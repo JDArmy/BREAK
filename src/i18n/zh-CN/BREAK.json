@@ -1,0 +1,1555 @@
+{
+  "title": "JDARMY BREAK - 业务风险枚举与规避知识",
+  "keyword": "Business Risk Enumeration & Avoidance Kownledge",
+  "description": "BREAK（Business Risk Enumeration & Avoidance Kownledge）一个开放式框架",
+  "maintainer": "Monyer",
+  "license": "Apache 2.0",
+  "rights": "BREAK 框架由 JD.Army 创建、拥有和进行管理。JD.Army 是专注于挖掘和解决企业安全运行风险隐患的专业型红队。JD.Army 保留自行决定定期更新 BREAK 的权利。虽然 JD.Army 拥有 BREAK 的所有权利和利益，但它许可公众自由使用，遵循相关开源协议。",
+  "website": "https://jd.army/BREAK/",
+  "github": "https://github.com/JDArmy/BREAK",
+  "version": "0.1.0",
+  "riskDimensions": {
+    "RD01": {
+      "title": "业务维度",
+      "riskScenes": [
+        "RS01",
+        "RS03",
+        "RS02"
+      ]
+    },
+    "RD02": {
+      "title": "内容维度",
+      "riskScenes": [
+        "RS05",
+        "RS06"
+      ]
+    },
+    "RD03": {
+      "title": "身份维度",
+      "riskScenes": [
+        "RS07",
+        "RS08"
+      ]
+    },
+    "RD04": {
+      "title": "对抗维度",
+      "riskScenes": [
+        "RS09",
+        "RS10",
+        "RS04"
+      ]
+    }
+  },
+  "riskScenes": {
+    "RS01": {
+      "title": "营销风险",
+      "risks": [
+        "R0001",
+        "R0002",
+        "R0005",
+        "R0006",
+        "R0007",
+        "R0008"
+      ]
+    },
+    "RS02": {
+      "title": "游戏运营风险",
+      "risks": [
+        "R0010",
+        "R0011",
+        "R0012"
+      ]
+    },
+    "RS03": {
+      "title": "交易风险",
+      "risks": [
+        "R0054",
+        "R0013",
+        "R0014",
+        "R0015",
+        "R0003",
+        "R0004",
+        "R0055",
+        "R0057",
+        "R0058",
+        "R0059",
+        "R0064",
+        "R0065",
+        "R0017",
+        "R0056",
+        "R0060",
+        "R0026",
+        "R0019",
+        "R0067",
+        "R0068"
+      ]
+    },
+    "RS04": {
+      "title": "非法请求风险",
+      "risks": [
+        "R0029",
+        "R0027",
+        "R0028",
+        "R0039"
+      ]
+    },
+    "RS05": {
+      "title": "用户内容风险",
+      "risks": [
+        "R0020",
+        "R0021",
+        "R0022",
+        "R0024",
+        "R0066"
+      ]
+    },
+    "RS06": {
+      "title": "违规引流风险",
+      "risks": [
+        "R0016",
+        "R0023",
+        "R0018",
+        "R0025",
+        "R0063",
+        "R0009"
+      ]
+    },
+    "RS07": {
+      "title": "身份风险",
+      "risks": [
+        "R0030",
+        "R0031",
+        "R0032",
+        "R0033",
+        "R0034",
+        "R0035",
+        "R0036",
+        "R0037",
+        "R0038",
+        "R0061"
+      ]
+    },
+    "RS08": {
+      "title": "盗号变现风险",
+      "risks": [
+        "R0040",
+        "R0041",
+        "R0042",
+        "R0043",
+        "R0044",
+        "R0045",
+        "R0062"
+      ]
+    },
+    "RS09": {
+      "title": "身份对抗风险",
+      "risks": [
+        "R0046",
+        "R0047",
+        "R0048",
+        "R0049"
+      ]
+    },
+    "RS10": {
+      "title": "设备对抗风险",
+      "risks": [
+        "R0050",
+        "R0051",
+        "R0052",
+        "R0053"
+      ]
+    }
+  },
+  "risks": {
+    "R0001": {
+      "title": "流程自动化",
+      "description": "包括不限于自动化注册、登录、购物、领劵、抽奖、做任务等，通过应用程序的非预期操作加速或定时完成特定流程。",
+      "attack": "有两种主流的方式来实施流程自动化：一种是通过逆向分析业务流程及数据传输协议，编写自动化脚本来发送请求；另一种是操纵业务访问终端（譬如浏览器、应用APP等），重复播放提前录制的流程动作。",
+      "complexity": "高级",
+      "influence": "套取平台营销活动利益，占用正常用户活动资源。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A10",
+        "A13",
+        "A14",
+        "A15",
+        "A16",
+        "A18",
+        "A22"
+      ],
+      "reference": [
+        {
+          "title": "OWASP Automated Threat: OAT006 Expediting",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-006_Expediting.html"
+        }
+      ]
+    },
+    "R0002": {
+      "title": "卡券枚举",
+      "description": "批量枚举优惠券号码、兑换码、折扣码等活动卡券兑换凭证。",
+      "attack": "劵号由某种规则数列或可猜测算法生成，通过暴力枚举或算法破解等方式，可以批量获取券号以便进一步套取利益。",
+      "complexity": "初级",
+      "influence": "套取平台营销活动利益，占用正常用户活动资源。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A10",
+        "A13",
+        "A14",
+        "A15",
+        "A16",
+        "A18"
+      ],
+      "reference": [
+        {
+          "title": "OWASP Automated Threat: OAT002 Token Cracking",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-002_Token_Cracking.html"
+        }
+      ]
+    },
+    "R0003": {
+      "title": "秒拍出价",
+      "description": "第一时间出价，通过不公平方法获得限购或抢购商品或服务。",
+      "attack": "通过不公平方法获得限购或抢购商品或服务或者商品折扣，通常指使用第三方脚本，或辅助工具完成抢购操作，有时依赖于第三方情报提前泄露接口等相关信息。通常需要借助自动化领劵、抽奖、做任务（R0001）相关攻击方法。",
+      "complexity": "中级",
+      "influence": "套取平台营销活动利益。影响正常用户下单。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A10",
+        "A13",
+        "A14",
+        "A15",
+        "A16",
+        "A18"
+      ],
+      "reference": [
+        {
+          "title": "OWASP Automated Threat: OAT005 Scalping",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-005_Scalping.html"
+        }
+      ]
+    },
+    "R0004": {
+      "title": "拍卖狙击",
+      "description": "在最后一分钟对商品或服务出价。",
+      "attack": "利用自动化手段实现在最后一分钟对商品或服务出价，往往能以最小代价完成交易。与秒拍出价（R0003）攻击原理相同但目的不同：拍卖狙击力争成为活动截止时间前的最后一次有效出价，目的是尽量以最低价格获得商品购买权；而秒拍出价则力争在活动开始后的第一时间出价，目的是尽量获得有限数量折扣商品的购买权。拍卖狙击通常需要借助流程自动化技术(R0001)",
+      "complexity": "中级",
+      "influence": "商品成交价格过低，导致利润率不足。影响正常用户下单。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A10",
+        "A13",
+        "A14",
+        "A15",
+        "A16",
+        "A18"
+      ],
+      "reference": [
+        {
+          "title": "OWASP Automated Threat: OAT013 Sniping",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-013_Sniping.html"
+        }
+      ]
+    },
+    "R0005": {
+      "title": "营销活动作弊",
+      "description": "利用大量账号完成平台营销活动获利。",
+      "attack": "在获得大量平台账号后，自动化完成平台的营销活动（包括签到，任务，抢红包，抢券，秒杀，拼团等）。账号来源通常为黑产批量注册（R0030），机器撞库（R0031），凭证破解（R0032），或从黑市购买等。完成活动的过程中需要自动化领劵、抽奖、做任务（R0001）能力。",
+      "complexity": "中级",
+      "influence": "套取平台营销活动利益。影响正常用户参与活动。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A04",
+        "A07",
+        "A09",
+        "A10",
+        "A13",
+        "A14",
+        "A15",
+        "A16",
+        "A21"
+      ],
+      "reference": []
+    },
+    "R0006": {
+      "title": "批量小号作弊",
+      "description": "利用大量账号进行点赞，收藏，转发，评论等影响平台排名指标并获利。",
+      "attack": "在获得大量平台账号后，自动化完成平台的点赞，收藏，转发，评论等功能，从而影响平台排名指标，实现恶性竞争并获利。账号来源通常为黑产批量注册（R0030），机器撞库（R0031），凭证破解（R0032），或从黑市购买等。完成操作的过程中需要自动化领劵、抽奖、做任务（R0001）能力。",
+      "complexity": "高级",
+      "influence": "通过好评率实现恶性竞争。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A04",
+        "A07",
+        "A09",
+        "A10",
+        "A13",
+        "A14",
+        "A15",
+        "A16",
+        "A21"
+      ],
+      "reference": []
+    },
+    "R0007": {
+      "title": "虚假裂变",
+      "description": "利用大量账号完成拉新裂变类活动获利。",
+      "attack": "在获得大量平台账号后，自动化完成平台的拉新，推荐等任务并获利。账号来源通常为黑产批量注册（R0030）。完成操作的过程中需要自动化领劵、抽奖、做任务（R0001）能力。",
+      "complexity": "高级",
+      "influence": "套取平台营销活动利益。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A04",
+        "A07",
+        "A09",
+        "A10",
+        "A13",
+        "A14",
+        "A15",
+        "A16"
+      ],
+      "reference": []
+    },
+    "R0008": {
+      "title": "广告欺诈",
+      "description": "利用虚假点击或展示方式，或恶意消耗广告资源，实现网络广告投放作弊。",
+      "attack": "伪造或恶意消耗广告类项目的点击次数或广告显示次数，造成投放者财产损失。一般存在广告服务商作弊，竞争对手恶意操作等行为。广告服务商作弊通常包括点击次数或展示次数作弊，过量计算广告价值。竞争对手通常会通过恶意点击链接消耗广告资源，从而增加投放者付费总数。",
+      "complexity": "初级",
+      "influence": "广告投放者财产损失。",
+      "avoidances": [
+        "A01",
+        "A05",
+        "A10",
+        "A15",
+        "A16",
+        "A18",
+        "A20",
+        "A21"
+      ],
+      "reference": [
+        {
+          "title": "OWASP Automated Threat: OAT003 Ad Fraud",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-003_Ad_Fraud.html"
+        }
+      ]
+    },
+    "R0009": {
+      "title": "广告引流",
+      "description": "通过在业务系统的公开用户生成内容处植入外站广告，将用户引导到外站，干扰用户决策。",
+      "attack": "通过在业务系统中发布噱头内容资源（包括文本，图片，视频等），吸引用户点赞，转发，收藏，从而在平台上得到有利的曝光位置，并通过植入的广告或建议干扰用户消费决策，将用户引导到外站。",
+      "complexity": "初级",
+      "influence": "恶意引导用户流量。",
+      "avoidances": [
+        "A06",
+        "A15",
+        "A16",
+        "A20"
+      ],
+      "reference": []
+    },
+    "R0010": {
+      "title": "团伙代充",
+      "description": "绕过官方正常充值渠道提供低价充值服务",
+      "attack": "通过促销，不合规，或非法手段获得低价充值资源，并对外提供充值服务。",
+      "complexity": "初级",
+      "influence": "影响游戏运营商正常经营和盈利",
+      "avoidances": [
+        "A15",
+        "A21"
+      ],
+      "reference": []
+    },
+    "R0011": {
+      "title": "账号倒卖",
+      "description": "倒卖被盗账号或包含特殊资源的游戏账号。",
+      "attack": "倒卖被盗游戏账号或包含特殊资源游戏账号，用以虚拟资产变卖套现。",
+      "complexity": "初级",
+      "influence": "影响游戏运营商正常经营和盈利",
+      "avoidances": [
+        "A07",
+        "A15",
+        "A17",
+        "A20"
+      ],
+      "reference": []
+    },
+    "R0012": {
+      "title": "游戏外挂/脚本",
+      "description": "通过游戏外挂/脚本实现自动化或作弊",
+      "attack": "通过屏幕控制、逆向分析、协议分析等手段实现游戏客户端修改，服务器欺骗等，达到修改游戏数值或自动化操作的目的，破坏游戏平衡。",
+      "complexity": "中级",
+      "influence": "破坏游戏平衡",
+      "avoidances": [
+        "A01",
+        "A10",
+        "A14",
+        "A15",
+        "A19",
+        "A20"
+      ],
+      "reference": []
+    },
+    "R0013": {
+      "title": "批量退款",
+      "description": "通过同一账户或不同账户批量下单批量发起非正当退货或退款",
+      "attack": "通过自动化或人工的方式，大量下单或者进行高价值的下单，然后批量退单退款，恶意消耗供应链成本或导致商家退货率上升。",
+      "complexity": "中级",
+      "influence": "扰乱商家正常运营，带来供应链损失或评级排名下降",
+      "avoidances": [
+        "A15",
+        "A20"
+      ],
+      "reference": []
+    },
+    "R0014": {
+      "title": "恶意占库存",
+      "description": "在未完成购买或交易的情况下，耗尽商品或服务的库存。",
+      "attack": "通过大量下单不付款等手段，将商家店铺全部商品打到无库存状态，达到商家无货可售",
+      "complexity": "初级",
+      "influence": "一般商业竞争中容易出现，当库存耗尽后，其他用户就无法再购买商品",
+      "avoidances": [
+        "A15",
+        "A20"
+      ],
+      "reference": [
+        {
+          "title": "OWASP Automated Threat: OAT021 Denial of Inventory",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-021_Denial_of_Inventory.html"
+        }
+      ]
+    },
+    "R0015": {
+      "title": "恶意差评",
+      "description": "通过不实评价，影响人或物的口碑。",
+      "attack": "通过恶意评论、评价、评分、举报、点踩等方式达到影响系统或其他用户信誉、评分和口碑等目的",
+      "complexity": "初级",
+      "influence": "与黑产刷量（R0016）相似，但性质不同。刷量一般已经成为一种黑产的非法商业行为，通过为某些用户或商家刷量提升评价来实现盈利。但恶意评价则是以污秽其他用户或商家的声誉、名誉和信誉作为出发点，一般目的可能是纯粹的恶意或商业竞争行为",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A06",
+        "A18"
+      ],
+      "reference": [
+        {
+          "title": "OWASP Automated Threat: OAT016 Skewing",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-016_Skewing.html"
+        }
+      ]
+    },
+    "R0016": {
+      "title": "刷量刷榜",
+      "description": "通过重复点击链接，发送请求或提交表单干扰应用程序某些指标。",
+      "attack": "自动重复点击或请求或提交内容，影响基于应用程序的指标，例如频率和/或速率的计数和度量。 刷榜、刷赞、刷评论等",
+      "complexity": "初级",
+      "influence": "度量或测量可能对用户可见（例如投注赔率、喜欢、市场/动态定价、访问者数量、投票结果、评论）或隐藏（例如应用程序使用统计、业务绩效指标）。 指标可能会影响个人以及应用程序所有者，例如 用户声誉、影响他人、获得名誉或损害他人声誉。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A18",
+        "A22"
+      ],
+      "reference": [
+        {
+          "title": "OWASP Automated Threat: OAT016 Skewing",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-016_Skewing.html"
+        }
+      ]
+    },
+    "R0017": {
+      "title": "虚假交易",
+      "description": "通过无效交易获得利益。",
+      "attack": "商家完成大量虚假交易，目的是获得平台商家优惠/返利，或低成本刷商品好评数量等。手段一般为“拍A发B“，直接发空包等不合理的交易。",
+      "complexity": "中级",
+      "influence": "套取平台商家优惠/返利。通过好评率实现恶性竞争。",
+      "avoidances": [
+        "A05",
+        "A15",
+        "A16",
+        "A20"
+      ],
+      "reference": []
+    },
+    "R0018": {
+      "title": "干扰搜索结果",
+      "description": "通过提供无效或非法的的数据，干扰搜索引擎结果。",
+      "attack": "通过大量搜索某关键词以提升该关键词排名，或通过大量将一个关键词与另外一个关键词并列搜素以形成某种关联。",
+      "complexity": "中级",
+      "influence": "干扰搜索引擎结果排名的公平机制，或对正常搜索关键词的智能提示或关联结果形成干扰",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A09",
+        "A10",
+        "A15",
+        "A16",
+        "A18",
+        "A21"
+      ],
+      "reference": []
+    },
+    "R0019": {
+      "title": "刷单",
+      "description": "商家通过批量低成本成单或虚假成单，已提高交易量或提升评价。",
+      "attack": "商家完成大量低成本交易，目的是获得平台商家优惠/返利，或低成本刷商品好评数量等。手段一般为雇佣买家，或恶意上架低值商品批量完成交易等。",
+      "complexity": "中级",
+      "influence": "影响平台公平性竞争原则，部分情况下套取平台商家优惠/返利。",
+      "avoidances": [
+        "A15",
+        "A16",
+        "A20"
+      ],
+      "reference": []
+    },
+    "R0020": {
+      "title": "文本内容风险",
+      "description": "用户生成无效，恶意或非法的文本内容。",
+      "attack": "用户通过输入恶意的、非法的内容，来达到诽谤、污损、干扰、引流、诈骗等目的",
+      "complexity": "初级",
+      "influence": "影响系统正常运营，给用户带来诈骗风险，给企业正常运营造成合规风险",
+      "avoidances": [
+        "A06",
+        "A20",
+        "A21"
+      ],
+      "reference": [
+        {
+          "title": "OWASP Automated Threat: OAT017 Spamming",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-017_Spamming.html"
+        }
+      ]
+    },
+    "R0021": {
+      "title": "图片内容风险",
+      "description": "用户生成无效，恶意或非法的图片内容。",
+      "attack": "用户通过输入恶意的、非法的内容，来达到诽谤、污损、干扰、引流、诈骗等目的",
+      "complexity": "初级",
+      "influence": "影响系统正常运营，给用户带来诈骗风险，给企业正常运营造成合规风险",
+      "avoidances": [
+        "A06",
+        "A15",
+        "A20",
+        "A21"
+      ],
+      "reference": [
+        {
+          "title": "OWASP Automated Threat: OAT017 Spamming",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-017_Spamming.html"
+        }
+      ]
+    },
+    "R0022": {
+      "title": "音频(流)内容风险",
+      "description": "用户生成无效，恶意或非法的音频内容。",
+      "attack": "用户通过输入恶意的、非法的内容，来达到诽谤、污损、干扰、引流、诈骗等目的",
+      "complexity": "初级",
+      "influence": "影响系统正常运营，给用户带来诈骗风险，给企业正常运营造成合规风险",
+      "avoidances": [
+        "A06",
+        "A15",
+        "A20",
+        "A21"
+      ],
+      "reference": [
+        {
+          "title": "OWASP Automated Threat: OAT017 Spamming",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-017_Spamming.html"
+        }
+      ]
+    },
+    "R0023": {
+      "title": "外部链接风险",
+      "description": "向平台插入恶意或非法的外部链接",
+      "attack": "用户通过输入恶意的、非法的内容，来达到诽谤、污损、干扰、引流、诈骗等目的",
+      "complexity": "初级",
+      "influence": "影响系统正常运营，给用户带来诈骗风险，给企业正常运营造成合规风险",
+      "avoidances": [
+        "A06",
+        "A15",
+        "A16",
+        "A20",
+        "A21"
+      ],
+      "reference": [
+        {
+          "title": "OWASP Automated Threat: OAT017 Spamming",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-017_Spamming.html"
+        }
+      ]
+    },
+    "R0024": {
+      "title": "视频(流)内容风险",
+      "description": "用户生成无效，恶意或非法的视频内容。",
+      "attack": "用户通过输入恶意的、非法的内容，来达到诽谤、污损、干扰、引流、诈骗等目的",
+      "complexity": "初级",
+      "influence": "影响系统正常运营，给用户带来诈骗风险，给企业正常运营造成合规风险",
+      "avoidances": [
+        "A06",
+        "A15",
+        "A20",
+        "A21"
+      ],
+      "reference": [
+        {
+          "title": "OWASP Automated Threat: OAT017 Spamming",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-017_Spamming.html"
+        }
+      ]
+    },
+    "R0025": {
+      "title": "恶意挖墙脚",
+      "description": "挖金主、挖客户、挖主播",
+      "attack": "以导流为目的将本平台的金主、客户、主播通过评论、私信等方式沟通向其他平台引流",
+      "complexity": "初级",
+      "influence": "影响系统正常运营，给用户带来诈骗风险，给企业正常运营造成负面影响",
+      "avoidances": [
+        "A06",
+        "A15",
+        "A20",
+        "A21"
+      ],
+      "reference": []
+    },
+    "R0026": {
+      "title": "违规商品",
+      "description": "商家上架无效，恶意或非法的商品内容。",
+      "attack": "商家通过上架无效，恶意或非法的商品内容，销售不合规或不合法的商品，或达到诽谤、污损、干扰、引流、诈骗等目的",
+      "complexity": "初级",
+      "influence": "影响系统正常运营，给用户带来诈骗风险，给企业正常运营造成合规风险",
+      "avoidances": [
+        "A06",
+        "A15",
+        "A20"
+      ],
+      "reference": []
+    },
+    "R0027": {
+      "title": "经营数据盗爬",
+      "description": "爬取应用程序提供的数据（商详、价格、库存、评论等等）方便后续使用。盗爬可能实时发生，或者更具周期性。",
+      "attack": "从应用程序收集可访问的数据和/或处理后的输出。一些抓取可能使用虚假或被盗帐户，或者无需身份验证即可访问信息。抓取工具从静态网页/api接口，收集响应并从中提取数据，反编译app解析静态资源。",
+      "complexity": "中级",
+      "influence": "一般被盗爬的经营数据在未形成一定的规模前提下可能未必会给企业带来实际损失，但一旦盗爬数据形成一定规模后，可以将其用于商业竞争，或分析企业运营状况及详细，会带来巨大经营上的损害。譬如分析GMV、分析特定用户群体等。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A10",
+        "A15",
+        "A16",
+        "A18",
+        "A20",
+        "A21",
+        "A22"
+      ],
+      "reference": [
+        {
+          "title": "OWASP Automated Threat: OAT011 Scraping",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-011_Scraping.html"
+        }
+      ]
+    },
+    "R0028": {
+      "title": "敏感数据泄露",
+      "description": "通过公开/非公开接口，内鬼或者第三方泄露获得应用程序中存储敏感数据。",
+      "attack": "应用程序接口会返回大于前端展示的数据结构内容，譬如地址、身份证、手机号等，用户访问服务器的公开接口获取敏感数据（模糊搜索用户名，小号批量添加用户），用户与用户交互获取敏感数据（小号批量给用户发送消息），或可以通过枚举id等形式获得全部隐私数据。",
+      "complexity": "中级",
+      "influence": "敏感数据泄露一般伴随着数据未脱敏、越权漏洞、接口未鉴权等弱点隐患发生，在目前数据安全监管严格的环境下，有可能造成严重合规风险",
+      "avoidances": [
+        "A04",
+        "A05",
+        "A17",
+        "A18",
+        "A19"
+      ],
+      "reference": []
+    },
+    "R0029": {
+      "title": "验证码恶意消耗",
+      "description": "批量请求验证码并控制接收对象，消耗应用程序验证码资源，同时影响正常用户的使用。",
+      "attack": "通过对同一手机号或邮箱批量发送验证码请求来达到干扰或拒绝服务，或对大批量手机号或邮箱发送验证码来对服务资源进行消耗。在部分可以控制发送内容情况下，还会引发诈骗。",
+      "complexity": "中级",
+      "influence": "消耗平台验证码资源，或形成对服务端的拒绝服务攻击，以及对特定手机号接收群体的干扰和拒绝服务攻击。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A04",
+        "A05",
+        "A09",
+        "A10",
+        "A15",
+        "A16",
+        "A21"
+      ],
+      "reference": []
+    },
+    "R0030": {
+      "title": "批量注册",
+      "description": "批量注册账号便于后续滥用。",
+      "attack": "通过使用应用程序的帐户注册流程，批量创建帐户，有时还填充个人资料。",
+      "complexity": "高级",
+      "influence": "这些帐户随后被滥用于生成垃圾邮件、洗钱和商品、传播恶意软件、影响声誉、造成恶作剧以及扭曲搜索引擎优化 (SEO)、评论和调查。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A04",
+        "A05",
+        "A07",
+        "A09",
+        "A10",
+        "A15",
+        "A16",
+        "A21",
+        "A22"
+      ],
+      "reference": [
+        {
+          "title": "OWASP Automated Threat: OAT019 Account Creation",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-019_Account_Creation.html"
+        }
+      ]
+    },
+    "R0031": {
+      "title": "撞库攻击",
+      "description": "通过批量登陆，验证被盗账号密码在当前系统中的有效性。",
+      "attack": "在当前系统的身份验证机制中，对从其他地方窃取的身份验证凭据列表进行测试，以确定用户是否重复使用了相同的登录凭据。被盗的用户名（通常是电子邮件地址）和密码可能是攻击者直接从另一个应用程序中获取的、在犯罪市场上购买的，或者是从公开的违规数据转储中获得的。与“凭证破解”不同，机器撞库不涉及任何暴力破解或数值猜测。",
+      "complexity": "高级",
+      "influence": "通过无限制的账号密码碰撞，攻击者将有可能获得众多在当前系统上复用其他系统身份凭证的用户权限，通过进一步操作对当前系统用户造成损失。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A04",
+        "A05",
+        "A07",
+        "A09",
+        "A10",
+        "A11",
+        "A12",
+        "A15",
+        "A16",
+        "A19",
+        "A21",
+        "A23"
+      ],
+      "reference": [
+        {
+          "title": "OWASP Automated Threat: OAT008 Credential Stuffing",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-008_Credential_Stuffing.html"
+        }
+      ]
+    },
+    "R0032": {
+      "title": "凭证破解",
+      "description": "通过暴力枚举特定账号的可能密码列表尝试登陆，得到有效身份凭证。",
+      "attack": "通过蛮力、字典（单词列表）和猜测攻击等方式对应用程序的身份验证过程进行暴力枚举来识别特定账户使用的脆弱帐户凭据，譬如枚举某用户的密码。",
+      "complexity": "高级",
+      "influence": "通过无限制的账号密码碰撞，攻击者将有可能获得当前系统上使用脆弱密码的用户权限，通过进一步操作对当前系统用户造成损失。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A04",
+        "A05",
+        "A07",
+        "A09",
+        "A10",
+        "A11",
+        "A12",
+        "A15",
+        "A16",
+        "A19",
+        "A21",
+        "A23"
+      ],
+      "reference": [
+        {
+          "title": "OWASP Automated Threat: OAT007 Credential Cracking",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-007_Credential_Cracking.html"
+        }
+      ]
+    },
+    "R0033": {
+      "title": "密码喷射",
+      "description": "通过暴力枚举众多账号列表的特定脆弱密码尝试登陆，得到有效身份凭证。",
+      "attack": "通过蛮力、字典（单词列表）和猜测攻击等方式对应用程序的身份验证过程进行暴力枚举来获得使用特定脆弱登录凭据的有效帐户，譬如枚举使用某脆弱密码的账户。",
+      "complexity": "高级",
+      "influence": "通过无限制的账号密码碰撞，攻击者将有可能获得当前系统上使用脆弱密码的用户权限，通过进一步操作对当前系统用户造成损失。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A04",
+        "A05",
+        "A07",
+        "A09",
+        "A10",
+        "A11",
+        "A12",
+        "A15",
+        "A16",
+        "A19",
+        "A21",
+        "A23"
+      ],
+      "reference": [
+        {
+          "title": "OWASP Automated Threat: OAT007 Credential Cracking",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-007_Credential_Cracking.html"
+        }
+      ]
+    },
+    "R0034": {
+      "title": "自动化养号",
+      "description": "通过自动化方式提升账号信誉度",
+      "attack": "对被盗账号或批量注册账号通过自动化活动以降低账号风险值或提升账号信誉度。譬如自动化评价、评论、发帖、交易等。",
+      "complexity": "高级",
+      "influence": "自动化养号通常需要结合其他的业务风险场景才能完成变现，譬如薅羊毛、抢购、刷量等。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A10",
+        "A13",
+        "A14",
+        "A15",
+        "A16",
+        "A21",
+        "A22"
+      ],
+      "reference": []
+    },
+    "R0035": {
+      "title": "凭据复用",
+      "description": "通过复用session cookies来实现绕过登录长期维持登录状态",
+      "attack": "通过盗用或其他手段获取用户Cookies来实现自动化免账密登录操作。",
+      "complexity": "中级",
+      "influence": "很多账户系统在账户改密码之后并不能清除已有的登录状态，导致在盗用或使用Cookies的情况之下，可以一直维持对目标用户的登录权限",
+      "avoidances": [
+        "A07",
+        "A10",
+        "A11",
+        "A15",
+        "A16",
+        "A18",
+        "A19",
+        "A20",
+        "A21",
+        "A23"
+      ],
+      "reference": []
+    },
+    "R0036": {
+      "title": "多因素破解",
+      "description": "通过暴力枚举对身份验证过程中的多因素因子进行破解",
+      "attack": "对身份验证过程中的MFA多因子因子进行爆破，以实现多因素验证绕过，譬如破解手机验证码、身份证后几位、邮箱验证码、动态口令等",
+      "complexity": "高级",
+      "influence": "将绕过现有MFA多因素身份验证机制，部分情况下可导致账户沦陷",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A04",
+        "A05",
+        "A09",
+        "A10",
+        "A21"
+      ],
+      "reference": []
+    },
+    "R0037": {
+      "title": "第三方账号聚合",
+      "description": "以第三方应用作为代理人，统一管理多个应用的账号密码。",
+      "attack": "将来自多个应用程序帐户的凭据和信息编译到另一个系统中。 单个用户可以使用此聚合应用程序来合并来自多个应用程序的信息，或者合并单个应用程序的多个用户的信息。 譬如电商系统的搬家应用，票务系统的抢票应用等。",
+      "complexity": "中级",
+      "influence": "对用户来说，有导致用户敏感信息泄露风险；对系统来说，有导致平台数据流失以及系统请求压力增大风险",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A07",
+        "A08",
+        "A09",
+        "A10",
+        "A11",
+        "A13",
+        "A14",
+        "A15",
+        "A16",
+        "A20",
+        "A21",
+        "A22"
+      ],
+      "reference": [
+        {
+          "title": "OWASP Automated Threat: OAT020 Account Aggregation",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-020_Account_Aggregation.html"
+        }
+      ]
+    },
+    "R0038": {
+      "title": "登录扫码欺诈",
+      "description": "利用移动应用扫描二维码，对网页端授权登录的机制，来实现欺诈登录",
+      "attack": "业务移动应用为了便捷访问以及推广需求，常常支持外部扫描二维码进行APP唤起和自动登录。攻击者只需要在业务web登录页面复制二维码并发给受害者，待受害者扫描二维码后，即获得受害者的网页端账户访问权限。",
+      "complexity": "中级",
+      "influence": "用户的账号被攻击者登录",
+      "avoidances": [
+        "A10",
+        "A15",
+        "A17",
+        "A19",
+        "A21"
+      ],
+      "reference": []
+    },
+    "R0039": {
+      "title": "CC攻击",
+      "description": "通过大量构造业务正常请求的方式来对系统进行拒绝服务攻击",
+      "attack": "通过分析每种业务请求，将对服务端计算量大的请求作为目标，发送大量伪造请求来占满全部服务器计算资源。",
+      "complexity": "中级",
+      "influence": "导致业务拒绝服务，影响用户访问",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A08",
+        "A09",
+        "A18"
+      ],
+      "reference": [
+        {
+          "title": "OWASP Automated Threat: OAT-015 Denial of Service",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-015_Denial_of_Service.html"
+        }
+      ]
+    },
+    "R0040": {
+      "title": "撞卡攻击",
+      "description": "通过批量登陆认证，验证被盗支付卡凭证有效性。",
+      "attack": "通过商家完整的登陆凭证验证流程，完成被盗支付卡或账号的有效性。由于被盗账号价值未知，撞卡攻击可进行支付卡价值评估。相关登陆凭证数据来源可能是第三方应用泄露，第三方支付渠道泄露，或者从黑市购买。",
+      "complexity": "中级",
+      "influence": "支付卡或账号凭证信息被盗取。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A04",
+        "A05",
+        "A07",
+        "A10",
+        "A12",
+        "A13",
+        "A14",
+        "A15",
+        "A16"
+      ],
+      "reference": [
+        {
+          "title": "OWASP Automated Threat: OAT001 Carding",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-001_Carding.html"
+        }
+      ]
+    },
+    "R0041": {
+      "title": "支付卡破解",
+      "description": "通过枚举不同缺失的开始/过期日期和安全码，得到有效支付信息。",
+      "attack": "暴力破解支付卡的开始/过期日期和安全码（CSC），也被称作CVN2，CVC，CV2，或CID。撞卡攻击（BRE-0101）的成果可用作支付卡或账号价值判断，而支付卡破解（BRE-0102）的成果可用于实际支付。",
+      "complexity": "中级",
+      "influence": "支付卡或账号支付信息被盗取。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A04",
+        "A07",
+        "A10",
+        "A12",
+        "A13",
+        "A14",
+        "A15",
+        "A16"
+      ],
+      "reference": [
+        {
+          "title": "OWASP Automated Threat: OAT010 Card Cracking",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-010_Card_Cracking.html"
+        }
+      ]
+    },
+    "R0042": {
+      "title": "盗卡盗刷",
+      "description": "使用被盗支付卡或其他用户账号中的资金，购买商品或套现。",
+      "attack": "通过被盗的支付卡或账号的登陆凭证和支付信息，盗用或盗取其中的资金。除常规的购买商品/购买服务/提现外，还可以通过退款等方式获利。其中登陆凭证来源自撞卡攻击（BRE-0101），支付信息来源自支付卡破解（BRE-0102）。",
+      "complexity": "高级",
+      "influence": "支付卡或账号中的资金被盗用或盗取。",
+      "avoidances": [
+        "A07",
+        "A10",
+        "A12",
+        "A15",
+        "A16",
+        "A21",
+        "A23"
+      ],
+      "reference": [
+        {
+          "title": "OWASP Automated Threat: OAT012 Cashing Out",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-012_Cashing_Out.html"
+        }
+      ]
+    },
+    "R0043": {
+      "title": "黑卡支付",
+      "description": "利用被盗支付卡或其他用户账号中的身份，完成交易。",
+      "attack": "利用被盗支付卡或其他用户账号中的身份，完成交易。一般情况下是用来隐蔽攻击者身份，或者降低批量刷单被风控拦截的风险。其中登陆凭证来源自撞卡攻击（BRE-0101），支付信息来源自支付卡破解（BRE-0102）。",
+      "complexity": "高级",
+      "influence": "支付身份被冒用。",
+      "avoidances": [
+        "A07",
+        "A10",
+        "A12",
+        "A15",
+        "A16",
+        "A18",
+        "A19",
+        "A21",
+        "A23"
+      ],
+      "reference": []
+    },
+    "R0044": {
+      "title": "仿冒转账",
+      "description": "利用高仿账号欺骗他人转账，或伪造转账记录。",
+      "attack": "通常包括欺骗收款者和欺骗付款者两种场景。欺骗收款者一般通过伪造交易记录，利用不可信第三方做担保等。欺骗付款者一般通过高仿收款者账号，诱导支付。",
+      "complexity": "高级",
+      "influence": "收款者或付款者财产损失。",
+      "avoidances": [
+        "A06",
+        "A07",
+        "A10",
+        "A15",
+        "A16",
+        "A17",
+        "A21",
+        "A23"
+      ],
+      "reference": []
+    },
+    "R0045": {
+      "title": "积分盗刷",
+      "description": "盗用被盗支付卡或其他用户账号中的非资金类权益。",
+      "attack": "通过被盗的支付卡或账号的登陆凭证和支付信息，盗用或盗取其中的非资金类权益。其中登陆凭证来源自撞卡攻击（BRE-0101），支付信息来源自支付卡破解（BRE-0102）。",
+      "complexity": "高级",
+      "influence": "支付卡或账号中的非资金类权益被盗用或盗取。",
+      "avoidances": [
+        "A07",
+        "A10",
+        "A12",
+        "A15",
+        "A16",
+        "A19",
+        "A21",
+        "A23"
+      ],
+      "reference": []
+    },
+    "R0046": {
+      "title": "未成年人识别对抗",
+      "description": "通过身份伪造实现未成年人识别欺骗。",
+      "attack": "通过使用正常或伪造的成人身份，绕过未成年人识别机制，包括使用成年人身份证，人脸，指纹等隐私数据。",
+      "complexity": "中级",
+      "influence": "未成年人识别机制失效。",
+      "avoidances": [
+        "A10",
+        "A15",
+        "A17",
+        "A18",
+        "A19",
+        "A21",
+        "A23"
+      ],
+      "reference": []
+    },
+    "R0047": {
+      "title": "人机识别对抗",
+      "description": "通过自动化手段通过人机测试。",
+      "attack": "通常以自动化方式通过图灵测试（用于区分机器或人的测试题目）。除了传统的图片，音频验证码外，有时还会使用小游戏或算术等形式。通常用于批量自动化操作过程中的人机检验。除了自动化通过人机测试外，通过改变设备环境，或使用第三方脚本工具绕过鼠标移动轨迹、点按压力、3D陀螺仪等方式的人机识别。",
+      "complexity": "高级",
+      "influence": "人机识别机制失效。",
+      "avoidances": [
+        "A03",
+        "A10",
+        "A13",
+        "A14",
+        "A15",
+        "A16",
+        "A18",
+        "A21",
+        "A22"
+      ],
+      "reference": [
+        {
+          "title": "OWASP Automated Threat: OAT009 CAPTCHA Defeat",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-009_CAPTCHA_Defeat.html"
+        }
+      ]
+    },
+    "R0048": {
+      "title": "人脸识别对抗",
+      "description": "通过伪造，篡改人脸数据或相关认证数据，实现人脸识别欺骗。",
+      "attack": "通过伪造，篡改人脸数据或相关认证数据，实现人脸识别欺骗。通常用作登陆，支付等流程，或作为多因素认证的方式之一。",
+      "complexity": "高级",
+      "influence": "人脸识别机制失效，导致越权登陆，支付等风险。",
+      "avoidances": [
+        "A02",
+        "A07",
+        "A10",
+        "A13",
+        "A14",
+        "A15",
+        "A19",
+        "A21",
+        "A22"
+      ],
+      "reference": []
+    },
+    "R0049": {
+      "title": "代登录、代下单",
+      "description": "利用设备环境协助登陆他人账号，或利用账号协助他人完成下单。",
+      "attack": "利用设备环境协助登陆他人账号，或利用账号协助他人完成下单。通常为了绕过设备风险对抗，或降低账号风险值，从而完成登陆，下单等操作。",
+      "complexity": "高级",
+      "influence": "设备/账号风险识别机制失效。",
+      "avoidances": [
+        "A01",
+        "A07",
+        "A10",
+        "A11",
+        "A13",
+        "A14",
+        "A15",
+        "A16",
+        "A17",
+        "A19",
+        "A20",
+        "A21",
+        "A22"
+      ],
+      "reference": []
+    },
+    "R0050": {
+      "title": "风险设备识别对抗",
+      "description": "修改真实设备的设备信息，欺骗应用程序，降低设备风险值。",
+      "attack": "运行应用的系统被ROOT，或者应用在被Hook情况下运行，或在调试器调试情况下运营，或应用与服务器之间的安全证书被替换等情况",
+      "complexity": "高级",
+      "influence": "可能导致应用中的安全流程被突破，数据被伪造等情况",
+      "avoidances": [
+        "A01",
+        "A10",
+        "A13",
+        "A14",
+        "A15",
+        "A21"
+      ],
+      "reference": []
+    },
+    "R0051": {
+      "title": "逆向分析",
+      "description": "通过逆向还原应用的源代码或运行逻辑",
+      "attack": "对于WEB应用、微信小程序、安卓应用来说，可以直接或轻易还原源代码，看到全部应用处理逻辑。当在终端使用安全策略时，即可能存在被破解绕过等风险。",
+      "complexity": "高级",
+      "influence": "可能导致应用中的安全流程被突破，数据被伪造等情况",
+      "avoidances": [
+        "A02",
+        "A13",
+        "A14",
+        "A21",
+        "A22"
+      ],
+      "reference": []
+    },
+    "R0052": {
+      "title": "HTTP请求分析",
+      "description": "通过抓包还原应用的请求发送结构及监听返回数据",
+      "attack": "对于使用HTTP/HTTPS等基于文本协议进行数据传输的应用来说，可以通过中间人来实现数据收发的抓包，继而还原应用执行逻辑，来实现自动化操作。",
+      "complexity": "高级",
+      "influence": "可能导致应用中的安全流程被突破，数据被伪造等情况",
+      "avoidances": [
+        "A02",
+        "A10",
+        "A13",
+        "A14",
+        "A21",
+        "A22"
+      ],
+      "reference": []
+    },
+    "R0053": {
+      "title": "虚拟设备对抗",
+      "description": "通过软件模拟真实设备，便于后续滥用。",
+      "attack": "通过云手机、云服务器、虚拟机、模拟器等方式运行应用",
+      "complexity": "中级",
+      "influence": "可能导致应用中的安全流程被突破，数据被伪造等情况",
+      "avoidances": [
+        "A01",
+        "A04",
+        "A05",
+        "A10",
+        "A13",
+        "A14",
+        "A15",
+        "A16",
+        "A21",
+        "A23"
+      ],
+      "reference": []
+    },
+    "R0054": {
+      "title": "恶意退货",
+      "description": "买家以干扰卖家或平台，或谋求不正当利益为目的，非出于正当理由的退货行为",
+      "attack": "买家出于干扰、破坏为目的，购买大额、大件、稀缺商品，并在货物刚到达或未到达的情况下退货，来给卖家带来经济损失或由退货率造成商誉影响。或买家以七天无理由对高价值商品使用并退货，以造成该商品的贬值，再通过内外勾结购买贬值后商品",
+      "complexity": "初级",
+      "influence": "消耗商家利益、库存、商誉或供应链成本",
+      "avoidances": [
+        "A15",
+        "A20"
+      ],
+      "reference": []
+    },
+    "R0055": {
+      "title": "低价购风险",
+      "description": "由于业务实现逻辑错误，价格、优惠券等配置错误导致的低价购和零元购",
+      "attack": "该攻击可能是偶然发现，但更有可能是攻击者通过自动化批量加购、修改提交金额或数量、领劵配劵等方法进行的大规模试探发现。攻击者在发现漏洞后，为了达到法不责众以及隐藏自身的目的，通常会一边利用漏洞，一边公开漏洞，使得平台或商家蒙受更大的损失。",
+      "complexity": "初级",
+      "influence": "给平台和商家带来巨额损失",
+      "avoidances": [
+        "A15",
+        "A16"
+      ],
+      "reference": []
+    },
+    "R0056": {
+      "title": "虚假好评",
+      "description": "卖家通过购买虚假好评以提升产品商誉或搜索排名权值",
+      "attack": "卖家通过低价成单、发空包、虚拟发货等方式与买家勾结，通过虚假成单和批量好评来提升店铺信誉或商品排名。",
+      "complexity": "初级",
+      "influence": "影响平台公平性以及干扰排名算法",
+      "avoidances": [
+        "A15",
+        "A21"
+      ],
+      "reference": []
+    },
+    "R0057": {
+      "title": "退货造假",
+      "description": "买家退货过程中退假、退旧、退空包、少件、买A退B等情况",
+      "attack": "买家退回的商品不是实际发出的商品，买A退B，包含退货高仿等；买家退回的商品数量与实际寄出的数量不一样，包含空包",
+      "complexity": "初级",
+      "influence": "给平台或卖家带来经济损失",
+      "avoidances": [
+        "A15",
+        "A16",
+        "A20"
+      ],
+      "reference": []
+    },
+    "R0058": {
+      "title": "闪退套利",
+      "description": "在下单得到赠品、赠券、优惠后，第一时间退单套取利益",
+      "attack": "一个针对性的黑产攻击者可能会囤积大量的账号，并实时监控平台或商家活动，一旦发现有利可图会通过自动化方式大量下单，在套取到优惠券、赠品等利益后，第一时间退单，赚取利益。",
+      "complexity": "中级",
+      "influence": "给平台和商家带来经济损失",
+      "avoidances": [
+        "A15",
+        "A16",
+        "A20",
+        "A21"
+      ],
+      "reference": []
+    },
+    "R0059": {
+      "title": "恶意拒收",
+      "description": "买家通过报复、破坏等目的拒收商品，以占用或消耗卖家的供应链资源，造成经济损失。",
+      "attack": "一个典型的恶意攻击场景是：买家购买家电、数码产品、建筑耗材、轮胎等大件商品，在快递送货时选择失联或拒收，以占用和消耗商家的供应链成本。",
+      "complexity": "初级",
+      "influence": "对商家供应链造成利用损失",
+      "avoidances": [
+        "A05",
+        "A06",
+        "A20",
+        "A21"
+      ],
+      "reference": []
+    },
+    "R0060": {
+      "title": "洗钱/诈骗",
+      "description": "利用合法的交易平台来开展非法的交易，以实现金钱转移",
+      "attack": "有很多赌博网站通过在合法交易平台建立店铺进行虚拟商品发货或空包发货的方式来实现对赌客的充值；还有色情诈骗网站，在浏览者尝试购买高级服务时，被跳转到合法交易平台下单虚拟商品，譬如电话卡、油卡等VIP卡券等，但并不会提供高级服务，导致下单的浏览者对合法交易平台的客诉量大幅上升",
+      "complexity": "高级",
+      "influence": "会给平台带来较大合规风险，以及客诉量的增加",
+      "avoidances": [
+        "A02",
+        "A10",
+        "A15",
+        "A16"
+      ],
+      "reference": []
+    },
+    "R0061": {
+      "title": "手机二次号",
+      "description": "新的手机号码使用者通过找回密码或验证码登录机制，获得前手机号码使用者的账户权限",
+      "attack": "典型的恶意攻击者可以通过与运营商内部人员串通来批量获取过期手机号码，达到大规模盗号的目的。目前国内的主流电信运营商均已提供手机号验证接口，可以判断手机号是否换绑或过期等情况，平台可以依次来判断手机号状态。",
+      "complexity": "初级",
+      "influence": "导致平台用户账户被冒用",
+      "avoidances": [
+        "A15",
+        "A23"
+      ],
+      "reference": []
+    },
+    "R0062": {
+      "title": "信用卡/借款套现",
+      "description": "利用平台机制实现信用卡套现或购物借款的套现",
+      "attack": "利用平台业务流程漏洞将购物借款提现到银行卡中，或通过买家卖家勾结，实现假发货来套取购物借款",
+      "complexity": "中级",
+      "influence": "给平台带来经济损失以及合规风险",
+      "avoidances": [
+        "A15",
+        "A16",
+        "A20"
+      ],
+      "reference": []
+    },
+    "R0063": {
+      "title": "实时评论广告引流",
+      "description": "通过在直播弹幕、有些的聊天广场等处发布广告来实现引流",
+      "attack": "实时评论广告引流其实也是一种广告引流（R0009）手段，不过很多平台对实时评论审核不严格或较为事后，导致即便第一时间删除了内容，亦会会大量用户造成影响。",
+      "complexity": "初级",
+      "influence": "对正常用户访问造成影响，有可能会使得平台用户遭受诈骗或客源流失",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A04",
+        "A05",
+        "A06",
+        "A07",
+        "A09",
+        "A10",
+        "A11",
+        "A15",
+        "A19",
+        "A20",
+        "A21"
+      ],
+      "reference": []
+    },
+    "R0064": {
+      "title": "拆单套利",
+      "description": "利用运费/差价/赠品链接商品或低单价商品进行非正常凑单下单后取消部分订单获取利益。",
+      "attack": "有很多交易平台有满多少钱免运费、满减优惠、提供赠品、返利等优惠，通过凑单先满足获取利益要求，再退掉部分或全部商品，达到套取利益的目的。",
+      "complexity": "初级",
+      "influence": "套取平台商家优惠/返利。",
+      "avoidances": [
+        "A16",
+        "A15",
+        "A21"
+      ],
+      "reference": []
+    },
+    "R0065": {
+      "title": "恶意索赔",
+      "description": "通过批量购买过期未下架或假冒伪劣商品，申请假一罚十索赔",
+      "attack": "通过批量搜索、数据爬取等方式获取过期、假冒伪劣、违规（如：包含广告法违禁词、商品不合规）等商品，订单产生后买家投诉卖家存在违规，目的以撤销投诉为由索取高额钱款。",
+      "complexity": "中级",
+      "influence": "给平台或卖家带来经济损失",
+      "avoidances": [],
+      "reference": []
+    },
+    "R0066": {
+      "title": "消息骚扰",
+      "description": "利用平台消息发送机制给他人发送骚扰性信息",
+      "attack": "与文本内容风险不同，消息骚扰会精心设计以规避关键词黑名单，可能并不会触发平台设置的关键词预警。消息骚扰是一个普遍的风险问题，有些平台用户可以选择什么样的人群允许给‘我’发消息，是一种比较好的防御策略",
+      "complexity": "初级",
+      "influence": "给平台客服或商家带来巨大干扰，严重情况可能会导致平台用户流失或人身伤害",
+      "avoidances": [
+        "A01",
+        "A04",
+        "A05",
+        "A06",
+        "A07",
+        "A09",
+        "A10",
+        "A11",
+        "A15",
+        "A17",
+        "A19",
+        "A20",
+        "A21"
+      ],
+      "reference": []
+    },
+    "R0067": {
+      "title": "恶意客诉",
+      "description": "对交易平台或在交易平台对商家进行恶意投诉",
+      "attack": "以谋取不正当利益、逼迫被投诉者受到处罚为目标，通过监管单位对交易平台发起恶意投诉，或通过交易平台对商家发起恶意投诉。",
+      "complexity": "初级",
+      "influence": "给平台或卖家带来经济或商誉损失",
+      "avoidances": [
+        "A15",
+        "A16",
+        "A21"
+      ],
+      "reference": []
+    },
+    "R0068": {
+      "title": "权益滥用",
+      "description": "对平台赋予的权益的恶意利用和过度地使用",
+      "attack": "譬如网络购物平台国家要求7天无理由退货，购买者利用这个机制免费使用产品或服务，并在7天内发起退货。",
+      "complexity": "初级",
+      "influence": "给平台或卖家带来经济损失",
+      "avoidances": [
+        "A15",
+        "A16",
+        "A20",
+        "A21"
+      ],
+      "reference": []
+    }
+  },
+  "avoidances": {
+    "A01": {
+      "title": "人机识别挑战",
+      "summary": "通过设置人机挑战或收集分析数据，实现对人类操作和非人类操作区分。",
+      "description": "通过行为验证码、图文验证码等方式设置人机挑战，或通过收集鼠标移动轨迹、屏幕点按压力、请求访问速率、3D陀螺仪等数据并分析的方式进行人机识别。注：人脸识别通常被认为是生物特征识别（A23）的一种。"
+    },
+    "A02": {
+      "title": "接口签名",
+      "summary": "对接口发送请求进行签名和校验。",
+      "description": "因为所有的用户端数据均无法保证完整性，因此可以通过对请求数据进行 HASH 值计算、标记和服务端再校验来确保数据未经过篡改。需要注意的是：数据的完整性紧密依赖于 HASH 算法的强壮性。像 MD5 这种弱 HASH 算法已经较难保证数据的完整性。此外，目前接口签名更多地被应用在自动化请求识别对抗环节，严格来说接口签名本身并不具备人机识别能力，目前的对抗点更多是在于对签名算法的隐藏上，譬如终端签名算法混淆（A13）、图片隐写、算法白盒化、动态秘钥等。"
+    },
+    "A03": {
+      "title": "爬虫识别",
+      "summary": "基于终端请求特征以及访问频次对请求进行爬虫识别和限制。",
+      "description": "广义来说，凡是进行人机识别、自动化请求识别等能力均属于爬虫识别范畴。不过这里我们采用狭义定义，即：基于终端请求特征、用户身份和访问频次对高频自动化请求进行识别的能力。终端请求特征包括但不限于：设备指纹与设备ID（A21）、请求IP与HTTP头信息等数据。终端请求特征结合用户身份实现了对请求端的唯一性标记，结合服务端算法和单位时间的频率、次数限制配置，实现对高频自动化请求的识别和限制。"
+    },
+    "A04": {
+      "title": "频率限制",
+      "summary": "请求相关资源时进行访问频率控制。",
+      "description": "与爬虫识别（A03）不同，频率限制并不会严格区分人类流量和自动化流量，这导致过低的阈值通常会将部分人类访问请求误拦截，而过高的阈值又会将低频请求爬虫放行，也因此并不能达到最好的爬虫识别与拦截效果。不过对于远超过人类正常请求的超高频数据请求的爬虫场景下会有较为直接的拦截作用。频率限制通常可以用在流量削峰等场景，其目的是为了缓解服务器压力，避免远超服务器承载的流量导致服务器拒绝服务器以及所引起的雪崩效应。"
+    },
+    "A05": {
+      "title": "数量限制",
+      "summary": "请求相关资源时进行访问数量控制。",
+      "description": "数量限制与频率限制（A04）类似，不过其控制点主要在于针对较长一段时间内的资源请求总量限制，而频率限制是在较短一段时间内的访问数量控制，对于较长时间的访问数量并不做限制。譬如短信验证码请求接口一般除了单位时间的频率限制外，还会根据IP、手机号、用户ID等标识进行小时级，甚至天级为单位的请求总量限制，一方面防止对资源的恶意消耗，另一方面还可以防止验证码滥用及短信轰炸。"
+    },
+    "A06": {
+      "title": "恶意内容识别",
+      "summary": "识别用户生成内容中的恶意内容。",
+      "description": "用户生成内容包括但不限于：文字、图像、视频（流）、链接等，恶意内容按利益点与场景不同包括但不限于：违法、违规、欺诈、恶意推广等。简单文字类识别可以通过设置关键词，复杂文本内容可能还包括自然语言处理等。涉及图像或视频类内容除OCR文本识别外，还包含图像内部识别等。链接类除黑白名单外，部分场景下还需要结合威胁情报（A16）来实现更精确识别。"
+    },
+    "A07": {
+      "title": "多因素验证",
+      "summary": "增加除主要身份识别手段（譬如账密等）外的其他维度身份验证因素。",
+      "description": "多因素验证基本成为身份验证的主流方式，其存在很大程度上解决了由于账密泄露导致的身份冒充登录和滥用问题。常见的多因素验证因子有：短信验证码、邮箱验证码、基于时间的一次性密码等。"
+    },
+    "A08": {
+      "title": "增加负载",
+      "summary": "通过增加服务器计算资源等方式提升可承载的终端同时请求数量。",
+      "description": "由业务风险导致的资源消耗一般都是出于经济利益等目的，较少会出现如常规网络攻击中CC攻击、DDOS攻击等情况，所以通过增加服务器计算资源是解决资源消耗的一种必要手段。对于业务来讲，任何时候系统保证平稳运行，为用户提供有效服务是其最大目标。"
+    },
+    "A09": {
+      "title": "时间限制",
+      "summary": "通过时间控制相关资源仅在一段时间内有效。",
+      "description": "一个时间限制的典型场景就是短信验证码发送，通过限制验证码的发送时间间隔，达到避免对特定手机号实施短信轰炸的目的。在密码碰撞、支付密码错误等场景也常会通过时间限制避免账号沦陷以及金钱损失。时间限制有时也会被应用在用户内容发送场景，通过进行一定限制避免实施内容轰炸或延缓来自自动化请求的压力。"
+    },
+    "A10": {
+      "title": "异常环境识别",
+      "summary": "对应用运行环境及用户请求环境进行识别，发现异常环境。",
+      "description": "异常环境识别通过获取包括不限于终端静默人机挑战、应用合法性、进程合法性、是否越狱（ROOT）、陀螺仪状态、是否外挂插件等数十种数据的获取、分析和判断。业务场景下的异常环境识别一般是通过业务终端访问系统实现的。根据业务访问模式的不同，终端访问系统可能是浏览器、APP移动应用、桌面级程序等形式。异常环境识别能力严重依赖业务终端访问系统的权限，由于用户授权限制以及法律法规限制，异常环境识别具有一定的局限性，且也受到对抗和终端数据完整性制约。"
+    },
+    "A11": {
+      "title": "退出登录态",
+      "summary": "将用户踢出登录态，并在服务端注销所有登录状态。",
+      "description": "踢出登录态属于一种轻量级的用户处置策略（A20）。其中一些情况是为了用户账户安全考虑的，譬如Cookies复用与异地登录的识别与处置措施；而另一些情况是希望登录态的使用者重新经历登录挑战（A18），譬如很多爬虫会利用登录态进行数据爬取，因登录挑战过程一般包含账密挑战、人机识别挑战（A01）和多因素验证挑战（A07），可以有效的干扰自动化爬虫的爬取进程。"
+    },
+    "A12": {
+      "title": "强制改密",
+      "summary": "对用户下发强制改密操作，用户必须成功改密后方可进行相关操作。",
+      "description": "强制改密一般会应用在撞库成功登录、账密泄露、异地登录、长期未登录、密码过期等场景，其主要目的还是寄托于通过改密，以及改密过程中的账户所有权验证（A18）来降低用户账密泄露风险。"
+    },
+    "A13": {
+      "title": "访问端代码混淆",
+      "summary": "对前端JS脚本或客户端APP进行代码级别混淆。",
+      "description": "访问端代码混淆一方面可以在一定程度上解决黑灰产直接逆向访问端代码，分析资源访问逻辑，实现业务自动化及数据爬取问题；另一方面也能增加破解终端人机挑战、异常环境识别（A10）、接口签名（A02）等业务安全防护手段的难度。不过因为混淆后的代码依旧在用户访问端，所以在不考虑时间成本和人力成本的前提下，混淆代码最终还是具备被完全还原的可行性。所以访问端代码混淆仅是一种降低黑灰产ROI的手段。不过若按照PDR中的Pt>Dt+Rt公式来看，如果防守者有能力将代码混淆的周期降低到破解周期内，则有可能达到长期防护的效果。"
+    },
+    "A14": {
+      "title": "反调试",
+      "summary": "对前端/客户端增加验证，禁止使用调试工具或在调试期间变更执行流程。",
+      "description": "反调试既可以是一种针对调试的阻断，也可以是一种针对调试的干扰，譬如可以实现非调试环境下是一种程序运行逻辑，调试环境下是另外一种程序运行逻辑。在大部分WEB应用场景中，反调试会作为访问端代码混淆（A13）的一种增强型手段共同配合使用，尤其是反调试逻辑被代码混淆后，去除反调试逻辑将变得更为困难，代码解混淆难度提升导致算法破解时间大幅延长。而在桌面应用软件、游戏等场景下，反调试又起到阻止程序破解，防止程序外挂等作用。"
+    },
+    "A15": {
+      "title": "风控策略",
+      "summary": "通过现有或增加风控策略来实现特殊用户或行为标记和管控。",
+      "description": "风控是在业务安全中应用得最多的一种手段，也是防御重特大业务运营风险的必要利器。风控的安全能力水位严重依赖于策略，这既是优势也是劣势。优势在于业务防护的灵活性，劣势在于对业务防护场景的覆盖性。此外，因为风控可以具备较多的风险处置环节与后置处置逻辑，可以避免跟攻击者站立在强对抗环节，达到策略长期有效的目的。不过，也正因为如此，照比其他一些安全防护手段，风控在某些情况下具有滞后性，譬如有些识别和处置是在业务流程环节结束后进行的，这有可能会造成一定的经济损失，也有可能会带来不好的用户体验。"
+    },
+    "A16": {
+      "title": "威胁情报",
+      "summary": "通过黑IP库、黑手机号库等威胁情报对黑产身份进行标记。",
+      "description": "威胁情报的定义可以很广义：所有可以标识好与坏的数据标签都属于威胁情报。威胁情报比较考验情报运营能力以及情报质量，需要长期并实时保持数据的鲜活性。一般会把召回率作为威胁情报好坏的度量标准，好的威胁情报可以直接作为一种防护手段使用，而质量差的威胁情报则需要结合风控策略（A15）来使用，避免覆盖不全或大规模误报。"
+    },
+    "A17": {
+      "title": "身份授权判断",
+      "summary": "对应用运行流程增加权限鉴别，以实现特定的资源只能被指定用户访问。",
+      "description": "权限判断通常可以用在两种业务风险规避环节：一种是不同的资源请求与操作对用户身份的级别有更高的要求，譬如数据只允许管理员访问、借款只允许高信誉用户使用、特权资源只允许会员使用等；另一种是对同一用户的不同等级资源的有不同权限判断要求，譬如在支付、改密、用券等环节通过支付口令、人脸识别、所有权判断等方式来加强权限判断等。"
+    },
+    "A18": {
+      "title": "身份认证",
+      "summary": "在终端请求相关资源时，强制要求用户使用登陆态。",
+      "description": "在不验证登录态的情况下，要实现对终端访问行为的持续监控是很难的，因为不管是请求特征还是请求来源伪造起来均十分简单，这使得逃脱服务端对终端访问的持续监控成为了绕过对资源滥用惩罚的一种常用方法。也正因此，目前很多业务会将身份认证作为实现对终端访问行为持续性监控的有效办法，终端在不经过身份认证的情况下只能访问有限类型或有效数量的资源，若想访问更多资源，则必须进行身份认证。不过，身份认证的防护效果严重依赖于业务身份的获取成本，一方面是身份的注册成本，另一方面是身份的登录认证成本，此外也跟身份处罚（A20）的严厉性息息相关。"
+    },
+    "A19": {
+      "title": "身份行为审计",
+      "summary": "对用户访问行为进行持续性审计，以发现用户账号风险。",
+      "description": "与风控策略（A15）的风险监控机制类似，身份的行为监控和风险性判断同样是一种审计性防护手段。不过两者的防护主体和客体不同，风控的防护主体是业务，客体是用户；而身份行为审计的防护主体是用户，客体是攻击者。身份行为审计是一种常用的评估身份安全性的手段，不过在审计出异常后，需要结合身份的其他手段使用，如：身份再认证（A18）、多因素认证（A07）、强制改密（A12）等。"
+    },
+    "A20": {
+      "title": "身份处罚策略",
+      "summary": "增加对相关账号的处罚策略，在触碰相关规则时对账号进行处罚，并禁止相关行为或动作。",
+      "description": "身份处罚策略是限制不合法或不合规用户对业务造成持续性破坏的一种有效手段。身份处罚可以有两个层面：一是对账户本身的限制，譬如一定期限内禁用、警告公示、取消授权等；二是对账户可访问资源的限制，如禁用特殊的业务功能、限制资源使用频次、删除资源或限制非法资源访问等。"
+    },
+    "A21": {
+      "title": "终端标记",
+      "summary": "通过设备指纹、永久Cookies、IMEI、MAC地址等方式对终端进行唯一标记",
+      "description": "终端标记通常可以通过隐蔽标记埋点、设备ID获取、批量设备特征采集计算来获得。终端标记一般会应用在两种场景：一种是跨应用的同一设备识别标记场景，目的是为了实现用户从一个应用跳转到另一个应用的有效跟踪，以便计算广告推广过程中的有效点击或有效安装；另一种是同一应用的不同设备标记场景，目的是为了替代用户账户实现对匿名用户唯一访问终端的持续性跟踪。由于无法保证终端数据完整性，再加上法律法规对用户隐私性要求，终端标记的制约性较强，仅在一定情况下保持有效。"
+    },
+    "A22": {
+      "title": "协议加密",
+      "summary": "对接口收发协议进行加密。",
+      "description": "协议加密的目的主要是为了保证网络链路中的数据保密性和完整性，相关法律法规对于敏感数据传输加密也有合规性要求。需要注意的是，协议加密在用户终端并不能保证数据不被截获或篡改，这是由于加解密逻辑在终端实现决定的。有些业务会试图通过协议加密来防御终端请求的重复性提交和业务流程自动化，为了保障加密协议不被轻易逆向，可以采用访问端代码混淆（A13）来进行一定的防御。"
+    },
+    "A23": {
+      "title": "生物特征识别",
+      "summary": "通过对人体的生物特征进行识别和比对，判断用户身份。",
+      "description": "人脸、面容、指纹、声纹、虹膜、步态、掌纹、静脉纹路、DNA等都属于具备一定唯一性的人体生物特征。目前在移动设备上常用于远程比对的主要是人脸、面容、声纹等。由于图像和声音在防伪上的先天劣势，人脸识别、声纹识别有着非常激烈的对抗战场，目前主要用于在基本身份认证（A18）和双因素验证（A07）外的第三验证，相比盗号防御而言，更多地是防止身份仿冒。"
+    }
+  }
+}
