@@ -1,11 +1,15 @@
 <script setup lang="ts">
 import BREAK from "@/i18n/zh-CN/BREAK.json";
 import RiskDetail from "@/components/RiskDetail.vue";
-import { ref } from "vue";
+import { ref, watch } from "vue";
+import { useRouter, useRoute } from "vue-router";
 
 import "element-plus/es/components/row/style/css";
 import "element-plus/es/components/col/style/css";
 import { ElRow, ElCol } from "element-plus";
+
+const router = useRouter();
+const route = useRoute();
 
 let getRisks = (rsKey: String) =>
     BREAK.riskScenes[rsKey as keyof typeof BREAK.riskScenes].risks;
@@ -15,12 +19,25 @@ let riskKey = ref("");
 let showRiskDetail = (riskKey1: string, drawer1: boolean) => {
     drawer.value = drawer1;
     riskKey.value = riskKey1;
-    // console.log(riskKey.value, drawer.value);
 };
+
+if (route.name == "riskDetail") {
+    showRiskDetail(route.params.rKey as string, true);
+}
+watch(
+    () => route.params.rKey,
+    async () => {
+        if (route.name == "riskDetail") {
+            showRiskDetail(route.params.rKey as string, true);
+        }
+    }
+);
 
 let riskDetailClose = () => {
     drawer.value = false;
-    // console.log("close");
+    router.push({
+        name: "home",
+    });
 };
 </script>
 
@@ -69,9 +86,9 @@ let riskDetailClose = () => {
                             :key="rKey"
                             :title="rKey"
                         >
-                            <a href="#" @click="showRiskDetail(rKey, true)">{{
+                            <router-link :to="'/risk/' + rKey">{{
                                 $t(`BREAK.risks.${rKey}.title`)
-                            }}</a>
+                            }}</router-link>
                         </li>
                     </ul>
                 </el-col>

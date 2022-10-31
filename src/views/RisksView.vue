@@ -43,9 +43,11 @@ let riskDetailClose = () => {
     <el-table :data="risks" stripe border>
         <el-table-column prop="rKey" width="100" :label="$t('riskKey')">
             <template v-slot="scope">
-                <a @click="showRiskDetail(scope.row.rKey, true)" href="#">{{
-                    scope.row.rKey
-                }}</a>
+                <a
+                    @click="showRiskDetail(scope.row.rKey, true)"
+                    href="javascript:void(0);"
+                    >{{ scope.row.rKey }}</a
+                >
             </template>
         </el-table-column>
         <el-table-column prop="title" width="200" :label="$t('riskTitle')">
