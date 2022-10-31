@@ -31,7 +31,7 @@ watch(
         @closed="$emit('drawerClose')"
         :title="$t('riskDetail')"
         direction="rtl"
-        size="40%"
+        :size="400"
     >
         <div class="desc">
             <strong>{{ $t("riskKey") }}:&nbsp;</strong>
@@ -105,6 +105,7 @@ watch(
             v-model="innerDrawer"
             :title="$t('avoidance')"
             :append-to-body="true"
+            :size="300"
         >
             <div class="desc">
                 <strong>{{ $t("ID") }}:&nbsp;</strong>
