@@ -5,22 +5,22 @@ import BREAK from "@/i18n/zh-CN/BREAK.json";
 import "element-plus/es/components/drawer/style/css";
 import { ElDrawer } from "element-plus";
 
-const risks = BREAK.risks;
-const drawer = ref(false);
-const innerDrawer = ref(false);
-const avoidanceKey = ref("");
-
 const props = defineProps<{
     drawer: boolean;
     rKey: string;
 }>();
 defineEmits(["drawerClose"]);
 
+const risks = BREAK.risks;
+const innerDrawer = ref(false);
+const avoidanceKey = ref("");
+const drawer = ref(false);
+drawer.value = props.drawer;
+
 watch(
     () => props.rKey + props.drawer,
     () => {
         drawer.value = props.drawer;
-        // console.log(props.rKey, props.drawer);
     }
 );
 </script>
@@ -65,7 +65,7 @@ watch(
                     :key="aKey"
                 >
                     <a
-                        href="#"
+                        href="javascript:void(0);"
                         @click="
                             avoidanceKey = aKey;
                             innerDrawer = true;
