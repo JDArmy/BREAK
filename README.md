@@ -147,5 +147,5 @@ JDArmy BREAK 是英文“Business Risk Enumeration & Avoidance Kownledge”的�
 
 ## 链接
 
-框架地址：[[https://break.jd.army/]]
-Github：[[https://github.com/JDArmy/BREAK]]
+- 框架地址：https://break.jd.army/
+- Github：https://github.com/JDArmy/BREAK
