@@ -21,8 +21,8 @@ Object.keys(BREAK.avoidances).forEach((aKey) => {
 <template lang="">
     <h3>{{ $t("menu.avoidances") }}</h3>
     <el-table :data="avoidances" stripe border>
-        <el-table-column prop="aKey" width="100" :label="$t('ID')" />
-        <el-table-column width="200" :label="$t('title')">
+        <el-table-column prop="aKey" width="80px" :label="$t('ID')" />
+        <el-table-column width="100px" :label="$t('title')">
             <template #header>{{ $t("title") }}</template>
             <template #default="scope">
                 {{

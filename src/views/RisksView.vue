@@ -41,7 +41,7 @@ let riskDetailClose = () => {
 <template lang="">
     <h3>{{ $t("menu.risks") }}</h3>
     <el-table :data="risks" stripe border>
-        <el-table-column prop="rKey" width="100" :label="$t('riskKey')">
+        <el-table-column prop="rKey" width="80px" :label="$t('riskKey')">
             <template v-slot="scope">
                 <a
                     @click="showRiskDetail(scope.row.rKey, true)"
@@ -50,7 +50,7 @@ let riskDetailClose = () => {
                 >
             </template>
         </el-table-column>
-        <el-table-column prop="title" width="200" :label="$t('riskTitle')">
+        <el-table-column prop="title" width="100px" :label="$t('riskTitle')">
             <template #default="scope">
                 {{
                     scope.row.rKey

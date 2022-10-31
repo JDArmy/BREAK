@@ -44,6 +44,9 @@ const handleCommand = (command: keyof typeof languages) => {
         :ellipsis="false"
         :router="true"
     >
+        <div class="hidden-md-and-up">
+            <h3 class="banner">BREAK</h3>
+        </div>
         <div class="hidden-sm-and-down">
             <h3 class="banner">
                 {{ $t("BREAK.title") }}
@@ -57,6 +60,11 @@ const handleCommand = (command: keyof typeof languages) => {
         <el-menu-item index="/avoidances">{{
             $t("menu.avoidances")
         }}</el-menu-item>
+        <span class="github">
+            <a href="https://github.com/JDArmy/BREAK" target="_blank">
+                <icon-github />
+            </a>
+        </span>
         <el-dropdown @command="handleCommand">
             <span class="el-dropdown-link">
                 <icon-translate />
@@ -74,11 +82,6 @@ const handleCommand = (command: keyof typeof languages) => {
                 </el-dropdown-menu>
             </template>
         </el-dropdown>
-        <span class="github">
-            <a href="https://github.com/JDArmy/BREAK" target="_blank">
-                <icon-github />
-            </a>
-        </span>
     </el-menu>
 </template>
 
