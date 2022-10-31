@@ -60,12 +60,12 @@ const handleCommand = (command: keyof typeof languages) => {
         <el-menu-item index="/avoidances">{{
             $t("menu.avoidances")
         }}</el-menu-item>
-        <span class="github">
+        <span class="github hidden-sm-and-down">
             <a href="https://github.com/JDArmy/BREAK" target="_blank">
                 <icon-github />
             </a>
         </span>
-        <el-dropdown @command="handleCommand">
+        <el-dropdown class="hidden-sm-and-down" @command="handleCommand">
             <span class="el-dropdown-link">
                 <icon-translate />
             </span>

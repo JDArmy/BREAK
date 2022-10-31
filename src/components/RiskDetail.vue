@@ -23,6 +23,14 @@ watch(
         drawer.value = props.drawer;
     }
 );
+
+const getDrawerWidth = () => {
+    return window.innerWidth > 600 ? 600 : "100%";
+};
+
+const getInnerDrawerWidth = () => {
+    return window.innerWidth > 600 ? 450 : "100%";
+};
 </script>
 
 <template>
@@ -31,7 +39,7 @@ watch(
         @closed="$emit('drawerClose')"
         :title="$t('riskDetail')"
         direction="rtl"
-        :size="400"
+        :size="getDrawerWidth()"
     >
         <div class="desc">
             <strong>{{ $t("riskKey") }}:&nbsp;</strong>
@@ -105,7 +113,7 @@ watch(
             v-model="innerDrawer"
             :title="$t('avoidance')"
             :append-to-body="true"
-            :size="300"
+            :size="getInnerDrawerWidth()"
         >
             <div class="desc">
                 <strong>{{ $t("ID") }}:&nbsp;</strong>

@@ -7,6 +7,7 @@ import "element-plus/es/components/header/style/css";
 import "element-plus/es/components/main/style/css";
 import "element-plus/es/components/footer/style/css";
 import { ElContainer, ElHeader, ElMain, ElFooter } from "element-plus";
+import iconGithub from "@/components/icons/iconGithub.vue";
 </script>
 
 <template>
@@ -21,7 +22,17 @@ import { ElContainer, ElHeader, ElMain, ElFooter } from "element-plus";
             </el-main>
 
             <el-footer>
-                <div class="footer">©2022 JD.Army</div>
+                <div class="footer">
+                    ©2022 JD.Army
+                    <span class="github">
+                        <a
+                            href="https://github.com/JDArmy/BREAK"
+                            target="_blank"
+                        >
+                            <icon-github />
+                        </a>
+                    </span>
+                </div>
             </el-footer>
         </el-container>
     </div>
@@ -55,5 +66,9 @@ import { ElContainer, ElHeader, ElMain, ElFooter } from "element-plus";
     font-size: 50%;
     padding: 5px 0 10px 0;
     border-top: 1px solid rgb(213, 213, 213);
+}
+
+.github {
+    font-size: 150%;
 }
 </style>

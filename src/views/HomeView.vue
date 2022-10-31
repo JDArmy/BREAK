@@ -67,7 +67,7 @@ let riskDetailClose = () => {
                     v-for="rsKey in rdVal.riskScenes"
                     :key="rsKey"
                     :title="rsKey"
-                    :span="24 / rdVal.riskScenes.length"
+                    :md="24 / rdVal.riskScenes.length"
                 >
                     <h4 class="risk-scene-title">
                         <!-- <a :href="'/risk-demensions/' + rdKey"> -->
