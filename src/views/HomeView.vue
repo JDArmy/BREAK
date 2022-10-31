@@ -44,20 +44,16 @@ let riskDetailClose = () => {
 <template>
     <el-row>
         <!-- 风险场景 -->
-        <div
+        <el-col
             class="risk-dimension"
             v-for="(rdVal, rdKey) in BREAK.riskDimensions"
             :key="rdKey"
-            :style="
-                'width:' +
-                parseInt(
-                    (
-                        (rdVal.riskScenes.length /
-                            Object.keys(BREAK.riskScenes).length) *
-                        100
-                    ).toString()
-                ) +
-                '%'
+            :md="
+                Math.round(
+                    (rdVal.riskScenes.length /
+                        Object.keys(BREAK.riskScenes).length) *
+                        24
+                )
             "
         >
             <h3 class="risk-dimension-title" :title="rdKey">
@@ -93,7 +89,7 @@ let riskDetailClose = () => {
                     </ul>
                 </el-col>
             </el-row>
-        </div>
+        </el-col>
         <RiskDetail
             v-on:drawer-close="riskDetailClose"
             :drawer="drawer"
