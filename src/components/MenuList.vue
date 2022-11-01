@@ -44,8 +44,8 @@ const handleCommand = (command: keyof typeof languages) => {
         :ellipsis="false"
         :router="true"
     >
-        <div class="hidden-md-and-up">
-            <h3 class="banner">BREAK</h3>
+        <div class="hidden-md-and-up sm-banner">
+            <h3 class="banner">{{ $t("BREAK.title") }}</h3>
         </div>
         <div class="hidden-sm-and-down">
             <h3 class="banner">
@@ -54,10 +54,14 @@ const handleCommand = (command: keyof typeof languages) => {
             </h3>
             <h6 class="description">{{ $t("BREAK.description") }}</h6>
         </div>
-        <div class="flex-grow" />
-        <el-menu-item index="/">{{ $t("menu.home") }}</el-menu-item>
-        <el-menu-item index="/risks">{{ $t("menu.risks") }}</el-menu-item>
-        <el-menu-item index="/avoidances">{{
+        <div class="flex-grow hidden-sm-and-down" />
+        <el-menu-item class="hidden-sm-and-down" index="/">{{
+            $t("menu.home")
+        }}</el-menu-item>
+        <el-menu-item class="hidden-sm-and-down" index="/risks">{{
+            $t("menu.risks")
+        }}</el-menu-item>
+        <el-menu-item class="hidden-sm-and-down" index="/avoidances">{{
             $t("menu.avoidances")
         }}</el-menu-item>
         <span class="github hidden-sm-and-down">
@@ -100,6 +104,11 @@ const handleCommand = (command: keyof typeof languages) => {
     padding-left: 10px;
     padding-bottom: 0px;
     margin-bottom: 0px;
+}
+
+.sm-banner {
+    text-align: center;
+    width: 100%;
 }
 
 .description {

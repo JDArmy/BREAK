@@ -19,6 +19,12 @@ import iconGithub from "@/components/icons/iconGithub.vue";
 
             <el-main>
                 <RouterView />
+                <div
+                    class="hidden-md-and-up"
+                    style="text-align: center; margin-top: 20px; color: grey"
+                >
+                    {{ $t("seeMoreInDesktop") }}
+                </div>
             </el-main>
 
             <el-footer>
