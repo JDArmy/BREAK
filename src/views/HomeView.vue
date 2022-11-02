@@ -11,137 +11,175 @@ import { ElRow, ElCol } from "element-plus";
 const router = useRouter();
 const route = useRoute();
 
-let getRisks = (rsKey: String) =>
-    BREAK.riskScenes[rsKey as keyof typeof BREAK.riskScenes].risks;
+//分场景查看弱点
+let sceneBREAK = ref(BREAK);
+const bsKeySelected = ref("");
+watch(bsKeySelected, async () => {
+  if (!bsKeySelected.value.match(/BS[0-9]{2}/)) {
+    bsKeySelected.value = "";
+    sceneBREAK.value = BREAK;
+  } else {
+    sceneBREAK.value = await import(`@/scenes/${bsKeySelected.value}.json`);
+  }
+});
 
+let getRisks = (
+  riskScenes: typeof sceneBREAK.value.riskScenes,
+  rsKey: string
+) => {
+  return riskScenes[rsKey as keyof typeof sceneBREAK.value.riskScenes].risks;
+};
+
+/////////////////////////////////////////////////////////////////////
+//start: 查看风险细节
 let drawer = ref(false);
 let riskKey = ref("");
 let showRiskDetail = (riskKey1: string, drawer1: boolean) => {
-    drawer.value = drawer1;
-    riskKey.value = riskKey1;
+  drawer.value = drawer1;
+  riskKey.value = riskKey1;
 };
 
 if (route.name == "riskDetail") {
-    showRiskDetail(route.params.rKey as string, true);
+  showRiskDetail(route.params.rKey as string, true);
 }
 watch(
-    () => route.params.rKey,
-    async () => {
-        if (route.name == "riskDetail") {
-            showRiskDetail(route.params.rKey as string, true);
-        }
+  () => route.params.rKey,
+  async () => {
+    if (route.name == "riskDetail") {
+      showRiskDetail(route.params.rKey as string, true);
     }
+  }
 );
 
 let riskDetailClose = () => {
-    drawer.value = false;
-    router.push({
-        name: "home",
-    });
+  drawer.value = false;
+  router.push({
+    name: "home",
+  });
 };
+//end.
 </script>
 
 <template>
-    <el-row>
-        <!-- 风险场景 -->
-        <el-col
-            class="risk-dimension"
-            v-for="(rdVal, rdKey) in BREAK.riskDimensions"
-            :key="rdKey"
-            :md="
-                Math.round(
-                    (rdVal.riskScenes.length /
-                        Object.keys(BREAK.riskScenes).length) *
-                        24
-                )
-            "
-        >
-            <h3 class="risk-dimension-title" :title="rdKey">
-                {{ $t(`BREAK.riskDimensions.${rdKey}.title`) }}
-            </h3>
+  <el-row class="header">
+    <el-col :span="24" :offset="0" style="text-align: center">
+      <h3 style="margin-bottom: 0">{{ $t("BREAK.title") }}</h3>
+      <h6 style="color: gray">{{ $t("BREAK.description") }}</h6>
+    </el-col>
 
-            <el-row>
-                <!-- 风险维度 -->
-                <el-col
-                    class="risk-scene"
-                    v-for="rsKey in rdVal.riskScenes"
-                    :key="rsKey"
-                    :title="rsKey"
-                    :md="24 / rdVal.riskScenes.length"
-                >
-                    <h4 class="risk-scene-title">
-                        <!-- <a :href="'/risk-demensions/' + rdKey"> -->
-                        {{ $t(`BREAK.riskScenes.${rsKey}.title`) }}
-                        <!-- </a> -->
-                    </h4>
-                    <ul>
-                        <!-- 风险列表 -->
-                        <li
-                            class="risk"
-                            v-for="rKey in getRisks(rsKey)"
-                            :key="rKey"
-                            :title="rKey"
-                        >
-                            <router-link :to="'/risk/' + rKey">{{
-                                $t(`BREAK.risks.${rKey}.title`)
-                            }}</router-link>
-                        </li>
-                    </ul>
-                </el-col>
-            </el-row>
-        </el-col>
-        <RiskDetail
-            v-on:drawer-close="riskDetailClose"
-            :drawer="drawer"
-            :rKey="riskKey"
+    <el-col>
+      <el-select v-model="bsKeySelected" :placeholder="$t('allScenes')">
+        <el-option key="" :label="$t('allScenes')" value=""></el-option>
+        <el-option
+          v-for="(bsVal, bsKey) in BREAK.businessScenes"
+          :key="bsKey"
+          :label="bsVal.title"
+          :value="bsKey"
         />
-    </el-row>
+      </el-select>
+    </el-col>
+  </el-row>
+
+  <el-row>
+    <!-- 风险场景 -->
+    <el-col
+      class="risk-dimension"
+      v-for="(rdVal, rdKey) in sceneBREAK.riskDimensions"
+      :key="rdKey"
+      :md="
+        Math.round(
+          (rdVal.riskScenes.length /
+            Object.keys(sceneBREAK.riskScenes).length) *
+            24
+        )
+      "
+    >
+      <h3 class="risk-dimension-title" :title="rdKey">
+        {{ $t(`BREAK.riskDimensions.${rdKey}.title`) }}
+      </h3>
+
+      <el-row>
+        <!-- 风险维度 -->
+        <el-col
+          class="risk-scene"
+          v-for="rsKey in rdVal.riskScenes"
+          :key="rsKey"
+          :title="rsKey"
+          :md="24 / rdVal.riskScenes.length"
+        >
+          <h4 class="risk-scene-title">
+            <!-- <a :href="'/risk-demensions/' + rdKey"> -->
+            {{ $t(`BREAK.riskScenes.${rsKey}.title`) }}
+            <!-- </a> -->
+          </h4>
+          <ul class="risk-list">
+            <!-- 风险列表 -->
+            <li
+              class="risk"
+              v-for="rKey in getRisks(sceneBREAK.riskScenes, rsKey)"
+              :key="rKey"
+              :title="rKey"
+            >
+              <router-link :to="'/risk/' + rKey">{{
+                $t(`BREAK.risks.${rKey}.title`)
+              }}</router-link>
+            </li>
+          </ul>
+        </el-col>
+      </el-row>
+    </el-col>
+    <RiskDetail
+      v-on:drawer-close="riskDetailClose"
+      :drawer="drawer"
+      :rKey="riskKey"
+    />
+  </el-row>
 </template>
 
 <style scoped>
+.header {
+  margin-bottom: 10px;
+}
 .risk-dimension {
-    border: 1px solid rgb(246, 245, 245);
-    box-sizing: border-box;
-    padding-bottom: 10px;
+  border: 1px solid rgb(246, 245, 245);
+  box-sizing: border-box;
+  padding-bottom: 10px;
 }
 
 .risk-scene {
-    padding: 3px;
+  padding: 3px;
 }
 
 .risk-scene-title,
 .risk-dimension-title {
-    margin-bottom: 5px;
-    color: var(--el-text-color-primary);
-    text-align: center;
+  margin-bottom: 5px;
+  color: var(--el-text-color-primary);
+  text-align: center;
+}
+
+.risk-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .risk {
-    font-size: 1em;
-    padding: 3px 0;
-    text-align: center;
+  font-size: 1em;
+  padding: 3px 0;
+  text-align: center;
+  border: 1px solid lightgray;
 }
 .risk:hover {
-    background-color: rgb(210, 212, 253);
+  background-color: rgb(210, 212, 253);
 }
 
-a {
-    color: #4f7cac;
-    text-decoration: none;
-    display: block;
+.risk a {
+  color: #4f7cac;
+  text-decoration: none;
+  display: block;
 }
 
-a:hover {
-    color: #002b58;
-}
-
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-li {
-    border: 1px solid lightgray;
+.risk a:hover {
+  color: #002b58;
 }
 </style>
