@@ -76,9 +76,9 @@ const handleCommand = (command: keyof typeof languages) => {
             key=""
             >{{ $t("businessScenes") }}</el-menu-item
         > -->
-    <!-- <el-menu-item class="" index="/ability-providers" key="">{{
+    <el-menu-item class="" index="/ability-providers" key="">{{
       $t("abilityProviders")
-    }}</el-menu-item> -->
+    }}</el-menu-item>
 
     <span class="github">
       <a href="https://github.com/JDArmy/BREAK" target="_blank">
