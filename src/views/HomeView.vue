@@ -162,7 +162,7 @@ let riskDetailClose = () => {
                     ⩦
                   </td>
                   <td class="parent-risk-link">
-                    <router-link :to="'/risk/' + rKey">{{
+                    <router-link class="link" :to="'/risk/' + rKey">{{
                       $t(`BREAK.risks.${rKey}.title`)
                     }}</router-link>
                   </td>
@@ -179,7 +179,7 @@ let riskDetailClose = () => {
                     style="border-right: 1px solid lightgray"
                   ></td>
                   <td class="sub-risk-link">
-                    <router-link :to="'/risk/' + srKey">{{
+                    <router-link class="link" :to="'/risk/' + srKey">{{
                       $t(`BREAK.risks.${srKey}.title`)
                     }}</router-link>
                   </td>
@@ -187,7 +187,7 @@ let riskDetailClose = () => {
                 </tr>
               </table>
               <!-- 无子风险时 -->
-              <router-link v-else :to="'/risk/' + rKey">{{
+              <router-link class="link" v-else :to="'/risk/' + rKey">{{
                 $t(`BREAK.risks.${rKey}.title`)
               }}</router-link>
             </li>
@@ -259,7 +259,7 @@ let riskDetailClose = () => {
 .risk a,
 .s-risk a,
 .sub-risk a {
-  color: #7196be;
+  color: #294e76;
   text-decoration: none;
   display: inline-block;
 }
@@ -272,5 +272,12 @@ let riskDetailClose = () => {
 
 .sidebar {
   width: 5px;
+}
+
+.link {
+  display: block;
+  height: 100%;
+  width: 100%;
+  font-size: 90%;
 }
 </style>

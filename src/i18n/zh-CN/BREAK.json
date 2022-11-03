@@ -93,7 +93,8 @@
         "R0021",
         "R0022",
         "R0024",
-        "R0066"
+        "R0066",
+        "R0069"
       ]
     },
     "RS06": {
@@ -1422,6 +1423,33 @@
       "attack": "通过批量搜索、数据爬取等方式获取过期、假冒伪劣、违规（如：包含广告法违禁词、商品不合规）等商品，订单产生后买家投诉卖家存在违规，目的以撤销投诉为由索取高额钱款。",
       "complexity": "中级",
       "influence": "给平台或卖家带来经济损失",
+      "avoidances": [],
+      "references": []
+    },
+    "R0069": {
+      "title": "文件上传滥用",
+      "description": "利用业务系统的正常文件上传功能上传非预期文件",
+      "attack": "",
+      "complexity": "低级",
+      "influence": "",
+      "avoidances": [],
+      "references": []
+    },
+    "R0069-001": {
+      "title": "图床滥用",
+      "description": "",
+      "attack": "",
+      "complexity": "低级",
+      "influence": "",
+      "avoidances": [],
+      "references": []
+    },
+    "R0069-002": {
+      "title": "云存储滥用",
+      "description": "",
+      "attack": "",
+      "complexity": "低级",
+      "influence": "",
       "avoidances": [],
       "references": []
     }
