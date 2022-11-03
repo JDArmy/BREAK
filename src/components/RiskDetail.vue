@@ -31,6 +31,11 @@ const getDrawerWidth = () => {
 const getInnerDrawerWidth = () => {
   return window.innerWidth > 600 ? 450 : "100%";
 };
+
+const getAvoidanceReferences = (avoidanceKey: string) => {
+  return BREAK.avoidances[avoidanceKey as keyof typeof BREAK.avoidances]
+    .references;
+};
 </script>
 
 <template>
@@ -87,13 +92,13 @@ const getInnerDrawerWidth = () => {
       <strong>{{ $t("riskReference") }}:&nbsp;</strong>
       <ul>
         <li
-          v-for="(reference,refIdx) in risks[rKey as keyof typeof risks].reference"
+          v-for="(reference,refIdx) in risks[rKey as keyof typeof risks].references"
         >
           <a :href="reference.link" v-if="reference.link" target="_blank">{{
-            $t(`BREAK.risks.${rKey}.reference[${refIdx}].title`)
+            $t(`BREAK.risks.${rKey}.references[${refIdx}].title`)
           }}</a>
           <span v-else>
-            {{ $t(`BREAK.risks.${rKey}.reference[${refIdx}].title`) }}
+            {{ $t(`BREAK.risks.${rKey}.references[${refIdx}].title`) }}
           </span>
         </li>
       </ul>
@@ -121,9 +126,20 @@ const getInnerDrawerWidth = () => {
         {{ $t(`BREAK.avoidances.${avoidanceKey}.description`) }}
       </div>
       <div class="desc">
-        <strong>{{ $t("abilityProviders") }}:&nbsp;</strong>
-        todo.
-        <div class="ability-providers-info">以上排名不分先后</div>
+        <strong>{{ $t("references") }}:&nbsp;</strong>
+        <ul>
+          <li
+            v-for="(reference, refIdx) in getAvoidanceReferences(avoidanceKey)"
+          >
+            <a :href="reference.link" target="_blank">
+              {{
+                $t(
+                  `BREAK.avoidances.${avoidanceKey}.references[${refIdx}].title`
+                )
+              }}
+            </a>
+          </li>
+        </ul>
       </div>
     </el-drawer>
   </el-drawer>

@@ -3,7 +3,7 @@ import BREAK from "@/i18n/zh-CN/BREAK.json";
 
 import "element-plus/es/components/table/style/css";
 import "element-plus/es/components/table-column/style/css";
-import { ElTable, ElTableColumn } from "element-plus";
+// import { ElTable, ElTableColumn } from "element-plus";
 
 let avoidanceCategories = Object.keys(BREAK.avoidanceCategories);
 let avoidances = Object();
@@ -60,6 +60,21 @@ avoidanceCategories.forEach((acKey) => {
               ? $t(`BREAK.avoidances.${scope.row.aKey}.description`)
               : ""
           }}
+        </template>
+      </el-table-column>
+      <el-table-column width="250px" :label="$t('references')">
+        <template #default="scope">
+          <ul>
+            <li v-for="(reference, refIdx) in scope.row.references">
+              <a :href="reference.link" target="_blank">{{
+                scope.row.aKey
+                  ? $t(
+                      `BREAK.avoidances.${scope.row.aKey}.references[${refIdx}].title`
+                    )
+                  : ""
+              }}</a>
+            </li>
+          </ul>
         </template>
       </el-table-column>
     </el-table>
