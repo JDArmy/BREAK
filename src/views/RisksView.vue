@@ -4,7 +4,7 @@ import BREAK from "@/i18n/zh-CN/BREAK.json";
 
 import "element-plus/es/components/table/style/css";
 import "element-plus/es/components/table-column/style/css";
-import { ElTable, ElTableColumn } from "element-plus";
+// import { ElTable, ElTableColumn } from "element-plus";
 
 let risks = Array();
 Object.keys(BREAK.risks).forEach((rKey) => {
@@ -41,7 +41,7 @@ let riskDetailClose = () => {
 <template lang="">
   <h3>{{ $t("menu.risks") }}</h3>
   <el-table :data="risks" stripe border>
-    <el-table-column prop="rKey" width="100px" :label="$t('riskKey')">
+    <el-table-column prop="rKey" width="120px" :label="$t('riskKey')">
       <template v-slot="scope">
         <a
           @click="showRiskDetail(scope.row.rKey, true)"
@@ -50,7 +50,7 @@ let riskDetailClose = () => {
         >
       </template>
     </el-table-column>
-    <el-table-column prop="title" width="100px" :label="$t('riskTitle')">
+    <el-table-column prop="title" width="150px" :label="$t('riskTitle')">
       <template #default="scope">
         {{ scope.row.rKey ? $t(`BREAK.risks.${scope.row.rKey}.title`) : "" }}
       </template>

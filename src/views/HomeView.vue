@@ -11,7 +11,7 @@ import { ElRow, ElCol } from "element-plus";
 const router = useRouter();
 const route = useRoute();
 
-//分场景查看弱点
+//分场景查看风险
 let sceneBREAK = ref(BREAK);
 const bsKeySelected = ref("");
 watch(bsKeySelected, async () => {
@@ -19,7 +19,12 @@ watch(bsKeySelected, async () => {
     bsKeySelected.value = "";
     sceneBREAK.value = BREAK;
   } else {
-    sceneBREAK.value = await import(`@/scenes/${bsKeySelected.value}.json`);
+    const exJson =
+      BREAK.businessScenes[
+        bsKeySelected.value as keyof typeof BREAK.businessScenes
+      ].exJson;
+    sceneBREAK.value = await import(`@/scenes/${exJson}.json`);
+    // sceneBREAK.value = await import(`@/scenes/${bsKeySelected.value}.json`);
   }
 });
 
@@ -29,6 +34,23 @@ let getRisks = (
 ) => {
   return riskScenes[rsKey as keyof typeof sceneBREAK.value.riskScenes].risks;
 };
+
+//子风险筛选
+const getSubRisks = (prKey: string) => {
+  return Object.keys(BREAK.risks).filter(
+    (rKey) => rKey.includes("-") && rKey.split("-")[0] == prKey
+  );
+};
+
+let subRisks = ref(Object());
+Object.keys(BREAK.risks).forEach((prKey) => {
+  if (prKey.includes("-")) return;
+  let srKeys = getSubRisks(prKey);
+  if (srKeys.length > 0) {
+    subRisks.value[prKey] = srKeys;
+  }
+});
+// console.log(subRisks.value);
 
 /////////////////////////////////////////////////////////////////////
 //start: 查看风险细节
@@ -63,7 +85,9 @@ let riskDetailClose = () => {
 <template>
   <el-row class="header">
     <el-col :span="24" :offset="0" style="text-align: center">
-      <h3 style="margin-bottom: 0">{{ $t("BREAK.title") }}</h3>
+      <h3 style="margin-bottom: 0">
+        {{ $t("BREAK.title") }} v{{ BREAK.version }}
+      </h3>
       <h6 style="color: gray">{{ $t("BREAK.description") }}</h6>
     </el-col>
 
@@ -120,7 +144,50 @@ let riskDetailClose = () => {
               :key="rKey"
               :title="rKey"
             >
-              <router-link :to="'/risk/' + rKey">{{
+              <!-- 子风险列表 -->
+              <table
+                class="risk-with-sub"
+                style="width: 100%; border-spacing: 0px"
+                v-if="subRisks[rKey]"
+              >
+                <tr>
+                  <td
+                    class="sidebar"
+                    style="
+                      color: #fff;
+                      background-color: lightgray;
+                      cursor: pointer;
+                    "
+                  >
+                    ⩦
+                  </td>
+                  <td class="parent-risk-link">
+                    <router-link :to="'/risk/' + rKey">{{
+                      $t(`BREAK.risks.${rKey}.title`)
+                    }}</router-link>
+                  </td>
+                  <td style="width: 1px"></td>
+                </tr>
+                <tr
+                  class="sub-risk"
+                  :key="srKey"
+                  :title="srKey"
+                  v-for="srKey in subRisks[rKey]"
+                >
+                  <td
+                    class="sidebar"
+                    style="border-right: 1px solid lightgray"
+                  ></td>
+                  <td class="sub-risk-link">
+                    <router-link :to="'/risk/' + srKey">{{
+                      $t(`BREAK.risks.${srKey}.title`)
+                    }}</router-link>
+                  </td>
+                  <td style="width: 1px"></td>
+                </tr>
+              </table>
+              <!-- 无子风险时 -->
+              <router-link v-else :to="'/risk/' + rKey">{{
                 $t(`BREAK.risks.${rKey}.title`)
               }}</router-link>
             </li>
@@ -163,23 +230,36 @@ let riskDetailClose = () => {
   padding: 0;
 }
 
-.risk {
+.risk,
+.sub-risk-link {
   font-size: 1em;
   padding: 3px 0;
   text-align: center;
   border: 1px solid lightgray;
 }
+
 .risk:hover {
-  background-color: rgb(210, 212, 253);
+  background-color: rgb(245, 246, 252);
 }
 
-.risk a {
-  color: #4f7cac;
+.sub-risk-link:hover {
+  background-color: rgb(228, 230, 241);
+}
+
+.risk a,
+.sub-risk a {
+  color: #7196be;
   text-decoration: none;
-  display: block;
+  display: inline-block;
 }
 
-.risk a:hover {
+.risk a:hover,
+.sub-risk a:hover {
   color: #002b58;
+}
+
+.sidebar {
+  width: 5px;
+  font-size: 5px;
 }
 </style>
