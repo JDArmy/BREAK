@@ -139,7 +139,7 @@ let riskDetailClose = () => {
           <ul class="risk-list">
             <!-- 风险列表 -->
             <li
-              class="risk"
+              :class="subRisks[rKey] ? 's-risk' : 'risk'"
               v-for="rKey in getRisks(sceneBREAK.riskScenes, rsKey)"
               :key="rKey"
               :title="rKey"
@@ -156,7 +156,7 @@ let riskDetailClose = () => {
                     style="
                       color: #fff;
                       background-color: lightgray;
-                      cursor: pointer;
+                      border-radius: 0 0 0 20px;
                     "
                   >
                     ⩦
@@ -232,13 +232,23 @@ let riskDetailClose = () => {
 
 .risk,
 .sub-risk-link {
+  padding: 3px 0 3px 0;
+}
+
+.s-risk {
+  padding: 0 0 3px 0;
+}
+
+.risk,
+.s-risk,
+.sub-risk-link {
   font-size: 1em;
-  padding: 3px 0;
   text-align: center;
   border: 1px solid lightgray;
 }
 
-.risk:hover {
+.risk:hover,
+.s-risk:hover {
   background-color: rgb(245, 246, 252);
 }
 
@@ -247,6 +257,7 @@ let riskDetailClose = () => {
 }
 
 .risk a,
+.s-risk a,
 .sub-risk a {
   color: #7196be;
   text-decoration: none;
@@ -254,12 +265,12 @@ let riskDetailClose = () => {
 }
 
 .risk a:hover,
+.s-risk a:hover,
 .sub-risk a:hover {
   color: #002b58;
 }
 
 .sidebar {
   width: 5px;
-  font-size: 5px;
 }
 </style>
