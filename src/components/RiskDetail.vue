@@ -155,8 +155,13 @@ const getEventLink = (eKey: unknown) =>
                 $t(
                   `BREAK.avoidances.${avoidanceKey}.references[${refIdx}].title`
                 )
-              }}
-            </a>
+              }} </a
+            >:
+            {{
+              $t(
+                `BREAK.avoidances.${avoidanceKey}.references[${refIdx}].description`
+              )
+            }}
           </li>
         </ul>
       </div>

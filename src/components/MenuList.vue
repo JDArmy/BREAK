@@ -46,6 +46,9 @@ const handleCommand = (command: keyof typeof languages) => {
     class="hidden-md-and-up"
     style="height: 100%"
   >
+    <div style="position: absolute; left: 0; top: 0">
+      <img src="/logo.png" width="50" alt="" />
+    </div>
     <h3 class="banner" style="text-align: center; width: 100%; height: 100%">
       {{ $t("BREAK.name") }}
     </h3>
@@ -62,8 +65,15 @@ const handleCommand = (command: keyof typeof languages) => {
     class="hidden-sm-and-down"
   >
     <div>
-      <h3 class="banner">{{ $t("BREAK.name") }}</h3>
+      <img src="/logo.png" width="50" alt="" />
     </div>
+
+    <div>
+      <h3 class="banner">
+        {{ $t("BREAK.name") }}
+      </h3>
+    </div>
+
     <div class="flex-grow" />
     <el-menu-item class="" index="/">{{ $t("menu.home") }}</el-menu-item>
     <el-menu-item class="" index="/risks">{{ $t("menu.risks") }}</el-menu-item>
@@ -80,11 +90,11 @@ const handleCommand = (command: keyof typeof languages) => {
       $t("abilityProviders")
     }}</el-menu-item>
 
-    <span class="github">
+    <div class="github">
       <a href="https://github.com/JDArmy/BREAK" target="_blank">
         <icon-github />
       </a>
-    </span>
+    </div>
     <!-- <el-dropdown class="" @command="handleCommand">
       <span class="el-dropdown-link">
         <icon-translate />
