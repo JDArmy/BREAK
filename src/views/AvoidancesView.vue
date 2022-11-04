@@ -29,11 +29,16 @@ avoidanceCategories.forEach((acKey) => {
 <template lang="">
   <h3>{{ $t("menu.avoidances") }}</h3>
   <div v-for="(avoidance, avoidanceCategory) in avoidances">
-    <h4 class="avoidance-category">
-      {{ $t(`BREAK.avoidanceCategories.${avoidanceCategory}.title`) }} ({{
-        BREAK.avoidanceCategories[avoidanceCategory].keyword
-      }})
-    </h4>
+    <div>
+      <h4 class="avoidance-category-title">
+        {{ $t(`BREAK.avoidanceCategories.${avoidanceCategory}.title`) }} ({{
+          BREAK.avoidanceCategories[avoidanceCategory].keyword
+        }})
+      </h4>
+      <div class="avoidance-category-description">
+        {{ $t(`BREAK.avoidanceCategories.${avoidanceCategory}.description`) }}
+      </div>
+    </div>
     <el-table :data="avoidances[avoidanceCategory]" stripe border>
       <el-table-column prop="aKey" width="100px" :label="$t('ID')" />
       <el-table-column width="150px" :label="$t('title')">
@@ -64,7 +69,7 @@ avoidanceCategories.forEach((acKey) => {
       </el-table-column>
       <el-table-column width="250px" :label="$t('references')">
         <template #default="scope">
-          <ul>
+          <ul class="reference-list">
             <li v-for="(reference, refIdx) in scope.row.references">
               <a :href="reference.link" target="_blank">{{
                 scope.row.aKey
@@ -82,8 +87,19 @@ avoidanceCategories.forEach((acKey) => {
 </template>
 
 <style scoped>
-.avoidance-category {
+.avoidance-category-title {
   margin-top: 50px;
+  margin-bottom: 5px;
   text-align: center;
+}
+.avoidance-category-description {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 50%;
+  color: gray;
+}
+
+.reference-list {
+  padding: 0;
 }
 </style>
