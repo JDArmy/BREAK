@@ -85,7 +85,7 @@ const handleCommand = (command: keyof typeof languages) => {
         <icon-github />
       </a>
     </span>
-    <el-dropdown class="" @command="handleCommand">
+    <!-- <el-dropdown class="" @command="handleCommand">
       <span class="el-dropdown-link">
         <icon-translate />
       </span>
@@ -101,7 +101,7 @@ const handleCommand = (command: keyof typeof languages) => {
           </el-dropdown-item>
         </el-dropdown-menu>
       </template>
-    </el-dropdown>
+    </el-dropdown> -->
   </el-menu>
 </template>
 

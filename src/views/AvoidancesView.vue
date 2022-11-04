@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import BREAK from "@/i18n/zh-CN/BREAK";
+import BREAK from "@/BREAK";
 
 import "element-plus/es/components/table/style/css";
 import "element-plus/es/components/table-column/style/css";
