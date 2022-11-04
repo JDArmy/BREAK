@@ -25,11 +25,11 @@ const router = createRouter({
       name: "avoidances",
       component: () => import("@/views/AvoidancesView.vue"),
     },
-    {
-      path: "/business-scenes",
-      name: "businessScenes",
-      component: () => import("@/views/BusinessScenesView.vue"),
-    },
+    // {
+    //   path: "/events",
+    //   name: "events",
+    //   component: () => import("@/views/EventsView.vue"),
+    // },
     {
       path: "/ability-providers",
       name: "abilityProviders",

@@ -1154,6 +1154,33 @@
       ],
       "references": []
     },
+    "R0055-001": {
+      "title": "卡券限制突破",
+      "description": "限制性卡券被脱离限制非预期领用。",
+      "attack": "分两种场景：一种是非公开的卡券、特定条件可领取或面向特定群体发放的卡券被脱离限制领取；另一种场景是限定使用场景或条件的卡券被脱离限制条件使用。限制包括：特定时间、特定人群、特定商品配券、特定价格配券、卡券叠加限制等等",
+      "complexity": "初级",
+      "influence": "套取平台营销活动利益，给平台带来经济损失。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A10",
+        "A13",
+        "A15",
+        "A16",
+        "A18"
+      ],
+      "references": [
+        {
+          "title": "OWASP Automated Threat: OAT002 Token Cracking",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-002_Token_Cracking.html"
+        }
+      ],
+      "events": [
+        "E0001"
+      ]
+    },
     "R0056": {
       "title": "虚假好评",
       "description": "卖家通过购买虚假好评以提升产品商誉或搜索排名权值",
