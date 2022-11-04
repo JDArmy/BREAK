@@ -25,17 +25,19 @@ JDArmy BREAK 是英文“Business Risk Enumeration & Avoidance Kownledge”的�
 
 ## 协作 & 贡献
 
-本框架采用JSON格式进行了系统描述，详见“/src/i18n/zh-CN/BREAK.json”文件，其中：
+本框架采用JSON格式进行了系统描述，详见“/src/BREAK”文件夹，其中：
 
-风险维度放于“riskDimensions”中，并通过其内的“riskScenes”来划分场景；
+- main.json 中存放本知识框架的基础信息
+- riskDimensions.json 中存放风险维度
+- riskScenes.json 中存放风险场景
+- risks.json 中存放风险列表
+- avoidances.json 中存放规避手段
+- businessScenes.json 中存放业务场景列表
+  - 具体的场景存在 /src/scenes 中，按 businessScenes 中的编号进行命名
+- abilityProviders.json 中存放了一些能力提供者，以及提供的一些业务风险规避能力。
 
-风险场景放于“riskScenes”中，并通过其内的“risks”来划分风险；
-
-风险放于“risks”中，并通过其内的“avoidances”来承载规避手段；
-
-规避手段放于“avoidances”中。
-
-各协作者可以通过直接修改 BREAK.json 文件来与我们进行该系统框架的协作开发。亦可通过在github上提issue来给我们提供意见或建议。
+各协作者可以通过直接修改各 json 文件来与我们进行该系统框架的协作开发。
+亦可通过在github上提issue来给我们提供意见或建议。
 
 ### 致谢
 
