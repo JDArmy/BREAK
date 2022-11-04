@@ -1,0 +1,203 @@
+{
+  "abilityProviders": {
+    "AP0001": {
+      "title": "京东云",
+      "site": "https://www.jdcloud.com/",
+      "description": "作为京东集团面向企业、政府等机构的技术服务品牌，京东云是更懂产业的数智化解决方案提供商，致力于为企业、金融机构、政府等各类客户提供以供应链为基础的数智化解决方案。依托公、专、混的全栈式云产品矩阵，京东云融合了人工智能、大数据、物联网等前沿科技，在零售、物流、健康、智能城市、金融科技等行业领域为客户提供了丰富的产品与数字化解决方案，帮助客户降低成本、提升效率，是值得信赖的产业数字合作伙伴。",
+      "logo": "/provider-logo/jdcloud.svg",
+      "abilities": {
+        "A16": {
+          "url": "https://www.jdcloud.com/cn/products/risk-detection"
+        },
+        "A06-001": {
+          "url": "https://www.jdcloud.com/cn/products/censor"
+        },
+        "A06-002": {
+          "url": "https://www.jdcloud.com/cn/products/censor"
+        },
+        "A06-003": {
+          "url": "https://www.jdcloud.com/cn/products/censor"
+        },
+        "A06-004": {
+          "url": "https://www.jdcloud.com/cn/products/censor"
+        },
+        "A21": {
+          "url": "https://www.jdcloud.com/cn/products/device-fingerprint"
+        },
+        "A01": {
+          "url": "https://www.jdcloud.com/cn/products/captcha"
+        },
+        "A24": {
+          "url": "https://www.jdcloud.com/cn/products/real-name-authentication"
+        },
+        "A25-003": {
+          "url": "https://www.jdcloud.com/cn/products/electronic-signature"
+        }
+      }
+    },
+    "AP0002": {
+      "title": "网易易盾",
+      "site": "https://dun.163.com/",
+      "description": "网易易盾是网易集团旗下一站式数字内容风控品牌，依托网易 20 多年的先进技术沉淀和一线实践经验，作为国内领先的数字内容风控服务商，为面向数字化业务的客户提供专业可靠的安全服务，涵盖内容安全、业务安全、移动安全三大领域，全方位保障客户业务合规、稳健和安全运营。",
+      "logo": "/provider-logo/dun-163.png",
+      "abilities": {
+        "A06-001": {
+          "url": "https://dun.163.com/product/text-detection"
+        },
+        "A06-002": {
+          "url": "https://dun.163.com/product/picture-detection"
+        },
+        "A06-003": {
+          "url": "https://dun.163.com/product/audio-detection"
+        },
+        "A06-004": {
+          "url": "https://dun.163.com/product/video-detection"
+        },
+        "A01": {
+          "url": "https://dun.163.com/product/captcha"
+        },
+        "A07": {
+          "url": "https://dun.163.com/product/sms"
+        },
+        "A18": {
+          "url": "https://dun.163.com/product/phone-verification"
+        },
+        "A24": {
+          "url": "https://dun.163.com/product/certification"
+        },
+        "A23": {
+          "url": "https://dun.163.com/product/certification"
+        },
+        "A16": {
+          "url": "https://dun.163.com/product/anticheat"
+        },
+        "A21": {
+          "url": "https://dun.163.com/product/dna"
+        },
+        "A10": {
+          "url": "https://dun.163.com/product/register-protect"
+        },
+        "A13-001": {
+          "url": "https://dun.163.com/product/android-reinforce"
+        },
+        "A13-002": {
+          "url": "https://dun.163.com/product/ios-reinforce"
+        },
+        "A13-003": {
+          "url": "https://dun.163.com/product/h5-reinforce"
+        },
+        "A14": {
+          "url": "https://dun.163.com/product/android-reinforce"
+        }
+      }
+    },
+    "AP0003": {
+      "title": "小盾安全",
+      "site": "https://xiaodun.com/",
+      "description": "小盾安全是同盾科技旗下全新业务安全独立品牌，是国内领先的全栈式业务安全解决方案专家，以“维护数字社会的安全与清朗”为使命，以业务攻击情报为驱动，以业务数据资产为原料，以网络安全技术为基础，以人工智能算法为核心，依托自主研发的实时计算、决策引擎、知识图谱、终端态势感知等技术，结合先进的“半监督、无监督”机器学习算法，基于对客户业务模式的深度了解，为客户提供全栈式业务安全解决方案，构筑企业数字化的基础安全设施，护航客户业务高速增长。",
+      "logo": "/provider-logo/xiaodun.png",
+      "abilities": {
+        "A06-001": {
+          "url": "https://xiaodun.com/product/text"
+        },
+        "A06-002": {
+          "url": "https://xiaodun.com/product/picture"
+        },
+        "A06-003": {
+          "url": "https://xiaodun.com/product/audio"
+        },
+        "A06-004": {
+          "url": "https://xiaodun.com/product/video"
+        },
+        "A10": {
+          "url": "https://xiaodun.com/product/terminalPerception"
+        },
+        "A16": {
+          "url": "https://xiaodun.com/product/riskIntelligence"
+        },
+        "A01": {
+          "url": "https://xiaodun.com/product/humanVerification"
+        },
+        "A14": {
+          "url": "https://xiaodun.com/product/android"
+        },
+        "A03": {
+          "url": "https://xiaodun.com/product/interface"
+        }
+      }
+    },
+    "AP0004": {
+      "title": "腾讯云",
+      "site": "https://cloud.tencent.com/",
+      "description": "腾讯云，腾讯集团倾力打造的云计算品牌，面向全世界各个国家和地区的政府机构、企业组织和个人开发者，提供全球领先的云计算、大数据、人工智能等技术产品与服务，以卓越的科技能力打造丰富的行业解决方案，构建开放共赢的云端生态，推动产业互联网建设，助力各行各业实现数字化升级。",
+      "logo": "/provider-logo/cloud-tencent.svg",
+      "abilities": {
+        "A15": {
+          "url": "https://cloud.tencent.com/product/rcp"
+        },
+        "A01": {
+          "url": "https://cloud.tencent.com/product/captcha"
+        },
+        "A06-001": {
+          "url": "https://cloud.tencent.com/product/tms"
+        },
+        "A06-002": {
+          "url": "https://cloud.tencent.com/product/ims"
+        },
+        "A06-003": {
+          "url": "https://cloud.tencent.com/product/ams"
+        },
+        "A06-004": {
+          "url": "https://cloud.tencent.com/product/vm"
+        },
+        "A16": {
+          "url": "https://cloud.tencent.com/product/bri"
+        },
+        "A25-001": {
+          "url": "https://cloud.tencent.com/product/esc"
+        },
+        "A07": {
+          "url": "https://cloud.tencent.com/product/mfas"
+        },
+        "A21": {
+          "url": "https://cloud.tencent.com/product/tds"
+        }
+      }
+    },
+    "AP0005": {
+      "title": "数美科技",
+      "site": "https://www.ishumei.com/",
+      "description": "数美科技（北京数美时代科技有限公司）成立于 2015 年 6 月，是一家专业的在线业务风控解决方案提供商，为客户提供天网-全栈式智能业务风控和天净-全栈式智能内容风控两大核心产品，致力于解决在线业务中广泛存在的业务风险与内容风险，为企业数字化转型保驾护航。",
+      "logo": "/provider-logo/ishumei.png",
+      "abilities": {
+        "A06-001": {
+          "url": "https://www.ishumei.com/new/product/tj/text"
+        },
+        "A06-002": {
+          "url": "https://www.ishumei.com/new/product/tj/image"
+        },
+        "A06-003": {
+          "url": "https://www.ishumei.com/new/product/tj/audio"
+        },
+        "A06-004": {
+          "url": "https://www.ishumei.com/new/product/tj/video"
+        },
+        "A06-006": {
+          "url": "https://www.ishumei.com/new/product/tj/document"
+        },
+        "A15": {
+          "url": "https://www.ishumei.com/new/product/tw/marketing"
+        },
+        "A03": {
+          "url": "https://www.ishumei.com/new/product/tw/fdp"
+        },
+        "A10": {
+          "url": "https://www.ishumei.com/new/product/tw/sdk"
+        },
+        "A01": {
+          "url": "https://www.ishumei.com/new/product/tw/code"
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import BREAK from "@/i18n/zh-CN/BREAK.json";
+import BREAK from "@/i18n/zh-CN/BREAK";
+
 import RiskDetail from "@/components/RiskDetail.vue";
 import { ref, watch } from "vue";
 import { useRouter, useRoute } from "vue-router";

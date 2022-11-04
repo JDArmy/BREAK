@@ -1,0 +1,34 @@
+{
+  "riskDimensions": {
+    "RD01": {
+      "title": "业务维度",
+      "riskScenes": [
+        "RS01",
+        "RS03",
+        "RS02"
+      ]
+    },
+    "RD02": {
+      "title": "内容维度",
+      "riskScenes": [
+        "RS05",
+        "RS06"
+      ]
+    },
+    "RD03": {
+      "title": "身份维度",
+      "riskScenes": [
+        "RS07",
+        "RS08"
+      ]
+    },
+    "RD04": {
+      "title": "对抗维度",
+      "riskScenes": [
+        "RS09",
+        "RS10",
+        "RS04"
+      ]
+    }
+  }
+}
