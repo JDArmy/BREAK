@@ -2,7 +2,7 @@ import { createI18n } from "vue-i18n";
 import en from "./en/index.json";
 import cn from "./zh-CN/index.json";
 import enBREAK from "./en/BREAK.json";
-import cnBREAK from "./zh-CN/BREAK.json";
+import cnBREAK from "./zh-CN/BREAK";
 
 const languages = {
   en: "English",

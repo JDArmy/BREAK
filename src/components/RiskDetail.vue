@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, watch } from "vue";
-import BREAK from "@/i18n/zh-CN/BREAK.json";
+import BREAK from "@/i18n/zh-CN/BREAK";
 
 import "element-plus/es/components/drawer/style/css";
 import { ElDrawer } from "element-plus";
