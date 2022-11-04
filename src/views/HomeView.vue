@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import BREAK from "@/i18n/zh-CN/BREAK";
+import BREAK from "@/BREAK";
 
 import RiskDetail from "@/components/RiskDetail.vue";
 import { ref, watch } from "vue";

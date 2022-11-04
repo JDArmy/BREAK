@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import BREAK from "@/i18n/zh-CN/BREAK";
+import BREAK from "@/BREAK";
 
 let providers = Array();
 Object.keys(BREAK.abilityProviders).forEach((apKey) => {
