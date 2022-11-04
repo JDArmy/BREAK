@@ -38,7 +38,8 @@
       "description": "目前常见的行为式验证码通常建立在人类识别图文信息基础上的点击、选择、滑动、拖动等动作，通过对比人类的行为与机器行为的差异来进行人机判断。因为除了图片识别外，还增加了行为鉴别，所以抗破解性会高于传统的图片验证码（A01-001）",
       "references": [
         {
-          "title": "AJ-Captcha行为验证码，包含滑动拼图、文字点选两种方式",
+          "title": "AJ-Captcha",
+          "description": "行为验证码，包含滑动拼图、文字点选两种方式",
           "link": "https://gitee.com/anji-plus/captcha"
         }
       ]
@@ -57,7 +58,8 @@
       "description": "因为所有的用户端数据均无法保证完整性，因此可以通过对请求数据进行 HASH 值计算、标记和服务端再校验来确保数据未经过篡改。需要注意的是：数据的完整性紧密依赖于 HASH 算法的强壮性。像 MD5 这种弱 HASH 算法已经较难保证数据的完整性。此外，目前接口签名更多地被应用在自动化请求识别对抗环节，严格来说接口签名本身并不具备人机识别能力，目前的对抗点更多是在于对签名算法的隐藏上，譬如终端签名算法混淆（A13）、图片隐写、算法白盒化、动态秘钥等。",
       "references": [
         {
-          "title": "smart-cloud，一个开源spring cloud脚手架，具备接口签名功能",
+          "title": "smart-cloud",
+          "description": "一个开源 spring cloud 脚手架，具备接口签名功能",
           "link": "https://github.com/smart-cloud/smart-cloud-examples#%E4%BA%8C%E6%8E%A5%E5%8F%A3%E5%AE%89%E5%85%A8"
         }
       ]

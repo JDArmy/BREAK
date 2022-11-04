@@ -71,13 +71,18 @@ avoidanceCategories.forEach((acKey) => {
         <template #default="scope">
           <ul class="reference-list">
             <li v-for="(reference, refIdx) in scope.row.references">
-              <a :href="reference.link" target="_blank">{{
-                scope.row.aKey
-                  ? $t(
-                      `BREAK.avoidances.${scope.row.aKey}.references[${refIdx}].title`
-                    )
-                  : ""
-              }}</a>
+              <a v-if="scope.row.aKey" :href="reference.link" target="_blank"
+                >{{
+                  $t(
+                    `BREAK.avoidances.${scope.row.aKey}.references[${refIdx}].title`
+                  )
+                }} </a
+              >:
+              {{
+                $t(
+                  `BREAK.avoidances.${scope.row.aKey}.references[${refIdx}].description`
+                )
+              }}
             </li>
           </ul>
         </template>
@@ -101,5 +106,6 @@ avoidanceCategories.forEach((acKey) => {
 
 .reference-list {
   padding: 0;
+  margin-left: 5px;
 }
 </style>
