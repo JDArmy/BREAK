@@ -36,6 +36,17 @@ const getAvoidanceReferences = (avoidanceKey: string) => {
   return BREAK.avoidances[avoidanceKey as keyof typeof BREAK.avoidances]
     .references;
 };
+
+const getReferences = (rKey: string) =>
+  risks[rKey as keyof typeof risks].references;
+
+const getEvents = (rKey: string) => {
+  let risk = risks[rKey as keyof typeof risks];
+  return risk["events" as keyof typeof risk] as typeof String[];
+};
+
+const getEventLink = (eKey: unknown) =>
+  BREAK.events[eKey as keyof typeof BREAK.events].link;
 </script>
 
 <template>
@@ -88,18 +99,26 @@ const getAvoidanceReferences = (avoidanceKey: string) => {
         </li>
       </ul>
     </div>
-    <div class="desc">
+    <div class="desc" v-if="getReferences(rKey).length > 0">
       <strong>{{ $t("riskReference") }}:&nbsp;</strong>
       <ul>
-        <li
-          v-for="(reference,refIdx) in risks[rKey as keyof typeof risks].references"
-        >
+        <li v-for="(reference, refIdx) in getReferences(rKey)">
           <a :href="reference.link" v-if="reference.link" target="_blank">{{
             $t(`BREAK.risks.${rKey}.references[${refIdx}].title`)
           }}</a>
           <span v-else>
             {{ $t(`BREAK.risks.${rKey}.references[${refIdx}].title`) }}
           </span>
+        </li>
+      </ul>
+    </div>
+    <div class="desc" v-if="getEvents(rKey)">
+      <strong>{{ $t("events") }}:&nbsp;</strong>
+      <ul>
+        <li v-for="eventKey in getEvents(rKey)">
+          <a :href="getEventLink(eventKey)" target="_blank">
+            {{ $t(`BREAK.events.${eventKey}.title`) }} </a
+          >: {{ $t(`BREAK.events.${eventKey}.description`) }}
         </li>
       </ul>
     </div>
