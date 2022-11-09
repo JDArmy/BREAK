@@ -47,7 +47,7 @@ const handleCommand = (command: keyof typeof languages) => {
     style="height: 100%"
   >
     <div style="position: absolute; left: 0; top: 0">
-      <img src="/logo.png" width="50" alt="" />
+      <img src="/logo.png" class="logo" width="50" alt="" />
     </div>
     <h3 class="banner" style="text-align: center; width: 100%; height: 100%">
       {{ $t("BREAK.name") }}
@@ -65,7 +65,7 @@ const handleCommand = (command: keyof typeof languages) => {
     class="hidden-sm-and-down"
   >
     <div>
-      <img src="/logo.png" width="50" alt="" />
+      <img src="/logo.png" class="logo" alt="JDArmy BREAK" />
     </div>
 
     <div>
@@ -86,6 +86,10 @@ const handleCommand = (command: keyof typeof languages) => {
             key=""
             >{{ $t("businessScenes") }}</el-menu-item
         > -->
+    <el-menu-item index="/attack-tools">{{
+      $t("menu.attackTools")
+    }}</el-menu-item>
+
     <el-menu-item class="" index="/ability-providers" key="">{{
       $t("abilityProviders")
     }}</el-menu-item>
@@ -116,6 +120,12 @@ const handleCommand = (command: keyof typeof languages) => {
 </template>
 
 <style>
+.logo {
+  background: #b0afaf;
+  border-radius: 20px;
+  margin: 5px;
+  width: 40px;
+}
 .version {
   color: var(--el-color-info);
   font-size: 50%;

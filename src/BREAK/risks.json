@@ -115,7 +115,12 @@
         "A16",
         "A21"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "活动作弊什么意思？",
+          "link": "https://zhidao.baidu.com/question/1389943897887283500.html"
+        }
+      ]
     },
     "R0005-001": {
       "title": "批量小号作弊",
@@ -135,7 +140,12 @@
         "A16",
         "A21"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "垃圾粉丝目的是什么？如何删除垃圾粉丝？",
+          "link": "https://dun.163.com/news/p/840c5640093140fbad7ed1cfe30f547b"
+        }
+      ]
     },
     "R0005-002": {
       "title": "虚假裂变",
@@ -154,7 +164,16 @@
         "A15",
         "A16"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "裂变套路看似多，只有一个核心要素",
+          "link": "https://zhuanlan.zhihu.com/p/110531852"
+        },
+        {
+          "title": "做裂变营销活动，怎么能忽视防作弊环节？",
+          "link": "https://ishare.ifeng.com/c/s/v002ZjHiClSab6wTq1twdmiKvHULvXFzqSujP--nz2AHj820__"
+        }
+      ]
     },
     "R0008": {
       "title": "广告欺诈",
@@ -191,7 +210,12 @@
         "A16",
         "A20"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "抖音电商治理“低质引流&虚假宣传”违规行为",
+          "link": "https://mp.weixin.qq.com/s/DZ2D6bEpGcNv52Zp-B5f1w"
+        }
+      ]
     },
     "R0009-001": {
       "title": "实时评论引流",
@@ -214,7 +238,12 @@
         "A20",
         "A21"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "做推广引流的算犯法么(做引流给人上粉违法吗)",
+          "link": "https://zhuanlan.zhihu.com/p/393442338"
+        }
+      ]
     },
     "R0010": {
       "title": "团伙代充",
@@ -226,7 +255,16 @@
         "A15",
         "A21"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "新型犯罪“苹果代充” 全国首例涉案3000万",
+          "link": "https://zhuanlan.zhihu.com/p/76883001"
+        },
+        {
+          "title": "原神代充诈骗手段（围绕利益、贪、智商税）",
+          "link": "https://zhuanlan.zhihu.com/p/338192875?ivk_sa=1024320u"
+        }
+      ]
     },
     "R0011": {
       "title": "账号倒卖",
@@ -240,7 +278,16 @@
         "A17",
         "A20"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "全国政协委员许进呼吁：倒卖网络游戏账号应严处！",
+          "link": "https://baijiahao.baidu.com/s?id=1726557011324745346&wfr=spider&for=pc"
+        },
+        {
+          "title": "通过王者荣耀骗取微信账号倒卖，四人获刑",
+          "link": "https://baijiahao.baidu.com/s?id=1732715080496688809&wfr=spider&for=pc"
+        }
+      ]
     },
     "R0012": {
       "title": "游戏外挂/脚本",
@@ -256,7 +303,12 @@
         "A19",
         "A20"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "游戏外挂-百度百科",
+          "link": "https://baike.baidu.com/item/%E5%A4%96%E6%8C%82/89291?fromtitle=%E6%B8%B8%E6%88%8F%E5%A4%96%E6%8C%82&fromid=2748874&fr=aladdin"
+        }
+      ]
     },
     "R0014": {
       "title": "恶意占库存",
@@ -331,7 +383,56 @@
         "A16",
         "A20"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "虚假交易-百度百科",
+          "link": "https://baike.baidu.com/item/%E8%99%9A%E5%81%87%E4%BA%A4%E6%98%93/10013126?fr=aladdin"
+        },
+        {
+          "title": "虚假交易违反哪些法律法规",
+          "link": "https://www.66law.cn/laws/1560611.aspx"
+        }
+      ]
+    },
+    "R0017-001": {
+      "title": "刷单",
+      "description": "商家通过批量低成本成单或虚假成单，已提高交易量或提升评价。",
+      "attack": "商家完成大量低成本交易，目的是获得平台商家优惠/返利，或低成本刷商品好评数量等。手段一般为雇佣买家，或恶意上架低值商品批量完成交易等。",
+      "complexity": "中级",
+      "influence": "影响平台公平性竞争原则，部分情况下套取平台商家优惠/返利。",
+      "avoidances": [
+        "A15",
+        "A16",
+        "A20"
+      ],
+      "references": [
+        {
+          "title": "刷单-百度百科",
+          "link": "https://baike.baidu.com/item/%E5%88%B7%E5%8D%95/8171368?fr=aladdin"
+        }
+      ]
+    },
+    "R0017-002": {
+      "title": "骗取补贴",
+      "description": "",
+      "attack": "",
+      "complexity": "中级",
+      "influence": "",
+      "avoidances": [
+        "A15",
+        "A16",
+        "A20"
+      ],
+      "references": [
+        {
+          "title": "网约车司机“空跑”刷单骗补贴， 法院：诈骗罪，判刑！",
+          "link": "http://www.hebeicourt.gov.cn/article/detail/2022/07/id/6803049.shtml"
+        },
+        {
+          "title": "找“刷手”拉“内鬼”骗取电商平台补贴，这个9人团伙栽了",
+          "link": "http://news.hexun.com/2022-09-14/206761601.html"
+        }
+      ]
     },
     "R0018": {
       "title": "干扰搜索结果",
@@ -352,20 +453,16 @@
         "A18",
         "A21"
       ],
-      "references": []
-    },
-    "R0019": {
-      "title": "刷单",
-      "description": "商家通过批量低成本成单或虚假成单，已提高交易量或提升评价。",
-      "attack": "商家完成大量低成本交易，目的是获得平台商家优惠/返利，或低成本刷商品好评数量等。手段一般为雇佣买家，或恶意上架低值商品批量完成交易等。",
-      "complexity": "中级",
-      "influence": "影响平台公平性竞争原则，部分情况下套取平台商家优惠/返利。",
-      "avoidances": [
-        "A15",
-        "A16",
-        "A20"
-      ],
-      "references": []
+      "references": [
+        {
+          "title": "搜索结果受SEO严重干扰 专家称Google正在死亡",
+          "link": "http://www.benber.com/content/202202/60667.html"
+        },
+        {
+          "title": "恶意干扰搜索排名，误导网民！“万词霸屏”等网络黑灰产如何治理",
+          "link": "https://baijiahao.baidu.com/s?id=1728261617282281292&wfr=spider&for=pc"
+        }
+      ]
     },
     "R0020": {
       "title": "文本内容风险",
@@ -474,7 +571,12 @@
         "A20",
         "A21"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "网络主播在合约期内恶意跳槽、挖墙脚是否构成不正当竞争？",
+          "link": "https://baijiahao.baidu.com/s?id=1700201113697587369&wfr=spider&for=pc"
+        }
+      ]
     },
     "R0026": {
       "title": "违规商品",
@@ -487,7 +589,12 @@
         "A15",
         "A20"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "淘宝那里，什么叫做违规商品？",
+          "link": "https://zhidao.baidu.com/question/100790301.html"
+        }
+      ]
     },
     "R0027": {
       "title": "经营数据盗爬",
@@ -529,7 +636,12 @@
         "A18",
         "A19"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "5亿XX用户数据遭泄露，XX被约谈",
+          "link": "https://www.likecs.com/show-730298.html#sc=270"
+        }
+      ]
     },
     "R0029": {
       "title": "验证码恶意消耗",
@@ -548,9 +660,40 @@
         "A16",
         "A21"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "短信验证码接口被恶意攻击怎么办？",
+          "link": "http://m.cr6868.com/html/xyxw/2709.html"
+        }
+      ]
     },
     "R0030": {
+      "title": "虚假注册",
+      "description": "利用虚假的身份注册虚假账号便于后续滥用。",
+      "attack": "通过使用应用程序的帐户注册流程，提供虚假的身份数据注册账号。",
+      "complexity": "中级",
+      "influence": "这些帐户随后被滥用于生成垃圾邮件、洗钱和商品、传播恶意软件、影响声誉、造成恶作剧以及扭曲搜索引擎优化 (SEO)、评论和调查。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A04",
+        "A05",
+        "A07",
+        "A09",
+        "A10",
+        "A15",
+        "A16",
+        "A21",
+        "A22"
+      ],
+      "references": [
+        {
+          "title": "OWASP Automated Threat: OAT019 Account Creation",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-019_Account_Creation.html"
+        }
+      ]
+    },
+    "R0030-001": {
       "title": "批量注册",
       "description": "批量注册账号便于后续滥用。",
       "attack": "通过使用应用程序的帐户注册流程，批量创建帐户，有时还填充个人资料。",
@@ -573,6 +716,49 @@
         {
           "title": "OWASP Automated Threat: OAT019 Account Creation",
           "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-019_Account_Creation.html"
+        }
+      ]
+    },
+    "R0030-002": {
+      "title": "三方登陆风险",
+      "description": "利用三方登陆绕过现有身份验证体系",
+      "attack": "很多站点在创建用户身份时具有严格的身份验证体系，譬如手机验证码、实名认证等。但在通过微信、微博等进行三方身份登录时，过于相信三方，没有进行严格的身份验证，导致可以通过在三方注册大量垃圾小号（R0030-001）来进行身份联登突破现有的严格的身份验证体系。",
+      "complexity": "中级",
+      "influence": "绕过现有身份验证体制，导致防御机制失效",
+      "avoidances": [
+        "A07",
+        "A24",
+        "A29",
+        "A29-001"
+      ],
+      "references": [
+        {
+          "title": "什么是第三方账号登陆？有什么好处？",
+          "link": "https://zhidao.baidu.com/question/1437455763683359379.html"
+        }
+      ]
+    },
+    "R0031": {
+      "title": "子账号风险",
+      "description": "业务账号系统有子账号概念且对子账号管理不严格造成账号滥用",
+      "attack": "有不少业务系统账号注册十分严格，但对子账号的生成不严格，且子账号具备母账号的全部功能。这样黑灰产可以通过批量生成子账号后来进行相关攻击超过，从而绕过严格的账号注册和身份认证策略。",
+      "complexity": "中级",
+      "influence": "子账号滥用绕过账号注册和身份认证策略。",
+      "avoidances": [
+        "A17",
+        "A18",
+        "A19",
+        "A24",
+        "A29"
+      ],
+      "references": [
+        {
+          "title": "淘宝开店子账号有什么弊端？有没有风险",
+          "link": "https://www.musicheng.com/news/i177638.html"
+        },
+        {
+          "title": "支付宝实名认证惊现大漏洞 可暗中绑定多个子账户",
+          "link": "https://stock.xinpianchang.com/article/scbaike/100016.html"
         }
       ]
     },
@@ -663,6 +849,27 @@
         }
       ]
     },
+    "R0032-003": {
+      "title": "凭证盗取",
+      "description": "通过木马病毒、钓鱼欺骗等方式盗取登录凭证。",
+      "attack": "。",
+      "complexity": "高级",
+      "influence": "",
+      "avoidances": [
+        "A07",
+        "A19",
+        "A24",
+        "A21",
+        "A11",
+        "A12"
+      ],
+      "references": [
+        {
+          "title": "OWASP Automated Threat: OAT007 Credential Cracking",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-007_Credential_Cracking.html"
+        }
+      ]
+    },
     "R0034": {
       "title": "自动化养号",
       "description": "通过自动化方式提升账号信誉度",
@@ -679,7 +886,16 @@
         "A21",
         "A22"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "RPA机器人是什么？",
+          "link": "https://baijiahao.baidu.com/s?id=1742940718304519356&wfr=spider&for=pc"
+        },
+        {
+          "title": "RPA机器人自动化养号和AdsPower反指纹浏览器",
+          "link": "https://baijiahao.baidu.com/s?id=1732976759234259657&wfr=spider&for=pc"
+        }
+      ]
     },
     "R0035": {
       "title": "凭据复用",
@@ -699,7 +915,16 @@
         "A21",
         "A23"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "恶意软件偷取网站Cookies，黑客藉此控制社交账号",
+          "link": "https://baijiahao.baidu.com/s?id=1661120873809520712&wfr=spider&for=pc"
+        },
+        {
+          "title": "盗用cookie的目的和防盗cookie的手段",
+          "link": "https://blog.csdn.net/ITWANGBOIT/article/details/109323115"
+        }
+      ]
     },
     "R0036": {
       "title": "多因素破解",
@@ -716,7 +941,12 @@
         "A10",
         "A21"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "多因素身份验证（MFA）绕过技术揭示",
+          "link": "http://www.fangyuba.com/news/dynamic/2778.htm"
+        }
+      ]
     },
     "R0037": {
       "title": "第三方账号聚合",
@@ -760,7 +990,12 @@
         "A19",
         "A21"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "大批QQ账号被盗，扫码登录行为被黑产团伙劫持并记录 ",
+          "link": "https://police.news.sohu.com/a/561515350_121124361"
+        }
+      ]
     },
     "R0039": {
       "title": "拒绝服务攻击",
@@ -874,7 +1109,12 @@
         "A21",
         "A23"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "用黑卡充值的账号会怎么样",
+          "link": "https://baijiahao.baidu.com/s?id=1728703601989302772&wfr=spider&for=pc"
+        }
+      ]
     },
     "R0043-001": {
       "title": "盗卡盗刷",
@@ -914,7 +1154,12 @@
         "A21",
         "A23"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "利用转账时差诈骗,新型诈骗如何防范",
+          "link": "https://www.66law.cn/laws/139111.aspx"
+        }
+      ]
     },
     "R0045": {
       "title": "积分盗刷",
@@ -932,7 +1177,16 @@
         "A21",
         "A23"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "信用卡积分兑换警惕第三方渠道切莫贪小失大",
+          "link": "https://baijiahao.baidu.com/s?id=1747986450409392334&wfr=spider&for=pc"
+        },
+        {
+          "title": "李晨里程卡被十余人盗刷",
+          "link": "https://yule.sohu.com/a/579933969_121150437"
+        }
+      ]
     },
     "R0046": {
       "title": "未成年人识别对抗",
@@ -949,7 +1203,12 @@
         "A21",
         "A23"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "00 后 10 后和防沉迷系统的「斗智斗勇」，堪比谍战大片",
+          "link": "https://baijiahao.baidu.com/s?id=1687300622437595490&wfr=spider&for=pc"
+        }
+      ]
     },
     "R0047": {
       "title": "人机识别对抗",
@@ -990,7 +1249,12 @@
         "A21",
         "A22"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "人脸识别的技术与攻击技术简要概述",
+          "link": "https://blog.csdn.net/yty_311/article/details/113625432"
+        }
+      ]
     },
     "R0049": {
       "title": "代登录、代下单",
@@ -1012,7 +1276,12 @@
         "A21",
         "A22"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "代下单-百度百科",
+          "link": "https://baike.baidu.com/item/%E4%BB%A3%E4%B8%8B%E5%8D%95/3288502?fr=aladdin"
+        }
+      ]
     },
     "R0050": {
       "title": "风险设备识别对抗",
@@ -1027,7 +1296,12 @@
         "A15",
         "A21"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "业务风控中的前端对抗实践",
+          "link": "https://zhuanlan.zhihu.com/p/524097525"
+        }
+      ]
     },
     "R0050-001": {
       "title": "虚拟设备对抗",
@@ -1046,7 +1320,12 @@
         "A21",
         "A23"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "设备指纹：面对各种虚拟设备，如何进行对抗？",
+          "link": "https://blog.51cto.com/u_15275035/4979325"
+        }
+      ]
     },
     "R0051": {
       "title": "逆向分析",
@@ -1060,12 +1339,17 @@
         "A21",
         "A22"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "什么是逆向分析",
+          "link": "https://blog.csdn.net/Eastmount/article/details/107591832"
+        }
+      ]
     },
     "R0051-001": {
-      "title": "HTTP请求分析",
+      "title": "抓包分析",
       "description": "通过抓包还原应用的请求发送结构及监听返回数据",
-      "attack": "对于使用HTTP/HTTPS等基于文本协议进行数据传输的应用来说，可以通过中间人来实现数据收发的抓包，继而还原应用执行逻辑，来实现自动化操作。",
+      "attack": "抓包（packet capture）就是将网络传输发送与接收的数据包进行截获、重发、编辑、转存等操作。通过抓包可以分析应用的请求方式与请求结构，以便实现业务逻辑还原模拟和替代终端实现流程自动化（R0001）",
       "complexity": "高级",
       "influence": "可能导致应用中的安全流程被突破，数据被伪造等情况",
       "avoidances": [
@@ -1075,7 +1359,32 @@
         "A21",
         "A22"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "TCP 实战抓包分析",
+          "link": "https://blog.csdn.net/qq_31941921/article/details/119853993"
+        }
+      ]
+    },
+    "R0051-002": {
+      "title": "HTTP请求分析",
+      "description": "通过抓包还原应用的请求发送结构及监听返回数据",
+      "attack": "对于使用HTTP/HTTPS等基于文本协议进行数据传输的应用来说，可以通过中间人来实现数据收发的抓包，继而还原应用执行逻辑，来实现自动化操作。",
+      "complexity": "中级",
+      "influence": "可能导致应用中的安全流程被突破，数据被伪造等情况",
+      "avoidances": [
+        "A02",
+        "A10",
+        "A13",
+        "A21",
+        "A22"
+      ],
+      "references": [
+        {
+          "title": "完整的HTTP请求分析",
+          "link": "https://www.cnblogs.com/wzfwaf/p/10515507.html"
+        }
+      ]
     },
     "R0054": {
       "title": "恶意退货",
@@ -1087,7 +1396,12 @@
         "A15",
         "A20"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "买家利用快递单号恶意退款近四万元 涉嫌诈骗落法网",
+          "link": "https://m.gmw.cn/baijia/2022-06/29/1303021072.html"
+        }
+      ]
     },
     "R0054-001": {
       "title": "批量退款",
@@ -1099,7 +1413,12 @@
         "A15",
         "A20"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "电商被批量退货背后有哪些黑幕？ ",
+          "link": "https://www.sohu.com/a/478550413_120916326"
+        }
+      ]
     },
     "R0054-002": {
       "title": "退货造假",
@@ -1112,7 +1431,16 @@
         "A16",
         "A20"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "网购商家雇人刷单退货伪造物品受损假象一心只为骗保",
+          "link": "https://baijiahao.baidu.com/s?id=1728176509876921426&wfr=spider&for=pc"
+        },
+        {
+          "title": "淘宝虚假退货会有什么后果 女子网购退货寄空箱获刑",
+          "link": "https://www.sohu.com/a/303084308_99940212"
+        }
+      ]
     },
     "R0054-003": {
       "title": "闪退套利",
@@ -1126,7 +1454,12 @@
         "A20",
         "A21"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "利用平台闪电退款规则 刷单并制造退货假象构成诈骗罪",
+          "link": "https://weibo.com/ttarticle/p/show?id=2309404589705009169082"
+        }
+      ]
     },
     "R0054-004": {
       "title": "恶意拒收",
@@ -1140,7 +1473,12 @@
         "A20",
         "A21"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "遭到闲鱼买家恶意拒收",
+          "link": "https://zhuanlan.zhihu.com/p/398441673"
+        }
+      ]
     },
     "R0055": {
       "title": "低价购风险",
@@ -1152,7 +1490,12 @@
         "A15",
         "A16"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "“0元购”再现，卖家悲喜交加，亚马逊隐忧重重",
+          "link": "https://baijiahao.baidu.com/s?id=1738288741897824434&wfr=spider&for=pc"
+        }
+      ]
     },
     "R0055-001": {
       "title": "卡券限制突破",
@@ -1175,14 +1518,15 @@
         {
           "title": "OWASP Automated Threat: OAT002 Token Cracking",
           "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-002_Token_Cracking.html"
+        },
+        {
+          "title": "2019年PDD优惠券漏洞事件",
+          "link": "https://baike.baidu.com/item/%E6%8B%BC%E5%A4%9A%E5%A4%9A%E6%BC%8F%E6%B4%9E%E9%97%A8"
         }
-      ],
-      "events": [
-        "E0001"
       ]
     },
     "R0056": {
-      "title": "虚假好评",
+      "title": "虚假评价",
       "description": "卖家通过购买虚假好评以提升产品商誉或搜索排名权值",
       "attack": "卖家通过低价成单、发空包、虚拟发货等方式与买家勾结，通过虚假成单和批量好评来提升店铺信誉或商品排名。",
       "complexity": "初级",
@@ -1191,7 +1535,12 @@
         "A15",
         "A21"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "刷好评-百度百科",
+          "link": "https://baike.baidu.com/item/%E4%BF%A1%E7%94%A8%E7%82%92%E4%BD%9C/7462798?fromtitle=%E5%88%B7%E5%A5%BD%E8%AF%84&fromid=6521876&fr=aladdin"
+        }
+      ]
     },
     "R0060": {
       "title": "洗钱/诈骗",
@@ -1205,7 +1554,12 @@
         "A15",
         "A16"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "网络赌博充值点“潜伏”电商平台",
+          "link": "https://baijiahao.baidu.com/s?id=1639817185485445391&wfr=spider&for=pc"
+        }
+      ]
     },
     "R0061": {
       "title": "手机二次号",
@@ -1217,7 +1571,12 @@
         "A15",
         "A23"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "二次启用手机号背后的隐私危机",
+          "link": "https://baijiahao.baidu.com/s?id=1703406873193853384&wfr=spider&for=pc"
+        }
+      ]
     },
     "R0062": {
       "title": "信用卡/借款套现",
@@ -1230,7 +1589,12 @@
         "A16",
         "A20"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "信用卡套现-百度百科",
+          "link": "https://baike.baidu.com/item/%E4%BF%A1%E7%94%A8%E5%8D%A1%E5%A5%97%E7%8E%B0/934329?fr=aladdin"
+        }
+      ]
     },
     "R0064": {
       "title": "拆单套利",
@@ -1243,10 +1607,19 @@
         "A15",
         "A21"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "如何避免恶意凑单？",
+          "link": "https://www.sohu.com/a/433318629_120934325"
+        },
+        {
+          "title": "买家恶意凑单退款，商家该怎么办？",
+          "link": "https://www.kaitao.cn/article/20201229093211.htm"
+        }
+      ]
     },
     "R0066": {
-      "title": "消息骚扰",
+      "title": "站内消息骚扰",
       "description": "利用平台消息发送机制给他人发送骚扰性信息",
       "attack": "与文本内容风险不同，消息骚扰会精心设计以规避关键词黑名单，可能并不会触发平台设置的关键词预警。消息骚扰是一个普遍的风险问题，有些平台用户可以选择什么样的人群允许给‘我’发消息，是一种比较好的防御策略",
       "complexity": "初级",
@@ -1266,7 +1639,12 @@
         "A20",
         "A21"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "设置一键防护功能、优化私信规则、加强评论环节管理……中央网信办：切实加强网络暴力治理！",
+          "link": "https://baijiahao.baidu.com/s?id=1748570171206490385&wfr=spider&for=pc"
+        }
+      ]
     },
     "R0068": {
       "title": "权益滥用",
@@ -1280,7 +1658,12 @@
         "A20",
         "A21"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "消费者权益，滥用也是一种伤害 ",
+          "link": "https://www.sohu.com/a/559353695_114890"
+        }
+      ]
     },
     "R0068-001": {
       "title": "恶意客诉",
@@ -1293,7 +1676,12 @@
         "A16",
         "A21"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "电商平台内经营者遭遇恶意投诉的应对方法",
+          "link": "https://baijiahao.baidu.com/s?id=1742827753728741896&wfr=spider&for=pc"
+        }
+      ]
     },
     "R0068-002": {
       "title": "恶意索赔",
@@ -1301,8 +1689,21 @@
       "attack": "通过批量搜索、数据爬取等方式获取过期、假冒伪劣、违规（如：包含广告法违禁词、商品不合规）等商品，订单产生后买家投诉卖家存在违规，目的以撤销投诉为由索取高额钱款。",
       "complexity": "中级",
       "influence": "给平台或卖家带来经济损失",
-      "avoidances": [],
-      "references": []
+      "avoidances": [
+        "A15",
+        "A19",
+        "A24",
+        "A27",
+        "A29",
+        "A29-001",
+        "A20"
+      ],
+      "references": [
+        {
+          "title": "恶意索赔灰色产业链！该赞扬还是惩罚？",
+          "link": "https://baijiahao.baidu.com/s?id=1748533088616726645&wfr=spider&for=pc"
+        }
+      ]
     },
     "R0069": {
       "title": "文件上传滥用",
@@ -1317,7 +1718,12 @@
         "A15",
         "A26"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "5个减少网站恶意文件上传的妙招",
+          "link": "https://zhuanlan.zhihu.com/p/372859453"
+        }
+      ]
     },
     "R0069-001": {
       "title": "图床滥用",
@@ -1332,7 +1738,12 @@
         "A15",
         "A26"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "远方图床逐步关闭",
+          "link": "https://blog.ltyuanfang.cn/319.html"
+        }
+      ]
     },
     "R0069-002": {
       "title": "云存储滥用",
@@ -1347,7 +1758,12 @@
         "A15",
         "A26"
       ],
-      "references": []
+      "references": [
+        {
+          "title": "阿里巴巴 OSS 存储桶被攻破，通过隐写术分发恶意 Shell 脚本",
+          "link": "https://www.wangan.com/p/7fy7f8dc9e2a9d89"
+        }
+      ]
     }
   }
 }

@@ -4,7 +4,8 @@
     "scenes": "风险场景",
     "dimensions": "风险维度",
     "risks": "风险列表",
-    "avoidances": "规避手段"
+    "avoidances": "规避手段",
+    "attackTools": "攻击工具"
   },
   "risk": "风险",
   "riskKey": "风险ID",
@@ -30,5 +31,6 @@
   "supportAbilities": "提供能力",
   "allScenes": "全场景",
   "references": "参考",
-  "events": "相关事件"
+  "events": "相关事件",
+  "attackTools": "攻击工具"
 }

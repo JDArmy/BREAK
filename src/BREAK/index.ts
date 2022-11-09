@@ -5,7 +5,7 @@ import riskDimensions from "./riskDimensions.json";
 import avoidances from "./avoidances.json";
 import abilityProbiders from "./abilityProviders.json";
 import businessScenes from "./businessScenes.json";
-import events from "./events.json";
+import attackTools from "./attackTools.json";
 
 let BREAK = {
   ...main, //BREAK框架基础信息
@@ -15,7 +15,7 @@ let BREAK = {
   ...avoidances, //规避手段枚举
   ...abilityProbiders, //能力提供者
   ...businessScenes, //业务场景
-  ...events, //相关事件
+  ...attackTools, //攻击工具
 };
 
 export default BREAK;
