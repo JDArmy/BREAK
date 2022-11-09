@@ -12,8 +12,10 @@ const props = defineProps<{
 defineEmits(["drawerClose"]);
 
 const risks = BREAK.risks;
-const innerDrawer = ref(false);
+const avoidanceDrawer = ref(false);
 const avoidanceKey = ref("");
+const attackToolDrawer = ref(false);
+const attackToolKey = ref("");
 const drawer = ref(false);
 drawer.value = props.drawer;
 
@@ -32,24 +34,32 @@ const getInnerDrawerWidth = () => {
   return window.innerWidth > 600 ? 450 : "100%";
 };
 
-const getAvoidanceReferences = (avoidanceKey: string) => {
-  return BREAK.avoidances[avoidanceKey as keyof typeof BREAK.avoidances]
-    .references;
+const getAvoidanceReferences = (aKey: string) => {
+  return BREAK.avoidances[aKey as keyof typeof BREAK.avoidances].references;
+};
+
+const getAttackToolReferences = (atKey: string) => {
+  return BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].references;
 };
 
 const getReferences = (rKey: string) =>
   risks[rKey as keyof typeof risks].references;
 
-const getEvents = (rKey: string) => {
-  let risk = risks[rKey as keyof typeof risks];
-  return risk["events" as keyof typeof risk] as typeof String[];
+const getAttackTools = (rKey: string) => {
+  return Object.keys(BREAK.attackTools).filter((atKey) =>
+    BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].risks.includes(
+      rKey as never
+    )
+  );
 };
-
-const getEventLink = (eKey: unknown) =>
-  BREAK.events[eKey as keyof typeof BREAK.events].link;
+// const getEvents = (rKey: string) => {
+//   let risk = risks[rKey as keyof typeof risks];
+//   return risk["events" as keyof typeof risk] as typeof String[];
+// };
 </script>
 
 <template>
+  <!-- 风险详情页 -->
   <el-drawer
     v-model="drawer"
     @closed="$emit('drawerClose')"
@@ -92,7 +102,7 @@ const getEventLink = (eKey: unknown) =>
             href="javascript:void(0);"
             @click="
               avoidanceKey = aKey;
-              innerDrawer = true;
+              avoidanceDrawer = true;
             "
             >{{ aKey + ":&nbsp;" + $t(`BREAK.avoidances.${aKey}.title`) }}</a
           >
@@ -112,60 +122,98 @@ const getEventLink = (eKey: unknown) =>
         </li>
       </ul>
     </div>
-    <div class="desc" v-if="getEvents(rKey)">
-      <strong>{{ $t("events") }}:&nbsp;</strong>
+    <div class="desc" v-if="getAttackTools(rKey).length > 0">
+      <strong>{{ $t("attackTools") }}</strong>
       <ul>
-        <li v-for="eventKey in getEvents(rKey)">
-          <a :href="getEventLink(eventKey)" target="_blank">
-            {{ $t(`BREAK.events.${eventKey}.title`) }} </a
-          >: {{ $t(`BREAK.events.${eventKey}.description`) }}
+        <li v-for="atKey in getAttackTools(rKey)">
+          <a
+            href="javascript:void(0);"
+            @click="
+              attackToolKey = atKey;
+              attackToolDrawer = true;
+            "
+            >{{ atKey + ":&nbsp;" + $t(`BREAK.attackTools.${atKey}.title`) }}</a
+          >
         </li>
       </ul>
     </div>
-    <el-drawer
-      v-model="innerDrawer"
-      :title="$t('avoidance')"
-      :append-to-body="true"
-      :size="getInnerDrawerWidth()"
-    >
-      <div class="desc">
-        <strong>{{ $t("ID") }}:&nbsp;</strong>
-        {{ avoidanceKey }}
-      </div>
-      <div class="desc">
-        <strong>{{ $t("title") }}:&nbsp;</strong>
-        {{ $t(`BREAK.avoidances.${avoidanceKey}.title`) }}
-      </div>
-      <div class="desc">
-        <strong>{{ $t("summary") }}:&nbsp;</strong>
-        {{ $t(`BREAK.avoidances.${avoidanceKey}.summary`) }}
-      </div>
-      <div class="desc">
-        <strong>{{ $t("description") }}:&nbsp;</strong>
-        {{ $t(`BREAK.avoidances.${avoidanceKey}.description`) }}
-      </div>
-      <div class="desc">
-        <strong>{{ $t("references") }}:&nbsp;</strong>
-        <ul>
-          <li
-            v-for="(reference, refIdx) in getAvoidanceReferences(avoidanceKey)"
-          >
-            <a :href="reference.link" target="_blank">
-              {{
-                $t(
-                  `BREAK.avoidances.${avoidanceKey}.references[${refIdx}].title`
-                )
-              }} </a
-            >:
+  </el-drawer>
+  <!-- 手段详情页 -->
+  <el-drawer
+    v-model="avoidanceDrawer"
+    :title="$t('avoidance')"
+    :append-to-body="true"
+    :size="getInnerDrawerWidth()"
+  >
+    <div class="desc">
+      <strong>{{ $t("ID") }}:&nbsp;</strong>
+      {{ avoidanceKey }}
+    </div>
+    <div class="desc">
+      <strong>{{ $t("title") }}:&nbsp;</strong>
+      {{ $t(`BREAK.avoidances.${avoidanceKey}.title`) }}
+    </div>
+    <div class="desc">
+      <strong>{{ $t("summary") }}:&nbsp;</strong>
+      {{ $t(`BREAK.avoidances.${avoidanceKey}.summary`) }}
+    </div>
+    <div class="desc">
+      <strong>{{ $t("description") }}:&nbsp;</strong>
+      {{ $t(`BREAK.avoidances.${avoidanceKey}.description`) }}
+    </div>
+    <div class="desc" v-if="getAvoidanceReferences(avoidanceKey).length > 0">
+      <strong>{{ $t("references") }}:&nbsp;</strong>
+      <ul>
+        <li v-for="(reference, refIdx) in getAvoidanceReferences(avoidanceKey)">
+          <a :href="reference.link" target="_blank">
+            {{
+              $t(`BREAK.avoidances.${avoidanceKey}.references[${refIdx}].title`)
+            }} </a
+          >:
+          {{
+            $t(
+              `BREAK.avoidances.${avoidanceKey}.references[${refIdx}].description`
+            )
+          }}
+        </li>
+      </ul>
+    </div>
+  </el-drawer>
+  <!-- 攻击工具详情页 -->
+  <el-drawer
+    v-model="attackToolDrawer"
+    :title="$t('attackTools')"
+    :append-to-body="true"
+    :size="getInnerDrawerWidth()"
+  >
+    <div class="desc">
+      <strong>{{ $t("ID") }}:&nbsp;</strong>
+      {{ attackToolKey }}
+    </div>
+    <div class="desc">
+      <strong>{{ $t("title") }}:&nbsp;</strong>
+      {{ $t(`BREAK.attackTools.${attackToolKey}.title`) }}
+    </div>
+    <div class="desc">
+      <strong>{{ $t("description") }}:&nbsp;</strong>
+      {{ $t(`BREAK.attackTools.${attackToolKey}.description`) }}
+    </div>
+    <div class="desc" v-if="getAttackToolReferences(attackToolKey).length > 0">
+      <strong>{{ $t("references") }}:&nbsp;</strong>
+      <ul>
+        <li
+          v-for="(reference, refIdx) in getAttackToolReferences(attackToolKey)"
+        >
+          <a :href="reference.link" target="_blank">
             {{
               $t(
-                `BREAK.avoidances.${avoidanceKey}.references[${refIdx}].description`
+                `BREAK.attackTools.${attackToolKey}.references[${refIdx}].title`
               )
             }}
-          </li>
-        </ul>
-      </div>
-    </el-drawer>
+          </a>
+        </li>
+      </ul>
+    </div>
   </el-drawer>
 </template>
 

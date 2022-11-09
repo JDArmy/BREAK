@@ -11,14 +11,14 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: "/risk/:rKey",
-      name: "riskDetail",
-      component: HomeView,
-    },
-    {
       path: "/risks",
       name: "risks",
       component: () => import("@/views/RisksView.vue"),
+    },
+    {
+      path: "/risk/:rKey",
+      name: "riskDetail",
+      component: HomeView,
     },
     {
       path: "/avoidances",
@@ -30,6 +30,16 @@ const router = createRouter({
     //   name: "events",
     //   component: () => import("@/views/EventsView.vue"),
     // },
+    {
+      path: "/attack-tools",
+      name: "attackTools",
+      component: () => import("@/views/AttackToolsView.vue"),
+    },
+    {
+      path: "/attack-tool/:atKey",
+      name: "attackTool",
+      component: () => import("@/views/AttackToolView.vue"),
+    },
     {
       path: "/ability-providers",
       name: "abilityProviders",

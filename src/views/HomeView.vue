@@ -129,10 +129,9 @@ let riskDetailClose = () => {
           class="risk-scene"
           v-for="rsKey in rdVal.riskScenes"
           :key="rsKey"
-          :title="rsKey"
           :md="24 / rdVal.riskScenes.length"
         >
-          <h4 class="risk-scene-title">
+          <h4 :title="rsKey" class="risk-scene-title">
             <!-- <a :href="'/risk-demensions/' + rdKey"> -->
             {{ $t(`BREAK.riskScenes.${rsKey}.title`) }}
             <!-- </a> -->
