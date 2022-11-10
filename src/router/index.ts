@@ -25,21 +25,16 @@ const router = createRouter({
       name: "avoidances",
       component: () => import("@/views/AvoidancesView.vue"),
     },
-    // {
-    //   path: "/events",
-    //   name: "events",
-    //   component: () => import("@/views/EventsView.vue"),
-    // },
     {
       path: "/attack-tools",
       name: "attackTools",
       component: () => import("@/views/AttackToolsView.vue"),
     },
-    {
-      path: "/attack-tool/:atKey",
-      name: "attackTool",
-      component: () => import("@/views/AttackToolView.vue"),
-    },
+    // {
+    //   path: "/attack-tool/:atKey",
+    //   name: "attackTool",
+    //   component: () => import("@/views/AttackToolView.vue"),
+    // },
     {
       path: "/ability-providers",
       name: "abilityProviders",

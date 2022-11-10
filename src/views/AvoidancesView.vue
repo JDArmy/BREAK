@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import BREAK from "@/BREAK";
+import { ElIcon } from "element-plus";
+import { Link } from "@element-plus/icons-vue";
 
 import "element-plus/es/components/table/style/css";
 import "element-plus/es/components/table-column/style/css";
@@ -72,6 +74,7 @@ avoidanceCategories.forEach((acKey) => {
           <ul class="reference-list">
             <li v-for="(reference, refIdx) in scope.row.references">
               <a v-if="scope.row.aKey" :href="reference.link" target="_blank"
+                ><el-icon><Link /></el-icon
                 >{{
                   $t(
                     `BREAK.avoidances.${scope.row.aKey}.references[${refIdx}].title`

@@ -8,11 +8,14 @@
       <template #default="scope">
         <ul>
           <li v-for="(reference, refIdx) in scope.row.references">
-            <a :href="reference.link" target="_blank">{{
-              $t(
-                `BREAK.attackTools.${scope.row.atKey}.references[${refIdx}].title`
-              )
-            }}</a>
+            <a :href="reference.link" target="_blank"
+              ><el-icon><Link /></el-icon
+              >{{
+                $t(
+                  `BREAK.attackTools.${scope.row.atKey}.references[${refIdx}].title`
+                )
+              }}</a
+            >
           </li>
         </ul>
       </template>
@@ -30,6 +33,8 @@
 </template>
 <script lang="ts" setup>
 import BREAK from "@/BREAK";
+import { ElIcon } from "element-plus";
+import { Link } from "@element-plus/icons-vue";
 
 let attackTools = Object.keys(BREAK.attackTools).map((atKey) => {
   return {
