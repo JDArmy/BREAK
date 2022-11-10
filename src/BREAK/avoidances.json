@@ -191,60 +191,85 @@
       "references": []
     },
     "A10": {
-      "title": "异常环境识别",
+      "title": "异常环境检测",
       "category": "AC02",
       "summary": "对应用运行环境及用户请求环境进行识别，发现异常环境。",
       "description": "异常环境识别通过获取包括不限于终端静默人机挑战、应用合法性、进程合法性、是否越狱（ROOT）、陀螺仪状态、是否外挂插件等数十种数据的获取、分析和判断。业务场景下的异常环境识别一般是通过业务终端访问系统实现的。根据业务访问模式的不同，终端访问系统可能是浏览器、APP移动应用、桌面级程序等形式。异常环境识别能力严重依赖业务终端访问系统的权限，由于用户授权限制以及法律法规限制，异常环境识别具有一定的局限性，且也受到对抗和终端数据完整性制约。",
       "references": []
     },
     "A10-001": {
-      "title": "手机模拟器识别",
+      "title": "手机模拟器检测",
       "category": "AC02",
-      "summary": "",
-      "description": "",
-      "references": []
+      "summary": "对APP是否运行在手机模拟器上进行识别",
+      "description": "模拟器常常被用来刷单，如何准确的识别模拟器成为App开发中的一个重要模块，目前也有专门的公司提供相应的SDK供开发者识别模拟器。 目前流行的Android模拟器大概分为两种，一种是基于Qemu，另一类是基于Genymotion(VirtualBox类)，网上现在流行用一些模拟器特征进行鉴别，比如：通过判断IMEI是否全部为0000000000格式；判断Build中的一些模拟器特征值；匹配Qemu的一些特征文件以及属性；通过获取cpu信息，将x86的给过滤掉（真机一般都是基于ARM）等",
+      "references": [
+        {
+          "title": "Android模拟器识别检测技术",
+          "link": "https://blog.csdn.net/liuno0/article/details/124279075"
+        }
+      ]
     },
     "A10-002": {
-      "title": "云手机识别",
+      "title": "云手机检测",
       "category": "AC02",
-      "summary": "",
-      "description": "",
+      "summary": "对APP是否运行在云手机上进行识别",
+      "description": "可以通过识别手机模拟器（A10-001）的方式来进行云手机识别，此外设备指纹、异常环境监测、出网IP等也可用来进行云手机识别。",
       "references": []
     },
     "A10-003": {
-      "title": "手机ROOT/越狱识别",
+      "title": "手机ROOT/越狱检测",
       "category": "AC02",
-      "summary": "",
-      "description": "",
-      "references": []
+      "summary": "对APP是否运行在被Root或越狱破解的设备上进行识别",
+      "description": "通过Root或越狱后的特征来进行判断，譬如：可以查看发布的系统版本，是test-keys（测试版），还是release-keys（发布版）；检查是否存在Superuser.apk；检测在常用目录下是否存在su；使用which命令查看是否存在su；执行su，看能否获取到root权限；是否存在busybox；访问/data目录，查看读写权限等",
+      "references": [
+        {
+          "title": "Android root检测方法小结",
+          "link": "https://www.lmlphp.com/user/58076/article/item/637693/"
+        }
+      ]
     },
     "A10-004": {
-      "title": "外挂识别",
+      "title": "外挂检测",
       "category": "AC02",
-      "summary": "",
-      "description": "",
+      "summary": "对程序是否被注入运行时指令或外挂程序进行识别",
+      "description": "通过对程序运行时进行完整性校验、关键词或DLL列表检测，对进行列表、窗口标题关键词等进行判断来检测是否存在外挂程序",
       "references": []
     },
     "A10-005": {
-      "title": "多开识别",
+      "title": "多开检测",
       "category": "AC02",
-      "summary": "",
-      "description": "",
-      "references": []
+      "summary": "对APP是否在终端上被多开进行识别",
+      "description": "游戏多开检测只是对游戏的进程数进行限制，分为事前检测、事中检测、和事后检测。事中检测和事后检测往往没有提示，是游戏公司封号、处罚的手段，事前检测即禁止游戏多开，包括：枚举进程的多开检测、互斥对象多开检测、信号量多开检测、窗口多开检测、共享内存检测多开等方法",
+      "references": [
+        {
+          "title": "游戏多开检测的几种实现方法及破解方法参考",
+          "link": "https://blog.csdn.net/weixin_40582034/article/details/125960599"
+        }
+      ]
     },
     "A10-006": {
-      "title": "调试器识别",
+      "title": "调试器检测",
       "category": "AC02",
-      "summary": "",
-      "description": "",
-      "references": []
+      "summary": "对程序是否运行被调试进行识别",
+      "description": "最基本的调试器检测技术就是检测进程环境块(PEB)中的BeingDebugged标志。PEB另一个成员被称作NtGlobalFlag（偏移0x68），壳也通过它来检测程序是否用调试器加载。Kernel32!CheckRemoteDebuggerPresent()是另一个可以用于确定是否有调试器被附加到进程的API。在调试器中步过INT3和INT1指令的时候，由于调试器通常会处理这些调试中断，所以异常处理例程默认情况下将不会被调用，Debugger Interrupts就利用了这个事实。这样壳可以在异常处理例程中设置标志，通过INT指令后如果这些标志没有被设置则意味着进程正在被调试。更多方式请阅读参考资料。",
+      "references": [
+        {
+          "title": "脱壳的艺术--2 调试器检测技术",
+          "link": "https://blog.csdn.net/iiprogram/article/details/2248506"
+        }
+      ]
     },
     "A10-007": {
-      "title": "虚拟机识别",
+      "title": "虚拟机检测",
       "category": "AC02",
-      "summary": "",
-      "description": "",
-      "references": []
+      "summary": "对APP是否运行在虚拟机中进行识别",
+      "description": "虚拟机运行环境检测，指的是软件能够判断当前是不是在虚拟机中运行，根据判断结果，做对应的处理。从恶意软件的视角，它可以在虚拟机中改变自身行为，加大分析难度。从软件自身安全出发，用于防止被逆向调试以及某些场景下的非正常使用。",
+      "references": [
+        {
+          "title": "虚拟机运行环境检测",
+          "link": "https://www.cnblogs.com/cherishui/p/14366072.html"
+        }
+      ]
     },
     "A11": {
       "title": "退出登录态",

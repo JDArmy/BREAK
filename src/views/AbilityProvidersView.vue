@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import BREAK from "@/BREAK";
+import { ElIcon } from "element-plus";
+import { Link } from "@element-plus/icons-vue";
 
 let providers = Array();
 Object.keys(BREAK.abilityProviders).forEach((apKey) => {
@@ -18,7 +20,7 @@ Object.keys(BREAK.abilityProviders).forEach((apKey) => {
   <el-table :data="providers" border stripe>
     <el-table-column prop="logo" width="150" :label="$t('logo')">
       <template #default="scope">
-        <div class="logo">
+        <div class="aLogo">
           <img :src="scope.row.logo" />
         </div>
       </template>
@@ -26,7 +28,8 @@ Object.keys(BREAK.abilityProviders).forEach((apKey) => {
     <el-table-column prop="title" width="120" :label="$t('title')">
       <template #default="scope">
         <a :href="scope.row.site" target="_blank">
-          {{
+          <el-icon><Link /></el-icon
+          >{{
             scope.row.apKey
               ? $t(`BREAK.abilityProviders.${scope.row.apKey}.title`)
               : ""
@@ -40,9 +43,10 @@ Object.keys(BREAK.abilityProviders).forEach((apKey) => {
           class="provider-abilities"
           v-for="(ability, aKey) in scope.row.abilities"
         >
-          <a :href="ability.url" target="_blank">{{
-            $t(`BREAK.avoidances.${aKey}.title`)
-          }}</a>
+          <a :href="ability.url" target="_blank"
+            ><el-icon><Link /></el-icon
+            >{{ $t(`BREAK.avoidances.${aKey}.title`) }}</a
+          >
         </span>
       </template>
     </el-table-column>
@@ -59,16 +63,16 @@ Object.keys(BREAK.abilityProviders).forEach((apKey) => {
   <div class="commit-new-provider">
     {{ $t("commitNewProvider") }}:
     <a href="https://github.com/JDArmy/BREAK/issues" target="_blank">
-      https://github.com/JDArmy/BREAK/issues
+      <el-icon><Link /></el-icon>https://github.com/JDArmy/BREAK/issues
     </a>
   </div>
 </template>
 
 <style scoped>
-.logo {
+.aLogo {
   text-align: center;
 }
-.logo img {
+.aLogo img {
   height: 30px;
   max-width: 120px;
 }
