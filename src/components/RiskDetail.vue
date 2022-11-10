@@ -107,6 +107,7 @@ const getAttackToolAvoidances = (atKey: string) => {
           avoidanceKey = aKey;
           avoidanceDrawer = true;
         "
+        round
         >{{
           aKey + ":&nbsp;" + $t(`BREAK.avoidances.${aKey}.title`)
         }}</el-button
@@ -136,6 +137,7 @@ const getAttackToolAvoidances = (atKey: string) => {
           attackToolKey = atKey;
           attackToolDrawer = true;
         "
+        round
         >{{
           atKey + ":&nbsp;" + $t(`BREAK.attackTools.${atKey}.title`)
         }}</el-button
@@ -213,6 +215,7 @@ const getAttackToolAvoidances = (atKey: string) => {
           avoidanceKey = aKey;
           avoidanceDrawer = true;
         "
+        round
         >{{
           aKey + ":&nbsp;" + $t(`BREAK.avoidances.${aKey}.title`)
         }}</el-button
