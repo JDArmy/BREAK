@@ -42,7 +42,8 @@ const getAvoidanceReferences = (aKey: string) => {
 const getReferences = (rKey: string) =>
   risks[rKey as keyof typeof risks].references;
 
-const getAttackTools = (rKey: string) => {
+//从attackTools中获取对应ID的risks
+const getRiskAttackTools = (rKey: string) => {
   return Object.keys(BREAK.attackTools).filter((atKey) =>
     BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].risks.includes(
       rKey as never
@@ -116,7 +117,7 @@ const getAttackToolAvoidances = (atKey: string) => {
     <div class="desc" v-if="getReferences(rKey).length > 0">
       <strong>{{ $t("riskReference") }}:&nbsp;</strong>
       <ul>
-        <li v-for="(reference, refIdx) in getReferences(rKey)">
+        <li v-for="(reference, refIdx) in getReferences(rKey)" :key="refIdx">
           <a :href="reference.link" v-if="reference.link" target="_blank"
             ><el-icon><Link /></el-icon
             >{{ $t(`BREAK.risks.${rKey}.references[${refIdx}].title`) }}</a
@@ -127,10 +128,10 @@ const getAttackToolAvoidances = (atKey: string) => {
         </li>
       </ul>
     </div>
-    <div class="desc" v-if="getAttackTools(rKey).length > 0">
+    <div class="desc" v-if="getRiskAttackTools(rKey).length > 0">
       <strong>{{ $t("attackTools") }}:&nbsp;</strong>
       <el-button
-        v-for="atKey in getAttackTools(rKey)"
+        v-for="atKey in getRiskAttackTools(rKey)"
         :key="atKey"
         class="relational-link"
         @click="
@@ -167,10 +168,17 @@ const getAttackToolAvoidances = (atKey: string) => {
       <strong>{{ $t("description") }}:&nbsp;</strong>
       {{ $t(`BREAK.avoidances.${avoidanceKey}.description`) }}
     </div>
+    <div class="desc" v-if="$t(`BREAK.avoidances.${avoidanceKey}.limitation`)">
+      <strong>{{ $t("limitation") }}:&nbsp;</strong>
+      {{ $t(`BREAK.avoidances.${avoidanceKey}.limitation`) }}
+    </div>
     <div class="desc" v-if="getAvoidanceReferences(avoidanceKey).length > 0">
       <strong>{{ $t("references") }}:&nbsp;</strong>
       <ul>
-        <li v-for="(reference, refIdx) in getAvoidanceReferences(avoidanceKey)">
+        <li
+          v-for="(reference, refIdx) in getAvoidanceReferences(avoidanceKey)"
+          :key="refIdx"
+        >
           <a :href="reference.link" target="_blank">
             <el-icon><Link /></el-icon
             >{{
@@ -226,6 +234,7 @@ const getAttackToolAvoidances = (atKey: string) => {
       <ul>
         <li
           v-for="(reference, refIdx) in getAttackToolReferences(attackToolKey)"
+          :key="refIdx"
         >
           <a :href="reference.link" target="_blank">
             <el-icon><Link /></el-icon
@@ -243,7 +252,7 @@ const getAttackToolAvoidances = (atKey: string) => {
 
 <style scoped>
 .desc {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .ability-providers-info {

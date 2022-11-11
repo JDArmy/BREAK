@@ -7,7 +7,7 @@
     <el-table-column :label="$t('references')" :width="300">
       <template #default="scope">
         <ul>
-          <li v-for="(reference, refIdx) in scope.row.references">
+          <li v-for="(reference, refIdx) in scope.row.references" :key="refIdx">
             <a :href="reference.link" target="_blank"
               ><el-icon><Link /></el-icon
               >{{
@@ -23,7 +23,7 @@
     <el-table-column :label="$t('avoidance')" :width="180">
       <template #default="scope">
         <ul>
-          <li v-for="aKey in scope.row.avoidances" :title="aKey">
+          <li v-for="aKey in scope.row.avoidances" :title="aKey" :key="aKey">
             {{ $t(`BREAK.avoidances.${aKey}.title`) }}
           </li>
         </ul>

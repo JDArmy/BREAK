@@ -30,7 +30,10 @@ avoidanceCategories.forEach((acKey) => {
 
 <template lang="">
   <h3>{{ $t("menu.avoidances") }}</h3>
-  <div v-for="(avoidance, avoidanceCategory) in avoidances">
+  <div
+    v-for="(avoidance, avoidanceCategory) in avoidances"
+    :key="avoidanceCategory"
+  >
     <div>
       <h4 class="avoidance-category-title">
         {{ $t(`BREAK.avoidanceCategories.${avoidanceCategory}.title`) }} ({{
@@ -69,10 +72,22 @@ avoidanceCategories.forEach((acKey) => {
           }}
         </template>
       </el-table-column>
+      <el-table-column :label="$t('limitation')">
+        <template #default="scope">
+          {{
+            scope.row.aKey
+              ? $t(`BREAK.avoidances.${scope.row.aKey}.limitation`)
+              : ""
+          }}
+        </template>
+      </el-table-column>
       <el-table-column width="250px" :label="$t('references')">
         <template #default="scope">
           <ul class="reference-list">
-            <li v-for="(reference, refIdx) in scope.row.references">
+            <li
+              v-for="(reference, refIdx) in scope.row.references"
+              :key="refIdx"
+            >
               <a v-if="scope.row.aKey" :href="reference.link" target="_blank"
                 ><el-icon><Link /></el-icon
                 >{{

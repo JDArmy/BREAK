@@ -42,6 +42,7 @@ Object.keys(BREAK.abilityProviders).forEach((apKey) => {
         <span
           class="provider-abilities"
           v-for="(ability, aKey) in scope.row.abilities"
+          :key="aKey"
         >
           <a :href="ability.url" target="_blank"
             ><el-icon><Link /></el-icon
