@@ -104,6 +104,10 @@
         {
           "title": "网络爬虫是什么意思？",
           "link": "https://baijiahao.baidu.com/s?id=1729187646862870167&wfr=spider&for=pc"
+        },
+        {
+          "title": "scrapy爬虫框架 - 百度百科",
+          "link": "https://baike.baidu.com/item/scrapy/7914913?fr=aladdin"
         }
       ],
       "avoidances": [
@@ -695,6 +699,30 @@
         "R0051",
         "R0012"
       ]
+    },
+    "AT0029": {
+      "title": "验证码OCR识别",
+      "description": "OCR，即 Optical Character Recognition，中文叫作光学字符识别，是指通过电子设备检查打印在纸上的字符，通过检查暗、亮的模式确认字符形状，然后通过字符识别方法将形状转换成计算机文字的过程。那么对于图形验证码来说，它都是一些不规则的字符，但是这些字符确实是由字符稍加扭曲变换得到的内容。爬虫过程中难免会遇到各种各样的验证码，而大多数验证码还是图形验证码，这时候我们可以直接用 OCR 来识别。",
+      "references": [
+        {
+          "title": "Tesseract-OCR 图像文字识别工具",
+          "link": "https://blog.csdn.net/weixin_43656359/article/details/103401848"
+        }
+      ],
+      "avoidances": [
+        "A01-002",
+        "A01-003"
+      ],
+      "risks": [
+        "R0047"
+      ]
+    },
+    "AT0030": {
+      "title": "",
+      "description": "",
+      "references": [],
+      "avoidances": [],
+      "risks": []
     }
   }
 }
