@@ -13,11 +13,13 @@ Object.keys(BREAK.abilityProviders).forEach((apKey) => {
   };
   providers.push(provider);
 });
+
+let getWindowHeight = () => window.innerHeight;
 </script>
 
 <template lang="">
   <h3>{{ $t("abilityProviders") }}</h3>
-  <el-table :data="providers" border stripe>
+  <el-table :height="getWindowHeight() - 50" :data="providers" border stripe>
     <el-table-column prop="logo" width="150" :label="$t('logo')">
       <template #default="scope">
         <div class="aLogo">

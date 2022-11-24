@@ -1,6 +1,6 @@
 <template lang="">
   <h3>{{ $t("menu.attackTools") }}</h3>
-  <el-table :data="attackTools" border stripe>
+  <el-table :height="getWindowHeight() - 50" :data="attackTools" border stripe>
     <el-table-column prop="atKey" label="ID" :width="100" />
     <el-table-column prop="title" :label="$t('title')" :width="150" />
     <el-table-column prop="description" :label="$t('description')" />
@@ -42,6 +42,8 @@ let attackTools = Object.keys(BREAK.attackTools).map((atKey) => {
     ...BREAK.attackTools[atKey as keyof typeof BREAK.attackTools],
   };
 });
+
+let getWindowHeight = () => window.innerHeight;
 </script>
 <style scoped>
 ul {

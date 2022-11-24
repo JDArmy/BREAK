@@ -36,11 +36,13 @@ let riskDetailClose = () => {
 // const rKeyFormatter = (row: Risks) => {
 //   return "<a href='/risk/" + row.rKey + "'>" + row.rKey + "</a>";
 // };
+
+let getWindowHeight = () => window.innerHeight;
 </script>
 
 <template lang="">
   <h3>{{ $t("menu.risks") }}</h3>
-  <el-table :data="risks" stripe border>
+  <el-table :height="getWindowHeight() - 50" :data="risks" stripe border>
     <el-table-column prop="rKey" width="120px" :label="$t('riskKey')">
       <template v-slot="scope">
         <a

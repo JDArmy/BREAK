@@ -25,6 +25,7 @@ avoidanceCategories.forEach((acKey) => {
   });
 });
 
+let getWindowHeight = () => window.innerHeight;
 // console.log(avoidances);
 </script>
 
@@ -44,7 +45,12 @@ avoidanceCategories.forEach((acKey) => {
         {{ $t(`BREAK.avoidanceCategories.${avoidanceCategory}.description`) }}
       </div>
     </div>
-    <el-table :data="avoidances[avoidanceCategory]" stripe border>
+    <el-table
+      :height="getWindowHeight() - 50"
+      :data="avoidances[avoidanceCategory]"
+      stripe
+      border
+    >
       <el-table-column prop="aKey" width="100px" :label="$t('ID')" />
       <el-table-column width="150px" :label="$t('title')">
         <template #header>{{ $t("title") }}</template>
