@@ -1,6 +1,6 @@
 {
   "name": "break",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",

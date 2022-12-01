@@ -20,12 +20,7 @@ watch(bsKeySelected, async () => {
     bsKeySelected.value = "";
     sceneBREAK.value = BREAK;
   } else {
-    const exJson =
-      BREAK.businessScenes[
-        bsKeySelected.value as keyof typeof BREAK.businessScenes
-      ].exJson;
-    sceneBREAK.value = await import(`@/scenes/${exJson}.json`);
-    // sceneBREAK.value = await import(`@/scenes/${bsKeySelected.value}.json`);
+    sceneBREAK.value = await import(`@/scenes/${bsKeySelected.value}.json`);
   }
 });
 
@@ -98,7 +93,7 @@ let riskDetailClose = () => {
         <el-option
           v-for="(bsVal, bsKey) in BREAK.businessScenes"
           :key="bsKey"
-          :label="bsVal.title"
+          :label="bsVal"
           :value="bsKey"
         />
       </el-select>

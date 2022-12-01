@@ -1,4 +1,6 @@
 {
+  "title": "航旅",
+  "description": "",
   "bsKey": "BS03",
   "riskDimensions": {
     "RD01": {
@@ -39,7 +41,8 @@
       "risks": [
         "R0003",
         "R0055",
-        "R0068"
+        "R0068",
+        "R0006"
       ]
     },
     "RS04": {
