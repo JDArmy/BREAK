@@ -80,12 +80,6 @@ const handleCommand = (command: keyof typeof languages) => {
     <el-menu-item class="" index="/avoidances">{{
       $t("menu.avoidances")
     }}</el-menu-item>
-    <!-- <el-menu-item
-            class=""
-            index="/business-scenes"
-            key=""
-            >{{ $t("businessScenes") }}</el-menu-item
-        > -->
     <el-menu-item index="/attack-tools">{{
       $t("menu.attackTools")
     }}</el-menu-item>
