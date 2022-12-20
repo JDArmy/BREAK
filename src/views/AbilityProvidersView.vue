@@ -3,16 +3,10 @@ import BREAK from "@/BREAK";
 import { ElIcon } from "element-plus";
 import { Link } from "@element-plus/icons-vue";
 
-let providers = Array();
-Object.keys(BREAK.abilityProviders).forEach((apKey) => {
-  let providerVal =
-    BREAK.abilityProviders[apKey as keyof typeof BREAK.abilityProviders];
-  let provider = {
-    ...providerVal,
-    apKey: apKey,
-  };
-  providers.push(provider);
-});
+let providers = Object.keys(BREAK.abilityProviders).map((apKey) => ({
+  apKey: apKey,
+  ...BREAK.abilityProviders[apKey as keyof typeof BREAK.abilityProviders],
+}));
 
 let getWindowHeight = () => window.innerHeight;
 </script>

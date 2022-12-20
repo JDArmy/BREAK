@@ -36,12 +36,10 @@ import BREAK from "@/BREAK";
 import { ElIcon } from "element-plus";
 import { Link } from "@element-plus/icons-vue";
 
-let attackTools = Object.keys(BREAK.attackTools).map((atKey) => {
-  return {
-    atKey: atKey,
-    ...BREAK.attackTools[atKey as keyof typeof BREAK.attackTools],
-  };
-});
+let attackTools = Object.keys(BREAK.attackTools).map((atKey) => ({
+  atKey: atKey,
+  ...BREAK.attackTools[atKey as keyof typeof BREAK.attackTools],
+}));
 
 let getWindowHeight = () => window.innerHeight;
 </script>
