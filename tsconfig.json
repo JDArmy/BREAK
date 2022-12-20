@@ -7,10 +7,10 @@
       "@/*": ["./src/*"]
     }
   },
-
   "references": [
     {
       "path": "./tsconfig.config.json"
     }
-  ]
+  ],
+  "strictNullChecks": true
 }

@@ -4,17 +4,11 @@ import BREAK from "@/BREAK";
 
 import "element-plus/es/components/table/style/css";
 import "element-plus/es/components/table-column/style/css";
-// import { ElTable, ElTableColumn } from "element-plus";
 
-let risks = Array();
-Object.keys(BREAK.risks).forEach((rKey) => {
-  let riskVal = BREAK.risks[rKey as keyof typeof BREAK.risks];
-  let risk = {
-    ...riskVal,
-    rKey: rKey,
-  };
-  risks.push(risk);
-});
+let risks = Object.keys(BREAK.risks).map((rKey) => ({
+  ...BREAK.risks[rKey as keyof typeof BREAK.risks],
+  rKey: rKey,
+}));
 
 let drawer = ref(false);
 let riskKey = ref("");

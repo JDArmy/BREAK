@@ -33,7 +33,7 @@ JDArmy BREAK 是英文“Business Risk Enumeration & Avoidance Kownledge”的�
 - `risks.json` 中存放风险列表
 - `avoidances.json` 中存放规避手段
 - `businessScenes.json` 中存放业务场景列表
-  - 具体的场景存在 `/src/scenes` 中，按 `businessScenes` 中的编号进行命名
+  - 具体的场景存在 `/src/BREAK/scenes` 中，按 `businessScenes` 中的编号进行命名
 - `abilityProviders.json` 中存放了一些能力提供者，以及提供的一些业务风险规避能力。
 
 各协作者可以通过直接修改各 JSON 文件来与我们进行该系统框架的协作开发。亦可通过在github上提issue来给我们提供意见或建议。

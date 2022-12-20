@@ -20,7 +20,9 @@ watch(bsKeySelected, async () => {
     bsKeySelected.value = "";
     sceneBREAK.value = BREAK;
   } else {
-    sceneBREAK.value = await import(`@/scenes/${bsKeySelected.value}.json`);
+    sceneBREAK.value = await import(
+      `@/BREAK/business-scenes/${bsKeySelected.value}.json`
+    );
   }
 });
 

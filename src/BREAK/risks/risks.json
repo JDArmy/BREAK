@@ -1,0 +1,1886 @@
+{
+  "risks": {
+    "R0001": {
+      "title": "流程自动化",
+      "description": "包括不限于自动化注册、登录、购物、领劵、抽奖、做任务等，通过应用程序的非预期操作加速或定时完成特定流程。",
+      "attack": "有两种主流的方式来实施流程自动化：一种是通过逆向分析业务流程及数据传输协议，编写自动化脚本来发送请求；另一种是操纵业务访问终端（譬如浏览器、应用APP等），重复播放提前录制的流程动作。",
+      "complexity": "高级",
+      "influence": "套取平台营销活动利益，占用正常用户活动资源。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A10",
+        "A13",
+        "A15",
+        "A16",
+        "A18",
+        "A22"
+      ],
+      "references": [
+        {
+          "title": "OWASP Automated Threat: OAT006 Expediting",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-006_Expediting.html"
+        }
+      ]
+    },
+    "R0002": {
+      "title": "卡券枚举",
+      "description": "批量枚举优惠券号码、兑换码、折扣码等活动卡券兑换凭证。",
+      "attack": "劵号由某种规则数列或可猜测算法生成，通过暴力枚举或算法破解等方式，可以批量获取券号以便进一步套取利益。",
+      "complexity": "初级",
+      "influence": "套取平台营销活动利益，占用正常用户活动资源。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A10",
+        "A13",
+        "A15",
+        "A16",
+        "A18"
+      ],
+      "references": [
+        {
+          "title": "OWASP Automated Threat: OAT002 Token Cracking",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-002_Token_Cracking.html"
+        }
+      ]
+    },
+    "R0003": {
+      "title": "秒拍出价",
+      "description": "第一时间出价，通过不公平方法获得限购或抢购商品或服务。",
+      "attack": "通过不公平方法获得限购或抢购商品或服务或者商品折扣，通常指使用第三方脚本，或辅助工具完成抢购操作，有时依赖于第三方情报提前泄露接口等相关信息。通常需要借助自动化领劵、抽奖、做任务（R0001）相关攻击方法。",
+      "complexity": "中级",
+      "influence": "套取平台营销活动利益。影响正常用户下单。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A10",
+        "A13",
+        "A15",
+        "A16",
+        "A18"
+      ],
+      "references": [
+        {
+          "title": "OWASP Automated Threat: OAT005 Scalping",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-005_Scalping.html"
+        }
+      ]
+    },
+    "R0004": {
+      "title": "拍卖狙击",
+      "description": "在最后一分钟对商品或服务出价。",
+      "attack": "利用自动化手段实现在最后一分钟对商品或服务出价，往往能以最小代价完成交易。与秒拍出价（R0003）攻击原理相同但目的不同：拍卖狙击力争成为活动截止时间前的最后一次有效出价，目的是尽量以最低价格获得商品购买权；而秒拍出价则力争在活动开始后的第一时间出价，目的是尽量获得有限数量折扣商品的购买权。拍卖狙击通常需要借助流程自动化技术(R0001)",
+      "complexity": "中级",
+      "influence": "商品成交价格过低，导致利润率不足。影响正常用户下单。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A10",
+        "A13",
+        "A15",
+        "A16",
+        "A18"
+      ],
+      "references": [
+        {
+          "title": "OWASP Automated Threat: OAT013 Sniping",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-013_Sniping.html"
+        }
+      ]
+    },
+    "R0005": {
+      "title": "营销活动作弊",
+      "description": "利用大量账号完成平台营销活动获利。",
+      "attack": "在获得大量平台账号后，自动化完成平台的营销活动（包括签到，任务，抢红包，抢券，秒杀，拼团等）。账号来源通常为黑产批量注册（R0030），机器撞库（R0032-001），凭证破解（R0032），或从黑市购买等。完成活动的过程中需要自动化领劵、抽奖、做任务（R0001）能力。",
+      "complexity": "中级",
+      "influence": "套取平台营销活动利益。影响正常用户参与活动。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A04",
+        "A07",
+        "A09",
+        "A10",
+        "A13",
+        "A15",
+        "A16",
+        "A21"
+      ],
+      "references": [
+        {
+          "title": "活动作弊什么意思？",
+          "link": "https://zhidao.baidu.com/question/1389943897887283500.html"
+        }
+      ]
+    },
+    "R0005-001": {
+      "title": "批量小号作弊",
+      "description": "利用大量账号进行点赞，收藏，转发，评论等影响平台排名指标并获利。",
+      "attack": "在获得大量平台账号后，自动化完成平台的点赞，收藏，转发，评论等功能，从而影响平台排名指标，实现恶性竞争并获利。账号来源通常为黑产批量注册（R0030），机器撞库（R0032-001），凭证破解（R0032），或从黑市购买等。完成操作的过程中需要自动化领劵、抽奖、做任务（R0001）能力。",
+      "complexity": "高级",
+      "influence": "通过好评率实现恶性竞争。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A04",
+        "A07",
+        "A09",
+        "A10",
+        "A13",
+        "A15",
+        "A16",
+        "A21"
+      ],
+      "references": [
+        {
+          "title": "垃圾粉丝目的是什么？如何删除垃圾粉丝？",
+          "link": "https://dun.163.com/news/p/840c5640093140fbad7ed1cfe30f547b"
+        }
+      ]
+    },
+    "R0005-002": {
+      "title": "虚假裂变",
+      "description": "利用大量账号完成拉新裂变类活动获利。",
+      "attack": "在获得大量平台账号后，自动化完成平台的拉新，推荐等任务并获利。账号来源通常为黑产批量注册（R0030）。完成操作的过程中需要自动化领劵、抽奖、做任务（R0001）能力。",
+      "complexity": "高级",
+      "influence": "套取平台营销活动利益。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A04",
+        "A07",
+        "A09",
+        "A10",
+        "A13",
+        "A15",
+        "A16"
+      ],
+      "references": [
+        {
+          "title": "裂变套路看似多，只有一个核心要素",
+          "link": "https://zhuanlan.zhihu.com/p/110531852"
+        },
+        {
+          "title": "做裂变营销活动，怎么能忽视防作弊环节？",
+          "link": "https://ishare.ifeng.com/c/s/v002ZjHiClSab6wTq1twdmiKvHULvXFzqSujP--nz2AHj820__"
+        }
+      ]
+    },
+    "R0006": {
+      "title": "卖家违规风险",
+      "description": "由于卖家违反平台规定或利用平台机制漏洞造成的风险隐患",
+      "attack": "这类业务风险并非由于IT技术的对抗性导致的，但同样能给平台造成重大风险隐患，包括不限于：失联跑路、僵尸店铺、店铺倒卖、无货源、虚标库存、虚假库存、虚假售卖、物流坏账、价格异常、重复铺货、虚假宣传、低价高邮、供应商回购、诈骗洗钱、恶意骚扰等等。因为不具有技术对抗性，所以并不能够完全通过技术升级进行防御，通常可结合卖家资质审查、签订合同、风控策略、保质金策略、店铺抽检等方式予以防治、发现和进行处置。",
+      "complexity": "中级",
+      "influence": "造成平台合规风险、经理损失或商誉风险",
+      "avoidances": [
+        "A06",
+        "A15",
+        "A24",
+        "A29-001",
+        "A20"
+      ],
+      "references": [
+        {
+          "title": "淘宝店铺违规类型有几种？违规类型介绍！",
+          "link": "https://www.musicheng.com/news/i11832.html"
+        }
+      ]
+    },
+    "R0007": {
+      "title": "违规插件推广",
+      "description": "通过插件类的应用或依附于应用客户端的插件进行推广。",
+      "attack": "通常可以通过三种模式实现违规推广插件：一是以外挂的形式附在浏览器或应用客户端上；二是对访问终端进行流量劫持，当监控到特定流量时进行拦截转向；三是以第三方工具或网站的形式，譬如比价、返利等网站实施非法推广",
+      "complexity": "高级",
+      "influence": "造成平台经济损失、客户流失等",
+      "avoidances": [
+        "A13",
+        "A14",
+        "A10",
+        "A10-004",
+        "A15",
+        "A16",
+        "A29",
+        "A20"
+      ],
+      "references": [
+        {
+          "title": "规则学习·“插件违规推广”的规则解读",
+          "link": "https://rule.alimama.com/?#!/product/index?type=detail&id=405&knowledgeId=11004102"
+        }
+      ]
+    },
+    "R0007-001": {
+      "title": "竞品价格比较",
+      "description": "在用户浏览正常商品详情页时，提供竞品网站同样商品的价格比较",
+      "attack": "典型的违规推广插件以浏览器插件的形式存在，此外还有APP外挂插件等。其手法主要是当用户访问商品详情时，提供其他竞品网站同类商品价格信息，引导用户到价格更低的平台下单。",
+      "complexity": "高级",
+      "influence": "造成平台经济损失、客户流失等",
+      "avoidances": [
+        "A13",
+        "A14",
+        "A10",
+        "A10-004",
+        "A15",
+        "A16",
+        "A29",
+        "A20"
+      ],
+      "references": []
+    },
+    "R0007-002": {
+      "title": "访问链接劫持",
+      "description": "劫持用户的正常访问请求，非法跳转到他站或返利、推广页面等",
+      "attack": "如通过病毒、木马、恶意插件和末经授权软件捆绑安装、强设首页、劫持地址栏或浏览器、劫持页面、搜素引擎作弊、篡改用户信息等非常规手段劫持正常流量。或者在用户正常浏览过程中，通过修改URL参数或弹窗（浮窗）等的方式劫持网站正常流量。例如：监听IE访问链接通过微软公开的COM连接点技术，即传统的BHO方式，实现的推广URL的生成或者修改。",
+      "complexity": "高级",
+      "influence": "造成平台经济损失、客户流失等",
+      "avoidances": [
+        "A13",
+        "A14",
+        "A10",
+        "A10-004",
+        "A15",
+        "A16",
+        "A29",
+        "A20"
+      ],
+      "references": []
+    },
+    "R0007-003": {
+      "title": "违规推广引导",
+      "description": "在用户浏览正常商品详情页时，提供诱导用户到其他页面购买的信息",
+      "attack": "典型的违规推广插件以浏览器插件的形式存在，此外还有APP外挂插件等。其手法主要是当用户访问商品详情时，通过提供更优惠或性价比更高的商品信息，或通过返利、分佣等方式引导用户下载客户端以谋取佣金等。",
+      "complexity": "高级",
+      "influence": "造成平台经济损失、客户流失等",
+      "avoidances": [
+        "A13",
+        "A14",
+        "A10",
+        "A10-004",
+        "A15",
+        "A16",
+        "A29",
+        "A20"
+      ],
+      "references": []
+    },
+    "R0007-004": {
+      "title": "违规插件返利",
+      "description": "在用户浏览正常商品详情页时，插件标签上提供该商品的返利信息。",
+      "attack": "典型的返利插件以浏览器插件的形式存在，此外还有APP外挂插件，第三方APP或网站的形式。其手法主要是当用户访问商品详情时，获取该商品的推客佣金，并从佣金中拿出一部分返利给用户。",
+      "complexity": "高级",
+      "influence": "造成平台经济损失、客户流失等",
+      "avoidances": [
+        "A13",
+        "A14",
+        "A10",
+        "A10-004",
+        "A15",
+        "A16",
+        "A29",
+        "A20"
+      ],
+      "references": []
+    },
+    "R0008": {
+      "title": "广告欺诈",
+      "description": "利用虚假点击或展示方式，或恶意消耗广告资源，实现网络广告投放作弊。",
+      "attack": "伪造或恶意消耗广告类项目的点击次数或广告显示次数，造成投放者财产损失。一般存在广告服务商作弊，竞争对手恶意操作等行为。广告服务商作弊通常包括点击次数或展示次数作弊，过量计算广告价值。竞争对手通常会通过恶意点击链接消耗广告资源，从而增加投放者付费总数。",
+      "complexity": "初级",
+      "influence": "广告投放者财产损失。",
+      "avoidances": [
+        "A01",
+        "A05",
+        "A10",
+        "A15",
+        "A16",
+        "A18",
+        "A20",
+        "A21"
+      ],
+      "references": [
+        {
+          "title": "OWASP Automated Threat: OAT003 Ad Fraud",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-003_Ad_Fraud.html"
+        }
+      ]
+    },
+    "R0009": {
+      "title": "广告引流",
+      "description": "通过在业务系统的公开用户生成内容处植入外站广告，将用户引导到外站，干扰用户决策。",
+      "attack": "通过在业务系统中发布噱头内容资源（包括文本，图片，视频等），吸引用户点赞，转发，收藏，从而在平台上得到有利的曝光位置，并通过植入的广告或建议干扰用户消费决策，将用户引导到外站。",
+      "complexity": "初级",
+      "influence": "恶意引导用户流量。",
+      "avoidances": [
+        "A06",
+        "A15",
+        "A16",
+        "A20"
+      ],
+      "references": [
+        {
+          "title": "抖音电商治理“低质引流&虚假宣传”违规行为",
+          "link": "https://mp.weixin.qq.com/s/DZ2D6bEpGcNv52Zp-B5f1w"
+        }
+      ]
+    },
+    "R0009-001": {
+      "title": "实时评论引流",
+      "description": "通过在直播弹幕、有些的聊天广场等处发布广告来实现引流",
+      "attack": "实时评论广告引流其实也是一种广告引流（R0009）手段，不过很多平台对实时评论审核不严格或较为事后，导致即便第一时间删除了内容，亦会会大量用户造成影响。",
+      "complexity": "初级",
+      "influence": "对正常用户访问造成影响，有可能会使得平台用户遭受诈骗或客源流失",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A04",
+        "A05",
+        "A06",
+        "A07",
+        "A09",
+        "A10",
+        "A11",
+        "A15",
+        "A19",
+        "A20",
+        "A21"
+      ],
+      "references": [
+        {
+          "title": "做推广引流的算犯法么(做引流给人上粉违法吗)",
+          "link": "https://zhuanlan.zhihu.com/p/393442338"
+        }
+      ]
+    },
+    "R0010": {
+      "title": "团伙代充",
+      "description": "绕过官方正常充值渠道提供低价充值服务",
+      "attack": "通过促销，不合规，或非法手段获得低价充值资源，并对外提供充值服务。",
+      "complexity": "初级",
+      "influence": "影响游戏运营商正常经营和盈利",
+      "avoidances": [
+        "A15",
+        "A21"
+      ],
+      "references": [
+        {
+          "title": "新型犯罪“苹果代充” 全国首例涉案3000万",
+          "link": "https://zhuanlan.zhihu.com/p/76883001"
+        },
+        {
+          "title": "原神代充诈骗手段（围绕利益、贪、智商税）",
+          "link": "https://zhuanlan.zhihu.com/p/338192875?ivk_sa=1024320u"
+        }
+      ]
+    },
+    "R0011": {
+      "title": "账号倒卖",
+      "description": "倒卖被盗账号或包含特殊资源的游戏账号。",
+      "attack": "倒卖被盗游戏账号或包含特殊资源游戏账号，用以虚拟资产变卖套现。",
+      "complexity": "初级",
+      "influence": "影响游戏运营商正常经营和盈利",
+      "avoidances": [
+        "A07",
+        "A15",
+        "A17",
+        "A20"
+      ],
+      "references": [
+        {
+          "title": "全国政协委员许进呼吁：倒卖网络游戏账号应严处！",
+          "link": "https://baijiahao.baidu.com/s?id=1726557011324745346&wfr=spider&for=pc"
+        },
+        {
+          "title": "通过王者荣耀骗取微信账号倒卖，四人获刑",
+          "link": "https://baijiahao.baidu.com/s?id=1732715080496688809&wfr=spider&for=pc"
+        }
+      ]
+    },
+    "R0012": {
+      "title": "游戏外挂/脚本",
+      "description": "通过游戏外挂/脚本实现自动化或作弊",
+      "attack": "通过屏幕控制、逆向分析、协议分析等手段实现游戏客户端修改，服务器欺骗等，达到修改游戏数值或自动化操作的目的，破坏游戏平衡。",
+      "complexity": "中级",
+      "influence": "破坏游戏平衡",
+      "avoidances": [
+        "A01",
+        "A10",
+        "A13",
+        "A15",
+        "A19",
+        "A20"
+      ],
+      "references": [
+        {
+          "title": "游戏外挂-百度百科",
+          "link": "https://baike.baidu.com/item/%E5%A4%96%E6%8C%82/89291?fromtitle=%E6%B8%B8%E6%88%8F%E5%A4%96%E6%8C%82&fromid=2748874&fr=aladdin"
+        }
+      ]
+    },
+    "R0014": {
+      "title": "恶意占库存",
+      "description": "在未完成购买或交易的情况下，耗尽商品或服务的库存。",
+      "attack": "通过大量下单不付款等手段，将商家店铺全部商品打到无库存状态，达到商家无货可售",
+      "complexity": "初级",
+      "influence": "一般商业竞争中容易出现，当库存耗尽后，其他用户就无法再购买商品",
+      "avoidances": [
+        "A15",
+        "A20"
+      ],
+      "references": [
+        {
+          "title": "OWASP Automated Threat: OAT021 Denial of Inventory",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-021_Denial_of_Inventory.html"
+        }
+      ]
+    },
+    "R0015": {
+      "title": "恶意差评",
+      "description": "通过不实评价，影响人或物的口碑。",
+      "attack": "通过恶意评论、评价、评分、举报、点踩等方式达到影响系统或其他用户信誉、评分和口碑等目的",
+      "complexity": "初级",
+      "influence": "与黑产刷量（R0016）相似，但性质不同。刷量一般已经成为一种黑产的非法商业行为，通过为某些用户或商家刷量提升评价来实现盈利。但恶意评价则是以污秽其他用户或商家的声誉、名誉和信誉作为出发点，一般目的可能是纯粹的恶意或商业竞争行为",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A06",
+        "A18"
+      ],
+      "references": [
+        {
+          "title": "OWASP Automated Threat: OAT016 Skewing",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-016_Skewing.html"
+        }
+      ]
+    },
+    "R0016": {
+      "title": "刷量刷榜",
+      "description": "通过重复点击链接，发送请求或提交表单干扰应用程序某些指标。",
+      "attack": "自动重复点击或请求或提交内容，影响基于应用程序的指标，例如频率和/或速率的计数和度量。 刷榜、刷赞、刷评论等",
+      "complexity": "初级",
+      "influence": "度量或测量可能对用户可见（例如投注赔率、喜欢、市场/动态定价、访问者数量、投票结果、评论）或隐藏（例如应用程序使用统计、业务绩效指标）。 指标可能会影响个人以及应用程序所有者，例如 用户声誉、影响他人、获得名誉或损害他人声誉。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A18",
+        "A22"
+      ],
+      "references": [
+        {
+          "title": "OWASP Automated Threat: OAT016 Skewing",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-016_Skewing.html"
+        }
+      ]
+    },
+    "R0017": {
+      "title": "虚假交易",
+      "description": "通过无效交易获得利益。",
+      "attack": "商家完成大量虚假交易，目的是获得平台商家优惠/返利，或低成本刷商品好评数量等。手段一般为“拍A发B“，直接发空包等不合理的交易。",
+      "complexity": "中级",
+      "influence": "套取平台商家优惠/返利。通过好评率实现恶性竞争。",
+      "avoidances": [
+        "A05",
+        "A15",
+        "A16",
+        "A20"
+      ],
+      "references": [
+        {
+          "title": "虚假交易-百度百科",
+          "link": "https://baike.baidu.com/item/%E8%99%9A%E5%81%87%E4%BA%A4%E6%98%93/10013126?fr=aladdin"
+        },
+        {
+          "title": "虚假交易违反哪些法律法规",
+          "link": "https://www.66law.cn/laws/1560611.aspx"
+        }
+      ]
+    },
+    "R0017-001": {
+      "title": "刷单",
+      "description": "商家通过批量低成本成单或虚假成单，已提高交易量或提升评价。",
+      "attack": "商家完成大量低成本交易，目的是获得平台商家优惠/返利，或低成本刷商品好评数量等。手段一般为雇佣买家，或恶意上架低值商品批量完成交易等。",
+      "complexity": "中级",
+      "influence": "影响平台公平性竞争原则，部分情况下套取平台商家优惠/返利。",
+      "avoidances": [
+        "A15",
+        "A16",
+        "A20"
+      ],
+      "references": [
+        {
+          "title": "刷单-百度百科",
+          "link": "https://baike.baidu.com/item/%E5%88%B7%E5%8D%95/8171368?fr=aladdin"
+        }
+      ]
+    },
+    "R0017-002": {
+      "title": "骗取补贴",
+      "description": "",
+      "attack": "",
+      "complexity": "中级",
+      "influence": "",
+      "avoidances": [
+        "A15",
+        "A16",
+        "A20"
+      ],
+      "references": [
+        {
+          "title": "网约车司机“空跑”刷单骗补贴， 法院：诈骗罪，判刑！",
+          "link": "http://www.hebeicourt.gov.cn/article/detail/2022/07/id/6803049.shtml"
+        },
+        {
+          "title": "找“刷手”拉“内鬼”骗取电商平台补贴，这个9人团伙栽了",
+          "link": "http://news.hexun.com/2022-09-14/206761601.html"
+        }
+      ]
+    },
+    "R0018": {
+      "title": "干扰搜索结果",
+      "description": "通过提供无效或非法的的数据，干扰搜索引擎结果。",
+      "attack": "通过大量搜索某关键词以提升该关键词排名，或通过大量将一个关键词与另外一个关键词并列搜素以形成某种关联。",
+      "complexity": "中级",
+      "influence": "干扰搜索引擎结果排名的公平机制，或对正常搜索关键词的智能提示或关联结果形成干扰",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A09",
+        "A10",
+        "A15",
+        "A16",
+        "A18",
+        "A21"
+      ],
+      "references": [
+        {
+          "title": "搜索结果受SEO严重干扰 专家称Google正在死亡",
+          "link": "http://www.benber.com/content/202202/60667.html"
+        },
+        {
+          "title": "恶意干扰搜索排名，误导网民！“万词霸屏”等网络黑灰产如何治理",
+          "link": "https://baijiahao.baidu.com/s?id=1728261617282281292&wfr=spider&for=pc"
+        }
+      ]
+    },
+    "R0020": {
+      "title": "文本内容风险",
+      "description": "用户生成无效，恶意或非法的文本内容。",
+      "attack": "用户通过输入恶意的、非法的内容，来达到诽谤、污损、干扰、引流、诈骗等目的",
+      "complexity": "初级",
+      "influence": "影响系统正常运营，给用户带来诈骗风险，给企业正常运营造成合规风险",
+      "avoidances": [
+        "A06",
+        "A06-001",
+        "A20",
+        "A21"
+      ],
+      "references": [
+        {
+          "title": "OWASP Automated Threat: OAT017 Spamming",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-017_Spamming.html"
+        }
+      ]
+    },
+    "R0021": {
+      "title": "图片内容风险",
+      "description": "用户生成无效，恶意或非法的图片内容。",
+      "attack": "用户通过输入恶意的、非法的内容，来达到诽谤、污损、干扰、引流、诈骗等目的",
+      "complexity": "初级",
+      "influence": "影响系统正常运营，给用户带来诈骗风险，给企业正常运营造成合规风险",
+      "avoidances": [
+        "A06",
+        "A15",
+        "A20",
+        "A21"
+      ],
+      "references": [
+        {
+          "title": "OWASP Automated Threat: OAT017 Spamming",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-017_Spamming.html"
+        }
+      ]
+    },
+    "R0022": {
+      "title": "音频(流)内容风险",
+      "description": "用户生成无效，恶意或非法的音频内容。",
+      "attack": "用户通过输入恶意的、非法的内容，来达到诽谤、污损、干扰、引流、诈骗等目的",
+      "complexity": "初级",
+      "influence": "影响系统正常运营，给用户带来诈骗风险，给企业正常运营造成合规风险",
+      "avoidances": [
+        "A06",
+        "A15",
+        "A20",
+        "A21"
+      ],
+      "references": [
+        {
+          "title": "OWASP Automated Threat: OAT017 Spamming",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-017_Spamming.html"
+        }
+      ]
+    },
+    "R0023": {
+      "title": "外部链接风险",
+      "description": "向平台插入恶意或非法的外部链接",
+      "attack": "用户通过输入恶意的、非法的内容，来达到诽谤、污损、干扰、引流、诈骗等目的",
+      "complexity": "初级",
+      "influence": "影响系统正常运营，给用户带来诈骗风险，给企业正常运营造成合规风险",
+      "avoidances": [
+        "A06",
+        "A15",
+        "A16",
+        "A20",
+        "A21"
+      ],
+      "references": [
+        {
+          "title": "OWASP Automated Threat: OAT017 Spamming",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-017_Spamming.html"
+        }
+      ]
+    },
+    "R0024": {
+      "title": "视频(流)内容风险",
+      "description": "用户生成无效，恶意或非法的视频内容。",
+      "attack": "用户通过输入恶意的、非法的内容，来达到诽谤、污损、干扰、引流、诈骗等目的",
+      "complexity": "初级",
+      "influence": "影响系统正常运营，给用户带来诈骗风险，给企业正常运营造成合规风险",
+      "avoidances": [
+        "A06",
+        "A15",
+        "A20",
+        "A21"
+      ],
+      "references": [
+        {
+          "title": "OWASP Automated Threat: OAT017 Spamming",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-017_Spamming.html"
+        }
+      ]
+    },
+    "R0025": {
+      "title": "恶意挖墙脚",
+      "description": "挖金主、挖客户、挖主播",
+      "attack": "以导流为目的将本平台的金主、客户、主播通过评论、私信等方式沟通向其他平台引流",
+      "complexity": "初级",
+      "influence": "影响系统正常运营，给用户带来诈骗风险，给企业正常运营造成负面影响",
+      "avoidances": [
+        "A06",
+        "A15",
+        "A20",
+        "A21"
+      ],
+      "references": [
+        {
+          "title": "网络主播在合约期内恶意跳槽、挖墙脚是否构成不正当竞争？",
+          "link": "https://baijiahao.baidu.com/s?id=1700201113697587369&wfr=spider&for=pc"
+        }
+      ]
+    },
+    "R0026": {
+      "title": "违规商品",
+      "description": "商家上架无效，恶意或非法的商品内容。",
+      "attack": "商家通过上架无效，恶意或非法的商品内容，销售不合规或不合法的商品，或达到诽谤、污损、干扰、引流、诈骗等目的",
+      "complexity": "初级",
+      "influence": "影响系统正常运营，给用户带来诈骗风险，给企业正常运营造成合规风险",
+      "avoidances": [
+        "A06",
+        "A15",
+        "A20"
+      ],
+      "references": [
+        {
+          "title": "淘宝那里，什么叫做违规商品？",
+          "link": "https://zhidao.baidu.com/question/100790301.html"
+        }
+      ]
+    },
+    "R0027": {
+      "title": "数据盗爬(爬虫)",
+      "description": "爬取应用程序提供的数据（商详、价格、库存、评论等等）方便后续使用。盗爬可能实时发生，或者更具周期性。",
+      "attack": "从应用程序收集可访问的数据和/或处理后的输出。一些抓取可能使用虚假或被盗帐户，或者无需身份验证即可访问信息。抓取工具从静态网页/api接口，收集响应并从中提取数据，反编译app解析静态资源。",
+      "complexity": "中级",
+      "influence": "一般被盗爬的经营数据在未形成一定的规模前提下可能未必会给企业带来实际损失，但一旦盗爬数据形成一定规模后，可以将其用于商业竞争，或分析企业运营状况及详细，会带来巨大经营上的损害。譬如分析GMV、分析特定用户群体等。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A10",
+        "A15",
+        "A16",
+        "A18",
+        "A20",
+        "A21",
+        "A22",
+        "A32"
+      ],
+      "references": [
+        {
+          "title": "OWASP Automated Threat: OAT011 Scraping",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-011_Scraping.html"
+        }
+      ]
+    },
+    "R0028": {
+      "title": "敏感数据泄露",
+      "description": "通过公开/非公开接口，内鬼或者第三方泄露获得应用程序中存储敏感数据。",
+      "attack": "应用程序接口会返回大于前端展示的数据结构内容，譬如地址、身份证、手机号等，用户访问服务器的公开接口获取敏感数据（模糊搜索用户名，小号批量添加用户），用户与用户交互获取敏感数据（小号批量给用户发送消息），或可以通过枚举id等形式获得全部隐私数据。",
+      "complexity": "中级",
+      "influence": "敏感数据泄露一般伴随着数据未脱敏、越权漏洞、接口未鉴权等弱点隐患发生，在目前数据安全监管严格的环境下，有可能造成严重合规风险",
+      "avoidances": [
+        "A04",
+        "A05",
+        "A17",
+        "A18",
+        "A19"
+      ],
+      "references": [
+        {
+          "title": "5亿XX用户数据遭泄露，XX被约谈",
+          "link": "https://www.likecs.com/show-730298.html#sc=270"
+        }
+      ]
+    },
+    "R0029": {
+      "title": "验证码恶意消耗",
+      "description": "批量请求验证码并控制接收对象，消耗应用程序验证码资源，同时影响正常用户的使用。",
+      "attack": "通过对同一手机号或邮箱批量发送验证码请求来达到干扰或拒绝服务，或对大批量手机号或邮箱发送验证码来对服务资源进行消耗。在部分可以控制发送内容情况下，还会引发诈骗。",
+      "complexity": "中级",
+      "influence": "消耗平台验证码资源，或形成对服务端的拒绝服务攻击，以及对特定手机号接收群体的干扰和拒绝服务攻击。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A04",
+        "A05",
+        "A09",
+        "A10",
+        "A15",
+        "A16",
+        "A21"
+      ],
+      "references": [
+        {
+          "title": "短信验证码接口被恶意攻击怎么办？",
+          "link": "http://m.cr6868.com/html/xyxw/2709.html"
+        }
+      ]
+    },
+    "R0030": {
+      "title": "虚假注册",
+      "description": "利用虚假的身份注册虚假账号便于后续滥用。",
+      "attack": "通过使用应用程序的帐户注册流程，提供虚假的身份数据注册账号。",
+      "complexity": "中级",
+      "influence": "这些帐户随后被滥用于生成垃圾邮件、洗钱和商品、传播恶意软件、影响声誉、造成恶作剧以及扭曲搜索引擎优化 (SEO)、评论和调查。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A04",
+        "A05",
+        "A07",
+        "A09",
+        "A10",
+        "A15",
+        "A16",
+        "A21",
+        "A22"
+      ],
+      "references": [
+        {
+          "title": "OWASP Automated Threat: OAT019 Account Creation",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-019_Account_Creation.html"
+        }
+      ]
+    },
+    "R0030-001": {
+      "title": "批量注册",
+      "description": "批量注册账号便于后续滥用。",
+      "attack": "通过使用应用程序的帐户注册流程，批量创建帐户，有时还填充个人资料。",
+      "complexity": "高级",
+      "influence": "这些帐户随后被滥用于生成垃圾邮件、洗钱和商品、传播恶意软件、影响声誉、造成恶作剧以及扭曲搜索引擎优化 (SEO)、评论和调查。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A04",
+        "A05",
+        "A07",
+        "A09",
+        "A10",
+        "A15",
+        "A16",
+        "A21",
+        "A22"
+      ],
+      "references": [
+        {
+          "title": "OWASP Automated Threat: OAT019 Account Creation",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-019_Account_Creation.html"
+        }
+      ]
+    },
+    "R0030-002": {
+      "title": "三方登陆风险",
+      "description": "利用三方登陆绕过现有身份验证体系",
+      "attack": "很多站点在创建用户身份时具有严格的身份验证体系，譬如手机验证码、实名认证等。但在通过微信、微博等进行三方身份登录时，过于相信三方，没有进行严格的身份验证，导致可以通过在三方注册大量垃圾小号（R0030-001）来进行身份联登突破现有的严格的身份验证体系。",
+      "complexity": "中级",
+      "influence": "绕过现有身份验证体制，导致防御机制失效",
+      "avoidances": [
+        "A07",
+        "A24",
+        "A29",
+        "A29-001"
+      ],
+      "references": [
+        {
+          "title": "什么是第三方账号登陆？有什么好处？",
+          "link": "https://zhidao.baidu.com/question/1437455763683359379.html"
+        }
+      ]
+    },
+    "R0031": {
+      "title": "子账号风险",
+      "description": "业务账号系统有子账号概念且对子账号管理不严格造成账号滥用",
+      "attack": "有不少业务系统账号注册十分严格，但对子账号的生成不严格，且子账号具备母账号的全部功能。这样黑灰产可以通过批量生成子账号后来进行相关攻击超过，从而绕过严格的账号注册和身份认证策略。",
+      "complexity": "中级",
+      "influence": "子账号滥用绕过账号注册和身份认证策略。",
+      "avoidances": [
+        "A17",
+        "A18",
+        "A19",
+        "A24",
+        "A29"
+      ],
+      "references": [
+        {
+          "title": "淘宝开店子账号有什么弊端？有没有风险",
+          "link": "https://www.musicheng.com/news/i177638.html"
+        },
+        {
+          "title": "支付宝实名认证惊现大漏洞 可暗中绑定多个子账户",
+          "link": "https://stock.xinpianchang.com/article/scbaike/100016.html"
+        }
+      ]
+    },
+    "R0032": {
+      "title": "凭证破解",
+      "description": "通过暴力枚举特定账号的可能密码列表尝试登陆，得到有效身份凭证。",
+      "attack": "通过蛮力、字典（单词列表）和猜测攻击等方式对应用程序的身份验证过程进行暴力枚举来识别特定账户使用的脆弱帐户凭据，譬如枚举某用户的密码。",
+      "complexity": "高级",
+      "influence": "通过无限制的账号密码碰撞，攻击者将有可能获得当前系统上使用脆弱密码的用户权限，通过进一步操作对当前系统用户造成损失。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A04",
+        "A05",
+        "A07",
+        "A09",
+        "A10",
+        "A11",
+        "A12",
+        "A15",
+        "A16",
+        "A19",
+        "A21",
+        "A23"
+      ],
+      "references": [
+        {
+          "title": "OWASP Automated Threat: OAT007 Credential Cracking",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-007_Credential_Cracking.html"
+        }
+      ]
+    },
+    "R0032-001": {
+      "title": "撞库攻击",
+      "description": "通过批量登陆，验证被盗账号密码在当前系统中的有效性。",
+      "attack": "在当前系统的身份验证机制中，对从其他地方窃取的身份验证凭据列表进行测试，以确定用户是否重复使用了相同的登录凭据。被盗的用户名（通常是电子邮件地址）和密码可能是攻击者直接从另一个应用程序中获取的、在犯罪市场上购买的，或者是从公开的违规数据转储中获得的。与“凭证破解”不同，机器撞库不涉及任何暴力破解或数值猜测。",
+      "complexity": "高级",
+      "influence": "通过无限制的账号密码碰撞，攻击者将有可能获得众多在当前系统上复用其他系统身份凭证的用户权限，通过进一步操作对当前系统用户造成损失。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A04",
+        "A05",
+        "A07",
+        "A09",
+        "A10",
+        "A11",
+        "A12",
+        "A15",
+        "A16",
+        "A19",
+        "A21",
+        "A23"
+      ],
+      "references": [
+        {
+          "title": "OWASP Automated Threat: OAT008 Credential Stuffing",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-008_Credential_Stuffing.html"
+        }
+      ]
+    },
+    "R0032-002": {
+      "title": "密码喷射",
+      "description": "通过暴力枚举众多账号列表的特定脆弱密码尝试登陆，得到有效身份凭证。",
+      "attack": "通过蛮力、字典（单词列表）和猜测攻击等方式对应用程序的身份验证过程进行暴力枚举来获得使用特定脆弱登录凭据的有效帐户，譬如枚举使用某脆弱密码的账户。",
+      "complexity": "高级",
+      "influence": "通过无限制的账号密码碰撞，攻击者将有可能获得当前系统上使用脆弱密码的用户权限，通过进一步操作对当前系统用户造成损失。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A04",
+        "A05",
+        "A07",
+        "A09",
+        "A10",
+        "A11",
+        "A12",
+        "A15",
+        "A16",
+        "A19",
+        "A21",
+        "A23"
+      ],
+      "references": [
+        {
+          "title": "OWASP Automated Threat: OAT007 Credential Cracking",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-007_Credential_Cracking.html"
+        }
+      ]
+    },
+    "R0032-003": {
+      "title": "凭证盗取",
+      "description": "通过木马病毒、钓鱼欺骗等方式盗取登录凭证。",
+      "attack": "典型的登录凭证有两种，一种是用以实现登录的身份认证凭证，一般以账密为主，但还包含一次性口令、短信验证码、物理身份特征等；另一种是为了维持登录状态的身份维持凭证，通常为cookies，但还包含sessionid、nonce、JSON WEB Token等。",
+      "complexity": "高级",
+      "influence": "获得被攻击者之于对应网站或应用的持续性账户访问和操作权限",
+      "avoidances": [
+        "A07",
+        "A19",
+        "A24",
+        "A21",
+        "A11",
+        "A12"
+      ],
+      "references": [
+        {
+          "title": "OWASP Automated Threat: OAT007 Credential Cracking",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-007_Credential_Cracking.html"
+        }
+      ]
+    },
+    "R0034": {
+      "title": "自动化养号",
+      "description": "通过自动化方式提升账号信誉度",
+      "attack": "对被盗账号或批量注册账号通过自动化活动以降低账号风险值或提升账号信誉度。譬如自动化评价、评论、发帖、交易等。",
+      "complexity": "高级",
+      "influence": "自动化养号通常需要结合其他的业务风险场景才能完成变现，譬如薅羊毛、抢购、刷量等。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A10",
+        "A13",
+        "A15",
+        "A16",
+        "A21",
+        "A22"
+      ],
+      "references": [
+        {
+          "title": "RPA机器人是什么？",
+          "link": "https://baijiahao.baidu.com/s?id=1742940718304519356&wfr=spider&for=pc"
+        },
+        {
+          "title": "RPA机器人自动化养号和AdsPower反指纹浏览器",
+          "link": "https://baijiahao.baidu.com/s?id=1732976759234259657&wfr=spider&for=pc"
+        }
+      ]
+    },
+    "R0035": {
+      "title": "凭据复用",
+      "description": "通过复用session cookies来实现绕过登录长期维持登录状态",
+      "attack": "通过盗用或其他手段获取用户Cookies来实现自动化免账密登录操作。",
+      "complexity": "中级",
+      "influence": "很多账户系统在账户改密码之后并不能清除已有的登录状态，导致在盗用或使用Cookies的情况之下，可以一直维持对目标用户的登录权限",
+      "avoidances": [
+        "A07",
+        "A10",
+        "A11",
+        "A15",
+        "A16",
+        "A18",
+        "A19",
+        "A20",
+        "A21",
+        "A23"
+      ],
+      "references": [
+        {
+          "title": "恶意软件偷取网站Cookies，黑客藉此控制社交账号",
+          "link": "https://baijiahao.baidu.com/s?id=1661120873809520712&wfr=spider&for=pc"
+        },
+        {
+          "title": "盗用cookie的目的和防盗cookie的手段",
+          "link": "https://blog.csdn.net/ITWANGBOIT/article/details/109323115"
+        }
+      ]
+    },
+    "R0036": {
+      "title": "多因素绕过",
+      "description": "对身份验证过程中的多因素因子进行破解或绕过",
+      "attack": "通过暴力枚举获得MFA验证因子，譬如：破解手机验证码、身份证后几位、邮箱验证码、动态口令等；利用身份验证过程中的缺陷，譬如伪造可信设备指纹、请求非MFA登录页面等绕过MFA多因素验证流程等。",
+      "complexity": "高级",
+      "influence": "将绕过现有MFA多因素身份验证机制，导致账户沦陷",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A04",
+        "A05",
+        "A09",
+        "A10",
+        "A21"
+      ],
+      "references": [
+        {
+          "title": "多因素身份验证（MFA）绕过技术揭示",
+          "link": "http://www.fangyuba.com/news/dynamic/2778.htm"
+        }
+      ]
+    },
+    "R0037": {
+      "title": "第三方账号聚合",
+      "description": "以第三方应用作为代理人，统一管理多个应用的账号密码。",
+      "attack": "将来自多个应用程序帐户的凭据和信息编译到另一个系统中。 单个用户可以使用此聚合应用程序来合并来自多个应用程序的信息，或者合并单个应用程序的多个用户的信息。 譬如电商系统的搬家应用，票务系统的抢票应用等。",
+      "complexity": "中级",
+      "influence": "对用户来说，有导致用户敏感信息泄露风险；对系统来说，有导致平台数据流失以及系统请求压力增大风险",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A07",
+        "A09",
+        "A10",
+        "A11",
+        "A13",
+        "A15",
+        "A16",
+        "A20",
+        "A21",
+        "A22"
+      ],
+      "references": [
+        {
+          "title": "OWASP Automated Threat: OAT020 Account Aggregation",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-020_Account_Aggregation.html"
+        }
+      ]
+    },
+    "R0038": {
+      "title": "登录扫码欺诈",
+      "description": "利用移动应用扫描二维码，对网页端授权登录的机制，来实现欺诈登录",
+      "attack": "业务移动应用为了便捷访问以及推广需求，常常支持外部扫描二维码进行APP唤起和自动登录。攻击者只需要在业务web登录页面复制二维码并发给受害者，待受害者扫描二维码后，即获得受害者的网页端账户访问权限。",
+      "complexity": "中级",
+      "influence": "用户的账号被攻击者登录",
+      "avoidances": [
+        "A10",
+        "A15",
+        "A17",
+        "A19",
+        "A21"
+      ],
+      "references": [
+        {
+          "title": "大批QQ账号被盗，扫码登录行为被黑产团伙劫持并记录 ",
+          "link": "https://police.news.sohu.com/a/561515350_121124361"
+        }
+      ]
+    },
+    "R0039": {
+      "title": "拒绝服务攻击",
+      "description": "通过向服务器发送大量请求，或利用服务器漏洞使减缓或停止业务响应",
+      "attack": "拒绝服务攻击即是攻击者想办法让目标机器停止提供服务，是黑客常用的攻击手段之一。其实对网络带宽进行的消耗性攻击只是拒绝服务攻击的一小部分，只要能够对目标造成麻烦，使某些服务被暂停甚至主机死机，都属于拒绝服务攻击。",
+      "complexity": "中级",
+      "influence": "导致业务拒绝服务，影响用户访问",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A08",
+        "A09",
+        "A18"
+      ],
+      "references": [
+        {
+          "title": "OWASP Automated Threat: OAT-015 Denial of Service",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-015_Denial_of_Service.html"
+        }
+      ]
+    },
+    "R0039-001": {
+      "title": "CC攻击",
+      "description": "通过大量构造业务正常请求的方式来对系统进行拒绝服务攻击",
+      "attack": "通过分析每种业务请求，将对服务端计算量大的请求作为目标，发送大量伪造请求来占满全部服务器计算资源。",
+      "complexity": "中级",
+      "influence": "导致业务拒绝服务，影响用户访问",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A08",
+        "A09",
+        "A18"
+      ],
+      "references": [
+        {
+          "title": "OWASP Automated Threat: OAT-015 Denial of Service",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-015_Denial_of_Service.html"
+        }
+      ]
+    },
+    "R0040": {
+      "title": "撞卡攻击",
+      "description": "通过批量登陆认证，验证被盗支付卡凭证有效性。",
+      "attack": "通过商家完整的登陆凭证验证流程，完成被盗支付卡或账号的有效性。由于被盗账号价值未知，撞卡攻击可进行支付卡价值评估。相关登陆凭证数据来源可能是第三方应用泄露，第三方支付渠道泄露，或者从黑市购买。",
+      "complexity": "中级",
+      "influence": "支付卡或账号凭证信息被盗取。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A04",
+        "A05",
+        "A07",
+        "A10",
+        "A12",
+        "A13",
+        "A15",
+        "A16"
+      ],
+      "references": [
+        {
+          "title": "OWASP Automated Threat: OAT001 Carding",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-001_Carding.html"
+        }
+      ]
+    },
+    "R0041": {
+      "title": "支付卡破解",
+      "description": "通过枚举不同缺失的开始/过期日期和安全码，得到有效支付信息。",
+      "attack": "暴力破解支付卡的开始/过期日期和安全码（CSC），也被称作CVN2，CVC，CV2，或CID。撞卡攻击（BRE-0101）的成果可用作支付卡或账号价值判断，而支付卡破解（BRE-0102）的成果可用于实际支付。",
+      "complexity": "中级",
+      "influence": "支付卡或账号支付信息被盗取。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A04",
+        "A07",
+        "A10",
+        "A12",
+        "A13",
+        "A15",
+        "A16"
+      ],
+      "references": [
+        {
+          "title": "OWASP Automated Threat: OAT010 Card Cracking",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-010_Card_Cracking.html"
+        }
+      ]
+    },
+    "R0043": {
+      "title": "黑卡支付",
+      "description": "利用被盗支付卡或其他用户账号中的身份，完成交易。",
+      "attack": "利用被盗支付卡或其他用户账号中的身份，完成交易。一般情况下是用来隐蔽攻击者身份，或者降低批量刷单被风控拦截的风险。其中登陆凭证来源自撞卡攻击（BRE-0101），支付信息来源自支付卡破解（BRE-0102）。",
+      "complexity": "高级",
+      "influence": "支付身份被冒用。",
+      "avoidances": [
+        "A07",
+        "A10",
+        "A12",
+        "A15",
+        "A16",
+        "A18",
+        "A19",
+        "A21",
+        "A23"
+      ],
+      "references": [
+        {
+          "title": "用黑卡充值的账号会怎么样",
+          "link": "https://baijiahao.baidu.com/s?id=1728703601989302772&wfr=spider&for=pc"
+        }
+      ]
+    },
+    "R0043-001": {
+      "title": "盗卡盗刷",
+      "description": "使用被盗支付卡或其他用户账号中的资金，购买商品或套现。",
+      "attack": "通过被盗的支付卡或账号的登陆凭证和支付信息，盗用或盗取其中的资金。除常规的购买商品/购买服务/提现外，还可以通过退款等方式获利。其中登陆凭证来源自撞卡攻击（BRE-0101），支付信息来源自支付卡破解（BRE-0102）。",
+      "complexity": "高级",
+      "influence": "支付卡或账号中的资金被盗用或盗取。",
+      "avoidances": [
+        "A07",
+        "A10",
+        "A12",
+        "A15",
+        "A16",
+        "A21",
+        "A23"
+      ],
+      "references": [
+        {
+          "title": "OWASP Automated Threat: OAT012 Cashing Out",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-012_Cashing_Out.html"
+        }
+      ]
+    },
+    "R0044": {
+      "title": "转账欺诈",
+      "description": "利用高仿账号欺骗他人转账，或伪造转账记录。",
+      "attack": "通常包括欺骗收款者和欺骗付款者两种场景。欺骗收款者一般通过伪造交易记录，利用不可信第三方做担保等。欺骗付款者一般通过高仿收款者账号，诱导支付。",
+      "complexity": "高级",
+      "influence": "收款者或付款者财产损失。",
+      "avoidances": [
+        "A06",
+        "A07",
+        "A10",
+        "A15",
+        "A16",
+        "A17",
+        "A21",
+        "A23"
+      ],
+      "references": [
+        {
+          "title": "利用转账时差诈骗,新型诈骗如何防范",
+          "link": "https://www.66law.cn/laws/139111.aspx"
+        }
+      ]
+    },
+    "R0045": {
+      "title": "积分盗刷",
+      "description": "盗用被盗支付卡或其他用户账号中的非资金类权益。",
+      "attack": "通过被盗的支付卡或账号的登陆凭证和支付信息，盗用或盗取其中的非资金类权益。其中登陆凭证来源自撞卡攻击（BRE-0101），支付信息来源自支付卡破解（BRE-0102）。",
+      "complexity": "高级",
+      "influence": "支付卡或账号中的非资金类权益被盗用或盗取。",
+      "avoidances": [
+        "A07",
+        "A10",
+        "A12",
+        "A15",
+        "A16",
+        "A19",
+        "A21",
+        "A23"
+      ],
+      "references": [
+        {
+          "title": "信用卡积分兑换警惕第三方渠道切莫贪小失大",
+          "link": "https://baijiahao.baidu.com/s?id=1747986450409392334&wfr=spider&for=pc"
+        },
+        {
+          "title": "李晨里程卡被十余人盗刷",
+          "link": "https://yule.sohu.com/a/579933969_121150437"
+        }
+      ]
+    },
+    "R0046": {
+      "title": "未成年人识别对抗",
+      "description": "通过身份伪造实现未成年人识别欺骗。",
+      "attack": "通过使用正常或伪造的成人身份，绕过未成年人识别机制，包括使用成年人身份证，人脸，指纹等隐私数据。",
+      "complexity": "中级",
+      "influence": "未成年人识别机制失效。",
+      "avoidances": [
+        "A10",
+        "A15",
+        "A17",
+        "A18",
+        "A19",
+        "A21",
+        "A23"
+      ],
+      "references": [
+        {
+          "title": "00 后 10 后和防沉迷系统的「斗智斗勇」，堪比谍战大片",
+          "link": "https://baijiahao.baidu.com/s?id=1687300622437595490&wfr=spider&for=pc"
+        }
+      ]
+    },
+    "R0047": {
+      "title": "人机识别对抗",
+      "description": "通过自动化手段通过人机测试。",
+      "attack": "通常以自动化方式通过图灵测试（用于区分机器或人的测试题目）。除了传统的图片，音频验证码外，有时还会使用小游戏或算术等形式。通常用于批量自动化操作过程中的人机检验。除了自动化通过人机测试外，通过改变设备环境，或使用第三方脚本工具绕过鼠标移动轨迹、点按压力、3D陀螺仪等方式的人机识别。",
+      "complexity": "高级",
+      "influence": "人机识别机制失效。",
+      "avoidances": [
+        "A03",
+        "A10",
+        "A13",
+        "A15",
+        "A16",
+        "A18",
+        "A21",
+        "A22"
+      ],
+      "references": [
+        {
+          "title": "OWASP Automated Threat: OAT009 CAPTCHA Defeat",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-009_CAPTCHA_Defeat.html"
+        }
+      ]
+    },
+    "R0048": {
+      "title": "人脸识别对抗",
+      "description": "通过伪造，篡改人脸数据或相关认证数据，实现人脸识别欺骗。",
+      "attack": "通过伪造，篡改人脸数据或相关认证数据，实现人脸识别欺骗。通常用作登陆，支付等流程，或作为多因素认证的方式之一。",
+      "complexity": "高级",
+      "influence": "人脸识别机制失效，导致越权登陆，支付等风险。",
+      "avoidances": [
+        "A02",
+        "A07",
+        "A10",
+        "A13",
+        "A15",
+        "A19",
+        "A21",
+        "A22"
+      ],
+      "references": [
+        {
+          "title": "人脸识别的技术与攻击技术简要概述",
+          "link": "https://blog.csdn.net/yty_311/article/details/113625432"
+        }
+      ]
+    },
+    "R0049": {
+      "title": "代登录、代下单",
+      "description": "利用设备环境协助登陆他人账号，或利用账号协助他人完成下单。",
+      "attack": "利用设备环境协助登陆他人账号，或利用账号协助他人完成下单。通常为了绕过设备风险对抗，或降低账号风险值，从而完成登陆，下单等操作。",
+      "complexity": "高级",
+      "influence": "设备/账号风险识别机制失效。",
+      "avoidances": [
+        "A01",
+        "A07",
+        "A10",
+        "A11",
+        "A13",
+        "A15",
+        "A16",
+        "A17",
+        "A19",
+        "A20",
+        "A21",
+        "A22"
+      ],
+      "references": [
+        {
+          "title": "代下单-百度百科",
+          "link": "https://baike.baidu.com/item/%E4%BB%A3%E4%B8%8B%E5%8D%95/3288502?fr=aladdin"
+        }
+      ]
+    },
+    "R0050": {
+      "title": "风险设备识别对抗",
+      "description": "修改真实设备的设备信息，欺骗应用程序，降低设备风险值。",
+      "attack": "运行应用的系统被ROOT，或者应用在被Hook情况下运行，或在调试器调试情况下运营，或应用与服务器之间的安全证书被替换等情况",
+      "complexity": "高级",
+      "influence": "可能导致应用中的安全流程被突破，数据被伪造等情况",
+      "avoidances": [
+        "A01",
+        "A10",
+        "A13",
+        "A15",
+        "A21"
+      ],
+      "references": [
+        {
+          "title": "业务风控中的前端对抗实践",
+          "link": "https://zhuanlan.zhihu.com/p/524097525"
+        }
+      ]
+    },
+    "R0050-001": {
+      "title": "虚拟设备对抗",
+      "description": "通过软件模拟真实设备，便于后续滥用。",
+      "attack": "通过云手机、云服务器、虚拟机、模拟器等方式运行应用",
+      "complexity": "中级",
+      "influence": "可能导致应用中的安全流程被突破，数据被伪造等情况",
+      "avoidances": [
+        "A01",
+        "A04",
+        "A05",
+        "A10",
+        "A13",
+        "A15",
+        "A16",
+        "A21",
+        "A23"
+      ],
+      "references": [
+        {
+          "title": "设备指纹：面对各种虚拟设备，如何进行对抗？",
+          "link": "https://blog.51cto.com/u_15275035/4979325"
+        }
+      ]
+    },
+    "R0051": {
+      "title": "逆向分析",
+      "description": "通过逆向还原应用的源代码或运行逻辑",
+      "attack": "对于WEB应用、微信小程序、安卓应用来说，可以直接或轻易还原源代码，看到全部应用处理逻辑。当在终端使用安全策略时，即可能存在被破解绕过等风险。",
+      "complexity": "高级",
+      "influence": "可能导致应用中的安全流程被突破，数据被伪造等情况",
+      "avoidances": [
+        "A02",
+        "A13",
+        "A21",
+        "A22"
+      ],
+      "references": [
+        {
+          "title": "什么是逆向分析",
+          "link": "https://blog.csdn.net/Eastmount/article/details/107591832"
+        }
+      ]
+    },
+    "R0051-001": {
+      "title": "抓包分析",
+      "description": "通过抓包还原应用的请求发送结构及监听返回数据",
+      "attack": "抓包（packet capture）就是将网络传输发送与接收的数据包进行截获、重发、编辑、转存等操作。通过抓包可以分析应用的请求方式与请求结构，以便实现业务逻辑还原模拟和替代终端实现流程自动化（R0001）",
+      "complexity": "高级",
+      "influence": "可能导致应用中的安全流程被突破，数据被伪造等情况",
+      "avoidances": [
+        "A02",
+        "A10",
+        "A13",
+        "A21",
+        "A22"
+      ],
+      "references": [
+        {
+          "title": "TCP 实战抓包分析",
+          "link": "https://blog.csdn.net/qq_31941921/article/details/119853993"
+        }
+      ]
+    },
+    "R0051-002": {
+      "title": "HTTP请求分析",
+      "description": "通过抓包还原应用的请求发送结构及监听返回数据",
+      "attack": "对于使用HTTP/HTTPS等基于文本协议进行数据传输的应用来说，可以通过中间人来实现数据收发的抓包，继而还原应用执行逻辑，来实现自动化操作。",
+      "complexity": "中级",
+      "influence": "可能导致应用中的安全流程被突破，数据被伪造等情况",
+      "avoidances": [
+        "A02",
+        "A10",
+        "A13",
+        "A21",
+        "A22"
+      ],
+      "references": [
+        {
+          "title": "完整的HTTP请求分析",
+          "link": "https://www.cnblogs.com/wzfwaf/p/10515507.html"
+        }
+      ]
+    },
+    "R0054": {
+      "title": "恶意退货",
+      "description": "买家以干扰卖家或平台，或谋求不正当利益为目的，非出于正当理由的退货行为",
+      "attack": "买家出于干扰、破坏为目的，购买大额、大件、稀缺商品，并在货物刚到达或未到达的情况下退货，来给卖家带来经济损失或由退货率造成商誉影响。或买家以七天无理由对高价值商品使用并退货，以造成该商品的贬值，再通过内外勾结购买贬值后商品",
+      "complexity": "初级",
+      "influence": "消耗商家利益、库存、商誉或供应链成本",
+      "avoidances": [
+        "A15",
+        "A20"
+      ],
+      "references": [
+        {
+          "title": "买家利用快递单号恶意退款近四万元 涉嫌诈骗落法网",
+          "link": "https://m.gmw.cn/baijia/2022-06/29/1303021072.html"
+        }
+      ]
+    },
+    "R0054-001": {
+      "title": "批量退款",
+      "description": "通过同一账户或不同账户批量下单批量发起非正当退货或退款",
+      "attack": "通过自动化或人工的方式，大量下单或者进行高价值的下单，然后批量退单退款，恶意消耗供应链成本或导致商家退货率上升。",
+      "complexity": "中级",
+      "influence": "扰乱商家正常运营，带来供应链损失或评级排名下降",
+      "avoidances": [
+        "A15",
+        "A20"
+      ],
+      "references": [
+        {
+          "title": "电商被批量退货背后有哪些黑幕？ ",
+          "link": "https://www.sohu.com/a/478550413_120916326"
+        }
+      ]
+    },
+    "R0054-002": {
+      "title": "退货造假",
+      "description": "买家退货过程中退假、退旧、退空包、少件、买A退B等情况",
+      "attack": "买家退回的商品不是实际发出的商品，买A退B，包含退货高仿等；买家退回的商品数量与实际寄出的数量不一样，包含空包",
+      "complexity": "初级",
+      "influence": "给平台或卖家带来经济损失",
+      "avoidances": [
+        "A15",
+        "A16",
+        "A20"
+      ],
+      "references": [
+        {
+          "title": "网购商家雇人刷单退货伪造物品受损假象一心只为骗保",
+          "link": "https://baijiahao.baidu.com/s?id=1728176509876921426&wfr=spider&for=pc"
+        },
+        {
+          "title": "淘宝虚假退货会有什么后果 女子网购退货寄空箱获刑",
+          "link": "https://www.sohu.com/a/303084308_99940212"
+        }
+      ]
+    },
+    "R0054-003": {
+      "title": "闪退套利",
+      "description": "在下单得到赠品、赠券、优惠后，第一时间退单套取利益",
+      "attack": "一个针对性的黑产攻击者可能会囤积大量的账号，并实时监控平台或商家活动，一旦发现有利可图会通过自动化方式大量下单，在套取到优惠券、赠品等利益后，第一时间退单，赚取利益。",
+      "complexity": "中级",
+      "influence": "给平台和商家带来经济损失",
+      "avoidances": [
+        "A15",
+        "A16",
+        "A20",
+        "A21"
+      ],
+      "references": [
+        {
+          "title": "利用平台闪电退款规则 刷单并制造退货假象构成诈骗罪",
+          "link": "https://weibo.com/ttarticle/p/show?id=2309404589705009169082"
+        }
+      ]
+    },
+    "R0054-004": {
+      "title": "恶意拒收",
+      "description": "买家通过报复、破坏等目的拒收商品，以占用或消耗卖家的供应链资源，造成经济损失。",
+      "attack": "一个典型的恶意攻击场景是：买家购买家电、数码产品、建筑耗材、轮胎等大件商品，在快递送货时选择失联或拒收，以占用和消耗商家的供应链成本。",
+      "complexity": "初级",
+      "influence": "对商家供应链造成利用损失",
+      "avoidances": [
+        "A05",
+        "A06",
+        "A20",
+        "A21"
+      ],
+      "references": [
+        {
+          "title": "遭到闲鱼买家恶意拒收",
+          "link": "https://zhuanlan.zhihu.com/p/398441673"
+        }
+      ]
+    },
+    "R0055": {
+      "title": "低价购风险",
+      "description": "由于业务实现逻辑错误，价格、优惠券等配置错误导致的低价购和零元购",
+      "attack": "该攻击可能是偶然发现，但更有可能是攻击者通过自动化批量加购、修改提交金额或数量、领劵配劵等方法进行的大规模试探发现。攻击者在发现漏洞后，为了达到法不责众以及隐藏自身的目的，通常会一边利用漏洞，一边公开漏洞，使得平台或商家蒙受更大的损失。",
+      "complexity": "初级",
+      "influence": "给平台和商家带来巨额损失",
+      "avoidances": [
+        "A15",
+        "A16"
+      ],
+      "references": [
+        {
+          "title": "“0元购”再现，卖家悲喜交加，亚马逊隐忧重重",
+          "link": "https://baijiahao.baidu.com/s?id=1738288741897824434&wfr=spider&for=pc"
+        }
+      ]
+    },
+    "R0055-001": {
+      "title": "卡券限制突破",
+      "description": "限制性卡券被脱离限制非预期领用。",
+      "attack": "分两种场景：一种是非公开的卡券、特定条件可领取或面向特定群体发放的卡券被脱离限制领取；另一种场景是限定使用场景或条件的卡券被脱离限制条件使用。限制包括：特定时间、特定人群、特定商品配券、特定价格配券、卡券叠加限制等等",
+      "complexity": "初级",
+      "influence": "套取平台营销活动利益，给平台带来经济损失。",
+      "avoidances": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A10",
+        "A13",
+        "A15",
+        "A16",
+        "A18"
+      ],
+      "references": [
+        {
+          "title": "OWASP Automated Threat: OAT002 Token Cracking",
+          "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-002_Token_Cracking.html"
+        },
+        {
+          "title": "2019年PDD优惠券漏洞事件",
+          "link": "https://baike.baidu.com/item/%E6%8B%BC%E5%A4%9A%E5%A4%9A%E6%BC%8F%E6%B4%9E%E9%97%A8"
+        }
+      ]
+    },
+    "R0056": {
+      "title": "虚假评价",
+      "description": "卖家通过购买虚假好评以提升产品商誉或搜索排名权值",
+      "attack": "卖家通过低价成单、发空包、虚拟发货等方式与买家勾结，通过虚假成单和批量好评来提升店铺信誉或商品排名。",
+      "complexity": "初级",
+      "influence": "影响平台公平性以及干扰排名算法",
+      "avoidances": [
+        "A15",
+        "A21"
+      ],
+      "references": [
+        {
+          "title": "刷好评-百度百科",
+          "link": "https://baike.baidu.com/item/%E4%BF%A1%E7%94%A8%E7%82%92%E4%BD%9C/7462798?fromtitle=%E5%88%B7%E5%A5%BD%E8%AF%84&fromid=6521876&fr=aladdin"
+        }
+      ]
+    },
+    "R0060": {
+      "title": "洗钱/诈骗",
+      "description": "利用合法的交易平台来开展非法的交易，以实现金钱转移",
+      "attack": "有很多赌博网站通过在合法交易平台建立店铺进行虚拟商品发货或空包发货的方式来实现对赌客的充值；还有色情诈骗网站，在浏览者尝试购买高级服务时，被跳转到合法交易平台下单虚拟商品，譬如电话卡、油卡等VIP卡券等，但并不会提供高级服务，导致下单的浏览者对合法交易平台的客诉量大幅上升",
+      "complexity": "高级",
+      "influence": "会给平台带来较大合规风险，以及客诉量的增加",
+      "avoidances": [
+        "A02",
+        "A10",
+        "A15",
+        "A16"
+      ],
+      "references": [
+        {
+          "title": "网络赌博充值点“潜伏”电商平台",
+          "link": "https://baijiahao.baidu.com/s?id=1639817185485445391&wfr=spider&for=pc"
+        }
+      ]
+    },
+    "R0061": {
+      "title": "手机二次号",
+      "description": "新的手机号码使用者通过找回密码或验证码登录机制，获得前手机号码使用者的账户权限",
+      "attack": "典型的恶意攻击者可以通过与运营商内部人员串通来批量获取过期手机号码，达到大规模盗号的目的。目前国内的主流电信运营商均已提供手机号验证接口，可以判断手机号是否换绑或过期等情况，平台可以依次来判断手机号状态。",
+      "complexity": "初级",
+      "influence": "导致平台用户账户被冒用",
+      "avoidances": [
+        "A15",
+        "A23"
+      ],
+      "references": [
+        {
+          "title": "二次启用手机号背后的隐私危机",
+          "link": "https://baijiahao.baidu.com/s?id=1703406873193853384&wfr=spider&for=pc"
+        }
+      ]
+    },
+    "R0062": {
+      "title": "信用卡/借款套现",
+      "description": "利用平台机制实现信用卡套现或购物借款的套现",
+      "attack": "利用平台业务流程漏洞将购物借款提现到银行卡中，或通过买家卖家勾结，实现假发货来套取购物借款",
+      "complexity": "中级",
+      "influence": "给平台带来经济损失以及合规风险",
+      "avoidances": [
+        "A15",
+        "A16",
+        "A20"
+      ],
+      "references": [
+        {
+          "title": "信用卡套现-百度百科",
+          "link": "https://baike.baidu.com/item/%E4%BF%A1%E7%94%A8%E5%8D%A1%E5%A5%97%E7%8E%B0/934329?fr=aladdin"
+        }
+      ]
+    },
+    "R0064": {
+      "title": "拆单套利",
+      "description": "利用运费/差价/赠品链接商品或低单价商品进行非正常凑单下单后取消部分订单获取利益。",
+      "attack": "有很多交易平台有满多少钱免运费、满减优惠、提供赠品、返利等优惠，通过凑单先满足获取利益要求，再退掉部分或全部商品，达到套取利益的目的。",
+      "complexity": "初级",
+      "influence": "套取平台商家优惠/返利。",
+      "avoidances": [
+        "A16",
+        "A15",
+        "A21"
+      ],
+      "references": [
+        {
+          "title": "如何避免恶意凑单？",
+          "link": "https://www.sohu.com/a/433318629_120934325"
+        },
+        {
+          "title": "买家恶意凑单退款，商家该怎么办？",
+          "link": "https://www.kaitao.cn/article/20201229093211.htm"
+        }
+      ]
+    },
+    "R0066": {
+      "title": "站内消息骚扰",
+      "description": "利用平台消息发送机制给他人发送骚扰性信息",
+      "attack": "与文本内容风险不同，消息骚扰会精心设计以规避关键词黑名单，可能并不会触发平台设置的关键词预警。消息骚扰是一个普遍的风险问题，有些平台用户可以选择什么样的人群允许给‘我’发消息，是一种比较好的防御策略",
+      "complexity": "初级",
+      "influence": "给平台客服或商家带来巨大干扰，严重情况可能会导致平台用户流失或人身伤害",
+      "avoidances": [
+        "A01",
+        "A04",
+        "A05",
+        "A06",
+        "A07",
+        "A09",
+        "A10",
+        "A11",
+        "A15",
+        "A17",
+        "A19",
+        "A20",
+        "A21"
+      ],
+      "references": [
+        {
+          "title": "设置一键防护功能、优化私信规则、加强评论环节管理……中央网信办：切实加强网络暴力治理！",
+          "link": "https://baijiahao.baidu.com/s?id=1748570171206490385&wfr=spider&for=pc"
+        }
+      ]
+    },
+    "R0068": {
+      "title": "权益滥用",
+      "description": "对平台赋予的权益的恶意利用和过度地使用",
+      "attack": "譬如网络购物平台国家要求7天无理由退货，购买者利用这个机制免费使用产品或服务，并在7天内发起退货。",
+      "complexity": "初级",
+      "influence": "给平台或卖家带来经济损失",
+      "avoidances": [
+        "A15",
+        "A16",
+        "A20",
+        "A21"
+      ],
+      "references": [
+        {
+          "title": "消费者权益，滥用也是一种伤害 ",
+          "link": "https://www.sohu.com/a/559353695_114890"
+        }
+      ]
+    },
+    "R0068-001": {
+      "title": "恶意客诉",
+      "description": "对交易平台或在交易平台对商家进行恶意投诉",
+      "attack": "以谋取不正当利益、逼迫被投诉者受到处罚为目标，通过监管单位对交易平台发起恶意投诉，或通过交易平台对商家发起恶意投诉。",
+      "complexity": "初级",
+      "influence": "给平台或卖家带来经济或商誉损失",
+      "avoidances": [
+        "A15",
+        "A16",
+        "A21"
+      ],
+      "references": [
+        {
+          "title": "电商平台内经营者遭遇恶意投诉的应对方法",
+          "link": "https://baijiahao.baidu.com/s?id=1742827753728741896&wfr=spider&for=pc"
+        }
+      ]
+    },
+    "R0068-002": {
+      "title": "恶意索赔",
+      "description": "通过批量购买过期未下架或假冒伪劣商品，申请假一罚十索赔",
+      "attack": "通过批量搜索、数据爬取等方式获取过期、假冒伪劣、违规（如：包含广告法违禁词、商品不合规）等商品，订单产生后买家投诉卖家存在违规，目的以撤销投诉为由索取高额钱款。",
+      "complexity": "中级",
+      "influence": "给平台或卖家带来经济损失",
+      "avoidances": [
+        "A15",
+        "A19",
+        "A24",
+        "A27",
+        "A29",
+        "A29-001",
+        "A20"
+      ],
+      "references": [
+        {
+          "title": "恶意索赔灰色产业链！该赞扬还是惩罚？",
+          "link": "https://baijiahao.baidu.com/s?id=1748533088616726645&wfr=spider&for=pc"
+        }
+      ]
+    },
+    "R0069": {
+      "title": "文件上传滥用",
+      "description": "利用业务系统的正常文件上传功能上传非预期文件",
+      "attack": "业务系统因存在用户生成内容，有譬如图片上传、文件上传的功能，攻击者通过上传接口上传图片或文件，但是并不是",
+      "complexity": "初级",
+      "influence": "占用平台存储和网络资源，有可能造成合规风险隐患",
+      "avoidances": [
+        "A18",
+        "A01",
+        "A06",
+        "A15",
+        "A26"
+      ],
+      "references": [
+        {
+          "title": "5个减少网站恶意文件上传的妙招",
+          "link": "https://zhuanlan.zhihu.com/p/372859453"
+        }
+      ]
+    },
+    "R0069-001": {
+      "title": "图床滥用",
+      "description": "用户在业务系统正常功能的上传图片功能处，上传并非为本站正常功能使用的图片或文件，并对资源进行访问滥用",
+      "attack": "一般存在两种情况：一是用户在上传图片功能处，上传大量图片，将正常业务图片功能当成个人云盘存储；二是用户在上传图片功能处，上传伪造成图片的视频文件，用于存储视频。用户通过将视频文件切片成多个文件，并逐一拼接到图片文件末端达到伪装成图片目的，利用上传图片接口上传切片文件，通过m3u文件整合切片后的图片URL达到播放视频的目的。常见于可以随时上传图片并返回图片URL功能，如实名认证前的证件照功能，创建帐号后的头像功能。功能页如果不最终确认提交，一般不会经过后台审核，所以风控运营无法看到上传后的图片，该风险利用这个业务盲区得以实现，传播盗版视频、色情视频等。",
+      "complexity": "初级",
+      "influence": "影响系统正常运营，大量占用网络流量、存储空间，有合规风险。",
+      "avoidances": [
+        "A18",
+        "A01",
+        "A06",
+        "A15",
+        "A26"
+      ],
+      "references": [
+        {
+          "title": "远方图床逐步关闭",
+          "link": "https://blog.ltyuanfang.cn/319.html"
+        }
+      ]
+    },
+    "R0069-002": {
+      "title": "云存储滥用",
+      "description": "与图床滥用（R0069-001）类似，区别在于云存储是业务的云服务的一项功能，而并非是某种用户生成内容的附加资源。",
+      "attack": "利用业务提供的云存储功能上传非预期或非法信息，云存储功能可能是云计算服务的一个部分，或云盘的一个部分，照比用户生成内容审核较弱，有可能会被黑灰产用来传播盗版视频、色情视频等。",
+      "complexity": "初级",
+      "influence": "影响系统正常运营，大量占用网络流量、存储空间，有合规风险。",
+      "avoidances": [
+        "A18",
+        "A01",
+        "A06",
+        "A15",
+        "A26"
+      ],
+      "references": [
+        {
+          "title": "阿里巴巴 OSS 存储桶被攻破，通过隐写术分发恶意 Shell 脚本",
+          "link": "https://www.wangan.com/p/7fy7f8dc9e2a9d89"
+        }
+      ]
+    }
+  }
+}
