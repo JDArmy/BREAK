@@ -95,7 +95,7 @@ let riskDetailClose = () => {
         <el-option
           v-for="(bsVal, bsKey) in BREAK.businessScenes"
           :key="bsKey"
-          :label="bsVal"
+          :label="bsKey + ':&nbsp;&nbsp;' + bsVal"
           :value="bsKey"
         />
       </el-select>
