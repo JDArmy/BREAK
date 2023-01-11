@@ -8,9 +8,11 @@ import "element-plus/theme-chalk/display.css";
 
 import iconTranslate from "@/components/icons/iconTranslate.vue";
 import iconGithub from "@/components/icons/iconGithub.vue";
+import { ArrowDown } from "@element-plus/icons-vue";
 
 import {
   ElMenu,
+  ElIcon,
   ElMenuItem,
   ElDropdown,
   ElDropdownMenu,
@@ -88,12 +90,50 @@ const handleCommand = (command: keyof typeof languages) => {
       $t("abilityProviders")
     }}</el-menu-item>
 
+    <el-dropdown class="outside-link">
+      <span class="el-dropdown-link"
+        >JDArmy<el-icon>
+          <arrow-down />
+        </el-icon>
+      </span>
+      <template #dropdown>
+        <el-dropdown-menu class="outside-link-menu">
+          <el-dropdown-item
+            ><a target="_blank" href="https://jd.army"
+              >Webpage</a
+            ></el-dropdown-item
+          >
+          <el-dropdown-item
+            ><a target="_blank" href="https://blog.jd.army"
+              >Blog</a
+            ></el-dropdown-item
+          >
+          <el-dropdown-item divided
+            ><a target="_blank" href="https://rtass.jd.army"
+              >RTASS</a
+            ></el-dropdown-item
+          >
+          <el-dropdown-item
+            ><a target="_blank" href="https://break.jd.army"
+              >BREAK</a
+            ></el-dropdown-item
+          >
+          <el-dropdown-item
+            ><a target="_blank" href="https://dsre.jd.army"
+              >DSRE</a
+            ></el-dropdown-item
+          >
+        </el-dropdown-menu>
+      </template>
+    </el-dropdown>
+
     <div class="github">
       <a href="https://github.com/JDArmy/BREAK" target="_blank">
         <icon-github />
       </a>
     </div>
-    <!-- <el-dropdown class="" @command="handleCommand">
+
+    <!-- <el-dropdown class="translate" @command="handleCommand">
       <span class="el-dropdown-link">
         <icon-translate />
       </span>
@@ -113,7 +153,7 @@ const handleCommand = (command: keyof typeof languages) => {
   </el-menu>
 </template>
 
-<style>
+<style scoped>
 .logo {
   background: #b0afaf;
   border-radius: 20px;
@@ -148,10 +188,26 @@ const handleCommand = (command: keyof typeof languages) => {
   padding: 0 0 0 10px;
 }
 
-.el-dropdown-link,
+.translate,
 .github {
-  color: rgb(218, 216, 216);
+  color: var(--el-menu-text-color);
   margin: auto 10px;
   cursor: pointer;
+}
+
+.outside-link {
+  line-height: var(--el-menu-item-height);
+  color: var(--el-menu-text-color);
+  padding: 0 var(--el-menu-base-level-padding);
+  cursor: pointer;
+}
+
+.outside-link-menu a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #000;
+  text-decoration: none;
 }
 </style>
