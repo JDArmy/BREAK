@@ -1,6 +1,7 @@
 # JDArmy BREAK-业务风险枚举与规避知识框架
 
-## 框架线上地址：https://break.jd.army/
+## 框架线上地址：<https://break.jd.army/>
+
 ## 介绍
 
 JDArmy BREAK 是英文“Business Risk Enumeration & Avoidance Kownledge”的缩写，是一个开放式“业务风险枚举与规避知识”框架。该框架通过对各种业务风险进行分类、介绍与枚举，为使用者提供了一个完整的业务风险全景图，并对业务规避风险、提升能力提供了规避知识。
@@ -40,13 +41,12 @@ JDArmy BREAK 是英文“Business Risk Enumeration & Avoidance Kownledge”的�
 
 ### 致谢
 
-- 感谢团长提供的建议
+- 感谢团长、we1h0提供的建议
 
 ## 链接
 
-- Github：https://github.com/JDArmy/BREAK
+- Github：<https://github.com/JDArmy/BREAK>
 
 ## BREAK框架意见建议反馈群
-
 
 ![alt BREAK框架意见建议反馈群](./docs/wxqun.png)
