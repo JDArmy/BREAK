@@ -47,6 +47,6 @@ JDArmy BREAK 是英文“Business Risk Enumeration & Avoidance Kownledge”的�
 
 - Github：<https://github.com/JDArmy/BREAK>
 
-## BREAK框架意见建议反馈群
+<!-- ## BREAK框架意见建议反馈群
 
-![alt BREAK框架意见建议反馈群](./docs/wxqun.png)
+![alt BREAK框架意见建议反馈群](./docs/wxqun.png) -->
