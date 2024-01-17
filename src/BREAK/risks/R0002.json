@@ -1,0 +1,31 @@
+{
+  "R0002": {
+    "title": "优惠劵枚举",
+    "definition": "批量枚举优惠券号码、兑换码、折扣码等活动卡券兑换凭证。",
+    "description": "劵号由某种规则数列或可猜测算法生成，通过暴力枚举或算法破解等方式，可以批量获取券号以便进一步套取利益。",
+    "complexity": "初级",
+    "influence": "套取平台营销活动利益，占用正常用户活动资源。",
+    "avoidances": [
+      "A0001",
+      "A0002",
+      "A0007",
+      "A0032",
+      "A0036",
+      "A0010",
+      "A0021",
+      "A0003",
+      "A0015",
+      "A0029",
+      "A0004",
+      "A0005",
+      "A0028"
+    ],
+    "references": [
+      {
+        "title": "OWASP Automated Threat: OAT002 Token Cracking",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-002_Token_Cracking.html"
+      }
+    ],
+    "updated": "2024-01-15"
+  }
+}

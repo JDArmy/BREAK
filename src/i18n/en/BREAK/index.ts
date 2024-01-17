@@ -20,5 +20,5 @@
 //   ...businessScenes, //业务场景
 // };
 
-let BREAK = {};
+const BREAK = {};
 export default BREAK;

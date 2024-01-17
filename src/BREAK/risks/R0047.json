@@ -1,0 +1,26 @@
+{
+  "R0047": {
+    "title": "人机识别绕过",
+    "definition": "通过自动化手段通过人机测试。",
+    "description": "通常以自动化方式通过图灵测试（用于区分机器或人的测试题目）。除了传统的图片，音频验证码外，有时还会使用小游戏或算术等形式。通常用于批量自动化操作过程中的人机检验。除了自动化通过人机测试外，通过改变设备环境，或使用第三方脚本工具绕过鼠标移动轨迹、点按压力、3D陀螺仪等方式的人机识别。",
+    "complexity": "高级",
+    "influence": "人机识别机制失效。",
+    "avoidances": [
+      "A0003",
+      "A0010",
+      "A0013",
+      "A0015",
+      "A0016",
+      "A0018",
+      "A0021",
+      "A0022"
+    ],
+    "references": [
+      {
+        "title": "OWASP Automated Threat: OAT009 CAPTCHA Defeat",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-009_CAPTCHA_Defeat.html"
+      }
+    ],
+    "updated": "2024-01-15"
+  }
+}

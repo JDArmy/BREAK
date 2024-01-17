@@ -1,0 +1,32 @@
+{
+  "AT0025": {
+    "title": "AST反混淆",
+    "description": "抽象语法树（Abstract Syntax Tree，AST），是源代码语法结构的一种抽象表示。它以树状的形式表现编程语言的语法结构，树上的每个节点都表示源代码中的一种结构。之所以说语法是“抽象”的，是因为这里的语法并不会表示出真实语法中出现的每个细节。JS逆向经常会遇到各种混淆过后的代码，极其难以阅读，这时候就可以使用AST对这些混淆代码进行一定的还原处理，得到一个相对容易阅读的JS代码，方便我们进行JS分析。",
+    "references": [
+      {
+        "title": "AST反混淆实战",
+        "link": "https://www.jianshu.com/p/f485140ad83b"
+      },
+      {
+        "title": "利用AST解混淆先导知识:概念相关",
+        "link": "https://blog.csdn.net/qq523176585/article/details/109508056"
+      },
+      {
+        "title": "JS逆向：AST还原极验混淆JS实战",
+        "link": "https://www.freesion.com/article/4268832069/"
+      }
+    ],
+    "avoidances": [
+      "A0002",
+      "A0013",
+      "A0014",
+      "A0022",
+      "A0001"
+    ],
+    "risks": [
+      "R0001",
+      "R0051-002"
+    ],
+    "updated": "2024-01-11"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "AT0028": {
+    "title": "反编译工具",
+    "description": "计算机软件反向工程（Reverse engineering）也称为计算机软件还原工程，是指通过对他人软件的目标程序（比如可执行程序）进行“逆向分析、研究”工作，以推导出他人的软件产品所使用的思路、原理、结构、算法、处理过程、运行方法等设计要素，某些特定情况下可能推导出源代码。安卓逆向是对已经打包好的APP进行反编译、源码分析了解APP实现逻辑的一门技术。我们可以把安卓安装时用到的APK文件看作一个加密后的压缩包，逆向就是要最大程序地还原出APK打包之前的源码。",
+    "references": [
+      {
+        "title": "反编译-百度百科",
+        "link": "https://baike.baidu.com/item/%E5%8F%8D%E5%90%91%E7%BC%96%E8%AF%91/9932384?fromtitle=%E5%8F%8D%E7%BC%96%E8%AF%91&fromid=8748947&fr=aladdin"
+      },
+      {
+        "title": "什么是Android逆向？",
+        "link": "https://blog.csdn.net/wqwq_22/article/details/122778209"
+      }
+    ],
+    "avoidances": [
+      "A0013",
+      "A0014"
+    ],
+    "risks": [
+      "R0051",
+      "R0012"
+    ],
+    "updated": "2024-01-11"
+  }
+}

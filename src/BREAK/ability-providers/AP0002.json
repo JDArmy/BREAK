@@ -1,0 +1,59 @@
+{
+  "AP0002": {
+    "title": "网易易盾",
+    "site": "https://dun.163.com/",
+    "description": "网易易盾是网易集团旗下一站式数字内容风控品牌，依托网易 20 多年的先进技术沉淀和一线实践经验，作为国内领先的数字内容风控服务商，为面向数字化业务的客户提供专业可靠的安全服务，涵盖内容安全、业务安全、移动安全三大领域，全方位保障客户业务合规、稳健和安全运营。",
+    "updated": "2024-01-11",
+    "abilities": {
+      "A0006-001": {
+        "url": "https://dun.163.com/product/text-detection"
+      },
+      "A0006-002": {
+        "url": "https://dun.163.com/product/picture-detection"
+      },
+      "A0006-003": {
+        "url": "https://dun.163.com/product/audio-detection"
+      },
+      "A0006-004": {
+        "url": "https://dun.163.com/product/video-detection"
+      },
+      "A0001": {
+        "url": "https://dun.163.com/product/captcha"
+      },
+      "A0007": {
+        "url": "https://dun.163.com/product/sms"
+      },
+      "A0018": {
+        "url": "https://dun.163.com/product/phone-verification"
+      },
+      "A0024": {
+        "url": "https://dun.163.com/product/certification"
+      },
+      "A0023": {
+        "url": "https://dun.163.com/product/certification"
+      },
+      "A0016": {
+        "url": "https://dun.163.com/product/anticheat"
+      },
+      "A0021": {
+        "url": "https://dun.163.com/product/dna"
+      },
+      "A0010": {
+        "url": "https://dun.163.com/product/register-protect"
+      },
+      "A0013-001": {
+        "url": "https://dun.163.com/product/android-reinforce"
+      },
+      "A0013-002": {
+        "url": "https://dun.163.com/product/ios-reinforce"
+      },
+      "A0013-003": {
+        "url": "https://dun.163.com/product/h5-reinforce"
+      },
+      "A0014": {
+        "url": "https://dun.163.com/product/android-reinforce"
+      }
+    },
+    "logoBase64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAABACAMAAAB7sojtAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAADkUExURUdwTBkiNRYjMxcfLx8nNxgiMxkiNBsjMxchNRciMhciNxkjMx8fLxkjNg8nNwBm/xgiNABm/w8nLwBn/x8fNwBn/xghMwBv/wBn/xciNBolNRciNhYjMxkhMwBo/xgiMgBr/wBm/wBf/xchNABn/wBn/wBn/xYiNgBm/wBm/wBo/wBm/wBn/xghMxkjMxofNQBm/wBp/wBn/x8fPxoiNBgiNgBo/wBm/wBq/wBm/wBk/wBl/x8lNRgiMxciNBciMxkiMgBo/wBo/wBk/xolLxkiNhghNRYiMhsiNBghNQBn/xgiNPJNTZ4AAABKdFJOUwC/nyAg379AgGBgnxCfIN/vvyAgIGCQEO+vMM9Qn99/QHAQoI/Pr3DvoHCQQI9QMFBQgBCvz59/MJ8wgDDP789wX3+QMHCPcG+wOwO4QgAABJNJREFUaN7tmmlXozAUhqOWUixj6UJbW1urtlXH3VHHZRydfYb8//8zWUgI4aaAHhfO4f3gaeEK70Nyb25QhEqVKlWqVClF11vNvb25f11I8+2t+V4QqjH328Uy719J8xLi5qwYED1/2ggMmk3Peu/b/WQ6C1LUnE7er/9pkEkf3y1ANv9BowR4LYDmwWGvd3gwWwDgeniBlkXYwBhyEl3LTg/qLLrdSQxgdnAqK07vdH9mAFjBmQDM3uwsAHZ6CIsSDvuKebk2nO6PDQAWLC8OMPyQlKUDpAWREG/JpJYEMBT7Wxjgn2FCrsQBVoEQRweAgmpxgJp6buBsQDlgWqBhgOU3BKhivPZaAFUnqXUdYD0liIT8rii6x3jDFqo8HeDIeiCf760/6Nh6cOn3agLg5ZMYpwHcGgHYKJOLO+EYe3jpXQC0r5qq9owAzPYI4xb1XuUoOgA0O3Z0gOX0KVStKaKVTn55TAA00lfi0CW1beEh+dTF2OUob5/E20FmAGKbXLvLb7HLUd4eoJ0dgFw4XG9Ib+Hxu2gAVjUpTwdIC+IAAzm9SBXqihnkPAeAtUSWeCi8eXmhJK6Ft0hq7RkA6EJ2Pr8EigrgLlj/pTrpQfkAUN+wswQAyGzGfFV3BcqCNe7JkgBdvVZZEMDWGPLfvwUAiO2vUWLZOoBTr7dS3f2t192sAGv6GXZMPPEcrx+kS08CXAAAlxgPKgbJa1npQSkAou5P8gPYMtXoFKppAJ1F6+dqjiAJUK9pYlNonn/XLlyStYstAwgdA0nsZAFw8gDASXwgtpL5ASxZRkf8WjGAAXtIpCfAQ/68ujQ8PCYAbD1oJxmUAnAo0nQ7L4CNhW2CQtaEXagKkbGxWtHe1gZXX0cJwqwlYcd0AMfWxKbQdv43P1Er8cht01aCdkZJgI4lKi1C66Il0AFokKhXQxEEAMBJjJq551Do8pLMH26boJyQsXeTAKOoj9kU8y0BMIwFLaGcAFtiCM6gl6ZM1xBAh/7ktikKv6EGEJmm4WKaaACRadYZtYwA63VNbAqhbbESNBJZ0IZrLHfJuspjepsOLUYuOxgHICe80M8ni+0XAICBkgDKhHOyJjFCd2IIpjpAEx4c7vKCPlzS0HUphU3vMNQAVNMjUXF1ANW0MuHyAMgh0PP4szg+hqaQW6E9APvJFk32KQZwFJmmdcYFAcAsyViFLsO8kEMQfAP9B7751cOCtxKKaVpBW+AmJp4lXmsRgCGJyRCMobfokf85egqAatri5TYJYMiSnAByMSP6LurPjTw0bmcD6JD1cxSdUkxvKuszKR5V6U01rUw4mwQNM1ch1kMrOxdmd6Ls7X2UDcCOvdxVTG9EdYbWXaXNMWTJTp5eiGtf6f1vJpOm8vUcmiddAOCLCrCimCb3/imCujxoQ/yGNF1VsmRHDaJRNb79AyQrw77pLxvngNVKBdyE8C5enFJi3IEeJBcBJahiCmLXdFM2FiaC8+L8ofhHwf3HMlm02H7B/tNA2883i/W/BlT+uLiPPxwE8Valf9dDBZU/D/pXh6hUqVKlSpUqgv4Dt2zNjfjfvY0AAAAASUVORK5CYII="
+  }
+}

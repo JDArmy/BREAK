@@ -1,0 +1,20 @@
+{
+  "R0056": {
+    "title": "虚假评价",
+    "definition": "卖家通过购买虚假好评以提升产品商誉或搜索排名权值",
+    "description": "卖家通过低价成单、发空包、虚拟发货等方式与买家勾结，通过虚假成单和批量好评来提升店铺信誉或商品排名。",
+    "complexity": "初级",
+    "influence": "影响平台公平性以及干扰排名算法",
+    "avoidances": [
+      "A0015",
+      "A0021"
+    ],
+    "references": [
+      {
+        "title": "刷好评-百度百科",
+        "link": "https://baike.baidu.com/item/%E4%BF%A1%E7%94%A8%E7%82%92%E4%BD%9C/7462798?fromtitle=%E5%88%B7%E5%A5%BD%E8%AF%84&fromid=6521876&fr=aladdin"
+      }
+    ],
+    "updated": "2024-01-15"
+  }
+}

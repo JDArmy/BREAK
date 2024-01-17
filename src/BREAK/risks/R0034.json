@@ -1,0 +1,30 @@
+{
+  "R0034": {
+    "title": "自动化养号",
+    "definition": "通过自动化方式提升账号信誉度",
+    "description": "对被盗账号或批量注册账号通过自动化活动以降低账号风险值或提升账号信誉度。譬如自动化评价、评论、发帖、交易等。",
+    "complexity": "高级",
+    "influence": "自动化养号通常需要结合其他的业务风险场景才能完成变现，譬如薅羊毛、抢购、刷量等。",
+    "avoidances": [
+      "A0001",
+      "A0002",
+      "A0010",
+      "A0013",
+      "A0015",
+      "A0016",
+      "A0021",
+      "A0022"
+    ],
+    "references": [
+      {
+        "title": "RPA机器人是什么？",
+        "link": "https://baijiahao.baidu.com/s?id=1742940718304519356&wfr=spider&for=pc"
+      },
+      {
+        "title": "RPA机器人自动化养号和AdsPower反指纹浏览器",
+        "link": "https://baijiahao.baidu.com/s?id=1732976759234259657&wfr=spider&for=pc"
+      }
+    ],
+    "updated": "2024-01-15"
+  }
+}

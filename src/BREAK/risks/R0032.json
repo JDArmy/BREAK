@@ -1,0 +1,139 @@
+{
+  "R0032": {
+    "title": "凭证破解",
+    "definition": "通过暴力枚举特定账号的可能密码列表尝试登陆，得到有效身份凭证。",
+    "description": "通过蛮力、字典（单词列表）和猜测攻击等方式对应用程序的身份验证过程进行暴力枚举来识别特定账户使用的脆弱帐户凭据，譬如枚举某用户的密码。",
+    "complexity": "高级",
+    "influence": "通过无限制的账号密码碰撞，攻击者将有可能获得当前系统上使用脆弱密码的用户权限，通过进一步操作对当前系统用户造成损失。",
+    "avoidances": [
+      "A0001",
+      "A0002",
+      "A0004",
+      "A0005",
+      "A0007",
+      "A0009",
+      "A0010",
+      "A0011",
+      "A0012",
+      "A0015",
+      "A0016",
+      "A0019",
+      "A0021",
+      "A0023"
+    ],
+    "references": [
+      {
+        "title": "OWASP Automated Threat: OAT007 Credential Cracking",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-007_Credential_Cracking.html"
+      }
+    ],
+    "updated": "2024-01-15"
+  },
+  "R0032-001": {
+    "title": "撞库攻击",
+    "definition": "通过批量登陆，验证被盗账号密码在当前系统中的有效性。",
+    "description": "在当前系统的身份验证机制中，对从其他地方窃取的身份验证凭据列表进行测试，以确定用户是否重复使用了相同的登录凭据。被盗的用户名（通常是电子邮件地址）和密码可能是攻击者直接从另一个应用程序中获取的、在犯罪市场上购买的，或者是从公开的违规数据转储中获得的。与“凭证破解”不同，机器撞库不涉及任何暴力破解或数值猜测。",
+    "complexity": "高级",
+    "influence": "通过无限制的账号密码碰撞，攻击者将有可能获得众多在当前系统上复用其他系统身份凭证的用户权限，通过进一步操作对当前系统用户造成损失。",
+    "avoidances": [
+      "A0001",
+      "A0002",
+      "A0004",
+      "A0005",
+      "A0007",
+      "A0009",
+      "A0010",
+      "A0011",
+      "A0012",
+      "A0015",
+      "A0016",
+      "A0019",
+      "A0021",
+      "A0023"
+    ],
+    "references": [
+      {
+        "title": "OWASP Automated Threat: OAT008 Credential Stuffing",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-008_Credential_Stuffing.html"
+      }
+    ],
+    "updated": "2024-01-15"
+  },
+  "R0032-002": {
+    "title": "密码喷射",
+    "definition": "通过暴力枚举众多账号列表的特定脆弱密码尝试登陆，得到有效身份凭证。",
+    "description": "通过蛮力、字典（单词列表）和猜测攻击等方式对应用程序的身份验证过程进行暴力枚举来获得使用特定脆弱登录凭据的有效帐户，譬如枚举使用某脆弱密码的账户。",
+    "complexity": "高级",
+    "influence": "通过无限制的账号密码碰撞，攻击者将有可能获得当前系统上使用脆弱密码的用户权限，通过进一步操作对当前系统用户造成损失。",
+    "avoidances": [
+      "A0001",
+      "A0002",
+      "A0004",
+      "A0005",
+      "A0007",
+      "A0009",
+      "A0010",
+      "A0011",
+      "A0012",
+      "A0015",
+      "A0016",
+      "A0019",
+      "A0021",
+      "A0023"
+    ],
+    "references": [
+      {
+        "title": "OWASP Automated Threat: OAT007 Credential Cracking",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-007_Credential_Cracking.html"
+      }
+    ],
+    "updated": "2024-01-15"
+  },
+  "R0032-003": {
+    "title": "凭证盗取风险",
+    "definition": "通过木马病毒、钓鱼欺骗等方式盗取登录凭证。",
+    "description": "典型的登录凭证有两种，一种是用以实现登录的身份认证凭证，一般以账密为主，但还包含一次性口令、短信验证码、物理身份特征等；另一种是为了维持登录状态的身份维持凭证，通常为cookies，但还包含sessionid、nonce、JSON WEB Token等。",
+    "complexity": "高级",
+    "influence": "获得被攻击者之于对应网站或应用的持续性账户访问和操作权限",
+    "avoidances": [
+      "A0007",
+      "A0019",
+      "A0024",
+      "A0021",
+      "A0011",
+      "A0012"
+    ],
+    "references": [
+      {
+        "title": "OWASP Automated Threat: OAT007 Credential Cracking",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-007_Credential_Cracking.html"
+      }
+    ],
+    "updated": "2024-01-15"
+  },
+  "R0032-004": {
+    "title": "验证码暴破风险",
+    "definition": "通过暴力枚举验证码尝试登陆，得到有效身份凭证。",
+    "description": "验证码（Verification Code）暴力破解风险是指攻击者尝试通过不断尝试各种可能性，以破解验证码的方式获取系统或账户的访问权限。这种攻击可能对系统和用户产生严重的危害。成因包括：弱验证码设计： 如果系统使用简单、易猜的验证码，攻击者更容易通过尝试不同的组合来破解。缺乏验证码安全性保护： 某些系统可能未实施足够的安全措施，如频繁变化的验证码、防止暴力破解的锁定机制等。使用相同验证码： 如果系统多处使用相同的验证码，攻击者可以通过破解一个位置的验证码，然后将其应用于其他位置。无效的验证码生成算法： 如果验证码生成算法不足够复杂，攻击者可能通过分析算法的弱点来破解验证码。",
+    "complexity": "中级",
+    "influence": "用户身份失陷",
+    "avoidances": [
+      "A0001",
+      "A0010",
+      "A0041",
+      "A0003",
+      "A0015",
+      "A0016",
+      "A0023",
+      "A0038",
+      "A0055",
+      "A0004",
+      "A0005",
+      "A0009",
+      "A0028",
+      "A0056"
+    ],
+    "references": [],
+    "updated": "2024-01-16"
+  }
+}

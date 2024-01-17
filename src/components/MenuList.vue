@@ -6,8 +6,8 @@ import "element-plus/es/components/dropdown-menu/style/css";
 import "element-plus/es/components/dropdown-item/style/css";
 import "element-plus/theme-chalk/display.css";
 
-import iconTranslate from "@/components/icons/iconTranslate.vue";
-import iconGithub from "@/components/icons/iconGithub.vue";
+// import iconTranslate from "@/components/icons/iconTranslate.vue";
+import GithubPane from "@/components/GithubPane.vue";
 import { ArrowDown } from "@element-plus/icons-vue";
 
 import {
@@ -19,21 +19,21 @@ import {
   ElDropdownItem,
 } from "element-plus";
 
-import { i18n, languages } from "@/i18n";
+// import { i18n, languages } from "@/i18n";
 
-const lang = localStorage.getItem("locale");
-if (
-  lang &&
-  lang !== i18n.global.locale &&
-  Object.keys(languages).includes(lang)
-) {
-  i18n.global.locale = lang as keyof typeof languages;
-}
+// const lang = localStorage.getItem("locale");
+// if (
+//   lang &&
+//   lang !== i18n.global.locale &&
+//   Object.keys(languages).includes(lang)
+// ) {
+//   i18n.global.locale = lang as keyof typeof languages;
+// }
 
-const handleCommand = (command: keyof typeof languages) => {
-  i18n.global.locale = command;
-  localStorage.setItem("locale", command);
-};
+// const handleCommand = (command: keyof typeof languages) => {
+//   i18n.global.locale = command;
+//   localStorage.setItem("locale", command);
+// };
 </script>
 
 <template>
@@ -109,18 +109,35 @@ const handleCommand = (command: keyof typeof languages) => {
             ></el-dropdown-item
           >
           <el-dropdown-item divided
-            ><a target="_blank" href="https://rtass.jd.army"
+            ><a
+              target="_blank"
+              href="https://rtass.jd.army"
+              title="Red Team Assessment Scoring System Open Source Framework"
               >RTASS</a
             ></el-dropdown-item
           >
           <el-dropdown-item
-            ><a target="_blank" href="https://break.jd.army"
+            ><a
+              target="_blank"
+              href="https://break.jd.army"
+              title="Business Risk Enumeration & Avoidance Kownledge Open Source Framework"
               >BREAK</a
             ></el-dropdown-item
           >
           <el-dropdown-item
-            ><a target="_blank" href="https://dsre.jd.army"
+            ><a
+              target="_blank"
+              href="https://dsre.jd.army"
+              title="Data Security Risk Enumeration Open Source Framkework"
               >DSRE</a
+            ></el-dropdown-item
+          >
+          <el-dropdown-item divided
+            ><a
+              target="_blank"
+              href="https://textwatermark.jd.army"
+              title="A Open Source Library for Text Watermarking in python"
+              >Text Watermark</a
             ></el-dropdown-item
           >
         </el-dropdown-menu>
@@ -128,9 +145,7 @@ const handleCommand = (command: keyof typeof languages) => {
     </el-dropdown>
 
     <div class="github">
-      <a href="https://github.com/JDArmy/BREAK" target="_blank">
-        <icon-github />
-      </a>
+      <github-pane />
     </div>
 
     <!-- <el-dropdown class="translate" @command="handleCommand">

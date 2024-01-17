@@ -1,0 +1,22 @@
+{
+  "R0025": {
+    "title": "恶意挖墙脚",
+    "definition": "挖金主、挖客户、挖主播",
+    "description": "以导流为目的将本平台的金主、客户、主播通过评论、私信等方式沟通向其他平台引流",
+    "complexity": "初级",
+    "influence": "影响系统正常运营，给用户带来诈骗风险，给企业正常运营造成负面影响",
+    "avoidances": [
+      "A0006",
+      "A0015",
+      "A0020",
+      "A0021"
+    ],
+    "references": [
+      {
+        "title": "网络主播在合约期内恶意跳槽、挖墙脚是否构成不正当竞争？",
+        "link": "https://baijiahao.baidu.com/s?id=1700201113697587369&wfr=spider&for=pc"
+      }
+    ],
+    "updated": "2024-01-15"
+  }
+}
