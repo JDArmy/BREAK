@@ -1,0 +1,27 @@
+{
+  "R0031": {
+    "title": "子账号风险",
+    "definition": "业务账号系统有子账号概念且对子账号管理不严格造成账号滥用",
+    "description": "有不少业务系统账号注册十分严格，但对子账号的生成不严格，且子账号具备母账号的全部功能。这样黑灰产可以通过批量生成子账号后来进行相关攻击超过，从而绕过严格的账号注册和身份认证策略。",
+    "complexity": "中级",
+    "influence": "子账号滥用绕过账号注册和身份认证策略。",
+    "avoidances": [
+      "A0017",
+      "A0018",
+      "A0019",
+      "A0024",
+      "A0029-001"
+    ],
+    "references": [
+      {
+        "title": "淘宝开店子账号有什么弊端？有没有风险",
+        "link": "https://www.musicheng.com/news/i177638.html"
+      },
+      {
+        "title": "支付宝实名认证惊现大漏洞 可暗中绑定多个子账户",
+        "link": "https://stock.xinpianchang.com/article/scbaike/100016.html"
+      }
+    ],
+    "updated": "2024-01-15"
+  }
+}

@@ -21,6 +21,11 @@ const router = createRouter({
       component: HomeView,
     },
     {
+      path: "/business-scene/:bsKey",
+      name: "businessScene",
+      component: HomeView,
+    },
+    {
       path: "/avoidances",
       name: "avoidances",
       component: () => import("@/views/AvoidancesView.vue"),
@@ -30,17 +35,21 @@ const router = createRouter({
       name: "attackTools",
       component: () => import("@/views/AttackToolsView.vue"),
     },
-    // {
-    //   path: "/attack-tool/:atKey",
-    //   name: "attackTool",
-    //   component: () => import("@/views/AttackToolView.vue"),
-    // },
     {
       path: "/ability-providers",
       name: "abilityProviders",
       component: () => import("@/views/AbilityProvidersView.vue"),
     },
   ],
+  scrollBehavior(to) {
+    if (to.hash) {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve({ el: to.hash, behavior: "smooth" });
+        }, 300); // 延迟 500 毫秒以确保元素已经被渲染
+      });
+    }
+  },
 });
 
 export default router;

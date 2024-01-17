@@ -1,0 +1,76 @@
+{
+  "R0030": {
+    "title": "虚假注册",
+    "definition": "利用虚假的身份注册虚假账号便于后续滥用。",
+    "description": "通过使用应用程序的帐户注册流程，提供虚假的身份数据注册账号。",
+    "complexity": "中级",
+    "influence": "这些帐户随后被滥用于生成垃圾邮件、洗钱和商品、传播恶意软件、影响声誉、造成恶作剧以及扭曲搜索引擎优化 (SEO)、评论和调查。",
+    "avoidances": [
+      "A0001",
+      "A0002",
+      "A0004",
+      "A0005",
+      "A0007",
+      "A0009",
+      "A0010",
+      "A0015",
+      "A0016",
+      "A0021",
+      "A0022"
+    ],
+    "references": [
+      {
+        "title": "OWASP Automated Threat: OAT019 Account Creation",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-019_Account_Creation.html"
+      }
+    ],
+    "updated": "2024-01-15"
+  },
+  "R0030-001": {
+    "title": "批量注册",
+    "definition": "批量注册账号便于后续滥用。",
+    "description": "通过使用应用程序的帐户注册流程，批量创建帐户，有时还填充个人资料。",
+    "complexity": "高级",
+    "influence": "这些帐户随后被滥用于生成垃圾邮件、洗钱和商品、传播恶意软件、影响声誉、造成恶作剧以及扭曲搜索引擎优化 (SEO)、评论和调查。",
+    "avoidances": [
+      "A0001",
+      "A0002",
+      "A0004",
+      "A0005",
+      "A0007",
+      "A0009",
+      "A0010",
+      "A0015",
+      "A0016",
+      "A0021",
+      "A0022"
+    ],
+    "references": [
+      {
+        "title": "OWASP Automated Threat: OAT019 Account Creation",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-019_Account_Creation.html"
+      }
+    ],
+    "updated": "2024-01-15"
+  },
+  "R0030-002": {
+    "title": "三方账号风险",
+    "definition": "利用三方账号联合登录绕过现有身份验证体系",
+    "description": "很多站点在创建用户身份时具有严格的身份验证体系，譬如手机验证码、实名认证等。但在通过微信、微博等进行三方身份登录时，过于相信三方，没有进行严格的身份验证，导致可以通过在三方注册大量垃圾小号（R0030-001）来进行身份联登突破现有的严格的身份验证体系。",
+    "complexity": "中级",
+    "influence": "绕过现有身份验证体制，导致防御机制失效",
+    "avoidances": [
+      "A0007",
+      "A0024",
+      "A0029-001",
+      "A0029-002"
+    ],
+    "references": [
+      {
+        "title": "什么是第三方账号登陆？有什么好处？",
+        "link": "https://zhidao.baidu.com/question/1437455763683359379.html"
+      }
+    ],
+    "updated": "2024-01-15"
+  }
+}

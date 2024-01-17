@@ -1,0 +1,65 @@
+{
+  "R0051": {
+    "title": "应用被逆向",
+    "definition": "通过逆向还原应用的源代码或运行逻辑",
+    "description": "对于WEB应用、微信小程序、安卓应用来说，可以直接或轻易还原源代码，看到全部应用处理逻辑。当在终端使用安全策略时，即可能存在被破解绕过等风险。",
+    "complexity": "高级",
+    "influence": "可能导致应用中的安全流程被突破，数据被伪造等情况",
+    "avoidances": [
+      "A0002",
+      "A0013",
+      "A0021",
+      "A0022"
+    ],
+    "references": [
+      {
+        "title": "什么是逆向分析",
+        "link": "https://blog.csdn.net/Eastmount/article/details/107591832"
+      }
+    ],
+    "updated": "2024-01-15"
+  },
+  "R0051-001": {
+    "title": "应用被抓包",
+    "definition": "通过抓包还原应用的请求发送结构及监听返回数据",
+    "description": "抓包（packet capture）就是将网络传输发送与接收的数据包进行截获、重发、编辑、转存等操作。通过抓包可以分析应用的请求方式与请求结构，以便实现业务逻辑还原模拟和替代终端实现流程自动化（R0001）",
+    "complexity": "高级",
+    "influence": "可能导致应用中的安全流程被突破，数据被伪造等情况",
+    "avoidances": [
+      "A0002",
+      "A0010",
+      "A0013",
+      "A0021",
+      "A0022",
+      "A0035"
+    ],
+    "references": [
+      {
+        "title": "TCP 实战抓包分析",
+        "link": "https://blog.csdn.net/qq_31941921/article/details/119853993"
+      }
+    ],
+    "updated": "2024-01-15"
+  },
+  "R0051-002": {
+    "title": "HTTP请求分析",
+    "definition": "通过抓包还原应用的请求发送结构及监听返回数据",
+    "description": "对于使用HTTP/HTTPS等基于文本协议进行数据传输的应用来说，可以通过中间人来实现数据收发的抓包，继而还原应用执行逻辑，来实现自动化操作。",
+    "complexity": "中级",
+    "influence": "可能导致应用中的安全流程被突破，数据被伪造等情况",
+    "avoidances": [
+      "A0002",
+      "A0010",
+      "A0013",
+      "A0021",
+      "A0022"
+    ],
+    "references": [
+      {
+        "title": "完整的HTTP请求分析",
+        "link": "https://www.cnblogs.com/wzfwaf/p/10515507.html"
+      }
+    ],
+    "updated": "2024-01-15"
+  }
+}

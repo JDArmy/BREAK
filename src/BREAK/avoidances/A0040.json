@@ -1,0 +1,17 @@
+{
+  "A0040": {
+    "title": "证书锁定(SSL Pinning)",
+    "category": "AC01",
+    "summary": "在终端中固定服务器的SSL证书",
+    "description": "也称SSL Pinning。证书锁定是一种保护措施，通过在终端中固定服务器的SSL证书，使得攻击者无法通过中间人的方式获取和修改网络流量。",
+    "limitation": "证书锁定是一种较为初级的安全防御机制，旨在提升中间人门槛。但高明的攻击者会通过各种方法技巧将终端中固定的SSL证书替换成自定义证书以绕过此防御机制。",
+    "references": [
+      {
+        "title": "证书锁定SSL Pinning简介及用途",
+        "description": "",
+        "link": "https://zhuanlan.zhihu.com/p/58204817"
+      }
+    ],
+    "updated": "2024-01-11"
+  }
+}

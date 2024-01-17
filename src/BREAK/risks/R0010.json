@@ -1,0 +1,25 @@
+{
+  "R0010": {
+    "title": "团伙代充",
+    "definition": "绕过官方正常充值渠道提供低价充值服务",
+    "description": "通过促销，不合规，或非法手段获得低价充值资源，并对外提供充值服务。",
+    "complexity": "初级",
+    "influence": "影响游戏运营商正常经营和盈利",
+    "avoidances": [
+      "A0015",
+      "A0019",
+      "A0044"
+    ],
+    "references": [
+      {
+        "title": "新型犯罪“苹果代充” 全国首例涉案3000万",
+        "link": "https://zhuanlan.zhihu.com/p/76883001"
+      },
+      {
+        "title": "原神代充诈骗手段（围绕利益、贪、智商税）",
+        "link": "https://zhuanlan.zhihu.com/p/338192875?ivk_sa=1024320u"
+      }
+    ],
+    "updated": "2024-01-15"
+  }
+}

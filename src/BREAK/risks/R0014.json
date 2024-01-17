@@ -1,0 +1,20 @@
+{
+  "R0014": {
+    "title": "恶意占库存",
+    "definition": "在未完成购买或交易的情况下，耗尽商品或服务的库存。",
+    "description": "通过大量下单不付款等手段，将商家店铺全部商品打到无库存状态，达到商家无货可售。此外还有通过批量把商品加购物车或下单不支付等方式去探测商家的商品库存量，或者探测商品的实际购买价格，虽然不是以耗尽库存或资源为目标，但造成的危害相同或更高。",
+    "complexity": "初级",
+    "influence": "一般商业竞争中容易出现，当库存耗尽后，其他用户就无法再购买商品。",
+    "avoidances": [
+      "A0015",
+      "A0020"
+    ],
+    "references": [
+      {
+        "title": "OWASP Automated Threat: OAT021 Denial of Inventory",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-021_Denial_of_Inventory.html"
+      }
+    ],
+    "updated": "2024-01-15"
+  }
+}

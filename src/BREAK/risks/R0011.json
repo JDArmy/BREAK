@@ -1,0 +1,26 @@
+{
+  "R0011": {
+    "title": "游戏账号倒卖",
+    "definition": "倒卖被盗账号或包含特殊资源的游戏账号。",
+    "description": "倒卖被盗游戏账号或包含特殊资源游戏账号，用以虚拟资产变卖套现。",
+    "complexity": "初级",
+    "influence": "影响游戏运营商正常经营和盈利",
+    "avoidances": [
+      "A0007",
+      "A0015",
+      "A0017",
+      "A0020"
+    ],
+    "references": [
+      {
+        "title": "全国政协委员许进呼吁：倒卖网络游戏账号应严处！",
+        "link": "https://baijiahao.baidu.com/s?id=1726557011324745346&wfr=spider&for=pc"
+      },
+      {
+        "title": "通过王者荣耀骗取微信账号倒卖，四人获刑",
+        "link": "https://baijiahao.baidu.com/s?id=1732715080496688809&wfr=spider&for=pc"
+      }
+    ],
+    "updated": "2024-01-15"
+  }
+}

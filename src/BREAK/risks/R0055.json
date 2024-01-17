@@ -1,0 +1,49 @@
+{
+  "R0055": {
+    "title": "低价购风险",
+    "definition": "由于业务实现逻辑错误，价格、优惠券等配置错误导致的低价购和零元购",
+    "description": "该攻击可能是偶然发现，但更有可能是攻击者通过自动化批量加购、修改提交金额或数量、领劵配劵等方法进行的大规模试探发现。攻击者在发现漏洞后，为了达到法不责众以及隐藏自身的目的，通常会一边利用漏洞，一边公开漏洞，使得平台或商家蒙受更大的损失。",
+    "complexity": "初级",
+    "influence": "给平台和商家带来巨额损失",
+    "avoidances": [
+      "A0015",
+      "A0016"
+    ],
+    "references": [
+      {
+        "title": "“0元购”再现，卖家悲喜交加，亚马逊隐忧重重",
+        "link": "https://baijiahao.baidu.com/s?id=1738288741897824434&wfr=spider&for=pc"
+      }
+    ],
+    "updated": "2024-01-15"
+  },
+  "R0055-001": {
+    "title": "卡券限制突破",
+    "definition": "限制性卡券被脱离限制非预期领用。",
+    "description": "分两种场景：一种是非公开的卡券、特定条件可领取或面向特定群体发放的卡券被脱离限制领取；另一种场景是限定使用场景或条件的卡券被脱离限制条件使用。限制包括：特定时间、特定人群、特定商品配券、特定价格配券、卡券叠加限制等等",
+    "complexity": "初级",
+    "influence": "套取平台营销活动利益，给平台带来经济损失。",
+    "avoidances": [
+      "A0001",
+      "A0002",
+      "A0003",
+      "A0004",
+      "A0010",
+      "A0013",
+      "A0015",
+      "A0016",
+      "A0018"
+    ],
+    "references": [
+      {
+        "title": "OWASP Automated Threat: OAT002 Token Cracking",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-002_Token_Cracking.html"
+      },
+      {
+        "title": "2019年PDD优惠券漏洞事件",
+        "link": "https://baike.baidu.com/item/%E6%8B%BC%E5%A4%9A%E5%A4%9A%E6%BC%8F%E6%B4%9E%E9%97%A8"
+      }
+    ],
+    "updated": "2024-01-15"
+  }
+}

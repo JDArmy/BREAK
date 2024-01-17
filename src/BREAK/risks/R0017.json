@@ -1,0 +1,68 @@
+{
+  "R0017": {
+    "title": "虚假交易",
+    "definition": "通过无效交易获得利益。",
+    "description": "商家完成大量虚假交易，目的是获得平台商家优惠/返利，或低成本刷商品好评数量等。手段一般为“拍A发B“，直接发空包等不合理的交易。",
+    "complexity": "中级",
+    "influence": "套取平台商家优惠/返利。通过好评率实现恶性竞争。",
+    "avoidances": [
+      "A0005",
+      "A0015",
+      "A0016",
+      "A0020"
+    ],
+    "references": [
+      {
+        "title": "虚假交易-百度百科",
+        "link": "https://baike.baidu.com/item/%E8%99%9A%E5%81%87%E4%BA%A4%E6%98%93/10013126?fr=aladdin"
+      },
+      {
+        "title": "虚假交易违反哪些法律法规",
+        "link": "https://www.66law.cn/laws/1560611.aspx"
+      }
+    ],
+    "updated": "2024-01-15"
+  },
+  "R0017-001": {
+    "title": "刷单",
+    "definition": "商家通过批量低成本成单或虚假成单，已提高交易量或提升评价。",
+    "description": "商家完成大量低成本交易，目的是获得平台商家优惠/返利，或低成本刷商品好评数量等。手段一般为雇佣买家，或恶意上架低值商品批量完成交易等。",
+    "complexity": "中级",
+    "influence": "影响平台公平性竞争原则，部分情况下套取平台商家优惠/返利。",
+    "avoidances": [
+      "A0015",
+      "A0016",
+      "A0020"
+    ],
+    "references": [
+      {
+        "title": "刷单-百度百科",
+        "link": "https://baike.baidu.com/item/%E5%88%B7%E5%8D%95/8171368?fr=aladdin"
+      }
+    ],
+    "updated": "2024-01-15"
+  },
+  "R0017-002": {
+    "title": "骗取补贴",
+    "definition": "",
+    "description": "",
+    "complexity": "中级",
+    "influence": "",
+    "avoidances": [
+      "A0015",
+      "A0016",
+      "A0020"
+    ],
+    "references": [
+      {
+        "title": "网约车司机“空跑”刷单骗补贴， 法院：诈骗罪，判刑！",
+        "link": "http://www.hebeicourt.gov.cn/article/detail/2022/07/id/6803049.shtml"
+      },
+      {
+        "title": "找“刷手”拉“内鬼”骗取电商平台补贴，这个9人团伙栽了",
+        "link": "http://news.hexun.com/2022-09-14/206761601.html"
+      }
+    ],
+    "updated": "2024-01-15"
+  }
+}

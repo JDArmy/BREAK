@@ -1,0 +1,28 @@
+{
+  "R0040": {
+    "title": "撞卡攻击",
+    "definition": "通过批量登陆认证，验证被盗支付卡凭证有效性。",
+    "description": "通过商家完整的登陆凭证验证流程，完成被盗支付卡或账号的有效性。由于被盗账号价值未知，撞卡攻击可进行支付卡价值评估。相关登陆凭证数据来源可能是第三方应用泄露，第三方支付渠道泄露，或者从黑市购买。",
+    "complexity": "中级",
+    "influence": "支付卡或账号凭证信息被盗取。",
+    "avoidances": [
+      "A0001",
+      "A0002",
+      "A0004",
+      "A0005",
+      "A0007",
+      "A0010",
+      "A0012",
+      "A0013",
+      "A0015",
+      "A0016"
+    ],
+    "references": [
+      {
+        "title": "OWASP Automated Threat: OAT001 Carding",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-001_Carding.html"
+      }
+    ],
+    "updated": "2024-01-15"
+  }
+}

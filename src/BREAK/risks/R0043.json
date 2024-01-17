@@ -1,0 +1,50 @@
+{
+  "R0043": {
+    "title": "黑卡支付",
+    "definition": "利用被盗支付卡或其他用户账号中的身份，完成交易。",
+    "description": "利用被盗支付卡或其他用户账号中的身份，完成交易。一般情况下是用来隐蔽攻击者身份，或者降低批量刷单被风控拦截的风险。其中登陆凭证来源自撞卡攻击（R0040），支付信息来源自支付卡破解（R0041）。",
+    "complexity": "高级",
+    "influence": "支付身份被冒用。",
+    "avoidances": [
+      "A0007",
+      "A0010",
+      "A0012",
+      "A0015",
+      "A0016",
+      "A0018",
+      "A0019",
+      "A0021",
+      "A0023"
+    ],
+    "references": [
+      {
+        "title": "用黑卡充值的账号会怎么样",
+        "link": "https://baijiahao.baidu.com/s?id=1728703601989302772&wfr=spider&for=pc"
+      }
+    ],
+    "updated": "2024-01-15"
+  },
+  "R0043-001": {
+    "title": "盗卡盗刷",
+    "definition": "使用被盗支付卡或其他用户账号中的资金，购买商品或套现。",
+    "description": "通过被盗的支付卡或账号的登陆凭证和支付信息，盗用或盗取其中的资金。除常规的购买商品/购买服务/提现外，还可以通过退款等方式获利。其中登陆凭证来源自撞卡攻击（R0040），支付信息来源自支付卡破解（R0041）。",
+    "complexity": "高级",
+    "influence": "支付卡或账号中的资金被盗用或盗取。",
+    "avoidances": [
+      "A0007",
+      "A0010",
+      "A0012",
+      "A0015",
+      "A0016",
+      "A0021",
+      "A0023"
+    ],
+    "references": [
+      {
+        "title": "OWASP Automated Threat: OAT012 Cashing Out",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-012_Cashing_Out.html"
+      }
+    ],
+    "updated": "2024-01-15"
+  }
+}

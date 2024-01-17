@@ -1,0 +1,32 @@
+{
+  "R0037": {
+    "title": "第三方账号聚合",
+    "definition": "以第三方应用作为代理人，统一管理多个应用的账号密码。",
+    "description": "将来自多个应用程序帐户的凭据和信息编译到另一个系统中。 单个用户可以使用此聚合应用程序来合并来自多个应用程序的信息，或者合并单个应用程序的多个用户的信息。 譬如电商系统的搬家应用，票务系统的抢票应用等。",
+    "complexity": "中级",
+    "influence": "对用户来说，有导致用户敏感信息泄露风险；对系统来说，有导致平台数据流失以及系统请求压力增大风险",
+    "avoidances": [
+      "A0001",
+      "A0002",
+      "A0003",
+      "A0004",
+      "A0007",
+      "A0009",
+      "A0010",
+      "A0011",
+      "A0013",
+      "A0015",
+      "A0016",
+      "A0020",
+      "A0021",
+      "A0022"
+    ],
+    "references": [
+      {
+        "title": "OWASP Automated Threat: OAT020 Account Aggregation",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-020_Account_Aggregation.html"
+      }
+    ],
+    "updated": "2024-01-15"
+  }
+}
