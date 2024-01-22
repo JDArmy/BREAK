@@ -1,11 +1,8 @@
 {
   "menu": {
     "home": "首页",
-    "scenes": "风险场景",
-    "dimensions": "风险维度",
     "risks": "风险列表",
-    "avoidances": "规避手段",
-    "attackTools": "攻击工具"
+    "avoidances": "规避手段"
   },
   "risk": "风险",
   "riskKey": "风险ID",
@@ -34,5 +31,10 @@
   "events": "相关事件",
   "attackTools": "攻击工具",
   "limitation": "局限性",
-  "evadeAttack": "防御攻击"
+  "evadeAttack": "防御攻击",
+  "threatActors": "威胁行为者",
+  "buildAttackTools": "作为工具建设者",
+  "risks": "风险列表",
+  "useAttackTools": "作为工具使用者",
+  "risksMaker": "作为风险制造者"
 }

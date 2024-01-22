@@ -46,6 +46,18 @@
     }
     return "";
   };
+
+  let totalAvoidancesRowSize = 24;
+  let getAvoidanceRowSize = (avoidanceCategoryLength: number, avoidancesLength: number) => {
+    let step = Math.round((avoidanceCategoryLength / avoidancesLength) * 24);
+
+    totalAvoidancesRowSize = totalAvoidancesRowSize <= 0 ? 24 : totalAvoidancesRowSize;
+
+    step = step > totalAvoidancesRowSize ? totalAvoidancesRowSize : step;
+    totalAvoidancesRowSize -= step;
+
+    return step;
+  };
 </script>
 
 <template lang="">
@@ -54,10 +66,9 @@
     <el-col
       v-for="(avoidanceCategory, avoidanceCategoryKey) in BREAK.avoidanceCategories"
       :md="
-        Math.round(
-          (Object.keys(avoidances[avoidanceCategoryKey]).length /
-            Object.keys(BREAK.avoidances).length) *
-            24
+        getAvoidanceRowSize(
+          Object.keys(avoidances[avoidanceCategoryKey]).length,
+          Object.keys(BREAK.avoidances).length
         )
       "
       :key="avoidanceCategoryKey"
@@ -91,7 +102,7 @@
       </div>
     </div>
     <el-table
-      :sheight="getWindowHeight() - 50"
+      :sheight="getWindowHeight() - 200"
       :data="avoidances[avoidanceCategoryKey]"
       :row-class-name="tableRowClassName"
       stripe

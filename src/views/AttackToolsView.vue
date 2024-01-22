@@ -17,21 +17,19 @@
   const getWindowHeight = () => window.innerHeight;
 
   // 风险详情页
-  const drawer = ref(false);
+  const riskDrawer = ref(false);
   const riskKey = ref("");
-  const showRiskDetail = (riskKey1: string, drawer1: boolean) => {
-    drawer.value = drawer1;
-    riskKey.value = riskKey1;
-  };
-  const riskDetailClose = () => {
-    drawer.value = false;
-    riskKey.value = "";
-  };
 </script>
 <template lang="">
-  <h3>{{ $t("menu.attackTools") }}</h3>
-  <el-table :height="getWindowHeight() - 200" :data="attackTools" border stripe>
-    <el-table-column prop="atKey" label="ID" :width="100" />
+  <h3>{{ $t("attackTools") }}</h3>
+  <el-table
+    :height="getWindowHeight() - 200"
+    :scrollbar-always-on="true"
+    :data="attackTools"
+    border
+    stripe
+  >
+    <el-table-column prop="atKey" label="ID" :width="120" />
     <el-table-column prop="title" :label="$t('title')" :width="150" />
     <el-table-column prop="description" :label="$t('description')" />
     <el-table-column :label="$t('references')" :width="300">
@@ -52,7 +50,7 @@
           size="small"
           v-for="rKey in scope.row.risks"
           :key="rKey"
-          @click="showRiskDetail(rKey, true)"
+          @click="(riskKey = rKey) && (riskDrawer = true)"
           class="relational-link"
           round
           >{{ rKey + ":&nbsp;" + $t(`BREAK.risks.${rKey}.title`) }}</el-button
@@ -83,7 +81,11 @@
     :aKey="avoidanceKey"
   />
   <!-- 风险详情页 -->
-  <risk-detail v-on:drawer-close="riskDetailClose" :drawer="drawer" :rKey="riskKey" />
+  <risk-detail
+    v-on:drawer-close="(riskDrawer = false) && (riskKey = '')"
+    :drawer="riskDrawer"
+    :rKey="riskKey"
+  />
 </template>
 <style scoped>
   ul {

@@ -36,6 +36,11 @@ const router = createRouter({
       component: () => import("@/views/AttackToolsView.vue"),
     },
     {
+      path: "/threat-actors",
+      name: "threatActors",
+      component: () => import("@/views/ThreatActorsView.vue"),
+    },
+    {
       path: "/ability-providers",
       name: "abilityProviders",
       component: () => import("@/views/AbilityProvidersView.vue"),

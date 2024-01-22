@@ -1,0 +1,28 @@
+{
+  "TA0020": {
+    "title": "菜商",
+    "description": "指非法获取并大量倒卖公民个人信息的犯罪分子",
+    "references": [
+      {
+        "title": "“菜商”“卡农”“车手”……听到这些“黑话”要小心了！",
+        "link": "https://baijiahao.baidu.com/s?id=1761843787271520370&wfr=spider&for=pc"
+      }
+    ],
+    "buildAttackTools": [
+      "AT0012",
+      "AT0039",
+      "AT0040"
+    ],
+    "useAttackTools": [
+      "AT0005",
+      "AT0010",
+      "AT0023",
+      "AT0042"
+    ],
+    "makeRisks": [
+      "R0090",
+      "R0098"
+    ],
+    "updated": "2024-01-17"
+  }
+}

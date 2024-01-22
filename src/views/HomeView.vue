@@ -2,7 +2,7 @@
   import BREAK from "@/BREAK";
 
   import RiskDetail from "@/components/RiskDetail.vue";
-  import { ref, watch } from "vue";
+  import { ref, watch, computed } from "vue";
   import { useRouter, useRoute } from "vue-router";
 
   import "element-plus/es/components/row/style/css";
@@ -34,38 +34,34 @@
     };
   }
   //url params init
-  const bsKeySelected = ref(route.params.bsKey as string);
-  const sceneBREAK = ref({
-    riskDimensions: BREAK.riskDimensions,
-    riskScenes: BREAK.riskScenes,
-  } as SceneBREAK);
-  if (bsKeySelected.value && bsKeySelected.value.match(/BS[0-9]{2}/)) {
-    sceneBREAK.value = {
-      riskDimensions: BREAK.businessScenes[bsKeySelected.value].riskDimensions,
-      riskScenes: BREAK.businessScenes[bsKeySelected.value].riskScenes,
-    };
-  }
-  //bsKeySelected event
-  watch(bsKeySelected, () => {
-    if (!bsKeySelected.value.match(/BS[0-9]{2}/)) {
-      bsKeySelected.value = "";
-      sceneBREAK.value = {
-        riskDimensions: BREAK.riskDimensions,
-        riskScenes: BREAK.riskScenes,
-      };
-      router.push({
-        name: "home",
-      });
-    } else {
-      sceneBREAK.value = {
+  const bsKeySelected = ref((route.params.bsKey as string) || "BS00");
+  watch(
+    () => route.params.bsKey,
+    () => {
+      bsKeySelected.value = (route.params.bsKey as string) || "BS00";
+    }
+  );
+  const sceneBREAK = computed(
+    () =>
+      ({
         riskDimensions: BREAK.businessScenes[bsKeySelected.value].riskDimensions,
         riskScenes: BREAK.businessScenes[bsKeySelected.value].riskScenes,
-      };
+      }) as SceneBREAK
+  );
+
+  //bsKeySelected event
+  watch(bsKeySelected, () => {
+    if (bsKeySelected.value.match(/BS[0-9]{2}/) && bsKeySelected.value !== "BS00") {
       router.push({
         name: "businessScene",
         params: {
           bsKey: bsKeySelected.value,
         },
+      });
+    } else {
+      bsKeySelected.value = "BS00";
+      router.push({
+        name: "home",
       });
     }
     // 重置风险维度和风险场景的 col 总大小，以便重新计算
@@ -98,10 +94,10 @@
 
   /////////////////////////////////////////////////////////////////////
   //start: 查看风险细节
-  let drawer = ref(false);
+  let riskDrawer = ref(false);
   let riskKey = ref("");
   let showRiskDetail = (riskKey1: string, drawer1: boolean) => {
-    drawer.value = drawer1;
+    riskDrawer.value = drawer1;
     riskKey.value = riskKey1;
   };
 
@@ -118,7 +114,7 @@
   );
 
   let riskDetailClose = () => {
-    drawer.value = false;
+    riskDrawer.value = false;
     router.push({
       name: "home",
     });
@@ -160,7 +156,6 @@
 
     <el-col id="scene-selector">
       <el-select v-model="bsKeySelected" :placeholder="$t('allScenes')">
-        <el-option key="" :label="$t('allScenes')" value=""></el-option>
         <el-option
           v-for="(bsVal, bsKey) in BREAK.businessScenes"
           :key="bsKey"
@@ -180,7 +175,7 @@
       :md="getDimensionRowSize(rdVal.riskScenes.length, Object.keys(sceneBREAK.riskScenes).length)"
     >
       <h3 class="risk-dimension-title" :title="rdKey.toString()">
-        {{ $t(`BREAK.riskDimensions.${rdKey}.title`) }}
+        {{ $t(`BREAK.businessScenes.${bsKeySelected}.riskDimensions.${rdKey}.title`) }}
       </h3>
 
       <el-row justify="center">
@@ -193,7 +188,8 @@
         >
           <h4 class="risk-scene-title" :title="rsKey">
             <!-- <a :href="'/risk-demensions/' + rdKey"> -->
-            {{ $t(`BREAK.riskScenes.${rsKey}.title`) }}
+            {{ $t(`BREAK.businessScenes.${bsKeySelected}.riskScenes.${rsKey}.title`) }}
+
             <!-- </a> -->
           </h4>
           <ul class="risk-list">
@@ -249,7 +245,7 @@
       </el-row>
     </el-col>
   </el-row>
-  <RiskDetail v-on:drawer-close="riskDetailClose" :drawer="drawer" :rKey="riskKey" />
+  <RiskDetail v-on:drawer-close="riskDetailClose" :drawer="riskDrawer" :rKey="riskKey" />
 </template>
 
 <style scoped>
