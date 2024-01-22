@@ -1,38 +1,37 @@
 <script lang="ts" setup>
   import { ref } from "vue";
   import BREAK from "@/BREAK";
+  // import "element-plus/es/components/table/style/css";
+  // import "element-plus/es/components/table-column/style/css";
+  import AvoidanceDetail from "@/components/AvoidanceDetail.vue";
   import RiskDetail from "@/components/RiskDetail.vue";
 
-  import "element-plus/es/components/table/style/css";
-  import "element-plus/es/components/table-column/style/css";
+  const avoidanceDrawer = ref(false);
+  const avoidanceKey = ref("");
 
   let risks = Object.keys(BREAK.risks).map((rKey) => ({
     ...BREAK.risks[rKey as keyof typeof BREAK.risks],
     rKey: rKey,
   }));
 
-  let drawer = ref(false);
+  let riskDrawer = ref(false);
   let riskKey = ref("");
-  let showRiskDetail = (riskKey1: string, drawer1: boolean) => {
-    drawer.value = drawer1;
-    riskKey.value = riskKey1;
-    // console.log(riskKey.value, drawer.value);
-  };
-
-  let riskDetailClose = () => {
-    drawer.value = false;
-    // console.log("close");
-  };
 
   let getWindowHeight = () => window.innerHeight;
 </script>
 
 <template lang="">
   <h3>{{ $t("menu.risks") }}</h3>
-  <el-table :height="getWindowHeight() - 200" :data="risks" stripe border>
+  <el-table
+    :height="getWindowHeight() - 200"
+    :scrollbar-always-on="true"
+    :data="risks"
+    stripe
+    border
+  >
     <el-table-column prop="rKey" width="120px" :label="$t('riskKey')">
       <template v-slot="scope">
-        <a @click="showRiskDetail(scope.row.rKey, true)" href="javascript:void(0);">{{
+        <a @click="(riskKey = scope.row.rKey) && (riskDrawer = true)" href="javascript:void(0);">{{
           scope.row.rKey
         }}</a>
       </template>
@@ -47,13 +46,50 @@
         {{ scope.row.rKey ? $t(`BREAK.risks.${scope.row.rKey}.definition`) : "" }}
       </template></el-table-column
     >
+    <el-table-column prop="description" :label="$t('riskDescription')"
+      ><template #default="scope">
+        {{ scope.row.rKey ? $t(`BREAK.risks.${scope.row.rKey}.description`) : "" }}
+      </template></el-table-column
+    >
+    <el-table-column prop="complexity" width="100px" :label="$t('riskComplexity')"
+      ><template #default="scope">
+        {{ scope.row.rKey ? $t(`BREAK.risks.${scope.row.rKey}.complexity`) : "" }}
+      </template></el-table-column
+    >
     <el-table-column prop="influence" :label="$t('riskInfluence')"
       ><template #default="scope">
         {{ scope.row.rKey ? $t(`BREAK.risks.${scope.row.rKey}.influence`) : "" }}
       </template></el-table-column
     >
+    <el-table-column :label="$t('avoidance')">
+      <template #default="scope">
+        <el-button
+          size="small"
+          v-for="aKey in scope.row.avoidances"
+          :key="aKey"
+          class="relational-link"
+          @click="
+            avoidanceKey = aKey;
+            avoidanceDrawer = true;
+          "
+          round
+          >{{ aKey + ":&nbsp;" + $t(`BREAK.avoidances.${aKey}.title`) }}</el-button
+        >
+      </template>
+    </el-table-column>
   </el-table>
-  <risk-detail v-on:drawer-close="riskDetailClose" :drawer="drawer" :rKey="riskKey" />
+  <!-- 手段详情页 -->
+  <AvoidanceDetail
+    v-on:drawer-close="avoidanceDrawer = false"
+    :drawer="avoidanceDrawer"
+    :aKey="avoidanceKey"
+  />
+  <!-- 风险详情页 -->
+  <risk-detail
+    v-on:drawer-close="(riskDrawer = false) && (riskKey = '')"
+    :drawer="riskDrawer"
+    :rKey="riskKey"
+  />
 </template>
 
 <style lang=""></style>
