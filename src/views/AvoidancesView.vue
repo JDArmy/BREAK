@@ -1,13 +1,11 @@
 <script lang="ts" setup>
   import BREAK from "@/BREAK";
-  import { ElIcon } from "element-plus";
   import { Link } from "@element-plus/icons-vue";
-
-  import "element-plus/es/components/table/style/css";
-  import "element-plus/es/components/table-column/style/css";
-  import { ElTable, ElTableColumn } from "element-plus";
-  import type { Avoidance, Avoidances } from "@/BREAK/avoidances";
+  import type { Avoidances } from "@/BREAK/avoidances";
   import { useRoute } from "vue-router";
+  import { ref, watch } from "vue";
+
+  const route = useRoute();
 
   let avoidanceCategories = Object.keys(BREAK.avoidanceCategories);
   let avoidances = Object();
@@ -27,8 +25,6 @@
     });
   });
 
-  let getWindowHeight = () => window.innerHeight;
-
   const filteredAvoidances = (avoidanceCategoryKey: string) => {
     let categoricalAvoidances: Avoidances = {};
     Object.keys(BREAK.avoidances).forEach((avoidanceKey) => {
@@ -37,14 +33,6 @@
       }
     });
     return categoricalAvoidances;
-  };
-
-  const route = useRoute();
-  const tableRowClassName = ({ row }: { row: Avoidance }) => {
-    if (route.hash.split("#")[1] === row.title) {
-      return "anchor-row";
-    }
-    return "";
   };
 
   let totalAvoidancesRowSize = 24;
@@ -57,6 +45,24 @@
     totalAvoidancesRowSize -= step;
 
     return step;
+  };
+
+  // 页内锚点
+  const getTableHeight = () => (route.hash.split("#")[1] ? "unset" : window.innerHeight - 150);
+  const tableHeight = ref(getTableHeight());
+
+  watch(
+    () => route.hash,
+    () => {
+      tableHeight.value = getTableHeight();
+    }
+  );
+
+  const tableRowClassName = ({ row }: { row: any }) => {
+    if (route.hash.split("#")[1] === row.aKey) {
+      return "anchor-row";
+    }
+    return "";
   };
 </script>
 
@@ -80,7 +86,7 @@
           :key="avoidanceKey"
           :title="avoidanceKey + ':' + avoidance.title"
           class="router-link"
-          :to="{ path: '/avoidances', hash: '#' + avoidance.title }"
+          :to="{ path: '/avoidances', hash: '#' + avoidanceKey }"
         >
           <el-button size="small" round class="ml-2">
             {{ avoidanceKey }}:{{ $t(`BREAK.avoidances.${avoidanceKey}.title`) }}
@@ -102,17 +108,21 @@
       </div>
     </div>
     <el-table
-      :sheight="getWindowHeight() - 200"
+      :height="tableHeight"
       :data="avoidances[avoidanceCategoryKey]"
       :row-class-name="tableRowClassName"
       stripe
       border
     >
-      <el-table-column prop="aKey" width="110px" :label="$t('ID')" />
+      <el-table-column prop="aKey" width="110px" :label="$t('ID')">
+        <template #default="scope">
+          <a class="avoidance-anchor" :id="scope.row.aKey"></a>
+          {{ scope.row.aKey }}
+        </template>
+      </el-table-column>
       <el-table-column width="150px" :label="$t('title')">
         <template #header>{{ $t("title") }}</template>
         <template #default="scope">
-          <a class="avoidance_anchor" :id="scope.row.title"></a>
           {{ scope.row.aKey ? $t(`BREAK.avoidances.${scope.row.aKey}.title`) : "" }}
         </template>
       </el-table-column>
@@ -171,19 +181,14 @@
     margin-top: 5px;
   }
 
-  .avoidance_anchor {
-    position: relative;
-    top: -30vh;
-  }
-
   .router-link {
     color: inherit;
     text-decoration: none;
   }
-</style>
-<style>
-  .anchor-row,
-  .anchor-row .el-table__cell {
-    background-color: var(--el-color-warning-light-7) !important;
+
+  .avoidance-anchor {
+    position: absolute;
+    top: -1vh;
+    left: 0px;
   }
 </style>

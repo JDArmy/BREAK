@@ -1,23 +1,22 @@
 <script setup lang="ts">
-import BREAK from "@/BREAK";
+  import BREAK from "@/BREAK";
 
-import "element-plus/es/components/drawer/style/css";
-import { ElDrawer,  ElIcon } from "element-plus";
-import { Link } from "@element-plus/icons-vue";
+  import "element-plus/es/components/drawer/style/css";
+  import { Link } from "@element-plus/icons-vue";
 
-defineProps<{
-  drawer: boolean;
-  aKey: string;
-}>();
-defineEmits(["drawerClose"]);
+  defineProps<{
+    drawer: boolean;
+    aKey: string;
+  }>();
+  defineEmits(["drawerClose"]);
 
-const getInnerDrawerWidth = () => {
-  return window.innerWidth > 600 ? 450 : "100%";
-};
+  const getInnerDrawerWidth = () => {
+    return window.innerWidth > 600 ? 450 : "100%";
+  };
 
-const getAvoidanceReferences = (aKey: string) => {
-  return BREAK.avoidances[aKey as keyof typeof BREAK.avoidances].references;
-};
+  const getAvoidanceReferences = (aKey: string) => {
+    return BREAK.avoidances[aKey as keyof typeof BREAK.avoidances].references;
+  };
 </script>
 
 <template>
@@ -52,21 +51,12 @@ const getAvoidanceReferences = (aKey: string) => {
     <div class="desc" v-if="getAvoidanceReferences(aKey).length > 0">
       <strong>{{ $t("references") }}:&nbsp;</strong>
       <ul>
-        <li
-          v-for="(reference, refIdx) in getAvoidanceReferences(aKey)"
-          :key="refIdx"
-        >
+        <li v-for="(reference, refIdx) in getAvoidanceReferences(aKey)" :key="refIdx">
           <a :href="reference.link" target="_blank">
             <el-icon><Link /></el-icon
-            >{{
-              $t(`BREAK.avoidances.${aKey}.references[${refIdx}].title`)
-            }} </a
+            >{{ $t(`BREAK.avoidances.${aKey}.references[${refIdx}].title`) }} </a
           >:
-          {{
-            $t(
-              `BREAK.avoidances.${aKey}.references[${refIdx}].description`
-            )
-          }}
+          {{ $t(`BREAK.avoidances.${aKey}.references[${refIdx}].description`) }}
         </li>
       </ul>
     </div>
@@ -74,13 +64,7 @@ const getAvoidanceReferences = (aKey: string) => {
 </template>
 
 <style scoped>
-.desc {
-  margin-bottom: 20px;
-}
-</style>
-
-<style>
-.el-drawer__header {
-  margin-bottom: 0px;
-}
+  .desc {
+    margin-bottom: 20px;
+  }
 </style>

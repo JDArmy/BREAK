@@ -3,3 +3,12 @@
 .relational-link {
   margin: 5px 0;
 }
+
+.anchor-row,
+.anchor-row .el-table__cell {
+  background-color: var(--el-color-warning-light-7) !important;
+}
+
+.el-drawer__header {
+  margin-bottom: 0px;
+}

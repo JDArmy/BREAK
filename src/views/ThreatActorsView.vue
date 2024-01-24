@@ -1,11 +1,12 @@
 <script lang="ts" setup>
   import { ref } from "vue";
   import BREAK from "@/BREAK";
-  import { ElIcon } from "element-plus";
   import { Link } from "@element-plus/icons-vue";
   import RiskDetail from "@/components/RiskDetail.vue";
   import AttackToolDetail from "@/components/AttackToolDetail.vue";
+  import { useRoute } from "vue-router";
 
+  const route = useRoute();
   // 攻击工具详情页
   const attackToolDrawer = ref(false);
   const attackToolKey = ref("");
@@ -19,19 +20,32 @@
     ...BREAK.threatActors[taKey as keyof typeof BREAK.threatActors],
   }));
 
-  let getWindowHeight = () => window.innerHeight;
+  //页内锚点
+  const getTableHeight = () => (route.hash.split("#")[1] ? "unset" : window.innerHeight - 200);
+  const tableRowClassName = ({ row }: { row: any }) => {
+    if (route.hash.split("#")[1] === row.taKey) {
+      return "anchor-row";
+    }
+    return "";
+  };
 </script>
 
 <template lang="">
   <h3>{{ $t("threatActors") }}</h3>
   <el-table
-    :height="getWindowHeight() - 200"
+    :height="getTableHeight()"
     :scrollbar-always-on="true"
     :data="threatActors"
+    :row-class-name="tableRowClassName"
     border
     stripe
   >
-    <el-table-column prop="taKey" width="120" :label="$t('ID')" />
+    <el-table-column prop="taKey" width="120" :label="$t('ID')">
+      <template #default="scope">
+        <a :id="scope.row.taKey" class="threat-actor-anchor"></a>
+        {{ scope.row.taKey }}
+      </template>
+    </el-table-column>
     <el-table-column prop="title" width="150" :label="$t('title')" />
     <el-table-column prop="description" :label="$t('description')" />
     <el-table-column :label="$t('buildAttackTools')">
@@ -122,5 +136,11 @@
   }
   .provider-abilities a:hover {
     color: brown;
+  }
+
+  .threat-actor-anchor {
+    position: absolute;
+    top: -1vh;
+    left: 0px;
   }
 </style>

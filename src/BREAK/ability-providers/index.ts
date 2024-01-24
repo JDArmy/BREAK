@@ -6,7 +6,7 @@ interface AbilityProvider {
   update: string;
   abilities: {
     [key: string]: {
-      url: string;
+      link: string;
     };
   };
 }

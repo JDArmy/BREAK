@@ -744,6 +744,42 @@
       },
     });
   };
+
+  const gotoItemDetailView = () => {
+    let routeName = "";
+    switch (nodeType.value) {
+      case RelationType.risk: {
+        routeName = "riskDetail";
+        router.push({
+          name: routeName,
+          params: {
+            rKey: nodeId.value,
+          },
+        });
+        return;
+      }
+      case RelationType.avoidance: {
+        routeName = "avoidances";
+        break;
+      }
+      case RelationType.attackTool: {
+        routeName = "attackTools";
+        break;
+      }
+      case RelationType.threatActor: {
+        routeName = "threatActors";
+        break;
+      }
+      case RelationType.abilityProvider: {
+        routeName = "abilityProviders";
+        break;
+      }
+    }
+    router.push({
+      name: routeName,
+      hash: "#" + nodeId.value,
+    });
+  };
   /**
    * 筛选
    */
@@ -870,8 +906,10 @@
       <span class="el-dropdown-link"></span>
       <template #dropdown>
         <el-dropdown-menu>
+          <el-dropdown-item @click="gotoItemDetailView()">查看详情</el-dropdown-item>
           <el-dropdown-item
             @click="clickContextMenu(RelationType.risk)"
+            divided
             :disabled="disableContextMenu.risk"
             >风险列表</el-dropdown-item
           >

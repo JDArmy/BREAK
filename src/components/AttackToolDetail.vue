@@ -1,33 +1,32 @@
 <script setup lang="ts">
-import { ref } from "vue";
-import BREAK from "@/BREAK";
-import AvoidanceDetail from "@/components/AvoidanceDetail.vue";
+  import { ref } from "vue";
+  import BREAK from "@/BREAK";
+  import AvoidanceDetail from "@/components/AvoidanceDetail.vue";
 
-import "element-plus/es/components/drawer/style/css";
-import { ElDrawer, ElButton, ElIcon } from "element-plus";
-import { Link } from "@element-plus/icons-vue";
+  import "element-plus/es/components/drawer/style/css";
+  import { ElDrawer, ElButton, ElIcon } from "element-plus";
+  import { Link } from "@element-plus/icons-vue";
 
-defineProps<{
-  drawer: boolean;
-  atKey: string;
-}>();
-defineEmits(["drawerClose"]);
+  defineProps<{
+    drawer: boolean;
+    atKey: string;
+  }>();
+  defineEmits(["drawerClose"]);
 
-const avoidanceDrawer = ref(false);
-const avoidanceKey = ref("");
+  const avoidanceDrawer = ref(false);
+  const avoidanceKey = ref("");
 
+  const getInnerDrawerWidth = () => {
+    return window.innerWidth > 600 ? 450 : "100%";
+  };
 
-const getInnerDrawerWidth = () => {
-  return window.innerWidth > 600 ? 450 : "100%";
-};
+  const getAttackToolReferences = (atKey: string) => {
+    return BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].references;
+  };
 
-const getAttackToolReferences = (atKey: string) => {
-  return BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].references;
-};
-
-const getAttackToolAvoidances = (atKey: string) => {
-  return BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].avoidances;
-};
+  const getAttackToolAvoidances = (atKey: string) => {
+    return BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].avoidances;
+  };
 </script>
 
 <template>
@@ -62,23 +61,16 @@ const getAttackToolAvoidances = (atKey: string) => {
           avoidanceDrawer = true;
         "
         round
-        >{{
-          aKey + ":&nbsp;" + $t(`BREAK.avoidances.${aKey}.title`)
-        }}</el-button
+        >{{ aKey + ":&nbsp;" + $t(`BREAK.avoidances.${aKey}.title`) }}</el-button
       >
     </div>
     <div class="desc" v-if="getAttackToolReferences(atKey).length > 0">
       <strong>{{ $t("references") }}:&nbsp;</strong>
       <ul>
-        <li
-          v-for="(reference, refIdx) in getAttackToolReferences(atKey)"
-          :key="refIdx"
-        >
+        <li v-for="(reference, refIdx) in getAttackToolReferences(atKey)" :key="refIdx">
           <a :href="reference.link" target="_blank">
             <el-icon><Link /></el-icon
-            >{{
-              $t(`BREAK.attackTools.${atKey}.references[${refIdx}].title`)
-            }}
+            >{{ $t(`BREAK.attackTools.${atKey}.references[${refIdx}].title`) }}
           </a>
         </li>
       </ul>
@@ -93,13 +85,7 @@ const getAttackToolAvoidances = (atKey: string) => {
 </template>
 
 <style scoped>
-.desc {
-  margin-bottom: 20px;
-}
-</style>
-
-<style>
-.el-drawer__header {
-  margin-bottom: 0px;
-}
+  .desc {
+    margin-bottom: 20px;
+  }
 </style>

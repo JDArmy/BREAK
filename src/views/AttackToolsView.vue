@@ -3,8 +3,10 @@
   import BREAK from "@/BREAK";
   import AvoidanceDetail from "@/components/AvoidanceDetail.vue";
   import RiskDetail from "@/components/RiskDetail.vue";
-  import { ElIcon } from "element-plus";
   import { Link } from "@element-plus/icons-vue";
+  import { useRoute } from "vue-router";
+
+  const route = useRoute();
 
   const avoidanceDrawer = ref(false);
   const avoidanceKey = ref("");
@@ -14,22 +16,35 @@
     ...BREAK.attackTools[atKey as keyof typeof BREAK.attackTools],
   }));
 
-  const getWindowHeight = () => window.innerHeight;
-
   // 风险详情页
   const riskDrawer = ref(false);
   const riskKey = ref("");
+
+  //页内锚点
+  const getTableHeight = () => (route.hash.split("#")[1] ? "unset" : window.innerHeight - 200);
+  const tableRowClassName = ({ row }: { row: any }) => {
+    if (route.hash.split("#")[1] === row.atKey) {
+      return "anchor-row";
+    }
+    return "";
+  };
 </script>
 <template lang="">
   <h3>{{ $t("attackTools") }}</h3>
   <el-table
-    :height="getWindowHeight() - 200"
+    :height="getTableHeight()"
     :scrollbar-always-on="true"
     :data="attackTools"
+    :row-class-name="tableRowClassName"
     border
     stripe
   >
-    <el-table-column prop="atKey" label="ID" :width="120" />
+    <el-table-column prop="atKey" label="ID" :width="120">
+      <template #default="scope">
+        <a :id="scope.row.atKey" class="attack-tool-anchor"></a>
+        {{ scope.row.atKey }}
+      </template>
+    </el-table-column>
     <el-table-column prop="title" :label="$t('title')" :width="150" />
     <el-table-column prop="description" :label="$t('description')" />
     <el-table-column :label="$t('references')" :width="300">
@@ -91,5 +106,11 @@
   ul {
     padding: 0px;
     margin-left: 5px;
+  }
+
+  .attack-tool-anchor {
+    position: absolute;
+    top: -1vh;
+    left: 0px;
   }
 </style>
