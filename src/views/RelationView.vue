@@ -20,7 +20,6 @@
     threatActor = "threat-actor",
     abilityProvider = "ability-provider",
     all = "all",
-    openAsRoot = "open-as-root",
   }
 
   enum RelationTypeColor {
@@ -36,19 +35,24 @@
 
   const graphRef$ = ref<RelationGraph>();
 
-  const graphOptions: RGOptions = {
+  const graphOptions: RGOptions = reactive({
     allowShowMiniToolBar: true, //是否显示工具栏
     disableZoom: false, //是否禁用缩放
     disableDragCanvas: false, //是否禁用拖拽画布
     defaultExpandHolderPosition: "right", //展开按钮默认方向
     defaultShowLineLabel: true, //默认显示连线标签
-  };
+  });
 
   graphOptions.layout = {
+    layoutLabel: "中心布局",
     layoutName: "center",
     distance_coefficient: 2,
+    maxLayoutTimes: 20,
+    force_line_elastic: 0.3, // 连线牵引力系数
+    force_node_repulsion: 3, // 节点排斥力系数
   } as RGLayoutOptions;
 
+  // Reference: https://relation-graph.github.io/#/docs/node
   interface Node {
     id: string;
     type: string;
@@ -56,6 +60,7 @@
     color: string;
   }
 
+  // Reference: https://relation-graph.github.io/#/docs/link
   interface Line {
     from: string;
     text: string;
@@ -544,7 +549,7 @@
   const setRGJsonData = () => {
     uniqLines();
     graphRef$?.value?.setJsonData(jsonData);
-    graphRef$?.value?.setOptions(graphOptions);
+    // graphRef$?.value?.setOptions(graphOptions);
     // 重新获取所有连线类型，服务于筛选功能
     getLineType();
   };
@@ -635,13 +640,16 @@
     display: "none",
   });
   const dropdown1 = ref<DropdownInstance>();
-  const disableContextMenuOfRisks = ref(false);
-  const disableContextMenuOfAvoidances = ref(false);
-  const disableContextMenuOfAttackTools = ref(false);
-  const disableContextMenuOfThreatActors = ref(false);
-  const disableContextMenuOfAbilityProviders = ref(false);
-  const disableContextMenuOfAll = ref(false);
-  const disableContextMenuOfOpenAsRoot = ref(false);
+  let disableContextMenu = reactive({
+    risk: false,
+    avoidance: false,
+    attackTool: false,
+    threatActor: false,
+    abilityProvider: false,
+    all: false,
+    openAsRoot: false,
+  });
+
   // 当前右键的节点类型和id
   const nodeType = ref("" as RelationType);
   const nodeId = ref("" as string);
@@ -652,47 +660,71 @@
     dropdownStyle.display = "block";
     dropdown1.value?.handleOpen();
 
-    if (node.id == relKey.value) {
-      disableContextMenuOfOpenAsRoot.value = true;
-    } else {
-      disableContextMenuOfOpenAsRoot.value = false;
+    switch (node.type) {
+      case RelationType.risk: {
+        disableContextMenu = {
+          risk: true,
+          avoidance: false,
+          attackTool: false,
+          threatActor: false,
+          abilityProvider: true,
+          all: false,
+          openAsRoot: false,
+        };
+        break;
+      }
+      case RelationType.avoidance: {
+        disableContextMenu = {
+          risk: false,
+          avoidance: true,
+          attackTool: true,
+          threatActor: true,
+          abilityProvider: false,
+          all: false,
+          openAsRoot: false,
+        };
+        break;
+      }
+      case RelationType.attackTool: {
+        disableContextMenu = {
+          risk: false,
+          avoidance: false,
+          attackTool: true,
+          threatActor: false,
+          abilityProvider: true,
+          all: false,
+          openAsRoot: false,
+        };
+        break;
+      }
+      case RelationType.threatActor: {
+        disableContextMenu = {
+          risk: false,
+          avoidance: true,
+          attackTool: false,
+          threatActor: true,
+          abilityProvider: true,
+          all: false,
+          openAsRoot: false,
+        };
+        break;
+      }
+      case RelationType.abilityProvider: {
+        disableContextMenu = {
+          risk: true,
+          avoidance: false,
+          attackTool: true,
+          threatActor: true,
+          abilityProvider: true,
+          all: true,
+          openAsRoot: false,
+        };
+        break;
+      }
     }
 
-    if (node.type === RelationType.risk) {
-      disableContextMenuOfRisks.value = true;
-      disableContextMenuOfAvoidances.value = false;
-      disableContextMenuOfAttackTools.value = false;
-      disableContextMenuOfThreatActors.value = false;
-      disableContextMenuOfAbilityProviders.value = true;
-      disableContextMenuOfAll.value = false;
-    } else if (node.type === RelationType.avoidance) {
-      disableContextMenuOfRisks.value = false;
-      disableContextMenuOfAvoidances.value = true;
-      disableContextMenuOfAttackTools.value = true;
-      disableContextMenuOfThreatActors.value = true;
-      disableContextMenuOfAbilityProviders.value = false;
-      disableContextMenuOfAll.value = false;
-    } else if (node.type === RelationType.attackTool) {
-      disableContextMenuOfRisks.value = false;
-      disableContextMenuOfAvoidances.value = false;
-      disableContextMenuOfAttackTools.value = true;
-      disableContextMenuOfThreatActors.value = false;
-      disableContextMenuOfAbilityProviders.value = true;
-      disableContextMenuOfAll.value = false;
-    } else if (node.type === RelationType.threatActor) {
-      disableContextMenuOfRisks.value = false;
-      disableContextMenuOfAvoidances.value = true;
-      disableContextMenuOfAttackTools.value = false;
-      disableContextMenuOfThreatActors.value = true;
-      disableContextMenuOfAbilityProviders.value = true;
-      disableContextMenuOfAll.value = false;
-    } else if (node.type === RelationType.abilityProvider) {
-      disableContextMenuOfRisks.value = true;
-      disableContextMenuOfAvoidances.value = false;
-      disableContextMenuOfAttackTools.value = true;
-      disableContextMenuOfThreatActors.value = true;
-      disableContextMenuOfAbilityProviders.value = true;
-      disableContextMenuOfAll.value = true;
+    if (node.id == relKey.value) {
+      disableContextMenu.openAsRoot = true;
     }
 
     nodeType.value = node.type as RelationType;
@@ -735,7 +767,6 @@
   const filterLineType = ref(totalLineType.value);
 
   const doFilter = () => {
-    console.log("doFilter", totalLineType, filterLineType);
     const _all_nodes = graphRef$.value?.getInstance().getNodes();
     const _all_links = graphRef$.value?.getInstance().getLinks();
     _all_nodes?.forEach((thisNode) => {
@@ -781,31 +812,39 @@
         <div class="filter-pane" id="node-filter-pane">
           <h2>节点筛选：</h2>
           <el-checkbox-group v-model="filterRelationType" @change="doFilter">
-            <el-checkbox class="filter-checkbox" :key="RelationType.risk" :label="RelationType.risk"
+            <el-checkbox
+              class="filter-checkbox"
+              :key="RelationType.risk"
+              :label="RelationType.risk"
+              :name="RelationType.risk"
               >风险</el-checkbox
             >
             <el-checkbox
               class="filter-checkbox"
               :key="RelationType.avoidance"
               :label="RelationType.avoidance"
+              :name="RelationType.avoidance"
               >规避手段</el-checkbox
             >
             <el-checkbox
               class="filter-checkbox"
               :key="RelationType.attackTool"
               :label="RelationType.attackTool"
+              :name="RelationType.attackTool"
               >攻击工具</el-checkbox
             >
             <el-checkbox
               class="filter-checkbox"
               :key="RelationType.threatActor"
               :label="RelationType.threatActor"
+              :name="RelationType.threatActor"
               >威胁行为者</el-checkbox
             >
             <el-checkbox
               class="filter-checkbox"
               :key="RelationType.abilityProvider"
               :label="RelationType.abilityProvider"
+              :name="RelationType.abilityProvider"
               >能力提供者</el-checkbox
             >
           </el-checkbox-group>
@@ -820,6 +859,7 @@
               v-for="oneType in totalLineType"
               :key="oneType"
               :label="oneType"
+              :name="oneType"
               >{{ oneType }}</el-checkbox
             >
           </el-checkbox-group>
@@ -832,37 +872,37 @@
         <el-dropdown-menu>
           <el-dropdown-item
             @click="clickContextMenu(RelationType.risk)"
-            :disabled="disableContextMenuOfRisks"
+            :disabled="disableContextMenu.risk"
             >风险列表</el-dropdown-item
           >
           <el-dropdown-item
             @click="clickContextMenu(RelationType.avoidance)"
-            :disabled="disableContextMenuOfAvoidances"
+            :disabled="disableContextMenu.avoidance"
             >规避手段</el-dropdown-item
           >
           <el-dropdown-item
             @click="clickContextMenu(RelationType.attackTool)"
-            :disabled="disableContextMenuOfAttackTools"
+            :disabled="disableContextMenu.attackTool"
             >攻击工具</el-dropdown-item
           >
           <el-dropdown-item
             @click="clickContextMenu(RelationType.threatActor)"
-            :disabled="disableContextMenuOfThreatActors"
+            :disabled="disableContextMenu.threatActor"
             >威胁行为者</el-dropdown-item
           >
           <el-dropdown-item
             @click="clickContextMenu(RelationType.abilityProvider)"
-            :disabled="disableContextMenuOfAbilityProviders"
+            :disabled="disableContextMenu.abilityProvider"
             >能力提供者</el-dropdown-item
           >
           <el-dropdown-item
             @click="clickContextMenu(RelationType.all)"
-            :disabled="disableContextMenuOfAll"
-            >全部关系</el-dropdown-item
+            :disabled="disableContextMenu.all"
+            >拉取全部关系</el-dropdown-item
           >
           <el-dropdown-item
             @click="gotoNewRelationView()"
-            :disabled="disableContextMenuOfOpenAsRoot"
+            :disabled="disableContextMenu.openAsRoot"
             divided
             >作为根节点打开</el-dropdown-item
           >
