@@ -45,6 +45,11 @@ const router = createRouter({
       name: "abilityProviders",
       component: () => import("@/views/AbilityProvidersView.vue"),
     },
+    {
+      path: "/relation/:type/:key",
+      name: "relation",
+      component: () => import("@/views/RelationView.vue"),
+    },
   ],
   scrollBehavior(to) {
     if (to.hash) {

@@ -27,7 +27,7 @@
 
       <el-footer>
         <div class="footer">
-          ©2023 JD.Army
+          ©2024 JD.Army
           <span class="github">
             <a href="https://github.com/JDArmy/BREAK" target="_blank">
               <icon-github />
