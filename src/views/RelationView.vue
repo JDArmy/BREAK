@@ -872,7 +872,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
   .filter-pane {
     position: absolute;
     z-index: 700;
