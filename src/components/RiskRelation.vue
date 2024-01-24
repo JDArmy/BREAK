@@ -127,8 +127,4 @@
   </div>
 </template>
 
-<style>
-  #relation-graph-pane .c-node-text {
-    font-size: xx-small;
-  }
-</style>
+<style scoped></style>

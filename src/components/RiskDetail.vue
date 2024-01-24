@@ -5,7 +5,6 @@
   import AttackToolDetail from "@/components/AttackToolDetail.vue";
 
   import "element-plus/es/components/drawer/style/css";
-  import { ElDrawer, ElButton, ElIcon } from "element-plus";
   import { Link } from "@element-plus/icons-vue";
 
   import RiskRelation from "@/components/RiskRelation.vue";
@@ -141,11 +140,5 @@
 <style scoped>
   .desc {
     margin-bottom: 20px;
-  }
-</style>
-
-<style>
-  .el-drawer__header {
-    margin-bottom: 0px;
   }
 </style>

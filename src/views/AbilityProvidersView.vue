@@ -1,21 +1,37 @@
 <script lang="ts" setup>
   import BREAK from "@/BREAK";
-  import { ElIcon } from "element-plus";
   import { Link } from "@element-plus/icons-vue";
+  import { useRoute } from "vue-router";
+
+  const route = useRoute();
 
   let providers = Object.keys(BREAK.abilityProviders).map((apKey) => ({
     apKey: apKey,
     ...BREAK.abilityProviders[apKey as keyof typeof BREAK.abilityProviders],
   }));
 
-  let getWindowHeight = () => window.innerHeight;
+  //页内锚点
+  const getTableHeight = () => (route.hash.split("#")[1] ? "unset" : window.innerHeight - 200);
+  const tableRowClassName = ({ row }: { row: any }) => {
+    if (route.hash.split("#")[1] === row.apKey) {
+      return "anchor-row";
+    }
+    return "";
+  };
 </script>
 
 <template lang="">
   <h3>{{ $t("abilityProviders") }}</h3>
-  <el-table :height="getWindowHeight() - 200" :data="providers" border stripe>
+  <el-table
+    :height="getTableHeight()"
+    :row-class-name="tableRowClassName"
+    :data="providers"
+    border
+    stripe
+  >
     <el-table-column prop="logo" width="150" :label="$t('logo')">
       <template #default="scope">
+        <a :id="scope.row.apKey" class="ability-provider-anchor"></a>
         <div class="aLogo">
           <img :src="scope.row.logoBase64" />
         </div>
@@ -32,7 +48,7 @@
     <el-table-column prop="abilities" :label="$t('supportAbilities')">
       <template #default="scope">
         <span class="provider-abilities" v-for="(ability, aKey) in scope.row.abilities" :key="aKey">
-          <a :href="ability.url" target="_blank"
+          <a :href="ability.link" target="_blank"
             ><el-icon><Link /></el-icon>{{ $t(`BREAK.avoidances.${aKey}.title`) }}</a
           >
         </span>
@@ -75,5 +91,11 @@
   }
   .provider-abilities a:hover {
     color: brown;
+  }
+
+  .ability-provider-anchor {
+    position: absolute;
+    top: -1vh;
+    left: 0px;
   }
 </style>
