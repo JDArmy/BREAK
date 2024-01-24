@@ -8,6 +8,8 @@
   import { ElDrawer, ElButton, ElIcon } from "element-plus";
   import { Link } from "@element-plus/icons-vue";
 
+  import RiskRelation from "@/components/RiskRelation.vue";
+
   defineProps<{
     drawer: boolean;
     rKey: string;
@@ -110,6 +112,14 @@
         round
         >{{ atKey + ":&nbsp;" + $t(`BREAK.attackTools.${atKey}.title`) }}</el-button
       >
+    </div>
+    <!-- 关系图 -->
+    <div class="desc">
+      <strong>{{ $t("riskRelations") }}</strong
+      >&nbsp;&nbsp;<router-link :to="{ name: 'relation', params: { type: 'risk', key: rKey } }">{{
+        $t("more")
+      }}</router-link>
+      <risk-relation :rKey="rKey" />
     </div>
   </el-drawer>
   <!-- 手段详情页 -->
