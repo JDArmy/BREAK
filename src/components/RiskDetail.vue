@@ -82,6 +82,7 @@
       <el-button
         v-for="aKey in risks[rKey as keyof typeof risks].avoidances"
         :key="aKey"
+        size="small"
         class="relational-link"
         @click="(avoidanceKey = aKey) && (avoidanceDrawer = true)"
         round
@@ -107,6 +108,7 @@
       <el-button
         v-for="atKey in getriskDescriptionTools(rKey)"
         :key="atKey"
+        size="small"
         class="relational-link"
         @click="(attackToolKey = atKey) && (attackToolDrawer = true)"
         round
@@ -115,10 +117,9 @@
     </div>
     <!-- 关系图 -->
     <div class="desc">
-      <strong>{{ $t("riskRelations") }}</strong
-      >&nbsp;&nbsp;<router-link :to="{ name: 'relation', params: { type: 'risk', key: rKey } }">{{
-        $t("more")
-      }}</router-link>
+      <strong>{{ $t("riskRelations") }}</strong>
+      &nbsp;&nbsp;
+      <el-text size="small" type="info">{{ $t("more") }}</el-text>
       <risk-relation :rKey="rKey" />
     </div>
   </el-drawer>

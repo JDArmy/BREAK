@@ -43,6 +43,7 @@ export default defineConfig({
           // "BREAK-Risks": ["/src/BREAK/risks"],
           // "BREAK-Avoidances": ["/src/BREAK/avoidances"],
           BREAK: ["/src/BREAK"],
+          "relation-graph": ["relation-graph"],
         },
       },
     },

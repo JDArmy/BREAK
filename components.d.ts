@@ -21,6 +21,7 @@ declare module 'vue' {
     ElSelect: typeof import('element-plus/es')['ElSelect']
     ElTable: typeof import('element-plus/es')['ElTable']
     ElTableColumn: typeof import('element-plus/es')['ElTableColumn']
+    ElText: typeof import('element-plus/es')['ElText']
     GithubPane: typeof import('./src/components/GithubPane.vue')['default']
     IconFork: typeof import('./src/components/icons/iconFork.vue')['default']
     IconGithub: typeof import('./src/components/icons/iconGithub.vue')['default']
