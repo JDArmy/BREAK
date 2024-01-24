@@ -640,15 +640,14 @@
     display: "none",
   });
   const dropdown1 = ref<DropdownInstance>();
-  let disableContextMenu = reactive({
-    risk: false,
-    avoidance: false,
-    attackTool: false,
-    threatActor: false,
-    abilityProvider: false,
-    all: false,
-    openAsRoot: false,
-  });
+
+  const disableContextMenuRisk = ref(false);
+  const disableContextMenuAvoidance = ref(false);
+  const disableContextMenuAttackTool = ref(false);
+  const disableContextMenuThreatActor = ref(false);
+  const disableContextMenuAbilityProvider = ref(false);
+  const disableContextMenuAll = ref(false);
+  const disableContextMenuOpenAsRoot = ref(false);
 
   // 当前右键的节点类型和id
   const nodeType = ref("" as RelationType);
@@ -662,69 +661,59 @@
 
     switch (node.type) {
       case RelationType.risk: {
-        disableContextMenu = {
-          risk: true,
-          avoidance: false,
-          attackTool: false,
-          threatActor: false,
-          abilityProvider: true,
-          all: false,
-          openAsRoot: false,
-        };
+        disableContextMenuRisk.value = true;
+        disableContextMenuAvoidance.value = false;
+        disableContextMenuAttackTool.value = false;
+        disableContextMenuThreatActor.value = false;
+        disableContextMenuAbilityProvider.value = true;
+        disableContextMenuAll.value = false;
+        disableContextMenuOpenAsRoot.value = false;
         break;
       }
       case RelationType.avoidance: {
-        disableContextMenu = {
-          risk: false,
-          avoidance: true,
-          attackTool: true,
-          threatActor: true,
-          abilityProvider: false,
-          all: false,
-          openAsRoot: false,
-        };
+        disableContextMenuRisk.value = false;
+        disableContextMenuAvoidance.value = true;
+        disableContextMenuAttackTool.value = true;
+        disableContextMenuThreatActor.value = true;
+        disableContextMenuAbilityProvider.value = false;
+        disableContextMenuAll.value = false;
+        disableContextMenuOpenAsRoot.value = false;
         break;
       }
       case RelationType.attackTool: {
-        disableContextMenu = {
-          risk: false,
-          avoidance: false,
-          attackTool: true,
-          threatActor: false,
-          abilityProvider: true,
-          all: false,
-          openAsRoot: false,
-        };
+        disableContextMenuRisk.value = false;
+        disableContextMenuAvoidance.value = false;
+        disableContextMenuAttackTool.value = true;
+        disableContextMenuThreatActor.value = false;
+        disableContextMenuAbilityProvider.value = true;
+        disableContextMenuAll.value = false;
+        disableContextMenuOpenAsRoot.value = false;
         break;
       }
       case RelationType.threatActor: {
-        disableContextMenu = {
-          risk: false,
-          avoidance: true,
-          attackTool: false,
-          threatActor: true,
-          abilityProvider: true,
-          all: false,
-          openAsRoot: false,
-        };
+        disableContextMenuRisk.value = false;
+        disableContextMenuAvoidance.value = true;
+        disableContextMenuAttackTool.value = false;
+        disableContextMenuThreatActor.value = true;
+        disableContextMenuAbilityProvider.value = true;
+        disableContextMenuAll.value = false;
+        disableContextMenuOpenAsRoot.value = false;
         break;
       }
       case RelationType.abilityProvider: {
-        disableContextMenu = {
-          risk: true,
-          avoidance: false,
-          attackTool: true,
-          threatActor: true,
-          abilityProvider: true,
-          all: true,
-          openAsRoot: false,
-        };
+        disableContextMenuRisk.value = true;
+        disableContextMenuAvoidance.value = false;
+        disableContextMenuAttackTool.value = true;
+        disableContextMenuThreatActor.value = true;
+        disableContextMenuAbilityProvider.value = true;
+        disableContextMenuAll.value = true;
+        disableContextMenuOpenAsRoot.value = false;
         break;
       }
     }
 
     if (node.id == relKey.value) {
-      disableContextMenu.openAsRoot = true;
+      disableContextMenuOpenAsRoot.value = true;
     }
 
     nodeType.value = node.type as RelationType;
@@ -910,37 +899,37 @@
           <el-dropdown-item
             @click="clickContextMenu(RelationType.risk)"
             divided
-            :disabled="disableContextMenu.risk"
+            :disabled="disableContextMenuRisk"
             >风险列表</el-dropdown-item
           >
           <el-dropdown-item
             @click="clickContextMenu(RelationType.avoidance)"
-            :disabled="disableContextMenu.avoidance"
+            :disabled="disableContextMenuAvoidance"
             >规避手段</el-dropdown-item
           >
           <el-dropdown-item
             @click="clickContextMenu(RelationType.attackTool)"
-            :disabled="disableContextMenu.attackTool"
+            :disabled="disableContextMenuAttackTool"
             >攻击工具</el-dropdown-item
           >
           <el-dropdown-item
             @click="clickContextMenu(RelationType.threatActor)"
-            :disabled="disableContextMenu.threatActor"
+            :disabled="disableContextMenuThreatActor"
             >威胁行为者</el-dropdown-item
           >
           <el-dropdown-item
             @click="clickContextMenu(RelationType.abilityProvider)"
-            :disabled="disableContextMenu.abilityProvider"
+            :disabled="disableContextMenuAbilityProvider"
             >能力提供者</el-dropdown-item
           >
           <el-dropdown-item
             @click="clickContextMenu(RelationType.all)"
-            :disabled="disableContextMenu.all"
+            :disabled="disableContextMenuAll"
             >拉取全部关系</el-dropdown-item
           >
           <el-dropdown-item
             @click="gotoNewRelationView()"
-            :disabled="disableContextMenu.openAsRoot"
+            :disabled="disableContextMenuOpenAsRoot"
             divided
             >作为根节点打开</el-dropdown-item
           >
