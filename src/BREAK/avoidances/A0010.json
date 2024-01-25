@@ -33,7 +33,7 @@
     "updated": "2024-01-11"
   },
   "A0010-003": {
-    "title": "手机ROOT/越狱检测",
+    "title": "ROOT/越狱检测",
     "category": "AC02",
     "summary": "对APP是否运行在被Root或越狱破解的设备上进行识别",
     "description": "通过Root或越狱后的特征来进行判断，譬如：可以查看发布的系统版本，是test-keys（测试版），还是release-keys（发布版）；检查是否存在Superuser.apk；检测在常用目录下是否存在su；使用which命令查看是否存在su；执行su，看能否获取到root权限；是否存在busybox；访问/data目录，查看读写权限等",

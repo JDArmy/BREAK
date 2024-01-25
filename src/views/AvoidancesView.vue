@@ -84,7 +84,7 @@ const tableRowClassName = ({ row }: { row: any }) => {
         <router-link
           v-for="(avoidance, avoidanceKey) in filteredAvoidances(avoidanceCategoryKey)"
           :key="avoidanceKey"
-          :title="avoidanceKey + ':' + avoidance.title"
+          :title="avoidance.summary"
           class="router-link"
           :to="{ path: '/avoidances', hash: '#' + avoidanceKey }"
         >
