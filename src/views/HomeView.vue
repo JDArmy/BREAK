@@ -1,150 +1,150 @@
 <script setup lang="ts">
-  import BREAK from "@/BREAK";
+import BREAK from "@/BREAK";
 
-  import RiskDetail from "@/components/RiskDetail.vue";
-  import { ref, watch, computed } from "vue";
-  import { useRouter, useRoute } from "vue-router";
+import RiskDetail from "@/components/RiskDetail.vue";
+import { ref, watch, computed } from "vue";
+import { useRouter, useRoute } from "vue-router";
 
-  import "element-plus/es/components/row/style/css";
-  import "element-plus/es/components/col/style/css";
-  import { ElRow, ElCol } from "element-plus";
+import "element-plus/es/components/row/style/css";
+import "element-plus/es/components/col/style/css";
+import { ElRow, ElCol } from "element-plus";
 
-  const router = useRouter();
-  const route = useRoute();
+const router = useRouter();
+const route = useRoute();
 
-  // console.log(
-  //   Object.keys(BREAK.avoidances).map((rKey) => {
-  //     console.log(rKey + ":" + BREAK.avoidances[rKey as keyof typeof BREAK.avoidances].title);
-  //   })
-  // );
+// console.log(
+//   Object.keys(BREAK.avoidances).map((rKey) => {
+//     console.log(rKey + ":" + BREAK.avoidances[rKey as keyof typeof BREAK.avoidances].title);
+//   })
+// );
 
-  //分商业场景查看风险
-  interface SceneBREAK {
-    riskDimensions: {
-      [key: string]: {
-        title: string;
-        riskScenes: string[];
-      };
+//分商业场景查看风险
+interface SceneBREAK {
+  riskDimensions: {
+    [key: string]: {
+      title: string;
+      riskScenes: string[];
     };
-    riskScenes: {
-      [key: string]: {
-        title: string;
-        risks: string[];
-      };
+  };
+  riskScenes: {
+    [key: string]: {
+      title: string;
+      risks: string[];
     };
+  };
+}
+//url params init
+const bsKeySelected = ref((route.params.bsKey as string) || "BS00");
+watch(
+  () => route.params.bsKey,
+  () => {
+    bsKeySelected.value = (route.params.bsKey as string) || "BS00";
   }
-  //url params init
-  const bsKeySelected = ref((route.params.bsKey as string) || "BS00");
-  watch(
-    () => route.params.bsKey,
-    () => {
-      bsKeySelected.value = (route.params.bsKey as string) || "BS00";
-    }
-  );
-  const sceneBREAK = computed(
-    () =>
-      ({
-        riskDimensions: BREAK.businessScenes[bsKeySelected.value].riskDimensions,
-        riskScenes: BREAK.businessScenes[bsKeySelected.value].riskScenes,
-      }) as SceneBREAK
-  );
+);
+const sceneBREAK = computed(
+  () =>
+    ({
+      riskDimensions: BREAK.businessScenes[bsKeySelected.value].riskDimensions,
+      riskScenes: BREAK.businessScenes[bsKeySelected.value].riskScenes,
+    }) as SceneBREAK
+);
 
-  //bsKeySelected event
-  watch(bsKeySelected, () => {
-    if (bsKeySelected.value.match(/BS[0-9]{2}/) && bsKeySelected.value !== "BS00") {
-      router.push({
-        name: "businessScene",
-        params: {
-          bsKey: bsKeySelected.value,
-        },
-      });
-    } else {
-      bsKeySelected.value = "BS00";
-      router.push({
-        name: "home",
-      });
-    }
-    // 重置风险维度和风险场景的 col 总大小，以便重新计算
-    totalRowSize = 24;
-    totalDimensionRowSize = 24;
-  });
-
-  let getRisks = (riskScenes: typeof sceneBREAK.value.riskScenes, rsKey: string) => {
-    return riskScenes[rsKey as keyof typeof sceneBREAK.value.riskScenes].risks;
-  };
-
-  /*-----子风险筛选-----*/
-  const getSubRisks = (prKey: string) => {
-    return Object.keys(BREAK.risks).filter(
-      (rKey) => rKey.includes("-") && rKey.split("-")[0] == prKey
-    );
-  };
-
-  // 以父风险为key，将子风险放到value的对象中
-  let subRisks = ref(Object());
-  Object.keys(BREAK.risks).forEach((prKey) => {
-    if (prKey.includes("-")) return;
-    let srKeys = getSubRisks(prKey);
-    if (srKeys.length > 0) {
-      subRisks.value[prKey] = srKeys;
-    }
-  });
-  // console.log(subRisks.value);
-  //subrisk end.
-
-  /////////////////////////////////////////////////////////////////////
-  //start: 查看风险细节
-  let riskDrawer = ref(false);
-  let riskKey = ref("");
-  let showRiskDetail = (riskKey1: string, drawer1: boolean) => {
-    riskDrawer.value = drawer1;
-    riskKey.value = riskKey1;
-  };
-
-  if (route.name == "riskDetail") {
-    showRiskDetail(route.params.rKey as string, true);
-  }
-  watch(
-    () => route.params.rKey,
-    async () => {
-      if (route.name == "riskDetail") {
-        showRiskDetail(route.params.rKey as string, true);
-      }
-    }
-  );
-
-  let riskDetailClose = () => {
-    riskDrawer.value = false;
+//bsKeySelected event
+watch(bsKeySelected, () => {
+  if (bsKeySelected.value.match(/BS[0-9]{2}/) && bsKeySelected.value !== "BS00") {
+    router.push({
+      name: "businessScene",
+      params: {
+        bsKey: bsKeySelected.value,
+      },
+    });
+  } else {
+    bsKeySelected.value = "BS00";
     router.push({
       name: "home",
     });
-  };
-  //end.
+  }
+  // 重置风险维度和风险场景的 col 总大小，以便重新计算
+  totalRowSize = 24;
+  totalDimensionRowSize = 24;
+});
 
-  // 通过动态计算每个风险维度中风险场景的数量，来分配每个风险维度的Col大小，主要解决24不能被整除问题
-  let totalRowSize = 24;
-  let getDimensionRowSize = (dimensionScenesLength: number, totalSceneslength: number) => {
-    let step = Math.round((dimensionScenesLength / totalSceneslength) * 24);
+let getRisks = (riskScenes: typeof sceneBREAK.value.riskScenes, rsKey: string) => {
+  return riskScenes[rsKey as keyof typeof sceneBREAK.value.riskScenes].risks;
+};
 
-    totalRowSize = totalRowSize <= 0 ? 24 : totalRowSize;
+/*-----子风险筛选-----*/
+const getSubRisks = (prKey: string) => {
+  return Object.keys(BREAK.risks).filter(
+    (rKey) => rKey.includes("-") && rKey.split("-")[0] == prKey
+  );
+};
 
-    step = step > totalRowSize ? totalRowSize : step;
-    totalRowSize -= step;
+// 以父风险为key，将子风险放到value的对象中
+let subRisks = ref(Object());
+Object.keys(BREAK.risks).forEach((prKey) => {
+  if (prKey.includes("-")) return;
+  let srKeys = getSubRisks(prKey);
+  if (srKeys.length > 0) {
+    subRisks.value[prKey] = srKeys;
+  }
+});
+// console.log(subRisks.value);
+//subrisk end.
 
-    return step;
-  };
-  // 通过通过动态计算每个风险维度中风险场景的数量，来分配每个风险场景的Col大小，主要解决24不能被整除问题
-  let totalDimensionRowSize = 24;
-  let getSceneRowSize = (sceneLength: number) => {
-    let step = Math.round(24 / sceneLength);
+/////////////////////////////////////////////////////////////////////
+//start: 查看风险细节
+let riskDrawer = ref(false);
+let riskKey = ref("");
+let showRiskDetail = (riskKey1: string, drawer1: boolean) => {
+  riskDrawer.value = drawer1;
+  riskKey.value = riskKey1;
+};
 
-    totalDimensionRowSize = totalDimensionRowSize <= 0 ? 24 : totalDimensionRowSize;
+if (route.name == "riskDetail") {
+  showRiskDetail(route.params.rKey as string, true);
+}
+watch(
+  () => route.params.rKey,
+  async () => {
+    if (route.name == "riskDetail") {
+      showRiskDetail(route.params.rKey as string, true);
+    }
+  }
+);
 
-    step = step > totalDimensionRowSize ? totalDimensionRowSize : step;
-    totalDimensionRowSize -= step;
+let riskDetailClose = () => {
+  riskDrawer.value = false;
+  router.push({
+    name: "home",
+  });
+};
+//end.
 
-    return step;
-  };
+// 通过动态计算每个风险维度中风险场景的数量，来分配每个风险维度的Col大小，主要解决24不能被整除问题
+let totalRowSize = 24;
+let getDimensionRowSize = (dimensionScenesLength: number, totalSceneslength: number) => {
+  let step = Math.round((dimensionScenesLength / totalSceneslength) * 24);
+
+  totalRowSize = totalRowSize <= 0 ? 24 : totalRowSize;
+
+  step = step > totalRowSize ? totalRowSize : step;
+  totalRowSize -= step;
+
+  return step;
+};
+// 通过通过动态计算每个风险维度中风险场景的数量，来分配每个风险场景的Col大小，主要解决24不能被整除问题
+let totalDimensionRowSize = 24;
+let getSceneRowSize = (sceneLength: number) => {
+  let step = Math.round(24 / sceneLength);
+
+  totalDimensionRowSize = totalDimensionRowSize <= 0 ? 24 : totalDimensionRowSize;
+
+  step = step > totalDimensionRowSize ? totalDimensionRowSize : step;
+  totalDimensionRowSize -= step;
+
+  return step;
+};
 </script>
 
 <template>
@@ -249,90 +249,90 @@
 </template>
 
 <style scoped>
-  .header {
-    margin-bottom: 10px;
-  }
+.header {
+  margin-bottom: 10px;
+}
 
-  #scene-selector {
-    position: absolute;
-    bottom: 10px;
-    width: 200px;
-  }
-  .risk-dimension {
-    border: 1px solid rgb(246, 245, 245);
-    box-sizing: border-box;
-    padding-bottom: 10px;
-  }
+#scene-selector {
+  position: absolute;
+  bottom: 10px;
+  width: 200px;
+}
+.risk-dimension {
+  border: 1px solid rgb(246, 245, 245);
+  box-sizing: border-box;
+  padding-bottom: 10px;
+}
 
-  .risk-scene {
-    padding: 3px;
-  }
+.risk-scene {
+  padding: 3px;
+}
 
-  .risk-scene-title,
-  .risk-dimension-title {
-    margin-bottom: 5px;
-    color: var(--el-text-color-primary);
-    text-align: center;
-  }
+.risk-scene-title,
+.risk-dimension-title {
+  margin-bottom: 5px;
+  color: var(--el-text-color-primary);
+  text-align: center;
+}
 
-  .risk-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+.risk-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-  .risk,
-  .sub-risk-link {
-    padding: 3px 0 3px 0;
-  }
+.risk,
+.sub-risk-link {
+  padding: 3px 0 3px 0;
+}
 
-  .s-risk {
-    padding: 0 0 3px 0;
-  }
+.s-risk {
+  padding: 0 0 3px 0;
+}
 
-  .risk,
-  .s-risk,
-  .sub-risk-link {
-    font-size: 1em;
-    text-align: center;
-    border: 1px solid lightgray;
-  }
+.risk,
+.s-risk,
+.sub-risk-link {
+  font-size: 1em;
+  text-align: center;
+  border: 1px solid lightgray;
+}
 
-  .risk:hover,
-  .s-risk:hover {
-    background-color: rgb(245, 246, 252);
-  }
+.risk:hover,
+.s-risk:hover {
+  background-color: rgb(245, 246, 252);
+}
 
-  .sub-risk-link:hover {
-    background-color: rgb(228, 230, 241);
-  }
+.sub-risk-link:hover {
+  background-color: rgb(228, 230, 241);
+}
 
-  .risk a,
-  .s-risk a,
-  .sub-risk a {
-    color: #294e76;
-    text-decoration: none;
-    display: inline-block;
-  }
+.risk a,
+.s-risk a,
+.sub-risk a {
+  color: #294e76;
+  text-decoration: none;
+  display: inline-block;
+}
 
-  .risk a:hover,
-  .s-risk a:hover,
-  .sub-risk a:hover {
-    color: #002b58;
-  }
+.risk a:hover,
+.s-risk a:hover,
+.sub-risk a:hover {
+  color: #002b58;
+}
 
-  .sidebar {
-    width: 5px;
-  }
+.sidebar {
+  width: 5px;
+}
 
-  .link {
-    display: block;
-    height: 100%;
-    width: 100%;
-    font-size: 90%;
-  }
+.link {
+  display: block;
+  height: 100%;
+  width: 100%;
+  font-size: 90%;
+}
 
-  .parent-risk-link {
-    font-weight: 500;
-  }
+.parent-risk-link {
+  font-weight: 500;
+}
 </style>

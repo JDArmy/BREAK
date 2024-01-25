@@ -1,33 +1,33 @@
 <script lang="ts" setup>
-  import { ref } from "vue";
-  import BREAK from "@/BREAK";
-  import { Link } from "@element-plus/icons-vue";
-  import RiskDetail from "@/components/RiskDetail.vue";
-  import AttackToolDetail from "@/components/AttackToolDetail.vue";
-  import { useRoute } from "vue-router";
+import { ref } from "vue";
+import BREAK from "@/BREAK";
+import { Link } from "@element-plus/icons-vue";
+import RiskDetail from "@/components/RiskDetail.vue";
+import AttackToolDetail from "@/components/AttackToolDetail.vue";
+import { useRoute } from "vue-router";
 
-  const route = useRoute();
-  // 攻击工具详情页
-  const attackToolDrawer = ref(false);
-  const attackToolKey = ref("");
-  // 风险详情页
-  const riskDrawer = ref(false);
-  const riskKey = ref("");
+const route = useRoute();
+// 攻击工具详情页
+const attackToolDrawer = ref(false);
+const attackToolKey = ref("");
+// 风险详情页
+const riskDrawer = ref(false);
+const riskKey = ref("");
 
-  //
-  let threatActors = Object.keys(BREAK.threatActors).map((taKey) => ({
-    taKey: taKey,
-    ...BREAK.threatActors[taKey as keyof typeof BREAK.threatActors],
-  }));
+//
+let threatActors = Object.keys(BREAK.threatActors).map((taKey) => ({
+  taKey: taKey,
+  ...BREAK.threatActors[taKey as keyof typeof BREAK.threatActors],
+}));
 
-  //页内锚点
-  const getTableHeight = () => (route.hash.split("#")[1] ? "unset" : window.innerHeight - 200);
-  const tableRowClassName = ({ row }: { row: any }) => {
-    if (route.hash.split("#")[1] === row.taKey) {
-      return "anchor-row";
-    }
-    return "";
-  };
+//页内锚点
+const getTableHeight = () => (route.hash.split("#")[1] ? "unset" : window.innerHeight - 200);
+const tableRowClassName = ({ row }: { row: any }) => {
+  if (route.hash.split("#")[1] === row.taKey) {
+    return "anchor-row";
+  }
+  return "";
+};
 </script>
 
 <template lang="">
@@ -115,32 +115,32 @@
 </template>
 
 <style scoped>
-  .aLogo {
-    text-align: center;
-  }
-  .aLogo img {
-    height: 30px;
-    max-width: 120px;
-  }
+.aLogo {
+  text-align: center;
+}
+.aLogo img {
+  height: 30px;
+  max-width: 120px;
+}
 
-  .commit-new-provider {
-    text-align: center;
-    color: grey;
-    margin: 50px;
-    font-size: 50%;
-  }
+.commit-new-provider {
+  text-align: center;
+  color: grey;
+  margin: 50px;
+  font-size: 50%;
+}
 
-  .provider-abilities {
-    padding: 10px;
-    display: inline-block;
-  }
-  .provider-abilities a:hover {
-    color: brown;
-  }
+.provider-abilities {
+  padding: 10px;
+  display: inline-block;
+}
+.provider-abilities a:hover {
+  color: brown;
+}
 
-  .threat-actor-anchor {
-    position: absolute;
-    top: -1vh;
-    left: 0px;
-  }
+.threat-actor-anchor {
+  position: absolute;
+  top: -1vh;
+  left: 0px;
+}
 </style>

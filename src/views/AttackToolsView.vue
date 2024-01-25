@@ -1,33 +1,33 @@
 <script lang="ts" setup>
-  import { ref } from "vue";
-  import BREAK from "@/BREAK";
-  import AvoidanceDetail from "@/components/AvoidanceDetail.vue";
-  import RiskDetail from "@/components/RiskDetail.vue";
-  import { Link } from "@element-plus/icons-vue";
-  import { useRoute } from "vue-router";
+import { ref } from "vue";
+import BREAK from "@/BREAK";
+import AvoidanceDetail from "@/components/AvoidanceDetail.vue";
+import RiskDetail from "@/components/RiskDetail.vue";
+import { Link } from "@element-plus/icons-vue";
+import { useRoute } from "vue-router";
 
-  const route = useRoute();
+const route = useRoute();
 
-  const avoidanceDrawer = ref(false);
-  const avoidanceKey = ref("");
+const avoidanceDrawer = ref(false);
+const avoidanceKey = ref("");
 
-  const attackTools = Object.keys(BREAK.attackTools).map((atKey) => ({
-    atKey: atKey,
-    ...BREAK.attackTools[atKey as keyof typeof BREAK.attackTools],
-  }));
+const attackTools = Object.keys(BREAK.attackTools).map((atKey) => ({
+  atKey: atKey,
+  ...BREAK.attackTools[atKey as keyof typeof BREAK.attackTools],
+}));
 
-  // 风险详情页
-  const riskDrawer = ref(false);
-  const riskKey = ref("");
+// 风险详情页
+const riskDrawer = ref(false);
+const riskKey = ref("");
 
-  //页内锚点
-  const getTableHeight = () => (route.hash.split("#")[1] ? "unset" : window.innerHeight - 200);
-  const tableRowClassName = ({ row }: { row: any }) => {
-    if (route.hash.split("#")[1] === row.atKey) {
-      return "anchor-row";
-    }
-    return "";
-  };
+//页内锚点
+const getTableHeight = () => (route.hash.split("#")[1] ? "unset" : window.innerHeight - 200);
+const tableRowClassName = ({ row }: { row: any }) => {
+  if (route.hash.split("#")[1] === row.atKey) {
+    return "anchor-row";
+  }
+  return "";
+};
 </script>
 <template lang="">
   <h3>{{ $t("attackTools") }}</h3>
@@ -103,14 +103,14 @@
   />
 </template>
 <style scoped>
-  ul {
-    padding: 0px;
-    margin-left: 5px;
-  }
+ul {
+  padding: 0px;
+  margin-left: 5px;
+}
 
-  .attack-tool-anchor {
-    position: absolute;
-    top: -1vh;
-    left: 0px;
-  }
+.attack-tool-anchor {
+  position: absolute;
+  top: -1vh;
+  left: 0px;
+}
 </style>

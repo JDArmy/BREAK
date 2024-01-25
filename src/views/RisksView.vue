@@ -1,23 +1,23 @@
 <script lang="ts" setup>
-  import { ref } from "vue";
-  import BREAK from "@/BREAK";
-  // import "element-plus/es/components/table/style/css";
-  // import "element-plus/es/components/table-column/style/css";
-  import AvoidanceDetail from "@/components/AvoidanceDetail.vue";
-  import RiskDetail from "@/components/RiskDetail.vue";
+import { ref } from "vue";
+import BREAK from "@/BREAK";
+// import "element-plus/es/components/table/style/css";
+// import "element-plus/es/components/table-column/style/css";
+import AvoidanceDetail from "@/components/AvoidanceDetail.vue";
+import RiskDetail from "@/components/RiskDetail.vue";
 
-  const avoidanceDrawer = ref(false);
-  const avoidanceKey = ref("");
+const avoidanceDrawer = ref(false);
+const avoidanceKey = ref("");
 
-  let risks = Object.keys(BREAK.risks).map((rKey) => ({
-    ...BREAK.risks[rKey as keyof typeof BREAK.risks],
-    rKey: rKey,
-  }));
+let risks = Object.keys(BREAK.risks).map((rKey) => ({
+  ...BREAK.risks[rKey as keyof typeof BREAK.risks],
+  rKey: rKey,
+}));
 
-  let riskDrawer = ref(false);
-  let riskKey = ref("");
+let riskDrawer = ref(false);
+let riskKey = ref("");
 
-  let getWindowHeight = () => window.innerHeight;
+let getWindowHeight = () => window.innerHeight;
 </script>
 
 <template lang="">

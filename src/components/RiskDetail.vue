@@ -1,46 +1,46 @@
 <script setup lang="ts">
-  import { ref } from "vue";
-  import BREAK from "@/BREAK";
-  import AvoidanceDetail from "@/components/AvoidanceDetail.vue";
-  import AttackToolDetail from "@/components/AttackToolDetail.vue";
+import { ref } from "vue";
+import BREAK from "@/BREAK";
+import AvoidanceDetail from "@/components/AvoidanceDetail.vue";
+import AttackToolDetail from "@/components/AttackToolDetail.vue";
 
-  import "element-plus/es/components/drawer/style/css";
-  import { Link } from "@element-plus/icons-vue";
+import "element-plus/es/components/drawer/style/css";
+import { Link } from "@element-plus/icons-vue";
 
-  import RiskRelation from "@/components/RiskRelation.vue";
+import RiskRelation from "@/components/RiskRelation.vue";
 
-  defineProps<{
-    drawer: boolean;
-    rKey: string;
-  }>();
-  defineEmits(["drawerClose"]);
+defineProps<{
+  drawer: boolean;
+  rKey: string;
+}>();
+defineEmits(["drawerClose"]);
 
-  const risks = BREAK.risks;
-  const avoidanceDrawer = ref(false);
-  const avoidanceKey = ref("");
-  const attackToolDrawer = ref(false);
-  const attackToolKey = ref("");
+const risks = BREAK.risks;
+const avoidanceDrawer = ref(false);
+const avoidanceKey = ref("");
+const attackToolDrawer = ref(false);
+const attackToolKey = ref("");
 
-  const getDrawerWidth = () => {
-    return window.innerWidth > 600 ? 600 : "100%";
-  };
+const getDrawerWidth = () => {
+  return window.innerWidth > 600 ? 600 : "100%";
+};
 
-  const getReferences = (rKey: string) => risks[rKey as keyof typeof risks].references;
+const getReferences = (rKey: string) => risks[rKey as keyof typeof risks].references;
 
-  //从attackTools中获取对应ID的risks
-  const getriskDescriptionTools = (rKey: string) => {
-    return Object.keys(BREAK.attackTools).filter((atKey) =>
-      BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].risks.includes(rKey as never)
-    );
-  };
+//从attackTools中获取对应ID的risks
+const getriskDescriptionTools = (rKey: string) => {
+  return Object.keys(BREAK.attackTools).filter((atKey) =>
+    BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].risks.includes(rKey as never)
+  );
+};
 
-  // const getAttackToolReferences = (atKey: string) => {
-  //   return BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].references;
-  // };
+// const getAttackToolReferences = (atKey: string) => {
+//   return BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].references;
+// };
 
-  // const getAttackToolAvoidances = (atKey: string) => {
-  //   return BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].avoidances;
-  // };
+// const getAttackToolAvoidances = (atKey: string) => {
+//   return BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].avoidances;
+// };
 </script>
 
 <template>
@@ -138,7 +138,7 @@
 </template>
 
 <style scoped>
-  .desc {
-    margin-bottom: 20px;
-  }
+.desc {
+  margin-bottom: 20px;
+}
 </style>
