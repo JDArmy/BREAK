@@ -1,22 +1,22 @@
 <script setup lang="ts">
-  import BREAK from "@/BREAK";
+import BREAK from "@/BREAK";
 
-  import "element-plus/es/components/drawer/style/css";
-  import { Link } from "@element-plus/icons-vue";
+import "element-plus/es/components/drawer/style/css";
+import { Link } from "@element-plus/icons-vue";
 
-  defineProps<{
-    drawer: boolean;
-    aKey: string;
-  }>();
-  defineEmits(["drawerClose"]);
+defineProps<{
+  drawer: boolean;
+  aKey: string;
+}>();
+defineEmits(["drawerClose"]);
 
-  const getInnerDrawerWidth = () => {
-    return window.innerWidth > 600 ? 450 : "100%";
-  };
+const getInnerDrawerWidth = () => {
+  return window.innerWidth > 600 ? 450 : "100%";
+};
 
-  const getAvoidanceReferences = (aKey: string) => {
-    return BREAK.avoidances[aKey as keyof typeof BREAK.avoidances].references;
-  };
+const getAvoidanceReferences = (aKey: string) => {
+  return BREAK.avoidances[aKey as keyof typeof BREAK.avoidances].references;
+};
 </script>
 
 <template>
@@ -64,7 +64,7 @@
 </template>
 
 <style scoped>
-  .desc {
-    margin-bottom: 20px;
-  }
+.desc {
+  margin-bottom: 20px;
+}
 </style>

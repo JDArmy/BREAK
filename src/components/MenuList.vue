@@ -1,46 +1,46 @@
 <script lang="ts" setup>
-  import "element-plus/es/components/menu/style/css";
-  import "element-plus/es/components/menu-item/style/css";
-  import "element-plus/es/components/dropdown/style/css";
-  import "element-plus/es/components/dropdown-menu/style/css";
-  import "element-plus/es/components/dropdown-item/style/css";
-  import "element-plus/theme-chalk/display.css";
+import "element-plus/es/components/menu/style/css";
+import "element-plus/es/components/menu-item/style/css";
+import "element-plus/es/components/dropdown/style/css";
+import "element-plus/es/components/dropdown-menu/style/css";
+import "element-plus/es/components/dropdown-item/style/css";
+import "element-plus/theme-chalk/display.css";
 
-  // import iconTranslate from "@/components/icons/iconTranslate.vue";
-  import GithubPane from "@/components/GithubPane.vue";
-  import { ArrowDown } from "@element-plus/icons-vue";
+// import iconTranslate from "@/components/icons/iconTranslate.vue";
+import GithubPane from "@/components/GithubPane.vue";
+import { ArrowDown } from "@element-plus/icons-vue";
 
-  import {
-    ElMenu,
-    ElIcon,
-    ElMenuItem,
-    ElDropdown,
-    ElDropdownMenu,
-    ElDropdownItem,
-  } from "element-plus";
+import {
+  ElMenu,
+  ElIcon,
+  ElMenuItem,
+  ElDropdown,
+  ElDropdownMenu,
+  ElDropdownItem,
+} from "element-plus";
 
-  // import { i18n, languages } from "@/i18n";
+// import { i18n, languages } from "@/i18n";
 
-  // const lang = localStorage.getItem("locale");
-  // if (
-  //   lang &&
-  //   lang !== i18n.global.locale &&
-  //   Object.keys(languages).includes(lang)
-  // ) {
-  //   i18n.global.locale = lang as keyof typeof languages;
-  // }
+// const lang = localStorage.getItem("locale");
+// if (
+//   lang &&
+//   lang !== i18n.global.locale &&
+//   Object.keys(languages).includes(lang)
+// ) {
+//   i18n.global.locale = lang as keyof typeof languages;
+// }
 
-  // const handleCommand = (command: keyof typeof languages) => {
-  //   i18n.global.locale = command;
-  //   localStorage.setItem("locale", command);
-  // };
+// const handleCommand = (command: keyof typeof languages) => {
+//   i18n.global.locale = command;
+//   localStorage.setItem("locale", command);
+// };
 
-  const getActiveIndex = (fullPath: string) => {
-    // console.log(fullPath);
-    // 匹配其他业务场景
-    if (fullPath.match(/^\/business-scene\//)) return "/";
-    return fullPath.split("#")[0];
-  };
+const getActiveIndex = (fullPath: string) => {
+  // console.log(fullPath);
+  // 匹配其他业务场景
+  if (fullPath.match(/^\/business-scene\//)) return "/";
+  return fullPath.split("#")[0];
+};
 </script>
 
 <template>
@@ -166,60 +166,60 @@
 </template>
 
 <style scoped>
-  .logo {
-    background: #b0afaf;
-    border-radius: 20px;
-    margin: 5px;
-    width: 40px;
-  }
-  .version {
-    color: var(--el-color-info);
-    font-size: 50%;
-  }
+.logo {
+  background: #b0afaf;
+  border-radius: 20px;
+  margin: 5px;
+  width: 40px;
+}
+.version {
+  color: var(--el-color-info);
+  font-size: 50%;
+}
 
-  .flex-grow {
-    flex-grow: 1;
-  }
+.flex-grow {
+  flex-grow: 1;
+}
 
-  .banner {
-    color: #fff;
-    padding-left: 10px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    text-align: center;
-  }
+.banner {
+  color: #fff;
+  padding-left: 10px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+}
 
-  .sm-banner {
-    text-align: center;
-    width: 100%;
-  }
+.sm-banner {
+  text-align: center;
+  width: 100%;
+}
 
-  .description {
-    color: #fff;
-    margin: 0 0 5px 0;
-    padding: 0 0 0 10px;
-  }
+.description {
+  color: #fff;
+  margin: 0 0 5px 0;
+  padding: 0 0 0 10px;
+}
 
-  .translate,
-  .github {
-    color: var(--el-menu-text-color);
-    margin: auto 10px;
-    cursor: pointer;
-  }
+.translate,
+.github {
+  color: var(--el-menu-text-color);
+  margin: auto 10px;
+  cursor: pointer;
+}
 
-  .outside-link {
-    line-height: var(--el-menu-item-height);
-    color: var(--el-menu-text-color);
-    padding: 0 var(--el-menu-base-level-padding);
-    cursor: pointer;
-  }
+.outside-link {
+  line-height: var(--el-menu-item-height);
+  color: var(--el-menu-text-color);
+  padding: 0 var(--el-menu-base-level-padding);
+  cursor: pointer;
+}
 
-  .outside-link-menu a {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    color: #000;
-    text-decoration: none;
-  }
+.outside-link-menu a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #000;
+  text-decoration: none;
+}
 </style>

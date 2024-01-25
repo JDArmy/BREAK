@@ -1,69 +1,69 @@
 <script lang="ts" setup>
-  import BREAK from "@/BREAK";
-  import { Link } from "@element-plus/icons-vue";
-  import type { Avoidances } from "@/BREAK/avoidances";
-  import { useRoute } from "vue-router";
-  import { ref, watch } from "vue";
+import BREAK from "@/BREAK";
+import { Link } from "@element-plus/icons-vue";
+import type { Avoidances } from "@/BREAK/avoidances";
+import { useRoute } from "vue-router";
+import { ref, watch } from "vue";
 
-  const route = useRoute();
+const route = useRoute();
 
-  let avoidanceCategories = Object.keys(BREAK.avoidanceCategories);
-  let avoidances = Object();
+let avoidanceCategories = Object.keys(BREAK.avoidanceCategories);
+let avoidances = Object();
 
-  avoidanceCategories.forEach((acKey) => {
-    avoidances[acKey] = Array();
-    Object.keys(BREAK.avoidances).forEach((aKey) => {
-      let avoidancesVal = BREAK.avoidances[aKey as keyof typeof BREAK.avoidances];
-      if (acKey !== avoidancesVal.category) {
-        return;
-      }
-      let avoidance = {
-        ...avoidancesVal,
-        aKey: aKey,
-      };
-      avoidances[acKey].push(avoidance);
-    });
+avoidanceCategories.forEach((acKey) => {
+  avoidances[acKey] = Array();
+  Object.keys(BREAK.avoidances).forEach((aKey) => {
+    let avoidancesVal = BREAK.avoidances[aKey as keyof typeof BREAK.avoidances];
+    if (acKey !== avoidancesVal.category) {
+      return;
+    }
+    let avoidance = {
+      ...avoidancesVal,
+      aKey: aKey,
+    };
+    avoidances[acKey].push(avoidance);
   });
+});
 
-  const filteredAvoidances = (avoidanceCategoryKey: string) => {
-    let categoricalAvoidances: Avoidances = {};
-    Object.keys(BREAK.avoidances).forEach((avoidanceKey) => {
-      if (BREAK.avoidances[avoidanceKey].category === avoidanceCategoryKey) {
-        categoricalAvoidances[avoidanceKey] = BREAK.avoidances[avoidanceKey];
-      }
-    });
-    return categoricalAvoidances;
-  };
-
-  let totalAvoidancesRowSize = 24;
-  let getAvoidanceRowSize = (avoidanceCategoryLength: number, avoidancesLength: number) => {
-    let step = Math.round((avoidanceCategoryLength / avoidancesLength) * 24);
-
-    totalAvoidancesRowSize = totalAvoidancesRowSize <= 0 ? 24 : totalAvoidancesRowSize;
-
-    step = step > totalAvoidancesRowSize ? totalAvoidancesRowSize : step;
-    totalAvoidancesRowSize -= step;
-
-    return step;
-  };
-
-  // 页内锚点
-  const getTableHeight = () => (route.hash.split("#")[1] ? "unset" : window.innerHeight - 150);
-  const tableHeight = ref(getTableHeight());
-
-  watch(
-    () => route.hash,
-    () => {
-      tableHeight.value = getTableHeight();
+const filteredAvoidances = (avoidanceCategoryKey: string) => {
+  let categoricalAvoidances: Avoidances = {};
+  Object.keys(BREAK.avoidances).forEach((avoidanceKey) => {
+    if (BREAK.avoidances[avoidanceKey].category === avoidanceCategoryKey) {
+      categoricalAvoidances[avoidanceKey] = BREAK.avoidances[avoidanceKey];
     }
-  );
+  });
+  return categoricalAvoidances;
+};
 
-  const tableRowClassName = ({ row }: { row: any }) => {
-    if (route.hash.split("#")[1] === row.aKey) {
-      return "anchor-row";
-    }
-    return "";
-  };
+let totalAvoidancesRowSize = 24;
+let getAvoidanceRowSize = (avoidanceCategoryLength: number, avoidancesLength: number) => {
+  let step = Math.round((avoidanceCategoryLength / avoidancesLength) * 24);
+
+  totalAvoidancesRowSize = totalAvoidancesRowSize <= 0 ? 24 : totalAvoidancesRowSize;
+
+  step = step > totalAvoidancesRowSize ? totalAvoidancesRowSize : step;
+  totalAvoidancesRowSize -= step;
+
+  return step;
+};
+
+// 页内锚点
+const getTableHeight = () => (route.hash.split("#")[1] ? "unset" : window.innerHeight - 150);
+const tableHeight = ref(getTableHeight());
+
+watch(
+  () => route.hash,
+  () => {
+    tableHeight.value = getTableHeight();
+  }
+);
+
+const tableRowClassName = ({ row }: { row: any }) => {
+  if (route.hash.split("#")[1] === row.aKey) {
+    return "anchor-row";
+  }
+  return "";
+};
 </script>
 
 <template lang="">
@@ -159,36 +159,36 @@
 </template>
 
 <style scoped>
-  .avoidance-category-title {
-    margin-top: 50px;
-    margin-bottom: 5px;
-    text-align: center;
-  }
-  .avoidance-category-description {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 50%;
-    color: gray;
-  }
+.avoidance-category-title {
+  margin-top: 50px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.avoidance-category-description {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 50%;
+  color: gray;
+}
 
-  .reference-list {
-    padding: 0;
-    margin-left: 5px;
-  }
+.reference-list {
+  padding: 0;
+  margin-left: 5px;
+}
 
-  .ml-2 {
-    margin-left: 5px;
-    margin-top: 5px;
-  }
+.ml-2 {
+  margin-left: 5px;
+  margin-top: 5px;
+}
 
-  .router-link {
-    color: inherit;
-    text-decoration: none;
-  }
+.router-link {
+  color: inherit;
+  text-decoration: none;
+}
 
-  .avoidance-anchor {
-    position: absolute;
-    top: -1vh;
-    left: 0px;
-  }
+.avoidance-anchor {
+  position: absolute;
+  top: -1vh;
+  left: 0px;
+}
 </style>

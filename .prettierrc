@@ -1,6 +1,8 @@
 {
   "$schema": "https://json.schemastore.org/prettierrc",
   "printWidth": 100,
+  "eslintIntegration": true,
+  "stylelintIntegration": true,
   "tabWidth": 2,
   "useTabs": false,
   "semi": true,
@@ -15,7 +17,7 @@
   "insertPragma": false,
   "proseWrap": "preserve",
   "htmlWhitespaceSensitivity": "css",
-  "vueIndentScriptAndStyle": true,
+  "vueIndentScriptAndStyle": false,
   "endOfLine": "auto",
   "embeddedLanguageFormatting": "auto"
 }

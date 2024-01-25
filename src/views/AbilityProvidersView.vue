@@ -1,23 +1,23 @@
 <script lang="ts" setup>
-  import BREAK from "@/BREAK";
-  import { Link } from "@element-plus/icons-vue";
-  import { useRoute } from "vue-router";
+import BREAK from "@/BREAK";
+import { Link } from "@element-plus/icons-vue";
+import { useRoute } from "vue-router";
 
-  const route = useRoute();
+const route = useRoute();
 
-  let providers = Object.keys(BREAK.abilityProviders).map((apKey) => ({
-    apKey: apKey,
-    ...BREAK.abilityProviders[apKey as keyof typeof BREAK.abilityProviders],
-  }));
+let providers = Object.keys(BREAK.abilityProviders).map((apKey) => ({
+  apKey: apKey,
+  ...BREAK.abilityProviders[apKey as keyof typeof BREAK.abilityProviders],
+}));
 
-  //页内锚点
-  const getTableHeight = () => (route.hash.split("#")[1] ? "unset" : window.innerHeight - 200);
-  const tableRowClassName = ({ row }: { row: any }) => {
-    if (route.hash.split("#")[1] === row.apKey) {
-      return "anchor-row";
-    }
-    return "";
-  };
+//页内锚点
+const getTableHeight = () => (route.hash.split("#")[1] ? "unset" : window.innerHeight - 200);
+const tableRowClassName = ({ row }: { row: any }) => {
+  if (route.hash.split("#")[1] === row.apKey) {
+    return "anchor-row";
+  }
+  return "";
+};
 </script>
 
 <template lang="">
@@ -70,32 +70,32 @@
 </template>
 
 <style scoped>
-  .aLogo {
-    text-align: center;
-  }
-  .aLogo img {
-    height: 30px;
-    max-width: 120px;
-  }
+.aLogo {
+  text-align: center;
+}
+.aLogo img {
+  height: 30px;
+  max-width: 120px;
+}
 
-  .commit-new-provider {
-    text-align: center;
-    color: grey;
-    margin: 50px;
-    font-size: 50%;
-  }
+.commit-new-provider {
+  text-align: center;
+  color: grey;
+  margin: 50px;
+  font-size: 50%;
+}
 
-  .provider-abilities {
-    padding: 10px;
-    display: inline-block;
-  }
-  .provider-abilities a:hover {
-    color: brown;
-  }
+.provider-abilities {
+  padding: 10px;
+  display: inline-block;
+}
+.provider-abilities a:hover {
+  color: brown;
+}
 
-  .ability-provider-anchor {
-    position: absolute;
-    top: -1vh;
-    left: 0px;
-  }
+.ability-provider-anchor {
+  position: absolute;
+  top: -1vh;
+  left: 0px;
+}
 </style>
