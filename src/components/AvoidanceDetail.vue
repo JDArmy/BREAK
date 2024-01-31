@@ -51,12 +51,14 @@ const getAvoidanceReferences = (aKey: string) => {
     <div class="desc" v-if="getAvoidanceReferences(aKey).length > 0">
       <strong>{{ $t("references") }}:&nbsp;</strong>
       <ul>
-        <li v-for="(reference, refIdx) in getAvoidanceReferences(aKey)" :key="refIdx">
+        <li
+          v-for="(reference, refIdx) in getAvoidanceReferences(aKey)"
+          :key="refIdx"
+        >
           <a :href="reference.link" target="_blank">
             <el-icon><Link /></el-icon
-            >{{ $t(`BREAK.avoidances.${aKey}.references[${refIdx}].title`) }} </a
-          >:
-          {{ $t(`BREAK.avoidances.${aKey}.references[${refIdx}].description`) }}
+            >{{ $t(`BREAK.avoidances.${aKey}.references[${refIdx}].title`) }}
+          </a>
         </li>
       </ul>
     </div>

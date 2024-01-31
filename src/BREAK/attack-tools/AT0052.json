@@ -1,0 +1,84 @@
+{
+  "AT0052": {
+    "title": "恶意外设",
+    "description": "恶意外设是指恶意软件通过USB接口等方式，将恶意代码写入外设中，当外设插入计算机时，恶意代码会自动运行，从而实现对计算机的攻击。",
+    "references": [],
+    "avoidances": [
+      "A0062"
+    ],
+    "risks": [
+      "R0080",
+      "R0112-003",
+      "R0112-004",
+      "R0112-005",
+      "R0067",
+      "R0082",
+      "R0083-001"
+    ],
+    "updated": "2024-01-30"
+  },
+  "AT0052-001": {
+    "title": "KON-Boot",
+    "description": "KON-Boot是一款可以绕过Windows和Mac OS X的登录密码的工具，它可以通过USB设备启动，从而绕过登录密码。",
+    "references": [
+      {
+        "title": "KON-Boot售卖渠道",
+        "url": "http://www.piotrbania.com/all/kon-boot/"
+      }
+    ],
+    "avoidances": [
+      "A0062"
+    ],
+    "risks": [
+      "R0080",
+      "R0112-003",
+      "R0112-005",
+      "R0067",
+      "R0082",
+      "R0083-001"
+    ],
+    "updated": "2024-01-30"
+  },
+  "AT0052-002": {
+    "title": "USB Killer",
+    "description": "USB Killer是一款可以通过USB接口将高压电流注入计算机的工具，它可以瞬间将计算机的主板、CPU、内存等硬件设备烧毁。",
+    "references": [
+      {
+        "title": "USB Killer售卖渠道",
+        "url": "https://usbkill.com/"
+      }
+    ],
+    "avoidances": [
+      "A0062"
+    ],
+    "risks": [
+      "R0112-003",
+      "R0112-004",
+      "R0082"
+    ],
+    "updated": "2024-01-30"
+  },
+  "AT0052-003": {
+    "title": "BadUSB",
+    "description": "BadUSB是一款可以通过USB接口将恶意代码写入计算机的工具，它可以将恶意代码写入USB设备中，当USB设备插入计算机时，恶意代码会自动运行，从而实现对计算机的攻击。",
+    "references": [
+      {
+        "title": "USBdriveby",
+        "url": "https://samy.pl/usbdriveby/"
+      }
+    ],
+    "avoidances": [
+      "A0062"
+    ],
+    "risks": [
+      "R0067",
+      "R0080",
+      "R0082",
+      "R0083-001",
+      "R0112-003",
+      "R0112-005",
+      "R0112-006"
+    ],
+    "updated": "2024-01-30"
+  }
+}

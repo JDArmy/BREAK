@@ -4,6 +4,7 @@ import { Link } from "@element-plus/icons-vue";
 import type { Avoidances } from "@/BREAK/avoidances";
 import { useRoute } from "vue-router";
 import { ref, watch } from "vue";
+import { CaretTop } from "@element-plus/icons-vue";
 
 const route = useRoute();
 
@@ -36,10 +37,14 @@ const filteredAvoidances = (avoidanceCategoryKey: string) => {
 };
 
 let totalAvoidancesRowSize = 24;
-let getAvoidanceRowSize = (avoidanceCategoryLength: number, avoidancesLength: number) => {
+let getAvoidanceRowSize = (
+  avoidanceCategoryLength: number,
+  avoidancesLength: number
+) => {
   let step = Math.round((avoidanceCategoryLength / avoidancesLength) * 24);
 
-  totalAvoidancesRowSize = totalAvoidancesRowSize <= 0 ? 24 : totalAvoidancesRowSize;
+  totalAvoidancesRowSize =
+    totalAvoidancesRowSize <= 0 ? 24 : totalAvoidancesRowSize;
 
   step = step > totalAvoidancesRowSize ? totalAvoidancesRowSize : step;
   totalAvoidancesRowSize -= step;
@@ -48,7 +53,8 @@ let getAvoidanceRowSize = (avoidanceCategoryLength: number, avoidancesLength: nu
 };
 
 // 页内锚点
-const getTableHeight = () => (route.hash.split("#")[1] ? "unset" : window.innerHeight - 150);
+const getTableHeight = () =>
+  route.hash.split("#")[1] ? "unset" : window.innerHeight - 150;
 const tableHeight = ref(getTableHeight());
 
 watch(
@@ -64,13 +70,29 @@ const tableRowClassName = ({ row }: { row: any }) => {
   }
   return "";
 };
+
+const clickAvoidanceCategoryTitle = (e: any) => {
+  window.scrollTo({
+    top: e.target.offsetTop - 10,
+    behavior: "smooth",
+  });
+};
+
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
 </script>
 
 <template lang="">
   <h3>{{ $t("menu.avoidances") }}</h3>
   <el-row :gutter="20">
     <el-col
-      v-for="(avoidanceCategory, avoidanceCategoryKey) in BREAK.avoidanceCategories"
+      v-for="(
+        avoidanceCategory, avoidanceCategoryKey
+      ) in BREAK.avoidanceCategories"
       :md="
         getAvoidanceRowSize(
           Object.keys(avoidances[avoidanceCategoryKey]).length,
@@ -79,32 +101,46 @@ const tableRowClassName = ({ row }: { row: any }) => {
       "
       :key="avoidanceCategoryKey"
     >
-      <h4>{{ $t(`BREAK.avoidanceCategories.${avoidanceCategoryKey}.title`) }}</h4>
+      <h4>
+        {{ $t(`BREAK.avoidanceCategories.${avoidanceCategoryKey}.title`) }}
+      </h4>
       <div>
         <router-link
-          v-for="(avoidance, avoidanceKey) in filteredAvoidances(avoidanceCategoryKey)"
+          v-for="(avoidance, avoidanceKey) in filteredAvoidances(
+            avoidanceCategoryKey
+          )"
           :key="avoidanceKey"
           :title="avoidance.summary"
           class="router-link"
           :to="{ path: '/avoidances', hash: '#' + avoidanceKey }"
         >
           <el-button size="small" round class="ml-2">
-            {{ avoidanceKey }}:{{ $t(`BREAK.avoidances.${avoidanceKey}.title`) }}
+            {{ avoidanceKey }}:{{
+              $t(`BREAK.avoidances.${avoidanceKey}.title`)
+            }}
           </el-button>
         </router-link>
       </div>
     </el-col>
   </el-row>
 
-  <div v-for="(avoidance, avoidanceCategoryKey) in avoidances" :key="avoidanceCategoryKey">
+  <div
+    v-for="(avoidance, avoidanceCategoryKey) in avoidances"
+    :key="avoidanceCategoryKey"
+  >
     <div>
-      <h4 class="avoidance-category-title">
+      <h4
+        class="avoidance-category-title"
+        @click="clickAvoidanceCategoryTitle($event)"
+      >
         {{ $t(`BREAK.avoidanceCategories.${avoidanceCategoryKey}.title`) }} ({{
           BREAK.avoidanceCategories[avoidanceCategoryKey].keyword
         }})
       </h4>
       <div class="avoidance-category-description">
-        {{ $t(`BREAK.avoidanceCategories.${avoidanceCategoryKey}.description`) }}
+        {{
+          $t(`BREAK.avoidanceCategories.${avoidanceCategoryKey}.description`)
+        }}
       </div>
     </div>
     <el-table
@@ -123,46 +159,77 @@ const tableRowClassName = ({ row }: { row: any }) => {
       <el-table-column width="150px" :label="$t('title')">
         <template #header>{{ $t("title") }}</template>
         <template #default="scope">
-          {{ scope.row.aKey ? $t(`BREAK.avoidances.${scope.row.aKey}.title`) : "" }}
+          {{
+            scope.row.aKey ? $t(`BREAK.avoidances.${scope.row.aKey}.title`) : ""
+          }}
         </template>
       </el-table-column>
       <el-table-column :label="$t('summary')">
         <template #default="scope">
-          {{ scope.row.aKey ? $t(`BREAK.avoidances.${scope.row.aKey}.summary`) : "" }}
+          {{
+            scope.row.aKey
+              ? $t(`BREAK.avoidances.${scope.row.aKey}.summary`)
+              : ""
+          }}
         </template>
       </el-table-column>
       <el-table-column :label="$t('description')">
         <template #default="scope">
-          {{ scope.row.aKey ? $t(`BREAK.avoidances.${scope.row.aKey}.description`) : "" }}
+          {{
+            scope.row.aKey
+              ? $t(`BREAK.avoidances.${scope.row.aKey}.description`)
+              : ""
+          }}
         </template>
       </el-table-column>
       <el-table-column :label="$t('limitation')">
         <template #default="scope">
-          {{ scope.row.aKey ? $t(`BREAK.avoidances.${scope.row.aKey}.limitation`) : "" }}
+          {{
+            scope.row.aKey
+              ? $t(`BREAK.avoidances.${scope.row.aKey}.limitation`)
+              : ""
+          }}
         </template>
       </el-table-column>
       <el-table-column width="250px" :label="$t('references')">
         <template #default="scope">
           <ul class="reference-list">
-            <li v-for="(reference, refIdx) in scope.row.references" :key="refIdx">
+            <li
+              v-for="(reference, refIdx) in scope.row.references"
+              :key="refIdx"
+            >
               <a v-if="scope.row.aKey" :href="reference.link" target="_blank"
                 ><el-icon><Link /></el-icon
-                >{{ $t(`BREAK.avoidances.${scope.row.aKey}.references[${refIdx}].title`) }} </a
-              >:
-              {{ $t(`BREAK.avoidances.${scope.row.aKey}.references[${refIdx}].description`) }}
+                >{{
+                  $t(
+                    `BREAK.avoidances.${scope.row.aKey}.references[${refIdx}].title`
+                  )
+                }}
+              </a>
             </li>
           </ul>
         </template>
       </el-table-column>
     </el-table>
   </div>
+
+  <div style="text-align: center; margin: 10px">
+    <el-button
+      type="primary"
+      size="small"
+      @click="scrollToTop"
+      :icon="CaretTop"
+      >{{ $t("backtop") }}</el-button
+    >
+  </div>
 </template>
 
 <style scoped>
 .avoidance-category-title {
-  margin-top: 50px;
+  margin-top: 25px;
   margin-bottom: 5px;
   text-align: center;
+  cursor: pointer;
 }
 .avoidance-category-description {
   text-align: center;

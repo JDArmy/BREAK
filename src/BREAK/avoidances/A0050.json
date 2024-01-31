@@ -8,7 +8,6 @@
     "references": [
       {
         "title": "数据泄露保护 - 百度百科",
-        "description": "",
         "link": "https://baike.baidu.com/item/DLP%E6%95%B0%E6%8D%AE%E6%B3%84%E9%9C%B2%E9%98%B2%E6%8A%A4%E7%B3%BB%E7%BB%9F/10522315?fr=ge_ala"
       }
     ],
@@ -32,10 +31,23 @@
     "references": [
       {
         "title": "数据库审计 - 百度百科",
-        "description": "",
         "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%A1%E8%AE%A1?fromModule=lemma_search-box"
       }
     ],
     "updated": "2024-01-25"
+  },
+  "A0050-003": {
+    "title": "数据擦除",
+    "category": "AC01",
+    "summary": "数据擦除是指对数据进行擦除，以保证数据不被恢复。",
+    "description": "数据擦除是指将存储设备上的数据完全删除或覆盖，以确保其无法被恢复或访问。这是一种常见的数据管理和信息安全措施，通常在设备不再使用、需要重新分配、回收、出售或丢弃之前执行。数据擦除的主要目的是保护敏感信息不被未经授权的人获取。简单的删除文件或格式化存储设备并不总能确保数据的完全擦除，因为这些操作通常只是将文件系统标记为空闲，而实际数据仍然存在。因此，更安全的方法是使用专门的数据擦除工具或软件，以覆盖存储设备上的数据，使其无法恢复。",
+    "limitation": "数据擦除不是一次性的，需要多次擦除才能确保数据无法恢复。数据擦除的效率较低，需要较长的时间。数据擦除的效果受到存储介质的影响，如固态硬盘（SSD）的数据擦除效果较差。",
+    "references": [
+      {
+        "title": "硬盘数据安全擦除 - 百度百科",
+        "link": "https://baike.baidu.com/item/%E7%A1%AC%E7%9B%98%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8%E6%93%A6%E9%99%A4/3496982?fromModule=search-result_lemma-recommend"
+      }
+    ],
+    "updated": "2024-01-29"
   }
 }

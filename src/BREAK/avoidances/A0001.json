@@ -8,7 +8,6 @@
     "references": [
       {
         "title": "Captcha - 百度百科",
-        "description": "",
         "link": "https://baike.baidu.com/item/Captcha/9630117?fr=aladdin"
       }
     ],
@@ -23,7 +22,6 @@
     "references": [
       {
         "title": "GITHUB上的Captcha开源库",
-        "description": "对于图形验证码这种传统且古老的验证机制来说，目前在github上有非常多非常成熟的开源库可用。",
         "link": "https://github.com/search?q=captcha"
       }
     ],
@@ -37,8 +35,7 @@
     "limitation": "行为验证码的原理是在人类识别图文信息的基础上，依照对图文的理解去进行一定的键鼠动作。从图片验证码（A001-001）的局限性可见：图文信息的挑战越来越难以区分人机界限，行为验证码同样面临这样的问题。行为验证通过对人类的键鼠动作进行深度学习形成模型以识别机器自动化键鼠的平滑操作。但机器自动化同样可以通过对人类键鼠动作的深度学习来达到以假乱真的地步，会是未来面临的巨大挑战。",
     "references": [
       {
-        "title": "AJ-Captcha",
-        "description": "行为验证码，包含滑动拼图、文字点选两种方式",
+        "title": "AJ-Captcha(行为验证码，包含滑动拼图、文字点选两种方式)",
         "link": "https://gitee.com/anji-plus/captcha"
       }
     ],

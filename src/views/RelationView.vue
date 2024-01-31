@@ -22,13 +22,43 @@ enum RelationType {
   all = "all",
 }
 
-enum RelationTypeColor {
-  risk = "orange",
-  avoidance = "green",
-  attackTool = "blue",
-  threatActor = "red",
-  abilityProvider = "purple",
-}
+const RelationTypeMapping = {
+  [RelationType.risk]: {
+    title: "风险",
+    relType: RelationType.risk,
+    BreakKey: "risks",
+    color: "orange",
+    disableContextMenu: ref<boolean>(false),
+  },
+  [RelationType.avoidance]: {
+    title: "规避手段",
+    relType: RelationType.avoidance,
+    BreakKey: "avoidances",
+    color: "green",
+    disableContextMenu: ref<boolean>(false),
+  },
+  [RelationType.attackTool]: {
+    title: "攻击工具",
+    relType: RelationType.attackTool,
+    BreakKey: "attackTools",
+    color: "blue",
+    disableContextMenu: ref<boolean>(false),
+  },
+  [RelationType.threatActor]: {
+    title: "威胁行为者",
+    relType: RelationType.threatActor,
+    BreakKey: "threatActors",
+    color: "red",
+    disableContextMenu: ref<boolean>(false),
+  },
+  [RelationType.abilityProvider]: {
+    title: "能力提供者",
+    relType: RelationType.abilityProvider,
+    BreakKey: "abilityProviders",
+    color: "purple",
+    disableContextMenu: ref<boolean>(false),
+  },
+};
 
 const relType = ref<RelationType>(route.params.type as RelationType);
 const relKey = ref<string>(route.params.key as string);
@@ -76,80 +106,35 @@ const jsonData = reactive({
 } as RGJsonData);
 
 const addRootNode = () => {
-  let title: string;
-  switch (relType.value) {
-    case RelationType.risk: {
-      let risk = BREAK.risks[relKey.value as keyof typeof BREAK.risks];
-      if (risk === undefined) {
-        alert("未知ID");
-        return;
-      }
-      title = risk.title;
-      break;
-    }
-    case RelationType.avoidance: {
-      let avoidance = BREAK.avoidances[relKey.value as keyof typeof BREAK.avoidances];
-      if (avoidance === undefined) {
-        alert("未知ID");
-        return;
-      }
-      title = avoidance.title;
-      break;
-    }
-    case RelationType.attackTool: {
-      let attackTool = BREAK.attackTools[relKey.value as keyof typeof BREAK.attackTools];
-      if (attackTool === undefined) {
-        alert("未知ID");
-        return;
-      }
-      title = attackTool.title;
-      break;
-    }
-    case RelationType.threatActor: {
-      let threatActor = BREAK.threatActors[relKey.value as keyof typeof BREAK.threatActors];
-      if (threatActor === undefined) {
-        alert("未知ID");
-        return;
-      }
-      title = threatActor.title;
-      break;
-    }
-    case RelationType.abilityProvider: {
-      let abilityProvider =
-        BREAK.abilityProviders[relKey.value as keyof typeof BREAK.abilityProviders];
-      if (abilityProvider === undefined) {
-        alert("未知ID");
-        return;
-      }
-      title = abilityProvider.title;
-      break;
-    }
-    default:
-      alert("未知类型");
-      return;
+  const breakItemAttr =
+    RelationTypeMapping[relType.value as keyof typeof RelationTypeMapping];
+  const items = BREAK[breakItemAttr.BreakKey as keyof typeof BREAK];
+  const item: any = items[relKey.value as keyof typeof items];
+  if (item === undefined) {
+    alert("未知ID");
+    return;
   }
-  // 跟进relType获取对应的key
-  const relTypeKey = Object.keys(RelationType).find(
-    (key) => RelationType[key as keyof typeof RelationType] === relType.value
-  );
+
   nodes.push({
     id: relKey.value,
-    type: RelationType[relTypeKey as keyof typeof RelationType],
-    text: relKey.value + "<br>" + title,
-    color: RelationTypeColor[relTypeKey as keyof typeof RelationTypeColor],
+    type: breakItemAttr.relType,
+    text: relKey.value + "<br>" + item.title,
+    color: breakItemAttr.color,
   } as Node);
 };
 
 /** Risk */
 const addRiskAvoidance = (rKey: string) => {
-  const avoidanceKeys = BREAK.risks[rKey as keyof typeof BREAK.risks].avoidances;
+  const avoidanceKeys =
+    BREAK.risks[rKey as keyof typeof BREAK.risks].avoidances;
   avoidanceKeys.forEach((avoidanceKey) => {
-    const avoidance = BREAK.avoidances[avoidanceKey as keyof typeof BREAK.avoidances];
+    const avoidance =
+      BREAK.avoidances[avoidanceKey as keyof typeof BREAK.avoidances];
     nodes.push({
       id: avoidanceKey,
       type: RelationType.avoidance,
       text: avoidanceKey + "<br>" + avoidance.title,
-      color: RelationTypeColor.avoidance,
+      color: RelationTypeMapping[RelationType.avoidance].color,
     } as Node);
     lines.push({
       from: rKey,
@@ -161,15 +146,18 @@ const addRiskAvoidance = (rKey: string) => {
 
 const addRiskAttackTool = (rKey: string) => {
   const attackToolKeys = Object.keys(BREAK.attackTools).filter((atKey) =>
-    BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].risks.includes(rKey as never)
+    BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].risks.includes(
+      rKey as never
+    )
   );
   attackToolKeys.forEach((attackToolKey) => {
-    const attackTool = BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools];
+    const attackTool =
+      BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools];
     nodes.push({
       id: attackToolKey,
       type: RelationType.attackTool,
       text: attackToolKey + "<br>" + attackTool.title,
-      color: RelationTypeColor.attackTool,
+      color: RelationTypeMapping[RelationType.attackTool].color,
     } as Node);
     lines.push({
       from: rKey,
@@ -180,16 +168,19 @@ const addRiskAttackTool = (rKey: string) => {
 };
 
 const addRisk_AvoidanceAttackToolRelation = (rKey: string) => {
-  const avoidanceKeys = BREAK.risks[rKey as keyof typeof BREAK.risks].avoidances;
+  const avoidanceKeys =
+    BREAK.risks[rKey as keyof typeof BREAK.risks].avoidances;
   const attackToolKeys = Object.keys(BREAK.attackTools).filter((atKey) =>
-    BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].risks.includes(rKey as never)
+    BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].risks.includes(
+      rKey as never
+    )
   );
   attackToolKeys.forEach((attackToolKey) => {
     avoidanceKeys.forEach((avoidanceKey) => {
       if (
-        BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools].avoidances.includes(
-          avoidanceKey
-        )
+        BREAK.attackTools[
+          attackToolKey as keyof typeof BREAK.attackTools
+        ].avoidances.includes(avoidanceKey)
       ) {
         lines.push({
           from: avoidanceKey,
@@ -203,15 +194,18 @@ const addRisk_AvoidanceAttackToolRelation = (rKey: string) => {
 
 const addRiskThreatActor = (rKey: string) => {
   const threatActorKeys = Object.keys(BREAK.threatActors).filter((taKey) =>
-    BREAK.threatActors[taKey as keyof typeof BREAK.threatActors].makeRisks.includes(rKey as never)
+    BREAK.threatActors[
+      taKey as keyof typeof BREAK.threatActors
+    ].makeRisks.includes(rKey as never)
   );
   threatActorKeys.forEach((threatActorKey) => {
-    const threatActor = BREAK.threatActors[threatActorKey as keyof typeof BREAK.threatActors];
+    const threatActor =
+      BREAK.threatActors[threatActorKey as keyof typeof BREAK.threatActors];
     nodes.push({
       id: threatActorKey,
       type: RelationType.threatActor,
       text: threatActorKey + "<br>" + threatActor.title,
-      color: RelationTypeColor.threatActor,
+      color: RelationTypeMapping[RelationType.threatActor].color,
     } as Node);
     lines.push({
       from: threatActorKey,
@@ -223,10 +217,14 @@ const addRiskThreatActor = (rKey: string) => {
 
 const addRisk_ThreatActorAttackToolRelation = (rKey: string) => {
   const threatActorKeys = Object.keys(BREAK.threatActors).filter((taKey) =>
-    BREAK.threatActors[taKey as keyof typeof BREAK.threatActors].makeRisks.includes(rKey as never)
+    BREAK.threatActors[
+      taKey as keyof typeof BREAK.threatActors
+    ].makeRisks.includes(rKey as never)
   );
   const attackToolKeys = Object.keys(BREAK.attackTools).filter((atKey) =>
-    BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].risks.includes(rKey as never)
+    BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].risks.includes(
+      rKey as never
+    )
   );
 
   threatActorKeys.forEach((threatActorKey) => {
@@ -256,10 +254,31 @@ const addRisk_ThreatActorAttackToolRelation = (rKey: string) => {
   });
 };
 
+const addRiskSubrisk = (rKey: string) => {
+  const subriskKeys = Object.keys(BREAK.risks).filter(
+    (riskKey) => riskKey.includes(rKey) && riskKey != rKey
+  );
+  subriskKeys.forEach((subriskKey) => {
+    nodes.push({
+      id: subriskKey,
+      type: RelationType.risk,
+      text: subriskKey + "<br>" + BREAK.risks[subriskKey].title,
+      color: RelationTypeMapping[RelationType.risk].color,
+    } as Node);
+    lines.push({
+      from: rKey,
+      text: "子风险",
+      to: subriskKey,
+    } as Line);
+  });
+};
+
 /** Avoidacne */
 const addAvoidanceRisk = (avoidanceKey: string) => {
   const riskKeys = Object.keys(BREAK.risks).filter((rKey) =>
-    BREAK.risks[rKey as keyof typeof BREAK.risks].avoidances.includes(avoidanceKey as never)
+    BREAK.risks[rKey as keyof typeof BREAK.risks].avoidances.includes(
+      avoidanceKey as never
+    )
   );
   riskKeys.forEach((riskKey) => {
     const risk = BREAK.risks[riskKey as keyof typeof BREAK.risks];
@@ -267,7 +286,7 @@ const addAvoidanceRisk = (avoidanceKey: string) => {
       id: riskKey,
       type: RelationType.risk,
       text: riskKey + "<br>" + risk.title,
-      color: RelationTypeColor.risk,
+      color: RelationTypeMapping[RelationType.risk].color,
     } as Node);
     lines.push({
       from: riskKey,
@@ -278,19 +297,23 @@ const addAvoidanceRisk = (avoidanceKey: string) => {
 };
 
 const addAvoidanceAbilityProvider = (avoidanceKey: string) => {
-  const abilityProviderKeys = Object.keys(BREAK.abilityProviders).filter((apKey) =>
-    Object.keys(
-      BREAK.abilityProviders[apKey as keyof typeof BREAK.abilityProviders].abilities
-    ).includes(avoidanceKey as never)
+  const abilityProviderKeys = Object.keys(BREAK.abilityProviders).filter(
+    (apKey) =>
+      Object.keys(
+        BREAK.abilityProviders[apKey as keyof typeof BREAK.abilityProviders]
+          .abilities
+      ).includes(avoidanceKey as never)
   );
   abilityProviderKeys.forEach((abilityProviderKey) => {
     const abilityProvider =
-      BREAK.abilityProviders[abilityProviderKey as keyof typeof BREAK.abilityProviders];
+      BREAK.abilityProviders[
+        abilityProviderKey as keyof typeof BREAK.abilityProviders
+      ];
     nodes.push({
       id: abilityProviderKey,
       type: RelationType.abilityProvider,
       text: abilityProviderKey + "<br>" + abilityProvider.title,
-      color: RelationTypeColor.abilityProvider,
+      color: RelationTypeMapping[RelationType.abilityProvider].color,
     } as Node);
     lines.push({
       from: avoidanceKey,
@@ -300,16 +323,37 @@ const addAvoidanceAbilityProvider = (avoidanceKey: string) => {
   });
 };
 
+const addAvoidanceSubavoidance = (aKey: string) => {
+  const subavoidanceKeys = Object.keys(BREAK.avoidances).filter(
+    (avoidanceKey) => avoidanceKey.includes(aKey) && avoidanceKey != aKey
+  );
+  // console.log(subavoidanceKeys);
+  subavoidanceKeys.forEach((subavoidanceKey) => {
+    nodes.push({
+      id: subavoidanceKey,
+      type: RelationType.avoidance,
+      text: subavoidanceKey + "<br>" + BREAK.avoidances[subavoidanceKey].title,
+      color: RelationTypeMapping[RelationType.avoidance].color,
+    } as Node);
+    lines.push({
+      from: aKey,
+      text: "子规避手段",
+      to: subavoidanceKey,
+    } as Line);
+  });
+};
+
 /** AttackTool */
 const addAttackToolRisk = (attackToolKey: string) => {
-  const riskKeys = BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools].risks;
+  const riskKeys =
+    BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools].risks;
   riskKeys.forEach((riskKey) => {
     const risk = BREAK.risks[riskKey as keyof typeof BREAK.risks];
     nodes.push({
       id: riskKey,
       type: RelationType.risk,
       text: riskKey + "<br>" + risk.title,
-      color: RelationTypeColor.risk,
+      color: RelationTypeMapping[RelationType.risk].color,
     } as Node);
     lines.push({
       from: attackToolKey,
@@ -321,14 +365,16 @@ const addAttackToolRisk = (attackToolKey: string) => {
 
 const addAttackToolAvoidance = (attackToolKey: string) => {
   const avoidanceKeys =
-    BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools].avoidances;
+    BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools]
+      .avoidances;
   avoidanceKeys.forEach((avoidanceKey) => {
-    const avoidance = BREAK.avoidances[avoidanceKey as keyof typeof BREAK.avoidances];
+    const avoidance =
+      BREAK.avoidances[avoidanceKey as keyof typeof BREAK.avoidances];
     nodes.push({
       id: avoidanceKey,
       type: RelationType.avoidance,
       text: avoidanceKey + "<br>" + avoidance.title,
-      color: RelationTypeColor.avoidance,
+      color: RelationTypeMapping[RelationType.avoidance].color,
     } as Node);
     lines.push({
       from: attackToolKey,
@@ -339,36 +385,43 @@ const addAttackToolAvoidance = (attackToolKey: string) => {
 };
 
 const addAttackTool_RiskAvoidanceRelation = (attackToolKey: string) => {
-  const riskKeys = BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools].risks;
+  const riskKeys =
+    BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools].risks;
   const avoidanceKeys =
-    BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools].avoidances;
+    BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools]
+      .avoidances;
   riskKeys.forEach((riskKey) => {
-    BREAK.risks[riskKey as keyof typeof BREAK.risks].avoidances.forEach((avoidanceKey) => {
-      if (avoidanceKeys.includes(avoidanceKey)) {
-        lines.push({
-          from: riskKey,
-          text: "规避手段",
-          to: avoidanceKey,
-        } as Line);
+    BREAK.risks[riskKey as keyof typeof BREAK.risks].avoidances.forEach(
+      (avoidanceKey) => {
+        if (avoidanceKeys.includes(avoidanceKey)) {
+          lines.push({
+            from: riskKey,
+            text: "规避手段",
+            to: avoidanceKey,
+          } as Line);
+        }
       }
-    });
+    );
   });
 };
 
 const addAttackToolThreatActor = (attackToolKey: string) => {
-  const builderThreatActorKeys = Object.keys(BREAK.threatActors).filter((taKey) =>
-    BREAK.threatActors[taKey as keyof typeof BREAK.threatActors].buildAttackTools.includes(
-      attackToolKey as never
-    )
+  const builderThreatActorKeys = Object.keys(BREAK.threatActors).filter(
+    (taKey) =>
+      BREAK.threatActors[
+        taKey as keyof typeof BREAK.threatActors
+      ].buildAttackTools.includes(attackToolKey as never)
   );
   builderThreatActorKeys.forEach((builderThreatActorKey) => {
     const threatActor =
-      BREAK.threatActors[builderThreatActorKey as keyof typeof BREAK.threatActors];
+      BREAK.threatActors[
+        builderThreatActorKey as keyof typeof BREAK.threatActors
+      ];
     nodes.push({
       id: builderThreatActorKey,
       type: RelationType.threatActor,
       text: builderThreatActorKey + "<br>" + threatActor.title,
-      color: RelationTypeColor.threatActor,
+      color: RelationTypeMapping[RelationType.threatActor].color,
     } as Node);
     lines.push({
       from: builderThreatActorKey,
@@ -378,17 +431,18 @@ const addAttackToolThreatActor = (attackToolKey: string) => {
   });
 
   const userThreatActorKeys = Object.keys(BREAK.threatActors).filter((taKey) =>
-    BREAK.threatActors[taKey as keyof typeof BREAK.threatActors].useAttackTools.includes(
-      attackToolKey as never
-    )
+    BREAK.threatActors[
+      taKey as keyof typeof BREAK.threatActors
+    ].useAttackTools.includes(attackToolKey as never)
   );
   userThreatActorKeys.forEach((userThreatActorKey) => {
-    const threatActor = BREAK.threatActors[userThreatActorKey as keyof typeof BREAK.threatActors];
+    const threatActor =
+      BREAK.threatActors[userThreatActorKey as keyof typeof BREAK.threatActors];
     nodes.push({
       id: userThreatActorKey,
       type: RelationType.threatActor,
       text: userThreatActorKey + "<br>" + threatActor.title,
-      color: RelationTypeColor.threatActor,
+      color: RelationTypeMapping[RelationType.threatActor].color,
     } as Node);
     lines.push({
       from: userThreatActorKey,
@@ -399,17 +453,19 @@ const addAttackToolThreatActor = (attackToolKey: string) => {
 };
 
 const addAttackTool_ThreatActorRiskRelation = (attackToolKey: string) => {
-  const builderThreatActorKeys = Object.keys(BREAK.threatActors).filter((taKey) =>
-    BREAK.threatActors[taKey as keyof typeof BREAK.threatActors].buildAttackTools.includes(
-      attackToolKey as never
-    )
+  const builderThreatActorKeys = Object.keys(BREAK.threatActors).filter(
+    (taKey) =>
+      BREAK.threatActors[
+        taKey as keyof typeof BREAK.threatActors
+      ].buildAttackTools.includes(attackToolKey as never)
   );
   const userThreatActorKeys = Object.keys(BREAK.threatActors).filter((taKey) =>
-    BREAK.threatActors[taKey as keyof typeof BREAK.threatActors].useAttackTools.includes(
-      attackToolKey as never
-    )
+    BREAK.threatActors[
+      taKey as keyof typeof BREAK.threatActors
+    ].useAttackTools.includes(attackToolKey as never)
   );
-  const riskKeys = BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools].risks;
+  const riskKeys =
+    BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools].risks;
   builderThreatActorKeys.forEach((builderThreatActorKey) => {
     riskKeys.forEach((riskKey) => {
       if (
@@ -442,6 +498,26 @@ const addAttackTool_ThreatActorRiskRelation = (attackToolKey: string) => {
   });
 };
 
+const addAttackToolSubattackTool = (atKey: string) => {
+  const subattackToolKeys = Object.keys(BREAK.attackTools).filter(
+    (attackToolKey) => attackToolKey.includes(atKey) && attackToolKey != atKey
+  );
+  subattackToolKeys.forEach((subattackToolKey) => {
+    nodes.push({
+      id: subattackToolKey,
+      type: RelationType.attackTool,
+      text:
+        subattackToolKey + "<br>" + BREAK.attackTools[subattackToolKey].title,
+      color: RelationTypeMapping[RelationType.attackTool].color,
+    } as Node);
+    lines.push({
+      from: atKey,
+      text: "子攻击工具",
+      to: subattackToolKey,
+    } as Line);
+  });
+};
+
 /** ThreatActor */
 const addThreatActorRisk = (threatActorKey: string) => {
   const riskKeys = BREAK.threatActors[threatActorKey].makeRisks;
@@ -451,7 +527,7 @@ const addThreatActorRisk = (threatActorKey: string) => {
       id: riskKey,
       type: RelationType.risk,
       text: riskKey + "<br>" + risk.title,
-      color: RelationTypeColor.risk,
+      color: RelationTypeMapping[RelationType.risk].color,
     } as Node);
     lines.push({
       from: threatActorKey,
@@ -462,14 +538,16 @@ const addThreatActorRisk = (threatActorKey: string) => {
 };
 
 const addThreatActorAttackTool = (threatActorKey: string) => {
-  const buildAttackToolKeys = BREAK.threatActors[threatActorKey].buildAttackTools;
+  const buildAttackToolKeys =
+    BREAK.threatActors[threatActorKey].buildAttackTools;
   buildAttackToolKeys.forEach((buildAttackToolKey) => {
-    const attackTool = BREAK.attackTools[buildAttackToolKey as keyof typeof BREAK.attackTools];
+    const attackTool =
+      BREAK.attackTools[buildAttackToolKey as keyof typeof BREAK.attackTools];
     nodes.push({
       id: buildAttackToolKey,
       type: RelationType.attackTool,
       text: buildAttackToolKey + "<br>" + attackTool.title,
-      color: RelationTypeColor.attackTool,
+      color: RelationTypeMapping[RelationType.attackTool].color,
     } as Node);
     lines.push({
       from: threatActorKey,
@@ -480,12 +558,13 @@ const addThreatActorAttackTool = (threatActorKey: string) => {
 
   const useAttackToolKeys = BREAK.threatActors[threatActorKey].useAttackTools;
   useAttackToolKeys.forEach((useAttackToolKey) => {
-    const attackTool = BREAK.attackTools[useAttackToolKey as keyof typeof BREAK.attackTools];
+    const attackTool =
+      BREAK.attackTools[useAttackToolKey as keyof typeof BREAK.attackTools];
     nodes.push({
       id: useAttackToolKey,
       type: RelationType.attackTool,
       text: useAttackToolKey + "<br>" + attackTool.title,
-      color: RelationTypeColor.attackTool,
+      color: RelationTypeMapping[RelationType.attackTool].color,
     } as Node);
     lines.push({
       from: threatActorKey,
@@ -513,16 +592,42 @@ const addThreatActor_AttackToolRiskRelation = (threatActorKey: string) => {
     });
   });
 };
+
+const addThreatActorSubthreatActor = (taKey: string) => {
+  const subthreatActorKeys = Object.keys(BREAK.threatActors).filter(
+    (threatActorKey) =>
+      threatActorKey.includes(taKey) && threatActorKey != taKey
+  );
+  subthreatActorKeys.forEach((subthreatActorKey) => {
+    nodes.push({
+      id: subthreatActorKey,
+      type: RelationType.threatActor,
+      text:
+        subthreatActorKey +
+        "<br>" +
+        BREAK.threatActors[subthreatActorKey].title,
+      color: RelationTypeMapping[RelationType.threatActor].color,
+    } as Node);
+    lines.push({
+      from: taKey,
+      text: "子威胁行为者",
+      to: subthreatActorKey,
+    } as Line);
+  });
+};
 /** AbilityProvider */
 const addAbilityProviderAvoidance = (abilityProviderKey: string) => {
-  const avoidanceKeys = Object.keys(BREAK.abilityProviders[abilityProviderKey].abilities);
+  const avoidanceKeys = Object.keys(
+    BREAK.abilityProviders[abilityProviderKey].abilities
+  );
   avoidanceKeys.forEach((avoidanceKey) => {
-    const avoidance = BREAK.avoidances[avoidanceKey as keyof typeof BREAK.avoidances];
+    const avoidance =
+      BREAK.avoidances[avoidanceKey as keyof typeof BREAK.avoidances];
     nodes.push({
       id: avoidanceKey,
       type: RelationType.avoidance,
       text: avoidanceKey + "<br>" + avoidance.title,
-      color: RelationTypeColor.avoidance,
+      color: RelationTypeMapping[RelationType.avoidance].color,
     } as Node);
     lines.push({
       from: avoidanceKey,
@@ -554,7 +659,11 @@ const setRGJsonData = () => {
   getLineType();
 };
 
-const genRGJsonData = (reqType: RelationType, nodeType: RelationType, nodeId: string) => {
+const genRGJsonData = (
+  reqType: RelationType,
+  nodeType: RelationType,
+  nodeId: string
+) => {
   if (nodeType === RelationType.risk) {
     if (reqType == RelationType.avoidance) {
       addRiskAvoidance(nodeId);
@@ -568,6 +677,7 @@ const genRGJsonData = (reqType: RelationType, nodeType: RelationType, nodeId: st
       addRisk_AvoidanceAttackToolRelation(nodeId);
       addRiskThreatActor(nodeId);
       addRisk_ThreatActorAttackToolRelation(nodeId);
+      addRiskSubrisk(nodeId);
     }
   } else if (nodeType === RelationType.avoidance) {
     if (reqType == RelationType.risk) {
@@ -579,6 +689,7 @@ const genRGJsonData = (reqType: RelationType, nodeType: RelationType, nodeId: st
     if (reqType == RelationType.all) {
       addAvoidanceRisk(nodeId);
       addAvoidanceAbilityProvider(nodeId);
+      addAvoidanceSubavoidance(nodeId);
     }
   } else if (nodeType === RelationType.attackTool) {
     if (reqType == RelationType.risk) {
@@ -593,6 +704,7 @@ const genRGJsonData = (reqType: RelationType, nodeType: RelationType, nodeId: st
       addAttackTool_RiskAvoidanceRelation(nodeId);
       addAttackToolThreatActor(nodeId);
       addAttackTool_ThreatActorRiskRelation(nodeId);
+      addAttackToolSubattackTool(nodeId);
     }
   } else if (nodeType === RelationType.threatActor) {
     if (reqType == RelationType.risk) {
@@ -603,6 +715,7 @@ const genRGJsonData = (reqType: RelationType, nodeType: RelationType, nodeId: st
       addThreatActorRisk(nodeId);
       addThreatActorAttackTool(nodeId);
       addThreatActor_AttackToolRiskRelation(nodeId);
+      addThreatActorSubthreatActor(nodeId);
     }
   } else if (nodeType === RelationType.abilityProvider) {
     if (reqType == RelationType.avoidance || reqType == RelationType.all) {
@@ -616,14 +729,56 @@ const genRGJsonData = (reqType: RelationType, nodeType: RelationType, nodeId: st
  * 初始化
  */
 onMounted(() => {
+  if (
+    !Object.values(RelationType).includes(route.params.type as RelationType) ||
+    !Object.keys(
+      BREAK[
+        RelationTypeMapping[
+          route.params.type as keyof typeof RelationTypeMapping
+        ].BreakKey as keyof typeof BREAK
+      ]
+    ).includes(route.params.key as string)
+  ) {
+    alert("未知类型或ID");
+    router
+      .push({
+        name: "relation",
+        params: {
+          type: "risk",
+          key: "R0001",
+        },
+      })
+      .then(() => {
+        location.reload();
+      });
+    return;
+  }
   addRootNode();
   genRGJsonData(RelationType.all, relType.value, relKey.value);
 });
+
+// 监听下拉框的值变化，改变路由
+watch(
+  () => relKey.value,
+  (newValue) => {
+    if (newValue !== route.params.key) {
+      router.push({
+        name: "relation",
+        params: {
+          type: relType.value,
+          key: newValue,
+        },
+      });
+    }
+  }
+);
+
+// 监听路由变化，改变关系图数据
 watch(
   () => [route.params.type, route.params.key],
-  (newValue) => {
-    relType.value = newValue[0] as RelationType;
-    relKey.value = newValue[1] as string;
+  () => {
+    relType.value = route.params.type as RelationType;
+    relKey.value = route.params.key as string;
     nodes.splice(0, nodes.length);
     lines.splice(0, lines.length);
     addRootNode();
@@ -641,11 +796,6 @@ const dropdownStyle = reactive({
 });
 const dropdown1 = ref<DropdownInstance>();
 
-const disableContextMenuRisk = ref(false);
-const disableContextMenuAvoidance = ref(false);
-const disableContextMenuAttackTool = ref(false);
-const disableContextMenuThreatActor = ref(false);
-const disableContextMenuAbilityProvider = ref(false);
 const disableContextMenuAll = ref(false);
 const disableContextMenuOpenAsRoot = ref(false);
 
@@ -661,51 +811,76 @@ const nodeClick = (node: Node, e: any) => {
 
   switch (node.type) {
     case RelationType.risk: {
-      disableContextMenuRisk.value = true;
-      disableContextMenuAvoidance.value = false;
-      disableContextMenuAttackTool.value = false;
-      disableContextMenuThreatActor.value = false;
-      disableContextMenuAbilityProvider.value = true;
+      RelationTypeMapping[RelationType.risk].disableContextMenu.value = true;
+      RelationTypeMapping[RelationType.avoidance].disableContextMenu.value =
+        false;
+      RelationTypeMapping[RelationType.attackTool].disableContextMenu.value =
+        false;
+      RelationTypeMapping[RelationType.threatActor].disableContextMenu.value =
+        false;
+      RelationTypeMapping[
+        RelationType.abilityProvider
+      ].disableContextMenu.value = true;
       disableContextMenuAll.value = false;
       disableContextMenuOpenAsRoot.value = false;
       break;
     }
     case RelationType.avoidance: {
-      disableContextMenuRisk.value = false;
-      disableContextMenuAvoidance.value = true;
-      disableContextMenuAttackTool.value = true;
-      disableContextMenuThreatActor.value = true;
-      disableContextMenuAbilityProvider.value = false;
+      RelationTypeMapping[RelationType.risk].disableContextMenu.value = false;
+      RelationTypeMapping[RelationType.avoidance].disableContextMenu.value =
+        true;
+      RelationTypeMapping[RelationType.attackTool].disableContextMenu.value =
+        true;
+      RelationTypeMapping[RelationType.threatActor].disableContextMenu.value =
+        true;
+      RelationTypeMapping[
+        RelationType.abilityProvider
+      ].disableContextMenu.value = false;
       disableContextMenuAll.value = false;
       disableContextMenuOpenAsRoot.value = false;
       break;
     }
     case RelationType.attackTool: {
-      disableContextMenuRisk.value = false;
-      disableContextMenuAvoidance.value = false;
-      disableContextMenuAttackTool.value = true;
-      disableContextMenuThreatActor.value = false;
-      disableContextMenuAbilityProvider.value = true;
+      RelationTypeMapping[RelationType.risk].disableContextMenu.value = false;
+      RelationTypeMapping[RelationType.avoidance].disableContextMenu.value =
+        false;
+      RelationTypeMapping[RelationType.attackTool].disableContextMenu.value =
+        true;
+      RelationTypeMapping[RelationType.threatActor].disableContextMenu.value =
+        false;
+      RelationTypeMapping[
+        RelationType.abilityProvider
+      ].disableContextMenu.value = true;
       disableContextMenuAll.value = false;
       disableContextMenuOpenAsRoot.value = false;
       break;
     }
     case RelationType.threatActor: {
-      disableContextMenuRisk.value = false;
-      disableContextMenuAvoidance.value = true;
-      disableContextMenuAttackTool.value = false;
-      disableContextMenuThreatActor.value = true;
-      disableContextMenuAbilityProvider.value = true;
+      RelationTypeMapping[RelationType.risk].disableContextMenu.value = false;
+      RelationTypeMapping[RelationType.avoidance].disableContextMenu.value =
+        true;
+      RelationTypeMapping[RelationType.attackTool].disableContextMenu.value =
+        false;
+      RelationTypeMapping[RelationType.threatActor].disableContextMenu.value =
+        true;
+      RelationTypeMapping[
+        RelationType.abilityProvider
+      ].disableContextMenu.value = true;
       disableContextMenuAll.value = false;
       disableContextMenuOpenAsRoot.value = false;
       break;
     }
     case RelationType.abilityProvider: {
-      disableContextMenuRisk.value = true;
-      disableContextMenuAvoidance.value = false;
-      disableContextMenuAttackTool.value = true;
-      disableContextMenuThreatActor.value = true;
-      disableContextMenuAbilityProvider.value = true;
+      RelationTypeMapping[RelationType.risk].disableContextMenu.value = true;
+      RelationTypeMapping[RelationType.avoidance].disableContextMenu.value =
+        false;
+      RelationTypeMapping[RelationType.attackTool].disableContextMenu.value =
+        true;
+      RelationTypeMapping[RelationType.threatActor].disableContextMenu.value =
+        true;
+      RelationTypeMapping[
+        RelationType.abilityProvider
+      ].disableContextMenu.value = true;
       disableContextMenuAll.value = true;
       disableContextMenuOpenAsRoot.value = false;
       break;
@@ -816,7 +991,9 @@ const doFilter = () => {
 
 <template>
   <!-- 关系图 -->
-  <div style="border: #efefef solid 1px; height: calc(100vh - 150px); width: 100%">
+  <div
+    style="border: #efefef solid 1px; height: calc(100vh - 150px); width: 100%"
+  >
     <relation-graph ref="graphRef$" :options="graphOptions">
       <template #node="{ node }">
         <div
@@ -835,42 +1012,42 @@ const doFilter = () => {
       </template>
       <template #graph-plug>
         <div class="filter-pane" id="node-filter-pane">
+          <div>
+            <el-select style="width: 200px" v-model="relType">
+              <el-option
+                v-for="(item, key) in RelationTypeMapping"
+                :label="item.title"
+                :key="key"
+                :value="key"
+              >
+              </el-option>
+            </el-select>
+          </div>
+          <div>
+            <el-select style="width: 200px" v-model="relKey">
+              <el-option
+                v-for="(item, key) in BREAK[
+                  RelationTypeMapping[
+                    relType as keyof typeof RelationTypeMapping
+                  ].BreakKey as keyof typeof BREAK
+                ] as any"
+                :key="key"
+                :label="key + ':' + item.title"
+                :value="key"
+              >
+              </el-option>
+            </el-select>
+          </div>
           <h2>节点筛选：</h2>
           <el-checkbox-group v-model="filterRelationType" @change="doFilter">
             <el-checkbox
+              v-for="(item, key) in RelationTypeMapping"
+              :key="key"
+              :name="key"
               class="filter-checkbox"
-              :key="RelationType.risk"
-              :label="RelationType.risk"
-              :name="RelationType.risk"
-              >风险</el-checkbox
-            >
-            <el-checkbox
-              class="filter-checkbox"
-              :key="RelationType.avoidance"
-              :label="RelationType.avoidance"
-              :name="RelationType.avoidance"
-              >规避手段</el-checkbox
-            >
-            <el-checkbox
-              class="filter-checkbox"
-              :key="RelationType.attackTool"
-              :label="RelationType.attackTool"
-              :name="RelationType.attackTool"
-              >攻击工具</el-checkbox
-            >
-            <el-checkbox
-              class="filter-checkbox"
-              :key="RelationType.threatActor"
-              :label="RelationType.threatActor"
-              :name="RelationType.threatActor"
-              >威胁行为者</el-checkbox
-            >
-            <el-checkbox
-              class="filter-checkbox"
-              :key="RelationType.abilityProvider"
-              :label="RelationType.abilityProvider"
-              :name="RelationType.abilityProvider"
-              >能力提供者</el-checkbox
+              :label="key"
+              :value="key"
+              >{{ item.title }}</el-checkbox
             >
           </el-checkbox-group>
 
@@ -895,32 +1072,12 @@ const doFilter = () => {
       <span class="el-dropdown-link"></span>
       <template #dropdown>
         <el-dropdown-menu>
-          <el-dropdown-item @click="gotoItemDetailView()">查看详情</el-dropdown-item>
           <el-dropdown-item
-            @click="clickContextMenu(RelationType.risk)"
-            divided
-            :disabled="disableContextMenuRisk"
-            >风险列表</el-dropdown-item
-          >
-          <el-dropdown-item
-            @click="clickContextMenu(RelationType.avoidance)"
-            :disabled="disableContextMenuAvoidance"
-            >规避手段</el-dropdown-item
-          >
-          <el-dropdown-item
-            @click="clickContextMenu(RelationType.attackTool)"
-            :disabled="disableContextMenuAttackTool"
-            >攻击工具</el-dropdown-item
-          >
-          <el-dropdown-item
-            @click="clickContextMenu(RelationType.threatActor)"
-            :disabled="disableContextMenuThreatActor"
-            >威胁行为者</el-dropdown-item
-          >
-          <el-dropdown-item
-            @click="clickContextMenu(RelationType.abilityProvider)"
-            :disabled="disableContextMenuAbilityProvider"
-            >能力提供者</el-dropdown-item
+            v-for="(item, key) in RelationTypeMapping"
+            :key="key"
+            @click="clickContextMenu(key)"
+            :disabled="item.disableContextMenu.value"
+            >{{ item.title }}</el-dropdown-item
           >
           <el-dropdown-item
             @click="clickContextMenu(RelationType.all)"
@@ -932,6 +1089,9 @@ const doFilter = () => {
             :disabled="disableContextMenuOpenAsRoot"
             divided
             >作为根节点打开</el-dropdown-item
+          >
+          <el-dropdown-item divided @click="gotoItemDetailView()"
+            >查看详细描述</el-dropdown-item
           >
         </el-dropdown-menu>
       </template>

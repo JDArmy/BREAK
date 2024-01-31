@@ -14,8 +14,11 @@
     "useAttackTools": [
       "AT0001",
       "AT0039",
+      "AT0039-001",
+      "AT0039-002",
       "AT0040",
-      "AT0026"
+      "AT0026",
+      "AT0040-001"
     ],
     "makeRisks": [
       "R0017-002",
@@ -35,7 +38,8 @@
     ],
     "buildAttackTools": [],
     "useAttackTools": [
-      "AT0001"
+      "AT0001",
+      "AT0039-001"
     ],
     "makeRisks": [
       "R0060",

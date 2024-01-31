@@ -8,9 +8,12 @@
         "link": "https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E6%B0%B4%E5%86%9B?fromModule=lemma_search-box"
       }
     ],
-    "buildAttackTools": [],
+    "buildAttackTools": [
+      "AT0051"
+    ],
     "useAttackTools": [
       "AT0001",
+      "AT0001-003",
       "AT0002",
       "AT0003",
       "AT0006",
@@ -22,10 +25,13 @@
       "AT0029",
       "AT0030",
       "AT0031",
-      "AT0034",
       "AT0034-001",
+      "AT0034-002",
       "AT0046",
-      "AT0050"
+      "AT0050",
+      "AT0053",
+      "AT0053-001",
+      "AT0051"
     ],
     "makeRisks": [
       "R0024",

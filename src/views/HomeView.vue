@@ -12,12 +12,6 @@ import { ElRow, ElCol } from "element-plus";
 const router = useRouter();
 const route = useRoute();
 
-// console.log(
-//   Object.keys(BREAK.avoidances).map((rKey) => {
-//     console.log(rKey + ":" + BREAK.avoidances[rKey as keyof typeof BREAK.avoidances].title);
-//   })
-// );
-
 //分商业场景查看风险
 interface SceneBREAK {
   riskDimensions: {
@@ -51,7 +45,10 @@ const sceneBREAK = computed(
 
 //bsKeySelected event
 watch(bsKeySelected, () => {
-  if (bsKeySelected.value.match(/BS[0-9]{2}/) && bsKeySelected.value !== "BS00") {
+  if (
+    bsKeySelected.value.match(/BS[0-9]{2}/) &&
+    bsKeySelected.value !== "BS00"
+  ) {
     router.push({
       name: "businessScene",
       params: {
@@ -69,7 +66,10 @@ watch(bsKeySelected, () => {
   totalDimensionRowSize = 24;
 });
 
-let getRisks = (riskScenes: typeof sceneBREAK.value.riskScenes, rsKey: string) => {
+let getRisks = (
+  riskScenes: typeof sceneBREAK.value.riskScenes,
+  rsKey: string
+) => {
   return riskScenes[rsKey as keyof typeof sceneBREAK.value.riskScenes].risks;
 };
 
@@ -81,22 +81,32 @@ const getSubRisks = (prKey: string) => {
 };
 
 // 以父风险为key，将子风险放到value的对象中
-let subRisks = ref(Object());
+const subRisks = ref(Object());
+const hideSubRisks = ref(Object());
 Object.keys(BREAK.risks).forEach((prKey) => {
   if (prKey.includes("-")) return;
   let srKeys = getSubRisks(prKey);
   if (srKeys.length > 0) {
     subRisks.value[prKey] = srKeys;
+    hideSubRisks.value[prKey] = false;
   }
 });
-// console.log(subRisks.value);
+const hideAllSubRisks = ref(false);
+watch(
+  () => hideAllSubRisks.value,
+  () => {
+    Object.keys(hideSubRisks.value).forEach((prKey) => {
+      hideSubRisks.value[prKey] = hideAllSubRisks.value;
+    });
+  }
+);
 //subrisk end.
 
 /////////////////////////////////////////////////////////////////////
 //start: 查看风险细节
-let riskDrawer = ref(false);
-let riskKey = ref("");
-let showRiskDetail = (riskKey1: string, drawer1: boolean) => {
+const riskDrawer = ref(false);
+const riskKey = ref("");
+const showRiskDetail = (riskKey1: string, drawer1: boolean) => {
   riskDrawer.value = drawer1;
   riskKey.value = riskKey1;
 };
@@ -113,7 +123,7 @@ watch(
   }
 );
 
-let riskDetailClose = () => {
+const riskDetailClose = () => {
   riskDrawer.value = false;
   router.push({
     name: "home",
@@ -123,7 +133,10 @@ let riskDetailClose = () => {
 
 // 通过动态计算每个风险维度中风险场景的数量，来分配每个风险维度的Col大小，主要解决24不能被整除问题
 let totalRowSize = 24;
-let getDimensionRowSize = (dimensionScenesLength: number, totalSceneslength: number) => {
+let getDimensionRowSize = (
+  dimensionScenesLength: number,
+  totalSceneslength: number
+) => {
   let step = Math.round((dimensionScenesLength / totalSceneslength) * 24);
 
   totalRowSize = totalRowSize <= 0 ? 24 : totalRowSize;
@@ -138,7 +151,8 @@ let totalDimensionRowSize = 24;
 let getSceneRowSize = (sceneLength: number) => {
   let step = Math.round(24 / sceneLength);
 
-  totalDimensionRowSize = totalDimensionRowSize <= 0 ? 24 : totalDimensionRowSize;
+  totalDimensionRowSize =
+    totalDimensionRowSize <= 0 ? 24 : totalDimensionRowSize;
 
   step = step > totalDimensionRowSize ? totalDimensionRowSize : step;
   totalDimensionRowSize -= step;
@@ -150,12 +164,18 @@ let getSceneRowSize = (sceneLength: number) => {
 <template>
   <el-row class="header">
     <el-col :span="24" :offset="0" style="text-align: center">
-      <h3 style="margin-bottom: 0">{{ $t("BREAK.title") }} v{{ BREAK.version }}</h3>
+      <h3 style="margin-bottom: 0">
+        {{ $t("BREAK.title") }} v{{ BREAK.version }}
+      </h3>
       <h6 style="color: gray">{{ $t("BREAK.description") }}</h6>
     </el-col>
 
-    <el-col id="scene-selector">
-      <el-select v-model="bsKeySelected" :placeholder="$t('allScenes')">
+    <el-col :md="2" :sm="12" :offset="0">
+      <el-select
+        v-model="bsKeySelected"
+        size="small"
+        :placeholder="$t('allScenes')"
+      >
         <el-option
           v-for="(bsVal, bsKey) in BREAK.businessScenes"
           :key="bsKey"
@@ -163,6 +183,16 @@ let getSceneRowSize = (sceneLength: number) => {
           :value="bsKey"
         />
       </el-select>
+    </el-col>
+    <el-col :md="20" :sm="11" :offset="1">
+      <el-radio-group size="small" v-model="hideAllSubRisks">
+        <el-radio-button :label="false">{{
+          $t("showAllSubRisks")
+        }}</el-radio-button>
+        <el-radio-button :label="true">{{
+          $t("hideAllSubRisks")
+        }}</el-radio-button>
+      </el-radio-group>
     </el-col>
   </el-row>
 
@@ -172,10 +202,19 @@ let getSceneRowSize = (sceneLength: number) => {
       class="risk-dimension"
       v-for="(rdVal, rdKey) in sceneBREAK.riskDimensions"
       :key="rdKey"
-      :md="getDimensionRowSize(rdVal.riskScenes.length, Object.keys(sceneBREAK.riskScenes).length)"
+      :md="
+        getDimensionRowSize(
+          rdVal.riskScenes.length,
+          Object.keys(sceneBREAK.riskScenes).length
+        )
+      "
     >
       <h3 class="risk-dimension-title" :title="rdKey.toString()">
-        {{ $t(`BREAK.businessScenes.${bsKeySelected}.riskDimensions.${rdKey}.title`) }}
+        {{
+          $t(
+            `BREAK.businessScenes.${bsKeySelected}.riskDimensions.${rdKey}.title`
+          )
+        }}
       </h3>
 
       <el-row justify="center">
@@ -188,7 +227,11 @@ let getSceneRowSize = (sceneLength: number) => {
         >
           <h4 class="risk-scene-title" :title="rsKey">
             <!-- <a :href="'/risk-demensions/' + rdKey"> -->
-            {{ $t(`BREAK.businessScenes.${bsKeySelected}.riskScenes.${rsKey}.title`) }}
+            {{
+              $t(
+                `BREAK.businessScenes.${bsKeySelected}.riskScenes.${rsKey}.title`
+              )
+            }}
 
             <!-- </a> -->
           </h4>
@@ -199,8 +242,9 @@ let getSceneRowSize = (sceneLength: number) => {
               v-for="rKey in getRisks(sceneBREAK.riskScenes, rsKey)"
               :key="rKey"
               :title="rKey + ': ' + $t(`BREAK.risks.${rKey}.definition`)"
+              :style="hideSubRisks[rKey] ? '' : 'padding:0 0 3px 0;'"
             >
-              <!-- 子风险列表 -->
+              <!-- 有子风险时，显示子风险列表 -->
               <table
                 class="risk-with-sub"
                 style="width: 100%; border-spacing: 0px"
@@ -208,8 +252,9 @@ let getSceneRowSize = (sceneLength: number) => {
               >
                 <tr>
                   <td
-                    class="sidebar"
-                    style="color: #fff; background-color: lightgray; border-radius: 0 0 0 20px"
+                    class="sidebar sidebar-icon"
+                    @click="hideSubRisks[rKey] = !hideSubRisks[rKey]"
+                    :title="$t('showhideSubRisks')"
                   >
                     ⩦
                   </td>
@@ -224,9 +269,14 @@ let getSceneRowSize = (sceneLength: number) => {
                   class="sub-risk"
                   :key="srKey"
                   :title="srKey + ': ' + $t(`BREAK.risks.${srKey}.definition`)"
-                  v-for="srKey in subRisks[rKey]"
+                  v-for="(srKey, index) in subRisks[rKey]"
+                  v-show="!hideSubRisks[rKey]"
                 >
-                  <td class="sidebar" style="border-right: 1px solid lightgray"></td>
+                  <td class="sidebar sidebar-line">
+                    <svg v-if="index === 0" fill="lightgray">
+                      <path d="M0 0H12V12Z"></path>
+                    </svg>
+                  </td>
                   <td class="sub-risk-link">
                     <router-link class="link" :to="'/risk/' + srKey">{{
                       $t(`BREAK.risks.${srKey}.title`)
@@ -245,7 +295,11 @@ let getSceneRowSize = (sceneLength: number) => {
       </el-row>
     </el-col>
   </el-row>
-  <RiskDetail v-on:drawer-close="riskDetailClose" :drawer="riskDrawer" :rKey="riskKey" />
+  <RiskDetail
+    v-on:drawer-close="riskDetailClose"
+    :drawer="riskDrawer"
+    :rKey="riskKey"
+  />
 </template>
 
 <style scoped>
@@ -253,11 +307,6 @@ let getSceneRowSize = (sceneLength: number) => {
   margin-bottom: 10px;
 }
 
-#scene-selector {
-  position: absolute;
-  bottom: 10px;
-  width: 200px;
-}
 .risk-dimension {
   border: 1px solid rgb(246, 245, 245);
   box-sizing: border-box;
@@ -284,10 +333,6 @@ let getSceneRowSize = (sceneLength: number) => {
 .risk,
 .sub-risk-link {
   padding: 3px 0 3px 0;
-}
-
-.s-risk {
-  padding: 0 0 3px 0;
 }
 
 .risk,
@@ -322,7 +367,37 @@ let getSceneRowSize = (sceneLength: number) => {
 }
 
 .sidebar {
-  width: 5px;
+  width: 8px;
+}
+
+.sidebar-icon {
+  cursor: pointer;
+  color: #fff;
+  background-color: lightgray;
+  /* border-radius: 0 0 0 20px; */
+}
+
+.first-sub-risk .sidebar {
+  border-radius: 0 0 0 20px;
+  background-color: lightgray;
+}
+
+.sidebar-icon:hover {
+  background-color: rgb(228, 230, 241);
+  color: grey;
+}
+.sidebar-line {
+  border-right: 1px solid lightgray;
+  position: relative;
+}
+
+.sidebar-line svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: lightgray;
+  width: 10px;
+  height: 10px;
 }
 
 .link {
@@ -334,5 +409,6 @@ let getSceneRowSize = (sceneLength: number) => {
 
 .parent-risk-link {
   font-weight: 500;
+  border-left: 1px solid lightgray;
 }
 </style>
