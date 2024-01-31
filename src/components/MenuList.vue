@@ -86,11 +86,16 @@ const getActiveIndex = (fullPath: string) => {
     <div class="flex-grow" />
     <el-menu-item class="" index="/">{{ $t("menu.home") }}</el-menu-item>
     <el-menu-item class="" index="/risks">{{ $t("menu.risks") }}</el-menu-item>
-    <el-menu-item class="" index="/avoidances">{{ $t("menu.avoidances") }}</el-menu-item>
+    <el-menu-item class="" index="/avoidances">{{
+      $t("menu.avoidances")
+    }}</el-menu-item>
     <el-menu-item index="/attack-tools">{{ $t("attackTools") }}</el-menu-item>
     <el-menu-item index="/threat-actors">{{ $t("threatActors") }}</el-menu-item>
     <el-menu-item class="" index="/ability-providers" key="">{{
       $t("abilityProviders")
+    }}</el-menu-item>
+    <el-menu-item index="/relation/risk/R0001">{{
+      $t("relationMap")
     }}</el-menu-item>
 
     <el-dropdown class="outside-link">
@@ -101,9 +106,15 @@ const getActiveIndex = (fullPath: string) => {
       </span>
       <template #dropdown>
         <el-dropdown-menu class="outside-link-menu">
-          <el-dropdown-item><a target="_blank" href="https://jd.army">Webpage</a></el-dropdown-item>
           <el-dropdown-item
-            ><a target="_blank" href="https://blog.jd.army">Blog</a></el-dropdown-item
+            ><a target="_blank" href="https://jd.army"
+              >Webpage</a
+            ></el-dropdown-item
+          >
+          <el-dropdown-item
+            ><a target="_blank" href="https://blog.jd.army"
+              >Blog</a
+            ></el-dropdown-item
           >
           <el-dropdown-item divided
             ><a

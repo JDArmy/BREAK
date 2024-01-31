@@ -8,15 +8,24 @@
         "link": "https://baike.baidu.com/item/%E7%94%B5%E4%BF%A1%E8%AF%88%E9%AA%97?fromModule=lemma_search-box"
       }
     ],
-    "buildAttackTools": [],
+    "buildAttackTools": [
+      "AT0051"
+    ],
     "useAttackTools": [
       "AT0001",
+      "AT0001-002",
       "AT0012",
       "AT0013",
       "AT0027",
       "AT0039",
+      "AT0039-001",
+      "AT0039-002",
       "AT0040",
-      "AT0042"
+      "AT0040-001",
+      "AT0042",
+      "AT0053-001",
+      "AT0053-002",
+      "AT0051"
     ],
     "makeRisks": [
       "R0044",
@@ -24,7 +33,8 @@
       "R0093",
       "R0094",
       "R0095",
-      "R0038"
+      "R0038",
+      "R0083-002"
     ],
     "updated": "2024-01-17"
   },
@@ -37,9 +47,14 @@
         "link": "https://baijiahao.baidu.com/s?id=1690849537211278629&wfr=spider&for=pc"
       }
     ],
-    "buildAttackTools": [],
+    "buildAttackTools": [
+      "AT0039-001",
+      "AT0040-001"
+    ],
     "useAttackTools": [
-      "AT0043"
+      "AT0043",
+      "AT0039",
+      "AT0039-001"
     ],
     "makeRisks": [
       "R0095"

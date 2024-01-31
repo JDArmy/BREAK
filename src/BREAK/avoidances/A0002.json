@@ -7,8 +7,7 @@
     "limitation": "接口签名用来保证数据传输过程的完整性是没有问题的，不过因接口签名目前广泛被用在防止自动化的环节，这使得接口签名面临着强对抗。因为签名算法必须以某种形式存在于用户终端，相当于对用户可见。攻击者通过解析算法、调用签名接口、模拟点击等方式均可破解接口签名算法，来实现对请求的自动化伪造。",
     "references": [
       {
-        "title": "smart-cloud",
-        "description": "一个开源 spring cloud 脚手架，具备接口签名功能",
+        "title": "smart-cloud - 一个开源 spring cloud 脚手架，具备接口签名功能",
         "link": "https://github.com/smart-cloud/smart-cloud-examples#%E4%BA%8C%E6%8E%A5%E5%8F%A3%E5%AE%89%E5%85%A8"
       }
     ],

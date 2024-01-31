@@ -8,9 +8,12 @@
         "link": "https://baike.baidu.com/item/%E9%BB%84%E7%89%9B%E5%85%9A/285883?fromtitle=%E9%BB%84%E7%89%9B&fromid=6349458"
       }
     ],
-    "buildAttackTools": [],
+    "buildAttackTools": [
+      "AT0051"
+    ],
     "useAttackTools": [
       "AT0001",
+      "AT0001-002",
       "AT0002",
       "AT0003",
       "AT0006",
@@ -28,11 +31,12 @@
       "AT0029",
       "AT0030",
       "AT0032",
-      "AT0034",
+      "AT0034-001",
       "AT0035",
       "AT0039",
       "AT0044",
-      "AT0045"
+      "AT0045",
+      "AT0051"
     ],
     "makeRisks": [
       "R0003",

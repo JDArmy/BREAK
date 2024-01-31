@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/prettierrc",
-  "printWidth": 100,
+  "printWidth": 80,
   "eslintIntegration": true,
   "stylelintIntegration": true,
   "tabWidth": 2,
