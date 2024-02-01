@@ -23,7 +23,7 @@ const riskKey = ref("");
 
 //页内锚点
 const getTableHeight = () =>
-  route.hash.split("#")[1] ? "unset" : window.innerHeight - 200;
+  route.hash.split("#")[1] ? "unset" : window.innerHeight - 100;
 const tableRowClassName = ({ row }: { row: any }) => {
   if (route.hash.split("#")[1] === row.atKey) {
     return "anchor-row";
@@ -33,6 +33,21 @@ const tableRowClassName = ({ row }: { row: any }) => {
 </script>
 <template lang="">
   <h3>{{ $t("attackTools") }}</h3>
+  <div id="attack-tools-list">
+    <router-link
+      v-for="attackTool in attackTools"
+      :key="attackTool.atKey"
+      :title="attackTool.summary"
+      class="router-link ml-2"
+      :to="{ name: 'attackTools', hash: '#' + attackTool.atKey }"
+    >
+      <el-button size="small" round class="ml-2">
+        {{ attackTool.atKey }}:{{
+          $t(`BREAK.attackTools.${attackTool.atKey}.title`)
+        }}
+      </el-button>
+    </router-link>
+  </div>
   <el-table
     :height="getTableHeight()"
     :scrollbar-always-on="true"
@@ -43,7 +58,7 @@ const tableRowClassName = ({ row }: { row: any }) => {
   >
     <el-table-column prop="atKey" label="ID" :width="135">
       <template #default="scope">
-        <a :id="scope.row.atKey" class="attack-tool-anchor"></a>
+        <a :id="scope.row.atKey" class="anchor-position"></a>
         {{ scope.row.atKey }}
         <router-link
           :title="$t('relationMap')"
@@ -126,9 +141,7 @@ ul {
   margin-left: 5px;
 }
 
-.attack-tool-anchor {
-  position: absolute;
-  top: -1vh;
-  left: 0px;
+#attack-tools-list {
+  margin-bottom: 40px;
 }
 </style>
