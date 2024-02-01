@@ -5,6 +5,7 @@ import type { Avoidances } from "@/BREAK/avoidances";
 import { useRoute } from "vue-router";
 import { ref, watch } from "vue";
 import { CaretTop } from "@element-plus/icons-vue";
+import iconRelation from "@/components/icons/iconRelation.vue";
 
 const route = useRoute();
 
@@ -150,10 +151,20 @@ const scrollToTop = () => {
       stripe
       border
     >
-      <el-table-column prop="aKey" width="110px" :label="$t('ID')">
+      <el-table-column prop="aKey" width="135px" :label="$t('ID')">
         <template #default="scope">
           <a class="avoidance-anchor" :id="scope.row.aKey"></a>
           {{ scope.row.aKey }}
+          <router-link
+            :title="$t('relationMap')"
+            class="relation-map-icon"
+            :to="{
+              name: 'relation',
+              params: { type: 'avoidance', key: scope.row.aKey },
+            }"
+          >
+            <icon-relation width="14px" height="14px" />
+          </router-link>
         </template>
       </el-table-column>
       <el-table-column width="150px" :label="$t('title')">

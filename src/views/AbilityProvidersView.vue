@@ -2,6 +2,7 @@
 import BREAK from "@/BREAK";
 import { Link } from "@element-plus/icons-vue";
 import { useRoute } from "vue-router";
+import iconRelation from "@/components/icons/iconRelation.vue";
 
 const route = useRoute();
 
@@ -11,7 +12,8 @@ let providers = Object.keys(BREAK.abilityProviders).map((apKey) => ({
 }));
 
 //页内锚点
-const getTableHeight = () => (route.hash.split("#")[1] ? "unset" : window.innerHeight - 200);
+const getTableHeight = () =>
+  route.hash.split("#")[1] ? "unset" : window.innerHeight - 200;
 const tableRowClassName = ({ row }: { row: any }) => {
   if (route.hash.split("#")[1] === row.apKey) {
     return "anchor-row";
@@ -37,26 +39,49 @@ const tableRowClassName = ({ row }: { row: any }) => {
         </div>
       </template>
     </el-table-column>
-    <el-table-column prop="title" width="120" :label="$t('title')">
+    <el-table-column prop="title" width="135" :label="$t('title')">
       <template #default="scope">
         <a :href="scope.row.site" target="_blank">
           <el-icon><Link /></el-icon
-          >{{ scope.row.apKey ? $t(`BREAK.abilityProviders.${scope.row.apKey}.title`) : "" }}
+          >{{
+            scope.row.apKey
+              ? $t(`BREAK.abilityProviders.${scope.row.apKey}.title`)
+              : ""
+          }}
         </a>
+        <router-link
+          :title="$t('relationMap')"
+          class="relation-map-icon"
+          :to="{
+            name: 'relation',
+            params: { type: 'ability-provider', key: scope.row.apKey },
+          }"
+        >
+          <icon-relation width="14px" height="14px" />
+        </router-link>
       </template>
     </el-table-column>
     <el-table-column prop="abilities" :label="$t('supportAbilities')">
       <template #default="scope">
-        <span class="provider-abilities" v-for="(ability, aKey) in scope.row.abilities" :key="aKey">
+        <span
+          class="provider-abilities"
+          v-for="(ability, aKey) in scope.row.abilities"
+          :key="aKey"
+        >
           <a :href="ability.link" target="_blank"
-            ><el-icon><Link /></el-icon>{{ $t(`BREAK.avoidances.${aKey}.title`) }}</a
+            ><el-icon><Link /></el-icon
+            >{{ $t(`BREAK.avoidances.${aKey}.title`) }}</a
           >
         </span>
       </template>
     </el-table-column>
     <el-table-column prop="description" :label="$t('description')">
       <template #default="scope">
-        {{ scope.row.apKey ? $t(`BREAK.abilityProviders.${scope.row.apKey}.description`) : "" }}
+        {{
+          scope.row.apKey
+            ? $t(`BREAK.abilityProviders.${scope.row.apKey}.description`)
+            : ""
+        }}
       </template>
     </el-table-column>
   </el-table>

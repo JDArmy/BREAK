@@ -6,6 +6,7 @@ import AvoidanceDetail from "@/components/AvoidanceDetail.vue";
 import "element-plus/es/components/drawer/style/css";
 import { ElDrawer, ElButton, ElIcon } from "element-plus";
 import { Link } from "@element-plus/icons-vue";
+import iconRelation from "./icons/iconRelation.vue";
 
 defineProps<{
   drawer: boolean;
@@ -41,6 +42,16 @@ const getAttackToolAvoidances = (atKey: string) => {
     <div class="desc">
       <strong>{{ $t("ID") }}:&nbsp;</strong>
       {{ atKey }}
+      <router-link
+        :title="$t('relationMap')"
+        class="relation-map-icon"
+        :to="{
+          name: 'relation',
+          params: { type: 'attack-tool', key: atKey },
+        }"
+      >
+        <icon-relation width="14px" height="14px" />
+      </router-link>
     </div>
     <div class="desc">
       <strong>{{ $t("title") }}:&nbsp;</strong>
@@ -61,13 +72,18 @@ const getAttackToolAvoidances = (atKey: string) => {
           avoidanceDrawer = true;
         "
         round
-        >{{ aKey + ":&nbsp;" + $t(`BREAK.avoidances.${aKey}.title`) }}</el-button
+        >{{
+          aKey + ":&nbsp;" + $t(`BREAK.avoidances.${aKey}.title`)
+        }}</el-button
       >
     </div>
     <div class="desc" v-if="getAttackToolReferences(atKey).length > 0">
       <strong>{{ $t("references") }}:&nbsp;</strong>
       <ul>
-        <li v-for="(reference, refIdx) in getAttackToolReferences(atKey)" :key="refIdx">
+        <li
+          v-for="(reference, refIdx) in getAttackToolReferences(atKey)"
+          :key="refIdx"
+        >
           <a :href="reference.link" target="_blank">
             <el-icon><Link /></el-icon
             >{{ $t(`BREAK.attackTools.${atKey}.references[${refIdx}].title`) }}

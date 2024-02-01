@@ -3,6 +3,7 @@ import BREAK from "@/BREAK";
 
 import "element-plus/es/components/drawer/style/css";
 import { Link } from "@element-plus/icons-vue";
+import iconRelation from "./icons/iconRelation.vue";
 
 defineProps<{
   drawer: boolean;
@@ -31,6 +32,16 @@ const getAvoidanceReferences = (aKey: string) => {
     <div class="desc">
       <strong>{{ $t("ID") }}:&nbsp;</strong>
       {{ aKey }}
+      <router-link
+        :title="$t('relationMap')"
+        class="relation-map-icon"
+        :to="{
+          name: 'relation',
+          params: { type: 'avoidance', key: aKey },
+        }"
+      >
+        <icon-relation width="14px" height="14px" />
+      </router-link>
     </div>
     <div class="desc">
       <strong>{{ $t("title") }}:&nbsp;</strong>

@@ -5,6 +5,7 @@ import BREAK from "@/BREAK";
 // import "element-plus/es/components/table-column/style/css";
 import AvoidanceDetail from "@/components/AvoidanceDetail.vue";
 import RiskDetail from "@/components/RiskDetail.vue";
+import iconRelation from "@/components/icons/iconRelation.vue";
 
 const avoidanceDrawer = ref(false);
 const avoidanceKey = ref("");
@@ -29,11 +30,23 @@ let getWindowHeight = () => window.innerHeight;
     stripe
     border
   >
-    <el-table-column prop="rKey" width="120px" :label="$t('riskKey')">
+    <el-table-column prop="rKey" width="135px" :label="$t('riskKey')">
       <template v-slot="scope">
-        <a @click="(riskKey = scope.row.rKey) && (riskDrawer = true)" href="javascript:void(0);">{{
-          scope.row.rKey
-        }}</a>
+        <a
+          @click="(riskKey = scope.row.rKey) && (riskDrawer = true)"
+          href="javascript:void(0);"
+          >{{ scope.row.rKey }}</a
+        >
+        <router-link
+          :title="$t('relationMap')"
+          class="relation-map-icon"
+          :to="{
+            name: 'relation',
+            params: { type: 'risk', key: scope.row.rKey },
+          }"
+        >
+          <icon-relation width="14px" height="14px" />
+        </router-link>
       </template>
     </el-table-column>
     <el-table-column prop="title" width="150px" :label="$t('riskTitle')">
@@ -43,22 +56,33 @@ let getWindowHeight = () => window.innerHeight;
     </el-table-column>
     <el-table-column prop="definition" :label="$t('riskDefinition')"
       ><template #default="scope">
-        {{ scope.row.rKey ? $t(`BREAK.risks.${scope.row.rKey}.definition`) : "" }}
+        {{
+          scope.row.rKey ? $t(`BREAK.risks.${scope.row.rKey}.definition`) : ""
+        }}
       </template></el-table-column
     >
     <el-table-column prop="description" :label="$t('riskDescription')"
       ><template #default="scope">
-        {{ scope.row.rKey ? $t(`BREAK.risks.${scope.row.rKey}.description`) : "" }}
+        {{
+          scope.row.rKey ? $t(`BREAK.risks.${scope.row.rKey}.description`) : ""
+        }}
       </template></el-table-column
     >
-    <el-table-column prop="complexity" width="100px" :label="$t('riskComplexity')"
+    <el-table-column
+      prop="complexity"
+      width="100px"
+      :label="$t('riskComplexity')"
       ><template #default="scope">
-        {{ scope.row.rKey ? $t(`BREAK.risks.${scope.row.rKey}.complexity`) : "" }}
+        {{
+          scope.row.rKey ? $t(`BREAK.risks.${scope.row.rKey}.complexity`) : ""
+        }}
       </template></el-table-column
     >
     <el-table-column prop="influence" :label="$t('riskInfluence')"
       ><template #default="scope">
-        {{ scope.row.rKey ? $t(`BREAK.risks.${scope.row.rKey}.influence`) : "" }}
+        {{
+          scope.row.rKey ? $t(`BREAK.risks.${scope.row.rKey}.influence`) : ""
+        }}
       </template></el-table-column
     >
     <el-table-column :label="$t('avoidance')">
@@ -73,7 +97,9 @@ let getWindowHeight = () => window.innerHeight;
             avoidanceDrawer = true;
           "
           round
-          >{{ aKey + ":&nbsp;" + $t(`BREAK.avoidances.${aKey}.title`) }}</el-button
+          >{{
+            aKey + ":&nbsp;" + $t(`BREAK.avoidances.${aKey}.title`)
+          }}</el-button
         >
       </template>
     </el-table-column>

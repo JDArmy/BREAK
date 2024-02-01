@@ -5,6 +5,7 @@ import AvoidanceDetail from "@/components/AvoidanceDetail.vue";
 import RiskDetail from "@/components/RiskDetail.vue";
 import { Link } from "@element-plus/icons-vue";
 import { useRoute } from "vue-router";
+import iconRelation from "@/components/icons/iconRelation.vue";
 
 const route = useRoute();
 
@@ -21,7 +22,8 @@ const riskDrawer = ref(false);
 const riskKey = ref("");
 
 //页内锚点
-const getTableHeight = () => (route.hash.split("#")[1] ? "unset" : window.innerHeight - 200);
+const getTableHeight = () =>
+  route.hash.split("#")[1] ? "unset" : window.innerHeight - 200;
 const tableRowClassName = ({ row }: { row: any }) => {
   if (route.hash.split("#")[1] === row.atKey) {
     return "anchor-row";
@@ -39,10 +41,20 @@ const tableRowClassName = ({ row }: { row: any }) => {
     border
     stripe
   >
-    <el-table-column prop="atKey" label="ID" :width="120">
+    <el-table-column prop="atKey" label="ID" :width="135">
       <template #default="scope">
         <a :id="scope.row.atKey" class="attack-tool-anchor"></a>
         {{ scope.row.atKey }}
+        <router-link
+          :title="$t('relationMap')"
+          class="relation-map-icon"
+          :to="{
+            name: 'relation',
+            params: { type: 'attack-tool', key: scope.row.atKey },
+          }"
+        >
+          <icon-relation width="14px" height="14px" />
+        </router-link>
       </template>
     </el-table-column>
     <el-table-column prop="title" :label="$t('title')" :width="150" />
@@ -53,7 +65,11 @@ const tableRowClassName = ({ row }: { row: any }) => {
           <li v-for="(reference, refIdx) in scope.row.references" :key="refIdx">
             <a :href="reference.link" target="_blank"
               ><el-icon><Link /></el-icon
-              >{{ $t(`BREAK.attackTools.${scope.row.atKey}.references[${refIdx}].title`) }}</a
+              >{{
+                $t(
+                  `BREAK.attackTools.${scope.row.atKey}.references[${refIdx}].title`
+                )
+              }}</a
             >
           </li>
         </ul>
@@ -84,7 +100,9 @@ const tableRowClassName = ({ row }: { row: any }) => {
             avoidanceDrawer = true;
           "
           round
-          >{{ aKey + ":&nbsp;" + $t(`BREAK.avoidances.${aKey}.title`) }}</el-button
+          >{{
+            aKey + ":&nbsp;" + $t(`BREAK.avoidances.${aKey}.title`)
+          }}</el-button
         >
       </template>
     </el-table-column>
