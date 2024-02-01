@@ -5,6 +5,7 @@ import { Link } from "@element-plus/icons-vue";
 import RiskDetail from "@/components/RiskDetail.vue";
 import AttackToolDetail from "@/components/AttackToolDetail.vue";
 import { useRoute } from "vue-router";
+import iconRelation from "@/components/icons/iconRelation.vue";
 
 const route = useRoute();
 // 攻击工具详情页
@@ -21,7 +22,8 @@ let threatActors = Object.keys(BREAK.threatActors).map((taKey) => ({
 }));
 
 //页内锚点
-const getTableHeight = () => (route.hash.split("#")[1] ? "unset" : window.innerHeight - 200);
+const getTableHeight = () =>
+  route.hash.split("#")[1] ? "unset" : window.innerHeight - 200;
 const tableRowClassName = ({ row }: { row: any }) => {
   if (route.hash.split("#")[1] === row.taKey) {
     return "anchor-row";
@@ -40,10 +42,20 @@ const tableRowClassName = ({ row }: { row: any }) => {
     border
     stripe
   >
-    <el-table-column prop="taKey" width="120" :label="$t('ID')">
+    <el-table-column prop="taKey" width="135" :label="$t('ID')">
       <template #default="scope">
         <a :id="scope.row.taKey" class="threat-actor-anchor"></a>
         {{ scope.row.taKey }}
+        <router-link
+          :title="$t('relationMap')"
+          class="relation-map-icon"
+          :to="{
+            name: 'relation',
+            params: { type: 'threat-actor', key: scope.row.taKey },
+          }"
+        >
+          <icon-relation width="14px" height="14px" />
+        </router-link>
       </template>
     </el-table-column>
     <el-table-column prop="title" width="150" :label="$t('title')" />
@@ -57,7 +69,9 @@ const tableRowClassName = ({ row }: { row: any }) => {
           @click="(attackToolKey = atKey) && (attackToolDrawer = true)"
           class="relational-link"
           round
-          >{{ atKey + ":&nbsp;" + $t(`BREAK.attackTools.${atKey}.title`) }}</el-button
+          >{{
+            atKey + ":&nbsp;" + $t(`BREAK.attackTools.${atKey}.title`)
+          }}</el-button
         >
       </template></el-table-column
     >
@@ -70,7 +84,9 @@ const tableRowClassName = ({ row }: { row: any }) => {
           @click="(attackToolKey = atKey) && (attackToolDrawer = true)"
           class="relational-link"
           round
-          >{{ atKey + ":&nbsp;" + $t(`BREAK.attackTools.${atKey}.title`) }}</el-button
+          >{{
+            atKey + ":&nbsp;" + $t(`BREAK.attackTools.${atKey}.title`)
+          }}</el-button
         >
       </template></el-table-column
     >
@@ -93,7 +109,11 @@ const tableRowClassName = ({ row }: { row: any }) => {
           <li v-for="(reference, refIdx) in scope.row.references" :key="refIdx">
             <a v-if="scope.row.taKey" :href="reference.link" target="_blank"
               ><el-icon><Link /></el-icon
-              >{{ $t(`BREAK.threatActors.${scope.row.taKey}.references[${refIdx}].title`) }}
+              >{{
+                $t(
+                  `BREAK.threatActors.${scope.row.taKey}.references[${refIdx}].title`
+                )
+              }}
             </a>
           </li>
         </ul>

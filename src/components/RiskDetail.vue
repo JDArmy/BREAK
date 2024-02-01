@@ -8,6 +8,7 @@ import "element-plus/es/components/drawer/style/css";
 import { Link } from "@element-plus/icons-vue";
 
 import RiskRelation from "@/components/RiskRelation.vue";
+import iconRelation from "./icons/iconRelation.vue";
 
 defineProps<{
   drawer: boolean;
@@ -25,12 +26,15 @@ const getDrawerWidth = () => {
   return window.innerWidth > 600 ? 600 : "100%";
 };
 
-const getReferences = (rKey: string) => risks[rKey as keyof typeof risks].references;
+const getReferences = (rKey: string) =>
+  risks[rKey as keyof typeof risks].references;
 
 //从attackTools中获取对应ID的risks
 const getriskDescriptionTools = (rKey: string) => {
   return Object.keys(BREAK.attackTools).filter((atKey) =>
-    BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].risks.includes(rKey as never)
+    BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].risks.includes(
+      rKey as never
+    )
   );
 };
 
@@ -55,6 +59,16 @@ const getriskDescriptionTools = (rKey: string) => {
     <div class="desc">
       <strong>{{ $t("riskKey") }}:&nbsp;</strong>
       {{ rKey }}
+      <router-link
+        :title="$t('relationMap')"
+        class="relation-map-icon"
+        :to="{
+          name: 'relation',
+          params: { type: 'risk', key: rKey },
+        }"
+      >
+        <icon-relation width="14px" height="14px" />
+      </router-link>
     </div>
     <div class="desc">
       <strong>{{ $t("riskTitle") }}:&nbsp;</strong>
@@ -85,7 +99,9 @@ const getriskDescriptionTools = (rKey: string) => {
         class="relational-link"
         @click="(avoidanceKey = aKey) && (avoidanceDrawer = true)"
         round
-        >{{ aKey + ":&nbsp;" + $t(`BREAK.avoidances.${aKey}.title`) }}</el-button
+        >{{
+          aKey + ":&nbsp;" + $t(`BREAK.avoidances.${aKey}.title`)
+        }}</el-button
       >
     </div>
     <div class="desc" v-if="getReferences(rKey).length > 0">
@@ -111,7 +127,9 @@ const getriskDescriptionTools = (rKey: string) => {
         class="relational-link"
         @click="(attackToolKey = atKey) && (attackToolDrawer = true)"
         round
-        >{{ atKey + ":&nbsp;" + $t(`BREAK.attackTools.${atKey}.title`) }}</el-button
+        >{{
+          atKey + ":&nbsp;" + $t(`BREAK.attackTools.${atKey}.title`)
+        }}</el-button
       >
     </div>
     <!-- 关系图 -->

@@ -29,6 +29,7 @@ declare module 'vue' {
     GithubPane: typeof import('./src/components/GithubPane.vue')['default']
     IconFork: typeof import('./src/components/icons/iconFork.vue')['default']
     IconGithub: typeof import('./src/components/icons/iconGithub.vue')['default']
+    IconRelation: typeof import('./src/components/icons/iconRelation.vue')['default']
     IconStar: typeof import('./src/components/icons/iconStar.vue')['default']
     IconTranslate: typeof import('./src/components/icons/iconTranslate.vue')['default']
     MenuList: typeof import('./src/components/MenuList.vue')['default']
