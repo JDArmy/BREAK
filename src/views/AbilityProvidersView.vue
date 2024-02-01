@@ -13,7 +13,7 @@ let providers = Object.keys(BREAK.abilityProviders).map((apKey) => ({
 
 //页内锚点
 const getTableHeight = () =>
-  route.hash.split("#")[1] ? "unset" : window.innerHeight - 200;
+  route.hash.split("#")[1] ? "unset" : window.innerHeight - 100;
 const tableRowClassName = ({ row }: { row: any }) => {
   if (route.hash.split("#")[1] === row.apKey) {
     return "anchor-row";
@@ -24,6 +24,20 @@ const tableRowClassName = ({ row }: { row: any }) => {
 
 <template lang="">
   <h3>{{ $t("abilityProviders") }}</h3>
+  <div id="providers-list">
+    <router-link
+      v-for="provider in providers"
+      :key="provider.apKey"
+      class="router-link ml-2"
+      :to="{ name: 'abilityProviders', hash: '#' + provider.apKey }"
+    >
+      <el-button size="small" round class="ml-2">
+        {{ provider.apKey }}:{{
+          $t(`BREAK.abilityProviders.${provider.apKey}.title`)
+        }}
+      </el-button>
+    </router-link>
+  </div>
   <el-table
     :height="getTableHeight()"
     :row-class-name="tableRowClassName"
@@ -33,7 +47,7 @@ const tableRowClassName = ({ row }: { row: any }) => {
   >
     <el-table-column prop="logo" width="150" :label="$t('logo')">
       <template #default="scope">
-        <a :id="scope.row.apKey" class="ability-provider-anchor"></a>
+        <a :id="scope.row.apKey" class="anchor-position"></a>
         <div class="aLogo">
           <img :src="scope.row.logoBase64" />
         </div>
@@ -118,9 +132,7 @@ const tableRowClassName = ({ row }: { row: any }) => {
   color: brown;
 }
 
-.ability-provider-anchor {
-  position: absolute;
-  top: -1vh;
-  left: 0px;
+#providers-list {
+  margin-bottom: 40px;
 }
 </style>

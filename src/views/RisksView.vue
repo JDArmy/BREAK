@@ -6,6 +6,7 @@ import BREAK from "@/BREAK";
 import AvoidanceDetail from "@/components/AvoidanceDetail.vue";
 import RiskDetail from "@/components/RiskDetail.vue";
 import iconRelation from "@/components/icons/iconRelation.vue";
+import { useRoute } from "vue-router";
 
 const avoidanceDrawer = ref(false);
 const avoidanceKey = ref("");
@@ -18,20 +19,44 @@ let risks = Object.keys(BREAK.risks).map((rKey) => ({
 let riskDrawer = ref(false);
 let riskKey = ref("");
 
-let getWindowHeight = () => window.innerHeight;
+//页内锚点
+const route = useRoute();
+const getTableHeight = () =>
+  route.hash.split("#")[1] ? "unset" : window.innerHeight - 100;
+const tableRowClassName = ({ row }: { row: any }) => {
+  if (route.hash.split("#")[1] === row.rKey) {
+    return "anchor-row";
+  }
+  return "";
+};
 </script>
 
 <template lang="">
   <h3>{{ $t("menu.risks") }}</h3>
+  <div id="risks-list">
+    <router-link
+      v-for="risk in risks"
+      :key="risk.rKey"
+      :title="risk.definition"
+      class="router-link ml-2"
+      :to="{ name: 'risks', hash: '#' + risk.rKey }"
+    >
+      <el-button size="small" round class="ml-2">
+        {{ risk.rKey }}:{{ $t(`BREAK.risks.${risk.rKey}.title`) }}
+      </el-button>
+    </router-link>
+  </div>
   <el-table
-    :height="getWindowHeight() - 200"
+    :height="getTableHeight()"
     :scrollbar-always-on="true"
     :data="risks"
+    :row-class-name="tableRowClassName"
     stripe
     border
   >
     <el-table-column prop="rKey" width="135px" :label="$t('riskKey')">
       <template v-slot="scope">
+        <a :id="scope.row.rKey" class="anchor-position"></a>
         <a
           @click="(riskKey = scope.row.rKey) && (riskDrawer = true)"
           href="javascript:void(0);"
@@ -118,4 +143,8 @@ let getWindowHeight = () => window.innerHeight;
   />
 </template>
 
-<style scoped></style>
+<style scoped>
+#risks-list {
+  margin-bottom: 40px;
+}
+</style>

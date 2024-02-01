@@ -9,10 +9,21 @@
   background-color: var(--el-color-warning-light-7) !important;
 }
 
+.anchor-position {
+  position: absolute;
+  top: -1vh;
+  left: 0px;
+}
+
 .el-drawer__header {
   margin-bottom: 0px;
 }
 
 .relation-map-icon {
   margin-left: 5px;
+}
+
+.ml-2 {
+  margin-left: 5px;
+  margin-top: 5px;
 }

@@ -23,7 +23,7 @@ let threatActors = Object.keys(BREAK.threatActors).map((taKey) => ({
 
 //页内锚点
 const getTableHeight = () =>
-  route.hash.split("#")[1] ? "unset" : window.innerHeight - 200;
+  route.hash.split("#")[1] ? "unset" : window.innerHeight - 100;
 const tableRowClassName = ({ row }: { row: any }) => {
   if (route.hash.split("#")[1] === row.taKey) {
     return "anchor-row";
@@ -34,6 +34,21 @@ const tableRowClassName = ({ row }: { row: any }) => {
 
 <template lang="">
   <h3>{{ $t("threatActors") }}</h3>
+  <div id="threat-actors-list">
+    <router-link
+      v-for="threatActor in threatActors"
+      :key="threatActor.taKey"
+      :title="threatActor.summary"
+      class="router-link ml-2"
+      :to="{ name: 'threatActors', hash: '#' + threatActor.taKey }"
+    >
+      <el-button size="small" round class="ml-2">
+        {{ threatActor.taKey }}:{{
+          $t(`BREAK.threatActors.${threatActor.taKey}.title`)
+        }}
+      </el-button>
+    </router-link>
+  </div>
   <el-table
     :height="getTableHeight()"
     :scrollbar-always-on="true"
@@ -44,7 +59,7 @@ const tableRowClassName = ({ row }: { row: any }) => {
   >
     <el-table-column prop="taKey" width="135" :label="$t('ID')">
       <template #default="scope">
-        <a :id="scope.row.taKey" class="threat-actor-anchor"></a>
+        <a :id="scope.row.taKey" class="anchor-position"></a>
         {{ scope.row.taKey }}
         <router-link
           :title="$t('relationMap')"
@@ -162,5 +177,9 @@ const tableRowClassName = ({ row }: { row: any }) => {
   position: absolute;
   top: -1vh;
   left: 0px;
+}
+
+#threat-actors-list {
+  margin-bottom: 40px;
 }
 </style>

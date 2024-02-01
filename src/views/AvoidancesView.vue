@@ -113,7 +113,7 @@ const scrollToTop = () => {
           :key="avoidanceKey"
           :title="avoidance.summary"
           class="router-link"
-          :to="{ path: '/avoidances', hash: '#' + avoidanceKey }"
+          :to="{ name: 'avoidances', hash: '#' + avoidanceKey }"
         >
           <el-button size="small" round class="ml-2">
             {{ avoidanceKey }}:{{
@@ -153,7 +153,7 @@ const scrollToTop = () => {
     >
       <el-table-column prop="aKey" width="135px" :label="$t('ID')">
         <template #default="scope">
-          <a class="avoidance-anchor" :id="scope.row.aKey"></a>
+          <a class="anchor-position" :id="scope.row.aKey"></a>
           {{ scope.row.aKey }}
           <router-link
             :title="$t('relationMap')"
@@ -254,19 +254,8 @@ const scrollToTop = () => {
   margin-left: 5px;
 }
 
-.ml-2 {
-  margin-left: 5px;
-  margin-top: 5px;
-}
-
 .router-link {
   color: inherit;
   text-decoration: none;
-}
-
-.avoidance-anchor {
-  position: absolute;
-  top: -1vh;
-  left: 0px;
 }
 </style>
