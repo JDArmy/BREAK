@@ -67,6 +67,7 @@ const getAttackToolAvoidances = (atKey: string) => {
         v-for="aKey in getAttackToolAvoidances(atKey)"
         :key="aKey"
         class="relational-link"
+        size="small"
         @click="
           avoidanceKey = aKey;
           avoidanceDrawer = true;

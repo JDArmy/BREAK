@@ -11,11 +11,6 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: "/risks",
-      name: "risks",
-      component: () => import("@/views/RisksView.vue"),
-    },
-    {
       path: "/risk/:rKey",
       name: "riskDetail",
       component: HomeView,
@@ -24,6 +19,11 @@ const router = createRouter({
       path: "/business-scene/:bsKey",
       name: "businessScene",
       component: HomeView,
+    },
+    {
+      path: "/risks",
+      name: "risks",
+      component: () => import("@/views/RisksView.vue"),
     },
     {
       path: "/avoidances",
