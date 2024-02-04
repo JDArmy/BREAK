@@ -49,25 +49,32 @@ const setJsonData = () => {
   }[] = [];
 
   // 枚举所有有关的avoidances
-  BREAK.risks[props.rKey as keyof typeof BREAK.risks].avoidances.forEach((avoidanceKey) => {
-    nodes.push({
-      id: avoidanceKey,
-      text:
-        avoidanceKey +
-        "<br>" +
-        BREAK.avoidances[avoidanceKey as keyof typeof BREAK.avoidances].title,
-      color: "green",
-    });
-  });
+  BREAK.risks[props.rKey as keyof typeof BREAK.risks].avoidances.forEach(
+    (avoidanceKey) => {
+      nodes.push({
+        id: avoidanceKey,
+        text:
+          avoidanceKey +
+          "<br>" +
+          BREAK.avoidances[avoidanceKey as keyof typeof BREAK.avoidances].title,
+        color: "green",
+      });
+    }
+  );
 
   // 枚举所有有关的attackTools
   Object.keys(BREAK.attackTools).forEach((atKey) => {
     if (
-      BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].risks.includes(props.rKey as never)
+      BREAK.attackTools[
+        atKey as keyof typeof BREAK.attackTools
+      ].couseRisks.includes(props.rKey as never)
     ) {
       nodes.push({
         id: atKey,
-        text: atKey + "<br>" + BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].title,
+        text:
+          atKey +
+          "<br>" +
+          BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].title,
         color: "blue",
       });
     }
@@ -76,13 +83,16 @@ const setJsonData = () => {
   // 枚举所有有关的threatActors
   Object.keys(BREAK.threatActors).forEach((taKey) => {
     if (
-      BREAK.threatActors[taKey as keyof typeof BREAK.threatActors].makeRisks.includes(
-        props.rKey as never
-      )
+      BREAK.threatActors[
+        taKey as keyof typeof BREAK.threatActors
+      ].couseRisks.includes(props.rKey as never)
     ) {
       nodes.push({
         id: taKey,
-        text: taKey + "<br>" + BREAK.threatActors[taKey as keyof typeof BREAK.threatActors].title,
+        text:
+          taKey +
+          "<br>" +
+          BREAK.threatActors[taKey as keyof typeof BREAK.threatActors].title,
         color: "red",
       });
     }
@@ -100,7 +110,10 @@ const setJsonData = () => {
    */
   nodes.push({
     id: props.rKey,
-    text: props.rKey + "<br>" + BREAK.risks[props.rKey as keyof typeof BREAK.risks].title,
+    text:
+      props.rKey +
+      "<br>" +
+      BREAK.risks[props.rKey as keyof typeof BREAK.risks].title,
     color: "orange",
   });
   const jsonData: RGJsonData = {
@@ -117,7 +130,9 @@ const setJsonData = () => {
   <!-- 关系图 -->
   <div
     style="border: #efefef solid 1px; height: calc(60vh); width: 100%"
-    @dblclick="$router.push({ name: 'relation', params: { type: 'risk', key: rKey } })"
+    @dblclick="
+      $router.push({ name: 'relation', params: { type: 'risk', key: rKey } })
+    "
     id="relation-graph-pane"
     :title="$t('more')"
   >

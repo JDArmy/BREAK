@@ -50,6 +50,11 @@ const router = createRouter({
       name: "relation",
       component: () => import("@/views/RelationView.vue"),
     },
+    {
+      path: "/editor",
+      name: "editor",
+      component: () => import("@/views/editor/HomeView.vue"),
+    },
   ],
   scrollBehavior(to) {
     if (to.hash) {

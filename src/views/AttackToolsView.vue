@@ -94,7 +94,7 @@ const tableRowClassName = ({ row }: { row: any }) => {
       <template #default="scope">
         <el-button
           size="small"
-          v-for="rKey in scope.row.risks"
+          v-for="rKey in scope.row.couseRisks"
           :key="rKey"
           @click="(riskKey = rKey) && (riskDrawer = true)"
           class="relational-link"

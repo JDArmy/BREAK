@@ -9,7 +9,7 @@ interface ThreatActor {
   references: Reference[];
   buildAttackTools: string[];
   useAttackTools: string[];
-  makeRisks: string[];
+  couseRisks: string[];
   attackTools: string[];
   updated: string;
 }
