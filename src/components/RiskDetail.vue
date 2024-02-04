@@ -32,9 +32,9 @@ const getReferences = (rKey: string) =>
 //从attackTools中获取对应ID的risks
 const getriskDescriptionTools = (rKey: string) => {
   return Object.keys(BREAK.attackTools).filter((atKey) =>
-    BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].risks.includes(
-      rKey as never
-    )
+    BREAK.attackTools[
+      atKey as keyof typeof BREAK.attackTools
+    ].couseRisks.includes(rKey as never)
   );
 };
 

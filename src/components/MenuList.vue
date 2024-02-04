@@ -39,6 +39,8 @@ const getActiveIndex = (fullPath: string) => {
   // console.log(fullPath);
   // 匹配其他业务场景
   if (fullPath.match(/^\/business-scene\//)) return "/";
+  if (fullPath.match(/^\/relation\//)) return "/relation/risk/R0001";
+
   return fullPath.split("#")[0];
 };
 </script>

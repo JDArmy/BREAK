@@ -146,9 +146,9 @@ const addRiskAvoidance = (rKey: string) => {
 
 const addRiskAttackTool = (rKey: string) => {
   const attackToolKeys = Object.keys(BREAK.attackTools).filter((atKey) =>
-    BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].risks.includes(
-      rKey as never
-    )
+    BREAK.attackTools[
+      atKey as keyof typeof BREAK.attackTools
+    ].couseRisks.includes(rKey as never)
   );
   attackToolKeys.forEach((attackToolKey) => {
     const attackTool =
@@ -171,9 +171,9 @@ const addRisk_AvoidanceAttackToolRelation = (rKey: string) => {
   const avoidanceKeys =
     BREAK.risks[rKey as keyof typeof BREAK.risks].avoidances;
   const attackToolKeys = Object.keys(BREAK.attackTools).filter((atKey) =>
-    BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].risks.includes(
-      rKey as never
-    )
+    BREAK.attackTools[
+      atKey as keyof typeof BREAK.attackTools
+    ].couseRisks.includes(rKey as never)
   );
   attackToolKeys.forEach((attackToolKey) => {
     avoidanceKeys.forEach((avoidanceKey) => {
@@ -196,7 +196,7 @@ const addRiskThreatActor = (rKey: string) => {
   const threatActorKeys = Object.keys(BREAK.threatActors).filter((taKey) =>
     BREAK.threatActors[
       taKey as keyof typeof BREAK.threatActors
-    ].makeRisks.includes(rKey as never)
+    ].couseRisks.includes(rKey as never)
   );
   threatActorKeys.forEach((threatActorKey) => {
     const threatActor =
@@ -219,12 +219,12 @@ const addRisk_ThreatActorAttackToolRelation = (rKey: string) => {
   const threatActorKeys = Object.keys(BREAK.threatActors).filter((taKey) =>
     BREAK.threatActors[
       taKey as keyof typeof BREAK.threatActors
-    ].makeRisks.includes(rKey as never)
+    ].couseRisks.includes(rKey as never)
   );
   const attackToolKeys = Object.keys(BREAK.attackTools).filter((atKey) =>
-    BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].risks.includes(
-      rKey as never
-    )
+    BREAK.attackTools[
+      atKey as keyof typeof BREAK.attackTools
+    ].couseRisks.includes(rKey as never)
   );
 
   threatActorKeys.forEach((threatActorKey) => {
@@ -346,7 +346,8 @@ const addAvoidanceSubavoidance = (aKey: string) => {
 /** AttackTool */
 const addAttackToolRisk = (attackToolKey: string) => {
   const riskKeys =
-    BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools].risks;
+    BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools]
+      .couseRisks;
   riskKeys.forEach((riskKey) => {
     const risk = BREAK.risks[riskKey as keyof typeof BREAK.risks];
     nodes.push({
@@ -386,7 +387,8 @@ const addAttackToolAvoidance = (attackToolKey: string) => {
 
 const addAttackTool_RiskAvoidanceRelation = (attackToolKey: string) => {
   const riskKeys =
-    BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools].risks;
+    BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools]
+      .couseRisks;
   const avoidanceKeys =
     BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools]
       .avoidances;
@@ -465,13 +467,14 @@ const addAttackTool_ThreatActorRiskRelation = (attackToolKey: string) => {
     ].useAttackTools.includes(attackToolKey as never)
   );
   const riskKeys =
-    BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools].risks;
+    BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools]
+      .couseRisks;
   builderThreatActorKeys.forEach((builderThreatActorKey) => {
     riskKeys.forEach((riskKey) => {
       if (
         BREAK.threatActors[
           builderThreatActorKey as keyof typeof BREAK.threatActors
-        ].makeRisks.includes(riskKey as never)
+        ].couseRisks.includes(riskKey as never)
       ) {
         lines.push({
           from: riskKey,
@@ -486,7 +489,7 @@ const addAttackTool_ThreatActorRiskRelation = (attackToolKey: string) => {
       if (
         BREAK.threatActors[
           userThreatActorKey as keyof typeof BREAK.threatActors
-        ].makeRisks.includes(riskKey as never)
+        ].couseRisks.includes(riskKey as never)
       ) {
         lines.push({
           from: userThreatActorKey,
@@ -520,7 +523,7 @@ const addAttackToolSubattackTool = (atKey: string) => {
 
 /** ThreatActor */
 const addThreatActorRisk = (threatActorKey: string) => {
-  const riskKeys = BREAK.threatActors[threatActorKey].makeRisks;
+  const riskKeys = BREAK.threatActors[threatActorKey].couseRisks;
   riskKeys.forEach((riskKey) => {
     const risk = BREAK.risks[riskKey as keyof typeof BREAK.risks];
     nodes.push({
@@ -579,7 +582,7 @@ const addThreatActor_AttackToolRiskRelation = (threatActorKey: string) => {
     ...BREAK.threatActors[threatActorKey].buildAttackTools,
     ...BREAK.threatActors[threatActorKey].useAttackTools,
   ];
-  const riskKeys = BREAK.threatActors[threatActorKey].makeRisks;
+  const riskKeys = BREAK.threatActors[threatActorKey].couseRisks;
   attackToolKeys.forEach((attackToolKey) => {
     riskKeys.forEach((riskKey) => {
       if (riskKeys.includes(riskKey)) {

@@ -6,7 +6,7 @@ interface AttackTool {
     link: string;
   }[];
   avoidances: string[];
-  risks: string[];
+  couseRisks: string[];
 }
 
 interface AttackTools {
