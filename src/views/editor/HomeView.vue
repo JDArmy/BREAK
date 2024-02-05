@@ -2,9 +2,13 @@
 import { ref, watch } from "vue";
 import BREAK from "@/BREAK";
 import { reactive } from "vue";
+import axios from "axios";
+import { useRoute, useRouter } from "vue-router";
 
-const breakType = ref("");
-const breakKey = ref("");
+const route = useRoute();
+const router = useRouter();
+const breakType = ref((route.params.type as string) || "");
+const breakKey = ref((route.params.key as string) || "");
 
 enum BreakType {
   risks = "risks",
@@ -172,6 +176,7 @@ const genData = (BreakKey: any) => {
   return data;
 };
 
+// 初始化左侧数据
 Object.values(relationShips).forEach((rsItems) => {
   Object.values(rsItems).forEach((rsItem) => {
     if (rsItem.type === relationType.one2many) {
@@ -182,43 +187,75 @@ Object.values(relationShips).forEach((rsItems) => {
   });
 });
 
+// 初始化右侧数据
+const genVal = () => {
+  let relationShip =
+    relationShips[breakType.value as keyof typeof relationShips];
+  Object.values(relationShip).forEach((rsItem) => {
+    const val: string[] = [];
+    const fromBreakItems = BREAK[rsItem.fromBreakKey as keyof typeof BREAK];
+
+    if (rsItem.type === relationType.one2many) {
+      // one2many
+      const fromBreakItem = fromBreakItems[
+        breakKey.value as keyof typeof fromBreakItems
+      ] as any;
+      if (fromBreakItem) {
+        val.push(
+          ...fromBreakItem[
+            rsItem.fromBreakItemKey as keyof typeof fromBreakItem
+          ]
+        );
+      }
+    } else if (rsItem.type === relationType.many2one) {
+      // many2one
+      Object.entries(fromBreakItems).forEach(([key, item]) => {
+        if (
+          item[rsItem.fromBreakItemKey as keyof typeof item].includes(
+            breakKey.value
+          )
+        ) {
+          val.push(key);
+        }
+      });
+    }
+    rsItem.val = val;
+  });
+};
+
+if (breakType.value && breakKey.value) {
+  genVal();
+}
+// 监听breakType和breakKey的变化，并初始化右侧数据
 watch([breakType, breakKey], () => {
   if (breakType.value && breakKey.value) {
-    let relationShip =
-      relationShips[breakType.value as keyof typeof relationShips];
-    Object.values(relationShip).forEach((rsItem) => {
-      const val: string[] = [];
-      const fromBreakItems = BREAK[rsItem.fromBreakKey as keyof typeof BREAK];
-
-      if (rsItem.type === relationType.one2many) {
-        // one2many
-        const fromBreakItem = fromBreakItems[
-          breakKey.value as keyof typeof fromBreakItems
-        ] as any;
-        if (fromBreakItem) {
-          val.push(
-            ...fromBreakItem[
-              rsItem.fromBreakItemKey as keyof typeof fromBreakItem
-            ]
-          );
-        }
-      } else if (rsItem.type === relationType.many2one) {
-        // many2one
-        Object.entries(fromBreakItems).forEach(([key, item]) => {
-          if (
-            item[rsItem.fromBreakItemKey as keyof typeof item].includes(
-              breakKey.value
-            )
-          ) {
-            val.push(key);
-          }
-        });
-      }
-      rsItem.val = val;
+    router.push({
+      name: "editorWithParams",
+      params: {
+        type: breakType.value,
+        key: breakKey.value,
+      },
     });
+    genVal();
   }
 });
+// 向服务器保存文件
+const saveFileToServer = (path: string, json: string) => {
+  const payload = {
+    path,
+    json,
+  };
+  axios
+    .post("http://127.0.0.1:3000/", payload)
+    .then((response) => {
+      console.log(response.data);
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+};
 
+const rootPath = ".."; //相对于server的路径
 const transferChange = (relationItem: any) => {
   if (relationItem.type === relationType.one2many) {
     const breakItems = BREAK[breakType.value as keyof typeof BREAK];
@@ -230,10 +267,28 @@ const transferChange = (relationItem: any) => {
     ];
     breakItem[relationItem.fromBreakItemKey as keyof typeof breakItem].sort();
 
-    const json = JSON.stringify({ [breakKey.value]: breakItem }, null, 2);
-    const path = `src/BREAK/${BreakTypeForder[breakType.value as keyof typeof BreakTypeForder]}/${breakKey.value}.json`;
+    let newBreakItems = { [breakKey.value]: breakItem };
+    let parentKey = breakKey.value;
+    if (breakKey.value.indexOf("-") > -1) {
+      parentKey = breakKey.value.split("-")[0];
+    }
+    Object.keys(breakItems).forEach((key) => {
+      if (key !== breakKey.value && key.indexOf(parentKey) > -1) {
+        newBreakItems[key] = breakItems[key as keyof typeof breakItems];
+      }
+    });
+    const sortedNewBreakItems = Object.keys(newBreakItems)
+      .sort()
+      .reduce((sortedObj: any, key: any) => {
+        sortedObj[key] = newBreakItems[key];
+        return sortedObj;
+      }, {});
 
-    console.log(path, json);
+    const json = JSON.stringify(sortedNewBreakItems, null, 2);
+    const path = `${rootPath}/BREAK/${BreakTypeForder[breakType.value as keyof typeof BreakTypeForder]}/${parentKey}.json`;
+
+    // console.log(path, json);
+    saveFileToServer(path, json);
   } else if (relationItem.type === relationType.many2one) {
     const breakItems = BREAK[relationItem.fromBreakKey as keyof typeof BREAK];
     // 枚举所有的breakItems
@@ -253,36 +308,57 @@ const transferChange = (relationItem: any) => {
           ),
         ];
         bItem[relationItem.fromBreakItemKey as keyof typeof bItem].sort();
-
-        const json = JSON.stringify({ [bKey]: bItem }, null, 2);
-        const path = `src/BREAK/${BreakTypeForder[relationItem.fromBreakKey as keyof typeof BreakTypeForder]}/${bKey}.json`;
-
-        console.log(path, json);
       } else {
         // 如果不在，比对breakKey是否在对应的关系中，如果在则删除
         const index = bItem[
           relationItem.fromBreakItemKey as keyof typeof bItem
         ].indexOf(breakKey.value);
-        if (index > -1) {
-          bItem[relationItem.fromBreakItemKey as keyof typeof bItem].splice(
-            index,
-            1
-          );
-          bItem[relationItem.fromBreakItemKey as keyof typeof bItem] = [
-            ...new Set(
-              bItem[relationItem.fromBreakItemKey as keyof typeof bItem]
-            ),
-          ];
-          bItem[relationItem.fromBreakItemKey as keyof typeof bItem].sort();
-
-          const json = JSON.stringify({ [bKey]: bItem }, null, 2);
-          const path = `src/BREAK/${BreakTypeForder[relationItem.fromBreakKey as keyof typeof BreakTypeForder]}/${bKey}.json`;
-
-          console.log(path, json);
+        if (index <= -1) {
+          return;
         }
+        bItem[relationItem.fromBreakItemKey as keyof typeof bItem].splice(
+          index,
+          1
+        );
+        bItem[relationItem.fromBreakItemKey as keyof typeof bItem] = [
+          ...new Set(
+            bItem[relationItem.fromBreakItemKey as keyof typeof bItem]
+          ),
+        ];
+        bItem[relationItem.fromBreakItemKey as keyof typeof bItem].sort();
       }
+
+      let newBreakItems = { [bKey]: bItem };
+      let parentKey = bKey;
+      if (bKey.indexOf("-") > -1) {
+        parentKey = bKey.split("-")[0];
+      }
+      Object.keys(breakItems).forEach((key) => {
+        if (key !== bKey && key.indexOf(parentKey) > -1) {
+          newBreakItems[key] = breakItems[key as keyof typeof breakItems];
+        }
+      });
+      const sortedNewBreakItems = Object.keys(newBreakItems)
+        .sort()
+        .reduce((sortedObj: any, key: any) => {
+          sortedObj[key] = newBreakItems[key];
+          return sortedObj;
+        }, {});
+
+      const json = JSON.stringify(sortedNewBreakItems, null, 2);
+      const path = `${rootPath}/BREAK/${BreakTypeForder[relationItem.fromBreakKey as keyof typeof BreakTypeForder]}/${parentKey}.json`;
+
+      // console.log(path, json);
+      saveFileToServer(path, json);
     });
   }
+};
+
+const getBreakItemTitle = () => {
+  const breakItems = BREAK[breakType.value as keyof typeof BREAK] as any;
+  if (breakKey.value === "") return "";
+  const breakItem = breakItems[breakKey.value as keyof typeof breakItems];
+  return breakItem ? breakItem.title : "";
 };
 </script>
 
@@ -313,16 +389,16 @@ const transferChange = (relationItem: any) => {
     </el-col>
   </el-row>
   <template v-if="breakType && breakKey">
-    <el-row
-      :gutter="20"
-      style="padding: 10px"
-      v-for="[relationKey, relationItem] of Object.entries(
-        relationShips[breakType as keyof typeof relationShips]
-      )"
-      :key="breakType + relationKey"
-    >
-      <el-col :md="12">
+    <el-row :gutter="20" style="padding: 10px">
+      <el-col
+        v-for="[relationKey, relationItem] of Object.entries(
+          relationShips[breakType as keyof typeof relationShips]
+        )"
+        :key="breakType + relationKey"
+        :md="12"
+      >
         <h3 style="text-align: center">
+          {{ getBreakItemTitle() }}
           {{ BreakTypeTitle[breakType as keyof typeof BreakTypeTitle] }}
           的
           {{
@@ -332,13 +408,17 @@ const transferChange = (relationItem: any) => {
           }}
           （{{ relationItem.title }}）
         </h3>
-        <el-transfer
-          v-model="relationItem.val"
-          :data="relationItem.data"
-          @change="transferChange(relationItem)"
-        />
+        <el-transfer v-model="relationItem.val" :data="relationItem.data" />
+        <div style="text-align: center; margin: 10px">
+          <el-button
+            type="primary"
+            size="default"
+            @click="transferChange(relationItem)"
+            >提交修改</el-button
+          >
+        </div>
       </el-col>
-      <el-col :md="12"></el-col>
+      <!-- <el-col :md="12"></el-col> -->
     </el-row>
   </template>
 </template>

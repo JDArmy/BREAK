@@ -55,6 +55,11 @@ const router = createRouter({
       name: "editor",
       component: () => import("@/views/editor/HomeView.vue"),
     },
+    {
+      path: "/editor/:type/:key",
+      name: "editorWithParams",
+      component: () => import("@/views/editor/HomeView.vue"),
+    },
   ],
   scrollBehavior(to) {
     if (to.hash) {

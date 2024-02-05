@@ -1,36 +1,41 @@
-import * as fs from "fs";
-import * as http from "http";
+// eslint-disable-next-line no-undef
+const express = require("express");
+// eslint-disable-next-line no-undef
+const fs = require("fs");
+const app = express();
 
-const server = http.createServer((req, res) => {
-  if (req.method === "POST") {
-    let body = "";
-    req.on("data", (chunk) => {
-      body += chunk;
-    });
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-    req.on("end", () => {
-      try {
-        const { path, json } = JSON.parse(body);
-        if (!fs.existsSync(path)) {
-          res.statusCode = 404;
-          res.end(`File ${path} does not exist`);
-        } else {
-          fs.writeFileSync(path, JSON.stringify(json));
-          res.statusCode = 200;
-          res.end(`Data written to ${path}`);
-        }
-      } catch (error) {
-        res.statusCode = 400;
-        res.end("Invalid JSON data");
-      }
-    });
-  } else {
-    res.statusCode = 405;
-    res.end("Method Not Allowed");
-  }
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  next();
 });
 
-const port = 3000;
-server.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
+app.post("/", (req, res) => {
+  const { path, json } = req.body;
+
+  if (!path || !json) {
+    return res.status(400).json({ error: "Missing path or json field" });
+  }
+
+  fs.access(path, fs.constants.F_OK, (err) => {
+    if (err) {
+      return res.status(404).json({ error: "File not found" });
+    }
+
+    fs.writeFile(path, json, (err) => {
+      if (err) {
+        return res.status(500).json({ error: "Failed to write to file" });
+      }
+
+      res.status(200).json({ message: "Data written to file successfully" });
+    });
+  });
+});
+
+app.listen(3000, () => {
+  console.log("Server is running on port 3000");
 });
