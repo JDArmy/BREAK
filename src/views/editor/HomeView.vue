@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, watch } from "vue";
+import { onMounted, ref, watch } from "vue";
 import BREAK from "@/BREAK";
 import { reactive } from "vue";
 import axios from "axios";
@@ -240,7 +240,9 @@ watch([breakType, breakKey], () => {
   }
 });
 // 向服务器保存文件
+let saveFileToServerSuccessStatus: boolean = true;
 const saveFileToServer = (path: string, json: string) => {
+  saveFileToServerSuccessStatus = false;
   const payload = {
     path,
     json,
@@ -248,12 +250,30 @@ const saveFileToServer = (path: string, json: string) => {
   axios
     .post("http://127.0.0.1:3000/", payload)
     .then((response) => {
+      saveFileToServerSuccessStatus = true;
       console.log(response.data);
     })
     .catch((error) => {
-      console.error(error);
+      saveFileToServerSuccessStatus = false;
+      alert(error);
     });
 };
+// 监控页面关闭事件，如果数据未完全上传成功，则通过beforeunload事件阻止页面关闭
+onMounted(() => {
+  window.onerror = function (message, source, lineno, colno, error) {
+    alert(
+      `JavaScript错误: ${message}\n在: ${source}:${lineno}:${colno}:${error}`
+    );
+    return true;
+  };
+
+  window.addEventListener("beforeunload", (e) => {
+    if (!saveFileToServerSuccessStatus) {
+      e.preventDefault();
+      e.returnValue = "";
+    }
+  });
+});
 
 const rootPath = ".."; //相对于server的路径
 const transferChange = (relationItem: any) => {

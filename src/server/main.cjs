@@ -21,6 +21,12 @@ app.post("/", (req, res) => {
     return res.status(400).json({ error: "Missing path or json field" });
   }
 
+  try {
+    JSON.parse(json);
+  } catch (err) {
+    return res.status(400).json({ error: "Invalid JSON" });
+  }
+
   fs.access(path, fs.constants.F_OK, (err) => {
     if (err) {
       return res.status(404).json({ error: "File not found" });
