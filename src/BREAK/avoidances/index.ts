@@ -1,7 +1,9 @@
+import { loadJsonModules } from "../utils";
+
 interface Avoidance {
   title: string;
   category: string;
-  summary: string;
+  definition: string;
   description: string;
   limitation: string;
   references: {
@@ -16,14 +18,7 @@ interface Avoidances {
 }
 
 const avoidanceFiles = import.meta.glob("./A*.json", { eager: true });
-// 合并所有 JSON 对象
-const allAvoidances = Object.values(avoidanceFiles).reduce(
-  (allAvoidances: Avoidances, avoidance: any) => ({
-    ...allAvoidances,
-    ...avoidance.default,
-  }),
-  {}
-);
+const allAvoidances = loadJsonModules<Avoidances>(avoidanceFiles);
 
 export default {
   avoidances: allAvoidances,

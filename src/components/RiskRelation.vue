@@ -42,7 +42,7 @@ onMounted(() => {
 
 const setJsonData = () => {
   const rootId = props.rKey;
-  let nodes: {
+  const nodes: {
     id: string;
     text: string;
     color: string;
@@ -98,7 +98,7 @@ const setJsonData = () => {
     }
   });
 
-  let lines = nodes.map((node) => {
+  const lines = nodes.map((node) => {
     return {
       from: node.id,
       to: rootId,

@@ -1,25 +1,15 @@
 <script lang="ts" setup>
 import BREAK from "@/BREAK";
 import { Link } from "@element-plus/icons-vue";
-import { useRoute } from "vue-router";
 import iconRelation from "@/components/icons/iconRelation.vue";
+import { useAnchorTable } from "@/composables/useAnchorTable";
 
-const route = useRoute();
-
-let providers = Object.keys(BREAK.abilityProviders).map((apKey) => ({
+const providers = Object.keys(BREAK.abilityProviders).map((apKey) => ({
   apKey: apKey,
   ...BREAK.abilityProviders[apKey as keyof typeof BREAK.abilityProviders],
 }));
 
-//页内锚点
-const getTableHeight = () =>
-  route.hash.split("#")[1] ? "unset" : window.innerHeight - 100;
-const tableRowClassName = ({ row }: { row: any }) => {
-  if (route.hash.split("#")[1] === row.apKey) {
-    return "anchor-row";
-  }
-  return "";
-};
+const { getTableHeight, tableRowClassName } = useAnchorTable("apKey");
 </script>
 
 <template lang="">
@@ -55,7 +45,7 @@ const tableRowClassName = ({ row }: { row: any }) => {
     </el-table-column>
     <el-table-column prop="title" width="135" :label="$t('title')">
       <template #default="scope">
-        <a :href="scope.row.site" target="_blank">
+        <a :href="scope.row.site" target="_blank" rel="noopener noreferrer">
           <el-icon><Link /></el-icon
           >{{
             scope.row.apKey
@@ -82,7 +72,7 @@ const tableRowClassName = ({ row }: { row: any }) => {
           v-for="(ability, aKey) in scope.row.abilities"
           :key="aKey"
         >
-          <a :href="ability.link" target="_blank"
+          <a :href="ability.link" target="_blank" rel="noopener noreferrer"
             ><el-icon><Link /></el-icon
             >{{ $t(`BREAK.avoidances.${aKey}.title`) }}</a
           >
@@ -101,7 +91,7 @@ const tableRowClassName = ({ row }: { row: any }) => {
   </el-table>
   <div class="commit-new-provider">
     {{ $t("commitNewProvider") }}:
-    <a href="https://github.com/JDArmy/BREAK/issues" target="_blank">
+    <a href="https://github.com/JDArmy/BREAK/issues" target="_blank" rel="noopener noreferrer">
       <el-icon><Link /></el-icon>https://github.com/JDArmy/BREAK/issues
     </a>
     <div>参考：src/BREAK/ability-providers/AP****.json 文件格式。</div>

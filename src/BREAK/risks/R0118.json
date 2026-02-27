@@ -1,0 +1,29 @@
+{
+  "R0118": {
+    "title": "AI自动化攻击升级",
+    "definition": "利用AI技术（特别是大语言模型）来自动化、增强和规模化传统网络攻击和业务攻击的风险。",
+    "description": "AI自动化攻击升级是指攻击者利用AI技术大幅提升传统攻击的效率、规模和成功率。主要表现包括：①AI辅助社工攻击：利用LLM自动生成高度个性化的钓鱼邮件和社工话术，大幅提高钓鱼成功率。②AI辅助漏洞利用：利用AI自动发现和利用安全漏洞，加速攻击链的构建。③智能验证码破解：利用多模态AI模型自动识别和破解各类验证码。④自适应攻击：AI驱动的攻击工具可以根据防御策略自动调整攻击方式，实现攻防对抗的自动化。⑤批量内容生成：利用AI批量生成虚假评论、虚假账号资料等，支撑大规模业务欺诈。AI技术的引入使得攻击的技术门槛大幅降低，攻击成本显著下降，而攻击效果却大幅提升。",
+    "complexity": "高级",
+    "influence": "传统安全防护体系面临严峻挑战，攻击规模和效率大幅提升，防御成本显著增加",
+    "avoidances": [
+      "A0065",
+      "A0001",
+      "A0004",
+      "A0067",
+      "A0008",
+      "A0015",
+      "A0064"
+    ],
+    "references": [
+      {
+        "title": "AI驱动的网络威胁 - 世界经济论坛",
+        "link": "https://www.weforum.org/publications/global-cybersecurity-outlook-2025/"
+      },
+      {
+        "title": "NCSC: The near-term impact of AI on the cyber threat",
+        "link": "https://www.ncsc.gov.uk/report/impact-of-ai-on-cyber-threat"
+      }
+    ],
+    "updated": "2026-02-27"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "R0126": {
+    "title": "API滥用风险",
+    "definition": "攻击者通过发现、枚举和滥用业务系统的API接口，实施数据窃取、业务逻辑绕过、资源耗尽等攻击的风险。",
+    "description": "API滥用风险是随着微服务架构和API经济的发展而日益突出的安全风险。攻击者通过各种手段发现和利用API接口的安全缺陷，实施恶意操作。主要风险场景包括API枚举攻击、API速率限制绕过和API业务逻辑滥用等。",
+    "complexity": "中级",
+    "influence": "敏感数据泄露、业务逻辑被绕过、服务可用性受影响、经济损失",
+    "avoidances": [
+      "A0067",
+      "A0004",
+      "A0002",
+      "A0008",
+      "A0015",
+      "A0017"
+    ],
+    "references": [
+      {
+        "title": "OWASP API Security Top 10 2023",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0x11-t10/"
+      },
+      {
+        "title": "API安全最佳实践 - Gartner",
+        "link": "https://www.gartner.com/en/documents/api-security"
+      }
+    ],
+    "updated": "2026-02-27"
+  },
+  "R0126-001": {
+    "title": "API枚举攻击",
+    "definition": "通过自动化工具发现和枚举目标系统的API端点，获取未授权的API接口信息。",
+    "description": "API枚举攻击是指攻击者通过路径爆破、Swagger/OpenAPI文档泄露、JavaScript代码分析、流量分析等手段，发现目标系统暴露的API端点。攻击者可能发现未经保护的管理接口、测试接口、废弃但未下线的旧版本接口等，进而利用这些接口获取敏感数据或执行未授权操作。",
+    "complexity": "中级",
+    "influence": "暴露系统内部接口信息，为后续攻击提供入口",
+    "avoidances": [
+      "A0067",
+      "A0004",
+      "A0032",
+      "A0017"
+    ],
+    "references": [],
+    "updated": "2026-02-27"
+  },
+  "R0126-002": {
+    "title": "API速率限制绕过",
+    "definition": "通过技术手段绕过API接口的速率限制（Rate Limiting）机制，实现超频调用。",
+    "description": "API速率限制绕过是指攻击者通过IP轮换、分布式请求、参数变异、Header伪造、利用不同API版本等手段，绕过API接口设置的速率限制。绕过速率限制后，攻击者可以进行暴力破解、批量数据爬取、资源耗尽攻击等。",
+    "complexity": "高级",
+    "influence": "速率限制防护失效，系统面临暴力破解、数据爬取、资源耗尽等风险",
+    "avoidances": [
+      "A0067",
+      "A0004",
+      "A0008",
+      "A0038"
+    ],
+    "references": [],
+    "updated": "2026-02-27"
+  },
+  "R0126-003": {
+    "title": "API业务逻辑滥用",
+    "definition": "利用API接口的业务逻辑缺陷，通过合法的API调用实现非预期的业务操作。",
+    "description": "API业务逻辑滥用是指攻击者通过分析API的业务逻辑，利用接口设计中的逻辑缺陷实施攻击。例如：通过修改API请求参数绕过价格校验、利用API调用顺序的漏洞跳过支付流程、通过批量API调用实现库存锁定、利用API的并发处理缺陷实现条件竞争等。这类攻击使用的都是合法的API调用，传统的安全防护手段难以检测。",
+    "complexity": "高级",
+    "influence": "业务逻辑被绕过，可能导致经济损失、数据不一致、业务流程被破坏",
+    "avoidances": [
+      "A0067",
+      "A0015",
+      "A0002",
+      "A0014"
+    ],
+    "references": [],
+    "updated": "2026-02-27"
+  }
+}

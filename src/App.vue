@@ -27,9 +27,9 @@ import iconGithub from "@/components/icons/iconGithub.vue";
 
       <el-footer>
         <div class="footer">
-          ©2024 JD.Army
+          ©2024-2026 JD.Army
           <span class="github">
-            <a href="https://github.com/JDArmy/BREAK" target="_blank">
+            <a href="https://github.com/JDArmy/BREAK" target="_blank" rel="noopener noreferrer">
               <icon-github />
             </a>
           </span>

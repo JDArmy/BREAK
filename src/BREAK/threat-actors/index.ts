@@ -1,3 +1,5 @@
+import { loadJsonModules } from "../utils";
+
 interface Reference {
   title: string;
   link: string;
@@ -25,15 +27,7 @@ interface ThreatActors {
 }
 
 const threatActorFiles = import.meta.glob("./T*.json", { eager: true });
-// 合并所有 JSON 对象
-const allThreatActors = Object.values(threatActorFiles).reduce(
-  (allThreatActors: AllThreatActors, threatActor: any) => ({
-    ...allThreatActors,
-    ...threatActor.default,
-  }),
-  {}
-);
-// // console.log(threatActors);
+const allThreatActors = loadJsonModules<AllThreatActors>(threatActorFiles);
 
 const threatActors: ThreatActors = {
   threatActors: allThreatActors,

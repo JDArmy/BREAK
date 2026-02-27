@@ -1,0 +1,33 @@
+{
+  "AT0057": {
+    "title": "LLM自动化攻击工具",
+    "description": "LLM自动化攻击工具是利用大语言模型（如GPT、Claude等）的能力来自动化和增强传统网络攻击的工具。这类工具可以自动生成钓鱼邮件和社工话术、编写恶意代码和漏洞利用脚本、自动化漏洞扫描和渗透测试、批量生成虚假内容和评论、自动化验证码识别和绕过等。攻击者通过提示工程（Prompt Engineering）和微调（Fine-tuning）技术，将通用大模型改造为专用的攻击辅助工具，大幅降低了攻击的技术门槛和成本，同时提高了攻击的效率和成功率。此外，还包括针对LLM服务本身的攻击工具，如提示注入框架、越狱工具包等。",
+    "references": [
+      {
+        "title": "OWASP Top 10 for LLM Applications",
+        "link": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"
+      },
+      {
+        "title": "AI驱动的网络攻击趋势分析",
+        "link": "https://www.weforum.org/publications/global-cybersecurity-outlook-2025/"
+      }
+    ],
+    "avoidances": [
+      "A0065",
+      "A0067",
+      "A0001",
+      "A0004",
+      "A0015",
+      "A0064"
+    ],
+    "couseRisks": [
+      "R0117",
+      "R0117-001",
+      "R0117-002",
+      "R0118",
+      "R0084",
+      "R0001"
+    ],
+    "updated": "2026-02-27"
+  }
+}

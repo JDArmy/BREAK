@@ -1,0 +1,20 @@
+{
+  "A0071": {
+    "title": "云安全态势管理",
+    "category": "AC03",
+    "definition": "云安全态势管理（Cloud Security Posture Management, CSPM）是一类自动化工具和实践，用于持续监控和评估云基础设施的安全配置，识别错误配置、合规偏差和安全风险。",
+    "description": "云安全态势管理的主要能力包括：①配置合规检查：自动扫描云资源配置，对照CIS Benchmark、等保标准等安全基线进行合规性检查，识别不安全的配置项。②资产可见性：提供云环境中所有资源的统一视图，包括计算实例、存储桶、数据库、网络配置、IAM策略等。③风险评估与优先级排序：根据风险严重程度和业务影响对发现的安全问题进行优先级排序，帮助安全团队聚焦关键风险。④自动修复：对常见的错误配置提供自动修复能力，如关闭公开的存储桶、修复过于宽松的安全组规则等。⑤多云支持：支持AWS、Azure、GCP、阿里云等主流云平台的统一安全管理。⑥容器与K8s安全：扩展到容器镜像扫描、Kubernetes集群配置审计等云原生安全场景。⑦合规报告：自动生成符合各类合规标准的安全报告。",
+    "limitation": "云安全态势管理的局限性包括：①主要关注配置层面的安全问题，对应用层和业务逻辑层的安全风险覆盖有限。②多云环境下不同云平台的API和配置模型差异增加了统一管理的复杂度。③自动修复功能可能在某些场景下影响业务正常运行，需要谨慎使用。④对于动态和短暂的云资源（如Serverless函数），实时监控存在挑战。⑤告警疲劳：大量的安全告警可能导致安全团队忽视真正重要的风险。",
+    "references": [
+      {
+        "title": "What is CSPM - Gartner",
+        "link": "https://www.gartner.com/en/information-technology/glossary/cloud-security-posture-management-cspm"
+      },
+      {
+        "title": "云安全态势管理最佳实践",
+        "link": "https://cloud.google.com/security/cspm"
+      }
+    ],
+    "updated": "2026-02-27"
+  }
+}

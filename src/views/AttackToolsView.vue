@@ -4,10 +4,8 @@ import BREAK from "@/BREAK";
 import AvoidanceDetail from "@/components/AvoidanceDetail.vue";
 import RiskDetail from "@/components/RiskDetail.vue";
 import { Link } from "@element-plus/icons-vue";
-import { useRoute } from "vue-router";
 import iconRelation from "@/components/icons/iconRelation.vue";
-
-const route = useRoute();
+import { useAnchorTable } from "@/composables/useAnchorTable";
 
 const avoidanceDrawer = ref(false);
 const avoidanceKey = ref("");
@@ -21,15 +19,7 @@ const attackTools = Object.keys(BREAK.attackTools).map((atKey) => ({
 const riskDrawer = ref(false);
 const riskKey = ref("");
 
-//页内锚点
-const getTableHeight = () =>
-  route.hash.split("#")[1] ? "unset" : window.innerHeight - 100;
-const tableRowClassName = ({ row }: { row: any }) => {
-  if (route.hash.split("#")[1] === row.atKey) {
-    return "anchor-row";
-  }
-  return "";
-};
+const { getTableHeight, tableRowClassName } = useAnchorTable("atKey");
 </script>
 <template lang="">
   <h3>{{ $t("attackTools") }}</h3>
@@ -37,7 +27,7 @@ const tableRowClassName = ({ row }: { row: any }) => {
     <router-link
       v-for="attackTool in attackTools"
       :key="attackTool.atKey"
-      :title="attackTool.summary"
+      :title="attackTool.definition"
       class="router-link ml-2"
       :to="{ name: 'attackTools', hash: '#' + attackTool.atKey }"
     >
@@ -78,7 +68,7 @@ const tableRowClassName = ({ row }: { row: any }) => {
       <template #default="scope">
         <ul>
           <li v-for="(reference, refIdx) in scope.row.references" :key="refIdx">
-            <a :href="reference.link" target="_blank"
+            <a :href="reference.link" target="_blank" rel="noopener noreferrer"
               ><el-icon><Link /></el-icon
               >{{
                 $t(
@@ -96,7 +86,7 @@ const tableRowClassName = ({ row }: { row: any }) => {
           size="small"
           v-for="rKey in scope.row.couseRisks"
           :key="rKey"
-          @click="(riskKey = rKey) && (riskDrawer = true)"
+          @click="riskKey = rKey; riskDrawer = true"
           class="relational-link"
           round
           >{{ rKey + ":&nbsp;" + $t(`BREAK.risks.${rKey}.title`) }}</el-button
@@ -130,7 +120,7 @@ const tableRowClassName = ({ row }: { row: any }) => {
   />
   <!-- 风险详情页 -->
   <risk-detail
-    v-on:drawer-close="(riskDrawer = false) && (riskKey = '')"
+    v-on:drawer-close="riskDrawer = false; riskKey = ''"
     :drawer="riskDrawer"
     :rKey="riskKey"
   />

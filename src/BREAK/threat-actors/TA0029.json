@@ -15,11 +15,10 @@
     "buildAttackTools": [],
     "useAttackTools": [
       "AT0001",
-      "AT0034-001",
-      "AT0050"
+      "AT0034-001"
     ],
     "couseRisks": [
-      "R0096"
+      "R0096-001"
     ],
     "updated": "2024-01-30"
   }

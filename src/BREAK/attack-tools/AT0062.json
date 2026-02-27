@@ -1,0 +1,33 @@
+{
+  "AT0062": {
+    "title": "SIM卡交换工具包",
+    "description": "SIM卡交换工具包是用于实施SIM Swap攻击的一系列工具和资源的集合。SIM Swap攻击是指攻击者通过社会工程学手段欺骗电信运营商客服人员，将目标用户的手机号码转移到攻击者控制的SIM卡上，从而接管目标用户的手机号码，拦截短信验证码，进而突破基于短信的双因素认证。工具包通常包括：伪造身份证件的模板和工具、运营商客服话术脚本、自动化拨打运营商客服的工具、批量验证手机号码状态的工具、以及配套的社工信息收集工具。近年来，SIM Swap攻击已形成完整的黑产链条，攻击者甚至可以通过贿赂运营商内部人员来完成号码转移。",
+    "references": [
+      {
+        "title": "SIM Swap Fraud - FBI IC3",
+        "link": "https://www.ic3.gov/Media/Y2022/PSA220208"
+      },
+      {
+        "title": "SIM卡交换攻击防范指南 - CISA",
+        "link": "https://www.cisa.gov/news-events/alerts/2022/02/08/protecting-against-sim-swap-attacks"
+      }
+    ],
+    "avoidances": [
+      "A0073",
+      "A0024",
+      "A0007",
+      "A0023",
+      "A0026",
+      "A0011"
+    ],
+    "couseRisks": [
+      "R0132",
+      "R0032",
+      "R0036",
+      "R0092",
+      "R0044",
+      "R0045"
+    ],
+    "updated": "2026-02-27"
+  }
+}

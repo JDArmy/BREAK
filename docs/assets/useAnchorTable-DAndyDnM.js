@@ -1,0 +1,1 @@
+import{a as t}from"./vue-router-BEXBg7Fd.js";function e(e){const r=t();return{getTableHeight:()=>r.hash.split("#")[1]?"unset":window.innerHeight-100,tableRowClassName:({row:t})=>{const o=r.hash.split("#")[1];return o&&o===t[e]?"anchor-row":""}}}export{e as u};

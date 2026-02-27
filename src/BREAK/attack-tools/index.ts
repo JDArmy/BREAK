@@ -1,3 +1,5 @@
+import { loadJsonModules } from "../utils";
+
 interface AttackTool {
   title: string;
   description: string;
@@ -14,14 +16,7 @@ interface AttackTools {
 }
 
 const attackToolFiles = import.meta.glob("./AT*.json", { eager: true });
-// 合并所有 JSON 对象
-const allAttackTools = Object.values(attackToolFiles).reduce(
-  (allAttackTools: AttackTools, attackTool: any) => ({
-    ...allAttackTools,
-    ...attackTool.default,
-  }),
-  {}
-);
+const allAttackTools = loadJsonModules<AttackTools>(attackToolFiles);
 
 const attackTools = {
   attackTools: allAttackTools,

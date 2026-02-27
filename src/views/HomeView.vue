@@ -66,7 +66,7 @@ watch(bsKeySelected, () => {
   totalDimensionRowSize = 24;
 });
 
-let getRisks = (
+const getRisks = (
   riskScenes: typeof sceneBREAK.value.riskScenes,
   rsKey: string
 ) => {
@@ -85,7 +85,7 @@ const subRisks = ref(Object());
 const hideSubRisks = ref(Object());
 Object.keys(BREAK.risks).forEach((prKey) => {
   if (prKey.includes("-")) return;
-  let srKeys = getSubRisks(prKey);
+  const srKeys = getSubRisks(prKey);
   if (srKeys.length > 0) {
     subRisks.value[prKey] = srKeys;
     hideSubRisks.value[prKey] = false;
@@ -133,7 +133,7 @@ const riskDetailClose = () => {
 
 // 通过动态计算每个风险维度中风险场景的数量，来分配每个风险维度的Col大小，主要解决24不能被整除问题
 let totalRowSize = 24;
-let getDimensionRowSize = (
+const getDimensionRowSize = (
   dimensionScenesLength: number,
   totalSceneslength: number
 ) => {
@@ -148,7 +148,7 @@ let getDimensionRowSize = (
 };
 // 通过通过动态计算每个风险维度中风险场景的数量，来分配每个风险场景的Col大小，主要解决24不能被整除问题
 let totalDimensionRowSize = 24;
-let getSceneRowSize = (sceneLength: number) => {
+const getSceneRowSize = (sceneLength: number) => {
   let step = Math.round(24 / sceneLength);
 
   totalDimensionRowSize =
@@ -186,10 +186,10 @@ let getSceneRowSize = (sceneLength: number) => {
     </el-col>
     <el-col :md="20" :sm="11" :offset="1">
       <el-radio-group size="small" v-model="hideAllSubRisks">
-        <el-radio-button :label="false">{{
+        <el-radio-button :value="false">{{
           $t("showAllSubRisks")
         }}</el-radio-button>
-        <el-radio-button :label="true">{{
+        <el-radio-button :value="true">{{
           $t("hideAllSubRisks")
         }}</el-radio-button>
       </el-radio-group>
@@ -250,6 +250,7 @@ let getSceneRowSize = (sceneLength: number) => {
                 style="width: 100%; border-spacing: 0px"
                 v-if="subRisks[rKey]"
               >
+                <tbody>
                 <tr>
                   <td
                     class="sidebar sidebar-icon"
@@ -284,6 +285,7 @@ let getSceneRowSize = (sceneLength: number) => {
                   </td>
                   <td style="width: 1px"></td>
                 </tr>
+                </tbody>
               </table>
               <!-- 无子风险时 -->
               <router-link class="link" v-else :to="'/risk/' + rKey">{{

@@ -1,0 +1,33 @@
+{
+  "AT0061": {
+    "title": "API自动化滥用工具",
+    "description": "API自动化滥用工具是专门针对Web API接口进行自动化攻击和滥用的工具集合。这类工具可以自动发现和枚举API端点、绕过API速率限制和认证机制、批量调用API接口进行数据爬取或业务逻辑滥用。主要功能包括：API端点发现与枚举（通过Swagger/OpenAPI文档泄露、路径爆破等）、认证绕过（Token伪造、JWT攻击、OAuth滥用等）、速率限制绕过（IP轮换、分布式请求、参数变异等）、业务逻辑滥用（批量注册、批量下单、价格篡改等）。代表性工具包括各类API安全测试框架、自动化请求工具、以及专门的API攻击脚本。",
+    "references": [
+      {
+        "title": "OWASP API Security Top 10 2023",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0x11-t10/"
+      },
+      {
+        "title": "API安全攻防实践",
+        "link": "https://portswigger.net/web-security/api-testing"
+      }
+    ],
+    "avoidances": [
+      "A0067",
+      "A0004",
+      "A0002",
+      "A0008",
+      "A0015",
+      "A0017"
+    ],
+    "couseRisks": [
+      "R0126",
+      "R0126-001",
+      "R0126-002",
+      "R0126-003",
+      "R0027",
+      "R0029"
+    ],
+    "updated": "2026-02-27"
+  }
+}

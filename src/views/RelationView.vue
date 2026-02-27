@@ -109,7 +109,7 @@ const addRootNode = () => {
   const breakItemAttr =
     RelationTypeMapping[relType.value as keyof typeof RelationTypeMapping];
   const items = BREAK[breakItemAttr.BreakKey as keyof typeof BREAK];
-  const item: any = items[relKey.value as keyof typeof items];
+  const item = items[relKey.value as keyof typeof items] as { title: string };
   if (item === undefined) {
     alert("未知ID");
     return;
@@ -585,7 +585,11 @@ const addThreatActor_AttackToolRiskRelation = (threatActorKey: string) => {
   const riskKeys = BREAK.threatActors[threatActorKey].couseRisks;
   attackToolKeys.forEach((attackToolKey) => {
     riskKeys.forEach((riskKey) => {
-      if (riskKeys.includes(riskKey)) {
+      if (
+        BREAK.attackTools[
+          attackToolKey as keyof typeof BREAK.attackTools
+        ].couseRisks.includes(riskKey as never)
+      ) {
         lines.push({
           from: attackToolKey,
           text: "造成风险",
@@ -806,7 +810,7 @@ const disableContextMenuOpenAsRoot = ref(false);
 const nodeType = ref("" as RelationType);
 const nodeId = ref("" as string);
 
-const nodeClick = (node: Node, e: any) => {
+const nodeClick = (node: Node, e: MouseEvent) => {
   dropdownStyle.top = e.clientY + "px";
   dropdownStyle.left = e.clientX + "px";
   dropdownStyle.display = "block";

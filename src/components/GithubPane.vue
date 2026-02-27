@@ -10,49 +10,35 @@ const forksCount = ref(0);
 
 const reposUrl = "https://api.github.com/repos/JDArmy/BREAK";
 
-axios.interceptors.response.use(
-  function (response) {
-    // 如果响应状态码是 200，那么直接返回响应
-    return response;
-  },
-  function (error) {
-    // 如果响应状态码是 403，那么返回一个自定义的响应
+const githubApi = axios.create();
+githubApi.interceptors.response.use(
+  (response) => response,
+  (error) => {
     if (error.response && error.response.status === 403) {
       return {
-        data: "Forbidden",
+        data: { stargazers_count: 0, forks_count: 0 },
         status: 403,
-        statusText: "Forbidden",
-        headers: {},
-        config: error.config,
       };
     }
-
-    // 如果响应状态码是其他值，那么抛出错误
     return Promise.reject(error);
   }
 );
 
 const getGithubData = async () => {
-  // await axios
-  //   .get(reposUrl)
-  //   .catch((error) => {
-  //     console.error(error);
-  //   })
-  //   .then((response:any) => {
-  //     stargazersCount.value = response.data.stargazers_count;
-  //     forksCount.value = response.data.forks_count;
-  //   });
-
-  const reposResponse = await axios.get(reposUrl);
-  stargazersCount.value = reposResponse.data.stargazers_count;
-  forksCount.value = reposResponse.data.forks_count;
+  try {
+    const reposResponse = await githubApi.get(reposUrl);
+    stargazersCount.value = reposResponse.data.stargazers_count;
+    forksCount.value = reposResponse.data.forks_count;
+  } catch {
+    // GitHub API unavailable, keep default values
+  }
 };
 getGithubData();
 </script>
 
 <template>
   <div>
-    <a href="https://github.com/JDArmy/BREAK" target="_blank">
+    <a href="https://github.com/JDArmy/BREAK" target="_blank" rel="noopener noreferrer">
       <icon-github />
       <span class="description">
         <icon-star />{{ stargazersCount }} <icon-fork />{{ forksCount }}

@@ -1,0 +1,21 @@
+{
+  "R0142": {
+    "title": "中间人攻击",
+    "definition": "攻击者在客户端与服务端之间拦截和篡改通信数据，窃取用户凭据、会话令牌或篡改交易内容，实现信息窃取或交易劫持。",
+    "description": "中间人攻击（Man-in-the-Middle Attack，MITM）是指攻击者秘密介入通信双方之间，拦截、查看甚至篡改传输数据的攻击方式。主要攻击场景包括：①WiFi劫持：在公共WiFi环境下拦截用户的网络通信，窃取登录凭据和敏感信息。②SSL/TLS降级攻击：通过SSL剥离等技术将加密连接降级为明文连接，使通信内容可被窃听。③ARP欺骗：在局域网内通过ARP欺骗将流量重定向到攻击者设备。④DNS劫持：篡改DNS解析结果将用户引导至恶意服务器。⑤证书伪造：使用伪造的SSL证书冒充合法服务器，拦截加密通信。⑥交易篡改：在支付过程中篡改收款账号、交易金额等关键信息。⑦会话劫持：窃取用户的会话令牌（Session Token/Cookie），冒充用户身份进行操作。在移动互联网场景中，恶意WiFi热点和APP中间人攻击是最常见的威胁。",
+    "complexity": "高级",
+    "influence": "用户凭据和敏感信息泄露、交易被篡改造成资金损失、用户对平台安全性失去信任",
+    "avoidances": ["A0078", "A0081", "A0026", "A0010", "A0007"],
+    "references": [
+      {
+        "title": "Man-in-the-Middle Attack - OWASP",
+        "link": "https://owasp.org/www-community/attacks/Manipulator-in-the-middle_attack"
+      },
+      {
+        "title": "MITM攻击防御指南 - CISA",
+        "link": "https://www.cisa.gov/news-events/alerts"
+      }
+    ],
+    "updated": "2026-02-27"
+  }
+}

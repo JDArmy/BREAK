@@ -1,0 +1,20 @@
+{
+  "A0067": {
+    "title": "API安全网关",
+    "category": "AC01",
+    "definition": "API安全网关是部署在API服务前端的安全防护层，通过身份认证、授权管理、流量控制、请求校验、威胁检测等机制保护后端API服务免受滥用和攻击。",
+    "description": "API安全网关的主要防护能力包括：①身份认证与授权：支持OAuth 2.0、JWT、API Key等多种认证方式，实施细粒度的访问控制策略。②请求校验：对API请求的参数、格式、Schema进行严格校验，拒绝不符合规范的请求。③速率限制与配额管理：基于用户、IP、API端点等维度实施精细化的速率限制，防止API被暴力调用。④威胁检测：识别SQL注入、XSS、参数篡改等常见API攻击模式。⑤流量分析：通过机器学习分析API调用模式，识别异常行为和潜在的滥用行为。⑥数据脱敏：对API响应中的敏感数据进行自动脱敏处理。⑦API版本管理：管理API的生命周期，及时下线废弃的API端点。⑧日志审计：记录所有API调用的详细日志，支持安全审计和事后追溯。",
+    "limitation": "API安全网关的局限性包括：①可能引入额外的网络延迟，影响API响应性能。②复杂的安全策略配置可能导致误拦截合法请求。③对于业务逻辑层面的API滥用（如合法参数组合的恶意使用）检测能力有限。④需要持续维护和更新安全规则以应对新型攻击。⑤在微服务架构中，东西向流量的API安全防护仍存在盲区。",
+    "references": [
+      {
+        "title": "OWASP API Security Top 10",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0x11-t10/"
+      },
+      {
+        "title": "API安全最佳实践",
+        "link": "https://cloud.google.com/apigee/docs/api-platform/security/api-security-best-practices"
+      }
+    ],
+    "updated": "2026-02-27"
+  }
+}

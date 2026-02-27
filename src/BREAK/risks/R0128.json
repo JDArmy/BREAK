@@ -1,0 +1,28 @@
+{
+  "R0128": {
+    "title": "云原生安全风险",
+    "definition": "在云原生架构（容器、Kubernetes、微服务、Serverless等）环境中，由于配置不当、权限管理缺陷等导致的安全风险。",
+    "description": "云原生安全风险是指企业在采用云原生技术栈时面临的特有安全挑战。主要风险包括：①容器逃逸：攻击者利用容器运行时的漏洞突破容器隔离，获取宿主机权限。②Kubernetes配置不当：RBAC权限过大、API Server未认证暴露、etcd未加密、Pod安全策略缺失等。③镜像安全：使用包含已知漏洞或恶意代码的容器镜像。④服务网格安全：微服务间通信的认证和加密不足。⑤Serverless安全：函数权限过大、事件注入、依赖库漏洞等。⑥云配置漏洞：存储桶公开访问、安全组规则过于宽松、IAM权限过大等。⑦密钥管理：硬编码的密钥、未轮换的凭证、密钥存储不当等。",
+    "complexity": "高级",
+    "influence": "可导致大规模数据泄露、服务中断、横向移动攻击、云资源被滥用",
+    "avoidances": [
+      "A0071",
+      "A0068",
+      "A0055",
+      "A0041",
+      "A0017",
+      "A0052"
+    ],
+    "references": [
+      {
+        "title": "OWASP Kubernetes Top 10",
+        "link": "https://owasp.org/www-project-kubernetes-top-ten/"
+      },
+      {
+        "title": "云原生安全白皮书 - CNCF",
+        "link": "https://www.cncf.io/blog/2022/05/18/cloud-native-security-whitepaper-v2/"
+      }
+    ],
+    "updated": "2026-02-27"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "TA0031": {
+    "title": "AI欺诈团伙",
+    "description": "AI欺诈团伙是指专门利用人工智能技术（特别是深度伪造、大语言模型、语音克隆等）实施各类欺诈活动的有组织犯罪团伙。这类团伙通常具备较强的AI技术能力，能够开发或定制化使用各类AI攻击工具。主要活动包括：利用AI换脸技术进行视频通话诈骗、利用语音克隆技术冒充亲友或领导进行电话诈骗、利用LLM批量生成高质量钓鱼内容、利用AI技术绕过人脸识别和声纹认证系统、利用数字人技术进行虚假直播带货等。AI欺诈团伙的出现标志着网络犯罪进入了AI驱动的新阶段，其攻击效率和成功率远超传统手段。",
+    "references": [
+      {
+        "title": "AI驱动的网络犯罪趋势 - Europol",
+        "link": "https://www.europol.europa.eu/publications-events/publications/chatgpt-impact-of-large-language-models-law-enforcement"
+      },
+      {
+        "title": "AI诈骗案例分析 - 公安部",
+        "link": "https://www.mps.gov.cn/"
+      }
+    ],
+    "buildAttackTools": [
+      "AT0056",
+      "AT0057",
+      "AT0059"
+    ],
+    "useAttackTools": [
+      "AT0056",
+      "AT0057",
+      "AT0058",
+      "AT0059",
+      "AT0005",
+      "AT0008",
+      "AT0012",
+      "AT0051"
+    ],
+    "couseRisks": [
+      "R0116",
+      "R0116-001",
+      "R0116-002",
+      "R0118",
+      "R0119",
+      "R0120",
+      "R0130",
+      "R0084",
+      "R0092"
+    ],
+    "updated": "2026-02-27"
+  }
+}

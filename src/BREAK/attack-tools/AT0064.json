@@ -1,0 +1,19 @@
+{
+  "AT0064": {
+    "title": "信息窃取器",
+    "description": "信息窃取器（Infostealer）是一类专门从受害者设备上窃取敏感信息的恶意软件，主要目标包括浏览器保存的密码、Cookie、自动填充数据、加密货币钱包密钥等。代表性家族包括RedLine、Raccoon、Vidar、Lumma等。主要功能包括：①浏览器数据窃取：提取Chrome、Firefox、Edge等浏览器保存的登录凭据、Cookie、信用卡信息、自动填充数据。②加密钱包窃取：搜索并窃取MetaMask、Exodus等加密货币钱包的密钥文件和助记词。③会话令牌窃取：窃取Discord、Telegram、Steam等应用的会话令牌，实现免密登录。④屏幕截图和键盘记录：定期截取屏幕内容，记录键盘输入以捕获未保存的凭据。⑤系统信息收集：收集操作系统版本、硬件信息、已安装软件列表等环境信息。⑥数据回传：将窃取的数据通过加密通道回传到攻击者控制的服务器或Telegram Bot。信息窃取器通常通过钓鱼邮件、虚假软件下载、破解软件等渠道传播，窃取的数据在暗网市场上以\"日志\"（Logs）形式批量出售。",
+    "references": [
+      {
+        "title": "Infostealer Malware Analysis - MITRE ATT&CK",
+        "link": "https://attack.mitre.org/software/"
+      },
+      {
+        "title": "RedLine Stealer技术分析报告",
+        "link": "https://www.cert.org.cn/"
+      }
+    ],
+    "avoidances": ["A0078", "A0010", "A0026", "A0007", "A0023"],
+    "couseRisks": ["R0032", "R0036", "R0098", "R0143"],
+    "updated": "2026-02-27"
+  }
+}

@@ -9,6 +9,7 @@ import { Link } from "@element-plus/icons-vue";
 
 import RiskRelation from "@/components/RiskRelation.vue";
 import iconRelation from "./icons/iconRelation.vue";
+import { useDrawerWidth } from "@/composables/useDrawerWidth";
 
 defineProps<{
   drawer: boolean;
@@ -22,29 +23,18 @@ const avoidanceKey = ref("");
 const attackToolDrawer = ref(false);
 const attackToolKey = ref("");
 
-const getDrawerWidth = () => {
-  return window.innerWidth > 600 ? 600 : "100%";
-};
+const { getDrawerWidth } = useDrawerWidth();
 
 const getReferences = (rKey: string) =>
   risks[rKey as keyof typeof risks].references;
 
-//从attackTools中获取对应ID的risks
-const getriskDescriptionTools = (rKey: string) => {
+const getRiskDescriptionTools = (rKey: string) => {
   return Object.keys(BREAK.attackTools).filter((atKey) =>
     BREAK.attackTools[
       atKey as keyof typeof BREAK.attackTools
     ].couseRisks.includes(rKey as never)
   );
 };
-
-// const getAttackToolReferences = (atKey: string) => {
-//   return BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].references;
-// };
-
-// const getAttackToolAvoidances = (atKey: string) => {
-//   return BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].avoidances;
-// };
 </script>
 
 <template>
@@ -97,7 +87,7 @@ const getriskDescriptionTools = (rKey: string) => {
         :key="aKey"
         size="small"
         class="relational-link"
-        @click="(avoidanceKey = aKey) && (avoidanceDrawer = true)"
+        @click="avoidanceKey = aKey; avoidanceDrawer = true"
         round
         >{{
           aKey + ":&nbsp;" + $t(`BREAK.avoidances.${aKey}.title`)
@@ -108,7 +98,7 @@ const getriskDescriptionTools = (rKey: string) => {
       <strong>{{ $t("riskReference") }}:&nbsp;</strong>
       <ul>
         <li v-for="(reference, refIdx) in getReferences(rKey)" :key="refIdx">
-          <a :href="reference.link" v-if="reference.link" target="_blank"
+          <a :href="reference.link" v-if="reference.link" target="_blank" rel="noopener noreferrer"
             ><el-icon><Link /></el-icon
             >{{ $t(`BREAK.risks.${rKey}.references[${refIdx}].title`) }}</a
           >
@@ -118,14 +108,14 @@ const getriskDescriptionTools = (rKey: string) => {
         </li>
       </ul>
     </div>
-    <div class="desc" v-if="getriskDescriptionTools(rKey).length > 0">
+    <div class="desc" v-if="getRiskDescriptionTools(rKey).length > 0">
       <strong>{{ $t("attackTools") }}:&nbsp;</strong>
       <el-button
-        v-for="atKey in getriskDescriptionTools(rKey)"
+        v-for="atKey in getRiskDescriptionTools(rKey)"
         :key="atKey"
         size="small"
         class="relational-link"
-        @click="(attackToolKey = atKey) && (attackToolDrawer = true)"
+        @click="attackToolKey = atKey; attackToolDrawer = true"
         round
         >{{
           atKey + ":&nbsp;" + $t(`BREAK.attackTools.${atKey}.title`)

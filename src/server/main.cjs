@@ -1,6 +1,6 @@
-// eslint-disable-next-line no-undef
+ 
 const express = require("express");
-// eslint-disable-next-line no-undef
+ 
 const fs = require("fs");
 const app = express();
 

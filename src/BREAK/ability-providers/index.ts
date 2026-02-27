@@ -1,3 +1,5 @@
+import { loadJsonModules } from "../utils";
+
 interface AbilityProvider {
   title: string;
   site: string;
@@ -16,14 +18,7 @@ interface AbilityProviders {
 }
 
 const abilityProviderFiles = import.meta.glob("./AP*.json", { eager: true });
-// 合并所有 JSON 对象
-const allAbilityProviders = Object.values(abilityProviderFiles).reduce(
-  (allAbilityProviders: AbilityProviders, abilityProvider: any) => ({
-    ...allAbilityProviders,
-    ...abilityProvider.default,
-  }),
-  {}
-);
+const allAbilityProviders = loadJsonModules<AbilityProviders>(abilityProviderFiles);
 
 const abilityProviders = {
   abilityProviders: allAbilityProviders,
