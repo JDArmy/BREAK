@@ -6,38 +6,10 @@ import "element-plus/es/components/dropdown-menu/style/css";
 import "element-plus/es/components/dropdown-item/style/css";
 import "element-plus/theme-chalk/display.css";
 
-// import iconTranslate from "@/components/icons/iconTranslate.vue";
 import GithubPane from "@/components/GithubPane.vue";
 import { ArrowDown } from "@element-plus/icons-vue";
 
-import {
-  ElMenu,
-  ElIcon,
-  ElMenuItem,
-  ElDropdown,
-  ElDropdownMenu,
-  ElDropdownItem,
-} from "element-plus";
-
-// import { i18n, languages } from "@/i18n";
-
-// const lang = localStorage.getItem("locale");
-// if (
-//   lang &&
-//   lang !== i18n.global.locale &&
-//   Object.keys(languages).includes(lang)
-// ) {
-//   i18n.global.locale = lang as keyof typeof languages;
-// }
-
-// const handleCommand = (command: keyof typeof languages) => {
-//   i18n.global.locale = command;
-//   localStorage.setItem("locale", command);
-// };
-
 const getActiveIndex = (fullPath: string) => {
-  // console.log(fullPath);
-  // 匹配其他业务场景
   if (fullPath.match(/^\/business-scene\//)) return "/";
   if (fullPath.match(/^\/relation\//)) return "/relation/risk/R0001";
 
@@ -109,18 +81,18 @@ const getActiveIndex = (fullPath: string) => {
       <template #dropdown>
         <el-dropdown-menu class="outside-link-menu">
           <el-dropdown-item
-            ><a target="_blank" href="https://jd.army"
+            ><a target="_blank" rel="noopener noreferrer" href="https://jd.army"
               >Webpage</a
             ></el-dropdown-item
           >
           <el-dropdown-item
-            ><a target="_blank" href="https://blog.jd.army"
+            ><a target="_blank" rel="noopener noreferrer" href="https://blog.jd.army"
               >Blog</a
             ></el-dropdown-item
           >
           <el-dropdown-item divided
             ><a
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               href="https://rtass.jd.army"
               title="Red Team Assessment Scoring System Open Source Framework"
               >RTASS</a
@@ -128,7 +100,7 @@ const getActiveIndex = (fullPath: string) => {
           >
           <el-dropdown-item
             ><a
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               href="https://break.jd.army"
               title="Business Risk Enumeration & Avoidance Kownledge Open Source Framework"
               >BREAK</a
@@ -136,7 +108,7 @@ const getActiveIndex = (fullPath: string) => {
           >
           <el-dropdown-item
             ><a
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               href="https://dsre.jd.army"
               title="Data Security Risk Enumeration Open Source Framkework"
               >DSRE</a
@@ -144,7 +116,7 @@ const getActiveIndex = (fullPath: string) => {
           >
           <el-dropdown-item divided
             ><a
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               href="https://textwatermark.jd.army"
               title="A Open Source Library for Text Watermarking in python"
               >Text Watermark</a
@@ -158,23 +130,6 @@ const getActiveIndex = (fullPath: string) => {
       <github-pane />
     </div>
 
-    <!-- <el-dropdown class="translate" @command="handleCommand">
-      <span class="el-dropdown-link">
-        <icon-translate />
-      </span>
-      <template #dropdown>
-        <el-dropdown-menu>
-          <el-dropdown-item
-            v-for="(langName, langKey) in languages"
-            :key="langKey"
-            :command="langKey"
-            :disabled="i18n.global.locale == langKey"
-          >
-            {{ langName }}
-          </el-dropdown-item>
-        </el-dropdown-menu>
-      </template>
-    </el-dropdown> -->
   </el-menu>
 </template>
 
@@ -185,11 +140,6 @@ const getActiveIndex = (fullPath: string) => {
   margin: 5px;
   width: 40px;
 }
-.version {
-  color: var(--el-color-info);
-  font-size: 50%;
-}
-
 .flex-grow {
   flex-grow: 1;
 }

@@ -1,3 +1,5 @@
+import { loadJsonModules } from "../utils";
+
 interface BusinessScene {
   title: string;
   description: string;
@@ -21,14 +23,7 @@ interface BusinessScenes {
 }
 
 const businessSceneFiles = import.meta.glob("./BS*.json", { eager: true });
-// 合并所有 JSON 对象
-const allBusinessScenes = Object.values(businessSceneFiles).reduce(
-  (allBusinessScenes: BusinessScenes, businessScene: any) => ({
-    ...allBusinessScenes,
-    ...businessScene.default,
-  }),
-  {}
-);
+const allBusinessScenes = loadJsonModules<BusinessScenes>(businessSceneFiles);
 
 export default {
   businessScenes: allBusinessScenes,

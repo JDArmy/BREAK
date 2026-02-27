@@ -9,17 +9,17 @@ import iconRelation from "@/components/icons/iconRelation.vue";
 
 const route = useRoute();
 
-let avoidanceCategories = Object.keys(BREAK.avoidanceCategories);
-let avoidances = Object();
+const avoidanceCategories = Object.keys(BREAK.avoidanceCategories);
+const avoidances = Object();
 
 avoidanceCategories.forEach((acKey) => {
-  avoidances[acKey] = Array();
+  avoidances[acKey] = [];
   Object.keys(BREAK.avoidances).forEach((aKey) => {
-    let avoidancesVal = BREAK.avoidances[aKey as keyof typeof BREAK.avoidances];
+    const avoidancesVal = BREAK.avoidances[aKey as keyof typeof BREAK.avoidances];
     if (acKey !== avoidancesVal.category) {
       return;
     }
-    let avoidance = {
+    const avoidance = {
       ...avoidancesVal,
       aKey: aKey,
     };
@@ -28,7 +28,7 @@ avoidanceCategories.forEach((acKey) => {
 });
 
 const filteredAvoidances = (avoidanceCategoryKey: string) => {
-  let categoricalAvoidances: Avoidances = {};
+  const categoricalAvoidances: Avoidances = {};
   Object.keys(BREAK.avoidances).forEach((avoidanceKey) => {
     if (BREAK.avoidances[avoidanceKey].category === avoidanceCategoryKey) {
       categoricalAvoidances[avoidanceKey] = BREAK.avoidances[avoidanceKey];
@@ -38,7 +38,7 @@ const filteredAvoidances = (avoidanceCategoryKey: string) => {
 };
 
 let totalAvoidancesRowSize = 24;
-let getAvoidanceRowSize = (
+const getAvoidanceRowSize = (
   avoidanceCategoryLength: number,
   avoidancesLength: number
 ) => {
@@ -65,16 +65,17 @@ watch(
   }
 );
 
-const tableRowClassName = ({ row }: { row: any }) => {
+const tableRowClassName = ({ row }: { row: Record<string, string> }) => {
   if (route.hash.split("#")[1] === row.aKey) {
     return "anchor-row";
   }
   return "";
 };
 
-const clickAvoidanceCategoryTitle = (e: any) => {
+const clickAvoidanceCategoryTitle = (e: MouseEvent) => {
+  const target = e.target as HTMLElement;
   window.scrollTo({
-    top: e.target.offsetTop - 10,
+    top: target.offsetTop - 10,
     behavior: "smooth",
   });
 };
@@ -111,7 +112,7 @@ const scrollToTop = () => {
             avoidanceCategoryKey
           )"
           :key="avoidanceKey"
-          :title="avoidance.summary"
+          :title="avoidance.definition"
           class="router-link"
           :to="{ name: 'avoidances', hash: '#' + avoidanceKey }"
         >
@@ -175,11 +176,11 @@ const scrollToTop = () => {
           }}
         </template>
       </el-table-column>
-      <el-table-column :label="$t('summary')">
+      <el-table-column :label="$t('definition')">
         <template #default="scope">
           {{
             scope.row.aKey
-              ? $t(`BREAK.avoidances.${scope.row.aKey}.summary`)
+              ? $t(`BREAK.avoidances.${scope.row.aKey}.definition`)
               : ""
           }}
         </template>
@@ -209,7 +210,7 @@ const scrollToTop = () => {
               v-for="(reference, refIdx) in scope.row.references"
               :key="refIdx"
             >
-              <a v-if="scope.row.aKey" :href="reference.link" target="_blank"
+              <a v-if="scope.row.aKey" :href="reference.link" target="_blank" rel="noopener noreferrer"
                 ><el-icon><Link /></el-icon
                 >{{
                   $t(

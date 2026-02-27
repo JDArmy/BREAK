@@ -4,9 +4,9 @@ import BREAK from "@/BREAK";
 import AvoidanceDetail from "@/components/AvoidanceDetail.vue";
 
 import "element-plus/es/components/drawer/style/css";
-import { ElDrawer, ElButton, ElIcon } from "element-plus";
 import { Link } from "@element-plus/icons-vue";
 import iconRelation from "./icons/iconRelation.vue";
+import { useDrawerWidth } from "@/composables/useDrawerWidth";
 
 defineProps<{
   drawer: boolean;
@@ -17,9 +17,7 @@ defineEmits(["drawerClose"]);
 const avoidanceDrawer = ref(false);
 const avoidanceKey = ref("");
 
-const getInnerDrawerWidth = () => {
-  return window.innerWidth > 600 ? 450 : "100%";
-};
+const { getInnerDrawerWidth } = useDrawerWidth();
 
 const getAttackToolReferences = (atKey: string) => {
   return BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].references;
@@ -85,7 +83,7 @@ const getAttackToolAvoidances = (atKey: string) => {
           v-for="(reference, refIdx) in getAttackToolReferences(atKey)"
           :key="refIdx"
         >
-          <a :href="reference.link" target="_blank">
+          <a :href="reference.link" target="_blank" rel="noopener noreferrer">
             <el-icon><Link /></el-icon
             >{{ $t(`BREAK.attackTools.${atKey}.references[${refIdx}].title`) }}
           </a>

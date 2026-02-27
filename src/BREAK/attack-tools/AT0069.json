@@ -1,0 +1,19 @@
+{
+  "AT0069": {
+    "title": "虚假WiFi",
+    "description": "虚假WiFi（Evil Twin）是一种通过伪造公共WiFi热点来拦截用户网络流量和窃取凭据的攻击工具。攻击者在公共场所（如咖啡厅、机场、商场）部署与合法WiFi同名或相似名称的恶意热点，诱导用户连接后实施中间人攻击。主要功能和攻击方式包括：①热点伪造：创建与目标WiFi相同SSID和加密方式的恶意热点，信号强度设置高于合法热点以吸引用户自动连接。②强制门户钓鱼：设置仿冒的WiFi登录认证页面，诱导用户输入手机号、社交账号等信息。③流量拦截：对连接用户的所有网络流量进行监听和分析，提取明文传输的凭据和敏感信息。④SSL剥离：通过SSLStrip等技术将HTTPS连接降级为HTTP，使加密通信变为可窃听的明文。⑤DNS欺骗：篡改DNS解析结果，将用户访问的正常网站重定向到钓鱼页面。⑥会话劫持：窃取用户的Cookie和会话令牌，冒充用户身份访问各类在线服务。代表性工具包括WiFi-Pumpkin、Fluxion、Airgeddon等。在国内公共WiFi使用率高的环境下，此类攻击威胁较大。",
+    "references": [
+      {
+        "title": "Evil Twin Attack - CISA",
+        "link": "https://www.cisa.gov/news-events/alerts"
+      },
+      {
+        "title": "公共WiFi安全风险提示 - CNCERT",
+        "link": "https://www.cert.org.cn/"
+      }
+    ],
+    "avoidances": ["A0078", "A0010", "A0026", "A0007"],
+    "couseRisks": ["R0142", "R0032", "R0036"],
+    "updated": "2026-02-27"
+  }
+}

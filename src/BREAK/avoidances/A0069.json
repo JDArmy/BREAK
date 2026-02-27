@@ -1,0 +1,20 @@
+{
+  "A0069": {
+    "title": "隐私增强技术",
+    "category": "AC01",
+    "definition": "隐私增强技术（Privacy Enhancing Technologies, PET）是一组旨在保护个人数据隐私的技术方案，使得数据在使用和分析过程中能够最大限度地减少个人信息的暴露。",
+    "description": "隐私增强技术的主要类型包括：①联邦学习（Federated Learning）：在不集中原始数据的前提下，通过分布式训练实现模型的协作学习，数据始终保留在本地。②差分隐私（Differential Privacy）：通过向数据或查询结果中添加精心设计的噪声，在保证统计分析有效性的同时保护个体隐私。③同态加密（Homomorphic Encryption）：允许在加密数据上直接进行计算操作，无需解密即可得到正确的计算结果。④安全多方计算（Secure Multi-Party Computation）：多个参与方在不泄露各自私有数据的前提下，协作完成联合计算任务。⑤可信执行环境（TEE）：利用硬件级别的安全隔离技术，在受保护的内存区域中处理敏感数据。⑥匿名化与假名化：通过去标识化技术降低数据与个人身份的关联性。⑦零知识证明：在不泄露具体信息的情况下证明某个陈述的真实性。",
+    "limitation": "隐私增强技术的局限性包括：①性能开销：同态加密等技术的计算开销较大，可能影响系统性能和实时性。②实施复杂度：部署和维护PET系统需要专业的密码学和安全知识。③数据可用性与隐私保护的平衡：过度的隐私保护可能降低数据的分析价值。④标准化不足：各类PET技术的标准和互操作性仍在发展中。⑤新型攻击：针对联邦学习的模型投毒攻击、针对差分隐私的成员推断攻击等新型威胁不断出现。",
+    "references": [
+      {
+        "title": "隐私增强技术白皮书 - 中国信通院",
+        "link": "http://www.caict.ac.cn/kxyj/qwfb/bps/"
+      },
+      {
+        "title": "Privacy-Enhancing Technologies - ENISA",
+        "link": "https://www.enisa.europa.eu/topics/data-protection/privacy-enhancing-technologies"
+      }
+    ],
+    "updated": "2026-02-27"
+  }
+}

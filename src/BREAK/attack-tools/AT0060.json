@@ -1,0 +1,30 @@
+{
+  "AT0060": {
+    "title": "加密货币混币器",
+    "description": "加密货币混币器（Cryptocurrency Mixer/Tumbler）是一种通过混合多个用户的加密货币交易来模糊资金流向的工具或服务。混币器将多个用户的加密货币汇集到一个池中，经过多次拆分、延时、随机化处理后，将等额（扣除手续费）的加密货币发送到用户指定的新地址，从而切断原始交易与最终接收地址之间的关联。常见的混币技术包括CoinJoin协议、零知识证明混币（如Tornado Cash）、跨链桥混币等。攻击者利用混币器进行洗钱、勒索赎金转移、暗网交易资金清洗、逃避金融监管等非法活动。",
+    "references": [
+      {
+        "title": "Tornado Cash制裁事件 - OFAC",
+        "link": "https://home.treasury.gov/news/press-releases/jy0916"
+      },
+      {
+        "title": "加密货币混币技术分析",
+        "link": "https://www.chainalysis.com/blog/cryptocurrency-mixers/"
+      }
+    ],
+    "avoidances": [
+      "A0016",
+      "A0016-001",
+      "A0029",
+      "A0015",
+      "A0044",
+      "A0054"
+    ],
+    "couseRisks": [
+      "R0121",
+      "R0060",
+      "R0062"
+    ],
+    "updated": "2026-02-27"
+  }
+}

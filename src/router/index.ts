@@ -1,6 +1,5 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-// createWebHistory(import.meta.env.BASE_URL),
 
 const router = createRouter({
   history: createWebHashHistory(),
@@ -60,13 +59,17 @@ const router = createRouter({
       name: "editorWithParams",
       component: () => import("@/views/editor/HomeView.vue"),
     },
+    {
+      path: "/:pathMatch(.*)*",
+      redirect: "/",
+    },
   ],
   scrollBehavior(to) {
     if (to.hash) {
       return new Promise((resolve) => {
         setTimeout(() => {
           resolve({ el: to.hash, behavior: "smooth" });
-        }, 300); // 延迟 500 毫秒以确保元素已经被渲染
+        }, 300); // 延迟 300 毫秒以确保元素已经被渲染
       });
     }
   },

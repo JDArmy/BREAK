@@ -4,6 +4,7 @@ import BREAK from "@/BREAK";
 import "element-plus/es/components/drawer/style/css";
 import { Link } from "@element-plus/icons-vue";
 import iconRelation from "./icons/iconRelation.vue";
+import { useDrawerWidth } from "@/composables/useDrawerWidth";
 
 defineProps<{
   drawer: boolean;
@@ -11,9 +12,7 @@ defineProps<{
 }>();
 defineEmits(["drawerClose"]);
 
-const getInnerDrawerWidth = () => {
-  return window.innerWidth > 600 ? 450 : "100%";
-};
+const { getInnerDrawerWidth } = useDrawerWidth();
 
 const getAvoidanceReferences = (aKey: string) => {
   return BREAK.avoidances[aKey as keyof typeof BREAK.avoidances].references;
@@ -48,8 +47,8 @@ const getAvoidanceReferences = (aKey: string) => {
       {{ $t(`BREAK.avoidances.${aKey}.title`) }}
     </div>
     <div class="desc">
-      <strong>{{ $t("summary") }}:&nbsp;</strong>
-      {{ $t(`BREAK.avoidances.${aKey}.summary`) }}
+      <strong>{{ $t("definition") }}:&nbsp;</strong>
+      {{ $t(`BREAK.avoidances.${aKey}.definition`) }}
     </div>
     <div class="desc">
       <strong>{{ $t("description") }}:&nbsp;</strong>
@@ -66,7 +65,7 @@ const getAvoidanceReferences = (aKey: string) => {
           v-for="(reference, refIdx) in getAvoidanceReferences(aKey)"
           :key="refIdx"
         >
-          <a :href="reference.link" target="_blank">
+          <a :href="reference.link" target="_blank" rel="noopener noreferrer">
             <el-icon><Link /></el-icon
             >{{ $t(`BREAK.avoidances.${aKey}.references[${refIdx}].title`) }}
           </a>

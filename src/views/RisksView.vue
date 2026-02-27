@@ -1,34 +1,23 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 import BREAK from "@/BREAK";
-// import "element-plus/es/components/table/style/css";
-// import "element-plus/es/components/table-column/style/css";
 import AvoidanceDetail from "@/components/AvoidanceDetail.vue";
 import RiskDetail from "@/components/RiskDetail.vue";
 import iconRelation from "@/components/icons/iconRelation.vue";
-import { useRoute } from "vue-router";
+import { useAnchorTable } from "@/composables/useAnchorTable";
 
 const avoidanceDrawer = ref(false);
 const avoidanceKey = ref("");
 
-let risks = Object.keys(BREAK.risks).map((rKey) => ({
+const risks = Object.keys(BREAK.risks).map((rKey) => ({
   ...BREAK.risks[rKey as keyof typeof BREAK.risks],
   rKey: rKey,
 }));
 
-let riskDrawer = ref(false);
-let riskKey = ref("");
+const riskDrawer = ref(false);
+const riskKey = ref("");
 
-//页内锚点
-const route = useRoute();
-const getTableHeight = () =>
-  route.hash.split("#")[1] ? "unset" : window.innerHeight - 100;
-const tableRowClassName = ({ row }: { row: any }) => {
-  if (route.hash.split("#")[1] === row.rKey) {
-    return "anchor-row";
-  }
-  return "";
-};
+const { getTableHeight, tableRowClassName } = useAnchorTable("rKey");
 </script>
 
 <template lang="">
@@ -58,7 +47,7 @@ const tableRowClassName = ({ row }: { row: any }) => {
       <template v-slot="scope">
         <a :id="scope.row.rKey" class="anchor-position"></a>
         <a
-          @click="(riskKey = scope.row.rKey) && (riskDrawer = true)"
+          @click="riskKey = scope.row.rKey; riskDrawer = true"
           href="javascript:void(0);"
           >{{ scope.row.rKey }}</a
         >
@@ -137,7 +126,7 @@ const tableRowClassName = ({ row }: { row: any }) => {
   />
   <!-- 风险详情页 -->
   <risk-detail
-    v-on:drawer-close="(riskDrawer = false) && (riskKey = '')"
+    v-on:drawer-close="riskDrawer = false; riskKey = ''"
     :drawer="riskDrawer"
     :rKey="riskKey"
   />

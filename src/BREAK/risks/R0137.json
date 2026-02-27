@@ -1,0 +1,21 @@
+{
+  "R0137": {
+    "title": "先买后付(BNPL)欺诈",
+    "definition": "利用先买后付（Buy Now Pay Later）信用额度进行欺诈消费后拒绝还款，或利用BNPL机制的审核漏洞骗取商品和资金。",
+    "description": "先买后付欺诈是针对BNPL信用消费模式的欺诈行为，在国内主要表现为花呗、白条等信用支付工具的滥用。主要欺诈模式包括：①虚假身份申请：利用合成身份或盗用他人身份开通BNPL额度后恶意消费。②套现欺诈：通过虚假交易将BNPL额度转化为现金，无意偿还。③多平台骗贷：同时在多个BNPL平台申请额度，集中消费后逃废债。④退款欺诈：利用BNPL的退款机制，在收到商品后发起退款但保留商品。⑤账号接管：盗取他人账号后利用其BNPL额度进行消费。⑥商户串通：与虚假商户合谋制造虚假交易套取BNPL资金。在国内电商场景中，花呗套现、白条套现已形成完整的灰产链条。",
+    "complexity": "中级",
+    "influence": "造成平台和金融机构的信贷损失、坏账率上升、影响BNPL业务的可持续发展",
+    "avoidances": ["A0075", "A0077", "A0024", "A0018", "A0044", "A0007"],
+    "references": [
+      {
+        "title": "BNPL Fraud Trends - Juniper Research",
+        "link": "https://www.juniperresearch.com/research/fintech-payments/digital-lending/"
+      },
+      {
+        "title": "花呗白条套现风险防控",
+        "link": "https://www.pbccrc.org.cn/"
+      }
+    ],
+    "updated": "2026-02-27"
+  }
+}

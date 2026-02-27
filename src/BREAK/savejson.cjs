@@ -1,6 +1,6 @@
 // 用于将 all.json 文件中的键值对按前缀分组，并将每个前缀的键值对保存到一个新的 JSON 文件中
 
-// eslint-disable-next-line no-undef
+ 
 const fs = require("fs");
 
 const filename = "abilityProviders.json";

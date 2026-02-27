@@ -6,11 +6,9 @@
     "composite": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "noEmit": false,
-    "baseUrl": ".",
+    "strictNullChecks": true,
     "paths": {
       "@/*": ["./src/*"]
     }
-  },
-  "strictNullChecks": true
+  }
 }

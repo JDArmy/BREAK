@@ -1,0 +1,30 @@
+{
+  "AT0059": {
+    "title": "AI语音克隆工具",
+    "description": "AI语音克隆工具是利用深度学习技术，基于少量目标人物的语音样本（通常仅需几秒到几分钟），即可生成与目标人物高度相似的合成语音的工具。这类工具采用语音合成（TTS）和语音转换（Voice Conversion）技术，可以实时或离线生成任意内容的克隆语音。代表性技术包括VALL-E、Bark、Tortoise-TTS等开源项目，以及各类商业化语音克隆服务。攻击者利用语音克隆工具进行电话诈骗（冒充亲友、领导等）、绕过声纹认证系统、制作虚假音频证据等。随着零样本（Zero-shot）语音克隆技术的发展，攻击门槛进一步降低。",
+    "references": [
+      {
+        "title": "VALL-E: Neural Codec Language Models",
+        "link": "https://arxiv.org/abs/2301.02111"
+      },
+      {
+        "title": "AI语音克隆安全风险分析",
+        "link": "https://www.europol.europa.eu/publications-events/publications/chatgpt-impact-of-large-language-models-law-enforcement"
+      }
+    ],
+    "avoidances": [
+      "A0066",
+      "A0023",
+      "A0007",
+      "A0027"
+    ],
+    "couseRisks": [
+      "R0120",
+      "R0116",
+      "R0084",
+      "R0092",
+      "R0044"
+    ],
+    "updated": "2026-02-27"
+  }
+}

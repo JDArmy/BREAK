@@ -1,0 +1,19 @@
+{
+  "AT0068": {
+    "title": "密码字典/彩虹表",
+    "description": "密码字典和彩虹表是用于密码破解和撞库攻击的预计算数据集。密码字典是包含常见密码、泄露密码、规则生成密码的文本集合；彩虹表是预先计算好的哈希值与明文密码的映射表。主要类型和用途包括：①通用密码字典：收集互联网上最常用的密码组合（如123456、password等），用于快速尝试弱密码。②泄露密码库：从历次数据泄露事件中收集的真实用户密码，用于撞库攻击（Credential Stuffing）。③规则生成字典：基于密码生成规则（如首字母大写+数字+特殊字符）自动生成密码变体。④社工字典：根据目标用户的个人信息（姓名、生日、手机号等）生成针对性密码字典。⑤彩虹表：预计算常见哈希算法（MD5、SHA1等）的哈希值与明文对应关系，用于快速反查哈希值对应的明文密码。⑥国别化字典：针对特定国家和语言习惯定制的密码字典，如中文拼音组合、常见中文名字等。代表性工具包括rockyou.txt、SecLists等公开字典，以及Hashcat、John the Ripper等配套破解工具。",
+    "references": [
+      {
+        "title": "Password Cracking - MITRE ATT&CK T1110",
+        "link": "https://attack.mitre.org/techniques/T1110/"
+      },
+      {
+        "title": "SecLists - OWASP",
+        "link": "https://github.com/danielmiessler/SecLists"
+      }
+    ],
+    "avoidances": ["A0007", "A0026", "A0001", "A0074"],
+    "couseRisks": ["R0032", "R0036", "R0098"],
+    "updated": "2026-02-27"
+  }
+}

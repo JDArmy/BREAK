@@ -1,0 +1,21 @@
+{
+  "R0143": {
+    "title": "OAuth/SSO授权滥用",
+    "definition": "利用OAuth、SSO等第三方登录授权机制的实现漏洞或设计缺陷，获取用户账号控制权或越权访问用户数据。",
+    "description": "OAuth/SSO授权滥用是针对第三方登录和单点登录机制的攻击行为。主要攻击方式包括：①授权码劫持：通过开放重定向漏洞劫持OAuth授权码，获取用户的访问令牌。②CSRF绑定攻击：利用CSRF漏洞将攻击者的第三方账号绑定到受害者的平台账号上。③Token泄露利用：利用不安全的Token传输或存储方式窃取访问令牌和刷新令牌。④权限范围越权：在授权请求中扩大权限范围（Scope），获取超出必要的用户数据访问权限。⑤账号关联混淆：利用不同平台间账号关联逻辑的缺陷，实现账号接管。⑥隐式授权流滥用：利用隐式授权模式（Implicit Flow）中Token直接暴露在URL中的特点进行窃取。⑦第三方应用滥用：恶意第三方应用通过OAuth授权获取用户数据后进行滥用或出售。",
+    "complexity": "高级",
+    "influence": "用户账号被接管、个人数据泄露、平台间信任链被破坏、影响第三方登录生态安全",
+    "avoidances": ["A0081", "A0082", "A0007", "A0026", "A0078"],
+    "references": [
+      {
+        "title": "OAuth 2.0 Security Best Current Practice - IETF",
+        "link": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics"
+      },
+      {
+        "title": "OAuth安全攻防 - PortSwigger",
+        "link": "https://portswigger.net/web-security/oauth"
+      }
+    ],
+    "updated": "2026-02-27"
+  }
+}

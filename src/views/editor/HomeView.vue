@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { onMounted, ref, watch } from "vue";
+import { computed, onMounted, onUnmounted, ref, watch } from "vue";
 import BREAK from "@/BREAK";
 import { reactive } from "vue";
 import axios from "axios";
@@ -9,6 +9,31 @@ const route = useRoute();
 const router = useRouter();
 const breakType = ref((route.params.type as string) || "");
 const breakKey = ref((route.params.key as string) || "");
+
+const breakItems = computed(() => {
+  if (breakType.value === "") return {};
+  const bItems = BREAK[breakType.value as keyof typeof BREAK];
+  if (!bItems) {
+    return {};
+  }
+  return bItems;
+});
+
+const breakItem = computed((): BreakItem => {
+  if (!breakItems.value) {
+    return {} as BreakItem;
+  }
+  if (breakKey.value === "") {
+    return {} as BreakItem;
+  }
+  const bItem = breakItems.value[
+    breakKey.value as keyof typeof breakItems.value
+  ] as BreakItem | undefined;
+  if (bItem === undefined) {
+    return {} as BreakItem;
+  }
+  return bItem;
+});
 
 enum BreakType {
   risks = "risks",
@@ -34,6 +59,7 @@ enum BreakTypeTitle {
 interface Option {
   key: string;
   label: string;
+  description: string;
   disabled: boolean;
 }
 
@@ -42,8 +68,25 @@ enum relationType {
   many2one = "many2one",
 }
 
+interface BreakItem {
+  title: string;
+  description: string;
+  updated?: string;
+  [key: string]: unknown;
+}
+
+interface RelationItem {
+  title: string;
+  type: relationType;
+  fromBreakKey: BreakType;
+  fromBreakItemKey: string;
+  toBreakKey: BreakType;
+  val: string[];
+  data: Option[];
+}
+
 const relationShips = reactive({
-  risks: {
+  [BreakType.risks]: {
     avoidances: {
       title: "规避手段",
       type: relationType.one2many,
@@ -52,7 +95,7 @@ const relationShips = reactive({
       toBreakKey: BreakType.avoidances,
       val: [] as string[],
       data: [] as Option[],
-      jsons: [] as any,
+      jsons: [] as string[],
     },
     attackTools: {
       title: "攻击工具",
@@ -73,7 +116,7 @@ const relationShips = reactive({
       data: [] as Option[],
     },
   },
-  avoidances: {
+  [BreakType.avoidances]: {
     risks: {
       title: "规避风险",
       type: relationType.many2one,
@@ -93,7 +136,7 @@ const relationShips = reactive({
       data: [] as Option[],
     },
   },
-  attackTools: {
+  [BreakType.attackTools]: {
     avoidances: {
       title: "规避手段",
       type: relationType.one2many,
@@ -131,7 +174,7 @@ const relationShips = reactive({
       data: [] as Option[],
     },
   },
-  threatActors: {
+  [BreakType.threatActors]: {
     couseRisks: {
       title: "造成风险",
       type: relationType.one2many,
@@ -162,13 +205,36 @@ const relationShips = reactive({
   },
 });
 
-const genData = (BreakKey: any) => {
+// todo，可以直接编辑 json，然后保存到文件
+// const editable = {
+//   [BreakType.risks]: [
+//     "title",
+//     "definition",
+//     "description",
+//     "complexity",
+//     "influence",
+//     "references",
+//   ],
+//   [BreakType.avoidances]: [
+//     "title",
+//     "category",
+//     "definition",
+//     "description",
+//     "limitation",
+//     "references",
+//   ],
+//   [BreakType.attackTools]: ["title", "description", "references"],
+//   [BreakType.threatActors]: ["title", "description", "references"],
+// };
+
+const genData = (BreakKey: BreakType) => {
   const data: Option[] = [];
   Object.entries(BREAK[BreakKey as keyof typeof BREAK]).forEach(
     ([key, item]) => {
       data.push({
         key,
         label: key + ": " + item.title,
+        description: item.description,
         disabled: false,
       });
     }
@@ -189,7 +255,7 @@ Object.values(relationShips).forEach((rsItems) => {
 
 // 初始化右侧数据
 const genVal = () => {
-  let relationShip =
+  const relationShip =
     relationShips[breakType.value as keyof typeof relationShips];
   Object.values(relationShip).forEach((rsItem) => {
     const val: string[] = [];
@@ -199,12 +265,12 @@ const genVal = () => {
       // one2many
       const fromBreakItem = fromBreakItems[
         breakKey.value as keyof typeof fromBreakItems
-      ] as any;
+      ] as BreakItem | undefined;
       if (fromBreakItem) {
         val.push(
-          ...fromBreakItem[
+          ...(fromBreakItem[
             rsItem.fromBreakItemKey as keyof typeof fromBreakItem
-          ]
+          ] as string[])
         );
       }
     } else if (rsItem.type === relationType.many2one) {
@@ -259,47 +325,63 @@ const saveFileToServer = (path: string, json: string) => {
     });
 };
 // 监控页面关闭事件，如果数据未完全上传成功，则通过beforeunload事件阻止页面关闭
-onMounted(() => {
-  window.onerror = function (message, source, lineno, colno, error) {
-    alert(
-      `JavaScript错误: ${message}\n在: ${source}:${lineno}:${colno}:${error}`
-    );
-    return true;
-  };
+const onBeforeUnload = (e: BeforeUnloadEvent) => {
+  if (!saveFileToServerSuccessStatus) {
+    e.preventDefault();
+    e.returnValue = "";
+  }
+};
 
-  window.addEventListener("beforeunload", (e) => {
-    if (!saveFileToServerSuccessStatus) {
-      e.preventDefault();
-      e.returnValue = "";
-    }
-  });
+onMounted(() => {
+  window.addEventListener("beforeunload", onBeforeUnload);
 });
 
+onUnmounted(() => {
+  window.removeEventListener("beforeunload", onBeforeUnload);
+});
+
+const getDateTimeString = () => {
+  return new Intl.DateTimeFormat("zh-CN", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    timeZone: "Asia/Chongqing",
+  }).format(new Date());
+};
+
 const rootPath = ".."; //相对于server的路径
-const transferChange = (relationItem: any) => {
+const transferChange = (relationItem: RelationItem) => {
   if (relationItem.type === relationType.one2many) {
-    const breakItems = BREAK[breakType.value as keyof typeof BREAK];
-    const breakItem = breakItems[
-      breakKey.value as keyof typeof breakItems
-    ] as any;
-    breakItem[relationItem.fromBreakItemKey as keyof typeof breakItem] = [
+    const breakItemOldJson = JSON.stringify(breakItem.value);
+    const newBreakItem = breakItem.value as BreakItem;
+    (newBreakItem[relationItem.fromBreakItemKey] as unknown) = [
       ...new Set(relationItem.val),
     ];
-    breakItem[relationItem.fromBreakItemKey as keyof typeof breakItem].sort();
+    (newBreakItem[relationItem.fromBreakItemKey] as string[]).sort();
+    // 如果没有变化则不保存
+    if (breakItemOldJson === JSON.stringify(newBreakItem)) {
+      return;
+    }
+    // 添加更新时间
+    newBreakItem.updated = getDateTimeString();
 
-    let newBreakItems = { [breakKey.value]: breakItem };
+    const newBreakItems: Record<string, unknown> = { [breakKey.value]: newBreakItem };
     let parentKey = breakKey.value;
     if (breakKey.value.indexOf("-") > -1) {
       parentKey = breakKey.value.split("-")[0];
     }
-    Object.keys(breakItems).forEach((key) => {
+    Object.keys(breakItems.value).forEach((key) => {
       if (key !== breakKey.value && key.indexOf(parentKey) > -1) {
-        newBreakItems[key] = breakItems[key as keyof typeof breakItems];
+        newBreakItems[key] =
+          breakItems.value[key as keyof typeof breakItems.value];
       }
     });
     const sortedNewBreakItems = Object.keys(newBreakItems)
       .sort()
-      .reduce((sortedObj: any, key: any) => {
+      .reduce((sortedObj: Record<string, unknown>, key: string) => {
         sortedObj[key] = newBreakItems[key];
         return sortedObj;
       }, {});
@@ -310,57 +392,51 @@ const transferChange = (relationItem: any) => {
     // console.log(path, json);
     saveFileToServer(path, json);
   } else if (relationItem.type === relationType.many2one) {
-    const breakItems = BREAK[relationItem.fromBreakKey as keyof typeof BREAK];
     // 枚举所有的breakItems
-    Object.entries(breakItems).forEach(([bKey, bItem]) => {
+    Object.entries(breakItems.value).forEach(([bKey, bItem]) => {
+      const bItemOldJson = JSON.stringify(bItem);
+      const itemFields = bItem as BreakItem;
+      const fieldArr = itemFields[relationItem.fromBreakItemKey] as string[];
       // 比对所有breakItems的ID是否在relationItem.val中
       if (relationItem.val.includes(bKey)) {
-        // 如果在，比对breakKey是否在对应的关系中，如果不在则添加
-        bItem[relationItem.fromBreakItemKey as keyof typeof bItem].includes(
-          breakKey.value
-        ) ||
-          bItem[relationItem.fromBreakItemKey as keyof typeof bItem].push(
-            breakKey.value
-          );
-        bItem[relationItem.fromBreakItemKey as keyof typeof bItem] = [
-          ...new Set(
-            bItem[relationItem.fromBreakItemKey as keyof typeof bItem]
-          ),
-        ];
-        bItem[relationItem.fromBreakItemKey as keyof typeof bItem].sort();
+        // 添加操作：如果在，比对breakKey是否在对应的关系中，如果不在则添加
+        if (!fieldArr.includes(breakKey.value)) {
+          fieldArr.push(breakKey.value);
+        }
+        itemFields[relationItem.fromBreakItemKey] = [...new Set(fieldArr)];
+        (itemFields[relationItem.fromBreakItemKey] as string[]).sort();
       } else {
-        // 如果不在，比对breakKey是否在对应的关系中，如果在则删除
-        const index = bItem[
-          relationItem.fromBreakItemKey as keyof typeof bItem
-        ].indexOf(breakKey.value);
+        // 删除操作：如果不在，比对breakKey是否在对应的关系中，如果在则删除
+        const index = fieldArr.indexOf(breakKey.value);
         if (index <= -1) {
           return;
         }
-        bItem[relationItem.fromBreakItemKey as keyof typeof bItem].splice(
-          index,
-          1
-        );
-        bItem[relationItem.fromBreakItemKey as keyof typeof bItem] = [
-          ...new Set(
-            bItem[relationItem.fromBreakItemKey as keyof typeof bItem]
-          ),
-        ];
-        bItem[relationItem.fromBreakItemKey as keyof typeof bItem].sort();
+        fieldArr.splice(index, 1);
+        itemFields[relationItem.fromBreakItemKey] = [...new Set(fieldArr)];
+        (itemFields[relationItem.fromBreakItemKey] as string[]).sort();
       }
 
-      let newBreakItems = { [bKey]: bItem };
+      // 如果没有变化则不保存
+      if (bItemOldJson === JSON.stringify(itemFields)) {
+        return;
+      }
+      // 添加更新时间
+      itemFields.updated = getDateTimeString();
+
+      const newBreakItems: Record<string, unknown> = { [bKey]: itemFields };
       let parentKey = bKey;
       if (bKey.indexOf("-") > -1) {
         parentKey = bKey.split("-")[0];
       }
-      Object.keys(breakItems).forEach((key) => {
+      Object.keys(breakItems.value).forEach((key) => {
         if (key !== bKey && key.indexOf(parentKey) > -1) {
-          newBreakItems[key] = breakItems[key as keyof typeof breakItems];
+          newBreakItems[key] =
+            breakItems.value[key as keyof typeof breakItems.value];
         }
       });
       const sortedNewBreakItems = Object.keys(newBreakItems)
         .sort()
-        .reduce((sortedObj: any, key: any) => {
+        .reduce((sortedObj: Record<string, unknown>, key: string) => {
           sortedObj[key] = newBreakItems[key];
           return sortedObj;
         }, {});
@@ -373,25 +449,17 @@ const transferChange = (relationItem: any) => {
     });
   }
 };
-
-const getBreakItemTitle = () => {
-  const breakItems = BREAK[breakType.value as keyof typeof BREAK] as any;
-  if (breakKey.value === "") return "";
-  const breakItem = breakItems[breakKey.value as keyof typeof breakItems];
-  return breakItem ? breakItem.title : "";
-};
 </script>
 
 <template>
   <el-row :gutter="20">
     <el-col :md="4">
-      <el-select v-model="breakType">
+      <el-select v-model="breakType" @change="breakKey = ''">
         <el-option
           v-for="bType in BreakType"
           :key="bType"
           :label="BreakTypeTitle[bType]"
           :value="bType"
-          @change="breakKey = ''"
         >
         </el-option>
       </el-select>
@@ -407,6 +475,10 @@ const getBreakItemTitle = () => {
         </el-option>
       </el-select>
     </el-col>
+    <el-col :md="4">
+      最近更新：
+      {{ breakItem ? breakItem.updated : "" }}
+    </el-col>
   </el-row>
   <template v-if="breakType && breakKey">
     <el-row :gutter="20" style="padding: 10px">
@@ -418,9 +490,9 @@ const getBreakItemTitle = () => {
         :md="12"
       >
         <h3 style="text-align: center">
-          {{ getBreakItemTitle() }}
+          {{ breakItem ? breakItem.title : "" }}
           {{ BreakTypeTitle[breakType as keyof typeof BreakTypeTitle] }}
-          的
+          &nbsp;-&nbsp;
           {{
             relationItem.type == relationType.one2many
               ? BreakTypeTitle[relationItem.toBreakKey]
@@ -428,7 +500,11 @@ const getBreakItemTitle = () => {
           }}
           （{{ relationItem.title }}）
         </h3>
-        <el-transfer v-model="relationItem.val" :data="relationItem.data" />
+        <el-transfer v-model="relationItem.val" :data="relationItem.data">
+          <template #default="{ option }">
+            <span :title="option.description">{{ option.label }}</span>
+          </template>
+        </el-transfer>
         <div style="text-align: center; margin: 10px">
           <el-button
             type="primary"

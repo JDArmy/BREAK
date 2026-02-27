@@ -1,0 +1,21 @@
+{
+  "R0139": {
+    "title": "友好欺诈",
+    "definition": "消费者在正常收到商品或服务后，恶意向银行或支付机构发起拒付（Chargeback），谎称未收到商品或交易未经授权，以骗取退款同时保留商品。",
+    "description": "友好欺诈（Friendly Fraud / Chargeback Fraud）是一种由消费者发起的欺诈行为，区别于R0054恶意退货退款。其核心特征是消费者绕过商家直接通过银行或支付机构的争议解决机制发起拒付。主要表现形式包括：①虚假未收货声明：消费者收到商品后向银行声称未收到，发起拒付。②未授权交易声明：消费者自行完成交易后声称交易未经本人授权。③服务不满拒付：消费者在未与商家沟通的情况下直接发起拒付。④家庭成员消费：家庭成员（如子女）使用持卡人账户消费后，持卡人以未授权为由拒付。⑤买家后悔：消费者购买后后悔，通过拒付而非正常退货流程获取退款。⑥职业拒付人：有组织地利用拒付机制反复骗取退款的职业欺诈者。在国内场景中，类似行为表现为通过支付平台争议机制恶意申请退款。",
+    "complexity": "初级",
+    "influence": "商家承担商品损失和拒付手续费、拒付率过高导致支付通道被关闭、增加运营成本",
+    "avoidances": ["A0077", "A0074", "A0075", "A0044", "A0024"],
+    "references": [
+      {
+        "title": "Chargeback Fraud - Visa",
+        "link": "https://usa.visa.com/support/small-business/dispute-resolution.html"
+      },
+      {
+        "title": "Friendly Fraud Prevention Best Practices",
+        "link": "https://www.mastercard.com/news/perspectives/featured-topics/chargebacks/"
+      }
+    ],
+    "updated": "2026-02-27"
+  }
+}
