@@ -6,7 +6,10 @@
     "complexity": "Intermediate",
     "influence": "Exploits platform promotional benefits, disrupts normal platform operations, and degrades the ordering and shopping experience for legitimate users.",
     "references": [
-      { "title": "OWASP Automated Threat: OAT005 Scalping" }
+      {
+        "title": "OWASP Automated Threat: OAT005 Scalping",
+        "link": "https://wenku.baidu.com/view/d5fa02b2a900b52acfc789eb172ded630b1c98fa.html?_wkts_=1698737083175"
+      }
     ]
   },
   "R0003-001": {
@@ -16,7 +19,10 @@
     "complexity": "Intermediate",
     "influence": "Exploits platform promotional benefits and disrupts legitimate user ordering.",
     "references": [
-      { "title": "OWASP Automated Threat: OAT005 Scalping" }
+      {
+        "title": "OWASP Automated Threat: OAT005 Scalping",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-005_Scalping.html"
+      }
     ]
   },
   "R0003-002": {
@@ -26,7 +32,10 @@
     "complexity": "Intermediate",
     "influence": "Transaction prices are too low, resulting in insufficient profit margins. Disrupts legitimate user ordering.",
     "references": [
-      { "title": "OWASP Automated Threat: OAT013 Sniping" }
+      {
+        "title": "OWASP Automated Threat: OAT013 Sniping",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-013_Sniping.html"
+      }
     ]
   },
   "R0003-003": {
@@ -35,7 +44,12 @@
     "description": "Using automated scripts or crawler tools to register large numbers of fake accounts, simulating transaction activity and fictitious purchases to seize scarce resources on the platform — such as limited-edition goods or purchase eligibility — preventing legitimate users from having a fair chance.",
     "complexity": "Intermediate",
     "influence": "Disrupts legitimate user ordering.",
-    "references": []
+    "references": [
+      {
+        "title": "Fake Order Fraud - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E5%88%B7%E5%8D%95"
+      }
+    ]
   },
   "R0003-004": {
     "title": "Unfair Resource Seizure",
@@ -43,6 +57,11 @@
     "description": "Specific illegitimate means include but are not limited to: using bot programs to rapidly submit large numbers of requests the moment resources become available; using malicious software to attack target systems; exploiting system vulnerabilities to bypass normal allocation mechanisms; submitting false personal or application information to deceive the system.",
     "complexity": "Intermediate",
     "influence": "May lead to unfair resource distribution, system overload, and escalating malicious competition.",
-    "references": []
+    "references": [
+      {
+        "title": "OWASP Automated Threat: OAT-021 Denial of Inventory",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-021_Denial_of_Inventory.html"
+      }
+    ]
   }
 }

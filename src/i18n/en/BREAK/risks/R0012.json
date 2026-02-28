@@ -5,7 +5,12 @@
     "description": "Generally includes: cheat programs providing capabilities beyond normal gameplay such as auto-aim and wall hacks; automation scripts that automatically perform specific tasks like resource collection or quest completion without player involvement; and speed hacks that modify game speed to allow faster movement or actions.",
     "complexity": "Intermediate",
     "influence": "Disrupts the normal operating logic of the application, thereby affecting normal platform operations.",
-    "references": []
+    "references": [
+      {
+        "title": "Game Cheats/Hacks - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E5%A4%96%E6%8C%82/89291?fromtitle=%E6%B8%B8%E6%88%8F%E5%A4%96%E6%8C%82&fromid=2748874&fr=aladdin"
+      }
+    ]
   },
   "R0012-001": {
     "title": "Red Packet Grabbing Bot",
@@ -14,7 +19,10 @@
     "complexity": "Intermediate",
     "influence": "Undermines platform fairness and disrupts normal user activity order.",
     "references": [
-      { "title": "WeChat Red Packet Grabbing Bots: Where Is the Fairness? User Experience Must Not Be Compromised" }
+      {
+        "title": "WeChat Red Packet Grabbing Bots: Where Is the Fairness? User Experience Must Not Be Compromised",
+        "link": "https://baijiahao.baidu.com/s?id=1780597937062155614&wfr=spider&for=pc"
+      }
     ]
   },
   "R0012-002": {
@@ -24,7 +32,10 @@
     "complexity": "Intermediate",
     "influence": "Disrupts game balance.",
     "references": [
-      { "title": "Game Cheating Software - Baidu Baike" }
+      {
+        "title": "Game Cheating Software - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E5%A4%96%E6%8C%82/89291?fromtitle=%E6%B8%B8%E6%88%8F%E5%A4%96%E6%8C%82&fromid=2748874&fr=aladdin"
+      }
     ]
   }
 }

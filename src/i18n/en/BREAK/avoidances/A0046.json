@@ -4,6 +4,11 @@
     "definition": "Rating users by credit score and applying different restrictions based on their credit level.",
     "description": "Credit grading applies different restrictions to users based on their credit level. For example, users with a high credit rating may enjoy more privileges, while users with a low credit rating enjoy fewer. The goal is to deter malicious behavior and incentivize users to improve their credit standing. Methods include behavior-based, attribute-based, relationship-based, and evaluation-based credit grading.",
     "limitation": "Credit analysis relies on the platform's collection and analysis of user behavior, attributes, relationships, and evaluations, so it cannot identify new high-quality users and may to some extent reduce the motivation of new high-quality users.",
-    "references": []
+    "references": [
+      {
+        "title": "Credit Score - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E4%BF%A1%E7%94%A8%E5%88%86"
+      }
+    ]
   }
 }

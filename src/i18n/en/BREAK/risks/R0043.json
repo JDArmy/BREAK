@@ -6,7 +6,10 @@
     "complexity": "Advanced",
     "influence": "Payment identity is impersonated.",
     "references": [
-      { "title": "What Happens to Accounts Topped Up with Stolen Cards?" }
+      {
+        "title": "What Happens to Accounts Topped Up with Stolen Cards?",
+        "link": "https://baijiahao.baidu.com/s?id=1728703601989302772&wfr=spider&for=pc"
+      }
     ]
   },
   "R0043-001": {
@@ -16,7 +19,10 @@
     "complexity": "Advanced",
     "influence": "Funds in the payment card or account are misappropriated or stolen.",
     "references": [
-      { "title": "OWASP Automated Threat: OAT012 Cashing Out" }
+      {
+        "title": "OWASP Automated Threat: OAT012 Cashing Out",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-012_Cashing_Out.html"
+      }
     ]
   }
 }

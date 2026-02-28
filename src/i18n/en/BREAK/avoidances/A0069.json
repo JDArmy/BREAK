@@ -5,8 +5,14 @@
     "description": "The main types of privacy enhancing technologies include: (1) federated learning — achieving collaborative model training through distributed learning without centralizing raw data, keeping data local at all times; (2) differential privacy — protecting individual privacy while maintaining the validity of statistical analysis by adding carefully designed noise to data or query results; (3) homomorphic encryption — allowing computation operations to be performed directly on encrypted data and obtaining correct results without decryption; (4) secure multi-party computation — enabling multiple parties to collaboratively complete joint computation tasks without revealing their respective private data; (5) trusted execution environment (TEE) — using hardware-level security isolation to process sensitive data in protected memory regions; (6) anonymization and pseudonymization — reducing the association between data and personal identity through de-identification techniques; (7) zero-knowledge proofs — proving the truth of a statement without revealing specific information.",
     "limitation": "The limitations of privacy enhancing technologies include: (1) performance overhead — techniques such as homomorphic encryption have significant computational overhead that may affect system performance and real-time capability; (2) implementation complexity — deploying and maintaining PET systems requires specialized cryptography and security knowledge; (3) balance between data usability and privacy protection — excessive privacy protection may reduce the analytical value of data; (4) insufficient standardization — standards and interoperability for various PET technologies are still evolving; (5) novel attacks — new threats such as model poisoning attacks against federated learning and membership inference attacks against differential privacy continue to emerge.",
     "references": [
-      { "title": "Privacy Enhancing Technologies White Paper - CAICT" },
-      { "title": "Privacy-Enhancing Technologies - ENISA" }
+      {
+        "title": "Privacy Enhancing Technologies White Paper - CAICT",
+        "link": "http://www.caict.ac.cn/kxyj/qwfb/bps/"
+      },
+      {
+        "title": "Privacy-Enhancing Technologies - ENISA",
+        "link": "https://www.enisa.europa.eu/topics/data-protection/privacy-enhancing-technologies"
+      }
     ]
   }
 }

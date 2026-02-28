@@ -3,21 +3,30 @@
     "title": "Black SIM Cards",
     "description": "Black SIM cards, also known as 'black phone cards', refer to mobile phone cards (including wireless data cards) that have not been registered under a real name and are used by criminals for illegal activities. Since the implementation of phone real-name registration in September 2013, new users in China have largely completed real-name registration. However, due to lax enforcement and large existing stock, unregistered phone cards still number as many as 180 million, giving criminals opportunities to spread obscene content, commit telecommunications fraud, and organize terrorist activities. The main sources of black SIM cards are physical carrier cards, virtual carrier cards, and overseas phone cards.",
     "references": [
-      { "title": "Black SIM Cards - Baidu Baike" }
+      {
+        "title": "Black SIM Cards - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E7%94%B5%E8%AF%9D%E9%BB%91%E5%8D%A1/19710385?fr=aladdin"
+      }
     ]
   },
   "AT0001-002": {
     "title": "Modem Pool SIM Cards",
     "description": "Black SIM cards used with a 'modem pool' — a network communication hardware device that enables simultaneous multi-number calling and bulk SMS sending.",
     "references": [
-      { "title": "Modem Pool - Baidu Baike" }
+      {
+        "title": "Modem Pool - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E7%8C%AB%E6%B1%A0?fromModule=lemma_search-box"
+      }
     ]
   },
   "AT0001-003": {
     "title": "Intercept SIM Cards",
     "description": "SIM cards that, via malware or trojans, grant unauthorized control over a real user's SMS and verification code reception, typically sourced from intercept card platforms.",
     "references": [
-      { "title": "The Current State of the SIM Card Black Market Under the 'Card-Cutting' Campaign" }
+      {
+        "title": "The Current State of the SIM Card Black Market Under the 'Card-Cutting' Campaign",
+        "link": "https://zhuanlan.zhihu.com/p/640350477"
+      }
     ]
   }
 }

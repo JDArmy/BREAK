@@ -4,6 +4,11 @@
     "definition": "Analyzing credential usage patterns to identify whether credentials are being maliciously reused.",
     "description": "Credential reuse detection is a commonly used method for identifying malicious accounts. It can be applied in any business scenario by analyzing data collected from terminals or request characteristics on the server side to determine whether the same access credential is being used in multiple places. Common detection methods include: User-Agent analysis, IP analysis, device fingerprint analysis, etc.",
     "limitation": "Because normal users also experience IP drift, IP analysis is generally based on geographic region. If an attacker uses a local proxy IP and also modifies the UA and device fingerprint, detection may be bypassed. The author (Monyer) has filed a patent titled 'An Identity Impersonation Detection Technology Based on Access Bifurcation Analysis' to address this problem.",
-    "references": []
+    "references": [
+      {
+        "title": "Credentials - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E5%87%AD%E8%AF%81"
+      }
+    ]
   }
 }

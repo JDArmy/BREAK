@@ -4,6 +4,11 @@
     "definition": "After identifying security vulnerabilities in a computer system, network, or application, taking a series of measures to patch or eliminate those vulnerabilities in order to reduce the risk of potential attackers exploiting them for unauthorized access, data leakage, destruction, or other malicious activities.",
     "description": "Key vulnerability remediation methods include: security patch application — security patches released by manufacturers or developers typically contain fixes for known vulnerabilities, and organizations should apply these patches promptly to ensure vulnerabilities are addressed; system configuration updates — updating system and application configurations to fix configuration errors that may cause vulnerabilities, such as disabling default passwords and restricting unnecessary services; code review and fixes — reviewing source code or binary code for application vulnerabilities, identifying potential security issues and fixing them; network security device configuration — updating and fixing configurations on network and security devices to address potential vulnerabilities; data encryption and access control — using data encryption and strengthened access controls to improve overall system security.",
     "limitation": "Limitations of vulnerability remediation include: delays and complexity — some fixes may take time to develop, test, and apply, giving attackers a window of opportunity; incomplete fixes — remediation measures may sometimes introduce new issues or miss other vulnerabilities while addressing one; vendor dependency — if a vulnerability involves hardware or software vendors, the speed and effectiveness of the fix may depend on vendor cooperation and support; complexity and cost — for complex systems and large-scale networks, vulnerability remediation can become complex and costly, especially when business continuity is involved.",
-    "references": []
+    "references": [
+      {
+        "title": "Security Patch - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E5%AE%89%E5%85%A8%E8%A1%A5%E4%B8%81"
+      }
+    ]
   }
 }

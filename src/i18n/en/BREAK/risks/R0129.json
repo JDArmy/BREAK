@@ -6,7 +6,10 @@
     "complexity": "Basic",
     "influence": "Users are harassed, platform SMS resources are consumed, verification code interfaces are abused, and security alerts are buried.",
     "references": [
-      { "title": "SMS Bombing Attack Analysis and Defense" }
+      {
+        "title": "SMS Bombing Attack Analysis and Defense",
+        "link": "https://www.freebuf.com/"
+      }
     ]
   }
 }

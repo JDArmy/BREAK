@@ -3,8 +3,14 @@
     "title": "AI Fraud Gangs",
     "description": "AI fraud gangs are organized criminal gangs specializing in using artificial intelligence technologies (particularly deepfakes, large language models, and voice cloning) to commit various types of fraud. These gangs typically have strong AI technical capabilities and can develop or customize various AI attack tools. Main activities include: video call fraud using AI face-swapping, phone fraud impersonating friends or leaders using voice cloning, batch generation of high-quality phishing content using LLMs, bypassing facial recognition and voiceprint authentication systems using AI, and fake live-stream e-commerce using digital human technology.",
     "references": [
-      { "title": "AI-Driven Cybercrime Trends - Europol" },
-      { "title": "AI Fraud Case Analysis - Ministry of Public Security" }
+      {
+        "title": "AI-Driven Cybercrime Trends - Europol",
+        "link": "https://www.europol.europa.eu/publications-events/publications/chatgpt-impact-of-large-language-models-law-enforcement"
+      },
+      {
+        "title": "AI Fraud Case Analysis - Ministry of Public Security",
+        "link": "https://www.mps.gov.cn/"
+      }
     ]
   }
 }

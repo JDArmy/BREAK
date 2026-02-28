@@ -6,8 +6,14 @@
     "complexity": "Advanced",
     "influence": "Platforms face anti-money laundering compliance risks, regulatory penalties, and reputational losses, and may be exploited as money laundering channels by criminals.",
     "references": [
-      { "title": "Chainalysis 2025 Crypto Crime Report" },
-      { "title": "Trends in Cryptocurrency Anti-Money Laundering Regulation" }
+      {
+        "title": "Chainalysis 2025 Crypto Crime Report",
+        "link": "https://www.chainalysis.com/blog/crypto-crime-report/"
+      },
+      {
+        "title": "Trends in Cryptocurrency Anti-Money Laundering Regulation",
+        "link": "http://www.pbc.gov.cn/"
+      }
     ]
   }
 }

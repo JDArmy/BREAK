@@ -5,8 +5,14 @@
     "description": "The main LLM security protection measures include: (1) prompt filtering — performing security checks on user-submitted prompts to identify and block inputs containing injection attacks, jailbreak attempts, sensitive information probing, and other malicious intent; (2) output guardrails — performing real-time review of model-generated content to filter outputs containing harmful information, sensitive data, or prohibited content; (3) system prompt hardening — using carefully designed system prompts to constrain model behavior boundaries and prevent role-playing attacks and instruction overrides; (4) model access control — implementing fine-grained API access control including identity authentication, rate limiting, and usage quota management; (5) security sandbox — running the model in an isolated sandbox environment to restrict its access to external systems and data; (6) red team testing — regularly conducting adversarial testing of the model to discover and fix security vulnerabilities; (7) content grading — managing model outputs at different levels based on user identity and context.",
     "limitation": "The limitations of LLM security protection include: (1) the diversity of prompt injection makes complete defense extremely difficult, as attackers can bypass filters through encoding, multilingual mixing, indirect injection, and other techniques; (2) overly strict security policies may reduce model usability and affect normal user experience; (3) security measures themselves may introduce additional latency and computational overhead; (4) the black-box nature of models makes it difficult to fully predict and control their behavior; (5) new attack methods continue to emerge, requiring continuous updates to protection strategies.",
     "references": [
-      { "title": "OWASP Top 10 for LLM Applications" },
-      { "title": "LLM Security Practice Guide" }
+      {
+        "title": "OWASP Top 10 for LLM Applications",
+        "link": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"
+      },
+      {
+        "title": "LLM Security Practice Guide",
+        "link": "https://www.nist.gov/artificial-intelligence/ai-risk-management-framework"
+      }
     ]
   }
 }

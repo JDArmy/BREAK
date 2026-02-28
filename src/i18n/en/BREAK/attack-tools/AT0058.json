@@ -3,8 +3,14 @@
     "title": "Digital Human Generation Tools",
     "description": "Digital human generation tools use AI technology to create virtual digital human avatars and drive them for real-time interaction. These tools can generate highly realistic virtual character images based on a small amount of real person photos or video material, and achieve real-time lip sync, facial expression changes, and body movements through text-driven or voice-driven methods. In live streaming scenarios, digital humans can conduct 24-hour uninterrupted live-stream e-commerce and interactive chat. Attackers use digital human tools for fake live-stream e-commerce fraud, impersonating real people for social fraud, and batch generating fake account content.",
     "references": [
-      { "title": "AI Digital Human Technology Development Report" },
-      { "title": "Virtual Digital Human In-depth Industry Report" }
+      {
+        "title": "AI Digital Human Technology Development Report",
+        "link": "https://www.iresearch.com.cn/"
+      },
+      {
+        "title": "Virtual Digital Human In-depth Industry Report",
+        "link": "https://www.qianzhan.com/"
+      }
     ]
   }
 }

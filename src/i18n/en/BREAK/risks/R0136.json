@@ -6,8 +6,14 @@
     "complexity": "Advanced",
     "influence": "Causes platform credit losses, risk control model failures, increased compliance risks, and losses that are difficult to recover due to unclear victims.",
     "references": [
-      { "title": "Synthetic Identity Fraud - Federal Reserve" },
-      { "title": "Research on Synthetic Identity Fraud Detection Techniques" }
+      {
+        "title": "Synthetic Identity Fraud - Federal Reserve",
+        "link": "https://fedpaymentsimprovement.org/strategic-initiatives/payments-security/synthetic-identity-payments-fraud/"
+      },
+      {
+        "title": "Research on Synthetic Identity Fraud Detection Techniques",
+        "link": "https://www.bis.org/publ/work931.htm"
+      }
     ]
   }
 }

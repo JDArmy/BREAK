@@ -71,7 +71,10 @@
     "complexity": "Advanced",
     "influence": "Large numbers of downstream projects are implanted with malicious code, sensitive data is leaked, systems are compromised, and the supply chain trust ecosystem is damaged.",
     "references": [
-      { "title": "SLSA: Supply-chain Levels for Software Artifacts" }
+      {
+        "title": "SLSA: Supply-chain Levels for Software Artifacts",
+        "link": "https://slsa.dev/"
+      }
     ]
   }
 }

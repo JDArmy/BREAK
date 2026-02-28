@@ -4,6 +4,11 @@
     "definition": "Returning inaccurate or fake data to identified attackers.",
     "description": "Also called 'data poisoning.' Returning fake data is typically aimed at scraping of price, review count, sales volume, inventory, and other data. Since price data is widely used by price comparison websites or competitors for unfair competition, returning fake data will render such attempts ineffective. Review counts and sales volumes combined with prices can be used to infer a company's GMV and assess its business performance, which may be used for malicious stock market manipulation or short selling. Returning fake data will make such calculations inaccurate.",
     "limitation": "Returning fake data must only be used when the accuracy of identifying malicious requests is 100%. If fake data is accessed by a normal user, the minor consequence is causing confusion for the user; the more serious consequence is that it could be used as evidence that the platform fabricates data and does not comply with lawful business operations. The lesser impact is negative public opinion; the greater impact may lead to compliance issues.",
-    "references": []
+    "references": [
+      {
+        "title": "Data Poisoning - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E6%8A%95%E6%AF%92"
+      }
+    ]
   }
 }

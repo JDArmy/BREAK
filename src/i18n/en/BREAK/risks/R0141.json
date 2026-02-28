@@ -6,7 +6,10 @@
     "complexity": "Basic",
     "influence": "Causes platform marketing resource waste, regional operation strategy failures, and location-based risk control model bypass.",
     "references": [
-      { "title": "GPS Spoofing Detection Techniques" }
+      {
+        "title": "GPS Spoofing Detection Techniques",
+        "link": "https://www.gps.gov/systems/gps/performance/accuracy/"
+      }
     ]
   }
 }

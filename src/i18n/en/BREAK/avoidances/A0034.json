@@ -4,27 +4,47 @@
     "definition": "A privacy protection technique that transforms, perturbs, or replaces sensitive data to reduce the risk of data leakage while maintaining a certain level of data usability. The goal is to reduce the risk of identifying sensitive information during data processing and sharing.",
     "description": "Methods include: substitution and replacement — replacing certain values in the original data with vague or fictitious values, such as replacing real names with randomly generated names. Perturbation — introducing noise or perturbation into the data to make it difficult to accurately restore the original values, such as adding random numbers to numerical data. Generalization — reducing specific details to a more general form to protect privacy, such as generalizing a specific address to the city level. Desensitization — removing or replacing sensitive information in the data to protect privacy. Data masking — using masking techniques to hide part of the data, showing only a portion of the information to limit access to sensitive information.",
     "limitation": "Although data obfuscation plays an important role in privacy protection, its use also has some limitations. First, obfuscation may cause information loss, affecting the precision and detail of the original data and thus impacting data analysis and mining effectiveness. Second, some complex obfuscation techniques may introduce significant performance overhead, increasing computational and storage costs. Additionally, excessive data obfuscation may cause data usability issues, reducing the practical value of data for users or analysts. Finally, although intended to protect privacy, some obfuscation techniques may still be subject to attacks that restore data or infer sensitive information, further increasing the factors that need to be carefully weighed when using data obfuscation.",
-    "references": []
+    "references": [
+      {
+        "title": "Data Masking - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E8%84%B1%E6%95%8F"
+      }
+    ]
   },
   "A0034-001": {
     "title": "Numerical Obfuscation",
     "definition": "Applying a certain degree of obfuscation and approximation to precise numerical values to create a significant difference from the exact values.",
     "description": "The purpose of numerical obfuscation is to prevent attackers from obtaining precise numerical values through data analysis and data mining. For example, many third-party organizations scrape precise product sales volumes and prices to estimate a company's annual revenue and profit, gaining a first-mover advantage in securities trading or corporate mergers and acquisitions. Numerical obfuscation methods include: rounding, truncation, modulo, arithmetic operations, random numbers, etc. Application scenarios include: prices, inventory, sales volumes, ratings, review counts, etc.",
     "limitation": "The goal of numerical obfuscation is to allow data viewers to see the general trend of data without seeing precise values, while preventing third-party organizations from grasping the company's exact operational status. This goal is inherently contradictory, because even without precise data, the final operational status can be estimated from the general trend. Therefore, this defense approach is only suitable for scenarios where the goal is to prevent third-party organizations from obtaining precise operational data.",
-    "references": []
+    "references": [
+      {
+        "title": "Data Masking - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E8%84%B1%E6%95%8F"
+      }
+    ]
   },
   "A0034-002": {
     "title": "Numerical Indexing",
     "definition": "Converting precise numerical values into an indexed form to create a significant difference from the exact values.",
     "description": "Numerical indexing refers to expressing linear values in a non-linear way through a certain algorithm. The goal is to allow data viewers to see the general trend without seeing precise values, while preventing third-party organizations from grasping the company's exact operational status. Methods include: exponential transformation, logarithmic transformation, squaring, square root, cubing, cube root, etc.",
     "limitation": "Given a certain number of real values, it may be possible to reverse-engineer the indexing algorithm by comparing the generated corresponding indices. Therefore, when indexing, either completely hide the real values to prevent reverse-engineering, or use a stepped algorithm to make the index a stepped curve where each segment uses a different algorithm, making reverse-engineering more difficult.",
-    "references": []
+    "references": [
+      {
+        "title": "Data Masking - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E8%84%B1%E6%95%8F"
+      }
+    ]
   },
   "A0034-003": {
     "title": "Response Status Obfuscation",
     "definition": "Obfuscating precise response statuses so that specific states cannot be distinguished.",
     "description": "For example, many login systems display 'username or password incorrect' when a user fails to log in, allowing attackers to determine whether a user exists on the platform. After obfuscating the response status, whether the user does not exist or the password is wrong, the message 'username or password incorrect' is displayed, preventing attackers from inferring whether the user does not exist or the password is wrong.",
     "limitation": "Response status obfuscation is a relatively basic countermeasure that is well worth trying, but it is not a silver bullet.",
-    "references": []
+    "references": [
+      {
+        "title": "Data Masking - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E8%84%B1%E6%95%8F"
+      }
+    ]
   }
 }

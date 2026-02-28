@@ -6,7 +6,10 @@
     "complexity": "Basic",
     "influence": "Causes platform membership revenue losses, degrades paid user experience, and dilutes the value of the membership system.",
     "references": [
-      { "title": "Subscription Fraud Prevention - Recurly" }
+      {
+        "title": "Subscription Fraud Prevention - Recurly",
+        "link": "https://recurly.com/blog/subscription-fraud/"
+      }
     ]
   }
 }

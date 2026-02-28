@@ -6,8 +6,14 @@
     "complexity": "Basic",
     "influence": "AI-generated content risks may create compliance risks for the platform and increase the volume of customer complaints.",
     "references": [
-      { "title": "AIGC - Baidu Baike" },
-      { "title": "What Security Risks Does AIGC Introduce?" }
+      {
+        "title": "AIGC - Baidu Baike",
+        "link": "https://baike.baidu.com/item/AIGC/59988381?fr=ge_ala"
+      },
+      {
+        "title": "What Security Risks Does AIGC Introduce?",
+        "link": "https://baijiahao.baidu.com/s?id=1778727153917782040&wfr=spider&for=pc"
+      }
     ]
   },
   "R0071-001": {
@@ -17,7 +23,10 @@
     "complexity": "Intermediate",
     "influence": "AIGC sensitive information leakage may create compliance risks for the platform.",
     "references": [
-      { "title": "What Data Risks Should Enterprises Consider When Using AIGC?" }
+      {
+        "title": "What Data Risks Should Enterprises Consider When Using AIGC?",
+        "link": "https://www.sohu.com/a/713192470_121394207"
+      }
     ]
   },
   "R0071-002": {
@@ -27,7 +36,10 @@
     "complexity": "Basic",
     "influence": "AIGC compliance risks may create compliance risks for the platform and increase the volume of customer complaints.",
     "references": [
-      { "title": "Legal Compliance Risks and Prevention in the AIGC Wave" }
+      {
+        "title": "Legal Compliance Risks and Prevention in the AIGC Wave",
+        "link": "https://www.hnjzlaw.net/news/3/1451.html"
+      }
     ]
   },
   "R0071-003": {
@@ -50,7 +62,10 @@
     "complexity": "Intermediate",
     "influence": "Users are misled into making wrong decisions; incorrect advice in professional domains may cause serious consequences; platform credibility declines.",
     "references": [
-      { "title": "Survey on Hallucination Problems in Large Language Models" }
+      {
+        "title": "Survey on Hallucination Problems in Large Language Models",
+        "link": "https://arxiv.org/abs/2311.05232"
+      }
     ]
   },
   "R0071-005": {
@@ -60,7 +75,10 @@
     "complexity": "Advanced",
     "influence": "AI system decisions are manipulated, security detection is bypassed, and model trustworthiness is lost.",
     "references": [
-      { "title": "Survey on AI Model Security and Poisoning Attacks" }
+      {
+        "title": "Survey on AI Model Security and Poisoning Attacks",
+        "link": "https://arxiv.org/abs/2302.10149"
+      }
     ]
   }
 }

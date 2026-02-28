@@ -24,7 +24,10 @@
     "description": "Penalty content may include verbal warnings, written warnings, suspension, demotion, salary deductions, termination, etc. Effective employee penalty strategies should balance punishment and improvement, making employees aware of the consequences of misconduct while providing opportunities for correction and improvement.",
     "limitation": "Limitations include the potential to cause employee dissatisfaction and affect the work environment. Compliance must be ensured to guard against legal action. Therefore, fair, clear, and consistently enforced strategies must be developed in alignment with relevant regulations and company policies.",
     "references": [
-      { "title": "Which Employee Behaviors Require Penalties" }
+      {
+        "title": "Which Employee Behaviors Require Penalties",
+        "link": "https://www.64365.com/zs/1280613.aspx"
+      }
     ]
   },
   "A0020-003": {
@@ -32,6 +35,11 @@
     "definition": "Banning an account when it violates related rules, preventing the account from logging in.",
     "description": "Account ban strategies include: account ban, account freeze, account deactivation, account deletion, etc.",
     "limitation": "Account banning is a loss-mitigation strategy with a certain degree of latency.",
-    "references": []
+    "references": [
+      {
+        "title": "Account Management - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Account_management"
+      }
+    ]
   }
 }

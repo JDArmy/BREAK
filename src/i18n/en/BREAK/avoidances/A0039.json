@@ -4,6 +4,11 @@
     "definition": "Hiding data needed by terminal security capabilities to increase the difficulty for attackers to discover and obtain it.",
     "description": "Unlike response data encryption (A022-003), the goal of data hiding is to make attackers unaware of the existence of the data itself, or to know it exists but be unable to find where it is. Some typical data hiding techniques include: algorithm whitebox protection — the goal is to maintain the security of an encryption algorithm even when the encryption key is embedded in the application; steganography — hiding information within other media using a certain algorithm, such as hiding text within an image; virtualization technology — compiling information into specific bytecode to be executed in a custom bytecode interpreter, etc.",
     "limitation": "The core adversarial point of data hiding is the reverse-engineering threshold and time cost caused by information asymmetry. Once the hiding method is discovered, cracking is only a matter of time. Therefore, data hiding typically employs dynamic algorithms or a 'hide-and-seek' mechanism: dynamic algorithms strengthen protection by issuing new algorithms and invalidating old ones before the old algorithm is reverse-engineered; 'hide-and-seek' strengthens protection by moving hidden data from its original location to a new location before it is found.",
-    "references": []
+    "references": [
+      {
+        "title": "Steganography - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E9%9A%90%E5%86%99%E6%9C%AF"
+      }
+    ]
   }
 }

@@ -6,8 +6,14 @@
     "complexity": "Basic",
     "influence": "Merchants bear product losses and chargeback fees, excessively high chargeback rates lead to payment channel closure, and operational costs increase.",
     "references": [
-      { "title": "Chargeback Fraud - Visa" },
-      { "title": "Friendly Fraud Prevention Best Practices" }
+      {
+        "title": "Chargeback Fraud - Visa",
+        "link": "https://usa.visa.com/support/small-business/dispute-resolution.html"
+      },
+      {
+        "title": "Friendly Fraud Prevention Best Practices",
+        "link": "https://www.mastercard.com/news/perspectives/featured-topics/chargebacks/"
+      }
     ]
   }
 }

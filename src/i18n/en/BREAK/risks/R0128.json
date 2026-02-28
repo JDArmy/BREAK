@@ -6,8 +6,14 @@
     "complexity": "Advanced",
     "influence": "Can lead to large-scale data breaches, service disruption, lateral movement attacks, and cloud resource abuse.",
     "references": [
-      { "title": "OWASP Kubernetes Top 10" },
-      { "title": "Cloud Native Security White Paper - CNCF" }
+      {
+        "title": "OWASP Kubernetes Top 10",
+        "link": "https://owasp.org/www-project-kubernetes-top-ten/"
+      },
+      {
+        "title": "Cloud Native Security White Paper - CNCF",
+        "link": "https://www.cncf.io/blog/2022/05/18/cloud-native-security-whitepaper-v2/"
+      }
     ]
   }
 }

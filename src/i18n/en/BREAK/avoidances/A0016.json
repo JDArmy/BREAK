@@ -5,7 +5,10 @@
     "description": "Also commonly abbreviated as TI or CTI. The definition of threat intelligence can be very broad: any data label that can identify good or bad is threat intelligence. Threat intelligence places high demands on intelligence operations capability and intelligence quality, requiring data to remain fresh on a continuous and real-time basis. Precision and recall are generally used as metrics for threat intelligence quality. Good threat intelligence can be used directly as a protective measure, while poor-quality threat intelligence needs to be combined with risk control strategies (A015) to avoid incomplete coverage or large-scale false positives.",
     "limitation": "The limitations of threat intelligence mainly include: incomplete information sources, timeliness challenges, excessive false information, difficulty distinguishing targeted attacks, difficulty quantifying real impact, challenges in cross-organizational sharing and collaboration, and compliance issues related to privacy and regulations.",
     "references": [
-      { "title": "Threat Intelligence - Baidu Baike" }
+      {
+        "title": "Threat Intelligence - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/23311172?fr=ge_ala"
+      }
     ]
   },
   "A0016-001": {
@@ -13,7 +16,12 @@
     "definition": "Labeling IP addresses with risk scores, types, and other attributes.",
     "description": "IP intelligence refers to various information about IP addresses. In a narrow sense, IP intelligence may only include the risk score of an IP. In a broad sense, IP intelligence also includes: geographic location, ISP (Internet Service Provider) information, ASN (Autonomous System Number), malicious activity history, user information, proxy detection, network traffic analysis, etc.",
     "limitation": "The limitations of IP threat intelligence are that it can only provide limited information and cannot provide a complete threat picture. Additionally, since network attackers constantly change their attack methods and techniques, the effectiveness of IP intelligence can also be affected. Therefore, when using IP intelligence, it needs to be combined with other security technologies and measures to improve the effectiveness of network security protection.",
-    "references": []
+    "references": [
+      {
+        "title": "Threat Intelligence - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Threat_intelligence"
+      }
+    ]
   },
   "A0016-002": {
     "title": "Domain & Link Threat Intelligence",
@@ -35,7 +43,10 @@
     "description": "Content may include: file hash values — unique identifiers of malicious files, used to identify known malware. IP addresses — known malicious IP addresses associated with malicious activity. Domain names — potentially malicious domain names associated with threats. Malicious file behavior patterns — specific malware may have unique behavior patterns that can serve as threat indicators.",
     "limitation": "The limitations of IOC intelligence include dependence on known attack patterns, vulnerability to attackers changing IOCs, susceptibility to false positives and false negatives, and its static-feature-based nature making it difficult to adapt to dynamic and evolving threat environments.",
     "references": [
-      { "title": "Basic Terminology of Threat Intelligence" }
+      {
+        "title": "Basic Terminology of Threat Intelligence",
+        "link": "https://www.jianshu.com/p/201d296636f4"
+      }
     ]
   },
   "A0016-005": {

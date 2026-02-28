@@ -6,7 +6,10 @@
     "complexity": "Advanced",
     "influence": "Facial recognition mechanisms become ineffective, leading to unauthorized login, payment, and other risks.",
     "references": [
-      { "title": "A Brief Overview of Facial Recognition Technology and Attack Techniques" }
+      {
+        "title": "A Brief Overview of Facial Recognition Technology and Attack Techniques",
+        "link": "https://blog.csdn.net/yty_311/article/details/113625432"
+      }
     ]
   }
 }

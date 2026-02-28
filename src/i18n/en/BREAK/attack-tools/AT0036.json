@@ -3,7 +3,10 @@
     "title": "Device Wipe Tools",
     "description": "Device wipe tools completely reset a device to factory settings, clearing all user data, modifying device fingerprint data, and clearing all locally stored data from installed apps. After wiping, the device is theoretically a brand new device.",
     "references": [
-      { "title": "Android One-Click New Device Software - Root-Free Device Fingerprint Reset" }
+      {
+        "title": "Android One-Click New Device Software - Root-Free Device Fingerprint Reset",
+        "link": "https://zhuanlan.zhihu.com/p/534705816"
+      }
     ]
   }
 }

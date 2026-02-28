@@ -5,7 +5,10 @@
     "description": "Device fingerprinting is a method used to identify and label computing devices (such as smartphones, tablets, computers, etc.). It uses the hardware and software characteristics of the device itself to create a unique identifier for recognizing and verifying the device in future accesses. Device fingerprints include some inherent, difficult-to-tamper, and unique device identifiers — for example, the IMEI number assigned to each phone during manufacturing, or the MAC address assigned to a computer's network card. These unique device identifiers can be considered device fingerprints. Additionally, a combination of device characteristics such as name, model, shape, color, and features can also be used as a device fingerprint.",
     "limitation": "For unique identifiers in devices such as IMEI, IMSI, MAC address, Android ID, and IDFA, due to user privacy restrictions and system upgrades, these generally require user authorization to access. This makes universality a problem, especially since black-gray market devices will basically never grant such permissions. For device identifiers computed from multiple device characteristics, they are too easily tampered with, making recall impossible.",
     "references": [
-      { "title": "Device Fingerprinting - Baidu Baike" }
+      {
+        "title": "Device Fingerprinting - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E8%AE%BE%E5%A4%87%E6%8C%87%E7%BA%B9/20817369?fr=ge_ala"
+      }
     ]
   },
   "A0021-001": {
@@ -13,6 +16,11 @@
     "definition": "Tagging terminals using device characteristics, persistent cookies, and other methods.",
     "description": "Also called terminal tagging or device labeling. Device tagging can typically be implemented through covert tracking markers and special device characteristic collection. Device tagging generally serves two purposes: one is to assign a unique identifier to the device so that the device's identity is known when the tag is present; the other is to assign a special label to the device (such as 'clean device' or 'blacklisted device') so that even after the device changes its fingerprint, the device's security status can still be continuously identified and tracked.",
     "limitation": "Due to the inability to guarantee terminal data integrity, combined with legal and regulatory requirements for user privacy, terminal tagging has significant constraints and is only effective under certain conditions.",
-    "references": []
+    "references": [
+      {
+        "title": "Device Fingerprint - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Device_fingerprint"
+      }
+    ]
   }
 }

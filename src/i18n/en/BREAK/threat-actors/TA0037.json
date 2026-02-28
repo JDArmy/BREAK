@@ -3,8 +3,14 @@
     "title": "Fraudulent Claims Gangs",
     "description": "Fraudulent claims gangs are organized criminal gangs specializing in defrauding insurance claims or e-commerce platform after-sales compensation. They defraud compensation through fabricating accidents, exaggerating losses, and colluding with insiders. Main operating models include: insurance fraud, e-commerce after-sales fraud, logistics claims fraud, medical insurance fraud, insider collusion, and industry chain division of labor.",
     "references": [
-      { "title": "Insurance Fraud Risk Prevention - China Banking and Insurance Regulatory Commission" },
-      { "title": "E-commerce After-sales Fraud Governance" }
+      {
+        "title": "Insurance Fraud Risk Prevention - China Banking and Insurance Regulatory Commission",
+        "link": "https://www.cbirc.gov.cn/"
+      },
+      {
+        "title": "E-commerce After-sales Fraud Governance",
+        "link": "https://www.samr.gov.cn/"
+      }
     ]
   }
 }

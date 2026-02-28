@@ -6,8 +6,14 @@
     "complexity": "Advanced",
     "influence": "Can lead to identity authentication systems being compromised, financial fraud losses, serious brand reputational damage, social trust crises, and legal compliance risks.",
     "references": [
-      { "title": "Deepfake Technology Governance White Paper - China Academy of Information and Communications Technology" },
-      { "title": "Deepfakes and the New Disinformation War" }
+      {
+        "title": "Deepfake Technology Governance White Paper - China Academy of Information and Communications Technology",
+        "link": "http://www.caict.ac.cn/"
+      },
+      {
+        "title": "Deepfakes and the New Disinformation War",
+        "link": "https://www.foreignaffairs.com/articles/world/2018-12-11/deepfakes-and-new-disinformation-war"
+      }
     ]
   },
   "R0116-001": {
@@ -17,7 +23,10 @@
     "complexity": "Advanced",
     "influence": "Directly leads to financial fraud losses, identity authentication system failures, and user trust crises.",
     "references": [
-      { "title": "AI Face-Swap Fraud Case Analysis" }
+      {
+        "title": "AI Face-Swap Fraud Case Analysis",
+        "link": "https://www.mps.gov.cn/"
+      }
     ]
   },
   "R0116-002": {

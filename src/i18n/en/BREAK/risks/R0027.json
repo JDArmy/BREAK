@@ -6,7 +6,10 @@
     "complexity": "Intermediate",
     "influence": "Scraped business data may not cause actual losses to a company until it reaches a certain scale, but once scraped data reaches sufficient scale, it can be used for commercial competition or to analyze company operations in detail, causing significant business harm — for example, analyzing GMV or specific user groups.",
     "references": [
-      { "title": "OWASP Automated Threat: OAT011 Scraping" }
+      {
+        "title": "OWASP Automated Threat: OAT011 Scraping",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-011_Scraping.html"
+      }
     ]
   }
 }

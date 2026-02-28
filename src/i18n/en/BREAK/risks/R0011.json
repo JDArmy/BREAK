@@ -5,7 +5,12 @@
     "description": "These accounts can be from social media, email, online games, e-commerce, and other internet services. Account resellers typically obtain accounts through various means including illegal hacking, malware attacks, and social engineering. Once obtained, they sell them to buyers on the dark web or specific online forums.",
     "complexity": "Intermediate",
     "influence": "Disrupts normal platform operations. Poses threats to user privacy and security, and may lead to account abuse, information leakage, and identity theft.",
-    "references": []
+    "references": [
+      {
+        "title": "Valid Accounts - MITRE ATT&CK T1078",
+        "link": "https://attack.mitre.org/techniques/T1078/"
+      }
+    ]
   },
   "R0011-001": {
     "title": "Game Account Reselling",
@@ -14,8 +19,14 @@
     "complexity": "Basic",
     "influence": "Affects the normal operations and profitability of game operators.",
     "references": [
-      { "title": "CPPCC Member Xu Jin Calls for Strict Penalties for Reselling Online Game Accounts!" },
-      { "title": "Four Sentenced for Stealing and Reselling WeChat Accounts via Honor of Kings Scam" }
+      {
+        "title": "CPPCC Member Xu Jin Calls for Strict Penalties for Reselling Online Game Accounts!",
+        "link": "https://baijiahao.baidu.com/s?id=1726557011324745346&wfr=spider&for=pc"
+      },
+      {
+        "title": "Four Sentenced for Stealing and Reselling WeChat Accounts via Honor of Kings Scam",
+        "link": "https://baijiahao.baidu.com/s?id=1732715080496688809&wfr=spider&for=pc"
+      }
     ]
   },
   "R0011-002": {
@@ -24,6 +35,11 @@
     "description": "This may include obtaining paid software, membership accounts, subscription services, or special permissions through malicious means, then selling them to others at a lower price or through illegally obtained channels.",
     "complexity": "Basic",
     "influence": "Causes economic losses to legitimate users and service providers.",
-    "references": []
+    "references": [
+      {
+        "title": "Valid Accounts - MITRE ATT&CK T1078",
+        "link": "https://attack.mitre.org/techniques/T1078/"
+      }
+    ]
   }
 }

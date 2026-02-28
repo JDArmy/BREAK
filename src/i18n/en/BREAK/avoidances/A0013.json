@@ -4,7 +4,12 @@
     "definition": "Applying code-level obfuscation, anti-debugging, and other protections to front-end JS scripts or client APPs.",
     "description": "Client-side code obfuscation can, to some extent, prevent black-gray industry actors from directly reverse-engineering client-side code to analyze resource access logic and implement business automation and data scraping. It also increases the difficulty of breaking client-side human verification challenges, abnormal environment detection (A010), API signatures (A002), and other business security measures. However, because the obfuscated code still resides on the user's client, it is theoretically possible to fully reverse the obfuscated code given sufficient time and effort. Therefore, client-side code obfuscation is only a means of reducing the ROI of black-gray industry actors. However, according to the PDR formula Pt > Dt + Rt, if defenders can reduce the obfuscation cycle to within the cracking cycle, long-term protection may be achievable. Anti-debugging can be either a blocking mechanism against debugging or an interference mechanism — for example, one program logic can run in a non-debug environment and a different logic in a debug environment.",
     "limitation": "Hardened applications can still be decompiled: although hardening increases the difficulty of decompilation, it cannot completely prevent it. Hackers can use various means to crack hardened applications and obtain source code and sensitive information. Hardened applications may have compatibility issues: since hardening modifies the application's code and structure, it may cause compatibility problems — for example, the hardened application may not run on certain devices or may crash. Hardened applications may have performance issues: since hardening increases the application's size and runtime overhead, it may cause performance problems such as slower startup or higher memory usage.",
-    "references": []
+    "references": [
+      {
+        "title": "Code Obfuscation - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Code_obfuscation"
+      }
+    ]
   },
   "A0013-001": {
     "title": "Android Application Hardening",

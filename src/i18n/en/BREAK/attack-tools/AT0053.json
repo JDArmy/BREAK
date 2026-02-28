@@ -3,23 +3,38 @@
     "title": "Malicious AI Applications",
     "description": "The term 'malicious AI applications' describes practices that use artificial intelligence technology for malicious purposes or illegal activities. These technologies may be abused in violation of laws and ethical standards, causing potential harm. Related concepts include Deepfake technology for generating realistic fake content, fusion of malware with AI to evade detection, social engineering using natural language processing, AI-powered cyberattacks, automated large-scale network attacks, and AI-generated online fraud content.",
     "references": [
-      { "title": "Beware of AI Black Industry Chain Batch-Generating Defamatory Content" }
+      {
+        "title": "Beware of AI Black Industry Chain Batch-Generating Defamatory Content",
+        "link": "https://baijiahao.baidu.com/s?id=1771272671713776437&wfr=spider&for=pc"
+      }
     ]
   },
   "AT0053-001": {
     "title": "AI Fraud Chatbots",
     "description": "AI fraud chatbots are chatbots built with artificial intelligence and natural language processing capabilities, designed to conduct deceptive and fraudulent activities. They simulate realistic conversations to trick users into revealing personal or financial information, or into taking harmful actions. Typical fraud scenarios include social engineering (gaining trust to extract sensitive credentials), fake investment advice (promoting fraudulent opportunities to steal funds), romance scams (simulating relationships to solicit money), fake customer service (impersonating legitimate companies to harvest credentials), and malicious link distribution (embedding phishing links within conversations).",
     "references": [
-      { "title": "AI Application Security Back in the Headlines: AI Chatbots Become a New Tool for Fraud" },
-      { "title": "'AI' Voice Bots Turned Into Fraud Weapons? Telecom Scam Tactics Are Evolving — Stay Alert!" }
+      {
+        "title": "AI Application Security Back in the Headlines: AI Chatbots Become a New Tool for Fraud",
+        "link": "https://baijiahao.baidu.com/s?id=1765497083313841378&wfr=spider&for=pc"
+      },
+      {
+        "title": "'AI' Voice Bots Turned Into Fraud Weapons? Telecom Scam Tactics Are Evolving — Stay Alert!",
+        "link": "https://baijiahao.baidu.com/s?id=1787666481258718079&wfr=spider&for=pc"
+      }
     ]
   },
   "AT0053-002": {
     "title": "AI Deepfake Video",
     "description": "Criminal networks use AI face-swapping tools at scale to produce deepfake videos for identity verification bypass services. For example, when a social media account triggers a platform's risk control and requires facial authentication, criminals use AI face-swapping to pass the check. Additionally, cases of fraud via conferencing software combined with real-time AI face-swapping are increasingly common — scammers instruct victims to install a video conferencing app, then impersonate a trusted acquaintance through real-time face-swapping to gain the victim's trust and steal funds.",
     "references": [
-      { "title": "AI Deepfake Videos — Can You Tell the Difference?" },
-      { "title": "Video 'Face-Swapping' with 80% Similarity! How to Guard Against AI Deepfake Fraud?" }
+      {
+        "title": "AI Deepfake Videos — Can You Tell the Difference?",
+        "link": "https://baijiahao.baidu.com/s?id=1644436446016986485&wfr=spider&for=pc"
+      },
+      {
+        "title": "Video 'Face-Swapping' with 80% Similarity! How to Guard Against AI Deepfake Fraud?",
+        "link": "https://baijiahao.baidu.com/s?id=1781674923891589881&wfr=spider&for=pc"
+      }
     ]
   }
 }

@@ -3,8 +3,14 @@
     "title": "Modem Pool",
     "description": "A modem pool is a telephone-based expansion device that connects a large number of modems together using special dial-up request access equipment, allowing simultaneous dial-up connections from multiple users. Due to this characteristic, it is widely used by organizations with multi-user remote networking needs. A modem pool can synchronously dial large numbers of user phone numbers, and fraudsters use it to improve the efficiency of their calling operations. It enables cluster broadcasting, is easy to use, and low-cost, making it a commonly used tool for telecom fraudsters.",
     "references": [
-      { "title": "Modem Pool - Baidu Baike" },
-      { "title": "Police Reveal Seven Telecom Fraud Methods! Do You Know What a Modem Pool Is?" }
+      {
+        "title": "Modem Pool - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E7%8C%AB%E6%B1%A0/1476300?fr=aladdin"
+      },
+      {
+        "title": "Police Reveal Seven Telecom Fraud Methods! Do You Know What a Modem Pool Is?",
+        "link": "https://baike.baidu.com/tashuo/browse/content?id=d4c4e5133318d337e28f6bd9"
+      }
     ]
   }
 }

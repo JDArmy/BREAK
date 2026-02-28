@@ -2,20 +2,44 @@
   "BS12": {
     "title": "Insurance",
     "riskDimensions": {
-      "RD01": { "title": "Transaction Dimension" },
-      "RD02": { "title": "Operations Dimension" },
-      "RD03": { "title": "Identity Dimension" },
-      "RD04": { "title": "Adversarial Dimension" }
+      "RD01": {
+        "title": "Transaction Dimension"
+      },
+      "RD02": {
+        "title": "Operations Dimension"
+      },
+      "RD03": {
+        "title": "Identity Dimension"
+      },
+      "RD04": {
+        "title": "Adversarial Dimension"
+      }
     },
     "riskScenes": {
-      "RS01": { "title": "Marketing Risk" },
-      "RS02": { "title": "Compliance Risk" },
-      "RS03": { "title": "Customer Risk" },
-      "RS04": { "title": "Illegal Request Risk" },
-      "RS06": { "title": "Internal Risk" },
-      "RS07": { "title": "Identity Theft Risk" },
-      "RS08": { "title": "Payment/Financial Risk" },
-      "RS09": { "title": "Identity Verification Risk" }
+      "RS01": {
+        "title": "Marketing Risk"
+      },
+      "RS02": {
+        "title": "Compliance Risk"
+      },
+      "RS03": {
+        "title": "Customer Risk"
+      },
+      "RS04": {
+        "title": "Illegal Request Risk"
+      },
+      "RS06": {
+        "title": "Internal Risk"
+      },
+      "RS07": {
+        "title": "Identity Theft Risk"
+      },
+      "RS08": {
+        "title": "Payment/Financial Risk"
+      },
+      "RS09": {
+        "title": "Identity Verification Risk"
+      }
     }
   }
 }

@@ -5,7 +5,10 @@
     "description": "Privacy computing employs multiple methods to protect user data privacy, including homomorphic encryption, secure multi-party computation, differential privacy, zero-knowledge proofs, searchable encryption, fully homomorphic encryption, and blockchain with smart contracts. Homomorphic encryption allows computation on encrypted data; secure multi-party computation ensures privacy in collaborative computations; differential privacy prevents inference of individual data by introducing noise; zero-knowledge proofs allow verifying the truth of a statement without revealing other information. Searchable encryption enables searching over encrypted data; fully homomorphic encryption provides more flexible homomorphic computation; and blockchain with smart contracts enable decentralized privacy protection. These methods can be combined based on different application requirements to meet diverse privacy protection needs.",
     "limitation": "The limitations of privacy computing include performance overhead, reduced accuracy, communication overhead, complexity, security dependencies, compliance issues, and selective disclosure. It must be applied carefully with consideration for balancing privacy protection against other aspects.",
     "references": [
-      { "title": "Privacy Computing - Baidu Baike" }
+      {
+        "title": "Privacy Computing - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E9%9A%90%E7%A7%81%E8%AE%A1%E7%AE%97/58575539"
+      }
     ]
   }
 }

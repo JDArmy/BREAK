@@ -4,6 +4,11 @@
     "definition": "The process of detecting and identifying potential security vulnerabilities in computer systems, networks, or applications.",
     "description": "Vulnerability identification typically includes the following steps: scanning and automated tools — using automated tools and scanners to comprehensively scan systems, networks, or applications to discover known vulnerabilities, including common security flaws and misconfigurations; manual review — security professionals conduct manual reviews, deeply analyzing systems, code, or configurations to discover vulnerabilities that automated tools may miss or novel vulnerability types; vulnerability databases — leveraging vulnerability databases to learn about the latest known vulnerability information, including descriptions, remediation recommendations, and released security patches; system vulnerabilities — identifying vulnerabilities in operating systems, network devices, or other infrastructure, including systems without applied security patches; application vulnerabilities — discovering potential vulnerabilities through review of application source code or binary code, such as input validation issues and buffer overflows; configuration errors — checking whether system and application configurations have security vulnerabilities, such as default passwords and improper permission settings.",
     "limitation": "Vulnerability identification faces several limitations. First, incomplete vulnerability databases mean some vulnerabilities may not be covered. Second, automated tools and scanners may produce false positives — incorrectly flagging non-existent vulnerabilities — and may also miss real vulnerabilities, producing false negatives. Additionally, for complex applications and custom-developed systems, relying solely on automated tools may not uncover all vulnerabilities, and manual review is costly. Therefore, vulnerability identification requires a combination of approaches including automated tools, manual review, updated vulnerability databases, and regular system audits to improve comprehensiveness and accuracy.",
-    "references": []
+    "references": [
+      {
+        "title": "Vulnerability Scanning - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F"
+      }
+    ]
   }
 }

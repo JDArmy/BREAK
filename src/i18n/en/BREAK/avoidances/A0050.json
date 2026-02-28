@@ -5,7 +5,10 @@
     "description": "Through content inspection, policy rules, real-time monitoring, and encryption, DLP systems can deeply scan data, identify specific patterns or keywords, monitor real-time data flows to quickly respond to potential leakage risks, and use encryption to protect data security. DLP systems can also implement protections on endpoint devices, monitor network traffic and communication channels, generate detailed reports and audit logs, and enhance employee awareness of sensitive information protection through user education and training.",
     "limitation": "The limitations of DLP systems include false positives, content recognition challenges, endpoint device limitations, uncontrolled endpoint devices, insider threats, real-time latency, complexity, and implementation costs. Organizations must consider and manage these comprehensively during deployment.",
     "references": [
-      { "title": "Data Loss Prevention - Baidu Baike" }
+      {
+        "title": "Data Loss Prevention - Baidu Baike",
+        "link": "https://baike.baidu.com/item/DLP%E6%95%B0%E6%8D%AE%E6%B3%84%E9%9C%B2%E9%98%B2%E6%8A%A4%E7%B3%BB%E7%BB%9F/10522315?fr=ge_ala"
+      }
     ]
   },
   "A0050-001": {
@@ -13,7 +16,12 @@
     "definition": "Encrypting data to ensure its security on storage media.",
     "description": "Data storage encryption can be divided into two types: encrypting data before storing it, or encrypting the storage medium itself. The former allows finer-grained control over data but requires storing the key on the storage medium, so key security must be ensured. The latter does not require storing the key on the storage medium but provides coarser-grained control over data.",
     "limitation": "Key management: the security of encryption depends on proper key management. If keys are poorly managed, they may be leaked or lost, making data unrecoverable or accessible to unauthorized parties. Performance impact: the encryption and decryption process may introduce some performance overhead. For large-scale data storage and frequent data access, encryption may cause certain delays.",
-    "references": []
+    "references": [
+      {
+        "title": "Data Encryption - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%8A%A0%E5%AF%86"
+      }
+    ]
   },
   "A0050-002": {
     "title": "Database Auditing",
@@ -21,7 +29,10 @@
     "description": "Database auditing is the process of monitoring and recording database system activities to ensure security, compliance, and traceability. It covers key areas including access control auditing, change auditing, sensitive data auditing, anomalous activity detection, audit log management, and compliance auditing. Through auditing, organizations can identify potential security issues, protect sensitive data, meet regulatory compliance requirements, and gain deep insight into database usage to take timely measures to improve security policies. Database administrators and security professionals typically use specialized audit tools to simplify and automate this process.",
     "limitation": "Main limitations include performance overhead, log management challenges, privacy and compliance issues, false positives and false negatives, complexity and configuration management challenges, confidentiality concerns, and technical limitations.",
     "references": [
-      { "title": "Database Auditing - Baidu Baike" }
+      {
+        "title": "Database Auditing - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%A1%E8%AE%A1?fromModule=lemma_search-box"
+      }
     ]
   },
   "A0050-003": {
@@ -30,7 +41,10 @@
     "description": "Data erasure refers to completely deleting or overwriting data on a storage device to ensure it cannot be recovered or accessed. This is a common data management and information security measure, typically performed before a device is decommissioned, reassigned, recycled, sold, or discarded. Simply deleting files or formatting a storage device does not always ensure complete data erasure, as these operations typically only mark the file system as free while the actual data remains. Therefore, a safer approach is to use specialized data erasure tools or software to overwrite the data on the storage device, making it unrecoverable.",
     "limitation": "Data erasure is not a one-time operation; multiple passes are needed to ensure data cannot be recovered. The process is relatively slow and time-consuming. The effectiveness of data erasure is affected by the storage medium — for example, solid-state drives (SSDs) are harder to erase completely.",
     "references": [
-      { "title": "Secure Hard Drive Data Erasure - Baidu Baike" }
+      {
+        "title": "Secure Hard Drive Data Erasure - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E7%A1%AC%E7%9B%98%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8%E6%93%A6%E9%99%A4/3496982?fromModule=search-result_lemma-recommend"
+      }
     ]
   }
 }

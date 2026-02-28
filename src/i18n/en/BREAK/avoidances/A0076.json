@@ -5,7 +5,10 @@
     "description": "Geofencing is a location-based access control and risk defense technology that restricts or monitors business activity scope by defining virtual geographic boundaries. Main applications include: (1) login location restriction — triggering additional verification or restricting access when a user logs in from an anomalous geographic location; (2) transaction location validation — verifying the consistency between the transaction origin and the user's home location, shipping address, and other factors to identify cross-region card fraud risks; (3) regional promotion control — ensuring regional promotional activities are limited to target-area users to prevent location spoofing for coupon abuse; (4) regulatory geographic control — restricting certain business activities in restricted regions based on local laws and regulations; (5) delivery range validation — validating the reasonableness of order addresses against delivery ranges in local life services; (6) multi-source location cross-validation — combining GPS, cell towers, WiFi, IP addresses, and other positioning data for cross-validation to improve the reliability of location information.",
     "limitation": "The limitations of geofencing include: (1) VPNs, proxy servers, and GPS spoofing tools can forge geographic location information; (2) indoor positioning accuracy is limited and may produce location errors in large buildings; (3) normal user travel and business trips may trigger false positives; (4) different positioning technologies vary significantly in accuracy and reliability; (5) some users may refuse to authorize location information for privacy reasons.",
     "references": [
-      { "title": "Geofencing Technology in Fraud Prevention" }
+      {
+        "title": "Geofencing Technology in Fraud Prevention",
+        "link": "https://www.gartner.com/en/information-technology/glossary/geofencing"
+      }
     ]
   }
 }

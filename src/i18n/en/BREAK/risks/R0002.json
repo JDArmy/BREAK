@@ -6,7 +6,10 @@
     "complexity": "Basic",
     "influence": "Exploits platform promotional benefits and occupies resources intended for legitimate users.",
     "references": [
-      { "title": "OWASP Automated Threat: OAT002 Token Cracking" }
+      {
+        "title": "OWASP Automated Threat: OAT002 Token Cracking",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-002_Token_Cracking.html"
+      }
     ]
   }
 }

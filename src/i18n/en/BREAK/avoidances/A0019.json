@@ -4,6 +4,11 @@
     "definition": "Conducting continuous security audits of user accounts to detect account risks in a timely manner.",
     "description": "Similar to the risk monitoring mechanism of risk control strategies (A015), identity behavior monitoring and risk assessment is also an audit-based protective measure. However, the two differ in their protection subjects and objects: risk control protects the business from users, while identity behavior auditing protects users from attackers. Identity security auditing is a commonly used means of assessing identity security. After an anomaly is detected, it needs to be combined with other identity measures such as re-authentication (A018), multi-factor authentication (A007), and forced password reset (A012).",
     "limitation": "Generally, identity security auditing relies on detecting abnormal account behavior, which requires a certain amount of time and data as a reference baseline. Additionally, in some cases, identity security auditing has a certain degree of latency — subsequent handling or loss mitigation is required after a risk is identified.",
-    "references": []
+    "references": [
+      {
+        "title": "Security Audit - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Information_technology_security_audit"
+      }
+    ]
   }
 }

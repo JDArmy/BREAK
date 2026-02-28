@@ -5,6 +5,11 @@
     "description": "Causes include: fake reviews and ratings to attract user clicks; social media abuse by fabricating fake shares and likes to redirect traffic; fabricating user activity to make certain content appear more popular; comment section abuse by posting false information; and using malicious tags or keywords to boost search rankings for specific content.",
     "complexity": "Basic",
     "influence": "Malicious traffic diversion through user-generated content may lead to fake traffic, economic losses, decreased user trust, brand reputation damage, and negative impacts on community health.",
-    "references": []
+    "references": [
+      {
+        "title": "OWASP Automated Threat: OAT-017 Spamming",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-017_Spamming.html"
+      }
+    ]
   }
 }

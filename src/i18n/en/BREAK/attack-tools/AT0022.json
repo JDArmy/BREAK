@@ -3,7 +3,10 @@
     "title": "Headless Browsers",
     "description": "A headless browser is a browser that uses scripts to execute browsing processes, capable of simulating real browser usage scenarios. It is mainly used for web scraping to capture various types of data on the web. 'Headless' means it has no graphical interface and operates entirely in the background. It is a real browser, just without a visible interface.",
     "references": [
-      { "title": "How to Choose a Headless Browser for Web Scraping" }
+      {
+        "title": "How to Choose a Headless Browser for Web Scraping",
+        "link": "https://blog.csdn.net/Z_suger7/article/details/125603480"
+      }
     ]
   }
 }

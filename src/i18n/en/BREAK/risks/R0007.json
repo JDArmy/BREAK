@@ -6,7 +6,10 @@
     "complexity": "Advanced",
     "influence": "Causes economic losses to the platform and customer attrition.",
     "references": [
-      { "title": "Rule Guide: Interpretation of Rules on \"Unauthorized Plugin Promotion\"" }
+      {
+        "title": "Rule Guide: Interpretation of Rules on \"Unauthorized Plugin Promotion\"",
+        "link": "https://rule.alimama.com/?#!/product/index?type=detail&id=405&knowledgeId=11004102"
+      }
     ]
   },
   "R0007-001": {
@@ -15,7 +18,12 @@
     "description": "Typical unauthorized promotional plugins exist as browser extensions, as well as app add-on plugins. While reasonable price comparison benefits market activity and saves consumer spending, incomplete or intentionally biased comparisons can cause economic losses or customer attrition — for example, comparing different brands, different models, or different service tiers.",
     "complexity": "Advanced",
     "influence": "Causes economic losses to the platform and customer attrition.",
-    "references": []
+    "references": [
+      {
+        "title": "Browser Extension - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6"
+      }
+    ]
   },
   "R0007-002": {
     "title": "Access Link Hijacking",
@@ -23,7 +31,12 @@
     "description": "Using viruses, trojans, malicious plugins, unauthorized bundled software, forced homepage setting, browser hijacking, page hijacking, search engine manipulation, or user information tampering to hijack normal traffic. Or during normal browsing, hijacking website traffic by modifying URL parameters or using pop-ups/floating windows.",
     "complexity": "Advanced",
     "influence": "Causes economic losses to the platform and customer attrition.",
-    "references": []
+    "references": [
+      {
+        "title": "Browser Hijacking - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8A%AB%E6%8C%81"
+      }
+    ]
   },
   "R0007-003": {
     "title": "Unauthorized Promotional Redirection",
@@ -31,7 +44,12 @@
     "description": "Typical unauthorized promotional plugins exist as browser extensions, as well as app add-on plugins. The main tactic is to present more attractive or better-value product information when a user views a product, or to guide users to download a client through cashback or commission-sharing schemes.",
     "complexity": "Advanced",
     "influence": "Causes economic losses to the platform and customer attrition.",
-    "references": []
+    "references": [
+      {
+        "title": "Browser Extension - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6"
+      }
+    ]
   },
   "R0007-004": {
     "title": "Unauthorized Plugin Cashback",
@@ -39,6 +57,11 @@
     "description": "Typical cashback plugins exist as browser extensions, as well as app add-on plugins and third-party apps or websites. The main tactic is to obtain the affiliate commission for a product when a user views it, then share a portion of that commission back to the user as cashback.",
     "complexity": "Advanced",
     "influence": "Causes economic losses to the platform and customer attrition.",
-    "references": []
+    "references": [
+      {
+        "title": "Browser Extension - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6"
+      }
+    ]
   }
 }

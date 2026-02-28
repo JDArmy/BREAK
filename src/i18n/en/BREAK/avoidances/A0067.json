@@ -5,8 +5,14 @@
     "description": "The main protection capabilities of an API security gateway include: (1) identity authentication and authorization — supporting multiple authentication methods such as OAuth 2.0, JWT, and API Key, and implementing fine-grained access control policies; (2) request validation — strictly validating API request parameters, formats, and schemas, and rejecting non-conforming requests; (3) rate limiting and quota management — implementing fine-grained rate limiting based on dimensions such as user, IP, and API endpoint to prevent brute-force API calls; (4) threat detection — identifying common API attack patterns such as SQL injection, XSS, and parameter tampering; (5) traffic analysis — using machine learning to analyze API call patterns and identify anomalous behavior and potential abuse; (6) data masking — automatically masking sensitive data in API responses; (7) API version management — managing the API lifecycle and promptly retiring deprecated API endpoints; (8) audit logging — recording detailed logs of all API calls to support security auditing and post-incident tracing.",
     "limitation": "The limitations of API security gateways include: (1) they may introduce additional network latency, affecting API response performance; (2) complex security policy configurations may cause legitimate requests to be incorrectly blocked; (3) detection capability for business-logic-level API abuse (such as malicious use of legitimate parameter combinations) is limited; (4) security rules need continuous maintenance and updates to address new attack types; (5) in microservice architectures, blind spots remain in east-west traffic API security protection.",
     "references": [
-      { "title": "OWASP API Security Top 10" },
-      { "title": "API Security Best Practices" }
+      {
+        "title": "OWASP API Security Top 10",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0x11-t10/"
+      },
+      {
+        "title": "API Security Best Practices",
+        "link": "https://cloud.google.com/apigee/docs/api-platform/security/api-security-best-practices"
+      }
     ]
   }
 }

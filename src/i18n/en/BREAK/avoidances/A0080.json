@@ -5,8 +5,14 @@
     "description": "Data classification and grading is foundational work in data security governance. By systematically classifying and grading data assets by sensitivity, it enables fine-grained data protection. Main practices include: (1) data asset inventory — comprehensively cataloging data assets within the organization, including structured data (databases, tables) and unstructured data (documents, logs, images, etc.); (2) classification framework — categorizing data by business attributes into user data, transaction data, operational data, system data, and other categories; (3) grading standards — typically divided into public, internal, sensitive, and confidential levels, or following national standards into general data, important data, and core data; (4) automated labeling — using natural language processing and pattern recognition to automatically identify and label sensitive data (such as ID numbers, phone numbers, bank card numbers, etc.); (5) differentiated protection — implementing different encryption, desensitization, access control, and audit strategies based on data level; (6) data flow control — monitoring and controlling the use, sharing, and export of data at different levels to prevent sensitive data leakage; (7) periodic review — regularly evaluating and updating data classification and grading results to ensure alignment with business development.",
     "limitation": "The limitations of data classification and grading include: (1) data asset inventory is labor-intensive and dynamic data is difficult to cover comprehensively; (2) automated classification accuracy is limited and requires manual review; (3) developing grading standards requires close collaboration between business and security teams, and parties may disagree on sensitivity judgments; (4) data levels may change during processing and transfer, making dynamic management difficult; (5) excessive grading protection may affect normal data use and business efficiency.",
     "references": [
-      { "title": "Data Security Law - People's Republic of China" },
-      { "title": "Data Classification and Grading Guide - GB/T 43697-2024" }
+      {
+        "title": "Data Security Law - People's Republic of China",
+        "link": "http://www.npc.gov.cn/npc/c30834/202106/7c9af12f51334a73b56d7938f99a788a.shtml"
+      },
+      {
+        "title": "Data Classification and Grading Guide - GB/T 43697-2024",
+        "link": "https://www.tc260.org.cn/"
+      }
     ]
   }
 }

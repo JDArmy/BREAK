@@ -4,28 +4,48 @@
     "definition": "Digitally signing and encrypting data or files through a digital certificate mechanism.",
     "description": "Unlike API signature verification (A002), digital certificates place more emphasis on the integrity of the entire transmission chain from sender to receiver, and can also serve as a mechanism for verifying the sender's authenticity. API signatures focus more on ensuring the integrity of data passed from the client and across sites. Simply put, digital certificates primarily protect the data transmission process, while API signatures primarily protect the user terminal.",
     "limitation": "Since digital certificates are issued by trusted third-party authorities, the security of digital certificates is heavily dependent on the trustworthiness of the issuing authority. If the issuing authority is compromised, attackers can forge digital certificates. Additionally, the security of digital certificates is also affected by the signing algorithm — if the signing algorithm is compromised, attackers can forge digital signatures.",
-    "references": []
+    "references": [
+      {
+        "title": "Digital Certificate - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6"
+      }
+    ]
   },
   "A0025-001": {
     "title": "Email Digital Certificate",
     "definition": "Providing trustworthiness guarantees for email senders and integrity and confidentiality guarantees for email content.",
     "description": "Digitally signing and encrypting emails and attachments provides a high level of confidentiality and security for electronic communications. Encryption means only the intended recipient can read the email, while digital signatures allow them to confirm the sender and verify that the email was not tampered with in transit. (Excerpted from Tencent Cloud)",
     "limitation": "Using email digital certificates can be relatively complex — users need to understand the concept of digital certificates, purchase certificates, configure email clients, etc. This may create a barrier for general users. Digital certificates need to be renewed on time, and updates must be performed before expiration. Certificate management can become complex, especially for large-scale deployments. For end-to-end encryption and signing to work, both the sender and recipient must support and configure digital certificates, which may impose limitations when communicating with users who do not use digital certificates. Email digital certificates can only provide security during transmission and cannot address endpoint security issues such as password leaks or malware infections.",
-    "references": []
+    "references": [
+      {
+        "title": "Digital Certificate - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6"
+      }
+    ]
   },
   "A0025-002": {
     "title": "HTTPS Digital Certificate",
     "definition": "Providing trustworthiness, integrity, and confidentiality guarantees for HTTP requests.",
     "description": "By purchasing and installing an HTTPS certificate service, the trustworthiness, integrity, and confidentiality of user requests to the server are guaranteed.",
     "limitation": "The security of HTTPS digital certificates is heavily dependent on the trustworthiness of the issuing authority. If the issuing authority is compromised, attackers can forge digital certificates. Additionally, the security of HTTPS digital certificates is also affected by the signing algorithm — if the signing algorithm is compromised, attackers can forge digital signatures.",
-    "references": []
+    "references": [
+      {
+        "title": "Digital Certificate - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6"
+      }
+    ]
   },
   "A0025-003": {
     "title": "Electronic File Seal",
     "definition": "Providing trustworthiness and integrity signing guarantees for files.",
     "description": "Provides full-chain trusted behavior authentication for online contracting, contract management (historical contracts, contract templates), electronic data preservation and notarization, and real-time evidence collection of electronic documents (electronic contracts, electronic orders, electronic agreements, etc.). By ensuring the completeness, trustworthiness, and non-tamperability of electronic data throughout its entire lifecycle, it effectively resolves the difficulties of electronic data preservation, management, and judicial authentication. (Excerpted from jdcloud.com)",
     "limitation": "Using electronic file seals may be relatively complex for general users, requiring understanding of digital signatures and seals and how to correctly apply and verify them. The trustworthiness and validity of electronic file seals depend on the reliability of the underlying Public Key Infrastructure (PKI). If the PKI is attacked or has issues, the trustworthiness of the electronic seal will be threatened.",
-    "references": []
+    "references": [
+      {
+        "title": "Public Key Infrastructure - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E5%85%AC%E9%92%A5%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD"
+      }
+    ]
   },
   "A0025-004": {
     "title": "USB Key Digital Certificate",
@@ -33,7 +53,10 @@
     "description": "Authentication information required for client login (such as username, password, QQ, email, phone, ID number, etc.) can all be written into the USB key. Algorithms and code can also be written in, allowing the key to replace the traditional 'username + password' login method, achieving the goal of only being able to log in to a website or application system when the key is plugged in. Developers can also set the USB key to work alongside the traditional 'username + password' login mode as needed. The USB key can be used for access control, setting different clients to have different permissions — for example, some clients can only use part of the website or system's features, or different clients use different modules. It can also be configured to require the USB key to remain plugged in during use, or to automatically log out after a set time following removal.",
     "limitation": "The device is easy to lose or be stolen, potentially leading to unauthorized access to sensitive information. Depends on the login system's support — if the system does not support USB Key login, the USB Key cannot be used.",
     "references": [
-      { "title": "USB Key - Baidu Baike" }
+      {
+        "title": "USB Key - Baidu Baike",
+        "link": "https://baike.baidu.com/item/USB%20Key/9679194?fromtitle=ukey&fromid=8352760&fr=aladdin"
+      }
     ]
   }
 }

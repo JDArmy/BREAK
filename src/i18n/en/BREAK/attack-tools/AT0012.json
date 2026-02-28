@@ -3,7 +3,10 @@
     "title": "Social Engineering Database",
     "description": "A Social Engineering Database (SEDB) is a product of combining hacking with big data, where hackers integrate and analyze leaked user data and archive it centrally. It is a database query platform built from user data from major websites. Hackers obtain data packages through database breaches and credential stuffing that contain not only account passwords but also additional data from different industries. Information in social engineering databases often involves user privacy, making such sites illegal.",
     "references": [
-      { "title": "Social Engineering Database - Baidu Baike" }
+      {
+        "title": "Social Engineering Database - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E7%A4%BE%E5%B7%A5%E5%BA%93/1896113?fr=aladdin"
+      }
     ]
   }
 }

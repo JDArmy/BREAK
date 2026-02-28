@@ -3,8 +3,14 @@
     "title": "Decompilation Tools",
     "description": "Computer software reverse engineering refers to performing reverse analysis and research on another party's software target program (such as an executable program) to deduce the design elements such as ideas, principles, structure, algorithms, processing procedures, and operating methods used in their software product, and in certain cases possibly deriving the source code. Android reverse engineering is a technique for decompiling packaged APPs and analyzing source code to understand APP implementation logic.",
     "references": [
-      { "title": "Decompilation - Baidu Baike" },
-      { "title": "What Is Android Reverse Engineering?" }
+      {
+        "title": "Decompilation - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E5%8F%8D%E5%90%91%E7%BC%96%E8%AF%91/9932384?fromtitle=%E5%8F%8D%E7%BC%96%E8%AF%91&fromid=8748947&fr=aladdin"
+      },
+      {
+        "title": "What Is Android Reverse Engineering?",
+        "link": "https://blog.csdn.net/wqwq_22/article/details/122778209"
+      }
     ]
   }
 }

@@ -5,6 +5,11 @@
     "description": "Possible scenarios include: false information publishing (attackers using user-generated content features to post fake product listings, lottery notifications, or job postings to lure users into fraud); impersonating official accounts or verified users to deceive users into providing personal information, assets, or sensitive data; abusing advertising platforms to publish fake ads directing users to fraudulent sites; social engineering via private messages, comments, or invitations to induce users to click links, provide personal information, or make transfers; and exploiting platform vulnerabilities to bypass security measures and conduct fraud.",
     "complexity": "Basic",
     "influence": "Leads to user information leakage, financial losses, and damage to the platform's reputation and credibility.",
-    "references": []
+    "references": [
+      {
+        "title": "",
+        "link": ""
+      }
+    ]
   }
 }

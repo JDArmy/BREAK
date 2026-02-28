@@ -6,8 +6,14 @@
     "complexity": "Intermediate",
     "influence": "User personal information leakage, financial losses, malware infection, and account compromise.",
     "references": [
-      { "title": "Quishing Attack Trend Analysis" },
-      { "title": "QR Code Security Risk Prevention Guide" }
+      {
+        "title": "Quishing Attack Trend Analysis",
+        "link": "https://www.proofpoint.com/"
+      },
+      {
+        "title": "QR Code Security Risk Prevention Guide",
+        "link": "https://www.cert.org.cn/"
+      }
     ]
   }
 }

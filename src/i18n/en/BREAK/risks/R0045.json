@@ -6,8 +6,14 @@
     "complexity": "Advanced",
     "influence": "Non-monetary benefits in the payment card or account are misappropriated or stolen.",
     "references": [
-      { "title": "Beware of Third-Party Channels for Credit Card Points Redemption — Don't Lose Big Trying to Save Small" },
-      { "title": "Li Chen's Mileage Card Fraudulently Used by Over Ten People" }
+      {
+        "title": "Beware of Third-Party Channels for Credit Card Points Redemption — Don't Lose Big Trying to Save Small",
+        "link": "https://www.sohu.com/a/600716434_121406675"
+      },
+      {
+        "title": "Li Chen's Mileage Card Fraudulently Used by Over Ten People",
+        "link": "https://yule.sohu.com/a/579933969_121150437"
+      }
     ]
   },
   "R0045-001": {
@@ -17,8 +23,14 @@
     "complexity": "Intermediate",
     "influence": "Disrupts market order and infringes on consumer rights.",
     "references": [
-      { "title": "Beware of Third-Party Channels for Credit Card Points Redemption" },
-      { "title": "Li Chen's Mileage Card Fraudulently Used by Over Ten People" }
+      {
+        "title": "Beware of Third-Party Channels for Credit Card Points Redemption",
+        "link": "https://www.sohu.com/a/600716434_121406675"
+      },
+      {
+        "title": "Li Chen's Mileage Card Fraudulently Used by Over Ten People",
+        "link": "https://yule.sohu.com/a/579933969_121150437"
+      }
     ]
   }
 }

@@ -6,8 +6,14 @@
     "complexity": "Intermediate",
     "influence": "Sensitive data leakage, business logic bypass, service availability impact, and financial losses.",
     "references": [
-      { "title": "OWASP API Security Top 10 2023" },
-      { "title": "API Security Best Practices - Gartner" }
+      {
+        "title": "OWASP API Security Top 10 2023",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0x11-t10/"
+      },
+      {
+        "title": "API Security Best Practices - Gartner",
+        "link": "https://www.gartner.com/en/documents/api-security"
+      }
     ]
   },
   "R0126-001": {

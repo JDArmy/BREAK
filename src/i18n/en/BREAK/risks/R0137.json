@@ -6,8 +6,14 @@
     "complexity": "Intermediate",
     "influence": "Causes credit losses for platforms and financial institutions, rising bad debt rates, and impacts the sustainable development of BNPL business.",
     "references": [
-      { "title": "BNPL Fraud Trends - Juniper Research" },
-      { "title": "Huabei/Baitiao Cash-Out Risk Prevention and Control" }
+      {
+        "title": "BNPL Fraud Trends - Juniper Research",
+        "link": "https://www.juniperresearch.com/research/fintech-payments/digital-lending/"
+      },
+      {
+        "title": "Huabei/Baitiao Cash-Out Risk Prevention and Control",
+        "link": "https://www.pbccrc.org.cn/"
+      }
     ]
   }
 }

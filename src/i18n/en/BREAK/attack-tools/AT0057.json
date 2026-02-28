@@ -3,8 +3,14 @@
     "title": "LLM Automated Attack Tools",
     "description": "LLM automated attack tools use the capabilities of large language models (such as GPT, Claude, etc.) to automate and enhance traditional cyberattacks. These tools can automatically generate phishing emails and social engineering scripts, write malicious code and exploit scripts, automate vulnerability scanning and penetration testing, batch generate fake content and reviews, and automate CAPTCHA recognition and bypass. Attackers use prompt engineering and fine-tuning techniques to transform general large models into specialized attack assistance tools. They also include tools targeting LLM services themselves, such as prompt injection frameworks and jailbreak toolkits.",
     "references": [
-      { "title": "OWASP Top 10 for LLM Applications" },
-      { "title": "AI-Driven Cyberattack Trend Analysis" }
+      {
+        "title": "OWASP Top 10 for LLM Applications",
+        "link": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"
+      },
+      {
+        "title": "AI-Driven Cyberattack Trend Analysis",
+        "link": "https://www.weforum.org/publications/global-cybersecurity-outlook-2025/"
+      }
     ]
   }
 }

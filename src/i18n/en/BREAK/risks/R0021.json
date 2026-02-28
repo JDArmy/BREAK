@@ -5,6 +5,11 @@
     "description": "Causes of spam content risk include malicious users posting false information, advertising abuse, mass spamming, low-quality comments, as well as inadequate platform oversight and incomplete review mechanisms.",
     "complexity": "Basic",
     "influence": "Spam content risk may lead to degraded user experience, reputational damage to the platform, loss of advertisers and users, and regulatory sanctions, negatively impacting the platform's long-term development.",
-    "references": []
+    "references": [
+      {
+        "title": "OWASP Automated Threat: OAT-017 Spamming",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-017_Spamming.html"
+      }
+    ]
   }
 }

@@ -5,7 +5,16 @@
     "description": "A common method is to obtain user cookies to enable automated password-free login. Many account vendors sell accounts by providing only login cookies rather than credentials — known as CK trading. CK trading can bypass SMS verification code login and prevents buyers from changing passwords, enabling multiple resales of the same account.",
     "complexity": "Intermediate",
     "influence": "Bypasses MFA multi-factor authentication mechanisms in the login process, or enables a single account to log in on multiple devices.",
-    "references": []
+    "references": [
+      {
+        "title": "Cookie - Baidu Baike",
+        "link": "https://baike.baidu.com/item/Cookie/1119"
+      },
+      {
+        "title": "Steal Web Session Cookie - MITRE ATT&CK T1539",
+        "link": "https://attack.mitre.org/techniques/T1539/"
+      }
+    ]
   },
   "R0035-001": {
     "title": "Login Credential Theft",
@@ -14,8 +23,14 @@
     "complexity": "Intermediate",
     "influence": "Many account systems do not invalidate existing login sessions after a password change, meaning that with stolen or reused cookies, a hacker can maintain persistent login access to the target user's account.",
     "references": [
-      { "title": "Malware Steals Website Cookies, Hackers Use Them to Take Over Social Accounts" },
-      { "title": "The Purpose of Cookie Theft and Methods to Prevent It" }
+      {
+        "title": "Malware Steals Website Cookies, Hackers Use Them to Take Over Social Accounts",
+        "link": "https://baijiahao.baidu.com/s?id=1661120873809520712&wfr=spider&for=pc"
+      },
+      {
+        "title": "The Purpose of Cookie Theft and Methods to Prevent It",
+        "link": "https://blog.csdn.net/ITWANGBOIT/article/details/109323115"
+      }
     ]
   }
 }

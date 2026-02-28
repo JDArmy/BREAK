@@ -6,8 +6,14 @@
     "complexity": "Intermediate",
     "influence": "Privacy protection goals fail, user data is not effectively protected in practice, compliance risks arise, and technology trust declines.",
     "references": [
-      { "title": "Privacy Computing Technology and Application White Paper - China Academy of Information and Communications Technology" },
-      { "title": "Survey on Security and Privacy in Federated Learning" }
+      {
+        "title": "Privacy Computing Technology and Application White Paper - China Academy of Information and Communications Technology",
+        "link": "http://www.caict.ac.cn/"
+      },
+      {
+        "title": "Survey on Security and Privacy in Federated Learning",
+        "link": "https://arxiv.org/abs/2012.13995"
+      }
     ]
   }
 }

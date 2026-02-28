@@ -4,6 +4,11 @@
     "definition": "Analyzing and evaluating the source of user or system access to determine whether anomalies or potential threats exist. This includes examining the IP address, device type, geographic location, network behavior, and other information of entities accessing the system to identify possible anomalous or malicious activity.",
     "description": "Anomalous access source detection can include the following aspects: IP address analysis — analyzing the IP addresses of system access to check for access from anomalous geographic locations, anonymous proxies, or malicious networks; device fingerprinting — analyzing device characteristics such as operating system, browser version, and device type to determine whether there is anomalous device access; behavioral pattern analysis — analyzing user behavior patterns including access time, access frequency, and page browsing sequence to detect unusual patterns; user identity verification — confirming the user's true identity through authentication to prevent impersonation or spoofed access. Additional approaches include: identifying whether the sharer of a page access link is anomalous, and setting and validating page access tokens.",
     "limitation": "There is a certain false positive rate, requiring combination with other methods for comprehensive judgment, or using cumulative counting to improve detection accuracy.",
-    "references": []
+    "references": [
+      {
+        "title": "Behavior Analysis - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E8%A1%8C%E4%B8%BA%E5%88%86%E6%9E%90"
+      }
+    ]
   }
 }
