@@ -1,5 +1,9 @@
 # Change log
 
+## 1.6.3
+
+- 全面更新了 references links，修复了之前版本中部分失效的链接问题
+
 ## 1.6.2
 
 - 移除 ability-providers 模块及相关调用（数据文件、视图、菜单、i18n）
