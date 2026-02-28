@@ -5,6 +5,11 @@
     "description": "Device loss scenarios are varied, including on public transportation, at airports, hotels, coffee shops, at home, gyms, and other environments. This risk may occur due to employee negligence, haste, or theft, exposing the organization to risks of data leakage, security vulnerabilities, and business disruption.",
     "complexity": "Basic",
     "influence": "May lead to potential information leakage, security vulnerabilities, and business risks.",
-    "references": []
+    "references": [
+      {
+        "title": "Data breach - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Data_breach"
+      }
+    ]
   }
 }

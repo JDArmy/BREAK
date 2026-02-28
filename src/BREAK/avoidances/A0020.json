@@ -5,7 +5,12 @@
     "definition": "在账号触碰相关规则时对账号进行处罚，并禁止相关行为或动作。",
     "description": "身份处罚策略是限制不合法或不合规用户对业务造成持续性破坏的一种有效手段。身份处罚可以有两个层面：一是对账户本身的限制，譬如一定期限内禁用、警告公示、取消授权等；二是对账户可访问资源的限制，如禁用特殊的业务功能、限制资源使用频次、删除资源或限制非法资源访问等。",
     "limitation": "身份处罚是一种止损策略，具备一定滞后性。",
-    "references": [],
+    "references": [
+      {
+        "title": "OWASP Blocking Brute Force Attacks",
+        "link": "https://owasp.org/www-community/controls/Blocking_Brute_Force_Attacks"
+      }
+    ],
     "updated": "2024-01-11"
   },
   "A0020-001": {
@@ -37,7 +42,12 @@
     "definition": "账号封禁策略是指在账号触碰相关规则时对账号进行封禁，禁止账号登录。",
     "description": "账号封禁策略包括：账号封禁、账号冻结、账号注销、账号销毁等。",
     "limitation": "账号封禁是一种止损策略，具备一定滞后性。",
-    "references": [],
+    "references": [
+      {
+        "title": "账号管理 - 维基百科",
+        "link": "https://en.wikipedia.org/wiki/Account_management"
+      }
+    ],
     "updated": "2024-01-19"
   }
 }

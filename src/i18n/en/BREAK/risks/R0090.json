@@ -5,6 +5,11 @@
     "description": "Bulk account enumeration typically involves attackers using automated tools for large-scale account scanning, with common techniques including brute force, dictionary attacks, and social engineering. Attackers may attempt to crack passwords, bypass CAPTCHAs, and abuse API interfaces to obtain large amounts of user account information. This behavior may lead to user privacy leakage, account abuse, and platform reputational damage.",
     "complexity": "Basic",
     "influence": "Bulk account enumeration risk may lead to large-scale user account information leakage, triggering personal privacy issues, account abuse, identity theft, and other security risks, while negatively impacting platform reputation and user trust.",
-    "references": []
+    "references": [
+      {
+        "title": "Credential stuffing - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Credential_stuffing"
+      }
+    ]
   }
 }

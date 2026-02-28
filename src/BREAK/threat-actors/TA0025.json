@@ -2,7 +2,12 @@
   "TA0025": {
     "title": "打金工作室",
     "description": "通常指的是一些提供虚拟货币、游戏物品等虚拟财富的服务机构或个体。这些工作室的主要业务是通过专业玩家或自动化脚本，为玩家提供游戏内的虚拟货币、游戏物品、角色等服务，以换取真实货币。",
-    "references": [],
+    "references": [
+      {
+        "title": "Gold Farming - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Gold_farming"
+      }
+    ],
     "buildAttackTools": [
       "AT0019",
       "AT0038",
@@ -46,7 +51,12 @@
   "TA0025-001": {
     "title": "点券金币商",
     "description": "是指那些在游戏中出售点券和金币的人。这些人在游戏中通过各种方式获得大量的点券和金币，然后以低于官方价格的方式出售给其他玩家。这种行为可能会对游戏造成负面影响，例如破坏游戏的经济平衡、影响其他玩家的游戏体验等。因此，游戏运营商通常会采取措施打击这种行为，例如封禁相关账号、加强安全检测等。",
-    "references": [],
+    "references": [
+      {
+        "title": "Real-Money Trading - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Real-money_trading"
+      }
+    ],
     "buildAttackTools": [],
     "useAttackTools": [
       "AT0017",

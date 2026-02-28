@@ -18,7 +18,12 @@
       "A0056",
       "A0058"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "T1190 Exploit Public-Facing Application - MITRE ATT&CK",
+        "link": "https://attack.mitre.org/techniques/T1190/"
+      }
+    ],
     "updated": "2024-01-15"
   }
 }

@@ -23,7 +23,16 @@
       "A0058",
       "A0017-001"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "MITRE Insider Threat Research",
+        "link": "https://insiderthreat.mitre.org/"
+      },
+      {
+        "title": "Insider Threat - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Insider_threat"
+      }
+    ],
     "updated": "2024-01-29"
   },
   "R0111-001": {
@@ -47,7 +56,12 @@
       "A0059",
       "A0041"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Account Sharing - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Account_sharing"
+      }
+    ],
     "updated": "2024-01-15"
   },
   "R0111-002": {
@@ -64,7 +78,12 @@
       "A0019",
       "A0020-002"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Insider Threat - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Insider_threat"
+      }
+    ],
     "updated": "2024-01-15"
   }
 }

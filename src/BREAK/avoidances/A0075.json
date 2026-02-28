@@ -7,12 +7,8 @@
     "limitation": "图计算/关联分析的局限性包括：①大规模图计算对计算资源和存储资源要求较高，实时性受限。②关联关系的数据质量直接影响分析效果，数据缺失或错误会导致误判。③攻击者可以通过隔离设备、使用独立IP等方式切断关联链路。④正常用户之间也可能存在合理的关联关系（如家庭成员共用设备），需要精细化规则避免误伤。⑤图模型的可解释性相对较差，不利于业务人员理解和调优。",
     "references": [
       {
-        "title": "图计算在金融风控中的应用实践",
-        "link": "https://www.antgroup.com/tech/graph-computing"
-      },
-      {
-        "title": "Graph-Based Fraud Detection - ACM",
-        "link": "https://dl.acm.org/doi/10.1145/graph-fraud-detection"
+        "title": "Graph-Based Fraud Detection - Neo4j",
+        "link": "https://neo4j.com/use-cases/fraud-detection/"
       }
     ],
     "updated": "2026-02-27"

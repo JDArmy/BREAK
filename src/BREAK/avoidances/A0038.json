@@ -5,7 +5,12 @@
     "definition": "感知用户请求网络资源时的代理使用情况",
     "description": "代理识别主要是通过分析用户请求的数据特征等，识别判断用户的网络代理和终端代理使用情况，进一步确认是否为真实的用户请求。",
     "limitation": "代理识别的最大问题是正常用户也可能使用代理，容易误拦截。",
-    "references": [],
+    "references": [
+      {
+        "title": "代理服务器 - 维基百科",
+        "link": "https://en.wikipedia.org/wiki/Proxy_server"
+      }
+    ],
     "updated": "2024-01-11"
   },
   "A0038-001": {
@@ -28,7 +33,12 @@
     "definition": "对用户请求资源时是否进行了网络代理进行识别",
     "description": "常见的网络代理方式有：VPN、SOCKS5、HTTP代理等。目前常见的网络代理识别方法有：IP情报、请求IP聚类、IP属性判断、TCP/IP指纹判断、DNS Server归属地差异、利用WebRTC等暴露真实IP的特征、利用代理的网络延时特性等方法，来判断是否有网络代理被使用。",
     "limitation": "代理识别技术存在以下局限性：一是正常用户也可能使用网络代理，容易误拦截；二是使用移动运营商出口IP作为代理，导致即便识别也很难封禁；三是使用ADSL拨号网络作为代理，一旦封禁就立即通过重新拨号的方式来切换新代理",
-    "references": [],
+    "references": [
+      {
+        "title": "VPN - 百度百科",
+        "link": "https://baike.baidu.com/item/VPN"
+      }
+    ],
     "updated": "2024-01-11"
   }
 }

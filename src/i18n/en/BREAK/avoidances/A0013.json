@@ -11,27 +11,47 @@
     "definition": "Hardening Android applications through anti-reverse engineering, anti-tampering, anti-debugging, and anti-malware measures.",
     "description": "Multiple DEX protection modes combined with VMP virtual machines encrypt and protect critical code and core logic, preventing source code extraction via reverse engineering tools such as IDA, JEB, JADX, APKTool, and Readelf. Each file in the app is assigned a unique fingerprint; combined with signature and file integrity verification, replacing any file will prevent the app from running, guarding against ad virus injection, repackaging, and feature blocking. Multi-layer encryption combined with low-level countermeasures prevents code injection and Java/C-layer dynamic debugging, effectively resisting dynamic debugging, memory dumping, code injection, and HOOK attacks. Effectively detects and counters: ROOT, emulators, UI hijacking, multi-instance tools, Xposed plugins, Frida, and other HOOK tools. (Excerpted from dun.163.com)",
     "limitation": "May have compatibility and runtime performance issues.",
-    "references": []
+    "references": [
+      {
+        "title": "OWASP Mobile Application Security",
+        "link": "https://mas.owasp.org/"
+      }
+    ]
   },
   "A0013-002": {
     "title": "iOS Application Hardening",
     "definition": "Hardening iOS applications through anti-reverse engineering, anti-tampering, anti-debugging, and anti-malware measures.",
     "description": "Encrypts strings to prevent keyword-based location of core business code via tools like IDA. Applies multiple obfuscation methods to application code to increase complexity and reverse analysis difficulty without affecting original logic and performance. Obfuscates application symbols to increase code reverse difficulty. Advanced anti-debugging techniques prevent attackers and malicious analysts from dynamically debugging the program. Protects binary code from being decompiled into pseudo-code by reverse analysis tools. Protects numerical values in the application from being tampered with by memory editors (e.g., attack power, HP in games). Applies integrity protection to prevent tampering, repackaging, and other cheating behaviors. (Excerpted from dun.163.com)",
     "limitation": "May have compatibility and runtime performance issues.",
-    "references": []
+    "references": [
+      {
+        "title": "OWASP Mobile Application Security",
+        "link": "https://mas.owasp.org/"
+      }
+    ]
   },
   "A0013-003": {
     "title": "H5/Mini-Program Hardening",
     "definition": "Hardening H5 applications through anti-reverse engineering, anti-tampering, anti-debugging, and anti-malware measures.",
     "description": "Uses encryption technology to counter dynamic debugging and prevent code from being debugged and cracked or data from being extracted. Supports strong binding of H5 applications to specified domains, preventing domain tampering that could redirect users or enable fraud. Encrypts code and script files, including dynamic encryption/decryption of strings, function names, and expressions, and obfuscates variables to increase cracking difficulty. Also supports code file compression to reduce application size. Uses encryption technology to protect data and prevent sensitive data from being obtained through network packet capture. (Excerpted from dun.163.com)",
     "limitation": "May have compatibility and runtime performance issues.",
-    "references": []
+    "references": [
+      {
+        "title": "OWASP Bytecode Obfuscation",
+        "link": "https://owasp.org/www-community/controls/Bytecode_obfuscation"
+      }
+    ]
   },
   "A0013-004": {
     "title": "Desktop Application Hardening",
     "definition": "Hardening desktop applications through anti-reverse engineering, anti-tampering, anti-debugging, and anti-malware measures.",
     "description": "Encrypts and protects the application to prevent decompilation. Applies obfuscation to increase code complexity and reverse analysis difficulty without affecting original logic and performance. Obfuscates application symbols to increase code reverse difficulty. Advanced anti-debugging techniques prevent attackers and malicious analysts from dynamically debugging the program. Protects binary code from being decompiled into pseudo-code by reverse analysis tools. Protects numerical values in the application from being tampered with by memory editors (e.g., attack power, HP in games). Applies integrity protection to prevent tampering, repackaging, and other cheating behaviors.",
     "limitation": "May have compatibility and runtime performance issues.",
-    "references": []
+    "references": [
+      {
+        "title": "OWASP Bytecode Obfuscation",
+        "link": "https://owasp.org/www-community/controls/Bytecode_obfuscation"
+      }
+    ]
   }
 }

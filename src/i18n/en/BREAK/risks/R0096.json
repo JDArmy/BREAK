@@ -5,7 +5,12 @@
     "description": "Main fraud methods include: registering large numbers of phone numbers and using them for bulk consumption to artificially boost credit ratings; using technical means to forge identity information, device information, and location information to obtain loans and evade post-loan collection; and exploiting the slow update cycle of public credit information to simultaneously apply for loans from multiple platforms, maliciously exhausting credit.",
     "complexity": "Basic",
     "influence": "Causes financial losses to the platform.",
-    "references": []
+    "references": [
+      {
+        "title": "Identity theft - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Identity_theft"
+      }
+    ]
   },
   "R0096-001": {
     "title": "Anti-Collection Risk",

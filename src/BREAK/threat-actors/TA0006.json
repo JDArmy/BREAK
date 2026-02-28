@@ -48,7 +48,12 @@
   "TA0006-002": {
     "title": "听码人员",
     "description": "指被雇佣或组织的个体，专门从事破解语音验证码的活动。这些听码人员可能使用技术手段或者人工操作，通过分析语音验证码的音频内容，尝试绕过系统的安全验证机制。他们的目标可能包括恶意推广、欺诈活动，或者其他需要绕过语音验证码的非法行为。",
-    "references": [],
+    "references": [
+      {
+        "title": "SMS PVA: Underground Service for Cybercriminals",
+        "link": "https://www.trendmicro.com/en_us/research/22/b/sms-pva-cybercriminals-part-2.html"
+      }
+    ],
     "buildAttackTools": [],
     "useAttackTools": [
       "AT0008",
@@ -67,7 +72,12 @@
   "TA0006-003": {
     "title": "跑分人员",
     "description": "在黑灰产领域，跑分人员是一类专门为洗钱活动服务的个体。这些人可能被组织或雇佣，通过虚假交易等手段，将非法获得的资金进行混淆，使其看起来具有合法性。这可能牵涉到涉及金融系统、电商平台、虚拟货币等多个领域。跑分人员在洗钱活动中起到关键作用，帮助洗钱者掩盖其犯罪活动的痕迹，增加了执法机构对这类非法资金流动的监测难度。",
-    "references": [],
+    "references": [
+      {
+        "title": "What is a Money Mule Scam?",
+        "link": "https://www.hoosierhills.com/blog/what-is-a-money-mule-scam"
+      }
+    ],
     "buildAttackTools": [],
     "useAttackTools": [
       "AT0026",

@@ -13,7 +13,16 @@
       "A0056",
       "A0028"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Privilege escalation - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Privilege_escalation"
+      },
+      {
+        "title": "T1078 Valid Accounts - MITRE ATT&CK",
+        "link": "https://attack.mitre.org/techniques/T1078/"
+      }
+    ],
     "updated": "2024-01-25"
   }
 }

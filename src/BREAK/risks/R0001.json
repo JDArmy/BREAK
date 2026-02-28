@@ -85,7 +85,12 @@
       "A0059",
       "A0060"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "OWASP Automated Threat: OAT-011 Scraping",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-011_Scraping.html"
+      }
+    ],
     "updated": "2024-01-16"
   },
   "R0001-002": {
@@ -132,7 +137,12 @@
       "A0059",
       "A0060"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "OWASP Automated Threat: OAT-020 Account Aggregation",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-020_Account_Aggregation.html"
+      }
+    ],
     "updated": "2024-01-16"
   }
 }

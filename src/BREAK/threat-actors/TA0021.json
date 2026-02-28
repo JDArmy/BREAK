@@ -2,7 +2,12 @@
   "TA0021": {
     "title": "安全意识薄弱员工",
     "description": "安全意识薄弱的员工是指在信息安全方面缺乏足够认识和培训的人员，可能由于对安全威胁和最佳实践的了解不足而容易成为潜在的安全风险。这种薄弱的安全意识可能导致员工犯下安全错误、不慎泄露敏感信息、点击恶意链接或采取其他容易受到攻击的行为。",
-    "references": [],
+    "references": [
+      {
+        "title": "Insider Threat - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Insider_threat"
+      }
+    ],
     "buildAttackTools": [],
     "useAttackTools": [],
     "couseRisks": [

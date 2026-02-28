@@ -37,7 +37,12 @@
       "A0032",
       "A0017"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "OWASP API Security Top 10 2023",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0x11-t10/"
+      }
+    ],
     "updated": "2026-02-27"
   },
   "R0126-002": {
@@ -52,7 +57,12 @@
       "A0008",
       "A0038"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "OWASP API4:2023 Unrestricted Resource Consumption",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0xa4-unrestricted-resource-consumption/"
+      }
+    ],
     "updated": "2026-02-27"
   },
   "R0126-003": {
@@ -67,7 +77,12 @@
       "A0002",
       "A0014"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "OWASP API6:2023 Unrestricted Access to Sensitive Business Flows",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0xa6-unrestricted-access-to-sensitive-business-flows/"
+      }
+    ],
     "updated": "2026-02-27"
   }
 }

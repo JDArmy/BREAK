@@ -16,11 +16,21 @@
   "TA0006-002": {
     "title": "Voice CAPTCHA Solver",
     "description": "Individuals hired or organized specifically to break voice CAPTCHAs. They analyze audio content manually or with technical tools to bypass voice-based security verification, enabling malicious promotion, fraud, or other illegal activities that require circumventing voice CAPTCHAs.",
-    "references": []
+    "references": [
+      {
+        "title": "SMS PVA: Underground Service for Cybercriminals",
+        "link": "https://www.trendmicro.com/en_us/research/22/b/sms-pva-cybercriminals-part-2.html"
+      }
+    ]
   },
   "TA0006-003": {
     "title": "Score Runner",
     "description": "Individuals who serve money laundering operations by conducting fictitious transactions and other means to obscure the origin of illicit funds, making them appear legitimate. Their activities may span financial systems, e-commerce platforms, virtual currencies, and other domains, making it significantly harder for law enforcement to detect illegal fund flows.",
-    "references": []
+    "references": [
+      {
+        "title": "What is a Money Mule Scam?",
+        "link": "https://www.hoosierhills.com/blog/what-is-a-money-mule-scam"
+      }
+    ]
   }
 }

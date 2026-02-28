@@ -2,7 +2,12 @@
   "AT0052": {
     "title": "恶意外设",
     "description": "恶意外设是指恶意软件通过USB接口等方式，将恶意代码写入外设中，当外设插入计算机时，恶意代码会自动运行，从而实现对计算机的攻击。",
-    "references": [],
+    "references": [
+      {
+        "title": "Hardware Additions - MITRE ATT&CK T1200",
+        "link": "https://attack.mitre.org/techniques/T1200/"
+      }
+    ],
     "avoidances": [
       "A0062",
       "A0041"

@@ -20,7 +20,12 @@
     "definition": "Identifying whether an APP is running on a cloud phone.",
     "description": "Cloud phone detection can be performed using the same methods as mobile emulator detection (A010-001). Additionally, device fingerprinting, abnormal environment monitoring, and outbound IP can also be used for cloud phone detection. Since cloud phones typically cannot modify the ROM and most cannot even obtain root access, the countermeasure effectiveness is generally better than mobile emulator detection (A010-001).",
     "limitation": "As cloud phones and cloud gaming continue to develop and become more widespread, APP vendors will not be able to adopt a blanket 'cloud equals blacklisted' policy, otherwise they will face a large number of user complaints. This leaves room for the black-gray industry to exploit cloud phones in the future.",
-    "references": []
+    "references": [
+      {
+        "title": "NIST Guidelines for Managing the Security of Mobile Devices",
+        "link": "https://csrc.nist.gov/publications/detail/sp/800-124/rev-2/final"
+      }
+    ]
   },
   "A0010-003": {
     "title": "ROOT/Jailbreak Detection",

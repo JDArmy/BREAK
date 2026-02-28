@@ -12,7 +12,12 @@
       "A0023-001",
       "A0020"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Valid Accounts - MITRE ATT&CK T1078",
+        "link": "https://attack.mitre.org/techniques/T1078/"
+      }
+    ],
     "updated": "2024-01-18"
   },
   "R0011-001": {
@@ -55,7 +60,12 @@
       "A0020",
       "A0044"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Valid Accounts - MITRE ATT&CK T1078",
+        "link": "https://attack.mitre.org/techniques/T1078/"
+      }
+    ],
     "updated": "2024-01-18"
   }
 }

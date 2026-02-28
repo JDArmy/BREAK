@@ -15,7 +15,16 @@
       "A0059",
       "A0041"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Cookie - 百度百科",
+        "link": "https://baike.baidu.com/item/Cookie/1119"
+      },
+      {
+        "title": "Steal Web Session Cookie - MITRE ATT&CK T1539",
+        "link": "https://attack.mitre.org/techniques/T1539/"
+      }
+    ],
     "updated": "2024-01-15"
   },
   "R0035-001": {

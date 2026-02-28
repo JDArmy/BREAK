@@ -26,6 +26,11 @@
     "description": "AI synthetic video fraud refers to using deepfake technology to generate complete fake video content, including fake news reports, product recommendations, and celebrity endorsements. Unlike AI face-swapping, synthetic videos may involve more complex techniques such as full-body synthesis and scene synthesis. Attackers can use synthetic videos for false advertising, forging celebrity endorsements to promote fraudulent products, and creating fake news to manipulate stock prices.",
     "complexity": "Advanced",
     "influence": "Leads to the spread of misinformation, consumer deception, brand reputational damage, and market order disruption.",
-    "references": []
+    "references": [
+      {
+        "title": "Deepfake - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Deepfake"
+      }
+    ]
   }
 }

@@ -3,7 +3,10 @@
     "title": "GPS Spoofing Tools",
     "description": "Using fake location apps, users can disguise their location and instantly appear anywhere in the world with a single tap. These tools simulate GPS coordinates in any country, allowing users to search for any location they want to spoof, whether a street or city, and execute the most precise fake positioning.",
     "references": [
-      { "title": "Modifying Phone GPS Location Is Actually Done Through Software Location Simulation" }
+      {
+        "title": "GPS Spoofing: Everything You Need to Know",
+        "link": "https://dmarcreport.com/blog/everything-you-need-to-know-about-gps-spoofing/"
+      }
     ]
   }
 }

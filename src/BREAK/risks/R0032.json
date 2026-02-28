@@ -135,7 +135,16 @@
       "A0055",
       "A0056"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "验证码 - 百度百科",
+        "link": "https://baike.baidu.com/item/%E9%AA%8C%E8%AF%81%E7%A0%81"
+      },
+      {
+        "title": "Brute Force - MITRE ATT&CK T1110",
+        "link": "https://attack.mitre.org/techniques/T1110/"
+      }
+    ],
     "updated": "2024-01-16"
   }
 }
