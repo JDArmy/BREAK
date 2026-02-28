@@ -5,6 +5,11 @@
     "description": "Possible privacy compliance risk scenarios include: unauthorized data collection (collecting personal data without explicit user consent); non-transparent data processing (failing to inform users of the purpose, methods, and use of data collection); data breaches (personal data leakage due to security vulnerabilities, internal errors, or external attacks); violation of data retention periods; failure to provide access and modification rights; lack of data security measures such as encryption and access controls; violation of cross-border data transfer regulations; and failure to fulfill data processing agreements.",
     "complexity": "Basic",
     "influence": "May lead to lawsuits, fines, reputational damage, and loss of customer trust.",
-    "references": []
+    "references": [
+      {
+        "title": "Regulations on Network Data Security Management (Draft for Comments) - Cyberspace Administration of China",
+        "link": "https://www.cac.gov.cn/2021-11/14/c_1638501991577898.htm"
+      }
+    ]
   }
 }

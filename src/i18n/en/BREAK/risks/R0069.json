@@ -6,7 +6,10 @@
     "complexity": "Basic",
     "influence": "Consumes platform storage and network resources, and may create compliance risks.",
     "references": [
-      { "title": "5 Tips to Reduce Malicious File Uploads on Websites" }
+      {
+        "title": "5 Tips to Reduce Malicious File Uploads on Websites",
+        "link": "https://zhuanlan.zhihu.com/p/372859453"
+      }
     ]
   },
   "R0069-001": {
@@ -16,7 +19,10 @@
     "complexity": "Basic",
     "influence": "Disrupts normal system operations, consumes large amounts of network bandwidth and storage space, and creates compliance risks.",
     "references": [
-      { "title": "Remote Image Hosting Service Gradually Shutting Down" }
+      {
+        "title": "Remote Image Hosting Service Gradually Shutting Down",
+        "link": "https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload"
+      }
     ]
   },
   "R0069-002": {
@@ -26,7 +32,10 @@
     "complexity": "Basic",
     "influence": "Disrupts normal system operations, consumes large amounts of network bandwidth and storage space, and creates compliance risks.",
     "references": [
-      { "title": "Alibaba OSS Storage Bucket Breached, Malicious Shell Scripts Distributed via Steganography" }
+      {
+        "title": "Alibaba OSS Storage Bucket Breached, Malicious Shell Scripts Distributed via Steganography",
+        "link": "https://help.aliyun.com/zh/oss/security-best-practices"
+      }
     ]
   }
 }

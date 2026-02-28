@@ -3,7 +3,10 @@
     "title": "Bulk Account Registration Tool",
     "description": "A tool specifically designed for bulk registration of business accounts. Normal account registration requires complex operations such as phone verification, making it tedious to register even one account. However, gray/black market actors need large numbers of business accounts, and bulk registration tools help quickly register large numbers of accounts.",
     "references": [
-      { "title": "WeChat Bulk Registration Tool" }
+      {
+        "title": "WeChat Bulk Registration Tool",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-019_Account_Creation.html"
+      }
     ]
   }
 }

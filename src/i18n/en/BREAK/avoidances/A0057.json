@@ -4,6 +4,11 @@
     "definition": "Introducing additional approval steps in an organization or project to ensure the legality, compliance, and traceability of decisions.",
     "description": "Key practices include: approver assignment — designating approvers for each step based on their responsibilities and authority; approval conditions and rules — defining the conditions and rules that trigger approval, such as expenditures exceeding a certain amount or critical decisions; electronic approval systems — using electronic approval tools to automate and streamline the approval process, improving efficiency and reducing human error; approval logs and records — recording decisions at each approval step to support auditing and traceability.",
     "limitation": "Limitations include: efficiency issues — too many approval steps may slow down decision-making and reduce work efficiency; human error — manual approval processes are prone to mistakes or oversights; process complexity — overly complex approval processes may be difficult to understand and manage, increasing maintenance burden; applicability constraints — not all scenarios require additional approval steps, and some simple decisions may become unnecessarily cumbersome.",
-    "references": []
+    "references": [
+      {
+        "title": "Workflow - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E5%B7%A5%E4%BD%9C%E6%B5%81"
+      }
+    ]
   }
 }

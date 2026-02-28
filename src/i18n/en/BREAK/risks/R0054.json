@@ -6,7 +6,10 @@
     "complexity": "Basic",
     "influence": "Consumes the seller's profits, inventory, reputation, or supply chain costs.",
     "references": [
-      { "title": "Buyer Uses Courier Tracking Number for Malicious Refund of Nearly 40,000 Yuan, Faces Fraud Charges" }
+      {
+        "title": "Buyer Uses Courier Tracking Number for Malicious Refund of Nearly 40,000 Yuan, Faces Fraud Charges",
+        "link": "https://m.gmw.cn/baijia/2022-06/29/1303021072.html"
+      }
     ]
   },
   "R0054-001": {
@@ -16,7 +19,10 @@
     "complexity": "Intermediate",
     "influence": "Disrupts the seller's normal operations, causing supply chain losses or a drop in ratings and rankings.",
     "references": [
-      { "title": "What Dark Secrets Lie Behind Bulk Returns to E-Commerce Merchants?" }
+      {
+        "title": "What Dark Secrets Lie Behind Bulk Returns to E-Commerce Merchants?",
+        "link": "https://www.sohu.com/a/478550413_120916326"
+      }
     ]
   },
   "R0054-002": {
@@ -26,8 +32,14 @@
     "complexity": "Basic",
     "influence": "Causes financial loss to the platform or seller.",
     "references": [
-      { "title": "Online Merchant Hires People to Brush Orders and Return Goods, Faking Damage to Commit Insurance Fraud" },
-      { "title": "What Are the Consequences of Fake Returns on Taobao? Woman Sentenced for Returning Empty Box" }
+      {
+        "title": "Online Merchant Hires People to Brush Orders and Return Goods, Faking Damage to Commit Insurance Fraud",
+        "link": "https://baijiahao.baidu.com/s?id=1728176509876921426&wfr=spider&for=pc"
+      },
+      {
+        "title": "What Are the Consequences of Fake Returns on Taobao? Woman Sentenced for Returning Empty Box",
+        "link": "https://www.sohu.com/a/303084308_99940212"
+      }
     ]
   },
   "R0054-003": {
@@ -37,7 +49,10 @@
     "complexity": "Intermediate",
     "influence": "Causes financial loss to the platform and sellers.",
     "references": [
-      { "title": "Exploiting Platform Flash Refund Rules: Order Brushing and Faking Returns Constitutes Fraud" }
+      {
+        "title": "Exploiting Platform Flash Refund Rules: Order Brushing and Faking Returns Constitutes Fraud",
+        "link": "https://weibo.com/ttarticle/p/show?id=2309404589705009169082"
+      }
     ]
   },
   "R0054-004": {
@@ -47,7 +62,10 @@
     "complexity": "Basic",
     "influence": "Causes supply chain losses to the seller.",
     "references": [
-      { "title": "Experiencing Malicious Refusal of Delivery by a Xianyu Buyer" }
+      {
+        "title": "Experiencing Malicious Refusal of Delivery by a Xianyu Buyer",
+        "link": "https://zhuanlan.zhihu.com/p/398441673"
+      }
     ]
   }
 }

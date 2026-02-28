@@ -6,8 +6,14 @@
     "complexity": "Intermediate",
     "influence": "Faces multi-country regulatory penalties, market access restrictions, fines, business disruption, and reputational losses.",
     "references": [
-      { "title": "Cross-Border E-Commerce Compliance White Paper" },
-      { "title": "EU Digital Services Act" }
+      {
+        "title": "Cross-Border E-Commerce Compliance White Paper",
+        "link": "http://www.mofcom.gov.cn/"
+      },
+      {
+        "title": "EU Digital Services Act",
+        "link": "https://digital-strategy.ec.europa.eu/en/policies/digital-services-act-package"
+      }
     ]
   }
 }

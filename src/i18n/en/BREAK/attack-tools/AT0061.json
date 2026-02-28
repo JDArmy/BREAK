@@ -3,8 +3,14 @@
     "title": "API Automated Abuse Tools",
     "description": "API automated abuse tools are a collection of tools specifically targeting Web API interfaces for automated attacks and abuse. These tools can automatically discover and enumerate API endpoints, bypass API rate limits and authentication mechanisms, and batch-call API interfaces for data scraping or business logic abuse. Main functions include API endpoint discovery and enumeration, authentication bypass (token forgery, JWT attacks, OAuth abuse), rate limit bypass (IP rotation, distributed requests, parameter mutation), and business logic abuse (bulk registration, bulk ordering, price tampering).",
     "references": [
-      { "title": "OWASP API Security Top 10 2023" },
-      { "title": "API Security Attack and Defense Practice" }
+      {
+        "title": "OWASP API Security Top 10 2023",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0x11-t10/"
+      },
+      {
+        "title": "API Security Attack and Defense Practice",
+        "link": "https://portswigger.net/web-security/api-testing"
+      }
     ]
   }
 }

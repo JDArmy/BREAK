@@ -5,7 +5,10 @@
     "description": "Also known as interface signature verification or request signing. Because client-side data integrity cannot be guaranteed, hashing the request data and re-verifying it on the server side can ensure the data has not been tampered with. Note: data integrity is closely tied to the strength of the hashing algorithm — weak algorithms like MD5 are no longer sufficient to guarantee integrity. Additionally, API signatures are increasingly used in automated request detection and countermeasures. Strictly speaking, API signatures themselves do not have human verification capability; the current focus is on the complexity and concealment of custom signing algorithms, such as client application hardening (A013), data hiding (A039), algorithm whitebox protection, dynamic keys, WebAssembly, etc.",
     "limitation": "API signatures are fine for ensuring data integrity during transmission, but because they are widely used to prevent automation, they face strong adversarial pressure. Since the signing algorithm must exist in some form on the client side, it is effectively visible to the user. Attackers can break the signing algorithm by parsing the algorithm, calling the signing interface, simulating clicks, etc., enabling automated forgery of requests.",
     "references": [
-      { "title": "smart-cloud - an open-source Spring Cloud scaffold with API signing capability" }
+      {
+        "title": "smart-cloud - an open-source Spring Cloud scaffold with API signing capability",
+        "link": "https://github.com/smart-cloud/smart-cloud-examples#%E4%BA%8C%E6%8E%A5%E5%8F%A3%E5%AE%89%E5%85%A8"
+      }
     ]
   }
 }

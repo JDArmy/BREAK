@@ -5,8 +5,14 @@
     "description": "The main approaches for SIM card security verification include: (1) SIM binding verification — binding user accounts to the ICCID or IMSI of a specific SIM card and triggering additional security verification when the SIM card changes; (2) carrier-assisted verification — cooperating with telecom carriers to query number status in real time through carrier interfaces, detecting SIM card replacement, number porting, and other change events; (3) device-SIM association detection — monitoring changes in the association between mobile devices and SIM cards, and performing risk assessment when the same number appears on a new device; (4) multi-channel verification — for critical operations, relying not only on SMS verification codes but also combining app push notifications, email verification, biometrics, and other verification channels; (5) number status monitoring — continuously monitoring the network status of user phone numbers to promptly detect anomalies such as suspension, cancellation, and secondary number assignment; (6) SIM card locking — allowing users to proactively lock their SIM cards to prevent unauthorized SIM card replacement.",
     "limitation": "The limitations of SIM card security verification include: (1) reliance on carrier technical support and data sharing, with differences in interface capabilities and response speeds across carriers; (2) limited cross-border carrier coordination capability for international roaming and overseas carriers; (3) obtaining SIM card information may involve user privacy and requires compliant handling; (4) the proliferation of eSIM technology presents new challenges for physical SIM binding verification; (5) social engineering attacks may bypass carrier SIM card replacement processes.",
     "references": [
-      { "title": "SIM Swap Fraud - GSMA" },
-      { "title": "Best Practices for Protecting Against SIM Swap Attacks" }
+      {
+        "title": "SIM Swap Fraud - GSMA",
+        "link": "https://www.gsma.com/security/sim-swap-fraud/"
+      },
+      {
+        "title": "Best Practices for Protecting Against SIM Swap Attacks",
+        "link": "https://www.cisa.gov/news-events/alerts/2022/02/08/protecting-against-sim-swap-attacks"
+      }
     ]
   }
 }

@@ -6,8 +6,14 @@
     "complexity": "Advanced",
     "influence": "Phone number is hijacked, all SMS verification-based accounts face takeover risk, and financial assets are stolen.",
     "references": [
-      { "title": "SIM Swap Fraud - FBI IC3" },
-      { "title": "SIM Swap Attack Prevention - CISA" }
+      {
+        "title": "SIM Swap Fraud - FBI IC3",
+        "link": "https://www.ic3.gov/Media/Y2022/PSA220208"
+      },
+      {
+        "title": "SIM Swap Attack Prevention - CISA",
+        "link": "https://www.cisa.gov/news-events/alerts/2022/02/08/protecting-against-sim-swap-attacks"
+      }
     ]
   }
 }

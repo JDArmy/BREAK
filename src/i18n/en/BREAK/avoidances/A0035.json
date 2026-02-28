@@ -4,14 +4,24 @@
     "definition": "Removing or replacing sensitive information in data with special symbols.",
     "description": "Data desensitization is a technical measure used to protect the security and privacy of sensitive data. The basic principle is to use desensitization algorithms to obscure or transform sensitive data, reducing its sensitivity level before releasing it externally or making it available for access. Methods include static data desensitization — a one-time processing of the original data's sensitive fields to reduce data sensitivity and personal privacy risk — and dynamic data desensitization, which processes data in real time during use to protect private information.",
     "limitation": "Data desensitization may have the following limitations: first, due to insufficient protection of sensitive data, malicious attackers can combine background information to infer sensitive data, creating privacy leakage risks; second, existing desensitization techniques typically alter the original data structure, affecting data accuracy to some extent.",
-    "references": []
+    "references": [
+      {
+        "title": "Data Masking - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E8%84%B1%E6%95%8F"
+      }
+    ]
   },
   "A0035-001": {
     "title": "Sensitive Data Removal",
     "definition": "Removing sensitive information from data.",
     "description": "Unlike data desensitization (A035), sensitive data removal refers to removing sensitive information from data rather than replacing it with special symbols. The basic principle is to use removal algorithms to obscure or transform sensitive data, reducing its sensitivity level before releasing it externally or making it available for access. Methods include static data removal and dynamic data removal.",
     "limitation": "Sensitive data removal depends on the execution of data classification and grading, as well as the ability to identify sensitive data. If data classification is inaccurate or the ability to identify sensitive data is insufficient, the effectiveness of sensitive data removal will be poor. Additionally, static sensitive data removal may affect data completeness, availability, and accuracy.",
-    "references": []
+    "references": [
+      {
+        "title": "Data Masking - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E8%84%B1%E6%95%8F"
+      }
+    ]
   },
   "A0035-002": {
     "title": "User Information Tokenization",
@@ -19,7 +29,10 @@
     "description": "User information tokenization is a privacy protection and security enhancement practice. A token is a string that represents specific information or permissions without directly containing sensitive data. This approach helps reduce risk when processing user data, especially in network communication and storage.",
     "limitation": "Tokenization is not applicable to all scenarios. In some applications, direct access to the user's original data is required rather than processing through tokens.",
     "references": [
-      { "title": "Tokenization - Baidu Baike" }
+      {
+        "title": "Tokenization - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E4%BB%A4%E7%89%8C%E5%8C%96/22416521?fr=ge_ala"
+      }
     ]
   },
   "A0035-003": {
@@ -28,7 +41,10 @@
     "description": "Virtual phone numbers allow the other party in a transaction to communicate with the user through the virtual number without knowing the user's real phone number. Application scenarios include: transactions, delivery, customer service, complaints, and after-sales.",
     "limitation": "Due to the limited number of available virtual numbers, tokens must be used to map multiple user phone numbers to a single virtual number, increasing the cost of calls. Virtual numbers are not friendly for SMS sending and receiving — for example, parcel lockers do not support virtual numbers, preventing consumers from receiving pickup codes.",
     "references": [
-      { "title": "Virtual Numbers: Who Are They Really Protecting?" }
+      {
+        "title": "Virtual Numbers: Who Are They Really Protecting?",
+        "link": "https://baijiahao.baidu.com/s?id=1786971537647885809&wfr=spider&for=pc"
+      }
     ]
   }
 }

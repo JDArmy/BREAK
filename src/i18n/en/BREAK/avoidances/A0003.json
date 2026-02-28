@@ -5,7 +5,10 @@
     "description": "Also known as cloud-side crawler identification. Broadly speaking, any capability for human-machine identification or automated request detection falls under the scope of crawler identification. Here we use a narrow definition: the ability to identify high-frequency automated requests on the server side based on terminal request characteristics, user identity, and access frequency. Terminal request characteristics include but are not limited to: device fingerprinting and terminal tracking (A021), request IP and HTTP header information, etc. Terminal request characteristics combined with user identity enable unique identification of the requesting endpoint; combined with server-side algorithms and rate/count limits per unit time, this enables identification and restriction of high-frequency automated requests.",
     "limitation": "Crawler identification depends on three prerequisites: 1. unique identification of the requester, 2. identity identification of the requester, 3. request frequency calculation. All three are necessary. Without effective unique identification, detection can be bypassed by changing IP, UA, or device fingerprint. Without identity identification, good crawlers (search engines) cannot be distinguished from bad ones. Without frequency calculation, effective blocking is impossible. All three prerequisites have limitations: terminal and identity identification not tied to accounts can be forged; account-based identity identification can be countered by bulk registration (R0030-001); if identity is identified by request characteristics, those can be forged; request frequency can be bypassed by slow-rate crawling. Additionally, crawler identification has inherent latency, making it unable to identify and prevent scenarios like last-second bidding (R0003-001) and auction sniping (R0003-002) in real time. Therefore, crawler identification alone cannot solve the problem of automated requests; it must be combined with other countermeasures.",
     "references": [
-      { "title": "Introduction to Crawlers and Anti-Crawling Techniques (see Chapter 2 - Anti-Crawling Technologies)" }
+      {
+        "title": "Introduction to Crawlers and Anti-Crawling Techniques (see Chapter 2 - Anti-Crawling Technologies)",
+        "link": "https://mp.weixin.qq.com/s/dJhCQmpejY-GTE_a1ZpPsg"
+      }
     ]
   }
 }

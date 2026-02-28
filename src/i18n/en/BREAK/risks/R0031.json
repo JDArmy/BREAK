@@ -6,8 +6,14 @@
     "complexity": "Intermediate",
     "influence": "Sub-account abuse bypasses account registration and identity authentication policies.",
     "references": [
-      { "title": "What Are the Drawbacks and Risks of Taobao Store Sub-Accounts?" },
-      { "title": "Major Loophole Found in Alipay Real-Name Authentication: Multiple Sub-Accounts Can Be Secretly Bound" }
+      {
+        "title": "What Are the Drawbacks and Risks of Taobao Store Sub-Accounts?",
+        "link": "https://www.musicheng.com/news/i177638.html"
+      },
+      {
+        "title": "Major Loophole Found in Alipay Real-Name Authentication: Multiple Sub-Accounts Can Be Secretly Bound",
+        "link": "https://stock.xinpianchang.com/article/scbaike/100016.html"
+      }
     ]
   }
 }

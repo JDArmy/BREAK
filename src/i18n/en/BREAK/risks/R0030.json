@@ -6,7 +6,10 @@
     "complexity": "Intermediate",
     "influence": "These accounts are subsequently abused for generating spam, money laundering, spreading malware, reputation manipulation, pranks, and distorting SEO, reviews, and surveys.",
     "references": [
-      { "title": "OWASP Automated Threat: OAT019 Account Creation" }
+      {
+        "title": "OWASP Automated Threat: OAT019 Account Creation",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-019_Account_Creation.html"
+      }
     ]
   },
   "R0030-001": {
@@ -16,7 +19,10 @@
     "complexity": "Advanced",
     "influence": "These accounts are subsequently abused for generating spam, money laundering, spreading malware, reputation manipulation, pranks, and distorting SEO, reviews, and surveys.",
     "references": [
-      { "title": "OWASP Automated Threat: OAT019 Account Creation" }
+      {
+        "title": "OWASP Automated Threat: OAT019 Account Creation",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-019_Account_Creation.html"
+      }
     ]
   },
   "R0030-002": {
@@ -26,7 +32,10 @@
     "complexity": "Intermediate",
     "influence": "Bypasses existing identity verification systems, causing defense mechanisms to fail.",
     "references": [
-      { "title": "What Is Third-Party Account Login? What Are Its Benefits?" }
+      {
+        "title": "What Is Third-Party Account Login? What Are Its Benefits?",
+        "link": "https://zhidao.baidu.com/question/1437455763683359379.html"
+      }
     ]
   },
   "R0030-003": {
@@ -35,7 +44,12 @@
     "description": "Many sites have strict identity verification systems, such as SMS verification codes. However, when registering with overseas phone numbers, excessive trust in overseas numbers without strict identity verification allows bulk registration (R0030-001) of large numbers of spam accounts to bypass the strict identity verification system.",
     "complexity": "Intermediate",
     "influence": "Bypasses existing identity verification systems, causing defense mechanisms to fail.",
-    "references": []
+    "references": [
+      {
+        "title": "Phone Real-Name Registration - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E6%89%8B%E6%9C%BA%E5%AE%9E%E5%90%8D%E5%88%B6"
+      }
+    ]
   },
   "R0030-004": {
     "title": "Inactive Number Registration",
@@ -44,7 +58,10 @@
     "complexity": "Advanced",
     "influence": "Risks mainly manifest in disrupting normal internet order, potential social engineering attacks, challenges from new cybercrime patterns, and economic and reputational impacts on users and platforms.",
     "references": [
-      { "title": "China's First Inactive Number SMS Hijacking Case Solved: Collusion with Telecom Insider" }
+      {
+        "title": "China's First Inactive Number SMS Hijacking Case Solved: Collusion with Telecom Insider",
+        "link": "https://zhuanlan.zhihu.com/p/44878951"
+      }
     ]
   },
   "R0030-005": {
@@ -53,7 +70,12 @@
     "description": "Besides the four major carriers, China has many virtual network operators (MVNOs) that purchase voice, SMS, and data services from the major carriers and resell them under their own branding. These are commonly called 'virtual cards' by black market operators. Virtual card number prefixes are fixed (162, 165, 167, 170, 171). Compared to physical SIM cards, virtual cards have two advantages: low cost (often zero monthly fee) and low barrier (one ID card can be used to register dozens of cards across different MVNOs).",
     "complexity": "Basic",
     "influence": "Bulk registration with virtual numbers may lead to online service abuse, including online fraud and false information spreading, damaging platform credibility and user security.",
-    "references": []
+    "references": [
+      {
+        "title": "Virtual Network Operator - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E8%99%9A%E6%8B%9F%E8%BF%90%E8%90%A5%E5%95%86"
+      }
+    ]
   },
   "R0030-006": {
     "title": "IoT SIM Card Registration",
@@ -61,7 +83,12 @@
     "description": "IoT SIM cards are phone cards specifically designed for IoT terminal devices to provide connectivity. By default they do not have SMS sending/receiving capability, which must be applied for at the time of purchase.",
     "complexity": "Basic",
     "influence": "Bulk registration with IoT SIM cards may lead to online service abuse, including online fraud and false information spreading, damaging platform credibility and user security.",
-    "references": []
+    "references": [
+      {
+        "title": "IoT SIM Card - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E7%89%A9%E8%81%94%E7%BD%91%E5%8D%A1"
+      }
+    ]
   },
   "R0030-007": {
     "title": "Interceptor Card Registration",
@@ -69,6 +96,11 @@
     "description": "Interceptor cards require that the legitimate device holder has not registered for the black market operator's target online service, otherwise the black market operator cannot use it for fake registration. To achieve this, interceptor cards primarily target three types of devices: phones exported overseas, low-to-mid-range phones, and children's smartwatches — because users of these devices (overseas users, elderly people, and children) are unlikely to have registered for the target services.",
     "complexity": "Basic",
     "influence": "Fake registration may lead to online service abuse, including online fraud and false information spreading, damaging platform credibility and user security.",
-    "references": []
+    "references": [
+      {
+        "title": "Phone Real-Name Registration - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E6%89%8B%E6%9C%BA%E5%AE%9E%E5%90%8D%E5%88%B6"
+      }
+    ]
   }
 }

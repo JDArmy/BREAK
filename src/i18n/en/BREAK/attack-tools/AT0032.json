@@ -3,14 +3,20 @@
     "title": "Browser Extensions",
     "description": "Includes but is not limited to malicious promotional extensions, price comparison extensions, ad-blocking extensions, and membership benefit acquisition extensions.",
     "references": [
-      { "title": "Case Report on Unfair Competition by Browser Extensions" }
+      {
+        "title": "Case Report on Unfair Competition by Browser Extensions",
+        "link": "https://www.163.com/dy/article/HB8OBS1L051187VR.html"
+      }
     ]
   },
   "AT0032-001": {
     "title": "Hijacking Extensions",
     "description": "Browser extensions that hijack legitimate traffic through unconventional means such as viruses, trojans, unauthorized bundled installs, forced homepage changes, browser or address bar hijacking, page hijacking, search engine manipulation, or user data tampering. They may also hijack traffic by modifying URL parameters or injecting pop-ups during normal user browsing. An example is monitoring IE access via Microsoft's COM connection point technology (the traditional BHO method) to generate or modify affiliate URLs.",
     "references": [
-      { "title": "A Well-Known Chinese Browser Extension Caught Hijacking and Monitoring User Pages and Spamming Ads" }
+      {
+        "title": "A Well-Known Chinese Browser Extension Caught Hijacking and Monitoring User Pages and Spamming Ads",
+        "link": "https://baijiahao.baidu.com/s?id=1707302172260893117&wfr=spider&for=pc"
+      }
     ]
   }
 }

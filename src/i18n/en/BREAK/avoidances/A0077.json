@@ -5,8 +5,14 @@
     "description": "Transaction risk monitoring is a technical system for real-time risk identification of transaction behavior. Main monitoring dimensions and capabilities include: (1) amount anomaly detection — monitoring whether single transaction amounts and cumulative transaction amounts exceed historical baselines or preset thresholds to identify abnormally large transactions; (2) frequency anomaly detection — monitoring transaction frequency, order rate, and other metrics to identify abnormally dense transaction behavior within a short time; (3) counterparty analysis — analyzing the risk labels, historical behavior, and association relationships of transaction counterparties to identify transactions with high-risk entities; (4) time pattern analysis — analyzing the time distribution of transactions to identify anomalous time-period transactions such as those occurring late at night; (5) channel consistency validation — validating the consistency of transaction channels, devices, and IP addresses with the user's historical transaction habits; (6) cross-account association analysis — monitoring fund flow patterns between multiple accounts to identify anomalous fund chains such as circular transfers and dispersed transfers; (7) real-time decision engine — completing transaction risk assessment and decision-making at the millisecond level based on rule engines and real-time feature computation.",
     "limitation": "The limitations of transaction risk monitoring include: (1) rule strategies need continuous iteration and updates, as new fraud patterns may bypass existing rules; (2) overly strict monitoring strategies may cause legitimate transactions to be incorrectly blocked, affecting user experience; (3) high real-time requirements place strict demands on system performance and stability; (4) detection effectiveness for small-amount dispersed fraud is limited; (5) cross-platform and cross-institution transaction data integration faces barriers.",
     "references": [
-      { "title": "Transaction Monitoring Best Practices - ACAMS" },
-      { "title": "Real-Time Transaction Risk Control System Design Practice" }
+      {
+        "title": "Transaction Monitoring Best Practices - ACAMS",
+        "link": "https://www.acams.org/en/resources/transaction-monitoring"
+      },
+      {
+        "title": "Real-Time Transaction Risk Control System Design Practice",
+        "link": "https://tech.meituan.com/transaction-risk-control"
+      }
     ]
   }
 }

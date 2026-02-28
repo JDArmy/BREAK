@@ -5,6 +5,15 @@
     "description": "Possible scenarios include: unauthorized data transfers (transmitting personal sensitive information to other countries or regions without explicit consent from data subjects, potentially violating data privacy regulations); lack of cross-border data transfer agreements; non-compliance with specific national or regional regulations; and data leakage risk during transmission due to inadequate encryption and security measures.",
     "complexity": "Basic",
     "influence": "Violating cross-border data transfer regulations may result in legal liability, including fines, lawsuits, and other legal sanctions.",
-    "references": []
+    "references": [
+      {
+        "title": "Measures for Security Assessment of Data Exports - Cyberspace Administration of China",
+        "link": "https://www.cac.gov.cn/2022-07/07/c_1658811536396503.htm"
+      },
+      {
+        "title": "Provisions on Regulating and Promoting Cross-Border Data Flows (Draft for Comments) - Cyberspace Administration of China",
+        "link": "https://www.cac.gov.cn/2023-09/28/c_1697558914242877.htm"
+      }
+    ]
   }
 }

@@ -6,7 +6,10 @@
     "complexity": "Advanced",
     "influence": "May cause security processes within the application to be broken and data to be forged.",
     "references": [
-      { "title": "Frontend Anti-Fraud Practices in Business Risk Control" }
+      {
+        "title": "Frontend Anti-Fraud Practices in Business Risk Control",
+        "link": "https://zhuanlan.zhihu.com/p/524097525"
+      }
     ]
   },
   "R0050-001": {
@@ -16,7 +19,10 @@
     "complexity": "Intermediate",
     "influence": "May cause security processes within the application to be broken and data to be forged.",
     "references": [
-      { "title": "Device Fingerprinting: How to Counter Various Virtual Devices?" }
+      {
+        "title": "Device Fingerprinting: How to Counter Various Virtual Devices?",
+        "link": "https://blog.51cto.com/u_15275035/4979325"
+      }
     ]
   }
 }

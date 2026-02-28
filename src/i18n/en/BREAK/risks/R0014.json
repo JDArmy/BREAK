@@ -6,7 +6,10 @@
     "complexity": "Basic",
     "influence": "Common in commercial competition. Once inventory is exhausted, other users can no longer purchase the goods.",
     "references": [
-      { "title": "OWASP Automated Threat: OAT021 Denial of Inventory" }
+      {
+        "title": "OWASP Automated Threat: OAT021 Denial of Inventory",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-021_Denial_of_Inventory.html"
+      }
     ]
   }
 }

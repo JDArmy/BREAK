@@ -6,7 +6,10 @@
     "complexity": "Advanced",
     "influence": "Grants the attacker persistent account access and operational permissions on the corresponding website or application.",
     "references": [
-      { "title": "OWASP Automated Threat: OAT007 Credential Cracking" }
+      {
+        "title": "OWASP Automated Threat: OAT007 Credential Cracking",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-007_Credential_Cracking.html"
+      }
     ]
   },
   "R0032-001": {
@@ -16,7 +19,10 @@
     "complexity": "Advanced",
     "influence": "Through unrestricted credential stuffing, attackers may gain access to many users who have reused credentials from other systems, causing losses to those users through further operations.",
     "references": [
-      { "title": "OWASP Automated Threat: OAT008 Credential Stuffing" }
+      {
+        "title": "OWASP Automated Threat: OAT008 Credential Stuffing",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-008_Credential_Stuffing.html"
+      }
     ]
   },
   "R0032-002": {
@@ -26,7 +32,10 @@
     "complexity": "Advanced",
     "influence": "Through unrestricted credential attacks, attackers may gain access to users with weak passwords on the current system, causing losses through further operations.",
     "references": [
-      { "title": "OWASP Automated Threat: OAT007 Credential Cracking" }
+      {
+        "title": "OWASP Automated Threat: OAT007 Credential Cracking",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-007_Credential_Cracking.html"
+      }
     ]
   },
   "R0032-003": {
@@ -36,7 +45,10 @@
     "complexity": "Advanced",
     "influence": "Through unrestricted credential attacks, attackers may gain access to users with weak passwords on the current system, causing losses through further operations.",
     "references": [
-      { "title": "OWASP Automated Threat: OAT007 Credential Cracking" }
+      {
+        "title": "OWASP Automated Threat: OAT007 Credential Cracking",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-007_Credential_Cracking.html"
+      }
     ]
   },
   "R0032-004": {
@@ -45,6 +57,15 @@
     "description": "Verification code brute force risk refers to attackers attempting to break verification codes by continuously trying various possibilities to gain access to a system or account. Causes include: weak verification code design; lack of security protections such as frequently changing codes or lockout mechanisms; reuse of the same verification code across multiple locations; and inadequate verification code generation algorithms.",
     "complexity": "Intermediate",
     "influence": "User identity compromise.",
-    "references": []
+    "references": [
+      {
+        "title": "CAPTCHA - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E9%AA%8C%E8%AF%81%E7%A0%81"
+      },
+      {
+        "title": "Brute Force - MITRE ATT&CK T1110",
+        "link": "https://attack.mitre.org/techniques/T1110/"
+      }
+    ]
   }
 }

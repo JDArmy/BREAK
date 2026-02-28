@@ -5,7 +5,10 @@
     "description": "Rate limiting can be used in scenarios such as traffic peak shaving. Its purpose is to relieve server pressure. For crawler scenarios with extremely high-frequency data requests far exceeding normal human request rates, it has a relatively direct blocking effect, preventing traffic far exceeding server capacity from causing denial of service and cascading failures.",
     "limitation": "Unlike crawler identification (A003), rate limiting does not strictly distinguish between human traffic and automated traffic. This means that a threshold set too low will mistakenly block some legitimate human requests, while a threshold set too high will let through low-frequency crawlers. Therefore, it cannot be considered an effective crawler identification and blocking measure.",
     "references": [
-      { "title": "Implementing API Gateway Authentication and Rate Limiting with Kong" }
+      {
+        "title": "Implementing API Gateway Authentication and Rate Limiting with Kong",
+        "link": "https://zhuanlan.zhihu.com/p/92172480?ivk_sa=1024320u&utm_id=0"
+      }
     ]
   }
 }

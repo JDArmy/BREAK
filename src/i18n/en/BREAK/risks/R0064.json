@@ -6,8 +6,14 @@
     "complexity": "Basic",
     "influence": "Extracts platform or merchant discounts and rebates.",
     "references": [
-      { "title": "How to Prevent Malicious Order Padding?" },
-      { "title": "Buyer Maliciously Pads Order Then Requests Refund — What Should Merchants Do?" }
+      {
+        "title": "How to Prevent Malicious Order Padding?",
+        "link": "https://www.sohu.com/a/433318629_120934325"
+      },
+      {
+        "title": "Buyer Maliciously Pads Order Then Requests Refund — What Should Merchants Do?",
+        "link": "https://www.kaitao.cn/article/20201229093211.htm"
+      }
     ]
   }
 }

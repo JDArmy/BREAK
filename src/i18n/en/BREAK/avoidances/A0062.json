@@ -5,7 +5,10 @@
     "description": "Traditional surveillance systems include front-end cameras, transmission cables, and video surveillance platforms. Cameras can be divided into network digital cameras and analog cameras, serving as front-end video image signal collectors. Video surveillance is widely used in many settings due to its intuitive, accurate, timely, and information-rich nature. Modern surveillance systems can use smartphones, with automatic image recognition, storage, and automatic alerting. Video data is transmitted back to a control host via 3G/4G/WiFi, where it can be viewed in real time, recorded, played back, retrieved, and stored, enabling mobile internet-based video surveillance.",
     "limitation": "Video surveillance relies heavily on personnel to interpret footage and has a certain degree of latency.",
     "references": [
-      { "title": "Video Surveillance - Baidu Baike" }
+      {
+        "title": "Video Surveillance - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E7%9B%91%E6%8E%A7/157510?fromtitle=%E8%A7%86%E9%A2%91%E7%9B%91%E6%8E%A7&fromid=9032286&fromModule=lemma_search-box"
+      }
     ]
   }
 }

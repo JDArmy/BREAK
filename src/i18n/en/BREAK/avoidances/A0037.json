@@ -4,6 +4,11 @@
     "definition": "Tracking the access source of resources to determine the reliability and reasonableness of the source.",
     "description": "Common source tracking checks the Referer header in resource requests. However, there are now more sophisticated approaches: one is to generate encrypted access tokens with time-based, random, and unique properties in the pre-access page for in-site resource access to track resource access; the other is to embed the sharer's identity information as an access token in the shared link when resources are shared off-site. This way, both in-site and off-site resource access can be tracked, enabling identification and blocking of abnormal sources.",
     "limitation": "Two foreseeable breakable scenarios are: 1. For in-site access, attackers can obtain in-site resource access tokens by bulk-constructing resource pre-access pages. 2. For off-site access, in high-traffic scenarios such as advertising and promotion, it is difficult to determine whether token acquisition is non-compliant based on volume alone. For scenario 1, the pre-access page can be included in the tracking coverage, or the randomness of resources in the pre-access page can be increased to prevent targeted resource access. For scenario 2, the off-site resource access ID can be encoded to decouple it from targeted in-site resource access.",
-    "references": []
+    "references": [
+      {
+        "title": "Access Control - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6"
+      }
+    ]
   }
 }

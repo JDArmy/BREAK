@@ -6,8 +6,14 @@
     "complexity": "Advanced",
     "influence": "Extremely wide impact range, potentially causing large numbers of downstream systems to be implanted with backdoors, sensitive data leakage, and business disruption.",
     "references": [
-      { "title": "Software Supply Chain Security White Paper - China Academy of Information and Communications Technology" },
-      { "title": "SLSA: Supply-chain Levels for Software Artifacts" }
+      {
+        "title": "Software Supply Chain Security White Paper - China Academy of Information and Communications Technology",
+        "link": "http://www.caict.ac.cn/"
+      },
+      {
+        "title": "SLSA: Supply-chain Levels for Software Artifacts",
+        "link": "https://slsa.dev/"
+      }
     ]
   }
 }

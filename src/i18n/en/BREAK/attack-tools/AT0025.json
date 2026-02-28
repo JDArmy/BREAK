@@ -3,9 +3,18 @@
     "title": "Deobfuscation Tools",
     "description": "Deobfuscation tools are tools used to restore obfuscated code to a readable form. Obfuscation is a common code protection technique used to hide the true intent and functionality of code, increasing the difficulty of reverse engineering. Deobfuscation tools help developers analyze and understand obfuscated code for vulnerability analysis and security auditing. They typically use static analysis techniques to syntactically and semantically analyze code and restore it to a readable form.",
     "references": [
-      { "title": "AST Deobfuscation in Practice" },
-      { "title": "Prerequisite Knowledge for AST Deobfuscation: Concepts" },
-      { "title": "JS Reverse Engineering: AST Restoration of Geetest Obfuscated JS in Practice" }
+      {
+        "title": "AST Deobfuscation in Practice",
+        "link": "https://www.jianshu.com/p/f485140ad83b"
+      },
+      {
+        "title": "Prerequisite Knowledge for AST Deobfuscation: Concepts",
+        "link": "https://blog.csdn.net/qq523176585/article/details/109508056"
+      },
+      {
+        "title": "JS Reverse Engineering: AST Restoration of Geetest Obfuscated JS in Practice",
+        "link": "https://astexplorer.net/"
+      }
     ]
   }
 }

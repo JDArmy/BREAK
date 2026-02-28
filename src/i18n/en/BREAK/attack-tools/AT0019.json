@@ -3,7 +3,10 @@
     "title": "Offline Game Bots",
     "description": "Offline game bots are specially designed programs that use a large number of computer hosts (compromised machines or proxy service providers) to simulate normal game clients sending and receiving data packets to game servers. Game servers cannot distinguish the true source of these large numbers of data packets, often causing server load to exceed maximum limits, resulting in login failures, connection timeouts, server crashes, or other serious consequences.",
     "references": [
-      { "title": "Offline Game Bots - Baidu Baike" }
+      {
+        "title": "Offline Game Bots - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E8%84%B1%E6%9C%BA%E6%8C%82/10371991?fr=aladdin"
+      }
     ]
   }
 }

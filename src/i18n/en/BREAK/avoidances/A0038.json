@@ -4,7 +4,12 @@
     "definition": "Detecting the use of proxies when users request network resources.",
     "description": "Proxy detection primarily analyzes the data characteristics of user requests to identify and assess the use of network proxies and terminal proxies, further confirming whether the request is from a real user.",
     "limitation": "The biggest problem with proxy detection is that normal users may also use proxies, making false positives easy.",
-    "references": []
+    "references": [
+      {
+        "title": "Proxy Server - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Proxy_server"
+      }
+    ]
   },
   "A0038-001": {
     "title": "Web Access Proxy Detection",
@@ -12,7 +17,10 @@
     "description": "Black-gray industry actors may use non-standard web access proxies to request resources, such as headless browsers, curl, wget, or HTTP libraries from various programming languages. Detection methods include: User-Agent analysis, JavaScript environment detection, JA3 fingerprinting, HTTP/2 fingerprinting, etc.",
     "limitation": "Because web access proxy detection ultimately relies on analyzing terminal request information, placing this measure in a high-adversarial context makes it easy to bypass by forging and modifying data.",
     "references": [
-      { "title": "Web Browser" }
+      {
+        "title": "Web Browser",
+        "link": "https://baike.baidu.com/item/%E6%B5%8F%E8%A7%88%E5%99%A8/213911?fr=ge_ala"
+      }
     ]
   },
   "A0038-002": {
@@ -20,6 +28,11 @@
     "definition": "Detecting whether users are using a network proxy when requesting resources.",
     "description": "Common network proxy methods include VPN, SOCKS5, and HTTP proxies. Current common network proxy detection methods include: IP intelligence, request IP clustering, IP attribute analysis, TCP/IP fingerprinting, DNS server location discrepancy, using WebRTC to expose the real IP, and leveraging the network latency characteristics of proxies to determine whether a network proxy is being used.",
     "limitation": "Network proxy detection has the following limitations: first, normal users may also use network proxies, making false positives easy; second, using mobile carrier egress IPs as proxies makes blocking difficult even when detected; third, using ADSL dial-up networks as proxies allows immediate switching to a new proxy by re-dialing after being blocked.",
-    "references": []
+    "references": [
+      {
+        "title": "VPN - Baidu Baike",
+        "link": "https://baike.baidu.com/item/VPN"
+      }
+    ]
   }
 }

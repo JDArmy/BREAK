@@ -5,8 +5,10 @@
     "description": "The main implementation elements of Zero Trust Architecture include: (1) continuous identity verification — continuously verifying the identity of users and devices rather than only at login, dynamically adjusting verification strength based on risk level; (2) least privilege principle — strictly limiting the access permissions of users and services, granting only the minimum set of permissions needed to complete the current task; (3) micro-segmentation — dividing the network into fine-grained security zones to restrict lateral movement, so that even if an attacker breaches one zone they cannot easily spread; (4) device trust assessment — continuously evaluating the security posture of connected devices, including operating system version, patch status, and security software status; (5) encrypted communications — all communications use encrypted transmission, whether on internal or external networks; (6) security analytics and automation — using SIEM, SOAR, and other tools for real-time security analysis and automated response; (7) software-defined perimeter (SDP) — using SDP technology to hide network resources, making them visible only to authenticated and authorized users.",
     "limitation": "The limitations of Zero Trust Architecture include: (1) high implementation complexity requiring large-scale transformation of existing IT infrastructure with significant cost; (2) potential impact on user experience as frequent identity verification and permission checks may reduce work efficiency; (3) poor compatibility with legacy systems that may not support the authentication and authorization mechanisms required by Zero Trust; (4) requires robust identity management infrastructure; (5) full implementation of Zero Trust is a long-term process that is difficult to cover all business scenarios in the short term.",
     "references": [
-      { "title": "NIST SP 800-207 Zero Trust Architecture" },
-      { "title": "Zero Trust Security Architecture Practice Guide" }
+      {
+        "title": "NIST SP 800-207 Zero Trust Architecture",
+        "link": "https://csrc.nist.gov/publications/detail/sp/800-207/final"
+      }
     ]
   }
 }

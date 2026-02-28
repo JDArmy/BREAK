@@ -3,10 +3,18 @@
     "title": "Device Spoofing Tools",
     "description": "Device spoofing is an important tool relied upon by criminal gangs for large-scale operations. Through device spoofing, criminals can batch-forge new devices or modify device fingerprints to bypass business risk controls.",
     "references": [
-      { "title": "Fraud Tool: Device Spoofing Software" },
-      { "title": "Xposed - A framework service that can affect program execution (modify the system) without modifying the APK" },
-      { "title": "Cydia Substrate - A code modification platform that can modify the code of any main process" },
-      { "title": "Frida - A convenient and easy-to-use cross-platform Hook tool" }
+      {
+        "title": "Fraud Tool 'Device Modification Software'",
+        "link": "https://zhuanlan.zhihu.com/p/391039941"
+      },
+      {
+        "title": "Xposed - A framework service that affects program execution (modifies the system) without modifying APK",
+        "link": "https://www.oschina.net/p/xposed?hmsr=aladdin1e1"
+      },
+      {
+        "title": "Frida - A convenient and easy-to-use cross-platform Hook tool",
+        "link": "https://frida.re/"
+      }
     ]
   }
 }

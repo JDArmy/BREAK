@@ -5,6 +5,11 @@
     "description": "Scenarios include failure to meet the security level requirements for information systems under the classified protection system, failure to fulfill information security management responsibilities, and risks of data leakage and unauthorized access.",
     "complexity": "Basic",
     "influence": "Harms may include legal liability, information leakage, service disruptions, and negative impacts on the organization's reputation and trust.",
-    "references": []
+    "references": [
+      {
+        "title": "Cybersecurity Level Protection System - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%AD%89%E7%BA%A7%E4%BF%9D%E6%8A%A4%E5%88%B6%E5%BA%A6"
+      }
+    ]
   }
 }

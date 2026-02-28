@@ -6,8 +6,14 @@
     "complexity": "Advanced",
     "influence": "Traditional security defense systems face severe challenges, attack scale and efficiency increase significantly, and defense costs rise substantially.",
     "references": [
-      { "title": "AI-Driven Cyber Threats - World Economic Forum" },
-      { "title": "NCSC: The near-term impact of AI on the cyber threat" }
+      {
+        "title": "AI-Driven Cyber Threats - World Economic Forum",
+        "link": "https://www.weforum.org/publications/global-cybersecurity-outlook-2025/"
+      },
+      {
+        "title": "NCSC: The near-term impact of AI on the cyber threat",
+        "link": "https://www.ncsc.gov.uk/report/impact-of-ai-on-cyber-threat"
+      }
     ]
   }
 }

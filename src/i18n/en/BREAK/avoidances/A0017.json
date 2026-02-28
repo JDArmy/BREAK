@@ -4,7 +4,12 @@
     "definition": "Adding permission verification to the application workflow to re-confirm the user's request intent and true identity.",
     "description": "Additional identity authorization can be applied in business scenarios such as: payment, password changes, identity binding, third-party OAuth authorization, coupon redemption, points redemption, account cancellation, etc. Available forms include: entering a password, facial recognition, fingerprint recognition, phone verification code, etc.",
     "limitation": "Adding identity authorization via password entry is only suitable for scenarios where the goal is to have the user re-confirm their request intent, or to defend against stolen login credentials (e.g., cookies). Since it cannot guarantee that the person who knows the login password is the actual account owner, it is not very effective for confirming the user's true identity. In many cases, users are required to set a separate password in addition to the login password, such as a payment password.",
-    "references": []
+    "references": [
+      {
+        "title": "Multi-Factor Authentication - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Multi-factor_authentication"
+      }
+    ]
   },
   "A0017-001": {
     "title": "Access Control System",
@@ -12,7 +17,10 @@
     "description": "Access control systems come in many types and forms. Common types include: password-based access control — identity verification through entering a specific numeric password, usually combined with a mechanical lock. Card-based access control — identity recognition using magnetic cards, IC cards, RFID cards, etc., common in office buildings and residential communities. Biometric access control — using biometric technologies such as fingerprint recognition, facial recognition, and iris recognition, offering high security. Mobile app access control — remote door opening via a smartphone app, suitable for smart homes and self-service libraries. Combined access control — combining multiple identity recognition methods, such as fingerprint + password or card + biometrics, to improve security. Cloud-based access control — remote management and monitoring via cloud computing, common in large enterprises or public venues. Special access control — such as inductive loop access control and infrared sensing access control, suitable for specific environments and special needs. Each type has its own advantages and disadvantages and is suitable for different application scenarios. Choosing the right type requires considering security requirements, ease of use, and cost.",
     "limitation": "Non-biometric access control systems are susceptible to credential theft. Additionally, access control systems that do not implement precise flow control can be bypassed by tailgating.",
     "references": [
-      { "title": "Access Control System - Baidu Baike" }
+      {
+        "title": "Access Control System - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E9%97%A8%E7%A6%81?fromModule=lemma_search-box"
+      }
     ]
   }
 }

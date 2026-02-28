@@ -4,14 +4,24 @@
     "definition": "Encrypting network request traffic or response traffic.",
     "description": "Traffic encryption typically provides a protection mechanism for process security. By encrypting data during transmission, attackers cannot directly obtain the original data or directly modify it.",
     "limitation": "Traffic encryption increases the complexity and cost of data transmission. When using traffic encryption, the trade-off between security and performance impact needs to be considered.",
-    "references": []
+    "references": [
+      {
+        "title": "Transport Layer Security - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Transport_Layer_Security"
+      }
+    ]
   },
   "A0022-001": {
     "title": "Transport Protocol Encryption",
     "definition": "Encrypting the entire transport layer or application layer communication data using custom algorithms or modified standard encryption algorithms.",
     "description": "Transport layer encryption refers to encrypting data at the transport layer to ensure data is not stolen or tampered with during transmission — for example, modified SSL or TLS. Application layer encryption refers to encrypting data at the application layer — for example, modified HTTPS. Since the data transport protocol itself is encrypted, the specific business scenarios above it can be ignored, achieving full business scenario coverage below the application layer.",
     "limitation": "Not applicable to scenarios where users access web pages via a browser.",
-    "references": []
+    "references": [
+      {
+        "title": "Transport Layer Security - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Transport_Layer_Security"
+      }
+    ]
   },
   "A0022-002": {
     "title": "Request Data Encryption",

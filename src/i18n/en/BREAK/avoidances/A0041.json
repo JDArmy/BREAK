@@ -5,7 +5,10 @@
     "description": "Access control covers multiple aspects including: authentication — confirming the identity of a user or device to ensure the claimed identity is legitimate and accurate. Authorization — granting authenticated individuals or entities specific permissions to perform certain operations or access certain resources. Access level control — determining the resources, areas, or functions that users or devices can access and setting corresponding permissions. Compliance checks — ensuring users or devices meet the compliance standards and policies specified by the organization or system. Device health checks — verifying that devices connecting to the network meet predefined security standards, including whether they have the latest security patches and antivirus software.",
     "limitation": "Access control focuses on static management of authentication and access permissions and is difficult to adapt to dynamically changing environments and threats. It is also relatively difficult to detect and respond to potential malicious behavior by internal threats or already-authenticated users. Additionally, maintaining complex access policies and rules may increase management and operational complexity, leading to misjudgments or excessive restrictions. Finally, traditional access control may not be flexible enough for modern work environments such as mobile devices and remote work. Organizations implementing access control need to consider these limitations comprehensively and combine other security strategies and technologies to improve overall security.",
     "references": [
-      { "title": "Access Control - Baidu Baike" }
+      {
+        "title": "Access Control - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E5%87%86%E5%85%A5%E6%8E%A7%E5%88%B6?fromModule=lemma_search-box"
+      }
     ]
   }
 }

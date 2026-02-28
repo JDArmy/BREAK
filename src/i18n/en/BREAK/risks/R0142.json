@@ -6,8 +6,14 @@
     "complexity": "Advanced",
     "influence": "User credentials and sensitive information are leaked, transactions are tampered with causing financial losses, and users lose trust in platform security.",
     "references": [
-      { "title": "Man-in-the-Middle Attack - OWASP" },
-      { "title": "MITM Attack Defense Guide - CISA" }
+      {
+        "title": "Man-in-the-Middle Attack - OWASP",
+        "link": "https://owasp.org/www-community/attacks/Manipulator-in-the-middle_attack"
+      },
+      {
+        "title": "MITM Attack Defense Guide - CISA",
+        "link": "https://www.cisa.gov/news-events/alerts"
+      }
     ]
   }
 }

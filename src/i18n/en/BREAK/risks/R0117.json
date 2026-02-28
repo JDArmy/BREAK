@@ -6,8 +6,14 @@
     "complexity": "Advanced",
     "influence": "Can lead to sensitive data leakage, business logic bypass, system manipulation to perform unauthorized operations, and generation of harmful or non-compliant content.",
     "references": [
-      { "title": "OWASP Top 10 for LLM Applications" },
-      { "title": "Survey on Prompt Injection Attacks and Defenses" }
+      {
+        "title": "OWASP Top 10 for LLM Applications",
+        "link": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"
+      },
+      {
+        "title": "Survey on Prompt Injection Attacks and Defenses",
+        "link": "https://arxiv.org/abs/2310.12397"
+      }
     ]
   },
   "R0117-001": {
@@ -30,7 +36,10 @@
     "complexity": "Advanced",
     "influence": "Can manipulate model behavior without the user's knowledge, leading to serious consequences such as data leakage and unauthorized operations.",
     "references": [
-      { "title": "Indirect Prompt Injection Threats" }
+      {
+        "title": "Indirect Prompt Injection Threats",
+        "link": "https://arxiv.org/abs/2302.12173"
+      }
     ]
   }
 }

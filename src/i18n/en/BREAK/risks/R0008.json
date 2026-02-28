@@ -6,7 +6,10 @@
     "complexity": "Basic",
     "influence": "Financial losses to advertisers.",
     "references": [
-      { "title": "OWASP Automated Threat: OAT003 Ad Fraud" }
+      {
+        "title": "OWASP Automated Threat: OAT003 Ad Fraud",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-003_Ad_Fraud.html"
+      }
     ]
   },
   "R0008-001": {
@@ -15,7 +18,12 @@
     "description": "Using browser plugins or applications to hijack product links or ad links, converting a user's direct product visit into a visit through an affiliate promotion link to earn commissions. Or hijacking and tampering with existing affiliate promotion links to change the ultimate beneficiary and intercept commissions.",
     "complexity": "Intermediate",
     "influence": "Financial losses to advertisers or affiliate promoters.",
-    "references": []
+    "references": [
+      {
+        "title": "Browser Hijacking - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8A%AB%E6%8C%81"
+      }
+    ]
   },
   "R0008-002": {
     "title": "Click Fraud",
@@ -23,7 +31,12 @@
     "description": "This behavior is designed to mislead advertising systems into recording fictitious ad click counts to obtain improper revenue or inflate ad performance metrics. Fake clicks may be generated through automated scripts, bots, click farms, and similar means rather than genuine user intent.",
     "complexity": "Intermediate",
     "influence": "May cause harm to advertisers, ad platforms, and the entire digital advertising ecosystem.",
-    "references": []
+    "references": [
+      {
+        "title": "OWASP Automated Threat: OAT-003 Ad Fraud",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-003_Ad_Fraud.html"
+      }
+    ]
   },
   "R0008-003": {
     "title": "Fake App Installs",
@@ -31,7 +44,12 @@
     "description": "Fake install methods include using automated scripts, bots, or virtual accounts to simulate large numbers of user installs, or using other technical means to generate large volumes of fake app install records in a short time. This can cause app stores and advertisers to misjudge the true value and popularity of an app.",
     "complexity": "Intermediate",
     "influence": "Financial losses to advertisers or affiliate promoters.",
-    "references": []
+    "references": [
+      {
+        "title": "OWASP Automated Threat: OAT-003 Ad Fraud",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-003_Ad_Fraud.html"
+      }
+    ]
   },
   "R0008-004": {
     "title": "Impression Fraud",
@@ -39,7 +57,12 @@
     "description": "For example, a media outlet places multiple display ads in the same ad slot and charges the advertiser for multiple ad impressions.",
     "complexity": "",
     "influence": "",
-    "references": []
+    "references": [
+      {
+        "title": "OWASP Automated Threat: OAT-003 Ad Fraud",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-003_Ad_Fraud.html"
+      }
+    ]
   },
   "R0008-005": {
     "title": "Traffic Attribution Fraud",
@@ -47,6 +70,11 @@
     "description": "Fraudulent ad channel operators collect large amounts of device and user information, then directly send click information from different devices to the advertiser's ad click log server. If some organic traffic happens to convert within a certain time window, the activation log server records the corresponding device activation and attributes it to the fraudulent channel operator. This method of sending false information to disguise organic traffic as channel traffic can be applied at many stages, such as faking server click behavior or faking tracking code events.",
     "complexity": "Advanced",
     "influence": "Financial losses to advertisers or affiliate promoters.",
-    "references": []
+    "references": [
+      {
+        "title": "OWASP Automated Threat: OAT-003 Ad Fraud",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-003_Ad_Fraud.html"
+      }
+    ]
   }
 }

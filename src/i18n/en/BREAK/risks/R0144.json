@@ -6,8 +6,14 @@
     "complexity": "Basic",
     "influence": "Users are phished leading to credential and financial losses, brand reputation is damaged, user trust declines, and intellectual property disputes arise.",
     "references": [
-      { "title": "Domain Name Abuse - ICANN" },
-      { "title": "Brand Protection and Domain Impersonation Prevention" }
+      {
+        "title": "Domain Name Abuse - ICANN",
+        "link": "https://www.icann.org/resources/pages/dndr-2012-02-25-en"
+      },
+      {
+        "title": "Brand Protection and Domain Impersonation Prevention",
+        "link": "https://www.antiphishing.org/"
+      }
     ]
   }
 }

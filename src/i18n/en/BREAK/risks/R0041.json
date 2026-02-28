@@ -6,7 +6,10 @@
     "complexity": "Intermediate",
     "influence": "Payment card or account payment information is stolen.",
     "references": [
-      { "title": "OWASP Automated Threat: OAT010 Card Cracking" }
+      {
+        "title": "OWASP Automated Threat: OAT010 Card Cracking",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-010_Card_Cracking.html"
+      }
     ]
   }
 }

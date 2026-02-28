@@ -23,7 +23,10 @@
     "complexity": "Advanced",
     "influence": "The number and frequency of ransomware attacks increase significantly, small and medium enterprises become primary targets, and ransom amounts continue to rise.",
     "references": [
-      { "title": "Ransomware as a Service Trend Analysis" }
+      {
+        "title": "Ransomware as a Service Trend Analysis",
+        "link": "https://www.cisa.gov/stopransomware"
+      }
     ]
   },
   "R0085-002": {

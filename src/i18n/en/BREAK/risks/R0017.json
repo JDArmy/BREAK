@@ -6,8 +6,14 @@
     "complexity": "Intermediate",
     "influence": "Exploits platform merchant discounts/rebates. Enables unfair competition through inflated positive ratings.",
     "references": [
-      { "title": "Fake Transactions - Baidu Baike" },
-      { "title": "What Laws and Regulations Do Fake Transactions Violate?" }
+      {
+        "title": "Fake Transactions - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E8%99%9A%E5%81%87%E4%BA%A4%E6%98%93/10013126?fr=aladdin"
+      },
+      {
+        "title": "What Laws and Regulations Do Fake Transactions Violate?",
+        "link": "https://www.66law.cn/laws/1560611.aspx"
+      }
     ]
   },
   "R0017-001": {
@@ -17,7 +23,10 @@
     "complexity": "Intermediate",
     "influence": "Undermines fair competition principles on the platform; in some cases exploits platform merchant discounts/rebates.",
     "references": [
-      { "title": "Order Brushing - Baidu Baike" }
+      {
+        "title": "Order Brushing - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E5%88%B7%E5%8D%95/8171368?fr=aladdin"
+      }
     ]
   },
   "R0017-002": {
@@ -27,8 +36,14 @@
     "complexity": "Intermediate",
     "influence": "",
     "references": [
-      { "title": "Ride-Hailing Driver \"Ghost Rides\" to Brush Orders and Defraud Subsidies — Court: Fraud, Sentenced!" },
-      { "title": "Hiring Order Brushers and Recruiting Insiders to Defraud E-Commerce Platform Subsidies: 9-Person Gang Caught" }
+      {
+        "title": "Ride-Hailing Driver \"Ghost Rides\" to Brush Orders and Defraud Subsidies — Court: Fraud, Sentenced!",
+        "link": "http://www.hebeicourt.gov.cn/article/detail/2022/07/id/6803049.shtml"
+      },
+      {
+        "title": "Hiring Order Brushers and Recruiting Insiders to Defraud E-Commerce Platform Subsidies: 9-Person Gang Caught",
+        "link": "http://news.hexun.com/2022-09-14/206761601.html"
+      }
     ]
   }
 }

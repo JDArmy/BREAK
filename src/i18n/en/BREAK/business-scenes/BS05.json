@@ -2,19 +2,41 @@
   "BS05": {
     "title": "Short Video & Live Streaming",
     "riskDimensions": {
-      "RD02": { "title": "Operations Dimension" },
-      "RD03": { "title": "Identity Dimension" },
-      "RD04": { "title": "Adversarial Dimension" }
+      "RD02": {
+        "title": "Operations Dimension"
+      },
+      "RD03": {
+        "title": "Identity Dimension"
+      },
+      "RD04": {
+        "title": "Adversarial Dimension"
+      }
     },
     "riskScenes": {
-      "RS01": { "title": "Marketing Risk" },
-      "RS02": { "title": "Compliance Risk" },
-      "RS04": { "title": "Illegal Request Risk" },
-      "RS05": { "title": "Content Risk" },
-      "RS06": { "title": "Internal Risk" },
-      "RS07": { "title": "Identity Theft Risk" },
-      "RS09": { "title": "Identity Verification Risk" },
-      "RS10": { "title": "Endpoint Adversarial Risk" }
+      "RS01": {
+        "title": "Marketing Risk"
+      },
+      "RS02": {
+        "title": "Compliance Risk"
+      },
+      "RS04": {
+        "title": "Illegal Request Risk"
+      },
+      "RS05": {
+        "title": "Content Risk"
+      },
+      "RS06": {
+        "title": "Internal Risk"
+      },
+      "RS07": {
+        "title": "Identity Theft Risk"
+      },
+      "RS09": {
+        "title": "Identity Verification Risk"
+      },
+      "RS10": {
+        "title": "Endpoint Adversarial Risk"
+      }
     }
   }
 }

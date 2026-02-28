@@ -4,21 +4,36 @@
     "definition": "Improving the number of concurrent terminal requests that can be handled by filtering traffic and increasing server computing resources.",
     "description": "Improving service availability is a systematic engineering effort. On one hand, it requires identifying and blocking malicious traffic; on the other hand, it requires addressing system bottlenecks and improving response efficiency.",
     "limitation": "Cost issues: improving service availability requires significant investment in human, material, and financial resources, which may increase enterprise costs. Technical issues: in some cases, technical limitations may affect service availability — for example, some applications may not be able to seamlessly switch between multiple data centers. Human factors: human factors may also affect service availability, such as human error and malicious attacks.",
-    "references": []
+    "references": [
+      {
+        "title": "High Availability - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/High_availability"
+      }
+    ]
   },
   "A0008-001": {
     "title": "Adding Computing Resources",
     "definition": "Improving the number of concurrent terminal requests that can be handled by adding server computing resources.",
     "description": "For distributed architectures, adding computing resources is the simplest and most effective way to improve availability.",
     "limitation": "This is complementary to business system optimization (A008-004). Adding computing resources can quickly resolve availability issues but will significantly increase operating costs.",
-    "references": []
+    "references": [
+      {
+        "title": "Auto Scaling - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Autoscaling"
+      }
+    ]
   },
   "A0008-002": {
     "title": "DDoS Protection",
     "definition": "Identifying and filtering attack traffic through a DDoS protection system.",
     "description": "Filtering attack traffic through a DDoS protection system allows fewer, more legitimate user requests to be served by the server. This is an effective approach when the system is under large-scale attack.",
     "limitation": "Existing DDoS protection systems have limited effectiveness against CC attacks and need to be combined with cloud-side anti-crawling (A003) and other measures.",
-    "references": []
+    "references": [
+      {
+        "title": "Denial of Service Attack - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Denial-of-service_attack"
+      }
+    ]
   },
   "A0008-003": {
     "title": "Front-End CDN",
@@ -26,7 +41,10 @@
     "description": "Dynamic-static separation is a common method for improving server response efficiency. For situations where dynamic-static separation cannot be implemented or where static resource load is high, a front-end CDN can effectively relieve server pressure and improve response efficiency.",
     "limitation": "Caching acceleration is effective for static resources but does not help with dynamic resources.",
     "references": [
-      { "title": "Content Delivery Network - Baidu Baike" }
+      {
+        "title": "Content Delivery Network - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E5%86%85%E5%AE%B9%E5%88%86%E5%8F%91%E7%BD%91%E7%BB%9C/4034265?fromtitle=CDN&fromid=420951&fromModule=lemma_search-box"
+      }
     ]
   },
   "A0008-004": {
@@ -34,13 +52,23 @@
     "definition": "Optimizing the business system to improve response efficiency and reduce resource consumption.",
     "description": "Reducing the system load of business requests by streamlining processes, setting up caches, optimizing algorithms, increasing concurrency, and adjusting architecture — thereby reducing response time and increasing request throughput.",
     "limitation": "Has a long implementation cycle; suitable for long-term planning but not a quick fix. Requires significant R&D investment.",
-    "references": []
+    "references": [
+      {
+        "title": "Business Continuity - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Business_continuity"
+      }
+    ]
   },
   "A0008-005": {
     "title": "Increasing Business Resources",
     "definition": "Addressing resource scarcity to some extent by increasing the available business resources.",
     "description": "For example, increasing the number of products, quota slots, adding more shifts, flights, etc.",
     "limitation": "For resources that can yield high returns, it is difficult to directly solve resource scarcity by simply increasing supply.",
-    "references": []
+    "references": [
+      {
+        "title": "Cloud Computing - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Cloud_computing"
+      }
+    ]
   }
 }

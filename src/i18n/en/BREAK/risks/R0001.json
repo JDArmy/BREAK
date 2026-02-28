@@ -6,7 +6,10 @@
     "complexity": "Advanced",
     "influence": "Exploits platform promotional benefits and occupies resources intended for legitimate users.",
     "references": [
-      { "title": "OWASP Automated Threat: OAT006 Expediting" }
+      {
+        "title": "OWASP Automated Threat: OAT006 Expediting",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-006_Expediting.html"
+      }
     ]
   },
   "R0001-001": {
@@ -15,7 +18,12 @@
     "description": "By reverse-engineering the business workflow and data transmission protocol, automated scripts are written to send requests.",
     "complexity": "Advanced",
     "influence": "Exploits platform promotional benefits and occupies resources intended for legitimate users.",
-    "references": []
+    "references": [
+      {
+        "title": "OWASP Automated Threat: OAT-011 Scraping",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-011_Scraping.html"
+      }
+    ]
   },
   "R0001-002": {
     "title": "Automated Simulator",
@@ -23,6 +31,11 @@
     "description": "By manipulating the business access terminal (e.g., browser, mobile app), pre-recorded workflow actions are replayed repeatedly.",
     "complexity": "Advanced",
     "influence": "Exploits platform promotional benefits and occupies resources intended for legitimate users.",
-    "references": []
+    "references": [
+      {
+        "title": "OWASP Automated Threat: OAT-020 Account Aggregation",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-020_Account_Aggregation.html"
+      }
+    ]
   }
 }

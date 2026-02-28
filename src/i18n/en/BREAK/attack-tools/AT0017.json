@@ -3,7 +3,10 @@
     "title": "Multi-Instance Tools",
     "description": "Multi-instance software allows running multiple clients of the same software simultaneously on one device, with each client operating normally. It is a tool that removes restrictions on single-instance software programs and games, enabling multiple clients to run without a virtual machine.",
     "references": [
-      { "title": "What Is Multi-Instance Software?" }
+      {
+        "title": "What Is Multi-Instance Software?",
+        "link": "https://www.zhihu.com/question/53687531"
+      }
     ]
   }
 }

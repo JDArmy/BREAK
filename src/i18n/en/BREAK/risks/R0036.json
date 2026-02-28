@@ -6,7 +6,10 @@
     "complexity": "Advanced",
     "influence": "Will bypass existing MFA multi-factor authentication mechanisms, leading to account compromise.",
     "references": [
-      { "title": "Exposing Multi-Factor Authentication (MFA) Bypass Techniques" }
+      {
+        "title": "Exposing Multi-Factor Authentication (MFA) Bypass Techniques",
+        "link": "http://www.fangyuba.com/news/dynamic/2778.htm"
+      }
     ]
   },
   "R0036-001": {
@@ -16,7 +19,10 @@
     "complexity": "Advanced",
     "influence": "Will bypass existing MFA multi-factor authentication mechanisms, leading to account compromise.",
     "references": [
-      { "title": "Cisco and Uber Hacked Back-to-Back: Reflections on MFA Fatigue Attacks" }
+      {
+        "title": "Cisco and Uber Hacked Back-to-Back: Reflections on MFA Fatigue Attacks",
+        "link": "https://baijiahao.baidu.com/s?id=1745023094279147686&wfr=spider&for=pc"
+      }
     ]
   }
 }

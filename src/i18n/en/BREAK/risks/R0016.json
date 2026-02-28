@@ -6,7 +6,10 @@
     "complexity": "Basic",
     "influence": "Causes platform display results to lose objectivity and fairness, degrading user experience.",
     "references": [
-      { "title": "OWASP Automated Threat: OAT016 Skewing" }
+      {
+        "title": "OWASP Automated Threat: OAT016 Skewing",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-016_Skewing.html"
+      }
     ]
   },
   "R0016-001": {
@@ -16,7 +19,10 @@
     "complexity": "Intermediate",
     "influence": "Undermines platform fairness and interferes with ranking algorithms.",
     "references": [
-      { "title": "Methods and Strategies for Inflating TikTok Live Stream Viewer Counts" }
+      {
+        "title": "Methods and Strategies for Inflating TikTok Live Stream Viewer Counts",
+        "link": "https://it.sohu.com/a/704525060_121714717"
+      }
     ]
   },
   "R0016-002": {
@@ -25,6 +31,11 @@
     "description": "Also called 'mass following'. Typically refers to using software, bots, or crowdsourcing to have a user bulk-follow other users, thereby influencing the platform's scoring and recommendation or ranking of that user.",
     "complexity": "Intermediate",
     "influence": "Undermines platform fairness and interferes with ranking algorithms.",
-    "references": []
+    "references": [
+      {
+        "title": "OWASP Automated Threat: OAT-016 Skewing",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-016_Skewing.html"
+      }
+    ]
   }
 }

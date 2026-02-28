@@ -6,8 +6,14 @@
     "complexity": "Advanced",
     "influence": "Leads to significantly higher telephone fraud success rates, voiceprint authentication system failures, user financial losses, and trust crises.",
     "references": [
-      { "title": "AI Voice Cloning Fraud Cases - FBI" },
-      { "title": "Survey on Voice Deepfake Detection Techniques" }
+      {
+        "title": "AI Voice Cloning Fraud Cases - FBI",
+        "link": "https://www.ic3.gov/"
+      },
+      {
+        "title": "Survey on Voice Deepfake Detection Techniques",
+        "link": "https://arxiv.org/abs/2308.14970"
+      }
     ]
   }
 }

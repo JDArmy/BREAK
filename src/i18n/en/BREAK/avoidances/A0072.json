@@ -5,8 +5,14 @@
     "description": "The main components of an algorithm audit mechanism include: (1) fairness assessment — detecting decision-making disparities across different groups (such as gender, age, and region) to identify potential discrimination and bias issues; (2) transparency review — evaluating the transparency of algorithmic decision-making processes to ensure users can understand the algorithmic logic affecting their rights; (3) explainability analysis — using explainable AI techniques such as SHAP and LIME to analyze the key factors and reasoning paths behind algorithmic decisions; (4) data auditing — reviewing the quality, representativeness, and bias of training data to ensure data sources are legal and compliant; (5) impact assessment — evaluating the potential impact of algorithms on user rights, market competition, and social equity; (6) compliance checking — checking the compliance of algorithmic systems against regulatory requirements such as the Provisions on the Administration of Algorithmic Recommendations for Internet Information Services; (7) periodic review — establishing a regular algorithm audit system to track changes in algorithm performance and fairness metrics; (8) third-party auditing — engaging independent third-party organizations to conduct algorithm audits to improve objectivity and credibility.",
     "limitation": "The limitations of algorithm audit mechanisms include: (1) complex deep learning models have inherent black-box characteristics, making it technically difficult to fully understand their decision logic; (2) the definition of fairness may vary across different scenarios and cultural contexts, making it difficult to establish uniform standards; (3) algorithm auditing requires specialized technical capabilities and domain knowledge, and qualified auditors and organizations are relatively scarce; (4) audit results may be influenced by the choice of audit methods and evaluation metrics; (5) dynamically updated algorithm models require continuous auditing, and one-time audits cannot guarantee long-term compliance.",
     "references": [
-      { "title": "Provisions on the Administration of Algorithmic Recommendations for Internet Information Services" },
-      { "title": "Algorithm Audit Framework - IEEE" }
+      {
+        "title": "Provisions on the Administration of Algorithmic Recommendations for Internet Information Services",
+        "link": "https://www.cac.gov.cn/2022-01/04/c_1642894606364259.htm"
+      },
+      {
+        "title": "Algorithm Audit Framework - IEEE",
+        "link": "https://standards.ieee.org/industry-connections/ec/autonomous-systems/"
+      }
     ]
   }
 }

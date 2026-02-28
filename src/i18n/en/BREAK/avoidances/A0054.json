@@ -5,7 +5,10 @@
     "description": "Compliance governance measures include but are not limited to: establishing a compliance framework — developing clear compliance policies, procedures, and standards to ensure employees understand and follow relevant regulations and company rules; training and education — providing compliance training to employees to increase their awareness of regulations and organizational compliance requirements; risk assessment and monitoring — conducting regular compliance risk assessments and monitoring business activities to identify and address potential compliance risks in a timely manner; internal compliance audits — conducting internal audits to ensure business activities comply with compliance policies and regulatory requirements; compliance reporting and communication — providing compliance reports to stakeholders to ensure transparency and timely communication; establishing a compliance team — setting up a dedicated compliance team or hiring compliance professionals to oversee and drive compliance matters.",
     "limitation": "Compliance governance faces several limitations. First, the complexity and constant evolution of regulations makes compliance governance complex and in need of continuous updates. Cultural differences are also a major challenge, as understanding and expectations of compliance vary across regions and countries. Human factors may affect the effectiveness of compliance governance, requiring training and cultural development to reinforce employee compliance awareness. Technological advances and new business models may bring new compliance challenges, and establishing and maintaining a compliance governance system may require significant investment in human, technical, and financial resources.",
     "references": [
-      { "title": "How to Manage Compliance and Build a Compliance System?" }
+      {
+        "title": "How to Manage Compliance and Build a Compliance System?",
+        "link": "https://baike.baidu.com/item/%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF%E4%BF%9D%E6%8A%A4%E6%B3%95"
+      }
     ]
   },
   "A0054-001": {
@@ -13,6 +16,11 @@
     "definition": "The process of ensuring that the development, operation, and use of an app comply with relevant laws, regulations, regulatory requirements, and industry standards, while safeguarding user rights. It involves multiple aspects such as personal information protection, data security, privacy policies, and content compliance.",
     "description": "To achieve app compliance governance, a series of regulations and standards must be followed, such as the Cybersecurity Law, Consumer Rights Protection Law, Data Security Law, and Personal Information Protection Law. Attention must also be paid to industry-specific standards and regulatory requirements in areas such as finance, healthcare, and education. The goal is to ensure that app development and operations comply with all applicable laws and industry standards, protect users' personal information and privacy, prevent data leakage and misuse, and ensure app content aligns with social ethics and public interest. To achieve this, app operators need to establish a comprehensive compliance management system, develop detailed compliance policies and processes, strengthen internal training and management, cooperate with regulatory inspections and guidance, and promptly rectify non-compliant issues.",
     "limitation": "The regulatory environment for mobile applications can change at any time, and regulatory requirements vary across different countries and regions, making compliance governance complex and challenging.",
-    "references": []
+    "references": [
+      {
+        "title": "Personal Information Protection Law - Baidu Baike",
+        "link": "https://baike.baidu.com/item/%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF%E4%BF%9D%E6%8A%A4%E6%B3%95"
+      }
+    ]
   }
 }

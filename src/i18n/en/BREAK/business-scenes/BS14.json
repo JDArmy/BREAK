@@ -3,18 +3,38 @@
     "title": "Artificial Intelligence",
     "description": "The artificial intelligence industry covers business scenarios such as large language model services, AI-generated content platforms, intelligent customer service, AI-assisted decision-making, and computer vision services, facing unique business security risks.",
     "riskDimensions": {
-      "RD02": { "title": "Operations Dimension" },
-      "RD03": { "title": "Identity Dimension" },
-      "RD04": { "title": "Adversarial Dimension" }
+      "RD02": {
+        "title": "Operations Dimension"
+      },
+      "RD03": {
+        "title": "Identity Dimension"
+      },
+      "RD04": {
+        "title": "Adversarial Dimension"
+      }
     },
     "riskScenes": {
-      "RS02": { "title": "Compliance Risk" },
-      "RS04": { "title": "Illegal Request Risk" },
-      "RS05": { "title": "Content Risk" },
-      "RS06": { "title": "Internal Risk" },
-      "RS07": { "title": "Identity Theft Risk" },
-      "RS09": { "title": "Identity Verification Risk" },
-      "RS10": { "title": "Endpoint Adversarial Risk" }
+      "RS02": {
+        "title": "Compliance Risk"
+      },
+      "RS04": {
+        "title": "Illegal Request Risk"
+      },
+      "RS05": {
+        "title": "Content Risk"
+      },
+      "RS06": {
+        "title": "Internal Risk"
+      },
+      "RS07": {
+        "title": "Identity Theft Risk"
+      },
+      "RS09": {
+        "title": "Identity Verification Risk"
+      },
+      "RS10": {
+        "title": "Endpoint Adversarial Risk"
+      }
     }
   }
 }

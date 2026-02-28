@@ -23,7 +23,10 @@
     "complexity": "Advanced",
     "influence": "Phishing attack success rates increase significantly, traditional security awareness training becomes less effective, and organizations face greater social engineering attack risks.",
     "references": [
-      { "title": "AI-Enhanced Phishing Threats - NCSC" }
+      {
+        "title": "AI-Enhanced Phishing Threats - NCSC",
+        "link": "https://www.ncsc.gov.uk/report/impact-of-ai-on-cyber-threat"
+      }
     ]
   }
 }

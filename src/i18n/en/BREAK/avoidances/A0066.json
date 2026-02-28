@@ -5,8 +5,14 @@
     "description": "The main technical approaches for deepfake detection include: (1) facial artifact detection — analyzing abnormalities in micro-expressions, blink frequency, facial symmetry, skin texture, and other biometric features in video faces, as AI-generated faces often exhibit unnatural details in these areas; (2) audio spectrum analysis — identifying AI-synthesized speech by analyzing spectral features, fundamental frequency variations, formant patterns, and other acoustic characteristics, as synthesized speech typically shows anomalies in high-frequency bands and transition segments; (3) temporal consistency detection — checking temporal consistency between video frames, as deepfake videos may exhibit discontinuities in frame transitions, lighting changes, and background consistency; (4) digital forensics analysis — using image forensics techniques to analyze compression artifacts, noise patterns, color space anomalies, and other digital features; (5) enhanced liveness detection — combining liveness detection in identity verification scenarios by requiring users to complete random actions, facial expression changes, and other interactive verification; (6) multimodal cross-validation — simultaneously analyzing cross-modal features such as lip sync and emotional consistency between audio and video.",
     "limitation": "The limitations of deepfake detection include: (1) rapid advances in generation technology make forged content increasingly realistic, continuously increasing detection difficulty; (2) real-time detection requires significant computational resources and is difficult to deploy in resource-constrained environments such as mobile devices; (3) post-processing operations such as compression and transcoding may destroy the features relied upon for detection; (4) adversarial attacks targeting specific detection methods can effectively reduce detection accuracy; (5) insufficient cross-domain generalization means detectors trained on specific generative models may perform poorly on new models.",
     "references": [
-      { "title": "Deepfake Detection Challenge - Kaggle" },
-      { "title": "A Survey on Deepfake Detection" }
+      {
+        "title": "Deepfake Detection Challenge - Kaggle",
+        "link": "https://www.kaggle.com/c/deepfake-detection-challenge"
+      },
+      {
+        "title": "A Survey on Deepfake Detection",
+        "link": "https://arxiv.org/abs/2004.11138"
+      }
     ]
   }
 }

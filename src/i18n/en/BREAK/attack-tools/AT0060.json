@@ -3,8 +3,14 @@
     "title": "Cryptocurrency Mixers",
     "description": "A cryptocurrency mixer (also known as a tumbler) is a tool or service that obscures fund flows by mixing cryptocurrency transactions from multiple users. The mixer pools multiple users' cryptocurrencies, processes them through multiple splits, delays, and randomization, then sends equivalent amounts (minus fees) to user-specified new addresses, severing the link between original transactions and final receiving addresses. Common mixing techniques include CoinJoin protocol, zero-knowledge proof mixing (such as Tornado Cash), and cross-chain bridge mixing. Attackers use mixers for money laundering, ransomware payment transfers, dark web transaction fund laundering, and evading financial regulation.",
     "references": [
-      { "title": "Tornado Cash Sanctions Event - OFAC" },
-      { "title": "Cryptocurrency Mixing Technology Analysis" }
+      {
+        "title": "Tornado Cash Sanctions Event - OFAC",
+        "link": "https://home.treasury.gov/news/press-releases/jy0916"
+      },
+      {
+        "title": "Cryptocurrency Mixing Technology Analysis",
+        "link": "https://www.chainalysis.com/blog/cryptocurrency-mixers/"
+      }
     ]
   }
 }

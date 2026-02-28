@@ -3,8 +3,14 @@
     "title": "Password Dictionaries/Rainbow Tables",
     "description": "Password dictionaries and rainbow tables are pre-computed datasets used for password cracking and credential stuffing attacks. Password dictionaries are text collections containing common passwords, leaked passwords, and rule-generated passwords; rainbow tables are pre-computed mapping tables of hash values to plaintext passwords. Types include general password dictionaries, leaked password databases for credential stuffing, rule-generated dictionaries, social engineering dictionaries based on target personal information, rainbow tables for common hash algorithms (MD5, SHA1), and localized dictionaries. Representative tools include rockyou.txt, SecLists, and cracking tools like Hashcat and John the Ripper.",
     "references": [
-      { "title": "Password Cracking - MITRE ATT&CK T1110" },
-      { "title": "SecLists - OWASP" }
+      {
+        "title": "Password Cracking - MITRE ATT&CK T1110",
+        "link": "https://attack.mitre.org/techniques/T1110/"
+      },
+      {
+        "title": "SecLists - OWASP",
+        "link": "https://github.com/danielmiessler/SecLists"
+      }
     ]
   }
 }
