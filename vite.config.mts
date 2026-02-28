@@ -42,6 +42,12 @@ export default defineConfig({
           if (id.includes("/src/BREAK/attack-tools")) return "BREAK-AttackTools";
           if (id.includes("/src/BREAK/threat-actors")) return "BREAK-ThreatActors";
           if (id.includes("/src/BREAK")) return "BREAK";
+          if (id.includes("/src/i18n/en/BREAK/risks")) return "i18n-en-Risks";
+          if (id.includes("/src/i18n/en/BREAK/avoidances")) return "i18n-en-Avoidances";
+          if (id.includes("/src/i18n/en/BREAK/attack-tools")) return "i18n-en-AttackTools";
+          if (id.includes("/src/i18n/en/BREAK/threat-actors")) return "i18n-en-ThreatActors";
+          if (id.includes("/src/i18n/en/BREAK")) return "i18n-en-BREAK";
+          if (id.includes("/src/i18n")) return "i18n";
           if (id.includes("node_modules/vue-router")) return "vue-router";
           if (id.includes("node_modules/vue-i18n")) return "vue-i18n";
           if (id.includes("node_modules/vue")) return "vue";
