@@ -63,11 +63,11 @@ import iconGithub from "@/components/icons/iconGithub.vue";
   height: auto;
   left: 0px;
   bottom: 0px;
-  background-color: white;
-  color: gray;
+  background-color: #f8fafc;
+  color: #94a3b8;
   font-size: 50%;
   padding: 5px 0 10px 0;
-  border-top: 1px solid rgb(213, 213, 213);
+  border-top: 1px solid #e2e8f0;
 }
 
 .github {
