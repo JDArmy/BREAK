@@ -219,6 +219,14 @@ const getActiveIndex = (fullPath: string) => {
   cursor: pointer;
 }
 
+.outside-link .el-dropdown-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--el-menu-text-color);
+  cursor: pointer;
+}
+
 .outside-link-menu a {
   display: inline-block;
   width: 100%;
