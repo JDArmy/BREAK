@@ -5,5 +5,19 @@
     "references": [
       { "title": "Introduction to IP Risk Profiling Technology" }
     ]
+  },
+  "AT0034-001": {
+    "title": "Proxy IP",
+    "description": "A proxy IP is a network proxy technique used to conceal a device's real IP address. The client first connects to the proxy IP, which then forwards the request to the target website, leaving only the proxy IP in the site's access logs. Common proxy IP types include HTTP proxies, HTTPS proxies, and SOCKS proxies.",
+    "references": [
+      { "title": "What Is a Proxy IP?" }
+    ]
+  },
+  "AT0034-002": {
+    "title": "Second-Dial IP",
+    "description": "A 'second-dial IP' exploits the fact that home broadband connections obtain a new IP address each time they reconnect. Criminals rent large numbers of home broadband lines and rapidly generate millions of IP addresses to form an 'IP pool', which is then provided to cybercrime groups. The resulting massive volume of IP addresses circumvents normal IP-based restrictions, making it extremely difficult for law enforcement to trace criminal activity.",
+    "references": [
+      { "title": "People's Daily Commentary: The 'Second-Dial IP' Black Market Must Be Struck Down Immediately" }
+    ]
   }
 }

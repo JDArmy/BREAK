@@ -44,5 +44,33 @@
   "hideAllSubRisks": "Hide All Sub-Risks",
   "showAllSubRisks": "Show All Sub-Risks",
   "relationMap": "Relation Map",
-  "commitNewProviderHint": "Reference: src/BREAK/ability-providers/AP****.json file format."
+  "commitNewProviderHint": "Reference: src/BREAK/ability-providers/AP****.json file format.",
+  "nodeFilter": "Node Filter:",
+  "subNodeFilter": "Sub-Nodes",
+  "lineFilter": "Relation Filter:",
+  "fetchAllRelations": "Fetch All Relations",
+  "openAsRoot": "Open as Root Node",
+  "viewDetail": "View Detail",
+  "unknownId": "Unknown ID",
+  "unknownTypeOrId": "Unknown type or ID",
+  "relationType": {
+    "risk": "Risk",
+    "avoidance": "Avoidance",
+    "attackTool": "Attack Tool",
+    "threatActor": "Threat Actor",
+    "abilityProvider": "Ability Provider"
+  },
+  "relationLine": {
+    "avoidanceMeans": "Avoidance",
+    "causeRisk": "Causes Risk",
+    "buildAttackTool": "Builds Attack Tool",
+    "useAttackTool": "Uses Attack Tool",
+    "subRisk": "Sub-Risk",
+    "subAvoidance": "Sub-Avoidance",
+    "subAttackTool": "Sub-Attack Tool",
+    "subThreatActor": "Sub-Threat Actor",
+    "abilityProvider": "Ability Provider",
+    "attackToolMaker": "Attack Tool Maker",
+    "makeRisk": "Makes Risk"
+  }
 }

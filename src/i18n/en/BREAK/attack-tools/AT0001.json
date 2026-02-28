@@ -5,5 +5,19 @@
     "references": [
       { "title": "Black SIM Cards - Baidu Baike" }
     ]
+  },
+  "AT0001-002": {
+    "title": "Modem Pool SIM Cards",
+    "description": "Black SIM cards used with a 'modem pool' — a network communication hardware device that enables simultaneous multi-number calling and bulk SMS sending.",
+    "references": [
+      { "title": "Modem Pool - Baidu Baike" }
+    ]
+  },
+  "AT0001-003": {
+    "title": "Intercept SIM Cards",
+    "description": "SIM cards that, via malware or trojans, grant unauthorized control over a real user's SMS and verification code reception, typically sourced from intercept card platforms.",
+    "references": [
+      { "title": "The Current State of the SIM Card Black Market Under the 'Card-Cutting' Campaign" }
+    ]
   }
 }

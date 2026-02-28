@@ -10,12 +10,12 @@ import GithubPane from "@/components/GithubPane.vue";
 import iconTranslate from "@/components/icons/iconTranslate.vue";
 import { ArrowDown } from "@element-plus/icons-vue";
 import { useI18n } from "vue-i18n";
-import { languages } from "@/i18n";
+import { languages, setLocale } from "@/i18n";
 
 const { locale } = useI18n();
 
-const toggleLocale = () => {
-  locale.value = locale.value === "cn" ? "en" : "cn";
+const handleLocaleChange = (lang: string) => {
+  setLocale(lang);
 };
 
 const getActiveIndex = (fullPath: string) => {
@@ -74,9 +74,9 @@ const getActiveIndex = (fullPath: string) => {
     }}</el-menu-item>
     <el-menu-item index="/attack-tools">{{ $t("attackTools") }}</el-menu-item>
     <el-menu-item index="/threat-actors">{{ $t("threatActors") }}</el-menu-item>
-    <el-menu-item class="" index="/ability-providers" key="">{{
+    <!-- <el-menu-item class="" index="/ability-providers" key="">{{
       $t("abilityProviders")
-    }}</el-menu-item>
+    }}</el-menu-item> -->
     <el-menu-item index="/relation/risk/R0001">{{
       $t("relationMap")
     }}</el-menu-item>
@@ -135,10 +135,23 @@ const getActiveIndex = (fullPath: string) => {
       </template>
     </el-dropdown>
 
-    <div class="translate" @click="toggleLocale" :title="languages[locale === 'cn' ? 'en' : 'cn']">
-      <icon-translate />
-      <span class="locale-label">{{ languages[locale as keyof typeof languages] }}</span>
-    </div>
+    <el-dropdown class="translate" trigger="click" @command="handleLocaleChange">
+      <span class="el-dropdown-link">
+        <icon-translate />
+        <span class="locale-label">{{ languages[locale as keyof typeof languages] }}</span>
+        <el-icon><arrow-down /></el-icon>
+      </span>
+      <template #dropdown>
+        <el-dropdown-menu>
+          <el-dropdown-item
+            v-for="(label, lang) in languages"
+            :key="lang"
+            :command="lang"
+            :class="{ 'is-active': locale === lang }"
+          >{{ label }}</el-dropdown-item>
+        </el-dropdown-menu>
+      </template>
+    </el-dropdown>
 
     <div class="github">
       <github-pane />
@@ -187,6 +200,14 @@ const getActiveIndex = (fullPath: string) => {
   display: flex;
   align-items: center;
   gap: 4px;
+}
+
+.translate .el-dropdown-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--el-menu-text-color);
+  cursor: pointer;
 }
 
 .locale-label {

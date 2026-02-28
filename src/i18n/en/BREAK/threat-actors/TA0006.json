@@ -5,5 +5,22 @@
     "references": [
       { "title": "Crowdsourced Workers - Baidu Baike" }
     ]
+  },
+  "TA0006-001": {
+    "title": "CAPTCHA Solver",
+    "description": "Individuals hired or organized to manually or automatically break CAPTCHAs, bypassing access restrictions to mass-register accounts or carry out other illegal activities such as malicious promotion, fraud, and spam registration.",
+    "references": [
+      { "title": "Is Part-Time CAPTCHA Solving Real?" }
+    ]
+  },
+  "TA0006-002": {
+    "title": "Voice CAPTCHA Solver",
+    "description": "Individuals hired or organized specifically to break voice CAPTCHAs. They analyze audio content manually or with technical tools to bypass voice-based security verification, enabling malicious promotion, fraud, or other illegal activities that require circumventing voice CAPTCHAs.",
+    "references": []
+  },
+  "TA0006-003": {
+    "title": "Score Runner",
+    "description": "Individuals who serve money laundering operations by conducting fictitious transactions and other means to obscure the origin of illicit funds, making them appear legitimate. Their activities may span financial systems, e-commerce platforms, virtual currencies, and other domains, making it significantly harder for law enforcement to detect illegal fund flows.",
+    "references": []
   }
 }

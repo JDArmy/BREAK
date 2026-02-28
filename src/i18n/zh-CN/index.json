@@ -44,5 +44,33 @@
   "hideAllSubRisks": "隐藏所有子风险",
   "showAllSubRisks": "显示所有子风险",
   "relationMap": "关系图谱",
-  "commitNewProviderHint": "参考：src/BREAK/ability-providers/AP****.json 文件格式。"
+  "commitNewProviderHint": "参考：src/BREAK/ability-providers/AP****.json 文件格式。",
+  "nodeFilter": "节点筛选：",
+  "subNodeFilter": "子节点",
+  "lineFilter": "关系筛选：",
+  "fetchAllRelations": "拉取全部关系",
+  "openAsRoot": "作为根节点打开",
+  "viewDetail": "查看详细描述",
+  "unknownId": "未知ID",
+  "unknownTypeOrId": "未知类型或ID",
+  "relationType": {
+    "risk": "风险",
+    "avoidance": "规避手段",
+    "attackTool": "攻击工具",
+    "threatActor": "威胁行为者",
+    "abilityProvider": "能力提供者"
+  },
+  "relationLine": {
+    "avoidanceMeans": "规避手段",
+    "causeRisk": "造成风险",
+    "buildAttackTool": "制作攻击工具",
+    "useAttackTool": "使用攻击工具",
+    "subRisk": "子风险",
+    "subAvoidance": "子规避手段",
+    "subAttackTool": "子攻击工具",
+    "subThreatActor": "子威胁行为者",
+    "abilityProvider": "能力提供者",
+    "attackToolMaker": "攻击工具制造者",
+    "makeRisk": "制造风险"
+  }
 }

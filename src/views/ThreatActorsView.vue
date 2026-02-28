@@ -63,8 +63,16 @@ const { getTableHeight, tableRowClassName } = useAnchorTable("taKey");
         </router-link>
       </template>
     </el-table-column>
-    <el-table-column prop="title" width="150" :label="$t('title')" />
-    <el-table-column prop="description" :label="$t('description')" />
+    <el-table-column prop="title" width="150" :label="$t('title')">
+      <template #default="scope">
+        {{ scope.row.taKey ? $t(`BREAK.threatActors.${scope.row.taKey}.title`) : "" }}
+      </template>
+    </el-table-column>
+    <el-table-column prop="description" :label="$t('description')">
+      <template #default="scope">
+        {{ scope.row.taKey ? $t(`BREAK.threatActors.${scope.row.taKey}.description`) : "" }}
+      </template>
+    </el-table-column>
     <el-table-column :label="$t('buildAttackTools')">
       <template #default="scope">
         <el-button

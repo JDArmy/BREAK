@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted, ref, watch } from "vue";
 import BREAK from "@/BREAK";
+import { useI18n } from "vue-i18n";
 
 import RelationGraph, {
   type RGJsonData,
@@ -11,6 +12,8 @@ import RelationGraph, {
 const props = defineProps<{
   rKey: string;
 }>();
+
+const { t } = useI18n();
 
 watch(
   () => props.rKey,
@@ -53,10 +56,7 @@ const setJsonData = () => {
     (avoidanceKey) => {
       nodes.push({
         id: avoidanceKey,
-        text:
-          avoidanceKey +
-          "<br>" +
-          BREAK.avoidances[avoidanceKey as keyof typeof BREAK.avoidances].title,
+        text: avoidanceKey + "<br>" + t(`BREAK.avoidances.${avoidanceKey}.title`),
         color: "green",
       });
     }
@@ -71,10 +71,7 @@ const setJsonData = () => {
     ) {
       nodes.push({
         id: atKey,
-        text:
-          atKey +
-          "<br>" +
-          BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].title,
+        text: atKey + "<br>" + t(`BREAK.attackTools.${atKey}.title`),
         color: "blue",
       });
     }
@@ -89,10 +86,7 @@ const setJsonData = () => {
     ) {
       nodes.push({
         id: taKey,
-        text:
-          taKey +
-          "<br>" +
-          BREAK.threatActors[taKey as keyof typeof BREAK.threatActors].title,
+        text: taKey + "<br>" + t(`BREAK.threatActors.${taKey}.title`),
         color: "red",
       });
     }
@@ -110,10 +104,7 @@ const setJsonData = () => {
    */
   nodes.push({
     id: props.rKey,
-    text:
-      props.rKey +
-      "<br>" +
-      BREAK.risks[props.rKey as keyof typeof BREAK.risks].title,
+    text: props.rKey + "<br>" + t(`BREAK.risks.${props.rKey}.title`),
     color: "orange",
   });
   const jsonData: RGJsonData = {
