@@ -47,6 +47,15 @@
   "commitNewProviderHint": "Reference: src/BREAK/ability-providers/AP****.json file format.",
   "nodeFilter": "Node Filter:",
   "subNodeFilter": "Sub-Nodes",
+  "toolbar": {
+    "fullscreen": "Fullscreen/Exit Fullscreen",
+    "zoomIn": "Zoom In",
+    "zoomOut": "Zoom Out",
+    "autoLayout": "Auto Layout",
+    "stopAutoLayout": "Stop Auto Layout",
+    "refresh": "Refresh",
+    "download": "Download Image"
+  },
   "lineFilter": "Relation Filter:",
   "fetchAllRelations": "Fetch All Relations",
   "openAsRoot": "Open as Root Node",

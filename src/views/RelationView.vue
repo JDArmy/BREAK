@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref, reactive, watch } from "vue";
+import { onMounted, ref, reactive, watch, nextTick } from "vue";
 import BREAK from "@/BREAK";
 import { useRoute, useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
@@ -53,13 +53,6 @@ const RelationTypeMapping = {
     color: "red",
     disableContextMenu: ref<boolean>(false),
   },
-  [RelationType.abilityProvider]: {
-    get title() { return t("relationType.abilityProvider"); },
-    relType: RelationType.abilityProvider,
-    BreakKey: "abilityProviders",
-    color: "purple",
-    disableContextMenu: ref<boolean>(false),
-  },
 };
 
 const relType = ref<RelationType>(route.params.type as RelationType);
@@ -94,7 +87,7 @@ interface Node {
   type: string;
   text: string;
   color: string;
-  isSubNode?: boolean;
+  data?: { isSubNode?: boolean };
 }
 
 // Reference: https://relation-graph.github.io/#/docs/link
@@ -265,7 +258,7 @@ const addRiskSubrisk = (rKey: string) => {
       type: RelationType.risk,
       text: subriskKey + "<br>" + t(`BREAK.risks.${subriskKey}.title`),
       color: RelationTypeMapping[RelationType.risk].color,
-      isSubNode: true,
+      data: { isSubNode: true },
     } as Node);
     lines.push({
       from: rKey,
@@ -297,29 +290,6 @@ const addAvoidanceRisk = (avoidanceKey: string) => {
   });
 };
 
-const addAvoidanceAbilityProvider = (avoidanceKey: string) => {
-  const abilityProviderKeys = Object.keys(BREAK.abilityProviders).filter(
-    (apKey) =>
-      Object.keys(
-        BREAK.abilityProviders[apKey as keyof typeof BREAK.abilityProviders]
-          .abilities
-      ).includes(avoidanceKey as never)
-  );
-  abilityProviderKeys.forEach((abilityProviderKey) => {
-    nodes.push({
-      id: abilityProviderKey,
-      type: RelationType.abilityProvider,
-      text: abilityProviderKey + "<br>" + t(`BREAK.abilityProviders.${abilityProviderKey}.title`),
-      color: RelationTypeMapping[RelationType.abilityProvider].color,
-    } as Node);
-    lines.push({
-      from: avoidanceKey,
-      text: t("relationLine.abilityProvider"),
-      to: abilityProviderKey,
-    } as Line);
-  });
-};
-
 const addAvoidanceSubavoidance = (aKey: string) => {
   const subavoidanceKeys = Object.keys(BREAK.avoidances).filter(
     (avoidanceKey) => avoidanceKey.includes(aKey) && avoidanceKey != aKey
@@ -331,7 +301,7 @@ const addAvoidanceSubavoidance = (aKey: string) => {
       type: RelationType.avoidance,
       text: subavoidanceKey + "<br>" + t(`BREAK.avoidances.${subavoidanceKey}.title`),
       color: RelationTypeMapping[RelationType.avoidance].color,
-      isSubNode: true,
+      data: { isSubNode: true },
     } as Node);
     lines.push({
       from: aKey,
@@ -501,7 +471,7 @@ const addAttackToolSubattackTool = (atKey: string) => {
       text:
         subattackToolKey + "<br>" + t(`BREAK.attackTools.${subattackToolKey}.title`),
       color: RelationTypeMapping[RelationType.attackTool].color,
-      isSubNode: true,
+      data: { isSubNode: true },
     } as Node);
     lines.push({
       from: atKey,
@@ -597,31 +567,12 @@ const addThreatActorSubthreatActor = (taKey: string) => {
       text:
         subthreatActorKey + "<br>" + t(`BREAK.threatActors.${subthreatActorKey}.title`),
       color: RelationTypeMapping[RelationType.threatActor].color,
-      isSubNode: true,
+      data: { isSubNode: true },
     } as Node);
     lines.push({
       from: taKey,
       text: t("relationLine.subThreatActor"),
       to: subthreatActorKey,
-    } as Line);
-  });
-};
-/** AbilityProvider */
-const addAbilityProviderAvoidance = (abilityProviderKey: string) => {
-  const avoidanceKeys = Object.keys(
-    BREAK.abilityProviders[abilityProviderKey].abilities
-  );
-  avoidanceKeys.forEach((avoidanceKey) => {
-    nodes.push({
-      id: avoidanceKey,
-      type: RelationType.avoidance,
-      text: avoidanceKey + "<br>" + t(`BREAK.avoidances.${avoidanceKey}.title`),
-      color: RelationTypeMapping[RelationType.avoidance].color,
-    } as Node);
-    lines.push({
-      from: avoidanceKey,
-      text: t("relationLine.abilityProvider"),
-      to: abilityProviderKey,
     } as Line);
   });
 };
@@ -672,12 +623,8 @@ const genRGJsonData = (
     if (reqType == RelationType.risk) {
       addAvoidanceRisk(nodeId);
     }
-    if (reqType == RelationType.abilityProvider) {
-      addAvoidanceAbilityProvider(nodeId);
-    }
     if (reqType == RelationType.all) {
       addAvoidanceRisk(nodeId);
-      addAvoidanceAbilityProvider(nodeId);
       addAvoidanceSubavoidance(nodeId);
     }
   } else if (nodeType === RelationType.attackTool) {
@@ -705,10 +652,6 @@ const genRGJsonData = (
       addThreatActorAttackTool(nodeId);
       addThreatActor_AttackToolRiskRelation(nodeId);
       addThreatActorSubthreatActor(nodeId);
-    }
-  } else if (nodeType === RelationType.abilityProvider) {
-    if (reqType == RelationType.avoidance || reqType == RelationType.all) {
-      addAbilityProviderAvoidance(nodeId);
     }
   }
   setRGJsonData();
@@ -744,6 +687,7 @@ onMounted(() => {
   }
   addRootNode();
   genRGJsonData(RelationType.all, relType.value, relKey.value);
+  nextTick(() => updateToolbarTitles());
 });
 
 // 监听下拉框的值变化，改变路由
@@ -782,7 +726,27 @@ watch(locale, () => {
   filterLineType.value = [];
   addRootNode();
   genRGJsonData(RelationType.all, relType.value, relKey.value);
+  updateToolbarTitles();
 });
+
+// 更新 relation-graph 工具栏按钮的 title（库硬编码中文，需手动替换）
+const updateToolbarTitles = () => {
+  const titleMap: Record<string, string> = {
+    "全屏/退出全屏": t("toolbar.fullscreen"),
+    "放大": t("toolbar.zoomIn"),
+    "缩小": t("toolbar.zoomOut"),
+    "点击停止自动布局": t("toolbar.stopAutoLayout"),
+    "点击开始自动调整布局": t("toolbar.autoLayout"),
+    "刷新": t("toolbar.refresh"),
+    "下载图片": t("toolbar.download"),
+  };
+  document.querySelectorAll(".rel-toolbar .c-mb-button, .c-mini-toolbar .c-mb-button").forEach((el) => {
+    const title = el.getAttribute("title");
+    if (title && titleMap[title]) {
+      el.setAttribute("title", titleMap[title]);
+    }
+  });
+};
 
 // 鼠标右键下拉菜单
 const dropdownStyle = reactive({
@@ -810,76 +774,37 @@ const nodeClick = (node: Node, e: MouseEvent) => {
   switch (node.type) {
     case RelationType.risk: {
       RelationTypeMapping[RelationType.risk].disableContextMenu.value = true;
-      RelationTypeMapping[RelationType.avoidance].disableContextMenu.value =
-        false;
-      RelationTypeMapping[RelationType.attackTool].disableContextMenu.value =
-        false;
-      RelationTypeMapping[RelationType.threatActor].disableContextMenu.value =
-        false;
-      RelationTypeMapping[
-        RelationType.abilityProvider
-      ].disableContextMenu.value = true;
+      RelationTypeMapping[RelationType.avoidance].disableContextMenu.value = false;
+      RelationTypeMapping[RelationType.attackTool].disableContextMenu.value = false;
+      RelationTypeMapping[RelationType.threatActor].disableContextMenu.value = false;
       disableContextMenuAll.value = false;
       disableContextMenuOpenAsRoot.value = false;
       break;
     }
     case RelationType.avoidance: {
       RelationTypeMapping[RelationType.risk].disableContextMenu.value = false;
-      RelationTypeMapping[RelationType.avoidance].disableContextMenu.value =
-        true;
-      RelationTypeMapping[RelationType.attackTool].disableContextMenu.value =
-        true;
-      RelationTypeMapping[RelationType.threatActor].disableContextMenu.value =
-        true;
-      RelationTypeMapping[
-        RelationType.abilityProvider
-      ].disableContextMenu.value = false;
+      RelationTypeMapping[RelationType.avoidance].disableContextMenu.value = true;
+      RelationTypeMapping[RelationType.attackTool].disableContextMenu.value = true;
+      RelationTypeMapping[RelationType.threatActor].disableContextMenu.value = true;
       disableContextMenuAll.value = false;
       disableContextMenuOpenAsRoot.value = false;
       break;
     }
     case RelationType.attackTool: {
       RelationTypeMapping[RelationType.risk].disableContextMenu.value = false;
-      RelationTypeMapping[RelationType.avoidance].disableContextMenu.value =
-        false;
-      RelationTypeMapping[RelationType.attackTool].disableContextMenu.value =
-        true;
-      RelationTypeMapping[RelationType.threatActor].disableContextMenu.value =
-        false;
-      RelationTypeMapping[
-        RelationType.abilityProvider
-      ].disableContextMenu.value = true;
+      RelationTypeMapping[RelationType.avoidance].disableContextMenu.value = false;
+      RelationTypeMapping[RelationType.attackTool].disableContextMenu.value = true;
+      RelationTypeMapping[RelationType.threatActor].disableContextMenu.value = false;
       disableContextMenuAll.value = false;
       disableContextMenuOpenAsRoot.value = false;
       break;
     }
     case RelationType.threatActor: {
       RelationTypeMapping[RelationType.risk].disableContextMenu.value = false;
-      RelationTypeMapping[RelationType.avoidance].disableContextMenu.value =
-        true;
-      RelationTypeMapping[RelationType.attackTool].disableContextMenu.value =
-        false;
-      RelationTypeMapping[RelationType.threatActor].disableContextMenu.value =
-        true;
-      RelationTypeMapping[
-        RelationType.abilityProvider
-      ].disableContextMenu.value = true;
+      RelationTypeMapping[RelationType.avoidance].disableContextMenu.value = true;
+      RelationTypeMapping[RelationType.attackTool].disableContextMenu.value = false;
+      RelationTypeMapping[RelationType.threatActor].disableContextMenu.value = true;
       disableContextMenuAll.value = false;
-      disableContextMenuOpenAsRoot.value = false;
-      break;
-    }
-    case RelationType.abilityProvider: {
-      RelationTypeMapping[RelationType.risk].disableContextMenu.value = true;
-      RelationTypeMapping[RelationType.avoidance].disableContextMenu.value =
-        false;
-      RelationTypeMapping[RelationType.attackTool].disableContextMenu.value =
-        true;
-      RelationTypeMapping[RelationType.threatActor].disableContextMenu.value =
-        true;
-      RelationTypeMapping[
-        RelationType.abilityProvider
-      ].disableContextMenu.value = true;
-      disableContextMenuAll.value = true;
       disableContextMenuOpenAsRoot.value = false;
       break;
     }
@@ -932,10 +857,6 @@ const gotoItemDetailView = () => {
       routeName = "threatActors";
       break;
     }
-    case RelationType.abilityProvider: {
-      routeName = "abilityProviders";
-      break;
-    }
   }
   router.push({
     name: routeName,
@@ -950,7 +871,6 @@ const filterRelationType = ref([
   RelationType.avoidance,
   RelationType.attackTool,
   RelationType.threatActor,
-  RelationType.abilityProvider,
 ] as string[]);
 
 const filterSubNode = ref(true);
@@ -976,7 +896,7 @@ const doFilter = () => {
   const _all_nodes = graphRef$.value?.getInstance().getNodes();
   const _all_links = graphRef$.value?.getInstance().getLinks();
   _all_nodes?.forEach((thisNode) => {
-    const isSubNode = (thisNode as unknown as Node).isSubNode;
+    const isSubNode = thisNode.data?.isSubNode;
     const _isHideThisNode =
       !filterRelationType.value.includes(thisNode.type as string) ||
       (isSubNode && !filterSubNode.value);
