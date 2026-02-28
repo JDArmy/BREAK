@@ -1,0 +1,26 @@
+{
+  "R0083": {
+    "title": "Insufficient Employee Security Awareness",
+    "definition": "The potential threat that accounts of internal employees may be obtained and misused by unauthorized individuals or malicious parties.",
+    "description": "Scenarios may include employees falling victim to phishing attacks, using weak passwords, sharing account information, or being manipulated through social engineering, resulting in account compromise.",
+    "complexity": "Intermediate",
+    "influence": "Harms include theft of sensitive information, unauthorized access to company systems, data tampering, and malicious operations performed under stolen identities, posing potential threats to the company's confidentiality, integrity, and availability.",
+    "references": []
+  },
+  "R0083-001": {
+    "title": "Employee Account Compromise",
+    "definition": "The potential threat that accounts of internal employees may be obtained and misused by unauthorized individuals or malicious parties.",
+    "description": "Scenarios may include employees falling victim to phishing attacks, using weak passwords, sharing account information, or being manipulated through social engineering, resulting in account compromise.",
+    "complexity": "Intermediate",
+    "influence": "Harms include theft of sensitive information, unauthorized access to company systems, data tampering, and malicious operations performed under stolen identities, posing potential threats to the company's confidentiality, integrity, and availability.",
+    "references": []
+  },
+  "R0083-002": {
+    "title": "Social Engineering Risk",
+    "definition": "The potential threat that attackers use social engineering techniques to fraudulently exploit employees' trust and social connections to obtain sensitive information, steal credentials, or carry out other malicious activities, typically through false identities, impersonated communications, and social engineering tactics.",
+    "description": "Common employee social engineering scenarios include: identity impersonation (attackers posing as senior management, colleagues, customers, or other trusted entities via email, social media, or instant messaging to request sensitive information or specific tasks); impersonated communications (sending fake emails, messages, or documents to induce employees to click malicious links, download malicious attachments, or provide sensitive information); social media fraud (creating fake profiles mimicking colleagues or superiors to establish contact and extract sensitive information); and fake emergencies (posing as urgent situations to induce employees to provide sensitive information or perform unsafe operations without proper verification).",
+    "complexity": "Basic",
+    "influence": "Harms include but are not limited to: information leakage of sensitive data, credentials, or company secrets; network intrusion through unauthorized access; financial losses from fraudulent financial operations; and reputational damage from customer trust issues or broken business partnerships.",
+    "references": []
+  }
+}

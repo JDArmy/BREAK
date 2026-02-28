@@ -1,0 +1,12 @@
+{
+  "R0093": {
+    "title": "Payment Channel Abuse",
+    "definition": "Payment channel abuse risk refers to the potential threat of malicious actors abusing payment systems or channels to obtain financial benefits through illegal means or carry out fraudulent activities, involving various aspects of the payment process including payment cards, electronic payments, online payments, and offline payments.",
+    "description": "Main aspects include: fraud risk (some bad actors may use fake accounts, forged payment documents, and other means to conduct fraudulent activities); money laundering risk (some bad actors may use payment channels to launder money, converting illegal proceeds into legitimate funds); and cross-border fund risk (cross-border fund flows may involve foreign exchange controls, tax policies, anti-money laundering requirements, and other considerations).",
+    "complexity": "Basic",
+    "influence": "Causes financial losses and security risks for merchants and consumers.",
+    "references": [
+      { "title": "Rampant Third-Party Payment Chaos: Held Accountable for Providing Unauthorized Payment Channels" }
+    ]
+  }
+}

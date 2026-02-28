@@ -1,0 +1,9 @@
+{
+  "AT0008": {
+    "title": "CAPTCHA Solving Platform",
+    "description": "A platform that provides CAPTCHA solving services through automated or human means. Many simple character CAPTCHAs can no longer effectively block automated behavior and can be recognized using simple OCR tools. More complex ones can be solved with high accuracy using machine learning. For high-difficulty CAPTCHAs, human-powered solving platforms organize real people to perform recognition and submit verification results.",
+    "references": [
+      { "title": "Black Market Exposed: The Past and Present of CAPTCHA Solving Platforms" }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "R0028": {
+    "title": "Data Exfiltration Risk",
+    "definition": "Data exfiltration risk refers to obtaining sensitive data stored in an application through public/non-public interfaces, insider threats, or third-party leaks.",
+    "description": "Application interfaces may return data structures beyond what is displayed on the frontend — such as addresses, ID numbers, and phone numbers. Users can access public server interfaces to obtain sensitive data (fuzzy username search, bulk adding users with secondary accounts), interact with other users to obtain sensitive data (bulk messaging users with secondary accounts), or enumerate IDs to obtain all private data.",
+    "complexity": "Intermediate",
+    "influence": "Sensitive data leakage typically occurs alongside issues such as unmasked data, privilege escalation vulnerabilities, and unauthenticated interfaces. In the current environment of strict data security regulation, this may cause serious compliance risks.",
+    "references": [
+      { "title": "500 Million XX User Records Leaked, XX Called In for Regulatory Interview" }
+    ]
+  }
+}

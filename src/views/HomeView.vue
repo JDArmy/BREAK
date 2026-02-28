@@ -179,7 +179,7 @@ const getSceneRowSize = (sceneLength: number) => {
         <el-option
           v-for="(bsVal, bsKey) in BREAK.businessScenes"
           :key="bsKey"
-          :label="bsKey + ':&nbsp;&nbsp;' + bsVal.title"
+          :label="bsKey + ':&nbsp;&nbsp;' + $t(`BREAK.businessScenes.${bsKey}.title`)"
           :value="bsKey"
         />
       </el-select>

@@ -1,0 +1,12 @@
+{
+  "R0025": {
+    "title": "Malicious User Poaching",
+    "definition": "Poaching sponsors, customers, and streamers.",
+    "description": "Using comments, private messages, and other means to contact the platform's sponsors, customers, or streamers with the intent of redirecting them to other platforms.",
+    "complexity": "Basic",
+    "influence": "Disrupts normal platform operations, exposes users to fraud risks, and negatively impacts the company's normal operations.",
+    "references": [
+      { "title": "Does a Live Streamer Maliciously Switching Platforms or Poaching During Contract Period Constitute Unfair Competition?" }
+    ]
+  }
+}

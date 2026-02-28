@@ -1,0 +1,12 @@
+{
+  "A0071": {
+    "title": "Cloud Security Posture Management",
+    "definition": "Cloud Security Posture Management (CSPM) is a category of automated tools and practices used to continuously monitor and assess the security configuration of cloud infrastructure, identifying misconfigurations, compliance deviations, and security risks.",
+    "description": "The main capabilities of cloud security posture management include: (1) configuration compliance checking — automatically scanning cloud resource configurations and checking compliance against security baselines such as CIS Benchmarks and national security standards to identify insecure configuration items; (2) asset visibility — providing a unified view of all resources in the cloud environment, including compute instances, storage buckets, databases, network configurations, and IAM policies; (3) risk assessment and prioritization — prioritizing discovered security issues based on risk severity and business impact to help security teams focus on critical risks; (4) automated remediation — providing automated remediation for common misconfigurations, such as closing public storage buckets and fixing overly permissive security group rules; (5) multi-cloud support — supporting unified security management across major cloud platforms including AWS, Azure, GCP, and Alibaba Cloud; (6) container and Kubernetes security — extending to container image scanning, Kubernetes cluster configuration auditing, and other cloud-native security scenarios; (7) compliance reporting — automatically generating security reports that meet various compliance standards.",
+    "limitation": "The limitations of cloud security posture management include: (1) it primarily focuses on configuration-level security issues with limited coverage of application-layer and business-logic-layer security risks; (2) differences in APIs and configuration models across cloud platforms in multi-cloud environments increase the complexity of unified management; (3) automated remediation may affect normal business operations in certain scenarios and should be used with caution; (4) real-time monitoring of dynamic and ephemeral cloud resources such as serverless functions presents challenges; (5) alert fatigue — large volumes of security alerts may cause security teams to overlook truly important risks.",
+    "references": [
+      { "title": "What is CSPM - Gartner" },
+      { "title": "Cloud Security Posture Management Best Practices" }
+    ]
+  }
+}

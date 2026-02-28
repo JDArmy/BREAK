@@ -1,0 +1,12 @@
+{
+  "R0026": {
+    "title": "Prohibited and Illegal Products",
+    "definition": "Merchants listing invalid, malicious, or illegal product content.",
+    "description": "Merchants list invalid, malicious, or illegal product content to sell non-compliant or illegal goods, or to achieve purposes such as defamation, disruption, traffic diversion, or fraud.",
+    "complexity": "Basic",
+    "influence": "Disrupts normal system operations, exposes users to fraud risks, and creates compliance risks for the company's normal operations.",
+    "references": [
+      { "title": "What Are Prohibited Products on Taobao?" }
+    ]
+  }
+}

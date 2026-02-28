@@ -1,0 +1,32 @@
+{
+  "R0068": {
+    "title": "After-Sales Rights Abuse",
+    "definition": "Malicious exploitation and excessive use of rights granted by the platform.",
+    "description": "For example, national regulations require online shopping platforms to offer 7-day no-questions-asked returns. Buyers exploit this mechanism to use products or services for free and then initiate a return within 7 days.",
+    "complexity": "Basic",
+    "influence": "Causes financial losses to the platform or sellers.",
+    "references": [
+      { "title": "Consumer Rights: Abuse Is Also a Form of Harm" }
+    ]
+  },
+  "R0068-001": {
+    "title": "Malicious Complaints",
+    "definition": "Filing malicious complaints against a trading platform or against merchants on a trading platform.",
+    "description": "With the goal of gaining improper benefits or forcing the target to be penalized, attackers file malicious complaints against a trading platform through regulatory bodies, or against merchants through the trading platform.",
+    "complexity": "Basic",
+    "influence": "Causes financial or reputational losses to the platform or sellers.",
+    "references": [
+      { "title": "How E-Commerce Platform Merchants Can Respond to Malicious Complaints" }
+    ]
+  },
+  "R0068-002": {
+    "title": "Malicious Claims",
+    "definition": "Bulk-purchasing expired, unlisted, or counterfeit goods and filing tenfold compensation claims.",
+    "description": "Using bulk searches, data scraping, and similar methods to find expired, counterfeit, substandard, or non-compliant products (e.g., containing advertising law prohibited terms). After placing orders, the buyer complains about the seller's violations and demands large sums of money in exchange for withdrawing the complaint.",
+    "complexity": "Intermediate",
+    "influence": "Causes financial losses to the platform or sellers.",
+    "references": [
+      { "title": "Malicious Claims Gray Industry Chain! Praise or Punish?" }
+    ]
+  }
+}

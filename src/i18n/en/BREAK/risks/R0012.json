@@ -1,0 +1,30 @@
+{
+  "R0012": {
+    "title": "Cheating Tools / Game Hacks",
+    "definition": "Cheating tools refer to illegal programs or script code used in computer games or software, designed to give users unfair advantages or modify program functionality.",
+    "description": "Generally includes: cheat programs providing capabilities beyond normal gameplay such as auto-aim and wall hacks; automation scripts that automatically perform specific tasks like resource collection or quest completion without player involvement; and speed hacks that modify game speed to allow faster movement or actions.",
+    "complexity": "Intermediate",
+    "influence": "Disrupts the normal operating logic of the application, thereby affecting normal platform operations.",
+    "references": []
+  },
+  "R0012-001": {
+    "title": "Red Packet Grabbing Bot",
+    "definition": "Using cheating tools/scripts to automatically grab red packets in a fraudulent manner.",
+    "description": "Mainly used in red packet features of social apps or games such as WeChat and QQ. These tools help users grab red packets the moment they are sent, typically by monitoring chat records and auto-clicking. When a red packet is detected, the tool immediately clicks to grab it at a speed far exceeding human capability.",
+    "complexity": "Intermediate",
+    "influence": "Undermines platform fairness and disrupts normal user activity order.",
+    "references": [
+      { "title": "WeChat Red Packet Grabbing Bots: Where Is the Fairness? User Experience Must Not Be Compromised" }
+    ]
+  },
+  "R0012-002": {
+    "title": "Game Cheating Software",
+    "definition": "Game cheating software refers to illegal software or scripts used in video games to gain unfair advantages, modify game content, or manipulate game rules.",
+    "description": "Includes: cheat programs providing capabilities beyond normal gameplay such as auto-aim, wallhacks, and infinite lives; scripts and macros that automatically execute specific operations like auto-casting or auto-resource collection; speed hacks; external modifiers that change game files or memory data; and gold/item generators that create fake in-game currency or items.",
+    "complexity": "Intermediate",
+    "influence": "Disrupts game balance.",
+    "references": [
+      { "title": "Game Cheating Software - Baidu Baike" }
+    ]
+  }
+}

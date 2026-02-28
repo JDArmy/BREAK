@@ -1,0 +1,11 @@
+{
+  "A0033": {
+    "title": "Single-Device Login",
+    "definition": "Allowing an account to be logged in only once on the same type of device.",
+    "description": "Same-type devices refer to: browsers, mobile APPs, tablets, mini-programs, etc. An account is only allowed to be logged into one browser, mobile APP, tablet, or mini-program instance at a time. When a second same-type device attempts to log in, the previously logged-in corresponding device instance is logged out. This prevents a single account from being logged into multiple same-type devices simultaneously.",
+    "limitation": "The detection mechanism for single-device login typically records the number of logins on the same type of device on the server side and resets the previous instance or logs it out when the count exceeds 1. However, this mechanism has a problem: in the case of credential reuse (R0035), i.e., cookie-based login (AT0030), since both the previous device and the new device use the same login instance, the restriction can be bypassed to achieve multi-point login. In this case, a credential reuse detection mechanism needs to be added.",
+    "references": [
+      { "title": "Single-Device Login" }
+    ]
+  }
+}

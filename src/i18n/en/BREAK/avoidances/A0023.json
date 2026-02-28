@@ -1,0 +1,16 @@
+{
+  "A0023": {
+    "title": "Biometric Identification",
+    "definition": "Identifying and verifying user identity by recognizing and comparing human biometric characteristics.",
+    "description": "Face, fingerprint, voiceprint, iris, gait, palm print, vein pattern, DNA, and other human biometric characteristics all have a certain degree of uniqueness. Currently, the most commonly used for remote comparison on mobile devices are face, facial features, and voiceprint. Since facial recognition and voiceprint recognition face very intense adversarial competition, they are currently mainly used as a third verification factor beyond basic identity authentication (A018) and two-factor authentication (A007), and are more focused on preventing identity impersonation than account theft.",
+    "limitation": "High false recognition rate: biometric identification technology in practical applications can have a high false recognition rate due to environmental, device, and physiological change factors. Susceptibility to attack: biometric identification technology has certain security risks — biometric characteristics such as face, voiceprint, fingerprint, and iris can be copied or forged, leading to system attacks. Privacy leakage: biometric identification technology requires collecting users' biometric information; if this information is leaked, it will pose a threat to user privacy.",
+    "references": []
+  },
+  "A0023-001": {
+    "title": "Facial Recognition",
+    "definition": "Identifying and verifying user identity by recognizing and comparing facial features.",
+    "description": "Facial recognition is a biometric identification technology that identifies and verifies user identity by recognizing and comparing facial features. The main steps include face detection, facial feature extraction, and facial feature comparison. Applications on mobile devices include face unlock, face payment, and face check-in.",
+    "limitation": "Facial recognition technology has certain security risks — facial images can be copied or forged, leading to system attacks.",
+    "references": []
+  }
+}

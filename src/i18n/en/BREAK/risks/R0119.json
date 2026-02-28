@@ -1,0 +1,12 @@
+{
+  "R0119": {
+    "title": "AI-Generated Fake Reviews",
+    "definition": "The risk of using AI technology (particularly large language models) to bulk-generate fake product reviews, service ratings, or content reviews, disrupting the platform's review system.",
+    "description": "AI-generated fake reviews refers to attackers using large language models to bulk-generate seemingly authentic fake review content. Compared to traditional manual review fraud, AI-generated reviews have the following characteristics: (1) High content diversity: each review differs in wording, angle, and style, making it difficult to detect through simple text similarity checks. (2) Extremely low generation cost: LLMs can generate large volumes of high-quality reviews in a very short time at far lower cost than manual writing. (3) High targeting: can automatically generate targeted positive or negative reviews based on product features and competitor information. (4) Multilingual support: can easily generate reviews in multiple languages, supporting cross-border e-commerce review fraud. This risk seriously undermines the credibility of the platform's review system, misleads consumer decisions, and disrupts fair competition.",
+    "complexity": "Intermediate",
+    "influence": "Platform review system credibility declines, consumers are misled, fair competition is disrupted, and platform compliance risks increase.",
+    "references": [
+      { "title": "Research on Detection of AI-Generated Fake Reviews" }
+    ]
+  }
+}

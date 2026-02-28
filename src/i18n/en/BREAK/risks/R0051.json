@@ -1,0 +1,32 @@
+{
+  "R0051": {
+    "title": "Application Reverse Engineering",
+    "definition": "Restoring an application's source code or runtime logic through reverse engineering.",
+    "description": "For web applications, WeChat mini-programs, and Android apps, source code can be directly or easily restored, exposing all application processing logic. When security policies are implemented on the client side, there is a risk of them being cracked or bypassed.",
+    "complexity": "Advanced",
+    "influence": "May cause security processes within the application to be broken and data to be forged.",
+    "references": [
+      { "title": "What Is Reverse Engineering?" }
+    ]
+  },
+  "R0051-001": {
+    "title": "Application Traffic Interception",
+    "definition": "Restoring an application's request structure and monitoring response data through packet capture.",
+    "description": "Packet capture involves intercepting, replaying, editing, and saving data packets sent and received over the network. Through packet capture, an application's request methods and structure can be analyzed to enable business logic reconstruction, simulation, and process automation as a substitute for the client (R0001).",
+    "complexity": "Advanced",
+    "influence": "May cause security processes within the application to be broken and data to be forged.",
+    "references": [
+      { "title": "TCP Packet Capture Analysis in Practice" }
+    ]
+  },
+  "R0051-002": {
+    "title": "HTTP Request Analysis",
+    "definition": "Restoring an application's request structure and monitoring response data through packet capture.",
+    "description": "For applications that transmit data using text-based protocols such as HTTP/HTTPS, a man-in-the-middle can be used to capture sent and received data, thereby reconstructing the application's execution logic to enable automated operations.",
+    "complexity": "Intermediate",
+    "influence": "May cause security processes within the application to be broken and data to be forged.",
+    "references": [
+      { "title": "Complete HTTP Request Analysis" }
+    ]
+  }
+}

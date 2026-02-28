@@ -1,0 +1,12 @@
+{
+  "A0070": {
+    "title": "Supply Chain Security Audit",
+    "definition": "A systematic security inspection and assessment of each link in the software, hardware, and service supply chain to identify potential security risks and vulnerabilities and ensure the integrity and trustworthiness of the supply chain.",
+    "description": "The main approaches for supply chain security auditing include: (1) software composition analysis (SCA) — scanning and identifying all open-source components and their versions used in software projects, detecting known vulnerabilities and license compliance issues; (2) software bill of materials (SBOM) — establishing and maintaining a complete software bill of materials that records the origin, version, and dependency relationships of all software components; (3) code signing verification — verifying the digital signatures of software packages and updates to ensure code has not been tampered with; (4) dependency auditing — analyzing the software dependency tree to identify transitively dependent components with security risks; (5) vendor security assessment — evaluating the security capabilities of third-party vendors, including secure development processes, vulnerability response mechanisms, and data protection measures; (6) continuous monitoring — continuously monitoring security of supply chain components in use and promptly identifying newly disclosed vulnerabilities; (7) build environment security — ensuring the security of CI/CD pipelines and build environments to prevent poisoning attacks during the build process.",
+    "limitation": "The limitations of supply chain security auditing include: (1) the open-source ecosystem is vast, and fully auditing all dependent components requires enormous effort; (2) zero-day vulnerabilities and undisclosed backdoors are difficult to discover through routine audits; (3) supply chain attack methods continue to evolve, requiring continuous updates to audit standards and tools; (4) for closed-source commercial software, audit depth is limited by vendor cooperation; (5) standardization and automation of SBOM still need improvement.",
+    "references": [
+      { "title": "NIST Cybersecurity Supply Chain Risk Management" },
+      { "title": "Software Supply Chain Security White Paper - CAICT" }
+    ]
+  }
+}

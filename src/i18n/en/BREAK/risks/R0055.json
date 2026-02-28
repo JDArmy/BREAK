@@ -1,0 +1,23 @@
+{
+  "R0055": {
+    "title": "Unauthorized Discount Purchase",
+    "definition": "Zero-price or below-cost purchases resulting from business logic errors or misconfigured prices and coupons.",
+    "description": "This attack may be discovered accidentally, but is more likely the result of an attacker probing at scale through automated bulk cart additions, modifying submitted amounts or quantities, or collecting and stacking coupons. After discovering a vulnerability, attackers typically exploit it while simultaneously publicizing it to achieve safety in numbers and conceal their identity, causing greater losses to the platform or merchant.",
+    "complexity": "Basic",
+    "influence": "Causes significant financial losses to the platform and merchants.",
+    "references": [
+      { "title": "Zero-yuan purchase resurfaces, sellers react with mixed feelings, Amazon faces mounting concerns" }
+    ]
+  },
+  "R0055-001": {
+    "title": "Coupon Restriction Bypass",
+    "definition": "Restricted coupons are claimed or used outside of their intended restrictions.",
+    "description": "Two scenarios: first, non-public coupons, coupons claimable under specific conditions, or coupons issued to specific groups are claimed without meeting the restrictions; second, coupons restricted to specific usage scenarios or conditions are used outside those restrictions. Restrictions include: specific time windows, specific user groups, specific product pairings, specific price thresholds, coupon stacking limits, and more.",
+    "complexity": "Basic",
+    "influence": "Exploits platform marketing activity benefits, causing financial losses to the platform.",
+    "references": [
+      { "title": "OWASP Automated Threat: OAT002 Token Cracking" },
+      { "title": "2019 PDD coupon vulnerability incident" }
+    ]
+  }
+}

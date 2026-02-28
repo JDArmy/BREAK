@@ -1,0 +1,13 @@
+{
+  "R0135": {
+    "title": "Platform Monopoly Abuse Risk",
+    "definition": "The risk of internet platforms with dominant market positions engaging in monopolistic behavior, including forced exclusivity, self-preferencing, and blocking competitors, facing antitrust regulatory penalties.",
+    "description": "Platform monopoly abuse risk refers to the risk of internet platforms with dominant market positions abusing their advantageous position to engage in competition-restricting behavior. Key manifestations include: (1) Forced exclusivity: requiring merchants to make exclusive choices between platforms, prohibiting them from operating on competing platforms. (2) Self-preferencing: prioritizing the display of proprietary products or services in search rankings and traffic distribution, discriminating against third-party merchants. (3) Blocking competitors: shielding or restricting competitors' links, content, or services from spreading on the platform. (4) Data monopoly: using the massive data accumulated by the platform to build competitive barriers and refusing to open necessary data interfaces to third parties. (5) Bundling: using platform dominance to force users to use affiliated services. (6) Predatory pricing: using below-cost pricing strategies to drive out competitors. With the revision of the Anti-Monopoly Law and increased antitrust enforcement in the platform economy, compliance pressure on platforms continues to grow.",
+    "complexity": "Intermediate",
+    "influence": "Faces enormous antitrust fines, business rectification requirements, disruption of market competition order, and harm to small and medium merchant rights.",
+    "references": [
+      { "title": "Anti-Monopoly Law of the People's Republic of China (2022 Amendment)" },
+      { "title": "Anti-Monopoly Guidelines for the Platform Economy" }
+    ]
+  }
+}

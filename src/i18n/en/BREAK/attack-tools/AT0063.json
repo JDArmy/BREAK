@@ -1,0 +1,10 @@
+{
+  "AT0063": {
+    "title": "Phishing Kits",
+    "description": "A phishing kit is a complete set of tools for quickly deploying phishing attacks, lowering the technical barrier for phishing. Kits typically include: page template libraries with pre-built high-fidelity login page templates for major banks, e-commerce platforms, and social media; credential collection backends for receiving and managing victim-submitted credentials; domain management tools for automated registration and configuration of lookalike domains and SSL certificates; email/SMS bulk sending modules; anti-detection mechanisms including anti-crawling, geo-restrictions, and User-Agent filtering; and real-time relay functionality in advanced kits to bypass two-factor authentication. Representative tools include Gophish (open source) and various commercial phishing kits circulating in underground markets.",
+    "references": [
+      { "title": "Phishing Kit Analysis - APWG" },
+      { "title": "Phishing Attack Toolkit Technical Analysis" }
+    ]
+  }
+}

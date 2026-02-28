@@ -1,0 +1,13 @@
+{
+  "R0130": {
+    "title": "Digital Avatar Live Stream Fraud",
+    "definition": "The risk of using AI digital avatar technology for fake live stream commerce, impersonating real streamers, or conducting other live stream fraud.",
+    "description": "Digital avatar live stream fraud refers to fraudulent activities in live streaming using AI-generated virtual digital avatars. Key risk scenarios include: (1) Fake live stream commerce: using AI digital avatars to impersonate real streamers for 24-hour uninterrupted live stream selling of counterfeit goods or false advertising. (2) Celebrity impersonation: using deepfake technology to generate digital avatar likenesses of celebrities or influencers for live streams, impersonating them for product recommendations or endorsements. (3) Fake interaction: AI digital avatars combined with automated bullet comments and fake viewer data to create false live stream popularity and interaction atmosphere. (4) Undisclosed AI identity: using AI digital avatars for live streaming without clearly disclosing their AI identity to viewers, violating relevant regulations. (5) Emotional fraud: using AI digital avatars in social live streams to establish false emotional connections with users, inducing tips or consumption.",
+    "complexity": "Intermediate",
+    "influence": "Consumers are misled and defrauded, platform content ecosystem is disrupted, brand reputation is damaged, and compliance risks arise.",
+    "references": [
+      { "title": "Guiding Opinions on Strengthening the Standardized Management of Online Live Streaming" },
+      { "title": "AI Digital Avatar Live Stream Compliance Guidelines" }
+    ]
+  }
+}

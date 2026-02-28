@@ -1,0 +1,12 @@
+{
+  "R0058": {
+    "title": "Price Fraud",
+    "definition": "An operator uses false or misleading pricing forms or price tactics to deceive or induce consumers or other operators into transactions.",
+    "description": "The following pricing behaviors or price tactics are recognized as price fraud: 1. False pricing. 2. Dual pricing. 3. Deceptive pricing. 4. Vague or exaggerated pricing. 5. False discounts. 6. Failure to mark prices on clearance items. 7. Failure to truthfully disclose gift conditions. 8. Hidden price conditions. 9. Fabricated original prices. 10. Failure to honor price commitments. 11. Fabricated comparison prices. 12. Price-quality mismatch. 13. False claims of 'government-set prices'.",
+    "complexity": "Basic",
+    "influence": "Creates significant compliance risks for the platform and increases the volume of customer complaints.",
+    "references": [
+      { "title": "What Behaviors Constitute Price Fraud?" }
+    ]
+  }
+}

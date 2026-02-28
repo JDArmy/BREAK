@@ -1,0 +1,10 @@
+{
+  "AT0067": {
+    "title": "Malicious QR Code Generators",
+    "description": "Malicious QR code generators are tools for generating QR codes pointing to phishing pages, malicious download links, or malicious payment requests. They exploit users' inability to visually identify QR code content to commit fraud. Main attack methods include phishing QR codes, malicious download QR codes, payment hijacking QR codes, WiFi phishing QR codes, dynamic QR codes that can be remotely updated, and QR code overlay attacks replacing legitimate QR codes in shared bikes and parking payment scenarios.",
+    "references": [
+      { "title": "QR Code Security Risks - NIST" },
+      { "title": "QR Code Security Risks and Prevention" }
+    ]
+  }
+}

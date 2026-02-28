@@ -1,0 +1,13 @@
+{
+  "R0124": {
+    "title": "Minor Protection Compliance Risk",
+    "definition": "The compliance risk that platforms fail to meet increasingly strict legal and regulatory requirements for minor protection, including content rating, usage time limits, consumption limits, and privacy protection.",
+    "description": "Minor protection compliance risk refers to the compliance challenges internet platforms face in protecting underage users. With the implementation of regulations such as the Regulations on the Protection of Minors in Cyberspace, platforms must meet compliance requirements in the following areas: (1) Real-name authentication and age verification: accurately identifying underage users and preventing minors from bypassing age restrictions. (2) Usage time management: implementing youth mode to limit minors' usage duration and time periods. (3) Content rating and filtering: implementing tiered content management and blocking content unsuitable for minors. (4) Consumption limits: restricting minors' recharge and spending amounts to prevent irrational consumption. (5) Privacy protection: implementing stricter protection measures for minors' personal information. (6) Anti-addiction mechanisms: establishing effective anti-addiction systems to prevent excessive use by minors. (7) Parental supervision: providing parental supervision tools and features.",
+    "complexity": "Intermediate",
+    "influence": "Faces regulatory penalties, business rectification requirements, public opinion pressure, and legal liability for harm to minors' rights.",
+    "references": [
+      { "title": "Regulations on the Protection of Minors in Cyberspace" },
+      { "title": "Notice on Further Strengthening Management to Effectively Prevent Minors from Becoming Addicted to Online Games" }
+    ]
+  }
+}

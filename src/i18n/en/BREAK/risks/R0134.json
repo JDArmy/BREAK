@@ -1,0 +1,13 @@
+{
+  "R0134": {
+    "title": "Big Data Price Discrimination Risk",
+    "definition": "The risk of platforms using big data analysis to implement differential pricing for existing users or specific user groups, showing different prices for the same product or service to different users.",
+    "description": "Big data price discrimination risk refers to internet platforms using user profiles, consumption habits, device information, geographic location, and other big data to implement differential pricing strategies for different users, typically charging higher prices to existing users, high-spending users, or users of specific devices. Main manifestations include: (1) Price discrimination: showing different prices for the same product or service to different users, with existing users paying more than new users. (2) Dynamic pricing manipulation: dynamically adjusting prices based on browsing history and search frequency, with prices rising the more frequently a user views them. (3) Inverted membership pricing: paid members seeing higher prices than non-members. (4) Device-based differential pricing: differential pricing based on the user's device brand and model. (5) Regional differential pricing: unreasonable differential pricing based on the consumption level of the user's region. This behavior violates provisions on fair transactions and prohibition of price discrimination in laws such as the Personal Information Protection Law and the Consumer Rights Protection Law.",
+    "complexity": "Intermediate",
+    "influence": "Consumer rights are harmed, platforms face regulatory penalties and fines, user trust declines, and brand reputation is damaged.",
+    "references": [
+      { "title": "Anti-Monopoly Guidelines for the Platform Economy" },
+      { "title": "Legal Regulation of Big Data Price Discrimination" }
+    ]
+  }
+}

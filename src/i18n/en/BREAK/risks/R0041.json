@@ -1,0 +1,12 @@
+{
+  "R0041": {
+    "title": "Card Cracking",
+    "definition": "Obtaining valid payment information by enumerating different missing start/expiry dates and security codes.",
+    "description": "Brute-forcing the start/expiry dates and security codes (CSC) of payment cards, also known as CVN2, CVC, CV2, or CID. The results of a carding attack (R0040) can be used to assess payment card or account value, while the results of card cracking (R0041) can be used for actual payments.",
+    "complexity": "Intermediate",
+    "influence": "Payment card or account payment information is stolen.",
+    "references": [
+      { "title": "OWASP Automated Threat: OAT010 Card Cracking" }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "A0030": {
+    "title": "Business-Level Honeypot",
+    "definition": "A fake business resource system built specifically for attackers rather than normal users.",
+    "description": "This resource system should ensure that it will not be accessed by normal users during normal business access or request processes, but can be discovered and accessed by attackers through resource ID enumeration, reverse engineering, packet capture, cracking, and other methods. Any access to the fake business resource system is therefore from an attacker. This serves two purposes: first, it immediately alerts the business that a resource has been targeted and attacked; second, it enables continuous tracking of the attacker's identity, characteristics, and behavior to facilitate countermeasure upgrades or related handling.",
+    "limitation": "Completely ineffective against attack behavior that perfectly simulates normal user access.",
+    "references": []
+  }
+}

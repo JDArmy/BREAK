@@ -1,0 +1,13 @@
+{
+  "R0137": {
+    "title": "Buy Now Pay Later (BNPL) Fraud",
+    "definition": "Fraudulently consuming BNPL credit limits and refusing to repay, or exploiting audit loopholes in BNPL mechanisms to obtain goods and funds fraudulently.",
+    "description": "BNPL fraud targets the BNPL credit consumption model, manifesting domestically primarily as abuse of credit payment tools such as Huabei and Baitiao. Main fraud patterns include: (1) Fake identity applications: using synthetic identities or stolen identities to activate BNPL limits for malicious consumption. (2) Cash-out fraud: converting BNPL limits into cash through fake transactions with no intention to repay. (3) Multi-platform loan fraud: simultaneously applying for limits on multiple BNPL platforms, concentrating consumption then defaulting. (4) Refund fraud: initiating refunds after receiving goods while retaining the items. (5) Account takeover: stealing others' accounts and using their BNPL limits for consumption. (6) Merchant collusion: colluding with fake merchants to create fake transactions to extract BNPL funds.",
+    "complexity": "Intermediate",
+    "influence": "Causes credit losses for platforms and financial institutions, rising bad debt rates, and impacts the sustainable development of BNPL business.",
+    "references": [
+      { "title": "BNPL Fraud Trends - Juniper Research" },
+      { "title": "Huabei/Baitiao Cash-Out Risk Prevention and Control" }
+    ]
+  }
+}

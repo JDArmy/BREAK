@@ -1,0 +1,13 @@
+{
+  "R0136": {
+    "title": "Synthetic Identity Fraud",
+    "definition": "Attackers combine fragments of real personal information with fabricated information to create entirely new fake identities for account registration, credit applications, benefit fraud, and other fraudulent activities.",
+    "description": "Synthetic identity fraud is an advanced identity fraud technique distinct from direct identity theft (R0098). Attackers do not directly use a real individual's complete identity information, but instead mix fragments of real information from multiple sources (such as a real ID number combined with a fake name and address) with fabricated information to create an identity that appears legitimate in systems but does not actually exist. Key characteristics include: (1) Information splicing: combining real information fragments obtained from data breaches and social engineering databases with fabricated information. (2) Account seasoning: after registering accounts with synthetic identities, gradually building credit records through normal transaction behavior to increase account credibility. (3) Bulk manufacturing: using automated tools to bulk-generate synthetic identities for large-scale fraud. (4) Difficult to trace: since the identity itself is fictitious, victims are difficult to identify clearly, and fraud detection cycles are long. (5) Cross-platform exploitation: the same synthetic identity can be registered and used across multiple platforms to maximize fraud gains.",
+    "complexity": "Advanced",
+    "influence": "Causes platform credit losses, risk control model failures, increased compliance risks, and losses that are difficult to recover due to unclear victims.",
+    "references": [
+      { "title": "Synthetic Identity Fraud - Federal Reserve" },
+      { "title": "Research on Synthetic Identity Fraud Detection Techniques" }
+    ]
+  }
+}

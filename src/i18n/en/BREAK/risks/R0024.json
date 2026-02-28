@@ -1,0 +1,10 @@
+{
+  "R0024": {
+    "title": "Malicious Traffic Diversion",
+    "definition": "Malicious traffic diversion through user-generated content refers to attackers tampering with, forging, or abusing user-generated content such as reviews and social shares to deceive users, redirect traffic, or achieve other malicious purposes.",
+    "description": "Causes include: fake reviews and ratings to attract user clicks; social media abuse by fabricating fake shares and likes to redirect traffic; fabricating user activity to make certain content appear more popular; comment section abuse by posting false information; and using malicious tags or keywords to boost search rankings for specific content.",
+    "complexity": "Basic",
+    "influence": "Malicious traffic diversion through user-generated content may lead to fake traffic, economic losses, decreased user trust, brand reputation damage, and negative impacts on community health.",
+    "references": []
+  }
+}

@@ -7,7 +7,16 @@ import "element-plus/es/components/dropdown-item/style/css";
 import "element-plus/theme-chalk/display.css";
 
 import GithubPane from "@/components/GithubPane.vue";
+import iconTranslate from "@/components/icons/iconTranslate.vue";
 import { ArrowDown } from "@element-plus/icons-vue";
+import { useI18n } from "vue-i18n";
+import { languages } from "@/i18n";
+
+const { locale } = useI18n();
+
+const toggleLocale = () => {
+  locale.value = locale.value === "cn" ? "en" : "cn";
+};
 
 const getActiveIndex = (fullPath: string) => {
   if (fullPath.match(/^\/business-scene\//)) return "/";
@@ -126,6 +135,11 @@ const getActiveIndex = (fullPath: string) => {
       </template>
     </el-dropdown>
 
+    <div class="translate" @click="toggleLocale" :title="languages[locale === 'cn' ? 'en' : 'cn']">
+      <icon-translate />
+      <span class="locale-label">{{ languages[locale as keyof typeof languages] }}</span>
+    </div>
+
     <div class="github">
       <github-pane />
     </div>
@@ -170,6 +184,14 @@ const getActiveIndex = (fullPath: string) => {
   color: var(--el-menu-text-color);
   margin: auto 10px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.locale-label {
+  font-size: 12px;
+  user-select: none;
 }
 
 .outside-link {

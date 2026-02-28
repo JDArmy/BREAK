@@ -1,0 +1,53 @@
+{
+  "R0029": {
+    "title": "Denial of Service Risk",
+    "definition": "Slowing down or stopping business responses by sending large numbers of requests to a server or exploiting server vulnerabilities.",
+    "description": "Also known as DoS. A denial of service attack is when an attacker causes a target machine to stop providing services. Consuming network bandwidth is only a small part of denial of service attacks — any action that causes trouble for the target, suspends services, or crashes the host qualifies as a denial of service attack.",
+    "complexity": "Intermediate",
+    "influence": "Causes business denial of service and affects user access.",
+    "references": [
+      { "title": "OWASP Automated Threat: OAT-015 Denial of Service" }
+    ]
+  },
+  "R0029-001": {
+    "title": "SMS Resource Exhaustion",
+    "definition": "Bulk requesting SMS verification codes and controlling the recipients to exhaust the application's SMS verification code resources while disrupting legitimate users.",
+    "description": "Sending SMS verification code requests to the same phone number to cause disruption or denial of service, or sending SMS verification codes to large numbers of phone numbers to exhaust service resources. In cases where the content can be controlled, this can also trigger fraud.",
+    "complexity": "Intermediate",
+    "influence": "Exhausts platform SMS verification code resources, creates a denial of service attack against the server, and causes disruption and denial of service to specific phone number recipients.",
+    "references": [
+      { "title": "What to Do When SMS Verification Code Interface Is Under Malicious Attack?" }
+    ]
+  },
+  "R0029-002": {
+    "title": "Resource Exhaustion Attack",
+    "definition": "Also known as malicious resource consumption attacks, the goal is to exhaust the target system's resources — such as computing power, storage space, network bandwidth, or other system resources — to paralyze, slow down, or prevent the system from providing normal services.",
+    "description": "Possible scenarios include: network bandwidth attacks flooding the target network; compute resource exhaustion through computationally intensive requests; storage resource exhaustion by uploading large volumes of invalid or large files; TCP connection attacks (SYN flood); and database resource attacks through mass database queries.",
+    "complexity": "Intermediate",
+    "influence": "Causes service unavailability, performance degradation, reliability impact, and financial losses due to malicious resource consumption.",
+    "references": [
+      { "title": "What Are Resource Exhaustion Attacks?" },
+      { "title": "OWASP: OAT-015 Denial of Service" }
+    ]
+  },
+  "R0029-003": {
+    "title": "CC Attack",
+    "definition": "Performing a denial of service attack on a system by constructing large numbers of normal business requests.",
+    "description": "By analyzing each type of business request and targeting requests that are computationally expensive for the server, sending large numbers of forged requests to saturate all server computing resources.",
+    "complexity": "Intermediate",
+    "influence": "Causes business denial of service and affects user access.",
+    "references": [
+      { "title": "OWASP Automated Threat: OAT-015 Denial of Service" }
+    ]
+  },
+  "R0029-004": {
+    "title": "Distributed Denial of Service",
+    "definition": "Distributed Denial of Service (DDoS) is a network attack that uses multiple attackers (or multiple attack sources) to simultaneously attack a target system, rendering it unable to provide normal services.",
+    "description": "DDoS attacks typically aim to push the target system's network bandwidth, computing resources, or other critical resources to their limits, causing service unavailability. Attack types include: network layer attacks (UDP flood, ICMP flood, SYN/ACK attacks); transport layer attacks (SYN flood); application layer attacks (HTTP request flood, Slowloris); and reflection/amplification attacks.",
+    "complexity": "Intermediate",
+    "influence": "Causes service unavailability, performance degradation, reliability impact, and financial losses due to resource consumption.",
+    "references": [
+      { "title": "Distributed Denial of Service" }
+    ]
+  }
+}

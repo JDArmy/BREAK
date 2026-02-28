@@ -1,0 +1,9 @@
+{
+  "AT0042": {
+    "title": "Credential Stuffing Tools",
+    "description": "Credential stuffing tools attempt to crack or decipher user passwords in malicious attacks. They primarily try large numbers of username and password combinations to find credentials matching a target system or service, thereby illegally gaining access to user accounts. Specifically, these tools involve password cracking through brute force or dictionary attacks, username enumeration, and rapid bulk attempts that may trigger account lockouts or other defensive mechanisms.",
+    "references": [
+      { "title": "Credential Stuffing - Baidu Baike" }
+    ]
+  }
+}

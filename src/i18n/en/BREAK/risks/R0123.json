@@ -1,0 +1,13 @@
+{
+  "R0123": {
+    "title": "Algorithm Compliance Risk",
+    "definition": "The risk that algorithmic systems used by enterprises (recommendation algorithms, pricing algorithms, risk control algorithms, etc.) fail to meet regulatory requirements for algorithm transparency, fairness, and explainability.",
+    "description": "Algorithm compliance risk refers to the risk that enterprises may violate relevant laws and regulations when using algorithms for business decisions. With the introduction of regulations such as the Provisions on the Management of Algorithmic Recommendations for Internet Information Services and the Interim Measures for the Management of Generative AI Services, algorithm compliance requirements are increasingly strict. Key risks include: (1) Algorithmic discrimination: recommendation and pricing algorithms treating different user groups unfairly. (2) Filter bubbles: over-personalized recommendation algorithms narrowing users' information access and affecting information diversity. (3) Algorithm opacity: users unable to understand the algorithmic logic affecting their rights, lacking informed consent and choice. (4) Algorithm manipulation: using algorithms to manipulate search rankings and information feed ordering, affecting fair market competition. (5) Unregistered algorithms: algorithm recommendation services with public opinion attributes or social mobilization capabilities not registered as required.",
+    "complexity": "Intermediate",
+    "influence": "Faces regulatory penalties, fines, business rectification requirements, as well as declining user trust and reputational losses.",
+    "references": [
+      { "title": "Provisions on the Management of Algorithmic Recommendations for Internet Information Services" },
+      { "title": "Interim Measures for the Management of Generative AI Services" }
+    ]
+  }
+}

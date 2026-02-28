@@ -1,0 +1,11 @@
+{
+  "A0015": {
+    "title": "Risk Control Strategy",
+    "definition": "Implementing existing or additional risk control strategies to mark and manage special users or behaviors.",
+    "description": "Risk control is the most widely applied measure in business security and is an essential tool for defending against major business operational risks. The security capability level of risk control is heavily dependent on its strategies — this is both an advantage and a disadvantage. The advantage is flexibility in business protection; the disadvantage is coverage of business protection scenarios. Additionally, because risk control can have many risk handling stages and post-processing logic, it can avoid direct confrontation with attackers at high-adversarial stages, achieving long-term effectiveness. However, precisely because of this, compared to some other security measures, risk control can be lagging in certain situations — for example, some identification and handling occurs after the business process has completed, which may cause some financial loss and may also lead to a poor user experience.",
+    "limitation": "Risk control strategies may be affected by data quality, data sources, and data processing, leading to inaccurate risk assessments. Additionally, risk control strategies may be limited by technical means — for example, some fraud methods may not be detectable by traditional risk control technology.",
+    "references": [
+      { "title": "The Evolution and Upgrade of Financial Risk Control Systems: From the First to the Fourth Generation" }
+    ]
+  }
+}

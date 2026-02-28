@@ -1,0 +1,13 @@
+{
+  "R0131": {
+    "title": "QR Code Phishing (Quishing)",
+    "definition": "The risk of using malicious QR codes to direct users to phishing websites, download malware, or perform other malicious actions, also known as Quishing.",
+    "description": "QR code phishing (Quishing) is a new type of phishing attack that uses QR codes as attack vectors. Key attack scenarios include: (1) Payment code replacement: covering a merchant's payment QR code with a malicious one to redirect user payments to the attacker's account. (2) Phishing email embedding: embedding malicious QR codes in phishing emails to bypass traditional URL detection and email security gateways. (3) Public placement: posting QR codes containing malicious links in public places disguised as WiFi connections or promotional offers. (4) Fake official QR codes: forging official QR codes from government agencies, banks, or courier companies to trick users into entering personal information after scanning. (5) Dynamic QR code attacks: using short link services to generate dynamic QR codes that initially point to normal pages but are later modified to malicious pages to evade detection. The unique danger of QR code phishing is that users cannot intuitively judge the content a QR code points to before scanning, and mobile device security protection is typically weaker than on PCs.",
+    "complexity": "Intermediate",
+    "influence": "User personal information leakage, financial losses, malware infection, and account compromise.",
+    "references": [
+      { "title": "Quishing Attack Trend Analysis" },
+      { "title": "QR Code Security Risk Prevention Guide" }
+    ]
+  }
+}

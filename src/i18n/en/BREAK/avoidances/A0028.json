@@ -1,0 +1,16 @@
+{
+  "A0028": {
+    "title": "Resource Access Restriction",
+    "definition": "Restricting the resources accessible to a requester.",
+    "description": "Unlike account penalty strategies (A020), resource access restrictions do not necessarily require obtaining the user's login identity. By using session information delivered to the terminal by the browser, access IP information, or unique device IDs obtained through terminal tracking (A021), the accessor can be identified. On this basis, specific business functions can be disabled, resource usage frequency can be limited, resources can be deleted, or access to illegal resources can be restricted.",
+    "limitation": "In non-login scenarios, resource access restrictions can only rely on terminal factors such as IP, UA, and device ID, all of which can be forged. This limits the effectiveness of this measure against sophisticated attackers.",
+    "references": []
+  },
+  "A0028-001": {
+    "title": "Restrict Off-Site Access",
+    "definition": "Restricting access from external sites by checking the Referer header and similar methods.",
+    "description": "Generally applied to image, video, and file resource requests. Restricting off-site access can reduce unnecessary server load and is also an effective way to prevent resource abuse.",
+    "limitation": "It should be noted that the Referer field can be forged, so this technique is not completely reliable. Additionally, some browsers provide a Referrer Policy option that controls whether the browser includes the Referer field in requests, making it difficult to determine the access source.",
+    "references": []
+  }
+}

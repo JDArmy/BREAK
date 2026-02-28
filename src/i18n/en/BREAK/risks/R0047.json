@@ -1,0 +1,12 @@
+{
+  "R0047": {
+    "title": "CAPTCHA Bypass",
+    "definition": "Passing human-machine tests through automated means.",
+    "description": "Typically involves passing Turing tests (challenges used to distinguish machines from humans) in an automated manner. In addition to traditional image and audio CAPTCHAs, mini-games or arithmetic challenges may also be used. Commonly used during bulk automated operations to bypass human verification. Beyond automated CAPTCHA solving, bypasses can also be achieved by altering the device environment or using third-party scripts to circumvent mouse movement trajectories, touch pressure, 3D gyroscope, and other behavioral biometric checks.",
+    "complexity": "Advanced",
+    "influence": "Human-machine identification mechanisms become ineffective.",
+    "references": [
+      { "title": "OWASP Automated Threat: OAT009 CAPTCHA Defeat" }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "R0144": {
+    "title": "Domain / Brand Impersonation",
+    "definition": "Registering domains similar to target brands, building impersonation websites, or creating fake social media accounts to conduct phishing attacks, traffic hijacking, or brand reputation damage.",
+    "description": "Domain/brand impersonation refers to attackers using domains, page designs, or brand identities similar to well-known brands for fraudulent activities. Main forms include: (1) Typosquatting: registering domains with spellings close to the target brand (e.g., substituting letters, adding or removing characters) to phish users who mistype. (2) Homograph attacks: using visually similar Unicode characters to register domains that are difficult to distinguish with the naked eye. (3) Fake website construction: copying the target brand's website design to build high-fidelity phishing sites to steal user credentials and payment information. (4) Fake app publishing: publishing malicious apps impersonating the brand on unofficial app stores. (5) Social media impersonation: creating fake brand social media accounts for false marketing or fraud. (6) Search engine poisoning: using SEO techniques to rank impersonation websites highly in search results. (7) Subdomain takeover: exploiting expired but still DNS-recorded subdomains of the target brand for impersonation.",
+    "complexity": "Basic",
+    "influence": "Users are phished leading to credential and financial losses, brand reputation is damaged, user trust declines, and intellectual property disputes arise.",
+    "references": [
+      { "title": "Domain Name Abuse - ICANN" },
+      { "title": "Brand Protection and Domain Impersonation Prevention" }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "R0127": {
+    "title": "Supply Chain Poisoning Risk",
+    "definition": "The risk of attackers planting malicious code or backdoors at various stages of the software supply chain, affecting the security of downstream users and systems.",
+    "description": "Supply chain poisoning risk refers to attackers implementing large-scale attacks by contaminating the software supply chain. Main attack methods include: (1) Open source component poisoning: publishing packages containing malicious code on npm, PyPI, Maven, and other package management platforms, or using typosquatting to trick developers into installing malicious packages. (2) Dependency confusion attacks: exploiting package manager dependency resolution mechanisms to cause target systems to install attacker-controlled malicious packages. (3) Build environment contamination: compromising CI/CD pipelines to inject malicious code during the build process. (4) Upstream project hijacking: planting backdoors after gaining maintenance access to popular open source projects. (5) Commercial software backdoors: planting malicious code in commercial software update packages (e.g., the SolarWinds incident). Supply chain attacks have become increasingly frequent in recent years with wide-ranging impact, making them one of the most threatening attack methods.",
+    "complexity": "Advanced",
+    "influence": "Extremely wide impact range, potentially causing large numbers of downstream systems to be implanted with backdoors, sensitive data leakage, and business disruption.",
+    "references": [
+      { "title": "Software Supply Chain Security White Paper - China Academy of Information and Communications Technology" },
+      { "title": "SLSA: Supply-chain Levels for Software Artifacts" }
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "R0054": {
+    "title": "Malicious Returns",
+    "definition": "A buyer returns goods not for legitimate reasons, but to disrupt the seller or platform, or to gain improper benefits.",
+    "description": "A buyer purchases high-value, large, or scarce items with the intent to disrupt or damage, then initiates a return as soon as the goods arrive or before they arrive, causing financial loss or reputational damage to the seller through high return rates. Alternatively, a buyer uses the 7-day no-questions-asked return policy on high-value items after using them, causing depreciation, then colluding with insiders to purchase the depreciated item.",
+    "complexity": "Basic",
+    "influence": "Consumes the seller's profits, inventory, reputation, or supply chain costs.",
+    "references": [
+      { "title": "Buyer Uses Courier Tracking Number for Malicious Refund of Nearly 40,000 Yuan, Faces Fraud Charges" }
+    ]
+  },
+  "R0054-001": {
+    "title": "Bulk Refunds",
+    "definition": "Placing bulk orders through the same or different accounts and initiating illegitimate bulk returns or refunds.",
+    "description": "Using automated or manual means to place large numbers of orders or high-value orders, then bulk-canceling and requesting refunds, maliciously consuming supply chain costs or causing the seller's return rate to rise.",
+    "complexity": "Intermediate",
+    "influence": "Disrupts the seller's normal operations, causing supply chain losses or a drop in ratings and rankings.",
+    "references": [
+      { "title": "What Dark Secrets Lie Behind Bulk Returns to E-Commerce Merchants?" }
+    ]
+  },
+  "R0054-002": {
+    "title": "Return Fraud",
+    "definition": "A buyer returns a counterfeit, used, empty, incomplete, or substitute item instead of the original purchased product.",
+    "description": "The returned item is not the actual item that was shipped — such as returning a counterfeit or a different product (buy A, return B). The quantity of returned items differs from what was actually shipped, including empty packages.",
+    "complexity": "Basic",
+    "influence": "Causes financial loss to the platform or seller.",
+    "references": [
+      { "title": "Online Merchant Hires People to Brush Orders and Return Goods, Faking Damage to Commit Insurance Fraud" },
+      { "title": "What Are the Consequences of Fake Returns on Taobao? Woman Sentenced for Returning Empty Box" }
+    ]
+  },
+  "R0054-003": {
+    "title": "Flash Return Arbitrage",
+    "definition": "Placing an order to receive gifts, vouchers, or discounts, then immediately canceling the order to extract the benefits.",
+    "description": "A targeted fraudster may stockpile large numbers of accounts and monitor platform or merchant promotions in real time. Upon finding a profitable opportunity, they place bulk orders via automation, extract coupons, gifts, or other benefits, and then immediately cancel the orders for profit.",
+    "complexity": "Intermediate",
+    "influence": "Causes financial loss to the platform and sellers.",
+    "references": [
+      { "title": "Exploiting Platform Flash Refund Rules: Order Brushing and Faking Returns Constitutes Fraud" }
+    ]
+  },
+  "R0054-004": {
+    "title": "Malicious Refusal of Delivery",
+    "definition": "A buyer refuses to accept goods for retaliatory or disruptive purposes, occupying or consuming the seller's supply chain resources and causing financial loss.",
+    "description": "A typical malicious attack scenario: a buyer purchases large items such as appliances, electronics, construction materials, or tires, then goes unreachable or refuses delivery when the courier arrives, occupying and consuming the seller's supply chain costs.",
+    "complexity": "Basic",
+    "influence": "Causes supply chain losses to the seller.",
+    "references": [
+      { "title": "Experiencing Malicious Refusal of Delivery by a Xianyu Buyer" }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "R0017": {
+    "title": "Fake Transactions",
+    "definition": "Obtaining benefits through invalid transactions.",
+    "description": "Merchants complete large numbers of fake transactions to obtain platform merchant discounts/rebates, or to inflate product positive review counts at low cost. Methods generally include 'order A, ship B' schemes or directly shipping empty packages.",
+    "complexity": "Intermediate",
+    "influence": "Exploits platform merchant discounts/rebates. Enables unfair competition through inflated positive ratings.",
+    "references": [
+      { "title": "Fake Transactions - Baidu Baike" },
+      { "title": "What Laws and Regulations Do Fake Transactions Violate?" }
+    ]
+  },
+  "R0017-001": {
+    "title": "Order Brushing",
+    "definition": "Merchants completing bulk low-cost or fake orders to inflate transaction volume or improve ratings.",
+    "description": "Merchants complete large numbers of low-cost transactions to obtain platform merchant discounts/rebates, or to inflate product positive review counts at low cost. Methods generally include hiring buyers or maliciously listing low-value items to complete bulk transactions.",
+    "complexity": "Intermediate",
+    "influence": "Undermines fair competition principles on the platform; in some cases exploits platform merchant discounts/rebates.",
+    "references": [
+      { "title": "Order Brushing - Baidu Baike" }
+    ]
+  },
+  "R0017-002": {
+    "title": "Subsidy Fraud",
+    "definition": "",
+    "description": "",
+    "complexity": "Intermediate",
+    "influence": "",
+    "references": [
+      { "title": "Ride-Hailing Driver \"Ghost Rides\" to Brush Orders and Defraud Subsidies — Court: Fraud, Sentenced!" },
+      { "title": "Hiring Order Brushers and Recruiting Insiders to Defraud E-Commerce Platform Subsidies: 9-Person Gang Caught" }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "A0011": {
+    "title": "Force Session Logout",
+    "definition": "Logging the user out of their session and invalidating the current login state on the server side.",
+    "description": "Forcing a session logout is a lightweight user penalty strategy (A020). Some cases are for the user's account security, such as detection and handling of cookie reuse and logins from unusual locations. Other cases aim to force the session holder to go through the identity authentication (A018) login challenge again — for example, many crawlers use session tokens for data scraping. Since the login challenge typically includes credential verification, human verification (A001), and multi-factor authentication (A007) challenges, this can effectively disrupt automated crawlers.",
+    "limitation": "Many applications support multi-point login, meaning that even after a session is forced out, the user can still access via another active session. Additionally, because forcing a session logout effectively disrupts the black-market cookie trading workflow, many black-market account vendors now provide one-click login tools that can re-login instantly even after a forced logout.",
+    "references": []
+  }
+}

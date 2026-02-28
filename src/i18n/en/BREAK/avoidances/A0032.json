@@ -1,0 +1,11 @@
+{
+  "A0032": {
+    "title": "Data Parsing Interference",
+    "definition": "Increasing the difficulty for programs to parse or understand the content of obtained data.",
+    "description": "Common data parsing interference methods include: text obfuscation, response data encryption (A022-003), dynamic page rendering, JS obfuscation, and returning fake data (A031). Text obfuscation further includes CSS offset, image-disguised text, and custom fonts. These methods do not directly identify or block attackers' data request processes, but instead increase the difficulty for programs to understand data resources, thereby raising the adversarial level.",
+    "limitation": "Any resource displayed on a terminal, no matter how complex the countermeasures, can potentially be reversed and cracked. Additionally, there is a very simple and brute-force method that can bypass most data parsing interference: simulate user requests, access the page containing the resource, take a screenshot, and use OCR to identify the resource content — this can easily bypass the methods mentioned above.",
+    "references": [
+      { "title": "Introduction to Crawlers and Anti-Crawling Techniques (see Chapter 2 - Anti-Crawling Technologies)" }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "R0132": {
+    "title": "SIM Swap Attack",
+    "definition": "Attackers use social engineering to deceive telecom operators into transferring a target user's phone number to a SIM card controlled by the attacker, thereby hijacking phone number-based identity authentication.",
+    "description": "SIM Swap Attack is an attack method targeting phone number-based identity authentication systems. The attack process typically involves: (1) Information gathering: attackers obtain the target user's personal information (name, ID number, phone number, etc.) through social engineering or data breaches. (2) Contacting the operator: attackers impersonate the target user and contact telecom operator customer service, claiming the phone was lost or the SIM card was damaged, to request a SIM card replacement or number transfer. (3) Number hijacking: after the operator transfers the target number to the attacker's SIM card, the attacker can receive all SMS messages and calls for that number. (4) Account takeover: using the hijacked phone number to receive SMS verification codes and reset the target user's passwords on various platforms. (5) Asset theft: logging into the target user's bank, payment, and cryptocurrency accounts to transfer assets. SIM Swap attacks are extremely harmful because a large number of online services rely on SMS verification codes as an authentication method.",
+    "complexity": "Advanced",
+    "influence": "Phone number is hijacked, all SMS verification-based accounts face takeover risk, and financial assets are stolen.",
+    "references": [
+      { "title": "SIM Swap Fraud - FBI IC3" },
+      { "title": "SIM Swap Attack Prevention - CISA" }
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "R0081": {
+    "title": "Supply Chain Risk",
+    "definition": "Supply chain risk refers to the possibility that products such as software, hardware, and cloud services are exposed to security threats during development, delivery, deployment, and maintenance due to potential threats in supply chain components or links.",
+    "description": "Supply chain risk refers to the possibility that products such as software, hardware, and cloud services are exposed to security threats during development, delivery, deployment, and maintenance due to potential threats in supply chain components or links.",
+    "complexity": "Intermediate",
+    "influence": "Harms include potential business disruption, sensitive information exposure, and system vulnerability exposure, significantly impacting the organization's trust and reliability.",
+    "references": []
+  },
+  "R0081-001": {
+    "title": "Software Supply Chain Risk",
+    "definition": "Software supply chain risk refers to the possibility that software systems are exposed to security threats during development, delivery, deployment, and maintenance due to potential threats in supply chain components or links.",
+    "description": "Scenarios include third-party components being attacked, suppliers suffering data breaches, and software development tools being tampered with, potentially leading to malicious code injection, backdoors, or data leakage.",
+    "complexity": "Intermediate",
+    "influence": "Harms include potential business disruption, sensitive information exposure, and system vulnerability exposure, significantly impacting the organization's trust and reliability.",
+    "references": []
+  },
+  "R0081-002": {
+    "title": "Hardware Supply Chain Risk",
+    "definition": "Hardware supply chain risk refers to the possibility that hardware systems are exposed to security threats during development, delivery, deployment, and maintenance due to potential threats in supply chain components or links.",
+    "description": "Scenarios include third-party components being attacked, suppliers suffering data breaches, and hardware development tools being tampered with, potentially leading to malicious code injection, backdoors, or data leakage.",
+    "complexity": "Intermediate",
+    "influence": "Harms include potential business disruption, sensitive information exposure, and system vulnerability exposure, significantly impacting the organization's trust and reliability.",
+    "references": []
+  },
+  "R0081-003": {
+    "title": "Cloud Service Supply Chain Risk",
+    "definition": "Cloud service supply chain risk refers to the possibility that cloud services are exposed to security threats during development, delivery, deployment, and maintenance due to potential threats in supply chain components or links.",
+    "description": "Scenarios include third-party components being attacked, suppliers suffering data breaches, and cloud service development tools being tampered with, potentially leading to malicious code injection, backdoors, or data leakage.",
+    "complexity": "Intermediate",
+    "influence": "Harms include potential business disruption, sensitive information exposure, and system vulnerability exposure, significantly impacting the organization's trust and reliability.",
+    "references": []
+  },
+  "R0081-004": {
+    "title": "Outsourced Personnel Risk",
+    "definition": "Outsourced personnel risk refers to the possibility that software systems are exposed to security threats due to potential threats from the behavior of outsourced personnel involved in software development, delivery, deployment, and maintenance.",
+    "description": "Scenarios include outsourced personnel's accounts being compromised, maliciously tampered with, or misused, potentially leading to malicious code injection, backdoors, or data leakage.",
+    "complexity": "Intermediate",
+    "influence": "Harms include potential business disruption, sensitive information exposure, and system vulnerability exposure, significantly impacting the organization's trust and reliability.",
+    "references": []
+  },
+  "R0081-005": {
+    "title": "Open Source Component Poisoning Risk",
+    "definition": "Attackers publish packages containing malicious code on open source package management platforms (such as npm, PyPI, Maven, etc.) or hijack existing popular open source projects to conduct supply chain attacks against downstream users.",
+    "description": "Open source component poisoning is a rapidly growing supply chain attack method. Main techniques include: (1) Typosquatting: publishing malicious packages with names similar to popular packages to exploit developer typos. (2) Dependency confusion: exploiting package managers' preference for public repositories to publish malicious public packages with the same name as internal enterprise packages. (3) Maintainer account hijacking: obtaining popular open source project maintainer account access through social engineering or credential leakage to plant malicious code in normal updates. (4) Malicious PR merging: submitting pull requests containing hidden malicious code to popular open source projects. (5) Abandoned package takeover: taking over popular packages abandoned by their original authors and planting malicious code in new versions.",
+    "complexity": "Advanced",
+    "influence": "Large numbers of downstream projects are implanted with malicious code, sensitive data is leaked, systems are compromised, and the supply chain trust ecosystem is damaged.",
+    "references": [
+      { "title": "SLSA: Supply-chain Levels for Software Artifacts" }
+    ]
+  }
+}

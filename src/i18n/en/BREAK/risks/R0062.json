@@ -1,0 +1,32 @@
+{
+  "R0062": {
+    "title": "Illegal Cash-Out",
+    "definition": "Converting funds into a more convenient or valuable form through fraudulent transactions, using the extracted funds for illegal or prohibited purposes.",
+    "description": "Refers to converting one form of funds into another more usable or valuable form. This typically involves converting non-cash assets such as credit card limits, points, coupons, or virtual currencies into cash. For example, some people may use a credit card to purchase returnable goods and then return them for cash. Others may sell virtual currencies on trading platforms to convert them into cash.",
+    "complexity": "Intermediate",
+    "influence": "Causes financial losses and compliance risks for the platform.",
+    "references": [
+      { "title": "Illegal Cash-Out - Baidu Baike" }
+    ]
+  },
+  "R0062-001": {
+    "title": "Credit Card / Loan Cash-Out",
+    "definition": "Exploiting platform mechanisms to cash out credit card limits or shopping loans.",
+    "description": "Exploiting platform business process vulnerabilities to withdraw shopping loans to a bank card, or colluding between buyers and sellers to fake shipments and extract shopping loan funds.",
+    "complexity": "Intermediate",
+    "influence": "Causes financial losses and compliance risks for the platform.",
+    "references": [
+      { "title": "Credit Card Cash-Out - Baidu Baike" }
+    ]
+  },
+  "R0062-002": {
+    "title": "Illegal Points Cash-Out",
+    "definition": "Obtaining points through illegal means or converting points into cash in violation of terms of service.",
+    "description": "Illegal points cash-out may include: a) Fabricated transactions: creating fake transactions to earn points, such as using one's own credit card at one's own store, then canceling the transactions while retaining the points. b) Exploiting system vulnerabilities: using loopholes to obtain extra points without actual spending. c) Buying and selling points: purchasing others' points and reselling them at a higher price, or selling goods redeemed with points at full market price.",
+    "complexity": "Intermediate",
+    "influence": "Causes financial losses and compliance risks for the platform.",
+    "references": [
+      { "title": "Can you get rich from points cash-out? Shanghai man detained for illegally obtaining merchant points" }
+    ]
+  }
+}

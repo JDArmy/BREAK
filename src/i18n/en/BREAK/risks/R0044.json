@@ -1,0 +1,12 @@
+{
+  "R0044": {
+    "title": "Transfer Fraud",
+    "definition": "Deceiving others into making transfers using high-fidelity spoofed accounts, or forging transfer records.",
+    "description": "Typically involves two scenarios: deceiving the payee and deceiving the payer. Deceiving the payee generally involves forging transaction records or using untrustworthy third parties as guarantors. Deceiving the payer generally involves creating high-fidelity spoofed payee accounts to induce payment.",
+    "complexity": "Advanced",
+    "influence": "Financial loss to the payee or payer.",
+    "references": [
+      { "title": "Transfer Timing Fraud: How to Guard Against This New Type of Scam" }
+    ]
+  }
+}

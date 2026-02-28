@@ -1,0 +1,12 @@
+{
+  "R0063": {
+    "title": "Duplicate Product Listings",
+    "definition": "A seller excessively lists the same or similar products in their store, resulting in duplicate product listings and redundant inventory.",
+    "description": "Duplicate listings generally include: products with highly similar titles, images, key attributes, or descriptions. Listing the same product separately by different colors, sizes, bundles, or specifications is generally considered duplicate listing.",
+    "complexity": "Basic",
+    "influence": "Degrades the shopping experience and may cause transaction loss; occupies platform search and recommendation resources, damaging the platform's reputation.",
+    "references": [
+      { "title": "What Is Duplicate Product Listing?" }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "R0050": {
+    "title": "Risk Device Identification Bypass",
+    "definition": "Modifying a real device's device information to deceive applications and lower the device risk score.",
+    "description": "Scenarios include: the operating system running the app has been rooted, the app runs while being hooked, the app runs under a debugger, or the security certificate between the app and server has been replaced.",
+    "complexity": "Advanced",
+    "influence": "May cause security processes within the application to be broken and data to be forged.",
+    "references": [
+      { "title": "Frontend Anti-Fraud Practices in Business Risk Control" }
+    ]
+  },
+  "R0050-001": {
+    "title": "Virtual Device Identification Bypass",
+    "definition": "Simulating a real device through software to facilitate subsequent abuse.",
+    "description": "Running applications via cloud phones, cloud servers, virtual machines, emulators, and similar means.",
+    "complexity": "Intermediate",
+    "influence": "May cause security processes within the application to be broken and data to be forged.",
+    "references": [
+      { "title": "Device Fingerprinting: How to Counter Various Virtual Devices?" }
+    ]
+  }
+}

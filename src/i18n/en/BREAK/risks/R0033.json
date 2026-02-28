@@ -1,0 +1,20 @@
+{
+  "R0033": {
+    "title": "Ghost Stores",
+    "definition": "Ghost stores refer to stores that exist on physical or online platforms but are effectively closed, abandoned, or unable to operate normally due to poor management, poor operations, poor sales performance, or other reasons.",
+    "description": "On online platforms, especially e-commerce platforms, merchants may sometimes stop operating or go long periods without updating products and services, yet their stores remain active. These abandoned or non-functioning stores are sometimes called 'ghost stores'.",
+    "complexity": "Basic",
+    "influence": "May lead to the store being unable to provide normal services, declining product quality, and potential inability to process returns or provide after-sales service.",
+    "references": [
+      { "title": "Ghost Stores - Baidu Baike" }
+    ]
+  },
+  "R0033-001": {
+    "title": "Merchant Disappearance / Runaway",
+    "definition": "A merchant suddenly becomes unreachable after operating on the platform for a period of time.",
+    "description": "Some disappearances may be caused by sudden circumstances or poor management, while others are deliberate — either to evade platform responsibilities or to cold-shoulder buyer complaints.",
+    "complexity": "Basic",
+    "influence": "May lead to the store being unable to provide normal services, inability to process returns, or lack of after-sales service.",
+    "references": []
+  }
+}

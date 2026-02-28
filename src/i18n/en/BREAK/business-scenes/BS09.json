@@ -1,0 +1,17 @@
+{
+  "BS09": {
+    "title": "Government Websites",
+    "riskDimensions": {
+      "RD02": { "title": "Operations Dimension" },
+      "RD03": { "title": "Identity Dimension" },
+      "RD04": { "title": "Adversarial Dimension" }
+    },
+    "riskScenes": {
+      "RS02": { "title": "Compliance Risk" },
+      "RS04": { "title": "Illegal Request Risk" },
+      "RS06": { "title": "Internal Risk" },
+      "RS07": { "title": "Identity Theft Risk" },
+      "RS09": { "title": "Identity Verification Risk" }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "AT0034": {
+    "title": "Risk IP Addresses",
+    "description": "Risk IP addresses are IP addresses considered unsafe in the network security domain. They may be malicious IPs, IPs being maliciously exploited, or IPs that have been misjudged. Risk IP addresses are classified into three risk levels: high, medium, and low. High-risk IPs are considered malicious, medium-risk IPs are being maliciously exploited, and low-risk IPs are misjudged.",
+    "references": [
+      { "title": "Introduction to IP Risk Profiling Technology" }
+    ]
+  }
+}

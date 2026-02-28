@@ -1,0 +1,10 @@
+{
+  "R0076": {
+    "title": "Classified Protection (MLPS) Compliance Risk",
+    "definition": "Multi-Level Protection Scheme (MLPS) compliance risk refers to the potential threat of an organization failing to meet relevant regulations and standards under the information security classified protection system.",
+    "description": "Scenarios include failure to meet the security level requirements for information systems under the classified protection system, failure to fulfill information security management responsibilities, and risks of data leakage and unauthorized access.",
+    "complexity": "Basic",
+    "influence": "Harms may include legal liability, information leakage, service disruptions, and negative impacts on the organization's reputation and trust.",
+    "references": []
+  }
+}

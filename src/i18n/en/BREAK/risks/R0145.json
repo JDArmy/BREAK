@@ -1,0 +1,13 @@
+{
+  "R0145": {
+    "title": "Content Farm Risk",
+    "definition": "Bulk-producing low-quality, highly SEO-optimized content to dominate search rankings, polluting the platform content ecosystem, misleading users, and harming the interests of quality content creators.",
+    "description": "Content farm risk refers to the behavior of using automation or low-cost labor to bulk-produce low-quality content to gain traffic and revenue. Main forms include: (1) SEO keyword stuffing: bulk-producing low-quality articles optimized for popular keywords to dominate search engine rankings. (2) AI-generated content flooding: using large language models to bulk-generate seemingly professional but genuinely valueless content. (3) Content scraping and rewriting: mass-publishing others' original content after simple rewrites, diluting original content traffic. (4) Clickbait and misinformation: using exaggerated headlines and false information to attract clicks and spread misinformation. (5) Comment flooding: bulk-posting fake reviews and answers in product reviews, Q&A communities, and similar contexts. (6) Multi-platform distribution: simultaneously publishing the same batch of low-quality content across multiple platforms to maximize traffic revenue. (7) Ad revenue arbitrage: generating large page view counts through low-quality content to fraudulently obtain advertising revenue shares.",
+    "complexity": "Basic",
+    "influence": "Platform content quality declines, the cost for users to obtain useful information increases, quality creators leave the platform, and platform brand value is damaged.",
+    "references": [
+      { "title": "Content Farm Detection and Prevention" },
+      { "title": "Provisions on the Governance of the Internet Information Content Ecosystem" }
+    ]
+  }
+}

@@ -1,24 +1,24 @@
-/**
- * you can follow the constructure of /src/BREAK files
- */
+import { loadJsonModules } from "@/BREAK/utils";
 
-// import main from "./main.json";
-// import risks from "./risks.json";
-// import riskScenes from "./riskScenes.json";
-// import riskDimensions from "./riskDimensions.json";
-// import avoidances from "./avoidances.json";
-// import abilityProbiders from "./abilityProviders.json";
-// import businessScenes from "./businessScenes.json";
+const basicInfo = { title: "Business Risk Enumeration & Avoidance Knowledge", description: "BREAK (Business Risk Enumeration & Avoidance Knowledge) is an open knowledge framework", rights: "The BREAK framework is created, owned, and managed by JD.Army. JD.Army is a professional red team focused on identifying and resolving enterprise security operational risks. JD.Army reserves the right to update BREAK periodically at its sole discretion. While JD.Army owns all rights and interests in BREAK, it licenses the public to use it freely under the relevant open source license." };
 
-// let BREAK = {
-//   ...main, //BREAK框架基础信息
-//   ...risks, //业务风险枚举
-//   ...riskScenes, //风险场景
-//   ...riskDimensions, //风险维度
-//   ...avoidances, //规避手段枚举
-//   ...abilityProbiders, //能力提供者
-//   ...businessScenes, //业务场景
-// };
+const avoidanceCategoryFiles = import.meta.glob("./avoidance-categories/*.json", { eager: true });
+const riskFiles = import.meta.glob("./risks/*.json", { eager: true });
+const avoidanceFiles = import.meta.glob("./avoidances/*.json", { eager: true });
+const businessSceneFiles = import.meta.glob("./business-scenes/*.json", { eager: true });
+const attackToolFiles = import.meta.glob("./attack-tools/*.json", { eager: true });
+const threatActorFiles = import.meta.glob("./threat-actors/*.json", { eager: true });
+const abilityProviderFiles = import.meta.glob("./ability-providers/*.json", { eager: true });
 
-const BREAK = {};
+const BREAK = {
+  ...basicInfo,
+  risks: loadJsonModules(riskFiles),
+  avoidances: loadJsonModules(avoidanceFiles),
+  avoidanceCategories: loadJsonModules(avoidanceCategoryFiles),
+  businessScenes: loadJsonModules(businessSceneFiles),
+  attackTools: loadJsonModules(attackToolFiles),
+  threatActors: loadJsonModules(threatActorFiles),
+  abilityProviders: loadJsonModules(abilityProviderFiles),
+};
+
 export default BREAK;

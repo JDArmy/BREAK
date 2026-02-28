@@ -1,0 +1,12 @@
+{
+  "R0129": {
+    "title": "SMS Bombing as a Service",
+    "definition": "The risk of using commercialized SMS bombing service platforms to send large volumes of spam messages to target phone numbers, causing harassment or consuming SMS resources.",
+    "description": "SMS Bombing as a Service refers to black market groups packaging SMS bombing capabilities as online services, allowing anyone to launch SMS bombing attacks against a specified phone number for a small fee. Attackers collect large numbers of SMS verification code interfaces from websites and apps, then use these interfaces to bulk-send verification code messages to target numbers. Key harms include: (1) User harassment: target users receive large volumes of spam messages in a short time, severely disrupting normal use. (2) SMS resource consumption: abused platforms must bear large SMS sending costs. (3) Verification code interface abuse: platform SMS verification code interfaces are maliciously called, affecting normal business. (4) Cover for attacks: large volumes of spam messages mask genuine security alert messages (such as login notifications and transaction confirmations).",
+    "complexity": "Basic",
+    "influence": "Users are harassed, platform SMS resources are consumed, verification code interfaces are abused, and security alerts are buried.",
+    "references": [
+      { "title": "SMS Bombing Attack Analysis and Defense" }
+    ]
+  }
+}

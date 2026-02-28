@@ -1,0 +1,12 @@
+{
+  "R0049": {
+    "title": "Proxy Login / Proxy Order Placement",
+    "definition": "Using a device environment to assist logging into another person's account, or using an account to assist others in placing orders.",
+    "description": "Using a device environment to assist logging into another person's account, or using an account to assist others in placing orders. Typically done to bypass device risk controls or reduce account risk scores, enabling login, order placement, and other operations.",
+    "complexity": "Advanced",
+    "influence": "Device/account risk identification mechanisms become ineffective.",
+    "references": [
+      { "title": "Proxy Order Placement - Baidu Baike" }
+    ]
+  }
+}

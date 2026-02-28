@@ -1,0 +1,12 @@
+{
+  "R0013": {
+    "title": "Ad Blocking",
+    "definition": "Preventing advertisements from displaying on web pages or applications.",
+    "description": "Free content providers typically insert ads into content or before content viewing to generate revenue. Ad blockers typically exist as browser plugins or applications that block ad display, reducing the impact of ads on content viewers or allowing viewers to skip ads and access free content directly. While this improves the viewer experience, from the content operator's perspective, providing free content without earning revenue affects the stability and sustainability of free content provision.",
+    "complexity": "Intermediate",
+    "influence": "Revenue loss for content providers.",
+    "references": [
+      { "title": "Comparing 6 Apps: A Complete Guide to Mobile Ad Blocking" }
+    ]
+  }
+}

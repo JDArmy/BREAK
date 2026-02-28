@@ -1,0 +1,31 @@
+{
+  "R0116": {
+    "title": "AI Deepfake Risk",
+    "definition": "The risk of using AI deepfake technology to generate fake facial images, videos, or audio for malicious purposes such as identity impersonation, fraud, and public opinion manipulation.",
+    "description": "AI deepfake risk refers to attackers using AI technologies such as GANs and diffusion models to generate highly realistic fake facial images, videos, or audio content for various fraudulent and attack activities. Key risk scenarios include: (1) Identity impersonation: using deepfake technology to forge others' facial features to bypass facial recognition authentication systems for account takeover and financial fraud. (2) Video call fraud: using AI face-swapping in real-time video calls to impersonate others for social engineering attacks. (3) Fabricated evidence: generating fake video or audio evidence for extortion, reputational damage, or legal disputes. (4) Public opinion manipulation: creating fake videos of public figures to spread misinformation. As deepfake technology rapidly advances and open-source tools proliferate, the attack barrier continues to lower, making this a major emerging threat in business security.",
+    "complexity": "Advanced",
+    "influence": "Can lead to identity authentication systems being compromised, financial fraud losses, serious brand reputational damage, social trust crises, and legal compliance risks.",
+    "references": [
+      { "title": "Deepfake Technology Governance White Paper - China Academy of Information and Communications Technology" },
+      { "title": "Deepfakes and the New Disinformation War" }
+    ]
+  },
+  "R0116-001": {
+    "title": "AI Face-Swap Fraud",
+    "definition": "Using AI face-swapping technology to replace faces in real-time video or images to impersonate others and commit fraud.",
+    "description": "AI face-swap fraud is the most common form of deepfake attack. Attackers use tools like DeepFaceLab to train face-swap models based on publicly available photos or videos of the target, then replace their own face with the target's in real-time video calls or recorded videos. Typical attack scenarios include: impersonating corporate executives in video conference fraud (CEO Fraud), impersonating friends or family in video calls to extort money, and forging faces to pass remote identity verification (such as bank account opening or loan approval). Since 2024, multiple large-scale fraud cases using AI face-swapping have been exposed, with single-incident losses reaching tens of millions of yuan.",
+    "complexity": "Advanced",
+    "influence": "Directly leads to financial fraud losses, identity authentication system failures, and user trust crises.",
+    "references": [
+      { "title": "AI Face-Swap Fraud Case Analysis" }
+    ]
+  },
+  "R0116-002": {
+    "title": "AI Synthetic Video Fraud",
+    "definition": "Using AI technology to synthesize fake video content for false advertising, public opinion manipulation, or fraud.",
+    "description": "AI synthetic video fraud refers to using deepfake technology to generate complete fake video content, including fake news reports, product recommendations, and celebrity endorsements. Unlike AI face-swapping, synthetic videos may involve more complex techniques such as full-body synthesis and scene synthesis. Attackers can use synthetic videos for false advertising, forging celebrity endorsements to promote fraudulent products, and creating fake news to manipulate stock prices.",
+    "complexity": "Advanced",
+    "influence": "Leads to the spread of misinformation, consumer deception, brand reputational damage, and market order disruption.",
+    "references": []
+  }
+}

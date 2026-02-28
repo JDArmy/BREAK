@@ -1,0 +1,37 @@
+{
+  "R0126": {
+    "title": "API Abuse Risk",
+    "definition": "The risk of attackers discovering, enumerating, and abusing API interfaces of business systems to conduct data theft, business logic bypass, resource exhaustion, and other attacks.",
+    "description": "API abuse risk is a security risk that has become increasingly prominent with the development of microservice architectures and the API economy. Attackers discover and exploit security flaws in API interfaces through various means to carry out malicious operations. Key risk scenarios include API enumeration attacks, API rate limit bypass, and API business logic abuse.",
+    "complexity": "Intermediate",
+    "influence": "Sensitive data leakage, business logic bypass, service availability impact, and financial losses.",
+    "references": [
+      { "title": "OWASP API Security Top 10 2023" },
+      { "title": "API Security Best Practices - Gartner" }
+    ]
+  },
+  "R0126-001": {
+    "title": "API Enumeration Attack",
+    "definition": "Using automated tools to discover and enumerate API endpoints of a target system to obtain unauthorized API interface information.",
+    "description": "API enumeration attacks involve attackers using path brute-forcing, Swagger/OpenAPI documentation leakage, JavaScript code analysis, and traffic analysis to discover exposed API endpoints. Attackers may discover unprotected admin interfaces, test interfaces, and deprecated but still-active legacy interfaces, then use them to obtain sensitive data or perform unauthorized operations.",
+    "complexity": "Intermediate",
+    "influence": "Exposes internal interface information, providing entry points for subsequent attacks.",
+    "references": []
+  },
+  "R0126-002": {
+    "title": "API Rate Limit Bypass",
+    "definition": "Using technical means to bypass the rate limiting mechanisms of API interfaces to achieve over-frequency calls.",
+    "description": "API rate limit bypass refers to attackers using IP rotation, distributed requests, parameter variation, header spoofing, and exploiting different API versions to bypass rate limits set on API interfaces. After bypassing rate limits, attackers can conduct brute force attacks, bulk data scraping, and resource exhaustion attacks.",
+    "complexity": "Advanced",
+    "influence": "Rate limiting protection becomes ineffective, exposing the system to brute force, data scraping, and resource exhaustion risks.",
+    "references": []
+  },
+  "R0126-003": {
+    "title": "API Business Logic Abuse",
+    "definition": "Exploiting business logic flaws in API interfaces to achieve unintended business operations through legitimate API calls.",
+    "description": "API business logic abuse refers to attackers analyzing API business logic and exploiting logical flaws in interface design. Examples include: bypassing price validation by modifying API request parameters, skipping payment processes by exploiting API call sequence vulnerabilities, locking inventory through bulk API calls, and achieving race conditions by exploiting API concurrency handling flaws. These attacks use legitimate API calls, making them difficult to detect with traditional security measures.",
+    "complexity": "Advanced",
+    "influence": "Business logic is bypassed, potentially causing financial losses, data inconsistency, and disruption of business processes.",
+    "references": []
+  }
+}

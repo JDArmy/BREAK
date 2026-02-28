@@ -1,0 +1,50 @@
+{
+  "R0032": {
+    "title": "Account Takeover",
+    "definition": "Stealing login credentials through trojans, phishing, and other means.",
+    "description": "There are two typical types of login credentials: authentication credentials used to log in (primarily username/password, but also one-time passwords, SMS verification codes, biometric features, etc.); and session maintenance credentials used to maintain login state (typically cookies, but also session IDs, nonces, JSON Web Tokens, etc.).",
+    "complexity": "Advanced",
+    "influence": "Grants the attacker persistent account access and operational permissions on the corresponding website or application.",
+    "references": [
+      { "title": "OWASP Automated Threat: OAT007 Credential Cracking" }
+    ]
+  },
+  "R0032-001": {
+    "title": "Credential Stuffing",
+    "definition": "Testing the validity of stolen account credentials in the current system through bulk login attempts.",
+    "description": "Testing a list of stolen authentication credentials against the current system's authentication mechanism to determine whether users have reused the same login credentials. Stolen usernames (usually email addresses) and passwords may have been obtained directly from another application, purchased on criminal markets, or obtained from publicly available breach data dumps. Unlike credential cracking, credential stuffing does not involve any brute force or numerical guessing.",
+    "complexity": "Advanced",
+    "influence": "Through unrestricted credential stuffing, attackers may gain access to many users who have reused credentials from other systems, causing losses to those users through further operations.",
+    "references": [
+      { "title": "OWASP Automated Threat: OAT008 Credential Stuffing" }
+    ]
+  },
+  "R0032-002": {
+    "title": "Password Spraying",
+    "definition": "Attempting to log in by brute-forcing a specific weak password against a large list of accounts to obtain valid credentials.",
+    "description": "Using brute force, dictionary (word list), and guessing attacks against the application's authentication process to identify accounts using specific weak login credentials — for example, enumerating accounts that use a particular weak password.",
+    "complexity": "Advanced",
+    "influence": "Through unrestricted credential attacks, attackers may gain access to users with weak passwords on the current system, causing losses through further operations.",
+    "references": [
+      { "title": "OWASP Automated Threat: OAT007 Credential Cracking" }
+    ]
+  },
+  "R0032-003": {
+    "title": "Credential Brute Force",
+    "definition": "Attempting to log in by brute-forcing a list of possible passwords for a specific account to obtain valid credentials.",
+    "description": "Using brute force, dictionary (word list), and guessing attacks against the application's authentication process to identify the weak credentials used by a specific account — for example, enumerating a user's password.",
+    "complexity": "Advanced",
+    "influence": "Through unrestricted credential attacks, attackers may gain access to users with weak passwords on the current system, causing losses through further operations.",
+    "references": [
+      { "title": "OWASP Automated Threat: OAT007 Credential Cracking" }
+    ]
+  },
+  "R0032-004": {
+    "title": "Verification Code Brute Force",
+    "definition": "Attempting to log in by brute-forcing verification codes to obtain valid credentials.",
+    "description": "Verification code brute force risk refers to attackers attempting to break verification codes by continuously trying various possibilities to gain access to a system or account. Causes include: weak verification code design; lack of security protections such as frequently changing codes or lockout mechanisms; reuse of the same verification code across multiple locations; and inadequate verification code generation algorithms.",
+    "complexity": "Intermediate",
+    "influence": "User identity compromise.",
+    "references": []
+  }
+}

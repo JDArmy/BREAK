@@ -1,0 +1,10 @@
+{
+  "R0080": {
+    "title": "Device Malware Infection",
+    "definition": "Malware or trojans infiltrate an organization's internal network through employee devices or accounts, potentially stealing sensitive information, monitoring operations, or damaging systems.",
+    "description": "Scenarios may include employees clicking malicious links, downloading trojan-infected attachments, or being tricked through social engineering, causing malware to enter the internal network.",
+    "complexity": "Intermediate",
+    "influence": "Harms include sensitive data leakage, network service disruption, damage to information assets, and potential financial losses.",
+    "references": []
+  }
+}

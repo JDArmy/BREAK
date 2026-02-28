@@ -1,0 +1,9 @@
+{
+  "A0024": {
+    "title": "Real-Name Identity Verification",
+    "definition": "Binding a virtual identity to a real-world identity.",
+    "description": "A person's or entity's real-world identity includes legally recognized documents such as national ID cards, household registration books, driver's licenses, military officer IDs, soldier IDs, passports, and business licenses. The real-name identity verification process is the process of binding a person's or entity's online virtual identity to their real-world identity. This process may use biometric identification (A023) and other methods to confirm the validity of the real-world identity.",
+    "limitation": "Because personal ID document information leaks occur frequently, it is not sufficient to verify identity ownership by simply entering an ID number or photographing an ID document. It is necessary to combine facial recognition, SMS verification linked to the registered phone number, bank card holder verification, and other methods to confirm the document owner.",
+    "references": []
+  }
+}

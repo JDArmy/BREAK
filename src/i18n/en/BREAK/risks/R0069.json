@@ -1,0 +1,32 @@
+{
+  "R0069": {
+    "title": "Upload Abuse",
+    "definition": "Using a business system's normal file upload functionality to upload unexpected files.",
+    "description": "Business systems with user-generated content features such as image or file uploads can be exploited by attackers who upload files through the upload interface that are not intended for the platform's normal use.",
+    "complexity": "Basic",
+    "influence": "Consumes platform storage and network resources, and may create compliance risks.",
+    "references": [
+      { "title": "5 Tips to Reduce Malicious File Uploads on Websites" }
+    ]
+  },
+  "R0069-001": {
+    "title": "Image Hosting Abuse",
+    "definition": "Users upload images or files through the platform's normal image upload feature that are not intended for the site's normal functions, and abuse the resources for external access.",
+    "description": "Two common scenarios: first, users upload large volumes of images to use the platform's image upload feature as personal cloud storage; second, users upload video files disguised as images. Users slice video files into segments, append each segment to an image file to disguise them as images, upload the sliced files via the image upload interface, and use an m3u file to aggregate the image URLs for video playback. This is common in features that allow immediate image upload and return a URL, such as ID photo upload before identity verification or avatar upload after account creation. If the page is not finally submitted, it typically bypasses backend review, creating a blind spot that can be exploited to distribute pirated or pornographic videos.",
+    "complexity": "Basic",
+    "influence": "Disrupts normal system operations, consumes large amounts of network bandwidth and storage space, and creates compliance risks.",
+    "references": [
+      { "title": "Remote Image Hosting Service Gradually Shutting Down" }
+    ]
+  },
+  "R0069-002": {
+    "title": "Cloud Storage Abuse",
+    "definition": "Similar to image hosting abuse (R0069-001), but the difference is that cloud storage is a feature of the business's cloud service rather than an ancillary resource for user-generated content.",
+    "description": "Using the cloud storage feature provided by the business to upload unexpected or illegal content. Cloud storage may be part of a cloud computing service or a cloud drive, and is typically subject to weaker content moderation than user-generated content, making it potentially exploitable by bad actors to distribute pirated or pornographic videos.",
+    "complexity": "Basic",
+    "influence": "Disrupts normal system operations, consumes large amounts of network bandwidth and storage space, and creates compliance risks.",
+    "references": [
+      { "title": "Alibaba OSS Storage Bucket Breached, Malicious Shell Scripts Distributed via Steganography" }
+    ]
+  }
+}

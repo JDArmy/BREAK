@@ -1,0 +1,12 @@
+{
+  "R0141": {
+    "title": "Geolocation Fraud",
+    "definition": "Using fake GPS positioning, VPNs, proxies, and other means to tamper with geographic location information to bypass regional restrictions for regional discounts, evade geographic regulation, or conduct location-related fraud.",
+    "description": "Geolocation fraud refers to attackers using technical means to forge or tamper with geographic location information for improper gain. Main forms include: (1) Regional discount exploitation: faking location to a specific area to obtain coupons, subsidies, or promotions limited to that area. (2) Food delivery/local services fraud: faking delivery addresses to obtain new user subsidies, or faking merchant locations to expand service areas. (3) Ride-hailing fraud: drivers faking GPS routes to inflate mileage and overcharge fares, or faking locations to obtain high-value orders in specific areas. (4) Check-in cheating: faking location to complete in-store check-in tasks for points or rewards. (5) Regulatory evasion: faking location to evade business restrictions or compliance requirements in specific regions. (6) Bidding rank manipulation: faking location to influence location-based search rankings and ad placements.",
+    "complexity": "Basic",
+    "influence": "Causes platform marketing resource waste, regional operation strategy failures, and location-based risk control model bypass.",
+    "references": [
+      { "title": "GPS Spoofing Detection Techniques" }
+    ]
+  }
+}

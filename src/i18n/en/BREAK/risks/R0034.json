@@ -1,0 +1,13 @@
+{
+  "R0034": {
+    "title": "Automated Account Seasoning",
+    "definition": "Using automated means to improve account credibility.",
+    "description": "Using automated activities on stolen accounts or bulk-registered accounts to reduce account risk scores or improve account credibility — for example, automated reviews, comments, posts, and transactions.",
+    "complexity": "Advanced",
+    "influence": "Automated account seasoning typically needs to be combined with other business risk scenarios to monetize, such as benefit abuse, flash sale grabbing, and metric manipulation.",
+    "references": [
+      { "title": "What Is an RPA Robot?" },
+      { "title": "RPA Robot Automated Account Seasoning and AdsPower Anti-Fingerprint Browser" }
+    ]
+  }
+}

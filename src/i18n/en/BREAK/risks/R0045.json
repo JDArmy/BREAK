@@ -1,0 +1,24 @@
+{
+  "R0045": {
+    "title": "Points Theft",
+    "definition": "Misappropriating non-monetary benefits from a stolen payment card or another user's account.",
+    "description": "Using stolen payment card or account login credentials and payment information to misappropriate or steal non-monetary benefits. Login credentials come from carding attacks (R0040), and payment information comes from card cracking (R0041).",
+    "complexity": "Advanced",
+    "influence": "Non-monetary benefits in the payment card or account are misappropriated or stolen.",
+    "references": [
+      { "title": "Beware of Third-Party Channels for Credit Card Points Redemption — Don't Lose Big Trying to Save Small" },
+      { "title": "Li Chen's Mileage Card Fraudulently Used by Over Ten People" }
+    ]
+  },
+  "R0045-001": {
+    "title": "Points Redemption Reselling",
+    "definition": "An illegal profit-making scheme that uses other people's points for personal gain.",
+    "description": "Fraudsters obtain other people's points through various means, then use those points for redemptions, and resell the redeemed gifts or services for profit.",
+    "complexity": "Intermediate",
+    "influence": "Disrupts market order and infringes on consumer rights.",
+    "references": [
+      { "title": "Beware of Third-Party Channels for Credit Card Points Redemption" },
+      { "title": "Li Chen's Mileage Card Fraudulently Used by Over Ten People" }
+    ]
+  }
+}

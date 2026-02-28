@@ -1,0 +1,13 @@
+{
+  "R0143": {
+    "title": "OAuth / SSO Authorization Abuse",
+    "definition": "Exploiting implementation vulnerabilities or design flaws in OAuth, SSO, and other third-party login authorization mechanisms to gain control of user accounts or unauthorized access to user data.",
+    "description": "OAuth/SSO authorization abuse targets third-party login and single sign-on mechanisms. Main attack methods include: (1) Authorization code hijacking: hijacking OAuth authorization codes through open redirect vulnerabilities to obtain user access tokens. (2) CSRF binding attacks: using CSRF vulnerabilities to bind the attacker's third-party account to the victim's platform account. (3) Token leakage exploitation: stealing access tokens and refresh tokens through insecure token transmission or storage. (4) Scope escalation: expanding permission scope in authorization requests to obtain more user data access than necessary. (5) Account association confusion: exploiting flaws in account association logic between different platforms to achieve account takeover. (6) Implicit flow abuse: exploiting the characteristic of tokens being directly exposed in URLs in the implicit authorization flow. (7) Third-party app abuse: malicious third-party apps obtaining user data through OAuth authorization and then misusing or selling it.",
+    "complexity": "Advanced",
+    "influence": "User accounts are taken over, personal data is leaked, cross-platform trust chains are broken, and third-party login ecosystem security is affected.",
+    "references": [
+      { "title": "OAuth 2.0 Security Best Current Practice - IETF" },
+      { "title": "OAuth Security Attack and Defense - PortSwigger" }
+    ]
+  }
+}

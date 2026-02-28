@@ -1,0 +1,12 @@
+{
+  "R0059": {
+    "title": "Trade Secret Leakage",
+    "definition": "An employee discloses a company's trade secrets or sensitive information to third parties without authorization, or uses such information for personal or others' gain.",
+    "description": "Scenarios include but are not limited to: departing employees taking sensitive information for competitive use, competitors stealing business or research results, internal employees leaking secrets out of dissatisfaction or greed, external attackers obtaining credentials through social engineering or cyberattacks to steal information, and employees inadvertently leaking sensitive data when using unauthorized cloud services or storage devices.",
+    "complexity": "Basic",
+    "influence": "May cause serious financial losses, reputational damage, and legal liability for the company.",
+    "references": [
+      { "title": "What Are the Ways Trade Secrets Are Leaked?" }
+    ]
+  }
+}

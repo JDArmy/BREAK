@@ -1,0 +1,12 @@
+{
+  "R0019": {
+    "title": "Unauthorized Account Sharing",
+    "definition": "Illegally selling or sharing paid account privileges that support multi-device login to others.",
+    "description": "Malicious actors exploit the ability to log into accounts on multiple devices simultaneously, selling accounts with paid privileges to multiple people at low prices to profit from the price difference. The platform's multi-device login feature is intended for a single user with multiple devices, not for different users sharing the same privileges. Instead of earning multiple paid subscriptions, the platform earns only one while black market operators profit from the price arbitrage.",
+    "complexity": "Basic",
+    "influence": "Causes economic losses to the platform.",
+    "references": [
+      { "title": "Is Sharing Membership Accounts Also Illegal? iQIYI Account Rental Case Results in 2 Million Yuan Damages" }
+    ]
+  }
+}

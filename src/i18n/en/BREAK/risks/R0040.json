@@ -1,0 +1,12 @@
+{
+  "R0040": {
+    "title": "Carding Attack",
+    "definition": "Verifying the validity of stolen payment card credentials through bulk login authentication.",
+    "description": "Using a merchant's complete login credential verification process to validate stolen payment cards or accounts. Since the value of stolen accounts is unknown, carding attacks can be used to assess payment card value. The source of credential data may be third-party application breaches, third-party payment channel leaks, or purchases from black markets.",
+    "complexity": "Intermediate",
+    "influence": "Payment card or account credential information is stolen.",
+    "references": [
+      { "title": "OWASP Automated Threat: OAT001 Carding" }
+    ]
+  }
+}

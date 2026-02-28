@@ -1,0 +1,12 @@
+{
+  "R0092": {
+    "title": "Real-World Identity Theft",
+    "definition": "Real-world identity theft risk refers to the potential threat of malicious actors obtaining others' real identity information through illegal means and using it for fraud, crime, or other unlawful activities, involving the theft and misuse of personal sensitive information that may cause serious financial losses and privacy leakage for victims.",
+    "description": "Key characteristics include: identity information theft (obtaining personal identity information such as name, ID number, address, phone number, and bank account details); fake account creation (using stolen identity information to open fake bank accounts, credit card accounts, or other financial accounts); credit card fraud; social engineering attacks to obtain additional personal information; and criminal activities such as trafficking, money laundering, and smuggling using stolen identity information.",
+    "complexity": "Basic",
+    "influence": "Real-world identity theft may cause serious multi-faceted impacts: individuals may face significant financial losses including stolen bank accounts, credit card abuse, and illegally applied loans; credit rating decline and legal liability may further burden victims; psychological impacts including loss of privacy, anxiety, and fear are significant; social trust is affected as identity theft cases increase; and financial institutions may face financial losses from fraudulent transactions and anti-fraud measures.",
+    "references": [
+      { "title": "Identity Theft - Baidu Baike" }
+    ]
+  }
+}
