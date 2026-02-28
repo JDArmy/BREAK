@@ -40,11 +40,6 @@ const router = createRouter({
       component: () => import("@/views/ThreatActorsView.vue"),
     },
     {
-      path: "/ability-providers",
-      name: "abilityProviders",
-      component: () => import("@/views/AbilityProvidersView.vue"),
-    },
-    {
       path: "/relation/:type/:key",
       name: "relation",
       component: () => import("@/views/RelationView.vue"),

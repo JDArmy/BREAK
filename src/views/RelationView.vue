@@ -20,7 +20,6 @@ enum RelationType {
   avoidance = "avoidance",
   attackTool = "attack-tool",
   threatActor = "threat-actor",
-  abilityProvider = "ability-provider",
   all = "all",
 }
 
