@@ -21,11 +21,8 @@
   "definition": "Definition",
   "seeMoreInDesktop": "View the full version on a desktop browser",
   "businessScenes": "Business Scenes",
-  "abilityProviders": "Ability Providers",
   "site": "Website",
   "logo": "Logo",
-  "commitNewProvider": "Submit a new ability provider",
-  "supportAbilities": "Supported Abilities",
   "allScenes": "All Scenes",
   "references": "References",
   "events": "Related Events",
@@ -44,7 +41,6 @@
   "hideAllSubRisks": "Hide All Sub-Risks",
   "showAllSubRisks": "Show All Sub-Risks",
   "relationMap": "Relation Map",
-  "commitNewProviderHint": "Reference: src/BREAK/ability-providers/AP****.json file format.",
   "nodeFilter": "Node Filter:",
   "subNodeFilter": "Sub-Nodes",
   "toolbar": {
@@ -66,8 +62,7 @@
     "risk": "Risk",
     "avoidance": "Avoidance",
     "attackTool": "Attack Tool",
-    "threatActor": "Threat Actor",
-    "abilityProvider": "Ability Provider"
+    "threatActor": "Threat Actor"
   },
   "relationLine": {
     "avoidanceMeans": "Avoidance",
@@ -78,7 +73,6 @@
     "subAvoidance": "Sub-Avoidance",
     "subAttackTool": "Sub-Attack Tool",
     "subThreatActor": "Sub-Threat Actor",
-    "abilityProvider": "Ability Provider",
     "attackToolMaker": "Attack Tool Maker",
     "makeRisk": "Makes Risk"
   }

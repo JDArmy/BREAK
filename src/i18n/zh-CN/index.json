@@ -21,11 +21,8 @@
   "definition": "定义",
   "seeMoreInDesktop": "在桌面系统下查看更完整版本",
   "businessScenes": "业务场景",
-  "abilityProviders": "能力提供者",
   "site": "网站",
   "logo": "图标",
-  "commitNewProvider": "提交新的能力供应者",
-  "supportAbilities": "提供能力",
   "allScenes": "全场景",
   "references": "参考",
   "events": "相关事件",
@@ -44,7 +41,6 @@
   "hideAllSubRisks": "隐藏所有子风险",
   "showAllSubRisks": "显示所有子风险",
   "relationMap": "关系图谱",
-  "commitNewProviderHint": "参考：src/BREAK/ability-providers/AP****.json 文件格式。",
   "nodeFilter": "节点筛选：",
   "subNodeFilter": "子节点",
   "toolbar": {
@@ -66,8 +62,7 @@
     "risk": "风险",
     "avoidance": "规避手段",
     "attackTool": "攻击工具",
-    "threatActor": "威胁行为者",
-    "abilityProvider": "能力提供者"
+    "threatActor": "威胁行为者"
   },
   "relationLine": {
     "avoidanceMeans": "规避手段",
@@ -78,7 +73,6 @@
     "subAvoidance": "子规避手段",
     "subAttackTool": "子攻击工具",
     "subThreatActor": "子威胁行为者",
-    "abilityProvider": "能力提供者",
     "attackToolMaker": "攻击工具制造者",
     "makeRisk": "制造风险"
   }
