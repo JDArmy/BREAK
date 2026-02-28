@@ -1,0 +1,12 @@
+{
+  "R0014": {
+    "title": "Inventory Denial",
+    "definition": "Exhausting the inventory of goods or services without completing a purchase or transaction.",
+    "description": "By placing large numbers of orders without paying, driving all products in a merchant's store to zero inventory so the merchant has nothing to sell. Additionally, bulk adding items to cart or placing unpaid orders can be used to probe a merchant's inventory levels or actual purchase prices. While not necessarily aimed at exhausting inventory, the harm caused is the same or greater.",
+    "complexity": "Basic",
+    "influence": "Common in commercial competition. Once inventory is exhausted, other users can no longer purchase the goods.",
+    "references": [
+      { "title": "OWASP Automated Threat: OAT021 Denial of Inventory" }
+    ]
+  }
+}

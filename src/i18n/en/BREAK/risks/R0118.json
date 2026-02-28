@@ -1,0 +1,13 @@
+{
+  "R0118": {
+    "title": "AI-Automated Attack Escalation",
+    "definition": "The risk of using AI technology (particularly large language models) to automate, enhance, and scale traditional cyberattacks and business attacks.",
+    "description": "AI-automated attack escalation refers to attackers using AI technology to significantly improve the efficiency, scale, and success rate of traditional attacks. Key manifestations include: (1) AI-assisted social engineering: using LLMs to automatically generate highly personalized phishing emails and social engineering scripts, greatly improving phishing success rates. (2) AI-assisted vulnerability exploitation: using AI to automatically discover and exploit security vulnerabilities, accelerating attack chain construction. (3) Intelligent CAPTCHA cracking: using multimodal AI models to automatically recognize and solve various CAPTCHAs. (4) Adaptive attacks: AI-driven attack tools that automatically adjust attack methods based on defensive strategies, enabling automated attack-defense confrontation. (5) Bulk content generation: using AI to bulk-generate fake reviews, fake account profiles, and other content to support large-scale business fraud. AI technology has significantly lowered the technical barrier for attacks, reduced attack costs, and greatly improved attack effectiveness.",
+    "complexity": "Advanced",
+    "influence": "Traditional security defense systems face severe challenges, attack scale and efficiency increase significantly, and defense costs rise substantially.",
+    "references": [
+      { "title": "AI-Driven Cyber Threats - World Economic Forum" },
+      { "title": "NCSC: The near-term impact of AI on the cyber threat" }
+    ]
+  }
+}

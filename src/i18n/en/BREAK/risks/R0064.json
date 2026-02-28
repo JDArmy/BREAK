@@ -1,0 +1,13 @@
+{
+  "R0064": {
+    "title": "Order-Splitting Arbitrage",
+    "definition": "Exploiting shipping thresholds, price differences, or bundled gift items by placing abnormal combined orders and then canceling part of the order to extract benefits.",
+    "description": "Many trading platforms offer free shipping above a certain amount, tiered discounts, gifts, or rebates. Attackers first build up an order to meet the benefit threshold, then return some or all of the items to extract the benefit.",
+    "complexity": "Basic",
+    "influence": "Extracts platform or merchant discounts and rebates.",
+    "references": [
+      { "title": "How to Prevent Malicious Order Padding?" },
+      { "title": "Buyer Maliciously Pads Order Then Requests Refund — What Should Merchants Do?" }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "R0139": {
+    "title": "Friendly Fraud / Chargeback Fraud",
+    "definition": "A consumer maliciously initiates a chargeback with their bank or payment institution after legitimately receiving goods or services, falsely claiming non-receipt or unauthorized transaction, to obtain a refund while retaining the goods.",
+    "description": "Friendly fraud (Chargeback Fraud) is a consumer-initiated fraud distinct from malicious returns (R0054). Its core characteristic is that the consumer bypasses the merchant and initiates a chargeback directly through the bank or payment institution's dispute resolution mechanism. Main forms include: (1) False non-receipt claims: consumers claiming non-receipt to their bank after receiving goods. (2) Unauthorized transaction claims: consumers claiming a transaction they completed themselves was unauthorized. (3) Service dissatisfaction chargebacks: consumers initiating chargebacks without communicating with the merchant. (4) Family member consumption: cardholders disputing charges made by family members (such as children) as unauthorized. (5) Buyer's remorse: consumers obtaining refunds through chargebacks rather than normal return processes. (6) Professional chargeback fraudsters: organized fraudsters repeatedly exploiting chargeback mechanisms.",
+    "complexity": "Basic",
+    "influence": "Merchants bear product losses and chargeback fees, excessively high chargeback rates lead to payment channel closure, and operational costs increase.",
+    "references": [
+      { "title": "Chargeback Fraud - Visa" },
+      { "title": "Friendly Fraud Prevention Best Practices" }
+    ]
+  }
+}

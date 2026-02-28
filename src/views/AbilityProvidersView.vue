@@ -94,7 +94,7 @@ const { getTableHeight, tableRowClassName } = useAnchorTable("apKey");
     <a href="https://github.com/JDArmy/BREAK/issues" target="_blank" rel="noopener noreferrer">
       <el-icon><Link /></el-icon>https://github.com/JDArmy/BREAK/issues
     </a>
-    <div>参考：src/BREAK/ability-providers/AP****.json 文件格式。</div>
+    <div>{{ $t("commitNewProviderHint") }}</div>
   </div>
 </template>
 

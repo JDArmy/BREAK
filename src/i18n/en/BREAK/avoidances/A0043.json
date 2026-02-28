@@ -1,0 +1,9 @@
+{
+  "A0043": {
+    "title": "Contractual Clause Restrictions",
+    "definition": "Adding clauses to contracts that can limit the compliance of risk generation and reduce the probability of risk occurrence.",
+    "description": "For example, setting breach of contract liability, breach penalties, and breach compensation.",
+    "limitation": "The prerequisite for modifying contract clauses is that both parties to the contract are legal entities, and the modification must comply with laws and regulations. The goal is to restrict the attacker's legal behavior, not to prevent the attacker's malicious behavior.",
+    "references": []
+  }
+}

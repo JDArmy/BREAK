@@ -1,0 +1,12 @@
+{
+  "R0015": {
+    "title": "Malicious Negative Reviews",
+    "definition": "Using false reviews to damage the reputation of a person or product.",
+    "description": "Using malicious comments, reviews, ratings, reports, or downvotes to damage the reputation, score, or credibility of other users or merchants.",
+    "complexity": "Basic",
+    "influence": "Similar to black market metric manipulation (R0016) but different in nature. Metric manipulation has generally become an illegal commercial activity where operators inflate ratings for profit. Malicious reviews, however, are motivated by the intent to damage other users' or merchants' reputation and credibility — typically driven by pure malice or competitive business motives.",
+    "references": [
+      { "title": "OWASP Automated Threat: OAT016 Skewing" }
+    ]
+  }
+}

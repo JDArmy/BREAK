@@ -1,0 +1,48 @@
+{
+  "R0003": {
+    "title": "Malicious Flash Sale Grabbing",
+    "definition": "Using automated means to grab goods or services during flash sales.",
+    "description": "Also known as malicious order snatching. Refers to bad actors using technical means such as purchase-grabbing software to maliciously snatch time-limited, limited-quantity discounted goods on e-commerce platforms, disrupting normal market order and consumer shopping experience. These tools simulate human operations such as login, clicking, and order submission to achieve automated purchasing.",
+    "complexity": "Intermediate",
+    "influence": "Exploits platform promotional benefits, disrupts normal platform operations, and degrades the ordering and shopping experience for legitimate users.",
+    "references": [
+      { "title": "OWASP Automated Threat: OAT005 Scalping" }
+    ]
+  },
+  "R0003-001": {
+    "title": "Instant Bid Sniping",
+    "definition": "Placing a bid at the first possible moment to obtain limited or flash-sale goods or services through unfair means.",
+    "description": "Using unfair methods to obtain limited or flash-sale goods, services, or discounts — typically via third-party scripts or auxiliary tools. Sometimes relies on third-party intelligence to pre-leak interface information. Usually requires process automation capabilities (R0001).",
+    "complexity": "Intermediate",
+    "influence": "Exploits platform promotional benefits and disrupts legitimate user ordering.",
+    "references": [
+      { "title": "OWASP Automated Threat: OAT005 Scalping" }
+    ]
+  },
+  "R0003-002": {
+    "title": "Auction Sniping",
+    "definition": "Placing a bid on goods or services at the last minute.",
+    "description": "Using automated means to place a bid at the last minute, often completing a transaction at minimal cost. The principle is the same as instant bid sniping (R0003) but the goal differs: auction sniping aims to be the last valid bid before the deadline to obtain goods at the lowest possible price, while instant bid sniping aims to be the first bid after the sale starts to secure limited discounted items. Auction sniping typically requires process automation (R0001).",
+    "complexity": "Intermediate",
+    "influence": "Transaction prices are too low, resulting in insufficient profit margins. Disrupts legitimate user ordering.",
+    "references": [
+      { "title": "OWASP Automated Threat: OAT013 Sniping" }
+    ]
+  },
+  "R0003-003": {
+    "title": "Bot Scalping Risk",
+    "definition": "Bots refer to the practice of seizing, misappropriating, or manipulating scarce resources through illegitimate means, especially using automated crawler techniques.",
+    "description": "Using automated scripts or crawler tools to register large numbers of fake accounts, simulating transaction activity and fictitious purchases to seize scarce resources on the platform — such as limited-edition goods or purchase eligibility — preventing legitimate users from having a fair chance.",
+    "complexity": "Intermediate",
+    "influence": "Disrupts legitimate user ordering.",
+    "references": []
+  },
+  "R0003-004": {
+    "title": "Unfair Resource Seizure",
+    "definition": "Unfair resource seizure risk refers to individuals or organizations using illegitimate means to compete for and seize limited resources, violating fair competition principles and potentially causing unfair resource distribution and system abuse.",
+    "description": "Specific illegitimate means include but are not limited to: using bot programs to rapidly submit large numbers of requests the moment resources become available; using malicious software to attack target systems; exploiting system vulnerabilities to bypass normal allocation mechanisms; submitting false personal or application information to deceive the system.",
+    "complexity": "Intermediate",
+    "influence": "May lead to unfair resource distribution, system overload, and escalating malicious competition.",
+    "references": []
+  }
+}

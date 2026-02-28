@@ -1,0 +1,9 @@
+{
+  "AT0029": {
+    "title": "Image CAPTCHA Recognition Tools",
+    "description": "OCR (Optical Character Recognition) tools check characters on paper through electronic devices, confirm character shapes by checking dark and light patterns, and then convert shapes into computer text through character recognition methods. For image CAPTCHAs containing irregular characters derived from slightly distorted text, OCR can be used directly for recognition during web scraping.",
+    "references": [
+      { "title": "Tesseract-OCR Image Text Recognition Tool" }
+    ]
+  }
+}

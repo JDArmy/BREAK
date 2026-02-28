@@ -1,0 +1,20 @@
+{
+  "R0084": {
+    "title": "Phishing Attack",
+    "definition": "Phishing attack risk refers to attackers using false and deceptive means to induce individuals or organization members to provide sensitive information such as usernames, passwords, and financial information.",
+    "description": "Scenarios include impersonating legitimate emails, social media messages, or websites to trick victims into clicking malicious links, downloading malicious attachments, or entering sensitive information.",
+    "complexity": "Intermediate",
+    "influence": "Harms include personal privacy leakage, account compromise, and financial losses; for organizations, may lead to confidential information leakage, system intrusion, and reputational damage.",
+    "references": []
+  },
+  "R0084-001": {
+    "title": "AI-Enhanced Phishing Attack",
+    "definition": "Using AI technologies (large language models, deepfakes, etc.) to enhance the personalization, credibility, and scalability of phishing attacks.",
+    "description": "AI-enhanced phishing attacks involve attackers using AI technology to significantly improve the effectiveness of traditional phishing attacks. Key manifestations include: (1) Personalized phishing emails: using LLMs to automatically generate highly personalized phishing emails based on the target's social media information and work background, greatly increasing open and click rates. (2) Multilingual phishing: AI can automatically generate high-quality phishing content in multiple languages, supporting cross-border phishing attacks. (3) Voice phishing (Vishing): using AI voice cloning technology to impersonate trusted individuals in phone phishing. (4) Video phishing: using deepfake technology to impersonate others in video calls. (5) Adaptive phishing: AI-driven phishing systems that automatically adjust attack strategies based on target responses.",
+    "complexity": "Advanced",
+    "influence": "Phishing attack success rates increase significantly, traditional security awareness training becomes less effective, and organizations face greater social engineering attack risks.",
+    "references": [
+      { "title": "AI-Enhanced Phishing Threats - NCSC" }
+    ]
+  }
+}

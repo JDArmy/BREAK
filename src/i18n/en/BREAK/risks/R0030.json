@@ -1,0 +1,74 @@
+{
+  "R0030": {
+    "title": "Fake Registration",
+    "definition": "Registering fake accounts using false identities for subsequent abuse.",
+    "description": "Using an application's account registration process to register accounts with false identity data.",
+    "complexity": "Intermediate",
+    "influence": "These accounts are subsequently abused for generating spam, money laundering, spreading malware, reputation manipulation, pranks, and distorting SEO, reviews, and surveys.",
+    "references": [
+      { "title": "OWASP Automated Threat: OAT019 Account Creation" }
+    ]
+  },
+  "R0030-001": {
+    "title": "Bulk Account Registration",
+    "definition": "Bulk registering accounts for subsequent abuse.",
+    "description": "Using an application's account registration process to create accounts in bulk, sometimes also filling in profile information.",
+    "complexity": "Advanced",
+    "influence": "These accounts are subsequently abused for generating spam, money laundering, spreading malware, reputation manipulation, pranks, and distorting SEO, reviews, and surveys.",
+    "references": [
+      { "title": "OWASP Automated Threat: OAT019 Account Creation" }
+    ]
+  },
+  "R0030-002": {
+    "title": "Third-Party Account Risk",
+    "definition": "Using third-party account federated login to bypass existing identity verification systems.",
+    "description": "Many sites have strict identity verification systems for creating user identities, such as SMS verification codes and real-name authentication. However, when logging in via third-party identity providers like WeChat or Weibo, excessive trust in the third party without strict identity verification allows bulk registration of spam accounts (R0030-001) on the third party to bypass the strict identity verification system.",
+    "complexity": "Intermediate",
+    "influence": "Bypasses existing identity verification systems, causing defense mechanisms to fail.",
+    "references": [
+      { "title": "What Is Third-Party Account Login? What Are Its Benefits?" }
+    ]
+  },
+  "R0030-003": {
+    "title": "Overseas Number Registration",
+    "definition": "Using overseas phone numbers to register accounts and bypass domestic real-name authentication requirements for phone numbers.",
+    "description": "Many sites have strict identity verification systems, such as SMS verification codes. However, when registering with overseas phone numbers, excessive trust in overseas numbers without strict identity verification allows bulk registration (R0030-001) of large numbers of spam accounts to bypass the strict identity verification system.",
+    "complexity": "Intermediate",
+    "influence": "Bypasses existing identity verification systems, causing defense mechanisms to fail.",
+    "references": []
+  },
+  "R0030-004": {
+    "title": "Inactive Number Registration",
+    "definition": "Inactive number registration refers to using phone numbers that have not been put into market use or activated to falsely register internet platform accounts or conduct other online activities.",
+    "description": "Inactive number registration generally exploits vulnerabilities in the registration process for inactive number verification, or uses insiders at companies or carriers to obtain verification codes. This method has zero cost since no physical SIM card is needed, allowing criminals to hide their identities online and massively abuse platform resources for fake follower/metric inflation, spreading false information, and online fraud.",
+    "complexity": "Advanced",
+    "influence": "Risks mainly manifest in disrupting normal internet order, potential social engineering attacks, challenges from new cybercrime patterns, and economic and reputational impacts on users and platforms.",
+    "references": [
+      { "title": "China's First Inactive Number SMS Hijacking Case Solved: Collusion with Telecom Insider" }
+    ]
+  },
+  "R0030-005": {
+    "title": "Virtual Number Registration",
+    "definition": "Virtual number registration refers to using virtual phone numbers to falsely register internet platform accounts or conduct other online activities.",
+    "description": "Besides the four major carriers, China has many virtual network operators (MVNOs) that purchase voice, SMS, and data services from the major carriers and resell them under their own branding. These are commonly called 'virtual cards' by black market operators. Virtual card number prefixes are fixed (162, 165, 167, 170, 171). Compared to physical SIM cards, virtual cards have two advantages: low cost (often zero monthly fee) and low barrier (one ID card can be used to register dozens of cards across different MVNOs).",
+    "complexity": "Basic",
+    "influence": "Bulk registration with virtual numbers may lead to online service abuse, including online fraud and false information spreading, damaging platform credibility and user security.",
+    "references": []
+  },
+  "R0030-006": {
+    "title": "IoT SIM Card Registration",
+    "definition": "IoT SIM card registration refers to using IoT SIM cards to falsely register internet platform accounts or conduct other online activities.",
+    "description": "IoT SIM cards are phone cards specifically designed for IoT terminal devices to provide connectivity. By default they do not have SMS sending/receiving capability, which must be applied for at the time of purchase.",
+    "complexity": "Basic",
+    "influence": "Bulk registration with IoT SIM cards may lead to online service abuse, including online fraud and false information spreading, damaging platform credibility and user security.",
+    "references": []
+  },
+  "R0030-007": {
+    "title": "Interceptor Card Registration",
+    "definition": "An 'interceptor card' refers to a setup where both the card device and the SIM card are in the hands of a legitimate user, but the card vendor has pre-installed a backdoor in the device that can intercept SMS verification codes received by the user's phone.",
+    "description": "Interceptor cards require that the legitimate device holder has not registered for the black market operator's target online service, otherwise the black market operator cannot use it for fake registration. To achieve this, interceptor cards primarily target three types of devices: phones exported overseas, low-to-mid-range phones, and children's smartwatches — because users of these devices (overseas users, elderly people, and children) are unlikely to have registered for the target services.",
+    "complexity": "Basic",
+    "influence": "Fake registration may lead to online service abuse, including online fraud and false information spreading, damaging platform credibility and user security.",
+    "references": []
+  }
+}

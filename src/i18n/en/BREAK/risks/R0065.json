@@ -1,0 +1,10 @@
+{
+  "R0065": {
+    "title": "Employee Error Risk",
+    "definition": "Potential security risks arising from employee negligence, improper operations, or lack of security awareness when handling information, using technical tools, or performing tasks, which may lead to accidental disclosure of sensitive information.",
+    "description": "Common risk scenarios caused by employee negligence or improper operations include: password leakage (employees saving passwords in insecure locations, using weak passwords, or sharing passwords, leading to account compromise); malware infection (clicking malicious links, downloading suspicious attachments, or visiting unsafe websites); data loss from misoperations (accidentally deleting, modifying, or mishandling sensitive data); unauthorized data access (employees inadvertently accessing sensitive information outside their work scope); and device loss or theft (lost or stolen mobile devices such as laptops or phones leading to sensitive information exposure).",
+    "complexity": "Basic",
+    "influence": "These risks may include data breaches, system failures, network intrusions, and other security vulnerabilities, causing potential financial losses and reputational damage to the organization.",
+    "references": []
+  }
+}

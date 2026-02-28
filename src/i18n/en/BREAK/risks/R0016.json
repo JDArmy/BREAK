@@ -1,0 +1,30 @@
+{
+  "R0016": {
+    "title": "Metric Manipulation / Ranking Fraud",
+    "definition": "Interfering with certain application metrics by repeatedly clicking links, sending requests, or submitting forms.",
+    "description": "Automatically and repeatedly clicking, requesting, or submitting content to influence application-based metrics such as frequency and/or rate counts and measurements. Includes ranking fraud, like farming, comment farming, etc. Metrics may be visible to users (e.g., betting odds, likes, market/dynamic pricing, visitor counts, vote results, reviews) or hidden (e.g., application usage statistics, business performance metrics).",
+    "complexity": "Basic",
+    "influence": "Causes platform display results to lose objectivity and fairness, degrading user experience.",
+    "references": [
+      { "title": "OWASP Automated Threat: OAT016 Skewing" }
+    ]
+  },
+  "R0016-001": {
+    "title": "Fake Viewer Count Inflation",
+    "definition": "Using illegitimate means or software to artificially inflate the visitor count of a live stream room or personal space, creating a false impression of high traffic, ultimately influencing platform recommendation algorithms.",
+    "description": "Also called 'fake audience' or 'ghost viewers'. Typically refers to using software, bots, or crowdsourcing to artificially increase metrics such as page views, likes, comments, and online viewer counts for a web page or live stream room, thereby influencing the platform's scoring and recommendation or ranking of that space.",
+    "complexity": "Intermediate",
+    "influence": "Undermines platform fairness and interferes with ranking algorithms.",
+    "references": [
+      { "title": "Methods and Strategies for Inflating TikTok Live Stream Viewer Counts" }
+    ]
+  },
+  "R0016-002": {
+    "title": "Bulk Following",
+    "definition": "Using illegitimate means or software to bulk-follow other users, ultimately influencing platform recommendations.",
+    "description": "Also called 'mass following'. Typically refers to using software, bots, or crowdsourcing to have a user bulk-follow other users, thereby influencing the platform's scoring and recommendation or ranking of that user.",
+    "complexity": "Intermediate",
+    "influence": "Undermines platform fairness and interferes with ranking algorithms.",
+    "references": []
+  }
+}

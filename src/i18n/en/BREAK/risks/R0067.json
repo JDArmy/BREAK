@@ -1,0 +1,10 @@
+{
+  "R0067": {
+    "title": "File or Document Theft",
+    "definition": "The potential threat of unauthorized individuals or organizations obtaining, copying, distributing, or using confidential files or documents, which may include business plans, customer data, contracts, financial reports, intellectual property, and other sensitive information.",
+    "description": "Possible file or document theft scenarios include: cyberattacks (hackers obtaining sensitive files through phishing, malware, or ransomware); insider leaks (employees, partners, or vendors abusing access privileges to steal confidential files for personal or competitor benefit); physical intrusion (intruders gaining access to paper or electronic sensitive files by breaking into offices or through lost/stolen devices); and social engineering (attackers gaining access to sensitive files through deception, impersonation, or trust manipulation).",
+    "complexity": "Basic",
+    "influence": "Harms manifest across multiple dimensions: intellectual property loss threatening the company's innovation capacity; competitors gaining business strategies and plans damaging competitive position; files containing customer information causing trust issues and legal liability; and violations of data protection regulations leading to compliance issues, lawsuits, and fines.",
+    "references": []
+  }
+}

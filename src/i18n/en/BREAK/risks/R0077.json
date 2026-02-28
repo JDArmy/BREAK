@@ -1,0 +1,10 @@
+{
+  "R0077": {
+    "title": "Cross-Border Data Transfer Compliance Risk",
+    "definition": "Cross-border data transfer compliance risk refers to the potential legal, business, and reputational threats arising from an organization's failure to comply with relevant regulations and requirements during the transnational transmission and processing of data.",
+    "description": "Possible scenarios include: unauthorized data transfers (transmitting personal sensitive information to other countries or regions without explicit consent from data subjects, potentially violating data privacy regulations); lack of cross-border data transfer agreements; non-compliance with specific national or regional regulations; and data leakage risk during transmission due to inadequate encryption and security measures.",
+    "complexity": "Basic",
+    "influence": "Violating cross-border data transfer regulations may result in legal liability, including fines, lawsuits, and other legal sanctions.",
+    "references": []
+  }
+}

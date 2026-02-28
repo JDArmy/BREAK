@@ -1,0 +1,10 @@
+{
+  "R0086": {
+    "title": "Server Cryptomining",
+    "definition": "Server cryptomining risk refers to the potential threat of attackers using compromised server resources without authorization to mine cryptocurrency.",
+    "description": "Scenarios include attackers infecting servers with malware and using the server's computing power for cryptocurrency mining activities.",
+    "complexity": "Intermediate",
+    "influence": "Harms include degraded server performance and increased energy consumption, potentially leading to reduced service quality, additional electricity costs, and financial and resource losses for the organization.",
+    "references": []
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "R0074": {
+    "title": "Privacy Compliance Risk",
+    "definition": "Privacy compliance risk refers to the risk that an organization fails to comply with relevant privacy regulations or policies when processing personal data, potentially violating individuals' privacy rights and triggering legal liability and negative consequences.",
+    "description": "Possible privacy compliance risk scenarios include: unauthorized data collection (collecting personal data without explicit user consent); non-transparent data processing (failing to inform users of the purpose, methods, and use of data collection); data breaches (personal data leakage due to security vulnerabilities, internal errors, or external attacks); violation of data retention periods; failure to provide access and modification rights; lack of data security measures such as encryption and access controls; violation of cross-border data transfer regulations; and failure to fulfill data processing agreements.",
+    "complexity": "Basic",
+    "influence": "May lead to lawsuits, fines, reputational damage, and loss of customer trust.",
+    "references": []
+  }
+}

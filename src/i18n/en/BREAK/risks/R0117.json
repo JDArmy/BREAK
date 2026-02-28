@@ -1,0 +1,31 @@
+{
+  "R0117": {
+    "title": "LLM Prompt Injection Risk",
+    "definition": "The risk of manipulating the behavior of large language model (LLM)-integrated business systems through carefully crafted prompts to cause the model to perform unintended operations.",
+    "description": "LLM prompt injection risk is a new type of security risk that has emerged with the widespread adoption of large language models in business systems. Attackers embed malicious instructions in inputs to override or bypass the system's preset prompt constraints, causing the model to leak sensitive information, perform unauthorized operations, or generate harmful content. Prompt injection attacks have been listed by OWASP as the top security risk for LLM applications. Main attack methods fall into two categories: direct prompt injection and indirect prompt injection.",
+    "complexity": "Advanced",
+    "influence": "Can lead to sensitive data leakage, business logic bypass, system manipulation to perform unauthorized operations, and generation of harmful or non-compliant content.",
+    "references": [
+      { "title": "OWASP Top 10 for LLM Applications" },
+      { "title": "Survey on Prompt Injection Attacks and Defenses" }
+    ]
+  },
+  "R0117-001": {
+    "title": "Direct Prompt Injection",
+    "definition": "An attacker directly embeds malicious instructions in user input to override system prompts or manipulate model behavior.",
+    "description": "Direct prompt injection refers to attackers embedding malicious instructions directly in input text when interacting with an LLM to manipulate model behavior. Common techniques include: role-playing attacks (asking the model to play an unrestricted character), instruction override (using phrases like 'ignore previous instructions'), encoding bypass (using Base64, Unicode, or other encodings to hide malicious instructions), and multilingual mixing (using instructions in different languages to confuse the model).",
+    "complexity": "Intermediate",
+    "influence": "Model behavior is manipulated, potentially leaking system prompts, generating non-compliant content, or performing unauthorized operations.",
+    "references": []
+  },
+  "R0117-002": {
+    "title": "Indirect Prompt Injection",
+    "definition": "An attacker hides malicious instructions in external data sources that the model may retrieve or process, indirectly manipulating model behavior.",
+    "description": "Indirect prompt injection is a more covert attack method where attackers do not interact directly with the model but instead embed malicious instructions in external data sources the model may access, such as web content, documents, emails, or database records. When the LLM application processes this external data, the hidden malicious instructions are executed by the model. For example, in RAG (Retrieval-Augmented Generation) systems, attackers can plant malicious instructions in knowledge base documents; in AI email assistant scenarios, attackers can embed manipulation instructions in email bodies. Indirect prompt injection is more dangerous because it can be triggered without the user's knowledge.",
+    "complexity": "Advanced",
+    "influence": "Can manipulate model behavior without the user's knowledge, leading to serious consequences such as data leakage and unauthorized operations.",
+    "references": [
+      { "title": "Indirect Prompt Injection Threats" }
+    ]
+  }
+}

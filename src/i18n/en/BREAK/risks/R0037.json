@@ -1,0 +1,12 @@
+{
+  "R0037": {
+    "title": "Third-Party Account Aggregation",
+    "definition": "Using a third-party application as a proxy to centrally manage account credentials for multiple applications.",
+    "description": "Compiling credentials and information from multiple application accounts into another system. A single user can use this aggregation application to consolidate information from multiple applications, or consolidate information from multiple users of a single application — for example, e-commerce migration tools or ticket-grabbing applications.",
+    "complexity": "Intermediate",
+    "influence": "For users, there is a risk of sensitive information leakage; for the system, there is a risk of platform data loss and increased system request pressure.",
+    "references": [
+      { "title": "OWASP Automated Threat: OAT020 Account Aggregation" }
+    ]
+  }
+}

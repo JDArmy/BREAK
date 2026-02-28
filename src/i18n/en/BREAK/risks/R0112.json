@@ -1,0 +1,58 @@
+{
+  "R0112": {
+    "title": "Office Environment Risk",
+    "definition": "Office environment business security risk involves various potential threats and hazards related to business operations that may cause harm to an organization's information, systems, employees, and customer data.",
+    "description": "Possible office environment business security risk scenarios include: data leakage (sensitive information, customer data, or trade secrets exposed through unauthorized access, insider leaks, or cyberattacks); cyberattacks (malware, viruses, ransomware, phishing causing business system disruption, data corruption, or theft); supply chain risk (insecure supply chains introducing malware or substandard products); social engineering (attackers obtaining sensitive employee information through impersonation or fraudulent communications); and physical security risks (unauthorized access, device loss, or insecure facility layouts).",
+    "complexity": "Basic",
+    "influence": "Impacts include: financial losses from data breaches, cyberattacks, and other security incidents; reputational damage reducing customer and partner trust; legal liability from data breaches; and business disruption affecting service delivery and customer satisfaction.",
+    "references": []
+  },
+  "R0112-001": {
+    "title": "Bring Your Own Device (BYOD) Risk",
+    "definition": "BYOD (Bring Your Own Device) refers to employees using their personal devices (such as phones, tablets, laptops) for work-related tasks.",
+    "description": "BYOD presents multiple potential risk scenarios: personal devices typically lack enterprise-grade security measures and may become sources of security vulnerabilities; compliance issues may be exacerbated by difficulty monitoring personal devices; personal devices connected to the corporate network may be attacked by viruses and malware; managing and monitoring various types of personal devices is difficult; and employees who leave the company may still have access to company data.",
+    "complexity": "Basic",
+    "influence": "BYOD introduces potential harms including security vulnerabilities, data leakage, compliance issues, network security threats, device management challenges, loss of control, and post-departure access issues.",
+    "references": []
+  },
+  "R0112-002": {
+    "title": "Unauthorized Physical Access",
+    "definition": "Unauthorized physical access refers to individuals or entities entering office premises, equipment areas, data centers, or other sensitive locations without explicit company or organizational approval.",
+    "description": "This physical access may lead to information security threats involving: unauthorized personnel entering office areas through social engineering, impersonation, or other deceptive means; inadequate visitor management lacking proper registration and identity verification; unauthorized device connections by employees or visitors introducing malware; physical file and device access by unauthorized individuals; unauthorized data center access leading to illegal operations on servers and storage; and unauthorized server room access causing equipment tampering or data leakage.",
+    "complexity": "Basic",
+    "influence": "Unauthorized physical access may cause serious information security harms including theft, tampering, or destruction of confidential information; data leakage causing serious business damage; reputational loss, legal liability, and financial losses; and introduction of malware or malicious devices into the corporate network.",
+    "references": []
+  },
+  "R0112-003": {
+    "title": "Unauthorized Device Connection",
+    "definition": "Unauthorized device connection risk refers to unapproved or unauthorized devices (including computers, mobile devices, network equipment, etc.) connecting to the corporate network or systems, potentially causing security threats and data leakage.",
+    "description": "Possible scenarios include: employees connecting personal devices without authorization or necessary security measures; external personnel or vendors bringing unauthorized hardware devices; unauthorized network devices (such as routers or switches) being connected and altering network topology; and attackers attempting to connect malicious devices (such as malicious USB devices or network sniffers) to execute attacks, steal information, or move laterally.",
+    "complexity": "Basic",
+    "influence": "Harms include: security threats from viruses, malware, or other threats introduced by unauthorized devices; and data leakage risk from unauthorized devices accessing, storing, or transmitting sensitive information.",
+    "references": []
+  },
+  "R0112-004": {
+    "title": "Physical Damage and Destruction",
+    "definition": "Physical damage and destruction risk refers to potential threats to an organization at the physical level that may cause damage or destruction to company facilities, property, or infrastructure, from factors including natural disasters, deliberate sabotage, theft, and terrorist attacks.",
+    "description": "Possible scenarios include: natural disasters (earthquakes, fires, floods, hurricanes causing severe facility damage); deliberate sabotage (malicious destruction, arson, destructive robbery); theft and intrusion (thieves or unauthorized personnel attempting to enter facilities to steal property or cause damage); terrorist attacks; and industrial accidents (fires, explosions, or leaks damaging facilities and threatening employees and the surrounding environment).",
+    "complexity": "Basic",
+    "influence": "May lead to: financial losses from expensive repair costs and business interruption; business disruption affecting production and service delivery; reputational damage especially among the public and customers; and employee safety risks causing casualties or health issues.",
+    "references": []
+  },
+  "R0112-005": {
+    "title": "Surveillance and Eavesdropping",
+    "definition": "Refers to the potential for confidential information leakage, privacy violations, and other security issues in a corporate environment due to the presence of surveillance equipment or eavesdropping tools, from internal or external threats including employees, competitors, suppliers, or other malicious individuals or organizations.",
+    "description": "Possible scenarios include: illegal eavesdropping devices installed in offices, meeting rooms, or other sensitive areas; surveillance camera abuse for monitoring employees or internal activities; electronic eavesdropping through remote access to corporate communication devices; insider employees recording confidential information using recording or photography devices; and supply chain risk where third-party suppliers are hacked and eavesdropping devices are introduced.",
+    "complexity": "Basic",
+    "influence": "Harms include: information leakage of business secrets, strategies, and other important information; privacy violations of employees or management; and reputational damage once surveillance or eavesdropping is exposed.",
+    "references": []
+  },
+  "R0112-006": {
+    "title": "Wireless Network Risk",
+    "definition": "Wireless network risk refers to potential threats and security issues when using wireless networks (Wi-Fi), which are more susceptible to various types of attacks due to their broadcast nature and wireless transmission characteristics.",
+    "description": "Common wireless network risks include: unauthorized access (unauthorized individuals attempting to access protected wireless networks); password cracking (attackers trying to crack wireless network passwords through weak passwords, default passwords, or insecure encryption); phishing attacks (attackers setting up fake wireless networks mimicking legitimate ones to steal user information); man-in-the-middle attacks (attackers inserting themselves between users and access points to monitor or tamper with traffic); wireless interference; wireless cloning (attackers cloning legitimate access points); and wireless intrusion.",
+    "complexity": "Basic",
+    "influence": "",
+    "references": []
+  }
+}

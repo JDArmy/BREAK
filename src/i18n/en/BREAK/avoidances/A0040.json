@@ -1,0 +1,11 @@
+{
+  "A0040": {
+    "title": "Certificate Pinning (SSL Pinning)",
+    "definition": "Pinning the server's SSL certificate in the client.",
+    "description": "Also known as SSL Pinning. Certificate pinning is a protective measure that pins the server's SSL certificate in the client, preventing attackers from intercepting and modifying network traffic via a man-in-the-middle attack.",
+    "limitation": "Certificate pinning is a relatively basic security defense mechanism aimed at raising the bar for man-in-the-middle attacks. However, sophisticated attackers can use various techniques to replace the pinned SSL certificate in the client with a custom certificate to bypass this defense.",
+    "references": [
+      { "title": "Introduction to Certificate Pinning (SSL Pinning) and Its Uses" }
+    ]
+  }
+}

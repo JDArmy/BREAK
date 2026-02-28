@@ -1,0 +1,12 @@
+{
+  "R0004": {
+    "title": "Fake Shipment",
+    "definition": "Fake shipment refers to a merchant or individual who, knowing that goods have not actually been shipped, deliberately provides false shipping information to the buyer in order to deceive or evade responsibility.",
+    "description": "Fake shipment is one of the common fraud tactics in e-commerce or offline transactions. It typically involves: hiding the true status of goods (e.g., damaged, out of stock, or delayed); evading responsibility by sending unrelated items or empty packages after payment; substituting low-quality goods to reduce costs; or making false promises through misleading promotional tactics.",
+    "complexity": "Basic",
+    "influence": "Damages buyers' legitimate rights and interests and disrupts normal platform operations.",
+    "references": [
+      { "title": "Fake Shipment - Baidu Baike" }
+    ]
+  }
+}

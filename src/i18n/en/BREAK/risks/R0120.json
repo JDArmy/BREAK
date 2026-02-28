@@ -1,0 +1,13 @@
+{
+  "R0120": {
+    "title": "AI Voice Cloning Fraud",
+    "definition": "The risk of using AI voice cloning technology to forge others' voices for telephone fraud, bypassing voiceprint authentication, or creating fake audio evidence.",
+    "description": "AI voice cloning fraud refers to attackers using deep learning speech synthesis technology to generate synthetic voices highly similar to a target person based on a small number of voice samples (even just a few seconds of recording). Key risk scenarios include: (1) Telephone fraud: impersonating the voice of friends, family, supervisors, or customer service staff to commit phone fraud and extort transfers or sensitive information. (2) Voiceprint authentication bypass: using cloned voices to bypass voiceprint authentication systems at banks and payment platforms. (3) Fake audio evidence: creating fake call recordings or voice messages for extortion or legal disputes. (4) Enhanced social engineering: combining AI voice cloning with deepfake video for more deceptive social engineering attacks. As zero-shot voice cloning technology matures, attackers can even extract sufficient samples from publicly available voice content on social media.",
+    "complexity": "Advanced",
+    "influence": "Leads to significantly higher telephone fraud success rates, voiceprint authentication system failures, user financial losses, and trust crises.",
+    "references": [
+      { "title": "AI Voice Cloning Fraud Cases - FBI" },
+      { "title": "Survey on Voice Deepfake Detection Techniques" }
+    ]
+  }
+}

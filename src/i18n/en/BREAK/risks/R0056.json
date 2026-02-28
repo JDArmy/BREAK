@@ -1,0 +1,12 @@
+{
+  "R0056": {
+    "title": "Fake Reviews",
+    "definition": "A seller purchases fake positive reviews to boost product reputation or search ranking weight.",
+    "description": "Sellers collude with buyers through low-price orders, empty package shipments, or virtual deliveries to generate fake transactions and bulk positive reviews, boosting store credibility or product rankings.",
+    "complexity": "Basic",
+    "influence": "Undermines platform fairness and distorts ranking algorithms.",
+    "references": [
+      { "title": "Fake Reviews / Review Brushing - Baidu Baike" }
+    ]
+  }
+}

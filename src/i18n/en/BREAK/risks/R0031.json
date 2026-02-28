@@ -1,0 +1,13 @@
+{
+  "R0031": {
+    "title": "Sub-Account Abuse",
+    "definition": "Business account systems that have a sub-account concept but manage sub-accounts loosely, leading to account abuse.",
+    "description": "Some business systems have very strict account registration requirements but are lax about sub-account creation, and sub-accounts have all the same capabilities as the parent account. Black market operators can bypass strict account registration and identity authentication policies by bulk-generating sub-accounts.",
+    "complexity": "Intermediate",
+    "influence": "Sub-account abuse bypasses account registration and identity authentication policies.",
+    "references": [
+      { "title": "What Are the Drawbacks and Risks of Taobao Store Sub-Accounts?" },
+      { "title": "Major Loophole Found in Alipay Real-Name Authentication: Multiple Sub-Accounts Can Be Secretly Bound" }
+    ]
+  }
+}

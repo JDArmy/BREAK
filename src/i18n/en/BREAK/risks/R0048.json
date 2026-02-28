@@ -1,0 +1,12 @@
+{
+  "R0048": {
+    "title": "Facial Recognition Bypass",
+    "definition": "Bypassing facial recognition by forging or tampering with facial data or related authentication data.",
+    "description": "Bypassing facial recognition by forging or tampering with facial data or related authentication data. Commonly used in login, payment, and other processes, or as one of the factors in multi-factor authentication.",
+    "complexity": "Advanced",
+    "influence": "Facial recognition mechanisms become ineffective, leading to unauthorized login, payment, and other risks.",
+    "references": [
+      { "title": "A Brief Overview of Facial Recognition Technology and Attack Techniques" }
+    ]
+  }
+}

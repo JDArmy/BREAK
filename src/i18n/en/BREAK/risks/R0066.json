@@ -1,0 +1,12 @@
+{
+  "R0066": {
+    "title": "In-Platform Message Harassment",
+    "definition": "Using the platform's messaging mechanism to send harassing messages to others.",
+    "description": "Unlike text content risks, message harassment is carefully crafted to evade keyword blacklists and may not trigger the platform's keyword alerts. Message harassment is a widespread risk. Some platforms allow users to configure which groups of people can send them messages, which is an effective defensive strategy.",
+    "complexity": "Basic",
+    "influence": "Causes significant disruption to platform customer service or merchants; in severe cases may lead to user churn or physical harm.",
+    "references": [
+      { "title": "One-Click Protection, Optimized DM Rules, Strengthened Comment Management... CAC: Effectively Strengthen Governance of Cyberbullying!" }
+    ]
+  }
+}

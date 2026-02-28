@@ -1,0 +1,13 @@
+{
+  "R0133": {
+    "title": "Privacy Computing Abuse Risk",
+    "definition": "The risk that privacy computing technologies (federated learning, secure multi-party computation, etc.) are misused or improperly implemented, causing privacy protection goals to fail or even creating new security risks.",
+    "description": "Privacy computing abuse risk refers to risks arising from improper technical implementation, malicious exploitation, or regulatory gaps in the application of privacy computing technologies. Key risks include: (1) Federated learning poisoning: participants injecting malicious model updates during federated learning to affect global model accuracy or plant backdoors. (2) Gradient leakage attacks: inferring participants' original training data by analyzing shared gradient information in federated learning. (3) Privacy computing whitewashing: using privacy computing technology to 'launder' illegally obtained data, making it appear to have undergone compliant privacy protection processing. (4) Excessive collection: collecting excessive user data under the guise of privacy computing without actually implementing effective privacy protection. (5) Compliance facade: deploying privacy computing systems that are misconfigured or incompletely implemented, creating a false appearance of compliance. (6) Technology misuse: using secure multi-party computation and similar technologies to assist illegal activities such as joint money laundering or tax evasion.",
+    "complexity": "Intermediate",
+    "influence": "Privacy protection goals fail, user data is not effectively protected in practice, compliance risks arise, and technology trust declines.",
+    "references": [
+      { "title": "Privacy Computing Technology and Application White Paper - China Academy of Information and Communications Technology" },
+      { "title": "Survey on Security and Privacy in Federated Learning" }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "R0035": {
+    "title": "Login Credential Reuse",
+    "definition": "Copying a user's session credentials (session cookies) to another device to bypass the login process and directly reuse the user's identity.",
+    "description": "A common method is to obtain user cookies to enable automated password-free login. Many account vendors sell accounts by providing only login cookies rather than credentials — known as CK trading. CK trading can bypass SMS verification code login and prevents buyers from changing passwords, enabling multiple resales of the same account.",
+    "complexity": "Intermediate",
+    "influence": "Bypasses MFA multi-factor authentication mechanisms in the login process, or enables a single account to log in on multiple devices.",
+    "references": []
+  },
+  "R0035-001": {
+    "title": "Login Credential Theft",
+    "definition": "Stealing user identity credentials to impersonate the user's identity for access.",
+    "description": "Credential theft is a form of credential reuse. Credential reuse more often refers to a voluntary process of copying and reusing credentials; credential theft refers to a user's identity credentials being stolen by a hacker for use elsewhere to impersonate the user's login.",
+    "complexity": "Intermediate",
+    "influence": "Many account systems do not invalidate existing login sessions after a password change, meaning that with stolen or reused cookies, a hacker can maintain persistent login access to the target user's account.",
+    "references": [
+      { "title": "Malware Steals Website Cookies, Hackers Use Them to Take Over Social Accounts" },
+      { "title": "The Purpose of Cookie Theft and Methods to Prevent It" }
+    ]
+  }
+}

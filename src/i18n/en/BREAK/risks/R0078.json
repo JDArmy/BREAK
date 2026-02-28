@@ -1,0 +1,18 @@
+{
+  "R0078": {
+    "title": "Data Breach",
+    "definition": "Data breach risk refers to the potential threat of an organization's or individual's sensitive, confidential, or personally identifiable information being disclosed, exposed, or accessed without authorization.",
+    "description": "May occur in various scenarios, including cyberattacks, insider leaks, and physical device loss or theft.",
+    "complexity": "Basic",
+    "influence": "Harms include privacy violations, financial losses, legal liability, and reputational damage, potentially causing serious impacts on both organizations and individuals.",
+    "references": []
+  },
+  "R0078-001": {
+    "title": "Partner Data Breach",
+    "definition": "Sensitive information leakage caused by external entities or service providers that partner with the organization, due to insufficient security measures, technical vulnerabilities, or improper operations when handling, storing, or transmitting data.",
+    "description": "Scenarios may include third-party service providers being attacked, unauthorized access, and insecure environments during data transmission.",
+    "complexity": "Basic",
+    "influence": "Harms include loss of trust from customers and business partners, legal liability, reputational damage, and potential financial losses, posing potential threats to both the organization and its partners.",
+    "references": []
+  }
+}

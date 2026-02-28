@@ -1,0 +1,23 @@
+{
+  "A0042": {
+    "title": "Feature Randomization",
+    "definition": "Randomizing business features so that attackers cannot complete automated operations through a fixed workflow.",
+    "description": "Attackers typically complete automated operations by locating feature points and reproducing business workflows. By randomizing the locating attributes of feature points, or inserting some random events into the business workflow, the attacker's fixed automated workflow can be invalidated.",
+    "limitation": "Feature randomization is highly intrusive to the business and requires strong security-business collaboration to implement. Additionally, changes to features may lead to a degraded user experience.",
+    "references": []
+  },
+  "A0042-001": {
+    "title": "DOM Randomization",
+    "definition": "Randomizing the DOM structure so that attackers cannot locate and manipulate page elements through the DOM structure.",
+    "description": "By randomizing the DOM structure and attributes — such as the DOM tree, element IDs, and class names — attackers cannot locate and manipulate page elements via XPath, ID, class, etc.",
+    "limitation": "DOM randomization is ineffective against attack methods that use OCR to identify and manipulate page elements.",
+    "references": []
+  },
+  "A0042-002": {
+    "title": "Random Event Workflow",
+    "definition": "Inserting random events into the normal business workflow so that attackers cannot complete automated operations through a fixed workflow.",
+    "description": "Random event workflows are generally targeted at business scenarios with fixed sequential steps. For example, inserting random CAPTCHAs, random questions, random ad pop-ups, or random red packet pop-ups between normal steps to interrupt and interfere with the normal business workflow, invalidating the attacker's pre-recorded automation.",
+    "limitation": "Attackers can bypass this type of defense by continuously enumerating random events and alerting on automation workflow exceptions.",
+    "references": []
+  }
+}

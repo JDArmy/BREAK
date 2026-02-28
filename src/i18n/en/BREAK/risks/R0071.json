@@ -1,0 +1,61 @@
+{
+  "R0071": {
+    "title": "Generative AI Risk",
+    "definition": "Risks and hazards introduced by AIGC (Artificial Intelligence Generated Content) generative AI.",
+    "description": "AI-generated content risks fall into several categories: sensitive information being embedded in generated content causing data leakage; generated content containing illegal, non-compliant, or unethical material; and the risk of platform content quality degradation from bulk, cheap, and low-quality AI-generated content.",
+    "complexity": "Basic",
+    "influence": "AI-generated content risks may create compliance risks for the platform and increase the volume of customer complaints.",
+    "references": [
+      { "title": "AIGC - Baidu Baike" },
+      { "title": "What Security Risks Does AIGC Introduce?" }
+    ]
+  },
+  "R0071-001": {
+    "title": "AIGC Privacy Leakage",
+    "definition": "AIGC leaking sensitive information learned during large model training into generated content.",
+    "description": "Sensitive information leakage may occur in several ways: (1) Training data leakage: if text data containing sensitive information was used to train the large language model, the model may generate similar sensitive information based on that data. (2) Model memorization: large language models may sometimes exhibit memorization, including previously input information in generated text. If a user provides sensitive information during a conversation, the model may include it in subsequent generations. (3) Context sensitivity: the model may base generated text on prior context, which may include sensitive information provided by the user, and may implicitly include related information in subsequent generations even if the user no longer explicitly mentions it.",
+    "complexity": "Intermediate",
+    "influence": "AIGC sensitive information leakage may create compliance risks for the platform.",
+    "references": [
+      { "title": "What Data Risks Should Enterprises Consider When Using AIGC?" }
+    ]
+  },
+  "R0071-002": {
+    "title": "AIGC Compliance Risk",
+    "definition": "AI-generated content may contain illegal, non-compliant, or unethical material.",
+    "description": "Large language model content compliance risks mainly include: misleading information, discriminatory content, privacy violations, malicious misuse, intellectual property issues, regulatory compliance issues, and lack of transparency. These risks may lead to the spread of false information, discriminatory speech, privacy violations, malicious misuse, and regulatory non-compliance.",
+    "complexity": "Basic",
+    "influence": "AIGC compliance risks may create compliance risks for the platform and increase the volume of customer complaints.",
+    "references": [
+      { "title": "Legal Compliance Risks and Prevention in the AIGC Wave" }
+    ]
+  },
+  "R0071-003": {
+    "title": "AI-Generated Low-Quality Content",
+    "definition": "Bulk, cheap, and low-quality large language model generated content may introduce various risks of platform content quality degradation.",
+    "description": "First, due to the lack of effective content filtering mechanisms, large volumes of spam, fake news, and low-quality reviews may emerge, degrading overall platform content quality. Second, generated content may involve privacy violations, malicious attacks, and inappropriate speech, exacerbating the spread of misinformation and social tension on social platforms. Additionally, large-scale use of language models to generate content may encourage bot-like behavior, making it difficult for real users to distinguish fake accounts and artificially generated content, damaging the platform's credibility and user experience.",
+    "complexity": "Intermediate",
+    "influence": "Leads to degraded platform content quality and undermines the motivation of original and high-quality content creators.",
+    "references": []
+  },
+  "R0071-004": {
+    "title": "AI Hallucination Risk",
+    "definition": "Large language models generating seemingly plausible but actually incorrect or fabricated information — known as 'hallucinations' — which may mislead user decisions.",
+    "description": "AI hallucination refers to large language models generating content that is factually incorrect, logically inconsistent, or entirely fabricated, yet expressed with apparent confidence and plausibility. Key risk scenarios include: (1) Fabricated facts: the model invents non-existent events, people, data, or citations. (2) Incorrect professional advice: generating erroneous advice in medical, legal, financial, and other professional domains, potentially causing serious consequences. (3) False citations: generating seemingly real but non-existent academic papers, legal provisions, or news reports. (4) Logical reasoning errors: producing seemingly valid but actually incorrect reasoning chains in complex inference tasks.",
+    "complexity": "Intermediate",
+    "influence": "Users are misled into making wrong decisions; incorrect advice in professional domains may cause serious consequences; platform credibility declines.",
+    "references": [
+      { "title": "Survey on Hallucination Problems in Large Language Models" }
+    ]
+  },
+  "R0071-005": {
+    "title": "AI Model Poisoning Risk",
+    "definition": "The risk that attackers contaminate training data or model parameters to cause the AI model to exhibit preset erroneous behaviors or backdoors.",
+    "description": "AI model poisoning refers to attackers injecting malicious data or modifying model parameters during the training or fine-tuning phase, causing the model to produce attacker-intended erroneous outputs under specific trigger conditions. Main attack methods include: (1) Data poisoning: injecting carefully crafted malicious samples into training data to cause the model to learn incorrect patterns. (2) Backdoor attacks: planting a backdoor in the model so that when input contains a specific trigger, the model outputs attacker-controlled results. (3) Model tampering: modifying model weights during distribution to implant malicious behavior. (4) Federated learning poisoning: in federated learning scenarios, malicious participants submit poisoned model updates.",
+    "complexity": "Advanced",
+    "influence": "AI system decisions are manipulated, security detection is bypassed, and model trustworthiness is lost.",
+    "references": [
+      { "title": "Survey on AI Model Security and Poisoning Attacks" }
+    ]
+  }
+}

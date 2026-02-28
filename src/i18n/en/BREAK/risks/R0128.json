@@ -1,0 +1,13 @@
+{
+  "R0128": {
+    "title": "Cloud-Native Security Risk",
+    "definition": "Security risks in cloud-native architecture (containers, Kubernetes, microservices, Serverless, etc.) environments caused by misconfigurations, permission management flaws, and other issues.",
+    "description": "Cloud-native security risk refers to the unique security challenges enterprises face when adopting cloud-native technology stacks. Key risks include: (1) Container escape: attackers exploiting container runtime vulnerabilities to break container isolation and gain host machine privileges. (2) Kubernetes misconfiguration: overly permissive RBAC, unauthenticated API Server exposure, unencrypted etcd, missing Pod security policies. (3) Image security: using container images containing known vulnerabilities or malicious code. (4) Service mesh security: insufficient authentication and encryption for inter-microservice communication. (5) Serverless security: overly permissive function permissions, event injection, dependency library vulnerabilities. (6) Cloud configuration vulnerabilities: publicly accessible storage buckets, overly permissive security group rules, excessive IAM permissions. (7) Key management: hardcoded keys, unrotated credentials, improper key storage.",
+    "complexity": "Advanced",
+    "influence": "Can lead to large-scale data breaches, service disruption, lateral movement attacks, and cloud resource abuse.",
+    "references": [
+      { "title": "OWASP Kubernetes Top 10" },
+      { "title": "Cloud Native Security White Paper - CNCF" }
+    ]
+  }
+}

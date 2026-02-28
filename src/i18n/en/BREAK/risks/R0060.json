@@ -1,0 +1,12 @@
+{
+  "R0060": {
+    "title": "Money Laundering Risk",
+    "definition": "Using legitimate trading platforms to conduct illegal transactions in order to transfer money.",
+    "description": "Many gambling websites establish storefronts on legitimate trading platforms and use virtual goods delivery or empty package shipments to process deposits for gamblers. Pornographic scam websites redirect visitors attempting to purchase premium services to legitimate trading platforms to order virtual goods such as phone cards, fuel cards, or VIP vouchers, but never provide the premium services, causing a sharp increase in customer complaints against the legitimate platform.",
+    "complexity": "Advanced",
+    "influence": "Creates significant compliance risks for the platform and increases the volume of customer complaints.",
+    "references": [
+      { "title": "Online gambling recharge points lurking on e-commerce platforms" }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "R0009": {
+    "title": "Malicious Benefit Abuse",
+    "definition": "Malicious benefit abuse (coupon abuse) refers to obtaining illegitimate gains by excessively exploiting merchant promotional policies or activities.",
+    "description": "Merchants run coupon collection, points, discounts, rebates, and giveaway activities to attract new users, boost sales, or increase user engagement. Malicious benefit abuse refers to attackers exploiting loopholes in merchant activities — including but not limited to: quantity limit failures, time limit failures, and eligibility restriction failures — to excessively (often through automated means) obtain more benefits, causing significant financial losses to merchants.",
+    "complexity": "Basic",
+    "influence": "Causes significant financial losses to platforms and merchants.",
+    "references": [
+      { "title": "Coupon Abuse / Benefit Exploitation" }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "A0082": {
+    "title": "Bug Bounty Program",
+    "definition": "A mechanism for publicly soliciting security vulnerabilities from external security researchers and rewarding them, leveraging the external security community to discover security risks in systems and supplement internal security testing capabilities.",
+    "description": "A Bug Bounty Program is a mechanism that incentivizes external security researchers to discover and report security vulnerabilities. Main practices include: (1) scope definition — clearly defining the target systems, domains, and application scope covered by the program, as well as out-of-scope testing areas and prohibited actions; (2) severity levels and reward standards — setting different reward amounts based on vulnerability severity (e.g., CVSS scores) to incentivize researchers to find high-severity vulnerabilities; (3) security response process — establishing a standardized process for vulnerability intake, validation, triage, remediation, and confirmation to ensure timely handling; (4) safe harbor provisions — providing legal protection for good-faith security researchers, clearly stating that compliant testing within scope will not result in legal liability; (5) platform-based operations — managing the program through third-party bug bounty platforms such as HackerOne and Bugcrowd, or a self-built platform, to reduce operational costs; (6) continuous operations — running the bug bounty program as an ongoing security activity, regularly updating scope and reward standards to maintain researcher engagement; (7) vulnerability intelligence feedback — feeding collected vulnerability information back into the security development process to drive systematic security improvements.",
+    "limitation": "The limitations of bug bounty programs include: (1) they require continuous financial investment and professional team operations; (2) large volumes of low-quality or invalid vulnerability reports may be received, increasing review burden; (3) researchers may leak or sell vulnerability information before reporting it; (4) they cannot cover all types of security risks, especially business-logic-level risks; (5) testing of internal systems and non-public assets carries security risks.",
+    "references": [
+      { "title": "HackerOne Bug Bounty Platform" },
+      { "title": "Vulnerability Disclosure and Bug Bounty Program Guide - ISO 29147" }
+    ]
+  }
+}

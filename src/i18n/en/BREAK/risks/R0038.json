@@ -1,0 +1,12 @@
+{
+  "R0038": {
+    "title": "QR Code Login Fraud",
+    "definition": "Exploiting the mechanism of mobile app QR code scanning to authorize web login, enabling fraudulent login.",
+    "description": "Business mobile apps often support external QR code scanning for app launch and auto-login for convenience and promotion purposes. An attacker only needs to copy the QR code from the business web login page and send it to a victim. Once the victim scans the QR code, the attacker gains web-side account access for the victim.",
+    "complexity": "Intermediate",
+    "influence": "The user's account is logged into by the attacker.",
+    "references": [
+      { "title": "Mass QQ Accounts Stolen: QR Code Login Hijacked and Recorded by Black Market Groups" }
+    ]
+  }
+}

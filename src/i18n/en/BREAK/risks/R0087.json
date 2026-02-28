@@ -1,0 +1,10 @@
+{
+  "R0087": {
+    "title": "Business Logic Tampering Risk",
+    "definition": "The potential threat of attackers modifying the runtime logic of business systems to manipulate or disrupt system functions, steal sensitive information, or carry out other malicious activities.",
+    "description": "Scenarios include attackers illegally modifying business logic, manipulating transaction processes, or tampering with data inputs, potentially causing incorrect system processing, resource abuse, or unauthorized data access.",
+    "complexity": "Advanced",
+    "influence": "Harms include business data inconsistency and compromised transaction integrity, potentially causing financial losses, loss of trust, and compliance issues for the organization.",
+    "references": []
+  }
+}

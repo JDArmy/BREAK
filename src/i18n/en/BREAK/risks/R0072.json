@@ -1,0 +1,18 @@
+{
+  "R0072": {
+    "title": "Employee Corruption",
+    "definition": "Employee corruption refers to employees using improper means to seek personal gain, abuse their authority, accept bribes, or engage in corrupt activities in the workplace.",
+    "description": "This may include falsifying expense reports, soliciting kickbacks from suppliers, misusing company resources, bribery, or participating in other corrupt activities.",
+    "complexity": "Basic",
+    "influence": "Employee corruption harms include damaging the company's reputation, undermining internal trust, reducing work efficiency, causing resource waste, increasing compliance risks, and ultimately potentially triggering legal liability and financial losses.",
+    "references": []
+  },
+  "R0072-001": {
+    "title": "Insider-Outsider Collusion",
+    "definition": "Internal employees collude with external individuals or organizations to commit fraud, embezzlement, bribery, or other improper acts that violate the company's interests and regulations.",
+    "description": "Behaviors or scenarios include employees colluding with suppliers to falsify expenses, corrupt transactions, and insider-outsider collusion for fraudulent activities.",
+    "complexity": "Basic",
+    "influence": "May cause financial losses and reputational damage to the company, while increasing compliance risks and posing a serious threat to the company's sound operations.",
+    "references": []
+  }
+}

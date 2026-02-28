@@ -1,0 +1,10 @@
+{
+  "R0099": {
+    "title": "Blocklisted IP Bypass",
+    "definition": "Attackers using various means to evade or bypass a system's mechanisms for identifying and blocking blocklisted IP addresses. Blocklisted IPs typically contain known malicious IP addresses that the system uses to identify and block potential threats.",
+    "description": "Methods used for blocklisted IP bypass include: IP address rotation (frequently changing IP addresses to avoid being blocklisted); proxy servers and VPNs (hiding the real IP address and appearing to come from different locations); TOR network (routing traffic through multiple nodes to hide the real IP); botnets (using multiple infected computers with different IP addresses to increase detection difficulty); low-frequency attacks (reducing attack frequency to evade detection); and IP spoofing (disguising the real IP address to appear as legitimate traffic).",
+    "complexity": "Basic",
+    "influence": "Blocking becomes ineffective if the blocklist cannot be updated in time; legitimate users may be falsely blocked if they use proxies or VPNs; deploying complex blocklist mechanisms may increase system load and be exploited for denial-of-service attacks.",
+    "references": []
+  }
+}

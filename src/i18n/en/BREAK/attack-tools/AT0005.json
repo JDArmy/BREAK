@@ -1,0 +1,10 @@
+{
+  "AT0005": {
+    "title": "Web Scraping Tools",
+    "description": "Web crawlers, also known as 'web spiders' or 'web robots', are a network information collection technology in the internet era. They can be understood as computer programs that automatically simulate human operations online. These crawlers follow specific programs along certain paths, simulating manual operations to extract and store data from websites and applications. With the development of big data technology, web crawlers have become increasingly influential, appearing in ticket grabbing, account theft, and system attacks.",
+    "references": [
+      { "title": "What Are Web Crawlers?" },
+      { "title": "Scrapy Crawler Framework - Baidu Baike" }
+    ]
+  }
+}

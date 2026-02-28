@@ -1,0 +1,13 @@
+{
+  "R0142": {
+    "title": "Man-in-the-Middle Attack",
+    "definition": "Attackers intercept and tamper with communication data between clients and servers to steal user credentials, session tokens, or tamper with transaction content, achieving information theft or transaction hijacking.",
+    "description": "A Man-in-the-Middle (MITM) attack involves an attacker secretly intervening between two communicating parties to intercept, view, or tamper with transmitted data. Main attack scenarios include: (1) WiFi hijacking: intercepting user network communications in public WiFi environments to steal login credentials and sensitive information. (2) SSL/TLS downgrade attacks: using SSL stripping and similar techniques to downgrade encrypted connections to plaintext. (3) ARP spoofing: redirecting traffic to the attacker's device through ARP spoofing on a LAN. (4) DNS hijacking: tampering with DNS resolution results to redirect users to malicious servers. (5) Certificate forgery: using forged SSL certificates to impersonate legitimate servers and intercept encrypted communications. (6) Transaction tampering: modifying key information such as payee accounts and transaction amounts during payment. (7) Session hijacking: stealing user session tokens (Session Token/Cookie) to impersonate users.",
+    "complexity": "Advanced",
+    "influence": "User credentials and sensitive information are leaked, transactions are tampered with causing financial losses, and users lose trust in platform security.",
+    "references": [
+      { "title": "Man-in-the-Middle Attack - OWASP" },
+      { "title": "MITM Attack Defense Guide - CISA" }
+    ]
+  }
+}

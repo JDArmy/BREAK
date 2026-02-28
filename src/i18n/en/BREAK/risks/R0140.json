@@ -1,0 +1,12 @@
+{
+  "R0140": {
+    "title": "Membership / Subscription Abuse",
+    "definition": "Repeatedly obtaining free benefits by exploiting trial period and subscription mechanism loopholes, or illegally obtaining and distributing paid benefits through sharing or reselling membership accounts.",
+    "description": "Membership/subscription abuse involves fraud targeting platform membership systems and subscription services. Main patterns include: (1) Trial period abuse: repeatedly registering new accounts to obtain free trial benefits, abandoning accounts when they expire and re-registering. (2) Benefit sharing: sharing personal membership account credentials with multiple people beyond the authorized scope. (3) Membership reselling: bulk-registering or stealing membership accounts and reselling them at low prices on third-party platforms. (4) Refund benefit retention: activating membership, using benefits, then canceling the subscription through refund mechanisms while retaining already-obtained benefits (such as downloaded content). (5) Downgrade arbitrage: concentrating use of high-tier benefits during the grace period before immediately downgrading. (6) Family plan abuse: adding non-family members to family sharing plans to obtain membership benefits at low cost.",
+    "complexity": "Basic",
+    "influence": "Causes platform membership revenue losses, degrades paid user experience, and dilutes the value of the membership system.",
+    "references": [
+      { "title": "Subscription Fraud Prevention - Recurly" }
+    ]
+  }
+}

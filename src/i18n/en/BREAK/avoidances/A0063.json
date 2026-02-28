@@ -1,0 +1,12 @@
+{
+  "A0063": {
+    "title": "Password Complexity Requirements",
+    "definition": "Rules and requirements imposed by a system or service when setting passwords to ensure passwords are strong enough to be difficult to guess or crack.",
+    "description": "These requirements typically include: length — requiring a minimum password length, as longer passwords are generally more secure and harder to crack; character types — requiring passwords to contain different types of characters such as uppercase letters, lowercase letters, numbers, and special symbols to increase complexity; avoiding common passwords — prohibiting easily guessed common passwords such as 'password' or '123456'; no dictionary words — prohibiting the use of dictionary words to prevent dictionary attacks; periodic changes — requiring users to change passwords regularly to reduce the risk of password misuse; no repeated characters — avoiding the same character appearing repeatedly in a password; no match with username — prohibiting passwords that are the same as or contain the username; password history — recording previously used passwords to ensure new passwords differ from prior ones; account lockout — locking accounts after multiple incorrect password attempts to prevent brute-force attacks.",
+    "limitation": "Overly strict requirements may lead users to adopt hard-to-remember passwords, which they then record in insecure locations or replace with weak passwords. Forcing periodic password changes may prompt users to adopt easily guessable patterns, such as appending numbers or special characters. Complexity requirements primarily defend against brute-force and dictionary attacks and have limited effectiveness against advanced attack methods such as social engineering. Finally, overly complex password rules may degrade user experience, making users more likely to adopt insecure alternatives and undermining overall security.",
+    "references": [
+      { "title": "Password Policy Recommendations for Microsoft 365" },
+      { "title": "On Password Strength Rules" }
+    ]
+  }
+}

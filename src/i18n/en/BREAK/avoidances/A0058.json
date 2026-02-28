@@ -1,0 +1,9 @@
+{
+  "A0058": {
+    "title": "Disaster Recovery",
+    "definition": "A set of plans and procedures developed by an organization to respond to various sudden disaster events, aimed at ensuring business continuity and rapidly restoring normal operations. This covers natural disasters, human accidents, technical failures, and other emergencies.",
+    "description": "Common practices include: backup and recovery strategies — regularly backing up critical data and system configurations to enable rapid restoration to the pre-disaster state; redundant systems and equipment — deploying redundant hardware, network devices, and systems to guard against primary equipment or system failures; disaster recovery sites — establishing alternate work locations to ensure employees can continue working when the primary office is unavailable; emergency communication plans — ensuring reliable communication channels so that internal and external parties can effectively coordinate disaster response; regular drills — conducting regular drills of the disaster recovery plan to ensure the team is familiar with procedures and to identify and resolve potential issues.",
+    "limitation": "Limitations include: cost — establishing a comprehensive disaster recovery mechanism may require significant investment, which may be difficult for smaller organizations; unpredictable disasters — some disasters cannot be predicted or prevented, so the mechanism may not cover all scenarios; supply chain dependency — if a link in the supply chain is affected, it may impact the execution of the disaster recovery mechanism; human factors — human errors, mistakes, or negligence may cause the disaster recovery plan to fail.",
+    "references": []
+  }
+}

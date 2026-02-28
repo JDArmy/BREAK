@@ -1,0 +1,20 @@
+{
+  "A0049": {
+    "title": "Digital Watermark",
+    "definition": "Embedding specific information into a digital signal, which may be text, audio, files, images, or video.",
+    "description": "Also known as a digital watermark. When a watermarked signal is copied, the embedded information is copied along with it. Digital watermarks can be divided into visible and invisible types. Visible watermarks contain information that can be seen while viewing an image or video. Invisible watermarks are added to audio, images, or video as digital data but cannot normally be seen. In general, visible watermarks are primarily used for deterrence and copyright declaration; invisible watermarks are primarily used for traceability and copyright determination.",
+    "limitation": "Watermarks may disappear or become unrecoverable when the digital signal is edited, such as through image cropping, video editing, or audio editing.",
+    "references": [
+      { "title": "Digital Watermark - Baidu Baike" }
+    ]
+  },
+  "A0049-001": {
+    "title": "Text Watermark",
+    "definition": "Adding invisible or imperceptible information to text content to verify document authenticity, protect intellectual property, or manage digital rights.",
+    "description": "Text watermarks can be visible — for example, replacing certain digits, letters, or symbols with homoglyphs — or invisible, such as inserting invisible characters like Unicode control characters into the text.",
+    "limitation": "The limitations of text watermarking include visibility issues, ease of removal, inapplicability to all text types, stealth requirements, inability to prevent copying, inapplicability to encrypted text, difficulty scaling to large deployments, and legal and privacy concerns.",
+    "references": [
+      { "title": "JD.Army Open Source Text Watermark Solution" }
+    ]
+  }
+}

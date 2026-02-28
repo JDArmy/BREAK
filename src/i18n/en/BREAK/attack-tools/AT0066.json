@@ -1,0 +1,10 @@
+{
+  "AT0066": {
+    "title": "Fake Apps",
+    "description": "Fake apps are malicious mobile applications that impersonate legitimate applications by mimicking the names, icons, and interface designs of well-known apps to deceive users into downloading and installing them, then implementing phishing, information theft, or backdoor implantation. Main characteristics include high-fidelity interfaces, permission abuse, malicious code implantation, push phishing, SMS interception on Android devices, and distribution through third-party app stores, phishing websites, and social media links.",
+    "references": [
+      { "title": "Fake Apps - Google Play Protect" },
+      { "title": "Regulations on the Administration of Mobile Internet Application Information Services" }
+    ]
+  }
+}

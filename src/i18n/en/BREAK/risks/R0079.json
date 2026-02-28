@@ -1,0 +1,10 @@
+{
+  "R0079": {
+    "title": "Chinese Cryptography Standard (SM) Compliance Risk",
+    "definition": "The potential threat of an organization failing to comply with the cryptographic algorithm standards issued by China's State Cryptography Administration (SCA) when using encryption algorithms, which may lead to regulatory non-compliance and technical standard inconsistencies.",
+    "description": "Scenarios may involve the inability to meet domestic regulatory requirements due to the use of non-SM algorithms, potential scrutiny from regulatory authorities, and possible challenges regarding technical standard inconsistencies in critical domains.",
+    "complexity": "Basic",
+    "influence": "Harms include legal liability, compliance issues, and business restrictions in specific domestic markets, potentially damaging the organization's competitiveness and reputation in the Chinese market.",
+    "references": []
+  }
+}

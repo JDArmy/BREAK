@@ -1,0 +1,30 @@
+{
+  "A0029": {
+    "title": "Data Profiling",
+    "definition": "Collecting and analyzing various data to form labeled profiles of that data.",
+    "description": "Data profiling refers to labeled data models abstracted from data attributes, data behaviors, and other information.",
+    "limitation": "Data quality issues: data profiling requires large amounts of data; if data quality is poor, it will affect profile accuracy. Data privacy issues: data profiling requires collecting large amounts of data; if not handled properly, it will involve data privacy concerns. Timeliness issues: data profiling is based on historical data analysis and prediction; if the data is outdated or inaccurate, it will affect the timeliness of the profile.",
+    "references": []
+  },
+  "A0029-001": {
+    "title": "User Profiling",
+    "definition": "Labeling users and describing them through various tags.",
+    "description": "User profiling refers to labeled user models abstracted from user attributes, preferences, lifestyle habits, and behavior. In plain terms, it means assigning tags to users — tags are highly refined characteristic identifiers derived from analyzing user information. Through labeling, users can be described using highly summarized, easy-to-understand characteristics, making it easier for people to understand users and for computers to process them.",
+    "limitation": "Data quality issues: user profiling requires large amounts of data; if data quality is poor, it will affect profile accuracy. Data privacy issues: user profiling requires collecting large amounts of user data; if not handled properly, it will involve user privacy concerns. Timeliness issues: user profiling is based on historical data analysis and prediction; if the data is outdated or inaccurate, it will affect the timeliness of the profile.",
+    "references": []
+  },
+  "A0029-002": {
+    "title": "IP Profiling",
+    "definition": "Analyzing the behavior and characteristics of an IP address and associating it with various labels and attributes to form a comprehensive understanding of that IP address.",
+    "description": "IP profiling can include multiple aspects such as the IP address's geographic location, carrier, network quality, and user profile, and can be used to determine whether the IP address poses a risk or is a malicious IP. In the network security field, IP profiling is an important technical means that can help enterprises better understand threats and anomalous behavior in the network, improving network security protection capabilities. Through IP profiling, enterprises can quickly locate and handle malicious attacks, fraud, and other network security incidents, protecting business and data security.",
+    "limitation": "With the proliferation of IPv6, the number of IP addresses will increase dramatically, posing greater challenges for IP profiling technology.",
+    "references": []
+  },
+  "A0029-003": {
+    "title": "Device Profiling",
+    "definition": "Labeling devices and describing them through various tags.",
+    "description": "Device profiling refers to labeled device models abstracted from device attributes and device behaviors.",
+    "limitation": "Device profiling is an extension of device fingerprinting (A0021). If device fingerprinting is inaccurate, device profiling will also be affected. Additionally, the accuracy of device profiling is also affected by the device profiling algorithm.",
+    "references": []
+  }
+}

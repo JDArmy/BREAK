@@ -1,0 +1,13 @@
+{
+  "R0125": {
+    "title": "Cross-Border E-Commerce Compliance Risk",
+    "definition": "Compliance risks faced by cross-border e-commerce businesses in terms of laws and regulations, tax policies, and data protection requirements across different countries and regions.",
+    "description": "Cross-border e-commerce compliance risk refers to the compliance challenges enterprises face when conducting cross-border e-commerce, needing to simultaneously comply with laws and regulations of multiple countries and regions. Key risks include: (1) Cross-border data transfer: different countries have different restrictions on cross-border personal data transfers, such as the EU GDPR and China's Data Export Security Assessment Measures. (2) Tax compliance: different countries have different tax policies for cross-border e-commerce, including VAT, customs duties, and digital services taxes. (3) Product compliance: different markets have different product safety standards, certification requirements, and labeling specifications. (4) Consumer rights protection: different countries' consumer protection laws have different requirements for returns, after-sales service, and advertising. (5) Intellectual property: cross-border sales may involve IP infringement risks across different jurisdictions. (6) Payment compliance: cross-border payments involve foreign exchange management and anti-money laundering compliance requirements. (7) Platform liability: different countries have different definitions of e-commerce platform liability and regulatory requirements.",
+    "complexity": "Intermediate",
+    "influence": "Faces multi-country regulatory penalties, market access restrictions, fines, business disruption, and reputational losses.",
+    "references": [
+      { "title": "Cross-Border E-Commerce Compliance White Paper" },
+      { "title": "EU Digital Services Act" }
+    ]
+  }
+}

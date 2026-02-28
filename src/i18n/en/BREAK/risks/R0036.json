@@ -1,0 +1,22 @@
+{
+  "R0036": {
+    "title": "Multi-Factor Authentication (MFA) Bypass",
+    "definition": "Cracking or bypassing multi-factor authentication factors during the identity verification process.",
+    "description": "Obtaining MFA verification factors through brute force enumeration — such as cracking SMS verification codes, last digits of ID numbers, email verification codes, or OTP tokens; or exploiting flaws in the authentication process — such as forging trusted device fingerprints or requesting non-MFA login pages — to bypass MFA verification.",
+    "complexity": "Advanced",
+    "influence": "Will bypass existing MFA multi-factor authentication mechanisms, leading to account compromise.",
+    "references": [
+      { "title": "Exposing Multi-Factor Authentication (MFA) Bypass Techniques" }
+    ]
+  },
+  "R0036-001": {
+    "title": "MFA Fatigue Attack",
+    "definition": "MFA fatigue attack refers to hackers repeatedly sending push notification approval requests after obtaining login credentials, tricking users into granting account access. Eventually, users approve the notification out of fatigue or inattention.",
+    "description": "The hacker continuously triggers login approval request push notifications to the victim's device. The victim is initially confused and has about 30% trust. The attacker then uses social engineering to contact the victim, posing as an IT administrator and claiming the system has a problem that requires approving the notification to stop the pushes. The victim's trust rises to about 80% because they believe a real IT admin would know about the issue so quickly and know their name and department. Many employees then comply with the 'fake admin's' instructions.",
+    "complexity": "Advanced",
+    "influence": "Will bypass existing MFA multi-factor authentication mechanisms, leading to account compromise.",
+    "references": [
+      { "title": "Cisco and Uber Hacked Back-to-Back: Reflections on MFA Fatigue Attacks" }
+    ]
+  }
+}

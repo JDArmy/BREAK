@@ -1,0 +1,12 @@
+{
+  "R0042": {
+    "title": "Fake Inventory",
+    "definition": "An e-commerce seller deliberately claims to have stock of a product when they do not actually have sufficient inventory.",
+    "description": "Fake inventory generally serves a few purposes: first, attracting users with extremely low prices or popular items, then claiming out-of-stock and redirecting users to other products; second, creating fake inventory to attract orders, then fulfilling them through reselling or other means.",
+    "complexity": "Basic",
+    "influence": "The first type of fake inventory creates a poor shopping experience for users, who may feel deceived; the second type may cause delayed shipments or users paying high prices for low-value goods, negatively impacting user experience.",
+    "references": [
+      { "title": "How Are Tmall Sellers Penalized for Fake Inventory?" }
+    ]
+  }
+}

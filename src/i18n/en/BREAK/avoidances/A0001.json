@@ -1,0 +1,43 @@
+{
+  "A0001": {
+    "title": "Human Verification Technology",
+    "definition": "Also known as CAPTCHA or verification code mechanism, it distinguishes human operations from non-human operations by presenting challenges.",
+    "description": "Challenges are typically presented through behavioral CAPTCHAs, image-text CAPTCHAs, or by collecting and analyzing data such as mouse movement trajectories, click events, screen touch pressure, swipe trajectories, request access rates, and 3D gyroscope readings. Note: facial recognition is generally considered a form of biometric identification (A023).",
+    "limitation": "The black-gray industry has given rise to 'CAPTCHA-solving platforms' (AT0008), which use crowdsourced human labor to complete human verification challenges. This is a dimensionality-reduction attack against human verification, and in theory can render all explicit human verification completely ineffective.",
+    "references": [
+      { "title": "Captcha - Baidu Baike" }
+    ]
+  },
+  "A0001-001": {
+    "title": "Image-Text CAPTCHA",
+    "definition": "A type of human verification challenge where the challenger must identify the content in an image and enter it into an input field.",
+    "description": "Image CAPTCHAs, also known as graphic CAPTCHAs, are a common user identity verification method. They typically consist of a set of randomly generated numbers, letters, or symbols displayed in graphical form, usually with interference elements such as lines, noise, or distortion to prevent automated tools (e.g., bots or OCR software) from easily recognizing them. Users must correctly enter the characters shown in the image to pass verification. This method is primarily used to prevent malicious software or non-human users from performing automated operations. The challenge mainly relies on the gap between human ability to recognize irregular image text and computer recognition ability.",
+    "limitation": "As computer processing power improves and AI image recognition capabilities advance, the probability of this type of CAPTCHA being cracked is increasing. In particular, the development of AI-generated content has rendered traditional image CAPTCHA mechanisms nearly ineffective. A mainstream evolution direction for image CAPTCHAs is to combine them with behavioral CAPTCHAs (A001-002), using multi-dimensional factors to complete the human verification challenge.",
+    "references": [
+      { "title": "Captcha open-source libraries on GitHub" }
+    ]
+  },
+  "A0001-002": {
+    "title": "Behavioral CAPTCHA",
+    "definition": "A human verification mode that combines image-text recognition with human mouse/keyboard and screen interaction.",
+    "description": "Common behavioral CAPTCHAs are built on the basis of human recognition of image-text information, requiring actions such as clicking, selecting, sliding, and dragging. They judge human vs. machine by comparing the differences between human behavior and machine behavior. Because image recognition is supplemented by behavioral identification, resistance to cracking is higher than traditional image CAPTCHAs (A001-001).",
+    "limitation": "The principle of behavioral CAPTCHAs is to perform certain keyboard/mouse actions based on understanding of image-text information. As seen from the limitations of image CAPTCHAs (A001-001), the challenge of distinguishing humans from machines through image-text is becoming increasingly difficult. Behavioral CAPTCHAs use deep learning on human keyboard/mouse actions to form models that identify the smooth automated keyboard/mouse operations of machines. However, automated machines can also use deep learning on human keyboard/mouse actions to achieve convincing imitation, which will be a major challenge in the future.",
+    "references": [
+      { "title": "AJ-Captcha (behavioral CAPTCHA, including sliding puzzle and text click-selection)" }
+    ]
+  },
+  "A0001-003": {
+    "title": "Voice CAPTCHA",
+    "definition": "A human verification technology similar to image CAPTCHAs but using audio for verification. Users must listen to system-generated voice content and then answer or perform related operations to prove they are a real human user. Voice CAPTCHAs are commonly used in phone verification, voice navigation systems, and other scenarios requiring voice interaction.",
+    "description": "Methods include: digit string verification — the system generates a voice string containing numbers, and the user must listen and enter the correct digit string to complete verification. Voice commands — the user may be asked to follow voice prompts to perform certain instructions, such as saying specific words, numbers, or performing an action. Speech recognition technology — the voice CAPTCHA system may use speech recognition to confirm whether the user's answer is correct.",
+    "limitation": "The limitations of voice CAPTCHAs include sensitivity to voice quality, differences in user comprehension, noisy environments, unfriendliness to users with disabilities, and potentially increased computational resource requirements.",
+    "references": []
+  },
+  "A0001-004": {
+    "title": "Silent CAPTCHA",
+    "definition": "A human verification technology that analyzes the user's behavioral characteristics to determine whether the user is a real human. Silent CAPTCHA does not require the user to perform any additional operations or actively input any information to complete verification.",
+    "description": "Methods include: user behavior analysis — analyzing behavioral characteristics such as mouse movement trajectories, click events, screen touch pressure, swipe trajectories, request access rates, and 3D gyroscope data to determine whether the user is a real human. User environment analysis — analyzing environmental characteristics such as IP address, device information, browser information, operating system information, and geographic location to determine whether the user is a real human. Combined behavior and environment analysis — analyzing both behavioral and environmental characteristics together to determine whether the user is a real human.",
+    "limitation": "The limitations of silent CAPTCHA include sensitivity to the user's environment and unfriendliness to users with disabilities.",
+    "references": []
+  }
+}

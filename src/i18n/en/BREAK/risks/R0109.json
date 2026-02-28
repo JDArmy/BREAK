@@ -1,0 +1,10 @@
+{
+  "R0109": {
+    "title": "Privilege Escalation / Unauthorized Access",
+    "definition": "Privilege escalation or unauthorized access risk refers to a user or process gaining or attempting to gain access to resources, data, functions, or systems in an unauthorized manner within a computer system or application.",
+    "description": "This risk may occur due to weak passwords, vulnerability exploitation, lack of access controls, misconfigurations, or unauthorized system or application access. It may allow malicious users, attackers, or unauthorized personnel to bypass normal security controls and access sensitive information or perform operations they are not authorized to perform.",
+    "complexity": "Basic",
+    "influence": "Unauthorized access may lead to serious security issues including but not limited to data leakage, privacy violations, denial of service, and system crashes.",
+    "references": []
+  }
+}

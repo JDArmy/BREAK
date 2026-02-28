@@ -1,0 +1,12 @@
+{
+  "R0046": {
+    "title": "Minor Age Verification Bypass",
+    "definition": "Bypassing minor identification mechanisms through identity forgery.",
+    "description": "Bypassing minor identification mechanisms by using real or forged adult identities, including using adult ID cards, facial recognition, fingerprints, and other biometric data.",
+    "complexity": "Intermediate",
+    "influence": "Minor identification mechanisms become ineffective.",
+    "references": [
+      { "title": "Post-00s and Post-10s vs. Anti-Addiction Systems: A Battle of Wits Worthy of a Spy Thriller" }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "R0122": {
+    "title": "NFT Fraud Risk",
+    "definition": "The risk of exploiting the opacity and regulatory gaps in the NFT (Non-Fungible Token) market to conduct fake transactions, price manipulation, intellectual property infringement, and other fraudulent activities.",
+    "description": "NFT fraud risk encompasses multiple fraud forms: (1) Wash trading: the same person or affiliated parties repeatedly trading the same NFT to artificially inflate prices and volume, creating a false sense of prosperity. (2) Rug pull: project teams disappearing with funds after NFT sales, leaving buyers with worthless investments. (3) Intellectual property infringement: minting others' artwork, brand logos, and other content as NFTs for sale without authorization. (4) Fake projects: creating fake NFT projects to attract investors through false promotion and community hype. (5) Phishing attacks: stealing users' crypto assets through fake NFT trading platforms or wallet connection requests. (6) Metadata tampering: modifying the associated digital asset content after NFT minting.",
+    "complexity": "Intermediate",
+    "influence": "Investor financial losses, intellectual property violations, declining market trust, and platform compliance risks.",
+    "references": [
+      { "title": "NFT Market Fraud Analysis - Chainalysis" }
+    ]
+  }
+}

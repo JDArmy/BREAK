@@ -1,0 +1,22 @@
+{
+  "R0043": {
+    "title": "Stolen Card Payment",
+    "definition": "Using the identity from a stolen payment card or another user's account to complete transactions.",
+    "description": "Using the identity from a stolen payment card or another user's account to complete transactions. This is generally used to conceal the attacker's identity or reduce the risk of bulk order fraud being intercepted by risk controls. Login credentials come from carding attacks (R0040), and payment information comes from card cracking (R0041).",
+    "complexity": "Advanced",
+    "influence": "Payment identity is impersonated.",
+    "references": [
+      { "title": "What Happens to Accounts Topped Up with Stolen Cards?" }
+    ]
+  },
+  "R0043-001": {
+    "title": "Stolen Card Fraud",
+    "definition": "Using funds from a stolen payment card or another user's account to purchase goods or cash out.",
+    "description": "Using stolen payment card or account login credentials and payment information to misappropriate or steal funds. In addition to conventional purchases/services/withdrawals, profits can also be made through refunds. Login credentials come from carding attacks (R0040), and payment information comes from card cracking (R0041).",
+    "complexity": "Advanced",
+    "influence": "Funds in the payment card or account are misappropriated or stolen.",
+    "references": [
+      { "title": "OWASP Automated Threat: OAT012 Cashing Out" }
+    ]
+  }
+}

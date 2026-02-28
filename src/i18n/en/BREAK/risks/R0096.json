@@ -1,0 +1,20 @@
+{
+  "R0096": {
+    "title": "Platform Online Loan Fraud",
+    "definition": "Online loan fraud generally refers to internet black/grey market actors using illegal means such as forged identity documents, fabricated credit materials, and purchased illegal data to exploit loopholes in internet loan approval systems during the qualification review stage, illegally obtaining loan qualifications from internet lending platforms, transferring the funds to personal accounts, and refusing to repay the loans.",
+    "description": "Main fraud methods include: registering large numbers of phone numbers and using them for bulk consumption to artificially boost credit ratings; using technical means to forge identity information, device information, and location information to obtain loans and evade post-loan collection; and exploiting the slow update cycle of public credit information to simultaneously apply for loans from multiple platforms, maliciously exhausting credit.",
+    "complexity": "Basic",
+    "influence": "Causes financial losses to the platform.",
+    "references": []
+  },
+  "R0096-001": {
+    "title": "Anti-Collection Risk",
+    "definition": "Anti-collection generally refers to organizations or individuals using abnormal means to help debtors maliciously evade debts, extending repayment periods, reducing or waiving interest, or otherwise reducing debtors' repayment obligations.",
+    "description": "For example, anti-collection intermediaries have debtors forward their phone cards or set up call forwarding, so that the anti-collection gang's so-called legal staff negotiate on behalf of the debtor to achieve interest reduction and deferred/installment repayment, ultimately charging the debtor a percentage fee based on the anti-collection outcome.",
+    "complexity": "Basic",
+    "influence": "Causes financial losses to the platform.",
+    "references": [
+      { "title": "Report on the Current Crisis and Governance of Anti-Collection Black/Grey Industries released" }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "A0014": {
+    "title": "Anti-Tampering Mechanism",
+    "definition": "A set of technologies and measures designed to ensure the integrity of data, software, or information. Such mechanisms aim to prevent unauthorized modification, tampering, or damage, ensuring data trustworthiness and accuracy.",
+    "description": "Common anti-tampering methods and practices include: Digital signatures — using asymmetric encryption algorithms to generate digital signatures for data; verifying the signature confirms data integrity and source authenticity. Hash algorithms — hashing data to generate a fixed-length hash value; even a minor change in the data causes a significant change in the hash, used to verify data integrity. Access control — restricting access permissions to data and systems to prevent unauthorized modification. Secure transport protocols — using secure transport protocols (such as HTTPS) to ensure data integrity during transmission. Logging — recording key operations and events to track and verify the modification history of data.",
+    "limitation": "Key management: if key management is improper, mechanisms such as digital signatures may be attacked, affecting data integrity verification. Dependence on a trusted environment: the effectiveness of anti-tampering mechanisms depends on the overall security of the system or environment; if the overall environment is untrusted, the mechanism may be compromised. Performance impact: some anti-tampering measures may have a certain impact on system performance, especially in large-scale data processing scenarios. Human factors: human error, negligence, or insider threats may bypass anti-tampering mechanisms and affect data integrity.",
+    "references": []
+  },
+  "A0014-001": {
+    "title": "Client-Side Anti-Tampering",
+    "definition": "Ensuring the integrity of client-side programs and preventing malicious tampering.",
+    "description": "Signing and integrity-checking the client application and its associated files ensures that the program cannot run normally if content injection, repackaging, or feature blocking occurs at runtime.",
+    "limitation": "Attackers can use decompilation tools to analyze the program and find the implementation of the anti-tampering algorithm. Additionally, attackers can use debugging tools to trace the program's execution and find vulnerabilities in the anti-tampering algorithm.",
+    "references": []
+  },
+  "A0014-002": {
+    "title": "Server-Side Anti-Tampering",
+    "definition": "A set of security measures designed to protect server systems from unauthorized access, modification, or damage, ensuring the integrity of software, configurations, and data on the server.",
+    "description": "Common server-side anti-tampering measures include: Integrity checks — using hash algorithms to regularly check the integrity of critical files and system images on the server to detect tampering. Real-time monitoring — deploying real-time monitoring systems to watch server activity and file system changes, detecting anomalies promptly. Secure configuration — applying security configurations to the server OS and related services, disabling unnecessary services and ports, and following the principle of least privilege. Firewalls and Intrusion Detection Systems (IDS) — deploying firewalls and IDS to monitor and block malicious traffic and reduce unauthorized access. Regular vulnerability scanning and patch management — regularly scanning the server for vulnerabilities and applying patches promptly to prevent attackers from exploiting known vulnerabilities. Access control — using strong password policies, multi-factor authentication, and other measures to restrict server access, ensuring only authorized users can access it. Encrypted communication — using encrypted communication protocols (such as SSH, HTTPS) to protect communication between the server and clients.",
+    "limitation": "Zero-day vulnerabilities: anti-tampering mechanisms may not defend against undisclosed zero-day vulnerabilities since no corresponding fix exists yet. False positives and false negatives: security tools may produce false positives or false negatives, leading to misinterpretation of normal operations or overlooking real threats. Human factors: administrator misconfiguration, negligence, or insider threats may bypass anti-tampering measures. Performance impact: strong anti-tampering measures may sometimes have a certain impact on server performance.",
+    "references": []
+  }
+}

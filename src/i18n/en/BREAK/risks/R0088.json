@@ -1,0 +1,10 @@
+{
+  "R0088": {
+    "title": "Automated Login Risk",
+    "definition": "The identity authentication login process can be automated, creating security risks.",
+    "description": "Automated login risk refers to the use of automated scripts, bots, or software to execute the login process, potentially involving a range of security threats and issues.",
+    "complexity": "Intermediate",
+    "influence": "Can lead to credential cracking (R0032), credential stuffing (R0032-001), and other cyberattacks; can also be used for automated account seasoning (R0034) and third-party account aggregation (R0037), making it a priority defense target.",
+    "references": []
+  }
+}

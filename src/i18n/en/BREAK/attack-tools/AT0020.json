@@ -1,0 +1,9 @@
+{
+  "AT0020": {
+    "title": "Hardware ROM Modification Tools",
+    "description": "Android is an open-source operating system, allowing developers to customize ROMs. Some developers with malicious intent create ROMs that can arbitrarily modify phone operating system parameters, known as 'hardware modification'. This method is more difficult for developers but makes changes at the OS framework level that apps cannot detect at all. Hardware-modified devices can generate device parameters locally at random or dynamically receive real parameters from other devices via a cloud device library.",
+    "references": [
+      { "title": "Excerpts from 'Risk Control Essentials'" }
+    ]
+  }
+}

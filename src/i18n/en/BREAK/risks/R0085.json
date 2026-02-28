@@ -1,0 +1,28 @@
+{
+  "R0085": {
+    "title": "Ransomware Attack",
+    "definition": "The potential threat where attackers encrypt victims' data or threaten to expose their sensitive information, then demand ransom payment to unlock or withhold the data.",
+    "description": "Scenarios include using malware to infect systems, encrypting files, and then extorting victims to pay for decryption keys or to prevent information leakage.",
+    "complexity": "Advanced",
+    "influence": "Harms include data loss, system paralysis, and business disruption, potentially causing enormous financial losses, reputational damage, and legal liability for organizations.",
+    "references": []
+  },
+  "R0085-001": {
+    "title": "Ransomware as a Service (RaaS)",
+    "definition": "Ransomware as a Service is a criminal business model where ransomware developers provide ransomware tools and infrastructure as a service to other criminals, sharing a percentage of the ransom.",
+    "description": "The RaaS model significantly lowers the technical barrier for ransomware attacks, enabling criminals without technical skills to launch ransomware attacks. RaaS platforms typically provide: ransomware generators, encryption/decryption tools, ransom negotiation platforms, victim management panels, and technical support services. Well-known RaaS groups include LockBit, BlackCat/ALPHV, and Cl0p. The typical RaaS business model has developers taking 20%-30% of the ransom as a platform fee, with the remainder going to the 'affiliates' who actually launch the attacks.",
+    "complexity": "Advanced",
+    "influence": "The number and frequency of ransomware attacks increase significantly, small and medium enterprises become primary targets, and ransom amounts continue to rise.",
+    "references": [
+      { "title": "Ransomware as a Service Trend Analysis" }
+    ]
+  },
+  "R0085-002": {
+    "title": "Double / Triple Extortion",
+    "definition": "In addition to encrypting data, attackers add data leakage threats (double extortion) and pressure on the victim's customers/partners (triple extortion) as multiple extortion tactics.",
+    "description": "Double/triple extortion is an escalated form of ransomware attack. (1) Double extortion: attackers steal a copy of the victim's data before encrypting it, threatening to publicly leak the data on the dark web if the victim refuses to pay. (2) Triple extortion: in addition to double extortion, attackers also contact the victim's customers, partners, or regulators to notify them of the data breach, applying additional pressure to force payment. (3) Quadruple extortion: some attackers also simultaneously launch DDoS attacks to further paralyze the victim's business systems. This multi-extortion strategy means that even comprehensive data backups cannot fully mitigate ransomware risk.",
+    "complexity": "Advanced",
+    "influence": "Data leakage risk persists even with backups, customer and partner trust is damaged, and compliance penalty risks arise.",
+    "references": []
+  }
+}

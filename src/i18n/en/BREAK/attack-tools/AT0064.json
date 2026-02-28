@@ -1,0 +1,10 @@
+{
+  "AT0064": {
+    "title": "Infostealers",
+    "description": "Infostealers are a class of malware specifically designed to steal sensitive information from victim devices, primarily targeting browser-saved passwords, cookies, autofill data, and cryptocurrency wallet keys. Representative families include RedLine, Raccoon, Vidar, and Lumma. Main functions include browser data theft, cryptocurrency wallet theft, session token theft (Discord, Telegram, Steam), screenshots and keylogging, system information collection, and data exfiltration via encrypted channels to attacker-controlled servers or Telegram bots. Infostealers typically spread through phishing emails, fake software downloads, and cracked software, with stolen data sold in bulk on dark web markets as 'logs'.",
+    "references": [
+      { "title": "Infostealer Malware Analysis - MITRE ATT&CK" },
+      { "title": "RedLine Stealer Technical Analysis Report" }
+    ]
+  }
+}

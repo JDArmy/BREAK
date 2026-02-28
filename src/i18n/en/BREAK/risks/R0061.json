@@ -1,0 +1,12 @@
+{
+  "R0061": {
+    "title": "Recycled Phone Number Takeover",
+    "definition": "A new phone number holder gains access to the previous holder's account through password recovery or SMS verification code login mechanisms.",
+    "description": "A typical malicious attacker can collude with insiders at telecom operators to obtain expired phone numbers in bulk, enabling large-scale account takeovers. Major domestic telecom operators now provide phone number verification APIs that can determine whether a number has been reassigned or expired, allowing platforms to check phone number status accordingly.",
+    "complexity": "Basic",
+    "influence": "Leads to platform user accounts being impersonated.",
+    "references": [
+      { "title": "The Privacy Crisis Behind Recycled Phone Numbers" }
+    ]
+  }
+}

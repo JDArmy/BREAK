@@ -1,0 +1,13 @@
+{
+  "R0138": {
+    "title": "Gift Card / Prepaid Card Fraud",
+    "definition": "Using stolen credit cards or other illegal funds to purchase gift cards or prepaid cards for money laundering, or forging or tampering with prepaid card information to defraud platform funds.",
+    "description": "Gift card/prepaid card fraud involves using prepaid card products for fraud and money laundering. Main patterns include: (1) Stolen card purchases: using stolen credit cards to bulk-purchase electronic gift cards, then laundering money by selling them at a discount or using them directly. (2) Forged prepaid cards: forging or tampering with prepaid card numbers and passwords to defraud platform recharge amounts. (3) Gift card arbitrage: bulk-purchasing gift cards to exploit price differences across different channels. (4) Refund laundering: purchasing gift cards with illegal funds then requesting refunds to different accounts to launder money. (5) Social engineering cash-out: in telecom fraud, requiring victims to purchase gift cards and provide card numbers and passwords to quickly transfer funds. (6) Internal theft: internal employees using system vulnerabilities to generate or activate unauthorized gift cards. Gift cards are commonly used as fund transfer tools in cybercrime due to their strong anonymity, good liquidity, and difficulty of tracking.",
+    "complexity": "Basic",
+    "influence": "Causes direct financial losses to the platform, creates money laundering channels leading to compliance penalties, and damages gift card business credibility.",
+    "references": [
+      { "title": "Gift Card Fraud Prevention - FTC" },
+      { "title": "Prepaid Card Management Measures - People's Bank of China" }
+    ]
+  }
+}

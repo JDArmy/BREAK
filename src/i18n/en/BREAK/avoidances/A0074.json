@@ -1,0 +1,12 @@
+{
+  "A0074": {
+    "title": "Behavioral Biometrics",
+    "definition": "Identifying users and assessing risk by analyzing behavioral habit characteristics such as typing rhythm, swipe trajectory, grip posture, and mouse movement patterns. This is distinct from A0023, which is based on physiological biometrics.",
+    "description": "Behavioral biometrics is a technology for identity verification and risk assessment based on user behavioral habits. The main recognition dimensions include: (1) keystroke dynamics — analyzing the rhythm of user typing, key hold duration, inter-key intervals, and other characteristics to form a unique typing behavior fingerprint; (2) touchscreen behavior analysis — on mobile devices, analyzing swipe speed, touch pressure, swipe angle, finger contact area, and other characteristics; (3) mouse behavior analysis — on PC, analyzing mouse movement speed, acceleration, click frequency, movement trajectory curvature, and other characteristics; (4) grip posture recognition — analyzing the posture and angle at which users hold their phones using gyroscopes and accelerometers; (5) gait recognition — analyzing the user's walking rhythm and gait characteristics through built-in phone sensors; (6) usage habit modeling — analyzing browsing paths, feature usage frequency, operation time distribution, and other behavioral patterns within an app. The advantage of behavioral biometrics is that it can perform continuous, passive identity verification without requiring active user cooperation, serving as a supplement to traditional identity authentication.",
+    "limitation": "The limitations of behavioral biometrics include: (1) user behavior can change due to physical condition, mood, and environment, leading to higher false positive rates; (2) initial modeling requires a period of data accumulation, with a prominent cold-start problem; (3) behavioral characteristics may differ across devices, reducing cross-device recognition accuracy; (4) automated tools can simulate human behavioral patterns to bypass detection; (5) collecting user behavioral data may involve privacy compliance issues.",
+    "references": [
+      { "title": "A Survey on Behavioral Biometrics" },
+      { "title": "Behavioral Biometrics for Continuous Authentication - NIST" }
+    ]
+  }
+}

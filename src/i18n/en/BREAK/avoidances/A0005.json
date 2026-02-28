@@ -1,0 +1,9 @@
+{
+  "A0005": {
+    "title": "Quantity Limiting",
+    "definition": "Controlling the total number of accesses when a visitor requests related resources.",
+    "description": "Quantity limiting is similar to rate limiting (A004), but its control point is primarily on the total number of resource requests over a longer period of time. Rate limiting controls the number of accesses within a short time window without limiting the total over a longer period. For example, SMS verification code request interfaces typically apply both per-unit-time rate limits and total request limits per hour or day based on identifiers such as IP, phone number, or user ID — both to prevent malicious resource consumption and to prevent verification code abuse and SMS bombing.",
+    "limitation": "Quantity limiting is a relatively broad loss-reduction measure: it allows losses or risks to occur but with a certain tolerance. When the unique identity of the requester cannot be accurately identified, the effect is poor. For example, malicious SMS consumption (R0029) and CC attacks (R0029-001) can achieve sustained abuse by continuously changing IPs. If total limits are applied without distinguishing requester identity, normal users will be affected — for example, some cloud services limit total daily request traffic and block all requests once the limit is exceeded.",
+    "references": []
+  }
+}

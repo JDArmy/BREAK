@@ -1,0 +1,48 @@
+{
+  "A0016": {
+    "title": "Threat Intelligence",
+    "definition": "Marking black-market identities using threat intelligence such as blacklisted IP databases and blacklisted phone number databases.",
+    "description": "Also commonly abbreviated as TI or CTI. The definition of threat intelligence can be very broad: any data label that can identify good or bad is threat intelligence. Threat intelligence places high demands on intelligence operations capability and intelligence quality, requiring data to remain fresh on a continuous and real-time basis. Precision and recall are generally used as metrics for threat intelligence quality. Good threat intelligence can be used directly as a protective measure, while poor-quality threat intelligence needs to be combined with risk control strategies (A015) to avoid incomplete coverage or large-scale false positives.",
+    "limitation": "The limitations of threat intelligence mainly include: incomplete information sources, timeliness challenges, excessive false information, difficulty distinguishing targeted attacks, difficulty quantifying real impact, challenges in cross-organizational sharing and collaboration, and compliance issues related to privacy and regulations.",
+    "references": [
+      { "title": "Threat Intelligence - Baidu Baike" }
+    ]
+  },
+  "A0016-001": {
+    "title": "IP Intelligence",
+    "definition": "Labeling IP addresses with risk scores, types, and other attributes.",
+    "description": "IP intelligence refers to various information about IP addresses. In a narrow sense, IP intelligence may only include the risk score of an IP. In a broad sense, IP intelligence also includes: geographic location, ISP (Internet Service Provider) information, ASN (Autonomous System Number), malicious activity history, user information, proxy detection, network traffic analysis, etc.",
+    "limitation": "The limitations of IP threat intelligence are that it can only provide limited information and cannot provide a complete threat picture. Additionally, since network attackers constantly change their attack methods and techniques, the effectiveness of IP intelligence can also be affected. Therefore, when using IP intelligence, it needs to be combined with other security technologies and measures to improve the effectiveness of network security protection.",
+    "references": []
+  },
+  "A0016-002": {
+    "title": "Domain & Link Threat Intelligence",
+    "definition": "Labeling malicious domains or links.",
+    "description": "Compared to IP intelligence (A016-001), domain and link intelligence has higher accuracy and effectiveness, but its use cases are more limited: IP intelligence can be applied to virtually any network request scenario, while domain and link intelligence is typically only applicable to malicious link detection (A006-005) scenarios.",
+    "limitation": "Domain-level threat intelligence has the problem of being too broad, making domain-based blocking prone to false positives. Link-level intelligence has the problem of being too narrow, meaning that simply modifying a link descriptor can bypass detection.",
+    "references": []
+  },
+  "A0016-003": {
+    "title": "Phone Number Intelligence",
+    "definition": "Labeling black-market phone numbers, recycled numbers, etc.",
+    "description": "Black-market phone numbers are mostly generated from risk control systems and risk device identification countermeasures. Recycled numbers (numbers reassigned to new users) typically come from carriers; by connecting to carrier interfaces, businesses can promptly obtain the active status and secondary identity binding status of phone numbers.",
+    "limitation": "Black-market actors can obtain phone numbers by renting real people's phone numbers. Additionally, interception SIM cards (real phones with malware installed to intercept SMS messages) have a high market share in the black-market industry and have become the most mainstream type of malicious phone number. Although these phone numbers are used for black-gray market activities, they cannot be directly blocked as blacklisted numbers.",
+    "references": []
+  },
+  "A0016-004": {
+    "title": "IOC (Indicator of Compromise) Intelligence",
+    "definition": "IOC (Indicator of Compromise) intelligence refers to specific markers and characteristics used to detect and confirm whether a computer system or network has been threatened or compromised. These markers can include specific file hashes, IP addresses, domain names, malicious file behavior patterns, etc.",
+    "description": "Content may include: file hash values — unique identifiers of malicious files, used to identify known malware. IP addresses — known malicious IP addresses associated with malicious activity. Domain names — potentially malicious domain names associated with threats. Malicious file behavior patterns — specific malware may have unique behavior patterns that can serve as threat indicators.",
+    "limitation": "The limitations of IOC intelligence include dependence on known attack patterns, vulnerability to attackers changing IOCs, susceptibility to false positives and false negatives, and its static-feature-based nature making it difficult to adapt to dynamic and evolving threat environments.",
+    "references": [
+      { "title": "Basic Terminology of Threat Intelligence" }
+    ]
+  },
+  "A0016-005": {
+    "title": "Risk Address Intelligence",
+    "definition": "Labeling false or malicious shipping and contact addresses entered by users.",
+    "description": "Such intelligence systems typically combine data analysis, machine learning, and AI technologies to extract patterns, behaviors, and characteristics from large data sources to identify potentially risky addresses. Key aspects include: fake identity and fraud detection — analyzing user-provided address information against other data points (such as name, contact information) to identify fake identities or fraudulent behavior. Historical behavior analysis — analyzing past user behavior patterns to identify abnormal or unusual address entry behavior, such as frequently changing addresses or using similar fake addresses. Geographic information verification — using GIS and geolocation data to verify whether user-provided addresses match actual geographic locations. Social network analysis — linking user address information with their social network activity and relationships to help detect potential fraud or illegal activity. Blacklist matching — matching against known blacklists of addresses associated with fraud and malicious activity.",
+    "limitation": "Limitations include the possibility of false information evading detection, high false positive rates, strong dependence on data quality, privacy concerns, constraints from geographic diversity, insufficient adaptability to new fraud forms, potential negative impact on user experience, and relatively high implementation and maintenance costs.",
+    "references": []
+  }
+}

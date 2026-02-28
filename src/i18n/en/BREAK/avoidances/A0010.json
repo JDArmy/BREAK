@@ -1,0 +1,88 @@
+{
+  "A0010": {
+    "title": "Terminal Abnormal Environment Detection",
+    "definition": "Identifying the application runtime environment and user request environment to detect anomalies.",
+    "description": "Abnormal environment detection works by collecting, analyzing, and evaluating dozens of data points including but not limited to: terminal silent human verification challenges, application legitimacy, process legitimacy, whether the device is rooted/jailbroken, gyroscope status, and whether plugins are installed. In business scenarios, abnormal environment detection is generally implemented through the business terminal access system. Depending on the business access mode, the terminal access system may be a browser, a mobile APP, a desktop application, etc. Abnormal environment detection capability is heavily dependent on the permissions of the business terminal access system. Due to user authorization restrictions and legal/regulatory constraints, abnormal environment detection has certain limitations and is also constrained by adversarial countermeasures and terminal data integrity.",
+    "limitation": "Because abnormal environment detection is carried out on a user-controlled terminal, the ultimate effectiveness depends on the adversarial contest. In theory, since the terminal is controllable, it is always possible to bypass various abnormal environment detection strategies — it is ultimately a matter of time cost and capability.",
+    "references": []
+  },
+  "A0010-001": {
+    "title": "Emulator Detection",
+    "definition": "Identifying whether an APP is running on a mobile phone emulator.",
+    "description": "Emulators are often used for fraudulent order manipulation. Accurately identifying emulators has become an important module in app development, and there are now specialized companies providing SDKs for developers to detect emulators. Currently popular Android emulators fall into roughly two categories: those based on QEMU and those based on Genymotion (VirtualBox-type). Common detection methods include: checking whether the IMEI is all zeros (0000000000 format); checking for emulator-specific values in the Build properties; matching QEMU-specific feature files and properties; obtaining CPU information and filtering out x86 (real devices are generally ARM-based), etc.",
+    "limitation": "There are two countermeasure points for mobile emulator detection: one is to pre-forge the information collected by the APP; the other is to forge the information after the APP has collected and uploaded it.",
+    "references": [
+      { "title": "Android Emulator Identification and Detection Technology" }
+    ]
+  },
+  "A0010-002": {
+    "title": "Cloud Phone Detection",
+    "definition": "Identifying whether an APP is running on a cloud phone.",
+    "description": "Cloud phone detection can be performed using the same methods as mobile emulator detection (A010-001). Additionally, device fingerprinting, abnormal environment monitoring, and outbound IP can also be used for cloud phone detection. Since cloud phones typically cannot modify the ROM and most cannot even obtain root access, the countermeasure effectiveness is generally better than mobile emulator detection (A010-001).",
+    "limitation": "As cloud phones and cloud gaming continue to develop and become more widespread, APP vendors will not be able to adopt a blanket 'cloud equals blacklisted' policy, otherwise they will face a large number of user complaints. This leaves room for the black-gray industry to exploit cloud phones in the future.",
+    "references": []
+  },
+  "A0010-003": {
+    "title": "ROOT/Jailbreak Detection",
+    "definition": "Identifying whether an APP is running on a device that has been rooted or jailbroken.",
+    "description": "Detection is based on characteristics of rooted or jailbroken devices, such as: checking whether the published system version is test-keys (test build) or release-keys (release build); checking for the existence of Superuser.apk; detecting whether 'su' exists in common directories; using the 'which' command to check for 'su'; executing 'su' to see if root access can be obtained; checking for busybox; accessing the /data directory to check read/write permissions, etc.",
+    "limitation": "There are two strategies for anti-detection on rooted devices: one is to target the app and interfere with its root detection behavior; the other is to target the system and hide the system's own root-related characteristics. By reversing every root detection policy and rule in the app, anti-detection strategies can be pre-built. For example, the open-source RootCloak can hook API calls to counter root detection.",
+    "references": [
+      { "title": "Summary of Android Root Detection Methods" }
+    ]
+  },
+  "A0010-004": {
+    "title": "Cheat/Plugin Detection",
+    "definition": "Identifying whether a program has had runtime instructions injected or cheat programs attached.",
+    "description": "Detection is performed by checking program runtime integrity, keyword or DLL list detection, process lists, window title keywords, etc. to determine whether cheat programs are present.",
+    "limitation": "Similar to the limitations of mobile ROOT/jailbreak detection (A010-003), by analyzing and reversing the detection process, blocking or providing hooked false values can bypass cheat detection. However, since cheats are typically used in games, and game data packets are much less readable than HTTP-based APP traffic, hiding cheat detection logic and data reporting within normal game operation and communication will increase the difficulty of anti-cheat countermeasures.",
+    "references": [
+      { "title": "A Brief Discussion on Cheat Basics and How to Defend Against Them" }
+    ]
+  },
+  "A0010-005": {
+    "title": "Multi-Instance Detection",
+    "definition": "Identifying whether an APP is running in multiple instances on a terminal.",
+    "description": "Game multi-instance detection simply limits the number of game processes and is divided into pre-detection, in-process detection, and post-detection. In-process and post-detection are often silent and serve as the basis for banning or penalizing accounts. Pre-detection prevents multi-instance launching and includes methods such as: process enumeration multi-instance detection, mutex object multi-instance detection, semaphore multi-instance detection, window multi-instance detection, shared memory multi-instance detection, etc.",
+    "limitation": "By analyzing and reversing the detection process, blocking or providing hooked false values can bypass multi-instance detection.",
+    "references": [
+      { "title": "Several Implementation Methods and Bypass References for Game Multi-Instance Detection" }
+    ]
+  },
+  "A0010-006": {
+    "title": "Debugger Detection",
+    "definition": "Identifying whether a program is being debugged.",
+    "description": "The most basic debugger detection technique is to check the BeingDebugged flag in the Process Environment Block (PEB). Another PEB member called NtGlobalFlag (offset 0x68) is also used by packers to detect whether the program was loaded with a debugger. Kernel32!CheckRemoteDebuggerPresent() is another API that can be used to determine whether a debugger is attached to a process. When stepping over INT3 and INT1 instructions in a debugger, since the debugger typically handles these debug interrupts, the exception handler will not be called by default. Debugger Interrupts exploits this fact — a packer can set a flag in the exception handler, and if the flag is not set after the INT instruction, it means the process is being debugged. See references for more methods.",
+    "limitation": "By analyzing and reversing the detection process, blocking or providing hooked false values can bypass debugger detection.",
+    "references": [
+      { "title": "The Art of Unpacking -- 2: Debugger Detection Techniques" }
+    ]
+  },
+  "A0010-007": {
+    "title": "Virtual Machine Detection",
+    "definition": "Identifying whether an APP is running inside a virtual machine.",
+    "description": "Virtual machine environment detection refers to software's ability to determine whether it is currently running in a virtual machine and to take corresponding action based on the result. From a malware perspective, it can change its behavior inside a virtual machine to increase analysis difficulty. From a software security perspective, it is used to prevent reverse engineering and abnormal use in certain scenarios.",
+    "limitation": "Virtual machine detection methods mainly work by checking certain environment properties and files, but these methods are not absolutely reliable because black-gray industry actors can modify the virtual machine's environment properties and files to evade detection.",
+    "references": [
+      { "title": "Virtual Machine Runtime Environment Detection" }
+    ]
+  },
+  "A0010-008": {
+    "title": "Headless Browser Detection",
+    "definition": "Identifying whether an APP is running inside a headless browser.",
+    "description": "Headless browser detection refers to software's ability to determine whether it is currently running in a headless browser and to take corresponding action based on the result. From a malware perspective, it can change its behavior inside a headless browser to increase analysis difficulty. From a software security perspective, it is used to prevent reverse engineering and abnormal use in certain scenarios.",
+    "limitation": "Headless browser detection methods mainly work by checking certain environment properties and files, but these methods are not absolutely reliable because black-gray industry actors can modify the headless browser's environment properties and files to evade detection.",
+    "references": [
+      { "title": "Detecting Headless Browsers with JavaScript" }
+    ]
+  },
+  "A0010-009": {
+    "title": "HOOK Detection",
+    "definition": "Identifying whether an APP is running in a HOOKed environment.",
+    "description": "HOOK detection refers to software's ability to determine whether it is currently running in a HOOKed environment and to take corresponding action based on the result. From a malware perspective, it can change its behavior in a HOOKed environment to increase analysis difficulty. From a software security perspective, it is used to prevent reverse engineering and abnormal use in certain scenarios.",
+    "limitation": "HOOK detection methods mainly work by checking certain environment properties and files, but these methods are not absolutely reliable because black-gray industry actors can modify the HOOKed environment's properties and files to evade detection.",
+    "references": [
+      { "title": "Android Hook, Detection, and Countermeasures" }
+    ]
+  }
+}

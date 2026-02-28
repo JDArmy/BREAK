@@ -1,0 +1,9 @@
+{
+  "A0012": {
+    "title": "Forced Password Reset",
+    "definition": "Issuing a mandatory password reset to the user; the user must successfully reset their password before they can log in.",
+    "description": "Forced password resets are generally applied in scenarios such as successful credential stuffing, password leaks, logins from unusual locations, long periods of inactivity, password expiration, and unchanged default passwords. The main purpose is to use the password reset process and the identity authentication (A018) within it to verify account ownership and reduce the risk of credential exposure.",
+    "limitation": "Forced password resets have a significant negative impact on user experience.",
+    "references": []
+  }
+}

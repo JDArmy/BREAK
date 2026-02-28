@@ -1,0 +1,28 @@
+{
+  "R0001": {
+    "title": "Process Automation",
+    "definition": "Includes but is not limited to automated registration, login, shopping, coupon collection, lottery, and task completion — using unintended application operations to accelerate or schedule specific workflows.",
+    "description": "There are two mainstream approaches to implementing process automation: one is to reverse-engineer the business workflow and data transmission protocol, then write automated scripts to send requests; the other is to manipulate the business access terminal (e.g., browser, mobile app) and replay pre-recorded workflow actions.",
+    "complexity": "Advanced",
+    "influence": "Exploits platform promotional benefits and occupies resources intended for legitimate users.",
+    "references": [
+      { "title": "OWASP Automated Threat: OAT006 Expediting" }
+    ]
+  },
+  "R0001-001": {
+    "title": "Protocol-Level Automation",
+    "definition": "Refers to programs that automatically send network protocol requests.",
+    "description": "By reverse-engineering the business workflow and data transmission protocol, automated scripts are written to send requests.",
+    "complexity": "Advanced",
+    "influence": "Exploits platform promotional benefits and occupies resources intended for legitimate users.",
+    "references": []
+  },
+  "R0001-002": {
+    "title": "Automated Simulator",
+    "definition": "Refers to simulator programs that mimic normal user behavior to automatically send network protocol requests.",
+    "description": "By manipulating the business access terminal (e.g., browser, mobile app), pre-recorded workflow actions are replayed repeatedly.",
+    "complexity": "Advanced",
+    "influence": "Exploits platform promotional benefits and occupies resources intended for legitimate users.",
+    "references": []
+  }
+}

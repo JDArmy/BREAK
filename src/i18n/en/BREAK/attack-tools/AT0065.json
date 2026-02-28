@@ -1,0 +1,9 @@
+{
+  "AT0065": {
+    "title": "Keyloggers",
+    "description": "A keylogger is a monitoring tool that records user keyboard input, used to steal passwords, credit card numbers, chat content, and other sensitive information. Keyloggers come in software and hardware types. Software keylogger implementations include API hooking (intercepting keyboard messages via SetWindowsHookEx), kernel-level drivers, form grabbing directly from browser form submissions, and screen recording assistance. Hardware keyloggers include USB interface devices and wireless keyboard signal interceptors. Modern keyloggers typically exist as functional modules within infostealers or may be embedded in legitimate software as spyware.",
+    "references": [
+      { "title": "Keylogger - MITRE ATT&CK T1056.001" }
+    ]
+  }
+}

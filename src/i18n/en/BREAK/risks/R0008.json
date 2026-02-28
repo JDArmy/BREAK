@@ -1,0 +1,52 @@
+{
+  "R0008": {
+    "title": "Ad Fraud",
+    "definition": "Manipulating digital advertising through fake clicks or impressions, or maliciously consuming advertising resources.",
+    "description": "Forging or maliciously consuming click counts or impression counts for advertising projects, causing financial losses to advertisers. This generally involves ad network fraud or malicious actions by competitors. Ad network fraud typically includes inflating click or impression counts. Competitors typically maliciously click links to exhaust advertising budgets, increasing total advertiser spend.",
+    "complexity": "Basic",
+    "influence": "Financial losses to advertisers.",
+    "references": [
+      { "title": "OWASP Automated Threat: OAT003 Ad Fraud" }
+    ]
+  },
+  "R0008-001": {
+    "title": "Ad Link Hijacking",
+    "definition": "Tampering with advertising links to change the ultimate beneficiary of the ad promotion.",
+    "description": "Using browser plugins or applications to hijack product links or ad links, converting a user's direct product visit into a visit through an affiliate promotion link to earn commissions. Or hijacking and tampering with existing affiliate promotion links to change the ultimate beneficiary and intercept commissions.",
+    "complexity": "Intermediate",
+    "influence": "Financial losses to advertisers or affiliate promoters.",
+    "references": []
+  },
+  "R0008-002": {
+    "title": "Click Fraud",
+    "definition": "Click fraud refers to artificially generated fake click behavior through fraudulent means, typically occurring in the digital advertising space.",
+    "description": "This behavior is designed to mislead advertising systems into recording fictitious ad click counts to obtain improper revenue or inflate ad performance metrics. Fake clicks may be generated through automated scripts, bots, click farms, and similar means rather than genuine user intent.",
+    "complexity": "Intermediate",
+    "influence": "May cause harm to advertisers, ad platforms, and the entire digital advertising ecosystem.",
+    "references": []
+  },
+  "R0008-003": {
+    "title": "Fake App Installs",
+    "definition": "Fake installs refer to fraudulently simulating or faking user installation behavior for an application or software to obtain false install counts or active user numbers.",
+    "description": "Fake install methods include using automated scripts, bots, or virtual accounts to simulate large numbers of user installs, or using other technical means to generate large volumes of fake app install records in a short time. This can cause app stores and advertisers to misjudge the true value and popularity of an app.",
+    "complexity": "Intermediate",
+    "influence": "Financial losses to advertisers or affiliate promoters.",
+    "references": []
+  },
+  "R0008-004": {
+    "title": "Impression Fraud",
+    "definition": "Charging impression fees for ad materials that have not generated exposure or have not completed valid exposure.",
+    "description": "For example, a media outlet places multiple display ads in the same ad slot and charges the advertiser for multiple ad impressions.",
+    "complexity": "",
+    "influence": "",
+    "references": []
+  },
+  "R0008-005": {
+    "title": "Traffic Attribution Fraud",
+    "definition": "A cheating method targeting CPA/CPS traffic that disguises organic traffic as channel traffic to obtain channel traffic commissions.",
+    "description": "Fraudulent ad channel operators collect large amounts of device and user information, then directly send click information from different devices to the advertiser's ad click log server. If some organic traffic happens to convert within a certain time window, the activation log server records the corresponding device activation and attributes it to the fraudulent channel operator. This method of sending false information to disguise organic traffic as channel traffic can be applied at many stages, such as faking server click behavior or faking tracking code events.",
+    "complexity": "Advanced",
+    "influence": "Financial losses to advertisers or affiliate promoters.",
+    "references": []
+  }
+}

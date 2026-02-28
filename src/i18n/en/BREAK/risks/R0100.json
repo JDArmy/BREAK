@@ -1,0 +1,10 @@
+{
+  "R0100": {
+    "title": "AFK / Idle Behavior",
+    "definition": "Refers to a player leaving their character idle or using auto-combat features while a game is in progress, without actively controlling the character.",
+    "description": "AFK behavior may occur because the player has left their device, or to exploit game mechanics to accumulate experience or resources passively.",
+    "complexity": "Basic",
+    "influence": "AFK behavior affects both the game and other players. In team-based games, AFK players may cause team imbalances, making things harder for other players. AFK behavior may also affect the game's economy, as AFK players may accumulate large amounts of resources or experience, disrupting game balance.",
+    "references": []
+  }
+}

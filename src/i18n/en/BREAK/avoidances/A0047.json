@@ -1,0 +1,11 @@
+{
+  "A0047": {
+    "title": "Security Deposit Mechanism",
+    "definition": "Also known as a deposit or earnest money, this requires users to pay a certain amount as collateral when using platform services, which may be forfeited upon breach of contract.",
+    "description": "A deposit (also called a security deposit or risk margin in practice) is an amount agreed upon by both parties, paid by the debtor or a third party to the creditor as a guarantee of performance. When the obligation is fulfilled, the deposit is returned or offset; when the obligation is not fulfilled, the creditor has priority claim to the funds. The party paying the deposit is called the depositor, generally the debtor or a third party. The party receiving the deposit is called the depositee, who is the creditor.",
+    "limitation": "If the deposit amount is too large it will dampen user motivation; if too small it will reduce the deterrent effect. A careful trade-off is required.",
+    "references": [
+      { "title": "Deposit - Baidu Baike" }
+    ]
+  }
+}

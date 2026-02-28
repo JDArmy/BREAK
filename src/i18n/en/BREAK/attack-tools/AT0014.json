@@ -1,0 +1,9 @@
+{
+  "AT0014": {
+    "title": "Packet Capture Tools",
+    "description": "Packet capture tools are software that intercepts and inspects the contents of network data packets. Because they can capture all IP packets during data communication and perform layer-by-layer unpacking analysis, they have long been commonly used troubleshooting tools in traditional fixed-network maintenance. Popular packet capture software includes Wireshark, SnifferPro, Snoop, and Tcpdump.",
+    "references": [
+      { "title": "Packet Capture Tools - Baidu Baike" }
+    ]
+  }
+}
