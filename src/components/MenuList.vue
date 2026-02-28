@@ -22,9 +22,9 @@ const getActiveIndex = (fullPath: string) => {
     :default-active="getActiveIndex($route.fullPath)"
     mode="horizontal"
     :ellipsis="false"
-    background-color="#545c64"
-    text-color="#fff"
-    active-text-color="#ffd04b"
+    background-color="#0f172a"
+    text-color="#cbd5e1"
+    active-text-color="#60a5fa"
     :router="true"
     class="hidden-md-and-up"
     style="height: 100%"
@@ -40,9 +40,9 @@ const getActiveIndex = (fullPath: string) => {
   <el-menu
     :default-active="getActiveIndex($route.fullPath)"
     mode="horizontal"
-    background-color="#545c64"
-    text-color="#fff"
-    active-text-color="#ffd04b"
+    background-color="#0f172a"
+    text-color="#cbd5e1"
+    active-text-color="#60a5fa"
     :ellipsis="false"
     :router="true"
     class="hidden-sm-and-down"
@@ -135,8 +135,8 @@ const getActiveIndex = (fullPath: string) => {
 
 <style scoped>
 .logo {
-  background: #b0afaf;
-  border-radius: 20px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 10px;
   margin: 5px;
   width: 40px;
 }
@@ -145,11 +145,13 @@ const getActiveIndex = (fullPath: string) => {
 }
 
 .banner {
-  color: #fff;
+  color: #f1f5f9;
   padding-left: 10px;
   padding-bottom: 0px;
   margin-bottom: 0px;
   text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 .sm-banner {

@@ -99,7 +99,7 @@ const { getTableHeight, tableRowClassName } = useAnchorTable("rKey");
         }}
       </template></el-table-column
     >
-    <el-table-column :label="$t('avoidance')">
+    <!-- <el-table-column :label="$t('avoidance')">
       <template #default="scope">
         <el-button
           size="small"
@@ -116,7 +116,7 @@ const { getTableHeight, tableRowClassName } = useAnchorTable("rKey");
           }}</el-button
         >
       </template>
-    </el-table-column>
+    </el-table-column> -->
   </el-table>
   <!-- 手段详情页 -->
   <AvoidanceDetail

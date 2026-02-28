@@ -162,12 +162,12 @@ const getSceneRowSize = (sceneLength: number) => {
 </script>
 
 <template>
-  <el-row class="header">
+  <el-row class="header" align="middle">
     <el-col :span="24" :offset="0" style="text-align: center">
       <h3 style="margin-bottom: 0">
         {{ $t("BREAK.title") }} v{{ BREAK.version }}
       </h3>
-      <h6 style="color: gray">{{ $t("BREAK.description") }}</h6>
+      <h6 style="color: #64748b; margin-top: 0.2em">{{ $t("BREAK.description") }}</h6>
     </el-col>
 
     <el-col :md="2" :sm="12" :offset="0">
@@ -209,6 +209,7 @@ const getSceneRowSize = (sceneLength: number) => {
         )
       "
     >
+      <div class="risk-card">
       <h3 class="risk-dimension-title" :title="rdKey.toString()">
         {{
           $t(
@@ -295,6 +296,7 @@ const getSceneRowSize = (sceneLength: number) => {
           </ul>
         </el-col>
       </el-row>
+      </div>
     </el-col>
   </el-row>
   <RiskDetail
@@ -306,24 +308,46 @@ const getSceneRowSize = (sceneLength: number) => {
 
 <style scoped>
 .header {
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 .risk-dimension {
-  border: 1px solid rgb(246, 245, 245);
   box-sizing: border-box;
+  padding: 3px;
+}
+
+.risk-card {
+  border: 1px solid #e8edf3;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
   padding-bottom: 10px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.risk-dimension-title {
+  margin: 0 0 6px 0;
+  color: #1e293b;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.95em;
+  padding: 8px 6px 6px;
+  background: #f1f5f9;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .risk-scene {
   padding: 3px;
 }
 
-.risk-scene-title,
-.risk-dimension-title {
+.risk-scene-title {
   margin-bottom: 5px;
-  color: var(--el-text-color-primary);
+  color: #475569;
   text-align: center;
+  font-weight: 600;
+  font-size: 0.85em;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .risk-list {
@@ -342,22 +366,25 @@ const getSceneRowSize = (sceneLength: number) => {
 .sub-risk-link {
   font-size: 1em;
   text-align: center;
-  border: 1px solid lightgray;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  margin-bottom: 2px;
 }
 
 .risk:hover,
 .s-risk:hover {
-  background-color: rgb(245, 246, 252);
+  background-color: #eff6ff;
+  border-color: #bfdbfe;
 }
 
 .sub-risk-link:hover {
-  background-color: rgb(228, 230, 241);
+  background-color: #dbeafe;
 }
 
 .risk a,
 .s-risk a,
 .sub-risk a {
-  color: #294e76;
+  color: #2563eb;
   text-decoration: none;
   display: inline-block;
 }
@@ -365,41 +392,35 @@ const getSceneRowSize = (sceneLength: number) => {
 .risk a:hover,
 .s-risk a:hover,
 .sub-risk a:hover {
-  color: #002b58;
+  color: #1d4ed8;
 }
 
 .sidebar {
-  width: 8px;
+  width: 10px;
 }
 
 .sidebar-icon {
   cursor: pointer;
-  color: #fff;
-  background-color: lightgray;
-  /* border-radius: 0 0 0 20px; */
+  color: #94a3b8;
+  background: none;
+  border-left: 3px solid #cbd5e1;
 }
 
 .first-sub-risk .sidebar {
-  border-radius: 0 0 0 20px;
-  background-color: lightgray;
+  border-left: 3px solid #cbd5e1;
 }
 
 .sidebar-icon:hover {
-  background-color: rgb(228, 230, 241);
-  color: grey;
+  border-left-color: #60a5fa;
+  color: #2563eb;
 }
 .sidebar-line {
-  border-right: 1px solid lightgray;
+  border-left: 3px solid #cbd5e1;
   position: relative;
 }
 
 .sidebar-line svg {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  color: lightgray;
-  width: 10px;
-  height: 10px;
+  display: none;
 }
 
 .link {
@@ -411,6 +432,6 @@ const getSceneRowSize = (sceneLength: number) => {
 
 .parent-risk-link {
   font-weight: 500;
-  border-left: 1px solid lightgray;
+  border-left: 1px solid #e2e8f0;
 }
 </style>

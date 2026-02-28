@@ -66,11 +66,15 @@ const relKey = ref<string>(route.params.key as string);
 const graphRef$ = ref<RelationGraph>();
 
 const graphOptions: RGOptions = reactive({
-  allowShowMiniToolBar: true, //是否显示工具栏
-  disableZoom: false, //是否禁用缩放
-  disableDragCanvas: false, //是否禁用拖拽画布
-  defaultExpandHolderPosition: "right", //展开按钮默认方向
-  defaultShowLineLabel: true, //默认显示连线标签
+  allowShowMiniToolBar: true,
+  disableZoom: false,
+  disableDragCanvas: false,
+  defaultExpandHolderPosition: "right",
+  defaultShowLineLabel: true,
+  defaultNodeWidth: 120,
+  defaultNodeHeight: 120,
+  moveToCenterWhenRefresh: true,
+  zoomToFitWhenRefresh: true,
 });
 
 graphOptions.layout = {
@@ -1006,7 +1010,7 @@ const doFilter = () => {
         <div
           style="
             cursor: pointer;
-            font-size: xx-small;
+            font-size: 16px;
             display: flex;
             height: inherit;
             align-items: center;
@@ -1030,7 +1034,7 @@ const doFilter = () => {
               </el-option>
             </el-select>
           </div>
-          <div>
+          <div style="margin-top: 8px">
             <el-select style="width: 200px" v-model="relKey">
               <el-option
                 v-for="(item, key) in BREAK[
@@ -1052,7 +1056,6 @@ const doFilter = () => {
               :key="key"
               :name="key"
               class="filter-checkbox"
-              :label="key"
               :value="key"
               >{{ item.title }}</el-checkbox
             >
@@ -1067,8 +1070,8 @@ const doFilter = () => {
               class="filter-checkbox"
               v-for="oneType in totalLineType"
               :key="oneType"
-              :label="oneType"
               :name="oneType"
+              :value="oneType"
               >{{ oneType }}</el-checkbox
             >
           </el-checkbox-group>
@@ -1132,5 +1135,10 @@ const doFilter = () => {
 }
 #line-filter-pane {
   right: 80px;
+}
+
+:deep(svg text) {
+  font-size: 14px !important;
+  fill: #5e6269 !important;
 }
 </style>
