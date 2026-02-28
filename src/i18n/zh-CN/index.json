@@ -47,6 +47,15 @@
   "commitNewProviderHint": "参考：src/BREAK/ability-providers/AP****.json 文件格式。",
   "nodeFilter": "节点筛选：",
   "subNodeFilter": "子节点",
+  "toolbar": {
+    "fullscreen": "全屏/退出全屏",
+    "zoomIn": "放大",
+    "zoomOut": "缩小",
+    "autoLayout": "自动布局",
+    "stopAutoLayout": "停止自动布局",
+    "refresh": "刷新",
+    "download": "下载图片"
+  },
   "lineFilter": "关系筛选：",
   "fetchAllRelations": "拉取全部关系",
   "openAsRoot": "作为根节点打开",
