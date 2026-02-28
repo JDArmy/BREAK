@@ -5,7 +5,12 @@
     "description": "May occur in various scenarios, including cyberattacks, insider leaks, and physical device loss or theft.",
     "complexity": "Basic",
     "influence": "Harms include privacy violations, financial losses, legal liability, and reputational damage, potentially causing serious impacts on both organizations and individuals.",
-    "references": []
+    "references": [
+      {
+        "title": "Data breach - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Data_breach"
+      }
+    ]
   },
   "R0078-001": {
     "title": "Partner Data Breach",
@@ -13,6 +18,11 @@
     "description": "Scenarios may include third-party service providers being attacked, unauthorized access, and insecure environments during data transmission.",
     "complexity": "Basic",
     "influence": "Harms include loss of trust from customers and business partners, legal liability, reputational damage, and potential financial losses, posing potential threats to both the organization and its partners.",
-    "references": []
+    "references": [
+      {
+        "title": "Data breach - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Data_breach"
+      }
+    ]
   }
 }

@@ -27,7 +27,12 @@
       "A0053",
       "A0056"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Data from Information Repositories (T1213) - MITRE ATT&CK",
+        "link": "https://attack.mitre.org/techniques/T1213/"
+      }
+    ],
     "updated": "2024-01-29"
   }
 }

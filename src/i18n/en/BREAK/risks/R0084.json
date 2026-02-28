@@ -5,7 +5,16 @@
     "description": "Scenarios include impersonating legitimate emails, social media messages, or websites to trick victims into clicking malicious links, downloading malicious attachments, or entering sensitive information.",
     "complexity": "Intermediate",
     "influence": "Harms include personal privacy leakage, account compromise, and financial losses; for organizations, may lead to confidential information leakage, system intrusion, and reputational damage.",
-    "references": []
+    "references": [
+      {
+        "title": "Phishing - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Phishing"
+      },
+      {
+        "title": "T1566 Phishing - MITRE ATT&CK",
+        "link": "https://attack.mitre.org/techniques/T1566/"
+      }
+    ]
   },
   "R0084-001": {
     "title": "AI-Enhanced Phishing Attack",

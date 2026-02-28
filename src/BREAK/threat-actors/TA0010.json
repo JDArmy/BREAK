@@ -2,7 +2,12 @@
   "TA0010": {
     "title": "恶意用户",
     "description": "恶意用户是指以欺诈、欺骗或其他不当手段参与购物或交易活动的个体。这类买家可能通过虚假投诉、欺诈性退货、虚假支付争议等手段，试图获得不当的经济利益，给卖家和交易平台造成损失。他们可能滥用促销活动，刷单以获取额外福利，并通过不诚实的手段破坏公平交易环境。",
-    "references": [],
+    "references": [
+      {
+        "title": "OWASP Automated Threats to Web Applications",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/"
+      }
+    ],
     "buildAttackTools": [
       "AT0051"
     ],

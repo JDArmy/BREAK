@@ -7,12 +7,8 @@
     "limitation": "行为生物特征识别的局限性包括：①用户行为会因身体状态、情绪、环境等因素发生变化，导致误判率较高。②初始建模需要一定时间的数据积累，冷启动问题突出。③不同设备之间的行为特征可能存在差异，跨设备识别准确率下降。④自动化工具可以模拟人类行为模式来绕过检测。⑤收集用户行为数据可能涉及隐私合规问题。",
     "references": [
       {
-        "title": "行为生物特征识别技术综述",
-        "link": "https://ieeexplore.ieee.org/document/behavioral-biometrics"
-      },
-      {
-        "title": "Behavioral Biometrics for Continuous Authentication - NIST",
-        "link": "https://www.nist.gov/publications/behavioral-biometrics"
+        "title": "生物特征识别 - 百度百科",
+        "link": "https://baike.baidu.com/item/%E7%94%9F%E7%89%A9%E7%89%B9%E5%BE%81%E8%AF%86%E5%88%AB"
       }
     ],
     "updated": "2026-02-27"

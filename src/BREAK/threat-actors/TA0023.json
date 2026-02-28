@@ -2,7 +2,12 @@
   "TA0023": {
     "title": "风险第三合作方",
     "description": "指跟平台有合作关系的第三方，通过恶意手段不当牟利",
-    "references": [],
+    "references": [
+      {
+        "title": "Insider Threat - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Insider_threat"
+      }
+    ],
     "buildAttackTools": [],
     "useAttackTools": [
       "AT0003",

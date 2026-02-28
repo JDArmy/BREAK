@@ -2,7 +2,12 @@
   "TA0027": {
     "title": "游戏演员",
     "description": "一般指的在游戏中，存在送分和吃分的玩家，在同一对局中，操纵比赛结果的恶意行为，一般出现在MOBA游戏对局中，有时也会出现在FPS游戏中。",
-    "references": [],
+    "references": [
+      {
+        "title": "Match Fixing - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Match_fixing"
+      }
+    ],
     "buildAttackTools": [],
     "useAttackTools": [
       "AT0001",

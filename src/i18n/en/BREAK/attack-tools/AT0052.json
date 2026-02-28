@@ -2,7 +2,12 @@
   "AT0052": {
     "title": "Malicious Peripherals",
     "description": "Malicious peripherals are devices into which malicious software writes malicious code via USB interfaces or other means. When the peripheral is plugged into a computer, the malicious code automatically runs, thereby attacking the computer.",
-    "references": []
+    "references": [
+      {
+        "title": "Hardware Additions - MITRE ATT&CK T1200",
+        "link": "https://attack.mitre.org/techniques/T1200/"
+      }
+    ]
   },
   "AT0052-001": {
     "title": "KON-Boot",

@@ -5,6 +5,11 @@
     "description": "Primarily found in shooting/competitive games. The escort players are split into two teams: one team is the paying 'boss' player (whose main goal is to rank up), and the other team uses a high-ranked main account (the 'driver') paired with a cheating secondary account (the 'enforcer'). Both teams queue at the same time to increase the chance of matching into the same game. Once the driver successfully gets the enforcer into a high-ranked match, the driver leaves the game. The enforcer then eliminates other players, and the boss waits until the final circle to defeat the enforcer and claim victory.",
     "complexity": "Basic",
     "influence": "Affects game fairness and other players' experience.",
-    "references": []
+    "references": [
+      {
+        "title": "Cheating in video games - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Cheating_in_video_games"
+      }
+    ]
   }
 }

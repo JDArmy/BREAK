@@ -4,7 +4,12 @@
     "definition": "Penalizing accounts when they violate related rules, and prohibiting related behaviors or actions.",
     "description": "Identity penalty strategies are an effective means of limiting the continuous damage caused by illegal or non-compliant users to the business. Identity penalties can operate at two levels: one is restrictions on the account itself, such as temporary suspension, public warning, or revocation of authorization; the other is restrictions on the resources accessible to the account, such as disabling specific business functions, limiting resource usage frequency, deleting resources, or restricting access to illegal resources.",
     "limitation": "Account penalties are a loss-mitigation strategy with a certain degree of latency.",
-    "references": []
+    "references": [
+      {
+        "title": "OWASP Blocking Brute Force Attacks",
+        "link": "https://owasp.org/www-community/controls/Blocking_Brute_Force_Attacks"
+      }
+    ]
   },
   "A0020-001": {
     "title": "Store Penalty",

@@ -5,7 +5,16 @@
     "description": "Employee policy violation scenarios are varied, including unauthorized data access, data leakage, unauthorized software or device use, social engineering and fraud, compliance violations, network abuse, disclosure of trade secrets, and improper use of employee privileges.",
     "complexity": "Basic",
     "influence": "May cause serious negative impacts on the organization, including legal liability, financial losses, reputational damage, and security vulnerabilities.",
-    "references": []
+    "references": [
+      {
+        "title": "MITRE Insider Threat Research",
+        "link": "https://insiderthreat.mitre.org/"
+      },
+      {
+        "title": "Insider Threat - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Insider_threat"
+      }
+    ]
   },
   "R0111-001": {
     "title": "Employee Account Sharing",
@@ -13,7 +22,12 @@
     "description": "Generally includes: password sharing (employees sharing login credentials with colleagues or others for convenience or collaboration); shared accounts (multiple people using the same account to save costs, bypass task restrictions, or circumvent permission limits); and external sharing (employees leaking company account information to external parties such as contractors, partners, or competitors, intentionally or unintentionally).",
     "complexity": "Basic",
     "influence": "Shared accounts increase the risk of unauthorized access; tracking which individual performed a specific action becomes difficult, making accountability hard after security incidents; shared accounts may lead to sensitive information leakage; and in some industries or regulations, account sharing may violate compliance requirements, leading to legal liability and fines.",
-    "references": []
+    "references": [
+      {
+        "title": "Account Sharing - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Account_sharing"
+      }
+    ]
   },
   "R0111-002": {
     "title": "Employee Business-Level Backdoor",
@@ -21,6 +35,11 @@
     "description": "Specific scenarios may include: unauthorized remote access (developers embedding remote access backdoors to access and control systems after deployment without normal authentication); illegal data access (developers setting business-level backdoors to gain unauthorized access to sensitive data such as PII or financial data); malicious function activation (backdoors containing code to activate malicious functions under specific conditions, such as data destruction or system crashes); and undetectable presence (developers designing backdoors to be difficult to detect, maintaining covert long-term access).",
     "complexity": "Intermediate",
     "influence": "Impacts include: data leakage of sensitive information; business disruption from malicious manipulation causing system crashes; reputational damage once the backdoor is revealed; and legal liability from unauthorized data access or tampering.",
-    "references": []
+    "references": [
+      {
+        "title": "Insider Threat - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Insider_threat"
+      }
+    ]
   }
 }

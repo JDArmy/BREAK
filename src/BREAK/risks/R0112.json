@@ -12,7 +12,12 @@
       "A0052",
       "A0062"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Physical Security - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Physical_security"
+      }
+    ],
     "updated": "2024-01-31"
   },
   "R0112-001": {
@@ -36,7 +41,16 @@
       "A0020-002",
       "A0041"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "NIST SP 1800-22: Mobile Device Security: Bring Your Own Device (BYOD)",
+        "link": "https://csrc.nist.gov/pubs/sp/1800/22/final"
+      },
+      {
+        "title": "Bring Your Own Device - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Bring_your_own_device"
+      }
+    ],
     "updated": "2024-01-29"
   },
   "R0112-002": {
@@ -57,7 +71,12 @@
       "A0059",
       "A0062"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Physical Security - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Physical_security"
+      }
+    ],
     "updated": "2024-01-30"
   },
   "R0112-003": {
@@ -75,7 +94,12 @@
       "A0057",
       "A0062"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Physical Security - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Physical_security"
+      }
+    ],
     "updated": "2024-01-29"
   },
   "R0112-004": {
@@ -91,7 +115,12 @@
       "A0058",
       "A0062"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Sabotage - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Sabotage"
+      }
+    ],
     "updated": "2024-01-29"
   },
   "R0112-005": {
@@ -108,7 +137,12 @@
       "A0052",
       "A0062"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Eavesdropping - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Eavesdropping"
+      }
+    ],
     "updated": "2024-01-29"
   },
   "R0112-006": {
@@ -124,7 +158,12 @@
       "A0051",
       "A0052"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Wireless Security - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Wireless_security"
+      }
+    ],
     "updated": "2024-01-29"
   }
 }

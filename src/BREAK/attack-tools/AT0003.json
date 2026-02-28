@@ -4,8 +4,8 @@
     "description": "专门用于批量申请注册某业务账号的工具,在正常的注册账号时是需要进行手机验证等复杂的操作的,注册一个就非常的麻烦,但是对于黑灰产来说肯定是需要大量的业务账号的,这时批量注册器就能帮助快速注册大量账号。",
     "references": [
       {
-        "title": "微信批量注册器",
-        "link": "https://www.jz08.com/article/4341.html"
+        "title": "OWASP Automated Threat: OAT-019 Account Creation",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-019_Account_Creation.html"
       }
     ],
     "avoidances": [

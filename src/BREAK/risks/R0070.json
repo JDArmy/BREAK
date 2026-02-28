@@ -27,7 +27,12 @@
       "A0043",
       "A0059"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "OAT-005 Scalping - OWASP",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-005_Scalping"
+      }
+    ],
     "updated": "2024-01-15"
   },
   "R0070-001": {
@@ -57,7 +62,12 @@
       "A0042",
       "A0043"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "OAT-005 Scalping - OWASP",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-005_Scalping"
+      }
+    ],
     "updated": "2024-01-15"
   },
   "R0070-002": {
@@ -87,7 +97,12 @@
       "A0042",
       "A0043"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Drop shipping - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Drop_shipping"
+      }
+    ],
     "updated": "2024-01-15"
   },
   "R0070-003": {
@@ -118,7 +133,12 @@
       "A0042",
       "A0043"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "OAT-005 Scalping - OWASP",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-005_Scalping"
+      }
+    ],
     "updated": "2024-01-15"
   }
 }

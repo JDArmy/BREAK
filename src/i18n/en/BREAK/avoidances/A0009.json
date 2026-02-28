@@ -4,6 +4,11 @@
     "definition": "Controlling related resources so they are only valid within a certain time window.",
     "description": "A typical scenario for time limiting is SMS verification code sending: by limiting the interval between code sends, it prevents SMS bombing against a specific phone number. Time limits are also commonly applied in scenarios such as password brute-forcing and payment password errors to prevent account compromise and financial loss. Time limiting is sometimes also applied to user content posting scenarios to prevent content bombing or to slow down the pressure from automated requests.",
     "limitation": "Time limiting is generally a 'business-impacting' countermeasure that has some effect on normal user requests or services. Therefore, a compromise value is usually chosen that is acceptable to normal users while maximally blocking attackers.",
-    "references": []
+    "references": [
+      {
+        "title": "Rate Limiting - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Rate_limiting"
+      }
+    ]
   }
 }

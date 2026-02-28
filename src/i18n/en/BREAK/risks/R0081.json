@@ -5,7 +5,12 @@
     "description": "Supply chain risk refers to the possibility that products such as software, hardware, and cloud services are exposed to security threats during development, delivery, deployment, and maintenance due to potential threats in supply chain components or links.",
     "complexity": "Intermediate",
     "influence": "Harms include potential business disruption, sensitive information exposure, and system vulnerability exposure, significantly impacting the organization's trust and reliability.",
-    "references": []
+    "references": [
+      {
+        "title": "Supply chain attack - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Supply_chain_attack"
+      }
+    ]
   },
   "R0081-001": {
     "title": "Software Supply Chain Risk",
@@ -13,7 +18,12 @@
     "description": "Scenarios include third-party components being attacked, suppliers suffering data breaches, and software development tools being tampered with, potentially leading to malicious code injection, backdoors, or data leakage.",
     "complexity": "Intermediate",
     "influence": "Harms include potential business disruption, sensitive information exposure, and system vulnerability exposure, significantly impacting the organization's trust and reliability.",
-    "references": []
+    "references": [
+      {
+        "title": "Supply chain attack - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Supply_chain_attack"
+      }
+    ]
   },
   "R0081-002": {
     "title": "Hardware Supply Chain Risk",
@@ -21,7 +31,12 @@
     "description": "Scenarios include third-party components being attacked, suppliers suffering data breaches, and hardware development tools being tampered with, potentially leading to malicious code injection, backdoors, or data leakage.",
     "complexity": "Intermediate",
     "influence": "Harms include potential business disruption, sensitive information exposure, and system vulnerability exposure, significantly impacting the organization's trust and reliability.",
-    "references": []
+    "references": [
+      {
+        "title": "Supply chain attack - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Supply_chain_attack"
+      }
+    ]
   },
   "R0081-003": {
     "title": "Cloud Service Supply Chain Risk",
@@ -29,7 +44,12 @@
     "description": "Scenarios include third-party components being attacked, suppliers suffering data breaches, and cloud service development tools being tampered with, potentially leading to malicious code injection, backdoors, or data leakage.",
     "complexity": "Intermediate",
     "influence": "Harms include potential business disruption, sensitive information exposure, and system vulnerability exposure, significantly impacting the organization's trust and reliability.",
-    "references": []
+    "references": [
+      {
+        "title": "Supply chain attack - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Supply_chain_attack"
+      }
+    ]
   },
   "R0081-004": {
     "title": "Outsourced Personnel Risk",
@@ -37,7 +57,12 @@
     "description": "Scenarios include outsourced personnel's accounts being compromised, maliciously tampered with, or misused, potentially leading to malicious code injection, backdoors, or data leakage.",
     "complexity": "Intermediate",
     "influence": "Harms include potential business disruption, sensitive information exposure, and system vulnerability exposure, significantly impacting the organization's trust and reliability.",
-    "references": []
+    "references": [
+      {
+        "title": "Insider threat - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Insider_threat"
+      }
+    ]
   },
   "R0081-005": {
     "title": "Open Source Component Poisoning Risk",

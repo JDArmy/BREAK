@@ -16,7 +16,12 @@
     "description": "Direct prompt injection refers to attackers embedding malicious instructions directly in input text when interacting with an LLM to manipulate model behavior. Common techniques include: role-playing attacks (asking the model to play an unrestricted character), instruction override (using phrases like 'ignore previous instructions'), encoding bypass (using Base64, Unicode, or other encodings to hide malicious instructions), and multilingual mixing (using instructions in different languages to confuse the model).",
     "complexity": "Intermediate",
     "influence": "Model behavior is manipulated, potentially leaking system prompts, generating non-compliant content, or performing unauthorized operations.",
-    "references": []
+    "references": [
+      {
+        "title": "OWASP Top 10 for LLM Applications",
+        "link": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"
+      }
+    ]
   },
   "R0117-002": {
     "title": "Indirect Prompt Injection",

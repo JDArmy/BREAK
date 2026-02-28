@@ -17,7 +17,16 @@
       "A0056",
       "A0058"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Ransomware - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Ransomware"
+      },
+      {
+        "title": "T1486 Data Encrypted for Impact - MITRE ATT&CK",
+        "link": "https://attack.mitre.org/techniques/T1486/"
+      }
+    ],
     "updated": "2026-02-27"
   },
   "R0085-001": {
@@ -56,7 +65,12 @@
       "A0053",
       "A0044"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Ransomware - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Ransomware"
+      }
+    ],
     "updated": "2026-02-27"
   }
 }

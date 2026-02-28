@@ -5,7 +5,12 @@
     "description": "Automated reselling typically serves three purposes: first, buying low and selling high to profit from price differences; second, listing products without actual stock and fulfilling orders through other stocked stores; third, using automation to bulk-create store clusters for mass product listing.",
     "complexity": "Intermediate",
     "influence": "Buy-low-sell-high behavior, once discovered by users, creates the impression of inflated prices on the platform, causing reputational damage and user churn; dropshipping stores often negate competitive advantages or lead to unfair competition; store clusters occupy large amounts of search and recommendation resources, leading to unfair competition.",
-    "references": []
+    "references": [
+      {
+        "title": "OAT-005 Scalping - OWASP",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-005_Scalping"
+      }
+    ]
   },
   "R0070-001": {
     "title": "Buy Low, Sell High",
@@ -13,7 +18,12 @@
     "description": "A typical buy-low-sell-high approach involves significantly marking up a product's price and then using search bidding ranking mechanisms to place the product at the top of results for greater exposure.",
     "complexity": "Intermediate",
     "influence": "This behavior creates the impression of inflated prices on the platform for users, leading to user churn.",
-    "references": []
+    "references": [
+      {
+        "title": "OAT-005 Scalping - OWASP",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-005_Scalping"
+      }
+    ]
   },
   "R0070-002": {
     "title": "Dropshipping Store",
@@ -21,7 +31,12 @@
     "description": "Buy-low-sell-high (R0070-001) is generally also a form of dropshipping, but buy-low-sell-high is more focused on gaining exposure, while dropshipping is more focused on gaining order volume. For example, if a seller only has a store on Platform A and not on Platform B, Platform A gains a competitive advantage. But if the seller lists products on Platform B and fulfills orders through Platform A when users order on B, this competitive advantage is negated — especially if Platform B subsidizes the originally unstocked products, creating the illusion that Platform B is always cheaper than Platform A.",
     "complexity": "Intermediate",
     "influence": "Cross-platform dropshipping reduces the competitive advantage of the original platform and may lead to unfair competition, causing financial or reputational losses.",
-    "references": []
+    "references": [
+      {
+        "title": "Drop shipping - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Drop_shipping"
+      }
+    ]
   },
   "R0070-003": {
     "title": "Store Cluster",
@@ -29,6 +44,11 @@
     "description": "By bulk-creating large numbers of stores to increase exposure and expand the display area of products or services, attracting more potential customers. This practice is typically aimed at increasing product or service visibility on the platform, improving exposure in search results, and gaining more traffic and sales opportunities.",
     "complexity": "Intermediate",
     "influence": "Occupies display opportunities of other stores on the platform, and the mass listing of similar products makes it harder for users to discover differentiated products.",
-    "references": []
+    "references": [
+      {
+        "title": "OAT-005 Scalping - OWASP",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-005_Scalping"
+      }
+    ]
   }
 }

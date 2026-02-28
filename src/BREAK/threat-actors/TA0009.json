@@ -2,7 +2,12 @@
   "TA0009": {
     "title": "恶意商家",
     "description": "恶意商家是指那些从事欺诈、欺骗或其他不正当手段谋取利益的商业实体或个人。这类商家通常采用欺诈性的销售手法，可能包括虚假广告、欺骗性定价、虚构商品或服务等手段，以误导消费者并获取非法收益。他们可能故意提供次品或假冒伪劣产品，或者在交易中采取不公平的手段，损害消费者权益。恶意商家还可能涉及虚假退款、未经授权的付款扣费、违规销售个人信息等行为，以获取不正当的经济收益。在数字环境中，一些恶意商家还可能参与网络诈骗、虚假广告点击、刷单等活动，进一步损害了数字经济的健康运作。",
-    "references": [],
+    "references": [
+      {
+        "title": "OWASP Automated Threats to Web Applications",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/"
+      }
+    ],
     "buildAttackTools": [
       "AT0051"
     ],

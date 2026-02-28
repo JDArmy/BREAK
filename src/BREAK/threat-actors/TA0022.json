@@ -2,7 +2,12 @@
   "TA0022": {
     "title": "竞争对手",
     "description": "竞争对手是指在同一行业中，拥有相同或相似的产品或服务，面对相同或相似的顾客，因此会产生竞争关系的企业。竞争对手的攻击行为主要是为了获取对手的商业机密，以便在竞争中占据优势。",
-    "references": [],
+    "references": [
+      {
+        "title": "Industrial Espionage - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Industrial_espionage"
+      }
+    ],
     "buildAttackTools": [],
     "useAttackTools": [
       "AT0004",

@@ -2,7 +2,12 @@
   "TA0024": {
     "title": "恶意员工(内鬼)",
     "description": "恶意员工是指企业内部的员工，他们可能是因为个人原因，也可能是受到外部人员的诱惑，而对企业进行攻击。恶意员工的攻击手段多种多样，包恶意员工指的是在组织内部，有意而恶意地从事破坏性、不道德或违法活动的雇员。这些活动可能是为了个人利益、报复、对公司不满，或者是其他潜在的动机。恶意员工行为可能对组织的运作、声誉和安全性造成严重威胁。",
-    "references": [],
+    "references": [
+      {
+        "title": "Insider Threat - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Insider_threat"
+      }
+    ],
     "buildAttackTools": [
       "AT0051"
     ],

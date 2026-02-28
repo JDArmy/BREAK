@@ -5,6 +5,11 @@
     "description": "Scenarios include attackers illegally modifying business logic, manipulating transaction processes, or tampering with data inputs, potentially causing incorrect system processing, resource abuse, or unauthorized data access.",
     "complexity": "Advanced",
     "influence": "Harms include business data inconsistency and compromised transaction integrity, potentially causing financial losses, loss of trust, and compliance issues for the organization.",
-    "references": []
+    "references": [
+      {
+        "title": "T1190 Exploit Public-Facing Application - MITRE ATT&CK",
+        "link": "https://attack.mitre.org/techniques/T1190/"
+      }
+    ]
   }
 }

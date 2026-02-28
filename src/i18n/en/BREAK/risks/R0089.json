@@ -5,6 +5,11 @@
     "description": "Causes of personal privacy leakage risk include platform security vulnerabilities, unauthorized data access, misuse of user data, and improper handling of user information by third-party partners, all of which create potential risks of user privacy exposure.",
     "complexity": "Basic",
     "influence": "Personal privacy leakage risk may cause users to lose trust, trigger legal liability, damage the platform's reputation, reduce user activity, and create regulatory compliance issues, negatively impacting the platform's sustainable development.",
-    "references": []
+    "references": [
+      {
+        "title": "Privacy breach - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Privacy_breach"
+      }
+    ]
   }
 }

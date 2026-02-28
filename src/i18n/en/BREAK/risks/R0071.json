@@ -36,7 +36,12 @@
     "description": "First, due to the lack of effective content filtering mechanisms, large volumes of spam, fake news, and low-quality reviews may emerge, degrading overall platform content quality. Second, generated content may involve privacy violations, malicious attacks, and inappropriate speech, exacerbating the spread of misinformation and social tension on social platforms. Additionally, large-scale use of language models to generate content may encourage bot-like behavior, making it difficult for real users to distinguish fake accounts and artificially generated content, damaging the platform's credibility and user experience.",
     "complexity": "Intermediate",
     "influence": "Leads to degraded platform content quality and undermines the motivation of original and high-quality content creators.",
-    "references": []
+    "references": [
+      {
+        "title": "AIGC - Baidu Baike",
+        "link": "https://baike.baidu.com/item/AIGC/59988381"
+      }
+    ]
   },
   "R0071-004": {
     "title": "AI Hallucination Risk",

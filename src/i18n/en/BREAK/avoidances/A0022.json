@@ -18,20 +18,35 @@
     "definition": "Encrypting request data sent to the server.",
     "description": "Request data encryption refers to encrypting the request body on top of an existing protocol (such as HTTPS) before sending it to the server, to ensure data is not stolen or tampered with during transmission. Request data encryption can be applied in any business scenario, but requires decryption logic to be added on the server side.",
     "limitation": "Generally implemented by hooking the remote request function to encrypt data, but this may cause certain compatibility issues. If some business logic does not use a unified remote request function, that portion of data cannot be encrypted.",
-    "references": []
+    "references": [
+      {
+        "title": "OWASP REST Security Cheat Sheet",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html"
+      }
+    ]
   },
   "A0022-003": {
     "title": "Response Data Encryption",
     "definition": "Encrypting response data from the server.",
     "description": "Response data encryption refers to encrypting the response body on the server side to ensure data is not stolen or tampered with during transmission. Response data encryption can be applied in any business scenario, but requires decryption logic to be added on the client side.",
     "limitation": "Generally implemented by hooking the remote request function to encrypt data, but this may cause certain compatibility issues. If some business logic does not use a unified remote request function, that portion of data cannot be encrypted.",
-    "references": []
+    "references": [
+      {
+        "title": "OWASP REST Security Cheat Sheet",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html"
+      }
+    ]
   },
   "A0022-004": {
     "title": "Custom Transport Protocol",
     "definition": "Using a custom transport protocol instead of standard protocols.",
     "description": "A custom transport protocol refers to defining a custom protocol at the transport or application layer, or modifying a common protocol to make it non-standard, to ensure data cannot be parsed or tampered with during transmission. Custom transport protocols can be applied in any business scenario, but require custom protocol parsing logic to be added on both the client and server sides.",
     "limitation": "Custom transport protocols require custom protocol parsing logic on both the client and server sides, and the protocol versions on both sides must be consistent; otherwise communication will fail.",
-    "references": []
+    "references": [
+      {
+        "title": "OWASP Cryptographic Storage Cheat Sheet",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html"
+      }
+    ]
   }
 }

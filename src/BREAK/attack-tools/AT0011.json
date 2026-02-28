@@ -4,8 +4,8 @@
     "description": "攻击者预置木马主要通过两种途径,一是通过“刷机”或APP(再Root)的方式,在手机到达用户手中前,进行恶意软件的安装,从而达到感染传播的效果,比如会伪装成“系统WIFI服务”等应用的RottenSys恶意软件;二是一些小众手机品牌厂家,采用多种手段收集用户流量,甚至提前向手机预置StealthBot等恶意软件,来弥补自己的市场份额。",
     "references": [
       {
-        "title": "360全面揭秘手机黑灰产：野蛮生长规模巨大",
-        "link": "https://www.xinqtech.com/read/201902/2151066.html"
+        "title": "MITRE ATT&CK: Supply Chain Compromise (T1195)",
+        "link": "https://attack.mitre.org/techniques/T1195/"
       }
     ],
     "avoidances": [

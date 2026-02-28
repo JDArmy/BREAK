@@ -16,7 +16,12 @@
       "A0005",
       "A0020"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "OWASP Automated Threat: OAT-017 Spamming",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-017_Spamming.html"
+      }
+    ],
     "updated": "2024-01-15"
   }
 }

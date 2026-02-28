@@ -13,7 +13,16 @@
       "A0064",
       "A0066"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Phishing - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Phishing"
+      },
+      {
+        "title": "T1566 Phishing - MITRE ATT&CK",
+        "link": "https://attack.mitre.org/techniques/T1566/"
+      }
+    ],
     "updated": "2026-02-27"
   },
   "R0084-001": {

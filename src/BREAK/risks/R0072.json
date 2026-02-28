@@ -13,7 +13,12 @@
       "A0020-002",
       "A0044"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Corporate fraud - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Corporate_fraud"
+      }
+    ],
     "updated": "2024-01-15"
   },
   "R0072-001": {
@@ -30,7 +35,12 @@
       "A0020-002",
       "A0044"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Insider threat - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Insider_threat"
+      }
+    ],
     "updated": "2024-01-15"
   }
 }

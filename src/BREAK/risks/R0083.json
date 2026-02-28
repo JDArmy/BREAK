@@ -24,7 +24,12 @@
       "A0041",
       "A0063"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Social engineering (security) - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Social_engineering_(security)"
+      }
+    ],
     "updated": "2024-01-15"
   },
   "R0083-001": {
@@ -52,7 +57,12 @@
       "A0041",
       "A0063"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Credential stuffing - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Credential_stuffing"
+      }
+    ],
     "updated": "2024-01-15"
   },
   "R0083-002": {
@@ -66,7 +76,12 @@
       "A0051",
       "A0059"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Social engineering (security) - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Social_engineering_(security)"
+      }
+    ],
     "updated": "2024-01-29"
   }
 }
