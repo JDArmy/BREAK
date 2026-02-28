@@ -4,7 +4,6 @@ import avoidances from "./avoidances";
 import avoidanceCategories from "./avoidance-categories";
 import businessScenes from "./business-scenes";
 import attackTools from "./attack-tools";
-import abilityProviders from "./ability-providers";
 import threatActors from "./threat-actors";
 
 const BREAK = {
@@ -14,7 +13,6 @@ const BREAK = {
   ...avoidanceCategories, //规避手段分类
   ...businessScenes, //业务场景
   ...attackTools, //攻击工具
-  ...abilityProviders, //能力提供者
   ...threatActors, //威胁行为者
 };
 
