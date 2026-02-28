@@ -74,9 +74,6 @@ const getActiveIndex = (fullPath: string) => {
     }}</el-menu-item>
     <el-menu-item index="/attack-tools">{{ $t("attackTools") }}</el-menu-item>
     <el-menu-item index="/threat-actors">{{ $t("threatActors") }}</el-menu-item>
-    <!-- <el-menu-item class="" index="/ability-providers" key="">{{
-      $t("abilityProviders")
-    }}</el-menu-item> -->
     <el-menu-item index="/relation/risk/R0001">{{
       $t("relationMap")
     }}</el-menu-item>
