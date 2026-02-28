@@ -15,11 +15,29 @@ const messages = {
   cn: { ...cn, BREAK: cnBREAK },
 };
 
+const LOCALE_STORAGE_KEY = "break-locale";
+
+const getInitialLocale = (): string => {
+  const saved = localStorage.getItem(LOCALE_STORAGE_KEY);
+  if (saved && saved in languages) return saved;
+
+  const browserLang = navigator.language || "";
+  if (browserLang.startsWith("zh")) return "cn";
+  if (browserLang.startsWith("en")) return "en";
+
+  return "cn";
+};
+
 const i18n = createI18n({
   legacy: false,
-  locale: "cn",
+  locale: getInitialLocale(),
   fallbackLocale: "cn",
   messages: messages,
 });
 
-export { i18n, languages };
+const setLocale = (locale: string) => {
+  localStorage.setItem(LOCALE_STORAGE_KEY, locale);
+  (i18n.global.locale as { value: string }).value = locale;
+};
+
+export { i18n, languages, setLocale, LOCALE_STORAGE_KEY };

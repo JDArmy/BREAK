@@ -1,56 +1,58 @@
-# JDArmy BREAK-业务风险枚举与规避知识框架
+# JDArmy BREAK - Business Risk Enumeration & Avoidance Knowledge Framework
 
-## 框架线上地址：<https://break.jd.army/>
+English | [中文](./README_CN.md)
 
-## 介绍
+## Online: <https://break.jd.army/>
 
-JDArmy BREAK 是英文“Business Risk Enumeration & Avoidance Kownledge”的缩写，是一个开放式“业务风险枚举与规避知识”框架。该框架通过对各种业务风险进行分类、介绍与枚举，为使用者提供了一个完整的业务风险全景图，并对业务规避风险、提升能力提供了规避知识。
+## Introduction
 
-> JDArmy BREAK 由JD.Army创建、拥有和进行管理。JD.Army是专注于挖掘和解决企业安全运行风险隐患的专业型红队。JD.Army保留自行决定定期更新 BREAK 和本文档的权利。虽然JD.Army拥有 BREAK 的所有权利和利益，但它许可公众自由使用，遵循相关开源协议。
+JDArmy BREAK stands for **Business Risk Enumeration & Avoidance Knowledge** — an open framework for enumerating and mitigating business risks. By systematically classifying, describing, and cataloguing a wide range of business risks, it provides a comprehensive risk landscape and offers practical avoidance guidance to help organizations build security capabilities and reduce business risk.
 
-## 背景
+> BREAK is created, owned, and managed by JD.Army — a professional red team focused on identifying and resolving enterprise security operational risks. JD.Army reserves the right to update BREAK and this documentation periodically at its sole discretion. While JD.Army owns all rights and interests in BREAK, it licenses the public to use it freely under the relevant open source license.
 
-随着信息安全能力对业务的覆盖与落地，以及业务对安全需求的加深，如果安全还是单单停留在网络安全范畴，仅仅是提前发现和修复各种漏洞，显然是无法保证业务正常的安全运营的，也无法满足业务安全的更高需求。
+## Background
 
-为此，JDArmy根据多年以来对业务安全的理解和积累，推出 BREAK - “业务风险枚举与规避知识框架”，旨在为企业蓝军在开展业务安全评估过程中提供指导和依据，同时框架中的业务风险规避知识也为安全能力建设、业务安全运营、风控能力提升提供指引。
+As information security capabilities increasingly cover business operations and business demands for security deepen, limiting security to the traditional network security domain — merely discovering and patching vulnerabilities — is clearly insufficient to ensure normal business security operations or meet higher business security requirements.
 
-## 方法
+Drawing on years of experience and accumulated understanding of business security, JDArmy introduces BREAK — the *Business Risk Enumeration & Avoidance Knowledge Framework* — to provide guidance and a reference basis for enterprise blue teams conducting business security assessments. The business risk avoidance knowledge in the framework also serves as a guide for building security capabilities, running business security operations, and improving risk control.
 
-框架整体按照：风险维度、风险场景、风险点的划分原则，框架包含若干风险维度，每个风险维度包含若干风险场景，每个风险场景包含若干风险点。
+## Methodology
 
-目前框架共收集和整理风险点 135+ 个、规避手段 73 个、攻击工具 61 个、威胁行为者 33 个、业务场景 15 个，后续会根据情况和反馈进行动态添加、升级或调整。每个风险点由风险编号、风险标题、风险定义、风险描述、风险复杂度、风险影响、规避手段、参考资料和攻击工具等组成。风险编号通过 R00xx 的方式来进行唯一编号（效仿Mitre ATT&CK），以便后期交流和情报传递。而攻击描述可以指引企业蓝军更好地进行安全能力评估，规避手段可以帮助企业红军或业务风控来加强安全能力建设，以降低业务风险。
+The framework is organized around three levels: **risk dimensions**, **risk scenarios**, and **risk items**. The framework contains multiple risk dimensions; each dimension contains multiple risk scenarios; and each scenario contains multiple risk items.
 
-**主要注意的是：** 业务风险和漏洞不是一回事情。一般来说漏洞是由于业务编码的缺陷导致的，可以通过修改代码去除缺陷来修复漏洞；而业务风险很大程度上并不是由编码缺陷造成的，只是攻击者对正常业务逻辑的一种非预期的利用。也因此，在大部分情况下，并不能完全消除风险，只能将风险降低到一定的可接受范围。所以并不一定可以通过直接修改代码来修复漏洞，通常业务风险需要外挂安全能力、构造风控模型来减缓攻击、降低攻击ROI或缩小攻击面。
+The current framework catalogues 135+ risk items, 73 avoidance measures, 61 attack tools, 33 threat actors, and 15 business scenes, with ongoing additions, upgrades, and adjustments based on developments and feedback. Each risk item consists of: a risk ID, risk title, risk definition, risk description, risk complexity, risk influence, avoidance measures, references, and associated attack tools. Risk IDs follow the format `R00xx` for unique identification (modeled after MITRE ATT&CK) to facilitate communication and intelligence sharing. Attack descriptions guide blue teams in security capability assessments, while avoidance measures help red teams and business risk control to strengthen security capabilities and reduce business risk.
 
-## 协作 & 贡献
+**Important note:** Business risks and vulnerabilities are not the same thing. Vulnerabilities are generally caused by coding defects and can be fixed by modifying code to remove the defect. Business risks, however, are largely not caused by coding defects — they are unintended exploitations of normal business logic by attackers. As a result, it is usually impossible to completely eliminate business risks; they can only be reduced to an acceptable level. Instead of direct code fixes, business risks typically require added security capabilities and risk control models to slow attacks, reduce attack ROI, and shrink the attack surface.
 
-本框架采用JSON格式进行了系统描述，详见`/src/BREAK`文件夹。其中：
+## Collaboration & Contribution
 
-- `basic-info` 文件夹中存放本知识框架的基础信息
-- `risks` 文件夹中存放风险列表
-- `avoidances` 文件夹中存放规避手段
-- `avoidance-categories` 文件夹中存放规避手段分类
-- `business-scenes` 文件夹中存放业务场景
-  - `riskSimensions` 字段为该业务场景所涉及的风险维度
-  - `riskScenes` 字段为该业务场景所涉及的风险场景及相关风险
-- `attack-tools` 文件夹中存放攻击工具列表
-- `threat-actors` 文件夹中存放威胁行为者列表
-- `ability-providers` 文件夹中存放了一些能力提供者，以及提供的一些业务风险规避能力
-- `utils.ts` 提供了通用的数据加载工具函数
+The framework is described in JSON format under the `/src/BREAK` directory:
 
-各协作者可以通过直接修改各 JSON 文件来与我们进行该系统框架的协作开发。亦可通过在github上提issue来给我们提供意见或建议。
+- `basic-info` — basic information about the framework
+- `risks` — risk item catalogue
+- `avoidances` — avoidance measures catalogue
+- `avoidance-categories` — avoidance measure categories
+- `business-scenes` — business scenes
+  - `riskDimensions` field: risk dimensions covered by the scene
+  - `riskScenes` field: risk scenarios and associated risk items for the scene
+- `attack-tools` — attack tool catalogue
+- `threat-actors` — threat actor catalogue
+- `ability-providers` — ability providers and the business risk avoidance capabilities they offer
+- `utils.ts` — common data loading utility functions
 
-### 致谢
+Contributors are welcome to collaborate by directly editing the JSON files. You can also open an issue on GitHub to share suggestions or feedback.
 
-- 感谢团长、we1h0提供的建议
+### Acknowledgements
 
-## 链接
+- Thanks to 团长 and we1h0 for their valuable suggestions
 
-- Github：<https://github.com/JDArmy/BREAK>
+## Links
 
-## 开发
+- GitHub: <https://github.com/JDArmy/BREAK>
 
-### 界面化配置
+## Development
+
+### GUI Configuration
 
 ```shell
 node ./src/server/main.cjs

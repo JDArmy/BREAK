@@ -1,6 +1,6 @@
 import { loadJsonModules } from "@/BREAK/utils";
 
-const basicInfo = { title: "Business Risk Enumeration & Avoidance Knowledge", description: "BREAK (Business Risk Enumeration & Avoidance Knowledge) is an open knowledge framework", rights: "The BREAK framework is created, owned, and managed by JD.Army. JD.Army is a professional red team focused on identifying and resolving enterprise security operational risks. JD.Army reserves the right to update BREAK periodically at its sole discretion. While JD.Army owns all rights and interests in BREAK, it licenses the public to use it freely under the relevant open source license." };
+const basicInfo = { name: "JDARMY BREAK", title: "Business Risk Enumeration & Avoidance Knowledge", description: "BREAK (Business Risk Enumeration & Avoidance Knowledge) is an open knowledge framework", rights: "The BREAK framework is created, owned, and managed by JD.Army. JD.Army is a professional red team focused on identifying and resolving enterprise security operational risks. JD.Army reserves the right to update BREAK periodically at its sole discretion. While JD.Army owns all rights and interests in BREAK, it licenses the public to use it freely under the relevant open source license." };
 
 const avoidanceCategoryFiles = import.meta.glob("./avoidance-categories/*.json", { eager: true });
 const riskFiles = import.meta.glob("./risks/*.json", { eager: true });

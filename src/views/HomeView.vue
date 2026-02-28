@@ -255,10 +255,11 @@ const getSceneRowSize = (sceneLength: number) => {
                 <tr>
                   <td
                     class="sidebar sidebar-icon"
+                    :class="hideSubRisks[rKey] ? 'sidebar-collapsed' : 'sidebar-expanded'"
                     @click="hideSubRisks[rKey] = !hideSubRisks[rKey]"
                     :title="$t('showhideSubRisks')"
                   >
-                    ⩦
+                    <span class="sidebar-arrow">{{ hideSubRisks[rKey] ? '▶' : '▼' }}</span>
                   </td>
                   <td class="parent-risk-link">
                     <router-link class="link" :to="'/risk/' + rKey">{{
@@ -274,7 +275,7 @@ const getSceneRowSize = (sceneLength: number) => {
                   v-for="(srKey, index) in subRisks[rKey]"
                   v-show="!hideSubRisks[rKey]"
                 >
-                  <td class="sidebar sidebar-line">
+                  <td class="sidebar sidebar-line" :class="hideSubRisks[rKey] ? 'sidebar-collapsed' : 'sidebar-expanded'">
                     <svg v-if="index === 0" fill="lightgray">
                       <path d="M0 0H12V12Z"></path>
                     </svg>
@@ -403,19 +404,36 @@ const getSceneRowSize = (sceneLength: number) => {
   cursor: pointer;
   color: #94a3b8;
   background: none;
-  border-left: 3px solid #cbd5e1;
+  text-align: center;
+  vertical-align: middle;
 }
 
-.first-sub-risk .sidebar {
+.sidebar-arrow {
+  font-size: 9px;
+  line-height: 1;
+  display: block;
+  text-align: center;
+}
+
+.sidebar-expanded {
+  border-left: 3px solid #60a5fa;
+  background-color: #eff6ff;
+  color: #2563eb;
+}
+
+.sidebar-collapsed {
   border-left: 3px solid #cbd5e1;
+  background-color: transparent;
+  color: #94a3b8;
 }
 
 .sidebar-icon:hover {
-  border-left-color: #60a5fa;
-  color: #2563eb;
+  border-left-color: #3b82f6;
+  background-color: #dbeafe;
+  color: #1d4ed8;
 }
+
 .sidebar-line {
-  border-left: 3px solid #cbd5e1;
   position: relative;
 }
 

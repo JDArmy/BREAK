@@ -51,10 +51,15 @@ getGithubData();
 a {
   text-decoration: none;
   color: #fff;
+  display: flex;
+  align-items: center;
 }
 
 .description {
   font-size: 0.8em;
   margin-left: 0.5em;
+  display: flex;
+  align-items: center;
+  gap: 2px;
 }
 </style>

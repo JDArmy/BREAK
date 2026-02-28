@@ -62,8 +62,16 @@ const { getTableHeight, tableRowClassName } = useAnchorTable("atKey");
         </router-link>
       </template>
     </el-table-column>
-    <el-table-column prop="title" :label="$t('title')" :width="150" />
-    <el-table-column prop="description" :label="$t('description')" />
+    <el-table-column prop="title" :label="$t('title')" :width="150">
+      <template #default="scope">
+        {{ scope.row.atKey ? $t(`BREAK.attackTools.${scope.row.atKey}.title`) : "" }}
+      </template>
+    </el-table-column>
+    <el-table-column prop="description" :label="$t('description')">
+      <template #default="scope">
+        {{ scope.row.atKey ? $t(`BREAK.attackTools.${scope.row.atKey}.description`) : "" }}
+      </template>
+    </el-table-column>
     <el-table-column :label="$t('references')" :width="300">
       <template #default="scope">
         <ul>

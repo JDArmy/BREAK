@@ -5,5 +5,21 @@
     "references": [
       { "title": "Beware of AI Black Industry Chain Batch-Generating Defamatory Content" }
     ]
+  },
+  "AT0053-001": {
+    "title": "AI Fraud Chatbots",
+    "description": "AI fraud chatbots are chatbots built with artificial intelligence and natural language processing capabilities, designed to conduct deceptive and fraudulent activities. They simulate realistic conversations to trick users into revealing personal or financial information, or into taking harmful actions. Typical fraud scenarios include social engineering (gaining trust to extract sensitive credentials), fake investment advice (promoting fraudulent opportunities to steal funds), romance scams (simulating relationships to solicit money), fake customer service (impersonating legitimate companies to harvest credentials), and malicious link distribution (embedding phishing links within conversations).",
+    "references": [
+      { "title": "AI Application Security Back in the Headlines: AI Chatbots Become a New Tool for Fraud" },
+      { "title": "'AI' Voice Bots Turned Into Fraud Weapons? Telecom Scam Tactics Are Evolving — Stay Alert!" }
+    ]
+  },
+  "AT0053-002": {
+    "title": "AI Deepfake Video",
+    "description": "Criminal networks use AI face-swapping tools at scale to produce deepfake videos for identity verification bypass services. For example, when a social media account triggers a platform's risk control and requires facial authentication, criminals use AI face-swapping to pass the check. Additionally, cases of fraud via conferencing software combined with real-time AI face-swapping are increasingly common — scammers instruct victims to install a video conferencing app, then impersonate a trusted acquaintance through real-time face-swapping to gain the victim's trust and steal funds.",
+    "references": [
+      { "title": "AI Deepfake Videos — Can You Tell the Difference?" },
+      { "title": "Video 'Face-Swapping' with 80% Similarity! How to Guard Against AI Deepfake Fraud?" }
+    ]
   }
 }
