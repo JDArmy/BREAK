@@ -183,7 +183,10 @@ const getSceneRowSize = (sceneLength: number) => {
       <h3 style="margin-bottom: 0">
         {{ $t("BREAK.title") }} v{{ BREAK.version }}
       </h3>
-      <h6 style="color: #64748b; margin-top: 0.2em">{{ $t("BREAK.description") }}</h6>
+      <h6 style="color: #64748b; margin-top: 0.2em; margin-bottom: 0.3em">{{ $t("BREAK.description") }}</h6>
+      <div class="last-updated">
+        {{ $t("lastUpdated") }}: {{ BREAK.updated }}
+      </div>
       <div class="stats">
         <router-link to="/risks" class="stat-card">
           <div class="stat-label">{{ $t("stats.risks") }}</div>
@@ -560,5 +563,13 @@ const getSceneRowSize = (sceneLength: number) => {
   font-size: 0.9em;
   color: #94a3b8;
   margin-left: 2px;
+}
+
+.last-updated {
+  text-align: center;
+  color: #cbd5e1;
+  font-size: 0.7em;
+  margin-top: 0.3em;
+  margin-bottom: 0.5em;
 }
 </style>
