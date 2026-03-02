@@ -12,6 +12,15 @@ import { ElRow, ElCol } from "element-plus";
 const router = useRouter();
 const route = useRoute();
 
+// 统计所有风险（包括子风险）
+const totalRisks = computed(() => Object.keys(BREAK.risks).length);
+// 统计所有规避手段（包括子手段）
+const totalAvoidances = computed(() => Object.keys(BREAK.avoidances).length);
+// 统计所有攻击工具（包括子工具）
+const totalAttackTools = computed(() => Object.keys(BREAK.attackTools).length);
+// 统计所有威胁行为者（包括子行为者）
+const totalThreatActors = computed(() => Object.keys(BREAK.threatActors).length);
+
 //分商业场景查看风险
 interface SceneBREAK {
   riskDimensions: {
@@ -169,13 +178,13 @@ const getSceneRowSize = (sceneLength: number) => {
       </h3>
       <h6 style="color: #64748b; margin-top: 0.2em">{{ $t("BREAK.description") }}</h6>
       <div class="stats">
-        <router-link to="/risks" class="stat-item">145 {{ $t("stats.risks") }}</router-link>
+        <router-link to="/risks" class="stat-item">{{ totalRisks }} {{ $t("stats.risks") }}</router-link>
         <span class="stat-separator">·</span>
-        <router-link to="/avoidances" class="stat-item">82 {{ $t("stats.avoidances") }}</router-link>
+        <router-link to="/avoidances" class="stat-item">{{ totalAvoidances }} {{ $t("stats.avoidances") }}</router-link>
         <span class="stat-separator">·</span>
-        <router-link to="/attack-tools" class="stat-item">69 {{ $t("stats.attackTools") }}</router-link>
+        <router-link to="/attack-tools" class="stat-item">{{ totalAttackTools }} {{ $t("stats.attackTools") }}</router-link>
         <span class="stat-separator">·</span>
-        <router-link to="/threat-actors" class="stat-item">38 {{ $t("stats.threatActors") }}</router-link>
+        <router-link to="/threat-actors" class="stat-item">{{ totalThreatActors }} {{ $t("stats.threatActors") }}</router-link>
       </div>
     </el-col>
 
