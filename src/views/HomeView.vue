@@ -186,24 +186,24 @@ const getSceneRowSize = (sceneLength: number) => {
       <h6 style="color: #64748b; margin-top: 0.2em">{{ $t("BREAK.description") }}</h6>
       <div class="stats">
         <router-link to="/risks" class="stat-card">
-          <div class="stat-number">{{ totalRisks }}</div>
           <div class="stat-label">{{ $t("stats.risks") }}</div>
-          <div v-if="subRisksCount > 0" class="stat-sub">{{ subRisksCount }} {{ $t("stats.subRisks") }}</div>
+          <div class="stat-number">{{ totalRisks }}</div>
+          <div v-if="subRisksCount > 0" class="stat-sub">{{ $t("stats.subRisks") }} {{ subRisksCount }}</div>
         </router-link>
         <router-link to="/avoidances" class="stat-card">
-          <div class="stat-number">{{ totalAvoidances }}</div>
           <div class="stat-label">{{ $t("stats.avoidances") }}</div>
-          <div v-if="subAvoidancesCount > 0" class="stat-sub">{{ subAvoidancesCount }} {{ $t("stats.subAvoidances") }}</div>
+          <div class="stat-number">{{ totalAvoidances }}</div>
+          <div v-if="subAvoidancesCount > 0" class="stat-sub">{{ $t("stats.subAvoidances") }} {{ subAvoidancesCount }}</div>
         </router-link>
         <router-link to="/attack-tools" class="stat-card">
-          <div class="stat-number">{{ totalAttackTools }}</div>
           <div class="stat-label">{{ $t("stats.attackTools") }}</div>
-          <div v-if="subAttackToolsCount > 0" class="stat-sub">{{ subAttackToolsCount }} {{ $t("stats.subAttackTools") }}</div>
+          <div class="stat-number">{{ totalAttackTools }}</div>
+          <div v-if="subAttackToolsCount > 0" class="stat-sub">{{ $t("stats.subAttackTools") }} {{ subAttackToolsCount }}</div>
         </router-link>
         <router-link to="/threat-actors" class="stat-card">
-          <div class="stat-number">{{ totalThreatActors }}</div>
           <div class="stat-label">{{ $t("stats.threatActors") }}</div>
-          <div v-if="subThreatActorsCount > 0" class="stat-sub">{{ subThreatActorsCount }} {{ $t("stats.subThreatActors") }}</div>
+          <div class="stat-number">{{ totalThreatActors }}</div>
+          <div v-if="subThreatActorsCount > 0" class="stat-sub">{{ $t("stats.subThreatActors") }} {{ subThreatActorsCount }}</div>
         </router-link>
       </div>
     </el-col>
@@ -524,6 +524,7 @@ const getSceneRowSize = (sceneLength: number) => {
   font-size: 2em;
   font-weight: bold;
   line-height: 1;
+  margin-top: 4px;
   margin-bottom: 4px;
 }
 
