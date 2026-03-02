@@ -1,5 +1,9 @@
 # Change log
 
+## 1.6.6
+
+- 新增：在导航栏显示 BREAK 框架统计数据（145 Risks, 82 Avoidances, 69 Attack Tools, 38 Threat Actors）
+
 ## 1.6.5
 
 - 修复导航栏 JDArmy 下拉箭头未与文字垂直居中的问题
