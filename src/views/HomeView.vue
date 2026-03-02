@@ -168,6 +168,15 @@ const getSceneRowSize = (sceneLength: number) => {
         {{ $t("BREAK.title") }} v{{ BREAK.version }}
       </h3>
       <h6 style="color: #64748b; margin-top: 0.2em">{{ $t("BREAK.description") }}</h6>
+      <div class="stats">
+        <span class="stat-item">145 Risks</span>
+        <span class="stat-separator">·</span>
+        <span class="stat-item">82 Avoidances</span>
+        <span class="stat-separator">·</span>
+        <span class="stat-item">69 Attack Tools</span>
+        <span class="stat-separator">·</span>
+        <span class="stat-item">38 Threat Actors</span>
+      </div>
     </el-col>
 
     <el-col :md="2" :sm="12" :offset="0">
@@ -451,5 +460,23 @@ const getSceneRowSize = (sceneLength: number) => {
 .parent-risk-link {
   font-weight: 500;
   border-left: 1px solid #e2e8f0;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.85em;
+  color: #64748b;
+  margin-top: 0.5em;
+}
+
+.stat-item {
+  white-space: nowrap;
+}
+
+.stat-separator {
+  color: #cbd5e1;
 }
 </style>

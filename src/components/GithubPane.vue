@@ -8,14 +8,6 @@ import { ref } from "vue";
 const stargazersCount = ref(0);
 const forksCount = ref(0);
 
-// BREAK framework statistics
-const stats = {
-  risks: 145,
-  avoidances: 82,
-  attackTools: 69,
-  threatActors: 38
-};
-
 const reposUrl = "https://api.github.com/repos/JDArmy/BREAK";
 
 const githubApi = axios.create();
@@ -45,13 +37,7 @@ getGithubData();
 </script>
 
 <template>
-  <div class="github-pane">
-    <div class="stats">
-      <span class="stat-item">{{ stats.risks }} Risks</span>
-      <span class="stat-item">{{ stats.avoidances }} Avoidances</span>
-      <span class="stat-item">{{ stats.attackTools }} Attack Tools</span>
-      <span class="stat-item">{{ stats.threatActors }} Threat Actors</span>
-    </div>
+  <div>
     <a href="https://github.com/JDArmy/BREAK" target="_blank" rel="noopener noreferrer">
       <icon-github />
       <span class="description">
@@ -62,24 +48,6 @@ getGithubData();
 </template>
 
 <style scoped>
-.github-pane {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.stats {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 0.75em;
-  color: #cbd5e1;
-}
-
-.stat-item {
-  white-space: nowrap;
-}
-
 a {
   text-decoration: none;
   color: #fff;
