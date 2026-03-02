@@ -185,24 +185,25 @@ const getSceneRowSize = (sceneLength: number) => {
       </h3>
       <h6 style="color: #64748b; margin-top: 0.2em">{{ $t("BREAK.description") }}</h6>
       <div class="stats">
-        <router-link to="/risks" class="stat-item">
-          {{ totalRisks }} {{ $t("stats.risks") }}
-          <span v-if="subRisksCount > 0" class="sub-count">({{ subRisksCount }} {{ $t("stats.subRisks") }})</span>
+        <router-link to="/risks" class="stat-card">
+          <div class="stat-number">{{ totalRisks }}</div>
+          <div class="stat-label">{{ $t("stats.risks") }}</div>
+          <div v-if="subRisksCount > 0" class="stat-sub">{{ subRisksCount }} {{ $t("stats.subRisks") }}</div>
         </router-link>
-        <span class="stat-separator">·</span>
-        <router-link to="/avoidances" class="stat-item">
-          {{ totalAvoidances }} {{ $t("stats.avoidances") }}
-          <span v-if="subAvoidancesCount > 0" class="sub-count">({{ subAvoidancesCount }} {{ $t("stats.subAvoidances") }})</span>
+        <router-link to="/avoidances" class="stat-card">
+          <div class="stat-number">{{ totalAvoidances }}</div>
+          <div class="stat-label">{{ $t("stats.avoidances") }}</div>
+          <div v-if="subAvoidancesCount > 0" class="stat-sub">{{ subAvoidancesCount }} {{ $t("stats.subAvoidances") }}</div>
         </router-link>
-        <span class="stat-separator">·</span>
-        <router-link to="/attack-tools" class="stat-item">
-          {{ totalAttackTools }} {{ $t("stats.attackTools") }}
-          <span v-if="subAttackToolsCount > 0" class="sub-count">({{ subAttackToolsCount }} {{ $t("stats.subAttackTools") }})</span>
+        <router-link to="/attack-tools" class="stat-card">
+          <div class="stat-number">{{ totalAttackTools }}</div>
+          <div class="stat-label">{{ $t("stats.attackTools") }}</div>
+          <div v-if="subAttackToolsCount > 0" class="stat-sub">{{ subAttackToolsCount }} {{ $t("stats.subAttackTools") }}</div>
         </router-link>
-        <span class="stat-separator">·</span>
-        <router-link to="/threat-actors" class="stat-item">
-          {{ totalThreatActors }} {{ $t("stats.threatActors") }}
-          <span v-if="subThreatActorsCount > 0" class="sub-count">({{ subThreatActorsCount }} {{ $t("stats.subThreatActors") }})</span>
+        <router-link to="/threat-actors" class="stat-card">
+          <div class="stat-number">{{ totalThreatActors }}</div>
+          <div class="stat-label">{{ $t("stats.threatActors") }}</div>
+          <div v-if="subThreatActorsCount > 0" class="stat-sub">{{ subThreatActorsCount }} {{ $t("stats.subThreatActors") }}</div>
         </router-link>
       </div>
     </el-col>
@@ -494,10 +495,48 @@ const getSceneRowSize = (sceneLength: number) => {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  font-size: 0.85em;
-  color: #64748b;
-  margin-top: 0.5em;
+  gap: 16px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  text-decoration: none;
+  color: #fff;
+  min-width: 120px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.stat-number {
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 0.9em;
+  opacity: 0.95;
+  white-space: nowrap;
+}
+
+.stat-sub {
+  font-size: 0.75em;
+  opacity: 0.8;
+  margin-top: 4px;
 }
 
 .stat-item {
