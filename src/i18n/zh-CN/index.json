@@ -75,5 +75,11 @@
     "subThreatActor": "子威胁行为者",
     "attackToolMaker": "攻击工具制造者",
     "makeRisk": "制造风险"
+  },
+  "stats": {
+    "risks": "个风险",
+    "avoidances": "个规避手段",
+    "attackTools": "个攻击工具",
+    "threatActors": "个威胁行为者"
   }
 }

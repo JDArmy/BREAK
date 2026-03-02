@@ -169,13 +169,13 @@ const getSceneRowSize = (sceneLength: number) => {
       </h3>
       <h6 style="color: #64748b; margin-top: 0.2em">{{ $t("BREAK.description") }}</h6>
       <div class="stats">
-        <span class="stat-item">145 Risks</span>
+        <router-link to="/risks" class="stat-item">145 {{ $t("stats.risks") }}</router-link>
         <span class="stat-separator">·</span>
-        <span class="stat-item">82 Avoidances</span>
+        <router-link to="/avoidances" class="stat-item">82 {{ $t("stats.avoidances") }}</router-link>
         <span class="stat-separator">·</span>
-        <span class="stat-item">69 Attack Tools</span>
+        <router-link to="/attack-tools" class="stat-item">69 {{ $t("stats.attackTools") }}</router-link>
         <span class="stat-separator">·</span>
-        <span class="stat-item">38 Threat Actors</span>
+        <router-link to="/threat-actors" class="stat-item">38 {{ $t("stats.threatActors") }}</router-link>
       </div>
     </el-col>
 
@@ -474,6 +474,13 @@ const getSceneRowSize = (sceneLength: number) => {
 
 .stat-item {
   white-space: nowrap;
+  text-decoration: none;
+  color: #64748b;
+  transition: color 0.2s;
+}
+
+.stat-item:hover {
+  color: #3b82f6;
 }
 
 .stat-separator {

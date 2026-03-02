@@ -75,5 +75,11 @@
     "subThreatActor": "Sub-Threat Actor",
     "attackToolMaker": "Attack Tool Maker",
     "makeRisk": "Makes Risk"
+  },
+  "stats": {
+    "risks": "Risks",
+    "avoidances": "Avoidances",
+    "attackTools": "Attack Tools",
+    "threatActors": "Threat Actors"
   }
 }
