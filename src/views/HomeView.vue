@@ -506,7 +506,7 @@ const getSceneRowSize = (sceneLength: number) => {
   align-items: center;
   justify-content: center;
   padding: 16px 24px;
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
   border-radius: 12px;
   text-decoration: none;
   color: #fff;
@@ -518,7 +518,7 @@ const getSceneRowSize = (sceneLength: number) => {
 .stat-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
-  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  background: linear-gradient(135deg, #334155 0%, #475569 100%);
 }
 
 .stat-number {
