@@ -187,22 +187,22 @@ const getSceneRowSize = (sceneLength: number) => {
       <div class="stats">
         <router-link to="/risks" class="stat-item">
           {{ totalRisks }} {{ $t("stats.risks") }}
-          <span v-if="subRisksCount > 0" class="sub-count">({{ subRisksCount }})</span>
+          <span v-if="subRisksCount > 0" class="sub-count">({{ subRisksCount }} {{ $t("stats.subRisks") }})</span>
         </router-link>
         <span class="stat-separator">·</span>
         <router-link to="/avoidances" class="stat-item">
           {{ totalAvoidances }} {{ $t("stats.avoidances") }}
-          <span v-if="subAvoidancesCount > 0" class="sub-count">({{ subAvoidancesCount }})</span>
+          <span v-if="subAvoidancesCount > 0" class="sub-count">({{ subAvoidancesCount }} {{ $t("stats.subAvoidances") }})</span>
         </router-link>
         <span class="stat-separator">·</span>
         <router-link to="/attack-tools" class="stat-item">
           {{ totalAttackTools }} {{ $t("stats.attackTools") }}
-          <span v-if="subAttackToolsCount > 0" class="sub-count">({{ subAttackToolsCount }})</span>
+          <span v-if="subAttackToolsCount > 0" class="sub-count">({{ subAttackToolsCount }} {{ $t("stats.subAttackTools") }})</span>
         </router-link>
         <span class="stat-separator">·</span>
         <router-link to="/threat-actors" class="stat-item">
           {{ totalThreatActors }} {{ $t("stats.threatActors") }}
-          <span v-if="subThreatActorsCount > 0" class="sub-count">({{ subThreatActorsCount }})</span>
+          <span v-if="subThreatActorsCount > 0" class="sub-count">({{ subThreatActorsCount }} {{ $t("stats.subThreatActors") }})</span>
         </router-link>
       </div>
     </el-col>
