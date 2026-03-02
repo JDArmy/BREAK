@@ -14,12 +14,19 @@ const route = useRoute();
 
 // 统计所有风险（包括子风险）
 const totalRisks = computed(() => Object.keys(BREAK.risks).length);
+const subRisksCount = computed(() => Object.keys(BREAK.risks).filter(key => key.includes('-')).length);
+
 // 统计所有规避手段（包括子手段）
 const totalAvoidances = computed(() => Object.keys(BREAK.avoidances).length);
+const subAvoidancesCount = computed(() => Object.keys(BREAK.avoidances).filter(key => key.includes('-')).length);
+
 // 统计所有攻击工具（包括子工具）
 const totalAttackTools = computed(() => Object.keys(BREAK.attackTools).length);
+const subAttackToolsCount = computed(() => Object.keys(BREAK.attackTools).filter(key => key.includes('-')).length);
+
 // 统计所有威胁行为者（包括子行为者）
 const totalThreatActors = computed(() => Object.keys(BREAK.threatActors).length);
+const subThreatActorsCount = computed(() => Object.keys(BREAK.threatActors).filter(key => key.includes('-')).length);
 
 //分商业场景查看风险
 interface SceneBREAK {
@@ -178,13 +185,25 @@ const getSceneRowSize = (sceneLength: number) => {
       </h3>
       <h6 style="color: #64748b; margin-top: 0.2em">{{ $t("BREAK.description") }}</h6>
       <div class="stats">
-        <router-link to="/risks" class="stat-item">{{ totalRisks }} {{ $t("stats.risks") }}</router-link>
+        <router-link to="/risks" class="stat-item">
+          {{ totalRisks }} {{ $t("stats.risks") }}
+          <span v-if="subRisksCount > 0" class="sub-count">({{ subRisksCount }})</span>
+        </router-link>
         <span class="stat-separator">·</span>
-        <router-link to="/avoidances" class="stat-item">{{ totalAvoidances }} {{ $t("stats.avoidances") }}</router-link>
+        <router-link to="/avoidances" class="stat-item">
+          {{ totalAvoidances }} {{ $t("stats.avoidances") }}
+          <span v-if="subAvoidancesCount > 0" class="sub-count">({{ subAvoidancesCount }})</span>
+        </router-link>
         <span class="stat-separator">·</span>
-        <router-link to="/attack-tools" class="stat-item">{{ totalAttackTools }} {{ $t("stats.attackTools") }}</router-link>
+        <router-link to="/attack-tools" class="stat-item">
+          {{ totalAttackTools }} {{ $t("stats.attackTools") }}
+          <span v-if="subAttackToolsCount > 0" class="sub-count">({{ subAttackToolsCount }})</span>
+        </router-link>
         <span class="stat-separator">·</span>
-        <router-link to="/threat-actors" class="stat-item">{{ totalThreatActors }} {{ $t("stats.threatActors") }}</router-link>
+        <router-link to="/threat-actors" class="stat-item">
+          {{ totalThreatActors }} {{ $t("stats.threatActors") }}
+          <span v-if="subThreatActorsCount > 0" class="sub-count">({{ subThreatActorsCount }})</span>
+        </router-link>
       </div>
     </el-col>
 
@@ -494,5 +513,11 @@ const getSceneRowSize = (sceneLength: number) => {
 
 .stat-separator {
   color: #cbd5e1;
+}
+
+.sub-count {
+  font-size: 0.9em;
+  color: #94a3b8;
+  margin-left: 2px;
 }
 </style>
