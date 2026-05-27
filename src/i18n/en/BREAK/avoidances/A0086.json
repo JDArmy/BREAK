@@ -1,0 +1,18 @@
+{
+  "A0086": {
+    "title": "Supply Chain Security Audit",
+    "category": "Management Control",
+    "definition": "Management measures for regularly auditing and assessing the cybersecurity status of suppliers and partners.",
+    "description": "Identify security risks in the supply chain by regularly auditing suppliers' security control measures, vulnerability management processes, incident response capabilities, etc. Audit content includes security policies, technical controls, personnel training, compliance, and other dimensions. This is particularly important for regulated industries such as payment institutions.",
+    "limitation": "High audit costs; suppliers may not cooperate; audit results have limited timeliness; difficult to cover all suppliers.",
+    "references": [
+      {
+        "title": "Enterprise Network Security Issues: Supply Chain Attack Prevention",
+        "link": "https://m.sohu.com/a/772554694_121128511",
+        "type": "industry",
+        "evidenceLevel": "medium"
+      }
+    ],
+    "updated": "2026/05/28 00:33:45"
+  }
+}

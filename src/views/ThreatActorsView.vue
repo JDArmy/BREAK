@@ -6,6 +6,7 @@ import RiskDetail from "@/components/RiskDetail.vue";
 import AttackToolDetail from "@/components/AttackToolDetail.vue";
 import iconRelation from "@/components/icons/iconRelation.vue";
 import { useAnchorTable } from "@/composables/useAnchorTable";
+import ReferenceBadge from "@/components/ReferenceBadge.vue";
 
 // 攻击工具详情页
 const attackToolDrawer = ref(false);
@@ -120,7 +121,7 @@ const { getTableHeight, tableRowClassName } = useAnchorTable("taKey");
       <template #default="scope">
         <ul class="reference-list">
           <li v-for="(reference, refIdx) in scope.row.references" :key="refIdx">
-            <a v-if="scope.row.taKey" :href="reference.link" target="_blank" rel="noopener noreferrer"
+            <a v-if="scope.row.taKey && reference.link" :href="reference.link" target="_blank" rel="noopener noreferrer"
               ><el-icon><Link /></el-icon
               >{{
                 $t(
@@ -128,6 +129,14 @@ const { getTableHeight, tableRowClassName } = useAnchorTable("taKey");
                 )
               }}
             </a>
+            <span v-else-if="scope.row.taKey">
+              {{
+                $t(
+                  `BREAK.threatActors.${scope.row.taKey}.references[${refIdx}].title`
+                )
+              }}
+            </span>
+            <ReferenceBadge :type="reference.type" :evidence-level="reference.evidenceLevel" />
           </li>
         </ul>
       </template>

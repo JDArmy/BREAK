@@ -6,6 +6,7 @@ import RiskDetail from "@/components/RiskDetail.vue";
 import { Link } from "@element-plus/icons-vue";
 import iconRelation from "@/components/icons/iconRelation.vue";
 import { useAnchorTable } from "@/composables/useAnchorTable";
+import ReferenceBadge from "@/components/ReferenceBadge.vue";
 
 const avoidanceDrawer = ref(false);
 const avoidanceKey = ref("");
@@ -76,7 +77,7 @@ const { getTableHeight, tableRowClassName } = useAnchorTable("atKey");
       <template #default="scope">
         <ul>
           <li v-for="(reference, refIdx) in scope.row.references" :key="refIdx">
-            <a :href="reference.link" target="_blank" rel="noopener noreferrer"
+            <a v-if="reference.link" :href="reference.link" target="_blank" rel="noopener noreferrer"
               ><el-icon><Link /></el-icon
               >{{
                 $t(
@@ -84,6 +85,14 @@ const { getTableHeight, tableRowClassName } = useAnchorTable("atKey");
                 )
               }}</a
             >
+            <span v-else>
+              {{
+                $t(
+                  `BREAK.attackTools.${scope.row.atKey}.references[${refIdx}].title`
+                )
+              }}
+            </span>
+            <ReferenceBadge :type="reference.type" :evidence-level="reference.evidenceLevel" />
           </li>
         </ul>
       </template>

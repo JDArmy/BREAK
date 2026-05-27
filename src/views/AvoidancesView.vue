@@ -6,6 +6,7 @@ import { useRoute } from "vue-router";
 import { ref, watch } from "vue";
 import { CaretTop } from "@element-plus/icons-vue";
 import iconRelation from "@/components/icons/iconRelation.vue";
+import ReferenceBadge from "@/components/ReferenceBadge.vue";
 
 const route = useRoute();
 
@@ -210,7 +211,7 @@ const scrollToTop = () => {
               v-for="(reference, refIdx) in scope.row.references"
               :key="refIdx"
             >
-              <a v-if="scope.row.aKey" :href="reference.link" target="_blank" rel="noopener noreferrer"
+              <a v-if="scope.row.aKey && reference.link" :href="reference.link" target="_blank" rel="noopener noreferrer"
                 ><el-icon><Link /></el-icon
                 >{{
                   $t(
@@ -218,6 +219,14 @@ const scrollToTop = () => {
                   )
                 }}
               </a>
+              <span v-else-if="scope.row.aKey">
+                {{
+                  $t(
+                    `BREAK.avoidances.${scope.row.aKey}.references[${refIdx}].title`
+                  )
+                }}
+              </span>
+              <ReferenceBadge :type="reference.type" :evidence-level="reference.evidenceLevel" />
             </li>
           </ul>
         </template>

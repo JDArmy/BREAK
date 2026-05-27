@@ -1,8 +1,40 @@
+export type ReferenceType =
+  | "standard"
+  | "academic"
+  | "regulation"
+  | "regulatory"
+  | "vendor"
+  | "news"
+  | "encyclopedia"
+  | "blog"
+  | "tool"
+  | "industry";
+
+export type EvidenceLevel = "high" | "medium" | "low";
+
+export interface AcademicReferenceMeta {
+  year?: string;
+  venue?: string;
+  doi?: string;
+  scholarId?: string;
+  citesId?: string;
+  clusterId?: string;
+  citedBy?: number;
+  pdf?: string;
+}
+
 export interface Reference {
   link: string;
   title: string;
-  type?: 'standard' | 'academic' | 'regulatory' | 'industry' | 'encyclopedia';
-  evidenceLevel?: 'high' | 'medium' | 'low';
+  type?: ReferenceType;
+  source?: string;
+  language?: "zh-CN" | "en" | string;
+  evidenceLevel?: EvidenceLevel;
+  collectedBy?: "manual" | "scrapingdog" | "import" | string;
+  collectedAt?: string;
+  verifiedAt?: string;
+  note?: string;
+  academic?: AcademicReferenceMeta;
 }
 
 export interface Risk {

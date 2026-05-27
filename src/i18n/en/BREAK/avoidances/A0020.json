@@ -16,7 +16,12 @@
     "definition": "Penalizing a store when it violates related rules, and prohibiting related behaviors or actions.",
     "description": "Store penalty strategies include: lowering credit ratings, lowering tier levels, taking down products, reducing search ranking weight, suspending the store, banning the store, fines, etc.",
     "limitation": "Store penalties are a loss-mitigation strategy with a certain degree of latency.",
-    "references": []
+    "references": [
+      {
+        "title": "Interpretation of the Personal Fine System",
+        "link": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/xwxcs/art/2023/art_36461cc80e004ad0afa7daef05ee1f9e.html"
+      }
+    ]
   },
   "A0020-002": {
     "title": "Employee Penalty",

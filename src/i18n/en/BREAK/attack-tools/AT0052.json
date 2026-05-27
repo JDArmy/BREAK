@@ -14,7 +14,8 @@
     "description": "KON-Boot is a tool that bypasses Windows and macOS login passwords. It boots from a USB device to circumvent the login authentication process.",
     "references": [
       {
-        "title": "KON-Boot Official Website"
+        "title": "KON-Boot Bypassing Windows Authentication - CSDN",
+        "link": "https://blog.csdn.net/weixin_52497013/article/details/121848172"
       }
     ]
   },
@@ -23,7 +24,8 @@
     "description": "USB Killer is a device that injects high-voltage electrical current into a computer via the USB port, instantly burning out hardware components such as the motherboard, CPU, and RAM.",
     "references": [
       {
-        "title": "USB Killer Official Website"
+        "title": "How USB Killer Damages Computers - Zhihu",
+        "link": "https://zhuanlan.zhihu.com/p/153254485"
       }
     ]
   },
@@ -32,7 +34,8 @@
     "description": "BadUSB is a USB device pre-loaded with malicious code. When inserted into a computer, the malicious code executes automatically, enabling attacks such as keystroke injection, data exfiltration, or malware installation.",
     "references": [
       {
-        "title": "USBdriveby"
+        "title": "BadUSB Detailed Tutorial - Jianshu",
+        "link": "https://www.jianshu.com/p/76b42b276bee"
       }
     ]
   }

@@ -1,0 +1,19 @@
+{
+  "R0146": {
+    "title": "消费贷骗贷（真实补缴）",
+    "definition": "通过真实补缴社保、公积金等方式伪造还款能力，骗取消费贷款的欺诈行为。",
+    "description": "黑产团伙通过帮助借款人真实补缴社保、公积金等记录，伪造稳定收入和还款能力证明，从而骗取金融机构的消费贷款。这种手法相比传统的虚假材料更难识别，因为补缴记录是真实存在的。2026年这种手法成为主流，给金融机构风控带来新挑战。",
+    "complexity": "中",
+    "influence": "高",
+    "avoidances": ["A0051", "A0064"],
+    "references": [
+      {
+        "title": "2026年消费贷骗贷新变化:真实补缴成为主流手法",
+        "link": "https://www.163.com/dy/article/KOA4UHH60518STKV.html",
+        "type": "industry",
+        "evidenceLevel": "medium"
+      }
+    ],
+    "updated": "2026/05/28 00:32:56"
+  }
+}

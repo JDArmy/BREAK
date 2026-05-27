@@ -72,7 +72,13 @@ interface Reference {
   link: string;
   title: string;
   type?: string;
+  source?: string;
+  language?: string;
   evidenceLevel?: string;
+  collectedBy?: string;
+  collectedAt?: string;
+  verifiedAt?: string;
+  note?: string;
 }
 
 interface BreakItem {
@@ -326,7 +332,18 @@ const initReferences = () => {
 };
 
 const addReference = () => {
-  editingRef.value = { link: '', title: '', type: 'industry', evidenceLevel: 'medium' };
+  editingRef.value = {
+    link: "",
+    title: "",
+    type: "industry",
+    source: "",
+    language: "zh-CN",
+    evidenceLevel: "medium",
+    collectedBy: "manual",
+    collectedAt: new Date().toISOString().slice(0, 10),
+    verifiedAt: new Date().toISOString().slice(0, 10),
+    note: "",
+  };
   editingIndex.value = -1;
   showRefDialog.value = true;
 };
@@ -343,9 +360,15 @@ const deleteReference = (index: number) => {
 
 const saveReference = () => {
   if (!editingRef.value || !editingRef.value.link || !editingRef.value.title) {
-    alert('链接和标题不能为空');
+    alert("链接和标题不能为空");
     return;
   }
+  Object.keys(editingRef.value).forEach((key) => {
+    const value = editingRef.value?.[key as keyof Reference];
+    if (value === "") {
+      delete editingRef.value?.[key as keyof Reference];
+    }
+  });
   if (editingIndex.value === -1) {
     references.value.push(editingRef.value);
   } else {
@@ -396,7 +419,7 @@ const saveFileToServer = (path: string, json: string) => {
     })
     .catch((error) => {
       saveFileToServerSuccessStatus = false;
-      alert(error);
+      alert(error.response?.data?.error?.message || error.message);
     });
 };
 // 监控页面关闭事件，如果数据未完全上传成功，则通过beforeunload事件阻止页面关闭
@@ -427,7 +450,7 @@ const getDateTimeString = () => {
   }).format(new Date());
 };
 
-const rootPath = ".."; //相对于server的路径
+const rootPath = "src"; //相对于项目根目录的路径
 const transferChange = (relationItem: RelationItem) => {
   if (relationItem.type === relationType.one2many) {
     const breakItemOldJson = JSON.stringify(breakItem.value);
@@ -599,6 +622,8 @@ const transferChange = (relationItem: RelationItem) => {
           <el-table-column prop="title" label="标题" width="200" />
           <el-table-column prop="link" label="链接" />
           <el-table-column prop="type" label="类型" width="100" />
+          <el-table-column prop="source" label="来源" width="120" />
+          <el-table-column prop="language" label="语言" width="100" />
           <el-table-column prop="evidenceLevel" label="证据等级" width="100" />
           <el-table-column label="操作" width="150">
             <template #default="{ $index }">
@@ -624,9 +649,22 @@ const transferChange = (relationItem: RelationItem) => {
           <el-select v-model="editingRef.type">
             <el-option label="标准" value="standard" />
             <el-option label="学术" value="academic" />
-            <el-option label="监管" value="regulatory" />
-            <el-option label="行业" value="industry" />
+            <el-option label="监管" value="regulation" />
+            <el-option label="厂商" value="vendor" />
+            <el-option label="新闻" value="news" />
             <el-option label="百科" value="encyclopedia" />
+            <el-option label="博客" value="blog" />
+            <el-option label="工具" value="tool" />
+            <el-option label="行业" value="industry" />
+          </el-select>
+        </el-form-item>
+        <el-form-item label="来源">
+          <el-input v-model="editingRef.source" placeholder="owasp / nist / arxiv / baidu" />
+        </el-form-item>
+        <el-form-item label="语言">
+          <el-select v-model="editingRef.language">
+            <el-option label="中文" value="zh-CN" />
+            <el-option label="英文" value="en" />
           </el-select>
         </el-form-item>
         <el-form-item label="证据等级">
@@ -635,6 +673,15 @@ const transferChange = (relationItem: RelationItem) => {
             <el-option label="中" value="medium" />
             <el-option label="低" value="low" />
           </el-select>
+        </el-form-item>
+        <el-form-item label="采集日期">
+          <el-input v-model="editingRef.collectedAt" placeholder="YYYY-MM-DD" />
+        </el-form-item>
+        <el-form-item label="验证日期">
+          <el-input v-model="editingRef.verifiedAt" placeholder="YYYY-MM-DD" />
+        </el-form-item>
+        <el-form-item label="备注">
+          <el-input v-model="editingRef.note" type="textarea" />
         </el-form-item>
       </el-form>
       <template #footer>

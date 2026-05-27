@@ -1,0 +1,19 @@
+{
+  "R0147": {
+    "title": "Payment Institution Regulatory Compliance Risk",
+    "definition": "Compliance risks faced by payment institutions due to regulatory data quality issues and failure to meet penetrating supervision requirements.",
+    "description": "As regulatory authorities implement penetrating supervision and payment business function supervision on payment institutions, payment institutions need to provide high-quality regulatory data. Data quality issues, non-compliance with validation rules (4200+ rules), improper data desensitization, etc., may all lead to compliance risks and regulatory penalties. Regulatory requirements have been further tightened in 2026.",
+    "complexity": "High",
+    "influence": "High",
+    "avoidances": ["A0086"],
+    "references": [
+      {
+        "title": "Strict Implementation of Penetrating Supervision and Payment Business Function Supervision for Payment Institutions",
+        "link": "https://view.inews.qq.com/a/20260111A021G400",
+        "type": "regulatory",
+        "evidenceLevel": "high"
+      }
+    ],
+    "updated": "2026/05/28 00:33:12"
+  }
+}
