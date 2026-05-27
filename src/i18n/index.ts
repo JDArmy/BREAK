@@ -17,9 +17,11 @@ const messages = {
 
 const LOCALE_STORAGE_KEY = "break-locale";
 
-const getInitialLocale = (): string => {
+type Locale = "cn" | "en";
+
+const getInitialLocale = (): Locale => {
   const saved = localStorage.getItem(LOCALE_STORAGE_KEY);
-  if (saved && saved in languages) return saved;
+  if (saved && saved in languages) return saved as Locale;
 
   const browserLang = navigator.language || "";
   if (browserLang.startsWith("zh")) return "cn";
@@ -35,9 +37,9 @@ const i18n = createI18n({
   messages: messages,
 });
 
-const setLocale = (locale: string) => {
+const setLocale = (locale: Locale) => {
   localStorage.setItem(LOCALE_STORAGE_KEY, locale);
-  (i18n.global.locale as { value: string }).value = locale;
+  i18n.global.locale.value = locale;
 };
 
 export { i18n, languages, setLocale, LOCALE_STORAGE_KEY };

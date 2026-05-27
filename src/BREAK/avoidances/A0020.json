@@ -19,8 +19,13 @@
     "definition": "在店铺触碰相关规则时对店铺进行处罚，并禁止相关行为或动作。",
     "description": "店铺处罚策略包括：降低信用评级、降低等级、商品下架、降低搜索权重、暂停店铺、封禁店铺、罚款等",
     "limitation": "店铺处罚是一种止损策略，具备一定滞后性。",
-    "references": [],
-    "updated": "2024-01-11"
+    "references": [
+      {
+        "title": "“罚款到人”制度解读",
+        "link": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/xwxcs/art/2023/art_36461cc80e004ad0afa7daef05ee1f9e.html"
+      }
+    ],
+    "updated": "2026-05-27"
   },
   "A0020-002": {
     "title": "员工处罚",

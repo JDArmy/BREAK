@@ -2,7 +2,12 @@
   "AT0050": {
     "title": "发贴机",
     "description": "发贴机是一种自动发帖的外挂，可以在游戏中自动发帖，以达到刷屏的目的。",
-    "references": [],
+    "references": [
+      {
+        "title": "www.sendong.com/t2404.html",
+        "link": "http://www.sendong.com/t2404.html"
+      }
+    ],
     "avoidances": [
       "A0001",
       "A0001-004",
@@ -31,6 +36,6 @@
       "R0066",
       "R0110"
     ],
-    "updated": "2024-01-19"
+    "updated": "2026-05-27"
   }
 }

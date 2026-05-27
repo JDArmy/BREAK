@@ -2,9 +2,9 @@
 import { ref } from "vue";
 import BREAK from "@/BREAK";
 import AvoidanceDetail from "@/components/AvoidanceDetail.vue";
+import ReferenceList from "@/components/ReferenceList.vue";
 
 import "element-plus/es/components/drawer/style/css";
-import { Link } from "@element-plus/icons-vue";
 import iconRelation from "./icons/iconRelation.vue";
 import { useDrawerWidth } from "@/composables/useDrawerWidth";
 
@@ -78,17 +78,7 @@ const getAttackToolAvoidances = (atKey: string) => {
     </div>
     <div class="desc" v-if="getAttackToolReferences(atKey).length > 0">
       <strong>{{ $t("references") }}:&nbsp;</strong>
-      <ul>
-        <li
-          v-for="(reference, refIdx) in getAttackToolReferences(atKey)"
-          :key="refIdx"
-        >
-          <a :href="reference.link" target="_blank" rel="noopener noreferrer">
-            <el-icon><Link /></el-icon
-            >{{ $t(`BREAK.attackTools.${atKey}.references[${refIdx}].title`) }}
-          </a>
-        </li>
-      </ul>
+      <ReferenceList :references="getAttackToolReferences(atKey)" />
     </div>
   </el-drawer>
   <!-- 手段详情页 -->

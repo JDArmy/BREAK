@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import BREAK from "@/BREAK";
+import ReferenceList from "@/components/ReferenceList.vue";
 
 import "element-plus/es/components/drawer/style/css";
-import { Link } from "@element-plus/icons-vue";
 import iconRelation from "./icons/iconRelation.vue";
 import { useDrawerWidth } from "@/composables/useDrawerWidth";
 
@@ -60,17 +60,7 @@ const getAvoidanceReferences = (aKey: string) => {
     </div>
     <div class="desc" v-if="getAvoidanceReferences(aKey).length > 0">
       <strong>{{ $t("references") }}:&nbsp;</strong>
-      <ul>
-        <li
-          v-for="(reference, refIdx) in getAvoidanceReferences(aKey)"
-          :key="refIdx"
-        >
-          <a :href="reference.link" target="_blank" rel="noopener noreferrer">
-            <el-icon><Link /></el-icon
-            >{{ $t(`BREAK.avoidances.${aKey}.references[${refIdx}].title`) }}
-          </a>
-        </li>
-      </ul>
+      <ReferenceList :references="getAvoidanceReferences(aKey)" />
     </div>
   </el-drawer>
 </template>

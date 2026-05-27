@@ -3,9 +3,9 @@ import { ref } from "vue";
 import BREAK from "@/BREAK";
 import AvoidanceDetail from "@/components/AvoidanceDetail.vue";
 import AttackToolDetail from "@/components/AttackToolDetail.vue";
+import ReferenceList from "@/components/ReferenceList.vue";
 
 import "element-plus/es/components/drawer/style/css";
-import { Link } from "@element-plus/icons-vue";
 
 import RiskRelation from "@/components/RiskRelation.vue";
 import iconRelation from "./icons/iconRelation.vue";
@@ -96,17 +96,7 @@ const getRiskDescriptionTools = (rKey: string) => {
     </div>
     <div class="desc" v-if="getReferences(rKey).length > 0">
       <strong>{{ $t("riskReference") }}:&nbsp;</strong>
-      <ul>
-        <li v-for="(reference, refIdx) in getReferences(rKey)" :key="refIdx">
-          <a :href="reference.link" v-if="reference.link" target="_blank" rel="noopener noreferrer"
-            ><el-icon><Link /></el-icon
-            >{{ $t(`BREAK.risks.${rKey}.references[${refIdx}].title`) }}</a
-          >
-          <span v-else>
-            {{ $t(`BREAK.risks.${rKey}.references[${refIdx}].title`) }}
-          </span>
-        </li>
-      </ul>
+      <ReferenceList :references="getReferences(rKey)" />
     </div>
     <div class="desc" v-if="getRiskDescriptionTools(rKey).length > 0">
       <strong>{{ $t("attackTools") }}:&nbsp;</strong>
