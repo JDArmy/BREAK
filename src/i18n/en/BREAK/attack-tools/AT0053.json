@@ -7,6 +7,22 @@
         "title": "Beware of AI Black Industry Chain Batch-Generating Defamatory Content",
         "link": "https://baijiahao.baidu.com/s?id=1771272671713776437&wfr=spider&for=pc"
       }
+    ],
+    "avoidances": [
+      "A0006-008"
+    ],
+    "couseRisks": [
+      "R0015",
+      "R0006",
+      "R0056",
+      "R0021",
+      "R0023",
+      "R0071",
+      "R0110",
+      "R0012-002",
+      "R0084",
+      "R0047",
+      "R0048"
     ]
   },
   "AT0053-001": {
@@ -21,6 +37,16 @@
         "title": "'AI' Voice Bots Turned Into Fraud Weapons? Telecom Scam Tactics Are Evolving — Stay Alert!",
         "link": "https://baijiahao.baidu.com/s?id=1787666481258718079&wfr=spider&for=pc"
       }
+    ],
+    "avoidances": [
+      "A0006",
+      "A0006-008"
+    ],
+    "couseRisks": [
+      "R0053",
+      "R0095",
+      "R0024",
+      "R0066"
     ]
   },
   "AT0053-002": {
@@ -35,6 +61,17 @@
         "title": "Video 'Face-Swapping' with 80% Similarity! How to Guard Against AI Deepfake Fraud?",
         "link": "https://baijiahao.baidu.com/s?id=1781674923891589881&wfr=spider&for=pc"
       }
+    ],
+    "avoidances": [
+      "A0010",
+      "A0006-008"
+    ],
+    "couseRisks": [
+      "R0048",
+      "R0095",
+      "R0024",
+      "R0083-002",
+      "R0115"
     ]
   }
 }

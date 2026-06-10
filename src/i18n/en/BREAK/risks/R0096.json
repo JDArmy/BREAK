@@ -2,7 +2,7 @@
   "R0096": {
     "title": "Platform Online Loan Fraud",
     "definition": "Online loan fraud generally refers to internet black/grey market actors using illegal means such as forged identity documents, fabricated credit materials, and purchased illegal data to exploit loopholes in internet loan approval systems during the qualification review stage, illegally obtaining loan qualifications from internet lending platforms, transferring the funds to personal accounts, and refusing to repay the loans.",
-    "description": "Main fraud methods include: registering large numbers of phone numbers and using them for bulk consumption to artificially boost credit ratings; using technical means to forge identity information, device information, and location information to obtain loans and evade post-loan collection; and exploiting the slow update cycle of public credit information to simultaneously apply for loans from multiple platforms, maliciously exhausting credit.",
+    "description": "Main fraud methods include: registering large numbers of phone numbers and using them for bulk consumption to artificially boost credit ratings; using technical means to forge identity information, device information, and location information to obtain loans and evade post-loan collection; and exploiting the slow update cycle of public credit information to simultaneously apply for loans from multiple platforms, maliciously exhausting credit. Recent variants also include using real retroactive social insurance or housing fund contributions to create a false appearance of repayment ability and obtain consumer loan limits.",
     "complexity": "Basic",
     "influence": "Causes financial losses to the platform.",
     "references": [

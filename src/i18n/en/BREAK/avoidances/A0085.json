@@ -1,16 +1,26 @@
 {
   "A0085": {
     "title": "Network Segmentation Technology",
-    "category": "Technical Control",
+    "category": "AC01",
     "definition": "A security technology that manages traffic between subnets and limits attackers' lateral movement by setting access policies for each network subnet.",
     "description": "Network segmentation divides the enterprise network into multiple logically or physically isolated subnets, and sets strict access control policies for each subnet. When an attacker intrudes into a subnet, segmentation technology can prevent them from moving laterally to other subnets, thereby limiting the scope and impact of the attack. This is an important component of zero trust architecture.",
     "limitation": "High implementation cost, requiring network architecture re-planning; may affect normal communication between business systems; requires continuous maintenance and policy updates.",
     "references": [
       {
-        "title": "Typical Network Security Risks Faced by Enterprises and Their Prevention Strategies",
-        "link": "https://blog.csdn.net/u011223449/article/details/135761488",
-        "type": "industry",
-        "evidenceLevel": "medium"
+        "title": "NIST SP 800-207: Zero Trust Architecture",
+        "link": "https://csrc.nist.gov/pubs/sp/800/207/final",
+        "type": "standard",
+        "source": "NIST",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "Zero Trust Maturity Model - CISA",
+        "link": "https://www.cisa.gov/resources-tools/resources/zero-trust-maturity-model",
+        "type": "standard",
+        "source": "CISA",
+        "language": "en",
+        "evidenceLevel": "high"
       }
     ],
     "updated": "2026/05/28 00:33:28"

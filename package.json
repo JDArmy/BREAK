@@ -1,6 +1,6 @@
 {
   "name": "break",
-  "version": "1.8.0",
+  "version": "1.8.2",
   "private": true,
   "type": "module",
   "scripts": {
@@ -9,14 +9,7 @@
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit",
-    "lint": "eslint --fix",
-    "validate:references": "node scripts/validate/references.mjs",
-    "validate:references:strict": "node scripts/validate/references.mjs --strict",
-    "search:queries": "node scripts/search/generate-queries.mjs",
-    "search:collect": "node scripts/search/collect-candidates.mjs",
-    "search:score": "node scripts/search/score-candidates.mjs",
-    "search:report": "node scripts/search/export-review-report.mjs",
-    "search:apply": "node scripts/search/apply-approved-references.mjs"
+    "lint": "eslint --fix"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",

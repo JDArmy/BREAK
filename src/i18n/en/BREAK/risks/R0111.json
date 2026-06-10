@@ -14,6 +14,23 @@
         "title": "Insider Threat - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Insider_threat"
       }
+    ],
+    "avoidances": [
+      "A0024",
+      "A0025-004",
+      "A0043",
+      "A0050",
+      "A0051",
+      "A0054",
+      "A0057",
+      "A0010",
+      "A0037",
+      "A0023",
+      "A0059",
+      "A0020-002",
+      "A0044",
+      "A0058",
+      "A0017-001"
     ]
   },
   "R0111-001": {
@@ -27,6 +44,21 @@
         "title": "Account Sharing - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Account_sharing"
       }
+    ],
+    "avoidances": [
+      "A0017",
+      "A0007",
+      "A0025-004",
+      "A0033",
+      "A0010",
+      "A0021",
+      "A0021-001",
+      "A0019",
+      "A0011",
+      "A0012",
+      "A0020-002",
+      "A0059",
+      "A0041"
     ]
   },
   "R0111-002": {
@@ -40,6 +72,14 @@
         "title": "Insider Threat - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Insider_threat"
       }
+    ],
+    "avoidances": [
+      "A0043",
+      "A0051",
+      "A0010",
+      "A0037",
+      "A0019",
+      "A0020-002"
     ]
   }
 }

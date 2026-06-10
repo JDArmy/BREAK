@@ -58,5 +58,29 @@
         "link": "https://www.pindrop.com/blog/customer-authentication-guide"
       }
     ]
+  },
+  "A0007-005": {
+    "title": "Passkeys / Phishing-Resistant Authentication",
+    "definition": "A phishing-resistant authentication method based on FIDO2, WebAuthn, and passkey standards that uses public-key cryptography and relying-party binding to reduce reusable credential theft.",
+    "description": "Passkeys replace reusable passwords or one-time codes with asymmetric keys. During registration, an authenticator creates a key pair, keeps the private key on a device, security key, or platform authenticator, and stores only the public key on the server. During sign-in, the authenticator verifies the legitimate domain and signs the challenge. This reduces phishing, credential stuffing, MFA fatigue, and adversary-in-the-middle code theft risks for account login, administrator access, and high-risk transaction confirmation.",
+    "limitation": "Passkeys do not prevent session hijacking after an active session cookie, device token, or endpoint is stolen by malware. Cross-device sync, account recovery, device loss, and compatibility require supporting processes. High-risk services should combine passkeys with device binding, session risk controls, anomaly detection, and step-up authorization.",
+    "references": [
+      {
+        "title": "More than a Password - CISA",
+        "link": "https://www.cisa.gov/MFA",
+        "type": "standard",
+        "source": "CISA",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "CISA Secure by Demand Guide: Phishing-Resistant Authentication",
+        "link": "https://fidoalliance.org/cisa-secure-by-demand-guide-phishing-resistant-authentication-passkeys-by-default/",
+        "type": "standard",
+        "source": "FIDO Alliance",
+        "language": "en",
+        "evidenceLevel": "high"
+      }
+    ]
   }
 }

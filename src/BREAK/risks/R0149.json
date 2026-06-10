@@ -1,0 +1,36 @@
+{
+  "R0149": {
+    "title": "非人类身份与API密钥滥用风险",
+    "definition": "服务账号、API密钥、OAuth应用、CI/CD令牌、机器人账号、AI智能体凭证等非人类身份因暴露、权限过大、缺乏归属和缺少轮换而被滥用的风险。",
+    "description": "企业自动化、云原生、SaaS集成和AI智能体应用会产生大量非人类身份。这些身份通常以长期API密钥、访问令牌、证书、服务账号或应用授权形式存在，可能分散在代码仓库、配置文件、CI/CD变量、日志、工单、终端环境和第三方平台中。攻击者一旦获取这些凭证，就可能绕过人工登录流程，直接调用业务API、访问数据、修改配置、横向移动或维持持久化访问。该风险常与供应链攻击、信息窃取器、内部威胁和云权限配置不当相互叠加。",
+    "complexity": "中级",
+    "influence": "可导致批量数据泄露、业务API被滥用、云资源被接管、供应链污染、审计归因困难和长期潜伏访问。",
+    "avoidances": [
+      "A0019",
+      "A0050",
+      "A0068",
+      "A0079",
+      "A0080",
+      "A0087"
+    ],
+    "references": [
+      {
+        "title": "Cybersecurity Forecast 2026 - Google Cloud",
+        "link": "https://cloud.google.com/security/resources/cybersecurity-forecast",
+        "type": "vendor",
+        "source": "Google Cloud",
+        "language": "en",
+        "evidenceLevel": "medium"
+      },
+      {
+        "title": "NIST SP 800-207: Zero Trust Architecture",
+        "link": "https://csrc.nist.gov/pubs/sp/800/207/final",
+        "type": "standard",
+        "source": "NIST",
+        "language": "en",
+        "evidenceLevel": "high"
+      }
+    ],
+    "updated": "2026-05-28"
+  }
+}

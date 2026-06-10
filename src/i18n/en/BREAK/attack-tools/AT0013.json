@@ -7,6 +7,20 @@
         "title": "Trojan Virus - Baidu Baike",
         "link": "https://baike.baidu.com/item/%E6%9C%A8%E9%A9%AC%E7%97%85%E6%AF%92?fromModule=lemma_search-box"
       }
+    ],
+    "avoidances": [
+      "A0010"
+    ],
+    "couseRisks": [
+      "R0005",
+      "R0008",
+      "R0008-001",
+      "R0013",
+      "R0032",
+      "R0067",
+      "R0083-001",
+      "R0112",
+      "R0112-001"
     ]
   }
 }

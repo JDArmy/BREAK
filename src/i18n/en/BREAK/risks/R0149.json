@@ -1,0 +1,36 @@
+{
+  "R0149": {
+    "title": "Non-Human Identity and API Key Abuse Risk",
+    "definition": "The risk that service accounts, API keys, OAuth applications, CI/CD tokens, bot accounts, AI agent credentials, and other non-human identities are abused because they are exposed, overprivileged, ownerless, or not rotated.",
+    "description": "Enterprise automation, cloud-native systems, SaaS integrations, and AI agent applications create large numbers of non-human identities. These identities often exist as long-lived API keys, access tokens, certificates, service accounts, or application grants scattered across code repositories, configuration files, CI/CD variables, logs, tickets, endpoint environments, and third-party platforms. Once attackers obtain these credentials, they can bypass human login flows and directly call business APIs, access data, modify configurations, move laterally, or maintain persistent access. This risk often compounds with supply chain attacks, infostealers, insider threats, and cloud permission misconfiguration.",
+    "complexity": "Intermediate",
+    "influence": "Can cause bulk data exposure, business API abuse, cloud resource takeover, supply chain poisoning, difficult attribution, and long-lived persistent access.",
+    "avoidances": [
+      "A0019",
+      "A0050",
+      "A0068",
+      "A0079",
+      "A0080",
+      "A0087"
+    ],
+    "references": [
+      {
+        "title": "Cybersecurity Forecast 2026 - Google Cloud",
+        "link": "https://cloud.google.com/security/resources/cybersecurity-forecast",
+        "type": "vendor",
+        "source": "Google Cloud",
+        "language": "en",
+        "evidenceLevel": "medium"
+      },
+      {
+        "title": "NIST SP 800-207: Zero Trust Architecture",
+        "link": "https://csrc.nist.gov/pubs/sp/800/207/final",
+        "type": "standard",
+        "source": "NIST",
+        "language": "en",
+        "evidenceLevel": "high"
+      }
+    ],
+    "updated": "2026-05-28"
+  }
+}

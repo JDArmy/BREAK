@@ -1,0 +1,34 @@
+{
+  "R0148": {
+    "title": "AI智能体工具滥用/过度自主风险",
+    "definition": "集成外部工具、插件、MCP服务器或业务API的AI智能体，在恶意指令、错误目标或权限过大的情况下执行非预期业务操作的风险。",
+    "description": "AI智能体不再只是生成文本，而是可以调用搜索、浏览器、代码执行、数据库、工单、支付、营销、客服、办公自动化等工具完成真实操作。攻击者可通过直接或间接提示注入、恶意网页/文档、伪造工具描述、污染MCP上下文、诱导越权调用等方式，操纵智能体删除或泄露数据、发起交易、修改配置、发送消息、下载恶意内容或编排攻击链。该风险的关键特征是工具权限、外部数据和模型推理共同决定执行结果，传统输入过滤难以单独覆盖。",
+    "complexity": "高级",
+    "influence": "可导致敏感数据泄露、业务操作越权、自动化攻击放大、内部系统被间接操纵、审计追溯困难以及合规风险。",
+    "avoidances": [
+      "A0065",
+      "A0068",
+      "A0079",
+      "A0087"
+    ],
+    "references": [
+      {
+        "title": "OWASP Top 10 for Agentic Applications",
+        "link": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/",
+        "type": "standard",
+        "source": "OWASP",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "Cybersecurity Forecast 2026 - Google Cloud",
+        "link": "https://cloud.google.com/security/resources/cybersecurity-forecast",
+        "type": "vendor",
+        "source": "Google Cloud",
+        "language": "en",
+        "evidenceLevel": "medium"
+      }
+    ],
+    "updated": "2026-05-28"
+  }
+}

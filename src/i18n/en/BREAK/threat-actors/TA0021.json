@@ -7,6 +7,27 @@
         "title": "Insider Threat - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Insider_threat"
       }
+    ],
+    "buildAttackTools": [],
+    "useAttackTools": [],
+    "couseRisks": [
+      "R0038",
+      "R0059",
+      "R0065",
+      "R0067",
+      "R0073",
+      "R0080",
+      "R0083",
+      "R0083-001",
+      "R0083-002",
+      "R0084",
+      "R0087",
+      "R0089",
+      "R0111-001",
+      "R0112",
+      "R0112-001",
+      "R0112-002",
+      "R0112-003"
     ]
   }
 }

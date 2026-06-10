@@ -7,6 +7,30 @@
         "title": "Packet Capture Tools - Baidu Baike",
         "link": "https://baike.baidu.com/item/%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7?fromModule=lemma_search-box"
       }
+    ],
+    "avoidances": [
+      "A0002",
+      "A0022",
+      "A0022-001",
+      "A0022-002",
+      "A0022-003",
+      "A0022-004",
+      "A0031",
+      "A0032",
+      "A0040"
+    ],
+    "couseRisks": [
+      "R0001",
+      "R0001-001",
+      "R0003",
+      "R0003-002",
+      "R0003-003",
+      "R0012",
+      "R0027",
+      "R0032-003",
+      "R0051-001",
+      "R0051-002",
+      "R0109"
     ]
   }
 }

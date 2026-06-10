@@ -68,5 +68,31 @@
       }
     ],
     "updated": "2024-01-16"
+  },
+  "A0007-005": {
+    "title": "通行密钥/防钓鱼认证",
+    "category": "AC01",
+    "definition": "基于 FIDO2、WebAuthn、Passkey 等标准的抗钓鱼身份认证方式，通过公私钥和域名绑定机制降低凭据被钓鱼复用的风险。",
+    "description": "通行密钥/防钓鱼认证使用非对称密钥替代可复用密码或一次性验证码。用户注册时由认证器生成密钥对，私钥保存在设备、安全密钥或平台认证器中，服务端仅保存公钥；登录时认证器会校验真实域名并完成签名验证。该机制可有效降低钓鱼站点、凭据填充、MFA疲劳攻击和中间人页面窃取验证码等风险，适用于账户登录、管理员访问、高风险交易确认等场景。",
+    "limitation": "通行密钥不能阻止已登录会话 Cookie、设备令牌或终端被恶意软件窃取后的会话劫持；跨设备同步、账号恢复、设备丢失和兼容性也需要配套流程。对于高风险业务仍需结合设备绑定、会话风控、异常行为检测和分级授权。",
+    "references": [
+      {
+        "title": "More than a Password - CISA",
+        "link": "https://www.cisa.gov/MFA",
+        "type": "standard",
+        "source": "CISA",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "CISA Secure by Demand Guide: Phishing-Resistant Authentication",
+        "link": "https://fidoalliance.org/cisa-secure-by-demand-guide-phishing-resistant-authentication-passkeys-by-default/",
+        "type": "standard",
+        "source": "FIDO Alliance",
+        "language": "en",
+        "evidenceLevel": "high"
+      }
+    ],
+    "updated": "2026-05-28"
   }
 }

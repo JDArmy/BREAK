@@ -10,6 +10,16 @@
         "title": "OWASP Automated Threat: OAT-015 Denial of Service",
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-015_Denial_of_Service.html"
       }
+    ],
+    "avoidances": [
+      "A0001",
+      "A0002",
+      "A0003",
+      "A0004",
+      "A0005",
+      "A0008",
+      "A0009",
+      "A0018"
     ]
   },
   "R0029-001": {
@@ -23,6 +33,17 @@
         "title": "What to Do When SMS Verification Code Interface Is Under Malicious Attack?",
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-015_Denial_of_Service.html"
       }
+    ],
+    "avoidances": [
+      "A0001",
+      "A0002",
+      "A0004",
+      "A0005",
+      "A0009",
+      "A0010",
+      "A0015",
+      "A0016",
+      "A0021"
     ]
   },
   "R0029-002": {
@@ -40,6 +61,24 @@
         "title": "OWASP: OAT-015 Denial of Service",
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-015_Denial_of_Service.html"
       }
+    ],
+    "avoidances": [
+      "A0001",
+      "A0002",
+      "A0004",
+      "A0005",
+      "A0007-001",
+      "A0008",
+      "A0008-005",
+      "A0010",
+      "A0016-001",
+      "A0017",
+      "A0018",
+      "A0020",
+      "A0024",
+      "A0028",
+      "A0038",
+      "A0044"
     ]
   },
   "R0029-003": {
@@ -53,6 +92,16 @@
         "title": "OWASP Automated Threat: OAT-015 Denial of Service",
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-015_Denial_of_Service.html"
       }
+    ],
+    "avoidances": [
+      "A0001",
+      "A0002",
+      "A0003",
+      "A0004",
+      "A0005",
+      "A0008",
+      "A0009",
+      "A0018"
     ]
   },
   "R0029-004": {
@@ -66,6 +115,18 @@
         "title": "Distributed Denial of Service",
         "link": "https://baike.baidu.com/item/%E5%88%86%E5%B8%83%E5%BC%8F%E6%8B%92%E7%BB%9D%E6%9C%8D%E5%8A%A1%E6%94%BB%E5%87%BB/3802159?fr=ge_ala"
       }
+    ],
+    "avoidances": [
+      "A0001",
+      "A0002",
+      "A0004",
+      "A0005",
+      "A0008",
+      "A0010",
+      "A0016-001",
+      "A0028",
+      "A0038",
+      "A0044"
     ]
   }
 }

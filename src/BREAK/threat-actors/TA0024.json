@@ -8,9 +8,7 @@
         "link": "https://en.wikipedia.org/wiki/Insider_threat"
       }
     ],
-    "buildAttackTools": [
-      "AT0051"
-    ],
+    "buildAttackTools": [],
     "useAttackTools": [
       "AT0005",
       "AT0013",
@@ -29,7 +27,6 @@
     ],
     "couseRisks": [
       "R0059",
-      "R0065",
       "R0067",
       "R0072",
       "R0072-001",
@@ -49,8 +46,9 @@
       "R0112-003",
       "R0112-004",
       "R0112-005",
-      "R0112-006"
+      "R0112-006",
+      "R0149"
     ],
-    "updated": "2024/02/05 14:28:03"
+    "updated": "2026-05-28"
   }
 }
