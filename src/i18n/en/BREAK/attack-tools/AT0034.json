@@ -7,6 +7,32 @@
         "title": "Introduction to IP Risk Profiling Technology",
         "link": "https://www.163.com/dy/article/HT4OLRVB0553MFFW.html"
       }
+    ],
+    "avoidances": [
+      "A0018",
+      "A0016-001",
+      "A0029-002"
+    ],
+    "couseRisks": [
+      "R0001-002",
+      "R0003",
+      "R0003-001",
+      "R0003-002",
+      "R0003-003",
+      "R0003-004",
+      "R0005",
+      "R0005-001",
+      "R0009",
+      "R0016",
+      "R0017-001",
+      "R0027",
+      "R0030-001",
+      "R0032-001",
+      "R0032-002",
+      "R0032-003",
+      "R0037",
+      "R0040",
+      "R0049"
     ]
   },
   "AT0034-001": {
@@ -17,6 +43,33 @@
         "title": "What Is a Proxy IP?",
         "link": "http://web-auto.91ajs.com/information/type-of-proxy-ip.html"
       }
+    ],
+    "avoidances": [
+      "A0016-001",
+      "A0029-002",
+      "A0038",
+      "A0038-002"
+    ],
+    "couseRisks": [
+      "R0001-002",
+      "R0003",
+      "R0003-001",
+      "R0003-002",
+      "R0003-003",
+      "R0003-004",
+      "R0005",
+      "R0005-001",
+      "R0009",
+      "R0016",
+      "R0017-001",
+      "R0027",
+      "R0030-001",
+      "R0032-001",
+      "R0032-002",
+      "R0032-003",
+      "R0037",
+      "R0040",
+      "R0049"
     ]
   },
   "AT0034-002": {
@@ -27,6 +80,32 @@
         "title": "People's Daily Commentary: The 'Second-Dial IP' Black Market Must Be Struck Down Immediately",
         "link": "https://baijiahao.baidu.com/s?id=1722257035210193072&wfr=spider&for=pc"
       }
+    ],
+    "avoidances": [
+      "A0016-001",
+      "A0029-002",
+      "A0038",
+      "A0038-002"
+    ],
+    "couseRisks": [
+      "R0001-002",
+      "R0003",
+      "R0003-001",
+      "R0003-002",
+      "R0003-003",
+      "R0005",
+      "R0005-001",
+      "R0009",
+      "R0016",
+      "R0017-001",
+      "R0027",
+      "R0030-001",
+      "R0032-001",
+      "R0032-002",
+      "R0032-003",
+      "R0037",
+      "R0040",
+      "R0049"
     ]
   }
 }

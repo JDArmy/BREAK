@@ -11,6 +11,24 @@
         "title": "AI-Driven Cyberattack Trend Analysis",
         "link": "https://www.weforum.org/publications/global-cybersecurity-outlook-2025/"
       }
+    ],
+    "avoidances": [
+      "A0065",
+      "A0087",
+      "A0079",
+      "A0067",
+      "A0001",
+      "A0004",
+      "A0015",
+      "A0064"
+    ],
+    "couseRisks": [
+      "R0117",
+      "R0117-001",
+      "R0117-002",
+      "R0118",
+      "R0148",
+      "R0084"
     ]
   }
 }

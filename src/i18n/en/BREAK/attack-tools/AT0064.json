@@ -11,6 +11,8 @@
         "title": "RedLine Stealer Technical Analysis Report",
         "link": "https://www.cert.org.cn/"
       }
-    ]
+    ],
+    "avoidances": ["A0078", "A0010", "A0026", "A0023", "A0079"],
+    "couseRisks": ["R0032", "R0036", "R0143", "R0149"]
   }
 }

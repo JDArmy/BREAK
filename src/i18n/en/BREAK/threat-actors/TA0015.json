@@ -7,6 +7,32 @@
         "title": "Telecom Fraud - Baidu Baike",
         "link": "https://baike.baidu.com/item/%E7%94%B5%E4%BF%A1%E8%AF%88%E9%AA%97?fromModule=lemma_search-box"
       }
+    ],
+    "buildAttackTools": [],
+    "useAttackTools": [
+      "AT0001",
+      "AT0001-002",
+      "AT0012",
+      "AT0013",
+      "AT0039",
+      "AT0039-001",
+      "AT0039-002",
+      "AT0040",
+      "AT0040-001",
+      "AT0053-001",
+      "AT0053-002",
+      "AT0051"
+    ],
+    "couseRisks": [
+      "R0038",
+      "R0044",
+      "R0060",
+      "R0083-002",
+      "R0093",
+      "R0094",
+      "R0095",
+      "R0115",
+      "R0146"
     ]
   },
   "TA0015-001": {
@@ -17,6 +43,18 @@
         "title": "How Do the Fraud Gangs Hiding in Southeast Asia Bankrupt Their Victims?",
         "link": "https://baijiahao.baidu.com/s?id=1690849537211278629&wfr=spider&for=pc"
       }
+    ],
+    "buildAttackTools": [
+      "AT0039-001",
+      "AT0040-001"
+    ],
+    "useAttackTools": [
+      "AT0043",
+      "AT0039",
+      "AT0039-001"
+    ],
+    "couseRisks": [
+      "R0095"
     ]
   }
 }

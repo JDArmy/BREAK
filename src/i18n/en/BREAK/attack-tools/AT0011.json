@@ -7,6 +7,25 @@
         "title": "360 Fully Exposes Mobile Phone Black Market: Wild Growth at Massive Scale",
         "link": "https://attack.mitre.org/techniques/T1195/"
       }
+    ],
+    "avoidances": [
+      "A0010"
+    ],
+    "couseRisks": [
+      "R0003",
+      "R0005",
+      "R0005-001",
+      "R0005-002",
+      "R0008",
+      "R0008-001",
+      "R0030-001",
+      "R0035",
+      "R0036",
+      "R0043-001",
+      "R0045",
+      "R0067",
+      "R0083-001",
+      "R0112-001"
     ]
   }
 }

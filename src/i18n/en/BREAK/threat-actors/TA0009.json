@@ -7,6 +7,49 @@
         "title": "OWASP Automated Threats to Web Applications",
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/"
       }
+    ],
+    "buildAttackTools": [],
+    "useAttackTools": [
+      "AT0046",
+      "AT0050",
+      "AT0040-001",
+      "AT0051"
+    ],
+    "couseRisks": [
+      "R0004",
+      "R0005",
+      "R0006",
+      "R0007",
+      "R0007-004",
+      "R0016",
+      "R0016-001",
+      "R0016-002",
+      "R0017",
+      "R0017-001",
+      "R0017-002",
+      "R0018",
+      "R0020",
+      "R0021",
+      "R0022",
+      "R0023",
+      "R0024",
+      "R0026",
+      "R0031",
+      "R0033",
+      "R0033-001",
+      "R0042",
+      "R0052",
+      "R0053",
+      "R0056",
+      "R0057",
+      "R0058",
+      "R0060",
+      "R0063",
+      "R0070",
+      "R0070-001",
+      "R0070-002",
+      "R0070-003",
+      "R0115"
     ]
   }
 }
