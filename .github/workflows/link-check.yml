@@ -1,0 +1,34 @@
+name: Link Health Check
+
+on:
+  schedule:
+    - cron: "0 1 * * 1" # 每周一 UTC 01:00（北京时间 09:00）
+  workflow_dispatch:
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Check reference links
+        run: node scripts/validate/references.mjs
+        continue-on-error: true
+        id: link-check
+      - name: Create Issue on Failure
+        if: steps.link-check.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const date = new Date().toISOString().split('T')[0];
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `链接健康检查失败 - ${date}`,
+              body: '本周自动链接健康检查发现问题，请查看 CI 日志获取详情。',
+              labels: ['automated', 'data-quality']
+            });
