@@ -7,8 +7,8 @@
     "limitation": "与爬虫识别（A003）不同，频率限制并不会严格区分人类流量和自动化流量，这导致过低的阈值通常会将部分人类访问请求误拦截，而过高的阈值又会将低频请求爬虫放行，也因此并不能算成一种有效的爬虫识别与拦截手段。",
     "references": [
       {
-        "title": "Kong实现API网关鉴权与调用频率限制",
-        "link": "https://zhuanlan.zhihu.com/p/92172480?ivk_sa=1024320u&utm_id=0"
+        "title": "API4:2019 Lack of Resources & Rate Limiting - OWASP API Security ...",
+        "link": "https://owasp.org/API-Security/editions/2019/en/0xa4-lack-of-resources-and-rate-limiting/"
       }
     ],
     "updated": "2024-01-11"

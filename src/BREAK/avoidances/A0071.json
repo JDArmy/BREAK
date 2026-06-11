@@ -7,8 +7,8 @@
     "limitation": "云安全态势管理的局限性包括：①主要关注配置层面的安全问题，对应用层和业务逻辑层的安全风险覆盖有限。②多云环境下不同云平台的API和配置模型差异增加了统一管理的复杂度。③自动修复功能可能在某些场景下影响业务正常运行，需要谨慎使用。④对于动态和短暂的云资源（如Serverless函数），实时监控存在挑战。⑤告警疲劳：大量的安全告警可能导致安全团队忽视真正重要的风险。",
     "references": [
       {
-        "title": "What is CSPM - Gartner",
-        "link": "https://www.gartner.com/en/information-technology/glossary/cloud-security-posture-management-cspm"
+        "title": "拾象云安全投资图谱:Wiz最快达到1亿美元ARR的来龙去脉_腾讯新闻",
+        "link": "https://new.qq.com/rain/a/20230223A08UA700"
       },
       {
         "title": "云安全态势管理 - Google Security Command Center",

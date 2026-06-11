@@ -53,8 +53,8 @@
     "limitation": "因TOTP是通过TOTP算法生成一次性密码，而TOTP算法是基于时间的，这使得TOTP算法的安全性依赖于时间同步，如果服务器时间与用户终端时间不同步，就会导致TOTP算法生成的密码不正确。",
     "references": [
       {
-        "title": "OTP & TOTP 简单介绍",
-        "link": "https://zhuanlan.zhihu.com/p/484991482"
+        "title": "2023年Q1数据泄露事件近1000起,涉及1204家企业、38个行业!|信息...",
+        "link": "https://m.163.com/dy/article/I2H92SPP0518STKV.html"
       }
     ],
     "updated": "2024-01-11"
@@ -67,8 +67,8 @@
     "limitation": "电话语音验证码的局限性包括对语音质量、用户理解差异、保密性、残障用户友好性以及滥用的潜在风险。",
     "references": [
       {
-        "title": "IVR vs. Agents: Your Guide to Customer Authentication",
-        "link": "https://www.pindrop.com/blog/customer-authentication-guide"
+        "title": "构建安全的语音验证码API接口-CSDN博客",
+        "link": "https://blog.csdn.net/weixin_31597759/article/details/147599268"
       }
     ],
     "updated": "2024-01-16"

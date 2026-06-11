@@ -63,8 +63,8 @@
     "limitation": "与手机ROOT/越狱检测（A010-003）的局限性一样，通过分析并还原检测过程，阻断或提供Hook后的虚假值即可绕过外挂检测策略。不过因外挂通常用在游戏中，而游戏的数据包可读性比基于HTTP协议的APP应用差许多，如果将外挂检测逻辑和数据回传隐藏在正常的游戏运行和通信中，将加大外挂反检测的难度。",
     "references": [
       {
-        "title": "浅谈外挂常识和如何防御",
-        "link": "https://zhuanlan.zhihu.com/p/490189706"
+        "title": "DMA硬件外挂原理与检测技术深度分析|内存|电脑|游戏|dma_网易订阅",
+        "link": "https://www.163.com/dy/article/KOVL1LB80556IVC7.html"
       }
     ],
     "updated": "2024-01-11"
@@ -119,8 +119,8 @@
     "limitation": "无头浏览器检测方法主要是通过检测一些环境属性和文件，但是这些方法并不是绝对可靠的，因为黑灰产业者可以通过修改无头浏览器的环境属性和文件来规避检测",
     "references": [
       {
-        "title": "用JavaScript检测当前浏览器是无头浏览器",
-        "link": "https://zhuanlan.zhihu.com/p/149491639"
+        "title": "国家网络安全宣传周|域名被盗用,不可小觑",
+        "link": "https://mp.weixin.qq.com/s?__biz=MzIwOTIxNTY0MQ==&mid=2650363457&idx=1&sn=5da31d6062602002a9efe40b898df485&chksm=8f7abfb7b80d36a12c2a7de21d4b404bf60087dcff9b5641499a19ae74acc33ec769952b1443&scene=27"
       }
     ],
     "updated": "2024-01-11"

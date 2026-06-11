@@ -6,8 +6,8 @@
     "limitation": "The limitations of cloud security posture management include: (1) it primarily focuses on configuration-level security issues with limited coverage of application-layer and business-logic-layer security risks; (2) differences in APIs and configuration models across cloud platforms in multi-cloud environments increase the complexity of unified management; (3) automated remediation may affect normal business operations in certain scenarios and should be used with caution; (4) real-time monitoring of dynamic and ephemeral cloud resources such as serverless functions presents challenges; (5) alert fatigue — large volumes of security alerts may cause security teams to overlook truly important risks.",
     "references": [
       {
-        "title": "What is CSPM - Gartner",
-        "link": "https://www.gartner.com/en/information-technology/glossary/cloud-security-posture-management-cspm"
+        "title": "拾象云安全投资图谱:Wiz最快达到1亿美元ARR的来龙去脉_腾讯新闻",
+        "link": "https://new.qq.com/rain/a/20230223A08UA700"
       },
       {
         "title": "Cloud Security Posture Management - Google Security Command Center",

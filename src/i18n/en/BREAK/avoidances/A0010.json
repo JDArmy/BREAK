@@ -54,8 +54,8 @@
     "limitation": "Similar to the limitations of mobile ROOT/jailbreak detection (A010-003), by analyzing and reversing the detection process, blocking or providing hooked false values can bypass cheat detection. However, since cheats are typically used in games, and game data packets are much less readable than HTTP-based APP traffic, hiding cheat detection logic and data reporting within normal game operation and communication will increase the difficulty of anti-cheat countermeasures.",
     "references": [
       {
-        "title": "A Brief Discussion on Cheat Basics and How to Defend Against Them",
-        "link": "https://zhuanlan.zhihu.com/p/490189706"
+        "title": "DMA硬件外挂原理与检测技术深度分析|内存|电脑|游戏|dma_网易订阅",
+        "link": "https://www.163.com/dy/article/KOVL1LB80556IVC7.html"
       }
     ]
   },
@@ -102,8 +102,8 @@
     "limitation": "Headless browser detection methods mainly work by checking certain environment properties and files, but these methods are not absolutely reliable because black-gray industry actors can modify the headless browser's environment properties and files to evade detection.",
     "references": [
       {
-        "title": "Detecting Headless Browsers with JavaScript",
-        "link": "https://zhuanlan.zhihu.com/p/149491639"
+        "title": "国家网络安全宣传周|域名被盗用,不可小觑",
+        "link": "https://mp.weixin.qq.com/s?__biz=MzIwOTIxNTY0MQ==&mid=2650363457&idx=1&sn=5da31d6062602002a9efe40b898df485&chksm=8f7abfb7b80d36a12c2a7de21d4b404bf60087dcff9b5641499a19ae74acc33ec769952b1443&scene=27"
       }
     ]
   },

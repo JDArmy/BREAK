@@ -7,8 +7,8 @@
     "limitation": "EDR的局限性包括：①对终端性能有一定影响，可能导致设备运行变慢。②高级攻击者可能通过内核级rootkit或固件攻击绕过EDR检测。③在BYOD（自带设备）场景下部署和管理困难。④大量终端产生的告警需要专业安全团队进行分析和处理。⑤对于加密通信和零日攻击的检测能力有限。",
     "references": [
       {
-        "title": "Endpoint Detection and Response - Gartner",
-        "link": "https://www.gartner.com/en/information-technology/glossary/endpoint-detection-and-response"
+        "title": "Endpoint Detection and Response - Glossary | CSRC",
+        "link": "https://csrc.nist.gov/glossary/term/endpoint_detection_and_response"
       },
       {
         "title": "EDR技术发展与实践 - CNCERT",

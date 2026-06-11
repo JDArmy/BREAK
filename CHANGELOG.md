@@ -1,5 +1,16 @@
 # Change log
 
+## 2.3.0
+
+- 修复：批量替换111个不可达引用链接为有效替代来源
+  - 替换百家号(baijiahao)23个、知乎专栏(zhuanlan)18个、搜狐(sohu)8个、Gartner 7个等反爬/超时/403链接
+  - 使用 Scrapingdog 百度搜索 + Google 搜索 API 查找替代来源
+  - 替换来源包括：网易163、腾讯新闻、简书、CSDN、OWASP、NIST、IBM、Wikipedia等权威或可访问站点
+  - 同步更新所有英文 i18n 翻译文件
+- 补全：实体关联关系推断与应用（26条高置信度推断）
+  - 20个攻击工具补充 directCauseRisks（基于共享规避手段推导）
+  - 5个威胁行为者补充 directCauseRisks 和 indirectSupportRisks（基于使用的AT关联的Risk推导）
+
 ## 2.2.1
 
 - 补全：实体关联关系推断与应用（26条高置信度推断）

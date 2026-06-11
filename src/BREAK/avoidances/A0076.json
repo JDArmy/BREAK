@@ -7,8 +7,8 @@
     "limitation": "地理围栏的局限性包括：①VPN、代理服务器、GPS欺骗工具等可以伪造地理位置信息。②室内定位精度有限，在大型建筑物内可能出现定位偏差。③用户正常出行、出差等场景可能触发误报。④不同定位技术的精度和可靠性差异较大。⑤部分用户可能出于隐私考虑拒绝授权位置信息。",
     "references": [
       {
-        "title": "Geofencing Technology in Fraud Prevention",
-        "link": "https://www.gartner.com/en/information-technology/glossary/geofencing"
+        "title": "创建和监控地理围栏| Sensors and location - Android Developers",
+        "link": "https://developer.android.com/develop/sensors-and-location/location/geofencing?hl=zh-cn"
       }
     ],
     "updated": "2026-02-27"
