@@ -11,17 +11,19 @@
     "avoidances": [
       "A0006-008"
     ],
-    "couseRisks": [
-      "R0116",
-      "R0015",
+    "directCauseRisks": [
       "R0006",
-      "R0056",
+      "R0012-002",
+      "R0015",
       "R0021",
       "R0023",
+      "R0056",
       "R0071",
-      "R0110",
-      "R0012-002",
       "R0084",
+      "R0110",
+      "R0116"
+    ],
+    "indirectSupportRisks": [
       "R0047",
       "R0048"
     ],
@@ -44,12 +46,13 @@
       "A0006",
       "A0006-008"
     ],
-    "couseRisks": [
-      "R0053",
-      "R0095",
+    "directCauseRisks": [
       "R0024",
-      "R0066"
+      "R0053",
+      "R0066",
+      "R0095"
     ],
+    "indirectSupportRisks": [],
     "updated": "2024-01-30"
   },
   "AT0053-002": {
@@ -69,11 +72,12 @@
       "A0010",
       "A0006-008"
     ],
-    "couseRisks": [
-      "R0116",
+    "directCauseRisks": [
       "R0048",
-      "R0095"
+      "R0095",
+      "R0116"
     ],
+    "indirectSupportRisks": [],
     "updated": "2024-01-30"
   }
 }

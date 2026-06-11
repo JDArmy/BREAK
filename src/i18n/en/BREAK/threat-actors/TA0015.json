@@ -31,7 +31,7 @@
       "AT0053-002",
       "AT0051"
     ],
-    "couseRisks": [
+    "directCauseRisks": [
       "R0038",
       "R0044",
       "R0060",
@@ -41,7 +41,8 @@
       "R0095",
       "R0115",
       "R0146"
-    ]
+    ],
+    "indirectSupportRisks": []
   },
   "TA0015-001": {
     "title": "Fraud Kingpin",
@@ -61,8 +62,9 @@
       "AT0039",
       "AT0039-001"
     ],
-    "couseRisks": [
+    "directCauseRisks": [
       "R0095"
-    ]
+    ],
+    "indirectSupportRisks": []
   }
 }

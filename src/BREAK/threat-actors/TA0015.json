@@ -32,7 +32,7 @@
       "AT0051",
       "AT0070"
     ],
-    "couseRisks": [
+    "directCauseRisks": [
       "R0038",
       "R0044",
       "R0060",
@@ -44,6 +44,7 @@
       "R0146",
       "R0150"
     ],
+    "indirectSupportRisks": [],
     "updated": "2026/05/28 00:35:08"
   },
   "TA0015-001": {
@@ -64,9 +65,10 @@
       "AT0039",
       "AT0039-001"
     ],
-    "couseRisks": [
+    "directCauseRisks": [
       "R0095"
     ],
+    "indirectSupportRisks": [],
     "updated": "2024-01-17"
   }
 }

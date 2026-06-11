@@ -11,11 +11,12 @@
       "AT0059",
       "AT0001"
     ],
-    "couseRisks": [
-      "R0150",
+    "directCauseRisks": [
       "R0084",
-      "R0084-001"
+      "R0084-001",
+      "R0150"
     ],
+    "indirectSupportRisks": [],
     "references": [
       {
         "title": "INTERPOL: Operation First Light Targets Social Engineering Fraud",

@@ -64,10 +64,9 @@ const setJsonData = () => {
 
   // 枚举所有有关的attackTools
   Object.keys(BREAK.attackTools).forEach((atKey) => {
+    const at = BREAK.attackTools[atKey as keyof typeof BREAK.attackTools];
     if (
-      BREAK.attackTools[
-        atKey as keyof typeof BREAK.attackTools
-      ].couseRisks.includes(props.rKey as never)
+      at.directCauseRisks.includes(props.rKey) || at.indirectSupportRisks.includes(props.rKey)
     ) {
       nodes.push({
         id: atKey,
@@ -79,10 +78,9 @@ const setJsonData = () => {
 
   // 枚举所有有关的threatActors
   Object.keys(BREAK.threatActors).forEach((taKey) => {
+    const ta = BREAK.threatActors[taKey as keyof typeof BREAK.threatActors];
     if (
-      BREAK.threatActors[
-        taKey as keyof typeof BREAK.threatActors
-      ].couseRisks.includes(props.rKey as never)
+      ta.directCauseRisks.includes(props.rKey) || ta.indirectSupportRisks.includes(props.rKey)
     ) {
       nodes.push({
         id: taKey,

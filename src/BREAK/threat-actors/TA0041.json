@@ -8,11 +8,12 @@
       "AT0056",
       "AT0059"
     ],
-    "couseRisks": [
-      "R0118",
+    "directCauseRisks": [
+      "R0084-001",
       "R0116",
-      "R0084-001"
+      "R0118"
     ],
+    "indirectSupportRisks": [],
     "references": [
       {
         "title": "AI Goes on Offense: How LLMs Are Redefining the Cybercrime Landscape",

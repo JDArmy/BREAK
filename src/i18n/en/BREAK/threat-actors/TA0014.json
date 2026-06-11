@@ -19,10 +19,11 @@
       "AT0026",
       "AT0040-001"
     ],
-    "couseRisks": [
+    "directCauseRisks": [
       "R0060",
       "R0093"
-    ]
+    ],
+    "indirectSupportRisks": []
   },
   "TA0014-001": {
     "title": "ATM Runner",
@@ -37,9 +38,10 @@
     "useAttackTools": [
       "AT0039-001"
     ],
-    "couseRisks": [
-      "R0060",
-      "R0044"
-    ]
+    "directCauseRisks": [
+      "R0044",
+      "R0060"
+    ],
+    "indirectSupportRisks": []
   }
 }

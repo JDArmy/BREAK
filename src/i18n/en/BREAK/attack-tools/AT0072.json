@@ -2,8 +2,17 @@
   "AT0072": {
     "title": "AiTM Adversary-in-the-Middle Attack Tool",
     "description": "Adversary-in-the-Middle (AiTM) attack tools are specifically designed to bypass multi-factor authentication (MFA) based on traditional man-in-the-middle attacks. Unlike AT0069 Fake WiFi which focuses on network-layer traffic interception, AiTM tools target application-layer authentication session interception and theft. Key features and attack methods include: ① Reverse proxy architecture: establishing a reverse proxy between the attacker-controlled server and the target website, forwarding requests and responses in real-time; ② Session token theft: when victims log in through the AiTM proxy, the tool steals post-authentication session cookies and tokens, enabling attackers to access victim accounts without passwords or MFA; ③ MFA bypass: since MFA verification completes normally during the proxy process, attackers obtain sessions that have already passed MFA verification, completely bypassing MFA protection; ④ Phishing page disguise: hosting AiTM proxy entry points on legitimate or similar domains to lure victims; ⑤ Session persistence: stolen session tokens can be used for extended periods, with some tools supporting automatic session refresh. Representative tools include Evilginx2 and Modlishka open-source frameworks. AiTM attacks have become one of the primary methods for stealing enterprise account credentials, and even MFA cannot effectively defend against them.",
-    "avoidances": ["A0007-005", "A0078", "A0026"],
-    "couseRisks": ["R0151", "R0142", "R0032"],
+    "avoidances": [
+      "A0007-005",
+      "A0078",
+      "A0026"
+    ],
+    "directCauseRisks": [
+      "R0032",
+      "R0142",
+      "R0151"
+    ],
+    "indirectSupportRisks": [],
     "references": [
       {
         "title": "Microsoft Digital Defense Report 2025 - AiTM Phishing",

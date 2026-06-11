@@ -13,7 +13,8 @@
       "A0016-001",
       "A0029-002"
     ],
-    "couseRisks": [
+    "directCauseRisks": [],
+    "indirectSupportRisks": [
       "R0001-002",
       "R0003",
       "R0003-001",
@@ -50,7 +51,7 @@
       "A0038",
       "A0038-002"
     ],
-    "couseRisks": [
+    "directCauseRisks": [
       "R0001-002",
       "R0003",
       "R0003-001",
@@ -70,7 +71,8 @@
       "R0037",
       "R0040",
       "R0049"
-    ]
+    ],
+    "indirectSupportRisks": []
   },
   "AT0034-002": {
     "title": "Second-Dial IP",
@@ -87,7 +89,7 @@
       "A0038",
       "A0038-002"
     ],
-    "couseRisks": [
+    "directCauseRisks": [
       "R0001-002",
       "R0003",
       "R0003-001",
@@ -106,6 +108,7 @@
       "R0037",
       "R0040",
       "R0049"
-    ]
+    ],
+    "indirectSupportRisks": []
   }
 }

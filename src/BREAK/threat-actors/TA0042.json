@@ -11,11 +11,12 @@
       "AT0059",
       "AT0073"
     ],
-    "couseRisks": [
-      "R0150",
+    "directCauseRisks": [
       "R0044",
-      "R0084"
+      "R0084",
+      "R0150"
     ],
+    "indirectSupportRisks": [],
     "references": [
       {
         "title": "UNODC: Transnational Organized Crime in Southeast Asia",

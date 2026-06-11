@@ -67,6 +67,8 @@
   "relationLine": {
     "avoidanceMeans": "规避手段",
     "causeRisk": "造成风险",
+    "directCauseRisk": "直接造成",
+    "indirectSupportRisk": "间接关联",
     "buildAttackTool": "制作攻击工具",
     "useAttackTool": "使用攻击工具",
     "subRisk": "子风险",

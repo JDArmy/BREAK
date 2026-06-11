@@ -7,11 +7,12 @@
       "A0078",
       "A0016"
     ],
-    "couseRisks": [
-      "R0154",
+    "directCauseRisks": [
+      "R0028",
       "R0084",
-      "R0028"
+      "R0154"
     ],
+    "indirectSupportRisks": [],
     "references": [
       {
         "title": "Security Brief: ClickFix Social Engineering Technique Floods Threat Landscape",

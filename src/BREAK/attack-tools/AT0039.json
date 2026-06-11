@@ -14,7 +14,8 @@
       "A0023-001",
       "A0044"
     ],
-    "couseRisks": [
+    "directCauseRisks": [],
+    "indirectSupportRisks": [
       "R0010",
       "R0043",
       "R0044",
@@ -41,11 +42,12 @@
       "A0023-001",
       "A0044"
     ],
-    "couseRisks": [
+    "directCauseRisks": [
       "R0060",
       "R0094",
       "R0096"
     ],
+    "indirectSupportRisks": [],
     "updated": "2024-01-30"
   },
   "AT0039-002": {
@@ -63,10 +65,11 @@
       "A0023-001",
       "A0044"
     ],
-    "couseRisks": [
+    "directCauseRisks": [
       "R0060",
       "R0121"
     ],
+    "indirectSupportRisks": [],
     "updated": "2024-01-30"
   }
 }

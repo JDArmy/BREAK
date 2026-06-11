@@ -1,5 +1,16 @@
 # Change log
 
+## 2.1.0
+
+- 架构改进：couseRisks 关系分类拆分，将单一 `couseRisks` 字段拆分为 `directCauseRisks`（直接造成）和 `indirectSupportRisks`（间接关联）两个字段
+  - 类型定义更新：AttackTool 和 ThreatActor 接口中的 `couseRisks: string[]` 替换为 `directCauseRisks: string[]` + `indirectSupportRisks: string[]`
+  - 数据迁移：75 个攻击工具文件 + 44 个威胁行为者文件 = 119 个中文数据文件完成迁移
+  - 英文翻译同步：76 个英文翻译文件同步更新
+  - 关系图谱：连线标签区分"直接造成"和"间接关联"
+  - 列表视图：攻击工具和威胁行为者的风险列拆分为"直接造成"和"间接关联"两列
+  - 编辑器：穿梭框从 1 个拆分为 2 个（直接/间接）
+  - 国际化：新增 `directCauseRisk` 和 `indirectSupportRisk` 标签
+
 ## 2.0.8
 
 - 修复：验证并替换references中14个确认404/4xx/5xx错误的损坏链接

@@ -18,12 +18,13 @@
       "AT0003",
       "AT0051"
     ],
-    "couseRisks": [
-      "R0139",
+    "directCauseRisks": [
       "R0054",
       "R0056",
-      "R0136"
+      "R0136",
+      "R0139"
     ],
+    "indirectSupportRisks": [],
     "updated": "2026-02-27"
   }
 }

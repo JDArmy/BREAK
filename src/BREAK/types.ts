@@ -62,7 +62,8 @@ export interface AttackTool {
   title: string;
   description: string;
   avoidances: string[];
-  couseRisks: string[];
+  directCauseRisks: string[];
+  indirectSupportRisks: string[];
   references: Reference[];
   updated?: string;
 }
@@ -70,7 +71,8 @@ export interface AttackTool {
 export interface ThreatActor {
   title: string;
   description: string;
-  couseRisks: string[];
+  directCauseRisks: string[];
+  indirectSupportRisks: string[];
   buildAttackTools: string[];
   useAttackTools: string[];
   references: Reference[];

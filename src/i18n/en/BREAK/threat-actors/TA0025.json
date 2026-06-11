@@ -34,13 +34,14 @@
       "AT0048",
       "AT0049"
     ],
-    "couseRisks": [
+    "directCauseRisks": [
       "R0001",
       "R0010",
+      "R0011-001",
       "R0108",
-      "R0114",
-      "R0011-001"
-    ]
+      "R0114"
+    ],
+    "indirectSupportRisks": []
   },
   "TA0025-001": {
     "title": "In-Game Currency Dealer",
@@ -60,11 +61,12 @@
       "AT0047",
       "AT0049"
     ],
-    "couseRisks": [
+    "directCauseRisks": [
       "R0001",
       "R0010",
       "R0108",
       "R0114"
-    ]
+    ],
+    "indirectSupportRisks": []
   }
 }

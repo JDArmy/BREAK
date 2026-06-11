@@ -16,14 +16,16 @@
       "AT0010",
       "AT0042"
     ],
-    "couseRisks": [
-      "R0040",
-      "R0032-003",
+    "directCauseRisks": [
+      "R0032",
       "R0032-001",
       "R0032-002",
-      "R0032",
+      "R0032-003",
       "R0032-004",
-      "R0089",
+      "R0040",
+      "R0089"
+    ],
+    "indirectSupportRisks": [
       "R0092",
       "R0098"
     ]
@@ -46,10 +48,11 @@
     "useAttackTools": [
       "AT0027"
     ],
-    "couseRisks": [
-      "R0098",
-      "R0060"
-    ]
+    "directCauseRisks": [
+      "R0060",
+      "R0098"
+    ],
+    "indirectSupportRisks": []
   },
   "TA0005-002": {
     "title": "Data Harvester",
@@ -68,10 +71,11 @@
       "AT0010",
       "AT0043"
     ],
-    "couseRisks": [
-      "R0089",
+    "directCauseRisks": [
       "R0027",
+      "R0089",
       "R0098"
-    ]
+    ],
+    "indirectSupportRisks": []
   }
 }

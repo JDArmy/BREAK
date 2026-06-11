@@ -7,11 +7,12 @@
       "A0089",
       "A0079"
     ],
-    "couseRisks": [
-      "R0148",
+    "directCauseRisks": [
       "R0032",
+      "R0148",
       "R0149"
     ],
+    "indirectSupportRisks": [],
     "references": [
       {
         "title": "Strengthening AI Agent Hijacking Evaluations",

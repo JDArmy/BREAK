@@ -2,8 +2,17 @@
   "AT0072": {
     "title": "AiTM中间人攻击工具",
     "description": "对抗性中间人攻击（Adversary-in-the-Middle, AiTM）工具是在传统中间人攻击基础上，专门设计用于绕过多因素认证（MFA）的攻击工具。区别于AT0069虚假WiFi侧重网络层流量劫持，AiTM工具聚焦于应用层认证会话的拦截和窃取。主要功能和攻击方式包括：①反向代理架构：在攻击者控制的服务器和目标网站之间建立反向代理，实时转发请求和响应；②会话令牌窃取：当受害者通过AiTM代理登录时，工具窃取认证后的会话Cookie和令牌，使攻击者无需密码和MFA即可访问受害者账户；③MFA绕过：由于MFA验证在代理过程中正常完成，攻击者获得的是已通过MFA验证的会话，完全绕过了MFA的保护；④钓鱼页面伪装：通过合法域名或近似域名托管AiTM代理入口，诱导受害者访问；⑤会话持久化：窃取的会话令牌可在较长时间内使用，部分工具支持自动刷新会话。代表性工具包括Evilginx2、Modlishka等开源框架。AiTM攻击已成为窃取企业账户凭据的主要手段之一，即使启用了MFA也无法有效防御。",
-    "avoidances": ["A0007-005", "A0078", "A0026"],
-    "couseRisks": ["R0151", "R0142", "R0032"],
+    "avoidances": [
+      "A0007-005",
+      "A0078",
+      "A0026"
+    ],
+    "directCauseRisks": [
+      "R0032",
+      "R0142",
+      "R0151"
+    ],
+    "indirectSupportRisks": [],
     "references": [
       {
         "title": "Microsoft Digital Defense Report 2025 - AiTM Phishing",

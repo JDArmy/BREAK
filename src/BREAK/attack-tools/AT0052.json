@@ -12,13 +12,14 @@
       "A0062",
       "A0041"
     ],
-    "couseRisks": [
+    "directCauseRisks": [
       "R0080",
       "R0112",
       "R0112-003",
       "R0112-004",
       "R0112-005"
     ],
+    "indirectSupportRisks": [],
     "updated": "2024-01-30"
   },
   "AT0052-001": {
@@ -34,13 +35,14 @@
       "A0062",
       "A0041"
     ],
-    "couseRisks": [
+    "directCauseRisks": [
+      "R0067",
+      "R0083-001",
       "R0109",
       "R0112",
-      "R0112-003",
-      "R0067",
-      "R0083-001"
+      "R0112-003"
     ],
+    "indirectSupportRisks": [],
     "updated": "2026-05-27"
   },
   "AT0052-002": {
@@ -56,12 +58,13 @@
       "A0062",
       "A0041"
     ],
-    "couseRisks": [
+    "directCauseRisks": [
+      "R0082",
       "R0112",
       "R0112-003",
-      "R0112-004",
-      "R0082"
+      "R0112-004"
     ],
+    "indirectSupportRisks": [],
     "updated": "2026-05-27"
   },
   "AT0052-003": {
@@ -77,7 +80,7 @@
       "A0062",
       "A0041"
     ],
-    "couseRisks": [
+    "directCauseRisks": [
       "R0067",
       "R0080",
       "R0083-001",
@@ -85,6 +88,7 @@
       "R0112-003",
       "R0112-005"
     ],
+    "indirectSupportRisks": [],
     "updated": "2026-05-27"
   }
 }

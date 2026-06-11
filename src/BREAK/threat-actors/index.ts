@@ -11,7 +11,8 @@ interface ThreatActor {
   references: Reference[];
   buildAttackTools: string[];
   useAttackTools: string[];
-  couseRisks: string[];
+  directCauseRisks: string[];
+  indirectSupportRisks: string[];
   attackTools: string[];
   updated: string;
 }

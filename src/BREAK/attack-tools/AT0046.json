@@ -22,13 +22,15 @@
       "A0029-003",
       "A0038"
     ],
-    "couseRisks": [
+    "directCauseRisks": [
       "R0001",
       "R0001-002",
-      "R0005",
       "R0016",
       "R0017-001",
       "R0056"
+    ],
+    "indirectSupportRisks": [
+      "R0005"
     ],
     "updated": "2024/02/05 14:27:29"
   }

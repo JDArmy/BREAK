@@ -12,8 +12,20 @@
         "link": "http://www.cac.gov.cn/"
       }
     ],
-    "avoidances": ["A0078", "A0010", "A0081", "A0082"],
-    "couseRisks": ["R0144", "R0032", "R0036", "R0098", "R0142"],
+    "avoidances": [
+      "A0078",
+      "A0010",
+      "A0081",
+      "A0082"
+    ],
+    "directCauseRisks": [
+      "R0032",
+      "R0036",
+      "R0098",
+      "R0142",
+      "R0144"
+    ],
+    "indirectSupportRisks": [],
     "updated": "2026-02-27"
   }
 }

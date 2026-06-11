@@ -2,9 +2,20 @@
   "TA0039": {
     "title": "Cryptocurrency Fraud Syndicate",
     "description": "Organized criminal groups specializing in cryptocurrency ecosystem fraud. Unlike TA0015 Telecom Fraud Groups which focus on traditional telecom fraud, cryptocurrency fraud syndicates use blockchain and cryptocurrency as their core作案 tools and financial channels. Key characteristics and operational models include: ① Pig butchering operations: cultivating trust through social media and dating apps, then guiding victims to invest in fake cryptocurrency investment platforms; ② Fake DeFi projects: creating disguised decentralized finance projects that attract investors with false high-yield promises before executing rug pulls; ③ NFT fraud: issuing fake or plagiarized NFT projects for scams; ④ Cryptocurrency impersonation: impersonating well-known crypto projects, exchanges, or KOLs for social engineering fraud; ⑤ Cross-border money laundering: using cryptocurrency mixers, privacy coins, and cross-chain bridges for fund cleaning and cross-border transfers; ⑥ Scam compound operations: establishing large-scale scam compounds in Southeast Asia and other regions, coercing or employing large numbers of people to conduct cryptocurrency fraud. These groups are often closely associated with transnational criminal networks, underground banks, and scam compounds.",
-    "buildAttackTools": ["AT0070"],
-    "useAttackTools": ["AT0060", "AT0059", "AT0001"],
-    "couseRisks": ["R0150", "R0121", "R0044"],
+    "buildAttackTools": [
+      "AT0070"
+    ],
+    "useAttackTools": [
+      "AT0060",
+      "AT0059",
+      "AT0001"
+    ],
+    "directCauseRisks": [
+      "R0044",
+      "R0121",
+      "R0150"
+    ],
+    "indirectSupportRisks": [],
     "references": [
       {
         "title": "FBI IC3 Cryptocurrency Fraud Report",

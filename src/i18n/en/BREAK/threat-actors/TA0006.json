@@ -14,7 +14,8 @@
       "AT0031",
       "AT0047"
     ],
-    "couseRisks": [
+    "directCauseRisks": [],
+    "indirectSupportRisks": [
       "R0003",
       "R0003-003",
       "R0049"
@@ -34,11 +35,12 @@
       "AT0008",
       "AT0031"
     ],
-    "couseRisks": [
+    "directCauseRisks": [
       "R0001",
       "R0003-003",
       "R0047"
-    ]
+    ],
+    "indirectSupportRisks": []
   },
   "TA0006-002": {
     "title": "Voice CAPTCHA Solver",
@@ -54,10 +56,11 @@
       "AT0008",
       "AT0031"
     ],
-    "couseRisks": [
+    "directCauseRisks": [
       "R0003-003",
       "R0047"
-    ]
+    ],
+    "indirectSupportRisks": []
   },
   "TA0006-003": {
     "title": "Score Runner",
@@ -75,8 +78,9 @@
       "AT0041",
       "AT0047"
     ],
-    "couseRisks": [
+    "directCauseRisks": [
       "R0060"
-    ]
+    ],
+    "indirectSupportRisks": []
   }
 }

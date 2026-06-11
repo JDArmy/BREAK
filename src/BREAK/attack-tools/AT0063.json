@@ -12,8 +12,21 @@
         "link": "https://www.cert.org.cn/"
       }
     ],
-    "avoidances": ["A0078", "A0082", "A0010", "A0007", "A0026"],
-    "couseRisks": ["R0084", "R0144", "R0036", "R0032", "R0098"],
+    "avoidances": [
+      "A0078",
+      "A0082",
+      "A0010",
+      "A0007",
+      "A0026"
+    ],
+    "directCauseRisks": [
+      "R0032",
+      "R0036",
+      "R0084",
+      "R0098",
+      "R0144"
+    ],
+    "indirectSupportRisks": [],
     "updated": "2026-02-27"
   }
 }

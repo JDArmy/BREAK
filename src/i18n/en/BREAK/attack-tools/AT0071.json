@@ -2,8 +2,17 @@
   "AT0071": {
     "title": "Phishing-as-a-Service (PhaaS) Platform",
     "description": "Phishing-as-a-Service (PhaaS) is a black market service model that provides complete phishing attack hosting. Unlike AT0063 Phishing Toolkit which provides downloadable phishing tools and templates, PhaaS platforms operate in a SaaS model where attackers don't need to set up their own servers, register domains, or configure email delivery systems. They simply pay subscription fees to access a full suite of services from phishing page hosting, email/SMS delivery, credential collection to two-factor authentication token theft. Key features include: ① Phishing page hosting: providing highly realistic login page hosting with automatic HTTPS certificate configuration and anti-detection mechanisms; ② Email/SMS delivery services: integrated email and SMS sending channels with capabilities to bypass spam filters; ③ Credential and token collection: real-time collection of victim-entered credentials and 2FA tokens, with some platforms supporting AiTM session hijacking; ④ Anti-detection and evasion: integrating CAPTCHA bypass, anti-bot mechanisms, domain rotation, and cloud service abuse techniques; ⑤ Analytics dashboard: providing data analysis, conversion rate statistics, and victim management for phishing campaigns. Representative platforms include EvilProxy and Storm-0443's PhaaS platform. PhaaS significantly lowers the technical barrier for phishing attacks, enabling non-technical personnel to launch large-scale high-quality phishing campaigns.",
-    "avoidances": ["A0078", "A0016"],
-    "couseRisks": ["R0084", "R0084-001", "R0032", "R0143"],
+    "avoidances": [
+      "A0078",
+      "A0016"
+    ],
+    "directCauseRisks": [
+      "R0032",
+      "R0084",
+      "R0084-001",
+      "R0143"
+    ],
+    "indirectSupportRisks": [],
     "references": [
       {
         "title": "Proofpoint PhaaS Threat Report 2025",

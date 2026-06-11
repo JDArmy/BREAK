@@ -23,7 +23,7 @@
       "A0059",
       "A0020"
     ],
-    "couseRisks": [
+    "directCauseRisks": [
       "R0001-002",
       "R0012",
       "R0012-002",
@@ -32,6 +32,7 @@
       "R0103",
       "R0104",
       "R0108"
-    ]
+    ],
+    "indirectSupportRisks": []
   }
 }

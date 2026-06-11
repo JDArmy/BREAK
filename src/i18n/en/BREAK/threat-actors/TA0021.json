@@ -10,7 +10,7 @@
     ],
     "buildAttackTools": [],
     "useAttackTools": [],
-    "couseRisks": [
+    "directCauseRisks": [
       "R0038",
       "R0059",
       "R0065",
@@ -21,12 +21,14 @@
       "R0083-001",
       "R0083-002",
       "R0084",
-      "R0089",
       "R0111-001",
       "R0112",
       "R0112-001",
       "R0112-002",
       "R0112-003"
+    ],
+    "indirectSupportRisks": [
+      "R0089"
     ]
   }
 }

@@ -22,10 +22,11 @@
       "A0014",
       "A0022"
     ],
-    "couseRisks": [
+    "directCauseRisks": [
       "R0001",
       "R0051-002"
     ],
+    "indirectSupportRisks": [],
     "updated": "2024-01-11"
   }
 }

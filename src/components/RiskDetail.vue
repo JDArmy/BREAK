@@ -29,11 +29,10 @@ const getReferences = (rKey: string) =>
   risks[rKey as keyof typeof risks].references;
 
 const getRiskDescriptionTools = (rKey: string) => {
-  return Object.keys(BREAK.attackTools).filter((atKey) =>
-    BREAK.attackTools[
-      atKey as keyof typeof BREAK.attackTools
-    ].couseRisks.includes(rKey as never)
-  );
+  return Object.keys(BREAK.attackTools).filter((atKey) => {
+    const at = BREAK.attackTools[atKey as keyof typeof BREAK.attackTools];
+    return at.directCauseRisks.includes(rKey) || at.indirectSupportRisks.includes(rKey);
+  });
 };
 </script>
 

@@ -142,12 +142,15 @@ const addRiskAvoidance = (rKey: string) => {
 };
 
 const addRiskAttackTool = (rKey: string) => {
-  const attackToolKeys = Object.keys(BREAK.attackTools).filter((atKey) =>
-    BREAK.attackTools[
-      atKey as keyof typeof BREAK.attackTools
-    ].couseRisks.includes(rKey as never)
-  );
-  attackToolKeys.forEach((attackToolKey) => {
+  const directAttackToolKeys = Object.keys(BREAK.attackTools).filter((atKey) => {
+    const at = BREAK.attackTools[atKey as keyof typeof BREAK.attackTools];
+    return at.directCauseRisks.includes(rKey);
+  });
+  const indirectAttackToolKeys = Object.keys(BREAK.attackTools).filter((atKey) => {
+    const at = BREAK.attackTools[atKey as keyof typeof BREAK.attackTools];
+    return at.indirectSupportRisks.includes(rKey);
+  });
+  directAttackToolKeys.forEach((attackToolKey) => {
     nodes.push({
       id: attackToolKey,
       type: RelationType.attackTool,
@@ -155,9 +158,22 @@ const addRiskAttackTool = (rKey: string) => {
       color: RelationTypeMapping[RelationType.attackTool].color,
     } as Node);
     lines.push({
-      from: rKey,
-      text: t("relationLine.makeRisk"),
-      to: attackToolKey,
+      from: attackToolKey,
+      text: t("relationLine.directCauseRisk"),
+      to: rKey,
+    } as Line);
+  });
+  indirectAttackToolKeys.forEach((attackToolKey) => {
+    nodes.push({
+      id: attackToolKey,
+      type: RelationType.attackTool,
+      text: attackToolKey + "<br>" + t(`BREAK.attackTools.${attackToolKey}.title`),
+      color: RelationTypeMapping[RelationType.attackTool].color,
+    } as Node);
+    lines.push({
+      from: attackToolKey,
+      text: t("relationLine.indirectSupportRisk"),
+      to: rKey,
     } as Line);
   });
 };
@@ -165,11 +181,10 @@ const addRiskAttackTool = (rKey: string) => {
 const addRisk_AvoidanceAttackToolRelation = (rKey: string) => {
   const avoidanceKeys =
     BREAK.risks[rKey as keyof typeof BREAK.risks].avoidances;
-  const attackToolKeys = Object.keys(BREAK.attackTools).filter((atKey) =>
-    BREAK.attackTools[
-      atKey as keyof typeof BREAK.attackTools
-    ].couseRisks.includes(rKey as never)
-  );
+  const attackToolKeys = Object.keys(BREAK.attackTools).filter((atKey) => {
+    const at = BREAK.attackTools[atKey as keyof typeof BREAK.attackTools];
+    return at.directCauseRisks.includes(rKey) || at.indirectSupportRisks.includes(rKey);
+  });
   attackToolKeys.forEach((attackToolKey) => {
     avoidanceKeys.forEach((avoidanceKey) => {
       if (
@@ -188,12 +203,15 @@ const addRisk_AvoidanceAttackToolRelation = (rKey: string) => {
 };
 
 const addRiskThreatActor = (rKey: string) => {
-  const threatActorKeys = Object.keys(BREAK.threatActors).filter((taKey) =>
-    BREAK.threatActors[
-      taKey as keyof typeof BREAK.threatActors
-    ].couseRisks.includes(rKey as never)
-  );
-  threatActorKeys.forEach((threatActorKey) => {
+  const directThreatActorKeys = Object.keys(BREAK.threatActors).filter((taKey) => {
+    const ta = BREAK.threatActors[taKey as keyof typeof BREAK.threatActors];
+    return ta.directCauseRisks.includes(rKey);
+  });
+  const indirectThreatActorKeys = Object.keys(BREAK.threatActors).filter((taKey) => {
+    const ta = BREAK.threatActors[taKey as keyof typeof BREAK.threatActors];
+    return ta.indirectSupportRisks.includes(rKey);
+  });
+  directThreatActorKeys.forEach((threatActorKey) => {
     nodes.push({
       id: threatActorKey,
       type: RelationType.threatActor,
@@ -202,23 +220,34 @@ const addRiskThreatActor = (rKey: string) => {
     } as Node);
     lines.push({
       from: threatActorKey,
-      text: t("relationLine.causeRisk"),
+      text: t("relationLine.directCauseRisk"),
+      to: rKey,
+    } as Line);
+  });
+  indirectThreatActorKeys.forEach((threatActorKey) => {
+    nodes.push({
+      id: threatActorKey,
+      type: RelationType.threatActor,
+      text: threatActorKey + "<br>" + t(`BREAK.threatActors.${threatActorKey}.title`),
+      color: RelationTypeMapping[RelationType.threatActor].color,
+    } as Node);
+    lines.push({
+      from: threatActorKey,
+      text: t("relationLine.indirectSupportRisk"),
       to: rKey,
     } as Line);
   });
 };
 
 const addRisk_ThreatActorAttackToolRelation = (rKey: string) => {
-  const threatActorKeys = Object.keys(BREAK.threatActors).filter((taKey) =>
-    BREAK.threatActors[
-      taKey as keyof typeof BREAK.threatActors
-    ].couseRisks.includes(rKey as never)
-  );
-  const attackToolKeys = Object.keys(BREAK.attackTools).filter((atKey) =>
-    BREAK.attackTools[
-      atKey as keyof typeof BREAK.attackTools
-    ].couseRisks.includes(rKey as never)
-  );
+  const threatActorKeys = Object.keys(BREAK.threatActors).filter((taKey) => {
+    const ta = BREAK.threatActors[taKey as keyof typeof BREAK.threatActors];
+    return ta.directCauseRisks.includes(rKey) || ta.indirectSupportRisks.includes(rKey);
+  });
+  const attackToolKeys = Object.keys(BREAK.attackTools).filter((atKey) => {
+    const at = BREAK.attackTools[atKey as keyof typeof BREAK.attackTools];
+    return at.directCauseRisks.includes(rKey) || at.indirectSupportRisks.includes(rKey);
+  });
 
   threatActorKeys.forEach((threatActorKey) => {
     attackToolKeys.forEach((attackToolKey) => {
@@ -312,10 +341,10 @@ const addAvoidanceSubavoidance = (aKey: string) => {
 
 /** AttackTool */
 const addAttackToolRisk = (attackToolKey: string) => {
-  const riskKeys =
-    BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools]
-      .couseRisks;
-  riskKeys.forEach((riskKey) => {
+  const at = BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools];
+  const directRiskKeys: string[] = at.directCauseRisks;
+  const indirectRiskKeys: string[] = at.indirectSupportRisks;
+  directRiskKeys.forEach((riskKey) => {
     nodes.push({
       id: riskKey,
       type: RelationType.risk,
@@ -324,7 +353,20 @@ const addAttackToolRisk = (attackToolKey: string) => {
     } as Node);
     lines.push({
       from: attackToolKey,
-      text: t("relationLine.makeRisk"),
+      text: t("relationLine.directCauseRisk"),
+      to: riskKey,
+    } as Line);
+  });
+  indirectRiskKeys.forEach((riskKey) => {
+    nodes.push({
+      id: riskKey,
+      type: RelationType.risk,
+      text: riskKey + "<br>" + t(`BREAK.risks.${riskKey}.title`),
+      color: RelationTypeMapping[RelationType.risk].color,
+    } as Node);
+    lines.push({
+      from: attackToolKey,
+      text: t("relationLine.indirectSupportRisk"),
       to: riskKey,
     } as Line);
   });
@@ -350,9 +392,8 @@ const addAttackToolAvoidance = (attackToolKey: string) => {
 };
 
 const addAttackTool_RiskAvoidanceRelation = (attackToolKey: string) => {
-  const riskKeys =
-    BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools]
-      .couseRisks;
+  const at = BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools];
+  const riskKeys: string[] = [...at.directCauseRisks, ...at.indirectSupportRisks];
   const avoidanceKeys =
     BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools]
       .avoidances;
@@ -424,15 +465,15 @@ const addAttackTool_ThreatActorRiskRelation = (attackToolKey: string) => {
       taKey as keyof typeof BREAK.threatActors
     ].useAttackTools.includes(attackToolKey as never)
   );
-  const riskKeys =
-    BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools]
-      .couseRisks;
+  const at = BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools];
+  const riskKeys: string[] = [...at.directCauseRisks, ...at.indirectSupportRisks];
   builderThreatActorKeys.forEach((builderThreatActorKey) => {
     riskKeys.forEach((riskKey) => {
+      const ta = BREAK.threatActors[
+        builderThreatActorKey as keyof typeof BREAK.threatActors
+      ];
       if (
-        BREAK.threatActors[
-          builderThreatActorKey as keyof typeof BREAK.threatActors
-        ].couseRisks.includes(riskKey as never)
+        ta.directCauseRisks.includes(riskKey) || ta.indirectSupportRisks.includes(riskKey)
       ) {
         lines.push({
           from: riskKey,
@@ -444,10 +485,11 @@ const addAttackTool_ThreatActorRiskRelation = (attackToolKey: string) => {
   });
   userThreatActorKeys.forEach((userThreatActorKey) => {
     riskKeys.forEach((riskKey) => {
+      const ta = BREAK.threatActors[
+        userThreatActorKey as keyof typeof BREAK.threatActors
+      ];
       if (
-        BREAK.threatActors[
-          userThreatActorKey as keyof typeof BREAK.threatActors
-        ].couseRisks.includes(riskKey as never)
+        ta.directCauseRisks.includes(riskKey) || ta.indirectSupportRisks.includes(riskKey)
       ) {
         lines.push({
           from: userThreatActorKey,
@@ -482,8 +524,10 @@ const addAttackToolSubattackTool = (atKey: string) => {
 
 /** ThreatActor */
 const addThreatActorRisk = (threatActorKey: string) => {
-  const riskKeys = BREAK.threatActors[threatActorKey].couseRisks;
-  riskKeys.forEach((riskKey) => {
+  const ta = BREAK.threatActors[threatActorKey];
+  const directRiskKeys: string[] = ta.directCauseRisks;
+  const indirectRiskKeys: string[] = ta.indirectSupportRisks;
+  directRiskKeys.forEach((riskKey) => {
     nodes.push({
       id: riskKey,
       type: RelationType.risk,
@@ -492,7 +536,20 @@ const addThreatActorRisk = (threatActorKey: string) => {
     } as Node);
     lines.push({
       from: threatActorKey,
-      text: t("relationLine.causeRisk"),
+      text: t("relationLine.directCauseRisk"),
+      to: riskKey,
+    } as Line);
+  });
+  indirectRiskKeys.forEach((riskKey) => {
+    nodes.push({
+      id: riskKey,
+      type: RelationType.risk,
+      text: riskKey + "<br>" + t(`BREAK.risks.${riskKey}.title`),
+      color: RelationTypeMapping[RelationType.risk].color,
+    } as Node);
+    lines.push({
+      from: threatActorKey,
+      text: t("relationLine.indirectSupportRisk"),
       to: riskKey,
     } as Line);
   });
@@ -536,13 +593,15 @@ const addThreatActor_AttackToolRiskRelation = (threatActorKey: string) => {
     ...BREAK.threatActors[threatActorKey].buildAttackTools,
     ...BREAK.threatActors[threatActorKey].useAttackTools,
   ];
-  const riskKeys = BREAK.threatActors[threatActorKey].couseRisks;
+  const ta = BREAK.threatActors[threatActorKey];
+  const riskKeys: string[] = [...ta.directCauseRisks, ...ta.indirectSupportRisks];
   attackToolKeys.forEach((attackToolKey) => {
     riskKeys.forEach((riskKey) => {
+      const at = BREAK.attackTools[
+        attackToolKey as keyof typeof BREAK.attackTools
+      ];
       if (
-        BREAK.attackTools[
-          attackToolKey as keyof typeof BREAK.attackTools
-        ].couseRisks.includes(riskKey as never)
+        at.directCauseRisks.includes(riskKey) || at.indirectSupportRisks.includes(riskKey)
       ) {
         lines.push({
           from: attackToolKey,

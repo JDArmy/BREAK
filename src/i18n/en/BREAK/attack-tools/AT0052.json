@@ -12,13 +12,14 @@
       "A0062",
       "A0041"
     ],
-    "couseRisks": [
+    "directCauseRisks": [
       "R0080",
       "R0112",
       "R0112-003",
       "R0112-004",
       "R0112-005"
-    ]
+    ],
+    "indirectSupportRisks": []
   },
   "AT0052-001": {
     "title": "KON-Boot",
@@ -33,12 +34,13 @@
       "A0062",
       "A0041"
     ],
-    "couseRisks": [
-      "R0112",
-      "R0112-003",
+    "directCauseRisks": [
       "R0067",
-      "R0083-001"
-    ]
+      "R0083-001",
+      "R0112",
+      "R0112-003"
+    ],
+    "indirectSupportRisks": []
   },
   "AT0052-002": {
     "title": "USB Killer",
@@ -53,12 +55,13 @@
       "A0062",
       "A0041"
     ],
-    "couseRisks": [
+    "directCauseRisks": [
+      "R0082",
       "R0112",
       "R0112-003",
-      "R0112-004",
-      "R0082"
-    ]
+      "R0112-004"
+    ],
+    "indirectSupportRisks": []
   },
   "AT0052-003": {
     "title": "BadUSB",
@@ -73,13 +76,14 @@
       "A0062",
       "A0041"
     ],
-    "couseRisks": [
+    "directCauseRisks": [
       "R0067",
       "R0080",
       "R0083-001",
       "R0112",
       "R0112-003",
       "R0112-005"
-    ]
+    ],
+    "indirectSupportRisks": []
   }
 }

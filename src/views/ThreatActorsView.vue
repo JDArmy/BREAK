@@ -104,12 +104,25 @@ const { getTableHeight, tableRowClassName } = useAnchorTable("taKey");
         >
       </template></el-table-column
     >
-    <el-table-column :label="$t('risksMaker')">
+    <el-table-column :label="$t('relationLine.directCauseRisk')">
       <template #default="scope">
         <el-button
           size="small"
-          v-for="rKey in scope.row.couseRisks"
-          :key="rKey"
+          v-for="rKey in scope.row.directCauseRisks"
+          :key="'d-'+rKey"
+          @click="riskKey = rKey; riskDrawer = true"
+          class="relational-link"
+          round
+          >{{ rKey + ":&nbsp;" + $t(`BREAK.risks.${rKey}.title`) }}</el-button
+        >
+      </template></el-table-column
+    >
+    <el-table-column :label="$t('relationLine.indirectSupportRisk')">
+      <template #default="scope">
+        <el-button
+          size="small"
+          v-for="rKey in scope.row.indirectSupportRisks"
+          :key="'i-'+rKey"
           @click="riskKey = rKey; riskDrawer = true"
           class="relational-link"
           round

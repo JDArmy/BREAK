@@ -12,8 +12,19 @@
         "link": "https://github.com/danielmiessler/SecLists"
       }
     ],
-    "avoidances": ["A0007", "A0026", "A0001", "A0074"],
-    "couseRisks": ["R0032", "R0032-003", "R0036", "R0098"],
+    "avoidances": [
+      "A0007",
+      "A0026",
+      "A0001",
+      "A0074"
+    ],
+    "directCauseRisks": [
+      "R0032",
+      "R0032-003",
+      "R0036",
+      "R0098"
+    ],
+    "indirectSupportRisks": [],
     "updated": "2026-02-27"
   }
 }

@@ -8,8 +8,18 @@
         "link": "https://attack.mitre.org/techniques/T1056/001/"
       }
     ],
-    "avoidances": ["A0078", "A0010", "A0007", "A0023"],
-    "couseRisks": ["R0032", "R0036", "R0098"],
+    "avoidances": [
+      "A0078",
+      "A0010",
+      "A0007",
+      "A0023"
+    ],
+    "directCauseRisks": [
+      "R0032",
+      "R0036",
+      "R0098"
+    ],
+    "indirectSupportRisks": [],
     "updated": "2026-02-27"
   }
 }

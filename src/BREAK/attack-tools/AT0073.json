@@ -8,11 +8,12 @@
       "A0073",
       "A0027"
     ],
-    "couseRisks": [
-      "R0120",
+    "directCauseRisks": [
       "R0084",
-      "R0095"
+      "R0095",
+      "R0120"
     ],
+    "indirectSupportRisks": [],
     "references": [
       {
         "title": "Google Android Fake Call Detection Announcement",

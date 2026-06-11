@@ -15,9 +15,10 @@
     "avoidances": [
       "A0013"
     ],
-    "couseRisks": [
-      "R0051",
-      "R0012"
+    "directCauseRisks": [],
+    "indirectSupportRisks": [
+      "R0012",
+      "R0051"
     ],
     "updated": "2024-01-11"
   }

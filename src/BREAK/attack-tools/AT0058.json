@@ -20,13 +20,14 @@
       "A0020",
       "A0048"
     ],
-    "couseRisks": [
-      "R0130",
-      "R0119",
-      "R0071-003",
+    "directCauseRisks": [
       "R0006",
-      "R0116"
+      "R0071-003",
+      "R0116",
+      "R0119",
+      "R0130"
     ],
+    "indirectSupportRisks": [],
     "updated": "2026-02-27"
   }
 }

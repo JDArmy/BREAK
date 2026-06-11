@@ -15,7 +15,7 @@
       "AT0040-001",
       "AT0051"
     ],
-    "couseRisks": [
+    "directCauseRisks": [
       "R0004",
       "R0005",
       "R0006",
@@ -50,6 +50,7 @@
       "R0070-002",
       "R0070-003",
       "R0115"
-    ]
+    ],
+    "indirectSupportRisks": []
   }
 }

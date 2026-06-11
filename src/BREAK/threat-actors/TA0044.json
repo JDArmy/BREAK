@@ -3,8 +3,15 @@
     "title": "算力黄牛/算力黑产",
     "description": "非法获取和倒卖GPU算力资源的黑灰产从业者。随着AI大模型训练对GPU算力需求的爆发式增长，算力黄牛通过非法渠道获取算力资源并高价倒卖或用于挖矿牟利。主要特征包括：①云账号盗用：盗取他人云服务账号，利用其GPU配额进行挖矿或AI训练；②算力倒卖：将从各渠道获取的算力资源加价倒卖给有紧急需求的AI创业公司或研究机构；③虚假算力平台：搭建虚假的算力共享平台，骗取用户的算力资源或资金；④显卡黄牛：大量囤积和倒卖GPU显卡，推高市场价格，利用供需失衡牟利；⑤算力洗钱：利用算力挖矿产生的加密货币进行洗钱活动。算力黄牛/算力黑产是AI算力经济催生的新型黑灰产。",
     "buildAttackTools": [],
-    "useAttackTools": ["AT0048", "AT0060"],
-    "couseRisks": ["R0158", "R0086"],
+    "useAttackTools": [
+      "AT0048",
+      "AT0060"
+    ],
+    "directCauseRisks": [
+      "R0086",
+      "R0158"
+    ],
+    "indirectSupportRisks": [],
     "references": [
       {
         "title": "FBI: Cloud Computing Fraud and Resource Abuse",

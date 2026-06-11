@@ -8,7 +8,8 @@ interface AttackTool {
     link: string;
   }[];
   avoidances: string[];
-  couseRisks: string[];
+  directCauseRisks: string[];
+  indirectSupportRisks: string[];
 }
 
 interface AttackTools {

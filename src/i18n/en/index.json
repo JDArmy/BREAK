@@ -67,6 +67,8 @@
   "relationLine": {
     "avoidanceMeans": "Avoidance",
     "causeRisk": "Causes Risk",
+    "directCauseRisk": "Directly Causes",
+    "indirectSupportRisk": "Indirectly Supports",
     "buildAttackTool": "Builds Attack Tool",
     "useAttackTool": "Uses Attack Tool",
     "subRisk": "Sub-Risk",
