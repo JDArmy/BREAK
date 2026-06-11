@@ -7,8 +7,8 @@
     "limitation": "深度伪造检测的局限性包括：①生成技术的快速进步使得伪造内容越来越逼真，检测难度持续增加。②实时检测对计算资源要求较高，在移动端等资源受限场景下难以部署。③压缩、转码等后处理操作可能破坏检测所依赖的特征。④针对特定检测方法的对抗攻击可以有效降低检测准确率。⑤跨域泛化能力不足，针对特定生成模型训练的检测器可能对新模型效果不佳。",
     "references": [
       {
-        "title": "Deepfake Detection Challenge - Kaggle",
-        "link": "https://www.kaggle.com/c/deepfake-detection-challenge"
+        "title": "Deepfake Detection Challenge Dataset - Meta AI",
+        "link": "https://ai.meta.com/datasets/dfdc/"
       },
       {
         "title": "深度伪造检测技术综述",

@@ -6,8 +6,8 @@
     "limitation": "The limitations of deepfake detection include: (1) rapid advances in generation technology make forged content increasingly realistic, continuously increasing detection difficulty; (2) real-time detection requires significant computational resources and is difficult to deploy in resource-constrained environments such as mobile devices; (3) post-processing operations such as compression and transcoding may destroy the features relied upon for detection; (4) adversarial attacks targeting specific detection methods can effectively reduce detection accuracy; (5) insufficient cross-domain generalization means detectors trained on specific generative models may perform poorly on new models.",
     "references": [
       {
-        "title": "Deepfake Detection Challenge - Kaggle",
-        "link": "https://www.kaggle.com/c/deepfake-detection-challenge"
+        "title": "Deepfake Detection Challenge Dataset - Meta AI",
+        "link": "https://ai.meta.com/datasets/dfdc/"
       },
       {
         "title": "A Survey on Deepfake Detection",

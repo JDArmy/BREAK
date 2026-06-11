@@ -7,8 +7,8 @@
     "limitation": "隐私增强技术的局限性包括：①性能开销：同态加密等技术的计算开销较大，可能影响系统性能和实时性。②实施复杂度：部署和维护PET系统需要专业的密码学和安全知识。③数据可用性与隐私保护的平衡：过度的隐私保护可能降低数据的分析价值。④标准化不足：各类PET技术的标准和互操作性仍在发展中。⑤新型攻击：针对联邦学习的模型投毒攻击、针对差分隐私的成员推断攻击等新型威胁不断出现。",
     "references": [
       {
-        "title": "隐私增强技术白皮书 - 中国信通院",
-        "link": "http://www.caict.ac.cn/kxyj/qwfb/bps/"
+        "title": "PETs Testbed - NIST",
+        "link": "https://www.nist.gov/itl/applied-cybersecurity/privacy-engineering/pets-testbed"
       },
       {
         "title": "Privacy-Enhancing Technologies - ENISA",
