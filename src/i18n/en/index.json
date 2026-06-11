@@ -88,5 +88,14 @@
     "subAttackTools": "Sub-Attack Tools",
     "subThreatActors": "Sub-Threat Actors"
   },
-  "lastUpdated": "Last Updated"
+  "lastUpdated": "Last Updated",
+  "search": {
+    "placeholder": "Search risks, avoidances, attack tools...",
+    "noResults": "No results found",
+    "hint": "Press ESC to close",
+    "groupRisk": "Risks",
+    "groupAvoidance": "Avoidances",
+    "groupAttackTool": "Attack Tools",
+    "groupThreatActor": "Threat Actors"
+  }
 }

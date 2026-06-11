@@ -1,5 +1,15 @@
 # Change log
 
+## 2.7.0
+
+- 新增：全文搜索功能（Phase 2.1）
+  - 集成 Fuse.js 模糊搜索引擎，支持中英文双语搜索
+  - 导航栏搜索入口，支持 Cmd+K / Ctrl+K 全局快捷键唤起
+  - 搜索结果按实体类型分组显示（风险/规避手段/攻击工具/威胁行为者）
+  - 匹配关键词高亮，键盘导航（↑↓选择、Enter跳转、ESC关闭）
+  - 点击结果跳转到对应列表页锚点定位
+  - 新增 `useSearch` composable
+
 ## 2.6.2
 
 - 修复：翻译 101 条 EN references 中仍为中文的标题（risks 52条、avoidances 23条、attackTools 17条、threatActors 9条）

@@ -88,5 +88,14 @@
     "subAttackTools": "子攻击工具",
     "subThreatActors": "子威胁行为者"
   },
-  "lastUpdated": "最后更新"
+  "lastUpdated": "最后更新",
+  "search": {
+    "placeholder": "搜索风险、规避手段、攻击工具...",
+    "noResults": "未找到匹配结果",
+    "hint": "按 ESC 关闭",
+    "groupRisk": "风险",
+    "groupAvoidance": "规避手段",
+    "groupAttackTool": "攻击工具",
+    "groupThreatActor": "威胁行为者"
+  }
 }

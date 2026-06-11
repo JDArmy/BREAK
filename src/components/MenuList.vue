@@ -7,12 +7,16 @@ import "element-plus/es/components/dropdown-item/style/css";
 import "element-plus/theme-chalk/display.css";
 
 import GithubPane from "@/components/GithubPane.vue";
+import SearchDialog from "@/components/SearchDialog.vue";
 import iconTranslate from "@/components/icons/iconTranslate.vue";
-import { ArrowDown } from "@element-plus/icons-vue";
+import { ArrowDown, Search } from "@element-plus/icons-vue";
 import { useI18n } from "vue-i18n";
 import { languages, setLocale } from "@/i18n";
+import { ref } from "vue";
 
 const { locale } = useI18n();
+const searchOpen = ref(false);
+const shortcutHint = navigator.platform?.includes("Mac") ? "⌘K" : "Ctrl+K";
 
 const handleLocaleChange = (lang: string) => {
   setLocale(lang);
@@ -44,6 +48,9 @@ const getActiveIndex = (fullPath: string) => {
     <h3 class="banner" style="text-align: center; width: 100%; height: 100%">
       {{ $t("BREAK.name") }}
     </h3>
+    <div class="mobile-search" @click="searchOpen = true">
+      <el-icon><Search /></el-icon>
+    </div>
   </el-menu>
 
   <el-menu
@@ -66,7 +73,13 @@ const getActiveIndex = (fullPath: string) => {
       </h3>
     </div>
 
-    <div class="flex-grow" />
+    <div class="flex-grow">
+      <div class="search-trigger" @click="searchOpen = true">
+        <el-icon><Search /></el-icon>
+        <span class="search-placeholder">{{ $t("search.placeholder") }}</span>
+        <span class="search-shortcut">{{ shortcutHint }}</span>
+      </div>
+    </div>
     <el-menu-item class="" index="/">{{ $t("menu.home") }}</el-menu-item>
     <el-menu-item class="" index="/risks">{{ $t("menu.risks") }}</el-menu-item>
     <el-menu-item class="" index="/avoidances">{{
@@ -155,6 +168,8 @@ const getActiveIndex = (fullPath: string) => {
     </div>
 
   </el-menu>
+
+  <SearchDialog v-model="searchOpen" />
 </template>
 
 <style scoped>
@@ -166,6 +181,60 @@ const getActiveIndex = (fullPath: string) => {
 }
 .flex-grow {
   flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 8px;
+}
+
+.search-trigger {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  transition: background-color 0.2s;
+  max-width: 260px;
+  width: 100%;
+}
+
+.search-trigger:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.search-trigger .el-icon {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.search-placeholder {
+  flex: 1;
+  font-size: 13px;
+  color: #64748b;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.search-shortcut {
+  font-size: 11px;
+  color: #64748b;
+  padding: 2px 5px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.mobile-search {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #cbd5e1;
+  font-size: 18px;
 }
 
 .banner {
