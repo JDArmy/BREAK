@@ -7,6 +7,21 @@
         "title": "How Much Do You Know About 'Money Laundering Rooms'?",
         "link": "https://mp.weixin.qq.com/s/7_9NKsdVvggtosaaa5nRyw"
       }
+    ],
+    "buildAttackTools": [
+      "AT0026"
+    ],
+    "useAttackTools": [
+      "AT0039",
+      "AT0039-001",
+      "AT0039-002",
+      "AT0040",
+      "AT0026",
+      "AT0040-001"
+    ],
+    "couseRisks": [
+      "R0060",
+      "R0093"
     ]
   },
   "TA0014-001": {
@@ -17,6 +32,14 @@
         "title": "A Batch of 'ATM Runners' Arrested with 2.7 Million Cash Seized — Why Have They Resurfaced After Years of Silence?",
         "link": "https://mp.weixin.qq.com/s/_Xynz_Qy0UTwHWEkMTeEVg"
       }
+    ],
+    "buildAttackTools": [],
+    "useAttackTools": [
+      "AT0039-001"
+    ],
+    "couseRisks": [
+      "R0060",
+      "R0044"
     ]
   }
 }

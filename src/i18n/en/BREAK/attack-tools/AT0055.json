@@ -7,6 +7,18 @@
         "title": "Covert Recording Devices - Baidu Baike",
         "link": "https://baike.baidu.com/item/%E5%81%B7%E6%8B%8D%E7%A5%9E%E5%99%A8/15594040?fr=ge_ala"
       }
+    ],
+    "avoidances": [
+      "A0017-001",
+      "A0041",
+      "A0051",
+      "A0052",
+      "A0062"
+    ],
+    "couseRisks": [
+      "R0059",
+      "R0112-003",
+      "R0112-005"
     ]
   }
 }

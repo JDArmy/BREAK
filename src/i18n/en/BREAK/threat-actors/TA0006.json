@@ -7,6 +7,17 @@
         "title": "Crowdsourced Workers - Baidu Baike",
         "link": "https://baike.baidu.com/item/%E4%BC%97%E5%8C%85%E5%B7%A5%E4%BA%BA/16659995"
       }
+    ],
+    "buildAttackTools": [],
+    "useAttackTools": [
+      "AT0008",
+      "AT0031",
+      "AT0047"
+    ],
+    "couseRisks": [
+      "R0003",
+      "R0003-003",
+      "R0049"
     ]
   },
   "TA0006-001": {
@@ -17,6 +28,16 @@
         "title": "Is Part-Time CAPTCHA Solving Real?",
         "link": "https://www.jianshu.com/p/e6b7435718b3"
       }
+    ],
+    "buildAttackTools": [],
+    "useAttackTools": [
+      "AT0008",
+      "AT0031"
+    ],
+    "couseRisks": [
+      "R0001",
+      "R0003-003",
+      "R0047"
     ]
   },
   "TA0006-002": {
@@ -27,6 +48,15 @@
         "title": "SMS PVA: Underground Service for Cybercriminals",
         "link": "https://www.trendmicro.com/en_us/research/22/b/sms-pva-cybercriminals-part-2.html"
       }
+    ],
+    "buildAttackTools": [],
+    "useAttackTools": [
+      "AT0008",
+      "AT0031"
+    ],
+    "couseRisks": [
+      "R0003-003",
+      "R0047"
     ]
   },
   "TA0006-003": {
@@ -37,6 +67,16 @@
         "title": "What is a Money Mule Scam?",
         "link": "https://www.hoosierhills.com/blog/what-is-a-money-mule-scam"
       }
+    ],
+    "buildAttackTools": [],
+    "useAttackTools": [
+      "AT0026",
+      "AT0031",
+      "AT0041",
+      "AT0047"
+    ],
+    "couseRisks": [
+      "R0060"
     ]
   }
 }

@@ -13,8 +13,8 @@
       }
     ],
     "buildAttackTools": [],
-    "useAttackTools": ["AT0060", "AT0051", "AT0034-001"],
-    "couseRisks": ["R0121", "R0122", "R0132", "R0060", "R0043"],
+    "useAttackTools": ["AT0060", "AT0034-001"],
+    "couseRisks": ["R0121", "R0060"],
     "updated": "2026-02-27"
   }
 }

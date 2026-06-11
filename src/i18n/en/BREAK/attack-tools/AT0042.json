@@ -7,6 +7,34 @@
         "title": "Credential Stuffing - Baidu Baike",
         "link": "https://baike.baidu.com/item/%E6%92%9E%E5%BA%93/16480882?fromModule=search-result_lemma-recommend"
       }
+    ],
+    "avoidances": [
+      "A0001",
+      "A0001-004",
+      "A0004",
+      "A0005",
+      "A0007",
+      "A0009",
+      "A0010",
+      "A0011",
+      "A0012",
+      "A0015",
+      "A0016",
+      "A0021",
+      "A0022",
+      "A0023",
+      "A0029",
+      "A0034-003",
+      "A0038",
+      "A0044",
+      "A0059"
+    ],
+    "couseRisks": [
+      "R0032-003",
+      "R0032-001",
+      "R0032-002",
+      "R0032-004",
+      "R0083-001"
     ]
   }
 }

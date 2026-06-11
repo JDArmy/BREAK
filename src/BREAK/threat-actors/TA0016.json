@@ -8,9 +8,7 @@
         "link": "https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E5%8D%9A%E5%BD%A9?fromtitle=%E7%BD%91%E7%BB%9C%E8%B5%8C%E5%8D%9A&fromid=24238584&fromModule=lemma_search-box"
       }
     ],
-    "buildAttackTools": [
-      "AT0026"
-    ],
+    "buildAttackTools": [],
     "useAttackTools": [
       "AT0010",
       "AT0026",
@@ -21,8 +19,7 @@
     "couseRisks": [
       "R0060",
       "R0093",
-      "R0097",
-      "R0115"
+      "R0097"
     ],
     "updated": "2024-01-17"
   }

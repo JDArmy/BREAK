@@ -7,6 +7,21 @@
         "title": "SIM Card Dealer Ecosystem Under the 'Card Crackdown' Campaign",
         "link": "https://zhuanlan.zhihu.com/p/640350477"
       }
+    ],
+    "buildAttackTools": [
+      "AT0001",
+      "AT0001-002",
+      "AT0001-003"
+    ],
+    "useAttackTools": [
+      "AT0006",
+      "AT0010",
+      "AT0043"
+    ],
+    "couseRisks": [
+      "R0030-003",
+      "R0030-005",
+      "R0030-006"
     ]
   }
 }

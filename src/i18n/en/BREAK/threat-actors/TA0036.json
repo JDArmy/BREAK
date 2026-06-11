@@ -11,6 +11,16 @@
         "title": "Online Copyright Protection - National Copyright Administration",
         "link": "https://www.ncac.gov.cn/"
       }
+    ],
+    "buildAttackTools": [],
+    "useAttackTools": [
+      "AT0005",
+      "AT0003",
+      "AT0051",
+      "AT0034"
+    ],
+    "couseRisks": [
+      "R0145"
     ]
   }
 }

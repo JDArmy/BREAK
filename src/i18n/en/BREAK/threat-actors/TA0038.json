@@ -11,6 +11,15 @@
         "title": "Underground Money House Crime Crackdown - Ministry of Public Security",
         "link": "https://www.mps.gov.cn/"
       }
+    ],
+    "buildAttackTools": [],
+    "useAttackTools": [
+      "AT0060",
+      "AT0034-001"
+    ],
+    "couseRisks": [
+      "R0121",
+      "R0060"
     ]
   }
 }
