@@ -51,11 +51,12 @@ function getRefTitle(index: number): string {
 }
 
 .reference-item a {
-  color: #409eff;
+  color: var(--break-link);
   text-decoration: none;
 }
 
 .reference-item a:hover {
+  color: var(--break-link-hover);
   text-decoration: underline;
 }
 </style>

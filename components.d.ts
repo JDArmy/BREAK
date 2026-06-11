@@ -46,5 +46,7 @@ declare module 'vue' {
     RiskRelation: typeof import('./src/components/RiskRelation.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SearchDialog: typeof import('./src/components/SearchDialog.vue')['default']
+    ThemeToggle: typeof import('./src/components/ThemeToggle.vue')['default']
   }
 }

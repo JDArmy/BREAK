@@ -83,6 +83,11 @@ const BREAK_KEYS: Record<EntityType, keyof typeof BREAK> = {
   threatActor: "threatActors",
 };
 
+/** 通过点分隔路径获取嵌套属性值 */
+function getNestedValue(obj: Record<string, unknown>, path: string): unknown {
+  return path.split('.').reduce((o, k) => (o as Record<string, unknown>)?.[k], obj);
+}
+
 /** 从 i18n messages 构建可索引的实体列表 */
 function buildIndexableItems(
   type: EntityType,
@@ -90,7 +95,7 @@ function buildIndexableItems(
 ): IndexableItem[] {
   const config = FUSE_CONFIGS[type];
   const breakCategory = BREAK[BREAK_KEYS[type]] as Record<string, unknown>;
-  const i18nCategory = localeMessages[config.i18nPath] as
+  const i18nCategory = getNestedValue(localeMessages, config.i18nPath) as
     | Record<string, Record<string, unknown>>
     | undefined;
 

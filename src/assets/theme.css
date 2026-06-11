@@ -1,0 +1,119 @@
+/* BREAK 主题 CSS 变量 */
+
+:root {
+  /* 页面背景 */
+  --break-bg-primary: #ffffff;
+  --break-bg-secondary: #f8fafc;
+  --break-bg-card: #ffffff;
+
+  /* 文本 */
+  --break-text-primary: #1e293b;
+  --break-text-secondary: #475569;
+  --break-text-muted: #64748b;
+  --break-text-weak: #94a3b8;
+
+  /* 边框 */
+  --break-border: #e2e8f0;
+  --break-border-light: #f1f5f9;
+
+  /* 链接 */
+  --break-link: #2563eb;
+  --break-link-hover: #1d4ed8;
+
+  /* 高亮 */
+  --break-highlight-bg: #eff6ff;
+  --break-highlight-border: #bfdbfe;
+
+  /* 统计卡片 */
+  --break-stat-bg-start: #1e293b;
+  --break-stat-bg-end: #334155;
+  --break-stat-hover-start: #334155;
+  --break-stat-hover-end: #475569;
+  --break-stat-text: #ffffff;
+
+  /* 关系图谱 */
+  --break-graph-border: #efefef;
+  --break-graph-filter-bg: rgba(255, 255, 255, 0.5);
+  --break-graph-text: #5e6269;
+
+  /* Footer */
+  --break-footer-bg: #f8fafc;
+  --break-footer-text: #94a3b8;
+  --break-footer-border: #e2e8f0;
+}
+
+html.dark {
+  color-scheme: dark;
+
+  /* 页面背景 */
+  --break-bg-primary: #0f172a;
+  --break-bg-secondary: #1e293b;
+  --break-bg-card: #1e293b;
+
+  /* 文本 */
+  --break-text-primary: #e2e8f0;
+  --break-text-secondary: #cbd5e1;
+  --break-text-muted: #94a3b8;
+  --break-text-weak: #64748b;
+
+  /* 边框 */
+  --break-border: #334155;
+  --break-border-light: #1e293b;
+
+  /* 链接 */
+  --break-link: #60a5fa;
+  --break-link-hover: #93c5fd;
+
+  /* 高亮 */
+  --break-highlight-bg: #1e293b;
+  --break-highlight-border: #334155;
+
+  /* 统计卡片 */
+  --break-stat-bg-start: #1e293b;
+  --break-stat-bg-end: #334155;
+  --break-stat-hover-start: #334155;
+  --break-stat-hover-end: #475569;
+  --break-stat-text: #ffffff;
+
+  /* 关系图谱 */
+  --break-graph-border: #334155;
+  --break-graph-filter-bg: rgba(15, 23, 42, 0.8);
+  --break-graph-text: #94a3b8;
+
+  /* Footer */
+  --break-footer-bg: #0f172a;
+  --break-footer-text: #64748b;
+  --break-footer-border: #1e293b;
+}
+
+/* 暗色主题全局样式 */
+html.dark body {
+  background-color: var(--break-bg-primary);
+  color: var(--break-text-primary);
+}
+
+/* Element Plus 表格暗色调整 */
+html.dark .el-table {
+  --el-table-bg-color: var(--break-bg-primary);
+  --el-table-tr-bg-color: var(--break-bg-primary);
+  --el-table-header-bg-color: var(--break-bg-secondary);
+  --el-table-border-color: var(--break-border);
+  --el-table-text-color: var(--break-text-primary);
+  --el-table-header-text-color: var(--break-text-secondary);
+  --el-table-row-hover-bg-color: var(--break-bg-secondary);
+}
+
+/* Element Plus Drawer 暗色调整 */
+html.dark .el-drawer {
+  background-color: var(--break-bg-primary);
+}
+
+/* Element Plus Dialog 暗色调整 */
+html.dark .el-dialog {
+  background-color: var(--break-bg-primary);
+}
+
+/* Element Plus Select 暗色调整 */
+html.dark .el-select-dropdown {
+  background-color: var(--break-bg-card);
+}

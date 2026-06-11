@@ -1,5 +1,19 @@
 # Change log
 
+## 2.7.1
+
+- 新增：暗色主题支持（Phase 2.4）
+  - 三种模式：亮色/暗色/跟随系统，localStorage 持久化
+  - 导航栏主题切换按钮（太阳/月亮图标）
+  - CSS 变量系统（`--break-*` 前缀），`html.dark` 切换暗色值
+  - Element Plus 暗色模式集成
+  - 替换 App.vue、HomeView、RelationView、ReferenceList、RiskRelation 中硬编码颜色为 CSS 变量
+  - 新增 `useTheme` composable、`ThemeToggle` 组件、`theme.css`
+- 修复：全文搜索 i18n 路径解析错误，导致搜索无结果
+  - 根因：`localeMessages["BREAK.risks"]` 无法解析点分隔路径，返回 undefined
+  - 新增 `getNestedValue()` 工具函数遍历嵌套属性
+- 修复：ThemeToggle 组件未使用的 `theme` 变量 lint 错误
+
 ## 2.7.0
 
 - 新增：全文搜索功能（Phase 2.1）

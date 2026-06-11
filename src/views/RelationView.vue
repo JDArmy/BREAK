@@ -973,7 +973,7 @@ const doFilter = () => {
 <template>
   <!-- 关系图 -->
   <div
-    style="border: #efefef solid 1px; height: calc(100vh - 150px); width: 100%"
+    style="border: var(--break-graph-border) solid 1px; height: calc(100vh - 150px); width: 100%"
   >
     <relation-graph ref="graphRef$" :options="graphOptions">
       <template #node="{ node }">
@@ -1084,10 +1084,10 @@ const doFilter = () => {
   z-index: 700;
   top: 20px;
   padding: 10px 30px;
-  border: #efefef solid 1px;
-  color: #555555;
+  border: var(--break-graph-border) solid 1px;
+  color: var(--break-graph-text);
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: var(--break-graph-filter-bg);
 }
 
 .filter-checkbox {
@@ -1108,6 +1108,6 @@ const doFilter = () => {
 
 :deep(svg text) {
   font-size: 14px !important;
-  fill: #5e6269 !important;
+  fill: var(--break-graph-text) !important;
 }
 </style>

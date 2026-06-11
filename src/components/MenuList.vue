@@ -8,6 +8,7 @@ import "element-plus/theme-chalk/display.css";
 
 import GithubPane from "@/components/GithubPane.vue";
 import SearchDialog from "@/components/SearchDialog.vue";
+import ThemeToggle from "@/components/ThemeToggle.vue";
 import iconTranslate from "@/components/icons/iconTranslate.vue";
 import { ArrowDown, Search } from "@element-plus/icons-vue";
 import { useI18n } from "vue-i18n";
@@ -144,6 +145,8 @@ const getActiveIndex = (fullPath: string) => {
         </el-dropdown-menu>
       </template>
     </el-dropdown>
+
+    <ThemeToggle />
 
     <el-dropdown class="translate" trigger="click" @command="handleLocaleChange">
       <span class="el-dropdown-link">

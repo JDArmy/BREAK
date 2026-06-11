@@ -118,7 +118,7 @@ const setJsonData = () => {
 <template>
   <!-- 关系图 -->
   <div
-    style="border: #efefef solid 1px; height: calc(60vh); width: 100%"
+    style="border: var(--break-graph-border) solid 1px; height: calc(60vh); width: 100%"
     @dblclick="
       $router.push({ name: 'relation', params: { type: 'risk', key: rKey } })
     "

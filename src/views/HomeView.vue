@@ -183,7 +183,7 @@ const getSceneRowSize = (sceneLength: number) => {
       <h3 style="margin-bottom: 0">
         {{ $t("BREAK.title") }} v{{ BREAK.version }}
       </h3>
-      <h6 style="color: #64748b; margin-top: 0.2em; margin-bottom: 0.3em">{{ $t("BREAK.description") }}</h6>
+      <h6 style="color: var(--break-text-muted); margin-top: 0.2em; margin-bottom: 0.3em">{{ $t("BREAK.description") }}</h6>
       <div class="last-updated">
         {{ $t("lastUpdated") }}: {{ BREAK.updated }}
       </div>
@@ -359,7 +359,7 @@ const getSceneRowSize = (sceneLength: number) => {
 }
 
 .risk-card {
-  border: 1px solid #e8edf3;
+  border: 1px solid var(--break-border);
   border-radius: 8px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.06);
   padding-bottom: 10px;
@@ -369,13 +369,13 @@ const getSceneRowSize = (sceneLength: number) => {
 
 .risk-dimension-title {
   margin: 0 0 6px 0;
-  color: #1e293b;
+  color: var(--break-text-primary);
   text-align: center;
   font-weight: 700;
   font-size: 0.95em;
   padding: 8px 6px 6px;
-  background: #f1f5f9;
-  border-bottom: 1px solid #e2e8f0;
+  background: var(--break-border-light);
+  border-bottom: 1px solid var(--break-border);
 }
 
 .risk-scene {
@@ -384,12 +384,12 @@ const getSceneRowSize = (sceneLength: number) => {
 
 .risk-scene-title {
   margin-bottom: 5px;
-  color: #475569;
+  color: var(--break-text-secondary);
   text-align: center;
   font-weight: 600;
   font-size: 0.85em;
   padding-bottom: 4px;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid var(--break-border);
 }
 
 .risk-list {
@@ -408,25 +408,25 @@ const getSceneRowSize = (sceneLength: number) => {
 .sub-risk-link {
   font-size: 1em;
   text-align: center;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--break-border);
   border-radius: 4px;
   margin-bottom: 2px;
 }
 
 .risk:hover,
 .s-risk:hover {
-  background-color: #eff6ff;
-  border-color: #bfdbfe;
+  background-color: var(--break-highlight-bg);
+  border-color: var(--break-highlight-border);
 }
 
 .sub-risk-link:hover {
-  background-color: #dbeafe;
+  background-color: var(--break-highlight-bg);
 }
 
 .risk a,
 .s-risk a,
 .sub-risk a {
-  color: #2563eb;
+  color: var(--break-link);
   text-decoration: none;
   display: inline-block;
 }
@@ -434,7 +434,7 @@ const getSceneRowSize = (sceneLength: number) => {
 .risk a:hover,
 .s-risk a:hover,
 .sub-risk a:hover {
-  color: #1d4ed8;
+  color: var(--break-link-hover);
 }
 
 .sidebar {
@@ -443,7 +443,7 @@ const getSceneRowSize = (sceneLength: number) => {
 
 .sidebar-icon {
   cursor: pointer;
-  color: #94a3b8;
+  color: var(--break-text-weak);
   background: none;
   text-align: center;
   vertical-align: middle;
@@ -457,21 +457,21 @@ const getSceneRowSize = (sceneLength: number) => {
 }
 
 .sidebar-expanded {
-  border-left: 3px solid #60a5fa;
-  background-color: #eff6ff;
-  color: #2563eb;
+  border-left: 3px solid var(--break-link);
+  background-color: var(--break-highlight-bg);
+  color: var(--break-link);
 }
 
 .sidebar-collapsed {
-  border-left: 3px solid #cbd5e1;
+  border-left: 3px solid var(--break-border);
   background-color: transparent;
-  color: #94a3b8;
+  color: var(--break-text-weak);
 }
 
 .sidebar-icon:hover {
-  border-left-color: #3b82f6;
-  background-color: #dbeafe;
-  color: #1d4ed8;
+  border-left-color: var(--break-link);
+  background-color: var(--break-highlight-bg);
+  color: var(--break-link-hover);
 }
 
 .sidebar-line {
@@ -491,7 +491,7 @@ const getSceneRowSize = (sceneLength: number) => {
 
 .parent-risk-link {
   font-weight: 500;
-  border-left: 1px solid #e2e8f0;
+  border-left: 1px solid var(--break-border);
 }
 
 .stats {
@@ -509,10 +509,10 @@ const getSceneRowSize = (sceneLength: number) => {
   align-items: center;
   justify-content: center;
   padding: 16px 24px;
-  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  background: linear-gradient(135deg, var(--break-stat-bg-start) 0%, var(--break-stat-bg-end) 100%);
   border-radius: 12px;
   text-decoration: none;
-  color: #fff;
+  color: var(--break-stat-text);
   min-width: 120px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -521,7 +521,7 @@ const getSceneRowSize = (sceneLength: number) => {
 .stat-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
-  background: linear-gradient(135deg, #334155 0%, #475569 100%);
+  background: linear-gradient(135deg, var(--break-stat-hover-start) 0%, var(--break-stat-hover-end) 100%);
 }
 
 .stat-number {
@@ -547,27 +547,27 @@ const getSceneRowSize = (sceneLength: number) => {
 .stat-item {
   white-space: nowrap;
   text-decoration: none;
-  color: #64748b;
+  color: var(--break-text-muted);
   transition: color 0.2s;
 }
 
 .stat-item:hover {
-  color: #3b82f6;
+  color: var(--break-link);
 }
 
 .stat-separator {
-  color: #cbd5e1;
+  color: var(--break-text-secondary);
 }
 
 .sub-count {
   font-size: 0.9em;
-  color: #94a3b8;
+  color: var(--break-text-weak);
   margin-left: 2px;
 }
 
 .last-updated {
   text-align: center;
-  color: #cbd5e1;
+  color: var(--break-text-secondary);
   font-size: 0.7em;
   margin-top: 0.3em;
   margin-bottom: 0.5em;
