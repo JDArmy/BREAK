@@ -12,7 +12,13 @@
       "R0084-001",
       "R0143"
     ],
-    "indirectSupportRisks": [],
+    "indirectSupportRisks": [
+      "R0036",
+      "R0083-001",
+      "R0098",
+      "R0142",
+      "R0144"
+    ],
     "references": [
       {
         "title": "Proofpoint PhaaS Threat Report 2025",

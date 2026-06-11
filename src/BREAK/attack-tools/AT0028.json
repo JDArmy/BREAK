@@ -15,7 +15,11 @@
     "avoidances": [
       "A0013"
     ],
-    "directCauseRisks": [],
+    "directCauseRisks": [
+      "R0051",
+      "R0051-001",
+      "R0051-002"
+    ],
     "indirectSupportRisks": [
       "R0012",
       "R0051"

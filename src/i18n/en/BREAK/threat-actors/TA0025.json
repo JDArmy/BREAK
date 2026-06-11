@@ -64,14 +64,15 @@
         "link": "https://en.wikipedia.org/wiki/Real-money_trading"
       }
     ],
-    "buildAttackTools": [],
+    "buildAttackTools": [
+      "AT0023",
+      "AT0049"
+    ],
     "useAttackTools": [
       "AT0017",
       "AT0019",
-      "AT0023",
       "AT0044",
-      "AT0047",
-      "AT0049"
+      "AT0047"
     ],
     "directCauseRisks": [
       "R0001",

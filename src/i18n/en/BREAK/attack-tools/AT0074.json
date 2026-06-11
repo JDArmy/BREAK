@@ -12,7 +12,13 @@
       "R0148",
       "R0149"
     ],
-    "indirectSupportRisks": [],
+    "indirectSupportRisks": [
+      "R0036",
+      "R0084",
+      "R0117",
+      "R0118",
+      "R0153"
+    ],
     "references": [
       {
         "title": "Strengthening AI Agent Hijacking Evaluations",

@@ -7,6 +7,12 @@
         "title": "Debugging Tools - Woku Baike",
         "link": "https://baike.baidu.com/item/%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7"
       }
+    ],
+    "directCauseRisks": [
+      "R0001-001",
+      "R0051",
+      "R0051-001",
+      "R0051-002"
     ]
   }
 }

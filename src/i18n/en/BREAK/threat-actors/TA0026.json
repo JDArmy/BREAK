@@ -8,14 +8,15 @@
         "link": "https://en.wikipedia.org/wiki/Boosting_(video_games)"
       }
     ],
-    "buildAttackTools": [],
+    "buildAttackTools": [
+      "AT0023"
+    ],
     "useAttackTools": [
       "AT0002",
       "AT0007",
       "AT0017",
       "AT0018",
       "AT0019",
-      "AT0023",
       "AT0034-001",
       "AT0036",
       "AT0044",

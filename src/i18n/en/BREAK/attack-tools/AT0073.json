@@ -13,7 +13,12 @@
       "R0095",
       "R0120"
     ],
-    "indirectSupportRisks": [],
+    "indirectSupportRisks": [
+      "R0048",
+      "R0092",
+      "R0116",
+      "R0132"
+    ],
     "references": [
       {
         "title": "Google Android Fake Call Detection Announcement",

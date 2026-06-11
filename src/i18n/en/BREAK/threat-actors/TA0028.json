@@ -8,13 +8,14 @@
         "link": "https://en.wikipedia.org/wiki/Cheating_in_online_games"
       }
     ],
-    "buildAttackTools": [],
+    "buildAttackTools": [
+      "AT0049"
+    ],
     "useAttackTools": [
       "AT0019",
       "AT0023",
       "AT0034-001",
-      "AT0044",
-      "AT0049"
+      "AT0044"
     ],
     "directCauseRisks": [
       "R0001",

@@ -11,6 +11,12 @@
         "title": "Cloud Phones: The Invisible Threat",
         "link": "https://www.group-ib.com/blog/cloud-phones-invisible-threat/"
       }
+    ],
+    "directCauseRisks": [
+      "R0001",
+      "R0001-002",
+      "R0050",
+      "R0080"
     ]
   }
 }

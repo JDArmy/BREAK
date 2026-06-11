@@ -80,7 +80,12 @@
       "R0095",
       "R0116"
     ],
-    "indirectSupportRisks": [],
+    "indirectSupportRisks": [
+      "R0044",
+      "R0071-003",
+      "R0119",
+      "R0120"
+    ],
     "updated": "2024-01-30"
   }
 }

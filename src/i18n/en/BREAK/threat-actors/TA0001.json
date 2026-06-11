@@ -12,13 +12,14 @@
         "link": "https://www.163.com/dy/article/J7CL1BGM0518STKV.html"
       }
     ],
-    "buildAttackTools": [],
+    "buildAttackTools": [
+      "AT0023"
+    ],
     "useAttackTools": [
       "AT0001",
       "AT0003",
       "AT0006",
       "AT0017",
-      "AT0023",
       "AT0032",
       "AT0034-001",
       "AT0045",
