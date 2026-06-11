@@ -1,5 +1,11 @@
 # Change log
 
+## 2.6.2
+
+- 修复：翻译 101 条 EN references 中仍为中文的标题（risks 52条、avoidances 23条、attackTools 17条、threatActors 9条）
+  - 全部 795 条 references 标题已翻译为英文，英文模式下不再显示中文
+  - 翻译时清理了中文网站 SEO 标签（如 `|犯罪行为|犯罪活动_网易订阅`），保留核心标题内容
+
 ## 2.6.1
 
 - 修复：详情抽屉和列表页 References 标题在英文模式下仍显示中文

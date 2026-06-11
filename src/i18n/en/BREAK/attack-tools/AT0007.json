@@ -4,7 +4,7 @@
     "description": "Device spoofing tools are important tools relied upon by criminal gangs for large-scale operations. By modifying device parameters or forging device fingerprints, the same device can be identified as multiple different devices, thereby bypassing business risk controls. The core functions of device spoofing tools include modifying IMEI, IMSI, hardware serial numbers, MAC addresses, and other device identifiers, as well as the 'one-click new device' feature that quickly simulates device parameters from different manufacturers. Technically, device spoofing tools can use frameworks like Xposed and tools like Frida Hook to intercept and tamper with system calls without modifying APKs, and there are also Root-free spoofing solutions. Device spoofing tools are commonly used for batch account registration, batch account farming, bypassing device bans, and other scenarios. Some advanced tools also support one-click backup and restore functions, enabling quick switching and operation of multiple accounts on a single device.",
     "references": [
       {
-        "title": "【深入解密】315晚会曝光的黑产高频切换IP|ip|服务器_网易订阅"
+        "title": "In-Depth: 315 Gala Exposes Black Market High-Frequency IP Switching"
       },
       {
         "title": "Xposed - A framework service that affects program execution (modifies the system) without modifying APK"
