@@ -7,6 +7,24 @@
         "title": "Analysis of AI Digital Human Live Streaming Chaos",
         "link": "https://www.cac.gov.cn/"
       }
+    ],
+    "buildAttackTools": [
+      "AT0058"
+    ],
+    "useAttackTools": [
+      "AT0056",
+      "AT0058",
+      "AT0051",
+      "AT0003"
+    ],
+    "couseRisks": [
+      "R0130",
+      "R0119",
+      "R0071-003",
+      "R0006",
+      "R0016",
+      "R0017-001",
+      "R0056"
     ]
   }
 }

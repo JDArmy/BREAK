@@ -7,6 +7,17 @@
         "title": "Vulnerability - Baidu Baike",
         "link": "https://baike.baidu.com/item/%E6%BC%8F%E6%B4%9E/1688129?fromModule=disambiguation"
       }
+    ],
+    "avoidances": [
+      "A0055",
+      "A0056"
+    ],
+    "couseRisks": [
+      "R0028",
+      "R0085",
+      "R0086",
+      "R0087",
+      "R0109"
     ]
   }
 }

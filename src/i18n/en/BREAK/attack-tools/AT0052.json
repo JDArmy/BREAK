@@ -7,6 +7,17 @@
         "title": "Hardware Additions - MITRE ATT&CK T1200",
         "link": "https://attack.mitre.org/techniques/T1200/"
       }
+    ],
+    "avoidances": [
+      "A0062",
+      "A0041"
+    ],
+    "couseRisks": [
+      "R0080",
+      "R0112",
+      "R0112-003",
+      "R0112-004",
+      "R0112-005"
     ]
   },
   "AT0052-001": {
@@ -17,6 +28,18 @@
         "title": "KON-Boot Bypassing Windows Authentication - CSDN",
         "link": "https://blog.csdn.net/weixin_52497013/article/details/121848172"
       }
+    ],
+    "avoidances": [
+      "A0062",
+      "A0041"
+    ],
+    "couseRisks": [
+      "R0080",
+      "R0112",
+      "R0112-003",
+      "R0067",
+      "R0082",
+      "R0083-001"
     ]
   },
   "AT0052-002": {
@@ -27,6 +50,16 @@
         "title": "How USB Killer Damages Computers - Zhihu",
         "link": "https://zhuanlan.zhihu.com/p/153254485"
       }
+    ],
+    "avoidances": [
+      "A0062",
+      "A0041"
+    ],
+    "couseRisks": [
+      "R0112",
+      "R0112-003",
+      "R0112-004",
+      "R0082"
     ]
   },
   "AT0052-003": {
@@ -37,6 +70,20 @@
         "title": "BadUSB Detailed Tutorial - Jianshu",
         "link": "https://www.jianshu.com/p/76b42b276bee"
       }
+    ],
+    "avoidances": [
+      "A0062",
+      "A0041"
+    ],
+    "couseRisks": [
+      "R0067",
+      "R0080",
+      "R0082",
+      "R0083-001",
+      "R0112",
+      "R0112-003",
+      "R0112-005",
+      "R0112-006"
     ]
   }
 }

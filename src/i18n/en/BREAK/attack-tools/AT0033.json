@@ -7,6 +7,19 @@
         "title": "Eavesdropping - Baidu Baike",
         "link": "https://baike.baidu.com/item/%E7%AA%83%E5%90%AC/20600680?fr=ge_ala"
       }
+    ],
+    "avoidances": [
+      "A0017-001",
+      "A0041",
+      "A0051",
+      "A0062",
+      "A0044"
+    ],
+    "couseRisks": [
+      "R0059",
+      "R0112",
+      "R0112-002",
+      "R0112-005"
     ]
   }
 }

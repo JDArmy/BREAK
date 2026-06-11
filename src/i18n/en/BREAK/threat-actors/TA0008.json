@@ -7,6 +7,24 @@
         "title": "Spam Promoters - Baidu Baike",
         "link": "https://baike.baidu.com/item/%E7%8B%97%E6%8E%A8/23589325"
       }
+    ],
+    "buildAttackTools": [],
+    "useAttackTools": [
+      "AT0001-002",
+      "AT0003",
+      "AT0004",
+      "AT0023",
+      "AT0046",
+      "AT0050",
+      "AT0051"
+    ],
+    "couseRisks": [
+      "R0095",
+      "R0024",
+      "R0016",
+      "R0018",
+      "R0110",
+      "R0115"
     ]
   }
 }

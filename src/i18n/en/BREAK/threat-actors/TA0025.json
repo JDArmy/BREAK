@@ -7,6 +7,39 @@
         "title": "Gold Farming - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Gold_farming"
       }
+    ],
+    "buildAttackTools": [
+      "AT0019",
+      "AT0049"
+    ],
+    "useAttackTools": [
+      "AT0001",
+      "AT0002",
+      "AT0003",
+      "AT0006",
+      "AT0007",
+      "AT0008",
+      "AT0009",
+      "AT0016",
+      "AT0017",
+      "AT0018",
+      "AT0019",
+      "AT0020",
+      "AT0023",
+      "AT0034-001",
+      "AT0036",
+      "AT0037",
+      "AT0044",
+      "AT0047",
+      "AT0048",
+      "AT0049"
+    ],
+    "couseRisks": [
+      "R0001",
+      "R0010",
+      "R0108",
+      "R0114",
+      "R0011-001"
     ]
   },
   "TA0025-001": {
@@ -17,6 +50,21 @@
         "title": "Real-Money Trading - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Real-money_trading"
       }
+    ],
+    "buildAttackTools": [],
+    "useAttackTools": [
+      "AT0017",
+      "AT0019",
+      "AT0023",
+      "AT0044",
+      "AT0047",
+      "AT0049"
+    ],
+    "couseRisks": [
+      "R0001",
+      "R0010",
+      "R0108",
+      "R0114"
     ]
   }
 }

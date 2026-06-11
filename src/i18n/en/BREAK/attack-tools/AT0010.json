@@ -7,6 +7,17 @@
         "title": "Dark Web - Baidu Baike",
         "link": "https://baike.baidu.com/item/%E6%9A%97%E7%BD%91/8694490?fr=ge_ala"
       }
+    ],
+    "avoidances": [
+      "A0016"
+    ],
+    "couseRisks": [
+      "R0062",
+      "R0060",
+      "R0043",
+      "R0044",
+      "R0011",
+      "R0028"
     ]
   }
 }

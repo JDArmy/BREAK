@@ -11,6 +11,29 @@
         "title": "Combating Cross-border Telecom Network Fraud",
         "link": "https://www.mps.gov.cn/"
       }
+    ],
+    "buildAttackTools": [
+      "AT0060"
+    ],
+    "useAttackTools": [
+      "AT0060",
+      "AT0062",
+      "AT0001",
+      "AT0034-001",
+      "AT0051",
+      "AT0027",
+      "AT0039",
+      "AT0040"
+    ],
+    "couseRisks": [
+      "R0121",
+      "R0132",
+      "R0060",
+      "R0044",
+      "R0043",
+      "R0095",
+      "R0093",
+      "R0098"
     ]
   }
 }
