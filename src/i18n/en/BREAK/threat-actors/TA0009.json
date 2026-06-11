@@ -8,11 +8,12 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/"
       }
     ],
-    "buildAttackTools": [],
+    "buildAttackTools": [
+      "AT0046"
+    ],
     "useAttackTools": [
-      "AT0046",
-      "AT0050",
       "AT0040-001",
+      "AT0050",
       "AT0051"
     ],
     "directCauseRisks": [
@@ -51,6 +52,17 @@
       "R0070-003",
       "R0115"
     ],
-    "indirectSupportRisks": []
+    "indirectSupportRisks": [
+      "R0001",
+      "R0001-001",
+      "R0002",
+      "R0003-001",
+      "R0003-002",
+      "R0003-003",
+      "R0003-004",
+      "R0005-001",
+      "R0008-005",
+      "R0027"
+    ]
   }
 }

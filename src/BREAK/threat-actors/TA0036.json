@@ -12,18 +12,32 @@
         "link": "https://www.ncac.gov.cn/"
       }
     ],
-    "buildAttackTools": [],
+    "buildAttackTools": [
+      "AT0025",
+      "AT0035"
+    ],
     "useAttackTools": [
-      "AT0005",
       "AT0003",
-      "AT0051",
-      "AT0034"
+      "AT0005",
+      "AT0034",
+      "AT0051"
     ],
     "directCauseRisks": [
       "R0022",
       "R0145"
     ],
-    "indirectSupportRisks": [],
+    "indirectSupportRisks": [
+      "R0003-001",
+      "R0008",
+      "R0015",
+      "R0016",
+      "R0016-001",
+      "R0017-001",
+      "R0028",
+      "R0030",
+      "R0030-001",
+      "R0090"
+    ],
     "updated": "2026-02-27"
   }
 }

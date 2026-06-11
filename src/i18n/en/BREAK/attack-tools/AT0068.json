@@ -11,6 +11,18 @@
         "title": "SecLists - OWASP",
         "link": "https://github.com/danielmiessler/SecLists"
       }
+    ],
+    "indirectSupportRisks": [
+      "R0005-001",
+      "R0005-002",
+      "R0030-001",
+      "R0037",
+      "R0083",
+      "R0083-001",
+      "R0088",
+      "R0090",
+      "R0132",
+      "R0140"
     ]
   }
 }

@@ -10,6 +10,20 @@
         "title": "OWASP Automated Threat: OAT019 Account Creation",
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-019_Account_Creation.html"
       }
+    ],
+    "avoidances": [
+      "A0002",
+      "A0004",
+      "A0005",
+      "A0007",
+      "A0007-002",
+      "A0009",
+      "A0010",
+      "A0015",
+      "A0016",
+      "A0019-002",
+      "A0021",
+      "A0022"
     ]
   },
   "R0030-001": {

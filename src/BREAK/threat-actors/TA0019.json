@@ -12,7 +12,9 @@
         "link": "https://3g.china.com/act/news/945/20211223/40632112.html"
       }
     ],
-    "buildAttackTools": [],
+    "buildAttackTools": [
+      "AT0050"
+    ],
     "useAttackTools": [
       "AT0001",
       "AT0002",
@@ -27,9 +29,8 @@
       "AT0034-001",
       "AT0034-002",
       "AT0046",
-      "AT0050",
-      "AT0053",
       "AT0051",
+      "AT0053",
       "AT0058"
     ],
     "directCauseRisks": [
@@ -48,7 +49,18 @@
       "R0119",
       "R0130"
     ],
-    "indirectSupportRisks": [],
+    "indirectSupportRisks": [
+      "R0001-002",
+      "R0003",
+      "R0003-003",
+      "R0003-004",
+      "R0005",
+      "R0005-001",
+      "R0009",
+      "R0016-001",
+      "R0047",
+      "R0050"
+    ],
     "updated": "2026-02-27"
   }
 }

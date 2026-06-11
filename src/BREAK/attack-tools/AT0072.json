@@ -12,7 +12,10 @@
       "R0142",
       "R0151"
     ],
-    "indirectSupportRisks": [],
+    "indirectSupportRisks": [
+      "R0088",
+      "R0143"
+    ],
     "references": [
       {
         "title": "Microsoft Digital Defense Report 2025 - AiTM Phishing",

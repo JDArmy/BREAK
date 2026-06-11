@@ -11,6 +11,18 @@
         "title": "Public WiFi Security Risk Advisory - CNCERT",
         "link": "https://www.cert.org.cn/"
       }
+    ],
+    "indirectSupportRisks": [
+      "R0083",
+      "R0083-001",
+      "R0143",
+      "R0151",
+      "R0005-001",
+      "R0005-002",
+      "R0030",
+      "R0030-001",
+      "R0032-001",
+      "R0032-002"
     ]
   }
 }

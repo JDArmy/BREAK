@@ -7,6 +7,18 @@
         "title": "Keylogger - MITRE ATT&CK T1056.001",
         "link": "https://attack.mitre.org/techniques/T1056/001/"
       }
+    ],
+    "indirectSupportRisks": [
+      "R0032-001",
+      "R0032-002",
+      "R0032-003",
+      "R0035-001",
+      "R0043",
+      "R0043-001",
+      "R0044",
+      "R0045",
+      "R0083",
+      "R0083-001"
     ]
   }
 }

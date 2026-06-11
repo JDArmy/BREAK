@@ -10,6 +10,18 @@
         "title": "OWASP Automated Threat: OAT007 Credential Cracking",
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-007_Credential_Cracking.html"
       }
+    ],
+    "avoidances": [
+      "A0007",
+      "A0011",
+      "A0012",
+      "A0018-001",
+      "A0019",
+      "A0021",
+      "A0024",
+      "A0025-001",
+      "A0039",
+      "A0063"
     ]
   },
   "R0032-001": {

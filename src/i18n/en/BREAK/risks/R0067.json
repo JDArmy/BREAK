@@ -10,6 +10,27 @@
         "title": "Data from Information Repositories (T1213) - MITRE ATT&CK",
         "link": "https://attack.mitre.org/techniques/T1213/"
       }
+    ],
+    "avoidances": [
+      "A0006-006",
+      "A0017-001",
+      "A0023-001",
+      "A0024",
+      "A0025",
+      "A0025-003",
+      "A0025-004",
+      "A0028",
+      "A0044",
+      "A0049",
+      "A0049-001",
+      "A0050-001",
+      "A0050-002",
+      "A0050-003",
+      "A0051",
+      "A0054",
+      "A0057",
+      "A0059",
+      "A0062"
     ]
   }
 }

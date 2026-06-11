@@ -12,7 +12,12 @@
         "link": "https://shxca.miit.gov.cn/xxgk/zcwj/wjfb/art/2022/art_13487222ca2340358f61fc9dcf264cd3.html"
       }
     ],
-    "buildAttackTools": [],
+    "buildAttackTools": [
+      "AT0053-001",
+      "AT0063",
+      "AT0071",
+      "AT0073"
+    ],
     "useAttackTools": [
       "AT0001",
       "AT0001-002",
@@ -23,9 +28,9 @@
       "AT0039-002",
       "AT0040",
       "AT0040-001",
-      "AT0053-001",
+      "AT0051",
       "AT0053-002",
-      "AT0051"
+      "AT0070"
     ],
     "directCauseRisks": [
       "R0038",
@@ -38,7 +43,18 @@
       "R0115",
       "R0146"
     ],
-    "indirectSupportRisks": []
+    "indirectSupportRisks": [
+      "R0002",
+      "R0003-003",
+      "R0003-004",
+      "R0005",
+      "R0005-001",
+      "R0030",
+      "R0030-004",
+      "R0030-005",
+      "R0030-006",
+      "R0030-007"
+    ]
   },
   "TA0015-001": {
     "title": "Fraud Kingpin",
@@ -61,6 +77,17 @@
     "directCauseRisks": [
       "R0095"
     ],
-    "indirectSupportRisks": []
+    "indirectSupportRisks": [
+      "R0002",
+      "R0003-003",
+      "R0003-004",
+      "R0005",
+      "R0005-001",
+      "R0011-002",
+      "R0030-004",
+      "R0030-005",
+      "R0030-006",
+      "R0060"
+    ]
   }
 }

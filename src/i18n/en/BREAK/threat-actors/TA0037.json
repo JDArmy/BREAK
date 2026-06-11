@@ -11,6 +11,25 @@
         "title": "E-commerce After-sales Fraud Governance",
         "link": "https://www.samr.gov.cn/"
       }
+    ],
+    "indirectSupportRisks": [
+      "R0008",
+      "R0015",
+      "R0016",
+      "R0016-001",
+      "R0017-001",
+      "R0028",
+      "R0030",
+      "R0030-001",
+      "R0090"
+    ],
+    "buildAttackTools": [
+      "AT0023"
+    ],
+    "useAttackTools": [
+      "AT0003",
+      "AT0005",
+      "AT0051"
     ]
   }
 }

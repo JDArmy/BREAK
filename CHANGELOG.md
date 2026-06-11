@@ -1,5 +1,18 @@
 # Change log
 
+## 2.4.0
+
+- 补全：AT indirectSupportRisks 空值率 50% → 6.8%（38个AT补充间接关联风险）
+  - 基于共享规避手段推导，每个AT最多保留10个最相关的间接风险
+- 补全：TA indirectSupportRisks 空值率 73.6% → 0%（51个TA全部补充间接关联风险）
+  - 基于使用的AT关联的indirectSupportRisks推导
+- 补全：TA buildAttackTools 空值率 60.4% → 26.4%（17个TA补充自建工具关联）
+  - 基于领域知识严格映射，仅对确实开发工具的TA补充
+  - 剩余14个空值为合理空值（众包工人、打码员、狗推等不自建工具）
+- 关联：21个孤儿 Avoidance 全部关联到对应 Risk
+- 关联：29个孤儿 Risk 全部关联到 BusinessScene 和/或 AT
+- 所有变更同步英文 i18n 翻译文件
+
 ## 2.3.1
 
 - 更新：ROADMAP.md 如实标注 Phase 1 完成状态

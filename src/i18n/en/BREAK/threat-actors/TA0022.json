@@ -8,10 +8,11 @@
         "link": "https://en.wikipedia.org/wiki/Industrial_espionage"
       }
     ],
-    "buildAttackTools": [],
+    "buildAttackTools": [
+      "AT0005"
+    ],
     "useAttackTools": [
       "AT0004",
-      "AT0005",
       "AT0013",
       "AT0032-001",
       "AT0033",
@@ -38,6 +39,17 @@
       "R0112-004",
       "R0112-005"
     ],
-    "indirectSupportRisks": []
+    "indirectSupportRisks": [
+      "R0005-002",
+      "R0007-001",
+      "R0007-003",
+      "R0028",
+      "R0030-001",
+      "R0036-001",
+      "R0053",
+      "R0073",
+      "R0082",
+      "R0090"
+    ]
   }
 }

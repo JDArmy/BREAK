@@ -11,6 +11,25 @@
         "title": "Over 40 Arrested! Mashang Consumer Finance Assists in Cracking Down on Anti-Collection Gangs",
         "link": "https://news.sina.com.cn/shangxunfushen/2024-01-09/detail-inaaxhhf5072158.shtml"
       }
+    ],
+    "indirectSupportRisks": [
+      "R0001",
+      "R0002",
+      "R0003",
+      "R0003-003",
+      "R0003-004",
+      "R0005",
+      "R0005-001",
+      "R0029-002",
+      "R0030",
+      "R0030-001"
+    ],
+    "buildAttackTools": [
+      "AT0023"
+    ],
+    "useAttackTools": [
+      "AT0001",
+      "AT0034-001"
     ]
   }
 }

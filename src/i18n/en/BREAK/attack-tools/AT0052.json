@@ -19,7 +19,9 @@
       "R0112-004",
       "R0112-005"
     ],
-    "indirectSupportRisks": []
+    "indirectSupportRisks": [
+      "R0112-002"
+    ]
   },
   "AT0052-001": {
     "title": "KON-Boot",
@@ -40,7 +42,10 @@
       "R0112",
       "R0112-003"
     ],
-    "indirectSupportRisks": []
+    "indirectSupportRisks": [
+      "R0112-002",
+      "R0112-005"
+    ]
   },
   "AT0052-002": {
     "title": "USB Killer",
@@ -61,7 +66,10 @@
       "R0112-003",
       "R0112-004"
     ],
-    "indirectSupportRisks": []
+    "indirectSupportRisks": [
+      "R0112-002",
+      "R0112-005"
+    ]
   },
   "AT0052-003": {
     "title": "BadUSB",
@@ -84,6 +92,8 @@
       "R0112-003",
       "R0112-005"
     ],
-    "indirectSupportRisks": []
+    "indirectSupportRisks": [
+      "R0112-002"
+    ]
   }
 }

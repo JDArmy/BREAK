@@ -11,6 +11,18 @@
         "title": "Phishing Attack Toolkit Technical Analysis",
         "link": "https://www.cert.org.cn/"
       }
+    ],
+    "indirectSupportRisks": [
+      "R0142",
+      "R0143",
+      "R0083",
+      "R0083-001",
+      "R0151",
+      "R0005-001",
+      "R0005-002",
+      "R0030",
+      "R0030-001",
+      "R0032-001"
     ]
   }
 }

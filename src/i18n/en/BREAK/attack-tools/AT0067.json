@@ -11,6 +11,13 @@
         "title": "QR Code Security Risks and Prevention",
         "link": "https://www.cert.org.cn/"
       }
+    ],
+    "indirectSupportRisks": [
+      "R0083",
+      "R0083-001",
+      "R0088",
+      "R0143",
+      "R0151"
     ]
   }
 }

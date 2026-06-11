@@ -14,6 +14,15 @@
         "title": "T1566 Phishing - MITRE ATT&CK",
         "link": "https://attack.mitre.org/techniques/T1566/"
       }
+    ],
+    "avoidances": [
+      "A0016",
+      "A0016-002",
+      "A0019",
+      "A0051",
+      "A0059",
+      "A0064",
+      "A0066"
     ]
   },
   "R0084-001": {

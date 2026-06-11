@@ -11,6 +11,18 @@
         "title": "API Security Attack and Defense Practice",
         "link": "https://portswigger.net/web-security/api-testing"
       }
+    ],
+    "indirectSupportRisks": [
+      "R0002",
+      "R0009",
+      "R0029-002",
+      "R0118",
+      "R0001-001",
+      "R0001-002",
+      "R0003",
+      "R0003-001",
+      "R0003-002",
+      "R0003-003"
     ]
   }
 }

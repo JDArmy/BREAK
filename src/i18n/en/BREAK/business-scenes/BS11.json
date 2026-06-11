@@ -43,6 +43,11 @@
       "RS10": {
         "title": "Endpoint Adversarial Risk"
       }
-    }
+    },
+    "risks": [
+      "R0077",
+      "R0147",
+      "R0155"
+    ]
   }
 }

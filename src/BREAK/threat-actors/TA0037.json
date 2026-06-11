@@ -12,10 +12,12 @@
         "link": "https://www.samr.gov.cn/"
       }
     ],
-    "buildAttackTools": [],
+    "buildAttackTools": [
+      "AT0023"
+    ],
     "useAttackTools": [
-      "AT0005",
       "AT0003",
+      "AT0005",
       "AT0051"
     ],
     "directCauseRisks": [
@@ -24,7 +26,17 @@
       "R0136",
       "R0139"
     ],
-    "indirectSupportRisks": [],
+    "indirectSupportRisks": [
+      "R0008",
+      "R0015",
+      "R0016",
+      "R0016-001",
+      "R0017-001",
+      "R0028",
+      "R0030",
+      "R0030-001",
+      "R0090"
+    ],
     "updated": "2026-02-27"
   }
 }

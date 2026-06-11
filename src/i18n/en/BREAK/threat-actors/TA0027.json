@@ -18,6 +18,17 @@
     "directCauseRisks": [
       "R0107"
     ],
-    "indirectSupportRisks": []
+    "indirectSupportRisks": [
+      "R0001",
+      "R0001-002",
+      "R0002",
+      "R0003-003",
+      "R0005-001",
+      "R0012",
+      "R0016-001",
+      "R0034",
+      "R0050",
+      "R0088"
+    ]
   }
 }

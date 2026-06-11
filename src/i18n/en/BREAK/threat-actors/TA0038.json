@@ -12,15 +12,24 @@
         "link": "https://www.mps.gov.cn/"
       }
     ],
-    "buildAttackTools": [],
+    "buildAttackTools": [
+      "AT0026"
+    ],
     "useAttackTools": [
-      "AT0060",
-      "AT0034-001"
+      "AT0034-001",
+      "AT0060"
     ],
     "directCauseRisks": [
       "R0060",
       "R0121"
     ],
-    "indirectSupportRisks": []
+    "indirectSupportRisks": [
+      "R0001",
+      "R0002",
+      "R0029-002",
+      "R0029-004",
+      "R0062",
+      "R0099"
+    ]
   }
 }

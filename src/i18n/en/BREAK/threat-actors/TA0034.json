@@ -11,6 +11,23 @@
         "title": "Supreme People's Court Provisions on Several Issues Concerning the Application of Law in Adjudicating Food and Drug Dispute Cases",
         "link": "https://www.court.gov.cn/"
       }
+    ],
+    "indirectSupportRisks": [
+      "R0008",
+      "R0015",
+      "R0016",
+      "R0016-001",
+      "R0017-001",
+      "R0028",
+      "R0030",
+      "R0030-001",
+      "R0090"
+    ],
+    "buildAttackTools": [
+      "AT0005"
+    ],
+    "useAttackTools": [
+      "AT0003"
     ]
   }
 }

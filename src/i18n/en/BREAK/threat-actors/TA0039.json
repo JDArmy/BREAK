@@ -15,7 +15,18 @@
       "R0121",
       "R0150"
     ],
-    "indirectSupportRisks": [],
+    "indirectSupportRisks": [
+      "R0032-001",
+      "R0032-002",
+      "R0032-003",
+      "R0035-001",
+      "R0043",
+      "R0043-001",
+      "R0045",
+      "R0060",
+      "R0062",
+      "R0116-001"
+    ],
     "references": [
       {
         "title": "FBI IC3 Cryptocurrency Fraud Report",

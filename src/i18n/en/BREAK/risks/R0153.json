@@ -6,10 +6,11 @@
     "complexity": "Intermediate",
     "influence": "Can lead to sensitive data leakage, compliance violation penalties, trade secret exfiltration, loss of customer trust, and irreversible intellectual property loss.",
     "avoidances": [
-      "A0083",
       "A0035",
+      "A0068",
       "A0080",
-      "A0068"
+      "A0083",
+      "A0094"
     ],
     "references": [
       {

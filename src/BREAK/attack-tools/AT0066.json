@@ -25,7 +25,9 @@
       "R0142",
       "R0144"
     ],
-    "indirectSupportRisks": [],
+    "indirectSupportRisks": [
+      "R0143"
+    ],
     "updated": "2026-02-27"
   }
 }

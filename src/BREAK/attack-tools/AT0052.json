@@ -19,7 +19,9 @@
       "R0112-004",
       "R0112-005"
     ],
-    "indirectSupportRisks": [],
+    "indirectSupportRisks": [
+      "R0112-002"
+    ],
     "updated": "2024-01-30"
   },
   "AT0052-001": {
@@ -42,7 +44,10 @@
       "R0112",
       "R0112-003"
     ],
-    "indirectSupportRisks": [],
+    "indirectSupportRisks": [
+      "R0112-002",
+      "R0112-005"
+    ],
     "updated": "2026-05-27"
   },
   "AT0052-002": {
@@ -64,7 +69,10 @@
       "R0112-003",
       "R0112-004"
     ],
-    "indirectSupportRisks": [],
+    "indirectSupportRisks": [
+      "R0112-002",
+      "R0112-005"
+    ],
     "updated": "2026-05-27"
   },
   "AT0052-003": {
@@ -88,7 +96,9 @@
       "R0112-003",
       "R0112-005"
     ],
-    "indirectSupportRisks": [],
+    "indirectSupportRisks": [
+      "R0112-002"
+    ],
     "updated": "2026-05-27"
   }
 }

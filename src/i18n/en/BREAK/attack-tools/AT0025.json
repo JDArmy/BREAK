@@ -15,6 +15,18 @@
         "title": "JS Reverse Engineering: AST Restoration of Geetest Obfuscated JS in Practice",
         "link": "https://astexplorer.net/"
       }
+    ],
+    "indirectSupportRisks": [
+      "R0034",
+      "R0037",
+      "R0048",
+      "R0051",
+      "R0051-001",
+      "R0001-001",
+      "R0005-002",
+      "R0007",
+      "R0007-001",
+      "R0007-002"
     ]
   }
 }

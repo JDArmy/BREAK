@@ -10,6 +10,11 @@
         "title": "Malware - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Malware"
       }
+    ],
+    "avoidances": [
+      "A0051",
+      "A0059",
+      "A0092"
     ]
   }
 }

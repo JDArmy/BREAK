@@ -2,18 +2,32 @@
   "TA0041": {
     "title": "AI工具滥用者",
     "description": "利用专门为网络犯罪设计的AI工具（如WormGPT、Mythos等）实施各类网络攻击的行为者。区别于TA0012恶意软件开发者是AI工具的制造者，AI工具滥用者是这些犯罪AI工具的终端使用者。主要特征包括：①犯罪AI工具使用：使用WormGPT、Mythos、FraudGPT等专门为网络犯罪定制的大语言模型，这些工具不受安全限制，可生成钓鱼邮件、恶意代码和社会工程话术；②AI增强钓鱼：利用AI工具批量生成个性化和高度逼真的钓鱼邮件，大幅提高钓鱼成功率；③AI辅助社会工程：使用AI工具分析目标信息，生成定制化的社会工程攻击方案；④AI恶意代码生成：利用AI工具辅助编写恶意代码、漏洞利用脚本和攻击工具；⑤自动化攻击编排：使用AI工具自动化攻击链的规划和执行，提高攻击效率。AI工具滥用者代表了网络犯罪向AI化转型的新趋势，使原本需要高级技能的攻击变得大众化。",
-    "buildAttackTools": [],
-    "useAttackTools": [
-      "AT0057",
+    "buildAttackTools": [
+      "AT0053-001",
+      "AT0053-002",
       "AT0056",
+      "AT0057",
+      "AT0058",
       "AT0059"
     ],
+    "useAttackTools": [],
     "directCauseRisks": [
       "R0084-001",
       "R0116",
       "R0118"
     ],
-    "indirectSupportRisks": [],
+    "indirectSupportRisks": [
+      "R0001-001",
+      "R0001-002",
+      "R0002",
+      "R0003",
+      "R0003-001",
+      "R0003-002",
+      "R0003-003",
+      "R0003-004",
+      "R0005-001",
+      "R0005-002"
+    ],
     "references": [
       {
         "title": "AI Goes on Offense: How LLMs Are Redefining the Cybercrime Landscape",

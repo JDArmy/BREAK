@@ -12,7 +12,9 @@
         "link": "https://news.sina.com.cn/shangxunfushen/2024-01-09/detail-inaaxhhf5072158.shtml"
       }
     ],
-    "buildAttackTools": [],
+    "buildAttackTools": [
+      "AT0023"
+    ],
     "useAttackTools": [
       "AT0001",
       "AT0034-001"
@@ -20,7 +22,18 @@
     "directCauseRisks": [
       "R0096-001"
     ],
-    "indirectSupportRisks": [],
+    "indirectSupportRisks": [
+      "R0001",
+      "R0002",
+      "R0003",
+      "R0003-003",
+      "R0003-004",
+      "R0005",
+      "R0005-001",
+      "R0029-002",
+      "R0030",
+      "R0030-001"
+    ],
     "updated": "2024-01-30"
   }
 }

@@ -50,7 +50,10 @@
       "R0066",
       "R0095"
     ],
-    "indirectSupportRisks": []
+    "indirectSupportRisks": [
+      "R0115",
+      "R0119"
+    ]
   },
   "AT0053-002": {
     "title": "AI Deepfake Video",

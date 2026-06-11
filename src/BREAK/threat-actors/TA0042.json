@@ -16,7 +16,18 @@
       "R0084",
       "R0150"
     ],
-    "indirectSupportRisks": [],
+    "indirectSupportRisks": [
+      "R0003",
+      "R0003-003",
+      "R0003-004",
+      "R0005",
+      "R0005-001",
+      "R0028",
+      "R0030",
+      "R0030-001",
+      "R0090",
+      "R0116-001"
+    ],
     "references": [
       {
         "title": "UNODC: Transnational Organized Crime in Southeast Asia",

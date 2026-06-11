@@ -8,15 +8,18 @@
         "link": "https://en.wikipedia.org/wiki/Insider_threat"
       }
     ],
-    "buildAttackTools": [],
+    "buildAttackTools": [
+      "AT0064",
+      "AT0065"
+    ],
     "useAttackTools": [
       "AT0013",
+      "AT0033",
       "AT0048",
       "AT0052",
       "AT0052-001",
       "AT0052-002",
       "AT0052-003",
-      "AT0033",
       "AT0054",
       "AT0055"
     ],
@@ -37,7 +40,18 @@
       "R0112-005",
       "R0149"
     ],
-    "indirectSupportRisks": [],
+    "indirectSupportRisks": [
+      "R0001",
+      "R0026",
+      "R0032-004",
+      "R0036-001",
+      "R0050",
+      "R0050-001",
+      "R0073",
+      "R0083",
+      "R0083-001",
+      "R0111"
+    ],
     "updated": "2026-05-28"
   }
 }
