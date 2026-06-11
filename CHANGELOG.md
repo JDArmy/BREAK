@@ -1,5 +1,12 @@
 # Change log
 
+## 2.6.1
+
+- 修复：详情抽屉中 References 标题在英文模式下仍显示中文
+  - 改造 ReferenceList 组件，从直接渲染 BREAK 数据改为通过 $t() 获取翻译标题
+  - ReferenceList 接收 type + entityKey props，自动构建 i18n 路径
+  - link 仍从中文 BREAK 源获取（结构数据），title 通过 $t() 获取翻译
+
 ## 2.6.0
 
 - 重构：i18n 架构从"全量复制 JSON"迁移至"单一数据源 + 运行时合并"

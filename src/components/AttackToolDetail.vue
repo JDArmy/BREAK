@@ -19,10 +19,6 @@ const avoidanceKey = ref("");
 
 const { getInnerDrawerWidth } = useDrawerWidth();
 
-const getAttackToolReferences = (atKey: string) => {
-  return BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].references;
-};
-
 const getAttackToolAvoidances = (atKey: string) => {
   return BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].avoidances;
 };
@@ -76,9 +72,9 @@ const getAttackToolAvoidances = (atKey: string) => {
         }}</el-button
       >
     </div>
-    <div class="desc" v-if="getAttackToolReferences(atKey).length > 0">
+    <div class="desc" v-if="BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].references?.length > 0">
       <strong>{{ $t("references") }}:&nbsp;</strong>
-      <ReferenceList :references="getAttackToolReferences(atKey)" />
+      <ReferenceList type="attackTools" :entityKey="atKey" />
     </div>
   </el-drawer>
   <!-- 手段详情页 -->

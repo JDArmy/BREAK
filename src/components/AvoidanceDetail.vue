@@ -13,10 +13,6 @@ defineProps<{
 defineEmits(["drawerClose"]);
 
 const { getInnerDrawerWidth } = useDrawerWidth();
-
-const getAvoidanceReferences = (aKey: string) => {
-  return BREAK.avoidances[aKey as keyof typeof BREAK.avoidances].references;
-};
 </script>
 
 <template>
@@ -58,9 +54,9 @@ const getAvoidanceReferences = (aKey: string) => {
       <strong>{{ $t("limitation") }}:&nbsp;</strong>
       {{ $t(`BREAK.avoidances.${aKey}.limitation`) }}
     </div>
-    <div class="desc" v-if="getAvoidanceReferences(aKey).length > 0">
+    <div class="desc" v-if="BREAK.avoidances[aKey as keyof typeof BREAK.avoidances].references?.length > 0">
       <strong>{{ $t("references") }}:&nbsp;</strong>
-      <ReferenceList :references="getAvoidanceReferences(aKey)" />
+      <ReferenceList type="avoidances" :entityKey="aKey" />
     </div>
   </el-drawer>
 </template>

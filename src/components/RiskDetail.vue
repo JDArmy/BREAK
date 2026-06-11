@@ -25,9 +25,6 @@ const attackToolKey = ref("");
 
 const { getDrawerWidth } = useDrawerWidth();
 
-const getReferences = (rKey: string) =>
-  risks[rKey as keyof typeof risks].references;
-
 const getRiskDescriptionTools = (rKey: string) => {
   return Object.keys(BREAK.attackTools).filter((atKey) => {
     const at = BREAK.attackTools[atKey as keyof typeof BREAK.attackTools];
@@ -93,9 +90,9 @@ const getRiskDescriptionTools = (rKey: string) => {
         }}</el-button
       >
     </div>
-    <div class="desc" v-if="getReferences(rKey).length > 0">
+    <div class="desc" v-if="risks[rKey as keyof typeof risks].references?.length > 0">
       <strong>{{ $t("riskReference") }}:&nbsp;</strong>
-      <ReferenceList :references="getReferences(rKey)" />
+      <ReferenceList type="risks" :entityKey="rKey" />
     </div>
     <div class="desc" v-if="getRiskDescriptionTools(rKey).length > 0">
       <strong>{{ $t("attackTools") }}:&nbsp;</strong>
