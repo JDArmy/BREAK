@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { onMounted, ref, watch } from "vue";
+import { onMounted, ref, watch, reactive, nextTick } from "vue";
 import BREAK from "@/BREAK";
 import { useI18n } from "vue-i18n";
+import { useTheme } from "@/composables/useTheme";
 
 import RelationGraph, {
   type RGJsonData,
@@ -14,6 +15,7 @@ const props = defineProps<{
 }>();
 
 const { t } = useI18n();
+const { isDark } = useTheme();
 
 watch(
   () => props.rKey,
@@ -24,12 +26,29 @@ watch(
 
 const graphRef$ = ref<RelationGraph>();
 
-const graphOptions: RGOptions = {
+const graphOptions: RGOptions = reactive({
   allowShowMiniToolBar: false, //是否显示工具栏
   disableZoom: true, //是否禁用缩放
   disableDragCanvas: true, //是否禁用拖拽画布
   defaultExpandHolderPosition: "hide",
-};
+  backgroundColor: "transparent",
+  defaultLineColor: "#999999",
+  defaultLineFontColor: "#666666",
+  defaultNodeFontColor: "#333333",
+  defaultNodeBorderColor: "#efefef",
+});
+
+// 暗色模式下动态更新图谱颜色
+watch(isDark, (dark) => {
+  graphOptions.backgroundColor = dark ? "#0f172a" : "#ffffff";
+  graphOptions.defaultLineColor = dark ? "#475569" : "#999999";
+  graphOptions.defaultLineFontColor = dark ? "#94a3b8" : "#666666";
+  graphOptions.defaultNodeFontColor = dark ? "#e2e8f0" : "#333333";
+  graphOptions.defaultNodeBorderColor = dark ? "#334155" : "#efefef";
+  nextTick(() => {
+    graphRef$?.value?.getInstance()?.refresh();
+  });
+}, { immediate: true });
 graphOptions.layout = {
   layoutLabel: "中心布局",
   layoutName: "center",

@@ -3,6 +3,7 @@ import { onMounted, ref, reactive, watch, nextTick } from "vue";
 import BREAK from "@/BREAK";
 import { useRoute, useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
+import { useTheme } from "@/composables/useTheme";
 
 import RelationGraph, {
   type RGJsonData,
@@ -14,6 +15,7 @@ import type { DropdownInstance } from "element-plus";
 const route = useRoute();
 const router = useRouter();
 const { t, locale } = useI18n();
+const { isDark } = useTheme();
 
 enum RelationType {
   risk = "risk",
@@ -69,7 +71,25 @@ const graphOptions: RGOptions = reactive({
   defaultNodeHeight: 120,
   moveToCenterWhenRefresh: true,
   zoomToFitWhenRefresh: true,
+  backgroundColor: "transparent",
+  defaultLineColor: "#999999",
+  defaultLineFontColor: "#666666",
+  defaultNodeFontColor: "#333333",
+  defaultNodeBorderColor: "#efefef",
 });
+
+// 暗色模式下动态更新图谱颜色
+watch(isDark, (dark) => {
+  graphOptions.backgroundColor = dark ? "#0f172a" : "#ffffff";
+  graphOptions.defaultLineColor = dark ? "#475569" : "#999999";
+  graphOptions.defaultLineFontColor = dark ? "#94a3b8" : "#666666";
+  graphOptions.defaultNodeFontColor = dark ? "#e2e8f0" : "#333333";
+  graphOptions.defaultNodeBorderColor = dark ? "#334155" : "#efefef";
+  // 需要刷新图谱以应用新颜色
+  nextTick(() => {
+    graphRef$?.value?.getInstance()?.refresh();
+  });
+}, { immediate: true });
 
 graphOptions.layout = {
   layoutLabel: "中心布局",
@@ -1109,5 +1129,31 @@ const doFilter = () => {
 :deep(svg text) {
   font-size: 14px !important;
   fill: var(--break-graph-text) !important;
+}
+</style>
+
+<style>
+/* 暗色模式下图谱 Canvas 内节点文本颜色 */
+html.dark .rel-node-text {
+  color: #e2e8f0 !important;
+}
+
+html.dark .rel-node-detect {
+  color: #e2e8f0 !important;
+}
+
+/* 暗色模式下工具栏背景和图标 */
+html.dark .c-mini-toolbar {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+}
+
+html.dark .c-mb-button {
+  color: #cbd5e1 !important;
+}
+
+html.dark .rel-toolbar {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
 }
 </style>
