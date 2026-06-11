@@ -2,10 +2,11 @@
 
 ## 2.6.1
 
-- 修复：详情抽屉中 References 标题在英文模式下仍显示中文
-  - 改造 ReferenceList 组件，从直接渲染 BREAK 数据改为通过 $t() 获取翻译标题
-  - ReferenceList 接收 type + entityKey props，自动构建 i18n 路径
-  - link 仍从中文 BREAK 源获取（结构数据），title 通过 $t() 获取翻译
+- 修复：详情抽屉和列表页 References 标题在英文模式下仍显示中文
+  - 根因：vue-i18n 的 t() 函数将 `|` 字符当作复数分隔符处理，导致含 `|` 的标题被截断
+  - 新增 `useSafeI18n` composable，提供 `safeT()` 函数直接从 messages 对象读取翻译值，绕过管道符解析
+  - ReferenceList 组件改用 safeT() 获取翻译标题
+  - AttackToolsView、AvoidancesView、ThreatActorsView 列表页的 references 标题改用 safeT()
 
 ## 2.6.0
 

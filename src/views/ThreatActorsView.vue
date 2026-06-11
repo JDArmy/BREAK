@@ -6,6 +6,9 @@ import RiskDetail from "@/components/RiskDetail.vue";
 import AttackToolDetail from "@/components/AttackToolDetail.vue";
 import iconRelation from "@/components/icons/iconRelation.vue";
 import { useAnchorTable } from "@/composables/useAnchorTable";
+import { useSafeI18n } from "@/composables/useSafeI18n";
+
+const { safeT } = useSafeI18n();
 
 // 攻击工具详情页
 const attackToolDrawer = ref(false);
@@ -136,14 +139,14 @@ const { getTableHeight, tableRowClassName } = useAnchorTable("taKey");
             <a v-if="scope.row.taKey && reference.link" :href="reference.link" target="_blank" rel="noopener noreferrer"
               ><el-icon><Link /></el-icon
               >{{
-                $t(
+                safeT(
                   `BREAK.threatActors.${scope.row.taKey}.references[${refIdx}].title`
                 )
               }}
             </a>
             <span v-else-if="scope.row.taKey">
               {{
-                $t(
+                safeT(
                   `BREAK.threatActors.${scope.row.taKey}.references[${refIdx}].title`
                 )
               }}

@@ -6,6 +6,9 @@ import { useRoute } from "vue-router";
 import { ref, watch } from "vue";
 import { CaretTop } from "@element-plus/icons-vue";
 import iconRelation from "@/components/icons/iconRelation.vue";
+import { useSafeI18n } from "@/composables/useSafeI18n";
+
+const { safeT } = useSafeI18n();
 
 const route = useRoute();
 
@@ -213,14 +216,14 @@ const scrollToTop = () => {
               <a v-if="scope.row.aKey && reference.link" :href="reference.link" target="_blank" rel="noopener noreferrer"
                 ><el-icon><Link /></el-icon
                 >{{
-                  $t(
+                  safeT(
                     `BREAK.avoidances.${scope.row.aKey}.references[${refIdx}].title`
                   )
                 }}
               </a>
               <span v-else-if="scope.row.aKey">
                 {{
-                  $t(
+                  safeT(
                     `BREAK.avoidances.${scope.row.aKey}.references[${refIdx}].title`
                   )
                 }}
