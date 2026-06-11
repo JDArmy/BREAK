@@ -4,11 +4,19 @@
     "category": "AC01",
     "definition": "也称CAPTCHA或验证码机制，通过设置挑战实现对人类操作和非人类操作区分。",
     "description": "一般通过行为验证码、图文验证码等方式设置人机挑战，或通过收集鼠标移动轨迹、点击事件、屏幕点按压力、滑动轨迹、请求访问速率、3D陀螺仪等数据并分析的方式进行人机识别。注：人脸识别通常被认为是生物特征识别（A0023）的一种。",
-    "limitation": "目前黑灰产催生出“打码平台”（AT0008），通过众包服务人工打码模式来完成突破人机识别挑战。对于人机识别挑战基本是降维打击，从理论上讲可导致所有显式的人机识别彻底失效。",
+    "limitation": "目前黑灰产催生出\"打码平台\"（AT0008），通过众包服务人工打码模式来完成突破人机识别挑战。对于人机识别挑战基本是降维打击，从理论上讲可导致所有显式的人机识别彻底失效。",
     "references": [
       {
         "title": "Captcha - 百度百科",
         "link": "https://baike.baidu.com/item/Captcha/9630117?fr=aladdin"
+      },
+      {
+        "title": "NIST SP 800-63B: Digital Identity Guidelines - Authentication and Lifecycle Management",
+        "link": "https://pages.nist.gov/800-63-3/sp800-63b.html",
+        "type": "standard",
+        "source": "NIST",
+        "language": "en",
+        "evidenceLevel": "high"
       }
     ],
     "updated": "2024-01-11"

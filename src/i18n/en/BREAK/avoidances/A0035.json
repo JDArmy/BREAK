@@ -8,6 +8,14 @@
       {
         "title": "Data Masking - Baidu Baike",
         "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E8%84%B1%E6%95%8F"
+      },
+      {
+        "title": "NIST SP 800-188: De-Identifying Government Datasets - Techniques and Governance",
+        "link": "https://csrc.nist.gov/pubs/sp/800/188/final",
+        "type": "standard",
+        "source": "NIST",
+        "language": "en",
+        "evidenceLevel": "high"
       }
     ]
   },
@@ -38,8 +46,8 @@
   "A0035-003": {
     "title": "Virtual Phone Number",
     "definition": "Replacing the user's real phone number with a virtual phone number during order fulfillment.",
-    "description": "Virtual phone numbers allow the other party in a transaction to communicate with the user through the virtual number without knowing the user's real phone number. Application scenarios include: transactions, delivery, customer service, complaints, and after-sales.",
-    "limitation": "Due to the limited number of available virtual numbers, tokens must be used to map multiple user phone numbers to a single virtual number, increasing the cost of calls. Virtual numbers are not friendly for SMS sending and receiving — for example, parcel lockers do not support virtual numbers, preventing consumers from receiving pickup codes.",
+    "description": "Virtual phone numbers allow the other party in a transaction to communicate with the user through the virtual number without knowing the user's real phone number. Application scenarios include: transactions, delivery, customer service, complaints, and after-sales. Starting in 2025, China's MIIT launched the 700-number range privacy protection service pilot, replacing platform-built virtual numbers with a dedicated number range that features high identifiability, unified regulation, and three-element binding (user, service provider, session cycle), further standardizing privacy protection number services.",
+    "limitation": "Due to the limited number of available virtual numbers, tokens must be used to map multiple user phone numbers to a single virtual number, increasing the cost of calls. Virtual numbers are not friendly for SMS sending and receiving — for example, parcel lockers do not support virtual numbers, preventing consumers from receiving pickup codes. Additionally, some enterprises use mobile phone numbers as intermediary numbers for bulk commercial marketing calls or even fraud under the guise of user privacy protection. The introduction of the 700 dedicated number range helps address this issue, but industry regulation is still being improved.",
     "references": [
       {
         "title": "Virtual Numbers: Who Are They Really Protecting?",

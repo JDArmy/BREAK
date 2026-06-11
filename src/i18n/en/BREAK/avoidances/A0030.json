@@ -8,6 +8,14 @@
       {
         "title": "Honeypot - Baidu Baike",
         "link": "https://baike.baidu.com/item/%E8%9C%9C%E7%BD%90"
+      },
+      {
+        "title": "MITRE D3FEND: Connected Honeynet Technique",
+        "link": "https://d3fend.mitre.org/technique/d3f:ConnectedHoneynet/",
+        "type": "standard",
+        "source": "MITRE",
+        "language": "en",
+        "evidenceLevel": "high"
       }
     ]
   }

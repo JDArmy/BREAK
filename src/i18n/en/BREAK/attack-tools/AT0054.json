@@ -6,6 +6,14 @@
       {
         "title": "Vulnerability - Baidu Baike",
         "link": "https://baike.baidu.com/item/%E6%BC%8F%E6%B4%9E/1688129?fromModule=disambiguation"
+      },
+      {
+        "title": "MITRE ATT&CK - Software",
+        "link": "https://attack.mitre.org/software/",
+        "type": "standard",
+        "source": "MITRE",
+        "language": "en",
+        "evidenceLevel": "high"
       }
     ],
     "avoidances": [

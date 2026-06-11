@@ -6,6 +6,14 @@
       {
         "title": "黑帽黑客 - 百度百科",
         "link": "https://baike.baidu.com/item/%E9%BB%91%E5%B8%BD%E9%BB%91%E5%AE%A2?fromModule=lemma_search-box"
+      },
+      {
+        "title": "MITRE ATT&CK - Threat Groups",
+        "link": "https://attack.mitre.org/groups/",
+        "type": "standard",
+        "source": "MITRE",
+        "language": "en",
+        "evidenceLevel": "high"
       }
     ],
     "buildAttackTools": [

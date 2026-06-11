@@ -9,6 +9,14 @@
       {
         "title": "数字证书 - 百度百科",
         "link": "https://baike.baidu.com/item/%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6"
+      },
+      {
+        "title": "RFC 5280: Internet X.509 Public Key Infrastructure Certificate and CRL Profile",
+        "link": "https://datatracker.ietf.org/doc/html/rfc5280",
+        "type": "standard",
+        "source": "IETF",
+        "language": "en",
+        "evidenceLevel": "high"
       }
     ],
     "updated": "2024-01-11"
@@ -59,7 +67,7 @@
     "title": "USB Key数字证书",
     "category": "AC01",
     "definition": "一种USB接口的硬件设备。它内置单片机或智能卡芯片，有一定的存储空间，可以存储用户的私钥以及数字证书。",
-    "description": "将客户端登录时所需的认证信息，（如用户名，密码，QQ，邮箱，电话，身份证号等等）均可写入到usb key内，可以写入算法，也可写入代码，从而让 key取代传统的“用户名+密码”的登录方式，实现插上Key才能登录网站或应用系统的目标。同时，开发人员还可以根据需要，设置usb key与传统的“用户名密码”方式并用的登录模式。用usb key做权限控制，设定不同的客户端拥有不同的权限。如某些客户端，只能使用网站或系统的部分功能，或不同的客户端，使用不同的网站或系统模块等，同时可以设定网站或系统使用时，是否一定要一直插着usb key或拔下usb key后多久网站或系统自动退出。",
+    "description": "将客户端登录时所需的认证信息，（如用户名，密码，QQ，邮箱，电话，身份证号等等）均可写入到usb key内，可以写入算法，也可写入代码，从而让 key取代传统的\"用户名+密码\"的登录方式，实现插上Key才能登录网站或应用系统的目标。同时，开发人员还可以根据需要，设置usb key与传统的\"用户名密码\"方式并用的登录模式。用usb key做权限控制，设定不同的客户端拥有不同的权限。如某些客户端，只能使用网站或系统的部分功能，或不同的客户端，使用不同的网站或系统模块等，同时可以设定网站或系统使用时，是否一定要一直插着usb key或拔下usb key后多久网站或系统自动退出。",
     "limitation": "设备易于遗失或被盗，可能导致敏感信息的不当访问。依赖于登录系统的支持情况，如果系统不支持USB Key登录，那么USB Key就无法使用。",
     "references": [
       {
