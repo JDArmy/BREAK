@@ -49,8 +49,8 @@
     "limitation": "账号封禁是一种止损策略，具备一定滞后性。",
     "references": [
       {
-        "title": "账号管理 - 维基百科",
-        "link": "https://en.wikipedia.org/wiki/Account_management"
+        "title": "Account Lockout - NIST SP 800-53",
+        "link": "https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final"
       }
     ],
     "updated": "2024-01-19"

@@ -42,8 +42,8 @@
     "limitation": "Account banning is a loss-mitigation strategy with a certain degree of latency.",
     "references": [
       {
-        "title": "Account Management - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Account_management"
+        "title": "Account Lockout - NIST SP 800-53",
+        "link": "https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final"
       }
     ]
   }
