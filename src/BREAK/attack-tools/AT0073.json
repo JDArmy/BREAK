@@ -1,0 +1,27 @@
+{
+  "AT0073": {
+    "title": "虚假来电伪装工具",
+    "description": "虚假来电伪装工具是结合AI语音克隆技术和来电号码篡改（Caller ID Spoofing）技术，在电话通话中伪装来电者身份和声音的组合攻击工具。区别于AT0059 AI语音克隆工具仅提供声音合成能力，虚假来电伪装工具增加了电信层面的号码伪造和通话链路操控能力。主要功能和攻击方式包括：①来电号码伪造：通过VoIP网关或SS7信令漏洞，篡改来电显示号码，使受害者的手机显示为目标人物或机构的真实号码；②AI实时语音克隆：在通话过程中实时将攻击者的声音转换为目标人物的声音，支持双向实时对话；③通话场景脚本：提供常见诈骗场景的对话脚本和应急应对话术；④多线路并发：支持同时向多个目标发起伪装来电，实施规模化诈骗；⑤通话录制与分析：自动录制通话内容，用于改进话术和后续勒索。该工具是电信诈骗向AI化升级的关键工具，2025年全球AI语音克隆诈骗损失已超过4000亿美元。",
+    "avoidances": ["A0084", "A0086", "A0073", "A0027"],
+    "couseRisks": ["R0120", "R0084", "R0095"],
+    "references": [
+      {
+        "title": "Google Android Fake Call Detection Announcement",
+        "link": "https://blog.google/technology/safety-security/android-scam-detection/",
+        "type": "vendor",
+        "source": "Google",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "FCC Caller ID Authentication Rules",
+        "link": "https://www.fcc.gov/call-authentication",
+        "type": "regulation",
+        "source": "FCC",
+        "language": "en",
+        "evidenceLevel": "high"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

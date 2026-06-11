@@ -11,7 +11,8 @@
       "A0006",
       "A0045",
       "A0064",
-      "A0065"
+      "A0065",
+      "A0083"
     ],
     "references": [
       {
@@ -19,11 +20,15 @@
         "link": "https://baike.baidu.com/item/AIGC/59988381?fr=ge_ala"
       },
       {
-        "title": "AIGC带来的安全隐患有哪些？",
-        "link": "https://baijiahao.baidu.com/s?id=1778727153917782040&wfr=spider&for=pc"
+        "title": "生成式人工智能服务管理暂行办法 - 国家互联网信息办公室",
+        "link": "https://www.cac.gov.cn/2023-07/13/c_1690897390291892.htm"
+      },
+      {
+        "title": "人工智能生成合成内容标识办法 - 国家互联网信息办公室",
+        "link": "https://www.cac.gov.cn/2025-03/14/c_1743654685896173.htm"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-11"
   },
   "R0071-001": {
     "title": "AIGC隐私泄露",
@@ -56,11 +61,15 @@
     ],
     "references": [
       {
+        "title": "生成式人工智能服务管理暂行办法 - 国家互联网信息办公室",
+        "link": "https://www.cac.gov.cn/2023-07/13/c_1690897390291892.htm"
+      },
+      {
         "title": "AIGC浪潮下的法律合规风险与防范",
         "link": "https://www.hnjzlaw.net/news/3/1451.html"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-11"
   },
   "R0071-003": {
     "title": "AI生成劣质内容",
@@ -79,9 +88,13 @@
       {
         "title": "AIGC - 百度百科",
         "link": "https://baike.baidu.com/item/AIGC/59988381"
+      },
+      {
+        "title": "人工智能生成合成内容标识办法 - 国家互联网信息办公室",
+        "link": "https://www.cac.gov.cn/2025-03/14/c_1743654685896173.htm"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-11"
   },
   "R0071-004": {
     "title": "AI幻觉风险",

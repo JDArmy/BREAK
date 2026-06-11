@@ -1,0 +1,43 @@
+{
+  "AT0075": {
+    "title": "ClickFix欺骗工具",
+    "description": "ClickFix欺骗工具是伪装成验证码修复或系统更新提示，诱骗用户执行恶意PowerShell或CMD命令的新型钓鱼工具。区别于AT0063钓鱼工具包通过伪造网页窃取信息，ClickFix利用用户对系统修复提示的信任心理，将恶意代码执行伪装成合法的系统操作。主要攻击手法包括：①验证码修复伪装：显示伪造的验证码显示异常提示，声称需要运行修复命令才能正常显示；②剪贴板劫持：将恶意命令复制到剪贴板，引导用户粘贴到终端或运行对话框中执行；③CAPTCHA绕过提示：伪装成CAPTCHA验证步骤，要求用户执行特定命令以证明自己是人类；④错误页面伪装：显示伪造的浏览器错误页面，提示用户运行修复脚本；⑤多步骤诱导：通过多步骤的交互式引导，逐步降低用户警惕性，最终诱骗执行恶意代码。ClickFix攻击在2025年被Proofpoint等安全厂商报告大幅增长，ENISA 2025威胁报告中也被列为新兴威胁。",
+    "avoidances": [
+      "A0051",
+      "A0078",
+      "A0016"
+    ],
+    "couseRisks": [
+      "R0154",
+      "R0084",
+      "R0028"
+    ],
+    "references": [
+      {
+        "title": "Security Brief: ClickFix Social Engineering Technique Floods Threat Landscape",
+        "link": "https://www.proofpoint.com/us/blog/threat-insight/security-brief-clickfix-social-engineering-technique-floods-threat-landscape",
+        "type": "vendor",
+        "source": "Proofpoint",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "ClickFix: How to Infect Your PC in Three Easy Steps",
+        "link": "https://krebsonsecurity.com/2025/03/clickfix-how-to-infect-your-pc-in-three-easy-steps/",
+        "type": "industry",
+        "source": "Krebs on Security",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "Beyond The Click: Unveiling Fake CAPTCHA Campaigns",
+        "link": "https://www.splunk.com/en_us/blog/security/unveiling-fake-captcha-clickfix-attacks.html",
+        "type": "vendor",
+        "source": "Splunk",
+        "language": "en",
+        "evidenceLevel": "medium"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

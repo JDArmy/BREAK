@@ -27,8 +27,8 @@
   },
   "R0032-002": {
     "title": "Password Spraying",
-    "definition": "Attempting to log in by brute-forcing a specific weak password against a large list of accounts to obtain valid credentials.",
-    "description": "Using brute force, dictionary (word list), and guessing attacks against the application's authentication process to identify accounts using specific weak login credentials — for example, enumerating accounts that use a particular weak password.",
+    "definition": "Attempting to log in by trying one or a few common weak passwords against a large number of accounts to obtain valid credentials.",
+    "description": "Unlike credential brute force which enumerates passwords for a single account, password spraying fixes one or a few common passwords and tries them against a large number of different user accounts to discover accounts using that weak password. This approach avoids triggering account lockout mechanisms that would result from multiple failed attempts on a single account.",
     "complexity": "Advanced",
     "influence": "Through unrestricted credential attacks, attackers may gain access to users with weak passwords on the current system, causing losses through further operations.",
     "references": [

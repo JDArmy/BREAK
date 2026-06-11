@@ -1,0 +1,37 @@
+{
+  "R0157": {
+    "title": "AI浏览器/手机黑箱风险",
+    "definition": "AI原生浏览器和手机中嵌入的AI功能缺乏透明度和可解释性，导致用户无法理解和控制AI决策行为的风险。",
+    "description": "AI浏览器/手机黑箱风险是指新一代AI原生设备（如AI PC、AI手机、AI浏览器）中嵌入的AI功能在决策过程中缺乏透明度和可解释性，使用户无法理解和控制AI的行为。区别于R0148 AI智能体工具滥用关注的是AI被恶意利用，AI黑箱风险关注的是AI系统本身的不透明性和不可控性。主要风险场景包括：①自主决策不可解释：AI助手自动执行操作（如自动回复邮件、自动购物、自动订阅服务）但无法向用户解释决策依据；②数据收集不透明：AI功能在后台持续收集用户行为数据，用户无法知悉数据收集的范围和用途；③偏见与歧视：AI决策可能包含训练数据中的偏见，导致不公平的推荐、筛选或定价；④错误决策不可纠正：AI的错误决策可能被用户误信为正确，且缺乏有效的纠正机制；⑤隐私泄露通道：AI功能的云端处理可能成为数据泄露的新通道。随着AI PC和AI手机的市场普及，该风险的影响面正在迅速扩大。",
+    "complexity": "中级",
+    "influence": "可导致用户自主权丧失、隐私持续泄露、不公平待遇、错误决策扩散，以及社会信任体系弱化。",
+    "avoidances": ["A0072", "A0089", "A0083"],
+    "references": [
+      {
+        "title": "EU AI Act: Transparency Requirements for AI Systems",
+        "link": "https://artificialintelligenceact.eu/",
+        "type": "regulation",
+        "source": "EU",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "NIST AI 100-4: AI Transparency and Explainability",
+        "link": "https://www.nist.gov/artificial-intelligence",
+        "type": "standard",
+        "source": "NIST",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "Mozilla: AI Black Box and Consumer Privacy",
+        "link": "https://foundation.mozilla.org/en/privacynotincluded/",
+        "type": "industry",
+        "source": "Mozilla",
+        "language": "en",
+        "evidenceLevel": "medium"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

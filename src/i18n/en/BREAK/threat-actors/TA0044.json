@@ -1,0 +1,36 @@
+{
+  "TA0044": {
+    "title": "Compute Scalper / Compute Black Market",
+    "description": "Cybercriminals who illegally acquire and resell GPU compute resources. With the explosive growth of GPU compute demand for AI large model training, compute scalpers acquire compute resources through illegal channels and resell them at high prices or use them for mining profit. Key characteristics include: ① Cloud account theft: stealing others' cloud service accounts and using their GPU quotas for mining or AI training; ② Compute reselling: marking up and reselling compute resources acquired from various channels to AI startups or research institutions with urgent needs; ③ Fake compute platforms: building fake compute sharing platforms to defraud users' compute resources or funds; ④ GPU scalping: hoarding and reselling GPU graphics cards in large quantities, driving up market prices and exploiting supply-demand imbalances for profit; ⑤ Compute-based money laundering: using cryptocurrency generated from compute mining for money laundering activities. Compute scalpers / compute black market operators are a new type of cybercrime spawned by the AI compute economy.",
+    "buildAttackTools": [],
+    "useAttackTools": ["AT0048", "AT0060"],
+    "couseRisks": ["R0158", "R0086"],
+    "references": [
+      {
+        "title": "FBI: Cloud Computing Fraud and Resource Abuse",
+        "link": "https://www.ic3.gov/",
+        "type": "regulation",
+        "source": "FBI",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "Unit 42: GPU Compute Abuse and Cloud Account Takeover",
+        "link": "https://unit42.paloaltonetworks.com/",
+        "type": "vendor",
+        "source": "Palo Alto Unit 42",
+        "language": "en",
+        "evidenceLevel": "medium"
+      },
+      {
+        "title": "Microsoft: GPU Supply Chain and Black Market Report",
+        "link": "https://www.microsoft.com/en-us/security/blog/",
+        "type": "vendor",
+        "source": "Microsoft",
+        "language": "en",
+        "evidenceLevel": "medium"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

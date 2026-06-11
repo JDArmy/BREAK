@@ -1,0 +1,36 @@
+{
+  "A0091": {
+    "title": "量子安全加密迁移",
+    "category": "AC01",
+    "definition": "将现有加密体系迁移到能够抵抗量子计算攻击的后量子密码学（PQC）算法的安全控制手段。",
+    "description": "量子安全加密迁移是将组织现有的RSA、ECC等经典加密算法替换为NIST标准化的后量子密码学（Post-Quantum Cryptography, PQC）算法的安全迁移过程。主要内容包括：①密码清查：对组织中所有使用加密的场景进行清查，包括TLS/SSL、数字签名、密钥交换、数据加密等；②风险评估：评估各加密场景面临的「先收集后解密」（Harvest Now, Decrypt Later）威胁等级；③算法选择：根据NIST FIPS 203（ML-KEM）、FIPS 204（ML-DSA）、FIPS 205（SLH-DSA）标准选择合适的后量子算法；④混合部署：在过渡期采用经典+后量子混合加密方案，确保向后兼容；⑤性能优化：解决后量子算法密钥和签名尺寸增大带来的性能和存储问题；⑥加密敏捷性：建立加密算法可快速替换的架构，为未来算法更新做准备。NIST于2024年发布了首批后量子密码标准，2026年进入规模化部署期，各国政府和金融机构已开始强制要求迁移。",
+    "limitation": "后量子算法的密钥和签名尺寸显著大于经典算法，可能导致性能下降和存储需求增加；迁移过程复杂且耗时，涉及大量系统和协议的改造；部分后量子算法的安全性仍需时间验证；向后兼容性可能导致混合部署期的安全薄弱环节；迁移成本较高，中小企业可能难以承担。",
+    "references": [
+      {
+        "title": "Post-Quantum Cryptography - NIST CSRC",
+        "link": "https://csrc.nist.gov/projects/post-quantum-cryptography",
+        "type": "standard",
+        "source": "NIST",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "NIST Releases First 3 Finalized Post-Quantum Encryption Standards",
+        "link": "https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards",
+        "type": "standard",
+        "source": "NIST",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "NIST FIPS 203, 204, and 205 Finalized: An Important Step Towards a Quantum-Safe Future",
+        "link": "https://cloudsecurityalliance.org/blog/2024/08/15/nist-fips-203-204-and-205-finalized-an-important-step-towards-a-quantum-safe-future",
+        "type": "industry",
+        "source": "Cloud Security Alliance",
+        "language": "en",
+        "evidenceLevel": "high"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

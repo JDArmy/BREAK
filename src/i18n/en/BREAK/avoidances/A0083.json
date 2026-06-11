@@ -1,0 +1,36 @@
+{
+  "A0083": {
+    "title": "Shadow AI Detection and Governance",
+    "category": "AC03",
+    "definition": "Security controls for detecting, monitoring, and governing employees' unauthorized use of third-party AI tools such as public large language models, AI writing assistants, and AI code generators.",
+    "description": "Shadow AI refers to employees inputting sensitive data into third-party AI services or using unvetted AI tools for business purposes without formal organizational approval or security assessment. With the proliferation of generative AI, employees spontaneously using tools like ChatGPT and Claude to improve productivity has become commonplace, but this also introduces risks such as data leakage, compliance violations, and intellectual property exposure. Shadow AI detection and governance includes: ① AI traffic identification: recognizing data requests to known AI service endpoints through network traffic analysis; ② DLP integration: adding AI service sensitive data transfer rules to DLP policies; ③ AI tool catalog management: establishing approved AI tool allowlists and unapproved tool blocklists; ④ Usage audit logging: recording AI tool usage time, users, data types, and interaction content summaries; ⑤ Security awareness education: explaining Shadow AI risks and compliance requirements to employees; ⑥ Alternative solutions: providing employees with security-vetted enterprise-grade AI tools as alternatives to public services.",
+    "limitation": "AI service endpoints and tools continuously emerge, making detection rules difficult to fully cover; AI usage in encrypted traffic is hard to identify; employees may bypass enterprise network detection through personal devices; excessive restrictions may reduce employee productivity and innovation; auditing AI tool functionality depends on vendor transparency.",
+    "references": [
+      {
+        "title": "2026 Cybersecurity Trends - Gartner",
+        "link": "https://www.gartner.com/en/information-technology",
+        "type": "vendor",
+        "source": "Gartner",
+        "language": "en",
+        "evidenceLevel": "medium"
+      },
+      {
+        "title": "Cisco 2025 Data Privacy Benchmark Study",
+        "link": "https://www.cisco.com/c/en/us/products/security/data-privacy.html",
+        "type": "vendor",
+        "source": "Cisco",
+        "language": "en",
+        "evidenceLevel": "medium"
+      },
+      {
+        "title": "NIST AI Risk Management Framework",
+        "link": "https://www.nist.gov/itl/ai-risk-management-framework",
+        "type": "standard",
+        "source": "NIST",
+        "language": "en",
+        "evidenceLevel": "high"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

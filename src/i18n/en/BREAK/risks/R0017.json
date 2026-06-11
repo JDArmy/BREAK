@@ -31,10 +31,10 @@
   },
   "R0017-002": {
     "title": "Subsidy Fraud",
-    "definition": "",
-    "description": "",
+    "definition": "Defrauding platform or government subsidies, rewards, or promotional funds through fabricated transactions, forged data, or other fraudulent means.",
+    "description": "Exploiting loopholes in platform subsidy policies to claim subsidy funds that should not be obtained, through methods such as fake transactions, order brushing, or fabricating user activity. Common tactics include: hiring brushers to create fake transaction records; using multiple accounts to repeatedly claim subsidies; running ghost rides or fake orders on ride-hailing or food delivery platforms to defraud subsidies; e-commerce sellers buying from themselves to exploit platform merchant discounts and rebates.",
     "complexity": "Intermediate",
-    "influence": "",
+    "influence": "Causes financial losses to platforms and governments, undermines fair competition, and distorts market resource allocation.",
     "references": [
       {
         "title": "Ride-Hailing Driver \"Ghost Rides\" to Brush Orders and Defraud Subsidies — Court: Fraud, Sentenced!",

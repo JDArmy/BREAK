@@ -1,7 +1,7 @@
 {
   "AT0002": {
     "title": "Mobile Phone Emulator",
-    "description": "Also known as a game emulator, it is a simulation program that can emulate an independent mobile phone system on a computer, enabling mobile games to run locally on a PC. Originally designed for player convenience, some features have been exploited by gray/black market actors as accomplices for running cheats. The value modification cheat features in some games rely on the Root permissions provided by the emulator. The multi-instance feature has also been exploited by script studios.",
+    "description": "Also known as Android emulator or game emulator, it is a simulation program that can emulate an independent mobile phone system on a computer, enabling mobile apps to run on a PC. Originally designed for players to run mobile games on computers, some features have been exploited by gray/black market actors. The Root permissions provided by emulators enable value modification cheats, while the multi-instance feature is used by script studios for batch AFK farming and traffic inflation. Additionally, emulators can be used for batch account registration, simulated click traffic inflation, ranking manipulation, and other black/gray market activities. Some emulators support toggling Root permissions in real-time without restarting, further increasing detection difficulty.",
     "references": [
       {
         "title": "Game Emulators Become Cheat Accomplices, Gray Market Countermeasures Escalate",

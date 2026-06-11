@@ -2,15 +2,20 @@
   "R0096": {
     "title": "Platform Online Loan Fraud",
     "definition": "Online loan fraud generally refers to internet black/grey market actors using illegal means such as forged identity documents, fabricated credit materials, and purchased illegal data to exploit loopholes in internet loan approval systems during the qualification review stage, illegally obtaining loan qualifications from internet lending platforms, transferring the funds to personal accounts, and refusing to repay the loans.",
-    "description": "Main fraud methods include: registering large numbers of phone numbers and using them for bulk consumption to artificially boost credit ratings; using technical means to forge identity information, device information, and location information to obtain loans and evade post-loan collection; and exploiting the slow update cycle of public credit information to simultaneously apply for loans from multiple platforms, maliciously exhausting credit. Recent variants also include using real retroactive social insurance or housing fund contributions to create a false appearance of repayment ability and obtain consumer loan limits.",
+    "description": "Main fraud methods include: registering large numbers of phone numbers and using them for bulk consumption to artificially boost credit ratings; using technical means to forge identity information, device information, and location information to obtain loans and evade post-loan collection; and exploiting the slow update cycle of public credit information to simultaneously apply for loans from multiple platforms, maliciously exhausting credit. Recent variants also include using real retroactive social insurance or housing fund contributions to create a false appearance of repayment ability and obtain consumer loan limits. Recent variants also include the professional debt bearer model, where black market groups specifically find creditworthy \"blank slate\" users (such as recent college graduates), fabricate income and bank statements to help them fraudulently obtain loans from multiple platforms, with the loan proceeds taken by the black market and the debt left on the debt bearers.",
     "complexity": "Basic",
     "influence": "Causes financial losses to the platform.",
     "references": [
       {
         "title": "Identity theft - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Identity_theft"
+      },
+      {
+        "title": "2025 Credit Fraud Risk Trend Report",
+        "link": "https://blog.csdn.net/weixin_41829439/article/details/157132164"
       }
-    ]
+    ],
+    "updated": "2026-06-11"
   },
   "R0096-001": {
     "title": "Anti-Collection Risk",
@@ -20,9 +25,14 @@
     "influence": "Causes financial losses to the platform.",
     "references": [
       {
-        "title": "Report on the Current Crisis and Governance of Anti-Collection Black/Grey Industries released",
+        "title": "Report on the Crisis and Governance of the Anti-Collection Grey Industry",
         "link": "https://goodsfu.10jqka.com.cn/20231025/c651590564.shtml"
+      },
+      {
+        "title": "Cracking Down on Financial Black/Grey Market - Anti-Collection Cases",
+        "link": "https://m.163.com/dy/article/K06CF51305391F6M.html"
       }
-    ]
+    ],
+    "updated": "2026-06-11"
   }
 }

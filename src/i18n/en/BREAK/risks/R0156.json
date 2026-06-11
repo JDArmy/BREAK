@@ -1,0 +1,37 @@
+{
+  "R0156": {
+    "title": "Post-Quantum Cryptography Risk",
+    "definition": "The risk that the development of quantum computing may crack currently widely used classical encryption algorithms such as RSA and ECC in the future, causing encrypted communications and data protection to fail.",
+    "description": "Post-quantum cryptography risk refers to the risk that the development of quantum computing technology may render currently widely used classical public-key encryption algorithms such as RSA and ECC insecure in the future, thereby causing encrypted communications, digital signatures, and data protection to fail. Key threat scenarios include: ① \"Harvest Now, Decrypt Later\": attackers steal encrypted data now and wait for quantum computers to mature before decrypting, posing an immediate threat to long-term confidential data; ② Digital signature forgery: quantum computers may crack RSA and ECC signature algorithms, enabling attackers to forge legitimate digital certificates and signatures; ③ Encrypted communication cracking: communication protocols based on classical encryption such as TLS/SSL may be cracked, exposing communication contents; ④ Blockchain security threats: elliptic curve signatures used in cryptocurrencies and smart contracts may be cracked. Although general-purpose quantum computers have not yet been realized, governments and security agencies worldwide have listed post-quantum cryptography migration as a priority, and NIST released the first batch of post-quantum cryptography standards in 2024.",
+    "complexity": "Advanced",
+    "influence": "Can lead to long-term confidential data leakage, collapse of digital trust systems, cryptocurrency security failure, and complete loss of communication privacy.",
+    "avoidances": ["A0091", "A0022"],
+    "references": [
+      {
+        "title": "NIST Post-Quantum Cryptography Standards",
+        "link": "https://csrc.nist.gov/projects/post-quantum-cryptography",
+        "type": "standard",
+        "source": "NIST",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "ENISA: Post-Quantum Cryptography Integration Study",
+        "link": "https://www.enisa.europa.eu/publications/post-quantum-cryptography-integration-study",
+        "type": "regulation",
+        "source": "ENISA",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "NSA: Quantum Computing and Post-Quantum Cryptography",
+        "link": "https://www.nsa.gov/Cybersecurity/Post-Quantum-Cryptography/",
+        "type": "regulation",
+        "source": "NSA",
+        "language": "en",
+        "evidenceLevel": "high"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

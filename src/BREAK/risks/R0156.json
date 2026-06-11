@@ -1,0 +1,37 @@
+{
+  "R0156": {
+    "title": "抗量子加密风险",
+    "definition": "量子计算的发展可能在未来破解当前广泛使用的RSA、ECC等经典加密算法，导致加密通信和数据保护失效的风险。",
+    "description": "抗量子加密风险是指量子计算技术的发展可能在未来使当前广泛使用的RSA、ECC等经典公钥加密算法不再安全，从而导致加密通信、数字签名和数据保护失效的风险。主要威胁场景包括：①\"先收集后解密\"（Harvest Now, Decrypt Later）：攻击者现在窃取加密数据，等待量子计算机成熟后解密，对长期保密数据构成即时威胁；②数字签名伪造：量子计算机可能破解RSA和ECC签名算法，使攻击者能够伪造合法的数字证书和签名；③加密通信破解：TLS/SSL等基于经典加密的通信协议可能被破解，导致通信内容暴露；④区块链安全威胁：加密货币和智能合约使用的椭圆曲线签名可能被破解。虽然通用量子计算机尚未实现，但各国政府和安全机构已将抗量子加密迁移列为优先事项，NIST于2024年发布了首批后量子密码标准。",
+    "complexity": "高级",
+    "influence": "可导致长期保密数据泄露、数字信任体系崩溃、加密货币安全失效，以及通信隐私全面丧失。",
+    "avoidances": ["A0091", "A0022"],
+    "references": [
+      {
+        "title": "NIST Post-Quantum Cryptography Standards",
+        "link": "https://csrc.nist.gov/projects/post-quantum-cryptography",
+        "type": "standard",
+        "source": "NIST",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "ENISA: Post-Quantum Cryptography Integration Study",
+        "link": "https://www.enisa.europa.eu/publications/post-quantum-cryptography-integration-study",
+        "type": "regulation",
+        "source": "ENISA",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "NSA: Quantum Computing and Post-Quantum Cryptography",
+        "link": "https://www.nsa.gov/Cybersecurity/Post-Quantum-Cryptography/",
+        "type": "regulation",
+        "source": "NSA",
+        "language": "en",
+        "evidenceLevel": "high"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

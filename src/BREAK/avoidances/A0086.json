@@ -1,0 +1,36 @@
+{
+  "A0086": {
+    "title": "虚假来电检测",
+    "category": "AC03",
+    "definition": "对电话通话中利用AI语音克隆和来电号码篡改实施的虚假来电进行检测和识别的安全技术手段。",
+    "description": "虚假来电检测是针对AI语音克隆与来电号码伪造组合攻击的防御技术。随着AI语音克隆技术的成熟，攻击者可以实时克隆目标声音，再结合来电号码篡改（Caller ID Spoofing）技术，伪装成熟人、领导或金融机构工作人员实施电信诈骗。虚假来电检测包括：①来电号码验证：通过STIR/SHAKEN协议验证来电号码的真实性，检测号码伪造行为；②AI语音克隆检测：分析通话中的声纹特征，识别是否为AI合成的语音；③通话行为异常检测：识别异常的通话模式，如陌生号码突然以紧急事由要求转账；④身份交叉验证：通过其他渠道（如短信、面对面）验证来电者真实身份；⑤来电元数据分析：分析通话链路信息，识别VoIP伪造和网关异常。2025年Google Android已推出行业首创的虚假来电检测功能，通过端到端加密RCS协议验证来电真实性。",
+    "limitation": "并非所有电话系统都支持STIR/SHAKEN协议；高质量的AI语音克隆可能暂时逃避声纹检测；攻击者可能利用合法通信渠道中转降低可疑度；误报可能阻断正常紧急通话；部分国家和地区的通信基础设施不支持来电验证。",
+    "references": [
+      {
+        "title": "Google Android Scam Detection - Official Blog",
+        "link": "https://blog.google/technology/safety-security/android-scam-detection/",
+        "type": "vendor",
+        "source": "Google",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "FCC STIR/SHAKEN Framework",
+        "link": "https://www.fcc.gov/call-authentication",
+        "type": "regulation",
+        "source": "FCC",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "INTERPOL Report on AI Voice Cloning Fraud",
+        "link": "https://www.interpol.org/",
+        "type": "regulatory",
+        "source": "INTERPOL",
+        "language": "en",
+        "evidenceLevel": "medium"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "R0152": {
+    "title": "无恶意软件攻击风险",
+    "definition": "攻击者不使用传统恶意软件，而是利用窃取的身份凭据、合法工具和操作系统内置功能实施攻击的风险。",
+    "description": "无恶意软件攻击（Malware-Free Attack）是指攻击者完全不使用传统恶意软件（如木马、病毒、勒索软件等），而是通过窃取合法身份凭据、利用系统内置工具和合法云服务实施攻击的方式。这种攻击方式使传统的基于恶意软件检测的安全防护体系效果极差。主要攻击手法包括：①凭据窃取与滥用：通过钓鱼、AiTM攻击、信息窃取器等手段窃取合法账户凭据和会话令牌，直接以合法身份登录系统；②Living-off-the-Land（LotL）：利用操作系统内置工具（如PowerShell、WMI、PsExec等）执行攻击操作，不留下恶意文件痕迹；③合法云服务滥用：使用合法的云存储、协作工具和远程管理软件进行数据渗出和远程控制；④身份冒充：利用窃取的管理员凭据直接操控Active Directory、云管理控制台等关键基础设施；⑤供应链合法权限滥用：利用合法的第三方供应商访问权限进行横向移动。据Microsoft和CrowdStrike报告，2025年约82%的网络攻击不使用恶意软件。",
+    "complexity": "高级",
+    "influence": "传统安全检测体系几乎失效，攻击者以合法身份在系统内长期潜伏，难以被发现和阻断，数据泄露和业务破坏风险极高。",
+    "avoidances": [
+      "A0075",
+      "A0078",
+      "A0068",
+      "A0079"
+    ],
+    "references": [
+      {
+        "title": "Microsoft Digital Defense Report 2025",
+        "link": "https://www.microsoft.com/en-us/security/business/microsoft-digital-defense-report",
+        "type": "vendor",
+        "source": "Microsoft",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "CrowdStrike 2026 Global Threat Report",
+        "link": "https://www.crowdstrike.com/global-threat-report/",
+        "type": "vendor",
+        "source": "CrowdStrike",
+        "language": "en",
+        "evidenceLevel": "high"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

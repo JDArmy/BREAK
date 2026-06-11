@@ -1,0 +1,43 @@
+{
+  "AT0074": {
+    "title": "AI Agent劫持工具",
+    "description": "劫持已部署的AI智能体（Agent）的攻击工具。区别于AT0057 LLM自动化攻击工具是用LLM发起攻击，AI Agent劫持工具是攻击已部署运行的AI智能体，使其执行攻击者指定的操作。主要功能和攻击方式包括：①提示注入劫持：通过向AI智能体输入精心构造的提示词，覆盖原有指令，使智能体执行攻击者指定的操作；②工具调用劫持：操纵智能体的工具调用链，使其调用恶意工具或向合法工具传递恶意参数；③记忆投毒：篡改智能体的记忆或知识库，使其在后续交互中产生攻击者预期的行为；④权限提升：利用智能体的权限配置漏洞，获取超出授权范围的系统访问权限；⑤横向移动：通过被劫持的智能体访问同一环境中其他智能体或系统资源。AI Agent劫持是随着AI智能体广泛部署而出现的新型攻击方式，对企业的AI自动化系统构成严重威胁。",
+    "avoidances": [
+      "A0087",
+      "A0089",
+      "A0079"
+    ],
+    "couseRisks": [
+      "R0148",
+      "R0032",
+      "R0149"
+    ],
+    "references": [
+      {
+        "title": "Strengthening AI Agent Hijacking Evaluations",
+        "link": "https://www.nist.gov/news-events/news/2025/01/technical-blog-strengthening-ai-agent-hijacking-evaluations",
+        "type": "standard",
+        "source": "NIST",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "Fooling AI Agents: Web-Based Indirect Prompt Injection Observed in the Wild",
+        "link": "https://unit42.paloaltonetworks.com/ai-agent-prompt-injection/",
+        "type": "vendor",
+        "source": "Palo Alto Unit 42",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "Agent Hijacking: How Prompt Injection Leads to Full AI System Compromise",
+        "link": "https://www.straiker.ai/blog/agent-hijacking-how-prompt-injection-leads-to-full-ai-system-compromise",
+        "type": "vendor",
+        "source": "Straiker",
+        "language": "en",
+        "evidenceLevel": "medium"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

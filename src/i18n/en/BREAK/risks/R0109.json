@@ -1,8 +1,8 @@
 {
   "R0109": {
     "title": "Privilege Escalation / Unauthorized Access",
-    "definition": "Privilege escalation or unauthorized access risk refers to a user or process gaining or attempting to gain access to resources, data, functions, or systems in an unauthorized manner within a computer system or application.",
-    "description": "This risk may occur due to weak passwords, vulnerability exploitation, lack of access controls, misconfigurations, or unauthorized system or application access. It may allow malicious users, attackers, or unauthorized personnel to bypass normal security controls and access sensitive information or perform operations they are not authorized to perform.",
+    "definition": "Unauthorized access or privilege escalation risk refers to users or processes obtaining or attempting to obtain access to resources, data, functions, or systems in an unauthorized manner. Unauthorized access generally falls into two types: horizontal privilege escalation (accessing other users' resources at the same permission level) and vertical privilege escalation (lower-privilege users gaining higher-privilege capabilities).",
+    "description": "This risk may arise from weak passwords, vulnerability exploitation, lack of access controls, misconfiguration, or unauthorized system or application access. Privilege escalation attacks typically occur at the application logic level, such as accessing other users' data by tampering with request parameters (horizontal privilege escalation), or performing high-privilege operations with low-privilege accounts (vertical privilege escalation). Unauthorized access refers to accessing protected resources without authentication. These risks may allow malicious users, attackers, or unauthorized personnel to bypass normal security controls and access sensitive information or perform certain operations.",
     "complexity": "Basic",
     "influence": "Unauthorized access may lead to serious security issues including but not limited to data leakage, privacy violations, denial of service, and system crashes.",
     "references": [
@@ -14,6 +14,7 @@
         "title": "T1078 Valid Accounts - MITRE ATT&CK",
         "link": "https://attack.mitre.org/techniques/T1078/"
       }
-    ]
+    ],
+    "updated": "2026-06-11"
   }
 }

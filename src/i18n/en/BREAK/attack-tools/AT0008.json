@@ -1,7 +1,7 @@
 {
   "AT0008": {
     "title": "CAPTCHA Solving Platform",
-    "description": "A platform that provides CAPTCHA solving services through automated or human means. Many simple character CAPTCHAs can no longer effectively block automated behavior and can be recognized using simple OCR tools. More complex ones can be solved with high accuracy using machine learning. For high-difficulty CAPTCHAs, human-powered solving platforms organize real people to perform recognition and submit verification results.",
+    "description": "A platform that provides CAPTCHA solving services through automated or human means. Simple character CAPTCHAs can no longer effectively block automated behavior and can be cracked using OCR recognition tools. More complex CAPTCHAs can be solved with high accuracy using deep learning (such as convolutional neural networks). For high-difficulty CAPTCHAs, human-powered solving platforms organize real people (commonly known as 'code slaves') to perform recognition and submit verification results. In recent years, with the development of AIGC technology, the confrontation between CAPTCHAs and solving platforms has entered a new AI-versus-AI stage — CAPTCHAs use generative adversarial networks to produce more complex adversarial examples, while solving platforms use deep learning models to continuously improve their cracking capabilities, forming a continuously escalating offensive-defensive game.",
     "references": [
       {
         "title": "Black Market Exposed: The Past and Present of CAPTCHA Solving Platforms",

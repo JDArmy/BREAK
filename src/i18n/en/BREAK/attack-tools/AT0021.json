@@ -1,7 +1,7 @@
 {
   "AT0021": {
     "title": "Custom Browsers",
-    "description": "Many professional companies abroad sell paid browser software such as Antidetect and Multilogin, which modify Chrome and Firefox cores to customize browser object parameters and achieve the goal of forging new browsers. They also provide features such as automatic proxy, mass control, cookie robots, and device standard libraries, with visual interfaces for easy operation.",
+    "description": "Custom browsers (also known as fingerprint browsers or anti-detect browsers) are tools that modify browser cores or create independent browser environments to customize browser fingerprint parameters (such as User-Agent, Canvas, WebGL, font lists, etc.), achieving the goal of forging new browser identities. Many professional companies abroad sell such paid browser software, including Antidetect, Multilogin, GoLogin, and AdsPower. They also provide features such as automatic proxy, mass control, cookie robots, and device standard libraries, with visual interfaces for easy operation. Black-grey market actors use custom browsers to simultaneously operate a large number of uncorrelated browser identities on the same computer for batch registration, multi-account operation, traffic inflation, coupon abuse, and other cheating activities.",
     "references": [
       {
         "title": "Excerpts from 'Risk Control Essentials'",

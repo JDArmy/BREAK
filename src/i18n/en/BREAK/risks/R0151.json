@@ -1,0 +1,34 @@
+{
+  "R0151": {
+    "title": "MFA Bypass Risk",
+    "definition": "The risk that attackers use technical means to bypass multi-factor authentication (MFA) security protection and directly obtain authenticated session access.",
+    "description": "MFA bypass risk refers to attackers using AiTM adversary-in-the-middle attacks, MFA fatigue attacks, SIM swapping, session token theft, and other methods to bypass MFA security verification and directly obtain authenticated session access. MFA has long been considered a critical line of defense for account security, but with the evolution of attack techniques, MFA is no longer an insurmountable barrier. Key attack paths include: ① AiTM attacks: intercepting authentication flows through reverse proxies to steal post-MFA session cookies; ② MFA fatigue attacks: pushing massive MFA verification requests to targets, forcing users to accidentally confirm due to fatigue; ③ SIM swapping: using social engineering to transfer victim phone numbers to attacker-controlled SIM cards to receive SMS verification codes; ④ Session token theft: stealing session cookies stored in browsers through infostealers; ⑤ MFA credential phishing: collecting both passwords and real-time 2FA tokens through phishing pages simultaneously. According to the CrowdStrike 2026 Global Threat Report, 82% of cyber attacks use no malware but instead bypass MFA through identity and session token theft.",
+    "complexity": "Advanced",
+    "influence": "Directly causes account security defenses to be breached, enterprise core systems and data can be accessed without authorization, and traditional MFA protection becomes ineffective.",
+    "avoidances": [
+      "A0007",
+      "A0073",
+      "A0026",
+      "A0078"
+    ],
+    "references": [
+      {
+        "title": "CrowdStrike 2026 Global Threat Report",
+        "link": "https://www.crowdstrike.com/global-threat-report/",
+        "type": "vendor",
+        "source": "CrowdStrike",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "CISA MFA Implementation Guidance",
+        "link": "https://www.cisa.gov/",
+        "type": "regulatory",
+        "source": "CISA",
+        "language": "en",
+        "evidenceLevel": "high"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

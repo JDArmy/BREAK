@@ -2,7 +2,7 @@
   "R0051": {
     "title": "Application Reverse Engineering",
     "definition": "Restoring an application's source code or runtime logic through reverse engineering.",
-    "description": "For web applications, WeChat mini-programs, and Android apps, source code can be directly or easily restored, exposing all application processing logic. When security policies are implemented on the client side, there is a risk of them being cracked or bypassed.",
+    "description": "For web applications, WeChat mini-programs, and Android apps, source code can be directly or easily restored, exposing all application processing logic. For iOS apps, reverse analysis can be performed using tools such as class-dump, Hopper, and IDA. When security policies are implemented on the client side, there is a risk of them being cracked or bypassed.",
     "complexity": "Advanced",
     "influence": "May cause security processes within the application to be broken and data to be forged.",
     "references": [

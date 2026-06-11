@@ -1,0 +1,36 @@
+{
+  "A0094": {
+    "title": "AI安全态势管理(AI-SPM)",
+    "category": "AC02",
+    "definition": "对AI系统的安全状态进行持续监控、评估和治理的全局态势感知和管理手段。",
+    "description": "AI安全态势管理（AI Security Posture Management, AI-SPM）是专门针对AI系统的安全态势管理技术。区别于A0087 AI智能体工具治理与MCP安全控制是具体的控制措施，AI-SPM是全局层面的态势感知和治理框架。主要功能包括：①AI资产发现：自动发现和盘点组织内所有AI模型、训练数据、推理服务和智能体应用；②漏洞评估：评估AI系统面临的提示注入、数据投毒、模型窃取、对抗样本等安全风险；③权限映射：分析AI系统的权限配置，识别过大的权限授予和不安全的访问路径；④合规监控：监控AI系统是否符合EU AI Act、中国生成式AI管理办法等法规要求；⑤攻击面管理：持续评估AI系统的攻击面变化，发现新增的暴露面；⑥安全评分：为每个AI系统生成安全评分，辅助安全决策。AI-SPM是Gartner等研究机构2026年重点关注的AI安全领域。",
+    "limitation": "AI系统的复杂性和动态性使全面态势感知困难；缺乏统一的AI安全标准和评分体系；AI模型内部的\"黑箱\"特性限制了安全评估的深度；AI-SPM工具市场尚处于早期阶段，成熟度不足；跨云、跨平台的AI系统管理面临整合挑战。",
+    "references": [
+      {
+        "title": "Gartner: AI Security Posture Management Market Guide",
+        "link": "https://www.gartner.com/en/topics/ai-security",
+        "type": "industry",
+        "source": "Gartner",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "OWASP AI Security and Privacy Guide",
+        "link": "https://owasp.org/www-project-ai-security-and-privacy-guide/",
+        "type": "standard",
+        "source": "OWASP",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "NIST AI Risk Management Framework (AI RMF)",
+        "link": "https://www.nist.gov/itl/ai-risk-management-framework",
+        "type": "standard",
+        "source": "NIST",
+        "language": "en",
+        "evidenceLevel": "high"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

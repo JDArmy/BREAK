@@ -55,8 +55,8 @@
     "title": "Impression Fraud",
     "definition": "Charging impression fees for ad materials that have not generated exposure or have not completed valid exposure.",
     "description": "For example, a media outlet places multiple display ads in the same ad slot and charges the advertiser for multiple ad impressions.",
-    "complexity": "",
-    "influence": "",
+    "complexity": "Intermediate",
+    "influence": "Financial losses to advertisers.",
     "references": [
       {
         "title": "OWASP Automated Threat: OAT-003 Ad Fraud",

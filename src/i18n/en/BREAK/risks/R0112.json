@@ -86,12 +86,13 @@
     "definition": "Wireless network risk refers to potential threats and security issues when using wireless networks (Wi-Fi), which are more susceptible to various types of attacks due to their broadcast nature and wireless transmission characteristics.",
     "description": "Common wireless network risks include: unauthorized access (unauthorized individuals attempting to access protected wireless networks); password cracking (attackers trying to crack wireless network passwords through weak passwords, default passwords, or insecure encryption); phishing attacks (attackers setting up fake wireless networks mimicking legitimate ones to steal user information); man-in-the-middle attacks (attackers inserting themselves between users and access points to monitor or tamper with traffic); wireless interference; wireless cloning (attackers cloning legitimate access points); and wireless intrusion.",
     "complexity": "Basic",
-    "influence": "",
+    "influence": "May lead to sensitive information leakage, data tampering through man-in-the-middle attacks, unauthorized network access, and business system disruption.",
     "references": [
       {
         "title": "Wireless Security - Wikipedia",
         "link": "https://en.wikipedia.org/wiki/Wireless_security"
       }
-    ]
+    ],
+    "updated": "2026-06-11"
   }
 }

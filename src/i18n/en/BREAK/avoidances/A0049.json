@@ -1,7 +1,7 @@
 {
   "A0049": {
-    "title": "Digital Watermark",
-    "definition": "Embedding specific information into a digital signal, which may be text, audio, files, images, or video.",
+    "title": "Digital Watermark/Text Watermark",
+    "definition": "Embedding specific information into digital signals — including text, audio, files, images, or video — for copyright protection, integrity verification, copy prevention, or traceability tracking",
     "description": "Also known as a digital watermark. When a watermarked signal is copied, the embedded information is copied along with it. Digital watermarks can be divided into visible and invisible types. Visible watermarks contain information that can be seen while viewing an image or video. Invisible watermarks are added to audio, images, or video as digital data but cannot normally be seen. In general, visible watermarks are primarily used for deterrence and copyright declaration; invisible watermarks are primarily used for traceability and copyright determination.",
     "limitation": "Watermarks may disappear or become unrecoverable when the digital signal is edited, such as through image cropping, video editing, or audio editing.",
     "references": [

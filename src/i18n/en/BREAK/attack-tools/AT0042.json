@@ -1,7 +1,7 @@
 {
   "AT0042": {
     "title": "Credential Stuffing Tools",
-    "description": "Credential stuffing tools attempt to crack or decipher user passwords in malicious attacks. They primarily try large numbers of username and password combinations to find credentials matching a target system or service, thereby illegally gaining access to user accounts. Specifically, these tools involve password cracking through brute force or dictionary attacks, username enumeration, and rapid bulk attempts that may trigger account lockouts or other defensive mechanisms.",
+    "description": "Credential stuffing tools use leaked username and password data (typically from data breaches on one website) to automate batch login attempts on other websites or systems. The core principle of credential stuffing is that many users reuse the same username and password across different websites. Attackers only need to obtain a batch of leaked credentials to attempt bulk logins on numerous target websites within a short time. Credential stuffing differs from brute force attacks: brute force tries all possible password combinations, while credential stuffing directly uses real leaked credentials for matching, making it far more efficient. These tools typically feature batch import of leaked credentials, multi-threaded concurrent login attempts, automatic CAPTCHA recognition (paired with CAPTCHA-solving platforms), proxy IP rotation to evade rate limits and IP bans, and automatic extraction of account information after successful logins.",
     "references": [
       {
         "title": "Credential Stuffing - Baidu Baike",

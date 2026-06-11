@@ -1,0 +1,36 @@
+{
+  "TA0039": {
+    "title": "加密货币诈骗团伙",
+    "description": "专门从事加密货币生态诈骗活动的有组织犯罪团伙。区别于TA0015电诈团伙侧重传统电信诈骗，加密货币诈骗团伙以区块链和加密货币为核心作案工具和资金通道。主要特征和运作模式包括：①杀猪盘运营：通过社交媒体和交友软件培养信任关系，引导受害者在虚假加密货币投资平台投入资金；②虚假DeFi项目：创建伪装的去中心化金融项目，通过虚假承诺高收益吸引投资者后卷款跑路（Rug Pull）；③NFT欺诈：发行虚假或抄袭的NFT项目进行诈骗；④加密货币冒充：冒充知名加密货币项目方、交易所或KOL进行社交工程诈骗；⑤跨境洗钱：利用加密货币混币器、隐私币和跨链桥进行资金清洗和跨境转移；⑥诈骗园区运营：在东南亚等地区建立规模化诈骗园区，通过胁迫或雇佣大量人员实施加密货币诈骗。该类团伙常与跨国犯罪网络、地下钱庄和诈骗园区紧密关联。",
+    "buildAttackTools": ["AT0070"],
+    "useAttackTools": ["AT0060", "AT0059", "AT0001"],
+    "couseRisks": ["R0150", "R0121", "R0044"],
+    "references": [
+      {
+        "title": "FBI IC3 Cryptocurrency Fraud Report",
+        "link": "https://www.ic3.gov/",
+        "type": "regulatory",
+        "source": "FBI",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "Chainalysis 2026 Crypto Crime Report",
+        "link": "https://www.chainalysis.com/",
+        "type": "industry",
+        "source": "Chainalysis",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "US DOJ Cryptocurrency Fraud Enforcement Actions",
+        "link": "https://www.justice.gov/",
+        "type": "regulatory",
+        "source": "US DOJ",
+        "language": "en",
+        "evidenceLevel": "high"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

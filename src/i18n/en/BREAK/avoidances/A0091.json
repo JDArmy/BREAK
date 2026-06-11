@@ -1,0 +1,36 @@
+{
+  "A0091": {
+    "title": "Quantum-Safe Cryptography Migration",
+    "category": "AC01",
+    "definition": "Security controls for migrating existing cryptographic systems to Post-Quantum Cryptography (PQC) algorithms resistant to quantum computing attacks.",
+    "description": "Quantum-safe cryptography migration is the security migration process of replacing an organization's existing classical cryptographic algorithms such as RSA and ECC with NIST-standardized Post-Quantum Cryptography (PQC) algorithms. Key components include: 1) Cryptographic inventory: cataloging all encryption usage scenarios in the organization, including TLS/SSL, digital signatures, key exchange, data encryption, etc.; 2) Risk assessment: evaluating the threat level of \"Harvest Now, Decrypt Later\" attacks faced by each encryption scenario; 3) Algorithm selection: selecting appropriate post-quantum algorithms based on NIST FIPS 203 (ML-KEM), FIPS 204 (ML-DSA), and FIPS 205 (SLH-DSA) standards; 4) Hybrid deployment: adopting classical + post-quantum hybrid encryption schemes during the transition period to ensure backward compatibility; 5) Performance optimization: addressing performance and storage issues caused by the increased key and signature sizes of post-quantum algorithms; 6) Cryptographic agility: establishing an architecture that allows rapid replacement of cryptographic algorithms, preparing for future algorithm updates. NIST released the first post-quantum cryptography standards in 2024, with large-scale deployment beginning in 2026. Governments and financial institutions worldwide have begun mandating migration.",
+    "limitation": "Post-quantum algorithms have significantly larger key and signature sizes than classical algorithms, which may lead to performance degradation and increased storage requirements; the migration process is complex and time-consuming, involving the modification of numerous systems and protocols; the security of some post-quantum algorithms still requires time to validate; backward compatibility may create security weaknesses during the hybrid deployment period; migration costs are high, and small and medium enterprises may find it difficult to afford.",
+    "references": [
+      {
+        "title": "Post-Quantum Cryptography - NIST CSRC",
+        "link": "https://csrc.nist.gov/projects/post-quantum-cryptography",
+        "type": "standard",
+        "source": "NIST",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "NIST Releases First 3 Finalized Post-Quantum Encryption Standards",
+        "link": "https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards",
+        "type": "standard",
+        "source": "NIST",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "NIST FIPS 203, 204, and 205 Finalized: An Important Step Towards a Quantum-Safe Future",
+        "link": "https://cloudsecurityalliance.org/blog/2024/08/15/nist-fips-203-204-and-205-finalized-an-important-step-towards-a-quantum-safe-future",
+        "type": "industry",
+        "source": "Cloud Security Alliance",
+        "language": "en",
+        "evidenceLevel": "high"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

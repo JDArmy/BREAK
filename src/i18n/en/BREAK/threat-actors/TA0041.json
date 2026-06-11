@@ -1,0 +1,44 @@
+{
+  "TA0041": {
+    "title": "AI Tool Abusers",
+    "description": "Actors who use AI tools specifically designed for cybercrime (such as WormGPT, Mythos, etc.) to carry out various cyberattacks. Unlike TA0012 Malware Developers who are the creators of AI tools, AI Tool Abusers are the end users of these criminal AI tools. Main characteristics include: 1) Criminal AI tool usage: using large language models specifically customized for cybercrime such as WormGPT, Mythos, and FraudGPT, which are free from safety restrictions and can generate phishing emails, malicious code, and social engineering scripts; 2) AI-enhanced phishing: using AI tools to batch generate personalized and highly realistic phishing emails, significantly improving phishing success rates; 3) AI-assisted social engineering: using AI tools to analyze target information and generate customized social engineering attack plans; 4) AI malicious code generation: using AI tools to assist in writing malicious code, exploit scripts, and attack tools; 5) Automated attack orchestration: using AI tools to automate the planning and execution of attack chains, improving attack efficiency. AI Tool Abusers represent the new trend of cybercrime transitioning toward AI, making attacks that originally required advanced skills accessible to a broader audience.",
+    "buildAttackTools": [],
+    "useAttackTools": [
+      "AT0057",
+      "AT0056",
+      "AT0059"
+    ],
+    "couseRisks": [
+      "R0118",
+      "R0116",
+      "R0084-001"
+    ],
+    "references": [
+      {
+        "title": "AI Goes on Offense: How LLMs Are Redefining the Cybercrime Landscape",
+        "link": "https://www.rapid7.com/blog/post/ai-goes-on-offense-how-llms-are-redefining-the-cybercrime-landscape/",
+        "type": "vendor",
+        "source": "Rapid7",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "The Dual-Use Dilemma of AI: Malicious LLMs",
+        "link": "https://unit42.paloaltonetworks.com/dilemma-of-ai-malicious-llms/",
+        "type": "vendor",
+        "source": "Palo Alto Unit 42",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "From WormGPT to Mythos: AI in Cybersecurity 2021-2026",
+        "link": "https://www.brside.com/blog/from-wormgpt-to-mythos-ai-in-cybersecurity-2021%E2%80%932026",
+        "type": "industry",
+        "source": "BRSide",
+        "language": "en",
+        "evidenceLevel": "medium"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "A0084": {
+    "title": "Real-Time Deepfake Detection",
+    "category": "AC03",
+    "definition": "Security techniques for instantly detecting and alerting on AI-generated deepfake content during real-time communications such as video conferences, voice calls, and live streams.",
+    "description": "Real-time deepfake detection targets real-time communication scenarios, distinguishing it from A0066 Deepfake Detection which focuses on offline/static content analysis. As AI deepfake technology is applied in real-time during video calls and phone conversations, attackers can replace faces in real-time during video conferences or clone target voices during phone calls, making traditional post-hoc detection methods inadequate. Real-time deepfake detection includes: ① Video stream liveness detection: determining whether a video stream is deepfake by analyzing facial micro-expressions, eye movement, and lighting consistency; ② Voice stream authenticity verification: determining whether speech is AI-synthesized through voiceprint analysis, breathing patterns, and emotional coherence; ③ Communication metadata validation: verifying that endpoint identities and transmission paths have not been tampered with; ④ Multimodal cross-validation: performing consistency analysis across audio, video, and text signals; ⑤ Behavioral baseline comparison: real-time comparison with known genuine person behavioral patterns. This technology is critical for defending against real-time attack scenarios such as AI face-swap fraud and AI voice cloning scams.",
+    "limitation": "Real-time detection requires analysis within extremely short timeframes, demanding significant computational resources; detection accuracy may decline as deepfake technology advances; high-quality deepfakes may temporarily evade detection; privacy regulations may limit real-time analysis of communication content; false positives may disrupt normal business communications.",
+    "references": [
+      {
+        "title": "Cybersecurity Forecast 2026 - Google Cloud",
+        "link": "https://cloud.google.com/security/resources/cybersecurity-forecast",
+        "type": "vendor",
+        "source": "Google Cloud",
+        "language": "en",
+        "evidenceLevel": "medium"
+      },
+      {
+        "title": "Microsoft Digital Defense Report 2025",
+        "link": "https://www.microsoft.com/en-us/security/business/microsoft-digital-defense-report",
+        "type": "vendor",
+        "source": "Microsoft",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "Deepfake Detection - NIST",
+        "link": "https://www.nist.gov/programs-projects/deepfake-detection",
+        "type": "standard",
+        "source": "NIST",
+        "language": "en",
+        "evidenceLevel": "high"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

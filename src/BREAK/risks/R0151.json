@@ -1,0 +1,34 @@
+{
+  "R0151": {
+    "title": "MFA绕过风险",
+    "definition": "攻击者通过技术手段绕过多因素认证（MFA）的安全保护，直接获取已通过认证的会话访问权限的风险。",
+    "description": "MFA绕过风险是指攻击者利用AiTM中间人攻击、MFA疲劳攻击、SIM卡交换、会话令牌窃取等手段，绕过多因素认证的安全验证，直接获取已认证会话的访问权限。MFA长期被视为账户安全的关键防线，但随着攻击技术的进化，MFA已不再是不可逾越的屏障。主要攻击路径包括：①AiTM攻击：通过反向代理拦截认证流程，窃取MFA验证后的会话Cookie；②MFA疲劳攻击（MFA Fatigue Attack）：向目标推送大量MFA验证请求，迫使用户因疲劳而误点确认；③SIM卡交换：通过社会工程使运营商将受害者手机号转移到攻击者控制的SIM卡，接收SMS验证码；④会话令牌窃取：通过信息窃取器窃取浏览器中存储的会话Cookie；⑤MFA凭据钓鱼：通过钓鱼页面同时收集密码和实时2FA令牌。据CrowdStrike 2026全球威胁报告，82%的网络攻击不使用恶意软件，而是通过窃取身份和会话令牌绕过MFA。",
+    "complexity": "高级",
+    "influence": "直接导致账户安全防线被突破，企业核心系统和数据可被未授权访问，传统MFA保护形同虚设。",
+    "avoidances": [
+      "A0007",
+      "A0073",
+      "A0026",
+      "A0078"
+    ],
+    "references": [
+      {
+        "title": "CrowdStrike 2026 Global Threat Report",
+        "link": "https://www.crowdstrike.com/global-threat-report/",
+        "type": "vendor",
+        "source": "CrowdStrike",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "CISA MFA Implementation Guidance",
+        "link": "https://www.cisa.gov/",
+        "type": "regulatory",
+        "source": "CISA",
+        "language": "en",
+        "evidenceLevel": "high"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

@@ -2,7 +2,7 @@
   "R0069": {
     "title": "Upload Abuse",
     "definition": "Using a business system's normal file upload functionality to upload unexpected files.",
-    "description": "Business systems with user-generated content features such as image or file uploads can be exploited by attackers who upload files through the upload interface that are not intended for the platform's normal use.",
+    "description": "Business systems with user-generated content features such as image or file uploads can be exploited by attackers who upload files through the upload interface that are not intended for the platform's normal use, but rather for illegal storage, distribution of illegal content, and other purposes.",
     "complexity": "Basic",
     "influence": "Consumes platform storage and network resources, and may create compliance risks.",
     "references": [

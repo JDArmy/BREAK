@@ -11,10 +11,15 @@
         "link": "https://baike.baidu.com/item/AIGC/59988381?fr=ge_ala"
       },
       {
-        "title": "What Security Risks Does AIGC Introduce?",
-        "link": "https://baijiahao.baidu.com/s?id=1778727153917782040&wfr=spider&for=pc"
+        "title": "Interim Measures for the Management of Generative Artificial Intelligence Services",
+        "link": "https://www.cac.gov.cn/2023-07/13/c_1690897390291892.htm"
+      },
+      {
+        "title": "Measures for the Labeling of AI-Generated Synthetic Content",
+        "link": "https://www.cac.gov.cn/2025-03/14/c_1743654685896173.htm"
       }
-    ]
+    ],
+    "updated": "2026-06-11"
   },
   "R0071-001": {
     "title": "AIGC Privacy Leakage",
@@ -37,10 +42,15 @@
     "influence": "AIGC compliance risks may create compliance risks for the platform and increase the volume of customer complaints.",
     "references": [
       {
+        "title": "Interim Measures for the Management of Generative Artificial Intelligence Services",
+        "link": "https://www.cac.gov.cn/2023-07/13/c_1690897390291892.htm"
+      },
+      {
         "title": "Legal Compliance Risks and Prevention in the AIGC Wave",
         "link": "https://www.hnjzlaw.net/news/3/1451.html"
       }
-    ]
+    ],
+    "updated": "2026-06-11"
   },
   "R0071-003": {
     "title": "AI-Generated Low-Quality Content",
@@ -52,8 +62,13 @@
       {
         "title": "AIGC - Baidu Baike",
         "link": "https://baike.baidu.com/item/AIGC/59988381"
+      },
+      {
+        "title": "Measures for the Labeling of AI-Generated Synthetic Content",
+        "link": "https://www.cac.gov.cn/2025-03/14/c_1743654685896173.htm"
       }
-    ]
+    ],
+    "updated": "2026-06-11"
   },
   "R0071-004": {
     "title": "AI Hallucination Risk",

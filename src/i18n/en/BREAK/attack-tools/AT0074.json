@@ -1,0 +1,43 @@
+{
+  "AT0074": {
+    "title": "AI Agent Hijacking Tools",
+    "description": "Attack tools designed to hijack deployed AI agents. Unlike AT0057 LLM Automated Attack Tools which use LLMs to launch attacks, AI Agent Hijacking Tools target already deployed and running AI agents, forcing them to execute attacker-specified operations. Main capabilities and attack methods include: 1) Prompt injection hijacking: injecting carefully crafted prompts into AI agents to override original instructions and force execution of attacker-specified operations; 2) Tool call hijacking: manipulating an agent's tool invocation chain to call malicious tools or pass malicious parameters to legitimate tools; 3) Memory poisoning: tampering with an agent's memory or knowledge base to produce attacker-expected behaviors in subsequent interactions; 4) Privilege escalation: exploiting agent permission configuration vulnerabilities to gain system access beyond authorized scope; 5) Lateral movement: accessing other agents or system resources in the same environment through a hijacked agent. AI Agent hijacking is a novel attack method emerging with the widespread deployment of AI agents, posing a serious threat to enterprise AI automation systems.",
+    "avoidances": [
+      "A0087",
+      "A0089",
+      "A0079"
+    ],
+    "couseRisks": [
+      "R0148",
+      "R0032",
+      "R0149"
+    ],
+    "references": [
+      {
+        "title": "Strengthening AI Agent Hijacking Evaluations",
+        "link": "https://www.nist.gov/news-events/news/2025/01/technical-blog-strengthening-ai-agent-hijacking-evaluations",
+        "type": "standard",
+        "source": "NIST",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "Fooling AI Agents: Web-Based Indirect Prompt Injection Observed in the Wild",
+        "link": "https://unit42.paloaltonetworks.com/ai-agent-prompt-injection/",
+        "type": "vendor",
+        "source": "Palo Alto Unit 42",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "Agent Hijacking: How Prompt Injection Leads to Full AI System Compromise",
+        "link": "https://www.straiker.ai/blog/agent-hijacking-how-prompt-injection-leads-to-full-ai-system-compromise",
+        "type": "vendor",
+        "source": "Straiker",
+        "language": "en",
+        "evidenceLevel": "medium"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

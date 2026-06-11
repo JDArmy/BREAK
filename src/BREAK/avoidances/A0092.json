@@ -1,0 +1,36 @@
+{
+  "A0092": {
+    "title": "移动威胁防御(MTD)",
+    "category": "AC02",
+    "definition": "部署在移动终端上的专用威胁检测与防御技术，保护移动设备免受恶意应用、网络攻击和数据泄露的威胁。",
+    "description": "移动威胁防御（Mobile Threat Defense, MTD）是专门针对移动终端的威胁检测与防御技术。区别于A0078端点检测与响应（EDR）主要覆盖桌面和服务器端点，MTD专注于智能手机和平板等移动设备的特殊威胁场景。主要功能包括：①应用安全分析：对移动设备上安装的应用进行行为分析和风险评估，检测恶意应用和可疑权限请求；②网络威胁检测：检测移动设备连接的WiFi热点安全性，识别中间人攻击和虚假热点；③设备完整性验证：检查设备是否被越狱/Root、是否安装了恶意配置文件，验证设备完整性；④数据泄露防护：监控移动设备上的数据流转，防止敏感数据通过不安全的应用或通道泄露；⑤钓鱼防护：在移动浏览器和消息应用中实时检测钓鱼链接和恶意内容；⑥威胁情报集成：与移动端威胁情报源集成，提供实时的威胁预警。随着BYOD和移动办公的普及，MTD已成为企业移动安全战略的核心组件。",
+    "limitation": "移动操作系统的封闭性限制了MTD的检测深度；iOS系统的沙箱机制使MTD难以获取系统级信息；用户隐私意识增强可能拒绝安装MTD应用；移动设备的电池和性能限制影响持续监控能力；部分高级移动威胁可能绕过MTD检测。",
+    "references": [
+      {
+        "title": "Gartner: Market Guide for Mobile Threat Defense",
+        "link": "https://www.gartner.com/en/documents/market-guide-mobile-threat-defense",
+        "type": "industry",
+        "source": "Gartner",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "NIST SP 800-124: Guidelines for Managing the Security of Mobile Devices",
+        "link": "https://csrc.nist.gov/publications/detail/sp/800-124/rev-2/final",
+        "type": "standard",
+        "source": "NIST",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "OWASP Mobile Security Testing Guide",
+        "link": "https://owasp.org/www-project-mobile-security-testing-guide/",
+        "type": "standard",
+        "source": "OWASP",
+        "language": "en",
+        "evidenceLevel": "high"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

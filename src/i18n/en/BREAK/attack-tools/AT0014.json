@@ -1,7 +1,7 @@
 {
   "AT0014": {
     "title": "Packet Capture Tools",
-    "description": "Packet capture tools are software that intercepts and inspects the contents of network data packets. Because they can capture all IP packets during data communication and perform layer-by-layer unpacking analysis, they have long been commonly used troubleshooting tools in traditional fixed-network maintenance. Popular packet capture software includes Wireshark, SnifferPro, Snoop, and Tcpdump.",
+    "description": "Packet capture tools are software that intercepts and inspects the contents of network data packets. Because they can capture all IP packets during data communication and perform layer-by-layer unpacking analysis, they have long been commonly used troubleshooting tools in traditional fixed-network maintenance. Popular packet capture software includes Wireshark, SnifferPro, Snoop, and Tcpdump. On the mobile side, tools like Fiddler, Charles, and mitmproxy are also widely used, often for mobile application interface analysis and man-in-the-middle (MITM) attacks. Black-grey market actors can use packet capture tools to obtain communication data between apps and servers, steal sensitive information, or reverse-engineer API interfaces to carry out automated attacks.",
     "references": [
       {
         "title": "Packet Capture Tools - Baidu Baike",

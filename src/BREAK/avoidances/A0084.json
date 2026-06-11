@@ -1,0 +1,36 @@
+{
+  "A0084": {
+    "title": "实时深度伪造检测",
+    "category": "AC03",
+    "definition": "在实时通信场景（如视频会议、语音通话、直播）中，对AI生成的深度伪造内容进行即时检测和预警的安全技术手段。",
+    "description": "实时深度伪造检测是针对实时通信场景的深度伪造防御技术，区别于A0066深度伪造检测侧重于离线/静态内容分析。随着AI深度伪造技术在视频通话、语音通话中的实时应用，攻击者可以在视频会议中实时替换面部、在电话中实时克隆目标声音，使传统的事后检测手段无法应对。实时深度伪造检测包括：①视频流活体检测：通过分析面部微表情、眼球运动、光照一致性等生物特征判断视频流是否为深度伪造；②语音流真实性验证：通过声纹特征分析、呼吸节奏、情感连贯性等判断语音是否为AI合成；③通信元数据校验：验证通信链路的端点身份和传输路径是否被篡改；④多模态交叉验证：将音频、视频、文本等多模态信号进行一致性分析；⑤行为基线比对：与已知真人的行为模式进行实时比对。该技术对防御AI换脸欺诈、AI语音克隆诈骗等实时攻击场景至关重要。",
+    "limitation": "实时检测需要在极短时间内完成分析，对计算资源要求高；随着深度伪造技术进步，检测准确率可能下降；高质量深度伪造可能暂时逃避检测；隐私法规可能限制对通信内容的实时分析；误报可能影响正常业务沟通。",
+    "references": [
+      {
+        "title": "Cybersecurity Forecast 2026 - Google Cloud",
+        "link": "https://cloud.google.com/security/resources/cybersecurity-forecast",
+        "type": "vendor",
+        "source": "Google Cloud",
+        "language": "en",
+        "evidenceLevel": "medium"
+      },
+      {
+        "title": "Microsoft Digital Defense Report 2025",
+        "link": "https://www.microsoft.com/en-us/security/business/microsoft-digital-defense-report",
+        "type": "vendor",
+        "source": "Microsoft",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "Deepfake Detection - NIST",
+        "link": "https://www.nist.gov/programs-projects/deepfake-detection",
+        "type": "standard",
+        "source": "NIST",
+        "language": "en",
+        "evidenceLevel": "high"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

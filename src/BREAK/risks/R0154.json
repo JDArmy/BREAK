@@ -1,0 +1,41 @@
+{
+  "R0154": {
+    "title": "ClickFix欺骗风险",
+    "definition": "攻击者伪装成系统修复提示或验证码验证步骤，诱骗用户主动执行恶意代码的社会工程风险。",
+    "description": "ClickFix欺骗风险是一种新型社会工程攻击风险，攻击者利用用户对系统错误提示和修复操作的信任心理，将恶意代码执行伪装成合法的系统操作。区别于R0084钓鱼攻击侧重于信息窃取，ClickFix欺骗风险侧重于诱骗用户直接在本地执行恶意代码。主要风险场景包括：①终端被控制：用户执行恶意命令后，攻击者获得终端的远程控制权；②凭据窃取：恶意命令在后台窃取浏览器中存储的密码、Cookie和会话令牌；③勒索软件部署：通过恶意命令下载并执行勒索软件，加密用户文件；④持久化后门：在系统中植入持久化后门，实现长期潜伏访问；⑤横向移动：以被控终端为跳板，向企业内网其他系统发起攻击。ClickFix攻击的社会工程效果显著，因为用户往往认为自己在\"修复\"问题而非\"被攻击\"。",
+    "complexity": "中级",
+    "influence": "可导致终端被完全控制、凭据批量泄露、勒索软件感染和企业内网被渗透。",
+    "avoidances": [
+      "A0051",
+      "A0078",
+      "A0001"
+    ],
+    "references": [
+      {
+        "title": "Security Brief: ClickFix Social Engineering Technique Floods Threat Landscape",
+        "link": "https://www.proofpoint.com/us/blog/threat-insight/security-brief-clickfix-social-engineering-technique-floods-threat-landscape",
+        "type": "vendor",
+        "source": "Proofpoint",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "ClickFix Attacks - HHS Sector Alert",
+        "link": "https://www.hhs.gov/sites/default/files/clickfix-attacks-sector-alert-tlpclear.pdf",
+        "type": "regulation",
+        "source": "HHS",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "Caught in the CAPTCHA: How ClickFix is Weaponizing Verification Fatigue",
+        "link": "https://www.sentinelone.com/blog/how-clickfix-is-weaponizing-verification-fatigue-to-deliver-rats-infostealers/",
+        "type": "vendor",
+        "source": "SentinelOne",
+        "language": "en",
+        "evidenceLevel": "medium"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

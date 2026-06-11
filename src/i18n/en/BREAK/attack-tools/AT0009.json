@@ -1,7 +1,7 @@
 {
   "AT0009": {
     "title": "Mass Control Systems",
-    "description": "A mass control system uses automated control integration technology to map multiple phone interfaces directly to a computer monitor, enabling one computer to control dozens or even hundreds of phones simultaneously. The system numbers each phone's interface on the control computer, corresponding to the same-numbered phone, achieving one-to-one phone operation control. Mass control systems typically consist of software and hardware components.",
+    "description": "A mass control system uses automated control integration technology to map multiple phone interfaces directly to a computer monitor, enabling one computer to control dozens or even hundreds of phones simultaneously. The system numbers each phone's interface on the control computer, corresponding to the same-numbered phone, achieving one-to-one phone operation control. Traditional mass control systems typically consist of software and hardware components, with the hardware including a control host, HUB, computer, and terminal phones, and the software using a control system with sub-control functionality operating in a local LAN environment. In recent years, mass control has evolved into a 'cloud control' model, where large numbers of phones are remotely controlled through cloud-based software without physical connections. A single computer can control tens of thousands of phones, commonly used for livestream traffic inflation, short video likes and comments, and other black/gray market activities.",
     "references": [
       {
         "title": "Basic Concepts of Mass Control Systems",

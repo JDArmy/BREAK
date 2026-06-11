@@ -1,0 +1,36 @@
+{
+  "A0083": {
+    "title": "影子AI检测与治理",
+    "category": "AC03",
+    "definition": "对企业员工未经授权使用第三方AI工具（如公开大模型、AI写作助手、AI代码生成器等）的行为进行检测、监控和治理的安全控制手段。",
+    "description": "影子AI（Shadow AI）是指员工在未经组织正式批准和安全评估的情况下，将敏感数据输入第三方AI服务，或使用未经审核的AI工具处理业务数据的行为。随着生成式AI的普及，员工自发使用ChatGPT、Claude等工具提升工作效率已成为普遍现象，但这也带来了数据泄露、合规违规和知识产权外泄等风险。影子AI检测与治理包括：①AI流量识别：通过网络流量分析识别向已知AI服务端点发送的数据请求；②数据防泄漏集成：在DLP策略中增加AI服务敏感数据传输规则；③AI工具目录管理：建立已批准AI工具白名单和未批准工具黑名单；④使用审计日志：记录AI工具的使用时间、用户、数据类型和交互内容摘要；⑤安全意识教育：向员工说明影子AI风险和合规要求；⑥替代方案提供：为员工提供经安全评估的企业级AI工具以替代公开服务。",
+    "limitation": "AI服务端点和工具持续涌现，检测规则难以完全覆盖；加密流量中的AI使用难以识别；员工可能通过个人设备绕过企业网络检测；过度限制可能降低员工工作效率和创新能力；对AI工具功能的审计依赖供应商的透明度。",
+    "references": [
+      {
+        "title": "2026 Cybersecurity Trends - Gartner",
+        "link": "https://www.gartner.com/en/information-technology",
+        "type": "vendor",
+        "source": "Gartner",
+        "language": "en",
+        "evidenceLevel": "medium"
+      },
+      {
+        "title": "Cisco 2025 Data Privacy Benchmark Study",
+        "link": "https://www.cisco.com/c/en/us/products/security/data-privacy.html",
+        "type": "vendor",
+        "source": "Cisco",
+        "language": "en",
+        "evidenceLevel": "medium"
+      },
+      {
+        "title": "NIST AI Risk Management Framework",
+        "link": "https://www.nist.gov/itl/ai-risk-management-framework",
+        "type": "standard",
+        "source": "NIST",
+        "language": "en",
+        "evidenceLevel": "high"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

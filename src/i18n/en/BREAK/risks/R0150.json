@@ -1,0 +1,43 @@
+{
+  "R0150": {
+    "title": "Pig Butchering / Investment Fraud Risk",
+    "definition": "Systematic fraud risk in which criminal groups cultivate long-term trust relationships to lure victims into investing funds in fake investment platforms, particularly cryptocurrency platforms.",
+    "description": "Pig butchering is a long-term relationship-based investment fraud. Scammers contact potential victims through social media and dating apps, spending weeks to months building trust before guiding victims to invest in fake platforms they control. These investment platforms are actually fraudulent websites; victims' funds are quickly transferred and laundered behind the scenes. The name derives from the criminal process of 'fattening the pig' (building trust) and 'slaughtering' (defrauding funds). Key characteristics include: ① Trust cultivation phase: gaining victim trust through romantic relationships, friendship, or professional advice; ② Investment induction phase: demonstrating fake high-yield returns, encouraging victims to start small then increase investments; ③ Harvest phase: when victims attempt to withdraw, demanding high fees or taxes before cutting off contact. Pig butchering has formed a complete industry chain including script training, fake platform development, and money laundering. Global losses are enormous. According to the FBI IC3 report, US investment fraud losses alone reached $9.3 billion in 2024, with cryptocurrency-related fraud accounting for more than half.",
+    "complexity": "Advanced",
+    "influence": "Can cause victims massive financial losses (single cases reaching millions of dollars), trigger platform trust crises, intensify regulatory pressure, and scam compounds are often associated with serious social issues including human trafficking and forced labor.",
+    "avoidances": [
+      "A0024",
+      "A0075",
+      "A0018",
+      "A0029",
+      "A0077"
+    ],
+    "references": [
+      {
+        "title": "FBI IC3 2024 Internet Crime Report",
+        "link": "https://www.ic3.gov/",
+        "type": "regulatory",
+        "source": "FBI",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "UNODC Southeast Asia Scam Operations Report",
+        "link": "https://www.unodc.org/",
+        "type": "regulatory",
+        "source": "UNODC",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "Chainalysis 2026 Crypto Crime Report",
+        "link": "https://www.chainalysis.com/",
+        "type": "industry",
+        "source": "Chainalysis",
+        "language": "en",
+        "evidenceLevel": "high"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

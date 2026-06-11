@@ -1,0 +1,41 @@
+{
+  "R0154": {
+    "title": "ClickFix Deception Risk",
+    "definition": "A social engineering risk where attackers disguise themselves as system repair prompts or CAPTCHA verification steps to trick users into voluntarily executing malicious code.",
+    "description": "ClickFix deception risk is a novel social engineering attack risk where attackers exploit users' trust in system error prompts and repair operations, disguising malicious code execution as legitimate system operations. Unlike R0084 phishing attacks which focus on information theft, ClickFix deception risk focuses on tricking users into directly executing malicious code locally. Main risk scenarios include: 1) Terminal takeover: after users execute malicious commands, attackers gain remote control of the terminal; 2) Credential theft: malicious commands steal passwords, cookies, and session tokens stored in browsers in the background; 3) Ransomware deployment: downloading and executing ransomware through malicious commands to encrypt user files; 4) Persistent backdoor: implanting persistent backdoors in the system for long-term stealthy access; 5) Lateral movement: using the compromised terminal as a springboard to attack other systems in the enterprise internal network. The social engineering effectiveness of ClickFix attacks is significant because users often believe they are \"fixing\" a problem rather than \"being attacked\".",
+    "complexity": "Intermediate",
+    "influence": "Can result in complete terminal compromise, bulk credential leakage, ransomware infection, and enterprise internal network penetration.",
+    "avoidances": [
+      "A0051",
+      "A0078",
+      "A0001"
+    ],
+    "references": [
+      {
+        "title": "Security Brief: ClickFix Social Engineering Technique Floods Threat Landscape",
+        "link": "https://www.proofpoint.com/us/blog/threat-insight/security-brief-clickfix-social-engineering-technique-floods-threat-landscape",
+        "type": "vendor",
+        "source": "Proofpoint",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "ClickFix Attacks - HHS Sector Alert",
+        "link": "https://www.hhs.gov/sites/default/files/clickfix-attacks-sector-alert-tlpclear.pdf",
+        "type": "regulation",
+        "source": "HHS",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "Caught in the CAPTCHA: How ClickFix is Weaponizing Verification Fatigue",
+        "link": "https://www.sentinelone.com/blog/how-clickfix-is-weaponizing-verification-fatigue-to-deliver-rats-infostealers/",
+        "type": "vendor",
+        "source": "SentinelOne",
+        "language": "en",
+        "evidenceLevel": "medium"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

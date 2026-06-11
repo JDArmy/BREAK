@@ -1,7 +1,7 @@
 {
   "AT0051": {
     "title": "Risk Email Accounts",
-    "description": "From a defense perspective against gray/black markets, risk email accounts are email accounts that may be exploited by criminal actors. They typically obtain large numbers of email accounts through malicious registration, fraud, and cyberattacks, and use these accounts for various illegal activities such as sending spam, online fraud, and data breaches.",
+    "description": "From a defense perspective against gray/black markets, risk email accounts are email accounts that may be exploited by criminal actors. They mainly fall into two categories: first, large numbers of legitimate email accounts obtained through malicious registration, fraud, and cyberattacks, used for illegal activities such as sending spam, online fraud, and data breaches; second, temporary email accounts (disposable emails) that can be quickly obtained without real-name registration and are heavily used by criminal actors for batch registration of fake accounts and bypassing email verification.",
     "references": [
       {
         "title": "Black Market Big Data: Malicious Email Accounts See New Surge",

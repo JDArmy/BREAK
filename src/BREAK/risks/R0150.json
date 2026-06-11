@@ -1,0 +1,43 @@
+{
+  "R0150": {
+    "title": "杀猪盘/投资诈骗风险",
+    "definition": "犯罪团伙通过长期培养信任关系，诱导受害者在虚假投资平台（尤其加密货币平台）投入资金的系统性诈骗风险。",
+    "description": "杀猪盘是一种长期关系型投资诈骗，诈骗者通过社交媒体、交友软件等渠道接触潜在受害者，花费数周至数月建立信任关系后，引导受害者向其控制的虚假投资平台进行\"投资\"。这些投资平台实际上是伪造网站，受害者投入的资金在后台被迅速转移和洗钱。杀猪盘名称来源于\"养猪\"（培养信任）和\"杀猪\"（骗取资金）的犯罪流程。主要特征包括：①信任培养阶段：通过恋爱关系、友谊或专业建议获取受害者信任；②诱导投资阶段：展示虚假的高收益投资回报，引导受害者小额试水后加大投入；③收割阶段：当受害者试图提现时，要求支付高额手续费或税款，最终切断联系。杀猪盘已形成完整产业链，包括话术培训、虚假平台开发、资金洗白等环节，全球损失金额巨大。据FBI IC3报告，2024年仅美国投资诈骗损失即达93亿美元，其中加密货币相关诈骗占比超过一半。",
+    "complexity": "高级",
+    "influence": "可造成受害者巨额经济损失（单案可达数百万美元），引发平台信任危机，加剧监管压力，同时诈骗园区常涉及人口贩运和强迫劳动等严重社会问题。",
+    "avoidances": [
+      "A0024",
+      "A0075",
+      "A0018",
+      "A0029",
+      "A0077"
+    ],
+    "references": [
+      {
+        "title": "FBI IC3 2024 Internet Crime Report",
+        "link": "https://www.ic3.gov/",
+        "type": "regulatory",
+        "source": "FBI",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "UNODC Southeast Asia Scam Operations Report",
+        "link": "https://www.unodc.org/",
+        "type": "regulatory",
+        "source": "UNODC",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "Chainalysis 2026 Crypto Crime Report",
+        "link": "https://www.chainalysis.com/",
+        "type": "industry",
+        "source": "Chainalysis",
+        "language": "en",
+        "evidenceLevel": "high"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

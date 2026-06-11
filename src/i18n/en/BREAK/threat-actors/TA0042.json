@@ -1,0 +1,36 @@
+{
+  "TA0042": {
+    "title": "Scam Compound Operator",
+    "description": "Organizers and managers who operate large-scale telecommunications fraud and cryptocurrency scam compounds. Unlike TA0015 Fraud Gangs that directly carry out scams, scam compound operators are the \"platform providers\" that supply infrastructure, workplaces, and management frameworks. Key characteristics include: ① Compound construction: establishing enclosed scam compounds in weak-regulation areas, equipped with offices, communication equipment, and technical facilities; ② Personnel management: acquiring large numbers of people for scam operations through recruitment, deception, or even coercion; ③ Technical support: providing technical tools, script training, and management systems for scam teams within the compound; ④ Division of labor management: dividing the compound into multiple business groups responsible for different types of scams (pig butchering, investment fraud, impersonation of customer service, etc.); ⑤ Fund channels: establishing complete fund receiving and laundering channels, interfacing with underground money changers and cryptocurrency mixers; ⑥ Counter-surveillance measures: deploying counter-surveillance technologies, frequently changing communication devices and IP addresses to evade law enforcement tracking. Representative cases include Cambodia's Taishan Group, and the UNODC reports that the scale of Southeast Asian scam compounds has reached hundreds of thousands of people.",
+    "buildAttackTools": ["AT0070"],
+    "useAttackTools": ["AT0001", "AT0005", "AT0059", "AT0073"],
+    "couseRisks": ["R0150", "R0044", "R0084"],
+    "references": [
+      {
+        "title": "UNODC: Transnational Organized Crime in Southeast Asia",
+        "link": "https://www.unodc.org/roseap/en/toctag.html",
+        "type": "regulation",
+        "source": "UNODC",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "USIP: The Scamming of Southeast Asia",
+        "link": "https://www.usip.org/publications/2024/scamming-southeast-asia",
+        "type": "industry",
+        "source": "USIP",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "Human Rights Watch: Cambodia Cyber Scam Compounds",
+        "link": "https://www.hrw.org/news/2024/11/cambodia-cyber-scam-compounds",
+        "type": "regulation",
+        "source": "HRW",
+        "language": "en",
+        "evidenceLevel": "high"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

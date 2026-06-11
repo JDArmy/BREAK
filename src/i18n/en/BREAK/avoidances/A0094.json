@@ -1,0 +1,36 @@
+{
+  "A0094": {
+    "title": "AI Security Posture Management (AI-SPM)",
+    "category": "AC02",
+    "definition": "A comprehensive situational awareness and governance approach for continuous monitoring, assessment, and governance of the security posture of AI systems.",
+    "description": "AI Security Posture Management (AI-SPM) is a security posture management technology specifically designed for AI systems. Unlike A0087 AI Agent Tool Governance and MCP Security Controls which are specific control measures, AI-SPM is a global-level situational awareness and governance framework. Key functions include: ① AI asset discovery: automatically discovering and inventorying all AI models, training data, inference services, and agent applications within an organization; ② Vulnerability assessment: assessing security risks facing AI systems, including prompt injection, data poisoning, model theft, and adversarial examples; ③ Permission mapping: analyzing AI system permission configurations, identifying overly broad permission grants and insecure access paths; ④ Compliance monitoring: monitoring whether AI systems comply with regulatory requirements such as the EU AI Act and China's Generative AI Management Measures; ⑤ Attack surface management: continuously assessing changes in AI system attack surfaces and discovering new exposures; ⑥ Security scoring: generating security scores for each AI system to support security decision-making. AI-SPM is a key focus area for AI security identified by research organizations such as Gartner in 2026.",
+    "limitation": "The complexity and dynamic nature of AI systems make comprehensive situational awareness difficult; lack of unified AI security standards and scoring systems; the \"black box\" nature of AI model internals limits the depth of security assessment; the AI-SPM tool market is still in its early stages with insufficient maturity; cross-cloud and cross-platform AI system management faces integration challenges.",
+    "references": [
+      {
+        "title": "Gartner: AI Security Posture Management Market Guide",
+        "link": "https://www.gartner.com/en/topics/ai-security",
+        "type": "industry",
+        "source": "Gartner",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "OWASP AI Security and Privacy Guide",
+        "link": "https://owasp.org/www-project-ai-security-and-privacy-guide/",
+        "type": "standard",
+        "source": "OWASP",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "NIST AI Risk Management Framework (AI RMF)",
+        "link": "https://www.nist.gov/itl/ai-risk-management-framework",
+        "type": "standard",
+        "source": "NIST",
+        "language": "en",
+        "evidenceLevel": "high"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

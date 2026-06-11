@@ -1,0 +1,27 @@
+{
+  "AT0070": {
+    "title": "Fraud-as-a-Service (FaaS) Platform",
+    "description": "Fraud-as-a-Service (FaaS) is a black market service model where cybercriminals tool and platform the entire fraud process, including pig butchering, investment fraud, and identity impersonation. Unlike AT0063 Phishing Toolkit which provides single-point phishing capabilities, FaaS platforms offer a complete fraud chain as a managed service from script generation, fake platform setup, victim screening, trust cultivation to money laundering. Key features and services include: ① Script libraries and training: providing multi-language, multi-scenario scam script templates and role-play training materials; ② Fake investment platform setup: providing customizable fake trading platform frontends and backend management systems supporting simulated trading quotes and fake profit displays; ③ Victim screening tools: identifying high-value potential victims through social media data crawling and analysis; ④ AI-assisted communication: integrating AI chatbots to assist or replace humans in daily communication and trust cultivation; ⑤ Payment channel integration: providing multi-channel fund reception and transfer solutions; ⑥ Money laundering service connections: seamlessly integrating with cryptocurrency mixers, underground banks, and other money laundering channels. FaaS platforms significantly lower the technical barriers and organizational costs of fraud, enabling non-professional criminal groups to conduct large-scale complex scams.",
+    "avoidances": ["A0075", "A0029", "A0078"],
+    "couseRisks": ["R0150", "R0044", "R0098"],
+    "references": [
+      {
+        "title": "Chainalysis 2026 Crypto Crime Report",
+        "link": "https://www.chainalysis.com/",
+        "type": "industry",
+        "source": "Chainalysis",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "UNODC Transnational Organized Fraud Report",
+        "link": "https://www.unodc.org/",
+        "type": "regulatory",
+        "source": "UNODC",
+        "language": "en",
+        "evidenceLevel": "high"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

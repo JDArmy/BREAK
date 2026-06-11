@@ -1,0 +1,36 @@
+{
+  "A0086": {
+    "title": "Fake Call Detection",
+    "category": "AC03",
+    "definition": "Security techniques for detecting and identifying fraudulent phone calls that use AI voice cloning combined with caller ID spoofing.",
+    "description": "Fake call detection targets combined attacks using AI voice cloning and caller ID spoofing. As AI voice cloning technology matures, attackers can clone target voices in real-time and, combined with caller ID spoofing, impersonate acquaintances, supervisors, or financial institution staff to perpetrate telecom fraud. Fake call detection includes: ① Caller ID verification: verifying the authenticity of incoming call numbers through STIR/SHAKEN protocols to detect number spoofing; ② AI voice cloning detection: analyzing voiceprint features during calls to identify AI-synthesized speech; ③ Call behavior anomaly detection: identifying abnormal call patterns such as unfamiliar numbers making urgent transfer requests; ④ Identity cross-verification: verifying the caller's true identity through other channels (SMS, in-person); ⑤ Call metadata analysis: analyzing call path information to identify VoIP spoofing and gateway anomalies. In 2025, Google Android launched an industry-first fake call detection feature that verifies call authenticity through end-to-end encrypted RCS protocol.",
+    "limitation": "Not all phone systems support STIR/SHAKEN protocols; high-quality AI voice clones may temporarily evade voiceprint detection; attackers may use legitimate communication channels as intermediaries to reduce suspicion; false positives may block legitimate emergency calls; some countries' communication infrastructure does not support caller verification.",
+    "references": [
+      {
+        "title": "Google Android Scam Detection - Official Blog",
+        "link": "https://blog.google/technology/safety-security/android-scam-detection/",
+        "type": "vendor",
+        "source": "Google",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "FCC STIR/SHAKEN Framework",
+        "link": "https://www.fcc.gov/call-authentication",
+        "type": "regulation",
+        "source": "FCC",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "INTERPOL Report on AI Voice Cloning Fraud",
+        "link": "https://www.interpol.org/",
+        "type": "regulatory",
+        "source": "INTERPOL",
+        "language": "en",
+        "evidenceLevel": "medium"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}
