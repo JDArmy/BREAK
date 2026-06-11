@@ -12,19 +12,11 @@
       },
       {
         "title": "OWASP Vulnerability Management Guide",
-        "link": "https://owasp.org/www-project-vulnerability-management-guide/",
-        "type": "standard",
-        "source": "OWASP",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://owasp.org/www-project-vulnerability-management-guide/"
       },
       {
         "title": "NIST SP 800-40 Rev. 4: Guide to Enterprise Patch Management Planning",
-        "link": "https://csrc.nist.gov/pubs/sp/800/40/r4/final",
-        "type": "standard",
-        "source": "NIST",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://csrc.nist.gov/pubs/sp/800/40/r4/final"
       }
     ],
     "updated": "2024-01-11"

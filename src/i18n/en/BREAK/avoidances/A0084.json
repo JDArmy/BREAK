@@ -8,27 +8,15 @@
     "references": [
       {
         "title": "Cybersecurity Forecast 2026 - Google Cloud",
-        "link": "https://cloud.google.com/security/resources/cybersecurity-forecast",
-        "type": "vendor",
-        "source": "Google Cloud",
-        "language": "en",
-        "evidenceLevel": "medium"
+        "link": "https://cloud.google.com/security/resources/cybersecurity-forecast"
       },
       {
         "title": "Microsoft Digital Defense Report 2025",
-        "link": "https://www.microsoft.com/en-us/security/business/microsoft-digital-defense-report",
-        "type": "vendor",
-        "source": "Microsoft",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://www.microsoft.com/en-us/security/business/microsoft-digital-defense-report"
       },
       {
         "title": "Deepfake Detection - NIST",
-        "link": "https://airc.nist.gov/airmf-resources/airmf/",
-        "type": "standard",
-        "source": "NIST",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://airc.nist.gov/airmf-resources/airmf/"
       }
     ],
     "updated": "2026-06-11"

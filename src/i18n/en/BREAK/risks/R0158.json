@@ -13,27 +13,15 @@
     "references": [
       {
         "title": "MITRE ATT&CK: Resource Hijacking (T1496)",
-        "link": "https://attack.mitre.org/techniques/T1496/",
-        "type": "standard",
-        "source": "MITRE",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://attack.mitre.org/techniques/T1496/"
       },
       {
         "title": "CrowdStrike: Cloud Compute Resource Abuse Report",
-        "link": "https://www.crowdstrike.com/resources/reports/",
-        "type": "vendor",
-        "source": "CrowdStrike",
-        "language": "en",
-        "evidenceLevel": "medium"
+        "link": "https://www.crowdstrike.com/resources/reports/"
       },
       {
         "title": "Aqua Security: Cryptojacking and GPU Abuse in Cloud Environments",
-        "link": "https://www.aquasec.com/blog/top-cloud-native-threats-and-vulnerabilities/",
-        "type": "vendor",
-        "source": "Aqua Security",
-        "language": "en",
-        "evidenceLevel": "medium"
+        "link": "https://www.aquasec.com/blog/top-cloud-native-threats-and-vulnerabilities/"
       }
     ],
     "updated": "2026-06-11"

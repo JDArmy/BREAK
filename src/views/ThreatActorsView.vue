@@ -6,7 +6,6 @@ import RiskDetail from "@/components/RiskDetail.vue";
 import AttackToolDetail from "@/components/AttackToolDetail.vue";
 import iconRelation from "@/components/icons/iconRelation.vue";
 import { useAnchorTable } from "@/composables/useAnchorTable";
-import ReferenceBadge from "@/components/ReferenceBadge.vue";
 
 // 攻击工具详情页
 const attackToolDrawer = ref(false);
@@ -149,7 +148,6 @@ const { getTableHeight, tableRowClassName } = useAnchorTable("taKey");
                 )
               }}
             </span>
-            <ReferenceBadge :type="reference.type" :evidence-level="reference.evidenceLevel" />
           </li>
         </ul>
       </template>

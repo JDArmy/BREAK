@@ -18,27 +18,15 @@
     "references": [
       {
         "title": "Europol: Internet Organised Crime Threat Assessment",
-        "link": "https://www.europol.europa.eu/crime-areas-and-statistics",
-        "type": "regulation",
-        "source": "Europol",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://www.europol.europa.eu/crime-areas-and-statistics"
       },
       {
         "title": "FBI IC3 Annual Report",
-        "link": "https://www.ic3.gov/",
-        "type": "regulation",
-        "source": "FBI",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://www.ic3.gov/"
       },
       {
         "title": "Kaspersky: Data Broker Activities on the Dark Web",
-        "link": "https://securelist.com/",
-        "type": "vendor",
-        "source": "Kaspersky",
-        "language": "en",
-        "evidenceLevel": "medium"
+        "link": "https://securelist.com/"
       }
     ],
     "updated": "2026-06-11"

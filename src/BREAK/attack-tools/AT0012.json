@@ -9,11 +9,7 @@
       },
       {
         "title": "公安部:严打侵犯公民个人信息犯罪",
-        "link": "https://www.mps.gov.cn/n2254314/n2254487/c5752336/content.html",
-        "type": "regulation",
-        "source": "公安部",
-        "language": "zh-CN",
-        "evidenceLevel": "high"
+        "link": "https://www.mps.gov.cn/n2254314/n2254487/c5752336/content.html"
       }
     ],
     "avoidances": [
@@ -23,7 +19,13 @@
       "A0011",
       "A0012"
     ],
-    "directCauseRisks": [],
+    "directCauseRisks": [
+      "R0005-001",
+      "R0032",
+      "R0032-001",
+      "R0032-002",
+      "R0032-003"
+    ],
     "indirectSupportRisks": [
       "R0011",
       "R0032-001",

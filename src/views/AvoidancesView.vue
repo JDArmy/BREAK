@@ -6,7 +6,6 @@ import { useRoute } from "vue-router";
 import { ref, watch } from "vue";
 import { CaretTop } from "@element-plus/icons-vue";
 import iconRelation from "@/components/icons/iconRelation.vue";
-import ReferenceBadge from "@/components/ReferenceBadge.vue";
 
 const route = useRoute();
 
@@ -226,7 +225,6 @@ const scrollToTop = () => {
                   )
                 }}
               </span>
-              <ReferenceBadge :type="reference.type" :evidence-level="reference.evidenceLevel" />
             </li>
           </ul>
         </template>

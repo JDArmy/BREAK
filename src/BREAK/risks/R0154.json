@@ -13,27 +13,15 @@
     "references": [
       {
         "title": "Security Brief: ClickFix Social Engineering Technique Floods Threat Landscape",
-        "link": "https://www.proofpoint.com/us/blog/threat-insight/security-brief-clickfix-social-engineering-technique-floods-threat-landscape",
-        "type": "vendor",
-        "source": "Proofpoint",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://www.proofpoint.com/us/blog/threat-insight/security-brief-clickfix-social-engineering-technique-floods-threat-landscape"
       },
       {
         "title": "ClickFix Attacks - HHS Sector Alert",
-        "link": "https://www.hhs.gov/sites/default/files/clickfix-attacks-sector-alert-tlpclear.pdf",
-        "type": "regulation",
-        "source": "HHS",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://www.hhs.gov/sites/default/files/clickfix-attacks-sector-alert-tlpclear.pdf"
       },
       {
         "title": "Caught in the CAPTCHA: How ClickFix is Weaponizing Verification Fatigue",
-        "link": "https://www.sentinelone.com/blog/how-clickfix-is-weaponizing-verification-fatigue-to-deliver-rats-infostealers/",
-        "type": "vendor",
-        "source": "SentinelOne",
-        "language": "en",
-        "evidenceLevel": "medium"
+        "link": "https://www.sentinelone.com/blog/how-clickfix-is-weaponizing-verification-fatigue-to-deliver-rats-infostealers/"
       }
     ],
     "updated": "2026-06-11"

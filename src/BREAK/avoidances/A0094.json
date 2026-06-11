@@ -8,27 +8,15 @@
     "references": [
       {
         "title": "Gartner: AI Security Posture Management Market Guide",
-        "link": "https://www.gartner.com/en/topics/ai-security",
-        "type": "industry",
-        "source": "Gartner",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://www.gartner.com/en/topics/ai-security"
       },
       {
         "title": "OWASP AI Security and Privacy Guide",
-        "link": "https://owasp.org/www-project-ai-security-and-privacy-guide/",
-        "type": "standard",
-        "source": "OWASP",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://owasp.org/www-project-ai-security-and-privacy-guide/"
       },
       {
         "title": "NIST AI Risk Management Framework (AI RMF)",
-        "link": "https://www.nist.gov/itl/ai-risk-management-framework",
-        "type": "standard",
-        "source": "NIST",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://www.nist.gov/itl/ai-risk-management-framework"
       }
     ],
     "updated": "2026-06-11"

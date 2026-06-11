@@ -9,11 +9,7 @@
       },
       {
         "title": "MITRE ATT&CK - Threat Groups",
-        "link": "https://attack.mitre.org/groups/",
-        "type": "standard",
-        "source": "MITRE",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://attack.mitre.org/groups/"
       }
     ],
     "buildAttackTools": [

@@ -9,11 +9,7 @@
       },
       {
         "title": "中国反诈成功实践",
-        "link": "https://www.mps.gov.cn/n2255079/n6865805/n7355741/n7355780/c8924764/content.html",
-        "type": "regulation",
-        "source": "公安部",
-        "language": "zh-CN",
-        "evidenceLevel": "high"
+        "link": "https://www.mps.gov.cn/n2255079/n6865805/n7355741/n7355780/c8924764/content.html"
       }
     ],
     "avoidances": [
@@ -22,7 +18,13 @@
       "A0029-001",
       "A0044"
     ],
-    "directCauseRisks": [],
+    "directCauseRisks": [
+      "R0002",
+      "R0003-001",
+      "R0003-003",
+      "R0003-004",
+      "R0005-001"
+    ],
     "indirectSupportRisks": [
       "R0003",
       "R0003-003",

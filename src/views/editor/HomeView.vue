@@ -71,14 +71,6 @@ enum relationType {
 interface Reference {
   link: string;
   title: string;
-  type?: string;
-  source?: string;
-  language?: string;
-  evidenceLevel?: string;
-  collectedBy?: string;
-  collectedAt?: string;
-  verifiedAt?: string;
-  note?: string;
 }
 
 interface BreakItem {
@@ -371,14 +363,6 @@ const addReference = () => {
   editingRef.value = {
     link: "",
     title: "",
-    type: "industry",
-    source: "",
-    language: "zh-CN",
-    evidenceLevel: "medium",
-    collectedBy: "manual",
-    collectedAt: new Date().toISOString().slice(0, 10),
-    verifiedAt: new Date().toISOString().slice(0, 10),
-    note: "",
   };
   editingIndex.value = -1;
   showRefDialog.value = true;
@@ -655,12 +639,8 @@ const transferChange = (relationItem: RelationItem) => {
         <h3 style="text-align: center">参考资料编辑</h3>
         <el-button type="primary" @click="addReference">添加参考资料</el-button>
         <el-table :data="references" style="margin-top: 10px">
-          <el-table-column prop="title" label="标题" width="200" />
+          <el-table-column prop="title" label="标题" width="300" />
           <el-table-column prop="link" label="链接" />
-          <el-table-column prop="type" label="类型" width="100" />
-          <el-table-column prop="source" label="来源" width="120" />
-          <el-table-column prop="language" label="语言" width="100" />
-          <el-table-column prop="evidenceLevel" label="证据等级" width="100" />
           <el-table-column label="操作" width="150">
             <template #default="{ $index }">
               <el-button size="small" @click="editReference($index)">编辑</el-button>
@@ -673,51 +653,13 @@ const transferChange = (relationItem: RelationItem) => {
         </div>
       </el-col>
     </el-row>
-    <el-dialog v-model="showRefDialog" title="编辑参考资料" width="600px">
-      <el-form v-if="editingRef" label-width="100px">
+    <el-dialog v-model="showRefDialog" title="编辑参考资料" width="500px">
+      <el-form v-if="editingRef" label-width="80px">
         <el-form-item label="标题">
           <el-input v-model="editingRef.title" />
         </el-form-item>
         <el-form-item label="链接">
           <el-input v-model="editingRef.link" />
-        </el-form-item>
-        <el-form-item label="类型">
-          <el-select v-model="editingRef.type">
-            <el-option label="标准" value="standard" />
-            <el-option label="学术" value="academic" />
-            <el-option label="监管" value="regulation" />
-            <el-option label="厂商" value="vendor" />
-            <el-option label="新闻" value="news" />
-            <el-option label="百科" value="encyclopedia" />
-            <el-option label="博客" value="blog" />
-            <el-option label="工具" value="tool" />
-            <el-option label="行业" value="industry" />
-          </el-select>
-        </el-form-item>
-        <el-form-item label="来源">
-          <el-input v-model="editingRef.source" placeholder="owasp / nist / arxiv / baidu" />
-        </el-form-item>
-        <el-form-item label="语言">
-          <el-select v-model="editingRef.language">
-            <el-option label="中文" value="zh-CN" />
-            <el-option label="英文" value="en" />
-          </el-select>
-        </el-form-item>
-        <el-form-item label="证据等级">
-          <el-select v-model="editingRef.evidenceLevel">
-            <el-option label="高" value="high" />
-            <el-option label="中" value="medium" />
-            <el-option label="低" value="low" />
-          </el-select>
-        </el-form-item>
-        <el-form-item label="采集日期">
-          <el-input v-model="editingRef.collectedAt" placeholder="YYYY-MM-DD" />
-        </el-form-item>
-        <el-form-item label="验证日期">
-          <el-input v-model="editingRef.verifiedAt" placeholder="YYYY-MM-DD" />
-        </el-form-item>
-        <el-form-item label="备注">
-          <el-input v-model="editingRef.note" type="textarea" />
         </el-form-item>
       </el-form>
       <template #footer>

@@ -8,19 +8,11 @@
     "references": [
       {
         "title": "NIST SP 800-207: Zero Trust Architecture",
-        "link": "https://csrc.nist.gov/pubs/sp/800/207/final",
-        "type": "standard",
-        "source": "NIST",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://csrc.nist.gov/pubs/sp/800/207/final"
       },
       {
         "title": "Zero Trust Maturity Model - CISA",
-        "link": "https://www.cisa.gov/resources-tools/resources/zero-trust-maturity-model",
-        "type": "standard",
-        "source": "CISA",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://www.cisa.gov/resources-tools/resources/zero-trust-maturity-model"
       }
     ],
     "updated": "2026/05/28 00:33:28"

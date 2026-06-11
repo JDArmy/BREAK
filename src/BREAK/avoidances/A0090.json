@@ -8,27 +8,15 @@
     "references": [
       {
         "title": "OAuth 2.0 Security Best Current Practice",
-        "link": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics",
-        "type": "standard",
-        "source": "IETF",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics"
       },
       {
         "title": "Microsoft: Securing OAuth Apps in Microsoft 365",
-        "link": "https://learn.microsoft.com/en-us/microsoft-365/security/",
-        "type": "vendor",
-        "source": "Microsoft",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://learn.microsoft.com/en-us/microsoft-365/security/"
       },
       {
         "title": "OWASP OAuth 2.0 Security Cheat Sheet",
-        "link": "https://cheatsheetseries.owasp.org/cheatsheets/OAuth2_Cheat_Sheet.html",
-        "type": "standard",
-        "source": "OWASP",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/OAuth2_Cheat_Sheet.html"
       }
     ],
     "updated": "2026-06-11"

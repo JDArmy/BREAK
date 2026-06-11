@@ -41,11 +41,7 @@
       },
       {
         "title": "网络反不正当竞争暂行规定",
-        "link": "https://www.gov.cn/gongbao/2024/issue_11466/202407/content_6963168.html",
-        "type": "regulation",
-        "source": "国家市场监督管理总局",
-        "language": "zh-CN",
-        "evidenceLevel": "high"
+        "link": "https://www.gov.cn/gongbao/2024/issue_11466/202407/content_6963168.html"
       }
     ],
     "updated": "2024-01-15"
@@ -55,7 +51,7 @@
     "definition": "通过虚构交易、伪造数据等手段，骗取平台或政府发放的补贴、奖励或优惠资金。",
     "description": "利用平台的补贴政策漏洞，通过虚假交易、刷单、虚构用户活跃度等方式，将本不应获得的补贴资金据为己有。常见手段包括：雇佣刷手制造虚假交易记录；利用多账号重复领取补贴；在网约车、外卖等平台通过空跑刷单骗取补贴；电商卖家自买自卖骗取平台商家优惠和返利等。",
     "complexity": "中级",
-    "influence": "",
+    "influence": "骗取平台或政府补贴资金，造成直接经济损失；扰乱市场公平竞争秩序。",
     "avoidances": [
       "A0015",
       "A0016",

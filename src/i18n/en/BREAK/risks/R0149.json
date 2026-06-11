@@ -16,19 +16,11 @@
     "references": [
       {
         "title": "Cybersecurity Forecast 2026 - Google Cloud",
-        "link": "https://cloud.google.com/security/resources/cybersecurity-forecast",
-        "type": "vendor",
-        "source": "Google Cloud",
-        "language": "en",
-        "evidenceLevel": "medium"
+        "link": "https://cloud.google.com/security/resources/cybersecurity-forecast"
       },
       {
         "title": "NIST SP 800-207: Zero Trust Architecture",
-        "link": "https://csrc.nist.gov/pubs/sp/800/207/final",
-        "type": "standard",
-        "source": "NIST",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://csrc.nist.gov/pubs/sp/800/207/final"
       }
     ],
     "updated": "2026-05-28"

@@ -14,27 +14,15 @@
     "references": [
       {
         "title": "China Data Security Law and Cross-Border Data Transfer Regulations",
-        "link": "https://www.dataguidance.com/notes/china-data-security-law",
-        "type": "regulation",
-        "source": "DataGuidance",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://www.dataguidance.com/notes/china-data-security-law"
       },
       {
         "title": "MITRE: Data Exfiltration Techniques",
-        "link": "https://attack.mitre.org/tactics/TA0010/",
-        "type": "standard",
-        "source": "MITRE",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://attack.mitre.org/tactics/TA0010/"
       },
       {
         "title": "PwC: Global Data Transfer Compliance Report",
-        "link": "https://www.pwc.com/us/en/services/consulting/cybersecurity-data-tech-risk/data-risk-privacy.html",
-        "type": "industry",
-        "source": "PwC",
-        "language": "en",
-        "evidenceLevel": "medium"
+        "link": "https://www.pwc.com/us/en/services/consulting/cybersecurity-data-tech-risk/data-risk-privacy.html"
       }
     ],
     "updated": "2026-06-11"

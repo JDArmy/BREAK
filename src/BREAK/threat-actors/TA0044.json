@@ -15,27 +15,15 @@
     "references": [
       {
         "title": "FBI: Cloud Computing Fraud and Resource Abuse",
-        "link": "https://www.ic3.gov/",
-        "type": "regulation",
-        "source": "FBI",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://www.ic3.gov/"
       },
       {
         "title": "Unit 42: GPU Compute Abuse and Cloud Account Takeover",
-        "link": "https://unit42.paloaltonetworks.com/",
-        "type": "vendor",
-        "source": "Palo Alto Unit 42",
-        "language": "en",
-        "evidenceLevel": "medium"
+        "link": "https://unit42.paloaltonetworks.com/"
       },
       {
         "title": "Microsoft: GPU Supply Chain and Black Market Report",
-        "link": "https://www.microsoft.com/en-us/security/blog/",
-        "type": "vendor",
-        "source": "Microsoft",
-        "language": "en",
-        "evidenceLevel": "medium"
+        "link": "https://www.microsoft.com/en-us/security/blog/"
       }
     ],
     "updated": "2026-06-11"

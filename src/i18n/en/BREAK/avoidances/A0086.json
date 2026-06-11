@@ -8,27 +8,15 @@
     "references": [
       {
         "title": "Google Android Scam Detection - Official Blog",
-        "link": "https://blog.google/security/new-ai-powered-scam-detection-features/",
-        "type": "vendor",
-        "source": "Google",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://blog.google/security/new-ai-powered-scam-detection-features/"
       },
       {
         "title": "FCC STIR/SHAKEN Framework",
-        "link": "https://www.fcc.gov/call-authentication",
-        "type": "regulation",
-        "source": "FCC",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://www.fcc.gov/call-authentication"
       },
       {
         "title": "INTERPOL Report on AI Voice Cloning Fraud",
-        "link": "https://www.interpol.int/en",
-        "type": "regulatory",
-        "source": "INTERPOL",
-        "language": "en",
-        "evidenceLevel": "medium"
+        "link": "https://www.interpol.int/en"
       }
     ],
     "updated": "2026-06-11"

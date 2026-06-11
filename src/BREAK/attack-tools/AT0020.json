@@ -13,7 +13,13 @@
       "A0021",
       "A0021-001"
     ],
-    "directCauseRisks": [],
+    "directCauseRisks": [
+      "R0001",
+      "R0002",
+      "R0003",
+      "R0003-001",
+      "R0003-002"
+    ],
     "indirectSupportRisks": [
       "R0034",
       "R0050"

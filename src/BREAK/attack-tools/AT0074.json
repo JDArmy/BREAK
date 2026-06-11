@@ -16,27 +16,15 @@
     "references": [
       {
         "title": "Strengthening AI Agent Hijacking Evaluations",
-        "link": "https://www.nist.gov/news-events/news/2025/01/technical-blog-strengthening-ai-agent-hijacking-evaluations",
-        "type": "standard",
-        "source": "NIST",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://www.nist.gov/news-events/news/2025/01/technical-blog-strengthening-ai-agent-hijacking-evaluations"
       },
       {
         "title": "Fooling AI Agents: Web-Based Indirect Prompt Injection Observed in the Wild",
-        "link": "https://unit42.paloaltonetworks.com/ai-agent-prompt-injection/",
-        "type": "vendor",
-        "source": "Palo Alto Unit 42",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://unit42.paloaltonetworks.com/ai-agent-prompt-injection/"
       },
       {
         "title": "Agent Hijacking: How Prompt Injection Leads to Full AI System Compromise",
-        "link": "https://www.straiker.ai/blog/agent-hijacking-how-prompt-injection-leads-to-full-ai-system-compromise",
-        "type": "vendor",
-        "source": "Straiker",
-        "language": "en",
-        "evidenceLevel": "medium"
+        "link": "https://www.straiker.ai/blog/agent-hijacking-how-prompt-injection-leads-to-full-ai-system-compromise"
       }
     ],
     "updated": "2026-06-11"

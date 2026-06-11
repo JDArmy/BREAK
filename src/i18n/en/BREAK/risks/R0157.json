@@ -5,31 +5,23 @@
     "description": "AI browser/phone black box risk refers to the risk that AI functions embedded in the new generation of AI-native devices (such as AI PCs, AI phones, AI browsers) lack transparency and explainability in their decision-making processes, making users unable to understand and control AI behaviors. Unlike R0148 AI Agent Tool Abuse which focuses on AI being maliciously exploited, the AI black box risk focuses on the opacity and uncontrollability of AI systems themselves. Key risk scenarios include: ① Unexplainable autonomous decisions: AI assistants automatically execute operations (such as auto-replying to emails, auto-shopping, auto-subscribing to services) but cannot explain the decision basis to users; ② Opaque data collection: AI functions continuously collect user behavior data in the background, and users cannot know the scope and purpose of data collection; ③ Bias and discrimination: AI decisions may contain biases from training data, leading to unfair recommendations, screening, or pricing; ④ Uncorrectable erroneous decisions: AI's incorrect decisions may be mistakenly trusted by users as correct, and there is a lack of effective correction mechanisms; ⑤ Privacy leakage channels: cloud processing of AI functions may become new channels for data leakage. With the market proliferation of AI PCs and AI phones, the impact of this risk is rapidly expanding.",
     "complexity": "Intermediate",
     "influence": "Can lead to loss of user autonomy, continuous privacy leakage, unfair treatment, spread of erroneous decisions, and weakening of social trust systems.",
-    "avoidances": ["A0072", "A0089", "A0083"],
+    "avoidances": [
+      "A0072",
+      "A0089",
+      "A0083"
+    ],
     "references": [
       {
         "title": "EU AI Act: Transparency Requirements for AI Systems",
-        "link": "https://artificialintelligenceact.eu/",
-        "type": "regulation",
-        "source": "EU",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://artificialintelligenceact.eu/"
       },
       {
         "title": "NIST AI 100-4: AI Transparency and Explainability",
-        "link": "https://www.nist.gov/artificial-intelligence",
-        "type": "standard",
-        "source": "NIST",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://www.nist.gov/artificial-intelligence"
       },
       {
         "title": "Mozilla: AI Black Box and Consumer Privacy",
-        "link": "https://foundation.mozilla.org/en/privacynotincluded/",
-        "type": "industry",
-        "source": "Mozilla",
-        "language": "en",
-        "evidenceLevel": "medium"
+        "link": "https://foundation.mozilla.org/en/privacynotincluded/"
       }
     ],
     "updated": "2026-06-11"

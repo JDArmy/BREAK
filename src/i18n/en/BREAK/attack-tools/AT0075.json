@@ -16,27 +16,15 @@
     "references": [
       {
         "title": "Security Brief: ClickFix Social Engineering Technique Floods Threat Landscape",
-        "link": "https://www.proofpoint.com/us/blog/threat-insight/security-brief-clickfix-social-engineering-technique-floods-threat-landscape",
-        "type": "vendor",
-        "source": "Proofpoint",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://www.proofpoint.com/us/blog/threat-insight/security-brief-clickfix-social-engineering-technique-floods-threat-landscape"
       },
       {
         "title": "ClickFix: How to Infect Your PC in Three Easy Steps",
-        "link": "https://krebsonsecurity.com/2025/03/clickfix-how-to-infect-your-pc-in-three-easy-steps/",
-        "type": "industry",
-        "source": "Krebs on Security",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://krebsonsecurity.com/2025/03/clickfix-how-to-infect-your-pc-in-three-easy-steps/"
       },
       {
         "title": "Beyond The Click: Unveiling Fake CAPTCHA Campaigns",
-        "link": "https://www.splunk.com/en_us/blog/security/unveiling-fake-captcha-clickfix-attacks.html",
-        "type": "vendor",
-        "source": "Splunk",
-        "language": "en",
-        "evidenceLevel": "medium"
+        "link": "https://www.splunk.com/en_us/blog/security/unveiling-fake-captcha-clickfix-attacks.html"
       }
     ],
     "updated": "2026-06-11"

@@ -14,19 +14,11 @@
     "references": [
       {
         "title": "CrowdStrike 2026 Global Threat Report",
-        "link": "https://www.crowdstrike.com/global-threat-report/",
-        "type": "vendor",
-        "source": "CrowdStrike",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://www.crowdstrike.com/global-threat-report/"
       },
       {
         "title": "CISA MFA Implementation Guidance",
-        "link": "https://www.cisa.gov/",
-        "type": "regulatory",
-        "source": "CISA",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://www.cisa.gov/"
       }
     ],
     "updated": "2026-06-11"

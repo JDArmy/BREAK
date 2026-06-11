@@ -14,27 +14,15 @@
     "references": [
       {
         "title": "Cisco 2025 Data Privacy Benchmark Study",
-        "link": "https://www.cisco.com/c/en/us/about/trust-center/data-privacy-benchmark-study.html",
-        "type": "vendor",
-        "source": "Cisco",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://www.cisco.com/c/en/us/about/trust-center/data-privacy-benchmark-study.html"
       },
       {
         "title": "NIST AI 100-1: AI Risk Management Framework",
-        "link": "https://www.nist.gov/itl/ai-risk-management-framework",
-        "type": "standard",
-        "source": "NIST",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://www.nist.gov/itl/ai-risk-management-framework"
       },
       {
         "title": "Gartner: Managing Shadow AI Risks in the Enterprise",
-        "link": "https://www.gartner.com/en/topics/shadow-ai",
-        "type": "industry",
-        "source": "Gartner",
-        "language": "en",
-        "evidenceLevel": "medium"
+        "link": "https://www.gartner.com/en/topics/shadow-ai"
       }
     ],
     "updated": "2026-06-11"

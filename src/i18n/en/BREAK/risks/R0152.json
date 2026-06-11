@@ -14,19 +14,11 @@
     "references": [
       {
         "title": "Microsoft Digital Defense Report 2025",
-        "link": "https://www.microsoft.com/en-us/security/business/microsoft-digital-defense-report",
-        "type": "vendor",
-        "source": "Microsoft",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://www.microsoft.com/en-us/security/business/microsoft-digital-defense-report"
       },
       {
         "title": "CrowdStrike 2026 Global Threat Report",
-        "link": "https://www.crowdstrike.com/global-threat-report/",
-        "type": "vendor",
-        "source": "CrowdStrike",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://www.crowdstrike.com/global-threat-report/"
       }
     ],
     "updated": "2026-06-11"

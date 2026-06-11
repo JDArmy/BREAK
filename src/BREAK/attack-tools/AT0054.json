@@ -9,11 +9,7 @@
       },
       {
         "title": "MITRE ATT&CK - Software",
-        "link": "https://attack.mitre.org/software/",
-        "type": "standard",
-        "source": "MITRE",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://attack.mitre.org/software/"
       }
     ],
     "avoidances": [

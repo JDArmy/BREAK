@@ -17,19 +17,11 @@
     "references": [
       {
         "title": "Google Android Fake Call Detection Announcement",
-        "link": "https://blog.google/security/new-ai-powered-scam-detection-features/",
-        "type": "vendor",
-        "source": "Google",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://blog.google/security/new-ai-powered-scam-detection-features/"
       },
       {
         "title": "FCC Caller ID Authentication Rules",
-        "link": "https://www.fcc.gov/call-authentication",
-        "type": "regulation",
-        "source": "FCC",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://www.fcc.gov/call-authentication"
       }
     ],
     "updated": "2026-06-11"

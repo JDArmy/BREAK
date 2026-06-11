@@ -41,7 +41,6 @@ declare module 'vue' {
     IconStar: typeof import('./src/components/icons/iconStar.vue')['default']
     IconTranslate: typeof import('./src/components/icons/iconTranslate.vue')['default']
     MenuList: typeof import('./src/components/MenuList.vue')['default']
-    ReferenceBadge: typeof import('./src/components/ReferenceBadge.vue')['default']
     ReferenceList: typeof import('./src/components/ReferenceList.vue')['default']
     RiskDetail: typeof import('./src/components/RiskDetail.vue')['default']
     RiskRelation: typeof import('./src/components/RiskRelation.vue')['default']

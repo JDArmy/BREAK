@@ -16,19 +16,11 @@
     "references": [
       {
         "title": "Microsoft Digital Defense Report 2025 - AiTM Phishing",
-        "link": "https://www.microsoft.com/en-us/security/business/microsoft-digital-defense-report",
-        "type": "vendor",
-        "source": "Microsoft",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://www.microsoft.com/en-us/security/business/microsoft-digital-defense-report"
       },
       {
         "title": "CISA Guidance on AiTM Phishing Attacks",
-        "link": "https://www.cisa.gov/",
-        "type": "regulatory",
-        "source": "CISA",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://www.cisa.gov/"
       }
     ],
     "updated": "2026-06-11"

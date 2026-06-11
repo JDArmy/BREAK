@@ -1,5 +1,26 @@
 # Change log
 
+## 2.2.1
+
+- 补全：实体关联关系推断与应用（26条高置信度推断）
+  - 20个攻击工具补充 directCauseRisks（基于共享规避手段推导，匹配度≥3）
+  - 5个威胁行为者补充 directCauseRisks 和 indirectSupportRisks（基于使用的AT关联的Risk推导）
+  - 所有推断同步更新英文 i18n 翻译文件
+
+## 2.2.0
+
+- 数据质量修复
+  - 修复 Risk complexity 值不一致（R0146 "中"→"中级"，R0147 "高"→"高级"）
+  - 补充 R0017-002 缺失的 influence 字段
+  - 补充 TA0025-001 缺失的 updated 字段，统一 TA0025 日期格式
+- Reference 模型精简
+  - 移除 Reference 接口中的 `type`、`evidenceLevel`、`language`、`source`、`collectedBy`、`collectedAt`、`verifiedAt`、`note`、`academic` 等过度设计字段，仅保留 `link` + `title`
+  - 清理 427 个 JSON 文件中的 3910 个多余字段
+  - 移除 `ReferenceBadge.vue` 组件及所有视图中的引用
+  - 精简 `ReferenceList.vue`，仅展示链接和标题
+  - 精简编辑器中参考资料的增删改表单
+  - 移除 `ReferenceType`、`EvidenceLevel`、`AcademicReferenceMeta` 类型定义
+
 ## 2.1.0
 
 - 架构改进：couseRisks 关系分类拆分，将单一 `couseRisks` 字段拆分为 `directCauseRisks`（直接造成）和 `indirectSupportRisks`（间接关联）两个字段

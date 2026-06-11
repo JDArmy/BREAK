@@ -8,27 +8,15 @@
     "references": [
       {
         "title": "OWASP Gen AI Security Project",
-        "link": "https://genai.owasp.org/",
-        "type": "standard",
-        "source": "OWASP",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://genai.owasp.org/"
       },
       {
         "title": "OWASP Top 10 for Agentic Applications",
-        "link": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/",
-        "type": "standard",
-        "source": "OWASP",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/"
       },
       {
         "title": "Cybersecurity Forecast 2026 - Google Cloud",
-        "link": "https://cloud.google.com/security/resources/cybersecurity-forecast",
-        "type": "vendor",
-        "source": "Google Cloud",
-        "language": "en",
-        "evidenceLevel": "medium"
+        "link": "https://cloud.google.com/security/resources/cybersecurity-forecast"
       }
     ],
     "updated": "2026-05-28"

@@ -6,7 +6,6 @@ import RiskDetail from "@/components/RiskDetail.vue";
 import { Link } from "@element-plus/icons-vue";
 import iconRelation from "@/components/icons/iconRelation.vue";
 import { useAnchorTable } from "@/composables/useAnchorTable";
-import ReferenceBadge from "@/components/ReferenceBadge.vue";
 
 const avoidanceDrawer = ref(false);
 const avoidanceKey = ref("");
@@ -92,7 +91,6 @@ const { getTableHeight, tableRowClassName } = useAnchorTable("atKey");
                 )
               }}
             </span>
-            <ReferenceBadge :type="reference.type" :evidence-level="reference.evidenceLevel" />
           </li>
         </ul>
       </template>

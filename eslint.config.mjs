@@ -16,6 +16,8 @@ export default [
       "savejson.js",
       "**/*.cjs",
       ".eslintrc.cjs",
+      "scripts/**",
+      "research/**",
     ],
   },
   ...pluginVue.configs["flat/essential"],

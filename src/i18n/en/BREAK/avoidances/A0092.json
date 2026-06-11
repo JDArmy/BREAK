@@ -8,27 +8,15 @@
     "references": [
       {
         "title": "Gartner: Market Guide for Mobile Threat Defense",
-        "link": "https://www.gartner.com/en/documents/market-guide-mobile-threat-defense",
-        "type": "industry",
-        "source": "Gartner",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://www.gartner.com/en/documents/market-guide-mobile-threat-defense"
       },
       {
         "title": "NIST SP 800-124: Guidelines for Managing the Security of Mobile Devices",
-        "link": "https://csrc.nist.gov/publications/detail/sp/800-124/rev-2/final",
-        "type": "standard",
-        "source": "NIST",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://csrc.nist.gov/publications/detail/sp/800-124/rev-2/final"
       },
       {
         "title": "OWASP Mobile Security Testing Guide",
-        "link": "https://owasp.org/www-project-mobile-security-testing-guide/",
-        "type": "standard",
-        "source": "OWASP",
-        "language": "en",
-        "evidenceLevel": "high"
+        "link": "https://owasp.org/www-project-mobile-security-testing-guide/"
       }
     ],
     "updated": "2026-06-11"
