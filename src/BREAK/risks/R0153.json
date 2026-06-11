@@ -5,11 +5,16 @@
     "description": "影子AI风险是指员工在未经组织正式批准和安全评估的情况下，将敏感业务数据输入第三方AI服务或使用未经审核的AI工具处理业务数据的行为带来的风险。区别于R0071生成式AI风险关注AI系统自身的技术风险，影子AI风险关注的是员工违规使用AI工具的组织管理风险。主要风险场景包括：①敏感数据输入：将客户数据、财务报表、源代码等敏感信息输入公开AI服务，可能导致数据被用于模型训练或泄露给第三方；②合规违规：使用未通过安全评估的AI工具处理受监管数据（如个人隐私数据、医疗数据），违反数据保护法规；③知识产权外泄：将商业秘密、专利技术等通过AI工具处理，可能导致知识产权泄露；④决策依赖：过度依赖AI生成的未经验证的分析和建议，可能导致业务决策失误；⑤数据残留：输入AI服务的数据可能被服务商缓存或存储，无法彻底删除。随着ChatGPT等工具的普及，78%的企业存在影子AI使用行为。",
     "complexity": "中级",
     "influence": "可导致敏感数据泄露、合规违规处罚、商业秘密外泄、客户信任丧失，以及知识产权不可逆损失。",
-    "avoidances": ["A0083", "A0035", "A0080", "A0068"],
+    "avoidances": [
+      "A0083",
+      "A0035",
+      "A0080",
+      "A0068"
+    ],
     "references": [
       {
         "title": "Cisco 2025 Data Privacy Benchmark Study",
-        "link": "https://www.cisco.com/c/en/us/products/security/data-privacy.html",
+        "link": "https://www.cisco.com/c/en/us/about/trust-center/data-privacy-benchmark-study.html",
         "type": "vendor",
         "source": "Cisco",
         "language": "en",

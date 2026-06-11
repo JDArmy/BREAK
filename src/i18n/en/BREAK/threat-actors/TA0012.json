@@ -5,7 +5,15 @@
     "references": [
       {
         "title": "Malware - Baidu Baike",
-        "link": "https://baike.baidu.com/item/恶意软件"
+        "link": "https://baike.baidu.com/item/%E6%81%B6%E6%84%8F%E8%BD%AF%E4%BB%B6"
+      },
+      {
+        "title": "Qianxin 2024 AI Security Report",
+        "link": "https://www.qianxin.com/news/detail?news_id=12355",
+        "type": "vendor",
+        "source": "Qianxin",
+        "language": "zh-CN",
+        "evidenceLevel": "high"
       }
     ],
     "buildAttackTools": [

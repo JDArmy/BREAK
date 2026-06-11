@@ -5,7 +5,15 @@
     "references": [
       {
         "title": "Web Crawler - Baidu Baike",
-        "link": "https://baike.baidu.com/item/网络爬虫"
+        "link": "https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB"
+      },
+      {
+        "title": "2024 H1 Internet Black-Grey Industry Research Report",
+        "link": "https://www.163.com/dy/article/J7CL1BGM0518STKV.html",
+        "type": "vendor",
+        "source": "ThreatHunter",
+        "language": "zh-CN",
+        "evidenceLevel": "high"
       }
     ],
     "buildAttackTools": [

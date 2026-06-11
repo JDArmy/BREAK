@@ -5,15 +5,25 @@
     "references": [
       {
         "title": "Evil Twin Attack - CISA",
-        "link": "https://www.cisa.gov/news-events/alerts"
+        "link": "https://www.cisa.gov/news-events/cybersecurity-advisories"
       },
       {
         "title": "公共WiFi安全风险提示 - CNCERT",
         "link": "https://www.cert.org.cn/"
       }
     ],
-    "avoidances": ["A0078", "A0010", "A0026", "A0007"],
-    "couseRisks": ["R0084", "R0142", "R0032", "R0036"],
+    "avoidances": [
+      "A0078",
+      "A0010",
+      "A0026",
+      "A0007"
+    ],
+    "couseRisks": [
+      "R0084",
+      "R0142",
+      "R0032",
+      "R0036"
+    ],
     "updated": "2026-02-27"
   }
 }

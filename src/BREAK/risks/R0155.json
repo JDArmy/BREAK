@@ -5,7 +5,12 @@
     "description": "跨境数据走私风险是指通过隐蔽手段将受监管的敏感数据非法转移出境的风险。区别于R0077数据出境合规风险关注的是合规层面的违规，跨境数据走私风险关注的是主动的、有目的的数据窃取和转移行为。主要手法包括：①隐蔽通道传输：通过加密隧道、代理服务器、CDN等隐蔽通道将数据传输至境外服务器；②数据碎片化：将数据拆分成小片段，通过多个渠道分散传输，降低被检测的概率；③物理介质走私：将数据存储在便携设备中，由人员携带出境；④云服务滥用：利用境外云存储和SaaS服务作为数据中转站；⑤API滥用：通过合法API接口进行高频数据导出，规避数据出境审批；⑥供应链渠道：通过第三方供应商的境外系统间接传输数据。跨境数据走私对企业数据主权和国家安全构成严重威胁。",
     "complexity": "高级",
     "influence": "可导致核心数据资产外泄、国家安全风险、合规重罚，以及竞争优势丧失。",
-    "avoidances": ["A0080", "A0035", "A0068", "A0067"],
+    "avoidances": [
+      "A0080",
+      "A0035",
+      "A0068",
+      "A0067"
+    ],
     "references": [
       {
         "title": "China Data Security Law and Cross-Border Data Transfer Regulations",
@@ -25,7 +30,7 @@
       },
       {
         "title": "PwC: Global Data Transfer Compliance Report",
-        "link": "https://www.pwc.com/gx/en/services/legal-services/data-privacy.html",
+        "link": "https://www.pwc.com/us/en/services/consulting/cybersecurity-data-tech-risk/data-risk-privacy.html",
         "type": "industry",
         "source": "PwC",
         "language": "en",

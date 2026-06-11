@@ -2,13 +2,24 @@
   "TA0043": {
     "title": "Scam Compound Technician",
     "description": "Technical personnel responsible for technology development, system maintenance, and tool deployment within scam compounds. Unlike TA0012 Malware Developers who develop general-purpose malware, scam compound technicians specialize in developing and maintaining customized technical tools and platforms for scam operations. Key responsibilities include: ① Phishing platform development: developing and maintaining high-fidelity phishing websites and platforms targeting specific victims; ② Communication system maintenance: maintaining VoIP phone systems, SMS mass-sending platforms, and instant messaging tools; ③ Data analysis tools: developing victim data analysis and screening tools to improve scam precision; ④ Anti-detection technology: deploying and updating anti-detection mechanisms, including domain rotation, CAPTCHA bypass, and anti-blocking strategies; ⑤ Technical training: providing training on technical tool usage for scam operators within the compound; ⑥ System operations: maintaining IT infrastructure within the compound to ensure all systems operate normally. Scam compound technicians are the key support for technical capabilities in scam compounds and typically possess strong programming and network technology skills.",
-    "buildAttackTools": ["AT0063", "AT0071"],
-    "useAttackTools": ["AT0057", "AT0059", "AT0001"],
-    "couseRisks": ["R0150", "R0084", "R0084-001"],
+    "buildAttackTools": [
+      "AT0063",
+      "AT0071"
+    ],
+    "useAttackTools": [
+      "AT0057",
+      "AT0059",
+      "AT0001"
+    ],
+    "couseRisks": [
+      "R0150",
+      "R0084",
+      "R0084-001"
+    ],
     "references": [
       {
         "title": "INTERPOL: Operation First Light Targets Social Engineering Fraud",
-        "link": "https://www.interpol.int/en/News-and-Events/News/2024/Operation-First-Light",
+        "link": "https://www.interpol.int/en/News-and-Events/News",
         "type": "regulation",
         "source": "INTERPOL",
         "language": "en",

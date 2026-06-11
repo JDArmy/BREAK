@@ -5,11 +5,16 @@
     "description": "随着监管部门对支付机构实施穿透式监管和支付业务功能监管，支付机构需要提供高质量的监管数据，并对支付业务、外包合作、数据处理和风险控制链路保持可追溯。数据质量问题、校验规则不符、数据脱敏不当、供应商安全管理不到位、监管报送口径不一致等都可能导致合规风险和监管处罚。",
     "complexity": "高",
     "influence": "高",
-    "avoidances": ["A0054", "A0050-002", "A0080", "A0070"],
+    "avoidances": [
+      "A0054",
+      "A0050-002",
+      "A0080",
+      "A0070"
+    ],
     "references": [
       {
         "title": "非银行支付机构监督管理条例",
-        "link": "https://www.gov.cn/zhengce/content/202312/content_6921345.htm",
+        "link": "https://www.shanghaiinvest.com/cn/viewfile.php?id=19212",
         "type": "regulatory",
         "source": "中国政府网",
         "language": "zh-CN",
@@ -17,7 +22,7 @@
       },
       {
         "title": "中国人民银行有关负责人就《非银行支付机构监督管理条例》答记者问",
-        "link": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/5179477/index.html",
+        "link": "https://www.shanghaiinvest.com/cn/viewfile.php?id=19212",
         "type": "regulatory",
         "source": "中国人民银行",
         "language": "zh-CN",

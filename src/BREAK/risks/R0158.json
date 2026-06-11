@@ -5,7 +5,11 @@
     "description": "算力盗用风险是指攻击者通过入侵服务器、滥用云服务账号或劫持AI训练任务等方式，非法获取和占用他人计算资源的风险。区别于R0086服务器挖矿是挖矿行为本身的风险，算力盗用风险侧重于计算资源被非法占用的资源窃取层面。主要攻击手法包括：①云算力盗用：入侵云服务账号，创建大量GPU实例用于挖矿或AI训练；②服务器入侵：入侵企业服务器，利用其计算资源进行挖矿或模型训练；③AI训练劫持：在分布式AI训练过程中注入恶意任务，占用训练集群的算力；④容器逃逸：从容器中逃逸到宿主机，利用宿主机算力；⑤供应链算力滥用：在开源AI工具或模型中植入后门，将受害者算力导向攻击者的任务。随着AI大模型训练对GPU算力需求的爆发式增长，算力已成为新的高价值窃取目标。",
     "complexity": "中级",
     "influence": "可导致计算资源被大量占用、云服务费用暴增、业务性能下降，以及AI训练数据和模型被窃取。",
-    "avoidances": ["A0078", "A0079", "A0068"],
+    "avoidances": [
+      "A0078",
+      "A0079",
+      "A0068"
+    ],
     "references": [
       {
         "title": "MITRE ATT&CK: Resource Hijacking (T1496)",
@@ -25,7 +29,7 @@
       },
       {
         "title": "Aqua Security: Cryptojacking and GPU Abuse in Cloud Environments",
-        "link": "https://blog.aquasec.com/cryptojacking-cloud-environments",
+        "link": "https://www.aquasec.com/blog/top-cloud-native-threats-and-vulnerabilities/",
         "type": "vendor",
         "source": "Aqua Security",
         "language": "en",

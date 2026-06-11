@@ -5,7 +5,7 @@
     "references": [
       {
         "title": "保险欺诈风险防范 - 银保监会",
-        "link": "https://www.cbirc.gov.cn/"
+        "link": "https://www.nfra.gov.cn/"
       },
       {
         "title": "电商售后欺诈治理",
@@ -13,8 +13,17 @@
       }
     ],
     "buildAttackTools": [],
-    "useAttackTools": ["AT0005", "AT0003", "AT0051"],
-    "couseRisks": ["R0139", "R0054", "R0056", "R0136"],
+    "useAttackTools": [
+      "AT0005",
+      "AT0003",
+      "AT0051"
+    ],
+    "couseRisks": [
+      "R0139",
+      "R0054",
+      "R0056",
+      "R0136"
+    ],
     "updated": "2026-02-27"
   }
 }

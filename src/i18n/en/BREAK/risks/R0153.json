@@ -5,11 +5,16 @@
     "description": "Shadow AI risk refers to the risks arising from employees inputting sensitive business data into third-party AI services or using unvetted AI tools to process business data without formal organizational approval and security assessment. Unlike R0071 Generative AI Risk which focuses on technical risks inherent to AI systems themselves, Shadow AI Risk focuses on organizational management risks from employees' unauthorized use of AI tools. Key risk scenarios include: ① Sensitive data input: inputting customer data, financial reports, source code, and other sensitive information into public AI services, which may result in data being used for model training or leaked to third parties; ② Compliance violations: using AI tools that have not passed security assessments to process regulated data (such as personal privacy data, medical data), violating data protection regulations; ③ Intellectual property exfiltration: processing trade secrets and patented technologies through AI tools, which may lead to intellectual property leakage; ④ Decision dependency: over-relying on unverified AI-generated analysis and recommendations, which may lead to business decision-making errors; ⑤ Data residue: data input into AI services may be cached or stored by service providers and cannot be completely deleted. With the proliferation of tools like ChatGPT, 78% of enterprises have shadow AI usage.",
     "complexity": "Intermediate",
     "influence": "Can lead to sensitive data leakage, compliance violation penalties, trade secret exfiltration, loss of customer trust, and irreversible intellectual property loss.",
-    "avoidances": ["A0083", "A0035", "A0080", "A0068"],
+    "avoidances": [
+      "A0083",
+      "A0035",
+      "A0080",
+      "A0068"
+    ],
     "references": [
       {
         "title": "Cisco 2025 Data Privacy Benchmark Study",
-        "link": "https://www.cisco.com/c/en/us/products/security/data-privacy.html",
+        "link": "https://www.cisco.com/c/en/us/about/trust-center/data-privacy-benchmark-study.html",
         "type": "vendor",
         "source": "Cisco",
         "language": "en",

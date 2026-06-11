@@ -2,13 +2,24 @@
   "TA0042": {
     "title": "诈骗园区运营者",
     "description": "规模化运营电信诈骗和加密货币诈骗园区的组织者和管理者。区别于TA0015电诈团伙是直接实施诈骗的团伙，诈骗园区运营者是提供基础设施、工作场所和管理框架的「平台方」。主要特征包括：①园区建设：在监管薄弱地区建立封闭式诈骗园区，配备办公场所、通信设备和技术设施；②人员管理：通过招募、诱骗甚至胁迫方式获取大量人员进行诈骗操作；③技术支持：为园区内的诈骗团队提供技术工具、话术培训和管理系统；④分工管理：将园区划分为多个业务组，分别负责不同类型的诈骗（杀猪盘、投资诈骗、冒充客服等）；⑤资金通道：建立完整的资金接收和洗白通道，与地下钱庄和加密货币混币器对接；⑥反侦查措施：部署反侦查技术，频繁更换通信设备和IP地址，规避执法追踪。代表案例包括柬埔寨太子集团等，联合国毒品犯罪办公室报告指出东南亚诈骗园区规模已达数十万人。",
-    "buildAttackTools": ["AT0070"],
-    "useAttackTools": ["AT0001", "AT0005", "AT0059", "AT0073"],
-    "couseRisks": ["R0150", "R0044", "R0084"],
+    "buildAttackTools": [
+      "AT0070"
+    ],
+    "useAttackTools": [
+      "AT0001",
+      "AT0005",
+      "AT0059",
+      "AT0073"
+    ],
+    "couseRisks": [
+      "R0150",
+      "R0044",
+      "R0084"
+    ],
     "references": [
       {
         "title": "UNODC: Transnational Organized Crime in Southeast Asia",
-        "link": "https://www.unodc.org/roseap/en/toctag.html",
+        "link": "https://www.unodc.org/unodc/en/data-and-analysis/toc.html",
         "type": "regulation",
         "source": "UNODC",
         "language": "en",
