@@ -1,0 +1,36 @@
+{
+  "A0090": {
+    "title": "OAuth权限最小化",
+    "category": "AC01",
+    "definition": "对OAuth授权流程中的应用权限进行细粒度控制，确保应用仅获得完成其功能所需的最小权限集的安全控制手段。",
+    "description": "OAuth权限最小化是针对OAuth授权流程的安全控制手段，解决Consent Phishing（同意钓鱼）和OAuth授权滥用问题。区别于A0007多因素验证侧重于身份验证，OAuth权限最小化侧重于授权后的权限粒度控制。主要功能包括：①权限范围审查：对OAuth应用请求的权限范围进行安全审查，拒绝过大的权限请求；②增量授权：应用初始仅获得基本权限，按需逐步申请额外权限；③权限时效控制：设置授权的过期时间，定期要求用户重新确认；④权限监控告警：监控OAuth应用的实际权限使用情况，对异常行为进行告警；⑤应用风险评级：对OAuth应用进行安全风险评级，高风险应用需额外审批；⑥权限回收机制：对长期未使用或行为异常的应用自动回收授权。该技术对防御AiTM攻击、OAuth授权滥用和第三方应用过度权限等风险至关重要。",
+    "limitation": "过度限制OAuth权限可能影响应用的正常功能和用户体验；细粒度权限控制增加了开发和维护成本；用户可能不理解权限请求的含义而习惯性同意；对第三方应用的权限使用监控依赖平台的支持能力。",
+    "references": [
+      {
+        "title": "OAuth 2.0 Security Best Current Practice",
+        "link": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics",
+        "type": "standard",
+        "source": "IETF",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "Microsoft: Securing OAuth Apps in Microsoft 365",
+        "link": "https://learn.microsoft.com/en-us/microsoft-365/security/",
+        "type": "vendor",
+        "source": "Microsoft",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "OWASP OAuth 2.0 Security Cheat Sheet",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/OAuth2_Cheat_Sheet.html",
+        "type": "standard",
+        "source": "OWASP",
+        "language": "en",
+        "evidenceLevel": "high"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

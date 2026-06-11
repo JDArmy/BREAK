@@ -1,0 +1,36 @@
+{
+  "A0089": {
+    "title": "智能体行为沙箱",
+    "category": "AC01",
+    "definition": "在隔离的受控执行环境中运行AI智能体，监控和约束其行为、工具调用和资源访问的安全控制手段。",
+    "description": "智能体行为沙箱是为AI智能体提供隔离执行环境的安全控制技术，与A0087 AI智能体工具治理与MCP安全控制互补——A0087管理权限和访问控制，沙箱管理运行时行为和执行环境。主要功能包括：①执行隔离：在独立的容器或虚拟环境中运行智能体，限制其对宿主系统和网络的访问；②行为监控：实时监控智能体的决策过程、工具调用序列和资源消耗；③策略执行：根据安全策略限制智能体可执行的操作范围，如禁止文件删除、网络外联等；④异常检测：检测智能体行为偏离预期模式的异常情况，如循环调用、权限提升尝试等；⑤回滚机制：在检测到异常行为时自动暂停智能体并回滚到安全状态；⑥审计日志：记录智能体的完整执行轨迹，用于事后分析和合规审计。该技术是OWASP Agentic Applications安全标准中的核心控制之一。",
+    "limitation": "沙箱环境可能无法完全模拟生产环境，导致智能体行为差异；过度限制可能降低智能体的功能性和实用性；高性能计算场景下沙箱的性能开销显著；复杂的工具链和外部依赖可能难以在沙箱中完整运行。",
+    "references": [
+      {
+        "title": "OWASP Agentic Security Standard",
+        "link": "https://owasp.org/www-project-agentic-security/",
+        "type": "standard",
+        "source": "OWASP",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "NIST AI 100-2 E2: AI Risk Measurement",
+        "link": "https://www.nist.gov/itl/ai-risk-management-framework",
+        "type": "standard",
+        "source": "NIST",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "Google DeepMind: Scalable Agent Alignment via Reward Modeling",
+        "link": "https://deepmind.google/",
+        "type": "academic",
+        "source": "Google DeepMind",
+        "language": "en",
+        "evidenceLevel": "medium"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

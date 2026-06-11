@@ -1,0 +1,36 @@
+{
+  "TA0040": {
+    "title": "数据掮客",
+    "description": "在暗网和地下市场专门从事个人数据交易的中介角色。区别于TA0007号商侧重于账号交易和TA0005料商侧重于银行卡/身份数据供应，数据掮客是跨数据类型的交易中介，汇集各类个人数据（身份信息、联系方式、行为数据、医疗记录等）进行批发和零售。主要特征包括：①数据整合：从多个数据泄露事件、爬虫抓取、内鬼渠道等汇集个人数据，建立整合的个人信息数据库；②分类分级：对数据进行分类（身份信息、金融数据、医疗数据等）和分级（按数据新鲜度、完整度、价值度定价）；③渠道运营：在暗网论坛、Telegram群组、专属交易平台等渠道运营数据交易业务；④定制服务：根据买家需求提供特定人群、特定地区、特定行业的定向数据包；⑤数据验证：提供数据真实性验证服务，确保所售数据的有效性。数据掮客是黑灰产业链中的关键中间环节，为各类下游犯罪提供数据支撑。",
+    "buildAttackTools": [],
+    "useAttackTools": ["AT0012", "AT0051", "AT0039"],
+    "couseRisks": ["R0028", "R0059", "R0092", "R0136"],
+    "references": [
+      {
+        "title": "Europol: Internet Organised Crime Threat Assessment",
+        "link": "https://www.europol.europa.eu/crime-areas-and-statistics",
+        "type": "regulation",
+        "source": "Europol",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "FBI IC3 Annual Report",
+        "link": "https://www.ic3.gov/",
+        "type": "regulation",
+        "source": "FBI",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "Kaspersky: Data Broker Activities on the Dark Web",
+        "link": "https://securelist.com/",
+        "type": "vendor",
+        "source": "Kaspersky",
+        "language": "en",
+        "evidenceLevel": "medium"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

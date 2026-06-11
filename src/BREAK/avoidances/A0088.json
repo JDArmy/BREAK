@@ -1,0 +1,36 @@
+{
+  "A0088": {
+    "title": "AI内容溯源",
+    "category": "AC01",
+    "definition": "为AI生成的内容添加可验证的来源信息和元数据标识，使内容来源可追溯、可验证的安全控制手段。",
+    "description": "AI内容溯源是通过技术手段为AI生成的内容添加不可篡改的来源标识和元数据信息，使内容的生产过程、使用的AI模型、生成时间等信息可追溯和可验证。区别于A0064 AI内容检测侧重于识别内容是否为AI生成，AI内容溯源侧重于为内容建立可信的来源证明。主要技术包括：①内容凭证（C2PA标准）：由Adobe、Microsoft、Google等联合推动的内容来源认证标准，为数字内容绑定加密签名和来源元数据；②数字水印嵌入：在AI生成内容中嵌入不可见的数字水印，包含生成模型、时间戳等信息；③区块链溯源：将内容的生成记录和变更历史存储在区块链上，确保不可篡改；④模型指纹：记录生成内容所使用的AI模型的唯一标识信息；⑤内容签名链：为内容的每次编辑和传播添加数字签名，形成完整的签名链。该技术对防御AI深度伪造、虚假信息传播等场景至关重要。",
+    "limitation": "C2PA等标准尚未全面普及，许多平台和设备不支持；数字水印可能被高级技术擦除或破坏；区块链溯源的存储成本较高；模型指纹的准确性受模型更新影响；内容签名链的复杂性随传播次数增长而急剧增加。",
+    "references": [
+      {
+        "title": "C2PA Technical Specification",
+        "link": "https://c2pa.org/specifications/",
+        "type": "standard",
+        "source": "C2PA",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "Adobe Content Authenticity Initiative",
+        "link": "https://contentauthenticity.org/",
+        "type": "vendor",
+        "source": "Adobe",
+        "language": "en",
+        "evidenceLevel": "high"
+      },
+      {
+        "title": "NIST AI RMF: AI Risk Management Framework",
+        "link": "https://www.nist.gov/itl/ai-risk-management-framework",
+        "type": "standard",
+        "source": "NIST",
+        "language": "en",
+        "evidenceLevel": "high"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}
