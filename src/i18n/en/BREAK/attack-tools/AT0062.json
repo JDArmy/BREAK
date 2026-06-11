@@ -4,25 +4,11 @@
     "description": "A SIM swap toolkit is a collection of tools and resources used to carry out SIM swap attacks. A SIM swap attack involves an attacker using social engineering to deceive telecom carrier customer service staff into transferring a target user's phone number to a SIM card controlled by the attacker, thereby taking over the target's phone number and intercepting SMS verification codes to bypass SMS-based two-factor authentication. The toolkit typically includes forged identity document templates, carrier customer service scripts, automated tools for calling carrier customer service, tools for batch verifying phone number status, and accompanying social engineering information collection tools.",
     "references": [
       {
-        "title": "SIM Swap Fraud - FBI IC3",
-        "link": "https://www.ic3.gov/PSA/2022/PSA220208"
+        "title": "SIM Swap Fraud - FBI IC3"
       },
       {
-        "title": "SIM Card Swap Attack Prevention Guide - CISA",
-        "link": "https://www.cisa.gov/news-events/cybersecurity-advisories"
+        "title": "SIM Card Swap Attack Prevention Guide - CISA"
       }
-    ],
-    "indirectSupportRisks": [
-      "R0083",
-      "R0083-001",
-      "R0003-003",
-      "R0005-001",
-      "R0019",
-      "R0032-001",
-      "R0032-002",
-      "R0032-003",
-      "R0035-001",
-      "R0088"
     ]
   }
 }

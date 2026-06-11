@@ -4,25 +4,11 @@
     "description": "AI deepfake tools are a collection of tools that use deep learning technology (particularly Generative Adversarial Networks and diffusion models) to generate highly realistic fake face images, videos, and audio. These tools can implement face swapping, face reenactment, expression transfer, and full-body synthesis. Representative tools include DeepFaceLab, FaceSwap, Wav2Lip, and various commercial AI face-swapping applications. Attackers use these tools to forge identities for fraud, bypass facial recognition authentication, create fake videos for extortion or opinion manipulation.",
     "references": [
       {
-        "title": "DeepFaceLab - GitHub",
-        "link": "https://github.com/iperov/DeepFaceLab"
+        "title": "DeepFaceLab - GitHub"
       },
       {
-        "title": "AI Security Governance Research Report (2025) - CAICT",
-        "link": "https://www.caict.ac.cn/kxyj/qwfb/bps/202601/P020260109784447548497.pdf"
+        "title": "AI Security Governance Research Report (2025) - CAICT"
       }
-    ],
-    "indirectSupportRisks": [
-      "R0130",
-      "R0003-003",
-      "R0003-004",
-      "R0071-004",
-      "R0097",
-      "R0110",
-      "R0113",
-      "R0119",
-      "R0005",
-      "R0005-001"
     ]
   }
 }

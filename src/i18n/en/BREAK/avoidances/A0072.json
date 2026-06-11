@@ -6,12 +6,10 @@
     "limitation": "The limitations of algorithm audit mechanisms include: (1) complex deep learning models have inherent black-box characteristics, making it technically difficult to fully understand their decision logic; (2) the definition of fairness may vary across different scenarios and cultural contexts, making it difficult to establish uniform standards; (3) algorithm auditing requires specialized technical capabilities and domain knowledge, and qualified auditors and organizations are relatively scarce; (4) audit results may be influenced by the choice of audit methods and evaluation metrics; (5) dynamically updated algorithm models require continuous auditing, and one-time audits cannot guarantee long-term compliance.",
     "references": [
       {
-        "title": "Provisions on the Administration of Algorithmic Recommendations for Internet Information Services",
-        "link": "https://www.cac.gov.cn/2022-01/04/c_1642894606364259.htm"
+        "title": "Provisions on the Administration of Algorithmic Recommendations for Internet Information Services"
       },
       {
-        "title": "专题| 区块链技术与应用研究|大数据|网络安全|物联网|广域_网易订阅",
-        "link": "https://www.163.com/dy/article/H64VVFR50552NPC3.html"
+        "title": "专题| 区块链技术与应用研究|大数据|网络安全|物联网|广域_网易订阅"
       }
     ]
   }

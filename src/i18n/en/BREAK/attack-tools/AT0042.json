@@ -4,53 +4,11 @@
     "description": "Credential stuffing tools use leaked username and password data (typically from data breaches on one website) to automate batch login attempts on other websites or systems. The core principle of credential stuffing is that many users reuse the same username and password across different websites. Attackers only need to obtain a batch of leaked credentials to attempt bulk logins on numerous target websites within a short time. Credential stuffing differs from brute force attacks: brute force tries all possible password combinations, while credential stuffing directly uses real leaked credentials for matching, making it far more efficient. These tools typically feature batch import of leaked credentials, multi-threaded concurrent login attempts, automatic CAPTCHA recognition (paired with CAPTCHA-solving platforms), proxy IP rotation to evade rate limits and IP bans, and automatic extraction of account information after successful logins.",
     "references": [
       {
-        "title": "Credential Stuffing - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E6%92%9E%E5%BA%93/16480882?fromModule=search-result_lemma-recommend"
+        "title": "Credential Stuffing - Baidu Baike"
       },
       {
-        "title": "Credential Stuffing - OWASP",
-        "link": "https://owasp.org/www-community/attacks/Credential_stuffing"
+        "title": "Credential Stuffing - OWASP"
       }
-    ],
-    "avoidances": [
-      "A0001",
-      "A0001-004",
-      "A0004",
-      "A0005",
-      "A0007",
-      "A0009",
-      "A0010",
-      "A0011",
-      "A0012",
-      "A0015",
-      "A0016",
-      "A0021",
-      "A0022",
-      "A0023",
-      "A0029",
-      "A0034-003",
-      "A0038",
-      "A0044",
-      "A0059"
-    ],
-    "directCauseRisks": [
-      "R0032-001",
-      "R0032-002",
-      "R0032-003",
-      "R0032-004",
-      "R0083-001"
-    ],
-    "indirectSupportRisks": [
-      "R0001-002",
-      "R0002",
-      "R0003-003",
-      "R0001-001",
-      "R0003-004",
-      "R0005-001",
-      "R0001",
-      "R0003-001",
-      "R0088",
-      "R0090"
     ]
   }
 }

@@ -7,31 +7,8 @@
     "influence": "Can lead to credential cracking (R0032), credential stuffing (R0032-001), and other cyberattacks; can also be used for automated account seasoning (R0034) and third-party account aggregation (R0037), making it a priority defense target.",
     "references": [
       {
-        "title": "Credential stuffing - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Credential_stuffing"
+        "title": "Credential stuffing - Wikipedia"
       }
-    ],
-    "avoidances": [
-      "A0001",
-      "A0001-004",
-      "A0002",
-      "A0003",
-      "A0007-005",
-      "A0010",
-      "A0011",
-      "A0012",
-      "A0015",
-      "A0016",
-      "A0021",
-      "A0023",
-      "A0026",
-      "A0028",
-      "A0029",
-      "A0033",
-      "A0038",
-      "A0042",
-      "A0043",
-      "A0059"
     ]
   }
 }

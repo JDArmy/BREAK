@@ -5,26 +5,16 @@
     "description": "Cross-border data smuggling risk refers to the risk of illegally transferring regulated sensitive data abroad through covert means. Unlike R0077 Cross-Border Data Transfer Compliance Risk which focuses on compliance-level violations, cross-border data smuggling risk focuses on active, purposeful data theft and transfer behaviors. Key methods include: ① Covert channel transmission: transmitting data to overseas servers through encrypted tunnels, proxy servers, CDN, and other covert channels; ② Data fragmentation: splitting data into small fragments and transmitting them through multiple channels to reduce detection probability; ③ Physical media smuggling: storing data on portable devices carried by personnel across borders; ④ Cloud service abuse: using overseas cloud storage and SaaS services as data relay stations; ⑤ API abuse: performing high-frequency data exports through legitimate API interfaces to circumvent cross-border data transfer approvals; ⑥ Supply chain channels: indirectly transmitting data through third-party vendors' overseas systems. Cross-border data smuggling poses a serious threat to enterprise data sovereignty and national security.",
     "complexity": "Advanced",
     "influence": "Can lead to core data asset exfiltration, national security risks, heavy compliance penalties, and loss of competitive advantage.",
-    "avoidances": [
-      "A0080",
-      "A0035",
-      "A0068",
-      "A0067"
-    ],
     "references": [
       {
-        "title": "China Data Security Law and Cross-Border Data Transfer Regulations",
-        "link": "https://www.dataguidance.com/notes/china-data-security-law"
+        "title": "China Data Security Law and Cross-Border Data Transfer Regulations"
       },
       {
-        "title": "MITRE: Data Exfiltration Techniques",
-        "link": "https://attack.mitre.org/tactics/TA0010/"
+        "title": "MITRE: Data Exfiltration Techniques"
       },
       {
-        "title": "PwC: Global Data Transfer Compliance Report",
-        "link": "https://www.pwc.com/us/en/services/consulting/cybersecurity-data-tech-risk/data-risk-privacy.html"
+        "title": "PwC: Global Data Transfer Compliance Report"
       }
-    ],
-    "updated": "2026-06-11"
+    ]
   }
 }

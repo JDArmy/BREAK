@@ -4,30 +4,11 @@
     "description": "The Dark Web refers to a part of the internet whose content is not indexed by traditional search engines and typically requires specific software or authorization to access. Websites on the dark web usually use highly anonymous browsers such as Tor (The Onion Router) to hide users' identities and locations. This anonymity makes the dark web a venue for activities requiring concealment, including illegal trading of drugs, hacking tools, cyberattack services, illegal weapons, and other illegal services.",
     "references": [
       {
-        "title": "Dark Web - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E6%9A%97%E7%BD%91/8694490?fr=ge_ala"
+        "title": "Dark Web - Baidu Baike"
       },
       {
-        "title": "Internet Organised Crime Threat Assessment (IOCTA)",
-        "link": "https://www.europol.europa.eu/publications-events/main-reports/iocta-report"
+        "title": "Internet Organised Crime Threat Assessment (IOCTA)"
       }
-    ],
-    "avoidances": [
-      "A0016"
-    ],
-    "directCauseRisks": [
-      "R0026",
-      "R0059",
-      "R0060",
-      "R0078"
-    ],
-    "indirectSupportRisks": [
-      "R0011",
-      "R0028",
-      "R0043",
-      "R0044",
-      "R0060",
-      "R0062"
     ]
   }
 }

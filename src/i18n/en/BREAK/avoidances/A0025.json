@@ -6,12 +6,10 @@
     "limitation": "Since digital certificates are issued by trusted third-party authorities, the security of digital certificates is heavily dependent on the trustworthiness of the issuing authority. If the issuing authority is compromised, attackers can forge digital certificates. Additionally, the security of digital certificates is also affected by the signing algorithm — if the signing algorithm is compromised, attackers can forge digital signatures.",
     "references": [
       {
-        "title": "Digital Certificate - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6"
+        "title": "Digital Certificate - Baidu Baike"
       },
       {
-        "title": "RFC 5280: Internet X.509 Public Key Infrastructure Certificate and CRL Profile",
-        "link": "https://datatracker.ietf.org/doc/html/rfc5280"
+        "title": "RFC 5280: Internet X.509 Public Key Infrastructure Certificate and CRL Profile"
       }
     ]
   },
@@ -22,8 +20,7 @@
     "limitation": "Using email digital certificates can be relatively complex — users need to understand the concept of digital certificates, purchase certificates, configure email clients, etc. This may create a barrier for general users. Digital certificates need to be renewed on time, and updates must be performed before expiration. Certificate management can become complex, especially for large-scale deployments. For end-to-end encryption and signing to work, both the sender and recipient must support and configure digital certificates, which may impose limitations when communicating with users who do not use digital certificates. Email digital certificates can only provide security during transmission and cannot address endpoint security issues such as password leaks or malware infections.",
     "references": [
       {
-        "title": "Digital Certificate - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6"
+        "title": "Digital Certificate - Baidu Baike"
       }
     ]
   },
@@ -34,8 +31,7 @@
     "limitation": "The security of HTTPS digital certificates is heavily dependent on the trustworthiness of the issuing authority. If the issuing authority is compromised, attackers can forge digital certificates. Additionally, the security of HTTPS digital certificates is also affected by the signing algorithm — if the signing algorithm is compromised, attackers can forge digital signatures.",
     "references": [
       {
-        "title": "Digital Certificate - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6"
+        "title": "Digital Certificate - Baidu Baike"
       }
     ]
   },
@@ -46,8 +42,7 @@
     "limitation": "Using electronic file seals may be relatively complex for general users, requiring understanding of digital signatures and seals and how to correctly apply and verify them. The trustworthiness and validity of electronic file seals depend on the reliability of the underlying Public Key Infrastructure (PKI). If the PKI is attacked or has issues, the trustworthiness of the electronic seal will be threatened.",
     "references": [
       {
-        "title": "Public Key Infrastructure - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E5%85%AC%E9%92%A5%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD"
+        "title": "Public Key Infrastructure - Baidu Baike"
       }
     ]
   },
@@ -58,8 +53,7 @@
     "limitation": "The device is easy to lose or be stolen, potentially leading to unauthorized access to sensitive information. Depends on the login system's support — if the system does not support USB Key login, the USB Key cannot be used.",
     "references": [
       {
-        "title": "USB Key - Baidu Baike",
-        "link": "https://baike.baidu.com/item/USB%20Key/9679194?fromtitle=ukey&fromid=8352760&fr=aladdin"
+        "title": "USB Key - Baidu Baike"
       }
     ]
   }

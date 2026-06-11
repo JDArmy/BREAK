@@ -4,47 +4,8 @@
     "description": "Malicious players are players in gaming environments who intentionally interfere, cheat, disrupt, or violate game rules. These players may seek personal gain through illegitimate means, disrupt game balance, or simply cause trouble for other players. Malicious player behavior may include cheating and hacking, fraud and deception, disrupting game balance, malicious score or experience farming, toxic speech and harassment, and team sabotage.",
     "references": [
       {
-        "title": "Cheating in Online Games - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Cheating_in_online_games"
+        "title": "Cheating in Online Games - Wikipedia"
       }
-    ],
-    "buildAttackTools": [
-      "AT0049"
-    ],
-    "useAttackTools": [
-      "AT0019",
-      "AT0023",
-      "AT0034-001",
-      "AT0044"
-    ],
-    "directCauseRisks": [
-      "R0001",
-      "R0001-002",
-      "R0003-004",
-      "R0012",
-      "R0012-002",
-      "R0100",
-      "R0101",
-      "R0102",
-      "R0103",
-      "R0104",
-      "R0105",
-      "R0106",
-      "R0107",
-      "R0113",
-      "R0114"
-    ],
-    "indirectSupportRisks": [
-      "R0002",
-      "R0003",
-      "R0003-003",
-      "R0005",
-      "R0005-001",
-      "R0009",
-      "R0050",
-      "R0051",
-      "R0051-001",
-      "R0108"
     ]
   }
 }

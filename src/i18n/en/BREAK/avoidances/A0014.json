@@ -6,8 +6,7 @@
     "limitation": "Key management: if key management is improper, mechanisms such as digital signatures may be attacked, affecting data integrity verification. Dependence on a trusted environment: the effectiveness of anti-tampering mechanisms depends on the overall security of the system or environment; if the overall environment is untrusted, the mechanism may be compromised. Performance impact: some anti-tampering measures may have a certain impact on system performance, especially in large-scale data processing scenarios. Human factors: human error, negligence, or insider threats may bypass anti-tampering mechanisms and affect data integrity.",
     "references": [
       {
-        "title": "Tamper Protection - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Tamper_resistance"
+        "title": "Tamper Protection - Wikipedia"
       }
     ]
   },
@@ -18,8 +17,7 @@
     "limitation": "Attackers can use decompilation tools to analyze the program and find the implementation of the anti-tampering algorithm. Additionally, attackers can use debugging tools to trace the program's execution and find vulnerabilities in the anti-tampering algorithm.",
     "references": [
       {
-        "title": "Code Obfuscation - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Code_obfuscation"
+        "title": "Code Obfuscation - Wikipedia"
       }
     ]
   },
@@ -30,8 +28,7 @@
     "limitation": "Zero-day vulnerabilities: anti-tampering mechanisms may not defend against undisclosed zero-day vulnerabilities since no corresponding fix exists yet. False positives and false negatives: security tools may produce false positives or false negatives, leading to misinterpretation of normal operations or overlooking real threats. Human factors: administrator misconfiguration, negligence, or insider threats may bypass anti-tampering measures. Performance impact: strong anti-tampering measures may sometimes have a certain impact on server performance.",
     "references": [
       {
-        "title": "File Integrity Monitoring - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/File_integrity_monitoring"
+        "title": "File Integrity Monitoring - Wikipedia"
       }
     ]
   }

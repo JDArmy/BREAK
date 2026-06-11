@@ -4,41 +4,11 @@
     "description": "Online gambling gangs are criminal organizations or individuals specializing in organizing and operating online gambling activities. They use internet platforms to provide various gambling services including online casinos, betting websites, and virtual game gambling. These gangs attract gamblers through cleverly designed websites, attractive reward schemes, and advertising. Their operations typically involve gambling fund laundering, illegal profits, and manipulation of gambling results.",
     "references": [
       {
-        "title": "Online Gambling - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E5%8D%9A%E5%BD%A9?fromtitle=%E7%BD%91%E7%BB%9C%E8%B5%8C%E5%8D%9A&fromid=24238584&fromModule=lemma_search-box"
+        "title": "Online Gambling - Baidu Baike"
       },
       {
-        "title": "MPS Cross-Border Gambling Crackdown Report",
-        "link": "http://m.app.cctv.com/vsetv/detail/C10616/65a5d47f267d46939d207f9d97498fb3/index.shtml"
+        "title": "MPS Cross-Border Gambling Crackdown Report"
       }
-    ],
-    "buildAttackTools": [
-      "AT0023",
-      "AT0049"
-    ],
-    "useAttackTools": [
-      "AT0010",
-      "AT0026",
-      "AT0039-001",
-      "AT0039-002",
-      "AT0040-001"
-    ],
-    "directCauseRisks": [
-      "R0060",
-      "R0093",
-      "R0097"
-    ],
-    "indirectSupportRisks": [
-      "R0002",
-      "R0003-003",
-      "R0003-004",
-      "R0005",
-      "R0005-001",
-      "R0011-002",
-      "R0030-004",
-      "R0030-005",
-      "R0043",
-      "R0062"
     ]
   }
 }

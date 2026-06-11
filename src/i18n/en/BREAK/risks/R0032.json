@@ -7,21 +7,8 @@
     "influence": "Grants the attacker persistent account access and operational permissions on the corresponding website or application.",
     "references": [
       {
-        "title": "OWASP Automated Threat: OAT007 Credential Cracking",
-        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-007_Credential_Cracking.html"
+        "title": "OWASP Automated Threat: OAT007 Credential Cracking"
       }
-    ],
-    "avoidances": [
-      "A0007",
-      "A0011",
-      "A0012",
-      "A0018-001",
-      "A0019",
-      "A0021",
-      "A0024",
-      "A0025-001",
-      "A0039",
-      "A0063"
     ]
   },
   "R0032-001": {
@@ -32,8 +19,7 @@
     "influence": "Through unrestricted credential stuffing, attackers may gain access to many users who have reused credentials from other systems, causing losses to those users through further operations.",
     "references": [
       {
-        "title": "OWASP Automated Threat: OAT008 Credential Stuffing",
-        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-008_Credential_Stuffing.html"
+        "title": "OWASP Automated Threat: OAT008 Credential Stuffing"
       }
     ]
   },
@@ -45,8 +31,7 @@
     "influence": "Through unrestricted credential attacks, attackers may gain access to users with weak passwords on the current system, causing losses through further operations.",
     "references": [
       {
-        "title": "OWASP Automated Threat: OAT007 Credential Cracking",
-        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-007_Credential_Cracking.html"
+        "title": "OWASP Automated Threat: OAT007 Credential Cracking"
       }
     ]
   },
@@ -58,8 +43,7 @@
     "influence": "Through unrestricted credential attacks, attackers may gain access to users with weak passwords on the current system, causing losses through further operations.",
     "references": [
       {
-        "title": "OWASP Automated Threat: OAT007 Credential Cracking",
-        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-007_Credential_Cracking.html"
+        "title": "OWASP Automated Threat: OAT007 Credential Cracking"
       }
     ]
   },
@@ -71,12 +55,10 @@
     "influence": "User identity compromise.",
     "references": [
       {
-        "title": "CAPTCHA - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E9%AA%8C%E8%AF%81%E7%A0%81"
+        "title": "CAPTCHA - Baidu Baike"
       },
       {
-        "title": "Brute Force - MITRE ATT&CK T1110",
-        "link": "https://attack.mitre.org/techniques/T1110/"
+        "title": "Brute Force - MITRE ATT&CK T1110"
       }
     ]
   }

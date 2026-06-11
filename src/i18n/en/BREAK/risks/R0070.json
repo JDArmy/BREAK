@@ -7,8 +7,7 @@
     "influence": "Buy-low-sell-high behavior, once discovered by users, creates the impression of inflated prices on the platform, causing reputational damage and user churn; dropshipping stores often negate competitive advantages or lead to unfair competition; store clusters occupy large amounts of search and recommendation resources, leading to unfair competition.",
     "references": [
       {
-        "title": "OAT-005 Scalping - OWASP",
-        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-005_Scalping"
+        "title": "OAT-005 Scalping - OWASP"
       }
     ]
   },
@@ -20,8 +19,7 @@
     "influence": "This behavior creates the impression of inflated prices on the platform for users, leading to user churn.",
     "references": [
       {
-        "title": "OAT-005 Scalping - OWASP",
-        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-005_Scalping"
+        "title": "OAT-005 Scalping - OWASP"
       }
     ]
   },
@@ -33,8 +31,7 @@
     "influence": "Cross-platform dropshipping reduces the competitive advantage of the original platform and may lead to unfair competition, causing financial or reputational losses.",
     "references": [
       {
-        "title": "Drop shipping - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Drop_shipping"
+        "title": "Drop shipping - Wikipedia"
       }
     ]
   },
@@ -46,8 +43,7 @@
     "influence": "Occupies display opportunities of other stores on the platform, and the mass listing of similar products makes it harder for users to discover differentiated products.",
     "references": [
       {
-        "title": "OAT-005 Scalping - OWASP",
-        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-005_Scalping"
+        "title": "OAT-005 Scalping - OWASP"
       }
     ]
   }

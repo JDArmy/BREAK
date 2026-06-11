@@ -6,8 +6,7 @@
     "limitation": "API signatures are fine for ensuring data integrity during transmission, but because they are widely used to prevent automation, they face strong adversarial pressure. Since the signing algorithm must exist in some form on the client side, it is effectively visible to the user. Attackers can break the signing algorithm by parsing the algorithm, calling the signing interface, simulating clicks, etc., enabling automated forgery of requests.",
     "references": [
       {
-        "title": "smart-cloud - an open-source Spring Cloud scaffold with API signing capability",
-        "link": "https://github.com/smart-cloud/smart-cloud-examples#%E4%BA%8C%E6%8E%A5%E5%8F%A3%E5%AE%89%E5%85%A8"
+        "title": "smart-cloud - an open-source Spring Cloud scaffold with API signing capability"
       }
     ]
   }

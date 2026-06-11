@@ -6,8 +6,7 @@
     "limitation": "The limitations of Zero Trust Architecture include: (1) high implementation complexity requiring large-scale transformation of existing IT infrastructure with significant cost; (2) potential impact on user experience as frequent identity verification and permission checks may reduce work efficiency; (3) poor compatibility with legacy systems that may not support the authentication and authorization mechanisms required by Zero Trust; (4) requires robust identity management infrastructure; (5) full implementation of Zero Trust is a long-term process that is difficult to cover all business scenarios in the short term.",
     "references": [
       {
-        "title": "NIST SP 800-207 Zero Trust Architecture",
-        "link": "https://csrc.nist.gov/publications/detail/sp/800-207/final"
+        "title": "NIST SP 800-207 Zero Trust Architecture"
       }
     ]
   }

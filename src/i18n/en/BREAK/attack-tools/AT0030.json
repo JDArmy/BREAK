@@ -4,34 +4,8 @@
     "description": "By extracting, stealing, or purchasing cookies from already-logged-in accounts, these tools perform credential reuse to achieve 'login-free' authentication for accounts.",
     "references": [
       {
-        "title": "Kali Linux-网络安全之-XSS 跨站脚本攻击原理及 DVWA 靶机的搭建...",
-        "link": "https://www.jianshu.com/p/23a2cb2ddb15"
+        "title": "Kali Linux-网络安全之-XSS 跨站脚本攻击原理及 DVWA 靶机的搭建..."
       }
-    ],
-    "avoidances": [
-      "A0010",
-      "A0015",
-      "A0019",
-      "A0021",
-      "A0029-001",
-      "A0059"
-    ],
-    "directCauseRisks": [
-      "R0003",
-      "R0003-001",
-      "R0003-002",
-      "R0003-003",
-      "R0003-004",
-      "R0005",
-      "R0005-001",
-      "R0032",
-      "R0035",
-      "R0105"
-    ],
-    "indirectSupportRisks": [
-      "R0016",
-      "R0034",
-      "R0037"
     ]
   }
 }

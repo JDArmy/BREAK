@@ -2,33 +2,13 @@
   "AT0073": {
     "title": "Fake Call Spoofing Tool",
     "description": "Fake call spoofing tools combine AI voice cloning technology with caller ID spoofing to disguise caller identity and voice during phone calls. Unlike AT0059 AI Voice Cloning Tool which only provides voice synthesis capabilities, fake call spoofing tools add telecom-level number forgery and call path manipulation capabilities. Key features and attack methods include: ① Caller ID spoofing: altering caller display numbers through VoIP gateways or SS7 signaling vulnerabilities, making the victim's phone display the real number of the target person or institution; ② AI real-time voice cloning: converting the attacker's voice to the target person's voice during calls in real-time, supporting two-way real-time dialogue; ③ Call scenario scripts: providing dialogue scripts and contingency response talking points for common scam scenarios; ④ Multi-line concurrent calling: supporting simultaneous spoofed calls to multiple targets for large-scale fraud; ⑤ Call recording and analysis: automatically recording call content for script improvement and subsequent extortion. This tool is key to the AI-driven evolution of telecom fraud, with global AI voice cloning fraud losses exceeding $400 billion in 2025.",
-    "avoidances": [
-      "A0084",
-      "A0086",
-      "A0073",
-      "A0027"
-    ],
-    "directCauseRisks": [
-      "R0084",
-      "R0095",
-      "R0120"
-    ],
-    "indirectSupportRisks": [
-      "R0048",
-      "R0092",
-      "R0116",
-      "R0132"
-    ],
     "references": [
       {
-        "title": "Google Android Fake Call Detection Announcement",
-        "link": "https://blog.google/security/new-ai-powered-scam-detection-features/"
+        "title": "Google Android Fake Call Detection Announcement"
       },
       {
-        "title": "FCC Caller ID Authentication Rules",
-        "link": "https://www.fcc.gov/call-authentication"
+        "title": "FCC Caller ID Authentication Rules"
       }
-    ],
-    "updated": "2026-06-11"
+    ]
   }
 }

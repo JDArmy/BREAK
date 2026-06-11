@@ -6,8 +6,7 @@
     "limitation": "The limitations of geofencing include: (1) VPNs, proxy servers, and GPS spoofing tools can forge geographic location information; (2) indoor positioning accuracy is limited and may produce location errors in large buildings; (3) normal user travel and business trips may trigger false positives; (4) different positioning technologies vary significantly in accuracy and reliability; (5) some users may refuse to authorize location information for privacy reasons.",
     "references": [
       {
-        "title": "创建和监控地理围栏| Sensors and location - Android Developers",
-        "link": "https://developer.android.com/develop/sensors-and-location/location/geofencing?hl=zh-cn"
+        "title": "创建和监控地理围栏| Sensors and location - Android Developers"
       }
     ]
   }

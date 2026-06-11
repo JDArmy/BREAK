@@ -7,11 +7,9 @@
     "influence": "Harms include theft of sensitive information, unauthorized access to company systems, data tampering, and malicious operations performed under stolen identities, posing potential threats to the company's confidentiality, integrity, and availability.",
     "references": [
       {
-        "title": "Social engineering (security) - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Social_engineering_(security)"
+        "title": "Social engineering (security) - Wikipedia"
       }
-    ],
-    "updated": "2026-06-11"
+    ]
   },
   "R0083-001": {
     "title": "Employee Account Compromise",
@@ -21,8 +19,7 @@
     "influence": "Harms include theft of sensitive information, unauthorized access to company systems, data tampering, and malicious operations performed under stolen identities, posing potential threats to the company's confidentiality, integrity, and availability.",
     "references": [
       {
-        "title": "Credential stuffing - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Credential_stuffing"
+        "title": "Credential stuffing - Wikipedia"
       }
     ]
   },
@@ -34,10 +31,8 @@
     "influence": "Harms include but are not limited to: information leakage of sensitive data, credentials, or company secrets; network intrusion through unauthorized access; financial losses from fraudulent financial operations; and reputational damage from customer trust issues or broken business partnerships.",
     "references": [
       {
-        "title": "Social engineering (security) - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Social_engineering_(security)"
+        "title": "Social engineering (security) - Wikipedia"
       }
-    ],
-    "updated": "2026-06-11"
+    ]
   }
 }

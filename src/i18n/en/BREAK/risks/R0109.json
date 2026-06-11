@@ -7,14 +7,11 @@
     "influence": "Unauthorized access may lead to serious security issues including but not limited to data leakage, privacy violations, denial of service, and system crashes.",
     "references": [
       {
-        "title": "Privilege escalation - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Privilege_escalation"
+        "title": "Privilege escalation - Wikipedia"
       },
       {
-        "title": "T1078 Valid Accounts - MITRE ATT&CK",
-        "link": "https://attack.mitre.org/techniques/T1078/"
+        "title": "T1078 Valid Accounts - MITRE ATT&CK"
       }
-    ],
-    "updated": "2026-06-11"
+    ]
   }
 }

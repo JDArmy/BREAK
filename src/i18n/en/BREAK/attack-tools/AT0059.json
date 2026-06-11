@@ -4,25 +4,11 @@
     "description": "AI voice cloning tools use deep learning technology to generate synthetic voices highly similar to a target person based on a small amount of voice samples (typically only a few seconds to a few minutes). These tools use Text-to-Speech (TTS) and Voice Conversion technology to generate cloned voices of any content in real time or offline. Representative technologies include VALL-E, Bark, and Tortoise-TTS. Attackers use voice cloning tools for phone fraud (impersonating friends or leaders), bypassing voiceprint authentication systems, and creating fake audio evidence.",
     "references": [
       {
-        "title": "VALL-E: Neural Codec Language Models",
-        "link": "https://arxiv.org/abs/2301.02111"
+        "title": "VALL-E: Neural Codec Language Models"
       },
       {
-        "title": "AI Voice Cloning Security Risk Analysis",
-        "link": "https://www.europol.europa.eu/publications-events/publications/chatgpt-impact-of-large-language-models-law-enforcement"
+        "title": "AI Voice Cloning Security Risk Analysis"
       }
-    ],
-    "indirectSupportRisks": [
-      "R0116-001",
-      "R0032-001",
-      "R0032-002",
-      "R0032-003",
-      "R0035-001",
-      "R0043",
-      "R0043-001",
-      "R0045",
-      "R0083",
-      "R0083-001"
     ]
   }
 }

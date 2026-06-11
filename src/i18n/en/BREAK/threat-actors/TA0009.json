@@ -4,65 +4,8 @@
     "description": "Malicious merchants are commercial entities or individuals engaged in fraud, deception, or other illegitimate means to profit. They typically use fraudulent sales tactics including false advertising, deceptive pricing, and fictitious goods or services to mislead consumers. They may also engage in fake refunds, unauthorized charges, illegal sale of personal information, fake ad clicks, order manipulation, and other activities that harm the digital economy.",
     "references": [
       {
-        "title": "OWASP Automated Threats to Web Applications",
-        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/"
+        "title": "OWASP Automated Threats to Web Applications"
       }
-    ],
-    "buildAttackTools": [
-      "AT0046"
-    ],
-    "useAttackTools": [
-      "AT0040-001",
-      "AT0050",
-      "AT0051"
-    ],
-    "directCauseRisks": [
-      "R0004",
-      "R0005",
-      "R0006",
-      "R0007",
-      "R0007-004",
-      "R0016",
-      "R0016-001",
-      "R0016-002",
-      "R0017",
-      "R0017-001",
-      "R0017-002",
-      "R0018",
-      "R0020",
-      "R0021",
-      "R0022",
-      "R0023",
-      "R0024",
-      "R0026",
-      "R0031",
-      "R0033",
-      "R0033-001",
-      "R0042",
-      "R0052",
-      "R0053",
-      "R0056",
-      "R0057",
-      "R0058",
-      "R0060",
-      "R0063",
-      "R0070",
-      "R0070-001",
-      "R0070-002",
-      "R0070-003",
-      "R0115"
-    ],
-    "indirectSupportRisks": [
-      "R0001",
-      "R0001-001",
-      "R0002",
-      "R0003-001",
-      "R0003-002",
-      "R0003-003",
-      "R0003-004",
-      "R0005-001",
-      "R0008-005",
-      "R0027"
     ]
   }
 }

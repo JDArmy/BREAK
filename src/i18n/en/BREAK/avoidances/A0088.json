@@ -1,24 +1,19 @@
 {
   "A0088": {
     "title": "AI Content Provenance",
-    "category": "AC01",
     "definition": "A security control that adds verifiable source information and metadata identifiers to AI-generated content, making content origins traceable and verifiable.",
     "description": "AI content provenance uses technical means to add tamper-proof source identifiers and metadata information to AI-generated content, making the content's production process, AI model used, generation time, and other information traceable and verifiable. Unlike A0064 AI Content Detection which focuses on identifying whether content is AI-generated, AI Content Provenance focuses on establishing trusted proof of origin for content. Key technologies include: ① Content Credentials (C2PA standard): a content provenance authentication standard jointly promoted by Adobe, Microsoft, Google, and others, binding cryptographic signatures and provenance metadata to digital content; ② Digital watermark embedding: embedding invisible digital watermarks in AI-generated content containing information such as the generation model and timestamp; ③ Blockchain provenance: storing content generation records and change history on the blockchain to ensure immutability; ④ Model fingerprinting: recording the unique identifier information of the AI model used to generate the content; ⑤ Content signature chain: adding digital signatures for each edit and distribution of the content, forming a complete signature chain. This technology is critical for defending against AI deepfakes and disinformation dissemination.",
     "limitation": "C2PA and other standards have not yet been fully adopted, with many platforms and devices not supporting them; digital watermarks may be erased or damaged by advanced techniques; blockchain provenance has high storage costs; model fingerprinting accuracy is affected by model updates; content signature chain complexity increases dramatically with the number of distribution events.",
     "references": [
       {
-        "title": "C2PA Technical Specification",
-        "link": "https://c2pa.org/specifications/"
+        "title": "C2PA Technical Specification"
       },
       {
-        "title": "Adobe Content Authenticity Initiative",
-        "link": "https://contentauthenticity.org/"
+        "title": "Adobe Content Authenticity Initiative"
       },
       {
-        "title": "NIST AI RMF: AI Risk Management Framework",
-        "link": "https://www.nist.gov/itl/ai-risk-management-framework"
+        "title": "NIST AI RMF: AI Risk Management Framework"
       }
-    ],
-    "updated": "2026-06-11"
+    ]
   }
 }

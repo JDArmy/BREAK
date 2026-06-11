@@ -5,25 +5,16 @@
     "description": "Compute resource theft risk refers to the risk of attackers illegally acquiring and occupying others' computing resources through server intrusion, cloud service account abuse, or AI training task hijacking. Unlike R0086 Server Mining which addresses the risk of mining behavior itself, compute resource theft risk focuses on the resource theft aspect of computing resources being illegally occupied. Key attack methods include: ① Cloud compute theft: intruding into cloud service accounts and creating large numbers of GPU instances for mining or AI training; ② Server intrusion: intruding into enterprise servers and using their computing resources for mining or model training; ③ AI training hijacking: injecting malicious tasks during distributed AI training processes to occupy training cluster compute power; ④ Container escape: escaping from containers to host machines and using host compute power; ⑤ Supply chain compute abuse: implanting backdoors in open-source AI tools or models to redirect victim compute power to attacker tasks. With the explosive growth of GPU compute demand for AI large model training, compute power has become a new high-value theft target.",
     "complexity": "Intermediate",
     "influence": "Can lead to massive occupation of computing resources, skyrocketing cloud service costs, degraded business performance, and theft of AI training data and models.",
-    "avoidances": [
-      "A0078",
-      "A0079",
-      "A0068"
-    ],
     "references": [
       {
-        "title": "MITRE ATT&CK: Resource Hijacking (T1496)",
-        "link": "https://attack.mitre.org/techniques/T1496/"
+        "title": "MITRE ATT&CK: Resource Hijacking (T1496)"
       },
       {
-        "title": "CrowdStrike: Cloud Compute Resource Abuse Report",
-        "link": "https://www.crowdstrike.com/resources/reports/"
+        "title": "CrowdStrike: Cloud Compute Resource Abuse Report"
       },
       {
-        "title": "【黑产大数据】2025年互联网黑灰产趋势年度总结|洗钱|欺诈|大陆|...",
-        "link": "https://www.163.com/dy/article/KJ2QH6LE0518STKV.html"
+        "title": "【黑产大数据】2025年互联网黑灰产趋势年度总结|洗钱|欺诈|大陆|..."
       }
-    ],
-    "updated": "2026-06-11"
+    ]
   }
 }

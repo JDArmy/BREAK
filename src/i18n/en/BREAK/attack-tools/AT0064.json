@@ -4,39 +4,11 @@
     "description": "Infostealers are a class of malware specifically designed to steal sensitive information from victim devices, primarily targeting browser-saved passwords, cookies, autofill data, and cryptocurrency wallet keys. Representative families include RedLine, Raccoon, Vidar, LummaC2 (Lumma), StealC, and Meta. In 2025-2026, infostealers have become the top threat for global data breaches, with single incidents leading to billions of credentials being leaked. Main functions include: (1) Browser data theft: extracting saved login credentials, cookies, credit card information, and autofill data from Chrome, Firefox, Edge, and other browsers. (2) Cryptocurrency wallet theft: searching for and stealing key files and mnemonic phrases from MetaMask, Exodus, and other wallets. (3) Session token theft: stealing session tokens from Discord, Telegram, Steam, and other applications for password-free login. (4) Screenshots and keylogging: periodically capturing screen content and recording keyboard input to harvest unsaved credentials. (5) System information collection: gathering OS version, hardware information, and installed software lists. (6) Data exfiltration: sending stolen data through encrypted channels to attacker-controlled servers or Telegram bots. Infostealers typically spread through phishing emails, fake software downloads, cracked software, and fake VPN applications, with stolen data sold in bulk on dark web markets as 'logs'.",
     "references": [
       {
-        "title": "Infostealer Malware Analysis - MITRE ATT&CK",
-        "link": "https://attack.mitre.org/software/"
+        "title": "Infostealer Malware Analysis - MITRE ATT&CK"
       },
       {
-        "title": "RedLine Stealer Technical Analysis Report",
-        "link": "https://www.cert.org.cn/"
+        "title": "RedLine Stealer Technical Analysis Report"
       }
-    ],
-    "avoidances": [
-      "A0078",
-      "A0010",
-      "A0026",
-      "A0023",
-      "A0079"
-    ],
-    "directCauseRisks": [
-      "R0032",
-      "R0036",
-      "R0143",
-      "R0149"
-    ],
-    "indirectSupportRisks": [
-      "R0001",
-      "R0001-001",
-      "R0001-002",
-      "R0003-003",
-      "R0003-004",
-      "R0008-005",
-      "R0078",
-      "R0083",
-      "R0083-001",
-      "R0088",
-      "R0142"
     ]
   }
 }

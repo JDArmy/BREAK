@@ -4,52 +4,8 @@
     "description": "Third parties with a cooperative relationship with the platform who use malicious means to profit improperly.",
     "references": [
       {
-        "title": "Insider Threat - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Insider_threat"
+        "title": "Insider Threat - Wikipedia"
       }
-    ],
-    "buildAttackTools": [
-      "AT0061"
-    ],
-    "useAttackTools": [
-      "AT0003",
-      "AT0005",
-      "AT0023",
-      "AT0040-001",
-      "AT0046"
-    ],
-    "directCauseRisks": [
-      "R0008",
-      "R0008-002",
-      "R0008-003",
-      "R0008-004",
-      "R0008-005",
-      "R0067",
-      "R0078-001",
-      "R0081",
-      "R0081-001",
-      "R0081-002",
-      "R0081-003",
-      "R0081-004",
-      "R0087",
-      "R0112",
-      "R0112-002",
-      "R0112-003",
-      "R0112-005"
-    ],
-    "indirectSupportRisks": [
-      "R0005",
-      "R0005-001",
-      "R0015",
-      "R0016",
-      "R0016-001",
-      "R0017-001",
-      "R0028",
-      "R0030",
-      "R0030-001",
-      "R0037",
-      "R0089",
-      "R0090"
     ]
   }
 }

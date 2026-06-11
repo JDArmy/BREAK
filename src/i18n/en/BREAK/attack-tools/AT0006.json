@@ -4,32 +4,8 @@
     "description": "SMS verification code platforms are cloud service platforms that use virtual or physical phone numbers to receive SMS verification codes. Their principle is to connect phone numbers provided by card merchants to the platform, which then provides them to consumers. SMS verification codes are used in internet businesses to filter low-value users, based on the premise that phone numbers essentially implement real-name authentication. However, the gray/black market has developed SMS verification code platforms that stockpile large numbers of SIM cards to provide SMS sending and receiving services. Large platforms have been found to hold millions of SIM cards, while smaller ones hold tens of thousands. These platforms belong to the illegal gray industry that undermines internet real-name registration and has a severe impact on cybersecurity. In recent years, the platform model has evolved toward a decentralized 'group code receiving' model, where card merchants provide code receiving services directly to multiple black/gray market actors through social messaging tools, bypassing traditional platform account systems, reducing transaction costs and enhancing privacy, making enforcement even more difficult.",
     "references": [
       {
-        "title": "What Do SMS Verification Code Platforms Do?",
-        "link": "https://zhidao.baidu.com/question/566282201955764244.html"
+        "title": "What Do SMS Verification Code Platforms Do?"
       }
-    ],
-    "avoidances": [
-      "A0016-003",
-      "A0029-001"
-    ],
-    "directCauseRisks": [
-      "R0005-001",
-      "R0016",
-      "R0030",
-      "R0030-001",
-      "R0030-004"
-    ],
-    "indirectSupportRisks": [
-      "R0003",
-      "R0003-003",
-      "R0005",
-      "R0005-001",
-      "R0005-002",
-      "R0009",
-      "R0016",
-      "R0016-001",
-      "R0030",
-      "R0030-001"
     ]
   }
 }

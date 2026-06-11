@@ -6,8 +6,7 @@
     "limitation": "The limitations of graph computing and association analysis include: (1) large-scale graph computation requires significant computational and storage resources, limiting real-time performance; (2) the quality of association relationship data directly affects analysis results, and missing or erroneous data can lead to misjudgments; (3) attackers can sever association links by isolating devices and using independent IPs; (4) normal users may also have legitimate association relationships (such as family members sharing a device), requiring fine-grained rules to avoid false positives; (5) graph models have relatively poor explainability, making it difficult for business personnel to understand and tune them.",
     "references": [
       {
-        "title": "Graph-Based Fraud Detection - Neo4j",
-        "link": "https://neo4j.com/use-cases/fraud-detection/"
+        "title": "Graph-Based Fraud Detection - Neo4j"
       }
     ]
   }

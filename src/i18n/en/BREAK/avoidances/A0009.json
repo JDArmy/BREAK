@@ -6,8 +6,7 @@
     "limitation": "Time limiting is generally a 'business-impacting' countermeasure that has some effect on normal user requests or services. Therefore, a compromise value is usually chosen that is acceptable to normal users while maximally blocking attackers.",
     "references": [
       {
-        "title": "Rate Limiting - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Rate_limiting"
+        "title": "Rate Limiting - Wikipedia"
       }
     ]
   }

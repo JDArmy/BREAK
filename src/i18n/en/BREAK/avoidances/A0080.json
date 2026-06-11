@@ -6,12 +6,10 @@
     "limitation": "The limitations of data classification and grading include: (1) data asset inventory is labor-intensive and dynamic data is difficult to cover comprehensively; (2) automated classification accuracy is limited and requires manual review; (3) developing grading standards requires close collaboration between business and security teams, and parties may disagree on sensitivity judgments; (4) data levels may change during processing and transfer, making dynamic management difficult; (5) excessive grading protection may affect normal data use and business efficiency.",
     "references": [
       {
-        "title": "Data Security Law - People's Republic of China",
-        "link": "http://www.npc.gov.cn/npc/c30834/202106/7c9af12f51334a73b56d7938f99a788a.shtml"
+        "title": "Data Security Law - People's Republic of China"
       },
       {
-        "title": "Data Classification and Grading Guide - GB/T 43697-2024",
-        "link": "https://www.tc260.org.cn/"
+        "title": "Data Classification and Grading Guide - GB/T 43697-2024"
       }
     ]
   }

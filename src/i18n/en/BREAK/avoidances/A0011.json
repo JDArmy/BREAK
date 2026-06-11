@@ -6,8 +6,7 @@
     "limitation": "Many applications support multi-point login, meaning that even after a session is forced out, the user can still access via another active session. Additionally, because forcing a session logout effectively disrupts the black-market cookie trading workflow, many black-market account vendors now provide one-click login tools that can re-login instantly even after a forced logout.",
     "references": [
       {
-        "title": "Session Management - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Session_(computer_science)"
+        "title": "Session Management - Wikipedia"
       }
     ]
   }

@@ -7,12 +7,10 @@
     "influence": "Harms include data loss, system paralysis, and business disruption, potentially causing enormous financial losses, reputational damage, and legal liability for organizations.",
     "references": [
       {
-        "title": "Ransomware - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Ransomware"
+        "title": "Ransomware - Wikipedia"
       },
       {
-        "title": "T1486 Data Encrypted for Impact - MITRE ATT&CK",
-        "link": "https://attack.mitre.org/techniques/T1486/"
+        "title": "T1486 Data Encrypted for Impact - MITRE ATT&CK"
       }
     ]
   },
@@ -24,8 +22,7 @@
     "influence": "The number and frequency of ransomware attacks increase significantly, small and medium enterprises become primary targets, and ransom amounts continue to rise.",
     "references": [
       {
-        "title": "Ransomware as a Service Trend Analysis",
-        "link": "https://www.cisa.gov/stopransomware"
+        "title": "Ransomware as a Service Trend Analysis"
       }
     ]
   },
@@ -37,8 +34,7 @@
     "influence": "Data leakage risk persists even with backups, customer and partner trust is damaged, and compliance penalty risks arise.",
     "references": [
       {
-        "title": "Ransomware - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Ransomware"
+        "title": "Ransomware - Wikipedia"
       }
     ]
   }

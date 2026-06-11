@@ -1,24 +1,19 @@
 {
   "A0092": {
     "title": "Mobile Threat Defense (MTD)",
-    "category": "AC02",
     "definition": "Specialized threat detection and defense technology deployed on mobile endpoints, protecting mobile devices from malicious applications, network attacks, and data leakage threats.",
     "description": "Mobile Threat Defense (MTD) is a threat detection and defense technology specifically designed for mobile endpoints. Unlike A0078 Endpoint Detection and Response (EDR) which primarily covers desktop and server endpoints, MTD focuses on the unique threat scenarios of mobile devices such as smartphones and tablets. Key functions include: ① Application security analysis: conducting behavioral analysis and risk assessment of installed applications on mobile devices, detecting malicious apps and suspicious permission requests; ② Network threat detection: detecting the security of WiFi hotspots connected by mobile devices, identifying man-in-the-middle attacks and rogue hotspots; ③ Device integrity verification: checking whether devices are jailbroken/rooted, whether malicious configuration profiles are installed, and verifying device integrity; ④ Data leakage prevention: monitoring data flow on mobile devices to prevent sensitive data from leaking through insecure applications or channels; ⑤ Phishing protection: real-time detection of phishing links and malicious content in mobile browsers and messaging applications; ⑥ Threat intelligence integration: integrating with mobile threat intelligence sources to provide real-time threat alerts. With the proliferation of BYOD and mobile work, MTD has become a core component of enterprise mobile security strategies.",
     "limitation": "The closed nature of mobile operating systems limits MTD detection depth; iOS sandbox mechanisms make it difficult for MTD to obtain system-level information; increased user privacy awareness may lead to rejection of MTD app installation; mobile device battery and performance limitations affect continuous monitoring capabilities; some advanced mobile threats may bypass MTD detection.",
     "references": [
       {
-        "title": "MTD的定义和价值|应用程序|网络安全|网络安全防护|mtd|网络攻击_网 ...",
-        "link": "https://www.163.com/dy/article/H9DUIGGJ0511ALHJ.html"
+        "title": "MTD的定义和价值|应用程序|网络安全|网络安全防护|mtd|网络攻击_网 ..."
       },
       {
-        "title": "NIST SP 800-124: Guidelines for Managing the Security of Mobile Devices",
-        "link": "https://csrc.nist.gov/publications/detail/sp/800-124/rev-2/final"
+        "title": "NIST SP 800-124: Guidelines for Managing the Security of Mobile Devices"
       },
       {
-        "title": "OWASP Mobile Security Testing Guide",
-        "link": "https://owasp.org/www-project-mobile-security-testing-guide/"
+        "title": "OWASP Mobile Security Testing Guide"
       }
-    ],
-    "updated": "2026-06-11"
+    ]
   }
 }

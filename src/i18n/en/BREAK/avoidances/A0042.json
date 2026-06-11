@@ -6,8 +6,7 @@
     "limitation": "Feature randomization is highly intrusive to the business and requires strong security-business collaboration to implement. Additionally, changes to features may lead to a degraded user experience.",
     "references": [
       {
-        "title": "Access Control - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6"
+        "title": "Access Control - Baidu Baike"
       }
     ]
   },
@@ -18,8 +17,7 @@
     "limitation": "DOM randomization is ineffective against attack methods that use OCR to identify and manipulate page elements.",
     "references": [
       {
-        "title": "Access Control - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6"
+        "title": "Access Control - Baidu Baike"
       }
     ]
   },
@@ -30,8 +28,7 @@
     "limitation": "Attackers can bypass this type of defense by continuously enumerating random events and alerting on automation workflow exceptions.",
     "references": [
       {
-        "title": "Access Control - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6"
+        "title": "Access Control - Baidu Baike"
       }
     ]
   }

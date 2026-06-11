@@ -6,8 +6,7 @@
     "limitation": "Generally, identity security auditing relies on detecting abnormal account behavior, which requires a certain amount of time and data as a reference baseline. Additionally, in some cases, identity security auditing has a certain degree of latency — subsequent handling or loss mitigation is required after a risk is identified.",
     "references": [
       {
-        "title": "Security Audit - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Information_technology_security_audit"
+        "title": "Security Audit - Wikipedia"
       }
     ]
   },
@@ -18,8 +17,7 @@
     "limitation": "The invitation code mechanism increases the cost of user registration and is therefore not suitable for scenarios with a large volume of user registrations.",
     "references": [
       {
-        "title": "谷歌简史_腾讯新闻",
-        "link": "https://new.qq.com/rain/a/20250828A02YSL00"
+        "title": "谷歌简史_腾讯新闻"
       }
     ]
   },
@@ -30,8 +28,7 @@
     "limitation": "If the user has no friends, or if friends are unwilling to help with verification, the user will be unable to complete registration.",
     "references": [
       {
-        "title": "WeChat Friend-Assisted Verification",
-        "link": "https://kf.qq.com/faq/120322fu63YV130422nqIrqu.html"
+        "title": "WeChat Friend-Assisted Verification"
       }
     ]
   }

@@ -4,31 +4,11 @@
     "description": "Image CAPTCHA recognition tools are technical tools used to automatically identify and crack various types of graphical CAPTCHAs. Early versions were primarily based on OCR (Optical Character Recognition) technology, which confirms character shapes by examining light and dark patterns in images and converts them into computer text. With the evolution of CAPTCHA technology and the development of deep learning, modern CAPTCHA recognition tools widely use deep learning-based image recognition models (such as CNN, Caffe frameworks, etc.), significantly improving recognition rates for multiple CAPTCHA types including character CAPTCHAs, slider CAPTCHAs, and click-selection CAPTCHAs. In the black/gray market, such tools typically operate as 'CAPTCHA-solving platforms' (打码平台), providing batch automated CAPTCHA recognition services. Criminal groups encapsulate captured CAPTCHA information as tasks and submit them to these platforms, which return results through AI models or human labor, thereby bypassing websites' CAPTCHA security protections.",
     "references": [
       {
-        "title": "Tesseract-OCR Image Text Recognition Tool",
-        "link": "https://blog.csdn.net/weixin_43656359/article/details/103401848"
+        "title": "Tesseract-OCR Image Text Recognition Tool"
       },
       {
-        "title": "Black Market Uses 'Future Weapons' to Crack CAPTCHAs — 'Kuai'a Dama' Platform Uses Deep Learning Caffe Framework",
-        "link": "https://blog.csdn.net/fuhanghang/article/details/118538724"
+        "title": "Black Market Uses 'Future Weapons' to Crack CAPTCHAs — 'Kuai'a Dama' Platform Uses Deep Learning Caffe Framework"
       }
-    ],
-    "avoidances": [
-      "A0001",
-      "A0001-002",
-      "A0001-004"
-    ],
-    "directCauseRisks": [
-      "R0001",
-      "R0001-002",
-      "R0002",
-      "R0003",
-      "R0003-001"
-    ],
-    "indirectSupportRisks": [
-      "R0001-001",
-      "R0001-002",
-      "R0005-001",
-      "R0047"
     ]
   }
 }

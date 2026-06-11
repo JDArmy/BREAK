@@ -4,31 +4,8 @@
     "description": "Security-unaware employees are personnel lacking sufficient information security awareness and training, who may easily become potential security risks due to insufficient understanding of security threats and best practices. This weak security awareness may lead employees to make security mistakes, inadvertently leak sensitive information, click malicious links, or take other actions that are vulnerable to attack.",
     "references": [
       {
-        "title": "Insider Threat - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Insider_threat"
+        "title": "Insider Threat - Wikipedia"
       }
-    ],
-    "buildAttackTools": [],
-    "useAttackTools": [],
-    "directCauseRisks": [
-      "R0038",
-      "R0059",
-      "R0065",
-      "R0067",
-      "R0073",
-      "R0080",
-      "R0083",
-      "R0083-001",
-      "R0083-002",
-      "R0084",
-      "R0111-001",
-      "R0112",
-      "R0112-001",
-      "R0112-002",
-      "R0112-003"
-    ],
-    "indirectSupportRisks": [
-      "R0089"
     ]
   }
 }

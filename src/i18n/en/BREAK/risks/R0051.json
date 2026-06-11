@@ -7,19 +7,8 @@
     "influence": "May cause security processes within the application to be broken and data to be forged.",
     "references": [
       {
-        "title": "What Is Reverse Engineering?",
-        "link": "https://github.com/eastmountyxz/Reverse-Analysis-Case"
+        "title": "What Is Reverse Engineering?"
       }
-    ],
-    "avoidances": [
-      "A0002",
-      "A0013",
-      "A0013-002",
-      "A0013-003",
-      "A0013-004",
-      "A0014-001",
-      "A0021",
-      "A0022"
     ]
   },
   "R0051-001": {
@@ -30,8 +19,7 @@
     "influence": "May cause security processes within the application to be broken and data to be forged.",
     "references": [
       {
-        "title": "TCP Packet Capture Analysis in Practice",
-        "link": "https://blog.csdn.net/qq_31941921/article/details/119853993"
+        "title": "TCP Packet Capture Analysis in Practice"
       }
     ]
   },
@@ -43,8 +31,7 @@
     "influence": "May cause security processes within the application to be broken and data to be forged.",
     "references": [
       {
-        "title": "Complete HTTP Request Analysis",
-        "link": "https://www.cnblogs.com/wzfwaf/p/10515507.html"
+        "title": "Complete HTTP Request Analysis"
       }
     ]
   }

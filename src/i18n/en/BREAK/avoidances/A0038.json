@@ -6,8 +6,7 @@
     "limitation": "The biggest problem with proxy detection is that normal users may also use proxies, making false positives easy.",
     "references": [
       {
-        "title": "Proxy Server - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Proxy_server"
+        "title": "Proxy Server - Wikipedia"
       }
     ]
   },
@@ -18,8 +17,7 @@
     "limitation": "Because web access proxy detection ultimately relies on analyzing terminal request information, placing this measure in a high-adversarial context makes it easy to bypass by forging and modifying data.",
     "references": [
       {
-        "title": "Web Browser",
-        "link": "https://baike.baidu.com/item/%E6%B5%8F%E8%A7%88%E5%99%A8/213911?fr=ge_ala"
+        "title": "Web Browser"
       }
     ]
   },
@@ -30,8 +28,7 @@
     "limitation": "Network proxy detection has the following limitations: first, normal users may also use network proxies, making false positives easy; second, using mobile carrier egress IPs as proxies makes blocking difficult even when detected; third, using ADSL dial-up networks as proxies allows immediate switching to a new proxy by re-dialing after being blocked.",
     "references": [
       {
-        "title": "VPN - Baidu Baike",
-        "link": "https://baike.baidu.com/item/VPN"
+        "title": "VPN - Baidu Baike"
       }
     ]
   }

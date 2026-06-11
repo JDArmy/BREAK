@@ -2,47 +2,16 @@
   "TA0040": {
     "title": "Data Broker",
     "description": "Intermediaries specializing in personal data trading on the dark web and underground markets. Unlike TA0007 Account Dealers who focus on account trading and TA0005 Data Suppliers who focus on bank card and identity data supply, data brokers are cross-data-type trading intermediaries that aggregate various types of personal data (identity information, contact details, behavioral data, medical records, etc.) for wholesale and retail. Key characteristics include: ① Data aggregation: collecting personal data from multiple data breaches, crawler scraping, insider channels, and other sources to build integrated personal information databases; ② Classification and grading: classifying data (identity information, financial data, medical data, etc.) and grading it (pricing by data freshness, completeness, and value); ③ Channel operations: operating data trading businesses on dark web forums, Telegram groups, dedicated trading platforms, and other channels; ④ Custom services: providing targeted data packages for specific populations, regions, or industries based on buyer needs; ⑤ Data verification: providing data authenticity verification services to ensure the validity of sold data. Data brokers are a critical intermediary link in the cybercrime ecosystem, providing data support for various downstream crimes.",
-    "buildAttackTools": [
-      "AT0005",
-      "AT0064"
-    ],
-    "useAttackTools": [
-      "AT0012",
-      "AT0039",
-      "AT0051"
-    ],
-    "directCauseRisks": [
-      "R0028",
-      "R0059",
-      "R0092",
-      "R0136"
-    ],
-    "indirectSupportRisks": [
-      "R0010",
-      "R0011",
-      "R0030",
-      "R0030-001",
-      "R0032-001",
-      "R0040",
-      "R0043",
-      "R0044",
-      "R0049",
-      "R0083-001"
-    ],
     "references": [
       {
-        "title": "Europol: Internet Organised Crime Threat Assessment",
-        "link": "https://www.europol.europa.eu/crime-areas-and-statistics"
+        "title": "Europol: Internet Organised Crime Threat Assessment"
       },
       {
-        "title": "FBI IC3 Annual Report",
-        "link": "https://www.ic3.gov/"
+        "title": "FBI IC3 Annual Report"
       },
       {
-        "title": "Kaspersky: Data Broker Activities on the Dark Web",
-        "link": "https://securelist.com/"
+        "title": "Kaspersky: Data Broker Activities on the Dark Web"
       }
-    ],
-    "updated": "2026-06-11"
+    ]
   }
 }

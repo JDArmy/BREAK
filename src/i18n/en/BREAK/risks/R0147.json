@@ -5,22 +5,13 @@
     "description": "As regulators implement penetrating supervision and payment business supervision for payment institutions, institutions need to provide high-quality regulatory data and keep payment operations, outsourcing, data processing, and risk-control chains traceable. Data quality issues, inconsistent reporting rules, improper data desensitization, weak supplier security management, and inconsistent regulatory reporting scopes may all lead to compliance risk and regulatory penalties.",
     "complexity": "High",
     "influence": "High",
-    "avoidances": [
-      "A0054",
-      "A0050-002",
-      "A0080",
-      "A0070"
-    ],
     "references": [
       {
-        "title": "Regulation on the Supervision and Administration of Non-bank Payment Institutions",
-        "link": "https://www.shanghaiinvest.com/cn/viewfile.php?id=19212"
+        "title": "Regulation on the Supervision and Administration of Non-bank Payment Institutions"
       },
       {
-        "title": "PBOC Q&A on the Regulation on Non-bank Payment Institutions",
-        "link": "https://www.shanghaiinvest.com/cn/viewfile.php?id=19212"
+        "title": "PBOC Q&A on the Regulation on Non-bank Payment Institutions"
       }
-    ],
-    "updated": "2026-05-28"
+    ]
   }
 }

@@ -7,23 +7,8 @@
     "influence": "These accounts are subsequently abused for generating spam, money laundering, spreading malware, reputation manipulation, pranks, and distorting SEO, reviews, and surveys.",
     "references": [
       {
-        "title": "OWASP Automated Threat: OAT019 Account Creation",
-        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-019_Account_Creation.html"
+        "title": "OWASP Automated Threat: OAT019 Account Creation"
       }
-    ],
-    "avoidances": [
-      "A0002",
-      "A0004",
-      "A0005",
-      "A0007",
-      "A0007-002",
-      "A0009",
-      "A0010",
-      "A0015",
-      "A0016",
-      "A0019-002",
-      "A0021",
-      "A0022"
     ]
   },
   "R0030-001": {
@@ -34,8 +19,7 @@
     "influence": "These accounts are subsequently abused for generating spam, money laundering, spreading malware, reputation manipulation, pranks, and distorting SEO, reviews, and surveys.",
     "references": [
       {
-        "title": "OWASP Automated Threat: OAT019 Account Creation",
-        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-019_Account_Creation.html"
+        "title": "OWASP Automated Threat: OAT019 Account Creation"
       }
     ]
   },
@@ -47,8 +31,7 @@
     "influence": "Bypasses existing identity verification systems, causing defense mechanisms to fail.",
     "references": [
       {
-        "title": "What Is Third-Party Account Login? What Are Its Benefits?",
-        "link": "https://zhidao.baidu.com/question/1437455763683359379.html"
+        "title": "What Is Third-Party Account Login? What Are Its Benefits?"
       }
     ]
   },
@@ -60,8 +43,7 @@
     "influence": "Bypasses existing identity verification systems, causing defense mechanisms to fail.",
     "references": [
       {
-        "title": "Phone Real-Name Registration - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E6%89%8B%E6%9C%BA%E5%AE%9E%E5%90%8D%E5%88%B6"
+        "title": "Phone Real-Name Registration - Baidu Baike"
       }
     ]
   },
@@ -73,8 +55,7 @@
     "influence": "Risks mainly manifest in disrupting normal internet order, potential social engineering attacks, challenges from new cybercrime patterns, and economic and reputational impacts on users and platforms.",
     "references": [
       {
-        "title": "上海首例批量注册游戏账号案:批量起号是否违法?游戏黑灰产的刑事...",
-        "link": "https://new.qq.com/rain/a/20260228A06D4S00"
+        "title": "上海首例批量注册游戏账号案:批量起号是否违法?游戏黑灰产的刑事..."
       }
     ]
   },
@@ -86,8 +67,7 @@
     "influence": "Bulk registration with virtual numbers may lead to online service abuse, including online fraud and false information spreading, damaging platform credibility and user security.",
     "references": [
       {
-        "title": "Virtual Network Operator - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E8%99%9A%E6%8B%9F%E8%BF%90%E8%90%A5%E5%95%86"
+        "title": "Virtual Network Operator - Baidu Baike"
       }
     ]
   },
@@ -99,8 +79,7 @@
     "influence": "Bulk registration with IoT SIM cards may lead to online service abuse, including online fraud and false information spreading, damaging platform credibility and user security.",
     "references": [
       {
-        "title": "IoT SIM Card - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E7%89%A9%E8%81%94%E7%BD%91%E5%8D%A1"
+        "title": "IoT SIM Card - Baidu Baike"
       }
     ]
   },
@@ -112,8 +91,7 @@
     "influence": "Fake registration may lead to online service abuse, including online fraud and false information spreading, damaging platform credibility and user security.",
     "references": [
       {
-        "title": "Phone Real-Name Registration - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E6%89%8B%E6%9C%BA%E5%AE%9E%E5%90%8D%E5%88%B6"
+        "title": "Phone Real-Name Registration - Baidu Baike"
       }
     ]
   }

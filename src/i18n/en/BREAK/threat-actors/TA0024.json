@@ -4,53 +4,8 @@
     "description": "Malicious insiders are employees within an organization who intentionally engage in destructive, unethical, or illegal activities. These activities may be for personal gain, revenge, dissatisfaction with the company, or other motivations. Malicious insider behavior can pose serious threats to an organization's operations, reputation, and security.",
     "references": [
       {
-        "title": "Insider Threat - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Insider_threat"
+        "title": "Insider Threat - Wikipedia"
       }
-    ],
-    "buildAttackTools": [
-      "AT0064",
-      "AT0065"
-    ],
-    "useAttackTools": [
-      "AT0013",
-      "AT0033",
-      "AT0048",
-      "AT0052",
-      "AT0052-001",
-      "AT0052-002",
-      "AT0052-003",
-      "AT0054",
-      "AT0055"
-    ],
-    "directCauseRisks": [
-      "R0059",
-      "R0067",
-      "R0072",
-      "R0072-001",
-      "R0082",
-      "R0087",
-      "R0089",
-      "R0111-002",
-      "R0112",
-      "R0112-001",
-      "R0112-002",
-      "R0112-003",
-      "R0112-004",
-      "R0112-005",
-      "R0149"
-    ],
-    "indirectSupportRisks": [
-      "R0001",
-      "R0026",
-      "R0032-004",
-      "R0036-001",
-      "R0050",
-      "R0050-001",
-      "R0073",
-      "R0083",
-      "R0083-001",
-      "R0111"
     ]
   }
 }

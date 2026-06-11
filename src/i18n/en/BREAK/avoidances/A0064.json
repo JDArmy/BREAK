@@ -6,12 +6,10 @@
     "limitation": "The main limitations of AI content detection include: (1) arms race effect — as generative models continuously evolve, detection techniques need constant updates and face inherent lag; (2) misclassification risk — detection models may falsely flag human-created content as AI-generated, or fail to detect AI-generated content, especially content that has been manually polished; (3) cross-language differences — most detection tools are trained on English and may perform poorly on Chinese and other languages; (4) mixed content challenge — when humans and AI collaborate on creation, it is difficult to accurately determine the degree of AI involvement; (5) computational cost — large-scale real-time detection requires significant computational resources.",
     "references": [
       {
-        "title": "GPTZero - AI Content Detection Tool",
-        "link": "https://gptzero.me/"
+        "title": "GPTZero - AI Content Detection Tool"
       },
       {
-        "title": "A Survey on AI-Generated Content Detection",
-        "link": "https://arxiv.org/abs/2303.07205"
+        "title": "A Survey on AI-Generated Content Detection"
       }
     ]
   }

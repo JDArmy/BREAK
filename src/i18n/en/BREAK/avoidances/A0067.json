@@ -6,12 +6,10 @@
     "limitation": "The limitations of API security gateways include: (1) they may introduce additional network latency, affecting API response performance; (2) complex security policy configurations may cause legitimate requests to be incorrectly blocked; (3) detection capability for business-logic-level API abuse (such as malicious use of legitimate parameter combinations) is limited; (4) security rules need continuous maintenance and updates to address new attack types; (5) in microservice architectures, blind spots remain in east-west traffic API security protection.",
     "references": [
       {
-        "title": "OWASP API Security Top 10",
-        "link": "https://owasp.org/API-Security/editions/2023/en/0x11-t10/"
+        "title": "OWASP API Security Top 10"
       },
       {
-        "title": "API Security Best Practices",
-        "link": "https://docs.cloud.google.com/apigee/docs/api-security/best-practices"
+        "title": "API Security Best Practices"
       }
     ]
   }

@@ -4,42 +4,8 @@
     "description": "Automation scripts automate repetitive operations that would otherwise require manual execution through code. In many cases, they do not involve exploiting system vulnerabilities but simply automate manual operations through machines, a common means for developers to improve daily work efficiency. In the black-grey market, automation scripts are commonly used for batch registration, automated traffic inflation, grabbing red packets, snapping up coupons, auto-order grabbing, and other scenarios, serving as an important tool for black-grey market actors to achieve scaled cheating.",
     "references": [
       {
-        "title": "工行发布《2022网络金融黑产研究报告》|黑客|洗钱|欺诈|互联网|中国...",
-        "link": "https://www.163.com/dy/article/HU9BHEUA051982TB.html"
+        "title": "工行发布《2022网络金融黑产研究报告》|黑客|洗钱|欺诈|互联网|中国..."
       }
-    ],
-    "avoidances": [
-      "A0001",
-      "A0001-002",
-      "A0001-004",
-      "A0002",
-      "A0004",
-      "A0005",
-      "A0009",
-      "A0010",
-      "A0015",
-      "A0016",
-      "A0021",
-      "A0022",
-      "A0024",
-      "A0029-001",
-      "A0059"
-    ],
-    "directCauseRisks": [
-      "R0001",
-      "R0001-001",
-      "R0002",
-      "R0003-001",
-      "R0003-002"
-    ],
-    "indirectSupportRisks": [
-      "R0003",
-      "R0003-003",
-      "R0003-004",
-      "R0005",
-      "R0005-001",
-      "R0009",
-      "R0108"
     ]
   }
 }

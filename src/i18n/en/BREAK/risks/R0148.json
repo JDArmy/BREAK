@@ -5,22 +5,13 @@
     "description": "AI agents no longer only generate text; they can call search, browsers, code execution, databases, ticketing, payment, marketing, customer service, office automation, and other tools to perform real actions. Attackers can manipulate agents through direct or indirect prompt injection, malicious web pages or documents, forged tool descriptions, polluted MCP context, and unauthorized tool invocation to delete or leak data, initiate transactions, change configurations, send messages, download malicious content, or orchestrate attack chains. The defining feature is that tool permissions, external data, and model reasoning jointly determine execution results, making traditional input filtering insufficient on its own.",
     "complexity": "Advanced",
     "influence": "Can cause sensitive data leakage, unauthorized business operations, amplified automated attacks, indirect manipulation of internal systems, audit difficulties, and compliance risk.",
-    "avoidances": [
-      "A0065",
-      "A0068",
-      "A0079",
-      "A0087"
-    ],
     "references": [
       {
-        "title": "OWASP Top 10 for Agentic Applications",
-        "link": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/"
+        "title": "OWASP Top 10 for Agentic Applications"
       },
       {
-        "title": "Cybersecurity Forecast 2026 - Google Cloud",
-        "link": "https://cloud.google.com/security/resources/cybersecurity-forecast"
+        "title": "Cybersecurity Forecast 2026 - Google Cloud"
       }
-    ],
-    "updated": "2026-05-28"
+    ]
   }
 }

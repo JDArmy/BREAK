@@ -4,30 +4,8 @@
     "description": "The 8-piece corporate identity document set refers to 8 items: corporate bank card, USB key, legal representative ID card, business license, corporate account, company seal, legal representative personal seal, and corporate account opening permit. These are essential tools for implementing telecom network fraud and money laundering. The key step in telecom fraud is transferring stolen funds, and criminals purchase these personal or corporate accounts through various illegal channels at high prices to achieve their illegal purposes.",
     "references": [
       {
-        "title": "3,200 People Used '4-Piece Sets' and '8-Piece Sets' to Commit Crimes",
-        "link": "https://www.thepaper.cn/newsDetail_forward_10024890"
+        "title": "3,200 People Used '4-Piece Sets' and '8-Piece Sets' to Commit Crimes"
       }
-    ],
-    "avoidances": [
-      "A0017",
-      "A0015",
-      "A0023-001",
-      "A0044"
-    ],
-    "directCauseRisks": [
-      "R0002",
-      "R0005-001",
-      "R0011-002",
-      "R0045-001",
-      "R0046"
-    ],
-    "indirectSupportRisks": [
-      "R0010",
-      "R0043",
-      "R0044",
-      "R0049",
-      "R0060",
-      "R0062"
     ]
   },
   "AT0040-001": {
@@ -35,32 +13,8 @@
     "description": "Corporate bank accounts used by criminal networks to launder illicit funds. Because corporate accounts support high transaction limits and frequent transfers, they are commonly used as both collection hubs and distribution points for laundering illicit money.",
     "references": [
       {
-        "title": "3,200 People Exploiting '4-Piece' and '8-Piece' Sets — Chenzhou Police Dismantle Large-Scale SIM/Bank Card Black Market",
-        "link": "https://www.thepaper.cn/newsDetail_forward_10024890"
+        "title": "3,200 People Exploiting '4-Piece' and '8-Piece' Sets — Chenzhou Police Dismantle Large-Scale SIM/Bank Card Black Market"
       }
-    ],
-    "avoidances": [
-      "A0016",
-      "A0015",
-      "A0044"
-    ],
-    "directCauseRisks": [
-      "R0044",
-      "R0060",
-      "R0062",
-      "R0093"
-    ],
-    "indirectSupportRisks": [
-      "R0002",
-      "R0005-001",
-      "R0008-005",
-      "R0026",
-      "R0027",
-      "R0054-002",
-      "R0054-003",
-      "R0062-001",
-      "R0095",
-      "R0121"
     ]
   }
 }

@@ -4,38 +4,11 @@
     "description": "Piracy/infringement gangs are criminal gangs that systematically steal digital content (online courses, software, films, e-books, music, etc.) and redistribute it for profit. Main operating models include: content recording, cracking and distribution, membership sharing, low-price resale, ad monetization, and cross-platform content migration.",
     "references": [
       {
-        "title": "Copyright Law of the People's Republic of China",
-        "link": "http://www.npc.gov.cn/"
+        "title": "Copyright Law of the People's Republic of China"
       },
       {
-        "title": "Online Copyright Protection - National Copyright Administration",
-        "link": "https://www.ncac.gov.cn/"
+        "title": "Online Copyright Protection - National Copyright Administration"
       }
-    ],
-    "buildAttackTools": [
-      "AT0025",
-      "AT0035"
-    ],
-    "useAttackTools": [
-      "AT0003",
-      "AT0005",
-      "AT0034",
-      "AT0051"
-    ],
-    "directCauseRisks": [
-      "R0145"
-    ],
-    "indirectSupportRisks": [
-      "R0003-001",
-      "R0008",
-      "R0015",
-      "R0016",
-      "R0016-001",
-      "R0017-001",
-      "R0028",
-      "R0030",
-      "R0030-001",
-      "R0090"
     ]
   }
 }

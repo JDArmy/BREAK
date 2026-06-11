@@ -7,30 +7,8 @@
     "influence": "Harms manifest across multiple dimensions: intellectual property loss threatening the company's innovation capacity; competitors gaining business strategies and plans damaging competitive position; files containing customer information causing trust issues and legal liability; and violations of data protection regulations leading to compliance issues, lawsuits, and fines.",
     "references": [
       {
-        "title": "Data from Information Repositories (T1213) - MITRE ATT&CK",
-        "link": "https://attack.mitre.org/techniques/T1213/"
+        "title": "Data from Information Repositories (T1213) - MITRE ATT&CK"
       }
-    ],
-    "avoidances": [
-      "A0006-006",
-      "A0017-001",
-      "A0023-001",
-      "A0024",
-      "A0025",
-      "A0025-003",
-      "A0025-004",
-      "A0028",
-      "A0044",
-      "A0049",
-      "A0049-001",
-      "A0050-001",
-      "A0050-002",
-      "A0050-003",
-      "A0051",
-      "A0054",
-      "A0057",
-      "A0059",
-      "A0062"
     ]
   }
 }

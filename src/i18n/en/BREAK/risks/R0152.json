@@ -5,22 +5,13 @@
     "description": "Malware-free attacks refer to attackers completely avoiding traditional malware (trojans, viruses, ransomware, etc.) and instead conducting attacks by stealing legitimate credentials, using built-in system tools, and leveraging legitimate cloud services. This attack approach renders traditional malware-detection-based security defenses largely ineffective. Key attack methods include: ① Credential theft and abuse: stealing legitimate account credentials and session tokens through phishing, AiTM attacks, and infostealers, then logging into systems directly with legitimate identities; ② Living-off-the-Land (LotL): using built-in operating system tools (PowerShell, WMI, PsExec, etc.) for attack operations without leaving malicious file traces; ③ Legitimate cloud service abuse: using legitimate cloud storage, collaboration tools, and remote management software for data exfiltration and remote control; ④ Identity impersonation: using stolen administrator credentials to directly manipulate Active Directory, cloud management consoles, and other critical infrastructure; ⑤ Supply chain legitimate permission abuse: using legitimate third-party vendor access for lateral movement. According to Microsoft and CrowdStrike reports, approximately 82% of cyber attacks in 2025 used no malware.",
     "complexity": "Advanced",
     "influence": "Traditional security detection systems are almost entirely ineffective; attackers hide within systems using legitimate identities for extended periods, making detection and blocking extremely difficult, with very high risk of data exfiltration and business disruption.",
-    "avoidances": [
-      "A0075",
-      "A0078",
-      "A0068",
-      "A0079"
-    ],
     "references": [
       {
-        "title": "Microsoft Digital Defense Report 2025",
-        "link": "https://www.microsoft.com/en-us/security/business/microsoft-digital-defense-report"
+        "title": "Microsoft Digital Defense Report 2025"
       },
       {
-        "title": "CrowdStrike 2026 Global Threat Report",
-        "link": "https://www.crowdstrike.com/global-threat-report/"
+        "title": "CrowdStrike 2026 Global Threat Report"
       }
-    ],
-    "updated": "2026-06-11"
+    ]
   }
 }

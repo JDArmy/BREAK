@@ -4,25 +4,11 @@
     "description": "Evil Twin WiFi is an attack tool that intercepts user network traffic and steals credentials by spoofing public WiFi hotspots. Attackers deploy malicious hotspots with the same or similar names as legitimate WiFi in public places (such as cafes, airports, and shopping malls), inducing users to connect and then conducting man-in-the-middle attacks. Main functions include hotspot spoofing, captive portal phishing, traffic interception, SSL stripping, DNS spoofing, and session hijacking. Representative tools include WiFi-Pumpkin, Fluxion, and Airgeddon.",
     "references": [
       {
-        "title": "Evil Twin Attack - CISA",
-        "link": "https://www.cisa.gov/news-events/cybersecurity-advisories"
+        "title": "Evil Twin Attack - CISA"
       },
       {
-        "title": "Public WiFi Security Risk Advisory - CNCERT",
-        "link": "https://www.cert.org.cn/"
+        "title": "Public WiFi Security Risk Advisory - CNCERT"
       }
-    ],
-    "indirectSupportRisks": [
-      "R0083",
-      "R0083-001",
-      "R0143",
-      "R0151",
-      "R0005-001",
-      "R0005-002",
-      "R0030",
-      "R0030-001",
-      "R0032-001",
-      "R0032-002"
     ]
   }
 }

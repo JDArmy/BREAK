@@ -6,12 +6,10 @@
     "limitation": "The limitations of SIM card security verification include: (1) reliance on carrier technical support and data sharing, with differences in interface capabilities and response speeds across carriers; (2) limited cross-border carrier coordination capability for international roaming and overseas carriers; (3) obtaining SIM card information may involve user privacy and requires compliant handling; (4) the proliferation of eSIM technology presents new challenges for physical SIM binding verification; (5) social engineering attacks may bypass carrier SIM card replacement processes.",
     "references": [
       {
-        "title": "SIM Swap Fraud - GSMA",
-        "link": "https://www.gsma.com/get-involved/working-groups/content-type/article/what-is-sim-swap/"
+        "title": "SIM Swap Fraud - GSMA"
       },
       {
-        "title": "Best Practices for Protecting Against SIM Swap Attacks",
-        "link": "https://www.cisa.gov/news-events/cybersecurity-advisories"
+        "title": "Best Practices for Protecting Against SIM Swap Attacks"
       }
     ]
   }

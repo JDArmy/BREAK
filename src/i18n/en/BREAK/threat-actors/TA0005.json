@@ -4,40 +4,8 @@
     "description": "In the gray/black market, data brokers are individuals or organizations specializing in illegally obtaining and trading sensitive information. They sell various types of data including personal identity information, credit card details, passwords, and identity document sets. They collect this information through hacking, social engineering, or other illegal means, then resell it to criminal gangs, cyber attackers, or other participants in illegal activities.",
     "references": [
       {
-        "title": "公安部公布金融领域“黑灰产”违法犯罪十大典型案例_腾讯新闻",
-        "link": "https://news.qq.com/rain/a/20251225A03HT700"
+        "title": "公安部公布金融领域“黑灰产”违法犯罪十大典型案例_腾讯新闻"
       }
-    ],
-    "buildAttackTools": [
-      "AT0012",
-      "AT0027"
-    ],
-    "useAttackTools": [
-      "AT0010",
-      "AT0042"
-    ],
-    "directCauseRisks": [
-      "R0032",
-      "R0032-001",
-      "R0032-002",
-      "R0032-003",
-      "R0032-004",
-      "R0040",
-      "R0089"
-    ],
-    "indirectSupportRisks": [
-      "R0001-002",
-      "R0002",
-      "R0003-003",
-      "R0005-001",
-      "R0011",
-      "R0028",
-      "R0043",
-      "R0044",
-      "R0060",
-      "R0062",
-      "R0092",
-      "R0098"
     ]
   },
   "TA0005-001": {
@@ -45,34 +13,8 @@
     "description": "A criminal who supplies large quantities of bank cards to data brokers or card dealers for use as fund-transfer accounts, profiting illegally from the arrangement.",
     "references": [
       {
-        "title": "Card Farmer - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E5%8D%A1%E5%86%9C/62690938?fr=ge_ala"
+        "title": "Card Farmer - Baidu Baike"
       }
-    ],
-    "buildAttackTools": [
-      "AT0039",
-      "AT0039-001",
-      "AT0040",
-      "AT0040-001"
-    ],
-    "useAttackTools": [
-      "AT0027"
-    ],
-    "directCauseRisks": [
-      "R0060",
-      "R0098"
-    ],
-    "indirectSupportRisks": [
-      "R0005-001",
-      "R0005-002",
-      "R0010",
-      "R0011",
-      "R0030-001",
-      "R0043",
-      "R0044",
-      "R0049",
-      "R0062",
-      "R0092"
     ]
   },
   "TA0005-002": {
@@ -80,34 +22,8 @@
     "description": "An individual who collects personal information through various channels — including e-commerce platforms, courier services, social networks, property management companies, hospitals, and even tax or business registration authorities — and sells it illegally.",
     "references": [
       {
-        "title": "公安部公布“黑灰产”违法犯罪十大典型案例",
-        "link": "https://mp.weixin.qq.com/s?__biz=MjM5ODEzNDEzNw==&mid=2247530198&idx=1&sn=37f8f913498f7ace19a30a9dfbad3f7c&chksm=a713847592847e143fcb38a7bff5ef12a5d837e6c3412dc32c6f975cfd7944a1b25e6304464c&scene=27"
+        "title": "公安部公布“黑灰产”违法犯罪十大典型案例"
       }
-    ],
-    "buildAttackTools": [
-      "AT0012",
-      "AT0027"
-    ],
-    "useAttackTools": [
-      "AT0010",
-      "AT0043"
-    ],
-    "directCauseRisks": [
-      "R0027",
-      "R0089",
-      "R0098"
-    ],
-    "indirectSupportRisks": [
-      "R0011",
-      "R0028",
-      "R0032-001",
-      "R0040",
-      "R0043",
-      "R0044",
-      "R0060",
-      "R0062",
-      "R0072-001",
-      "R0083-001"
     ]
   }
 }

@@ -4,36 +4,11 @@
     "description": "Vulnerability exploitation tools are software or hardware tools used to discover and exploit security vulnerabilities in computer systems or network systems. These tools can be used for vulnerability scanning, vulnerability mining, and vulnerability attacks to assess system security or conduct penetration testing.",
     "references": [
       {
-        "title": "Vulnerability - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E6%BC%8F%E6%B4%9E/1688129?fromModule=disambiguation"
+        "title": "Vulnerability - Baidu Baike"
       },
       {
-        "title": "MITRE ATT&CK - Software",
-        "link": "https://attack.mitre.org/software/"
+        "title": "MITRE ATT&CK - Software"
       }
-    ],
-    "avoidances": [
-      "A0055",
-      "A0056"
-    ],
-    "directCauseRisks": [
-      "R0028",
-      "R0085",
-      "R0086",
-      "R0087",
-      "R0109"
-    ],
-    "indirectSupportRisks": [
-      "R0032-004",
-      "R0075",
-      "R0076",
-      "R0081",
-      "R0081-001",
-      "R0081-002",
-      "R0081-003",
-      "R0081-004",
-      "R0085-001",
-      "R0089"
     ]
   }
 }

@@ -4,36 +4,8 @@
     "description": "Money laundering gangs are criminal organizations or individuals specializing in laundering activities. Their primary purpose is to transfer, hide, or conceal funds from illegal sources to make them appear to come from legitimate channels. This involves complex financial transactions and investments designed to make criminal proceeds appear legitimate and difficult to trace within the economic system.",
     "references": [
       {
-        "title": "How Much Do You Know About 'Money Laundering Rooms'?",
-        "link": "https://mp.weixin.qq.com/s/7_9NKsdVvggtosaaa5nRyw"
+        "title": "How Much Do You Know About 'Money Laundering Rooms'?"
       }
-    ],
-    "buildAttackTools": [
-      "AT0026"
-    ],
-    "useAttackTools": [
-      "AT0039",
-      "AT0039-001",
-      "AT0039-002",
-      "AT0040",
-      "AT0026",
-      "AT0040-001"
-    ],
-    "directCauseRisks": [
-      "R0060",
-      "R0093"
-    ],
-    "indirectSupportRisks": [
-      "R0002",
-      "R0003-003",
-      "R0005-001",
-      "R0010",
-      "R0043",
-      "R0044",
-      "R0049",
-      "R0062",
-      "R0092",
-      "R0098"
     ]
   },
   "TA0014-001": {
@@ -41,29 +13,8 @@
     "description": "A person who withdraws fraud proceeds from ATMs in exchange for a commission. They are commonly called 'runners' because they typically travel by motorcycle or electric scooter to carry out the withdrawals.",
     "references": [
       {
-        "title": "A Batch of 'ATM Runners' Arrested with 2.7 Million Cash Seized — Why Have They Resurfaced After Years of Silence?",
-        "link": "https://mp.weixin.qq.com/s/_Xynz_Qy0UTwHWEkMTeEVg"
+        "title": "A Batch of 'ATM Runners' Arrested with 2.7 Million Cash Seized — Why Have They Resurfaced After Years of Silence?"
       }
-    ],
-    "buildAttackTools": [],
-    "useAttackTools": [
-      "AT0039-001"
-    ],
-    "directCauseRisks": [
-      "R0044",
-      "R0060"
-    ],
-    "indirectSupportRisks": [
-      "R0002",
-      "R0003",
-      "R0003-003",
-      "R0003-004",
-      "R0005",
-      "R0005-001",
-      "R0011-002",
-      "R0030",
-      "R0030-001",
-      "R0030-004"
     ]
   }
 }

@@ -6,12 +6,10 @@
     "limitation": "The black-gray industry has given rise to 'CAPTCHA-solving platforms' (AT0008), which use crowdsourced human labor to complete human verification challenges. This is a dimensionality-reduction attack against human verification, and in theory can render all explicit human verification completely ineffective.",
     "references": [
       {
-        "title": "Captcha - Baidu Baike",
-        "link": "https://baike.baidu.com/item/Captcha/9630117?fr=aladdin"
+        "title": "Captcha - Baidu Baike"
       },
       {
-        "title": "NIST SP 800-63B: Digital Identity Guidelines - Authentication and Lifecycle Management",
-        "link": "https://pages.nist.gov/800-63-3/sp800-63b.html"
+        "title": "NIST SP 800-63B: Digital Identity Guidelines - Authentication and Lifecycle Management"
       }
     ]
   },
@@ -22,8 +20,7 @@
     "limitation": "As computer processing power improves and AI image recognition capabilities advance, the probability of this type of CAPTCHA being cracked is increasing. In particular, the development of AI-generated content has rendered traditional image CAPTCHA mechanisms nearly ineffective. A mainstream evolution direction for image CAPTCHAs is to combine them with behavioral CAPTCHAs (A0001-002), using multi-dimensional factors to complete the human verification challenge.",
     "references": [
       {
-        "title": "Captcha open-source libraries on GitHub",
-        "link": "https://github.com/search?q=captcha"
+        "title": "Captcha open-source libraries on GitHub"
       }
     ]
   },
@@ -34,8 +31,7 @@
     "limitation": "The principle of behavioral CAPTCHAs is to perform certain keyboard/mouse actions based on understanding of image-text information. As seen from the limitations of image CAPTCHAs (A0001-001), the challenge of distinguishing humans from machines through image-text is becoming increasingly difficult. Behavioral CAPTCHAs use deep learning on human keyboard/mouse actions to form models that identify the smooth automated keyboard/mouse operations of machines. However, automated machines can also use deep learning on human keyboard/mouse actions to achieve convincing imitation, which will be a major challenge in the future.",
     "references": [
       {
-        "title": "AJ-Captcha (behavioral CAPTCHA, including sliding puzzle and text click-selection)",
-        "link": "https://gitee.com/anji-plus/captcha"
+        "title": "AJ-Captcha (behavioral CAPTCHA, including sliding puzzle and text click-selection)"
       }
     ]
   },
@@ -46,8 +42,7 @@
     "limitation": "The limitations of voice CAPTCHAs include sensitivity to voice quality, differences in user comprehension, noisy environments, unfriendliness to users with disabilities, and potentially increased computational resource requirements.",
     "references": [
       {
-        "title": "Voice CAPTCHA - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E8%AF%AD%E9%9F%B3%E9%AA%8C%E8%AF%81%E7%A0%81"
+        "title": "Voice CAPTCHA - Baidu Baike"
       }
     ]
   },
@@ -58,8 +53,7 @@
     "limitation": "The limitations of silent CAPTCHA include sensitivity to the user's environment and unfriendliness to users with disabilities.",
     "references": [
       {
-        "title": "Risk Control - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E9%A3%8E%E6%8E%A7"
+        "title": "Risk Control - Baidu Baike"
       }
     ]
   }

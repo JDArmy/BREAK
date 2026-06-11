@@ -4,42 +4,8 @@
     "description": "Packet sending and modification tools are network debugging tools primarily used to capture, analyze, and edit network data packets. Through these tools, users can monitor network traffic, analyze protocols, and debug network issues. For example, Burp Suite is a web application security testing tool that can capture, analyze, and modify HTTP/HTTPS packets. These tools are widely used in network security, system debugging, and network performance analysis.",
     "references": [
       {
-        "title": "...境内导流、组团“收割”:起底跨境色情黑产链条|工具化|电信网络...",
-        "link": "https://www.163.com/dy/article/KUMMMI6P05568W0A.html"
+        "title": "...境内导流、组团“收割”:起底跨境色情黑产链条|工具化|电信网络..."
       }
-    ],
-    "avoidances": [
-      "A0001",
-      "A0002",
-      "A0004",
-      "A0010",
-      "A0015",
-      "A0022",
-      "A0025",
-      "A0025-002",
-      "A0031",
-      "A0032"
-    ],
-    "directCauseRisks": [
-      "R0001",
-      "R0001-001",
-      "R0002",
-      "R0003-001",
-      "R0003-002",
-      "R0008-001",
-      "R0027",
-      "R0032-001",
-      "R0032-002",
-      "R0032-003",
-      "R0034",
-      "R0051-002"
-    ],
-    "indirectSupportRisks": [
-      "R0003",
-      "R0003-003",
-      "R0003-004",
-      "R0005",
-      "R0005-001"
     ]
   }
 }

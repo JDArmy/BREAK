@@ -4,21 +4,8 @@
     "description": "GPS spoofing tools (also known as virtual location tools or location disguise tools) are software that modifies device GPS positioning information to disguise the geographic location of a phone or device to any specified location. Using fake location apps, users can disguise their location and simulate GPS coordinates in any country, allowing them to search for any location they want to spoof. In the black-grey market, GPS spoofing tools are commonly used for virtual location check-ins, faking rider locations, remote coupon abuse, false sign-ins, and other scenarios. Additionally, more advanced GPS spoofing methods include using SDR (Software Defined Radio) devices to forge satellite signals, affecting GPS receivers within a target area.",
     "references": [
       {
-        "title": "GPS Spoofing: Everything You Need to Know",
-        "link": "https://dmarcreport.com/blog/everything-you-need-to-know-about-gps-spoofing/"
+        "title": "GPS Spoofing: Everything You Need to Know"
       }
-    ],
-    "indirectSupportRisks": [
-      "R0001",
-      "R0001-002",
-      "R0002",
-      "R0003",
-      "R0003-001",
-      "R0003-003",
-      "R0003-004",
-      "R0005",
-      "R0005-001",
-      "R0001-001"
     ]
   }
 }

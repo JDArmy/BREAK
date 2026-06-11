@@ -4,35 +4,11 @@
     "description": "Black SIM cards, also known as 'black phone cards', refer to mobile phone cards (including wireless data cards) that have not been registered under a real name and are used by criminals for illegal activities. Since the implementation of phone real-name registration in September 2013, new users in China have largely completed real-name registration. However, due to lax enforcement and large existing stock, unregistered phone cards still number as many as 180 million, giving criminals opportunities to spread obscene content, commit telecommunications fraud, and organize terrorist activities. The main sources of black SIM cards are physical carrier cards, virtual carrier cards, and overseas phone cards.",
     "references": [
       {
-        "title": "Black SIM Cards - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E7%94%B5%E8%AF%9D%E9%BB%91%E5%8D%A1/19710385?fr=aladdin"
+        "title": "Black SIM Cards - Baidu Baike"
       },
       {
-        "title": "China's Successful Anti-Fraud Practices",
-        "link": "https://www.mps.gov.cn/n2255079/n6865805/n7355741/n7355780/c8924764/content.html"
+        "title": "China's Successful Anti-Fraud Practices"
       }
-    ],
-    "avoidances": [
-      "A0016-003",
-      "A0024",
-      "A0029-001",
-      "A0044"
-    ],
-    "directCauseRisks": [
-      "R0002",
-      "R0003-001",
-      "R0003-003",
-      "R0003-004",
-      "R0005-001"
-    ],
-    "indirectSupportRisks": [
-      "R0003",
-      "R0003-003",
-      "R0003-004",
-      "R0005",
-      "R0005-001",
-      "R0030",
-      "R0030-001"
     ]
   },
   "AT0001-002": {
@@ -40,32 +16,8 @@
     "description": "Black SIM cards used with a 'modem pool' — a network communication hardware device that enables simultaneous multi-number calling and bulk SMS sending.",
     "references": [
       {
-        "title": "Modem Pool - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E7%8C%AB%E6%B1%A0?fromModule=lemma_search-box"
+        "title": "Modem Pool - Baidu Baike"
       }
-    ],
-    "avoidances": [
-      "A0024",
-      "A0016-003",
-      "A0044"
-    ],
-    "directCauseRisks": [
-      "R0024",
-      "R0053",
-      "R0084",
-      "R0110"
-    ],
-    "indirectSupportRisks": [
-      "R0005-001",
-      "R0030-004",
-      "R0030-005",
-      "R0030-006",
-      "R0030-007",
-      "R0002",
-      "R0003-001",
-      "R0003-002",
-      "R0003-003",
-      "R0003-004"
     ]
   },
   "AT0001-003": {
@@ -73,36 +25,8 @@
     "description": "SIM cards that, via malware or trojans, grant unauthorized control over a real user's SMS and verification code reception, typically sourced from intercept card platforms.",
     "references": [
       {
-        "title": "【黑产大数据】2025年互联网黑灰产趋势年度总结|洗钱|欺诈|大陆|...",
-        "link": "https://www.163.com/dy/article/KJ2QH6LE0518STKV.html"
+        "title": "【黑产大数据】2025年互联网黑灰产趋势年度总结|洗钱|欺诈|大陆|..."
       }
-    ],
-    "avoidances": [
-      "A0024",
-      "A0016-003",
-      "A0023-001",
-      "A0048"
-    ],
-    "directCauseRisks": [
-      "R0005-001",
-      "R0030",
-      "R0030-001",
-      "R0030-007",
-      "R0089",
-      "R0092",
-      "R0098"
-    ],
-    "indirectSupportRisks": [
-      "R0003-003",
-      "R0003-004",
-      "R0030-003",
-      "R0030-004",
-      "R0030-005",
-      "R0030-006",
-      "R0116",
-      "R0003-001",
-      "R0003-002",
-      "R0005"
     ]
   }
 }

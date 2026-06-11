@@ -7,30 +7,11 @@
     "influence": "May cause serious negative impacts on the organization, including legal liability, financial losses, reputational damage, and security vulnerabilities.",
     "references": [
       {
-        "title": "MITRE Insider Threat Research",
-        "link": "https://insiderthreat.mitre.org/"
+        "title": "MITRE Insider Threat Research"
       },
       {
-        "title": "Insider Threat - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Insider_threat"
+        "title": "Insider Threat - Wikipedia"
       }
-    ],
-    "avoidances": [
-      "A0024",
-      "A0025-004",
-      "A0043",
-      "A0050",
-      "A0051",
-      "A0054",
-      "A0057",
-      "A0010",
-      "A0037",
-      "A0023",
-      "A0059",
-      "A0020-002",
-      "A0044",
-      "A0058",
-      "A0017-001"
     ]
   },
   "R0111-001": {
@@ -41,24 +22,8 @@
     "influence": "Shared accounts increase the risk of unauthorized access; tracking which individual performed a specific action becomes difficult, making accountability hard after security incidents; shared accounts may lead to sensitive information leakage; and in some industries or regulations, account sharing may violate compliance requirements, leading to legal liability and fines.",
     "references": [
       {
-        "title": "Account Sharing - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Account_sharing"
+        "title": "Account Sharing - Wikipedia"
       }
-    ],
-    "avoidances": [
-      "A0017",
-      "A0007",
-      "A0025-004",
-      "A0033",
-      "A0010",
-      "A0021",
-      "A0021-001",
-      "A0019",
-      "A0011",
-      "A0012",
-      "A0020-002",
-      "A0059",
-      "A0041"
     ]
   },
   "R0111-002": {
@@ -69,17 +34,8 @@
     "influence": "Impacts include: data leakage of sensitive information; business disruption from malicious manipulation causing system crashes; reputational damage once the backdoor is revealed; and legal liability from unauthorized data access or tampering.",
     "references": [
       {
-        "title": "Insider Threat - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Insider_threat"
+        "title": "Insider Threat - Wikipedia"
       }
-    ],
-    "avoidances": [
-      "A0043",
-      "A0051",
-      "A0010",
-      "A0037",
-      "A0019",
-      "A0020-002"
     ]
   }
 }

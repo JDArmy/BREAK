@@ -4,64 +4,11 @@
     "description": "In the gray/black market, malware developers are individuals or organizations specializing in writing, publishing, and distributing malicious software. Their goals typically include stealing personal information, conducting cyberattacks, extortion, and other illegal activities. They create malicious software such as viruses, trojans, and ransomware using vulnerability exploitation, social engineering, and other technical means.",
     "references": [
       {
-        "title": "Malware - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E6%81%B6%E6%84%8F%E8%BD%AF%E4%BB%B6"
+        "title": "Malware - Baidu Baike"
       },
       {
-        "title": "Qianxin 2024 AI Security Report",
-        "link": "https://www.qianxin.com/news/detail?news_id=12355"
+        "title": "Qianxin 2024 AI Security Report"
       }
-    ],
-    "buildAttackTools": [
-      "AT0011",
-      "AT0013",
-      "AT0025",
-      "AT0032-001",
-      "AT0053",
-      "AT0053-001",
-      "AT0053-002",
-      "AT0054",
-      "AT0056",
-      "AT0057",
-      "AT0059",
-      "AT0064"
-    ],
-    "useAttackTools": [
-      "AT0002",
-      "AT0014",
-      "AT0015",
-      "AT0016",
-      "AT0017",
-      "AT0021",
-      "AT0022",
-      "AT0028",
-      "AT0034-001",
-      "AT0035",
-      "AT0043",
-      "AT0044",
-      "AT0048"
-    ],
-    "directCauseRisks": [
-      "R0012",
-      "R0012-002",
-      "R0051",
-      "R0051-001",
-      "R0051-002",
-      "R0080",
-      "R0085",
-      "R0149"
-    ],
-    "indirectSupportRisks": [
-      "R0001",
-      "R0001-002",
-      "R0003",
-      "R0003-003",
-      "R0003-004",
-      "R0005-001",
-      "R0005-002",
-      "R0034",
-      "R0050",
-      "R0088"
     ]
   }
 }

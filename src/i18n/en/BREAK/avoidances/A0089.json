@@ -1,24 +1,19 @@
 {
   "A0089": {
     "title": "Agent Behavior Sandbox",
-    "category": "AC01",
     "definition": "A security control that runs AI agents in an isolated, controlled execution environment, monitoring and constraining their behavior, tool calls, and resource access.",
     "description": "Agent behavior sandbox is a security control technology that provides an isolated execution environment for AI agents, complementing A0087 AI Agent Tool Governance and MCP Security Control — A0087 manages permissions and access control, while the sandbox manages runtime behavior and the execution environment. Key functions include: ① Execution isolation: running agents in independent containers or virtual environments, limiting their access to the host system and network; ② Behavior monitoring: real-time monitoring of the agent's decision-making process, tool call sequences, and resource consumption; ③ Policy enforcement: restricting the range of operations an agent can execute based on security policies, such as prohibiting file deletion and outbound network connections; ④ Anomaly detection: detecting when agent behavior deviates from expected patterns, such as recursive calls or privilege escalation attempts; ⑤ Rollback mechanism: automatically suspending the agent and rolling back to a safe state when anomalous behavior is detected; ⑥ Audit logging: recording the complete execution trail of the agent for post-incident analysis and compliance auditing. This technology is one of the core controls in the OWASP Agentic Applications security standard.",
     "limitation": "The sandbox environment may not fully simulate the production environment, leading to differences in agent behavior; excessive restrictions may reduce the functionality and utility of the agent; sandbox performance overhead is significant in high-performance computing scenarios; complex toolchains and external dependencies may be difficult to run completely within the sandbox.",
     "references": [
       {
-        "title": "OWASP Top 10 for Agentic Applications",
-        "link": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/"
+        "title": "OWASP Top 10 for Agentic Applications"
       },
       {
-        "title": "NIST AI 100-2 E2025: Adversarial Machine Learning - A Taxonomy and Terminology of Attacks and Mitigations",
-        "link": "https://csrc.nist.gov/pubs/ai/100/2/e2025/final"
+        "title": "NIST AI 100-2 E2025: Adversarial Machine Learning - A Taxonomy and Terminology of Attacks and Mitigations"
       },
       {
-        "title": "Google DeepMind: Scalable Agent Alignment via Reward Modeling",
-        "link": "https://deepmind.google/"
+        "title": "Google DeepMind: Scalable Agent Alignment via Reward Modeling"
       }
-    ],
-    "updated": "2026-06-11"
+    ]
   }
 }

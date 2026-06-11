@@ -6,8 +6,7 @@
     "limitation": "Unlike crawler identification (A003), rate limiting does not strictly distinguish between human traffic and automated traffic. This means that a threshold set too low will mistakenly block some legitimate human requests, while a threshold set too high will let through low-frequency crawlers. Therefore, it cannot be considered an effective crawler identification and blocking measure.",
     "references": [
       {
-        "title": "API4:2019 Lack of Resources & Rate Limiting - OWASP API Security ...",
-        "link": "https://owasp.org/API-Security/editions/2019/en/0xa4-lack-of-resources-and-rate-limiting/"
+        "title": "API4:2019 Lack of Resources & Rate Limiting - OWASP API Security ..."
       }
     ]
   }

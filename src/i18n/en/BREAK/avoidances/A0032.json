@@ -6,8 +6,7 @@
     "limitation": "Any resource displayed on a terminal, no matter how complex the countermeasures, can potentially be reversed and cracked. Additionally, there is a very simple and brute-force method that can bypass most data parsing interference: simulate user requests, access the page containing the resource, take a screenshot, and use OCR to identify the resource content — this can easily bypass the methods mentioned above.",
     "references": [
       {
-        "title": "Introduction to Crawlers and Anti-Crawling Techniques (see Chapter 2 - Anti-Crawling Technologies)",
-        "link": "https://mp.weixin.qq.com/s/dJhCQmpejY-GTE_a1ZpPsg"
+        "title": "Introduction to Crawlers and Anti-Crawling Techniques (see Chapter 2 - Anti-Crawling Technologies)"
       }
     ]
   }

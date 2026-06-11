@@ -4,39 +4,8 @@
     "description": "Includes but is not limited to malicious promotional extensions, price comparison extensions, ad-blocking extensions, and membership benefit acquisition extensions.",
     "references": [
       {
-        "title": "Case Report on Unfair Competition by Browser Extensions",
-        "link": "https://www.163.com/dy/article/HB8OBS1L051187VR.html"
+        "title": "Case Report on Unfair Competition by Browser Extensions"
       }
-    ],
-    "avoidances": [
-      "A0001",
-      "A0010",
-      "A0010-004"
-    ],
-    "directCauseRisks": [
-      "R0003-001",
-      "R0003-002",
-      "R0007",
-      "R0007-001",
-      "R0007-002",
-      "R0007-003",
-      "R0007-004",
-      "R0008",
-      "R0008-001",
-      "R0013",
-      "R0032"
-    ],
-    "indirectSupportRisks": [
-      "R0001",
-      "R0001-002",
-      "R0003",
-      "R0003-003",
-      "R0003-004",
-      "R0005",
-      "R0005-001",
-      "R0009",
-      "R0016",
-      "R0018"
     ]
   },
   "AT0032-001": {
@@ -44,34 +13,8 @@
     "description": "Browser extensions that hijack legitimate traffic through unconventional means such as viruses, trojans, unauthorized bundled installs, forced homepage changes, browser or address bar hijacking, page hijacking, search engine manipulation, or user data tampering. They may also hijack traffic by modifying URL parameters or injecting pop-ups during normal user browsing. An example is monitoring IE access via Microsoft's COM connection point technology (the traditional BHO method) to generate or modify affiliate URLs.",
     "references": [
       {
-        "title": "轻松篡改定位?Fake Location改定位工具原理分析及处置建议|...",
-        "link": "https://m.163.com/dy/article/I270F16P0518STKV.html"
+        "title": "轻松篡改定位?Fake Location改定位工具原理分析及处置建议|..."
       }
-    ],
-    "avoidances": [
-      "A0001",
-      "A0010",
-      "A0013",
-      "A0014"
-    ],
-    "directCauseRisks": [
-      "R0007",
-      "R0008-001",
-      "R0013",
-      "R0067",
-      "R0083-001"
-    ],
-    "indirectSupportRisks": [
-      "R0005-002",
-      "R0007-001",
-      "R0007-002",
-      "R0007-003",
-      "R0007-004",
-      "R0012",
-      "R0012-001",
-      "R0012-002",
-      "R0034",
-      "R0037"
     ]
   }
 }

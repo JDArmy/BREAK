@@ -6,12 +6,10 @@
     "limitation": "The limitations of bug bounty programs include: (1) they require continuous financial investment and professional team operations; (2) large volumes of low-quality or invalid vulnerability reports may be received, increasing review burden; (3) researchers may leak or sell vulnerability information before reporting it; (4) they cannot cover all types of security risks, especially business-logic-level risks; (5) testing of internal systems and non-public assets carries security risks.",
     "references": [
       {
-        "title": "HackerOne Bug Bounty Platform",
-        "link": "https://www.hackerone.com/"
+        "title": "HackerOne Bug Bounty Platform"
       },
       {
-        "title": "Vulnerability Disclosure and Bug Bounty Program Guide - ISO 29147",
-        "link": "https://www.iso.org/standard/72311.html"
+        "title": "Vulnerability Disclosure and Bug Bounty Program Guide - ISO 29147"
       }
     ]
   }

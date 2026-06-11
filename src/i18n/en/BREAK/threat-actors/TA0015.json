@@ -4,56 +4,11 @@
     "description": "Telecom fraud gangs are criminal organizations or individuals specializing in telecommunications fraud. They use phone calls, SMS, and online communications to commit fraud through deception, false advertising, and social engineering to illegally obtain others' property. These gangs are typically well-organized with clear division of labor, using highly technical and sophisticated methods.",
     "references": [
       {
-        "title": "Telecom Fraud - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E7%94%B5%E4%BF%A1%E8%AF%88%E9%AA%97?fromModule=lemma_search-box"
+        "title": "Telecom Fraud - Baidu Baike"
       },
       {
-        "title": "Anti-Telecom and Online Fraud Law of the People's Republic of China",
-        "link": "https://shxca.miit.gov.cn/xxgk/zcwj/wjfb/art/2022/art_13487222ca2340358f61fc9dcf264cd3.html"
+        "title": "Anti-Telecom and Online Fraud Law of the People's Republic of China"
       }
-    ],
-    "buildAttackTools": [
-      "AT0053-001",
-      "AT0063",
-      "AT0071",
-      "AT0073"
-    ],
-    "useAttackTools": [
-      "AT0001",
-      "AT0001-002",
-      "AT0012",
-      "AT0013",
-      "AT0039",
-      "AT0039-001",
-      "AT0039-002",
-      "AT0040",
-      "AT0040-001",
-      "AT0051",
-      "AT0053-002",
-      "AT0070"
-    ],
-    "directCauseRisks": [
-      "R0038",
-      "R0044",
-      "R0060",
-      "R0083-002",
-      "R0093",
-      "R0094",
-      "R0095",
-      "R0115",
-      "R0146"
-    ],
-    "indirectSupportRisks": [
-      "R0002",
-      "R0003-003",
-      "R0003-004",
-      "R0005",
-      "R0005-001",
-      "R0030",
-      "R0030-004",
-      "R0030-005",
-      "R0030-006",
-      "R0030-007"
     ]
   },
   "TA0015-001": {
@@ -61,33 +16,8 @@
     "description": "The top boss of a fraud gang — either a single individual or a group of shareholders. They set up operations overseas, build server rooms and infrastructure, recruit and train gang members, purchase data and bank cards from harvesters and card farmers, and supply fraud scripts. After a successful operation, they distribute the proceeds to runners and money laundering rooms.",
     "references": [
       {
-        "title": "...两部门联手曝光金融“黑灰产”典型案例|违法|犯罪活动|犯罪行为...",
-        "link": "https://www.163.com/dy/article/KA38FG2O051481US.html"
+        "title": "...两部门联手曝光金融“黑灰产”典型案例|违法|犯罪活动|犯罪行为..."
       }
-    ],
-    "buildAttackTools": [
-      "AT0039-001",
-      "AT0040-001"
-    ],
-    "useAttackTools": [
-      "AT0043",
-      "AT0039",
-      "AT0039-001"
-    ],
-    "directCauseRisks": [
-      "R0095"
-    ],
-    "indirectSupportRisks": [
-      "R0002",
-      "R0003-003",
-      "R0003-004",
-      "R0005",
-      "R0005-001",
-      "R0011-002",
-      "R0030-004",
-      "R0030-005",
-      "R0030-006",
-      "R0060"
     ]
   }
 }

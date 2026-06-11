@@ -4,37 +4,8 @@
     "description": "Crowdsourcing refers to a model where gangs or organizations recruit large numbers of volunteer workers online to complete tasks in bulk for small rewards. Due to current technological limitations, no intelligent or automated technology can match normal human operation levels. Therefore, crowdsourcing can easily bypass various security protections and identification strategies. Since all resource requesters are real users, even if crowdsourcing behavior can be identified, it is difficult to implement countermeasures without causing significant impact and complaints.",
     "references": [
       {
-        "title": "Revealing the Current State of Micro-Crowdsourcing Industry: Gray/Black Markets Flourish, Opportunities and Challenges Coexist",
-        "link": "https://weibo.com/ttarticle/p/show?id=2309404682250288758796"
+        "title": "Revealing the Current State of Micro-Crowdsourcing Industry: Gray/Black Markets Flourish, Opportunities and Challenges Coexist"
       }
-    ],
-    "avoidances": [
-      "A0018",
-      "A0033",
-      "A0019",
-      "A0024",
-      "A0029-001",
-      "A0059",
-      "A0060"
-    ],
-    "directCauseRisks": [
-      "R0002",
-      "R0003",
-      "R0003-001",
-      "R0003-003",
-      "R0003-004"
-    ],
-    "indirectSupportRisks": [
-      "R0003",
-      "R0003-003",
-      "R0003-002",
-      "R0016-001",
-      "R0016",
-      "R0008",
-      "R0015",
-      "R0047",
-      "R0005-002",
-      "R0017"
     ]
   }
 }

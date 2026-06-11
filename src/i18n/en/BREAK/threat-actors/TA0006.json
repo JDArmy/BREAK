@@ -4,41 +4,8 @@
     "description": "In the gray/black market, crowdsourced workers are large numbers of individuals organized or hired to participate in illegal activities through online platforms. Their tasks often include fraudulent activities such as installing specific software for arbitrage, clicking ad links, or making purchases for fake orders. This form of illegal crowdsourcing enables fraud at scale, posing serious challenges to legitimate businesses and digital platforms.",
     "references": [
       {
-        "title": "Crowdsourced Workers - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E4%BC%97%E5%8C%85%E5%B7%A5%E4%BA%BA/16659995"
+        "title": "Crowdsourced Workers - Baidu Baike"
       }
-    ],
-    "buildAttackTools": [],
-    "useAttackTools": [
-      "AT0008",
-      "AT0031",
-      "AT0047"
-    ],
-    "directCauseRisks": [
-      "R0001",
-      "R0001-001",
-      "R0001-002",
-      "R0003-001",
-      "R0016"
-    ],
-    "indirectSupportRisks": [
-      "R0003",
-      "R0003-002",
-      "R0003-003",
-      "R0005",
-      "R0005-001",
-      "R0005-002",
-      "R0008",
-      "R0009",
-      "R0015",
-      "R0016-001",
-      "R0017",
-      "R0017-001",
-      "R0030-001",
-      "R0034",
-      "R0047",
-      "R0049",
-      "R0056"
     ]
   },
   "TA0006-001": {
@@ -46,31 +13,8 @@
     "description": "Individuals hired or organized to manually or automatically break CAPTCHAs, bypassing access restrictions to mass-register accounts or carry out other illegal activities such as malicious promotion, fraud, and spam registration.",
     "references": [
       {
-        "title": "Is Part-Time CAPTCHA Solving Real?",
-        "link": "https://www.jianshu.com/p/e6b7435718b3"
+        "title": "Is Part-Time CAPTCHA Solving Real?"
       }
-    ],
-    "buildAttackTools": [],
-    "useAttackTools": [
-      "AT0008",
-      "AT0031"
-    ],
-    "directCauseRisks": [
-      "R0001",
-      "R0003-003",
-      "R0047"
-    ],
-    "indirectSupportRisks": [
-      "R0003",
-      "R0003-002",
-      "R0005",
-      "R0005-001",
-      "R0008",
-      "R0009",
-      "R0015",
-      "R0016",
-      "R0016-001",
-      "R0030-001"
     ]
   },
   "TA0006-002": {
@@ -78,30 +22,8 @@
     "description": "Individuals hired or organized specifically to break voice CAPTCHAs. They analyze audio content manually or with technical tools to bypass voice-based security verification, enabling malicious promotion, fraud, or other illegal activities that require circumventing voice CAPTCHAs.",
     "references": [
       {
-        "title": "SMS PVA: Underground Service for Cybercriminals",
-        "link": "https://www.trendmicro.com/en_us/research/22/b/sms-pva-cybercriminals-part-2.html"
+        "title": "SMS PVA: Underground Service for Cybercriminals"
       }
-    ],
-    "buildAttackTools": [],
-    "useAttackTools": [
-      "AT0008",
-      "AT0031"
-    ],
-    "directCauseRisks": [
-      "R0003-003",
-      "R0047"
-    ],
-    "indirectSupportRisks": [
-      "R0001",
-      "R0003",
-      "R0003-002",
-      "R0005",
-      "R0005-001",
-      "R0008",
-      "R0009",
-      "R0016",
-      "R0016-001",
-      "R0030-001"
     ]
   },
   "TA0006-003": {
@@ -109,31 +31,8 @@
     "description": "Individuals who serve money laundering operations by conducting fictitious transactions and other means to obscure the origin of illicit funds, making them appear legitimate. Their activities may span financial systems, e-commerce platforms, virtual currencies, and other domains, making it significantly harder for law enforcement to detect illegal fund flows.",
     "references": [
       {
-        "title": "案例研究 | 经营“跑分”平台为黑灰产不法商户提供资金支付结算...",
-        "link": "https://news.qq.com/rain/a/20241224A07GZB00"
+        "title": "案例研究 | 经营“跑分”平台为黑灰产不法商户提供资金支付结算..."
       }
-    ],
-    "buildAttackTools": [],
-    "useAttackTools": [
-      "AT0026",
-      "AT0031",
-      "AT0041",
-      "AT0047"
-    ],
-    "directCauseRisks": [
-      "R0060"
-    ],
-    "indirectSupportRisks": [
-      "R0003",
-      "R0003-002",
-      "R0003-003",
-      "R0008",
-      "R0015",
-      "R0016",
-      "R0016-001",
-      "R0043",
-      "R0062",
-      "R0093"
     ]
   }
 }

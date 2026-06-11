@@ -4,42 +4,11 @@
     "description": "Game cheats refer to modifying or manipulating games through illegal means or third-party software to gain unfair game advantages or engage in other violations. Cheats may include cheat software that modifies game memory, files, or data to achieve functions not allowed by game design such as invincibility, auto-aim, and wallhacks; automation scripts that simulate player behavior to automatically perform operations like auto-grinding and auto-leveling; external modification tools; virtual currency and equipment trading; and cheat codes and vulnerability exploitation.",
     "references": [
       {
-        "title": "Game Cheats - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E5%A4%96%E6%8C%82?fromtitle=%E6%B8%B8%E6%88%8F%E5%A4%96%E6%8C%82&fromid=2748874&fromModule=lemma_search-box"
+        "title": "Game Cheats - Baidu Baike"
       },
       {
-        "title": "A Systematic Review of Technical Defenses Against Software-Based Cheating in Online Multiplayer Games",
-        "link": "https://arxiv.org/html/2512.21377v1"
+        "title": "A Systematic Review of Technical Defenses Against Software-Based Cheating in Online Multiplayer Games"
       }
-    ],
-    "avoidances": [
-      "A0010",
-      "A0010-004",
-      "A0015",
-      "A0059",
-      "A0020"
-    ],
-    "directCauseRisks": [
-      "R0001-002",
-      "R0012",
-      "R0012-002",
-      "R0100",
-      "R0102",
-      "R0103",
-      "R0104",
-      "R0108"
-    ],
-    "indirectSupportRisks": [
-      "R0001",
-      "R0007-002",
-      "R0003-003",
-      "R0003-004",
-      "R0005",
-      "R0007",
-      "R0007-001",
-      "R0007-003",
-      "R0007-004",
-      "R0016-001"
     ]
   }
 }

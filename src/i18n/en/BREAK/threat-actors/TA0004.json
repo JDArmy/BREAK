@@ -4,52 +4,8 @@
     "description": "In the gray/black market, bank card dealers are individuals or organizations involved in illegal bank card information trading. They specialize in stealing, purchasing, or exchanging credit card and debit card information for fraudulent activities such as illegal purchases and fund theft. They primarily operate on the dark web or black markets, buying and selling stolen bank card data including card numbers, expiration dates, CVV codes, and cardholder details.",
     "references": [
       {
-        "title": "断卡记 ——辽源警方斩断电诈幕后帮凶洗钱产业黑链始末_吉林省...",
-        "link": "http://www.jlpeace.gov.cn/jlscaw/zfyx/202106/11fe91dc26fb4e4ea19805c3fa9deadc.shtml"
+        "title": "断卡记 ——辽源警方斩断电诈幕后帮凶洗钱产业黑链始末_吉林省..."
       }
-    ],
-    "buildAttackTools": [
-      "AT0039",
-      "AT0039-001",
-      "AT0040",
-      "AT0040-001"
-    ],
-    "useAttackTools": [
-      "AT0010",
-      "AT0043",
-      "AT0027"
-    ],
-    "directCauseRisks": [
-      "R0044",
-      "R0060",
-      "R0062",
-      "R0093",
-      "R0094",
-      "R0096"
-    ],
-    "indirectSupportRisks": [
-      "R0002",
-      "R0003-003",
-      "R0003-004",
-      "R0005",
-      "R0005-001",
-      "R0005-002",
-      "R0008-005",
-      "R0010",
-      "R0011",
-      "R0011-002",
-      "R0028",
-      "R0030-001",
-      "R0030-004",
-      "R0030-005",
-      "R0030-006",
-      "R0030-007",
-      "R0040",
-      "R0043",
-      "R0049",
-      "R0072-001",
-      "R0092",
-      "R0098"
     ]
   }
 }

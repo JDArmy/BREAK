@@ -7,19 +7,8 @@
     "influence": "Will bypass existing MFA multi-factor authentication mechanisms, leading to account compromise.",
     "references": [
       {
-        "title": "Exposing Multi-Factor Authentication (MFA) Bypass Techniques",
-        "link": "http://www.fangyuba.com/news/dynamic/2778.htm"
+        "title": "Exposing Multi-Factor Authentication (MFA) Bypass Techniques"
       }
-    ],
-    "avoidances": [
-      "A0002",
-      "A0004",
-      "A0005",
-      "A0007-003",
-      "A0007-005",
-      "A0009",
-      "A0010",
-      "A0021"
     ]
   },
   "R0036-001": {
@@ -30,8 +19,7 @@
     "influence": "Will bypass existing MFA multi-factor authentication mechanisms, leading to account compromise.",
     "references": [
       {
-        "title": "2023年Q1数据泄露事件近1000起,涉及1204家企业、38个行业!|信息...",
-        "link": "https://m.163.com/dy/article/I2H92SPP0518STKV.html"
+        "title": "2023年Q1数据泄露事件近1000起,涉及1204家企业、38个行业!|信息..."
       }
     ]
   }

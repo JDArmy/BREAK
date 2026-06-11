@@ -4,41 +4,8 @@
     "description": "Game boosters are professional players or teams who play games on behalf of other players, providing boosting services. This service typically involves helping other players level up game characters, obtain virtual items, and complete specific tasks or challenges. Game boosters usually have extensive game experience and skills to quickly and efficiently complete tasks.",
     "references": [
       {
-        "title": "Boosting (Video Games) - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Boosting_(video_games)"
+        "title": "Boosting (Video Games) - Wikipedia"
       }
-    ],
-    "buildAttackTools": [
-      "AT0023"
-    ],
-    "useAttackTools": [
-      "AT0002",
-      "AT0007",
-      "AT0017",
-      "AT0018",
-      "AT0019",
-      "AT0034-001",
-      "AT0036",
-      "AT0044",
-      "AT0049"
-    ],
-    "directCauseRisks": [
-      "R0001",
-      "R0106",
-      "R0108",
-      "R0114"
-    ],
-    "indirectSupportRisks": [
-      "R0001-002",
-      "R0003-003",
-      "R0003-004",
-      "R0005",
-      "R0005-001",
-      "R0012",
-      "R0016-001",
-      "R0034",
-      "R0050",
-      "R0088"
     ]
   }
 }

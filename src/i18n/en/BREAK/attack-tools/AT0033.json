@@ -4,38 +4,11 @@
     "description": "Surveillance and eavesdropping devices are tools used for monitoring and intercepting communications, typically used illegally or without authorization. These devices are designed to obtain people's private information, eavesdrop on conversations, or collect sensitive data, potentially leading to privacy breaches, illegal surveillance, and other security threats.",
     "references": [
       {
-        "title": "Eavesdropping - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E7%AA%83%E5%90%AC/20600680?fr=ge_ala"
+        "title": "Eavesdropping - Baidu Baike"
       },
       {
-        "title": "Public Security Organs Crack Down on Illegal Eavesdropping and Surveillance Devices",
-        "link": "https://www.mps.gov.cn/n2255079/n8310277/n8568134/n8568146/c8627029/content.html"
+        "title": "Public Security Organs Crack Down on Illegal Eavesdropping and Surveillance Devices"
       }
-    ],
-    "avoidances": [
-      "A0017-001",
-      "A0041",
-      "A0051",
-      "A0062",
-      "A0044"
-    ],
-    "directCauseRisks": [
-      "R0059",
-      "R0112",
-      "R0112-002",
-      "R0112-005"
-    ],
-    "indirectSupportRisks": [
-      "R0067",
-      "R0082",
-      "R0112-003",
-      "R0073",
-      "R0083",
-      "R0083-001",
-      "R0111",
-      "R0112-004",
-      "R0026",
-      "R0036-001"
     ]
   }
 }

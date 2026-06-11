@@ -1,5 +1,20 @@
 # Change log
 
+## 2.6.0
+
+- 重构：i18n 架构从"全量复制 JSON"迁移至"单一数据源 + 运行时合并"
+  - 中文数据（src/BREAK/）作为唯一结构数据源，英文翻译文件仅保留可翻译文本字段
+  - 新增 mergeWithStructure 运行时合并函数，自动将中文结构数据与英文翻译合并
+  - 精简 AttackTools（75个文件）：移除 avoidances、directCauseRisks、indirectSupportRisks、references[].link、updated
+  - 精简 ThreatActors（44个文件）：移除 buildAttackTools、useAttackTools、directCauseRisks、indirectSupportRisks、references[].link、updated
+  - 精简 Risks（158个文件）：移除 references[].link
+  - 精简 Avoidances（93个文件）：移除 references[].link
+  - 精简 BusinessScenes（15个文件）：移除 risks 数组、description、updated 及嵌套结构字段
+  - 将 EN Basic Info 从硬编码 JS 对象迁移为独立 JSON 文件（src/i18n/en/BREAK/basic-info/main.json）
+  - 组件无需任何修改，dual-access 模式（import BREAK + $t()）完全兼容
+  - Editor 组件不受影响，继续读写 src/BREAK/ 中文源文件
+  - 更新 CLAUDE.md 国际化同步规则，明确英文文件仅需维护翻译字段
+
 ## 2.5.0
 
 - 补全：AT directCauseRisks 空值率 8.0% → 0%（7个AT补充直接风险关联）

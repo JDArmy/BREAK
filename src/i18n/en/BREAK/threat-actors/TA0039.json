@@ -2,45 +2,16 @@
   "TA0039": {
     "title": "Cryptocurrency Fraud Syndicate",
     "description": "Organized criminal groups specializing in cryptocurrency ecosystem fraud. Unlike TA0015 Telecom Fraud Groups which focus on traditional telecom fraud, cryptocurrency fraud syndicates use blockchain and cryptocurrency as their core作案 tools and financial channels. Key characteristics and operational models include: ① Pig butchering operations: cultivating trust through social media and dating apps, then guiding victims to invest in fake cryptocurrency investment platforms; ② Fake DeFi projects: creating disguised decentralized finance projects that attract investors with false high-yield promises before executing rug pulls; ③ NFT fraud: issuing fake or plagiarized NFT projects for scams; ④ Cryptocurrency impersonation: impersonating well-known crypto projects, exchanges, or KOLs for social engineering fraud; ⑤ Cross-border money laundering: using cryptocurrency mixers, privacy coins, and cross-chain bridges for fund cleaning and cross-border transfers; ⑥ Scam compound operations: establishing large-scale scam compounds in Southeast Asia and other regions, coercing or employing large numbers of people to conduct cryptocurrency fraud. These groups are often closely associated with transnational criminal networks, underground banks, and scam compounds.",
-    "buildAttackTools": [
-      "AT0070"
-    ],
-    "useAttackTools": [
-      "AT0060",
-      "AT0059",
-      "AT0001"
-    ],
-    "directCauseRisks": [
-      "R0044",
-      "R0121",
-      "R0150"
-    ],
-    "indirectSupportRisks": [
-      "R0032-001",
-      "R0032-002",
-      "R0032-003",
-      "R0035-001",
-      "R0043",
-      "R0043-001",
-      "R0045",
-      "R0060",
-      "R0062",
-      "R0116-001"
-    ],
     "references": [
       {
-        "title": "FBI IC3 Cryptocurrency Fraud Report",
-        "link": "https://www.ic3.gov/"
+        "title": "FBI IC3 Cryptocurrency Fraud Report"
       },
       {
-        "title": "Chainalysis 2026 Crypto Crime Report",
-        "link": "https://www.chainalysis.com/"
+        "title": "Chainalysis 2026 Crypto Crime Report"
       },
       {
-        "title": "US DOJ Cryptocurrency Fraud Enforcement Actions",
-        "link": "https://www.justice.gov/"
+        "title": "US DOJ Cryptocurrency Fraud Enforcement Actions"
       }
-    ],
-    "updated": "2026-06-11"
+    ]
   }
 }

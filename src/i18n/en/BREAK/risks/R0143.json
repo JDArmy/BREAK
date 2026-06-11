@@ -7,12 +7,10 @@
     "influence": "User accounts are taken over, personal data is leaked, cross-platform trust chains are broken, and third-party login ecosystem security is affected.",
     "references": [
       {
-        "title": "OAuth 2.0 Security Best Current Practice - IETF",
-        "link": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics"
+        "title": "OAuth 2.0 Security Best Current Practice - IETF"
       },
       {
-        "title": "OAuth Security Attack and Defense - PortSwigger",
-        "link": "https://portswigger.net/web-security/oauth"
+        "title": "OAuth Security Attack and Defense - PortSwigger"
       }
     ]
   }

@@ -1,24 +1,19 @@
 {
   "A0090": {
     "title": "OAuth Permission Minimization",
-    "category": "AC01",
     "definition": "A security control that applies fine-grained control over application permissions in the OAuth authorization flow, ensuring applications only receive the minimum set of permissions needed to perform their functions.",
     "description": "OAuth permission minimization is a security control for the OAuth authorization flow that addresses Consent Phishing and OAuth authorization abuse. Unlike A0007 Multi-Factor Authentication which focuses on identity verification, OAuth permission minimization focuses on granular permission control after authorization. Key functions include: ① Permission scope review: conducting security reviews of OAuth application permission scope requests and rejecting overly broad permission requests; ② Incremental authorization: applications initially receive only basic permissions and progressively request additional permissions as needed; ③ Permission time-to-live control: setting expiration times for authorizations and periodically requiring users to re-confirm; ④ Permission monitoring and alerting: monitoring actual permission usage by OAuth applications and alerting on anomalous behavior; ⑤ Application risk rating: conducting security risk ratings for OAuth applications, with high-risk applications requiring additional approval; ⑥ Permission revocation mechanism: automatically revoking authorization for applications that are unused for extended periods or exhibit anomalous behavior. This technology is critical for defending against AiTM attacks, OAuth authorization abuse, and excessive third-party application permissions.",
     "limitation": "Overly restricting OAuth permissions may affect normal application functionality and user experience; fine-grained permission control increases development and maintenance costs; users may not understand the meaning of permission requests and habitually consent; monitoring third-party application permission usage depends on platform support capabilities.",
     "references": [
       {
-        "title": "OAuth 2.0 Security Best Current Practice",
-        "link": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics"
+        "title": "OAuth 2.0 Security Best Current Practice"
       },
       {
-        "title": "Microsoft: Securing OAuth Apps in Microsoft 365",
-        "link": "https://learn.microsoft.com/en-us/microsoft-365/security/"
+        "title": "Microsoft: Securing OAuth Apps in Microsoft 365"
       },
       {
-        "title": "OWASP OAuth 2.0 Security Cheat Sheet",
-        "link": "https://cheatsheetseries.owasp.org/cheatsheets/OAuth2_Cheat_Sheet.html"
+        "title": "OWASP OAuth 2.0 Security Cheat Sheet"
       }
-    ],
-    "updated": "2026-06-11"
+    ]
   }
 }

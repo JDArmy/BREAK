@@ -7,19 +7,15 @@
     "influence": "AI-generated content risks may create compliance risks for the platform and increase the volume of customer complaints.",
     "references": [
       {
-        "title": "AIGC - Baidu Baike",
-        "link": "https://baike.baidu.com/item/AIGC/59988381?fr=ge_ala"
+        "title": "AIGC - Baidu Baike"
       },
       {
-        "title": "Interim Measures for the Management of Generative Artificial Intelligence Services - Gov.cn",
-        "link": "https://www.gov.cn/zhengce/zhengceku/202307/content_6891752.htm"
+        "title": "Interim Measures for the Management of Generative Artificial Intelligence Services - Gov.cn"
       },
       {
-        "title": "Measures for the Labeling of AI-Generated Synthetic Content - Gov.cn",
-        "link": "https://www.gov.cn/zhengce/zhengceku/202503/content_7014286.htm"
+        "title": "Measures for the Labeling of AI-Generated Synthetic Content - Gov.cn"
       }
-    ],
-    "updated": "2026-06-11"
+    ]
   },
   "R0071-001": {
     "title": "AIGC Privacy Leakage",
@@ -29,8 +25,7 @@
     "influence": "AIGC sensitive information leakage may create compliance risks for the platform.",
     "references": [
       {
-        "title": "非法代理维权激增42% 技术如何破局金融黑灰产治理?_腾讯新闻",
-        "link": "https://new.qq.com/rain/a/20251119A030QT00"
+        "title": "非法代理维权激增42% 技术如何破局金融黑灰产治理?_腾讯新闻"
       }
     ]
   },
@@ -42,15 +37,12 @@
     "influence": "AIGC compliance risks may create compliance risks for the platform and increase the volume of customer complaints.",
     "references": [
       {
-        "title": "Interim Measures for the Management of Generative Artificial Intelligence Services - Gov.cn",
-        "link": "https://www.gov.cn/zhengce/zhengceku/202307/content_6891752.htm"
+        "title": "Interim Measures for the Management of Generative Artificial Intelligence Services - Gov.cn"
       },
       {
-        "title": "Legal Compliance Risks and Prevention in the AIGC Wave",
-        "link": "https://www.hnjzlaw.net/news/3/1451.html"
+        "title": "Legal Compliance Risks and Prevention in the AIGC Wave"
       }
-    ],
-    "updated": "2026-06-11"
+    ]
   },
   "R0071-003": {
     "title": "AI-Generated Low-Quality Content",
@@ -60,15 +52,12 @@
     "influence": "Leads to degraded platform content quality and undermines the motivation of original and high-quality content creators.",
     "references": [
       {
-        "title": "AIGC - Baidu Baike",
-        "link": "https://baike.baidu.com/item/AIGC/59988381"
+        "title": "AIGC - Baidu Baike"
       },
       {
-        "title": "Measures for the Labeling of AI-Generated Synthetic Content - Gov.cn",
-        "link": "https://www.gov.cn/zhengce/zhengceku/202503/content_7014286.htm"
+        "title": "Measures for the Labeling of AI-Generated Synthetic Content - Gov.cn"
       }
-    ],
-    "updated": "2026-06-11"
+    ]
   },
   "R0071-004": {
     "title": "AI Hallucination Risk",
@@ -78,8 +67,7 @@
     "influence": "Users are misled into making wrong decisions; incorrect advice in professional domains may cause serious consequences; platform credibility declines.",
     "references": [
       {
-        "title": "Survey on Hallucination Problems in Large Language Models",
-        "link": "https://arxiv.org/abs/2311.05232"
+        "title": "Survey on Hallucination Problems in Large Language Models"
       }
     ]
   },
@@ -91,8 +79,7 @@
     "influence": "AI system decisions are manipulated, security detection is bypassed, and model trustworthiness is lost.",
     "references": [
       {
-        "title": "Survey on AI Model Security and Poisoning Attacks",
-        "link": "https://arxiv.org/abs/2302.10149"
+        "title": "Survey on AI Model Security and Poisoning Attacks"
       }
     ]
   }

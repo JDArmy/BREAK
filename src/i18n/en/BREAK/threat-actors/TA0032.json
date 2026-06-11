@@ -4,39 +4,8 @@
     "description": "Digital human operation gangs are gangs that use AI digital human technology for large-scale fake live streaming, fake content production, and social fraud. These gangs typically operate digital human accounts in bulk, using AI-generated virtual anchors for 24-hour uninterrupted live-stream e-commerce, fake interactions, and content migration. Main characteristics include: bulk registration and operation of live-streaming accounts, using AI digital humans to replace real anchors to reduce operating costs, creating fake popularity with automated bullet comments and fake viewer data, selling counterfeit goods or making false advertising, and impersonating celebrities or influencers for live streaming.",
     "references": [
       {
-        "title": "Analysis of AI Digital Human Live Streaming Chaos",
-        "link": "https://www.cac.gov.cn/"
+        "title": "Analysis of AI Digital Human Live Streaming Chaos"
       }
-    ],
-    "buildAttackTools": [
-      "AT0058"
-    ],
-    "useAttackTools": [
-      "AT0056",
-      "AT0058",
-      "AT0051",
-      "AT0003"
-    ],
-    "directCauseRisks": [
-      "R0006",
-      "R0016",
-      "R0017-001",
-      "R0056",
-      "R0071-003",
-      "R0119",
-      "R0130"
-    ],
-    "indirectSupportRisks": [
-      "R0004",
-      "R0020",
-      "R0021",
-      "R0022",
-      "R0024",
-      "R0071-004",
-      "R0097",
-      "R0110",
-      "R0115",
-      "R0116-002"
     ]
   }
 }

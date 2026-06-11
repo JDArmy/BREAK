@@ -4,27 +4,8 @@
     "description": "Professional negative reviewers are groups that use negative reviews or threats of negative reviews to extort money from merchants, or are hired by competitors to maliciously attack target merchants. Main behavioral patterns include: extortion-type negative reviews, competitor attack-type negative reviews, organized operations, multi-account operations, carefully crafted content, and exploitation of platform rules.",
     "references": [
       {
-        "title": "E-commerce Platform Malicious Review Governance",
-        "link": "https://www.samr.gov.cn/"
+        "title": "E-commerce Platform Malicious Review Governance"
       }
-    ],
-    "indirectSupportRisks": [
-      "R0008",
-      "R0015",
-      "R0016-001",
-      "R0017-001",
-      "R0028",
-      "R0030",
-      "R0030-001",
-      "R0090"
-    ],
-    "buildAttackTools": [
-      "AT0023"
-    ],
-    "useAttackTools": [
-      "AT0003",
-      "AT0005",
-      "AT0051"
     ]
   }
 }

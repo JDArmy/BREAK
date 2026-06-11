@@ -4,20 +4,11 @@
     "description": "Score-running platforms are online platforms that illegally provide payment settlement services for illegal activities (such as gambling, pornography, and fraud) through third-party payment platforms, partner banks, and other service provider interfaces. When gamblers top up funds on overseas gambling websites, this information is published on score-running platforms, and registered members grab orders in a manner similar to ride-hailing. After successfully grabbing an order, the gambling platform displays a corresponding payment QR code, and the gambler transfers funds directly to the platform member via the QR code.",
     "references": [
       {
-        "title": "工行发布《2022网络金融黑产研究报告》|黑客|洗钱|欺诈|互联网|中国...",
-        "link": "https://www.163.com/dy/article/HU9BHEUA051982TB.html"
+        "title": "工行发布《2022网络金融黑产研究报告》|黑客|洗钱|欺诈|互联网|中国..."
       },
       {
-        "title": "Harm Analysis and Regulatory Recommendations for Money Laundering via Payment Platforms",
-        "link": "https://www.163.com/dy/article/HLB99K1805509NOJ.html"
+        "title": "Harm Analysis and Regulatory Recommendations for Money Laundering via Payment Platforms"
       }
-    ],
-    "directCauseRisks": [
-      "R0002",
-      "R0005-001",
-      "R0093",
-      "R0097",
-      "R0110"
     ]
   }
 }

@@ -7,8 +7,7 @@
     "influence": "Exploits platform promotional benefits, disrupts normal platform operations, and degrades the ordering and shopping experience for legitimate users.",
     "references": [
       {
-        "title": "OWASP Automated Threat: OAT005 Scalping",
-        "link": "https://wenku.baidu.com/view/d5fa02b2a900b52acfc789eb172ded630b1c98fa.html?_wkts_=1698737083175"
+        "title": "OWASP Automated Threat: OAT005 Scalping"
       }
     ]
   },
@@ -20,8 +19,7 @@
     "influence": "Exploits platform promotional benefits and disrupts legitimate user ordering.",
     "references": [
       {
-        "title": "OWASP Automated Threat: OAT005 Scalping",
-        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-005_Scalping.html"
+        "title": "OWASP Automated Threat: OAT005 Scalping"
       }
     ]
   },
@@ -33,8 +31,7 @@
     "influence": "Transaction prices are too low, resulting in insufficient profit margins. Disrupts legitimate user ordering.",
     "references": [
       {
-        "title": "OWASP Automated Threat: OAT013 Sniping",
-        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-013_Sniping.html"
+        "title": "OWASP Automated Threat: OAT013 Sniping"
       }
     ]
   },
@@ -46,8 +43,7 @@
     "influence": "Disrupts legitimate user ordering.",
     "references": [
       {
-        "title": "Fake Order Fraud - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E5%88%B7%E5%8D%95"
+        "title": "Fake Order Fraud - Baidu Baike"
       }
     ]
   },
@@ -59,8 +55,7 @@
     "influence": "May lead to unfair resource distribution, system overload, and escalating malicious competition.",
     "references": [
       {
-        "title": "OWASP Automated Threat: OAT-021 Denial of Inventory",
-        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-021_Denial_of_Inventory.html"
+        "title": "OWASP Automated Threat: OAT-021 Denial of Inventory"
       }
     ]
   }

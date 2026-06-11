@@ -4,65 +4,8 @@
     "description": "Malicious users are individuals who participate in shopping or trading activities through fraud, deception, or other improper means. They may attempt to gain improper economic benefits through false complaints, fraudulent returns, and fake payment disputes, causing losses to sellers and trading platforms. They may abuse promotions, manipulate orders for extra benefits, and undermine fair trading through dishonest means.",
     "references": [
       {
-        "title": "OWASP Automated Threats to Web Applications",
-        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/"
+        "title": "OWASP Automated Threats to Web Applications"
       }
-    ],
-    "buildAttackTools": [],
-    "useAttackTools": [
-      "AT0031",
-      "AT0041",
-      "AT0044",
-      "AT0045",
-      "AT0047",
-      "AT0050",
-      "AT0040-001",
-      "AT0051"
-    ],
-    "directCauseRisks": [
-      "R0001",
-      "R0001-002",
-      "R0002",
-      "R0003",
-      "R0003-001",
-      "R0003-002",
-      "R0003-003",
-      "R0003-004",
-      "R0005",
-      "R0012",
-      "R0012-001",
-      "R0014",
-      "R0015",
-      "R0016",
-      "R0016-001",
-      "R0016-002",
-      "R0046",
-      "R0054",
-      "R0054-001",
-      "R0054-002",
-      "R0054-003",
-      "R0054-004",
-      "R0064"
-    ],
-    "indirectSupportRisks": [
-      "R0001-001",
-      "R0005-001",
-      "R0005-002",
-      "R0008",
-      "R0017",
-      "R0027",
-      "R0034",
-      "R0037",
-      "R0047",
-      "R0062",
-      "R0062-001",
-      "R0068",
-      "R0068-001",
-      "R0068-002",
-      "R0070",
-      "R0088",
-      "R0094",
-      "R0096"
     ]
   }
 }

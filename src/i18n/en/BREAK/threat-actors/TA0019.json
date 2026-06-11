@@ -4,62 +4,11 @@
     "description": "Astroturfing networks are hired or organized groups that post large volumes of fake comments, likes, and reposts on the internet to influence public opinion, create false impressions, or push specific agendas. Members operate multiple accounts manually or through automation to rapidly generate large amounts of content, obscuring real users' voices and creating a false social media atmosphere.",
     "references": [
       {
-        "title": "Astroturfing Networks - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E6%B0%B4%E5%86%9B?fromModule=lemma_search-box"
+        "title": "Astroturfing Networks - Baidu Baike"
       },
       {
-        "title": "CAC Crackdown on Traffic Fraud and Astroturfing",
-        "link": "https://3g.china.com/act/news/945/20211223/40632112.html"
+        "title": "CAC Crackdown on Traffic Fraud and Astroturfing"
       }
-    ],
-    "buildAttackTools": [
-      "AT0050"
-    ],
-    "useAttackTools": [
-      "AT0001",
-      "AT0002",
-      "AT0003",
-      "AT0006",
-      "AT0008",
-      "AT0009",
-      "AT0016",
-      "AT0023",
-      "AT0029",
-      "AT0031",
-      "AT0034-001",
-      "AT0034-002",
-      "AT0046",
-      "AT0051",
-      "AT0053",
-      "AT0058"
-    ],
-    "directCauseRisks": [
-      "R0001",
-      "R0018",
-      "R0024",
-      "R0030",
-      "R0030-001",
-      "R0030-002",
-      "R0030-003",
-      "R0030-004",
-      "R0030-005",
-      "R0030-006",
-      "R0071",
-      "R0071-003",
-      "R0119",
-      "R0130"
-    ],
-    "indirectSupportRisks": [
-      "R0001-002",
-      "R0003",
-      "R0003-003",
-      "R0003-004",
-      "R0005",
-      "R0005-001",
-      "R0009",
-      "R0016-001",
-      "R0047",
-      "R0050"
     ]
   }
 }

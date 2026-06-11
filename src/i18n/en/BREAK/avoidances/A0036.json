@@ -6,8 +6,7 @@
     "limitation": "When choosing an encoding algorithm, ensure it cannot be guessed — for example, using timestamps as IDs, using guessable hash algorithms, or using brute-force-enumerable algorithms. Once the algorithm is guessable, this countermeasure loses its meaning. Additionally, encryption and hash algorithms must be protected against insider leaks and theft, because once leaked, the protection is permanently invalidated. Therefore, either ensure the confidentiality of the algorithm, or use random character generation as a better approach.",
     "references": [
       {
-        "title": "Data Encryption - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%8A%A0%E5%AF%86"
+        "title": "Data Encryption - Baidu Baike"
       }
     ]
   }

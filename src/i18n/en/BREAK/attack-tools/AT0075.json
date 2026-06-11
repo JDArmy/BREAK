@@ -2,34 +2,16 @@
   "AT0075": {
     "title": "ClickFix Deception Tools",
     "description": "ClickFix deception tools are a novel phishing tool that disguises itself as CAPTCHA repair or system update prompts to trick users into executing malicious PowerShell or CMD commands. Unlike AT0063 Phishing Toolkits which steal information through forged web pages, ClickFix exploits users' trust in system repair prompts, disguising malicious code execution as legitimate system operations. Main attack techniques include: 1) CAPTCHA repair disguise: displaying forged CAPTCHA display error prompts, claiming that repair commands need to be run for normal display; 2) Clipboard hijacking: copying malicious commands to the clipboard, guiding users to paste and execute them in a terminal or run dialog; 3) CAPTCHA bypass prompt: disguising as a CAPTCHA verification step, requiring users to execute specific commands to prove they are human; 4) Error page disguise: displaying forged browser error pages, prompting users to run repair scripts; 5) Multi-step induction: using multi-step interactive guidance to gradually lower user vigilance, ultimately tricking them into executing malicious code. ClickFix attacks were reported to have grown significantly by Proofpoint and other security vendors in 2025, and were listed as an emerging threat in the ENISA 2025 Threat Landscape Report.",
-    "avoidances": [
-      "A0051",
-      "A0078",
-      "A0016"
-    ],
-    "directCauseRisks": [
-      "R0028",
-      "R0084",
-      "R0154"
-    ],
-    "indirectSupportRisks": [
-      "R0084-001",
-      "R0131"
-    ],
     "references": [
       {
-        "title": "Security Brief: ClickFix Social Engineering Technique Floods Threat Landscape",
-        "link": "https://www.proofpoint.com/us/blog/threat-insight/security-brief-clickfix-social-engineering-technique-floods-threat-landscape"
+        "title": "Security Brief: ClickFix Social Engineering Technique Floods Threat Landscape"
       },
       {
-        "title": "ClickFix: How to Infect Your PC in Three Easy Steps",
-        "link": "https://krebsonsecurity.com/2025/03/clickfix-how-to-infect-your-pc-in-three-easy-steps/"
+        "title": "ClickFix: How to Infect Your PC in Three Easy Steps"
       },
       {
-        "title": "Beyond The Click: Unveiling Fake CAPTCHA Campaigns",
-        "link": "https://www.splunk.com/en_us/blog/security/unveiling-fake-captcha-clickfix-attacks.html"
+        "title": "Beyond The Click: Unveiling Fake CAPTCHA Campaigns"
       }
-    ],
-    "updated": "2026-06-11"
+    ]
   }
 }

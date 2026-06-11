@@ -4,51 +4,8 @@
     "description": "An auto-posting bot is an automated tool that can bulk-post messages, comments, or replies on forums, social media platforms, and blogs for purposes such as spam flooding, traffic diversion, promotion, or public opinion manipulation. These bots typically feature multi-account management, content template variable substitution, scheduled posting, auto-bumping, CAPTCHA recognition, and the ability to simulate real user behavior to bypass basic platform defenses. In gray/black market scenarios, auto-posting bots are widely used for spam campaigns, astroturfing, SEO backlink building, and fake content dissemination.",
     "references": [
       {
-        "title": "How Are Auto-Scripting Tools Like Key Wizard Punished",
-        "link": "https://dy.163.com/article/J56P34K40541BQVC.html"
+        "title": "How Are Auto-Scripting Tools Like Key Wizard Punished"
       }
-    ],
-    "avoidances": [
-      "A0001",
-      "A0001-004",
-      "A0004",
-      "A0005",
-      "A0006",
-      "A0010",
-      "A0015",
-      "A0018",
-      "A0020",
-      "A0021",
-      "A0022",
-      "A0023",
-      "A0024",
-      "A0029",
-      "A0038",
-      "A0059"
-    ],
-    "directCauseRisks": [
-      "R0001-002",
-      "R0015",
-      "R0021",
-      "R0024",
-      "R0056",
-      "R0110"
-    ],
-    "indirectSupportRisks": [
-      "R0001",
-      "R0001-001",
-      "R0002",
-      "R0003-001",
-      "R0003-002",
-      "R0003-003",
-      "R0003-004",
-      "R0005",
-      "R0005-001",
-      "R0069",
-      "R0069-001",
-      "R0069-002",
-      "R0070",
-      "R0129"
     ]
   }
 }

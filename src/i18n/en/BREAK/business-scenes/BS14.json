@@ -1,7 +1,6 @@
 {
   "BS14": {
     "title": "Artificial Intelligence",
-    "description": "The artificial intelligence industry covers business scenarios such as large language model services, AI-generated content platforms, intelligent customer service, AI-assisted decision-making, and computer vision services, facing unique business security risks.",
     "riskDimensions": {
       "RD02": {
         "title": "Operations Dimension"
@@ -35,16 +34,6 @@
       "RS10": {
         "title": "Endpoint Adversarial Risk"
       }
-    },
-    "risks": [
-      "R0071-001",
-      "R0071-002",
-      "R0071-005",
-      "R0128",
-      "R0133",
-      "R0153",
-      "R0156",
-      "R0157"
-    ]
+    }
   }
 }

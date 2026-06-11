@@ -7,24 +7,8 @@
     "influence": "These risks may include data breaches, system failures, network intrusions, and other security vulnerabilities, causing potential financial losses and reputational damage to the organization.",
     "references": [
       {
-        "title": "Insider Threat - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E5%86%85%E9%83%A8%E5%A8%81%E8%83%81"
+        "title": "Insider Threat - Baidu Baike"
       }
-    ],
-    "avoidances": [
-      "A0007",
-      "A0017",
-      "A0019",
-      "A0020-002",
-      "A0041",
-      "A0050",
-      "A0050-002",
-      "A0051",
-      "A0052",
-      "A0054",
-      "A0057",
-      "A0059",
-      "A0085"
     ]
   }
 }

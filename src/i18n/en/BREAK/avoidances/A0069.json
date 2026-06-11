@@ -6,12 +6,10 @@
     "limitation": "The limitations of privacy enhancing technologies include: (1) performance overhead — techniques such as homomorphic encryption have significant computational overhead that may affect system performance and real-time capability; (2) implementation complexity — deploying and maintaining PET systems requires specialized cryptography and security knowledge; (3) balance between data usability and privacy protection — excessive privacy protection may reduce the analytical value of data; (4) insufficient standardization — standards and interoperability for various PET technologies are still evolving; (5) novel attacks — new threats such as model poisoning attacks against federated learning and membership inference attacks against differential privacy continue to emerge.",
     "references": [
       {
-        "title": "PETs Testbed - NIST",
-        "link": "https://www.nist.gov/itl/applied-cybersecurity/privacy-engineering/pets-testbed"
+        "title": "PETs Testbed - NIST"
       },
       {
-        "title": "Privacy-Enhancing Technologies - ENISA",
-        "link": "https://www.enisa.europa.eu/publications/pets-maturity-tool"
+        "title": "Privacy-Enhancing Technologies - ENISA"
       }
     ]
   }

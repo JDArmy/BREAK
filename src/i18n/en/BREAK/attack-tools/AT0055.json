@@ -4,33 +4,8 @@
     "description": "Covert recording devices are equipment or tools used for illegal or unauthorized recording of photos, videos, or audio. These tools are typically designed to be very discreet, intended to record without attracting the attention of the monitored subject. Such tools may include cameras, audio recorders, hidden camera devices, or other eavesdropping equipment, and may be misused to violate personal privacy, illegally obtain confidential information, or serve other illegal purposes.",
     "references": [
       {
-        "title": "Covert Recording Devices - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E5%81%B7%E6%8B%8D%E7%A5%9E%E5%99%A8/15594040?fr=ge_ala"
+        "title": "Covert Recording Devices - Baidu Baike"
       }
-    ],
-    "avoidances": [
-      "A0017-001",
-      "A0041",
-      "A0051",
-      "A0052",
-      "A0062"
-    ],
-    "directCauseRisks": [
-      "R0059",
-      "R0112-003",
-      "R0112-005"
-    ],
-    "indirectSupportRisks": [
-      "R0112",
-      "R0112-002",
-      "R0082",
-      "R0112-004",
-      "R0065",
-      "R0067",
-      "R0073",
-      "R0112-006",
-      "R0036-001",
-      "R0072"
     ]
   }
 }

@@ -4,19 +4,11 @@
     "description": "A cloud phone applies cloud computing technology to network terminal services, implementing virtual phone functionality through cloud servers. Based on end-cloud integrated virtualization technology, cloud phones elastically adapt to user needs through cloud networking, security, and AI capabilities, offloading hardware resources and loading massive cloud applications on demand. Users can remotely control cloud phones in real time via video streaming, enabling Android native apps and mobile games to run in the cloud. In the black-grey market, cloud phones are commonly used for batch account registration, traffic inflation, coupon abuse, mass-controlled order grabbing, and other cheating activities. Black-grey market actors obtain cloud phone access through membership or rental, leveraging remote connections to attack, simultaneously controlling large numbers of cloud phone instances for scaled automated cheating.",
     "references": [
       {
-        "title": "Cloud Phone - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E4%BA%91%E6%89%8B%E6%9C%BA/8154883?fr=aladdin"
+        "title": "Cloud Phone - Baidu Baike"
       },
       {
-        "title": "Cloud Phones: The Invisible Threat",
-        "link": "https://www.group-ib.com/blog/cloud-phones-invisible-threat/"
+        "title": "Cloud Phones: The Invisible Threat"
       }
-    ],
-    "directCauseRisks": [
-      "R0001",
-      "R0001-002",
-      "R0050",
-      "R0080"
     ]
   }
 }

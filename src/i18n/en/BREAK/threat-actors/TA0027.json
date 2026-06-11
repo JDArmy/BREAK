@@ -4,31 +4,8 @@
     "description": "Generally refers to players in games who engage in score-giving and score-taking behavior, manipulating match results within the same game session. This malicious behavior generally appears in MOBA game matches and sometimes in FPS games.",
     "references": [
       {
-        "title": "Match Fixing - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Match_fixing"
+        "title": "Match Fixing - Wikipedia"
       }
-    ],
-    "buildAttackTools": [],
-    "useAttackTools": [
-      "AT0002",
-      "AT0034-001",
-      "AT0048",
-      "AT0049"
-    ],
-    "directCauseRisks": [
-      "R0107"
-    ],
-    "indirectSupportRisks": [
-      "R0001",
-      "R0001-002",
-      "R0002",
-      "R0003-003",
-      "R0005-001",
-      "R0012",
-      "R0016-001",
-      "R0034",
-      "R0050",
-      "R0088"
     ]
   }
 }

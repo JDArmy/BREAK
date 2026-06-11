@@ -4,52 +4,8 @@
     "description": "Criminals who illegally obtain and bulk-resell citizens' personal information.",
     "references": [
       {
-        "title": "...两部门联手曝光金融“黑灰产”典型案例|违法|犯罪活动|犯罪行为...",
-        "link": "https://www.163.com/dy/article/KA38FG2O051481US.html"
+        "title": "...两部门联手曝光金融“黑灰产”典型案例|违法|犯罪活动|犯罪行为..."
       }
-    ],
-    "buildAttackTools": [
-      "AT0012"
-    ],
-    "useAttackTools": [
-      "AT0005",
-      "AT0010",
-      "AT0023",
-      "AT0042"
-    ],
-    "directCauseRisks": [
-      "R0001",
-      "R0001-001",
-      "R0002",
-      "R0003-001",
-      "R0003-002",
-      "R0027",
-      "R0032",
-      "R0032-001",
-      "R0032-002",
-      "R0032-003",
-      "R0032-004",
-      "R0083-001"
-    ],
-    "indirectSupportRisks": [
-      "R0001-002",
-      "R0003",
-      "R0003-003",
-      "R0003-004",
-      "R0005",
-      "R0005-001",
-      "R0009",
-      "R0011",
-      "R0028",
-      "R0040",
-      "R0043",
-      "R0044",
-      "R0060",
-      "R0062",
-      "R0088",
-      "R0090",
-      "R0098",
-      "R0108"
     ]
   }
 }

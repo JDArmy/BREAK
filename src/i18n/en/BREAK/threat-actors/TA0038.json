@@ -4,32 +4,11 @@
     "description": "Underground money houses are underground organizations that illegally engage in cross-border fund transfers, currency exchange, and other financial businesses without approval from national financial regulators. Unlike TA0014 money laundering rooms which primarily handle domestic criminal fund laundering, underground money houses focus on cross-border illegal fund flows. Main operating models include: mirror transfer, cross-border e-commerce channels, cryptocurrency channels, underground insurance policies, fake investments, and multi-layer nesting.",
     "references": [
       {
-        "title": "Anti-Money Laundering Law - People's Bank of China",
-        "link": "http://www.pbc.gov.cn/"
+        "title": "Anti-Money Laundering Law - People's Bank of China"
       },
       {
-        "title": "Underground Money House Crime Crackdown - Ministry of Public Security",
-        "link": "https://www.mps.gov.cn/"
+        "title": "Underground Money House Crime Crackdown - Ministry of Public Security"
       }
-    ],
-    "buildAttackTools": [
-      "AT0026"
-    ],
-    "useAttackTools": [
-      "AT0034-001",
-      "AT0060"
-    ],
-    "directCauseRisks": [
-      "R0060",
-      "R0121"
-    ],
-    "indirectSupportRisks": [
-      "R0001",
-      "R0002",
-      "R0029-002",
-      "R0029-004",
-      "R0062",
-      "R0099"
     ]
   }
 }

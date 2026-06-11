@@ -6,8 +6,7 @@
     "limitation": "The protective effectiveness of identity authentication is heavily dependent on the cost of obtaining a business identity — both the registration cost and the login authentication cost — and is also closely related to the severity of account penalties (A020). Some websites allow arbitrary bulk registration of user identities, in which case the value of identity authentication is very limited.",
     "references": [
       {
-        "title": "Authentication - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Authentication"
+        "title": "Authentication - Wikipedia"
       }
     ]
   },
@@ -18,8 +17,7 @@
     "limitation": "Users may lose access to certain knowledge, making it impossible to pass verification.",
     "references": [
       {
-        "title": "零知识证明(ZKP)科普: 它如何保护隐私并验证数据 - 简书",
-        "link": "https://www.jianshu.com/p/0f77d5916810"
+        "title": "零知识证明(ZKP)科普: 它如何保护隐私并验证数据 - 简书"
       }
     ]
   }

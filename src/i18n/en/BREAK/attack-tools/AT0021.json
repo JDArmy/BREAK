@@ -4,36 +4,8 @@
     "description": "Custom browsers (also known as fingerprint browsers or anti-detect browsers) are tools that modify browser cores or create independent browser environments to customize browser fingerprint parameters (such as User-Agent, Canvas, WebGL, font lists, etc.), achieving the goal of forging new browser identities. Many professional companies abroad sell such paid browser software, including Antidetect, Multilogin, GoLogin, and AdsPower. They also provide features such as automatic proxy, mass control, cookie robots, and device standard libraries, with visual interfaces for easy operation. Black-grey market actors use custom browsers to simultaneously operate a large number of uncorrelated browser identities on the same computer for batch registration, multi-account operation, traffic inflation, coupon abuse, and other cheating activities.",
     "references": [
       {
-        "title": "Excerpts from 'Risk Control Essentials'",
-        "link": "https://maimai.cn/article/detail?fid=1634043605&efid=NRS3hReqt2jxgj0xruuOGg"
+        "title": "Excerpts from 'Risk Control Essentials'"
       }
-    ],
-    "avoidances": [
-      "A0001",
-      "A0010",
-      "A0021",
-      "A0021-001",
-      "A0029-003",
-      "A0059"
-    ],
-    "directCauseRisks": [
-      "R0001",
-      "R0002",
-      "R0003",
-      "R0003-001",
-      "R0003-004"
-    ],
-    "indirectSupportRisks": [
-      "R0001-002",
-      "R0003-003",
-      "R0005-001",
-      "R0005-002",
-      "R0008",
-      "R0016",
-      "R0027",
-      "R0030-001",
-      "R0034",
-      "R0050"
     ]
   }
 }

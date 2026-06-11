@@ -4,94 +4,17 @@
     "description": "Gold farming studios are service organizations or individuals that provide virtual currencies, game items, and other virtual wealth. Their main business is providing in-game virtual currency, items, and characters to players through professional players or automated scripts in exchange for real money.",
     "references": [
       {
-        "title": "Gold Farming - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Gold_farming"
+        "title": "Gold Farming - Wikipedia"
       }
-    ],
-    "buildAttackTools": [
-      "AT0019",
-      "AT0049"
-    ],
-    "useAttackTools": [
-      "AT0001",
-      "AT0002",
-      "AT0003",
-      "AT0006",
-      "AT0007",
-      "AT0008",
-      "AT0009",
-      "AT0016",
-      "AT0017",
-      "AT0018",
-      "AT0019",
-      "AT0020",
-      "AT0023",
-      "AT0034-001",
-      "AT0036",
-      "AT0037",
-      "AT0044",
-      "AT0047",
-      "AT0048",
-      "AT0049"
-    ],
-    "directCauseRisks": [
-      "R0001",
-      "R0010",
-      "R0011-001",
-      "R0108",
-      "R0114"
-    ],
-    "indirectSupportRisks": [
-      "R0001-002",
-      "R0003-003",
-      "R0003-004",
-      "R0005",
-      "R0005-001",
-      "R0009",
-      "R0016-001",
-      "R0030-001",
-      "R0034",
-      "R0050"
-    ],
-    "updated": "2024-02-05"
+    ]
   },
   "TA0025-001": {
     "title": "In-Game Currency Dealer",
     "description": "Individuals who sell in-game points or gold coins, typically acquired in bulk through various in-game methods, and resell them to other players at prices below the official rate. This behavior can negatively impact the game economy, disrupt balance, and degrade other players' experience. Game operators typically counter this with account bans and enhanced security detection.",
     "references": [
       {
-        "title": "Real-Money Trading - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Real-money_trading"
+        "title": "Real-Money Trading - Wikipedia"
       }
-    ],
-    "buildAttackTools": [
-      "AT0023",
-      "AT0049"
-    ],
-    "useAttackTools": [
-      "AT0017",
-      "AT0019",
-      "AT0044",
-      "AT0047"
-    ],
-    "directCauseRisks": [
-      "R0001",
-      "R0010",
-      "R0108",
-      "R0114"
-    ],
-    "indirectSupportRisks": [
-      "R0003",
-      "R0003-003",
-      "R0003-004",
-      "R0005",
-      "R0005-001",
-      "R0009",
-      "R0034",
-      "R0050",
-      "R0051",
-      "R0051-001"
-    ],
-    "updated": "2024-02-05"
+    ]
   }
 }

@@ -7,8 +7,7 @@
     "influence": "Impacts include: financial losses from data breaches, cyberattacks, and other security incidents; reputational damage reducing customer and partner trust; legal liability from data breaches; and business disruption affecting service delivery and customer satisfaction.",
     "references": [
       {
-        "title": "Physical Security - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Physical_security"
+        "title": "Physical Security - Wikipedia"
       }
     ]
   },
@@ -20,12 +19,10 @@
     "influence": "BYOD introduces potential harms including security vulnerabilities, data leakage, compliance issues, network security threats, device management challenges, loss of control, and post-departure access issues.",
     "references": [
       {
-        "title": "NIST SP 1800-22: Mobile Device Security: Bring Your Own Device (BYOD)",
-        "link": "https://csrc.nist.gov/pubs/sp/1800/22/final"
+        "title": "NIST SP 1800-22: Mobile Device Security: Bring Your Own Device (BYOD)"
       },
       {
-        "title": "Bring Your Own Device - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Bring_your_own_device"
+        "title": "Bring Your Own Device - Wikipedia"
       }
     ]
   },
@@ -37,8 +34,7 @@
     "influence": "Unauthorized physical access may cause serious information security harms including theft, tampering, or destruction of confidential information; data leakage causing serious business damage; reputational loss, legal liability, and financial losses; and introduction of malware or malicious devices into the corporate network.",
     "references": [
       {
-        "title": "Physical Security - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Physical_security"
+        "title": "Physical Security - Wikipedia"
       }
     ]
   },
@@ -50,8 +46,7 @@
     "influence": "Harms include: security threats from viruses, malware, or other threats introduced by unauthorized devices; and data leakage risk from unauthorized devices accessing, storing, or transmitting sensitive information.",
     "references": [
       {
-        "title": "Physical Security - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Physical_security"
+        "title": "Physical Security - Wikipedia"
       }
     ]
   },
@@ -63,8 +58,7 @@
     "influence": "May lead to: financial losses from expensive repair costs and business interruption; business disruption affecting production and service delivery; reputational damage especially among the public and customers; and employee safety risks causing casualties or health issues.",
     "references": [
       {
-        "title": "Sabotage - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Sabotage"
+        "title": "Sabotage - Wikipedia"
       }
     ]
   },
@@ -76,8 +70,7 @@
     "influence": "Harms include: information leakage of business secrets, strategies, and other important information; privacy violations of employees or management; and reputational damage once surveillance or eavesdropping is exposed.",
     "references": [
       {
-        "title": "Eavesdropping - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Eavesdropping"
+        "title": "Eavesdropping - Wikipedia"
       }
     ]
   },
@@ -89,10 +82,8 @@
     "influence": "May lead to sensitive information leakage, data tampering through man-in-the-middle attacks, unauthorized network access, and business system disruption.",
     "references": [
       {
-        "title": "Wireless Security - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Wireless_security"
+        "title": "Wireless Security - Wikipedia"
       }
-    ],
-    "updated": "2026-06-11"
+    ]
   }
 }

@@ -6,8 +6,7 @@
     "limitation": "Because abnormal environment detection is carried out on a user-controlled terminal, the ultimate effectiveness depends on the adversarial contest. In theory, since the terminal is controllable, it is always possible to bypass various abnormal environment detection strategies — it is ultimately a matter of time cost and capability.",
     "references": [
       {
-        "title": "Device Fingerprint - Wikipedia",
-        "link": "https://en.wikipedia.org/wiki/Device_fingerprint"
+        "title": "Device Fingerprint - Wikipedia"
       }
     ]
   },
@@ -18,8 +17,7 @@
     "limitation": "There are two countermeasure points for mobile emulator detection: one is to pre-forge the information collected by the APP; the other is to forge the information after the APP has collected and uploaded it.",
     "references": [
       {
-        "title": "Android Emulator Identification and Detection Technology",
-        "link": "https://blog.csdn.net/liuno0/article/details/124279075"
+        "title": "Android Emulator Identification and Detection Technology"
       }
     ]
   },
@@ -30,8 +28,7 @@
     "limitation": "As cloud phones and cloud gaming continue to develop and become more widespread, APP vendors will not be able to adopt a blanket 'cloud equals blacklisted' policy, otherwise they will face a large number of user complaints. This leaves room for the black-gray industry to exploit cloud phones in the future.",
     "references": [
       {
-        "title": "NIST Guidelines for Managing the Security of Mobile Devices",
-        "link": "https://csrc.nist.gov/pubs/sp/800/124/r2/final"
+        "title": "NIST Guidelines for Managing the Security of Mobile Devices"
       }
     ]
   },
@@ -42,8 +39,7 @@
     "limitation": "There are two strategies for anti-detection on rooted devices: one is to target the app and interfere with its root detection behavior; the other is to target the system and hide the system's own root-related characteristics. By reversing every root detection policy and rule in the app, anti-detection strategies can be pre-built. For example, the open-source RootCloak can hook API calls to counter root detection.",
     "references": [
       {
-        "title": "Summary of Android Root Detection Methods",
-        "link": "https://www.lmlphp.com/user/58076/article/item/637693/"
+        "title": "Summary of Android Root Detection Methods"
       }
     ]
   },
@@ -54,8 +50,7 @@
     "limitation": "Similar to the limitations of mobile ROOT/jailbreak detection (A010-003), by analyzing and reversing the detection process, blocking or providing hooked false values can bypass cheat detection. However, since cheats are typically used in games, and game data packets are much less readable than HTTP-based APP traffic, hiding cheat detection logic and data reporting within normal game operation and communication will increase the difficulty of anti-cheat countermeasures.",
     "references": [
       {
-        "title": "DMA硬件外挂原理与检测技术深度分析|内存|电脑|游戏|dma_网易订阅",
-        "link": "https://www.163.com/dy/article/KOVL1LB80556IVC7.html"
+        "title": "DMA硬件外挂原理与检测技术深度分析|内存|电脑|游戏|dma_网易订阅"
       }
     ]
   },
@@ -66,8 +61,7 @@
     "limitation": "By analyzing and reversing the detection process, blocking or providing hooked false values can bypass multi-instance detection.",
     "references": [
       {
-        "title": "Several Implementation Methods and Bypass References for Game Multi-Instance Detection",
-        "link": "https://blog.csdn.net/weixin_40582034/article/details/125960599"
+        "title": "Several Implementation Methods and Bypass References for Game Multi-Instance Detection"
       }
     ]
   },
@@ -78,8 +72,7 @@
     "limitation": "By analyzing and reversing the detection process, blocking or providing hooked false values can bypass debugger detection.",
     "references": [
       {
-        "title": "The Art of Unpacking -- 2: Debugger Detection Techniques",
-        "link": "https://blog.csdn.net/iiprogram/article/details/2248506"
+        "title": "The Art of Unpacking -- 2: Debugger Detection Techniques"
       }
     ]
   },
@@ -90,8 +83,7 @@
     "limitation": "Virtual machine detection methods mainly work by checking certain environment properties and files, but these methods are not absolutely reliable because black-gray industry actors can modify the virtual machine's environment properties and files to evade detection.",
     "references": [
       {
-        "title": "Virtual Machine Runtime Environment Detection",
-        "link": "https://www.cnblogs.com/cherishui/p/14366072.html"
+        "title": "Virtual Machine Runtime Environment Detection"
       }
     ]
   },
@@ -102,8 +94,7 @@
     "limitation": "Headless browser detection methods mainly work by checking certain environment properties and files, but these methods are not absolutely reliable because black-gray industry actors can modify the headless browser's environment properties and files to evade detection.",
     "references": [
       {
-        "title": "国家网络安全宣传周|域名被盗用,不可小觑",
-        "link": "https://mp.weixin.qq.com/s?__biz=MzIwOTIxNTY0MQ==&mid=2650363457&idx=1&sn=5da31d6062602002a9efe40b898df485&chksm=8f7abfb7b80d36a12c2a7de21d4b404bf60087dcff9b5641499a19ae74acc33ec769952b1443&scene=27"
+        "title": "国家网络安全宣传周|域名被盗用,不可小觑"
       }
     ]
   },
@@ -114,8 +105,7 @@
     "limitation": "HOOK detection methods mainly work by checking certain environment properties and files, but these methods are not absolutely reliable because black-gray industry actors can modify the HOOKed environment's properties and files to evade detection.",
     "references": [
       {
-        "title": "Android Hook, Detection, and Countermeasures",
-        "link": "https://tech.meituan.com/2018/02/02/android-anti-hooking.html"
+        "title": "Android Hook, Detection, and Countermeasures"
       }
     ]
   }

@@ -4,72 +4,11 @@
     "description": "In the gray/black market, scraping gangs are individuals or organizations specializing in writing and deploying web crawlers to scrape not only web data but also app data. Their goal is to obtain large amounts of data through automated programs simulating human behavior, which may include sensitive information, user personal data, or other confidential content for illegal purposes.",
     "references": [
       {
-        "title": "Web Crawler - Baidu Baike",
-        "link": "https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB"
+        "title": "Web Crawler - Baidu Baike"
       },
       {
-        "title": "2024 H1 Internet Black-Grey Industry Research Report",
-        "link": "https://www.163.com/dy/article/J7CL1BGM0518STKV.html"
+        "title": "2024 H1 Internet Black-Grey Industry Research Report"
       }
-    ],
-    "buildAttackTools": [
-      "AT0005",
-      "AT0023"
-    ],
-    "useAttackTools": [
-      "AT0002",
-      "AT0006",
-      "AT0007",
-      "AT0008",
-      "AT0014",
-      "AT0015",
-      "AT0016",
-      "AT0018",
-      "AT0021",
-      "AT0022",
-      "AT0025",
-      "AT0029",
-      "AT0030",
-      "AT0034-001",
-      "AT0034-002",
-      "AT0035",
-      "AT0044",
-      "AT0048",
-      "AT0061"
-    ],
-    "directCauseRisks": [
-      "R0001-001",
-      "R0001-002",
-      "R0027",
-      "R0030",
-      "R0030-001",
-      "R0030-002",
-      "R0030-003",
-      "R0030-004",
-      "R0030-005",
-      "R0030-006",
-      "R0031",
-      "R0061"
-    ],
-    "indirectSupportRisks": [
-      "R0001",
-      "R0003",
-      "R0003-003",
-      "R0003-004",
-      "R0005",
-      "R0005-001",
-      "R0009",
-      "R0012",
-      "R0016",
-      "R0016-001",
-      "R0034",
-      "R0047",
-      "R0050",
-      "R0050-001",
-      "R0051",
-      "R0051-001",
-      "R0051-002",
-      "R0088"
     ]
   }
 }
