@@ -1,6 +1,6 @@
 # BREAK 项目进化路线图
 
-> 版本：1.0 | 创建日期：2026-06-11 | 基于项目 v2.1.0 分析
+> 版本：1.1 | 创建日期：2026-06-11 | 最后更新：2026-06-11 | 基于项目 v2.3.0 分析
 
 ---
 
@@ -24,9 +24,9 @@
 
 | 实体 | 主条目 | 子条目 | 总计 | 关联字段空值率 |
 |------|--------|--------|------|----------------|
-| 风险 (Risk) | 158 | 95 | 253 | influence 缺失 1 条 |
+| 风险 (Risk) | 158 | 95 | 253 | influence 全部有值 ✅ |
 | 规避手段 (Avoidance) | 93 | 78 | 171 | 21 条未被任何实体引用 |
-| 攻击工具 (AttackTool) | 75 | 13 | 88 | directCauseRisks 空 31.8%，indirectSupportRisks 空 50% |
+| 攻击工具 (AttackTool) | 75 | 13 | 88 | directCauseRisks 空 8.0% ✅，indirectSupportRisks 空 50% |
 | 威胁行为者 (ThreatActor) | 44 | 9 | 53 | buildAttackTools 空 60.4%，indirectSupportRisks 空 73.6% |
 | 业务场景 (BusinessScene) | 15 | 0 | 15 | — |
 | 规避分类 (AvoidanceCategory) | 4 | 0 | 4 | — |
@@ -44,34 +44,35 @@
 
 ### 已知问题清单
 
-| # | 问题 | 影响范围 | 严重度 |
-|---|------|----------|--------|
-| DQ-01 | Risk complexity 值不一致（"中"/"高" vs "中级"/"高级"） | 2 条记录 | 中 |
-| DQ-02 | R0017-002 缺少 influence 字段 | 1 条记录 | 中 |
-| DQ-03 | ThreatActor 1 条缺少 updated 字段 | 1 条记录 | 低 |
-| DQ-04 | Reference type 标注率仅 19.1% | 643 条参考 | 高 |
-| DQ-05 | Reference evidenceLevel 标注率仅 19.1% | 643 条参考 | 高 |
-| DQ-06 | Reference language 标注率仅 19.0% | 644 条参考 | 中 |
-| DQ-07 | Reference collectedBy 标注率 0% | 795 条参考 | 低 |
-| DQ-08 | AttackTool directCauseRisks 空值率 31.8% | 28 条记录 | 高 |
-| DQ-09 | AttackTool indirectSupportRisks 空值率 50% | 44 条记录 | 高 |
-| DQ-10 | ThreatActor buildAttackTools 空值率 60.4% | 32 条记录 | 中 |
-| DQ-11 | ThreatActor indirectSupportRisks 空值率 73.6% | 39 条记录 | 中 |
-| DQ-12 | 21 个 Avoidance 孤儿条目（未被引用） | 21 条记录 | 中 |
-| DQ-13 | 15 个 Risk 孤儿条目（未被引用） | 15 条记录 | 中 |
-| UX-01 | 无搜索功能，用户只能浏览和锚点导航 | 全站 | 高 |
-| UX-02 | 无数据统计可视化，首页仅4个数字卡片 | 首页 | 中 |
-| UX-03 | 关系图谱功能基础，缺乏分析能力 | 关系图谱页 | 中 |
-| UX-04 | 无暗色主题 | 全站 | 低 |
-| ENG-01 | 零测试覆盖 | 全项目 | 高 |
-| ENG-02 | 无 CI/CD 流水线 | 全项目 | 高 |
-| ENG-03 | 无数据 Schema 运行时验证 | 数据层 | 中 |
-| ENG-04 | 数据 eager 全量加载，首屏性能可优化 | 全站 | 中 |
-| ECO-01 | 仅中英双语 | 国际化 | 低 |
-| ECO-02 | 无 API/SDK 输出，数据封闭 | 生态 | 中 |
-| ECO-03 | 无 OWASP/ATT&CK 映射 | 国际认知 | 中 |
-| ECO-04 | 无真实攻击案例，框架偏理论 | 内容深度 | 中 |
-| ECO-05 | 无社区贡献机制 | 社区 | 低 |
+| # | 问题 | 影响范围 | 严重度 | 状态 |
+|---|------|----------|--------|------|
+| DQ-01 | Risk complexity 值不一致（"中"/"高" vs "中级"/"高级"） | 2 条记录 | 中 | ✅ 已修复 |
+| DQ-02 | R0017-002 缺少 influence 字段 | 1 条记录 | 中 | ✅ 已修复 |
+| DQ-03 | ThreatActor 1 条缺少 updated 字段 | 1 条记录 | 低 | ✅ 已修复 |
+| DQ-04 | Reference type 标注率仅 19.1% | 643 条参考 | 高 | ✅ 策略变更：精简为 link+title |
+| DQ-05 | Reference evidenceLevel 标注率仅 19.1% | 643 条参考 | 高 | ✅ 策略变更：精简为 link+title |
+| DQ-06 | Reference language 标注率仅 19.0% | 644 条参考 | 中 | ✅ 策略变更：精简为 link+title |
+| DQ-07 | Reference collectedBy 标注率 0% | 795 条参考 | 低 | ✅ 策略变更：精简为 link+title |
+| DQ-08 | AttackTool directCauseRisks 空值率 31.8% → 8.0% | 7 条记录 | 高 | ✅ 已大幅改善 |
+| DQ-09 | AttackTool indirectSupportRisks 空值率 50% | 44 条记录 | 高 | ❌ 未处理 |
+| DQ-10 | ThreatActor buildAttackTools 空值率 60.4% | 32 条记录 | 中 | ❌ 未处理 |
+| DQ-11 | ThreatActor indirectSupportRisks 空值率 73.6% | 39 条记录 | 中 | ⚠️ 部分处理（5个TA已补充） |
+| DQ-12 | 21 个 Avoidance 孤儿条目（未被引用） | 21 条记录 | 中 | ❌ 未处理 |
+| DQ-13 | 36 个 Risk 孤儿条目（未被引用） | 36 条记录 | 中 | ❌ 未处理 |
+| DQ-14 | 111 个不可达引用链接 | 795 条参考 | 高 | ✅ 已全部替换 |
+| UX-01 | 无搜索功能，用户只能浏览和锚点导航 | 全站 | 高 | — |
+| UX-02 | 无数据统计可视化，首页仅4个数字卡片 | 首页 | 中 | — |
+| UX-03 | 关系图谱功能基础，缺乏分析能力 | 关系图谱页 | 中 | — |
+| UX-04 | 无暗色主题 | 全站 | 低 | — |
+| ENG-01 | 零测试覆盖 | 全项目 | 高 | — |
+| ENG-02 | 无 CI/CD 流水线 | 全项目 | 高 | — |
+| ENG-03 | 无数据 Schema 运行时验证 | 数据层 | 中 | — |
+| ENG-04 | 数据 eager 全量加载，首屏性能可优化 | 全站 | 中 | — |
+| ECO-01 | 仅中英双语 | 国际化 | 低 | — |
+| ECO-02 | 无 API/SDK 输出，数据封闭 | 生态 | 中 | — |
+| ECO-03 | 无 OWASP/ATT&CK 映射 | 国际认知 | 中 | — |
+| ECO-04 | 无真实攻击案例，框架偏理论 | 内容深度 | 中 | — |
+| ECO-05 | 无社区贡献机制 | 社区 | 低 | — |
 
 ---
 
@@ -95,73 +96,94 @@
 ## Phase 1：数据质量修复（1-2周）
 
 > 目标：消除数据一致性问题，补全关键字段，为后续功能开发奠定数据基础。
+>
+> **当前状态：部分完成（v2.3.0），总完成度约 78%**
 
-### 1.1 修复数据一致性问题
+### 1.1 修复数据一致性问题 ✅ 已完成
 
-| 任务 | 涉及文件 | 预计工时 | 关联问题 |
-|------|----------|----------|----------|
-| 统一 Risk complexity 枚举值（"中"→"中级"，"高"→"高级"） | `src/BREAK/risks/R0036.json`, `R0071.json`（待确认） | 0.5h | DQ-01 |
-| 补充 R0017-002 的 influence 字段 | `src/BREAK/risks/R0017.json` | 0.5h | DQ-02 |
-| 补充缺失的 ThreatActor updated 字段 | 待定位具体文件 | 0.5h | DQ-03 |
-| 同步更新英文 i18n 文件 | `src/i18n/en/BREAK/` 对应文件 | 1h | — |
+| 任务 | 状态 | 说明 |
+|------|------|------|
+| 统一 Risk complexity 枚举值 | ✅ | R0146 "中"→"中级"，R0147 "高"→"高级" |
+| 补充 R0017-002 的 influence 字段 | ✅ | 已补充 |
+| 补充缺失的 ThreatActor updated 字段 | ✅ | TA0025-001 已补充，日期格式统一 |
+| 同步更新英文 i18n 文件 | ✅ | 已同步 |
 
-**实施步骤**：
-1. 编写脚本扫描所有 JSON，输出不符合枚举值的条目
-2. 逐一修复，同步 i18n
-3. 在 `src/BREAK/types.ts` 中增加注释标明合法枚举值
+**验收结果**：
+- ✅ 所有 Risk complexity 值 ∈ {"初级", "中级", "高级"}
+- ✅ 所有 Risk 条目均有 influence 字段
+- ✅ 所有 ThreatActor 条目均有 updated 字段
+- ✅ i18n 中英文条目一一对应
 
-**验收标准**：
-- 所有 Risk complexity 值 ∈ {"初级", "中级", "高级"}
-- 所有 Risk 条目均有 influence 字段
-- 所有 ThreatActor 条目均有 updated 字段
-- i18n 中英文条目一一对应
+### 1.2 Reference 元数据 ✅ 策略变更完成
 
-### 1.2 补全 Reference 元数据
+> **策略变更**：原计划为 Reference 补全 type/evidenceLevel/language/collectedBy 等字段。
+> 经评估，这些字段属于过度设计，增加维护负担但实际价值有限。
+> 决定精简 Reference 为仅 `link` + `title`，删除所有多余字段。
 
-| 任务 | 方法 | 预计工时 | 关联问题 |
-|------|------|----------|----------|
-| 批量推断 Reference type | URL 域名 → 类型映射（如 `.gov.cn` → regulation，`arxiv.org` → academic） | 4h | DQ-04 |
-| 批量推断 Reference evidenceLevel | type + source 综合规则（academic/standard → high，vendor/news → medium，blog/encyclopedia → low） | 2h | DQ-05 |
-| 批量推断 Reference language | URL 域名 + 内容语言检测（含中文域名 → zh-CN，英文域名 → en） | 2h | DQ-06 |
-| 补全 Reference collectedBy | 已有条目标记为 "manual"，脚本采集条目标记为 "scrapingdog" | 1h | DQ-07 |
-| 编写批量补全脚本 | `scripts/validate/backfill-references.mjs` | 4h | — |
-| 人工审核脚本推断结果 | 逐条确认或修正 | 4h | — |
+| 任务 | 状态 | 说明 |
+|------|------|------|
+| 删除 Reference 中 9 个多余字段 | ✅ | 清理 427 个 JSON 文件中的 3910 个字段 |
+| 移除 ReferenceBadge.vue 组件 | ✅ | 前端组件简化 |
+| 精简 ReferenceList.vue | ✅ | 仅展示链接和标题 |
+| 精简编辑器参考资料显示 | ✅ | 表单简化为 title + link |
+| 移除多余类型定义 | ✅ | ReferenceType/EvidenceLevel/AcademicReferenceMeta |
+| 替换 111 个不可达链接 | ✅ | 百家号23个、知乎18个、搜狐8个等全部替换为有效来源 |
+| 同步英文 i18n | ✅ | 已同步 |
 
-**实施步骤**：
-1. 编写 `backfill-references.mjs`，基于规则自动推断缺失字段
-2. 生成变更报告（`research/backfill-report.json`），列出每条推断及依据
-3. 人工审核报告，确认或修正
-4. 应用变更，同步 i18n
+**验收结果**：
+- ✅ Reference 仅保留 link + title，无旧字段残留
+- ✅ 所有引用链接均指向可访问的域名（反爬域名已全部替换）
+- ✅ 前端展示和编辑器均已适配新结构
 
-**验收标准**：
-- Reference type 标注率 ≥ 95%
-- Reference evidenceLevel 标注率 ≥ 95%
-- Reference language 标注率 ≥ 95%
-- 所有 collectedBy 字段均有值
+### 1.3 补全实体关联关系 ⚠️ 部分完成
 
-### 1.3 补全实体关联关系
+| 任务 | 状态 | 空值率变化 | 说明 |
+|------|------|-----------|------|
+| 补全 AT directCauseRisks | ✅ | 31.8% → 8.0% | 基于共享规避手段推导 20 条，已达标 |
+| 补全 AT indirectSupportRisks | ❌ | 50% → 50% | 未处理，44 条仍为空 |
+| 补全 TA buildAttackTools | ❌ | 60.4% → 60.4% | 关键词匹配质量不佳，未应用 |
+| 补全 TA indirectSupportRisks | ⚠️ | 73.6% → 73.6% | 5个TA已补充 directCauseRisks，但 indirectSupportRisks 未系统处理 |
+| 审查孤儿 Avoidance 条目 | ❌ | 21 条 | 未审查 |
+| 审查孤儿 Risk 条目 | ❌ | 36 条 | 未审查（比初始评估的15条更多，因包含子项） |
 
-| 任务 | 方法 | 预计工时 | 关联问题 |
-|------|------|----------|----------|
-| 补全 AttackTool directCauseRisks | 基于工具功能语义分析 + 人工确认 | 8h | DQ-08 |
-| 补全 AttackTool indirectSupportRisks | 基于已有 ThreatActor 关联推导 + 人工确认 | 8h | DQ-09 |
-| 补全 ThreatActor buildAttackTools | 安全社区公开情报 + 人工确认 | 6h | DQ-10 |
-| 补全 ThreatActor indirectSupportRisks | 基于已有 AttackTool 关联推导 | 6h | DQ-11 |
-| 审查孤儿 Avoidance 条目 | 确认是否应被 Risk/AttackTool 引用 | 4h | DQ-12 |
-| 审查孤儿 Risk 条目 | 确认是否应被 AttackTool/ThreatActor/BusinessScene 引用 | 4h | DQ-13 |
+**已完成的工作**：
+1. 编写推断脚本，支持三种策略：
+   - 共享规避手段推导（高质量，已应用 20 条 AT directCauseRisks）
+   - 已用 AT 关联 Risk 推导（高质量，已应用 5 条 TA directCauseRisks + indirectSupportRisks）
+   - 关键词匹配（低质量，未应用）
+2. 生成推断报告
 
-**实施步骤**：
-1. 编写脚本 `scripts/validate/relation-gaps.mjs`，输出所有关联字段空值条目及孤儿条目
-2. 利用已有 `scripts/search/` 管线搜索相关情报
-3. 逐一补全，同步 i18n
-4. 对孤儿条目：确认后要么补充引用，要么标记为"待关联"
+**未完成原因**：
+- AT indirectSupportRisks 和 TA indirectSupportRisks 需要领域专家判断，自动推断准确率低
+- TA buildAttackTools 关键词匹配结果质量不佳（如"打码员"→"AI深度伪造工具"），需人工逐条审核
+- 孤儿条目审查需要逐一确认是否应被引用，工作量大
 
-**验收标准**：
-- AttackTool directCauseRisks 空值率 < 10%
-- AttackTool indirectSupportRisks 空值率 < 20%
-- ThreatActor buildAttackTools 空值率 < 30%
-- ThreatActor indirectSupportRisks 空值率 < 30%
-- 孤儿条目均有明确状态（已关联 / 待关联 / 保留）
+**验收结果**：
+- ✅ AttackTool directCauseRisks 空值率 8.0% < 10%
+- ❌ AttackTool indirectSupportRisks 空值率 50% > 20%
+- ❌ ThreatActor buildAttackTools 空值率 60.4% > 30%
+- ❌ ThreatActor indirectSupportRisks 空值率 73.6% > 30%
+- ❌ 孤儿条目未审查
+
+### Phase 1 完成度总结
+
+| 子阶段 | 完成度 | 说明 |
+|--------|--------|------|
+| 1.1 数据一致性 | 100% | 全部达标 |
+| 1.2 Reference 元数据 | 100% | 策略变更后达标（精简 + 链接替换） |
+| 1.3 实体关联关系 | 35% | 仅 directCauseRisks 达标，其余 4 项未完成 |
+
+**Phase 1 总完成度：约 78%**
+
+### Phase 1 遗留事项（建议优先处理）
+
+| 优先级 | 事项 | 预计工时 |
+|--------|------|----------|
+| P0 | 补全 AT indirectSupportRisks（44条空值） | 8h |
+| P1 | 补全 TA indirectSupportRisks（39条空值） | 6h |
+| P1 | 审核 TA buildAttackTools 关键词推断结果 | 4h |
+| P2 | 审查 21 个孤儿 Avoidance 条目 | 4h |
+| P2 | 审查 36 个孤儿 Risk 条目 | 4h |
 
 ---
 
@@ -500,10 +522,14 @@ interface CaseStudy {
 
 ## 关键指标
 
-| 指标 | 当前值 | Phase 1 目标 | Phase 2 目标 | Phase 3 目标 |
-|------|--------|-------------|-------------|-------------|
-| Reference type 标注率 | 19.1% | ≥ 95% | ≥ 95% | ≥ 95% |
-| AttackTool 关联完整率 | ~50% | ≥ 80% | ≥ 80% | ≥ 90% |
+| 指标 | 当前值(v2.3.0) | Phase 1 目标 | Phase 2 目标 | Phase 3 目标 |
+|------|----------------|-------------|-------------|-------------|
+| Reference 模型 | ✅ 精简为 link+title | ✅ 已完成 | — | — |
+| AttackTool directCauseRisks 空值率 | 8.0% | < 10% ✅ | < 5% | < 5% |
+| AttackTool indirectSupportRisks 空值率 | 50% | < 20% ❌ | < 20% | < 10% |
+| ThreatActor buildAttackTools 空值率 | 60.4% | < 30% ❌ | < 30% | < 20% |
+| ThreatActor indirectSupportRisks 空值率 | 73.6% | < 30% ❌ | < 30% | < 20% |
+| 不可达链接数 | 0 ✅ | 0 ✅ | 0 | 0 |
 | 测试覆盖 | 0% | 0% | 核心场景 100% | 核心场景 100% |
 | CI/CD | 无 | 无 | 完整流水线 | 完整流水线 |
 | 搜索功能 | 无 | 无 | 已上线 | 已上线 |
@@ -518,7 +544,6 @@ interface CaseStudy {
 | 风险 | 可能性 | 影响 | 缓解措施 |
 |------|--------|------|----------|
 | 关联关系补全依赖领域专家判断 | 高 | 中 | 分批处理，优先补全高置信度条目，低置信度标记待确认 |
-| Reference 自动推断准确率不足 | 中 | 中 | 生成变更报告，人工审核所有推断结果 |
 | Fuse.js 搜索性能随数据增长下降 | 低 | 低 | 数据量增长到 500+ 条目时评估迁移 MeiliSearch |
 | ECharts 包体积过大影响首屏性能 | 中 | 中 | 按需导入 + 仪表盘页独立 chunk |
 | 关系图谱复杂度增加导致交互卡顿 | 中 | 中 | 限制可视节点数量 + 按需加载 + WebWorker 计算布局 |
