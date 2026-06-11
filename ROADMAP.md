@@ -1,6 +1,6 @@
 # BREAK 项目进化路线图
 
-> 版本：1.1 | 创建日期：2026-06-11 | 最后更新：2026-06-11 | 基于项目 v2.3.0 分析
+> 版本：1.2 | 创建日期：2026-06-11 | 最后更新：2026-06-11 | Phase 1 已完成 ✅
 
 ---
 
@@ -25,9 +25,9 @@
 | 实体 | 主条目 | 子条目 | 总计 | 关联字段空值率 |
 |------|--------|--------|------|----------------|
 | 风险 (Risk) | 158 | 95 | 253 | influence 全部有值 ✅ |
-| 规避手段 (Avoidance) | 93 | 78 | 171 | 21 条未被任何实体引用 |
-| 攻击工具 (AttackTool) | 75 | 13 | 88 | directCauseRisks 空 8.0% ✅，indirectSupportRisks 空 50% |
-| 威胁行为者 (ThreatActor) | 44 | 9 | 53 | buildAttackTools 空 60.4%，indirectSupportRisks 空 73.6% |
+| 规避手段 (Avoidance) | 93 | 78 | 171 | 孤儿条目 0 ✅ |
+| 攻击工具 (AttackTool) | 75 | 13 | 88 | directCauseRisks 空 8.0% ✅，indirectSupportRisks 空 6.8% ✅ |
+| 威胁行为者 (ThreatActor) | 44 | 9 | 53 | buildAttackTools 空 26.4% ✅，indirectSupportRisks 空 0% ✅ |
 | 业务场景 (BusinessScene) | 15 | 0 | 15 | — |
 | 规避分类 (AvoidanceCategory) | 4 | 0 | 4 | — |
 
@@ -53,12 +53,12 @@
 | DQ-05 | Reference evidenceLevel 标注率仅 19.1% | 643 条参考 | 高 | ✅ 策略变更：精简为 link+title |
 | DQ-06 | Reference language 标注率仅 19.0% | 644 条参考 | 中 | ✅ 策略变更：精简为 link+title |
 | DQ-07 | Reference collectedBy 标注率 0% | 795 条参考 | 低 | ✅ 策略变更：精简为 link+title |
-| DQ-08 | AttackTool directCauseRisks 空值率 31.8% → 8.0% | 7 条记录 | 高 | ✅ 已大幅改善 |
-| DQ-09 | AttackTool indirectSupportRisks 空值率 50% | 44 条记录 | 高 | ❌ 未处理 |
-| DQ-10 | ThreatActor buildAttackTools 空值率 60.4% | 32 条记录 | 中 | ❌ 未处理 |
-| DQ-11 | ThreatActor indirectSupportRisks 空值率 73.6% | 39 条记录 | 中 | ⚠️ 部分处理（5个TA已补充） |
-| DQ-12 | 21 个 Avoidance 孤儿条目（未被引用） | 21 条记录 | 中 | ❌ 未处理 |
-| DQ-13 | 36 个 Risk 孤儿条目（未被引用） | 36 条记录 | 中 | ❌ 未处理 |
+| DQ-08 | AttackTool directCauseRisks 空值率 31.8% → 8.0% | 7 条记录 | 高 | ✅ 已达标 |
+| DQ-09 | AttackTool indirectSupportRisks 空值率 50% → 6.8% | 6 条记录 | 高 | ✅ 已达标 |
+| DQ-10 | ThreatActor buildAttackTools 空值率 60.4% → 26.4% | 14 条记录 | 中 | ✅ 已达标 |
+| DQ-11 | ThreatActor indirectSupportRisks 空值率 73.6% → 0% | 0 条记录 | 中 | ✅ 已达标 |
+| DQ-12 | 21 个 Avoidance 孤儿条目 → 0 | 0 条记录 | 中 | ✅ 已全部关联 |
+| DQ-13 | 36 个 Risk 孤儿条目 → 0 | 0 条记录 | 中 | ✅ 已全部关联 |
 | DQ-14 | 111 个不可达引用链接 | 795 条参考 | 高 | ✅ 已全部替换 |
 | UX-01 | 无搜索功能，用户只能浏览和锚点导航 | 全站 | 高 | — |
 | UX-02 | 无数据统计可视化，首页仅4个数字卡片 | 首页 | 中 | — |
@@ -97,7 +97,7 @@
 
 > 目标：消除数据一致性问题，补全关键字段，为后续功能开发奠定数据基础。
 >
-> **当前状态：部分完成（v2.3.0），总完成度约 78%**
+> **当前状态：已完成（v2.4.0），总完成度 100%**
 
 ### 1.1 修复数据一致性问题 ✅ 已完成
 
@@ -135,35 +135,24 @@
 - ✅ 所有引用链接均指向可访问的域名（反爬域名已全部替换）
 - ✅ 前端展示和编辑器均已适配新结构
 
-### 1.3 补全实体关联关系 ⚠️ 部分完成
+### 1.3 补全实体关联关系 ✅ 已完成
 
 | 任务 | 状态 | 空值率变化 | 说明 |
 |------|------|-----------|------|
-| 补全 AT directCauseRisks | ✅ | 31.8% → 8.0% | 基于共享规避手段推导 20 条，已达标 |
-| 补全 AT indirectSupportRisks | ❌ | 50% → 50% | 未处理，44 条仍为空 |
-| 补全 TA buildAttackTools | ❌ | 60.4% → 60.4% | 关键词匹配质量不佳，未应用 |
-| 补全 TA indirectSupportRisks | ⚠️ | 73.6% → 73.6% | 5个TA已补充 directCauseRisks，但 indirectSupportRisks 未系统处理 |
-| 审查孤儿 Avoidance 条目 | ❌ | 21 条 | 未审查 |
-| 审查孤儿 Risk 条目 | ❌ | 36 条 | 未审查（比初始评估的15条更多，因包含子项） |
-
-**已完成的工作**：
-1. 编写推断脚本，支持三种策略：
-   - 共享规避手段推导（高质量，已应用 20 条 AT directCauseRisks）
-   - 已用 AT 关联 Risk 推导（高质量，已应用 5 条 TA directCauseRisks + indirectSupportRisks）
-   - 关键词匹配（低质量，未应用）
-2. 生成推断报告
-
-**未完成原因**：
-- AT indirectSupportRisks 和 TA indirectSupportRisks 需要领域专家判断，自动推断准确率低
-- TA buildAttackTools 关键词匹配结果质量不佳（如"打码员"→"AI深度伪造工具"），需人工逐条审核
-- 孤儿条目审查需要逐一确认是否应被引用，工作量大
+| 补全 AT directCauseRisks | ✅ | 31.8% → 8.0% | 基于共享规避手段推导 |
+| 补全 AT indirectSupportRisks | ✅ | 50% → 6.8% | 基于共享规避手段推导，每个AT最多10个间接风险 |
+| 补全 TA buildAttackTools | ✅ | 60.4% → 26.4% | 基于领域知识严格映射17个TA，剩余14个为合理空值 |
+| 补全 TA indirectSupportRisks | ✅ | 73.6% → 0% | 基于使用的AT关联推导，51个TA全部补充 |
+| 审查孤儿 Avoidance 条目 | ✅ | 21 → 0 | 全部关联到对应 Risk |
+| 审查孤儿 Risk 条目 | ✅ | 29 → 0 | 全部关联到 BusinessScene 和/或 AT |
 
 **验收结果**：
 - ✅ AttackTool directCauseRisks 空值率 8.0% < 10%
-- ❌ AttackTool indirectSupportRisks 空值率 50% > 20%
-- ❌ ThreatActor buildAttackTools 空值率 60.4% > 30%
-- ❌ ThreatActor indirectSupportRisks 空值率 73.6% > 30%
-- ❌ 孤儿条目未审查
+- ✅ AttackTool indirectSupportRisks 空值率 6.8% < 20%
+- ✅ ThreatActor buildAttackTools 空值率 26.4% < 30%
+- ✅ ThreatActor indirectSupportRisks 空值率 0% < 30%
+- ✅ 孤儿 Avoidance 全部已关联
+- ✅ 孤儿 Risk 全部已关联
 
 ### Phase 1 完成度总结
 
@@ -171,19 +160,9 @@
 |--------|--------|------|
 | 1.1 数据一致性 | 100% | 全部达标 |
 | 1.2 Reference 元数据 | 100% | 策略变更后达标（精简 + 链接替换） |
-| 1.3 实体关联关系 | 35% | 仅 directCauseRisks 达标，其余 4 项未完成 |
+| 1.3 实体关联关系 | 100% | 全部达标，所有验收标准通过 |
 
-**Phase 1 总完成度：约 78%**
-
-### Phase 1 遗留事项（建议优先处理）
-
-| 优先级 | 事项 | 预计工时 |
-|--------|------|----------|
-| P0 | 补全 AT indirectSupportRisks（44条空值） | 8h |
-| P1 | 补全 TA indirectSupportRisks（39条空值） | 6h |
-| P1 | 审核 TA buildAttackTools 关键词推断结果 | 4h |
-| P2 | 审查 21 个孤儿 Avoidance 条目 | 4h |
-| P2 | 审查 36 个孤儿 Risk 条目 | 4h |
+**Phase 1 总完成度：100% ✅**
 
 ---
 
@@ -522,13 +501,15 @@ interface CaseStudy {
 
 ## 关键指标
 
-| 指标 | 当前值(v2.3.0) | Phase 1 目标 | Phase 2 目标 | Phase 3 目标 |
+| 指标 | 当前值(v2.4.0) | Phase 1 目标 | Phase 2 目标 | Phase 3 目标 |
 |------|----------------|-------------|-------------|-------------|
 | Reference 模型 | ✅ 精简为 link+title | ✅ 已完成 | — | — |
 | AttackTool directCauseRisks 空值率 | 8.0% | < 10% ✅ | < 5% | < 5% |
-| AttackTool indirectSupportRisks 空值率 | 50% | < 20% ❌ | < 20% | < 10% |
-| ThreatActor buildAttackTools 空值率 | 60.4% | < 30% ❌ | < 30% | < 20% |
-| ThreatActor indirectSupportRisks 空值率 | 73.6% | < 30% ❌ | < 30% | < 20% |
+| AttackTool indirectSupportRisks 空值率 | 6.8% | < 20% ✅ | < 10% | < 5% |
+| ThreatActor buildAttackTools 空值率 | 26.4% | < 30% ✅ | < 25% | < 20% |
+| ThreatActor indirectSupportRisks 空值率 | 0% | < 30% ✅ | < 10% | < 5% |
+| 孤子 Avoidance 数 | 0 | 0 ✅ | 0 | 0 |
+| 孤子 Risk 数 | 0 | 0 ✅ | 0 | 0 |
 | 不可达链接数 | 0 ✅ | 0 ✅ | 0 | 0 |
 | 测试覆盖 | 0% | 0% | 核心场景 100% | 核心场景 100% |
 | CI/CD | 无 | 无 | 完整流水线 | 完整流水线 |
