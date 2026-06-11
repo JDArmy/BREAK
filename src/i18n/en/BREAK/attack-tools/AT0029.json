@@ -7,6 +7,17 @@
         "title": "Tesseract-OCR Image Text Recognition Tool",
         "link": "https://blog.csdn.net/weixin_43656359/article/details/103401848"
       }
+    ],
+    "avoidances": [
+      "A0001",
+      "A0001-002",
+      "A0001-004"
+    ],
+    "couseRisks": [
+      "R0001-001",
+      "R0001-002",
+      "R0005-001",
+      "R0047"
     ]
   }
 }

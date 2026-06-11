@@ -7,6 +7,25 @@
         "title": "Basic Concepts of Mass Control Systems",
         "link": "https://zhuanlan.zhihu.com/p/526198871"
       }
+    ],
+    "avoidances": [
+      "A0010",
+      "A0010-003",
+      "A0010-004",
+      "A0016-001",
+      "A0021",
+      "A0029-003",
+      "A0059"
+    ],
+    "couseRisks": [
+      "R0001-002",
+      "R0003-003",
+      "R0005-001",
+      "R0016-001",
+      "R0030-001",
+      "R0034",
+      "R0050",
+      "R0108"
     ]
   }
 }

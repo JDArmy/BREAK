@@ -7,6 +7,24 @@
         "title": "How to Choose a Headless Browser for Web Scraping",
         "link": "https://blog.csdn.net/Z_suger7/article/details/125603480"
       }
+    ],
+    "avoidances": [
+      "A0001",
+      "A0010",
+      "A0021",
+      "A0021-001",
+      "A0029-003",
+      "A0059"
+    ],
+    "couseRisks": [
+      "R0001-002",
+      "R0003-003",
+      "R0005-001",
+      "R0016",
+      "R0027",
+      "R0030-001",
+      "R0034",
+      "R0050"
     ]
   }
 }

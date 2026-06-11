@@ -7,6 +7,45 @@
         "title": "What Are Card Dealers, Account Dealers, and SMS Verification Platforms Targeted by the Ministry of Public Security?",
         "link": "https://baijiahao.baidu.com/s?id=1686679221399992594&wfr=spider&for=pc"
       }
+    ],
+    "buildAttackTools": [
+      "AT0003",
+      "AT0012",
+      "AT0027",
+      "AT0038",
+      "AT0051"
+    ],
+    "useAttackTools": [
+      "AT0003",
+      "AT0010",
+      "AT0012",
+      "AT0039",
+      "AT0042",
+      "AT0051"
+    ],
+    "couseRisks": [
+      "R0005-001",
+      "R0011",
+      "R0011-001",
+      "R0011-002",
+      "R0030",
+      "R0030-001",
+      "R0030-002",
+      "R0030-003",
+      "R0030-004",
+      "R0030-005",
+      "R0030-006",
+      "R0032",
+      "R0032-001",
+      "R0032-002",
+      "R0032-003",
+      "R0035",
+      "R0035-001",
+      "R0061",
+      "R0089",
+      "R0090",
+      "R0098",
+      "R0114"
     ]
   }
 }
