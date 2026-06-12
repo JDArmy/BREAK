@@ -14,14 +14,35 @@ import { ArrowDown, Search } from "@element-plus/icons-vue";
 import { useI18n } from "vue-i18n";
 import { languages, setLocale } from "@/i18n";
 import { ref } from "vue";
+import { useRouter } from "vue-router";
 
 const { locale } = useI18n();
+const router = useRouter();
 const searchOpen = ref(false);
 const shortcutHint = navigator.platform?.includes("Mac") ? "⌘K" : "Ctrl+K";
 
 const handleLocaleChange = (lang: string) => {
   setLocale(lang);
 };
+
+const knowledgeRoutes: Record<string, string> = {
+  risks: "/risks",
+  avoidances: "/avoidances",
+  attackTools: "/attack-tools",
+  threatActors: "/threat-actors",
+};
+
+const handleKnowledgeCommand = (command: string) => {
+  const path = knowledgeRoutes[command];
+  if (path) {
+    router.push(path);
+  }
+};
+
+const isKnowledgeActive = (fullPath: string) =>
+  ["/risks", "/avoidances", "/attack-tools", "/threat-actors"].includes(
+    getActiveIndex(fullPath)
+  );
 
 const getActiveIndex = (fullPath: string) => {
   if (fullPath.match(/^\/business-scene\//)) return "/";
@@ -82,12 +103,23 @@ const getActiveIndex = (fullPath: string) => {
       </div>
     </div>
     <el-menu-item class="" index="/">{{ $t("menu.home") }}</el-menu-item>
-    <el-menu-item class="" index="/risks">{{ $t("menu.risks") }}</el-menu-item>
-    <el-menu-item class="" index="/avoidances">{{
-      $t("menu.avoidances")
-    }}</el-menu-item>
-    <el-menu-item index="/attack-tools">{{ $t("attackTools") }}</el-menu-item>
-    <el-menu-item index="/threat-actors">{{ $t("threatActors") }}</el-menu-item>
+    <el-dropdown
+      class="knowledge-menu"
+      :class="{ 'is-active': isKnowledgeActive($route.fullPath) }"
+      @command="handleKnowledgeCommand"
+    >
+      <span class="el-dropdown-link">
+        {{ $t("menu.knowledge") }}<el-icon><arrow-down /></el-icon>
+      </span>
+      <template #dropdown>
+        <el-dropdown-menu>
+          <el-dropdown-item command="risks">{{ $t("menu.risks") }}</el-dropdown-item>
+          <el-dropdown-item command="avoidances">{{ $t("menu.avoidances") }}</el-dropdown-item>
+          <el-dropdown-item command="attackTools">{{ $t("attackTools") }}</el-dropdown-item>
+          <el-dropdown-item command="threatActors">{{ $t("threatActors") }}</el-dropdown-item>
+        </el-dropdown-menu>
+      </template>
+    </el-dropdown>
     <el-menu-item index="/relation/risk/R0001">{{
       $t("relationMap")
     }}</el-menu-item>
@@ -262,16 +294,21 @@ const getActiveIndex = (fullPath: string) => {
 }
 
 .translate,
+.knowledge-menu,
 .github {
   color: var(--el-menu-text-color);
-  margin: auto 10px;
+  height: var(--el-menu-item-height);
+  line-height: var(--el-menu-item-height);
+  padding: 0 var(--el-menu-base-level-padding);
+  margin: 0;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 4px;
 }
 
-.translate .el-dropdown-link {
+.translate .el-dropdown-link,
+.knowledge-menu .el-dropdown-link {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -280,11 +317,11 @@ const getActiveIndex = (fullPath: string) => {
 }
 
 .locale-label {
-  font-size: 12px;
   user-select: none;
 }
 
 .outside-link {
+  height: var(--el-menu-item-height);
   line-height: var(--el-menu-item-height);
   color: var(--el-menu-text-color);
   padding: 0 var(--el-menu-base-level-padding);
@@ -297,6 +334,14 @@ const getActiveIndex = (fullPath: string) => {
   gap: 4px;
   color: var(--el-menu-text-color);
   cursor: pointer;
+}
+
+.knowledge-menu.is-active .el-dropdown-link {
+  color: var(--el-menu-active-color);
+}
+
+.translate {
+  padding: 0 10px;
 }
 
 .outside-link-menu a {

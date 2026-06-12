@@ -79,11 +79,13 @@ const themeOptions: { mode: ThemeMode; labelKey: string; icon: "sun" | "moon" | 
 <style scoped>
 .theme-toggle {
   color: var(--el-menu-text-color);
-  margin: auto 10px;
+  height: var(--el-menu-item-height);
+  line-height: var(--el-menu-item-height);
+  padding: 0 10px;
+  margin: 0;
   cursor: pointer;
   display: flex;
   align-items: center;
-  line-height: var(--el-menu-item-height);
 }
 
 .theme-toggle .el-dropdown-link {
