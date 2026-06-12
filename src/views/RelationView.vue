@@ -1,9 +1,13 @@
 <script setup lang="ts">
-import { onMounted, ref, reactive, watch, nextTick } from "vue";
+import { computed, nextTick, onBeforeUnmount, onMounted, reactive, ref, watch } from "vue";
 import BREAK from "@/BREAK";
 import { useRoute, useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
 import { useTheme } from "@/composables/useTheme";
+import { init, use, type ECharts } from "echarts/core";
+import { SankeyChart } from "echarts/charts";
+import { TooltipComponent } from "echarts/components";
+import { CanvasRenderer } from "echarts/renderers";
 
 import RelationGraph, {
   type RGJsonData,
@@ -16,6 +20,7 @@ const route = useRoute();
 const router = useRouter();
 const { t, locale } = useI18n();
 const { isDark } = useTheme();
+use([SankeyChart, TooltipComponent, CanvasRenderer]);
 
 enum RelationType {
   risk = "risk",
@@ -71,8 +76,11 @@ const RelationTypeMapping = {
 
 const relType = ref<RelationType>(route.params.type as RelationType);
 const relKey = ref<string>(route.params.key as string);
+const activeView = ref<"network" | "sankey">("network");
 
 const graphRef$ = ref<RelationGraph>();
+const sankeyChartRef = ref<HTMLDivElement>();
+let sankeyChart: ECharts | null = null;
 
 // 控制图谱组件的销毁与重建，用于主题切换时完整重绘 Canvas
 const graphVisible = ref(true);
@@ -137,6 +145,26 @@ interface Line {
   to: string;
 }
 
+interface SankeyNode {
+  name: string;
+  itemStyle: {
+    color: string;
+  };
+}
+
+interface SankeyLink {
+  source: string;
+  target: string;
+  value: number;
+}
+
+interface AttackPath {
+  threatActorKey?: string;
+  attackToolKey?: string;
+  riskKey: string;
+  avoidanceKey?: string;
+}
+
 const nodes = reactive([] as Node[]);
 const lines = reactive([] as Line[]);
 const jsonData = reactive({
@@ -144,6 +172,209 @@ const jsonData = reactive({
   nodes: nodes,
   lines: lines,
 } as RGJsonData);
+
+const getBreakKey = (type: RelationType) =>
+  RelationTypeMapping[type as keyof typeof RelationTypeMapping].BreakKey as keyof typeof BREAK;
+
+const getCurrentEntityOptions = computed(() => BREAK[getBreakKey(relType.value)] as Record<string, unknown>);
+
+const getEntityTitle = (type: Exclude<RelationType, RelationType.all>, key: string) => {
+  const breakKey = RelationTypeMapping[type].BreakKey;
+  return t(`BREAK.${breakKey}.${key}.title`);
+};
+
+const getNodeLabel = (type: Exclude<RelationType, RelationType.all>, key: string) =>
+  `${key} ${getEntityTitle(type, key)}`;
+
+const getSankeyNodeName = (type: Exclude<RelationType, RelationType.all>, key: string) =>
+  `${RelationTypeMapping[type].title}: ${getNodeLabel(type, key)}`;
+
+const matchesSelectedEntity = (path: AttackPath) => {
+  switch (relType.value) {
+    case RelationType.threatActor:
+      return path.threatActorKey === relKey.value;
+    case RelationType.attackTool:
+      return path.attackToolKey === relKey.value;
+    case RelationType.risk:
+      return path.riskKey === relKey.value;
+    case RelationType.avoidance:
+      return path.avoidanceKey === relKey.value;
+    default:
+      return true;
+  }
+};
+
+const getAttackToolRiskKeys = (attackToolKey: string) => {
+  const attackTool = BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools];
+  return [...new Set([...attackTool.directCauseRisks, ...attackTool.indirectSupportRisks])];
+};
+
+const getThreatActorRiskKeys = (threatActorKey: string) => {
+  const threatActor = BREAK.threatActors[threatActorKey as keyof typeof BREAK.threatActors];
+  return [...new Set([...threatActor.directCauseRisks, ...threatActor.indirectSupportRisks])];
+};
+
+const getThreatActorAttackToolKeys = (threatActorKey: string) => {
+  const threatActor = BREAK.threatActors[threatActorKey as keyof typeof BREAK.threatActors];
+  return [...new Set([...threatActor.buildAttackTools, ...threatActor.useAttackTools])];
+};
+
+const buildAttackPaths = () => {
+  const paths: AttackPath[] = [];
+
+  Object.keys(BREAK.risks).forEach((riskKey) => {
+    const risk = BREAK.risks[riskKey as keyof typeof BREAK.risks];
+    const riskAvoidances = risk.avoidances.length > 0 ? risk.avoidances : [undefined];
+
+    const relatedAttackToolKeys = Object.keys(BREAK.attackTools).filter((attackToolKey) =>
+      getAttackToolRiskKeys(attackToolKey).includes(riskKey)
+    );
+    const relatedThreatActorKeys = Object.keys(BREAK.threatActors).filter((threatActorKey) =>
+      getThreatActorRiskKeys(threatActorKey).includes(riskKey)
+    );
+
+    relatedAttackToolKeys.forEach((attackToolKey) => {
+      const toolThreatActorKeys = Object.keys(BREAK.threatActors).filter((threatActorKey) =>
+        getThreatActorAttackToolKeys(threatActorKey).includes(attackToolKey)
+      );
+      const threatActorKeys = toolThreatActorKeys.length > 0 ? toolThreatActorKeys : relatedThreatActorKeys;
+
+      if (threatActorKeys.length > 0) {
+        threatActorKeys.forEach((threatActorKey) => {
+          riskAvoidances.forEach((avoidanceKey) => {
+            paths.push({ threatActorKey, attackToolKey, riskKey, avoidanceKey });
+          });
+        });
+      } else {
+        riskAvoidances.forEach((avoidanceKey) => {
+          paths.push({ attackToolKey, riskKey, avoidanceKey });
+        });
+      }
+    });
+
+    if (relatedAttackToolKeys.length === 0) {
+      relatedThreatActorKeys.forEach((threatActorKey) => {
+        riskAvoidances.forEach((avoidanceKey) => {
+          paths.push({ threatActorKey, riskKey, avoidanceKey });
+        });
+      });
+    }
+  });
+
+  return paths.filter(matchesSelectedEntity);
+};
+
+const sankeyData = computed(() => {
+  const nodeMap = new Map<string, SankeyNode>();
+  const linkMap = new Map<string, SankeyLink>();
+
+  const addNode = (type: Exclude<RelationType, RelationType.all>, key: string) => {
+    const name = getSankeyNodeName(type, key);
+    if (!nodeMap.has(name)) {
+      nodeMap.set(name, {
+        name,
+        itemStyle: {
+          color: RelationTypeMapping[type].color,
+        },
+      });
+    }
+    return name;
+  };
+
+  const addLink = (source: string, target: string) => {
+    const linkKey = `${source}->${target}`;
+    const existing = linkMap.get(linkKey);
+    if (existing) {
+      existing.value += 1;
+    } else {
+      linkMap.set(linkKey, { source, target, value: 1 });
+    }
+  };
+
+  buildAttackPaths().forEach((path) => {
+    const pathNodes: string[] = [];
+    if (path.threatActorKey) {
+      pathNodes.push(addNode(RelationType.threatActor, path.threatActorKey));
+    }
+    if (path.attackToolKey) {
+      pathNodes.push(addNode(RelationType.attackTool, path.attackToolKey));
+    }
+    pathNodes.push(addNode(RelationType.risk, path.riskKey));
+    if (path.avoidanceKey) {
+      pathNodes.push(addNode(RelationType.avoidance, path.avoidanceKey));
+    }
+
+    pathNodes.forEach((nodeName, index) => {
+      const nextNodeName = pathNodes[index + 1];
+      if (nextNodeName) {
+        addLink(nodeName, nextNodeName);
+      }
+    });
+  });
+
+  return {
+    nodes: [...nodeMap.values()],
+    links: [...linkMap.values()],
+  };
+});
+
+const renderSankeyChart = () => {
+  if (activeView.value !== "sankey" || !sankeyChartRef.value) return;
+  if (!sankeyChart) {
+    sankeyChart = init(sankeyChartRef.value);
+  }
+
+  sankeyChart.setOption({
+    backgroundColor: isDark.value ? "#0f172a" : "#ffffff",
+    tooltip: {
+      trigger: "item",
+      triggerOn: "mousemove",
+    },
+    series: [
+      {
+        type: "sankey",
+        data: sankeyData.value.nodes,
+        links: sankeyData.value.links,
+        left: 40,
+        right: 280,
+        top: 24,
+        bottom: 24,
+        nodeWidth: 18,
+        nodeGap: 12,
+        draggable: true,
+        emphasis: {
+          focus: "adjacency",
+        },
+        lineStyle: {
+          color: "gradient",
+          curveness: 0.5,
+          opacity: isDark.value ? 0.28 : 0.36,
+        },
+        label: {
+          color: isDark.value ? "#e2e8f0" : "#334155",
+          fontSize: 12,
+          width: 220,
+          overflow: "truncate",
+          ellipsis: "...",
+        },
+        itemStyle: {
+          borderColor: isDark.value ? "#334155" : "#e2e8f0",
+          borderWidth: 1,
+        },
+      },
+    ],
+  });
+  sankeyChart.resize();
+};
+
+const disposeSankeyChart = () => {
+  sankeyChart?.dispose();
+  sankeyChart = null;
+};
+
+const resizeSankeyChart = () => {
+  sankeyChart?.resize();
+};
 
 const addRootNode = () => {
   const breakItemAttr =
@@ -794,7 +1025,22 @@ onMounted(() => {
   addRootNode();
   genRGJsonData(RelationType.all, relType.value, relKey.value);
   nextTick(() => updateToolbarTitles());
+  window.addEventListener("resize", resizeSankeyChart);
 });
+
+onBeforeUnmount(() => {
+  window.removeEventListener("resize", resizeSankeyChart);
+  disposeSankeyChart();
+});
+
+watch(
+  () => relType.value,
+  () => {
+    if (!Object.keys(getCurrentEntityOptions.value).includes(relKey.value)) {
+      relKey.value = Object.keys(getCurrentEntityOptions.value)[0] ?? "";
+    }
+  }
+);
 
 // 监听下拉框的值变化，改变路由
 watch(
@@ -827,7 +1073,14 @@ watch(locale, () => {
   filterLineType.value = [];
   rebuildGraphData();
   updateToolbarTitles();
+  nextTick(renderSankeyChart);
 });
+
+watch([activeView, sankeyData, isDark], () => {
+  if (activeView.value === "sankey") {
+    nextTick(renderSankeyChart);
+  }
+}, { deep: true });
 
 // 更新 relation-graph 工具栏按钮的 title（库硬编码中文，需手动替换）
 const updateToolbarTitles = () => {
@@ -1013,114 +1266,222 @@ const doFilter = () => {
 </script>
 
 <template>
-  <!-- 关系图 -->
-  <div
-    style="border: var(--break-graph-border) solid 1px; height: calc(100vh - 150px); width: 100%"
-  >
-    <relation-graph v-if="graphVisible" ref="graphRef$" :options="graphOptions">
-      <template #node="{ node }">
-        <div
-          style="
-            cursor: pointer;
-            font-size: 16px;
-            display: flex;
-            height: inherit;
-            align-items: center;
-            justify-content: center;
-          "
-          @dblclick="nodeClick(node, $event)"
-          @contextmenu="nodeClick(node, $event)"
-          v-html="(node as Node).text"
-        ></div>
-      </template>
-      <template #graph-plug>
-        <div class="filter-pane" id="node-filter-pane">
-          <div>
-            <el-select style="width: 200px" v-model="relType">
-              <el-option
-                v-for="(item, key) in RelationTypeMapping"
-                :label="item.title"
-                :key="key"
-                :value="key"
-              >
-              </el-option>
-            </el-select>
-          </div>
-          <div style="margin-top: 8px">
-            <el-select style="width: 200px" v-model="relKey">
-              <el-option
-                v-for="(item, key) in BREAK[
-                  RelationTypeMapping[
-                    relType as keyof typeof RelationTypeMapping
-                  ].BreakKey as keyof typeof BREAK
-                ] as any"
-                :key="key"
-                :label="key + ':' + $t(`BREAK.${RelationTypeMapping[relType as keyof typeof RelationTypeMapping].BreakKey}.${key}.title`)"
-                :value="key"
-              >
-              </el-option>
-            </el-select>
-          </div>
-          <h2>{{ $t('nodeFilter') }}</h2>
-          <el-checkbox-group v-model="filterRelationType" @change="doFilter">
-            <el-checkbox
-              v-for="(item, key) in RelationTypeMapping"
-              :key="key"
-              :name="key"
-              class="filter-checkbox"
-              :value="key"
-              >{{ item.title }}</el-checkbox
-            >
-          </el-checkbox-group>
-          <el-checkbox v-model="filterSubNode" class="filter-checkbox" @change="doFilter">{{ $t('subNodeFilter') }}</el-checkbox>
+  <div class="relation-page">
+    <div class="relation-selector">
+      <el-select class="relation-select" v-model="relType">
+        <el-option
+          v-for="(item, key) in RelationTypeMapping"
+          :label="item.title"
+          :key="key"
+          :value="key"
+        >
+        </el-option>
+      </el-select>
+      <el-select class="relation-key-select" v-model="relKey" filterable>
+        <el-option
+          v-for="(_item, key) in getCurrentEntityOptions"
+          :key="key"
+          :label="key + ':' + $t(`BREAK.${RelationTypeMapping[relType as keyof typeof RelationTypeMapping].BreakKey}.${key}.title`)"
+          :value="key"
+        >
+        </el-option>
+      </el-select>
+    </div>
+
+    <el-tabs v-model="activeView" class="relation-tabs">
+      <el-tab-pane :label="$t('relationView.network')" name="network">
+        <!-- 关系图 -->
+        <div class="relation-graph-pane">
+          <relation-graph v-if="graphVisible" ref="graphRef$" :options="graphOptions">
+            <template #node="{ node }">
+              <div
+                style="
+                  cursor: pointer;
+                  font-size: 16px;
+                  display: flex;
+                  height: inherit;
+                  align-items: center;
+                  justify-content: center;
+                "
+                @dblclick="nodeClick(node, $event)"
+                @contextmenu="nodeClick(node, $event)"
+                v-html="(node as Node).text"
+              ></div>
+            </template>
+            <template #graph-plug>
+              <div class="filter-pane" id="node-filter-pane">
+                <h2>{{ $t('nodeFilter') }}</h2>
+                <el-checkbox-group v-model="filterRelationType" @change="doFilter">
+                  <el-checkbox
+                    v-for="(item, key) in RelationTypeMapping"
+                    :key="key"
+                    :name="key"
+                    class="filter-checkbox"
+                    :value="key"
+                    >{{ item.title }}</el-checkbox
+                  >
+                </el-checkbox-group>
+                <el-checkbox v-model="filterSubNode" class="filter-checkbox" @change="doFilter">{{ $t('subNodeFilter') }}</el-checkbox>
+              </div>
+              <div class="filter-pane" id="line-filter-pane">
+                <h2>{{ $t('lineFilter') }}</h2>
+                <el-checkbox-group v-model="filterLineType" @change="doFilter">
+                  <el-checkbox
+                    class="filter-checkbox"
+                    v-for="oneType in totalLineType"
+                    :key="oneType"
+                    :name="oneType"
+                    :value="oneType"
+                    >{{ oneType }}</el-checkbox
+                  >
+                </el-checkbox-group>
+              </div>
+            </template>
+          </relation-graph>
+          <el-dropdown ref="dropdown1" :handleOpen="true" :style="dropdownStyle">
+            <span class="el-dropdown-link"></span>
+            <template #dropdown>
+              <el-dropdown-menu>
+                <el-dropdown-item
+                  v-for="(item, key) in RelationTypeMapping"
+                  :key="key"
+                  @click="clickContextMenu(key)"
+                  :disabled="item.disableContextMenu.value"
+                  >{{ item.title }}</el-dropdown-item
+                >
+                <el-dropdown-item
+                  @click="clickContextMenu(RelationType.all)"
+                  :disabled="disableContextMenuAll"
+                  >{{ $t('fetchAllRelations') }}</el-dropdown-item
+                >
+                <el-dropdown-item
+                  @click="gotoNewRelationView()"
+                  :disabled="disableContextMenuOpenAsRoot"
+                  divided
+                  >{{ $t('openAsRoot') }}</el-dropdown-item
+                >
+                <el-dropdown-item divided @click="gotoItemDetailView()"
+                  >{{ $t('viewDetail') }}</el-dropdown-item
+                >
+              </el-dropdown-menu>
+            </template>
+          </el-dropdown>
         </div>
-        <div class="filter-pane" id="line-filter-pane">
-          <h2>{{ $t('lineFilter') }}</h2>
-          <el-checkbox-group v-model="filterLineType" @change="doFilter">
-            <el-checkbox
-              class="filter-checkbox"
-              v-for="oneType in totalLineType"
-              :key="oneType"
-              :name="oneType"
-              :value="oneType"
-              >{{ oneType }}</el-checkbox
-            >
-          </el-checkbox-group>
+      </el-tab-pane>
+      <el-tab-pane :label="$t('relationView.attackPath')" name="sankey">
+        <div class="sankey-pane">
+          <div v-if="sankeyData.nodes.length === 0" class="sankey-empty">
+            {{ $t("relationView.noAttackPath") }}
+          </div>
+          <div v-show="sankeyData.nodes.length > 0" ref="sankeyChartRef" class="sankey-chart"></div>
         </div>
-      </template>
-    </relation-graph>
-    <el-dropdown ref="dropdown1" :handleOpen="true" :style="dropdownStyle">
-      <span class="el-dropdown-link"></span>
-      <template #dropdown>
-        <el-dropdown-menu>
-          <el-dropdown-item
-            v-for="(item, key) in RelationTypeMapping"
-            :key="key"
-            @click="clickContextMenu(key)"
-            :disabled="item.disableContextMenu.value"
-            >{{ item.title }}</el-dropdown-item
-          >
-          <el-dropdown-item
-            @click="clickContextMenu(RelationType.all)"
-            :disabled="disableContextMenuAll"
-            >{{ $t('fetchAllRelations') }}</el-dropdown-item
-          >
-          <el-dropdown-item
-            @click="gotoNewRelationView()"
-            :disabled="disableContextMenuOpenAsRoot"
-            divided
-            >{{ $t('openAsRoot') }}</el-dropdown-item
-          >
-          <el-dropdown-item divided @click="gotoItemDetailView()"
-            >{{ $t('viewDetail') }}</el-dropdown-item
-          >
-        </el-dropdown-menu>
-      </template>
-    </el-dropdown>
+      </el-tab-pane>
+    </el-tabs>
   </div>
 </template>
 
 <style scoped>
+.relation-page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 132px);
+  min-height: 480px;
+  overflow: hidden;
+  padding: 0 12px 4px;
+}
+
+.relation-selector {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  right: 12px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding-bottom: 4px;
+}
+
+.relation-select {
+  width: 160px;
+}
+
+.relation-key-select {
+  width: min(520px, calc(100vw - 420px));
+}
+
+.relation-tabs {
+  min-height: 0;
+  flex: 1;
+}
+
+.relation-tabs :deep(.el-tabs__header) {
+  margin-bottom: 8px;
+}
+
+.relation-tabs :deep(.el-tabs__nav-wrap) {
+  padding-right: min(700px, calc(100vw - 360px));
+}
+
+.relation-tabs :deep(.el-tabs__nav-wrap) {
+  min-height: 40px;
+}
+
+.relation-tabs :deep(.el-tabs__content) {
+  height: calc(100% - 48px);
+}
+
+.relation-tabs :deep(.el-tab-pane) {
+  height: 100%;
+}
+
+.relation-graph-pane,
+.sankey-pane {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  overflow: hidden;
+  border: var(--break-graph-border) solid 1px;
+  background: var(--break-card-bg);
+}
+
+.sankey-chart {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 760px) {
+  .relation-selector {
+    position: static;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+  }
+
+  .relation-select,
+  .relation-key-select {
+    width: 100%;
+  }
+
+  .relation-tabs :deep(.el-tabs__header) {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+.sankey-empty {
+  display: flex;
+  height: 100%;
+  min-height: 360px;
+  align-items: center;
+  justify-content: center;
+  color: var(--break-graph-text);
+  font-size: 14px;
+}
+
 .filter-pane {
   position: absolute;
   z-index: 700;

@@ -44,6 +44,11 @@
   "hideAllSubRisks": "隐藏所有子风险",
   "showAllSubRisks": "显示所有子风险",
   "relationMap": "关系图谱",
+  "relationView": {
+    "network": "关系网络",
+    "attackPath": "攻击路径",
+    "noAttackPath": "当前实体没有可展示的攻击路径"
+  },
   "nodeFilter": "节点筛选：",
   "subNodeFilter": "子节点",
   "toolbar": {

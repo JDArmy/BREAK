@@ -44,6 +44,11 @@
   "hideAllSubRisks": "Hide All Sub-Risks",
   "showAllSubRisks": "Show All Sub-Risks",
   "relationMap": "Relation Map",
+  "relationView": {
+    "network": "Relation Network",
+    "attackPath": "Attack Path",
+    "noAttackPath": "No attack path available for the selected entity"
+  },
   "nodeFilter": "Node Filter:",
   "subNodeFilter": "Sub-Nodes",
   "toolbar": {
