@@ -64,11 +64,11 @@ const getActiveIndex = (fullPath: string) => {
     :router="true"
     class="hidden-sm-and-down"
   >
-    <div>
+    <div style="display: flex; align-items: center;">
       <img src="/logo.png" class="logo" alt="JDArmy BREAK" />
     </div>
 
-    <div>
+    <div style="display: flex; align-items: center;">
       <h3 class="banner">
         {{ $t("BREAK.name") }}
       </h3>
