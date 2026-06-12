@@ -3,6 +3,8 @@ import BREAK from "@/BREAK";
 import ReferenceList from "@/components/ReferenceList.vue";
 
 import "element-plus/es/components/drawer/style/css";
+import "element-plus/es/components/button/style/css";
+import { ArrowLeft } from "@element-plus/icons-vue";
 import iconRelation from "./icons/iconRelation.vue";
 import { useDrawerWidth } from "@/composables/useDrawerWidth";
 
@@ -24,6 +26,15 @@ const { getInnerDrawerWidth } = useDrawerWidth();
     :append-to-body="true"
     :size="getInnerDrawerWidth()"
   >
+    <template #header>
+      <div class="drawer-header-with-back">
+        <el-button text size="small" @click="$emit('drawerClose')" class="drawer-back-btn">
+          <el-icon><ArrowLeft /></el-icon>
+          {{ $t("back") }}
+        </el-button>
+        <span class="drawer-header-title">{{ $t('avoidance') }}</span>
+      </div>
+    </template>
     <div class="desc">
       <strong>{{ $t("ID") }}:&nbsp;</strong>
       {{ aKey }}
@@ -64,5 +75,21 @@ const { getInnerDrawerWidth } = useDrawerWidth();
 <style scoped>
 .desc {
   margin-bottom: 20px;
+}
+
+.drawer-header-with-back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.drawer-back-btn {
+  padding: 4px 8px;
+  color: var(--break-text-muted);
+}
+
+.drawer-header-title {
+  font-weight: 600;
+  color: var(--break-text-primary);
 }
 </style>

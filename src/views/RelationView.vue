@@ -4,6 +4,7 @@ import BREAK from "@/BREAK";
 import { useRoute, useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
 import { useTheme } from "@/composables/useTheme";
+import { useBreakpoints } from "@/composables/useBreakpoints";
 import { init, use, type ECharts } from "echarts/core";
 import { SankeyChart } from "echarts/charts";
 import { TooltipComponent } from "echarts/components";
@@ -20,6 +21,7 @@ const route = useRoute();
 const router = useRouter();
 const { t, locale } = useI18n();
 const { isDark } = useTheme();
+const { isMobile } = useBreakpoints();
 use([SankeyChart, TooltipComponent, CanvasRenderer]);
 
 enum RelationType {
@@ -76,7 +78,7 @@ const RelationTypeMapping = {
 
 const relType = ref<RelationType>(route.params.type as RelationType);
 const relKey = ref<string>(route.params.key as string);
-const activeView = ref<"network" | "sankey">("network");
+const activeView = ref<"network" | "sankey">(isMobile.value ? "sankey" : "network");
 
 const graphRef$ = ref<RelationGraph>();
 const sankeyChartRef = ref<HTMLDivElement>();
@@ -341,6 +343,18 @@ const selectSankeyNode = (node: SankeyNode) => {
   relKey.value = node.entityKey;
 };
 
+const sankeyRight = computed(() => {
+  if (isMobile.value) return 80;
+  if (window.innerWidth < 992) return 160;
+  return 280;
+});
+
+const sankeyLabelWidth = computed(() => {
+  if (isMobile.value) return 100;
+  if (window.innerWidth < 992) return 160;
+  return 220;
+});
+
 const renderSankeyChart = () => {
   if (activeView.value !== "sankey" || !sankeyChartRef.value) return;
   if (!sankeyChart) {
@@ -360,7 +374,7 @@ const renderSankeyChart = () => {
         data: sankeyData.value.nodes,
         links: sankeyData.value.links,
         left: 40,
-        right: 280,
+        right: sankeyRight.value,
         top: 24,
         bottom: 24,
         nodeWidth: 18,
@@ -378,7 +392,7 @@ const renderSankeyChart = () => {
         label: {
           color: isDark.value ? "#e2e8f0" : "#334155",
           fontSize: 12,
-          width: 220,
+          width: sankeyLabelWidth.value,
           overflow: "truncate",
           ellipsis: "...",
         },
@@ -1220,11 +1234,70 @@ const nodeClick = (node: Node, e: MouseEvent) => {
   nodeId.value = node.id;
 };
 
+// 触摸设备：底部操作面板
+const touchActionVisible = ref(false);
+
+const handleNodeTouch = (node: Node) => {
+  // 与 nodeClick 相同的上下文菜单状态逻辑
+  switch (node.type) {
+    case RelationType.risk: {
+      RelationTypeMapping[RelationType.risk].disableContextMenu.value = true;
+      RelationTypeMapping[RelationType.avoidance].disableContextMenu.value = false;
+      RelationTypeMapping[RelationType.attackTool].disableContextMenu.value = false;
+      RelationTypeMapping[RelationType.threatActor].disableContextMenu.value = false;
+      disableContextMenuAll.value = false;
+      disableContextMenuOpenAsRoot.value = false;
+      break;
+    }
+    case RelationType.avoidance: {
+      RelationTypeMapping[RelationType.risk].disableContextMenu.value = false;
+      RelationTypeMapping[RelationType.avoidance].disableContextMenu.value = true;
+      RelationTypeMapping[RelationType.attackTool].disableContextMenu.value = true;
+      RelationTypeMapping[RelationType.threatActor].disableContextMenu.value = true;
+      disableContextMenuAll.value = false;
+      disableContextMenuOpenAsRoot.value = false;
+      break;
+    }
+    case RelationType.attackTool: {
+      RelationTypeMapping[RelationType.risk].disableContextMenu.value = false;
+      RelationTypeMapping[RelationType.avoidance].disableContextMenu.value = false;
+      RelationTypeMapping[RelationType.attackTool].disableContextMenu.value = true;
+      RelationTypeMapping[RelationType.threatActor].disableContextMenu.value = false;
+      disableContextMenuAll.value = false;
+      disableContextMenuOpenAsRoot.value = false;
+      break;
+    }
+    case RelationType.threatActor: {
+      RelationTypeMapping[RelationType.risk].disableContextMenu.value = false;
+      RelationTypeMapping[RelationType.avoidance].disableContextMenu.value = true;
+      RelationTypeMapping[RelationType.attackTool].disableContextMenu.value = false;
+      RelationTypeMapping[RelationType.threatActor].disableContextMenu.value = true;
+      disableContextMenuAll.value = false;
+      disableContextMenuOpenAsRoot.value = false;
+      break;
+    }
+  }
+
+  if (node.id == relKey.value) {
+    disableContextMenuOpenAsRoot.value = true;
+  }
+
+  nodeType.value = node.type as RelationType;
+  nodeId.value = node.id;
+  touchActionVisible.value = true;
+};
+
+const touchActionClose = () => {
+  touchActionVisible.value = false;
+};
+
 const clickContextMenu = (reqType: RelationType) => {
   genRGJsonData(reqType, nodeType.value, nodeId.value);
+  touchActionVisible.value = false;
 };
 
 const gotoNewRelationView = () => {
+  touchActionVisible.value = false;
   router.push({
     name: "relation",
     params: {
@@ -1235,6 +1308,7 @@ const gotoNewRelationView = () => {
 };
 
 const gotoItemDetailView = () => {
+  touchActionVisible.value = false;
   let routeName = "";
   switch (nodeType.value) {
     case RelationType.risk: {
@@ -1353,7 +1427,8 @@ const doFilter = () => {
                   justify-content: center;
                 "
                 @dblclick="nodeClick(node, $event)"
-                @contextmenu="nodeClick(node, $event)"
+                @contextmenu.prevent="nodeClick(node, $event)"
+                @click="isMobile && handleNodeTouch(node)"
                 v-html="(node as Node).text"
               ></div>
             </template>
@@ -1426,6 +1501,30 @@ const doFilter = () => {
         </div>
       </el-tab-pane>
     </el-tabs>
+
+    <!-- 手机端触摸操作面板 -->
+    <div v-if="touchActionVisible" class="touch-action-overlay" @click="touchActionClose">
+      <div class="touch-action-sheet" @click.stop>
+        <div class="touch-action-item"
+          v-for="(item, key) in RelationTypeMapping"
+          :key="key"
+          :class="{ disabled: item.disableContextMenu.value }"
+          @click="!item.disableContextMenu.value && clickContextMenu(key)"
+        >{{ item.title }}</div>
+        <div class="touch-action-item"
+          :class="{ disabled: disableContextMenuAll }"
+          @click="!disableContextMenuAll && clickContextMenu(RelationType.all)"
+        >{{ $t('fetchAllRelations') }}</div>
+        <div class="touch-action-divider"></div>
+        <div class="touch-action-item"
+          :class="{ disabled: disableContextMenuOpenAsRoot }"
+          @click="!disableContextMenuOpenAsRoot && gotoNewRelationView()"
+        >{{ $t('openAsRoot') }}</div>
+        <div class="touch-action-item" @click="gotoItemDetailView()">{{ $t('viewDetail') }}</div>
+        <div class="touch-action-divider"></div>
+        <div class="touch-action-item touch-action-cancel" @click="touchActionClose">{{ $t('cancel') }}</div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -1434,7 +1533,7 @@ const doFilter = () => {
   position: relative;
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 132px);
+  height: calc(100dvh - 132px);
   min-height: 480px;
   overflow: hidden;
   padding: 0 12px 4px;
@@ -1508,7 +1607,7 @@ const doFilter = () => {
   min-height: 100%;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 767px) {
   .relation-selector {
     position: static;
     width: 100%;
@@ -1526,6 +1625,22 @@ const doFilter = () => {
     display: flex;
     flex-direction: column;
     gap: 8px;
+  }
+
+  .relation-tabs :deep(.el-tabs__nav-wrap) {
+    padding-right: 0;
+  }
+
+  .filter-pane {
+    position: static;
+    margin-bottom: 8px;
+    padding: 8px 16px;
+  }
+
+  #node-filter-pane,
+  #line-filter-pane {
+    left: auto;
+    right: auto;
   }
 }
 
@@ -1569,6 +1684,59 @@ const doFilter = () => {
 :deep(svg text) {
   font-size: 14px !important;
   fill: var(--break-graph-text) !important;
+}
+
+/* 触摸操作面板 */
+.touch-action-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.touch-action-sheet {
+  width: 100%;
+  max-width: 500px;
+  background: var(--break-bg-card);
+  border-radius: 16px 16px 0 0;
+  padding: 8px 0;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.touch-action-item {
+  padding: 14px 20px;
+  font-size: 16px;
+  color: var(--break-text-primary);
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.15s;
+}
+
+.touch-action-item:hover,
+.touch-action-item:active {
+  background: var(--break-bg-secondary);
+}
+
+.touch-action-item.disabled {
+  color: var(--break-text-weak);
+  cursor: not-allowed;
+}
+
+.touch-action-divider {
+  height: 1px;
+  background: var(--break-border);
+  margin: 4px 20px;
+}
+
+.touch-action-cancel {
+  font-weight: 600;
+  color: var(--break-text-secondary);
 }
 </style>
 

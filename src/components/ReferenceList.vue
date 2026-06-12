@@ -56,7 +56,8 @@ function getRefTitle(index: number): string {
   text-decoration: none;
 }
 
-.reference-item a:hover {
+.reference-item a:hover,
+.reference-item a:active {
   color: var(--break-link-hover);
   text-decoration: underline;
 }

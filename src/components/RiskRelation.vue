@@ -17,6 +17,9 @@ const props = defineProps<{
 const { t } = useI18n();
 const { isDark } = useTheme();
 
+// 触摸设备上允许缩放和拖拽
+const isTouchDevice = typeof window !== "undefined" && ("ontouchstart" in window || navigator.maxTouchPoints > 0);
+
 watch(
   () => props.rKey,
   () => {
@@ -30,9 +33,9 @@ const graphRef$ = ref<RelationGraph>();
 const graphVisible = ref(true);
 
 const graphOptions: RGOptions = reactive({
-  allowShowMiniToolBar: false, //是否显示工具栏
-  disableZoom: true, //是否禁用缩放
-  disableDragCanvas: true, //是否禁用拖拽画布
+  allowShowMiniToolBar: isTouchDevice, //触摸设备显示工具栏
+  disableZoom: !isTouchDevice, //触摸设备允许缩放
+  disableDragCanvas: !isTouchDevice, //触摸设备允许拖拽画布
   defaultExpandHolderPosition: "hide",
   backgroundColor: "transparent",
   defaultLineColor: "#999999",
@@ -155,7 +158,7 @@ const setJsonData = () => {
 <template>
   <!-- 关系图 -->
   <div
-    style="border: var(--break-graph-border) solid 1px; height: calc(60vh); width: 100%"
+    style="border: var(--break-graph-border) solid 1px; height: calc(60dvh); width: 100%"
     @dblclick="
       $router.push({ name: 'relation', params: { type: 'risk', key: rKey } })
     "

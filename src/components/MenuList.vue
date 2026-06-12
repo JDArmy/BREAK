@@ -4,21 +4,24 @@ import "element-plus/es/components/menu-item/style/css";
 import "element-plus/es/components/dropdown/style/css";
 import "element-plus/es/components/dropdown-menu/style/css";
 import "element-plus/es/components/dropdown-item/style/css";
+import "element-plus/es/components/drawer/style/css";
 import "element-plus/theme-chalk/display.css";
 
 import GithubPane from "@/components/GithubPane.vue";
 import SearchDialog from "@/components/SearchDialog.vue";
 import ThemeToggle from "@/components/ThemeToggle.vue";
 import iconTranslate from "@/components/icons/iconTranslate.vue";
-import { ArrowDown, Search } from "@element-plus/icons-vue";
+import { ArrowDown, Search, Menu as MenuIcon } from "@element-plus/icons-vue";
 import { useI18n } from "vue-i18n";
 import { languages, setLocale } from "@/i18n";
 import { ref } from "vue";
-import { useRouter } from "vue-router";
+import { useRouter, useRoute } from "vue-router";
 
 const { locale } = useI18n();
 const router = useRouter();
+const route = useRoute();
 const searchOpen = ref(false);
+const mobileMenuOpen = ref(false);
 const shortcutHint = navigator.platform?.includes("Mac") ? "⌘K" : "Ctrl+K";
 
 const handleLocaleChange = (lang: string) => {
@@ -36,7 +39,13 @@ const handleKnowledgeCommand = (command: string) => {
   const path = knowledgeRoutes[command];
   if (path) {
     router.push(path);
+    mobileMenuOpen.value = false;
   }
+};
+
+const handleMobileNav = (path: string) => {
+  router.push(path);
+  mobileMenuOpen.value = false;
 };
 
 const isKnowledgeActive = (fullPath: string) =>
@@ -53,6 +62,7 @@ const getActiveIndex = (fullPath: string) => {
 </script>
 
 <template>
+  <!-- 移动端导航栏 -->
   <el-menu
     :default-active="getActiveIndex($route.fullPath)"
     mode="horizontal"
@@ -60,7 +70,7 @@ const getActiveIndex = (fullPath: string) => {
     background-color="#0f172a"
     text-color="#cbd5e1"
     active-text-color="#60a5fa"
-    :router="true"
+    :router="false"
     class="hidden-md-and-up"
     style="height: 100%"
   >
@@ -70,11 +80,111 @@ const getActiveIndex = (fullPath: string) => {
     <h3 class="banner" style="text-align: center; width: 100%; height: 100%">
       {{ $t("BREAK.name") }}
     </h3>
-    <div class="mobile-search" @click="searchOpen = true">
-      <el-icon><Search /></el-icon>
+    <div class="mobile-nav-right">
+      <div class="mobile-search" @click="searchOpen = true">
+        <el-icon><Search /></el-icon>
+      </div>
+      <div class="mobile-hamburger" @click="mobileMenuOpen = true">
+        <el-icon :size="20"><MenuIcon /></el-icon>
+      </div>
     </div>
   </el-menu>
 
+  <!-- 移动端侧滑菜单 -->
+  <el-drawer
+    v-model="mobileMenuOpen"
+    direction="ltr"
+    :size="280"
+    :show-close="false"
+    class="mobile-nav-drawer"
+  >
+    <template #header>
+      <div class="drawer-header">
+        <img src="/logo.png" class="drawer-logo" alt="JDArmy BREAK" />
+        <span class="drawer-title">{{ $t("BREAK.name") }}</span>
+      </div>
+    </template>
+    <div class="mobile-nav-list">
+      <div class="mobile-nav-item" :class="{ active: getActiveIndex(route.fullPath) === '/' }" @click="handleMobileNav('/')">
+        <span>{{ $t("menu.home") }}</span>
+      </div>
+
+      <div class="mobile-nav-group">
+        <div class="mobile-nav-group-title">{{ $t("menu.knowledge") }}</div>
+        <div class="mobile-nav-item" :class="{ active: getActiveIndex(route.fullPath) === '/risks' }" @click="handleMobileNav('/risks')">
+          <span>{{ $t("menu.risks") }}</span>
+        </div>
+        <div class="mobile-nav-item" :class="{ active: getActiveIndex(route.fullPath) === '/avoidances' }" @click="handleMobileNav('/avoidances')">
+          <span>{{ $t("menu.avoidances") }}</span>
+        </div>
+        <div class="mobile-nav-item" :class="{ active: getActiveIndex(route.fullPath) === '/attack-tools' }" @click="handleMobileNav('/attack-tools')">
+          <span>{{ $t("attackTools") }}</span>
+        </div>
+        <div class="mobile-nav-item" :class="{ active: getActiveIndex(route.fullPath) === '/threat-actors' }" @click="handleMobileNav('/threat-actors')">
+          <span>{{ $t("threatActors") }}</span>
+        </div>
+      </div>
+
+      <div class="mobile-nav-item" :class="{ active: route.fullPath.match(/^\/relation\//) }" @click="handleMobileNav('/relation/risk/R0001')">
+        <span>{{ $t("relationMap") }}</span>
+      </div>
+
+      <div class="mobile-nav-divider"></div>
+
+      <div class="mobile-nav-group">
+        <div class="mobile-nav-group-title">JDArmy</div>
+        <a class="mobile-nav-item mobile-nav-link" href="https://jd.army" target="_blank" rel="noopener noreferrer">
+          <span>Webpage</span>
+        </a>
+        <a class="mobile-nav-item mobile-nav-link" href="https://blog.jd.army" target="_blank" rel="noopener noreferrer">
+          <span>Blog</span>
+        </a>
+        <a class="mobile-nav-item mobile-nav-link" href="https://rtass.jd.army" target="_blank" rel="noopener noreferrer">
+          <span>RTASS</span>
+        </a>
+        <a class="mobile-nav-item mobile-nav-link" href="https://break.jd.army" target="_blank" rel="noopener noreferrer">
+          <span>BREAK</span>
+        </a>
+        <a class="mobile-nav-item mobile-nav-link" href="https://dsre.jd.army" target="_blank" rel="noopener noreferrer">
+          <span>DSRE</span>
+        </a>
+        <a class="mobile-nav-item mobile-nav-link" href="https://textwatermark.jd.army" target="_blank" rel="noopener noreferrer">
+          <span>Text Watermark</span>
+        </a>
+      </div>
+
+      <div class="mobile-nav-divider"></div>
+
+      <div class="mobile-nav-actions">
+        <ThemeToggle />
+        <el-dropdown trigger="click" @command="handleLocaleChange">
+          <span class="mobile-locale-toggle">
+            <icon-translate />
+            <span>{{ languages[locale as keyof typeof languages] }}</span>
+            <el-icon><arrow-down /></el-icon>
+          </span>
+          <template #dropdown>
+            <el-dropdown-menu>
+              <el-dropdown-item
+                v-for="(label, lang) in languages"
+                :key="lang"
+                :command="lang"
+                :class="{ 'is-active': locale === lang }"
+              >{{ label }}</el-dropdown-item>
+            </el-dropdown-menu>
+          </template>
+        </el-dropdown>
+      </div>
+
+      <div class="mobile-nav-footer">
+        <a href="https://github.com/JDArmy/BREAK" target="_blank" rel="noopener noreferrer" class="mobile-github">
+          <github-pane />
+        </a>
+      </div>
+    </div>
+  </el-drawer>
+
+  <!-- 桌面端导航栏 -->
   <el-menu
     :default-active="getActiveIndex($route.fullPath)"
     mode="horizontal"
@@ -235,7 +345,8 @@ const getActiveIndex = (fullPath: string) => {
   width: 100%;
 }
 
-.search-trigger:hover {
+.search-trigger:hover,
+.search-trigger:active {
   background: rgba(255, 255, 255, 0.15);
 }
 
@@ -262,14 +373,28 @@ const getActiveIndex = (fullPath: string) => {
   white-space: nowrap;
 }
 
-.mobile-search {
+.mobile-nav-right {
   position: absolute;
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mobile-search {
   cursor: pointer;
   color: #cbd5e1;
   font-size: 18px;
+}
+
+.mobile-hamburger {
+  cursor: pointer;
+  color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  padding: 4px;
 }
 
 .banner {
@@ -351,5 +476,112 @@ const getActiveIndex = (fullPath: string) => {
   text-align: center;
   color: #000;
   text-decoration: none;
+}
+
+/* 移动端侧滑菜单样式 */
+.drawer-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.drawer-logo {
+  width: 32px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.drawer-title {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--break-text-primary);
+}
+
+.mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mobile-nav-item {
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--break-text-secondary);
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.mobile-nav-item:hover,
+.mobile-nav-item:active {
+  background: var(--break-bg-secondary);
+  color: var(--break-text-primary);
+}
+
+.mobile-nav-item.active {
+  background: var(--break-highlight-bg);
+  color: var(--break-link);
+}
+
+.mobile-nav-link {
+  text-decoration: none;
+  display: block;
+}
+
+.mobile-nav-group {
+  margin-left: 12px;
+}
+
+.mobile-nav-group-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--break-text-muted);
+  padding: 10px 16px 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.mobile-nav-divider {
+  height: 1px;
+  background: var(--break-border);
+  margin: 8px 16px;
+}
+
+.mobile-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 16px;
+}
+
+.mobile-locale-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  color: var(--break-text-secondary);
+  font-size: 14px;
+}
+
+.mobile-nav-footer {
+  padding: 8px 16px;
+  margin-top: auto;
+}
+
+.mobile-github {
+  display: inline-flex;
+  color: var(--break-text-muted);
+}
+</style>
+
+<style>
+/* 非 scoped：Drawer 样式覆盖 */
+.mobile-nav-drawer .el-drawer__header {
+  margin-bottom: 0;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--break-border);
+}
+
+.mobile-nav-drawer .el-drawer__body {
+  padding: 8px 0;
 }
 </style>

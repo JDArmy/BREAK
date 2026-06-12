@@ -414,12 +414,15 @@ const getSceneRowSize = (sceneLength: number) => {
 }
 
 .risk:hover,
-.s-risk:hover {
+.risk:active,
+.s-risk:hover,
+.s-risk:active {
   background-color: var(--break-highlight-bg);
   border-color: var(--break-highlight-border);
 }
 
-.sub-risk-link:hover {
+.sub-risk-link:hover,
+.sub-risk-link:active {
   background-color: var(--break-highlight-bg);
 }
 
@@ -432,8 +435,11 @@ const getSceneRowSize = (sceneLength: number) => {
 }
 
 .risk a:hover,
+.risk a:active,
 .s-risk a:hover,
-.sub-risk a:hover {
+.s-risk a:active,
+.sub-risk a:hover,
+.sub-risk a:active {
   color: var(--break-link-hover);
 }
 
@@ -468,7 +474,8 @@ const getSceneRowSize = (sceneLength: number) => {
   color: var(--break-text-weak);
 }
 
-.sidebar-icon:hover {
+.sidebar-icon:hover,
+.sidebar-icon:active {
   border-left-color: var(--break-link);
   background-color: var(--break-highlight-bg);
   color: var(--break-link-hover);
@@ -518,7 +525,8 @@ const getSceneRowSize = (sceneLength: number) => {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.stat-card:hover {
+.stat-card:hover,
+.stat-card:active {
   transform: translateY(-4px);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
   background: linear-gradient(135deg, var(--break-stat-hover-start) 0%, var(--break-stat-hover-end) 100%);
@@ -551,7 +559,8 @@ const getSceneRowSize = (sceneLength: number) => {
   transition: color 0.2s;
 }
 
-.stat-item:hover {
+.stat-item:hover,
+.stat-item:active {
   color: var(--break-link);
 }
 
@@ -571,5 +580,23 @@ const getSceneRowSize = (sceneLength: number) => {
   font-size: 0.7em;
   margin-top: 0.3em;
   margin-bottom: 0.5em;
+}
+
+/* 移动端适配 */
+@media (max-width: 767px) {
+  .stats {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .stat-card {
+    min-width: 0;
+    flex: 1 1 calc(50% - 10px);
+    padding: 12px 16px;
+  }
+
+  .stat-number {
+    font-size: 1.5em;
+  }
 }
 </style>

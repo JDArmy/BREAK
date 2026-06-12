@@ -1,20 +1,19 @@
-import { ref, onMounted, onUnmounted } from "vue";
+import { useBreakpoints } from "./useBreakpoints";
 
-export function useDrawerWidth(breakpoint = 600, drawerSize = 600, innerSize = 450) {
-  const windowWidth = ref(window.innerWidth);
+export function useDrawerWidth() {
+  const { isMobile, isTablet } = useBreakpoints();
 
-  const onResize = () => {
-    windowWidth.value = window.innerWidth;
+  const getDrawerWidth = () => {
+    if (isMobile.value) return "100%";
+    if (isTablet.value) return "70vw";
+    return "600px";
   };
 
-  onMounted(() => window.addEventListener("resize", onResize));
-  onUnmounted(() => window.removeEventListener("resize", onResize));
-
-  const getDrawerWidth = () =>
-    windowWidth.value > breakpoint ? drawerSize : "100%";
-
-  const getInnerDrawerWidth = () =>
-    windowWidth.value > breakpoint ? innerSize : "100%";
+  const getInnerDrawerWidth = () => {
+    if (isMobile.value) return "100%";
+    if (isTablet.value) return "55vw";
+    return "450px";
+  };
 
   return { getDrawerWidth, getInnerDrawerWidth };
 }

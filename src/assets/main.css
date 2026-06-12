@@ -117,8 +117,30 @@
   line-height: 1.35;
 }
 
-.entity-link:hover {
+.entity-link:hover,
+.entity-link:active {
   color: var(--break-link-hover);
   border-color: var(--break-highlight-border);
   background: var(--break-highlight-bg);
+}
+
+/* ===== 移动端全局响应式 ===== */
+@media (max-width: 767px) {
+  .detail-heading {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .detail-heading h2 {
+    font-size: clamp(1.25rem, 4vw, 1.625rem);
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .entity-link {
+    min-height: 32px;
+  }
 }

@@ -20,9 +20,6 @@ import iconGithub from "@/components/icons/iconGithub.vue";
 
       <el-main>
         <RouterView />
-        <div class="hidden-md-and-up" style="text-align: center; margin-top: 20px; color: grey">
-          {{ $t("seeMoreInDesktop") }}
-        </div>
       </el-main>
 
       <el-footer>
@@ -53,15 +50,14 @@ import iconGithub from "@/components/icons/iconGithub.vue";
   width: 100%;
 }
 .el-main {
-  margin-bottom: 50px;
+  margin-bottom: 0;
 }
 .el-footer {
-  position: fixed;
+  position: sticky;
   z-index: 100;
   text-align: center;
   width: 100%;
   height: auto;
-  left: 0px;
   bottom: 0px;
   background-color: var(--break-footer-bg);
   color: var(--break-footer-text);

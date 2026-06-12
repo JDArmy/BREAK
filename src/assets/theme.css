@@ -1,6 +1,12 @@
 /* BREAK 主题 CSS 变量 */
 
 :root {
+  /* 响应式断点（与 Element Plus display.css 一致） */
+  --break-bp-sm: 480px; /* 小手机分界 */
+  --break-bp-md: 768px; /* 手机/平板分界 */
+  --break-bp-lg: 992px; /* 平板/桌面分界 */
+  --break-bp-xl: 1200px; /* 桌面 */
+
   /* 页面背景 */
   --break-bg-primary: #ffffff;
   --break-bg-secondary: #f8fafc;
@@ -138,6 +144,7 @@ html.dark .outside-link-menu a {
   color: var(--break-text-primary);
 }
 
-html.dark .outside-link-menu a:hover {
+html.dark .outside-link-menu a:hover,
+html.dark .outside-link-menu a:active {
   color: var(--break-link);
 }

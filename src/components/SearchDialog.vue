@@ -4,6 +4,7 @@ import { useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
 import { Search } from "@element-plus/icons-vue";
 import { useSearch, type EntityType, type SearchResult } from "@/composables/useSearch";
+import { useBreakpoints } from "@/composables/useBreakpoints";
 
 import "element-plus/es/components/dialog/style/css";
 import "element-plus/es/components/input/style/css";
@@ -15,6 +16,7 @@ const emit = defineEmits<{ "update:modelValue": [value: boolean] }>();
 const router = useRouter();
 const { t } = useI18n();
 const { search: doSearch } = useSearch();
+const { isMobile } = useBreakpoints();
 
 const query = ref("");
 const selectedIndex = ref(-1);
@@ -161,6 +163,11 @@ onUnmounted(() => {
 
 // 获取当前平台快捷键提示
 const shortcutHint = navigator.platform?.includes("Mac") ? "⌘K" : "Ctrl+K";
+
+// 触摸设备选中索引
+function handleTouchStart(index: number) {
+  selectedIndex.value = index;
+}
 </script>
 
 <template>
@@ -168,8 +175,8 @@ const shortcutHint = navigator.platform?.includes("Mac") ? "⌘K" : "Ctrl+K";
     :model-value="modelValue"
     @update:model-value="emit('update:modelValue', $event)"
     :show-close="false"
-    width="640px"
-    top="15vh"
+    :width="isMobile ? '92vw' : '640px'"
+    :top="isMobile ? '8vh' : '15vh'"
     class="search-dialog"
     :append-to-body="true"
     :close-on-click-modal="true"
@@ -205,9 +212,12 @@ const shortcutHint = navigator.platform?.includes("Mac") ? "⌘K" : "Ctrl+K";
             :class="{ selected: flatResults.findIndex(f => f.id === result.id && f.type === result.type) === selectedIndex }"
             @click="selectResult(result)"
             @mouseenter="selectedIndex = flatResults.findIndex(f => f.id === result.id && f.type === result.type)"
+            @touchstart.passive="handleTouchStart(flatResults.findIndex(f => f.id === result.id && f.type === result.type))"
           >
-            <span class="result-id">{{ result.id }}</span>
-            <span class="result-title" v-html="highlightText(result.title, debouncedQuery)" />
+            <div class="result-main-row">
+              <span class="result-id">{{ result.id }}</span>
+              <span class="result-title" v-html="highlightText(result.title, debouncedQuery)" />
+            </div>
             <span v-if="result.snippet" class="result-snippet" v-html="highlightText(result.snippet, debouncedQuery)" />
           </div>
         </div>
@@ -255,7 +265,7 @@ const shortcutHint = navigator.platform?.includes("Mac") ? "⌘K" : "Ctrl+K";
 }
 
 .search-results {
-  max-height: 400px;
+  max-height: min(60vh, 420px);
   overflow-y: auto;
   padding: 0 4px;
 }
@@ -284,8 +294,8 @@ const shortcutHint = navigator.platform?.includes("Mac") ? "⌘K" : "Ctrl+K";
 
 .search-result-item {
   display: flex;
-  align-items: center;
-  gap: 8px;
+  flex-direction: column;
+  gap: 2px;
   padding: 8px 12px;
   border-radius: 6px;
   cursor: pointer;
@@ -293,21 +303,28 @@ const shortcutHint = navigator.platform?.includes("Mac") ? "⌘K" : "Ctrl+K";
 }
 
 .search-result-item:hover,
+.search-result-item:active,
 .search-result-item.selected {
   background-color: var(--el-fill-color-light);
+}
+
+.result-main-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .result-id {
   font-size: 12px;
   color: var(--el-text-color-secondary);
   font-family: monospace;
-  min-width: 70px;
+  flex: 0 0 auto;
 }
 
 .result-title {
   font-size: 14px;
   color: var(--el-text-color-primary);
-  flex: 0 0 150px;
+  flex: 0 1 auto;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -316,8 +333,7 @@ const shortcutHint = navigator.platform?.includes("Mac") ? "⌘K" : "Ctrl+K";
 .result-snippet {
   font-size: 12px;
   color: var(--el-text-color-secondary);
-  flex: 1 1 auto;
-  min-width: 0;
+  padding-left: 80px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -346,6 +362,12 @@ const shortcutHint = navigator.platform?.includes("Mac") ? "⌘K" : "Ctrl+K";
   color: var(--el-color-primary);
   padding: 0 2px;
   border-radius: 2px;
+}
+
+@media (max-width: 767px) {
+  .result-snippet {
+    padding-left: 0;
+  }
 }
 </style>
 

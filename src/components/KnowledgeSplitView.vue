@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { computed, nextTick, ref, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
+import { useBreakpoints } from "@/composables/useBreakpoints";
+import { ArrowLeft } from "@element-plus/icons-vue";
+
+import "element-plus/es/components/button/style/css";
 
 interface KnowledgeItem {
   id: string;
@@ -22,7 +26,11 @@ const emit = defineEmits<{
 
 const route = useRoute();
 const router = useRouter();
+const { isMobile } = useBreakpoints();
 const query = ref("");
+
+// 移动端两态：list / detail
+const mobileView = ref<"list" | "detail">("list");
 
 const selectedItem = computed(() =>
   props.items.find((item) => item.id === props.selectedKey)
@@ -43,6 +51,14 @@ const selectItem = (key: string) => {
   if (!props.items.some((item) => item.id === key)) return;
   emit("select", key);
   router.replace({ name: props.routeName, hash: `#${key}` });
+  // 移动端选中后切换到详情态
+  if (isMobile.value) {
+    mobileView.value = "detail";
+  }
+};
+
+const backToList = () => {
+  mobileView.value = "list";
 };
 
 watch(
@@ -68,14 +84,25 @@ watch(
       props.items.some((item) => item.id === key)
     ) {
       emit("select", key);
+      if (isMobile.value) {
+        mobileView.value = "detail";
+      }
     }
   },
   { immediate: true }
 );
+
+// 屏幕尺寸变化时重置视图状态
+watch(isMobile, (mobile) => {
+  if (!mobile) {
+    mobileView.value = "list";
+  }
+});
 </script>
 
 <template>
-  <section class="knowledge-page">
+  <!-- 桌面端：双栏布局 -->
+  <section v-if="!isMobile" class="knowledge-page">
     <aside class="knowledge-sidebar">
       <div class="knowledge-header">
         <h3 class="knowledge-title">{{ title }}</h3>
@@ -114,6 +141,63 @@ watch(
       </template>
     </main>
   </section>
+
+  <!-- 移动端：两态切换 -->
+  <section v-else class="knowledge-mobile">
+    <!-- 列表态 -->
+    <template v-if="mobileView === 'list'">
+      <aside class="knowledge-sidebar knowledge-mobile-sidebar">
+        <div class="knowledge-header">
+          <h3 class="knowledge-title">{{ title }}</h3>
+          <slot name="filters" />
+          <el-input
+            v-model="query"
+            class="knowledge-search"
+            size="small"
+            clearable
+            :placeholder="searchPlaceholder"
+          />
+        </div>
+        <div class="knowledge-list">
+          <button
+            v-for="item in filteredItems"
+            :key="item.id"
+            class="knowledge-list-item"
+            :class="{ active: item.id === selectedKey }"
+            :data-knowledge-key="item.id"
+            type="button"
+            @click="selectItem(item.id)"
+          >
+            <span class="knowledge-id">{{ item.id }}</span>
+            <span class="knowledge-name">{{ item.title }}</span>
+            <span v-if="item.subtitle" class="knowledge-subtitle">{{ item.subtitle }}</span>
+          </button>
+          <div v-if="filteredItems.length === 0" class="knowledge-empty">
+            {{ $t("search.noResults") }}
+          </div>
+        </div>
+      </aside>
+    </template>
+
+    <!-- 详情态 -->
+    <template v-else>
+      <div class="knowledge-mobile-detail-header">
+        <el-button text @click="backToList" class="back-button">
+          <el-icon><ArrowLeft /></el-icon>
+          {{ $t("back") }}
+        </el-button>
+        <span v-if="selectedItem" class="mobile-detail-title">
+          <span class="knowledge-id">{{ selectedItem.id }}</span>
+          <span class="knowledge-name">{{ selectedItem.title }}</span>
+        </span>
+      </div>
+      <main class="knowledge-detail knowledge-mobile-detail">
+        <template v-if="selectedItem">
+          <slot :selected-key="selectedKey" />
+        </template>
+      </main>
+    </template>
+  </section>
 </template>
 
 <style scoped>
@@ -121,7 +205,7 @@ watch(
   display: grid;
   grid-template-columns: minmax(280px, 30%) 1fr;
   gap: 18px;
-  height: calc(100vh - 150px);
+  height: calc(100dvh - 150px);
   min-height: 520px;
 }
 
@@ -184,7 +268,8 @@ watch(
   cursor: pointer;
 }
 
-.knowledge-list-item:hover {
+.knowledge-list-item:hover,
+.knowledge-list-item:active {
   background: var(--break-bg-secondary);
   border-color: var(--break-border-light);
 }
@@ -227,18 +312,52 @@ watch(
   padding: 26px 30px 32px;
 }
 
-@media (max-width: 768px) {
-  .knowledge-page {
-    grid-template-columns: 1fr;
-    height: auto;
-  }
+/* 移动端两态布局 */
+.knowledge-mobile {
+  display: flex;
+  flex-direction: column;
+  height: calc(100dvh - 150px);
+  min-height: 420px;
+}
 
-  .knowledge-sidebar {
-    max-height: 320px;
-  }
+.knowledge-mobile-sidebar {
+  flex: 1;
+  max-height: none;
+  border-radius: 8px;
+}
 
-  .knowledge-detail {
-    min-height: 420px;
-  }
+.knowledge-mobile-detail-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--break-border);
+  background: var(--break-bg-card);
+  border-radius: 8px 8px 0 0;
+}
+
+.back-button {
+  flex: 0 0 auto;
+  padding: 4px 8px;
+}
+
+.mobile-detail-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  flex: 1;
+}
+
+.mobile-detail-title .knowledge-name {
+  color: var(--break-text-primary);
+  font-weight: 600;
+}
+
+.knowledge-mobile-detail {
+  flex: 1;
+  border-radius: 0 0 8px 8px;
+  border-top: none;
+  padding: 16px 18px 24px;
 }
 </style>

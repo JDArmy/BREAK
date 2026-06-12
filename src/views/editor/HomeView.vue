@@ -623,7 +623,7 @@ const transferChange = (relationItem: RelationItem) => {
 
 <template>
   <el-row :gutter="20">
-    <el-col :md="4">
+    <el-col :md="4" :xs="12">
       <el-select v-model="breakType" @change="breakKey = ''">
         <el-option
           v-for="bType in BreakType"
@@ -634,7 +634,7 @@ const transferChange = (relationItem: RelationItem) => {
         </el-option>
       </el-select>
     </el-col>
-    <el-col :md="4">
+    <el-col :md="4" :xs="12">
       <el-select v-model="breakKey">
         <el-option
           v-for="(item, key) in BREAK[breakType as keyof typeof BREAK] as any"
@@ -645,7 +645,7 @@ const transferChange = (relationItem: RelationItem) => {
         </el-option>
       </el-select>
     </el-col>
-    <el-col :md="4">
+    <el-col :md="4" :xs="24">
       最近更新：
       {{ breakItem ? breakItem.updated : "" }}
     </el-col>
@@ -705,7 +705,7 @@ const transferChange = (relationItem: RelationItem) => {
         </div>
       </el-col>
     </el-row>
-    <el-dialog v-model="showRefDialog" title="编辑参考资料" width="500px">
+    <el-dialog v-model="showRefDialog" title="编辑参考资料" width="min(500px, 90vw)">
       <el-form v-if="editingRef" label-width="80px">
         <el-form-item label="标题">
           <el-input v-model="editingRef.title" />
@@ -726,8 +726,24 @@ const transferChange = (relationItem: RelationItem) => {
 .el-transfer-panel {
   width: calc(calc(100% - 180px) / 2);
 }
-/* .el-transfer-panel__list,
-.el-transfer-panel__body {
-  height: 600px;
-} */
+
+@media (max-width: 767px) {
+  .el-transfer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .el-transfer-panel {
+    width: 100% !important;
+  }
+
+  .el-transfer__buttons {
+    padding: 10px 0;
+  }
+
+  .el-table {
+    overflow-x: auto;
+  }
+}
 </style>
