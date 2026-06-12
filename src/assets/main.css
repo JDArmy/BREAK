@@ -46,7 +46,7 @@
 
 .detail-heading h2 {
   margin: 6px 0 0;
-  font-size: 26px;
+  font-size: clamp(1.25rem, 4vw, 1.625rem);
   line-height: 1.32;
   color: var(--break-text-primary);
 }
@@ -59,7 +59,7 @@
   border-radius: 999px;
   background: var(--break-bg-secondary);
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: var(--break-text-muted);
 }
 
@@ -71,7 +71,7 @@
 .detail-section h3,
 .detail-grid h3 {
   margin: 0 0 10px;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 650;
   color: var(--break-text-secondary);
   text-transform: none;
@@ -113,7 +113,7 @@
   color: var(--break-link);
   background: var(--break-bg-secondary);
   text-decoration: none;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.35;
 }
 
@@ -142,5 +142,31 @@
 
   .entity-link {
     min-height: 32px;
+  }
+
+  /* 通用弹窗响应式 */
+  .el-dialog {
+    width: 92vw !important;
+    margin: 5vh auto !important;
+  }
+}
+
+/* 小手机断点 */
+@media (max-width: 479px) {
+  .detail-heading h2 {
+    font-size: 1.125rem;
+  }
+
+  .detail-heading {
+    gap: 8px;
+    padding-bottom: 16px;
+  }
+
+  .detail-grid > div {
+    padding: 10px 12px;
+  }
+
+  .entity-links {
+    gap: 4px 5px;
   }
 }
