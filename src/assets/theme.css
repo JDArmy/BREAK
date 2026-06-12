@@ -117,3 +117,27 @@ html.dark .el-dialog {
 html.dark .el-select-dropdown {
   background-color: var(--break-bg-card);
 }
+
+/* Element Plus Dropdown 暗色调整 */
+html.dark .el-dropdown-menu {
+  background-color: var(--break-bg-card);
+}
+
+html.dark .el-dropdown-menu__item {
+  color: var(--break-text-primary);
+}
+
+html.dark .el-dropdown-menu__item:not(.is-disabled):hover,
+html.dark .el-dropdown-menu__item:not(.is-disabled):focus {
+  background-color: var(--break-bg-secondary);
+  color: var(--break-text-primary);
+}
+
+/* JDArmy 下拉菜单链接暗色调整 */
+html.dark .outside-link-menu a {
+  color: var(--break-text-primary);
+}
+
+html.dark .outside-link-menu a:hover {
+  color: var(--break-link);
+}
