@@ -26,6 +26,9 @@ watch(
 
 const graphRef$ = ref<RelationGraph>();
 
+// 控制图谱组件的销毁与重建，用于主题切换时完整重绘 Canvas
+const graphVisible = ref(true);
+
 const graphOptions: RGOptions = reactive({
   allowShowMiniToolBar: false, //是否显示工具栏
   disableZoom: true, //是否禁用缩放
@@ -38,15 +41,20 @@ const graphOptions: RGOptions = reactive({
   defaultNodeBorderColor: "#efefef",
 });
 
-// 暗色模式下动态更新图谱颜色
+// 暗色模式下销毁并重建图谱，确保 Canvas 完整重绘
 watch(isDark, (dark) => {
   graphOptions.backgroundColor = dark ? "#0f172a" : "#ffffff";
   graphOptions.defaultLineColor = dark ? "#475569" : "#999999";
   graphOptions.defaultLineFontColor = dark ? "#94a3b8" : "#666666";
   graphOptions.defaultNodeFontColor = dark ? "#e2e8f0" : "#333333";
   graphOptions.defaultNodeBorderColor = dark ? "#334155" : "#efefef";
+  // 销毁图谱，等待 DOM 更新后重建
+  graphVisible.value = false;
   nextTick(() => {
-    graphRef$?.value?.getInstance()?.refresh();
+    graphVisible.value = true;
+    nextTick(() => {
+      setJsonData();
+    });
   });
 }, { immediate: true });
 graphOptions.layout = {
@@ -144,7 +152,7 @@ const setJsonData = () => {
     id="relation-graph-pane"
     :title="$t('more')"
   >
-    <relation-graph ref="graphRef$" :options="graphOptions" />
+    <relation-graph v-if="graphVisible" ref="graphRef$" :options="graphOptions" />
   </div>
 </template>
 

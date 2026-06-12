@@ -1,5 +1,13 @@
 # Change log
 
+## 2.7.4
+
+- 修复：关系图谱切换亮色/暗色主题时 Canvas 背景未更新
+  - 改用销毁重建策略：监听 isDark 变化时通过 v-if 销毁 relation-graph 组件，nextTick 后重建并重新加载数据
+  - RelationView 和 RiskRelation 均同步修复
+- 修复：导航栏标题和搜索框垂直未对齐
+- 修复：ThemeToggle 图标垂直对齐问题
+
 ## 2.7.3
 
 - 修复：ThemeToggle 图标在亮色模式下显示太阳而非月亮
