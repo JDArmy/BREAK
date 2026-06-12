@@ -147,6 +147,9 @@ interface Line {
 
 interface SankeyNode {
   name: string;
+  depth?: number;
+  entityType: Exclude<RelationType, RelationType.all>;
+  entityKey: string;
   itemStyle: {
     color: string;
   };
@@ -267,12 +270,16 @@ const buildAttackPaths = () => {
 const sankeyData = computed(() => {
   const nodeMap = new Map<string, SankeyNode>();
   const linkMap = new Map<string, SankeyLink>();
+  const paths = buildAttackPaths();
 
-  const addNode = (type: Exclude<RelationType, RelationType.all>, key: string) => {
+  const addNode = (type: Exclude<RelationType, RelationType.all>, key: string, depth: number) => {
     const name = getSankeyNodeName(type, key);
     if (!nodeMap.has(name)) {
       nodeMap.set(name, {
         name,
+        depth,
+        entityType: type,
+        entityKey: key,
         itemStyle: {
           color: RelationTypeMapping[type].color,
         },
@@ -291,17 +298,17 @@ const sankeyData = computed(() => {
     }
   };
 
-  buildAttackPaths().forEach((path) => {
+  paths.forEach((path) => {
     const pathNodes: string[] = [];
     if (path.threatActorKey) {
-      pathNodes.push(addNode(RelationType.threatActor, path.threatActorKey));
+      pathNodes.push(addNode(RelationType.threatActor, path.threatActorKey, 0));
     }
     if (path.attackToolKey) {
-      pathNodes.push(addNode(RelationType.attackTool, path.attackToolKey));
+      pathNodes.push(addNode(RelationType.attackTool, path.attackToolKey, 1));
     }
-    pathNodes.push(addNode(RelationType.risk, path.riskKey));
+    pathNodes.push(addNode(RelationType.risk, path.riskKey, 2));
     if (path.avoidanceKey) {
-      pathNodes.push(addNode(RelationType.avoidance, path.avoidanceKey));
+      pathNodes.push(addNode(RelationType.avoidance, path.avoidanceKey, 3));
     }
 
     pathNodes.forEach((nodeName, index) => {
@@ -318,11 +325,28 @@ const sankeyData = computed(() => {
   };
 });
 
+const sankeyChartHeight = computed(() => {
+  const nodesByDepth = sankeyData.value.nodes.reduce<Record<number, number>>((acc, node) => {
+    const depth = node.depth ?? 0;
+    acc[depth] = (acc[depth] ?? 0) + 1;
+    return acc;
+  }, {});
+  const maxLayerNodeCount = Math.max(1, ...Object.values(nodesByDepth));
+
+  return Math.min(Math.max(520, maxLayerNodeCount * 24 + 96), 3200);
+});
+
+const selectSankeyNode = (node: SankeyNode) => {
+  relType.value = node.entityType;
+  relKey.value = node.entityKey;
+};
+
 const renderSankeyChart = () => {
   if (activeView.value !== "sankey" || !sankeyChartRef.value) return;
   if (!sankeyChart) {
     sankeyChart = init(sankeyChartRef.value);
   }
+  sankeyChartRef.value.style.height = `${sankeyChartHeight.value}px`;
 
   sankeyChart.setOption({
     backgroundColor: isDark.value ? "#0f172a" : "#ffffff",
@@ -340,7 +364,8 @@ const renderSankeyChart = () => {
         top: 24,
         bottom: 24,
         nodeWidth: 18,
-        nodeGap: 12,
+        nodeGap: 10,
+        layoutIterations: 48,
         draggable: true,
         emphasis: {
           focus: "adjacency",
@@ -363,6 +388,13 @@ const renderSankeyChart = () => {
         },
       },
     ],
+  });
+  sankeyChart.off("dblclick");
+  sankeyChart.on("dblclick", (params) => {
+    const node = params.data as Partial<SankeyNode>;
+    if (node.entityType && node.entityKey) {
+      selectSankeyNode(node as SankeyNode);
+    }
   });
   sankeyChart.resize();
 };
@@ -930,11 +962,20 @@ const setRGJsonData = () => {
 };
 
 function rebuildGraphData() {
+  jsonData.rootId = relKey.value;
   nodes.splice(0, nodes.length);
   lines.splice(0, lines.length);
   addRootNode();
   genRGJsonData(RelationType.all, relType.value, relKey.value);
 }
+
+const refreshGraphAfterVisible = () => {
+  rebuildGraphData();
+  nextTick(() => {
+    graphRef$.value?.getInstance().refresh(true);
+    updateToolbarTitles();
+  });
+};
 
 const genRGJsonData = (
   reqType: RelationType,
@@ -1044,14 +1085,14 @@ watch(
 
 // 监听下拉框的值变化，改变路由
 watch(
-  () => relKey.value,
-  (newValue) => {
-    if (newValue !== route.params.key) {
+  () => [relType.value, relKey.value],
+  ([newType, newKey]) => {
+    if (newType !== route.params.type || newKey !== route.params.key) {
       router.push({
         name: "relation",
         params: {
-          type: relType.value,
-          key: newValue,
+          type: newType,
+          key: newKey,
         },
       });
     }
@@ -1064,7 +1105,7 @@ watch(
   () => {
     relType.value = route.params.type as RelationType;
     relKey.value = route.params.key as string;
-    rebuildGraphData();
+    refreshGraphAfterVisible();
   }
 );
 
@@ -1076,7 +1117,15 @@ watch(locale, () => {
   nextTick(renderSankeyChart);
 });
 
-watch([activeView, sankeyData, isDark], () => {
+watch(activeView, () => {
+  if (activeView.value === "sankey") {
+    nextTick(renderSankeyChart);
+  } else {
+    nextTick(refreshGraphAfterVisible);
+  }
+});
+
+watch(sankeyData, () => {
   if (activeView.value === "sankey") {
     nextTick(renderSankeyChart);
   }
@@ -1441,14 +1490,22 @@ const doFilter = () => {
   width: 100%;
   height: 100%;
   min-height: 420px;
-  overflow: hidden;
   border: var(--break-graph-border) solid 1px;
   background: var(--break-card-bg);
 }
 
+.relation-graph-pane {
+  overflow: hidden;
+}
+
+.sankey-pane {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 .sankey-chart {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
 }
 
 @media (max-width: 760px) {

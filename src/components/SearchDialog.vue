@@ -307,15 +307,20 @@ const shortcutHint = navigator.platform?.includes("Mac") ? "⌘K" : "Ctrl+K";
 .result-title {
   font-size: 14px;
   color: var(--el-text-color-primary);
+  flex: 0 0 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .result-snippet {
   font-size: 12px;
   color: var(--el-text-color-secondary);
+  flex: 1 1 auto;
+  min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  max-width: 300px;
 }
 
 .no-results {

@@ -20,6 +20,7 @@ vi.mock("@/BREAK", () => ({
     attackTools: {
       AT0001: { title: "打码平台", directCauseRisks: ["R0001"] },
       AT0042: { title: "撞库工具", directCauseRisks: ["R0032"] },
+      AT0064: { title: "信息窃取器", directCauseRisks: ["R0032"] },
     },
     threatActors: {
       TA0001: { title: "羊毛党", directCauseRisks: ["R0001"] },
@@ -42,7 +43,8 @@ const mockMessages = ref<Record<string, unknown>>({
         R0002: {
           title: "合规处罚风险",
           definition: "因违反法规而受到处罚的风险",
-          description: "企业因不合规行为面临监管处罚",
+          description:
+            "企业在业务快速扩张时可能忽略资质、流程、授权、数据处理边界和内部审计要求，长期积累后会在专项检查中暴露问题并面临监管处罚",
           influence: "中",
         },
         R0032: {
@@ -73,7 +75,8 @@ const mockMessages = ref<Record<string, unknown>>({
         },
         AT0042: {
           title: "撞库工具",
-          description: "利用已泄露的账号密码批量尝试登录",
+          description:
+            "这是一类自动化攻击工具，攻击者会准备代理、脚本、设备指纹和批量任务调度能力，在较长的攻击链路中不断尝试登录入口，最终通过撞库方式验证已泄露账号密码是否可用。",
         },
       },
       threatActors: {
@@ -158,7 +161,7 @@ vi.mock("vue-i18n", () => ({
 }));
 
 // 导入被测模块（在 mock 之后）
-import { useSearch } from "@/composables/useSearch";
+import { extractSnippetForSearch, useSearch } from "@/composables/useSearch";
 
 describe("useSearch", () => {
   beforeEach(() => {
@@ -231,6 +234,22 @@ describe("useSearch", () => {
       if (result.risk.length > 0) {
         expect(result.risk[0].snippet).toBeDefined();
       }
+    });
+
+    it("snippet 围绕实际命中关键词生成", () => {
+      const snippet = extractSnippetForSearch(
+        {
+          id: "R0002",
+          title: "合规处罚风险",
+          description:
+            "企业在业务快速扩张时可能忽略资质、流程、授权、数据处理边界和内部审计要求，长期积累后会在专项检查中暴露问题并面临监管处罚",
+        },
+        undefined,
+        "监管"
+      );
+
+      expect(snippet).toContain("监管");
+      expect(snippet).toMatch(/^\.\.\./);
     });
   });
 

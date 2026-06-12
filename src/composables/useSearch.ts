@@ -119,30 +119,50 @@ function buildIndexableItems(
 }
 
 /** 从 Fuse matches 中提取匹配片段 */
-function extractSnippet(
+export function extractSnippetForSearch(
   item: IndexableItem,
-  matches: readonly Fuse.FuseResultMatch[] | undefined
+  matches: readonly Fuse.FuseResultMatch[] | undefined,
+  query: string
 ): string {
-  if (!matches || matches.length === 0) return item.description || item.definition || "";
+  const fallback = item.description || item.definition || "";
+  const normalizedQuery = query.trim().toLowerCase();
+  const snippetRadiusBefore = 12;
+  const snippetRadiusAfter = 36;
+
+  const createSnippet = (fieldValue: string, start: number) => {
+    const snippetStart = Math.max(0, start - snippetRadiusBefore);
+    const snippetEnd = Math.min(fieldValue.length, start + query.trim().length + snippetRadiusAfter);
+    let snippet = fieldValue.substring(snippetStart, snippetEnd);
+    if (snippetStart > 0) snippet = "..." + snippet;
+    if (snippetEnd < fieldValue.length) snippet = snippet + "...";
+    return snippet;
+  };
+
+  if (normalizedQuery) {
+    const searchableFields = ["title", "definition", "description", "influence", "limitation"] as const;
+    for (const fieldName of searchableFields) {
+      const fieldValue = item[fieldName];
+      if (!fieldValue) continue;
+
+      const matchIndex = fieldValue.toLowerCase().indexOf(normalizedQuery);
+      if (matchIndex >= 0) return createSnippet(fieldValue, matchIndex);
+    }
+  }
+
+  if (!matches || matches.length === 0) return fallback;
 
   // 取第一个匹配字段，提取包含匹配的片段
   const firstMatch = matches[0];
   const fieldName = firstMatch.key as string;
   const fieldValue = (item as Record<string, unknown>)[fieldName] as string;
-  if (!fieldValue) return item.description || item.definition || "";
+  if (!fieldValue) return fallback;
 
   // 截取匹配位置附近的文本（前后各 30 字符）
   const indices = firstMatch.indices;
   if (!indices || indices.length === 0) return fieldValue.substring(0, 80);
 
   const [start] = indices[0];
-  const snippetStart = Math.max(0, start - 30);
-  const snippetEnd = Math.min(fieldValue.length, start + 50);
-  let snippet = fieldValue.substring(snippetStart, snippetEnd);
-  if (snippetStart > 0) snippet = "..." + snippet;
-  if (snippetEnd < fieldValue.length) snippet = snippet + "...";
-
-  return snippet;
+  return createSnippet(fieldValue, start);
 }
 
 export function useSearch() {
@@ -202,7 +222,7 @@ export function useSearch() {
         id: r.item.id,
         type,
         title: r.item.title,
-        snippet: extractSnippet(r.item, r.matches),
+        snippet: extractSnippetForSearch(r.item, r.matches, query),
       }));
     }
 
