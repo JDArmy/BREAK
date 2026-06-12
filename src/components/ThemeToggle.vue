@@ -83,6 +83,7 @@ const themeOptions: { mode: ThemeMode; labelKey: string; icon: "sun" | "moon" | 
   cursor: pointer;
   display: flex;
   align-items: center;
+  line-height: var(--el-menu-item-height);
 }
 
 .theme-toggle .el-dropdown-link {
