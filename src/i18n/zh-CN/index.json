@@ -25,6 +25,7 @@
   "site": "网站",
   "logo": "图标",
   "allScenes": "全场景",
+  "allCategories": "全部分类",
   "references": "参考",
   "events": "相关事件",
   "attackTools": "攻击工具",
@@ -93,6 +94,10 @@
   "lastUpdated": "最后更新",
   "search": {
     "placeholder": "搜索风险、规避手段、攻击工具...",
+    "riskPlaceholder": "搜索风险",
+    "avoidancePlaceholder": "搜索规避手段",
+    "attackToolPlaceholder": "搜索攻击工具",
+    "threatActorPlaceholder": "搜索威胁行为者",
     "noResults": "未找到匹配结果",
     "hint": "按 ESC 关闭",
     "groupRisk": "风险",

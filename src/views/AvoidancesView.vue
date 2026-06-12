@@ -1,272 +1,169 @@
 <script lang="ts" setup>
+import { computed, ref, watch } from "vue";
+import { useRoute, useRouter } from "vue-router";
+import { useI18n } from "vue-i18n";
 import BREAK from "@/BREAK";
-import { Link } from "@element-plus/icons-vue";
-import type { Avoidances } from "@/BREAK/avoidances";
-import { useRoute } from "vue-router";
-import { ref, watch } from "vue";
-import { CaretTop } from "@element-plus/icons-vue";
-import iconRelation from "@/components/icons/iconRelation.vue";
-import { useSafeI18n } from "@/composables/useSafeI18n";
-
-const { safeT } = useSafeI18n();
+import KnowledgeSplitView from "@/components/KnowledgeSplitView.vue";
+import ReferenceList from "@/components/ReferenceList.vue";
 
 const route = useRoute();
+const router = useRouter();
+const { t } = useI18n();
 
-const avoidanceCategories = Object.keys(BREAK.avoidanceCategories);
-const avoidances = Object();
-
-avoidanceCategories.forEach((acKey) => {
-  avoidances[acKey] = [];
-  Object.keys(BREAK.avoidances).forEach((aKey) => {
-    const avoidancesVal = BREAK.avoidances[aKey as keyof typeof BREAK.avoidances];
-    if (acKey !== avoidancesVal.category) {
-      return;
-    }
-    const avoidance = {
-      ...avoidancesVal,
-      aKey: aKey,
-    };
-    avoidances[acKey].push(avoidance);
-  });
-});
-
-const filteredAvoidances = (avoidanceCategoryKey: string) => {
-  const categoricalAvoidances: Avoidances = {};
-  Object.keys(BREAK.avoidances).forEach((avoidanceKey) => {
-    if (BREAK.avoidances[avoidanceKey].category === avoidanceCategoryKey) {
-      categoricalAvoidances[avoidanceKey] = BREAK.avoidances[avoidanceKey];
-    }
-  });
-  return categoricalAvoidances;
-};
-
-let totalAvoidancesRowSize = 24;
-const getAvoidanceRowSize = (
-  avoidanceCategoryLength: number,
-  avoidancesLength: number
-) => {
-  let step = Math.round((avoidanceCategoryLength / avoidancesLength) * 24);
-
-  totalAvoidancesRowSize =
-    totalAvoidancesRowSize <= 0 ? 24 : totalAvoidancesRowSize;
-
-  step = step > totalAvoidancesRowSize ? totalAvoidancesRowSize : step;
-  totalAvoidancesRowSize -= step;
-
-  return step;
-};
-
-// 页内锚点
-const getTableHeight = () =>
-  route.hash.split("#")[1] ? "unset" : window.innerHeight - 150;
-const tableHeight = ref(getTableHeight());
+const avoidanceKeys = Object.keys(BREAK.avoidances);
+const selectedAvoidanceKey = ref(route.hash.replace("#", "") || avoidanceKeys[0] || "");
+const selectedCategory = ref("");
 
 watch(
   () => route.hash,
-  () => {
-    tableHeight.value = getTableHeight();
-  }
+  (hash) => {
+    const key = hash.replace("#", "");
+    if (key && BREAK.avoidances[key]) selectedAvoidanceKey.value = key;
+  },
+  { immediate: true }
 );
 
-const tableRowClassName = ({ row }: { row: Record<string, string> }) => {
-  if (route.hash.split("#")[1] === row.aKey) {
-    return "anchor-row";
+const avoidanceItems = computed(() =>
+  avoidanceKeys
+    .filter(
+      (aKey) =>
+        !selectedCategory.value ||
+        BREAK.avoidances[aKey].category === selectedCategory.value
+    )
+    .map((aKey) => {
+      const category = BREAK.avoidances[aKey].category;
+      return {
+        id: aKey,
+        title: t(`BREAK.avoidances.${aKey}.title`),
+        subtitle: `${category}: ${t(`BREAK.avoidanceCategories.${category}.title`)}`,
+      };
+    })
+);
+
+watch(selectedCategory, () => {
+  if (
+    selectedCategory.value &&
+    selectedAvoidance.value?.category !== selectedCategory.value
+  ) {
+    selectedAvoidanceKey.value = avoidanceItems.value[0]?.id || "";
   }
-  return "";
-};
+});
 
-const clickAvoidanceCategoryTitle = (e: MouseEvent) => {
-  const target = e.target as HTMLElement;
-  window.scrollTo({
-    top: target.offsetTop - 10,
-    behavior: "smooth",
-  });
-};
+const selectedAvoidance = computed(() => BREAK.avoidances[selectedAvoidanceKey.value]);
 
-const scrollToTop = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
+const relatedRiskKeys = computed(() =>
+  Object.keys(BREAK.risks).filter((rKey) =>
+    BREAK.risks[rKey].avoidances.includes(selectedAvoidanceKey.value)
+  )
+);
+
+const relatedAttackToolKeys = computed(() =>
+  Object.keys(BREAK.attackTools).filter((atKey) =>
+    BREAK.attackTools[atKey].avoidances.includes(selectedAvoidanceKey.value)
+  )
+);
+
+const openRelationGraph = (aKey: string) => {
+  const relRoute = router.resolve({
+    name: "relation",
+    params: { type: "avoidance", key: aKey },
   });
+  window.open(relRoute.href, "_blank", "noopener,noreferrer");
 };
 </script>
 
-<template lang="">
-  <h3>{{ $t("menu.avoidances") }}</h3>
-  <el-row :gutter="20">
-    <el-col
-      v-for="(
-        avoidanceCategory, avoidanceCategoryKey
-      ) in BREAK.avoidanceCategories"
-      :md="
-        getAvoidanceRowSize(
-          Object.keys(avoidances[avoidanceCategoryKey]).length,
-          Object.keys(BREAK.avoidances).length
-        )
-      "
-      :key="avoidanceCategoryKey"
-    >
-      <h4>
-        {{ $t(`BREAK.avoidanceCategories.${avoidanceCategoryKey}.title`) }}
-      </h4>
-      <div>
-        <router-link
-          v-for="(avoidance, avoidanceKey) in filteredAvoidances(
-            avoidanceCategoryKey
-          )"
-          :key="avoidanceKey"
-          :title="avoidance.definition"
-          class="router-link"
-          :to="{ name: 'avoidances', hash: '#' + avoidanceKey }"
-        >
-          <el-button size="small" round class="ml-2">
-            {{ avoidanceKey }}:{{
-              $t(`BREAK.avoidances.${avoidanceKey}.title`)
-            }}
-          </el-button>
-        </router-link>
-      </div>
-    </el-col>
-  </el-row>
-
-  <div
-    v-for="(avoidance, avoidanceCategoryKey) in avoidances"
-    :key="avoidanceCategoryKey"
+<template>
+  <KnowledgeSplitView
+    :title="$t('menu.avoidances')"
+    route-name="avoidances"
+    :items="avoidanceItems"
+    :selected-key="selectedAvoidanceKey"
+    :search-placeholder="$t('search.avoidancePlaceholder')"
+    @select="selectedAvoidanceKey = $event"
   >
-    <div>
-      <h4
-        class="avoidance-category-title"
-        @click="clickAvoidanceCategoryTitle($event)"
+    <template #filters>
+      <el-select
+        v-model="selectedCategory"
+        class="avoidance-category-filter"
+        size="small"
+        clearable
+        :placeholder="$t('allCategories')"
       >
-        {{ $t(`BREAK.avoidanceCategories.${avoidanceCategoryKey}.title`) }} ({{
-          BREAK.avoidanceCategories[avoidanceCategoryKey].keyword
-        }})
-      </h4>
-      <div class="avoidance-category-description">
-        {{
-          $t(`BREAK.avoidanceCategories.${avoidanceCategoryKey}.description`)
-        }}
-      </div>
-    </div>
-    <el-table
-      :height="tableHeight"
-      :data="avoidances[avoidanceCategoryKey]"
-      :row-class-name="tableRowClassName"
-      stripe
-      border
-    >
-      <el-table-column prop="aKey" width="135px" :label="$t('ID')">
-        <template #default="scope">
-          <a class="anchor-position" :id="scope.row.aKey"></a>
-          {{ scope.row.aKey }}
-          <router-link
-            :title="$t('relationMap')"
-            class="relation-map-icon"
-            :to="{
-              name: 'relation',
-              params: { type: 'avoidance', key: scope.row.aKey },
-            }"
-          >
-            <icon-relation width="14px" height="14px" />
-          </router-link>
-        </template>
-      </el-table-column>
-      <el-table-column width="150px" :label="$t('title')">
-        <template #header>{{ $t("title") }}</template>
-        <template #default="scope">
-          {{
-            scope.row.aKey ? $t(`BREAK.avoidances.${scope.row.aKey}.title`) : ""
-          }}
-        </template>
-      </el-table-column>
-      <el-table-column :label="$t('definition')">
-        <template #default="scope">
-          {{
-            scope.row.aKey
-              ? $t(`BREAK.avoidances.${scope.row.aKey}.definition`)
-              : ""
-          }}
-        </template>
-      </el-table-column>
-      <el-table-column :label="$t('description')">
-        <template #default="scope">
-          {{
-            scope.row.aKey
-              ? $t(`BREAK.avoidances.${scope.row.aKey}.description`)
-              : ""
-          }}
-        </template>
-      </el-table-column>
-      <el-table-column :label="$t('limitation')">
-        <template #default="scope">
-          {{
-            scope.row.aKey
-              ? $t(`BREAK.avoidances.${scope.row.aKey}.limitation`)
-              : ""
-          }}
-        </template>
-      </el-table-column>
-      <el-table-column width="250px" :label="$t('references')">
-        <template #default="scope">
-          <ul class="reference-list">
-            <li
-              v-for="(reference, refIdx) in scope.row.references"
-              :key="refIdx"
-            >
-              <a v-if="scope.row.aKey && reference.link" :href="reference.link" target="_blank" rel="noopener noreferrer"
-                ><el-icon><Link /></el-icon
-                >{{
-                  safeT(
-                    `BREAK.avoidances.${scope.row.aKey}.references[${refIdx}].title`
-                  )
-                }}
-              </a>
-              <span v-else-if="scope.row.aKey">
-                {{
-                  safeT(
-                    `BREAK.avoidances.${scope.row.aKey}.references[${refIdx}].title`
-                  )
-                }}
-              </span>
-            </li>
-          </ul>
-        </template>
-      </el-table-column>
-    </el-table>
-  </div>
+        <el-option
+          v-for="(category, categoryKey) in BREAK.avoidanceCategories"
+          :key="categoryKey"
+          :label="$t(`BREAK.avoidanceCategories.${categoryKey}.title`)"
+          :value="categoryKey"
+        />
+      </el-select>
+    </template>
 
-  <div style="text-align: center; margin: 10px">
-    <el-button
-      type="primary"
-      size="small"
-      @click="scrollToTop"
-      :icon="CaretTop"
-      >{{ $t("backtop") }}</el-button
-    >
-  </div>
+    <article v-if="selectedAvoidance" class="detail-panel">
+      <div class="detail-heading">
+        <div>
+          <div class="detail-id">{{ selectedAvoidanceKey }}</div>
+          <h2>{{ $t(`BREAK.avoidances.${selectedAvoidanceKey}.title`) }}</h2>
+        </div>
+        <el-button type="primary" size="small" @click="openRelationGraph(selectedAvoidanceKey)">
+          {{ $t("openRelationGraph") }}
+        </el-button>
+      </div>
+
+      <section class="detail-section">
+        <h3>{{ $t("definition") }}</h3>
+        <p>{{ $t(`BREAK.avoidances.${selectedAvoidanceKey}.definition`) }}</p>
+      </section>
+      <section class="detail-section">
+        <h3>{{ $t("description") }}</h3>
+        <p>{{ $t(`BREAK.avoidances.${selectedAvoidanceKey}.description`) }}</p>
+      </section>
+      <section v-if="$t(`BREAK.avoidances.${selectedAvoidanceKey}.limitation`)" class="detail-section">
+        <h3>{{ $t("limitation") }}</h3>
+        <p>{{ $t(`BREAK.avoidances.${selectedAvoidanceKey}.limitation`) }}</p>
+      </section>
+      <section class="detail-section">
+        <h3>{{ $t("menu.avoidances") }}</h3>
+        <p>
+          {{ selectedAvoidance.category }}:
+          {{ $t(`BREAK.avoidanceCategories.${selectedAvoidance.category}.title`) }}
+        </p>
+      </section>
+      <section v-if="relatedRiskKeys.length" class="detail-section">
+        <h3>{{ $t("risks") }}</h3>
+        <div class="entity-links">
+          <router-link
+            v-for="rKey in relatedRiskKeys"
+            :key="rKey"
+            :to="{ name: 'risks', hash: `#${rKey}` }"
+            class="entity-link"
+          >
+            {{ rKey }}: {{ $t(`BREAK.risks.${rKey}.title`) }}
+          </router-link>
+        </div>
+      </section>
+      <section v-if="relatedAttackToolKeys.length" class="detail-section">
+        <h3>{{ $t("attackTools") }}</h3>
+        <div class="entity-links">
+          <router-link
+            v-for="atKey in relatedAttackToolKeys"
+            :key="atKey"
+            :to="{ name: 'attackTools', hash: `#${atKey}` }"
+            class="entity-link"
+          >
+            {{ atKey }}: {{ $t(`BREAK.attackTools.${atKey}.title`) }}
+          </router-link>
+        </div>
+      </section>
+      <section v-if="selectedAvoidance.references?.length" class="detail-section">
+        <h3>{{ $t("references") }}</h3>
+        <ReferenceList type="avoidances" :entity-key="selectedAvoidanceKey" />
+      </section>
+    </article>
+  </KnowledgeSplitView>
 </template>
 
 <style scoped>
-.avoidance-category-title {
-  margin-top: 25px;
-  margin-bottom: 5px;
-  text-align: center;
-  cursor: pointer;
-}
-.avoidance-category-description {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 50%;
-  color: gray;
-}
-
-.reference-list {
-  padding: 0;
-  margin-left: 5px;
-}
-
-.router-link {
-  color: inherit;
-  text-decoration: none;
+.avoidance-category-filter {
+  flex: 0 0 96px;
 }
 </style>

@@ -1,139 +1,120 @@
 <script lang="ts" setup>
-import { ref } from "vue";
+import { computed, ref, watch } from "vue";
+import { useRoute, useRouter } from "vue-router";
+import { useI18n } from "vue-i18n";
 import BREAK from "@/BREAK";
-import AvoidanceDetail from "@/components/AvoidanceDetail.vue";
-import RiskDetail from "@/components/RiskDetail.vue";
-import iconRelation from "@/components/icons/iconRelation.vue";
-import { useAnchorTable } from "@/composables/useAnchorTable";
+import KnowledgeSplitView from "@/components/KnowledgeSplitView.vue";
+import ReferenceList from "@/components/ReferenceList.vue";
 
-const avoidanceDrawer = ref(false);
-const avoidanceKey = ref("");
+const route = useRoute();
+const router = useRouter();
+const { t } = useI18n();
 
-const risks = Object.keys(BREAK.risks).map((rKey) => ({
-  ...BREAK.risks[rKey as keyof typeof BREAK.risks],
-  rKey: rKey,
-}));
+const risks = Object.keys(BREAK.risks);
+const selectedRiskKey = ref(route.hash.replace("#", "") || risks[0] || "");
 
-const riskDrawer = ref(false);
-const riskKey = ref("");
+const riskItems = computed(() =>
+  risks.map((rKey) => ({
+    id: rKey,
+    title: t(`BREAK.risks.${rKey}.title`),
+    subtitle: t(`BREAK.risks.${rKey}.definition`).slice(0, 56),
+  }))
+);
 
-const { getTableHeight, tableRowClassName } = useAnchorTable("rKey");
+watch(
+  () => route.hash,
+  (hash) => {
+    const key = hash.replace("#", "");
+    if (key && BREAK.risks[key]) selectedRiskKey.value = key;
+  },
+  { immediate: true }
+);
+
+const selectedRisk = computed(() => BREAK.risks[selectedRiskKey.value]);
+
+const getRiskDescriptionTools = (rKey: string) =>
+  Object.keys(BREAK.attackTools).filter((atKey) => {
+    const at = BREAK.attackTools[atKey as keyof typeof BREAK.attackTools];
+    return at.directCauseRisks.includes(rKey) || at.indirectSupportRisks.includes(rKey);
+  });
+
+const openRelationGraph = (rKey: string) => {
+  const relRoute = router.resolve({
+    name: "relation",
+    params: { type: "risk", key: rKey },
+  });
+  window.open(relRoute.href, "_blank", "noopener,noreferrer");
+};
 </script>
 
-<template lang="">
-  <h3>{{ $t("menu.risks") }}</h3>
-  <div id="risks-list">
-    <router-link
-      v-for="risk in risks"
-      :key="risk.rKey"
-      :title="risk.definition"
-      class="router-link ml-2"
-      :to="{ name: 'risks', hash: '#' + risk.rKey }"
-    >
-      <el-button size="small" round class="ml-2">
-        {{ risk.rKey }}:{{ $t(`BREAK.risks.${risk.rKey}.title`) }}
-      </el-button>
-    </router-link>
-  </div>
-  <el-table
-    :height="getTableHeight()"
-    :scrollbar-always-on="true"
-    :data="risks"
-    :row-class-name="tableRowClassName"
-    stripe
-    border
+<template>
+  <KnowledgeSplitView
+    :title="$t('menu.risks')"
+    route-name="risks"
+    :items="riskItems"
+    :selected-key="selectedRiskKey"
+    :search-placeholder="$t('search.riskPlaceholder')"
+    @select="selectedRiskKey = $event"
   >
-    <el-table-column prop="rKey" width="135px" :label="$t('riskKey')">
-      <template v-slot="scope">
-        <a :id="scope.row.rKey" class="anchor-position"></a>
-        <a
-          @click="riskKey = scope.row.rKey; riskDrawer = true"
-          href="javascript:void(0);"
-          >{{ scope.row.rKey }}</a
-        >
-        <router-link
-          :title="$t('relationMap')"
-          class="relation-map-icon"
-          :to="{
-            name: 'relation',
-            params: { type: 'risk', key: scope.row.rKey },
-          }"
-        >
-          <icon-relation width="14px" height="14px" />
-        </router-link>
-      </template>
-    </el-table-column>
-    <el-table-column prop="title" width="150px" :label="$t('riskTitle')">
-      <template #default="scope">
-        {{ scope.row.rKey ? $t(`BREAK.risks.${scope.row.rKey}.title`) : "" }}
-      </template>
-    </el-table-column>
-    <el-table-column prop="definition" :label="$t('riskDefinition')"
-      ><template #default="scope">
-        {{
-          scope.row.rKey ? $t(`BREAK.risks.${scope.row.rKey}.definition`) : ""
-        }}
-      </template></el-table-column
-    >
-    <el-table-column prop="description" :label="$t('riskDescription')"
-      ><template #default="scope">
-        {{
-          scope.row.rKey ? $t(`BREAK.risks.${scope.row.rKey}.description`) : ""
-        }}
-      </template></el-table-column
-    >
-    <el-table-column
-      prop="complexity"
-      width="100px"
-      :label="$t('riskComplexity')"
-      ><template #default="scope">
-        {{
-          scope.row.rKey ? $t(`BREAK.risks.${scope.row.rKey}.complexity`) : ""
-        }}
-      </template></el-table-column
-    >
-    <el-table-column prop="influence" :label="$t('riskInfluence')"
-      ><template #default="scope">
-        {{
-          scope.row.rKey ? $t(`BREAK.risks.${scope.row.rKey}.influence`) : ""
-        }}
-      </template></el-table-column
-    >
-    <!-- <el-table-column :label="$t('avoidance')">
-      <template #default="scope">
-        <el-button
-          size="small"
-          v-for="aKey in scope.row.avoidances"
-          :key="aKey"
-          class="relational-link"
-          @click="
-            avoidanceKey = aKey;
-            avoidanceDrawer = true;
-          "
-          round
-          >{{
-            aKey + ":&nbsp;" + $t(`BREAK.avoidances.${aKey}.title`)
-          }}</el-button
-        >
-      </template>
-    </el-table-column> -->
-  </el-table>
-  <!-- 手段详情页 -->
-  <AvoidanceDetail
-    v-on:drawer-close="avoidanceDrawer = false"
-    :drawer="avoidanceDrawer"
-    :aKey="avoidanceKey"
-  />
-  <!-- 风险详情页 -->
-  <risk-detail
-    v-on:drawer-close="riskDrawer = false; riskKey = ''"
-    :drawer="riskDrawer"
-    :rKey="riskKey"
-  />
-</template>
+    <article v-if="selectedRisk" class="detail-panel">
+      <div class="detail-heading">
+        <div>
+          <div class="detail-id">{{ selectedRiskKey }}</div>
+          <h2>{{ $t(`BREAK.risks.${selectedRiskKey}.title`) }}</h2>
+        </div>
+        <el-button type="primary" size="small" @click="openRelationGraph(selectedRiskKey)">
+          {{ $t("openRelationGraph") }}
+        </el-button>
+      </div>
 
-<style scoped>
-#risks-list {
-  margin-bottom: 40px;
-}
-</style>
+      <section class="detail-section">
+        <h3>{{ $t("riskDefinition") }}</h3>
+        <p>{{ $t(`BREAK.risks.${selectedRiskKey}.definition`) }}</p>
+      </section>
+      <section class="detail-section">
+        <h3>{{ $t("riskDescription") }}</h3>
+        <p>{{ $t(`BREAK.risks.${selectedRiskKey}.description`) }}</p>
+      </section>
+      <section class="detail-grid">
+        <div>
+          <h3>{{ $t("riskComplexity") }}</h3>
+          <p>{{ $t(`BREAK.risks.${selectedRiskKey}.complexity`) }}</p>
+        </div>
+        <div>
+          <h3>{{ $t("riskInfluence") }}</h3>
+          <p>{{ $t(`BREAK.risks.${selectedRiskKey}.influence`) }}</p>
+        </div>
+      </section>
+      <section class="detail-section">
+        <h3>{{ $t("riskAvoidances") }}</h3>
+        <div class="entity-links">
+          <router-link
+            v-for="aKey in selectedRisk.avoidances"
+            :key="aKey"
+            :to="{ name: 'avoidances', hash: `#${aKey}` }"
+            class="entity-link"
+          >
+            {{ aKey }}: {{ $t(`BREAK.avoidances.${aKey}.title`) }}
+          </router-link>
+        </div>
+      </section>
+      <section v-if="getRiskDescriptionTools(selectedRiskKey).length" class="detail-section">
+        <h3>{{ $t("attackTools") }}</h3>
+        <div class="entity-links">
+          <router-link
+            v-for="atKey in getRiskDescriptionTools(selectedRiskKey)"
+            :key="atKey"
+            :to="{ name: 'attackTools', hash: `#${atKey}` }"
+            class="entity-link"
+          >
+            {{ atKey }}: {{ $t(`BREAK.attackTools.${atKey}.title`) }}
+          </router-link>
+        </div>
+      </section>
+      <section v-if="selectedRisk.references?.length" class="detail-section">
+        <h3>{{ $t("riskReference") }}</h3>
+        <ReferenceList type="risks" :entity-key="selectedRiskKey" />
+      </section>
+    </article>
+  </KnowledgeSplitView>
+</template>

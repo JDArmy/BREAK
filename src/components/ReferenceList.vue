@@ -47,7 +47,8 @@ function getRefTitle(index: number): string {
 
 .reference-item {
   margin-bottom: 8px;
-  line-height: 1.8;
+  font-size: 12px;
+  line-height: 1.6;
 }
 
 .reference-item a {

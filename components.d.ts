@@ -39,6 +39,7 @@ declare module 'vue' {
     IconRelation: typeof import('./src/components/icons/iconRelation.vue')['default']
     IconStar: typeof import('./src/components/icons/iconStar.vue')['default']
     IconTranslate: typeof import('./src/components/icons/iconTranslate.vue')['default']
+    KnowledgeSplitView: typeof import('./src/components/KnowledgeSplitView.vue')['default']
     MenuList: typeof import('./src/components/MenuList.vue')['default']
     ReferenceList: typeof import('./src/components/ReferenceList.vue')['default']
     RiskDetail: typeof import('./src/components/RiskDetail.vue')['default']

@@ -1,177 +1,126 @@
 <script lang="ts" setup>
-import { ref } from "vue";
+import { computed, ref, watch } from "vue";
+import { useRoute, useRouter } from "vue-router";
+import { useI18n } from "vue-i18n";
 import BREAK from "@/BREAK";
-import { Link } from "@element-plus/icons-vue";
-import RiskDetail from "@/components/RiskDetail.vue";
-import AttackToolDetail from "@/components/AttackToolDetail.vue";
-import iconRelation from "@/components/icons/iconRelation.vue";
-import { useAnchorTable } from "@/composables/useAnchorTable";
-import { useSafeI18n } from "@/composables/useSafeI18n";
+import KnowledgeSplitView from "@/components/KnowledgeSplitView.vue";
+import ReferenceList from "@/components/ReferenceList.vue";
 
-const { safeT } = useSafeI18n();
+const route = useRoute();
+const router = useRouter();
+const { t } = useI18n();
 
-// 攻击工具详情页
-const attackToolDrawer = ref(false);
-const attackToolKey = ref("");
-// 风险详情页
-const riskDrawer = ref(false);
-const riskKey = ref("");
+const threatActorKeys = Object.keys(BREAK.threatActors);
+const selectedThreatActorKey = ref(route.hash.replace("#", "") || threatActorKeys[0] || "");
 
-const threatActors = Object.keys(BREAK.threatActors).map((taKey) => ({
-  taKey: taKey,
-  ...BREAK.threatActors[taKey as keyof typeof BREAK.threatActors],
-}));
+watch(
+  () => route.hash,
+  (hash) => {
+    const key = hash.replace("#", "");
+    if (key && BREAK.threatActors[key]) selectedThreatActorKey.value = key;
+  },
+  { immediate: true }
+);
 
-const { getTableHeight, tableRowClassName } = useAnchorTable("taKey");
+const threatActorItems = computed(() =>
+  threatActorKeys.map((taKey) => ({
+    id: taKey,
+    title: t(`BREAK.threatActors.${taKey}.title`),
+    subtitle: t(`BREAK.threatActors.${taKey}.description`).slice(0, 56),
+  }))
+);
+
+const selectedThreatActor = computed(() => BREAK.threatActors[selectedThreatActorKey.value]);
+
+const openRelationGraph = (taKey: string) => {
+  const relRoute = router.resolve({
+    name: "relation",
+    params: { type: "threat-actor", key: taKey },
+  });
+  window.open(relRoute.href, "_blank", "noopener,noreferrer");
+};
 </script>
 
-<template lang="">
-  <h3>{{ $t("threatActors") }}</h3>
-  <div id="threat-actors-list">
-    <router-link
-      v-for="threatActor in threatActors"
-      :key="threatActor.taKey"
-      :title="threatActor.definition"
-      class="router-link ml-2"
-      :to="{ name: 'threatActors', hash: '#' + threatActor.taKey }"
-    >
-      <el-button size="small" round class="ml-2">
-        {{ threatActor.taKey }}:{{
-          $t(`BREAK.threatActors.${threatActor.taKey}.title`)
-        }}
-      </el-button>
-    </router-link>
-  </div>
-  <el-table
-    :height="getTableHeight()"
-    :scrollbar-always-on="true"
-    :data="threatActors"
-    :row-class-name="tableRowClassName"
-    border
-    stripe
+<template>
+  <KnowledgeSplitView
+    :title="$t('threatActors')"
+    route-name="threatActors"
+    :items="threatActorItems"
+    :selected-key="selectedThreatActorKey"
+    :search-placeholder="$t('search.threatActorPlaceholder')"
+    @select="selectedThreatActorKey = $event"
   >
-    <el-table-column prop="taKey" width="135" :label="$t('ID')">
-      <template #default="scope">
-        <a :id="scope.row.taKey" class="anchor-position"></a>
-        {{ scope.row.taKey }}
-        <router-link
-          :title="$t('relationMap')"
-          class="relation-map-icon"
-          :to="{
-            name: 'relation',
-            params: { type: 'threat-actor', key: scope.row.taKey },
-          }"
-        >
-          <icon-relation width="14px" height="14px" />
-        </router-link>
-      </template>
-    </el-table-column>
-    <el-table-column prop="title" width="150" :label="$t('title')">
-      <template #default="scope">
-        {{ scope.row.taKey ? $t(`BREAK.threatActors.${scope.row.taKey}.title`) : "" }}
-      </template>
-    </el-table-column>
-    <el-table-column prop="description" :label="$t('description')">
-      <template #default="scope">
-        {{ scope.row.taKey ? $t(`BREAK.threatActors.${scope.row.taKey}.description`) : "" }}
-      </template>
-    </el-table-column>
-    <el-table-column :label="$t('buildAttackTools')">
-      <template #default="scope">
-        <el-button
-          size="small"
-          v-for="atKey in scope.row.buildAttackTools"
-          :key="atKey"
-          @click="attackToolKey = atKey; attackToolDrawer = true"
-          class="relational-link"
-          round
-          >{{
-            atKey + ":&nbsp;" + $t(`BREAK.attackTools.${atKey}.title`)
-          }}</el-button
-        >
-      </template></el-table-column
-    >
-    <el-table-column :label="$t('useAttackTools')">
-      <template #default="scope">
-        <el-button
-          size="small"
-          v-for="atKey in scope.row.useAttackTools"
-          :key="atKey"
-          @click="attackToolKey = atKey; attackToolDrawer = true"
-          class="relational-link"
-          round
-          >{{
-            atKey + ":&nbsp;" + $t(`BREAK.attackTools.${atKey}.title`)
-          }}</el-button
-        >
-      </template></el-table-column
-    >
-    <el-table-column :label="$t('relationLine.directCauseRisk')">
-      <template #default="scope">
-        <el-button
-          size="small"
-          v-for="rKey in scope.row.directCauseRisks"
-          :key="'d-'+rKey"
-          @click="riskKey = rKey; riskDrawer = true"
-          class="relational-link"
-          round
-          >{{ rKey + ":&nbsp;" + $t(`BREAK.risks.${rKey}.title`) }}</el-button
-        >
-      </template></el-table-column
-    >
-    <el-table-column :label="$t('relationLine.indirectSupportRisk')">
-      <template #default="scope">
-        <el-button
-          size="small"
-          v-for="rKey in scope.row.indirectSupportRisks"
-          :key="'i-'+rKey"
-          @click="riskKey = rKey; riskDrawer = true"
-          class="relational-link"
-          round
-          >{{ rKey + ":&nbsp;" + $t(`BREAK.risks.${rKey}.title`) }}</el-button
-        >
-      </template></el-table-column
-    >
-    <el-table-column width="250px" :label="$t('references')">
-      <template #default="scope">
-        <ul class="reference-list">
-          <li v-for="(reference, refIdx) in scope.row.references" :key="refIdx">
-            <a v-if="scope.row.taKey && reference.link" :href="reference.link" target="_blank" rel="noopener noreferrer"
-              ><el-icon><Link /></el-icon
-              >{{
-                safeT(
-                  `BREAK.threatActors.${scope.row.taKey}.references[${refIdx}].title`
-                )
-              }}
-            </a>
-            <span v-else-if="scope.row.taKey">
-              {{
-                safeT(
-                  `BREAK.threatActors.${scope.row.taKey}.references[${refIdx}].title`
-                )
-              }}
-            </span>
-          </li>
-        </ul>
-      </template>
-    </el-table-column>
-  </el-table>
-  <!-- 风险详情页 -->
-  <risk-detail
-    v-on:drawer-close="riskDrawer = false; riskKey = ''"
-    :drawer="riskDrawer"
-    :rKey="riskKey"
-  />
-  <!-- 攻击工具详情页 -->
-  <AttackToolDetail
-    v-on:drawer-close="attackToolDrawer = false"
-    :drawer="attackToolDrawer"
-    :atKey="attackToolKey"
-  />
-</template>
+    <article v-if="selectedThreatActor" class="detail-panel">
+      <div class="detail-heading">
+        <div>
+          <div class="detail-id">{{ selectedThreatActorKey }}</div>
+          <h2>{{ $t(`BREAK.threatActors.${selectedThreatActorKey}.title`) }}</h2>
+        </div>
+        <el-button type="primary" size="small" @click="openRelationGraph(selectedThreatActorKey)">
+          {{ $t("openRelationGraph") }}
+        </el-button>
+      </div>
 
-<style scoped>
-#threat-actors-list {
-  margin-bottom: 40px;
-}
-</style>
+      <section class="detail-section">
+        <h3>{{ $t("description") }}</h3>
+        <p>{{ $t(`BREAK.threatActors.${selectedThreatActorKey}.description`) }}</p>
+      </section>
+      <section v-if="selectedThreatActor.directCauseRisks.length" class="detail-section">
+        <h3>{{ $t("relationLine.directCauseRisk") }}</h3>
+        <div class="entity-links">
+          <router-link
+            v-for="rKey in selectedThreatActor.directCauseRisks"
+            :key="rKey"
+            :to="{ name: 'risks', hash: `#${rKey}` }"
+            class="entity-link"
+          >
+            {{ rKey }}: {{ $t(`BREAK.risks.${rKey}.title`) }}
+          </router-link>
+        </div>
+      </section>
+      <section v-if="selectedThreatActor.indirectSupportRisks.length" class="detail-section">
+        <h3>{{ $t("relationLine.indirectSupportRisk") }}</h3>
+        <div class="entity-links">
+          <router-link
+            v-for="rKey in selectedThreatActor.indirectSupportRisks"
+            :key="rKey"
+            :to="{ name: 'risks', hash: `#${rKey}` }"
+            class="entity-link"
+          >
+            {{ rKey }}: {{ $t(`BREAK.risks.${rKey}.title`) }}
+          </router-link>
+        </div>
+      </section>
+      <section v-if="selectedThreatActor.buildAttackTools.length" class="detail-section">
+        <h3>{{ $t("buildAttackTools") }}</h3>
+        <div class="entity-links">
+          <router-link
+            v-for="atKey in selectedThreatActor.buildAttackTools"
+            :key="atKey"
+            :to="{ name: 'attackTools', hash: `#${atKey}` }"
+            class="entity-link"
+          >
+            {{ atKey }}: {{ $t(`BREAK.attackTools.${atKey}.title`) }}
+          </router-link>
+        </div>
+      </section>
+      <section v-if="selectedThreatActor.useAttackTools.length" class="detail-section">
+        <h3>{{ $t("useAttackTools") }}</h3>
+        <div class="entity-links">
+          <router-link
+            v-for="atKey in selectedThreatActor.useAttackTools"
+            :key="atKey"
+            :to="{ name: 'attackTools', hash: `#${atKey}` }"
+            class="entity-link"
+          >
+            {{ atKey }}: {{ $t(`BREAK.attackTools.${atKey}.title`) }}
+          </router-link>
+        </div>
+      </section>
+      <section v-if="selectedThreatActor.references?.length" class="detail-section">
+        <h3>{{ $t("references") }}</h3>
+        <ReferenceList type="threatActors" :entity-key="selectedThreatActorKey" />
+      </section>
+    </article>
+  </KnowledgeSplitView>
+</template>

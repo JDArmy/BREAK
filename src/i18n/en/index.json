@@ -25,6 +25,7 @@
   "site": "Website",
   "logo": "Logo",
   "allScenes": "All Scenes",
+  "allCategories": "All Categories",
   "references": "References",
   "events": "Related Events",
   "attackTools": "Attack Tools",
@@ -93,6 +94,10 @@
   "lastUpdated": "Last Updated",
   "search": {
     "placeholder": "Search risks, avoidances, attack tools...",
+    "riskPlaceholder": "Search risks",
+    "avoidancePlaceholder": "Search avoidances",
+    "attackToolPlaceholder": "Search attack tools",
+    "threatActorPlaceholder": "Search threat actors",
     "noResults": "No results found",
     "hint": "Press ESC to close",
     "groupRisk": "Risks",
