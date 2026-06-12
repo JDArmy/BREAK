@@ -5,11 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run lint && npm run type-check && npm run test && npm run build-only",
+    "build": "npm run lint && npm run type-check && npm run validate:data && npm run test && npm run build-only",
     "preview": "vite preview",
     "build-only": "vite build",
+    "analyze": "ANALYZE=1 vite build",
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint --fix",
+    "validate:data": "node scripts/validate/schema.mjs && node scripts/validate/i18n-sync.mjs --strict",
     "test": "vitest run",
     "test:watch": "vitest"
   },
@@ -23,7 +25,8 @@
     "shell-quote": "^1.8.4",
     "vue": "^3.5.0",
     "vue-i18n": "^11.4.4",
-    "vue-router": "^4.6.0"
+    "vue-router": "^4.6.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@tsconfig/node18": "^18.2.2",

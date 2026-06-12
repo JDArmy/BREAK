@@ -4,6 +4,11 @@ import BREAK from "@/BREAK";
 import { reactive } from "vue";
 import axios from "axios";
 import { useRoute, useRouter } from "vue-router";
+import {
+  entitySchemas,
+  formatZodIssues,
+  type EntitySchemaKey,
+} from "@/validation/breakSchema";
 
 const route = useRoute();
 const router = useRouter();
@@ -41,6 +46,13 @@ enum BreakType {
   attackTools = "attackTools",
   threatActors = "threatActors",
 }
+
+const schemaKeyByBreakType: Record<BreakType, EntitySchemaKey> = {
+  [BreakType.risks]: "risks",
+  [BreakType.avoidances]: "avoidances",
+  [BreakType.attackTools]: "attackTools",
+  [BreakType.threatActors]: "threatActors",
+};
 
 enum BreakTypeForder {
   risks = "risks",
@@ -399,6 +411,15 @@ const saveReference = () => {
 
 const saveReferences = () => {
   const newBreakItem = { ...breakItem.value, references: references.value, updated: getDateTimeString() };
+  if (
+    !validateBreakItem(
+      breakType.value as BreakType,
+      breakKey.value,
+      newBreakItem
+    )
+  ) {
+    return;
+  }
   const newBreakItems: Record<string, unknown> = { [breakKey.value]: newBreakItem };
   let parentKey = breakKey.value;
   if (breakKey.value.indexOf("-") > -1) {
@@ -471,6 +492,19 @@ const getDateTimeString = () => {
 };
 
 const rootPath = "src"; //相对于项目根目录的路径
+const validateBreakItem = (type: BreakType, key: string, item: unknown) => {
+  const schema = entitySchemas[schemaKeyByBreakType[type]];
+  const result = schema.safeParse(item);
+  if (result.success) return true;
+
+  alert(
+    `${key} 数据校验失败：\n${formatZodIssues(result.error)
+      .slice(0, 10)
+      .join("\n")}`
+  );
+  return false;
+};
+
 const transferChange = (relationItem: RelationItem) => {
   if (relationItem.type === relationType.one2many) {
     const breakItemOldJson = JSON.stringify(breakItem.value);
@@ -485,6 +519,15 @@ const transferChange = (relationItem: RelationItem) => {
     }
     // 添加更新时间
     newBreakItem.updated = getDateTimeString();
+    if (
+      !validateBreakItem(
+        breakType.value as BreakType,
+        breakKey.value,
+        newBreakItem
+      )
+    ) {
+      return;
+    }
 
     const newBreakItems: Record<string, unknown> = { [breakKey.value]: newBreakItem };
     let parentKey = breakKey.value;
@@ -540,6 +583,15 @@ const transferChange = (relationItem: RelationItem) => {
       }
       // 添加更新时间
       itemFields.updated = getDateTimeString();
+      if (
+        !validateBreakItem(
+          relationItem.fromBreakKey,
+          bKey,
+          itemFields
+        )
+      ) {
+        return;
+      }
 
       const newBreakItems: Record<string, unknown> = { [bKey]: itemFields };
       let parentKey = bKey;

@@ -66,6 +66,16 @@ graphOptions.layout = {
   force_node_repulsion: 3, // 节点排斥力系数
 } as RGLayoutOptions;
 
+const relationColors = {
+  risk: { light: "#fed7aa", dark: "#7c2d12" },
+  avoidance: { light: "#bbf7d0", dark: "#14532d" },
+  attackTool: { light: "#bfdbfe", dark: "#1e3a8a" },
+  threatActor: { light: "#fecaca", dark: "#7f1d1d" },
+};
+
+const getRelationColor = (type: keyof typeof relationColors) =>
+  isDark.value ? relationColors[type].dark : relationColors[type].light;
+
 onMounted(() => {
   setJsonData();
 });
@@ -84,7 +94,7 @@ const setJsonData = () => {
       nodes.push({
         id: avoidanceKey,
         text: avoidanceKey + "<br>" + t(`BREAK.avoidances.${avoidanceKey}.title`),
-        color: "green",
+        color: getRelationColor("avoidance"),
       });
     }
   );
@@ -98,7 +108,7 @@ const setJsonData = () => {
       nodes.push({
         id: atKey,
         text: atKey + "<br>" + t(`BREAK.attackTools.${atKey}.title`),
-        color: "blue",
+        color: getRelationColor("attackTool"),
       });
     }
   });
@@ -112,7 +122,7 @@ const setJsonData = () => {
       nodes.push({
         id: taKey,
         text: taKey + "<br>" + t(`BREAK.threatActors.${taKey}.title`),
-        color: "red",
+        color: getRelationColor("threatActor"),
       });
     }
   });
@@ -130,7 +140,7 @@ const setJsonData = () => {
   nodes.push({
     id: props.rKey,
     text: props.rKey + "<br>" + t(`BREAK.risks.${props.rKey}.title`),
-    color: "orange",
+    color: getRelationColor("risk"),
   });
   const jsonData: RGJsonData = {
     rootId,

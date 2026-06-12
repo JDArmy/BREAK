@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import { useRouter } from "vue-router";
 import BREAK from "@/BREAK";
 import AvoidanceDetail from "@/components/AvoidanceDetail.vue";
 import AttackToolDetail from "@/components/AttackToolDetail.vue";
@@ -7,7 +8,6 @@ import ReferenceList from "@/components/ReferenceList.vue";
 
 import "element-plus/es/components/drawer/style/css";
 
-import RiskRelation from "@/components/RiskRelation.vue";
 import iconRelation from "./icons/iconRelation.vue";
 import { useDrawerWidth } from "@/composables/useDrawerWidth";
 
@@ -17,6 +17,7 @@ defineProps<{
 }>();
 defineEmits(["drawerClose"]);
 
+const router = useRouter();
 const risks = BREAK.risks;
 const avoidanceDrawer = ref(false);
 const avoidanceKey = ref("");
@@ -30,6 +31,14 @@ const getRiskDescriptionTools = (rKey: string) => {
     const at = BREAK.attackTools[atKey as keyof typeof BREAK.attackTools];
     return at.directCauseRisks.includes(rKey) || at.indirectSupportRisks.includes(rKey);
   });
+};
+
+const openRelationGraph = (rKey: string) => {
+  const route = router.resolve({
+    name: "relation",
+    params: { type: "risk", key: rKey },
+  });
+  window.open(route.href, "_blank", "noopener,noreferrer");
 };
 </script>
 
@@ -112,8 +121,13 @@ const getRiskDescriptionTools = (rKey: string) => {
     <div class="desc">
       <strong>{{ $t("riskRelations") }}</strong>
       &nbsp;&nbsp;
-      <el-text size="small" type="info">{{ $t("more") }}</el-text>
-      <risk-relation :rKey="rKey" />
+      <el-button
+        size="small"
+        type="primary"
+        @click="openRelationGraph(rKey)"
+      >
+        {{ $t("openRelationGraph") }}
+      </el-button>
     </div>
   </el-drawer>
   <!-- 手段详情页 -->

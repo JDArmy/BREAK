@@ -25,33 +25,46 @@ enum RelationType {
   all = "all",
 }
 
+const relationTypeColors: Record<
+  Exclude<RelationType, RelationType.all>,
+  { light: string; dark: string }
+> = {
+  [RelationType.risk]: { light: "#fed7aa", dark: "#7c2d12" },
+  [RelationType.avoidance]: { light: "#bbf7d0", dark: "#14532d" },
+  [RelationType.attackTool]: { light: "#bfdbfe", dark: "#1e3a8a" },
+  [RelationType.threatActor]: { light: "#fecaca", dark: "#7f1d1d" },
+};
+
+const getRelationTypeColor = (type: Exclude<RelationType, RelationType.all>) =>
+  isDark.value ? relationTypeColors[type].dark : relationTypeColors[type].light;
+
 const RelationTypeMapping = {
   [RelationType.risk]: {
     get title() { return t("relationType.risk"); },
     relType: RelationType.risk,
     BreakKey: "risks",
-    color: "orange",
+    get color() { return getRelationTypeColor(RelationType.risk); },
     disableContextMenu: ref<boolean>(false),
   },
   [RelationType.avoidance]: {
     get title() { return t("relationType.avoidance"); },
     relType: RelationType.avoidance,
     BreakKey: "avoidances",
-    color: "green",
+    get color() { return getRelationTypeColor(RelationType.avoidance); },
     disableContextMenu: ref<boolean>(false),
   },
   [RelationType.attackTool]: {
     get title() { return t("relationType.attackTool"); },
     relType: RelationType.attackTool,
     BreakKey: "attackTools",
-    color: "blue",
+    get color() { return getRelationTypeColor(RelationType.attackTool); },
     disableContextMenu: ref<boolean>(false),
   },
   [RelationType.threatActor]: {
     get title() { return t("relationType.threatActor"); },
     relType: RelationType.threatActor,
     BreakKey: "threatActors",
-    color: "red",
+    get color() { return getRelationTypeColor(RelationType.threatActor); },
     disableContextMenu: ref<boolean>(false),
   },
 };
@@ -93,7 +106,7 @@ watch(isDark, (dark) => {
   nextTick(() => {
     graphVisible.value = true;
     nextTick(() => {
-      graphRef$?.value?.setJsonData(jsonData);
+      rebuildGraphData();
       updateToolbarTitles();
     });
   });
@@ -685,6 +698,13 @@ const setRGJsonData = () => {
   getLineType();
 };
 
+function rebuildGraphData() {
+  nodes.splice(0, nodes.length);
+  lines.splice(0, lines.length);
+  addRootNode();
+  genRGJsonData(RelationType.all, relType.value, relKey.value);
+}
+
 const genRGJsonData = (
   reqType: RelationType,
   nodeType: RelationType,
@@ -798,20 +818,14 @@ watch(
   () => {
     relType.value = route.params.type as RelationType;
     relKey.value = route.params.key as string;
-    nodes.splice(0, nodes.length);
-    lines.splice(0, lines.length);
-    addRootNode();
-    genRGJsonData(RelationType.all, relType.value, relKey.value);
+    rebuildGraphData();
   }
 );
 
 // 监听语言切换，重新构建图数据（节点/连线文本需重新翻译）
 watch(locale, () => {
-  nodes.splice(0, nodes.length);
-  lines.splice(0, lines.length);
   filterLineType.value = [];
-  addRootNode();
-  genRGJsonData(RelationType.all, relType.value, relKey.value);
+  rebuildGraphData();
   updateToolbarTitles();
 });
 

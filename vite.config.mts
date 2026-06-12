@@ -36,6 +36,8 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks(id) {
+          if (id.includes("/src/validation")) return "validation";
+          if (id.includes("node_modules/zod")) return "zod";
           if (id.includes("/src/BREAK/utils")) return "BREAK-utils";
           if (id.includes("/src/BREAK/risks")) return "BREAK-Risks";
           if (id.includes("/src/BREAK/avoidances")) return "BREAK-Avoidances";

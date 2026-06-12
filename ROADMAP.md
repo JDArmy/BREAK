@@ -379,30 +379,30 @@ main 分支合并
 - 至少提供 2 种布局算法
 - 迷你地图可点击快速定位
 
-### 3.3 性能优化
+### 3.3 性能优化（部分完成）
 
-| 任务 | 详情 | 预计工时 |
-|------|------|----------|
-| 数据懒加载 | `import.meta.glob` 改为动态导入，列表页按需加载 | 6h |
-| 虚拟滚动 | 列表页使用 `el-table-v2` 虚拟化表格 | 8h |
-| 关系图按需加载 | 初始只加载直接关系，展开时再加载 | 4h |
-| 构建产物分析 | 集成 rollup-plugin-visualizer 分析包体积 | 2h |
-| 图片/资源压缩 | 优化静态资源 | 2h |
+| 任务 | 详情 | 预计工时 | 状态 |
+|------|------|----------|------|
+| 数据懒加载 | `import.meta.glob` 改为动态导入，列表页按需加载 | 6h | 待评估 |
+| 虚拟滚动 | 列表页使用 `el-table-v2` 虚拟化表格 | 8h | 待评估 |
+| 关系图按需加载 | 风险详情抽屉中的内嵌关系图改为用户展开后异步加载 | 4h | ✅ |
+| 构建产物分析 | 新增 `npm run analyze`，复用 rollup-plugin-visualizer 分析包体积 | 2h | ✅ |
+| 图片/资源压缩 | 优化静态资源 | 2h | 待评估 |
 
 **验收标准**：
 - 首屏加载体积减少 30%+（通过懒加载）
 - 列表页滚动帧率 ≥ 60fps
 - Lighthouse Performance 评分 ≥ 85
 
-### 3.4 数据 Schema 验证
+### 3.4 数据 Schema 验证 ✅ 已完成
 
-| 任务 | 详情 | 预计工时 |
-|------|------|----------|
-| 引入 Zod | `npm install zod` | 0.5h |
-| 定义实体 Schema | Risk/Avoidance/AttackTool/ThreatActor/Reference | 4h |
-| 构建时校验 | `npm run build` 前自动运行数据校验 | 2h |
-| 编辑器集成 | editor/HomeView 实时校验输入 | 4h |
-| 友好错误提示 | 校验失败时输出具体字段和原因 | 2h |
+| 任务 | 详情 | 预计工时 | 状态 |
+|------|------|----------|------|
+| 引入 Zod | `npm install zod` | 0.5h | ✅ |
+| 定义实体 Schema | Risk/Avoidance/AttackTool/ThreatActor/Reference/BusinessScene | 4h | ✅ |
+| 构建时校验 | `npm run build` 前自动运行数据校验 | 2h | ✅ |
+| 编辑器集成 | editor/HomeView 保存引用和关系前校验输入 | 4h | ✅ |
+| 友好错误提示 | 校验失败时输出具体字段和原因 | 2h | ✅ |
 
 **验收标准**：
 - 所有实体类型均有 Zod Schema
