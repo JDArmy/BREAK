@@ -1152,6 +1152,10 @@ html.dark .c-mb-button {
   color: #cbd5e1 !important;
 }
 
+html.dark .c-current-zoom {
+  color: #94a3b8 !important;
+}
+
 html.dark .rel-toolbar {
   background-color: #1e293b !important;
   border-color: #334155 !important;
