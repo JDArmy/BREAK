@@ -55,8 +55,6 @@ export default defineConfig({
           if (id.includes("node_modules/vue-i18n")) return "vue-i18n";
           if (id.includes("node_modules/vue")) return "vue";
           if (id.includes("node_modules/element-plus")) return "element-plus";
-          if (id.includes("node_modules/relation-graph"))
-            return "relation-graph";
         },
       },
     },

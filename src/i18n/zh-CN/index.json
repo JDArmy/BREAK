@@ -56,10 +56,17 @@
     "fullscreen": "全屏/退出全屏",
     "zoomIn": "放大",
     "zoomOut": "缩小",
+    "layout": "布局",
     "autoLayout": "自动布局",
     "stopAutoLayout": "停止自动布局",
     "refresh": "刷新",
     "download": "下载图片"
+  },
+  "relationLayout": {
+    "horizontal": "横向链路",
+    "lanes": "泳道布局",
+    "split": "左右分栏",
+    "radial": "放射布局"
   },
   "lineFilter": "关系筛选：",
   "fetchAllRelations": "拉取全部关系",

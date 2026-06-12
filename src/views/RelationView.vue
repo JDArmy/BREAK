@@ -5,16 +5,11 @@ import { useRoute, useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
 import { useTheme } from "@/composables/useTheme";
 import { useBreakpoints } from "@/composables/useBreakpoints";
-import { init, use, type ECharts } from "echarts/core";
-import { SankeyChart } from "echarts/charts";
-import { TooltipComponent } from "echarts/components";
+import { init, use, type ECharts, type EChartsOption } from "echarts/core";
+import { GraphChart, SankeyChart } from "echarts/charts";
+import { LegendComponent, TooltipComponent } from "echarts/components";
 import { CanvasRenderer } from "echarts/renderers";
-
-import RelationGraph, {
-  type RGJsonData,
-  type RGLayoutOptions,
-  type RGOptions,
-} from "relation-graph/vue3";
+import { Aim, Download, FullScreen, Refresh, ZoomIn, ZoomOut } from "@element-plus/icons-vue";
 import type { DropdownInstance } from "element-plus";
 
 const route = useRoute();
@@ -22,7 +17,7 @@ const router = useRouter();
 const { t, locale } = useI18n();
 const { isDark } = useTheme();
 const { isMobile } = useBreakpoints();
-use([SankeyChart, TooltipComponent, CanvasRenderer]);
+use([GraphChart, SankeyChart, LegendComponent, TooltipComponent, CanvasRenderer]);
 
 enum RelationType {
   risk = "risk",
@@ -80,58 +75,59 @@ const relType = ref<RelationType>(route.params.type as RelationType);
 const relKey = ref<string>(route.params.key as string);
 const activeView = ref<"network" | "sankey">(isMobile.value ? "sankey" : "network");
 
-const graphRef$ = ref<RelationGraph>();
 const sankeyChartRef = ref<HTMLDivElement>();
+const networkChartRef = ref<HTMLDivElement>();
 let sankeyChart: ECharts | null = null;
+let networkChart: ECharts | null = null;
 
-// 控制图谱组件的销毁与重建，用于主题切换时完整重绘 Canvas
-const graphVisible = ref(true);
+type NetworkLayoutMode = "horizontal" | "lanes" | "split" | "radial";
 
-const graphOptions: RGOptions = reactive({
-  allowShowMiniToolBar: true,
-  disableZoom: false,
-  disableDragCanvas: false,
-  defaultExpandHolderPosition: "right",
-  defaultShowLineLabel: true,
-  defaultNodeWidth: 120,
-  defaultNodeHeight: 120,
-  moveToCenterWhenRefresh: true,
-  zoomToFitWhenRefresh: true,
-  backgroundColor: "transparent",
-  defaultLineColor: "#999999",
-  defaultLineFontColor: "#666666",
-  defaultNodeFontColor: "#333333",
-  defaultNodeBorderColor: "#efefef",
+const networkLayoutOptions: { value: NetworkLayoutMode; labelKey: string }[] = [
+  { value: "horizontal", labelKey: "relationLayout.horizontal" },
+  { value: "lanes", labelKey: "relationLayout.lanes" },
+  { value: "split", labelKey: "relationLayout.split" },
+  { value: "radial", labelKey: "relationLayout.radial" },
+];
+
+const networkLayoutZoom: Record<NetworkLayoutMode, number> = {
+  horizontal: 1.15,
+  lanes: 1.15,
+  split: 1.15,
+  radial: 1.15,
+};
+
+const networkState = reactive({
+  zoom: networkLayoutZoom.horizontal,
+  layout: "horizontal" as NetworkLayoutMode,
 });
 
-// 暗色模式下销毁并重建图谱，确保 Canvas 完整重绘
-watch(isDark, (dark) => {
-  graphOptions.backgroundColor = dark ? "#0f172a" : "#ffffff";
-  graphOptions.defaultLineColor = dark ? "#475569" : "#999999";
-  graphOptions.defaultLineFontColor = dark ? "#94a3b8" : "#666666";
-  graphOptions.defaultNodeFontColor = dark ? "#e2e8f0" : "#333333";
-  graphOptions.defaultNodeBorderColor = dark ? "#334155" : "#efefef";
-  // 销毁图谱，等待 DOM 更新后重建
-  graphVisible.value = false;
-  nextTick(() => {
-    graphVisible.value = true;
-    nextTick(() => {
-      rebuildGraphData();
-      updateToolbarTitles();
-    });
-  });
-}, { immediate: true });
+const activeNetworkLayoutLabel = computed(
+  () =>
+    t(
+      networkLayoutOptions.find((layout) => layout.value === networkState.layout)?.labelKey ??
+        "relationLayout.horizontal"
+    )
+);
 
-graphOptions.layout = {
-  layoutLabel: "中心布局",
-  layoutName: "center",
-  distance_coefficient: 2,
-  maxLayoutTimes: 20,
-  force_line_elastic: 0.3, // 连线牵引力系数
-  force_node_repulsion: 3, // 节点排斥力系数
-} as RGLayoutOptions;
+const networkLayoutTooltip = computed(
+  () => `${t("toolbar.layout")}: ${activeNetworkLayoutLabel.value}`
+);
 
-// Reference: https://relation-graph.github.io/#/docs/node
+const networkNodeSize = 58;
+const networkRootNodeSize = 64;
+const networkLabelMaxLineLength = 5;
+
+const graphColors = {
+  background: { light: "#ffffff", dark: "#0f172a" },
+  line: { light: "#999999", dark: "#475569" },
+  lineText: { light: "#666666", dark: "#94a3b8" },
+  nodeText: { light: "#333333", dark: "#e2e8f0" },
+  nodeBorder: { light: "#efefef", dark: "#334155" },
+};
+
+const getGraphColor = (key: keyof typeof graphColors) =>
+  isDark.value ? graphColors[key].dark : graphColors[key].light;
+
 interface Node {
   id: string;
   type: string;
@@ -140,11 +136,39 @@ interface Node {
   data?: { isSubNode?: boolean };
 }
 
-// Reference: https://relation-graph.github.io/#/docs/link
 interface Line {
   from: string;
   text: string;
   to: string;
+}
+
+interface GraphNode {
+  id: string;
+  name: string;
+  type: string;
+  text: string;
+  labelText: string;
+  symbolSize: number;
+  itemStyle: {
+    color: string;
+    borderColor: string;
+    borderWidth: number;
+  };
+  data?: { isSubNode?: boolean };
+  x?: number;
+  y?: number;
+  fixed?: boolean;
+}
+
+interface GraphLink {
+  source: string;
+  target: string;
+  text: string;
+  lineStyle: {
+    color: string;
+    opacity: number;
+    curveness: number;
+  };
 }
 
 interface SankeyNode {
@@ -176,7 +200,7 @@ const jsonData = reactive({
   rootId: relKey.value,
   nodes: nodes,
   lines: lines,
-} as RGJsonData);
+});
 
 const getBreakKey = (type: RelationType) =>
   RelationTypeMapping[type as keyof typeof RelationTypeMapping].BreakKey as keyof typeof BREAK;
@@ -193,6 +217,43 @@ const getNodeLabel = (type: Exclude<RelationType, RelationType.all>, key: string
 
 const getSankeyNodeName = (type: Exclude<RelationType, RelationType.all>, key: string) =>
   `${RelationTypeMapping[type].title}: ${getNodeLabel(type, key)}`;
+
+const getNodeTitle = (type: Exclude<RelationType, RelationType.all>, key: string) => {
+  const breakKey = RelationTypeMapping[type].BreakKey;
+  return t(`BREAK.${breakKey}.${key}.title`);
+};
+
+const getGraphNodeText = (type: Exclude<RelationType, RelationType.all>, key: string) =>
+  `${key}\n${getNodeTitle(type, key)}`;
+
+const wrapLabelText = (text: string, maxLineLength = 10) => {
+  const [id, title = ""] = text.replace(/<br\s*\/?>/gi, "\n").split("\n");
+  if (!title) return id;
+
+  const words = title.split(/\s+/).filter(Boolean);
+  const lines: string[] = [];
+
+  if (words.length > 1) {
+    let current = "";
+    words.forEach((word) => {
+      if (!current) {
+        current = word;
+      } else if (`${current} ${word}`.length <= maxLineLength) {
+        current = `${current} ${word}`;
+      } else {
+        lines.push(current);
+        current = word;
+      }
+    });
+    if (current) lines.push(current);
+  } else {
+    for (let index = 0; index < title.length; index += maxLineLength) {
+      lines.push(title.slice(index, index + maxLineLength));
+    }
+  }
+
+  return [id, ...lines.slice(0, 3)].join("\n");
+};
 
 const matchesSelectedEntity = (path: AttackPath) => {
   switch (relType.value) {
@@ -435,7 +496,7 @@ const addRootNode = () => {
   nodes.push({
     id: relKey.value,
     type: breakItemAttr.relType,
-    text: relKey.value + "<br>" + t(`BREAK.${RelationTypeMapping[relType.value as keyof typeof RelationTypeMapping].BreakKey}.${relKey.value}.title`),
+    text: getGraphNodeText(breakItemAttr.relType, relKey.value),
     color: breakItemAttr.color,
   } as Node);
 };
@@ -448,7 +509,7 @@ const addRiskAvoidance = (rKey: string) => {
     nodes.push({
       id: avoidanceKey,
       type: RelationType.avoidance,
-      text: avoidanceKey + "<br>" + t(`BREAK.avoidances.${avoidanceKey}.title`),
+      text: getGraphNodeText(RelationType.avoidance, avoidanceKey),
       color: RelationTypeMapping[RelationType.avoidance].color,
     } as Node);
     lines.push({
@@ -472,7 +533,7 @@ const addRiskAttackTool = (rKey: string) => {
     nodes.push({
       id: attackToolKey,
       type: RelationType.attackTool,
-      text: attackToolKey + "<br>" + t(`BREAK.attackTools.${attackToolKey}.title`),
+      text: getGraphNodeText(RelationType.attackTool, attackToolKey),
       color: RelationTypeMapping[RelationType.attackTool].color,
     } as Node);
     lines.push({
@@ -485,7 +546,7 @@ const addRiskAttackTool = (rKey: string) => {
     nodes.push({
       id: attackToolKey,
       type: RelationType.attackTool,
-      text: attackToolKey + "<br>" + t(`BREAK.attackTools.${attackToolKey}.title`),
+      text: getGraphNodeText(RelationType.attackTool, attackToolKey),
       color: RelationTypeMapping[RelationType.attackTool].color,
     } as Node);
     lines.push({
@@ -533,7 +594,7 @@ const addRiskThreatActor = (rKey: string) => {
     nodes.push({
       id: threatActorKey,
       type: RelationType.threatActor,
-      text: threatActorKey + "<br>" + t(`BREAK.threatActors.${threatActorKey}.title`),
+      text: getGraphNodeText(RelationType.threatActor, threatActorKey),
       color: RelationTypeMapping[RelationType.threatActor].color,
     } as Node);
     lines.push({
@@ -546,7 +607,7 @@ const addRiskThreatActor = (rKey: string) => {
     nodes.push({
       id: threatActorKey,
       type: RelationType.threatActor,
-      text: threatActorKey + "<br>" + t(`BREAK.threatActors.${threatActorKey}.title`),
+      text: getGraphNodeText(RelationType.threatActor, threatActorKey),
       color: RelationTypeMapping[RelationType.threatActor].color,
     } as Node);
     lines.push({
@@ -602,7 +663,7 @@ const addRiskSubrisk = (rKey: string) => {
     nodes.push({
       id: subriskKey,
       type: RelationType.risk,
-      text: subriskKey + "<br>" + t(`BREAK.risks.${subriskKey}.title`),
+      text: getGraphNodeText(RelationType.risk, subriskKey),
       color: RelationTypeMapping[RelationType.risk].color,
       data: { isSubNode: true },
     } as Node);
@@ -625,7 +686,7 @@ const addAvoidanceRisk = (avoidanceKey: string) => {
     nodes.push({
       id: riskKey,
       type: RelationType.risk,
-      text: riskKey + "<br>" + t(`BREAK.risks.${riskKey}.title`),
+      text: getGraphNodeText(RelationType.risk, riskKey),
       color: RelationTypeMapping[RelationType.risk].color,
     } as Node);
     lines.push({
@@ -645,7 +706,7 @@ const addAvoidanceSubavoidance = (aKey: string) => {
     nodes.push({
       id: subavoidanceKey,
       type: RelationType.avoidance,
-      text: subavoidanceKey + "<br>" + t(`BREAK.avoidances.${subavoidanceKey}.title`),
+      text: getGraphNodeText(RelationType.avoidance, subavoidanceKey),
       color: RelationTypeMapping[RelationType.avoidance].color,
       data: { isSubNode: true },
     } as Node);
@@ -666,7 +727,7 @@ const addAttackToolRisk = (attackToolKey: string) => {
     nodes.push({
       id: riskKey,
       type: RelationType.risk,
-      text: riskKey + "<br>" + t(`BREAK.risks.${riskKey}.title`),
+      text: getGraphNodeText(RelationType.risk, riskKey),
       color: RelationTypeMapping[RelationType.risk].color,
     } as Node);
     lines.push({
@@ -679,7 +740,7 @@ const addAttackToolRisk = (attackToolKey: string) => {
     nodes.push({
       id: riskKey,
       type: RelationType.risk,
-      text: riskKey + "<br>" + t(`BREAK.risks.${riskKey}.title`),
+      text: getGraphNodeText(RelationType.risk, riskKey),
       color: RelationTypeMapping[RelationType.risk].color,
     } as Node);
     lines.push({
@@ -698,7 +759,7 @@ const addAttackToolAvoidance = (attackToolKey: string) => {
     nodes.push({
       id: avoidanceKey,
       type: RelationType.avoidance,
-      text: avoidanceKey + "<br>" + t(`BREAK.avoidances.${avoidanceKey}.title`),
+      text: getGraphNodeText(RelationType.avoidance, avoidanceKey),
       color: RelationTypeMapping[RelationType.avoidance].color,
     } as Node);
     lines.push({
@@ -741,7 +802,7 @@ const addAttackToolThreatActor = (attackToolKey: string) => {
     nodes.push({
       id: builderThreatActorKey,
       type: RelationType.threatActor,
-      text: builderThreatActorKey + "<br>" + t(`BREAK.threatActors.${builderThreatActorKey}.title`),
+      text: getGraphNodeText(RelationType.threatActor, builderThreatActorKey),
       color: RelationTypeMapping[RelationType.threatActor].color,
     } as Node);
     lines.push({
@@ -760,7 +821,7 @@ const addAttackToolThreatActor = (attackToolKey: string) => {
     nodes.push({
       id: userThreatActorKey,
       type: RelationType.threatActor,
-      text: userThreatActorKey + "<br>" + t(`BREAK.threatActors.${userThreatActorKey}.title`),
+      text: getGraphNodeText(RelationType.threatActor, userThreatActorKey),
       color: RelationTypeMapping[RelationType.threatActor].color,
     } as Node);
     lines.push({
@@ -828,7 +889,7 @@ const addAttackToolSubattackTool = (atKey: string) => {
       id: subattackToolKey,
       type: RelationType.attackTool,
       text:
-        subattackToolKey + "<br>" + t(`BREAK.attackTools.${subattackToolKey}.title`),
+        getGraphNodeText(RelationType.attackTool, subattackToolKey),
       color: RelationTypeMapping[RelationType.attackTool].color,
       data: { isSubNode: true },
     } as Node);
@@ -849,7 +910,7 @@ const addThreatActorRisk = (threatActorKey: string) => {
     nodes.push({
       id: riskKey,
       type: RelationType.risk,
-      text: riskKey + "<br>" + t(`BREAK.risks.${riskKey}.title`),
+      text: getGraphNodeText(RelationType.risk, riskKey),
       color: RelationTypeMapping[RelationType.risk].color,
     } as Node);
     lines.push({
@@ -862,7 +923,7 @@ const addThreatActorRisk = (threatActorKey: string) => {
     nodes.push({
       id: riskKey,
       type: RelationType.risk,
-      text: riskKey + "<br>" + t(`BREAK.risks.${riskKey}.title`),
+      text: getGraphNodeText(RelationType.risk, riskKey),
       color: RelationTypeMapping[RelationType.risk].color,
     } as Node);
     lines.push({
@@ -880,7 +941,7 @@ const addThreatActorAttackTool = (threatActorKey: string) => {
     nodes.push({
       id: buildAttackToolKey,
       type: RelationType.attackTool,
-      text: buildAttackToolKey + "<br>" + t(`BREAK.attackTools.${buildAttackToolKey}.title`),
+      text: getGraphNodeText(RelationType.attackTool, buildAttackToolKey),
       color: RelationTypeMapping[RelationType.attackTool].color,
     } as Node);
     lines.push({
@@ -895,7 +956,7 @@ const addThreatActorAttackTool = (threatActorKey: string) => {
     nodes.push({
       id: useAttackToolKey,
       type: RelationType.attackTool,
-      text: useAttackToolKey + "<br>" + t(`BREAK.attackTools.${useAttackToolKey}.title`),
+      text: getGraphNodeText(RelationType.attackTool, useAttackToolKey),
       color: RelationTypeMapping[RelationType.attackTool].color,
     } as Node);
     lines.push({
@@ -941,7 +1002,7 @@ const addThreatActorSubthreatActor = (taKey: string) => {
       id: subthreatActorKey,
       type: RelationType.threatActor,
       text:
-        subthreatActorKey + "<br>" + t(`BREAK.threatActors.${subthreatActorKey}.title`),
+        getGraphNodeText(RelationType.threatActor, subthreatActorKey),
       color: RelationTypeMapping[RelationType.threatActor].color,
       data: { isSubNode: true },
     } as Node);
@@ -955,24 +1016,32 @@ const addThreatActorSubthreatActor = (taKey: string) => {
 /**
  * 生成关系图数据
  */
-// 删除lines中的重复数据
 const uniqLines = () => {
-  const linesSet = new Set();
+  const linesSet = new Set<string>();
   lines.forEach((line) => {
     linesSet.add(JSON.stringify(line));
   });
   lines.splice(0, lines.length);
   linesSet.forEach((line) => {
-    lines.push(JSON.parse(line as string) as Line);
+    lines.push(JSON.parse(line) as Line);
   });
 };
-// 设置关系图数据
-const setRGJsonData = () => {
+
+const uniqNodes = () => {
+  const nodeMap = new Map<string, Node>();
+  nodes.forEach((node) => {
+    if (!nodeMap.has(node.id)) {
+      nodeMap.set(node.id, node);
+    }
+  });
+  nodes.splice(0, nodes.length, ...nodeMap.values());
+};
+
+const setNetworkGraphData = () => {
+  uniqNodes();
   uniqLines();
-  graphRef$?.value?.setJsonData(jsonData);
-  // graphRef$?.value?.setOptions(graphOptions);
-  // 重新获取所有连线类型，服务于筛选功能
   getLineType();
+  renderNetworkChart();
 };
 
 function rebuildGraphData() {
@@ -980,18 +1049,442 @@ function rebuildGraphData() {
   nodes.splice(0, nodes.length);
   lines.splice(0, lines.length);
   addRootNode();
-  genRGJsonData(RelationType.all, relType.value, relKey.value);
+  genNetworkGraphData(RelationType.all, relType.value, relKey.value);
 }
 
 const refreshGraphAfterVisible = () => {
   rebuildGraphData();
   nextTick(() => {
-    graphRef$.value?.getInstance().refresh(true);
-    updateToolbarTitles();
+    renderNetworkChart(true);
   });
 };
 
-const genRGJsonData = (
+const findNodeById = (id: string) => nodes.find((node) => node.id === id);
+
+const networkNodeSortOrder: Record<string, number> = {
+  [RelationType.threatActor]: 0,
+  [RelationType.attackTool]: 1,
+  [RelationType.risk]: 2,
+  [RelationType.avoidance]: 3,
+};
+
+const normalizeGraphText = (text: string) => text.replace(/<br\s*\/?>/gi, "\n");
+
+const createGraphNode = (
+  node: Node,
+  x: number,
+  y: number,
+  symbolSize = networkNodeSize
+): GraphNode => {
+  const text = normalizeGraphText(node.text);
+  return {
+    id: node.id,
+    name: node.id,
+    type: node.type,
+    text,
+    labelText: wrapLabelText(text, networkLabelMaxLineLength),
+    symbolSize,
+    itemStyle: {
+      color: node.color,
+      borderColor: getGraphColor("nodeBorder"),
+      borderWidth: 1,
+    },
+    data: node.data,
+    fixed: true,
+    x,
+    y,
+  };
+};
+
+const createEmptyGroupedNodes = () =>
+  ({
+    [RelationType.threatActor]: [],
+    [RelationType.attackTool]: [],
+    [RelationType.risk]: [],
+    [RelationType.avoidance]: [],
+  } as Record<Exclude<RelationType, RelationType.all>, Node[]>);
+
+const placeGridNodes = (
+  graphNodes: GraphNode[],
+  group: Node[],
+  layout: { x: number; y: number; columns: number; columnGap?: number; rowGap?: number }
+) => {
+  if (group.length === 0) return;
+
+  const columnGap = layout.columnGap ?? 112;
+  const rowGap = layout.rowGap ?? 96;
+  const columns = Math.max(1, Math.min(layout.columns, group.length));
+  const rowCount = Math.ceil(group.length / columns);
+  const width = (columns - 1) * columnGap;
+  const height = (rowCount - 1) * rowGap;
+
+  group.forEach((node, index) => {
+    const column = index % columns;
+    const row = Math.floor(index / columns);
+    graphNodes.push(
+      createGraphNode(
+        node,
+        layout.x + column * columnGap - width / 2,
+        layout.y + row * rowGap - height / 2
+      )
+    );
+  });
+};
+
+const applyHorizontalNetworkLayout = (
+  graphNodes: GraphNode[],
+  groupedNodes: Record<Exclude<RelationType, RelationType.all>, Node[]>
+) => {
+  const groupLayout: Record<
+    Exclude<RelationType, RelationType.all>,
+    { x: number; y: number; columns: number; columnGap?: number; rowGap?: number }
+  > = {
+    [RelationType.threatActor]: { x: -720, y: -170, columns: 3, columnGap: 118, rowGap: 100 },
+    [RelationType.attackTool]: { x: -340, y: 190, columns: 4, columnGap: 116, rowGap: 100 },
+    [RelationType.risk]: { x: 280, y: -170, columns: 4, columnGap: 116, rowGap: 100 },
+    [RelationType.avoidance]: { x: 720, y: 180, columns: 4, columnGap: 116, rowGap: 100 },
+  };
+
+  Object.entries(groupLayout).forEach(([type, layout]) => {
+    placeGridNodes(
+      graphNodes,
+      groupedNodes[type as Exclude<RelationType, RelationType.all>],
+      layout
+    );
+  });
+};
+
+const applyLaneNetworkLayout = (
+  graphNodes: GraphNode[],
+  groupedNodes: Record<Exclude<RelationType, RelationType.all>, Node[]>
+) => {
+  const groupLayout: Record<
+    Exclude<RelationType, RelationType.all>,
+    { x: number; y: number; columns: number; columnGap?: number; rowGap?: number }
+  > = {
+    [RelationType.threatActor]: { x: 0, y: -440, columns: 8, columnGap: 116, rowGap: 92 },
+    [RelationType.attackTool]: { x: 0, y: -165, columns: 8, columnGap: 116, rowGap: 92 },
+    [RelationType.risk]: { x: 0, y: 165, columns: 8, columnGap: 116, rowGap: 92 },
+    [RelationType.avoidance]: { x: 0, y: 440, columns: 8, columnGap: 116, rowGap: 92 },
+  };
+
+  Object.entries(groupLayout).forEach(([type, layout]) => {
+    placeGridNodes(
+      graphNodes,
+      groupedNodes[type as Exclude<RelationType, RelationType.all>],
+      layout
+    );
+  });
+};
+
+const applySplitNetworkLayout = (
+  graphNodes: GraphNode[],
+  groupedNodes: Record<Exclude<RelationType, RelationType.all>, Node[]>
+) => {
+  const groupLayout: Record<
+    Exclude<RelationType, RelationType.all>,
+    { x: number; y: number; columns: number; columnGap?: number; rowGap?: number }
+  > = {
+    [RelationType.threatActor]: { x: -520, y: -245, columns: 4, columnGap: 112, rowGap: 98 },
+    [RelationType.attackTool]: { x: -520, y: 245, columns: 4, columnGap: 112, rowGap: 98 },
+    [RelationType.risk]: { x: 520, y: -245, columns: 4, columnGap: 112, rowGap: 98 },
+    [RelationType.avoidance]: { x: 520, y: 245, columns: 4, columnGap: 112, rowGap: 98 },
+  };
+
+  Object.entries(groupLayout).forEach(([type, layout]) => {
+    placeGridNodes(
+      graphNodes,
+      groupedNodes[type as Exclude<RelationType, RelationType.all>],
+      layout
+    );
+  });
+};
+
+const placeRadialGroupNodes = (
+  graphNodes: GraphNode[],
+  group: Node[],
+  options: { startAngle: number; endAngle: number; radius: number; innerRadius?: number }
+) => {
+  if (group.length === 0) return;
+
+  const angleSpan = options.endAngle - options.startAngle;
+  const useInnerRing = group.length > 7;
+  group.forEach((node, index) => {
+    const ring = useInnerRing && index % 2 === 1 ? options.innerRadius ?? options.radius - 130 : options.radius;
+    const angleIndex = useInnerRing ? Math.floor(index / 2) : index;
+    const angleCount = useInnerRing ? Math.ceil(group.length / 2) : group.length;
+    const angle =
+      options.startAngle +
+      (angleSpan * (angleIndex + 0.5)) / Math.max(1, angleCount);
+    graphNodes.push(createGraphNode(node, Math.cos(angle) * ring, Math.sin(angle) * ring));
+  });
+};
+
+const applyRadialNetworkLayout = (
+  graphNodes: GraphNode[],
+  groupedNodes: Record<Exclude<RelationType, RelationType.all>, Node[]>
+) => {
+  placeRadialGroupNodes(graphNodes, groupedNodes[RelationType.threatActor], {
+    startAngle: -Math.PI * 0.95,
+    endAngle: -Math.PI * 0.55,
+    radius: 650,
+  });
+  placeRadialGroupNodes(graphNodes, groupedNodes[RelationType.attackTool], {
+    startAngle: -Math.PI * 0.45,
+    endAngle: -Math.PI * 0.05,
+    radius: 520,
+  });
+  placeRadialGroupNodes(graphNodes, groupedNodes[RelationType.risk], {
+    startAngle: Math.PI * 0.05,
+    endAngle: Math.PI * 0.45,
+    radius: 520,
+  });
+  placeRadialGroupNodes(graphNodes, groupedNodes[RelationType.avoidance], {
+    startAngle: Math.PI * 0.55,
+    endAngle: Math.PI * 0.95,
+    radius: 650,
+  });
+};
+
+const applyNetworkLayout = (
+  graphNodes: GraphNode[],
+  groupedNodes: Record<Exclude<RelationType, RelationType.all>, Node[]>
+) => {
+  switch (networkState.layout) {
+    case "lanes":
+      applyLaneNetworkLayout(graphNodes, groupedNodes);
+      break;
+    case "split":
+      applySplitNetworkLayout(graphNodes, groupedNodes);
+      break;
+    case "radial":
+      applyRadialNetworkLayout(graphNodes, groupedNodes);
+      break;
+    case "horizontal":
+    default:
+      applyHorizontalNetworkLayout(graphNodes, groupedNodes);
+      break;
+  }
+};
+
+const toContextNode = (node: GraphNode): Node => ({
+  id: node.id,
+  type: node.type,
+  text: node.text,
+  color: node.itemStyle.color,
+  data: node.data,
+});
+
+const getVisibleNetworkData = () => {
+  const visibleNodeKeys = new Set<string>();
+  const visibleNodes: Node[] = [];
+  const linkMap = new Map<string, GraphLink>();
+
+  nodes.forEach((node) => {
+    const isSubNode = node.data?.isSubNode;
+    if (
+      !filterRelationType.value.includes(node.type) ||
+      (isSubNode && !filterSubNode.value)
+    ) {
+      return;
+    }
+
+    visibleNodeKeys.add(node.id);
+    visibleNodes.push(node);
+  });
+
+  const rootNode = visibleNodes.find((node) => node.id === relKey.value);
+  const groupedNodes = visibleNodes
+    .filter((node) => node.id !== relKey.value)
+    .sort((a, b) => {
+      const orderDiff =
+        (networkNodeSortOrder[a.type] ?? 99) - (networkNodeSortOrder[b.type] ?? 99);
+      return orderDiff || a.id.localeCompare(b.id);
+    })
+    .reduce<Record<Exclude<RelationType, RelationType.all>, Node[]>>((groups, node) => {
+      groups[node.type as Exclude<RelationType, RelationType.all>].push(node);
+      return groups;
+    }, createEmptyGroupedNodes());
+
+  const graphNodes: GraphNode[] = [];
+  if (rootNode) {
+    graphNodes.push(createGraphNode(rootNode, 0, 0, networkRootNodeSize));
+  }
+  applyNetworkLayout(graphNodes, groupedNodes);
+
+  lines.forEach((line) => {
+    if (!filterLineType.value.includes(line.text)) return;
+    if (!visibleNodeKeys.has(line.from) || !visibleNodeKeys.has(line.to)) return;
+    if (!findNodeById(line.from) || !findNodeById(line.to)) return;
+
+    const linkKey = `${line.from}->${line.to}->${line.text}`;
+    if (!linkMap.has(linkKey)) {
+      linkMap.set(linkKey, {
+        source: line.from,
+        target: line.to,
+        text: line.text,
+        lineStyle: {
+          color: getGraphColor("line"),
+          opacity: isDark.value ? 0.42 : 0.52,
+          curveness: 0.18,
+        },
+      });
+    }
+  });
+
+  return {
+    nodes: graphNodes,
+    links: [...linkMap.values()],
+  };
+};
+
+const bindNetworkChartEvents = () => {
+  if (!networkChart) return;
+  networkChart.off("click");
+  networkChart.off("dblclick");
+  networkChart.off("contextmenu");
+  networkChart.on("click", (params) => {
+    if (!isMobile.value || params.dataType !== "node") return;
+    handleNodeTouch(toContextNode(params.data as GraphNode));
+  });
+  networkChart.on("dblclick", (params) => {
+    if (params.dataType !== "node" || !params.event?.event) return;
+    nodeClick(toContextNode(params.data as GraphNode), params.event.event as MouseEvent);
+  });
+  networkChart.on("contextmenu", (params) => {
+    if (params.dataType !== "node" || !params.event?.event) return;
+    params.event.event.preventDefault();
+    nodeClick(toContextNode(params.data as GraphNode), params.event.event as MouseEvent);
+  });
+};
+
+const renderNetworkChart = (notMerge = false) => {
+  if (activeView.value !== "network" || !networkChartRef.value) return;
+  if (!networkChart) {
+    networkChart = init(networkChartRef.value);
+    bindNetworkChartEvents();
+  }
+
+  const networkData = getVisibleNetworkData();
+  const option = {
+    backgroundColor: getGraphColor("background"),
+    animationDurationUpdate: 300,
+    tooltip: {
+      trigger: "item",
+      formatter: (params: { dataType?: string; data?: GraphNode | GraphLink }) => {
+        if (params.dataType === "node") {
+          return (params.data as GraphNode).text.replace(/\n/g, "<br>");
+        }
+        if (params.dataType === "edge") {
+          return (params.data as GraphLink).text;
+        }
+        return "";
+      },
+    },
+    series: [
+      {
+        type: "graph",
+        layout: "none",
+        data: networkData.nodes,
+        links: networkData.links,
+        center: ["52%", "50%"],
+        roam: true,
+        draggable: false,
+        focusNodeAdjacency: true,
+        label: {
+          show: true,
+          color: getGraphColor("nodeText"),
+          fontSize: 8,
+          lineHeight: 10,
+          width: 48,
+          overflow: "break",
+          formatter: (params: { data?: GraphNode }) => params.data?.labelText ?? "",
+        },
+        lineStyle: {
+          color: getGraphColor("line"),
+          opacity: isDark.value ? 0.42 : 0.52,
+          curveness: 0.18,
+        },
+        edgeLabel: {
+          show: false,
+          color: getGraphColor("lineText"),
+          fontSize: 12,
+          formatter: (params: { data?: GraphLink }) => params.data?.text ?? "",
+        },
+        emphasis: {
+          focus: "adjacency",
+          lineStyle: {
+            width: 2,
+          },
+        },
+        zoom: networkState.zoom,
+        scaleLimit: {
+          min: 0.2,
+          max: 3,
+        },
+      },
+    ],
+  } satisfies EChartsOption;
+
+  networkChart.setOption(option, { notMerge, lazyUpdate: false });
+  networkChart.resize();
+};
+
+const disposeNetworkChart = () => {
+  networkChart?.dispose();
+  networkChart = null;
+};
+
+const resizeNetworkChart = () => {
+  networkChart?.resize();
+};
+
+const zoomNetworkChart = (step: number) => {
+  networkState.zoom = Math.min(3, Math.max(0.12, networkState.zoom + step));
+  renderNetworkChart(true);
+};
+
+const changeNetworkLayout = (layout: NetworkLayoutMode) => {
+  networkState.layout = layout;
+  networkState.zoom = networkLayoutZoom[layout];
+  renderNetworkChart(true);
+};
+
+const handleNetworkLayoutCommand = (command: string | number | object) => {
+  const layout = command as NetworkLayoutMode;
+  if (networkLayoutOptions.some((option) => option.value === layout)) {
+    changeNetworkLayout(layout);
+  }
+};
+
+const refreshNetworkChart = () => {
+  renderNetworkChart(true);
+};
+
+const downloadNetworkChart = () => {
+  if (!networkChart) return;
+  const imageUrl = networkChart.getDataURL({
+    type: "png",
+    pixelRatio: 2,
+    backgroundColor: getGraphColor("background"),
+  });
+  const link = document.createElement("a");
+  link.href = imageUrl;
+  link.download = `relation-${relType.value}-${relKey.value}.png`;
+  link.click();
+};
+
+const enterFullscreen = async () => {
+  const pane = document.querySelector(".network-graph-pane") as HTMLElement | null;
+  if (!pane) return;
+  if (document.fullscreenElement) {
+    await document.exitFullscreen();
+  } else {
+    await pane.requestFullscreen();
+  }
+};
+
+const genNetworkGraphData = (
   reqType: RelationType,
   nodeType: RelationType,
   nodeId: string
@@ -1046,7 +1539,7 @@ const genRGJsonData = (
       addThreatActorSubthreatActor(nodeId);
     }
   }
-  setRGJsonData();
+  setNetworkGraphData();
 };
 
 /**
@@ -1078,13 +1571,19 @@ onMounted(() => {
     return;
   }
   addRootNode();
-  genRGJsonData(RelationType.all, relType.value, relKey.value);
-  nextTick(() => updateToolbarTitles());
+  genNetworkGraphData(RelationType.all, relType.value, relKey.value);
+  nextTick(() => {
+    renderNetworkChart(true);
+    renderSankeyChart();
+  });
+  window.addEventListener("resize", resizeNetworkChart);
   window.addEventListener("resize", resizeSankeyChart);
 });
 
 onBeforeUnmount(() => {
+  window.removeEventListener("resize", resizeNetworkChart);
   window.removeEventListener("resize", resizeSankeyChart);
+  disposeNetworkChart();
   disposeSankeyChart();
 });
 
@@ -1127,15 +1626,17 @@ watch(
 watch(locale, () => {
   filterLineType.value = [];
   rebuildGraphData();
-  updateToolbarTitles();
-  nextTick(renderSankeyChart);
+  nextTick(() => {
+    renderNetworkChart(true);
+    renderSankeyChart();
+  });
 });
 
 watch(activeView, () => {
   if (activeView.value === "sankey") {
     nextTick(renderSankeyChart);
   } else {
-    nextTick(refreshGraphAfterVisible);
+    nextTick(() => renderNetworkChart(true));
   }
 });
 
@@ -1145,24 +1646,10 @@ watch(sankeyData, () => {
   }
 }, { deep: true });
 
-// 更新 relation-graph 工具栏按钮的 title（库硬编码中文，需手动替换）
-const updateToolbarTitles = () => {
-  const titleMap: Record<string, string> = {
-    "全屏/退出全屏": t("toolbar.fullscreen"),
-    "放大": t("toolbar.zoomIn"),
-    "缩小": t("toolbar.zoomOut"),
-    "点击停止自动布局": t("toolbar.stopAutoLayout"),
-    "点击开始自动调整布局": t("toolbar.autoLayout"),
-    "刷新": t("toolbar.refresh"),
-    "下载图片": t("toolbar.download"),
-  };
-  document.querySelectorAll(".rel-toolbar .c-mb-button, .c-mini-toolbar .c-mb-button").forEach((el) => {
-    const title = el.getAttribute("title");
-    if (title && titleMap[title]) {
-      el.setAttribute("title", titleMap[title]);
-    }
-  });
-};
+watch(isDark, () => {
+  renderNetworkChart(true);
+  nextTick(renderSankeyChart);
+});
 
 // 鼠标右键下拉菜单
 const dropdownStyle = reactive({
@@ -1292,7 +1779,7 @@ const touchActionClose = () => {
 };
 
 const clickContextMenu = (reqType: RelationType) => {
-  genRGJsonData(reqType, nodeType.value, nodeId.value);
+  genNetworkGraphData(reqType, nodeType.value, nodeId.value);
   touchActionVisible.value = false;
 };
 
@@ -1369,22 +1856,7 @@ const getLineType = () => {
 const filterLineType = ref(totalLineType.value);
 
 const doFilter = () => {
-  const _all_nodes = graphRef$.value?.getInstance().getNodes();
-  const _all_links = graphRef$.value?.getInstance().getLinks();
-  _all_nodes?.forEach((thisNode) => {
-    const isSubNode = thisNode.data?.isSubNode;
-    const _isHideThisNode =
-      !filterRelationType.value.includes(thisNode.type as string) ||
-      (isSubNode && !filterSubNode.value);
-    thisNode.isHide = _isHideThisNode;
-  });
-  _all_links?.forEach((thisLink) => {
-    thisLink.relations.forEach((thisLine) => {
-      thisLine.isHide = !filterLineType.value.includes(thisLine.text as string);
-    });
-  });
-  graphRef$.value?.getInstance().dataUpdated();
-  graphRef$.value?.getInstance().refresh(true);
+  renderNetworkChart(true);
 };
 </script>
 
@@ -1414,54 +1886,84 @@ const doFilter = () => {
     <el-tabs v-model="activeView" class="relation-tabs">
       <el-tab-pane :label="$t('relationView.network')" name="network">
         <!-- 关系图 -->
-        <div class="relation-graph-pane">
-          <relation-graph v-if="graphVisible" ref="graphRef$" :options="graphOptions">
-            <template #node="{ node }">
-              <div
-                style="
-                  cursor: pointer;
-                  font-size: 16px;
-                  display: flex;
-                  height: inherit;
-                  align-items: center;
-                  justify-content: center;
-                "
-                @dblclick="nodeClick(node, $event)"
-                @contextmenu.prevent="nodeClick(node, $event)"
-                @click="isMobile && handleNodeTouch(node)"
-                v-html="(node as Node).text"
-              ></div>
-            </template>
-            <template #graph-plug>
-              <div class="filter-pane" id="node-filter-pane">
-                <h2>{{ $t('nodeFilter') }}</h2>
-                <el-checkbox-group v-model="filterRelationType" @change="doFilter">
-                  <el-checkbox
-                    v-for="(item, key) in RelationTypeMapping"
-                    :key="key"
-                    :name="key"
-                    class="filter-checkbox"
-                    :value="key"
-                    >{{ item.title }}</el-checkbox
-                  >
-                </el-checkbox-group>
-                <el-checkbox v-model="filterSubNode" class="filter-checkbox" @change="doFilter">{{ $t('subNodeFilter') }}</el-checkbox>
-              </div>
-              <div class="filter-pane" id="line-filter-pane">
-                <h2>{{ $t('lineFilter') }}</h2>
-                <el-checkbox-group v-model="filterLineType" @change="doFilter">
-                  <el-checkbox
-                    class="filter-checkbox"
-                    v-for="oneType in totalLineType"
-                    :key="oneType"
-                    :name="oneType"
-                    :value="oneType"
-                    >{{ oneType }}</el-checkbox
-                  >
-                </el-checkbox-group>
-              </div>
-            </template>
-          </relation-graph>
+        <div class="network-graph-pane">
+          <div class="graph-toolbar">
+            <el-tooltip :content="$t('toolbar.fullscreen')" placement="top">
+              <el-button circle size="small" @click="enterFullscreen">
+                <el-icon><FullScreen /></el-icon>
+              </el-button>
+            </el-tooltip>
+            <el-tooltip :content="$t('toolbar.zoomIn')" placement="top">
+              <el-button circle size="small" @click="zoomNetworkChart(0.08)">
+                <el-icon><ZoomIn /></el-icon>
+              </el-button>
+            </el-tooltip>
+            <el-tooltip :content="$t('toolbar.zoomOut')" placement="top">
+              <el-button circle size="small" @click="zoomNetworkChart(-0.08)">
+                <el-icon><ZoomOut /></el-icon>
+              </el-button>
+            </el-tooltip>
+            <el-tooltip
+              :content="networkLayoutTooltip"
+              placement="top"
+            >
+              <el-dropdown trigger="click" placement="left" @command="handleNetworkLayoutCommand">
+                <el-button circle size="small">
+                  <el-icon><Aim /></el-icon>
+                </el-button>
+                <template #dropdown>
+                  <el-dropdown-menu>
+                    <el-dropdown-item
+                      v-for="layout in networkLayoutOptions"
+                      :key="layout.value"
+                      :command="layout.value"
+                      :class="{ 'is-active-layout': layout.value === networkState.layout }"
+                    >
+                      {{ $t(layout.labelKey) }}
+                    </el-dropdown-item>
+                  </el-dropdown-menu>
+                </template>
+              </el-dropdown>
+            </el-tooltip>
+            <el-tooltip :content="$t('toolbar.refresh')" placement="top">
+              <el-button circle size="small" @click="refreshNetworkChart">
+                <el-icon><Refresh /></el-icon>
+              </el-button>
+            </el-tooltip>
+            <el-tooltip :content="$t('toolbar.download')" placement="top">
+              <el-button circle size="small" @click="downloadNetworkChart">
+                <el-icon><Download /></el-icon>
+              </el-button>
+            </el-tooltip>
+          </div>
+          <div ref="networkChartRef" class="network-chart"></div>
+          <div class="filter-pane" id="node-filter-pane">
+            <h2>{{ $t('nodeFilter') }}</h2>
+            <el-checkbox-group v-model="filterRelationType" @change="doFilter">
+              <el-checkbox
+                v-for="(item, key) in RelationTypeMapping"
+                :key="key"
+                :name="key"
+                class="filter-checkbox"
+                :value="key"
+                >{{ item.title }}</el-checkbox
+              >
+            </el-checkbox-group>
+            <el-checkbox v-model="filterSubNode" class="filter-checkbox" @change="doFilter">{{ $t('subNodeFilter') }}</el-checkbox>
+          </div>
+          <div class="filter-pane" id="line-filter-pane">
+            <h2>{{ $t('lineFilter') }}</h2>
+            <el-checkbox-group v-model="filterLineType" @change="doFilter">
+              <el-checkbox
+                class="filter-checkbox"
+                v-for="oneType in totalLineType"
+                :key="oneType"
+                :name="oneType"
+                :value="oneType"
+                >{{ oneType }}</el-checkbox
+              >
+            </el-checkbox-group>
+          </div>
           <el-dropdown ref="dropdown1" :handleOpen="true" :style="dropdownStyle">
             <span class="el-dropdown-link"></span>
             <template #dropdown>
@@ -1583,18 +2085,60 @@ const doFilter = () => {
   height: 100%;
 }
 
-.relation-graph-pane,
+.network-graph-pane,
 .sankey-pane {
   position: relative;
   width: 100%;
   height: 100%;
   min-height: 420px;
   border: var(--break-graph-border) solid 1px;
-  background: var(--break-card-bg);
+  background: var(--break-bg-card);
 }
 
-.relation-graph-pane {
+.network-graph-pane {
   overflow: hidden;
+}
+
+.network-chart {
+  width: 100%;
+  height: 100%;
+}
+
+.graph-toolbar {
+  position: absolute;
+  z-index: 710;
+  top: 50%;
+  right: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 48px;
+  padding: 10px 7px;
+  border: 1px solid var(--break-graph-border);
+  border-radius: 8px;
+  background: var(--break-bg-card);
+  transform: translateY(-50%);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+}
+
+.graph-toolbar .el-button {
+  width: 28px;
+  height: 28px;
+  margin-left: 0;
+}
+
+.graph-toolbar :deep(.el-button + .el-button) {
+  margin-left: 0;
+}
+
+.graph-toolbar :deep(.el-dropdown) {
+  line-height: 1;
+}
+
+.is-active-layout {
+  color: var(--el-color-primary);
+  font-weight: 600;
 }
 
 .sankey-pane {
@@ -1642,6 +2186,16 @@ const doFilter = () => {
     left: auto;
     right: auto;
   }
+
+  .graph-toolbar {
+    top: auto;
+    right: 10px;
+    bottom: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    transform: none;
+    max-width: calc(100% - 20px);
+  }
 }
 
 .sankey-empty {
@@ -1679,11 +2233,6 @@ const doFilter = () => {
 }
 #line-filter-pane {
   right: 80px;
-}
-
-:deep(svg text) {
-  font-size: 14px !important;
-  fill: var(--break-graph-text) !important;
 }
 
 /* 触摸操作面板 */
@@ -1737,35 +2286,5 @@ const doFilter = () => {
 .touch-action-cancel {
   font-weight: 600;
   color: var(--break-text-secondary);
-}
-</style>
-
-<style>
-/* 暗色模式下图谱 Canvas 内节点文本颜色 */
-html.dark .rel-node-text {
-  color: #e2e8f0 !important;
-}
-
-html.dark .rel-node-detect {
-  color: #e2e8f0 !important;
-}
-
-/* 暗色模式下工具栏背景和图标 */
-html.dark .c-mini-toolbar {
-  background-color: #1e293b !important;
-  border-color: #334155 !important;
-}
-
-html.dark .c-mb-button {
-  color: #cbd5e1 !important;
-}
-
-html.dark .c-current-zoom {
-  color: #94a3b8 !important;
-}
-
-html.dark .rel-toolbar {
-  background-color: #1e293b !important;
-  border-color: #334155 !important;
 }
 </style>

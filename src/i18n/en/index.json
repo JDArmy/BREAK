@@ -56,10 +56,17 @@
     "fullscreen": "Fullscreen/Exit Fullscreen",
     "zoomIn": "Zoom In",
     "zoomOut": "Zoom Out",
+    "layout": "Layout",
     "autoLayout": "Auto Layout",
     "stopAutoLayout": "Stop Auto Layout",
     "refresh": "Refresh",
     "download": "Download Image"
+  },
+  "relationLayout": {
+    "horizontal": "Horizontal Flow",
+    "lanes": "Swimlanes",
+    "split": "Left/Right Split",
+    "radial": "Radial"
   },
   "lineFilter": "Relation Filter:",
   "fetchAllRelations": "Fetch All Relations",
