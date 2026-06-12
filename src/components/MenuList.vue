@@ -244,7 +244,7 @@ const getActiveIndex = (fullPath: string) => {
   color: #f1f5f9;
   padding-left: 10px;
   padding-bottom: 0px;
-  margin-bottom: 0px;
+  margin: 0;
   text-align: center;
   font-weight: 600;
   letter-spacing: 0.02em;
