@@ -22,38 +22,46 @@ function applyTheme(isDark: boolean) {
   }
 }
 
+// ===== 模块级单例状态，所有组件共享 =====
+const theme = ref<ThemeMode>(getInitialTheme());
+const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+const systemDark = ref(mediaQuery.matches);
+
+// 实际是否暗色
+const isDark = computed(
+  () => theme.value === "dark" || (theme.value === "system" && systemDark.value)
+);
+
+// 监听系统偏好变化
+function onMediaChange(e: MediaQueryListEvent) {
+  systemDark.value = e.matches;
+}
+
+// 监听主题变化，应用到 DOM
+watch(isDark, (dark) => applyTheme(dark), { immediate: true });
+
+// 全局系统偏好监听器引用计数
+let mediaListenerCount = 0;
+
 export function useTheme() {
-  const theme = ref<ThemeMode>(getInitialTheme());
-
-  // 系统偏好检测
-  const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-  const systemDark = ref(mediaQuery.matches);
-
-  // 监听系统偏好变化
-  function onMediaChange(e: MediaQueryListEvent) {
-    systemDark.value = e.matches;
-  }
-
-  // 实际是否暗色
-  const isDark = computed(
-    () => theme.value === "dark" || (theme.value === "system" && systemDark.value)
-  );
-
   // 设置主题
   function setTheme(mode: ThemeMode) {
     theme.value = mode;
     localStorage.setItem(THEME_STORAGE_KEY, mode);
   }
 
-  // 监听主题变化，应用到 DOM
-  watch(isDark, (dark) => applyTheme(dark), { immediate: true });
-
   onMounted(() => {
-    mediaQuery.addEventListener("change", onMediaChange);
+    if (mediaListenerCount === 0) {
+      mediaQuery.addEventListener("change", onMediaChange);
+    }
+    mediaListenerCount++;
   });
 
   onUnmounted(() => {
-    mediaQuery.removeEventListener("change", onMediaChange);
+    mediaListenerCount--;
+    if (mediaListenerCount === 0) {
+      mediaQuery.removeEventListener("change", onMediaChange);
+    }
   });
 
   return { theme, isDark, setTheme };
