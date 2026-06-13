@@ -23,11 +23,25 @@ watch(
 );
 
 const threatActorItems = computed(() =>
-  threatActorKeys.map((taKey) => ({
-    id: taKey,
-    title: t(`BREAK.threatActors.${taKey}.title`),
-    subtitle: t(`BREAK.threatActors.${taKey}.description`).slice(0, 56),
-  }))
+  threatActorKeys.map((taKey) => {
+    const threatActor = BREAK.threatActors[taKey];
+    const title = t(`BREAK.threatActors.${taKey}.title`);
+    const description = t(`BREAK.threatActors.${taKey}.description`);
+
+    return {
+      id: taKey,
+      title,
+      subtitle: description.slice(0, 56),
+      searchText: [
+        title,
+        description,
+        ...threatActor.directCauseRisks,
+        ...threatActor.indirectSupportRisks,
+        ...threatActor.buildAttackTools,
+        ...threatActor.useAttackTools,
+      ].join(" "),
+    };
+  })
 );
 
 const selectedThreatActor = computed(() => BREAK.threatActors[selectedThreatActorKey.value]);

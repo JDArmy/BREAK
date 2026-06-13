@@ -16,7 +16,7 @@ const route = useRoute();
 const router = useRouter();
 const { t, locale } = useI18n();
 const { isDark } = useTheme();
-const { isMobile } = useBreakpoints();
+const { isMobile, width } = useBreakpoints();
 use([GraphChart, SankeyChart, LegendComponent, TooltipComponent, CanvasRenderer]);
 
 enum RelationType {
@@ -406,13 +406,13 @@ const selectSankeyNode = (node: SankeyNode) => {
 
 const sankeyRight = computed(() => {
   if (isMobile.value) return 80;
-  if (window.innerWidth < 992) return 160;
+  if (width.value < 992) return 160;
   return 280;
 });
 
 const sankeyLabelWidth = computed(() => {
   if (isMobile.value) return 100;
-  if (window.innerWidth < 992) return 160;
+  if (width.value < 992) return 160;
   return 220;
 });
 
@@ -2175,18 +2175,6 @@ const doFilter = () => {
     padding-right: 0;
   }
 
-  .filter-pane {
-    position: static;
-    margin-bottom: 8px;
-    padding: 8px 16px;
-  }
-
-  #node-filter-pane,
-  #line-filter-pane {
-    left: auto;
-    right: auto;
-  }
-
   .graph-toolbar {
     top: auto;
     right: 10px;
@@ -2286,5 +2274,59 @@ const doFilter = () => {
 .touch-action-cancel {
   font-weight: 600;
   color: var(--break-text-secondary);
+}
+
+@media (max-width: 767px) {
+  .filter-pane {
+    position: static;
+    flex: 0 0 auto;
+    margin: 0 8px 6px;
+    padding: 8px 10px;
+    max-height: 86px;
+    overflow-y: auto;
+    border-radius: 8px;
+  }
+
+  #node-filter-pane {
+    order: 1;
+    left: auto;
+    right: auto;
+  }
+
+  #line-filter-pane {
+    order: 2;
+    left: auto;
+    right: auto;
+  }
+
+  .network-graph-pane {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    overflow: hidden;
+  }
+
+  .network-chart {
+    order: 3;
+    flex: 1 1 auto;
+    min-height: 260px;
+    height: auto;
+  }
+
+  .filter-pane h2 {
+    margin: 0 0 4px;
+    font-size: 12px;
+  }
+
+  .filter-pane :deep(.el-checkbox-group) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 8px;
+  }
+
+  .filter-checkbox {
+    display: inline-flex;
+    margin-right: 0;
+  }
 }
 </style>

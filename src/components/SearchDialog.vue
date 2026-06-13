@@ -22,21 +22,21 @@ const query = ref("");
 const selectedIndex = ref(-1);
 const inputRef = ref<InstanceType<typeof import("element-plus")["ElInput"]> | null>(null);
 
-// 搜索结果
-const results = computed(() => {
-  if (!query.value.trim()) return { risk: [], avoidance: [], attackTool: [], threatActor: [] } as Record<EntityType, SearchResult[]>;
-  return doSearch(query.value);
-});
+const emptyResults = () =>
+  ({ risk: [], avoidance: [], attackTool: [], threatActor: [] }) as Record<
+    EntityType,
+    SearchResult[]
+  >;
 
 // 扁平化的所有结果（用于键盘导航索引）
 const flatResults = computed(() => {
   const flat: (SearchResult & { groupIndex: number })[] = [];
   let groupIdx = 0;
   for (const type of ["risk", "avoidance", "attackTool", "threatActor"] as EntityType[]) {
-    for (const r of results.value[type]) {
+    for (const r of resultsDebounced.value[type]) {
       flat.push({ ...r, groupIndex: groupIdx });
     }
-    if (results.value[type].length > 0) groupIdx++;
+    if (resultsDebounced.value[type].length > 0) groupIdx++;
   }
   return flat;
 });
@@ -72,8 +72,8 @@ watch(query, (val) => {
 });
 
 // 用 debouncedQuery 触发实际搜索
-const results_debounced = computed(() => {
-  if (!debouncedQuery.value.trim()) return { risk: [], avoidance: [], attackTool: [], threatActor: [] } as Record<EntityType, SearchResult[]>;
+const resultsDebounced = computed(() => {
+  if (!debouncedQuery.value.trim()) return emptyResults();
   return doSearch(debouncedQuery.value);
 });
 
@@ -162,7 +162,10 @@ onUnmounted(() => {
 });
 
 // 获取当前平台快捷键提示
-const shortcutHint = navigator.platform?.includes("Mac") ? "⌘K" : "Ctrl+K";
+const shortcutHint =
+  typeof navigator !== "undefined" && navigator.platform?.includes("Mac")
+    ? "⌘K"
+    : "Ctrl+K";
 
 // 触摸设备选中索引
 function handleTouchStart(index: number) {
@@ -200,13 +203,13 @@ function handleTouchStart(index: number) {
     <!-- 搜索结果 -->
     <div class="search-results" v-if="debouncedQuery.trim()">
       <template v-for="type in (['risk', 'avoidance', 'attackTool', 'threatActor'] as EntityType[])" :key="type">
-        <div v-if="results_debounced[type]?.length" class="result-group">
+        <div v-if="resultsDebounced[type]?.length" class="result-group">
           <div class="result-group-header">
             {{ t(groupLabels[type]) }}
-            <span class="result-count">{{ results_debounced[type].length }}</span>
+            <span class="result-count">{{ resultsDebounced[type].length }}</span>
           </div>
           <div
-            v-for="result in results_debounced[type]"
+            v-for="result in resultsDebounced[type]"
             :key="result.id"
             class="search-result-item"
             :class="{ selected: flatResults.findIndex(f => f.id === result.id && f.type === result.type) === selectedIndex }"

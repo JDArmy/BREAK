@@ -32,10 +32,21 @@ const avoidanceItems = computed(() =>
     )
     .map((aKey) => {
       const category = BREAK.avoidances[aKey].category;
+      const title = t(`BREAK.avoidances.${aKey}.title`);
+      const definition = t(`BREAK.avoidances.${aKey}.definition`);
+      const description = t(`BREAK.avoidances.${aKey}.description`);
+      const limitation = BREAK.avoidances[aKey].limitation
+        ? t(`BREAK.avoidances.${aKey}.limitation`)
+        : "";
+      const categoryTitle = t(`BREAK.avoidanceCategories.${category}.title`);
+
       return {
         id: aKey,
-        title: t(`BREAK.avoidances.${aKey}.title`),
-        subtitle: `${category}: ${t(`BREAK.avoidanceCategories.${category}.title`)}`,
+        title,
+        subtitle: `${category}: ${categoryTitle}`,
+        searchText: [title, definition, description, limitation, category, categoryTitle]
+          .filter(Boolean)
+          .join(" "),
       };
     })
 );

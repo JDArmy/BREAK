@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import BREAK from "@/BREAK";
 import { useSafeI18n } from "@/composables/useSafeI18n";
+import { computed } from "vue";
 
 const { safeT } = useSafeI18n();
 
@@ -15,13 +16,13 @@ const props = defineProps<{
  * 获取 ZH 源数据中的 references 数组
  * link 是结构数据，始终从中文源获取
  */
-const references = (() => {
+const references = computed(() => {
   const category = BREAK[props.type as keyof typeof BREAK] as Record<
     string,
     { references?: { link: string; title: string }[] }
   >;
   return category?.[props.entityKey]?.references ?? [];
-})();
+});
 
 /** 安全获取翻译后的 reference title（绕过 vue-i18n 管道符解析） */
 function getRefTitle(index: number): string {

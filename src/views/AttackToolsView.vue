@@ -23,11 +23,24 @@ watch(
 );
 
 const attackToolItems = computed(() =>
-  attackToolKeys.map((atKey) => ({
-    id: atKey,
-    title: t(`BREAK.attackTools.${atKey}.title`),
-    subtitle: t(`BREAK.attackTools.${atKey}.description`).slice(0, 56),
-  }))
+  attackToolKeys.map((atKey) => {
+    const attackTool = BREAK.attackTools[atKey];
+    const title = t(`BREAK.attackTools.${atKey}.title`);
+    const description = t(`BREAK.attackTools.${atKey}.description`);
+
+    return {
+      id: atKey,
+      title,
+      subtitle: description.slice(0, 56),
+      searchText: [
+        title,
+        description,
+        ...attackTool.avoidances,
+        ...attackTool.directCauseRisks,
+        ...attackTool.indirectSupportRisks,
+      ].join(" "),
+    };
+  })
 );
 
 const selectedAttackTool = computed(() => BREAK.attackTools[selectedAttackToolKey.value]);

@@ -7,13 +7,21 @@ const BP_LG = 992; // >=992px 平板/桌面分界
 const BP_XL = 1200; // >=1200px 桌面
 
 export function useBreakpoints() {
-  const width = ref(window.innerWidth);
+  const width = ref(typeof window === "undefined" ? BP_XL : window.innerWidth);
 
   const onResize = () => {
+    if (typeof window === "undefined") return;
     width.value = window.innerWidth;
   };
-  onMounted(() => window.addEventListener("resize", onResize));
-  onUnmounted(() => window.removeEventListener("resize", onResize));
+  onMounted(() => {
+    onResize();
+    window.addEventListener("resize", onResize);
+  });
+  onUnmounted(() => {
+    if (typeof window !== "undefined") {
+      window.removeEventListener("resize", onResize);
+    }
+  });
 
   const isXs = computed(() => width.value < BP_SM); // <480px 小手机
   const isSm = computed(

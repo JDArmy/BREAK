@@ -22,7 +22,10 @@ const router = useRouter();
 const route = useRoute();
 const searchOpen = ref(false);
 const mobileMenuOpen = ref(false);
-const shortcutHint = navigator.platform?.includes("Mac") ? "⌘K" : "Ctrl+K";
+const shortcutHint =
+  typeof navigator !== "undefined" && navigator.platform?.includes("Mac")
+    ? "⌘K"
+    : "Ctrl+K";
 
 const handleLocaleChange = (lang: string) => {
   setLocale(lang);

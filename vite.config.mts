@@ -51,6 +51,9 @@ export default defineConfig({
           if (id.includes("/src/i18n/en/BREAK")) return "i18n-en-BREAK";
           if (id.includes("/src/i18n")) return "i18n";
           if (id.includes("node_modules/fuse.js")) return "fuse.js";
+          if (id.includes("node_modules/echarts") || id.includes("node_modules/zrender")) {
+            return "echarts";
+          }
           if (id.includes("node_modules/vue-router")) return "vue-router";
           if (id.includes("node_modules/vue-i18n")) return "vue-i18n";
           if (id.includes("node_modules/vue")) return "vue";

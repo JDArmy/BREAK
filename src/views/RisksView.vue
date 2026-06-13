@@ -14,11 +14,22 @@ const risks = Object.keys(BREAK.risks);
 const selectedRiskKey = ref(route.hash.replace("#", "") || risks[0] || "");
 
 const riskItems = computed(() =>
-  risks.map((rKey) => ({
-    id: rKey,
-    title: t(`BREAK.risks.${rKey}.title`),
-    subtitle: t(`BREAK.risks.${rKey}.definition`).slice(0, 56),
-  }))
+  risks.map((rKey) => {
+    const title = t(`BREAK.risks.${rKey}.title`);
+    const definition = t(`BREAK.risks.${rKey}.definition`);
+    const description = t(`BREAK.risks.${rKey}.description`);
+    const complexity = t(`BREAK.risks.${rKey}.complexity`);
+    const influence = t(`BREAK.risks.${rKey}.influence`);
+
+    return {
+      id: rKey,
+      title,
+      subtitle: definition.slice(0, 56),
+      searchText: [title, definition, description, complexity, influence]
+        .filter(Boolean)
+        .join(" "),
+    };
+  })
 );
 
 watch(

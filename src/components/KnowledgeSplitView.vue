@@ -10,6 +10,7 @@ interface KnowledgeItem {
   id: string;
   title: string;
   subtitle?: string;
+  searchText?: string;
 }
 
 const props = defineProps<{
@@ -41,7 +42,7 @@ const filteredItems = computed(() => {
   if (!keyword) return props.items;
 
   return props.items.filter((item) =>
-    [item.id, item.title, item.subtitle]
+    [item.id, item.title, item.subtitle, item.searchText]
       .filter(Boolean)
       .some((value) => value?.toLowerCase().includes(keyword))
   );
@@ -80,10 +81,11 @@ watch(
     const key = hash.replace("#", "");
     if (
       key &&
-      key !== props.selectedKey &&
       props.items.some((item) => item.id === key)
     ) {
-      emit("select", key);
+      if (key !== props.selectedKey) {
+        emit("select", key);
+      }
       if (isMobile.value) {
         mobileView.value = "detail";
       }
@@ -96,6 +98,8 @@ watch(
 watch(isMobile, (mobile) => {
   if (!mobile) {
     mobileView.value = "list";
+  } else if (route.hash && selectedItem.value) {
+    mobileView.value = "detail";
   }
 });
 </script>
