@@ -33,5 +33,10 @@ stats.html
 资料
 CLAUDE.md
 research/
-scripts/
+scripts/*
+!scripts/search/
+scripts/search/*
+!scripts/search/common.mjs
+!scripts/validate/
+!scripts/validate/*.mjs
 .claude/

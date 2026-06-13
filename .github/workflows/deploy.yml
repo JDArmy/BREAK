@@ -29,6 +29,7 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run type-check
+      - run: npm run validate:data
       - run: npm run test
       - run: npm run build-only
       - uses: actions/configure-pages@v4

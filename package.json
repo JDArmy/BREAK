@@ -11,7 +11,9 @@
     "analyze": "ANALYZE=1 vite build",
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint --fix",
-    "validate:data": "node scripts/validate/schema.mjs && node scripts/validate/i18n-sync.mjs --strict",
+    "validate:data": "node scripts/validate/schema.mjs && node scripts/validate/i18n-sync.mjs --strict && node scripts/validate/relations.mjs",
+    "audit:relations": "node scripts/validate/relations.mjs",
+    "audit:references": "node scripts/validate/references.mjs",
     "test": "vitest run",
     "test:watch": "vitest"
   },

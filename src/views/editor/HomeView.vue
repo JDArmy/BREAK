@@ -4,6 +4,8 @@ import BREAK from "@/BREAK";
 import { reactive } from "vue";
 import axios from "axios";
 import { useRoute, useRouter } from "vue-router";
+import { ElMessage } from "element-plus";
+import "element-plus/es/components/message/style/css";
 import {
   entitySchemas,
   formatZodIssues,
@@ -392,7 +394,7 @@ const deleteReference = (index: number) => {
 
 const saveReference = () => {
   if (!editingRef.value || !editingRef.value.link || !editingRef.value.title) {
-    alert("链接和标题不能为空");
+    ElMessage.warning("链接和标题不能为空");
     return;
   }
   Object.keys(editingRef.value).forEach((key) => {
@@ -454,13 +456,13 @@ const saveFileToServer = (path: string, json: string) => {
   };
   axios
     .post("http://127.0.0.1:3000/", payload)
-    .then((response) => {
+    .then(() => {
       saveFileToServerSuccessStatus = true;
-      console.log(response.data);
+      ElMessage.success(`已保存：${path}`);
     })
     .catch((error) => {
       saveFileToServerSuccessStatus = false;
-      alert(error.response?.data?.error?.message || error.message);
+      ElMessage.error(error.response?.data?.error?.message || error.message);
     });
 };
 // 监控页面关闭事件，如果数据未完全上传成功，则通过beforeunload事件阻止页面关闭
@@ -497,7 +499,7 @@ const validateBreakItem = (type: BreakType, key: string, item: unknown) => {
   const result = schema.safeParse(item);
   if (result.success) return true;
 
-  alert(
+  ElMessage.error(
     `${key} 数据校验失败：\n${formatZodIssues(result.error)
       .slice(0, 10)
       .join("\n")}`
@@ -550,7 +552,6 @@ const transferChange = (relationItem: RelationItem) => {
     const json = JSON.stringify(sortedNewBreakItems, null, 2);
     const path = `${rootPath}/BREAK/${BreakTypeForder[breakType.value as keyof typeof BreakTypeForder]}/${parentKey}.json`;
 
-    // console.log(path, json);
     saveFileToServer(path, json);
   } else if (relationItem.type === relationType.many2one) {
     // 枚举所有的breakItems
@@ -614,7 +615,6 @@ const transferChange = (relationItem: RelationItem) => {
       const json = JSON.stringify(sortedNewBreakItems, null, 2);
       const path = `${rootPath}/BREAK/${BreakTypeForder[relationItem.fromBreakKey as keyof typeof BreakTypeForder]}/${parentKey}.json`;
 
-      // console.log(path, json);
       saveFileToServer(path, json);
     });
   }
