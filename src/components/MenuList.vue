@@ -132,10 +132,6 @@ const getActiveIndex = (fullPath: string) => {
         </div>
       </div>
 
-      <div class="mobile-nav-item" :class="{ active: getActiveIndex(route.fullPath) === '/dashboard' }" @click="handleMobileNav('/dashboard')">
-        <span>{{ $t("menu.dashboard") }}</span>
-      </div>
-
       <div class="mobile-nav-divider"></div>
 
       <div class="mobile-nav-group">
@@ -240,7 +236,6 @@ const getActiveIndex = (fullPath: string) => {
         </el-dropdown-menu>
       </template>
     </el-dropdown>
-    <el-menu-item index="/dashboard">{{ $t("menu.dashboard") }}</el-menu-item>
 
     <el-dropdown class="outside-link">
       <span class="el-dropdown-link"

@@ -1,7 +1,6 @@
 {
   "menu": {
     "home": "Home",
-    "dashboard": "Analytics",
     "knowledge": "Knowledge Base",
     "risks": "Risks",
     "avoidances": "Avoidances"
@@ -123,36 +122,5 @@
     "light": "Light",
     "dark": "Dark",
     "system": "System"
-  },
-  "dashboard": {
-    "eyebrow": "Content Trust / Analytics Baseline",
-    "title": "BREAK Analytics Dashboard",
-    "referenceCoverage": "Reference Coverage",
-    "entityOverview": "Entity Overview",
-    "entityComposition": "Entity Composition",
-    "mainVsSub": "Main / Sub",
-    "mainItems": "Main Items",
-    "subItems": "Sub Items",
-    "mainSub": "Main {main} / Sub {sub}",
-    "riskComplexity": "Risk Complexity",
-    "avoidanceCategories": "Avoidance Categories",
-    "businessSceneCoverage": "Business Scene Coverage",
-    "topScenes": "Top Scenes",
-    "relationCoverage": "Relation Coverage",
-    "coverageRate": "Coverage Rate",
-    "highDegreeNodes": "High-Degree Nodes",
-    "degree": "Degree",
-    "entities": {
-      "risks": "Risks",
-      "avoidances": "Avoidances",
-      "attackTools": "Attack Tools",
-      "threatActors": "Threat Actors",
-      "businessScenes": "Business Scenes"
-    },
-    "status": {
-      "good": "Good",
-      "watch": "Watch",
-      "weak": "Weak"
-    }
   }
 }

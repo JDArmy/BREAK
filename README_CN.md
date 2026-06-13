@@ -64,6 +64,7 @@ npm run dev
 npm run validate:data
 npm run audit:metrics
 npm run audit:references
+npm run audit:maintenance
 npm run test
 npm run build
 npm run audit:bundle
@@ -72,6 +73,7 @@ npm run audit:bundle
 `npm run validate:data` 会执行 JSON Schema 校验、i18n key 同步检查和关系覆盖审计。
 `npm run audit:metrics` 会生成内容可信度、关系覆盖、分类分布和业务场景覆盖基线报告。
 `npm run audit:bundle` 会基于 `docs/assets` 检查构建产物是否超过 bundle 预算。
+`npm run audit:maintenance` 会刷新审计报告并生成统一维护汇总。
 
 ### 界面化配置编辑器
 

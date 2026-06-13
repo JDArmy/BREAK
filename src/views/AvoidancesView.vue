@@ -60,6 +60,7 @@ watch(selectedCategory, () => {
   }
 });
 
+
 const selectedAvoidance = computed(() => BREAK.avoidances[selectedAvoidanceKey.value]);
 
 const relatedRiskKeys = computed(() =>

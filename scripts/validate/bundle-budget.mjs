@@ -6,6 +6,7 @@ const assetsDir = path.join(projectRoot, 'docs/assets');
 const reportDir = path.join(projectRoot, 'research/search-reports');
 const reportJsonPath = path.join(reportDir, 'bundle-budget.json');
 const reportMdPath = path.join(reportDir, 'bundle-budget.md');
+const noFail = process.argv.includes('--no-fail');
 
 const budgets = {
   maxJsChunkBytes: 500 * 1024,
@@ -149,6 +150,6 @@ console.log(`largestJs=${report.summary.largestJs?.file || 'n/a'} ${report.summa
 console.log(`issues=${report.issues.length}`);
 console.log(`\n报告已保存到: ${reportMdPath}`);
 
-if (report.issues.length > 0) {
+if (report.issues.length > 0 && !noFail) {
   process.exitCode = 1;
 }

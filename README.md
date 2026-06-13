@@ -64,6 +64,7 @@ npm run dev
 npm run validate:data
 npm run audit:metrics
 npm run audit:references
+npm run audit:maintenance
 npm run test
 npm run build
 npm run audit:bundle
@@ -72,6 +73,7 @@ npm run audit:bundle
 `npm run validate:data` runs JSON Schema validation, i18n key synchronization, and relationship coverage auditing.
 `npm run audit:metrics` generates the content trust, relation coverage, category distribution, and business scene coverage baseline.
 `npm run audit:bundle` checks the generated `docs/assets` bundle against the current performance budget.
+`npm run audit:maintenance` refreshes the audit reports and writes a unified maintenance summary.
 
 ### GUI Configuration Editor
 

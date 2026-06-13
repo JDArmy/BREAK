@@ -19,6 +19,7 @@
     "audit:references": "node scripts/validate/references.mjs",
     "audit:metrics": "node scripts/validate/metrics.mjs",
     "audit:bundle": "node scripts/validate/bundle-budget.mjs",
+    "audit:maintenance": "npm run audit:references && npm run audit:relations && npm run audit:metrics && node scripts/validate/bundle-budget.mjs --no-fail && node scripts/validate/maintenance.mjs",
     "test": "vitest run",
     "test:watch": "vitest"
   },

@@ -15,6 +15,13 @@ const reportMdPath = path.join(reportDir, 'metrics-baseline.md');
 const percent = (part, total) => (total ? Number(((part / total) * 100).toFixed(2)) : 0);
 const isSubEntity = (key) => key.includes('-');
 const unique = (values) => [...new Set(values.filter(Boolean))].sort();
+const issueLabels = {
+  risk_low_avoidance_coverage: '风险规避覆盖偏弱',
+  attack_tool_without_avoidances: '攻击工具缺少规避手段',
+  threat_actor_without_tools: '威胁行为者缺少工具关系',
+  business_scene_without_risks: '业务场景未覆盖风险',
+  business_scene_high_duplicate_risks: '业务场景风险重复引用偏高',
+};
 
 function loadJsonRecords(relativeDir) {
   const dir = path.join(projectRoot, relativeDir);
@@ -51,13 +58,18 @@ function hasArrayValues(entity, field) {
 }
 
 function summarizeCoverage(name, records, field) {
-  const covered = records.filter(({ entity }) => hasArrayValues(entity, field)).length;
+  const emptyItems = records
+    .filter(({ entity }) => !hasArrayValues(entity, field))
+    .map(({ key, entity }) => ({ key, title: entity.title || '' }));
+  const covered = records.length - emptyItems.length;
   return {
     name,
+    field,
     total: records.length,
     covered,
-    empty: records.length - covered,
+    empty: emptyItems.length,
     rate: percent(covered, records.length),
+    emptyItems,
   };
 }
 
@@ -68,6 +80,163 @@ function collectBusinessSceneRisks(scene) {
       Array.isArray(riskScene.risks) ? riskScene.risks : [],
     ),
   ];
+}
+
+function collectRelationDegrees({ risks, avoidances, attackTools, threatActors }) {
+  const degreeMap = new Map();
+  const addDegree = (type, key, amount = 1) => {
+    const id = `${type}:${key}`;
+    const current = degreeMap.get(id) || { type, key, title: '', degree: 0, inbound: 0, outbound: 0 };
+    current.degree += amount;
+    degreeMap.set(id, current);
+  };
+  const addInbound = (type, key, amount = 1) => {
+    const id = `${type}:${key}`;
+    const current = degreeMap.get(id) || { type, key, title: '', degree: 0, inbound: 0, outbound: 0 };
+    current.inbound += amount;
+    current.degree += amount;
+    degreeMap.set(id, current);
+  };
+  const addOutbound = (type, key, amount = 1) => {
+    const id = `${type}:${key}`;
+    const current = degreeMap.get(id) || { type, key, title: '', degree: 0, inbound: 0, outbound: 0 };
+    current.outbound += amount;
+    current.degree += amount;
+    degreeMap.set(id, current);
+  };
+
+  for (const { key, entity } of risks) {
+    addOutbound('risk', key, entity.avoidances?.length || 0);
+    for (const avoidanceKey of entity.avoidances || []) addInbound('avoidance', avoidanceKey);
+  }
+  for (const { key, entity } of attackTools) {
+    const riskRefs = [...(entity.directCauseRisks || []), ...(entity.indirectSupportRisks || [])];
+    const avoidanceRefs = entity.avoidances || [];
+    addOutbound('attackTool', key, riskRefs.length + avoidanceRefs.length);
+    for (const riskKey of riskRefs) addInbound('risk', riskKey);
+    for (const avoidanceKey of avoidanceRefs) addInbound('avoidance', avoidanceKey);
+  }
+  for (const { key, entity } of threatActors) {
+    const attackToolRefs = [...(entity.buildAttackTools || []), ...(entity.useAttackTools || [])];
+    const riskRefs = [...(entity.directCauseRisks || []), ...(entity.indirectSupportRisks || [])];
+    addOutbound('threatActor', key, attackToolRefs.length + riskRefs.length);
+    for (const attackToolKey of attackToolRefs) addInbound('attackTool', attackToolKey);
+    for (const riskKey of riskRefs) addInbound('risk', riskKey);
+  }
+
+  const titles = new Map([
+    ...risks.map(({ key, entity }) => [`risk:${key}`, entity.title || '']),
+    ...avoidances.map(({ key, entity }) => [`avoidance:${key}`, entity.title || '']),
+    ...attackTools.map(({ key, entity }) => [`attackTool:${key}`, entity.title || '']),
+    ...threatActors.map(({ key, entity }) => [`threatActor:${key}`, entity.title || '']),
+  ]);
+
+  return [...degreeMap.values()]
+    .map((item) => ({ ...item, title: titles.get(`${item.type}:${item.key}`) || '' }))
+    .filter((item) => item.degree > 0)
+    .sort((a, b) => b.degree - a.degree);
+}
+
+function collectWeakRelations({ risks, attackTools, threatActors }) {
+  const weakRiskAvoidance = risks
+    .filter(({ entity }) => (entity.avoidances || []).length <= 1)
+    .map(({ key, entity }) => ({
+      type: 'risk_low_avoidance_coverage',
+      entityType: 'risk',
+      key,
+      title: entity.title || '',
+      count: entity.avoidances?.length || 0,
+      message: `Risk 关联规避手段数量偏低: ${key}`,
+    }));
+
+  const attackToolsWithoutAvoidances = attackTools
+    .filter(({ entity }) => !hasArrayValues(entity, 'avoidances'))
+    .map(({ key, entity }) => ({
+      type: 'attack_tool_without_avoidances',
+      entityType: 'attackTool',
+      key,
+      title: entity.title || '',
+      count: 0,
+      message: `AttackTool 缺少规避手段: ${key}`,
+    }));
+
+  const threatActorsWithoutTools = threatActors
+    .filter(({ entity }) => !hasArrayValues(entity, 'buildAttackTools') && !hasArrayValues(entity, 'useAttackTools'))
+    .map(({ key, entity }) => ({
+      type: 'threat_actor_without_tools',
+      entityType: 'threatActor',
+      key,
+      title: entity.title || '',
+      count: 0,
+      message: `ThreatActor 缺少工具关系: ${key}`,
+    }));
+
+  return [...weakRiskAvoidance, ...attackToolsWithoutAvoidances, ...threatActorsWithoutTools].sort((a, b) =>
+    a.type.localeCompare(b.type) || a.key.localeCompare(b.key),
+  );
+}
+
+function collectSceneIssues(businessScenes) {
+  return businessScenes.flatMap(({ key, entity }) => {
+    const sceneRisks = collectBusinessSceneRisks(entity);
+    const uniqueRisks = unique(sceneRisks);
+    const duplicateRiskCount = sceneRisks.length - uniqueRisks.length;
+    const issues = [];
+
+    if (uniqueRisks.length === 0) {
+      issues.push({
+        type: 'business_scene_without_risks',
+        key,
+        title: entity.title || '',
+        message: `BusinessScene 未覆盖风险: ${key}`,
+      });
+    }
+    if (sceneRisks.length > 0 && duplicateRiskCount / sceneRisks.length >= 0.15) {
+      issues.push({
+        type: 'business_scene_high_duplicate_risks',
+        key,
+        title: entity.title || '',
+        duplicateRiskCount,
+        riskCount: sceneRisks.length,
+        message: `BusinessScene 风险重复引用偏高: ${key}`,
+      });
+    }
+
+    return issues;
+  });
+}
+
+function buildMaintenanceTasks({ relationCoverage, weakRelations, sceneIssues }) {
+  const tasks = [];
+
+  for (const item of relationCoverage.filter((entry) => entry.empty > 0 || entry.rate < 95)) {
+    tasks.push({
+      priority: item.rate < 85 ? 'P1' : 'P2',
+      type: 'relation_coverage',
+      title: `${item.name} 存在 ${item.empty} 个空值实体`,
+      count: item.empty,
+    });
+  }
+  for (const type of [...new Set(weakRelations.map((item) => item.type))].sort()) {
+    const count = weakRelations.filter((item) => item.type === type).length;
+    tasks.push({
+      priority: type === 'risk_low_avoidance_coverage' ? 'P2' : 'P1',
+      type,
+      title: `${issueLabels[type] || type}: ${count}`,
+      count,
+    });
+  }
+  for (const type of [...new Set(sceneIssues.map((item) => item.type))].sort()) {
+    const count = sceneIssues.filter((item) => item.type === type).length;
+    tasks.push({
+      priority: 'P2',
+      type,
+      title: `${issueLabels[type] || type}: ${count}`,
+      count,
+    });
+  }
+
+  return tasks.sort((a, b) => a.priority.localeCompare(b.priority) || b.count - a.count);
 }
 
 function buildReport() {
@@ -147,6 +316,11 @@ function buildReport() {
     })
     .sort((a, b) => b.uniqueRiskCount - a.uniqueRiskCount);
 
+  const highDegreeNodes = collectRelationDegrees({ risks, avoidances, attackTools, threatActors }).slice(0, 20);
+  const weakRelations = collectWeakRelations({ risks, attackTools, threatActors });
+  const sceneIssues = collectSceneIssues(businessScenes);
+  const maintenanceTasks = buildMaintenanceTasks({ relationCoverage, weakRelations, sceneIssues });
+
   return {
     generatedAt: new Date().toISOString(),
     entities,
@@ -160,6 +334,10 @@ function buildReport() {
     avoidanceCategories: avoidanceCategoriesSummary,
     relationCoverage,
     businessSceneCoverage,
+    highDegreeNodes,
+    weakRelations,
+    sceneIssues,
+    maintenanceTasks,
   };
 }
 
@@ -207,6 +385,47 @@ function renderMarkdown(report) {
     lines.push(`| ${item.name} | ${item.total} | ${item.covered} | ${item.empty} | ${item.rate}% |`);
   }
 
+  lines.push('', '## 维护任务清单', '');
+  if (report.maintenanceTasks.length === 0) {
+    lines.push('当前没有由指标基线生成的维护任务。');
+  } else {
+    lines.push('| 优先级 | 类型 | 数量 | 任务 |');
+    lines.push('| --- | --- | ---: | --- |');
+    for (const item of report.maintenanceTasks) {
+      lines.push(`| ${item.priority} | ${item.type} | ${item.count} | ${item.title} |`);
+    }
+  }
+
+  lines.push('', '## 关系空值明细', '');
+  for (const item of report.relationCoverage.filter((entry) => entry.emptyItems.length > 0)) {
+    lines.push(`### ${item.name}`);
+    for (const entity of item.emptyItems.slice(0, 30)) {
+      lines.push(`- ${entity.key} ${entity.title}`);
+    }
+    if (item.emptyItems.length > 30) {
+      lines.push(`- 另有 ${item.emptyItems.length - 30} 条未显示，请查看 JSON 报告。`);
+    }
+    lines.push('');
+  }
+
+  lines.push('', '## 关系弱覆盖', '');
+  if (report.weakRelations.length === 0) {
+    lines.push('未发现关系弱覆盖项。');
+  } else {
+    lines.push('| 类型 | 实体 | 计数 | 说明 |');
+    lines.push('| --- | --- | ---: | --- |');
+    for (const item of report.weakRelations.slice(0, 80)) {
+      lines.push(`| ${item.type} | ${item.key} ${item.title} | ${item.count} | ${item.message} |`);
+    }
+  }
+
+  lines.push('', '## 高关联节点 Top 20', '');
+  lines.push('| 类型 | 实体 | 总关联 | 入向 | 出向 |');
+  lines.push('| --- | --- | ---: | ---: | ---: |');
+  for (const item of report.highDegreeNodes) {
+    lines.push(`| ${item.type} | ${item.key} ${item.title} | ${item.degree} | ${item.inbound} | ${item.outbound} |`);
+  }
+
   lines.push('', '## 业务场景覆盖 Top 10', '');
   lines.push('| 场景 | 唯一风险 | 重复引用 | 维度 | 子场景 |');
   lines.push('| --- | ---: | ---: | ---: | ---: |');
@@ -214,6 +433,15 @@ function renderMarkdown(report) {
     lines.push(
       `| ${item.key} ${item.title} | ${item.uniqueRiskCount} | ${item.duplicateRiskCount} | ${item.dimensionCount} | ${item.sceneCount} |`,
     );
+  }
+
+  lines.push('', '## 业务场景异常', '');
+  if (report.sceneIssues.length === 0) {
+    lines.push('未发现业务场景覆盖异常。');
+  } else {
+    for (const item of report.sceneIssues) {
+      lines.push(`- [${item.type}] ${item.message}`);
+    }
   }
 
   return `${lines.join('\n')}\n`;
@@ -230,4 +458,7 @@ console.log(`referenceCoverage=${report.reference.coverageRate}%`);
 for (const item of report.relationCoverage) {
   console.log(`${item.name}: ${item.covered}/${item.total} (${item.rate}%)`);
 }
+console.log(`maintenanceTasks=${report.maintenanceTasks.length}`);
+console.log(`weakRelations=${report.weakRelations.length}`);
+console.log(`sceneIssues=${report.sceneIssues.length}`);
 console.log(`\n报告已保存到: ${reportMdPath}`);
