@@ -62,11 +62,16 @@ npm run dev
 
 ```shell
 npm run validate:data
+npm run audit:metrics
+npm run audit:references
 npm run test
 npm run build
+npm run audit:bundle
 ```
 
 `npm run validate:data` runs JSON Schema validation, i18n key synchronization, and relationship coverage auditing.
+`npm run audit:metrics` generates the content trust, relation coverage, category distribution, and business scene coverage baseline.
+`npm run audit:bundle` checks the generated `docs/assets` bundle against the current performance budget.
 
 ### GUI Configuration Editor
 

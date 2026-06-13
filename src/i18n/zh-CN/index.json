@@ -1,6 +1,7 @@
 {
   "menu": {
     "home": "首页",
+    "dashboard": "分析",
     "knowledge": "知识库",
     "risks": "风险列表",
     "avoidances": "规避手段"
@@ -122,5 +123,36 @@
     "light": "亮色",
     "dark": "暗色",
     "system": "跟随系统"
+  },
+  "dashboard": {
+    "eyebrow": "内容可信度 / 分析基线",
+    "title": "BREAK 分析看板",
+    "referenceCoverage": "参考覆盖率",
+    "entityOverview": "实体概览",
+    "entityComposition": "实体构成",
+    "mainVsSub": "主条目 / 子条目",
+    "mainItems": "主条目",
+    "subItems": "子条目",
+    "mainSub": "主 {main} / 子 {sub}",
+    "riskComplexity": "风险复杂度分布",
+    "avoidanceCategories": "规避分类分布",
+    "businessSceneCoverage": "业务场景覆盖",
+    "topScenes": "Top 场景",
+    "relationCoverage": "关系覆盖",
+    "coverageRate": "覆盖率",
+    "highDegreeNodes": "高关联节点",
+    "degree": "关联数",
+    "entities": {
+      "risks": "风险",
+      "avoidances": "规避手段",
+      "attackTools": "攻击工具",
+      "threatActors": "威胁行为者",
+      "businessScenes": "业务场景"
+    },
+    "status": {
+      "good": "良好",
+      "watch": "关注",
+      "weak": "薄弱"
+    }
   }
 }

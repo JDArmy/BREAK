@@ -44,10 +44,8 @@ const codeSplittingGroups = [
   { name: "i18n-en-BREAK", test: toChunkTest("/src/i18n/en/BREAK") },
   { name: "i18n", test: toChunkTest("/src/i18n") },
   { name: "fuse.js", test: toChunkTest("node_modules/fuse.js") },
-  {
-    name: "echarts",
-    test: (id: string) => id.includes("node_modules/echarts") || id.includes("node_modules/zrender"),
-  },
+  { name: "zrender", test: toChunkTest("node_modules/zrender") },
+  { name: "echarts", test: toChunkTest("node_modules/echarts") },
   { name: "vue-router", test: toChunkTest("node_modules/vue-router") },
   { name: "vue-i18n", test: toChunkTest("node_modules/vue-i18n") },
   { name: "vue", test: toChunkTest("node_modules/vue") },

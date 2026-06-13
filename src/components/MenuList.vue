@@ -112,6 +112,10 @@ const getActiveIndex = (fullPath: string) => {
         <span>{{ $t("menu.home") }}</span>
       </div>
 
+      <div class="mobile-nav-item" :class="{ active: route.fullPath.match(/^\/relation\//) }" @click="handleMobileNav('/relation/risk/R0001')">
+        <span>{{ $t("relationMap") }}</span>
+      </div>
+
       <div class="mobile-nav-group">
         <div class="mobile-nav-group-title">{{ $t("menu.knowledge") }}</div>
         <div class="mobile-nav-item" :class="{ active: getActiveIndex(route.fullPath) === '/risks' }" @click="handleMobileNav('/risks')">
@@ -128,8 +132,8 @@ const getActiveIndex = (fullPath: string) => {
         </div>
       </div>
 
-      <div class="mobile-nav-item" :class="{ active: route.fullPath.match(/^\/relation\//) }" @click="handleMobileNav('/relation/risk/R0001')">
-        <span>{{ $t("relationMap") }}</span>
+      <div class="mobile-nav-item" :class="{ active: getActiveIndex(route.fullPath) === '/dashboard' }" @click="handleMobileNav('/dashboard')">
+        <span>{{ $t("menu.dashboard") }}</span>
       </div>
 
       <div class="mobile-nav-divider"></div>
@@ -216,6 +220,9 @@ const getActiveIndex = (fullPath: string) => {
       </div>
     </div>
     <el-menu-item class="" index="/">{{ $t("menu.home") }}</el-menu-item>
+    <el-menu-item index="/relation/risk/R0001">{{
+      $t("relationMap")
+    }}</el-menu-item>
     <el-dropdown
       class="knowledge-menu"
       :class="{ 'is-active': isKnowledgeActive($route.fullPath) }"
@@ -233,9 +240,7 @@ const getActiveIndex = (fullPath: string) => {
         </el-dropdown-menu>
       </template>
     </el-dropdown>
-    <el-menu-item index="/relation/risk/R0001">{{
-      $t("relationMap")
-    }}</el-menu-item>
+    <el-menu-item index="/dashboard">{{ $t("menu.dashboard") }}</el-menu-item>
 
     <el-dropdown class="outside-link">
       <span class="el-dropdown-link"

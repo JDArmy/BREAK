@@ -17,6 +17,8 @@
     "validate:data": "node scripts/validate/schema.mjs && node scripts/validate/i18n-sync.mjs --strict && node scripts/validate/relations.mjs",
     "audit:relations": "node scripts/validate/relations.mjs",
     "audit:references": "node scripts/validate/references.mjs",
+    "audit:metrics": "node scripts/validate/metrics.mjs",
+    "audit:bundle": "node scripts/validate/bundle-budget.mjs",
     "test": "vitest run",
     "test:watch": "vitest"
   },
