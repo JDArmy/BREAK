@@ -7,8 +7,8 @@
     "limitation": "单设备登录的识别机制通常是在服务端记录账号在同类设备登录的次数，当大于1次时就初始化掉之前的实例，或将之前实例登出。但这种机制存在一个问题：就是如果是凭据复用（R0035），也就是CK(Cookies)登录（AT0030）的情况下，因为前一设备和新的设备都使用的是同一登录实例，从而可以突破限制实现多点登录。此时需要增加凭据复用识别机制",
     "references": [
       {
-        "title": "单设备登录",
-        "link": "https://blog.csdn.net/ls0111/article/details/79062857"
+        "title": "Digital Identity Guidelines: Authentication and Lifecycle Management - NIST SP 800-63B",
+        "link": "https://pages.nist.gov/800-63-3/sp800-63b.html"
       }
     ],
     "updated": "2024-01-11"

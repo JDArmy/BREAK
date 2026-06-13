@@ -10,6 +10,50 @@ import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 
 import { visualizer } from "rollup-plugin-visualizer";
 
+const toChunkTest = (matcher: string) => (id: string) => id.includes(matcher);
+
+const codeSplittingGroups = [
+  { name: "validation", test: toChunkTest("/src/validation") },
+  { name: "zod", test: toChunkTest("node_modules/zod") },
+  { name: "BREAK-utils", test: toChunkTest("/src/BREAK/utils") },
+  { name: "BREAK-Risks", test: toChunkTest("/src/BREAK/risks"), maxSize: 300 * 1024 },
+  { name: "BREAK-Avoidances", test: toChunkTest("/src/BREAK/avoidances"), maxSize: 300 * 1024 },
+  { name: "BREAK-AttackTools", test: toChunkTest("/src/BREAK/attack-tools"), maxSize: 300 * 1024 },
+  { name: "BREAK-ThreatActors", test: toChunkTest("/src/BREAK/threat-actors"), maxSize: 300 * 1024 },
+  { name: "BREAK", test: toChunkTest("/src/BREAK") },
+  {
+    name: "i18n-en-Risks",
+    test: toChunkTest("/src/i18n/en/BREAK/risks"),
+    maxSize: 300 * 1024,
+  },
+  {
+    name: "i18n-en-Avoidances",
+    test: toChunkTest("/src/i18n/en/BREAK/avoidances"),
+    maxSize: 300 * 1024,
+  },
+  {
+    name: "i18n-en-AttackTools",
+    test: toChunkTest("/src/i18n/en/BREAK/attack-tools"),
+    maxSize: 300 * 1024,
+  },
+  {
+    name: "i18n-en-ThreatActors",
+    test: toChunkTest("/src/i18n/en/BREAK/threat-actors"),
+    maxSize: 300 * 1024,
+  },
+  { name: "i18n-en-BREAK", test: toChunkTest("/src/i18n/en/BREAK") },
+  { name: "i18n", test: toChunkTest("/src/i18n") },
+  { name: "fuse.js", test: toChunkTest("node_modules/fuse.js") },
+  {
+    name: "echarts",
+    test: (id: string) => id.includes("node_modules/echarts") || id.includes("node_modules/zrender"),
+  },
+  { name: "vue-router", test: toChunkTest("node_modules/vue-router") },
+  { name: "vue-i18n", test: toChunkTest("node_modules/vue-i18n") },
+  { name: "vue", test: toChunkTest("node_modules/vue") },
+  { name: "element-plus", test: toChunkTest("node_modules/element-plus") },
+];
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -33,31 +77,10 @@ export default defineConfig({
   build: {
     minify: "terser",
     outDir: "docs",
-    rollupOptions: {
+    rolldownOptions: {
       output: {
-        manualChunks(id) {
-          if (id.includes("/src/validation")) return "validation";
-          if (id.includes("node_modules/zod")) return "zod";
-          if (id.includes("/src/BREAK/utils")) return "BREAK-utils";
-          if (id.includes("/src/BREAK/risks")) return "BREAK-Risks";
-          if (id.includes("/src/BREAK/avoidances")) return "BREAK-Avoidances";
-          if (id.includes("/src/BREAK/attack-tools")) return "BREAK-AttackTools";
-          if (id.includes("/src/BREAK/threat-actors")) return "BREAK-ThreatActors";
-          if (id.includes("/src/BREAK")) return "BREAK";
-          if (id.includes("/src/i18n/en/BREAK/risks")) return "i18n-en-Risks";
-          if (id.includes("/src/i18n/en/BREAK/avoidances")) return "i18n-en-Avoidances";
-          if (id.includes("/src/i18n/en/BREAK/attack-tools")) return "i18n-en-AttackTools";
-          if (id.includes("/src/i18n/en/BREAK/threat-actors")) return "i18n-en-ThreatActors";
-          if (id.includes("/src/i18n/en/BREAK")) return "i18n-en-BREAK";
-          if (id.includes("/src/i18n")) return "i18n";
-          if (id.includes("node_modules/fuse.js")) return "fuse.js";
-          if (id.includes("node_modules/echarts") || id.includes("node_modules/zrender")) {
-            return "echarts";
-          }
-          if (id.includes("node_modules/vue-router")) return "vue-router";
-          if (id.includes("node_modules/vue-i18n")) return "vue-i18n";
-          if (id.includes("node_modules/vue")) return "vue";
-          if (id.includes("node_modules/element-plus")) return "element-plus";
+        codeSplitting: {
+          groups: codeSplittingGroups,
         },
       },
     },

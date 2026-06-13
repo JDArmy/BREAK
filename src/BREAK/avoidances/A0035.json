@@ -7,8 +7,8 @@
     "limitation": "数据脱敏技术可能存在如下局限性：一是由于脱敏技术对敏感数据的保护性不足，恶意攻击者可以结合相关背景信息，推导出敏感数据，引发隐私泄露的风险；二是现有脱敏技术通常会改变原始数据的数据结构，在一定程度上影响了数据准确性。",
     "references": [
       {
-        "title": "数据脱敏 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E8%84%B1%E6%95%8F"
+        "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",
+        "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
       },
       {
         "title": "NIST SP 800-188: De-Identifying Government Datasets - Techniques and Governance",
@@ -25,8 +25,8 @@
     "limitation": "敏感数据去除技术依赖于数据分类分级的执行，以及对敏感数据的识别能力。如果数据分类分级不准确，或者对敏感数据的识别能力不足，就会导致敏感数据去除的效果不佳。此外，静态的敏感数据去除技术可能会影响数据的完整性、可用性和准确性。",
     "references": [
       {
-        "title": "数据脱敏 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E8%84%B1%E6%95%8F"
+        "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",
+        "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
       }
     ],
     "updated": "2024-01-11"
@@ -39,8 +39,8 @@
     "limitation": "令牌化并不适用于所有场景。在某些应用程序中，需要直接访问用户的原始数据，而不是通过令牌来处理。",
     "references": [
       {
-        "title": "令牌化 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E4%BB%A4%E7%89%8C%E5%8C%96/22416521?fr=ge_ala"
+        "title": "Information Supplement: Tokenization Product Security Guidelines - PCI SSC",
+        "link": "https://www.pcisecuritystandards.org/documents/Tokenization_Product_Security_Guidelines.pdf"
       }
     ],
     "updated": "2024-01-11"
@@ -53,8 +53,8 @@
     "limitation": "因虚拟号的客观数量限制，需要通过令牌将多个用户手机号映射到一个虚拟号上，这增加了拨号成本。虚拟号对于短信的收发较为不友好，譬如快递柜不支持虚拟号导致消费者收不到取件码等。此外，部分企业以保护用户隐私为由批量使用手机号作为中间号拨打商业营销电话甚至用于诈骗，700号段专用号段的推出有助于解决此问题，但行业规范仍在完善中。",
     "references": [
       {
-        "title": "虚拟手机号与恶意注册攻防:一篇读懂背后的灰色产业链_手机号防止虚拟号...",
-        "link": "https://blog.csdn.net/BigBoy_Coder/article/details/157215732"
+        "title": "中华人民共和国个人信息保护法",
+        "link": "https://www.samr.gov.cn/wljys/gzzd/art/2023/art_3ef1e889c1e644d4b65b5f5c7f432386.html"
       }
     ],
     "updated": "2024-01-11"

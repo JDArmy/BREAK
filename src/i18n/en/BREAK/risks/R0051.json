@@ -19,7 +19,8 @@
     "influence": "May cause security processes within the application to be broken and data to be forged.",
     "references": [
       {
-        "title": "TCP Packet Capture Analysis in Practice"
+        "title": "MASTG-TEST-0244: Missing Certificate Pinning in Network Traffic - OWASP",
+        "link": "https://mas.owasp.org/MASTG/tests/android/MASVS-NETWORK/MASTG-TEST-0244/"
       }
     ]
   },

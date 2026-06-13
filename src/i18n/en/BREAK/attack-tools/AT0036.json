@@ -4,7 +4,8 @@
     "description": "Device wipe tools completely reset a device to factory settings, clearing all user data, modifying device fingerprint data, and clearing all locally stored data from installed apps. After wiping, the device is theoretically a brand new device.",
     "references": [
       {
-        "title": "Business Security Defense: Black Market Tools - Comprehensive Guide from Basics to Mastery"
+        "title": "Guidelines for Managing the Security of Mobile Devices in the Enterprise - NIST SP 800-124r2",
+        "link": "https://www.nist.gov/publications/guidelines-managing-security-mobile-devices-enterprise-0"
       }
     ]
   }

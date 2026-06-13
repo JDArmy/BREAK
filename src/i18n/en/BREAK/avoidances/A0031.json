@@ -6,7 +6,8 @@
     "limitation": "Returning fake data must only be used when the accuracy of identifying malicious requests is 100%. If fake data is accessed by a normal user, the minor consequence is causing confusion for the user; the more serious consequence is that it could be used as evidence that the platform fabricates data and does not comply with lawful business operations. The lesser impact is negative public opinion; the greater impact may lead to compliance issues.",
     "references": [
       {
-        "title": "Data Poisoning - Baidu Baike"
+        "title": "Artificial Intelligence Risk Management Framework - NIST AI 100-1",
+        "link": "https://www.nist.gov/itl/ai-risk-management-framework"
       }
     ]
   }

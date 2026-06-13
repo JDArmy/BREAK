@@ -4,7 +4,8 @@
     "description": "In the gray/black market, crowdsourced workers are large numbers of individuals organized or hired to participate in illegal activities through online platforms. Their tasks often include fraudulent activities such as installing specific software for arbitrage, clicking ad links, or making purchases for fake orders. This form of illegal crowdsourcing enables fraud at scale, posing serious challenges to legitimate businesses and digital platforms.",
     "references": [
       {
-        "title": "Crowdsourced Workers - Baidu Baike"
+        "title": "OWASP Automated Threats to Web Applications",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/"
       }
     ]
   },
@@ -13,7 +14,8 @@
     "description": "Individuals hired or organized to manually or automatically break CAPTCHAs, bypassing access restrictions to mass-register accounts or carry out other illegal activities such as malicious promotion, fraud, and spam registration.",
     "references": [
       {
-        "title": "Is Part-Time CAPTCHA Solving Real?"
+        "title": "OAT-009 CAPTCHA Defeat - OWASP",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-009_CAPTCHA_Defeat"
       }
     ]
   },

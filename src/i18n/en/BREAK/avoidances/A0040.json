@@ -6,7 +6,8 @@
     "limitation": "Certificate pinning is an effective defense mechanism against man-in-the-middle attacks, aimed at raising the bar for MITM attacks. However, attackers can bypass SSL Pinning by using frameworks like Frida or Xposed to hook certificate verification functions, or by replacing the embedded certificate in the application and repackaging it. Additionally, bypassing is easier on jailbroken or rooted devices, and there are now multiple automated tools that can achieve one-click SSL Pinning bypass.",
     "references": [
       {
-        "title": "Summary of SSL Pinning Techniques"
+        "title": "MASTG-TEST-0244: Missing Certificate Pinning in Network Traffic - OWASP",
+        "link": "https://mas.owasp.org/MASTG/tests/android/MASVS-NETWORK/MASTG-TEST-0244/"
       }
     ]
   }

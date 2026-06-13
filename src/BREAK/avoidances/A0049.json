@@ -7,8 +7,8 @@
     "limitation": "水印可能会随着数字信号的编辑而消失或无法还原，譬如：图片的裁剪、视频的剪辑、音频的剪辑等。",
     "references": [
       {
-        "title": "数位水印 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E6%95%B0%E4%BD%8D%E6%B0%B4%E5%8D%B0/22722684?fromtitle=%E6%95%B0%E5%AD%97%E6%B0%B4%E5%8D%B0&fromid=722667&fr=aladdin"
+        "title": "Digital watermarking and steganography - NIST DADS",
+        "link": "https://xlinux.nist.gov/dads/HTML/digitalWatermark.html"
       },
       {
         "title": "C2PA Specification: Content Credentials for Media Provenance and Integrity",

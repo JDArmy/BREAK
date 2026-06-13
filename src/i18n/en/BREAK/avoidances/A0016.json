@@ -6,7 +6,8 @@
     "limitation": "The limitations of threat intelligence mainly include: incomplete information sources, timeliness challenges, excessive false information, difficulty distinguishing targeted attacks, difficulty quantifying real impact, challenges in cross-organizational sharing and collaboration, and compliance issues related to privacy and regulations.",
     "references": [
       {
-        "title": "Threat Intelligence - Baidu Baike"
+        "title": "Guide to Cyber Threat Information Sharing - NIST SP 800-150",
+        "link": "https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-150.pdf"
       },
       {
         "title": "NIST SP 800-150: Guide to Cyber Threat Information Sharing"
@@ -31,7 +32,8 @@
     "limitation": "Domain-level threat intelligence has the problem of being too broad, making domain-based blocking prone to false positives. Link-level intelligence has the problem of being too narrow, meaning that simply modifying a link descriptor can bypass detection.",
     "references": [
       {
-        "title": "Basic Terminology of Threat Intelligence - Jianshu"
+        "title": "Information Sharing - CISA",
+        "link": "https://www.cisa.gov/topics/cyber-threats-and-advisories/information-sharing"
       }
     ]
   },
@@ -53,7 +55,8 @@
     "limitation": "The limitations of IOC intelligence include dependence on known attack patterns, vulnerability to attackers changing IOCs, susceptibility to false positives and false negatives, and its static-feature-based nature making it difficult to adapt to dynamic and evolving threat environments.",
     "references": [
       {
-        "title": "Basic Terminology of Threat Intelligence"
+        "title": "OASIS Cyber Threat Intelligence Technical Committee",
+        "link": "https://oasis-open.github.io/cti-documentation/"
       }
     ]
   },
@@ -64,7 +67,8 @@
     "limitation": "Limitations include the possibility of false information evading detection, high false positive rates, strong dependence on data quality, privacy concerns, constraints from geographic diversity, insufficient adaptability to new fraud forms, potential negative impact on user experience, and relatively high implementation and maintenance costs.",
     "references": [
       {
-        "title": "Basic Terminology of Threat Intelligence - Jianshu"
+        "title": "Guide to Cyber Threat Information Sharing - NIST SP 800-150",
+        "link": "https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-150.pdf"
       }
     ]
   }

@@ -4,7 +4,8 @@
     "description": "By extracting, stealing, or purchasing cookies from already-logged-in accounts, these tools perform credential reuse to achieve 'login-free' authentication for accounts.",
     "references": [
       {
-        "title": "Kali Linux Cybersecurity: XSS Cross-Site Scripting Principles and DVWA Lab Setup"
+        "title": "Session Hijacking Attack - OWASP",
+        "link": "https://owasp.org/www-community/attacks/Session_hijacking_attack"
       }
     ]
   }

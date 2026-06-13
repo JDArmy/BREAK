@@ -7,8 +7,8 @@
     "limitation": "数据隐藏的核心对抗点是因信息不对称导致的逆向门槛及时间成本。一旦隐藏方法被发现，那么破解只是时间问题。所以数据隐藏通常会采取动态算法或\"躲猫猫\"的机制：动态算法通过在算法被逆向出来之前，颁布新算法，作废旧算法的方式来加强防护；\"躲猫猫\"则通过在隐藏数据被找到之前，从原位置更换到新位置来实现加强防护。",
     "references": [
       {
-        "title": "隐写术 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E9%9A%90%E5%86%99%E6%9C%AF"
+        "title": "Steganography, Technique T1027.003 - MITRE ATT&CK",
+        "link": "https://attack.mitre.org/techniques/T1027/003/"
       }
     ],
     "updated": "2024-01-11"

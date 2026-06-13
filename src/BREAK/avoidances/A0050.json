@@ -7,8 +7,8 @@
     "limitation": "DLP系统的局限性包括误报、内容识别挑战、终端设备限制、不可控的终端设备、内部威胁、实时性延迟、复杂性以及引入成本，需要组织在部署时综合考虑和管理。",
     "references": [
       {
-        "title": "数据泄露保护 - 百度百科",
-        "link": "https://baike.baidu.com/item/DLP%E6%95%B0%E6%8D%AE%E6%B3%84%E9%9C%B2%E9%98%B2%E6%8A%A4%E7%B3%BB%E7%BB%9F/10522315?fr=ge_ala"
+        "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",
+        "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
       },
       {
         "title": "NIST SP 800-53 Rev. 5: Security and Privacy Controls for Information Systems and Organizations (SC-7, SC-8, SC-28)",
@@ -25,8 +25,8 @@
     "limitation": "密钥管理： 加密的安全性依赖于密钥的安全管理。如果密钥管理不善，密钥可能会被泄露或遗失，导致数据无法解密或被未经授权的人访问。性能影响： 加密和解密过程可能会引起一定的性能损耗。对于大规模的数据存储和频繁的数据访问，加密可能会导致一定的延迟。",
     "references": [
       {
-        "title": "数据加密 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%8A%A0%E5%AF%86"
+        "title": "Recommendation for Key Management - NIST SP 800-57 Part 1 Rev. 5",
+        "link": "https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final"
       }
     ],
     "updated": "2024-01-25"
@@ -39,8 +39,8 @@
     "limitation": "主要包括性能开销、日志管理难题、隐私和合规性问题、误报和漏报、复杂性与配置管理挑战、保密性问题以及技术限制。",
     "references": [
       {
-        "title": "数据库审计 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%A1%E8%AE%A1?fromModule=lemma_search-box"
+        "title": "Guide to Computer Security Log Management - NIST SP 800-92",
+        "link": "https://csrc.nist.gov/pubs/sp/800/92/final"
       }
     ],
     "updated": "2024-01-25"
@@ -53,8 +53,8 @@
     "limitation": "数据擦除不是一次性的，需要多次擦除才能确保数据无法恢复。数据擦除的效率较低，需要较长的时间。数据擦除的效果受到存储介质的影响，如固态硬盘（SSD）的数据擦除效果较差。",
     "references": [
       {
-        "title": "硬盘数据安全擦除 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E7%A1%AC%E7%9B%98%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8%E6%93%A6%E9%99%A4/3496982?fromModule=search-result_lemma-recommend"
+        "title": "Guidelines for Media Sanitization - NIST SP 800-88 Rev. 1",
+        "link": "https://csrc.nist.gov/pubs/sp/800/88/r1/final"
       }
     ],
     "updated": "2024-01-29"

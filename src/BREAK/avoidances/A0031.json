@@ -7,8 +7,8 @@
     "limitation": "返回虚假数据要保证在识别恶意请求的准确率为100%的前提下使用。因为虚假数据一旦被正常用户访问到，给正常用户造成干扰是小事，非常有可能被用户取证，作为平台伪造数据，不遵守依法合规从事经营活动的证据。较小的影响是造成社会舆论影响，较大的影响有可能会导致合规问题。",
     "references": [
       {
-        "title": "数据投毒 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E6%8A%95%E6%AF%92"
+        "title": "Artificial Intelligence Risk Management Framework - NIST AI 100-1",
+        "link": "https://www.nist.gov/itl/ai-risk-management-framework"
       }
     ],
     "updated": "2024-01-11"

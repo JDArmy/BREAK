@@ -7,8 +7,8 @@
     "limitation": "数据质量问题：数据画像技术需要大量的数据支持，如果数据质量不高，就会影响画像的准确性。数据隐私问题：数据画像技术需要收集大量的数据，如果处理不当，就会涉及到数据隐私问题。时效性问题：数据画像技术是基于历史数据进行分析和预测的，如果数据过时或者不准确，就会影响画像的时效性。",
     "references": [
       {
-        "title": "用户画像 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E7%94%A8%E6%88%B7%E7%94%BB%E5%83%8F"
+        "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",
+        "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
       },
       {
         "title": "GB/T 35273-2020 信息安全技术 个人信息安全规范",
@@ -25,8 +25,8 @@
     "limitation": "数据质量问题：用户画像技术需要大量的数据支持，如果数据质量不高，就会影响画像的准确性。数据隐私问题：用户画像技术需要收集大量的用户数据，如果处理不当，就会涉及到用户隐私问题。时效性问题：用户画像技术是基于历史数据进行分析和预测的，如果数据过时或者不准确，就会影响画像的时效性。",
     "references": [
       {
-        "title": "用户画像 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E7%94%A8%E6%88%B7%E7%94%BB%E5%83%8F"
+        "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",
+        "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
       }
     ],
     "updated": "2024-01-11"
@@ -39,8 +39,8 @@
     "limitation": "随着IPV6的普及，IP地址的数量将大幅增加，IP画像技术也将面临更大的挑战。",
     "references": [
       {
-        "title": "用户画像 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E7%94%A8%E6%88%B7%E7%94%BB%E5%83%8F"
+        "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",
+        "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
       }
     ],
     "updated": "2024-01-19"
@@ -53,8 +53,8 @@
     "limitation": "设备画像是设备指纹（A0021）的延伸，如果设备指纹不准确，设备画像也会受到影响。此外，设备画像的准确性还受到设备画像算法的影响。",
     "references": [
       {
-        "title": "用户画像 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E7%94%A8%E6%88%B7%E7%94%BB%E5%83%8F"
+        "title": "Fingerprinting - MDN Web Docs",
+        "link": "https://developer.mozilla.org/en-US/docs/Glossary/Fingerprinting"
       }
     ],
     "updated": "2024-01-16"

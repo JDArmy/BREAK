@@ -7,8 +7,8 @@
     "limitation": "数据模糊化虽然在隐私保护方面发挥了重要作用，但其使用也存在一些局限性。首先，模糊化可能引起信息损失，使得原始数据的精确性和细节信息受到影响，从而影响数据的分析和挖掘效果。其次，一些复杂的模糊化技术可能带来显著的性能开销，增加数据处理的计算和存储成本。此外，过度的数据模糊化可能导致数据的可用性问题，使得数据对用户或分析者的实际应用降低。最后，虽然旨在保护隐私，但部分模糊化技术仍可能受到攻击，导致数据被还原或敏感信息被推断，进一步增加了使用数据模糊化时需要谨慎权衡的因素。",
     "references": [
       {
-        "title": "数据脱敏 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E8%84%B1%E6%95%8F"
+        "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",
+        "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
       }
     ],
     "updated": "2024-01-16"
@@ -21,8 +21,8 @@
     "limitation": "数值模糊化的目标是希望数据访问者在无法看到精确数值的前提下，能看到数据的大概趋势，但又能防御三方机构掌握自身经营态势。这种目标本身就是矛盾的，因为即便不掌握精确数据，也能根据数据的大概趋势估算出最终的经营态势。所以这种防御方案仅适合阻止三方机构掌握自身精确经营数据的场景。",
     "references": [
       {
-        "title": "数据脱敏 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E8%84%B1%E6%95%8F"
+        "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",
+        "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
       }
     ],
     "updated": "2024-01-11"
@@ -35,8 +35,8 @@
     "limitation": "在掌握一定真实数值的前提下，通过对比生成的对应指数，是有可能还原指数化算法的。所以在指数化时，要么完全隐藏真实数值，使之不能够反推算法。要么通过一定阶梯算法将指数变成阶梯式曲线，每段阶梯的曲线算法均不一致，使得反推算法变得更困难。",
     "references": [
       {
-        "title": "数据脱敏 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E8%84%B1%E6%95%8F"
+        "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",
+        "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
       }
     ],
     "updated": "2024-01-11"
@@ -49,8 +49,8 @@
     "limitation": "响应状态模糊化是一种比较初级的规避手段，非常值得一试，但不是银弹",
     "references": [
       {
-        "title": "数据脱敏 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E8%84%B1%E6%95%8F"
+        "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",
+        "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
       }
     ],
     "updated": "2024-01-16"

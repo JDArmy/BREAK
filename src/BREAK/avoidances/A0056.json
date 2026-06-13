@@ -7,8 +7,8 @@
     "limitation": "漏洞修复的局限性：延迟和复杂性： 一些漏洞修复可能需要时间来制定、测试和应用。这种延迟可能给攻击者留下足够的时间进行攻击。不完全的修复： 有时修复措施可能会引入新的问题，或者在尝试修复一个漏洞时可能遗漏其他漏洞。依赖供应商： 如果漏洞涉及到硬件或软件供应商，修复的速度和有效性可能受到供应商的合作和支持程度的影响。复杂性和成本： 对于复杂的系统和大规模的网络，漏洞修复可能变得复杂且成本较高，特别是在涉及到业务连续性的情况下。",
     "references": [
       {
-        "title": "安全补丁 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E5%AE%89%E5%85%A8%E8%A1%A5%E4%B8%81"
+        "title": "Known Exploited Vulnerabilities Catalog - CISA",
+        "link": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
       }
     ],
     "updated": "2024-01-11"

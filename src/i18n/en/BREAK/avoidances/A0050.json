@@ -6,7 +6,8 @@
     "limitation": "The limitations of DLP systems include false positives, content recognition challenges, endpoint device limitations, uncontrolled endpoint devices, insider threats, real-time latency, complexity, and implementation costs. Organizations must consider and manage these comprehensively during deployment.",
     "references": [
       {
-        "title": "Data Loss Prevention - Baidu Baike"
+        "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",
+        "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
       },
       {
         "title": "NIST SP 800-53 Rev. 5: Security and Privacy Controls for Information Systems and Organizations (SC-7, SC-8, SC-28)"
@@ -20,7 +21,8 @@
     "limitation": "Key management: the security of encryption depends on proper key management. If keys are poorly managed, they may be leaked or lost, making data unrecoverable or accessible to unauthorized parties. Performance impact: the encryption and decryption process may introduce some performance overhead. For large-scale data storage and frequent data access, encryption may cause certain delays.",
     "references": [
       {
-        "title": "Data Encryption - Baidu Baike"
+        "title": "Recommendation for Key Management - NIST SP 800-57 Part 1 Rev. 5",
+        "link": "https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final"
       }
     ]
   },
@@ -31,7 +33,8 @@
     "limitation": "Main limitations include performance overhead, log management challenges, privacy and compliance issues, false positives and false negatives, complexity and configuration management challenges, confidentiality concerns, and technical limitations.",
     "references": [
       {
-        "title": "Database Auditing - Baidu Baike"
+        "title": "Guide to Computer Security Log Management - NIST SP 800-92",
+        "link": "https://csrc.nist.gov/pubs/sp/800/92/final"
       }
     ]
   },
@@ -42,7 +45,8 @@
     "limitation": "Data erasure is not a one-time operation; multiple passes are needed to ensure data cannot be recovered. The process is relatively slow and time-consuming. The effectiveness of data erasure is affected by the storage medium — for example, solid-state drives (SSDs) are harder to erase completely.",
     "references": [
       {
-        "title": "Secure Hard Drive Data Erasure - Baidu Baike"
+        "title": "Guidelines for Media Sanitization - NIST SP 800-88 Rev. 1",
+        "link": "https://csrc.nist.gov/pubs/sp/800/88/r1/final"
       }
     ]
   }

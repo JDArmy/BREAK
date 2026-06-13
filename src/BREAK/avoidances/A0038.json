@@ -21,8 +21,8 @@
     "limitation": "因为对网页访问代理识别的方法最终还是要依赖于对终端请求信息的判断，这意味着将此手段放在强对抗环节将很容易通过伪造和修改数据的方式进行破解。",
     "references": [
       {
-        "title": "网页浏览器",
-        "link": "https://baike.baidu.com/item/%E6%B5%8F%E8%A7%88%E5%99%A8/213911?fr=ge_ala"
+        "title": "Proxy, Technique T1090 - MITRE ATT&CK",
+        "link": "https://attack.mitre.org/techniques/T1090/"
       }
     ],
     "updated": "2024-01-11"
@@ -35,8 +35,8 @@
     "limitation": "代理识别技术存在以下局限性：一是正常用户也可能使用网络代理，容易误拦截；二是使用移动运营商出口IP作为代理，导致即便识别也很难封禁；三是使用ADSL拨号网络作为代理，一旦封禁就立即通过重新拨号的方式来切换新代理",
     "references": [
       {
-        "title": "VPN - 百度百科",
-        "link": "https://baike.baidu.com/item/VPN"
+        "title": "Proxy, Technique T1090 - MITRE ATT&CK",
+        "link": "https://attack.mitre.org/techniques/T1090/"
       }
     ],
     "updated": "2024-01-11"

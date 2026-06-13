@@ -6,7 +6,8 @@
     "limitation": "Access control focuses on static management of authentication and access permissions and is difficult to adapt to dynamically changing environments and threats. It is also relatively difficult to detect and respond to potential malicious behavior by internal threats or already-authenticated users. Additionally, maintaining complex access policies and rules may increase management and operational complexity, leading to misjudgments or excessive restrictions. Finally, traditional access control may not be flexible enough for modern work environments such as mobile devices and remote work. Organizations implementing access control need to consider these limitations comprehensively and combine other security strategies and technologies to improve overall security.",
     "references": [
       {
-        "title": "Access Control - Baidu Baike"
+        "title": "Access Control Cheat Sheet - OWASP",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html"
       }
     ]
   }

@@ -7,7 +7,8 @@
     "influence": "Bypasses MFA multi-factor authentication mechanisms in the login process, or enables a single account to log in on multiple devices.",
     "references": [
       {
-        "title": "Cookie - Baidu Baike"
+        "title": "Session Hijacking Attack - OWASP",
+        "link": "https://owasp.org/www-community/attacks/Session_hijacking_attack"
       },
       {
         "title": "Steal Web Session Cookie - MITRE ATT&CK T1539"
@@ -25,7 +26,8 @@
         "title": "Nearly 1,000 Data Breaches in Q1 2023, Affecting 1,204 Companies Across 38 Industries"
       },
       {
-        "title": "The Purpose of Cookie Theft and Methods to Prevent It"
+        "title": "Credential Stuffing Prevention Cheat Sheet - OWASP",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html"
       }
     ]
   }

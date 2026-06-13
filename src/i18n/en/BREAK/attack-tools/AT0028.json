@@ -4,10 +4,12 @@
     "description": "Computer software reverse engineering refers to performing reverse analysis and research on another party's software target program (such as an executable program) to deduce the design elements such as ideas, principles, structure, algorithms, processing procedures, and operating methods used in their software product, and in certain cases possibly deriving the source code. Android reverse engineering is a technique for decompiling packaged APPs and analyzing source code to understand APP implementation logic.",
     "references": [
       {
-        "title": "Decompilation - Baidu Baike"
+        "title": "Mobile App Tampering and Reverse Engineering - OWASP MASTG",
+        "link": "https://mas.owasp.org/MASTG/0x04c-Tampering-and-Reverse-Engineering/"
       },
       {
-        "title": "What Is Android Reverse Engineering?"
+        "title": "MASTG-TEST-0048: Testing Reverse Engineering Tools Detection - OWASP",
+        "link": "https://mas.owasp.org/MASTG-TEST-0048/"
       }
     ]
   }

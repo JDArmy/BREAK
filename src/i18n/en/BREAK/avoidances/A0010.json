@@ -17,7 +17,8 @@
     "limitation": "There are two countermeasure points for mobile emulator detection: one is to pre-forge the information collected by the APP; the other is to forge the information after the APP has collected and uploaded it.",
     "references": [
       {
-        "title": "Android Emulator Identification and Detection Technology"
+        "title": "MASTG-KNOW-0031: Emulator Detection - OWASP",
+        "link": "https://mas.owasp.org/MASTG-KNOW-0031/"
       }
     ]
   },
@@ -61,7 +62,8 @@
     "limitation": "By analyzing and reversing the detection process, blocking or providing hooked false values can bypass multi-instance detection.",
     "references": [
       {
-        "title": "Several Implementation Methods and Bypass References for Game Multi-Instance Detection"
+        "title": "MASTG-KNOW-0031: Emulator Detection - OWASP",
+        "link": "https://mas.owasp.org/MASTG-KNOW-0031/"
       }
     ]
   },
@@ -72,7 +74,8 @@
     "limitation": "By analyzing and reversing the detection process, blocking or providing hooked false values can bypass debugger detection.",
     "references": [
       {
-        "title": "The Art of Unpacking -- 2: Debugger Detection Techniques"
+        "title": "MASTG-KNOW-0085: Anti-Debugging Detection - OWASP",
+        "link": "https://mas.owasp.org/MASTG-KNOW-0085/"
       }
     ]
   },

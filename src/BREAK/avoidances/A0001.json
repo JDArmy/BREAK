@@ -7,8 +7,8 @@
     "limitation": "目前黑灰产催生出\"打码平台\"（AT0008），通过众包服务人工打码模式来完成突破人机识别挑战。对于人机识别挑战基本是降维打击，从理论上讲可导致所有显式的人机识别彻底失效。",
     "references": [
       {
-        "title": "Captcha - 百度百科",
-        "link": "https://baike.baidu.com/item/Captcha/9630117?fr=aladdin"
+        "title": "OAT-009 CAPTCHA Defeat - OWASP",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-009_CAPTCHA_Defeat"
       },
       {
         "title": "NIST SP 800-63B: Digital Identity Guidelines - Authentication and Lifecycle Management",
@@ -53,8 +53,8 @@
     "limitation": "语音验证码的局限性包括对语音质量、用户理解差异、嘈杂环境的敏感性，以及对残障用户不友好，同时可能增加计算资源的需求。",
     "references": [
       {
-        "title": "语音验证码 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E8%AF%AD%E9%9F%B3%E9%AA%8C%E8%AF%81%E7%A0%81"
+        "title": "Digital Identity Guidelines: Authentication and Lifecycle Management - NIST SP 800-63B",
+        "link": "https://pages.nist.gov/800-63-3/sp800-63b.html"
       }
     ],
     "updated": "2024-01-16"
@@ -67,8 +67,8 @@
     "limitation": "静默人机验证的局限性包括对用户环境的敏感性，以及对残障用户不友好。",
     "references": [
       {
-        "title": "风险控制 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E9%A3%8E%E6%8E%A7"
+        "title": "OWASP Automated Threats to Web Applications",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/"
       }
     ],
     "updated": "2024-01-25"

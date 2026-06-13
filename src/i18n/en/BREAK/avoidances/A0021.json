@@ -6,7 +6,8 @@
     "limitation": "For unique identifiers in devices such as IMEI, IMSI, MAC address, Android ID, and IDFA, due to user privacy restrictions and system upgrades, these generally require user authorization to access. This makes universality a problem, especially since black-gray market devices will basically never grant such permissions. For device identifiers computed from multiple device characteristics, they are too easily tampered with, making recall impossible.",
     "references": [
       {
-        "title": "Device Fingerprinting - Baidu Baike"
+        "title": "Fingerprinting - MDN Web Docs",
+        "link": "https://developer.mozilla.org/en-US/docs/Glossary/Fingerprinting"
       },
       {
         "title": "OWASP Web Security Testing Guide - Fingerprint Web Server"

@@ -17,7 +17,8 @@
     "limitation": "Because web access proxy detection ultimately relies on analyzing terminal request information, placing this measure in a high-adversarial context makes it easy to bypass by forging and modifying data.",
     "references": [
       {
-        "title": "Web Browser"
+        "title": "Proxy, Technique T1090 - MITRE ATT&CK",
+        "link": "https://attack.mitre.org/techniques/T1090/"
       }
     ]
   },
@@ -28,7 +29,8 @@
     "limitation": "Network proxy detection has the following limitations: first, normal users may also use network proxies, making false positives easy; second, using mobile carrier egress IPs as proxies makes blocking difficult even when detected; third, using ADSL dial-up networks as proxies allows immediate switching to a new proxy by re-dialing after being blocked.",
     "references": [
       {
-        "title": "VPN - Baidu Baike"
+        "title": "Proxy, Technique T1090 - MITRE ATT&CK",
+        "link": "https://attack.mitre.org/techniques/T1090/"
       }
     ]
   }

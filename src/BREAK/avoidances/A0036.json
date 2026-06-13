@@ -7,8 +7,8 @@
     "limitation": "在选择编码算法时，要注意该算法不能被猜测出来，譬如使用时间戳作为ID、使用可猜测的哈希算法生成ID、使用可暴力枚举的算法生成ID等。一旦算法可猜测，则编码这种规避手段就失去意义。此外，加密和哈希算法还要防止内鬼外泄和被盗取风险，因为一旦泄露，则防护措施永久性时效。所以要么保证算法的机密性，要么采取随机字符化是更好的办法。",
     "references": [
       {
-        "title": "数据加密 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%8A%A0%E5%AF%86"
+        "title": "Recommendation for Key Management - NIST SP 800-57 Part 1 Rev. 5",
+        "link": "https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final"
       }
     ],
     "updated": "2024-01-11"

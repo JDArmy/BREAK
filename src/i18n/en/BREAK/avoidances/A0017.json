@@ -17,7 +17,8 @@
     "limitation": "Non-biometric access control systems are susceptible to credential theft. Additionally, access control systems that do not implement precise flow control can be bypassed by tailgating.",
     "references": [
       {
-        "title": "Access Control System - Baidu Baike"
+        "title": "Access Control Cheat Sheet - OWASP",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html"
       }
     ]
   }

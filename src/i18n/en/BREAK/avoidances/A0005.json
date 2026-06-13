@@ -6,7 +6,8 @@
     "limitation": "Quantity limiting is a relatively broad loss-reduction measure: it allows losses or risks to occur but with a certain tolerance. When the unique identity of the requester cannot be accurately identified, the effect is poor. For example, malicious SMS consumption (R0029) and CC attacks (R0029-001) can achieve sustained abuse by continuously changing IPs. If total limits are applied without distinguishing requester identity, normal users will be affected — for example, some cloud services limit total daily request traffic and block all requests once the limit is exceeded.",
     "references": [
       {
-        "title": "Access Control - Baidu Baike"
+        "title": "Authorization Cheat Sheet - OWASP",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
       },
       {
         "title": "Blocking Brute Force Attacks - OWASP"

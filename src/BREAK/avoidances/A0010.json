@@ -21,8 +21,8 @@
     "limitation": "手机模拟器检测的对抗点有两处：一是对APP采集的信息提前进行伪造，二是对APP采集后上传的信息进行伪造。",
     "references": [
       {
-        "title": "Android模拟器识别检测技术",
-        "link": "https://blog.csdn.net/liuno0/article/details/124279075"
+        "title": "MASTG-KNOW-0031: Emulator Detection - OWASP",
+        "link": "https://mas.owasp.org/MASTG-KNOW-0031/"
       }
     ],
     "updated": "2024-01-11"
@@ -77,8 +77,8 @@
     "limitation": "通过分析并还原检测过程，阻断或提供Hook后的虚假值即可绕过多开检测策略。",
     "references": [
       {
-        "title": "游戏多开检测的几种实现方法及破解方法参考",
-        "link": "https://blog.csdn.net/weixin_40582034/article/details/125960599"
+        "title": "MASTG-KNOW-0031: Emulator Detection - OWASP",
+        "link": "https://mas.owasp.org/MASTG-KNOW-0031/"
       }
     ],
     "updated": "2024-01-11"
@@ -91,8 +91,8 @@
     "limitation": "通过分析并还原检测过程，阻断或提供Hook后的虚假值即可绕过调试器检测策略。",
     "references": [
       {
-        "title": "脱壳的艺术--2 调试器检测技术",
-        "link": "https://blog.csdn.net/iiprogram/article/details/2248506"
+        "title": "MASTG-KNOW-0085: Anti-Debugging Detection - OWASP",
+        "link": "https://mas.owasp.org/MASTG-KNOW-0085/"
       }
     ],
     "updated": "2024-01-11"

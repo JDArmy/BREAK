@@ -7,8 +7,8 @@
     "limitation": "由于正常用户访问也会有IP漂移的问题，所以IP判断一般是地域判断。如果攻击者使用了当地的代理IP、又修改了UA和设备指纹，则很可能绕过检测。对此笔者（Monyer）曾申请过一个专利\"一种基于访问分叉判断的身份冒用识别技术\"用以解决此问题。",
     "references": [
       {
-        "title": "凭证 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E5%87%AD%E8%AF%81"
+        "title": "Credential Stuffing Prevention Cheat Sheet - OWASP",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html"
       }
     ],
     "updated": "2024-01-11"

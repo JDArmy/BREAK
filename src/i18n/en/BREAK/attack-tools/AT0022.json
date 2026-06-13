@@ -4,7 +4,8 @@
     "description": "A headless browser is a browser without a graphical user interface (GUI) but with a complete browser core (including JavaScript parsing engine, rendering engine, etc.). It can be programmatically controlled via scripts to simulate real browser usage scenarios for page access, form submission, screenshots, and other operations. Common headless browser tools include Puppeteer (Chrome), Playwright (multi-browser), and Selenium. In the black-grey market, headless browsers are primarily used for web scraping to capture various types of data on the web, and are also commonly used for batch registration, automated traffic inflation, price monitoring, and other scenarios. Due to their interface-free nature, they run efficiently and are difficult to detect.",
     "references": [
       {
-        "title": "How to Choose a Headless Browser for Web Scraping"
+        "title": "Puppeteer Documentation",
+        "link": "https://pptr.dev/"
       }
     ]
   }

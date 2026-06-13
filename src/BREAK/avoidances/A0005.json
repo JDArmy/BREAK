@@ -7,8 +7,8 @@
     "limitation": "数量限制是一种较为宽泛的减损办法，即：允许损失或风险的发生，但有一定的容忍度。在不能准确识别或获得请求者唯一身份的情况下，效果会比较差。譬如短信恶意消耗（R0029）、CC攻击（R0029-001）等可以在不断更换IP的情况下来实现持续性滥用，而若不区分请求者身份进行总量的限制，又会影响正常用户的使用，譬如有些云服务限制每日请求的总流量，当流量超出后就阻拦任何请求。",
     "references": [
       {
-        "title": "访问控制 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6"
+        "title": "Authorization Cheat Sheet - OWASP",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
       },
       {
         "title": "Blocking Brute Force Attacks - OWASP",

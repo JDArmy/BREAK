@@ -6,7 +6,8 @@
     "limitation": "Data quality issues: data profiling requires large amounts of data; if data quality is poor, it will affect profile accuracy. Data privacy issues: data profiling requires collecting large amounts of data; if not handled properly, it will involve data privacy concerns. Timeliness issues: data profiling is based on historical data analysis and prediction; if the data is outdated or inaccurate, it will affect the timeliness of the profile.",
     "references": [
       {
-        "title": "User Profiling - Baidu Baike"
+        "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",
+        "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
       },
       {
         "title": "GB/T 35273-2020 Information Security Technology - Personal Information Security Specification"
@@ -20,7 +21,8 @@
     "limitation": "Data quality issues: user profiling requires large amounts of data; if data quality is poor, it will affect profile accuracy. Data privacy issues: user profiling requires collecting large amounts of user data; if not handled properly, it will involve user privacy concerns. Timeliness issues: user profiling is based on historical data analysis and prediction; if the data is outdated or inaccurate, it will affect the timeliness of the profile.",
     "references": [
       {
-        "title": "User Profiling - Baidu Baike"
+        "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",
+        "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
       }
     ]
   },
@@ -31,7 +33,8 @@
     "limitation": "With the proliferation of IPv6, the number of IP addresses will increase dramatically, posing greater challenges for IP profiling technology.",
     "references": [
       {
-        "title": "User Profiling - Baidu Baike"
+        "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",
+        "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
       }
     ]
   },
@@ -42,7 +45,8 @@
     "limitation": "Device profiling is an extension of device fingerprinting (A0021). If device fingerprinting is inaccurate, device profiling will also be affected. Additionally, the accuracy of device profiling is also affected by the device profiling algorithm.",
     "references": [
       {
-        "title": "User Profiling - Baidu Baike"
+        "title": "Fingerprinting - MDN Web Docs",
+        "link": "https://developer.mozilla.org/en-US/docs/Glossary/Fingerprinting"
       }
     ]
   }

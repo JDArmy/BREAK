@@ -4,8 +4,8 @@
     "description": "通过提取、盗取、购买已经登录过的账号Cookies，来进行凭证复用（R0035），实现账号的\"免登陆\"鉴权认证。",
     "references": [
       {
-        "title": "Kali Linux-网络安全之-XSS 跨站脚本攻击原理及 DVWA 靶机的搭建...",
-        "link": "https://www.jianshu.com/p/23a2cb2ddb15"
+        "title": "Session Hijacking Attack - OWASP",
+        "link": "https://owasp.org/www-community/attacks/Session_hijacking_attack"
       }
     ],
     "avoidances": [

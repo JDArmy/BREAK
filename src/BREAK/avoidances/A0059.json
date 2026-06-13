@@ -7,8 +7,8 @@
     "limitation": "异常行为检测在实际应用中存在一些局限性。其中包括误报率和漏报率的问题，系统可能错误地标记正常行为为异常或者错过真正的异常行为。对抗性攻击可能使系统更容易规避检测，而概念漂移、隐私问题、资源消耗和不平衡的数据分布也是需要面对的挑战。在设计和应用异常行为检测系统时，需要综合考虑这些局限性，并采取相应的措施以提高系统的鲁棒性和性能。",
     "references": [
       {
-        "title": "行为分析 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E8%A1%8C%E4%B8%BA%E5%88%86%E6%9E%90"
+        "title": "OWASP Automated Threats to Web Applications",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/"
       },
       {
         "title": "NIST SP 800-53 Rev. 5: Security and Privacy Controls (AU-6, AU-7, SI-4 Anomaly Detection)",

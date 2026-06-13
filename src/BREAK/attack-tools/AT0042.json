@@ -4,10 +4,6 @@
     "description": "撞库工具是指利用已泄露的账号密码数据（通常来自某个网站的数据泄露事件），自动化地在其他网站或系统上批量尝试登录的工具。撞库（Credential Stuffing，又称凭证填充）的核心原理是：许多用户在不同网站使用相同的用户名和密码，攻击者只需获取一批泄露的凭证，即可在短时间内对大量目标网站进行批量登录尝试。撞库与暴力破解不同：暴力破解是逐个尝试所有可能的密码组合，而撞库直接使用已泄露的真实账号密码进行匹配，效率远高于暴力破解。撞库工具通常具备以下功能：批量导入泄露的账号密码数据、多线程并发登录尝试、自动识别验证码（配合打码平台）、代理IP轮换以规避频率限制和IP封禁、成功登录后自动提取账户信息等。",
     "references": [
       {
-        "title": "撞库 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E6%92%9E%E5%BA%93/16480882?fromModule=search-result_lemma-recommend"
-      },
-      {
         "title": "Credential Stuffing - OWASP",
         "link": "https://owasp.org/www-community/attacks/Credential_stuffing"
       }

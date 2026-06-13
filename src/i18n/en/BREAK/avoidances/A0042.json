@@ -6,7 +6,8 @@
     "limitation": "Feature randomization is highly intrusive to the business and requires strong security-business collaboration to implement. Additionally, changes to features may lead to a degraded user experience.",
     "references": [
       {
-        "title": "Access Control - Baidu Baike"
+        "title": "Authorization Cheat Sheet - OWASP",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
       }
     ]
   },
@@ -17,7 +18,8 @@
     "limitation": "DOM randomization is ineffective against attack methods that use OCR to identify and manipulate page elements.",
     "references": [
       {
-        "title": "Access Control - Baidu Baike"
+        "title": "Authorization Cheat Sheet - OWASP",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
       }
     ]
   },
@@ -28,7 +30,8 @@
     "limitation": "Attackers can bypass this type of defense by continuously enumerating random events and alerting on automation workflow exceptions.",
     "references": [
       {
-        "title": "Access Control - Baidu Baike"
+        "title": "Authorization Cheat Sheet - OWASP",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
       }
     ]
   }

@@ -6,7 +6,8 @@
     "limitation": "The limitations of behavioral biometrics include: (1) user behavior can change due to physical condition, mood, and environment, leading to higher false positive rates; (2) initial modeling requires a period of data accumulation, with a prominent cold-start problem; (3) behavioral characteristics may differ across devices, reducing cross-device recognition accuracy; (4) automated tools can simulate human behavioral patterns to bypass detection; (5) collecting user behavioral data may involve privacy compliance issues.",
     "references": [
       {
-        "title": "Biometric Identification - Baidu Baike"
+        "title": "Biometrics - NIST",
+        "link": "https://www.nist.gov/programs-projects/biometrics"
       },
       {
         "title": "ISO/IEC 30107-1:2016 Biometric Presentation Attack Detection - Framework"

@@ -6,7 +6,8 @@
     "limitation": "Because personal ID document information leaks occur frequently, it is not sufficient to verify identity ownership by simply entering an ID number or photographing an ID document. It is necessary to combine facial recognition, SMS verification linked to the registered phone number, bank card holder verification, and other methods to confirm the document owner.",
     "references": [
       {
-        "title": "Real-Name Registration - Baidu Baike"
+        "title": "Digital Identity Guidelines: Enrollment and Identity Proofing - NIST SP 800-63A",
+        "link": "https://pages.nist.gov/800-63-3/sp800-63a.html"
       },
       {
         "title": "Ministry of Public Security Announces Top 10 Black-Grey Market Crime Cases"

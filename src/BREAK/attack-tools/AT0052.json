@@ -29,8 +29,8 @@
     "description": "KON-Boot是一款可以绕过Windows和Mac OS X的登录密码的工具，它可以通过USB设备启动，从而绕过登录密码。",
     "references": [
       {
-        "title": "kon-boot绕过window身份验证_konboot-CSDN博客",
-        "link": "https://blog.csdn.net/weixin_52497013/article/details/121848172"
+        "title": "Kon-Boot FAQ / Troubleshooting",
+        "link": "https://kon-boot.com/docs/faq/"
       }
     ],
     "avoidances": [
@@ -80,8 +80,8 @@
     "description": "BadUSB是一款可以通过USB接口将恶意代码写入计算机的工具，它可以将恶意代码写入USB设备中，当USB设备插入计算机时，恶意代码会自动运行，从而实现对计算机的攻击。",
     "references": [
       {
-        "title": "插一个U盘黑一台电脑-Badusb详细教程 - 简书",
-        "link": "https://www.jianshu.com/p/76b42b276bee"
+        "title": "BadUSB - On Accessories that Turn Evil - Black Hat USA 2014",
+        "link": "https://blackhat.com/us-14/video/badusb-on-accessories-that-turn-evil.html"
       }
     ],
     "avoidances": [

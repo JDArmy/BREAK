@@ -7,8 +7,8 @@
     "limitation": "威胁情报的局限性主要包括信息来源的不完整性、时效性的挑战、过多的虚假信息、难以分辨针对性攻击、难以量化真实影响、跨组织共享合作的困难以及对隐私和法规的合规性问题。",
     "references": [
       {
-        "title": "威胁情报 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/23311172?fr=ge_ala"
+        "title": "Guide to Cyber Threat Information Sharing - NIST SP 800-150",
+        "link": "https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-150.pdf"
       },
       {
         "title": "NIST SP 800-150: Guide to Cyber Threat Information Sharing",
@@ -39,8 +39,8 @@
     "limitation": "针对域名的威胁情报存在范围太广的问题，导致针对域名进行封禁容易出现误拦截；而针对链接的情报又存在范围太小的问题，导致修改一下链接描述符就能绕过检测。",
     "references": [
       {
-        "title": "威胁情报基本术语 - 简书",
-        "link": "https://www.jianshu.com/p/201d296636f4"
+        "title": "Information Sharing - CISA",
+        "link": "https://www.cisa.gov/topics/cyber-threats-and-advisories/information-sharing"
       }
     ],
     "updated": "2026-05-27"
@@ -67,8 +67,8 @@
     "limitation": "IOC妥协指标情报的局限性包括对已知攻击模式的依赖，易受攻击者变更IOC的影响，容易产生误报和漏报，以及其基于静态特征的特性，使其难以适应动态和变化的威胁环境。",
     "references": [
       {
-        "title": "威胁情报基本术语",
-        "link": "https://www.jianshu.com/p/201d296636f4"
+        "title": "OASIS Cyber Threat Intelligence Technical Committee",
+        "link": "https://oasis-open.github.io/cti-documentation/"
       }
     ],
     "updated": "2024-01-11"
@@ -81,8 +81,8 @@
     "limitation": "局限性包括可能存在虚假信息逃避检测、误报率高、数据质量依赖性强、涉及隐私问题、受制于地理多样性、适应性不足于新型欺诈形式、可能影响用户体验，以及实施和维护成本较高。",
     "references": [
       {
-        "title": "威胁情报基本术语 - 简书",
-        "link": "https://www.jianshu.com/p/201d296636f4"
+        "title": "Guide to Cyber Threat Information Sharing - NIST SP 800-150",
+        "link": "https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-150.pdf"
       }
     ],
     "updated": "2026-05-27"

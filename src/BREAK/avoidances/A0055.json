@@ -7,8 +7,8 @@
     "limitation": "漏洞识别面临一些局限性，首先，漏洞数据库的不完善性使得某些漏洞可能未被覆盖。其次，自动化工具和扫描器可能产生虚假阳性，即错误地标识出并不存在的漏洞，同时也可能漏掉真实存在的漏洞，形成虚假阴性。此外，对于复杂的应用程序和定制开发的系统，仅仅依赖自动化工具可能无法全面发现所有漏洞，手动审查的成本较高。因此，漏洞识别需要综合运用多种手段，包括自动化工具、手动审查、漏洞数据库的更新以及定期的系统审计，以提高全面性和准确性。",
     "references": [
       {
-        "title": "漏洞扫描 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F"
+        "title": "National Vulnerability Database - NIST",
+        "link": "https://nvd.nist.gov/"
       },
       {
         "title": "OWASP Vulnerability Management Guide",

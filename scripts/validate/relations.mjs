@@ -84,9 +84,10 @@ function collectRelationAudit() {
     ]),
   );
   const sceneRiskRefs = unique(
-    businessScenes.flatMap(({ entity }) =>
-      Object.values(entity.riskScenes || {}).flatMap((scene) => scene.risks || []),
-    ),
+    businessScenes.flatMap(({ entity }) => [
+      ...(entity.risks || []),
+      ...Object.values(entity.riskScenes || {}).flatMap((scene) => scene.risks || []),
+    ]),
   );
 
   for (const ref of riskAvoidanceRefs) {

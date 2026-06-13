@@ -7,8 +7,8 @@
     "limitation": "对于设备中的唯一标识如：IMEI、IMSI、MAC地址、AndroidID、IDFA等，由于用户隐私限制，随着系统升级，基本需要用户授权才能使用，这导致通用性是个问题，尤其对于黑灰产设备基本不会给予这类权限。而对于多设备特征进行综合计算形成的设备标识，则太容易被篡改从而导致无法召回。",
     "references": [
       {
-        "title": "设备指纹 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E8%AE%BE%E5%A4%87%E6%8C%87%E7%BA%B9/20817369?fr=ge_ala"
+        "title": "Fingerprinting - MDN Web Docs",
+        "link": "https://developer.mozilla.org/en-US/docs/Glossary/Fingerprinting"
       },
       {
         "title": "OWASP Web Security Testing Guide - Fingerprint Web Server",

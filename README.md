@@ -51,6 +51,8 @@ Contributors are welcome to collaborate by directly editing the JSON files. Data
 
 ## Development
 
+Requires Node.js 20.19+ or 22.12+.
+
 ```shell
 npm install
 npm run dev

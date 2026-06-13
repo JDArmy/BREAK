@@ -13,7 +13,8 @@
     "description": "KON-Boot is a tool that bypasses Windows and macOS login passwords. It boots from a USB device to circumvent the login authentication process.",
     "references": [
       {
-        "title": "KON-Boot Bypassing Windows Authentication - CSDN"
+        "title": "Kon-Boot FAQ / Troubleshooting",
+        "link": "https://kon-boot.com/docs/faq/"
       }
     ]
   },
@@ -31,7 +32,8 @@
     "description": "BadUSB is a USB device pre-loaded with malicious code. When inserted into a computer, the malicious code executes automatically, enabling attacks such as keystroke injection, data exfiltration, or malware installation.",
     "references": [
       {
-        "title": "BadUSB Detailed Tutorial - Jianshu"
+        "title": "BadUSB - On Accessories that Turn Evil - Black Hat USA 2014",
+        "link": "https://blackhat.com/us-14/video/badusb-on-accessories-that-turn-evil.html"
       }
     ]
   }

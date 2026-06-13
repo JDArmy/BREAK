@@ -7,8 +7,8 @@
     "limitation": "准入控制侧重于对身份验证和访问权限的静态管理，难以适应动态变化的环境和威胁。其次，对于内部威胁或已通过身份验证的用户可能的恶意行为，准入控制相对较难检测和应对。此外，维护复杂的准入策略和规则可能增加管理和操作的复杂性，导致误判或过度的限制。最后，对于移动设备、远程工作等现代工作环境的挑战，传统准入控制可能不够灵活和适应。因此，组织在实施准入控制时需要综合考虑这些局限性，并结合其他安全策略和技术，以提高整体安全性。",
     "references": [
       {
-        "title": "准入控制 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E5%87%86%E5%85%A5%E6%8E%A7%E5%88%B6?fromModule=lemma_search-box"
+        "title": "Access Control Cheat Sheet - OWASP",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html"
       }
     ],
     "updated": "2024-01-29"

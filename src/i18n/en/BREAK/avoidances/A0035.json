@@ -6,7 +6,8 @@
     "limitation": "Data desensitization may have the following limitations: first, due to insufficient protection of sensitive data, malicious attackers can combine background information to infer sensitive data, creating privacy leakage risks; second, existing desensitization techniques typically alter the original data structure, affecting data accuracy to some extent.",
     "references": [
       {
-        "title": "Data Masking - Baidu Baike"
+        "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",
+        "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
       },
       {
         "title": "NIST SP 800-188: De-Identifying Government Datasets - Techniques and Governance"
@@ -20,7 +21,8 @@
     "limitation": "Sensitive data removal depends on the execution of data classification and grading, as well as the ability to identify sensitive data. If data classification is inaccurate or the ability to identify sensitive data is insufficient, the effectiveness of sensitive data removal will be poor. Additionally, static sensitive data removal may affect data completeness, availability, and accuracy.",
     "references": [
       {
-        "title": "Data Masking - Baidu Baike"
+        "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",
+        "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
       }
     ]
   },
@@ -31,7 +33,8 @@
     "limitation": "Tokenization is not applicable to all scenarios. In some applications, direct access to the user's original data is required rather than processing through tokens.",
     "references": [
       {
-        "title": "Tokenization - Baidu Baike"
+        "title": "Information Supplement: Tokenization Product Security Guidelines - PCI SSC",
+        "link": "https://www.pcisecuritystandards.org/documents/Tokenization_Product_Security_Guidelines.pdf"
       }
     ]
   },
@@ -42,7 +45,8 @@
     "limitation": "Due to the limited number of available virtual numbers, tokens must be used to map multiple user phone numbers to a single virtual number, increasing the cost of calls. Virtual numbers are not friendly for SMS sending and receiving — for example, parcel lockers do not support virtual numbers, preventing consumers from receiving pickup codes. Additionally, some enterprises use mobile phone numbers as intermediary numbers for bulk commercial marketing calls or even fraud under the guise of user privacy protection. The introduction of the 700 dedicated number range helps address this issue, but industry regulation is still being improved.",
     "references": [
       {
-        "title": "Virtual Phone Numbers vs. Malicious Registration: Understanding the Grey Industry Chain"
+        "title": "Personal Information Protection Law of the People's Republic of China",
+        "link": "https://www.samr.gov.cn/wljys/gzzd/art/2023/art_3ef1e889c1e644d4b65b5f5c7f432386.html"
       }
     ]
   }

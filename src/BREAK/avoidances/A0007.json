@@ -7,8 +7,8 @@
     "limitation": "MFA照比传统账密登录，可以大幅提升账户安全性，不过针对MFA的攻击也层出不穷，譬如：中间人（MitM）攻击、SIM卡交换攻击、Pass-The-Cookie攻击、MFA疲劳攻击等，这在一定程度上打破MFA构建的账户安全体系。",
     "references": [
       {
-        "title": "多因素身份验证 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E5%A4%9A%E5%9B%A0%E7%B4%A0%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81/17580929?fr=ge_ala"
+        "title": "Multifactor Authentication Cheat Sheet - OWASP",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Multifactor_Authentication_Cheat_Sheet.html"
       },
       {
         "title": "NIST SP 800-63B: Digital Identity Guidelines - Authentication and Lifecycle Management",
@@ -67,8 +67,8 @@
     "limitation": "电话语音验证码的局限性包括对语音质量、用户理解差异、保密性、残障用户友好性以及滥用的潜在风险。",
     "references": [
       {
-        "title": "构建安全的语音验证码API接口-CSDN博客",
-        "link": "https://blog.csdn.net/weixin_31597759/article/details/147599268"
+        "title": "Digital Identity Guidelines: Authentication and Lifecycle Management - NIST SP 800-63B",
+        "link": "https://pages.nist.gov/800-63-3/sp800-63b.html"
       }
     ],
     "updated": "2024-01-16"

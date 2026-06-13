@@ -7,8 +7,8 @@
     "limitation": "证书锁定是一种有效的中间人攻击防御机制，旨在提升中间人门槛。但攻击者可以通过Frida、Xposed等框架Hook证书校验函数，或替换应用内嵌证书并重新打包等方式绕过SSL Pinning。此外，在越狱或ROOT设备上绕过难度更低，目前已有多款自动化工具可实现SSL Pinning的一键绕过。",
     "references": [
       {
-        "title": "有关ssl-pinning的总结 - 简书",
-        "link": "https://www.jianshu.com/p/22b56d977825"
+        "title": "MASTG-TEST-0244: Missing Certificate Pinning in Network Traffic - OWASP",
+        "link": "https://mas.owasp.org/MASTG/tests/android/MASVS-NETWORK/MASTG-TEST-0244/"
       }
     ],
     "updated": "2024-01-11"

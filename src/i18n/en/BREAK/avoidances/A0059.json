@@ -6,7 +6,8 @@
     "limitation": "Anomalous behavior detection has several practical limitations, including false positive and false negative rates — the system may incorrectly flag normal behavior as anomalous or miss genuinely anomalous behavior. Adversarial attacks may make the system easier to evade, while concept drift, privacy concerns, resource consumption, and imbalanced data distribution are also challenges. When designing and applying anomalous behavior detection systems, these limitations must be considered comprehensively and appropriate measures taken to improve robustness and performance.",
     "references": [
       {
-        "title": "Behavior Analysis - Baidu Baike"
+        "title": "OWASP Automated Threats to Web Applications",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/"
       },
       {
         "title": "NIST SP 800-53 Rev. 5: Security and Privacy Controls (AU-6, AU-7, SI-4 Anomaly Detection)"

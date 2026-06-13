@@ -4,12 +4,12 @@
     "description": "图像验证码识别工具是指用于自动识别和破解各类图形验证码的技术工具。早期主要基于OCR（光学字符识别）技术，通过检查图像中的明暗模式确认字符形状，再将形状转换为计算机文字。随着验证码技术的演进和深度学习的发展，现代验证码识别工具已广泛采用基于深度学习的图像识别模型（如CNN、Caffe框架等），对字符验证码、滑块验证码、点选验证码等多种类型验证码的识别率大幅提升。在黑灰产中，此类工具通常以\"打码平台\"的形式运作，提供批量自动化验证码识别服务，即黑灰产将抓取的验证码信息封装成任务提交到打码平台，由平台通过AI模型或人工方式完成识别并返回结果，从而绕过网站的验证码安全防护。",
     "references": [
       {
-        "title": "Tesseract-OCR 图像文字识别工具",
-        "link": "https://blog.csdn.net/weixin_43656359/article/details/103401848"
+        "title": "Tesseract OCR Documentation",
+        "link": "https://tesseract-ocr.github.io/"
       },
       {
-        "title": "黑产用「未来武器」破解验证码，「快啊打码」平台使用深度学习Caffe框架",
-        "link": "https://blog.csdn.net/fuhanghang/article/details/118538724"
+        "title": "OWASP Automated Threats to Web Applications",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/"
       }
     ],
     "avoidances": [

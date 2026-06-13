@@ -6,7 +6,8 @@
     "limitation": "Limitations of vulnerability remediation include: delays and complexity — some fixes may take time to develop, test, and apply, giving attackers a window of opportunity; incomplete fixes — remediation measures may sometimes introduce new issues or miss other vulnerabilities while addressing one; vendor dependency — if a vulnerability involves hardware or software vendors, the speed and effectiveness of the fix may depend on vendor cooperation and support; complexity and cost — for complex systems and large-scale networks, vulnerability remediation can become complex and costly, especially when business continuity is involved.",
     "references": [
       {
-        "title": "Security Patch - Baidu Baike"
+        "title": "Known Exploited Vulnerabilities Catalog - CISA",
+        "link": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
       }
     ]
   }

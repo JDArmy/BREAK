@@ -6,7 +6,8 @@
     "limitation": "Because normal users also experience IP drift, IP analysis is generally based on geographic region. If an attacker uses a local proxy IP and also modifies the UA and device fingerprint, detection may be bypassed. The author (Monyer) has filed a patent titled 'An Identity Impersonation Detection Technology Based on Access Bifurcation Analysis' to address this problem.",
     "references": [
       {
-        "title": "Credentials - Baidu Baike"
+        "title": "Credential Stuffing Prevention Cheat Sheet - OWASP",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html"
       }
     ]
   }

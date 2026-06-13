@@ -6,7 +6,8 @@
     "limitation": "Completely ineffective against attack behavior that perfectly simulates normal user access.",
     "references": [
       {
-        "title": "Honeypot - Baidu Baike"
+        "title": "Guide to Intrusion Detection and Prevention Systems - NIST SP 800-94",
+        "link": "https://csrc.nist.gov/pubs/sp/800/94/final"
       },
       {
         "title": "MITRE D3FEND: Connected Honeynet Technique"

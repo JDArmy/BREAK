@@ -6,7 +6,8 @@
     "limitation": "Limitations include: cost — establishing a comprehensive disaster recovery mechanism may require significant investment, which may be difficult for smaller organizations; unpredictable disasters — some disasters cannot be predicted or prevented, so the mechanism may not cover all scenarios; supply chain dependency — if a link in the supply chain is affected, it may impact the execution of the disaster recovery mechanism; human factors — human errors, mistakes, or negligence may cause the disaster recovery plan to fail.",
     "references": [
       {
-        "title": "Disaster Recovery Plan - Baidu Baike"
+        "title": "Contingency Planning Guide for Federal Information Systems - NIST SP 800-34 Rev. 1",
+        "link": "https://csrc.nist.gov/pubs/sp/800/34/r1/final"
       },
       {
         "title": "NIST SP 800-34 Rev. 1: Contingency Planning Guide for Federal Information Systems"

@@ -6,7 +6,8 @@
     "limitation": "Compared to traditional username/password login, MFA can significantly improve account security. However, attacks against MFA are also constantly emerging, such as Man-in-the-Middle (MitM) attacks, SIM swap attacks, Pass-The-Cookie attacks, MFA fatigue attacks, etc., which to some extent undermine the account security framework built by MFA.",
     "references": [
       {
-        "title": "Multi-Factor Authentication - Baidu Baike"
+        "title": "Multifactor Authentication Cheat Sheet - OWASP",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Multifactor_Authentication_Cheat_Sheet.html"
       },
       {
         "title": "NIST SP 800-63B: Digital Identity Guidelines - Authentication and Lifecycle Management"
@@ -53,7 +54,8 @@
     "limitation": "The limitations of phone voice verification codes include sensitivity to voice quality, differences in user comprehension, confidentiality concerns, unfriendliness to users with disabilities, and potential risks of abuse.",
     "references": [
       {
-        "title": "Building Secure Voice CAPTCHA API Interfaces"
+        "title": "Digital Identity Guidelines: Authentication and Lifecycle Management - NIST SP 800-63B",
+        "link": "https://pages.nist.gov/800-63-3/sp800-63b.html"
       }
     ]
   },

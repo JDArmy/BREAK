@@ -6,7 +6,8 @@
     "limitation": "The detection mechanism for single-device login typically records the number of logins on the same type of device on the server side and resets the previous instance or logs it out when the count exceeds 1. However, this mechanism has a problem: in the case of credential reuse (R0035), i.e., cookie-based login (AT0030), since both the previous device and the new device use the same login instance, the restriction can be bypassed to achieve multi-point login. In this case, a credential reuse detection mechanism needs to be added.",
     "references": [
       {
-        "title": "Single-Device Login"
+        "title": "Digital Identity Guidelines: Authentication and Lifecycle Management - NIST SP 800-63B",
+        "link": "https://pages.nist.gov/800-63-3/sp800-63b.html"
       }
     ]
   }

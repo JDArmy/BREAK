@@ -7,8 +7,8 @@
     "limitation": "由于数字证书的签发机构是可信的第三方，因此数字证书的安全性严重依赖于签发机构的可信性。如果签发机构被攻击，那么攻击者就可以伪造数字证书，从而导致数字证书的安全性受到影响。此外，数字证书的安全性还受到签名算法的影响。如果签名算法被攻击，那么攻击者就可以伪造数字签名，从而导致数字证书的安全性受到影响。",
     "references": [
       {
-        "title": "数字证书 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6"
+        "title": "Transport Layer Security Cheat Sheet - OWASP",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Security_Cheat_Sheet.html"
       },
       {
         "title": "RFC 5280: Internet X.509 Public Key Infrastructure Certificate and CRL Profile",
@@ -25,8 +25,8 @@
     "limitation": "使用邮件数字证书的过程可能相对繁琐，用户需要了解数字证书的概念、购买证书、配置电子邮件客户端等。这可能对一般用户造成一定的使用门槛。数字证书需要及时续期，而且在证书过期之前需要进行更新。证书管理可能变得复杂，尤其是对于大规模部署的组织。为了实现端到端的加密和签名，邮件的发送方和接收方都需要支持和配置数字证书。这意味着在一些情况下，与不使用数字证书的用户通信可能受到一些限制。邮件数字证书只能在传输过程中提供安全性，但无法解决端点安全性问题，如用户密码泄露或恶意软件感染。",
     "references": [
       {
-        "title": "数字证书 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6"
+        "title": "Recommendation for Key Management - NIST SP 800-57 Part 1 Rev. 5",
+        "link": "https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final"
       }
     ],
     "updated": "2024-01-11"
@@ -39,8 +39,8 @@
     "limitation": "HTTPS数字证书的安全性严重依赖于签发机构的可信性。如果签发机构被攻击，那么攻击者就可以伪造数字证书，从而导致HTTPS数字证书的安全性受到影响。此外，HTTPS数字证书的安全性还受到签名算法的影响。如果签名算法被攻击，那么攻击者就可以伪造数字签名，从而导致HTTPS数字证书的安全性受到影响。",
     "references": [
       {
-        "title": "数字证书 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6"
+        "title": "Transport Layer Security Cheat Sheet - OWASP",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Security_Cheat_Sheet.html"
       }
     ],
     "updated": "2024-01-11"
@@ -53,8 +53,8 @@
     "limitation": "使用文件电子印章的过程可能对一般用户来说相对复杂，需要了解数字签名和印章的概念，以及如何正确地应用和验证印章。文件电子印章的可信度和有效性依赖于底层的公共密钥基础设施的可靠性。如果PKI受到攻击或存在问题，电子印章的可信度就会受到威胁。",
     "references": [
       {
-        "title": "公钥基础设施 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E5%85%AC%E9%92%A5%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD"
+        "title": "Recommendation for Key Management - NIST SP 800-57 Part 1 Rev. 5",
+        "link": "https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final"
       }
     ],
     "updated": "2024-01-11"
@@ -67,8 +67,8 @@
     "limitation": "设备易于遗失或被盗，可能导致敏感信息的不当访问。依赖于登录系统的支持情况，如果系统不支持USB Key登录，那么USB Key就无法使用。",
     "references": [
       {
-        "title": "USB Key - 百度百科",
-        "link": "https://baike.baidu.com/item/USB%20Key/9679194?fromtitle=ukey&fromid=8352760&fr=aladdin"
+        "title": "FIDO2: Moving the World Beyond Passwords",
+        "link": "https://fidoalliance.org/fido2/"
       }
     ],
     "updated": "2024-01-11"

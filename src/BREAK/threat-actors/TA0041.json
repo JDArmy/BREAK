@@ -10,7 +10,9 @@
       "AT0058",
       "AT0059"
     ],
-    "useAttackTools": [],
+    "useAttackTools": [
+      "AT0074"
+    ],
     "directCauseRisks": [
       "R0084-001",
       "R0116",

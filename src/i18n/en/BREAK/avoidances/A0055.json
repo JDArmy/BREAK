@@ -6,7 +6,8 @@
     "limitation": "Vulnerability identification faces several limitations. First, incomplete vulnerability databases mean some vulnerabilities may not be covered. Second, automated tools and scanners may produce false positives — incorrectly flagging non-existent vulnerabilities — and may also miss real vulnerabilities, producing false negatives. Additionally, for complex applications and custom-developed systems, relying solely on automated tools may not uncover all vulnerabilities, and manual review is costly. Therefore, vulnerability identification requires a combination of approaches including automated tools, manual review, updated vulnerability databases, and regular system audits to improve comprehensiveness and accuracy.",
     "references": [
       {
-        "title": "Vulnerability Scanning - Baidu Baike"
+        "title": "National Vulnerability Database - NIST",
+        "link": "https://nvd.nist.gov/"
       },
       {
         "title": "OWASP Vulnerability Management Guide"

@@ -20,6 +20,7 @@ const lowQualityDomains = [
   'jianshu.com',
   'zhuanlan.zhihu.com',
 ];
+const includeI18nLinkIssues = process.argv.includes('--include-i18n-link-issues');
 
 function severityForIssue(type) {
   if (['duplicate_link', 'low_quality_domain'].includes(type)) return 'warning';
@@ -102,7 +103,14 @@ function checkEntityReferences(entityType, records, issues) {
   }
 }
 
-function checkI18nSync(entityType, zhRecords, issues) {
+function checkI18nSync(entityType, zhRecords, issues, i18nStats) {
+  const stats = {
+    type: entityType,
+    entitiesChecked: zhRecords.length,
+    referenceCountMismatches: 0,
+    referenceLinkMismatches: 0,
+  };
+
   for (const { key, entity: zhEntity } of zhRecords) {
     const enPath = getDataFilePath(entityType, key, 'en');
     if (!fs.existsSync(enPath)) {
@@ -132,14 +140,17 @@ function checkI18nSync(entityType, zhRecords, issues) {
     const zhRefs = Array.isArray(zhEntity.references) ? zhEntity.references : [];
     const enRefs = Array.isArray(enEntity.references) ? enEntity.references : [];
     if (zhRefs.length !== enRefs.length) {
-      addIssue(issues, {
-        type: 'i18n_reference_count_mismatch',
-        entityType,
-        entityKey: key,
-        entityTitle: zhEntity.title || '',
-        zhCount: zhRefs.length,
-        enCount: enRefs.length,
-      });
+      stats.referenceCountMismatches++;
+      if (includeI18nLinkIssues) {
+        addIssue(issues, {
+          type: 'i18n_reference_count_mismatch',
+          entityType,
+          entityKey: key,
+          entityTitle: zhEntity.title || '',
+          zhCount: zhRefs.length,
+          enCount: enRefs.length,
+        });
+      }
       continue;
     }
 
@@ -147,18 +158,23 @@ function checkI18nSync(entityType, zhRecords, issues) {
       const zhLink = normalizeLink(zhRef.link);
       const enLink = normalizeLink(enRefs[index]?.link);
       if (zhLink !== enLink) {
-        addIssue(issues, {
-          type: 'i18n_reference_link_mismatch',
-          entityType,
-          entityKey: key,
-          entityTitle: zhEntity.title || '',
-          refIndex: index,
-          zhLink,
-          enLink,
-        });
+        stats.referenceLinkMismatches++;
+        if (includeI18nLinkIssues) {
+          addIssue(issues, {
+            type: 'i18n_reference_link_mismatch',
+            entityType,
+            entityKey: key,
+            entityTitle: zhEntity.title || '',
+            refIndex: index,
+            zhLink,
+            enLink,
+          });
+        }
       }
     });
   }
+
+  i18nStats.push(stats);
 }
 
 function buildStats(entityType, records) {
@@ -181,7 +197,7 @@ function buildStats(entityType, records) {
   };
 }
 
-function renderMarkdown(stats, issues) {
+function renderMarkdown(stats, issues, i18nStats) {
   const lines = [
     '# BREAK 参考资料基线审计报告',
     '',
@@ -196,6 +212,16 @@ function renderMarkdown(stats, issues) {
   for (const item of stats) {
     lines.push(
       `| ${item.type} | ${item.total} | ${item.withReferences} | ${item.missingReferences} | ${item.references} | ${item.lowQualityRate}% | ${item.coverageRate}% |`,
+    );
+  }
+
+  lines.push('', '## i18n 参考资料同步概览', '');
+  lines.push('默认报告只汇总 i18n reference 链接差异；如需逐条输出，运行 `npm run audit:references -- --include-i18n-link-issues`。');
+  lines.push('', '| 类别 | 检查实体数 | 引用数量不一致实体 | 引用链接不一致条目 |');
+  lines.push('| --- | ---: | ---: | ---: |');
+  for (const item of i18nStats) {
+    lines.push(
+      `| ${item.type} | ${item.entitiesChecked} | ${item.referenceCountMismatches} | ${item.referenceLinkMismatches} |`,
     );
   }
 
@@ -238,12 +264,13 @@ function renderMarkdown(stats, issues) {
 function main() {
   const issues = [];
   const stats = [];
+  const i18nStats = [];
 
   for (const entityType of entityTypes) {
     const records = loadEntities(entityType);
     stats.push(buildStats(entityType, records));
     checkEntityReferences(entityType, records, issues);
-    checkI18nSync(entityType, records, issues);
+    checkI18nSync(entityType, records, issues, i18nStats);
   }
 
   const reportDir = path.join(projectRoot, 'research/search-reports');
@@ -251,14 +278,21 @@ function main() {
   writeJson(path.join(reportDir, 'reference-baseline.json'), {
     generatedAt: new Date().toISOString(),
     stats,
+    i18nStats,
     issues,
   });
-  fs.writeFileSync(path.join(reportDir, 'reference-baseline.md'), renderMarkdown(stats, issues));
+  fs.writeFileSync(path.join(reportDir, 'reference-baseline.md'), renderMarkdown(stats, issues, i18nStats));
 
   console.log('\n=== BREAK 参考资料基线审计报告 ===\n');
   for (const item of stats) {
     console.log(
       `${item.type}: total=${item.total}, withReferences=${item.withReferences}, references=${item.references}, lowQuality=${item.lowQualityRate}%`,
+    );
+  }
+  console.log('\n## i18n 参考资料同步概览');
+  for (const item of i18nStats) {
+    console.log(
+      `${item.type}: countMismatch=${item.referenceCountMismatches}, linkMismatch=${item.referenceLinkMismatches}`,
     );
   }
   console.log('\n## 问题汇总');

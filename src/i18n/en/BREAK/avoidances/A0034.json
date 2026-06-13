@@ -6,7 +6,8 @@
     "limitation": "Although data obfuscation plays an important role in privacy protection, its use also has some limitations. First, obfuscation may cause information loss, affecting the precision and detail of the original data and thus impacting data analysis and mining effectiveness. Second, some complex obfuscation techniques may introduce significant performance overhead, increasing computational and storage costs. Additionally, excessive data obfuscation may cause data usability issues, reducing the practical value of data for users or analysts. Finally, although intended to protect privacy, some obfuscation techniques may still be subject to attacks that restore data or infer sensitive information, further increasing the factors that need to be carefully weighed when using data obfuscation.",
     "references": [
       {
-        "title": "Data Masking - Baidu Baike"
+        "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",
+        "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
       }
     ]
   },
@@ -17,7 +18,8 @@
     "limitation": "The goal of numerical obfuscation is to allow data viewers to see the general trend of data without seeing precise values, while preventing third-party organizations from grasping the company's exact operational status. This goal is inherently contradictory, because even without precise data, the final operational status can be estimated from the general trend. Therefore, this defense approach is only suitable for scenarios where the goal is to prevent third-party organizations from obtaining precise operational data.",
     "references": [
       {
-        "title": "Data Masking - Baidu Baike"
+        "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",
+        "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
       }
     ]
   },
@@ -28,7 +30,8 @@
     "limitation": "Given a certain number of real values, it may be possible to reverse-engineer the indexing algorithm by comparing the generated corresponding indices. Therefore, when indexing, either completely hide the real values to prevent reverse-engineering, or use a stepped algorithm to make the index a stepped curve where each segment uses a different algorithm, making reverse-engineering more difficult.",
     "references": [
       {
-        "title": "Data Masking - Baidu Baike"
+        "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",
+        "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
       }
     ]
   },
@@ -39,7 +42,8 @@
     "limitation": "Response status obfuscation is a relatively basic countermeasure that is well worth trying, but it is not a silver bullet.",
     "references": [
       {
-        "title": "Data Masking - Baidu Baike"
+        "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",
+        "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
       }
     ]
   }

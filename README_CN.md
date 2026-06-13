@@ -51,6 +51,8 @@ JDArmy BREAK 是英文 "Business Risk Enumeration & Avoidance Knowledge" 的缩�
 
 ## 开发
 
+需要 Node.js 20.19+ 或 22.12+。
+
 ```shell
 npm install
 npm run dev

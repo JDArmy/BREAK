@@ -6,7 +6,8 @@
     "limitation": "In non-login scenarios, resource access restrictions can only rely on terminal factors such as IP, UA, and device ID, all of which can be forged. This limits the effectiveness of this measure against sophisticated attackers.",
     "references": [
       {
-        "title": "Access Control - Baidu Baike"
+        "title": "Authorization Cheat Sheet - OWASP",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
       }
     ]
   },
@@ -17,7 +18,8 @@
     "limitation": "It should be noted that the Referer field can be forged, so this technique is not completely reliable. Additionally, some browsers provide a Referrer Policy option that controls whether the browser includes the Referer field in requests, making it difficult to determine the access source.",
     "references": [
       {
-        "title": "Access Control - Baidu Baike"
+        "title": "Authorization Cheat Sheet - OWASP",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
       }
     ]
   }

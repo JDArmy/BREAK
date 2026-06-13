@@ -7,8 +7,8 @@
     "limitation": "恶意内容识别大都基于关键词或某种策略模型的评分机制，这使得攻击者可以通过关键词绕过，模型绕过或擦边评分机制等访问来对抗识别。",
     "references": [
       {
-        "title": "用户生成内容 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E7%94%A8%E6%88%B7%E7%94%9F%E6%88%90%E5%86%85%E5%AE%B9"
+        "title": "网络信息内容生态治理规定",
+        "link": "https://www.cac.gov.cn/2019-12/20/c_1578375159509309.htm"
       }
     ],
     "updated": "2024-01-11"
@@ -21,8 +21,8 @@
     "limitation": "由于人力限制以及效率限制，可以通过多账号、大批量的自动化请求来实现针对人力的拒绝服务。从而实现针对事前审核的长时间停摆，或者针对事后审核的恶意内容投放处置时间的大幅延长。",
     "references": [
       {
-        "title": "用户生成内容 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E7%94%A8%E6%88%B7%E7%94%9F%E6%88%90%E5%86%85%E5%AE%B9"
+        "title": "网络信息内容生态治理规定",
+        "link": "https://www.cac.gov.cn/2019-12/20/c_1578375159509309.htm"
       }
     ],
     "updated": "2024-01-11"
@@ -35,12 +35,12 @@
     "limitation": "目前图片OCR文字识别准确率较高，但同样受到自动恶意文本识别（A006-001）中的局限性影响。而对图片内容进行识别，目前准确率还很低，需要结合人工内容审核（A006-007）。",
     "references": [
       {
-        "title": "图像识别 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB"
+        "title": "Artificial Intelligence Risk Management Framework - NIST AI 100-1",
+        "link": "https://www.nist.gov/itl/ai-risk-management-framework"
       },
       {
-        "title": "OCR - 百度百科",
-        "link": "https://baike.baidu.com/item/OCR/25995"
+        "title": "Tesseract OCR Documentation",
+        "link": "https://tesseract-ocr.github.io/"
       }
     ],
     "updated": "2024-01-11"
@@ -53,8 +53,8 @@
     "limitation": "攻击者可以使用对抗性样本来欺骗自动恶意音频识别系统，使其无法准确地检测和识别恶意音频。此外，自动恶意音频识别系统可能会受到环境噪声、语言变化、说话人变化等因素的影响，从而导致其准确性下降。",
     "references": [
       {
-        "title": "语音识别 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB"
+        "title": "Speaker Recognition Evaluation - NIST",
+        "link": "https://www.nist.gov/itl/iad/mig/speaker-recognition"
       }
     ],
     "updated": "2024-01-11"
@@ -67,8 +67,8 @@
     "limitation": "同样会受到自动恶意图片识别（A006-002）局限性影响，也会受到自动恶意音频识别（A006-003）的局限性影响",
     "references": [
       {
-        "title": "图像识别 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB"
+        "title": "TRECVID - NIST",
+        "link": "https://www-nlpir.nist.gov/projects/trecvid/"
       }
     ],
     "updated": "2024-01-11"
@@ -81,8 +81,8 @@
     "limitation": "基于白名单的域名审计在面临任意链接跳转、资源滥用（R0069）时是无效的；基于黑名单的审计又存在可以轻易更换域名或链接的问题。所以很多情况下不能起到很好的效果。",
     "references": [
       {
-        "title": "网络钓鱼 - 百度百科",
-        "link": "https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E9%92%93%E9%B1%BC/1511310"
+        "title": "Phishing Guidance - CISA",
+        "link": "https://www.cisa.gov/topics/cyber-threats-and-advisories/types-cyber-threats/phishing"
       },
       {
         "title": "An effective detection approach for phishing websites using URL and HTML features",

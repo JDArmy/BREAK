@@ -6,7 +6,8 @@
     "limitation": "The core adversarial point of data hiding is the reverse-engineering threshold and time cost caused by information asymmetry. Once the hiding method is discovered, cracking is only a matter of time. Therefore, data hiding typically employs dynamic algorithms or a 'hide-and-seek' mechanism: dynamic algorithms strengthen protection by issuing new algorithms and invalidating old ones before the old algorithm is reverse-engineered; 'hide-and-seek' strengthens protection by moving hidden data from its original location to a new location before it is found.",
     "references": [
       {
-        "title": "Steganography - Baidu Baike"
+        "title": "Steganography, Technique T1027.003 - MITRE ATT&CK",
+        "link": "https://attack.mitre.org/techniques/T1027/003/"
       }
     ]
   }
