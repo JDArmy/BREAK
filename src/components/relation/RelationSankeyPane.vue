@@ -1,10 +1,14 @@
 <script setup lang="ts">
-import type { Ref } from "vue";
+import { type Ref, type ComponentPublicInstance } from "vue";
 
-defineProps<{
+const props = defineProps<{
   sankeyData: { nodes: unknown[]; links: unknown[] };
-  sankeyChartRef: Ref<HTMLDivElement | undefined>;
+  setSankeyChartElement?: (element: HTMLDivElement | undefined) => void;
 }>();
+
+const setRef = (el: Element | ComponentPublicInstance | null) => {
+  props.setSankeyChartElement?.((el as HTMLDivElement) || undefined);
+};
 </script>
 
 <template>
@@ -12,7 +16,7 @@ defineProps<{
     <div v-if="sankeyData.nodes.length === 0" class="sankey-empty">
       {{ $t("relationView.noAttackPath") }}
     </div>
-    <div v-show="sankeyData.nodes.length > 0" :ref="sankeyChartRef" class="sankey-chart"></div>
+    <div v-show="sankeyData.nodes.length > 0" :ref="setRef" class="sankey-chart"></div>
   </div>
 </template>
 

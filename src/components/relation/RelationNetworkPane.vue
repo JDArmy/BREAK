@@ -1,16 +1,16 @@
 <script setup lang="ts">
 import type { DropdownInstance } from "element-plus";
-import type { Ref } from "vue";
+import type { Ref, ComponentPublicInstance } from "vue";
 import RelationFilterPanels from "@/components/relation/RelationFilterPanels.vue";
 import RelationGraphContextMenu from "@/components/relation/RelationGraphContextMenu.vue";
 import RelationGraphToolbar from "@/components/relation/RelationGraphToolbar.vue";
 import RelationGraphTouchActions from "@/components/relation/RelationGraphTouchActions.vue";
 import { RelationType, type NetworkLayoutMode } from "@/views/relation/relationTypes";
 
-defineProps<{
-  networkPaneRef: Ref<HTMLDivElement | undefined>;
-  networkChartRef: Ref<HTMLDivElement | undefined>;
-  dropdown1: Ref<DropdownInstance | undefined>;
+const props = defineProps<{
+  setNetworkPaneElement?: (element: HTMLDivElement | undefined) => void;
+  setNetworkChartElement?: (element: HTMLDivElement | undefined) => void;
+  dropdown1?: Ref<DropdownInstance | undefined>;
   networkLayoutTooltip: string;
   networkLayoutOptions: { value: NetworkLayoutMode; labelKey: string }[];
   networkState: { layout: NetworkLayoutMode };
@@ -54,10 +54,18 @@ const emit = defineEmits<{
   touchActionClose: [];
   openTouchNodeDetailDrawer: [];
 }>();
+
+const setNetworkPaneRef = (el: Element | ComponentPublicInstance | null) => {
+  props.setNetworkPaneElement?.((el as HTMLDivElement) || undefined);
+};
+
+const setNetworkChartRef = (el: Element | ComponentPublicInstance | null) => {
+  props.setNetworkChartElement?.((el as HTMLDivElement) || undefined);
+};
 </script>
 
 <template>
-  <div :ref="networkPaneRef" class="network-graph-pane">
+  <div :ref="setNetworkPaneRef" class="network-graph-pane">
     <RelationGraphToolbar
       :network-layout-tooltip="networkLayoutTooltip"
       :network-layout-options="networkLayoutOptions"
@@ -75,7 +83,7 @@ const emit = defineEmits<{
       @open-node-detail="emit('openNodeDetail')"
     />
 
-    <div :ref="networkChartRef" class="network-chart"></div>
+    <div :ref="setNetworkChartRef" class="network-chart"></div>
 
     <RelationFilterPanels
       :node-filter-visible="nodeFilterVisible"

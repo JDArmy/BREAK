@@ -1,7 +1,7 @@
 import { nextTick, onBeforeUnmount, onMounted, watch, type Ref } from "vue";
 import BREAK from "@/BREAK";
 import type { Router, RouteLocationNormalizedLoaded } from "vue-router";
-import { createRelationTypeMapping, type RelationType } from "@/views/relation/relationTypes";
+import { createRelationTypeMapping, RelationType } from "@/views/relation/relationTypes";
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;
 

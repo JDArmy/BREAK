@@ -10,8 +10,23 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: "/risk/:rKey",
+      path: "/risks/:rKey",
       name: "riskDetail",
+      component: HomeView,
+    },
+    {
+      path: "/avoidances/:aKey",
+      name: "avoidanceDetail",
+      component: HomeView,
+    },
+    {
+      path: "/attack-tools/:atKey",
+      name: "attackToolDetail",
+      component: HomeView,
+    },
+    {
+      path: "/threat-actors/:taKey",
+      name: "threatActorDetail",
       component: HomeView,
     },
     {
@@ -30,28 +45,13 @@ const router = createRouter({
       component: () => import("@/views/AvoidancesView.vue"),
     },
     {
-      path: "/avoidance/:aKey",
-      name: "avoidanceDetail",
-      component: () => import("@/views/AvoidancesView.vue"),
-    },
-    {
       path: "/attack-tools",
       name: "attackTools",
       component: () => import("@/views/AttackToolsView.vue"),
     },
     {
-      path: "/attack-tool/:atKey",
-      name: "attackToolDetail",
-      component: () => import("@/views/AttackToolsView.vue"),
-    },
-    {
       path: "/threat-actors",
       name: "threatActors",
-      component: () => import("@/views/ThreatActorsView.vue"),
-    },
-    {
-      path: "/threat-actor/:taKey",
-      name: "threatActorDetail",
       component: () => import("@/views/ThreatActorsView.vue"),
     },
     {

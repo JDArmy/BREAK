@@ -1,6 +1,6 @@
 import { computed, reactive, ref, type Ref } from "vue";
 import type { RouteLocationNormalizedLoaded } from "vue-router";
-import { networkLayoutOptions, networkLayoutZoom, type NetworkLayoutMode, type RelationType, type SankeyNode } from "@/views/relation/relationTypes";
+import { networkLayoutOptions, networkLayoutZoom, RelationType, type NetworkLayoutMode, type SankeyNode } from "@/views/relation/relationTypes";
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;
 

@@ -134,10 +134,10 @@ export const networkLayoutOptions: { value: NetworkLayoutMode; labelKey: string 
 ];
 
 export const networkLayoutZoom: Record<NetworkLayoutMode, number> = {
-  horizontal: 1.15,
-  lanes: 1.15,
-  split: 1.15,
-  radial: 1.15,
+  horizontal: 1.0,
+  lanes: 1.0,
+  split: 1.0,
+  radial: 1.0,
 };
 
 export const networkNodeSize = 58;

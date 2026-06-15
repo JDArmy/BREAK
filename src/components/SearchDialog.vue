@@ -89,12 +89,25 @@ function highlightText(text: string, queryStr: string): string {
 function selectResult(result: SearchResult) {
   emit("update:modelValue", false);
 
-  // 所有类型都跳转到专门的详情路由
-  const detailRoute = detailRoutes[result.type];
-  router.push({
-    name: detailRoute.name,
-    params: { [detailRoute.paramKey]: result.id },
-  });
+  const isHomePage = router.currentRoute.value.name === 'home' || router.currentRoute.value.name === 'businessScene';
+
+  if (isHomePage) {
+    // 在首页：使用专门的详情路由
+    const detailRoute = detailRoutes[result.type];
+    router.push({
+      name: detailRoute.name,
+      params: { [detailRoute.paramKey]: result.id },
+    });
+  } else {
+    // 在非首页：跳转到列表页并使用锚点定位
+    const listRoutes: Record<EntityType, string> = {
+      risk: '/risks',
+      avoidance: '/avoidances',
+      attackTool: '/attack-tools',
+      threatActor: '/threat-actors',
+    };
+    router.push(`${listRoutes[result.type]}#${result.id}`);
+  }
 
   query.value = "";
   debouncedQuery.value = "";

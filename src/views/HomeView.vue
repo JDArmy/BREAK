@@ -2,8 +2,12 @@
 import BREAK from "@/BREAK";
 
 import RiskDetail from "@/components/RiskDetail.vue";
+import AvoidanceDetail from "@/components/AvoidanceDetail.vue";
+import AttackToolDetail from "@/components/AttackToolDetail.vue";
+import ThreatActorDetail from "@/components/ThreatActorDetail.vue";
 import { ref, watch, computed } from "vue";
 import { useRouter, useRoute } from "vue-router";
+import { useBreakpoints } from "@/composables/useBreakpoints";
 
 import "element-plus/es/components/row/style/css";
 import "element-plus/es/components/col/style/css";
@@ -12,6 +16,9 @@ import { ElRow, ElCol } from "element-plus";
 const router = useRouter();
 const route = useRoute();
 const defaultBusinessSceneKey = "BS00";
+
+const { isMobile } = useBreakpoints();
+const componentSize = computed(() => isMobile.value ? 'default' : 'small');
 
 const getSingleRouteParam = (param: unknown) =>
   typeof param === "string" ? param : undefined;
@@ -210,6 +217,81 @@ const riskDetailClose = () => {
   });
 };
 //end.
+
+// 规避手段抽屉
+const avoidanceDrawer = ref(false);
+const avoidanceKey = ref("");
+watch(
+  () => [route.name, route.params.aKey] as const,
+  ([routeName, rawAKey]) => {
+    if (routeName === "avoidanceDetail") {
+      const nextKey = getSingleRouteParam(rawAKey);
+      if (nextKey && hasOwn(BREAK.avoidances, nextKey)) {
+        avoidanceKey.value = nextKey;
+        avoidanceDrawer.value = true;
+        return;
+      }
+      router.replace({ name: "home" });
+      return;
+    }
+    avoidanceDrawer.value = false;
+  },
+  { immediate: true }
+);
+const avoidanceDetailClose = () => {
+  avoidanceDrawer.value = false;
+  router.push({ name: "home" });
+};
+
+// 攻击工具抽屉
+const attackToolDrawer = ref(false);
+const attackToolKey = ref("");
+watch(
+  () => [route.name, route.params.atKey] as const,
+  ([routeName, rawAtKey]) => {
+    if (routeName === "attackToolDetail") {
+      const nextKey = getSingleRouteParam(rawAtKey);
+      if (nextKey && hasOwn(BREAK.attackTools, nextKey)) {
+        attackToolKey.value = nextKey;
+        attackToolDrawer.value = true;
+        return;
+      }
+      router.replace({ name: "home" });
+      return;
+    }
+    attackToolDrawer.value = false;
+  },
+  { immediate: true }
+);
+const attackToolDetailClose = () => {
+  attackToolDrawer.value = false;
+  router.push({ name: "home" });
+};
+
+// 威胁行为者抽屉
+const threatActorDrawer = ref(false);
+const threatActorKey = ref("");
+watch(
+  () => [route.name, route.params.taKey] as const,
+  ([routeName, rawTaKey]) => {
+    if (routeName === "threatActorDetail") {
+      const nextKey = getSingleRouteParam(rawTaKey);
+      if (nextKey && hasOwn(BREAK.threatActors, nextKey)) {
+        threatActorKey.value = nextKey;
+        threatActorDrawer.value = true;
+        return;
+      }
+      router.replace({ name: "home" });
+      return;
+    }
+    threatActorDrawer.value = false;
+  },
+  { immediate: true }
+);
+const threatActorDetailClose = () => {
+  threatActorDrawer.value = false;
+  router.push({ name: "home" });
+};
 </script>
 
 <template>
@@ -246,29 +328,34 @@ const riskDetailClose = () => {
       </div>
     </el-col>
 
-    <el-col :md="2" :sm="12" :offset="0">
-      <el-select
-        v-model="bsKeySelected"
-        size="small"
-        :placeholder="$t('allScenes')"
-      >
-        <el-option
-          v-for="(bsVal, bsKey) in BREAK.businessScenes"
-          :key="bsKey"
-          :label="bsKey + ':&nbsp;&nbsp;' + $t(`BREAK.businessScenes.${bsKey}.title`)"
-          :value="bsKey"
-        />
-      </el-select>
-    </el-col>
-    <el-col :md="20" :sm="11" :offset="1">
-      <el-radio-group size="small" v-model="hideAllSubRisks">
-        <el-radio-button :value="false">{{
-          $t("showAllSubRisks")
-        }}</el-radio-button>
-        <el-radio-button :value="true">{{
-          $t("hideAllSubRisks")
-        }}</el-radio-button>
-      </el-radio-group>
+    <el-col :md="24" :sm="24" class="scene-controls">
+      <div class="scene-selector-wrapper">
+        <span class="control-label">{{ $t("businessScene") }}:</span>
+        <el-select
+          v-model="bsKeySelected"
+          :size="componentSize"
+          :placeholder="$t('allScenes')"
+          class="scene-selector"
+        >
+          <el-option
+            v-for="(bsVal, bsKey) in BREAK.businessScenes"
+            :key="bsKey"
+            :label="bsKey + ': ' + $t(`BREAK.businessScenes.${bsKey}.title`)"
+            :value="bsKey"
+          />
+        </el-select>
+      </div>
+      <div class="subrisk-controls-wrapper">
+        <span class="control-label">{{ $t("subRiskDisplay") }}:</span>
+        <el-radio-group :size="componentSize" v-model="hideAllSubRisks" class="subrisk-toggle">
+          <el-radio-button :value="false">{{
+            $t("showAllSubRisks")
+          }}</el-radio-button>
+          <el-radio-button :value="true">{{
+            $t("hideAllSubRisks")
+          }}</el-radio-button>
+        </el-radio-group>
+      </div>
     </el-col>
   </el-row>
 
@@ -338,7 +425,7 @@ const riskDetailClose = () => {
                     <span class="sidebar-arrow">{{ hideSubRisks[rKey] ? '▶' : '▼' }}</span>
                   </td>
                   <td class="parent-risk-link">
-                    <router-link class="link" :to="'/risk/' + rKey">{{
+                    <router-link class="link" :to="'/risks/' + rKey">{{
                       $t(`BREAK.risks.${rKey}.title`)
                     }}</router-link>
                   </td>
@@ -357,7 +444,7 @@ const riskDetailClose = () => {
                     </svg>
                   </td>
                   <td class="sub-risk-link">
-                    <router-link class="link" :to="'/risk/' + srKey">{{
+                    <router-link class="link" :to="'/risks/' + srKey">{{
                       $t(`BREAK.risks.${srKey}.title`)
                     }}</router-link>
                   </td>
@@ -366,7 +453,7 @@ const riskDetailClose = () => {
                 </tbody>
               </table>
               <!-- 无子风险时 -->
-              <router-link class="link" v-else :to="'/risk/' + rKey">{{
+              <router-link class="link" v-else :to="'/risks/' + rKey">{{
                 $t(`BREAK.risks.${rKey}.title`)
               }}</router-link>
             </li>
@@ -377,9 +464,28 @@ const riskDetailClose = () => {
     </el-col>
   </el-row>
   <RiskDetail
+    v-if="riskDrawer"
     v-on:drawer-close="riskDetailClose"
     :drawer="riskDrawer"
     :rKey="riskKey"
+  />
+  <AvoidanceDetail
+    v-if="avoidanceDrawer"
+    v-on:drawer-close="avoidanceDetailClose"
+    :drawer="avoidanceDrawer"
+    :aKey="avoidanceKey"
+  />
+  <AttackToolDetail
+    v-if="attackToolDrawer"
+    v-on:drawer-close="attackToolDetailClose"
+    :drawer="attackToolDrawer"
+    :atKey="attackToolKey"
+  />
+  <ThreatActorDetail
+    v-if="threatActorDrawer"
+    v-on:drawer-close="threatActorDetailClose"
+    :drawer="threatActorDrawer"
+    :taKey="threatActorKey"
   />
 </template>
 
@@ -617,8 +723,88 @@ const riskDetailClose = () => {
   margin-bottom: 0.5em;
 }
 
+.scene-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  background: var(--break-bg-soft);
+  border-radius: 8px;
+  border: 1px solid var(--break-border);
+}
+
+.scene-selector-wrapper,
+.subrisk-controls-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.control-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--break-text-secondary);
+  white-space: nowrap;
+}
+
+.scene-selector {
+  min-width: 200px;
+}
+
+.subrisk-toggle {
+  font-size: 0;
+}
+
+.subrisk-toggle :deep(.el-radio-button) {
+  margin: 0;
+  font-size: 14px;
+}
+
+.subrisk-toggle :deep(.el-radio-button:not(:first-child)) {
+  margin-left: -1px;
+}
+
+.subrisk-toggle :deep(.el-radio-button__inner) {
+  margin: 0;
+}
+
 /* 移动端适配 */
 @media (max-width: 767px) {
+  .scene-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .scene-selector-wrapper,
+  .subrisk-controls-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .subrisk-controls-wrapper {
+    align-items: flex-start;
+  }
+
+  .control-label {
+    font-size: 13px;
+  }
+
+  .scene-selector {
+    width: 100%;
+  }
+
+  .subrisk-toggle {
+    width: auto;
+    display: inline-flex;
+  }
+
+  .subrisk-toggle :deep(.el-radio-button) {
+    flex: 0 0 auto;
+  }
+
   .stats {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr);

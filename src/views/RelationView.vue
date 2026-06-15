@@ -31,8 +31,8 @@ export default defineComponent({
     <el-tabs v-model="activeView" class="relation-tabs">
       <el-tab-pane :label="$t('relationView.network')" name="network">
         <RelationNetworkPane
-          :network-pane-ref="networkPaneRef"
-          :network-chart-ref="networkChartRef"
+          :set-network-pane-element="setNetworkPaneElement"
+          :set-network-chart-element="setNetworkChartElement"
           :dropdown1="dropdown1"
           :network-layout-tooltip="networkLayoutTooltip"
           :network-layout-options="networkLayoutOptions"
@@ -78,7 +78,7 @@ export default defineComponent({
       <el-tab-pane :label="$t('relationView.attackPath')" name="sankey">
         <RelationSankeyPane
           :sankey-data="sankeyData"
-          :sankey-chart-ref="sankeyChartRef"
+          :set-sankey-chart-element="setSankeyChartElement"
         />
       </el-tab-pane>
     </el-tabs>

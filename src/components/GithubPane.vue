@@ -50,7 +50,7 @@ getGithubData();
 <style scoped>
 a {
   text-decoration: none;
-  color: var(--el-menu-text-color);
+  color: inherit;
   display: flex;
   align-items: center;
 }
@@ -61,5 +61,6 @@ a {
   display: flex;
   align-items: center;
   gap: 2px;
+  color: inherit;
 }
 </style>

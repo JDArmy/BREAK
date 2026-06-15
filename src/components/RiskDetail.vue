@@ -164,6 +164,11 @@ const openRelationGraph = (rKey: string) => {
         {{ $t("openRelationGraph") }}
       </el-button>
     </div>
+    <div class="desc">
+      <el-button type="primary" @click="$router.push('/risks#' + rKey)">
+        {{ $t("viewDetail") }}
+      </el-button>
+    </div>
   </el-drawer>
   <!-- 手段详情页 -->
   <AvoidanceDetail

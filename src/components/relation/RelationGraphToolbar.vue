@@ -25,22 +25,22 @@ const emit = defineEmits<{
 
 <template>
   <div class="graph-toolbar">
-    <el-tooltip :content="$t('toolbar.fullscreen')" placement="top">
+    <el-tooltip :content="$t('toolbar.fullscreen')" placement="top" :show-after="500">
       <el-button circle size="small" @click="emit('fullscreen')">
         <el-icon><FullScreen /></el-icon>
       </el-button>
     </el-tooltip>
-    <el-tooltip :content="$t('toolbar.zoomIn')" placement="top">
+    <el-tooltip :content="$t('toolbar.zoomIn')" placement="top" :show-after="500">
       <el-button circle size="small" @click="emit('zoomIn')">
         <el-icon><ZoomIn /></el-icon>
       </el-button>
     </el-tooltip>
-    <el-tooltip :content="$t('toolbar.zoomOut')" placement="top">
+    <el-tooltip :content="$t('toolbar.zoomOut')" placement="top" :show-after="500">
       <el-button circle size="small" @click="emit('zoomOut')">
         <el-icon><ZoomOut /></el-icon>
       </el-button>
     </el-tooltip>
-    <el-tooltip :content="networkLayoutTooltip" placement="top">
+    <el-tooltip :content="networkLayoutTooltip" placement="top" :show-after="500">
       <el-dropdown trigger="click" placement="left" @command="emit('layoutCommand', $event)">
         <el-button circle size="small">
           <el-icon><Aim /></el-icon>
@@ -59,17 +59,17 @@ const emit = defineEmits<{
         </template>
       </el-dropdown>
     </el-tooltip>
-    <el-tooltip :content="$t('toolbar.refresh')" placement="top">
+    <el-tooltip :content="$t('toolbar.refresh')" placement="top" :show-after="500">
       <el-button circle size="small" @click="emit('refresh')">
         <el-icon><Refresh /></el-icon>
       </el-button>
     </el-tooltip>
-    <el-tooltip :content="$t('toolbar.download')" placement="top">
+    <el-tooltip :content="$t('toolbar.download')" placement="top" :show-after="500">
       <el-button circle size="small" @click="emit('download')">
         <el-icon><Download /></el-icon>
       </el-button>
     </el-tooltip>
-    <el-tooltip :content="$t('toolbar.nodeFilterPanel')" placement="top">
+    <el-tooltip :content="$t('toolbar.nodeFilterPanel')" placement="top" :show-after="500">
       <el-button
         circle
         size="small"
@@ -79,7 +79,7 @@ const emit = defineEmits<{
         <el-icon><Operation /></el-icon>
       </el-button>
     </el-tooltip>
-    <el-tooltip :content="$t('toolbar.relationFilterPanel')" placement="top">
+    <el-tooltip :content="$t('toolbar.relationFilterPanel')" placement="top" :show-after="500">
       <el-button
         circle
         size="small"
@@ -89,7 +89,7 @@ const emit = defineEmits<{
         <el-icon><FilterIcon /></el-icon>
       </el-button>
     </el-tooltip>
-    <el-tooltip :content="$t('relationView.nodeDetail')" placement="top">
+    <el-tooltip :content="$t('relationView.nodeDetail')" placement="top" :show-after="500">
       <el-button circle size="small" @click="emit('openNodeDetail')">
         <el-icon><InfoFilled /></el-icon>
       </el-button>

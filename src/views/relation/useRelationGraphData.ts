@@ -5,11 +5,11 @@ import { createRelationGraphBuilder } from "@/views/relation/relationGraphBuilde
 import { createRelationGraphInsights } from "@/views/relation/relationGraphInsights";
 import {
   createRelationTypeMapping,
+  RelationType,
+  isRelationEntityType,
   type Line,
   type Node,
   type RelationLegendItem,
-  type RelationType,
-  isRelationEntityType,
 } from "@/views/relation/relationTypes";
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;

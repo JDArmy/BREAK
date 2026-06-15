@@ -1,6 +1,6 @@
 import type { DropdownInstance } from "element-plus";
 import type { Ref } from "vue";
-import { createRelationTypeMapping, type Line, type Node, type RelationType } from "@/views/relation/relationTypes";
+import { createRelationTypeMapping, RelationType, type Line, type Node } from "@/views/relation/relationTypes";
 
 export type Translate = (key: string, params?: Record<string, unknown>) => string;
 

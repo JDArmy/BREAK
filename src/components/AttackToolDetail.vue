@@ -87,6 +87,11 @@ const getAttackToolAvoidances = (atKey: string) => {
       <strong>{{ $t("references") }}:&nbsp;</strong>
       <ReferenceList type="attackTools" :entityKey="atKey" />
     </div>
+    <div class="desc">
+      <el-button type="primary" @click="$router.push('/attack-tools#' + atKey)">
+        {{ $t("viewDetail") }}
+      </el-button>
+    </div>
   </el-drawer>
   <!-- 手段详情页 -->
   <AvoidanceDetail
@@ -115,5 +120,17 @@ const getAttackToolAvoidances = (atKey: string) => {
 .drawer-header-title {
   font-weight: 600;
   color: var(--break-text-primary);
+}
+
+.relational-link {
+  margin: 4px 4px 4px 0;
+  border-color: var(--el-border-color);
+  color: var(--break-link);
+}
+
+.relational-link:hover,
+.relational-link:active {
+  border-color: var(--break-link);
+  color: var(--break-link-hover);
 }
 </style>

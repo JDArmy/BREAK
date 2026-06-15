@@ -5,7 +5,7 @@ import type { Ref } from "vue";
 import { RelationType } from "@/views/relation/relationTypes";
 
 defineProps<{
-  dropdown1: Ref<DropdownInstance | undefined>;
+  dropdown1?: Ref<DropdownInstance | undefined>;
   dropdownStyle: Record<string, string | number>;
   RelationTypeMapping: Record<string, { title: string; disableContextMenu: { value: boolean } }>;
   disableContextMenuAll: boolean;

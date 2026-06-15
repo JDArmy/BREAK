@@ -1,4 +1,5 @@
-import { createNetworkChartController, createSankeyChartController } from "@/views/relation/relationChartControllers";
+import { createNetworkChartController } from "@/views/relation/relationNetworkChartController";
+import { createSankeyChartController } from "@/views/relation/relationSankeyChartController";
 
 export {
   createNetworkChartController,

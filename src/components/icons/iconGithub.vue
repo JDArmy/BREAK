@@ -5,7 +5,7 @@
     version="1.1"
     height="1.2em"
     width="1.2em"
-    fill="#fff"
+    fill="currentColor"
     data-view-component="true"
   >
     <path

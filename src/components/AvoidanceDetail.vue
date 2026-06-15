@@ -69,6 +69,11 @@ const { getInnerDrawerWidth } = useDrawerWidth();
       <strong>{{ $t("references") }}:&nbsp;</strong>
       <ReferenceList type="avoidances" :entityKey="aKey" />
     </div>
+    <div class="desc">
+      <el-button type="primary" @click="$router.push('/avoidances#' + aKey)">
+        {{ $t("viewDetail") }}
+      </el-button>
+    </div>
   </el-drawer>
 </template>
 

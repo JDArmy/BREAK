@@ -3,9 +3,9 @@ import BREAK from "@/BREAK";
 import {
   createRelationTypeMapping,
   isRelationEntityType,
+  RelationType,
   type AttackPath,
   type Node,
-  type RelationType,
 } from "@/views/relation/relationTypes";
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;
