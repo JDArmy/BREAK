@@ -1,5 +1,3 @@
-import { computed, nextTick, onBeforeUnmount, onMounted, reactive, ref, watch } from "vue";
-import BREAK from "@/BREAK";
 import { useRoute, useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
 import { useTheme } from "@/composables/useTheme";
@@ -8,22 +6,22 @@ import { use } from "echarts/core";
 import { GraphChart, SankeyChart } from "echarts/charts";
 import { LegendComponent, TooltipComponent } from "echarts/components";
 import { CanvasRenderer } from "echarts/renderers";
-import type { DropdownInstance } from "element-plus";
 import {
-  createNetworkChartController,
-  createSankeyChartController,
-} from "@/views/relation/relationChartControllers";
+  createRelationDropdownRef,
+  createNetworkInteractionsBridge,
+  createRenderNetworkChartBridge,
+} from "@/views/relation/relationViewBridges";
+import { createNetworkChartController, createSankeyChartController } from "@/views/relation/relationViewControllers";
 import { createNetworkDataHelpers } from "@/views/relation/relationNetworkLayout";
+import { createRelationViewState } from "@/views/relation/relationViewState";
+import { setupRelationViewEffects } from "@/views/relation/relationViewEffects";
 import {
-  RelationType,
   createRelationTypeMapping,
   graphColors,
   networkLayoutOptions,
-  networkLayoutZoom,
   relationLineColors,
   relationTypeColors,
-  type NetworkLayoutMode,
-  type SankeyNode,
+  RelationType,
 } from "@/views/relation/relationTypes";
 import { useRelationGraphData } from "@/views/relation/useRelationGraphData";
 import { useRelationNodeActions } from "@/views/relation/useRelationNodeActions";
@@ -45,36 +43,33 @@ export const useRelationViewModel = () => {
     getRelationTypeColor
   );
 
-  const relType = ref<RelationType>(route.params.type as RelationType);
-  const relKey = ref<string>(route.params.key as string);
-  const activeView = ref<"network" | "sankey">(isMobile.value ? "sankey" : "network");
-
-  const networkState = reactive({
-    zoom: networkLayoutZoom.horizontal,
-    layout: "horizontal" as NetworkLayoutMode,
-  });
-
-  const activeNetworkLayoutLabel = computed(
-    () =>
-      t(
-        networkLayoutOptions.find((layout) => layout.value === networkState.layout)?.labelKey ??
-          "relationLayout.horizontal"
-      )
-  );
-
-  const networkLayoutTooltip = computed(
-    () => `${t("toolbar.layout")}: ${activeNetworkLayoutLabel.value}`
-  );
-
   const getGraphColor = (key: keyof typeof graphColors) =>
     isDark.value ? graphColors[key].dark : graphColors[key].light;
 
   const getRelationLineColor = (key: keyof typeof relationLineColors) =>
     isDark.value ? relationLineColors[key].dark : relationLineColors[key].light;
 
-  const renderNetworkChartBridge: { current: (notMerge?: boolean) => void } = {
-    current: () => {},
-  };
+  const renderNetworkChartBridge = createRenderNetworkChartBridge();
+  const {
+    activeView,
+    handleNetworkLayoutCommand,
+    networkLayoutTooltip,
+    networkState,
+    refreshNetworkChart,
+    relKey,
+    relType,
+    sankeyLabelWidth,
+    sankeyRight,
+    setClearDraggedNodePositions,
+    selectSankeyNode,
+    zoomNetworkChart,
+  } = createRelationViewState({
+    route,
+    t,
+    isMobile,
+    width,
+    renderNetworkChartBridge,
+  });
 
   const graphData = useRelationGraphData({
     t,
@@ -145,23 +140,6 @@ export const useRelationViewModel = () => {
     findNodeById,
   });
 
-  const selectSankeyNode = (node: SankeyNode) => {
-    relType.value = node.entityType;
-    relKey.value = node.entityKey;
-  };
-
-  const sankeyRight = computed(() => {
-    if (isMobile.value) return 80;
-    if (width.value < 992) return 160;
-    return 280;
-  });
-
-  const sankeyLabelWidth = computed(() => {
-    if (isMobile.value) return 100;
-    if (width.value < 992) return 160;
-    return 220;
-  });
-
   const {
     disposeSankeyChart,
     renderSankeyChart,
@@ -178,11 +156,8 @@ export const useRelationViewModel = () => {
     onSelectNode: selectSankeyNode,
   });
 
-  const dropdown1 = ref<DropdownInstance>();
-  const networkInteractionsBridge = {
-    handleNodeTouch: (() => {}) as (node: ReturnType<typeof toContextNode>) => void,
-    nodeClick: (() => {}) as (node: ReturnType<typeof toContextNode>, event: MouseEvent) => void,
-  };
+  const dropdown1 = createRelationDropdownRef();
+  const networkInteractionsBridge = createNetworkInteractionsBridge<ReturnType<typeof toContextNode>>();
   const {
     disposeNetworkChart,
     downloadNetworkChart,
@@ -252,144 +227,33 @@ export const useRelationViewModel = () => {
   networkInteractionsBridge.handleNodeTouch = (node) => handleNodeTouch(node as ReturnType<typeof toContextNode>);
   networkInteractionsBridge.nodeClick = (node, event) =>
     nodeClick(node as ReturnType<typeof toContextNode>, event);
+  setClearDraggedNodePositions(clearDraggedNodePositions);
 
-  const zoomNetworkChart = (step: number) => {
-    networkState.zoom = Math.min(3, Math.max(0.12, networkState.zoom + step));
-    renderNetworkChart(true);
-  };
-
-  const changeNetworkLayout = (layout: NetworkLayoutMode) => {
-    networkState.layout = layout;
-    networkState.zoom = networkLayoutZoom[layout];
-    clearDraggedNodePositions();
-    renderNetworkChart(true);
-  };
-
-  const handleNetworkLayoutCommand = (command: string | number | object) => {
-    const layout = command as NetworkLayoutMode;
-    if (networkLayoutOptions.some((option) => option.value === layout)) {
-      changeNetworkLayout(layout);
-    }
-  };
-
-  const refreshNetworkChart = () => {
-    renderNetworkChart(true);
-  };
-
-
-  onMounted(() => {
-    if (
-      !Object.values(RelationType).includes(route.params.type as RelationType) ||
-      !Object.keys(
-        BREAK[
-          RelationTypeMapping[
-            route.params.type as keyof typeof RelationTypeMapping
-          ].BreakKey as keyof typeof BREAK
-        ]
-      ).includes(route.params.key as string)
-    ) {
-      alert(t("unknownTypeOrId"));
-      router
-        .push({
-          name: "relation",
-          params: {
-            type: "risk",
-            key: "R0001",
-          },
-        })
-        .then(() => {
-          location.reload();
-        });
-      return;
-    }
-    addRootNode();
-    genNetworkGraphData(RelationType.all, relType.value, relKey.value);
-    nextTick(() => {
-      renderNetworkChart(true);
-      renderSankeyChart();
-    });
-    window.addEventListener("resize", resizeNetworkChart);
-    window.addEventListener("resize", resizeSankeyChart);
-    document.addEventListener("pointerdown", handleGlobalPointerDown);
-  });
-
-  onBeforeUnmount(() => {
-    window.removeEventListener("resize", resizeNetworkChart);
-    window.removeEventListener("resize", resizeSankeyChart);
-    document.removeEventListener("pointerdown", handleGlobalPointerDown);
-    disposeNetworkChart();
-    disposeSankeyChart();
-  });
-
-  watch(
-    () => relType.value,
-    () => {
-      if (!Object.keys(getCurrentEntityOptions.value).includes(relKey.value)) {
-        relKey.value = Object.keys(getCurrentEntityOptions.value)[0] ?? "";
-      }
-    }
-  );
-
-  watch(
-    () => [relType.value, relKey.value],
-    ([newType, newKey]) => {
-      if (newType !== route.params.type || newKey !== route.params.key) {
-        router.push({
-          name: "relation",
-          params: {
-            type: newType,
-            key: newKey,
-          },
-        });
-      }
-    }
-  );
-
-  watch(
-    () => [route.params.type, route.params.key],
-    () => {
-      relType.value = route.params.type as RelationType;
-      relKey.value = route.params.key as string;
-      refreshGraphAfterVisible();
-    }
-  );
-
-  watch(locale, () => {
-    filterLineType.value = [];
-    rebuildGraphData();
-    nextTick(() => {
-      renderNetworkChart(true);
-      renderSankeyChart();
-    });
-  });
-
-  watch(activeView, () => {
-    if (activeView.value === "sankey") {
-      nextTick(renderSankeyChart);
-    } else {
-      nextTick(() => renderNetworkChart(true));
-    }
-  });
-
-  watch(
+  setupRelationViewEffects({
+    t,
+    route,
+    router,
+    locale,
+    isDark,
+    activeView,
+    relType,
+    relKey,
     sankeyData,
-    () => {
-      if (activeView.value === "sankey") {
-        nextTick(renderSankeyChart);
-      }
-    },
-    { deep: true }
-  );
-
-  watch(isDark, () => {
-    renderNetworkChart(true);
-    nextTick(renderSankeyChart);
-  });
-
-  watch(selectedNetworkNodeId, () => {
-    if (activeView.value === "network") {
-      nextTick(() => renderNetworkChart(true));
-    }
+    getCurrentEntityOptions,
+    RelationTypeMapping,
+    addRootNode,
+    genNetworkGraphData,
+    rebuildGraphData,
+    refreshGraphAfterVisible,
+    renderNetworkChart,
+    renderSankeyChart,
+    resizeNetworkChart,
+    resizeSankeyChart,
+    handleGlobalPointerDown,
+    disposeNetworkChart,
+    disposeSankeyChart,
+    filterLineType,
+    selectedNetworkNodeId,
   });
 
   return {

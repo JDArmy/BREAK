@@ -1,0 +1,97 @@
+import { ElMessage } from "element-plus";
+import type { RelationNodeActionBaseOptions, Translate } from "@/views/relation/relationNodeActionShared";
+
+interface CreateCopyContextNodeCsvOptions extends RelationNodeActionBaseOptions {
+  t: Translate;
+  getContextNodeId: () => string;
+  closeContextMenu: () => void;
+  touchActionClose: () => void;
+}
+
+const toCsvCell = (value: unknown) => `"${String(value ?? "").replace(/"/g, "\"\"")}"`;
+
+export const createCopyContextNodeCsv = ({
+  t,
+  lines,
+  findNodeById,
+  buildNodeSummary,
+  isDirectRelationLine,
+  getRelationSourceFields,
+  getContextNodeId,
+  closeContextMenu,
+  touchActionClose,
+}: CreateCopyContextNodeCsvOptions) => async () => {
+  const node = findNodeById(getContextNodeId());
+  if (!node) {
+    ElMessage.error(t("relationView.copyFailed"));
+    return;
+  }
+
+  const centerNode = buildNodeSummary(node.id);
+  const relationLines = lines.filter((line) => line.from === node.id || line.to === node.id);
+  const relatedNodes = new Map<string, ReturnType<typeof buildNodeSummary>>();
+  relatedNodes.set(centerNode.id, centerNode);
+
+  const relationRows = relationLines.map((line) => {
+    const sourceNode = buildNodeSummary(line.from);
+    const targetNode = buildNodeSummary(line.to);
+    relatedNodes.set(sourceNode.id, sourceNode);
+    relatedNodes.set(targetNode.id, targetNode);
+    return [
+      sourceNode.id,
+      sourceNode.type,
+      sourceNode.title,
+      line.text,
+      isDirectRelationLine(line.text) ? t("relationView.direct") : t("relationView.indirect"),
+      targetNode.id,
+      targetNode.type,
+      targetNode.title,
+      getRelationSourceFields(line).join(" | "),
+    ];
+  });
+
+  const nodeRows = [...relatedNodes.values()]
+    .sort((a, b) => (a.id === centerNode.id ? -1 : b.id === centerNode.id ? 1 : a.id.localeCompare(b.id)))
+    .map((item) => [
+      item.id,
+      item.type,
+      item.title,
+      item.id === centerNode.id ? t("relationView.csvRoleRoot") : t("relationView.csvRoleRelated"),
+      item.isSubNode ? t("relationView.csvYes") : t("relationView.csvNo"),
+    ]);
+
+  const csvSections = [
+    t("relationView.csvNodes"),
+    [
+      t("relationView.csvHeaderId"),
+      t("relationView.csvHeaderType"),
+      t("relationView.csvHeaderTitle"),
+      t("relationView.csvHeaderRole"),
+      t("relationView.csvHeaderIsSubNode"),
+    ].map(toCsvCell).join(","),
+    ...nodeRows.map((row) => row.map(toCsvCell).join(",")),
+    "",
+    t("relationView.csvRelations"),
+    [
+      t("relationView.csvHeaderSourceId"),
+      t("relationView.csvHeaderSourceType"),
+      t("relationView.csvHeaderSourceTitle"),
+      t("relationView.csvHeaderRelation"),
+      t("relationView.csvHeaderDirectness"),
+      t("relationView.csvHeaderTargetId"),
+      t("relationView.csvHeaderTargetType"),
+      t("relationView.csvHeaderTargetTitle"),
+      t("relationView.csvHeaderSourceFields"),
+    ].map(toCsvCell).join(","),
+    ...relationRows.map((row) => row.map(toCsvCell).join(",")),
+  ];
+
+  try {
+    await navigator.clipboard.writeText(csvSections.join("\n"));
+    closeContextMenu();
+    touchActionClose();
+    ElMessage.success(t("relationView.copySuccess"));
+  } catch {
+    ElMessage.error(t("relationView.copyFailed"));
+  }
+};
