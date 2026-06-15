@@ -9,7 +9,7 @@ import { init, use, type ECharts, type EChartsOption } from "echarts/core";
 import { GraphChart, SankeyChart } from "echarts/charts";
 import { LegendComponent, TooltipComponent } from "echarts/components";
 import { CanvasRenderer } from "echarts/renderers";
-import { Aim, Download, FullScreen, InfoFilled, Refresh, TopRight, ZoomIn, ZoomOut } from "@element-plus/icons-vue";
+import { Aim, Close, Download, Filter, FullScreen, InfoFilled, Operation, Refresh, TopRight, ZoomIn, ZoomOut } from "@element-plus/icons-vue";
 import { ElMessage } from "element-plus";
 import type { DropdownInstance } from "element-plus";
 import "element-plus/es/components/drawer/style/css";
@@ -312,6 +312,8 @@ const escapeTooltipHtml = (value: unknown) =>
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#39;");
+
+const formatRelationFieldsTooltip = (fields: string[]) => fields.map((field) => escapeTooltipHtml(field)).join("<br>");
 
 const isRelationEntityType = (type: string): type is Exclude<RelationType, RelationType.all> =>
   [RelationType.risk, RelationType.avoidance, RelationType.attackTool, RelationType.threatActor].includes(
@@ -1429,6 +1431,7 @@ const setNetworkGraphData = () => {
 function rebuildGraphData() {
   jsonData.rootId = relKey.value;
   selectedNetworkNodeId.value = relKey.value;
+  clearDraggedNodePositions();
   nodes.splice(0, nodes.length);
   lines.splice(0, lines.length);
   addRootNode();
@@ -1443,6 +1446,11 @@ const refreshGraphAfterVisible = () => {
 };
 
 const findNodeById = (id: string) => nodes.find((node) => node.id === id);
+const draggedNodePositions = ref<Record<string, { x: number; y: number }>>({});
+
+const clearDraggedNodePositions = () => {
+  draggedNodePositions.value = {};
+};
 
 const networkNodeSortOrder: Record<string, number> = {
   [RelationType.threatActor]: 0,
@@ -1462,6 +1470,7 @@ const createGraphNode = (
   const text = normalizeGraphText(node.text);
   const isSelected = node.id === selectedNetworkNodeId.value;
   const isSubNode = Boolean(node.data?.isSubNode);
+  const draggedPosition = draggedNodePositions.value[node.id];
   return {
     id: node.id,
     name: node.id,
@@ -1487,8 +1496,8 @@ const createGraphNode = (
     },
     data: node.data,
     fixed: true,
-    x,
-    y,
+    x: draggedPosition?.x ?? x,
+    y: draggedPosition?.y ?? y,
   };
 };
 
@@ -1741,6 +1750,7 @@ const bindNetworkChartEvents = () => {
   networkChart.off("click");
   networkChart.off("dblclick");
   networkChart.off("contextmenu");
+  networkChart.off("mouseup");
   networkChart.on("click", (params) => {
     if (params.dataType !== "node") return;
     selectedNetworkNodeId.value = (params.data as GraphNode).id;
@@ -1759,15 +1769,25 @@ const bindNetworkChartEvents = () => {
     selectedNetworkNodeId.value = (params.data as GraphNode).id;
     nodeClick(toContextNode(params.data as GraphNode), params.event.event as MouseEvent);
   });
+  networkChart.on("mouseup", (params) => {
+    if (params.dataType !== "node") return;
+    const option = networkChart?.getOption();
+    const seriesData = option?.series?.[0] && "data" in option.series[0]
+      ? (option.series[0].data as Array<Partial<GraphNode>>)
+      : [];
+    const draggedData = typeof params.dataIndex === "number" ? seriesData[params.dataIndex] : undefined;
+    const data = (draggedData ?? params.data) as Partial<GraphNode>;
+    if (typeof data.id !== "string" || typeof data.x !== "number" || typeof data.y !== "number") return;
+    draggedNodePositions.value = {
+      ...draggedNodePositions.value,
+      [data.id]: { x: data.x, y: data.y },
+    };
+  });
 };
 
-const syncSelectedNetworkNodeHighlight = (graphNodes: GraphNode[]) => {
+const clearNetworkNodeHighlight = () => {
   if (!networkChart) return;
   networkChart.dispatchAction({ type: "downplay", seriesIndex: 0 });
-  const dataIndex = graphNodes.findIndex((node) => node.id === selectedNetworkNodeId.value);
-  if (dataIndex >= 0) {
-    networkChart.dispatchAction({ type: "highlight", seriesIndex: 0, dataIndex });
-  }
 };
 
 const renderNetworkChart = (notMerge = false) => {
@@ -1805,8 +1825,7 @@ const renderNetworkChart = (notMerge = false) => {
         links: networkData.links,
         center: ["52%", "50%"],
         roam: true,
-        draggable: false,
-        focusNodeAdjacency: true,
+        draggable: true,
         label: {
           show: true,
           color: getGraphColor("nodeText"),
@@ -1834,6 +1853,17 @@ const renderNetworkChart = (notMerge = false) => {
             width: 2,
           },
         },
+        blur: {
+          itemStyle: {
+            opacity: isDark.value ? 0.12 : 0.15,
+          },
+          label: {
+            opacity: isDark.value ? 0.20 : 0.24,
+          },
+          lineStyle: {
+            opacity: isDark.value ? 0.06 : 0.08,
+          },
+        },
         zoom: networkState.zoom,
         scaleLimit: {
           min: 0.2,
@@ -1844,7 +1874,7 @@ const renderNetworkChart = (notMerge = false) => {
   } satisfies EChartsOption;
 
   networkChart.setOption(option, { notMerge, lazyUpdate: false });
-  syncSelectedNetworkNodeHighlight(networkData.nodes);
+  clearNetworkNodeHighlight();
   networkChart.resize();
 };
 
@@ -1865,6 +1895,7 @@ const zoomNetworkChart = (step: number) => {
 const changeNetworkLayout = (layout: NetworkLayoutMode) => {
   networkState.layout = layout;
   networkState.zoom = networkLayoutZoom[layout];
+  clearDraggedNodePositions();
   renderNetworkChart(true);
 };
 
@@ -2494,7 +2525,17 @@ const visibleRelationLegendItems = computed(() =>
   relationLegendItems.value.filter((item) => totalLineType.value.includes(item.label))
 );
 
+const nodeFilterVisible = ref(true);
+const lineFilterVisible = ref(true);
 const nodeDetailDrawerVisible = ref(false);
+
+const toggleNodeFilter = () => {
+  nodeFilterVisible.value = !nodeFilterVisible.value;
+};
+
+const toggleLineFilter = () => {
+  lineFilterVisible.value = !lineFilterVisible.value;
+};
 
 const openNodeDetailDrawer = () => {
   nodeDetailDrawerVisible.value = true;
@@ -2580,6 +2621,26 @@ const doFilter = () => {
                 <el-icon><Download /></el-icon>
               </el-button>
             </el-tooltip>
+            <el-tooltip :content="$t('toolbar.nodeFilterPanel')" placement="top">
+              <el-button
+                circle
+                size="small"
+                :class="{ 'is-toolbar-active': nodeFilterVisible }"
+                @click="toggleNodeFilter"
+              >
+                <el-icon><Operation /></el-icon>
+              </el-button>
+            </el-tooltip>
+            <el-tooltip :content="$t('toolbar.relationFilterPanel')" placement="top">
+              <el-button
+                circle
+                size="small"
+                :class="{ 'is-toolbar-active': lineFilterVisible }"
+                @click="toggleLineFilter"
+              >
+                <el-icon><Filter /></el-icon>
+              </el-button>
+            </el-tooltip>
             <el-tooltip :content="$t('relationView.nodeDetail')" placement="top">
               <el-button circle size="small" @click="openNodeDetailDrawer">
                 <el-icon><InfoFilled /></el-icon>
@@ -2587,8 +2648,13 @@ const doFilter = () => {
             </el-tooltip>
           </div>
           <div ref="networkChartRef" class="network-chart"></div>
-          <div class="filter-pane" id="node-filter-pane">
-            <h2>{{ $t('nodeFilter') }}</h2>
+          <div v-if="nodeFilterVisible" class="filter-pane" id="node-filter-pane">
+            <div class="filter-pane-header">
+              <h2>{{ $t('nodeFilter') }}</h2>
+              <el-button circle text size="small" @click="nodeFilterVisible = false">
+                <el-icon><Close /></el-icon>
+              </el-button>
+            </div>
             <el-checkbox-group v-model="filterRelationType" @change="doFilter">
               <el-checkbox
                 v-for="(item, key) in RelationTypeMapping"
@@ -2611,8 +2677,13 @@ const doFilter = () => {
               </span>
             </el-checkbox>
           </div>
-          <div class="filter-pane" id="line-filter-pane">
-            <h2>{{ $t('lineFilter') }}</h2>
+          <div v-if="lineFilterVisible" class="filter-pane" id="line-filter-pane">
+            <div class="filter-pane-header">
+              <h2>{{ $t('lineFilter') }}</h2>
+              <el-button circle text size="small" @click="lineFilterVisible = false">
+                <el-icon><Close /></el-icon>
+              </el-button>
+            </div>
             <el-checkbox-group v-model="filterLineType" @change="doFilter">
               <el-checkbox
                 class="filter-checkbox"
@@ -2624,7 +2695,7 @@ const doFilter = () => {
                 <span class="filter-line-item">
                   <span class="legend-line-color" :style="{ backgroundColor: item.color }"></span>
                   <span class="filter-line-label">{{ item.label }}</span>
-                  <el-tooltip :content="item.fields.join(', ')" placement="top">
+                  <el-tooltip :content="formatRelationFieldsTooltip(item.fields)" raw-content placement="top">
                     <el-icon class="filter-line-help"><InfoFilled /></el-icon>
                   </el-tooltip>
                 </span>
@@ -3266,6 +3337,12 @@ const doFilter = () => {
   margin-left: 0;
 }
 
+.graph-toolbar .is-toolbar-active {
+  border-color: color-mix(in srgb, var(--el-color-primary) 45%, var(--break-graph-border));
+  color: var(--el-color-primary);
+  background: color-mix(in srgb, var(--el-color-primary-light-9) 72%, var(--break-bg-card));
+}
+
 .graph-toolbar :deep(.el-button + .el-button) {
   margin-left: 0;
 }
@@ -3345,6 +3422,20 @@ const doFilter = () => {
   background-color: var(--break-graph-filter-bg);
 }
 
+.filter-pane-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.filter-pane-header :deep(.el-button) {
+  width: 24px;
+  height: 24px;
+  color: var(--break-text-muted);
+}
+
 .filter-checkbox {
   font-size: xx-small;
   display: block;
@@ -3352,6 +3443,7 @@ const doFilter = () => {
 
 .filter-pane h2 {
   font-size: medium;
+  margin: 0;
 }
 
 #node-filter-pane {
@@ -3359,6 +3451,7 @@ const doFilter = () => {
 }
 #line-filter-pane {
   right: 80px;
+  padding-inline: 18px;
 }
 
 /* 触摸操作面板 */

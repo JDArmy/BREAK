@@ -1,5 +1,12 @@
 # Change log
 
+## 2.8.1
+
+- 修复：关系图谱网络图拖拽节点时其他连接变淡的问题
+  - 移除 ECharts 4 遗留 API `focusNodeAdjacency`，保留 `emphasis.focus: "adjacency"`
+  - hover 节点时仍正常聚焦变淡，拖拽节点时不再触发相邻聚焦
+- 新增：关系图谱筛选面板国际化标签（节点筛选、关系筛选）
+
 ## 2.8.0
 
 - 新增：全面移动端适配优化
