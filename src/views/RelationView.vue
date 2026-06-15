@@ -9,8 +9,9 @@ import { init, use, type ECharts, type EChartsOption } from "echarts/core";
 import { GraphChart, SankeyChart } from "echarts/charts";
 import { LegendComponent, TooltipComponent } from "echarts/components";
 import { CanvasRenderer } from "echarts/renderers";
-import { Aim, Download, FullScreen, Refresh, ZoomIn, ZoomOut } from "@element-plus/icons-vue";
+import { Aim, Download, FullScreen, InfoFilled, Refresh, ZoomIn, ZoomOut } from "@element-plus/icons-vue";
 import type { DropdownInstance } from "element-plus";
+import "element-plus/es/components/drawer/style/css";
 
 const route = useRoute();
 const router = useRouter();
@@ -125,8 +126,25 @@ const graphColors = {
   nodeBorder: { light: "#efefef", dark: "#334155" },
 };
 
+const relationLineColors = {
+  avoidanceMeans: { light: "#8b5cf6", dark: "#c084fc" },
+  directCauseRisk: { light: "#ef4444", dark: "#f87171" },
+  indirectSupportRisk: { light: "#f59e0b", dark: "#fbbf24" },
+  buildAttackTool: { light: "#0ea5e9", dark: "#38bdf8" },
+  useAttackTool: { light: "#14b8a6", dark: "#5eead4" },
+  causeRisk: { light: "#dc2626", dark: "#fb7185" },
+  subRisk: { light: "#94a3b8", dark: "#64748b" },
+  subAvoidance: { light: "#94a3b8", dark: "#64748b" },
+  subAttackTool: { light: "#94a3b8", dark: "#64748b" },
+  subThreatActor: { light: "#94a3b8", dark: "#64748b" },
+  attackToolMaker: { light: "#22c55e", dark: "#4ade80" },
+};
+
 const getGraphColor = (key: keyof typeof graphColors) =>
   isDark.value ? graphColors[key].dark : graphColors[key].light;
+
+const getRelationLineColor = (key: keyof typeof relationLineColors) =>
+  isDark.value ? relationLineColors[key].dark : relationLineColors[key].light;
 
 interface Node {
   id: string;
@@ -140,6 +158,12 @@ interface Line {
   from: string;
   text: string;
   to: string;
+}
+
+interface RelationLegendItem {
+  color: string;
+  label: string;
+  fields: string[];
 }
 
 interface GraphNode {
@@ -164,6 +188,7 @@ interface GraphLink {
   source: string;
   target: string;
   text: string;
+  sourceFields: string[];
   lineStyle: {
     color: string;
     opacity: number;
@@ -201,6 +226,45 @@ const jsonData = reactive({
   nodes: nodes,
   lines: lines,
 });
+const selectedNetworkNodeId = ref(relKey.value);
+
+const relationLegendItems = computed<RelationLegendItem[]>(() => [
+  {
+    color: getRelationLineColor("avoidanceMeans"),
+    label: t("relationLine.avoidanceMeans"),
+    fields: ["Risk.avoidances", "AttackTool.avoidances"],
+  },
+  {
+    color: getRelationLineColor("directCauseRisk"),
+    label: t("relationLine.directCauseRisk"),
+    fields: ["AttackTool.directCauseRisks", "ThreatActor.directCauseRisks"],
+  },
+  {
+    color: getRelationLineColor("indirectSupportRisk"),
+    label: t("relationLine.indirectSupportRisk"),
+    fields: ["AttackTool.indirectSupportRisks", "ThreatActor.indirectSupportRisks"],
+  },
+  {
+    color: getRelationLineColor("buildAttackTool"),
+    label: t("relationLine.buildAttackTool"),
+    fields: ["ThreatActor.buildAttackTools"],
+  },
+  {
+    color: getRelationLineColor("useAttackTool"),
+    label: t("relationLine.useAttackTool"),
+    fields: ["ThreatActor.useAttackTools"],
+  },
+  {
+    color: getRelationLineColor("causeRisk"),
+    label: t("relationLine.causeRisk"),
+    fields: ["AttackTool.directCauseRisks", "AttackTool.indirectSupportRisks", "ThreatActor.directCauseRisks"],
+  },
+  { color: getRelationLineColor("subRisk"), label: t("relationLine.subRisk"), fields: ["Risk child ID"] },
+  { color: getRelationLineColor("subAvoidance"), label: t("relationLine.subAvoidance"), fields: ["Avoidance child ID"] },
+  { color: getRelationLineColor("subAttackTool"), label: t("relationLine.subAttackTool"), fields: ["AttackTool child ID"] },
+  { color: getRelationLineColor("subThreatActor"), label: t("relationLine.subThreatActor"), fields: ["ThreatActor child ID"] },
+  { color: getRelationLineColor("attackToolMaker"), label: t("relationLine.attackToolMaker"), fields: ["ThreatActor.buildAttackTools"] },
+]);
 
 const getBreakKey = (type: RelationType) =>
   RelationTypeMapping[type as keyof typeof RelationTypeMapping].BreakKey as keyof typeof BREAK;
@@ -225,6 +289,268 @@ const getNodeTitle = (type: Exclude<RelationType, RelationType.all>, key: string
 
 const getGraphNodeText = (type: Exclude<RelationType, RelationType.all>, key: string) =>
   `${key}\n${getNodeTitle(type, key)}`;
+
+const escapeTooltipHtml = (value: unknown) =>
+  String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+
+const isRelationEntityType = (type: string): type is Exclude<RelationType, RelationType.all> =>
+  [RelationType.risk, RelationType.avoidance, RelationType.attackTool, RelationType.threatActor].includes(
+    type as Exclude<RelationType, RelationType.all>
+  );
+
+const getNodeTypeTitle = (type: string) =>
+  isRelationEntityType(type) ? RelationTypeMapping[type].title : type;
+
+const getRelationSourceFields = (line: Line) => {
+  const fromType = findNodeById(line.from)?.type;
+  const toType = findNodeById(line.to)?.type;
+  const fields = new Set<string>();
+
+  if (line.text === t("relationLine.avoidanceMeans")) {
+    if (fromType === RelationType.risk) fields.add("Risk.avoidances");
+    if (fromType === RelationType.attackTool || toType === RelationType.attackTool) fields.add("AttackTool.avoidances");
+  }
+  if (line.text === t("relationLine.directCauseRisk")) {
+    if (fromType === RelationType.attackTool) fields.add("AttackTool.directCauseRisks");
+    if (fromType === RelationType.threatActor) fields.add("ThreatActor.directCauseRisks");
+  }
+  if (line.text === t("relationLine.indirectSupportRisk")) {
+    if (fromType === RelationType.attackTool) fields.add("AttackTool.indirectSupportRisks");
+    if (fromType === RelationType.threatActor) fields.add("ThreatActor.indirectSupportRisks");
+  }
+  if (line.text === t("relationLine.buildAttackTool")) fields.add("ThreatActor.buildAttackTools");
+  if (line.text === t("relationLine.useAttackTool")) fields.add("ThreatActor.useAttackTools");
+  if (line.text === t("relationLine.attackToolMaker")) fields.add("ThreatActor.buildAttackTools");
+  if (line.text === t("relationLine.causeRisk")) {
+    if (fromType === RelationType.attackTool) {
+      fields.add("AttackTool.directCauseRisks");
+      fields.add("AttackTool.indirectSupportRisks");
+    }
+    if (fromType === RelationType.threatActor) {
+      fields.add("ThreatActor.directCauseRisks");
+      fields.add("ThreatActor.indirectSupportRisks");
+    }
+  }
+  if (line.text === t("relationLine.subRisk")) fields.add("Risk child ID");
+  if (line.text === t("relationLine.subAvoidance")) fields.add("Avoidance child ID");
+  if (line.text === t("relationLine.subAttackTool")) fields.add("AttackTool child ID");
+  if (line.text === t("relationLine.subThreatActor")) fields.add("ThreatActor child ID");
+
+  return [...fields];
+};
+
+const selectedNetworkNode = computed(() => {
+  const selectedNode = nodes.find((node) => node.id === selectedNetworkNodeId.value);
+  return selectedNode ?? nodes.find((node) => node.id === relKey.value) ?? null;
+});
+
+const selectedNetworkNodeTitle = computed(() => {
+  const node = selectedNetworkNode.value;
+  if (!node || !isRelationEntityType(node.type)) return "";
+  return getNodeTitle(node.type, node.id);
+});
+
+const getRelationPriority = (lineText: string) => {
+  if (lineText === t("relationLine.directCauseRisk")) return 0;
+  if (lineText === t("relationLine.buildAttackTool")) return 1;
+  if (lineText === t("relationLine.useAttackTool")) return 2;
+  if (lineText === t("relationLine.avoidanceMeans")) return 3;
+  if (lineText === t("relationLine.indirectSupportRisk")) return 4;
+  return 5;
+};
+
+const isDirectRelationLine = (lineText: string) =>
+  [t("relationLine.directCauseRisk"), t("relationLine.buildAttackTool"), t("relationLine.useAttackTool")].includes(
+    lineText
+  );
+
+const describeAttackPathRole = (nodeType: Exclude<RelationType, RelationType.all>) => {
+  switch (nodeType) {
+    case RelationType.threatActor:
+      return t("relationView.pathRoleThreatActorDesc");
+    case RelationType.attackTool:
+      return t("relationView.pathRoleAttackToolDesc");
+    case RelationType.risk:
+      return t("relationView.pathRoleRiskDesc");
+    case RelationType.avoidance:
+      return t("relationView.pathRoleAvoidanceDesc");
+  }
+};
+
+const buildRelationSummary = (line: Line, nodeId: string) => {
+  const otherNodeId = line.from === nodeId ? line.to : line.from;
+  const otherNode = findNodeById(otherNodeId);
+  return {
+    direction: line.from === nodeId ? t("relationView.outgoing") : t("relationView.incoming"),
+    text: line.text,
+    priority: getRelationPriority(line.text),
+    directness: isDirectRelationLine(line.text) ? t("relationView.direct") : t("relationView.indirect"),
+    otherNodeId,
+    otherNodeType: otherNode ? getNodeTypeTitle(otherNode.type) : "",
+    otherNodeTitle:
+      otherNode && isRelationEntityType(otherNode.type) ? getNodeTitle(otherNode.type, otherNode.id) : "",
+    sourceFields: getRelationSourceFields(line),
+  };
+};
+
+const selectedNetworkRelations = computed(() => {
+  const node = selectedNetworkNode.value;
+  if (!node) return [];
+
+  return lines
+    .filter((line) => line.from === node.id || line.to === node.id)
+    .map((line) => buildRelationSummary(line, node.id))
+    .sort((a, b) => a.priority - b.priority || a.otherNodeId.localeCompare(b.otherNodeId));
+});
+
+const selectedNetworkRelationCounts = computed(() => {
+  const node = selectedNetworkNode.value;
+  if (!node) return { incoming: 0, outgoing: 0 };
+  return {
+    incoming: lines.filter((line) => line.to === node.id).length,
+    outgoing: lines.filter((line) => line.from === node.id).length,
+  };
+});
+
+const rootNodeRelations = computed(() => {
+  const node = selectedNetworkNode.value;
+  if (!node || node.id === relKey.value) return [];
+
+  return lines
+    .filter(
+      (line) =>
+        (line.from === relKey.value && line.to === node.id) || (line.from === node.id && line.to === relKey.value)
+    )
+    .map((line) => ({
+      text: line.text,
+      direction: line.from === relKey.value ? t("relationView.rootToNode") : t("relationView.nodeToRoot"),
+      directness: isDirectRelationLine(line.text) ? t("relationView.direct") : t("relationView.indirect"),
+      sourceFields: getRelationSourceFields(line),
+      priority: getRelationPriority(line.text),
+    }))
+    .sort((a, b) => a.priority - b.priority);
+});
+
+const selectedNodeRootPath = computed(() => {
+  const node = selectedNetworkNode.value;
+  if (!node || node.id === relKey.value) return null;
+
+  const adjacency = new Map<string, { nextId: string; line: Line }[]>();
+  lines.forEach((line) => {
+    const fromEdges = adjacency.get(line.from) ?? [];
+    fromEdges.push({ nextId: line.to, line });
+    adjacency.set(line.from, fromEdges);
+
+    const toEdges = adjacency.get(line.to) ?? [];
+    toEdges.push({ nextId: line.from, line });
+    adjacency.set(line.to, toEdges);
+  });
+
+  const queue: { nodeId: string; steps: { fromId: string; toId: string; line: Line }[] }[] = [
+    { nodeId: relKey.value, steps: [] },
+  ];
+  const visited = new Set<string>([relKey.value]);
+
+  while (queue.length > 0) {
+    const current = queue.shift();
+    if (!current) break;
+    if (current.nodeId === node.id) {
+      return {
+        hopCount: current.steps.length,
+        relations: current.steps.map((step) => buildRelationSummary(step.line, step.fromId)),
+      };
+    }
+
+    const neighbors = adjacency.get(current.nodeId) ?? [];
+    neighbors
+      .slice()
+      .sort((a, b) => getRelationPriority(a.line.text) - getRelationPriority(b.line.text))
+      .forEach(({ nextId, line }) => {
+        if (visited.has(nextId)) return;
+        visited.add(nextId);
+        queue.push({
+          nodeId: nextId,
+          steps: [...current.steps, { fromId: current.nodeId, toId: nextId, line }],
+        });
+      });
+  }
+
+  return null;
+});
+
+const selectedNodeAttackPathSummary = computed(() => {
+  const node = selectedNetworkNode.value;
+  if (!node || !isRelationEntityType(node.type)) return [];
+
+  const matchingPaths = buildAttackPaths().filter((path) => {
+    if (node.type === RelationType.threatActor) return path.threatActorKey === node.id;
+    if (node.type === RelationType.attackTool) return path.attackToolKey === node.id;
+    if (node.type === RelationType.risk) return path.riskKey === node.id;
+    if (node.type === RelationType.avoidance) return path.avoidanceKey === node.id;
+    return false;
+  });
+
+  const roleSet = new Set<string>();
+  if (matchingPaths.some((path) => path.threatActorKey === node.id)) roleSet.add(t("relationView.pathRoleThreatActor"));
+  if (matchingPaths.some((path) => path.attackToolKey === node.id)) roleSet.add(t("relationView.pathRoleAttackTool"));
+  if (matchingPaths.some((path) => path.riskKey === node.id)) roleSet.add(t("relationView.pathRoleRisk"));
+  if (matchingPaths.some((path) => path.avoidanceKey === node.id)) roleSet.add(t("relationView.pathRoleAvoidance"));
+
+  return [...roleSet];
+});
+
+const selectedNodeAttackPathDescription = computed(() => {
+  const node = selectedNetworkNode.value;
+  if (!node || !isRelationEntityType(node.type)) return "";
+  return describeAttackPathRole(node.type);
+});
+
+const selectedNodeRootPreview = computed(() => {
+  const node = selectedNetworkNode.value;
+  if (!node || !isRelationEntityType(node.type) || node.id === relKey.value) return null;
+
+  const previewNodes: Node[] = [];
+  const previewLines: Line[] = [];
+
+  previewNodes.push({
+    id: node.id,
+    type: node.type,
+    text: node.text,
+    color: node.color,
+    data: node.data,
+  });
+
+  const collectPreviewRelation = (relatedNodeId: string) => {
+    const relatedNode = findNodeById(relatedNodeId);
+    if (relatedNode && relatedNode.id !== node.id && !previewNodes.some((item) => item.id === relatedNode.id)) {
+      previewNodes.push(relatedNode);
+    }
+  };
+
+  lines.forEach((line) => {
+    if (line.from === node.id || line.to === node.id) {
+      previewLines.push(line);
+      collectPreviewRelation(line.from);
+      collectPreviewRelation(line.to);
+    }
+  });
+
+  const groupedCounts = previewNodes.reduce<Record<string, number>>((acc, item) => {
+    acc[item.type] = (acc[item.type] ?? 0) + 1;
+    return acc;
+  }, {});
+
+  return {
+    nodeCount: previewNodes.length,
+    lineCount: previewLines.length,
+    groupedCounts,
+  };
+});
 
 const wrapLabelText = (text: string, maxLineLength = 10) => {
   const [id, title = ""] = text.replace(/<br\s*\/?>/gi, "\n").split("\n");
@@ -428,6 +754,25 @@ const renderSankeyChart = () => {
     tooltip: {
       trigger: "item",
       triggerOn: "mousemove",
+      formatter: (params: {
+        dataType?: string;
+        name?: string;
+        value?: number;
+        data?: Partial<SankeyNode & SankeyLink>;
+      }) => {
+        const value = params.value ?? params.data?.value ?? 0;
+        if (params.dataType === "edge") {
+          return [
+            `${escapeTooltipHtml(params.data?.source)} -> ${escapeTooltipHtml(params.data?.target)}`,
+            `${t("relationView.pathCount")}: ${value}`,
+          ].join("<br>");
+        }
+
+        return [
+          escapeTooltipHtml(params.name ?? params.data?.name),
+          `${t("relationView.pathCount")}: ${value}`,
+        ].join("<br>");
+      },
     },
     series: [
       {
@@ -1046,6 +1391,7 @@ const setNetworkGraphData = () => {
 
 function rebuildGraphData() {
   jsonData.rootId = relKey.value;
+  selectedNetworkNodeId.value = relKey.value;
   nodes.splice(0, nodes.length);
   lines.splice(0, lines.length);
   addRootNode();
@@ -1319,12 +1665,14 @@ const getVisibleNetworkData = () => {
 
     const linkKey = `${line.from}->${line.to}->${line.text}`;
     if (!linkMap.has(linkKey)) {
+      const legendItem = relationLegendItems.value.find((item) => item.label === line.text);
       linkMap.set(linkKey, {
         source: line.from,
         target: line.to,
         text: line.text,
+        sourceFields: getRelationSourceFields(line),
         lineStyle: {
-          color: getGraphColor("line"),
+          color: legendItem?.color ?? getGraphColor("line"),
           opacity: isDark.value ? 0.42 : 0.52,
           curveness: 0.18,
         },
@@ -1344,16 +1692,21 @@ const bindNetworkChartEvents = () => {
   networkChart.off("dblclick");
   networkChart.off("contextmenu");
   networkChart.on("click", (params) => {
-    if (!isMobile.value || params.dataType !== "node") return;
-    handleNodeTouch(toContextNode(params.data as GraphNode));
+    if (params.dataType !== "node") return;
+    selectedNetworkNodeId.value = (params.data as GraphNode).id;
+    if (isMobile.value) {
+      handleNodeTouch(toContextNode(params.data as GraphNode));
+    }
   });
   networkChart.on("dblclick", (params) => {
     if (params.dataType !== "node" || !params.event?.event) return;
+    selectedNetworkNodeId.value = (params.data as GraphNode).id;
     nodeClick(toContextNode(params.data as GraphNode), params.event.event as MouseEvent);
   });
   networkChart.on("contextmenu", (params) => {
     if (params.dataType !== "node" || !params.event?.event) return;
     params.event.event.preventDefault();
+    selectedNetworkNodeId.value = (params.data as GraphNode).id;
     nodeClick(toContextNode(params.data as GraphNode), params.event.event as MouseEvent);
   });
 };
@@ -1376,7 +1729,11 @@ const renderNetworkChart = (notMerge = false) => {
           return (params.data as GraphNode).text.replace(/\n/g, "<br>");
         }
         if (params.dataType === "edge") {
-          return (params.data as GraphLink).text;
+          const link = params.data as GraphLink;
+          const fields = link.sourceFields.length
+            ? `<br>${t("relationView.sourceFields")}: ${link.sourceFields.join(", ")}`
+            : "";
+          return `${link.text}${fields}`;
         }
         return "";
       },
@@ -1826,6 +2183,52 @@ const gotoItemDetailView = () => {
     hash: "#" + nodeId.value,
   });
 };
+
+const openSelectedNodeAsRoot = () => {
+  const node = selectedNetworkNode.value;
+  if (!node || !isRelationEntityType(node.type) || node.id === relKey.value) return;
+  router.push({
+    name: "relation",
+    params: {
+      type: node.type,
+      key: node.id,
+    },
+  });
+};
+
+const gotoSelectedNodeDetailView = () => {
+  const node = selectedNetworkNode.value;
+  if (!node || !isRelationEntityType(node.type)) return;
+
+  switch (node.type) {
+    case RelationType.risk:
+      router.push({
+        name: "riskDetail",
+        params: {
+          rKey: node.id,
+        },
+      });
+      return;
+    case RelationType.avoidance:
+      router.push({
+        name: "avoidances",
+        hash: `#${node.id}`,
+      });
+      return;
+    case RelationType.attackTool:
+      router.push({
+        name: "attackTools",
+        hash: `#${node.id}`,
+      });
+      return;
+    case RelationType.threatActor:
+      router.push({
+        name: "threatActors",
+        hash: `#${node.id}`,
+      });
+      return;
+  }
+};
 /**
  * 筛选
  */
@@ -1854,6 +2257,16 @@ const getLineType = () => {
   });
 };
 const filterLineType = ref(totalLineType.value);
+
+const visibleRelationLegendItems = computed(() =>
+  relationLegendItems.value.filter((item) => totalLineType.value.includes(item.label))
+);
+
+const nodeDetailDrawerVisible = ref(false);
+
+const openNodeDetailDrawer = () => {
+  nodeDetailDrawerVisible.value = true;
+};
 
 const doFilter = () => {
   renderNetworkChart(true);
@@ -1935,6 +2348,11 @@ const doFilter = () => {
                 <el-icon><Download /></el-icon>
               </el-button>
             </el-tooltip>
+            <el-tooltip :content="$t('relationView.nodeDetail')" placement="top">
+              <el-button circle size="small" @click="openNodeDetailDrawer">
+                <el-icon><InfoFilled /></el-icon>
+              </el-button>
+            </el-tooltip>
           </div>
           <div ref="networkChartRef" class="network-chart"></div>
           <div class="filter-pane" id="node-filter-pane">
@@ -1946,7 +2364,12 @@ const doFilter = () => {
                 :name="key"
                 class="filter-checkbox"
                 :value="key"
-                >{{ item.title }}</el-checkbox
+              >
+                <span class="filter-item-with-color">
+                  <span class="legend-node-color" :style="{ backgroundColor: item.color }"></span>
+                  <span>{{ item.title }}</span>
+                </span>
+              </el-checkbox
               >
             </el-checkbox-group>
             <el-checkbox v-model="filterSubNode" class="filter-checkbox" @change="doFilter">{{ $t('subNodeFilter') }}</el-checkbox>
@@ -1956,11 +2379,19 @@ const doFilter = () => {
             <el-checkbox-group v-model="filterLineType" @change="doFilter">
               <el-checkbox
                 class="filter-checkbox"
-                v-for="oneType in totalLineType"
-                :key="oneType"
-                :name="oneType"
-                :value="oneType"
-                >{{ oneType }}</el-checkbox
+                v-for="item in visibleRelationLegendItems"
+                :key="item.label"
+                :name="item.label"
+                :value="item.label"
+              >
+                <span class="filter-line-item">
+                  <span class="legend-line-color" :style="{ backgroundColor: item.color }"></span>
+                  <span class="filter-line-label">{{ item.label }}</span>
+                  <el-tooltip :content="item.fields.join(', ')" placement="top">
+                    <el-icon class="filter-line-help"><InfoFilled /></el-icon>
+                  </el-tooltip>
+                </span>
+              </el-checkbox
               >
             </el-checkbox-group>
           </div>
@@ -2027,6 +2458,129 @@ const doFilter = () => {
         <div class="touch-action-item touch-action-cancel" @click="touchActionClose">{{ $t('cancel') }}</div>
       </div>
     </div>
+
+    <el-drawer
+      v-model="nodeDetailDrawerVisible"
+      :title="$t('relationView.nodeDetail')"
+      direction="rtl"
+      size="420px"
+      append-to-body
+      :z-index="4000"
+      class="relation-drawer"
+    >
+      <div v-if="selectedNetworkNode" class="drawer-section">
+        <div class="node-detail-title">
+          <span class="node-detail-id">{{ selectedNetworkNode.id }}</span>
+          <span class="node-detail-type">{{ getNodeTypeTitle(selectedNetworkNode.type) }}</span>
+        </div>
+        <div class="node-detail-name">{{ selectedNetworkNodeTitle }}</div>
+        <div class="node-detail-counts">
+          <span>{{ $t("relationView.incoming") }}: {{ selectedNetworkRelationCounts.incoming }}</span>
+          <span>{{ $t("relationView.outgoing") }}: {{ selectedNetworkRelationCounts.outgoing }}</span>
+        </div>
+        <div class="node-detail-actions">
+          <el-button size="small" @click="gotoSelectedNodeDetailView()">{{ $t("viewDetail") }}</el-button>
+          <el-button
+            size="small"
+            :disabled="selectedNetworkNode.id === relKey"
+            @click="openSelectedNodeAsRoot()"
+          >
+            {{ $t("openAsRoot") }}
+          </el-button>
+        </div>
+        <div v-if="rootNodeRelations.length" class="node-explain-block">
+          <h3>{{ $t("relationView.rootRelation") }}</h3>
+          <div
+            v-for="relation in rootNodeRelations"
+            :key="`${relation.direction}-${relation.text}`"
+            class="node-relation-item"
+          >
+            <div>
+              <span class="node-relation-direction">{{ relation.direction }}</span>
+              <span>{{ relation.text }}</span>
+              <span class="node-relation-directness">{{ relation.directness }}</span>
+            </div>
+            <div v-if="relation.sourceFields.length" class="node-relation-fields">
+              {{ $t("relationView.sourceFields") }}: {{ relation.sourceFields.join(", ") }}
+            </div>
+          </div>
+        </div>
+        <div v-else class="node-explain-block">
+          <h3>{{ $t("relationView.rootRelation") }}</h3>
+          <div class="node-relation-more">{{ $t("relationView.noDirectRootRelation") }}</div>
+          <div v-if="selectedNodeRootPath" class="node-path-preview">
+            <div class="node-path-summary">
+              {{ $t("relationView.indirectPathSummary", { count: selectedNodeRootPath.hopCount }) }}
+            </div>
+            <div
+              v-for="(relation, index) in selectedNodeRootPath.relations"
+              :key="`${relation.direction}-${relation.text}-${relation.otherNodeId}-${index}`"
+              class="node-relation-item"
+            >
+              <div>
+                <span class="node-relation-direction">{{ index === 0 ? $t("relationView.rootStart") : relation.direction }}</span>
+                <span>{{ relation.text }}</span>
+                <span class="node-relation-directness">{{ relation.directness }}</span>
+              </div>
+              <div class="node-relation-target">
+                {{ relation.otherNodeId }} {{ relation.otherNodeTitle }}
+              </div>
+              <div v-if="relation.sourceFields.length" class="node-relation-fields">
+                {{ $t("relationView.sourceFields") }}: {{ relation.sourceFields.join(", ") }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div v-if="selectedNodeAttackPathSummary.length" class="node-explain-block">
+          <h3>{{ $t("relationView.attackPathRole") }}</h3>
+          <div v-if="selectedNodeAttackPathDescription" class="node-relation-more">
+            {{ selectedNodeAttackPathDescription }}
+          </div>
+          <div class="node-role-list">
+            <span v-for="role in selectedNodeAttackPathSummary" :key="role" class="node-role-chip">{{ role }}</span>
+          </div>
+        </div>
+        <div v-if="selectedNodeRootPreview" class="node-explain-block">
+          <h3>{{ $t("relationView.rootPreview") }}</h3>
+          <div class="node-detail-counts">
+            <span>{{ $t("relationView.previewNodeCount") }}: {{ selectedNodeRootPreview.nodeCount }}</span>
+            <span>{{ $t("relationView.previewRelationCount") }}: {{ selectedNodeRootPreview.lineCount }}</span>
+          </div>
+          <div class="node-preview-groups">
+            <span
+              v-for="(count, type) in selectedNodeRootPreview.groupedCounts"
+              :key="type"
+              class="node-role-chip"
+            >
+              {{ getNodeTypeTitle(type) }} {{ count }}
+            </span>
+          </div>
+        </div>
+        <div class="node-explain-block">
+          <h3>{{ $t("relationView.allRelations") }}</h3>
+        </div>
+        <div class="node-relation-list">
+          <div
+            v-for="relation in selectedNetworkRelations"
+            :key="`${relation.direction}-${relation.text}-${relation.otherNodeId}`"
+            class="node-relation-item"
+          >
+            <div>
+              <span class="node-relation-direction">{{ relation.direction }}</span>
+              <span>{{ relation.text }}</span>
+              <span class="node-relation-directness">{{ relation.directness }}</span>
+            </div>
+            <div class="node-relation-target">
+              <span :title="relation.otherNodeType">{{ relation.otherNodeId }}</span>
+              <span>{{ relation.otherNodeTitle }}</span>
+            </div>
+            <div v-if="relation.sourceFields.length" class="node-relation-fields">
+              {{ $t("relationView.sourceFields") }}: {{ relation.sourceFields.join(", ") }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </el-drawer>
   </div>
 </template>
 
@@ -2102,6 +2656,194 @@ const doFilter = () => {
 .network-chart {
   width: 100%;
   height: 100%;
+}
+
+.drawer-section {
+  color: var(--break-text-primary);
+}
+
+.legend-node-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px 10px;
+  margin-bottom: 8px;
+}
+
+.legend-node-item {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.legend-node-color {
+  width: 12px;
+  height: 12px;
+  flex: 0 0 auto;
+  border: 1px solid var(--break-graph-border);
+  border-radius: 50%;
+}
+
+.legend-relation-list,
+.node-relation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.legend-relation-item,
+.node-relation-item {
+  padding-top: 6px;
+  border-top: 1px solid var(--break-border);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.legend-relation-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-line-color {
+  width: 18px;
+  height: 3px;
+  flex: 0 0 auto;
+  border-radius: 999px;
+}
+
+.filter-item-with-color,
+.filter-line-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.filter-line-item {
+  flex-wrap: wrap;
+}
+
+.filter-line-label {
+  font-weight: 600;
+}
+
+.filter-line-help {
+  color: var(--break-text-muted);
+  font-size: 12px;
+}
+
+.legend-relation-name,
+.node-relation-direction {
+  margin-right: 6px;
+  font-weight: 700;
+}
+
+.legend-relation-fields,
+.node-relation-fields,
+.node-relation-target,
+.node-relation-more {
+  color: var(--break-text-muted);
+  overflow-wrap: anywhere;
+}
+
+.node-path-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.node-path-summary {
+  color: var(--break-text-secondary);
+  font-size: 12px;
+}
+
+.relation-drawer :deep(.el-drawer) {
+  z-index: 4000 !important;
+}
+
+.relation-drawer :deep(.el-overlay) {
+  z-index: 4000 !important;
+}
+
+.relation-drawer :deep(.el-drawer__header) {
+  margin-bottom: 8px;
+}
+
+.relation-drawer :deep(.el-drawer__body) {
+  padding-top: 0;
+  overflow-y: auto;
+}
+
+.node-detail-title,
+.node-detail-counts,
+.node-detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.node-detail-id {
+  font-weight: 800;
+}
+
+.node-detail-type {
+  padding: 2px 6px;
+  border: 1px solid var(--break-border);
+  border-radius: 999px;
+  color: var(--break-text-secondary);
+  font-size: 11px;
+}
+
+.node-detail-name {
+  margin-bottom: 8px;
+  color: var(--break-text-secondary);
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.node-detail-counts {
+  color: var(--break-text-muted);
+  font-size: 12px;
+}
+
+.node-explain-block {
+  margin-top: 14px;
+}
+
+.node-explain-block h3 {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.node-relation-directness,
+.node-role-chip {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border: 1px solid var(--break-border);
+  border-radius: 999px;
+  color: var(--break-text-secondary);
+  font-size: 11px;
+}
+
+.node-role-list,
+.node-preview-groups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.node-relation-target {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
 }
 
 .graph-toolbar {
@@ -2303,7 +3045,7 @@ const doFilter = () => {
     display: flex;
     flex-direction: column;
     gap: 0;
-    overflow: hidden;
+    overflow-y: auto;
   }
 
   .network-chart {
@@ -2311,6 +3053,10 @@ const doFilter = () => {
     flex: 1 1 auto;
     min-height: 260px;
     height: auto;
+  }
+
+  .legend-node-list {
+    grid-template-columns: 1fr;
   }
 
   .filter-pane h2 {
@@ -2327,6 +3073,11 @@ const doFilter = () => {
   .filter-checkbox {
     display: inline-flex;
     margin-right: 0;
+  }
+
+  .filter-line-item {
+    display: inline-flex;
+    max-width: 100%;
   }
 }
 </style>
