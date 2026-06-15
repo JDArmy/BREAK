@@ -9,7 +9,8 @@ import { init, use, type ECharts, type EChartsOption } from "echarts/core";
 import { GraphChart, SankeyChart } from "echarts/charts";
 import { LegendComponent, TooltipComponent } from "echarts/components";
 import { CanvasRenderer } from "echarts/renderers";
-import { Aim, Download, FullScreen, InfoFilled, Refresh, ZoomIn, ZoomOut } from "@element-plus/icons-vue";
+import { Aim, Download, FullScreen, InfoFilled, Refresh, TopRight, ZoomIn, ZoomOut } from "@element-plus/icons-vue";
+import { ElMessage } from "element-plus";
 import type { DropdownInstance } from "element-plus";
 import "element-plus/es/components/drawer/style/css";
 
@@ -78,6 +79,7 @@ const activeView = ref<"network" | "sankey">(isMobile.value ? "sankey" : "networ
 
 const sankeyChartRef = ref<HTMLDivElement>();
 const networkChartRef = ref<HTMLDivElement>();
+const networkPaneRef = ref<HTMLDivElement>();
 let sankeyChart: ECharts | null = null;
 let networkChart: ECharts | null = null;
 
@@ -124,6 +126,8 @@ const graphColors = {
   lineText: { light: "#666666", dark: "#94a3b8" },
   nodeText: { light: "#333333", dark: "#e2e8f0" },
   nodeBorder: { light: "#efefef", dark: "#334155" },
+  subNodeFill: { light: "#fde7a7", dark: "#7c5a1d" },
+  subNodeBorder: { light: "#e0b85b", dark: "#f6d28b" },
   selectedNodeBorder: { light: "#2563eb", dark: "#93c5fd" },
   selectedNodeGlow: { light: "rgba(37, 99, 235, 0.26)", dark: "rgba(147, 197, 253, 0.3)" },
 };
@@ -147,6 +151,8 @@ const getGraphColor = (key: keyof typeof graphColors) =>
 
 const getRelationLineColor = (key: keyof typeof relationLineColors) =>
   isDark.value ? relationLineColors[key].dark : relationLineColors[key].light;
+
+const subNodeFilterColor = computed(() => getGraphColor("subNodeFill"));
 
 interface Node {
   id: string;
@@ -412,6 +418,8 @@ const buildNodeSummary = (nodeId: string) => {
   const node = findNodeById(nodeId);
   return {
     id: nodeId,
+    rawType: node?.type ?? "",
+    isSubNode: Boolean(node?.data?.isSubNode),
     type: node ? getNodeTypeTitle(node.type) : "",
     title: node && isRelationEntityType(node.type) ? getNodeTitle(node.type, node.id) : "",
   };
@@ -1453,6 +1461,7 @@ const createGraphNode = (
 ): GraphNode => {
   const text = normalizeGraphText(node.text);
   const isSelected = node.id === selectedNetworkNodeId.value;
+  const isSubNode = Boolean(node.data?.isSubNode);
   return {
     id: node.id,
     name: node.id,
@@ -1461,8 +1470,12 @@ const createGraphNode = (
     labelText: wrapLabelText(text, networkLabelMaxLineLength),
     symbolSize: isSelected ? symbolSize + 10 : symbolSize,
     itemStyle: {
-      color: node.color,
-      borderColor: isSelected ? getGraphColor("selectedNodeBorder") : getGraphColor("nodeBorder"),
+      color: isSubNode ? getGraphColor("subNodeFill") : node.color,
+      borderColor: isSelected
+        ? getGraphColor("selectedNodeBorder")
+        : isSubNode
+          ? getGraphColor("subNodeBorder")
+          : getGraphColor("nodeBorder"),
       borderWidth: isSelected ? 3 : 1,
       shadowBlur: isSelected ? 18 : 0,
       shadowColor: isSelected ? getGraphColor("selectedNodeGlow") : "transparent",
@@ -1983,11 +1996,13 @@ onMounted(() => {
   });
   window.addEventListener("resize", resizeNetworkChart);
   window.addEventListener("resize", resizeSankeyChart);
+  document.addEventListener("pointerdown", handleGlobalPointerDown);
 });
 
 onBeforeUnmount(() => {
   window.removeEventListener("resize", resizeNetworkChart);
   window.removeEventListener("resize", resizeSankeyChart);
+  document.removeEventListener("pointerdown", handleGlobalPointerDown);
   disposeNetworkChart();
   disposeSankeyChart();
 });
@@ -2068,9 +2083,15 @@ const dropdownStyle = reactive({
   zIndex: 65535,
   top: "0px",
   left: "0px",
-  display: "none",
+  width: "0px",
+  height: "0px",
+  visibility: "hidden",
 });
 const dropdown1 = ref<DropdownInstance>();
+const contextMenuSize = {
+  width: 264,
+  height: 396,
+};
 
 const disableContextMenuAll = ref(false);
 const disableContextMenuOpenAsRoot = ref(false);
@@ -2079,10 +2100,125 @@ const disableContextMenuOpenAsRoot = ref(false);
 const nodeType = ref("" as RelationType);
 const nodeId = ref("" as string);
 
+const closeContextMenu = () => {
+  dropdown1.value?.handleClose?.();
+  dropdownStyle.visibility = "hidden";
+};
+
+const toCsvCell = (value: unknown) => `"${String(value ?? "").replace(/"/g, "\"\"")}"`;
+
+const copyContextNodeCsv = async () => {
+  const node = findNodeById(nodeId.value);
+  if (!node) {
+    ElMessage.error(t("relationView.copyFailed"));
+    return;
+  }
+
+  const centerNode = buildNodeSummary(node.id);
+  const relationLines = lines.filter((line) => line.from === node.id || line.to === node.id);
+  const relatedNodes = new Map<string, ReturnType<typeof buildNodeSummary>>();
+  relatedNodes.set(centerNode.id, centerNode);
+
+  const relationRows = relationLines.map((line) => {
+    const sourceNode = buildNodeSummary(line.from);
+    const targetNode = buildNodeSummary(line.to);
+    relatedNodes.set(sourceNode.id, sourceNode);
+    relatedNodes.set(targetNode.id, targetNode);
+    return [
+      sourceNode.id,
+      sourceNode.type,
+      sourceNode.title,
+      line.text,
+      isDirectRelationLine(line.text) ? t("relationView.direct") : t("relationView.indirect"),
+      targetNode.id,
+      targetNode.type,
+      targetNode.title,
+      getRelationSourceFields(line).join(" | "),
+    ];
+  });
+
+  const nodeRows = [...relatedNodes.values()]
+    .sort((a, b) => (a.id === centerNode.id ? -1 : b.id === centerNode.id ? 1 : a.id.localeCompare(b.id)))
+    .map((item) => [
+      item.id,
+      item.type,
+      item.title,
+      item.id === centerNode.id ? t("relationView.csvRoleRoot") : t("relationView.csvRoleRelated"),
+      item.isSubNode ? t("relationView.csvYes") : t("relationView.csvNo"),
+    ]);
+
+  const csvSections = [
+    t("relationView.csvNodes"),
+    [
+      t("relationView.csvHeaderId"),
+      t("relationView.csvHeaderType"),
+      t("relationView.csvHeaderTitle"),
+      t("relationView.csvHeaderRole"),
+      t("relationView.csvHeaderIsSubNode"),
+    ].map(toCsvCell).join(","),
+    ...nodeRows.map((row) => row.map(toCsvCell).join(",")),
+    "",
+    t("relationView.csvRelations"),
+    [
+      t("relationView.csvHeaderSourceId"),
+      t("relationView.csvHeaderSourceType"),
+      t("relationView.csvHeaderSourceTitle"),
+      t("relationView.csvHeaderRelation"),
+      t("relationView.csvHeaderDirectness"),
+      t("relationView.csvHeaderTargetId"),
+      t("relationView.csvHeaderTargetType"),
+      t("relationView.csvHeaderTargetTitle"),
+      t("relationView.csvHeaderSourceFields"),
+    ].map(toCsvCell).join(","),
+    ...relationRows.map((row) => row.map(toCsvCell).join(",")),
+  ];
+
+  try {
+    await navigator.clipboard.writeText(csvSections.join("\n"));
+    closeContextMenu();
+    touchActionClose();
+    ElMessage.success(t("relationView.copySuccess"));
+  } catch {
+    ElMessage.error(t("relationView.copyFailed"));
+  }
+};
+
+const applyContextMenuPosition = (rawLeft: number, rawTop: number) => {
+  const pane = networkPaneRef.value;
+  if (!pane) return;
+
+  const rect = pane.getBoundingClientRect();
+  const maxLeft = Math.max(8, rect.width - contextMenuSize.width - 8);
+  const maxTop = Math.max(8, rect.height - contextMenuSize.height - 8);
+
+  dropdownStyle.left = `${Math.min(Math.max(8, rawLeft), maxLeft)}px`;
+  dropdownStyle.top = `${Math.min(Math.max(8, rawTop), maxTop)}px`;
+  dropdownStyle.visibility = "visible";
+};
+
+const openContextMenuAtPointer = (e: MouseEvent) => {
+  const pane = networkPaneRef.value;
+  if (!pane) return;
+
+  const rect = pane.getBoundingClientRect();
+  applyContextMenuPosition(e.clientX - rect.left + 12, e.clientY - rect.top + 16);
+};
+
+const handleGlobalPointerDown = (event: PointerEvent) => {
+  if (dropdownStyle.visibility === "hidden") return;
+
+  const target = event.target;
+  if (!(target instanceof HTMLElement)) {
+    closeContextMenu();
+    return;
+  }
+
+  if (target.closest(".el-dropdown-menu") || target.closest(".el-popper")) return;
+  closeContextMenu();
+};
+
 const nodeClick = (node: Node, e: MouseEvent) => {
-  dropdownStyle.top = e.clientY + "px";
-  dropdownStyle.left = e.clientX + "px";
-  dropdownStyle.display = "block";
+  openContextMenuAtPointer(e);
   dropdown1.value?.handleOpen();
 
   switch (node.type) {
@@ -2130,6 +2266,11 @@ const nodeClick = (node: Node, e: MouseEvent) => {
 
   nodeType.value = node.type as RelationType;
   nodeId.value = node.id;
+};
+
+const openContextNodeDetailDrawer = () => {
+  closeContextMenu();
+  focusNodeInDrawer(nodeId.value);
 };
 
 // 触摸设备：底部操作面板
@@ -2236,6 +2377,11 @@ const gotoItemDetailView = () => {
     name: routeName,
     hash: "#" + nodeId.value,
   });
+};
+
+const openTouchNodeDetailDrawer = () => {
+  touchActionClose();
+  focusNodeInDrawer(nodeId.value);
 };
 
 const openSelectedNodeAsRoot = () => {
@@ -2385,7 +2531,7 @@ const doFilter = () => {
     <el-tabs v-model="activeView" class="relation-tabs">
       <el-tab-pane :label="$t('relationView.network')" name="network">
         <!-- 关系图 -->
-        <div class="network-graph-pane">
+        <div ref="networkPaneRef" class="network-graph-pane">
           <div class="graph-toolbar">
             <el-tooltip :content="$t('toolbar.fullscreen')" placement="top">
               <el-button circle size="small" @click="enterFullscreen">
@@ -2458,7 +2604,12 @@ const doFilter = () => {
               </el-checkbox
               >
             </el-checkbox-group>
-            <el-checkbox v-model="filterSubNode" class="filter-checkbox" @change="doFilter">{{ $t('subNodeFilter') }}</el-checkbox>
+            <el-checkbox v-model="filterSubNode" class="filter-checkbox" @change="doFilter">
+              <span class="filter-item-with-color">
+                <span class="legend-node-color" :style="{ backgroundColor: subNodeFilterColor }"></span>
+                <span>{{ $t('subNodeFilter') }}</span>
+              </span>
+            </el-checkbox>
           </div>
           <div class="filter-pane" id="line-filter-pane">
             <h2>{{ $t('lineFilter') }}</h2>
@@ -2503,9 +2654,18 @@ const doFilter = () => {
                   divided
                   >{{ $t('openAsRoot') }}</el-dropdown-item
                 >
-                <el-dropdown-item divided @click="gotoItemDetailView()"
-                  >{{ $t('viewDetail') }}</el-dropdown-item
-                >
+                <el-dropdown-item @click="openContextNodeDetailDrawer()">
+                  {{ $t('relationView.nodeDetail') }}
+                </el-dropdown-item>
+                <el-dropdown-item @click="copyContextNodeCsv()">
+                  {{ $t('relationView.copyCsv') }}
+                </el-dropdown-item>
+                <el-dropdown-item divided @click="gotoItemDetailView()">
+                  <span class="menu-action-with-icon">
+                    <el-icon><TopRight /></el-icon>
+                    <span>{{ $t('viewDetail') }}</span>
+                  </span>
+                </el-dropdown-item>
               </el-dropdown-menu>
             </template>
           </el-dropdown>
@@ -2539,7 +2699,14 @@ const doFilter = () => {
           :class="{ disabled: disableContextMenuOpenAsRoot }"
           @click="!disableContextMenuOpenAsRoot && gotoNewRelationView()"
         >{{ $t('openAsRoot') }}</div>
-        <div class="touch-action-item" @click="gotoItemDetailView()">{{ $t('viewDetail') }}</div>
+        <div class="touch-action-item" @click="openTouchNodeDetailDrawer()">{{ $t('relationView.nodeDetail') }}</div>
+        <div class="touch-action-item" @click="copyContextNodeCsv()">{{ $t('relationView.copyCsv') }}</div>
+        <div class="touch-action-item" @click="gotoItemDetailView()">
+          <span class="menu-action-with-icon">
+            <el-icon><TopRight /></el-icon>
+            <span>{{ $t('viewDetail') }}</span>
+          </span>
+        </div>
         <div class="touch-action-divider"></div>
         <div class="touch-action-item touch-action-cancel" @click="touchActionClose">{{ $t('cancel') }}</div>
       </div>
@@ -2565,7 +2732,12 @@ const doFilter = () => {
           <span>{{ $t("relationView.outgoing") }}: {{ selectedNetworkRelationCounts.outgoing }}</span>
         </div>
         <div class="node-detail-actions">
-          <el-button size="small" @click="gotoSelectedNodeDetailView()">{{ $t("viewDetail") }}</el-button>
+          <el-button size="small" @click="gotoSelectedNodeDetailView()">
+            <span class="menu-action-with-icon">
+              <el-icon><TopRight /></el-icon>
+              <span>{{ $t("viewDetail") }}</span>
+            </span>
+          </el-button>
           <el-button
             size="small"
             :disabled="selectedNetworkNode.id === relKey"
@@ -2876,6 +3048,12 @@ const doFilter = () => {
 .filter-line-help {
   color: var(--break-text-muted);
   font-size: 12px;
+}
+
+.menu-action-with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .legend-relation-name,
