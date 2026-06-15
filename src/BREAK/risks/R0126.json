@@ -23,7 +23,15 @@
         "link": "https://www.163.com/dy/article/H5Q1LC3R0518STKV.html"
       }
     ],
-    "updated": "2026-02-27"
+    "updated": "2026-06-11",
+    "keywords": [
+      "API滥用风险",
+      "API abuse",
+      "接口滥用",
+      "接口盗刷",
+      "接口攻击",
+      "业务接口滥用"
+    ]
   },
   "R0126-001": {
     "title": "API枚举攻击",
@@ -43,7 +51,15 @@
         "link": "https://owasp.org/API-Security/editions/2023/en/0x11-t10/"
       }
     ],
-    "updated": "2026-02-27"
+    "updated": "2026-06-11",
+    "keywords": [
+      "API枚举攻击",
+      "接口枚举",
+      "端点枚举",
+      "API探测",
+      "路径爆破",
+      "Swagger泄露"
+    ]
   },
   "R0126-002": {
     "title": "API速率限制绕过",
@@ -63,7 +79,15 @@
         "link": "https://owasp.org/API-Security/editions/2023/en/0xa4-unrestricted-resource-consumption/"
       }
     ],
-    "updated": "2026-02-27"
+    "updated": "2026-06-11",
+    "keywords": [
+      "API速率限制绕过",
+      "接口限流绕过",
+      "Rate Limit Bypass",
+      "刷接口",
+      "频控绕过",
+      "限频绕过"
+    ]
   },
   "R0126-003": {
     "title": "API业务逻辑滥用",
@@ -83,6 +107,14 @@
         "link": "https://owasp.org/API-Security/editions/2023/en/0xa6-unrestricted-access-to-sensitive-business-flows/"
       }
     ],
-    "updated": "2026-02-27"
+    "updated": "2026-06-11",
+    "keywords": [
+      "API业务逻辑滥用",
+      "接口逻辑漏洞",
+      "业务流滥用",
+      "业务接口绕过",
+      "敏感业务流滥用",
+      "参数篡改下单"
+    ]
   }
 }

@@ -2,6 +2,7 @@ import { loadJsonModules } from "../utils";
 
 interface AttackTool {
   title: string;
+  keywords: string[];
   description: string;
   references: {
     title: string;

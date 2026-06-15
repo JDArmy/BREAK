@@ -11,6 +11,15 @@
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "访问来源跟踪",
+      "来源追踪",
+      "Referer校验",
+      "访问来源校验",
+      "来源溯源",
+      "跳转链路校验",
+      "访问令牌跟踪"
+    ]
   }
 }

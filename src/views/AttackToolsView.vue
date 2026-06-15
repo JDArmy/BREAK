@@ -5,10 +5,11 @@ import { useI18n } from "vue-i18n";
 import BREAK from "@/BREAK";
 import KnowledgeSplitView from "@/components/KnowledgeSplitView.vue";
 import ReferenceList from "@/components/ReferenceList.vue";
+import { getMessageStringArray } from "@/utils/i18nMessage";
 
 const route = useRoute();
 const router = useRouter();
-const { t } = useI18n();
+const { t, locale, messages } = useI18n();
 
 const attackToolKeys = Object.keys(BREAK.attackTools);
 // 优先从路由参数获取，否则从 hash 获取，最后使用默认值
@@ -33,6 +34,11 @@ const attackToolItems = computed(() =>
     const attackTool = BREAK.attackTools[atKey];
     const title = t(`BREAK.attackTools.${atKey}.title`);
     const description = t(`BREAK.attackTools.${atKey}.description`);
+    const localeMessages = messages.value[locale.value] as Record<string, unknown>;
+    const keywords = getMessageStringArray(
+      localeMessages,
+      `BREAK.attackTools.${atKey}.keywords`
+    );
 
     return {
       id: atKey,
@@ -40,6 +46,7 @@ const attackToolItems = computed(() =>
       subtitle: description.slice(0, 56),
       searchText: [
         title,
+        ...keywords,
         description,
         ...attackTool.avoidances,
         ...attackTool.directCauseRisks,
@@ -95,6 +102,14 @@ const openRelationGraph = (atKey: string) => {
       <section class="detail-section">
         <h3>{{ $t("description") }}</h3>
         <p>{{ $t(`BREAK.attackTools.${selectedAttackToolKey}.description`) }}</p>
+      </section>
+      <section v-if="selectedAttackTool.keywords?.length" class="detail-section">
+        <h3>{{ $t("keywords") }}</h3>
+        <div class="keywords">
+          <span v-for="(keyword, index) in selectedAttackTool.keywords" :key="index" class="keyword-tag">
+            {{ keyword }}
+          </span>
+        </div>
       </section>
       <section v-if="selectedAttackTool.directCauseRisks.length" class="detail-section">
         <h3>{{ $t("relationLine.directCauseRisk") }}</h3>
@@ -165,6 +180,33 @@ const openRelationGraph = (atKey: string) => {
         <h3>{{ $t("references") }}</h3>
         <ReferenceList type="attackTools" :entity-key="selectedAttackToolKey" />
       </section>
+      <section v-if="selectedAttackTool.updated" class="detail-section">
+        <h3>{{ $t("lastUpdated") }}</h3>
+        <p class="text-muted">{{ selectedAttackTool.updated }}</p>
+      </section>
     </article>
   </KnowledgeSplitView>
 </template>
+
+<style scoped>
+.keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.keyword-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--break-bg-secondary);
+  border: 1px solid var(--break-border);
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: var(--break-text-secondary);
+}
+
+.text-muted {
+  color: var(--break-text-muted);
+  font-size: 0.9em;
+}
+</style>

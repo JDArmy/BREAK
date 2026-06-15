@@ -15,7 +15,16 @@
         "link": "https://csrc.nist.gov/pubs/sp/800/150/final"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "威胁情报",
+      "TI",
+      "CTI",
+      "安全情报",
+      "风险情报",
+      "黑名单情报",
+      "威胁数据"
+    ]
   },
   "A0016-001": {
     "title": "IP情报",
@@ -29,7 +38,16 @@
         "link": "https://en.wikipedia.org/wiki/Threat_intelligence"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "IP情报",
+      "IP黑名单",
+      "IP信誉",
+      "IP画像",
+      "ASN情报",
+      "代理IP情报",
+      "恶意IP"
+    ]
   },
   "A0016-002": {
     "title": "域名&链接威胁情报",
@@ -43,7 +61,16 @@
         "link": "https://www.cisa.gov/topics/cyber-threats-and-advisories/information-sharing"
       }
     ],
-    "updated": "2026-05-27"
+    "updated": "2026-06-13",
+    "keywords": [
+      "域名&链接威胁情报",
+      "URL情报",
+      "域名情报",
+      "恶意域名",
+      "钓鱼链接情报",
+      "链接黑名单",
+      "URL信誉"
+    ]
   },
   "A0016-003": {
     "title": "手机号情报",
@@ -57,7 +84,16 @@
         "link": "https://app.xinhuanet.com/news/article.html?articleId=f64de23f724b6da61410eccdc99b28c7"
       }
     ],
-    "updated": "2026-05-27"
+    "updated": "2026-06-13",
+    "keywords": [
+      "手机号情报",
+      "手机号风险情报",
+      "二次号识别",
+      "空号检测",
+      "在网状态",
+      "号码画像",
+      "恶意号码"
+    ]
   },
   "A0016-004": {
     "title": "IOC妥协指标情报",
@@ -71,7 +107,16 @@
         "link": "https://oasis-open.github.io/cti-documentation/"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "IOC妥协指标情报",
+      "IOC情报",
+      "妥协指标",
+      "Hash情报",
+      "恶意样本特征",
+      "威胁指纹",
+      "Indicators of Compromise"
+    ]
   },
   "A0016-005": {
     "title": "风险地址情报",
@@ -85,6 +130,15 @@
         "link": "https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-150.pdf"
       }
     ],
-    "updated": "2026-05-27"
+    "updated": "2026-06-13",
+    "keywords": [
+      "风险地址情报",
+      "收货地址情报",
+      "地址风险识别",
+      "地址画像",
+      "虚假地址识别",
+      "黑灰产地址",
+      "地址风险标签"
+    ]
   }
 }

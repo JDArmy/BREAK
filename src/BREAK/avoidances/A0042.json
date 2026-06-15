@@ -11,7 +11,16 @@
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "功能随机化",
+      "随机化防护",
+      "流程随机化",
+      "交互随机化",
+      "反自动化随机化",
+      "页面随机化",
+      "业务随机化"
+    ]
   },
   "A0042-001": {
     "title": "随机化DOM",
@@ -25,7 +34,16 @@
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "随机化DOM",
+      "DOM随机化",
+      "元素ID随机化",
+      "Class随机化",
+      "前端结构混淆",
+      "XPath干扰",
+      "选择器干扰"
+    ]
   },
   "A0042-002": {
     "title": "随机事件流程",
@@ -39,6 +57,15 @@
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "随机事件流程",
+      "随机验证流程",
+      "随机弹窗干扰",
+      "流程插桩随机化",
+      "交互步骤随机化",
+      "业务事件随机化",
+      "反脚本流程干扰"
+    ]
   }
 }

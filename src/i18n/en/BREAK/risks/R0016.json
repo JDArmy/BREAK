@@ -9,6 +9,15 @@
       {
         "title": "OWASP Automated Threat: OAT016 Skewing"
       }
+    ],
+    "keywords": [
+      "Metric Manipulation / Ranking Fraud",
+      "ranking manipulation",
+      "engagement fraud",
+      "metric gaming",
+      "skewing",
+      "social proof fraud",
+      "vote manipulation"
     ]
   },
   "R0016-001": {
@@ -21,6 +30,15 @@
       {
         "title": "Methods and Strategies for Inflating TikTok Live Stream Viewer Counts"
       }
+    ],
+    "keywords": [
+      "Fake Viewer Count Inflation",
+      "viewbotting",
+      "viewer bot",
+      "fake audience",
+      "ghost viewers",
+      "live view inflation",
+      "stream view bot"
     ]
   },
   "R0016-002": {
@@ -33,6 +51,15 @@
       {
         "title": "OWASP Automated Threat: OAT-016 Skewing"
       }
+    ],
+    "keywords": [
+      "Bulk Following",
+      "mass following",
+      "follow bot",
+      "follow farm",
+      "bulk follow",
+      "follower manipulation",
+      "social graph inflation"
     ]
   }
 }

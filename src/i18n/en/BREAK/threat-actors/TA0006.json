@@ -7,6 +7,13 @@
         "title": "OWASP Automated Threats to Web Applications",
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/"
       }
+    ],
+    "keywords": [
+      "Crowdsourced Workers",
+      "fraud task workers",
+      "click farm workers",
+      "black market crowdworkers",
+      "paid task workforce"
     ]
   },
   "TA0006-001": {
@@ -17,6 +24,13 @@
         "title": "OAT-009 CAPTCHA Defeat - OWASP",
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-009_CAPTCHA_Defeat"
       }
+    ],
+    "keywords": [
+      "CAPTCHA Solver",
+      "captcha farm",
+      "captcha solving service",
+      "human captcha farm",
+      "captcha bypass service"
     ]
   },
   "TA0006-002": {
@@ -26,6 +40,13 @@
       {
         "title": "SMS PVA: Underground Service for Cybercriminals"
       }
+    ],
+    "keywords": [
+      "Voice CAPTCHA Solver",
+      "audio captcha solver",
+      "voice captcha bypass",
+      "voice challenge solving service",
+      "audio challenge farm"
     ]
   },
   "TA0006-003": {
@@ -35,6 +56,13 @@
       {
         "title": "Case Study: Operating a Money Laundering Platform for Cyber Black-Grey Market Merchants"
       }
+    ],
+    "keywords": [
+      "Score Runner",
+      "money mule",
+      "payment mule",
+      "fund laundering runner",
+      "transaction runner"
     ]
   }
 }

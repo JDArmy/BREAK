@@ -11,7 +11,16 @@
         "link": "https://en.wikipedia.org/wiki/Code_obfuscation"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-11",
+    "keywords": [
+      "终端应用加固",
+      "应用加固",
+      "客户端加固",
+      "代码混淆",
+      "反逆向",
+      "壳保护",
+      "安全加固"
+    ]
   },
   "A0013-001": {
     "title": "Android应用加固",
@@ -25,7 +34,16 @@
         "link": "https://mas.owasp.org/"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-11",
+    "keywords": [
+      "Android应用加固",
+      "APK加固",
+      "Android加固",
+      "DEX加固",
+      "VMP加固",
+      "反编译保护",
+      "APK壳"
+    ]
   },
   "A0013-002": {
     "title": "iOS应用加固",
@@ -39,7 +57,16 @@
         "link": "https://mas.owasp.org/"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-11",
+    "keywords": [
+      "iOS应用加固",
+      "iOS加固",
+      "IPA加固",
+      "反逆向保护",
+      "Mach-O加固",
+      "字符串加密",
+      "越狱对抗"
+    ]
   },
   "A0013-003": {
     "title": "H5小程序加固",
@@ -53,7 +80,16 @@
         "link": "https://owasp.org/www-community/controls/Bytecode_obfuscation"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-11",
+    "keywords": [
+      "H5小程序加固",
+      "小程序加固",
+      "H5加固",
+      "JS加固",
+      "前端代码加固",
+      "域名绑定保护",
+      "脚本加密"
+    ]
   },
   "A0013-004": {
     "title": "桌面应用加固",
@@ -67,6 +103,15 @@
         "link": "https://owasp.org/www-community/controls/Bytecode_obfuscation"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-11",
+    "keywords": [
+      "桌面应用加固",
+      "桌面端加固",
+      "EXE加固",
+      "反反编译",
+      "桌面程序保护",
+      "二进制加固",
+      "符号混淆"
+    ]
   }
 }

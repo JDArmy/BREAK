@@ -12,6 +12,14 @@
       {
         "title": "Measures for the Labeling of AI-Generated Synthetic Content - Gov.cn"
       }
+    ],
+    "keywords": [
+      "Generative AI Risk",
+      "AIGC risk",
+      "genAI risk",
+      "LLM risk",
+      "AI content risk",
+      "model governance risk"
     ]
   },
   "R0071-001": {
@@ -24,6 +32,14 @@
       {
         "title": "Illegal Proxy Rights Defense Surges 42%: How Technology Can Break Through Financial Black-Grey Market Governance"
       }
+    ],
+    "keywords": [
+      "AIGC Privacy Leakage",
+      "training data leakage",
+      "model data leakage",
+      "memorization leak",
+      "PII leakage from model",
+      "sensitive output leakage"
     ]
   },
   "R0071-002": {
@@ -39,6 +55,14 @@
       {
         "title": "Legal Compliance Risks and Prevention in the AIGC Wave"
       }
+    ],
+    "keywords": [
+      "AIGC Compliance Risk",
+      "AI compliance risk",
+      "unsafe model output",
+      "policy-violating AI content",
+      "illegal generated content",
+      "responsible AI risk"
     ]
   },
   "R0071-003": {
@@ -51,6 +75,14 @@
       {
         "title": "Measures for the Labeling of AI-Generated Synthetic Content - Gov.cn"
       }
+    ],
+    "keywords": [
+      "AI-Generated Low-Quality Content",
+      "AI spam",
+      "content farm AI",
+      "low-effort AI content",
+      "synthetic content pollution",
+      "LLM spam"
     ]
   },
   "R0071-004": {
@@ -63,6 +95,14 @@
       {
         "title": "Survey on Hallucination Problems in Large Language Models"
       }
+    ],
+    "keywords": [
+      "AI Hallucination Risk",
+      "LLM hallucination",
+      "fabricated AI output",
+      "AI confabulation",
+      "false AI answers",
+      "model hallucinations"
     ]
   },
   "R0071-005": {
@@ -75,6 +115,14 @@
       {
         "title": "Survey on AI Model Security and Poisoning Attacks"
       }
+    ],
+    "keywords": [
+      "AI Model Poisoning Risk",
+      "training data poisoning",
+      "model backdoor",
+      "poisoned model",
+      "malicious fine-tuning",
+      "data poisoning attack"
     ]
   }
 }

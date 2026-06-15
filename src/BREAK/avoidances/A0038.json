@@ -11,7 +11,16 @@
         "link": "https://en.wikipedia.org/wiki/Proxy_server"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "代理识别",
+      "代理检测",
+      "Proxy检测",
+      "代理风控",
+      "中转代理识别",
+      "匿名代理识别",
+      "代理流量识别"
+    ]
   },
   "A0038-001": {
     "title": "网页访问代理识别",
@@ -25,7 +34,16 @@
         "link": "https://attack.mitre.org/techniques/T1090/"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "网页访问代理识别",
+      "浏览器代理识别",
+      "HTTP客户端识别",
+      "CURL识别",
+      "Wget识别",
+      "Selenium访问识别",
+      "脚本访问识别"
+    ]
   },
   "A0038-002": {
     "title": "网络代理识别",
@@ -39,6 +57,15 @@
         "link": "https://attack.mitre.org/techniques/T1090/"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "网络代理识别",
+      "VPN识别",
+      "SOCKS5识别",
+      "HTTP代理识别",
+      "住宅代理识别",
+      "匿名代理IP",
+      "隧道代理识别"
+    ]
   }
 }

@@ -18,7 +18,15 @@
         "link": "https://en.wikipedia.org/wiki/Physical_security"
       }
     ],
-    "updated": "2024-01-31"
+    "updated": "2026-06-11",
+    "keywords": [
+      "办公环境风险",
+      "办公安全",
+      "物理安全",
+      "办公室安全",
+      "场地安全",
+      "办公场所风险"
+    ]
   },
   "R0112-001": {
     "title": "自带设备办公风险",
@@ -51,7 +59,14 @@
         "link": "https://en.wikipedia.org/wiki/Bring_your_own_device"
       }
     ],
-    "updated": "2024-01-29"
+    "updated": "2026-06-11",
+    "keywords": [
+      "自带设备办公风险",
+      "BYOD",
+      "自带设备办公",
+      "个人设备办公",
+      "自有设备接入"
+    ]
   },
   "R0112-002": {
     "title": "未授权物理访问",
@@ -77,7 +92,15 @@
         "link": "https://en.wikipedia.org/wiki/Physical_security"
       }
     ],
-    "updated": "2024-01-30"
+    "updated": "2026-06-11",
+    "keywords": [
+      "未授权物理访问",
+      "未经授权进入",
+      "尾随进入",
+      "物理闯入",
+      "门禁绕过",
+      "机房闯入"
+    ]
   },
   "R0112-003": {
     "title": "未授权设备接入",
@@ -100,7 +123,15 @@
         "link": "https://en.wikipedia.org/wiki/Physical_security"
       }
     ],
-    "updated": "2024-01-29"
+    "updated": "2026-06-11",
+    "keywords": [
+      "未授权设备接入",
+      "私接设备",
+      "非法接入设备",
+      "未知设备接入",
+      "非授权终端",
+      "外来设备接入"
+    ]
   },
   "R0112-004": {
     "title": "物理损害与破坏",
@@ -121,7 +152,15 @@
         "link": "https://en.wikipedia.org/wiki/Sabotage"
       }
     ],
-    "updated": "2024-01-29"
+    "updated": "2026-06-11",
+    "keywords": [
+      "物理损害与破坏",
+      "设备破坏",
+      "恶意破坏",
+      "物理破坏",
+      "办公设施损坏",
+      "蓄意损毁"
+    ]
   },
   "R0112-005": {
     "title": "监控与窃听",
@@ -143,7 +182,15 @@
         "link": "https://en.wikipedia.org/wiki/Eavesdropping"
       }
     ],
-    "updated": "2024-01-29"
+    "updated": "2026-06-11",
+    "keywords": [
+      "监控与窃听",
+      "窃听设备",
+      "偷拍",
+      "录音窃听",
+      "屏幕窥视",
+      "针孔摄像头"
+    ]
   },
   "R0112-006": {
     "title": "无线网络风险",
@@ -164,6 +211,14 @@
         "link": "https://en.wikipedia.org/wiki/Wireless_security"
       }
     ],
-    "updated": "2026-06-11"
+    "updated": "2026-06-11",
+    "keywords": [
+      "无线网络风险",
+      "WiFi安全",
+      "钓鱼热点",
+      "伪造热点",
+      "弱口令WiFi",
+      "无线嗅探"
+    ]
   }
 }

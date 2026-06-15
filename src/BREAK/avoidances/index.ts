@@ -2,6 +2,7 @@ import { loadJsonModules } from "../utils";
 
 interface Avoidance {
   title: string;
+  keywords: string[];
   category: string;
   definition: string;
   description: string;

@@ -9,6 +9,11 @@
         "title": "Authorization Cheat Sheet - OWASP",
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
       }
+    ],
+    "keywords": [
+      "resource-level access control",
+      "content access restriction",
+      "access throttling"
     ]
   },
   "A0028-001": {
@@ -21,6 +26,11 @@
         "title": "Authorization Cheat Sheet - OWASP",
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
       }
+    ],
+    "keywords": [
+      "hotlink protection",
+      "referer check",
+      "anti-hotlinking"
     ]
   }
 }

@@ -15,7 +15,16 @@
         "link": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/02-Fingerprint_Web_Server"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "设备指纹",
+      "Device Fingerprint",
+      "浏览器指纹",
+      "终端指纹",
+      "设备识别",
+      "设备画像",
+      "指纹追踪"
+    ]
   },
   "A0021-001": {
     "title": "设备标记",
@@ -29,6 +38,15 @@
         "link": "https://en.wikipedia.org/wiki/Device_fingerprint"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "设备标记",
+      "设备打标",
+      "终端标记",
+      "设备标签",
+      "隐式标记",
+      "设备埋点标记",
+      "设备唯一标识"
+    ]
   }
 }

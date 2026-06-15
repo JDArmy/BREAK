@@ -19,6 +19,14 @@
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/OAuth2_Cheat_Sheet.html"
       }
     ],
-    "updated": "2026-06-11"
+    "updated": "2026-06-11",
+    "keywords": [
+      "OAuth权限最小化",
+      "OAuth最小权限",
+      "Scope最小化",
+      "最小授权",
+      "细粒度授权",
+      "OAuth权限收敛"
+    ]
   }
 }

@@ -11,6 +11,15 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/"
       }
     ],
-    "updated": "2024-01-18"
+    "updated": "2026-06-13",
+    "keywords": [
+      "异常访问来源识别",
+      "异常来源检测",
+      "风险IP识别",
+      "代理IP识别",
+      "异地访问识别",
+      "设备来源校验",
+      "访问源分析"
+    ]
   }
 }

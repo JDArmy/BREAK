@@ -123,11 +123,21 @@ export const createNetworkChartController = ({
 
     const networkData = getVisibleNetworkData();
     const isForceLayout = networkState.layout === "force";
+    const style = getComputedStyle(document.documentElement);
+    const tooltipBackground = style.getPropertyValue("--break-tooltip-bg").trim();
+    const tooltipBorder = style.getPropertyValue("--break-tooltip-border").trim();
+    const tooltipText = style.getPropertyValue("--break-tooltip-text").trim();
     const option = {
       backgroundColor: getGraphColor("background"),
       animationDurationUpdate: 300,
       tooltip: {
         trigger: "item",
+        backgroundColor: tooltipBackground,
+        borderColor: tooltipBorder,
+        borderWidth: 1,
+        textStyle: {
+          color: tooltipText,
+        },
         formatter: (params: { dataType?: string; data?: GraphNode | GraphLink }) => {
           if (params.dataType === "node") {
             return (params.data as GraphNode).text.replace(/\n/g, "<br>");

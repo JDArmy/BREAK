@@ -32,7 +32,15 @@
         "link": "https://en.wikipedia.org/wiki/Insider_threat"
       }
     ],
-    "updated": "2024-01-29"
+    "updated": "2026-06-11",
+    "keywords": [
+      "员工违规操作",
+      "内部人风险",
+      "内部威胁",
+      "员工舞弊",
+      "违规操作",
+      "内鬼"
+    ]
   },
   "R0111-001": {
     "title": "员工账号共享",
@@ -61,7 +69,15 @@
         "link": "https://en.wikipedia.org/wiki/Account_sharing"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-11",
+    "keywords": [
+      "员工账号共享",
+      "共享账号",
+      "共用账号",
+      "账号共用",
+      "凭据共享",
+      "密码共享"
+    ]
   },
   "R0111-002": {
     "title": "员工业务级后门",
@@ -83,6 +99,14 @@
         "link": "https://en.wikipedia.org/wiki/Insider_threat"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-11",
+    "keywords": [
+      "员工业务级后门",
+      "业务后门",
+      "逻辑后门",
+      "内部后门",
+      "人为后门",
+      "私留后门"
+    ]
   }
 }

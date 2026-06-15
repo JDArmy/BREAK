@@ -21,7 +21,7 @@ const props = defineProps<{
   relationTypeItems: RelationTypeItem[];
   filterRelationType: string[];
   filterSubNode: boolean;
-  subNodeFilterColor: string;
+  subNodeFilterColor?: string;
   filterLineType: string[];
   visibleRelationLegendItems: RelationLegendItem[];
   formatRelationFieldsTooltip: (fields: string[]) => string;

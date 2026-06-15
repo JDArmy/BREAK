@@ -11,6 +11,15 @@
         "link": "https://owasp.org/API-Security/editions/2019/en/0xa4-lack-of-resources-and-rate-limiting/"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-11",
+    "keywords": [
+      "频率限制",
+      "限流",
+      "频控",
+      "Rate Limit",
+      "速率限制",
+      "请求频率限制",
+      "QPS限制"
+    ]
   }
 }

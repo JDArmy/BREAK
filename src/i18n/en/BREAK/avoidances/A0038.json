@@ -8,6 +8,11 @@
       {
         "title": "Proxy Server - Wikipedia"
       }
+    ],
+    "keywords": [
+      "anonymous proxy detection",
+      "proxy fingerprinting",
+      "VPN detection"
     ]
   },
   "A0038-001": {
@@ -20,6 +25,11 @@
         "title": "Proxy, Technique T1090 - MITRE ATT&CK",
         "link": "https://attack.mitre.org/techniques/T1090/"
       }
+    ],
+    "keywords": [
+      "HTTP proxy detection",
+      "forward proxy detection",
+      "proxy header check"
     ]
   },
   "A0038-002": {
@@ -32,6 +42,11 @@
         "title": "Proxy, Technique T1090 - MITRE ATT&CK",
         "link": "https://attack.mitre.org/techniques/T1090/"
       }
+    ],
+    "keywords": [
+      "SOCKS proxy detection",
+      "VPN detection",
+      "network proxy check"
     ]
   }
 }

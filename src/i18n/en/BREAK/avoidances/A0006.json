@@ -9,6 +9,15 @@
         "title": "Provisions on the Governance of the Online Information Content Ecosystem",
         "link": "https://www.cac.gov.cn/2019-12/20/c_1578375159509309.htm"
       }
+    ],
+    "keywords": [
+      "Malicious Content Detection",
+      "content moderation",
+      "UGC moderation",
+      "harmful content detection",
+      "abuse detection",
+      "trust and safety",
+      "policy enforcement"
     ]
   },
   "A0006-001": {
@@ -21,6 +30,13 @@
         "title": "Provisions on the Governance of the Online Information Content Ecosystem",
         "link": "https://www.cac.gov.cn/2019-12/20/c_1578375159509309.htm"
       }
+    ],
+    "keywords": [
+      "Manual Content Review",
+      "human review",
+      "manual moderation",
+      "content moderation review",
+      "trust and safety review"
     ]
   },
   "A0006-002": {
@@ -37,6 +53,14 @@
         "title": "Tesseract OCR Documentation",
         "link": "https://tesseract-ocr.github.io/"
       }
+    ],
+    "keywords": [
+      "Automated Malicious Image Detection",
+      "image moderation",
+      "visual moderation",
+      "image abuse detection",
+      "image safety",
+      "OCR filtering"
     ]
   },
   "A0006-003": {
@@ -49,6 +73,13 @@
         "title": "Speaker Recognition Evaluation - NIST",
         "link": "https://www.nist.gov/itl/iad/mig/speaker-recognition"
       }
+    ],
+    "keywords": [
+      "Automated Malicious Audio Detection",
+      "audio moderation",
+      "voice moderation",
+      "audio abuse detection",
+      "audio safety detection"
     ]
   },
   "A0006-004": {
@@ -61,6 +92,13 @@
         "title": "TRECVID - NIST",
         "link": "https://www-nlpir.nist.gov/projects/trecvid/"
       }
+    ],
+    "keywords": [
+      "Automated Malicious Video Detection",
+      "video moderation",
+      "stream moderation",
+      "video abuse detection",
+      "video safety detection"
     ]
   },
   "A0006-005": {
@@ -76,6 +114,14 @@
       {
         "title": "An effective detection approach for phishing websites using URL and HTML features"
       }
+    ],
+    "keywords": [
+      "Automated Malicious Link Detection",
+      "malicious URL detection",
+      "phishing URL detection",
+      "URL reputation",
+      "link scanning",
+      "safe browsing"
     ]
   },
   "A0006-006": {
@@ -87,6 +133,14 @@
       {
         "title": "Analyze Malicious Office Documents: The Complete Guide"
       }
+    ],
+    "keywords": [
+      "Automated Malicious Document Detection",
+      "malicious document scanning",
+      "office document security",
+      "macro malware detection",
+      "document safety scanning",
+      "file inspection"
     ]
   },
   "A0006-007": {
@@ -98,6 +152,14 @@
       {
         "title": "Leveraging NLP Techniques for Effective Content Moderation"
       }
+    ],
+    "keywords": [
+      "Automated Malicious Text Detection",
+      "text moderation",
+      "NLP moderation",
+      "harmful text detection",
+      "spam text detection",
+      "content filtering"
     ]
   },
   "A0006-008": {
@@ -109,6 +171,14 @@
       {
         "title": "iResearch & NetEase Yidun Release Industry First Digital Content Risk Control White Paper"
       }
+    ],
+    "keywords": [
+      "Automated AI-Generated Content Detection",
+      "AI content detection",
+      "synthetic content detection",
+      "AI-generated text detection",
+      "AI-generated image detection",
+      "deepfake detection"
     ]
   }
 }

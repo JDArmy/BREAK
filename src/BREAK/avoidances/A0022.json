@@ -11,7 +11,16 @@
         "link": "https://en.wikipedia.org/wiki/Transport_Layer_Security"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-11",
+    "keywords": [
+      "流量加密",
+      "传输加密",
+      "链路加密",
+      "通信加密",
+      "流量保护",
+      "报文加密",
+      "数据传输加密"
+    ]
   },
   "A0022-001": {
     "title": "传输协议加密",
@@ -25,7 +34,16 @@
         "link": "https://en.wikipedia.org/wiki/Transport_Layer_Security"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-11",
+    "keywords": [
+      "传输协议加密",
+      "TLS加密",
+      "SSL加密",
+      "协议层加密",
+      "传输层加密",
+      "应用层加密",
+      "私有TLS"
+    ]
   },
   "A0022-002": {
     "title": "请求数据加密",
@@ -39,7 +57,16 @@
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-11",
+    "keywords": [
+      "请求数据加密",
+      "请求体加密",
+      "Request Body加密",
+      "上行加密",
+      "参数加密",
+      "请求报文加密",
+      "入参加密"
+    ]
   },
   "A0022-003": {
     "title": "响应数据加密",
@@ -53,7 +80,16 @@
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-11",
+    "keywords": [
+      "响应数据加密",
+      "响应体加密",
+      "Response Body加密",
+      "下行加密",
+      "返回值加密",
+      "响应报文加密",
+      "出参加密"
+    ]
   },
   "A0022-004": {
     "title": "自定义传输协议",
@@ -67,6 +103,15 @@
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html"
       }
     ],
-    "updated": "2024-01-16"
+    "updated": "2026-06-11",
+    "keywords": [
+      "自定义传输协议",
+      "私有协议",
+      "自研协议",
+      "魔改协议",
+      "非标传输协议",
+      "专有协议",
+      "私有通信协议"
+    ]
   }
 }

@@ -38,7 +38,9 @@ const { getInnerDrawerWidth } = useDrawerWidth();
     </template>
     <div class="desc">
       <strong>{{ $t("ID") }}:&nbsp;</strong>
-      {{ taKey }}
+      <router-link :to="{ name: 'threatActors', hash: `#${taKey}` }" class="id-link">
+        {{ taKey }}
+      </router-link>
       <router-link
         :title="$t('relationMap')"
         class="relation-map-icon"
@@ -63,7 +65,7 @@ const { getInnerDrawerWidth } = useDrawerWidth();
       <ReferenceList type="threatActors" :entityKey="taKey" />
     </div>
     <div class="desc">
-      <el-button type="primary" size="small" @click="$router.push('/threat-actors#' + taKey)">
+      <el-button type="primary" plain size="small" @click="$router.push('/threat-actors#' + taKey)">
         {{ $t("viewDetail") }}
       </el-button>
     </div>
@@ -73,6 +75,11 @@ const { getInnerDrawerWidth } = useDrawerWidth();
 <style scoped>
 .desc {
   margin-bottom: 20px;
+}
+
+.desc strong {
+  display: block;
+  margin-bottom: 8px;
 }
 
 .drawer-header-with-back {

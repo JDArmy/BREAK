@@ -9,6 +9,16 @@
       {
         "title": "OWASP Automated Threat: OAT003 Ad Fraud"
       }
+    ],
+    "keywords": [
+      "Ad Fraud",
+      "invalid traffic",
+      "IVT",
+      "media fraud",
+      "advertising fraud",
+      "ad spend abuse",
+      "traffic fraud",
+      "OAT-003"
     ]
   },
   "R0008-001": {
@@ -22,6 +32,14 @@
         "title": "Software Extensions, Technique T1176 - MITRE ATT&CK",
         "link": "https://attack.mitre.org/techniques/T1176/"
       }
+    ],
+    "keywords": [
+      "Ad Link Hijacking",
+      "affiliate link hijacking",
+      "commission hijacking",
+      "link rewriting",
+      "affiliate theft",
+      "attribution hijack"
     ]
   },
   "R0008-002": {
@@ -34,6 +52,15 @@
       {
         "title": "OWASP Automated Threat: OAT-003 Ad Fraud"
       }
+    ],
+    "keywords": [
+      "Click Fraud",
+      "fake clicks",
+      "PPC fraud",
+      "pay-per-click fraud",
+      "click bot",
+      "click farm",
+      "invalid clicks"
     ]
   },
   "R0008-003": {
@@ -46,6 +73,15 @@
       {
         "title": "OWASP Automated Threat: OAT-003 Ad Fraud"
       }
+    ],
+    "keywords": [
+      "Fake App Installs",
+      "install fraud",
+      "mobile install fraud",
+      "fake CPI installs",
+      "app install bot",
+      "install farm",
+      "attribution fraud"
     ]
   },
   "R0008-004": {
@@ -58,6 +94,15 @@
       {
         "title": "OWASP Automated Threat: OAT-003 Ad Fraud"
       }
+    ],
+    "keywords": [
+      "Impression Fraud",
+      "impression stuffing",
+      "view fraud",
+      "display ad fraud",
+      "fake impressions",
+      "ad stacking",
+      "impression inflation"
     ]
   },
   "R0008-005": {
@@ -70,6 +115,15 @@
       {
         "title": "OWASP Automated Threat: OAT-003 Ad Fraud"
       }
+    ],
+    "keywords": [
+      "Traffic Attribution Fraud",
+      "attribution fraud",
+      "click injection",
+      "click spamming",
+      "organic hijacking",
+      "last-click hijack",
+      "CPA fraud"
     ]
   }
 }

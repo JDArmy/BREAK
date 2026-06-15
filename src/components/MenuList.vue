@@ -70,11 +70,8 @@ const getActiveIndex = (fullPath: string) => {
     :default-active="getActiveIndex($route.fullPath)"
     mode="horizontal"
     :ellipsis="false"
-    background-color="#0f172a"
-    text-color="#cbd5e1"
-    active-text-color="#60a5fa"
     :router="false"
-    class="hidden-md-and-up"
+    class="hidden-md-and-up mobile-menu"
     style="height: 100%"
   >
     <div style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); cursor: pointer" @click="$router.push('/')">
@@ -191,12 +188,9 @@ const getActiveIndex = (fullPath: string) => {
   <el-menu
     :default-active="getActiveIndex($route.fullPath)"
     mode="horizontal"
-    background-color="#0f172a"
-    text-color="#cbd5e1"
-    active-text-color="#60a5fa"
     :ellipsis="false"
     :router="true"
-    class="hidden-sm-and-down"
+    class="hidden-sm-and-down desktop-menu"
   >
     <div style="display: flex; align-items: center; cursor: pointer" @click="$router.push('/')">
       <img src="/logo.png" class="logo" alt="JDArmy BREAK" />
@@ -322,7 +316,7 @@ const getActiveIndex = (fullPath: string) => {
 
 <style scoped>
 .logo {
-  background: rgba(255,255,255,0.08);
+  background: var(--break-bg-secondary);
   border-radius: 10px;
   margin: 5px;
   width: 40px;
@@ -341,7 +335,7 @@ const getActiveIndex = (fullPath: string) => {
   gap: 6px;
   padding: 4px 12px;
   border-radius: 6px;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--break-bg-secondary);
   cursor: pointer;
   transition: background-color 0.2s;
   max-width: 260px;
@@ -350,18 +344,18 @@ const getActiveIndex = (fullPath: string) => {
 
 .search-trigger:hover,
 .search-trigger:active {
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--break-bg-card);
 }
 
 .search-trigger .el-icon {
-  color: #94a3b8;
+  color: var(--break-text-secondary);
   font-size: 14px;
 }
 
 .search-placeholder {
   flex: 1;
   font-size: 13px;
-  color: #64748b;
+  color: var(--break-text-muted);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -369,9 +363,9 @@ const getActiveIndex = (fullPath: string) => {
 
 .search-shortcut {
   font-size: 11px;
-  color: #64748b;
+  color: var(--break-text-muted);
   padding: 2px 5px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--break-border);
   border-radius: 3px;
   white-space: nowrap;
 }
@@ -388,20 +382,20 @@ const getActiveIndex = (fullPath: string) => {
 
 .mobile-search {
   cursor: pointer;
-  color: #cbd5e1;
+  color: var(--break-text-primary);
   font-size: 18px;
 }
 
 .mobile-hamburger {
   cursor: pointer;
-  color: #cbd5e1;
+  color: var(--break-text-primary);
   display: flex;
   align-items: center;
   padding: 4px;
 }
 
 .banner {
-  color: #f1f5f9;
+  color: var(--break-text-primary);
   padding-left: 10px;
   padding-bottom: 0px;
   margin: 0;
@@ -416,7 +410,7 @@ const getActiveIndex = (fullPath: string) => {
 }
 
 .description {
-  color: #fff;
+  color: var(--break-text-primary);
   margin: 0 0 5px 0;
   padding: 0 0 0 10px;
 }
@@ -477,7 +471,7 @@ const getActiveIndex = (fullPath: string) => {
   width: 100%;
   height: 100%;
   text-align: center;
-  color: #000;
+  color: var(--break-text-primary);
   text-decoration: none;
 }
 
@@ -491,7 +485,7 @@ const getActiveIndex = (fullPath: string) => {
 .drawer-logo {
   width: 32px;
   border-radius: 6px;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--break-bg-secondary);
 }
 
 .drawer-title {

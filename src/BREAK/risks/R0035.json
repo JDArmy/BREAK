@@ -25,7 +25,16 @@
         "link": "https://attack.mitre.org/techniques/T1539/"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-13",
+    "keywords": [
+      "登录凭据复用",
+      "Cookie复用",
+      "CK登录",
+      "session复用",
+      "免密登录",
+      "会话复用",
+      "登录态复用"
+    ]
   },
   "R0035-001": {
     "title": "登录凭据盗用",
@@ -57,6 +66,14 @@
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-13",
+    "keywords": [
+      "登录凭据盗用",
+      "Cookie盗用",
+      "会话劫持",
+      "Session hijacking",
+      "登录态盗用",
+      "Token盗用"
+    ]
   }
 }

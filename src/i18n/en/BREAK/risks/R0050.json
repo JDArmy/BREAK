@@ -9,6 +9,14 @@
       {
         "title": "Cross-Border Fraud Risk: Analysis of Transnational Black-Grey Market Crime Patterns Driven by High Profits"
       }
+    ],
+    "keywords": [
+      "Risk Device Identification Bypass",
+      "device fingerprint spoofing",
+      "device ID spoofing",
+      "device risk spoofing",
+      "root cloaking",
+      "environment spoofing"
     ]
   },
   "R0050-001": {
@@ -22,6 +30,14 @@
         "title": "MASTG-KNOW-0031: Emulator Detection - OWASP",
         "link": "https://mas.owasp.org/MASTG-KNOW-0031/"
       }
+    ],
+    "keywords": [
+      "Virtual Device Identification Bypass",
+      "emulator detection bypass",
+      "virtual machine bypass",
+      "cloud phone bypass",
+      "anti-detect browser",
+      "device emulation spoofing"
     ]
   }
 }

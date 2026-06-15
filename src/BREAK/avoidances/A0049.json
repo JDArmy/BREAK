@@ -15,7 +15,16 @@
         "link": "https://spec.c2pa.org/specifications/specifications/2.4/explainer/Explainer.html"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "数字水印/文本水印",
+      "数字水印",
+      "文本水印",
+      "隐写水印",
+      "内容溯源",
+      "版权水印",
+      "防泄露水印"
+    ]
   },
   "A0049-001": {
     "title": "文本水印",
@@ -29,6 +38,14 @@
         "link": "https://textwatermark.jd.army/"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "文本水印",
+      "隐形水印",
+      "不可见字符水印",
+      "零宽字符水印",
+      "文本溯源",
+      "文档水印"
+    ]
   }
 }

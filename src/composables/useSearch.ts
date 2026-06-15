@@ -2,6 +2,7 @@ import { ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
 import Fuse from "fuse.js";
 import BREAK from "@/BREAK";
+import { getMessageStringArray, getNestedMessageValue } from "@/utils/i18nMessage";
 
 /** 实体类型 */
 export type EntityType = "risk" | "avoidance" | "attackTool" | "threatActor";
@@ -22,6 +23,7 @@ export interface SearchResult {
 interface IndexableItem {
   id: string;
   title: string;
+  keywords?: string[];
   definition?: string;
   description?: string;
   influence?: string;
@@ -35,40 +37,44 @@ const FUSE_CONFIGS: Record<
 > = {
   risk: {
     keys: [
+      { name: "id", weight: 2.2 },
       { name: "title", weight: 2 },
+      { name: "keywords", weight: 1.6 },
       { name: "definition", weight: 1.5 },
       { name: "description", weight: 1 },
       { name: "influence", weight: 0.5 },
-      { name: "id", weight: 0.3 },
     ],
     i18nPath: "BREAK.risks",
     idKey: "rKey",
   },
   avoidance: {
     keys: [
+      { name: "id", weight: 2.2 },
       { name: "title", weight: 2 },
+      { name: "keywords", weight: 1.6 },
       { name: "definition", weight: 1.5 },
       { name: "description", weight: 1 },
       { name: "limitation", weight: 0.5 },
-      { name: "id", weight: 0.3 },
     ],
     i18nPath: "BREAK.avoidances",
     idKey: "aKey",
   },
   attackTool: {
     keys: [
+      { name: "id", weight: 2.2 },
       { name: "title", weight: 2 },
+      { name: "keywords", weight: 1.6 },
       { name: "description", weight: 1 },
-      { name: "id", weight: 0.3 },
     ],
     i18nPath: "BREAK.attackTools",
     idKey: "atKey",
   },
   threatActor: {
     keys: [
+      { name: "id", weight: 2.2 },
       { name: "title", weight: 2 },
+      { name: "keywords", weight: 1.6 },
       { name: "description", weight: 1 },
-      { name: "id", weight: 0.3 },
     ],
     i18nPath: "BREAK.threatActors",
     idKey: "taKey",
@@ -83,11 +89,6 @@ const BREAK_KEYS: Record<EntityType, keyof typeof BREAK> = {
   threatActor: "threatActors",
 };
 
-/** 通过点分隔路径获取嵌套属性值 */
-function getNestedValue(obj: Record<string, unknown>, path: string): unknown {
-  return path.split('.').reduce((o, k) => (o as Record<string, unknown>)?.[k], obj);
-}
-
 /** 从 i18n messages 构建可索引的实体列表 */
 function buildIndexableItems(
   type: EntityType,
@@ -95,7 +96,7 @@ function buildIndexableItems(
 ): IndexableItem[] {
   const config = FUSE_CONFIGS[type];
   const breakCategory = BREAK[BREAK_KEYS[type]] as Record<string, unknown>;
-  const i18nCategory = getNestedValue(localeMessages, config.i18nPath) as
+  const i18nCategory = getNestedMessageValue(localeMessages, config.i18nPath) as
     | Record<string, Record<string, unknown>>
     | undefined;
 
@@ -109,6 +110,10 @@ function buildIndexableItems(
     items.push({
       id,
       title: (i18nEntity.title as string) || "",
+      keywords: getMessageStringArray(
+        localeMessages,
+        `${config.i18nPath}.${id}.keywords`
+      ),
       definition: (i18nEntity.definition as string) || undefined,
       description: (i18nEntity.description as string) || undefined,
       influence: (i18nEntity.influence as string) || undefined,
@@ -139,10 +144,25 @@ export function extractSnippetForSearch(
   };
 
   if (normalizedQuery) {
-    const searchableFields = ["title", "definition", "description", "influence", "limitation"] as const;
+    const searchableFields = [
+      "title",
+      "keywords",
+      "definition",
+      "description",
+      "influence",
+      "limitation",
+    ] as const;
     for (const fieldName of searchableFields) {
       const fieldValue = item[fieldName];
       if (!fieldValue) continue;
+
+      if (Array.isArray(fieldValue)) {
+        const keywordHit = fieldValue.find((keyword) =>
+          keyword.toLowerCase().includes(normalizedQuery)
+        );
+        if (keywordHit) return keywordHit;
+        continue;
+      }
 
       const matchIndex = fieldValue.toLowerCase().indexOf(normalizedQuery);
       if (matchIndex >= 0) return createSnippet(fieldValue, matchIndex);
@@ -154,8 +174,15 @@ export function extractSnippetForSearch(
   // 取第一个匹配字段，提取包含匹配的片段
   const firstMatch = matches[0];
   const fieldName = firstMatch.key as string;
-  const fieldValue = (item as Record<string, unknown>)[fieldName] as string;
+  const fieldValue = (item as Record<string, unknown>)[fieldName] as string | string[];
   if (!fieldValue) return fallback;
+
+  if (Array.isArray(fieldValue)) {
+    const keywordHit = fieldValue.find((keyword) =>
+      keyword.toLowerCase().includes(normalizedQuery)
+    );
+    return keywordHit || fieldValue[0] || fallback;
+  }
 
   // 截取匹配位置附近的文本（前后各 30 字符）
   const indices = firstMatch.indices;

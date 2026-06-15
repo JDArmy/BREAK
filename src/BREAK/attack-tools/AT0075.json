@@ -30,6 +30,15 @@
         "link": "https://www.splunk.com/en_us/blog/security/unveiling-fake-captcha-clickfix-attacks.html"
       }
     ],
-    "updated": "2026-06-11"
+    "updated": "2026-06-11",
+    "keywords": [
+      "ClickFix欺骗工具",
+      "ClickFix",
+      "假验证码",
+      "fake CAPTCHA",
+      "剪贴板劫持",
+      "PowerShell诱导",
+      "粘贴执行"
+    ]
   }
 }

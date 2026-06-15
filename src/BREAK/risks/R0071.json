@@ -24,7 +24,15 @@
         "link": "https://www.gov.cn/zhengce/zhengceku/202503/content_7014286.htm"
       }
     ],
-    "updated": "2026-06-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "生成式AI风险",
+      "AIGC风险",
+      "大模型风险",
+      "AI生成内容风险",
+      "生成式人工智能风险",
+      "LLM风险"
+    ]
   },
   "R0071-001": {
     "title": "AIGC隐私泄露",
@@ -43,7 +51,16 @@
         "link": "https://new.qq.com/rain/a/20251119A030QT00"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-13",
+    "keywords": [
+      "AIGC隐私泄露",
+      "AI隐私泄露",
+      "大模型隐私泄露",
+      "提示词泄密",
+      "模型泄露敏感信息",
+      "训练数据泄露",
+      "Prompt泄密"
+    ]
   },
   "R0071-002": {
     "title": "AIGC合规风险",
@@ -65,7 +82,16 @@
         "link": "https://www.hnjzlaw.net/news/3/1451.html"
       }
     ],
-    "updated": "2026-06-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "AIGC合规风险",
+      "AI合规风险",
+      "生成式AI合规",
+      "AIGC监管风险",
+      "生成内容合规",
+      "AI内容合规",
+      "内容标识合规"
+    ]
   },
   "R0071-003": {
     "title": "AI生成劣质内容",
@@ -86,7 +112,16 @@
         "link": "https://www.gov.cn/zhengce/zhengceku/202503/content_7014286.htm"
       }
     ],
-    "updated": "2026-06-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "AI生成劣质内容",
+      "AI灌水",
+      "机器洗稿",
+      "批量AI内容",
+      "低质AIGC",
+      "AI垃圾内容",
+      "内容农场"
+    ]
   },
   "R0071-004": {
     "title": "AI幻觉风险",
@@ -106,7 +141,16 @@
         "link": "https://arxiv.org/abs/2311.05232"
       }
     ],
-    "updated": "2026-02-27"
+    "updated": "2026-06-13",
+    "keywords": [
+      "AI幻觉风险",
+      "大模型幻觉",
+      "LLM幻觉",
+      "Hallucination",
+      "编造事实",
+      "虚假引用",
+      "模型胡说"
+    ]
   },
   "R0071-005": {
     "title": "AI模型投毒风险",
@@ -126,6 +170,15 @@
         "link": "https://arxiv.org/abs/2302.10149"
       }
     ],
-    "updated": "2026-02-27"
+    "updated": "2026-06-13",
+    "keywords": [
+      "AI模型投毒风险",
+      "模型投毒",
+      "数据投毒",
+      "后门模型",
+      "训练数据污染",
+      "模型后门",
+      "联邦学习投毒"
+    ]
   }
 }

@@ -9,6 +9,14 @@
       {
         "title": "OWASP Automated Threat: OAT007 Credential Cracking"
       }
+    ],
+    "keywords": [
+      "Account Takeover",
+      "ATO",
+      "account hijacking",
+      "account compromise",
+      "stolen account",
+      "account theft"
     ]
   },
   "R0032-001": {
@@ -21,6 +29,14 @@
       {
         "title": "OWASP Automated Threat: OAT008 Credential Stuffing"
       }
+    ],
+    "keywords": [
+      "Credential Stuffing",
+      "combo list attack",
+      "credential reuse attack",
+      "account checker",
+      "combo checker",
+      "bulk login attempts"
     ]
   },
   "R0032-002": {
@@ -33,6 +49,13 @@
       {
         "title": "OWASP Automated Threat: OAT007 Credential Cracking"
       }
+    ],
+    "keywords": [
+      "Password Spraying",
+      "password spray",
+      "common password attack",
+      "low-and-slow password attack",
+      "one-password-many-accounts"
     ]
   },
   "R0032-003": {
@@ -45,6 +68,13 @@
       {
         "title": "OWASP Automated Threat: OAT007 Credential Cracking"
       }
+    ],
+    "keywords": [
+      "Credential Brute Force",
+      "password brute force",
+      "login brute force",
+      "dictionary attack",
+      "password guessing"
     ]
   },
   "R0032-004": {
@@ -57,6 +87,14 @@
       {
         "title": "Brute Force - MITRE ATT&CK T1110"
       }
+    ],
+    "keywords": [
+      "Verification Code Brute Force",
+      "OTP brute force",
+      "SMS code brute force",
+      "one-time password brute force",
+      "2FA code brute force",
+      "verification code guessing"
     ]
   }
 }

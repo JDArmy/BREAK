@@ -23,6 +23,14 @@
         "link": "https://csrc.nist.gov/pubs/sp/800/207/final"
       }
     ],
-    "updated": "2026-05-28"
+    "updated": "2026-06-11",
+    "keywords": [
+      "非人类身份与API密钥滥用风险",
+      "NHI安全",
+      "服务账号滥用",
+      "API密钥泄露",
+      "机器身份安全",
+      "CI/CD令牌泄露"
+    ]
   }
 }

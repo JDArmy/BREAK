@@ -10,6 +10,8 @@ interface KnowledgeItem {
   id: string;
   title: string;
   subtitle?: string;
+  badge?: string;
+  badgeType?: string;
   searchText?: string;
 }
 
@@ -133,7 +135,10 @@ watch(isMobile, (mobile) => {
           @click="selectItem(item.id)"
         >
           <span class="knowledge-id">{{ item.id }}</span>
-          <span class="knowledge-name">{{ item.title }}</span>
+          <span class="knowledge-name">
+            {{ item.title }}
+            <span v-if="item.badge" class="knowledge-badge" :class="item.badgeType">{{ item.badge }}</span>
+          </span>
           <span v-if="item.subtitle" class="knowledge-subtitle">{{ item.subtitle }}</span>
         </button>
         <div v-if="filteredItems.length === 0" class="knowledge-empty">
@@ -176,7 +181,10 @@ watch(isMobile, (mobile) => {
             @click="selectItem(item.id)"
           >
             <span class="knowledge-id">{{ item.id }}</span>
-            <span class="knowledge-name">{{ item.title }}</span>
+            <span class="knowledge-name">
+              {{ item.title }}
+              <span v-if="item.badge" class="knowledge-badge" :class="item.badgeType">{{ item.badge }}</span>
+            </span>
             <span v-if="item.subtitle" class="knowledge-subtitle">{{ item.subtitle }}</span>
           </button>
           <div v-if="filteredItems.length === 0" class="knowledge-empty">
@@ -270,7 +278,7 @@ watch(isMobile, (mobile) => {
   border: 1px solid transparent;
   border-radius: 6px;
   background: transparent;
-  color: var(--break-text-secondary);
+  color: var(--break-text-primary);
   text-align: left;
   cursor: pointer;
 }
@@ -291,7 +299,7 @@ watch(isMobile, (mobile) => {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   font-size: 12px;
   line-height: 1.25;
-  color: var(--break-text-muted);
+  color: var(--break-text-secondary);
 }
 
 .knowledge-name {
@@ -303,6 +311,67 @@ watch(isMobile, (mobile) => {
   line-height: 1.25;
 }
 
+.knowledge-badge {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 2px 8px;
+  background: var(--break-bg-secondary);
+  border: 1px solid var(--break-border);
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--break-text-secondary);
+  white-space: nowrap;
+}
+
+.knowledge-badge.ac01 {
+  background: #fef3c7;
+  border-color: #fcd34d;
+  color: #78350f;
+}
+
+.knowledge-badge.ac02 {
+  background: #dcfce7;
+  border-color: #86efac;
+  color: #14532d;
+}
+
+.knowledge-badge.ac03 {
+  background: #dbeafe;
+  border-color: #93c5fd;
+  color: #1e3a8a;
+}
+
+.knowledge-badge.ac04 {
+  background: #fce7f3;
+  border-color: #f9a8d4;
+  color: #831843;
+}
+
+html.dark .knowledge-badge.ac01 {
+  background: #78350f;
+  border-color: #f59e0b;
+  color: #fef3c7;
+}
+
+html.dark .knowledge-badge.ac02 {
+  background: #14532d;
+  border-color: #22c55e;
+  color: #dcfce7;
+}
+
+html.dark .knowledge-badge.ac03 {
+  background: #1e3a8a;
+  border-color: #3b82f6;
+  color: #dbeafe;
+}
+
+html.dark .knowledge-badge.ac04 {
+  background: #831843;
+  border-color: #ec4899;
+  color: #fce7f3;
+}
+
 .knowledge-subtitle {
   display: block;
   grid-column: 2;
@@ -311,7 +380,7 @@ watch(isMobile, (mobile) => {
   text-overflow: ellipsis;
   white-space: nowrap;
   font-size: 12px;
-  color: var(--break-text-muted);
+  color: var(--break-text-secondary);
 }
 
 .knowledge-detail {

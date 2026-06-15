@@ -8,6 +8,14 @@
       {
         "title": "Transport Layer Security - Wikipedia"
       }
+    ],
+    "keywords": [
+      "Traffic Encryption",
+      "network encryption",
+      "in-transit encryption",
+      "transport encryption",
+      "TLS",
+      "HTTPS"
     ]
   },
   "A0022-001": {
@@ -19,6 +27,14 @@
       {
         "title": "Transport Layer Security - Wikipedia"
       }
+    ],
+    "keywords": [
+      "Transport Protocol Encryption",
+      "transport encryption",
+      "TLS",
+      "SSL",
+      "protocol encryption",
+      "application-layer encryption"
     ]
   },
   "A0022-002": {
@@ -30,6 +46,14 @@
       {
         "title": "OWASP REST Security Cheat Sheet"
       }
+    ],
+    "keywords": [
+      "Request Data Encryption",
+      "request payload encryption",
+      "encrypted request body",
+      "client-side encryption",
+      "body encryption",
+      "end-to-end request encryption"
     ]
   },
   "A0022-003": {
@@ -41,6 +65,14 @@
       {
         "title": "OWASP REST Security Cheat Sheet"
       }
+    ],
+    "keywords": [
+      "Response Data Encryption",
+      "response payload encryption",
+      "encrypted response body",
+      "server-side encryption",
+      "body encryption",
+      "end-to-end response encryption"
     ]
   },
   "A0022-004": {
@@ -52,6 +84,14 @@
       {
         "title": "OWASP Cryptographic Storage Cheat Sheet"
       }
+    ],
+    "keywords": [
+      "Custom Transport Protocol",
+      "custom protocol",
+      "proprietary protocol",
+      "non-standard protocol",
+      "protocol obfuscation",
+      "custom transport"
     ]
   }
 }

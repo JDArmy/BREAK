@@ -9,6 +9,14 @@
       {
         "title": "What Is Reverse Engineering?"
       }
+    ],
+    "keywords": [
+      "Application Reverse Engineering",
+      "app reversing",
+      "APK decompilation",
+      "source code recovery",
+      "binary analysis",
+      "reverse app logic"
     ]
   },
   "R0051-001": {
@@ -22,6 +30,14 @@
         "title": "MASTG-TEST-0244: Missing Certificate Pinning in Network Traffic - OWASP",
         "link": "https://mas.owasp.org/MASTG/tests/android/MASVS-NETWORK/MASTG-TEST-0244/"
       }
+    ],
+    "keywords": [
+      "Application Traffic Interception",
+      "packet capture",
+      "MITM proxy",
+      "request replay",
+      "traffic sniffing",
+      "API interception"
     ]
   },
   "R0051-002": {
@@ -34,6 +50,14 @@
       {
         "title": "Complete HTTP Request Analysis"
       }
+    ],
+    "keywords": [
+      "HTTP Request Analysis",
+      "HTTP packet capture",
+      "HTTPS interception",
+      "request inspection",
+      "API request analysis",
+      "man-in-the-middle proxy"
     ]
   }
 }

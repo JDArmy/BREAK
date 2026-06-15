@@ -27,7 +27,16 @@
         "link": "https://attack.mitre.org/techniques/T1486/"
       }
     ],
-    "updated": "2026-02-27"
+    "updated": "2026-06-11",
+    "keywords": [
+      "勒索攻击",
+      "勒索软件攻击",
+      "加密勒索",
+      "勒索病毒",
+      "赎金攻击",
+      "数据加密勒索",
+      "Ransomware"
+    ]
   },
   "R0085-001": {
     "title": "勒索即服务(RaaS)",
@@ -49,7 +58,15 @@
         "link": "https://www.cisa.gov/stopransomware"
       }
     ],
-    "updated": "2026-02-27"
+    "updated": "2026-06-11",
+    "keywords": [
+      "勒索即服务(RaaS)",
+      "RaaS",
+      "勒索即服务",
+      "勒索平台加盟",
+      "勒索软件加盟",
+      "黑产SaaS勒索"
+    ]
   },
   "R0085-002": {
     "title": "双重/三重勒索",
@@ -71,6 +88,15 @@
         "link": "https://en.wikipedia.org/wiki/Ransomware"
       }
     ],
-    "updated": "2026-02-27"
+    "updated": "2026-06-11",
+    "keywords": [
+      "双重/三重勒索",
+      "双重勒索",
+      "三重勒索",
+      "泄露勒索",
+      "曝光勒索",
+      "DDoS勒索",
+      "多重勒索"
+    ]
   }
 }

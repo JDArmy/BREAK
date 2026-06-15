@@ -11,7 +11,16 @@
         "link": "https://en.wikipedia.org/wiki/Tamper_resistance"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-11",
+    "keywords": [
+      "防篡改机制",
+      "完整性保护",
+      "防篡改",
+      "数字签名校验",
+      "完整性校验",
+      "哈希校验",
+      "篡改检测"
+    ]
   },
   "A0014-001": {
     "title": "终端防篡改",
@@ -25,7 +34,16 @@
         "link": "https://en.wikipedia.org/wiki/Code_obfuscation"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-11",
+    "keywords": [
+      "终端防篡改",
+      "客户端防篡改",
+      "应用完整性校验",
+      "安装包签名校验",
+      "二次打包检测",
+      "运行时防篡改",
+      "终端完整性保护"
+    ]
   },
   "A0014-002": {
     "title": "服务器防篡改",
@@ -39,6 +57,15 @@
         "link": "https://en.wikipedia.org/wiki/File_integrity_monitoring"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-11",
+    "keywords": [
+      "服务器防篡改",
+      "文件完整性监控",
+      "FIM",
+      "主机防篡改",
+      "网页防篡改",
+      "服务器完整性校验",
+      "基线监控"
+    ]
   }
 }

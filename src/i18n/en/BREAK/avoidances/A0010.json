@@ -8,6 +8,14 @@
       {
         "title": "Device Fingerprint - Wikipedia"
       }
+    ],
+    "keywords": [
+      "Terminal Abnormal Environment Detection",
+      "device fingerprinting",
+      "anomaly detection",
+      "device environment check",
+      "abnormal device detection",
+      "terminal environment detection"
     ]
   },
   "A0010-001": {
@@ -20,6 +28,14 @@
         "title": "MASTG-KNOW-0031: Emulator Detection - OWASP",
         "link": "https://mas.owasp.org/MASTG-KNOW-0031/"
       }
+    ],
+    "keywords": [
+      "Emulator Detection",
+      "emulator check",
+      "Android emulator detection",
+      "virtual device detection",
+      "QEMU detection",
+      "Genymotion detection"
     ]
   },
   "A0010-002": {
@@ -31,6 +47,13 @@
       {
         "title": "NIST Guidelines for Managing the Security of Mobile Devices"
       }
+    ],
+    "keywords": [
+      "Cloud Phone Detection",
+      "cloud phone check",
+      "virtual phone detection",
+      "cloud handset detection",
+      "phone farm detection"
     ]
   },
   "A0010-003": {
@@ -42,6 +65,14 @@
       {
         "title": "Summary of Android Root Detection Methods"
       }
+    ],
+    "keywords": [
+      "ROOT/Jailbreak Detection",
+      "root detection",
+      "jailbreak detection",
+      "rooted device detection",
+      "jailbroken device detection",
+      "anti-rooting"
     ]
   },
   "A0010-004": {
@@ -53,6 +84,15 @@
       {
         "title": "In-Depth Analysis of DMA Hardware Cheat Principles and Detection Techniques"
       }
+    ],
+    "keywords": [
+      "Cheat/Plugin Detection",
+      "anti-cheat",
+      "cheat detection",
+      "plugin detection",
+      "mod menu detection",
+      "game hack detection",
+      "DLL injection detection"
     ]
   },
   "A0010-005": {
@@ -65,6 +105,14 @@
         "title": "MASTG-KNOW-0031: Emulator Detection - OWASP",
         "link": "https://mas.owasp.org/MASTG-KNOW-0031/"
       }
+    ],
+    "keywords": [
+      "Multi-Instance Detection",
+      "multi-instance check",
+      "multi-open detection",
+      "instance limiting",
+      "multi-login detection",
+      "parallel instance detection"
     ]
   },
   "A0010-006": {
@@ -77,6 +125,14 @@
         "title": "MASTG-KNOW-0085: Anti-Debugging Detection - OWASP",
         "link": "https://mas.owasp.org/MASTG-KNOW-0085/"
       }
+    ],
+    "keywords": [
+      "Debugger Detection",
+      "anti-debugging",
+      "debugger check",
+      "debug detection",
+      "process debugging detection",
+      "runtime debugger detection"
     ]
   },
   "A0010-007": {
@@ -88,6 +144,14 @@
       {
         "title": "Virtual Machine Runtime Environment Detection"
       }
+    ],
+    "keywords": [
+      "Virtual Machine Detection",
+      "VM detection",
+      "virtual machine check",
+      "sandbox detection",
+      "hypervisor detection",
+      "virtualized environment detection"
     ]
   },
   "A0010-008": {
@@ -99,6 +163,14 @@
       {
         "title": "National Cybersecurity Awareness Week: Domain Name Theft Should Not Be Underestimated"
       }
+    ],
+    "keywords": [
+      "Headless Browser Detection",
+      "headless Chrome detection",
+      "headless mode detection",
+      "browser automation detection",
+      "bot browser detection",
+      "Puppeteer detection"
     ]
   },
   "A0010-009": {
@@ -110,6 +182,14 @@
       {
         "title": "Android Hook, Detection, and Countermeasures"
       }
+    ],
+    "keywords": [
+      "HOOK Detection",
+      "anti-hooking",
+      "API hooking detection",
+      "runtime hooking detection",
+      "function hooking",
+      "inline hooking"
     ]
   }
 }

@@ -42,7 +42,16 @@
         "link": "https://wenku.baidu.com/view/d5fa02b2a900b52acfc789eb172ded630b1c98fa.html?_wkts_=1698737083175"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-13",
+    "keywords": [
+      "恶意抢购",
+      "恶意抢单",
+      "抢购脚本",
+      "秒杀脚本",
+      "黄牛抢购",
+      "抢购机器人",
+      "秒杀器"
+    ]
   },
   "R0003-001": {
     "title": "秒拍出价",
@@ -92,7 +101,15 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-005_Scalping.html"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-13",
+    "keywords": [
+      "秒拍出价",
+      "秒拍",
+      "秒出价",
+      "抢先出价",
+      "首拍脚本",
+      "第一口价"
+    ]
   },
   "R0003-002": {
     "title": "拍卖狙击",
@@ -138,7 +155,15 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-013_Sniping.html"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-13",
+    "keywords": [
+      "拍卖狙击",
+      "狙击出价",
+      "尾秒出价",
+      "最后一秒出价",
+      "临门出价",
+      "auction sniping"
+    ]
   },
   "R0003-003": {
     "title": "刷子风险",
@@ -191,7 +216,15 @@
         "link": "https://www.moj.gov.cn/pub/sfbgw/flfggz/flfggzbmgz/202104/t20210423_357848.html"
       }
     ],
-    "updated": "2024-01-17"
+    "updated": "2026-06-13",
+    "keywords": [
+      "刷子风险",
+      "刷子",
+      "抢单刷子",
+      "资源刷子",
+      "黄牛脚本",
+      "机器抢单"
+    ]
   },
   "R0003-004": {
     "title": "不正当抢占",
@@ -244,6 +277,14 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-021_Denial_of_Inventory.html"
       }
     ],
-    "updated": "2024/02/05 14:12:41"
+    "updated": "2026-06-13",
+    "keywords": [
+      "不正当抢占",
+      "资源抢占",
+      "资源占坑",
+      "名额抢占",
+      "预约霸占",
+      "号源占用"
+    ]
   }
 }

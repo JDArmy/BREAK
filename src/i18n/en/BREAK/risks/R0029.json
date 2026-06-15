@@ -9,6 +9,15 @@
       {
         "title": "OWASP Automated Threat: OAT-015 Denial of Service"
       }
+    ],
+    "keywords": [
+      "Denial of Service Risk",
+      "DoS",
+      "service disruption",
+      "request flooding",
+      "resource exhaustion",
+      "availability attack",
+      "OAT-015"
     ]
   },
   "R0029-001": {
@@ -21,6 +30,15 @@
       {
         "title": "What to Do When SMS Verification Code Interface Is Under Malicious Attack?"
       }
+    ],
+    "keywords": [
+      "SMS Resource Exhaustion",
+      "SMS bombing",
+      "OTP flooding",
+      "verification code bombing",
+      "SMS flood",
+      "OTP exhaustion",
+      "SMS abuse"
     ]
   },
   "R0029-002": {
@@ -36,6 +54,15 @@
       {
         "title": "OWASP: OAT-015 Denial of Service"
       }
+    ],
+    "keywords": [
+      "Resource Exhaustion Attack",
+      "resource depletion",
+      "application-layer DoS",
+      "compute exhaustion",
+      "bandwidth exhaustion",
+      "storage exhaustion",
+      "SYN flood"
     ]
   },
   "R0029-003": {
@@ -48,6 +75,15 @@
       {
         "title": "OWASP Automated Threat: OAT-015 Denial of Service"
       }
+    ],
+    "keywords": [
+      "CC Attack",
+      "HTTP flood",
+      "challenge collapsar",
+      "layer 7 DoS",
+      "application flood",
+      "web request flood",
+      "CC flood"
     ]
   },
   "R0029-004": {
@@ -61,6 +97,15 @@
         "title": "Understanding and Responding to Distributed Denial-of-Service Attacks - CISA",
         "link": "https://www.cisa.gov/resources-tools/resources/understanding-and-responding-distributed-denial-service-attacks"
       }
+    ],
+    "keywords": [
+      "Distributed Denial of Service",
+      "DDoS",
+      "botnet attack",
+      "reflection attack",
+      "amplification attack",
+      "UDP flood",
+      "application-layer DDoS"
     ]
   }
 }

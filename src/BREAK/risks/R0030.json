@@ -25,7 +25,15 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-019_Account_Creation.html"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-13",
+    "keywords": [
+      "虚假注册",
+      "账号假注册",
+      "伪造身份注册",
+      "垃圾账号注册",
+      "黑产注册",
+      "虚假开户"
+    ]
   },
   "R0030-001": {
     "title": "批量注册",
@@ -52,7 +60,15 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-019_Account_Creation.html"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-13",
+    "keywords": [
+      "批量注册",
+      "批量起号",
+      "批量开号",
+      "机器注册",
+      "注册机",
+      "海量注册"
+    ]
   },
   "R0030-002": {
     "title": "三方账号风险",
@@ -71,7 +87,15 @@
         "link": "https://zhidao.baidu.com/question/1437455763683359379.html"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-13",
+    "keywords": [
+      "三方账号风险",
+      "第三方登录注册",
+      "联合登录绕过",
+      "三方联登",
+      "社交登录绕过",
+      "OAuth注册滥用"
+    ]
   },
   "R0030-003": {
     "title": "海外号注册",
@@ -91,7 +115,15 @@
         "link": "https://www.moj.gov.cn/pub/sfbgw/flfggz/flfggzbmgz/201311/t20131119_145359.html"
       }
     ],
-    "updated": "2024-01-18"
+    "updated": "2026-06-13",
+    "keywords": [
+      "海外号注册",
+      "境外号注册",
+      "国外手机号注册",
+      "海外手机号批量注册",
+      "国际号注册",
+      "境外短信号"
+    ]
   },
   "R0030-004": {
     "title": "空号注册",
@@ -112,7 +144,15 @@
         "link": "https://new.qq.com/rain/a/20260228A06D4S00"
       }
     ],
-    "updated": "2024-01-18"
+    "updated": "2026-06-13",
+    "keywords": [
+      "空号注册",
+      "空号",
+      "未激活号注册",
+      "运营商空号",
+      "空卡注册",
+      "空号验证码"
+    ]
   },
   "R0030-005": {
     "title": "虚拟号注册",
@@ -132,7 +172,15 @@
         "link": "https://www.mps.gov.cn/n6557558/c7942172/content.html"
       }
     ],
-    "updated": "2024-01-18"
+    "updated": "2026-06-13",
+    "keywords": [
+      "虚拟号注册",
+      "虚卡注册",
+      "虚商号注册",
+      "虚拟运营商注册",
+      "170号段注册",
+      "接码号注册"
+    ]
   },
   "R0030-006": {
     "title": "物联网卡注册",
@@ -152,7 +200,14 @@
         "link": "https://www.mps.gov.cn/n6557558/c7942172/content.html"
       }
     ],
-    "updated": "2024-01-18"
+    "updated": "2026-06-13",
+    "keywords": [
+      "物联网卡注册",
+      "物联卡注册",
+      "IoT卡注册",
+      "流量卡注册",
+      "机卡注册"
+    ]
   },
   "R0030-007": {
     "title": "拦截卡注册",
@@ -172,6 +227,14 @@
         "link": "https://www.mps.gov.cn/n6557558/c7942172/content.html"
       }
     ],
-    "updated": "2024-01-18"
+    "updated": "2026-06-13",
+    "keywords": [
+      "拦截卡注册",
+      "拦截卡",
+      "短信拦截卡",
+      "验证码拦截卡",
+      "截码卡",
+      "后门插卡设备"
+    ]
   }
 }

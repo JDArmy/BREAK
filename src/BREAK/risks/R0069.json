@@ -17,7 +17,15 @@
         "link": "https://view.inews.qq.com/a/20260527A030GJ00"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-11",
+    "keywords": [
+      "上传滥用",
+      "文件上传滥用",
+      "上传接口滥用",
+      "非法文件托管",
+      "上传存储滥用",
+      "违规内容上传"
+    ]
   },
   "R0069-001": {
     "title": "图床滥用",
@@ -37,7 +45,16 @@
         "link": "https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-11",
+    "keywords": [
+      "图床滥用",
+      "免费图床",
+      "图床外链",
+      "图片外链滥用",
+      "以图存视频",
+      "图床存视频",
+      "图片托管滥用"
+    ]
   },
   "R0069-002": {
     "title": "云存储滥用",
@@ -58,6 +75,15 @@
         "link": "https://help.aliyun.com/zh/oss/security-best-practices"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-11",
+    "keywords": [
+      "云存储滥用",
+      "对象存储滥用",
+      "OSS滥用",
+      "云盘滥用",
+      "网盘滥用",
+      "存储桶滥用",
+      "云存储外链"
+    ]
   }
 }

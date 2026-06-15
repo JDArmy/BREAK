@@ -19,6 +19,15 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-011_Scraping.html"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-11",
+    "keywords": [
+      "数据渗出风险",
+      "数据泄露",
+      "数据外流",
+      "data exfiltration",
+      "敏感数据泄漏",
+      "隐私泄露",
+      "数据导出滥用"
+    ]
   }
 }

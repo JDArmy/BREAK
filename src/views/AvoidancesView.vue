@@ -5,10 +5,11 @@ import { useI18n } from "vue-i18n";
 import BREAK from "@/BREAK";
 import KnowledgeSplitView from "@/components/KnowledgeSplitView.vue";
 import ReferenceList from "@/components/ReferenceList.vue";
+import { getMessageStringArray } from "@/utils/i18nMessage";
 
 const route = useRoute();
 const router = useRouter();
-const { t } = useI18n();
+const { t, locale, messages } = useI18n();
 
 const avoidanceKeys = Object.keys(BREAK.avoidances);
 // 优先从路由参数获取，否则从 hash 获取，最后使用默认值
@@ -45,12 +46,19 @@ const avoidanceItems = computed(() =>
         ? t(`BREAK.avoidances.${aKey}.limitation`)
         : "";
       const categoryTitle = t(`BREAK.avoidanceCategories.${category}.title`);
+      const localeMessages = messages.value[locale.value] as Record<string, unknown>;
+      const keywords = getMessageStringArray(
+        localeMessages,
+        `BREAK.avoidances.${aKey}.keywords`
+      );
 
       return {
         id: aKey,
         title,
-        subtitle: `${category}: ${categoryTitle}`,
-        searchText: [title, definition, description, limitation, category, categoryTitle]
+        badge: `${category}: ${categoryTitle}`,
+        badgeType: category.toLowerCase(),
+        subtitle: definition.slice(0, 50),
+        searchText: [title, ...keywords, definition, description, limitation, category, categoryTitle]
           .filter(Boolean)
           .join(" "),
       };
@@ -139,6 +147,14 @@ const openRelationGraph = (aKey: string) => {
         <h3>{{ $t("limitation") }}</h3>
         <p>{{ $t(`BREAK.avoidances.${selectedAvoidanceKey}.limitation`) }}</p>
       </section>
+      <section v-if="selectedAvoidance.keywords?.length" class="detail-section">
+        <h3>{{ $t("keywords") }}</h3>
+        <div class="keywords">
+          <span v-for="(keyword, index) in selectedAvoidance.keywords" :key="index" class="keyword-tag">
+            {{ keyword }}
+          </span>
+        </div>
+      </section>
       <section class="detail-section">
         <h3>{{ $t("menu.avoidances") }}</h3>
         <p>
@@ -176,6 +192,10 @@ const openRelationGraph = (aKey: string) => {
         <h3>{{ $t("references") }}</h3>
         <ReferenceList type="avoidances" :entity-key="selectedAvoidanceKey" />
       </section>
+      <section v-if="selectedAvoidance.updated" class="detail-section">
+        <h3>{{ $t("lastUpdated") }}</h3>
+        <p class="text-muted">{{ selectedAvoidance.updated }}</p>
+      </section>
     </article>
   </KnowledgeSplitView>
 </template>
@@ -183,5 +203,26 @@ const openRelationGraph = (aKey: string) => {
 <style scoped>
 .avoidance-category-filter {
   flex: 0 0 96px;
+}
+
+.keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.keyword-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--break-bg-secondary);
+  border: 1px solid var(--break-border);
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: var(--break-text-secondary);
+}
+
+.text-muted {
+  color: var(--break-text-muted);
+  font-size: 0.9em;
 }
 </style>

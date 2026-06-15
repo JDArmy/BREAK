@@ -38,12 +38,24 @@ export const createSankeyChartController = ({
       sankeyChart = init(sankeyChartRef.value);
     }
     sankeyChartRef.value.style.height = `${sankeyChartHeight.value}px`;
+    const style = getComputedStyle(document.documentElement);
+    const tooltipBackground = style.getPropertyValue("--break-tooltip-bg").trim();
+    const tooltipBorder = style.getPropertyValue("--break-tooltip-border").trim();
+    const tooltipText = style.getPropertyValue("--break-tooltip-text").trim();
 
     sankeyChart.setOption({
-      backgroundColor: isDark.value ? "#0f172a" : "#ffffff",
+      backgroundColor: getComputedStyle(document.documentElement)
+        .getPropertyValue("--break-bg-primary")
+        .trim(),
       tooltip: {
         trigger: "item",
         triggerOn: "mousemove",
+        backgroundColor: tooltipBackground,
+        borderColor: tooltipBorder,
+        borderWidth: 1,
+        textStyle: {
+          color: tooltipText,
+        },
         formatter: (params: {
           dataType?: string;
           name?: string;
@@ -85,14 +97,18 @@ export const createSankeyChartController = ({
             opacity: isDark.value ? 0.28 : 0.36,
           },
           label: {
-            color: isDark.value ? "#e2e8f0" : "#334155",
+            color: getComputedStyle(document.documentElement)
+              .getPropertyValue("--break-text-primary")
+              .trim(),
             fontSize: 12,
             width: sankeyLabelWidth.value,
             overflow: "truncate",
             ellipsis: "...",
           },
           itemStyle: {
-            borderColor: isDark.value ? "#334155" : "#e2e8f0",
+            borderColor: getComputedStyle(document.documentElement)
+              .getPropertyValue("--break-border")
+              .trim(),
             borderWidth: 1,
           },
         },

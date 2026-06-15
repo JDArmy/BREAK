@@ -18,6 +18,16 @@ function loadAllJson(dir: string): Record<string, Record<string, unknown>> {
   return result;
 }
 
+function normalizeKeyword(value: unknown): string {
+  return String(value ?? "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function normalizedLower(value: unknown): string {
+  return normalizeKeyword(value).toLowerCase();
+}
+
 const ROOT = "src/BREAK";
 const I18N_EN_ROOT = "src/i18n/en/BREAK";
 
@@ -80,6 +90,83 @@ describe("数据完整性", () => {
         if (!entity.description) missing.push(`${id}.description`);
       }
       expect(missing, `缺少必填字段: ${missing.join(", ")}`).toEqual([]);
+    });
+
+    it("所有 Risk 条目均含 keywords", () => {
+      const missing: string[] = [];
+      for (const [id, entity] of Object.entries(risks)) {
+        if (!Array.isArray(entity.keywords) || entity.keywords.length === 0) {
+          missing.push(`${id}.keywords`);
+        }
+      }
+      expect(missing, `缺少 keywords: ${missing.join(", ")}`).toEqual([]);
+    });
+
+    it("所有 Avoidance 条目均含 keywords", () => {
+      const missing: string[] = [];
+      for (const [id, entity] of Object.entries(avoidances)) {
+        if (!Array.isArray(entity.keywords) || entity.keywords.length === 0) {
+          missing.push(`${id}.keywords`);
+        }
+      }
+      expect(missing, `缺少 keywords: ${missing.join(", ")}`).toEqual([]);
+    });
+
+    it("所有 AttackTool 条目均含 keywords", () => {
+      const missing: string[] = [];
+      for (const [id, entity] of Object.entries(attackTools)) {
+        if (!Array.isArray(entity.keywords) || entity.keywords.length === 0) {
+          missing.push(`${id}.keywords`);
+        }
+      }
+      expect(missing, `缺少 keywords: ${missing.join(", ")}`).toEqual([]);
+    });
+
+    it("所有 ThreatActor 条目均含 keywords", () => {
+      const missing: string[] = [];
+      for (const [id, entity] of Object.entries(threatActors)) {
+        if (!Array.isArray(entity.keywords) || entity.keywords.length === 0) {
+          missing.push(`${id}.keywords`);
+        }
+      }
+      expect(missing, `缺少 keywords: ${missing.join(", ")}`).toEqual([]);
+    });
+
+    it("所有关键词不得存在大小写意义上的重复，也不得直接复写 title", () => {
+      const issues: string[] = [];
+      const allEntities = [
+        ...Object.entries(risks).map(([id, e]) => [id, e] as const),
+        ...Object.entries(avoidances).map(([id, e]) => [id, e] as const),
+        ...Object.entries(attackTools).map(([id, e]) => [id, e] as const),
+        ...Object.entries(threatActors).map(([id, e]) => [id, e] as const),
+      ];
+
+      for (const [id, entity] of allEntities) {
+        const titleNormalized = normalizeKeyword(entity.title);
+        const titleLower = normalizedLower(entity.title);
+        const keywords = Array.isArray(entity.keywords) ? entity.keywords : [];
+        const normalized = keywords.map(normalizedLower).filter(Boolean);
+        const duplicates = normalized.filter((item, index) => normalized.indexOf(item) !== index);
+        const titleMatches = keywords
+          .map((item) => normalizeKeyword(item))
+          .filter((item) => normalizedLower(item) === titleLower);
+
+        if (duplicates.length > 0) {
+          issues.push(`${id}: duplicate keywords -> ${[...new Set(duplicates)].join(", ")}`);
+        }
+
+        if (titleLower) {
+          if (titleMatches.length === 0) {
+            issues.push(`${id}: missing title keyword`);
+          } else if (titleMatches.length > 1) {
+            issues.push(`${id}: title duplicated in keywords`);
+          } else if (titleMatches[0] !== titleNormalized) {
+            issues.push(`${id}: title keyword casing drift`);
+          }
+        }
+      }
+
+      expect(issues, `关键词质量问题: ${issues.slice(0, 10).join(", ")}`).toEqual([]);
     });
 
     it("所有 Reference 均含 link 和 title", () => {

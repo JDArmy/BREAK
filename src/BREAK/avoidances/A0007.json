@@ -15,7 +15,16 @@
         "link": "https://pages.nist.gov/800-63-3/sp800-63b.html"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "多因素验证",
+      "MFA",
+      "2FA",
+      "双因素认证",
+      "多因子认证",
+      "二次验证",
+      "二步验证"
+    ]
   },
   "A0007-001": {
     "title": "短信验证",
@@ -29,7 +38,16 @@
         "link": "https://sakari.io/blog/what-is-sms-otp"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "短信验证",
+      "短信验证码",
+      "SMS验证",
+      "短信OTP",
+      "手机验证码",
+      "短信二次验证",
+      "短信校验"
+    ]
   },
   "A0007-002": {
     "title": "邮箱验证",
@@ -43,7 +61,16 @@
         "link": "https://en.wikipedia.org/wiki/Multi-factor_authentication"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "邮箱验证",
+      "邮箱验证码",
+      "邮件验证",
+      "Email验证",
+      "邮箱OTP",
+      "邮件二次验证",
+      "邮箱校验"
+    ]
   },
   "A0007-003": {
     "title": "一次性密码",
@@ -57,7 +84,17 @@
         "link": "https://m.163.com/dy/article/I2H92SPP0518STKV.html"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "一次性密码",
+      "OTP",
+      "TOTP",
+      "动态口令",
+      "一次性口令",
+      "令牌验证码",
+      "Authenticator",
+      "谷歌验证器"
+    ]
   },
   "A0007-004": {
     "title": "电话语音验证",
@@ -71,7 +108,16 @@
         "link": "https://pages.nist.gov/800-63-3/sp800-63b.html"
       }
     ],
-    "updated": "2024-01-16"
+    "updated": "2026-06-13",
+    "keywords": [
+      "电话语音验证",
+      "语音验证",
+      "电话验证",
+      "语音OTP",
+      "外呼验证",
+      "电话回呼验证",
+      "语音验证码"
+    ]
   },
   "A0007-005": {
     "title": "通行密钥/防钓鱼认证",
@@ -89,6 +135,16 @@
         "link": "https://fidoalliance.org/cisa-secure-by-demand-guide-phishing-resistant-authentication-passkeys-by-default/"
       }
     ],
-    "updated": "2026-05-28"
+    "updated": "2026-06-13",
+    "keywords": [
+      "通行密钥/防钓鱼认证",
+      "通行密钥",
+      "Passkey",
+      "防钓鱼认证",
+      "抗钓鱼认证",
+      "FIDO2",
+      "WebAuthn",
+      "无密码登录"
+    ]
   }
 }

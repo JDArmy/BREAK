@@ -9,6 +9,11 @@
         "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",
         "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
       }
+    ],
+    "keywords": [
+      "data masking",
+      "data perturbation",
+      "data redaction"
     ]
   },
   "A0034-001": {
@@ -21,6 +26,11 @@
         "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",
         "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
       }
+    ],
+    "keywords": [
+      "numeric masking",
+      "value rounding",
+      "value bucketing"
     ]
   },
   "A0034-002": {
@@ -33,6 +43,11 @@
         "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",
         "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
       }
+    ],
+    "keywords": [
+      "ordinal encoding",
+      "numeric binning",
+      "value mapping"
     ]
   },
   "A0034-003": {
@@ -45,6 +60,11 @@
         "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",
         "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
       }
+    ],
+    "keywords": [
+      "status code masking",
+      "error code obfuscation",
+      "response masking"
     ]
   }
 }

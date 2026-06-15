@@ -12,6 +12,14 @@
       {
         "title": "NIST SP 800-63B: Digital Identity Guidelines - Authentication and Lifecycle Management"
       }
+    ],
+    "keywords": [
+      "Multi-Factor Authentication",
+      "MFA",
+      "2FA",
+      "two-factor authentication",
+      "two-step verification",
+      "step-up authentication"
     ]
   },
   "A0007-001": {
@@ -23,6 +31,13 @@
       {
         "title": "SMS OTP (One-Time Password) Verification: Quick Start Guide"
       }
+    ],
+    "keywords": [
+      "SMS Verification",
+      "SMS OTP",
+      "text message verification",
+      "SMS code",
+      "phone verification code"
     ]
   },
   "A0007-002": {
@@ -34,6 +49,13 @@
       {
         "title": "Multi-Factor Authentication - Wikipedia"
       }
+    ],
+    "keywords": [
+      "Email Verification",
+      "email OTP",
+      "email code",
+      "email confirmation",
+      "mailbox verification"
     ]
   },
   "A0007-003": {
@@ -45,6 +67,15 @@
       {
         "title": "Nearly 1,000 Data Breaches in Q1 2023, Affecting 1,204 Companies Across 38 Industries"
       }
+    ],
+    "keywords": [
+      "One-Time Password",
+      "OTP",
+      "one-time code",
+      "passcode",
+      "verification code",
+      "TOTP",
+      "HOTP"
     ]
   },
   "A0007-004": {
@@ -57,6 +88,13 @@
         "title": "Digital Identity Guidelines: Authentication and Lifecycle Management - NIST SP 800-63B",
         "link": "https://pages.nist.gov/800-63-3/sp800-63b.html"
       }
+    ],
+    "keywords": [
+      "Phone Voice Verification",
+      "voice verification",
+      "voice OTP",
+      "call verification",
+      "IVR verification"
     ]
   },
   "A0007-005": {
@@ -71,6 +109,15 @@
       {
         "title": "CISA Secure by Demand Guide: Phishing-Resistant Authentication"
       }
+    ],
+    "keywords": [
+      "Passkeys / Phishing-Resistant Authentication",
+      "passkeys",
+      "phishing-resistant auth",
+      "passwordless login",
+      "FIDO2",
+      "WebAuthn",
+      "anti-phishing MFA"
     ]
   }
 }

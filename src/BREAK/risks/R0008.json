@@ -20,7 +20,16 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-003_Ad_Fraud.html"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-13",
+    "keywords": [
+      "广告欺诈",
+      "广告作弊",
+      "ad fraud",
+      "广告流量作弊",
+      "虚假流量",
+      "广告套利",
+      "广告刷量"
+    ]
   },
   "R0008-001": {
     "title": "广告劫持",
@@ -39,7 +48,15 @@
         "link": "https://attack.mitre.org/techniques/T1176/"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-13",
+    "keywords": [
+      "广告劫持",
+      "广告跳转劫持",
+      "广告链接篡改",
+      "渠道劫持",
+      "佣金劫持",
+      "affiliate hijacking"
+    ]
   },
   "R0008-002": {
     "title": "虚假点击",
@@ -65,7 +82,15 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-003_Ad_Fraud.html"
       }
     ],
-    "updated": "2024-01-16"
+    "updated": "2026-06-13",
+    "keywords": [
+      "虚假点击",
+      "刷点击",
+      "点击欺诈",
+      "点击农场",
+      "click fraud",
+      "广告点击作弊"
+    ]
   },
   "R0008-003": {
     "title": "虚假安装",
@@ -89,7 +114,15 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-003_Ad_Fraud.html"
       }
     ],
-    "updated": "2024-01-18"
+    "updated": "2026-06-13",
+    "keywords": [
+      "虚假安装",
+      "刷安装",
+      "安装欺诈",
+      "假安装",
+      "install fraud",
+      "激活作弊"
+    ]
   },
   "R0008-004": {
     "title": "展示欺诈",
@@ -111,7 +144,15 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-003_Ad_Fraud.html"
       }
     ],
-    "updated": "2024-01-18"
+    "updated": "2026-06-13",
+    "keywords": [
+      "展示欺诈",
+      "刷展示",
+      "曝光欺诈",
+      "impression fraud",
+      "虚假曝光",
+      "广告展示作弊"
+    ]
   },
   "R0008-005": {
     "title": "流量归因欺诈",
@@ -135,6 +176,14 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-003_Ad_Fraud.html"
       }
     ],
-    "updated": "2024-01-18"
+    "updated": "2026-06-13",
+    "keywords": [
+      "流量归因欺诈",
+      "归因作弊",
+      "归因劫持",
+      "渠道归因作弊",
+      "CPA归因作弊",
+      "CPS归因作弊"
+    ]
   }
 }

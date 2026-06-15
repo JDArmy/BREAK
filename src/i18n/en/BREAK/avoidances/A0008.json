@@ -8,6 +8,14 @@
       {
         "title": "High Availability - Wikipedia"
       }
+    ],
+    "keywords": [
+      "Improving Service Availability",
+      "high availability",
+      "uptime improvement",
+      "service resilience",
+      "fault tolerance",
+      "service continuity"
     ]
   },
   "A0008-001": {
@@ -19,6 +27,14 @@
       {
         "title": "Auto Scaling - Wikipedia"
       }
+    ],
+    "keywords": [
+      "Adding Computing Resources",
+      "autoscaling",
+      "horizontal scaling",
+      "capacity scaling",
+      "scale out",
+      "elastic scaling"
     ]
   },
   "A0008-002": {
@@ -30,6 +46,14 @@
       {
         "title": "Denial of Service Attack - Wikipedia"
       }
+    ],
+    "keywords": [
+      "DDoS Protection",
+      "DDoS mitigation",
+      "anti-DDoS",
+      "traffic scrubbing",
+      "volumetric attack defense",
+      "L7 DDoS protection"
     ]
   },
   "A0008-003": {
@@ -42,6 +66,14 @@
         "title": "What is Amazon CloudFront? - AWS Documentation",
         "link": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html"
       }
+    ],
+    "keywords": [
+      "Front-End CDN",
+      "CDN",
+      "content delivery network",
+      "edge caching",
+      "static asset delivery",
+      "web acceleration"
     ]
   },
   "A0008-004": {
@@ -53,6 +85,14 @@
       {
         "title": "Business Continuity - Wikipedia"
       }
+    ],
+    "keywords": [
+      "Business System Optimization",
+      "system optimization",
+      "performance tuning",
+      "process optimization",
+      "throughput improvement",
+      "latency reduction"
     ]
   },
   "A0008-005": {
@@ -64,6 +104,14 @@
       {
         "title": "Cloud Computing - Wikipedia"
       }
+    ],
+    "keywords": [
+      "Increasing Business Resources",
+      "capacity expansion",
+      "resource scaling",
+      "inventory expansion",
+      "quota increase",
+      "staffing increase"
     ]
   }
 }

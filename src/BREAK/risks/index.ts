@@ -7,6 +7,7 @@ interface Reference {
 
 interface Risk {
   title: string;
+  keywords: string[];
   definition: string;
   description: string;
   complexity: string;

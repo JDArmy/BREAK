@@ -12,6 +12,15 @@
       {
         "title": "T1566 Phishing - MITRE ATT&CK"
       }
+    ],
+    "keywords": [
+      "Phishing Attack",
+      "email phishing",
+      "spear phishing",
+      "credential harvesting",
+      "clone phishing",
+      "vishing",
+      "smishing"
     ]
   },
   "R0084-001": {
@@ -24,6 +33,15 @@
       {
         "title": "AI-Enhanced Phishing Threats - NCSC"
       }
+    ],
+    "keywords": [
+      "AI-Enhanced Phishing Attack",
+      "AI phishing",
+      "LLM phishing",
+      "deepfake phishing",
+      "multilingual phishing",
+      "adaptive phishing",
+      "vishing"
     ]
   }
 }

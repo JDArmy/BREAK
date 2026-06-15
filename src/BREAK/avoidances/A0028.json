@@ -11,7 +11,16 @@
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "资源访问限制",
+      "资源限访",
+      "访问限制",
+      "资源保护",
+      "下载限制",
+      "访问控制",
+      "资源权限控制"
+    ]
   },
   "A0028-001": {
     "title": "限制外站访问",
@@ -25,6 +34,15 @@
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "限制外站访问",
+      "防盗链",
+      "Referer防盗链",
+      "外链限制",
+      "热链保护",
+      "图片防盗链",
+      "资源防盗链"
+    ]
   }
 }

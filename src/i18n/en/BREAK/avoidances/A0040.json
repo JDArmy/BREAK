@@ -9,6 +9,11 @@
         "title": "MASTG-TEST-0244: Missing Certificate Pinning in Network Traffic - OWASP",
         "link": "https://mas.owasp.org/MASTG/tests/android/MASVS-NETWORK/MASTG-TEST-0244/"
       }
+    ],
+    "keywords": [
+      "TLS pinning",
+      "public key pinning",
+      "certificate trust pinning"
     ]
   }
 }

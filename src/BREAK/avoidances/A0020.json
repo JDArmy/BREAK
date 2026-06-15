@@ -11,7 +11,16 @@
         "link": "https://owasp.org/www-community/controls/Blocking_Brute_Force_Attacks"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-11",
+    "keywords": [
+      "账号处罚",
+      "账号惩戒",
+      "账户处罚",
+      "账号管控",
+      "违规处置",
+      "处罚策略",
+      "身份处罚"
+    ]
   },
   "A0020-001": {
     "title": "店铺处罚",
@@ -25,7 +34,16 @@
         "link": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/xwxcs/art/2023/art_36461cc80e004ad0afa7daef05ee1f9e.html"
       }
     ],
-    "updated": "2026-05-27"
+    "updated": "2026-06-11",
+    "keywords": [
+      "店铺处罚",
+      "店铺惩戒",
+      "商家处罚",
+      "店铺扣分",
+      "商品下架",
+      "店铺封禁",
+      "店铺降权"
+    ]
   },
   "A0020-002": {
     "title": "员工处罚",
@@ -39,7 +57,16 @@
         "link": "https://www.thepaper.cn/tag/7200885"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-11",
+    "keywords": [
+      "员工处罚",
+      "员工惩戒",
+      "内部处罚",
+      "绩效处罚",
+      "停职处理",
+      "降职处分",
+      "纪律处分"
+    ]
   },
   "A0020-003": {
     "title": "账号封禁",
@@ -53,6 +80,15 @@
         "link": "https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final"
       }
     ],
-    "updated": "2024-01-19"
+    "updated": "2026-06-11",
+    "keywords": [
+      "账号封禁",
+      "封号",
+      "账号冻结",
+      "账号停用",
+      "账户封禁",
+      "拉黑账号",
+      "账号禁用"
+    ]
   }
 }

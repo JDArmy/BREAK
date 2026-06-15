@@ -6,6 +6,14 @@
       {
         "title": "Hardware Additions - MITRE ATT&CK T1200"
       }
+    ],
+    "keywords": [
+      "Malicious Peripherals",
+      "rogue USB device",
+      "malicious USB",
+      "weaponized peripheral",
+      "USB attack device",
+      "hardware implant"
     ]
   },
   "AT0052-001": {
@@ -16,6 +24,13 @@
         "title": "Kon-Boot FAQ / Troubleshooting",
         "link": "https://kon-boot.com/docs/faq/"
       }
+    ],
+    "keywords": [
+      "KON-Boot",
+      "password bypass tool",
+      "Windows password bypass",
+      "macOS password bypass",
+      "bootable login bypass"
     ]
   },
   "AT0052-002": {
@@ -25,6 +40,13 @@
       {
         "title": "Nearly 1,000 Data Breaches in Q1 2023, Affecting 1,204 Companies Across 38 Industries"
       }
+    ],
+    "keywords": [
+      "USB Killer",
+      "USB kill stick",
+      "USB voltage attack",
+      "power surge USB device",
+      "hardware destruction USB"
     ]
   },
   "AT0052-003": {
@@ -35,6 +57,14 @@
         "title": "BadUSB - On Accessories that Turn Evil - Black Hat USA 2014",
         "link": "https://blackhat.com/us-14/video/badusb-on-accessories-that-turn-evil.html"
       }
+    ],
+    "keywords": [
+      "BadUSB",
+      "USB firmware attack",
+      "malicious HID",
+      "HID spoofing",
+      "keystroke injection USB",
+      "Rubber Ducky"
     ]
   }
 }

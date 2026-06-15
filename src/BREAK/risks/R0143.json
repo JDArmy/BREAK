@@ -23,6 +23,14 @@
         "link": "https://portswigger.net/web-security/oauth"
       }
     ],
-    "updated": "2026-02-27"
+    "updated": "2026-06-11",
+    "keywords": [
+      "OAuth/SSO授权滥用",
+      "OAuth滥用",
+      "SSO漏洞",
+      "授权码劫持",
+      "令牌劫持",
+      "第三方登录漏洞"
+    ]
   }
 }

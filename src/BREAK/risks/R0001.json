@@ -55,7 +55,16 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-006_Expediting.html"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-11",
+    "keywords": [
+      "流程自动化",
+      "自动化脚本",
+      "业务自动化",
+      "自动做任务",
+      "自动签到",
+      "自动领券",
+      "批量操作"
+    ]
   },
   "R0001-001": {
     "title": "协议级自动化",
@@ -91,7 +100,15 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-011_Scraping.html"
       }
     ],
-    "updated": "2024-01-16"
+    "updated": "2026-06-11",
+    "keywords": [
+      "协议级自动化",
+      "接口自动化",
+      "API自动化",
+      "协议脚本",
+      "直连接口",
+      "请求重放"
+    ]
   },
   "R0001-002": {
     "title": "自动化模拟器",
@@ -143,6 +160,14 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-020_Account_Aggregation.html"
       }
     ],
-    "updated": "2024-01-16"
+    "updated": "2026-06-11",
+    "keywords": [
+      "自动化模拟器",
+      "模拟器脚本",
+      "UI自动化",
+      "自动点击",
+      "录制回放",
+      "群控操作"
+    ]
   }
 }

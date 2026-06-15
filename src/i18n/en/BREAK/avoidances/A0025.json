@@ -12,6 +12,11 @@
       {
         "title": "RFC 5280: Internet X.509 Public Key Infrastructure Certificate and CRL Profile"
       }
+    ],
+    "keywords": [
+      "X.509 certificate",
+      "PKI certificate",
+      "public key certificate"
     ]
   },
   "A0025-001": {
@@ -24,6 +29,11 @@
         "title": "Recommendation for Key Management - NIST SP 800-57 Part 1 Rev. 5",
         "link": "https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final"
       }
+    ],
+    "keywords": [
+      "S/MIME",
+      "email signing certificate",
+      "email encryption certificate"
     ]
   },
   "A0025-002": {
@@ -36,6 +46,11 @@
         "title": "Transport Layer Security Cheat Sheet - OWASP",
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Security_Cheat_Sheet.html"
       }
+    ],
+    "keywords": [
+      "SSL certificate",
+      "TLS certificate",
+      "server certificate"
     ]
   },
   "A0025-003": {
@@ -48,6 +63,11 @@
         "title": "Recommendation for Key Management - NIST SP 800-57 Part 1 Rev. 5",
         "link": "https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final"
       }
+    ],
+    "keywords": [
+      "electronic seal",
+      "e-seal",
+      "digital seal"
     ]
   },
   "A0025-004": {
@@ -60,6 +80,11 @@
         "title": "FIDO2: Moving the World Beyond Passwords",
         "link": "https://fidoalliance.org/fido2/"
       }
+    ],
+    "keywords": [
+      "USB token",
+      "hardware token",
+      "smart card certificate"
     ]
   }
 }

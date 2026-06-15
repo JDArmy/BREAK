@@ -23,7 +23,16 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-007_Credential_Cracking.html"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-13",
+    "keywords": [
+      "账号盗取",
+      "盗号",
+      "账号接管",
+      "ATO",
+      "账户被盗",
+      "凭证被盗",
+      "钓鱼盗号"
+    ]
   },
   "R0032-001": {
     "title": "撞库(凭证填充)",
@@ -53,7 +62,16 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-008_Credential_Stuffing.html"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-13",
+    "keywords": [
+      "撞库(凭证填充)",
+      "撞库",
+      "凭证填充",
+      "批量试密",
+      "账号撞库",
+      "credential stuffing",
+      "泄露密码碰撞"
+    ]
   },
   "R0032-002": {
     "title": "密码喷射",
@@ -83,7 +101,14 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-007_Credential_Cracking.html"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-13",
+    "keywords": [
+      "密码喷射",
+      "口令喷射",
+      "弱口令喷射",
+      "password spraying",
+      "批量弱密码尝试"
+    ]
   },
   "R0032-003": {
     "title": "凭证爆破",
@@ -114,7 +139,14 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-007_Credential_Cracking.html"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-13",
+    "keywords": [
+      "凭证爆破",
+      "密码爆破",
+      "暴力破解账号",
+      "字典爆破",
+      "brute force登录"
+    ]
   },
   "R0032-004": {
     "title": "验证码暴破",
@@ -143,6 +175,13 @@
         "link": "https://attack.mitre.org/techniques/T1110/"
       }
     ],
-    "updated": "2024-01-16"
+    "updated": "2026-06-13",
+    "keywords": [
+      "验证码暴破",
+      "验证码爆破",
+      "短信码爆破",
+      "OTP爆破",
+      "验证码穷举"
+    ]
   }
 }

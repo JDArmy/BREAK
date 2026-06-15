@@ -9,6 +9,14 @@
       {
         "title": "Supply chain attack - Wikipedia"
       }
+    ],
+    "keywords": [
+      "Supply Chain Risk",
+      "supply chain attack",
+      "supply chain compromise",
+      "third-party risk",
+      "supplier compromise",
+      "upstream compromise"
     ]
   },
   "R0081-001": {
@@ -21,6 +29,14 @@
       {
         "title": "Supply chain attack - Wikipedia"
       }
+    ],
+    "keywords": [
+      "Software Supply Chain Risk",
+      "software supply chain attack",
+      "dependency confusion",
+      "malicious package",
+      "CI/CD compromise",
+      "package hijacking"
     ]
   },
   "R0081-002": {
@@ -33,6 +49,14 @@
       {
         "title": "Supply chain attack - Wikipedia"
       }
+    ],
+    "keywords": [
+      "Hardware Supply Chain Risk",
+      "hardware trojan",
+      "firmware tampering",
+      "component backdoor",
+      "counterfeit hardware",
+      "hardware tampering"
     ]
   },
   "R0081-003": {
@@ -45,6 +69,14 @@
       {
         "title": "Supply chain attack - Wikipedia"
       }
+    ],
+    "keywords": [
+      "Cloud Service Supply Chain Risk",
+      "cloud provider compromise",
+      "SaaS supply chain",
+      "managed service compromise",
+      "third-party cloud risk",
+      "cloud dependency risk"
     ]
   },
   "R0081-004": {
@@ -57,6 +89,14 @@
       {
         "title": "Insider threat - Wikipedia"
       }
+    ],
+    "keywords": [
+      "Outsourced Personnel Risk",
+      "insider threat",
+      "contractor risk",
+      "vendor insider",
+      "third-party personnel",
+      "privileged contractor"
     ]
   },
   "R0081-005": {
@@ -69,6 +109,16 @@
       {
         "title": "SLSA: Supply-chain Levels for Software Artifacts"
       }
+    ],
+    "keywords": [
+      "Open Source Component Poisoning Risk",
+      "typosquatting",
+      "dependency confusion",
+      "malicious package",
+      "package takeover",
+      "open source backdoor",
+      "npm malware",
+      "PyPI malware"
     ]
   }
 }

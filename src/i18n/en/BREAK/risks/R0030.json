@@ -9,6 +9,15 @@
       {
         "title": "OWASP Automated Threat: OAT019 Account Creation"
       }
+    ],
+    "keywords": [
+      "Fake Registration",
+      "fake signup",
+      "account creation fraud",
+      "synthetic registration",
+      "spam account creation",
+      "identity spoof registration",
+      "OAT-019"
     ]
   },
   "R0030-001": {
@@ -21,6 +30,15 @@
       {
         "title": "OWASP Automated Threat: OAT019 Account Creation"
       }
+    ],
+    "keywords": [
+      "Bulk Account Registration",
+      "mass registration",
+      "account farming",
+      "signup bot",
+      "bulk signup",
+      "account factory",
+      "registration bot"
     ]
   },
   "R0030-002": {
@@ -33,6 +51,15 @@
       {
         "title": "What Is Third-Party Account Login? What Are Its Benefits?"
       }
+    ],
+    "keywords": [
+      "Third-Party Account Risk",
+      "federated login abuse",
+      "social login abuse",
+      "OAuth abuse",
+      "third-party SSO abuse",
+      "IdP trust abuse",
+      "social signup bypass"
     ]
   },
   "R0030-003": {
@@ -46,6 +73,14 @@
         "title": "Telephone User Real Identity Information Registration Regulations",
         "link": "https://www.moj.gov.cn/pub/sfbgw/flfggz/flfggzbmgz/201311/t20131119_145359.html"
       }
+    ],
+    "keywords": [
+      "Overseas Number Registration",
+      "foreign number signup",
+      "international SIM registration",
+      "overseas phone registration",
+      "cross-border number signup",
+      "non-domestic SIM abuse"
     ]
   },
   "R0030-004": {
@@ -58,6 +93,14 @@
       {
         "title": "Shanghai's First Batch Game Account Registration Case: Is Mass Account Creation Illegal?"
       }
+    ],
+    "keywords": [
+      "Inactive Number Registration",
+      "unused number registration",
+      "unactivated SIM signup",
+      "dormant number abuse",
+      "carrier insider registration",
+      "silent number signup"
     ]
   },
   "R0030-005": {
@@ -71,6 +114,14 @@
         "title": "Notice on Cleaning Up Fraud-Related Phone Cards, IoT Cards, and Associated Internet Accounts",
         "link": "https://www.mps.gov.cn/n6557558/c7942172/content.html"
       }
+    ],
+    "keywords": [
+      "Virtual Number Registration",
+      "virtual SIM signup",
+      "MVNO registration abuse",
+      "burner number signup",
+      "VoIP number registration",
+      "virtual phone number abuse"
     ]
   },
   "R0030-006": {
@@ -84,6 +135,14 @@
         "title": "Notice on Cleaning Up Fraud-Related Phone Cards, IoT Cards, and Associated Internet Accounts",
         "link": "https://www.mps.gov.cn/n6557558/c7942172/content.html"
       }
+    ],
+    "keywords": [
+      "IoT SIM Card Registration",
+      "IoT SIM abuse",
+      "machine-to-machine SIM signup",
+      "M2M SIM registration",
+      "data-only SIM abuse",
+      "IoT card signup"
     ]
   },
   "R0030-007": {
@@ -97,6 +156,14 @@
         "title": "Notice on Cleaning Up Fraud-Related Phone Cards, IoT Cards, and Associated Internet Accounts",
         "link": "https://www.mps.gov.cn/n6557558/c7942172/content.html"
       }
+    ],
+    "keywords": [
+      "Interceptor Card Registration",
+      "SMS interception device",
+      "interceptor SIM setup",
+      "verification code interception",
+      "backdoored handset registration",
+      "SMS relay device"
     ]
   }
 }

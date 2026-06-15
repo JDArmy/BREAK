@@ -37,6 +37,7 @@ const categories = [
     schemaKey: "risks",
     filePattern: /^R\d{4}\.json$/,
     keyPattern: /^R\d{4}(?:-\d{3})?$/,
+    requireKeywords: true,
   },
   {
     name: "avoidances",
@@ -44,6 +45,7 @@ const categories = [
     schemaKey: "avoidances",
     filePattern: /^A\d{4}\.json$/,
     keyPattern: /^A\d{4}(?:-\d{3})?$/,
+    requireKeywords: true,
   },
   {
     name: "attack-tools",
@@ -51,6 +53,7 @@ const categories = [
     schemaKey: "attackTools",
     filePattern: /^AT\d{4}\.json$/,
     keyPattern: /^AT\d{4}(?:-\d{3})?$/,
+    requireKeywords: true,
   },
   {
     name: "threat-actors",
@@ -58,6 +61,7 @@ const categories = [
     schemaKey: "threatActors",
     filePattern: /^TA\d{4}\.json$/,
     keyPattern: /^TA\d{4}(?:-\d{3})?$/,
+    requireKeywords: true,
   },
   {
     name: "business-scenes",
@@ -69,9 +73,14 @@ const categories = [
 ];
 
 const issues = [];
+const keywordIssues = [];
 
 function addIssue(message) {
   issues.push(message);
+}
+
+function addKeywordIssue(message) {
+  keywordIssues.push(message);
 }
 
 for (const category of categories) {
@@ -113,6 +122,16 @@ for (const category of categories) {
         for (const issue of formatZodIssues(result.error)) {
           addIssue(`${filePath}.${key}.${issue}`);
         }
+      } else if (category.requireKeywords) {
+        const keywords = Array.isArray(entity.keywords) ? entity.keywords : [];
+        const normalized = keywords.map((item) => String(item).trim()).filter(Boolean);
+        const duplicates = normalized.filter((item, index) => normalized.indexOf(item) !== index);
+        if (normalized.length === 0) {
+          addKeywordIssue(`${filePath}.${key}: keywords 不能为空`);
+        }
+        if (duplicates.length > 0) {
+          addKeywordIssue(`${filePath}.${key}: keywords 存在重复项 ${[...new Set(duplicates)].join(", ")}`);
+        }
       }
     }
   }
@@ -127,6 +146,17 @@ if (issues.length > 0) {
   }
   if (issues.length > 80) {
     console.error(`... 另有 ${issues.length - 80} 个问题未显示`);
+  }
+  process.exit(1);
+}
+
+if (keywordIssues.length > 0) {
+  console.error(`\n❌ keywords 校验失败，共 ${keywordIssues.length} 个问题`);
+  for (const issue of keywordIssues.slice(0, 80)) {
+    console.error(`- ${issue}`);
+  }
+  if (keywordIssues.length > 80) {
+    console.error(`... 另有 ${keywordIssues.length - 80} 个问题未显示`);
   }
   process.exit(1);
 }

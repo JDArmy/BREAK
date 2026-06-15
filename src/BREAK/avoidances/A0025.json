@@ -15,7 +15,16 @@
         "link": "https://datatracker.ietf.org/doc/html/rfc5280"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "数字证书",
+      "Digital Certificate",
+      "PKI证书",
+      "X.509证书",
+      "证书认证",
+      "公钥证书",
+      "CA证书"
+    ]
   },
   "A0025-001": {
     "title": "邮件数字证书",
@@ -29,7 +38,16 @@
         "link": "https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "邮件数字证书",
+      "S/MIME",
+      "邮件签名",
+      "邮件加密证书",
+      "电子邮件证书",
+      "邮件证书",
+      "邮箱证书"
+    ]
   },
   "A0025-002": {
     "title": "HTTPS数字证书",
@@ -43,7 +61,16 @@
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Security_Cheat_Sheet.html"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "HTTPS数字证书",
+      "SSL证书",
+      "TLS证书",
+      "HTTPS证书",
+      "网站证书",
+      "服务器证书",
+      "CA签发证书"
+    ]
   },
   "A0025-003": {
     "title": "文件电子印章",
@@ -57,7 +84,16 @@
         "link": "https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "文件电子印章",
+      "电子签章",
+      "电子印章",
+      "文件签章",
+      "电子签名",
+      "合同签章",
+      "文档签章"
+    ]
   },
   "A0025-004": {
     "title": "USB Key数字证书",
@@ -71,6 +107,15 @@
         "link": "https://fidoalliance.org/fido2/"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "USB Key数字证书",
+      "USB Key",
+      "UKey",
+      "硬件证书",
+      "硬件密钥",
+      "U盾",
+      "USB令牌"
+    ]
   }
 }

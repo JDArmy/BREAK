@@ -11,6 +11,15 @@
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "凭据复用识别",
+      "撞库识别",
+      "凭证复用检测",
+      "账号共用检测",
+      "会话复用检测",
+      "Cookie复用识别",
+      "凭据共享检测"
+    ]
   }
 }

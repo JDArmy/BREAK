@@ -5,10 +5,11 @@ import { useI18n } from "vue-i18n";
 import BREAK from "@/BREAK";
 import KnowledgeSplitView from "@/components/KnowledgeSplitView.vue";
 import ReferenceList from "@/components/ReferenceList.vue";
+import { getMessageStringArray } from "@/utils/i18nMessage";
 
 const route = useRoute();
 const router = useRouter();
-const { t } = useI18n();
+const { t, locale, messages } = useI18n();
 
 const risks = Object.keys(BREAK.risks);
 const selectedRiskKey = ref(route.hash.replace("#", "") || risks[0] || "");
@@ -20,12 +21,14 @@ const riskItems = computed(() =>
     const description = t(`BREAK.risks.${rKey}.description`);
     const complexity = t(`BREAK.risks.${rKey}.complexity`);
     const influence = t(`BREAK.risks.${rKey}.influence`);
+    const localeMessages = messages.value[locale.value] as Record<string, unknown>;
+    const keywords = getMessageStringArray(localeMessages, `BREAK.risks.${rKey}.keywords`);
 
     return {
       id: rKey,
       title,
       subtitle: definition.slice(0, 56),
-      searchText: [title, definition, description, complexity, influence]
+      searchText: [title, ...keywords, definition, description, complexity, influence]
         .filter(Boolean)
         .join(" "),
     };
@@ -96,6 +99,14 @@ const openRelationGraph = (rKey: string) => {
           <p>{{ $t(`BREAK.risks.${selectedRiskKey}.influence`) }}</p>
         </div>
       </section>
+      <section v-if="selectedRisk.keywords?.length" class="detail-section">
+        <h3>{{ $t("keywords") }}</h3>
+        <div class="keywords">
+          <span v-for="(keyword, index) in selectedRisk.keywords" :key="index" class="keyword-tag">
+            {{ keyword }}
+          </span>
+        </div>
+      </section>
       <section class="detail-section">
         <h3>{{ $t("riskAvoidances") }}</h3>
         <div class="entity-links">
@@ -126,6 +137,33 @@ const openRelationGraph = (rKey: string) => {
         <h3>{{ $t("riskReference") }}</h3>
         <ReferenceList type="risks" :entity-key="selectedRiskKey" />
       </section>
+      <section v-if="selectedRisk.updated" class="detail-section">
+        <h3>{{ $t("lastUpdated") }}</h3>
+        <p class="text-muted">{{ selectedRisk.updated }}</p>
+      </section>
     </article>
   </KnowledgeSplitView>
 </template>
+
+<style scoped>
+.keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.keyword-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--break-bg-secondary);
+  border: 1px solid var(--break-border);
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: var(--break-text-secondary);
+}
+
+.text-muted {
+  color: var(--break-text-muted);
+  font-size: 0.9em;
+}
+</style>

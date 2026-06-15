@@ -2,6 +2,12 @@ import { z } from "zod";
 
 const nonEmptyString = z.string().trim().min(1, "不能为空");
 const idArray = z.array(nonEmptyString);
+const keywordArray = z
+  .array(nonEmptyString)
+  .min(1, "keywords 不能为空")
+  .refine((items) => new Set(items).size === items.length, {
+    message: "keywords 不能重复",
+  });
 
 export const referenceSchema = z.object({
   title: nonEmptyString,
@@ -10,6 +16,7 @@ export const referenceSchema = z.object({
 
 export const riskSchema = z.object({
   title: nonEmptyString,
+  keywords: keywordArray,
   definition: nonEmptyString,
   description: nonEmptyString,
   complexity: z.enum(["初级", "中级", "高级"]),
@@ -21,6 +28,7 @@ export const riskSchema = z.object({
 
 export const avoidanceSchema = z.object({
   title: nonEmptyString,
+  keywords: keywordArray,
   category: nonEmptyString,
   definition: nonEmptyString,
   description: nonEmptyString,
@@ -31,6 +39,7 @@ export const avoidanceSchema = z.object({
 
 export const attackToolSchema = z.object({
   title: nonEmptyString,
+  keywords: keywordArray,
   description: nonEmptyString,
   references: z.array(referenceSchema).default([]),
   avoidances: idArray,
@@ -41,6 +50,7 @@ export const attackToolSchema = z.object({
 
 export const threatActorSchema = z.object({
   title: nonEmptyString,
+  keywords: keywordArray,
   description: nonEmptyString,
   references: z.array(referenceSchema).default([]),
   buildAttackTools: idArray,

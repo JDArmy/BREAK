@@ -9,6 +9,15 @@
       {
         "title": "OWASP Automated Threat: OAT005 Scalping"
       }
+    ],
+    "keywords": [
+      "Malicious Flash Sale Grabbing",
+      "flash sale bot",
+      "purchase bot",
+      "scalping bot",
+      "drop bot",
+      "auto checkout bot",
+      "order snatching"
     ]
   },
   "R0003-001": {
@@ -21,6 +30,14 @@
       {
         "title": "OWASP Automated Threat: OAT005 Scalping"
       }
+    ],
+    "keywords": [
+      "Instant Bid Sniping",
+      "instant snipe bot",
+      "first-bid automation",
+      "purchase sniping",
+      "drop sniping",
+      "buyout bot"
     ]
   },
   "R0003-002": {
@@ -33,6 +50,14 @@
       {
         "title": "OWASP Automated Threat: OAT013 Sniping"
       }
+    ],
+    "keywords": [
+      "Auction Sniping",
+      "auction sniper",
+      "sniping bot",
+      "last-second bidding",
+      "bid sniper",
+      "eBay sniping"
     ]
   },
   "R0003-003": {
@@ -46,6 +71,15 @@
         "title": "Measures for the Supervision and Administration of Online Transactions",
         "link": "https://www.moj.gov.cn/pub/sfbgw/flfggz/flfggzbmgz/202104/t20210423_357848.html"
       }
+    ],
+    "keywords": [
+      "Bot Scalping Risk",
+      "scalper bot",
+      "grabbing bot",
+      "inventory scalping",
+      "limited-drop bot",
+      "mass purchase bot",
+      "OAT-005 Scalping"
     ]
   },
   "R0003-004": {
@@ -58,6 +92,15 @@
       {
         "title": "OWASP Automated Threat: OAT-021 Denial of Inventory"
       }
+    ],
+    "keywords": [
+      "Unfair Resource Seizure",
+      "resource grabbing",
+      "slot grabbing",
+      "inventory hoarding",
+      "eligibility hoarding",
+      "automated resource seizure",
+      "denial of inventory"
     ]
   }
 }

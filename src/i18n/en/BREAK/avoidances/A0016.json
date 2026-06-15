@@ -12,6 +12,15 @@
       {
         "title": "NIST SP 800-150: Guide to Cyber Threat Information Sharing"
       }
+    ],
+    "keywords": [
+      "Threat Intelligence",
+      "CTI",
+      "cyber threat intelligence",
+      "threat feeds",
+      "intel sharing",
+      "indicator feeds",
+      "threat intel"
     ]
   },
   "A0016-001": {
@@ -23,6 +32,14 @@
       {
         "title": "Threat Intelligence - Wikipedia"
       }
+    ],
+    "keywords": [
+      "IP Intelligence",
+      "IP reputation",
+      "IP risk scoring",
+      "proxy detection",
+      "geolocation intelligence",
+      "IP reputation data"
     ]
   },
   "A0016-002": {
@@ -35,6 +52,14 @@
         "title": "Information Sharing - CISA",
         "link": "https://www.cisa.gov/topics/cyber-threats-and-advisories/information-sharing"
       }
+    ],
+    "keywords": [
+      "Domain & Link Threat Intelligence",
+      "domain intelligence",
+      "URL intelligence",
+      "malicious domain detection",
+      "link reputation",
+      "phishing domain reputation"
     ]
   },
   "A0016-003": {
@@ -46,6 +71,14 @@
       {
         "title": "Thousands of Phones Hacked by Spyware - Xinhua"
       }
+    ],
+    "keywords": [
+      "Phone Number Intelligence",
+      "phone reputation",
+      "phone number risk",
+      "recycled number detection",
+      "virtual number detection",
+      "blacklisted number"
     ]
   },
   "A0016-004": {
@@ -58,6 +91,14 @@
         "title": "OASIS Cyber Threat Intelligence Technical Committee",
         "link": "https://oasis-open.github.io/cti-documentation/"
       }
+    ],
+    "keywords": [
+      "IOC (Indicator of Compromise) Intelligence",
+      "IOC intelligence",
+      "IOCs",
+      "indicators of compromise",
+      "threat indicators",
+      "malware indicators"
     ]
   },
   "A0016-005": {
@@ -70,6 +111,14 @@
         "title": "Guide to Cyber Threat Information Sharing - NIST SP 800-150",
         "link": "https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-150.pdf"
       }
+    ],
+    "keywords": [
+      "Risk Address Intelligence",
+      "address risk scoring",
+      "shipping address fraud",
+      "address reputation",
+      "fraud address screening",
+      "delivery address intelligence"
     ]
   }
 }

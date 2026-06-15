@@ -12,6 +12,15 @@
       {
         "title": "Yongan Online API Security Research Report (Q1 2022)"
       }
+    ],
+    "keywords": [
+      "API Abuse Risk",
+      "API security",
+      "endpoint abuse",
+      "API scraping",
+      "rate limit bypass",
+      "business logic abuse",
+      "API enumeration"
     ]
   },
   "R0126-001": {
@@ -24,6 +33,15 @@
       {
         "title": "OWASP API Security Top 10 2023"
       }
+    ],
+    "keywords": [
+      "API Enumeration Attack",
+      "endpoint discovery",
+      "API discovery",
+      "Swagger leak",
+      "OpenAPI leak",
+      "API scanning",
+      "endpoint enumeration"
     ]
   },
   "R0126-002": {
@@ -36,6 +54,15 @@
       {
         "title": "OWASP API4:2023 Unrestricted Resource Consumption"
       }
+    ],
+    "keywords": [
+      "API Rate Limit Bypass",
+      "rate limit bypass",
+      "throttling bypass",
+      "API scraping",
+      "IP rotation",
+      "resource exhaustion",
+      "anti-bot bypass"
     ]
   },
   "R0126-003": {
@@ -48,6 +75,15 @@
       {
         "title": "OWASP API6:2023 Unrestricted Access to Sensitive Business Flows"
       }
+    ],
+    "keywords": [
+      "API Business Logic Abuse",
+      "business flow abuse",
+      "parameter tampering",
+      "workflow bypass",
+      "race condition",
+      "payment bypass",
+      "sensitive business flows"
     ]
   }
 }

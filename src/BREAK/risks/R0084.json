@@ -24,7 +24,16 @@
         "link": "https://attack.mitre.org/techniques/T1566/"
       }
     ],
-    "updated": "2026-02-27"
+    "updated": "2026-06-11",
+    "keywords": [
+      "钓鱼攻击",
+      "网络钓鱼",
+      "仿冒登录页",
+      "钓鱼邮件",
+      "钓鱼链接",
+      "凭证钓鱼",
+      "鱼叉式钓鱼"
+    ]
   },
   "R0084-001": {
     "title": "AI增强钓鱼攻击",
@@ -45,6 +54,15 @@
         "link": "https://www.ncsc.gov.uk/report/impact-of-ai-on-cyber-threat"
       }
     ],
-    "updated": "2026-02-27"
+    "updated": "2026-06-11",
+    "keywords": [
+      "AI增强钓鱼攻击",
+      "AI钓鱼",
+      "LLM钓鱼",
+      "深度伪造钓鱼",
+      "语音钓鱼",
+      "视频钓鱼",
+      "个性化钓鱼"
+    ]
   }
 }

@@ -12,6 +12,15 @@
       {
         "title": "NIST SP 800-63B: Digital Identity Guidelines - Authentication and Lifecycle Management"
       }
+    ],
+    "keywords": [
+      "Human Verification Technology",
+      "CAPTCHA",
+      "anti-bot verification",
+      "bot check",
+      "human check",
+      "challenge-response",
+      "verification challenge"
     ]
   },
   "A0001-001": {
@@ -23,6 +32,15 @@
       {
         "title": "Captcha open-source libraries on GitHub"
       }
+    ],
+    "keywords": [
+      "Image-Text CAPTCHA",
+      "image CAPTCHA",
+      "graphic CAPTCHA",
+      "text CAPTCHA",
+      "OCR CAPTCHA",
+      "image verification",
+      "image-text challenge"
     ]
   },
   "A0001-002": {
@@ -34,6 +52,15 @@
       {
         "title": "AJ-Captcha (behavioral CAPTCHA, including sliding puzzle and text click-selection)"
       }
+    ],
+    "keywords": [
+      "Behavioral CAPTCHA",
+      "slider CAPTCHA",
+      "sliding puzzle CAPTCHA",
+      "click CAPTCHA",
+      "interaction CAPTCHA",
+      "behavior-based verification",
+      "human behavior verification"
     ]
   },
   "A0001-003": {
@@ -46,6 +73,14 @@
         "title": "Digital Identity Guidelines: Authentication and Lifecycle Management - NIST SP 800-63B",
         "link": "https://pages.nist.gov/800-63-3/sp800-63b.html"
       }
+    ],
+    "keywords": [
+      "Voice CAPTCHA",
+      "audio CAPTCHA",
+      "speech CAPTCHA",
+      "voice verification challenge",
+      "audio verification",
+      "speech challenge"
     ]
   },
   "A0001-004": {
@@ -58,6 +93,14 @@
         "title": "OWASP Automated Threats to Web Applications",
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/"
       }
+    ],
+    "keywords": [
+      "Silent CAPTCHA",
+      "invisible CAPTCHA",
+      "passive CAPTCHA",
+      "background verification",
+      "risk-based verification",
+      "frictionless bot detection"
     ]
   }
 }

@@ -15,7 +15,16 @@
         "link": "https://csrc.nist.gov/pubs/sp/800/188/final"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "数据脱敏（脱密）",
+      "数据脱敏",
+      "脱密",
+      "隐私脱敏",
+      "敏感信息脱敏",
+      "掩码展示",
+      "去标识化"
+    ]
   },
   "A0035-001": {
     "title": "敏感数据去除",
@@ -29,7 +38,16 @@
         "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "敏感数据去除",
+      "字段剔除",
+      "敏感字段移除",
+      "PII去除",
+      "敏感信息删除",
+      "数据清洗去敏",
+      "字段裁剪"
+    ]
   },
   "A0035-002": {
     "title": "用户信息令牌化",
@@ -43,7 +61,16 @@
         "link": "https://www.pcisecuritystandards.org/documents/Tokenization_Product_Security_Guidelines.pdf"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "用户信息令牌化",
+      "Tokenization",
+      "令牌化",
+      "PII令牌化",
+      "用户标识替代",
+      "假名化",
+      "Token替代"
+    ]
   },
   "A0035-003": {
     "title": "虚拟手机号",
@@ -57,6 +84,15 @@
         "link": "https://www.samr.gov.cn/wljys/gzzd/art/2023/art_3ef1e889c1e644d4b65b5f5c7f432386.html"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "虚拟手机号",
+      "中间号",
+      "隐私号",
+      "号码保护",
+      "虚拟号码",
+      "AXB",
+      "匿名号"
+    ]
   }
 }

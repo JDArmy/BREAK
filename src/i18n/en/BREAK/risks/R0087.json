@@ -9,6 +9,15 @@
       {
         "title": "T1190 Exploit Public-Facing Application - MITRE ATT&CK"
       }
+    ],
+    "keywords": [
+      "Business Logic Tampering Risk",
+      "business logic abuse",
+      "parameter tampering",
+      "workflow bypass",
+      "transaction tampering",
+      "race condition",
+      "logic flaw exploitation"
     ]
   }
 }

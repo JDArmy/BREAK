@@ -21,7 +21,16 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-016_Skewing.html"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-11",
+    "keywords": [
+      "刷量刷榜",
+      "刷榜",
+      "刷量",
+      "数据造假",
+      "榜单作弊",
+      "流量刷量",
+      "人气造假"
+    ]
   },
   "R0016-001": {
     "title": "挂人气",
@@ -52,7 +61,16 @@
         "link": "https://it.sohu.com/a/704525060_121714717"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-11",
+    "keywords": [
+      "挂人气",
+      "挂假人",
+      "挂铁",
+      "刷人气",
+      "直播挂人气",
+      "在线人数造假",
+      "直播间假人"
+    ]
   },
   "R0016-002": {
     "title": "批量关注",
@@ -79,6 +97,14 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-016_Skewing.html"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-11",
+    "keywords": [
+      "批量关注",
+      "刷关注",
+      "批量加关注",
+      "批量加粉",
+      "批量关注脚本",
+      "关注刷量"
+    ]
   }
 }

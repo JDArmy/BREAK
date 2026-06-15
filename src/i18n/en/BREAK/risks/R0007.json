@@ -9,6 +9,15 @@
       {
         "title": "Rule Guide: Interpretation of Rules on \"Unauthorized Plugin Promotion\""
       }
+    ],
+    "keywords": [
+      "Unauthorized Plugin Promotion",
+      "affiliate toolbar",
+      "promo extension abuse",
+      "browser extension promotion",
+      "toolbar hijacking",
+      "unauthorized affiliate plugin",
+      "shopping assistant plugin"
     ]
   },
   "R0007-001": {
@@ -22,6 +31,14 @@
         "title": "Chrome Extensions Documentation",
         "link": "https://developer.chrome.com/docs/extensions"
       }
+    ],
+    "keywords": [
+      "Third-Party Price Comparison",
+      "price comparison extension",
+      "shopping comparison plugin",
+      "comparison toolbar",
+      "price checker plugin",
+      "affiliate comparison widget"
     ]
   },
   "R0007-002": {
@@ -35,6 +52,15 @@
         "title": "Software Extensions, Technique T1176 - MITRE ATT&CK",
         "link": "https://attack.mitre.org/techniques/T1176/"
       }
+    ],
+    "keywords": [
+      "Access Link Hijacking",
+      "link hijacking",
+      "affiliate hijacking",
+      "URL hijack",
+      "browser redirect hijack",
+      "traffic hijack",
+      "link interception"
     ]
   },
   "R0007-003": {
@@ -48,6 +74,15 @@
         "title": "Chrome Extensions Documentation",
         "link": "https://developer.chrome.com/docs/extensions"
       }
+    ],
+    "keywords": [
+      "Unauthorized Promotional Redirection",
+      "promo redirect",
+      "forced affiliate redirect",
+      "shopping redirect",
+      "traffic redirection",
+      "commission redirection",
+      "offer redirect"
     ]
   },
   "R0007-004": {
@@ -61,6 +96,15 @@
         "title": "Chrome Extensions Documentation",
         "link": "https://developer.chrome.com/docs/extensions"
       }
+    ],
+    "keywords": [
+      "Unauthorized Plugin Cashback",
+      "cashback extension",
+      "rebate plugin",
+      "shopping rebate app",
+      "commission sharing plugin",
+      "affiliate cashback",
+      "cashback toolbar"
     ]
   }
 }

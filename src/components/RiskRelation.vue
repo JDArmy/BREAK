@@ -24,26 +24,17 @@ const isTouchDevice =
   typeof window !== "undefined" &&
   ("ontouchstart" in window || navigator.maxTouchPoints > 0);
 
-const relationColors = {
-  risk: { light: "#fed7aa", dark: "#7c2d12" },
-  avoidance: { light: "#bbf7d0", dark: "#14532d" },
-  attackTool: { light: "#bfdbfe", dark: "#1e3a8a" },
-  threatActor: { light: "#fecaca", dark: "#7f1d1d" },
+const getRelationColor = (type: "risk" | "avoidance" | "attackTool" | "threatActor") => {
+  const element = document.documentElement;
+  const style = getComputedStyle(element);
+  const colorMap = {
+    risk: "--break-relation-risk",
+    avoidance: "--break-relation-avoidance",
+    attackTool: "--break-relation-attack-tool",
+    threatActor: "--break-relation-threat-actor",
+  };
+  return style.getPropertyValue(colorMap[type]).trim();
 };
-
-const graphColors = {
-  background: { light: "#ffffff", dark: "#0f172a" },
-  line: { light: "#999999", dark: "#475569" },
-  lineText: { light: "#666666", dark: "#94a3b8" },
-  nodeText: { light: "#333333", dark: "#e2e8f0" },
-  nodeBorder: { light: "#efefef", dark: "#334155" },
-};
-
-const getRelationColor = (type: keyof typeof relationColors) =>
-  isDark.value ? relationColors[type].dark : relationColors[type].light;
-
-const getGraphColor = (key: keyof typeof graphColors) =>
-  isDark.value ? graphColors[key].dark : graphColors[key].light;
 
 interface GraphNode {
   id: string;

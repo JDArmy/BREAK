@@ -8,6 +8,15 @@
       {
         "title": "Code Obfuscation - Wikipedia"
       }
+    ],
+    "keywords": [
+      "Client Application Hardening",
+      "app hardening",
+      "client-side hardening",
+      "code obfuscation",
+      "anti-reverse engineering",
+      "anti-tampering",
+      "anti-debugging"
     ]
   },
   "A0013-001": {
@@ -19,6 +28,14 @@
       {
         "title": "OWASP Mobile Application Security"
       }
+    ],
+    "keywords": [
+      "Android Application Hardening",
+      "Android app hardening",
+      "APK hardening",
+      "mobile app hardening",
+      "Android anti-reverse engineering",
+      "Android code obfuscation"
     ]
   },
   "A0013-002": {
@@ -30,6 +47,14 @@
       {
         "title": "OWASP Mobile Application Security"
       }
+    ],
+    "keywords": [
+      "iOS Application Hardening",
+      "iOS app hardening",
+      "IPA hardening",
+      "mobile app hardening",
+      "iOS anti-reverse engineering",
+      "iOS code obfuscation"
     ]
   },
   "A0013-003": {
@@ -41,6 +66,15 @@
       {
         "title": "OWASP Bytecode Obfuscation"
       }
+    ],
+    "keywords": [
+      "H5/Mini-Program Hardening",
+      "H5 hardening",
+      "mini-program hardening",
+      "mini app hardening",
+      "webview hardening",
+      "JavaScript obfuscation",
+      "WeChat mini program security"
     ]
   },
   "A0013-004": {
@@ -52,6 +86,14 @@
       {
         "title": "OWASP Bytecode Obfuscation"
       }
+    ],
+    "keywords": [
+      "Desktop Application Hardening",
+      "desktop app hardening",
+      "Windows app hardening",
+      "reverse engineering protection",
+      "code obfuscation",
+      "desktop anti-tampering"
     ]
   }
 }

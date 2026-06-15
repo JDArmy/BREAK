@@ -15,7 +15,16 @@
         "link": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=4568F276E0F8346EB0FBA097AA0CE05E"
       }
     ],
-    "updated": "2024-01-16"
+    "updated": "2026-06-13",
+    "keywords": [
+      "数据画像",
+      "标签体系",
+      "画像建模",
+      "特征标签",
+      "数据标签",
+      "标签画像",
+      "风险画像"
+    ]
   },
   "A0029-001": {
     "title": "用户画像",
@@ -29,7 +38,16 @@
         "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "用户画像",
+      "用户标签",
+      "人群画像",
+      "用户标签体系",
+      "用户分层",
+      "行为画像",
+      "用户特征画像"
+    ]
   },
   "A0029-002": {
     "title": "IP画像",
@@ -43,7 +61,16 @@
         "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
       }
     ],
-    "updated": "2024-01-19"
+    "updated": "2026-06-13",
+    "keywords": [
+      "IP画像",
+      "IP标签",
+      "IP信誉画像",
+      "IP特征画像",
+      "网络画像",
+      "IP风险标签",
+      "IP行为画像"
+    ]
   },
   "A0029-003": {
     "title": "设备画像",
@@ -57,6 +84,15 @@
         "link": "https://developer.mozilla.org/en-US/docs/Glossary/Fingerprinting"
       }
     ],
-    "updated": "2024-01-16"
+    "updated": "2026-06-13",
+    "keywords": [
+      "设备画像",
+      "设备标签",
+      "终端画像",
+      "设备特征画像",
+      "设备风险画像",
+      "设备行为画像",
+      "终端标签"
+    ]
   }
 }

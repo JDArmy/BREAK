@@ -6,6 +6,14 @@
       {
         "title": "Introduction to IP Risk Profiling Technology"
       }
+    ],
+    "keywords": [
+      "Risk IP Addresses",
+      "IP reputation",
+      "malicious IP list",
+      "bad IP feed",
+      "high-risk IP",
+      "threat intelligence IP"
     ]
   },
   "AT0034-001": {
@@ -15,6 +23,15 @@
       {
         "title": "What Is a Proxy IP?"
       }
+    ],
+    "keywords": [
+      "Proxy IP",
+      "proxy server",
+      "forward proxy",
+      "SOCKS5 proxy",
+      "HTTP proxy",
+      "HTTPS proxy",
+      "rotating proxy"
     ]
   },
   "AT0034-002": {
@@ -24,6 +41,15 @@
       {
         "title": "What Is a Residential Proxy? Definition, Risks & Detection"
       }
+    ],
+    "keywords": [
+      "Second-Dial IP",
+      "redial IP",
+      "broadband redial IP",
+      "dynamic residential IP",
+      "residential proxy",
+      "ISP proxy",
+      "IP pool"
     ]
   }
 }

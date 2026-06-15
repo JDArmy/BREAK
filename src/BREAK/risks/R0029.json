@@ -25,7 +25,16 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-015_Denial_of_Service.html"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-13",
+    "keywords": [
+      "拒绝服务风险",
+      "拒绝服务攻击",
+      "DoS",
+      "DOS攻击",
+      "请求洪泛",
+      "服务打挂",
+      "服务不可用"
+    ]
   },
   "R0029-001": {
     "title": "短信恶意消耗",
@@ -50,7 +59,15 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-015_Denial_of_Service.html"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-13",
+    "keywords": [
+      "短信恶意消耗",
+      "短信轰炸",
+      "验证码轰炸",
+      "短信炸弹",
+      "短信资源消耗",
+      "骚扰验证码"
+    ]
   },
   "R0029-002": {
     "title": "资源耗尽风险",
@@ -86,7 +103,15 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-015_Denial_of_Service.html"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-13",
+    "keywords": [
+      "资源耗尽风险",
+      "资源消耗攻击",
+      "资源打满",
+      "带宽耗尽",
+      "CPU打满",
+      "连接耗尽"
+    ]
   },
   "R0029-003": {
     "title": "CC攻击",
@@ -110,7 +135,15 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-015_Denial_of_Service.html"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-13",
+    "keywords": [
+      "CC攻击",
+      "CC",
+      "HTTP flood",
+      "应用层洪泛",
+      "CC流量",
+      "业务洪泛"
+    ]
   },
   "R0029-004": {
     "title": "分布式拒绝服务",
@@ -136,6 +169,14 @@
         "link": "https://www.cisa.gov/resources-tools/resources/understanding-and-responding-distributed-denial-service-attacks"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-13",
+    "keywords": [
+      "分布式拒绝服务",
+      "DDoS",
+      "分布式Dos",
+      "流量攻击",
+      "UDP洪泛",
+      "SYN洪泛"
+    ]
   }
 }

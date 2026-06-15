@@ -1,6 +1,55 @@
 /* BREAK 主题 CSS 变量 */
 
 :root {
+  /* 基础色阶：Slate 色系 */
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+  --slate-white: #ffffff;
+
+  /* 基础色阶：Blue 色系（链接色） */
+  --blue-600: #2563eb;
+  --blue-700: #1d4ed8;
+  --blue-400: #60a5fa;
+  --blue-300: #93c5fd;
+  --blue-100: #dbeafe;
+  --blue-50: #eff6ff;
+
+  /* 基础色阶：功能色 */
+  --orange-200: #fed7aa;
+  --orange-800: #7c2d12;
+  --green-200: #bbf7d0;
+  --green-400: #4ade80;
+  --green-500: #22c55e;
+  --green-800: #14532d;
+  --sky-200: #bfdbfe;
+  --sky-400: #38bdf8;
+  --sky-500: #0ea5e9;
+  --sky-800: #1e3a8a;
+  --red-200: #fecaca;
+  --red-400: #f87171;
+  --red-500: #ef4444;
+  --red-600: #dc2626;
+  --red-800: #7f1d1d;
+  --amber-100: #fde7a7;
+  --amber-300: #f6d28b;
+  --amber-400: #fbbf24;
+  --amber-500: #f59e0b;
+  --amber-600: #e0b85b;
+  --amber-700: #7c5a1d;
+  --purple-400: #c084fc;
+  --purple-500: #8b5cf6;
+  --teal-400: #5eead4;
+  --teal-500: #14b8a6;
+  --pink-400: #fb7185;
+
   /* 响应式断点（与 Element Plus display.css 一致） */
   --break-bp-sm: 480px; /* 小手机分界 */
   --break-bp-md: 768px; /* 手机/平板分界 */
@@ -8,88 +57,136 @@
   --break-bp-xl: 1200px; /* 桌面 */
 
   /* 页面背景 */
-  --break-bg-primary: #ffffff;
-  --break-bg-secondary: #f8fafc;
-  --break-bg-card: #ffffff;
+  --break-bg-primary: var(--slate-white);
+  --break-bg-secondary: var(--slate-50);
+  --break-bg-card: var(--slate-white);
 
   /* 文本 */
-  --break-text-primary: #1e293b;
-  --break-text-secondary: #475569;
-  --break-text-muted: #64748b;
-  --break-text-weak: #94a3b8;
+  --break-text-primary: var(--slate-800);
+  --break-text-secondary: var(--slate-600);
+  --break-text-muted: var(--slate-500);
+  --break-text-weak: var(--slate-400);
 
   /* 边框 */
-  --break-border: #e2e8f0;
-  --break-border-light: #f1f5f9;
+  --break-border: var(--slate-200);
+  --break-border-light: var(--slate-100);
 
   /* 链接 */
-  --break-link: #2563eb;
-  --break-link-hover: #1d4ed8;
+  --break-link: var(--blue-600);
+  --break-link-hover: var(--blue-700);
 
   /* 高亮 */
-  --break-highlight-bg: #eff6ff;
-  --break-highlight-border: #bfdbfe;
+  --break-highlight-bg: var(--blue-50);
+  --break-highlight-border: var(--sky-200);
 
   /* 统计卡片 */
-  --break-stat-bg-start: #1e293b;
-  --break-stat-bg-end: #334155;
-  --break-stat-hover-start: #334155;
-  --break-stat-hover-end: #475569;
-  --break-stat-text: #ffffff;
+  --break-stat-bg-start: var(--slate-800);
+  --break-stat-bg-end: var(--slate-700);
+  --break-stat-hover-start: var(--slate-700);
+  --break-stat-hover-end: var(--slate-600);
+  --break-stat-text: var(--slate-white);
 
   /* 关系图谱 */
-  --break-graph-border: #efefef;
+  --break-graph-border: var(--slate-100);
   --break-graph-filter-bg: rgba(255, 255, 255, 0.5);
-  --break-graph-text: #5e6269;
+  --break-graph-text: var(--slate-500);
 
   /* Footer */
-  --break-footer-bg: #f8fafc;
-  --break-footer-text: #94a3b8;
-  --break-footer-border: #e2e8f0;
+  --break-footer-bg: var(--slate-50);
+  --break-footer-text: var(--slate-400);
+  --break-footer-border: var(--slate-200);
+
+  /* 关系类型颜色 */
+  --break-relation-risk: var(--orange-200);
+  --break-relation-avoidance: var(--green-200);
+  --break-relation-attack-tool: var(--sky-200);
+  --break-relation-threat-actor: var(--red-200);
+
+  /* 图表 Tooltip */
+  --break-tooltip-bg: var(--slate-white);
+  --break-tooltip-border: var(--slate-200);
+  --break-tooltip-text: var(--slate-700);
+
+  /* 关系图节点和连线颜色 */
+  --break-graph-sub-node-fill: var(--amber-100);
+  --break-graph-sub-node-border: var(--amber-600);
+  --break-graph-selected-border: var(--blue-600);
+  --break-line-avoidance: var(--purple-500);
+  --break-line-direct-risk: var(--red-500);
+  --break-line-indirect-risk: var(--amber-500);
+  --break-line-build-tool: var(--sky-500);
+  --break-line-use-tool: var(--teal-500);
+  --break-line-cause-risk: var(--red-600);
+  --break-line-sub: var(--slate-400);
+  --break-line-maker: var(--green-500);
 }
 
 html.dark {
   color-scheme: dark;
 
   /* 页面背景 */
-  --break-bg-primary: #0f172a;
-  --break-bg-secondary: #1e293b;
-  --break-bg-card: #1e293b;
+  --break-bg-primary: var(--slate-900);
+  --break-bg-secondary: var(--slate-800);
+  --break-bg-card: var(--slate-800);
 
   /* 文本 */
-  --break-text-primary: #e2e8f0;
-  --break-text-secondary: #cbd5e1;
-  --break-text-muted: #94a3b8;
-  --break-text-weak: #64748b;
+  --break-text-primary: var(--slate-300);
+  --break-text-secondary: var(--slate-400);
+  --break-text-muted: var(--slate-500);
+  --break-text-weak: var(--slate-600);
 
   /* 边框 */
-  --break-border: #334155;
-  --break-border-light: #1e293b;
+  --break-border: var(--slate-700);
+  --break-border-light: var(--slate-800);
 
   /* 链接 */
-  --break-link: #60a5fa;
-  --break-link-hover: #93c5fd;
+  --break-link: var(--blue-400);
+  --break-link-hover: var(--blue-300);
 
   /* 高亮 */
-  --break-highlight-bg: #1e293b;
-  --break-highlight-border: #334155;
+  --break-highlight-bg: var(--slate-800);
+  --break-highlight-border: var(--slate-700);
 
   /* 统计卡片 */
-  --break-stat-bg-start: #1e293b;
-  --break-stat-bg-end: #334155;
-  --break-stat-hover-start: #334155;
-  --break-stat-hover-end: #475569;
-  --break-stat-text: #ffffff;
+  --break-stat-bg-start: var(--slate-800);
+  --break-stat-bg-end: var(--slate-700);
+  --break-stat-hover-start: var(--slate-700);
+  --break-stat-hover-end: var(--slate-600);
+  --break-stat-text: var(--slate-white);
 
   /* 关系图谱 */
-  --break-graph-border: #334155;
+  --break-graph-border: var(--slate-700);
   --break-graph-filter-bg: rgba(15, 23, 42, 0.8);
-  --break-graph-text: #94a3b8;
+  --break-graph-text: var(--slate-400);
 
   /* Footer */
-  --break-footer-bg: #0f172a;
-  --break-footer-text: #64748b;
-  --break-footer-border: #1e293b;
+  --break-footer-bg: var(--slate-900);
+  --break-footer-text: var(--slate-500);
+  --break-footer-border: var(--slate-800);
+
+  /* 关系类型颜色 */
+  --break-relation-risk: var(--orange-800);
+  --break-relation-avoidance: var(--green-800);
+  --break-relation-attack-tool: var(--sky-800);
+  --break-relation-threat-actor: var(--red-800);
+
+  /* 图表 Tooltip */
+  --break-tooltip-bg: var(--slate-800);
+  --break-tooltip-border: var(--slate-700);
+  --break-tooltip-text: var(--slate-300);
+
+  /* 关系图节点和连线颜色 */
+  --break-graph-sub-node-fill: var(--amber-700);
+  --break-graph-sub-node-border: var(--amber-300);
+  --break-graph-selected-border: var(--blue-300);
+  --break-line-avoidance: var(--purple-400);
+  --break-line-direct-risk: var(--red-400);
+  --break-line-indirect-risk: var(--amber-400);
+  --break-line-build-tool: var(--sky-400);
+  --break-line-use-tool: var(--teal-400);
+  --break-line-cause-risk: var(--pink-400);
+  --break-line-sub: var(--slate-500);
+  --break-line-maker: var(--green-400);
 }
 
 /* 暗色主题全局样式 */
@@ -147,4 +244,43 @@ html.dark .outside-link-menu a {
 html.dark .outside-link-menu a:hover,
 html.dark .outside-link-menu a:active {
   color: var(--break-link);
+}
+
+/* Element Plus Menu 暗色调整 */
+html.dark .el-menu {
+  --el-menu-bg-color: var(--break-bg-primary);
+  --el-menu-text-color: var(--break-text-primary);
+  --el-menu-active-color: var(--break-link);
+  --el-menu-hover-bg-color: var(--break-bg-secondary);
+}
+
+html.dark .el-menu-item:hover,
+html.dark .el-sub-menu__title:hover {
+  background-color: var(--break-bg-secondary);
+}
+
+/* Element Plus Input 暗色调整 */
+html.dark .el-input {
+  --el-input-bg-color: var(--break-bg-card);
+  --el-input-text-color: var(--break-text-primary);
+  --el-input-border-color: var(--break-border);
+  --el-input-hover-border-color: var(--break-link);
+  --el-input-focus-border-color: var(--break-link);
+}
+
+/* Element Plus Tabs 暗色调整 */
+html.dark .el-tabs {
+  --el-tabs-header-bg-color: transparent;
+}
+
+html.dark .el-tabs__item {
+  color: var(--break-text-secondary);
+}
+
+html.dark .el-tabs__item.is-active {
+  color: var(--break-link);
+}
+
+html.dark .el-tabs__item:hover {
+  color: var(--break-text-primary);
 }

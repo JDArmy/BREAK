@@ -23,7 +23,15 @@
         "link": "https://arxiv.org/abs/2310.12397"
       }
     ],
-    "updated": "2026-02-27"
+    "updated": "2026-06-10",
+    "keywords": [
+      "LLM提示注入风险",
+      "提示注入",
+      "Prompt Injection",
+      "系统提示词绕过",
+      "越狱提示",
+      "提示攻击"
+    ]
   },
   "R0117-001": {
     "title": "直接提示注入",
@@ -43,7 +51,14 @@
         "link": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"
       }
     ],
-    "updated": "2026-02-27"
+    "updated": "2026-06-10",
+    "keywords": [
+      "直接提示注入",
+      "Direct Prompt Injection",
+      "忽略之前的指令",
+      "角色扮演越狱",
+      "提示词覆盖"
+    ]
   },
   "R0117-002": {
     "title": "间接提示注入",
@@ -64,6 +79,14 @@
         "link": "https://arxiv.org/abs/2302.12173"
       }
     ],
-    "updated": "2026-02-27"
+    "updated": "2026-06-10",
+    "keywords": [
+      "间接提示注入",
+      "Indirect Prompt Injection",
+      "RAG投毒",
+      "文档投毒",
+      "网页提示注入",
+      "知识库投毒"
+    ]
   }
 }

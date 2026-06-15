@@ -30,7 +30,16 @@
         "link": "https://en.wikipedia.org/wiki/Social_engineering_(security)"
       }
     ],
-    "updated": "2026-06-11"
+    "updated": "2026-06-11",
+    "keywords": [
+      "员工安全意识不足",
+      "安全意识薄弱",
+      "弱密码",
+      "随意点链接",
+      "安全培训不足",
+      "员工安防意识不足",
+      "社工受骗"
+    ]
   },
   "R0083-001": {
     "title": "员工账号被盗",
@@ -63,7 +72,16 @@
         "link": "https://en.wikipedia.org/wiki/Credential_stuffing"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-11",
+    "keywords": [
+      "员工账号被盗",
+      "企业账号被盗",
+      "员工账户被盗",
+      "账号接管",
+      "ATO",
+      "凭证泄露",
+      "撞库盗号"
+    ]
   },
   "R0083-002": {
     "title": "社交欺骗风险",
@@ -82,6 +100,15 @@
         "link": "https://en.wikipedia.org/wiki/Social_engineering_(security)"
       }
     ],
-    "updated": "2026-06-11"
+    "updated": "2026-06-11",
+    "keywords": [
+      "社交欺骗风险",
+      "社交工程",
+      "冒充领导",
+      "BEC",
+      "语音克隆诈骗",
+      "深度伪造诈骗",
+      "身份冒充"
+    ]
   }
 }

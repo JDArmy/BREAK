@@ -21,7 +21,16 @@
         "link": "https://github.com/eastmountyxz/Reverse-Analysis-Case"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-13",
+    "keywords": [
+      "应用被逆向",
+      "逆向分析",
+      "反编译",
+      "源码还原",
+      "APP逆向",
+      "小程序逆向",
+      "逆向破解"
+    ]
   },
   "R0051-001": {
     "title": "应用被抓包",
@@ -43,7 +52,15 @@
         "link": "https://mas.owasp.org/MASTG/tests/android/MASVS-NETWORK/MASTG-TEST-0244/"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-13",
+    "keywords": [
+      "应用被抓包",
+      "抓包分析",
+      "网络抓包",
+      "中间人抓包",
+      "MITM抓包",
+      "请求重放"
+    ]
   },
   "R0051-002": {
     "title": "HTTP请求分析",
@@ -64,6 +81,15 @@
         "link": "https://www.cnblogs.com/wzfwaf/p/10515507.html"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-13",
+    "keywords": [
+      "HTTP请求分析",
+      "HTTP分析",
+      "HTTPS抓包",
+      "接口分析",
+      "协议分析",
+      "接口逆向",
+      "请求重放"
+    ]
   }
 }

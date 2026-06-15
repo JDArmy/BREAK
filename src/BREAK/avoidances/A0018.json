@@ -11,7 +11,16 @@
         "link": "https://en.wikipedia.org/wiki/Authentication"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "身份认证（登录）",
+      "登录认证",
+      "账号登录",
+      "身份验证",
+      "用户登录",
+      "登录鉴权",
+      "账户认证"
+    ]
   },
   "A0018-001": {
     "title": "零知识证明",
@@ -25,6 +34,15 @@
         "link": "https://www.w3.org/TR/vc-data-model-2.0/"
       }
     ],
-    "updated": "2024-01-16"
+    "updated": "2026-06-13",
+    "keywords": [
+      "零知识证明",
+      "ZKP",
+      "ZK Proof",
+      "零知识认证",
+      "无泄露证明",
+      "可验证凭证",
+      "隐私证明"
+    ]
   }
 }

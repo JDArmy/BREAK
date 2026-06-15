@@ -7,6 +7,7 @@ interface Reference {
 
 interface ThreatActor {
   title: string;
+  keywords: string[];
   description: string;
   references: Reference[];
   buildAttackTools: string[];

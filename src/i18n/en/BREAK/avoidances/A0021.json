@@ -12,6 +12,14 @@
       {
         "title": "OWASP Web Security Testing Guide - Fingerprint Web Server"
       }
+    ],
+    "keywords": [
+      "Device Fingerprinting",
+      "device fingerprint",
+      "browser fingerprinting",
+      "browser fingerprint",
+      "terminal fingerprinting",
+      "device profiling"
     ]
   },
   "A0021-001": {
@@ -23,6 +31,14 @@
       {
         "title": "Device Fingerprint - Wikipedia"
       }
+    ],
+    "keywords": [
+      "Device Tagging",
+      "device labeling",
+      "terminal tagging",
+      "persistent device ID",
+      "device tracking",
+      "covert tracking"
     ]
   }
 }

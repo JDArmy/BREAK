@@ -74,7 +74,9 @@ const openRelationGraph = (rKey: string) => {
     </template>
     <div class="desc">
       <strong>{{ $t("riskKey") }}:&nbsp;</strong>
-      {{ rKey }}
+      <router-link :to="{ name: 'risks', hash: `#${rKey}` }" class="id-link">
+        {{ rKey }}
+      </router-link>
       <router-link
         :title="$t('relationMap')"
         class="relation-map-icon"
@@ -156,13 +158,14 @@ const openRelationGraph = (rKey: string) => {
       <el-button
         size="small"
         type="primary"
+        plain
         @click="openRelationGraph(rKey)"
       >
         {{ $t("openRelationGraph") }}
       </el-button>
     </div>
     <div class="desc">
-      <el-button type="primary" size="small" @click="$router.push('/risks#' + rKey)">
+      <el-button type="primary" plain size="small" @click="$router.push('/risks#' + rKey)">
         {{ $t("viewDetail") }}
       </el-button>
     </div>
@@ -192,6 +195,11 @@ const openRelationGraph = (rKey: string) => {
 <style scoped>
 .desc {
   margin-bottom: 20px;
+}
+
+.desc strong {
+  display: block;
+  margin-bottom: 8px;
 }
 
 .drawer-header-with-back {

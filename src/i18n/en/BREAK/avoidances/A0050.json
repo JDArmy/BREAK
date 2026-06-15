@@ -12,6 +12,11 @@
       {
         "title": "NIST SP 800-53 Rev. 5: Security and Privacy Controls for Information Systems and Organizations (SC-7, SC-8, SC-28)"
       }
+    ],
+    "keywords": [
+      "DLP",
+      "data exfiltration prevention",
+      "content inspection"
     ]
   },
   "A0050-001": {
@@ -24,6 +29,11 @@
         "title": "Recommendation for Key Management - NIST SP 800-57 Part 1 Rev. 5",
         "link": "https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final"
       }
+    ],
+    "keywords": [
+      "encryption at rest",
+      "storage encryption",
+      "disk encryption"
     ]
   },
   "A0050-002": {
@@ -36,6 +46,11 @@
         "title": "Guide to Computer Security Log Management - NIST SP 800-92",
         "link": "https://csrc.nist.gov/pubs/sp/800/92/final"
       }
+    ],
+    "keywords": [
+      "database audit logs",
+      "SQL audit trail",
+      "DB activity monitoring"
     ]
   },
   "A0050-003": {
@@ -48,6 +63,11 @@
         "title": "Guidelines for Media Sanitization - NIST SP 800-88 Rev. 1",
         "link": "https://csrc.nist.gov/pubs/sp/800/88/r1/final"
       }
+    ],
+    "keywords": [
+      "secure deletion",
+      "data wiping",
+      "disk wiping"
     ]
   }
 }

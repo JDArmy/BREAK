@@ -13,6 +13,14 @@
       {
         "title": "Steal Web Session Cookie - MITRE ATT&CK T1539"
       }
+    ],
+    "keywords": [
+      "Login Credential Reuse",
+      "session hijacking",
+      "cookie reuse",
+      "session cookie reuse",
+      "stolen session",
+      "session token reuse"
     ]
   },
   "R0035-001": {
@@ -29,6 +37,14 @@
         "title": "Credential Stuffing Prevention Cheat Sheet - OWASP",
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html"
       }
+    ],
+    "keywords": [
+      "Login Credential Theft",
+      "credential theft",
+      "session theft",
+      "cookie theft",
+      "token theft",
+      "account credential theft"
     ]
   }
 }

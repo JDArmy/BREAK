@@ -15,6 +15,16 @@
         "link": "https://owasp.org/www-community/controls/Blocking_Brute_Force_Attacks"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "数量限制",
+      "总量限制",
+      "配额限制",
+      "Quota",
+      "次数上限",
+      "请求总量限制",
+      "调用次数限制",
+      "每日限额"
+    ]
   }
 }

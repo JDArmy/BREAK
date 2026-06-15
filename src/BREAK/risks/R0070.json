@@ -32,7 +32,16 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-005_Scalping"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-10",
+    "keywords": [
+      "自动化倒卖",
+      "黄牛倒卖",
+      "自动抢货转卖",
+      "机器人倒卖",
+      "Scalping",
+      "自动化转卖",
+      "机器倒卖"
+    ]
   },
   "R0070-001": {
     "title": "低买高卖",
@@ -66,7 +75,15 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-005_Scalping"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-10",
+    "keywords": [
+      "低买高卖",
+      "跨平台倒卖",
+      "搬货赚差价",
+      "加价转卖",
+      "高价转卖",
+      "倒卖赚差价"
+    ]
   },
   "R0070-002": {
     "title": "无货源店铺",
@@ -100,7 +117,16 @@
         "link": "https://en.wikipedia.org/wiki/Drop_shipping"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-10",
+    "keywords": [
+      "无货源店铺",
+      "无货源",
+      "代拍代发",
+      "一件代发倒卖",
+      "dropshipping",
+      "跨平台代发",
+      "搬运店铺"
+    ]
   },
   "R0070-003": {
     "title": "店群",
@@ -135,6 +161,15 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-005_Scalping"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-10",
+    "keywords": [
+      "店群",
+      "店群模式",
+      "批量开店",
+      "矩阵店铺",
+      "店铺矩阵",
+      "批量铺货",
+      "多店铺货"
+    ]
   }
 }

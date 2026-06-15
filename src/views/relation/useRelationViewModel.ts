@@ -15,10 +15,10 @@ import { CanvasRenderer } from "echarts/renderers";
 import { createRelationViewAssembly } from "@/views/relation/relationViewAssembly";
 import {
   createRelationTypeMapping,
+  getColorFromCSS,
   graphColors,
   networkLayoutOptions,
   relationLineColors,
-  relationTypeColors,
   RelationType,
 } from "@/views/relation/relationTypes";
 
@@ -31,19 +31,53 @@ export const useRelationViewModel = () => {
   const { isDark } = useTheme();
   const { isMobile, width } = useBreakpoints();
 
-  const getRelationTypeColor = (type: Exclude<RelationType, RelationType.all>) =>
-    isDark.value ? relationTypeColors[type].dark : relationTypeColors[type].light;
+  const getRelationTypeColor = (type: Exclude<RelationType, RelationType.all>) => {
+    return getColorFromCSS(`--break-relation-${type}`);
+  };
 
   const RelationTypeMapping = createRelationTypeMapping(
     (key) => t(key),
     getRelationTypeColor
   );
 
-  const getGraphColor = (key: keyof typeof graphColors) =>
-    isDark.value ? graphColors[key].dark : graphColors[key].light;
+  const graphColorVarMap: Record<keyof typeof graphColors, string> = {
+    background: "--break-bg-primary",
+    line: "--break-text-muted",
+    lineText: "--break-text-secondary",
+    nodeText: "--break-text-primary",
+    nodeBorder: "--break-border",
+    subNodeFill: "--break-graph-sub-node-fill",
+    subNodeBorder: "--break-graph-sub-node-border",
+    selectedNodeBorder: "--break-graph-selected-border",
+    selectedNodeGlow: "--break-graph-selected-border",
+  };
+
+  const getGraphColor = (key: keyof typeof graphColors) => {
+    const varName = graphColorVarMap[key];
+    let color = getColorFromCSS(varName);
+    if (key === "selectedNodeGlow") {
+      const rgb = color.match(/\d+/g)?.join(", ");
+      color = rgb ? `rgba(${rgb}, 0.3)` : color;
+    }
+    return color;
+  };
+
+  const lineColorVarMap: Record<keyof typeof relationLineColors, string> = {
+    avoidanceMeans: "--break-line-avoidance",
+    directCauseRisk: "--break-line-direct-risk",
+    indirectSupportRisk: "--break-line-indirect-risk",
+    buildAttackTool: "--break-line-build-tool",
+    useAttackTool: "--break-line-use-tool",
+    causeRisk: "--break-line-cause-risk",
+    subRisk: "--break-line-sub",
+    subAvoidance: "--break-line-sub",
+    subAttackTool: "--break-line-sub",
+    subThreatActor: "--break-line-sub",
+    attackToolMaker: "--break-line-maker",
+  };
 
   const getRelationLineColor = (key: keyof typeof relationLineColors) =>
-    isDark.value ? relationLineColors[key].dark : relationLineColors[key].light;
+    getColorFromCSS(lineColorVarMap[key]);
 
   const renderNetworkChartBridge = createRenderNetworkChartBridge();
   const dropdown1 = createRelationDropdownRef();

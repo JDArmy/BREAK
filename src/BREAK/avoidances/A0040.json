@@ -11,6 +11,15 @@
         "link": "https://mas.owasp.org/MASTG/tests/android/MASVS-NETWORK/MASTG-TEST-0244/"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "证书锁定(SSL Pinning)",
+      "SSL Pinning",
+      "证书锁定",
+      "公钥锁定",
+      "证书绑定",
+      "Certificate Pinning",
+      "中间人防护"
+    ]
   }
 }

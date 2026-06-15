@@ -11,7 +11,16 @@
         "link": "https://en.wikipedia.org/wiki/High_availability"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "提升服务可用性",
+      "高可用",
+      "服务可用性",
+      "可用性保障",
+      "稳定性提升",
+      "容量保障",
+      "抗压能力"
+    ]
   },
   "A0008-001": {
     "title": "增加计算资源",
@@ -25,7 +34,16 @@
         "link": "https://en.wikipedia.org/wiki/Autoscaling"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "增加计算资源",
+      "扩容",
+      "横向扩容",
+      "弹性扩容",
+      "自动扩容",
+      "增加实例",
+      "算力扩容"
+    ]
   },
   "A0008-002": {
     "title": "DDoS防护",
@@ -39,7 +57,16 @@
         "link": "https://en.wikipedia.org/wiki/Denial-of-service_attack"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "DDoS防护",
+      "抗DDoS",
+      "DDoS清洗",
+      "高防IP",
+      "流量清洗",
+      "拒绝服务攻击防护",
+      "CC防护"
+    ]
   },
   "A0008-003": {
     "title": "前置CDN",
@@ -53,7 +80,16 @@
         "link": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "前置CDN",
+      "CDN",
+      "内容分发网络",
+      "边缘缓存",
+      "前置缓存",
+      "静态资源加速",
+      "边缘节点"
+    ]
   },
   "A0008-004": {
     "title": "业务系统优化",
@@ -67,7 +103,16 @@
         "link": "https://en.wikipedia.org/wiki/Business_continuity"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "业务系统优化",
+      "系统优化",
+      "架构优化",
+      "缓存优化",
+      "性能优化",
+      "业务流程优化",
+      "并发优化"
+    ]
   },
   "A0008-005": {
     "title": "增加业务资源",
@@ -81,6 +126,15 @@
         "link": "https://en.wikipedia.org/wiki/Cloud_computing"
       }
     ],
-    "updated": "2024-02-01"
+    "updated": "2026-06-13",
+    "keywords": [
+      "增加业务资源",
+      "增加库存",
+      "增加名额",
+      "增加配额",
+      "增加运力",
+      "扩充资源池",
+      "资源供给提升"
+    ]
   }
 }

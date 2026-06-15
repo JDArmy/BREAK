@@ -18,7 +18,15 @@
         "link": "https://en.wikipedia.org/wiki/Supply_chain_attack"
       }
     ],
-    "updated": "2026-05-28"
+    "updated": "2026-06-10",
+    "keywords": [
+      "供应链风险",
+      "供应链攻击",
+      "供应链安全",
+      "第三方供应链风险",
+      "上游投毒",
+      "供应商攻击"
+    ]
   },
   "R0081-001": {
     "title": "软件供应链风险",
@@ -37,7 +45,16 @@
         "link": "https://en.wikipedia.org/wiki/Supply_chain_attack"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-10",
+    "keywords": [
+      "软件供应链风险",
+      "软件供应链攻击",
+      "依赖投毒",
+      "CI/CD供应链",
+      "构建链投毒",
+      "第三方组件风险",
+      "构建环境投毒"
+    ]
   },
   "R0081-002": {
     "title": "硬件供应链风险",
@@ -56,7 +73,16 @@
         "link": "https://en.wikipedia.org/wiki/Supply_chain_attack"
       }
     ],
-    "updated": "2024-01-29"
+    "updated": "2026-06-10",
+    "keywords": [
+      "硬件供应链风险",
+      "硬件后门",
+      "固件投毒",
+      "设备后门",
+      "芯片供应链",
+      "硬件篡改",
+      "植入后门"
+    ]
   },
   "R0081-003": {
     "title": "云服务供应链风险",
@@ -75,7 +101,15 @@
         "link": "https://en.wikipedia.org/wiki/Supply_chain_attack"
       }
     ],
-    "updated": "2024-01-29"
+    "updated": "2026-06-10",
+    "keywords": [
+      "云服务供应链风险",
+      "云厂商风险",
+      "SaaS供应链",
+      "云平台供应链",
+      "第三方云服务风险",
+      "云服务商故障"
+    ]
   },
   "R0081-004": {
     "title": "外包人员风险",
@@ -96,7 +130,16 @@
         "link": "https://en.wikipedia.org/wiki/Insider_threat"
       }
     ],
-    "updated": "2024-01-29"
+    "updated": "2026-06-10",
+    "keywords": [
+      "外包人员风险",
+      "外包内鬼",
+      "供应商人员风险",
+      "驻场外包风险",
+      "第三方人员风险",
+      "外包账号风险",
+      "外包越权"
+    ]
   },
   "R0081-005": {
     "title": "开源组件投毒风险",
@@ -117,6 +160,15 @@
         "link": "https://slsa.dev/"
       }
     ],
-    "updated": "2026-02-27"
+    "updated": "2026-06-10",
+    "keywords": [
+      "开源组件投毒风险",
+      "开源投毒",
+      "依赖混淆",
+      "Typosquatting",
+      "恶意npm包",
+      "恶意PyPI包",
+      "包管理器投毒"
+    ]
   }
 }

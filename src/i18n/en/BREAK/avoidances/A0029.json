@@ -12,6 +12,11 @@
       {
         "title": "GB/T 35273-2020 Information Security Technology - Personal Information Security Specification"
       }
+    ],
+    "keywords": [
+      "dataset profiling",
+      "data quality analysis",
+      "attribute profiling"
     ]
   },
   "A0029-001": {
@@ -24,6 +29,11 @@
         "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",
         "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
       }
+    ],
+    "keywords": [
+      "customer profiling",
+      "audience segmentation",
+      "persona building"
     ]
   },
   "A0029-002": {
@@ -36,6 +46,11 @@
         "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",
         "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
       }
+    ],
+    "keywords": [
+      "IP reputation",
+      "IP intelligence",
+      "IP enrichment"
     ]
   },
   "A0029-003": {
@@ -48,6 +63,11 @@
         "title": "Fingerprinting - MDN Web Docs",
         "link": "https://developer.mozilla.org/en-US/docs/Glossary/Fingerprinting"
       }
+    ],
+    "keywords": [
+      "device fingerprinting",
+      "device intelligence",
+      "device reputation"
     ]
   }
 }

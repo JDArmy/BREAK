@@ -22,7 +22,15 @@
     "indirectSupportRisks": [
       "R0112-002"
     ],
-    "updated": "2024-01-30"
+    "updated": "2026-06-13",
+    "keywords": [
+      "恶意外设",
+      "恶意USB设备",
+      "USB攻击设备",
+      "硬件植入",
+      "硬件攻击工具",
+      "外设投毒"
+    ]
   },
   "AT0052-001": {
     "title": "KON-Boot",
@@ -48,7 +56,14 @@
       "R0112-002",
       "R0112-005"
     ],
-    "updated": "2026-05-27"
+    "updated": "2026-06-13",
+    "keywords": [
+      "KON-Boot",
+      "Kon Boot",
+      "密码绕过工具",
+      "Windows密码绕过",
+      "开机密码绕过"
+    ]
   },
   "AT0052-002": {
     "title": "USB Killer",
@@ -73,7 +88,14 @@
       "R0112-002",
       "R0112-005"
     ],
-    "updated": "2026-05-27"
+    "updated": "2026-06-13",
+    "keywords": [
+      "USB Killer",
+      "USB杀手",
+      "高压U盘",
+      "电涌U盘",
+      "烧机U盘"
+    ]
   },
   "AT0052-003": {
     "title": "BadUSB",
@@ -99,6 +121,14 @@
     "indirectSupportRisks": [
       "R0112-002"
     ],
-    "updated": "2026-05-27"
+    "updated": "2026-06-13",
+    "keywords": [
+      "BadUSB",
+      "BadUSB攻击",
+      "坏U盘",
+      "HID注入",
+      "键盘注入U盘",
+      "恶意USB固件"
+    ]
   }
 }

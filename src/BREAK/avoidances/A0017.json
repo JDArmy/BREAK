@@ -11,7 +11,16 @@
         "link": "https://en.wikipedia.org/wiki/Multi-factor_authentication"
       }
     ],
-    "updated": "2024-01-11"
+    "updated": "2026-06-13",
+    "keywords": [
+      "增加身份鉴权",
+      "二次鉴权",
+      "敏感操作鉴权",
+      "强身份校验",
+      "身份复核",
+      "操作鉴权",
+      "二次确认认证"
+    ]
   },
   "A0017-001": {
     "title": "门禁",
@@ -25,6 +34,15 @@
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html"
       }
     ],
-    "updated": "2024-01-30"
+    "updated": "2026-06-13",
+    "keywords": [
+      "门禁",
+      "访问控制",
+      "准入门禁",
+      "门禁系统",
+      "刷卡门禁",
+      "密码门禁",
+      "生物门禁"
+    ]
   }
 }

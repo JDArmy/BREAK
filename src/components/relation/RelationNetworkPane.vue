@@ -20,7 +20,7 @@ const props = defineProps<{
   filterSubNode: boolean;
   filterLineType: string[];
   relationTypeItems: { key: string; title: string; color: string }[];
-  subNodeFilterColor: string;
+  subNodeFilterColor?: string;
   visibleRelationLegendItems: { color: string; label: string; fields: string[] }[];
   formatRelationFieldsTooltip: (fields: string[]) => string;
   dropdownStyle: Record<string, string | number>;

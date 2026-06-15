@@ -21,7 +21,16 @@
         "link": "http://www.fangyuba.com/news/dynamic/2778.htm"
       }
     ],
-    "updated": "2024-01-15"
+    "updated": "2026-06-11",
+    "keywords": [
+      "多因素(MFA)绕过",
+      "MFA绕过",
+      "2FA绕过",
+      "双因子绕过",
+      "多因子绕过",
+      "OTP绕过",
+      "二次验证绕过"
+    ]
   },
   "R0036-001": {
     "title": "多因素疲劳攻击",
@@ -46,6 +55,14 @@
         "link": "https://m.163.com/dy/article/I2H92SPP0518STKV.html"
       }
     ],
-    "updated": "2024-02-04"
+    "updated": "2026-06-11",
+    "keywords": [
+      "多因素疲劳攻击",
+      "MFA疲劳",
+      "推送疲劳",
+      "Push bombing",
+      "通知轰炸登录",
+      "批准疲劳"
+    ]
   }
 }

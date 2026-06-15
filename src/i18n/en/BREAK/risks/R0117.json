@@ -12,6 +12,14 @@
       {
         "title": "Survey on Prompt Injection Attacks and Defenses"
       }
+    ],
+    "keywords": [
+      "LLM Prompt Injection Risk",
+      "prompt injection",
+      "jailbreak",
+      "prompt hijacking",
+      "LLM jailbreak",
+      "adversarial prompt"
     ]
   },
   "R0117-001": {
@@ -24,6 +32,12 @@
       {
         "title": "OWASP Top 10 for LLM Applications"
       }
+    ],
+    "keywords": [
+      "Direct Prompt Injection",
+      "malicious prompt",
+      "instruction override",
+      "prompt hijacking"
     ]
   },
   "R0117-002": {
@@ -36,6 +50,12 @@
       {
         "title": "Indirect Prompt Injection Threats"
       }
+    ],
+    "keywords": [
+      "Indirect Prompt Injection",
+      "retrieval injection",
+      "document injection",
+      "hidden instructions"
     ]
   }
 }

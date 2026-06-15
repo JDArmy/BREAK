@@ -12,6 +12,11 @@
       {
         "title": "NIST SP 800-188: De-Identifying Government Datasets - Techniques and Governance"
       }
+    ],
+    "keywords": [
+      "data masking",
+      "data redaction",
+      "de-identification"
     ]
   },
   "A0035-001": {
@@ -24,6 +29,11 @@
         "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",
         "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
       }
+    ],
+    "keywords": [
+      "data redaction",
+      "PII removal",
+      "sensitive field stripping"
     ]
   },
   "A0035-002": {
@@ -36,6 +46,11 @@
         "title": "Information Supplement: Tokenization Product Security Guidelines - PCI SSC",
         "link": "https://www.pcisecuritystandards.org/documents/Tokenization_Product_Security_Guidelines.pdf"
       }
+    ],
+    "keywords": [
+      "PII tokenization",
+      "identity tokenization",
+      "tokenized user data"
     ]
   },
   "A0035-003": {
@@ -48,6 +63,11 @@
         "title": "Personal Information Protection Law of the People's Republic of China",
         "link": "https://www.samr.gov.cn/wljys/gzzd/art/2023/art_3ef1e889c1e644d4b65b5f5c7f432386.html"
       }
+    ],
+    "keywords": [
+      "disposable phone number",
+      "proxy number",
+      "masked phone number"
     ]
   }
 }

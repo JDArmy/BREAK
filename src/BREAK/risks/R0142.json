@@ -22,6 +22,14 @@
         "link": "https://www.cisa.gov/news-events/cybersecurity-advisories"
       }
     ],
-    "updated": "2026-02-27"
+    "updated": "2026-06-11",
+    "keywords": [
+      "中间人攻击",
+      "MITM",
+      "会话劫持",
+      "流量劫持",
+      "SSL剥离",
+      "通信篡改"
+    ]
   }
 }

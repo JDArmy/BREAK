@@ -9,6 +9,15 @@
       {
         "title": "OWASP Automated Threat: OAT006 Expediting"
       }
+    ],
+    "keywords": [
+      "Process Automation",
+      "workflow automation",
+      "task automation",
+      "automation bot",
+      "scripted user actions",
+      "OAT-006 Expediting",
+      "expediting"
     ]
   },
   "R0001-001": {
@@ -21,6 +30,15 @@
       {
         "title": "OWASP Automated Threat: OAT-011 Scraping"
       }
+    ],
+    "keywords": [
+      "Protocol-Level Automation",
+      "API automation",
+      "request automation",
+      "protocol bot",
+      "direct API calls",
+      "HTTP request scripting",
+      "headless automation"
     ]
   },
   "R0001-002": {
@@ -33,6 +51,15 @@
       {
         "title": "OWASP Automated Threat: OAT-020 Account Aggregation"
       }
+    ],
+    "keywords": [
+      "Automated Simulator",
+      "UI automation",
+      "client automation",
+      "device farm bot",
+      "click bot",
+      "emulator farm",
+      "RPA bot"
     ]
   }
 }

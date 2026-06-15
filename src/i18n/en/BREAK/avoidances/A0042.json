@@ -9,6 +9,11 @@
         "title": "Authorization Cheat Sheet - OWASP",
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
       }
+    ],
+    "keywords": [
+      "workflow randomization",
+      "anti-bot workflow",
+      "interaction randomization"
     ]
   },
   "A0042-001": {
@@ -21,6 +26,11 @@
         "title": "Authorization Cheat Sheet - OWASP",
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
       }
+    ],
+    "keywords": [
+      "DOM obfuscation",
+      "randomized DOM",
+      "element shuffling"
     ]
   },
   "A0042-002": {
@@ -33,6 +43,11 @@
         "title": "Authorization Cheat Sheet - OWASP",
         "link": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
       }
+    ],
+    "keywords": [
+      "random event injection",
+      "challenge step",
+      "human verification step"
     ]
   }
 }

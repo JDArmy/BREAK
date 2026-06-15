@@ -90,6 +90,19 @@ export interface AttackPath {
   avoidanceKey?: string;
 }
 
+export const getColorFromCSS = (varName: string): string => {
+  const style = getComputedStyle(document.documentElement);
+  const value = style.getPropertyValue(varName).trim();
+
+  // 如果值是 var(--xxx) 形式，递归解析
+  const varMatch = value.match(/var\((--[^)]+)\)/);
+  if (varMatch) {
+    return getColorFromCSS(varMatch[1]);
+  }
+
+  return value;
+};
+
 export const relationTypeColors: Record<
   Exclude<RelationType, RelationType.all>,
   { light: string; dark: string }
@@ -101,30 +114,58 @@ export const relationTypeColors: Record<
 };
 
 export const graphColors = {
-  background: { light: "#ffffff", dark: "#0f172a" },
-  line: { light: "#999999", dark: "#475569" },
-  lineText: { light: "#666666", dark: "#94a3b8" },
-  nodeText: { light: "#333333", dark: "#e2e8f0" },
-  nodeBorder: { light: "#efefef", dark: "#334155" },
-  subNodeFill: { light: "#fde7a7", dark: "#7c5a1d" },
-  subNodeBorder: { light: "#e0b85b", dark: "#f6d28b" },
-  selectedNodeBorder: { light: "#2563eb", dark: "#93c5fd" },
-  selectedNodeGlow: { light: "rgba(37, 99, 235, 0.26)", dark: "rgba(147, 197, 253, 0.3)" },
-};
+  background: "",
+  line: "",
+  lineText: "",
+  nodeText: "",
+  nodeBorder: "",
+  subNodeFill: "",
+  subNodeBorder: "",
+  selectedNodeBorder: "",
+  selectedNodeGlow: "",
+} as const;
 
 export const relationLineColors = {
-  avoidanceMeans: { light: "#8b5cf6", dark: "#c084fc" },
-  directCauseRisk: { light: "#ef4444", dark: "#f87171" },
-  indirectSupportRisk: { light: "#f59e0b", dark: "#fbbf24" },
-  buildAttackTool: { light: "#0ea5e9", dark: "#38bdf8" },
-  useAttackTool: { light: "#14b8a6", dark: "#5eead4" },
-  causeRisk: { light: "#dc2626", dark: "#fb7185" },
-  subRisk: { light: "#94a3b8", dark: "#64748b" },
-  subAvoidance: { light: "#94a3b8", dark: "#64748b" },
-  subAttackTool: { light: "#94a3b8", dark: "#64748b" },
-  subThreatActor: { light: "#94a3b8", dark: "#64748b" },
-  attackToolMaker: { light: "#22c55e", dark: "#4ade80" },
-};
+  avoidanceMeans: "",
+  directCauseRisk: "",
+  indirectSupportRisk: "",
+  buildAttackTool: "",
+  useAttackTool: "",
+  causeRisk: "",
+  subRisk: "",
+  subAvoidance: "",
+  subAttackTool: "",
+  subThreatActor: "",
+  attackToolMaker: "",
+} as const;
+
+export const getGraphColors = () => ({
+  background: getColorFromCSS("--break-bg-primary"),
+  line: getColorFromCSS("--break-text-muted"),
+  lineText: getColorFromCSS("--break-text-secondary"),
+  nodeText: getColorFromCSS("--break-text-primary"),
+  nodeBorder: getColorFromCSS("--break-border"),
+  subNodeFill: getColorFromCSS("--break-graph-sub-node-fill"),
+  subNodeBorder: getColorFromCSS("--break-graph-sub-node-border"),
+  selectedNodeBorder: getColorFromCSS("--break-graph-selected-border"),
+  selectedNodeGlow: `rgba(${getColorFromCSS("--break-graph-selected-border")
+    .match(/\d+/g)
+    ?.join(", ")}, 0.3)`,
+});
+
+export const getRelationLineColors = () => ({
+  avoidanceMeans: getColorFromCSS("--break-line-avoidance"),
+  directCauseRisk: getColorFromCSS("--break-line-direct-risk"),
+  indirectSupportRisk: getColorFromCSS("--break-line-indirect-risk"),
+  buildAttackTool: getColorFromCSS("--break-line-build-tool"),
+  useAttackTool: getColorFromCSS("--break-line-use-tool"),
+  causeRisk: getColorFromCSS("--break-line-cause-risk"),
+  subRisk: getColorFromCSS("--break-line-sub"),
+  subAvoidance: getColorFromCSS("--break-line-sub"),
+  subAttackTool: getColorFromCSS("--break-line-sub"),
+  subThreatActor: getColorFromCSS("--break-line-sub"),
+  attackToolMaker: getColorFromCSS("--break-line-maker"),
+});
 
 export const networkLayoutOptions: { value: NetworkLayoutMode; labelKey: string }[] = [
   { value: "horizontal", labelKey: "relationLayout.horizontal" },

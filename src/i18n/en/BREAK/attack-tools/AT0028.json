@@ -11,6 +11,16 @@
         "title": "MASTG-TEST-0048: Testing Reverse Engineering Tools Detection - OWASP",
         "link": "https://mas.owasp.org/MASTG-TEST-0048/"
       }
+    ],
+    "keywords": [
+      "Decompilation Tools",
+      "disassembler",
+      "reverse engineering suite",
+      "JADX",
+      "apktool",
+      "Ghidra",
+      "IDA Pro",
+      "dnSpy"
     ]
   }
 }
