@@ -11,6 +11,13 @@ import { ElRow, ElCol } from "element-plus";
 
 const router = useRouter();
 const route = useRoute();
+const defaultBusinessSceneKey = "BS00";
+
+const getSingleRouteParam = (param: unknown) =>
+  typeof param === "string" ? param : undefined;
+
+const hasOwn = <T extends object>(obj: T, key: string) =>
+  Object.prototype.hasOwnProperty.call(obj, key);
 
 // 统计所有风险（包括子风险）
 const totalRisks = computed(() => Object.keys(BREAK.risks).length);
@@ -43,43 +50,94 @@ interface SceneBREAK {
     };
   };
 }
+
+// 通过动态计算每个风险维度中风险场景的数量，来分配每个风险维度的Col大小，主要解决24不能被整除问题
+let totalRowSize = 24;
+const getDimensionRowSize = (
+  dimensionScenesLength: number,
+  totalSceneslength: number
+) => {
+  let step = Math.round((dimensionScenesLength / totalSceneslength) * 24);
+
+  totalRowSize = totalRowSize <= 0 ? 24 : totalRowSize;
+
+  step = step > totalRowSize ? totalRowSize : step;
+  totalRowSize -= step;
+
+  return step;
+};
+// 通过通过动态计算每个风险维度中风险场景的数量，来分配每个风险场景的Col大小，主要解决24不能被整除问题
+let totalDimensionRowSize = 24;
+const getSceneRowSize = (sceneLength: number) => {
+  let step = Math.round(24 / sceneLength);
+
+  totalDimensionRowSize =
+    totalDimensionRowSize <= 0 ? 24 : totalDimensionRowSize;
+
+  step = step > totalDimensionRowSize ? totalDimensionRowSize : step;
+  totalDimensionRowSize -= step;
+
+  return step;
+};
+
+const resetSceneGridSizes = () => {
+  totalRowSize = 24;
+  totalDimensionRowSize = 24;
+};
+
+const normalizeBusinessSceneKey = (key?: string) =>
+  key && hasOwn(BREAK.businessScenes, key) ? key : defaultBusinessSceneKey;
+
 //url params init
-const bsKeySelected = ref((route.params.bsKey as string) || "BS00");
+const bsKeySelected = ref(normalizeBusinessSceneKey(getSingleRouteParam(route.params.bsKey)));
 watch(
   () => route.params.bsKey,
-  () => {
-    bsKeySelected.value = (route.params.bsKey as string) || "BS00";
-  }
+  (rawBsKey) => {
+    const nextBsKey = getSingleRouteParam(rawBsKey);
+    const normalizedBsKey = normalizeBusinessSceneKey(nextBsKey);
+    bsKeySelected.value = normalizedBsKey;
+    resetSceneGridSizes();
+
+    if (route.name === "businessScene" && nextBsKey !== normalizedBsKey) {
+      router.replace({ name: "home" });
+    }
+  },
+  { immediate: true }
 );
+
 const sceneBREAK = computed(
   () =>
     ({
-      riskDimensions: BREAK.businessScenes[bsKeySelected.value].riskDimensions,
-      riskScenes: BREAK.businessScenes[bsKeySelected.value].riskScenes,
+      riskDimensions: BREAK.businessScenes[normalizeBusinessSceneKey(bsKeySelected.value)].riskDimensions,
+      riskScenes: BREAK.businessScenes[normalizeBusinessSceneKey(bsKeySelected.value)].riskScenes,
     }) as SceneBREAK
 );
 
 //bsKeySelected event
-watch(bsKeySelected, () => {
-  if (
-    bsKeySelected.value.match(/BS[0-9]{2}/) &&
-    bsKeySelected.value !== "BS00"
-  ) {
+watch(bsKeySelected, (rawBsKey) => {
+  const normalizedBsKey = normalizeBusinessSceneKey(rawBsKey);
+  if (normalizedBsKey !== rawBsKey) {
+    bsKeySelected.value = normalizedBsKey;
+    return;
+  }
+
+  resetSceneGridSizes();
+
+  if (normalizedBsKey === defaultBusinessSceneKey) {
+    if (route.name !== "home") {
+      router.push({ name: "home" });
+    }
+    return;
+  }
+
+  if (route.name !== "businessScene" || route.params.bsKey !== normalizedBsKey) {
     router.push({
       name: "businessScene",
       params: {
-        bsKey: bsKeySelected.value,
+        bsKey: normalizedBsKey,
       },
     });
-  } else {
-    bsKeySelected.value = "BS00";
-    router.push({
-      name: "home",
-    });
   }
-  // 重置风险维度和风险场景的 col 总大小，以便重新计算
-  totalRowSize = 24;
-  totalDimensionRowSize = 24;
 });
 
 const getRisks = (
@@ -126,17 +184,23 @@ const showRiskDetail = (riskKey1: string, drawer1: boolean) => {
   riskDrawer.value = drawer1;
   riskKey.value = riskKey1;
 };
-
-if (route.name == "riskDetail") {
-  showRiskDetail(route.params.rKey as string, true);
-}
 watch(
-  () => route.params.rKey,
-  async () => {
-    if (route.name == "riskDetail") {
-      showRiskDetail(route.params.rKey as string, true);
+  () => [route.name, route.params.rKey] as const,
+  ([routeName, rawRiskKey]) => {
+    if (routeName === "riskDetail") {
+      const nextRiskKey = getSingleRouteParam(rawRiskKey);
+      if (nextRiskKey && hasOwn(BREAK.risks, nextRiskKey)) {
+        showRiskDetail(nextRiskKey, true);
+        return;
+      }
+
+      router.replace({ name: "home" });
+      return;
     }
-  }
+
+    showRiskDetail("", false);
+  },
+  { immediate: true }
 );
 
 const riskDetailClose = () => {
@@ -146,35 +210,6 @@ const riskDetailClose = () => {
   });
 };
 //end.
-
-// 通过动态计算每个风险维度中风险场景的数量，来分配每个风险维度的Col大小，主要解决24不能被整除问题
-let totalRowSize = 24;
-const getDimensionRowSize = (
-  dimensionScenesLength: number,
-  totalSceneslength: number
-) => {
-  let step = Math.round((dimensionScenesLength / totalSceneslength) * 24);
-
-  totalRowSize = totalRowSize <= 0 ? 24 : totalRowSize;
-
-  step = step > totalRowSize ? totalRowSize : step;
-  totalRowSize -= step;
-
-  return step;
-};
-// 通过通过动态计算每个风险维度中风险场景的数量，来分配每个风险场景的Col大小，主要解决24不能被整除问题
-let totalDimensionRowSize = 24;
-const getSceneRowSize = (sceneLength: number) => {
-  let step = Math.round(24 / sceneLength);
-
-  totalDimensionRowSize =
-    totalDimensionRowSize <= 0 ? 24 : totalDimensionRowSize;
-
-  step = step > totalDimensionRowSize ? totalDimensionRowSize : step;
-  totalDimensionRowSize -= step;
-
-  return step;
-};
 </script>
 
 <template>
