@@ -76,6 +76,7 @@ export default defineConfig({
     minify: "terser",
     outDir: "docs",
     rolldownOptions: {
+      logLevel: "silent",
       output: {
         codeSplitting: {
           groups: codeSplittingGroups,

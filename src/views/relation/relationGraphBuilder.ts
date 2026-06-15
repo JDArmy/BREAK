@@ -205,8 +205,12 @@ export const createRelationGraphBuilder = ({
     filterLineType,
     filterRelationType,
     filterSubNode,
+    getLineType,
     genNetworkGraphData,
     rebuildGraphData,
+    totalLineType,
+    uniqLines,
+    uniqNodes,
     visibleRelationLegendItems,
   };
 };
