@@ -1,6 +1,7 @@
 import type { Ref } from "vue";
 import {
   RelationType,
+  isRelationEntityType,
   type GraphLink,
   type GraphNode,
   type Line,
@@ -23,6 +24,7 @@ interface CreateNetworkDataHelpersOptions {
   networkState: { layout: NetworkLayoutMode };
   relationLegendItems: Ref<{ color: string; label: string }[]>;
   isDark: Ref<boolean>;
+  getRelationTypeColor: (type: Exclude<RelationType, RelationType.all>) => string;
   wrapLabelText: (text: string, maxLineLength?: number) => string;
   getGraphColor: (key: "line" | "nodeText" | "subNodeFill" | "selectedNodeBorder" | "subNodeBorder" | "nodeBorder" | "selectedNodeGlow") => string;
   getRelationSourceFields: (line: Line) => string[];
@@ -50,6 +52,7 @@ export const createNetworkDataHelpers = ({
   networkState,
   relationLegendItems,
   isDark,
+  getRelationTypeColor,
   wrapLabelText,
   getGraphColor,
   getRelationSourceFields,
@@ -65,6 +68,9 @@ export const createNetworkDataHelpers = ({
     const isSelected = node.id === selectedNetworkNodeId.value;
     const isSubNode = Boolean(node.data?.isSubNode);
     const draggedPosition = draggedNodePositions.value[node.id];
+    const baseColor = isRelationEntityType(node.type)
+      ? getRelationTypeColor(node.type)
+      : node.color;
     return {
       id: node.id,
       name: node.id,
@@ -73,7 +79,7 @@ export const createNetworkDataHelpers = ({
       labelText: wrapLabelText(text, networkLabelMaxLineLength),
       symbolSize: isSelected ? symbolSize + 10 : symbolSize,
       itemStyle: {
-        color: isSubNode ? getGraphColor("subNodeFill") : node.color,
+        color: isSubNode ? getGraphColor("subNodeFill") : baseColor,
         borderColor: isSelected
           ? getGraphColor("selectedNodeBorder")
           : isSubNode

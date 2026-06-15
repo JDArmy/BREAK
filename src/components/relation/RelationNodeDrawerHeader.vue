@@ -28,17 +28,13 @@ const { t } = useI18n();
 </script>
 
 <template>
-  <div class="node-detail-title">
-    <button type="button" class="node-detail-id" @click="emit('open-detail-new-window')">
-      {{ selectedNetworkNode.id }}
-    </button>
-    <button type="button" class="node-detail-type" @click="emit('open-detail-new-window')">
-      {{ getNodeTypeTitle(selectedNetworkNode.type) }}
-    </button>
-  </div>
-  <button type="button" class="node-detail-name" @click="emit('open-detail-new-window')">
-    {{ selectedNetworkNodeTitle }}
+  <button type="button" class="node-detail-title" @click="emit('open-detail-new-window')">
+    <span class="node-detail-id">{{ selectedNetworkNode.id }}</span>
+    <span class="node-detail-name">{{ selectedNetworkNodeTitle }}</span>
   </button>
+  <div class="node-detail-type">
+    {{ getNodeTypeTitle(selectedNetworkNode.type) }}
+  </div>
   <div class="node-detail-counts">
     <span>{{ t("relationView.incoming") }}: {{ selectedNetworkRelationCounts.incoming }}</span>
     <span>{{ t("relationView.outgoing") }}: {{ selectedNetworkRelationCounts.outgoing }}</span>
@@ -61,7 +57,48 @@ const { t } = useI18n();
 </template>
 
 <style scoped>
-.node-detail-title,
+.node-detail-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.node-detail-title:hover .node-detail-id,
+.node-detail-title:hover .node-detail-name {
+  color: var(--el-color-primary);
+}
+
+.node-detail-id {
+  font-weight: 800;
+  color: var(--break-text-primary);
+}
+
+.node-detail-name {
+  color: var(--break-text-secondary);
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.node-detail-type {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 6px;
+  margin-bottom: 6px;
+  border: 1px solid var(--break-border);
+  border-radius: 999px;
+  color: var(--break-text-secondary);
+  font-size: 11px;
+  background: transparent;
+}
+
 .node-detail-counts,
 .node-detail-actions {
   display: flex;
@@ -69,52 +106,6 @@ const { t } = useI18n();
   align-items: center;
   gap: 6px;
   margin-bottom: 6px;
-}
-
-.node-detail-id {
-  padding: 0;
-  border: 0;
-  background: transparent;
-  font-weight: 800;
-  color: var(--break-text-primary);
-  cursor: pointer;
-}
-
-.node-detail-id:hover {
-  color: var(--el-color-primary);
-}
-
-.node-detail-type {
-  padding: 2px 6px;
-  border: 1px solid var(--break-border);
-  border-radius: 999px;
-  color: var(--break-text-secondary);
-  font-size: 11px;
-  background: transparent;
-  cursor: pointer;
-}
-
-.node-detail-type:hover {
-  color: var(--el-color-primary);
-  border-color: color-mix(in srgb, var(--el-color-primary) 45%, var(--break-border));
-}
-
-.node-detail-name {
-  display: block;
-  width: 100%;
-  margin-bottom: 8px;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: var(--break-text-secondary);
-  font-size: 13px;
-  text-align: left;
-  overflow-wrap: anywhere;
-  cursor: pointer;
-}
-
-.node-detail-name:hover {
-  color: var(--el-color-primary);
 }
 
 .node-detail-counts {

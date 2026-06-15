@@ -25,7 +25,7 @@ export const addRelationNode = (
     id,
     type,
     text: context.getGraphNodeText(type, id),
-    color: context.RelationTypeMapping[type].color,
+    color: "",
     data: options?.isSubNode ? { isSubNode: true } : undefined,
   } as Node);
 };

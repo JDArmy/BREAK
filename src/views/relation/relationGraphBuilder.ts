@@ -114,7 +114,7 @@ export const createRelationGraphBuilder = ({
       id: relKey.value,
       type: breakItemAttr.relType,
       text: getGraphNodeText(breakItemAttr.relType, relKey.value),
-      color: breakItemAttr.color,
+      color: "",
     } as Node);
   };
 

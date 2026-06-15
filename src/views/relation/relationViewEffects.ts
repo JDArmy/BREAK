@@ -24,6 +24,7 @@ interface SetupRelationViewEffectsOptions {
   renderNetworkChart: (notMerge?: boolean) => void;
   updateNetworkSelection: () => void;
   renderSankeyChart: () => void;
+  updateSankeyTheme: () => void;
   resizeNetworkChart: () => void;
   resizeSankeyChart: () => void;
   handleGlobalPointerDown: (event: PointerEvent) => void;
@@ -52,6 +53,7 @@ export const setupRelationViewEffects = ({
   renderNetworkChart,
   updateNetworkSelection,
   renderSankeyChart,
+  updateSankeyTheme,
   resizeNetworkChart,
   resizeSankeyChart,
   handleGlobalPointerDown,
@@ -166,7 +168,7 @@ export const setupRelationViewEffects = ({
 
   watch(isDark, () => {
     renderNetworkChart(true);
-    nextTick(renderSankeyChart);
+    nextTick(updateSankeyTheme);
   });
 
   watch(selectedNetworkNodeId, () => {

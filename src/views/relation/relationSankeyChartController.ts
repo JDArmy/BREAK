@@ -108,6 +108,11 @@ export const createSankeyChartController = ({
     sankeyChart.resize();
   };
 
+  const updateSankeyTheme = () => {
+    if (activeView.value !== "sankey") return;
+    renderSankeyChart();
+  };
+
   const disposeSankeyChart = () => {
     sankeyChart?.dispose();
     sankeyChart = null;
@@ -121,6 +126,7 @@ export const createSankeyChartController = ({
     disposeSankeyChart,
     renderSankeyChart,
     resizeSankeyChart,
+    updateSankeyTheme,
     setSankeyChartElement,
     sankeyChartRef,
   };
