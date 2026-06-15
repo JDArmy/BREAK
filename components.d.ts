@@ -45,6 +45,8 @@ declare module 'vue' {
     KnowledgeSplitView: typeof import('./src/components/KnowledgeSplitView.vue')['default']
     MenuList: typeof import('./src/components/MenuList.vue')['default']
     ReferenceList: typeof import('./src/components/ReferenceList.vue')['default']
+    RelationFilterPanels: typeof import('./src/components/relation/RelationFilterPanels.vue')['default']
+    RelationNodeDetailDrawer: typeof import('./src/components/relation/RelationNodeDetailDrawer.vue')['default']
     RiskDetail: typeof import('./src/components/RiskDetail.vue')['default']
     RiskRelation: typeof import('./src/components/RiskRelation.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
