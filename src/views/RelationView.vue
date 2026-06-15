@@ -124,6 +124,8 @@ const graphColors = {
   lineText: { light: "#666666", dark: "#94a3b8" },
   nodeText: { light: "#333333", dark: "#e2e8f0" },
   nodeBorder: { light: "#efefef", dark: "#334155" },
+  selectedNodeBorder: { light: "#2563eb", dark: "#93c5fd" },
+  selectedNodeGlow: { light: "rgba(37, 99, 235, 0.26)", dark: "rgba(147, 197, 253, 0.3)" },
 };
 
 const relationLineColors = {
@@ -177,6 +179,13 @@ interface GraphNode {
     color: string;
     borderColor: string;
     borderWidth: number;
+    shadowBlur?: number;
+    shadowColor?: string;
+  };
+  label?: {
+    color: string;
+    fontSize: number;
+    fontWeight?: number | string;
   };
   data?: { isSubNode?: boolean };
   x?: number;
@@ -386,6 +395,7 @@ const buildRelationSummary = (line: Line, nodeId: string) => {
   const otherNodeId = line.from === nodeId ? line.to : line.from;
   const otherNode = findNodeById(otherNodeId);
   return {
+    relationKey: `${line.from}::${line.text}::${line.to}`,
     direction: line.from === nodeId ? t("relationView.outgoing") : t("relationView.incoming"),
     text: line.text,
     priority: getRelationPriority(line.text),
@@ -395,6 +405,15 @@ const buildRelationSummary = (line: Line, nodeId: string) => {
     otherNodeTitle:
       otherNode && isRelationEntityType(otherNode.type) ? getNodeTitle(otherNode.type, otherNode.id) : "",
     sourceFields: getRelationSourceFields(line),
+  };
+};
+
+const buildNodeSummary = (nodeId: string) => {
+  const node = findNodeById(nodeId);
+  return {
+    id: nodeId,
+    type: node ? getNodeTypeTitle(node.type) : "",
+    title: node && isRelationEntityType(node.type) ? getNodeTitle(node.type, node.id) : "",
   };
 };
 
@@ -462,7 +481,12 @@ const selectedNodeRootPath = computed(() => {
     if (current.nodeId === node.id) {
       return {
         hopCount: current.steps.length,
-        relations: current.steps.map((step) => buildRelationSummary(step.line, step.fromId)),
+        startNode: buildNodeSummary(relKey.value),
+        steps: current.steps.map((step) => ({
+          relation: buildRelationSummary(step.line, step.fromId),
+          targetNode: buildNodeSummary(step.toId),
+          isCurrentTarget: step.toId === node.id,
+        })),
       };
     }
 
@@ -508,6 +532,11 @@ const selectedNodeAttackPathDescription = computed(() => {
   const node = selectedNetworkNode.value;
   if (!node || !isRelationEntityType(node.type)) return "";
   return describeAttackPathRole(node.type);
+});
+
+const selectedNodePathRelationKeys = computed(() => {
+  if (!selectedNodeRootPath.value) return new Set<string>();
+  return new Set(selectedNodeRootPath.value.steps.map((step) => step.relation.relationKey));
 });
 
 const selectedNodeRootPreview = computed(() => {
@@ -1423,17 +1452,25 @@ const createGraphNode = (
   symbolSize = networkNodeSize
 ): GraphNode => {
   const text = normalizeGraphText(node.text);
+  const isSelected = node.id === selectedNetworkNodeId.value;
   return {
     id: node.id,
     name: node.id,
     type: node.type,
     text,
     labelText: wrapLabelText(text, networkLabelMaxLineLength),
-    symbolSize,
+    symbolSize: isSelected ? symbolSize + 10 : symbolSize,
     itemStyle: {
       color: node.color,
-      borderColor: getGraphColor("nodeBorder"),
-      borderWidth: 1,
+      borderColor: isSelected ? getGraphColor("selectedNodeBorder") : getGraphColor("nodeBorder"),
+      borderWidth: isSelected ? 3 : 1,
+      shadowBlur: isSelected ? 18 : 0,
+      shadowColor: isSelected ? getGraphColor("selectedNodeGlow") : "transparent",
+    },
+    label: {
+      color: getGraphColor("nodeText"),
+      fontSize: isSelected ? 9 : 8,
+      fontWeight: isSelected ? 700 : 500,
     },
     data: node.data,
     fixed: true,
@@ -1711,6 +1748,15 @@ const bindNetworkChartEvents = () => {
   });
 };
 
+const syncSelectedNetworkNodeHighlight = (graphNodes: GraphNode[]) => {
+  if (!networkChart) return;
+  networkChart.dispatchAction({ type: "downplay", seriesIndex: 0 });
+  const dataIndex = graphNodes.findIndex((node) => node.id === selectedNetworkNodeId.value);
+  if (dataIndex >= 0) {
+    networkChart.dispatchAction({ type: "highlight", seriesIndex: 0, dataIndex });
+  }
+};
+
 const renderNetworkChart = (notMerge = false) => {
   if (activeView.value !== "network" || !networkChartRef.value) return;
   if (!networkChart) {
@@ -1756,6 +1802,7 @@ const renderNetworkChart = (notMerge = false) => {
           width: 48,
           overflow: "break",
           formatter: (params: { data?: GraphNode }) => params.data?.labelText ?? "",
+          rich: {},
         },
         lineStyle: {
           color: getGraphColor("line"),
@@ -1784,6 +1831,7 @@ const renderNetworkChart = (notMerge = false) => {
   } satisfies EChartsOption;
 
   networkChart.setOption(option, { notMerge, lazyUpdate: false });
+  syncSelectedNetworkNodeHighlight(networkData.nodes);
   networkChart.resize();
 };
 
@@ -2008,6 +2056,12 @@ watch(isDark, () => {
   nextTick(renderSankeyChart);
 });
 
+watch(selectedNetworkNodeId, () => {
+  if (activeView.value === "network") {
+    nextTick(() => renderNetworkChart(true));
+  }
+});
+
 // 鼠标右键下拉菜单
 const dropdownStyle = reactive({
   position: "absolute",
@@ -2229,6 +2283,38 @@ const gotoSelectedNodeDetailView = () => {
       return;
   }
 };
+
+const scrollDrawerToTop = () => {
+  nextTick(() => {
+    const drawerBody = document.querySelector(".relation-drawer .el-drawer__body");
+    if (drawerBody instanceof HTMLElement) {
+      drawerBody.scrollTop = 0;
+    }
+  });
+};
+
+const focusNodeInDrawer = (nodeId: string) => {
+  if (!findNodeById(nodeId)) return;
+  selectedNetworkNodeId.value = nodeId;
+  nodeDetailDrawerVisible.value = true;
+  scrollDrawerToTop();
+};
+
+const openNodeAsRootById = (nodeId: string) => {
+  const node = findNodeById(nodeId);
+  if (!node || !isRelationEntityType(node.type) || node.id === relKey.value) return;
+  router.push({
+    name: "relation",
+    params: {
+      type: node.type,
+      key: node.id,
+    },
+  });
+};
+
+const isPathNodeCurrentSelection = (nodeId: string) => selectedNetworkNodeId.value === nodeId;
+
+const isRelationOnSelectedPath = (relationKey: string) => selectedNodePathRelationKeys.value.has(relationKey);
 /**
  * 筛选
  */
@@ -2512,21 +2598,71 @@ const doFilter = () => {
             <div class="node-path-summary">
               {{ $t("relationView.indirectPathSummary", { count: selectedNodeRootPath.hopCount }) }}
             </div>
-            <div
-              v-for="(relation, index) in selectedNodeRootPath.relations"
-              :key="`${relation.direction}-${relation.text}-${relation.otherNodeId}-${index}`"
-              class="node-relation-item"
-            >
-              <div>
-                <span class="node-relation-direction">{{ index === 0 ? $t("relationView.rootStart") : relation.direction }}</span>
-                <span>{{ relation.text }}</span>
-                <span class="node-relation-directness">{{ relation.directness }}</span>
+            <div class="node-path-chain">
+              <div class="node-path-node node-path-node-root">
+                <div class="node-path-node-tag">{{ $t("relationView.rootStart") }}</div>
+                <div class="node-path-node-main">
+                  <span :title="selectedNodeRootPath.startNode.type" class="node-path-node-id">
+                    {{ selectedNodeRootPath.startNode.id }}
+                  </span>
+                  <span>{{ selectedNodeRootPath.startNode.title }}</span>
+                </div>
+                <div class="node-path-node-actions">
+                  <el-button
+                    link
+                    size="small"
+                    :disabled="isPathNodeCurrentSelection(selectedNodeRootPath.startNode.id)"
+                    @click="focusNodeInDrawer(selectedNodeRootPath.startNode.id)"
+                  >
+                    {{ $t("relationView.switchNode") }}
+                  </el-button>
+                  <el-button link size="small" disabled>
+                    {{ $t("openAsRoot") }}
+                  </el-button>
+                </div>
               </div>
-              <div class="node-relation-target">
-                {{ relation.otherNodeId }} {{ relation.otherNodeTitle }}
-              </div>
-              <div v-if="relation.sourceFields.length" class="node-relation-fields">
-                {{ $t("relationView.sourceFields") }}: {{ relation.sourceFields.join(", ") }}
+              <div
+                v-for="(step, index) in selectedNodeRootPath.steps"
+                :key="`${step.relation.direction}-${step.relation.text}-${step.targetNode.id}-${index}`"
+                class="node-path-step"
+              >
+                <div class="node-path-relation">
+                  <div>
+                    <span class="node-relation-direction">{{ step.relation.direction }}</span>
+                    <span>{{ step.relation.text }}</span>
+                    <span class="node-relation-directness">{{ step.relation.directness }}</span>
+                  </div>
+                  <div v-if="step.relation.sourceFields.length" class="node-relation-fields">
+                    {{ $t("relationView.sourceFields") }}: {{ step.relation.sourceFields.join(", ") }}
+                  </div>
+                </div>
+                <div :class="['node-path-node', step.isCurrentTarget ? 'node-path-node-current' : '']">
+                  <div class="node-path-node-tag">
+                    {{ step.isCurrentTarget ? $t("relationView.currentNode") : $t("relationView.pathNode") }}
+                  </div>
+                  <div class="node-path-node-main">
+                    <span :title="step.targetNode.type" class="node-path-node-id">{{ step.targetNode.id }}</span>
+                    <span>{{ step.targetNode.title }}</span>
+                  </div>
+                  <div class="node-path-node-actions">
+                    <el-button
+                      link
+                      size="small"
+                      :disabled="isPathNodeCurrentSelection(step.targetNode.id)"
+                      @click="focusNodeInDrawer(step.targetNode.id)"
+                    >
+                      {{ $t("relationView.switchNode") }}
+                    </el-button>
+                    <el-button
+                      link
+                      size="small"
+                      :disabled="step.targetNode.id === relKey"
+                      @click="openNodeAsRootById(step.targetNode.id)"
+                    >
+                      {{ $t("openAsRoot") }}
+                    </el-button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -2562,8 +2698,8 @@ const doFilter = () => {
         <div class="node-relation-list">
           <div
             v-for="relation in selectedNetworkRelations"
-            :key="`${relation.direction}-${relation.text}-${relation.otherNodeId}`"
-            class="node-relation-item"
+            :key="relation.relationKey"
+            :class="['node-relation-item', { 'node-relation-item-active': isRelationOnSelectedPath(relation.relationKey) }]"
           >
             <div>
               <span class="node-relation-direction">{{ relation.direction }}</span>
@@ -2700,6 +2836,14 @@ const doFilter = () => {
   line-height: 1.4;
 }
 
+.node-relation-item-active {
+  margin-inline: -8px;
+  padding: 6px 8px 0;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--el-color-primary) 10%, transparent);
+  border-top-color: color-mix(in srgb, var(--el-color-primary) 28%, var(--break-border));
+}
+
 .legend-relation-header {
   display: flex;
   align-items: center;
@@ -2751,13 +2895,87 @@ const doFilter = () => {
 .node-path-preview {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
   margin-top: 8px;
 }
 
 .node-path-summary {
   color: var(--break-text-secondary);
   font-size: 12px;
+}
+
+.node-path-chain {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.node-path-step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 12px;
+}
+
+.node-path-step::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  bottom: calc(100% - 12px);
+  left: 3px;
+  width: 1px;
+  background: var(--break-border);
+}
+
+.node-path-node {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 10px;
+  border: 1px solid var(--break-border);
+  border-radius: 8px;
+  background: var(--break-bg-soft);
+}
+
+.node-path-node-root {
+  border-color: color-mix(in srgb, var(--el-color-primary) 28%, var(--break-border));
+}
+
+.node-path-node-current {
+  border-color: color-mix(in srgb, var(--el-color-success) 28%, var(--break-border));
+}
+
+.node-path-node-tag {
+  color: var(--break-text-muted);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.node-path-node-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 6px;
+  color: var(--break-text-primary);
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.node-path-node-id {
+  font-weight: 700;
+}
+
+.node-path-node-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+}
+
+.node-path-relation {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-left: 16px;
 }
 
 .relation-drawer :deep(.el-drawer) {
