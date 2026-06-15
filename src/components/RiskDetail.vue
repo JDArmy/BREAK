@@ -4,6 +4,7 @@ import { useRouter } from "vue-router";
 import BREAK from "@/BREAK";
 import AvoidanceDetail from "@/components/AvoidanceDetail.vue";
 import AttackToolDetail from "@/components/AttackToolDetail.vue";
+import ThreatActorDetail from "@/components/ThreatActorDetail.vue";
 import ReferenceList from "@/components/ReferenceList.vue";
 
 import "element-plus/es/components/drawer/style/css";
@@ -25,6 +26,8 @@ const avoidanceDrawer = ref(false);
 const avoidanceKey = ref("");
 const attackToolDrawer = ref(false);
 const attackToolKey = ref("");
+const threatActorDrawer = ref(false);
+const threatActorKey = ref("");
 
 const { getDrawerWidth } = useDrawerWidth();
 
@@ -32,6 +35,13 @@ const getRiskDescriptionTools = (rKey: string) => {
   return Object.keys(BREAK.attackTools).filter((atKey) => {
     const at = BREAK.attackTools[atKey as keyof typeof BREAK.attackTools];
     return at.directCauseRisks.includes(rKey) || at.indirectSupportRisks.includes(rKey);
+  });
+};
+
+const getRiskThreatActors = (rKey: string) => {
+  return Object.keys(BREAK.threatActors).filter((taKey) => {
+    const ta = BREAK.threatActors[taKey as keyof typeof BREAK.threatActors];
+    return ta.directCauseRisks.includes(rKey) || ta.indirectSupportRisks.includes(rKey);
   });
 };
 
@@ -47,6 +57,7 @@ const openRelationGraph = (rKey: string) => {
 <template>
   <!-- 风险详情页 -->
   <el-drawer
+    v-if="rKey && risks[rKey as keyof typeof risks]"
     :model-value="drawer"
     @closed="$emit('drawerClose')"
     direction="rtl"
@@ -127,6 +138,20 @@ const openRelationGraph = (rKey: string) => {
         }}</el-button
       >
     </div>
+    <div class="desc" v-if="getRiskThreatActors(rKey).length > 0">
+      <strong>{{ $t("threatActors") }}:&nbsp;</strong>
+      <el-button
+        v-for="taKey in getRiskThreatActors(rKey)"
+        :key="taKey"
+        size="small"
+        class="relational-link"
+        @click="threatActorKey = taKey; threatActorDrawer = true"
+        round
+        >{{
+          taKey + ":&nbsp;" + $t(`BREAK.threatActors.${taKey}.title`)
+        }}</el-button
+      >
+    </div>
     <!-- 关系图 -->
     <div class="desc">
       <strong>{{ $t("riskRelations") }}</strong>
@@ -153,6 +178,13 @@ const openRelationGraph = (rKey: string) => {
     :drawer="attackToolDrawer"
     :atKey="attackToolKey"
   />
+
+  <!-- 威胁行为者详情页 -->
+  <ThreatActorDetail
+    v-on:drawer-close="threatActorDrawer = false"
+    :drawer="threatActorDrawer"
+    :taKey="threatActorKey"
+  />
 </template>
 
 <style scoped>
@@ -174,5 +206,17 @@ const openRelationGraph = (rKey: string) => {
 .drawer-header-title {
   font-weight: 600;
   color: var(--break-text-primary);
+}
+
+.relational-link {
+  margin: 4px 4px 4px 0;
+  border-color: var(--el-border-color);
+  color: var(--break-link);
+}
+
+.relational-link:hover,
+.relational-link:active {
+  border-color: var(--break-link);
+  color: var(--break-link-hover);
 }
 </style>

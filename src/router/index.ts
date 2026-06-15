@@ -30,13 +30,28 @@ const router = createRouter({
       component: () => import("@/views/AvoidancesView.vue"),
     },
     {
+      path: "/avoidance/:aKey",
+      name: "avoidanceDetail",
+      component: () => import("@/views/AvoidancesView.vue"),
+    },
+    {
       path: "/attack-tools",
       name: "attackTools",
       component: () => import("@/views/AttackToolsView.vue"),
     },
     {
+      path: "/attack-tool/:atKey",
+      name: "attackToolDetail",
+      component: () => import("@/views/AttackToolsView.vue"),
+    },
+    {
       path: "/threat-actors",
       name: "threatActors",
+      component: () => import("@/views/ThreatActorsView.vue"),
+    },
+    {
+      path: "/threat-actor/:taKey",
+      name: "threatActorDetail",
       component: () => import("@/views/ThreatActorsView.vue"),
     },
     {
@@ -62,9 +77,18 @@ const router = createRouter({
   scrollBehavior(to) {
     if (to.hash) {
       return new Promise((resolve) => {
-        setTimeout(() => {
-          resolve({ el: to.hash, behavior: "smooth" });
-        }, 300); // 延迟 300 毫秒以确保元素已经被渲染
+        const tryScroll = (attempts = 0) => {
+          const el = document.querySelector(to.hash);
+          if (el) {
+            resolve({ el: to.hash, behavior: "smooth" });
+          } else if (attempts >= 10) {
+            // 元素未找到，不执行滚动，避免警告
+            resolve(false);
+          } else {
+            setTimeout(() => tryScroll(attempts + 1), 100);
+          }
+        };
+        setTimeout(() => tryScroll(), 100);
       });
     }
   },

@@ -48,10 +48,13 @@ const filteredItems = computed(() => {
   );
 });
 
-const selectItem = (key: string) => {
+const selectItem = (key: string, updateRoute = true) => {
   if (!props.items.some((item) => item.id === key)) return;
   emit("select", key);
-  router.replace({ name: props.routeName, hash: `#${key}` });
+  // 只在需要时更新路由，避免替换搜索跳转的历史记录
+  if (updateRoute) {
+    router.replace({ name: props.routeName, hash: `#${key}` });
+  }
   // 移动端选中后切换到详情态
   if (isMobile.value) {
     mobileView.value = "detail";

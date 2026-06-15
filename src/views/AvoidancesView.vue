@@ -11,7 +11,13 @@ const router = useRouter();
 const { t } = useI18n();
 
 const avoidanceKeys = Object.keys(BREAK.avoidances);
-const selectedAvoidanceKey = ref(route.hash.replace("#", "") || avoidanceKeys[0] || "");
+// 优先从路由参数获取，否则从 hash 获取，最后使用默认值
+const getInitialKey = () => {
+  const paramKey = typeof route.params.aKey === 'string' ? route.params.aKey : '';
+  const hashKey = route.hash.replace("#", "");
+  return paramKey || hashKey || avoidanceKeys[0] || "";
+};
+const selectedAvoidanceKey = ref(getInitialKey());
 const selectedCategory = ref("");
 
 watch(

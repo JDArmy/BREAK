@@ -77,10 +77,10 @@ const getActiveIndex = (fullPath: string) => {
     class="hidden-md-and-up"
     style="height: 100%"
   >
-    <div style="position: absolute; left: 0; top: 0">
+    <div style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); cursor: pointer" @click="$router.push('/')">
       <img src="/logo.png" class="logo" width="50" alt="" />
     </div>
-    <h3 class="banner" style="text-align: center; width: 100%; height: 100%">
+    <h3 class="banner" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%">
       {{ $t("BREAK.name") }}
     </h3>
     <div class="mobile-nav-right">
@@ -198,7 +198,7 @@ const getActiveIndex = (fullPath: string) => {
     :router="true"
     class="hidden-sm-and-down"
   >
-    <div style="display: flex; align-items: center;">
+    <div style="display: flex; align-items: center; cursor: pointer" @click="$router.push('/')">
       <img src="/logo.png" class="logo" alt="JDArmy BREAK" />
     </div>
 

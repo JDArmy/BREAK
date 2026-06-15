@@ -33,33 +33,52 @@ function getRefTitle(index: number): string {
 <template>
   <div v-if="references.length > 0" class="reference-list">
     <div v-for="(ref, index) in references" :key="index" class="reference-item">
-      <a v-if="ref.link" :href="ref.link" target="_blank" rel="noopener noreferrer">
+      <span class="reference-bullet">•</span>
+      <a v-if="ref.link" :href="ref.link" target="_blank" rel="noopener noreferrer" class="reference-link">
         {{ getRefTitle(index) }}
       </a>
-      <span v-else>{{ getRefTitle(index) }}</span>
+      <span v-else class="reference-text">{{ getRefTitle(index) }}</span>
     </div>
   </div>
 </template>
 
 <style scoped>
 .reference-list {
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .reference-item {
-  margin-bottom: 8px;
-  font-size: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 10px;
   line-height: 1.6;
 }
 
-.reference-item a {
-  color: var(--break-link);
-  text-decoration: none;
+.reference-bullet {
+  color: var(--break-text-secondary);
+  font-weight: 600;
+  flex-shrink: 0;
+  margin-top: 2px;
 }
 
-.reference-item a:hover,
-.reference-item a:active {
+.reference-link {
+  color: var(--break-link);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+  flex: 1;
+}
+
+.reference-link:hover,
+.reference-link:active {
   color: var(--break-link-hover);
   text-decoration: underline;
+}
+
+.reference-text {
+  color: var(--break-text-primary);
+  font-size: 14px;
+  flex: 1;
 }
 </style>

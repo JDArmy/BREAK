@@ -11,7 +11,13 @@ const router = useRouter();
 const { t } = useI18n();
 
 const attackToolKeys = Object.keys(BREAK.attackTools);
-const selectedAttackToolKey = ref(route.hash.replace("#", "") || attackToolKeys[0] || "");
+// 优先从路由参数获取，否则从 hash 获取，最后使用默认值
+const getInitialKey = () => {
+  const paramKey = typeof route.params.atKey === 'string' ? route.params.atKey : '';
+  const hashKey = route.hash.replace("#", "");
+  return paramKey || hashKey || attackToolKeys[0] || "";
+};
+const selectedAttackToolKey = ref(getInitialKey());
 
 watch(
   () => route.hash,

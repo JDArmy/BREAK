@@ -11,7 +11,13 @@ const router = useRouter();
 const { t } = useI18n();
 
 const threatActorKeys = Object.keys(BREAK.threatActors);
-const selectedThreatActorKey = ref(route.hash.replace("#", "") || threatActorKeys[0] || "");
+// 优先从路由参数获取，否则从 hash 获取，最后使用默认值
+const getInitialKey = () => {
+  const paramKey = typeof route.params.taKey === 'string' ? route.params.taKey : '';
+  const hashKey = route.hash.replace("#", "");
+  return paramKey || hashKey || threatActorKeys[0] || "";
+};
+const selectedThreatActorKey = ref(getInitialKey());
 
 watch(
   () => route.hash,

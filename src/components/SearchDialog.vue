@@ -52,12 +52,12 @@ const groupLabels: Record<EntityType, string> = {
   threatActor: "search.groupThreatActor",
 };
 
-// 各类型对应的路由
-const typeRoutes: Record<EntityType, string> = {
-  risk: "/risks",
-  avoidance: "/avoidances",
-  attackTool: "/attack-tools",
-  threatActor: "/threat-actors",
+// 各类型对应的详情路由
+const detailRoutes: Record<EntityType, { name: string; paramKey: string }> = {
+  risk: { name: "riskDetail", paramKey: "rKey" },
+  avoidance: { name: "avoidanceDetail", paramKey: "aKey" },
+  attackTool: { name: "attackToolDetail", paramKey: "atKey" },
+  threatActor: { name: "threatActorDetail", paramKey: "taKey" },
 };
 
 // 防抖搜索
@@ -88,8 +88,14 @@ function highlightText(text: string, queryStr: string): string {
 // 选择搜索结果
 function selectResult(result: SearchResult) {
   emit("update:modelValue", false);
-  const route = typeRoutes[result.type];
-  router.push({ path: route, hash: `#${result.id}` });
+
+  // 所有类型都跳转到专门的详情路由
+  const detailRoute = detailRoutes[result.type];
+  router.push({
+    name: detailRoute.name,
+    params: { [detailRoute.paramKey]: result.id },
+  });
+
   query.value = "";
   debouncedQuery.value = "";
 }
@@ -197,7 +203,7 @@ function handleTouchStart(index: number) {
         :prefix-icon="Search"
         class="search-input"
       />
-      <span class="shortcut-hint">{{ shortcutHint }}</span>
+      <span v-if="!isMobile" class="shortcut-hint">{{ shortcutHint }}</span>
     </div>
 
     <!-- 搜索结果 -->
@@ -233,7 +239,7 @@ function handleTouchStart(index: number) {
     </div>
 
     <!-- 底部提示 -->
-    <div class="search-footer" v-if="!debouncedQuery.trim()">
+    <div class="search-footer" v-if="!debouncedQuery.trim() && !isMobile">
       <span class="footer-hint">{{ t("search.hint") }}</span>
     </div>
   </el-dialog>

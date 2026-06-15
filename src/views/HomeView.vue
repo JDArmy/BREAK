@@ -620,13 +620,14 @@ const riskDetailClose = () => {
 /* 移动端适配 */
 @media (max-width: 767px) {
   .stats {
-    flex-wrap: wrap;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+    width: 100%;
   }
 
   .stat-card {
-    min-width: 0;
-    flex: 1 1 calc(50% - 10px);
+    min-width: 0 !important;
     padding: 12px 16px;
   }
 
