@@ -1,9 +1,14 @@
 import { nextTick, ref, type ComputedRef, type Ref } from "vue";
+import { ElMessage } from "element-plus";
 import type { DropdownInstance } from "element-plus";
 import type { Router } from "vue-router";
 import { createCopyContextNodeCsv } from "@/views/relation/relationNodeClipboard";
 import { createRelationNodeContextMenu } from "@/views/relation/relationNodeContextMenu";
-import { pushDetailNodeRoute, pushRelationNodeRoute } from "@/views/relation/relationNodeRouting";
+import {
+  openDetailNodeRouteInNewWindow,
+  pushDetailNodeRoute,
+  pushRelationNodeRoute,
+} from "@/views/relation/relationNodeRouting";
 import {
   type NodeSummary,
   type Translate,
@@ -65,6 +70,19 @@ export const useRelationNodeActions = ({
   const nodeDetailDrawerVisible = ref(false);
   const nodeFilterVisible = ref(true);
   const lineFilterVisible = ref(true);
+  const drawerCopyFeedbackMessage = ref("");
+  const drawerCopyFeedbackType = ref<"success" | "error">("success");
+  let drawerCopyFeedbackTimer: ReturnType<typeof setTimeout> | undefined;
+
+  const showCopyMessage = (message: string, type: "success" | "error") => {
+    ElMessage({
+      message,
+      type,
+      plain: true,
+      duration: type === "success" ? 1400 : 2200,
+      grouping: true,
+    });
+  };
 
   const touchActionClose = () => {
     touchActionVisible.value = false;
@@ -79,8 +97,17 @@ export const useRelationNodeActions = ({
     isDirectRelationLine,
     getRelationSourceFields,
     getContextNodeId: () => nodeId.value,
-    closeContextMenu,
-    touchActionClose,
+  });
+  const copySelectedNodeCsv = createCopyContextNodeCsv({
+    t,
+    relKey,
+    lines,
+    RelationTypeMapping,
+    findNodeById,
+    buildNodeSummary,
+    isDirectRelationLine,
+    getRelationSourceFields,
+    getContextNodeId: () => selectedNetworkNodeId.value,
   });
 
   const nodeClick = (node: Node, e: MouseEvent) => {
@@ -135,6 +162,36 @@ export const useRelationNodeActions = ({
     focusNodeInDrawer(nodeId.value);
   };
 
+  const handleCopyResult = (result: { ok: boolean; message: string }) => {
+    if (result.ok) {
+      showCopyMessage(result.message, "success");
+    } else {
+      showCopyMessage(result.message, "error");
+    }
+  };
+
+  const copyContextNodeCsvWithFeedback = async () => {
+    const result = await copyContextNodeCsv();
+    if (result.ok) {
+      closeContextMenu();
+      touchActionClose();
+    }
+    handleCopyResult(result);
+  };
+
+  const copySelectedNodeCsvWithFeedback = async () => {
+    const result = await copySelectedNodeCsv();
+    drawerCopyFeedbackType.value = result.ok ? "success" : "error";
+    drawerCopyFeedbackMessage.value = result.message;
+    if (drawerCopyFeedbackTimer) {
+      clearTimeout(drawerCopyFeedbackTimer);
+    }
+    drawerCopyFeedbackTimer = setTimeout(() => {
+      drawerCopyFeedbackMessage.value = "";
+    }, result.ok ? 1500 : 2200);
+    return result;
+  };
+
   const openSelectedNodeAsRoot = () => {
     const node = selectedNetworkNode.value;
     if (!node || !isRelationEntityType(node.type) || node.id === relKey.value) return;
@@ -147,10 +204,22 @@ export const useRelationNodeActions = ({
     pushDetailNodeRoute(router, node.type, node.id);
   };
 
+  const openSelectedNodeDetailInNewWindow = () => {
+    const node = selectedNetworkNode.value;
+    if (!node || !isRelationEntityType(node.type)) return;
+    openDetailNodeRouteInNewWindow(router, node.type, node.id);
+  };
+
   const openNodeAsRootById = (nodeId: string) => {
     const node = findNodeById(nodeId);
     if (!node || !isRelationEntityType(node.type) || node.id === relKey.value) return;
     pushRelationNodeRoute(router, node.type, node.id);
+  };
+
+  const gotoNodeDetailViewById = (nodeId: string) => {
+    const node = findNodeById(nodeId);
+    if (!node || !isRelationEntityType(node.type)) return;
+    openDetailNodeRouteInNewWindow(router, node.type, node.id);
   };
 
   const toggleNodeFilter = () => {
@@ -172,14 +241,19 @@ export const useRelationNodeActions = ({
   return {
     clickContextMenu,
     closeContextMenu,
-    copyContextNodeCsv,
+    copyContextNodeCsv: copyContextNodeCsvWithFeedback,
+    copySelectedNodeCsv: copySelectedNodeCsvWithFeedback,
+    drawerCopyFeedbackMessage,
+    drawerCopyFeedbackType,
     disableContextMenuAll,
     disableContextMenuOpenAsRoot,
     doFilter,
     dropdownStyle,
     focusNodeInDrawer,
     gotoItemDetailView,
+    gotoNodeDetailViewById,
     gotoNewRelationView,
+    openSelectedNodeDetailInNewWindow,
     gotoSelectedNodeDetailView,
     handleGlobalPointerDown,
     handleNodeTouch,

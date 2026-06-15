@@ -1,38 +1,48 @@
-import type { Router } from "vue-router";
+import type { RouteLocationRaw, Router } from "vue-router";
 import { RelationType } from "@/views/relation/relationTypes";
 
-export const pushRelationNodeRoute = (router: Router, type: RelationType, id: string) =>
-  router.push({
-    name: "relation",
-    params: {
-      type,
-      key: id,
-    },
-  });
+const getRelationNodeRoute = (type: RelationType, id: string): RouteLocationRaw => ({
+  name: "relation",
+  params: {
+    type,
+    key: id,
+  },
+});
 
-export const pushDetailNodeRoute = (router: Router, type: RelationType, id: string) => {
+const getDetailNodeRoute = (type: RelationType, id: string): RouteLocationRaw => {
   switch (type) {
     case RelationType.risk:
-      return router.push({
+      return {
         name: "riskDetail",
         params: {
           rKey: id,
         },
-      });
+      };
     case RelationType.avoidance:
-      return router.push({
+      return {
         name: "avoidances",
         hash: `#${id}`,
-      });
+      };
     case RelationType.attackTool:
-      return router.push({
+      return {
         name: "attackTools",
         hash: `#${id}`,
-      });
+      };
     case RelationType.threatActor:
-      return router.push({
+      return {
         name: "threatActors",
         hash: `#${id}`,
-      });
+      };
   }
+};
+
+export const pushRelationNodeRoute = (router: Router, type: RelationType, id: string) =>
+  router.push(getRelationNodeRoute(type, id));
+
+export const pushDetailNodeRoute = (router: Router, type: RelationType, id: string) =>
+  router.push(getDetailNodeRoute(type, id));
+
+export const openDetailNodeRouteInNewWindow = (router: Router, type: RelationType, id: string) => {
+  const href = router.resolve(getDetailNodeRoute(type, id)).href;
+  window.open(href, "_blank", "noopener");
 };

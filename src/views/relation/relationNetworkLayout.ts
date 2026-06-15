@@ -89,7 +89,7 @@ export const createNetworkDataHelpers = ({
         fontWeight: isSelected ? 700 : 500,
       },
       data: node.data,
-      fixed: true,
+      fixed: networkState.layout === "force" ? Boolean(draggedPosition) : true,
       x: draggedPosition?.x ?? x,
       y: draggedPosition?.y ?? y,
     };
@@ -245,6 +245,29 @@ export const createNetworkDataHelpers = ({
     });
   };
 
+  const applyHierarchicalNetworkLayout = (
+    graphNodes: GraphNode[],
+    groupedNodes: Record<Exclude<RelationType, RelationType.all>, Node[]>
+  ) => {
+    const groupLayout: Record<
+      Exclude<RelationType, RelationType.all>,
+      { x: number; y: number; columns: number; columnGap?: number; rowGap?: number }
+    > = {
+      [RelationType.threatActor]: { x: -660, y: 0, columns: 1, rowGap: 96 },
+      [RelationType.attackTool]: { x: -220, y: 0, columns: 1, rowGap: 96 },
+      [RelationType.risk]: { x: 220, y: 0, columns: 1, rowGap: 96 },
+      [RelationType.avoidance]: { x: 660, y: 0, columns: 1, rowGap: 96 },
+    };
+
+    Object.entries(groupLayout).forEach(([type, layout]) => {
+      placeGridNodes(
+        graphNodes,
+        groupedNodes[type as Exclude<RelationType, RelationType.all>],
+        layout
+      );
+    });
+  };
+
   const applyNetworkLayout = (
     graphNodes: GraphNode[],
     groupedNodes: Record<Exclude<RelationType, RelationType.all>, Node[]>
@@ -257,6 +280,12 @@ export const createNetworkDataHelpers = ({
         applySplitNetworkLayout(graphNodes, groupedNodes);
         break;
       case "radial":
+        applyRadialNetworkLayout(graphNodes, groupedNodes);
+        break;
+      case "hierarchical":
+        applyHierarchicalNetworkLayout(graphNodes, groupedNodes);
+        break;
+      case "force":
         applyRadialNetworkLayout(graphNodes, groupedNodes);
         break;
       case "horizontal":

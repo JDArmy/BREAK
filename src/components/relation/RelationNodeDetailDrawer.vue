@@ -70,19 +70,25 @@ const props = defineProps<{
   selectedNodeAttackPathSummary: string[];
   selectedNodeAttackPathDescription: string;
   selectedNodeRootPreview: RootPreviewSummary | null;
+  isCurrentNodeRoot: boolean;
   selectedNetworkRelations: RelationSummary[];
   relKey: string;
   getNodeTypeTitle: (type: string) => string;
   isPathNodeCurrentSelection: (nodeId: string) => boolean;
   isRelationOnSelectedPath: (relationKey: string) => boolean;
+  drawerCopyFeedbackMessage: string;
+  drawerCopyFeedbackType: "success" | "error";
 }>();
 
 const emit = defineEmits<{
   "update:modelValue": [value: boolean];
+  "copy-csv": [];
   "view-detail": [];
+  "open-detail-new-window": [];
   "open-as-root": [];
   "focus-node": [nodeId: string];
   "open-node-as-root": [nodeId: string];
+  "open-node-detail": [nodeId: string];
 }>();
 
 const { t } = useI18n();
@@ -98,7 +104,7 @@ const drawerVisible = computed({
     v-model="drawerVisible"
     :title="t('relationView.nodeDetail')"
     direction="rtl"
-    size="420px"
+    size="520px"
     append-to-body
     :z-index="4000"
     class="relation-drawer"
@@ -111,6 +117,7 @@ const drawerVisible = computed({
         :rel-key="relKey"
         :get-node-type-title="getNodeTypeTitle"
         @view-detail="emit('view-detail')"
+        @open-detail-new-window="emit('open-detail-new-window')"
         @open-as-root="emit('open-as-root')"
       />
       <RelationNodeDrawerInsights
@@ -122,12 +129,17 @@ const drawerVisible = computed({
         :rel-key="relKey"
         :get-node-type-title="getNodeTypeTitle"
         :is-path-node-current-selection="isPathNodeCurrentSelection"
+        :is-current-node-root="isCurrentNodeRoot"
         @focus-node="emit('focus-node', $event)"
         @open-node-as-root="emit('open-node-as-root', $event)"
       />
       <RelationNodeDrawerRelations
         :selected-network-relations="selectedNetworkRelations"
         :is-relation-on-selected-path="isRelationOnSelectedPath"
+        :copy-feedback-message="drawerCopyFeedbackMessage"
+        :copy-feedback-type="drawerCopyFeedbackType"
+        @copy-csv="emit('copy-csv')"
+        @open-node-detail="emit('open-node-detail', $event)"
       />
     </div>
   </el-drawer>

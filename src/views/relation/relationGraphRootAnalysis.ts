@@ -95,7 +95,7 @@ export const createRelationGraphRootAnalysis = ({
 
   const selectedNodeRootPreview = computed(() => {
     const node = selectedNetworkNode.value;
-    if (!node || !isRelationEntityType(node.type) || node.id === relKey.value) return null;
+    if (!node || !isRelationEntityType(node.type)) return null;
 
     const previewNodes: Node[] = [];
     const previewLines: Line[] = [];

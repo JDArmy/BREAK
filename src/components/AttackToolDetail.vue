@@ -68,27 +68,23 @@ const getAttackToolAvoidances = (atKey: string) => {
     </div>
     <div class="desc" v-if="getAttackToolAvoidances(atKey).length > 0">
       <strong>{{ $t("avoidance") }}:&nbsp;</strong>
-      <el-button
-        v-for="aKey in getAttackToolAvoidances(atKey)"
-        :key="aKey"
-        class="relational-link"
-        size="small"
-        @click="
-          avoidanceKey = aKey;
-          avoidanceDrawer = true;
-        "
-        round
-        >{{
-          aKey + ":&nbsp;" + $t(`BREAK.avoidances.${aKey}.title`)
-        }}</el-button
-      >
+      <div class="entity-links">
+        <button
+          v-for="aKey in getAttackToolAvoidances(atKey)"
+          :key="aKey"
+          class="entity-link"
+          @click="avoidanceKey = aKey; avoidanceDrawer = true"
+        >
+          {{ aKey }}: {{ $t(`BREAK.avoidances.${aKey}.title`) }}
+        </button>
+      </div>
     </div>
     <div class="desc" v-if="BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].references?.length > 0">
       <strong>{{ $t("references") }}:&nbsp;</strong>
       <ReferenceList type="attackTools" :entityKey="atKey" />
     </div>
     <div class="desc">
-      <el-button type="primary" @click="$router.push('/attack-tools#' + atKey)">
+      <el-button type="primary" size="small" @click="$router.push('/attack-tools#' + atKey)">
         {{ $t("viewDetail") }}
       </el-button>
     </div>
@@ -122,15 +118,8 @@ const getAttackToolAvoidances = (atKey: string) => {
   color: var(--break-text-primary);
 }
 
-.relational-link {
-  margin: 4px 4px 4px 0;
-  border-color: var(--el-border-color);
-  color: var(--break-link);
-}
-
-.relational-link:hover,
-.relational-link:active {
-  border-color: var(--break-link);
-  color: var(--break-link-hover);
+button.entity-link {
+  cursor: pointer;
+  font-family: inherit;
 }
 </style>

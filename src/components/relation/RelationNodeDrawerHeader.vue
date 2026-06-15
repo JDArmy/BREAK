@@ -20,6 +20,7 @@ defineProps<{
 
 const emit = defineEmits<{
   "view-detail": [];
+  "open-detail-new-window": [];
   "open-as-root": [];
 }>();
 
@@ -28,10 +29,16 @@ const { t } = useI18n();
 
 <template>
   <div class="node-detail-title">
-    <span class="node-detail-id">{{ selectedNetworkNode.id }}</span>
-    <span class="node-detail-type">{{ getNodeTypeTitle(selectedNetworkNode.type) }}</span>
+    <button type="button" class="node-detail-id" @click="emit('open-detail-new-window')">
+      {{ selectedNetworkNode.id }}
+    </button>
+    <button type="button" class="node-detail-type" @click="emit('open-detail-new-window')">
+      {{ getNodeTypeTitle(selectedNetworkNode.type) }}
+    </button>
   </div>
-  <div class="node-detail-name">{{ selectedNetworkNodeTitle }}</div>
+  <button type="button" class="node-detail-name" @click="emit('open-detail-new-window')">
+    {{ selectedNetworkNodeTitle }}
+  </button>
   <div class="node-detail-counts">
     <span>{{ t("relationView.incoming") }}: {{ selectedNetworkRelationCounts.incoming }}</span>
     <span>{{ t("relationView.outgoing") }}: {{ selectedNetworkRelationCounts.outgoing }}</span>
@@ -65,7 +72,16 @@ const { t } = useI18n();
 }
 
 .node-detail-id {
+  padding: 0;
+  border: 0;
+  background: transparent;
   font-weight: 800;
+  color: var(--break-text-primary);
+  cursor: pointer;
+}
+
+.node-detail-id:hover {
+  color: var(--el-color-primary);
 }
 
 .node-detail-type {
@@ -74,13 +90,31 @@ const { t } = useI18n();
   border-radius: 999px;
   color: var(--break-text-secondary);
   font-size: 11px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.node-detail-type:hover {
+  color: var(--el-color-primary);
+  border-color: color-mix(in srgb, var(--el-color-primary) 45%, var(--break-border));
 }
 
 .node-detail-name {
+  display: block;
+  width: 100%;
   margin-bottom: 8px;
+  padding: 0;
+  border: 0;
+  background: transparent;
   color: var(--break-text-secondary);
   font-size: 13px;
+  text-align: left;
   overflow-wrap: anywhere;
+  cursor: pointer;
+}
+
+.node-detail-name:hover {
+  color: var(--el-color-primary);
 }
 
 .node-detail-counts {

@@ -180,6 +180,7 @@ export const createRelationViewAssembly = ({
     rebuildGraphData,
     refreshGraphAfterVisible,
     renderNetworkChart: networkController.renderNetworkChart,
+    updateNetworkSelection: networkController.updateNetworkSelection,
     renderSankeyChart: sankeyController.renderSankeyChart,
     resizeNetworkChart: networkController.resizeNetworkChart,
     resizeSankeyChart: sankeyController.resizeSankeyChart,

@@ -98,9 +98,15 @@ export default defineComponent({
       :get-node-type-title="getNodeTypeTitle"
       :is-path-node-current-selection="isPathNodeCurrentSelection"
       :is-relation-on-selected-path="isRelationOnSelectedPath"
+      :is-current-node-root="isCurrentNodeRoot"
+      :drawer-copy-feedback-message="drawerCopyFeedbackMessage"
+      :drawer-copy-feedback-type="drawerCopyFeedbackType"
+      @copy-csv="copySelectedNodeCsv"
       @view-detail="gotoSelectedNodeDetailView"
+      @open-detail-new-window="openSelectedNodeDetailInNewWindow"
       @open-as-root="openSelectedNodeAsRoot"
       @focus-node="focusNodeInDrawer"
+      @open-node-detail="gotoNodeDetailViewById"
       @open-node-as-root="openNodeAsRootById"
     />
   </div>

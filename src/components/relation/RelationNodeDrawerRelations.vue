@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from "vue";
 import { useI18n } from "vue-i18n";
 
 interface RelationSummary {
@@ -12,38 +13,74 @@ interface RelationSummary {
   sourceFields: string[];
 }
 
-defineProps<{
+const props = defineProps<{
   selectedNetworkRelations: RelationSummary[];
   isRelationOnSelectedPath: (relationKey: string) => boolean;
+  copyFeedbackMessage: string;
+  copyFeedbackType: "success" | "error";
+}>();
+
+const emit = defineEmits<{
+  "copy-csv": [];
+  "open-node-detail": [nodeId: string];
 }>();
 
 const { t } = useI18n();
+
+const tableRows = computed(() =>
+  props.selectedNetworkRelations.map((relation) => ({
+    ...relation,
+    relationSummary: `${relation.direction} ${relation.text}`,
+    isActive: props.isRelationOnSelectedPath(relation.relationKey),
+  }))
+);
+
+const relationRowClassName = ({ row }: { row: { isActive: boolean } }) =>
+  row.isActive ? "node-relation-row-active" : "";
 </script>
 
 <template>
   <div class="node-explain-block">
-    <h3>{{ t("relationView.allRelations") }}</h3>
-  </div>
-  <div class="node-relation-list">
-    <div
-      v-for="relation in selectedNetworkRelations"
-      :key="relation.relationKey"
-      :class="['node-relation-item', { 'node-relation-item-active': isRelationOnSelectedPath(relation.relationKey) }]"
-    >
-      <div>
-        <span class="node-relation-direction">{{ relation.direction }}</span>
-        <span>{{ relation.text }}</span>
-        <span class="node-relation-directness">{{ relation.directness }}</span>
-      </div>
-      <div class="node-relation-target">
-        <span :title="relation.otherNodeType">{{ relation.otherNodeId }}</span>
-        <span>{{ relation.otherNodeTitle }}</span>
-      </div>
-      <div v-if="relation.sourceFields.length" class="node-relation-fields">
-        {{ t("relationView.sourceFields") }}: {{ relation.sourceFields.join(", ") }}
+    <div class="node-explain-header">
+      <h3>{{ t("relationView.allRelations") }}</h3>
+      <div class="node-explain-actions">
+        <span
+          v-if="copyFeedbackMessage"
+          :class="['copy-feedback', `copy-feedback-${copyFeedbackType}`]"
+        >
+          {{ copyFeedbackMessage }}
+        </span>
+        <el-button size="small" plain @click="emit('copy-csv')">
+          {{ t("relationView.copyCsv") }}
+        </el-button>
       </div>
     </div>
   </div>
+
+  <el-table
+    :data="tableRows"
+    size="small"
+    stripe
+    table-layout="fixed"
+    :row-class-name="relationRowClassName"
+    class="node-relation-table"
+  >
+    <el-table-column prop="relationSummary" :label="t('relationView.allRelations')" min-width="132" />
+    <el-table-column prop="directness" :label="t('relationView.csvHeaderDirectness')" width="76" />
+    <el-table-column :label="t('relationView.csvHeaderTargetTitle')" min-width="164">
+      <template #default="{ row }">
+        <button
+          type="button"
+          class="node-relation-link"
+          :title="row.otherNodeType"
+          @click="emit('open-node-detail', row.otherNodeId)"
+        >
+          <span class="node-relation-link-id">{{ row.otherNodeId }}</span>
+          <span>{{ row.otherNodeTitle }}</span>
+        </button>
+      </template>
+    </el-table-column>
+  </el-table>
 </template>
 
 <style scoped>
@@ -51,58 +88,76 @@ const { t } = useI18n();
   margin-top: 14px;
 }
 
+.node-explain-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.node-explain-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .node-explain-block h3 {
-  margin: 0 0 8px;
+  margin: 0;
   font-size: 13px;
   font-weight: 700;
 }
 
-.node-relation-list {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+.copy-feedback {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  white-space: nowrap;
 }
 
-.node-relation-item {
-  padding-top: 6px;
-  border-top: 1px solid var(--break-border);
+.copy-feedback-success {
+  color: var(--el-color-success);
+}
+
+.copy-feedback-error {
+  color: var(--el-color-danger);
+}
+
+.node-relation-table {
+  width: 100%;
+}
+
+.node-relation-table :deep(.el-table__cell) {
+  vertical-align: top;
+}
+
+.node-relation-table :deep(.node-relation-row-active) {
+  --el-table-tr-bg-color: color-mix(in srgb, var(--el-color-primary) 10%, transparent);
+}
+
+.node-relation-table :deep(.cell) {
   font-size: 12px;
   line-height: 1.4;
 }
 
-.node-relation-item-active {
-  margin-inline: -8px;
-  padding: 6px 8px 0;
-  border-radius: 8px;
-  background: color-mix(in srgb, var(--el-color-primary) 10%, transparent);
-  border-top-color: color-mix(in srgb, var(--el-color-primary) 28%, var(--break-border));
-}
-
-.node-relation-direction {
-  margin-right: 6px;
-  font-weight: 700;
-}
-
-.node-relation-directness {
+.node-relation-link {
   display: inline-flex;
-  align-items: center;
-  margin-left: 8px;
-  padding: 2px 8px;
-  border: 1px solid var(--break-border);
-  border-radius: 999px;
-  color: var(--break-text-secondary);
-  font-size: 11px;
-}
-
-.node-relation-fields,
-.node-relation-target {
-  color: var(--break-text-muted);
-  overflow-wrap: anywhere;
-}
-
-.node-relation-target {
-  display: flex;
   flex-wrap: wrap;
   gap: 4px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--el-color-primary);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.node-relation-link:hover {
+  text-decoration: underline;
+}
+
+.node-relation-link-id {
+  font-weight: 600;
 }
 </style>

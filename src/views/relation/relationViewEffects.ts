@@ -22,6 +22,7 @@ interface SetupRelationViewEffectsOptions {
   rebuildGraphData: () => void;
   refreshGraphAfterVisible: () => void;
   renderNetworkChart: (notMerge?: boolean) => void;
+  updateNetworkSelection: () => void;
   renderSankeyChart: () => void;
   resizeNetworkChart: () => void;
   resizeSankeyChart: () => void;
@@ -49,6 +50,7 @@ export const setupRelationViewEffects = ({
   rebuildGraphData,
   refreshGraphAfterVisible,
   renderNetworkChart,
+  updateNetworkSelection,
   renderSankeyChart,
   resizeNetworkChart,
   resizeSankeyChart,
@@ -169,7 +171,7 @@ export const setupRelationViewEffects = ({
 
   watch(selectedNetworkNodeId, () => {
     if (activeView.value === "network") {
-      nextTick(() => renderNetworkChart(true));
+      nextTick(updateNetworkSelection);
     }
   });
 };

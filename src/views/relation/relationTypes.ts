@@ -8,7 +8,7 @@ export enum RelationType {
   all = "all",
 }
 
-export type NetworkLayoutMode = "horizontal" | "lanes" | "split" | "radial";
+export type NetworkLayoutMode = "horizontal" | "lanes" | "split" | "radial" | "hierarchical" | "force";
 
 export interface Node {
   id: string;
@@ -131,6 +131,8 @@ export const networkLayoutOptions: { value: NetworkLayoutMode; labelKey: string 
   { value: "lanes", labelKey: "relationLayout.lanes" },
   { value: "split", labelKey: "relationLayout.split" },
   { value: "radial", labelKey: "relationLayout.radial" },
+  { value: "hierarchical", labelKey: "relationLayout.hierarchical" },
+  { value: "force", labelKey: "relationLayout.force" },
 ];
 
 export const networkLayoutZoom: Record<NetworkLayoutMode, number> = {
@@ -138,6 +140,8 @@ export const networkLayoutZoom: Record<NetworkLayoutMode, number> = {
   lanes: 1.0,
   split: 1.0,
   radial: 1.0,
+  hierarchical: 1.0,
+  force: 0.95,
 };
 
 export const networkNodeSize = 58;

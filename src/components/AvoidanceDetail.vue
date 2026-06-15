@@ -70,7 +70,7 @@ const { getInnerDrawerWidth } = useDrawerWidth();
       <ReferenceList type="avoidances" :entityKey="aKey" />
     </div>
     <div class="desc">
-      <el-button type="primary" @click="$router.push('/avoidances#' + aKey)">
+      <el-button type="primary" size="small" @click="$router.push('/avoidances#' + aKey)">
         {{ $t("viewDetail") }}
       </el-button>
     </div>

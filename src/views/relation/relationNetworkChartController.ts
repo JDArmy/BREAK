@@ -54,6 +54,22 @@ export const createNetworkChartController = ({
     networkChart.off("dblclick");
     networkChart.off("contextmenu");
     networkChart.off("mouseup");
+    networkChart.off("dragend");
+    const persistDraggedNodePosition = (params: { dataType?: string; dataIndex?: number; data?: GraphNode }) => {
+      if (params.dataType !== "node") return;
+      const option = networkChart?.getOption();
+      const seriesData =
+        option?.series?.[0] && "data" in option.series[0]
+          ? (option.series[0].data as Array<Partial<GraphNode>>)
+          : [];
+      const draggedData = typeof params.dataIndex === "number" ? seriesData[params.dataIndex] : undefined;
+      const data = (draggedData ?? params.data) as Partial<GraphNode>;
+      if (typeof data.id !== "string" || typeof data.x !== "number" || typeof data.y !== "number") return;
+      draggedNodePositions.value = {
+        ...draggedNodePositions.value,
+        [data.id]: { x: data.x, y: data.y },
+      };
+    };
     networkChart.on("click", (params) => {
       if (params.dataType !== "node") return;
       selectedNetworkNodeId.value = (params.data as GraphNode).id;
@@ -72,26 +88,30 @@ export const createNetworkChartController = ({
       selectedNetworkNodeId.value = (params.data as GraphNode).id;
       interactionsBridge.nodeClick(toContextNode(params.data as GraphNode), params.event.event as MouseEvent);
     });
-    networkChart.on("mouseup", (params) => {
-      if (params.dataType !== "node") return;
-      const option = networkChart?.getOption();
-      const seriesData =
-        option?.series?.[0] && "data" in option.series[0]
-          ? (option.series[0].data as Array<Partial<GraphNode>>)
-          : [];
-      const draggedData = typeof params.dataIndex === "number" ? seriesData[params.dataIndex] : undefined;
-      const data = (draggedData ?? params.data) as Partial<GraphNode>;
-      if (typeof data.id !== "string" || typeof data.x !== "number" || typeof data.y !== "number") return;
-      draggedNodePositions.value = {
-        ...draggedNodePositions.value,
-        [data.id]: { x: data.x, y: data.y },
-      };
-    });
+    networkChart.on("mouseup", persistDraggedNodePosition);
+    networkChart.on("dragend", persistDraggedNodePosition);
   };
 
   const clearNetworkNodeHighlight = () => {
     if (!networkChart) return;
     networkChart.dispatchAction({ type: "downplay", seriesIndex: 0 });
+  };
+
+  const updateNetworkSelection = () => {
+    if (!networkChart || activeView.value !== "network") return;
+    const networkData = getVisibleNetworkData();
+    networkChart.setOption(
+      {
+        series: [
+          {
+            type: "graph",
+            data: networkData.nodes,
+          },
+        ],
+      },
+      { notMerge: false, lazyUpdate: false }
+    );
+    clearNetworkNodeHighlight();
   };
 
   const renderNetworkChart = (notMerge = false) => {
@@ -102,6 +122,7 @@ export const createNetworkChartController = ({
     }
 
     const networkData = getVisibleNetworkData();
+    const isForceLayout = networkState.layout === "force";
     const option = {
       backgroundColor: getGraphColor("background"),
       animationDurationUpdate: 300,
@@ -124,12 +145,22 @@ export const createNetworkChartController = ({
       series: [
         {
           type: "graph",
-          layout: "none",
+          layout: isForceLayout ? "force" : "none",
           data: networkData.nodes,
           links: networkData.links,
           center: ["52%", "50%"],
           roam: true,
           draggable: true,
+          force: isForceLayout
+            ? {
+                repulsion: 1240,
+                edgeLength: [260, 440],
+                gravity: 0.022,
+                friction: 0.22,
+                preventOverlap: 44,
+                layoutAnimation: true,
+              }
+            : undefined,
           label: {
             show: true,
             color: getGraphColor("nodeText"),
@@ -173,6 +204,7 @@ export const createNetworkChartController = ({
             min: 0.2,
             max: 3,
           },
+          animation: isForceLayout,
         },
       ],
     } satisfies EChartsOption;
@@ -223,6 +255,7 @@ export const createNetworkChartController = ({
     renderNetworkChart,
     setNetworkChartElement,
     setNetworkPaneElement,
+    updateNetworkSelection,
     resizeNetworkChart,
   };
 };

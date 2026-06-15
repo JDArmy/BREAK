@@ -1,11 +1,8 @@
-import { ElMessage } from "element-plus";
 import type { RelationNodeActionBaseOptions, Translate } from "@/views/relation/relationNodeActionShared";
 
 interface CreateCopyContextNodeCsvOptions extends RelationNodeActionBaseOptions {
   t: Translate;
   getContextNodeId: () => string;
-  closeContextMenu: () => void;
-  touchActionClose: () => void;
 }
 
 const toCsvCell = (value: unknown) => `"${String(value ?? "").replace(/"/g, "\"\"")}"`;
@@ -18,13 +15,10 @@ export const createCopyContextNodeCsv = ({
   isDirectRelationLine,
   getRelationSourceFields,
   getContextNodeId,
-  closeContextMenu,
-  touchActionClose,
 }: CreateCopyContextNodeCsvOptions) => async () => {
   const node = findNodeById(getContextNodeId());
   if (!node) {
-    ElMessage.error(t("relationView.copyFailed"));
-    return;
+    return { ok: false as const, message: t("relationView.copyFailed") };
   }
 
   const centerNode = buildNodeSummary(node.id);
@@ -88,10 +82,8 @@ export const createCopyContextNodeCsv = ({
 
   try {
     await navigator.clipboard.writeText(csvSections.join("\n"));
-    closeContextMenu();
-    touchActionClose();
-    ElMessage.success(t("relationView.copySuccess"));
+    return { ok: true as const, message: t("relationView.copySuccess") };
   } catch {
-    ElMessage.error(t("relationView.copyFailed"));
+    return { ok: false as const, message: t("relationView.copyFailed") };
   }
 };

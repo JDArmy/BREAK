@@ -68,11 +68,17 @@ export const createRelationGraphRelationSummary = ({
       .sort((a, b) => a.priority - b.priority);
   });
 
+  const isCurrentNodeRoot = computed(() => {
+    const node = selectedNetworkNode.value;
+    return node ? node.id === relKey.value : false;
+  });
+
   return {
     buildNodeSummary,
     buildRelationSummary,
     findNodeById,
     rootNodeRelations,
+    isCurrentNodeRoot,
     selectedNetworkNode,
     selectedNetworkNodeTitle,
     selectedNetworkRelationCounts,

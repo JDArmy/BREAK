@@ -108,17 +108,16 @@ const openRelationGraph = (rKey: string) => {
     </div>
     <div class="desc">
       <strong>{{ $t("riskAvoidances") }}:&nbsp;</strong>
-      <el-button
-        v-for="aKey in risks[rKey as keyof typeof risks].avoidances"
-        :key="aKey"
-        size="small"
-        class="relational-link"
-        @click="avoidanceKey = aKey; avoidanceDrawer = true"
-        round
-        >{{
-          aKey + ":&nbsp;" + $t(`BREAK.avoidances.${aKey}.title`)
-        }}</el-button
-      >
+      <div class="entity-links">
+        <button
+          v-for="aKey in risks[rKey as keyof typeof risks].avoidances"
+          :key="aKey"
+          class="entity-link"
+          @click="avoidanceKey = aKey; avoidanceDrawer = true"
+        >
+          {{ aKey }}: {{ $t(`BREAK.avoidances.${aKey}.title`) }}
+        </button>
+      </div>
     </div>
     <div class="desc" v-if="risks[rKey as keyof typeof risks].references?.length > 0">
       <strong>{{ $t("riskReference") }}:&nbsp;</strong>
@@ -126,31 +125,29 @@ const openRelationGraph = (rKey: string) => {
     </div>
     <div class="desc" v-if="getRiskDescriptionTools(rKey).length > 0">
       <strong>{{ $t("attackTools") }}:&nbsp;</strong>
-      <el-button
-        v-for="atKey in getRiskDescriptionTools(rKey)"
-        :key="atKey"
-        size="small"
-        class="relational-link"
-        @click="attackToolKey = atKey; attackToolDrawer = true"
-        round
-        >{{
-          atKey + ":&nbsp;" + $t(`BREAK.attackTools.${atKey}.title`)
-        }}</el-button
-      >
+      <div class="entity-links">
+        <button
+          v-for="atKey in getRiskDescriptionTools(rKey)"
+          :key="atKey"
+          class="entity-link"
+          @click="attackToolKey = atKey; attackToolDrawer = true"
+        >
+          {{ atKey }}: {{ $t(`BREAK.attackTools.${atKey}.title`) }}
+        </button>
+      </div>
     </div>
     <div class="desc" v-if="getRiskThreatActors(rKey).length > 0">
       <strong>{{ $t("threatActors") }}:&nbsp;</strong>
-      <el-button
-        v-for="taKey in getRiskThreatActors(rKey)"
-        :key="taKey"
-        size="small"
-        class="relational-link"
-        @click="threatActorKey = taKey; threatActorDrawer = true"
-        round
-        >{{
-          taKey + ":&nbsp;" + $t(`BREAK.threatActors.${taKey}.title`)
-        }}</el-button
-      >
+      <div class="entity-links">
+        <button
+          v-for="taKey in getRiskThreatActors(rKey)"
+          :key="taKey"
+          class="entity-link"
+          @click="threatActorKey = taKey; threatActorDrawer = true"
+        >
+          {{ taKey }}: {{ $t(`BREAK.threatActors.${taKey}.title`) }}
+        </button>
+      </div>
     </div>
     <!-- 关系图 -->
     <div class="desc">
@@ -165,7 +162,7 @@ const openRelationGraph = (rKey: string) => {
       </el-button>
     </div>
     <div class="desc">
-      <el-button type="primary" @click="$router.push('/risks#' + rKey)">
+      <el-button type="primary" size="small" @click="$router.push('/risks#' + rKey)">
         {{ $t("viewDetail") }}
       </el-button>
     </div>
@@ -213,15 +210,8 @@ const openRelationGraph = (rKey: string) => {
   color: var(--break-text-primary);
 }
 
-.relational-link {
-  margin: 4px 4px 4px 0;
-  border-color: var(--el-border-color);
-  color: var(--break-link);
-}
-
-.relational-link:hover,
-.relational-link:active {
-  border-color: var(--break-link);
-  color: var(--break-link-hover);
+button.entity-link {
+  cursor: pointer;
+  font-family: inherit;
 }
 </style>

@@ -46,6 +46,7 @@ defineProps<{
   relKey: string;
   getNodeTypeTitle: (type: string) => string;
   isPathNodeCurrentSelection: (nodeId: string) => boolean;
+  isCurrentNodeRoot: boolean;
 }>();
 
 const emit = defineEmits<{
@@ -59,91 +60,95 @@ const { t } = useI18n();
 <template>
   <div v-if="rootNodeRelations.length" class="node-explain-block">
     <h3>{{ t("relationView.rootRelation") }}</h3>
-    <div
-      v-for="relation in rootNodeRelations"
-      :key="`${relation.direction}-${relation.text}`"
-      class="node-relation-item"
-    >
-      <div>
-        <span class="node-relation-direction">{{ relation.direction }}</span>
-        <span>{{ relation.text }}</span>
-        <span class="node-relation-directness">{{ relation.directness }}</span>
-      </div>
-      <div v-if="relation.sourceFields.length" class="node-relation-fields">
-        {{ t("relationView.sourceFields") }}: {{ relation.sourceFields.join(", ") }}
+    <div class="node-insight-panel">
+      <div
+        v-for="relation in rootNodeRelations"
+        :key="`${relation.direction}-${relation.text}`"
+        class="node-relation-item"
+      >
+        <div>
+          <span class="node-relation-direction">{{ relation.direction }}</span>
+          <span>{{ relation.text }}</span>
+          <span class="node-relation-directness">{{ relation.directness }}</span>
+        </div>
+        <div v-if="relation.sourceFields.length" class="node-relation-fields">
+          {{ t("relationView.sourceFields") }}: {{ relation.sourceFields.join(", ") }}
+        </div>
       </div>
     </div>
   </div>
   <div v-else class="node-explain-block">
     <h3>{{ t("relationView.rootRelation") }}</h3>
-    <div class="node-relation-more">{{ t("relationView.noDirectRootRelation") }}</div>
-    <div v-if="selectedNodeRootPath" class="node-path-preview">
-      <div class="node-path-summary">
-        {{ t("relationView.indirectPathSummary", { count: selectedNodeRootPath.hopCount }) }}
-      </div>
-      <div class="node-path-chain">
-        <div class="node-path-node node-path-node-root">
-          <div class="node-path-node-tag">{{ t("relationView.rootStart") }}</div>
-          <div class="node-path-node-main">
-            <span :title="selectedNodeRootPath.startNode.type" class="node-path-node-id">
-              {{ selectedNodeRootPath.startNode.id }}
-            </span>
-            <span>{{ selectedNodeRootPath.startNode.title }}</span>
-          </div>
-          <div class="node-path-node-actions">
-            <el-button
-              link
-              size="small"
-              :disabled="isPathNodeCurrentSelection(selectedNodeRootPath.startNode.id)"
-              @click="emit('focus-node', selectedNodeRootPath.startNode.id)"
-            >
-              {{ t("relationView.switchNode") }}
-            </el-button>
-            <el-button link size="small" disabled>
-              {{ t("openAsRoot") }}
-            </el-button>
-          </div>
+    <div class="node-insight-panel">
+      <div class="node-relation-more">{{ isCurrentNodeRoot ? t("relationView.currentNodeIsRoot") : t("relationView.noDirectRootRelation") }}</div>
+      <div v-if="selectedNodeRootPath" class="node-path-preview">
+        <div class="node-path-summary">
+          {{ t("relationView.indirectPathSummary", { count: selectedNodeRootPath.hopCount }) }}
         </div>
-        <div
-          v-for="(step, index) in selectedNodeRootPath.steps"
-          :key="`${step.relation.direction}-${step.relation.text}-${step.targetNode.id}-${index}`"
-          class="node-path-step"
-        >
-          <div class="node-path-relation">
-            <div>
-              <span class="node-relation-direction">{{ step.relation.direction }}</span>
-              <span>{{ step.relation.text }}</span>
-              <span class="node-relation-directness">{{ step.relation.directness }}</span>
-            </div>
-            <div v-if="step.relation.sourceFields.length" class="node-relation-fields">
-              {{ t("relationView.sourceFields") }}: {{ step.relation.sourceFields.join(", ") }}
-            </div>
-          </div>
-          <div :class="['node-path-node', step.isCurrentTarget ? 'node-path-node-current' : '']">
-            <div class="node-path-node-tag">
-              {{ step.isCurrentTarget ? t("relationView.currentNode") : t("relationView.pathNode") }}
-            </div>
+        <div class="node-path-chain">
+          <div class="node-path-node node-path-node-root">
+            <div class="node-path-node-tag">{{ t("relationView.rootStart") }}</div>
             <div class="node-path-node-main">
-              <span :title="step.targetNode.type" class="node-path-node-id">{{ step.targetNode.id }}</span>
-              <span>{{ step.targetNode.title }}</span>
+              <span :title="selectedNodeRootPath.startNode.type" class="node-path-node-id">
+                {{ selectedNodeRootPath.startNode.id }}
+              </span>
+              <span>{{ selectedNodeRootPath.startNode.title }}</span>
             </div>
             <div class="node-path-node-actions">
               <el-button
                 link
                 size="small"
-                :disabled="isPathNodeCurrentSelection(step.targetNode.id)"
-                @click="emit('focus-node', step.targetNode.id)"
+                :disabled="isPathNodeCurrentSelection(selectedNodeRootPath.startNode.id)"
+                @click="emit('focus-node', selectedNodeRootPath.startNode.id)"
               >
                 {{ t("relationView.switchNode") }}
               </el-button>
-              <el-button
-                link
-                size="small"
-                :disabled="step.targetNode.id === relKey"
-                @click="emit('open-node-as-root', step.targetNode.id)"
-              >
+              <el-button link size="small" disabled>
                 {{ t("openAsRoot") }}
               </el-button>
+            </div>
+          </div>
+          <div
+            v-for="(step, index) in selectedNodeRootPath.steps"
+            :key="`${step.relation.direction}-${step.relation.text}-${step.targetNode.id}-${index}`"
+            class="node-path-step"
+          >
+            <div class="node-path-relation">
+              <div>
+                <span class="node-relation-direction">{{ step.relation.direction }}</span>
+                <span>{{ step.relation.text }}</span>
+                <span class="node-relation-directness">{{ step.relation.directness }}</span>
+              </div>
+              <div v-if="step.relation.sourceFields.length" class="node-relation-fields">
+                {{ t("relationView.sourceFields") }}: {{ step.relation.sourceFields.join(", ") }}
+              </div>
+            </div>
+            <div :class="['node-path-node', step.isCurrentTarget ? 'node-path-node-current' : '']">
+              <div class="node-path-node-tag">
+                {{ step.isCurrentTarget ? t("relationView.currentNode") : t("relationView.pathNode") }}
+              </div>
+              <div class="node-path-node-main">
+                <span :title="step.targetNode.type" class="node-path-node-id">{{ step.targetNode.id }}</span>
+                <span>{{ step.targetNode.title }}</span>
+              </div>
+              <div class="node-path-node-actions">
+                <el-button
+                  link
+                  size="small"
+                  :disabled="isPathNodeCurrentSelection(step.targetNode.id)"
+                  @click="emit('focus-node', step.targetNode.id)"
+                >
+                  {{ t("relationView.switchNode") }}
+                </el-button>
+                <el-button
+                  link
+                  size="small"
+                  :disabled="step.targetNode.id === relKey"
+                  @click="emit('open-node-as-root', step.targetNode.id)"
+                >
+                  {{ t("openAsRoot") }}
+                </el-button>
+              </div>
             </div>
           </div>
         </div>
@@ -153,28 +158,32 @@ const { t } = useI18n();
 
   <div v-if="selectedNodeAttackPathSummary.length" class="node-explain-block">
     <h3>{{ t("relationView.attackPathRole") }}</h3>
-    <div v-if="selectedNodeAttackPathDescription" class="node-relation-more">
-      {{ selectedNodeAttackPathDescription }}
-    </div>
-    <div class="node-role-list">
-      <span v-for="role in selectedNodeAttackPathSummary" :key="role" class="node-role-chip">{{ role }}</span>
+    <div class="node-insight-panel node-attack-role-panel">
+      <div v-if="selectedNodeAttackPathDescription" class="node-attack-role-description">
+        {{ selectedNodeAttackPathDescription }}
+      </div>
+      <div class="node-role-list">
+        <span v-for="role in selectedNodeAttackPathSummary" :key="role" class="node-role-chip">{{ role }}</span>
+      </div>
     </div>
   </div>
 
   <div v-if="selectedNodeRootPreview" class="node-explain-block">
     <h3>{{ t("relationView.rootPreview") }}</h3>
-    <div class="node-detail-counts">
-      <span>{{ t("relationView.previewNodeCount") }}: {{ selectedNodeRootPreview.nodeCount }}</span>
-      <span>{{ t("relationView.previewRelationCount") }}: {{ selectedNodeRootPreview.lineCount }}</span>
-    </div>
-    <div class="node-preview-groups">
-      <span
-        v-for="(count, type) in selectedNodeRootPreview.groupedCounts"
-        :key="type"
-        class="node-role-chip"
-      >
-        {{ getNodeTypeTitle(type) }} {{ count }}
-      </span>
+    <div class="node-insight-panel">
+      <div class="node-detail-counts">
+        <span>{{ t("relationView.previewNodeCount") }}: {{ selectedNodeRootPreview.nodeCount }}</span>
+        <span>{{ t("relationView.previewRelationCount") }}: {{ selectedNodeRootPreview.lineCount }}</span>
+      </div>
+      <div class="node-preview-groups">
+        <span
+          v-for="(count, type) in selectedNodeRootPreview.groupedCounts"
+          :key="type"
+          class="node-role-chip"
+        >
+          {{ getNodeTypeTitle(type) }} {{ count }}
+        </span>
+      </div>
     </div>
   </div>
 </template>
@@ -190,11 +199,28 @@ const { t } = useI18n();
   font-weight: 700;
 }
 
+.node-insight-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--break-border);
+  border-radius: 8px;
+  background: var(--break-bg-soft);
+}
+
 .node-relation-item {
-  padding-top: 6px;
-  border-top: 1px solid var(--break-border);
+  padding-top: 10px;
   font-size: 12px;
   line-height: 1.4;
+}
+
+.node-relation-item:first-child {
+  padding-top: 0;
+}
+
+.node-relation-item + .node-relation-item {
+  border-top: 1px solid var(--break-border);
 }
 
 .node-relation-direction {
@@ -205,11 +231,12 @@ const { t } = useI18n();
 .node-relation-fields,
 .node-relation-more {
   color: var(--break-text-muted);
+  font-size: 12px;
+  line-height: 1.65;
   overflow-wrap: anywhere;
 }
 
-.node-relation-directness,
-.node-role-chip {
+.node-relation-directness {
   display: inline-flex;
   align-items: center;
   margin-left: 8px;
@@ -218,6 +245,18 @@ const { t } = useI18n();
   border-radius: 999px;
   color: var(--break-text-secondary);
   font-size: 11px;
+}
+
+.node-role-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border: 1px solid var(--break-border);
+  border-radius: 999px;
+  background: var(--break-bg);
+  color: var(--break-text-secondary);
+  font-size: 11px;
+  line-height: 1.2;
 }
 
 .node-path-preview {
@@ -317,5 +356,16 @@ const { t } = useI18n();
 .node-detail-counts {
   color: var(--break-text-muted);
   font-size: 12px;
+}
+
+.node-attack-role-panel {
+  border: 1px solid color-mix(in srgb, var(--el-color-primary) 18%, var(--break-border));
+  background: color-mix(in srgb, var(--el-color-primary) 4%, var(--break-bg));
+}
+
+.node-attack-role-description {
+  color: var(--break-text-secondary);
+  font-size: 12px;
+  line-height: 1.65;
 }
 </style>

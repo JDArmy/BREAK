@@ -60,6 +60,7 @@
     "rootRelation": "与根节点关系",
     "rootToNode": "根节点 -> 当前节点",
     "nodeToRoot": "当前节点 -> 根节点",
+    "currentNodeIsRoot": "节点为根节点",
     "noDirectRootRelation": "当前节点与根节点没有直接连线，更多关系见下方完整列表。",
     "indirectPathSummary": "当前节点可通过 {count} 跳路径连接到根节点：",
     "rootStart": "根节点起点",
@@ -124,7 +125,9 @@
     "horizontal": "横向链路",
     "lanes": "泳道布局",
     "split": "左右分栏",
-    "radial": "放射布局"
+    "radial": "放射布局",
+    "hierarchical": "分层布局",
+    "force": "力导向"
   },
   "lineFilter": "关系筛选：",
   "fetchAllRelations": "拉取全部关系",
