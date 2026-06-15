@@ -33,7 +33,7 @@ export default defineComponent({
         <RelationNetworkPane
           :set-network-pane-element="setNetworkPaneElement"
           :set-network-chart-element="setNetworkChartElement"
-          :dropdown1="dropdown1"
+          :set-dropdown-instance="setDropdownInstance"
           :network-layout-tooltip="networkLayoutTooltip"
           :network-layout-options="networkLayoutOptions"
           :network-state="networkState"

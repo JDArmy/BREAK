@@ -6,11 +6,12 @@ import { use } from "echarts/core";
 import { GraphChart, SankeyChart } from "echarts/charts";
 import { LegendComponent, TooltipComponent } from "echarts/components";
 import { CanvasRenderer } from "echarts/renderers";
-import {
-  createRelationDropdownRef,
-  createNetworkInteractionsBridge,
-  createRenderNetworkChartBridge,
-} from "@/views/relation/relationViewBridges";
+  import {
+    createRelationDropdownRef,
+    createRelationDropdownBinder,
+    createNetworkInteractionsBridge,
+    createRenderNetworkChartBridge,
+  } from "@/views/relation/relationViewBridges";
 import { createRelationViewAssembly } from "@/views/relation/relationViewAssembly";
 import {
   createRelationTypeMapping,
@@ -46,6 +47,7 @@ export const useRelationViewModel = () => {
 
   const renderNetworkChartBridge = createRenderNetworkChartBridge();
   const dropdown1 = createRelationDropdownRef();
+  const setDropdownInstance = createRelationDropdownBinder(dropdown1);
   const networkInteractionsBridge = createNetworkInteractionsBridge<unknown>();
 
   const relationView = createRelationViewAssembly({
@@ -61,6 +63,7 @@ export const useRelationViewModel = () => {
     getRelationLineColor,
     renderNetworkChartBridge,
     dropdown1,
+    setDropdownInstance,
     networkInteractionsBridge,
   });
 
@@ -68,6 +71,7 @@ export const useRelationViewModel = () => {
     RelationType,
     RelationTypeMapping,
     networkLayoutOptions,
+    setDropdownInstance,
     ...relationView,
   };
 };

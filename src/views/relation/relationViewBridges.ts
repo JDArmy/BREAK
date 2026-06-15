@@ -11,3 +11,9 @@ export const createNetworkInteractionsBridge = <TContextNode>() => ({
 });
 
 export const createRelationDropdownRef = () => ref<DropdownInstance>();
+
+export const createRelationDropdownBinder = (dropdownRef: ReturnType<typeof createRelationDropdownRef>) => (
+  instance: DropdownInstance | undefined
+) => {
+  dropdownRef.value = instance;
+};

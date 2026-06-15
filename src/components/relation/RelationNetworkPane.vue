@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { DropdownInstance } from "element-plus";
-import type { Ref, ComponentPublicInstance } from "vue";
+import type { ComponentPublicInstance } from "vue";
 import RelationFilterPanels from "@/components/relation/RelationFilterPanels.vue";
 import RelationGraphContextMenu from "@/components/relation/RelationGraphContextMenu.vue";
 import RelationGraphToolbar from "@/components/relation/RelationGraphToolbar.vue";
@@ -10,7 +10,7 @@ import { RelationType, type NetworkLayoutMode } from "@/views/relation/relationT
 const props = defineProps<{
   setNetworkPaneElement?: (element: HTMLDivElement | undefined) => void;
   setNetworkChartElement?: (element: HTMLDivElement | undefined) => void;
-  dropdown1?: Ref<DropdownInstance | undefined>;
+  setDropdownInstance?: (instance: DropdownInstance | undefined) => void;
   networkLayoutTooltip: string;
   networkLayoutOptions: { value: NetworkLayoutMode; labelKey: string }[];
   networkState: { layout: NetworkLayoutMode };
@@ -104,7 +104,7 @@ const setNetworkChartRef = (el: Element | ComponentPublicInstance | null) => {
     />
 
     <RelationGraphContextMenu
-      :dropdown1="dropdown1"
+      :set-dropdown-instance="setDropdownInstance"
       :dropdown-style="dropdownStyle"
       :RelationTypeMapping="RelationTypeMapping"
       :disable-context-menu-all="disableContextMenuAll"

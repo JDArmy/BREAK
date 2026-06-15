@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import type { DropdownInstance } from "element-plus";
 import { TopRight } from "@element-plus/icons-vue";
-import type { Ref } from "vue";
 import { RelationType } from "@/views/relation/relationTypes";
 
-defineProps<{
-  dropdown1?: Ref<DropdownInstance | undefined>;
+const props = defineProps<{
+  setDropdownInstance?: (instance: DropdownInstance | undefined) => void;
   dropdownStyle: Record<string, string | number>;
   RelationTypeMapping: Record<string, { title: string; disableContextMenu: { value: boolean } }>;
   disableContextMenuAll: boolean;
@@ -19,10 +18,14 @@ const emit = defineEmits<{
   copyContextNodeCsv: [];
   gotoItemDetailView: [];
 }>();
+
+const setDropdownRef = (instance: DropdownInstance | undefined) => {
+  props.setDropdownInstance?.(instance);
+};
 </script>
 
 <template>
-  <el-dropdown :ref="dropdown1" :handleOpen="true" :style="dropdownStyle">
+  <el-dropdown :ref="setDropdownRef" :handleOpen="true" :style="dropdownStyle">
     <span class="el-dropdown-link"></span>
     <template #dropdown>
       <el-dropdown-menu>

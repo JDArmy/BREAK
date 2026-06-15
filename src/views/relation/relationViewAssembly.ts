@@ -24,6 +24,7 @@ interface CreateRelationViewAssemblyOptions {
   getRelationLineColor: (key: keyof typeof relationLineColors) => string;
   renderNetworkChartBridge: { current: (notMerge?: boolean) => void };
   dropdown1: Ref<DropdownInstance | undefined>;
+  setDropdownInstance: (instance: DropdownInstance | undefined) => void;
   networkInteractionsBridge: {
     handleNodeTouch: (node: unknown) => void;
     nodeClick: (node: unknown, event: MouseEvent) => void;
@@ -43,6 +44,7 @@ export const createRelationViewAssembly = ({
   getRelationLineColor,
   renderNetworkChartBridge,
   dropdown1,
+  setDropdownInstance,
   networkInteractionsBridge,
 }: CreateRelationViewAssemblyOptions) => {
   const viewState = createRelationViewState({
@@ -195,6 +197,7 @@ export const createRelationViewAssembly = ({
     ...sankeyController,
     activeView,
     dropdown1,
+    setDropdownInstance,
     handleNetworkLayoutCommand,
     networkLayoutTooltip,
     networkState,
