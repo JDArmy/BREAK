@@ -58,39 +58,26 @@ interface SceneBREAK {
   };
 }
 
-// 通过动态计算每个风险维度中风险场景的数量，来分配每个风险维度的Col大小，主要解决24不能被整除问题
-let totalRowSize = 24;
-const getDimensionRowSize = (
-  dimensionScenesLength: number,
-  totalSceneslength: number
-) => {
-  let step = Math.round((dimensionScenesLength / totalSceneslength) * 24);
+const sceneLayout = computed(() => {
+  const totalScenes = Object.keys(sceneBREAK.value.riskScenes).length;
+  let remainingRowSize = 24;
 
-  totalRowSize = totalRowSize <= 0 ? 24 : totalRowSize;
+  return Object.entries(sceneBREAK.value.riskDimensions).map(([rdKey, rdVal]) => {
+    let dimensionSize = Math.round((rdVal.riskScenes.length / totalScenes) * 24);
+    dimensionSize = Math.min(dimensionSize, remainingRowSize || 24);
+    remainingRowSize -= dimensionSize;
 
-  step = step > totalRowSize ? totalRowSize : step;
-  totalRowSize -= step;
+    let remainingSceneSize = 24;
+    const scenes = rdVal.riskScenes.map(rsKey => {
+      let sceneSize = Math.round(24 / rdVal.riskScenes.length);
+      sceneSize = Math.min(sceneSize, remainingSceneSize || 24);
+      remainingSceneSize -= sceneSize;
+      return { key: rsKey, size: sceneSize };
+    });
 
-  return step;
-};
-// 通过通过动态计算每个风险维度中风险场景的数量，来分配每个风险场景的Col大小，主要解决24不能被整除问题
-let totalDimensionRowSize = 24;
-const getSceneRowSize = (sceneLength: number) => {
-  let step = Math.round(24 / sceneLength);
-
-  totalDimensionRowSize =
-    totalDimensionRowSize <= 0 ? 24 : totalDimensionRowSize;
-
-  step = step > totalDimensionRowSize ? totalDimensionRowSize : step;
-  totalDimensionRowSize -= step;
-
-  return step;
-};
-
-const resetSceneGridSizes = () => {
-  totalRowSize = 24;
-  totalDimensionRowSize = 24;
-};
+    return { key: rdKey, value: rdVal, size: dimensionSize, scenes };
+  });
+});
 
 const normalizeBusinessSceneKey = (key?: string) =>
   key && hasOwn(BREAK.businessScenes, key) ? key : defaultBusinessSceneKey;
@@ -103,7 +90,6 @@ watch(
     const nextBsKey = getSingleRouteParam(rawBsKey);
     const normalizedBsKey = normalizeBusinessSceneKey(nextBsKey);
     bsKeySelected.value = normalizedBsKey;
-    resetSceneGridSizes();
 
     if (route.name === "businessScene" && nextBsKey !== normalizedBsKey) {
       router.replace({ name: "home" });
@@ -115,8 +101,8 @@ watch(
 const sceneBREAK = computed(
   () =>
     ({
-      riskDimensions: BREAK.businessScenes[normalizeBusinessSceneKey(bsKeySelected.value)].riskDimensions,
-      riskScenes: BREAK.businessScenes[normalizeBusinessSceneKey(bsKeySelected.value)].riskScenes,
+      riskDimensions: BREAK.businessScenes[bsKeySelected.value].riskDimensions,
+      riskScenes: BREAK.businessScenes[bsKeySelected.value].riskScenes,
     }) as SceneBREAK
 );
 
@@ -127,8 +113,6 @@ watch(bsKeySelected, (rawBsKey) => {
     bsKeySelected.value = normalizedBsKey;
     return;
   }
-
-  resetSceneGridSizes();
 
   if (normalizedBsKey === defaultBusinessSceneKey) {
     if (route.name !== "home") {
@@ -363,20 +347,15 @@ const threatActorDetailClose = () => {
     <!-- 风险场景 -->
     <el-col
       class="risk-dimension"
-      v-for="(rdVal, rdKey) in sceneBREAK.riskDimensions"
-      :key="rdKey"
-      :md="
-        getDimensionRowSize(
-          rdVal.riskScenes.length,
-          Object.keys(sceneBREAK.riskScenes).length
-        )
-      "
+      v-for="dimension in sceneLayout"
+      :key="dimension.key"
+      :md="dimension.size"
     >
       <div class="risk-card">
-      <h3 class="risk-dimension-title" :title="rdKey.toString()">
+      <h3 class="risk-dimension-title" :title="dimension.key">
         {{
           $t(
-            `BREAK.businessScenes.${bsKeySelected}.riskDimensions.${rdKey}.title`
+            `BREAK.businessScenes.${bsKeySelected}.riskDimensions.${dimension.key}.title`
           )
         }}
       </h3>
@@ -385,15 +364,15 @@ const threatActorDetailClose = () => {
         <!-- 风险维度 -->
         <el-col
           class="risk-scene"
-          v-for="rsKey in rdVal.riskScenes"
-          :key="rsKey"
-          :md="getSceneRowSize(rdVal.riskScenes.length)"
+          v-for="scene in dimension.scenes"
+          :key="scene.key"
+          :md="scene.size"
         >
-          <h4 class="risk-scene-title" :title="rsKey">
+          <h4 class="risk-scene-title" :title="scene.key">
             <!-- <a :href="'/risk-demensions/' + rdKey"> -->
             {{
               $t(
-                `BREAK.businessScenes.${bsKeySelected}.riskScenes.${rsKey}.title`
+                `BREAK.businessScenes.${bsKeySelected}.riskScenes.${scene.key}.title`
               )
             }}
 
@@ -403,7 +382,7 @@ const threatActorDetailClose = () => {
             <!-- 风险列表 -->
             <li
               :class="subRisks[rKey] ? 's-risk' : 'risk'"
-              v-for="rKey in getRisks(sceneBREAK.riskScenes, rsKey)"
+              v-for="rKey in getRisks(sceneBREAK.riskScenes, scene.key)"
               :key="rKey"
               :title="rKey + ': ' + $t(`BREAK.risks.${rKey}.definition`)"
               :style="hideSubRisks[rKey] ? '' : 'padding:0 0 3px 0;'"

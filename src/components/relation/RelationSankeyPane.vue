@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { type Ref, type ComponentPublicInstance } from "vue";
+import { type ComponentPublicInstance } from "vue";
 
 const props = defineProps<{
   sankeyData: { nodes: unknown[]; links: unknown[] };
