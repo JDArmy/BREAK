@@ -78,6 +78,7 @@ export default defineComponent({
       <el-tab-pane :label="$t('relationView.attackPath')" name="sankey">
         <RelationSankeyPane
           :sankey-data="sankeyData"
+          :chart-min-width="sankeyChartMinWidth"
           :set-sankey-chart-element="setSankeyChartElement"
         />
       </el-tab-pane>
@@ -149,14 +150,35 @@ export default defineComponent({
 }
 
 @media (max-width: 767px) {
+  .relation-page {
+    height: calc(100dvh - 94px);
+    min-height: 0;
+    padding: 0 6px 2px;
+  }
+
+  .relation-tabs {
+    min-height: 0;
+  }
+
   .relation-tabs :deep(.el-tabs__header) {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 4px;
+    margin-bottom: 4px;
   }
 
   .relation-tabs :deep(.el-tabs__nav-wrap) {
     padding-right: 0;
+    min-height: 34px;
+  }
+
+  .relation-tabs :deep(.el-tabs__item) {
+    height: 34px;
+    line-height: 34px;
+  }
+
+  .relation-tabs :deep(.el-tabs__content) {
+    height: calc(100% - 38px);
   }
 }
 </style>

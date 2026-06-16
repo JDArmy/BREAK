@@ -1,6 +1,7 @@
 import { ref, type ComputedRef, type Ref } from "vue";
 import { init, type ECharts } from "echarts/core";
 import type { SankeyLink, SankeyNode } from "@/views/relation/relationTypes";
+import type { SankeyLabelOverflow, SankeyNodeAlign } from "@/views/relation/relationViewState";
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;
 
@@ -10,7 +11,17 @@ interface CreateSankeyChartControllerOptions {
   activeView: Ref<"network" | "sankey">;
   sankeyChartHeight: ComputedRef<number>;
   sankeyData: ComputedRef<{ nodes: SankeyNode[]; links: SankeyLink[] }>;
+  sankeyBottom: ComputedRef<number>;
+  sankeyLabelFontSize: ComputedRef<number>;
+  sankeyLabelLineHeight: ComputedRef<number>;
+  sankeyLabelOverflow: ComputedRef<SankeyLabelOverflow>;
+  sankeyLayoutIterations: ComputedRef<number>;
+  sankeyLeft: ComputedRef<number>;
+  sankeyNodeAlign: ComputedRef<SankeyNodeAlign>;
+  sankeyNodeGap: ComputedRef<number>;
+  sankeyNodeWidth: ComputedRef<number>;
   sankeyRight: ComputedRef<number>;
+  sankeyTop: ComputedRef<number>;
   sankeyLabelWidth: ComputedRef<number>;
   onSelectNode: (node: SankeyNode) => void;
 }
@@ -21,7 +32,17 @@ export const createSankeyChartController = ({
   activeView,
   sankeyChartHeight,
   sankeyData,
+  sankeyBottom,
+  sankeyLabelFontSize,
+  sankeyLabelLineHeight,
+  sankeyLabelOverflow,
+  sankeyLayoutIterations,
+  sankeyLeft,
+  sankeyNodeAlign,
+  sankeyNodeGap,
+  sankeyNodeWidth,
   sankeyRight,
+  sankeyTop,
   sankeyLabelWidth,
   onSelectNode,
 }: CreateSankeyChartControllerOptions) => {
@@ -80,13 +101,14 @@ export const createSankeyChartController = ({
           type: "sankey",
           data: sankeyData.value.nodes,
           links: sankeyData.value.links,
-          left: 40,
+          left: sankeyLeft.value,
           right: sankeyRight.value,
-          top: 24,
-          bottom: 24,
-          nodeWidth: 18,
-          nodeGap: 10,
-          layoutIterations: 48,
+          top: sankeyTop.value,
+          bottom: sankeyBottom.value,
+          nodeWidth: sankeyNodeWidth.value,
+          nodeGap: sankeyNodeGap.value,
+          nodeAlign: sankeyNodeAlign.value,
+          layoutIterations: sankeyLayoutIterations.value,
           draggable: true,
           emphasis: {
             focus: "adjacency",
@@ -100,10 +122,11 @@ export const createSankeyChartController = ({
             color: getComputedStyle(document.documentElement)
               .getPropertyValue("--break-text-primary")
               .trim(),
-            fontSize: 12,
+            fontSize: sankeyLabelFontSize.value,
+            lineHeight: sankeyLabelLineHeight.value,
             width: sankeyLabelWidth.value,
-            overflow: "truncate",
-            ellipsis: "...",
+            overflow: sankeyLabelOverflow.value,
+            ellipsis: sankeyLabelOverflow.value === "truncate" ? "..." : undefined,
           },
           itemStyle: {
             borderColor: getComputedStyle(document.documentElement)

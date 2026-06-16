@@ -105,6 +105,8 @@ const shouldEnableScroll = computed(() => {
   return Object.keys(sceneBREAK.value.riskScenes).length > scrollThreshold;
 });
 
+const shouldEnableMatrixScroll = computed(() => shouldEnableScroll.value && !isMobile.value);
+
 const normalizeBusinessSceneKey = (key?: string) =>
   key && hasOwn(BREAK.businessScenes, key) ? key : defaultBusinessSceneKey;
 
@@ -399,15 +401,17 @@ const termDetailClose = () => {
     </el-col>
   </el-row>
 
-  <div :class="{ 'scrollable-container': shouldEnableScroll }">
+  <div :class="{ 'scrollable-container': shouldEnableMatrixScroll }">
     <el-row>
       <!-- 风险场景 -->
       <el-col
         class="risk-dimension"
         v-for="dimension in sceneLayout"
         :key="dimension.key"
-        :md="shouldEnableScroll ? undefined : dimension.size"
-        :style="shouldEnableScroll ? { flex: `0 0 ${dimension.width}px`, maxWidth: `${dimension.width}px` } : {}"
+        :xs="24"
+        :sm="24"
+        :md="shouldEnableMatrixScroll ? undefined : dimension.size"
+        :style="shouldEnableMatrixScroll ? { flex: `0 0 ${dimension.width}px`, maxWidth: `${dimension.width}px` } : {}"
       >
         <div class="risk-card">
         <h3 class="risk-dimension-title" :title="dimension.key">
@@ -424,6 +428,8 @@ const termDetailClose = () => {
             class="risk-scene"
             v-for="scene in dimension.scenes"
             :key="scene.key"
+            :xs="24"
+            :sm="24"
             :md="scene.size"
           >
           <h4 class="risk-scene-title" :title="scene.key">
@@ -560,6 +566,8 @@ const termDetailClose = () => {
   border-radius: 8px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.06);
   padding-bottom: 10px;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .risk-dimension-title {
@@ -575,6 +583,7 @@ const termDetailClose = () => {
 
 .risk-scene {
   padding: 3px;
+  min-width: 0;
 }
 
 .risk-scene-title {
@@ -591,6 +600,7 @@ const termDetailClose = () => {
   list-style: none;
   margin: 0;
   padding: 0;
+  min-width: 0;
 }
 
 .risk,
@@ -606,6 +616,11 @@ const termDetailClose = () => {
   border: 1px solid var(--break-border);
   border-radius: 4px;
   margin-bottom: 2px;
+  min-width: 0;
+}
+
+.risk-with-sub {
+  table-layout: fixed;
 }
 
 .risk:hover,
@@ -627,6 +642,10 @@ const termDetailClose = () => {
   color: var(--break-link);
   text-decoration: none;
   display: inline-block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  white-space: normal;
 }
 
 .risk a:hover,
@@ -689,11 +708,15 @@ const termDetailClose = () => {
   height: 100%;
   width: 100%;
   font-size: 90%;
+  line-height: 1.45;
+  padding: 2px 4px;
+  box-sizing: border-box;
 }
 
 .parent-risk-link {
   font-weight: 500;
   border-left: 1px solid var(--break-border);
+  min-width: 0;
 }
 
 .stats {
@@ -873,6 +896,52 @@ const termDetailClose = () => {
 
   .stat-number {
     font-size: 1.5em;
+  }
+
+  .scrollable-container {
+    overflow-x: visible;
+    overflow-y: visible;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .scrollable-container .el-row {
+    flex-wrap: wrap !important;
+  }
+
+  .risk-dimension {
+    width: 100%;
+    max-width: 100%;
+    padding: 6px 0;
+  }
+
+  .risk-card {
+    width: 100%;
+  }
+
+  .risk-dimension-title {
+    font-size: 0.95rem;
+  }
+
+  .risk-scene {
+    width: 100%;
+    max-width: 100%;
+    padding: 6px 8px;
+  }
+
+  .risk-scene-title {
+    text-align: left;
+    font-size: 0.875rem;
+  }
+
+  .risk,
+  .s-risk,
+  .sub-risk-link {
+    text-align: left;
+  }
+
+  .sidebar {
+    width: 18px;
   }
 }
 </style>

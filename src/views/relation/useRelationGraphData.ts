@@ -17,6 +17,7 @@ type Translate = (key: string, params?: Record<string, unknown>) => string;
 interface UseRelationGraphDataOptions {
   t: Translate;
   isDark: Ref<boolean>;
+  isMobile: Ref<boolean>;
   relType: Ref<RelationType>;
   relKey: Ref<string>;
   RelationTypeMapping: ReturnType<typeof createRelationTypeMapping>;
@@ -27,6 +28,7 @@ interface UseRelationGraphDataOptions {
 
 export const useRelationGraphData = ({
   t,
+  isMobile,
   relType,
   relKey,
   RelationTypeMapping,
@@ -283,6 +285,7 @@ export const useRelationGraphData = ({
     selectedNodeAttackPathSummary,
   } = createRelationAttackPathData({
     t,
+    isMobile,
     relType,
     relKey,
     selectedNetworkNode,

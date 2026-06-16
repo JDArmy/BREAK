@@ -2,6 +2,7 @@ import { nextTick, onBeforeUnmount, onMounted, watch, type Ref } from "vue";
 import BREAK from "@/BREAK";
 import type { Router, RouteLocationNormalizedLoaded } from "vue-router";
 import { createRelationTypeMapping, RelationType } from "@/views/relation/relationTypes";
+import { normalizeRelationViewMode, type RelationViewMode } from "@/views/relation/relationViewState";
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;
 
@@ -11,7 +12,7 @@ interface SetupRelationViewEffectsOptions {
   router: Router;
   locale: Ref<string>;
   isDark: Ref<boolean>;
-  activeView: Ref<"network" | "sankey">;
+  activeView: Ref<RelationViewMode>;
   relType: Ref<RelationType>;
   relKey: Ref<string>;
   sankeyData: Ref<unknown>;
@@ -125,6 +126,7 @@ export const setupRelationViewEffects = ({
             type: newType,
             key: newKey,
           },
+          query: route.query,
         });
       }
     }
@@ -148,13 +150,41 @@ export const setupRelationViewEffects = ({
     });
   });
 
-  watch(activeView, () => {
-    if (activeView.value === "sankey") {
-      nextTick(renderSankeyChart);
-    } else {
-      nextTick(() => renderNetworkChart(true));
+  watch(
+    activeView,
+    () => {
+      if (route.query.view !== activeView.value) {
+        router.replace({
+          name: "relation",
+          params: {
+            type: relType.value,
+            key: relKey.value,
+          },
+          query: {
+            ...route.query,
+            view: activeView.value,
+          },
+        });
+      }
+
+      if (activeView.value === "sankey") {
+        nextTick(renderSankeyChart);
+      } else {
+        nextTick(() => renderNetworkChart(true));
+      }
+    },
+    { immediate: true }
+  );
+
+  watch(
+    () => route.query.view,
+    (view) => {
+      const nextView = normalizeRelationViewMode(view, activeView.value);
+      if (nextView !== activeView.value) {
+        activeView.value = nextView;
+      }
     }
-  });
+  );
 
   watch(
     sankeyData,

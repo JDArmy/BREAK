@@ -12,6 +12,7 @@ type Translate = (key: string, params?: Record<string, unknown>) => string;
 
 interface CreateRelationAttackPathOptions {
   t: Translate;
+  isMobile?: Ref<boolean>;
   relType: Ref<RelationType>;
   relKey: Ref<string>;
   selectedNetworkNode: ComputedRef<Node | null>;
@@ -21,12 +22,15 @@ interface CreateRelationAttackPathOptions {
 
 export const createRelationAttackPathData = ({
   t,
+  isMobile,
   relType,
   relKey,
   selectedNetworkNode,
   RelationTypeMapping,
   getSankeyNodeName,
 }: CreateRelationAttackPathOptions) => {
+  const isMobileView = () => isMobile?.value === true;
+
   const describeAttackPathRole = (nodeType: Exclude<RelationType, RelationType.all>) => {
     switch (nodeType) {
       case RelationType.threatActor:
@@ -218,6 +222,10 @@ export const createRelationAttackPathData = ({
       return acc;
     }, {});
     const maxLayerNodeCount = Math.max(1, ...Object.values(nodesByDepth));
+
+    if (isMobileView()) {
+      return Math.min(Math.max(620, maxLayerNodeCount * 34 + 140), 5200);
+    }
 
     return Math.min(Math.max(520, maxLayerNodeCount * 24 + 96), 3200);
   });
