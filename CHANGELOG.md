@@ -1,5 +1,18 @@
 # Change log
 
+## 2.14.2
+
+- 优化：启用 TypeScript 严格模式，提升类型安全
+- 优化：添加全局错误处理机制（Vue errorHandler）
+- 优化：Terms 数据分包从 500KB 优化到 300KB
+- 优化：增加无障碍性支持
+  - 导航菜单添加 ARIA 标签（role="navigation", aria-label）
+  - 搜索输入框添加 aria-label
+- 优化：添加完整的 SEO 元标签
+  - description、keywords、author
+  - Open Graph (og:*) 标签
+  - Twitter Card 标签
+
 ## 2.14.1
 
 - 修复：生产构建中Element Plus和ECharts的运行时错误

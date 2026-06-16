@@ -227,6 +227,8 @@ const getActiveIndex = (fullPath: string) => {
     :ellipsis="false"
     :router="true"
     class="hidden-sm-and-down desktop-menu"
+    role="navigation"
+    aria-label="Main navigation"
     @select="handleDesktopMenuSelect"
   >
     <div style="display: flex; align-items: center; cursor: pointer" @click="$router.push('/')">

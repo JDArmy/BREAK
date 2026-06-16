@@ -218,6 +218,7 @@ function handleTouchStart(index: number) {
         clearable
         :prefix-icon="Search"
         class="search-input"
+        aria-label="Search knowledge base"
       />
       <span v-if="!isMobile" class="shortcut-hint">{{ shortcutHint }}</span>
     </div>

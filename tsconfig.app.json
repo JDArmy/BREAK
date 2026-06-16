@@ -6,7 +6,7 @@
     "composite": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "strictNullChecks": true,
+    "strict": true,
     "paths": {
       "@/*": ["./src/*"]
     }

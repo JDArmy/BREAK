@@ -47,6 +47,7 @@ export const createNetworkChartController = ({
   let longPressNode: GraphNode | undefined;
   let longPressStart: { x: number; y: number } | undefined;
   let renderRequestId = 0;
+  let bodyOverflowBeforeAppFullscreen: string | null = null;
 
   const clearLongPressTimer = () => {
     if (longPressTimer) {
@@ -370,6 +371,7 @@ export const createNetworkChartController = ({
     renderRequestId += 1;
     clearLongPressTimer();
     hideNetworkTooltip();
+    exitAppFullscreen();
     networkChart?.dispose();
     networkChart = null;
   };
@@ -391,9 +393,46 @@ export const createNetworkChartController = ({
     link.click();
   };
 
+  const resizeNetworkChartAfterFullscreenChange = () => {
+    requestAnimationFrame(() => {
+      networkChart?.resize();
+      if (isMobile.value) {
+        centerSelectedNodeInScroller();
+      }
+    });
+  };
+
+  const exitAppFullscreen = () => {
+    const pane = networkPaneRef.value;
+    if (!pane) return;
+    pane.classList.remove("network-graph-pane--app-fullscreen");
+    if (bodyOverflowBeforeAppFullscreen !== null) {
+      document.body.style.overflow = bodyOverflowBeforeAppFullscreen;
+      bodyOverflowBeforeAppFullscreen = null;
+    }
+    resizeNetworkChartAfterFullscreenChange();
+  };
+
+  const enterAppFullscreen = () => {
+    const pane = networkPaneRef.value;
+    if (!pane) return;
+    if (pane.classList.contains("network-graph-pane--app-fullscreen")) {
+      exitAppFullscreen();
+      return;
+    }
+    bodyOverflowBeforeAppFullscreen = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    pane.classList.add("network-graph-pane--app-fullscreen");
+    resizeNetworkChartAfterFullscreenChange();
+  };
+
   const enterFullscreen = async () => {
     const pane = networkPaneRef.value;
     if (!pane) return;
+    if (isMobile.value) {
+      enterAppFullscreen();
+      return;
+    }
     if (document.fullscreenElement) {
       await document.exitFullscreen();
     } else {
