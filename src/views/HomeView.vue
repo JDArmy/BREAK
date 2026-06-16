@@ -9,6 +9,7 @@ import TermDetail from "@/components/TermDetail.vue";
 import { ref, watch, computed } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import { useBreakpoints } from "@/composables/useBreakpoints";
+import { useI18n } from "vue-i18n";
 
 import "element-plus/es/components/row/style/css";
 import "element-plus/es/components/col/style/css";
@@ -16,6 +17,7 @@ import { ElRow, ElCol } from "element-plus";
 
 const router = useRouter();
 const route = useRoute();
+const { locale } = useI18n();
 const defaultBusinessSceneKey = "BS00";
 
 const { isMobile } = useBreakpoints();
@@ -70,7 +72,8 @@ const sceneLayout = computed(() => {
     let dimensionWidth;
 
     if (enableScroll) {
-      dimensionWidth = rdVal.riskScenes.length * 180;
+      const sceneWidth = locale.value === 'en' ? 280 : 180;
+      dimensionWidth = rdVal.riskScenes.length * sceneWidth;
       dimensionSize = 24;
     } else {
       dimensionSize = Math.round((rdVal.riskScenes.length / totalScenes) * 24);
