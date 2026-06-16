@@ -68,11 +68,30 @@ const selectItem = (key: string, updateRoute = true) => {
   }
 };
 
+const scrollSelectedItemToMobileListCenter = () => {
+  const list = mobileListRef.value;
+  if (!list) return false;
+
+  const selectedElement = list.querySelector<HTMLElement>(
+    `[data-knowledge-key="${CSS.escape(props.selectedKey)}"]`
+  );
+  if (!selectedElement) return false;
+
+  const listRect = list.getBoundingClientRect();
+  const selectedRect = selectedElement.getBoundingClientRect();
+  const selectedTop = selectedRect.top - listRect.top + list.scrollTop;
+  const targetScrollTop = selectedTop - (list.clientHeight - selectedElement.offsetHeight) / 2;
+  const maxScrollTop = list.scrollHeight - list.clientHeight;
+  list.scrollTop = Math.max(0, Math.min(targetScrollTop, maxScrollTop));
+  mobileListScrollTop.value = list.scrollTop;
+  return true;
+};
+
 const backToList = () => {
   mobileView.value = "list";
   nextTick(() => {
     requestAnimationFrame(() => {
-      if (mobileListRef.value) {
+      if (!scrollSelectedItemToMobileListCenter() && mobileListRef.value) {
         mobileListRef.value.scrollTop = mobileListScrollTop.value;
       }
     });

@@ -62,7 +62,7 @@ import iconGithub from "@/components/icons/iconGithub.vue";
   background-color: var(--break-footer-bg);
   color: var(--break-footer-text);
   font-size: 50%;
-  padding: 5px 0 10px 0;
+  padding: 5px 0 5px 0;
   border-top: 1px solid var(--break-footer-border);
 }
 

@@ -610,7 +610,7 @@ const getActiveIndex = (fullPath: string) => {
 }
 
 .mobile-nav-footer {
-  padding: 8px 16px;
+  padding: 8px 16px 4px 16px;
   margin-top: auto;
 }
 
@@ -645,6 +645,6 @@ const getActiveIndex = (fullPath: string) => {
 }
 
 .mobile-nav-drawer .el-drawer__body {
-  padding: 8px 0;
+  padding: 8px 0 0 0;
 }
 </style>
