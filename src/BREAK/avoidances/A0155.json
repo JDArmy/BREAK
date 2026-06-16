@@ -1,7 +1,7 @@
 {
   "A0155": {
     "title": "链上身份去中心化验证",
-    "category": "TC01",
+    "category": "AC01",
     "definition": "使用DID等去中心化身份技术，实现无需中心化机构的身份证明",
     "description": "DID方案：W3C DID标准；链上身份锚点；可验证凭证；选择性披露；自主身份；跨平台互认。",
     "complexity": "高级",

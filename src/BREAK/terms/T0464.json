@@ -17,16 +17,26 @@
     "definition": "将犯罪所得资金通过各种手段转化为合法资金的行为。",
     "description": "犯罪团伙通过多层转账、跨境汇款、虚拟货币兑换、虚假交易等方式，掩盖非法资金来源并使其表面合法化。常见手法包括利用跑分平台分散资金、通过地下钱庄跨境转移、使用空壳公司制造合法交易记录等。洗钱是所有经济犯罪的下游环节，直接影响金融体系稳定和监管有效性。",
     "relatedRisks": [
-      "R0071",
-      "R0071-003"
+      "R0060",
+      "R0093",
+      "R0121"
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [
-      "AT0039",
-      "AT0040"
+      "AT0026",
+      "AT0060"
     ],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedThreatActors": [
+      "TA0014",
+      "TA0038",
+      "TA0006-003",
+      "TA0039"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01",
+      "BS15"
+    ],
     "references": [
       {
         "title": "什么是洗钱?",

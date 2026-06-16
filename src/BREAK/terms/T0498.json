@@ -1,8 +1,11 @@
 {
   "T0498": {
     "title": "私钥",
-    "aliases": [],
-    "category": "TC01",
+    "aliases": [
+      "Private Key",
+      "钱包密钥"
+    ],
+    "category": "区块链安全",
     "keywords": [
       "私钥",
       "Private Key",
@@ -14,17 +17,28 @@
     "description": "私钥是长度为64位十六进制字符的随机数，任何人掌握私钥即拥有对应地址的资产控制权。私钥泄露是加密资产安全的最大威胁，一旦丢失或被盗无法找回资产。私钥通常由助记词生成，需要离线保存在安全位置。",
     "usageExample": "用户使用私钥签署转账交易，将10个ETH发送到另一个地址，交易无法被撤销。",
     "relatedRisks": [
-      "R0161",
       "R0162",
-      "R0196"
+      "R0196",
+      "R0197",
+      "R0201"
     ],
     "relatedAvoidances": [
-      "A0098",
-      "A0099"
+      "A0104",
+      "A0105",
+      "A0106"
     ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedAttackTools": [
+      "AT0063",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0018",
+      "TA0039"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS15"
+    ],
     "references": [
       {
         "link": "https://www.coinbase.com/learn/crypto-basics/what-is-a-private-key",

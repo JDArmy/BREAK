@@ -1,8 +1,12 @@
 {
   "T0493": {
     "title": "Layer2",
-    "aliases": [],
-    "category": "TC01",
+    "aliases": [
+      "二层网络",
+      "Layer 2",
+      "Rollup"
+    ],
+    "category": "区块链基础设施",
     "keywords": [
       "Layer2",
       "二层网络",
@@ -16,16 +20,21 @@
     "description": "Layer2通过将大部分交易计算移至链下，仅将最终状态提交到主链，实现交易吞吐量的大幅提升和Gas费降低。常见方案包括Optimistic Rollup、ZK-Rollup、状态通道等，但跨链桥接、数据可用性、定序器中心化等问题带来新的安全挑战。",
     "usageExample": "用户在Arbitrum（一个Layer2网络）上进行代币交易，享受低Gas费和快速确认，最终状态被打包提交到以太坊主网。",
     "relatedRisks": [
-      "R0199",
-      "R0162"
+      "R0200"
     ],
     "relatedAvoidances": [
-      "A0097",
-      "A0163"
+      "A0173",
+      "A0097"
     ],
     "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedThreatActors": [
+      "TA0018",
+      "TA0039"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS15"
+    ],
     "references": [
       {
         "link": "https://ethereum.org/en/layer-2/",

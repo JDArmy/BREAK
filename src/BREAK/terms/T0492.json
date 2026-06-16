@@ -1,8 +1,11 @@
 {
   "T0492": {
     "title": "DAO",
-    "aliases": [],
-    "category": "TC01",
+    "aliases": [
+      "去中心化自治组织",
+      "链上治理"
+    ],
+    "category": "区块链治理",
     "keywords": [
       "DAO",
       "去中心化自治组织",
@@ -15,16 +18,23 @@
     "description": "DAO将组织规则编码为智能合约，所有决策通过代币持有者投票产生，资金管理和执行自动化进行。DAO消除了传统组织的层级结构，但也面临治理攻击、提案操纵、多签钱包社工等安全风险。",
     "usageExample": "某DeFi协议的DAO社区投票决定是否上线新功能，提案通过后智能合约自动执行升级。",
     "relatedRisks": [
-      "R0169",
+      "R0167",
       "R0197"
     ],
     "relatedAvoidances": [
-      "A0101",
-      "A0175"
+      "A0119",
+      "A0120",
+      "A0121",
+      "A0170"
     ],
     "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedThreatActors": [
+      "TA0039"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS15"
+    ],
     "references": [
       {
         "link": "https://ethereum.org/en/dao/",

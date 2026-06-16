@@ -1,8 +1,12 @@
 {
   "T0494": {
     "title": "跨链桥",
-    "aliases": [],
-    "category": "TC01",
+    "aliases": [
+      "跨链",
+      "桥接",
+      "资产跨链"
+    ],
+    "category": "区块链基础设施",
     "keywords": [
       "跨链桥",
       "Cross-chain Bridge",
@@ -15,16 +19,24 @@
     "description": "跨链桥通过锁定-铸造或销毁-释放机制，实现资产在不同区块链之间的流转。跨链桥是多链生态的关键基础设施，但由于涉及复杂的资产托管和验证逻辑，已成为黑客攻击的重灾区，历史上多次发生数亿美元的跨链桥被盗事件。",
     "usageExample": "用户通过Polygon Bridge将以太坊上的USDC转移到Polygon网络，享受更低的交易费用。",
     "relatedRisks": [
-      "R0162",
-      "R0199"
+      "R0161",
+      "R0200"
     ],
     "relatedAvoidances": [
-      "A0097",
-      "A0163"
+      "A0101",
+      "A0102",
+      "A0103",
+      "A0173"
     ],
     "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedThreatActors": [
+      "TA0018",
+      "TA0039"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS15"
+    ],
     "references": [
       {
         "link": "https://ethereum.org/en/bridges/",

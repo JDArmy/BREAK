@@ -18,15 +18,36 @@
     "definition": "伪装成可信实体诱骗用户泄露敏感信息的攻击方式。",
     "description": "攻击者通过伪造银行、电商平台、政府机构等可信网站或邮件，诱导用户输入账号密码、银行卡号、验证码等敏感信息。钓鱼手段包括仿冒官网、伪造邮件、虚假短信等，利用用户信任和疏忽达到盗取信息、资金的目的。是最常见的网络诈骗手段之一。",
     "relatedRisks": [
-      "R0080",
-      "R0162"
+      "R0084",
+      "R0084-001",
+      "R0032",
+      "R0144",
+      "R0194"
     ],
-    "relatedAvoidances": [],
-    "relatedAttackTools": [],
+    "relatedAvoidances": [
+      "A0016",
+      "A0016-002",
+      "A0040",
+      "A0007-005"
+    ],
+    "relatedAttackTools": [
+      "AT0063",
+      "AT0071",
+      "AT0072"
+    ],
     "relatedThreatActors": [
-      "TA0015"
+      "TA0015",
+      "TA0018",
+      "TA0039",
+      "TA0043"
     ],
-    "relatedBusinessScenes": [],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01",
+      "BS02",
+      "BS04",
+      "BS15"
+    ],
     "references": [
       {
         "title": "【钓鱼技巧】笨重的铅头钩,钓不了轻口鱼?不,朝天钩冬钓更高效|冬...",

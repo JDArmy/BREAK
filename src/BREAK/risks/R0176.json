@@ -5,7 +5,13 @@
     "description": "智能合约常使用区块时间戳（block.timestamp）来实现时间相关逻辑，如抽奖开奖、期权到期、利息计算等。矿工在一定范围内（通常15秒）可自由设置区块时间戳，攻击者可利用此特性操纵合约结果，如选择有利的开奖时间、提前触发或延迟执行等。",
     "complexity": "高级",
     "influence": "合约逻辑被操纵，抽奖结果可预测，时间敏感业务失效。",
-    "avoidances": [],
+    "avoidances": [
+      "A0095",
+      "A0096",
+      "A0097",
+      "A0129",
+      "A0138"
+    ],
     "references": [
       {
         "title": "Timestamp Dependence Vulnerability",

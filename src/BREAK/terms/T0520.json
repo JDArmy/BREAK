@@ -1,8 +1,12 @@
 {
   "T0520": {
     "title": "沙箱",
-    "aliases": [],
-    "category": "TC03",
+    "aliases": [
+      "Sandbox",
+      "沙盒",
+      "隔离环境"
+    ],
+    "category": "安全防护",
     "keywords": [
       "沙箱",
       "Sandbox",
@@ -15,15 +19,27 @@
     "usageExample": "安全团队将可疑邮件附件放入沙箱运行，观察其是否有加密文件、连接C2服务器等恶意行为。",
     "relatedRisks": [
       "R0080",
-      "R0112"
+      "R0112",
+      "R0148"
     ],
     "relatedAvoidances": [
-      "A0030",
+      "A0078",
       "A0089"
     ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedAttackTools": [
+      "AT0013",
+      "AT0057",
+      "AT0074"
+    ],
+    "relatedThreatActors": [
+      "TA0012",
+      "TA0018",
+      "TA0041"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS14"
+    ],
     "references": [
       {
         "link": "https://sandbox.cloudflare.com/",

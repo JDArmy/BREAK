@@ -1,8 +1,11 @@
 {
   "T0499": {
     "title": "助记词",
-    "aliases": [],
-    "category": "TC01",
+    "aliases": [
+      "Seed Phrase",
+      "恢复短语"
+    ],
+    "category": "区块链安全",
     "keywords": [
       "助记词",
       "Seed Phrase",
@@ -15,17 +18,26 @@
     "description": "助记词通过BIP-39标准将私钥编码为易于记忆和抄写的单词序列。掌握助记词等同于拥有钱包完全控制权，可以在任何设备上恢复钱包并访问所有资产。助记词泄露、钓鱼诈骗、物理盗窃是加密资产被盗的主要途径之一。",
     "usageExample": "用户将12个助记词手写在纸上离线保存，手机丢失后可用助记词在新设备恢复钱包。",
     "relatedRisks": [
-      "R0161",
+      "R0162",
       "R0194",
       "R0195"
     ],
     "relatedAvoidances": [
-      "A0098",
-      "A0099"
+      "A0105",
+      "A0106"
     ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedAttackTools": [
+      "AT0063",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0018",
+      "TA0039"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS15"
+    ],
     "references": [
       {
         "link": "https://www.ledger.com/academy/crypto/what-is-a-recovery-phrase",

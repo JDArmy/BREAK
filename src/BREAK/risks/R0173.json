@@ -5,7 +5,12 @@
     "description": "Gas费决定了交易在区块中的优先级。攻击者可通过：设置极高Gas费抢先执行交易（Front-running）、发送大量低Gas交易堵塞网络、利用Gas价格波动进行套利、操纵Gas拍卖机制等方式，使普通用户交易延迟或失败，或强迫用户支付更高手续费。",
     "complexity": "高级",
     "influence": "用户交易成本飙升，网络拥堵瘫痪，交易顺序被恶意操纵。",
-    "avoidances": [],
+    "avoidances": [
+      "A0128",
+      "A0129",
+      "A0130",
+      "A0177"
+    ],
     "references": [
       {
         "title": "Ethereum Gas Fee Manipulation",

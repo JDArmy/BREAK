@@ -1,8 +1,12 @@
 {
   "T0511": {
     "title": "僵尸网络",
-    "aliases": [],
-    "category": "TC02",
+    "aliases": [
+      "Botnet",
+      "肉鸡网络",
+      "C2网络"
+    ],
+    "category": "网络攻击",
     "keywords": [
       "僵尸网络",
       "Botnet",
@@ -15,17 +19,31 @@
     "description": "僵尸网络通过木马、蠕虫感染大量设备（电脑、手机、IoT设备等），形成分布式攻击力量。攻击者通过C&C（命令与控制）服务器远程下发指令，驱使僵尸设备执行DDoS攻击、垃圾邮件发送、密码爆破、挖矿、点击欺诈等任务。现代僵尸网络规模可达数百万节点，对互联网基础设施构成严重威胁。",
     "usageExample": "Mirai僵尸网络感染数十万IoT摄像头，发起超过1Tbps的DDoS攻击瘫痪了美国东海岸的互联网服务。",
     "relatedRisks": [
+      "R0029-004",
       "R0086",
       "R0165",
+      "R0209",
       "R0213"
     ],
     "relatedAvoidances": [
-      "A0115",
-      "A0003"
+      "A0008-002",
+      "A0016",
+      "A0078",
+      "A0113",
+      "A0114",
+      "A0115"
     ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedAttackTools": [
+      "AT0013"
+    ],
+    "relatedThreatActors": [
+      "TA0012",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS16"
+    ],
     "references": [
       {
         "link": "https://blog.cloudflare.com/tag/botnet/",

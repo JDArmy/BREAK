@@ -14,16 +14,21 @@
     "definition": "利用他人银行账户或支付账户进行资金流转，为黑产提供洗钱通道的行为。",
     "description": "黑产团伙招募大量账户持有者（“跑分手”），通过专门平台将赌博、诈骗等非法资金拆分后转入这些账户，再快速转出至下游账户，形成复杂的资金链路以规避监管追踪。跑分手按流水获取佣金，但面临账户冻结、涉嫌洗钱等法律风险。该模式是黑产资金流转的核心环节，严重危害金融安全。",
     "relatedRisks": [
-      "R0071",
-      "R0071-003"
+      "R0060",
+      "R0093"
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [
-      "AT0039",
-      "AT0040"
+      "AT0026"
     ],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
     "references": [
       {
         "title": "科技早报:Redmi Turbo 3跑分超175万|谷歌AI竞赛失利|微星为中国推出新...",

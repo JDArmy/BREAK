@@ -6,7 +6,10 @@
     "influence": "AIoT设备广泛应用于关键场景，影响重大",
     "limitation": "需要深入理解AI模型和IoT系统",
     "avoidances": [
-      "A0178"
+      "A0178",
+      "A0078",
+      "A0182",
+      "A0108"
     ],
     "references": [
       {

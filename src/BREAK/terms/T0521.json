@@ -1,8 +1,12 @@
 {
   "T0521": {
     "title": "蜜罐",
-    "aliases": [],
-    "category": "TC03",
+    "aliases": [
+      "Honeypot",
+      "诱饵系统",
+      "蜜网"
+    ],
+    "category": "安全防护",
     "keywords": [
       "蜜罐",
       "Honeypot",
@@ -15,15 +19,19 @@
     "usageExample": "企业在内网部署蜜罐模拟文件服务器，一旦有人访问立即触发告警，帮助检测内网渗透行为。",
     "relatedRisks": [
       "R0081",
-      "R0086"
+      "R0086",
+      "R0209"
     ],
     "relatedAvoidances": [
       "A0030",
-      "A0016"
+      "A0016",
+      "A0019"
     ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
     "references": [
       {
         "link": "https://github.com/jesusgavancho/TryHackMe_and_HackTheBox/blob/master/Introduction%20To%20Honeypots.md",

@@ -6,7 +6,11 @@
     "influence": "新型钱包架构带来未知风险",
     "limitation": "标准和实现尚不成熟",
     "avoidances": [
-      "A0174"
+      "A0174",
+      "A0104",
+      "A0105",
+      "A0168",
+      "A0176"
     ],
     "references": [
       {

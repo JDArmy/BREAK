@@ -12,15 +12,28 @@
     "definition": "无需抵押的区块链即时借贷机制，要求在同一交易区块内借入并归还资金，否则交易自动回滚。",
     "description": "闪电贷是DeFi协议提供的特殊借贷方式，允许用户在无抵押情况下借出大额资金，但必须在同一笔交易中完成借入、使用和归还的完整流程。该机制被广泛用于套利、清算等合法用途，但也常被攻击者利用进行价格操纵、重入攻击等恶意行为。",
     "relatedRisks": [
+      "R0160",
       "R0159",
-      "R0161"
+      "R0169",
+      "R0204"
     ],
     "relatedAvoidances": [
-      "A0099"
+      "A0096",
+      "A0099",
+      "A0100",
+      "A0125",
+      "A0126",
+      "A0127"
     ],
     "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedThreatActors": [
+      "TA0018",
+      "TA0039"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS15"
+    ],
     "references": [
       {
         "title": "科普|无抵押借巨资的闪电贷是什么?缘何频频成为DeFi暴雷帮凶...",

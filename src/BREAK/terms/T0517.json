@@ -1,8 +1,12 @@
 {
   "T0517": {
     "title": "加密",
-    "aliases": [],
-    "category": "TC03",
+    "aliases": [
+      "Encryption",
+      "密码学",
+      "加密算法"
+    ],
+    "category": "安全防护",
     "keywords": [
       "加密",
       "Encryption",
@@ -16,15 +20,20 @@
     "usageExample": "银行使用TLS加密协议保护网上银行通信，确保账号密码不被窃听。",
     "relatedRisks": [
       "R0078",
-      "R0156"
+      "R0156",
+      "R0162"
     ],
     "relatedAvoidances": [
       "A0022",
-      "A0091"
+      "A0050",
+      "A0091",
+      "A0105"
     ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
     "references": [
       {
         "link": "https://www.nist.gov/cryptography",

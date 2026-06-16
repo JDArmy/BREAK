@@ -16,12 +16,31 @@
     "relatedRisks": [
       "R0159",
       "R0160",
-      "R0161"
+      "R0168",
+      "R0169",
+      "R0170",
+      "R0204"
     ],
-    "relatedAvoidances": [],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedAvoidances": [
+      "A0095",
+      "A0098",
+      "A0099",
+      "A0125",
+      "A0126",
+      "A0128",
+      "A0130"
+    ],
+    "relatedAttackTools": [
+      "AT0060"
+    ],
+    "relatedThreatActors": [
+      "TA0038",
+      "TA0039"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS15"
+    ],
     "references": [
       {
         "title": "探索DeFi协议预言机实施的设计空间和挑战_腾讯新闻",

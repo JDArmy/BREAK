@@ -1,8 +1,12 @@
 {
   "T0518": {
     "title": "数字证书",
-    "aliases": [],
-    "category": "TC03",
+    "aliases": [
+      "Digital Certificate",
+      "SSL证书",
+      "PKI"
+    ],
+    "category": "安全防护",
     "keywords": [
       "数字证书",
       "Digital Certificate",
@@ -15,16 +19,25 @@
     "description": "数字证书是公钥基础设施（PKI）的核心组件，采用X.509标准格式。证书包含公钥、持有者信息、颁发者信息、有效期、数字签名等。SSL/TLS证书用于HTTPS网站身份认证和加密通信，代码签名证书用于软件发行者身份验证。证书伪造、私钥泄露、CA被入侵等风险可能破坏整个信任链。",
     "usageExample": "网站部署SSL证书后，浏览器地址栏显示锁图标，用户可以确认网站身份并安全通信。",
     "relatedRisks": [
+      "R0084",
       "R0144",
-      "R0084"
+      "R0143"
     ],
     "relatedAvoidances": [
       "A0025",
-      "A0040"
+      "A0040",
+      "A0007-005",
+      "A0185"
     ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedAttackTools": [
+      "AT0072"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
     "references": [
       {
         "link": "https://www.ietf.org/rfc/rfc5280.txt",

@@ -1,8 +1,11 @@
 {
   "T0508": {
     "title": "水坑攻击",
-    "aliases": [],
-    "category": "TC02",
+    "aliases": [
+      "Watering Hole Attack",
+      "战略网络入侵"
+    ],
+    "category": "网络攻击",
     "keywords": [
       "水坑攻击",
       "Watering Hole Attack",
@@ -15,15 +18,27 @@
     "usageExample": "黑客组织入侵某能源行业协会网站，植入0day漏洞利用代码，成功感染多家电力公司员工的电脑。",
     "relatedRisks": [
       "R0081",
+      "R0083",
+      "R0084",
       "R0112"
     ],
     "relatedAvoidances": [
+      "A0016",
+      "A0019",
       "A0055",
-      "A0019"
+      "A0078"
     ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedAttackTools": [
+      "AT0054",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0018",
+      "TA0012"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
     "references": [
       {
         "link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-099a",

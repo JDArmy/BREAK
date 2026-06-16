@@ -1,8 +1,11 @@
 {
   "T0509": {
     "title": "恶意软件",
-    "aliases": [],
-    "category": "TC02",
+    "aliases": [
+      "Malware",
+      "恶意代码"
+    ],
+    "category": "网络攻击",
     "keywords": [
       "恶意软件",
       "Malware",
@@ -17,15 +20,29 @@
     "relatedRisks": [
       "R0080",
       "R0078",
-      "R0109"
+      "R0085",
+      "R0086",
+      "R0109",
+      "R0209"
     ],
     "relatedAvoidances": [
-      "A0003",
-      "A0055"
+      "A0016",
+      "A0051",
+      "A0055",
+      "A0078"
     ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedAttackTools": [
+      "AT0013",
+      "AT0064",
+      "AT0065"
+    ],
+    "relatedThreatActors": [
+      "TA0012",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
     "references": [
       {
         "link": "https://www.cisa.gov/news-events/news/handling-destructive-malware",

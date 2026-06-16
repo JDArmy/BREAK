@@ -19,14 +19,23 @@
     "description": "多签钱包采用M-of-N签名机制，即设置N个授权签名者，需要其中至少M个人同意才能执行交易。例如2-of-3多签钱包需要3个私钥持有者中至少2人签名确认。这种机制有效防止单点故障和内部作恶，广泛应用于企业资金管理、DAO组织治理、交易所热钱包保护等场景。多签钱包通过智能合约或比特币脚本实现，将资金控制权分散给多个独立方，即使某一方私钥丢失或被盗，资金仍然安全。在企业应用中，可以设置CFO、CEO、审计等多个角色共同管理资金，任何大额转账都需要多方审批。多签机制也能抵御内部人员作恶，因为单个私钥持有者无法独自转移资金。常见的多签钱包方案包括Gnosis Safe、BitGo等，已成为机构级加密资产管理的标准配置。",
     "usageExample": "某DAO组织使用3-of-5多签钱包管理社区资金，任何提案支出都需要5名核心成员中至少3人签名批准才能执行。",
     "relatedRisks": [
-      "R0162"
+      "R0162",
+      "R0197",
+      "R0201"
     ],
     "relatedAvoidances": [
-      "A0104"
+      "A0104",
+      "A0170",
+      "A0174"
     ],
     "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedThreatActors": [
+      "TA0039"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS15"
+    ],
     "references": [
       {
         "title": "Gnosis Safe: The most trusted platform to manage digital assets",

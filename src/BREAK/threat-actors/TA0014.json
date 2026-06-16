@@ -21,7 +21,8 @@
     ],
     "directCauseRisks": [
       "R0060",
-      "R0093"
+      "R0093",
+      "R0121"
     ],
     "indirectSupportRisks": [
       "R0002",
@@ -57,7 +58,8 @@
     "buildAttackTools": [],
     "useAttackTools": [
       "AT0001",
-      "AT0039-001"
+      "AT0039-001",
+      "AT0026"
     ],
     "directCauseRisks": [
       "R0044",

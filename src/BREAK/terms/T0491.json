@@ -1,8 +1,11 @@
 {
   "T0491": {
     "title": "NFT",
-    "aliases": [],
-    "category": "TC01",
+    "aliases": [
+      "非同质化代币",
+      "数字藏品"
+    ],
+    "category": "区块链资产",
     "keywords": [
       "NFT",
       "非同质化代币",
@@ -15,17 +18,25 @@
     "description": "NFT通过智能合约标准（如ERC-721）实现数字资产的所有权证明和流转，广泛应用于数字艺术、游戏道具、虚拟土地等领域。NFT的独特性使其成为元宇宙经济的重要基础设施，但也面临版税绕过、元数据篡改、虚假铸造等安全挑战。",
     "usageExample": "某艺术家在OpenSea铸造并出售数字画作NFT，购买者获得该作品的链上所有权证明。",
     "relatedRisks": [
-      "R0198",
-      "R0183",
-      "R0184"
+      "R0122",
+      "R0185",
+      "R0199"
     ],
     "relatedAvoidances": [
-      "A0166",
-      "A0088"
+      "A0152",
+      "A0153",
+      "A0154",
+      "A0172"
     ],
     "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedThreatActors": [
+      "TA0039"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS15",
+      "BS17"
+    ],
     "references": [
       {
         "link": "https://ethereum.org/en/nft/",

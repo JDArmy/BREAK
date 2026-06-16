@@ -1,8 +1,12 @@
 {
   "T0506": {
     "title": "鱼叉式钓鱼",
-    "aliases": [],
-    "category": "TC02",
+    "aliases": [
+      "Spear Phishing",
+      "定向钓鱼",
+      "精准钓鱼"
+    ],
+    "category": "社会工程",
     "keywords": [
       "鱼叉式钓鱼",
       "Spear Phishing",
@@ -15,16 +19,26 @@
     "usageExample": "黑客研究某公司CFO的社交媒体后，伪造供应商邮件请求更改付款账户，成功骗取百万美元汇款。",
     "relatedRisks": [
       "R0084",
-      "R0083",
+      "R0084-001",
+      "R0083-002",
       "R0059"
     ],
     "relatedAvoidances": [
-      "A0013",
+      "A0051",
+      "A0007",
       "A0016"
     ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedAttackTools": [
+      "AT0063",
+      "AT0071"
+    ],
+    "relatedThreatActors": [
+      "TA0018",
+      "TA0043"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
     "references": [
       {
         "link": "https://www.microsoft.com/en-us/security/business/security-101/what-is-spear-phishing",

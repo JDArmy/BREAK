@@ -1,8 +1,12 @@
 {
   "T0507": {
     "title": "捕鲸攻击",
-    "aliases": [],
-    "category": "TC02",
+    "aliases": [
+      "Whaling Attack",
+      "高管钓鱼",
+      "BEC"
+    ],
+    "category": "社会工程",
     "keywords": [
       "捕鲸攻击",
       "Whaling Attack",
@@ -15,17 +19,29 @@
     "description": "捕鲸攻击是鱼叉式钓鱼的极端形式，攻击者冒充董事会成员、合作伙伴或监管机构，利用高管的决策权限和时间压力，诱导其授权大额转账或泄露商业机密。此类攻击造成的平均损失远超普通钓鱼，FBI将其归类为商业邮件入侵（BEC）诈骗的主要形式。",
     "usageExample": "攻击者伪造CEO邮件要求财务总监紧急汇款完成秘密收购，财务人员未经核实直接转账损失500万美元。",
     "relatedRisks": [
-      "R0084-001",
+      "R0084",
+      "R0083",
       "R0095",
       "R0059"
     ],
     "relatedAvoidances": [
-      "A0013",
-      "A0034"
+      "A0051",
+      "A0007"
     ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedAttackTools": [
+      "AT0063",
+      "AT0071",
+      "AT0073"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0018",
+      "TA0043"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
     "references": [
       {
         "link": "https://www.fbi.gov/how-we-can-help-you/scams-and-safety/common-frauds-and-scams/business-email-compromise",

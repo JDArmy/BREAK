@@ -1,8 +1,11 @@
 {
   "T0504": {
     "title": "社会工程学",
-    "aliases": [],
-    "category": "TC02",
+    "aliases": [
+      "社工",
+      "Social Engineering"
+    ],
+    "category": "攻击手段",
     "keywords": [
       "社会工程学",
       "Social Engineering",
@@ -14,17 +17,38 @@
     "description": "社会工程学利用人性弱点（信任、恐惧、好奇、贪婪等）绕过技术防御，是最有效的攻击手段之一。常见形式包括钓鱼邮件、电话诈骗、冒充身份、伪造场景等。攻击者通过公开信息收集、关系建立、情景伪造等手段获取受害者信任，诱导其主动配合完成攻击目标。",
     "usageExample": "攻击者冒充IT部门致电员工，声称需要验证账号安全性，诱导员工提供密码和验证码。",
     "relatedRisks": [
+      "R0083",
+      "R0083-002",
       "R0084",
       "R0092",
-      "R0116"
+      "R0116",
+      "R0154",
+      "R0197"
     ],
     "relatedAvoidances": [
-      "A0013",
-      "A0063"
+      "A0051",
+      "A0007",
+      "A0016"
     ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedAttackTools": [
+      "AT0063",
+      "AT0071",
+      "AT0072",
+      "AT0073"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0018",
+      "TA0031",
+      "TA0043"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01",
+      "BS02",
+      "BS04",
+      "BS15"
+    ],
     "references": [
       {
         "link": "https://www.social-engineer.org/framework/general-discussion/",

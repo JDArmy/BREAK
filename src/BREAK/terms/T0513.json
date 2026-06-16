@@ -1,8 +1,12 @@
 {
   "T0513": {
     "title": "漏洞",
-    "aliases": [],
-    "category": "TC03",
+    "aliases": [
+      "Vulnerability",
+      "安全漏洞",
+      "弱点"
+    ],
+    "category": "网络攻击",
     "keywords": [
       "漏洞",
       "Vulnerability",
@@ -16,15 +20,24 @@
     "relatedRisks": [
       "R0109",
       "R0112",
-      "R0081"
+      "R0081",
+      "R0126-003"
     ],
     "relatedAvoidances": [
       "A0055",
-      "A0019"
+      "A0056",
+      "A0082"
     ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedAttackTools": [
+      "AT0054"
+    ],
+    "relatedThreatActors": [
+      "TA0018",
+      "TA0012"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
     "references": [
       {
         "link": "https://www.cve.org/",

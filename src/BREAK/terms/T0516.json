@@ -1,8 +1,12 @@
 {
   "T0516": {
     "title": "入侵检测系统",
-    "aliases": [],
-    "category": "TC03",
+    "aliases": [
+      "IDS",
+      "Intrusion Detection System",
+      "异常检测"
+    ],
+    "category": "安全防护",
     "keywords": [
       "入侵检测系统",
       "IDS",
@@ -15,15 +19,20 @@
     "usageExample": "NIDS检测到内网主机向外发送大量DNS查询请求，告警可能存在数据窃取行为。",
     "relatedRisks": [
       "R0081",
-      "R0086"
+      "R0086",
+      "R0209"
     ],
     "relatedAvoidances": [
+      "A0016",
       "A0019",
-      "A0016"
+      "A0078",
+      "A0182"
     ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
     "references": [
       {
         "link": "https://www.nist.gov/publications/guide-intrusion-detection-and-prevention-systems-idps",

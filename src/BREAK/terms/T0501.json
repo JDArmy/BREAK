@@ -1,8 +1,12 @@
 {
   "T0501": {
     "title": "热钱包",
-    "aliases": [],
-    "category": "TC01",
+    "aliases": [
+      "Hot Wallet",
+      "在线钱包",
+      "软件钱包"
+    ],
+    "category": "区块链安全",
     "keywords": [
       "热钱包",
       "Hot Wallet",
@@ -15,17 +19,27 @@
     "description": "热钱包包括浏览器插件钱包、手机APP钱包、交易所托管钱包等，提供便捷的DeFi交互体验。由于联网特性，热钱包面临恶意软件、钓鱼攻击、交易所被盗等多重风险，适合存储小额资金用于日常交易。",
     "usageExample": "用户使用MetaMask热钱包连接Uniswap进行代币兑换，交易可在几秒钟内完成。",
     "relatedRisks": [
-      "R0161",
+      "R0162",
       "R0194",
       "R0203"
     ],
     "relatedAvoidances": [
-      "A0098",
-      "A0190"
+      "A0105",
+      "A0168",
+      "A0176"
     ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedAttackTools": [
+      "AT0063",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0018",
+      "TA0039"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS15"
+    ],
     "references": [
       {
         "link": "https://learn.metamask.io/",

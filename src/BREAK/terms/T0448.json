@@ -20,14 +20,26 @@
     "description": "助记词是基于BIP39标准生成的单词序列，用户可以通过记忆或物理备份这些单词来恢复钱包。助记词本质上是私钥的编码形式，任何获得助记词的人都能完全控制对应的加密货币资产。常见的助记词长度为12或24个单词，这些单词从预定义的2048个单词列表中选取。助记词的安全性直接关系到资产安全，一旦泄露将导致资产被盗。因此用户应将助记词离线保存在安全位置，避免截图、云端存储或通过网络传输。在区块链安全事件中，助记词泄露是导致用户资产损失的主要原因之一，黑产通过钓鱼、木马、社会工程等手段窃取助记词。",
     "usageExample": "用户在创建新钱包时会获得一组12个单词的助记词，需要按顺序抄写并妥善保管，以便在设备丢失或损坏时恢复钱包。",
     "relatedRisks": [
-      "R0162"
+      "R0162",
+      "R0194",
+      "R0195"
     ],
     "relatedAvoidances": [
-      "A0104"
+      "A0105",
+      "A0106"
     ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedAttackTools": [
+      "AT0063",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0018",
+      "TA0039"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS15"
+    ],
     "references": [
       {
         "title": "BIP39: Mnemonic code for generating deterministic keys",

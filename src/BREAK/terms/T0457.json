@@ -26,7 +26,10 @@
     "relatedAttackTools": [
       "AT0001"
     ],
-    "relatedThreatActors": [],
+    "relatedThreatActors": [
+      "TA0003",
+      "TA0004"
+    ],
     "relatedBusinessScenes": [],
     "references": [
       {

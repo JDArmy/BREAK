@@ -11,12 +11,16 @@
     "useAttackTools": [
       "AT0057",
       "AT0059",
-      "AT0001"
+      "AT0001",
+      "AT0073",
+      "AT0008",
+      "AT0063"
     ],
     "directCauseRisks": [
       "R0084",
       "R0084-001",
-      "R0150"
+      "R0150",
+      "R0154"
     ],
     "indirectSupportRisks": [
       "R0003",

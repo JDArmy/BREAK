@@ -22,7 +22,11 @@
       "R0153"
     ],
     "relatedAvoidances": [],
-    "relatedAttackTools": [],
+    "relatedAttackTools": [
+      "AT0056",
+      "AT0059",
+      "AT0053-002"
+    ],
     "relatedThreatActors": [],
     "relatedBusinessScenes": [],
     "references": [

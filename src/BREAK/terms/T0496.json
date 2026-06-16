@@ -1,8 +1,11 @@
 {
   "T0496": {
     "title": "预言机",
-    "aliases": [],
-    "category": "TC01",
+    "aliases": [
+      "区块链预言机",
+      "喂价"
+    ],
+    "category": "区块链基础设施",
     "keywords": [
       "预言机",
       "Oracle",
@@ -15,15 +18,23 @@
     "description": "由于区块链无法主动获取链外数据，预言机作为桥梁将价格、天气、体育赛果等信息喂送给智能合约。预言机是DeFi协议的关键基础设施，但中心化预言机存在单点故障风险，去中心化预言机也可能被操纵或延迟攻击。",
     "usageExample": "某借贷协议使用Chainlink预言机获取ETH实时价格，据此计算用户的抵押率和清算阈值。",
     "relatedRisks": [
-      "R0167",
-      "R0204"
+      "R0169"
     ],
     "relatedAvoidances": [
-      "A0103"
+      "A0098",
+      "A0125",
+      "A0126",
+      "A0127"
     ],
     "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedThreatActors": [
+      "TA0018",
+      "TA0039"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS15"
+    ],
     "references": [
       {
         "link": "https://chain.link/education/blockchain-oracles",

@@ -1,8 +1,11 @@
 {
   "T0519": {
     "title": "VPN",
-    "aliases": [],
-    "category": "TC03",
+    "aliases": [
+      "Virtual Private Network",
+      "加密隧道"
+    ],
+    "category": "安全防护",
     "keywords": [
       "VPN",
       "Virtual Private Network",
@@ -15,15 +18,23 @@
     "usageExample": "员工在家通过VPN连接到公司内网，安全访问文件服务器和办公系统。",
     "relatedRisks": [
       "R0112-006",
-      "R0109"
+      "R0109",
+      "R0209"
     ],
     "relatedAvoidances": [
       "A0022",
+      "A0068",
       "A0007"
     ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedAttackTools": [
+      "AT0069"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
     "references": [
       {
         "link": "https://www.nist.gov/publications/guide-ipsec-vpns",

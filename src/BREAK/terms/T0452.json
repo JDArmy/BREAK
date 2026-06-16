@@ -14,17 +14,27 @@
     "description": "智能合约是运行在区块链网络上的自动化程序，其代码和执行结果完全透明且不可篡改。一旦部署，合约将按照编写的逻辑自动执行，无需人工干预。广泛应用于DeFi、NFT、DAO等去中心化应用场景，但代码漏洞可能导致资产损失。",
     "relatedRisks": [
       "R0159",
-      "R0160",
-      "R0161"
+      "R0176",
+      "R0177"
     ],
     "relatedAvoidances": [
       "A0095",
       "A0096",
-      "A0097"
+      "A0097",
+      "A0142",
+      "A0160"
     ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedAttackTools": [
+      "AT0054"
+    ],
+    "relatedThreatActors": [
+      "TA0018",
+      "TA0039"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS15"
+    ],
     "references": [
       {
         "title": "教程丨三分钟教你制作专属NFT智能合约|区块链|应用程序|源代码|元数 ...",

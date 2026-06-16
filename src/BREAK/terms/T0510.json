@@ -1,8 +1,11 @@
 {
   "T0510": {
     "title": "勒索软件",
-    "aliases": [],
-    "category": "TC02",
+    "aliases": [
+      "Ransomware",
+      "加密勒索"
+    ],
+    "category": "网络攻击",
     "keywords": [
       "勒索软件",
       "Ransomware",
@@ -15,17 +18,29 @@
     "description": "勒索软件是最具破坏性的网络威胁之一，攻击者通过加密文件、数据库或整个系统勒索赎金（通常要求加密货币支付）。现代勒索软件采用双重勒索模式：加密+数据泄露威胁。攻击目标从个人扩展到企业、医院、政府机构，造成业务中断、数据丢失、声誉受损等严重后果。",
     "usageExample": "医院系统被勒索软件加密，所有病历无法访问，黑客要求支付50个比特币赎金。",
     "relatedRisks": [
+      "R0085",
+      "R0085-001",
+      "R0085-002",
       "R0065",
-      "R0078",
-      "R0073"
+      "R0078"
     ],
     "relatedAvoidances": [
+      "A0050",
       "A0058",
-      "A0050"
+      "A0016",
+      "A0078"
     ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedAttackTools": [
+      "AT0013",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0012",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
     "references": [
       {
         "link": "https://www.cisa.gov/stopransomware",

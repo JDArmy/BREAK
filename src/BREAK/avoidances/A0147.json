@@ -1,7 +1,7 @@
 {
   "A0147": {
     "title": "工业协议安全加固",
-    "category": "TC01",
+    "category": "AC01",
     "definition": "对Modbus、OPC等工业协议实施认证加密，防止未授权访问和篡改",
     "description": "工业协议通常无安全设计。加固：使用加密版本（OPC UA、Modbus/TCP+TLS）；部署协议网关过滤异常；白名单限制命令；异常行为检测；定期审计。",
     "complexity": "高级",

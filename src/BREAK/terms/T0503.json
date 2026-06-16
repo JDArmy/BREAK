@@ -1,8 +1,12 @@
 {
   "T0503": {
     "title": "MEV",
-    "aliases": [],
-    "category": "TC01",
+    "aliases": [
+      "最大可提取价值",
+      "夹子攻击",
+      "Sandwich Attack"
+    ],
+    "category": "DeFi",
     "keywords": [
       "MEV",
       "最大可提取价值",
@@ -15,14 +19,24 @@
     "description": "MEV源于区块生产者对交易排序的控制权，常见形式包括抢跑交易（frontrunning）、夹子攻击（在目标交易前后插入交易）、套利机会捕获等。MEV虽然提升了市场效率，但也增加了普通用户的交易成本和滑点，甚至可能威胁区块链共识安全。",
     "usageExample": "机器人检测到用户的大额买单，抢先以低价买入，待用户交易推高价格后立即卖出获利。",
     "relatedRisks": [
+      "R0170",
       "R0204"
     ],
     "relatedAvoidances": [
-      "A0194"
+      "A0128",
+      "A0129",
+      "A0130",
+      "A0177"
     ],
     "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedThreatActors": [
+      "TA0018",
+      "TA0039"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS15"
+    ],
     "references": [
       {
         "link": "https://ethereum.org/en/developers/docs/mev/",

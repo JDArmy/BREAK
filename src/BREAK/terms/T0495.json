@@ -1,8 +1,11 @@
 {
   "T0495": {
     "title": "闪电贷",
-    "aliases": [],
-    "category": "TC01",
+    "aliases": [
+      "Flash Loan",
+      "无抵押闪电贷"
+    ],
+    "category": "DeFi",
     "keywords": [
       "闪电贷",
       "Flash Loan",
@@ -15,15 +18,27 @@
     "usageExample": "攻击者使用闪电贷借入1000万美元操纵DEX价格，利用价格差异套利后归还贷款，整个过程在一笔交易内完成。",
     "relatedRisks": [
       "R0160",
+      "R0159",
+      "R0169",
       "R0204"
     ],
     "relatedAvoidances": [
       "A0096",
-      "A0103"
+      "A0099",
+      "A0100",
+      "A0125",
+      "A0126",
+      "A0127"
     ],
     "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedThreatActors": [
+      "TA0018",
+      "TA0039"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS15"
+    ],
     "references": [
       {
         "link": "https://aave.com/docs/aave-v3/guides/flash-loans",

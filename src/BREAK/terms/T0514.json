@@ -1,8 +1,12 @@
 {
   "T0514": {
     "title": "0day漏洞",
-    "aliases": [],
-    "category": "TC03",
+    "aliases": [
+      "Zero-day",
+      "零日漏洞",
+      "未公开漏洞"
+    ],
+    "category": "网络攻击",
     "keywords": [
       "0day漏洞",
       "Zero-day",
@@ -15,15 +19,26 @@
     "usageExample": "某APT组织使用Windows 0day漏洞入侵政府网络，直到微软发布补丁前一直未被发现。",
     "relatedRisks": [
       "R0081",
-      "R0112"
+      "R0109",
+      "R0112",
+      "R0127"
     ],
     "relatedAvoidances": [
+      "A0016",
       "A0055",
-      "A0016"
+      "A0056",
+      "A0078"
     ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedAttackTools": [
+      "AT0054"
+    ],
+    "relatedThreatActors": [
+      "TA0018",
+      "TA0012"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
     "references": [
       {
         "link": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",

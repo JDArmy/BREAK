@@ -6,7 +6,10 @@
     "influence": "XR设备权限高，可获取敏感传感器数据",
     "limitation": "需要设备漏洞和物理接近",
     "avoidances": [
-      "A0190"
+      "A0190",
+      "A0110",
+      "A0111",
+      "A0112"
     ],
     "references": [
       {

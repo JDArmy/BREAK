@@ -1,7 +1,7 @@
 {
   "A0148": {
     "title": "ICS安全监控与应急响应",
-    "category": "TC01",
+    "category": "AC02",
     "definition": "实时监控工控系统运行状态，建立应急响应机制快速处置安全事件",
     "description": "监控体系：IDS/IPS专用于工控流量；SIEM整合安全事件；基线行为建模；异常告警；应急预案演练；备份系统。",
     "complexity": "高级",

@@ -1,8 +1,11 @@
 {
   "T0490": {
     "title": "DeFi",
-    "aliases": [],
-    "category": "TC01",
+    "aliases": [
+      "去中心化金融",
+      "开放金融"
+    ],
+    "category": "区块链金融",
     "keywords": [
       "DeFi",
       "去中心化金融",
@@ -15,19 +18,33 @@
     "description": "DeFi通过智能合约自动化执行金融交易，用户可以在无需信任中心化机构的情况下进行借贷、交易、理财等操作。DeFi协议具有开放性、透明性和可组合性特点，但也面临智能合约漏洞、闪电贷攻击、预言机操纵等独特安全风险。",
     "usageExample": "用户在Uniswap进行代币兑换，或在Aave平台存入USDC获取利息收益，无需银行或券商中介。",
     "relatedRisks": [
+      "R0159",
       "R0160",
-      "R0167",
+      "R0168",
       "R0169",
+      "R0170",
       "R0204"
     ],
     "relatedAvoidances": [
-      "A0096",
-      "A0100",
-      "A0103"
+      "A0095",
+      "A0098",
+      "A0099",
+      "A0125",
+      "A0126",
+      "A0128",
+      "A0130"
     ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedAttackTools": [
+      "AT0060"
+    ],
+    "relatedThreatActors": [
+      "TA0038",
+      "TA0039"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS15"
+    ],
     "references": [
       {
         "link": "https://ethereum.org/en/defi/",

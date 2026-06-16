@@ -1,8 +1,11 @@
 {
   "T0505": {
     "title": "网络钓鱼",
-    "aliases": [],
-    "category": "TC02",
+    "aliases": [
+      "Phishing",
+      "钓鱼攻击"
+    ],
+    "category": "社会工程",
     "keywords": [
       "网络钓鱼",
       "Phishing",
@@ -15,16 +18,35 @@
     "usageExample": "用户收到伪装成银行的邮件，声称账户异常需要验证，点击链接后进入仿冒网站输入了银行卡信息。",
     "relatedRisks": [
       "R0084",
+      "R0084-001",
       "R0032",
-      "R0161"
+      "R0144",
+      "R0194"
     ],
     "relatedAvoidances": [
       "A0016",
-      "A0040"
+      "A0016-002",
+      "A0040",
+      "A0007-005"
     ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedAttackTools": [
+      "AT0063",
+      "AT0071",
+      "AT0072"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0018",
+      "TA0039",
+      "TA0043"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01",
+      "BS02",
+      "BS04",
+      "BS15"
+    ],
     "references": [
       {
         "link": "https://www.phishing.org/what-is-phishing",

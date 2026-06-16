@@ -1,8 +1,11 @@
 {
   "T0512": {
     "title": "APT攻击",
-    "aliases": [],
-    "category": "TC02",
+    "aliases": [
+      "APT",
+      "高级持续性威胁"
+    ],
+    "category": "网络攻击",
     "keywords": [
       "APT攻击",
       "APT",
@@ -16,16 +19,32 @@
     "usageExample": "某APT组织通过鱼叉式钓鱼入侵国防承包商网络，潜伏18个月窃取武器系统设计图纸。",
     "relatedRisks": [
       "R0081",
+      "R0083-001",
+      "R0084",
       "R0059",
-      "R0084"
+      "R0078",
+      "R0112"
     ],
     "relatedAvoidances": [
       "A0016",
-      "A0019"
+      "A0019",
+      "A0051",
+      "A0055",
+      "A0068",
+      "A0078"
     ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedAttackTools": [
+      "AT0054",
+      "AT0063",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0018",
+      "TA0012"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
     "references": [
       {
         "link": "https://www.cisa.gov/topics/cyber-threats-and-advisories/nation-state-cyber-actors",

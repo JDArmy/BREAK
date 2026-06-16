@@ -1,8 +1,12 @@
 {
   "T0497": {
     "title": "Gas费",
-    "aliases": [],
-    "category": "TC01",
+    "aliases": [
+      "交易费",
+      "矿工费",
+      "Gwei"
+    ],
+    "category": "区块链基础设施",
     "keywords": [
       "Gas费",
       "Gas Fee",
@@ -15,14 +19,22 @@
     "description": "Gas费由Gas消耗量和Gas价格决定，随网络拥堵程度动态变化。合理设置Gas费影响交易确认速度，过高的Gas费会降低用户体验，而Gas费操纵可能被用于抢跑交易（MEV攻击）或拒绝服务攻击。",
     "usageExample": "用户在以太坊上转账需支付约5-50美元Gas费，复杂的DeFi交互可能需要100美元以上。",
     "relatedRisks": [
+      "R0173",
       "R0204"
     ],
     "relatedAvoidances": [
-      "A0194"
+      "A0128",
+      "A0177"
     ],
     "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedThreatActors": [
+      "TA0018",
+      "TA0039"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS15"
+    ],
     "references": [
       {
         "link": "https://ethereum.org/en/developers/docs/gas/",

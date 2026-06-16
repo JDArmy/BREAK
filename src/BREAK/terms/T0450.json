@@ -20,14 +20,27 @@
     "description": "热钱包是指私钥存储在联网设备（如手机、电脑、云端）上的加密货币钱包，包括移动端APP钱包、浏览器插件钱包、交易所托管钱包等形式。热钱包的优势在于使用便捷，用户可以随时发起转账和交易，适合日常小额支付和频繁交易场景。但由于私钥持续暴露在网络环境中，热钱包面临更高的安全风险，容易遭受钓鱼攻击、恶意软件、网络劫持等威胁。黑产常通过伪造钱包APP、钓鱼网站、剪贴板劫持等手段窃取热钱包私钥或助记词。为降低风险，建议用户只在热钱包中存放小额资金用于日常使用，大额资产应转移到冷钱包保管。同时应选择信誉良好的钱包服务商，启用多重安全验证，定期更新软件版本。",
     "usageExample": "用户使用MetaMask浏览器插件钱包参与DeFi协议交互，方便连接去中心化应用进行质押、兑换等操作。",
     "relatedRisks": [
-      "R0162"
+      "R0162",
+      "R0194",
+      "R0203"
     ],
     "relatedAvoidances": [
-      "A0104"
+      "A0105",
+      "A0168",
+      "A0176"
     ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [],
+    "relatedAttackTools": [
+      "AT0063",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0018",
+      "TA0039"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS15"
+    ],
     "references": [
       {
         "title": "热钱包安全使用指南",
