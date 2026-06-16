@@ -62,9 +62,15 @@ interface SceneBREAK {
   };
 }
 
+// 场景布局常量
+const SCENE_WIDTH_CN = 180;
+const SCENE_WIDTH_EN = 280;
+const SCROLL_THRESHOLD_CN = 9;
+const SCROLL_THRESHOLD_EN = 7;
+
 const sceneLayout = computed(() => {
   const totalScenes = Object.keys(sceneBREAK.value.riskScenes).length;
-  const scrollThreshold = locale.value === 'en' ? 7 : 9;
+  const scrollThreshold = locale.value === 'en' ? SCROLL_THRESHOLD_EN : SCROLL_THRESHOLD_CN;
   const enableScroll = totalScenes > scrollThreshold;
   let remainingRowSize = 24;
 
@@ -73,7 +79,7 @@ const sceneLayout = computed(() => {
     let dimensionWidth;
 
     if (enableScroll) {
-      const sceneWidth = locale.value === 'en' ? 280 : 180;
+      const sceneWidth = locale.value === 'en' ? SCENE_WIDTH_EN : SCENE_WIDTH_CN;
       dimensionWidth = rdVal.riskScenes.length * sceneWidth;
       dimensionSize = 24;
     } else {
@@ -95,7 +101,7 @@ const sceneLayout = computed(() => {
 });
 
 const shouldEnableScroll = computed(() => {
-  const scrollThreshold = locale.value === 'en' ? 7 : 9;
+  const scrollThreshold = locale.value === 'en' ? SCROLL_THRESHOLD_EN : SCROLL_THRESHOLD_CN;
   return Object.keys(sceneBREAK.value.riskScenes).length > scrollThreshold;
 });
 
