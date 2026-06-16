@@ -138,7 +138,7 @@ export const createSankeyChartController = ({
             nodeGap: sankeyNodeGap.value,
             nodeAlign: sankeyNodeAlign.value,
             layoutIterations: sankeyLayoutIterations.value,
-            draggable: true,
+            draggable: !isMobile.value,
             emphasis: {
               focus: isMobile.value ? "none" : "adjacency",
             },
