@@ -166,7 +166,7 @@ export const createNetworkChartController = ({
         selectedNetworkNodeId.value = longPressNode.id;
         interactionsBridge.handleNodeTouch(toContextNode(longPressNode));
         clearLongPressTimer();
-      }, 550);
+      }, 800);
     });
     networkChart.getZr().on("pointermove", (event) => {
       if (!longPressStart) return;
