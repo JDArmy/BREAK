@@ -68,14 +68,14 @@ export const createRelationViewState = ({
   const sankeyBottom = computed(() => (isMobile.value ? 14 : 24));
   const sankeyNodeWidth = computed(() => (isMobile.value ? 10 : 18));
   const sankeyNodeGap = computed(() => (isMobile.value ? 12 : 10));
-  const sankeyLabelFontSize = computed(() => (isMobile.value ? 10 : 12));
-  const sankeyLabelLineHeight = computed(() => (isMobile.value ? 14 : 16));
+  const sankeyLabelFontSize = computed(() => (isMobile.value ? 12 : 13));
+  const sankeyLabelLineHeight = computed(() => (isMobile.value ? 16 : 17));
   const sankeyLayoutIterations = computed(() => (isMobile.value ? 0 : 48));
   const sankeyLabelOverflow = computed<SankeyLabelOverflow>(() => "truncate");
   const sankeyNodeAlign = computed<SankeyNodeAlign>(() => (isMobile.value ? "left" : "justify"));
 
   const sankeyLabelWidth = computed(() => {
-    if (isMobile.value) return Math.max(240, Math.min(330, Math.round(sankeyChartMinWidth.value * 0.27)));
+    if (isMobile.value) return Math.max(280, Math.min(360, Math.round(sankeyChartMinWidth.value * 0.3)));
     if (width.value < 992) return 160;
     return 220;
   });

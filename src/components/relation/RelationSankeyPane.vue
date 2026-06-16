@@ -55,9 +55,10 @@ const setRef = (el: Element | ComponentPublicInstance | null) => {
 
 @media (max-width: 767px) {
   .sankey-pane {
+    height: auto;
     min-height: 0;
     overflow-x: auto;
-    overflow-y: auto;
+    overflow-y: visible;
     -webkit-overflow-scrolling: touch;
   }
 

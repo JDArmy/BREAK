@@ -48,17 +48,31 @@ export const createSankeyChartController = ({
 }: CreateSankeyChartControllerOptions) => {
   const sankeyChartRef = ref<HTMLDivElement>();
   let sankeyChart: ECharts | null = null;
+  let pendingRenderFrame: number | null = null;
 
   const setSankeyChartElement = (element: HTMLDivElement | undefined) => {
     sankeyChartRef.value = element;
   };
 
-  const renderSankeyChart = () => {
+  const renderSankeyChart = (attempt = 0) => {
     if (activeView.value !== "sankey" || !sankeyChartRef.value) return;
+    sankeyChartRef.value.style.height = `${sankeyChartHeight.value}px`;
+
+    if (sankeyChartRef.value.clientWidth === 0 || sankeyChartRef.value.clientHeight === 0) {
+      if (attempt >= 6) return;
+      if (pendingRenderFrame !== null) {
+        cancelAnimationFrame(pendingRenderFrame);
+      }
+      pendingRenderFrame = requestAnimationFrame(() => {
+        pendingRenderFrame = null;
+        renderSankeyChart(attempt + 1);
+      });
+      return;
+    }
+
     if (!sankeyChart) {
       sankeyChart = init(sankeyChartRef.value);
     }
-    sankeyChartRef.value.style.height = `${sankeyChartHeight.value}px`;
     const style = getComputedStyle(document.documentElement);
     const tooltipBackground = style.getPropertyValue("--break-tooltip-bg").trim();
     const tooltipBorder = style.getPropertyValue("--break-tooltip-border").trim();
@@ -153,6 +167,10 @@ export const createSankeyChartController = ({
   };
 
   const disposeSankeyChart = () => {
+    if (pendingRenderFrame !== null) {
+      cancelAnimationFrame(pendingRenderFrame);
+      pendingRenderFrame = null;
+    }
     sankeyChart?.dispose();
     sankeyChart = null;
   };

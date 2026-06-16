@@ -20,7 +20,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="relation-page">
+  <div class="relation-page" :class="{ 'relation-page--mobile-sankey': activeView === 'sankey' }">
     <RelationSelectorBar
       v-model:rel-type="relType"
       v-model:rel-key="relKey"
@@ -179,6 +179,23 @@ export default defineComponent({
 
   .relation-tabs :deep(.el-tabs__content) {
     height: calc(100% - 38px);
+  }
+
+  .relation-page--mobile-sankey {
+    height: auto;
+    overflow: visible;
+  }
+
+  .relation-page--mobile-sankey .relation-tabs {
+    flex: none;
+  }
+
+  .relation-page--mobile-sankey :deep(.el-tabs__content) {
+    height: auto;
+  }
+
+  .relation-page--mobile-sankey :deep(.el-tab-pane) {
+    height: auto;
   }
 }
 </style>
