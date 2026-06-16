@@ -53,6 +53,11 @@ const router = createRouter({
       component: HomeView,
     },
     {
+      path: "/business-scene/:bsKey/risks/:rKey",
+      name: "businessSceneRiskDetail",
+      component: HomeView,
+    },
+    {
       path: "/risks",
       name: "risks",
       component: () => import("@/views/RisksView.vue"),

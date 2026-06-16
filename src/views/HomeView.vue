@@ -210,7 +210,7 @@ const showRiskDetail = (riskKey1: string, drawer1: boolean) => {
 watch(
   () => [route.name, route.params.rKey] as const,
   ([routeName, rawRiskKey]) => {
-    if (routeName === "riskDetail") {
+    if (routeName === "riskDetail" || routeName === "businessSceneRiskDetail") {
       const nextRiskKey = getSingleRouteParam(rawRiskKey);
       if (nextRiskKey && hasOwn(BREAK.risks, nextRiskKey)) {
         showRiskDetail(nextRiskKey, true);
@@ -228,9 +228,14 @@ watch(
 
 const riskDetailClose = () => {
   riskDrawer.value = false;
-  router.push({
-    name: "home",
-  });
+  if (route.name === "businessSceneRiskDetail" && route.params.bsKey) {
+    router.push({
+      name: "businessScene",
+      params: { bsKey: route.params.bsKey },
+    });
+  } else {
+    router.push({ name: "home" });
+  }
 };
 //end.
 
@@ -472,7 +477,11 @@ const termDetailClose = () => {
                     <span class="sidebar-arrow">{{ hideSubRisks[rKey] ? '▶' : '▼' }}</span>
                   </td>
                   <td class="parent-risk-link">
-                    <router-link class="link" :to="{ name: 'riskDetail', params: { rKey } }">{{
+                    <router-link
+                      class="link"
+                      :to="bsKeySelected === defaultBusinessSceneKey
+                        ? { name: 'riskDetail', params: { rKey } }
+                        : { name: 'businessSceneRiskDetail', params: { bsKey: bsKeySelected, rKey } }">{{
                       $t(`BREAK.risks.${rKey}.title`)
                     }}</router-link>
                   </td>
@@ -491,7 +500,11 @@ const termDetailClose = () => {
                     </svg>
                   </td>
                   <td class="sub-risk-link">
-                    <router-link class="link" :to="{ name: 'riskDetail', params: { rKey: srKey } }">{{
+                    <router-link
+                      class="link"
+                      :to="bsKeySelected === defaultBusinessSceneKey
+                        ? { name: 'riskDetail', params: { rKey: srKey } }
+                        : { name: 'businessSceneRiskDetail', params: { bsKey: bsKeySelected, rKey: srKey } }">{{
                       $t(`BREAK.risks.${srKey}.title`)
                     }}</router-link>
                   </td>
@@ -500,7 +513,12 @@ const termDetailClose = () => {
                 </tbody>
               </table>
               <!-- 无子风险时 -->
-              <router-link class="link" v-else :to="{ name: 'riskDetail', params: { rKey } }">{{
+              <router-link
+                class="link"
+                v-else
+                :to="bsKeySelected === defaultBusinessSceneKey
+                  ? { name: 'riskDetail', params: { rKey } }
+                  : { name: 'businessSceneRiskDetail', params: { bsKey: bsKeySelected, rKey } }">{{
                 $t(`BREAK.risks.${rKey}.title`)
               }}</router-link>
             </li>
