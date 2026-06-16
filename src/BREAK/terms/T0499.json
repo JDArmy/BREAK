@@ -1,0 +1,41 @@
+{
+  "T0499": {
+    "title": "助记词",
+    "aliases": [],
+    "category": "TC01",
+    "keywords": [
+      "助记词",
+      "Seed Phrase",
+      "恢复短语",
+      "Recovery Phrase",
+      "12个单词",
+      "24个单词"
+    ],
+    "definition": "由12或24个英文单词组成的私钥备份短语，用于恢复区块链钱包。",
+    "description": "助记词通过BIP-39标准将私钥编码为易于记忆和抄写的单词序列。掌握助记词等同于拥有钱包完全控制权，可以在任何设备上恢复钱包并访问所有资产。助记词泄露、钓鱼诈骗、物理盗窃是加密资产被盗的主要途径之一。",
+    "usageExample": "用户将12个助记词手写在纸上离线保存，手机丢失后可用助记词在新设备恢复钱包。",
+    "relatedRisks": [
+      "R0161",
+      "R0194",
+      "R0195"
+    ],
+    "relatedAvoidances": [
+      "A0098",
+      "A0099"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [
+      {
+        "link": "https://www.ledger.com/academy/crypto/what-is-a-recovery-phrase",
+        "title": "What is a Recovery Phrase? - Ledger Academy"
+      },
+      {
+        "link": "https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki",
+        "title": "BIP-39: Mnemonic code for generating deterministic keys"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

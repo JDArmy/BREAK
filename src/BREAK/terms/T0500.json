@@ -1,0 +1,40 @@
+{
+  "T0500": {
+    "title": "冷钱包",
+    "aliases": [],
+    "category": "TC01",
+    "keywords": [
+      "冷钱包",
+      "Cold Wallet",
+      "硬件钱包",
+      "离线钱包",
+      "Ledger",
+      "Trezor"
+    ],
+    "definition": "私钥完全离线存储、不连接互联网的加密货币钱包，提供最高安全等级。",
+    "description": "冷钱包通过物理隔离防止黑客远程攻击，常见形式包括硬件钱包（专用设备）和纸钱包（打印的私钥）。冷钱包适合长期存储大额资产，但使用便捷性较低，且需防范物理盗窃、设备损坏、供应链攻击等风险。",
+    "usageExample": "某机构将90%的加密资产存储在硬件冷钱包中，仅保留10%在热钱包用于日常交易。",
+    "relatedRisks": [
+      "R0161",
+      "R0193"
+    ],
+    "relatedAvoidances": [
+      "A0098",
+      "A0099"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [
+      {
+        "link": "https://www.ledger.com/",
+        "title": "Ledger Crypto Wallet - Security for DeFi & Web3"
+      },
+      {
+        "link": "https://trezor.io/?srsltid=AfmBOop6XDcjHMjqxUViQu7zdJ3Y8qUkP50N2v-sn_T9Ovu9dPGOpSMY",
+        "title": "Trezor Hardware Wallet (Official) | Bitcoin & Crypto Security | Trezor"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

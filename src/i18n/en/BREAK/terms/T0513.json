@@ -1,0 +1,19 @@
+{
+  "T0513": {
+    "keywords": [
+      "Vulnerability"
+    ],
+    "definition": "A flaw or weakness in a system, software, or hardware that can be exploited by an attacker to compromise security.",
+    "description": "Vulnerabilities are the root source of cybersecurity threats, which may arise from design flaws, coding errors, misconfigurations, or logic gaps. Common vulnerability types include buffer overflows, injection attacks, privilege escalation, and information disclosure. The window between vulnerability discovery and remediation represents an opportunity for attackers, with zero-day vulnerabilities (undisclosed flaws) being particularly dangerous. Vulnerability management is a core component of security defense.",
+    "usageExample": "A security researcher discovered an SQL injection vulnerability in a web framework that could lead to complete compromise of the database.",
+    "references": [
+      {
+        "title": "Common Vulnerabilities and Exposures (CVE)"
+      },
+      {
+        "title": "Known Exploited Vulnerabilities Catalog - CISA"
+      }
+    ],
+    "title": "Vulnerability"
+  }
+}

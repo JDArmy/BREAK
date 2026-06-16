@@ -1,0 +1,20 @@
+{
+  "T0519": {
+    "keywords": [
+      "VPN",
+      "Virtual Private Network"
+    ],
+    "definition": "A technology that establishes an encrypted tunnel over a public network, enabling users to securely access internal network resources remotely.",
+    "description": "A VPN creates a virtual, private connection over the internet through encryption and tunneling techniques, ensuring the confidentiality and integrity of data transmission. It is categorized by use case into remote access VPNs (for employees accessing corporate networks) and site-to-site VPNs (for interconnecting branch offices). Common protocols include IPSec, SSL/TLS, and WireGuard. VPNs are also used by individual users to hide their IP addresses and bypass geo-restrictions, though they may be misused for illegal activities.",
+    "usageExample": "An employee working from home connects to the corporate intranet via VPN to securely access file servers and office systems.",
+    "references": [
+      {
+        "title": "Guide to IPsec VPNs - NIST SP 800-77"
+      },
+      {
+        "title": "Enterprise VPN Security - CISA"
+      }
+    ],
+    "title": "Virtual Private Network"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "T0503": {
+    "title": "MEV",
+    "aliases": [],
+    "category": "TC01",
+    "keywords": [
+      "MEV",
+      "最大可提取价值",
+      "Maximal Extractable Value",
+      "抢跑",
+      "夹子攻击",
+      "Sandwich Attack"
+    ],
+    "definition": "矿工或验证者通过重新排序、插入或审查交易从区块链用户处提取的额外利润。",
+    "description": "MEV源于区块生产者对交易排序的控制权，常见形式包括抢跑交易（frontrunning）、夹子攻击（在目标交易前后插入交易）、套利机会捕获等。MEV虽然提升了市场效率，但也增加了普通用户的交易成本和滑点，甚至可能威胁区块链共识安全。",
+    "usageExample": "机器人检测到用户的大额买单，抢先以低价买入，待用户交易推高价格后立即卖出获利。",
+    "relatedRisks": [
+      "R0204"
+    ],
+    "relatedAvoidances": [
+      "A0194"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [
+      {
+        "link": "https://ethereum.org/en/developers/docs/mev/",
+        "title": "Maximal Extractable Value (MEV) - Ethereum"
+      },
+      {
+        "link": "https://www.paradigm.xyz/2020/08/ethereum-is-a-dark-forest",
+        "title": "Ethereum is a Dark Forest - Paradigm"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

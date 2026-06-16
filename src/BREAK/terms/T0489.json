@@ -1,0 +1,43 @@
+{
+  "T0489": {
+    "title": "智能合约",
+    "aliases": [],
+    "category": "TC01",
+    "keywords": [
+      "智能合约",
+      "Smart Contract",
+      "自动执行合约",
+      "区块链合约",
+      "以太坊合约",
+      "Solidity",
+      "合约代码",
+      "链上合约"
+    ],
+    "definition": "部署在区块链上的、能够自动执行预定规则的计算机程序，一旦部署后无法篡改且按既定逻辑运行。",
+    "description": "智能合约是区块链技术的核心应用之一，通过将合约条款编码为可执行程序，实现无需中介的自动化交易。当预设条件满足时，合约自动执行相应操作，如转账、数据记录等。智能合约的不可篡改性和透明性使其广泛应用于DeFi、NFT、DAO等Web3场景，但同时也带来了代码漏洞不可修复的安全挑战。",
+    "usageExample": "某DeFi协议使用智能合约管理借贷逻辑，用户存入抵押品后自动获得贷款额度，无需人工审核。",
+    "relatedRisks": [
+      "R0159",
+      "R0167",
+      "R0168"
+    ],
+    "relatedAvoidances": [
+      "A0095",
+      "A0105"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [
+      {
+        "link": "https://ethereum.org/en/developers/docs/smart-contracts/",
+        "title": "Introduction to Smart Contracts - Ethereum"
+      },
+      {
+        "link": "https://github.com/Consensys/smart-contract-best-practices",
+        "title": "A guide to smart contract security best practices - GitHub"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

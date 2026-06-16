@@ -1,0 +1,40 @@
+{
+  "T0515": {
+    "title": "防火墙",
+    "aliases": [],
+    "category": "TC03",
+    "keywords": [
+      "防火墙",
+      "Firewall",
+      "网络防火墙",
+      "应用防火墙",
+      "WAF",
+      "访问控制"
+    ],
+    "definition": "监控和控制网络流量的安全设备或软件，根据预定规则允许或阻止数据包通过。",
+    "description": "防火墙是网络安全的第一道防线，部署在网络边界或主机上。按类型分为包过滤防火墙、状态检测防火墙、应用层防火墙（WAF）、下一代防火墙（NGFW）等。防火墙通过IP地址、端口、协议、应用特征等规则过滤流量，阻止未授权访问和恶意攻击。现代防火墙集成了IPS、DPI、威胁情报等高级功能。",
+    "usageExample": "企业在网络边界部署防火墙，仅允许80/443端口的Web流量进入DMZ区。",
+    "relatedRisks": [
+      "R0086",
+      "R0109"
+    ],
+    "relatedAvoidances": [
+      "A0010",
+      "A0028"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [
+      {
+        "link": "https://csrc.nist.gov/pubs/sp/800/41/r1/final",
+        "title": "SP 800-41 Rev. 1, Guidelines on Firewalls and Firewall Policy | CSRC"
+      },
+      {
+        "link": "https://www.cloudflare.com/learning/security/what-is-a-firewall/",
+        "title": "What is a Firewall? - Cloudflare"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

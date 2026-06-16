@@ -1,0 +1,19 @@
+{
+  "T0504": {
+    "keywords": [
+      "Social Engineering"
+    ],
+    "definition": "An attack technique that deceives victims into divulging sensitive information or performing dangerous actions through psychological manipulation.",
+    "description": "Social engineering exploits human vulnerabilities such as trust, fear, curiosity, and greed to bypass technical defenses, making it one of the most effective attack vectors. Common forms include phishing emails, telephone scams, identity impersonation, and pretexting scenarios. Attackers gather open-source intelligence, establish rapport, and fabricate scenarios to gain the victim's trust, ultimately inducing them to willingly cooperate in achieving the attack objectives.",
+    "usageExample": "An attacker impersonates the IT department and calls an employee, claiming the need to verify account security, thereby tricking the employee into providing their password and verification code.",
+    "references": [
+      {
+        "title": "Social Engineering Framework"
+      },
+      {
+        "title": "Avoiding Social Engineering and Phishing Attacks | CISA"
+      }
+    ],
+    "title": "Social Engineering"
+  }
+}

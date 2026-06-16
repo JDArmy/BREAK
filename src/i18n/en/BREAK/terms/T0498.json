@@ -1,0 +1,19 @@
+{
+  "T0498": {
+    "keywords": [
+      "Private Key"
+    ],
+    "definition": "A cryptographic string that serves as the core secret of a blockchain wallet, used to sign transactions and prove ownership of digital assets.",
+    "description": "A private key is a randomly generated 64-character hexadecimal string. Anyone who possesses the private key effectively controls the assets associated with the corresponding blockchain address. The private key is mathematically linked to a public key and address through elliptic curve cryptography, enabling secure digital signatures without revealing the key itself. The security of all cryptocurrency holdings fundamentally depends on the confidentiality of the private key.",
+    "usageExample": "A user signs a transfer transaction using their private key to send 10 ETH to another address. Once broadcast to the network and confirmed, the transaction is irreversible and cannot be undone.",
+    "references": [
+      {
+        "title": "What is a private key? - Coinbase"
+      },
+      {
+        "title": "Ethereum Accounts - Ethereum"
+      }
+    ],
+    "title": "Private Key"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "T0510": {
+    "keywords": [
+      "Ransomware"
+    ],
+    "definition": "Malware that encrypts victim data or locks systems, demanding ransom payment to restore access.",
+    "description": "Ransomware is one of the most destructive cyber threats, where attackers encrypt files, databases, or entire systems to extort ransom payments, typically demanding cryptocurrency. Modern ransomware employs a double extortion model combining encryption with data exfiltration threats. Attack targets have expanded from individuals to enterprises, hospitals, and government agencies, causing severe consequences including business disruption, data loss, and reputational damage.",
+    "usageExample": "A hospital's systems were encrypted by ransomware, rendering all medical records inaccessible, with hackers demanding a ransom of 50 Bitcoins.",
+    "references": [
+      {
+        "title": "StopRansomware.gov - CISA"
+      },
+      {
+        "title": "No More Ransom Project"
+      }
+    ],
+    "title": "Ransomware"
+  }
+}

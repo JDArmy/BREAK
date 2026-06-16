@@ -1,0 +1,40 @@
+{
+  "T0506": {
+    "title": "鱼叉式钓鱼",
+    "aliases": [],
+    "category": "TC02",
+    "keywords": [
+      "鱼叉式钓鱼",
+      "Spear Phishing",
+      "定向钓鱼",
+      "APT攻击",
+      "精准钓鱼"
+    ],
+    "definition": "针对特定个人或组织定制的高度个性化钓鱼攻击，成功率远高于普通钓鱼。",
+    "description": "鱼叉式钓鱼攻击者通过社交媒体、公开信息等渠道深入研究目标，精心伪造与目标工作、兴趣相关的邮件内容，提高可信度。此类攻击常用于APT（高级持续性威胁）行动，目标包括企业高管、政府官员、研发人员等高价值对象。由于高度定制化，传统邮件过滤难以防御。",
+    "usageExample": "黑客研究某公司CFO的社交媒体后，伪造供应商邮件请求更改付款账户，成功骗取百万美元汇款。",
+    "relatedRisks": [
+      "R0084",
+      "R0083",
+      "R0059"
+    ],
+    "relatedAvoidances": [
+      "A0013",
+      "A0016"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [
+      {
+        "link": "https://www.microsoft.com/en-us/security/business/security-101/what-is-spear-phishing",
+        "title": "What Is Spear Phishing? | Microsoft Security"
+      },
+      {
+        "link": "https://www.proofpoint.com/us/threat-reference/spear-phishing",
+        "title": "Spear Phishing - Proofpoint"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "T0516": {
+    "title": "入侵检测系统",
+    "aliases": [],
+    "category": "TC03",
+    "keywords": [
+      "入侵检测系统",
+      "IDS",
+      "Intrusion Detection System",
+      "入侵检测",
+      "异常检测"
+    ],
+    "definition": "监控网络或系统活动，检测可疑行为和攻击特征，发出告警的安全系统。",
+    "description": "IDS通过特征匹配、异常检测、行为分析等技术识别入侵活动。按部署位置分为网络IDS（NIDS）和主机IDS（HIDS）。IDS只负责检测和告警，不主动阻断攻击（与IPS区别）。现代IDS结合机器学习和威胁情报提升检测准确率，但面临误报率高、加密流量检测困难等挑战。",
+    "usageExample": "NIDS检测到内网主机向外发送大量DNS查询请求，告警可能存在数据窃取行为。",
+    "relatedRisks": [
+      "R0081",
+      "R0086"
+    ],
+    "relatedAvoidances": [
+      "A0019",
+      "A0016"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [
+      {
+        "link": "https://www.nist.gov/publications/guide-intrusion-detection-and-prevention-systems-idps",
+        "title": "Guide to Intrusion Detection and Prevention Systems (IDPS) - NIST SP 800-94"
+      },
+      {
+        "link": "https://www.sans.org/reading-room/whitepapers/detection/intrusion-detection-systems-594",
+        "title": "Introduction to Intrusion Detection Systems - SANS"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

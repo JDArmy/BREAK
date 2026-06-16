@@ -1,0 +1,40 @@
+{
+  "T0505": {
+    "title": "网络钓鱼",
+    "aliases": [],
+    "category": "TC02",
+    "keywords": [
+      "网络钓鱼",
+      "Phishing",
+      "钓鱼邮件",
+      "钓鱼网站",
+      "钓鱼攻击"
+    ],
+    "definition": "伪装成可信实体发送欺诈性消息，诱骗受害者泄露敏感信息或安装恶意软件的攻击手段。",
+    "description": "网络钓鱼是最常见的社会工程学攻击形式，攻击者通过伪造邮件、短信、即时消息或网站，冒充银行、电商、社交平台等知名机构，诱导用户点击恶意链接、下载附件或输入账号密码。钓鱼攻击成本低、成功率高，是数据泄露和账号盗用的主要根源。",
+    "usageExample": "用户收到伪装成银行的邮件，声称账户异常需要验证，点击链接后进入仿冒网站输入了银行卡信息。",
+    "relatedRisks": [
+      "R0084",
+      "R0032",
+      "R0161"
+    ],
+    "relatedAvoidances": [
+      "A0016",
+      "A0040"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [
+      {
+        "link": "https://www.phishing.org/what-is-phishing",
+        "title": "What is Phishing? - Anti-Phishing Working Group"
+      },
+      {
+        "link": "https://www.cisa.gov/secure-our-world/recognize-and-report-phishing",
+        "title": "Recognize and Report Phishing - CISA"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

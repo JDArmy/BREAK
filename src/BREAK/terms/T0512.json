@@ -1,0 +1,41 @@
+{
+  "T0512": {
+    "title": "APT攻击",
+    "aliases": [],
+    "category": "TC02",
+    "keywords": [
+      "APT攻击",
+      "APT",
+      "Advanced Persistent Threat",
+      "高级持续性威胁",
+      "定向攻击",
+      "国家级黑客"
+    ],
+    "definition": "由高技能攻击者（通常有国家背景）发起的长期、隐蔽、针对特定目标的网络入侵行动。",
+    "description": "APT攻击具有三大特征：高级（使用0day漏洞和定制工具）、持续性（潜伏数月甚至数年）、威胁性（目标明确且破坏力大）。攻击者通过鱼叉式钓鱼、水坑攻击、供应链入侵等手段建立初始立足点，随后横向移动、权限提升、数据窃取，同时规避检测。典型目标包括政府机构、国防工业、能源基础设施、科研机构等。",
+    "usageExample": "某APT组织通过鱼叉式钓鱼入侵国防承包商网络，潜伏18个月窃取武器系统设计图纸。",
+    "relatedRisks": [
+      "R0081",
+      "R0059",
+      "R0084"
+    ],
+    "relatedAvoidances": [
+      "A0016",
+      "A0019"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [
+      {
+        "link": "https://www.cisa.gov/topics/cyber-threats-and-advisories/nation-state-cyber-actors",
+        "title": "Nation-State Threats | Cybersecurity and Infrastructure ... - CISA"
+      },
+      {
+        "link": "https://attack.mitre.org/groups/",
+        "title": "Groups - MITRE ATT&CK"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

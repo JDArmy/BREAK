@@ -1,0 +1,19 @@
+{
+  "T0509": {
+    "keywords": [
+      "Malware"
+    ],
+    "definition": "A general term for software programs designed to disrupt operations, steal data, gain unauthorized access, or perform other malicious activities.",
+    "description": "Malware serves as a core tool in the cybersecurity threat landscape, encompassing various types including viruses, trojans, worms, ransomware, spyware, adware, and rootkits. It propagates through attack vectors such as vulnerability exploitation, phishing emails, and drive-by downloads to execute malicious activities including data exfiltration, system destruction, remote control, cryptojacking, and DDoS attacks. Modern malware possesses advanced capabilities such as anti-detection, persistence, and lateral movement.",
+    "usageExample": "A user downloads cracked software and gets infected with a trojan, which the attacker uses to remotely control the computer and steal banking credentials and passwords.",
+    "references": [
+      {
+        "title": "Handling Destructive Malware | CISA"
+      },
+      {
+        "title": "What is Malware? - Microsoft Security"
+      }
+    ],
+    "title": "Malware"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "T0506": {
+    "keywords": [
+      "Spear Phishing"
+    ],
+    "definition": "A highly personalized phishing attack tailored to specific individuals or organizations, with a significantly higher success rate than generic phishing.",
+    "description": "Spear phishing attackers conduct in-depth research on their targets through social media, public information, and other channels, carefully crafting email content relevant to the target's work and interests to enhance credibility. This type of attack is commonly used in APT (Advanced Persistent Threat) operations, targeting high-value individuals such as corporate executives, government officials, and research and development personnel. Due to its high degree of customization, traditional email filtering is often ineffective in defending against such attacks.",
+    "usageExample": "After researching a company CFO's social media profiles, hackers forged a supplier email requesting a change in payment account details, successfully defrauding the company of millions of dollars in wire transfers.",
+    "references": [
+      {
+        "title": "What Is Spear Phishing? | Microsoft Security"
+      },
+      {
+        "title": "Spear Phishing - Proofpoint"
+      }
+    ],
+    "title": "Spear Phishing"
+  }
+}

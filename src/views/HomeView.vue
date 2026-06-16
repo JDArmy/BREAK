@@ -65,8 +65,8 @@ interface SceneBREAK {
 // 场景布局常量
 const SCENE_WIDTH_CN = 180;
 const SCENE_WIDTH_EN = 280;
-const SCROLL_THRESHOLD_CN = 9;
-const SCROLL_THRESHOLD_EN = 7;
+const SCROLL_THRESHOLD_CN = 8;
+const SCROLL_THRESHOLD_EN = 6;
 
 const sceneLayout = computed(() => {
   const totalScenes = Object.keys(sceneBREAK.value.riskScenes).length;

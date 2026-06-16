@@ -1,0 +1,41 @@
+{
+  "T0507": {
+    "title": "捕鲸攻击",
+    "aliases": [],
+    "category": "TC02",
+    "keywords": [
+      "捕鲸攻击",
+      "Whaling Attack",
+      "高管钓鱼",
+      "CEO诈骗",
+      "商业邮件入侵",
+      "BEC"
+    ],
+    "definition": "专门针对企业高管（CEO、CFO等）的鱼叉式钓鱼攻击，通常涉及高额资金或敏感信息。",
+    "description": "捕鲸攻击是鱼叉式钓鱼的极端形式，攻击者冒充董事会成员、合作伙伴或监管机构，利用高管的决策权限和时间压力，诱导其授权大额转账或泄露商业机密。此类攻击造成的平均损失远超普通钓鱼，FBI将其归类为商业邮件入侵（BEC）诈骗的主要形式。",
+    "usageExample": "攻击者伪造CEO邮件要求财务总监紧急汇款完成秘密收购，财务人员未经核实直接转账损失500万美元。",
+    "relatedRisks": [
+      "R0084-001",
+      "R0095",
+      "R0059"
+    ],
+    "relatedAvoidances": [
+      "A0013",
+      "A0034"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [
+      {
+        "link": "https://www.fbi.gov/how-we-can-help-you/scams-and-safety/common-frauds-and-scams/business-email-compromise",
+        "title": "Business Email Compromise - FBI"
+      },
+      {
+        "link": "https://www.fortinet.com/resources/cyberglossary/whaling-attack",
+        "title": "What is a Whaling Attack? - Fortinet"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

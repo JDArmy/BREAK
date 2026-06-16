@@ -1,0 +1,20 @@
+{
+  "T0512": {
+    "keywords": [
+      "APT",
+      "Advanced Persistent Threat"
+    ],
+    "definition": "A prolonged and targeted cyber intrusion campaign conducted by highly skilled threat actors, often with nation-state backing, aimed at compromising specific targets for strategic advantage.",
+    "description": "Advanced Persistent Threat (APT) attacks are characterized by three core attributes: 'Advanced' (leveraging zero-day exploits and custom malware), 'Persistent' (maintaining long-term access for months or even years), and 'Threat' (driven by clear objectives with destructive impact). Attackers typically establish an initial foothold through spear-phishing, watering hole attacks, or supply chain compromise, then proceed with lateral movement, privilege escalation, and data exfiltration while actively evading detection. Common targets include government agencies, defense industrial bases, energy infrastructure, and research institutions.",
+    "usageExample": "An APT group infiltrated a defense contractor's network via a spear-phishing campaign, maintaining persistence for 18 months to exfiltrate weapon system design blueprints.",
+    "references": [
+      {
+        "title": "Nation-State Threats | Cybersecurity and Infrastructure ... - CISA"
+      },
+      {
+        "title": "Groups - MITRE ATT&CK"
+      }
+    ],
+    "title": "Advanced Persistent Threat"
+  }
+}

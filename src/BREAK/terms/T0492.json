@@ -1,0 +1,40 @@
+{
+  "T0492": {
+    "title": "DAO",
+    "aliases": [],
+    "category": "TC01",
+    "keywords": [
+      "DAO",
+      "去中心化自治组织",
+      "Decentralized Autonomous Organization",
+      "链上治理",
+      "社区治理",
+      "投票治理"
+    ],
+    "definition": "通过智能合约实现规则透明化、决策民主化的去中心化组织形式，成员通过代币投票参与治理。",
+    "description": "DAO将组织规则编码为智能合约，所有决策通过代币持有者投票产生，资金管理和执行自动化进行。DAO消除了传统组织的层级结构，但也面临治理攻击、提案操纵、多签钱包社工等安全风险。",
+    "usageExample": "某DeFi协议的DAO社区投票决定是否上线新功能，提案通过后智能合约自动执行升级。",
+    "relatedRisks": [
+      "R0169",
+      "R0197"
+    ],
+    "relatedAvoidances": [
+      "A0101",
+      "A0175"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [
+      {
+        "link": "https://ethereum.org/en/dao/",
+        "title": "Introduction to DAOs - Ethereum"
+      },
+      {
+        "link": "https://a16zcrypto.com/posts/article/dao-canon/",
+        "title": "The DAO Canon - a16z crypto"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

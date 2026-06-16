@@ -1,0 +1,40 @@
+{
+  "T0502": {
+    "title": "Rug Pull",
+    "aliases": [],
+    "category": "TC01",
+    "keywords": [
+      "Rug Pull",
+      "跑路",
+      "项目方跑路",
+      "DeFi跑路",
+      "卷款跑路",
+      "流动性撤出"
+    ],
+    "definition": "加密项目方突然撤出流动性或关闭项目卷款跑路，导致投资者资金损失的欺诈行为。",
+    "description": "Rug Pull是DeFi领域最常见的诈骗手段，项目方通过虚假宣传吸引资金后，利用智能合约后门抽走流动池资金或直接关闭项目。常见手段包括移除流动性、铸造大量代币砸盘、限制卖出等。投资者需警惕匿名团队、未审计合约、过高收益承诺等危险信号。",
+    "usageExample": "某DeFi项目上线一周后，项目方突然撤出价值200万美元的流动性，代币价格瞬间归零。",
+    "relatedRisks": [
+      "R0170",
+      "R0183"
+    ],
+    "relatedAvoidances": [
+      "A0100",
+      "A0166"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [
+      {
+        "link": "https://go.chainalysis.com/2021-Crypto-Crime-Report-demo.html",
+        "title": "The Chainalysis 2021 Crypto Crime Report"
+      },
+      {
+        "link": "https://www.coindesk.com/markets/2026/01/13/former-bitcoin-mayor-eric-adams-faces-usd3-million-rugpull-allegation-after-issuing-nyc-coin",
+        "title": "Former 'bitcoin mayor' Eric Adams faces $3 million rugpull allegation ..."
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

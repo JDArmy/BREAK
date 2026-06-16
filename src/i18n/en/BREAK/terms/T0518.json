@@ -1,0 +1,20 @@
+{
+  "T0518": {
+    "keywords": [
+      "Digital Certificate",
+      "PKI"
+    ],
+    "definition": "An electronic document issued by a trusted third party (Certificate Authority, CA) to verify the identity of a public key holder.",
+    "description": "A digital certificate is a core component of the Public Key Infrastructure (PKI), formatted according to the X.509 standard. It contains the public key, holder information, issuer details, validity period, and a digital signature. SSL/TLS certificates are used for identity authentication and encrypted communication on HTTPS websites, while code signing certificates are used to verify the identity of software publishers.",
+    "usageExample": "After deploying an SSL certificate on a website, a lock icon appears in the browser's address bar, allowing users to confirm the website's identity and communicate securely.",
+    "references": [
+      {
+        "title": "RFC 5280: Internet X.509 Public Key Infrastructure Certificate"
+      },
+      {
+        "title": "What is an SSL certificate? | Learning Center - Cloudflare"
+      }
+    ],
+    "title": "Digital Certificate"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "T0520": {
+    "keywords": [
+      "Sandbox"
+    ],
+    "definition": "An isolated security environment for executing and observing suspicious program behavior, preventing it from affecting real systems.",
+    "description": "Sandbox technology creates a restricted execution environment through virtualization or container isolation, where malicious code cannot access real system resources. Sandboxes are widely used in scenarios such as malware analysis, browser security, and mobile application isolation. Defenders use sandboxes to analyze the behavioral characteristics of unknown files, while attackers research anti-sandbox techniques (such as detecting virtual environments, delayed execution, etc.) to evade detection.",
+    "usageExample": "The security team ran the suspicious email attachment in a sandbox to observe whether it exhibited malicious behaviors such as encrypting files or connecting to a C2 server.",
+    "references": [
+      {
+        "title": "Cloudflare Sandbox SDK"
+      },
+      {
+        "title": "Virtualization/Sandbox Evasion - MITRE ATT&CK"
+      }
+    ],
+    "title": "Sandbox"
+  }
+}

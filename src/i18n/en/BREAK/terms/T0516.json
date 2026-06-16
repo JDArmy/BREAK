@@ -1,0 +1,20 @@
+{
+  "T0516": {
+    "keywords": [
+      "IDS",
+      "Intrusion Detection System"
+    ],
+    "definition": "A security system that monitors network or system activities to detect suspicious behavior and attack signatures, and generates alerts.",
+    "description": "An Intrusion Detection System (IDS) identifies intrusion activities through techniques such as signature matching, anomaly detection, and behavioral analysis. Based on deployment location, it is categorized into Network-based IDS (NIDS) and Host-based IDS (HIDS). An IDS is only responsible for detection and alerting, and does not actively block attacks (which distinguishes it from an Intrusion Prevention System).",
+    "usageExample": "A NIDS detects that an internal host is sending an abnormally high volume of DNS query requests, generating an alert for potential data exfiltration.",
+    "references": [
+      {
+        "title": "Guide to Intrusion Detection and Prevention Systems (IDPS) - NIST SP 800-94"
+      },
+      {
+        "title": "Introduction to Intrusion Detection Systems - SANS"
+      }
+    ],
+    "title": "Intrusion Detection System"
+  }
+}

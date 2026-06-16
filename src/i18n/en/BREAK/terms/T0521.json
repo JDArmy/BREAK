@@ -1,0 +1,19 @@
+{
+  "T0521": {
+    "keywords": [
+      "Honeypot"
+    ],
+    "definition": "A deception technology that uses intentionally vulnerable systems or resources to attract, detect, and study attacker behavior.",
+    "description": "A honeypot simulates the vulnerabilities and services of real systems, enticing attackers to invest time and resources in attacking it while recording their methods, tools, and targets. Based on the level of interaction, honeypots are categorized into low-interaction honeypots (which emulate limited services) and high-interaction honeypots (which involve a full operating system). Honeypots can be utilized for threat intelligence collection, intrusion detection, and attack attribution, but they require careful deployment to avoid becoming a launchpad for further attacks.",
+    "usageExample": "An enterprise deploys a honeypot on its internal network to simulate a file server. As soon as someone accesses it, an alert is triggered, helping to detect lateral movement within the network.",
+    "references": [
+      {
+        "title": "Introduction To Honeypots.md - GitHub"
+      },
+      {
+        "title": "Honeypots: A Sweet Solution? - SANS"
+      }
+    ],
+    "title": "Honeypot"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "T0494": {
+    "keywords": [
+      "Cross-chain Bridge"
+    ],
+    "definition": "A protocol that connects different blockchain networks, enabling users to transfer assets and data across chains.",
+    "description": "Cross-chain bridges facilitate the movement of assets between different blockchains through lock-and-mint or burn-and-release mechanisms. These protocols typically lock assets on the source chain and mint equivalent wrapped tokens on the destination chain, or vice versa, ensuring the total supply remains constant across networks. The underlying architecture often involves smart contracts deployed on multiple chains, validators or relayers responsible for verifying cross-chain messages, and consensus mechanisms to prevent double-spending attacks. Cross-chain bridges are critical infrastructure for the multi-chain ecosystem, enabling interoperability between otherwise isolated blockchain networks. However, due to their complex asset custody and validation logic, they have become prime targets for threat actors, with multiple high-profile bridge exploits resulting in hundreds of millions of dollars in losses throughout blockchain history.",
+    "usageExample": "A user transfers USDC from Ethereum to the Polygon network via the Polygon Bridge to benefit from lower transaction fees.",
+    "references": [
+      {
+        "title": "Introduction to Bridges - Ethereum"
+      },
+      {
+        "title": "Crypto Bridge Protocols - TVL, Volume, & Fees - DefiLlama"
+      }
+    ],
+    "title": "Cross-Chain Bridge"
+  }
+}

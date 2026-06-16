@@ -1,0 +1,19 @@
+{
+  "T0505": {
+    "keywords": [
+      "Phishing"
+    ],
+    "definition": "An attack method that sends fraudulent messages disguised as a trusted entity to trick victims into revealing sensitive information or installing malware.",
+    "description": "Phishing is the most common form of social engineering attack, in which attackers impersonate well-known organizations such as banks, e-commerce platforms, or social media services by forging emails, SMS messages, instant messages, or websites. These deceptive communications are designed to lure users into clicking malicious links, downloading malicious attachments, or entering their account credentials and other sensitive data. Due to its low cost and high success rate, phishing remains a primary root cause of data breaches and account compromise.",
+    "usageExample": "A user receives an email disguised as a communication from their bank, claiming that their account requires verification due to an anomaly. Upon clicking the link, the user is directed to a spoofed website and enters their banking card details.",
+    "references": [
+      {
+        "title": "What is Phishing? - Anti-Phishing Working Group"
+      },
+      {
+        "title": "Recognize and Report Phishing - CISA"
+      }
+    ],
+    "title": "Phishing"
+  }
+}

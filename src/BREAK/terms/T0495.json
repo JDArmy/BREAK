@@ -1,0 +1,39 @@
+{
+  "T0495": {
+    "title": "闪电贷",
+    "aliases": [],
+    "category": "TC01",
+    "keywords": [
+      "闪电贷",
+      "Flash Loan",
+      "无抵押贷款",
+      "原子贷款",
+      "套利"
+    ],
+    "definition": "DeFi中一种无需抵押的即时贷款，要求在同一区块链交易内完成借入和归还。",
+    "description": "闪电贷利用区块链交易的原子性特征，允许用户在单笔交易中借入大量资金并执行套利、清算等操作，交易结束前必须归还本金和手续费，否则整个交易回滚。虽然为DeFi带来了资本效率，但也被黑客用于发动价格操纵、协议攻击等。",
+    "usageExample": "攻击者使用闪电贷借入1000万美元操纵DEX价格，利用价格差异套利后归还贷款，整个过程在一笔交易内完成。",
+    "relatedRisks": [
+      "R0160",
+      "R0204"
+    ],
+    "relatedAvoidances": [
+      "A0096",
+      "A0103"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [
+      {
+        "link": "https://aave.com/docs/aave-v3/guides/flash-loans",
+        "title": "Flash Loans | Aave Protocol Documentation"
+      },
+      {
+        "link": "https://www.coindesk.com/tech/2026/05/29/xrp-ledger-s-new-proposal-blocks-the-flash-loan-attacks-costing-defi-hundreds-of-millions",
+        "title": "XRP Ledger's design blocks the flash loan attacks costing DeFi ..."
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "T0520": {
+    "title": "沙箱",
+    "aliases": [],
+    "category": "TC03",
+    "keywords": [
+      "沙箱",
+      "Sandbox",
+      "沙盒",
+      "隔离环境",
+      "恶意代码分析"
+    ],
+    "definition": "隔离的安全环境，用于执行和观察可疑程序行为，防止其影响真实系统。",
+    "description": "沙箱技术通过虚拟化或容器隔离创建受限执行环境，恶意代码在其中无法访问真实系统资源。沙箱广泛应用于恶意软件分析、浏览器安全、移动应用隔离等场景。防御者使用沙箱分析未知文件的行为特征，攻击者则研究反沙箱技术（检测虚拟环境、延迟执行等）逃避检测。",
+    "usageExample": "安全团队将可疑邮件附件放入沙箱运行，观察其是否有加密文件、连接C2服务器等恶意行为。",
+    "relatedRisks": [
+      "R0080",
+      "R0112"
+    ],
+    "relatedAvoidances": [
+      "A0030",
+      "A0089"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [
+      {
+        "link": "https://sandbox.cloudflare.com/",
+        "title": "Cloudflare Sandbox SDK"
+      },
+      {
+        "link": "https://attack.mitre.org/techniques/T1497/",
+        "title": "Virtualization/Sandbox Evasion - MITRE ATT&CK"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

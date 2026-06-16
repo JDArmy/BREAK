@@ -1,0 +1,19 @@
+{
+  "T0495": {
+    "keywords": [
+      "Flash Loan"
+    ],
+    "definition": "An uncollateralized instant loan in DeFi that must be borrowed and repaid within the same blockchain transaction.",
+    "description": "Flash loans leverage the atomicity property of blockchain transactions, allowing users to borrow substantial amounts of capital within a single transaction to execute arbitrage, liquidations, and other operations. The principal plus fees must be returned before the transaction concludes; otherwise, the entire transaction is rolled back. While flash loans enhance capital efficiency in DeFi, they have also been exploited by malicious actors to conduct price manipulation and protocol attacks.",
+    "usageExample": "An attacker utilized a flash loan to borrow $10 million, manipulated a DEX price, exploited the price discrepancy for arbitrage, and repaid the loan, all within a single transaction.",
+    "references": [
+      {
+        "title": "Flash Loans | Aave Protocol Documentation"
+      },
+      {
+        "title": "XRP Ledger's design blocks the flash loan attacks costing DeFi ..."
+      }
+    ],
+    "title": "Flash Loan"
+  }
+}

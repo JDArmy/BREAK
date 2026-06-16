@@ -1,0 +1,41 @@
+{
+  "T0493": {
+    "title": "Layer2",
+    "aliases": [],
+    "category": "TC01",
+    "keywords": [
+      "Layer2",
+      "二层网络",
+      "Layer 2",
+      "扩容方案",
+      "侧链",
+      "Rollup",
+      "状态通道"
+    ],
+    "definition": "构建在区块链主网（Layer1）之上的扩容解决方案，在保持安全性的前提下提升交易处理能力。",
+    "description": "Layer2通过将大部分交易计算移至链下，仅将最终状态提交到主链，实现交易吞吐量的大幅提升和Gas费降低。常见方案包括Optimistic Rollup、ZK-Rollup、状态通道等，但跨链桥接、数据可用性、定序器中心化等问题带来新的安全挑战。",
+    "usageExample": "用户在Arbitrum（一个Layer2网络）上进行代币交易，享受低Gas费和快速确认，最终状态被打包提交到以太坊主网。",
+    "relatedRisks": [
+      "R0199",
+      "R0162"
+    ],
+    "relatedAvoidances": [
+      "A0097",
+      "A0163"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [
+      {
+        "link": "https://ethereum.org/en/layer-2/",
+        "title": "Layer 2 Scaling - Ethereum"
+      },
+      {
+        "link": "https://l2beat.com/",
+        "title": "L2BEAT - Layer 2 Analytics"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

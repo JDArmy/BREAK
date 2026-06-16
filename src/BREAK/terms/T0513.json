@@ -1,0 +1,40 @@
+{
+  "T0513": {
+    "title": "漏洞",
+    "aliases": [],
+    "category": "TC03",
+    "keywords": [
+      "漏洞",
+      "Vulnerability",
+      "安全漏洞",
+      "系统缺陷",
+      "弱点"
+    ],
+    "definition": "系统、软件或硬件中可被攻击者利用来破坏安全性的缺陷或弱点。",
+    "description": "漏洞是网络安全威胁的根本来源，可能由设计缺陷、编码错误、配置不当或逻辑疏漏造成。漏洞类型包括缓冲区溢出、注入攻击、权限提升、信息泄露等。漏洞从发现到修复的时间窗口是攻击者的机会，0day漏洞（未公开的漏洞）尤其危险。漏洞管理是安全防御的核心工作。",
+    "usageExample": "安全研究员发现某Web框架存在SQL注入漏洞，可导致数据库被完全控制。",
+    "relatedRisks": [
+      "R0109",
+      "R0112",
+      "R0081"
+    ],
+    "relatedAvoidances": [
+      "A0055",
+      "A0019"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [
+      {
+        "link": "https://www.cve.org/",
+        "title": "Common Vulnerabilities and Exposures (CVE)"
+      },
+      {
+        "link": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+        "title": "Known Exploited Vulnerabilities Catalog - CISA"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

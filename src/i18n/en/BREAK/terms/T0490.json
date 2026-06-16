@@ -1,0 +1,20 @@
+{
+  "T0490": {
+    "keywords": [
+      "DeFi",
+      "Decentralized Finance"
+    ],
+    "definition": "An open financial service system built on blockchain smart contracts that operates without traditional financial intermediaries.",
+    "description": "DeFi automates financial transactions through smart contracts, enabling users to perform lending, trading, and yield farming without relying on centralized institutions. DeFi protocols are characterized by openness, transparency, and composability, but they also face unique security risks such as smart contract vulnerabilities, flash loan attacks, and oracle manipulation.",
+    "usageExample": "A user swaps tokens on Uniswap or deposits USDC on the Aave platform to earn interest income without the need for a bank or brokerage intermediary.",
+    "references": [
+      {
+        "title": "Introduction to DeFi - Ethereum"
+      },
+      {
+        "title": "DeFi - CoinDesk"
+      }
+    ],
+    "title": "DeFi"
+  }
+}

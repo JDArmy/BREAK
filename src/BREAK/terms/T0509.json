@@ -1,0 +1,41 @@
+{
+  "T0509": {
+    "title": "恶意软件",
+    "aliases": [],
+    "category": "TC02",
+    "keywords": [
+      "恶意软件",
+      "Malware",
+      "病毒",
+      "木马",
+      "恶意代码",
+      "恶意程序"
+    ],
+    "definition": "设计用于破坏、窃取数据、获取未授权访问或执行其他恶意行为的软件程序统称。",
+    "description": "恶意软件是网络安全威胁的核心工具，包括病毒、木马、蠕虫、勒索软件、间谍软件、广告软件、Rootkit等多种类型。恶意软件通过漏洞利用、钓鱼邮件、恶意下载等途径传播，执行数据窃取、系统破坏、远程控制、挖矿、DDoS攻击等恶意活动。现代恶意软件具备反检测、持久化、横向移动等高级能力。",
+    "usageExample": "用户下载破解软件后感染木马，黑客通过木马远程控制电脑窃取银行账号和密码。",
+    "relatedRisks": [
+      "R0080",
+      "R0078",
+      "R0109"
+    ],
+    "relatedAvoidances": [
+      "A0003",
+      "A0055"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [
+      {
+        "link": "https://www.cisa.gov/news-events/news/handling-destructive-malware",
+        "title": "Handling Destructive Malware | CISA"
+      },
+      {
+        "link": "https://www.microsoft.com/en-us/security/business/security-101/what-is-malware",
+        "title": "What is Malware? - Microsoft Security"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

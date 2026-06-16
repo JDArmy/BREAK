@@ -1,0 +1,40 @@
+{
+  "T0517": {
+    "title": "加密",
+    "aliases": [],
+    "category": "TC03",
+    "keywords": [
+      "加密",
+      "Encryption",
+      "数据加密",
+      "密码学",
+      "加密算法",
+      "解密"
+    ],
+    "definition": "使用算法将明文数据转换为密文，使未授权者无法读取的技术。",
+    "description": "加密是数据保密性的核心技术，分为对称加密（AES、DES等）和非对称加密（RSA、ECC等）。对称加密速度快但密钥分发困难，非对称加密解决密钥分发问题但计算开销大。加密应用于数据存储、传输、身份认证、数字签名等场景。量子计算的发展对传统加密算法构成威胁，后量子密码学成为研究热点。",
+    "usageExample": "银行使用TLS加密协议保护网上银行通信，确保账号密码不被窃听。",
+    "relatedRisks": [
+      "R0078",
+      "R0156"
+    ],
+    "relatedAvoidances": [
+      "A0022",
+      "A0091"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [
+      {
+        "link": "https://www.nist.gov/cryptography",
+        "title": "Cryptography - NIST"
+      },
+      {
+        "link": "https://csrc.nist.gov/projects/post-quantum-cryptography",
+        "title": "Post-Quantum Cryptography - NIST"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

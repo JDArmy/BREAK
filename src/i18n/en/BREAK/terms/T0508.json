@@ -1,0 +1,19 @@
+{
+  "T0508": {
+    "keywords": [
+      "Watering Hole Attack"
+    ],
+    "definition": "A watering hole attack is an indirect attack strategy where adversaries compromise legitimate websites frequently visited by target groups to infect visitors with malicious code.",
+    "description": "The watering hole attack derives its name from the predatory strategy of waiting near a water source for prey. Attackers analyze the browsing habits of employees within targeted organizations, then compromise industry forums, news websites, or professional communities they frequently visit, implanting browser exploit code. Since the websites themselves are legitimate, traditional security measures often fail to detect or block such attacks. This technique is commonly employed in Advanced Persistent Threat (APT) campaigns targeting high-value sectors such as government, finance, and energy.",
+    "usageExample": "A hacker group compromised an energy industry association website, implanting a zero-day exploit code that successfully infected the computers of employees from multiple power companies.",
+    "references": [
+      {
+        "title": "Watering Hole Attacks - CISA"
+      },
+      {
+        "title": "Drive-by Compromise - MITRE ATT&CK"
+      }
+    ],
+    "title": "Watering Hole Attack"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "T0502": {
+    "keywords": [
+      "Rug Pull"
+    ],
+    "definition": "A fraudulent scheme in which cryptocurrency project developers abruptly withdraw liquidity or shut down the project and abscond with investor funds, resulting in total financial loss.",
+    "description": "A rug pull is one of the most prevalent scams in the DeFi ecosystem. Malicious project creators attract capital through deceptive marketing and hype, then exploit smart contract backdoors to drain liquidity pool funds or abruptly abandon the project entirely. Common tactics include removing liquidity from decentralized exchanges, minting and dumping massive quantities of tokens to crash the price, and implementing sell restrictions that prevent investors from exiting their positions. These schemes are particularly damaging because they exploit the trustless nature of smart contracts while violating the implicit trust investors place in project teams.",
+    "usageExample": "A DeFi project launched and, within one week, the project team suddenly withdrew $2 million in liquidity, causing the token price to instantly plummet to zero.",
+    "references": [
+      {
+        "title": "The Chainalysis 2021 Crypto Crime Report"
+      },
+      {
+        "title": "Former 'bitcoin mayor' Eric Adams faces $3 million rugpull allegation ..."
+      }
+    ],
+    "title": "Rug Pull"
+  }
+}

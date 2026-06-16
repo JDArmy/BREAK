@@ -1,0 +1,19 @@
+{
+  "T0517": {
+    "keywords": [
+      "Encryption"
+    ],
+    "definition": "The process of transforming plaintext data into ciphertext using cryptographic algorithms to prevent unauthorized access.",
+    "description": "Encryption is a core technology for ensuring data confidentiality. It is primarily categorized into symmetric encryption (e.g., AES, DES) and asymmetric encryption (e.g., RSA, ECC). Symmetric encryption offers high-speed performance but faces challenges in secure key distribution, while asymmetric encryption resolves key distribution issues at the cost of higher computational overhead. Encryption is widely applied in scenarios such as data storage, secure transmission, identity authentication, and digital signatures. The advent of quantum computing poses significant threats to traditional cryptographic algorithms, making post-quantum cryptography an emerging research focus.",
+    "usageExample": "Banks utilize TLS encryption protocols to secure online banking communications, ensuring that account credentials are not intercepted by eavesdroppers.",
+    "references": [
+      {
+        "title": "Cryptography - NIST"
+      },
+      {
+        "title": "Post-Quantum Cryptography - NIST"
+      }
+    ],
+    "title": "Encryption"
+  }
+}

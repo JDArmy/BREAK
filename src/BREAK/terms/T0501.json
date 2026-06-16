@@ -1,0 +1,41 @@
+{
+  "T0501": {
+    "title": "热钱包",
+    "aliases": [],
+    "category": "TC01",
+    "keywords": [
+      "热钱包",
+      "Hot Wallet",
+      "在线钱包",
+      "软件钱包",
+      "MetaMask",
+      "移动钱包"
+    ],
+    "definition": "私钥存储在联网设备上的加密货币钱包，便于快速交易但安全性较低。",
+    "description": "热钱包包括浏览器插件钱包、手机APP钱包、交易所托管钱包等，提供便捷的DeFi交互体验。由于联网特性，热钱包面临恶意软件、钓鱼攻击、交易所被盗等多重风险，适合存储小额资金用于日常交易。",
+    "usageExample": "用户使用MetaMask热钱包连接Uniswap进行代币兑换，交易可在几秒钟内完成。",
+    "relatedRisks": [
+      "R0161",
+      "R0194",
+      "R0203"
+    ],
+    "relatedAvoidances": [
+      "A0098",
+      "A0190"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [
+      {
+        "link": "https://learn.metamask.io/",
+        "title": "MetaMask Learn: Your Gateway to Blockchain Education"
+      },
+      {
+        "link": "https://www.coinbase.com/learn/crypto-basics/what-is-the-difference-between-coinbase-and-coinbase-wallet",
+        "title": "What's the difference between Coinbase and Coinbase Wallet?"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

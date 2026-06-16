@@ -1,0 +1,40 @@
+{
+  "T0518": {
+    "title": "数字证书",
+    "aliases": [],
+    "category": "TC03",
+    "keywords": [
+      "数字证书",
+      "Digital Certificate",
+      "SSL证书",
+      "X.509证书",
+      "CA证书",
+      "PKI"
+    ],
+    "definition": "由可信第三方（证书颁发机构CA）签发的电子文档，用于证明公钥持有者的身份。",
+    "description": "数字证书是公钥基础设施（PKI）的核心组件，采用X.509标准格式。证书包含公钥、持有者信息、颁发者信息、有效期、数字签名等。SSL/TLS证书用于HTTPS网站身份认证和加密通信，代码签名证书用于软件发行者身份验证。证书伪造、私钥泄露、CA被入侵等风险可能破坏整个信任链。",
+    "usageExample": "网站部署SSL证书后，浏览器地址栏显示锁图标，用户可以确认网站身份并安全通信。",
+    "relatedRisks": [
+      "R0144",
+      "R0084"
+    ],
+    "relatedAvoidances": [
+      "A0025",
+      "A0040"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [
+      {
+        "link": "https://www.ietf.org/rfc/rfc5280.txt",
+        "title": "RFC 5280: Internet X.509 Public Key Infrastructure Certificate"
+      },
+      {
+        "link": "https://www.cloudflare.com/learning/ssl/what-is-an-ssl-certificate/",
+        "title": "What is an SSL certificate? | Learning Center - Cloudflare"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

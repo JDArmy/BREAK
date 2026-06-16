@@ -1,0 +1,39 @@
+{
+  "T0519": {
+    "title": "VPN",
+    "aliases": [],
+    "category": "TC03",
+    "keywords": [
+      "VPN",
+      "Virtual Private Network",
+      "虚拟专用网",
+      "加密隧道",
+      "远程访问"
+    ],
+    "definition": "在公共网络上建立加密隧道，使用户可以安全地远程访问内网资源的技术。",
+    "description": "VPN通过加密和隧道技术在互联网上创建虚拟的专用连接，保护数据传输的机密性和完整性。按用途分为远程访问VPN（员工访问公司网络）和站点到站点VPN（分支机构互联）。常用协议包括IPSec、SSL/TLS、WireGuard等。VPN也被个人用户用于隐藏IP、绕过地理限制，但可能被滥用于违法活动。",
+    "usageExample": "员工在家通过VPN连接到公司内网，安全访问文件服务器和办公系统。",
+    "relatedRisks": [
+      "R0112-006",
+      "R0109"
+    ],
+    "relatedAvoidances": [
+      "A0022",
+      "A0007"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [
+      {
+        "link": "https://www.nist.gov/publications/guide-ipsec-vpns",
+        "title": "Guide to IPsec VPNs - NIST SP 800-77"
+      },
+      {
+        "link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-073a",
+        "title": "Enterprise VPN Security - CISA"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "T0501": {
+    "keywords": [
+      "Hot Wallet",
+      "MetaMask"
+    ],
+    "definition": "A cryptocurrency wallet where private keys are stored on an internet-connected device, enabling fast transactions but with lower security.",
+    "description": "Hot wallets include browser extension wallets, mobile app wallets, and exchange-hosted wallets, providing a convenient DeFi interaction experience. Due to their online nature, hot wallets face multiple risks such as malware, phishing attacks, and exchange breaches, making them suitable for storing small amounts of funds for daily transactions.",
+    "usageExample": "A user connects their MetaMask hot wallet to Uniswap to perform a token swap, completing the transaction within seconds.",
+    "references": [
+      {
+        "title": "MetaMask Learn: Your Gateway to Blockchain Education"
+      },
+      {
+        "title": "What's the difference between Coinbase and Coinbase Wallet?"
+      }
+    ],
+    "title": "Hot Wallet"
+  }
+}

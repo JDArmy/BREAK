@@ -1,0 +1,20 @@
+{
+  "T0499": {
+    "keywords": [
+      "Seed Phrase",
+      "Recovery Phrase"
+    ],
+    "definition": "A backup phrase consisting of 12 or 24 English words used to recover a blockchain wallet's private key.",
+    "description": "A mnemonic phrase encodes a private key into a sequence of human-readable and easily transcribable words based on the BIP-39 standard. It serves as a master seed that can deterministically derive all private keys within a hierarchical deterministic (HD) wallet. Possession of the mnemonic phrase is equivalent to having full control over the associated wallet, enabling restoration of the wallet and access to all assets on any compatible device. Mnemonic phrase leakage, phishing scams, and physical theft are among the primary attack vectors leading to cryptocurrency asset compromise.",
+    "usageExample": "A user writes down the 12-word mnemonic phrase on paper and stores it offline. After losing their mobile phone, they can restore the wallet on a new device using the mnemonic phrase.",
+    "references": [
+      {
+        "title": "What is a Recovery Phrase? - Ledger Academy"
+      },
+      {
+        "title": "BIP-39: Mnemonic code for generating deterministic keys"
+      }
+    ],
+    "title": "Seed Phrase"
+  }
+}

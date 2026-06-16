@@ -1,0 +1,20 @@
+{
+  "T0497": {
+    "keywords": [
+      "Gas Fee",
+      "Gwei"
+    ],
+    "definition": "A fee paid to miners/validators for the computational resources consumed when executing transactions or smart contracts on a blockchain.",
+    "description": "Gas fees are determined by gas consumption and gas price, fluctuating dynamically based on network congestion levels. Each operation in a transaction consumes a specific amount of gas units, and users set a gas price (typically denominated in gwei on Ethereum) to bid for block inclusion priority. Validators prioritize transactions with higher gas prices, creating a fee market that balances network demand with available block space. Properly setting gas fees directly impacts transaction confirmation speed, while excessively high gas fees degrade user experience and can make certain applications economically unviable during periods of high network activity. Gas fee manipulation may be exploited in front-running attacks (MEV attacks) where adversaries submit transactions with higher gas prices to preempt target transactions, or in denial-of-service attacks where malicious actors deliberately congest the network by submitting numerous high-fee transactions to delay legitimate operations.",
+    "usageExample": "A user transferring tokens on Ethereum typically pays approximately $5-50 in gas fees, while complex DeFi interactions such as multi-hop swaps, yield farming operations, or flash loan executions may incur gas fees exceeding $100 during periods of network congestion.",
+    "references": [
+      {
+        "title": "Gas and Fees - Ethereum"
+      },
+      {
+        "title": "Ethereum Gas Tracker - Etherscan"
+      }
+    ],
+    "title": "Gas Fee"
+  }
+}

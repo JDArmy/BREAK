@@ -1,0 +1,39 @@
+{
+  "T0514": {
+    "title": "0day漏洞",
+    "aliases": [],
+    "category": "TC03",
+    "keywords": [
+      "0day漏洞",
+      "Zero-day",
+      "0-day",
+      "零日漏洞",
+      "未公开漏洞"
+    ],
+    "definition": "尚未被厂商发现或公开、没有补丁可用的安全漏洞，攻击者可利用其发起攻击而无法被防御。",
+    "description": "0day漏洞得名于从漏洞被利用到补丁发布的天数为零。此类漏洞极其危险，因为没有已知防御方案，攻击者可以悄无声息地入侵系统。0day漏洞在黑市上价值极高，被国家黑客、APT组织、网络武器开发者广泛使用。一旦0day被公开，就变成Nday漏洞。",
+    "usageExample": "某APT组织使用Windows 0day漏洞入侵政府网络，直到微软发布补丁前一直未被发现。",
+    "relatedRisks": [
+      "R0081",
+      "R0112"
+    ],
+    "relatedAvoidances": [
+      "A0055",
+      "A0016"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [
+      {
+        "link": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+        "title": "Known Exploited Vulnerabilities Catalog - CISA"
+      },
+      {
+        "link": "https://www.microsoft.com/en-us/msrc/blog",
+        "title": "Microsoft Security Response Center Blog"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

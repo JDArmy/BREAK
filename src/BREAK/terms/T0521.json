@@ -1,0 +1,39 @@
+{
+  "T0521": {
+    "title": "蜜罐",
+    "aliases": [],
+    "category": "TC03",
+    "keywords": [
+      "蜜罐",
+      "Honeypot",
+      "诱饵系统",
+      "陷阱",
+      "蜜网"
+    ],
+    "definition": "故意设置的看似易受攻击的系统或资源，用于吸引、检测和研究攻击者行为的欺骗技术。",
+    "description": "蜜罐模拟真实系统的漏洞和服务，诱使攻击者投入时间和资源攻击它，同时记录攻击手法、工具和目标。按交互程度分为低交互蜜罐（模拟有限服务）和高交互蜜罐（完整操作系统）。蜜罐可以用于威胁情报收集、入侵检测、攻击溯源，但需要谨慎部署避免成为攻击跳板。",
+    "usageExample": "企业在内网部署蜜罐模拟文件服务器，一旦有人访问立即触发告警，帮助检测内网渗透行为。",
+    "relatedRisks": [
+      "R0081",
+      "R0086"
+    ],
+    "relatedAvoidances": [
+      "A0030",
+      "A0016"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [
+      {
+        "link": "https://github.com/jesusgavancho/TryHackMe_and_HackTheBox/blob/master/Introduction%20To%20Honeypots.md",
+        "title": "Introduction To Honeypots.md - GitHub"
+      },
+      {
+        "link": "https://www.sans.org/reading-room/whitepapers/detection/paper/37017",
+        "title": "Honeypots: A Sweet Solution? - SANS"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

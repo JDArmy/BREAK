@@ -1,0 +1,20 @@
+{
+  "T0491": {
+    "keywords": [
+      "NFT",
+      "Non-Fungible Token"
+    ],
+    "definition": "A unique and indivisible digital asset token on a blockchain, where each NFT possesses a distinct identifier and associated metadata.",
+    "description": "NFTs enable proof of ownership and transferability of digital assets through smart contract standards such as ERC-721. They are widely utilized in domains including digital art, gaming items, and virtual land. The uniqueness of NFTs makes them a critical infrastructure for the metaverse economy. However, they also face security challenges such as royalty circumvention, metadata tampering, and fraudulent minting.",
+    "usageExample": "An artist mints and sells a digital painting as an NFT on OpenSea, granting the buyer on-chain proof of ownership for the artwork.",
+    "references": [
+      {
+        "title": "Introduction to NFTs - Ethereum"
+      },
+      {
+        "title": "NFTs explained - The Verge"
+      }
+    ],
+    "title": "NFT"
+  }
+}

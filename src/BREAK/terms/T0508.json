@@ -1,0 +1,39 @@
+{
+  "T0508": {
+    "title": "水坑攻击",
+    "aliases": [],
+    "category": "TC02",
+    "keywords": [
+      "水坑攻击",
+      "Watering Hole Attack",
+      "战略网络入侵",
+      "间接攻击",
+      "供应链钓鱼"
+    ],
+    "definition": "攻击者入侵目标群体经常访问的合法网站，植入恶意代码感染访问者的间接攻击手段。",
+    "description": "水坑攻击得名于捕食者在水源地等待猎物的策略。攻击者通过分析目标组织员工的浏览习惯，入侵其常访问的行业论坛、新闻网站或专业社区，植入浏览器漏洞利用代码。由于网站本身合法，传统安全措施难以拦截。此攻击常用于针对政府、金融、能源等高价值行业的APT行动。",
+    "usageExample": "黑客组织入侵某能源行业协会网站，植入0day漏洞利用代码，成功感染多家电力公司员工的电脑。",
+    "relatedRisks": [
+      "R0081",
+      "R0112"
+    ],
+    "relatedAvoidances": [
+      "A0055",
+      "A0019"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [
+      {
+        "link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-099a",
+        "title": "Watering Hole Attacks - CISA"
+      },
+      {
+        "link": "https://attack.mitre.org/techniques/T1189/",
+        "title": "Drive-by Compromise - MITRE ATT&CK"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

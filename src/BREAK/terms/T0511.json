@@ -1,0 +1,41 @@
+{
+  "T0511": {
+    "title": "僵尸网络",
+    "aliases": [],
+    "category": "TC02",
+    "keywords": [
+      "僵尸网络",
+      "Botnet",
+      "肉鸡",
+      "Bot",
+      "僵尸主机",
+      "C&C服务器"
+    ],
+    "definition": "由大量被恶意软件感染和控制的联网设备组成的网络，被攻击者远程操控执行协同攻击。",
+    "description": "僵尸网络通过木马、蠕虫感染大量设备（电脑、手机、IoT设备等），形成分布式攻击力量。攻击者通过C&C（命令与控制）服务器远程下发指令，驱使僵尸设备执行DDoS攻击、垃圾邮件发送、密码爆破、挖矿、点击欺诈等任务。现代僵尸网络规模可达数百万节点，对互联网基础设施构成严重威胁。",
+    "usageExample": "Mirai僵尸网络感染数十万IoT摄像头，发起超过1Tbps的DDoS攻击瘫痪了美国东海岸的互联网服务。",
+    "relatedRisks": [
+      "R0086",
+      "R0165",
+      "R0213"
+    ],
+    "relatedAvoidances": [
+      "A0115",
+      "A0003"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [
+      {
+        "link": "https://blog.cloudflare.com/tag/botnet/",
+        "title": "Botnet - The Cloudflare Blog"
+      },
+      {
+        "link": "https://www.cisa.gov/news-events/news/understanding-denial-service-attacks",
+        "title": "Understanding Denial-of-Service Attacks - CISA"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

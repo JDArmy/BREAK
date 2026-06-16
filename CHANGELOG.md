@@ -1,5 +1,20 @@
 # Change log
 
+## 2.14.0
+
+- 新增：33个行业术语（T0489-T0521）
+  - **区块链术语**（15个）：智能合约、DeFi、NFT、DAO、Layer2、跨链桥、闪电贷、预言机、Gas费、私钥、助记词、冷钱包、热钱包、Rug Pull、MEV
+  - **社交工程与钓鱼**（9个）：社会工程学、网络钓鱼、鱼叉式钓鱼、捕鲸攻击、水坑攻击、恶意软件、勒索软件、僵尸网络、APT攻击
+  - **网络安全基础**（9个）：漏洞、0day漏洞、防火墙、入侵检测系统、加密、数字证书、VPN、沙箱、蜜罐
+- 完善：术语引用链接质量提升
+  - 验证并修复28个失效引用链接（404/403/超时）
+  - 使用Scrapingdog API搜索替代来源
+  - 引用来源：NIST、CISA、FBI、Microsoft、Cloudflare、Ethereum Foundation等权威站点
+- 新增：完整的中英文术语内容
+  - 所有术语包含definition、description、usageExample
+  - 英文内容通过DeepSeek-V4-Pro模型翻译
+  - 中英文数据架构与risks/avoidances保持一致
+
 ## 2.13.0
 
 - 重构：区块链安全场景优化（5个场景 → 3个场景）
