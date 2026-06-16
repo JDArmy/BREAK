@@ -20,7 +20,9 @@ const codeSplittingGroups = [
   { name: "BREAK-Avoidances", test: toChunkTest("/src/BREAK/avoidances"), maxSize: 300 * 1024 },
   { name: "BREAK-AttackTools", test: toChunkTest("/src/BREAK/attack-tools"), maxSize: 300 * 1024 },
   { name: "BREAK-ThreatActors", test: toChunkTest("/src/BREAK/threat-actors"), maxSize: 300 * 1024 },
-  { name: "BREAK", test: toChunkTest("/src/BREAK") },
+  { name: "BREAK-Terms", test: toChunkTest("/src/BREAK/terms"), maxSize: 300 * 1024 },
+  { name: "BREAK-BusinessScenes", test: toChunkTest("/src/BREAK/business-scenes"), maxSize: 300 * 1024 },
+  { name: "BREAK", test: toChunkTest("/src/BREAK"), maxSize: 300 * 1024 },
   {
     name: "i18n-en-Risks",
     test: toChunkTest("/src/i18n/en/BREAK/risks"),
@@ -41,15 +43,25 @@ const codeSplittingGroups = [
     test: toChunkTest("/src/i18n/en/BREAK/threat-actors"),
     maxSize: 300 * 1024,
   },
-  { name: "i18n-en-BREAK", test: toChunkTest("/src/i18n/en/BREAK") },
-  { name: "i18n", test: toChunkTest("/src/i18n") },
+  {
+    name: "i18n-en-Terms",
+    test: toChunkTest("/src/i18n/en/BREAK/terms"),
+    maxSize: 300 * 1024,
+  },
+  {
+    name: "i18n-en-BusinessScenes",
+    test: toChunkTest("/src/i18n/en/BREAK/business-scenes"),
+    maxSize: 300 * 1024,
+  },
+  { name: "i18n-en-BREAK", test: toChunkTest("/src/i18n/en/BREAK"), maxSize: 300 * 1024 },
+  { name: "i18n", test: toChunkTest("/src/i18n"), maxSize: 300 * 1024 },
   { name: "fuse.js", test: toChunkTest("node_modules/fuse.js") },
   { name: "zrender", test: toChunkTest("node_modules/zrender") },
-  { name: "echarts", test: toChunkTest("node_modules/echarts") },
+  { name: "echarts", test: toChunkTest("node_modules/echarts"), maxSize: 300 * 1024 },
   { name: "vue-router", test: toChunkTest("node_modules/vue-router") },
   { name: "vue-i18n", test: toChunkTest("node_modules/vue-i18n") },
   { name: "vue", test: toChunkTest("node_modules/vue") },
-  { name: "element-plus", test: toChunkTest("node_modules/element-plus") },
+  { name: "element-plus", test: toChunkTest("node_modules/element-plus"), maxSize: 300 * 1024 },
 ];
 
 // https://vitejs.dev/config/
