@@ -22,6 +22,20 @@ const emit = defineEmits<{
 <template>
   <div v-if="touchActionVisible" class="touch-action-overlay" @click="emit('touchActionClose')">
     <div class="touch-action-sheet" @click.stop>
+      <div class="touch-action-item" @click="emit('openTouchNodeDetailDrawer')">
+        {{ $t('relationView.nodeDetail') }}
+      </div>
+      <div
+        class="touch-action-item"
+        :class="{ disabled: disableContextMenuOpenAsRoot }"
+        @click="!disableContextMenuOpenAsRoot && emit('gotoNewRelationView')"
+      >
+        {{ $t('openAsRoot') }}
+      </div>
+      <div class="touch-action-item" @click="emit('copyContextNodeCsv')">
+        {{ $t('relationView.copyRelatedEntities') }}
+      </div>
+      <div class="touch-action-divider"></div>
       <div
         v-for="(item, key) in RelationTypeMapping"
         :key="key"
@@ -39,19 +53,6 @@ const emit = defineEmits<{
         {{ $t('fetchAllRelations') }}
       </div>
       <div class="touch-action-divider"></div>
-      <div
-        class="touch-action-item"
-        :class="{ disabled: disableContextMenuOpenAsRoot }"
-        @click="!disableContextMenuOpenAsRoot && emit('gotoNewRelationView')"
-      >
-        {{ $t('openAsRoot') }}
-      </div>
-      <div class="touch-action-item" @click="emit('openTouchNodeDetailDrawer')">
-        {{ $t('relationView.nodeDetail') }}
-      </div>
-      <div class="touch-action-item" @click="emit('copyContextNodeCsv')">
-        {{ $t('relationView.copyCsv') }}
-      </div>
       <div class="touch-action-item" @click="emit('gotoItemDetailView')">
         <span class="menu-action-with-icon">
           <el-icon><TopRight /></el-icon>

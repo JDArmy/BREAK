@@ -182,6 +182,8 @@ export const createRelationViewAssembly = ({
   });
 
   networkInteractionsBridge.handleNodeTouch = (node) => nodeActions.handleNodeTouch(node as ReturnType<typeof toContextNode>);
+  networkInteractionsBridge.openNodeDetail = (node) =>
+    nodeActions.focusNodeInDrawer((node as ReturnType<typeof toContextNode>).id);
   networkInteractionsBridge.nodeClick = (node, event) =>
     nodeActions.nodeClick(node as ReturnType<typeof toContextNode>, event);
   setClearDraggedNodePositions(clearDraggedNodePositions);

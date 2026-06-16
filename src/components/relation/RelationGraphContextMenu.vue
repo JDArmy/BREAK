@@ -29,9 +29,22 @@ const setDropdownRef = (instance: DropdownInstance | undefined) => {
     <span class="el-dropdown-link"></span>
     <template #dropdown>
       <el-dropdown-menu>
+        <el-dropdown-item @click="emit('openContextNodeDetailDrawer')">
+          {{ $t('relationView.nodeDetail') }}
+        </el-dropdown-item>
         <el-dropdown-item
-          v-for="(item, key) in RelationTypeMapping"
+          :disabled="disableContextMenuOpenAsRoot"
+          @click="emit('gotoNewRelationView')"
+        >
+          {{ $t('openAsRoot') }}
+        </el-dropdown-item>
+        <el-dropdown-item @click="emit('copyContextNodeCsv')">
+          {{ $t('relationView.copyRelatedEntities') }}
+        </el-dropdown-item>
+        <el-dropdown-item
+          v-for="([key, item], index) in Object.entries(RelationTypeMapping)"
           :key="key"
+          :divided="index === 0"
           :disabled="item.disableContextMenu.value"
           @click="emit('clickContextMenu', key as RelationType)"
         >
@@ -42,19 +55,6 @@ const setDropdownRef = (instance: DropdownInstance | undefined) => {
           @click="emit('clickContextMenu', RelationType.all)"
         >
           {{ $t('fetchAllRelations') }}
-        </el-dropdown-item>
-        <el-dropdown-item
-          divided
-          :disabled="disableContextMenuOpenAsRoot"
-          @click="emit('gotoNewRelationView')"
-        >
-          {{ $t('openAsRoot') }}
-        </el-dropdown-item>
-        <el-dropdown-item @click="emit('openContextNodeDetailDrawer')">
-          {{ $t('relationView.nodeDetail') }}
-        </el-dropdown-item>
-        <el-dropdown-item @click="emit('copyContextNodeCsv')">
-          {{ $t('relationView.copyCsv') }}
         </el-dropdown-item>
         <el-dropdown-item divided @click="emit('gotoItemDetailView')">
           <span class="menu-action-with-icon">

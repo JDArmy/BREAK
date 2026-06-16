@@ -19,7 +19,12 @@ const themeOptions: { mode: ThemeMode; labelKey: string; icon: "sun" | "moon" | 
 </script>
 
 <template>
-  <el-dropdown class="theme-toggle" trigger="click" @command="(m: ThemeMode) => setTheme(m)">
+  <el-dropdown
+    class="theme-toggle"
+    trigger="click"
+    placement="bottom"
+    @command="(m: ThemeMode) => setTheme(m)"
+  >
     <span class="el-dropdown-link">
       <!-- 月亮图标：当前暗色时显示 -->
       <svg v-if="isDark" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -92,6 +97,8 @@ const themeOptions: { mode: ThemeMode; labelKey: string; icon: "sun" | "moon" | 
   display: flex;
   align-items: center;
   gap: 4px;
+  height: var(--el-menu-item-height);
+  line-height: var(--el-menu-item-height);
   color: var(--el-menu-text-color);
   cursor: pointer;
 }

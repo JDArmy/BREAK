@@ -61,7 +61,7 @@ const codeSplittingGroups = [
   { name: "vue-router", test: toChunkTest("node_modules/vue-router") },
   { name: "vue-i18n", test: toChunkTest("node_modules/vue-i18n") },
   { name: "vue", test: toChunkTest("node_modules/vue") },
-  { name: "element-plus", test: toChunkTest("node_modules/element-plus"), maxSize: 300 * 1024 },
+  { name: "element-plus", test: toChunkTest("node_modules/element-plus") },
 ];
 
 // https://vitejs.dev/config/

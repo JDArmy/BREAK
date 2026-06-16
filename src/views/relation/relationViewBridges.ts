@@ -7,6 +7,7 @@ export const createRenderNetworkChartBridge = () => ({
 
 export const createNetworkInteractionsBridge = <TContextNode>() => ({
   handleNodeTouch: (() => {}) as (node: TContextNode) => void,
+  openNodeDetail: (() => {}) as (node: TContextNode) => void,
   nodeClick: (() => {}) as (node: TContextNode, event: MouseEvent) => void,
 });
 

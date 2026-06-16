@@ -18,6 +18,7 @@ interface CreateNetworkChartControllerOptions {
   getDownloadFilename: () => string;
   interactionsBridge: {
     handleNodeTouch: (node: unknown) => void;
+    openNodeDetail: (node: unknown) => void;
     nodeClick: (node: unknown, event: MouseEvent) => void;
   };
 }
@@ -123,9 +124,9 @@ export const createNetworkChartController = ({
       selectedNetworkNodeId.value = (params.data as GraphNode).id;
     });
     networkChart.on("dblclick", (params) => {
-      if (params.dataType !== "node" || !params.event?.event) return;
+      if (params.dataType !== "node") return;
       selectedNetworkNodeId.value = (params.data as GraphNode).id;
-      interactionsBridge.nodeClick(toContextNode(params.data as GraphNode), params.event.event as MouseEvent);
+      interactionsBridge.openNodeDetail(toContextNode(params.data as GraphNode));
     });
     networkChart.on("contextmenu", (params) => {
       if (params.dataType !== "node" || !params.event?.event) return;
@@ -208,6 +209,7 @@ export const createNetworkChartController = ({
       animationDurationUpdate: 300,
       tooltip: {
         trigger: "item",
+        showDelay: 500,
         backgroundColor: tooltipBackground,
         borderColor: tooltipBorder,
         borderWidth: 1,
