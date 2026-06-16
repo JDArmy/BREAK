@@ -160,9 +160,25 @@ const setNetworkScrollerRef = (el: Element | ComponentPublicInstance | null) => 
   overflow: hidden;
 }
 
+.network-graph-pane:fullscreen {
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+}
+
 @media (max-width: 767px) {
   .network-graph-pane {
     overflow: hidden;
+  }
+
+  .network-graph-pane--app-fullscreen {
+    position: fixed;
+    z-index: 5000;
+    inset: 0;
+    width: 100dvw;
+    height: 100dvh;
+    min-height: 100dvh;
+    border: 0;
   }
 
   .network-canvas-scroll {

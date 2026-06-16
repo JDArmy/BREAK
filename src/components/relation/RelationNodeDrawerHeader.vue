@@ -118,4 +118,42 @@ const { t } = useI18n();
   align-items: center;
   gap: 6px;
 }
+
+@media (max-width: 767px) {
+  .node-detail-title {
+    gap: 4px 8px;
+    margin-bottom: 6px;
+  }
+
+  .node-detail-id {
+    font-size: 14px;
+  }
+
+  .node-detail-name {
+    width: 100%;
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .node-detail-type {
+    margin-bottom: 5px;
+  }
+
+  .node-detail-counts,
+  .node-detail-actions {
+    gap: 5px;
+    margin-bottom: 5px;
+  }
+
+  .node-detail-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+
+  .node-detail-actions :deep(.el-button) {
+    width: 100%;
+    margin-left: 0;
+  }
+}
 </style>

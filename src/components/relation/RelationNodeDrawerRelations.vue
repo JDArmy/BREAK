@@ -57,30 +57,32 @@ const relationRowClassName = ({ row }: { row: { isActive: boolean } }) =>
     </div>
   </div>
 
-  <el-table
-    :data="tableRows"
-    size="small"
-    stripe
-    table-layout="fixed"
-    :row-class-name="relationRowClassName"
-    class="node-relation-table"
-  >
-    <el-table-column prop="relationSummary" :label="t('relationView.allRelations')" min-width="132" />
-    <el-table-column prop="directness" :label="t('relationView.csvHeaderDirectness')" width="76" />
-    <el-table-column :label="t('relationView.csvHeaderTargetTitle')" min-width="164">
-      <template #default="{ row }">
-        <button
-          type="button"
-          class="node-relation-link"
-          :title="row.otherNodeType"
-          @click="emit('open-node-detail', row.otherNodeId)"
-        >
-          <span class="node-relation-link-id">{{ row.otherNodeId }}</span>
-          <span>{{ row.otherNodeTitle }}</span>
-        </button>
-      </template>
-    </el-table-column>
-  </el-table>
+  <div class="node-relation-table-scroll">
+    <el-table
+      :data="tableRows"
+      size="small"
+      stripe
+      table-layout="fixed"
+      :row-class-name="relationRowClassName"
+      class="node-relation-table"
+    >
+      <el-table-column prop="relationSummary" :label="t('relationView.allRelations')" min-width="132" />
+      <el-table-column prop="directness" :label="t('relationView.csvHeaderDirectness')" width="76" />
+      <el-table-column :label="t('relationView.csvHeaderTargetTitle')" min-width="164">
+        <template #default="{ row }">
+          <button
+            type="button"
+            class="node-relation-link"
+            :title="row.otherNodeType"
+            @click="emit('open-node-detail', row.otherNodeId)"
+          >
+            <span class="node-relation-link-id">{{ row.otherNodeId }}</span>
+            <span>{{ row.otherNodeTitle }}</span>
+          </button>
+        </template>
+      </el-table-column>
+    </el-table>
+  </div>
 </template>
 
 <style scoped>
@@ -127,6 +129,10 @@ const relationRowClassName = ({ row }: { row: { isActive: boolean } }) =>
   width: 100%;
 }
 
+.node-relation-table-scroll {
+  width: 100%;
+}
+
 .node-relation-table :deep(.el-table__cell) {
   vertical-align: top;
 }
@@ -159,5 +165,52 @@ const relationRowClassName = ({ row }: { row: { isActive: boolean } }) =>
 
 .node-relation-link-id {
   font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .node-explain-block {
+    margin-top: 10px;
+  }
+
+  .node-explain-header {
+    align-items: flex-start;
+    gap: 6px;
+    margin-bottom: 6px;
+  }
+
+  .node-explain-actions {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 5px;
+  }
+
+  .copy-feedback {
+    width: 100%;
+    justify-content: flex-end;
+    font-size: 11px;
+  }
+
+  .node-relation-table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .node-relation-table {
+    min-width: 430px;
+  }
+
+  .node-relation-table :deep(.el-table__cell) {
+    padding: 5px 0;
+  }
+
+  .node-relation-table :deep(.cell) {
+    padding: 0 6px;
+    font-size: 11px;
+    line-height: 1.35;
+  }
+
+  .node-relation-link {
+    gap: 3px;
+  }
 }
 </style>

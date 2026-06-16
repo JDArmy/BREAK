@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useI18n } from "vue-i18n";
+import { useBreakpoints } from "@/composables/useBreakpoints";
 import RelationNodeDrawerHeader from "@/components/relation/RelationNodeDrawerHeader.vue";
 import RelationNodeDrawerInsights from "@/components/relation/RelationNodeDrawerInsights.vue";
 import RelationNodeDrawerRelations from "@/components/relation/RelationNodeDrawerRelations.vue";
@@ -92,6 +93,7 @@ const emit = defineEmits<{
 }>();
 
 const { t } = useI18n();
+const { isMobile } = useBreakpoints();
 
 const drawerVisible = computed({
   get: () => props.modelValue,
@@ -103,8 +105,8 @@ const drawerVisible = computed({
   <el-drawer
     v-model="drawerVisible"
     :title="t('relationView.nodeDetail')"
-    direction="rtl"
-    size="520px"
+    :direction="isMobile ? 'btt' : 'rtl'"
+    :size="isMobile ? '82dvh' : '520px'"
     append-to-body
     :z-index="4000"
     class="relation-drawer"
@@ -165,5 +167,24 @@ const drawerVisible = computed({
 .relation-drawer :deep(.el-drawer__body) {
   padding-top: 0;
   overflow-y: auto;
+}
+
+@media (max-width: 767px) {
+  .relation-drawer :deep(.el-drawer) {
+    width: 100% !important;
+    max-width: 100vw;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .relation-drawer :deep(.el-drawer__header) {
+    padding: 12px 14px 8px;
+    margin-bottom: 4px;
+  }
+
+  .relation-drawer :deep(.el-drawer__body) {
+    padding: 0 12px 14px;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 </style>

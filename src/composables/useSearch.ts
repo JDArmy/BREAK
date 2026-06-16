@@ -5,6 +5,20 @@ import type { FuseResultMatch } from "fuse.js";
 import BREAK from "@/BREAK";
 import { getMessageStringArray, getNestedMessageValue } from "@/utils/i18nMessage";
 
+/**
+ * 全文搜索功能
+ *
+ * 基于 Fuse.js 的模糊搜索，支持中英文双语、关键词匹配、语言切换响应式更新。
+ *
+ * @example
+ * ```ts
+ * const { search } = useSearch()
+ * const results = search('钓鱼攻击')
+ * // results.risk -> 风险类搜索结果
+ * // results.avoidance -> 规避手段类搜索结果
+ * ```
+ */
+
 /** 实体类型 */
 export type EntityType = "risk" | "avoidance" | "attackTool" | "threatActor" | "term";
 

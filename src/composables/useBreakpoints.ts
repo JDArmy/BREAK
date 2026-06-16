@@ -6,6 +6,20 @@ const BP_MD = 768; // >=768px 手机/平板分界
 const BP_LG = 992; // >=992px 平板/桌面分界
 const BP_XL = 1200; // >=1200px 桌面
 
+/**
+ * 响应式断点系统
+ *
+ * 提供与 Element Plus 一致的断点检测，支持 SSR。
+ * 断点定义：XS(<480px) | SM(480-767px) | MD(768-991px) | LG(992-1199px) | XL(≥1200px)
+ *
+ * @example
+ * ```ts
+ * const { isMobile, isDesktop } = useBreakpoints()
+ * if (isMobile.value) {
+ *   // 移动端布局
+ * }
+ * ```
+ */
 export function useBreakpoints() {
   const width = ref(typeof window === "undefined" ? BP_XL : window.innerWidth);
 

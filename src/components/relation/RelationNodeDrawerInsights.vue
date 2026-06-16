@@ -368,4 +368,81 @@ const { t } = useI18n();
   font-size: 12px;
   line-height: 1.65;
 }
+
+@media (max-width: 767px) {
+  .node-explain-block {
+    margin-top: 10px;
+  }
+
+  .node-explain-block h3 {
+    margin-bottom: 6px;
+    font-size: 12px;
+  }
+
+  .node-insight-panel {
+    gap: 8px;
+    padding: 8px 9px;
+    border-radius: 7px;
+  }
+
+  .node-relation-item {
+    padding-top: 8px;
+    line-height: 1.45;
+  }
+
+  .node-relation-directness {
+    margin-left: 4px;
+    padding: 1px 6px;
+  }
+
+  .node-role-chip {
+    padding: 3px 8px;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+  }
+
+  .node-path-step {
+    gap: 6px;
+    padding-left: 8px;
+  }
+
+  .node-path-node {
+    gap: 5px;
+    padding: 7px 8px;
+    border-radius: 7px;
+  }
+
+  .node-path-node-main {
+    display: block;
+    line-height: 1.55;
+  }
+
+  .node-path-node-id {
+    margin-right: 6px;
+  }
+
+  .node-path-node-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+
+  .node-path-node-actions :deep(.el-button) {
+    justify-content: center;
+    margin-left: 0;
+    min-width: 0;
+  }
+
+  .node-path-relation {
+    padding-left: 8px;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+  }
+
+  .node-role-list,
+  .node-preview-groups,
+  .node-detail-counts {
+    gap: 5px;
+  }
+}
 </style>
