@@ -156,7 +156,7 @@ export const createSankeyChartController = ({
             layoutIterations: sankeyLayoutIterations.value,
             draggable: true,
             emphasis: {
-              focus: "adjacency",
+              focus: isMobile.value ? "none" : "adjacency",
             },
             lineStyle: {
               color: "gradient",

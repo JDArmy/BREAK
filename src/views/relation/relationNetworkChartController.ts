@@ -143,10 +143,12 @@ export const createNetworkChartController = ({
     });
     networkChart.on("mouseup", (params) => {
       clearLongPressTimer();
+      if (isMobile.value) return;
       persistDraggedNodePosition(params);
     });
     networkChart.on("dragend", (params) => {
       clearLongPressTimer();
+      if (isMobile.value) return;
       persistDraggedNodePosition(params);
     });
     networkChart.on("mousedown", (params) => {
@@ -272,7 +274,7 @@ export const createNetworkChartController = ({
             links: networkData.links,
             center: ["52%", "50%"],
             roam: true,
-            draggable: true,
+            draggable: !isMobile.value,
             force: isForceLayout
               ? {
                   repulsion: 1240,
@@ -305,22 +307,24 @@ export const createNetworkChartController = ({
               formatter: (params: { data?: GraphLink }) => params.data?.text ?? "",
             },
             emphasis: {
-              focus: "adjacency",
+              focus: isMobile.value ? "none" : "adjacency",
               lineStyle: {
                 width: 2,
               },
             },
-            blur: {
-              itemStyle: {
-                opacity: isDark.value ? 0.12 : 0.15,
-              },
-              label: {
-                opacity: isDark.value ? 0.20 : 0.24,
-              },
-              lineStyle: {
-                opacity: isDark.value ? 0.06 : 0.08,
-              },
-            },
+            blur: isMobile.value
+              ? undefined
+              : {
+                  itemStyle: {
+                    opacity: isDark.value ? 0.12 : 0.15,
+                  },
+                  label: {
+                    opacity: isDark.value ? 0.20 : 0.24,
+                  },
+                  lineStyle: {
+                    opacity: isDark.value ? 0.06 : 0.08,
+                  },
+                },
             zoom: networkState.zoom,
             scaleLimit: {
               min: 0.2,
