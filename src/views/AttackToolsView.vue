@@ -6,10 +6,12 @@ import BREAK from "@/BREAK";
 import KnowledgeSplitView from "@/components/KnowledgeSplitView.vue";
 import ReferenceList from "@/components/ReferenceList.vue";
 import { getMessageStringArray } from "@/utils/i18nMessage";
+import { useBreakpoints } from "@/composables/useBreakpoints";
 
 const route = useRoute();
 const router = useRouter();
 const { t, locale, messages } = useI18n();
+const { isMobile } = useBreakpoints();
 
 const attackToolKeys = Object.keys(BREAK.attackTools);
 // 优先从路由参数获取，否则从 hash 获取，最后使用默认值
@@ -132,7 +134,7 @@ const openRelationGraph = (atKey: string) => {
           <router-link
             v-for="rKey in selectedAttackTool.directCauseRisks"
             :key="rKey"
-            :to="{ name: 'risks', hash: `#${rKey}` }"
+            :to="isMobile ? { name: 'risksDetail', params: { rKey } } : { name: 'risks', hash: `#${rKey}` }"
             class="entity-link"
           >
             {{ rKey }}: {{ $t(`BREAK.risks.${rKey}.title`) }}
@@ -145,7 +147,7 @@ const openRelationGraph = (atKey: string) => {
           <router-link
             v-for="rKey in selectedAttackTool.indirectSupportRisks"
             :key="rKey"
-            :to="{ name: 'risks', hash: `#${rKey}` }"
+            :to="isMobile ? { name: 'risksDetail', params: { rKey } } : { name: 'risks', hash: `#${rKey}` }"
             class="entity-link"
           >
             {{ rKey }}: {{ $t(`BREAK.risks.${rKey}.title`) }}
@@ -158,7 +160,7 @@ const openRelationGraph = (atKey: string) => {
           <router-link
             v-for="aKey in selectedAttackTool.avoidances"
             :key="aKey"
-            :to="{ name: 'avoidances', hash: `#${aKey}` }"
+            :to="isMobile ? { name: 'avoidancesDetail', params: { aKey } } : { name: 'avoidances', hash: `#${aKey}` }"
             class="entity-link"
           >
             {{ aKey }}: {{ $t(`BREAK.avoidances.${aKey}.title`) }}
@@ -171,7 +173,7 @@ const openRelationGraph = (atKey: string) => {
           <router-link
             v-for="taKey in builderThreatActorKeys"
             :key="taKey"
-            :to="{ name: 'threatActors', hash: `#${taKey}` }"
+            :to="isMobile ? { name: 'threatActorsDetail', params: { taKey } } : { name: 'threatActors', hash: `#${taKey}` }"
             class="entity-link"
           >
             {{ taKey }}: {{ $t(`BREAK.threatActors.${taKey}.title`) }}
@@ -184,7 +186,7 @@ const openRelationGraph = (atKey: string) => {
           <router-link
             v-for="taKey in userThreatActorKeys"
             :key="taKey"
-            :to="{ name: 'threatActors', hash: `#${taKey}` }"
+            :to="isMobile ? { name: 'threatActorsDetail', params: { taKey } } : { name: 'threatActors', hash: `#${taKey}` }"
             class="entity-link"
           >
             {{ taKey }}: {{ $t(`BREAK.threatActors.${taKey}.title`) }}
@@ -197,7 +199,7 @@ const openRelationGraph = (atKey: string) => {
           <router-link
             v-for="tKey in relatedTermKeys"
             :key="tKey"
-            :to="{ name: 'terms', hash: `#${tKey}` }"
+            :to="isMobile ? { name: 'termsDetail', params: { tKey } } : { name: 'terms', hash: `#${tKey}` }"
             class="entity-link"
           >
             {{ tKey }}: {{ $t(`BREAK.terms.${tKey}.title`) }}

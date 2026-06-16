@@ -6,9 +6,11 @@ import BREAK from "@/BREAK";
 import KnowledgeSplitView from "@/components/KnowledgeSplitView.vue";
 import ReferenceList from "@/components/ReferenceList.vue";
 import { getMessageStringArray, getNestedMessageValue } from "@/utils/i18nMessage";
+import { useBreakpoints } from "@/composables/useBreakpoints";
 
 const route = useRoute();
 const { locale, messages } = useI18n();
+const { isMobile } = useBreakpoints();
 
 const termKeys = Object.keys(BREAK.terms);
 
@@ -130,7 +132,7 @@ const selectedTermAliases = computed(() => getTermStringArray(selectedTermKey.va
           <router-link
             v-for="taKey in selectedTerm.relatedThreatActors"
             :key="taKey"
-            :to="{ name: 'threatActors', hash: `#${taKey}` }"
+            :to="isMobile ? { name: 'threatActorsDetail', params: { taKey } } : { name: 'threatActors', hash: `#${taKey}` }"
             class="entity-link"
           >
             {{ taKey }}: {{ $t(`BREAK.threatActors.${taKey}.title`) }}
@@ -143,7 +145,7 @@ const selectedTermAliases = computed(() => getTermStringArray(selectedTermKey.va
           <router-link
             v-for="atKey in selectedTerm.relatedAttackTools"
             :key="atKey"
-            :to="{ name: 'attackTools', hash: `#${atKey}` }"
+            :to="isMobile ? { name: 'attackToolsDetail', params: { atKey } } : { name: 'attackTools', hash: `#${atKey}` }"
             class="entity-link"
           >
             {{ atKey }}: {{ $t(`BREAK.attackTools.${atKey}.title`) }}
@@ -156,7 +158,7 @@ const selectedTermAliases = computed(() => getTermStringArray(selectedTermKey.va
           <router-link
             v-for="rKey in selectedTerm.relatedRisks"
             :key="rKey"
-            :to="{ name: 'risks', hash: `#${rKey}` }"
+            :to="isMobile ? { name: 'risksDetail', params: { rKey } } : { name: 'risks', hash: `#${rKey}` }"
             class="entity-link"
           >
             {{ rKey }}: {{ $t(`BREAK.risks.${rKey}.title`) }}
@@ -169,7 +171,7 @@ const selectedTermAliases = computed(() => getTermStringArray(selectedTermKey.va
           <router-link
             v-for="aKey in selectedTerm.relatedAvoidances"
             :key="aKey"
-            :to="{ name: 'avoidances', hash: `#${aKey}` }"
+            :to="isMobile ? { name: 'avoidancesDetail', params: { aKey } } : { name: 'avoidances', hash: `#${aKey}` }"
             class="entity-link"
           >
             {{ aKey }}: {{ $t(`BREAK.avoidances.${aKey}.title`) }}

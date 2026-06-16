@@ -6,10 +6,12 @@ import BREAK from "@/BREAK";
 import KnowledgeSplitView from "@/components/KnowledgeSplitView.vue";
 import ReferenceList from "@/components/ReferenceList.vue";
 import { getMessageStringArray } from "@/utils/i18nMessage";
+import { useBreakpoints } from "@/composables/useBreakpoints";
 
 const route = useRoute();
 const router = useRouter();
 const { t, locale, messages } = useI18n();
+const { isMobile } = useBreakpoints();
 
 const risks = Object.keys(BREAK.risks);
 const selectedRiskKey = ref(
@@ -128,7 +130,7 @@ const openRelationGraph = (rKey: string) => {
           <router-link
             v-for="aKey in selectedRisk.avoidances"
             :key="aKey"
-            :to="{ name: 'avoidances', hash: `#${aKey}` }"
+            :to="isMobile ? { name: 'avoidancesDetail', params: { aKey } } : { name: 'avoidances', hash: `#${aKey}` }"
             class="entity-link"
           >
             {{ aKey }}: {{ $t(`BREAK.avoidances.${aKey}.title`) }}
@@ -141,7 +143,7 @@ const openRelationGraph = (rKey: string) => {
           <router-link
             v-for="atKey in getRiskDescriptionTools(selectedRiskKey)"
             :key="atKey"
-            :to="{ name: 'attackTools', hash: `#${atKey}` }"
+            :to="isMobile ? { name: 'attackToolsDetail', params: { atKey } } : { name: 'attackTools', hash: `#${atKey}` }"
             class="entity-link"
           >
             {{ atKey }}: {{ $t(`BREAK.attackTools.${atKey}.title`) }}
@@ -154,7 +156,7 @@ const openRelationGraph = (rKey: string) => {
           <router-link
             v-for="tKey in getRelatedTerms(selectedRiskKey)"
             :key="tKey"
-            :to="{ name: 'terms', hash: `#${tKey}` }"
+            :to="isMobile ? { name: 'termsDetail', params: { tKey } } : { name: 'terms', hash: `#${tKey}` }"
             class="entity-link"
           >
             {{ tKey }}: {{ $t(`BREAK.terms.${tKey}.title`) }}
