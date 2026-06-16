@@ -17,9 +17,22 @@
     "description": "攻击者通常组织大量账号，针对特定商品或店铺进行恶意下单、虚假退货或批量差评，以此勒索商家或套取平台赔付金。这类行为直接破坏市场秩序，常导致商家资金受损、店铺降权，是电商生态中的典型黑产操作。",
     "relatedRisks": [
       "R0068",
-      "R0068-002"
+      "R0068-002",
+      "R0005"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0059",
+      "A0061",
+      "A0044",
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0049",
+      "A0043",
+      "A0027"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0034"
@@ -27,7 +40,16 @@
     "relatedBusinessScenes": [
       "BS02"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "【黑产大数据】电商黄牛党产业链分析报告",
+        "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
+      },
+      {
+        "title": "2024年上半年互联网黑灰产研究报告",
+        "link": "https://www.threathunter.cn/blog/2024-50e66f87-abe6-4928-b031-c5c2c83c1cf0"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

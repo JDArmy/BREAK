@@ -1,9 +1,9 @@
 {
   "A0114": {
-    "title": "IoT设备安全配置强制执行",
-    "definition": "通过网络接入控制和自动化扫描，强制IoT设备满足最低安全标准才允许入网",
-    "description": "从接入层阻止不安全设备成为僵尸网络节点。实施措施：部署NAC（网络接入控制）系统，设备入网前检查固件版本、密码强度、开放端口；使用802.1X认证，未通过安全检查的设备隔离到受限VLAN；定期扫描网络内设备，发现使用默认凭证、过期固件、不必要开放端口的设备并通知管理员；自动化修复工具推送安全配置（如关闭Telnet、强制密码修改）；对无法修复的设备强制断网。BitLyft等安全方案强调从部署阶段就实施安全配置。",
+    "title": "IoT Device Security Configuration Enforcement",
+    "definition": "Enforcing minimum security standards for IoT devices through network access control and automated scanning before granting network access.",
+    "description": "Preventing insecure devices from becoming nodes in botnets at the access layer. Implementation measures: Deploying NAC (Network Access Control) systems to check firmware versions, password strength, and open ports before devices join the network; using 802.1X authentication to isolate devices that fail security checks into a restricted VLAN; periodically scanning devices within the network to identify those using default credentials, outdated firmware, or unnecessary open ports and notifying administrators; automated remediation tools pushing security configurations (e.g., disabling Telnet, enforcing password changes); forcibly disconnecting devices that cannot be remediated. Security solutions such as BitLyft emphasize implementing security configurations from the deployment phase.",
     "complexity": "Intermediate",
-    "limitation": "NAC部署和维护成本高；可能阻止合法设备入网，影响业务；自动修复可能与设备功能冲突；对已在网设备改造困难"
+    "limitation": "High deployment and maintenance costs for NAC; potential blocking of legitimate devices, impacting business operations; automated remediation may conflict with device functionality; difficulty retrofitting already-connected devices."
   }
 }

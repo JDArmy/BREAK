@@ -14,12 +14,19 @@
     ],
     "aliases": [],
     "category": "Gambling",
-    "definition": "在赌博黑产中，“掌档”指牌桌上直接经手赌资收付、按输赢结果分发现金的操盘手。",
-    "description": "The table manager is the terminal executor of cash flow for each round, responsible for counting money, taking the house's cut, and paying out winnings, ensuring instant settlement between gamblers and the house. They are usually deeply trusted by the boss and control the on-site cash pool, making them a potential vulnerability for internal theft or betrayal. In online gambling, this role is replaced by automated settlement systems, but offline operations still rely on them to maintain table order and the closed financial loop.",
+    "definition": "In gambling-related black market operations, the 'table manager' is the operator directly responsible for handling cash payments and distributing winnings based on the game's outcome at the table.",
+    "description": "The 'table manager' is the terminal executor of fund flow for each round, responsible for counting cash, taking the house's cut, and paying out winnings, ensuring instant settlement between gamblers and the banker. They are usually deeply trusted by the 'rocker' and control the on-site cash pool, but they can also become a vulnerability for internal theft or a 'rip-off.' In online gambling, this role is replaced by automated system settlements, but in physical settings, they are essential for maintaining table order and the closed loop of funds.",
     "relatedRisks": [
       "R0097"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0016",
+      "A0044",
+      "A0061",
+      "A0043",
+      "A0027"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0016"
@@ -27,7 +34,16 @@
     "relatedBusinessScenes": [
       "BS06"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review",
+        "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
+      },
+      {
+        "title": "Black Market Big Data: 2025 Internet Underground Economy Trend Annual Review",
+        "link": "https://www.163.com/dy/article/KJ2QH6LE0518STKV.html"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

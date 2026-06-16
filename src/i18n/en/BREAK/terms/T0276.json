@@ -13,14 +13,31 @@
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "升单是指在引流完成后，通过话术诱导消费者购买远超初始预期的更高价商品或服务。",
-    "description": "在美容、医美或保健品黑产中，先用低价体验引流到店，再由销售团队进行高压话术洗脑，逼迫或诱导消费者层层加码消费。消费者往往从几十元的体验被忽悠成几千甚至几万的套餐，且常伴随贷款陷阱。这是典型的线下杀猪盘变现环节。",
-    "usageExample": "They said it was a free trial, but once I was in the store, I was locked in a small room for an upsell and couldn't leave without spending tens of thousands.",
+    "definition": "Upselling is a tactic used after lead generation to manipulate consumers into purchasing products or services far exceeding their initial expectations through high-pressure scripts.",
+    "description": "In the beauty, cosmetic surgery, or health supplement black markets, low-cost trial offers are used to attract customers to physical locations. Once there, sales teams employ high-pressure brainwashing scripts to coerce or induce consumers into escalating their spending. Victims often enter expecting a small fee but end up locked into packages costing thousands, frequently accompanied by hidden loan traps. This represents a classic offline 'pig-butchering' monetization phase.",
+    "usageExample": "They said it was a free trial, but once I got there, they locked me in a small room for upselling and I couldn't leave without spending tens of thousands.",
     "relatedRisks": [
       "R0017",
       "R0005"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0021",
+      "A0059",
+      "A0060",
+      "A0061",
+      "A0006-005",
+      "A0016-002",
+      "A0051",
+      "A0037",
+      "A0046",
+      "A0057",
+      "A0054",
+      "A0044",
+      "A0016",
+      "A0043",
+      "A0027"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0009",
@@ -31,7 +48,16 @@
       "BS01",
       "BS04"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "2024 H1 Internet Underground Economy Research Report",
+        "link": "https://www.threathunter.cn/blog/2024-50e66f87-abe6-4928-b031-c5c2c83c1cf0"
+      },
+      {
+        "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review",
+        "link": "https://www.threathunter.cn/blog/2024-37b58782-063b-4426-a2f8-6de6622dbca7"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

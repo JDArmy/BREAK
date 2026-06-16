@@ -22,7 +22,14 @@
       "R0093",
       "R0121"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0024",
+      "A0015",
+      "A0016",
+      "A0054",
+      "A0044",
+      "A0061"
+    ],
     "relatedAttackTools": [
       "AT0026",
       "AT0039",
@@ -37,7 +44,16 @@
       "BS01",
       "BS15"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "诈骗洗钱模式揭露：挂单充值洗钱、商户洗钱等新模式全面蔓延",
+        "link": "https://k.sina.cn/article_7857201856_1d45362c001906fzea.html?from=tech"
+      },
+      {
+        "title": "“断卡”行动趋势下，卡商生态的现状",
+        "link": "https://www.secrss.com/articles/56050"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

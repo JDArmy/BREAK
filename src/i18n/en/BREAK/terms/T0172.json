@@ -14,13 +14,22 @@
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "A black-market code name for an insider within a bank, implying their ability to provide authentic and reliable financial data.",
-    "description": "柜台通常指被收买或利用的银行职员，他们滥用权限非法查询客户账户、流水等敏感信息。黑产以此标榜数据来源权威、时效性强，用于吸引买家。这类内鬼行为直接破坏金融机构公信力，是金融诈骗和洗钱活动的重要一环。",
-    "usageExample": "\"Counter service, full range available. Returns on Sunday. Prices are super low, hit me up for orders.\"",
+    "definition": "A code name used in underground circles for an insider within a bank, implying they can provide authentic and reliable financial data.",
+    "description": "'Counter' typically refers to a bribed or exploited bank employee who abuses their access to illegally query sensitive information such as customer accounts and transaction records. Underground actors use this term to tout the authority and timeliness of the data source to attract buyers. Such insider behavior directly undermines the credibility of financial institutions and is a critical link in financial fraud and money laundering.",
+    "usageExample": "\"Counter, full range, results back on Sunday, prices are extremely low, hit me up for orders.\"",
     "relatedRisks": [
       "R0078"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0049",
+      "A0024",
+      "A0054"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0005",
@@ -31,7 +40,16 @@
       "BS01",
       "BS04"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

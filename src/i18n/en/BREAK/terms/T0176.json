@@ -14,13 +14,20 @@
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "The act of black-market gangs manually collecting personal information from individuals targeted for poverty alleviation on a large scale via social media and other channels.",
-    "description": "手工打扶贫粉是黑产针对弱势群体的定向信息采集手段，操作者伪装成帮扶人员，诱导扶贫对象提供身份证、住址等隐私。这些数据被整理后出售给诈骗团伙，用于实施扶贫补贴诈骗或身份冒用。该行为直接利用社会善意，危害性极大。",
+    "definition": "The practice of manually collecting personal information from poverty alleviation aid recipients at scale through social media and other channels by fraud rings.",
+    "description": "This is a targeted data harvesting method used by fraud rings against vulnerable populations. Operators pose as aid workers to trick targets into providing sensitive details such as ID numbers and home addresses. The collected data is then sold to scam syndicates for use in subsidy fraud schemes or identity theft. This activity exploits social goodwill and causes significant harm.",
     "relatedRisks": [
       "R0078",
       "R0089"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0049"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0005",
@@ -34,8 +41,12 @@
     ],
     "references": [
       {
-        "title": "2024 Data Breach Risk Landscape Report",
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
         "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
     "updated": "2026-06-16"

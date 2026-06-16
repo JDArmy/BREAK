@@ -1,9 +1,9 @@
 {
   "A0163": {
-    "title": "数据最小化与用途限制",
-    "definition": "仅收集必要数据并限制使用范围，减少数据泄露风险",
-    "description": "数据治理：最小化原则；目的限制；存储期限；定期清理；匿名化；去标识化；隐私影响评估。",
+    "title": "Data Minimization and Purpose Limitation",
+    "definition": "Collect only necessary data and restrict its usage scope to reduce the risk of data breaches",
+    "description": "Data governance: minimization principle; purpose limitation; retention period; regular purging; anonymization; de-identification; privacy impact assessment.",
     "complexity": "Basic",
-    "limitation": "业务需求冲突；监管要求变化；清理可能影响功能"
+    "limitation": "Conflict with business requirements; changes in regulatory requirements; purging may affect functionality"
   }
 }

@@ -18,7 +18,16 @@
     "relatedRisks": [
       "R0097"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0016",
+      "A0044",
+      "A0061",
+      "A0006-005",
+      "A0016-002",
+      "A0051",
+      "A0037"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0016"
@@ -27,7 +36,16 @@
       "BS06",
       "BS04"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review",
+        "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
+      },
+      {
+        "title": "Black Market Big Data: 2025 Internet Underground Economy Trend Annual Review",
+        "link": "https://www.163.com/dy/article/KJ2QH6LE0518STKV.html"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

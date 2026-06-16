@@ -1,9 +1,9 @@
 {
   "A0106": {
-    "title": "源代码与配置文件密钥扫描",
-    "definition": "使用自动化工具扫描代码仓库和配置文件，检测并阻止私钥等敏感信息被提交到版本控制系统",
-    "description": "开发者误将私钥提交到Git等版本控制系统是常见泄露途径。防护措施：使用GitGuardian、TruffleHog等工具扫描提交内容；在Git pre-commit hook中集成密钥检测，发现私钥时阻止提交；扫描历史提交记录，发现泄露的私钥并强制轮换；使用.gitignore排除私钥文件（如.env、*.pem）；配置GitHub等平台的Secret Scanning功能；对公开仓库实施定期扫描。发现泄露后需立即撤销该私钥对应的证书或权限，即使已从Git历史中删除，仍需视为已泄露。",
+    "title": "Source Code and Configuration File Secret Scanning",
+    "definition": "The use of automated tools to scan code repositories and configuration files to detect and prevent sensitive information such as private keys from being committed to version control systems.",
+    "description": "Developers mistakenly committing private keys to version control systems like Git is a common leakage pathway. Protective measures include: using tools such as GitGuardian and TruffleHog to scan commits; integrating secret detection into Git pre-commit hooks to block commits when private keys are detected; scanning historical commits to identify leaked private keys and enforcing key rotation; using .gitignore to exclude private key files (e.g., .env, *.pem); enabling Secret Scanning features on platforms like GitHub; and conducting regular scans of public repositories. Upon discovering a leak, the certificate or permissions associated with the private key must be revoked immediately. Even if removed from Git history, the key must still be considered compromised.",
     "complexity": "Basic",
-    "limitation": "只能检测已知的私钥格式，对自定义格式可能漏报；无法防护开发者通过其他途径泄露；已推送到远程仓库的泄露难以完全撤销；扫描工具可能误报，影响开发效率"
+    "limitation": "Can only detect known private key formats and may miss custom formats; cannot prevent developers from leaking secrets through other channels; leaks that have already been pushed to remote repositories are difficult to completely revoke; scanning tools may produce false positives, impacting development efficiency."
   }
 }

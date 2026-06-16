@@ -1,9 +1,9 @@
 {
   "A0096": {
-    "title": "智能合约静态分析工具",
-    "definition": "使用自动化工具对智能合约源代码或字节码进行扫描，识别常见漏洞模式和安全缺陷",
-    "description": "静态分析工具通过模式匹配、数据流分析、符号执行等技术，自动检测智能合约中的安全问题。常用工具包括Slither（基于Solidity AST的静态分析）、Mythril（符号执行和污点分析）、Securify（形式化验证）等。这些工具可以快速发现重入漏洞、整数溢出、未检查的外部调用、访问控制缺陷等常见问题。建议在开发过程中集成到CI/CD流程，实现持续安全检测。结合多个工具使用可以提高检测覆盖率，降低漏报风险。",
+    "title": "Smart Contract Static Analysis Tools",
+    "definition": "Automated tools that scan smart contract source code or bytecode to identify common vulnerability patterns and security flaws.",
+    "description": "Static analysis tools automatically detect security issues in smart contracts through techniques such as pattern matching, data flow analysis, and symbolic execution. Commonly used tools include Slither (static analysis based on Solidity AST), Mythril (symbolic execution and taint analysis), Securify (formal verification), and others. These tools can quickly identify common issues such as reentrancy vulnerabilities, integer overflows, unchecked external calls, and access control flaws. It is recommended to integrate them into the CI/CD pipeline during the development process to enable continuous security detection. Combining multiple tools can improve detection coverage and reduce the risk of false negatives.",
     "complexity": "Intermediate",
-    "limitation": "静态分析存在误报和漏报问题；无法检测复杂的业务逻辑漏洞；对新型攻击模式的检测能力有限；需要配合人工审计使用"
+    "limitation": "Static analysis is prone to false positives and false negatives; it cannot detect complex business logic vulnerabilities; its ability to detect novel attack patterns is limited; it must be used in conjunction with manual auditing."
   }
 }

@@ -19,7 +19,14 @@
       "R0060",
       "R0093"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0024",
+      "A0015",
+      "A0016",
+      "A0054",
+      "A0044",
+      "A0061"
+    ],
     "relatedAttackTools": [
       "AT0039",
       "AT0040"
@@ -34,6 +41,14 @@
       {
         "title": "【黑产大数据】2025年互联网黑灰产趋势年度总结",
         "link": "https://www.163.com/dy/article/KJ2QH6LE0518STKV.html"
+      },
+      {
+        "title": "诈骗洗钱模式揭露：挂单充值洗钱、商户洗钱等新模式全面蔓延",
+        "link": "https://k.sina.cn/article_7857201856_1d45362c001906fzea.html?from=tech"
+      },
+      {
+        "title": "“断卡”行动趋势下，卡商生态的现状",
+        "link": "https://www.secrss.com/articles/56050"
       }
     ],
     "updated": "2026-06-16"

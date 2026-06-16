@@ -25,7 +25,16 @@
       "R0030",
       "R0030-001"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0021",
+      "A0059",
+      "A0060",
+      "A0061",
+      "A0007",
+      "A0016-003",
+      "A0024"
+    ],
     "relatedAttackTools": [
       "AT0023",
       "AT0006"
@@ -38,7 +47,16 @@
     "relatedBusinessScenes": [
       "BS02"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "2024年上半年互联网黑灰产研究报告",
+        "link": "https://www.threathunter.cn/blog/2024-50e66f87-abe6-4928-b031-c5c2c83c1cf0"
+      },
+      {
+        "title": "【黑产大数据】2024年互联网黑灰产趋势年度总结",
+        "link": "https://www.threathunter.cn/blog/2024-37b58782-063b-4426-a2f8-6de6622dbca7"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

@@ -25,7 +25,12 @@
       "R0055",
       "R0064"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0059",
+      "A0061",
+      "A0044"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0002",
@@ -35,7 +40,16 @@
     "relatedBusinessScenes": [
       "BS02"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "【黑产大数据】电商黄牛党产业链分析报告",
+        "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
+      },
+      {
+        "title": "2024年上半年互联网黑灰产研究报告",
+        "link": "https://www.threathunter.cn/blog/2024-50e66f87-abe6-4928-b031-c5c2c83c1cf0"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

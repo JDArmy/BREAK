@@ -1,9 +1,9 @@
 {
   "A0153": {
-    "title": "虚拟土地交易平台审核机制",
-    "definition": "建立平台审核和用户举报机制，识别和下架欺诈性虚拟资产",
-    "description": "平台治理：项目审核准入；异常交易监控；用户评价体系；欺诈举报渠道；黑名单机制；争议仲裁；资金托管。",
+    "title": "Virtual Land Trading Platform Review Mechanism",
+    "definition": "Establishing a platform review and user reporting mechanism to identify and delist fraudulent virtual assets.",
+    "description": "Platform governance: project review and admission; abnormal transaction monitoring; user rating system; fraud reporting channel; blacklist mechanism; dispute arbitration; fund custody.",
     "complexity": "Basic",
-    "limitation": "中心化审核可能不公；无法覆盖所有欺诈；跨平台监管困难"
+    "limitation": "Centralized review may be unfair; cannot cover all fraud; cross-platform regulation is difficult."
   }
 }

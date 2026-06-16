@@ -1,9 +1,9 @@
 {
   "A0097": {
-    "title": "智能合约形式化验证",
-    "definition": "使用数学方法严格证明智能合约代码的正确性，确保合约行为符合预期规范",
-    "description": "形式化验证是智能合约安全的最高级别保障，通过数学证明而非测试来验证合约的正确性。验证过程包括：定义形式化规范（用数学逻辑描述合约应该做什么）、建立形式化模型、使用定理证明或模型检测工具验证属性。可以证明关键属性如资金守恒、状态一致性、权限正确性等。常用工具包括K框架、Coq、Isabelle等。形式化验证特别适用于高价值合约（如DeFi协议核心合约、跨链桥合约）和关键安全属性的证明。",
+    "title": "Formal Verification of Smart Contracts",
+    "definition": "The use of mathematical methods to rigorously prove the correctness of smart contract code, ensuring that the contract's behavior conforms to its intended specification.",
+    "description": "Formal verification provides the highest level of assurance for smart contract security by validating correctness through mathematical proofs rather than testing. The verification process involves: defining formal specifications (describing what the contract should do using mathematical logic), constructing formal models, and verifying properties using theorem proving or model checking tools. It can prove critical properties such as fund conservation, state consistency, and permission correctness. Commonly used tools include the K Framework, Coq, Isabelle, and others. Formal verification is particularly suitable for high-value contracts (e.g., core DeFi protocol contracts, cross-chain bridge contracts) and the verification of critical security properties.",
     "complexity": "Advanced",
-    "limitation": "需要深厚的数学和形式化方法知识；验证过程复杂，成本极高；只能验证明确定义的属性，无法覆盖所有可能的安全问题；验证工具的学习曲线陡峭"
+    "limitation": "Requires deep expertise in mathematics and formal methods; the verification process is complex and extremely costly; can only verify explicitly defined properties and cannot cover all possible security issues; the learning curve for verification tools is steep."
   }
 }

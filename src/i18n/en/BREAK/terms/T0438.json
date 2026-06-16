@@ -13,22 +13,42 @@
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "The state in which a borrower has fully repaid all debts and escaped the debt trap.",
-    "description": "在金融信贷黑灰产语境中，指债务人通过自身努力或借助代理维权等手段，彻底清偿所有欠款，结束以贷养贷的恶性循环。上岸后，债务人不再受催收骚扰，恢复正常生活，但过程中可能涉及非法套现、协商减免等灰色操作。",
-    "usageExample": "负债不到6万怎么才能上岸呢，征信呆账，条子被标记2次黑了，上班工资太低了暂时这里走不了。",
+    "definition": "The state in which a borrower has fully repaid all debts and escaped a debt trap.",
+    "description": "In the context of financial fraud and underground lending, this term refers to a debtor who has completely settled all outstanding obligations, either through personal effort or by leveraging debt relief agencies, thereby breaking the cycle of borrowing from one lender to pay another. Once 'ashore,' the debtor is no longer subject to collection harassment and can resume a normal life, though the process may involve gray-area practices such as illegal cash-outs or negotiated debt reductions.",
+    "usageExample": "I owe less than 60k—how can I get ashore? My credit report has charge-offs, my loan records have been blacklisted twice, and my salary is too low to get out of this right now.",
     "relatedRisks": [
       "R0096",
       "R0096-001"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0046",
+      "A0057",
+      "A0054",
+      "A0044",
+      "A0038",
+      "A0060",
+      "A0016-001",
+      "A0004"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0029"
     ],
     "relatedBusinessScenes": [
-      "BS01"
+      "BS01",
+      "BS11"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "2024 H1 Credit Fraud Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-ab1e8b8c-509b-44e7-9dbe-d7271765ae2c"
+      },
+      {
+        "title": "Black Market Big Data: Exposing Malicious Loan Brokers",
+        "link": "https://zhuanlan.zhihu.com/p/17601711058"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

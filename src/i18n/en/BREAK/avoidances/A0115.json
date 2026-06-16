@@ -1,9 +1,9 @@
 {
   "A0115": {
-    "title": "IoT僵尸网络流量过滤与限速",
-    "definition": "在网络边界实施DDoS流量过滤和速率限制，减轻已感染设备发起的攻击影响",
-    "description": "即使设备被感染，也要限制其攻击能力。防御措施：在上游ISP或CDN层部署DDoS清洗服务（如Cloudflare、Akamai），过滤来自僵尸网络的大流量攻击；对单个IoT设备设置出站流量限额，异常大流量自动限速或阻断；使用基于行为的速率限制（rate limiting），而非固定阈值；部署Botnet Traffic Filter（BTF），识别并丢弃僵尸网络特征流量；与威胁情报源联动，实时更新僵尸网络IP黑名单。这是纵深防御的最后一道防线。",
+    "title": "IoT Botnet Traffic Filtering and Rate Limiting",
+    "definition": "Implement DDoS traffic filtering and rate limiting at the network perimeter to mitigate the impact of attacks originating from compromised devices.",
+    "description": "Even if a device is infected, its attack capability should be restricted. Mitigation measures include: deploying DDoS scrubbing services (e.g., Cloudflare, Akamai) at the upstream ISP or CDN layer to filter large-scale botnet attacks; setting outbound traffic quotas for individual IoT devices, with automatic rate limiting or blocking of abnormally high traffic; applying behavior-based rate limiting instead of fixed thresholds; deploying Botnet Traffic Filter (BTF) to identify and drop traffic matching botnet signatures; and integrating with threat intelligence feeds to update botnet IP blacklists in real time. This serves as the last line of defense in a defense-in-depth strategy.",
     "complexity": "Intermediate",
-    "limitation": "无法阻止设备被感染，只能降低危害；大规模DDoS仍可能突破限速；需要持续更新威胁情报；限速可能影响合法高流量应用；成本随流量规模增加"
+    "limitation": "Cannot prevent devices from being infected, only reduces the impact; large-scale DDoS attacks may still overwhelm rate limiting; requires continuous threat intelligence updates; rate limiting may affect legitimate high-traffic applications; costs increase with traffic volume."
   }
 }

@@ -1,9 +1,9 @@
 {
   "A0110": {
-    "title": "固件安全启动（Secure Boot）机制",
-    "definition": "通过加密签名验证确保设备只能运行未被篡改的可信固件",
-    "description": "Secure Boot在设备启动时验证固件完整性，防止加载被篡改或恶意的固件。实施步骤：在硬件中存储可信根密钥（Root of Trust）；固件镜像使用厂商私钥签名；启动时用公钥验证签名，验证失败则拒绝启动；采用分层验证，每层验证下一层（UEFI Secure Boot模型）；使用硬件可信平台模块（TPM）存储度量值。这种机制广泛应用于服务器、IoT设备、路由器等关键设备，确保从硬件到操作系统的信任链完整。",
+    "title": "Firmware Secure Boot Mechanism",
+    "definition": "A security mechanism that ensures a device only runs trusted, untampered firmware through cryptographic signature verification.",
+    "description": "Secure Boot verifies firmware integrity during device startup to prevent loading of tampered or malicious firmware. Implementation steps include: storing a hardware Root of Trust key; signing firmware images with the manufacturer's private key; verifying signatures with the public key at boot time and denying boot if verification fails; employing a layered verification approach where each stage validates the next (UEFI Secure Boot model); and using a hardware Trusted Platform Module (TPM) to store integrity measurements. This mechanism is widely deployed in critical devices such as servers, IoT devices, and routers to ensure an unbroken chain of trust from hardware to the operating system.",
     "complexity": "Advanced",
-    "limitation": "需要硬件支持（TPM或类似芯片），增加成本；密钥管理复杂，私钥泄露将导致全系列设备风险；阻止用户安装自定义固件，影响开放性；实施错误可能导致设备变砖"
+    "limitation": "Requires hardware support (TPM or equivalent chip), increasing costs; key management is complex, as a private key compromise exposes the entire device series to risk; prevents users from installing custom firmware, limiting openness; implementation errors may render devices inoperable (bricking)."
   }
 }

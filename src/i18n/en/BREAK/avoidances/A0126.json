@@ -1,9 +1,9 @@
 {
   "A0126": {
-    "title": "时间加权平均价格（TWAP）机制",
-    "definition": "使用多个时间点的价格加权平均值，而非即时价格，防止短时操纵",
-    "description": "即时价格容易被单笔大额交易操纵，TWAP平滑价格波动。实施细节：从链上DEX记录每个区块的价格累积值；计算指定时间窗口（如30分钟）的平均价格；使用Uniswap V2/V3的内置TWAP预言机或自行实现；设置合理的时间窗口，太短易被操纵，太长滞后性大；结合即时价格和TWAP，设置最大偏差阈值。攻击者需要持续操纵价格一段时间才能影响TWAP，成本显著提高。Cube Exchange研究表明TWAP是防御闪电贷价格操纵的有效手段。",
+    "title": "Time-Weighted Average Price (TWAP) Mechanism",
+    "definition": "A method that uses the weighted average price across multiple time points instead of the instantaneous price to prevent short-term manipulation.",
+    "description": "Instantaneous prices are easily manipulated by single large transactions, whereas TWAP smooths out price fluctuations. Implementation details: record the cumulative price value from on-chain DEXs for each block; calculate the average price over a specified time window (e.g., 30 minutes); utilize the built-in TWAP oracle from Uniswap V2/V3 or implement a custom solution; set a reasonable time window—too short makes it susceptible to manipulation, while too long introduces significant lag; combine the instantaneous price with TWAP and set a maximum deviation threshold. Attackers would need to sustain price manipulation over a period of time to affect TWAP, significantly increasing the cost. Research by Cube Exchange indicates that TWAP is an effective defense against flash loan price manipulation.",
     "complexity": "Intermediate",
-    "limitation": "价格更新存在滞后，市场剧烈波动时不及时；攻击者可能通过持续操纵绕过；链上存储历史价格增加Gas成本；需要足够的交易量支撑价格发现"
+    "limitation": "Price updates exhibit lag, making them untimely during severe market volatility; attackers may bypass the mechanism through sustained manipulation; storing historical prices on-chain increases gas costs; sufficient trading volume is required to support price discovery."
   }
 }

@@ -14,15 +14,22 @@
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "An illegal channel for data queries that is slow, requiring one to several days for results.",
-    "description": "慢线指依赖特殊关系或人工操作的查档方式，如企业内鬼手动导出数据。虽然时效性差，但可能获取到快线无法覆盖的深层信息，如历史记录或加密档案。慢线常用于非紧急的批量数据倒卖，是黑产长期渗透的隐蔽通道。",
+    "definition": "An illicit channel that provides slow data queries, with feedback taking from one day to several days.",
+    "description": "The slow line refers to a data lookup method that relies on special relationships or manual operations, such as a corporate insider manually exporting data. Although timeliness is poor, it may access deeper information that express lines cannot cover, such as historical records or encrypted files. The slow line is often used for non-urgent bulk data reselling and serves as a covert, long-term infiltration channel for underground networks.",
     "relatedRisks": [
       "R0092",
       "R0078",
       "R0089",
       "R0109"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0049"
+    ],
     "relatedAttackTools": [
       "AT0012",
       "AT0064"
@@ -36,7 +43,16 @@
       "BS00",
       "BS04"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

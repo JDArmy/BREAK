@@ -20,7 +20,14 @@
       "R0088",
       "R0090"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0049"
+    ],
     "relatedAttackTools": [
       "AT0042"
     ],
@@ -30,8 +37,16 @@
     ],
     "references": [
       {
-        "title": "Notice! API account scanning attacks have become an important threat to account security",
+        "title": "API Account Enumeration Has Become a Major Threat to Account Security",
         "link": "https://www.threathunter.cn/blog/6a6fd45548f"
+      },
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
     "updated": "2026-06-16"

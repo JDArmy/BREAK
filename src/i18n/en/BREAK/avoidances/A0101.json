@@ -1,9 +1,9 @@
 {
   "A0101": {
-    "title": "去中心化跨链验证网络",
-    "definition": "使用多个独立的去中心化节点网络验证跨链交易，而非依赖单一验证者或中心化签名机制",
-    "description": "跨链桥的核心安全问题是验证机制的中心化或节点数量不足。防御措施包括：为每条跨链通道部署独立的去中心化验证网络；要求多数节点（如2/3以上）共识才能完成跨链转账；验证节点需质押资产，作恶将被罚没；使用阈值签名或多签机制，避免单点失败；验证节点由不同实体运营，分散地理位置和基础设施。Chainlink CCIP等采用此架构，通过分散信任来降低攻击面。",
+    "title": "Decentralized Cross-Chain Verification Network",
+    "definition": "A mechanism that uses multiple independent decentralized node networks to verify cross-chain transactions, rather than relying on a single verifier or centralized signing mechanism.",
+    "description": "The core security issue with cross-chain bridges lies in the centralization of the verification mechanism or an insufficient number of nodes. Defensive measures include: deploying independent decentralized verification networks for each cross-chain channel; requiring majority consensus (e.g., more than two-thirds of nodes) to finalize cross-chain transfers; mandating that verification nodes stake assets, which are subject to slashing in the event of malicious behavior; employing threshold signatures or multi-signature schemes to prevent single points of failure; and ensuring verification nodes are operated by different entities across geographically distributed locations and infrastructures. Chainlink CCIP adopts this architecture, reducing the attack surface by decentralizing trust.",
     "complexity": "Advanced",
-    "limitation": "去中心化验证网络增加了系统复杂度和运营成本；验证速度可能慢于中心化方案；需要激励机制吸引足够多的独立验证节点；节点质押要求可能限制参与度"
+    "limitation": "Decentralized verification networks increase system complexity and operational costs; verification speed may be slower than centralized solutions; incentive mechanisms are required to attract a sufficient number of independent verification nodes; node staking requirements may limit participation."
   }
 }

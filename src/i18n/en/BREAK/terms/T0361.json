@@ -14,14 +14,21 @@
     ],
     "aliases": [],
     "category": "Gambling",
-    "definition": "在赌博黑产中，“提篮子”指利用关系网替赌场或涉赌团伙收转非法资金、摆平外围麻烦的中间人。",
-    "description": "This role typically does not involve direct participation in gambling. Instead, the individual uses their connections to provide cover for the movement of gambling funds, transferring cash, money laundering proceeds, or cryptocurrency from gamblers to organizers while evading risk controls and law enforcement. These middlemen often have ties to local power structures or insiders, serving as both a financial conduit and a relationship buffer. If an operation is compromised, the middleman becomes a critical point of failure for cutting off the money flow.",
+    "definition": "In the gambling black market, a 'basket carrier' is a middleman who uses their network to facilitate the transfer of illicit funds and resolve external troubles for casinos or gambling syndicates.",
+    "description": "This role typically does not involve direct gambling. Instead, the carrier leverages their 'background' to provide cover for the flow of gambling funds, moving cash, layered settlement money, or cryptocurrency from the bettor's side to the house's side, thereby evading risk controls and law enforcement. They are often connected to local power structures or insiders, acting as a dual insurance for both the money channel and relationship coordination. If the chain is compromised, the basket carrier becomes the key breakthrough point for cutting off the funds.",
     "relatedRisks": [
       "R0060",
       "R0093",
       "R0097"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0016",
+      "A0044",
+      "A0061",
+      "A0024",
+      "A0054"
+    ],
     "relatedAttackTools": [
       "AT0026"
     ],
@@ -35,7 +42,16 @@
       "BS15",
       "BS01"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review",
+        "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
+      },
+      {
+        "title": "Black Market Big Data: 2025 Internet Underground Economy Trend Annual Review",
+        "link": "https://www.163.com/dy/article/KJ2QH6LE0518STKV.html"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

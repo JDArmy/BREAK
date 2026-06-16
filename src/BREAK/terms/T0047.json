@@ -17,16 +17,34 @@
     "definition": "指无抵押、无担保，且通常由无合法资质的地下钱庄或个人发放的高风险贷款。",
     "description": "这种放贷模式不依赖正规的信用审核，而是依靠暴力催收等手段控制风险。在信贷欺诈场景中，空放常被用于“借新还旧”的债务陷阱，或为黑产活动提供短期周转资金。借款人一旦陷入，往往面临超高利息和人身威胁，难以脱身。",
     "usageExample": "银行下不来的都去找空放了，利息高得吓人，但当天就能拿钱。",
-    "relatedRisks": [],
-    "relatedAvoidances": [],
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [
+      "A0015",
+      "A0046",
+      "A0057",
+      "A0054",
+      "A0044"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0038"
     ],
     "relatedBusinessScenes": [
-      "BS01"
+      "BS01",
+      "BS11"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "2024年上半年信贷欺诈风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-ab1e8b8c-509b-44e7-9dbe-d7271765ae2c"
+      },
+      {
+        "title": "【黑产大数据】恶意贷款中介揭秘",
+        "link": "https://zhuanlan.zhihu.com/p/17601711058"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

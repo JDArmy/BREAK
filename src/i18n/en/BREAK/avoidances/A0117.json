@@ -1,9 +1,9 @@
 {
   "A0117": {
-    "title": "默认凭据扫描与自动修复",
-    "definition": "使用自动化工具定期扫描网络中使用默认凭据的设备，并推送强制修改策略",
-    "description": "对已部署设备进行持续安全审计。实施方法：部署网络扫描工具（如Nmap、Nessus）定期探测设备，尝试常见默认凭据登录；建立设备资产清单，记录每台设备的凭据状态；发现使用默认凭据的设备立即告警并通知管理员；通过设备管理平台（如MDM）远程推送密码修改命令；对无法远程修复的设备降低网络权限或隔离；建立可视化仪表板，展示网络中默认凭据风险分布。研究显示40%以上的xIoT设备存在默认凭据风险。",
+    "title": "Default Credential Scanning and Auto-Remediation",
+    "definition": "The use of automated tools to periodically scan the network for devices using default credentials and push mandatory password change policies.",
+    "description": "Conduct continuous security audits on deployed devices. Implementation methods: Deploy network scanning tools (e.g., Nmap, Nessus) to periodically probe devices and attempt login with common default credentials; establish a device asset inventory to record the credential status of each device; immediately alert and notify administrators upon discovering devices using default credentials; remotely push password modification commands through device management platforms (e.g., MDM); reduce network privileges or isolate devices that cannot be remotely remediated; establish a visualization dashboard to display the risk distribution of default credentials across the network. Research indicates that over 40% of xIoT devices present default credential risks.",
     "complexity": "Intermediate",
-    "limitation": "扫描可能被误认为攻击行为；无法检测所有设备类型和凭据组合；远程修复依赖设备管理接口；扫描本身可能暴露凭据尝试日志；对不支持远程管理的设备无效"
+    "limitation": "Scanning may be mistaken for an attack; not all device types and credential combinations can be detected; remote remediation depends on device management interfaces; the scanning process itself may expose credential attempt logs; ineffective for devices that do not support remote management."
   }
 }

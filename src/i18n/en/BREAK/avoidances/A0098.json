@@ -1,9 +1,9 @@
 {
   "A0098": {
-    "title": "预言机价格验证机制",
-    "definition": "使用多源价格预言机并实施时间加权平均价格（TWAP）等机制，防止单笔交易操纵价格",
-    "description": "闪电贷攻击常通过单笔大额交易操纵去中心化交易所价格，导致依赖该价格的DeFi协议产生错误判断。防御措施包括：使用Chainlink等去中心化预言机而非单一DEX价格；实施TWAP（时间加权平均价格）算法，基于多个区块的价格计算；设置价格变动阈值，单笔交易导致的价格变动超过阈值时拒绝执行；使用多个独立价格源进行交叉验证。这种机制使得攻击者难以通过单笔闪电贷交易影响系统判断。",
+    "title": "Oracle Price Verification Mechanism",
+    "definition": "A mechanism that uses multi-source price oracles and implements mechanisms such as Time-Weighted Average Price (TWAP) to prevent single-transaction price manipulation.",
+    "description": "Flash loan attacks often manipulate decentralized exchange prices through single large transactions, causing DeFi protocols that rely on such prices to make erroneous judgments. Defensive measures include: using decentralized oracles like Chainlink instead of a single DEX price source; implementing TWAP (Time-Weighted Average Price) algorithms that calculate prices based on multiple blocks; setting price deviation thresholds, where execution is rejected if a single transaction causes a price change exceeding the threshold; and using multiple independent price sources for cross-validation. This mechanism makes it difficult for attackers to influence system judgment through a single flash loan transaction.",
     "complexity": "Intermediate",
-    "limitation": "TWAP机制在市场剧烈波动时可能滞后于真实价格；多源预言机增加了系统复杂度和Gas成本；仍需防范预言机本身被攻击"
+    "limitation": "The TWAP mechanism may lag behind the actual price during periods of extreme market volatility; multi-source oracles increase system complexity and gas costs; the oracle itself must still be protected from attacks."
   }
 }

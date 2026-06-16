@@ -1,9 +1,9 @@
 {
   "A0165": {
-    "title": "区块链分析工具应用",
-    "definition": "使用Chainalysis等专业工具分析可疑交易和地址",
-    "description": "分析工具：地址标签库；交易图谱；资金流向；关联分析；风险评分；合规检查；AML筛查。",
+    "title": "Blockchain Analysis Tool Application",
+    "definition": "Using professional tools such as Chainalysis to analyze suspicious transactions and addresses",
+    "description": "Analysis tools: address labeling database; transaction graph; fund flow tracking; correlation analysis; risk scoring; compliance check; AML screening.",
     "complexity": "Intermediate",
-    "limitation": "工具成本高；隐私技术对抗；误报问题；需要专业人员"
+    "limitation": "High tool costs; adversarial privacy techniques; false positive issues; requires professional personnel"
   }
 }

@@ -18,15 +18,37 @@
     "description": "在企业背债骗贷中，黑产为将空壳公司包装成正常经营的企业，会安排虚假的上下游交易合同、伪造物流单据、制造资金流水并虚开发票，使四方面数据相互印证。这种高度仿真的数据闭环能有效欺骗金融机构的风控系统，以骗取高额企业贷款。",
     "usageExample": "全国贸易带量增量资金服务，企业孵化，上下游合同包票，四流合一，年中美化财务数据。",
     "relatedRisks": [
-      "R0017"
+      "R0017",
+      "R0096"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0046",
+      "A0057",
+      "A0054",
+      "A0044",
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0049"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "relatedBusinessScenes": [
-      "BS01"
+      "BS01",
+      "BS11"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "2024年上半年信贷欺诈风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-ab1e8b8c-509b-44e7-9dbe-d7271765ae2c"
+      },
+      {
+        "title": "【黑产大数据】恶意贷款中介揭秘",
+        "link": "https://zhuanlan.zhihu.com/p/17601711058"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

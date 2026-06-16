@@ -14,15 +14,26 @@
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "The process of using technical means or social engineering databases to complete missing identity numbers, names, and addresses.",
-    "description": "在数据泄露链条中，补齐是查档服务的一种下游操作，常由中间商或数据贩子完成。他们利用已掌握的碎片化信息，结合社工库或内部渠道，拼凑出完整的个人身份画像。补齐后的数据可用于精准诈骗、恶意催收或转售获利，直接加剧隐私侵害。",
+    "definition": "The act of using technical means or social engineering databases to fill in missing identity numbers, names, and addresses to complete a personal profile.",
+    "description": "In the data breach supply chain, 'completing the profile' is a downstream operation within illegal lookup services, often performed by intermediaries or data traffickers. They use fragmented information already in hand, combined with social engineering databases or insider channels, to piece together a full personal identity portrait. Completed data can then be used for targeted fraud, malicious debt collection, or resale for profit, directly worsening privacy violations.",
     "relatedRisks": [
       "R0092",
       "R0078",
       "R0089",
       "R0109"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0049",
+      "A0015",
+      "A0046",
+      "A0057",
+      "A0054"
+    ],
     "relatedAttackTools": [
       "AT0012",
       "AT0064"
@@ -36,7 +47,16 @@
       "BS00",
       "BS01"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

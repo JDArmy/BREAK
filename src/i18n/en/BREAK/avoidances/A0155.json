@@ -1,9 +1,9 @@
 {
   "A0155": {
-    "title": "链上身份去中心化验证",
-    "definition": "使用DID等去中心化身份技术，实现无需中心化机构的身份证明",
-    "description": "DID方案：W3C DID标准；链上身份锚点；可验证凭证；选择性披露；自主身份；跨平台互认。",
+    "title": "Decentralized On-Chain Identity Verification",
+    "definition": "The use of decentralized identity technologies such as DID to achieve identity verification without relying on centralized authorities.",
+    "description": "DID scheme: W3C DID standard; on-chain identity anchoring; verifiable credentials; selective disclosure; self-sovereign identity; cross-platform interoperability.",
     "complexity": "Advanced",
-    "limitation": "生态不成熟；用户体验差；监管接受度低"
+    "limitation": "Immature ecosystem; poor user experience; low regulatory acceptance."
   }
 }

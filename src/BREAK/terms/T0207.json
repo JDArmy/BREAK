@@ -19,7 +19,18 @@
     "relatedRisks": [
       "R0096"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0049",
+      "A0015",
+      "A0046",
+      "A0057",
+      "A0054"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "relatedBusinessScenes": [
@@ -30,6 +41,14 @@
       {
         "title": "【黑产大数据】2025年上半年互联网黑灰产趋势年度总结",
         "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
+      },
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "【黑产大数据】2025年上半年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
     "updated": "2026-06-16"

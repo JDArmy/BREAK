@@ -1,9 +1,9 @@
 {
   "A0147": {
-    "title": "工业协议安全加固",
-    "definition": "对Modbus、OPC等工业协议实施认证加密，防止未授权访问和篡改",
-    "description": "工业协议通常无安全设计。加固：使用加密版本（OPC UA、Modbus/TCP+TLS）；部署协议网关过滤异常；白名单限制命令；异常行为检测；定期审计。",
+    "title": "Industrial Protocol Security Hardening",
+    "definition": "Implementing authentication and encryption for industrial protocols such as Modbus and OPC to prevent unauthorized access and tampering.",
+    "description": "Industrial protocols often lack built-in security design. Hardening measures include: using encrypted versions (OPC UA, Modbus/TCP with TLS); deploying protocol gateways to filter anomalies; restricting commands via whitelisting; detecting abnormal behavior; and conducting regular audits.",
     "complexity": "Advanced",
-    "limitation": "老旧设备不支持；性能影响；兼容性问题"
+    "limitation": "Legacy device incompatibility; performance impact; compatibility issues."
   }
 }

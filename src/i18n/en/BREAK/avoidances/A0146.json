@@ -1,9 +1,9 @@
 {
   "A0146": {
-    "title": "工业网络隔离与区域划分",
-    "definition": "将工业控制网络与IT网络物理或逻辑隔离，划分安全区域限制攻击扩散",
-    "description": "Purdue模型网络分层：0-2层（生产现场）与3-5层（企业网络）隔离；使用防火墙和二极管单向数据流；OT设备专用VLAN；DMZ区域缓冲；严格访问控制。",
+    "title": "Industrial Network Isolation and Segmentation",
+    "definition": "Physically or logically isolating the industrial control network from the IT network and segmenting security zones to limit the spread of attacks.",
+    "description": "Purdue model network layering: Isolation between Levels 0–2 (production floor) and Levels 3–5 (enterprise network); deployment of firewalls and data diodes for unidirectional data flow; dedicated VLANs for OT devices; DMZ zone buffering; strict access control.",
     "complexity": "Intermediate",
-    "limitation": "完全隔离影响远程运维；改造成本高；需要专业规划"
+    "limitation": "Complete isolation impacts remote operations and maintenance; high retrofit costs; requires specialized planning."
   }
 }

@@ -1,9 +1,9 @@
 {
   "A0151": {
-    "title": "分阶段OTA部署与灰度发布",
-    "definition": "采用小范围试点、逐步推广的策略，降低批量更新失败或恶意更新的影响",
-    "description": "谨慎部署策略：小比例灰度测试；监控更新设备状态；异常时紧急暂停；A/B测试；自动回滚机制；用户可选更新时间。",
+    "title": "Phased OTA Deployment and Canary Release",
+    "definition": "A strategy of deploying updates through small-scale pilots and gradual rollout to minimize the impact of batch update failures or malicious updates.",
+    "description": "Cautious deployment strategy: small-scale canary testing; monitoring the status of updated devices; emergency suspension in case of anomalies; A/B testing; automatic rollback mechanism; user-selectable update timing.",
     "complexity": "Intermediate",
-    "limitation": "延长部署周期；管理复杂度高；紧急更新响应慢"
+    "limitation": "Extended deployment cycle; high management complexity; slow response to emergency updates."
   }
 }

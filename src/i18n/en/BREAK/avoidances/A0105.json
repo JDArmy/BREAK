@@ -1,9 +1,9 @@
 {
   "A0105": {
-    "title": "私钥加密存储与密码保护",
-    "definition": "使用强密码或密钥派生函数加密私钥后存储，私钥明文仅在内存中短暂存在",
-    "description": "对无法使用HSM的场景，加密存储是基础防护。实施方法：使用PBKDF2、Argon2等密钥派生函数从用户密码生成加密密钥；用AES-256等强加密算法加密私钥后存储；私钥解密后仅在内存中使用，使用后立即清零；避免将私钥写入日志、临时文件或交换分区；对加密密钥本身进行保护，可使用操作系统密钥链（macOS Keychain、Windows DPAPI）；设置私钥文件权限（Unix 600）限制访问。区块链钱包普遍采用此方案，如BIP39助记词加密。",
+    "title": "Encrypted Storage and Password Protection of Private Keys",
+    "definition": "Private keys are encrypted using a strong password or key derivation function before storage, with the plaintext key only existing briefly in memory.",
+    "description": "For scenarios where Hardware Security Modules (HSMs) are unavailable, encrypted storage serves as a fundamental safeguard. Implementation methods include: generating encryption keys from user passwords using key derivation functions such as PBKDF2 or Argon2; encrypting private keys with strong encryption algorithms like AES-256 before storage; decrypting the private key only for in-memory use and immediately zeroing it out after use; avoiding writing private keys to logs, temporary files, or swap partitions; protecting the encryption key itself by leveraging operating system keychains (macOS Keychain, Windows DPAPI); and restricting access to private key files with appropriate file permissions (Unix 600). This approach is widely adopted in blockchain wallets, such as BIP39 mnemonic phrase encryption.",
     "complexity": "Basic",
-    "limitation": "安全性取决于用户密码强度，弱密码易被暴力破解；内存中的明文私钥仍可能被内存转储攻击获取；无法防护恶意软件或rootkit；用户忘记密码将永久丢失私钥"
+    "limitation": "Security depends on the strength of the user password; weak passwords are susceptible to brute-force attacks. The plaintext private key in memory may still be extracted through memory dump attacks. This method cannot defend against malware or rootkits. If the user forgets the password, the private key will be permanently lost."
   }
 }

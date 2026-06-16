@@ -24,7 +24,17 @@
       "R0005",
       "R0070"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0059",
+      "A0061",
+      "A0044",
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0049"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0002"
@@ -36,6 +46,10 @@
       {
         "title": "Internet black and gray industry research report in the first half of 2024",
         "link": "https://www.threathunter.cn/blog/2024-50e66f87-abe6-4928-b031-c5c2c83c1cf0"
+      },
+      {
+        "title": "Black Market Big Data: E-commerce Scalper Industry Chain Analysis Report",
+        "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
       }
     ],
     "updated": "2026-06-16"

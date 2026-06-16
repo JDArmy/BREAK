@@ -19,15 +19,31 @@
     "definition": "指黑产链条中，由第三方代发商为虚假交易或欺诈订单提供实际物流包裹和发货服务的环节。",
     "description": "在刷单或诈骗场景中，为规避平台风控，发单人并不持有真实商品，而是委托“代发”商发送空包或低劣赠品。代发商通过伪造物流信息，为虚假交易提供逼真的物流轨迹，以此骗取平台补贴或买家信任。",
     "relatedRisks": [
-      "R0004"
+      "R0004",
+      "R0005"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0059",
+      "A0061",
+      "A0044",
+      "A0021"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "relatedBusinessScenes": [
       "BS02"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "【黑产大数据】电商黄牛党产业链分析报告",
+        "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
+      },
+      {
+        "title": "2024年上半年互联网黑灰产研究报告",
+        "link": "https://www.threathunter.cn/blog/2024-50e66f87-abe6-4928-b031-c5c2c83c1cf0"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

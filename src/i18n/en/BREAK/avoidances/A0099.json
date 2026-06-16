@@ -1,9 +1,9 @@
 {
   "A0099": {
-    "title": "闪电贷限额控制",
-    "definition": "对单笔交易的借贷金额和影响范围设置上限，降低闪电贷攻击的潜在影响",
-    "description": "通过限制闪电贷的规模来降低攻击风险。具体措施包括：设置单笔闪电贷的最大金额上限；限制单笔交易对流动性池的最大影响比例（如不超过池子总量的10%）；实施速率限制，限制短时间内的大额操作频率；对大额交易增加额外的验证步骤或时间延迟。这些限制使得即使发生攻击，损失也能控制在可接受范围内，同时不影响正常用户的合理使用需求。",
+    "title": "Flash Loan Limit Control",
+    "definition": "Setting caps on the borrowing amount and scope of impact for a single transaction to reduce the potential impact of flash loan attacks.",
+    "description": "Mitigating attack risks by limiting the scale of flash loans. Specific measures include: setting a maximum amount cap for a single flash loan; limiting the maximum impact ratio of a single transaction on a liquidity pool (e.g., not exceeding 10% of the total pool); implementing rate limiting to restrict the frequency of large operations within a short timeframe; and adding extra verification steps or time delays for large transactions. These limitations ensure that even if an attack occurs, the losses are kept within an acceptable range, without affecting normal users' legitimate usage needs.",
     "complexity": "Basic",
-    "limitation": "限额设置过严会影响协议的资本效率和用户体验；限额需要根据市场情况动态调整；无法完全阻止小规模的套利攻击"
+    "limitation": "Overly strict limits can impair the protocol's capital efficiency and user experience; limits need to be dynamically adjusted based on market conditions; cannot completely prevent small-scale arbitrage attacks."
   }
 }

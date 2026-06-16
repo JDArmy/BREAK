@@ -1,9 +1,9 @@
 {
   "A0140": {
-    "title": "代理合约升级模式",
-    "definition": "采用代理（Proxy）模式实现合约逻辑可升级，但数据存储不变，允许修复缺陷而不丢失状态",
-    "description": "合约部署后不可变，代理模式实现可升级性。常用模式：透明代理（Transparent Proxy），用户调用转发到实现合约；UUPS（Universal Upgradeable Proxy Standard），升级逻辑在实现合约中；Beacon代理，多个代理共享同一实现；钻石模式（Diamond Pattern），模块化升级。关键点：代理合约持有数据，实现合约只有逻辑；升级需要严格权限控制（多签或时间锁）；注意存储槽冲突。Ethereum.org文档详细介绍了升级最佳实践。",
+    "title": "Proxy Contract Upgrade Pattern",
+    "definition": "A pattern that uses a proxy contract to enable upgradeable contract logic while keeping data storage unchanged, allowing bug fixes without state loss.",
+    "description": "Contracts are immutable once deployed, but the proxy pattern enables upgradeability. Common patterns include: Transparent Proxy, where user calls are forwarded to an implementation contract; UUPS (Universal Upgradeable Proxy Standard), where upgrade logic resides in the implementation contract; Beacon Proxy, where multiple proxies share a single implementation; and the Diamond Pattern, which enables modular upgrades. Key considerations: the proxy contract holds the data while the implementation contract contains only logic; upgrades require strict access controls (multi-signature or timelocks); and storage slot collisions must be carefully avoided. The Ethereum.org documentation provides detailed best practices for upgrades.",
     "complexity": "Advanced",
-    "limitation": "增加系统复杂度和Gas成本；存储布局管理困难，易出错；升级权限集中化可能被滥用；代理合约本身不可升级成为单点风险"
+    "limitation": "Increases system complexity and gas costs; storage layout management is difficult and error-prone; centralized upgrade authority may be abused; the proxy contract itself is non-upgradeable, creating a single point of failure."
   }
 }

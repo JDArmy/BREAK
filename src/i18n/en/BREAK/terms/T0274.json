@@ -13,8 +13,8 @@
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "Forced mass messaging refers to the use of automated tools to bypass platform restrictions and forcibly send bulk private messages to a large number of non-friend users.",
-    "description": "黑产利用群控系统或脚本，向未授权用户大规模推送包含广告、钓鱼链接或诈骗话术的私信。这种操作无视用户隐私设置，常伴随账号被盗用或批量注册的虚拟号。主要用于色情导流、刷单诈骗或赌博网站推广，极易导致用户遭受财产损失。",
+    "definition": "The act of using automated tools to bypass platform restrictions and send bulk private messages to a large number of non-friend users.",
+    "description": "Black market operators use bot farm systems or scripts to push unsolicited private messages containing ads, phishing links, or scam scripts to unauthorized users on a massive scale. This operation disregards user privacy settings and is often associated with compromised or bulk-registered virtual accounts. It is primarily used for adult content redirection, task scams, or gambling site promotion, frequently leading to financial loss for the victims.",
     "relatedRisks": [
       "R0024",
       "R0017",
@@ -22,7 +22,24 @@
       "R0005",
       "R0007-003"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0021",
+      "A0059",
+      "A0060",
+      "A0061",
+      "A0010",
+      "A0010-002",
+      "A0038",
+      "A0016-001",
+      "A0004",
+      "A0006-005",
+      "A0016-002",
+      "A0051",
+      "A0037",
+      "A0016",
+      "A0044"
+    ],
     "relatedAttackTools": [
       "AT0044",
       "AT0009",
@@ -40,7 +57,16 @@
       "BS02",
       "BS04"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "2024 H1 Internet Underground Economy Research Report",
+        "link": "https://www.threathunter.cn/blog/2024-50e66f87-abe6-4928-b031-c5c2c83c1cf0"
+      },
+      {
+        "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review",
+        "link": "https://www.threathunter.cn/blog/2024-37b58782-063b-4426-a2f8-6de6622dbca7"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

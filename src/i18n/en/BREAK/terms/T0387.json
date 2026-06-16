@@ -12,13 +12,24 @@
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "A full-service fraud package offered by underground rings, covering document forgery, data fabrication, and bribing bank insiders to secure loan approvals.",
-    "description": "在信贷欺诈中，“一条龙”意味着黑产中介包办了骗贷的所有环节。他们为不具备资质的客户伪造工作证明、银行流水，甚至买通金融机构内部人员，确保贷款获批。这种全包服务收费高昂，风险也极高，常导致金融机构形成大额坏账。",
-    "usageExample": "Recruiting nationwide: pure white, blank slate, or real estate credit clients for a full-service package. Graduation total starting from 5 million.",
+    "definition": "A full-package fraudulent service provided by black market operators, covering everything from document fabrication and data creation to bank relationship management and loan application.",
+    "description": "In credit fraud, 'one-stop service' means the black market intermediary handles all stages of the scam. They forge employment certificates and bank statements for unqualified clients, and may even bribe insiders at financial institutions to ensure loan approval. This all-inclusive service is extremely expensive and high-risk, often resulting in significant bad debt for financial institutions.",
+    "usageExample": "Recruiting pure white, white accounts, and real estate credit one-stop service nationwide, total graduation amount starting from 5 million.",
     "relatedRisks": [
       "R0096"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0046",
+      "A0057",
+      "A0054",
+      "A0044",
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0049"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "relatedBusinessScenes": [
@@ -27,8 +38,16 @@
     ],
     "references": [
       {
-        "title": "[Underground Big Data] Desperados in Financial Fraud",
+        "title": "Black Market Big Data: Desperados in Financial Fraud",
         "link": "https://www.threathunter.cn/blog/f17db99edff"
+      },
+      {
+        "title": "2024 H1 Credit Fraud Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-ab1e8b8c-509b-44e7-9dbe-d7271765ae2c"
+      },
+      {
+        "title": "Black Market Big Data: Exposing Malicious Loan Brokers",
+        "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
     "updated": "2026-06-16"

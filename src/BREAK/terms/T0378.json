@@ -17,16 +17,32 @@
     "definition": "指金融机构短期内放宽风控规则，使信用不良者也能获批贷款。",
     "description": "这是黑产和中介圈内流传的“情报”，指某些银行或平台在特定时段调整了信贷审批系统，降低了准入门槛。这种风控策略的松动可能是系统漏洞、业绩冲刺或策略调整所致，为征信差、负债高的客户提供了骗贷窗口。黑产会迅速组织人手，利用这个短暂的机会集中申请，以套取资金。",
     "usageExample": "最近X行偷偷放水，平时点进去都没额度，这次随便申了一下，居然给了6万，秒过。",
-    "relatedRisks": [],
+    "relatedRisks": [
+      "R0096"
+    ],
     "relatedAvoidances": [
-      "A0015"
+      "A0015",
+      "A0046",
+      "A0057",
+      "A0054",
+      "A0044"
     ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "relatedBusinessScenes": [
-      "BS01"
+      "BS01",
+      "BS11"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "2024年上半年信贷欺诈风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-ab1e8b8c-509b-44e7-9dbe-d7271765ae2c"
+      },
+      {
+        "title": "【黑产大数据】恶意贷款中介揭秘",
+        "link": "https://zhuanlan.zhihu.com/p/17601711058"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

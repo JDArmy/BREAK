@@ -22,16 +22,36 @@
       "R0146",
       "R0096"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0046",
+      "A0057",
+      "A0054",
+      "A0044",
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0049"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "relatedBusinessScenes": [
-      "BS01"
+      "BS01",
+      "BS11"
     ],
     "references": [
       {
-        "title": "Analysis of Loan Fraud Using Forged Housing Provident Fund Records",
+        "title": "Credit Fraud: Analysis of Provident Fund Forgery Loan Fraud Techniques",
         "link": "https://www.threathunter.cn/blog/a6c71ff0534"
+      },
+      {
+        "title": "2024 H1 Credit Fraud Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-ab1e8b8c-509b-44e7-9dbe-d7271765ae2c"
+      },
+      {
+        "title": "Black Market Big Data: Exposing Malicious Loan Brokers",
+        "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
     "updated": "2026-06-16"

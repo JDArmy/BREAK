@@ -19,7 +19,14 @@
       "R0060",
       "R0093"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0024",
+      "A0015",
+      "A0016",
+      "A0054",
+      "A0044",
+      "A0061"
+    ],
     "relatedAttackTools": [
       "AT0039",
       "AT0040"
@@ -32,8 +39,16 @@
     ],
     "references": [
       {
-        "title": "[Black Market Big Data] 2025 Internet Black and Grey Market Trend Annual Report",
+        "title": "Black Market Big Data: 2025 Internet Underground Economy Trend Annual Review",
         "link": "https://www.163.com/dy/article/KJ2QH6LE0518STKV.html"
+      },
+      {
+        "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly",
+        "link": "https://k.sina.cn/article_7857201856_1d45362c001906fzea.html?from=tech"
+      },
+      {
+        "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign",
+        "link": "https://www.secrss.com/articles/56050"
       }
     ],
     "updated": "2026-06-16"

@@ -1,9 +1,9 @@
 {
   "A0143": {
-    "title": "硬件侧信道防护设计",
-    "definition": "在硬件层面实施防护措施，降低通过功耗、电磁等侧信道泄露敏感信息的风险",
-    "description": "侧信道攻击通过分析设备物理特征（功耗、时间、电磁辐射）推断密钥等敏感数据。防护：使用恒定时间算法，避免操作时间与数据相关；添加随机延迟和噪声干扰测量；实施功耗掩码技术；使用硬件安全模块保护密钥操作；物理屏蔽减少电磁泄漏；定期审计密码实现。",
+    "title": "Hardware Side-Channel Protection Design",
+    "definition": "Implementing protective measures at the hardware level to reduce the risk of leaking sensitive information through side channels such as power consumption and electromagnetic emissions.",
+    "description": "Side-channel attacks infer sensitive data such as cryptographic keys by analyzing physical characteristics of a device, including power consumption, timing, and electromagnetic radiation. Countermeasures include: using constant-time algorithms to avoid data-dependent operation timing; adding random delays and noise to interfere with measurements; implementing power masking techniques; employing hardware security modules to protect key operations; applying physical shielding to reduce electromagnetic leakage; and conducting regular audits of cryptographic implementations.",
     "complexity": "Advanced",
-    "limitation": "硬件防护增加成本；性能开销；完全防护困难；需要专业知识"
+    "limitation": "Hardware-based protections increase costs; introduce performance overhead; achieving complete protection is difficult; and specialized expertise is required."
   }
 }

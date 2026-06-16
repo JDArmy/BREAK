@@ -1,9 +1,9 @@
 {
   "A0137": {
-    "title": "链ID与nonce机制",
-    "definition": "在签名消息中包含链ID和唯一nonce，防止交易在不同链或被多次执行",
-    "description": "EIP-155引入链ID防止跨链重放。实施要点：交易签名包含源链和目标链的Chain ID；每个账户维护递增的nonce，重复nonce的交易被拒绝；硬分叉时修改Chain ID强制重放保护；跨链消息包含genesis hash或其他链特定标识；使用EIP-712结构化签名，包含domain separator。Zealynx安全词汇表强调这是防重放的基础机制。",
+    "title": "Chain ID and Nonce Mechanism",
+    "definition": "A security mechanism that incorporates chain ID and unique nonce into signed messages to prevent transactions from being replayed across different chains or executed multiple times.",
+    "description": "EIP-155 introduced chain ID to prevent cross-chain replay attacks. Key implementation points: transaction signatures include the chain ID of both source and target chains; each account maintains an incrementing nonce, and transactions with duplicate nonces are rejected; chain ID is modified during hard forks to enforce replay protection; cross-chain messages include the genesis hash or other chain-specific identifiers; EIP-712 structured signatures are used, incorporating a domain separator. The Zealynx security glossary emphasizes this as a fundamental anti-replay mechanism.",
     "complexity": "Basic",
-    "limitation": "老旧合约可能不支持Chain ID；nonce管理不当可能导致交易卡死；跨链桥仍需额外保护；不能防止授权被重放利用"
+    "limitation": "Legacy contracts may not support chain ID; improper nonce management can lead to stuck transactions; cross-chain bridges still require additional protection; cannot prevent authorization replay exploits."
   }
 }

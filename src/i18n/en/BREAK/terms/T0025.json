@@ -14,9 +14,15 @@
     "category": "Marketing Fraud",
     "definition": "A term used by fraud operators to describe a target platform that has no risk control measures in place.",
     "description": "In underground fraud circles, a platform's risk control system is referred to as a \"shield.\" \"No shield\" means the platform has not deployed effective security verification or anti-fraud strategies. This allows fraudsters to bypass defenses directly and conduct bulk operations, commonly used for large-scale harvesting of physical rewards, vouchers, or cash bonuses. The nature of a \"shield\" varies across business scenarios—such as a bank's hardware security token or an e-commerce platform's risk engine—but the absence of one signals an extremely low cost of attack.",
-    "relatedRisks": [],
+    "relatedRisks": [
+      "R0005"
+    ],
     "relatedAvoidances": [
-      "A0153"
+      "A0153",
+      "A0015",
+      "A0059",
+      "A0061",
+      "A0044"
     ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
@@ -24,7 +30,16 @@
       "BS02",
       "BS01"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Black Market Big Data: E-commerce Scalper Industry Chain Analysis Report",
+        "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
+      },
+      {
+        "title": "2024 H1 Internet Underground Economy Research Report",
+        "link": "https://www.threathunter.cn/blog/2024-50e66f87-abe6-4928-b031-c5c2c83c1cf0"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

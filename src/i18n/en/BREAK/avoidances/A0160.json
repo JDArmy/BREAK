@@ -1,9 +1,9 @@
 {
   "A0160": {
-    "title": "代码审计与漏洞赏金",
-    "definition": "多方审计并建立漏洞赏金激励发现问题",
-    "description": "见R0159第一条和R0177第三条。",
+    "title": "Code Audit and Bug Bounty",
+    "definition": "Conduct multi-party audits and establish bug bounty programs to incentivize vulnerability discovery",
+    "description": "See item 1 of R0159 and item 3 of R0177.",
     "complexity": "Intermediate",
-    "limitation": "同R0159/R0177"
+    "limitation": "Same as R0159/R0177"
   }
 }

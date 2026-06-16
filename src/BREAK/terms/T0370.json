@@ -20,7 +20,13 @@
     "relatedRisks": [
       "R0096"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0046",
+      "A0057",
+      "A0054",
+      "A0044"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "relatedBusinessScenes": [
@@ -31,6 +37,14 @@
       {
         "title": "【黑产大数据】汽车贷款欺诈产业链解构",
         "link": "https://www.threathunter.cn/blog/8acce28b732"
+      },
+      {
+        "title": "2024年上半年信贷欺诈风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-ab1e8b8c-509b-44e7-9dbe-d7271765ae2c"
+      },
+      {
+        "title": "【黑产大数据】恶意贷款中介揭秘",
+        "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
     "updated": "2026-06-16"

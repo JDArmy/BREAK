@@ -14,20 +14,40 @@
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "卡圈黑话，指交通银行白麒麟、招商银行经典白、浦发AE白这三张权益丰厚但可通过积分抵扣年费的高端信用卡。",
-    "description": "These three cards are jokingly called the ‘loser’s three whites’ by ordinary cardholders because their application thresholds are relatively accessible while their perks are substantial. In underground fraud, intermediaries exploit bank approval windows or profile fabrication techniques to help underqualified clients obtain these high-end cards, aiming to defraud high credit lines or resell the rewards points.",
-    "usageExample": "SPDB AE Platinum is loosening up lately. Agents say it’s the best value among the loser’s three whites and they can package my profile to get it approved.",
+    "definition": "In credit card enthusiast slang, refers to three premium credit cards—Bank of Communications White Qilin, CMB Classic Platinum, and SPDB AE Platinum—that offer rich benefits and allow annual fees to be offset with points.",
+    "description": "These three cards are known for relatively accessible application thresholds and practical perks, leading ordinary cardholders to self-deprecatingly call them the 'loser's three white cards.' In underground circles, intermediaries often exploit bank easing periods or document fabrication techniques to help unqualified clients obtain these high-end cards, aiming to fraudulently secure high credit lines or resell points benefits.",
+    "usageExample": "SPDB AE Platinum has been easing approvals lately; the agent said among the loser's three white cards, this one offers the best value and can help me package my application to get approved.",
     "relatedRisks": [
       "R0096"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0046",
+      "A0057",
+      "A0054",
+      "A0044",
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0049"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "relatedBusinessScenes": [
       "BS01",
       "BS11"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "2024 H1 Credit Fraud Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-ab1e8b8c-509b-44e7-9dbe-d7271765ae2c"
+      },
+      {
+        "title": "Black Market Big Data: Exposing Malicious Loan Brokers",
+        "link": "https://zhuanlan.zhihu.com/p/17601711058"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

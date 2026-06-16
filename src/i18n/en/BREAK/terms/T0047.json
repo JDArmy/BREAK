@@ -17,16 +17,34 @@
     "definition": "A high-risk, unsecured loan issued without collateral or guarantees, typically by unlicensed underground lenders or private individuals operating outside the formal financial system.",
     "description": "This lending model relies not on standard credit checks but on violent collection tactics to manage risk. In the context of credit fraud, such loans are often used to create debt traps through “borrow-new-to-pay-old” cycles or to provide short-term bridge funding for illicit operations. Once a borrower falls in, they face exorbitant interest rates and physical intimidation, making it extremely difficult to exit.",
     "usageExample": "Those who get rejected by banks all turn to unsecured underground lenders. The interest is terrifyingly high, but you can get cash the same day.",
-    "relatedRisks": [],
-    "relatedAvoidances": [],
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [
+      "A0015",
+      "A0046",
+      "A0057",
+      "A0054",
+      "A0044"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0038"
     ],
     "relatedBusinessScenes": [
-      "BS01"
+      "BS01",
+      "BS11"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "2024 H1 Credit Fraud Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-ab1e8b8c-509b-44e7-9dbe-d7271765ae2c"
+      },
+      {
+        "title": "Black Market Big Data: Exposing Malicious Loan Brokers",
+        "link": "https://zhuanlan.zhihu.com/p/17601711058"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

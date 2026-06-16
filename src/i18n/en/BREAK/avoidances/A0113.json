@@ -1,9 +1,9 @@
 {
   "A0113": {
-    "title": "IoT流量异常检测与C&C通信阻断",
-    "definition": "使用机器学习模型检测IoT设备的异常网络行为，识别并阻断僵尸网络C&C（命令与控制）通信",
-    "description": "僵尸网络依赖C&C服务器下发指令，切断通信可以瓦解攻击。检测方法：使用机器学习分析设备流量特征，识别DGA域名、异常DNS查询、非常规端口通信等僵尸网络特征；在网关部署深度包检测（DPI），识别已知僵尸网络协议（如Mirai变种）；监控设备突然的大量出站连接、扫描行为；建立正常流量基线，偏离即告警。阻断措施：DNS过滤阻断已知C&C域名；防火墙规则限制设备只能访问白名单服务；检测到感染后自动隔离设备。",
+    "title": "IoT Traffic Anomaly Detection and C&C Communication Blocking",
+    "definition": "Using machine learning models to detect abnormal network behavior in IoT devices, and identifying and blocking botnet C&C (Command and Control) communication.",
+    "description": "Botnets rely on C&C servers to issue commands, and severing this communication can disrupt attacks. Detection methods: using machine learning to analyze device traffic characteristics and identify botnet features such as DGA domains, abnormal DNS queries, and non-standard port communication; deploying Deep Packet Inspection (DPI) at the gateway to identify known botnet protocols (e.g., Mirai variants); monitoring for sudden large-scale outbound connections and scanning behavior; establishing a baseline of normal traffic and triggering alerts upon deviation. Blocking measures: DNS filtering to block known C&C domains; firewall rules to restrict devices to whitelisted services only; automatically isolating infected devices upon detection.",
     "complexity": "Advanced",
-    "limitation": "机器学习模型需要大量训练数据且存在误报；新型僵尸网络可能使用加密通信绕过检测；DGA域名生成速度快，黑名单难以实时更新；对已加密流量检测效果有限"
+    "limitation": "Machine learning models require large amounts of training data and are prone to false positives; emerging botnets may use encrypted communication to evade detection; DGA domains are generated rapidly, making real-time blacklist updates difficult; limited effectiveness in detecting encrypted traffic."
   }
 }

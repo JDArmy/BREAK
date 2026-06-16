@@ -1,9 +1,9 @@
 {
   "A0122": {
-    "title": "智能合约代码审计与公开验证",
-    "definition": "在项目发布前进行第三方代码审计，并在区块链浏览器上公开验证合约源代码",
-    "description": "通过透明度和专业审查降低Rug Pull风险。实施要点：聘请知名审计公司（如CertiK、Quantstamp）进行全面代码审计，公开发布审计报告；在Etherscan等区块链浏览器上验证并公开合约源代码，让投资者可以检查；重点审查是否存在隐藏的铸币函数、暂停交易函数、owner特权、流动性撤回后门等Rug Pull常见手法；检查代理合约的升级权限，确保无法恶意替换实现；审计后的代码不应再修改，如需修改需重新审计。Coinbase等平台建议投资者优先选择经过审计的项目。",
+    "title": "Smart Contract Code Auditing and Public Verification",
+    "definition": "Conduct third-party code audits before project launch and publicly verify the contract source code on blockchain explorers.",
+    "description": "Reduce rug pull risks through transparency and professional review. Implementation points: Engage reputable auditing firms (e.g., CertiK, Quantstamp) to perform comprehensive code audits and publicly release audit reports; verify and publish contract source code on blockchain explorers such as Etherscan, allowing investors to inspect it; focus on checking for hidden mint functions, transaction pause functions, owner privileges, liquidity withdrawal backdoors, and other common rug pull techniques; examine upgrade permissions of proxy contracts to ensure they cannot be maliciously replaced; audited code should not be modified thereafter, and if modifications are required, a re-audit is necessary. Platforms like Coinbase recommend that investors prioritize projects that have undergone auditing.",
     "complexity": "Intermediate",
-    "limitation": "审计无法保证发现所有漏洞，且成本高（数万至数十万美元）；审计报告可能被造假或断章取义；即使通过审计的项目也可能通过其他方式Rug Pull（如社交工程）；代码开源不等于安全"
+    "limitation": "Audits cannot guarantee the discovery of all vulnerabilities and are costly (ranging from tens of thousands to hundreds of thousands of dollars); audit reports may be falsified or taken out of context; even audited projects may still conduct rug pulls through other means (e.g., social engineering); open-source code does not equate to security."
   }
 }

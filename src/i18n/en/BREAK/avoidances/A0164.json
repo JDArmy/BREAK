@@ -1,9 +1,9 @@
 {
   "A0164": {
-    "title": "多链资产映射追踪",
-    "definition": "建立跨链资产映射关系，追踪资产在不同链上的流转",
-    "description": "追踪体系：链上映射表；跨链索引；资产指纹；流转路径；总量监控；异常告警；取证支持。",
+    "title": "Multi-Chain Asset Mapping and Tracking",
+    "definition": "Establish cross-chain asset mapping relationships to track the flow of assets across different blockchains.",
+    "description": "Tracking system: on-chain mapping table; cross-chain indexing; asset fingerprinting; flow path analysis; aggregate monitoring; anomaly alerting; forensic support.",
     "complexity": "Advanced",
-    "limitation": "跨链数据整合困难；隐私币难追踪；新链接入滞后"
+    "limitation": "Difficulties in cross-chain data integration; challenges in tracking privacy coins; delays in new chain integration."
   }
 }

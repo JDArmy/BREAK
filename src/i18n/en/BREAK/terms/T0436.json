@@ -13,22 +13,47 @@
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "代理维权机构承诺代债务人处理催收并协商减免债务的服务。",
-    "description": "代理维权机构以债务托管名义接管债务人的催收电话，声称可协商减免债务，实则收取高额托管费。操作中常涉及伪造材料、恶意投诉等非法手段，导致债务人个人信息被滥用、债务问题恶化，甚至因虚假承诺而错过最佳还款时机。",
-    "usageExample": "债务托管不看账户150一个月。",
+    "definition": "A service in which a debt-relief agency promises to handle debt collection calls and negotiate debt reduction on behalf of the debtor.",
+    "description": "Under the guise of debt management, agencies take over collection calls for debtors and claim they can negotiate debt forgiveness, while in reality charging high management fees. Their operations often involve forging documents, filing malicious complaints, and other illegal tactics, leading to misuse of personal information, worsening debt problems, and missed repayment opportunities due to false promises.",
+    "usageExample": "Debt management service, no need to check your account, just 150 a month.",
     "relatedRisks": [
       "R0096",
       "R0096-001"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0046",
+      "A0057",
+      "A0054",
+      "A0044",
+      "A0038",
+      "A0060",
+      "A0016-001",
+      "A0004",
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0049"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0029"
     ],
     "relatedBusinessScenes": [
-      "BS01"
+      "BS01",
+      "BS11"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "2024 H1 Credit Fraud Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-ab1e8b8c-509b-44e7-9dbe-d7271765ae2c"
+      },
+      {
+        "title": "Black Market Big Data: Exposing Malicious Loan Brokers",
+        "link": "https://zhuanlan.zhihu.com/p/17601711058"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

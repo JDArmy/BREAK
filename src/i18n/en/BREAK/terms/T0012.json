@@ -19,10 +19,19 @@
     "relatedRisks": [
       "R0030",
       "R0030-001",
-      "R0030-005"
+      "R0030-005",
+      "R0005"
     ],
     "relatedAvoidances": [
-      "A0007-001"
+      "A0007-001",
+      "A0015",
+      "A0059",
+      "A0061",
+      "A0044",
+      "A0007",
+      "A0016-003",
+      "A0024",
+      "A0021"
     ],
     "relatedAttackTools": [
       "AT0006",
@@ -38,8 +47,16 @@
     ],
     "references": [
       {
-        "title": "Overseas e-commerce platform risk research report for the first half of 2024",
+        "title": "2024 H1 Overseas E-commerce Platform Risk Research Report",
         "link": "https://www.threathunter.cn/blog/2024-c4d0fcec-8464-4e21-a997-887ad34025d1"
+      },
+      {
+        "title": "Black Market Big Data: E-commerce Scalper Industry Chain Analysis Report",
+        "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
+      },
+      {
+        "title": "2024 H1 Internet Underground Economy Research Report",
+        "link": "https://www.threathunter.cn/blog/2024-50e66f87-abe6-4928-b031-c5c2c83c1cf0"
       }
     ],
     "updated": "2026-06-16"

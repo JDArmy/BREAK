@@ -1,9 +1,9 @@
 {
   "A0119": {
-    "title": "时间加权投票与时间锁机制",
-    "definition": "采用持币时长加权的投票权计算方式，并对提案实施时间延迟，防止闪电贷临时获取投票权",
-    "description": "闪电贷攻击者可以在单笔交易内借入大量治理代币投票后归还，时间加权机制可以防御此类攻击。实施方法：投票权不仅基于持币数量，还基于持有时长（如平方根或线性加权）；在提案快照时计算投票权，快照后获得的代币不能参与该提案投票；提案通过后设置执行延迟（timelock），通常24-72小时，给社区时间发现恶意提案并应对；延迟期内允许紧急否决机制（如多签委员会）。a16z的DAO治理框架强调时间维度的重要性，可以大幅提高攻击成本。",
+    "title": "Time-Weighted Voting and Timelock Mechanism",
+    "definition": "A voting power calculation method weighted by token holding duration, combined with a mandatory delay on proposal execution, to prevent flash loan-based temporary acquisition of voting rights.",
+    "description": "Flash loan attackers can borrow a large number of governance tokens, vote, and return them within a single transaction. A time-weighted mechanism can defend against such attacks. Implementation methods: Voting power is based not only on the number of tokens held but also on the holding duration (e.g., square root or linear weighting). Voting power is calculated at the time of the proposal snapshot, and tokens acquired after the snapshot cannot participate in that proposal's vote. An execution delay (timelock), typically 24–72 hours, is enforced after a proposal passes, giving the community time to detect malicious proposals and respond. An emergency veto mechanism (e.g., a multi-signature committee) is allowed during the delay period. The DAO governance framework proposed by a16z emphasizes the importance of the time dimension, significantly raising the cost of attacks.",
     "complexity": "Intermediate",
-    "limitation": "时间加权降低了代币流动性价值，影响市场活跃度；延迟机制降低治理效率，紧急情况响应慢；计算和存储历史持仓数据增加链上成本；可能被长期持有者操纵"
+    "limitation": "Time weighting reduces the liquidity value of tokens and impacts market activity. The timelock mechanism lowers governance efficiency and slows emergency response. Calculating and storing historical holding data increases on-chain costs. The system may be manipulated by long-term holders."
   }
 }

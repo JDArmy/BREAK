@@ -13,22 +13,47 @@
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "代理维权黑产为逾期债务人向平台协商调整还款计划的操作。",
-    "description": "代理维权机构利用债务人的实际困难，通过代理投诉或虚假协商手段，向银行或网贷平台申请重新制定分期还款方案。过程中常涉及伪造证明材料、恶意投诉施压等非法行为，债务人不仅面临个人信息被倒卖的风险，还可能因虚假材料导致法律追责。",
-    "usageExample": "Debt optimization, credit report dispute appeals, capital services, and credit card personalized installment plans up to 60 months.",
+    "definition": "A black-market debt relief service in which illicit agencies negotiate adjusted repayment plans with lenders on behalf of overdue borrowers.",
+    "description": "Illicit debt-relief agencies exploit borrowers' financial distress by filing proxy complaints or conducting sham negotiations with banks and online lending platforms to restructure installment repayment plans. These operations often involve forging supporting documents and exerting pressure through malicious complaints. Borrowers risk having their personal data resold and may face legal liability due to falsified materials.",
+    "usageExample": "Debt optimization, credit report dispute appeals, capital services, credit card personalized installment plans up to 60 months.",
     "relatedRisks": [
       "R0096",
       "R0096-001"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0046",
+      "A0057",
+      "A0054",
+      "A0044",
+      "A0038",
+      "A0060",
+      "A0016-001",
+      "A0004",
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0049"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0029"
     ],
     "relatedBusinessScenes": [
-      "BS01"
+      "BS01",
+      "BS11"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "2024 H1 Credit Fraud Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-ab1e8b8c-509b-44e7-9dbe-d7271765ae2c"
+      },
+      {
+        "title": "Black Market Big Data: Exposing Malicious Loan Brokers",
+        "link": "https://zhuanlan.zhihu.com/p/17601711058"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

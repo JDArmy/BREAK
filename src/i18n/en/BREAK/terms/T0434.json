@@ -13,25 +13,49 @@
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "代理维权机构代替债务人向银行申请减免利息罚息并分期归还本金的操作。",
-    "description": "代理维权机构以债务人名义与银行协商，声称可减免信用卡逾期利息和违约金，仅偿还本金并分期支付。实际操作中，代理方常伪造贫困证明、病历等材料，并收取高额服务费，导致债务人个人信息泄露、债务未减反增，甚至被银行列入黑名单。",
-    "usageExample": "For overdue credit cards and online loans, or those about to become overdue, we can arrange a interest-and-penalty freeze with installment repayment.",
+    "definition": "A practice where proxy agencies negotiate with banks on behalf of debtors to waive interest and penalty fees and allow repayment of the principal in installments.",
+    "description": "Proxy agencies negotiate with banks in the debtor's name, claiming they can have credit card overdue interest and penalty fees waived, so that only the principal is repaid in installments. In practice, these agents often fabricate poverty certificates, medical records, and other documents, charge exorbitant service fees, and expose debtors' personal information. This often leaves the debtor with unresolved debts, additional costs, and blacklisting by the bank.",
+    "usageExample": "For those with overdue credit cards or online loans, or about to become overdue, we can arrange a principal-only installment plan with waived interest.",
     "relatedRisks": [
       "R0096",
       "R0096-001"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0046",
+      "A0057",
+      "A0054",
+      "A0044",
+      "A0038",
+      "A0060",
+      "A0016-001",
+      "A0004",
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0049"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0029"
     ],
     "relatedBusinessScenes": [
-      "BS01"
+      "BS01",
+      "BS11"
     ],
     "references": [
       {
-        "title": "[Credit Fraud] Exposing the black industry behind illegal \"agency rights protection\" in the financial field",
+        "title": "Credit Fraud: Exposing the Black Industry Behind Illegal \"Proxy Rights Protection\" in the Financial Sector",
         "link": "https://www.threathunter.cn/blog/e78513e348b"
+      },
+      {
+        "title": "2024 H1 Credit Fraud Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-ab1e8b8c-509b-44e7-9dbe-d7271765ae2c"
+      },
+      {
+        "title": "Black Market Big Data: Exposing Malicious Loan Brokers",
+        "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
     "updated": "2026-06-16"

@@ -14,15 +14,26 @@
     ],
     "aliases": [],
     "category": "Gambling",
-    "definition": "在赌博黑产中，“洗码费/流水费”指赌场或平台按赌客下注流水抽取一定比例后返给代理或跑分人员的佣金。",
-    "description": "This fee is essentially a cut of the circulating gambling funds. Casinos deduct it from the total turnover and distribute it to intermediaries, code merchants, or money laundering teams to incentivize continuous recruitment of gamblers and maintenance of financial channels. In scams combining telecom fraud and money laundering, this fee is often disguised as a \"handling fee\" or \"rebate,\" but it actually serves as a lubricant for the money laundering chain, significantly diluting the gambler's principal through successive deductions.",
-    "usageExample": "Recruiting for manual money laundering tasks, base salary plus bonuses and an extra three points, minus a 20% turnover commission.",
+    "definition": "In gambling-related black market operations, 'washing fee' or 'turnover fee' refers to the commission returned to agents or money mule teams by the casino or platform, calculated as a percentage of the total betting turnover.",
+    "description": "This fee is essentially a cut taken from the flow of gambling funds. It is typically deducted by the casino from the total turnover and distributed to intermediaries, junket operators, or money mule teams to incentivize the continuous recruitment of gamblers and the maintenance of fund channels. In scenarios combining telecom fraud and money muling, this fee is often disguised as a 'handling fee' or 'rebate,' but it actually serves as a lubricant for the money laundering chain, significantly diluting the gambler's principal after multiple layers of deductions.",
+    "usageExample": "Recruiting for manual money mule work, base salary plus bonus and an extra three points, with a 20% deduction for the turnover fee.",
     "relatedRisks": [
       "R0060",
       "R0093",
       "R0097"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0016",
+      "A0044",
+      "A0061",
+      "A0038",
+      "A0060",
+      "A0016-001",
+      "A0004",
+      "A0024",
+      "A0054"
+    ],
     "relatedAttackTools": [
       "AT0026"
     ],
@@ -35,7 +46,16 @@
       "BS06",
       "BS01"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review",
+        "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
+      },
+      {
+        "title": "Black Market Big Data: 2025 Internet Underground Economy Trend Annual Review",
+        "link": "https://www.163.com/dy/article/KJ2QH6LE0518STKV.html"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

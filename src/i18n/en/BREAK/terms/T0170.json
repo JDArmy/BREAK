@@ -14,15 +14,24 @@
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "A core underground figure who owns and operates social engineering databases, credential-stuffing data, or leaked databases.",
-    "description": "库主是地下数据交易生态的关键节点，负责非法获取、整理和分发海量敏感数据。他们通过售卖、订阅或会员制提供查询服务，构建起数据黑产的上游供应链。库主常与内鬼、黑客合作，持续更新数据源，是各类精准欺诈和身份冒用的基础支撑。",
-    "usageExample": "\"Bank card transaction records, any bank, stable. Express line departs Sunday evening, returns Monday or Tuesday.\"",
+    "definition": "A core underground figure who controls and operates social engineering databases, credential-stuffing data, or leaked databases.",
+    "description": "The database owner is a key node in the underground data trading ecosystem, responsible for illegally acquiring, organizing, and distributing vast amounts of sensitive data. They provide query services through sales, subscriptions, or membership models, forming the upstream supply chain of the data black market. Often collaborating with insiders and hackers to continuously update data sources, database owners are the foundational support for various types of targeted fraud and identity theft.",
+    "usageExample": "\"Bank transaction records, any bank, stable, express line departing this Sunday evening, results back by Tuesday or Wednesday.\"",
     "relatedRisks": [
       "R0092",
       "R0078",
       "R0089"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0049",
+      "A0024",
+      "A0054"
+    ],
     "relatedAttackTools": [
       "AT0012"
     ],
@@ -36,7 +45,16 @@
       "BS01",
       "BS04"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

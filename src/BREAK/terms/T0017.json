@@ -22,15 +22,30 @@
     "description": "黑灰产利用定制化脚本或外挂程序，在促销活动开始的瞬间自动完成下单流程，抢购限量优惠商品或券包。该行为导致正常用户无法获得优惠，严重破坏营销活动的公平性，常与下游变现环节结合，形成规模化套利。",
     "usageExample": "昨晚那个半价茅台活动，脚本哥直接秒杀了几百单，我们手动根本抢不到。",
     "relatedRisks": [
-      "R0012"
+      "R0012",
+      "R0005"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0059",
+      "A0061",
+      "A0044"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "relatedBusinessScenes": [
       "BS02"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "【黑产大数据】电商黄牛党产业链分析报告",
+        "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
+      },
+      {
+        "title": "2024年上半年互联网黑灰产研究报告",
+        "link": "https://www.threathunter.cn/blog/2024-50e66f87-abe6-4928-b031-c5c2c83c1cf0"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

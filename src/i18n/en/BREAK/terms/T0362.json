@@ -14,12 +14,19 @@
     ],
     "aliases": [],
     "category": "Gambling",
-    "definition": "在赌博作弊场景中，“透视”指黑产利用摄像设备、作弊软件或系统后门实时窥探对手底牌的技术手段。",
-    "description": "Common methods include installing pinhole cameras at card tables or within gambling apps, modifying card sensors, or bribing platform operators to implant backdoors that transmit opponents' hands to the cheater's device. This allows the house or a card sharp to secure a win before bets are placed, rapidly draining victims in setups like pig-butchering scams or baccarat games. Discovery of such cheating often triggers violent confrontations or internal gang conflicts.",
+    "definition": "In gambling cheating scenarios, 'hole carding' refers to the technical means used by black market operators to spy on opponents' cards in real-time using camera equipment, cheating software, or system backdoors.",
+    "description": "Common methods include installing pinhole cameras or modified card sensors at physical tables or within gambling apps, or directly bribing platform operations staff to implant a backdoor, transmitting the opponent's hand to the cheater's terminal. This allows the house or card sharp to lock in a win before placing a bet, rapidly draining the gambler's funds, especially in pig-butchering or baccarat-style games. Discovery of such cheating often leads to violent confrontations or internal gang infighting.",
     "relatedRisks": [
       "R0097"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0016",
+      "A0044",
+      "A0061",
+      "A0051",
+      "A0006-005"
+    ],
     "relatedAttackTools": [
       "AT0066"
     ],
@@ -29,7 +36,16 @@
     "relatedBusinessScenes": [
       "BS06"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review",
+        "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
+      },
+      {
+        "title": "Black Market Big Data: 2025 Internet Underground Economy Trend Annual Review",
+        "link": "https://www.163.com/dy/article/KJ2QH6LE0518STKV.html"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

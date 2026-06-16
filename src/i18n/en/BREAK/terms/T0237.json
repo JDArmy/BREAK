@@ -20,7 +20,17 @@
       "R0068",
       "R0068-002"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0021",
+      "A0059",
+      "A0060",
+      "A0061",
+      "A0006-005",
+      "A0016-002",
+      "A0051",
+      "A0037"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0022",
@@ -31,7 +41,16 @@
       "BS05",
       "BS04"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "2024 H1 Internet Underground Economy Research Report",
+        "link": "https://www.threathunter.cn/blog/2024-50e66f87-abe6-4928-b031-c5c2c83c1cf0"
+      },
+      {
+        "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review",
+        "link": "https://www.threathunter.cn/blog/2024-37b58782-063b-4426-a2f8-6de6622dbca7"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

@@ -1,9 +1,9 @@
 {
   "A0145": {
-    "title": "侧信道攻击检测与监控",
-    "definition": "部署监控系统检测针对设备的侧信道攻击企图",
-    "description": "检测措施：功耗异常监控；物理访问日志；异常探测信号检测；防护罩传感器；入侵告警系统。",
+    "title": "Side-Channel Attack Detection and Monitoring",
+    "definition": "Deploy monitoring systems to detect side-channel attack attempts against devices",
+    "description": "Detection measures: abnormal power consumption monitoring; physical access logging; anomalous probe signal detection; tamper-evident enclosure sensors; intrusion alarm systems.",
     "complexity": "Intermediate",
-    "limitation": "被动防御；攻击者可能绕过监控"
+    "limitation": "Passive defense; attackers may bypass monitoring"
   }
 }

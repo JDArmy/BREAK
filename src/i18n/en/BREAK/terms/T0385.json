@@ -12,20 +12,44 @@
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "黑产用“稳吃皮”表示某项贷款业务稳定可靠、确定能下款，以此招揽合作。",
-    "description": "Originating from Sichuan-Chongqing dialect, it originally meant having the upper hand or being well-connected. In loan fraud, black-market brokers use this term to package their loan services, emphasizing an extremely high approval rate to lure downstream agents or desperate borrowers. Once trapped, victims often face exorbitant fees or risk having their personal data stolen.",
-    "usageExample": "Steady skin business No household registration limit, small number, come quickly.",
+    "definition": "In black market operations, 'steady skin-eater' is used to describe a loan service that is reliable and guaranteed to disburse funds, used to attract collaborators.",
+    "description": "Originating from Sichuan-Chongqing dialect, it originally meant having an advantage or being successful. In credit fraud, black market intermediaries use 'steady skin-eater' to package their loan services, emphasizing an extremely high success rate for loan disbursement to lure downstream agents or desperate clients. Once a client is hooked, they often face high fees or the risk of having their personal data stolen.",
+    "usageExample": "Steady skin-eater business, no restrictions on household registration, limited spots, come quickly.",
     "relatedRisks": [
       "R0096"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0046",
+      "A0057",
+      "A0054",
+      "A0044",
+      "A0038",
+      "A0060",
+      "A0016-001",
+      "A0004",
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0049"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "relatedBusinessScenes": [
       "BS01",
       "BS11"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "2024 H1 Credit Fraud Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-ab1e8b8c-509b-44e7-9dbe-d7271765ae2c"
+      },
+      {
+        "title": "Black Market Big Data: Exposing Malicious Loan Brokers",
+        "link": "https://zhuanlan.zhihu.com/p/17601711058"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

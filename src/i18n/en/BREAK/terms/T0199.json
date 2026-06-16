@@ -22,7 +22,20 @@
       "R0092",
       "R0109"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0038",
+      "A0060",
+      "A0016-001",
+      "A0004",
+      "A0049",
+      "A0015",
+      "A0061"
+    ],
     "relatedAttackTools": [
       "AT0012",
       "AT0064"
@@ -36,7 +49,16 @@
       "BS00",
       "BS04"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

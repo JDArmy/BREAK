@@ -13,13 +13,25 @@
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "Forced group addition refers to the act of using technical means to forcibly add users to a designated group or channel without their knowledge or authorization.",
-    "description": "黑产通过脚本或外挂批量操作，绕过平台好友验证或邀请机制，将大量用户强行拉入群组。被拉入的用户往往与群主题无关，群内随后会进行广告轰炸或诈骗信息推送。该手法常用于色情引流、赌博推广或金融诈骗，能快速拉升群成员数，制造虚假活跃度。",
+    "definition": "The act of forcibly adding users to a designated group or channel without their knowledge or consent through technical means.",
+    "description": "Using scripts or plug-ins to bypass platform friend verification or invitation mechanisms, operators add a large number of users to groups in bulk. The added users are often unrelated to the group's theme, and the group is subsequently flooded with advertisements or scam messages. This tactic is commonly used for adult content redirection, gambling promotion, or financial scams to rapidly inflate member counts and create a false sense of activity.",
     "relatedRisks": [
       "R0024",
       "R0007-003"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0021",
+      "A0059",
+      "A0060",
+      "A0061",
+      "A0006-005",
+      "A0016-002",
+      "A0051",
+      "A0037",
+      "A0016",
+      "A0044"
+    ],
     "relatedAttackTools": [
       "AT0005",
       "AT0050"
@@ -32,7 +44,16 @@
       "BS02",
       "BS04"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "2024 H1 Internet Underground Economy Research Report",
+        "link": "https://www.threathunter.cn/blog/2024-50e66f87-abe6-4928-b031-c5c2c83c1cf0"
+      },
+      {
+        "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review",
+        "link": "https://www.threathunter.cn/blog/2024-37b58782-063b-4426-a2f8-6de6622dbca7"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

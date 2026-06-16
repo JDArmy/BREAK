@@ -22,7 +22,13 @@
       "R0093",
       "R0095"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0024",
+      "A0015",
+      "A0016",
+      "A0054",
+      "A0044"
+    ],
     "relatedAttackTools": [
       "AT0026",
       "AT0039",
@@ -37,7 +43,16 @@
       "BS01",
       "BS04"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly",
+        "link": "https://k.sina.cn/article_7857201856_1d45362c001906fzea.html?from=tech"
+      },
+      {
+        "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign",
+        "link": "https://www.secrss.com/articles/56050"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

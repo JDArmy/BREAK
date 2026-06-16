@@ -1,9 +1,9 @@
 {
   "A0095": {
-    "title": "智能合约安全审计",
-    "definition": "对智能合约代码进行系统性的人工审查和专业分析，识别潜在的安全漏洞和逻辑缺陷",
-    "description": "智能合约安全审计是部署前的关键防御措施，由专业安全团队对合约代码进行全面检查。审计过程包括：代码逻辑审查、业务逻辑验证、权限控制检查、重入攻击防护、整数溢出检测、Gas优化分析等。审计分为内部审计和第三方专业审计，建议在主网部署前至少完成一次第三方审计。审计报告会列出发现的漏洞级别（严重/高危/中危/低危）和修复建议，开发团队需根据报告修复问题并进行复审。",
+    "title": "Smart Contract Security Audit",
+    "definition": "A systematic manual review and professional analysis of smart contract code to identify potential security vulnerabilities and logical flaws.",
+    "description": "A smart contract security audit is a critical defensive measure conducted before deployment, involving a comprehensive examination of the contract code by a professional security team. The audit process includes: code logic review, business logic verification, access control inspection, reentrancy attack prevention, integer overflow detection, gas optimization analysis, and more. Audits are categorized into internal audits and third-party professional audits, and it is recommended to complete at least one third-party audit before mainnet deployment. The audit report lists the severity levels of discovered vulnerabilities (Critical/High/Medium/Low) along with remediation recommendations. The development team is required to fix the issues based on the report and undergo a re-audit.",
     "complexity": "Intermediate",
-    "limitation": "人工审计依赖审计人员的经验和专业水平，可能遗漏复杂的逻辑漏洞；审计成本较高，周期较长；审计只能针对特定版本的代码，后续修改需要重新审计"
+    "limitation": "Manual audits depend on the experience and expertise of the auditors, which may result in missed complex logical vulnerabilities. Audits involve high costs and long cycles. Additionally, audits are only applicable to a specific version of the code, and any subsequent modifications require a re-audit."
   }
 }

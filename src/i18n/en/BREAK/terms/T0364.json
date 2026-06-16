@@ -14,12 +14,17 @@
     ],
     "aliases": [],
     "category": "Gambling",
-    "definition": "在赌博黑产中，“摇把子”指掌控整个赌场运营、调度资金与人手的一把手负责人。",
-    "description": "The boss typically does not participate directly at the table but orchestrates operations from behind the scenes, overseeing venue rental, recruitment, fund pool management, and external security to ensure the game runs continuously. They form a vertical management chain with roles like the middleman and table manager, and are often the first to cut ties and move assets when trouble arises. In online casinos, the boss may act as a platform administrator, remotely manipulating odds, closing bets, and consolidating funds.",
+    "definition": "In gambling-related black market operations, 'rocker' refers to the top-level boss who controls the entire casino operation, managing funds and personnel.",
+    "description": "The 'rocker' typically does not directly participate at the tables but orchestrates operations from behind the scenes, overseeing venue rental, personnel recruitment, fund pool management, and peripheral security to ensure the gambling sessions run continuously. They form a vertical management chain with roles like the 'basket carrier' and 'table manager.' When trouble arises, they are often the first to cut off contact and move assets. In online casinos, the 'rocker' may act as the platform administrator, remotely controlling odds, suspending bets, and centralizing funds.",
     "relatedRisks": [
       "R0097"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0016",
+      "A0044",
+      "A0061"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0016"
@@ -27,7 +32,16 @@
     "relatedBusinessScenes": [
       "BS06"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review",
+        "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
+      },
+      {
+        "title": "Black Market Big Data: 2025 Internet Underground Economy Trend Annual Review",
+        "link": "https://www.163.com/dy/article/KJ2QH6LE0518STKV.html"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

@@ -1,9 +1,9 @@
 {
   "A0152": {
-    "title": "元宇宙资产链上确权与溯源",
-    "definition": "通过区块链NFT技术确权虚拟资产所有权，实现可追溯的交易历史",
-    "description": "区块链确权：NFT记录所有权；元数据存储IPFS；交易历史公开；智能合约管理转移；防止双花；跨平台互操作标准。",
+    "title": "On-Chain Asset Ownership Verification and Traceability in the Metaverse",
+    "definition": "Leveraging blockchain-based NFT technology to verify ownership of virtual assets and establish a traceable transaction history.",
+    "description": "Blockchain-based ownership verification: NFTs record ownership; metadata stored on IPFS; publicly auditable transaction history; smart contract-managed transfers; double-spending prevention; cross-platform interoperability standards.",
     "complexity": "Intermediate",
-    "limitation": "依赖区块链可用性；跨链资产复杂；中心化平台控制仍存在"
+    "limitation": "Dependence on blockchain availability; complexity of cross-chain asset management; persistent control by centralized platforms."
   }
 }

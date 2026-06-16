@@ -14,16 +14,25 @@
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "An illegal channel for data queries that provides extremely fast results, often within minutes.",
-    "description": "快线是黑产上游的高效数据获取方式，通常依赖公权系统或自动化接口，能迅速返回目标信息。它被用于紧急查档需求，如实时定位、即时身份核验等。快线的存在表明黑产已渗透进高速信息网络，极大提升了犯罪效率。",
-    "usageExample": "\"Bank card transaction records, any bank, stable. Express line departs Sunday evening, returns Monday or Tuesday.\"",
+    "definition": "An illicit channel that provides extremely fast data queries, delivering feedback within minutes.",
+    "description": "The express line is a high-efficiency data acquisition method in the upstream underground market, often relying on compromised government systems or automated interfaces to rapidly return target information. It is used for urgent lookup needs, such as real-time location tracking or instant identity verification. The existence of express lines indicates that criminal networks have penetrated high-speed information networks, greatly enhancing criminal efficiency.",
+    "usageExample": "\"Bank transaction records, any bank, stable, express line departing this Sunday evening, results back by Tuesday or Wednesday.\"",
     "relatedRisks": [
       "R0092",
       "R0078",
       "R0089",
       "R0109"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0049",
+      "A0024",
+      "A0054"
+    ],
     "relatedAttackTools": [
       "AT0012",
       "AT0064"
@@ -38,7 +47,16 @@
       "BS01",
       "BS04"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

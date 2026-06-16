@@ -1,9 +1,9 @@
 {
   "A0116": {
-    "title": "强制首次配置密码修改",
-    "definition": "设备出厂时不设默认密码，或在首次启动时强制用户创建唯一密码才允许使用",
-    "description": "从根本上消除通用默认密码风险。实施方式：设备出厂时不设任何默认密码，首次配置必须创建；或使用设备唯一的随机初始密码（如MAC地址派生），打印在标签上；首次登录强制修改密码，未修改前限制设备功能；密码必须满足复杂度要求（长度、字符类型）；提供密码强度实时反馈；记录密码修改历史，防止重复使用。Cybersecurity Tech Accord倡导消除通用默认密码，TÜV SÜD等认证机构已将此作为IoT安全标准。",
+    "title": "Mandatory Initial Password Configuration",
+    "definition": "Devices are shipped without a default password, or users are forced to create a unique password upon first startup before the device can be used.",
+    "description": "This approach fundamentally eliminates the risk associated with universal default passwords. Implementation methods include: shipping devices without any default password, requiring password creation during initial configuration; using a device-unique random initial password (e.g., derived from the MAC address) printed on a label; enforcing a mandatory password change upon first login and restricting device functionality until the change is completed; requiring passwords to meet complexity requirements (length, character types); providing real-time feedback on password strength; and maintaining a password change history to prevent reuse. The Cybersecurity Tech Accord advocates for the elimination of universal default passwords, and certification bodies such as TÜV SÜD have adopted this as an IoT security standard.",
     "complexity": "Basic",
-    "limitation": "用户可能设置弱密码或忘记密码；增加设备初始配置复杂度，影响用户体验；部分用户可能跳过安全设置或使用弱密码；密码重置机制可能成为新的攻击面"
+    "limitation": "Users may set weak passwords or forget their passwords; increases the complexity of initial device configuration, impacting user experience; some users may skip security setup or use weak passwords; the password reset mechanism may become a new attack surface."
   }
 }

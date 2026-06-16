@@ -23,9 +23,17 @@
     "usageExample": "那帮人专门买有运费险的商品，收到货就挑刺申请赔付，一个月能搞不少钱。",
     "relatedRisks": [
       "R0068-002",
-      "R0068"
+      "R0068",
+      "R0005"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0059",
+      "A0061",
+      "A0044",
+      "A0043",
+      "A0027"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0034"
@@ -37,6 +45,10 @@
       {
         "title": "2024上半年度互联网黑灰产研究报告",
         "link": "https://www.threathunter.cn/blog/2024-50e66f87-abe6-4928-b031-c5c2c83c1cf0"
+      },
+      {
+        "title": "【黑产大数据】电商黄牛党产业链分析报告",
+        "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
       }
     ],
     "updated": "2026-06-16"

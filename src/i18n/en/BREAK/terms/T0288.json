@@ -14,13 +14,23 @@
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "Sextortion chat refers to a fraud technique that uses sexual enticement on social apps to trick victims into transferring money.",
-    "description": "铯聊是色情引流诈骗的变体说法，黑灰产从业者通过社交软件伪装成色情服务提供者，诱导受害人添加好友后进行私密聊天。在聊天过程中以各种名目要求受害人转账付款，但从不提供实际服务。这类诈骗手法成本低、隐蔽性强，受害人往往因羞于报案而让犯罪分子逍遥法外，资金追回难度极大。",
+    "definition": "Sextortion chat is a scam technique that uses social apps for sexual inducement to trick victims into making payments.",
+    "description": "A variant of adult-content lead generation scams, operators pose as providers of sexual services on social apps, luring victims into private chats after adding them as friends. During the conversation, they demand payments under various pretexts but never provide any actual service. This low-cost, highly covert scam often goes unreported because victims feel too ashamed to file a complaint, making fund recovery extremely difficult.",
     "relatedRisks": [
       "R0060",
       "R0095"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0024",
+      "A0015",
+      "A0016",
+      "A0054",
+      "A0044",
+      "A0006-005",
+      "A0016-002",
+      "A0051",
+      "A0037"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0014",
@@ -30,7 +40,16 @@
       "BS01",
       "BS04"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly",
+        "link": "https://k.sina.cn/article_7857201856_1d45362c001906fzea.html?from=tech"
+      },
+      {
+        "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign",
+        "link": "https://www.secrss.com/articles/56050"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

@@ -1,9 +1,9 @@
 {
   "A0112": {
-    "title": "固件完整性监控与物理防篡改",
-    "definition": "持续监控固件完整性，并使用物理防护机制检测和响应硬件级篡改企图",
-    "description": "运行时检测固件篡改并物理保护芯片。技术包括：定期计算固件哈希值并与可信基准比对；使用硬件防篡改开关，物理入侵时触发告警或数据清除；在PCB设计中加入防篡改线路，断开时触发保护；对关键芯片使用环氧树脂封装，增加物理逆向难度；部署远程证明（Remote Attestation）机制，让远程服务器验证设备固件状态。适用于ATM、POS机、工控系统等高安全需求场景。",
+    "title": "Firmware Integrity Monitoring and Physical Tamper Resistance",
+    "definition": "Continuously monitor firmware integrity and use physical protection mechanisms to detect and respond to hardware-level tampering attempts.",
+    "description": "Detect firmware tampering at runtime and physically protect the chip. Techniques include: periodically computing firmware hashes and comparing them against a trusted baseline; using hardware tamper switches that trigger alerts or data wiping upon physical intrusion; incorporating tamper-evident traces in PCB designs that activate protection when broken; encapsulating critical chips with epoxy resin to increase the difficulty of physical reverse engineering; and deploying Remote Attestation mechanisms to allow a remote server to verify the firmware state of the device. Applicable to high-security scenarios such as ATMs, POS terminals, and industrial control systems.",
     "complexity": "Advanced",
-    "limitation": "物理防护增加制造成本；专业攻击者仍可能绕过物理防护；持续监控消耗额外计算资源；误报可能导致设备不可用"
+    "limitation": "Physical protection increases manufacturing costs; sophisticated attackers may still bypass physical safeguards; continuous monitoring consumes additional computing resources; false positives may render the device unavailable."
   }
 }

@@ -20,15 +20,35 @@
     "description": "Fraud rings use automated tools to place bulk orders within milliseconds of a sale opening, rapidly driving inventory to zero. This tactic is commonly employed for hoarding or resale for profit, severely disrupting platform sales operations and depriving average consumers of any buying opportunity.",
     "usageExample": "Those limited-edition sneakers were gone the moment they dropped—definitely cleaned out by a group using bots again.",
     "relatedRisks": [
-      "R0012"
+      "R0012",
+      "R0005"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0059",
+      "A0061",
+      "A0044",
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0049"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "relatedBusinessScenes": [
       "BS02"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Black Market Big Data: E-commerce Scalper Industry Chain Analysis Report",
+        "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
+      },
+      {
+        "title": "2024 H1 Internet Underground Economy Research Report",
+        "link": "https://www.threathunter.cn/blog/2024-50e66f87-abe6-4928-b031-c5c2c83c1cf0"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

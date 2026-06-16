@@ -1,9 +1,9 @@
 {
   "A0158": {
-    "title": "智能合约形式化验证",
-    "definition": "使用数学方法严格证明合约逻辑正确性",
-    "description": "见R0159第三条。",
+    "title": "Formal Verification of Smart Contracts",
+    "definition": "The use of mathematical methods to rigorously prove the logical correctness of a contract.",
+    "description": "See Article 3 of R0159.",
     "complexity": "Advanced",
-    "limitation": "同R0159"
+    "limitation": "Same as R0159"
   }
 }

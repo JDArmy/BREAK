@@ -1,9 +1,9 @@
 {
   "A0148": {
-    "title": "ICS安全监控与应急响应",
-    "definition": "实时监控工控系统运行状态，建立应急响应机制快速处置安全事件",
-    "description": "监控体系：IDS/IPS专用于工控流量；SIEM整合安全事件；基线行为建模；异常告警；应急预案演练；备份系统。",
+    "title": "ICS Security Monitoring and Incident Response",
+    "definition": "Real-time monitoring of industrial control system operational status, with an established incident response mechanism for rapid security event handling.",
+    "description": "Monitoring architecture: IDS/IPS dedicated to ICS traffic; SIEM for security event correlation; baseline behavior modeling; anomaly alerting; emergency response plan drills; backup systems.",
     "complexity": "Advanced",
-    "limitation": "专业人才缺乏；误报率高；应急响应可能影响生产"
+    "limitation": "Shortage of specialized personnel; high false positive rate; incident response may disrupt production operations."
   }
 }

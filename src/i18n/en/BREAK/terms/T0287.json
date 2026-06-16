@@ -14,14 +14,31 @@
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "空降料指通过色情引流、刷单任务等手法直接骗取受害人资金的非法所得。",
-    "description": "空降料是黑灰产对情色诈骗所得资金的称呼，诈骗团伙通过社交软件发布色情引流信息，以预付定金、会员费、保证金等名义诱骗受害人转账。这类资金直接来源于受害人账户，流转链条相对简单，但涉及大量个人转账记录。黑灰产需要大量个人收款码或账户来分散接收空降料，以规避银行风控和警方追踪。",
-    "usageExample": "Air-drop material needs personal merchant QR codes, rates are very high.",
+    "definition": "Air-dropped funds are illicit proceeds obtained by directly defrauding victims through methods like adult-content lead generation or fake task scams.",
+    "description": "This is the black market term for money obtained from romance or sextortion scams. Fraud rings use social apps to post adult-content bait, tricking victims into transferring money under the guise of advance deposits, membership fees, or security deposits. These funds come directly from the victims' accounts, making the transaction chain relatively simple but involving numerous personal transfer records. Black market operators need a large number of personal payment codes or accounts to receive these air-dropped funds in a decentralized manner, thereby evading bank risk controls and police tracking.",
+    "usageExample": "Air-dropped funds need to be processed through personal merchant codes; the exchange rate is very high.",
     "relatedRisks": [
       "R0060",
       "R0095"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0024",
+      "A0015",
+      "A0016",
+      "A0054",
+      "A0044",
+      "A0006-005",
+      "A0016-002",
+      "A0051",
+      "A0037",
+      "A0059",
+      "A0021",
+      "A0061",
+      "A0050",
+      "A0035",
+      "A0052",
+      "A0049"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0014",
@@ -32,7 +49,16 @@
       "BS02",
       "BS04"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly",
+        "link": "https://k.sina.cn/article_7857201856_1d45362c001906fzea.html?from=tech"
+      },
+      {
+        "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign",
+        "link": "https://www.secrss.com/articles/56050"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

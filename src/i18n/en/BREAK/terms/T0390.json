@@ -12,12 +12,18 @@
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "在车贷欺诈中，指机动车登记证书，即车辆的“户口本”。",
-    "description": "机动车登记证书是车辆所有权的法律证明，在车贷欺诈中，它是办理抵押贷款或进行车辆非法转卖的关键凭证。黑产常通过挂失补办、骗取客户信任等手段获取“大本”，进而将车辆非法过户或抵押套现。",
+    "definition": "In the context of auto loan fraud, refers to the official motor vehicle registration certificate, essentially the vehicle's legal identity document.",
+    "description": "The motor vehicle registration certificate serves as legal proof of vehicle ownership. In auto loan fraud, it is a critical document for securing collateralized loans or illegally reselling vehicles. Fraud rings often obtain this certificate through methods such as reporting it lost and reapplying, or by deceiving clients, enabling them to illegally transfer ownership or mortgage the vehicle to cash out.",
     "relatedRisks": [
       "R0096"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0046",
+      "A0057",
+      "A0054",
+      "A0044"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "relatedBusinessScenes": [
@@ -26,8 +32,16 @@
     ],
     "references": [
       {
-        "title": "[Underground Big Data] Deconstructing the Auto Loan Fraud Industrial Chain",
+        "title": "Black Market Big Data: Deconstructing the Auto Loan Fraud Industry Chain",
         "link": "https://www.threathunter.cn/blog/8acce28b732"
+      },
+      {
+        "title": "2024 H1 Credit Fraud Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-ab1e8b8c-509b-44e7-9dbe-d7271765ae2c"
+      },
+      {
+        "title": "Black Market Big Data: Exposing Malicious Loan Brokers",
+        "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
     "updated": "2026-06-16"

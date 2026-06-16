@@ -1,9 +1,9 @@
 {
   "A0159": {
-    "title": "合约升级与紧急暂停",
-    "definition": "实施可升级合约设计和紧急暂停机制应对漏洞",
-    "description": "见R0177第一条及R0161第二条。",
+    "title": "Contract Upgrade and Emergency Pause",
+    "definition": "Implementing upgradeable contract designs and emergency pause mechanisms to address vulnerabilities",
+    "description": "Refer to the first item of R0177 and the second item of R0161.",
     "complexity": "Advanced",
-    "limitation": "同R0177/R0161"
+    "limitation": "Same as R0177/R0161"
   }
 }

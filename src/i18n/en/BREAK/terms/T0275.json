@@ -13,15 +13,27 @@
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "闪码是指在短视频或直播画面中，以极短时间闪现的引流二维码。",
-    "description": "黑产将二维码嵌入视频帧中，利用人眼难以察觉但截图可捕捉的特性，绕过平台内容审核。用户观看时若未暂停则无法看清，但通过录屏或截图即可获取。该手法广泛用于色粉引流、私彩外围或擦边直播导流，将公域流量转化为私域用户。",
-    "usageExample": "That live stream flickered for a moment; I took a screenshot and saw it was a flash code, and scanning it led to nothing but gambling ads.",
+    "definition": "A QR code that appears for an extremely short duration within a short video or live stream, designed to redirect traffic.",
+    "description": "Fraud rings embed QR codes into video frames, exploiting the fact that they are imperceptible to the human eye but can be captured in a screenshot, thereby bypassing platform content moderation. The code is invisible during normal viewing but can be obtained by recording the screen or taking a screenshot. This method is widely used to redirect public traffic to private channels for adult content, underground lotteries, or borderline live streams.",
+    "usageExample": "That live stream flashed for a second. I took a screenshot and saw it was a flash code. Scanning it led to nothing but gambling ads.",
     "relatedRisks": [
       "R0094",
       "R0138",
       "R0121"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0021",
+      "A0059",
+      "A0060",
+      "A0061",
+      "A0006-005",
+      "A0016-002",
+      "A0051",
+      "A0037",
+      "A0016",
+      "A0044"
+    ],
     "relatedAttackTools": [
       "AT0067",
       "AT0039"
@@ -35,7 +47,16 @@
       "BS05",
       "BS15"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "2024 H1 Internet Underground Economy Research Report",
+        "link": "https://www.threathunter.cn/blog/2024-50e66f87-abe6-4928-b031-c5c2c83c1cf0"
+      },
+      {
+        "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review",
+        "link": "https://www.threathunter.cn/blog/2024-37b58782-063b-4426-a2f8-6de6622dbca7"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

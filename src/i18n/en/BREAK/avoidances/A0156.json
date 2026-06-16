@@ -1,9 +1,9 @@
 {
   "A0156": {
-    "title": "链上声誉与信用体系",
-    "definition": "基于链上行为数据构建信誉评分，替代传统KYC身份验证",
-    "description": "信誉系统：链上交易历史；智能合约交互；DeFi信用分；社交图谱；Sybil抗性；灵魂绑定代币。",
+    "title": "On-Chain Reputation and Credit Systems",
+    "definition": "A trust scoring mechanism built on on-chain behavioral data, serving as an alternative to traditional KYC identity verification.",
+    "description": "Reputation systems: on-chain transaction history; smart contract interactions; DeFi credit scores; social graphs; Sybil resistance; soulbound tokens.",
     "complexity": "Intermediate",
-    "limitation": "历史数据可能不足；操纵风险；隐私泄露；标准不统一"
+    "limitation": "Insufficient historical data; risk of manipulation; privacy leakage; lack of standardized frameworks."
   }
 }

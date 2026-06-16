@@ -19,15 +19,31 @@
     "definition": "A link in the black market chain where a third-party drop-shipper provides actual logistics packages and shipping services for fake transactions or fraudulent orders.",
     "description": "In fake order or fraud scenarios, to evade platform risk controls, the person placing the order does not possess real goods but entrusts a drop-shipper to send empty packages or cheap trinkets. The drop-shipper forges logistics information, providing realistic shipping traces for the fake transaction to fraudulently obtain platform subsidies or buyer trust.",
     "relatedRisks": [
-      "R0004"
+      "R0004",
+      "R0005"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0059",
+      "A0061",
+      "A0044",
+      "A0021"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "relatedBusinessScenes": [
       "BS02"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Black Market Big Data: E-commerce Scalper Industry Chain Analysis Report",
+        "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
+      },
+      {
+        "title": "2024 H1 Internet Underground Economy Research Report",
+        "link": "https://www.threathunter.cn/blog/2024-50e66f87-abe6-4928-b031-c5c2c83c1cf0"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

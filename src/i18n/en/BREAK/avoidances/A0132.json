@@ -1,9 +1,9 @@
 {
   "A0132": {
-    "title": "连续区块限制与重组检测",
-    "definition": "限制单一矿工连续出块数量，并监控链重组行为，及时发现51%攻击迹象",
-    "description": "检测和限制攻击者控制链的能力。技术实现：限制同一矿工/验证者连续出块数量（如不超过3个连续块）；监控链重组深度和频率，超过阈值触发告警；追踪大额交易的确认数，检测双花企图；交易所和支付处理商提高确认数要求（如从6增到50+）；部署实时监控系统，检测算力突然集中。MIT DCI研究表明通过连续块限制可以显著提高攻击难度。",
+    "title": "Consecutive Block Limit and Reorganization Detection",
+    "definition": "Restrict the number of consecutive blocks produced by a single miner and monitor chain reorganization behavior to promptly detect signs of a 51% attack.",
+    "description": "Detect and limit an attacker's ability to control the chain. Technical implementation: restrict the number of consecutive blocks produced by the same miner/validator (e.g., no more than 3 consecutive blocks); monitor the depth and frequency of chain reorganizations, triggering alerts when thresholds are exceeded; track the number of confirmations for large transactions to detect double-spend attempts; exchanges and payment processors increase confirmation requirements (e.g., from 6 to 50+); deploy real-time monitoring systems to detect sudden concentration of hash power. Research by MIT DCI indicates that consecutive block limits can significantly increase the difficulty of attacks.",
     "complexity": "Intermediate",
-    "limitation": "限制连续出块可能影响网络效率；提高确认数降低用户体验；监控系统可能产生误报；无法阻止攻击只能延迟检测"
+    "limitation": "Limiting consecutive blocks may affect network efficiency; increasing confirmation requirements degrades user experience; monitoring systems may generate false positives; cannot prevent attacks, only delay detection."
   }
 }

@@ -22,7 +22,18 @@
       "R0093",
       "R0097"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0016",
+      "A0044",
+      "A0061",
+      "A0038",
+      "A0060",
+      "A0016-001",
+      "A0004",
+      "A0024",
+      "A0054"
+    ],
     "relatedAttackTools": [
       "AT0026"
     ],
@@ -35,7 +46,16 @@
       "BS06",
       "BS01"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "【黑产大数据】2025年上半年互联网黑灰产趋势半年度总结",
+        "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
+      },
+      {
+        "title": "【黑产大数据】2025年互联网黑灰产趋势年度总结",
+        "link": "https://www.163.com/dy/article/KJ2QH6LE0518STKV.html"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

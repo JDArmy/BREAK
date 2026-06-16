@@ -14,12 +14,17 @@
     ],
     "aliases": [],
     "category": "Gambling",
-    "definition": "在赌博黑产中，“窑车”指专门接送赌客往返地下赌场的车辆，是赌场物流环节的一环。",
-    "description": "These vehicles are centrally dispatched by the casino, with drivers familiar with routes and surveillance blind spots. They pick up gamblers from meeting points, take them to hidden locations, and return them afterward, all under closed management. The vehicles often use cloned or fake plates and may be equipped with communication jammers to prevent tracking. If compromised, these transport vehicles become a key lead for police to locate the casino's entrance.",
+    "definition": "In gambling-related black market operations, a 'kiln car' refers to a vehicle specifically used to transport gamblers to and from an underground casino, forming part of the operation's logistics.",
+    "description": "These vehicles are typically dispatched by the casino and driven by individuals familiar with the routes and police checkpoints. They pick up gamblers from a meeting point, transport them to the secret venue, and return them afterward, all within a closed-loop management system. The cars often use fake or cloned license plates and may be equipped with communication jammers to prevent tracking. If compromised, the 'kiln car' can become a key lead for law enforcement to locate the casino's entrance.",
     "relatedRisks": [
       "R0097"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0016",
+      "A0044",
+      "A0061"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0016"
@@ -28,7 +33,16 @@
       "BS06",
       "BS11"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review",
+        "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
+      },
+      {
+        "title": "Black Market Big Data: 2025 Internet Underground Economy Trend Annual Review",
+        "link": "https://www.163.com/dy/article/KJ2QH6LE0518STKV.html"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

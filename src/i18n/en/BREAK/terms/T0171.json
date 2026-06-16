@@ -14,15 +14,22 @@
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "Residual data from a one-time profile lookup that is not used directly and can be resold.",
-    "description": "在非法数据交易中，剩菜指单次查询后多出的个人信息，如多余的身份证号或住址。这些数据不会被丢弃，而是由中间商二次打包，流入社工库或低价出售给下游黑产。剩菜的流转扩大了数据泄露范围，使更多受害者面临骚扰和诈骗风险。",
+    "definition": "Leftover data from a one-time illegal lookup that was not directly used and can be resold.",
+    "description": "In illicit data trading, leftovers refer to surplus personal information from a single query, such as extra ID numbers or addresses. This data is not discarded but is repackaged by intermediaries and fed into social engineering databases or sold at low prices to downstream criminals. The circulation of leftovers broadens the scope of data breaches, exposing more victims to harassment and fraud risks.",
     "relatedRisks": [
       "R0092",
       "R0078",
       "R0089",
       "R0109"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0049"
+    ],
     "relatedAttackTools": [
       "AT0012",
       "AT0064"
@@ -35,7 +42,16 @@
     "relatedBusinessScenes": [
       "BS00"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

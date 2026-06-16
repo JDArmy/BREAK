@@ -1,9 +1,9 @@
 {
   "A0149": {
-    "title": "固件OTA更新签名验证",
-    "definition": "对OTA推送的固件包进行数字签名验证，确保来源可信且未被篡改",
-    "description": "防止恶意固件通过OTA植入。措施：固件包使用厂商私钥签名；设备内置公钥验证；使用安全哈希算法；证书链验证；版本号防回滚；更新失败自动回退。",
+    "title": "Firmware OTA Update Signature Verification",
+    "definition": "Digital signature verification of firmware packages delivered via OTA to ensure trusted origin and integrity against tampering.",
+    "description": "Prevents malicious firmware from being implanted through OTA. Measures: firmware packages signed with the vendor's private key; device-side verification using the embedded public key; secure hashing algorithms; certificate chain validation; anti-rollback version enforcement; automatic rollback upon update failure.",
     "complexity": "Intermediate",
-    "limitation": "密钥管理复杂；签名验证增加时间；证书过期需处理"
+    "limitation": "Complex key management; increased latency due to signature verification; certificate expiration requires handling."
   }
 }

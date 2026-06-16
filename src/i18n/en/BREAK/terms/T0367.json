@@ -14,12 +14,19 @@
     ],
     "aliases": [],
     "category": "Gambling",
-    "definition": "在赌博黑产中，“扎毛人”指赌场雇佣的托儿，通过假装参赌烘托气氛，引诱真实赌客下注。",
-    "description": "These shills are typically paid based on their effectiveness, blending in with real gamblers to create the illusion of winning and drive betting momentum, energizing a slow table. They bear no real financial risk, as the house covers their losses and they receive a cut of any winnings. In pig-butchering scams or mobile gambling stalls, shills are a core tool for manufacturing a false sense of fairness and opportunity, leading victims to believe the game is winnable.",
+    "definition": "In gambling-related black market operations, a 'hair-pricker' is a shill hired by the casino to create a lively atmosphere and lure real gamblers into betting by pretending to play.",
+    "description": "These shills are usually paid based on their effectiveness, blending in with real gamblers to create a false impression of winning and to drive the betting pace, energizing a slow table. They bear no real risk of loss; any money they lose is covered by the house, and they receive a cut of any winnings. In pig-butchering scams or mobile gambling stalls, 'hair-prickers' are a core tool for creating the illusion of a 'hot' table, tricking victims into believing the game is fair and winnable.",
     "relatedRisks": [
       "R0097"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0016",
+      "A0044",
+      "A0061",
+      "A0051",
+      "A0006-005"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0016"
@@ -27,7 +34,16 @@
     "relatedBusinessScenes": [
       "BS06"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review",
+        "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
+      },
+      {
+        "title": "Black Market Big Data: 2025 Internet Underground Economy Trend Annual Review",
+        "link": "https://www.163.com/dy/article/KJ2QH6LE0518STKV.html"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

@@ -21,9 +21,17 @@
     "usageExample": "Those groups specifically buy items covered by shipping insurance, then pick faults upon delivery to file compensation claims—they can pull in a fair amount of money each month.",
     "relatedRisks": [
       "R0068-002",
-      "R0068"
+      "R0068",
+      "R0005"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0059",
+      "A0061",
+      "A0044",
+      "A0043",
+      "A0027"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0034"
@@ -35,6 +43,10 @@
       {
         "title": "Internet black and gray industry research report in the first half of 2024",
         "link": "https://www.threathunter.cn/blog/2024-50e66f87-abe6-4928-b031-c5c2c83c1cf0"
+      },
+      {
+        "title": "Black Market Big Data: E-commerce Scalper Industry Chain Analysis Report",
+        "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
       }
     ],
     "updated": "2026-06-16"

@@ -18,9 +18,22 @@
     "description": "Attackers typically organize large numbers of accounts to place malicious orders, initiate fake returns, or post batches of negative reviews targeting specific products or stores. This is done to extort merchants or fraudulently claim compensation from the platform. Such activities directly undermine market order, often leading to financial losses for merchants and store downgrades, representing a classic black market operation within the e-commerce ecosystem.",
     "relatedRisks": [
       "R0068",
-      "R0068-002"
+      "R0068-002",
+      "R0005"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0059",
+      "A0061",
+      "A0044",
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0049",
+      "A0043",
+      "A0027"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0034"
@@ -28,7 +41,16 @@
     "relatedBusinessScenes": [
       "BS02"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Black Market Big Data: E-commerce Scalper Industry Chain Analysis Report",
+        "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
+      },
+      {
+        "title": "2024 H1 Internet Underground Economy Research Report",
+        "link": "https://www.threathunter.cn/blog/2024-50e66f87-abe6-4928-b031-c5c2c83c1cf0"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

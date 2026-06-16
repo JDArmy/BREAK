@@ -14,12 +14,17 @@
     ],
     "aliases": [],
     "category": "Gambling",
-    "definition": "在赌博黑产中，“窑花”指从赢家手里强行抽走的各类名目费用，实为赌场变相抽头。",
-    "description": "This money is typically collected under the guise of transportation, water, cigarette, or labor fees, deducted directly from the winner's payout to ensure the house profits regardless of the game's outcome. The percentage is often pre-agreed but can be increased arbitrarily, making it a covert method to squeeze gamblers' profits. In mobile gambling operations, this fee also covers costs like transportation and lookouts, sustaining the entire illicit ecosystem.",
+    "definition": "In gambling-related black market operations, 'kiln flower' refers to various fees forcibly taken from winners' profits, which is essentially a disguised commission for the house.",
+    "description": "This money is typically collected under the guise of transportation fees, water fees, cigarette fees, or labor costs, and is deducted directly from the winner's earnings. This ensures the house profits regardless of the game's outcome. The percentage for the 'kiln flower' is often agreed upon in advance but can be increased on the spot, serving as a covert method to squeeze gamblers' profits. In mobile gambling setups, this fee also covers costs like transportation and lookouts, sustaining the entire illegal ecosystem.",
     "relatedRisks": [
       "R0097"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0015",
+      "A0016",
+      "A0044",
+      "A0061"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0016"
@@ -27,7 +32,16 @@
     "relatedBusinessScenes": [
       "BS06"
     ],
-    "references": [],
+    "references": [
+      {
+        "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review",
+        "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
+      },
+      {
+        "title": "Black Market Big Data: 2025 Internet Underground Economy Trend Annual Review",
+        "link": "https://www.163.com/dy/article/KJ2QH6LE0518STKV.html"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

@@ -1,9 +1,9 @@
 {
   "A0157": {
-    "title": "零知识KYC与隐私保护",
-    "definition": "使用零知识证明完成身份验证，在不暴露具体信息情况下证明合规",
-    "description": "隐私KYC：zk-SNARK证明年龄/国籍；选择性披露属性；链下验证链上证明；监管可审计；用户控制数据。",
+    "title": "Zero-Knowledge KYC and Privacy Protection",
+    "definition": "Using zero-knowledge proofs to complete identity verification, proving compliance without exposing specific information.",
+    "description": "Privacy-preserving KYC: zk-SNARKs for proving age/nationality; selective attribute disclosure; off-chain verification with on-chain proof; regulatory auditability; user-controlled data.",
     "complexity": "Advanced",
-    "limitation": "技术复杂度高；监管接受度未知；计算成本高"
+    "limitation": "High technical complexity; unknown regulatory acceptance; high computational cost."
   }
 }
