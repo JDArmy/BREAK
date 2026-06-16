@@ -117,7 +117,7 @@ const router = createRouter({
       redirect: "/",
     },
   ],
-  scrollBehavior(to, _from, savedPosition) {
+  scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
       return savedPosition;
     }
@@ -137,6 +137,12 @@ const router = createRouter({
         };
         setTimeout(() => tryScroll(), 100);
       });
+    }
+
+    // 首页路由之间切换时保持滚动位置
+    const homeRoutes = ["home", "businessScene", "riskDetail", "businessSceneRiskDetail", "avoidanceDetail", "attackToolDetail", "threatActorDetail", "termDetail"];
+    if (homeRoutes.includes(to.name as string) && homeRoutes.includes(from.name as string)) {
+      return false;
     }
 
     return { top: 0 };
