@@ -1,0 +1,30 @@
+{
+  "T0485": {
+    "title": "模拟器",
+    "keywords": [
+      "模拟器",
+      "emulator",
+      "安卓模拟器",
+      "手机模拟器",
+      "虚拟机",
+      "设备模拟",
+      "移动设备模拟器"
+    ],
+    "aliases": [],
+    "category": "自动化工具",
+    "definition": "模拟移动设备或浏览器环境的软件工具，用于在电脑上运行移动应用或网页，实现批量化操作。",
+    "description": "模拟器是黑产团伙在PC端批量操作移动应用的重要工具。通过安卓模拟器、iOS模拟器等软件，攻击者可在一台电脑上同时运行多个虚拟设备，配合改机工具和群控系统实现大规模自动化作业。模拟器具有成本低、易管理、便于脚本控制等优势，常用于批量注册、刷单刷量、薅羊毛等场景，是移动端黑产的核心基础设施。",
+    "relatedRisks": [
+      "R0011",
+      "R0030"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0009"
+    ],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

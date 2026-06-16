@@ -1,0 +1,32 @@
+{
+  "T0460": {
+    "title": "四件套",
+    "keywords": [
+      "四件套",
+      "银行四件套",
+      "全套资料",
+      "实名四件套",
+      "账户全套",
+      "bank account set",
+      "full account package"
+    ],
+    "aliases": [
+      "银行四件套",
+      "全套资料"
+    ],
+    "category": "黑产资源",
+    "definition": "银行卡+手机卡+身份证+U盾的完整实名账户资料包。",
+    "description": "四件套是黑产中最完整的实名资源组合，包括银行卡、对应手机卡、身份证复印件/照片和网银U盾。这套资料可直接用于开设完全受控的金融账户，常用于洗钱、资金中转、虚假交易等高风险操作。四件套通常来自身份信息泄露受害者或专业“卡农”，在地下市场价格较高。",
+    "relatedRisks": [
+      "R0030",
+      "R0030-005",
+      "R0071"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

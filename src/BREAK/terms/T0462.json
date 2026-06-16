@@ -1,0 +1,32 @@
+{
+  "T0462": {
+    "title": "杀猪盘",
+    "keywords": [
+      "杀猪盘",
+      "感情诈骗",
+      "投资诈骗",
+      "杀猪",
+      "养猪",
+      "pig butchering",
+      "romance scam",
+      "investment fraud"
+    ],
+    "aliases": [],
+    "category": "诈骗手段",
+    "definition": "以感情为诱饵，诱导受害者在虚假投资平台投入资金后卷款跑路的诈骗方式。",
+    "description": "诈骗分子通过社交平台与受害者建立恋爱关系（“养猪”），逐步获取信任后，以投资理财、虚拟货币等名义诱导受害者在虚假平台充值（“杀猪”）。初期让受害者小额盈利以增强信任，待投入大额资金后平台无法提现或直接关闭跑路。该手法综合了情感操控和投资诈骗，受害者损失惨重且难以追回。",
+    "relatedRisks": [
+      "R0069",
+      "R0071"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0031"
+    ],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

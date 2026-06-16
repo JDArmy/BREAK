@@ -70,6 +70,12 @@ const userThreatActorKeys = computed(() =>
   )
 );
 
+const relatedTermKeys = computed(() =>
+  Object.keys(BREAK.terms).filter((tKey) =>
+    BREAK.terms[tKey].relatedAttackTools.includes(selectedAttackToolKey.value)
+  )
+);
+
 const openRelationGraph = (atKey: string) => {
   const relRoute = router.resolve({
     name: "relation",
@@ -173,6 +179,19 @@ const openRelationGraph = (atKey: string) => {
             class="entity-link"
           >
             {{ taKey }}: {{ $t(`BREAK.threatActors.${taKey}.title`) }}
+          </router-link>
+        </div>
+      </section>
+      <section v-if="relatedTermKeys.length" class="detail-section">
+        <h3>{{ $t("terms") }}</h3>
+        <div class="entity-links">
+          <router-link
+            v-for="tKey in relatedTermKeys"
+            :key="tKey"
+            :to="{ name: 'terms', hash: `#${tKey}` }"
+            class="entity-link"
+          >
+            {{ tKey }}: {{ $t(`BREAK.terms.${tKey}.title`) }}
           </router-link>
         </div>
       </section>

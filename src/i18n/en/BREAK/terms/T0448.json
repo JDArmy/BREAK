@@ -1,0 +1,31 @@
+{
+  "T0448": {
+    "title": "Seed Phrase",
+    "keywords": [
+      "seed phrase",
+      "mnemonic phrase",
+      "mnemonic",
+      "recovery phrase",
+      "12-word phrase",
+      "24-word phrase",
+      "wallet recovery",
+      "private key backup",
+      "BIP39"
+    ],
+    "aliases": [
+      "Recovery Phrase",
+      "Mnemonic Phrase"
+    ],
+    "definition": "A sequence of words used to recover and backup cryptocurrency wallets, typically consisting of 12, 18, or 24 words, serving as a human-readable form of private keys.",
+    "description": "A seed phrase is a word sequence generated based on the BIP39 standard, allowing users to recover wallets by memorizing or physically backing up these words. Essentially an encoded form of private keys, anyone who obtains the seed phrase gains complete control over the corresponding cryptocurrency assets. Common seed phrase lengths are 12 or 24 words, selected from a predefined list of 2048 words. The security of a seed phrase directly relates to asset security; once leaked, it leads to asset theft. Users should store seed phrases offline in secure locations, avoiding screenshots, cloud storage, or network transmission. In blockchain security incidents, seed phrase leaks are a primary cause of user asset losses, with threat actors stealing them through phishing, malware, and social engineering.",
+    "usageExample": "When creating a new wallet, users receive a 12-word seed phrase that must be written down in order and securely stored to recover the wallet in case of device loss or damage.",
+    "references": [
+      {
+        "title": "BIP39: Mnemonic code for generating deterministic keys"
+      },
+      {
+        "title": "Cryptocurrency Wallet Security Best Practices"
+      }
+    ]
+  }
+}

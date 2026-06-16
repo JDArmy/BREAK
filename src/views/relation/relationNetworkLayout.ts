@@ -36,6 +36,7 @@ const networkNodeSortOrder: Record<string, number> = {
   [RelationType.attackTool]: 1,
   [RelationType.risk]: 2,
   [RelationType.avoidance]: 3,
+  [RelationType.term]: 4,
 };
 
 const normalizeGraphText = (text: string) => text.replace(/<br\s*\/?>/gi, "\n");
@@ -107,6 +108,7 @@ export const createNetworkDataHelpers = ({
       [RelationType.attackTool]: [],
       [RelationType.risk]: [],
       [RelationType.avoidance]: [],
+      [RelationType.term]: [],
     } as Record<Exclude<RelationType, RelationType.all>, Node[]>);
 
   const placeGridNodes = (
@@ -148,6 +150,7 @@ export const createNetworkDataHelpers = ({
       [RelationType.attackTool]: { x: -340, y: 190, columns: 4, columnGap: 116, rowGap: 100 },
       [RelationType.risk]: { x: 280, y: -170, columns: 4, columnGap: 116, rowGap: 100 },
       [RelationType.avoidance]: { x: 720, y: 180, columns: 4, columnGap: 116, rowGap: 100 },
+      [RelationType.term]: { x: 0, y: 470, columns: 6, columnGap: 116, rowGap: 92 },
     };
 
     Object.entries(groupLayout).forEach(([type, layout]) => {
@@ -171,6 +174,7 @@ export const createNetworkDataHelpers = ({
       [RelationType.attackTool]: { x: 0, y: -165, columns: 8, columnGap: 116, rowGap: 92 },
       [RelationType.risk]: { x: 0, y: 165, columns: 8, columnGap: 116, rowGap: 92 },
       [RelationType.avoidance]: { x: 0, y: 440, columns: 8, columnGap: 116, rowGap: 92 },
+      [RelationType.term]: { x: 0, y: 715, columns: 8, columnGap: 116, rowGap: 92 },
     };
 
     Object.entries(groupLayout).forEach(([type, layout]) => {
@@ -194,6 +198,7 @@ export const createNetworkDataHelpers = ({
       [RelationType.attackTool]: { x: -520, y: 245, columns: 4, columnGap: 112, rowGap: 98 },
       [RelationType.risk]: { x: 520, y: -245, columns: 4, columnGap: 112, rowGap: 98 },
       [RelationType.avoidance]: { x: 520, y: 245, columns: 4, columnGap: 112, rowGap: 98 },
+      [RelationType.term]: { x: 0, y: 560, columns: 6, columnGap: 112, rowGap: 92 },
     };
 
     Object.entries(groupLayout).forEach(([type, layout]) => {
@@ -249,6 +254,12 @@ export const createNetworkDataHelpers = ({
       endAngle: Math.PI * 0.95,
       radius: 650,
     });
+    placeRadialGroupNodes(graphNodes, groupedNodes[RelationType.term], {
+      startAngle: Math.PI * 1.05,
+      endAngle: Math.PI * 1.45,
+      radius: 720,
+      innerRadius: 580,
+    });
   };
 
   const applyHierarchicalNetworkLayout = (
@@ -263,6 +274,7 @@ export const createNetworkDataHelpers = ({
       [RelationType.attackTool]: { x: -220, y: 0, columns: 1, rowGap: 96 },
       [RelationType.risk]: { x: 220, y: 0, columns: 1, rowGap: 96 },
       [RelationType.avoidance]: { x: 660, y: 0, columns: 1, rowGap: 96 },
+      [RelationType.term]: { x: 0, y: 420, columns: 6, columnGap: 112, rowGap: 92 },
     };
 
     Object.entries(groupLayout).forEach(([type, layout]) => {

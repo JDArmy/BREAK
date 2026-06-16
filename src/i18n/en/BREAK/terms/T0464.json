@@ -1,0 +1,19 @@
+{
+  "T0464": {
+    "title": "Money Laundering",
+    "keywords": [
+      "Money Laundering",
+      "proceeds concealment",
+      "illegal fund integration",
+      "dirty money cleaning",
+      "financial crime concealment",
+      "illicit fund legitimization"
+    ],
+    "aliases": [
+      "Xiqian"
+    ],
+    "definition": "The criminal process of disguising the origins of illegally obtained money by passing it through complex transfers and transactions to make it appear legitimate and difficult to trace.",
+    "description": "Money laundering is a systematic process typically divided into three stages: placement (introducing illegal funds into the financial system), layering (executing complex transactions to obscure the money trail), and integration (returning laundered funds to criminals in seemingly legitimate form). Modern laundering operations utilize diverse channels including shell companies, cryptocurrency mixing services, trade-based laundering, real estate purchases, online gambling platforms, and cross-border transfers through jurisdictions with weak oversight. Digital currencies and decentralized finance platforms have introduced new laundering vectors that exploit regulatory gaps and pseudonymity. Criminals employ money mules, nested service providers, and professional laundering networks to maximize distance between illicit sources and final destinations. Financial institutions implement Anti-Money Laundering (AML) programs using transaction monitoring, Know Your Customer (KYC) procedures, and suspicious activity reporting to detect and prevent laundering operations.",
+    "usageExample": "An organized crime group laundered $50 million in drug proceeds by purchasing cryptocurrency, transferring through multiple mixers, converting to stablecoins, and investing in overseas real estate through shell companies."
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "T0457": {
+    "title": "Card Dealer",
+    "keywords": [
+      "Card Dealer",
+      "payment card vendor",
+      "bank card seller",
+      "virtual card provider",
+      "prepaid card merchant",
+      "carded account seller"
+    ],
+    "aliases": [
+      "Kashang"
+    ],
+    "definition": "Underground vendors who provide stolen payment cards, compromised bank accounts, virtual cards, or anonymous prepaid cards used for fraudulent transactions and money laundering operations.",
+    "description": "Card dealers are key suppliers in the fraud economy, offering multiple card-related services. They sell stolen credit/debit card information (fullz) obtained from skimmers, malware, or dark web breaches, complete with CVV codes and cardholder data. They also provide registered bank accounts with verified identities for money mule operations, virtual prepaid cards that bypass KYC requirements, and anonymous payment instruments for illegal marketplaces. Card dealers often guarantee card validity through replacement policies and offer testing services before bulk purchases. Their inventory is categorized by issuing country, bank, card type, balance range, and verification status. These services enable payment fraud, money laundering, carding operations, and circumvention of financial controls.",
+    "usageExample": "A fraud ring purchased 50 virtual cards from a card dealer to register merchant accounts on multiple e-commerce platforms for refund scams."
+  }
+}

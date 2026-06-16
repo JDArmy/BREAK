@@ -1,0 +1,35 @@
+{
+  "T0458": {
+    "title": "接码平台",
+    "keywords": [
+      "接码平台",
+      "验证码接收",
+      "短信接码",
+      "在线接码",
+      "接码网站",
+      "临时手机号",
+      "sms verification service",
+      "receive sms online"
+    ],
+    "aliases": [
+      "接码网站",
+      "验证码接收平台"
+    ],
+    "category": "黑产资源",
+    "definition": "提供大量手机号码接收短信验证码服务的平台。",
+    "description": "接码平台维护大量手机号码池，用户无需实名办卡即可在线获取临时号码用于接收短信验证码。黑产团伙利用接码平台批量注册账号、绕过手机号验证，降低实名认证成本。这类平台通常按次数或时长收费，是批量注册的重要技术支撑。",
+    "relatedRisks": [
+      "R0030",
+      "R0032"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0001",
+      "AT0007"
+    ],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

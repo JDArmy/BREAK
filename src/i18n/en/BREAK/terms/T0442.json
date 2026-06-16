@@ -1,0 +1,13 @@
+{
+  "T0442": {
+    "title": "Store Matrix",
+    "keywords": [
+      "Store Matrix",
+      "Multiple Stores",
+      "Batch Store Opening"
+    ],
+    "definition": "Store matrix refers to an e-commerce black-hat practice of creating numerous stores in bulk and listing products across them to increase exposure and sales volume.",
+    "description": "The store matrix model exploits platform traffic allocation mechanisms by registering multiple store accounts in bulk and listing identical or similar products across these stores, forming a store network to increase product exposure opportunities and order acquisition probability. This practice often operates alongside dropshipping models and directly violates platform rules that typically allow one store per person, effectively monopolizing platform resources and disrupting fair market competition. Store matrix operators usually employ automated tools to manage stores at scale, handling product listing, price adjustments, order processing, and other operations in a coordinated fashion, forming a scaled black-gray industry chain. This approach artificially inflates search results by creating multiple duplicate or near-duplicate listings for the same products, misleads consumers who believe they are comparing different sellers when in reality all stores are controlled by the same operator, and undermines the platform's ranking algorithms which are designed to surface quality merchants based on genuine performance metrics. The practice also creates unfair competitive advantages for bad actors while legitimate sellers who follow the rules struggle to gain visibility.",
+    "usageExample": "This gang operated hundreds of stores on the platform through the store matrix model"
+  }
+}

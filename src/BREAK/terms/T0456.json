@@ -1,0 +1,36 @@
+{
+  "T0456": {
+    "title": "料商",
+    "keywords": [
+      "料商",
+      "数据商",
+      "信息贩子",
+      "个人信息贩卖",
+      "数据贩子",
+      "卖料",
+      "信息中介",
+      "data broker",
+      "info seller"
+    ],
+    "aliases": [
+      "数据商",
+      "信息贩子"
+    ],
+    "category": "黑产角色",
+    "definition": "专门收集、整理和贩卖公民个人信息数据的黑产从业者。",
+    "description": "料商是黑产链条中的数据供应环节，通过各种非法手段获取公民个人信息（包括姓名、身份证号、手机号、银行卡信息等），整理分类后在地下市场贩卖。他们通常按照数据类型、新鲜度、准确度进行定价，为下游的诈骗、营销欺诈等提供“原料”支持。",
+    "relatedRisks": [
+      "R0045",
+      "R0045-001",
+      "R0080"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0002"
+    ],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

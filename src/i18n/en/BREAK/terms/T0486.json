@@ -1,0 +1,19 @@
+{
+  "T0486": {
+    "title": "Device Farm",
+    "keywords": [
+      "Device Farm",
+      "mass control",
+      "phone farm",
+      "multi-device control",
+      "device cluster",
+      "synchronized control"
+    ],
+    "aliases": [
+      "Qunkong"
+    ],
+    "definition": "Systems that enable centralized control of dozens to hundreds of physical mobile devices simultaneously, allowing operators to execute coordinated actions across multiple accounts for fraud or manipulation.",
+    "description": "Device farms consist of physical mobile devices, typically mounted on racks with USB hubs for charging and data connectivity, controlled through specialized software that broadcasts commands to all devices simultaneously or executes scripted workflows. These setups enable one operator to control 50-200+ devices, each running separate accounts with unique identities. Applications include coordinating engagement manipulation (likes, follows, reviews), executing synchronized purchasing for limited inventory, farming virtual currency or game rewards, conducting A/B testing of fraud techniques, and maintaining large-scale account networks. Each device appears as a genuine mobile user to platforms since they possess authentic hardware identifiers, sensors, and network characteristics that emulators struggle to replicate perfectly. Advanced farms implement automation frameworks like Appium for scripted interactions, custom ROM modifications to enhance control, proxy or VPN integration for IP diversity, and physical robots for precise touchscreen interactions. The capital investment in devices makes farms primarily economically viable for high-value fraud operations.",
+    "usageExample": "Authorities raided a device farm containing 300 smartphones running coordinated social media engagement fraud, generating fake followers and engagement worth over $2 million annually for clients seeking artificial popularity."
+  }
+}

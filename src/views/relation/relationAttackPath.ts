@@ -37,6 +37,8 @@ export const createRelationAttackPathData = ({
         return t("relationView.pathRoleRiskDesc");
       case RelationType.avoidance:
         return t("relationView.pathRoleAvoidanceDesc");
+      case RelationType.term:
+        return "";
     }
   };
 
@@ -50,6 +52,8 @@ export const createRelationAttackPathData = ({
         return path.riskKey === relKey.value;
       case RelationType.avoidance:
         return path.avoidanceKey === relKey.value;
+      case RelationType.term:
+        return true;
       default:
         return true;
     }

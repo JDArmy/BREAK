@@ -1,0 +1,29 @@
+{
+  "T0451": {
+    "title": "Multi-Signature Wallet",
+    "keywords": [
+      "multisig",
+      "multi-signature",
+      "multi-sig wallet",
+      "M-of-N signature",
+      "joint signature",
+      "Gnosis Safe",
+      "threshold signature"
+    ],
+    "aliases": [
+      "Multisig Wallet",
+      "Joint Signature Wallet"
+    ],
+    "definition": "A cryptocurrency wallet requiring multiple private keys to jointly sign before completing transactions, enhancing fund security through distributed control.",
+    "description": "Multi-signature wallets employ an M-of-N signature mechanism, setting N authorized signers where at least M must agree to execute transactions. For example, a 2-of-3 multisig wallet requires at least 2 of 3 private key holders to sign for confirmation. This mechanism effectively prevents single points of failure and internal malfeasance, widely applied in corporate fund management, DAO governance, and exchange hot wallet protection. Multi-signature wallets are implemented through smart contracts or Bitcoin scripts, distributing fund control among multiple independent parties; even if one party's private key is lost or stolen, funds remain secure. In enterprise applications, CFO, CEO, and audit roles can jointly manage funds, requiring multi-party approval for any large transfers. The multisig mechanism also resists internal malfeasance, as single private key holders cannot independently transfer funds. Common multisig wallet solutions include Gnosis Safe and BitGo, which have become standard configurations for institutional-grade crypto asset management.",
+    "usageExample": "A DAO organization uses a 3-of-5 multisig wallet to manage community funds, requiring at least 3 of 5 core members to sign and approve any proposal expenditure before execution.",
+    "references": [
+      {
+        "title": "Gnosis Safe: The most trusted platform to manage digital assets"
+      },
+      {
+        "title": "Multi-Signature Wallet Technical Principles and Best Practices"
+      }
+    ]
+  }
+}

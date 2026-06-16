@@ -46,7 +46,7 @@ const termItems = computed(() =>
     return {
       id: termKey,
       title: getTermString(termKey, "title"),
-      subtitle: aliases[0] || definition.slice(0, 48),
+      subtitle: aliases[0] ? `${aliases[0]} - ${definition.slice(0, 48)}` : definition.slice(0, 48),
       badge: category,
       searchText: [
         getTermString(termKey, "title"),
@@ -105,7 +105,7 @@ const selectedTermAliases = computed(() => getTermStringArray(selectedTermKey.va
       <section v-if="selectedTerm.keywords?.length" class="detail-section">
         <h3>{{ $t("keywords") }}</h3>
         <div class="keywords">
-          <span v-for="keyword in selectedTerm.keywords" :key="keyword" class="keyword-tag">
+          <span v-for="keyword in getTermStringArray(selectedTermKey, 'keywords')" :key="keyword" class="keyword-tag">
             {{ keyword }}
           </span>
         </div>

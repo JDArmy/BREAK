@@ -1,0 +1,19 @@
+{
+  "T0463": {
+    "title": "Money Mule Service",
+    "keywords": [
+      "Money Mule Service",
+      "payment running",
+      "transaction relay",
+      "fund transfer service",
+      "laundering relay",
+      "scoring service"
+    ],
+    "aliases": [
+      "Paofen"
+    ],
+    "definition": "A money laundering scheme where individuals use personal payment accounts to receive and quickly transfer illicit funds for criminals, earning commissions while obscuring the money trail for law enforcement.",
+    "description": "Money mule services operate as intermediary laundering infrastructure where recruited individuals or compromised accounts serve as transfer nodes for stolen funds. Criminals send illicit money from fraud, gambling, or other illegal sources to mule accounts, which then rapidly disperse the funds through multiple channels including cryptocurrency exchanges, overseas transfers, or cash withdrawals. Mules typically earn 1-10% commission on transferred amounts. Recruitment targets include students, unemployed individuals, or financially desperate people lured by promises of easy income, often unaware they're committing crimes. Organized operations use four-piece identity sets to scale up with anonymous accounts. This practice enables criminals to break the direct connection between victims and final recipients, creating complex transaction chains that complicate investigation and asset recovery. Financial institutions actively monitor for mule behavior patterns including rapid in-and-out transfers, unusual transaction volumes, and connections to known fraud networks.",
+    "usageExample": "A college student recruited through social media earned $5,000 monthly as a money mule, transferring over $2 million in telecom fraud proceeds before being arrested for money laundering."
+  }
+}

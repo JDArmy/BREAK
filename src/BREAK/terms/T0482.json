@@ -1,0 +1,26 @@
+{
+  "T0482": {
+    "title": "反垄断",
+    "keywords": [
+      "反垄断",
+      "antitrust",
+      "反垄断法",
+      "市场支配地位",
+      "垄断协议",
+      "滥用市场支配地位"
+    ],
+    "aliases": [],
+    "category": "合规管理",
+    "definition": "防止和制止垄断行为，保护市场公平竞争的法律制度。",
+    "description": "指通过《反垄断法》等法律法规，禁止经营者达成垄断协议、滥用市场支配地位、实施具有或可能具有排除或限制竞争效果的经营者集中。在互联网领域，重点关注平台“二选一”、自我优待、数据垄断、算法共谋等新型垄断行为，维护公平竞争的市场秩序。",
+    "relatedRisks": [
+      "R0135"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

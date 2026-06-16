@@ -1,0 +1,20 @@
+{
+  "T0455": {
+    "title": "NFT",
+    "keywords": [
+      "NFT",
+      "non-fungible token",
+      "digital collectible",
+      "ERC-721",
+      "ERC-1155",
+      "digital art",
+      "tokenized asset"
+    ],
+    "aliases": [
+      "Non-Fungible Token"
+    ],
+    "definition": "Blockchain-based non-fungible tokens where each token has a unique identifier and ownership record, used to represent digital or physical assets.",
+    "description": "NFTs provide proof of uniqueness and ownership for digital assets through blockchain technology, widely applied in digital art, gaming items, virtual real estate, and more. Each NFT has unique metadata and a Token ID, making them non-interchangeable and indivisible, though they face risks including counterfeiting, theft, and copyright disputes. NFTs revolutionized digital ownership by enabling verifiable scarcity and provenance tracking. Implemented through standards like ERC-721 and ERC-1155 on Ethereum and other chains, NFTs have created new markets for creators and collectors. Major use cases include profile picture projects, generative art, metaverse assets, event tickets, and tokenized real-world assets. The NFT market experienced explosive growth with multi-million dollar sales, though also faces challenges including market volatility, wash trading, intellectual property infringement, and environmental concerns regarding energy consumption. Smart contract vulnerabilities and phishing attacks targeting NFT holders remain ongoing security concerns.",
+    "usageExample": "A digital artist mints their artwork as an NFT on Ethereum, selling it through OpenSea marketplace where blockchain records permanently verify authenticity and ownership, with royalties automatically paid to the creator on secondary sales."
+  }
+}

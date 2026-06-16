@@ -1,0 +1,43 @@
+{
+  "T0448": {
+    "title": "助记词",
+    "keywords": [
+      "助记词",
+      "seed phrase",
+      "mnemonic",
+      "恢复短语",
+      "12词助记词",
+      "24词助记词",
+      "钱包恢复",
+      "私钥备份"
+    ],
+    "aliases": [
+      "恢复短语",
+      "种子短语"
+    ],
+    "category": "区块链安全",
+    "definition": "用于恢复和备份加密货币钱包的一组单词序列，通常由12、18或24个单词组成，是私钥的人类可读形式。",
+    "description": "助记词是基于BIP39标准生成的单词序列，用户可以通过记忆或物理备份这些单词来恢复钱包。助记词本质上是私钥的编码形式，任何获得助记词的人都能完全控制对应的加密货币资产。常见的助记词长度为12或24个单词，这些单词从预定义的2048个单词列表中选取。助记词的安全性直接关系到资产安全，一旦泄露将导致资产被盗。因此用户应将助记词离线保存在安全位置，避免截图、云端存储或通过网络传输。在区块链安全事件中，助记词泄露是导致用户资产损失的主要原因之一，黑产通过钓鱼、木马、社会工程等手段窃取助记词。",
+    "usageExample": "用户在创建新钱包时会获得一组12个单词的助记词，需要按顺序抄写并妥善保管，以便在设备丢失或损坏时恢复钱包。",
+    "relatedRisks": [
+      "R0162"
+    ],
+    "relatedAvoidances": [
+      "A0104"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [
+      {
+        "title": "BIP39: Mnemonic code for generating deterministic keys",
+        "link": "https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki"
+      },
+      {
+        "title": "加密货币钱包安全最佳实践",
+        "link": "https://www.coinbase.com/learn/crypto-basics/how-to-secure-crypto"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

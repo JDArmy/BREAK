@@ -1,0 +1,19 @@
+{
+  "T0478": {
+    "title": "Self-Preferencing",
+    "keywords": [
+      "Self-Preferencing",
+      "preferential treatment",
+      "first-party advantage",
+      "platform favoritism",
+      "discriminatory ranking",
+      "vertical foreclosure"
+    ],
+    "aliases": [
+      "Ziwo Youdai"
+    ],
+    "definition": "The practice where platform operators give preferential treatment to their own products or services over third-party competitors in search rankings, recommendations, or access to platform features.",
+    "description": "Self-preferencing occurs when vertically integrated platforms that both operate marketplaces and sell products exploit their gatekeeper position to favor their own offerings. Common manifestations include prominently displaying first-party products in search results regardless of relevance or quality, providing internal products with better algorithmic treatment in recommendation systems, granting exclusive access to valuable user data or platform features, applying stricter policies to competitors, or bundling platform services with proprietary offerings. This conduct harms competition by making it impossible for superior third-party alternatives to compete fairly, stifles innovation as potential competitors face structural disadvantages, misleads consumers who assume neutral rankings, and enables platforms to extend dominance from one market into adjacent markets. Regulatory responses include mandatory disclosure of self-preferencing, algorithmic auditing requirements, structural separation of platform and merchant operations, and equal access obligations for platform infrastructure. The practice has become central to antitrust debates regarding digital platforms.",
+    "usageExample": "A platform operator's shopping service consistently appeared at the top of search results for product queries despite offering higher prices than third-party merchants, leveraging algorithmic preferencing to capture sales."
+  }
+}

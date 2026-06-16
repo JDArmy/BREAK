@@ -1,0 +1,43 @@
+{
+  "T0449": {
+    "title": "冷钱包",
+    "keywords": [
+      "冷钱包",
+      "cold wallet",
+      "硬件钱包",
+      "离线钱包",
+      "冷存储",
+      "硬件设备",
+      "Ledger",
+      "Trezor"
+    ],
+    "aliases": [
+      "冷存储",
+      "离线钱包"
+    ],
+    "category": "区块链安全",
+    "definition": "离线存储加密货币私钥的硬件设备或物理介质，通过与互联网隔离来提供最高级别的资产安全保护。",
+    "description": "冷钱包是一种将私钥完全离线保存的钱包形式，主要包括硬件钱包、纸钱包等类型。硬件钱包如Ledger、Trezor等专用设备，将私钥存储在安全芯片中，即使连接电脑进行交易签名时，私钥也不会暴露给网络。冷钱包的核心优势是隔离网络攻击面，黑客无法通过远程方式窃取私钥。适合长期持有大额加密货币的用户使用。使用冷钱包时，用户需要在离线环境下生成和存储私钥，交易时通过物理连接设备进行签名后再广播到区块链网络。相比热钱包，冷钱包牺牲了便利性换取了更高的安全性，是机构和高净值用户的首选存储方案。",
+    "usageExample": "交易所将95%以上的用户资产存储在冷钱包中，只保留少量资金在热钱包用于日常提现需求。",
+    "relatedRisks": [
+      "R0162"
+    ],
+    "relatedAvoidances": [
+      "A0104"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [
+      {
+        "title": "Hardware Wallet Best Practices",
+        "link": "https://www.ledger.com/academy/hardwarewallet/best-practices"
+      },
+      {
+        "title": "冷钱包与热钱包的安全对比",
+        "link": "https://www.binance.com/en/blog/ecosystem/cold-wallet-vs-hot-wallet-421499824684900429"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

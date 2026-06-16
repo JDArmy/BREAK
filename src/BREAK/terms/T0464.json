@@ -1,0 +1,33 @@
+{
+  "T0464": {
+    "title": "洗钱",
+    "keywords": [
+      "洗钱",
+      "money laundering",
+      "资金洗白",
+      "黑钱漂白",
+      "资金链",
+      "laundering"
+    ],
+    "aliases": [
+      "资金洗白",
+      "黑钱漂白"
+    ],
+    "category": "金融犯罪",
+    "definition": "将犯罪所得资金通过各种手段转化为合法资金的行为。",
+    "description": "犯罪团伙通过多层转账、跨境汇款、虚拟货币兑换、虚假交易等方式，掩盖非法资金来源并使其表面合法化。常见手法包括利用跑分平台分散资金、通过地下钱庄跨境转移、使用空壳公司制造合法交易记录等。洗钱是所有经济犯罪的下游环节，直接影响金融体系稳定和监管有效性。",
+    "relatedRisks": [
+      "R0071",
+      "R0071-003"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0039",
+      "AT0040"
+    ],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

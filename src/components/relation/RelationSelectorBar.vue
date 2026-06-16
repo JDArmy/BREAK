@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from "vue";
+import { useI18n } from "vue-i18n";
 import type { RelationType } from "@/views/relation/relationTypes";
 
 const props = defineProps<{
@@ -14,14 +15,37 @@ const emit = defineEmits<{
   "update:relKey": [value: string];
 }>();
 
+const { t } = useI18n();
+
 const selectedType = computed({
   get: () => props.relType,
-  set: (value: RelationType) => emit("update:relType", value),
+  set: (value: RelationType) => {
+    console.time(`[RelationPerf] selector type emit ${props.relType} -> ${value}`);
+    emit("update:relType", value);
+    console.timeEnd(`[RelationPerf] selector type emit ${props.relType} -> ${value}`);
+  },
 });
 
 const selectedKey = computed({
   get: () => props.relKey,
   set: (value: string) => emit("update:relKey", value),
+});
+
+const entitySelectOptions = computed(() => {
+  console.time(`[RelationPerf] selector options ${props.relType}`);
+  const currentMapping = props.RelationTypeMapping[props.relType];
+  if (!currentMapping) {
+    console.timeEnd(`[RelationPerf] selector options ${props.relType}`);
+    return [];
+  }
+
+  const options = Object.keys(props.getCurrentEntityOptions).map((key) => ({
+    label: `${key}:${t(`BREAK.${currentMapping.BreakKey}.${key}.title`)}`,
+    value: key,
+  }));
+  console.log(`[RelationPerf] selector options count ${props.relType}`, options.length);
+  console.timeEnd(`[RelationPerf] selector options ${props.relType}`);
+  return options;
 });
 </script>
 
@@ -35,14 +59,14 @@ const selectedKey = computed({
         :value="key"
       />
     </el-select>
-    <el-select v-model="selectedKey" class="relation-key-select" filterable>
-      <el-option
-        v-for="(_item, key) in getCurrentEntityOptions"
-        :key="key"
-        :label="key + ':' + $t(`BREAK.${RelationTypeMapping[relType as keyof typeof RelationTypeMapping].BreakKey}.${key}.title`)"
-        :value="key"
-      />
-    </el-select>
+    <el-select-v2
+      v-model="selectedKey"
+      class="relation-key-select"
+      filterable
+      :height="320"
+      :item-height="34"
+      :options="entitySelectOptions"
+    />
   </div>
 </template>
 

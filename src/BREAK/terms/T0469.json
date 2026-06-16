@@ -1,0 +1,29 @@
+{
+  "T0469": {
+    "title": "流量劫持",
+    "keywords": [
+      "流量劫持",
+      "traffic hijacking",
+      "HTTP劫持",
+      "会话劫持",
+      "网络流量拦截",
+      "数据篡改",
+      "流量重定向"
+    ],
+    "aliases": [],
+    "category": "网络攻击",
+    "definition": "非法拦截、篡改或重定向网络流量的攻击行为。",
+    "description": "攻击者通过技术手段控制用户与目标服务器之间的网络通信，拦截敏感数据、注入恶意内容或将用户重定向到钓鱼网站。常见方式包括ARP欺骗、路由劫持、运营商劫持等，可导致数据泄露、账号被盗、恶意广告植入等严重后果。",
+    "relatedRisks": [
+      "R0051",
+      "R0051-001",
+      "R0142"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -5,6 +5,7 @@ export enum RelationType {
   avoidance = "avoidance",
   attackTool = "attack-tool",
   threatActor = "threat-actor",
+  term = "term",
   all = "all",
 }
 
@@ -111,6 +112,7 @@ export const relationTypeColors: Record<
   [RelationType.avoidance]: { light: "#bbf7d0", dark: "#14532d" },
   [RelationType.attackTool]: { light: "#bfdbfe", dark: "#1e3a8a" },
   [RelationType.threatActor]: { light: "#fecaca", dark: "#7f1d1d" },
+  [RelationType.term]: { light: "#ddd6fe", dark: "#4c1d95" },
 };
 
 export const graphColors = {
@@ -132,6 +134,7 @@ export const relationLineColors = {
   buildAttackTool: "",
   useAttackTool: "",
   causeRisk: "",
+  relatedTerm: "",
   subRisk: "",
   subAvoidance: "",
   subAttackTool: "",
@@ -160,6 +163,7 @@ export const getRelationLineColors = () => ({
   buildAttackTool: getColorFromCSS("--break-line-build-tool"),
   useAttackTool: getColorFromCSS("--break-line-use-tool"),
   causeRisk: getColorFromCSS("--break-line-cause-risk"),
+  relatedTerm: getColorFromCSS("--break-line-related-term"),
   subRisk: getColorFromCSS("--break-line-sub"),
   subAvoidance: getColorFromCSS("--break-line-sub"),
   subAttackTool: getColorFromCSS("--break-line-sub"),
@@ -190,7 +194,7 @@ export const networkRootNodeSize = 64;
 export const networkLabelMaxLineLength = 5;
 
 export const isRelationEntityType = (type: string): type is Exclude<RelationType, RelationType.all> =>
-  [RelationType.risk, RelationType.avoidance, RelationType.attackTool, RelationType.threatActor].includes(
+  [RelationType.risk, RelationType.avoidance, RelationType.attackTool, RelationType.threatActor, RelationType.term].includes(
     type as Exclude<RelationType, RelationType.all>
   );
 
@@ -224,6 +228,13 @@ export const createRelationTypeMapping = (
     relType: RelationType.threatActor,
     BreakKey: "threatActors",
     get color() { return getRelationTypeColor(RelationType.threatActor); },
+    disableContextMenu: ref<boolean>(false),
+  },
+  [RelationType.term]: {
+    get title() { return t("relationType.term"); },
+    relType: RelationType.term,
+    BreakKey: "terms",
+    get color() { return getRelationTypeColor(RelationType.term); },
     disableContextMenu: ref<boolean>(false),
   },
 });

@@ -1,0 +1,26 @@
+{
+  "T0478": {
+    "title": "自我优待",
+    "keywords": [
+      "自我优待",
+      "self-preferencing",
+      "平台自营优先",
+      "流量倾斜",
+      "搜索排名优待",
+      "自营优先"
+    ],
+    "aliases": [],
+    "category": "平台治理",
+    "definition": "平台在搜索排名、流量分配等方面优先展示自营商品或服务的行为。",
+    "description": "指平台运营者利用其对算法和流量分配的控制权，在搜索结果、推荐位等关键流量入口优先展示自营业务，压制第三方商家的曝光机会。这种行为损害了平台的中立性，造成不公平竞争，影响消费者的自由选择权。",
+    "relatedRisks": [
+      "R0135"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

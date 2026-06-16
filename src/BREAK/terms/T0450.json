@@ -1,0 +1,43 @@
+{
+  "T0450": {
+    "title": "热钱包",
+    "keywords": [
+      "热钱包",
+      "hot wallet",
+      "在线钱包",
+      "软件钱包",
+      "移动钱包",
+      "网页钱包",
+      "MetaMask",
+      "Trust Wallet"
+    ],
+    "aliases": [
+      "在线钱包",
+      "软件钱包"
+    ],
+    "category": "区块链安全",
+    "definition": "保持联网状态的在线加密货币钱包，私钥存储在联网设备上，方便快速进行交易操作。",
+    "description": "热钱包是指私钥存储在联网设备（如手机、电脑、云端）上的加密货币钱包，包括移动端APP钱包、浏览器插件钱包、交易所托管钱包等形式。热钱包的优势在于使用便捷，用户可以随时发起转账和交易，适合日常小额支付和频繁交易场景。但由于私钥持续暴露在网络环境中，热钱包面临更高的安全风险，容易遭受钓鱼攻击、恶意软件、网络劫持等威胁。黑产常通过伪造钱包APP、钓鱼网站、剪贴板劫持等手段窃取热钱包私钥或助记词。为降低风险，建议用户只在热钱包中存放小额资金用于日常使用，大额资产应转移到冷钱包保管。同时应选择信誉良好的钱包服务商，启用多重安全验证，定期更新软件版本。",
+    "usageExample": "用户使用MetaMask浏览器插件钱包参与DeFi协议交互，方便连接去中心化应用进行质押、兑换等操作。",
+    "relatedRisks": [
+      "R0162"
+    ],
+    "relatedAvoidances": [
+      "A0104"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [
+      {
+        "title": "热钱包安全使用指南",
+        "link": "https://metamask.io/security/"
+      },
+      {
+        "title": "加密钱包安全威胁分析",
+        "link": "https://www.chainalysis.com/blog/crypto-wallet-security-threats/"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

@@ -33,6 +33,11 @@ const getDetailNodeRoute = (type: RelationType, id: string): RouteLocationRaw =>
         name: "threatActors",
         hash: `#${id}`,
       };
+    case RelationType.term:
+      return {
+        name: "terms",
+        hash: `#${id}`,
+      };
   }
 };
 

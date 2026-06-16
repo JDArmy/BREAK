@@ -1,0 +1,30 @@
+{
+  "T0450": {
+    "title": "Hot Wallet",
+    "keywords": [
+      "hot wallet",
+      "online wallet",
+      "software wallet",
+      "mobile wallet",
+      "web wallet",
+      "MetaMask",
+      "Trust Wallet",
+      "browser extension wallet"
+    ],
+    "aliases": [
+      "Online Wallet",
+      "Software Wallet"
+    ],
+    "definition": "An online cryptocurrency wallet that remains connected to the internet, with private keys stored on networked devices, enabling quick transaction operations.",
+    "description": "A hot wallet stores private keys on internet-connected devices such as smartphones, computers, or cloud services, including mobile app wallets, browser extension wallets, and exchange custodial wallets. The advantage of hot wallets lies in their convenience, allowing users to initiate transfers and trades anytime, suitable for daily small payments and frequent trading scenarios. However, since private keys are continuously exposed to network environments, hot wallets face higher security risks, vulnerable to phishing attacks, malware, and network hijacking. Threat actors commonly steal hot wallet private keys or seed phrases through fake wallet apps, phishing websites, and clipboard hijacking. To reduce risks, users should only store small amounts for daily use in hot wallets, transferring large assets to cold wallets. Additionally, users should choose reputable wallet service providers, enable multi-factor authentication, and regularly update software versions.",
+    "usageExample": "Users utilize the MetaMask browser extension wallet to interact with DeFi protocols, conveniently connecting to decentralized applications for staking, swapping, and other operations.",
+    "references": [
+      {
+        "title": "Hot Wallet Security Usage Guide"
+      },
+      {
+        "title": "Cryptocurrency Wallet Security Threat Analysis"
+      }
+    ]
+  }
+}

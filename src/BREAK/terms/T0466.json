@@ -1,0 +1,31 @@
+{
+  "T0466": {
+    "title": "博彩",
+    "keywords": [
+      "博彩",
+      "网络赌博",
+      "在线赌博",
+      "菠菜",
+      "BC",
+      "online gambling",
+      "betting"
+    ],
+    "aliases": [
+      "菠菜",
+      "BC"
+    ],
+    "category": "非法经营",
+    "definition": "非法网络赌博平台及相关推广引流活动。",
+    "description": "黑产团伙搭建非法赌博网站或APP，通过推广链接、虚假广告等方式吸引用户充值参赌。平台通过操纵赔率、后台控制等手段确保盈利，用户资金难以提现。相关产业链包括技术开发、支付通道、客服推广等多个环节，涉及洗钱、诈骗等多重违法行为，严重危害社会稳定和用户财产安全。",
+    "relatedRisks": [
+      "R0069",
+      "R0144"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "T0480": {
+    "title": "数据合规",
+    "keywords": [
+      "数据合规",
+      "data compliance",
+      "数据保护",
+      "GDPR",
+      "个保法",
+      "数据安全法"
+    ],
+    "aliases": [],
+    "category": "合规管理",
+    "definition": "企业数据收集、存储、使用和分享符合相关法律法规要求的状态。",
+    "description": "指企业在数据处理全生命周期中遵守《个人信息保护法》《数据安全法》《网络安全法》等法律法规，以及GDPR等国际规范的要求。包括数据分类分级、安全存储、合法使用、跨境传输管理等方面，确保数据处理活动的合法性、正当性和必要性。",
+    "relatedRisks": [
+      "R0120",
+      "R0122",
+      "R0137"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

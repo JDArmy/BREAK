@@ -1,0 +1,32 @@
+{
+  "T0474": {
+    "title": "爬虫",
+    "keywords": [
+      "爬虫",
+      "web scraper",
+      "网络爬虫",
+      "数据抓取",
+      "spider",
+      "网页抓取",
+      "自动化采集",
+      "数据爬取"
+    ],
+    "aliases": [
+      "网络爬虫"
+    ],
+    "category": "数据采集",
+    "definition": "自动化抓取网站数据的程序。",
+    "description": "通过模拟浏览器或HTTP请求自动访问网页并提取数据的程序。合法用途包括搜索引擎索引、价格监控、数据分析等，但也被黑产用于非法采集用户信息、商品数据、内容盗版等。恶意爬虫可能占用大量服务器资源、窃取商业机密、侵犯用户隐私，是企业面临的重要安全威胁。",
+    "relatedRisks": [
+      "R0027"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0044"
+    ],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

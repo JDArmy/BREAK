@@ -1,0 +1,30 @@
+{
+  "T0468": {
+    "title": "社会工程",
+    "keywords": [
+      "社会工程",
+      "社工",
+      "social engineering",
+      "钓鱼",
+      "心理操纵",
+      "pretexting",
+      "phishing"
+    ],
+    "aliases": [
+      "社工"
+    ],
+    "category": "攻击手段",
+    "definition": "通过心理操纵获取机密信息或诱使目标执行特定操作的攻击技术。",
+    "description": "攻击者利用人性弱点（信任、恐惧、贪婪等），通过伪装身份、构造场景、施加压力等手段，诱导目标主动泄露密码、验证码等敏感信息，或点击恶意链接、转账汇款等。常见形式包括钓鱼邮件、冒充客服、假冒熟人等。社会工程攻击无需技术漏洞即可突破安全防线，是最有效也最难防范的攻击方式之一。",
+    "relatedRisks": [
+      "R0080",
+      "R0162"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

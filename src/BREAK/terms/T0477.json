@@ -1,0 +1,28 @@
+{
+  "T0477": {
+    "title": "二选一",
+    "keywords": [
+      "二选一",
+      "强制二选一",
+      "平台排他",
+      "exclusive dealing",
+      "排他性选择",
+      "垄断行为"
+    ],
+    "aliases": [
+      "强制二选一"
+    ],
+    "category": "平台治理",
+    "definition": "平台要求商家在多个竞争平台之间做出排他性选择的垄断行为。",
+    "description": "指具有市场支配地位的电商平台利用其优势地位，强制商家在自己和竞争对手之间做出选择，不允许商家同时在多个平台经营。这种行为限制了商家的经营自由，破坏了公平竞争的市场环境，损害了消费者权益。",
+    "relatedRisks": [
+      "R0135"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "T0441": {
+    "title": "撞库",
+    "keywords": [
+      "撞库",
+      "撞库攻击",
+      "credential stuffing",
+      "账号撞库",
+      "密码撞库",
+      "批量撞库"
+    ],
+    "aliases": [],
+    "category": "攻击手段",
+    "definition": "撞库是指黑产利用已泄露的用户账号密码数据，批量尝试登录其他网站或应用，以获取有效账号的攻击手段。",
+    "description": "撞库攻击基于用户在多个平台使用相同账号密码的习惯。攻击者从数据泄露事件中获取大量账号密码组合，使用自动化工具批量尝试登录目标平台。一旦匹配成功，即可盗取账号控制权，进行盗刷、诈骗或转卖账号等牟利行为。撞库与暴力破解不同，它使用真实的用户凭证组合，成功率更高且更难被传统防护手段检测。",
+    "usageExample": "该团伙通过机器撞库盗取了数万个账号",
+    "relatedRisks": [
+      "R0005",
+      "R0005-001",
+      "R0032",
+      "R0032-001"
+    ],
+    "relatedAvoidances": [
+      "A0015",
+      "A0021",
+      "A0024",
+      "A0059"
+    ],
+    "relatedAttackTools": [
+      "AT0022",
+      "AT0048"
+    ],
+    "relatedThreatActors": [
+      "TA0002",
+      "TA0003"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS03",
+      "BS04"
+    ],
+    "references": [
+      {
+        "title": "OWASP - Credential Stuffing",
+        "link": "https://owasp.org/www-community/attacks/Credential_stuffing"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

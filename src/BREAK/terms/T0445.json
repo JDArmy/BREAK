@@ -1,0 +1,45 @@
+{
+  "T0445": {
+    "title": "信息茧房",
+    "keywords": [
+      "信息茧房",
+      "filter bubble",
+      "回音室效应",
+      "echo chamber",
+      "算法推荐茧房",
+      "信息窄化",
+      "过滤气泡"
+    ],
+    "aliases": [
+      "过滤气泡",
+      "回音室"
+    ],
+    "category": "算法治理",
+    "definition": "信息茧房是指推荐算法过度个性化导致用户信息获取面窄化、陷入同质化信息环境的现象。",
+    "description": "信息茧房概念源于学者桑斯坦的研究，描述算法推荐系统基于用户历史行为进行内容筛选和推送，使用户长期接触同类信息，而较少接触到不同观点和多元内容的现象。算法为提升用户停留时长和点击率，持续推荐用户偏好的内容，形成正反馈循环，导致用户视野收窄、认知偏差加深。信息茧房可能导致群体极化、降低信息多样性、影响用户的独立思考能力。《互联网信息服务算法推荐管理规定》要求平台提供不针对个人特征的选项，保障用户的算法知情权和选择权。",
+    "usageExample": "该用户因长期处于信息茧房中，对外界变化缺乏了解",
+    "relatedRisks": [
+      "R0123"
+    ],
+    "relatedAvoidances": [
+      "A0072",
+      "A0052"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [
+      {
+        "title": "信息茧房：互联网对公共领域的威胁",
+        "link": "https://book.douban.com/subject/1799932/"
+      },
+      {
+        "title": "算法推荐与信息茧房效应研究",
+        "link": "https://www.zhihu.com/question/35899900"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

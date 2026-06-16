@@ -1,0 +1,34 @@
+{
+  "T0457": {
+    "title": "卡商",
+    "keywords": [
+      "卡商",
+      "手机卡商",
+      "银行卡商",
+      "黑卡商",
+      "实名卡商",
+      "卖卡",
+      "sim card dealer",
+      "card seller"
+    ],
+    "aliases": [
+      "黑卡商"
+    ],
+    "category": "黑产角色",
+    "definition": "批量提供手机卡、银行卡等实名资源的黑产供应商。",
+    "description": "卡商通过收购实名认证资料、利用身份信息批量办卡等方式，向黑产团伙提供大量手机卡和银行卡。这些卡用于注册账号、接收验证码、洗钱转账等非法活动。卡商是黑产实名资源供应链的核心环节，为批量账号注册和资金流转提供基础设施。",
+    "relatedRisks": [
+      "R0030",
+      "R0030-005",
+      "R0132"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0001"
+    ],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

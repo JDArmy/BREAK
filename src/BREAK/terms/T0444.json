@@ -1,0 +1,49 @@
+{
+  "T0444": {
+    "title": "算法歧视",
+    "keywords": [
+      "算法歧视",
+      "算法偏见",
+      "价格歧视",
+      "algorithmic discrimination",
+      "algorithmic bias",
+      "算法不公平",
+      "差别定价"
+    ],
+    "aliases": [
+      "算法偏见"
+    ],
+    "category": "算法治理",
+    "definition": "算法歧视是指算法系统对不同用户群体产生不公平的差异化对待，导致特定群体遭受不利影响的现象。",
+    "description": "算法歧视源于训练数据的偏差、模型设计的缺陷或业务目标的不当设定，导致算法在决策过程中对不同群体产生系统性差异化待遇。常见表现包括：基于用户画像的价格歧视、对特定人群的信贷或就业机会限制、搜索和推荐结果的偏向性展示等。算法歧视不仅违背公平原则，还可能固化和放大社会偏见，侵犯用户合法权益。《互联网信息服务算法推荐管理规定》明确要求算法服务提供者不得利用算法实施不合理的差别待遇。",
+    "usageExample": "该平台因算法歧视对老用户实施价格歧视被监管部门处罚",
+    "relatedRisks": [
+      "R0123",
+      "R0009"
+    ],
+    "relatedAvoidances": [
+      "A0072",
+      "A0054",
+      "A0052"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS02",
+      "BS03",
+      "BS04"
+    ],
+    "references": [
+      {
+        "title": "互联网信息服务算法推荐管理规定",
+        "link": "http://www.cac.gov.cn/2022-01/04/c_1642894606364259.htm"
+      },
+      {
+        "title": "算法歧视的法律规制",
+        "link": "https://www.zhihu.com/question/489234567"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

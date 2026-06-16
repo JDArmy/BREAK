@@ -1,0 +1,29 @@
+{
+  "T0488": {
+    "title": "自动化框架",
+    "keywords": [
+      "自动化框架",
+      "Selenium",
+      "Appium",
+      "Puppeteer",
+      "automation framework",
+      "自动化测试框架",
+      "web自动化"
+    ],
+    "aliases": [],
+    "category": "自动化工具",
+    "definition": "用于自动化测试或操作的软件框架，提供浏览器和应用的程序化控制能力。",
+    "description": "自动化框架原本是软件测试领域的合法工具，但被黑产团伙广泛滥用于自动化攻击。Selenium、Puppeteer等Web自动化框架可完全控制浏览器行为，Appium等移动自动化框架可操控真机或模拟器上的App。这类框架提供了丰富的API接口，支持元素定位、事件触发、页面跳转等操作，使攻击者能够编写复杂的自动化脚本。相比传统爬虫，基于自动化框架的攻击更难检测，因为其行为与真实用户高度相似。",
+    "relatedRisks": [
+      "R0001"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0022"
+    ],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

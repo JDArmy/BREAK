@@ -146,7 +146,8 @@
     "risk": "Risk",
     "avoidance": "Avoidance",
     "attackTool": "Attack Tool",
-    "threatActor": "Threat Actor"
+    "threatActor": "Threat Actor",
+    "term": "Slang Term"
   },
   "relationLine": {
     "avoidanceMeans": "Avoidance",
@@ -155,6 +156,7 @@
     "indirectSupportRisk": "Indirectly Supports",
     "buildAttackTool": "Builds Attack Tool",
     "useAttackTool": "Uses Attack Tool",
+    "relatedTerm": "Related Term",
     "subRisk": "Sub-Risk",
     "subAvoidance": "Sub-Avoidance",
     "subAttackTool": "Sub-Attack Tool",

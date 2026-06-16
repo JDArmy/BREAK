@@ -1,0 +1,28 @@
+{
+  "T0454": {
+    "title": "DeFi",
+    "keywords": [
+      "DeFi",
+      "去中心化金融",
+      "decentralized finance",
+      "链上金融"
+    ],
+    "aliases": [
+      "去中心化金融"
+    ],
+    "category": "区块链金融",
+    "definition": "基于区块链技术的去中心化金融服务体系，通过智能合约实现借贷、交易、理财等金融功能。",
+    "description": "DeFi消除了传统金融的中间机构，用户可直接通过智能合约进行资产交易、抵押借贷、流动性挖矿等操作。所有交易记录公开透明且不可篡改，但也面临智能合约漏洞、闪电贷攻击、价格操纵等安全风险。",
+    "relatedRisks": [
+      "R0159",
+      "R0160",
+      "R0161"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

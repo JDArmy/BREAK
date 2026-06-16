@@ -1,0 +1,19 @@
+{
+  "T0473": {
+    "title": "Deepfake",
+    "keywords": [
+      "Deepfake",
+      "synthetic media",
+      "AI-generated impersonation",
+      "face swap",
+      "voice cloning",
+      "neural network manipulation"
+    ],
+    "aliases": [
+      "Shendu Weizao"
+    ],
+    "definition": "AI-generated synthetic media that convincingly replaces or manipulates a person's appearance, voice, or actions in videos, images, or audio, enabling sophisticated impersonation and misinformation.",
+    "description": "Deepfake technology leverages deep learning models, particularly generative adversarial networks (GANs) and diffusion models, to create highly realistic but fabricated media. Face-swapping deepfakes replace one person's face with another in video footage, voice cloning replicates speech patterns and timbre from small audio samples, and full-body synthesis generates entirely artificial personas. Initially requiring significant technical expertise, deepfake creation has become accessible through user-friendly applications and online services. Malicious applications include financial fraud through impersonating executives in video calls to authorize fraudulent transfers, creating non-consensual pornography, spreading political disinformation, manipulating evidence, and conducting sophisticated social engineering attacks. Detection techniques analyze inconsistencies in facial movements, lighting, audio-visual synchronization, and artifacts introduced by generation algorithms, but the arms race between creation and detection continues to escalate. Watermarking, blockchain provenance tracking, and multi-factor authentication for high-stakes communications serve as mitigation strategies.",
+    "usageExample": "Fraudsters used deepfake video technology to impersonate a company CEO in a video conference call, convincing a finance manager to transfer $35 million to an attacker-controlled account."
+  }
+}

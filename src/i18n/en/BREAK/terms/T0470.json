@@ -1,0 +1,19 @@
+{
+  "T0470": {
+    "title": "DNS Hijacking",
+    "keywords": [
+      "DNS Hijacking",
+      "DNS poisoning",
+      "DNS cache poisoning",
+      "DNS redirection",
+      "pharming",
+      "DNS spoofing"
+    ],
+    "aliases": [
+      "DNS Jiechi"
+    ],
+    "definition": "An attack that manipulates DNS resolution processes to redirect users from legitimate domains to attacker-controlled IP addresses, enabling phishing, malware distribution, or surveillance without user awareness.",
+    "description": "DNS hijacking operates by corrupting the domain name resolution mechanism that translates human-readable domains into IP addresses. Attackers employ various techniques: compromising routers or DNS servers to modify resolution tables, poisoning DNS caches with false records that persist and spread to other servers, exploiting vulnerabilities in DNS protocols to inject malicious responses, or conducting man-in-the-middle attacks that intercept and alter DNS queries. Router-level hijacking through compromised home or enterprise routers affects all devices on the network, while ISP-level hijacking can impact thousands of users simultaneously. Malware-based hijacking modifies local host files or DNS settings on individual devices. Once DNS is hijacked, users typing legitimate URLs are transparently redirected to attacker-controlled sites that may harvest credentials, distribute malware, or serve fraudulent content while appearing authentic. DNSSEC (Domain Name System Security Extensions) provides cryptographic verification of DNS responses, preventing many hijacking techniques. Defense strategies include DNSSEC adoption, monitoring DNS infrastructure for tampering, using trusted DNS resolvers, and browser security features that detect domain mismatches.",
+    "usageExample": "A DNS hijacking attack compromised residential routers, redirecting banking domain queries to phishing sites that collected login credentials from thousands of users who believed they were accessing legitimate bank websites."
+  }
+}

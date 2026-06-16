@@ -1,0 +1,36 @@
+{
+  "T0465": {
+    "title": "电信诈骗",
+    "keywords": [
+      "电信诈骗",
+      "电诈",
+      "网络诈骗",
+      "电话诈骗",
+      "短信诈骗",
+      "telecom fraud",
+      "cyber fraud",
+      "phone scam"
+    ],
+    "aliases": [
+      "电诈",
+      "网络诈骗"
+    ],
+    "category": "诈骗手段",
+    "definition": "通过电话、短信、网络等通信手段实施的远程非接触式诈骗。",
+    "description": "诈骗分子利用电信技术和互联网平台，冒充公检法、银行、客服等身份，或通过钓鱼网站、虚假APP等方式，诱导受害者转账汇款或泄露敏感信息。常见类型包括冒充熟人诈骗、贷款诈骗、刷单诈骗、杀猪盘等。该类犯罪具有跨地域、非接触、隐蔽性强等特点，已成为影响最广的诈骗形式。",
+    "relatedRisks": [
+      "R0030",
+      "R0080"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0039",
+      "TA0042"
+    ],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

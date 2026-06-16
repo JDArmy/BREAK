@@ -1,0 +1,31 @@
+{
+  "T0452": {
+    "title": "智能合约",
+    "keywords": [
+      "智能合约",
+      "smart contract",
+      "Solidity",
+      "链上合约",
+      "DApp"
+    ],
+    "aliases": [],
+    "category": "区块链技术",
+    "definition": "部署在区块链上自动执行的程序代码，根据预设条件自动触发和执行交易或操作。",
+    "description": "智能合约是运行在区块链网络上的自动化程序，其代码和执行结果完全透明且不可篡改。一旦部署，合约将按照编写的逻辑自动执行，无需人工干预。广泛应用于DeFi、NFT、DAO等去中心化应用场景，但代码漏洞可能导致资产损失。",
+    "relatedRisks": [
+      "R0159",
+      "R0160",
+      "R0161"
+    ],
+    "relatedAvoidances": [
+      "A0095",
+      "A0096",
+      "A0097"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

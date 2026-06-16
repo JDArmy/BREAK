@@ -15,6 +15,11 @@ defineProps<{
 defineEmits(["drawerClose"]);
 
 const { getInnerDrawerWidth } = useDrawerWidth();
+
+const getRelatedTerms = (aKey: string) =>
+  Object.keys(BREAK.terms).filter((tKey) =>
+    BREAK.terms[tKey].relatedAvoidances.includes(aKey)
+  );
 </script>
 
 <template>
@@ -66,6 +71,19 @@ const { getInnerDrawerWidth } = useDrawerWidth();
     <div class="desc" v-if="$t(`BREAK.avoidances.${aKey}.limitation`)">
       <strong>{{ $t("limitation") }}:&nbsp;</strong>
       {{ $t(`BREAK.avoidances.${aKey}.limitation`) }}
+    </div>
+    <div class="desc" v-if="getRelatedTerms(aKey).length > 0">
+      <strong>{{ $t("terms") }}:&nbsp;</strong>
+      <div class="entity-links">
+        <router-link
+          v-for="tKey in getRelatedTerms(aKey)"
+          :key="tKey"
+          :to="{ name: 'terms', hash: `#${tKey}` }"
+          class="entity-link"
+        >
+          {{ tKey }}: {{ $t(`BREAK.terms.${tKey}.title`) }}
+        </router-link>
+      </div>
     </div>
     <div class="desc" v-if="BREAK.avoidances[aKey as keyof typeof BREAK.avoidances].references?.length > 0">
       <strong>{{ $t("references") }}:&nbsp;</strong>

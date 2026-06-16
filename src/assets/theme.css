@@ -29,10 +29,14 @@
   --green-400: #4ade80;
   --green-500: #22c55e;
   --green-800: #14532d;
+  --lime-300: #bef264;
+  --lime-600: #65a30d;
   --sky-200: #bfdbfe;
   --sky-400: #38bdf8;
   --sky-500: #0ea5e9;
   --sky-800: #1e3a8a;
+  --cyan-400: #22d3ee;
+  --cyan-500: #06b6d4;
   --red-200: #fecaca;
   --red-400: #f87171;
   --red-500: #ef4444;
@@ -44,8 +48,10 @@
   --amber-500: #f59e0b;
   --amber-600: #e0b85b;
   --amber-700: #7c5a1d;
+  --purple-200: #e9d5ff;
   --purple-400: #c084fc;
   --purple-500: #8b5cf6;
+  --purple-800: #581c87;
   --teal-400: #5eead4;
   --teal-500: #14b8a6;
   --pink-400: #fb7185;
@@ -101,6 +107,7 @@
   --break-relation-avoidance: var(--green-200);
   --break-relation-attack-tool: var(--sky-200);
   --break-relation-threat-actor: var(--red-200);
+  --break-relation-term: var(--purple-200);
 
   /* 图表 Tooltip */
   --break-tooltip-bg: var(--slate-white);
@@ -117,6 +124,7 @@
   --break-line-build-tool: var(--sky-500);
   --break-line-use-tool: var(--teal-500);
   --break-line-cause-risk: var(--red-600);
+  --break-line-related-term: var(--lime-600);
   --break-line-sub: var(--slate-400);
   --break-line-maker: var(--green-500);
 }
@@ -169,6 +177,7 @@ html.dark {
   --break-relation-avoidance: var(--green-800);
   --break-relation-attack-tool: var(--sky-800);
   --break-relation-threat-actor: var(--red-800);
+  --break-relation-term: var(--purple-800);
 
   /* 图表 Tooltip */
   --break-tooltip-bg: var(--slate-800);
@@ -185,6 +194,7 @@ html.dark {
   --break-line-build-tool: var(--sky-400);
   --break-line-use-tool: var(--teal-400);
   --break-line-cause-risk: var(--pink-400);
+  --break-line-related-term: var(--lime-300);
   --break-line-sub: var(--slate-500);
   --break-line-maker: var(--green-400);
 }

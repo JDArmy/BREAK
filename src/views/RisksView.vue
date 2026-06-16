@@ -52,6 +52,11 @@ const getRiskDescriptionTools = (rKey: string) =>
     return at.directCauseRisks.includes(rKey) || at.indirectSupportRisks.includes(rKey);
   });
 
+const getRelatedTerms = (rKey: string) =>
+  Object.keys(BREAK.terms).filter((tKey) =>
+    BREAK.terms[tKey as keyof typeof BREAK.terms].relatedRisks.includes(rKey)
+  );
+
 const openRelationGraph = (rKey: string) => {
   const relRoute = router.resolve({
     name: "relation",
@@ -130,6 +135,19 @@ const openRelationGraph = (rKey: string) => {
             class="entity-link"
           >
             {{ atKey }}: {{ $t(`BREAK.attackTools.${atKey}.title`) }}
+          </router-link>
+        </div>
+      </section>
+      <section v-if="getRelatedTerms(selectedRiskKey).length" class="detail-section">
+        <h3>{{ $t("terms") }}</h3>
+        <div class="entity-links">
+          <router-link
+            v-for="tKey in getRelatedTerms(selectedRiskKey)"
+            :key="tKey"
+            :to="{ name: 'terms', hash: `#${tKey}` }"
+            class="entity-link"
+          >
+            {{ tKey }}: {{ $t(`BREAK.terms.${tKey}.title`) }}
           </router-link>
         </div>
       </section>

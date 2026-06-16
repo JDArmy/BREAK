@@ -24,6 +24,11 @@ const { getInnerDrawerWidth } = useDrawerWidth();
 const getAttackToolAvoidances = (atKey: string) => {
   return BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].avoidances;
 };
+
+const getRelatedTerms = (atKey: string) =>
+  Object.keys(BREAK.terms).filter((tKey) =>
+    BREAK.terms[tKey].relatedAttackTools.includes(atKey)
+  );
 </script>
 
 <template>
@@ -79,6 +84,19 @@ const getAttackToolAvoidances = (atKey: string) => {
         >
           {{ aKey }}: {{ $t(`BREAK.avoidances.${aKey}.title`) }}
         </button>
+      </div>
+    </div>
+    <div class="desc" v-if="getRelatedTerms(atKey).length > 0">
+      <strong>{{ $t("terms") }}:&nbsp;</strong>
+      <div class="entity-links">
+        <router-link
+          v-for="tKey in getRelatedTerms(atKey)"
+          :key="tKey"
+          :to="{ name: 'terms', hash: `#${tKey}` }"
+          class="entity-link"
+        >
+          {{ tKey }}: {{ $t(`BREAK.terms.${tKey}.title`) }}
+        </router-link>
       </div>
     </div>
     <div class="desc" v-if="BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].references?.length > 0">

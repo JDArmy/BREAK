@@ -5,6 +5,7 @@ import {
   addRelationNode,
   type RelationGraphBuilderContext,
 } from "@/views/relation/relationGraphBuilderShared";
+import { addRelatedTerms } from "@/views/relation/relationGraphTermBuilder";
 
 export const createAvoidanceRelationBuilder = (context: RelationGraphBuilderContext) => {
   const addRisk = (avoidanceKey: string) => {
@@ -30,8 +31,13 @@ export const createAvoidanceRelationBuilder = (context: RelationGraphBuilderCont
     });
   };
 
+  const addTerm = (avoidanceKey: string) => {
+    addRelatedTerms(context, RelationType.avoidance, avoidanceKey);
+  };
+
   return {
     addRisk,
     addSubavoidance,
+    addTerm,
   };
 };

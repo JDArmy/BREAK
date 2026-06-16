@@ -1,0 +1,19 @@
+{
+  "T0454": {
+    "title": "DeFi",
+    "keywords": [
+      "DeFi",
+      "decentralized finance",
+      "on-chain finance",
+      "permissionless finance",
+      "yield farming",
+      "liquidity mining"
+    ],
+    "aliases": [
+      "Decentralized Finance"
+    ],
+    "definition": "A blockchain-based decentralized financial service system implementing lending, trading, wealth management, and other financial functions through smart contracts.",
+    "description": "DeFi eliminates intermediaries in traditional finance, enabling users to directly engage in asset trading, collateralized lending, and liquidity mining through smart contracts. All transaction records are publicly transparent and immutable, operating without centralized authorities. DeFi protocols offer services including decentralized exchanges (DEXs), lending platforms, stablecoins, derivatives, and insurance. Users maintain custody of their assets, accessing financial services permissionlessly through wallet connections. The Total Value Locked (TVL) in DeFi has reached hundreds of billions, demonstrating significant adoption. However, DeFi faces security risks including smart contract vulnerabilities, flash loan attacks, price manipulation, rug pulls, and oracle failures. The composability of DeFi protocols enables innovation but also creates systemic risks where vulnerabilities in one protocol can cascade across interconnected systems. Regulatory uncertainty and user experience challenges remain barriers to mainstream adoption.",
+    "usageExample": "A user deposits USDC into an Aave lending pool to earn interest, then uses the deposited assets as collateral to borrow ETH for leveraged trading—all executed through smart contracts without bank intermediaries."
+  }
+}

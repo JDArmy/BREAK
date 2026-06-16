@@ -1,0 +1,29 @@
+{
+  "T0479": {
+    "title": "算法推荐",
+    "keywords": [
+      "算法推荐",
+      "推荐算法",
+      "个性化推荐",
+      "recommendation system",
+      "内容推荐",
+      "协同过滤"
+    ],
+    "aliases": [
+      "推荐算法"
+    ],
+    "category": "算法治理",
+    "definition": "基于用户行为数据和机器学习算法的个性化内容推荐系统。",
+    "description": "通过分析用户的浏览历史、购买记录、点击行为等数据，运用协同过滤、深度学习等算法技术，为用户推荐可能感兴趣的商品、内容或服务。虽然提升了用户体验，但也可能造成信息茧房、算法歧视等问题，需要在个性化和多样性之间取得平衡。",
+    "relatedRisks": [
+      "R0123",
+      "R0009"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

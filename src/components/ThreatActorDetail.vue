@@ -15,6 +15,11 @@ defineProps<{
 defineEmits(["drawerClose"]);
 
 const { getInnerDrawerWidth } = useDrawerWidth();
+
+const getRelatedTerms = (taKey: string) =>
+  Object.keys(BREAK.terms).filter((tKey) =>
+    BREAK.terms[tKey].relatedThreatActors.includes(taKey)
+  );
 </script>
 
 <template>
@@ -59,6 +64,19 @@ const { getInnerDrawerWidth } = useDrawerWidth();
     <div class="desc">
       <strong>{{ $t("description") }}:&nbsp;</strong>
       {{ $t(`BREAK.threatActors.${taKey}.description`) }}
+    </div>
+    <div class="desc" v-if="getRelatedTerms(taKey).length > 0">
+      <strong>{{ $t("terms") }}:&nbsp;</strong>
+      <div class="entity-links">
+        <router-link
+          v-for="tKey in getRelatedTerms(taKey)"
+          :key="tKey"
+          :to="{ name: 'terms', hash: `#${tKey}` }"
+          class="entity-link"
+        >
+          {{ tKey }}: {{ $t(`BREAK.terms.${tKey}.title`) }}
+        </router-link>
+      </div>
     </div>
     <div class="desc" v-if="BREAK.threatActors[taKey as keyof typeof BREAK.threatActors].references?.length > 0">
       <strong>{{ $t("riskReference") }}:&nbsp;</strong>

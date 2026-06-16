@@ -1,0 +1,19 @@
+{
+  "T0476": {
+    "title": "Cross-Site Scripting",
+    "keywords": [
+      "Cross-Site Scripting",
+      "XSS",
+      "script injection",
+      "DOM-based XSS",
+      "reflected XSS",
+      "stored XSS"
+    ],
+    "aliases": [
+      "XSS Gongji"
+    ],
+    "definition": "A web security vulnerability where attackers inject malicious JavaScript code into websites that executes in victims' browsers, enabling session hijacking, phishing, or defacement.",
+    "description": "Cross-site scripting exploits insufficient input sanitization and output encoding in web applications, allowing injection of client-side scripts that execute in other users' contexts. Stored (persistent) XSS saves malicious scripts in databases that execute for every user viewing the compromised content, reflected XSS delivers payloads through URLs that trick victims into clicking malicious links, and DOM-based XSS manipulates client-side JavaScript to execute attacks without server involvement. Successful XSS enables stealing authentication cookies and session tokens, capturing keystrokes and form inputs, redirecting users to phishing sites, modifying page content to spread misinformation, and executing actions on behalf of victims. Modern attack techniques bypass basic filters using encoding obfuscation, polyglot payloads that work across contexts, and mutation-based XSS that exploits browser quirks. Defense requires input validation and sanitization, context-aware output encoding, Content Security Policy headers that restrict script sources, HTTPOnly cookies to prevent JavaScript access, and security libraries that automatically handle escaping.",
+    "usageExample": "An attacker injected XSS payload into a forum post that stole session cookies from 2,000 logged-in users who viewed the thread, enabling account takeover across the platform."
+  }
+}

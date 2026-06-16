@@ -1,0 +1,26 @@
+{
+  "T0455": {
+    "title": "NFT",
+    "keywords": [
+      "NFT",
+      "非同质化代币",
+      "non-fungible token",
+      "数字藏品"
+    ],
+    "aliases": [
+      "非同质化代币"
+    ],
+    "category": "区块链资产",
+    "definition": "基于区块链技术的非同质化代币，每个代币都具有唯一标识和所有权记录，用于表示数字或实物资产。",
+    "description": "NFT通过区块链技术为数字资产提供唯一性证明和所有权确权，广泛应用于数字艺术品、游戏道具、虚拟地产等领域。每个NFT都有独特的元数据和Token ID，不可互换且不可分割，但也存在伪造、盗窃、版权纠纷等风险。",
+    "relatedRisks": [
+      "R0121"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

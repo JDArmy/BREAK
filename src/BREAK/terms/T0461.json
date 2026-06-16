@@ -1,0 +1,34 @@
+{
+  "T0461": {
+    "title": "打码平台",
+    "keywords": [
+      "打码平台",
+      "验证码识别",
+      "打码服务",
+      "captcha solver",
+      "验证码破解",
+      "人工打码",
+      "AI识别",
+      "ocr service"
+    ],
+    "aliases": [
+      "验证码识别平台",
+      "打码服务"
+    ],
+    "category": "黑产服务",
+    "definition": "提供人工或AI识别验证码服务的平台。",
+    "description": "打码平台通过人工众包或AI技术，为用户提供快速识别各类验证码的服务。黑产团伙利用打码平台自动化破解图片验证码、滑块验证等人机验证机制，实现批量注册、刷量、撞库等操作。平台通常按识别次数计费，响应速度快，准确率高，是黑产自动化攻击的重要技术支撑。",
+    "relatedRisks": [
+      "R0001",
+      "R0032"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0022"
+    ],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

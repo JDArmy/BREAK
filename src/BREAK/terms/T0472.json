@@ -1,0 +1,31 @@
+{
+  "T0472": {
+    "title": "中间人攻击",
+    "keywords": [
+      "中间人攻击",
+      "MITM",
+      "man-in-the-middle",
+      "会话劫持",
+      "通信拦截",
+      "数据窃听",
+      "SSL剥离"
+    ],
+    "aliases": [
+      "MITM"
+    ],
+    "category": "网络攻击",
+    "definition": "攻击者拦截并可能篡改两方通信内容的攻击技术。",
+    "description": "攻击者在用户与服务器之间建立中继，秘密监听、记录甚至篡改双方的通信数据。常见手段包括ARP欺骗、伪造WiFi热点、SSL剥离等。攻击者可窃取登录凭证、会话令牌、支付信息等敏感数据，或向通信中注入恶意内容，对用户隐私和资金安全构成严重威胁。",
+    "relatedRisks": [
+      "R0051",
+      "R0051-002",
+      "R0142"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

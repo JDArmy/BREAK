@@ -21,7 +21,7 @@ interface UseRelationGraphDataOptions {
   relKey: Ref<string>;
   RelationTypeMapping: ReturnType<typeof createRelationTypeMapping>;
   getGraphColor: (key: "background" | "line" | "lineText" | "nodeText" | "nodeBorder" | "subNodeFill" | "subNodeBorder" | "selectedNodeBorder" | "selectedNodeGlow") => string;
-  getRelationLineColor: (key: "avoidanceMeans" | "directCauseRisk" | "indirectSupportRisk" | "buildAttackTool" | "useAttackTool" | "causeRisk" | "subRisk" | "subAvoidance" | "subAttackTool" | "subThreatActor" | "attackToolMaker") => string;
+  getRelationLineColor: (key: "avoidanceMeans" | "directCauseRisk" | "indirectSupportRisk" | "buildAttackTool" | "useAttackTool" | "causeRisk" | "relatedTerm" | "subRisk" | "subAvoidance" | "subAttackTool" | "subThreatActor" | "attackToolMaker") => string;
   renderNetworkChart: (notMerge?: boolean) => void;
 }
 
@@ -73,6 +73,16 @@ export const useRelationGraphData = ({
       color: getRelationLineColor("causeRisk"),
       label: t("relationLine.causeRisk"),
       fields: ["AttackTool.directCauseRisks", "AttackTool.indirectSupportRisks", "ThreatActor.directCauseRisks"],
+    },
+    {
+      color: getRelationLineColor("relatedTerm"),
+      label: t("relationLine.relatedTerm"),
+      fields: [
+        "Term.relatedRisks",
+        "Term.relatedAvoidances",
+        "Term.relatedAttackTools",
+        "Term.relatedThreatActors",
+      ],
     },
     { color: getRelationLineColor("subRisk"), label: t("relationLine.subRisk"), fields: ["Risk child ID"] },
     { color: getRelationLineColor("subAvoidance"), label: t("relationLine.subAvoidance"), fields: ["Avoidance child ID"] },
@@ -147,6 +157,12 @@ export const useRelationGraphData = ({
     }
     if (line.text === t("relationLine.buildAttackTool")) fields.add("ThreatActor.buildAttackTools");
     if (line.text === t("relationLine.useAttackTool")) fields.add("ThreatActor.useAttackTools");
+    if (line.text === t("relationLine.relatedTerm")) {
+      if (fromType === RelationType.term && toType === RelationType.risk) fields.add("Term.relatedRisks");
+      if (fromType === RelationType.term && toType === RelationType.avoidance) fields.add("Term.relatedAvoidances");
+      if (fromType === RelationType.term && toType === RelationType.attackTool) fields.add("Term.relatedAttackTools");
+      if (fromType === RelationType.term && toType === RelationType.threatActor) fields.add("Term.relatedThreatActors");
+    }
     if (line.text === t("relationLine.attackToolMaker")) fields.add("ThreatActor.buildAttackTools");
     if (line.text === t("relationLine.causeRisk")) {
       if (fromType === RelationType.attackTool) {
@@ -274,10 +290,40 @@ export const useRelationGraphData = ({
     getSankeyNodeName,
   });
 
+  let refreshGraphRequestId = 0;
+
   const refreshGraphAfterVisible = () => {
-    rebuildGraphData();
-    nextTick(() => {
-      renderNetworkChart(true);
+    const requestId = ++refreshGraphRequestId;
+    const requestLabel = `${relType.value}:${relKey.value}`;
+    console.time(`[RelationPerf] refreshGraphAfterVisible queued ${requestLabel}`);
+
+    requestAnimationFrame(() => {
+      window.setTimeout(() => {
+        if (requestId !== refreshGraphRequestId) {
+          console.timeEnd(`[RelationPerf] refreshGraphAfterVisible queued ${requestLabel}`);
+          console.log(`[RelationPerf] refreshGraphAfterVisible skipped`, {
+            requestLabel,
+            current: `${relType.value}:${relKey.value}`,
+          });
+          return;
+        }
+
+        console.timeEnd(`[RelationPerf] refreshGraphAfterVisible queued ${requestLabel}`);
+        console.time(`[RelationPerf] refreshGraphAfterVisible work ${relType.value}:${relKey.value}`);
+        rebuildGraphData();
+        console.log(`[RelationPerf] graph size after rebuild`, {
+          type: relType.value,
+          key: relKey.value,
+          nodes: nodes.length,
+          lines: lines.length,
+        });
+        nextTick(() => {
+          console.time(`[RelationPerf] renderNetworkChart ${relType.value}:${relKey.value}`);
+          renderNetworkChart(true);
+          console.timeEnd(`[RelationPerf] renderNetworkChart ${relType.value}:${relKey.value}`);
+          console.timeEnd(`[RelationPerf] refreshGraphAfterVisible work ${relType.value}:${relKey.value}`);
+        });
+      }, 0);
     });
   };
 

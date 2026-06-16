@@ -1,0 +1,19 @@
+{
+  "T0488": {
+    "title": "Automation Framework",
+    "keywords": [
+      "Automation Framework",
+      "test automation",
+      "Selenium",
+      "Appium",
+      "browser automation",
+      "UI automation"
+    ],
+    "aliases": [
+      "Zidonghua Kuangjia"
+    ],
+    "definition": "Software frameworks designed for automated testing and interaction with applications, repurposed by fraudsters to programmatically control browsers or mobile apps for scaled abuse operations.",
+    "description": "Automation frameworks like Selenium for web browsers, Appium for mobile apps, and Puppeteer for headless Chrome provide APIs for programmatic control of user interfaces, enabling scripts to navigate pages, fill forms, click buttons, and extract data. While created for legitimate software testing, these powerful tools are widely adopted in fraud operations due to their ability to mimic human interactions convincingly. Attackers leverage these frameworks for credential stuffing campaigns, account registration automation, web scraping, form submission spam, and complex multi-step fraud workflows. Advanced usage includes headless mode operation for efficiency, proxy integration for IP rotation, CAPTCHA solving service integration, user agent randomization, and sophisticated wait strategies to handle dynamic content. Detection focuses on identifying framework artifacts like WebDriver properties, timing patterns inconsistent with human behavior, and execution environments characteristic of automation. Platforms must balance blocking malicious automation while allowing legitimate testing and accessibility tools.",
+    "usageExample": "Fraudsters deployed Selenium-based scripts across thousands of proxies to automate credential stuffing attacks, testing 10 million stolen username-password combinations against banking sites and achieving 50,000 successful account compromises."
+  }
+}

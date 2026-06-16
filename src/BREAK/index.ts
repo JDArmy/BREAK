@@ -15,7 +15,7 @@ const BREAK = {
   ...businessScenes, //业务场景
   ...attackTools, //攻击工具
   ...threatActors, //威胁行为者
-  ...terms, //行业黑话/术语
+  ...terms, //行业术语
 };
 
 export default BREAK;

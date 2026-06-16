@@ -1,0 +1,19 @@
+{
+  "T0469": {
+    "title": "Traffic Hijacking",
+    "keywords": [
+      "Traffic Hijacking",
+      "network interception",
+      "man-in-the-middle",
+      "session hijacking",
+      "BGP hijacking",
+      "HTTP redirection"
+    ],
+    "aliases": [
+      "Liuliang Jiechi"
+    ],
+    "definition": "The unauthorized interception and redirection of network traffic between users and legitimate destinations, enabling attackers to steal data, inject malicious content, or redirect users to fraudulent sites.",
+    "description": "Traffic hijacking encompasses multiple attack vectors that intercept communications between clients and servers. Network-level hijacking exploits vulnerabilities in routing protocols like BGP to redirect traffic at the ISP or backbone level, while local attacks compromise routers, DNS servers, or wireless networks to intercept traffic within specific networks. Proxy-based hijacking installs malicious software that forces all network traffic through attacker-controlled servers. HTTP hijacking injects advertisements, malware, or phishing content into unencrypted web traffic, commonly executed by compromised ISPs or public Wi-Fi operators. Session hijacking steals authentication cookies or tokens to impersonate legitimate users. These attacks enable credential theft, financial fraud, malware distribution, surveillance, and censorship. HTTPS encryption protects against many hijacking vectors but remains vulnerable to certificate authority compromise, downgrade attacks, or user acceptance of invalid certificates. Defense measures include HTTPS enforcement, DNSSEC implementation, VPN usage, certificate pinning, and network monitoring for anomalous routing.",
+    "usageExample": "Attackers hijacked BGP routes for a cryptocurrency exchange, redirecting traffic to a phishing clone for two hours and stealing login credentials from over 300 users attempting to access their accounts."
+  }
+}

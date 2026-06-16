@@ -1,0 +1,31 @@
+{
+  "T0475": {
+    "title": "SQL注入",
+    "keywords": [
+      "SQL注入",
+      "SQL injection",
+      "数据库注入",
+      "SQLi",
+      "注入攻击",
+      "数据库漏洞",
+      "盲注",
+      "联合查询注入"
+    ],
+    "aliases": [
+      "SQLi"
+    ],
+    "category": "代码注入",
+    "definition": "通过在输入中注入恶意SQL代码攻击数据库的技术。",
+    "description": "利用应用程序对用户输入过滤不严的漏洞，在输入字段中插入恶意SQL语句，从而绕过身份验证、读取敏感数据、修改或删除数据库内容。是最常见的Web应用安全漏洞之一，可导致数据泄露、数据篡改、系统权限提升等严重后果。OWASP Top 10中的持续高危风险。",
+    "relatedRisks": [
+      "R0126",
+      "R0127"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

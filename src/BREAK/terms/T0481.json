@@ -1,0 +1,28 @@
+{
+  "T0481": {
+    "title": "隐私合规",
+    "keywords": [
+      "隐私合规",
+      "privacy compliance",
+      "个人信息保护",
+      "隐私保护",
+      "用户隐私",
+      "隐私政策"
+    ],
+    "aliases": [],
+    "category": "合规管理",
+    "definition": "企业个人信息处理活动符合隐私保护法律法规的要求。",
+    "description": "指企业在收集、使用、存储、传输和删除个人信息时，遵守隐私保护相关法律法规，包括获取用户明示同意、最小化收集原则、透明告知义务、保障用户权利等。需建立完善的隐私管理体系，定期开展隐私影响评估，确保个人信息处理的合规性。",
+    "relatedRisks": [
+      "R0120",
+      "R0122",
+      "R0137"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

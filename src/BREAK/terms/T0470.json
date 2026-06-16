@@ -1,0 +1,30 @@
+{
+  "T0470": {
+    "title": "DNS劫持",
+    "keywords": [
+      "DNS劫持",
+      "DNS hijacking",
+      "域名劫持",
+      "DNS污染",
+      "DNS缓存投毒",
+      "域名解析篡改",
+      "DNS欺骗"
+    ],
+    "aliases": [
+      "域名劫持"
+    ],
+    "category": "网络攻击",
+    "definition": "篡改DNS解析结果，将用户导向恶意网站的攻击手段。",
+    "description": "攻击者通过入侵DNS服务器、污染DNS缓存或劫持用户设备的DNS配置，将正常域名解析到恶意IP地址。用户在访问合法网站时会被重定向到钓鱼网站或恶意页面，导致账号密码泄露、恶意软件下载等安全风险。DNS劫持隐蔽性强，用户往往难以察觉。",
+    "relatedRisks": [
+      "R0142",
+      "R0051"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

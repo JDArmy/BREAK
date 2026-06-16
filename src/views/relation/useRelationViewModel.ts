@@ -69,6 +69,7 @@ export const useRelationViewModel = () => {
     buildAttackTool: "--break-line-build-tool",
     useAttackTool: "--break-line-use-tool",
     causeRisk: "--break-line-cause-risk",
+    relatedTerm: "--break-line-related-term",
     subRisk: "--break-line-sub",
     subAvoidance: "--break-line-sub",
     subAttackTool: "--break-line-sub",

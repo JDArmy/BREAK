@@ -1,0 +1,19 @@
+{
+  "T0475": {
+    "title": "SQL Injection",
+    "keywords": [
+      "SQL Injection",
+      "SQLi",
+      "database injection",
+      "query manipulation",
+      "blind SQL injection",
+      "union-based injection"
+    ],
+    "aliases": [
+      "SQL Zhuru"
+    ],
+    "definition": "A code injection technique that exploits vulnerabilities in database queries by inserting malicious SQL statements through user inputs, enabling unauthorized data access, modification, or deletion.",
+    "description": "SQL injection attacks occur when applications fail to properly sanitize user inputs that are incorporated into SQL queries, allowing attackers to manipulate query logic. Classic injection techniques insert SQL syntax through input fields, URL parameters, or HTTP headers that break out of intended query structure. Union-based injection uses UNION operators to retrieve data from additional tables, error-based injection triggers database errors that reveal structure information, blind injection infers data through boolean logic or timing delays, and stacked queries execute multiple commands in succession. Successful exploitation enables complete database compromise: extracting sensitive user data, credentials, and business information; modifying or deleting records; bypassing authentication; executing administrative operations; and in some cases achieving remote code execution on the database server. Modern web frameworks provide protection through parameterized queries and prepared statements that separate code from data, input validation, least privilege database accounts, and web application firewalls that detect injection patterns.",
+    "usageExample": "An attacker exploited SQL injection in a login form by entering `admin' OR '1'='1` as username, bypassing authentication and gaining administrative access to extract the entire user database containing 500,000 records."
+  }
+}

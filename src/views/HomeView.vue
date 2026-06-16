@@ -279,7 +279,7 @@ const threatActorDetailClose = () => {
   router.push({ name: "home" });
 };
 
-// 黑话术语抽屉
+// 行业术语抽屉
 const termDrawer = ref(false);
 const termKey = ref("");
 watch(

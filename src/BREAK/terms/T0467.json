@@ -1,0 +1,28 @@
+{
+  "T0467": {
+    "title": "私服",
+    "keywords": [
+      "私服",
+      "私人服务器",
+      "游戏私服",
+      "盗版服务器",
+      "private server",
+      "pirate server"
+    ],
+    "aliases": [
+      "私人服务器"
+    ],
+    "category": "侵权行为",
+    "definition": "未经授权私自架设的游戏服务器。",
+    "description": "个人或团队通过逆向工程破解游戏客户端和服务端代码，私自搭建游戏服务器并对外运营。私服通常修改游戏参数、增加道具掉落或开放充值返利以吸引玩家，严重侵犯游戏版权方的知识产权和经济利益。部分私服还捆绑木马、窃取用户账号，或成为洗钱渠道，危害网络安全和玩家权益。",
+    "relatedRisks": [
+      "R0101"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

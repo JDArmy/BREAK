@@ -84,6 +84,7 @@ export const createRelationNodeContextMenu = ({
         RelationTypeMapping[RelationType.avoidance].disableContextMenu.value = false;
         RelationTypeMapping[RelationType.attackTool].disableContextMenu.value = false;
         RelationTypeMapping[RelationType.threatActor].disableContextMenu.value = false;
+        RelationTypeMapping[RelationType.term].disableContextMenu.value = false;
         disableContextMenuAll.value = false;
         disableContextMenuOpenAsRoot.value = false;
         break;
@@ -92,6 +93,7 @@ export const createRelationNodeContextMenu = ({
         RelationTypeMapping[RelationType.avoidance].disableContextMenu.value = true;
         RelationTypeMapping[RelationType.attackTool].disableContextMenu.value = true;
         RelationTypeMapping[RelationType.threatActor].disableContextMenu.value = true;
+        RelationTypeMapping[RelationType.term].disableContextMenu.value = false;
         disableContextMenuAll.value = false;
         disableContextMenuOpenAsRoot.value = false;
         break;
@@ -100,6 +102,7 @@ export const createRelationNodeContextMenu = ({
         RelationTypeMapping[RelationType.avoidance].disableContextMenu.value = false;
         RelationTypeMapping[RelationType.attackTool].disableContextMenu.value = true;
         RelationTypeMapping[RelationType.threatActor].disableContextMenu.value = false;
+        RelationTypeMapping[RelationType.term].disableContextMenu.value = false;
         disableContextMenuAll.value = false;
         disableContextMenuOpenAsRoot.value = false;
         break;
@@ -108,6 +111,16 @@ export const createRelationNodeContextMenu = ({
         RelationTypeMapping[RelationType.avoidance].disableContextMenu.value = true;
         RelationTypeMapping[RelationType.attackTool].disableContextMenu.value = false;
         RelationTypeMapping[RelationType.threatActor].disableContextMenu.value = true;
+        RelationTypeMapping[RelationType.term].disableContextMenu.value = false;
+        disableContextMenuAll.value = false;
+        disableContextMenuOpenAsRoot.value = false;
+        break;
+      case RelationType.term:
+        RelationTypeMapping[RelationType.risk].disableContextMenu.value = false;
+        RelationTypeMapping[RelationType.avoidance].disableContextMenu.value = false;
+        RelationTypeMapping[RelationType.attackTool].disableContextMenu.value = false;
+        RelationTypeMapping[RelationType.threatActor].disableContextMenu.value = false;
+        RelationTypeMapping[RelationType.term].disableContextMenu.value = true;
         disableContextMenuAll.value = false;
         disableContextMenuOpenAsRoot.value = false;
         break;

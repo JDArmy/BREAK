@@ -1,0 +1,33 @@
+{
+  "T0471": {
+    "title": "钓鱼",
+    "keywords": [
+      "钓鱼",
+      "phishing",
+      "钓鱼网站",
+      "钓鱼邮件",
+      "仿冒网站",
+      "网络钓鱼",
+      "欺诈网站",
+      "钓鱼攻击"
+    ],
+    "aliases": [
+      "网络钓鱼"
+    ],
+    "category": "社会工程",
+    "definition": "伪装成可信实体诱骗用户泄露敏感信息的攻击方式。",
+    "description": "攻击者通过伪造银行、电商平台、政府机构等可信网站或邮件，诱导用户输入账号密码、银行卡号、验证码等敏感信息。钓鱼手段包括仿冒官网、伪造邮件、虚假短信等，利用用户信任和疏忽达到盗取信息、资金的目的。是最常见的网络诈骗手段之一。",
+    "relatedRisks": [
+      "R0080",
+      "R0162"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0015"
+    ],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

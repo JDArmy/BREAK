@@ -1,0 +1,19 @@
+{
+  "T0465": {
+    "title": "Telecom Fraud",
+    "keywords": [
+      "Telecom Fraud",
+      "phone scam",
+      "voice phishing",
+      "impersonation scam",
+      "SMS fraud",
+      "caller ID spoofing"
+    ],
+    "aliases": [
+      "Dianxin Zhapian"
+    ],
+    "definition": "Criminal schemes that use telephone, SMS, or internet communication to deceive victims into transferring money or revealing sensitive information by impersonating authorities, institutions, or trusted contacts.",
+    "description": "Telecom fraud encompasses a wide range of scam methodologies that exploit communication technologies to reach and manipulate victims at scale. Common schemes include impersonating law enforcement or government officials claiming legal issues, posing as banks reporting security problems, pretending to be kidnapped relatives demanding ransom, offering fake investment opportunities, and conducting tech support scams. Sophisticated operations use caller ID spoofing to display legitimate-looking numbers, employ psychological manipulation tactics to create urgency and fear, and utilize prepared scripts optimized through A/B testing. Modern telecom fraud operations are highly organized, often operating from overseas compounds with segmented teams handling lead generation, social engineering, money mule coordination, and technical infrastructure. They leverage data broker information for precision targeting, use VoIP systems to obscure locations, and employ money laundering networks to extract proceeds. Governments combat these operations through international cooperation, real-time call blocking systems, and public awareness campaigns.",
+    "usageExample": "A victim transferred $200,000 to fraudsters after receiving a spoofed call from someone claiming to be a prosecutor investigating the victim for money laundering, demanding immediate fund transfer to a 'safe account' for verification."
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "T0483": {
+    "title": "脚本",
+    "keywords": [
+      "脚本",
+      "script",
+      "自动化脚本",
+      "批处理脚本",
+      "Python脚本",
+      "JavaScript脚本",
+      "自动化程序"
+    ],
+    "aliases": [],
+    "category": "自动化工具",
+    "definition": "用于自动化执行特定任务的程序代码，通常无需人工干预即可批量完成重复性操作。",
+    "description": "脚本是黑产团伙常用的自动化工具，通过编写代码实现注册、登录、下单、评论等操作的自动化执行。相比手工操作，脚本可大幅提升效率、降低人力成本，并能精确控制操作时间和频率以规避风控检测。常见的脚本语言包括Python、JavaScript、Shell等，广泛应用于刷单、养号、数据爬取等黑产场景。",
+    "relatedRisks": [
+      "R0001",
+      "R0003",
+      "R0027"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0022"
+    ],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

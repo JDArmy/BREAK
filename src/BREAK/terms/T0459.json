@@ -1,0 +1,34 @@
+{
+  "T0459": {
+    "title": "猫池",
+    "keywords": [
+      "猫池",
+      "GoIP",
+      "SIM卡池",
+      "短信猫池",
+      "GSM网关",
+      "多卡设备",
+      "sim box",
+      "gsm gateway"
+    ],
+    "aliases": [
+      "SIM卡池",
+      "GoIP设备"
+    ],
+    "category": "黑产工具",
+    "definition": "集成大量SIM卡的硬件设备，用于批量接收短信和拨打电话。",
+    "description": "猫池是一种硬件设备，可同时插入数十至上百张SIM卡，通过网络接口统一管理。黑产团伙使用猫池批量接收验证码、群发短信、拨打诈骗电话，实现规模化操作。设备通常配备远程控制软件，可自动化处理大量通信任务，是批量注册和诈骗活动的重要基础设施。",
+    "relatedRisks": [
+      "R0030",
+      "R0132"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0001"
+    ],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

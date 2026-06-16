@@ -1,0 +1,19 @@
+{
+  "T0472": {
+    "title": "Man-in-the-Middle Attack",
+    "keywords": [
+      "Man-in-the-Middle Attack",
+      "MITM",
+      "session interception",
+      "eavesdropping attack",
+      "proxy attack",
+      "network interception"
+    ],
+    "aliases": [
+      "Zhongjianren Gongji"
+    ],
+    "definition": "A cyberattack where an adversary secretly intercepts and potentially alters communications between two parties who believe they are directly communicating, enabling data theft, credential capture, or message manipulation.",
+    "description": "Man-in-the-middle (MITM) attacks position an attacker between a client and server, intercepting all traffic that passes between them. Common implementation methods include ARP spoofing on local networks to redirect traffic through the attacker's device, rogue Wi-Fi access points that impersonate legitimate networks, SSL stripping that downgrades HTTPS connections to unencrypted HTTP, and DNS hijacking that redirects connections to attacker-controlled proxies. Advanced attacks exploit vulnerabilities in TLS/SSL implementations, compromise certificate authorities to issue fraudulent certificates, or use social engineering to install proxy certificates on victim devices. MITM attacks enable real-time credential theft, session hijacking, injection of malicious content into legitimate communications, surveillance of sensitive data, and manipulation of transactions. Public Wi-Fi networks present high MITM risk due to lack of encryption between clients and access points. Defense strategies include mandatory HTTPS with certificate pinning, VPN usage on untrusted networks, certificate transparency monitoring, mutual authentication protocols, and network monitoring for suspicious proxy or routing behavior.",
+    "usageExample": "An attacker operated a rogue Wi-Fi hotspot named 'Airport_Free_WiFi' that performed MITM attacks on connected users, capturing passwords and credit card numbers from unencrypted connections and HTTP traffic."
+  }
+}

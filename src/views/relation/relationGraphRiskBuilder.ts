@@ -5,6 +5,7 @@ import {
   addRelationNode,
   type RelationGraphBuilderContext,
 } from "@/views/relation/relationGraphBuilderShared";
+import { addRelatedTerms } from "@/views/relation/relationGraphTermBuilder";
 
 export const createRiskRelationBuilder = (context: RelationGraphBuilderContext) => {
   const addAvoidance = (riskKey: string) => {
@@ -107,11 +108,16 @@ export const createRiskRelationBuilder = (context: RelationGraphBuilderContext) 
     });
   };
 
+  const addTerm = (riskKey: string) => {
+    addRelatedTerms(context, RelationType.risk, riskKey);
+  };
+
   return {
     addAttackTool,
     addAvoidance,
     addAvoidanceAttackToolRelation,
     addSubrisk,
+    addTerm,
     addThreatActor,
     addThreatActorAttackToolRelation,
   };

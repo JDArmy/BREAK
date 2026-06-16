@@ -1,0 +1,19 @@
+{
+  "T0484": {
+    "title": "Bot",
+    "keywords": [
+      "Bot",
+      "automated agent",
+      "software robot",
+      "internet bot",
+      "web bot",
+      "malicious bot"
+    ],
+    "aliases": [
+      "Jiqiren"
+    ],
+    "definition": "Automated software agents that perform tasks on the internet, ranging from legitimate applications like search engine crawlers to malicious bots conducting fraud, spam, or cyberattacks.",
+    "description": "Bots represent automated programs that interact with online services, executing tasks with speed and scale impossible for human operators. Legitimate bots include search engine crawlers indexing web content, monitoring bots checking site availability, chatbots providing customer service, and trading bots executing algorithmic strategies. Malicious bots constitute a significant threat: credential stuffing bots testing stolen passwords, scraper bots harvesting content and data, spam bots posting unwanted content, click fraud bots generating fake advertising engagement, DDoS bots overwhelming servers, and social media bots spreading misinformation. Advanced bots employ residential proxies to appear as genuine users, solve CAPTCHAs through automation services, execute JavaScript to bypass basic bot detection, and coordinate in botnets controlled by command-and-control infrastructure. Bot detection technologies analyze behavioral patterns, device fingerprints, network characteristics, and challenge-response tests to distinguish automated traffic. Industry estimates suggest 30-50% of internet traffic originates from bots, with malicious bots representing substantial portions.",
+    "usageExample": "A botnet comprising 50,000 compromised devices launched coordinated attacks on e-commerce platforms during sales events, creating fake traffic to slow site performance while automated purchasing bots grabbed limited inventory."
+  }
+}

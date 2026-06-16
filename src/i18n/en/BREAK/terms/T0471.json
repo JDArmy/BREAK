@@ -1,0 +1,19 @@
+{
+  "T0471": {
+    "title": "Phishing",
+    "keywords": [
+      "Phishing",
+      "credential harvesting",
+      "spear phishing",
+      "email spoofing",
+      "fake login page",
+      "impersonation attack"
+    ],
+    "aliases": [
+      "Diayu"
+    ],
+    "definition": "A deceptive attack technique where fraudsters impersonate trusted entities through email, SMS, or websites to trick victims into revealing credentials, financial information, or downloading malware.",
+    "description": "Phishing represents one of the most prevalent and effective attack vectors in cybercrime, exploiting human trust rather than technical vulnerabilities. Generic phishing campaigns cast wide nets with mass emails impersonating banks, delivery services, or popular platforms, leading victims to fake login pages that harvest credentials. Spear phishing targets specific individuals or organizations using personalized information from reconnaissance, increasing credibility and success rates. Whaling attacks target executives with high-value access. Smishing (SMS phishing) and vishing (voice phishing) extend these techniques to text messages and phone calls. Modern phishing operations employ sophisticated infrastructure including lookalike domains, SSL certificates for fake sites, email spoofing that bypasses SPF/DKIM checks, and hosting on compromised legitimate servers to evade blocklists. Attackers increasingly use legitimate services like cloud storage sharing or calendar invites to bypass security filters. Defense requires multi-layered approaches: technical controls including email authentication, URL filtering, and sandboxing; user education on identifying suspicious indicators; multi-factor authentication to mitigate credential compromise; and incident response procedures for rapid containment.",
+    "usageExample": "A spear phishing campaign targeted finance employees with emails mimicking the CFO's communication style, instructing urgent wire transfers that resulted in $3.2 million stolen before the fraud was detected."
+  }
+}

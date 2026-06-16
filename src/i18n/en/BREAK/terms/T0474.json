@@ -1,0 +1,19 @@
+{
+  "T0474": {
+    "title": "Web Scraper",
+    "keywords": [
+      "Web Scraper",
+      "data extraction bot",
+      "web crawler",
+      "content harvesting",
+      "automated data collection",
+      "spider bot"
+    ],
+    "aliases": [
+      "Pachong"
+    ],
+    "definition": "Automated software programs that systematically extract data from websites by parsing HTML, executing JavaScript, and navigating pages to collect content, prices, or user information at scale.",
+    "description": "Web scrapers range from simple scripts parsing static HTML to sophisticated browser automation frameworks that execute JavaScript, solve CAPTCHAs, and mimic human behavior to evade detection. Legitimate use cases include search engine indexing, price comparison services, academic research, and business intelligence. However, malicious scrapers harvest personal data for spam lists, steal copyrighted content, enable competitive price undercutting, extract proprietary business data, and overwhelm servers with excessive requests. Advanced scrapers employ residential proxy networks to distribute requests across genuine IP addresses, implement randomized delays and request patterns to avoid rate limiting, use headless browsers for JavaScript-heavy sites, and integrate CAPTCHA solving services. Website operators defend through rate limiting, IP blocking, CAPTCHA challenges, honeypot traps, fingerprinting, and legal enforcement under terms of service or computer fraud statutes. The ethical and legal boundaries of scraping remain contested, particularly regarding publicly accessible but copyrighted content.",
+    "usageExample": "An e-commerce competitor deployed scrapers to extract real-time pricing data from thousands of product pages daily, enabling them to systematically undercut prices by minimal margins."
+  }
+}

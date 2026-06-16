@@ -1,0 +1,27 @@
+{
+  "T0453": {
+    "title": "闪电贷",
+    "keywords": [
+      "闪电贷",
+      "flash loan",
+      "闪电贷攻击",
+      "无抵押借贷"
+    ],
+    "aliases": [],
+    "category": "DeFi",
+    "definition": "无需抵押的区块链即时借贷机制，要求在同一交易区块内借入并归还资金，否则交易自动回滚。",
+    "description": "闪电贷是DeFi协议提供的特殊借贷方式，允许用户在无抵押情况下借出大额资金，但必须在同一笔交易中完成借入、使用和归还的完整流程。该机制被广泛用于套利、清算等合法用途，但也常被攻击者利用进行价格操纵、重入攻击等恶意行为。",
+    "relatedRisks": [
+      "R0159",
+      "R0161"
+    ],
+    "relatedAvoidances": [
+      "A0099"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

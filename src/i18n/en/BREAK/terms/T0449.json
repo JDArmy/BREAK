@@ -1,0 +1,29 @@
+{
+  "T0449": {
+    "title": "Cold Wallet",
+    "keywords": [
+      "cold wallet",
+      "cold storage",
+      "hardware wallet",
+      "offline wallet",
+      "Ledger",
+      "Trezor",
+      "air-gapped wallet"
+    ],
+    "aliases": [
+      "Cold Storage",
+      "Offline Wallet"
+    ],
+    "definition": "A hardware device or physical medium that stores cryptocurrency private keys offline, providing the highest level of asset security protection through internet isolation.",
+    "description": "A cold wallet is a form of wallet that keeps private keys completely offline, primarily including hardware wallets and paper wallets. Hardware wallets like Ledger and Trezor store private keys in secure chips, and even when connected to computers for transaction signing, private keys remain unexposed to the network. The core advantage of cold wallets is isolating the attack surface from networks, preventing hackers from stealing private keys remotely. Suitable for users holding large amounts of cryptocurrency long-term. When using cold wallets, users generate and store private keys in offline environments, physically connecting devices for signing during transactions before broadcasting to the blockchain network. Compared to hot wallets, cold wallets sacrifice convenience for higher security, making them the preferred storage solution for institutions and high-net-worth users.",
+    "usageExample": "Exchanges store over 95% of user assets in cold wallets, keeping only small amounts in hot wallets for daily withdrawal needs.",
+    "references": [
+      {
+        "title": "Hardware Wallet Best Practices"
+      },
+      {
+        "title": "Cold Wallet vs Hot Wallet Security Comparison"
+      }
+    ]
+  }
+}
