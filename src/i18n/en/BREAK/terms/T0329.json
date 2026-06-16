@@ -2,13 +2,21 @@
   "T0329": {
     "title": "Cryptocurrency",
     "keywords": [
-      "Cryptocurrency"
+      "Cryptocurrency",
+      "virtual currency for money laundering",
+      "crypto for illicit funds",
+      "anonymous transfer asset",
+      "crypto laundering medium",
+      "USDT for running score",
+      "BTC for fraud",
+      "cryptocurrency for criminal proceeds",
+      "digital asset for obfuscation"
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "加密货币是黑灰产用于混淆资金流向的虚拟资产，充当匿名清洗非法所得的转移媒介。",
-    "description": "在跑分洗钱链条中，加密货币（如USDT、BTC）被用作核心清洗工具。黑产人员将非法人民币资金兑换为加密货币，利用其去中心化和跨境特性，切断资金与原始犯罪的关联。该方式常见于跨境网赌、诈骗回款等场景，因其难以追踪，极大增加了执法机关冻结和追查的难度。",
-    "usageExample": "💰💰高价白资 收加密货币💰💰 04 运作模式跑分洗钱的常见模式与利益分配",
+    "definition": "Cryptocurrency refers to virtual assets used by cybercriminal networks to obscure fund flows, serving as a transfer medium for anonymously laundering illicit proceeds.",
+    "description": "In money laundering and layering schemes, cryptocurrencies such as USDT and BTC are used as core cleansing tools. Criminals convert illegal fiat currency into cryptocurrency, leveraging its decentralized and cross-border nature to sever the connection between the funds and the original crime. This method is commonly seen in cross-border online gambling and fraud repatriation scenarios, significantly complicating efforts by law enforcement to freeze and trace assets due to its inherent anonymity.",
+    "usageExample": "💰💰 High-quality clean funds, accepting cryptocurrency 💰💰 04 Operational model: common methods and profit distribution in layering schemes",
     "relatedRisks": [
       "R0060",
       "R0093",

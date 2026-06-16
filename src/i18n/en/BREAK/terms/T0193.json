@@ -3,13 +3,19 @@
     "title": "Name-Phone-Time Data",
     "keywords": [
       "Name-Phone-Time Data",
-      "Famous Electrician"
+      "name phone time data",
+      "consumer data bundle",
+      "PII with timestamp",
+      "fresh data leads",
+      "real-time PII feed",
+      "data batch with time",
+      "timestamped identity data"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "黑产数据交易中一种包含姓名、手机号与时间字段的标准化数据格式。",
-    "description": "名电时是数据贩子按字段打包出售的基础信息包，通常来源于内鬼泄露、系统拖库或社工库整合。买家按条或按批次下单，用于电诈引流、催收定位或精准营销投放。因含实时时间戳，常被用来判断数据新鲜度和目标活跃窗口，价格随时效波动。",
-    "usageExample": "“名电时每天都在出，有需要的老板请提前下单预定。”",
+    "definition": "A standardized data format in underground data trading that bundles a person's name, phone number, and a timestamp.",
+    "description": "This format is a basic information package sold by data brokers, typically sourced from insider leaks, database dumps, or social engineering databases. Buyers purchase records in bulk or by batch for telecom fraud lead generation, debt collection targeting, or precision marketing campaigns. The inclusion of a real-time timestamp helps assess data freshness and the target's active window, causing prices to fluctuate based on timeliness.",
+    "usageExample": "\"We have fresh name-phone-time records dropping daily. Bosses who need them, please order in advance.\"",
     "relatedRisks": [
       "R0092",
       "R0078",

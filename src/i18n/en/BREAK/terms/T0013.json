@@ -14,9 +14,12 @@
     ],
     "aliases": [],
     "category": "Marketing Fraud",
-    "definition": "An empty parcel, typically sent by merchants engaged in fake order brushing or fraudulent transactions. This package contains no actual goods—it may be an empty box or filled with worthless filler—to fabricate the appearance of shipment and delivery, thereby artificially inflating a store's sales volume and credibility.",
-    "description": "An empty parcel, typically sent by merchants engaged in fake order brushing or fraudulent transactions. This package contains no actual goods—it may be an empty box or filled with worthless filler—to fabricate the appearance of shipment and delivery, thereby artificially inflating a store's sales volume and credibility.",
+    "definition": "A package sent during a fake transaction that contains no actual goods or is filled with irrelevant items.",
+    "description": "Empty packages are a common tactic in fake order brushing and false shipping. Sellers send empty packages to generate a logistics trail, creating the illusion of a completed transaction to fraudulently boost sales rankings and reputation scores. In marketing fraud, empty packages are also used to fabricate delivery records for proxy purchasing schemes, concealing the actual flow of goods. This constitutes direct transactional fraud.",
     "relatedRisks": [
+      "R0004",
+      "R0017",
+      "R0017-001",
       "R0003",
       "R0005",
       "R0070"

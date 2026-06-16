@@ -3,14 +3,21 @@
     "title": "Funds Intercept",
     "keywords": [
       "Funds Intercept",
-      "Buckle Thunder"
+      "dummy data trap",
+      "quality-control mine",
+      "settlement deduction",
+      "planted entry check",
+      "operative verification",
+      "task list audit",
+      "ghost lead"
     ],
     "aliases": [],
     "category": "Telecom Fraud",
-    "definition": "A quality-control measure in underground operations where dummy data, known as \"mines,\" are planted in task lists to detect fraudulent reporting by downline operatives. During settlement, the organizer reviews the list to verify work quality. Deducting these planted entries from the operative's payable count is referred to as \"deducting the mines.\"",
-    "description": "A quality-control measure in underground operations where dummy data, known as \"mines,\" are planted in task lists to detect fraudulent reporting by downline operatives. During settlement, the organizer reviews the list to verify work quality. Deducting these planted entries from the operative's payable count is referred to as \"deducting the mines.\"",
-    "usageExample": "这批量跑完，上头说雷太多，要扣雷结算，等于我们白干三天。",
+    "definition": "The practice by fraud ringleaders of deducting pay for fake data used to monitor or penalize affiliates.",
+    "description": "To verify the authenticity of an affiliate's promotional or click-farming work, a ringleader will insert fictitious monitoring data, known as 'mines,' into the task list. During settlement, if the submitted results are found to contain these invalid entries, the ringleader will deduct the corresponding payment or impose other penalties to ensure affiliates do not fabricate their work.",
+    "usageExample": "After this batch of work, the boss said there were too many mines and is deducting our pay. We basically worked for free for three days.",
     "relatedRisks": [
+      "R0189",
       "R0044",
       "R0032",
       "R0131"

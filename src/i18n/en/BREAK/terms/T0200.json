@@ -3,13 +3,19 @@
     "title": "Vehicle-Under-Name Lookup",
     "keywords": [
       "Vehicle-Under-Name Lookup",
-      "Get Off In Name"
+      "vehicle ownership lookup",
+      "car registration query",
+      "vehicle under name",
+      "DMV data lookup",
+      "registered vehicle search",
+      "auto asset check",
+      "vehicle title lookup"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "黑产提供的一种可查询个人名下全部登记车辆信息的非法数据服务。",
-    "description": "名下车数据通常来自车管所内鬼或系统接口泄露，输出字段包括车牌号、车型、登记日期及车主身份。该服务被用于资产调查、抵押诈骗、车辆追踪或非法催收，能直接暴露目标财产状况。黑产常按页或按次出售，并搭配过户记录、违章处理人等衍生服务，形成完整车务信息链。",
-    "usageExample": "“源头车务 一页 三页 名下车 过户记录 违章处理人 车管所车务 当天回。”",
+    "definition": "An illicit data service that queries all vehicles registered under an individual's name.",
+    "description": "This data is usually sourced from insiders at the vehicle administration or through leaked system interfaces. Output fields include license plate number, vehicle model, registration date, and owner identity. The service is used for asset investigation, collateral fraud, vehicle tracking, or illegal debt collection, directly exposing a target's financial status. Underground operators often sell this data per page or per query, and bundle it with derivative services like transfer history and traffic violation handler records to create a complete vehicle information chain.",
+    "usageExample": "\"Direct-source vehicle records. One page, three pages, vehicles under a name, transfer history, traffic violation handlers. DMV-sourced vehicle records, same-day return.\"",
     "relatedRisks": [
       "R0078",
       "R0089",

@@ -3,13 +3,20 @@
     "title": "Lead Brokering",
     "keywords": [
       "Lead Brokering",
-      "Flying Orders"
+      "lead flipping",
+      "deal brokering",
+      "client handoff",
+      "app resale",
+      "lead resale",
+      "referral churn",
+      "lead pass",
+      "deal forwarding"
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "贷款中介将无法消化的客户转交给其他中介操作，以获取佣金分成。",
-    "description": "当贷款中介发现客户资质无法匹配现有渠道时，会将客户资料转卖给其他有放款渠道的中介。这种行为常导致客户信息被多次倒卖，增加信息泄露风险。转单方无需付出后续劳动即可获得佣金，而客户可能面临更高的服务费或陷入套路贷陷阱。",
-    "usageExample": "这个客户资质太差了，我这边渠道做不了，直接飞单给老李那边，一个号能返现两万。",
+    "definition": "A loan broker passes a client they cannot service to another broker in exchange for a commission split.",
+    "description": "When a broker finds a client's profile doesn't match their available lending channels, they sell the client's information to another broker who can process the loan. This practice leads to repeated reselling of personal data and increases the risk of information leaks. The referring broker earns a commission without further work, while the client may face higher fees or fall into a debt trap.",
+    "usageExample": "This client's profile is too weak for my channels. I'll pass them to Old Li's side; the referral fee is twenty thousand per client.",
     "relatedRisks": [
       "R0096"
     ],

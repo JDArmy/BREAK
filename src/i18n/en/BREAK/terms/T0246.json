@@ -3,13 +3,18 @@
     "title": "Gift Flipping",
     "keywords": [
       "Gift Flipping",
-      "Pour Salute"
+      "gift swapping",
+      "gift cycling",
+      "gift churning",
+      "gift transfer farming",
+      "reward cycling",
+      "virtual gift arbitrage"
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "通过多账号互相转赠虚拟礼物，以骗取平台任务奖励或补贴的欺诈行为。",
-    "description": "操作者利用平台的任务机制或活动漏洞，控制批量账号互相赠送免费或低价获得的礼物。通过制造虚假的活跃交易，这些账号可以迅速达成平台设定的打赏任务，从而套取现金奖励或流量扶持。这种行为严重干扰了平台的数据真实性。",
-    "usageExample": "他们工作室几十台手机在那倒礼，一晚上就能刷出几万块的平台奖励。",
+    "definition": "A fraudulent practice of transferring virtual gifts between multiple accounts to fraudulently obtain platform task rewards or subsidies.",
+    "description": "Operators exploit platform task mechanisms or event loopholes by controlling batches of accounts to send each other free or low-cost gifts. By creating fake active transactions, these accounts quickly meet the platform's gifting task thresholds, thereby cashing out monetary rewards or traffic support. This behavior severely compromises the integrity of platform data.",
+    "usageExample": "Their workshop has dozens of phones running gift flipping operations, racking up tens of thousands in platform rewards overnight.",
     "relatedRisks": [
       "R0094",
       "R0138",

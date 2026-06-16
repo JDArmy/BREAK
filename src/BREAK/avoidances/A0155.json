@@ -6,7 +6,12 @@
     "description": "DID方案：W3C DID标准；链上身份锚点；可验证凭证；选择性披露；自主身份；跨平台互认。",
     "complexity": "高级",
     "limitation": "生态不成熟；用户体验差；监管接受度低",
-    "references": [],
+    "references": [
+      {
+        "title": "Decentralized Identity (DID) Standard",
+        "link": "https://www.w3.org/TR/did-core/"
+      }
+    ],
     "updated": "2026-06-16",
     "keywords": [
       "DID",

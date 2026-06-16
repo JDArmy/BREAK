@@ -3,12 +3,19 @@
     "title": "Slow Track Query",
     "keywords": [
       "Slow Track Query",
-      "Slow Line"
+      "delayed data retrieval",
+      "batch query service",
+      "slow-turnaround lookup",
+      "insider-sourced slow data",
+      "corporate insider channel",
+      "offline data pull",
+      "manual data retrieval",
+      "delayed record lookup"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In illegal data trading, a method used by upstream sources to obtain data, characterized by slow query speeds (one day to several days), with sources possibly being special channels such as corporate insiders.",
-    "description": "In illegal data trading, a method used by upstream sources to obtain data, characterized by slow query speeds (one day to several days), with sources possibly being special channels such as corporate insiders.",
+    "definition": "An illegal channel for data queries that is slow, requiring one to several days for results.",
+    "description": "慢线指依赖特殊关系或人工操作的查档方式，如企业内鬼手动导出数据。虽然时效性差，但可能获取到快线无法覆盖的深层信息，如历史记录或加密档案。慢线常用于非紧急的批量数据倒卖，是黑产长期渗透的隐蔽通道。",
     "relatedRisks": [
       "R0092",
       "R0078",

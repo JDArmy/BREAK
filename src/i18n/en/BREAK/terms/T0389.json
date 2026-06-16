@@ -3,13 +3,18 @@
     "title": "Two IDs, One Card",
     "keywords": [
       "Two IDs, One Card",
-      "Two Certificates and One Card"
+      "dual ID loan",
+      "ID plus license loan",
+      "enhanced fake docs",
+      "license-based fraud",
+      "two-document loan",
+      "ID and license loan"
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "指申请贷款时需提供身份证、驾驶证和银行卡的审核模式，比“一证一卡”多一层身份验证。",
-    "description": "这是车贷欺诈中一种常见的资质要求，黑产中介会为客户伪造驾驶证等全套假证来匹配这一要求。通过增加证件数量，制造资质合规的假象，以骗取金融机构的信任，从而套取更高额度的贷款。",
-    "usageExample": "Two certificates and one card, credit record 5.7 settlement; one certificate and one card, credit record 5 settlement",
+    "definition": "A loan application model requiring an ID card, driver's license, and bank card, adding one more layer of identity verification than the 'One ID, One Card' model.",
+    "description": "This is a common requirement in car loan fraud, where brokers forge a complete set of documents, including a driver's license, to meet the criteria. By increasing the number of documents, they create a false appearance of compliance to gain the financial institution's trust and secure a higher loan amount.",
+    "usageExample": "Two IDs one card, credit record, settle at 5.7; One ID one card, credit record, settle at 5.",
     "relatedRisks": [
       "R0096"
     ],

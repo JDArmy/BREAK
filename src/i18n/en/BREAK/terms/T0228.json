@@ -3,14 +3,22 @@
     "title": "Coupon Farming",
     "keywords": [
       "Coupon Farming",
-      "Luxuriate"
+      "Promo Abuse",
+      "Reward Farming",
+      "Bonus Hunting",
+      "Promo Scalping",
+      "Offer Farming",
+      "Incentive Abuse",
+      "Reward Stacking",
+      "Promo Exploitation"
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "通过参与互联网推广活动获取小额奖励，常被黑灰产规模化操作以牟利。",
-    "description": "黑灰产组织“羊毛党”利用虚假账号、脚本工具批量参与平台拉新、签到、红包等活动，套取现金或优惠券。操作者通过接码平台注册大量账号，配合自动化脚本完成浏览、下单等任务，将小额奖励汇聚成可观收益。这种行为导致平台营销预算被恶意消耗，正常用户福利被挤占，严重时引发平台风控升级。",
-    "usageExample": "啥项目啊，进来就看见撸毛，带我一个。",
+    "definition": "Participating in online promotional campaigns to collect small rewards, often scaled up by black and gray market actors for profit.",
+    "description": "Organized 'wool-pulling' groups use fake accounts and script tools to mass-participate in platform activities such as new-user acquisition, check-ins, and red-envelope events to extract cash or coupons. Operators register large numbers of accounts via SMS verification platforms and use automated scripts to complete tasks like browsing and ordering, aggregating small rewards into substantial gains. This behavior drains platform marketing budgets, deprives legitimate users of benefits, and can force platforms to tighten fraud controls.",
+    "usageExample": "What's the project? Just got here and already seeing wool-pulling, count me in.",
     "relatedRisks": [
+      "R0005",
       "R0009",
       "R0055",
       "R0064",

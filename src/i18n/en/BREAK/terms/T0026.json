@@ -13,12 +13,12 @@
     ],
     "aliases": [],
     "category": "Marketing Fraud",
-    "definition": "Small Shield",
-    "description": "In banking and online payment scenarios, a 'Small Shield' (sometimes also called 'USB Shield,' 'Online Banking Shield,' 'K-Bao,' etc.) is a physical hardware device used to enhance the security of online banking transactions. It is a security medium with built-in encryption algorithms. When users perform online banking transfers, payments, or other sensitive operations, they need to generate a dynamic password or digital signature through the 'Small Shield' device to confirm the legitimacy of the transaction. In e-commerce scenarios, a 'Small Shield' is a protection mechanism that prevents script-based order sniping. When a popular product is released, a security verification mechanism is set up to prevent mass scripted purchases.",
-    "relatedRisks": [
-      "R0005"
+    "definition": "A verification mechanism deployed in e-commerce scenarios to prevent automated scripts from snapping up purchases.",
+    "description": "During flash sales or the release of popular items, fraud rings often deploy automated scripts to conduct bulk purchasing, disrupting normal transaction order. Platforms implement a \"small shield\" as a security checkpoint, requiring users to complete specific verifications to prove they are human operators, thereby blocking automated requests from bots. This mechanism serves as a critical line of defense against marketing fraud and protects the interests of legitimate users.",
+    "relatedRisks": [],
+    "relatedAvoidances": [
+      "A0001"
     ],
-    "relatedAvoidances": [],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "relatedBusinessScenes": [

@@ -6,7 +6,12 @@
     "description": "见R0177第一条及R0161第二条。",
     "complexity": "高级",
     "limitation": "同R0177/R0161",
-    "references": [],
+    "references": [
+      {
+        "title": "Smart Contract Upgrade Patterns",
+        "link": "https://ethereum.org/developers/docs/smart-contracts/"
+      }
+    ],
     "updated": "2026-06-16",
     "keywords": [
       "可升级合约",

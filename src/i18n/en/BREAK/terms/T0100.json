@@ -3,12 +3,18 @@
     "title": "Manual Data Extraction",
     "keywords": [
       "Manual Data Extraction",
-      "Peel By Hand"
+      "manual dialing",
+      "manual calling",
+      "manual outreach",
+      "hand dial",
+      "voice phishing",
+      "vishing call",
+      "manual dial campaign"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "Derived from a term meaning “manual dialing,” this refers to the practice where downstream marketing or fraud rings make phone calls by hand to carry out malicious activities. The term appears in communications between downstream actors and midstream data brokers during illicit data transactions.",
-    "description": "Derived from a term meaning “manual dialing,” this refers to the practice where downstream marketing or fraud rings make phone calls by hand to carry out malicious activities. The term appears in communications between downstream actors and midstream data brokers during illicit data transactions.",
+    "definition": "A downstream fraud tactic in which operators manually dial victims to conduct direct harassment or scams.",
+    "description": "After acquiring personal information through illegal data trading, downstream marketing or fraud groups contact targets one by one via manual dialing. Compared to automated calls, this “manual dialing” approach is more flexible and is often used to carry out high-return targeted scams or aggressive telemarketing. Insiders use this term to evaluate data conversion performance.",
     "relatedRisks": [
       "R0078",
       "R0089",

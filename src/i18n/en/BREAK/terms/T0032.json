@@ -14,8 +14,8 @@
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "AB Loan",
-    "description": "An AB loan is a type of loan fraud, also known as proxy lending, assisted lending, or relationship-based lending. In this scheme, A is the person needing funds but has poor credit and cannot obtain a loan directly. B, who has good credit, is deceived into acting as a guarantor or the primary loan applicant. The loan funds are actually used by A, while B unknowingly becomes the ultimate debtor, bearing the debt and repayment responsibility.",
+    "definition": "A fraudulent loan scheme that exploits individuals with good credit history to act as debt bearers for the actual borrower.",
+    "description": "Fraud rings target person A, who is desperate for cash but has poor credit, and lure them into recruiting person B, who has a clean credit profile, to act as a guarantor or nominal borrower. Intermediaries then fabricate documentation to help B secure a loan. The funds are used by A, but the debt and legal liability fall entirely on B. Ultimately, A and the intermediaries split the loan proceeds and disappear, leaving B saddled with massive debt under unknowing or coerced circumstances, often triggering severe social and financial risks.",
     "relatedRisks": [
       "R0096"
     ],
@@ -28,7 +28,7 @@
     ],
     "references": [
       {
-        "title": "Credit Fraud Risk Situation Report for the First Half of 2024",
+        "title": "2024 H1 Credit Fraud Risk Landscape Report",
         "link": "https://www.threathunter.cn/blog/2024-ab1e8b8c-509b-44e7-9dbe-d7271765ae2c"
       }
     ],

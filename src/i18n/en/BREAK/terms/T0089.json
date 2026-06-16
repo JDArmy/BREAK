@@ -3,12 +3,18 @@
     "title": "Record Lookup",
     "keywords": [
       "Record Lookup",
-      "Check Files"
+      "data lookup service",
+      "PII search",
+      "doxing service",
+      "personal record search",
+      "background check illegal",
+      "info retrieval service",
+      "data broker lookup"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "A service within underground data broker networks where a specified individual's personal records can be retrieved. For example, using just a phone number, the service can return associated identity information such as home addresses, bank account numbers, and registered assets. These services often include data lookups, decryption services, and forced account access.",
-    "description": "A service within underground data broker networks where a specified individual's personal records can be retrieved. For example, using just a phone number, the service can return associated identity information such as home addresses, bank account numbers, and registered assets. These services often include data lookups, decryption services, and forced account access.",
+    "definition": "A service in which underground criminal groups illegally retrieve a target's complete personal dossier using a single piece of information, such as a phone number.",
+    "description": "File retrieval is a core service in underground data trading. Criminals leverage insider access, system vulnerabilities, or previously breached databases to provide clients with detailed personal records. The service covers highly sensitive data, including identity information, bank card numbers, asset holdings, and hotel stay records. Typically charged per query, this service is a critical source of intelligence for downstream crimes such as fraud, extortion, and precision marketing.",
     "relatedRisks": [
       "R0092",
       "R0078",
@@ -31,7 +37,7 @@
     ],
     "references": [
       {
-        "title": "2024 Data Breach Risk Landscape Report",
+        "title": "[Underground Big Data] 2024 Data Breach Risk Landscape Report",
         "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
       }
     ],

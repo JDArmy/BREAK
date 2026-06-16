@@ -3,13 +3,20 @@
     "title": "Fake Mortgage-Free Car",
     "keywords": [
       "Fake Mortgage-Free Car",
-      "Holiday exemption/forced Exemption"
+      "Title Washing",
+      "Lien Avoidance",
+      "Fake Lien Release",
+      "Unrecorded Mortgage",
+      "Auto Loan Fraud",
+      "Title Jumping",
+      "Collateral Stripping",
+      "Vehicle Title Fraud"
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "在车辆抵押登记完成前，黑产勾结车主将按揭车辆过户给第三方以逃避抵押。",
-    "description": "黑产中介利用车辆贷款审批与抵押登记之间的时间差，协助车主在银行放款后、办理抵押前，迅速将车辆过户转卖。这导致金融机构无法落实抵押权，形成坏账。常见于二手车交易市场，中介从中收取高额服务费，而银行面临钱车两空的损失。",
-    "usageExample": "中介说能搞假免抵，让我提车后别去车管所签抵押，直接过户给他找的下家，结果银行追着我要债。",
+    "definition": "Colluding with a vehicle owner to transfer a financed car to a third party before the mortgage registration is completed, thereby evading the lien.",
+    "description": "Fraud rings exploit the time gap between loan disbursement and official vehicle mortgage registration. After the lender releases funds but before the lien is recorded, the intermediary helps the owner quickly transfer the vehicle to another party. This leaves the financial institution unable to enforce its security interest, resulting in a bad debt. Common in the used-car market, intermediaries charge high fees while lenders lose both the car and the money.",
+    "usageExample": "The intermediary said they could do a fake lien release. They told me to skip the vehicle registration office and transfer the car directly to a buyer they found. Now the bank is coming after me for the debt.",
     "relatedRisks": [
       "R0096"
     ],
@@ -22,7 +29,7 @@
     ],
     "references": [
       {
-        "title": "[Black Big Data] Deconstruction of the auto loan fraud industry chain",
+        "title": "Unveiling the Auto Loan Fraud Industrial Chain",
         "link": "https://www.threathunter.cn/blog/8acce28b732"
       }
     ],

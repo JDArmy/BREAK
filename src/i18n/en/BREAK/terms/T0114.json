@@ -3,21 +3,29 @@
     "title": "Friend-Social Lead",
     "keywords": [
       "Friend-Social Lead",
-      "Friend Fish"
+      "friendship grooming",
+      "impersonated friend",
+      "trust exploitation",
+      "social trust scam",
+      "emotional manipulation",
+      "friend impersonation",
+      "relationship scam",
+      "affinity fraud"
     ],
     "aliases": [],
     "category": "Telecom Fraud",
-    "definition": "In fraud operations, a category of targets who are cultivated through feigned friendship or impersonation of a friend to gain trust. This strategy exploits interpersonal relationships and emotional trust to facilitate the scam.",
-    "description": "In fraud operations, a category of targets who are cultivated through feigned friendship or impersonation of a friend to gain trust. This strategy exploits interpersonal relationships and emotional trust to facilitate the scam.",
+    "definition": "An internal term used by fraud rings for targets who are deceived through a fake friendship.",
+    "description": "Fraudsters invest time in long-term chats to build a false friendship, breaking down the victim's psychological defenses. These victims often have strong emotional needs and are easily deceived by excuses such as fake investment opportunities or emergency loans recommended by their 'friend.' By exploiting interpersonal trust, this method is more insidious than direct financial enticement and often leads to significant financial losses.",
     "relatedRisks": [
-      "R0095",
-      "R0150"
+      "R0150",
+      "R0095"
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [
       "AT0053-001"
     ],
     "relatedThreatActors": [
+      "TA0039",
       "TA0015",
       "TA0008"
     ],

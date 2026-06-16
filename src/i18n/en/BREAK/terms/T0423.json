@@ -3,13 +3,19 @@
     "title": "Housing-Credit-Enterprise Combo",
     "keywords": [
       "Housing-Credit-Enterprise Combo",
-      "Real Estate Credit Enterprise"
+      "mortgage-credit-enterprise stacking",
+      "multi-product loan cycling",
+      "sequential loan max-out",
+      "credit exhaustion scheme",
+      "asset-backed fraud layering",
+      "loan stacking attack",
+      "full-spectrum lending fraud"
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "背债骗贷中，按房贷、信贷、企业贷顺序组合操作的欺诈模式。",
-    "description": "这是一种针对同一背债人进行多轮贷款诈骗的固定操作流程。团伙会先利用背债人申请房贷，再以房产为依托申请消费信贷或装修贷，最后将背债人包装成企业主申请企业贷。这种层层递进的组合方式，能在短时间内将背债人的信用价值榨取到极限。",
-    "usageExample": "房信企车，要求纯白户，负债不超过5万，前期费用垫付。",
+    "definition": "A sequential fraud model combining mortgage, credit, and business loans to maximize extraction from a single debt mule.",
+    "description": "This is a fixed operational process for multi-round loan fraud against a single mule. The syndicate first uses the mule to apply for a mortgage, then leverages the property for consumer credit or renovation loans, and finally packages the mule as a business owner for a corporate loan. This layered approach maximizes the mule's credit value in the shortest possible time.",
+    "usageExample": "Mortgage, credit, business, car loans. Looking for credit invisibles with total liabilities under 50,000. Upfront costs covered.",
     "relatedRisks": [
       "R0096"
     ],
@@ -17,8 +23,7 @@
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
+      "BS01"
     ],
     "references": [],
     "updated": "2026-06-16"

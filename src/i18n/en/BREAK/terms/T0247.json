@@ -3,13 +3,19 @@
     "title": "Auto Lottery Farming",
     "keywords": [
       "Auto Lottery Farming",
-      "On-Hook Lottery"
+      "auto-farming bot",
+      "lottery bot",
+      "idle farming",
+      "botting lottery",
+      "auto-enter giveaway",
+      "lottery automation",
+      "sock puppet farming"
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "利用脚本或程序在直播间自动挂机参与抽奖，以批量获取虚拟奖励。",
-    "description": "黑产通过模拟器或多开软件，让成百上千个账号同时进入直播间挂机，自动触发抽奖逻辑。这种方式无需人工干预，即可低成本获取大量礼物或平台福利，是黑产“集团号”矩阵化运营的核心手段之一。",
-    "usageExample": "他那个直播间看着人气高，其实全是挂机抽奖的协议号，没几个真人。",
+    "definition": "The use of scripts or programs to automatically idle in live-streaming rooms and participate in lotteries to collect virtual rewards in bulk.",
+    "description": "Fraud rings use emulators or multi-instance software to have hundreds or thousands of accounts enter live-streaming rooms simultaneously and idle, automatically triggering the lottery logic. This method requires no human intervention and allows for the low-cost acquisition of large quantities of gifts or platform benefits, serving as a core tactic in the matrix operation of bot accounts.",
+    "usageExample": "That streamer's room looks like it has high viewership, but it's actually full of protocol accounts idling for lottery prizes, with very few real people.",
     "relatedRisks": [
       "R0017",
       "R0017-001",

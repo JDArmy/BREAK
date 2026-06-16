@@ -3,13 +3,20 @@
     "title": "Lead Intake",
     "keywords": [
       "Lead Intake",
-      "Acquiring"
+      "lead buying",
+      "app sourcing",
+      "client intake",
+      "lead pooling",
+      "deal sourcing",
+      "referral intake",
+      "app aggregation",
+      "lead procurement"
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "拥有放款渠道的中介从其他中介处收购有贷款需求的客户资源。",
-    "description": "掌握稳定放款渠道的中介，通过发布“收单”信息吸引其他中介提供客户。收单方根据客户资质定价，放款成功后按比例返佣给供单方。这种模式形成了黑产中介间的利益链条，客户信息在流转中不断被转卖，极易被用于二次诈骗。",
-    "usageExample": "橙信收单，签单现返2万，内返6个点，无套路，有单的来。",
+    "definition": "A broker with active lending channels acquires loan-seeking clients from other brokers.",
+    "description": "Brokers with reliable lending channels post 'client acquisition' notices to attract other intermediaries to supply them with applicants. The acquiring broker prices the client based on their credit profile and pays a commission to the referring broker upon successful loan disbursement. This creates an illicit profit chain where client data is repeatedly traded, making it highly susceptible to secondary fraud.",
+    "usageExample": "ChengXin is acquiring clients. Twenty thousand upfront upon signing, plus a six percent internal rebate. No tricks, send your clients over.",
     "relatedRisks": [
       "R0096"
     ],

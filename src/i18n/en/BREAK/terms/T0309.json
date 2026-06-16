@@ -3,13 +3,20 @@
     "title": "Merchant QR Code",
     "keywords": [
       "Merchant QR Code",
-      "Merchant Code"
+      "Business QR",
+      "Enterprise QR",
+      "Commercial QR",
+      "Business Pay Code",
+      "Merchant Payment Code",
+      "Corporate QR",
+      "POS QR",
+      "Business Account QR"
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "商家码是以商户名义开通的收款二维码，具备更高交易额度和稳定性，是黑产清洗资金的重要通道。",
-    "description": "相较于个人码，商家码拥有更高的收款限额和更稳定的通道，能承受更大的资金流水。黑产团伙通过注册虚假商户或收购现有商户的收款码，将其作为核心收款工具。这类通道因交易量大，一旦被用于洗钱，极易引发大规模资金风险，是风控的重点监控对象。",
-    "usageExample": "招车，卡车，聚合码，商家码，一切丝滑通道来对接。",
+    "definition": "A merchant QR code is a collection QR code opened under a business identity, offering higher transaction limits and greater stability, serving as a key channel for cleaning illicit funds.",
+    "description": "Compared to personal codes, merchant codes have higher collection limits and more stable channels, capable of handling larger cash flows. Criminal rings register shell businesses or acquire existing merchants' codes to use as core collection tools. Due to high transaction volumes, these channels can trigger large-scale financial risks once used for money laundering and are a primary target for risk monitoring.",
+    "usageExample": "Recruiting drivers, card runners, aggregated codes, merchant codes—all smooth channels come connect.",
     "relatedRisks": [
       "R0060",
       "R0095",

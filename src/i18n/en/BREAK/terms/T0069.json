@@ -3,12 +3,19 @@
     "title": "Subsidy Recipient Data",
     "keywords": [
       "Subsidy Recipient Data",
-      "Poverty Alleviation Materials"
+      "welfare data",
+      "benefits data",
+      "subsidy list",
+      "aid recipient data",
+      "low-income data",
+      "public assistance data",
+      "relief data",
+      "grant recipient data"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In illicit data trading, personal information or data related to individuals targeted by poverty alleviation programs. After being illegally obtained by underground actors, this data is typically resold to third parties for targeted marketing, fraud, and other illicit activities.",
-    "description": "In illicit data trading, personal information or data related to individuals targeted by poverty alleviation programs. After being illegally obtained by underground actors, this data is typically resold to third parties for targeted marketing, fraud, and other illicit activities.",
+    "definition": "Subsidy data refers to personal information related to recipients of government poverty alleviation programs, traded in illicit data markets.",
+    "description": "This data typically contains detailed identity, address, and subsidy information of low-income individuals, illegally obtained and resold by underground actors. Downstream buyers exploit this data to carry out targeted scams against vulnerable groups with weak awareness, such as impersonating poverty alleviation offices to issue fake subsidies. Due to the high authenticity of the data, such scams have a high success rate and cause severe social harm.",
     "relatedRisks": [
       "R0078",
       "R0089"
@@ -24,7 +31,7 @@
     ],
     "references": [
       {
-        "title": "[Black Market Intelligence] 2024 Data Breach Risk Landscape Report",
+        "title": "[Black Industry Big Data] 2024 Data Breach Risk Landscape Report",
         "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
       }
     ],

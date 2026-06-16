@@ -3,26 +3,35 @@
     "title": "Reverse-Scan Tool",
     "keywords": [
       "Reverse-Scan Tool",
-      "Anti-Sweep Gun"
+      "QR code scam",
+      "payment code fraud",
+      "money laundering POS",
+      "illicit QR scan",
+      "merchant collusion",
+      "payment redirection",
+      "code hijacking"
     ],
     "aliases": [],
     "category": "Telecom Fraud",
-    "definition": "A merchant's counter-scanning device, such as a barcode scanner or POS scanner, used in offline payment scenarios to scan a customer's payment QR code. In telecom fraud, money laundering rings exploit these devices to move illicit funds.",
-    "description": "A merchant's counter-scanning device, such as a barcode scanner or POS scanner, used in offline payment scenarios to scan a customer's payment QR code. In telecom fraud, money laundering rings exploit these devices to move illicit funds.",
-    "usageExample": "“他们让我把付款码发过去，说用店里的扫码枪扫一下就能结账，其实就是拿我的码去洗钱。”",
+    "definition": "Reverse scanning is a money-laundering technique in which a complicit merchant’s barcode scanner or point-of-sale scanning device is used to process fraudulent funds as if they were legitimate consumer payments, enabling rapid fund transfer.",
+    "description": "Money-muling rings typically recruit merchants with physical storefronts. They transmit fraudulently obtained payment codes online to the merchant, who then uses a barcode scanner to ‘reverse scan’ and complete the transaction. Once the funds enter the merchant’s account, they are cycled back to underground-controlled accounts under the guise of payment for goods or top-ups. This method exploits the instant settlement and relatively lax risk controls of offline payment scenarios, allowing dirty money to be laundered quickly. Merchants often become unwitting or incentivized conduits for money laundering.",
+    "usageExample": "“They told me to send over my payment code and said they’d just scan it with the shop’s barcode scanner to settle up. In reality, they were using my code to wash dirty money.”",
     "relatedRisks": [
+      "R0060",
       "R0044",
       "R0032",
       "R0131"
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [
+      "AT0026",
       "AT0064",
       "AT0066",
       "AT0067",
       "AT0053-002"
     ],
     "relatedThreatActors": [
+      "TA0006-003",
       "TA0015",
       "TA0043"
     ],

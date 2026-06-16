@@ -3,13 +3,20 @@
     "title": "Exploit-Based Credit Application",
     "keywords": [
       "Exploit-Based Credit Application",
-      "Smuggling"
+      "credit card loophole",
+      "application exploit",
+      "address jigging",
+      "credit card churning",
+      "application fraud",
+      "policy gap exploit",
+      "credit card stacking",
+      "bypass credit check"
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "In credit fraud, \"smuggling\" refers to the act of exploiting loopholes in banking systems, policy gaps, or other irregular methods to apply for and obtain credit cards or loans.",
-    "description": "In credit fraud, \"smuggling\" refers to the act of exploiting loopholes in banking systems, policy gaps, or other irregular methods to apply for and obtain credit cards or loans.",
-    "usageExample": "最近那个口子风控松了，群里都在发教程教人怎么偷渡，用假地址跨区域申请，下卡率还挺高。",
+    "definition": "The illegal practice of exploiting loopholes in bank risk control or policy differences to bypass standard approval processes and fraudulently obtain credit cards or loans.",
+    "description": "Operators typically study the varying approval strictness across different banks or regions, exploiting system vulnerabilities to submit false information or apply from a different location. Upon a successful 'border crossing,' they quickly max out the credit line and abandon the card, causing direct bad debt losses for the bank. This behavior severely disrupts the financial credit order and is a primary target for anti-fraud departments.",
+    "usageExample": "The risk control on that loan product has been lax lately. The group chats are full of tutorials on how to sneak through, using fake addresses for cross-regional applications, and the approval rate is pretty high.",
     "relatedRisks": [
       "R0096"
     ],

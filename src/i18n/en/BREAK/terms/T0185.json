@@ -3,12 +3,19 @@
     "title": "Name-By-Phone Lookup",
     "keywords": [
       "Name-By-Phone Lookup",
-      "Dianbai"
+      "phone-to-name lookup",
+      "reverse phone lookup",
+      "phone number name match",
+      "caller ID lookup",
+      "phone subscriber name",
+      "phone identity lookup",
+      "phone PII retrieval",
+      "phone-to-name service"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In illicit data trading, a type of record lookup service where providing a phone number guarantees the retrieval of the associated name with 100% accuracy.",
-    "description": "In illicit data trading, a type of record lookup service where providing a phone number guarantees the retrieval of the associated name with 100% accuracy.",
+    "definition": "An illegal data lookup service that provides the real name associated with a phone number.",
+    "description": "In underground data markets, 'Dian Bai' is a type of lookup service where buyers submit a target's phone number, and sellers use internal access or leaked databases to return the corresponding real name. This service is commonly used in telecom fraud for identity verification or precision marketing scams, enabling criminals to quickly identify targets for further fraud or data resale.",
     "relatedRisks": [
       "R0092",
       "R0078",

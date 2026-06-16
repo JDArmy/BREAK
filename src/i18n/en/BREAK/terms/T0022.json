@@ -15,10 +15,11 @@
       "Lock Pill"
     ],
     "category": "Marketing Fraud",
-    "definition": "A homophone for 'order locking.' In e-commerce, when prices drop significantly or coupons are available, fraudsters rapidly place orders without completing payment to hoard inventory, a practice known as order locking.",
-    "description": "A homophone for 'order locking.' In e-commerce, when prices drop significantly or coupons are available, fraudsters rapidly place orders without completing payment to hoard inventory, a practice known as order locking.",
-    "usageExample": "别急着付款，先把低价货全部锁单，等价格涨回去咱们再转手卖订单。",
+    "definition": "A tactic used by fraud rings during major e-commerce sales events in which they place bulk orders programmatically without completing payment to tie up inventory or promotional slots.",
+    "description": "After identifying pricing errors or high-value coupons, fraud rings use automated tools to instantly generate a large volume of pending orders that lock up the available stock. The intent is to hoard goods for resale at a higher price or to hold them for arbitrage, preventing both the merchant from selling normally and other consumers from making purchases.",
+    "usageExample": "Don’t rush to pay—first lock down all the low-priced inventory with orders; once the price rebounds, we can flip the order slots for a profit.",
     "relatedRisks": [
+      "R0014",
       "R0003",
       "R0005",
       "R0070"

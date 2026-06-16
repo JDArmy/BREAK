@@ -3,20 +3,30 @@
     "title": "Leaked Data",
     "keywords": [
       "Leaked Data",
-      "Material"
+      "data dump",
+      "breach data",
+      "leaked PII",
+      "stolen database",
+      "compromised records",
+      "exfiltrated data",
+      "leaked credentials",
+      "data leak"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "Typically refers to sensitive data that has been illegally obtained and may be used for malicious purposes. This data includes, but is not limited to, personal information, corporate data, trade secrets, and user login credentials.",
-    "description": "Typically refers to sensitive data that has been illegally obtained and may be used for malicious purposes. This data includes, but is not limited to, personal information, corporate data, trade secrets, and user login credentials.",
+    "definition": "In the context of the underground industry, broadly refers to various types of sensitive data illegally obtained and used for profit.",
+    "description": "This data encompasses personal information, corporate secrets, login credentials, and more, serving as the foundational resource for online fraud, unauthorized transactions, and marketing scams. Within the underground supply chain, this data is often resold multiple times, processed from raw data into refined, high-value data, and ultimately used by downstream criminal groups for monetization.",
     "relatedRisks": [
       "R0078",
       "R0089"
     ],
     "relatedAvoidances": [],
-    "relatedAttackTools": [],
+    "relatedAttackTools": [
+      "AT0012"
+    ],
     "relatedThreatActors": [
       "TA0005",
+      "TA0020",
       "TA0040"
     ],
     "relatedBusinessScenes": [

@@ -3,19 +3,27 @@
     "title": "QR-to-USDT Settlement",
     "keywords": [
       "QR-to-USDT Settlement",
-      "The Code Is Returned to U/ the Code Is Returned to U"
+      "QR code settlement",
+      "USDT return",
+      "QR-to-crypto",
+      "scan-and-pay laundering",
+      "code-to-U",
+      "payment code recycling",
+      "digital payment washing",
+      "QR settlement cycle"
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "码接回U是黑产利用收款码接收人民币后，再以USDT形式返还资金的洗钱手法。",
-    "description": "此方式结合了二维码支付的便捷性与加密货币的匿名性。黑产通过大量收集来的个人收款码接收非法资金，资金进入账户后，再购买USDT返还给上游。这种模式将资金链路切割为“法币入-虚拟币出”，使得资金追踪在进入虚拟币环节后变得极为困难，常用于电信诈骗的快速分赃。",
-    "usageExample": "Boss, can I pick up U for a small amount of 50-1000 yards?",
+    "definition": "QR-to-Crypto is a laundering technique where criminals use payment QR codes to receive fiat currency and then return the funds in the form of USDT.",
+    "description": "This method combines the convenience of QR code payments with the anonymity of cryptocurrency. Criminals use a large collection of personal payment QR codes to receive illicit funds; once the money enters the account, they purchase USDT to return to the upstream handler. This model splits the fund trail into 'fiat in, crypto out,' making tracking extremely difficult once it enters the virtual currency stage, and is commonly used for rapid profit distribution in telecom fraud.",
+    "usageExample": "Boss, can you do small amounts, 50-1000, QR-to-Crypto?",
     "relatedRisks": [
       "R0121",
       "R0060"
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [
+      "AT0006",
       "AT0060",
       "AT0039"
     ],

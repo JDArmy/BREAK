@@ -14,9 +14,10 @@
     ],
     "aliases": [],
     "category": "Marketing Fraud",
-    "definition": "Placing an order without using any coupons or discounts. This practice typically exploits individual merchant rebate schemes, such as ordering a 200-yuan item with the merchant's address and receiving a 20-yuan kickback.",
-    "description": "Placing an order without using any coupons or discounts. This practice typically exploits individual merchant rebate schemes, such as ordering a 200-yuan item with the merchant's address and receiving a 20-yuan kickback.",
+    "definition": "A task execution method where orders are placed at the original price without using any coupons or discounts.",
+    "description": "'Naked ordering' is common in scenarios where sellers are brushing their own sales volume or in proxy purchasing schemes. Participants place orders at full price, and the merchant later refunds the cost and pays a commission through rebates. This method circumvents platform risk controls that monitor coupon stacking, making the transaction appear more like a genuine purchase and reducing the risk of being flagged as fake.",
     "relatedRisks": [
+      "R0017-001",
       "R0003",
       "R0005",
       "R0070"

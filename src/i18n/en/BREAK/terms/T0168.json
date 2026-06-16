@@ -3,12 +3,19 @@
     "title": "Fuzzy Lookup",
     "keywords": [
       "Fuzzy Lookup",
-      "Demon hunting/lm"
+      "fuzzy matching",
+      "partial match query",
+      "broad search",
+      "wildcard lookup",
+      "SE database query",
+      "fuzzy record pull",
+      "blurred search",
+      "approximate match"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In underground data trading, a fuzzy query method commonly used in social engineering databases to locate and extract specific target information.",
-    "description": "In underground data trading, a fuzzy query method commonly used in social engineering databases to locate and extract specific target information.",
+    "definition": "A query method within social engineering databases that uses scattered clues for fuzzy matching to unearth sensitive information on a specific target.",
+    "description": "Attackers leverage known fragments of a target's information to perform associative searches within underground databases, piecing together a complete profile of their identity, social connections, and finances. This type of query is often used for doxing and the intelligence-gathering phase preceding precision fraud, significantly increasing the success rate of downstream crimes.",
     "relatedRisks": [
       "R0092",
       "R0078",

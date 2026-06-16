@@ -3,13 +3,21 @@
     "title": "Crypto Theft",
     "keywords": [
       "Crypto Theft",
-      "Steal U"
+      "Crypto Drainer",
+      "Wallet Drainer",
+      "USDT Theft",
+      "Crypto Sweeper",
+      "Blockchain Theft",
+      "Seed Phrase Theft",
+      "Crypto Heist",
+      "Wallet Siphoning"
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "盗U指通过非法手段窃取他人加密货币（如USDT）的行为。",
-    "description": "黑灰产常通过钓鱼链接、恶意合约或私钥窃取等方式，获取受害者钱包权限并转走资产。被盗的虚拟货币通常经过混币器或跑分平台进行多层清洗，最终变现。由于区块链交易的匿名性，追回损失极为困难，受害者往往面临直接的经济损失。",
+    "definition": "Crypto theft refers to the illegal acquisition of others' cryptocurrency (such as USDT) through fraudulent means.",
+    "description": "Black-market actors often use phishing links, malicious smart contracts, or private key theft to gain access to victims' wallets and transfer assets. The stolen cryptocurrency is typically laundered through mixers or money-muling platforms before being cashed out. Due to the anonymity of blockchain transactions, recovering losses is extremely difficult, and victims often face direct financial damage.",
     "relatedRisks": [
+      "R0162",
       "R0121",
       "R0060",
       "R0094",

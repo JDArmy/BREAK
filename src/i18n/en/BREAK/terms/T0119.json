@@ -3,13 +3,21 @@
     "title": "Gaming Lead",
     "keywords": [
       "Gaming Lead",
-      "Game Fish"
+      "in-game transaction scam",
+      "gamer target",
+      "virtual item fraud",
+      "game currency scam",
+      "in-game purchase scam",
+      "gamer phishing",
+      "game account theft",
+      "online gaming fraud"
     ],
     "aliases": [],
     "category": "Telecom Fraud",
-    "definition": "A specific target group in scams, referring to online gamers who are deeply engaged in gaming and less cautious about in-game transactions. Scammers exploit game-related content to defraud them.",
-    "description": "A specific target group in scams, referring to online gamers who are deeply engaged in gaming and less cautious about in-game transactions. Scammers exploit game-related content to defraud them.",
+    "definition": "An internal term used by fraud rings for groups primarily targeting online gamers.",
+    "description": "Fraudsters post fake offers for low-cost top-ups, power-leveling services, or equipment trades in game chats or on trading platforms. Once a player takes the bait, they are directed to a phishing site for payment or tricked into giving up their account credentials. By exploiting players' focus on in-game assets, this type of transaction fraud has a very high incidence rate among young people.",
     "relatedRisks": [
+      "R0010",
       "R0095",
       "R0150",
       "R0084",
@@ -22,6 +30,7 @@
       "AT0071"
     ],
     "relatedThreatActors": [
+      "TA0026",
       "TA0015",
       "TA0008",
       "TA0043"

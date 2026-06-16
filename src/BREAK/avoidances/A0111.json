@@ -6,7 +6,12 @@
     "description": "确保固件更新来源可信且不可被降级攻击。措施包括：更新包使用厂商私钥签名，设备验证签名后才安装；使用版本号单调递增机制，拒绝安装低于当前版本的固件；在不可篡改存储区记录已安装的最低安全版本号；更新过程使用加密通道（TLS），防止中间人攻击；失败时自动回退到上一个可用版本而非进入不可用状态。NHTSA关于车联网固件的指导强调了这些措施的重要性。",
     "complexity": "中级",
     "limitation": "版本单调递增限制了灵活性，紧急回退到旧版本困难；回滚保护实施不当可能导致设备无法恢复；需要可靠的时间源防止时间回滚攻击",
-    "references": [],
+    "references": [
+      {
+        "title": "The Importance of Secure Firmware Updates",
+        "link": "https://www.researchgate.net/publication/384687421_The_Importance_of_Secure_Firmware_Updates_in_Maintaining_System_Integrity"
+      }
+    ],
     "updated": "2026-06-16",
     "keywords": [
       "签名验证",

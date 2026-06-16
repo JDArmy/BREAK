@@ -3,19 +3,32 @@
     "title": "Risk Control Bypass",
     "keywords": [
       "Risk Control Bypass",
-      "Break the Sky"
+      "risk engine bypass",
+      "limit increase exploit",
+      "verification crack",
+      "control circumvention",
+      "payment barrier break",
+      "anti-fraud evasion",
+      "system override"
     ],
     "aliases": [],
     "category": "Telecom Fraud",
-    "definition": "The act of using various technical methods to bypass or crack a system's risk-control mechanisms. This allows fraudsters to conduct illegal activities without restrictions, such as increasing payment limits or bypassing identity verification.",
-    "description": "The act of using various technical methods to bypass or crack a system's risk-control mechanisms. This allows fraudsters to conduct illegal activities without restrictions, such as increasing payment limits or bypassing identity verification.",
-    "usageExample": "这套新系统风控太严，之前的脚本不行了，技术组正在研究新的破空方案。",
+    "definition": "A technical method used by fraudsters to breach a platform's risk-control system.",
+    "description": "Bypassing security is a core part of fraud operations. Attackers use scripts, device-fingerprint spoofing tools, and proxy IPs to circumvent a platform's device fingerprinting, behavioral analysis, and other risk-control rules. A successful bypass allows fraudsters to mass-register accounts, claim promotional rewards, or conduct credential-stuffing attacks, paving the way for downstream scams and traffic manipulation.",
+    "usageExample": "The new system's risk control is too tight, and our old scripts are useless. The tech team is working on a new bypass solution.",
     "relatedRisks": [
+      "R0030-001",
+      "R0032-001",
       "R0095",
       "R0032"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0021"
+    ],
     "relatedAttackTools": [
+      "AT0007",
+      "AT0003",
+      "AT0042",
       "AT0064"
     ],
     "relatedThreatActors": [

@@ -2,7 +2,15 @@
   "T0219": {
     "title": "CVV",
     "keywords": [
-      "CVV"
+      "CVV",
+      "信用卡盗刷",
+      "盗刷料",
+      "银行卡信息",
+      "CVV料",
+      "CVV料站",
+      "CVV卡",
+      "卡料",
+      "CVV通道"
     ],
     "aliases": [],
     "category": "业务欺诈",
@@ -11,6 +19,7 @@
     "usageExample": "出一批新鲜CVV，全球可挑，走担保。",
     "relatedRisks": [
       "R0094",
+      "R0043-001",
       "R0138",
       "R0121"
     ],

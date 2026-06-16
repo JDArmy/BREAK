@@ -3,13 +3,20 @@
     "title": "Database Deduping",
     "keywords": [
       "Database Deduping",
-      "Pass Warehouse"
+      "deduplication",
+      "freshness check",
+      "data cleansing",
+      "deduped base",
+      "cross-reference filter",
+      "duplicate removal",
+      "new data filter",
+      "fresh base"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In underground data trading, the practice of comparing newly provided data against an existing illicit personal information database to filter out duplicates or historical records, ensuring freshness.",
-    "description": "In underground data trading, the practice of comparing newly provided data against an existing illicit personal information database to filter out duplicates or historical records, ensuring freshness.",
-    "usageExample": "\"Direct data intake, mixed gender, over 25, 15 per record, deduped against the library. Data handover at midnight, payment by 8 PM next day. Capable operators, look here.\"",
+    "definition": "The process of cross-referencing illegally obtained personal data against existing databases to deduplicate and filter out fresh, usable records.",
+    "description": "Operators maintain a massive historical database; newly acquired data must first be 'run through the database' to weed out expired, duplicate, or repeatedly resold records. Data that has been cleaned is referred to as 'fresh stock' and commands a higher price on the market, destined for use in precision scams or targeted marketing.",
+    "usageExample": "\"New batch of material just in, already run through the database, all pure first-hand and unused. Anyone interested, step up.\"",
     "relatedRisks": [
       "R0078",
       "R0089",

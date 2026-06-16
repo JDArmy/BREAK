@@ -3,13 +3,19 @@
     "title": "Limit-Breaking QR",
     "keywords": [
       "Limit-Breaking QR",
-      "Broken Code"
+      "limit bypass QR",
+      "threshold breaker code",
+      "limit override scan",
+      "ceiling breaker QR",
+      "limit crack code",
+      "bypass scan",
+      "limit evasion code"
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "跑分洗钱中能突破支付平台单笔或单日限额的收款二维码，专门用于绕过风控进行高密度转账。",
-    "description": "平台通常对收款码设有限额，破额码就是黑产通过技术手段或账号养成的“超限”码，能在短时间内连续接收远超正常阈值的资金。跑分团伙用它来应对大额赃款拆分需求，把一笔巨款拆成多笔快速入账，降低被拦截的概率。长期使用破额码会加速账户被冻结或封禁，但它在抢时间洗钱的场景里几乎是刚需。",
-    "usageExample": "5000-50000 breaking code is still in business.",
+    "definition": "A payment QR code used in money laundering that can bypass single-transaction or daily limits imposed by payment platforms, specifically designed to circumvent risk controls for high-density transfers.",
+    "description": "Platforms typically set limits on payment codes; limit-breaking codes are “over-limit” codes created by fraud rings through technical manipulation or account nurturing, capable of receiving funds far exceeding normal thresholds in a short time. Money-muling crews use them to handle the splitting of large illicit sums, breaking a single large amount into multiple rapid entries to reduce the chance of interception. Long-term use accelerates account freezes or bans, but these codes are virtually indispensable in time-sensitive laundering scenarios.",
+    "usageExample": "5,000–50,000 limit-breaking codes continuously operating.",
     "relatedRisks": [
       "R0060",
       "R0093",

@@ -6,7 +6,12 @@
     "description": "简单合约更容易审计和验证。设计原则：单一职责，每个合约只做一件事；模块化设计，通过接口组合功能；使用经过审计的库（OpenZeppelin）而非自己实现；避免过度优化导致代码难以理解；保持函数简短，逻辑清晰；充分的代码注释和文档。Kaia和Dotsquares最佳实践强调简单性是安全的基础。",
     "complexity": "基础",
     "limitation": "模块化增加合约间交互复杂度；多合约调用增加Gas成本；接口变更可能导致兼容性问题；过度拆分反而难以维护",
-    "references": [],
+    "references": [
+      {
+        "title": "Best Practices for Smart Contract Security",
+        "link": "https://docs.kaia.io/build/best-practices/smart-contract-security-best-practices/"
+      }
+    ],
     "updated": "2026-06-16",
     "keywords": [
       "模块化",

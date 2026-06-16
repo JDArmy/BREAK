@@ -3,12 +3,19 @@
     "title": "Guaranteed Real, Not Guaranteed Complete",
     "keywords": [
       "Guaranteed Real, Not Guaranteed Complete",
-      "Fidelity But Not Leakage"
+      "as-is data sale",
+      "no-completeness guarantee",
+      "partial record dump",
+      "verified but incomplete",
+      "data authenticity waiver",
+      "black market data disclaimer",
+      "hit-or-miss lookup",
+      "selective disclosure"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In illicit data trading, a transaction term used by illegal data lookup services to guarantee the authenticity of the data while disclaiming any responsibility for its completeness. It serves as a liability waiver for the seller.",
-    "description": "In illicit data trading, a transaction term used by illegal data lookup services to guarantee the authenticity of the data while disclaiming any responsibility for its completeness. It serves as a liability waiver for the seller.",
+    "definition": "A disclaimer in illegal data trading where the seller guarantees the authenticity of the data but not the completeness of all fields.",
+    "description": "When selling personal information, underground data brokers often use 'guaranteed authentic, not guaranteed complete' as a sales pitch. This means core items like names and ID numbers are verified as real, but fields such as addresses or contact details may be missing or outdated. This clause lowers buyer expectations and reduces disputes over incomplete data, effectively serving as a liability shield for the seller's unstable supply chain or resold data.",
     "relatedRisks": [
       "R0092",
       "R0078",

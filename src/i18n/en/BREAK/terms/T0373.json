@@ -3,13 +3,20 @@
     "title": "Loan Fishing",
     "keywords": [
       "Loan Fishing",
-      "Touch Porcelain"
+      "credit fishing",
+      "application farming",
+      "shotgun application",
+      "credit inquiry spam",
+      "speculative application",
+      "approval probing",
+      "app spamming",
+      "blind app"
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "征信资质较差的用户抱着侥幸心理尝试申请贷款或信用卡。",
-    "description": "申请人明知自身征信存在逾期、查询过多等问题，仍向审核较严的银行或机构提交申请，期望风控系统出现漏洞。这种行为常被黑产中介利用，组织群体性“碰瓷”以测试银行风控的薄弱环节。一旦成功，便可能引发大批量欺诈申请。",
-    "usageExample": "我征信有点花，上个月碰瓷了两家银行都被秒拒，看来得养养征信再试。",
+    "definition": "An applicant with poor credit knowingly attempts to apply for a loan or credit card from a strict lender, hoping for a system loophole.",
+    "description": "Applicants who are aware of their bad credit history, including defaults or excessive inquiries, still submit applications to banks with stringent approval processes, hoping the risk control system will fail. Fraud rings often organize mass 'probing' attempts to identify weak points in a bank's defenses. A single success can trigger a wave of fraudulent applications.",
+    "usageExample": "My credit is a bit rough. I tried my luck with two banks last month and got rejected instantly. Guess I need to clean up my credit first.",
     "relatedRisks": [
       "R0096"
     ],

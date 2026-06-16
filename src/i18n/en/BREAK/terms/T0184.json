@@ -3,13 +3,20 @@
     "title": "Spouse Lookup",
     "keywords": [
       "Spouse Lookup",
-      "Interface po/library Po"
+      "spouse data query",
+      "marital status lookup",
+      "spouse name lookup",
+      "partner information retrieval",
+      "spouse ID number",
+      "marriage record lookup",
+      "spouse API exploit",
+      "spouse database query"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In illicit data trading, “po” stands for spouse. “API po” refers to obtaining a target’s spouse information by exploiting API vulnerabilities; “database po” refers to querying spouse data from social engineering databases.",
-    "description": "In illicit data trading, the term “po” is shorthand for spouse. “API po” describes the method of acquiring a target’s marital partner information through exploiting security flaws in application programming interfaces. “Database po” refers to retrieving spouse-related data from a social engineering or doxing database.",
-    "usageExample": "“Nationwide text-based spouse records with divorce/marriage status, includes both parties’ frequently used numbers, with dates, instant delivery.”",
+    "definition": "An illicit service for querying a target's spouse information through API vulnerabilities or social engineering databases.",
+    "description": "Black market actors refer to spouse information as 'po' and obtain it through two main methods: real-time querying via system API vulnerabilities, or retrieval from previously leaked social engineering databases. Acquiring spouse information is commonly used to aid fraud, blackmail, or to complete a target's social relationship map.",
+    "usageExample": "\"National text-based 'po' with marriage/divorce status, bonus: both parties' frequently used phone numbers, with dates, instant delivery.\"",
     "relatedRisks": [
       "R0092",
       "R0078",

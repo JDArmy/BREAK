@@ -3,12 +3,19 @@
     "title": "Overnight Data",
     "keywords": [
       "Overnight Data",
-      "Overnight Food"
+      "delayed data release",
+      "data embargo",
+      "data holdback",
+      "stale data",
+      "data aging",
+      "delayed breach sale",
+      "data warehousing",
+      "data time delay"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "After a data breach, some attackers may not immediately sell freshly obtained data on underground markets to mitigate risk. Instead, they delay the transaction until the following day or a later period; such data is referred to as 'overnight material.' The risks and losses from overnight data breaches may only surface after a delay, making timely prevention and remediation difficult.",
-    "description": "After a data breach, some attackers may not immediately sell freshly obtained data on underground markets to mitigate risk. Instead, they delay the transaction until the following day or a later period; such data is referred to as 'overnight material.' The risks and losses from overnight data breaches may only surface after a delay, making timely prevention and remediation difficult.",
+    "definition": "Aged data refers to data that attackers deliberately delay selling for a period after exfiltrating it, in illicit data trading.",
+    "description": "To evade risk tracking or wait for the heat to die down, attackers hoard freshly stolen data for a while before releasing it onto the black market. This delayed transaction severely lags the discovery of and response to the data breach, causing victims to suffer ongoing losses often without their knowledge. Aged data is frequently used for highly targeted scams and is favored by underground actors for its strong stealth.",
     "relatedRisks": [
       "R0078",
       "R0089"

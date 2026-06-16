@@ -14,18 +14,20 @@
     ],
     "aliases": [],
     "category": "Marketing Fraud",
-    "definition": "SMS verification code reception, the act of obtaining another person's mobile phone verification code through specialized platforms or techniques for malicious purposes such as unauthorized account registration or identity verification bypass. A 'code-receiving number' refers to a grey-market or bonus-abusing user leveraging a code-receiving platform to bulk-register or log into accounts using black-market SIM cards, thereby exploiting platform or mini-program promotional rewards.",
-    "description": "SMS verification code reception, the act of obtaining another person's mobile phone verification code through specialized platforms or techniques for malicious purposes such as unauthorized account registration or identity verification bypass. A 'code-receiving number' refers to a grey-market or bonus-abusing user leveraging a code-receiving platform to bulk-register or log into accounts using black-market SIM cards, thereby exploiting platform or mini-program promotional rewards.",
+    "definition": "The practice of obtaining SMS verification codes via specialized platforms to register accounts in bulk or bypass identity verification.",
+    "description": "SMS code reception is a core component of bulk account creation. SIM card suppliers use devices like modem pools to control numerous black-market SIM cards, and code-receiving platforms automatically forward verification codes to participants. These verified accounts are then used to exploit new-user promotions, participate in prize draws, or conduct fake transactions, severely undermining platform marketing rules. This activity is directly linked to the infringement of personal information and the broader cybercrime supply chain.",
     "relatedRisks": [
       "R0030",
       "R0030-001",
       "R0030-005"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0007-001"
+    ],
     "relatedAttackTools": [
       "AT0006",
-      "AT0004",
-      "AT0001-002"
+      "AT0001-002",
+      "AT0004"
     ],
     "relatedThreatActors": [
       "TA0003",

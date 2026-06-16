@@ -3,13 +3,20 @@
     "title": "Account Seller",
     "keywords": [
       "Account Seller",
-      "Account Dealer"
+      "Account Farmer",
+      "Account Factory",
+      "Bulk Account Vendor",
+      "Account Generation",
+      "Account Stockpile",
+      "Account Marketplace",
+      "Credential Vendor",
+      "Profile Seller"
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "号商指专门批量注册、养号并贩卖各类社交平台账号的黑灰产从业者。",
-    "description": "号商拥有完整的账号生产链条，从接码平台获取验证码到模拟真人养号，最终将账号分级出售。下游买家利用这些账号进行刷量、引流、诈骗或水军活动。号商是黑灰产的基础资源供给方，支撑了大量网络欺诈行为。",
-    "usageExample": "Source first-hand dealer",
+    "definition": "Account dealers are underground industry operators who specialize in the bulk registration, nurturing, and sale of social media platform accounts.",
+    "description": "Account dealers manage a complete account production chain, from obtaining verification codes via SMS relay platforms to simulating genuine user behavior for account warming, and finally selling graded accounts to downstream buyers. These buyers use the accounts for engagement farming, traffic redirection, fraud, or astroturfing campaigns. Account dealers form the foundational supply chain of the underground industry, underpinning a wide range of online fraudulent activities.",
+    "usageExample": "Direct source, first-hand account dealer.",
     "relatedRisks": [
       "R0011",
       "R0030",

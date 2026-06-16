@@ -13,11 +13,13 @@
     ],
     "aliases": [],
     "category": "Marketing Fraud",
-    "definition": "Refers to 'loss-free cashout,' the process by which coupon farmers or fraud rings successfully convert fraudulently obtained platform coupons or gift cards into cash. This typically involves exploiting loopholes or using secondary marketplaces to liquidate vouchers, red packets, or gift cards at low or zero cost, a term frequently seen in couponing groups and forums.",
-    "description": "Refers to 'loss-free cashout,' the process by which coupon farmers or fraud rings successfully convert fraudulently obtained platform coupons or gift cards into cash. This typically involves exploiting loopholes or using secondary marketplaces to liquidate vouchers, red packets, or gift cards at low or zero cost, a term frequently seen in couponing groups and forums.",
-    "usageExample": "这次活动有漏洞，领了券找指定渠道无损套，100块券到手95。",
+    "definition": "A scheme in which fraud rings exploit platform rule loopholes to convert vouchers or red packets into cash at near-zero cost.",
+    "description": "Through fictitious transactions, self-dealing, or collusion with merchants, fraud rings turn platform-issued coupons and shopping subsidies into real money. The operation requires no actual logistics or relies solely on empty-package shipping services, directly draining platform marketing funds and causing substantial financial losses to the platform.",
+    "usageExample": "There’s a loophole in this campaign—grab the vouchers and cash them out through a designated channel with almost no loss, turning a 100-yuan voucher into 95 in hand.",
     "relatedRisks": [
       "R0017",
+      "R0017-002",
+      "R0055",
       "R0003",
       "R0005",
       "R0070"
@@ -25,6 +27,7 @@
     "relatedAvoidances": [],
     "relatedAttackTools": [],
     "relatedThreatActors": [
+      "TA0001",
       "TA0002"
     ],
     "relatedBusinessScenes": [

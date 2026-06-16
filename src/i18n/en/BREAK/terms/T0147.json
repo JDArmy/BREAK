@@ -3,13 +3,19 @@
     "title": "Card Deduction",
     "keywords": [
       "Card Deduction",
-      "Buckle"
+      "card-not-present debit",
+      "SMS verification theft",
+      "account number payment",
+      "ID-based deduction",
+      "phone verification drain",
+      "non-card transaction",
+      "bank detail exploit"
     ],
     "aliases": [],
     "category": "Telecom Fraud",
-    "definition": "A card-not-present debit method that allows a transaction to be completed using only the cardholder's bank account number, name, ID number, phone number, and SMS verification code.",
-    "description": "A card-not-present debit method that allows a transaction to be completed using only the cardholder's bank account number, name, ID number, phone number, and SMS verification code.",
-    "usageExample": "他点了个链接填了信息，卡扣就发生了，卡里钱被分三笔转走，银行发来短信才知道。",
+    "definition": "An unauthorized payment method that bypasses the need for a physical card, requiring only account details and a verification code.",
+    "description": "Once a cardholder's number, name, ID, phone number, and SMS verification code are compromised, fraudsters can initiate a card-not-present transaction, circumventing the physical card and its PIN. This technique is common in the fund-draining phase following information theft via phishing sites or trojans. The transfer is swift, and victims often only realize something is wrong upon receiving a debit notification.",
+    "usageExample": "He clicked a link and filled in his details, and then a card-not-present fraud happened. The money was drained in three transactions; he only knew when the bank's text alerts came through.",
     "relatedRisks": [
       "R0095",
       "R0150",

@@ -3,12 +3,18 @@
     "title": "Full Association Lookup",
     "keywords": [
       "Full Association Lookup",
-      "Big Correlation"
+      "deep association query",
+      "full social graph",
+      "relationship mapping",
+      "co-traveler lookup",
+      "co-residence lookup",
+      "multi-dimension association",
+      "comprehensive link analysis"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "黑产查档中一种深度关联查询服务，可输出目标人物的同住、同机构、同婚姻、同乘机、同出入境等多维度关联关系。",
-    "description": "大关联通过打通多源数据，将目标人物的社会关系网完整还原，常用于追债、背景调查或情报挖掘。操作方式包括内鬼批量导出、系统撞库或跨部门数据拼凑，输出结果包含关联人姓名、身份证号及关系类型。该服务风险极高，易引发连锁隐私泄露和下游犯罪升级。",
+    "definition": "An in-depth, illicit correlation query service that reveals a target's multi-dimensional relationships, such as cohabitants, institutional affiliations, marital ties, and shared travel or border-crossing records.",
+    "description": "This service reconstructs a target's full social network by correlating data from multiple sources, and is commonly used for debt recovery, background checks, or intelligence gathering. Methods include bulk data export by insiders, system credential stuffing, or cross-departmental data aggregation. The output includes related individuals' names, national ID numbers, and relationship types. This service carries extreme risk and can easily trigger cascading privacy breaches and downstream criminal escalation.",
     "relatedRisks": [
       "R0092",
       "R0078",

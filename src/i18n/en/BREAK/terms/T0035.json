@@ -14,9 +14,9 @@
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "An informal service or guarantee offered within the credit intermediary ecosystem, promising to resolve specific error codes that prevent loan disbursement. When a financial institution's system flags a transaction and blocks funding, these intermediaries claim they can provide the necessary fix or override code to force the loan through.",
-    "description": "An informal service or guarantee offered within the credit intermediary ecosystem, promising to resolve specific error codes that prevent loan disbursement. When a financial institution's system flags a transaction and blocks funding, these intermediaries claim they can provide the necessary fix or override code to force the loan through.",
-    "usageExample": "我这单子银行提示代码E018拒了，找了个中介说包解，收费20个点，不知道是不是真的能解开。",
+    "definition": "A service offered by credit intermediaries claiming to resolve loan disbursement failures caused by specific error codes.",
+    "description": "When a financial institution’s system returns a risk-control error code that blocks loan disbursement, some intermediaries sell a fix service. They exploit internal loopholes, forge documents, or collude with insiders to override the restriction and force the disbursement. This practice usually involves high service fees and significantly increases the risk of subsequent loan fraud.",
+    "usageExample": "My application got rejected with error code E018. I found an agent who guarantees a fix for a 20% cut—not sure if they can really clear it.",
     "relatedRisks": [
       "R0096"
     ],

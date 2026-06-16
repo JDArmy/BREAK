@@ -6,7 +6,12 @@
     "description": "区块链确权：NFT记录所有权；元数据存储IPFS；交易历史公开；智能合约管理转移；防止双花；跨平台互操作标准。",
     "complexity": "中级",
     "limitation": "依赖区块链可用性；跨链资产复杂；中心化平台控制仍存在",
-    "references": [],
+    "references": [
+      {
+        "title": "NFT and Virtual Asset Ownership",
+        "link": "https://ethereum.org/"
+      }
+    ],
     "updated": "2026-06-16",
     "keywords": [
       "NFT",

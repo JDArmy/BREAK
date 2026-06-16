@@ -3,12 +3,18 @@
     "title": "Loan Farming",
     "keywords": [
       "Loan Farming",
-      "Loan"
+      "Loan Stacking",
+      "Bulk Application",
+      "Loan Harvesting",
+      "Application Fraud",
+      "Loan Default",
+      "No Intent to Repay",
+      "Loan Abuse"
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "A fraudulent practice involving the frequent application and use of microloans or online lending products with no intention of repayment. This typically involves fabricating personal information, income certificates, and employment records to obtain loan funds through deception and then evading repayment.",
-    "description": "A fraudulent practice involving the frequent application and use of microloans or online lending products with no intention of repayment. This typically involves fabricating personal information, income certificates, and employment records to obtain loan funds through deception and then evading repayment.",
+    "definition": "Loan harvesting refers to the fraudulent practice of applying for small online loans in bulk using fabricated credentials with no intention of repayment.",
+    "description": "Fraudsters use synthetic or stolen identities, forged income proofs, and fake employment records to apply for loans across multiple platforms simultaneously. Once the funds are disbursed, they immediately sever contact and default, leaving financial institutions with bad debt. This tactic often targets small, fast-approval cash loan products with weak risk controls and is a classic form of loan fraud.",
     "relatedRisks": [
       "R0096"
     ],
@@ -16,8 +22,7 @@
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
+      "BS01"
     ],
     "references": [],
     "updated": "2026-06-16"

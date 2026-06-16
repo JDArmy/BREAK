@@ -3,12 +3,18 @@
     "title": "Client Buyout",
     "keywords": [
       "Client Buyout",
-      "Buyout"
+      "one-time payout",
+      "full asset purchase",
+      "account buyout",
+      "card buyout",
+      "lifetime buy",
+      "permanent card purchase",
+      "no-recourse buy"
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "黑产向中介一次性支付费用，买断客户或银行卡的后续操作权与收益。",
-    "description": "在信贷欺诈中，黑产通过支付一笔固定费用，从中介手中买断客户资源，后续贷款申请、套现等操作全部由黑产独立完成，中介不再参与分润。在洗钱场景下，买断指一次性购买银行卡，不再归还持卡人，用于长期接收、转移非法资金，直至卡片被风控或冻结。这种模式切断了资金追溯链条，增加了追踪难度。",
+    "definition": "A one-time payment made by fraud operators to intermediaries to acquire exclusive control over a customer or bank account and all subsequent proceeds.",
+    "description": "In loan fraud, fraud operators pay a fixed fee to intermediaries to buy out customer profiles, after which the operators independently handle loan applications, cash-outs, and other operations without sharing profits with the intermediary. In money laundering, this refers to purchasing a bank card outright without returning it to the original holder, using it to receive and move illicit funds until the card is flagged or frozen. This model breaks the traceability chain and complicates tracking.",
     "relatedRisks": [
       "R0096"
     ],

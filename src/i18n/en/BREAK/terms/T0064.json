@@ -3,16 +3,23 @@
     "title": "Debt Relief Scam",
     "keywords": [
       "Debt Relief Scam",
-      "Debt Optimization"
+      "debt consolidation scam",
+      "debt relief agent",
+      "debt negotiation fraud",
+      "debt settlement scam",
+      "debt restructuring fraud",
+      "counter-collection",
+      "debt fixer",
+      "debt adjustment scam"
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "Originally a standard financial term for restructuring debt, lowering costs, extending repayment periods, or consolidating debts to ease repayment pressure, it is used here specifically to describe malicious exploitation by underground actors who offer illicit post-loan services such as counter-collection, negotiating repayment plans, mortgage deferrals, and account suspensions for profit.",
-    "description": "These agent-based schemes often involve fabricating false reasons, submitting fraudulent documents, and launching malicious complaints against financial institutions.",
-    "usageExample": "中介收了他一万块做债务优化，其实就是帮他伪造了假的困难证明去跟银行谈，最后银行报警，他的卡全被冻结了。",
+    "definition": "An illicit agency service that fraudulently profits under the guise of debt optimization, using methods like document forgery and malicious complaints.",
+    "description": "Under the pretext of 'legal aid,' fraud rings offer agency services for debt relief, such as stopping interest accrual or negotiating installment plans. They pressure financial institutions by forging documents like poverty certificates or hospital records, and even instigate clients to default maliciously. This operation not only defrauds clients of high service fees but also exposes financial institutions to compliance risks, undermining the normal credit order.",
+    "usageExample": "He paid a broker ten thousand for debt optimization, which just meant the broker forged fake hardship documents to negotiate with the bank. In the end, the bank called the police, and all his accounts were frozen.",
     "relatedRisks": [
-      "R0096",
-      "R0096-001"
+      "R0096-001",
+      "R0096"
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [],
@@ -24,7 +31,7 @@
     ],
     "references": [
       {
-        "title": "Exposing the Underground Industry Behind Illegal \"Agent Rights Protection\" in the Financial Sector",
+        "title": "[Credit Fraud] Exposing the Illicit 'Agent Advocacy' Industry Behind Financial Sector Disputes",
         "link": "https://www.threathunter.cn/blog/e78513e348b"
       }
     ],

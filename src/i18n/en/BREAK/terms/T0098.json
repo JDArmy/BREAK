@@ -3,13 +3,20 @@
     "title": "Forced Account Login",
     "keywords": [
       "Forced Account Login",
-      "Strong"
+      "forced login",
+      "account takeover",
+      "forced access",
+      "ATO",
+      "unauthorized login",
+      "forced session",
+      "credential hijack"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "A term used in underground data markets to describe the forced unauthorized access to a user’s platform account through sophisticated techniques. Attackers extract sensitive information such as specific order details and then supply that data to downstream buyers. In midstream data sales, advertisements are often tagged with “forced login” to signal the data’s origin.",
-    "description": "A term used in underground data markets to describe the forced unauthorized access to a user’s platform account through sophisticated techniques. Attackers extract sensitive information such as specific order details and then supply that data to downstream buyers. In midstream data sales, advertisements are often tagged with “forced login” to signal the data’s origin.",
+    "definition": "The act of forcibly logging into user accounts using technical means to steal internal sensitive information.",
+    "description": "Attackers exploit vulnerabilities or use credential-stuffing techniques to breach platform defenses and forcibly access user account backends, stealing order details, addresses, and other private data. This high-value information is then packaged and sold to downstream fraud or marketing groups. In data-trading advertisements, the term “forced login” is often used to indicate the data’s source and freshness.",
     "relatedRisks": [
+      "R0032-001",
       "R0092",
       "R0078",
       "R0089",
@@ -17,6 +24,7 @@
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [
+      "AT0042",
       "AT0012",
       "AT0064"
     ],
@@ -30,7 +38,7 @@
     ],
     "references": [
       {
-        "title": "[Underground Data Insights] 2024 Data Breach Risk Landscape Report",
+        "title": "[Black Big Data] 2024 Data Breach Risk Situation Report",
         "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
       }
     ],

@@ -3,12 +3,19 @@
     "title": "Waybill Data",
     "keywords": [
       "Waybill Data",
-      "Face Sheet"
+      "shipping labels",
+      "courier records",
+      "package data",
+      "delivery intel",
+      "parcel details",
+      "shipping manifest",
+      "logistics leak",
+      "consignee PII"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "Refers to courier waybills, which are documents used in the shipping industry to record sender and recipient information, as well as product weight, price, and other related details. Once illegally obtained by underground actors, this data is typically resold to third parties for targeted marketing, fraud, and other illegal activities.",
-    "description": "Refers to courier waybills, which are documents used in the shipping industry to record sender and recipient information, as well as product weight, price, and other related details. Once illegally obtained by underground actors, this data is typically resold to third parties for targeted marketing, fraud, and other illegal activities.",
+    "definition": "In illicit data trading, refers to leaked detailed records from express delivery logistics.",
+    "description": "These records contain the recipient's name, phone number, address, and purchased item details, serving as a crucial information source for targeted marketing and fraud within the underground economy. This data is typically leaked by insiders at courier companies or through system vulnerabilities, sold in bulk by data brokers, and used for brushing, telecom fraud, or selling counterfeit goods.",
     "relatedRisks": [
       "R0078",
       "R0089"

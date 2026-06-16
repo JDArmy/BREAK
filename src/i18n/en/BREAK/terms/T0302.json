@@ -3,22 +3,31 @@
     "title": "Identity Provider",
     "keywords": [
       "Identity Provider",
-      "Head"
+      "Identity Mule",
+      "Straw Person",
+      "Nominee Identity",
+      "ID Mule",
+      "Rented Identity",
+      "Fake Identity Provider",
+      "Shell Identity",
+      "Identity Leaser"
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "人头是向黑产出租或出卖自己身份信息和账户的个人。",
-    "description": "人头为赚取佣金，主动或被动地将身份证、银行卡、支付账户等提供给跑分团伙使用，用于注册商户、接收赃款或充当法人。他们往往不清楚资金的具体来源和去向，但一旦涉案，作为账户持有人将首先面临法律制裁。",
-    "usageExample": "Head roll: 4u, get in the car.",
+    "definition": "An individual who rents or sells their own identity information and accounts to underground operations for profit.",
+    "description": "To earn a commission, these individuals actively or passively provide their ID cards, bank cards, and payment accounts to money laundering crews for registering merchant accounts, receiving illicit funds, or acting as a figurehead. They are often unaware of the specific source and destination of the funds, but once the account is implicated in a case, they, as the account holder, will be the first to face legal sanctions.",
+    "usageExample": "Commission for account providers: 4 USDT, come on board.",
     "relatedRisks": [
       "R0060",
       "R0093"
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [
+      "AT0039",
       "AT0026"
     ],
     "relatedThreatActors": [
+      "TA0005-001",
       "TA0006-003",
       "TA0014"
     ],

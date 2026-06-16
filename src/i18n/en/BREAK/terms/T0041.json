@@ -3,15 +3,21 @@
     "title": "Fake Provident Fund",
     "keywords": [
       "Fake Provident Fund",
-      "Provident Fund Forgery",
-      "Provident Fund Packaging"
+      "Housing Fund Forgery",
+      "Fake Housing Fund",
+      "Provident Fund App",
+      "Fund Data Fabrication",
+      "Fund Packaging",
+      "Fake Employment Record",
+      "Fund Loan Fraud",
+      "Fund Contribution Fraud"
     ],
     "aliases": [
       "Provident Fund Forgery"
     ],
     "category": "Credit Fraud",
-    "definition": "Refers to the fraudulent fabrication of housing provident fund data in a fake mobile app or the creation of fictitious employment relationships to help clients make supplementary housing fund contributions, ultimately aimed at defrauding consumer loans, payroll loans, and other personal credit products from banks and financial institutions.",
-    "description": "Refers to the fraudulent fabrication of housing provident fund data in a fake mobile app or the creation of fictitious employment relationships to help clients make supplementary housing fund contributions, ultimately aimed at defrauding consumer loans, payroll loans, and other personal credit products from banks and financial institutions.",
+    "definition": "The practice of fabricating housing provident fund (HPF) contribution records—either by forging data or creating fictitious employment relationships—to fraudulently qualify for personal credit products offered by financial institutions.",
+    "description": "Fraud rings use technical means to spoof HPF app data or arrange backdated contributions through shell employment, enabling applicants to pass bank eligibility checks for consumer loans and salary-based loans. This tactic specifically targets credit products that rely on HPF data for risk assessment, allowing unqualified individuals to extract large sums. Once the fraud succeeds, the lender faces a direct bad-debt loss.",
     "relatedRisks": [
       "R0146",
       "R0096"
@@ -24,7 +30,7 @@
     ],
     "references": [
       {
-        "title": "Analysis of Housing Provident Fund Forgery Loan Fraud Techniques",
+        "title": "Analysis of Loan Fraud Using Forged Housing Provident Fund Records",
         "link": "https://www.threathunter.cn/blog/a6c71ff0534"
       }
     ],

@@ -3,16 +3,25 @@
     "title": "Private Invite-Only Group",
     "keywords": [
       "Private Invite-Only Group",
-      "Private Domain Group"
+      "invite-only channel",
+      "closed group",
+      "private channel",
+      "vetted group",
+      "exclusive circle",
+      "private chat",
+      "closed community",
+      "invite-only room"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In underground data trading, a non-public group chat that typically requires an invitation link or admin approval to join, blocking entry by outsiders.",
-    "description": "In underground data trading, a non-public group chat that typically requires an invitation link or admin approval to join, blocking entry by outsiders.",
+    "definition": "Non-public groups used by underground actors for trading or communication, accessible only by invitation or vetting.",
+    "description": "These groups serve as the core venues for illegal data trading and technical exchanges within the black market, using strict access controls to evade platform risk management and law enforcement monitoring. Members are typically repeat customers or vetted newcomers, and the traded goods include citizens' personal information, complete sets of bank card details, and other contraband.",
     "relatedRisks": [
       "R0078"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0019-002"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0005",
@@ -25,7 +34,7 @@
     ],
     "references": [
       {
-        "title": "2024 Data Breach Risk Landscape Report",
+        "title": "[Black Market Big Data] 2024 Data Breach Risk Landscape Report",
         "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
       }
     ],

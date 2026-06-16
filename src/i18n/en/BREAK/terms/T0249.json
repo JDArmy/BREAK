@@ -3,15 +3,22 @@
     "title": "Gift Farming",
     "keywords": [
       "Gift Farming",
-      "Collect Gifts"
+      "gift harvesting",
+      "gift botting",
+      "lottery farming",
+      "virtual gift extraction",
+      "gift reward abuse",
+      "promo gift abuse",
+      "gift point farming"
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "利用平台抽奖或活动机制，批量获取虚拟礼物并变现的套利行为。",
-    "description": "黑灰产通过注册大量账号，使用脚本或外挂自动参与直播抽奖、完成平台任务，低成本甚至零成本获取高价值虚拟礼物。这些礼物随后通过礼物回流渠道低价出售给主播或公会，主播再以正常价格从平台提现，差价即为套利所得。该操作严重消耗平台营销资源，破坏经济系统平衡。",
+    "definition": "An arbitrage scheme that exploits platform lottery or promotional mechanisms to obtain virtual gifts in bulk and convert them into cash.",
+    "description": "Fraud rings register large numbers of accounts and use scripts or automated tools to participate in live-streaming lotteries and complete platform tasks, acquiring high-value virtual gifts at low or zero cost. These gifts are then sold at a discount to streamers or agencies through gift-recycling channels. The streamers subsequently cash out the gifts at their full platform value, with the price difference serving as the arbitrage profit. This practice drains platform marketing resources and severely disrupts the balance of the in-app economy.",
     "relatedRisks": [
-      "R0034",
       "R0005",
+      "R0009",
+      "R0034",
       "R0094",
       "R0138",
       "R0121"
@@ -24,6 +31,7 @@
       "AT0039"
     ],
     "relatedThreatActors": [
+      "TA0001",
       "TA0006",
       "TA0039",
       "TA0014"

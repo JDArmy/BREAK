@@ -3,14 +3,25 @@
     "title": "Forced Account Takeover",
     "keywords": [
       "Forced Account Takeover",
-      "Strong"
+      "account hijacking",
+      "credential stuffing",
+      "session hijacking",
+      "ATO",
+      "unauthorized access",
+      "account compromise",
+      "credential takeover",
+      "forced login"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In underground data trading, the act of forcibly logging into a user account through technical means to extract private information.",
-    "description": "In underground data trading, the act of forcibly logging into a user account through technical means to extract private information.",
-    "usageExample": "\"Forced login data — anyone who's sourced it knows. Straight from the source. Hit me up to talk price.\"",
+    "definition": "A black-hat technique of forcibly logging into a user's online account without their knowledge through credential stuffing, vulnerability exploitation, or trojans.",
+    "description": "Attackers leverage compromised username-password combinations or system flaws to bypass standard authentication and take over accounts, stealing account balances, personal data, and social connections. It is frequently used to hijack social media accounts for downstream fraud or to directly transfer assets from e-commerce and financial accounts.",
+    "usageExample": "\"Just forcefully logged a batch of accounts last night, some still have balances in them. Come pick through them quick if you want in.\"",
     "relatedRisks": [
+      "R0032",
+      "R0032-001",
+      "R0083-001",
+      "R0088",
       "R0092",
       "R0078",
       "R0089",
@@ -18,6 +29,7 @@
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [
+      "AT0042",
       "AT0012",
       "AT0064"
     ],
@@ -33,7 +45,7 @@
     ],
     "references": [
       {
-        "title": "2024 Data Breach Risk Landscape Report",
+        "title": "[Black Market Big Data] 2024 Data Breach Risk Landscape Report",
         "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
       }
     ],

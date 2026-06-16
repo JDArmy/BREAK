@@ -3,12 +3,19 @@
     "title": "A/B Lead Diversion",
     "keywords": [
       "A/B Lead Diversion",
-      "Sow and Reap"
+      "Sock Puppet Network",
+      "Burner Account Diversion",
+      "Decoy Account",
+      "Proxy Account Scheme",
+      "Lead Gen Array",
+      "Funnel Account",
+      "Dual-Account Funnel",
+      "Decoy and Switch"
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "一种规避平台风控的运营策略，由A账号负责吸引流量，B账号负责接收和转化。",
-    "description": "A账号通过发布优质或诱饵内容进入平台流量池，积累大量粉丝。为避免大号因直接导流而被封禁，所有引流动作均由B账号（小号）完成，B号在评论区、私信等位置发布联系方式或链接。即使B号被封，A号也能安然无恙，可持续为新的B号输血，实现长期欺诈运营。",
+    "definition": "A risk-mitigation operating model where Account A attracts traffic and Account B receives and converts it, shielding the main asset from platform enforcement.",
+    "description": "Account A enters the platform's traffic pool by posting high-quality or bait content to amass a large following. To avoid a ban for direct traffic diversion, all such actions are performed by Account B (a burner account). Account B posts contact information or links in comments and direct messages. Even if Account B is banned, Account A remains safe and can continuously supply new Account Bs, enabling long-term fraudulent operations.",
     "relatedRisks": [
       "R0024",
       "R0007-003"

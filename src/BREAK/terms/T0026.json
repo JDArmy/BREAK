@@ -2,16 +2,24 @@
   "T0026": {
     "title": "小盾",
     "keywords": [
-      "小盾"
+      "小盾",
+      "滑块",
+      "验证码",
+      "图形验证",
+      "行为验证",
+      "人机验证",
+      "反脚本",
+      "抢购验证",
+      "防刷"
     ],
     "aliases": [],
     "category": "营销欺诈",
     "definition": "电商场景中为防止自动化脚本抢单而设置的验证机制。",
     "description": "在热门商品发布或秒杀活动中，黑灰产常利用脚本进行批量抢购，破坏正常交易秩序。平台为此设置“小盾”作为安全认证环节，要求用户完成特定验证以证明是真人操作，以此阻断机器脚本的自动化请求。这种机制是平台对抗营销欺诈、保护普通用户权益的关键防线。",
-    "relatedRisks": [
-      "R0005"
+    "relatedRisks": [],
+    "relatedAvoidances": [
+      "A0001"
     ],
-    "relatedAvoidances": [],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "relatedBusinessScenes": [

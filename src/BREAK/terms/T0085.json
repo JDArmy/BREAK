@@ -2,7 +2,14 @@
   "T0085": {
     "title": "外料",
     "keywords": [
-      "外料"
+      "外料",
+      "CVV",
+      "境外卡",
+      "四件套",
+      "卡料",
+      "信用卡数据",
+      "外卡",
+      "境外料"
     ],
     "aliases": [],
     "category": "数据泄露",
@@ -16,6 +23,7 @@
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [
+      "AT0039",
       "AT0012",
       "AT0064"
     ],

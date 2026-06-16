@@ -3,13 +3,20 @@
     "title": "First-Hand Source Panel",
     "keywords": [
       "First-Hand Source Panel",
-      "One Hand Straight Deal"
+      "Source Fund Controller",
+      "Direct Panel",
+      "Whale Panel",
+      "Source Money Launderer",
+      "Core Settlement Layer",
+      "Primary Fund Source",
+      "Panel Operator",
+      "Source Channel"
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "一手直盘是直接掌控诈骗资金来源与核心收款通道的上游黑产操盘者，拥有稳定的非法资金池。",
-    "description": "作为洗钱产业链的头部，一手直盘掌握着最源头的非法资金，如赌博、诈骗等赃款。他们直接控制着大量用于收款的银行卡、支付账户或虚拟币地址，能提供“一手”的洗钱通道。下游的跑分团队或洗钱中介需要对接他们，以获取稳定的“料”进行清洗。",
-    "usageExample": "一手直盘找合作，菠菜料，常规精料混料都有，通道稳定。",
+    "definition": "A first-hand direct source is an upstream operator who directly controls the origin of illicit funds and core collection channels, maintaining a stable pool of dirty money.",
+    "description": "Sitting at the top of the money-laundering chain, a first-hand direct source holds the most upstream illegal funds, such as proceeds from gambling or fraud. They directly control a large number of bank accounts, payment accounts, or crypto addresses used for collection, offering a direct laundering channel. Downstream running crews or money brokers must connect with them to obtain a stable supply of material for washing.",
+    "usageExample": "First-hand direct source looking for partners, gambling material, regular clean mix and blended material all available, channels are stable.",
     "relatedRisks": [
       "R0060",
       "R0093"
@@ -19,6 +26,8 @@
       "AT0026"
     ],
     "relatedThreatActors": [
+      "TA0005",
+      "TA0015-001",
       "TA0006-003",
       "TA0014",
       "TA0015"

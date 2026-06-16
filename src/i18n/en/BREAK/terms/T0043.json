@@ -3,13 +3,19 @@
     "title": "Credit Blacklist",
     "keywords": [
       "Credit Blacklist",
-      "Kuroto"
+      "Blacklisted Borrower",
+      "Loan Default",
+      "Credit Impairment",
+      "Adverse Credit History",
+      "Blacklisted Account",
+      "Credit Denial",
+      "Credit Ban"
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "Typically refers to individuals with adverse credit histories who have been blacklisted by banks. These individuals may have been blacklisted by financial institutions due to loan defaults, breaches of contract, or other negative credit behaviors, meaning they can hardly obtain loans or credit cards through legitimate channels. Accounts belonging to blacklisted individuals are sometimes used by underground actors for money laundering, transferring illicit proceeds through these accounts to obscure the illegal source of funds. Fraud rings may also use the personal information of blacklisted individuals to attempt credential stuffing attacks across different financial institutions, testing whether this information can be used to successfully apply for loans or credit products.",
-    "description": "Typically refers to individuals with adverse credit histories who have been blacklisted by banks. These individuals may have been blacklisted by financial institutions due to loan defaults, breaches of contract, or other negative credit behaviors, meaning they can hardly obtain loans or credit cards through legitimate channels. Accounts belonging to blacklisted individuals are sometimes used by underground actors for money laundering, transferring illicit proceeds through these accounts to obscure the illegal source of funds. Fraud rings may also use the personal information of blacklisted individuals to attempt credential stuffing attacks across different financial institutions, testing whether this information can be used to successfully apply for loans or credit products.",
-    "usageExample": "他那身份都成黑户了，正规路子走不通，只能拿来跑分用。",
+    "definition": "A person blacklisted by financial institutions due to severe adverse credit history, rendering them ineligible for any legitimate loan channel.",
+    "description": "These individuals typically have records of delinquency or default. Because fund flows through their accounts are hard to trace, their identities and accounts are frequently purchased or rented by fraud rings as money-laundering conduits. Rings also use blacklisted individuals’ personal information to conduct credential-stuffing attacks across multiple platforms, testing whether they can fraudulently apply for loans or credit products in the victim’s name. If successful, all resulting debt and liability fall on the original identity holder.",
+    "usageExample": "That identity is completely blacklisted now—no legitimate path works. It can only be used for running money.",
     "relatedRisks": [
       "R0096"
     ],

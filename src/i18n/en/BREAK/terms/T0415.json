@@ -3,13 +3,20 @@
     "title": "Loan Bro",
     "keywords": [
       "Loan Bro",
-      "Brother"
+      "professional non-payer",
+      "intentional defaulter",
+      "serial loan abuser",
+      "debt evasion community",
+      "malicious borrower",
+      "never-pay mindset",
+      "deliberate delinquency",
+      "bad-faith applicant"
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "黑产中指借钱后恶意不还的职业骗贷人。",
-    "description": "这类人抱着“借到就是赚到”的心态，专门寻找风控宽松的网贷平台进行欺诈。他们活跃于各类社群，交流如何规避催收、拖延还款，甚至分享哪些平台容易下款。其行为直接导致平台坏账率攀升，是反欺诈系统重点识别对象。",
-    "usageExample": "老哥们，在线客服申请停催，好不容易转人工说申请停催，人工也不搭理，一直不回复，咋回事。有没有停催过的老哥教教咋说？",
+    "definition": "In black-market fraud, a professional loan fraudster who maliciously defaults after borrowing.",
+    "description": "Operating with a 'borrowing is earning' mentality, these individuals specifically target online lending platforms with lax risk controls. They are active in various communities, sharing tips on evading debt collection, delaying repayment, and identifying which platforms are easiest to borrow from. Their actions directly cause platform default rates to soar, making them a primary target for anti-fraud systems.",
+    "usageExample": "Guys, I applied for a collection suspension via online customer service, finally got transferred to a human to request it, but the agent ignored me and stopped replying. What's going on? Has anyone who got a suspension teach me what to say?",
     "relatedRisks": [
       "R0096"
     ],
@@ -17,8 +24,7 @@
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
+      "BS01"
     ],
     "references": [],
     "updated": "2026-06-16"

@@ -3,12 +3,19 @@
     "title": "Transaction Limit",
     "keywords": [
       "Transaction Limit",
-      "Goose Limit"
+      "single transaction cap",
+      "daily payment ceiling",
+      "per-transfer limit",
+      "account velocity limit",
+      "payment cap evasion",
+      "channel limit bypass",
+      "split transaction",
+      "limit monitoring"
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "在洗钱场景中，限鹅是“限额”的谐音，指支付账户或交易二维码的单笔或单日交易金额上限。",
-    "description": "黑产人员在跑分转账时需时刻关注账户的“限鹅”，避免因超出限额导致交易失败或触发风控。不同支付通道和账户类型的限额差异很大，团伙内部会专门安排“维护”人员监控限额变动。一旦账户被限额，需立即切换新账户或调整拆单策略，否则会导致资金链路中断，影响洗钱效率。",
+    "definition": "In money laundering operations, limit-goose is a homophonic slang term for limit, referring to the single-transaction or daily transaction cap on payment accounts or transaction QR codes.",
+    "description": "Criminal operators conducting money-mule transfers must constantly monitor account limit-geese to avoid transaction failures or triggering risk controls due to exceeding caps. Limits vary significantly across different payment channels and account types, and dedicated maintenance personnel within the syndicate are assigned to track limit changes. Once an account hits its limit, a new account must be switched in immediately or order-splitting strategies adjusted; otherwise, the fund chain will be disrupted, impacting laundering efficiency.",
     "relatedRisks": [
       "R0060",
       "R0093",

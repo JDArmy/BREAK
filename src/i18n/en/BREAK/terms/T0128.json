@@ -2,13 +2,20 @@
   "T0128": {
     "title": "Pig Feed",
     "keywords": [
-      "Pig Feed"
+      "Pig Feed",
+      "scam script",
+      "chat playbook",
+      "lure script",
+      "fraud scenario",
+      "social engineering kit",
+      "scripted dialogue",
+      "pretext scenario"
     ],
     "aliases": [],
     "category": "Telecom Fraud",
-    "definition": "Pre-scripted dialogues or scripts used to lure victims into scams.",
-    "description": "Pre-scripted dialogues or scripts used to lure victims into scams.",
-    "usageExample": "这套猪饲料是针对离异女性的，开场白要用情感共鸣的话题切入。",
+    "definition": "Pre-scripted dialogue templates and supporting materials carefully crafted by fraud rings to gain victims’ trust and induce them to transfer money.",
+    "description": "“Pig feed” serves as standardized tooling for the fraud process, containing complete conversation templates that cover everything from initial greetings and persona building to emotional escalation and the introduction of investment topics. The content includes daily greetings, emotional stories, flaunting-wealth photos, and even fake profit screenshots. Operators simply follow the script to efficiently “feed” targets and steer them step by step into the trap.",
+    "usageExample": "This set of pig feed is tailored for divorced women; the opening lines need to hook them through emotional resonance.",
     "relatedRisks": [
       "R0150"
     ],

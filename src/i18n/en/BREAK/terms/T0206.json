@@ -3,18 +3,26 @@
     "title": "Risk-Control Data",
     "keywords": [
       "Risk-Control Data",
-      "Risk Control Materials"
+      "Credit scoring data",
+      "User profiling",
+      "Financial profiling",
+      "Creditworthiness data",
+      "Borrower risk data",
+      "Loan applicant data",
+      "Underwriting data"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "指从金融平台风控系统泄露的、经过初步分析标记的用户数据集合。",
-    "description": "这些数据通常包含用户的信用评级、消费习惯、风险标签等敏感信息，多由内部人员或第三方服务商泄露。黑产利用这些精准画像，进行定制化的营销欺诈、贷款诈骗等非法活动。因其针对性强，诈骗成功率远高于盲打。",
-    "usageExample": "\"Issuing real-time borrowing materials, risk-controlled materials, quantity, first-hand guarantee, and excellent prices.\"",
+    "definition": "A collection of user data leaked from financial platform risk-control systems, containing preliminary analysis and risk tags.",
+    "description": "This data often includes sensitive information such as credit ratings, spending habits, and risk labels, leaked by insiders or third-party service providers. Underground actors use these precise profiles for customized marketing fraud, loan scams, and other illegal activities. Its targeted nature leads to a much higher scam success rate compared to random attacks.",
+    "usageExample": "\"Selling real-time IOU data, risk-control data, high volume, guaranteed first-hand source, good price.\"",
     "relatedRisks": [
       "R0078",
       "R0089"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0029-001"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0005",

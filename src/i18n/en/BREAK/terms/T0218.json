@@ -3,14 +3,24 @@
     "title": "Refund Harvesting",
     "keywords": [
       "Refund Harvesting",
-      "Withdraw"
+      "refund abuse",
+      "return harvesting",
+      "refund fraud",
+      "rebate harvesting",
+      "subsidy refund",
+      "refund scam",
+      "return fraud",
+      "refund siphoning"
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "采退是黑灰产以套取补贴或返点为目的，先大量采购商品再集中退货的欺诈行为。",
-    "description": "操作者通常利用平台的新人优惠、满减补贴或推广佣金政策，批量下单后触发退货流程，从而套取差价或返利。在电商大促期间尤为活跃，通过虚假交易制造虚假销量，扰乱平台风控体系。该行为不仅造成商家资损，还可能导致正常用户被误伤。",
-    "usageExample": "这波活动可以采退，先下单拿补贴，后面再统一退掉。",
-    "relatedRisks": [],
+    "definition": "Purchase-and-return fraud is a scheme where fraudsters buy products in bulk and then return them en masse to exploit subsidies or rebates.",
+    "description": "Operators typically take advantage of new-user promotions, discount subsidies, or commission policies on platforms. They place bulk orders and then trigger the return process to pocket the price difference or rebates. This activity is especially rampant during major e-commerce sales events, creating fake transactions that distort sales data and undermine platform risk control systems. The practice not only causes financial losses for merchants but may also lead to false flags against legitimate users.",
+    "usageExample": "We can run purchase-and-return on this promotion—place orders to get the subsidies first, then return everything later.",
+    "relatedRisks": [
+      "R0054",
+      "R0054-001"
+    ],
     "relatedAvoidances": [],
     "relatedAttackTools": [],
     "relatedThreatActors": [],

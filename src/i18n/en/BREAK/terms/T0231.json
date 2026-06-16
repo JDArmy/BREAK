@@ -3,13 +3,19 @@
     "title": "Fake Ordering",
     "keywords": [
       "Fake Ordering",
-      "Brushing Orders"
+      "brushing orders",
+      "fake reviews",
+      "fake sales",
+      "order padding",
+      "review padding",
+      "sales manipulation",
+      "e-commerce manipulation"
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "通过伪造订单、评价等虚假交易数据，欺骗平台算法和消费者以获取不正当曝光。",
-    "description": "黑灰产组织商家或刷手，利用自买自卖、发空包等方式制造虚假销量和好评，提升店铺权重。操作者通过社交群组招募买手，模拟真实购物流程，完成下单、付款、收货全链路。这种行为扭曲市场公平竞争，导致消费者被误导，平台信誉受损，严重时触发法律风险。",
-    "usageExample": "电商平台刷单220一单，是兄弟就来找我，稳定结算。",
+    "definition": "Fabricating orders, reviews, and other fake transaction data to deceive platform algorithms and consumers for unfair exposure.",
+    "description": "Black and gray market actors organize merchants or click-farm workers to create fake sales and positive reviews through self-buying, self-selling, and shipping empty packages. Operators recruit buyers through social groups to simulate real shopping processes, completing the full chain of ordering, payment, and receipt. This distorts fair market competition, misleads consumers, damages platform credibility, and can trigger legal risks in severe cases.",
+    "usageExample": "E-commerce platform fake orders at 220 per order, come to me if you're a bro, stable settlements.",
     "relatedRisks": [
       "R0017-001",
       "R0017",

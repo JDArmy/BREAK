@@ -3,16 +3,23 @@
     "title": "Phishing",
     "keywords": [
       "Phishing",
-      "Fishing"
+      "luring victim",
+      "deceptive bait",
+      "fake investment lure",
+      "impersonation bait",
+      "prize notification scam",
+      "taking the hook",
+      "casting net",
+      "social engineering lure"
     ],
     "aliases": [],
     "category": "Telecom Fraud",
-    "definition": "In telecom fraud, the process of luring a victim into a scam by using deceptive tactics such as fake investment opportunities, prize notifications, or impersonating acquaintances in urgent need of funds. Scammers continuously cast 'bait' until the victim takes the hook, providing personal information or transferring money.",
-    "description": "In telecom fraud, the process of luring a victim into a scam by using deceptive tactics such as fake investment opportunities, prize notifications, or impersonating acquaintances in urgent need of funds. Scammers continuously cast 'bait' until the victim takes the hook, providing personal information or transferring money.",
+    "definition": "In fraud operations, the process of luring a victim step by step using deceptive information.",
+    "description": "Fraud rings use fabricated investment opportunities, fake prize notifications, or impersonation of acquaintances to continuously deliver bait messages, gradually building the victim's trust. Once the victim takes the bait, they are manipulated into disclosing sensitive personal information or transferring money directly. This tactic serves as the common front-end stage of various telecom and online fraud schemes, often followed by specific scams such as 'cashing out the fish.'",
     "relatedRisks": [
+      "R0084",
       "R0095",
       "R0150",
-      "R0084",
       "R0131"
     ],
     "relatedAvoidances": [],

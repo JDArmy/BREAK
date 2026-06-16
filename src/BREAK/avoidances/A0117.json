@@ -6,7 +6,12 @@
     "description": "对已部署设备进行持续安全审计。实施方法：部署网络扫描工具（如Nmap、Nessus）定期探测设备，尝试常见默认凭据登录；建立设备资产清单，记录每台设备的凭据状态；发现使用默认凭据的设备立即告警并通知管理员；通过设备管理平台（如MDM）远程推送密码修改命令；对无法远程修复的设备降低网络权限或隔离；建立可视化仪表板，展示网络中默认凭据风险分布。研究显示40%以上的xIoT设备存在默认凭据风险。",
     "complexity": "中级",
     "limitation": "扫描可能被误认为攻击行为；无法检测所有设备类型和凭据组合；远程修复依赖设备管理接口；扫描本身可能暴露凭据尝试日志；对不支持远程管理的设备无效",
-    "references": [],
+    "references": [
+      {
+        "title": "Security Issues of IoT: Securing Your IoT Device in 2024",
+        "link": "https://deviceauthority.com/security-issues-of-iot-securing-your-iot-device-in-2024/"
+      }
+    ],
     "updated": "2026-06-16",
     "keywords": [
       "安全扫描",

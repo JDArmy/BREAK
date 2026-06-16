@@ -2,7 +2,15 @@
   "T0229": {
     "title": "秒死",
     "keywords": [
-      "秒死"
+      "秒死",
+      "封号",
+      "秒封",
+      "登录秒死",
+      "账号秒死",
+      "风控封号",
+      "秒冻结",
+      "秒限制",
+      "登录封"
     ],
     "aliases": [],
     "category": "业务欺诈",
@@ -17,7 +25,9 @@
       "R0030-001",
       "R0032"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0020-003"
+    ],
     "relatedAttackTools": [
       "AT0044",
       "AT0009",

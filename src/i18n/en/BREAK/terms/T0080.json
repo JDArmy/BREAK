@@ -3,18 +3,27 @@
     "title": "Domestic Fullz",
     "keywords": [
       "Domestic Fullz",
-      "Inner Material"
+      "CVV fullz",
+      "cardholder data",
+      "bank card intel",
+      "full card details",
+      "card PII",
+      "account takeover data",
+      "carding fullz",
+      "cardholder profiles"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "Refers to the four key pieces of domestic card information: bank card number, password, cardholder's ID number, and registered phone number (also known as CVV fullz). This data contains citizens' personal information and is typically resold to third parties for targeted marketing, fraud, and other illegal activities.",
-    "description": "Refers to the four key pieces of domestic card information: bank card number, password, cardholder's ID number, and registered phone number (also known as CVV fullz). This data contains citizens' personal information and is typically resold to third parties for targeted marketing, fraud, and other illegal activities.",
+    "definition": "In illicit data trading, refers to the four core pieces of information for a domestic bank card: the card number, password, cardholder's ID number, and linked mobile phone number.",
+    "description": "These four pieces of data are critical for conducting unauthorized transactions, money laundering, and account takeovers, typically obtained through phishing sites, trojans, or system vulnerabilities. Underground groups use them to directly transfer funds or register fake accounts for money laundering through transaction splitting, posing a direct threat to personal financial security.",
     "relatedRisks": [
       "R0078",
       "R0089"
     ],
     "relatedAvoidances": [],
-    "relatedAttackTools": [],
+    "relatedAttackTools": [
+      "AT0039"
+    ],
     "relatedThreatActors": [
       "TA0005",
       "TA0040"

@@ -3,13 +3,20 @@
     "title": "Forced Loan Activation",
     "keywords": [
       "Forced Loan Activation",
-      "Forced By Force"
+      "Unauthorized Loan Origination",
+      "Coerced Lending",
+      "Account Takeover Lending",
+      "Identity Theft Loan",
+      "Forced Credit Line",
+      "Involuntary Debt",
+      "Ghost Loan",
+      "Loan Activation Fraud"
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "以不正当手段强制开通贷款服务，通常伴随盗取客户信息或虚假扣款。",
-    "description": "黑产人员利用掌握的客户资料，在客户不知情或未授权的情况下，强行为其开通贷款产品并扣取手续费或利息。操作者常通过技术手段绕过风控审核，或利用内部渠道批量操作。该行为直接导致受害人背负不明债务，资金受损且难以追索。",
-    "usageExample": "他们搞了一批料子，直接暴力强开，下款就扣砍头息，客户收到催收电话才知道自己被贷款了。",
+    "definition": "Forcibly activating a loan service through illicit means, often involving theft of customer data or unauthorized deductions.",
+    "description": "Fraudsters use stolen or leaked personal information to activate loan products on behalf of victims without their knowledge or consent, then deduct fees or interest upfront. Operators typically bypass risk controls using technical exploits or insider access to process applications in bulk. This practice leaves victims with unexpected debt and limited recourse for recovery.",
+    "usageExample": "They got hold of a batch of personal data and forcibly opened loans on them. The victims only found out they were in debt when collection calls started coming in.",
     "relatedRisks": [
       "R0096"
     ],

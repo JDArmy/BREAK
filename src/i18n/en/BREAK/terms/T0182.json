@@ -3,12 +3,19 @@
     "title": "Full Household File",
     "keywords": [
       "Full Household File",
-      "Whole Head and Whole Household"
+      "full family register",
+      "all household members",
+      "complete household PII",
+      "family member ID photos",
+      "household headshots",
+      "entire household data",
+      "full family lookup",
+      "household register dump"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In illicit data trading, a type of record-checking service that retrieves the ID photos and information of all immediate family members listed in a household register, with “full head” referring to all available headshot photos.",
-    "description": "In illicit data trading, this is a category of record-checking service. “Full-head full household” means the service can access the ID photos and personal information of every direct relative registered in the household booklet, where “full head” specifically denotes all portrait photographs of the family members.",
+    "definition": "A type of record check that retrieves the ID photos and information of all immediate family members in a household register.",
+    "description": "The most comprehensive type of illegal record check, where black market actors can obtain the ID photos and household registration information of an entire family. The damage from such a data leak is immense, as it is often used for targeted family scams, extortion, or organized identity theft.",
     "relatedRisks": [
       "R0092",
       "R0078",

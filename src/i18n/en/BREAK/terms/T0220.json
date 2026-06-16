@@ -3,13 +3,21 @@
     "title": "Cross-Channel Arbitrage",
     "keywords": [
       "Cross-Channel Arbitrage",
-      "Cross-Selling Goods"
+      "channel arbitrage",
+      "cross-platform arbitrage",
+      "regional arbitrage",
+      "price arbitrage",
+      "unauthorized distribution",
+      "channel conflict",
+      "grey market goods",
+      "parallel import"
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "窜货指经销商将商品跨区域或跨渠道违规销售，以牟取不正当利益。",
-    "description": "在电商场景中，黑灰产利用不同平台间的补贴差价，将低价渠道获取的商品搬运到高价平台销售，破坏品牌方的价格体系。这种行为常与虚假交易、刷单配合，套取平台补贴或逃避授权限制。窜货不仅损害品牌方利益，也扰乱了市场秩序。",
+    "definition": "Cross-channel arbitrage is the unauthorized sale of goods across regions or channels to gain illicit profits.",
+    "description": "In e-commerce, black-market actors exploit subsidy differences between platforms by moving goods purchased through low-cost channels to higher-priced platforms, undermining the brand's pricing system. This practice is often combined with fake transactions and brushing orders to capture platform subsidies or bypass authorization restrictions. Cross-channel arbitrage not only harms brand interests but also disrupts market order.",
     "relatedRisks": [
+      "R0070-001",
       "R0017",
       "R0017-001",
       "R0005"

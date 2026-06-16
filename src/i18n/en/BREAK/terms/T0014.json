@@ -16,11 +16,13 @@
       "Lu Mao"
     ],
     "category": "Marketing Fraud",
-    "definition": "指羊毛用户利用平台漏洞或优惠规则，以零成本或极低成本获取商品或服务的行为。",
-    "description": "撸毛是营销欺诈链条中的执行动作，做单用户通过接码号、优惠券叠加等方式套取平台福利。黑灰产通过派单群组织大量撸毛行为，将套取的商品集中回收转卖获利。这种行为不仅造成平台资金损失，还扰乱了正常的营销秩序。",
+    "definition": "The act of exploiting platform loopholes or promotional rules to obtain goods or services at zero or extremely low cost.",
+    "description": "'Wool pulling' is the execution phase in the marketing fraud chain. Participants use SMS-verified accounts, coupon stacking, and other methods to extract platform subsidies. Fraud rings organize large-scale wool-pulling activities through task groups, collecting the obtained goods for resale and profit. This behavior not only causes direct financial losses to platforms but also disrupts normal marketing order.",
     "relatedRisks": [
-      "R0009",
       "R0055",
+      "R0005",
+      "R0009",
+      "R0054-003",
       "R0064",
       "R0030",
       "R0030-001"

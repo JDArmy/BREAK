@@ -3,13 +3,20 @@
     "title": "Cash-Out Disposal",
     "keywords": [
       "Cash-Out Disposal",
-      "Discharge"
+      "cash-out mule",
+      "final extraction",
+      "ATM cash-out",
+      "physical cash withdrawal",
+      "last-mile laundering",
+      "value extraction",
+      "cash-out runner",
+      "offloading"
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "在洗钱场景中，卸货是指将已接收非法资金的账户通过取现、兑换或购物等方式将赃款套出的末端兑现行为。",
-    "description": "当诈骗资金经过多层账户转移后，最后一道“卸货”环节负责将资金彻底取出，通常由“车手”在ATM取现、购买贵金属或转入其他可控账户来完成。该操作要求快速、隐蔽，常配合“维护”人员实时监控账户状态，防止被冻结。卸货成功意味着洗钱流程闭环，资金回归黑产团伙手中，是打击洗钱的关键节点。",
-    "usageExample": "招车，一二道卡车，双押维护，大混，笔笔维护到卸货。",
+    "definition": "In money laundering operations, offloading refers to the final-stage cash-out act of withdrawing, converting, or spending illicit funds from accounts that have already received them.",
+    "description": "After fraudulent funds have been moved through multiple account layers, the final offloading stage is responsible for extracting the money completely. This is typically carried out by cash mules who withdraw cash at ATMs, purchase precious metals, or transfer funds into other controlled accounts. The operation demands speed and stealth, often with account monitors tracking account status in real time to prevent freezes. A successful offload closes the money-laundering loop, returning the funds to the criminal syndicate, and represents a critical node for disrupting money laundering.",
+    "usageExample": "Recruiting runners: first- and second-tier card runners, dual-custody maintenance, large-scale mixing, and step-by-step maintenance all the way to offload.",
     "relatedRisks": [
       "R0060",
       "R0093",
@@ -21,6 +28,7 @@
       "AT0040"
     ],
     "relatedThreatActors": [
+      "TA0014-001",
       "TA0014",
       "TA0015"
     ],

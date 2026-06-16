@@ -6,7 +6,12 @@
     "description": "工业协议通常无安全设计。加固：使用加密版本（OPC UA、Modbus/TCP+TLS）；部署协议网关过滤异常；白名单限制命令；异常行为检测；定期审计。",
     "complexity": "高级",
     "limitation": "老旧设备不支持；性能影响；兼容性问题",
-    "references": [],
+    "references": [
+      {
+        "title": "Industrial Protocol Security Hardening",
+        "link": "https://www.dragos.com/"
+      }
+    ],
     "updated": "2026-06-16",
     "keywords": [
       "工业协议",

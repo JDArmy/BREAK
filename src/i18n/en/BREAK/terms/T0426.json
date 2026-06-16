@@ -3,13 +3,19 @@
     "title": "Upfront Costs",
     "keywords": [
       "Upfront Costs",
-      "Cost"
+      "front-end loading costs",
+      "borrower packaging expense",
+      "qualification fabrication cost",
+      "synthetic identity investment",
+      "straw borrower prep",
+      "credit profile build cost",
+      "application grooming fee"
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "在背债骗贷操作中，为包装借款人资质所投入的前期费用总称。",
-    "description": "背债中介在操作大额贷款欺诈时，需要为背债人打造虚假的优质借款人形象，这涉及一系列前期投入。这些成本包括购买空壳企业执照、办理虚假过户、制造虚假经营流水、补缴社保或公积金等。中介通常将这些成本转嫁给背债人或下游中介，以降低自身风险。一旦贷款失败或被风控拦截，这些投入将成为沉没成本，加剧参与方的财务损失。",
-    "usageExample": "全网收单：年化3.6%接单包落地，成本低，先息后本，随借随还，无压力。",
+    "definition": "The total upfront costs invested in packaging a borrower’s profile during debt assumption loan fraud operations.",
+    "description": "In large-scale loan fraud operations, debt assumption intermediaries need to create a false image of a high-quality borrower for the debt assumer, which involves a series of upfront investments. These costs include purchasing shell company licenses, processing fake asset transfers, fabricating business cash flows, and making back payments on social security or housing fund contributions. Intermediaries typically pass these costs onto the debt assumer or downstream intermediaries to reduce their own risk. If the loan fails or is blocked by risk controls, these investments become sunk costs, worsening the financial losses of the participants.",
+    "usageExample": "Accepting applications nationwide: 3.6% annualized rate, guaranteed loan approval, low upfront costs, interest-only payments initially with principal due at maturity, drawdown and repayment at any time, no pressure.",
     "relatedRisks": [
       "R0146",
       "R0096"

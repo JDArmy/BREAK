@@ -6,7 +6,12 @@
     "description": "隐私计算：多方安全计算；可信执行环境；联邦学习；同态加密；差分隐私；安全多方计算。",
     "complexity": "高级",
     "limitation": "技术成熟度低；性能影响大；实施复杂",
-    "references": [],
+    "references": [
+      {
+        "title": "Privacy-Preserving Computation",
+        "link": "https://www.oasis-protocol.org/"
+      }
+    ],
     "updated": "2026-06-16",
     "keywords": [
       "MPC",

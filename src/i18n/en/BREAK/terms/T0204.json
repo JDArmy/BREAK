@@ -3,12 +3,18 @@
     "title": "Movement-Trail Lookup",
     "keywords": [
       "Movement-Trail Lookup",
-      "Ghost"
+      "Location tracking",
+      "Hotel records lookup",
+      "Surveillance data",
+      "Movement history",
+      "Geolocation data",
+      "Border crossing records",
+      "Itinerary data"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "指黑产通过交通、住宿等综合数据追踪个人出行轨迹的非法服务。",
-    "description": "该服务整合了酒店入住、卡口监控等多种数据源，能勾勒出目标人物的完整活动轨迹。黑产利用这些数据为暴力催收、非法调查甚至绑架等严重犯罪提供情报支持。其危害性在于将碎片化信息拼凑成完整的个人行踪画像。",
+    "definition": "An illegal service that tracks an individual's travel patterns by aggregating data from transportation, accommodation, and other sources.",
+    "description": "This service integrates data from hotel stays, traffic checkpoints, and other sources to map a target's complete activity trail. Underground actors use this intelligence to support serious crimes such as aggressive debt collection, illegal investigation, and even kidnapping. Its danger lies in piecing together fragmented information into a comprehensive portrait of a person's movements.",
     "relatedRisks": [
       "R0078",
       "R0089",

@@ -2,7 +2,13 @@
   "T0080": {
     "title": "内料",
     "keywords": [
-      "内料"
+      "内料",
+      "四件套",
+      "银行卡四件",
+      "内料四件",
+      "卡密料",
+      "身份证号",
+      "银行卡密码"
     ],
     "aliases": [],
     "category": "数据泄露",
@@ -13,7 +19,9 @@
       "R0089"
     ],
     "relatedAvoidances": [],
-    "relatedAttackTools": [],
+    "relatedAttackTools": [
+      "AT0039"
+    ],
     "relatedThreatActors": [
       "TA0005",
       "TA0040"

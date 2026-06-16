@@ -12,12 +12,12 @@
     ],
     "aliases": [],
     "category": "Marketing Fraud",
-    "definition": "No Shield",
-    "description": "Refers to the absence of risk control measures. In black/gray market terminology, the risk control systems of targeted platforms are called 'shields,' analogous to firewalls. Fraudsters bypass platform verification to exploit physical goods or vouchers. Different businesses and scenarios have their own shields, such as a bank's USB security key or Taobao's risk control shield.",
-    "relatedRisks": [
-      "R0005"
+    "definition": "A term used by fraud operators to describe a target platform that has no risk control measures in place.",
+    "description": "In underground fraud circles, a platform's risk control system is referred to as a \"shield.\" \"No shield\" means the platform has not deployed effective security verification or anti-fraud strategies. This allows fraudsters to bypass defenses directly and conduct bulk operations, commonly used for large-scale harvesting of physical rewards, vouchers, or cash bonuses. The nature of a \"shield\" varies across business scenarios—such as a bank's hardware security token or an e-commerce platform's risk engine—but the absence of one signals an extremely low cost of attack.",
+    "relatedRisks": [],
+    "relatedAvoidances": [
+      "A0153"
     ],
-    "relatedAvoidances": [],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "relatedBusinessScenes": [

@@ -3,13 +3,19 @@
     "title": "Fixed-Amount QR",
     "keywords": [
       "Fixed-Amount QR",
-      "Setup Code"
+      "preset amount QR",
+      "fixed-value scan",
+      "locked-amount code",
+      "set-value payment link",
+      "fixed-sum QR",
+      "predefined amount code",
+      "static amount scan"
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "跑分洗钱中可预设固定金额的支付链接或二维码，用于精准收取特定面额的非法资金。",
-    "description": "设置码常被绑定到虚拟商品支付场景，比如Q币、点券充值，黑产把充值金额锁死在某个档位，让付款方只能按预设金额支付。这样既能避免多付少付带来的对账麻烦，又能把赃款伪装成正常的虚拟消费。跑分团伙大量收购这类码，配合自动发卡平台实现“付款即发货”，完成资金清洗和资产转换。",
-    "usageExample": "Recruitment: Set code, aggregate, personal, Didi Cash.",
+    "definition": "A payment link or QR code used in money laundering that can be preset with a fixed amount, enabling precise collection of specific denominations of illicit funds.",
+    "description": "Preset codes are often tied to virtual goods payment scenarios, such as QQ coins or top-up vouchers. Fraud rings lock the top-up amount to a specific tier so that the payer can only pay the preset sum. This avoids reconciliation hassles from overpayment or underpayment while disguising dirty money as legitimate virtual consumption. Money-muling crews purchase these codes in bulk and pair them with automated card-issuing platforms to achieve “pay-and-ship,” completing both money laundering and asset conversion.",
+    "usageExample": "Recruiting: preset codes, aggregated codes, personal codes, DiDi cash.",
     "relatedRisks": [
       "R0060",
       "R0093",

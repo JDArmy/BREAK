@@ -2,7 +2,15 @@
   "T0302": {
     "title": "人头",
     "keywords": [
-      "人头"
+      "人头",
+      "人头账户",
+      "人头卡",
+      "四件套",
+      "出租银行卡",
+      "实名代持",
+      "供卡人",
+      "人头户",
+      "出售银行卡"
     ],
     "aliases": [],
     "category": "跑分洗钱",
@@ -15,9 +23,11 @@
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [
+      "AT0039",
       "AT0026"
     ],
     "relatedThreatActors": [
+      "TA0005-001",
       "TA0006-003",
       "TA0014"
     ],

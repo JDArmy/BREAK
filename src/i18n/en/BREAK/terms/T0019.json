@@ -14,9 +14,9 @@
     ],
     "aliases": [],
     "category": "Marketing Fraud",
-    "definition": "Refers to newly registered accounts with no transaction history. Due to their clean, unused status, these accounts are considered safe to purchase and are often acquired by fraud rings for fake order generation and review manipulation.",
-    "description": "Refers to newly registered accounts with no transaction history. Due to their clean, unused status, these accounts are considered safe to purchase and are often acquired by fraud rings for fake order generation and review manipulation.",
-    "usageExample": "最近平台风控严，新号不好使，得找一批满月白号来做任务才稳。",
+    "definition": "An account that has been registered for a full month and has no transaction history, prized by fraud rings for its low-risk profile in brushing operations.",
+    "description": "Because these accounts meet the required registration age and maintain a clean behavioral record, they can bypass entry-level risk controls that platforms apply to new accounts. After being acquired by fraud rings, they are commonly used for bulk order padding, fake reviews, or referral campaigns to collect platform marketing incentives at minimal cost, serving as a foundational resource for marketing fraud.",
+    "usageExample": "The platform’s risk controls have tightened lately and fresh accounts aren’t working well—we need to source a batch of clean month-old accounts to run tasks reliably.",
     "relatedRisks": [
       "R0005"
     ],

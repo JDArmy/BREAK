@@ -3,12 +3,18 @@
     "title": "Cohabitation Lookup",
     "keywords": [
       "Cohabitation Lookup",
-      "Check If You Live Together"
+      "cohabitation check",
+      "live-in partner lookup",
+      "shared residence query",
+      "co-living data",
+      "household member lookup",
+      "residence association",
+      "cohabitant search"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "黑产查档中通过非法手段获取特定人员同住人信息的定向查询服务。",
-    "description": "查同住通常依赖酒店系统、户籍或社区网格数据，由内鬼或技术渗透直接拉取。结果多用于债务催收、婚外情调查或人身威胁，能精准锁定目标的生活轨迹与同居关系。该服务因涉及高度敏感隐私，在数据黑市中属于高价值、高风险品类，常与开房记录打包出售。",
+    "definition": "A targeted, illicit query service that illegally obtains information about a specific person's cohabitants.",
+    "description": "This service typically relies on hotel systems, household registration, or community grid data, pulled directly by insiders or through technical infiltration. The results are often used for debt collection, infidelity investigations, or personal threats, as they can precisely locate a target's living patterns and cohabitation relationships. Due to the highly sensitive privacy involved, this is a high-value, high-risk category in the underground data market and is often sold bundled with hotel check-in records.",
     "relatedRisks": [
       "R0092",
       "R0078",

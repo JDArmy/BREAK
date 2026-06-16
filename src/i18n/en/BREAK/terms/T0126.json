@@ -3,13 +3,19 @@
     "title": "Streetwalking Account",
     "keywords": [
       "Streetwalking Account",
-      "Station Street Number"
+      "bait account",
+      "honeypot profile",
+      "lure account",
+      "nearby promotion",
+      "social media bait",
+      "decoy profile",
+      "traffic account"
     ],
     "aliases": [],
     "category": "Telecom Fraud",
-    "definition": "Refers to WeChat accounts primarily used for promotion and marketing by exploiting social media features like 'People Nearby' to gain exposure. In plain terms, these accounts make themselves discoverable in the 'People Nearby' function to display advertisements and attract more attention and potential customers.",
-    "description": "These accounts typically use female profile images to attract male followers or to direct traffic to other accounts via QR codes. Accounts operated in this manner are called street-walking accounts and are commonly used in pig-butchering scams.",
-    "usageExample": "这批站街号刚挂上附近的人，一晚上就有几十个男的来加好友。",
+    "definition": "Social media accounts that use fake locations and carefully crafted personas on “nearby” features to attract and funnel potential victims into downstream scams.",
+    "description": "Operators typically dress these accounts with profile photos and albums depicting attractive young women. Using location-spoofing tools, they position the accounts in busy commercial areas or densely populated target zones. These accounts exploit male curiosity to draw attention; once a friend request is accepted, the target is redirected to adult services, drink hustles, or pig-butchering scams. They serve as a common front-end tool for illicit traffic generation.",
+    "usageExample": "As soon as these street-walker accounts were placed on nearby, dozens of men added them within one night.",
     "relatedRisks": [
       "R0150",
       "R0095"

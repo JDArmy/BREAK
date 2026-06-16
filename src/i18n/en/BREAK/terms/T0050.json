@@ -2,12 +2,19 @@
   "T0050": {
     "title": "Naked Application",
     "keywords": [
-      "Naked Application"
+      "Naked Application",
+      "No-Doc Application",
+      "Stated Income Application",
+      "Low-Doc Application",
+      "Application Only",
+      "No Income Verification",
+      "No Asset Verification",
+      "Skeleton Application"
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "A method of applying for a credit card by submitting only the application form without providing any additional supporting documents, such as proof of assets or income. This term is commonly used in loan application scenarios.",
-    "description": "A method of applying for a credit card by submitting only the application form without providing any additional supporting documents, such as proof of assets or income. This term is commonly used in loan application scenarios.",
+    "definition": "Naked application refers to the practice of applying for a credit card or loan by submitting only a basic form without any supporting documentation.",
+    "description": "Applicants deliberately withhold proof of assets, income, or other supplementary materials, exploiting the lenient underwriting thresholds of certain products. Fraud rings commonly use this method to test banks' or platforms' approval loopholes at scale, screening for channels with weak risk controls to pave the way for subsequent large-scale fraud.",
     "relatedRisks": [
       "R0096"
     ],

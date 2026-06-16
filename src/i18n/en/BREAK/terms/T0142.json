@@ -3,13 +3,19 @@
     "title": "Scam Bookmaker",
     "keywords": [
       "Scam Bookmaker",
-      "Dog Village"
+      "rigged gambling den",
+      "underground bookmaker",
+      "house fix",
+      "cheating casino software",
+      "outcome manipulation",
+      "illegal betting ring",
+      "crooked house"
     ],
     "aliases": [],
     "category": "Telecom Fraud",
-    "definition": "A term for underground casinos or illegal gambling dens where operators rig game outcomes and enforce unfair rules to cheat participants out of their money, using methods such as cheating software and insider manipulation to ensure the house or favored players win.",
-    "description": "A term for underground casinos or illegal gambling dens where operators rig game outcomes and enforce unfair rules to cheat participants out of their money, using methods such as cheating software and insider manipulation to ensure the house or favored players win.",
-    "usageExample": "“那个台子连黑三把我就知道是狗庄在后台改了结果，根本不可能让你赢钱走。”",
+    "definition": "A dog banker is a gambling operator who controls an illegal betting ring or private lottery platform, systematically extracting bettors’ funds through preset odds and rigged mechanics.",
+    "description": "Dog bankers typically run gambling websites or underground casinos hosted on offshore servers, holding backend privileges that allow them to alter draw results, restrict withdrawals, or adjust odds at will. They employ dog promoters to lure players into the game, initially allowing small wins to build trust before slaughtering victims once they increase their stakes. The dog banker sits at the apex of the online gambling chain, directly controlling the life and death of the capital pool, and serves as a major exit point for laundered and scammed funds.",
+    "usageExample": "“After three straight losses on that platform, I knew it was the dog banker manipulating the results from the backend. There’s no way they’d ever let you walk away with a win.”",
     "relatedRisks": [
       "R0150",
       "R0095",
@@ -21,6 +27,7 @@
       "AT0070"
     ],
     "relatedThreatActors": [
+      "TA0039",
       "TA0015",
       "TA0008",
       "TA0042",

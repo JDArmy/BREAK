@@ -3,16 +3,22 @@
     "title": "Online Lending",
     "keywords": [
       "Online Lending",
-      "WWD",
-      "Online Loan"
+      "online microloan",
+      "P2P lending",
+      "loan shark app",
+      "payday loan",
+      "loan intermediary",
+      "loan broker",
+      "loan mule",
+      "loan stacking"
     ],
     "aliases": [
       "WWD"
     ],
     "category": "Credit Fraud",
-    "definition": "Abbreviation for \"online lending,\" referring to loan products facilitated through internet platforms, often involving P2P lending, online microloans, and online consumer loans. In credit fraud, it commonly appears in advertisements for illicit credit intermediary services, offering to secure loans or handle overdue payments for blacklisted online borrowers in exchange for intermediary fees.",
-    "description": "Abbreviation for \"online lending,\" referring to loan products facilitated through internet platforms, often involving P2P lending, online microloans, and online consumer loans. In credit fraud, it commonly appears in advertisements for illicit credit intermediary services, offering to secure loans or handle overdue payments for blacklisted online borrowers in exchange for intermediary fees.",
-    "usageExample": "他搞了一堆假资料，专门找那些不上征信的网贷口子下款，撸下来就是工资，根本没打算还。",
+    "definition": "Refers to small loans issued through internet platforms, which are frequently exploited by fraud rings for fraudulent applications.",
+    "description": "Fraud rings use synthetic or stolen identities to register for and apply to various online lending products in bulk. They typically target small, cash-advance platforms with weak risk controls, maliciously cashing out through a practice known as 'loan farming' and then disappearing after the loan is disbursed. This behavior leads to massive bad debts for online lending platforms and is a contributing factor to the violent debt collection chaos.",
+    "usageExample": "He created a bunch of fake profiles to specifically target online loan products that don't check credit history. Any money he got was considered a 'payday,' and he never intended to pay it back.",
     "relatedRisks": [
       "R0096"
     ],

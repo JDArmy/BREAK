@@ -3,13 +3,20 @@
     "title": "Personal QR Code",
     "keywords": [
       "Personal QR Code",
-      "Personal Code"
+      "Personal QR",
+      "P2P Code",
+      "Individual QR",
+      "Private QR",
+      "Personal Pay Code",
+      "Consumer QR",
+      "P2P Payment Code",
+      "Direct QR"
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "个码是使用个人身份注册的收款二维码，交易额度有限但风控相对宽松，常用于小额洗钱。",
-    "description": "黑产人员通过收集或购买普通用户的个人收款码，用于接收非法资金。这类二维码通常有单笔和单日交易限额，但因其分散、隐蔽，初期不易触发风控。在跑分平台中，大量个码被用于碎片化收款，将大额赃款拆分成无数小额交易，增加追踪难度。",
-    "usageExample": "收几个丝滑个码，要求单日3000以内能用的，点位好商量。",
+    "definition": "A personal QR code is a collection QR code registered under an individual identity, featuring limited transaction caps but relatively loose risk controls, commonly used for micro-laundering.",
+    "description": "Underground actors collect or purchase ordinary users' personal payment QR codes to receive illicit funds. These codes typically have per-transaction and daily limits, but their fragmented and concealed nature makes them less likely to trigger early risk alerts. On money-running platforms, numerous personal codes are used for fragmented collection, breaking large sums of dirty money into countless small transactions to increase tracing difficulty.",
+    "usageExample": "Looking for a few smooth personal codes, must handle under 3000 per day, rates are negotiable.",
     "relatedRisks": [
       "R0060",
       "R0093",

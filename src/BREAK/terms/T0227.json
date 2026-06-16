@@ -2,7 +2,15 @@
   "T0227": {
     "title": "连体婴",
     "keywords": [
-      "连体婴"
+      "连体婴",
+      "多开",
+      "设备多开",
+      "分身",
+      "应用多开",
+      "改机",
+      "群控",
+      "一机多号",
+      "养号多开"
     ],
     "aliases": [],
     "category": "业务欺诈",
@@ -21,11 +29,12 @@
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [
-      "AT0044",
       "AT0009",
+      "AT0017",
+      "AT0007",
+      "AT0044",
       "AT0016",
       "AT0003",
-      "AT0007",
       "AT0021"
     ],
     "relatedThreatActors": [

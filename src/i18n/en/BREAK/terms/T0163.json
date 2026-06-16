@@ -3,12 +3,19 @@
     "title": "Malicious Instrumentation",
     "keywords": [
       "Malicious Instrumentation",
-      "Bury the Point"
+      "code injection",
+      "formjacking",
+      "JS sniffing",
+      "Magecart",
+      "client-side injection",
+      "web skimming",
+      "input scraping",
+      "keystroke logging"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In underground data trading, a technique involving the implantation of malicious code into an app or website to steal sensitive user input such as passwords, verification codes, and bank card numbers.",
-    "description": "In underground data trading, a technique involving the implantation of malicious code into an app or website to steal sensitive user input such as passwords, verification codes, and bank card numbers.",
+    "definition": "A technical method where malicious actors implant code on web pages or in apps to capture user input in real time.",
+    "description": "By embedding scripts into target applications or websites, or by tampering with app packages, sensitive data such as passwords, verification codes, and bank card numbers is simultaneously transmitted to black-market servers as the user types. This technique is commonly used on phishing sites and in cracked apps, serving as a primary channel for harvesting first-hand, high-precision data.",
     "relatedRisks": [
       "R0078",
       "R0089",

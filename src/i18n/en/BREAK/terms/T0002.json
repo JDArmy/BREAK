@@ -14,8 +14,8 @@
     ],
     "aliases": [],
     "category": "Marketing Fraud",
-    "definition": "In the context of online fraud, 'fake crackdown' refers to fraudulent activities where malicious actors exploit loopholes in e-commerce or social media platforms by fabricating or altering information, orchestrating fake reviews and transactions, and spreading disinformation to mislead consumers or damage competitors' reputations.",
-    "description": "In the context of online fraud, 'fake crackdown' refers to fraudulent activities where malicious actors exploit loopholes in e-commerce or social media platforms by fabricating or altering information, orchestrating fake reviews and transactions, and spreading disinformation to mislead consumers or damage competitors' reputations. This practice undermines fair market competition, degrades the online ecosystem, and violates consumer rights and legitimate business interests.",
+    "definition": "A fraudulent attack by black market operators exploiting loopholes in e-commerce platform rules through fabricated transactions or data manipulation against merchants or the platform itself.",
+    "description": "Attackers typically organize large numbers of accounts to place malicious orders, initiate fake returns, or post batches of negative reviews targeting specific products or stores. This is done to extort merchants or fraudulently claim compensation from the platform. Such activities directly undermine market order, often leading to financial losses for merchants and store downgrades, representing a classic black market operation within the e-commerce ecosystem.",
     "relatedRisks": [
       "R0068",
       "R0068-002"

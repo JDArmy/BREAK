@@ -3,13 +3,19 @@
     "title": "Trust-Seeding Float",
     "keywords": [
       "Trust-Seeding Float",
-      "Cushion Blue"
+      "fake deposit",
+      "fake balance display",
+      "advance-fee fraud",
+      "phantom funds",
+      "bait money",
+      "trust seeding",
+      "fake payout"
     ],
     "aliases": [],
     "category": "Telecom Fraud",
-    "definition": "A telecom fraud tactic where scammers deposit fake funds into a victim's account to create the illusion that a promised payout has been received, tricking the victim into proceeding further with the scam.",
-    "description": "A telecom fraud tactic where scammers deposit fake funds into a victim's account to create the illusion that a promised payout has been received, tricking the victim into proceeding further with the scam.",
-    "usageExample": "“他给我看了后台余额，说已经垫了五万在里面，让我放心跟单，结果那数字全是假的。”",
+    "definition": "A cushion deposit is a falsified sum of money or fabricated transaction record that fraudsters inject into a victim’s account or display interface before executing the main financial scam.",
+    "description": "Cushion deposits are commonly used in task-based rebate scams and fake investment platforms. Operators manipulate backend figures or use Photoshop to forge transfer screenshots, making victims believe they have received a commission or profit. This illusion of a trustworthy, profitable platform encourages victims to commit larger sums. In reality, the money never reaches a genuine account; once the victim deposits substantial principal, the funds are immediately transferred out or become impossible to withdraw.",
+    "usageExample": "“He showed me the backend balance and said he’d already put a fifty-thousand cushion in there for me, telling me to follow the trades without worry. Turned out every digit was fake.”",
     "relatedRisks": [
       "R0095",
       "R0150"

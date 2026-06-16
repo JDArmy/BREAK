@@ -6,7 +6,12 @@
     "description": "Secure Boot在设备启动时验证固件完整性，防止加载被篡改或恶意的固件。实施步骤：在硬件中存储可信根密钥（Root of Trust）；固件镜像使用厂商私钥签名；启动时用公钥验证签名，验证失败则拒绝启动；采用分层验证，每层验证下一层（UEFI Secure Boot模型）；使用硬件可信平台模块（TPM）存储度量值。这种机制广泛应用于服务器、IoT设备、路由器等关键设备，确保从硬件到操作系统的信任链完整。",
     "complexity": "高级",
     "limitation": "需要硬件支持（TPM或类似芯片），增加成本；密钥管理复杂，私钥泄露将导致全系列设备风险；阻止用户安装自定义固件，影响开放性；实施错误可能导致设备变砖",
-    "references": [],
+    "references": [
+      {
+        "title": "Firmware Security: The Unsung Hero of Cyber Defense",
+        "link": "https://akitra.com/blog/firmware-security-the-unsung-hero-of-cyber-defense/"
+      }
+    ],
     "updated": "2026-06-16",
     "keywords": [
       "Secure Boot",

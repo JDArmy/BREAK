@@ -6,7 +6,12 @@
     "description": "传输层防护：强制HTTPS/TLS通信；证书固定防MITM；完整性校验和；分片传输验证；断点续传保护；服务器身份认证。",
     "complexity": "基础",
     "limitation": "需要可靠网络；证书管理；老旧设备支持差",
-    "references": [],
+    "references": [
+      {
+        "title": "OTA Security: Encryption and Integrity",
+        "link": "https://www.embedded.com/"
+      }
+    ],
     "updated": "2026-06-16",
     "keywords": [
       "TLS",

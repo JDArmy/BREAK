@@ -6,7 +6,12 @@
     "description": "EIP-155引入链ID防止跨链重放。实施要点：交易签名包含源链和目标链的Chain ID；每个账户维护递增的nonce，重复nonce的交易被拒绝；硬分叉时修改Chain ID强制重放保护；跨链消息包含genesis hash或其他链特定标识；使用EIP-712结构化签名，包含domain separator。Zealynx安全词汇表强调这是防重放的基础机制。",
     "complexity": "基础",
     "limitation": "老旧合约可能不支持Chain ID；nonce管理不当可能导致交易卡死；跨链桥仍需额外保护；不能防止授权被重放利用",
-    "references": [],
+    "references": [
+      {
+        "title": "Replay Attack Prevention in Blockchain",
+        "link": "https://www.zealynx.io/glossary/replay-attack"
+      }
+    ],
     "updated": "2026-06-16",
     "keywords": [
       "Chain ID",

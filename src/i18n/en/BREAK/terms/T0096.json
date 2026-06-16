@@ -3,12 +3,18 @@
     "title": "Fuzzy Lookup",
     "keywords": [
       "Fuzzy Lookup",
-      "Demon Hunt"
+      "lm lookup",
+      "fuzzy search db",
+      "fuzzy query",
+      "social engineering db",
+      "SE db",
+      "fuzzy data lookup",
+      "fuzzy record search"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "Also known as 'lm,' this is a common fuzzy search technique used in underground social engineering databases to locate and extract information on a specific target. For instance, a user might search for a common name, and the system returns multiple records with fields like birthday, region, and gender. Using these auxiliary details, the searcher can pinpoint the exact record they need from a sea of similar entries.",
-    "description": "Also known as 'lm,' this is a common fuzzy search technique used in underground social engineering databases to locate and extract information on a specific target. For instance, a user might search for a common name, and the system returns multiple records with fields like birthday, region, and gender. Using these auxiliary details, the searcher can pinpoint the exact record they need from a sea of similar entries.",
+    "definition": "A technique used in social engineering databases to precisely locate a target's data by filtering results with auxiliary fields when only vague information like a name is known.",
+    "description": "Demon hunting is a common query technique in social engineering databases. When an attacker only knows a target's name, they cross-reference the returned results with auxiliary information like birthdate, region, and gender. This method allows them to precisely filter a specific target's complete dossier from a massive pool of homonymous data. This technique is a critical step in executing precision scams and doxing.",
     "relatedRisks": [
       "R0092",
       "R0078",

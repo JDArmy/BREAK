@@ -3,13 +3,21 @@
     "title": "Switch Fraud",
     "keywords": [
       "Switch Fraud",
-      "Bag Swapper"
+      "Return Fraud",
+      "Refund Fraud",
+      "Package Switching",
+      "Return Scam",
+      "Wardrobing",
+      "Empty Box Scam",
+      "Return Theft",
+      "Switch Scam"
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "掉包师指利用平台退货机制，通过“买真退假”的方式骗取正品商品的黑灰产从业者。",
-    "description": "操作者购买高价正品后，将仿冒品或空包退回，利用快递签收与平台退款的时间差牟利。掉包师通常针对奢侈品、电子产品等高价值商品，并可能勾结快递员进行虚假签收。这种行为直接导致商家钱货两空，推高了平台的运营成本。",
+    "definition": "A switch fraudster is a black-market operator who exploits platform return policies by returning counterfeit goods for genuine products to defraud merchants.",
+    "description": "The operator purchases high-value genuine items, then returns counterfeit goods or empty packages, exploiting the time gap between courier acceptance and platform refunds. Switch fraudsters typically target luxury goods, electronics, and other high-value items, and may collude with couriers for fake delivery confirmations. This practice directly causes merchants to lose both goods and payment, driving up platform operating costs.",
     "relatedRisks": [
+      "R0054-002",
       "R0017",
       "R0005"
     ],

@@ -3,14 +3,22 @@
     "title": "Fee Refund Abuse",
     "keywords": [
       "Fee Refund Abuse",
-      "Interest and Fee Refund"
+      "chargeback fraud",
+      "refund scam",
+      "fee reversal abuse",
+      "refund intermediary",
+      "malicious refund",
+      "fee clawback",
+      "refund agent",
+      "refund for profit"
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "Refers to the refunding of financial charges such as annual fees, processing fees, membership fees, entitlement fees, interest, and penalty fees. While originally a standard financial term, it is used here specifically to describe malicious exploitation by underground actors.",
-    "description": "Refers to the refunding of financial charges such as annual fees, processing fees, membership fees, entitlement fees, interest, and penalty fees. While originally a standard financial term, it is used here specifically to describe malicious exploitation by underground actors.",
-    "usageExample": "中介帮他把网贷的利息全退回来了，收了30%的手续费，还让他把通讯录里的朋友都介绍过来做退息退费。",
+    "definition": "A scheme where illicit actors use malicious complaints or forged documents to coerce financial institutions into refunding various legally charged fees.",
+    "description": "Posing as 'agent advocates,' fraud rings instigate clients or directly act on their behalf to file mass complaints with regulatory bodies. They exploit the financial institution's desire to avoid trouble, demanding refunds of interest, service fees, or even principal, and then take a large commission. Such malicious complaints not only disrupt the financial order but also crowd out legitimate complaint channels for ordinary consumers.",
+    "usageExample": "A broker helped him get all the interest from his online loan refunded and took a 30% cut. He was then told to refer everyone in his contact list for the same fee refund scam.",
     "relatedRisks": [
+      "R0068-001",
       "R0096",
       "R0096-001"
     ],
@@ -24,7 +32,7 @@
     ],
     "references": [
       {
-        "title": "Exposing the Underground Industry Behind Illegal \"Agent Rights Protection\" in the Financial Sector",
+        "title": "[Credit Fraud] Exposing the Illicit 'Agent Advocacy' Industry Behind Financial Sector Disputes",
         "link": "https://www.threathunter.cn/blog/e78513e348b"
       }
     ],

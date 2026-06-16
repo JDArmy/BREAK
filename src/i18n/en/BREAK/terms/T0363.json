@@ -3,13 +3,20 @@
     "title": "Rebate Fee / Turnover Fee",
     "keywords": [
       "Rebate Fee / Turnover Fee",
-      "Code Washing fee\\running Fee"
+      "Turnover Commission",
+      "Rolling Fee",
+      "Agent Rebate",
+      "Referral Kickback",
+      "Running Fee",
+      "Wash Fee",
+      "Volume-Based Commission",
+      "Betting Brokerage"
     ],
     "aliases": [],
     "category": "Gambling",
     "definition": "在赌博黑产中，“洗码费/流水费”指赌场或平台按赌客下注流水抽取一定比例后返给代理或跑分人员的佣金。",
-    "description": "这笔费用本质是赌资流转中的抽成，通常由赌场从总流水里扣除再分给拉客中介、码商或跑分团队，用于激励持续招揽赌客和维持资金通道。在电诈跑分融合场景里，洗码费常被包装成“手工费”“返点”，实际是洗钱链条的润滑剂，层层盘剥后赌客本金被大幅稀释。",
-    "usageExample": "招人手工活跑分，底薪加奖励再加三个点，扣洗码费20%。",
+    "description": "This fee is essentially a cut of the circulating gambling funds. Casinos deduct it from the total turnover and distribute it to intermediaries, code merchants, or money laundering teams to incentivize continuous recruitment of gamblers and maintenance of financial channels. In scams combining telecom fraud and money laundering, this fee is often disguised as a \"handling fee\" or \"rebate,\" but it actually serves as a lubricant for the money laundering chain, significantly diluting the gambler's principal through successive deductions.",
+    "usageExample": "Recruiting for manual money laundering tasks, base salary plus bonuses and an extra three points, minus a 20% turnover commission.",
     "relatedRisks": [
       "R0060",
       "R0093",

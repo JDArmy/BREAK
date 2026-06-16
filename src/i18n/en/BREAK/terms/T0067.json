@@ -3,12 +3,19 @@
     "title": "Broad-Sweep Data",
     "keywords": [
       "Broad-Sweep Data",
-      "General Material"
+      "unfiltered data",
+      "raw data dump",
+      "unverified data",
+      "bulk data",
+      "data sweep",
+      "untargeted data",
+      "data trawling",
+      "broad data scrape"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In illicit data trading, broad but non-specific personal or organizational data. This type of data has usually not undergone fine screening or verification, may contain a large amount of useless information, and has low accuracy and validity. Consequently, its value on underground markets is typically low.",
-    "description": "In illicit data trading, broad but non-specific personal or organizational data. This type of data has usually not undergone fine screening or verification, may contain a large amount of useless information, and has low accuracy and validity. Consequently, its value on underground markets is typically low.",
+    "definition": "Bulk data refers to a broad, unfiltered collection of personal information with low precision, traded in illicit data markets.",
+    "description": "This type of data usually comes from messy sources and contains a high volume of invalid, duplicate, or erroneous records, lacking any specific targeting. After purchasing bulk data, fraudsters often need to invest additional effort in cleaning and filtering before it can be used for scams or marketing. Due to its extremely low conversion rate, bulk data is cheap on the market and is commonly used for low-level attacks such as mass phishing SMS blasts.",
     "relatedRisks": [
       "R0078",
       "R0089"

@@ -3,13 +3,20 @@
     "title": "Unionpay QR",
     "keywords": [
       "Unionpay QR",
-      "Unionpay Code"
+      "Quick Response code for money laundering",
+      "UnionPay collection QR",
+      "payment code for illegal funds",
+      "UnionPay money receiving frontend",
+      "QR code for running score",
+      "bank settlement network QR",
+      "dynamic QR for illicit collection",
+      "static QR for dirty money"
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "银联体系内用于接收或转移非法资金的支付二维码，是跑分洗钱中依赖银行清算网络的收款入口。",
-    "description": "银联码依托银联跨行清算网络，覆盖绝大多数银行账户，黑产将其作为跑分收款的前端工具。操作时由码商或跑分平台生成动态或静态二维码，供受害人扫码付款，资金经银联通道快速归集到控制账户。因其银行级覆盖广、到账快，常被用于拆分小额多笔赃款，绕过风控监测。",
-    "usageExample": "码回码，码回u，银联码。",
+    "definition": "A UnionPay-based payment QR code used to receive or transfer illicit funds, serving as a collection entry point in money muling operations that rely on bank clearing networks.",
+    "description": "UnionPay QR codes leverage the cross-bank clearing network of UnionPay, covering the vast majority of bank accounts. Criminal actors use them as a front-end tool for collecting funds in money muling schemes. During operations, money mule organizers or platform operators generate dynamic or static QR codes for victims to scan and pay. The funds are then rapidly consolidated into controlled accounts through UnionPay channels. Due to their broad bank-level coverage and instant settlement, these codes are often used to split large sums into small, multiple transactions to evade risk monitoring systems.",
+    "usageExample": "QR to QR, QR to USDT, UnionPay QR.",
     "relatedRisks": [
       "R0060",
       "R0093"

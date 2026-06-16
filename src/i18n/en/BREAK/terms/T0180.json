@@ -3,20 +3,29 @@
     "title": "Full Identity Dossier",
     "keywords": [
       "Full Identity Dossier",
-      "Priest"
+      "high-res ID scan",
+      "ID card front and back",
+      "identity document image",
+      "ID card copy",
+      "document forgery source",
+      "identity theft document",
+      "two-sided ID image",
+      "full ID card scan"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In illicit data trading, high-resolution photos or scans of both sides of a citizen’s national ID card, containing core identity details such as full name, address, and ID number, used for document forgery or identity theft.",
-    "description": "In illicit data trading, this refers to high-definition photographs or scanned copies of the front and back of a national identity card. These images contain essential personal identifiers including the holder’s name, residential address, and ID number, and are primarily used to fabricate fake documents or impersonate the victim.",
-    "usageExample": "“Nationwide ‘Priest’ IDs, real validity period, 6u each, available all day, as many as you’ve got.”",
+    "definition": "High-resolution photos or scans of the front and back of a citizen's ID card, containing core identity information like name, address, and ID number.",
+    "description": "A black market term for acquired high-resolution images of both sides of an ID card, with complete and valid information. These materials are often used to bypass real-name verification, register illegal accounts, or forge documents, making them a core commodity for identity fraud crimes.",
+    "usageExample": "\"National 'priest' available, valid expiry dates, 6 USDT each. Online all day, send as many as you have.\"",
     "relatedRisks": [
       "R0078",
       "R0089",
       "R0092",
       "R0109"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0024"
+    ],
     "relatedAttackTools": [
       "AT0012",
       "AT0064"

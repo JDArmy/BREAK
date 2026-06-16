@@ -2,7 +2,16 @@
   "T0012": {
     "title": "接码",
     "keywords": [
-      "接码"
+      "接码",
+      "接码平台",
+      "短信验证码",
+      "卡商",
+      "黑卡",
+      "验证码接收",
+      "注册验证",
+      "手机号验证",
+      "接码号",
+      "猫池卡"
     ],
     "aliases": [],
     "category": "营销欺诈",
@@ -13,11 +22,13 @@
       "R0030-001",
       "R0030-005"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0007-001"
+    ],
     "relatedAttackTools": [
       "AT0006",
-      "AT0004",
-      "AT0001-002"
+      "AT0001-002",
+      "AT0004"
     ],
     "relatedThreatActors": [
       "TA0003",

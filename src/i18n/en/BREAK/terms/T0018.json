@@ -16,11 +16,11 @@
       "Meow"
     ],
     "category": "Marketing Fraud",
-    "definition": "A homophone for 'gone in seconds,' describing a scenario in e-commerce where limited-edition or popular items sell out instantly during pre-order or flash sale events.",
-    "description": "A homophone for 'gone in seconds,' describing a scenario in e-commerce where limited-edition or popular items sell out instantly during pre-order or flash sale events.",
-    "usageExample": "那个限量球鞋刚上架就秒无，肯定又是被那群用外挂的扫光了。",
+    "definition": "The phenomenon in which popular items are instantly cleared out by illicit actors during marketing events, leaving ordinary users unable to make a purchase.",
+    "description": "Fraud rings use automated tools to place bulk orders within milliseconds of a sale opening, rapidly driving inventory to zero. This tactic is commonly employed for hoarding or resale for profit, severely disrupting platform sales operations and depriving average consumers of any buying opportunity.",
+    "usageExample": "Those limited-edition sneakers were gone the moment they dropped—definitely cleaned out by a group using bots again.",
     "relatedRisks": [
-      "R0005"
+      "R0012"
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [],

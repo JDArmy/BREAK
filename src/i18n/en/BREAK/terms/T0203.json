@@ -3,13 +3,19 @@
     "title": "Travel-Trail Lookup",
     "keywords": [
       "Travel-Trail Lookup",
-      "Flying Fire"
+      "Flight records lookup",
+      "PNR data",
+      "Travel history search",
+      "Flight manifest data",
+      "Airline booking data",
+      "Passenger name record",
+      "Travel surveillance"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "指黑产通过非法获取航班、火车票等出行记录，追踪个人行踪的服务。",
-    "description": "数据多源自票务系统内部泄露或第三方接口滥用，黑产将其包装为查档服务出售。该服务常被用于跟踪特定目标、商业竞争对手或进行精准的诈骗活动。因其能实时反映个人动态，对个人隐私和安全构成严重威胁。",
-    "usageExample": "\"Feihuo + Entry and Exit Records, low price/fast order response\"",
+    "definition": "An underground service that tracks an individual's movements by illegally obtaining travel records such as flight and train bookings.",
+    "description": "Data is often sourced from internal leaks in ticketing systems or the abuse of third-party APIs, packaged and sold as a lookup service. This service is frequently used to track specific targets, monitor business competitors, or conduct precision fraud. Its ability to reflect real-time personal movements poses a severe threat to individual privacy and security.",
+    "usageExample": "\"Flight records + entry/exit records, affordable price / fast turnaround\"",
     "relatedRisks": [
       "R0092",
       "R0078",

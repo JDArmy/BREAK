@@ -3,13 +3,20 @@
     "title": "Result Delivery",
     "keywords": [
       "Result Delivery",
-      "Reply"
+      "query result return",
+      "data delivery",
+      "lookup fulfillment",
+      "dox drop",
+      "information handoff",
+      "report delivery",
+      "data packet",
+      "completed transaction"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In illicit data trading, synonymous with delivering results, referring to the act of the service provider returning the queried data to the buyer, marking the completion of the transaction.",
-    "description": "In illicit data trading, synonymous with delivering results, referring to the act of the service provider returning the queried data to the buyer, marking the completion of the transaction.",
-    "usageExample": "\"Direct from the source, price: 200 RMB, results delivered in about ten minutes, affordable and cheap.\"",
+    "definition": "The act of a service provider completing a query and delivering the results to the buyer in an illegal data transaction.",
+    "description": "'Returning the order' signifies that the data query has been completed and delivered, marking the closure of the illicit transaction. After receiving feedback from upstream sources, the provider sends documents or screenshots containing personal privacy information or account statements to the buyer, finalizing the deal. The turnaround time for returning orders is often used as a competitive selling point, with providers emphasizing 'fast returns' to attract buyers in urgent need of information.",
+    "usageExample": "\"Direct from the source, price: 200 RMB, results returned in about ten minutes. Affordable and fast.\"",
     "relatedRisks": [
       "R0078"
     ],

@@ -3,12 +3,19 @@
     "title": "Lead Intake",
     "keywords": [
       "Lead Intake",
-      "Incoming Line"
+      "lead generation",
+      "lead capture",
+      "phishing bait",
+      "ad fraud funnel",
+      "victim acquisition",
+      "clickbait lure",
+      "data harvesting",
+      "contact farming"
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "进线指通过广告投放、留痕等手段获取潜在客户联系方式，完成引流的第一步。",
-    "description": "这是诈骗链条中的获客环节，操作者通过投放虚假广告或批量添加好友等方式，将有意向的用户引入沟通渠道。进线后的用户信息会被明码标价，转卖给下游的聊天团队或诈骗团伙进行深度开发。",
+    "definition": "Jinxian refers to the first step of lead generation, where potential customer contact information is acquired through ad placements, digital footprints, or other outreach methods.",
+    "description": "This is the customer acquisition phase in the fraud supply chain. Operators attract interested users into communication channels by deploying fake advertisements or mass-adding friends. Once a user 'enters the line,' their information is priced and sold to downstream chat teams or fraud rings for deeper exploitation.",
     "relatedRisks": [
       "R0024",
       "R0007-003"

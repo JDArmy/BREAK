@@ -3,12 +3,18 @@
     "title": "Social Engineering Database",
     "keywords": [
       "Social Engineering Database",
-      "Social Work Library"
+      "SE database",
+      "doxing database",
+      "combolist",
+      "creds database",
+      "PII warehouse",
+      "breach combo list",
+      "personal info dump"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "A database containing extensive personal or organizational information that may be gathered from public sources, data breaches, social media, or other channels. By building a comprehensive social engineering database, attackers can conduct more targeted operations and significantly increase their chances of success.",
-    "description": "A database containing extensive personal or organizational information that may be gathered from public sources, data breaches, social media, or other channels. By building a comprehensive social engineering database, attackers can conduct more targeted operations and significantly increase their chances of success.",
+    "definition": "An illicit, consolidated information database built by aggregating data leaked from multiple sources.",
+    "description": "Fraudsters compile data from public records, database breaches, and social engineering to create a comprehensive repository containing personal identities, contact details, and social connections. Attackers use this database to quickly build detailed profiles of targets, enabling highly effective targeted fraud, extortion, or account takeover.",
     "relatedRisks": [
       "R0092",
       "R0078",

@@ -3,13 +3,19 @@
     "title": "ID Issuance Region Lookup",
     "keywords": [
       "ID Issuance Region Lookup",
-      "Proof of Return"
+      "ID prefix lookup",
+      "household registration query",
+      "ID card first six digits",
+      "ID origin check",
+      "national ID region code",
+      "ID number segmentation",
+      "ID geographic lookup"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In illicit data trading, refers to the ability to query the place of household registration linked to a national ID number based on its first six digits.",
-    "description": "In illicit data trading, refers to the ability to query the place of household registration linked to a national ID number based on its first six digits.",
-    "usageExample": "\"Can filter by region, ID registration origin, phone number origin, real-name verification, contact to order\"",
+    "definition": "An illegal lookup service that queries the household registration location based on a national ID number.",
+    "description": "In underground data markets, 'ID Location' is a service where fraudsters use the first six digits of a national ID number to determine the target's place of household registration. This information is often used to filter victims by region or conduct geographically targeted marketing scams, helping criminals narrow down their target pool.",
+    "usageExample": "Can filter by region, ID location and phone location, contact for real-name verification orders.",
     "relatedRisks": [
       "R0092",
       "R0078",

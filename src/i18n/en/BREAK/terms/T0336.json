@@ -3,13 +3,20 @@
     "title": "Small-Ticket Collection",
     "keywords": [
       "Small-Ticket Collection",
-      "Small Amount Collection"
+      "micro-collection",
+      "small-ticket laundering",
+      "split deposit",
+      "smurfing collection",
+      "micro-payment mule",
+      "low-value aggregation",
+      "fragmented receiving",
+      "small-amount pooling"
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "小额代收是黑产利用他人账户接收多笔小额非法资金，以规避风控的洗钱手段。",
-    "description": "为躲避银行和支付平台对大额、频繁交易的风控监测，黑产将大额赃款拆分成无数笔小额资金，分散到大量代收账户中。这些代收账户的持有者接收资金后，再统一归集转给上家。这种“化整为零”的策略常见于跑分平台的初期接单环节，能有效降低单笔交易被拦截的风险，是洗钱链条中的前端分流措施。",
-    "usageExample": "Paofen collects small amounts and orders large amounts.",
+    "definition": "Micro-collection is a money laundering tactic where criminals use other people's accounts to receive multiple small-value illicit payments to evade risk controls.",
+    "description": "To avoid bank and payment platform monitoring of large or frequent transactions, criminals split a large illicit sum into countless small payments, dispersing them across numerous collection accounts. The holders of these accounts receive the funds and then consolidate and transfer them to the upstream handler. This 'break it down' strategy is common in the initial task-acceptance phase of layering platforms, effectively reducing the risk of single-transaction interception and serving as a front-end dispersal measure in the laundering chain.",
+    "usageExample": "Layering, micro-collection, large supply of QR codes needed.",
     "relatedRisks": [
       "R0060",
       "R0093"

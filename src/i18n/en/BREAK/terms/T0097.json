@@ -3,14 +3,21 @@
     "title": "Database Sale",
     "keywords": [
       "Database Sale",
-      "Selling Warehouse"
+      "db dump sale",
+      "leaked db sale",
+      "database dump",
+      "db leak sale",
+      "selling db",
+      "db vendor",
+      "leak dump"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "The illicit practice of selling database information. Individuals or groups involved in database selling acquire large volumes of sensitive data—such as personal information and account credentials—through various means and then trade it on underground markets for illegal profit. Sellers may exaggerate the value and utility of the data to attract buyers. While the short-term gains can be substantial, the activity carries extreme legal and ethical risks.",
-    "description": "The illicit practice of selling database information. Individuals or groups involved in database selling acquire large volumes of sensitive data—such as personal information and account credentials—through various means and then trade it on underground markets for illegal profit. Sellers may exaggerate the value and utility of the data to attract buyers. While the short-term gains can be substantial, the activity carries extreme legal and ethical risks.",
+    "definition": "The practice of selling stolen databases in bulk through illicit channels.",
+    "description": "Fraudsters package sensitive data—such as personal information, account credentials, and passwords—obtained through various means and sell them at fixed prices on dark web forums or encrypted chat groups. Sellers often exaggerate data freshness and accuracy to inflate prices, while buyers use the data for targeted scams, brute-force attacks, or resale. This activity directly fuels downstream crime and causes large-scale privacy breaches.",
     "relatedRisks": [
       "R0078",
+      "R0028",
       "R0089"
     ],
     "relatedAvoidances": [],

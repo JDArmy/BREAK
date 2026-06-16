@@ -3,13 +3,19 @@
     "title": "Credit Hungry",
     "keywords": [
       "Credit Hungry",
-      "Hanado"
+      "Credit Shopping",
+      "Credit Report Inquiry",
+      "Multiple Credit Applications",
+      "Credit Seeking",
+      "Loan Stacking",
+      "Credit Application Storm",
+      "Credit Tapping"
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "Refers to individuals who frequently apply for credit cards or loans. This behavior is often viewed by financial institutions as a higher-risk indicator, as frequent applications may signal urgent financial needs or poor credit management. Such individuals typically have numerous credit inquiry records on their credit reports, which can negatively impact future credit applications.",
-    "description": "'Frequent applicants' may also be exploited by underground fraud rings for credit fraud, such as in 'debt restructuring' schemes, where fraudsters use upfront funds to help individuals pay off existing debts before saddling them with even higher loan obligations.",
-    "usageExample": "他征信上全是申请记录，典型的纯花户，现在正规银行都不给批了。",
+    "definition": "An individual whose credit report shows a high volume of hard inquiries due to frequent applications for credit cards or loans.",
+    "description": "Because they have applied for multiple credit products in a short period, financial institutions view these individuals as higher-risk—either cash-strapped or exhibiting poor credit management. In underground lending contexts, such profiles are often targeted for “debt restructuring”: a fraud ring pays off their existing debts to temporarily clean their credit report, then immediately helps them apply for a batch of higher-limit loans. The victim ends up with a far heavier debt burden while the ring collects exorbitant service fees.",
+    "usageExample": "His credit report is full of inquiries—a classic over-inquired profile. No mainstream bank will approve him now.",
     "relatedRisks": [
       "R0096"
     ],
@@ -17,12 +23,11 @@
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
+      "BS01"
     ],
     "references": [
       {
-        "title": "Credit Fraud Risk Landscape Report for the First Half of 2024",
+        "title": "Credit Fraud Risk Landscape Report, First Half 2024",
         "link": "https://www.threathunter.cn/blog/2024-ab1e8b8c-509b-44e7-9dbe-d7271765ae2c"
       }
     ],

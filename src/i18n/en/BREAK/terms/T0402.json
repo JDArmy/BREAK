@@ -3,13 +3,17 @@
     "title": "Account-ID Loan",
     "keywords": [
       "Account-ID Loan",
-      "Account/id Loan"
+      "Apple ID pawn",
+      "phone collateral loan",
+      "device-locked loan",
+      "mobile account hostage loan",
+      "ID pawn"
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "以手机账号作为抵押物发放的短期非法高利贷。",
-    "description": "借款人需交出苹果ID或安卓账号控制权，放贷方以此要挟还款，一旦逾期即锁定设备或窃取隐私数据。这种贷款周期极短、利息极高，专门针对急需用钱且无其他抵押物的群体，常见于社交媒体和地下借贷渠道。",
-    "usageExample": "黑户最少都是要苹果12P以上，第一单ID贷1800到手1200，一个星期还款",
+    "definition": "A short-term illegal high-interest loan secured by handing over control of a mobile device account.",
+    "description": "Borrowers are required to surrender access to their Apple ID or Android account, giving the lender leverage to enforce repayment. Upon default, the lender locks the device or extracts private data. With extremely short cycles and sky-high interest, this loan targets people in urgent need of cash who lack other collateral, and is commonly circulated through social media and underground lending channels.",
+    "usageExample": "For black-credit applicants, we require at least an iPhone 12 Pro or higher. First-time ID loan: 1,800 approved, 1,200 in hand, repayment due in one week.",
     "relatedRisks": [
       "R0096"
     ],

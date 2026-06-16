@@ -3,13 +3,20 @@
     "title": "Operation Boss",
     "keywords": [
       "Operation Boss",
-      "Mr. Pan"
+      "crime boss",
+      "syndicate head",
+      "fraud ring leader",
+      "scam compound boss",
+      "kingpin",
+      "criminal mastermind",
+      "operation commander",
+      "ringleader"
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "盘总是诈骗或博彩盘口的实际控制人，负责统筹资金流转与团伙指挥。",
-    "description": "盘总在诈骗或博彩盘口中处于顶层，决定资金分配、洗钱路径和人员分工。他们通过下级代理、车队和码商构建资金清洗网络，将非法所得层层转移。一旦盘口被端，盘总往往是首要追查对象，其控制的资金池规模通常很大。",
-    "usageExample": "Team members who want to move bricks will have plenty of tea; intermediary managers are welcome to come and talk.",
+    "definition": "The actual controller of a fraud or gambling operation, responsible for overall fund flows and crew command.",
+    "description": "The 'Pan Zong' sits at the top of a fraud or gambling operation, making decisions on profit distribution, money laundering routes, and personnel assignments. They build fund-clearing networks through sub-agents, runner crews, and QR code suppliers, moving illicit proceeds through multiple layers. When an operation is busted, the Pan Zong is typically the primary target of investigation, and the capital pools they control are usually substantial.",
+    "usageExample": "Looking for runner crews and individuals to move money; commission is generous. Intermediaries and Pan Zongs welcome to negotiate.",
     "relatedRisks": [
       "R0060",
       "R0093"
@@ -17,6 +24,7 @@
     "relatedAvoidances": [],
     "relatedAttackTools": [],
     "relatedThreatActors": [
+      "TA0015-001",
       "TA0014",
       "TA0015",
       "TA0006-003"

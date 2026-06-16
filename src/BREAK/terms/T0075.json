@@ -2,7 +2,13 @@
   "T0075": {
     "title": "料",
     "keywords": [
-      "料"
+      "料",
+      "数据料",
+      "一手料",
+      "二手料",
+      "数据交易",
+      "社工库",
+      "数据贩子"
     ],
     "aliases": [],
     "category": "数据泄露",
@@ -13,9 +19,12 @@
       "R0089"
     ],
     "relatedAvoidances": [],
-    "relatedAttackTools": [],
+    "relatedAttackTools": [
+      "AT0012"
+    ],
     "relatedThreatActors": [
       "TA0005",
+      "TA0020",
       "TA0040"
     ],
     "relatedBusinessScenes": [

@@ -3,13 +3,21 @@
     "title": "Student Lead",
     "keywords": [
       "Student Lead",
-      "Student Fish"
+      "student job scam",
+      "part-time scam",
+      "fake online survey",
+      "ad-clicking scam",
+      "training fee fraud",
+      "campus target",
+      "student deposit scam",
+      "fake campus job"
     ],
     "aliases": [],
     "category": "Telecom Fraud",
-    "definition": "In fraud contexts, refers to students, particularly those seeking part-time work. Due to their flexible schedules and lack of experience, they are prime targets. Scammers post seemingly legitimate job ads, such as online surveys or ad clicking, requiring upfront 'deposits' or 'training fees' for non-existent or exploitative work.",
-    "description": "In fraud contexts, refers to students, particularly those seeking part-time work. Due to their flexible schedules and lack of experience, they are prime targets. Scammers post seemingly legitimate job ads, such as online surveys or ad clicking, requiring upfront 'deposits' or 'training fees' for non-existent or exploitative work.",
+    "definition": "An internal term used by fraud rings for groups primarily targeting school students.",
+    "description": "Exploiting students' lack of social experience and desire to earn money through part-time work, fraudsters post fake job ads like 'high pay, daily settlement' or 'cashback for reviews.' Once contacted, victims are asked to pay 'training fees' or 'security deposits,' ultimately receiving no payment and losing their principal. This demographic is a prime target for task-based scams.",
     "relatedRisks": [
+      "R0017-001",
       "R0095",
       "R0150"
     ],

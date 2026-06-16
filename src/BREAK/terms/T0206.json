@@ -2,7 +2,15 @@
   "T0206": {
     "title": "风控料",
     "keywords": [
-      "风控料"
+      "风控料",
+      "风控数据",
+      "风控标签",
+      "用户画像",
+      "风控料出",
+      "风控一手",
+      "信贷数据",
+      "风控包",
+      "风控数据出"
     ],
     "aliases": [],
     "category": "数据泄露",
@@ -13,7 +21,9 @@
       "R0078",
       "R0089"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0029-001"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0005",

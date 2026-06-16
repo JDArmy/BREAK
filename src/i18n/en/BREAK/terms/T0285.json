@@ -3,13 +3,20 @@
     "title": "Tainted USDT",
     "keywords": [
       "Tainted USDT",
-      "Black U"
+      "dirty USDT",
+      "sanctioned USDT",
+      "flagged stablecoin",
+      "illicit crypto",
+      "stolen USDT",
+      "blacklisted Tether",
+      "contaminated USDT",
+      "high-risk wallet"
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "黑U指来源于诈骗、盗币等非法操作的USDT，已被标记为高风险。",
-    "description": "黑U是黑灰产对非法来源USDT的称呼，这些虚拟货币通常涉及诈骗、资金盘、黑客盗币等犯罪活动。交易所和链上分析工具会对这些地址进行标记，一旦接收方账户与之产生交易关联，可能面临账户冻结、资金被扣押的风险。黑灰产通过混币器、跨链桥等方式试图清洗黑U，但成功率并不稳定，参与者随时可能面临法律追责。",
-    "usageExample": "Black U is for sale: it can be entered into the exchange, can be used as a platform contract, and can be converted into RMB.",
+    "definition": "Black USDT refers to USDT originating from illegal operations such as fraud and coin theft, already flagged as high-risk.",
+    "description": "Black USDT is the underground term for USDT obtained through illegal activities, typically involving fraud, Ponzi schemes, hacking, and coin theft. Exchanges and on-chain analytics tools flag these addresses, and any receiving account that transacts with them risks account freezing and fund seizure. Underground actors attempt to clean black USDT through mixers, cross-chain bridges, and other methods, but the success rate is inconsistent, and participants face potential legal liability at any time.",
+    "usageExample": "Black USDT for sale: can be deposited to exchanges, used for platform contracts, or converted to RMB.",
     "relatedRisks": [
       "R0121",
       "R0060",

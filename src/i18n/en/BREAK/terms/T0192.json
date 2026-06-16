@@ -3,13 +3,19 @@
     "title": "Phone Attribution Lookup",
     "keywords": [
       "Phone Attribution Lookup",
-      "Return By Hand"
+      "phone carrier lookup",
+      "phone geographic origin",
+      "mobile number attribution",
+      "phone prefix lookup",
+      "carrier identification",
+      "phone region code",
+      "mobile number origin check"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In illicit data trading, refers to querying the carrier and geographic origin of a phone number, often used for precise targeting or correlation analysis of an individual.",
-    "description": "In illicit data trading, refers to querying the carrier and geographic origin of a phone number, often used for precise targeting or correlation analysis of an individual.",
-    "usageExample": "\"Can filter by region, phone number origin, real-name verification, contact to order\"",
+    "definition": "An illegal lookup service that queries the carrier and geographic location associated with a phone number.",
+    "description": "In illegal data trading, 'Phone Location' is a service where fraudsters input a phone number to obtain its carrier and registered location. This service is commonly used to pinpoint targets, analyze their activity range, or provide geographic context for telecom fraud and marketing harassment.",
+    "usageExample": "Can filter by region, phone location, contact for real-name verification orders.",
     "relatedRisks": [
       "R0092",
       "R0078",

@@ -3,12 +3,19 @@
     "title": "Cloud Deduction",
     "keywords": [
       "Cloud Deduction",
-      "Cloud Buckle"
+      "QuickPass deduction",
+      "contactless payment fraud",
+      "NFC skimming",
+      "UnionPay exploit",
+      "flash payment theft",
+      "tokenized payment abuse",
+      "contactless carding",
+      "tap-to-pay fraud"
     ],
     "aliases": [],
     "category": "Telecom Fraud",
-    "definition": "Refers to fraudulent funds directly deducted or transferred through the UnionPay QuickPass payment system.",
-    "description": "Refers to fraudulent funds directly deducted or transferred through the UnionPay QuickPass payment system.",
+    "definition": "Refers to illicit funds that are directly deducted or transferred through mobile payment channels such as UnionPay QuickPass.",
+    "description": "In the money laundering stage of telecom fraud, QuickPass is often used to rapidly consolidate funds transferred by victims due to its fast card binding and instant settlement. Fraud rings trick victims into downloading QuickPass, linking compromised bank cards, or scanning payment codes to achieve an 'instant deduction,' after which the funds are immediately split and moved. These deducted funds typically pass through multiple layers of accounts before being funneled into money-muling platforms or cryptocurrency exchange channels, making tracing extremely difficult.",
     "relatedRisks": [
       "R0044",
       "R0032",

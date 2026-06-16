@@ -3,12 +3,19 @@
     "title": "Stock Investor Data",
     "keywords": [
       "Stock Investor Data",
-      "Gm Material"
+      "investor leads",
+      "retail investor PII",
+      "high-net-worth data",
+      "active trader profiles",
+      "investor fullz",
+      "stock trader intel",
+      "wealth management targets",
+      "investor database"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "Also known as investor material, in illicit data trading this refers to personal information data of retail investors, typically containing key details of high-net-worth or active investors. Due to its high value and precision, this type of data is highly sought after in underground transactions.",
-    "description": "Also known as investor material, in illicit data trading this refers to personal information data of retail investors, typically containing key details of high-net-worth or active investors. Due to its high value and precision, this type of data is highly sought after in underground transactions.",
+    "definition": "Investor data refers to personal information specifically tailored for targeting stock investors, traded in illicit data markets.",
+    "description": "This data precisely targets high-net-worth or active retail investors and contains sensitive information such as investment preferences and portfolio holdings. Fraud rings use this data to carry out stock recommendation scams, pump-and-dump schemes, and other illegal activities, with single fraud amounts often being substantial. Due to its high conversion rate and strong monetization potential, investor data is a high-value commodity in darknet trading.",
     "relatedRisks": [
       "R0078",
       "R0089"

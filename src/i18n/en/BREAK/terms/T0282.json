@@ -3,13 +3,20 @@
     "title": "Account Warming",
     "keywords": [
       "Account Warming",
-      "Keep An Account"
+      "account nurturing",
+      "profile aging",
+      "reputation building",
+      "warm-up script",
+      "sleeper account activation",
+      "bot-human mimicry",
+      "credibility farming",
+      "account maturation"
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "养号指黑灰产通过模拟正常用户行为提升账号活跃度和可信度的培育操作。",
-    "description": "黑灰产从业者通过自动化脚本或人工方式，让账号执行浏览、点赞、评论、发帖等日常操作，使平台算法将其判定为正常活跃用户。养号周期从几天到数月不等，期间账号会逐步增加操作频率，避免触发风控。养成的账号可用于后续的引流、刷量、诈骗等违规活动，一旦被封禁，黑灰产会立即启用备用账号继续操作。",
-    "usageExample": "Use AI to fully automatically reply to note comments, automatically reply to comments, maintain accounts and intercept traffic to increase the popularity of notes",
+    "definition": "Account nurturing refers to the cultivation process where underground actors simulate normal user behavior to increase an account’s activity level and trustworthiness.",
+    "description": "Underground practitioners use automated scripts or manual methods to make accounts perform routine actions such as browsing, liking, commenting, and posting, so that platform algorithms classify them as legitimate active users. The nurturing period can range from a few days to several months, during which the frequency of operations is gradually increased to avoid triggering risk controls. Once nurtured, these accounts are used for subsequent illicit activities such as traffic diversion, engagement manipulation, and fraud. If an account is banned, operators immediately activate backup accounts to continue operations.",
+    "usageExample": "Using AI to auto-reply to notes and comments, auto-engage to nurture accounts and intercept traffic, boosting note popularity.",
     "relatedRisks": [
       "R0034",
       "R0017",
@@ -20,6 +27,7 @@
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [
+      "AT0003",
       "AT0044",
       "AT0009",
       "AT0016",

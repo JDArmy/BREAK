@@ -3,13 +3,20 @@
     "title": "Fast Track Query",
     "keywords": [
       "Fast Track Query",
-      "Express"
+      "rapid data retrieval",
+      "real-time lookup",
+      "instant query service",
+      "high-speed data channel",
+      "on-demand data pull",
+      "express data lookup",
+      "quick-turnaround query",
+      "live data feed"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In illegal data trading, a method used by upstream sources to obtain data, characterized by fast query speeds (results within minutes), with sources possibly being public authority systems or high-efficiency channels.",
-    "description": "In illegal data trading, a method used by upstream sources to obtain data, characterized by fast query speeds (results within minutes), with sources possibly being public authority systems or high-efficiency channels.",
-    "usageExample": "\"Bank transaction records for any bank, stable, fast line—departing Sunday night, returns Tuesday or Wednesday.\"",
+    "definition": "An illegal channel for data queries that provides extremely fast results, often within minutes.",
+    "description": "快线是黑产上游的高效数据获取方式，通常依赖公权系统或自动化接口，能迅速返回目标信息。它被用于紧急查档需求，如实时定位、即时身份核验等。快线的存在表明黑产已渗透进高速信息网络，极大提升了犯罪效率。",
+    "usageExample": "\"Bank card transaction records, any bank, stable. Express line departs Sunday evening, returns Monday or Tuesday.\"",
     "relatedRisks": [
       "R0092",
       "R0078",

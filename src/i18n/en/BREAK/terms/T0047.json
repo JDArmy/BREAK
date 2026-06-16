@@ -3,22 +3,28 @@
     "title": "No-Collateral Loan",
     "keywords": [
       "No-Collateral Loan",
-      "Empty"
+      "Unsecured Loan",
+      "Unlicensed Lending",
+      "Private Lending",
+      "Loan Shark",
+      "Street Loan",
+      "Underground Loan",
+      "Hard Money Loan",
+      "No Collateral"
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "Typically refers to issuing loans without any collateral or guarantee. In current usage, it is more often a term from underground lending, describing loans issued by individuals or illegal financial institutions operating without a legitimate business license.",
-    "description": "Typically refers to issuing loans without any collateral or guarantee. In current usage, it is more often a term from underground lending, describing loans issued by individuals or illegal financial institutions operating without a legitimate business license.",
-    "usageExample": "银行下不来的都去找空放了，利息高得吓人，但当天就能拿钱。",
-    "relatedRisks": [
-      "R0096"
-    ],
+    "definition": "A high-risk, unsecured loan issued without collateral or guarantees, typically by unlicensed underground lenders or private individuals operating outside the formal financial system.",
+    "description": "This lending model relies not on standard credit checks but on violent collection tactics to manage risk. In the context of credit fraud, such loans are often used to create debt traps through “borrow-new-to-pay-old” cycles or to provide short-term bridge funding for illicit operations. Once a borrower falls in, they face exorbitant interest rates and physical intimidation, making it extremely difficult to exit.",
+    "usageExample": "Those who get rejected by banks all turn to unsecured underground lenders. The interest is terrifyingly high, but you can get cash the same day.",
+    "relatedRisks": [],
     "relatedAvoidances": [],
     "relatedAttackTools": [],
-    "relatedThreatActors": [],
+    "relatedThreatActors": [
+      "TA0038"
+    ],
     "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
+      "BS01"
     ],
     "references": [],
     "updated": "2026-06-16"

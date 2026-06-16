@@ -3,13 +3,20 @@
     "title": "Escrow Broker",
     "keywords": [
       "Escrow Broker",
-      "Guarantee Agency"
+      "middleman service",
+      "transaction broker",
+      "deal guarantor",
+      "black market escrow",
+      "credential verification",
+      "trusted intermediary",
+      "trade facilitator",
+      "dispute resolution"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In illicit data trading, refers to an intermediary role responsible for verifying the credentials of both parties, overseeing the transaction process, and ensuring its successful completion. This model increases trust between buyers and sellers, standardizes the illicit data trade workflow, and to some extent facilitates the smooth execution of illegal data deals.",
-    "description": "In illicit data trading, refers to an intermediary role responsible for verifying the credentials of both parties, overseeing the transaction process, and ensuring its successful completion. This model increases trust between buyers and sellers, standardizes the illicit data trade workflow, and to some extent facilitates the smooth execution of illegal data deals.",
-    "usageExample": "\"Scam prevention reminder: Be cautious in transactions, it is recommended to go through a top-tier intermediary.\"",
+    "definition": "An intermediary role in illegal data trading that provides trust endorsement and fund escrow services for buyers and sellers.",
+    "description": "To mitigate the risks of exit scams and fraud in the underground data market, intermediaries akin to escrow agents have emerged. The guarantor verifies the seller's credentials, temporarily holds the funds, and releases payment to the seller only after the buyer confirms the data's accuracy, taking a commission from the transaction. This model makes illegal data trading more 'professional,' attracting more participants but also complicating efforts to track and crack down on these activities.",
+    "usageExample": "\"Scam prevention tip: Be cautious in your transactions; it is recommended to use a reputable escrow agent.\"",
     "relatedRisks": [
       "R0078"
     ],

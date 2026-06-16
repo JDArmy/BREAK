@@ -3,18 +3,25 @@
     "title": "Traffic Diversion",
     "keywords": [
       "Traffic Diversion",
-      "Guide Powder"
+      "Platform Funneling",
+      "Cross-Platform Lead Gen",
+      "Traffic Funneling",
+      "Audience Migration",
+      "DM-to-External Funnel",
+      "Bio Link-Out",
+      "Traffic Export",
+      "Follower Export"
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "导粉指将用户从一个社交平台批量引导至另一个平台，以完成后续变现的引流操作。",
-    "description": "常见于短视频、直播等公域流量场景，操作者通过话术、私信或评论区诱导用户跳转至私域或指定平台。导粉是流量变现的关键环节，常服务于电商刷单、色情导流或诈骗引流。该行为绕开平台监管，易导致用户被收割，平台流量生态受损。",
-    "usageExample": "Guide powder when issuing orders, ensuring quality and quantity, and supporting inspection",
+    "definition": "Funnel transfer refers to the practice of systematically redirecting users from one social platform to another in bulk to enable subsequent monetization.",
+    "description": "Commonly seen in public traffic scenarios such as short videos and live streaming, operators use scripted pitches, direct messages, or comment sections to lure users into private domains or designated platforms. Funnel transfer is a critical step in traffic monetization, often serving e-commerce brushing, adult content redirection, or fraud schemes. This activity bypasses platform regulations, often resulting in user exploitation and damage to the platform's traffic ecosystem.",
+    "usageExample": "Funnel transfer for order generation, guaranteed quality and volume, samples available for verification.",
     "relatedRisks": [
+      "R0024",
       "R0017",
       "R0017-001",
       "R0005",
-      "R0024",
       "R0007-003"
     ],
     "relatedAvoidances": [],

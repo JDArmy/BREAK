@@ -3,12 +3,18 @@
     "title": "Manual Poverty-Lead Harvesting",
     "keywords": [
       "Manual Poverty-Lead Harvesting",
-      "Handmade Poverty Alleviation Powder"
+      "poverty relief data",
+      "welfare recipient scraping",
+      "lead harvesting manual",
+      "social media scraping leads",
+      "poverty lead gen",
+      "manual data collection",
+      "aid beneficiary scraping"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "The practice by underground criminal groups of manually harvesting personal information belonging to recipients of poverty alleviation programs at scale through social media and other channels.",
-    "description": "The practice by underground criminal groups of manually harvesting personal information belonging to recipients of poverty alleviation programs at scale through social media and other channels.",
+    "definition": "The manual screening and collection of personal information specifically targeting recipients of poverty alleviation benefits.",
+    "description": "Fraudsters pose as officials on social media or through offline channels, luring low-income individuals into providing sensitive information such as ID numbers and bank card details under the pretense of processing subsidies. The collected data is packaged and either used to apply for fraudulent relief funds or sold to other scam rings for targeted fraud, directly harming vulnerable groups.",
     "relatedRisks": [
       "R0078",
       "R0089"
@@ -27,7 +33,7 @@
     ],
     "references": [
       {
-        "title": "[Underground Data Insights] 2024 Data Breach Risk Landscape Report",
+        "title": "[Black Big Data] 2024 Data Breach Risk Situation Report",
         "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
       }
     ],

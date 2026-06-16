@@ -3,13 +3,20 @@
     "title": "Order Padding",
     "keywords": [
       "Order Padding",
-      "Fill Order"
+      "fake order padding",
+      "order inflation",
+      "sales volume padding",
+      "fake order generation",
+      "order boosting",
+      "sales padding",
+      "order fabrication",
+      "transaction padding"
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "一种通过虚构订单来伪造销量、规避平台处罚或骗取补贴的营销欺诈作弊行为。",
-    "description": "商家或刷单团伙组织大量虚假账号下单，制造商品热销假象以提升搜索排名。在电商大促期间，补单行为尤为猖獗，用于套取平台发放的优惠券和推广佣金。这种行为严重破坏市场公平，损害真实消费者利益。",
-    "usageExample": "需要测评补单的商家请找我 一手品牌",
+    "definition": "A form of marketing fraud involving the creation of fictitious orders to falsify sales volume, evade platform penalties, or fraudulently obtain subsidies.",
+    "description": "Merchants or click-farm rings organize large numbers of fake accounts to place orders, creating a false impression of product popularity to boost search rankings. This activity is particularly rampant during major e-commerce promotions, used to siphon off platform-issued coupons and promotional commissions. This behavior severely undermines market fairness and harms the interests of genuine consumers.",
+    "usageExample": "'Merchants needing review and order padding, please find me, first-hand brand'",
     "relatedRisks": [
       "R0017-001",
       "R0017",

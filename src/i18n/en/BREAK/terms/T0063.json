@@ -3,13 +3,20 @@
     "title": "Credit Profile Dilution",
     "keywords": [
       "Credit Profile Dilution",
-      "Net Flower"
+      "credit inquiry overload",
+      "multi-platform borrowing",
+      "credit report dilution",
+      "credit file pollution",
+      "credit hungry",
+      "loan application spree",
+      "credit data contamination",
+      "credit profile damage"
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "Refers to a credit profile that has become \"messy\" due to excessive online loan applications, where the borrower has taken out too many online loans, regardless of whether those loans are reported to credit bureaus, leaving extensive traces in alternative credit databases.",
-    "description": "This typically results from individuals frequently applying for online loans, leading to \"multi-platform borrowing\" that complicates and muddies their credit data. Indicators include an excessive number of recent credit inquiries, multiple outstanding loan records, high credit card utilization rates, and elevated debt levels.",
-    "usageExample": "他现在网花了，正规平台都拒，只能找那些黑中介去碰瓷，结果越贷越花，最后彻底变成网黑。",
+    "definition": "Describes a personal credit profile that has become extremely chaotic and poor due to frequent applications for online loans, as reflected in big data credit checks.",
+    "description": "These users typically apply for loans on multiple platforms in a short period, leaving a trail of numerous credit inquiries and debt records. Fraud brokers view these 'credit-messed' users as potential clients, selling them services like 'big data cleanup' or 'forced loan approval.' In reality, this chaotic data state is very difficult to fix, and users often fall into a vicious cycle of taking out new loans to pay old ones.",
+    "usageExample": "His credit is completely messed up now, so all legitimate platforms reject him. He can only go to shady brokers for a long shot, which just makes his credit worse until he's totally blacklisted.",
     "relatedRisks": [
       "R0096"
     ],
@@ -17,8 +24,7 @@
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
+      "BS01"
     ],
     "references": [],
     "updated": "2026-06-16"

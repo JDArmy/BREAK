@@ -2,13 +2,21 @@
   "T0215": {
     "title": "Black Five Categories",
     "keywords": [
-      "Black Five Categories"
+      "Black Five Categories",
+      "black five data",
+      "sensitive product data",
+      "health product data",
+      "weight loss data",
+      "breast enhancement data",
+      "medical product data",
+      "diet product data",
+      "cosmetic procedure data"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "指从电商平台泄露的五类敏感商品消费者数据，包括药品、医疗器械、丰胸、减肥和增高产品。",
-    "description": "由于购买这些商品的用户有明确的隐私顾虑和消费需求，其数据在黑市价值很高。黑产获取这些数据后，会转卖给其他诈骗团伙，用于冒充专家回访、推销假药或保健品等精准诈骗活动。",
-    "usageExample": "“Providing black five-category data such as weight loss, freckle removal, and breast enhancement, users who placed orders in real time saw amazing results!!”",
+    "definition": "Refers to consumer data from e-commerce platforms for five sensitive product categories: pharmaceuticals, medical devices, breast enhancement, weight loss, and height increase products.",
+    "description": "Due to the clear privacy concerns and specific consumer needs of buyers for these products, this data holds high value on the black market. After obtaining it, black-market actors resell it to other fraud rings for targeted scams, such as impersonating specialists for follow-up calls or peddling fake medicines and health supplements.",
+    "usageExample": "'Selling weight loss, freckle removal, breast enhancement, and other black-five-category data, real-time ordering users, super effective results!!'",
     "relatedRisks": [
       "R0078",
       "R0089"

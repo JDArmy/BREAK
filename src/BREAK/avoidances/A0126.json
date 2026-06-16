@@ -6,7 +6,12 @@
     "description": "即时价格容易被单笔大额交易操纵，TWAP平滑价格波动。实施细节：从链上DEX记录每个区块的价格累积值；计算指定时间窗口（如30分钟）的平均价格；使用Uniswap V2/V3的内置TWAP预言机或自行实现；设置合理的时间窗口，太短易被操纵，太长滞后性大；结合即时价格和TWAP，设置最大偏差阈值。攻击者需要持续操纵价格一段时间才能影响TWAP，成本显著提高。Cube Exchange研究表明TWAP是防御闪电贷价格操纵的有效手段。",
     "complexity": "中级",
     "limitation": "价格更新存在滞后，市场剧烈波动时不及时；攻击者可能通过持续操纵绕过；链上存储历史价格增加Gas成本；需要足够的交易量支撑价格发现",
-    "references": [],
+    "references": [
+      {
+        "title": "The Dangers of Oracle Manipulation in Blockchain",
+        "link": "https://hydnsec.com/blog-posts/the-dangers-of-oracle-manipulation-in-blockchain-a-deep-dive"
+      }
+    ],
     "updated": "2026-06-16",
     "keywords": [
       "TWAP",

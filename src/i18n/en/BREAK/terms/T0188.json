@@ -3,13 +3,20 @@
     "title": "Four-Factor PII",
     "keywords": [
       "Four-Factor PII",
-      "Four Elements"
+      "bank card PII",
+      "cardholder identity",
+      "bank account details",
+      "financial PII set",
+      "cardholder name ID",
+      "bank verification data",
+      "four-point PII",
+      "bank card owner data"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In illicit data trading, refers to the four critical pieces of financial information: cardholder name, national ID number, bank card number, and the phone number registered with the bank.",
-    "description": "In illicit data trading, refers to the four critical pieces of financial information: cardholder name, national ID number, bank card number, and the phone number registered with the bank.",
-    "usageExample": "\"Bank four-element data, rumored insider material, act fast or regret missing out\"",
+    "definition": "The four core pieces of financial information: cardholder name, national ID number, bank card number, and bank-registered phone number.",
+    "description": "In illegal data trading, the 'Four Elements' are critical for financial fraud and account takeover. Criminals obtain this data through insider leaks or database breaches, using it for unauthorized transactions, money laundering, or fraudulent loan applications. With all four elements, attackers can gain near-total control over a victim's financial accounts, posing an extreme risk.",
+    "usageExample": "Bank four elements, legendary insider material, act fast or miss out.",
     "relatedRisks": [
       "R0078",
       "R0089",
@@ -18,6 +25,7 @@
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [
+      "AT0039",
       "AT0012",
       "AT0064"
     ],

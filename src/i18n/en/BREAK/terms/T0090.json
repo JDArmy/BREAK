@@ -3,12 +3,18 @@
     "title": "Decryption",
     "keywords": [
       "Decryption",
-      "Decrypt"
+      "phone unmasking",
+      "shipment label decrypt",
+      "tracking number decrypt",
+      "masked number reveal",
+      "virtual number decrypt",
+      "logistics data decrypt",
+      "privacy label bypass"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "A decryption service that targets privacy-protected shipping labels. By inputting a tracking number and a virtual phone number (or a partially masked phone number), the service decrypts and reveals the full, unmasked phone number.",
-    "description": "A decryption service that targets privacy-protected shipping labels. By inputting a tracking number and a virtual phone number (or a partially masked phone number), the service decrypts and reveals the full, unmasked phone number.",
+    "definition": "An operation in which criminals restore full phone numbers from partially masked information on privacy-enhanced express delivery waybills.",
+    "description": "Decryption services primarily serve telecom fraud rings and underground marketing operations, forming a critical link in the express information leakage chain. Operators illegally obtain waybill numbers and their corresponding virtual or masked phone numbers, then restore the full number using internal system access or cracking tools. Once obtained, the complete phone numbers are used for precision scams, advertising, or resale, directly violating user privacy.",
     "relatedRisks": [
       "R0092",
       "R0078",
@@ -30,7 +36,7 @@
     ],
     "references": [
       {
-        "title": "2024 Data Breach Risk Landscape Report",
+        "title": "[Underground Big Data] 2024 Data Breach Risk Landscape Report",
         "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
       }
     ],

@@ -2,13 +2,20 @@
   "T0129": {
     "title": "Pig Trough",
     "keywords": [
-      "Pig Trough"
+      "Pig Trough",
+      "encrypted chat app",
+      "scam communication tool",
+      "dating platform",
+      "scam infrastructure",
+      "chat platform",
+      "pigsty app",
+      "messaging app"
     ],
     "aliases": [],
     "category": "Telecom Fraud",
-    "definition": "A chat or dating tool used in pig-butchering scams. Scammers refer to victims as 'pigs,' dating sites as 'pigsties,' chat tools as 'pig troughs,' and the chat scripts as 'pig feed.' In telecom fraud, scammers use these scripts to build emotional bonds, presenting themselves as ideal partners to manipulate and deceive victims.",
-    "description": "A chat or dating tool used in pig-butchering scams. Scammers refer to victims as 'pigs,' dating sites as 'pigsties,' chat tools as 'pig troughs,' and the chat scripts as 'pig feed.' In telecom fraud, scammers use these scripts to build emotional bonds, presenting themselves as ideal partners to manipulate and deceive victims.",
-    "usageExample": "那个组刚换了新猪食槽，现在全用某加密聊天软件，每天按三班倒给猪灌饲料，养肥了直接推给杀鱼组。",
+    "definition": "A pig trough refers to the chat or social tools used by fraud rings for daily communication and emotional grooming, serving as the communication pipeline in the pig-butchering process.",
+    "description": "In pig-butchering telecom fraud, scammers refer to victims as “pigs” and dating or matchmaking platforms as “pigsties.” The pig trough is the messaging app or social tool they use to build intimacy. Operators use the pig trough to deliver pre-scripted “pig feed” talking points on a daily basis, presenting themselves as high-value partners and continuously dispensing fake affection to cloud the victim’s judgment. Once the victim becomes emotionally dependent on the fabricated relationship, they are steered into fake investments or gambling schemes to be fully fleeced.",
+    "usageExample": "That crew just switched to a new pig trough—they’re all on an encrypted chat app now, running three shifts a day to pump feed into the pigs, and once they’re fattened up they hand them straight to the fish-killing team.",
     "relatedRisks": [
       "R0150",
       "R0095"

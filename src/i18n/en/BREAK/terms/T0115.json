@@ -3,17 +3,24 @@
     "title": "Casting Bait",
     "keywords": [
       "Casting Bait",
-      "Bait"
+      "mass baiting",
+      "broadcast bait",
+      "fake loan offer",
+      "fake credit increase",
+      "HPV vaccine scam",
+      "epidemic survey scam",
+      "clickbait link",
+      "mass phishing SMS"
     ],
     "aliases": [],
     "category": "Telecom Fraud",
-    "definition": "The act of scammers broadly distributing bait through mass phone calls, SMS messages, social media posts, or fake advertisements on gaming and online platforms. The bait is often disguised as loan offers, credit card limit increases, HPV vaccine appointments, or epidemiological surveys, waiting for potential victims to take the bait.",
-    "description": "The act of scammers broadly distributing bait through mass phone calls, SMS messages, social media posts, or fake advertisements on gaming and online platforms. The bait is often disguised as loan offers, credit card limit increases, HPV vaccine appointments, or epidemiological surveys, waiting for potential victims to take the bait.",
-    "usageExample": "团伙头目在群里催问手下，‘今天的料撒得够不够多，怎么还没几条鱼咬钩’。他们说的撒鱼饵，就是看谁发的钓鱼短信链接被点开得多。",
+    "definition": "The preparatory act of mass-distributing fake advertisements or messages to screen for potential victims.",
+    "description": "Fraud rings widely disseminate bait such as 'loan limit increases' or 'vaccine appointments' through bulk SMS, social media groups, or web pop-ups. This stage does not involve direct fraud but waits for interested victims to initiate contact, effectively filtering for easy targets for the subsequent 'cashing out' stage.",
+    "usageExample": "The ringleader pressed his crew in the group chat, asking, 'Did you scatter enough bait today? Why haven't any fish bitten yet?' By 'scattering bait,' he meant checking who had clicked on the phishing SMS links they sent out.",
     "relatedRisks": [
+      "R0084",
       "R0095",
       "R0150",
-      "R0084",
       "R0131"
     ],
     "relatedAvoidances": [],

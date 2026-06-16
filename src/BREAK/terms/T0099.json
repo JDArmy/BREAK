@@ -2,17 +2,29 @@
   "T0099": {
     "title": "扫号",
     "keywords": [
-      "扫号"
+      "扫号",
+      "撞库",
+      "扫号器",
+      "批量登录",
+      "账号验证",
+      "脚本扫号",
+      "活账号",
+      "密码喷洒",
+      "账号筛选"
     ],
     "aliases": [],
     "category": "数据泄露",
     "definition": "指利用自动化工具批量尝试登录账号，筛选出有效凭证的非法行为。",
     "description": "黑产利用已泄露的账号密码组合，通过脚本对多个平台进行大规模登录尝试，筛选出可用的账号。这些被验证有效的账号可用于盗取虚拟资产、发布违规信息或作为后续精准诈骗的“料”。该行为严重威胁个人账号安全与资金安全。",
     "relatedRisks": [
+      "R0032-001",
+      "R0088",
       "R0090"
     ],
     "relatedAvoidances": [],
-    "relatedAttackTools": [],
+    "relatedAttackTools": [
+      "AT0042"
+    ],
     "relatedThreatActors": [],
     "relatedBusinessScenes": [
       "BS00"

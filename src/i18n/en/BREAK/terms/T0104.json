@@ -3,12 +3,18 @@
     "title": "Data Cleaning",
     "keywords": [
       "Data Cleaning",
-      "Washing Material"
+      "data scrubbing",
+      "lead refinement",
+      "PII sanitization",
+      "deduplication",
+      "data normalization",
+      "raw data processing",
+      "lead validation"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "The process of cleaning and refining raw data. This involves removing useless information, correcting errors, and deleting duplicate records to make the data cleaner and more usable. Washed data is typically easier to exploit and sell on underground markets.",
-    "description": "The process of cleaning and refining raw data. This involves removing useless information, correcting errors, and deleting duplicate records to make the data cleaner and more usable. Washed data is typically easier to exploit and sell on underground markets.",
+    "definition": "The process of filtering, deduplicating, and formatting raw illegally obtained data.",
+    "description": "Fraudsters clean up messy raw data by removing invalid, duplicate, or erroneous entries, transforming it into well-structured, ready-to-use “premium material.” Laundered data commands higher prices on the market and is often used for targeted scams or fraudulent loan applications, significantly boosting the efficiency of downstream crimes.",
     "relatedRisks": [
       "R0078",
       "R0089"

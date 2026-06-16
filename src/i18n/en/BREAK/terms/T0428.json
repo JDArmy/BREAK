@@ -3,12 +3,18 @@
     "title": "Commission Rate",
     "keywords": [
       "Commission Rate",
-      "Point"
+      "commission percentage",
+      "service fee rate",
+      "risk-adjusted fee",
+      "brokerage point",
+      "facilitation fee rate",
+      "cut of proceeds",
+      "channel fee percentage"
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "黑产团伙根据操作风险高低向客户抽取的服务费比例。",
-    "description": "在信贷欺诈、跑分等黑产活动中，中介或操作方会根据业务的风险等级收取不同点位的费用。操作渠道越隐蔽、涉及金额越大、被风控拦截概率越高，点位就越高。例如，利用虚假企业进行大额背债的点位远高于普通个人消费贷包装。点位是黑产衡量风险与收益的核心指标，高点位往往意味着更高的欺诈成功率或更严重的法律后果。",
+    "definition": "The service fee percentage charged by fraud syndicates to clients based on the risk level of the operation.",
+    "description": "In credit fraud, money muling, and other underground activities, intermediaries or operators charge different fee percentages based on the risk level of the business. The more covert the operation channel, the larger the amount involved, and the higher the probability of being blocked by risk controls, the higher the fee percentage. For example, the fee for large-scale debt assumption using a fake business is far higher than for ordinary personal consumer loan packaging. The fee percentage is a core metric for fraud syndicates to measure risk and return; a high percentage often implies a higher fraud success rate or more severe legal consequences.",
     "relatedRisks": [
       "R0096"
     ],

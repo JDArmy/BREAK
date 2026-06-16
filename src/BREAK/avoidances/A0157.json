@@ -6,7 +6,12 @@
     "description": "隐私KYC：zk-SNARK证明年龄/国籍；选择性披露属性；链下验证链上证明；监管可审计；用户控制数据。",
     "complexity": "高级",
     "limitation": "技术复杂度高；监管接受度未知；计算成本高",
-    "references": [],
+    "references": [
+      {
+        "title": "Zero-Knowledge KYC Solutions",
+        "link": "https://polygon.technology/"
+      }
+    ],
     "updated": "2026-06-16",
     "keywords": [
       "零知识KYC",

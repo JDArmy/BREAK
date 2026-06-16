@@ -2,7 +2,15 @@
   "T0354": {
     "title": "水房",
     "keywords": [
-      "水房"
+      "水房",
+      "洗钱窝点",
+      "资金分流",
+      "跑分",
+      "地下钱庄",
+      "多级转账",
+      "赌资洗白",
+      "资金归集",
+      "水房转账"
     ],
     "aliases": [],
     "category": "赌博",
@@ -13,8 +21,12 @@
       "R0060"
     ],
     "relatedAvoidances": [],
-    "relatedAttackTools": [],
+    "relatedAttackTools": [
+      "AT0026"
+    ],
     "relatedThreatActors": [
+      "TA0038",
+      "TA0006-003",
       "TA0014",
       "TA0016"
     ],

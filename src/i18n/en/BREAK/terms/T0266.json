@@ -3,14 +3,23 @@
     "title": "Traffic Interception",
     "keywords": [
       "Traffic Interception",
-      "Intercept Flow"
+      "typosquatting",
+      "click hijacking",
+      "traffic diversion",
+      "malvertising",
+      "pharming",
+      "SEO poisoning",
+      "affiliate hijacking",
+      "URL hijacking"
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "截流指通过技术或内容手段拦截竞争对手的流量，将用户强行导向己方平台的一种恶意引流行为。",
-    "description": "黑产从业者常利用关键词劫持、恶意弹窗或仿冒页面等方式，在用户访问正规渠道时截取其流量。该手段广泛用于电商刷单、博彩推广等场景，能直接窃取竞争对手的客户资源，造成对方经济损失。",
-    "usageExample": "** Cut off retail fans when they go out. There is a video settlement record of fans, and the money can be paid on the same day.",
+    "definition": "Jieliu is a malicious traffic hijacking tactic that uses technical or content-based methods to intercept a competitor's traffic and forcibly redirect users to one's own platform.",
+    "description": "Fraud operators often employ keyword hijacking, malicious pop-ups, or cloned landing pages to divert users while they are trying to access legitimate channels. This technique is widely used in e-commerce brushing and gambling promotion to directly steal a competitor's customer resources and cause financial losses.",
+    "usageExample": "Selling ** jieliu investor leads, with proof of traffic videos and settlement records. Looking for partners who can settle daily.",
     "relatedRisks": [
+      "R0007-002",
+      "R0142",
       "R0017",
       "R0017-001",
       "R0005",

@@ -3,13 +3,20 @@
     "title": "Digital Gift Card",
     "keywords": [
       "Digital Gift Card",
-      "Electronic Card"
+      "virtual stored-value card",
+      "e-card for money laundering",
+      "gift card cash-out",
+      "digital card for illicit funds",
+      "prepaid card for fraud",
+      "online shopping card for laundering",
+      "card number and password trade",
+      "virtual card redemption"
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "线上E卡、超市购物卡等虚拟储值卡，黑产用非法资金购买后通过卡密核销变现，是一种虚拟化兑现洗钱渠道。",
-    "description": "电子卡以卡号和密码形式存在，无需实物交割，黑产用赃款批量购入后，通过转售卡密或自行核销购买实物再变现的方式完成资金清洗。因其购买行为与核销行为可分离在不同账户和IP下执行，天然具备资金隔断效果。常见于电商平台、生活服务平台，单张面额小但可批量操作，易被用于小额高频洗钱。",
-    "usageExample": "Provide electronic card secrets through multiple channels.",
+    "definition": "Virtual stored-value cards, such as online E-cards and supermarket gift cards, which criminals purchase with illicit funds and then cash out by redeeming or reselling the card details, serving as a virtual liquidation channel for money laundering.",
+    "description": "E-cards exist as a card number and password without requiring physical delivery. Criminals buy them in bulk with illicit funds and then clean the money by reselling the card details or redeeming them to purchase physical goods for resale. Because the purchase and redemption actions can be separated across different accounts and IP addresses, this method inherently provides a fund isolation effect. Commonly found on e-commerce and lifestyle service platforms, these cards have small individual values but can be processed in bulk, making them suitable for high-frequency, small-sum money laundering.",
+    "usageExample": "Supplying, multiple channels for e-card details.",
     "relatedRisks": [
       "R0060",
       "R0093"

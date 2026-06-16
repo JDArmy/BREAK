@@ -3,13 +3,19 @@
     "title": "Fuzzy Address Lookup",
     "keywords": [
       "Fuzzy Address Lookup",
-      "Fake Address"
+      "fuzzy address data",
+      "city-level address",
+      "district-level lookup",
+      "partial address query",
+      "administrative region lookup",
+      "blurred address info",
+      "non-precise address"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "黑产查档场景中仅提供省、市、区三级行政区划的模糊地址信息。",
-    "description": "假地址无法定位到具体门牌或小区，多用于初步筛选、批量画像或降低交易成本。数据贩子常以低价吸引买家，实际交付内容只有行政区划名称，不具备直接落地能力。在催收、诈骗链条中，假地址往往作为引流款，后续再引导买家购买真地址升级服务。",
-    "usageExample": "“全国假地址个户12r，继续秒 欢迎咨询。”",
+    "definition": "A vague address containing only the province, city, and district levels of administrative division, used in underground data lookup scenarios.",
+    "description": "This type of address cannot pinpoint a specific house or residential compound and is mainly used for initial screening, bulk profiling, or to lower transaction costs. Data brokers often attract buyers with low prices, but the delivered content only includes administrative division names with no practical locating capability. In debt collection and fraud chains, vague addresses often serve as a low-cost lead to upsell buyers on a premium service for real addresses.",
+    "usageExample": "\"Nationwide vague addresses for individual accounts, 12 yuan each, still available, inquiries welcome.\"",
     "relatedRisks": [
       "R0092",
       "R0078",

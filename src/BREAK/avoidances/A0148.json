@@ -6,7 +6,12 @@
     "description": "监控体系：IDS/IPS专用于工控流量；SIEM整合安全事件；基线行为建模；异常告警；应急预案演练；备份系统。",
     "complexity": "高级",
     "limitation": "专业人才缺乏；误报率高；应急响应可能影响生产",
-    "references": [],
+    "references": [
+      {
+        "title": "ICS Security Monitoring Best Practices",
+        "link": "https://www.cisa.gov/"
+      }
+    ],
     "updated": "2026-06-16",
     "keywords": [
       "ICS监控",

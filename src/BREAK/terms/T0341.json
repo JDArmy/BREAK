@@ -2,7 +2,15 @@
   "T0341": {
     "title": "快捷卡扣",
     "keywords": [
-      "快捷卡扣"
+      "快捷卡扣",
+      "快捷支付盗刷",
+      "盗刷接口",
+      "协议支付",
+      "代扣通道",
+      "四件套",
+      "卡扣通道",
+      "支付截胡",
+      "免密扣款"
     ],
     "aliases": [],
     "category": "跑分洗钱",
@@ -16,8 +24,8 @@
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [
-      "AT0026",
       "AT0039",
+      "AT0026",
       "AT0040"
     ],
     "relatedThreatActors": [

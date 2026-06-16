@@ -3,13 +3,20 @@
     "title": "Risk-Control Seasoning Period",
     "keywords": [
       "Risk-Control Seasoning Period",
-      "Risk Control Period"
+      "payment seasoning",
+      "goodpayer masking",
+      "repayment honeymoon",
+      "credit grooming",
+      "repayment facade",
+      "seasoning cycle",
+      "debt seasoning",
+      "masking period"
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "黑产为规避金融机构监测，指使或代替背债人进行短期正常还款的伪装期。",
-    "description": "在利用虚假身份或包装材料骗取贷款后，为延缓金融机构发现骗贷行为，黑产会要求或代替背债人在初期按时偿还月供。这段人为制造的“良好还款记录”时期就是风控期，目的是麻痹风控系统，为后续申请更大额度的贷款或直接卷款跑路争取时间。风控期越长，骗贷行为暴露的风险就越被延后。",
-    "usageExample": "XX地区操作，背XXXX到手XXX，资产包，风控三年。",
+    "definition": "A period of staged, on-time repayments orchestrated by fraud rings to evade detection by financial institutions.",
+    "description": "After obtaining a loan using false identities or fabricated documents, fraud rings will make the initial monthly payments on behalf of the straw borrower. This artificially created 'good repayment record' is the risk-control period, designed to lull the monitoring system into a false sense of security. The goal is to buy time to apply for larger loans or to abscond with the funds, with a longer period further delaying the exposure of the fraud.",
+    "usageExample": "Operating in XX area, the borrower gets XXX in hand, asset package, three-year risk-control period.",
     "relatedRisks": [
       "R0096"
     ],

@@ -3,13 +3,19 @@
     "title": "Basic Association Lookup",
     "keywords": [
       "Basic Association Lookup",
-      "Small Correlation"
+      "basic association query",
+      "name-only association",
+      "identity-only link",
+      "lightweight social graph",
+      "basic link lookup",
+      "minimal association data",
+      "identity correlation"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "黑产查档中仅输出关联人姓名及身份证号的轻量级社会关系查询服务。",
-    "description": "小关联只提供关联人基础身份标识，不包含具体关系类型或住址等扩展信息，属于大关联的降级版本。常用于快速锁定目标周边人员、批量比对或作为进一步查询的入口。数据贩子通常按条低价出售，配合其他查档服务组合使用，以降低买家成本门槛。",
-    "usageExample": "“十年飞火➕出入境 单开房 开同 人鬼 小关联。”",
+    "definition": "A lightweight, illicit social relationship query service that outputs only the names and national ID numbers of related individuals.",
+    "description": "This is a downgraded version of a full correlation query, providing only basic identifiers without specific relationship types or address extensions. It is often used to quickly identify people around a target, for bulk matching, or as a starting point for further queries. Data brokers typically sell these records at a low price per entry, combining them with other lookup services to lower the cost barrier for buyers.",
+    "usageExample": "\"Ten-year flight and border-crossing records, single hotel check-in records, co-check-in records, ghost records, and basic relationship queries.\"",
     "relatedRisks": [
       "R0092",
       "R0078",

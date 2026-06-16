@@ -6,7 +6,12 @@
     "description": "见R0159第三条。",
     "complexity": "高级",
     "limitation": "同R0159",
-    "references": [],
+    "references": [
+      {
+        "title": "Formal Verification of Smart Contracts",
+        "link": "https://runtimeverification.com/"
+      }
+    ],
     "updated": "2026-06-16",
     "keywords": [
       "形式化验证"

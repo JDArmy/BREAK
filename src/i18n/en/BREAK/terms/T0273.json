@@ -3,11 +3,17 @@
     "title": "Forced Group Add",
     "keywords": [
       "Forced Group Add",
-      "Strong Pull"
+      "forced group invite",
+      "auto-add script",
+      "group flooding",
+      "mass invite",
+      "unauthorized group add",
+      "invite spam",
+      "bulk group injection"
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "强拉是指利用技术手段在用户不知情或未授权的情况下，强制将其拉入指定群组或频道的行为。",
+    "definition": "Forced group addition refers to the act of using technical means to forcibly add users to a designated group or channel without their knowledge or authorization.",
     "description": "黑产通过脚本或外挂批量操作，绕过平台好友验证或邀请机制，将大量用户强行拉入群组。被拉入的用户往往与群主题无关，群内随后会进行广告轰炸或诈骗信息推送。该手法常用于色情引流、赌博推广或金融诈骗，能快速拉升群成员数，制造虚假活跃度。",
     "relatedRisks": [
       "R0024",

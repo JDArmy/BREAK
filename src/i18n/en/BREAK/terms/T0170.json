@@ -3,13 +3,20 @@
     "title": "Database Owner",
     "keywords": [
       "Database Owner",
-      "Library Owner"
+      "db admin",
+      "data broker",
+      "leak operator",
+      "combolist owner",
+      "db operator",
+      "data vault owner",
+      "leak curator",
+      "data lord"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "A key figure who owns and operates social engineering databases, credential-stuffing data, or leaked databases, acquiring, organizing, and managing large volumes of sensitive data through illegal channels to offer query, sale, and subscription services, forming the core ecosystem of underground data trading.",
-    "description": "A key figure who owns and operates social engineering databases, credential-stuffing data, or leaked databases, acquiring, organizing, and managing large volumes of sensitive data through illegal channels to offer query, sale, and subscription services, forming the core ecosystem of underground data trading.",
-    "usageExample": "\"Bank transaction records for any bank, stable, fast line—departing Sunday night, returns Tuesday or Wednesday.\"",
+    "definition": "A core underground figure who owns and operates social engineering databases, credential-stuffing data, or leaked databases.",
+    "description": "库主是地下数据交易生态的关键节点，负责非法获取、整理和分发海量敏感数据。他们通过售卖、订阅或会员制提供查询服务，构建起数据黑产的上游供应链。库主常与内鬼、黑客合作，持续更新数据源，是各类精准欺诈和身份冒用的基础支撑。",
+    "usageExample": "\"Bank card transaction records, any bank, stable. Express line departs Sunday evening, returns Monday or Tuesday.\"",
     "relatedRisks": [
       "R0092",
       "R0078",
@@ -21,6 +28,7 @@
     ],
     "relatedThreatActors": [
       "TA0005",
+      "TA0020",
       "TA0040"
     ],
     "relatedBusinessScenes": [

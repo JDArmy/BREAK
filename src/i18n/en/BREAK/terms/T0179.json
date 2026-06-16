@@ -3,13 +3,20 @@
     "title": "Basic Identity File",
     "keywords": [
       "Basic Identity File",
-      "Individual Household"
+      "ID photo record",
+      "two-factor identity file",
+      "basic KYC record",
+      "personal detail file",
+      "ID front-back record",
+      "identity document file",
+      "residential address record",
+      "basic PII record"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In illicit data trading, a basic personal profile record that includes a close-up ID photo, full name, national ID number (two-factor elements), and detailed residential address.",
-    "description": "In illicit data trading, this refers to a foundational personal dossier containing a headshot-style ID photo, the individual’s name and ID number (the two core verification elements), along with their full residential address.",
-    "usageExample": "“Individual household records, front and back of ID, guaranteed before 6 PM.”",
+    "definition": "A basic personal profile containing an ID photo, name, ID number, and detailed residential address.",
+    "description": "This is the most fundamental personal information unit in illegal data trading, typically including a citizen's ID card front photo, name and ID number, and detailed address. Due to its completeness, this information is a basic material for identity theft and targeted scams, circulating frequently in the black market.",
+    "usageExample": "\"Individual profiles, front and back of ID, instant delivery before 6 PM.\"",
     "relatedRisks": [
       "R0078",
       "R0089",

@@ -2,22 +2,29 @@
   "T0047": {
     "title": "空放",
     "keywords": [
-      "空放"
+      "空放",
+      "私贷",
+      "高利贷",
+      "地下钱庄",
+      "无抵押贷款",
+      "当天放款",
+      "急用钱",
+      "私人借款",
+      "空放贷款"
     ],
     "aliases": [],
     "category": "信贷欺诈",
     "definition": "指无抵押、无担保，且通常由无合法资质的地下钱庄或个人发放的高风险贷款。",
     "description": "这种放贷模式不依赖正规的信用审核，而是依靠暴力催收等手段控制风险。在信贷欺诈场景中，空放常被用于“借新还旧”的债务陷阱，或为黑产活动提供短期周转资金。借款人一旦陷入，往往面临超高利息和人身威胁，难以脱身。",
     "usageExample": "银行下不来的都去找空放了，利息高得吓人，但当天就能拿钱。",
-    "relatedRisks": [
-      "R0096"
-    ],
+    "relatedRisks": [],
     "relatedAvoidances": [],
     "relatedAttackTools": [],
-    "relatedThreatActors": [],
+    "relatedThreatActors": [
+      "TA0038"
+    ],
     "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
+      "BS01"
     ],
     "references": [],
     "updated": "2026-06-16"

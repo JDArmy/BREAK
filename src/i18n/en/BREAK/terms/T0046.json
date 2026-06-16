@@ -3,16 +3,21 @@
     "title": "Exploit",
     "keywords": [
       "Exploit",
-      "Button",
-      "Mouth"
+      "Loophole",
+      "Lending Loophole",
+      "Application Loophole",
+      "Credit Gap",
+      "Lending Gap",
+      "Approval Bypass",
+      "Instant Approval"
     ],
     "aliases": [
       "Button"
     ],
     "category": "Credit Fraud",
-    "definition": "Synonymous with 'loophole,' typically referring to a vulnerability or weakness in the credit application process that can be exploited by fraudsters to perpetrate loan fraud. In credit fraud, fraudsters seek out and exploit these 'loopholes' to commit fraud, such as by forging documents to obtain loans or using fake transactions to extract credit funds.",
-    "description": "Synonymous with 'loophole,' typically referring to a vulnerability or weakness in the credit application process that can be exploited by fraudsters to perpetrate loan fraud. In credit fraud, fraudsters seek out and exploit these 'loopholes' to commit fraud, such as by forging documents to obtain loans or using fake transactions to extract credit funds.",
-    "usageExample": "最近新出的那个消费贷口子很松，不用面签，赶紧上人。",
+    "definition": "A vulnerability or weak spot in a credit approval workflow or risk-control system that can be exploited for fraudulent gain.",
+    "description": "Underground operators specialize in reverse-engineering financial platforms’ review mechanisms to identify gaps, such as lax document verification or system response delays. Once a viable loophole is discovered, they mobilize teams to attack it at scale, batch-obtaining loans through forged documents and fake transactions. Information about these vulnerabilities is traded at high prices within closed fraud communities and spreads rapidly.",
+    "usageExample": "That newly launched consumer loan product has a loose loophole—no in-person interview required. Get people on it now.",
     "relatedRisks": [
       "R0096"
     ],

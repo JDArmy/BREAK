@@ -3,12 +3,18 @@
     "title": "Data Buyer",
     "keywords": [
       "Data Buyer",
-      "Diners"
+      "data purchaser",
+      "leak buyer",
+      "fullz buyer",
+      "data reseller",
+      "downstream buyer",
+      "data trafficker",
+      "info buyer"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "An individual or organization that purchases leaked data from data suppliers or other sources to conduct various illegal activities for profit. Data buyers commonly use the data for financial fraud, identity theft, cyberattacks, spam and advertising campaigns, social engineering attacks, resale, and data bartering. They are a critical link in the underground data trade, causing widespread harm to individuals, businesses, and society.",
-    "description": "An individual or organization that purchases leaked data from data suppliers or other sources to conduct various illegal activities for profit. Data buyers commonly use the data for financial fraud, identity theft, cyberattacks, spam and advertising campaigns, social engineering attacks, resale, and data bartering. They are a critical link in the underground data trade, causing widespread harm to individuals, businesses, and society.",
+    "definition": "An individual or organization in the underground supply chain that purchases and uses leaked data for illegal activities.",
+    "description": "The data buyer is the end consumer or secondary distributor in underground data trading. They purchase various types of data from material suppliers or data shops and convert it into actual criminal profit. Common downstream activities include financial fraud, bank card theft, social engineering attacks, or reselling the data. They are the direct executors of the harm caused by leaked data, turning the risk of information misuse into reality.",
     "relatedRisks": [
       "R0078",
       "R0089"

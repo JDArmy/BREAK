@@ -3,13 +3,19 @@
     "title": "Offline App Promotion",
     "keywords": [
       "Offline App Promotion",
-      "Push"
+      "malicious app install",
+      "QR code scam",
+      "offline promotion scam",
+      "street marketing fraud",
+      "gift scam",
+      "remote access trojan install",
+      "phone takeover"
     ],
     "aliases": [],
     "category": "Telecom Fraud",
-    "definition": "An offline extension of online fraud, distinct from legitimate ground promotion. In cybercrime, it involves promoting scam platforms, illegal products, or services through in-person tactics, such as offering gifts to lure people into downloading malicious apps that enable remote control of their phones for unauthorized money transfers.",
-    "description": "An offline extension of online fraud, distinct from legitimate ground promotion. In cybercrime, it involves promoting scam platforms, illegal products, or services through in-person tactics, such as offering gifts to lure people into downloading malicious apps that enable remote control of their phones for unauthorized money transfers.",
-    "usageExample": "上个月在菜市场门口摆摊，送鸡蛋让人扫二维码下载那个假理财APP，后台直接开了远程控制，好几个老太太的银行卡都被划空了。",
+    "definition": "In the underground context, street pushing refers to using offline giveaways, QR-code scanning, and other bait to directly install scam apps or illicit services onto users’ phones as a traffic-generation method.",
+    "description": "Unlike legitimate commercial street promotion, underground street pushing typically sets up in high-traffic commercial areas, residential communities, or rural markets, using free gifts such as tissues, eggs, or toys as bait to lure passersby into downloading scam applications disguised as normal apps. Once installed and granted permissions, the app can remotely read contacts, intercept SMS verification codes, or even directly control the phone to initiate transfers. This offline installation method bypasses online risk controls and specifically targets elderly or low-awareness groups, often resulting in financial losses that are nearly impossible to recover.",
+    "usageExample": "Last month they set up a stand outside the wet market, giving away eggs to get people to scan a QR code and download that fake investment app—the backend enabled remote control straight away, and several elderly women had their bank cards completely drained.",
     "relatedRisks": [
       "R0095",
       "R0150"

@@ -2,7 +2,14 @@
   "T0297": {
     "title": "盘总",
     "keywords": [
-      "盘总"
+      "盘总",
+      "盘口老板",
+      "车队总代",
+      "资金盘控制人",
+      "诈骗盘口",
+      "博彩盘口",
+      "盘口洗钱",
+      "盘口抽成"
     ],
     "aliases": [],
     "category": "跑分洗钱",
@@ -16,6 +23,7 @@
     "relatedAvoidances": [],
     "relatedAttackTools": [],
     "relatedThreatActors": [
+      "TA0015-001",
       "TA0014",
       "TA0015",
       "TA0006-003"

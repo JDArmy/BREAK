@@ -3,13 +3,20 @@
     "title": "Order Intake",
     "keywords": [
       "Order Intake",
-      "Acquiring"
+      "background check request",
+      "data lookup intake",
+      "private investigation order",
+      "doxing service",
+      "personal data query",
+      "black market inquiry",
+      "information retrieval service",
+      "same-day response"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In illicit data trading, the act of a black-market service provider accepting data lookup requests, such as performing a background check on a specified individual.",
-    "description": "In illicit data trading, the act of a black-market service provider accepting data lookup requests, such as performing a background check on a specified individual.",
-    "usageExample": "\"Accepting orders, same-day response guaranteed.\"",
+    "definition": "In illegal data trading, the act of a service provider receiving and accepting a client's data query order.",
+    "description": "Within the underground data supply chain, 'accepting orders' is a signal from a service provider that they are open for business and can handle various requests such as personal background checks, transaction records, or location tracking. These order takers often act as middlemen who do not own the data sources themselves; instead, they aggregate orders and pass them to upstream interfaces or insiders, profiting from the markup.",
+    "usageExample": "\"Accepting orders, guaranteed same-day results.\"",
     "relatedRisks": [
       "R0092",
       "R0078",

@@ -3,12 +3,18 @@
     "title": "Complicit Merchant",
     "keywords": [
       "Complicit Merchant",
-      "Black Merchants"
+      "criminal collusion",
+      "merchant complicity",
+      "dirty merchant",
+      "payfac abuse",
+      "merchant-based laundering",
+      "collusive merchant",
+      "merchant collusion"
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "知情并主动配合黑产进行洗钱的商户账户。",
-    "description": "黑产通过租用、购买或分成合作的方式控制商户账户，用于接收诈骗或赌博赃款。黑商户通常提供支付接口或收款码，将非法资金伪装成正常营业收入，再通过提现或转账完成清洗。这种合作是洗钱链条中的关键节点，组织化程度高，打击难度大。",
+    "definition": "A merchant account whose operator knowingly and actively colludes with criminal networks for money laundering.",
+    "description": "Criminal groups control merchant accounts through rental, purchase, or profit-sharing arrangements to receive proceeds from fraud or gambling. Black merchants typically provide payment interfaces or collection QR codes, disguising illicit funds as legitimate business revenue, then completing the laundering process through withdrawals or transfers. This collaboration is a critical node in the laundering chain, characterized by a high degree of organization and posing significant challenges for law enforcement.",
     "relatedRisks": [
       "R0060",
       "R0093"
@@ -26,7 +32,7 @@
     ],
     "references": [
       {
-        "title": "[Black Industry Big Data] Annual Summary of Internet Black and Ash Industry Trends in 2025",
+        "title": "[Black Market Big Data] 2025 Internet Black and Grey Market Trend Annual Report",
         "link": "https://www.163.com/dy/article/KJ2QH6LE0518STKV.html"
       }
     ],

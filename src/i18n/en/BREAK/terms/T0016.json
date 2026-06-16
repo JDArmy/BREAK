@@ -14,8 +14,8 @@
     ],
     "aliases": [],
     "category": "Marketing Fraud",
-    "definition": "A modem pool, a telephone-based expansion device that can accept multiple simultaneous dial-up connections. When fitted with SIM cards, it can send and receive multiple SMS messages or make calls concurrently. Historically used by institutions like post offices, customs, banks, and call centers for remote networking, it has been repurposed by grey-market actors as a tool for bulk account registration, reselling access, or conducting fraud attacks against internet platforms through mass 'spray' techniques.",
-    "description": "A 'modem pool card' refers to a physical SIM card held by a card dealer, typically inserted into a modem pool device for receiving SMS verification codes. Dealers source these cards primarily from major carriers, virtual network operators, and IoT card channels.",
+    "definition": "Physical SIM cardsheld by card suppliers and inserted into modem pool devices for bulk sending and reception of SMS verification codes.",
+    "description": "Modem pool cards are the hardware foundation of the SMS code reception supply chain. Card suppliers use modem pool devices to control a large number of SIM cards simultaneously, providing verification code reception services to downstream black-market operations. These cards are often sourced from operator loopholes, illegally resold IoT cards, or identity fraud, and are widely used for bulk account registration and exploiting platform promotions. The existence of these cards allows fraud rings to bypass identity verification mechanisms at scale and low cost.",
     "relatedRisks": [
       "R0030",
       "R0030-001",
@@ -26,6 +26,7 @@
     ],
     "relatedAttackTools": [
       "AT0004",
+      "AT0009",
       "AT0006",
       "AT0001-002"
     ],

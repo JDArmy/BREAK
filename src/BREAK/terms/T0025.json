@@ -2,16 +2,24 @@
   "T0025": {
     "title": "无盾",
     "keywords": [
-      "无盾"
+      "无盾",
+      "风控",
+      "反欺诈",
+      "无验证",
+      "秒过",
+      "无门槛",
+      "无验证码",
+      "直接领",
+      "无风控"
     ],
     "aliases": [],
     "category": "营销欺诈",
     "definition": "黑灰产对目标平台无任何风控措施的叫法。",
     "description": "黑灰产从业者将平台的风控体系统称为“盾”，无盾即指平台未部署有效的安全验证或反欺诈策略。这为黑产提供了直接绕过防护、批量操作的空间，常用于大规模薅取平台发放的实物奖励、优惠券或现金红包。不同业务场景下的“盾”形态各异，例如银行的U盾或电商平台的业务风控引擎，无盾意味着攻击成本极低。",
-    "relatedRisks": [
-      "R0005"
+    "relatedRisks": [],
+    "relatedAvoidances": [
+      "A0153"
     ],
-    "relatedAvoidances": [],
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "relatedBusinessScenes": [

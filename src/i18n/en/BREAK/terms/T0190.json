@@ -3,13 +3,20 @@
     "title": "QR-Code Reverse Lookup",
     "keywords": [
       "QR-Code Reverse Lookup",
-      "Code Reverse"
+      "QR code lookup",
+      "QR-to-phone lookup",
+      "QR code identity",
+      "scan-to-phone lookup",
+      "QR phone number",
+      "code-to-phone lookup",
+      "QR account lookup",
+      "QR reverse search"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In illicit data trading, a type of record lookup service where a software account's QR code is used to query the associated user's phone number.",
-    "description": "In illicit data trading, a type of record lookup service where a software account's QR code is used to query the associated user's phone number.",
-    "usageExample": "\"Accepting QR reverse lookups, all reverse queries welcome, high efficiency and speed, no tricks\"",
+    "definition": "An illegal lookup service that reverse-queries a software account's QR code to retrieve the associated phone number.",
+    "description": "In illegal data trading, 'Code Reverse' is a service where fraudsters provide a target account's QR code, and sellers use technical means or internal interfaces to trace the bound phone number. This service is commonly used for identity mining after social media account takeover or to provide contact leads for precision scams.",
+    "usageExample": "Accepting code reverse orders, all reverse queries accepted, high efficiency and speed, no tricks.",
     "relatedRisks": [
       "R0092",
       "R0078",

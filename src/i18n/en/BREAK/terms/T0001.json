@@ -16,8 +16,8 @@
       "Baodan"
     ],
     "category": "Marketing Fraud",
-    "definition": "The act of reporting an illicit operation or transaction to an internal manager or coordinator within a fraud ring for settlement, task assignment, or performance tracking.",
-    "description": "The act of reporting an illicit operation or transaction to an internal manager or coordinator within a fraud ring for settlement, task assignment, or performance tracking.",
+    "definition": "The act of a fraud ring member reporting completed illicit operations or transaction results to a superior for commission settlement or performance tracking.",
+    "description": "In marketing fraud operations, downstream actors report completed tasks such as fake orders or fraudulent registrations to a coordinator via internal communication tools. Managers then verify the workload and disburse corresponding payments, making this a critical step for internal profit-sharing and task management within the group. This process ensures the orderly execution of illegal activities and closes the benefit chain.",
     "relatedRisks": [
       "R0003",
       "R0005",
@@ -33,7 +33,7 @@
     ],
     "references": [
       {
-        "title": "Black Market Data: E-commerce Scalper Industry Chain Analysis Report",
+        "title": "Black Market Big Data: An Analysis of the E-commerce Scalper Industry Chain",
         "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
       }
     ],

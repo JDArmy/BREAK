@@ -3,13 +3,21 @@
     "title": "Unwitting Merchant",
     "keywords": [
       "Unwitting Merchant",
-      "White Merchant"
+      "mule merchant",
+      "unwitting facilitator",
+      "clean merchant abuse",
+      "merchant account takeover",
+      "transaction laundering",
+      "shell merchant",
+      "front company",
+      "unwitting accomplice"
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "被黑产利用作为洗钱渠道但自身不知情的正规商户。",
-    "description": "黑产通过盗刷或诈骗获取资金后，在白商户处购买高价值商品或服务，再转卖变现。商户在不知情中成为洗钱环节的一环，账户可能因异常交易被冻结。这种手法常见于电商平台，利用真实交易掩盖资金流向，给商户带来合规风险。",
+    "definition": "A legitimate merchant unknowingly exploited as a laundering channel by criminal networks.",
+    "description": "After obtaining funds through carding or fraud, criminals purchase high-value goods or services from white merchants, then resell them to cash out. The merchant becomes an unwitting link in the laundering chain, and their accounts may be frozen due to abnormal transactions. This tactic is common on e-commerce platforms, using genuine transactions to obscure the money trail and exposing the merchant to compliance risks.",
     "relatedRisks": [
+      "R0062",
       "R0060",
       "R0093"
     ],

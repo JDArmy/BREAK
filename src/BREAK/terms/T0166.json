@@ -2,7 +2,14 @@
   "T0166": {
     "title": "私域群",
     "keywords": [
-      "私域群"
+      "私域群",
+      "内部群",
+      "担保群",
+      "审核群",
+      "暗群",
+      "交易群",
+      "邀请制",
+      "私密群组"
     ],
     "aliases": [],
     "category": "数据泄露",
@@ -11,7 +18,9 @@
     "relatedRisks": [
       "R0078"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0019-002"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0005",

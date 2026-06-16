@@ -3,12 +3,18 @@
     "title": "International Fullz",
     "keywords": [
       "International Fullz",
-      "External Materials"
+      "CVV fullz",
+      "overseas card fullz",
+      "non-resident fullz",
+      "foreign card dump",
+      "international card data",
+      "cross-border fullz",
+      "offshore card info"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "Refers to the four key pieces of information for overseas cards: bank card account number, password, cardholder ID number, and linked mobile number (also known as CVV fullz). This information contains citizens’ personal data and is usually resold to third parties for illegal activities such as targeted marketing and fraud.",
-    "description": "Refers to the four key pieces of information for overseas cards: bank card account number, password, cardholder ID number, and linked mobile number (also known as CVV fullz). This information contains citizens’ personal data and is usually resold to third parties for illegal activities such as targeted marketing and fraud.",
+    "definition": "Refers to four types of overseas bank card information—card number, password, cardholder ID number, and linked phone number—known in the black market as “foreign material” or “CVV fullz.”",
+    "description": "Foreign material primarily originates from data breaches involving overseas cards, including phishing sites, payment interface hijacking, or darknet database dumps. Black-market actors sell these full sets to downstream buyers for cross-border carding, fraudulent transactions, or impersonation-based telecom fraud. Due to the involvement of overseas cards, tracing is difficult, and the laundering process often integrates with underground money-transfer platforms, making the cash-out path covert. Once such information enters the market, cardholders face direct financial loss and identity theft risks.",
     "relatedRisks": [
       "R0078",
       "R0089",
@@ -17,6 +23,7 @@
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [
+      "AT0039",
       "AT0012",
       "AT0064"
     ],

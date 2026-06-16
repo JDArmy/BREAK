@@ -3,12 +3,19 @@
     "title": "Data Completion",
     "keywords": [
       "Data Completion",
-      "Complete"
+      "gap filling",
+      "record completion",
+      "identity patch",
+      "missing field fill",
+      "profile completion",
+      "data enrichment",
+      "attribute fill",
+      "lookup service"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In data trading contexts, a type of lookup service where missing identity numbers, names, and addresses are completed using technical means or social engineering databases.",
-    "description": "In data trading contexts, a type of lookup service where missing identity numbers, names, and addresses are completed using technical means or social engineering databases.",
+    "definition": "The process of using technical means or social engineering databases to complete missing identity numbers, names, and addresses.",
+    "description": "在数据泄露链条中，补齐是查档服务的一种下游操作，常由中间商或数据贩子完成。他们利用已掌握的碎片化信息，结合社工库或内部渠道，拼凑出完整的个人身份画像。补齐后的数据可用于精准诈骗、恶意催收或转售获利，直接加剧隐私侵害。",
     "relatedRisks": [
       "R0092",
       "R0078",

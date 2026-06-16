@@ -3,18 +3,26 @@
     "title": "Bank Card Broker",
     "keywords": [
       "Bank Card Broker",
-      "Card Dealer"
+      "card broker",
+      "account seller",
+      "mule account provider",
+      "fullz seller",
+      "bank drop seller",
+      "carding supply",
+      "account dealer",
+      "card trafficker"
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "卡商是非法批量收购和转卖银行卡、身份信息套件的黑产团伙。",
-    "description": "卡商通过线下招募、网络收购等方式，从卡主手中获取身份证、银行卡、U盾和手机号等成套资料，再高价转卖给洗钱或诈骗团伙。这些卡被用于接收、拆分和转移非法资金，是跑分洗钱的基础工具。一旦案发，卡商往往迅速切断联系，使资金追查难度大增。",
+    "definition": "An underground syndicate that illegally acquires and resells bank cards and identity information kits in bulk.",
+    "description": "Card dealers collect complete sets of ID cards, bank cards, USB security keys, and phone numbers from cardholders through offline recruitment or online acquisition, then resell them at a premium to money laundering or fraud rings. These cards are used to receive, split, and transfer illicit funds, serving as the foundational tools for money laundering. Once a case is exposed, card dealers quickly cut off contact, significantly complicating fund tracing.",
     "relatedRisks": [
       "R0060",
       "R0093"
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [
+      "AT0039",
       "AT0026"
     ],
     "relatedThreatActors": [
@@ -30,7 +38,7 @@
     ],
     "references": [
       {
-        "title": "Global Black and Gray Industry Upgrading Research: Black and Gray Production and Coding Models Are Going Hidden",
+        "title": "Global Underground Industry Upgrade Research: Underground OTP Bypass Models Go Stealth",
         "link": "https://www.threathunter.cn/blog/badc114ec23"
       }
     ],

@@ -3,13 +3,20 @@
     "title": "Grocery Card",
     "keywords": [
       "Grocery Card",
-      "Food Card"
+      "card cashing",
+      "microtransaction laundering",
+      "convenience store cash-out",
+      "small-value card fraud",
+      "sham purchase card",
+      "card cycling",
+      "card mule",
+      "low-value transaction laundering"
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "A credit or debit card widely used for small-value purchases, such as groceries, to disguise illegal cash-out schemes or other fraudulent activities. These cards are often obtained through illicit means or fraudulent applications and are used to conduct sham transactions or other forms of fraud.",
-    "description": "The term \"grocery card\" originates from its use in small-value purchases, such as groceries, to conceal the true purpose of illegal transactions. In these cases, fraudsters may collude with merchants to fabricate purchase records and facilitate cash-outs.",
-    "usageExample": "他手里那批买菜卡每天在便利店刷几十笔，每笔几十块，用来把电诈的钱洗白。",
+    "definition": "Grocery card refers to a bank card used by fraud rings for daily small-amount cash-outs or money laundering activities.",
+    "description": "Fraud rings use these cards to conduct low-value, high-frequency sham transactions at merchants, simulating everyday spending like grocery shopping to evade risk controls. These cards are often sourced illegally and are used to clean illicit funds from scams or gambling by breaking them into small amounts. Once the card is flagged by risk controls, any remaining funds are rapidly transferred out.",
+    "usageExample": "He uses a batch of grocery cards to make dozens of small transactions at convenience stores every day, cleaning money from telecom fraud a few dozen bucks at a time.",
     "relatedRisks": [
       "R0096"
     ],

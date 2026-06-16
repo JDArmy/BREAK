@@ -3,12 +3,19 @@
     "title": "Card Reverse Lookup",
     "keywords": [
       "Card Reverse Lookup",
-      "Reverse Card"
+      "bank card lookup",
+      "cardholder reverse lookup",
+      "card-to-identity lookup",
+      "bank card owner search",
+      "cardholder name query",
+      "bank card PII lookup",
+      "card number identity",
+      "reverse card search"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In illicit data trading, a type of record lookup service where a bank card number is used to reverse-lookup the account holder's name, national ID number, and registered phone number.",
-    "description": "In illicit data trading, a type of record lookup service where a bank card number is used to reverse-lookup the account holder's name, national ID number, and registered phone number.",
+    "definition": "An illegal lookup service that reverse-queries a bank card number to retrieve the cardholder's name, national ID number, and registered phone number.",
+    "description": "In underground data markets, 'Card Reverse' is a service where buyers provide a bank card number, and sellers use internal channels or leaked data to trace the cardholder's identity. This operation is often used in telecom fraud for identity verification or to supply critical information for downstream crimes like unauthorized transactions and money laundering.",
     "relatedRisks": [
       "R0092",
       "R0078",

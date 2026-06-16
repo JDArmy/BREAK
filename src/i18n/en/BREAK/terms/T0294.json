@@ -3,13 +3,20 @@
     "title": "No-Questions Funds",
     "keywords": [
       "No-Questions Funds",
-      "No Information"
+      "blind mixing",
+      "no-KYC flow",
+      "all-in laundering",
+      "indiscriminate layering",
+      "bulk cleaning",
+      "unfiltered funds",
+      "dirty money mixing",
+      "open intake"
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "不区分资金来源、全盘接收的洗钱操作。",
-    "description": "洗钱中介或跑分团队对上游提供的资金不进行任何审查，无论是诈骗、赌博还是色情黑产所得，均直接接入清洗流程。这种操作效率高但风险极大，容易因涉及重案资金被追踪。无视料常见于短期套现场景，参与者往往因贪图快钱而忽略法律后果。",
-    "usageExample": "Regardless of materials, money is what matters.",
+    "definition": "A laundering operation that accepts all incoming funds without scrutinizing their source.",
+    "description": "Laundering intermediaries or money mule teams process any upstream funds without any review, whether they originate from fraud, gambling, or adult industry black markets. This high-efficiency, high-risk approach risks attracting attention from major criminal investigations. Indiscriminate acceptance is common in short-term cash-grab scenarios, where participants often overlook legal consequences in pursuit of quick money.",
+    "usageExample": "Indiscriminate acceptance, any money is good.",
     "relatedRisks": [
       "R0060",
       "R0093",

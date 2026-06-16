@@ -3,13 +3,20 @@
     "title": "Forced Disbursement",
     "keywords": [
       "Forced Disbursement",
-      "Forced Payment"
+      "unsolicited loan",
+      "forced loan",
+      "loan bombing",
+      "ghost lending",
+      "predatory disbursement",
+      "involuntary debt",
+      "forced credit",
+      "unconsented loan"
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "非法网贷平台在用户未明确同意的情况下，单方面强行放款并索取高额利息。",
-    "description": "套路贷平台通过技术手段获取用户通讯录等隐私后，即使用户仅填写资料并未确认借款，也会强行下款。随后以极短周期和高额费用进行催收，威胁爆通讯录。这是典型的敲诈勒索手段，受害者往往因恐惧而被迫偿还远超本金的金额。",
-    "usageExample": "昨天下载一个分期商城，里面有个数码潮享玩，点击进去下载了APP，注册后选了一张身份证，然后退出登录卸载软件，会不会被强制下款。",
+    "definition": "An illegal lending platform unilaterally disburses a loan to a user without their explicit consent, then demands repayment with exorbitant interest.",
+    "description": "Predatory lending platforms use technical means to harvest users' contact lists and other private data. Even if a user merely fills out a form without confirming a loan, the platform forcibly transfers money into their account. They then demand repayment on extremely short cycles with excessive fees, threatening to harass the user's contacts if they don't pay. This is a typical extortion tactic, and victims often pay far more than the principal out of fear.",
+    "usageExample": "Yesterday I downloaded a shopping app and clicked on a link inside. I registered, uploaded an ID photo, then logged out and deleted the app. Could I still be forced into a loan?",
     "relatedRisks": [
       "R0096"
     ],

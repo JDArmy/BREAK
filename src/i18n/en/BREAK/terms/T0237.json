@@ -3,13 +3,19 @@
     "title": "Ban Evasion Guide",
     "keywords": [
       "Ban Evasion Guide",
-      "Wwg Tutorial"
+      "false report",
+      "malicious report",
+      "report abuse",
+      "ban guide",
+      "report exploit",
+      "false flagging",
+      "report manipulation"
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "一套专门教人如何在对方账号无明显违规记录的情况下，利用平台规则漏洞将其恶意举报至封禁的操作指南。",
-    "description": "教程通常拆解平台审核机制的弱点，比如利用批量投诉触发自动处罚、伪造违规截图等。使用者无需掌握高深技术，按步骤操作即可让竞争对手店铺、直播间或营销号下架。这类教程在灰产群内以网盘链接或文档形式传播，是恶意竞争和勒索变现的常用工具。",
-    "usageExample": "Do you want to give you the XX platform wwg tutorial?",
+    "definition": "A guide that teaches how to maliciously report an account with no obvious violations and get it banned by exploiting loopholes in platform policies.",
+    "description": "These tutorials typically break down weaknesses in moderation systems, such as triggering automatic penalties through mass complaints or fabricating violation screenshots. Users do not need advanced technical skills; by following the steps they can get a competitor’s shop, livestream, or channel taken down. Such guides circulate in underground groups via cloud links or documents and are a common tool for malicious competition and extortion.",
+    "usageExample": "Want a free wwg tutorial for XX platform?",
     "relatedRisks": [
       "R0068",
       "R0068-002"
@@ -17,6 +23,7 @@
     "relatedAvoidances": [],
     "relatedAttackTools": [],
     "relatedThreatActors": [
+      "TA0022",
       "TA0034"
     ],
     "relatedBusinessScenes": [

@@ -3,12 +3,19 @@
     "title": "Doxing",
     "keywords": [
       "Doxing",
-      "Unbox"
+      "dox",
+      "doxx",
+      "doxing attack",
+      "doxxing campaign",
+      "doxing operation",
+      "doxing group",
+      "doxing chat",
+      "doxing forum"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "The act of maliciously obtaining and publicly exposing an individual's private data. In a data breach context, threat actors perform this operation in anonymous group chats, illegally acquiring and disclosing sensitive personal information such as national ID numbers, home addresses, phone numbers, social media accounts, and financial records.",
-    "description": "The act of maliciously obtaining and publicly exposing an individual's private data. In a data breach context, threat actors perform this operation in anonymous group chats, illegally acquiring and disclosing sensitive personal information such as national ID numbers, home addresses, phone numbers, social media accounts, and financial records.",
+    "definition": "The act of illegally obtaining and publicly exposing an individual's private data, carried out by underground actors.",
+    "description": "Doxing is a common malicious exposure tactic in the cyber underground, typically conducted in anonymous group chats or on social platforms. Perpetrators aggregate fragmented information from social engineering databases, leaked data dumps, and other sources to assemble a complete dossier, including ID numbers, home addresses, social connections, and financial records. Often motivated by revenge, notoriety, or extortion, this practice poses a severe threat to the victim's personal safety and reputation.",
     "relatedRisks": [
       "R0092",
       "R0078",

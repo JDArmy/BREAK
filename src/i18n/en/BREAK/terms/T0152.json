@@ -2,13 +2,21 @@
   "T0152": {
     "title": "Software Kill",
     "keywords": [
-      "Software Kill"
+      "Software Kill",
+      "remote access trojan",
+      "accessibility service abuse",
+      "screen sharing takeover",
+      "RAT scam",
+      "device hijacking",
+      "remote control fraud",
+      "banking trojan",
+      "fake support app"
     ],
     "aliases": [],
     "category": "Telecom Fraud",
-    "definition": "A scam where fraudsters trick victims into installing a remote-control app, often disguised as a legitimate application. The victim is then persuaded to grant accessibility service permissions, allowing the scammer to take full control of the device, harvest information, and manipulate the phone to transfer money from the victim's bank account or trick them into sending funds to a designated account.",
-    "description": "A scam where fraudsters trick victims into installing a remote-control app, often disguised as a legitimate application. The victim is then persuaded to grant accessibility service permissions, allowing the scammer to take full control of the device, harvest information, and manipulate the phone to transfer money from the victim's bank account or trick them into sending funds to a designated account.",
-    "usageExample": "他按对方要求下了个会议软件，开了共享屏幕，结果就被软件杀了，眼睁睁看着手机自己动，把钱转走了。",
+    "definition": "A scam where fraudsters directly control a victim's phone via remote access software to transfer funds.",
+    "description": "Scammers, posing as customer service or law enforcement, trick victims into downloading a remote control app disguised as a legitimate tool and granting accessibility permissions. Once access is gained, the scammer can monitor the screen in real-time, intercept SMS messages, and directly operate the victim's mobile banking app to transfer money or make unauthorized purchases without the victim's knowledge.",
+    "usageExample": "He downloaded a meeting app as instructed and shared his screen. Then the remote takeover happened; he watched helplessly as his phone moved on its own and his money was transferred out.",
     "relatedRisks": [
       "R0044",
       "R0032",

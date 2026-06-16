@@ -3,13 +3,19 @@
     "title": "Instant-Scan Pack",
     "keywords": [
       "Instant-Scan Pack",
-      "Scan As Soon As You Send It"
+      "QR code rush",
+      "expiring payment code",
+      "instant scan tactic",
+      "snap scan",
+      "code flash payment",
+      "merchant scan pressure",
+      "time-sensitive QR"
     ],
     "aliases": [],
     "category": "Telecom Fraud",
-    "definition": "A rapid QR code payment action required when a payment code is displayed, as these codes are time-sensitive. To avoid expiration, the code must be scanned immediately by a merchant device or another user's scanning function to complete the transaction.",
-    "description": "A rapid QR code payment action required when a payment code is displayed, as these codes are time-sensitive. To avoid expiration, the code must be scanned immediately by a merchant device or another user's scanning function to complete the transaction.",
-    "usageExample": "“群里一直催‘发就扫’，我码刚出来不到十秒就被扫走了，根本来不及反应。”",
+    "definition": "‘Send and scan immediately’ is an instruction used in the money-laundering or fraudulent collection stage, demanding that a victim or money mule generate a payment code and have it scanned instantly to complete the fund transfer.",
+    "description": "Because payment platforms typically keep payment codes valid for only tens of seconds to a minute, underground operators rush to complete the transfer before risk-control systems can intervene, urging the counterparty to ‘scan it the moment the code appears.’ This practice is common in money-muling groups, gambling top-up operations, and the final emergency collection stage of a scam, where speed is critical to evade transaction blocking and account freezes. Any delay that causes the payment code to expire will break the fund chain.",
+    "usageExample": "“The group kept shouting ‘send and scan immediately.’ My code was swept away less than ten seconds after it appeared—I didn’t even have time to react.”",
     "relatedRisks": [
       "R0044",
       "R0032",

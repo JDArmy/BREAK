@@ -3,12 +3,18 @@
     "title": "Real-Time Data",
     "keywords": [
       "Real-Time Data",
-      "Real-Time Information"
+      "fresh fullz",
+      "first hand fullz",
+      "live data feed",
+      "fresh logs",
+      "fresh data dump",
+      "recent breach data",
+      "new stolen data"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "Refers to the latest first-hand data, i.e., personal or organizational information that has just been stolen. This type of material is the easiest to sell and commands the highest price.",
-    "description": "Refers to the latest first-hand data, i.e., personal or organizational information that has just been stolen. This type of material is the easiest to sell and commands the highest price.",
+    "definition": "Refers to freshly stolen, first-hand personal or organizational data that has not been resold, commanding the highest price on the black market due to its timeliness.",
+    "description": "Real-time material emphasizes data freshness and immediate usability, often sourced from recent system intrusions, insider leaks, or phishing harvests. Black-market actors quickly distribute it through automated card-selling platforms or darknet groups, aiming to monetize it before it becomes obsolete. Buyers typically use it for real-time fraud, credential-stuffing attacks, or registering malicious accounts, as shorter delays yield higher success rates.",
     "relatedRisks": [
       "R0078",
       "R0089"

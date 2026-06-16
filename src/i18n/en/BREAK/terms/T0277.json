@@ -3,14 +3,21 @@
     "title": "Fake Traffic Inflation",
     "keywords": [
       "Fake Traffic Inflation",
-      "Brush Amount"
+      "click farm",
+      "view botting",
+      "engagement manipulation",
+      "like farming",
+      "artificial inflation",
+      "traffic boosting",
+      "social proof fabrication"
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "刷量是指利用虚假账号或自动化脚本，批量制造虚假数据指标的行为。",
-    "description": "黑产通过卡商接码平台获取大量虚拟号，配合群控软件对指定视频、直播或商品进行点赞、播放、评论。目的是欺骗平台推荐算法，营造虚假热度，诱导真实用户跟风关注或下单。这严重破坏平台生态，常与刷单诈骗、假货推广绑定。",
+    "definition": "Metric inflation refers to the act of using fake accounts or automated scripts to fabricate false data metrics in bulk.",
+    "description": "Fraud rings obtain large numbers of virtual numbers through SIM card vendor platforms and use botnet control software to generate likes, views, or comments for designated videos, live streams, or products. The goal is to deceive the platform's recommendation algorithm, create a false impression of popularity, and induce real users to follow trends or make purchases. This severely damages the platform's ecosystem and is often tied to fake review scams and counterfeit goods promotion.",
     "relatedRisks": [
       "R0016",
+      "R0189",
       "R0030",
       "R0030-001",
       "R0017",

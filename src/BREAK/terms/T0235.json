@@ -2,7 +2,15 @@
   "T0235": {
     "title": "吞刀",
     "keywords": [
-      "吞刀"
+      "吞刀",
+      "助力被吞",
+      "无效助力",
+      "拼团",
+      "砍价",
+      "风控识别",
+      "批量注册",
+      "设备指纹",
+      "吞刀包补"
     ],
     "aliases": [],
     "category": "业务欺诈",
@@ -10,11 +18,16 @@
     "description": "黑产接单时承诺完成一定助力次数，但平台风控识别出账号为批量注册、设备指纹重复或行为异常，直接将该次助力作废。对下游买家而言，钱花了但进度条没涨，属于典型的欺诈损耗。接单方通常会用“吞刀包补”来兜底，即补做被吞掉的次数。",
     "usageExample": "xxx极速版有吗，回你5次xxx助力，吞刀包补",
     "relatedRisks": [
+      "R0030-001",
       "R0017",
       "R0005"
     ],
-    "relatedAvoidances": [],
-    "relatedAttackTools": [],
+    "relatedAvoidances": [
+      "A0021"
+    ],
+    "relatedAttackTools": [
+      "AT0003"
+    ],
     "relatedThreatActors": [
       "TA0009",
       "TA0007"

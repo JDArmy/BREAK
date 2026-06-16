@@ -3,13 +3,19 @@
     "title": "Settlement Split",
     "keywords": [
       "Settlement Split",
-      "Settlement Layer / Percentage"
+      "profit-sharing ratio",
+      "proceeds split percentage",
+      "commission tier",
+      "payout allocation",
+      "fraud revenue share",
+      "kickback percentage",
+      "settlement cut"
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "贷款欺诈中各方按约定比例分配放款金额的结算比例。",
-    "description": "在背债或中介合作获客的贷款欺诈链条中，贷款放款后，资金方、操作方、背债人及各级中介会按事先约定的比例进行分润。这个比例通常以“成数”表示，如7成即分走总放款额的70%。结算层决定了各环节的收益分配，层级越高、掌握资金或渠道资源越核心的参与者，分到的成数往往越高。这种分润机制激励了中介层层转介，也放大了信贷欺诈的规模。",
-    "usageExample": "一手资方7成结算（净利润）返点丰厚，双白优先。",
+    "definition": "The agreed percentage split of the loan disbursement among parties in a loan fraud scheme.",
+    "description": "In the chain of debt assumption or intermediary-facilitated loan fraud, after the loan is disbursed, the capital provider, operator, debt assumer, and intermediaries at various levels split the proceeds according to a pre-agreed ratio. This ratio is often expressed in “tenths,” e.g., 7 tenths means taking 70% of the total disbursed amount. The settlement tier determines the profit distribution at each stage; the higher the tier and the more core the resources controlled, the larger the share. This profit-sharing mechanism incentivizes multi-level intermediary referrals and amplifies the scale of credit fraud.",
+    "usageExample": "Direct capital source settles at 70% (net profit) with generous rebates, priority given to dual-clean applicants.",
     "relatedRisks": [
       "R0096"
     ],

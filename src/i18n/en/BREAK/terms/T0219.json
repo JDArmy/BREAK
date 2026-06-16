@@ -2,15 +2,24 @@
   "T0219": {
     "title": "CVV",
     "keywords": [
-      "CVV"
+      "CVV",
+      "CVV dump",
+      "CVV shop",
+      "CVV fraud",
+      "card verification value",
+      "CVV bin",
+      "CVV fullz",
+      "CVV base",
+      "CVV checker"
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "CVV是银行卡背面签名栏上的安全验证码，用于验证持卡人身份。",
-    "description": "在信用卡欺诈场景中，CVV常与卡号、有效期等信息一同被非法获取并出售，用于线上盗刷。黑灰产通过钓鱼网站、数据库拖库或恶意软件窃取完整的信用卡信息，随后在境外网站或虚拟商品平台快速变现。CVV泄露意味着卡片面临极高的盗用风险。",
-    "usageExample": "出一批新鲜CVV，全球可挑，走担保。",
+    "definition": "CVV is the security code on the back of a bank card, used to verify the cardholder's identity.",
+    "description": "In credit card fraud scenarios, the CVV is often illegally obtained and sold along with the card number and expiration date for online theft. Black-market actors steal complete credit card information through phishing sites, database breaches, or malware, then quickly monetize it on overseas websites or virtual goods platforms. A compromised CVV means the card faces an extremely high risk of unauthorized use.",
+    "usageExample": "Fresh batch of CVVs available, global selection, escrow accepted.",
     "relatedRisks": [
       "R0094",
+      "R0043-001",
       "R0138",
       "R0121"
     ],

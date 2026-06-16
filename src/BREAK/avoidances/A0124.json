@@ -6,7 +6,12 @@
     "description": "建立预警和损失补偿机制。检测方法：监控大额流动性撤出、合约权限变更、异常代币转移等Rug Pull信号；分析代币持有分布，检测高度集中持仓（少数地址持有大部分代币）；追踪开发者地址行为，如突然向交易所转移大量代币；使用Rugsafe等协议的实时检测引擎。保险机制：投资者购买DeFi保险（如Nexus Mutual），Rug Pull发生后可获得赔付；Rugsafe等协议通过多链恢复机制，在检测到Rug Pull后尝试追回资金或补偿受害者。这是被动防御的最后一道防线。",
     "complexity": "高级",
     "limitation": "检测系统存在延迟，可能无法在Rug Pull完成前告警；误报可能引发恐慌性抛售；保险覆盖范围有限且成本高；恢复机制依赖社区治理，执行困难；无法防止所有类型的Rug Pull",
-    "references": [],
+    "references": [
+      {
+        "title": "What is a rug pull and how to avoid it?",
+        "link": "https://www.coinbase.com/learn/tips-and-tutorials/what-is-a-rug-pull-and-how-to-avoid-it"
+      }
+    ],
     "updated": "2026-06-16",
     "keywords": [
       "实时监控",

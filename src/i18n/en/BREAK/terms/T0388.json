@@ -3,13 +3,18 @@
     "title": "One ID, One Card",
     "keywords": [
       "One ID, One Card",
-      "One certificate, One Card"
+      "ID card only loan",
+      "minimal KYC loan",
+      "no-verification loan",
+      "simplified application",
+      "bare-minimum loan",
+      "ID-only car loan"
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "指贷款申请时仅需提供身份证和银行卡的简易模式，常见于车贷欺诈场景。",
-    "description": "黑产利用部分金融机构审核宽松的漏洞，仅凭身份证和银行卡就为客户申请车贷。实际操作中，黑产往往会为客户伪造驾驶证等配套假证，以通过审核。这种模式极易被用于“买车套现”等欺诈活动。",
-    "usageExample": "Two certificates and one card, credit record 5.7 settlement; one certificate and one card, credit record 5 settlement",
+    "definition": "A simplified loan application model requiring only an ID card and a bank card, commonly seen in car loan fraud.",
+    "description": "Exploiting lax review processes at some financial institutions, fraud rings apply for car loans using only an ID and bank card. In practice, they often forge supporting documents like driver's licenses to pass verification. This model is easily exploited for 'buy-and-cash-out' fraud schemes.",
+    "usageExample": "Two IDs one card, credit record, settle at 5.7; One ID one card, credit record, settle at 5.",
     "relatedRisks": [
       "R0096"
     ],

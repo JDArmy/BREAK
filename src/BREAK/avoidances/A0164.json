@@ -6,7 +6,12 @@
     "description": "追踪体系：链上映射表；跨链索引；资产指纹；流转路径；总量监控；异常告警；取证支持。",
     "complexity": "高级",
     "limitation": "跨链数据整合困难；隐私币难追踪；新链接入滞后",
-    "references": [],
+    "references": [
+      {
+        "title": "Cross-Chain Asset Tracking",
+        "link": "https://www.chainalysis.com/"
+      }
+    ],
     "updated": "2026-06-16",
     "keywords": [
       "跨链追踪",

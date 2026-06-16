@@ -3,13 +3,20 @@
     "title": "Social Data Pull",
     "keywords": [
       "Social Data Pull",
-      "Slight Mention"
+      "contact scraping",
+      "chat exfiltration",
+      "social graph pull",
+      "message dump",
+      "social extraction",
+      "contact harvesting",
+      "account export",
+      "social media pull"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In underground data trading, an illegal operation that uses technical tools to export private data such as chat logs and contact lists from mainstream social platforms.",
-    "description": "In underground data trading, an illegal operation that uses technical tools to export private data such as chat logs and contact lists from mainstream social platforms.",
-    "usageExample": "\"Exclusive forced extraction, micro-extraction without notes, comes with all social platform accounts, no conversion needed, with avatars, document receipt. Don't report sensitive stuff.\"",
+    "definition": "An illicit operation using technical tools to exfiltrate private data such as chat logs and contact lists from mainstream social platforms.",
+    "description": "Typically exploiting system vulnerabilities or permission abuse, this method extracts private information from social accounts in bulk without user awareness. The exfiltrated data includes text, images, and video conversations, which can be used for extortion, precision marketing, or downstream scams, causing severe privacy violations.",
+    "usageExample": "\"Latest micro-extraction tech, can pull contacts and chat logs with just the account. Bosses who need it, hit me up.\"",
     "relatedRisks": [
       "R0078",
       "R0089",

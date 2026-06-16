@@ -3,12 +3,18 @@
     "title": "Customs Data",
     "keywords": [
       "Customs Data",
-      "Customs Clearance"
+      "customs clearance data leak",
+      "customs record dump",
+      "shipment data breach",
+      "import export data leak",
+      "customs info sale",
+      "border clearance data",
+      "customs PII leak"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In illegal data trading, this term refers to data stolen during the customs clearance process for overseas shipments. Such data is called “customs clearance material” and is illegally sold for profit by cybercriminals.",
-    "description": "In illegal data trading, this term refers to data stolen during the customs clearance process for overseas shipments. Such data is called “customs clearance material” and is illegally sold for profit by cybercriminals.",
+    "definition": "In illicit data trading, refers to personal or logistics data stolen during the customs clearance of overseas shipments, packaged and sold as “customs clearance material.”",
+    "description": "This type of data typically leaks through cross-border logistics processes and includes sensitive information such as recipient identity, addresses, and phone numbers. Black-market actors intercept data at customs clearance nodes via insiders or system vulnerabilities, then sort and sell it based on freshness and completeness. Downstream buyers often use it for precision fraud, marketing harassment, or identity theft. Due to its high timeliness, this data can be monetized quickly in the short term.",
     "relatedRisks": [
       "R0078",
       "R0089"

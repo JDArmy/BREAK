@@ -16,8 +16,8 @@
       "One Chicken and Many Eggs"
     ],
     "category": "Marketing Fraud",
-    "definition": "One Chicken, Multiple Eggs",
-    "description": "Synonymous with 'One Device, Multiple Orders,' meaning one POS machine can be bound to multiple merchants. Strictly speaking, UnionPay requires one machine per merchant, making the 'one device, multiple orders' practice non-compliant. It is a common operation used by bonus hunters for credit card maintenance.",
+    "definition": "The illegal practice of binding a single POS terminal to multiple merchant accounts for credit card cashing or limit maintenance.",
+    "description": "This operation violates UnionPay's one-machine-one-merchant regulation and is a common tactic used by coupon harvesters for credit card maintenance. By simulating multiple merchants across different industries on a single POS machine, cardholders can fabricate diversified spending records to evade bank risk controls and exploit rate differences between merchants to maximize credit card points or cashback rewards. This constitutes a regulatory violation or outright illegal act and is a form of financial fraud.",
     "relatedRisks": [
       "R0009",
       "R0055",

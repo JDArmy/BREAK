@@ -3,12 +3,19 @@
     "title": "Skimmed Card Data",
     "keywords": [
       "Skimmed Card Data",
-      "Track Material"
+      "POS skimming data",
+      "skimmed track2",
+      "dumps with PIN",
+      "compromised terminal data",
+      "skimmer logs",
+      "magstripe dump",
+      "track data",
+      "skimmed fullz"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In illicit data trading, bank card information obtained through tampered POS terminals. This information is generally highly precise and is typically resold to third parties for targeted marketing, fraud, and other illicit activities.",
-    "description": "In illicit data trading, bank card information obtained through tampered POS terminals. This information is generally highly precise and is typically resold to third parties for targeted marketing, fraud, and other illicit activities.",
+    "definition": "Track data refers to bank card magnetic stripe information obtained through skimming devices installed on compromised POS terminals, traded in illicit data markets.",
+    "description": "By implanting skimming modules in POS terminals, fraudsters steal magnetic stripe data and PINs from bank cards. This data is extremely precise and can be directly used to clone cards for fraudulent transactions or sold to downstream gangs for telecom fraud. Track data is core financial information, and its leakage directly threatens the financial security of cardholders.",
     "relatedRisks": [
       "R0078",
       "R0089"

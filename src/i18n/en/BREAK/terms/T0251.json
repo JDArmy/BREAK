@@ -3,24 +3,33 @@
     "title": "Farm Account Cluster",
     "keywords": [
       "Farm Account Cluster",
-      "Group Number"
+      "Sybil Farm",
+      "Account Farm",
+      "Bulk Account Operation",
+      "Mass Account Cluster",
+      "Coordinated Inauthentic Behavior",
+      "Device Farm Account",
+      "Account Array",
+      "Bot Herder"
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "由黑灰产操控、在特定时间有组织地大规模参与活动以套利的账号群体。",
-    "description": "这些账号通常由群控系统统一管理，在平台推出高价值奖励活动或抽奖时，集中涌入以博取奖品。它们分工明确，有的负责参与，有的负责接收和转移赃物。集团号的出现会瞬间消耗大量活动预算，导致真实用户无法获得奖励，严重干扰平台运营数据。",
+    "definition": "A cluster of accounts controlled by fraud rings to participate in organized, large-scale campaigns at specific times to exploit rewards.",
+    "description": "These accounts are typically managed through centralized control systems. When a platform launches a high-value reward campaign or lottery, they swarm in to capture the prizes. They have a clear division of labor: some accounts participate in the event, while others receive and transfer the illicit gains. The sudden appearance of these account clusters can instantly deplete a campaign's budget, preventing real users from receiving rewards and severely skewing platform operational data.",
     "relatedRisks": [
+      "R0005",
+      "R0009",
       "R0017",
-      "R0017-001",
-      "R0005"
+      "R0017-001"
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [
-      "AT0044",
       "AT0009",
+      "AT0044",
       "AT0016"
     ],
     "relatedThreatActors": [
+      "TA0001",
       "TA0009",
       "TA0006",
       "TA0007"

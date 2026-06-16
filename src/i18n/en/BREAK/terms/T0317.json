@@ -3,12 +3,18 @@
     "title": "Payment QR",
     "keywords": [
       "Payment QR",
-      "Payment Code"
+      "receiving QR",
+      "collection code",
+      "funds intake scan",
+      "pay-in QR",
+      "drop QR",
+      "cash-in code",
+      "receive scan"
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "跑分语境下被黑产用于代收、归集赃款的收款二维码或支付链接，是资金流转的入口工具。",
-    "description": "支付码本身是正常收付款介质，但在跑分链条里被异化为“接钱”的容器。黑产把大量支付码分发给下游“车手”或直接嵌入诈骗话术中，让受害人扫码付款，资金瞬间进入控制范围。随后通过多级转账、混币、购买虚拟资产等方式把赃款洗白，整个过程高度依赖支付码的快速分发和轮换，以对抗平台的风控追溯。",
+    "definition": "In the context of money laundering, a payment QR code or link used by fraud rings to collect and pool illicit funds, serving as the entry point for cash flow.",
+    "description": "A payment code is itself a normal payment instrument, but within money-muling chains it is repurposed as a “cash receptacle.” Fraud rings distribute large numbers of payment codes to downstream “runners” or embed them directly into scam scripts, inducing victims to scan and pay so that funds instantly enter the controlled environment. The money is then laundered through multi-level transfers, coin mixing, or virtual asset purchases, with the entire process relying on rapid code distribution and rotation to evade platform risk tracing.",
     "relatedRisks": [
       "R0060",
       "R0093"

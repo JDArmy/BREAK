@@ -3,12 +3,19 @@
     "title": "Rake",
     "keywords": [
       "Rake",
-      "Pump Water"
+      "house commission",
+      "vig",
+      "vigorish",
+      "juice",
+      "table take",
+      "cut",
+      "croupier's edge",
+      "house advantage"
     ],
     "aliases": [],
     "category": "Gambling",
-    "definition": "庄家按比例从赌资中抽取的利润。",
-    "description": "抽水是赌场的主要盈利模式，无论赌客输赢，庄家都从每笔下注中按固定比例抽成。线下赌场可能由扒头子现场收取，线上平台则自动结算，长期下来赌客必然处于劣势。",
+    "definition": "The percentage-based profit the house takes from every wager.",
+    "description": "The house commission is the primary revenue model for casinos. Regardless of whether a player wins or loses, the house deducts a fixed percentage from each bet. In physical venues, this is collected by managers like Pa Tou Zi, while online platforms automate the process. Over time, this edge ensures the house always wins.",
     "relatedRisks": [
       "R0097",
       "R0060"

@@ -3,12 +3,19 @@
     "title": "Niche Data",
     "keywords": [
       "Niche Data",
-      "Unpopular Material"
+      "low-demand data",
+      "specialty intel",
+      "obscure datasets",
+      "limited-use profiles",
+      "niche targets",
+      "uncommon PII",
+      "specialized leads",
+      "low-volume data"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In illicit data trading, refers to personal or organizational information with low demand and little market interest. This type of data may be less popular on the underground market due to limited use cases or a small target audience, resulting in lower trading volume and value.",
-    "description": "In illicit data trading, refers to personal or organizational information with low demand and little market interest. This type of data may be less popular on the underground market due to limited use cases or a small target audience, resulting in lower trading volume and value.",
+    "definition": "In illicit data trading, refers to personal or corporate information with low market demand that is difficult to monetize.",
+    "description": "This data may be of little interest to underground practitioners due to the target group's weak purchasing power, outdated information, or narrow application scenarios. Such data is often sold off cheaply in bulk or bundled with other high-value data, used to fill databases or for low-cost, wide-net scams.",
     "relatedRisks": [
       "R0078",
       "R0089"

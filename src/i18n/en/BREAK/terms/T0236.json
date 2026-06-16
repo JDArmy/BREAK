@@ -3,16 +3,22 @@
     "title": "Cooldown Account",
     "keywords": [
       "Cooldown Account",
-      "Disembarkation Number"
+      "used account",
+      "recycled account",
+      "second-hand account",
+      "account recycling",
+      "account reuse",
+      "pre-owned account",
+      "account repurposing"
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "曾经在某个设备上登录过但当前已退出登录的账号，常被黑产回收用于二次注册或刷量。",
-    "description": "这类账号因留有登录痕迹，在某些平台的风控模型中比纯新号更容易通过初期校验。黑产从网吧、租机平台等渠道批量回收下机号，用于接码、薅羊毛或做假量。由于账号已脱离原用户控制，实际使用人可随意切换身份，给平台反欺诈带来识别困难。",
-    "usageExample": "Receive all kinds of offline numbers (game offline numbers, etc.)",
+    "definition": "An account that was previously logged in on a device but is now logged out, often recycled by fraud rings for re-registration or volume farming.",
+    "description": "Because these accounts retain login traces, they often pass initial platform risk checks more easily than brand-new accounts. Fraud rings collect logged-out accounts in bulk from internet cafés, device rental platforms, and similar sources, then use them for SMS verification, promo abuse, or fake traffic generation. Since the original user no longer controls the account, the actual operator can switch identities at will, complicating anti-fraud detection.",
+    "usageExample": "Buying all types of logged-out accounts (gaming logged-out accounts, etc.)",
     "relatedRisks": [
-      "R0009",
       "R0055",
+      "R0009",
       "R0064",
       "R0030",
       "R0030-001",

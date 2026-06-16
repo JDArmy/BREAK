@@ -3,13 +3,20 @@
     "title": "Mutual Guarantee Escrow",
     "keywords": [
       "Mutual Guarantee Escrow",
-      "Guaranteed Double Pressure"
+      "dual escrow",
+      "cross guarantee",
+      "collateral bond",
+      "mutual bond",
+      "two-way guarantee",
+      "reciprocal guarantee",
+      "joint liability",
+      "escrow lock"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In underground data trading, a mutual guarantee mechanism where both parties vouch for the authenticity of a transaction to continue accessing high-value data or premium services. It represents a variant of interest-protection schemes between upstream and downstream actors in the illicit ecosystem.",
-    "description": "In underground data trading, a mutual guarantee mechanism where both parties vouch for the authenticity of a transaction to continue accessing high-value data or premium services. It represents a variant of interest-protection schemes between upstream and downstream actors in the illicit ecosystem.",
-    "usageExample": "\"Come to me for data fills, guaranteed double-lock through the butcher.\" — Used in illicit data trading scenarios involving underground data acquisition channels and techniques.",
+    "definition": "A risk-hedging mechanism in illicit data transactions where both parties stake mutual interests to ensure the authenticity of the deal.",
+    "description": "Commonly used in high-value intelligence trades on underground data markets, this practice involves both sides holding each other's sensitive information or placing deposits to create a check-and-balance, preventing either party from absconding with the money or supplying fake data. The arrangement is typically overseen by a broker; once the transaction is completed, the collateral is returned, while a defaulting party faces exposure of their information or financial loss.",
+    "usageExample": "\"This batch of fresh data goes through mutual collateral—you stake thirty thousand, I stake thirty thousand. Whoever tries any tricks first loses their money.\"",
     "relatedRisks": [
       "R0078",
       "R0089"

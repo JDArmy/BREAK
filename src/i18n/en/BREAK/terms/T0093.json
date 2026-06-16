@@ -3,19 +3,28 @@
     "title": "Data Supplier",
     "keywords": [
       "Data Supplier",
-      "Material Owner"
+      "data vendor",
+      "leak supplier",
+      "data wholesaler",
+      "fullz seller",
+      "data reseller",
+      "data source",
+      "leak provider"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "A primary individual or organization that possesses and sells large volumes of leaked data. The data supplier is a central role in the underground supply chain, acquiring data through various means, then organizing and categorizing it for sale at a premium to downstream buyers. These buyers typically use the data for fraud, identity theft, and cyberattacks.",
-    "description": "A primary individual or organization that possesses and sells large volumes of leaked data. The data supplier is a central role in the underground supply chain, acquiring data through various means, then organizing and categorizing it for sale at a premium to downstream buyers. These buyers typically use the data for fraud, identity theft, and cyberattacks.",
+    "definition": "A primary individual or organization in the underground supply chain that controls and sells first-hand leaked data in bulk.",
+    "description": "The material supplier is the direct controller of the data breach source. They obtain fresh data through insider moles, hacking attacks, or vulnerability exploitation, then categorize and organize it. As the upstream source in underground trading, they wholesale data at high prices to downstream buyers, acting as the original supplier for various crimes like fraud and identity theft. They typically only handle the data supply and avoid direct involvement in end-user crimes to minimize their own risk.",
     "relatedRisks": [
+      "R0072-001",
+      "R0111",
       "R0078",
       "R0089"
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [],
     "relatedThreatActors": [
+      "TA0024",
       "TA0005",
       "TA0040"
     ],

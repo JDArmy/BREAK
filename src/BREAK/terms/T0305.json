@@ -2,7 +2,15 @@
   "T0305": {
     "title": "群引导",
     "keywords": [
-      "群引导"
+      "群引导",
+      "群控",
+      "托",
+      "群演",
+      "气氛组",
+      "带单群",
+      "炒群",
+      "水军",
+      "群托"
     ],
     "aliases": [],
     "category": "跑分洗钱",
@@ -14,8 +22,11 @@
       "R0093"
     ],
     "relatedAvoidances": [],
-    "relatedAttackTools": [],
+    "relatedAttackTools": [
+      "AT0009"
+    ],
     "relatedThreatActors": [
+      "TA0019",
       "TA0014",
       "TA0015",
       "TA0006-003"

@@ -3,12 +3,18 @@
     "title": "Data Marketplace",
     "keywords": [
       "Data Marketplace",
-      "Material Station"
+      "CVV shop",
+      "carding shop",
+      "CVV store",
+      "carding marketplace",
+      "fullz shop",
+      "carding site",
+      "CVV market"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "A black market platform specifically for selling CVV data. Members of these platforms transact using cryptocurrency. The platforms are backed by thousands of data suppliers who specialize in providing fresh CVV information. Due to risk and technical barriers, these suppliers choose to sell the data directly rather than using it themselves.",
-    "description": "A black market platform specifically for selling CVV data. Members of these platforms transact using cryptocurrency. The platforms are backed by thousands of data suppliers who specialize in providing fresh CVV information. Due to risk and technical barriers, these suppliers choose to sell the data directly rather than using it themselves.",
+    "definition": "A platform or site on the black market specifically for trading carding information, such as CVV data.",
+    "description": "A carding shop is an online marketplace in the credit card fraud industry chain. Stocked by numerous material suppliers, it primarily sells 'material' containing card numbers, expiration dates, and CVV codes. Transactions are typically settled in cryptocurrency to evade oversight, with the shop itself providing escrow and arbitration services. Such platforms significantly lower the barrier to entry for carding crimes, allowing buyers without hacking skills to easily acquire criminal tools.",
     "relatedRisks": [
       "R0078",
       "R0089"

@@ -3,13 +3,19 @@
     "title": "Large-Ticket QR",
     "keywords": [
       "Large-Ticket QR",
-      "Large Amount Code"
+      "high-value QR",
+      "large-amount scan",
+      "bulk payment code",
+      "big-ticket scan",
+      "high-limit QR",
+      "large-sum code",
+      "whale transaction code"
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "跑分洗钱中用于单笔收取2000元以上资金的收款二维码，是专门承接高额度赃款的支付工具。",
-    "description": "黑产把大额码当作“跑量”的核心通道，单笔金额越大越利于快速归集和转移非法资金。这类码通常由被招募的“码商”提供，对接电诈、赌博等上游资金，通过高频大额交易把赃款打散再回流。一旦被风控盯上，大额码极易触发冻结，但因其洗钱效率高，仍是跑分链条中的抢手资源。",
-    "usageExample": "Long-term car rental, large amount of car, large quantity, no worries.",
+    "definition": "A payment QR code used in money laundering operations to receive single transactions of 2,000 yuan or more, serving as a dedicated tool for handling high-value illicit funds.",
+    "description": "Fraud rings treat high-value codes as core channels for volume-based laundering—the larger the single transaction, the faster illicit funds can be pooled and moved. These codes are typically supplied by recruited “code merchants” and linked to upstream crimes such as telecom fraud and gambling. By processing frequent, high-value transactions, dirty money is broken up and recirculated. Although these codes are highly prone to triggering freezes once flagged by risk controls, their laundering efficiency keeps them in high demand across money-muling chains.",
+    "usageExample": "Long-term recruitment for vehicles, high-value code vehicles, high volume no worries.",
     "relatedRisks": [
       "R0060",
       "R0093"

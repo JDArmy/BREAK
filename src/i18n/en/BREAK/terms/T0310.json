@@ -3,13 +3,20 @@
     "title": "Aggregated QR Code",
     "keywords": [
       "Aggregated QR Code",
-      "Aggregation Code"
+      "Multi-Payment QR",
+      "Unified QR",
+      "Combined QR",
+      "Multi-Channel QR",
+      "Payment Gateway QR",
+      "Omni-Channel QR",
+      "Integrated QR",
+      "Universal QR"
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "聚合码是整合了多种支付方式的收款二维码，黑产利用其掩盖资金流向，增加追踪难度。",
-    "description": "聚合码将微信、支付宝、云闪付等多种支付入口整合为一个二维码，方便用户支付。黑产利用这一特性，让受害者扫码后通过不同渠道付款，以此混淆资金来源和去向。在洗钱场景中，聚合码常被用于接收“团购料”等小额多笔的非法资金，以规避单一渠道的风控。",
-    "usageExample": "The recruitment code collects small amount group purchase materials, 28 points, single order 90-110, daily volume 1500-2000.",
+    "definition": "An aggregated QR code is a collection QR code that consolidates multiple payment methods, exploited by underground actors to obscure fund flows and increase tracing difficulty.",
+    "description": "An aggregated code combines WeChat Pay, Alipay, UnionPay, and other payment options into a single QR code for user convenience. Criminals exploit this feature to have victims pay through different channels after scanning, thereby confusing the source and destination of funds. In laundering scenarios, aggregated codes are often used to collect small, multi-transaction illicit funds such as group-buying material to evade single-channel risk controls.",
+    "usageExample": "Recruiting aggregated codes for small group-buying material, 28 points, single transaction 90–110, daily volume 1500–2000.",
     "relatedRisks": [
       "R0060",
       "R0093",

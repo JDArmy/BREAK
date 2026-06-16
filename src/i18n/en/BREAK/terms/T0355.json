@@ -3,12 +3,19 @@
     "title": "Rake Settlement",
     "keywords": [
       "Rake Settlement",
-      "Open Water Tank"
+      "drop count",
+      "cage reconciliation",
+      "pit settlement",
+      "table drop",
+      "chip count",
+      "cash box audit",
+      "shift settlement",
+      "soft count"
     ],
     "aliases": [],
     "category": "Gambling",
-    "definition": "赌场工作人员对抽水金额进行清点结算。",
-    "description": "每场赌局结束后，荷官或账房将台面抽水归拢，现场清点现金或筹码，核对账目后封存入库。开水箱是赌场内部风控的关键动作，直接反映当台当日的抽水收益，防止工作人员私吞或账实不符。",
+    "definition": "The process where casino staff count and settle the house's commission.",
+    "description": "After each gambling session, the dealer or cashier gathers the house's cut from the tables, counts the cash or chips on the spot, verifies the accounts, and seals them for storage. Counting the house's commission is a critical internal control action that directly reflects the table's daily commission revenue and prevents staff from embezzling funds or causing discrepancies.",
     "relatedRisks": [
       "R0097",
       "R0060"

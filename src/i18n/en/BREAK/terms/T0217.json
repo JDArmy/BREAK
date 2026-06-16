@@ -3,13 +3,20 @@
     "title": "Scrape-and-Blast",
     "keywords": [
       "Scrape-and-Blast",
-      "Collect Bulk Messages"
+      "data scraping",
+      "bulk messaging",
+      "SMS blast",
+      "mass DM",
+      "contact scraping",
+      "auto messaging",
+      "lead scraping",
+      "scrape and spam"
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "采集群发是一种集成数据抓取与批量推送功能的自动化黑灰产工具。",
-    "description": "该工具先通过爬虫或社工库等方式非法采集用户手机号、社交账号等个人信息，再通过短信、私信或群聊等渠道批量发送广告、钓鱼链接或诈骗信息。操作者常利用群控系统一键下发任务，实现大规模骚扰或引流。此类行为严重侵犯用户隐私，是营销欺诈和电信诈骗中常见的获客与扩散手段。",
-    "usageExample": "用这个软件先采一批号，再群发带链接的私信，后台一键就能跑完任务。",
+    "definition": "Data scraping and bulk messaging is an automated black-market tool that integrates data harvesting and mass distribution functions.",
+    "description": "This tool first illegally collects personal information such as phone numbers and social media accounts through web scraping or social engineering databases. It then sends advertisements, phishing links, or fraudulent messages in bulk via SMS, private messages, or group chats. Operators often use centralized control systems to dispatch tasks with a single click, enabling large-scale harassment or traffic diversion. Such practices severely violate user privacy and are a common method for customer acquisition and dissemination in marketing fraud and telecom scams.",
+    "usageExample": "Use this software to scrape a batch of accounts first, then blast private messages with links—the backend runs the whole task in one go.",
     "relatedRisks": [
       "R0024",
       "R0007-003"

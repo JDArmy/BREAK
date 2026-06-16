@@ -3,14 +3,22 @@
     "title": "Ponzi-App Data Harvesting",
     "keywords": [
       "Ponzi-App Data Harvesting",
-      "Capital Disk APP Data Collection"
+      "investment scam data harvesting",
+      "capital pool data collection",
+      "Ponzi scheme data mining",
+      "fraudulent platform data extraction",
+      "investor data harvesting",
+      "scam app data collection",
+      "money mule data sourcing",
+      "card fraud data supply"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In illicit data trading, the practice of harvesting personal information from investors in fraudulent investment schemes (known as “capital pools”), typically targeting individuals who hold bank cards, which are then sold to downstream groups for card fraud and money laundering.",
-    "description": "In illicit data trading, this refers to the process by which underground syndicates collect personal data from “investors” involved in fraudulent investment platforms or capital pool schemes. These investors usually possess bank cards, and their information is sold to downstream actors who use it to conduct card-based fraud and money laundering through payment routing.",
-    "usageExample": "“Massive supply of pyramid scheme leads and poverty relief scheme leads, capital pool app data collection — serious buyers only! Scammers stay away!” This appears in illegal data trading contexts involving sensitive personal information queries.",
+    "definition": "The practice of scraping personal data in bulk from fraudulent investment apps by black market actors.",
+    "description": "Black market groups perform targeted data extraction on fake investment and financial scam apps to harvest victim identity information. These victims typically have active bank accounts, and the data, once cleaned and organized, is resold to downstream groups for money laundering activities such as fraudulent card cashing.",
+    "usageExample": "\"Large batches of pyramid scheme and poverty relief leads available, scraped from investment scam apps. Serious buyers only! Scammers stay away!\"",
     "relatedRisks": [
+      "R0027",
       "R0078",
       "R0089"
     ],

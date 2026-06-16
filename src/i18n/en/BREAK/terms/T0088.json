@@ -3,12 +3,18 @@
     "title": "Stock Advisory Lead Data",
     "keywords": [
       "Stock Advisory Lead Data",
-      "Diagnostic Information"
+      "stock investor leads",
+      "investment client data",
+      "brokerage data leak",
+      "trading account data",
+      "investor PII",
+      "financial advisory leak",
+      "stock tip leads"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In illegal data trading, this refers to sensitive client information from stock trading platforms or investment advisory firms, such as personal identity data, trading history, and investment preferences. Once illegally obtained by cybercriminals, this data is usually resold to third parties for illegal activities such as targeted marketing and fraud.",
-    "description": "In illegal data trading, this refers to sensitive client information from stock trading platforms or investment advisory firms, such as personal identity data, trading history, and investment preferences. Once illegally obtained by cybercriminals, this data is usually resold to third parties for illegal activities such as targeted marketing and fraud.",
+    "definition": "In illicit data trading, refers to sensitive customer information illegally obtained from stock investment platforms or advisory firms, known in the black market as “stock advisory material.”",
+    "description": "This data covers personal identities, transaction records, portfolio preferences, and contact details, often leaked by internal employees or obtained through system intrusions. Black-market actors resell stock advisory material to investment scam rings, illegal margin-trading platforms, or precision marketing agencies, who use it for fraudulent investment inducement, fake stock recommendations, or charging exorbitant service fees. Victims are easily misled into believing the scammers are legitimate advisors due to the precise matching of their personal investment profiles, ultimately resulting in financial loss.",
     "relatedRisks": [
       "R0078",
       "R0089"

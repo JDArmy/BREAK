@@ -3,12 +3,19 @@
     "title": "Resold Data",
     "keywords": [
       "Resold Data",
-      "Second Hand Materials"
+      "recycled data",
+      "data reseller",
+      "aged data",
+      "secondhand data",
+      "data resharing",
+      "data repackaging",
+      "data re-brokering",
+      "data resale"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In illicit data trading, personal or organizational data that has been resold one or more times, also known as 'historical material.' Compared to first-hand data, second-hand material may suffer from incompleteness, inaccuracy, or tampering due to multiple transfers, and its value is typically lower.",
-    "description": "In illicit data trading, personal or organizational data that has been resold one or more times, also known as 'historical material.' Compared to first-hand data, second-hand material may suffer from incompleteness, inaccuracy, or tampering due to multiple transfers, and its value is typically lower.",
+    "definition": "Second-hand data refers to personal or corporate data that has been resold one or more times in illicit data trading markets.",
+    "description": "Due to repeated reselling, this data often suffers from missing fields, outdated information, or tampering, significantly reducing its accuracy and validity. In the underground supply chain, second-hand data is typically used for broad-stroke scams or low-quality marketing campaigns. Its trading price is far lower than that of fresh data, and buyers are usually downstream fraudsters with limited budgets.",
     "relatedRisks": [
       "R0078",
       "R0089"

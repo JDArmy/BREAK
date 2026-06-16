@@ -3,12 +3,18 @@
     "title": "Database Dump",
     "keywords": [
       "Database Dump",
-      "Drag Library"
+      "DB exfiltration",
+      "mass data theft",
+      "SQL dump",
+      "credential harvesting",
+      "insider data theft",
+      "privilege escalation dump",
+      "bulk extraction"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "The act of hackers stealing data from a database on a massive scale through illegal means. Methods include exploiting vulnerabilities, phishing, escalating privileges from ordinary user access to administrator-level control, and leveraging insiders with authorized access to illicitly extract and download database contents. The goal is to obtain personal information, account details, and corporate data, causing serious harm to individual privacy and business security.",
-    "description": "The act of hackers stealing data from a database on a massive scale through illegal means. Methods include exploiting vulnerabilities, phishing, escalating privileges from ordinary user access to administrator-level control, and leveraging insiders with authorized access to illicitly extract and download database contents. The goal is to obtain personal information, account details, and corporate data, causing serious harm to individual privacy and business security.",
+    "definition": "A hacking technique used to exfiltrate an entire database from a target server.",
+    "description": "After gaining full access to a database through vulnerability exploitation, privilege escalation, or insider collusion, attackers download the entire database file. The stolen data typically contains massive volumes of user information and serves as the source for subsequent database sales and data laundering, causing irreparable damage to businesses and users.",
     "relatedRisks": [
       "R0078",
       "R0089",

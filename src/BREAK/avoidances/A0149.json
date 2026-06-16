@@ -6,7 +6,12 @@
     "description": "防止恶意固件通过OTA植入。措施：固件包使用厂商私钥签名；设备内置公钥验证；使用安全哈希算法；证书链验证；版本号防回滚；更新失败自动回退。",
     "complexity": "中级",
     "limitation": "密钥管理复杂；签名验证增加时间；证书过期需处理",
-    "references": [],
+    "references": [
+      {
+        "title": "Secure OTA Update Implementation",
+        "link": "https://www.nhtsa.gov/sites/nhtsa.gov/files/documents/cybersecurity_of_firmware_updates_oct2020.pdf"
+      }
+    ],
     "updated": "2026-06-16",
     "keywords": [
       "OTA安全",

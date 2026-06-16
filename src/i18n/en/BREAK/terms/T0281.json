@@ -3,18 +3,27 @@
     "title": "Traffic Pool",
     "keywords": [
       "Traffic Pool",
-      "Drainage Pool"
+      "lead gen pool",
+      "drainage matrix",
+      "sock puppet farm",
+      "account matrix",
+      "content aggregation hub",
+      "funnel account cluster",
+      "astroturfing network",
+      "engagement farm"
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "引流池指黑灰产用于承接和聚合流量的内容渠道或账号矩阵。",
-    "description": "黑灰产通过批量注册或收购的社交账号群、问答账号、种草账号等组成矩阵，统一发布引流内容，将分散的流量集中到指定私域或诈骗平台。这些账号通常由团伙分工维护，有人负责内容发布，有人负责互动引导，最终将流量变现为诈骗目标或营销收割对象。一旦引流池被平台风控识别，整个矩阵可能被批量封禁，导致前期投入全部损失。",
+    "definition": "A traffic funnel is a network of content channels or account matrices used by underground actors to capture and aggregate user traffic.",
+    "description": "Underground operators build matrices of social media accounts, Q&A profiles, and lifestyle recommendation accounts—either batch-registered or purchased—to systematically post traffic-driving content. The goal is to channel scattered user traffic into designated private domains or fraudulent platforms. These accounts are typically maintained by teams with a clear division of labor: some members handle content publishing, while others manage engagement and guidance, ultimately converting traffic into scam targets or monetization victims. Once a traffic funnel is detected by platform risk controls, the entire matrix may be banned in bulk, resulting in a total loss of the initial investment.",
     "relatedRisks": [
+      "R0030-001",
       "R0024",
       "R0007-003"
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [
+      "AT0003",
       "AT0005",
       "AT0050"
     ],

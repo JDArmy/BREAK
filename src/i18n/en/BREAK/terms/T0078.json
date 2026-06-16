@@ -3,12 +3,19 @@
     "title": "Maternal-and-Infant Data",
     "keywords": [
       "Maternal-and-Infant Data",
-      "Maternal and Infant Materials"
+      "pregnancy data",
+      "new parent leads",
+      "baby product records",
+      "maternity PII",
+      "newborn intel",
+      "mom-and-baby profiles",
+      "infant data",
+      "parenting targets"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In illicit data trading, refers to personal information or data related to mothers and infants, such as details of pregnant women, infant birth dates, and purchase records for maternal and baby products. Once illegally obtained by underground actors, this data is typically resold to third parties for targeted marketing, fraud, and other illegal activities.",
-    "description": "In illicit data trading, refers to personal information or data related to mothers and infants, such as details of pregnant women, infant birth dates, and purchase records for maternal and baby products. Once illegally obtained by underground actors, this data is typically resold to third parties for targeted marketing, fraud, and other illegal activities.",
+    "definition": "In illicit data trading, refers to personal information and consumption data related to pregnant women, new mothers, and infants.",
+    "description": "This data includes maternal health records, infant birth registrations, and baby product purchase lists, leaked from channels such as hospitals and e-commerce platforms. After acquiring it, underground groups resell it to confinement centers and photography studios for telemarketing harassment, or directly use it for targeted scams impersonating medical staff.",
     "relatedRisks": [
       "R0078",
       "R0089"

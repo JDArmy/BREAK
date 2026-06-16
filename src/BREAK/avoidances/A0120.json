@@ -6,7 +6,12 @@
     "description": "通过限制治理权限降低攻击价值。设计原则：将操作分级，常规参数调整可由DAO投票，但资金转移、合约升级等高风险操作需要更高门槛；实施双重治理（dual governance），重大决策需要代币持有者和多签委员会双重批准；设置治理可调整参数的上下限，防止通过治理投票设置极端参数导致系统崩溃；对国库资金设置单笔转账上限和冷却期；关键合约使用不可升级设计或需要极高投票门槛才能升级。QuillAudits研究表明限制治理权限是防护的关键。",
     "complexity": "中级",
     "limitation": "降低了DAO的灵活性和自主性；多签引入中心化风险，可能被攻击或内部作恶；权限划分复杂，实施和沟通成本高；过度限制可能导致治理瘫痪",
-    "references": [],
+    "references": [
+      {
+        "title": "Non-obvious precautions for DAO security",
+        "link": "https://blog.oxor.io/non-obvious-precautions-for-dao-security-525a83512052"
+      }
+    ],
     "updated": "2026-06-16",
     "keywords": [
       "权限控制",

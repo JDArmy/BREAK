@@ -2,7 +2,14 @@
   "T0170": {
     "title": "库主",
     "keywords": [
-      "库主"
+      "库主",
+      "社工库",
+      "数据源头",
+      "数据贩子",
+      "料商",
+      "数据供应链",
+      "总库",
+      "数据订阅"
     ],
     "aliases": [],
     "category": "数据泄露",
@@ -20,6 +27,7 @@
     ],
     "relatedThreatActors": [
       "TA0005",
+      "TA0020",
       "TA0040"
     ],
     "relatedBusinessScenes": [

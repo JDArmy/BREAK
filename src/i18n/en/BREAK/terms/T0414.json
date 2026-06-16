@@ -3,13 +3,20 @@
     "title": "Blacklisted Borrower",
     "keywords": [
       "Blacklisted Borrower",
-      "Lao Hei"
+      "severely delinquent borrower",
+      "credit blacklist target",
+      "defaulted loan applicant",
+      "unbankable debtor",
+      "subprime fraud lead",
+      "charge-off candidate",
+      "blocklisted individual",
+      "hard-bounced credit"
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "黑产中指征信记录极差、已被金融机构列入黑名单的借款人。",
-    "description": "这类人因严重逾期、失信等行为，已无法通过正规渠道获得贷款。黑产中介利用部分网贷平台风控漏洞，或通过伪造资料、包装身份等手段，专门为这类“老黑”申请贷款。此类操作往往涉及高额手续费，且极易引发暴力催收等衍生问题。",
-    "usageExample": "老黑专属，矩阵产品，黑户可做。",
+    "definition": "In black-market fraud, a borrower with an extremely poor credit history who has been blacklisted by financial institutions.",
+    "description": "These individuals are already unable to obtain loans through legitimate channels due to severe defaults or dishonesty. Fraud intermediaries exploit loopholes in some online lending platforms' risk controls, or use forged documents and identity packaging, to apply for loans specifically for these 'blacklisted' borrowers. Such operations often involve high fees and can easily lead to derivative problems like aggressive debt collection.",
+    "usageExample": "Exclusive for blacklisted borrowers, matrix product, available to blacklisted individuals.",
     "relatedRisks": [
       "R0096"
     ],

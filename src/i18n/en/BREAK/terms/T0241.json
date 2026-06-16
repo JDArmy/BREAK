@@ -3,13 +3,19 @@
     "title": "Self-Trading",
     "keywords": [
       "Self-Trading",
-      "Left and Right Hands"
+      "wash trading",
+      "matched orders",
+      "fictitious trading",
+      "round-tripping",
+      "sham transaction",
+      "pre-arranged trade",
+      "circular trading"
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "指同一人同时操控买卖双方账号虚构交易，骗取平台营销补贴或套取资金。",
-    "description": "操作者通常注册或控制多个账号，一边扮演买家下单，一边扮演卖家接单，伪造完整的交易闭环。这种手法常见于电商平台的新人补贴、满减活动或拉新奖励场景，通过虚假刷单制造交易流水。一旦平台风控未能识别，黑产即可将补贴款套现，导致平台资金直接损失。",
-    "usageExample": "那个工作室靠左右手刷了上万单新人优惠，把平台补贴全薅光了。",
+    "definition": "A fraud tactic in which a single operator simultaneously controls both buyer and seller accounts to fabricate transactions and defraud the platform of marketing subsidies or funds.",
+    "description": "The operator typically registers or controls multiple accounts, acting as both the buyer placing orders and the seller fulfilling them, creating a complete fake transaction loop. This technique is commonly used in e-commerce scenarios involving new-user subsidies, promotional discounts, or referral rewards, generating fraudulent order volume. If the platform's risk controls fail to detect it, the fraudster can cash out the subsidies, resulting in direct financial losses for the platform.",
+    "usageExample": "That workshop ran tens of thousands of fake orders using the left-right hand trick and drained all the platform's new-user subsidies.",
     "relatedRisks": [
       "R0017",
       "R0017-001",

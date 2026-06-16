@@ -2,7 +2,15 @@
   "T0024": {
     "title": "无损套",
     "keywords": [
-      "无损套"
+      "无损套",
+      "套现",
+      "薅羊毛",
+      "空包",
+      "刷券",
+      "变现",
+      "优惠券变现",
+      "刷红包",
+      "补贴套利"
     ],
     "aliases": [],
     "category": "营销欺诈",
@@ -11,6 +19,8 @@
     "usageExample": "这次活动有漏洞，领了券找指定渠道无损套，100块券到手95。",
     "relatedRisks": [
       "R0017",
+      "R0017-002",
+      "R0055",
       "R0003",
       "R0005",
       "R0070"
@@ -18,6 +28,7 @@
     "relatedAvoidances": [],
     "relatedAttackTools": [],
     "relatedThreatActors": [
+      "TA0001",
       "TA0002"
     ],
     "relatedBusinessScenes": [

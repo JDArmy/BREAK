@@ -3,13 +3,19 @@
     "title": "Loan-Lead Data",
     "keywords": [
       "Loan-Lead Data",
-      "Loan Assistance Materials"
+      "Loan applicant data",
+      "Loan application leak",
+      "Borrower PII",
+      "Loan origination data",
+      "Lending platform leak",
+      "Applicant records",
+      "Loan broker data"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "指从网贷平台泄露的贷款申请人全套资料，包括身份证、银行卡、征信报告等。",
-    "description": "这些数据由助贷平台或金融机构内部泄露，经黑产中介按信用等级分类后高价出售。下游诈骗团伙购买后，冒充平台客服以“解冻费”“保证金”等名义对受害人实施二次诈骗。由于掌握了受害人的详细借款信息，此类诈骗极具迷惑性。",
-    "usageExample": "“All kinds of loan assistance materials are welcome to tease”",
+    "definition": "A complete set of loan applicant documents leaked from online lending platforms, including ID cards, bank cards, and credit reports.",
+    "description": "This data is leaked internally from loan facilitation platforms or financial institutions, classified by credit rating by underground brokers, and sold at a premium. Downstream fraud rings purchase it to impersonate platform customer service and conduct secondary scams under the guise of 'unfreezing fees' or 'security deposits.' The detailed loan information makes these scams highly deceptive.",
+    "usageExample": "\"Various loan application data, welcome to inquire\"",
     "relatedRisks": [
       "R0078",
       "R0089"

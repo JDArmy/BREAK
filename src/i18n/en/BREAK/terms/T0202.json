@@ -3,12 +3,18 @@
     "title": "Basic Vehicle File",
     "keywords": [
       "Basic Vehicle File",
-      "Car Stall"
+      "License plate lookup",
+      "VIN lookup",
+      "Vehicle basic info",
+      "Car plate data",
+      "Registration plate search",
+      "Vehicle details lookup",
+      "Plate search"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "指非法数据交易中仅包含车牌、车型等基本信息的车辆档案数据。",
-    "description": "相比车大档，这类数据不含车主个人身份信息，泄露源头同样多为车管所或保险系统。黑产常将其用于套牌、规避交通处罚或作为进一步获取车主信息的跳板。因其获取成本较低，在市场中流通量较大。",
+    "definition": "Basic vehicle registration data containing only information like license plate number and vehicle model, traded on the black market.",
+    "description": "Unlike full vehicle records, this data does not include the owner's personal identity information. Leaks often originate from vehicle administration offices or insurance systems. Underground actors use it for license plate cloning, evading traffic penalties, or as a stepping stone to acquire more detailed owner information. Its lower acquisition cost leads to higher circulation volumes in the market.",
     "relatedRisks": [
       "R0078",
       "R0089",

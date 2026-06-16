@@ -3,12 +3,18 @@
     "title": "Data Enrichment",
     "keywords": [
       "Data Enrichment",
-      "Wash Off Guests"
+      "lead scoring",
+      "data append",
+      "demographic enrichment",
+      "phone validation",
+      "geo enrichment",
+      "lead filtering",
+      "data enhancement"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "The process of cleaning and enriching raw data obtained from upstream sources to increase its value for downstream fraud or illicit marketing. This involves filtering out invalid or inactive phone numbers, appending geographic location data, and inferring demographic attributes such as age. The refined data enables more precise targeting of victims for scams or spam campaigns.",
-    "description": "The process of cleaning and enriching raw data obtained from upstream sources to increase its value for downstream fraud or illicit marketing. This involves filtering out invalid or inactive phone numbers, appending geographic location data, and inferring demographic attributes such as age. The refined data enables more precise targeting of victims for scams or spam campaigns.",
+    "definition": "The process within underground operations of cleaning, filtering, and enriching leaked upstream data to enhance its utility for downstream exploitation.",
+    "description": "Operators filter illegally obtained user information by removing invalid or inactive numbers and supplementing records with attributes such as geographic location and age demographics. This refined data enables downstream fraud or marketing groups to conduct highly targeted scams, significantly increasing their success rates. Such activities directly amplify the risk of secondary harm following a privacy breach.",
     "relatedRisks": [
       "R0078",
       "R0089"

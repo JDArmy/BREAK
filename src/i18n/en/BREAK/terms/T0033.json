@@ -16,9 +16,9 @@
       "Bang Dai"
     ],
     "category": "Credit Fraud",
-    "definition": "A practice where an individual with no personal need for credit applies for a loan on behalf of someone else. The nominal borrower completes the application, signs the contract, and receives the funds, then transfers the money to the actual borrower. This includes both consensual arrangements and cases where the nominal borrower is unwittingly used, the latter being known as AB lending and carrying significant fraud risk.",
-    "description": "A practice where an individual with no personal need for credit applies for a loan on behalf of someone else. The nominal borrower completes the application, signs the contract, and receives the funds, then transfers the money to the actual borrower. This includes both consensual arrangements and cases where the nominal borrower is unwittingly used, the latter being known as AB lending and carrying significant fraud risk.",
-    "usageExample": "我朋友征信花了贷不了款，中介就让我帮他做帮贷，钱下来后直接转给他，现在逾期了银行天天找我。",
+    "definition": "The act of applying for a loan from a financial institution on behalf of another person without genuine borrowing intent, and then transferring the funds to that person.",
+    "description": "In a proxy loan scheme, the nominal borrower applies for the loan, signs the contract, and receives the disbursement, then passes the money to the actual user. A high-risk variant is AB lending, where the nominal borrower’s identity is used without their knowledge, leaving them with heavy debt. This model is often exploited by illicit intermediaries to defraud financial institutions, resulting in credit losses.",
+    "usageExample": "My friend’s credit was trashed and he couldn’t get a loan, so an agent had me do a proxy loan for him. I transferred the money as soon as it came through, and now it’s overdue—the bank keeps calling me.",
     "relatedRisks": [
       "R0096"
     ],

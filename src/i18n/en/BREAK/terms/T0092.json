@@ -3,12 +3,18 @@
     "title": "Database Operator",
     "keywords": [
       "Database Operator",
-      "Library Owner"
+      "db operator",
+      "db owner",
+      "data broker",
+      "leaked database operator",
+      "database admin",
+      "underground db admin",
+      "db admin"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "A key figure who owns and operates social engineering databases, credential-stuffing databases, or leaked data repositories. These individuals illegally acquire, organize, and manage large volumes of sensitive data, offering query, sale, and subscription services that form the core ecosystem of the underground data trade.",
-    "description": "A key figure who owns and operates social engineering databases, credential-stuffing databases, or leaked data repositories. These individuals illegally acquire, organize, and manage large volumes of sensitive data, offering query, sale, and subscription services that form the core ecosystem of the underground data trade.",
+    "definition": "A key figure in underground data trading who owns and operates large-scale databases of leaked information.",
+    "description": "The database owner is a top-tier role in the underground data ecosystem, responsible for illegally acquiring, organizing, and continuously updating various social engineering and credential-stuffing databases. By purchasing data from material suppliers or conducting their own attacks, they amass vast amounts of sensitive information and offer query, subscription, or bulk sale services to data buyers. They build and maintain the core infrastructure of underground data trading and are the source of leaked data circulation.",
     "relatedRisks": [
       "R0092",
       "R0078",

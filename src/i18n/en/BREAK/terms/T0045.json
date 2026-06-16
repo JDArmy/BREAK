@@ -3,13 +3,20 @@
     "title": "Fast Company Flip",
     "keywords": [
       "Fast Company Flip",
-      "Fast Enterprise"
+      "Quick Company",
+      "Fast Company",
+      "Company Flip",
+      "Ownership Transfer",
+      "Traceless Transfer",
+      "Business Takeover",
+      "Shell Company",
+      "Quick Flip"
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "In business loan fraud, this refers to a tactic where fraud rings transfer business ownership to a loan applicant through 'traceless transfers' (where banks cannot discern the actual change in business ownership from business registration data), enabling rapid financing while circumventing rules on the duration of legal representative changes. This method, called 'quick enterprise' by fraud rings, allows for financing within 20-45 days. Such enterprises are often pre-cultivated by fraud rings with substantial operating and tax invoice data, allowing multiple large business tax-invoice loans to be applied for in a short period.",
-    "description": "In business loan fraud, this refers to a tactic where fraud rings transfer business ownership to a loan applicant through 'traceless transfers' (where banks cannot discern the actual change in business ownership from business registration data), enabling rapid financing while circumventing rules on the duration of legal representative changes. This method, called 'quick enterprise' by fraud rings, allows for financing within 20-45 days. Such enterprises are often pre-cultivated by fraud rings with substantial operating and tax invoice data, allowing multiple large business tax-invoice loans to be applied for in a short period.",
-    "usageExample": "刚过户了一家快企，数据养了半年，这几天抓紧安排进件。",
+    "definition": "A scheme in which a fraud ring rapidly transfers a pre-seasoned shell company to a loan applicant through an untraceable change of ownership, circumventing rules that flag short-tenure legal representatives for business financing fraud.",
+    "description": "Fraud rings cultivate empty-shell companies with substantial operating revenue and tax invoice records in advance. Through manipulation, banks are unable to detect the true change of control via commercial registries. Once the applicant takes over, they can apply for multiple large-amount corporate tax-invoice loans within 20 to 45 days under the new legal-representative identity. The tactic exploits a time gap to concentrate large-scale fund extraction before the lender detects the anomaly.",
+    "usageExample": "Just took over a fast-transfer shell company—the data has been seasoned for six months. We’re pushing submissions hard over the next few days.",
     "relatedRisks": [
       "R0096"
     ],
@@ -22,7 +29,7 @@
     ],
     "references": [
       {
-        "title": "Desperados in Financial Fraud: A Big Data Analysis of Underground Activities",
+        "title": "The Desperate Players in Financial Fraud: A Dark-Industry Data Perspective",
         "link": "https://www.threathunter.cn/blog/f17db99edff"
       }
     ],

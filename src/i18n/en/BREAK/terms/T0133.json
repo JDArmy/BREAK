@@ -3,14 +3,24 @@
     "title": "Mule Recruitment Script",
     "keywords": [
       "Mule Recruitment Script",
-      "Horse Rope"
+      "victim contact",
+      "patient data",
+      "leaked medical records",
+      "hospital data breach",
+      "patient lead",
+      "victim phone list",
+      "cancer patient lead"
     ],
     "aliases": [],
     "category": "Telecom Fraud",
-    "definition": "The contact information of an elderly scam victim.",
-    "description": "The contact information of an elderly scam victim.",
-    "usageExample": "这批马绳是从某三甲医院内鬼手里拿的，全是近期确诊癌症的，电话和家庭住址都有，训马组已经开始逐个联系了。",
+    "definition": "Horse reins refer to the core contact details of defrauded elderly victims, such as phone numbers and home addresses, which are the critical information fraud rings use to make contact.",
+    "description": "In scams targeting “horses,” horse reins are the sole link between the scammer and the victim. They are typically obtained illegally by data brokers or hospital insiders and then sold to fraud rings. With horse reins, calling teams can make precise calls, conduct home visits, or mail fake promotional materials, thereby launching the entire horse-training process. The quality of horse reins directly determines the success rate of the scam; the fresher and more detailed the information, the higher the probability that the victim can be controlled.",
+    "usageExample": "This batch of horse reins came straight from an insider at a top-tier hospital—all recently diagnosed cancer patients with full phone numbers and home addresses. The horse-training team has already started contacting them one by one.",
     "relatedRisks": [
+      "R0078",
+      "R0028",
+      "R0072-001",
+      "R0111",
       "R0095",
       "R0150",
       "R0060"
@@ -18,6 +28,7 @@
     "relatedAvoidances": [],
     "relatedAttackTools": [],
     "relatedThreatActors": [
+      "TA0024",
       "TA0008",
       "TA0015",
       "TA0042",

@@ -3,13 +3,20 @@
     "title": "Zombie Reviews",
     "keywords": [
       "Zombie Reviews",
-      "Zombie Review"
+      "astroturfing",
+      "review bombing",
+      "spam comments",
+      "paid reviews",
+      "review manipulation",
+      "crowdturfing",
+      "reputation laundering",
+      "fake testimonials"
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "僵尸评论指由程序或水军批量发布的、内容空洞重复的虚假评论。",
-    "description": "这类评论通常用于淹没真实用户的负面反馈，或营造商品、内容受欢迎的假象。操作者利用大量账号发布预设话术，干扰平台的内容排序和用户判断。僵尸评论是刷量控评的常见手段，用于误导消费者，掩盖产品或服务质量问题。",
-    "usageExample": "Off-site promotion, warranty of 20-50 orders, influencer videos, package upload, brand change, refurbished links, zombie comments.",
+    "definition": "Bot comments are fake, repetitive, and content-free comments posted in bulk by programs or click farms.",
+    "description": "This type of comment is often used to drown out negative feedback from real users or to create a false impression of popularity for a product or content. Operators use a large number of accounts to post pre-scripted messages, interfering with platform content ranking and user judgment. Bot comments are a common tool for engagement manipulation and review bombing, used to mislead consumers and conceal product or service quality issues.",
+    "usageExample": "Off-platform promotion, guaranteed 20-50 orders. Influencer videos, upload included, brand change, link refreshing, bot comments.",
     "relatedRisks": [
       "R0017",
       "R0017-001",
@@ -22,6 +29,7 @@
       "AT0016"
     ],
     "relatedThreatActors": [
+      "TA0019",
       "TA0009",
       "TA0006",
       "TA0007"

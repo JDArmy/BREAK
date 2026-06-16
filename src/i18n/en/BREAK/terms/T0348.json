@@ -3,12 +3,18 @@
     "title": "Rake Rate Slang",
     "keywords": [
       "Rake Rate Slang",
-      "Half A point\\cooked A Certain point\\last nineteen\\half Nineteen"
+      "house cut",
+      "vig",
+      "juice",
+      "commission calculation",
+      "house edge",
+      "rake structure",
+      "water money"
     ],
     "aliases": [],
     "category": "Gambling",
-    "definition": "赌博中不同的抽水计算方式，用于描述庄家从赌注中抽取利润的比例。",
-    "description": "半点指抽水5%，上一九指抽水10%，半一九介于两者之间，通常为7.5%左右。这些术语用于约定庄家收益，不同赌局或针对不同赌客会灵活调整点数，熟客可能享受更低抽水，是赌场控制盈利和吸引赌客的核心手段。",
+    "definition": "Various commission calculation methods in gambling that describe the percentage the house takes from bets.",
+    "description": "These terms define the house edge: 'Ban Dian' refers to a 5% commission, 'Shang Yi Jiu' to 10%, and 'Ban Yi Jiu' typically around 7.5%. Operators adjust these rates flexibly based on the game type or player status, with regulars sometimes receiving lower rates. This is a core mechanism for controlling profitability and attracting bettors.",
     "relatedRisks": [
       "R0097",
       "R0060"

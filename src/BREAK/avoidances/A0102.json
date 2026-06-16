@@ -6,7 +6,12 @@
     "description": "跨链桥智能合约的漏洞是攻击的主要入口。防护措施包括：部署前进行多家独立机构的安全审计；对锁定、铸造、销毁等关键函数进行形式化验证；实施链上监控系统，检测大额转账、异常铸币、非预期的合约调用；设置交易限额和速率限制，单笔转账超过阈值需要额外验证或时间延迟；部署紧急暂停机制，发现攻击时可快速冻结合约；定期进行代码审查和漏洞赏金计划。",
     "complexity": "中级",
     "limitation": "审计无法保证发现所有漏洞，新型攻击手法可能绕过已知检测；紧急暂停机制可能被滥用或成为攻击目标；监控系统可能产生误报，影响正常运营",
-    "references": [],
+    "references": [
+      {
+        "title": "Cross-Chain Interoperability and Security",
+        "link": "https://hacken.io/discover/cross-chain-interoperability-report/"
+      }
+    ],
     "updated": "2026-06-16",
     "keywords": [
       "智能合约审计",

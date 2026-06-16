@@ -3,17 +3,28 @@
     "title": "In-App Direct Report",
     "keywords": [
       "In-App Direct Report",
-      "Straight Lift"
+      "Mass Report",
+      "Report Bombing",
+      "Coordinated Flagging",
+      "Malicious Reporting",
+      "Report Brigading",
+      "False Flagging",
+      "Report Raid",
+      "Takedown Raid"
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "端内直举指在客户端内直接对目标账号或内容发起举报，以触发平台处罚的恶意竞争手段。",
-    "description": "黑灰产从业者利用平台举报机制，组织人手或使用脚本对竞争对手的账号、视频进行集中举报。通过短时间内大量举报，触发平台的自动审核或处罚机制，导致对方限流、降权或封号。常用于打压同行、清除异己，破坏正常的商业竞争环境。",
+    "definition": "In-app direct reporting refers to the malicious competitive tactic of initiating mass reports against a target account or content directly within a client to trigger platform penalties.",
+    "description": "Underground industry actors exploit platform reporting mechanisms by organizing manual efforts or deploying scripts to file concentrated reports against a competitor's accounts or videos. By generating a high volume of reports in a short period, they trigger the platform's automated review or penalty system, leading to shadowbanning, demotion, or account suspension. This is commonly used to suppress rivals and eliminate competition, disrupting a fair business environment.",
     "relatedRisks": [
+      "R0068-001",
       "R0068",
       "R0068-002"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0004",
+      "A0020-003"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0034"

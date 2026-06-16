@@ -3,13 +3,20 @@
     "title": "Digital RMB Gateway",
     "keywords": [
       "Digital RMB Gateway",
-      "Digital Gateway"
+      "digital yuan hijacking",
+      "e-CNY redirection",
+      "wallet top-up interception",
+      "device-switching for digital RMB",
+      "digital currency gateway",
+      "e-CNY recharge hijack",
+      "digital RMB man-in-the-middle",
+      "digital yuan wallet takeover"
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "拦截用户数字人民币充值请求并切换至他人设备完成充值的技术手段，黑产借此将诈骗资金直接导入控制钱包。",
-    "description": "数字网关通过技术手段劫持正常用户的数字人民币充值流程，将原本应由用户本人设备完成的充值操作，重定向到黑产持有的设备上执行。这样受害人资金直接充入黑产数字钱包，绕过了用户自身的钱包绑定和风控校验。该手法利用设备切换实现资金绕流，单笔金额通常在300到20000元之间，可全天候自动化运行，隐蔽性极高。",
-    "usageExample": "数字人民币网关，单笔300-20000，24小时在线不掉。",
+    "definition": "A technical method that intercepts a user's digital yuan top-up request and redirects it to a device controlled by the criminal, allowing them to funnel fraudulent funds directly into their own wallet.",
+    "description": "A digital gateway hijacks a legitimate user's digital yuan top-up process through technical means. The top-up operation, which should be executed on the user's own device, is redirected to a device held by the criminal. Consequently, the victim's funds are deposited directly into the criminal's digital wallet, bypassing the user's own wallet binding and risk verification. This technique achieves fund diversion through device switching, with single transactions typically ranging from 300 to 20,000 yuan. It can operate automatically around the clock with a high degree of stealth.",
+    "usageExample": "Digital RMB gateway, single transaction 300-20,000, online 24/7 without interruption.",
     "relatedRisks": [
       "R0060",
       "R0093",

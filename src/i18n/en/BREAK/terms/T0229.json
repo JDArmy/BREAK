@@ -3,13 +3,20 @@
     "title": "Instant Ban",
     "keywords": [
       "Instant Ban",
-      "Die Instantly"
+      "Instant Account Lock",
+      "Immediate Suspension",
+      "Auto-Ban",
+      "Real-Time Ban",
+      "Login Ban",
+      "Zero-Day Ban",
+      "Account Termination",
+      "Instant Block"
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "账号或设备在登录后极短时间内被平台风控系统封禁。",
-    "description": "黑灰产使用黑设备、异常IP或同质化脚本登录时，触发平台实时风控导致“秒死”。这常见于批量注册、撞库或养号初期，账号存活时间极短，无法用于后续欺诈。操作者需不断更换IP、设备指纹或登录环境来对抗，但成功率低，大量账号资源因此报废，增加黑产成本。",
-    "usageExample": "三网实名白号，所有功能正常，包登陆，包秒死，出货中。",
+    "definition": "An account or device being banned by a platform's risk-control system within an extremely short time after login.",
+    "description": "When black and gray market actors log in using blacklisted devices, abnormal IPs, or cookie-cutter scripts, they trigger real-time risk controls resulting in an 'instant death.' This is common during bulk registration, credential stuffing, or early-stage account farming, where the account's lifespan is too short for subsequent fraud. Operators must constantly change IPs, device fingerprints, or login environments to counter this, but success rates are low, leading to high resource waste and increased costs.",
+    "usageExample": "Real-name verified white accounts for all three carriers, all functions normal, guaranteed login, guaranteed instant death, now shipping.",
     "relatedRisks": [
       "R0017",
       "R0017-001",
@@ -18,7 +25,9 @@
       "R0030-001",
       "R0032"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0020-003"
+    ],
     "relatedAttackTools": [
       "AT0044",
       "AT0009",

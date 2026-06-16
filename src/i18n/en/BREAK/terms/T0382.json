@@ -3,13 +3,18 @@
     "title": "Bank Channel",
     "keywords": [
       "Bank Channel",
-      "Channel"
+      "insider access",
+      "loan officer collusion",
+      "internal referral",
+      "underwriting bypass",
+      "private banking channel",
+      "backdoor approval"
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "黑产中介掌握的、能违规放款或审批条件更宽松的银行内部合作关系。",
-    "description": "“渠道”是信贷黑产的核心资源，指中介与银行内部人员或第三方公司建立的灰色合作网络。通过这种关系，中介能为资质极差的客户获得常规途径无法审批的贷款，或绕过某些风控环节。拥有“渠道”的中介在产业链中处于上游，他们以此为筹码吸引下游中介合作，并收取更高比例的服务费。",
-    "usageExample": "一手渠道，不限地区，前中期无任何费用，免担保。",
+    "definition": "An internal partnership within a bank that fraud intermediaries leverage to secure irregular loan approvals or more lenient conditions.",
+    "description": "A 'channel' is a core asset in the credit fraud ecosystem, referring to a gray network of relationships intermediaries cultivate with bank insiders or third-party companies. Through these connections, they can secure loan approvals for clients with extremely poor qualifications who would normally be rejected, or bypass certain risk-control steps. Intermediaries who possess such channels operate at the top of the fraud chain, using them as leverage to attract downstream partners and charge higher service fees.",
+    "usageExample": "Direct channel, no regional restrictions, no upfront or mid-process fees, no guarantor required.",
     "relatedRisks": [
       "R0096"
     ],

@@ -16,12 +16,12 @@
       "Compensation Deputy"
     ],
     "category": "Marketing Fraud",
-    "definition": "A homophone for 'compensation,' referring to cash refunds issued for product quality or authenticity issues during after-sales. In this context, it specifically denotes malicious refund fraud where cybercriminals exploit platform loopholes or business rules to illicitly obtain payouts.",
-    "description": "A homophone for 'compensation,' referring to cash refunds issued for product quality or authenticity issues during after-sales. In this context, it specifically denotes malicious refund fraud where cybercriminals exploit platform loopholes or business rules to illicitly obtain payouts.",
-    "usageExample": "那帮人专门买有运费险的商品，收到货就挑刺申请赔付，一个月能搞不少钱。",
+    "definition": "The illicit practice of exploiting loopholes in platform after-sales policies to obtain unlawful profits through fraudulent refunds or compensation claims.",
+    "description": "Fraud rings target e-commerce policies such as no-reason returns, shipping insurance, or counterfeit compensation guarantees by fabricating product defects, conducting bait-and-switch returns, or posting malicious negative reviews to coerce merchants into cash settlements. This activity has evolved into an industrial chain that causes significant financial harm to sellers and disrupts market order.",
+    "usageExample": "Those groups specifically buy items covered by shipping insurance, then pick faults upon delivery to file compensation claims—they can pull in a fair amount of money each month.",
     "relatedRisks": [
-      "R0068",
-      "R0068-002"
+      "R0068-002",
+      "R0068"
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [],

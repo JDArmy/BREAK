@@ -3,13 +3,20 @@
     "title": "Device-Rental Data",
     "keywords": [
       "Device-Rental Data",
-      "Rental Information"
+      "device rental leak",
+      "phone rental data",
+      "rental order data",
+      "device leasing data",
+      "rental user data",
+      "gadget rental leak",
+      "rental platform data",
+      "device financing data"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "指从手机租赁平台泄露的用户订单数据，包含手机型号、租期、还款记录及个人身份信息。",
-    "description": "黑产通过渗透租赁平台后台或收买内部人员获取这些数据。买家利用这些信息，对租机用户实施定向营销或冒充平台客服进行诈骗。这些数据还能被用于恶意催收，或筛选出有资金需求的用户进行二次欺诈。",
-    "usageExample": "Required rental materials, real-time disembarkation the next day, data, and measurable contact",
+    "definition": "Refers to user order data leaked from phone rental platforms, including phone models, rental periods, repayment records, and personal identity information.",
+    "description": "Black-market actors obtain this data by infiltrating rental platform backends or bribing insiders. Buyers use this information for targeted marketing to rental users or to impersonate platform customer service for scams. This data can also be used for malicious debt collection or to screen users with financial needs for secondary fraud.",
+    "usageExample": "'Need phone rental material, next-day real-time device data, can test, contact me'",
     "relatedRisks": [
       "R0078",
       "R0089"

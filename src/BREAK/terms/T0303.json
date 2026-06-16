@@ -2,7 +2,15 @@
   "T0303": {
     "title": "无卡人头",
     "keywords": [
-      "无卡人头"
+      "无卡人头",
+      "无卡注册",
+      "手持照",
+      "实名认证",
+      "三件套",
+      "无卡代实名",
+      "代实名",
+      "无卡四件套",
+      "身份料"
     ],
     "aliases": [],
     "category": "跑分洗钱",
@@ -13,7 +21,9 @@
       "R0060",
       "R0093"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0024"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0014",

@@ -6,7 +6,12 @@
     "description": "闪电贷攻击常结合重入漏洞实施，攻击者在回调函数中再次调用合约函数。防护措施包括：使用OpenZeppelin的ReentrancyGuard修饰符；采用Checks-Effects-Interactions模式，先完成状态更新再进行外部调用；使用互斥锁机制防止函数重入；对关键函数添加nonReentrant标记。实施时需要在所有涉及外部调用和状态变更的函数上添加保护，确保状态一致性。",
     "complexity": "中级",
     "limitation": "只能防护重入攻击，无法防护其他类型的闪电贷攻击；需要开发者正确识别所有需要保护的函数；可能增加Gas消耗",
-    "references": [],
+    "references": [
+      {
+        "title": "Flash Loan Attacks: How They Work & How to Prevent Them",
+        "link": "https://hacken.io/discover/flash-loan-attacks/"
+      }
+    ],
     "updated": "2026-06-16",
     "keywords": [
       "重入攻击",

@@ -3,18 +3,27 @@
     "title": "Cardless Identity Provider",
     "keywords": [
       "Cardless Identity Provider",
-      "No Card Head"
+      "KYC Mule",
+      "Identity Document Provider",
+      "Selfie ID Vendor",
+      "KYC Bypass Identity",
+      "Virtual Account Registrant",
+      "ID Photo Supplier",
+      "Non-Card Identity Mule",
+      "Remote Identity Provider"
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "无卡人头是仅提供身份信息而不提供实体银行卡的供体。",
-    "description": "无卡人头通常只提供身份证照片、手持照等用于线上实名认证，帮助黑产绕过平台注册环节。他们不直接提供银行卡，但被用于注册的虚拟账户同样可用于接收和转移资金。这种模式降低了人头的风险感知，使其更容易被招募。",
-    "usageExample": "Who wants the head of a person without a card? I have a 5,000 non-teller limit of xx bank in my name.",
+    "definition": "A provider who supplies only identity information without a physical bank card.",
+    "description": "A 'cardless provider' typically only offers ID photos, selfies holding an ID, and similar materials for online identity verification, helping underground operations bypass platform registration requirements. They do not provide a physical bank card, but the virtual accounts registered with their information can still be used to receive and transfer funds. This model lowers the perceived risk for the provider, making them easier to recruit.",
+    "usageExample": "Who needs a cardless provider? Has a bank account with a 5,000 yuan non-counter limit.",
     "relatedRisks": [
       "R0060",
       "R0093"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0024"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0014",

@@ -3,22 +3,32 @@
     "title": "Scam Platform",
     "keywords": [
       "Scam Platform",
-      "Table"
+      "fake gambling site",
+      "investment scam platform",
+      "pig butchering platform",
+      "romance scam app",
+      "fake trading app",
+      "phony investment portal",
+      "scam site backend",
+      "bogus betting portal"
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "在洗钱场景中，台子是指诈骗团伙搭建的虚假博彩、投资或理财平台，用于诱导受害人充值并将资金导入洗钱链路。",
-    "description": "黑产技术团队开发仿冒正规平台的网站或APP，通过后台操控输赢或收益数据，让受害人不断加大投注或投资金额。这些“台子”通常由“推广团队”通过色情、交友、短信引流，资金一旦充入便进入预设的跑分账户。台子是诈骗与洗钱的交汇起点，受害人资金在此被截留并开始多层清洗。",
+    "definition": "In money laundering operations, a platform refers to a fake gambling, investment, or wealth-management site or app built by fraud syndicates to induce victims to deposit funds and channel them into the money-laundering pipeline.",
+    "description": "Criminal technical teams develop websites or apps that mimic legitimate platforms, manipulating win/loss outcomes or profit data through backend controls to make victims continuously increase their bets or investments. These platforms are typically promoted through adult content, dating, or SMS-based traffic generation. Once funds are deposited, they are routed into pre-configured money-mule accounts. The platform serves as the intersection point where fraud meets money laundering, with victim funds being intercepted and beginning a multi-layered cleansing process.",
     "relatedRisks": [
+      "R0150",
       "R0060",
       "R0093",
       "R0097"
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [
+      "AT0066",
       "AT0026"
     ],
     "relatedThreatActors": [
+      "TA0039",
       "TA0006-003",
       "TA0014",
       "TA0016"

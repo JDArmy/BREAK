@@ -3,13 +3,20 @@
     "title": "Deposit-Backed Order Request",
     "keywords": [
       "Deposit-Backed Order Request",
-      "Hang Rice Order"
+      "upfront payment",
+      "rice deposit",
+      "prepaid lookup",
+      "escrow order",
+      "custom data request",
+      "private account receiving",
+      "blind flow order",
+      "deposit before query"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In illicit data trading, a prepayment mechanism where a deposit (referred to as \"rice\" in underground slang) is paid upfront when submitting a customized data request before the order is fulfilled.",
-    "description": "In illicit data trading, a prepayment mechanism where a deposit (referred to as \"rice\" in underground slang) is paid upfront when submitting a customized data request before the order is fulfilled.",
-    "usageExample": "\"No blind flow, private account receiving orders: 180 for 1 month, 280 for 3 months, 360 for 6 months. All flows require upfront deposit with order submission—no haggling. Direct from the source.\"",
+    "definition": "An ordering method in illegal data trading where the buyer pays a deposit upfront and submits a customized request.",
+    "description": "In the underground data market, 'rice' is slang for money, and 'hanging rice' means paying a deposit. After a buyer submits a specific data query request, they must pay a deposit before the service provider begins work, with any balance settled upon completion. This mechanism locks in the transaction intent, prevents buyers from backing out, and allows the provider to schedule the job or outsource it to upstream data interfaces based on the prepayment.",
+    "usageExample": "\"Accepting orders for private bank statements with no blind spots: 180 for 1 month, 280 for 3 months, 360 for 6 months. All statements require a deposit upfront—no haggling. Direct from the source.\"",
     "relatedRisks": [
       "R0092",
       "R0078",

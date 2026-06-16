@@ -15,14 +15,16 @@
       "Anti-Halogen"
     ],
     "category": "Marketing Fraud",
-    "definition": "The scenario where fraudsters or scalpers attempting to exploit promotional offers or loopholes end up losing money due to market fluctuations or misjudged pricing, resulting in a net loss instead of profit.",
-    "description": "The scenario where fraudsters or scalpers attempting to exploit promotional offers or loopholes end up losing money due to market fluctuations or misjudged pricing, resulting in a net loss instead of profit.",
+    "definition": "A situation where coupon hunters, while participating in promotions or exploiting loopholes, fail to recover their costs and incur a loss due to market downturns or operational errors.",
+    "description": "For example, the market price of hoarded physical goods plummets, or risk control triggers lead to frozen accounts and funds. This phenomenon of being 'fleeced by the platform instead' often occurs when black market groups miscalculate a promotion's value or encounter merchant order cancellations, serving as a self-deprecating term for a failed arbitrage attempt.",
     "relatedRisks": [
       "R0009",
       "R0055",
       "R0064"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0020-003"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0001",

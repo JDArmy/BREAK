@@ -6,7 +6,12 @@
     "description": "时间限制降低重放攻击窗口。实施方法：签名中包含创建时间戳和过期时间（deadline）；合约验证当前时间在有效期内；使用区块号而非时间戳避免时间操纵；过期的签名立即拒绝；记录已使用的签名哈希，双重验证。Cube Exchange指出时间戳是nonce的有效补充。",
     "complexity": "基础",
     "limitation": "时钟不同步可能导致验证失败；攻击者在有效期内仍可重放；需要合理设置过期时间平衡安全和可用性；区块时间戳可能被矿工轻微操纵",
-    "references": [],
+    "references": [
+      {
+        "title": "Exploring Blockchain Replay Attacks: Five Typical Examples",
+        "link": "https://orochi.network/blog/Exploring-Blockchain-Replay-Attacks-All-Typical-Examples"
+      }
+    ],
     "updated": "2026-06-16",
     "keywords": [
       "时间戳",

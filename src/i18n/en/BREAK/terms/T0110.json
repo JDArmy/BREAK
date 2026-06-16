@@ -3,21 +3,28 @@
     "title": "Intoxicated Bird",
     "keywords": [
       "Intoxicated Bird",
-      "Drunken Bird"
+      "groomed victim",
+      "emotionally dependent target",
+      "romance scam victim",
+      "trust exploitation",
+      "financial dependency victim",
+      "scam grooming",
+      "brainwashed target"
     ],
     "aliases": [],
     "category": "Telecom Fraud",
-    "definition": "A state in which a victim has been emotionally manipulated into fully trusting the scammer, often through prolonged grooming and fabricated relationships. The victim becomes financially or emotionally dependent, making them highly susceptible to exploitation. The term reflects the victim's intoxicated, passive state within the fraud.",
-    "description": "A state in which a victim has been emotionally manipulated into fully trusting the scammer, often through prolonged grooming and fabricated relationships. The victim becomes financially or emotionally dependent, making them highly susceptible to exploitation. The term reflects the victim's intoxicated, passive state within the fraud.",
+    "definition": "A state of mind-control achieved through long-term cultivation of an emotional or trust-based relationship, causing the victim to completely lower their guard and become dependent on the fraudster.",
+    "description": "Through meticulously planned, long-term communication, the fraudster makes the victim emotionally or financially subservient. A victim in this 'drunk bird' state loses their basic judgment and follows the fraudster's instructions without question. This deep level of brainwashing means the victim not only fails to resist but may even actively assist the fraudster.",
     "relatedRisks": [
-      "R0095",
-      "R0150"
+      "R0150",
+      "R0095"
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [
       "AT0053-001"
     ],
     "relatedThreatActors": [
+      "TA0039",
       "TA0015",
       "TA0008"
     ],

@@ -3,16 +3,22 @@
     "title": "Data Euphemism",
     "keywords": [
       "Data Euphemism",
-      "Fruit",
-      "Data"
+      "fruit slang for data",
+      "data obfuscation term",
+      "evasion keyword for data",
+      "Tieba data slang",
+      "data black market euphemism",
+      "first-hand fruit",
+      "data vendor slang",
+      "censorship evasion term"
     ],
     "aliases": [
       "Fruit"
     ],
     "category": "Data Leakage",
-    "definition": "In illegal data trading, a slang term for \"data\" used on public social platforms like Tieba to evade content censorship.",
-    "description": "In illegal data trading, a slang term for \"data\" used on public social platforms like Tieba to evade content censorship.",
-    "usageExample": "\"Selling various first-hand fruit, complete customer info—full refund if a single entry doesn’t match.\"",
+    "definition": "A euphemism for 'data' used on public social platforms to evade censorship.",
+    "description": "黑产在贴吧等平台用水果代指非法获取的个人信息，以躲避关键词过滤。这类隐语常出现在兜售帖中，搭配“一手”“齐全”等词强调数据质量。它模糊了交易意图，使普通用户难以察觉，却精准触达黑产买家，助长信息倒卖。",
+    "usageExample": "\"Selling various first-hand fruit, complete customer info, full refund if a single piece doesn't match.\"",
     "relatedRisks": [
       "R0078",
       "R0089"

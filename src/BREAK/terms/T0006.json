@@ -3,7 +3,14 @@
     "title": "反撸",
     "keywords": [
       "反撸",
-      "反卤"
+      "反卤",
+      "被反薅",
+      "翻车",
+      "砍单",
+      "账号冻结",
+      "资金冻结",
+      "套利失败",
+      "亏本"
     ],
     "aliases": [
       "反卤"
@@ -16,7 +23,9 @@
       "R0055",
       "R0064"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0020-003"
+    ],
     "relatedAttackTools": [],
     "relatedThreatActors": [
       "TA0001",

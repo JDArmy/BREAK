@@ -3,12 +3,19 @@
     "title": "Multi-Instance Farming",
     "keywords": [
       "Multi-Instance Farming",
-      "Conjoined Twins"
+      "App Cloning",
+      "Parallel Space Farming",
+      "Virtual Machine Farming",
+      "Multi-Instance Sync",
+      "Instance Farming",
+      "Device Farming",
+      "Multi-Accounting",
+      "App Twin Farming"
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "在同一设备上通过虚拟机或多开工具同时运行多个账号，用于批量刷量或养号。",
-    "description": "黑灰产利用设备多开技术绕过平台“一机一号”风控，在营销欺诈中批量操控账号进行刷单、刷赞或薅羊毛。操作者部署虚拟环境或改机软件，模拟独立设备环境，使多个账号看似来自不同用户。这种行为极易触发平台关联封号，但通过IP代理和参数随机化可短期存活，常用于大规模业务欺诈。",
+    "definition": "Running multiple accounts simultaneously on a single device using virtual machines or multi-instance tools for bulk fake engagement or account farming.",
+    "description": "Black and gray market actors bypass 'one device, one account' controls by using device multi-opening technology to mass-manipulate accounts for fake orders, likes, or promo abuse. Operators deploy virtual environments or device-spoofing software to simulate independent device fingerprints, making multiple accounts appear to belong to different users. This behavior easily triggers platform association bans, but short-term survival is possible through IP proxies and parameter randomization, and it is commonly used in large-scale business fraud.",
     "relatedRisks": [
       "R0009",
       "R0055",
@@ -22,11 +29,12 @@
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [
-      "AT0044",
       "AT0009",
+      "AT0017",
+      "AT0007",
+      "AT0044",
       "AT0016",
       "AT0003",
-      "AT0007",
       "AT0021"
     ],
     "relatedThreatActors": [

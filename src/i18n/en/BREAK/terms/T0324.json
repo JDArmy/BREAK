@@ -3,13 +3,20 @@
     "title": "Card-and-QR Bundle",
     "keywords": [
       "Card-and-QR Bundle",
-      "Card Code"
+      "payment card and QR combo",
+      "bundled payment resource",
+      "receiving channel bundle",
+      "card and code package",
+      "QR and bank card set",
+      "payment method combo",
+      "fragmented payment tool",
+      "card code bundle"
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "银行卡与收款二维码打包组合的资源包，是跑分洗钱中供下游成员快速选用的收款通道集合。",
-    "description": "卡码将银行卡号和对应支付二维码捆绑成资源单元，方便跑分车手、码商按需切换收款方式。黑产通过群组或暗网分发卡码包，接单时根据金额大小、支付渠道要求选择对应卡或码进行收款。这种组合形式降低了收款工具调配成本，也使得资金入口更加碎片化，增加追踪难度。",
-    "usageExample": "空降直盘料，3000到10万，卡码都来，全天开 找长期合作车 欢迎各位老板。",
+    "definition": "A bundled resource pack combining a bank card with a corresponding payment QR code, providing a ready-to-use collection channel set for downstream members in money muling operations.",
+    "description": "A card-code bundle pairs a bank card number with its associated payment QR code into a single resource unit, allowing money mules and code merchants to switch collection methods on demand. These bundles are distributed through chat groups or darknet markets. When receiving payments, operators select the appropriate card or code based on the transaction amount and payment channel requirements. This combination reduces the logistical cost of managing collection tools and fragments the entry points for funds, increasing the difficulty of tracing.",
+    "usageExample": "Direct drops for fresh data, 3,000 to 100,000. Both cards and codes accepted. Operating all day, looking for long-term drivers. All bosses welcome.",
     "relatedRisks": [
       "R0060",
       "R0093"

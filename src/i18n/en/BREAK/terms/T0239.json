@@ -3,14 +3,23 @@
     "title": "Direct Login Account",
     "keywords": [
       "Direct Login Account",
-      "Direct Number"
+      "no-verification account",
+      "auto-login account",
+      "pre-verified account",
+      "credential-stuffed account",
+      "account takeover",
+      "ATO account",
+      "credential stuffing"
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "无需短信验证码或密码即可直接登录的账号，多由黑产通过协议漏洞或撞库手段批量产出。",
-    "description": "这类账号省去了二次验证环节，方便黑产快速切换设备进行批量操作，如刷单、发广告或洗钱。直登号在号商市场中溢价较高，常按平台、活跃度和是否带支付功能分档售卖。买家拿到手后直接挂脚本运行，极大降低了作案的时间成本。",
-    "usageExample": "TG direct account, agreement account, new account, large quantity in stock",
+    "definition": "An account that can be logged into directly without SMS verification or a password, usually mass-produced by fraud rings through protocol exploits or credential-stuffing.",
+    "description": "These accounts bypass secondary verification, allowing fraudsters to quickly switch devices for batch operations such as fake orders, spam advertising, or money laundering. Direct-login accounts command a premium in underground markets and are sold by platform, activity level, and whether they include payment functions. Buyers can run scripts on them immediately, drastically reducing operational time costs.",
+    "usageExample": "Telegram direct-login accounts, fresh protocol accounts, large stock available.",
     "relatedRisks": [
+      "R0001",
+      "R0011",
+      "R0032-001",
       "R0017",
       "R0017-001",
       "R0005",
@@ -19,9 +28,11 @@
       "R0032"
     ],
     "relatedAvoidances": [
+      "A0007",
       "A0007-001"
     ],
     "relatedAttackTools": [
+      "AT0042",
       "AT0044",
       "AT0009",
       "AT0016",
@@ -30,9 +41,9 @@
       "AT0021"
     ],
     "relatedThreatActors": [
+      "TA0007",
       "TA0009",
-      "TA0006",
-      "TA0007"
+      "TA0006"
     ],
     "relatedBusinessScenes": [
       "BS02",

@@ -3,19 +3,30 @@
     "title": "Settlement House",
     "keywords": [
       "Settlement House",
-      "Water House"
+      "money washing hub",
+      "fund layering",
+      "cash depot",
+      "underground clearinghouse",
+      "transfer node",
+      "account splitting",
+      "capital pool",
+      "financial logistics cell"
     ],
     "aliases": [],
     "category": "Gambling",
-    "definition": "专门处理赌资流转和洗钱的窝点或团伙。",
-    "description": "水房承接赌场或网赌平台的资金分流任务，通过多级账户快速拆分、归集赌资，切断资金溯源路径。操作人员使用大量他人账户进行高频转账，最终将资金洗白后回流给幕后庄家。一旦被查，水房往往是整个资金链中最先暴露的节点。",
+    "definition": "A den or syndicate specializing in handling gambling fund flows and money laundering.",
+    "description": "A money-handling crew takes on the task of diverting funds from casinos or online gambling platforms. They rapidly split and consolidate gambling proceeds through multiple tiers of accounts to sever the traceability of the funds. Operators use numerous other people's accounts for high-frequency transfers, ultimately returning the laundered money to the behind-the-scenes organizers. When investigated, the money-handling crew is often the first link in the financial chain to be exposed.",
     "relatedRisks": [
       "R0097",
       "R0060"
     ],
     "relatedAvoidances": [],
-    "relatedAttackTools": [],
+    "relatedAttackTools": [
+      "AT0026"
+    ],
     "relatedThreatActors": [
+      "TA0038",
+      "TA0006-003",
       "TA0014",
       "TA0016"
     ],

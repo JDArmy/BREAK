@@ -3,13 +3,19 @@
     "title": "Malicious Payload",
     "keywords": [
       "Malicious Payload",
-      "Poison Bag"
+      "trojan horse",
+      "remote access trojan",
+      "spyware",
+      "keylogger",
+      "malware delivery",
+      "credential theft",
+      "device compromise"
     ],
     "aliases": [],
     "category": "Telecom Fraud",
-    "definition": "A malicious file or program package infected with malware, viruses, or trojans that, once opened, allows fraud rings to monitor the victim's device. In telecom fraud, operators supply these poisoned packages to affiliates, who then engineer scenarios to trick victims into opening them on their computers, enabling remote collection of passwords, browsing history, and other sensitive data for fraud.",
-    "description": "A malicious file or program package infected with malware, viruses, or trojans that, once opened, allows fraud rings to monitor the victim's device. In telecom fraud, operators supply these poisoned packages to affiliates, who then engineer scenarios to trick victims into opening them on their computers, enabling remote collection of passwords, browsing history, and other sensitive data for fraud.",
-    "usageExample": "“他让我下载那个认证包，说是银行的安全插件，打开之后电脑就被人远程操控了。”",
+    "definition": "A poison package is a malicious file bundle pre-loaded with a Trojan or remote access tool, used to establish a covert control channel on a victim’s device.",
+    "description": "Poison packages are typically crafted by technical underground actors and distributed to downstream promoters or proxy chatters. Promoters fabricate pretexts such as ‘installing a security certificate’ or ‘claiming a promotional offer’ to trick victims into downloading and opening the file. Once executed, the attacker can remotely harvest passwords, hijack sessions, or control the device’s camera. In telecom fraud scenarios, poison packages are often used to directly steal online banking credentials or to facilitate secondary scams in coordination with fake customer service scripts, serving as a critical link for breaching endpoint security.",
+    "usageExample": "“He told me to download that authentication pack, claiming it was a bank security plugin. The moment I opened it, my computer was taken over remotely.”",
     "relatedRisks": [
       "R0044",
       "R0032",

@@ -3,13 +3,20 @@
     "title": "Number Status Check",
     "keywords": [
       "Number Status Check",
-      "Empty Number Detection"
+      "Number Filtering",
+      "Active Number Check",
+      "Carrier Lookup",
+      "Phone Validation",
+      "Number Scrubbing",
+      "Line Status Detection",
+      "Number Hygiene",
+      "Active Line Check"
     ],
     "aliases": [],
     "category": "Business Fraud",
-    "definition": "通过技术手段批量或实时检测手机号码状态，筛出空号、停机、关机等无效号码。",
-    "description": "黑灰产在营销欺诈、电诈或数据交易中，先用空号检测工具清洗号码库，剔除无效资源以降低成本。操作者接入第三方检测接口或自研脚本，对批量号码进行状态查询，筛选出正常在网号用于注册、刷单或引流。活跃号可高价转卖，风险号则被丢弃，整个过程旨在提升欺诈活动的效率和命中率。",
-    "usageExample": "国内空号检测，活跃号、风险号筛选，精准过滤停机空号。",
+    "definition": "Using technical methods to check the status of phone numbers in bulk or in real time, filtering out invalid numbers such as disconnected, suspended, or powered-off lines.",
+    "description": "In marketing fraud, telecom scams, or data trading, black and gray market actors first clean number databases with number-checking tools to eliminate invalid resources and reduce costs. Operators connect to third-party verification APIs or use custom scripts to query number statuses, selecting active numbers for registration, fake orders, or traffic driving. Active numbers can be resold at a premium, while risky ones are discarded, all aimed at improving the efficiency and hit rate of fraudulent operations.",
+    "usageExample": "Domestic number screening: active and risky number filtering, precise removal of disconnected and inactive numbers.",
     "relatedRisks": [
       "R0017",
       "R0017-001",

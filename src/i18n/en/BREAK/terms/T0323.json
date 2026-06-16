@@ -3,13 +3,20 @@
     "title": "Corporate Account",
     "keywords": [
       "Corporate Account",
-      "Public Account"
+      "shell company account",
+      "business bank account for laundering",
+      "high-capacity fund channel",
+      "corporate account for dirty money",
+      "fake trade account",
+      "public account for illegal funds",
+      "wholesale money laundering account",
+      "enterprise account for fraud"
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "以企业名义开立的对公银行账户，黑产用于承接和流转大额非法资金，是跑分体系中高容量资金通道。",
-    "description": "公户相比个人账户具有更高单笔和日累计转账额度，且企业背景可制造虚假贸易流水掩护资金性质。黑产通过收购或冒名注册空壳公司获取公户，将诈骗、赌博等大额赃款转入后，再以货款、服务费等名义拆分转出。因其资金容量大、表面合规性强，常被用于大额洗钱节点，一旦涉案极易引发对公账户全线风控升级。",
-    "usageExample": "The entire network accepts all public bank accounts, and junk public accounts that are not used by others, as long as the bank acceptance bill business is opened. Use it to make money! ! !",
+    "definition": "A corporate bank account opened in the name of a business, used by criminal actors to receive and circulate large volumes of illicit funds, acting as a high-capacity channel in money muling systems.",
+    "description": "Compared to personal accounts, corporate accounts have higher single-transaction and daily cumulative transfer limits. A business background can also be used to fabricate trade flows to disguise the nature of the funds. Criminals acquire these accounts by purchasing shell companies or using fraudulently registered entities. After transferring large sums from fraud or gambling into the account, the money is split and moved out under the guise of payments for goods or services. Due to their large capacity and apparent compliance, they are often used as key nodes for laundering large sums, and any case involvement typically triggers a system-wide risk control upgrade for corporate accounts.",
+    "usageExample": "Buying all banks' corporate accounts nationwide, even unused junk accounts, as long as the bank acceptance draft service is activated. Turn them into cash!!!",
     "relatedRisks": [
       "R0060",
       "R0093",

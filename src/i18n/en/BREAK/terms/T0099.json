@@ -3,24 +3,34 @@
     "title": "Account Sweeping",
     "keywords": [
       "Account Sweeping",
-      "Scan Number"
+      "credential stuffing",
+      "account checker",
+      "account validator",
+      "combolist",
+      "combo list",
+      "account testing",
+      "credential testing"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "The process of using automated tools or scripts to attempt account logins in bulk in order to identify valid credentials. This technique typically exploits previously leaked account information to find accounts whose passwords have not been changed or that have weak security. Credential stuffing is commonly used for account validation, data misuse, and secondary attacks, endangering personal privacy and financial assets.",
-    "description": "The process of using automated tools or scripts to attempt account logins in bulk in order to identify valid credentials. This technique typically exploits previously leaked account information to find accounts whose passwords have not been changed or that have weak security. Credential stuffing is commonly used for account validation, data misuse, and secondary attacks, endangering personal privacy and financial assets.",
+    "definition": "The illicit use of automated tools to test batches of credentials and filter out valid accounts.",
+    "description": "Using previously leaked username-password combinations, fraudsters run scripts to attempt mass logins across multiple platforms, identifying usable accounts. These validated accounts can then be used to steal virtual assets, post illicit content, or serve as raw material for subsequent targeted scams. This practice severely threatens personal account and financial security.",
     "relatedRisks": [
+      "R0032-001",
+      "R0088",
       "R0090"
     ],
     "relatedAvoidances": [],
-    "relatedAttackTools": [],
+    "relatedAttackTools": [
+      "AT0042"
+    ],
     "relatedThreatActors": [],
     "relatedBusinessScenes": [
       "BS00"
     ],
     "references": [
       {
-        "title": "Alert: API Credential Stuffing Attacks Have Become a Major Account Security Threat",
+        "title": "Notice! API account scanning attacks have become an important threat to account security",
         "link": "https://www.threathunter.cn/blog/6a6fd45548f"
       }
     ],

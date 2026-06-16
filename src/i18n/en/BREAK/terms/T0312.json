@@ -3,13 +3,19 @@
     "title": "Small-Ticket QR",
     "keywords": [
       "Small-Ticket QR",
-      "Small Amount Code"
+      "micro payment QR",
+      "small-value code",
+      "low-value scan",
+      "micro-transaction code",
+      "small-ticket scan",
+      "split payment code",
+      "small-amount QR"
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "小额码是专门用于收取1000元以下交易的收款二维码，因风控难度低，被广泛用于跑分洗钱。",
-    "description": "为规避大额交易触发的风控规则，黑产将非法资金拆分成无数笔小额交易。小额码就是用于接收这些碎片化资金的工具，单笔金额通常在几十到几百元。大量的小额码被跑分平台组织起来，通过“抢单”模式让普通用户完成收款和转账，以此清洗资金，隐蔽性极强。",
-    "usageExample": "小额码接回u，福利来担保，量大稳定。",
+    "definition": "A small-value QR code is a collection QR code specifically used for transactions under 1,000 yuan, widely adopted in money running due to its low risk-control sensitivity.",
+    "description": "To evade risk controls triggered by large transactions, criminals split illicit funds into numerous small payments. Small-value codes are the tools for receiving these fragmented funds, with single amounts typically ranging from tens to hundreds of yuan. Large numbers of small-value codes are organized on money-running platforms, where ordinary users complete collection and transfer through a task-grabbing model to wash funds, offering extreme concealment.",
+    "usageExample": "Small-value codes for cashing out to USDT, Fuli escrow, high volume and stable.",
     "relatedRisks": [
       "R0060",
       "R0093",

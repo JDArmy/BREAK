@@ -14,11 +14,12 @@
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "Illicit tactics employed by underground operations to evade debt obligations, including fabricating documentation, malicious debt avoidance, and filing fraudulent lawsuits.",
-    "description": "Illicit tactics employed by underground operations to evade debt obligations, including fabricating documentation, malicious debt avoidance, and filing fraudulent lawsuits.",
-    "usageExample": "我找了法务做反催收，他们让我把电话都转接给他们，说能帮我停息挂账，结果收了钱就拉黑我了。",
+    "definition": "The practice by underground organizations of helping debtors evade repayment obligations through forged documents, malicious complaints, and other illegal means.",
+    "description": "Operating under the guise of legal consulting, debt evasion rings incite debtors to default willfully. They forge poverty certificates and medical records or coach clients to file malicious complaints, pressuring financial institutions to grant debt relief or write off obligations. This behavior severely undermines the financial order; participants not only face debt recovery but may also be prosecuted for fraud.",
+    "usageExample": "I hired a legal consultant for debt evasion. They told me to forward all calls to them and said they could stop interest and suspend payments, but they took my money and blocked me.",
     "relatedRisks": [
       "R0096-001",
+      "R0068-001",
       "R0096"
     ],
     "relatedAvoidances": [],

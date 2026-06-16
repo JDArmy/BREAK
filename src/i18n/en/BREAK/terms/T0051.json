@@ -3,12 +3,19 @@
     "title": "Slow Company Flip",
     "keywords": [
       "Slow Company Flip",
-      "Slow Qi"
+      "slow flip",
+      "slow company fraud",
+      "company incubation fraud",
+      "sleeper company",
+      "business loan fraud",
+      "legal representative tenure",
+      "fabricated tax invoices",
+      "inflated cash flows"
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "A loan fraud scheme specifically targeting business lending, where fraudsters legally transfer ownership of a company to the loan applicant, with the change properly recorded in business registries. The company’s operating data, invoicing, and tax records are then fabricated to meet bank requirements for legal representative tenure before applying for large business loans. This method is known as a \"slow company\" in contrast to a \"fast company.\" Typically, after the ownership transfer, the fraudsters inflate business cash flows and maintain normal invoicing and tax payments for 3–6 months before applying for large corporate tax-invoice loans.",
-    "description": "A loan fraud scheme specifically targeting business lending, where fraudsters legally transfer ownership of a company to the loan applicant, with the change properly recorded in business registries. The company’s operating data, invoicing, and tax records are then fabricated to meet bank requirements for legal representative tenure before applying for large business loans. This method is known as a \"slow company\" in contrast to a \"fast company.\" Typically, after the ownership transfer, the fraudsters inflate business cash flows and maintain normal invoicing and tax payments for 3–6 months before applying for large corporate tax-invoice loans.",
+    "definition": "Slow-cooked enterprise refers to a scheme where fraud rings acquire and long-term package shell companies to defraud banks of large tax-invoice loans.",
+    "description": "Fraud rings formally transfer the legal representative role of a shell company to a debt mule and wait out the bank's required 3-6 month change-of-ownership period. During this time, they fabricate business transaction records, invoicing, and tax payments to portray the company as a normally operating, high-quality client. This is done to bypass risk models and secure high-limit business loans, after which they default on the debt.",
     "relatedRisks": [
       "R0096"
     ],
@@ -21,7 +28,7 @@
     ],
     "references": [
       {
-        "title": "[Black Big Data] Desperadoes in Financial Fraud",
+        "title": "Black Industry Big Data: The Desperados in Financial Fraud",
         "link": "https://www.threathunter.cn/blog/f17db99edff"
       }
     ],

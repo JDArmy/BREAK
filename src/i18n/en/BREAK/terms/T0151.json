@@ -3,19 +3,30 @@
     "title": "Face Verification Bypass",
     "keywords": [
       "Face Verification Bypass",
-      "Fall Out"
+      "facial recognition bypass",
+      "liveness detection bypass",
+      "deepfake spoofing",
+      "face swap scam",
+      "biometric spoofing",
+      "video injection attack",
+      "3D mask bypass",
+      "photo replay attack"
     ],
     "aliases": [],
     "category": "Telecom Fraud",
-    "definition": "The act of using technical methods to bypass or crack facial recognition systems, commonly seen in telecom fraud scenarios. This may involve using photos, videos, or deepfake technology to spoof the system, enabling fraudsters to perform illegal operations like payment verification or account access without restriction.",
-    "description": "The act of using technical methods to bypass or crack facial recognition systems, commonly seen in telecom fraud scenarios. This may involve using photos, videos, or deepfake technology to spoof the system, enabling fraudsters to perform illegal operations like payment verification or account access without restriction.",
-    "usageExample": "光有密码不够，还得找人做破脸，不然那笔大额转账过不去。",
+    "definition": "An attack that uses technical means to circumvent or spoof a facial recognition system.",
+    "description": "Fraudsters use techniques like high-resolution photo compositing, 3D masks, video replay, or AI deepfakes to attack facial recognition verification in scenarios like financial payments or account recovery. A successful facial recognition bypass allows criminals to impersonate a victim for high-risk operations such as large fund transfers or account detail changes, directly leading to asset theft.",
+    "usageExample": "Having the password isn't enough; we still need to find someone to do a facial recognition bypass, otherwise that large transfer won't go through.",
     "relatedRisks": [
+      "R0048",
+      "R0116-001",
       "R0044",
       "R0032",
       "R0131"
     ],
-    "relatedAvoidances": [],
+    "relatedAvoidances": [
+      "A0023-001"
+    ],
     "relatedAttackTools": [
       "AT0064",
       "AT0066",

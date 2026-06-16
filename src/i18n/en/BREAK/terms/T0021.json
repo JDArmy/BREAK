@@ -14,16 +14,20 @@
     ],
     "aliases": [],
     "category": "Marketing Fraud",
-    "definition": "Refers to bypassing a platform's risk control systems. This term is commonly used by fraud technicians, scalpers, and money laundering groups as a preliminary step to evade security measures before attacking platform services or stealing data.",
-    "description": "Refers to bypassing a platform's risk control systems. This term is commonly used by fraud technicians, scalpers, and money laundering groups as a preliminary step to evade security measures before attacking platform services or stealing data.",
-    "usageExample": "这个活动新加了设备指纹校验，不先破盾的话，我们写的脚本根本登录不上去。",
+    "definition": "The technical methods used by fraud operators to crack or circumvent a platform’s security and risk-control systems.",
+    "description": "Fraud technicians employ vulnerability scanning, protocol cracking, emulator-based device spoofing, and other techniques to defeat CAPTCHA challenges, device fingerprinting, and behavioral analysis. Successfully breaking through these defenses is a prerequisite for large-scale account registration, flash purchasing, or data scraping, making it the preparatory step for a wide range of cyberattacks and marketing fraud schemes.",
+    "usageExample": "This campaign just added device fingerprinting checks—if we don’t break through the shield first, our scripts won’t even be able to log in.",
     "relatedRisks": [
+      "R0032-001",
       "R0003",
       "R0005",
       "R0070"
     ],
     "relatedAvoidances": [],
-    "relatedAttackTools": [],
+    "relatedAttackTools": [
+      "AT0007",
+      "AT0042"
+    ],
     "relatedThreatActors": [
       "TA0002"
     ],

@@ -3,13 +3,19 @@
     "title": "Hotel Co-Stay Lookup",
     "keywords": [
       "Hotel Co-Stay Lookup",
-      "Open A Contract"
+      "hotel co-stay",
+      "hotel guest lookup",
+      "co-check-in record",
+      "hotel stay history",
+      "guest companion query",
+      "lodging co-occupant",
+      "hotel room share"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "黑产提供的一种可查询酒店开房记录及同住人信息的非法数据服务。",
-    "description": "开同服务直接对接酒店PMS系统或公安旅业数据源，通过内鬼、接口滥用或撞库方式获取。输出内容包含入住时间、酒店名称、同住人姓名及身份证号，被广泛用于敲诈、婚外情取证、赌博追债等场景。数据贩子常以代理模式发展下线，按单或按量结算，支持担保交易以降低买家信任成本。",
-    "usageExample": "“五年开房同住记录，寻有量代理，有量有价，私信问价，批量能低，两到三天回单，只做开同，只有五年，支持担保。”",
+    "definition": "An illicit data service that provides access to hotel check-in records and co-guest information.",
+    "description": "This service directly taps into hotel Property Management Systems or public security lodging data sources through insiders, API abuse, or credential stuffing. The output includes check-in dates, hotel names, and the names and national ID numbers of co-guests. It is widely used for blackmail, infidelity evidence gathering, and debt collection by gambling rings. Data brokers often recruit agents in a pyramid scheme, settling payments per query or volume, and may offer escrow services to reduce buyer risk.",
+    "usageExample": "\"Five-year hotel co-guest records. Looking for high-volume agents. Price depends on volume, DM for quote. Bulk orders get discounts. Two to three days for results. We only do co-guest records, five years only, escrow accepted.\"",
     "relatedRisks": [
       "R0078",
       "R0089",

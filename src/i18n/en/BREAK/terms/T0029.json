@@ -12,9 +12,10 @@
     ],
     "aliases": [],
     "category": "Marketing Fraud",
-    "definition": "One-Yuan Party",
-    "description": "Literally refers to people who habitually buy items costing only one yuan. It has evolved to describe groups who seek out group purchases, lucky draws, and promotional offers online, hoping to acquire high-value goods for minimal cost—essentially couponers or bonus hunters. This group includes stay-at-home mothers, college students, and part-timers. They actively participate in various promotions, using coupons, red packets, and discounts provided by merchants to obtain goods or services at low or zero cost, gathering deal information through various channels to gain benefits.",
+    "definition": "A general term for coupon-harvesting groups obsessed with exploiting promotional offers to acquire goods or services at extremely low cost.",
+    "description": "Initially referring to users who only purchased one-yuan items, the term has evolved into a collective label for coupon harvesters, including demographics such as stay-at-home mothers, students, and part-time workers. They are highly active in various social groups, systematically collecting, sharing, and exploiting platform loopholes or promotional rules. By stacking vouchers and red packets, they achieve near-zero or zero-cost purchases. Their activities often operate in a grey area, and when scaled into organized operations, they become a link in the underground fraud supply chain.",
     "relatedRisks": [
+      "R0005",
       "R0009",
       "R0055",
       "R0064"

@@ -3,13 +3,20 @@
     "title": "QR Code Broker",
     "keywords": [
       "QR Code Broker",
-      "Code Provider"
+      "code broker",
+      "QR mule",
+      "payment code seller",
+      "aggregator abuse",
+      "QR laundering",
+      "code supplier",
+      "mule code provider",
+      "payment code dealer"
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "码商是专门提供收款二维码供黑产洗钱使用的中间角色。",
-    "description": "码商通过注册、租借或购买方式囤积个人码、商户码和聚合支付码，再提供给跑分平台或诈骗团伙用于收款。他们按交易额抽成，将非法资金拆散流入不同账户，以此规避风控。码商的存在大幅降低了洗钱的技术门槛，使资金链路更隐蔽。",
-    "usageExample": "For small-amount collection, find a fleet code provider with an exchange rate of 12",
+    "definition": "An intermediary who specializes in providing payment QR codes for underground money laundering.",
+    "description": "QR code suppliers accumulate personal, merchant, and aggregated payment codes through registration, rental, or purchase, then provide them to money laundering platforms or fraud rings for receiving payments. They take a commission based on transaction volume, dispersing illicit funds into different accounts to evade risk controls. Their existence significantly lowers the technical barrier to money laundering, making fund trails more obscure.",
+    "usageExample": "Small-amount collection, looking for runner crews and QR code suppliers, rate 12%",
     "relatedRisks": [
       "R0060",
       "R0093"
@@ -29,7 +36,7 @@
     ],
     "references": [
       {
-        "title": "Fraud and money laundering models revealed: New models such as order and recharge money laundering and merchant money laundering are spreading across the board",
+        "title": "Fraud Laundering Models Exposed: New Schemes Like Recharge Laundering and Merchant Laundering Spread",
         "link": "https://k.sina.cn/article_7857201856_1d45362c001906fzea.html?from=tech"
       }
     ],

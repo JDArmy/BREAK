@@ -6,7 +6,12 @@
     "description": "通过透明度和专业审查降低Rug Pull风险。实施要点：聘请知名审计公司（如CertiK、Quantstamp）进行全面代码审计，公开发布审计报告；在Etherscan等区块链浏览器上验证并公开合约源代码，让投资者可以检查；重点审查是否存在隐藏的铸币函数、暂停交易函数、owner特权、流动性撤回后门等Rug Pull常见手法；检查代理合约的升级权限，确保无法恶意替换实现；审计后的代码不应再修改，如需修改需重新审计。Coinbase等平台建议投资者优先选择经过审计的项目。",
     "complexity": "中级",
     "limitation": "审计无法保证发现所有漏洞，且成本高（数万至数十万美元）；审计报告可能被造假或断章取义；即使通过审计的项目也可能通过其他方式Rug Pull（如社交工程）；代码开源不等于安全",
-    "references": [],
+    "references": [
+      {
+        "title": "Rugsafe: A multichain protocol for recovering from rug pulls",
+        "link": "https://arxiv.org/html/2507.06423v1"
+      }
+    ],
     "updated": "2026-06-16",
     "keywords": [
       "代码审计",

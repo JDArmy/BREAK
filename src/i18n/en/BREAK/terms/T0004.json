@@ -16,10 +16,10 @@
       "Wearing Hair"
     ],
     "category": "Marketing Fraud",
-    "definition": "A service model in e-commerce fraud where a third party handles order fulfillment on behalf of the original seller, including packaging, logistics, and shipping, often to obscure the source of illicit goods.",
-    "description": "A service model in e-commerce fraud where a third party handles order fulfillment on behalf of the original seller, including packaging, logistics, and shipping, often to obscure the source of illicit goods.",
+    "definition": "A link in the black market chain where a third-party drop-shipper provides actual logistics packages and shipping services for fake transactions or fraudulent orders.",
+    "description": "In fake order or fraud scenarios, to evade platform risk controls, the person placing the order does not possess real goods but entrusts a drop-shipper to send empty packages or cheap trinkets. The drop-shipper forges logistics information, providing realistic shipping traces for the fake transaction to fraudulently obtain platform subsidies or buyer trust.",
     "relatedRisks": [
-      "R0005"
+      "R0004"
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [],

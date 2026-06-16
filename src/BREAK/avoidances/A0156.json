@@ -6,7 +6,12 @@
     "description": "信誉系统：链上交易历史；智能合约交互；DeFi信用分；社交图谱；Sybil抗性；灵魂绑定代币。",
     "complexity": "中级",
     "limitation": "历史数据可能不足；操纵风险；隐私泄露；标准不统一",
-    "references": [],
+    "references": [
+      {
+        "title": "On-Chain Reputation Systems",
+        "link": "https://vitalik.eth.limo/general/2022/01/26/soulbound.html"
+      }
+    ],
     "updated": "2026-06-16",
     "keywords": [
       "链上信誉",

@@ -3,13 +3,19 @@
     "title": "Direct Aggregated Scan",
     "keywords": [
       "Direct Aggregated Scan",
-      "Aggregation Direct Scan"
+      "aggregated payment QR",
+      "multi-platform scan",
+      "direct payment gateway",
+      "aggregation scan code",
+      "unified scan",
+      "direct channel",
+      "scan-to-pay aggregation"
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "聚合直扫是黑产用于直接接收付款的聚合支付二维码，具备多平台通用性，流通性强。",
-    "description": "这是一种可直接用于交易的支付通道，受害者扫描后即可通过多种支付App完成付款。黑产团伙将其广泛用于跑分、收款等环节，因其多平台通用，能快速接收并转移资金。这种通道的流通性强，常被作为“直盘”资源在团伙间流转，用于对接各类诈骗场景。",
-    "usageExample": "收常规直盘，需聚合直扫，通道稳的来。",
+    "definition": "Aggregated direct scan is a payment-ready aggregated QR code used by underground actors to directly receive payments, featuring multi-platform compatibility and high liquidity.",
+    "description": "This is a payment channel that can be used directly for transactions; victims scan it and complete payments through various payment apps. Criminal rings widely use it for money running and collection, as its multi-platform compatibility enables rapid receipt and transfer of funds. Due to its high liquidity, it often circulates among groups as a direct-source asset to connect with various fraud scenarios.",
+    "usageExample": "Looking for regular direct-scan channels, must be aggregated direct scan, stable channels only.",
     "relatedRisks": [
       "R0060",
       "R0093"

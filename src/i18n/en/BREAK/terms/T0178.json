@@ -3,12 +3,19 @@
     "title": "Background Check Service",
     "keywords": [
       "Background Check Service",
-      "Check Files"
+      "personal dossier lookup",
+      "phone-to-identity lookup",
+      "full background check",
+      "identity record retrieval",
+      "asset lookup service",
+      "address lookup service",
+      "bank card lookup",
+      "data broker background check"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "In illicit data trading, a service that provides access to a specified individual’s personal records and background files, such as retrieving identity information, addresses, bank card numbers, and asset holdings linked to a single phone number.",
-    "description": "In illicit data trading, this refers to a service offered by underground groups that can retrieve a target’s personal dossier. For example, by using a single phone number, they can look up associated identity details including residential address, bank card numbers, and assets under the person’s name. Record-checking services encompass inquiry-based lookups, decryption services, and forced account access services.",
+    "definition": "An illicit service that reverse-looks up a target's full personal dossier using a single piece of information like a phone number.",
+    "description": "Exploiting insider access or system vulnerabilities, black market actors can query a target's identity, address, bank card numbers, and assets using just a phone number. This service often includes querying, decryption, and forced account access, serving as a core component of illegal data trading that provides precise intelligence for downstream fraud and extortion.",
     "relatedRisks": [
       "R0092",
       "R0078",
@@ -31,7 +38,7 @@
     ],
     "references": [
       {
-        "title": "[Underground Big Data] 2024 Data Breach Risk Landscape Report",
+        "title": "[Black Market Big Data] 2024 Data Breach Risk Landscape Report",
         "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
       }
     ],

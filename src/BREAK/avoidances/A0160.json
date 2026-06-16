@@ -6,7 +6,12 @@
     "description": "见R0159第一条和R0177第三条。",
     "complexity": "中级",
     "limitation": "同R0159/R0177",
-    "references": [],
+    "references": [
+      {
+        "title": "Bug Bounty Programs for Blockchain",
+        "link": "https://immunefi.com/"
+      }
+    ],
     "updated": "2026-06-16",
     "keywords": [
       "代码审计",

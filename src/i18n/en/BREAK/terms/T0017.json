@@ -16,11 +16,11 @@
       "Kill"
     ],
     "category": "Marketing Fraud",
-    "definition": "A homophone for 'flash sale,' referring to time-limited promotional discounts in marketing campaigns. In the context of coupon fraud, such homophonic or stylized variations of everyday terms are widely used.",
-    "description": "A homophone for 'flash sale,' referring to time-limited promotional discounts in marketing campaigns. In the context of coupon fraud, such homophonic or stylized variations of everyday terms are widely used.",
-    "usageExample": "昨晚那个半价茅台活动，脚本哥直接秒杀了几百单，我们手动根本抢不到。",
+    "definition": "A form of marketing fraud in which illicit actors use automated tools to snap up promotional items at extreme speed during flash sales.",
+    "description": "Fraud rings deploy custom scripts or bot programs that complete the checkout process within milliseconds of a promotion going live, targeting limited-quantity discounted goods or voucher bundles. This prevents legitimate users from accessing the offers, severely undermines the fairness of marketing campaigns, and is often linked to downstream monetization channels for large-scale arbitrage.",
+    "usageExample": "During last night’s half-price liquor promotion, script operators flash-purchased hundreds of orders in seconds—we stood no chance trying to grab one manually.",
     "relatedRisks": [
-      "R0005"
+      "R0012"
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [],

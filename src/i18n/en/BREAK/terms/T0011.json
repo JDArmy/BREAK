@@ -14,9 +14,10 @@
     ],
     "aliases": [],
     "category": "Marketing Fraud",
-    "definition": "Scalper proxying, where 'scalper' refers to intermediaries who monopolize and resell limited-access goods or participation rights outside legitimate sales channels for profit. The term originated in 20th-century Shanghai, describing ticket scalpers whose coordinated buying sprees were likened to the restlessness of a cattle herd, leading to the label 'scalper' or 'scalper gang'. Such anonymous reselling for profit is illegal in many jurisdictions as it severely disrupts legitimate sales.",
-    "description": "Scalper proxying refers to a practice where grey-market operators (large scalpers or goods suppliers controlling distribution channels) hire real individuals to place orders remotely, enabling bulk acquisition of limited-purchase promotional items. The hired individuals (proxy buyers) follow a purchasing script provided by the operator to place orders at designated locations (or later forward them), receiving reimbursement and a commission. The operator then resells the acquired goods for profit.",
+    "definition": "A practice where fraud rings organize real users to remotely place orders, systematically circumventing purchase limits to acquire discounted goods for resale.",
+    "description": "In this model, upstream suppliers provide the purchasing scheme and funds, while downstream participants use their personal accounts to place orders to designated addresses. Once the goods arrive, the supplier collects and resells them. This method bypasses per-account purchase limits by using genuine users as ordering tools, enabling large-scale exploitation. Because the transactions are conducted by real individuals, they closely mimic legitimate consumer behavior, making detection by platforms more difficult.",
     "relatedRisks": [
+      "R0049",
       "R0003",
       "R0005",
       "R0070"
