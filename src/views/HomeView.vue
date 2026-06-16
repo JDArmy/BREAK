@@ -62,7 +62,7 @@ interface SceneBREAK {
 
 const sceneLayout = computed(() => {
   const totalScenes = Object.keys(sceneBREAK.value.riskScenes).length;
-  const enableScroll = totalScenes > 10;
+  const enableScroll = totalScenes > 9;
   let remainingRowSize = 24;
 
   return Object.entries(sceneBREAK.value.riskDimensions).map(([rdKey, rdVal]) => {
@@ -91,7 +91,7 @@ const sceneLayout = computed(() => {
 });
 
 const shouldEnableScroll = computed(() => {
-  return Object.keys(sceneBREAK.value.riskScenes).length > 10;
+  return Object.keys(sceneBREAK.value.riskScenes).length > 9;
 });
 
 const normalizeBusinessSceneKey = (key?: string) =>
