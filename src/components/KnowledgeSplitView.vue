@@ -165,6 +165,13 @@ watch(
       mobileView.value = "detail";
     } else if (route.name === props.routeName) {
       mobileView.value = "list";
+      nextTick(() => {
+        requestAnimationFrame(() => {
+          if (!scrollSelectedItemToMobileListCenter() && mobileListRef.value) {
+            mobileListRef.value.scrollTop = mobileListScrollTop.value;
+          }
+        });
+      });
     }
   },
   { immediate: true }
