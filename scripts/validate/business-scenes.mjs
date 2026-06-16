@@ -55,6 +55,60 @@ function normalizeSceneRef(sceneKey, sceneTitle, dimensionTitle) {
   };
 }
 
+function parentRiskId(riskId) {
+  return riskId.includes('-') ? riskId.split('-')[0] : '';
+}
+
+function uniqueBy(values, keyFn) {
+  const seen = new Set();
+  const result = [];
+  for (const value of values) {
+    const key = keyFn(value);
+    if (seen.has(key)) continue;
+    seen.add(key);
+    result.push(value);
+  }
+  return result;
+}
+
+function inferCrossSceneReason(riskId, sceneRefs, referencedInRiskScenes) {
+  const uniqueRefs = uniqueBy(
+    sceneRefs,
+    (item) => `${item.businessSceneKey}/${item.sceneKey}`,
+  );
+  const uniqueBusinessScenes = unique(uniqueRefs.map((item) => item.businessSceneKey));
+  const uniqueSceneTitles = unique(uniqueRefs.map((item) => item.sceneTitle));
+  const uniqueDimensionTitles = unique(uniqueRefs.map((item) => item.dimensionTitle));
+
+  if (uniqueSceneTitles.length === 1 && uniqueBusinessScenes.length > 1) {
+    return `同一风险场景“${uniqueSceneTitles[0]}”在多个行业复用。`;
+  }
+
+  const parentId = parentRiskId(riskId);
+  if (parentId) {
+    const parentRefs = referencedInRiskScenes.get(parentId) || [];
+    const parentPairs = new Set(
+      parentRefs.map((item) => `${item.businessSceneKey}/${item.sceneKey}`),
+    );
+    if (
+      parentPairs.size > 0 &&
+      uniqueRefs.every((item) => parentPairs.has(`${item.businessSceneKey}/${item.sceneKey}`))
+    ) {
+      return `子风险继承父风险 ${parentId} 的业务场景归类。`;
+    }
+  }
+
+  if (uniqueDimensionTitles.length === 1 && uniqueBusinessScenes.length > 1) {
+    return `同一${uniqueDimensionTitles[0]}风险在多个行业复用。`;
+  }
+
+  if (uniqueBusinessScenes.includes('BS00') && uniqueBusinessScenes.length > 1) {
+    return '全场景通用风险与行业专题场景并行复用。';
+  }
+
+  return '';
+}
+
 function collectSceneIndex(sceneEntity) {
   const dimensionByScene = new Map();
   for (const dimension of Object.values(sceneEntity.riskDimensions || {})) {
@@ -77,6 +131,7 @@ function collectAudit() {
   const referencedInRiskScenes = new Map();
   const referencedAtTopLevel = new Map();
   const crossSceneReasons = new Map(Object.entries(defaultCrossSceneReason));
+  const inferredCrossSceneReasons = new Map();
 
   for (const { key: businessSceneKey, entity } of businessScenes) {
     const dimensionByScene = collectSceneIndex(entity);
@@ -135,20 +190,25 @@ function collectAudit() {
       sceneRefs.map((item) => `${item.businessSceneKey}/${item.sceneKey}`),
     );
     if (scenePairs.length > 1 && !crossSceneReasons.has(riskId)) {
-      addIssue(
-        issues,
-        strict ? 'error' : 'review',
-        'cross_scene_without_reason',
-        `Risk 跨挂多个场景但缺少明确理由: ${riskId}`,
-        {
-          key: riskId,
-          title: riskTitleById.get(riskId) || '',
-          references: sceneRefs.map(
-            (item) =>
-              `${item.businessSceneTitle}/${item.dimensionTitle || '未分类维度'}/${item.sceneTitle}`,
-          ),
-        },
-      );
+      const inferredReason = inferCrossSceneReason(riskId, sceneRefs, referencedInRiskScenes);
+      if (inferredReason) {
+        inferredCrossSceneReasons.set(riskId, inferredReason);
+      } else {
+        addIssue(
+          issues,
+          strict ? 'error' : 'review',
+          'cross_scene_without_reason',
+          `Risk 跨挂多个场景但缺少明确理由: ${riskId}`,
+          {
+            key: riskId,
+            title: riskTitleById.get(riskId) || '',
+            references: sceneRefs.map(
+              (item) =>
+                `${item.businessSceneTitle}/${item.dimensionTitle || '未分类维度'}/${item.sceneTitle}`,
+            ),
+          },
+        );
+      }
     }
   }
 
@@ -214,7 +274,11 @@ function collectAudit() {
       crossSceneWithoutReason: issues.filter((item) => item.type === 'cross_scene_without_reason').length,
       topLevelDuplicates: issues.filter((item) => item.type === 'top_level_risk_duplicate').length,
     },
-    crossSceneReasonCount: crossSceneReasons.size,
+    crossSceneReasonCount: crossSceneReasons.size + inferredCrossSceneReasons.size,
+    crossSceneReasons: Object.fromEntries([
+      ...crossSceneReasons.entries(),
+      ...inferredCrossSceneReasons.entries(),
+    ].sort(([a], [b]) => a.localeCompare(b))),
     issues,
   };
 }

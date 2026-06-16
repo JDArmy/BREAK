@@ -339,6 +339,7 @@ const termDetailClose = () => {
         <router-link to="/terms" class="stat-card">
           <div class="stat-label">{{ $t("stats.terms") }}</div>
           <div class="stat-number">{{ totalTerms }}</div>
+          <div class="stat-sub">&nbsp;</div>
         </router-link>
       </div>
     </el-col>

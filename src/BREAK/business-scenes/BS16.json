@@ -4,23 +4,11 @@
     "description": "物联网设备、工业物联网(IIoT)、车联网(V2X)、智能家居、医疗物联网等场景的安全风险",
     "updated": "2026-06-16",
     "riskDimensions": {
-      "RD09": {
-        "title": "设备安全",
+      "RD06": {
+        "title": "物联网安全",
         "riskScenes": [
-          "RS19"
-        ],
-        "updated": "2026-06-16"
-      },
-      "RD10": {
-        "title": "工业与关键基础设施",
-        "riskScenes": [
-          "RS20"
-        ],
-        "updated": "2026-06-16"
-      },
-      "RD11": {
-        "title": "数据完整性",
-        "riskScenes": [
+          "RS19",
+          "RS20",
           "RS21"
         ],
         "updated": "2026-06-16"

@@ -5,29 +5,11 @@
     "updated": "2026-06-16",
     "riskDimensions": {
       "RD05": {
-        "title": "智能合约安全",
+        "title": "区块链安全",
         "riskScenes": [
-          "RS15"
-        ],
-        "updated": "2026-06-16"
-      },
-      "RD06": {
-        "title": "DeFi安全",
-        "riskScenes": [
-          "RS16"
-        ],
-        "updated": "2026-06-16"
-      },
-      "RD07": {
-        "title": "区块链共识",
-        "riskScenes": [
-          "RS17"
-        ],
-        "updated": "2026-06-16"
-      },
-      "RD08": {
-        "title": "密钥管理",
-        "riskScenes": [
+          "RS15",
+          "RS16",
+          "RS17",
           "RS18"
         ],
         "updated": "2026-06-16"
