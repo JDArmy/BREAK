@@ -1,4 +1,4 @@
-import { computed, nextTick, reactive, ref, type Ref } from "vue";
+import { computed, reactive, ref, type Ref } from "vue";
 import BREAK from "@/BREAK";
 import { createRelationAttackPathData } from "@/views/relation/relationAttackPath";
 import { createRelationGraphBuilder } from "@/views/relation/relationGraphBuilder";
@@ -294,35 +294,15 @@ export const useRelationGraphData = ({
 
   const refreshGraphAfterVisible = () => {
     const requestId = ++refreshGraphRequestId;
-    const requestLabel = `${relType.value}:${relKey.value}`;
-    console.time(`[RelationPerf] refreshGraphAfterVisible queued ${requestLabel}`);
 
     requestAnimationFrame(() => {
       window.setTimeout(() => {
         if (requestId !== refreshGraphRequestId) {
-          console.timeEnd(`[RelationPerf] refreshGraphAfterVisible queued ${requestLabel}`);
-          console.log(`[RelationPerf] refreshGraphAfterVisible skipped`, {
-            requestLabel,
-            current: `${relType.value}:${relKey.value}`,
-          });
           return;
         }
 
-        console.timeEnd(`[RelationPerf] refreshGraphAfterVisible queued ${requestLabel}`);
-        console.time(`[RelationPerf] refreshGraphAfterVisible work ${relType.value}:${relKey.value}`);
         rebuildGraphData();
-        console.log(`[RelationPerf] graph size after rebuild`, {
-          type: relType.value,
-          key: relKey.value,
-          nodes: nodes.length,
-          lines: lines.length,
-        });
-        nextTick(() => {
-          console.time(`[RelationPerf] renderNetworkChart ${relType.value}:${relKey.value}`);
-          renderNetworkChart(true);
-          console.timeEnd(`[RelationPerf] renderNetworkChart ${relType.value}:${relKey.value}`);
-          console.timeEnd(`[RelationPerf] refreshGraphAfterVisible work ${relType.value}:${relKey.value}`);
-        });
+        renderNetworkChart(true);
       }, 0);
     });
   };

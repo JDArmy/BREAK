@@ -53,7 +53,7 @@ export const createRelationAttackPathData = ({
       case RelationType.avoidance:
         return path.avoidanceKey === relKey.value;
       case RelationType.term:
-        return true;
+        return false;
       default:
         return true;
     }
@@ -122,6 +122,7 @@ export const createRelationAttackPathData = ({
   const selectedNodeAttackPathSummary = computed(() => {
     const node = selectedNetworkNode.value;
     if (!node || !isRelationEntityType(node.type)) return [];
+    if (node.type === RelationType.term) return [];
 
     const matchingPaths = buildAttackPaths().filter((path) => {
       if (node.type === RelationType.threatActor) return path.threatActorKey === node.id;

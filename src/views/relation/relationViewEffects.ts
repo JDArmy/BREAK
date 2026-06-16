@@ -108,19 +108,16 @@ export const setupRelationViewEffects = ({
 
   watch(
     () => relType.value,
-    (newType, oldType) => {
-      console.time(`[RelationPerf] watch relType ${oldType} -> ${newType}`);
+    () => {
       if (!Object.keys(getCurrentEntityOptions.value).includes(relKey.value)) {
         relKey.value = Object.keys(getCurrentEntityOptions.value)[0] ?? "";
       }
-      console.timeEnd(`[RelationPerf] watch relType ${oldType} -> ${newType}`);
     }
   );
 
   watch(
     () => [relType.value, relKey.value],
     ([newType, newKey]) => {
-      console.time(`[RelationPerf] watch relType+relKey ${newType}:${newKey}`);
       if (newType !== route.params.type || newKey !== route.params.key) {
         router.push({
           name: "relation",
@@ -130,18 +127,15 @@ export const setupRelationViewEffects = ({
           },
         });
       }
-      console.timeEnd(`[RelationPerf] watch relType+relKey ${newType}:${newKey}`);
     }
   );
 
   watch(
     () => [route.params.type, route.params.key],
-    ([newType, newKey], [oldType, oldKey]) => {
-      console.time(`[RelationPerf] watch route ${oldType}:${oldKey} -> ${newType}:${newKey}`);
+    () => {
       relType.value = route.params.type as RelationType;
       relKey.value = route.params.key as string;
       refreshGraphAfterVisible();
-      console.timeEnd(`[RelationPerf] watch route ${oldType}:${oldKey} -> ${newType}:${newKey}`);
     }
   );
 

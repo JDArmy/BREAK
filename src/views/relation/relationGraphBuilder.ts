@@ -134,7 +134,6 @@ export const createRelationGraphBuilder = ({
   const termBuilder = createTermRelationBuilder(builderContext);
 
   function rebuildGraphData() {
-    console.time(`[RelationPerf] rebuildGraphData ${relType.value}:${relKey.value}`);
     jsonData.rootId = relKey.value;
     selectedNetworkNodeId.value = relKey.value;
     clearDraggedNodePositions();
@@ -142,7 +141,6 @@ export const createRelationGraphBuilder = ({
     lines.splice(0, lines.length);
     addRootNode();
     genNetworkGraphData(RelationType.all, relType.value, relKey.value);
-    console.timeEnd(`[RelationPerf] rebuildGraphData ${relType.value}:${relKey.value}`);
   }
 
   const genNetworkGraphData = (
@@ -150,7 +148,6 @@ export const createRelationGraphBuilder = ({
     currentNodeType: RelationType,
     currentNodeId: string
   ) => {
-    console.time(`[RelationPerf] genNetworkGraphData ${currentNodeType}:${currentNodeId} req=${reqType}`);
     if (currentNodeType === RelationType.risk) {
       if (reqType == RelationType.avoidance) {
         riskBuilder.addAvoidance(currentNodeId);
@@ -220,14 +217,6 @@ export const createRelationGraphBuilder = ({
       }
     }
     setNetworkGraphData();
-    console.log(`[RelationPerf] genNetworkGraphData result`, {
-      currentNodeType,
-      currentNodeId,
-      reqType,
-      nodes: nodes.length,
-      lines: lines.length,
-    });
-    console.timeEnd(`[RelationPerf] genNetworkGraphData ${currentNodeType}:${currentNodeId} req=${reqType}`);
   };
 
   return {
