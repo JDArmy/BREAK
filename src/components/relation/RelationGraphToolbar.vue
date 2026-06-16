@@ -144,16 +144,18 @@ const emit = defineEmits<{
 @media (max-width: 767px) {
   .graph-toolbar {
     top: auto;
-    right: 8px;
+    right: auto;
     bottom: 8px;
+    left: 50%;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 4px;
-    width: auto;
+    justify-content: center;
+    width: max-content;
     max-width: calc(100% - 16px);
     padding: 6px;
     border-radius: 999px;
-    transform: none;
+    transform: translateX(-50%);
   }
 
   .graph-toolbar .el-button {

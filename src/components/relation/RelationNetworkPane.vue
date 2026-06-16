@@ -9,6 +9,7 @@ import { RelationType, type NetworkLayoutMode } from "@/views/relation/relationT
 
 const props = defineProps<{
   setNetworkPaneElement?: (element: HTMLDivElement | undefined) => void;
+  setNetworkScrollerElement?: (element: HTMLDivElement | undefined) => void;
   setNetworkChartElement?: (element: HTMLDivElement | undefined) => void;
   setDropdownInstance?: (instance: DropdownInstance | undefined) => void;
   networkLayoutTooltip: string;
@@ -62,6 +63,10 @@ const setNetworkPaneRef = (el: Element | ComponentPublicInstance | null) => {
 const setNetworkChartRef = (el: Element | ComponentPublicInstance | null) => {
   props.setNetworkChartElement?.((el as HTMLDivElement) || undefined);
 };
+
+const setNetworkScrollerRef = (el: Element | ComponentPublicInstance | null) => {
+  props.setNetworkScrollerElement?.((el as HTMLDivElement) || undefined);
+};
 </script>
 
 <template>
@@ -83,7 +88,9 @@ const setNetworkChartRef = (el: Element | ComponentPublicInstance | null) => {
       @open-node-detail="emit('openNodeDetail')"
     />
 
-    <div :ref="setNetworkChartRef" class="network-chart"></div>
+    <div :ref="setNetworkScrollerRef" class="network-canvas-scroll">
+      <div :ref="setNetworkChartRef" class="network-chart"></div>
+    </div>
 
     <RelationFilterPanels
       :node-filter-visible="nodeFilterVisible"
@@ -147,19 +154,27 @@ const setNetworkChartRef = (el: Element | ComponentPublicInstance | null) => {
   height: 100%;
 }
 
+.network-canvas-scroll {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 @media (max-width: 767px) {
   .network-graph-pane {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    overflow-y: auto;
+    overflow: hidden;
+  }
+
+  .network-canvas-scroll {
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .network-chart {
-    order: 3;
-    flex: 1 1 auto;
-    min-height: 260px;
-    height: auto;
+    width: max(1180px, 260vw);
+    height: max(940px, 190vh);
+    min-height: 940px;
   }
 }
 </style>

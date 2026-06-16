@@ -194,33 +194,79 @@ const filterLineTypeModel = computed({
 
 @media (max-width: 767px) {
   .filter-pane {
-    position: static;
-    flex: 0 0 auto;
-    margin: 0 8px 6px;
-    padding: 8px 10px;
+    position: absolute;
+    z-index: 730;
+    top: 8px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 7px 8px;
+    width: calc(50% - 12px);
+    height: 86px;
     max-height: 86px;
-    overflow-y: auto;
+    overflow: auto;
     border-radius: 8px;
+    background-color: color-mix(in srgb, var(--break-graph-filter-bg) 94%, transparent);
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
   }
 
   #node-filter-pane {
-    order: 1;
+    left: 8px;
   }
 
   #line-filter-pane {
-    order: 2;
     right: auto;
+    left: calc(50% + 4px);
     padding-inline: 10px;
   }
 
   .filter-pane h2 {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .filter-pane :deep(.el-checkbox-group) {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 4px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    width: 100%;
+  }
+
+  .filter-pane-header {
+    gap: 6px;
+    margin-bottom: 5px;
+  }
+
+  .filter-pane-header :deep(.el-button) {
+    width: 20px;
+    height: 20px;
+  }
+
+  .filter-checkbox {
+    display: inline-flex;
+    flex: 0 0 auto;
+    width: 100%;
+    margin-right: 0;
+    white-space: nowrap;
+  }
+
+  .filter-item-with-color,
+  .filter-line-item {
+    gap: 4px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+
+  .legend-node-color {
+    width: 10px;
+    height: 10px;
+  }
+
+  .legend-line-color {
+    width: 16px;
+  }
+
+  .filter-line-help {
+    display: none;
   }
 }
 </style>

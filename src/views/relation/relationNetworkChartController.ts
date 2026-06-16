@@ -38,7 +38,20 @@ export const createNetworkChartController = ({
 }: CreateNetworkChartControllerOptions) => {
   const networkChartRef = ref<HTMLDivElement>();
   const networkPaneRef = ref<HTMLDivElement>();
+  const networkScrollerRef = ref<HTMLDivElement>();
   let networkChart: ECharts | null = null;
+  let longPressTimer: ReturnType<typeof setTimeout> | undefined;
+  let longPressNode: GraphNode | undefined;
+  let longPressStart: { x: number; y: number } | undefined;
+
+  const clearLongPressTimer = () => {
+    if (longPressTimer) {
+      clearTimeout(longPressTimer);
+      longPressTimer = undefined;
+    }
+    longPressNode = undefined;
+    longPressStart = undefined;
+  };
 
   const setNetworkChartElement = (element: HTMLDivElement | undefined) => {
     networkChartRef.value = element;
@@ -48,13 +61,48 @@ export const createNetworkChartController = ({
     networkPaneRef.value = element;
   };
 
+  const setNetworkScrollerElement = (element: HTMLDivElement | undefined) => {
+    networkScrollerRef.value = element;
+  };
+
+  const centerSelectedNodeInScroller = (networkData = getVisibleNetworkData()) => {
+    const scroller = networkScrollerRef.value;
+    const chartElement = networkChartRef.value;
+    if (!isMobile.value || activeView.value !== "network" || !scroller || !chartElement) return;
+    if (scroller.clientWidth === 0 || scroller.clientHeight === 0) return;
+
+    const nodesWithPosition = networkData.nodes.filter(
+      (node): node is GraphNode & { x: number; y: number } => typeof node.x === "number" && typeof node.y === "number"
+    );
+    const selectedNode = nodesWithPosition.find((node) => node.id === selectedNetworkNodeId.value);
+    if (!selectedNode || nodesWithPosition.length === 0) return;
+
+    const padding = 180;
+    const minX = Math.min(...nodesWithPosition.map((node) => node.x)) - padding;
+    const maxX = Math.max(...nodesWithPosition.map((node) => node.x)) + padding;
+    const minY = Math.min(...nodesWithPosition.map((node) => node.y)) - padding;
+    const maxY = Math.max(...nodesWithPosition.map((node) => node.y)) + padding;
+    const spanX = Math.max(1, maxX - minX);
+    const spanY = Math.max(1, maxY - minY);
+    const nodePixelX = ((selectedNode.x - minX) / spanX) * chartElement.clientWidth;
+    const nodePixelY = ((selectedNode.y - minY) / spanY) * chartElement.clientHeight;
+
+    scroller.scrollLeft = Math.max(0, nodePixelX - scroller.clientWidth / 2);
+    scroller.scrollTop = Math.max(0, nodePixelY - scroller.clientHeight / 2);
+  };
+
   const bindNetworkChartEvents = () => {
     if (!networkChart) return;
     networkChart.off("click");
     networkChart.off("dblclick");
     networkChart.off("contextmenu");
+    networkChart.off("mousedown");
     networkChart.off("mouseup");
     networkChart.off("dragend");
+    networkChart.getZr().off("pointermove");
+    networkChart.getZr().off("pointerup");
+    networkChart.getZr().off("pointercancel");
+    networkChart.getZr().off("globalout");
     const persistDraggedNodePosition = (params: { dataType?: string; dataIndex?: number; data?: GraphNode }) => {
       if (params.dataType !== "node") return;
       const option = networkChart?.getOption();
@@ -73,9 +121,6 @@ export const createNetworkChartController = ({
     networkChart.on("click", (params) => {
       if (params.dataType !== "node") return;
       selectedNetworkNodeId.value = (params.data as GraphNode).id;
-      if (isMobile.value) {
-        interactionsBridge.handleNodeTouch(toContextNode(params.data as GraphNode));
-      }
     });
     networkChart.on("dblclick", (params) => {
       if (params.dataType !== "node" || !params.event?.event) return;
@@ -88,8 +133,39 @@ export const createNetworkChartController = ({
       selectedNetworkNodeId.value = (params.data as GraphNode).id;
       interactionsBridge.nodeClick(toContextNode(params.data as GraphNode), params.event.event as MouseEvent);
     });
-    networkChart.on("mouseup", persistDraggedNodePosition);
-    networkChart.on("dragend", persistDraggedNodePosition);
+    networkChart.on("mouseup", (params) => {
+      clearLongPressTimer();
+      persistDraggedNodePosition(params);
+    });
+    networkChart.on("dragend", (params) => {
+      clearLongPressTimer();
+      persistDraggedNodePosition(params);
+    });
+    networkChart.on("mousedown", (params) => {
+      if (!isMobile.value || params.dataType !== "node") return;
+      const chartEvent = params.event as { offsetX?: number; offsetY?: number; event?: MouseEvent | PointerEvent };
+      const nativeEvent = chartEvent.event;
+      const startX = chartEvent.offsetX ?? nativeEvent?.clientX ?? 0;
+      const startY = chartEvent.offsetY ?? nativeEvent?.clientY ?? 0;
+      clearLongPressTimer();
+      longPressNode = params.data as GraphNode;
+      longPressStart = { x: startX, y: startY };
+      longPressTimer = setTimeout(() => {
+        if (!longPressNode) return;
+        selectedNetworkNodeId.value = longPressNode.id;
+        interactionsBridge.handleNodeTouch(toContextNode(longPressNode));
+        clearLongPressTimer();
+      }, 550);
+    });
+    networkChart.getZr().on("pointermove", (event) => {
+      if (!longPressStart) return;
+      if (Math.hypot(event.offsetX - longPressStart.x, event.offsetY - longPressStart.y) > 10) {
+        clearLongPressTimer();
+      }
+    });
+    networkChart.getZr().on("pointerup", clearLongPressTimer);
+    networkChart.getZr().on("pointercancel", clearLongPressTimer);
+    networkChart.getZr().on("globalout", clearLongPressTimer);
   };
 
   const clearNetworkNodeHighlight = () => {
@@ -222,9 +298,11 @@ export const createNetworkChartController = ({
     networkChart.setOption(option, { notMerge, lazyUpdate: false });
     clearNetworkNodeHighlight();
     networkChart.resize();
+    requestAnimationFrame(() => centerSelectedNodeInScroller(networkData));
   };
 
   const disposeNetworkChart = () => {
+    clearLongPressTimer();
     networkChart?.dispose();
     networkChart = null;
   };
@@ -265,6 +343,7 @@ export const createNetworkChartController = ({
     renderNetworkChart,
     setNetworkChartElement,
     setNetworkPaneElement,
+    setNetworkScrollerElement,
     updateNetworkSelection,
     resizeNetworkChart,
   };

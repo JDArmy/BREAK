@@ -32,6 +32,7 @@ export default defineComponent({
       <el-tab-pane :label="$t('relationView.network')" name="network">
         <RelationNetworkPane
           :set-network-pane-element="setNetworkPaneElement"
+          :set-network-scroller-element="setNetworkScrollerElement"
           :set-network-chart-element="setNetworkChartElement"
           :set-dropdown-instance="setDropdownInstance"
           :network-layout-tooltip="networkLayoutTooltip"
