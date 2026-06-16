@@ -3,17 +3,14 @@
     "title": "Internet of Things",
     "description": "Security risks in IoT devices, Industrial IoT (IIoT), Connected Vehicles (V2X), smart home, medical IoT and other scenarios",
     "riskDimensions": {
-      "RD09": {
-        "title": "Device Security"
-      },
-      "RD10": {
-        "title": "Industrial & Critical Infrastructure"
-      },
-      "RD11": {
-        "title": "Data Integrity"
+      "RD06": {
+        "title": "IoT Security"
       }
     },
     "riskScenes": {
+      "RS18": {
+        "title": "IoT Emerging Threats"
+      },
       "RS19": {
         "title": "IoT Device Attacks"
       },

@@ -13,6 +13,15 @@
       },
       "RD04": {
         "title": "Adversarial Dimension"
+      },
+      "RD05": {
+        "title": "Blockchain Security"
+      },
+      "RD06": {
+        "title": "IoT Security"
+      },
+      "RD07": {
+        "title": "Metaverse Security"
       }
     },
     "riskScenes": {
@@ -50,7 +59,34 @@
         "title": "Merchant Risk"
       },
       "RS12": {
-        "title": "Gaming Risk"
+        "title": "Web3 Ecosystem Attacks"
+      },
+      "RS15": {
+        "title": "Smart Contract Vulnerabilities"
+      },
+      "RS16": {
+        "title": "DeFi Protocol Attacks"
+      },
+      "RS17": {
+        "title": "Blockchain Consensus Attacks"
+      },
+      "RS18": {
+        "title": "IoT Emerging Threats"
+      },
+      "RS19": {
+        "title": "IoT Device Attacks"
+      },
+      "RS20": {
+        "title": "Industrial & V2X Security"
+      },
+      "RS21": {
+        "title": "IoT Data & Side Channel"
+      },
+      "RS22": {
+        "title": "Virtual Asset Fraud"
+      },
+      "RS23": {
+        "title": "VR/AR & Virtual World Risks"
       }
     }
   }
