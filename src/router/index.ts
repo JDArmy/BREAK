@@ -70,16 +70,6 @@ const router = createRouter({
       component: () => import("@/views/RelationView.vue"),
     },
     {
-      path: "/editor",
-      name: "editor",
-      component: () => import("@/views/editor/HomeView.vue"),
-    },
-    {
-      path: "/editor/:type/:key",
-      name: "editorWithParams",
-      component: () => import("@/views/editor/HomeView.vue"),
-    },
-    {
       path: "/:pathMatch(.*)*",
       redirect: "/",
     },

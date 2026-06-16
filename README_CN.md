@@ -75,9 +75,3 @@ npm run audit:bundle
 `npm run audit:metrics` 会生成内容可信度、关系覆盖、分类分布和业务场景覆盖基线报告。
 `npm run audit:bundle` 会基于 `docs/assets` 检查构建产物是否超过 bundle 预算。
 `npm run audit:maintenance` 会刷新审计报告并生成统一维护汇总。
-
-### 界面化配置编辑器
-
-```shell
-node ./src/server/main.cjs
-```

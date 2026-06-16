@@ -75,9 +75,3 @@ npm run audit:bundle
 `npm run audit:metrics` generates the content trust, relation coverage, category distribution, and business scene coverage baseline.
 `npm run audit:bundle` checks the generated `docs/assets` bundle against the current performance budget.
 `npm run audit:maintenance` refreshes the audit reports and writes a unified maintenance summary.
-
-### GUI Configuration Editor
-
-```shell
-node ./src/server/main.cjs
-```
