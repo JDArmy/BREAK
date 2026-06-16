@@ -1,0 +1,24 @@
+{
+  "TA0045": {
+    "title": "DeFi Protocol Attackers",
+    "description": "专门针对智能合约和DeFi协议实施攻击的黑客或团伙，通常具备Solidity、EVM、链上交易模拟和资金路径规划能力。其目标包括利用合约漏洞盗取资金、操纵预言机价格、发起闪电贷组合攻击、抢跑或夹子交易、操纵DAO治理以及攻击跨链桥。",
+    "references": [
+      {
+        "title": "Chainalysis Crypto Crime Report"
+      },
+      {
+        "title": "CertiK Web3 Security Reports"
+      },
+      {
+        "title": "Immunefi Crypto Losses Reports"
+      }
+    ],
+    "keywords": [
+      "DeFi Protocol Attackers",
+      "智能合约黑客",
+      "链上攻击者",
+      "闪电贷攻击者",
+      "MEV搜索者"
+    ]
+  }
+}

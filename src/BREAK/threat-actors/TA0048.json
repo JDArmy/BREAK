@@ -1,0 +1,52 @@
+{
+  "TA0048": {
+    "title": "IoT僵尸网络运营者",
+    "description": "通过漏洞利用、默认凭据爆破、固件后门和恶意软件感染控制大量物联网设备的攻击者。其目标包括DDoS、代理转发、挖矿、横向移动、数据篡改和设备勒索，也可能利用工业、医疗或车联网设备造成物理世界影响。",
+    "buildAttackTools": [
+      "AT0081",
+      "AT0082"
+    ],
+    "useAttackTools": [
+      "AT0081",
+      "AT0082",
+      "AT0054",
+      "AT0013"
+    ],
+    "directCauseRisks": [
+      "R0163",
+      "R0164",
+      "R0165",
+      "R0166",
+      "R0181",
+      "R0182",
+      "R0189"
+    ],
+    "indirectSupportRisks": [
+      "R0178",
+      "R0205",
+      "R0206"
+    ],
+    "references": [
+      {
+        "title": "Mirai Botnet source code",
+        "link": "https://github.com/jgamblin/Mirai-Source-Code"
+      },
+      {
+        "title": "CISA Securing IoT Devices",
+        "link": "https://www.cisa.gov/resources-tools/resources/securing-internet-things-iot-devices"
+      },
+      {
+        "title": "ENISA Baseline Security Recommendations for IoT",
+        "link": "https://www.enisa.europa.eu/publications/baseline-security-recommendations-for-iot"
+      }
+    ],
+    "keywords": [
+      "IoT僵尸网络运营者",
+      "物联网攻击者",
+      "Mirai运营者",
+      "设备劫持团伙",
+      "IoT恶意软件运营者"
+    ],
+    "updated": "2026-06-16"
+  }
+}

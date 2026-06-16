@@ -1,0 +1,21 @@
+{
+  "AT0080": {
+    "title": "On-chain Privacy Analysis Tools",
+    "description": "用于追踪链上地址、交易路径和跨链资产流转的分析工具。合法机构可用于合规、反洗钱和事件响应，攻击者也可能利用同类能力对地址进行去匿名化、识别高价值目标、关联钱包身份或追踪虚拟资产迁移路径，从而支持精准钓鱼、勒索和资产盗窃。",
+    "references": [
+      {
+        "title": "Chainalysis Reactor"
+      },
+      {
+        "title": "MITRE ATT&CK: Gather Victim Identity Information"
+      },
+      {
+        "title": "Zcash privacy technology"
+      }
+    ],
+    "keywords": [
+      "On-chain Privacy Analysis Tools",
+      "blockchain analytics tooling"
+    ]
+  }
+}

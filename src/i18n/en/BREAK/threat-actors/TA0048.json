@@ -1,0 +1,24 @@
+{
+  "TA0048": {
+    "title": "IoT Botnet Operators",
+    "description": "通过漏洞利用、默认凭据爆破、固件后门和恶意软件感染控制大量物联网设备的攻击者。其目标包括DDoS、代理转发、挖矿、横向移动、数据篡改和设备勒索，也可能利用工业、医疗或车联网设备造成物理世界影响。",
+    "references": [
+      {
+        "title": "Mirai Botnet source code"
+      },
+      {
+        "title": "CISA Securing IoT Devices"
+      },
+      {
+        "title": "ENISA Baseline Security Recommendations for IoT"
+      }
+    ],
+    "keywords": [
+      "IoT Botnet Operators",
+      "物联网攻击者",
+      "Mirai运营者",
+      "设备劫持团伙",
+      "IoT恶意软件运营者"
+    ]
+  }
+}

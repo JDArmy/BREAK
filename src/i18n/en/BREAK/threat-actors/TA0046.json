@@ -1,0 +1,24 @@
+{
+  "TA0046": {
+    "title": "Malicious Blockchain Node Operators",
+    "description": "控制区块链节点、矿池、验证者或大量伪造节点身份以影响P2P网络和共识过程的行为者。其行为包括女巫攻击、日食攻击、链重组、长程攻击、自私挖矿、51%攻击和交易重放利用，通常需要节点资源、算力、质押权重或网络连接控制能力。",
+    "references": [
+      {
+        "title": "Bitcoin Eclipse Attacks and Countermeasures"
+      },
+      {
+        "title": "Selfish Mining in Bitcoin"
+      },
+      {
+        "title": "Ethereum Proof-of-Stake Consensus Specifications"
+      }
+    ],
+    "keywords": [
+      "Malicious Blockchain Node Operators",
+      "恶意验证者",
+      "恶意矿工",
+      "女巫节点运营者",
+      "共识攻击者"
+    ]
+  }
+}

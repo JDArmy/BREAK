@@ -1,0 +1,21 @@
+{
+  "AT0079": {
+    "title": "Wallet Phishing and Drainer Tools",
+    "description": "面向加密钱包用户的钓鱼和授权盗币工具，通常伪装成空投、NFT铸造、DApp登录、交易签名确认或EIP授权页面，诱导用户泄露助记词、私钥或签署恶意授权交易。高级工具会结合Telegram Bot、仿冒钱包插件、剪贴板劫持、恶意DApp前端和链上监控，自动转移被授权资产。",
+    "references": [
+      {
+        "title": "MetaMask Security: Protect your wallet"
+      },
+      {
+        "title": "Wallet drainers and approval phishing overview"
+      },
+      {
+        "title": "EIP-712 Typed structured data hashing and signing"
+      }
+    ],
+    "keywords": [
+      "Wallet Phishing and Drainer Tools",
+      "wallet drainer"
+    ]
+  }
+}

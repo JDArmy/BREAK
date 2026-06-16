@@ -1,0 +1,53 @@
+{
+  "AT0083": {
+    "title": "工业与车联网协议利用工具",
+    "description": "针对工业控制、车联网V2X、医疗物联网和边缘设备协议的扫描与利用工具集合。攻击者可利用Modbus、OPC-UA、Profinet、CAN、V2X、BLE、MQTT等协议缺陷或配置错误实施未授权访问、指令注入、传感器数据伪造、医疗设备控制和车联网消息欺骗。",
+    "avoidances": [
+      "A0146",
+      "A0147",
+      "A0148",
+      "A0181",
+      "A0183",
+      "A0185",
+      "A0108",
+      "A0118"
+    ],
+    "directCauseRisks": [
+      "R0179",
+      "R0180",
+      "R0190",
+      "R0178",
+      "R0189",
+      "R0210"
+    ],
+    "indirectSupportRisks": [
+      "R0182",
+      "R0205"
+    ],
+    "references": [
+      {
+        "title": "Modbus Penetration Testing Framework",
+        "link": "https://github.com/theralfbrown/smod"
+      },
+      {
+        "title": "CANard CAN bus toolkit",
+        "link": "https://github.com/ericevenchick/canard"
+      },
+      {
+        "title": "OWASP Medical Device Security",
+        "link": "https://owasp.org/www-project-medical-device-security/"
+      }
+    ],
+    "keywords": [
+      "工业与车联网协议利用工具",
+      "工业协议利用工具",
+      "Modbus攻击",
+      "OPC-UA扫描",
+      "CAN总线攻击",
+      "V2X伪造",
+      "医疗物联网攻击",
+      "传感器欺骗"
+    ],
+    "updated": "2026-06-16"
+  }
+}

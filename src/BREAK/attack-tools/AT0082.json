@@ -1,0 +1,48 @@
+{
+  "AT0082": {
+    "title": "IoT僵尸网络与C2工具",
+    "description": "用于感染、控制和调度大量物联网设备的恶意软件与命令控制工具。此类工具常扫描弱口令或已知漏洞设备，植入轻量级恶意程序，通过C2服务器下发DDoS、挖矿、代理转发或横向移动任务，并可篡改设备数据或阻断正常服务。",
+    "avoidances": [
+      "A0113",
+      "A0114",
+      "A0115",
+      "A0182",
+      "A0078",
+      "A0016"
+    ],
+    "directCauseRisks": [
+      "R0165",
+      "R0182"
+    ],
+    "indirectSupportRisks": [
+      "R0163",
+      "R0166",
+      "R0189"
+    ],
+    "references": [
+      {
+        "title": "Mirai Botnet source code",
+        "link": "https://github.com/jgamblin/Mirai-Source-Code"
+      },
+      {
+        "title": "CISA Securing Internet of Things Devices",
+        "link": "https://www.cisa.gov/resources-tools/resources/securing-internet-things-iot-devices"
+      },
+      {
+        "title": "ENISA Baseline Security Recommendations for IoT",
+        "link": "https://www.enisa.europa.eu/publications/baseline-security-recommendations-for-iot"
+      }
+    ],
+    "keywords": [
+      "IoT僵尸网络与C2工具",
+      "IoT僵尸网络工具",
+      "Mirai",
+      "C2控制",
+      "物联网恶意软件",
+      "设备感染",
+      "DDoS僵尸网络",
+      "IoT数据篡改"
+    ],
+    "updated": "2026-06-16"
+  }
+}

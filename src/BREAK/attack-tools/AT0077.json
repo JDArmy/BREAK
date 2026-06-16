@@ -1,0 +1,54 @@
+{
+  "AT0077": {
+    "title": "DeFi攻击脚本",
+    "description": "面向DeFi协议的自动化攻击脚本和套利执行工具，通常用于闪电贷组合调用、预言机价格操纵、MEV抢跑/夹子交易、流动性池操纵、Rug Pull资金撤离和治理投票操纵。此类脚本会把借贷、兑换、抵押、清算、治理投票等多个协议调用编排到同一笔或一组交易中，通过交易模拟和Gas策略优化提高成功率。",
+    "avoidances": [
+      "A0098",
+      "A0099",
+      "A0100",
+      "A0125",
+      "A0126",
+      "A0127",
+      "A0128",
+      "A0129",
+      "A0130",
+      "A0177"
+    ],
+    "directCauseRisks": [
+      "R0160",
+      "R0169",
+      "R0170",
+      "R0167",
+      "R0168",
+      "R0173"
+    ],
+    "indirectSupportRisks": [
+      "R0159",
+      "R0204"
+    ],
+    "references": [
+      {
+        "title": "Aave Flash Loans documentation",
+        "link": "https://docs.aave.com/developers/guides/flash-loans"
+      },
+      {
+        "title": "Flash Boys 2.0: Frontrunning in Decentralized Exchanges",
+        "link": "https://arxiv.org/abs/1904.05234"
+      },
+      {
+        "title": "Chainlink Oracle Security Considerations",
+        "link": "https://docs.chain.link/data-feeds/selecting-data-feeds#risk-mitigation"
+      }
+    ],
+    "keywords": [
+      "DeFi攻击脚本",
+      "闪电贷攻击脚本",
+      "MEV机器人",
+      "三明治攻击",
+      "预言机操纵",
+      "治理攻击脚本",
+      "链上套利机器人"
+    ],
+    "updated": "2026-06-16"
+  }
+}

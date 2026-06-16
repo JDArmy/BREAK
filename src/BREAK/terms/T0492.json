@@ -27,9 +27,12 @@
       "A0121",
       "A0170"
     ],
-    "relatedAttackTools": [],
+    "relatedAttackTools": [
+      "AT0077"
+    ],
     "relatedThreatActors": [
-      "TA0039"
+      "TA0039",
+      "TA0045"
     ],
     "relatedBusinessScenes": [
       "BS00",

@@ -1,0 +1,21 @@
+{
+  "AT0077": {
+    "title": "DeFi Attack Scripts",
+    "description": "面向DeFi协议的自动化攻击脚本和套利执行工具，通常用于闪电贷组合调用、预言机价格操纵、MEV抢跑/夹子交易、流动性池操纵、Rug Pull资金撤离和治理投票操纵。此类脚本会把借贷、兑换、抵押、清算、治理投票等多个协议调用编排到同一笔或一组交易中，通过交易模拟和Gas策略优化提高成功率。",
+    "references": [
+      {
+        "title": "Aave Flash Loans documentation"
+      },
+      {
+        "title": "Flash Boys 2.0: Frontrunning in Decentralized Exchanges"
+      },
+      {
+        "title": "Chainlink Oracle Security Considerations"
+      }
+    ],
+    "keywords": [
+      "DeFi Attack Scripts",
+      "DeFi attack automation"
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "AT0080": {
+    "title": "链上隐私分析工具",
+    "description": "用于追踪链上地址、交易路径和跨链资产流转的分析工具。合法机构可用于合规、反洗钱和事件响应，攻击者也可能利用同类能力对地址进行去匿名化、识别高价值目标、关联钱包身份或追踪虚拟资产迁移路径，从而支持精准钓鱼、勒索和资产盗窃。",
+    "avoidances": [
+      "A0134",
+      "A0135",
+      "A0136",
+      "A0161",
+      "A0162",
+      "A0163",
+      "A0175"
+    ],
+    "directCauseRisks": [
+      "R0174"
+    ],
+    "indirectSupportRisks": [
+      "R0162",
+      "R0185",
+      "R0202"
+    ],
+    "references": [
+      {
+        "title": "Chainalysis Reactor",
+        "link": "https://www.chainalysis.com/chainalysis-reactor/"
+      },
+      {
+        "title": "MITRE ATT&CK: Gather Victim Identity Information",
+        "link": "https://attack.mitre.org/techniques/T1589/"
+      },
+      {
+        "title": "Zcash privacy technology",
+        "link": "https://z.cash/technology/"
+      }
+    ],
+    "keywords": [
+      "链上隐私分析工具",
+      "地址画像",
+      "链上追踪",
+      "钱包去匿名化",
+      "跨链资产追踪",
+      "区块链分析"
+    ],
+    "updated": "2026-06-16"
+  }
+}

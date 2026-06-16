@@ -1,0 +1,49 @@
+{
+  "AT0076": {
+    "title": "智能合约漏洞利用框架",
+    "description": "用于发现、验证和组合利用智能合约漏洞的自动化工具集合。此类工具通常集成合约字节码分析、ABI调用构造、交易模拟、重入与权限绕过测试、时间戳依赖验证、代理合约升级路径分析等能力，可帮助攻击者快速定位可获利漏洞并生成利用交易。合法安全团队也会在审计和红队演练中使用类似能力验证风险，但在黑灰产场景中，攻击者会将其用于主网资产盗取、合约状态操纵和漏洞批量扫描。",
+    "avoidances": [
+      "A0095",
+      "A0096",
+      "A0097",
+      "A0142",
+      "A0160"
+    ],
+    "directCauseRisks": [
+      "R0159",
+      "R0176",
+      "R0177"
+    ],
+    "indirectSupportRisks": [
+      "R0160",
+      "R0161",
+      "R0167",
+      "R0169",
+      "R0175"
+    ],
+    "references": [
+      {
+        "title": "Trail of Bits Slither",
+        "link": "https://github.com/crytic/slither"
+      },
+      {
+        "title": "Foundry Ethereum development toolkit",
+        "link": "https://github.com/foundry-rs/foundry"
+      },
+      {
+        "title": "Consensys Smart Contract Best Practices",
+        "link": "https://consensys.github.io/smart-contract-best-practices/"
+      }
+    ],
+    "keywords": [
+      "智能合约漏洞利用框架",
+      "合约漏洞利用",
+      "Solidity exploit",
+      "Foundry攻击脚本",
+      "Slither",
+      "合约交易模拟",
+      "重入利用"
+    ],
+    "updated": "2026-06-16"
+  }
+}

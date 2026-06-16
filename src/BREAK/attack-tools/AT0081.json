@@ -1,0 +1,52 @@
+{
+  "AT0081": {
+    "title": "IoT固件与设备利用工具",
+    "description": "面向物联网设备的漏洞扫描、固件提取、反编译、默认凭据尝试和远程利用工具集合。攻击者可通过这些工具发现暴露设备、分析固件后门、植入恶意固件、劫持设备控制权或将设备纳入僵尸网络。",
+    "avoidances": [
+      "A0107",
+      "A0108",
+      "A0109",
+      "A0110",
+      "A0111",
+      "A0112",
+      "A0116",
+      "A0117",
+      "A0118"
+    ],
+    "directCauseRisks": [
+      "R0163",
+      "R0164",
+      "R0166",
+      "R0181"
+    ],
+    "indirectSupportRisks": [
+      "R0165",
+      "R0206"
+    ],
+    "references": [
+      {
+        "title": "OWASP Firmware Security Testing Methodology",
+        "link": "https://github.com/scriptingxss/owasp-fstm"
+      },
+      {
+        "title": "Binwalk firmware analysis tool",
+        "link": "https://github.com/ReFirmLabs/binwalk"
+      },
+      {
+        "title": "OWASP Internet of Things",
+        "link": "https://owasp.org/www-project-internet-of-things/"
+      }
+    ],
+    "keywords": [
+      "IoT固件与设备利用工具",
+      "IoT固件利用工具",
+      "固件分析",
+      "Binwalk",
+      "默认口令扫描",
+      "IoT漏洞利用",
+      "设备劫持",
+      "固件后门"
+    ],
+    "updated": "2026-06-16"
+  }
+}

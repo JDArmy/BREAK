@@ -1,0 +1,53 @@
+{
+  "TA0047": {
+    "title": "钱包盗币团伙",
+    "description": "围绕加密钱包、助记词、私钥和DApp授权实施盗币活动的团伙。常通过钓鱼页面、恶意浏览器插件、Telegram Bot、虚假空投、仿冒钱包App、剪贴板劫持和恶意签名请求诱导用户泄露密钥或授权转移资产。",
+    "buildAttackTools": [
+      "AT0079"
+    ],
+    "useAttackTools": [
+      "AT0063",
+      "AT0064",
+      "AT0065",
+      "AT0071",
+      "AT0079",
+      "AT0060",
+      "AT0080"
+    ],
+    "directCauseRisks": [
+      "R0162",
+      "R0174",
+      "R0185"
+    ],
+    "indirectSupportRisks": [
+      "R0194",
+      "R0195",
+      "R0197",
+      "R0201",
+      "R0203"
+    ],
+    "references": [
+      {
+        "title": "Chainalysis: Crypto Drainers",
+        "link": "https://www.chainalysis.com/blog/crypto-drainers/"
+      },
+      {
+        "title": "MetaMask Security Center",
+        "link": "https://support.metamask.io/privacy-and-security/staying-safe-in-web3/"
+      },
+      {
+        "title": "FBI Cryptocurrency Investment Fraud",
+        "link": "https://www.ic3.gov/"
+      }
+    ],
+    "keywords": [
+      "钱包盗币团伙",
+      "钱包Drainer团伙",
+      "助记词钓鱼团伙",
+      "授权盗币",
+      "加密钱包诈骗",
+      "虚拟资产盗窃"
+    ],
+    "updated": "2026-06-16"
+  }
+}

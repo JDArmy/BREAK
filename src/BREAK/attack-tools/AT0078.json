@@ -1,0 +1,47 @@
+{
+  "AT0078": {
+    "title": "区块链节点与共识攻击工具",
+    "description": "针对区块链P2P网络和共识层的攻击工具集合，可用于构造恶意节点、批量生成节点身份、操纵对等连接、模拟链重组、隐藏或延迟区块广播，以及在测试网或私有网络中验证51%攻击、女巫攻击、日食攻击、长程攻击和自私挖矿策略。此类工具通常需要控制节点基础设施、算力或质押资源。",
+    "avoidances": [
+      "A0131",
+      "A0132",
+      "A0133",
+      "A0156"
+    ],
+    "directCauseRisks": [
+      "R0171",
+      "R0172",
+      "R0186",
+      "R0187",
+      "R0188"
+    ],
+    "indirectSupportRisks": [
+      "R0175"
+    ],
+    "references": [
+      {
+        "title": "Bitcoin Eclipse Attacks and Countermeasures",
+        "link": "https://www.usenix.org/conference/usenixsecurity15/technical-sessions/presentation/heilman"
+      },
+      {
+        "title": "Selfish Mining in Bitcoin",
+        "link": "https://arxiv.org/abs/1311.0243"
+      },
+      {
+        "title": "Ethereum Proof-of-Stake Consensus Specifications",
+        "link": "https://github.com/ethereum/consensus-specs"
+      }
+    ],
+    "keywords": [
+      "区块链节点与共识攻击工具",
+      "区块链共识攻击工具",
+      "恶意节点工具",
+      "女巫节点",
+      "日食攻击",
+      "自私挖矿",
+      "链重组模拟",
+      "P2P节点操纵"
+    ],
+    "updated": "2026-06-16"
+  }
+}

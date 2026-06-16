@@ -1,0 +1,55 @@
+{
+  "AT0084": {
+    "title": "元宇宙与XR攻击工具",
+    "description": "面向元宇宙平台、虚拟资产交易、XR设备和沉浸式社交环境的攻击工具集合。常见能力包括虚拟资产交易欺诈脚本、虚拟身份冒充、空间数据采集、XR固件漏洞利用、3D内容滥用、虚拟骚扰自动化和跨平台资产转移欺骗。",
+    "avoidances": [
+      "A0152",
+      "A0153",
+      "A0154",
+      "A0188",
+      "A0189",
+      "A0190",
+      "A0191",
+      "A0192",
+      "A0193",
+      "A0194"
+    ],
+    "directCauseRisks": [
+      "R0183",
+      "R0184",
+      "R0185",
+      "R0191",
+      "R0192"
+    ],
+    "indirectSupportRisks": [
+      "R0215",
+      "R0217",
+      "R0219"
+    ],
+    "references": [
+      {
+        "title": "OWASP Top 10 Metaverse Security Risks",
+        "link": "https://owasp.org/www-project-metaverse-top-10/"
+      },
+      {
+        "title": "XR Safety Initiative",
+        "link": "https://xrsafetyinitiative.org/"
+      },
+      {
+        "title": "NIST Cybersecurity for IoT Program",
+        "link": "https://www.nist.gov/itl/applied-cybersecurity/nist-cybersecurity-iot-program"
+      }
+    ],
+    "keywords": [
+      "元宇宙与XR攻击工具",
+      "元宇宙攻击工具",
+      "XR攻击工具",
+      "虚拟资产欺诈",
+      "虚拟身份冒充",
+      "空间数据窃取",
+      "XR固件漏洞",
+      "虚拟骚扰自动化"
+    ],
+    "updated": "2026-06-16"
+  }
+}

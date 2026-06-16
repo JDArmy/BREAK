@@ -1,0 +1,46 @@
+{
+  "TA0046": {
+    "title": "恶意区块链节点运营者",
+    "description": "控制区块链节点、矿池、验证者或大量伪造节点身份以影响P2P网络和共识过程的行为者。其行为包括女巫攻击、日食攻击、链重组、长程攻击、自私挖矿、51%攻击和交易重放利用，通常需要节点资源、算力、质押权重或网络连接控制能力。",
+    "buildAttackTools": [
+      "AT0078"
+    ],
+    "useAttackTools": [
+      "AT0078"
+    ],
+    "directCauseRisks": [
+      "R0171",
+      "R0172",
+      "R0186",
+      "R0187",
+      "R0188",
+      "R0175"
+    ],
+    "indirectSupportRisks": [
+      "R0173"
+    ],
+    "references": [
+      {
+        "title": "Bitcoin Eclipse Attacks and Countermeasures",
+        "link": "https://www.usenix.org/conference/usenixsecurity15/technical-sessions/presentation/heilman"
+      },
+      {
+        "title": "Selfish Mining in Bitcoin",
+        "link": "https://arxiv.org/abs/1311.0243"
+      },
+      {
+        "title": "Ethereum Proof-of-Stake Consensus Specifications",
+        "link": "https://github.com/ethereum/consensus-specs"
+      }
+    ],
+    "keywords": [
+      "恶意区块链节点运营者",
+      "恶意验证者",
+      "恶意矿工",
+      "女巫节点运营者",
+      "共识攻击者",
+      "P2P网络攻击者"
+    ],
+    "updated": "2026-06-16"
+  }
+}
