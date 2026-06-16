@@ -1,0 +1,31 @@
+{
+  "T0473": {
+    "title": "深度伪造",
+    "keywords": [
+      "深度伪造",
+      "deepfake",
+      "AI换脸",
+      "语音合成",
+      "视频伪造",
+      "人脸替换",
+      "声音克隆",
+      "合成媒体"
+    ],
+    "aliases": [
+      "AI换脸"
+    ],
+    "category": "AI安全",
+    "definition": "使用AI技术生成虚假音视频内容的技术。",
+    "description": "利用深度学习算法将目标人物的面部、声音替换到视频或音频中，生成高度逼真的虚假内容。被广泛用于网络诈骗、身份冒充、名誉损害等恶意活动。攻击者可伪造视频通话进行诈骗、伪造名人视频传播虚假信息、冒充身份通过人脸识别等，随着AI技术发展，识别难度越来越高。",
+    "relatedRisks": [
+      "R0084",
+      "R0153"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

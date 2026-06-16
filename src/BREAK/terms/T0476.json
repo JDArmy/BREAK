@@ -1,0 +1,32 @@
+{
+  "T0476": {
+    "title": "XSS攻击",
+    "keywords": [
+      "XSS攻击",
+      "XSS",
+      "cross-site scripting",
+      "跨站脚本",
+      "反射型XSS",
+      "存储型XSS",
+      "DOM型XSS",
+      "脚本注入",
+      "跨站攻击"
+    ],
+    "aliases": [
+      "跨站脚本攻击"
+    ],
+    "category": "代码注入",
+    "definition": "跨站脚本攻击，在网页中注入恶意脚本的攻击方式。",
+    "description": "攻击者将恶意JavaScript代码注入到网页中，当其他用户访问该页面时，恶意脚本在受害者浏览器中执行。可窃取Cookie、会话令牌、键盘记录、钓鱼、植入木马等。分为反射型（通过URL传参）、存储型（存储在数据库）、DOM型（客户端脚本漏洞）三类，是Web应用最常见的安全漏洞之一。",
+    "relatedRisks": [
+      "R0126",
+      "R0127"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}
