@@ -878,12 +878,12 @@ const termDetailClose = () => {
   }
 
   .subrisk-toggle {
-    width: auto;
-    display: inline-flex;
+    width: 100%;
+    display: flex;
   }
 
   .subrisk-toggle :deep(.el-radio-button) {
-    flex: 0 0 auto;
+    flex: 1;
   }
 
   .stats {
