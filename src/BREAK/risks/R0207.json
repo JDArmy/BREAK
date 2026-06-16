@@ -1,0 +1,19 @@
+{
+  "R0207": {
+    "title": "eSIM/iSIM劫持",
+    "definition": "嵌入式SIM卡（eSIM）和集成SIM卡（iSIM）的远程配置功能被攻击者利用，实现SIM卡劫持和身份盗用。",
+    "complexity": "高级",
+    "influence": "新型移动设备认证方式面临威胁",
+    "limitation": "需要攻破运营商远程配置系统",
+    "avoidances": [
+      "A0025",
+      "A0180"
+    ],
+    "references": [],
+    "keywords": [
+      "eSIM/iSIM劫持"
+    ],
+    "updated": "2026-06-16",
+    "description": "嵌入式SIM卡（eSIM）和集成SIM卡（iSIM）的远程配置功能被攻击者利用，实现SIM卡劫持和身份盗用。"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "R0212": {
+    "title": "车联网V2X攻击",
+    "definition": "攻击者劫持车辆间（V2V）、车辆与基础设施间（V2I）的通信，发送虚假信息干扰驾驶决策。",
+    "complexity": "高级",
+    "influence": "可能导致交通事故，威胁生命安全",
+    "limitation": "需要在现场部署攻击设备",
+    "avoidances": [
+      "A0185"
+    ],
+    "references": [],
+    "keywords": [
+      "车联网V2X攻击"
+    ],
+    "updated": "2026-06-16",
+    "description": "攻击者劫持车辆间（V2V）、车辆与基础设施间（V2I）的通信，发送虚假信息干扰驾驶决策。"
+  }
+}

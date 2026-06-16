@@ -1,0 +1,18 @@
+{
+  "R0204": {
+    "title": "Gas费操纵与抢跑",
+    "definition": "矿工或验证者利用交易排序权，通过Gas费竞价抢跑用户交易，或与套利机器人串谋获取MEV收益。",
+    "complexity": "高级",
+    "influence": "DeFi用户交易滑点增大，利益受损",
+    "limitation": "依赖区块生产者权限",
+    "avoidances": [
+      "A0177"
+    ],
+    "references": [],
+    "keywords": [
+      "Gas费操纵与抢跑"
+    ],
+    "updated": "2026-06-16",
+    "description": "矿工或验证者利用交易排序权，通过Gas费竞价抢跑用户交易，或与套利机器人串谋获取MEV收益。"
+  }
+}

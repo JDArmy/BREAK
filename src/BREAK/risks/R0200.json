@@ -1,0 +1,19 @@
+{
+  "R0200": {
+    "title": "Layer2桥接风险",
+    "definition": "Layer2扩容方案（Rollup、侧链等）与主链之间的资产桥接环节存在安全隐患，可能导致资金锁定或被盗。",
+    "complexity": "高级",
+    "influence": "Layer2生态快速发展，桥接资金规模巨大",
+    "limitation": "技术复杂度高，攻击成本较大",
+    "avoidances": [
+      "A0056",
+      "A0173"
+    ],
+    "references": [],
+    "keywords": [
+      "Layer2桥接风险"
+    ],
+    "updated": "2026-06-16",
+    "description": "Layer2扩容方案（Rollup、侧链等）与主链之间的资产桥接环节存在安全隐患，可能导致资金锁定或被盗。"
+  }
+}

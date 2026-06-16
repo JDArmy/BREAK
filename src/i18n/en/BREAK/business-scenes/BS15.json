@@ -4,19 +4,13 @@
     "description": "Security risks in decentralized Web, blockchain technology, cryptocurrency, DeFi, NFT and other Web3 application scenarios",
     "riskDimensions": {
       "RD05": {
-        "title": "Smart Contract Security"
-      },
-      "RD06": {
-        "title": "DeFi Security"
-      },
-      "RD07": {
-        "title": "Blockchain Consensus"
-      },
-      "RD08": {
-        "title": "Key Management"
+        "title": "Blockchain Security"
       }
     },
     "riskScenes": {
+      "RS12": {
+        "title": "Web3 Ecosystem Attacks"
+      },
       "RS15": {
         "title": "Smart Contract Vulnerabilities"
       },

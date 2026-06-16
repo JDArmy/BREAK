@@ -1,0 +1,9 @@
+{
+  "R0200": {
+    "title": "Layer2 Bridge Risk",
+    "definition": "Asset bridges between Layer2 scaling solutions (Rollup, sidechains) and mainchain have security vulnerabilities that may result in funds being locked or stolen.",
+    "keywords": [
+      "Layer2 Bridge Risk"
+    ]
+  }
+}

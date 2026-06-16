@@ -1,0 +1,18 @@
+{
+  "R0203": {
+    "title": "DApp前端劫持",
+    "definition": "攻击者通过劫持IPFS网关、DNS污染等方式篡改DApp前端代码，在用户不知情的情况下替换收款地址或注入恶意交互。",
+    "complexity": "中级",
+    "influence": "用户难以察觉，资金直接流向攻击者",
+    "limitation": "需要控制网络中间节点",
+    "avoidances": [
+      "A0176"
+    ],
+    "references": [],
+    "keywords": [
+      "DApp前端劫持"
+    ],
+    "updated": "2026-06-16",
+    "description": "攻击者通过劫持IPFS网关、DNS污染等方式篡改DApp前端代码，在用户不知情的情况下替换收款地址或注入恶意交互。"
+  }
+}

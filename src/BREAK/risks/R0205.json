@@ -1,0 +1,18 @@
+{
+  "R0205": {
+    "title": "AIoT融合攻击",
+    "definition": "攻击者通过对AI模型投毒、对抗样本攻击等手段，影响物联网设备的AI决策系统，导致误判或恶意行为。",
+    "complexity": "高级",
+    "influence": "AIoT设备广泛应用于关键场景，影响重大",
+    "limitation": "需要深入理解AI模型和IoT系统",
+    "avoidances": [
+      "A0178"
+    ],
+    "references": [],
+    "keywords": [
+      "AIoT融合攻击"
+    ],
+    "updated": "2026-06-16",
+    "description": "攻击者通过对AI模型投毒、对抗样本攻击等手段，影响物联网设备的AI决策系统，导致误判或恶意行为。"
+  }
+}

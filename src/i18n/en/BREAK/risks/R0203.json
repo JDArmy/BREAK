@@ -1,0 +1,9 @@
+{
+  "R0203": {
+    "title": "DApp Frontend Hijacking",
+    "definition": "Attackers hijack IPFS gateways or poison DNS to tamper with DApp frontend code, replacing payment addresses or injecting malicious interactions without user awareness.",
+    "keywords": [
+      "DApp Frontend Hijacking"
+    ]
+  }
+}

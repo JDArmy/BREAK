@@ -62,12 +62,21 @@ interface SceneBREAK {
 
 const sceneLayout = computed(() => {
   const totalScenes = Object.keys(sceneBREAK.value.riskScenes).length;
+  const enableScroll = totalScenes > 10;
   let remainingRowSize = 24;
 
   return Object.entries(sceneBREAK.value.riskDimensions).map(([rdKey, rdVal]) => {
-    let dimensionSize = Math.round((rdVal.riskScenes.length / totalScenes) * 24);
-    dimensionSize = Math.min(dimensionSize, remainingRowSize || 24);
-    remainingRowSize -= dimensionSize;
+    let dimensionSize;
+    let dimensionWidth;
+
+    if (enableScroll) {
+      dimensionWidth = rdVal.riskScenes.length * 180;
+      dimensionSize = 24;
+    } else {
+      dimensionSize = Math.round((rdVal.riskScenes.length / totalScenes) * 24);
+      dimensionSize = Math.min(dimensionSize, remainingRowSize || 24);
+      remainingRowSize -= dimensionSize;
+    }
 
     let remainingSceneSize = 24;
     const scenes = rdVal.riskScenes.map(rsKey => {
@@ -77,8 +86,12 @@ const sceneLayout = computed(() => {
       return { key: rsKey, size: sceneSize };
     });
 
-    return { key: rdKey, value: rdVal, size: dimensionSize, scenes };
+    return { key: rdKey, value: rdVal, size: dimensionSize, width: dimensionWidth, scenes };
   });
+});
+
+const shouldEnableScroll = computed(() => {
+  return Object.keys(sceneBREAK.value.riskScenes).length > 10;
 });
 
 const normalizeBusinessSceneKey = (key?: string) =>
@@ -375,31 +388,33 @@ const termDetailClose = () => {
     </el-col>
   </el-row>
 
-  <el-row>
-    <!-- 风险场景 -->
-    <el-col
-      class="risk-dimension"
-      v-for="dimension in sceneLayout"
-      :key="dimension.key"
-      :md="dimension.size"
-    >
-      <div class="risk-card">
-      <h3 class="risk-dimension-title" :title="dimension.key">
-        {{
-          $t(
-            `BREAK.businessScenes.${bsKeySelected}.riskDimensions.${dimension.key}.title`
-          )
-        }}
-      </h3>
+  <div :class="{ 'scrollable-container': shouldEnableScroll }">
+    <el-row>
+      <!-- 风险场景 -->
+      <el-col
+        class="risk-dimension"
+        v-for="dimension in sceneLayout"
+        :key="dimension.key"
+        :md="shouldEnableScroll ? undefined : dimension.size"
+        :style="shouldEnableScroll ? { flex: `0 0 ${dimension.width}px`, maxWidth: `${dimension.width}px` } : {}"
+      >
+        <div class="risk-card">
+        <h3 class="risk-dimension-title" :title="dimension.key">
+          {{
+            $t(
+              `BREAK.businessScenes.${bsKeySelected}.riskDimensions.${dimension.key}.title`
+            )
+          }}
+        </h3>
 
-      <el-row justify="center">
-        <!-- 风险维度 -->
-        <el-col
-          class="risk-scene"
-          v-for="scene in dimension.scenes"
-          :key="scene.key"
-          :md="scene.size"
-        >
+        <el-row justify="center">
+          <!-- 风险维度 -->
+          <el-col
+            class="risk-scene"
+            v-for="scene in dimension.scenes"
+            :key="scene.key"
+            :md="scene.size"
+          >
           <h4 class="risk-scene-title" :title="scene.key">
             <!-- <a :href="'/risk-demensions/' + rdKey"> -->
             {{
@@ -474,6 +489,7 @@ const termDetailClose = () => {
       </div>
     </el-col>
   </el-row>
+  </div>
   <RiskDetail
     v-if="riskDrawer"
     v-on:drawer-close="riskDetailClose"
@@ -511,6 +527,18 @@ const termDetailClose = () => {
   margin-bottom: 16px;
 }
 
+.scrollable-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin-bottom: -20px;
+  padding-bottom: 20px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scrollable-container .el-row {
+  flex-wrap: nowrap !important;
+}
+
 .risk-dimension {
   box-sizing: border-box;
   padding: 3px;
@@ -521,8 +549,6 @@ const termDetailClose = () => {
   border-radius: 8px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.06);
   padding-bottom: 10px;
-  height: 100%;
-  overflow: hidden;
 }
 
 .risk-dimension-title {

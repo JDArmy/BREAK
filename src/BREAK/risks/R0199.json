@@ -1,0 +1,18 @@
+{
+  "R0199": {
+    "title": "NFT版税绕过",
+    "definition": "攻击者通过场外交易、自定义合约等方式绕过NFT市场的版税机制，使创作者无法获得应有的二次销售收益。",
+    "complexity": "中级",
+    "influence": "损害创作者经济利益，影响NFT生态健康",
+    "limitation": "依赖买卖双方协同",
+    "avoidances": [
+      "A0172"
+    ],
+    "references": [],
+    "keywords": [
+      "NFT版税绕过"
+    ],
+    "updated": "2026-06-16",
+    "description": "攻击者通过场外交易、自定义合约等方式绕过NFT市场的版税机制，使创作者无法获得应有的二次销售收益。"
+  }
+}

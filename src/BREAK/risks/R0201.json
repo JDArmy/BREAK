@@ -1,0 +1,18 @@
+{
+  "R0201": {
+    "title": "账户抽象钱包风险",
+    "definition": "ERC-4337等账户抽象标准引入新的攻击面，如UserOperation验证绕过、Paymaster滥用、聚合器作恶等。",
+    "complexity": "高级",
+    "influence": "新型钱包架构带来未知风险",
+    "limitation": "标准和实现尚不成熟",
+    "avoidances": [
+      "A0174"
+    ],
+    "references": [],
+    "keywords": [
+      "账户抽象钱包风险"
+    ],
+    "updated": "2026-06-16",
+    "description": "ERC-4337等账户抽象标准引入新的攻击面，如UserOperation验证绕过、Paymaster滥用、聚合器作恶等。"
+  }
+}

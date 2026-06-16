@@ -1,0 +1,18 @@
+{
+  "R0210": {
+    "title": "工业协议漏洞利用",
+    "definition": "攻击者利用Modbus、OPC-UA、Profinet等工业物联网协议的安全漏洞，实现未授权访问和设备控制。",
+    "complexity": "高级",
+    "influence": "影响工业生产安全和稳定性",
+    "limitation": "需要了解工业协议特性",
+    "avoidances": [
+      "A0183"
+    ],
+    "references": [],
+    "keywords": [
+      "工业协议漏洞利用"
+    ],
+    "updated": "2026-06-16",
+    "description": "攻击者利用Modbus、OPC-UA、Profinet等工业物联网协议的安全漏洞，实现未授权访问和设备控制。"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "R0209": {
+    "title": "Illegal Outbound and C2 Control",
+    "definition": "IoT devices infected with trojans actively connect to C2 servers to receive remote commands, becoming part of botnets.",
+    "keywords": [
+      "Illegal Outbound and C2 Control"
+    ]
+  }
+}

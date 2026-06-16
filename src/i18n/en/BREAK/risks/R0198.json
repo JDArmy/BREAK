@@ -1,0 +1,9 @@
+{
+  "R0198": {
+    "title": "Token Inflation/Deflation Vulnerability",
+    "definition": "Token economic model vulnerabilities in smart contracts allow unauthorized minting (inflation) or burning (deflation) of tokens, disrupting economic balance.",
+    "keywords": [
+      "Token Inflation/Deflation Vulnerability"
+    ]
+  }
+}

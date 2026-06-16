@@ -1,0 +1,13 @@
+{
+  "A0174": {
+    "category": "AC01",
+    "title": "账户抽象安全审计",
+    "description": "审计ERC-4337相关合约，验证UserOperation和Paymaster安全性。",
+    "references": [],
+    "keywords": [
+      "账户抽象安全审计"
+    ],
+    "updated": "2026-06-16",
+    "definition": "审计ERC-4337相关合约，验证UserOperation和Paymaster安全性。"
+  }
+}

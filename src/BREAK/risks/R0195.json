@@ -1,0 +1,19 @@
+{
+  "R0195": {
+    "title": "Telegram Bot钓鱼",
+    "definition": "Web3项目社区主要在Telegram，攻击者创建仿冒官方机器人或劫持社群，诱导用户连接钱包或泄露助记词。",
+    "complexity": "中级",
+    "influence": "社交工程结合技术手段，成功率高",
+    "limitation": "需要持续维护仿冒渠道",
+    "avoidances": [
+      "A0024",
+      "A0169"
+    ],
+    "references": [],
+    "keywords": [
+      "Telegram Bot钓鱼"
+    ],
+    "updated": "2026-06-16",
+    "description": "Web3项目社区主要在Telegram，攻击者创建仿冒官方机器人或劫持社群，诱导用户连接钱包或泄露助记词。"
+  }
+}
