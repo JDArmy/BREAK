@@ -1,0 +1,26 @@
+{
+  "T0385": {
+    "title": "Sure-Win Deal",
+    "keywords": [
+      "Sure-Win Deal",
+      "Stay Safe"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "黑产用“稳吃皮”表示某项贷款业务稳定可靠、确定能下款，以此招揽合作。",
+    "description": "源自川渝方言，原指占优势、吃得开。在信贷欺诈中，黑产中介用“稳吃皮”包装其包装贷款业务，强调下款成功率极高，以此吸引下游代理或急需资金的客户上钩。一旦客户被诱入，往往面临高额手续费或被骗取个人资料的风险。",
+    "usageExample": "Steady skin business No household registration limit, small number, come quickly.",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

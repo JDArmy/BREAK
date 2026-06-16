@@ -1,0 +1,35 @@
+{
+  "T0264": {
+    "title": "僵尸评论",
+    "keywords": [
+      "僵尸评论"
+    ],
+    "aliases": [],
+    "category": "业务欺诈",
+    "definition": "僵尸评论指由程序或水军批量发布的、内容空洞重复的虚假评论。",
+    "description": "这类评论通常用于淹没真实用户的负面反馈，或营造商品、内容受欢迎的假象。操作者利用大量账号发布预设话术，干扰平台的内容排序和用户判断。僵尸评论是刷量控评的常见手段，用于误导消费者，掩盖产品或服务质量问题。",
+    "usageExample": "站外推广，质保20-50单 影响者视频，包上传，改品牌，翻新链接，僵尸评论。",
+    "relatedRisks": [
+      "R0017",
+      "R0017-001",
+      "R0005"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0044",
+      "AT0009",
+      "AT0016"
+    ],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0006",
+      "TA0007"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "T0430": {
+    "title": "砖头",
+    "keywords": [
+      "砖头"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "黑产圈对一万元现金的俗称。",
+    "description": "在现金密集型的地下交易、跑分或背债结算中，黑产从业者常用“砖头”代指一万元现金，因银行封捆的百元钞形似砖块。这种黑话便于在通讯中隐蔽地谈论资金量，避免直接提及具体金额。大量“砖头”的流转通常涉及线下现金交割、赌资转移或非法资金拆分，是洗钱和非法结算的典型特征。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

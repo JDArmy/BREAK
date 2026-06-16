@@ -1,0 +1,36 @@
+{
+  "T0323": {
+    "title": "Corporate Account",
+    "keywords": [
+      "Corporate Account",
+      "Public Account"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "以企业名义开立的对公银行账户，黑产用于承接和流转大额非法资金，是跑分体系中高容量资金通道。",
+    "description": "公户相比个人账户具有更高单笔和日累计转账额度，且企业背景可制造虚假贸易流水掩护资金性质。黑产通过收购或冒名注册空壳公司获取公户，将诈骗、赌博等大额赃款转入后，再以货款、服务费等名义拆分转出。因其资金容量大、表面合规性强，常被用于大额洗钱节点，一旦涉案极易引发对公账户全线风控升级。",
+    "usageExample": "The entire network accepts all public bank accounts, and junk public accounts that are not used by others, as long as the bank acceptance bill business is opened. Use it to make money! ! !",
+    "relatedRisks": [
+      "R0060",
+      "R0093",
+      "R0121"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026",
+      "AT0039",
+      "AT0040",
+      "AT0060"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS15"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

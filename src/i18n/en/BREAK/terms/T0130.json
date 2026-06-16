@@ -1,0 +1,32 @@
+{
+  "T0130": {
+    "title": "Pig Hunting",
+    "keywords": [
+      "Pig Hunting",
+      "Looking For Pig"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "The first step in a pig-butchering scam, referring to the process of searching for potential victims (called 'pigs'). Scammers use various methods such as social media, telemarketing, and fake job ads to identify vulnerable targets and obtain their contact information.",
+    "description": "The first step in a pig-butchering scam, referring to the process of searching for potential victims (called 'pigs'). Scammers use various methods such as social media, telemarketing, and fake job ads to identify vulnerable targets and obtain their contact information.",
+    "usageExample": "这周找猪组在几个婚恋APP上撒了网，筛出来三十多个离异带娃的，联系方式已经全部交给养猪组了。",
+    "relatedRisks": [
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001",
+      "AT0070"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008",
+      "TA0042"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

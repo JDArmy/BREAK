@@ -1,0 +1,32 @@
+{
+  "T0127": {
+    "title": "Pig Target",
+    "keywords": [
+      "Pig Target",
+      "Pig"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "A general term for fraud targets or victims.",
+    "description": "A general term for fraud targets or victims.",
+    "usageExample": "这头猪养了两个月，终于可以杀了，准备收网。",
+    "relatedRisks": [
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001",
+      "AT0070"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008",
+      "TA0042"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

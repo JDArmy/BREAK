@@ -1,0 +1,28 @@
+{
+  "T0070": {
+    "title": "Overnight Data",
+    "keywords": [
+      "Overnight Data",
+      "Overnight Food"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "After a data breach, some attackers may not immediately sell freshly obtained data on underground markets to mitigate risk. Instead, they delay the transaction until the following day or a later period; such data is referred to as 'overnight material.' The risks and losses from overnight data breaches may only surface after a delay, making timely prevention and remediation difficult.",
+    "description": "After a data breach, some attackers may not immediately sell freshly obtained data on underground markets to mitigate risk. Instead, they delay the transaction until the following day or a later period; such data is referred to as 'overnight material.' The risks and losses from overnight data breaches may only surface after a delay, making timely prevention and remediation difficult.",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

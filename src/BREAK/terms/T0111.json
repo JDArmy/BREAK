@@ -1,0 +1,30 @@
+{
+  "T0111": {
+    "title": "宝妈鱼",
+    "keywords": [
+      "宝妈鱼"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "在诈骗语境下特指有兼职意愿、希望通过手工活或刷单补贴家用的家庭主妇群体。",
+    "description": "诈骗分子在社交平台发布虚假兼职广告，以“在家做手工”“刷单赚佣金”为名吸引宝妈。他们要求先交纳押金或加盟费，承诺后续返还并支付报酬，最终在骗取大量押金后失联。这类骗局精准利用了宝妈群体时间碎片化、急于赚钱的心理。",
+    "relatedRisks": [
+      "R0095",
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "T0071": {
+    "title": "Stock Investor Data",
+    "keywords": [
+      "Stock Investor Data",
+      "Gm Material"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "Also known as investor material, in illicit data trading this refers to personal information data of retail investors, typically containing key details of high-net-worth or active investors. Due to its high value and precision, this type of data is highly sought after in underground transactions.",
+    "description": "Also known as investor material, in illicit data trading this refers to personal information data of retail investors, typically containing key details of high-net-worth or active investors. Due to its high value and precision, this type of data is highly sought after in underground transactions.",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01",
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

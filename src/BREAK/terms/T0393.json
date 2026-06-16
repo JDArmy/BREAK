@@ -1,0 +1,30 @@
+{
+  "T0393": {
+    "title": "免抵车",
+    "keywords": [
+      "免抵车"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "指以按揭方式购车但车辆无需抵押给放款机构，机动车登记证书等全套资料随车交付客户的操作模式。",
+    "description": "在汽车贷款欺诈场景中，中介利用客户资质办理分期购车，放款后不办理抵押登记，使车辆处于“免抵”状态。客户拿到绿本和发票后，车辆可自由处置，中介则按天结算佣金。这种模式绕开了金融机构的风控闭环，极易被用于一车多贷或快速转卖套现。",
+    "usageExample": "大花小花 根据客户资质 抵押 免抵车 远程过系统 三天结算",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [
+      {
+        "title": "【信贷欺诈】车贷欺诈产业链之\"免抵车\"欺诈手法揭秘",
+        "link": "https://www.threathunter.cn/blog/a469288539b"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

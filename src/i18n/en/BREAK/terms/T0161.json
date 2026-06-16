@@ -1,0 +1,30 @@
+{
+  "T0161": {
+    "title": "Mutual Guarantee Escrow",
+    "keywords": [
+      "Mutual Guarantee Escrow",
+      "Guaranteed Double Pressure"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In underground data trading, a mutual guarantee mechanism where both parties vouch for the authenticity of a transaction to continue accessing high-value data or premium services. It represents a variant of interest-protection schemes between upstream and downstream actors in the illicit ecosystem.",
+    "description": "In underground data trading, a mutual guarantee mechanism where both parties vouch for the authenticity of a transaction to continue accessing high-value data or premium services. It represents a variant of interest-protection schemes between upstream and downstream actors in the illicit ecosystem.",
+    "usageExample": "\"Come to me for data fills, guaranteed double-lock through the butcher.\" — Used in illicit data trading scenarios involving underground data acquisition channels and techniques.",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

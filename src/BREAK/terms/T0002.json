@@ -1,0 +1,26 @@
+{
+  "T0002": {
+    "title": "打假",
+    "keywords": [
+      "打假"
+    ],
+    "aliases": [],
+    "category": "营销欺诈",
+    "definition": "指黑产从业者利用电商平台规则漏洞，通过伪造交易、篡改数据等手段，对商家或平台实施的欺诈性攻击行为。",
+    "description": "攻击者通常组织大量账号，针对特定商品或店铺进行恶意下单、虚假退货或批量差评，以此勒索商家或套取平台赔付金。这类行为直接破坏市场秩序，常导致商家资金受损、店铺降权，是电商生态中的典型黑产操作。",
+    "relatedRisks": [
+      "R0068",
+      "R0068-002"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0034"
+    ],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

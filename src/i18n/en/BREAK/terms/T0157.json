@@ -1,0 +1,37 @@
+{
+  "T0157": {
+    "title": "Deposit-Backed Order Request",
+    "keywords": [
+      "Deposit-Backed Order Request",
+      "Hang Rice Order"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illicit data trading, a prepayment mechanism where a deposit (referred to as \"rice\" in underground slang) is paid upfront when submitting a customized data request before the order is fulfilled.",
+    "description": "In illicit data trading, a prepayment mechanism where a deposit (referred to as \"rice\" in underground slang) is paid upfront when submitting a customized data request before the order is fulfilled.",
+    "usageExample": "\"No blind flow, private account receiving orders: 180 for 1 month, 280 for 3 months, 360 for 6 months. All flows require upfront deposit with order submission—no haggling. Direct from the source.\"",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

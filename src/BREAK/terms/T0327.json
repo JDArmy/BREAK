@@ -1,0 +1,31 @@
+{
+  "T0327": {
+    "title": "电子卡",
+    "keywords": [
+      "电子卡"
+    ],
+    "aliases": [],
+    "category": "跑分洗钱",
+    "definition": "线上E卡、超市购物卡等虚拟储值卡，黑产用非法资金购买后通过卡密核销变现，是一种虚拟化兑现洗钱渠道。",
+    "description": "电子卡以卡号和密码形式存在，无需实物交割，黑产用赃款批量购入后，通过转售卡密或自行核销购买实物再变现的方式完成资金清洗。因其购买行为与核销行为可分离在不同账户和IP下执行，天然具备资金隔断效果。常见于电商平台、生活服务平台，单张面额小但可批量操作，易被用于小额高频洗钱。",
+    "usageExample": "供，多家渠道电子卡密。",
+    "relatedRisks": [
+      "R0060",
+      "R0093"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0039",
+      "AT0040"
+    ],
+    "relatedThreatActors": [
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

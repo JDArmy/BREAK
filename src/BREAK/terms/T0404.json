@@ -1,0 +1,24 @@
+{
+  "T0404": {
+    "title": "55高炮",
+    "keywords": [
+      "55高炮"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "借款周期极短、利息极高的非法网贷产品。",
+    "description": "例如借1000元5天后需还1500元，利息高达50%，由非法网贷平台运作。这类贷款专门收割无路可借的群体，逾期后迅速叠加罚息和催收压力，极易导致借款人债务失控。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "T0181": {
+    "title": "单头全户",
+    "keywords": [
+      "单头全户"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "查档服务中仅能查询到户口本户主页信息及户主身份证照片的类型。",
+    "description": "这是非法查档服务的一种细分类型，黑产通过非法渠道获取指定户口本的户主信息。其数据范围仅限于户主本人，不包含其他家庭成员，常用于针对户主的定向诈骗或资产调查。",
+    "usageExample": "“此版单头全户25u一天一车”",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

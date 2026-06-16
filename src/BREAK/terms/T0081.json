@@ -1,0 +1,27 @@
+{
+  "T0081": {
+    "title": "清关",
+    "keywords": [
+      "清关"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "在非法数据交易中，指海外货物进关时被窃取的个人或物流数据，黑产将其打包成“清关料”进行贩卖。",
+    "description": "这类数据通常伴随跨境物流环节流出，涉及收货人身份、地址、电话等敏感信息。黑产通过内鬼或系统漏洞在清关节点截取数据，再按新鲜度和完整度分拣出售。下游买家多用于精准诈骗、营销骚扰或身份冒用，因数据时效性强，短期内变现效率高。",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

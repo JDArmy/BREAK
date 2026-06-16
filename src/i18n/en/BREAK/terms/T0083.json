@@ -1,0 +1,29 @@
+{
+  "T0083": {
+    "title": "Dead Data",
+    "keywords": [
+      "Dead Data",
+      "Dead Material"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illegal data trading, this refers to outdated or invalid personal or organizational data. Because it is no longer timely or usable, it typically has no exploitable value on underground markets.",
+    "description": "In illegal data trading, this refers to outdated or invalid personal or organizational data. Because it is no longer timely or usable, it typically has no exploitable value on underground markets.",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

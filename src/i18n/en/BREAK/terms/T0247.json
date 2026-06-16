@@ -1,0 +1,39 @@
+{
+  "T0247": {
+    "title": "Auto Lottery Farming",
+    "keywords": [
+      "Auto Lottery Farming",
+      "On-Hook Lottery"
+    ],
+    "aliases": [],
+    "category": "Business Fraud",
+    "definition": "利用脚本或程序在直播间自动挂机参与抽奖，以批量获取虚拟奖励。",
+    "description": "黑产通过模拟器或多开软件，让成百上千个账号同时进入直播间挂机，自动触发抽奖逻辑。这种方式无需人工干预，即可低成本获取大量礼物或平台福利，是黑产“集团号”矩阵化运营的核心手段之一。",
+    "usageExample": "他那个直播间看着人气高，其实全是挂机抽奖的协议号，没几个真人。",
+    "relatedRisks": [
+      "R0017",
+      "R0017-001",
+      "R0005",
+      "R0034"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0044",
+      "AT0009",
+      "AT0016"
+    ],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0006",
+      "TA0007"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS05",
+      "BS04",
+      "BS06"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

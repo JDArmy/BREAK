@@ -1,0 +1,31 @@
+{
+  "T0325": {
+    "title": "银行卡四件套",
+    "keywords": [
+      "银行卡四件套"
+    ],
+    "aliases": [],
+    "category": "跑分洗钱",
+    "definition": "包含身份证、银行卡、手机卡、U盾的完整开户身份资源包，是黑产批量构建洗钱账户的基础配置。",
+    "description": "四件套提供冒名开户所需的全部核心要素，黑产购入后即可注册网银、绑定第三方支付并开通大额转账权限。这些账户被用于接收、拆分和转移非法资金，形成匿名资金链路。由于整套身份信息可绕过银行面签核身，常被批量用于搭建跑分账户池，一旦流入市场即意味着对应公民信息已被深度滥用。",
+    "usageExample": "银行卡四件套出售",
+    "relatedRisks": [
+      "R0060",
+      "R0093"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0039",
+      "AT0026"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

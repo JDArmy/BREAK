@@ -1,0 +1,25 @@
+{
+  "T0059": {
+    "title": "套壳",
+    "keywords": [
+      "套壳"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "黑产利用无实际经营的空壳公司作为伪装，进行骗取贷款或信用额度的欺诈行为。",
+    "description": "欺诈者首先收购或注册一个看似运营正常的公司，通过虚假交易流水和伪造的财务报表将其包装成优质企业。随后利用这个“壳”向多家金融机构申请贷款或承兑汇票，一旦资金到手便迅速转移并注销公司。这种操作手法隐蔽性强，常导致信贷机构面临巨额坏账。",
+    "usageExample": "他们团队专门去乡下收老头老太太的身份证注册公司，养半年流水就开始套壳骗贷，等银行反应过来，公司早就注销了。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

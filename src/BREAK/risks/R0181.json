@@ -5,7 +5,11 @@
     "description": "OTA更新是物联网设备远程升级固件的主要方式。攻击者可通过中间人攻击劫持更新通道、伪造更新服务器、利用更新协议漏洞等方式，向设备推送恶意固件或阻止安全补丁安装。如果更新包未加密签名验证或验证机制存在缺陷，设备将安装恶意固件并长期被控制。",
     "complexity": "高级",
     "influence": "设备被植入后门固件，安全漏洞无法修复，批量设备被持续控制。",
-    "avoidances": [],
+    "avoidances": [
+      "A0149",
+      "A0150",
+      "A0151"
+    ],
     "references": [
       {
         "title": "Secure OTA Update Best Practices",

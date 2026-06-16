@@ -1,0 +1,25 @@
+{
+  "T0401": {
+    "title": "黑户贷",
+    "keywords": [
+      "黑户贷"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "面向征信严重不良或完全无记录人群发放的非法高息贷款。",
+    "description": "这类贷款由非正规金融机构操作，利用借款人无法从正规渠道获得资金的困境，通过高利率和严苛条款牟利。常见于网贷平台或民间借贷团伙，借款人一旦逾期将面临暴力催收或债务滚雪球的风险。",
+    "usageExample": "黑户贷，所有贷款不会过的统统包过，不看负债，法院起诉、法院执行、当前逾期，都可办理",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

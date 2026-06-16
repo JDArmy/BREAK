@@ -1,0 +1,31 @@
+{
+  "T0045": {
+    "title": "Fast Company Flip",
+    "keywords": [
+      "Fast Company Flip",
+      "Fast Enterprise"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "In business loan fraud, this refers to a tactic where fraud rings transfer business ownership to a loan applicant through 'traceless transfers' (where banks cannot discern the actual change in business ownership from business registration data), enabling rapid financing while circumventing rules on the duration of legal representative changes. This method, called 'quick enterprise' by fraud rings, allows for financing within 20-45 days. Such enterprises are often pre-cultivated by fraud rings with substantial operating and tax invoice data, allowing multiple large business tax-invoice loans to be applied for in a short period.",
+    "description": "In business loan fraud, this refers to a tactic where fraud rings transfer business ownership to a loan applicant through 'traceless transfers' (where banks cannot discern the actual change in business ownership from business registration data), enabling rapid financing while circumventing rules on the duration of legal representative changes. This method, called 'quick enterprise' by fraud rings, allows for financing within 20-45 days. Such enterprises are often pre-cultivated by fraud rings with substantial operating and tax invoice data, allowing multiple large business tax-invoice loans to be applied for in a short period.",
+    "usageExample": "刚过户了一家快企，数据养了半年，这几天抓紧安排进件。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [
+      {
+        "title": "Desperados in Financial Fraud: A Big Data Analysis of Underground Activities",
+        "link": "https://www.threathunter.cn/blog/f17db99edff"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

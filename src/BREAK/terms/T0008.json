@@ -1,0 +1,30 @@
+{
+  "T0008": {
+    "title": "返款",
+    "keywords": [
+      "返款",
+      "返歀"
+    ],
+    "aliases": [
+      "返歀"
+    ],
+    "category": "营销欺诈",
+    "definition": "指在完成虚假交易或代下单任务后，上游发单方将垫付的本金与佣金一并结算给下游执行者的行为。",
+    "description": "在黄牛代下或刷单欺诈中，做单人先垫资购买指定商品，收货或完成任务后，发单人会通过支付工具“返款”。这笔钱通常包含商品原价和谈好的佣金，是维持黑产兼职人员参与动力的直接经济激励。",
+    "relatedRisks": [
+      "R0003",
+      "R0005",
+      "R0070"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0002"
+    ],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "T0226": {
+    "title": "Number Status Check",
+    "keywords": [
+      "Number Status Check",
+      "Empty Number Detection"
+    ],
+    "aliases": [],
+    "category": "Business Fraud",
+    "definition": "通过技术手段批量或实时检测手机号码状态，筛出空号、停机、关机等无效号码。",
+    "description": "黑灰产在营销欺诈、电诈或数据交易中，先用空号检测工具清洗号码库，剔除无效资源以降低成本。操作者接入第三方检测接口或自研脚本，对批量号码进行状态查询，筛选出正常在网号用于注册、刷单或引流。活跃号可高价转卖，风险号则被丢弃，整个过程旨在提升欺诈活动的效率和命中率。",
+    "usageExample": "国内空号检测，活跃号、风险号筛选，精准过滤停机空号。",
+    "relatedRisks": [
+      "R0017",
+      "R0017-001",
+      "R0005",
+      "R0030",
+      "R0030-001",
+      "R0032"
+    ],
+    "relatedAvoidances": [
+      "A0016-003"
+    ],
+    "relatedAttackTools": [
+      "AT0044",
+      "AT0009",
+      "AT0016",
+      "AT0003",
+      "AT0007",
+      "AT0021"
+    ],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0006",
+      "TA0007"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

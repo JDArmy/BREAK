@@ -1,0 +1,30 @@
+{
+  "T0042": {
+    "title": "花户",
+    "keywords": [
+      "花户"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "指因频繁申请信用卡或贷款，导致征信报告上留下大量查询记录的个人。",
+    "description": "这类人因短期内多次申请信贷产品，被金融机构视为资金紧张或信用管理存在问题的风险客群。在黑产语境中，花户常被用作“债务重组”的目标，黑产帮其垫资还清现有债务后，利用其短期干净的征信，再次集中申请更高额度的贷款。最终导致用户背负更沉重的债务，并从中牟取高额服务费。",
+    "usageExample": "他征信上全是申请记录，典型的纯花户，现在正规银行都不给批了。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [
+      {
+        "title": "2024年上半年信贷欺诈风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-ab1e8b8c-509b-44e7-9dbe-d7271765ae2c"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

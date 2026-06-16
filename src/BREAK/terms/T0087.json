@@ -1,0 +1,27 @@
+{
+  "T0087": {
+    "title": "一手料",
+    "keywords": [
+      "一手料"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指未经任何中间商转手、直接从泄露源头获取的个人或组织数据，在黑产交易中因完整度高而溢价明显。",
+    "description": "一手料避免了多次倒卖造成的数据污染和掺假，通常由数据源头直接流出，如内鬼、系统漏洞或即时钓鱼结果。黑产内部会优先消化一手料，用于高价值诈骗或精准营销，因为信息完整、关联性强，转化率远高于二手料。市场上常以“一手货源”为噱头招揽买家，实际交易中也会掺杂部分死料或重复数据来虚增数量。",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

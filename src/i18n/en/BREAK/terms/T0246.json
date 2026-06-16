@@ -1,0 +1,34 @@
+{
+  "T0246": {
+    "title": "Gift Flipping",
+    "keywords": [
+      "Gift Flipping",
+      "Pour Salute"
+    ],
+    "aliases": [],
+    "category": "Business Fraud",
+    "definition": "通过多账号互相转赠虚拟礼物，以骗取平台任务奖励或补贴的欺诈行为。",
+    "description": "操作者利用平台的任务机制或活动漏洞，控制批量账号互相赠送免费或低价获得的礼物。通过制造虚假的活跃交易，这些账号可以迅速达成平台设定的打赏任务，从而套取现金奖励或流量扶持。这种行为严重干扰了平台的数据真实性。",
+    "usageExample": "他们工作室几十台手机在那倒礼，一晚上就能刷出几万块的平台奖励。",
+    "relatedRisks": [
+      "R0094",
+      "R0138",
+      "R0121"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0067",
+      "AT0039"
+    ],
+    "relatedThreatActors": [
+      "TA0039",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS15"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

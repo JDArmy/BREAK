@@ -1,0 +1,35 @@
+{
+  "T0151": {
+    "title": "破脸",
+    "keywords": [
+      "破脸"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "利用技术手段绕过或欺骗人脸识别系统的攻击行为。",
+    "description": "黑产通过高清照片合成、3D面具、视频重放或AI深度伪造等技术，攻击金融支付、账户解封等场景下的人脸识别验证。破脸成功后，黑产可冒用他人身份进行大额转账、修改账户信息等高风险操作，直接导致受害人资金被盗。",
+    "usageExample": "光有密码不够，还得找人做破脸，不然那笔大额转账过不去。",
+    "relatedRisks": [
+      "R0044",
+      "R0032",
+      "R0131"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0064",
+      "AT0066",
+      "AT0067",
+      "AT0053-002"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0043"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

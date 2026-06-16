@@ -1,0 +1,33 @@
+{
+  "T0304": {
+    "title": "Account Holder",
+    "keywords": [
+      "Account Holder",
+      "Card Owner"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "卡主是银行卡或支付账户的实名开户人，其账户被黑产用于洗钱。",
+    "description": "卡主可能是在知情或不知情的情况下，将个人账户提供给他人使用。在跑分洗钱中，卡主账户被用作资金中转站，接收上游诈骗或赌博资金，再按指令转出。无论卡主是否获利，一旦账户涉案，其本人将面临信用惩戒甚至刑事责任。",
+    "usageExample": "xx line 3000, the card owner is in Jinan.",
+    "relatedRisks": [
+      "R0060",
+      "R0093"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014",
+      "TA0015"
+    ],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

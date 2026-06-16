@@ -1,0 +1,30 @@
+{
+  "T0131": {
+    "title": "Mule",
+    "keywords": [
+      "Mule",
+      "Horse"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "A term for elderly hospital patients who are easily deceived. These victims, often suffering from chronic illnesses with poor treatment outcomes and fading hope, are targeted by scammers who exploit their desperation with fake 'effective treatments.'",
+    "description": "A term for elderly hospital patients who are easily deceived. These victims, often suffering from chronic illnesses with poor treatment outcomes and fading hope, are targeted by scammers who exploit their desperation with fake 'effective treatments.'",
+    "usageExample": "上个月从挂号系统里拉了一批老病号，全是优质马，用马料养了两周，最后那批假药出了八十多万。",
+    "relatedRisks": [
+      "R0060",
+      "R0095"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0014",
+      "TA0015"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

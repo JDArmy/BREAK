@@ -1,0 +1,25 @@
+{
+  "T0395": {
+    "title": "代持房",
+    "keywords": [
+      "代持房"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "指实际购房人并非真实需求方，而是有偿以个人名义替第三方持有房产，以此骗取银行按揭贷款的操作。",
+    "description": "在房贷欺诈链条中，开发商为快速回笼资金或套现离场，会招募征信干净的“代持人”签订虚假购房合同。代持人出面申请房贷，银行放款后资金归开发商使用，房产名义上挂在代持人名下。双方私下签有回购协议，约定两三年内由开发商回购该房产。一旦市场下行或开发商资金链断裂，代持人将独自承担巨额债务。",
+    "usageExample": "签回购代持房,操作2年内会从客户这里回购回这个房子 房子价值70-80个",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

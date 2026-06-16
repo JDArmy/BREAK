@@ -1,0 +1,36 @@
+{
+  "T0176": {
+    "title": "Manual Welfare Data Harvesting",
+    "keywords": [
+      "Manual Welfare Data Harvesting",
+      "Handmade Poverty Alleviation Powder"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illegal data trading, the practice by underground gangs of manually collecting personal information from poverty-alleviation beneficiaries on a large scale through social media and other channels.",
+    "description": "In illegal data trading, the practice by underground gangs of manually collecting personal information from poverty-alleviation beneficiaries on a large scale through social media and other channels.",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS04",
+      "BS01",
+      "BS02"
+    ],
+    "references": [
+      {
+        "title": "2024 Data Breach Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

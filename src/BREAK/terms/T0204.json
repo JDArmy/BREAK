@@ -1,0 +1,34 @@
+{
+  "T0204": {
+    "title": "人鬼",
+    "keywords": [
+      "人鬼"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指黑产通过交通、住宿等综合数据追踪个人出行轨迹的非法服务。",
+    "description": "该服务整合了酒店入住、卡口监控等多种数据源，能勾勒出目标人物的完整活动轨迹。黑产利用这些数据为暴力催收、非法调查甚至绑架等严重犯罪提供情报支持。其危害性在于将碎片化信息拼凑成完整的个人行踪画像。",
+    "relatedRisks": [
+      "R0078",
+      "R0089",
+      "R0092",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

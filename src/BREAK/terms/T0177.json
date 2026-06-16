@@ -1,0 +1,29 @@
+{
+  "T0177": {
+    "title": "资金盘APP数据采集",
+    "keywords": [
+      "资金盘APP数据采集"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "黑产通过技术手段从资金盘APP中批量采集投资人个人信息的行为。",
+    "description": "黑产团伙针对虚假投资理财类资金盘应用进行定向数据抓取，获取参与投资的受害人身份信息。这些受害人通常具备银行卡持有特征，数据经清洗整理后，会转卖给下游团伙用于骗卡跑分等洗钱活动。",
+    "usageExample": "“大量出传销料扶贫料，资金盘app数据采集 对口的老板来! 骗子绕道!”",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

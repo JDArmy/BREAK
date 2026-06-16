@@ -1,0 +1,30 @@
+{
+  "T0167": {
+    "title": "Insider-Verified Data",
+    "keywords": [
+      "Insider-Verified Data",
+      "No Blindness"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In underground data trading, a term indicating a high success rate or zero-failure queries, often implying data sourced through corrupt insiders within law enforcement. In actual illicit negotiations, 'no blind spots' is used as a coded reference to such channels.",
+    "description": "In underground data trading, a term indicating a high success rate or zero-failure queries, often implying data sourced through corrupt insiders within law enforcement. In actual illicit negotiations, 'no blind spots' is used as a coded reference to such channels.",
+    "usageExample": "\"No blind spots for corporate or personal bank statements — 2 years, 3 years, account opening. Departing Thursday. Bulk or individual orders accepted.\"",
+    "relatedRisks": [
+      "R0078"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

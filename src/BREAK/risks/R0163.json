@@ -5,7 +5,11 @@
     "description": "物联网设备常因固件漏洞、弱密码、缺少安全更新等问题被攻击者远程控制。被劫持的设备可用于窃听、偷拍、数据窃取，或被纳入僵尸网络发起DDoS攻击，还可能成为入侵内网的跳板。",
     "complexity": "高级",
     "influence": "用户隐私泄露，设备成为攻击工具，企业内网被渗透。",
-    "avoidances": [],
+    "avoidances": [
+      "A0107",
+      "A0108",
+      "A0109"
+    ],
     "references": [
       {
         "title": "OWASP IoT Top 10",

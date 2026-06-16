@@ -1,0 +1,30 @@
+{
+  "T0146": {
+    "title": "Boxed-Meal Scam",
+    "keywords": [
+      "Boxed-Meal Scam",
+      "Box Lunch"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "A scam where fraudsters use fake bulk orders to trick victims into paying upfront costs or deposits. Scammers often impersonate authority figures or influential entities, fabricating urgent orders and high-profit margins to pressure victims into paying without proper verification. Typically, the scammer demands a large, urgent order for a specific branded product the victim cannot supply, then directs them to a fraudulent supplier or purchase link, ultimately stealing the payment.",
+    "description": "A scam where fraudsters use fake bulk orders to trick victims into paying upfront costs or deposits. Scammers often impersonate authority figures or influential entities, fabricating urgent orders and high-profit margins to pressure victims into paying without proper verification. Typically, the scammer demands a large, urgent order for a specific branded product the victim cannot supply, then directs them to a fraudulent supplier or purchase link, ultimately stealing the payment.",
+    "usageExample": "昨天有个饭店老板接到个部队的盒饭大单，垫了八万块买指定罐头，结果对方和供应商一起消失了。",
+    "relatedRisks": [
+      "R0095",
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

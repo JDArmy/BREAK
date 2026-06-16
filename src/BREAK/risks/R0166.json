@@ -5,7 +5,11 @@
     "description": "大量IoT设备出厂时使用相同的默认凭据（如admin/admin），用户部署后未修改或无法修改。攻击者利用公开的默认凭据列表进行批量扫描和登录，轻松控制大量设备。部分设备甚至存在硬编码凭据或隐藏后门账号。",
     "complexity": "初级",
     "influence": "设备被批量控制，用户数据泄露，设备被纳入僵尸网络。",
-    "avoidances": [],
+    "avoidances": [
+      "A0116",
+      "A0117",
+      "A0118"
+    ],
     "references": [
       {
         "title": "Default Password Lists",

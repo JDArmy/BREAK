@@ -1,0 +1,30 @@
+{
+  "T0104": {
+    "title": "洗料",
+    "keywords": [
+      "洗料"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指对非法获取的原始数据进行筛选、去重和格式化的处理过程。",
+    "description": "黑产将杂乱无章的原始数据通过清洗，剔除无效、重复或错误的信息，使其成为结构清晰、可直接利用的“精品料”。经过洗料的数据在市场上价格更高，常被用于精准诈骗或申请非法贷款，大幅提升了下游犯罪的效率。",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01",
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "T0014": {
+    "title": "撸毛",
+    "keywords": [
+      "撸毛",
+      "鲁毛"
+    ],
+    "aliases": [
+      "鲁毛"
+    ],
+    "category": "营销欺诈",
+    "definition": "指羊毛用户利用平台漏洞或优惠规则，以零成本或极低成本获取商品或服务的行为。",
+    "description": "撸毛是营销欺诈链条中的执行动作，做单用户通过接码号、优惠券叠加等方式套取平台福利。黑灰产通过派单群组织大量撸毛行为，将套取的商品集中回收转卖获利。这种行为不仅造成平台资金损失，还扰乱了正常的营销秩序。",
+    "relatedRisks": [
+      "R0009",
+      "R0055",
+      "R0064",
+      "R0030",
+      "R0030-001"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0006"
+    ],
+    "relatedThreatActors": [
+      "TA0001",
+      "TA0001-001",
+      "TA0003"
+    ],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

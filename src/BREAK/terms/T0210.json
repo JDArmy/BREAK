@@ -1,0 +1,33 @@
+{
+  "T0210": {
+    "title": "黄金料",
+    "keywords": [
+      "黄金料"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指支持黄金购买并分期还款的小型非法套现平台，其用户信息在数据黑市中被称为“黄金料”。",
+    "description": "这类平台以购买黄金为幌子，实则帮助用户套取现金，并收取高额手续费。黑产人员将参与套现的用户个人信息整理成“黄金料”出售。这些数据常被用于二次诈骗，受害者不仅面临财产损失，还可能因套现行为卷入法律纠纷。",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2025年上半年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

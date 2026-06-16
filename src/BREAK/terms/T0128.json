@@ -1,0 +1,31 @@
+{
+  "T0128": {
+    "title": "猪饲料",
+    "keywords": [
+      "猪饲料"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "诈骗团伙为骗取受害者信任并诱导其转账，而事先精心编写的话术剧本和素材。",
+    "description": "“猪饲料”是诈骗流程的标准化工具，包含从打招呼、建立人设、情感升温到切入投资话题的全套对话模板。内容涵盖日常问候、情感故事、炫富图片甚至虚假的盈利截图。操盘手只需按剧本执行，就能高效地对目标进行“喂养”，使其一步步落入陷阱。",
+    "usageExample": "这套猪饲料是针对离异女性的，开场白要用情感共鸣的话题切入。",
+    "relatedRisks": [
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001",
+      "AT0070"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008",
+      "TA0042"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

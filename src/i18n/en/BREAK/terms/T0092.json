@@ -1,0 +1,31 @@
+{
+  "T0092": {
+    "title": "Database Operator",
+    "keywords": [
+      "Database Operator",
+      "Library Owner"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "A key figure who owns and operates social engineering databases, credential-stuffing databases, or leaked data repositories. These individuals illegally acquire, organize, and manage large volumes of sensitive data, offering query, sale, and subscription services that form the core ecosystem of the underground data trade.",
+    "description": "A key figure who owns and operates social engineering databases, credential-stuffing databases, or leaked data repositories. These individuals illegally acquire, organize, and manage large volumes of sensitive data, offering query, sale, and subscription services that form the core ecosystem of the underground data trade.",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

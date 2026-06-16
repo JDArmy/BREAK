@@ -1,0 +1,40 @@
+{
+  "T0274": {
+    "title": "Bulk Unsolicited Dms",
+    "keywords": [
+      "Bulk Unsolicited Dms",
+      "Strong Private Group Messaging"
+    ],
+    "aliases": [],
+    "category": "Business Fraud",
+    "definition": "强私群发是指利用自动化工具，绕过平台限制，向大量非好友用户强制批量发送私信的行为。",
+    "description": "黑产利用群控系统或脚本，向未授权用户大规模推送包含广告、钓鱼链接或诈骗话术的私信。这种操作无视用户隐私设置，常伴随账号被盗用或批量注册的虚拟号。主要用于色情导流、刷单诈骗或赌博网站推广，极易导致用户遭受财产损失。",
+    "relatedRisks": [
+      "R0017",
+      "R0017-001",
+      "R0005",
+      "R0024",
+      "R0007-003"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0044",
+      "AT0009",
+      "AT0016",
+      "AT0005",
+      "AT0050"
+    ],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0006",
+      "TA0007",
+      "TA0013"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

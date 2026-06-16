@@ -1,0 +1,35 @@
+{
+  "T0113": {
+    "title": "Phishing",
+    "keywords": [
+      "Phishing",
+      "Fishing"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "In telecom fraud, the process of luring a victim into a scam by using deceptive tactics such as fake investment opportunities, prize notifications, or impersonating acquaintances in urgent need of funds. Scammers continuously cast 'bait' until the victim takes the hook, providing personal information or transferring money.",
+    "description": "In telecom fraud, the process of luring a victim into a scam by using deceptive tactics such as fake investment opportunities, prize notifications, or impersonating acquaintances in urgent need of funds. Scammers continuously cast 'bait' until the victim takes the hook, providing personal information or transferring money.",
+    "relatedRisks": [
+      "R0095",
+      "R0150",
+      "R0084",
+      "R0131"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001",
+      "AT0063",
+      "AT0071"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008",
+      "TA0043"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

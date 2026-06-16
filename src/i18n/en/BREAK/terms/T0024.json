@@ -1,0 +1,41 @@
+{
+  "T0024": {
+    "title": "Lossless Cashout",
+    "keywords": [
+      "Lossless Cashout",
+      "coupon liquidation",
+      "gift card cashout",
+      "voucher arbitrage",
+      "promo abuse cashout",
+      "coupon arbitrage",
+      "zero-cost cashout",
+      "promo code liquidation"
+    ],
+    "aliases": [],
+    "category": "Marketing Fraud",
+    "definition": "Refers to 'loss-free cashout,' the process by which coupon farmers or fraud rings successfully convert fraudulently obtained platform coupons or gift cards into cash. This typically involves exploiting loopholes or using secondary marketplaces to liquidate vouchers, red packets, or gift cards at low or zero cost, a term frequently seen in couponing groups and forums.",
+    "description": "Refers to 'loss-free cashout,' the process by which coupon farmers or fraud rings successfully convert fraudulently obtained platform coupons or gift cards into cash. This typically involves exploiting loopholes or using secondary marketplaces to liquidate vouchers, red packets, or gift cards at low or zero cost, a term frequently seen in couponing groups and forums.",
+    "usageExample": "这次活动有漏洞，领了券找指定渠道无损套，100块券到手95。",
+    "relatedRisks": [
+      "R0017",
+      "R0003",
+      "R0005",
+      "R0070"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0002"
+    ],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [
+      {
+        "title": "[Black Production Big Data] E-commerce scalper industry chain analysis report",
+        "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

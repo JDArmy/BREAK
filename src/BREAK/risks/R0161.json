@@ -5,7 +5,11 @@
     "description": "跨链桥用于在不同区块链之间转移资产，通常需要在源链锁定资产并在目标链铸造等值代币。攻击者可利用桥接合约的漏洞、多签验证缺陷、预言机操纵等方式，在未锁定资产的情况下铸造代币，或直接窃取锁定池中的资产。",
     "complexity": "高级",
     "influence": "造成跨链桥资金池被盗，用户跨链资产损失，影响多链生态互操作性。",
-    "avoidances": [],
+    "avoidances": [
+      "A0101",
+      "A0102",
+      "A0103"
+    ],
     "references": [
       {
         "title": "Cross-Chain Bridge Security",

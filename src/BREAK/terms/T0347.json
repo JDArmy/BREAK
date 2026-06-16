@@ -1,0 +1,28 @@
+{
+  "T0347": {
+    "title": "扒头子",
+    "keywords": [
+      "扒头子"
+    ],
+    "aliases": [],
+    "category": "赌博",
+    "definition": "赌博团伙中负责组织赌局、抽水、放码和压场的中层管理者。",
+    "description": "扒头子掌控赌局的核心运作，决定抽水比例、发放高利贷码，并维持现场秩序。他们向上对接团伙头目，向下管理扒仔，是地下赌场的关键控制节点，常涉及暴力催收和非法拘禁等衍生犯罪。",
+    "relatedRisks": [
+      "R0097",
+      "R0060"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0016",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS06",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

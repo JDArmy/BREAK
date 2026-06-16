@@ -1,0 +1,27 @@
+{
+  "T0366": {
+    "title": "Casino Shuttle",
+    "keywords": [
+      "Casino Shuttle",
+      "Kiln Car"
+    ],
+    "aliases": [],
+    "category": "Gambling",
+    "definition": "在赌博黑产中，“窑车”指专门接送赌客往返地下赌场的车辆，是赌场物流环节的一环。",
+    "description": "窑车通常由赌场统一调配，司机熟悉路线和避查点，负责把赌客从集合地拉到隐秘窝点，结束后再送回，全程封闭管理。车辆往往套牌或使用假牌，车内可能配备通讯干扰设备以防定位。一旦被盯上，窑车会成为警方突破赌场入口的关键线索。",
+    "relatedRisks": [
+      "R0097"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0016"
+    ],
+    "relatedBusinessScenes": [
+      "BS06",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

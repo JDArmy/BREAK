@@ -1,0 +1,33 @@
+{
+  "T0155": {
+    "title": "Spark Cultivation",
+    "keywords": [
+      "Spark Cultivation",
+      "Raise Sparks"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "A fraud tactic in which the scammer cultivates a long-term fake relationship to gradually build the victim's trust. The term describes nurturing an emotional connection—the \"spark\"—before executing the actual scam. This approach makes victims easier to manipulate and less likely to detect the fraud. It is commonly seen in romance scams, where the fraudster poses as a romantic partner, engages in prolonged communication to deepen trust and dependency, and then solicits money under various pretexts such as emergency medical bills or investment opportunities.",
+    "description": "A fraud tactic in which the scammer cultivates a long-term fake relationship to gradually build the victim's trust. The term describes nurturing an emotional connection—the \"spark\"—before executing the actual scam. This approach makes victims easier to manipulate and less likely to detect the fraud. It is commonly seen in romance scams, where the fraudster poses as a romantic partner, engages in prolonged communication to deepen trust and dependency, and then solicits money under various pretexts such as emergency medical bills or investment opportunities.",
+    "usageExample": "“聊了大半年，他说要带我一起赚钱，结果投进去就提不出来了，这就是典型的养火花套路。”",
+    "relatedRisks": [
+      "R0150",
+      "R0095"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001",
+      "AT0070"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008",
+      "TA0042"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

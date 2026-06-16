@@ -1,0 +1,35 @@
+{
+  "T0192": {
+    "title": "手归",
+    "keywords": [
+      "手归"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "一种非法查档服务，通过手机号码查询其归属运营商和地域。",
+    "description": "在非法数据交易中，手归是查档服务的一种，黑产人员输入手机号即可获取其运营商和归属地信息。这种服务常用于精准定位目标、分析其活动范围，或为电信诈骗和营销骚扰提供地理信息支持。",
+    "usageExample": "可以筛选地区，手归，过实名下单联系。",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

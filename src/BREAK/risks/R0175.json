@@ -5,7 +5,11 @@
     "description": "区块链分叉或跨链场景下，如果交易签名未包含链ID等防重放标识，攻击者可将用户在一条链上的签名交易复制到另一条链上执行。典型场景包括硬分叉后的两条链、跨链转账、合约升级等。用户可能在不知情的情况下在多条链上损失资产。",
     "complexity": "高级",
     "influence": "用户资产在多条链上被重复转移，造成额外损失。",
-    "avoidances": [],
+    "avoidances": [
+      "A0137",
+      "A0138",
+      "A0139"
+    ],
     "references": [
       {
         "title": "Replay Attack Protection",

@@ -1,0 +1,34 @@
+{
+  "T0169": {
+    "title": "补齐",
+    "keywords": [
+      "补齐"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "黑产通过技术手段或社工库将缺失的身份号码、姓名和地址补充完整的行为。",
+    "description": "在数据泄露链条中，补齐是查档服务的一种下游操作，常由中间商或数据贩子完成。他们利用已掌握的碎片化信息，结合社工库或内部渠道，拼凑出完整的个人身份画像。补齐后的数据可用于精准诈骗、恶意催收或转售获利，直接加剧隐私侵害。",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

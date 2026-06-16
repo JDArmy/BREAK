@@ -1,0 +1,35 @@
+{
+  "T0168": {
+    "title": "Fuzzy Lookup",
+    "keywords": [
+      "Fuzzy Lookup",
+      "Demon hunting/lm"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In underground data trading, a fuzzy query method commonly used in social engineering databases to locate and extract specific target information.",
+    "description": "In underground data trading, a fuzzy query method commonly used in social engineering databases to locate and extract specific target information.",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

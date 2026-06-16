@@ -1,0 +1,33 @@
+{
+  "T0166": {
+    "title": "私域群",
+    "keywords": [
+      "私域群"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "黑产用于交易或交流的非公开群组，需邀请或审核才能进入。",
+    "description": "这类群组是黑产进行非法数据买卖、技术交流的核心场所，通过严格的准入机制规避平台风控和警方监控。群内成员多为熟客或经过担保的新人，交易内容涉及公民个人信息、银行卡四件套等违禁品。",
+    "relatedRisks": [
+      "R0078"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01",
+      "BS04"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

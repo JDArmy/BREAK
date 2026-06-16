@@ -1,0 +1,26 @@
+{
+  "T0060": {
+    "title": "Exploit-Based Credit Application",
+    "keywords": [
+      "Exploit-Based Credit Application",
+      "Smuggling"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "In credit fraud, \"smuggling\" refers to the act of exploiting loopholes in banking systems, policy gaps, or other irregular methods to apply for and obtain credit cards or loans.",
+    "description": "In credit fraud, \"smuggling\" refers to the act of exploiting loopholes in banking systems, policy gaps, or other irregular methods to apply for and obtain credit cards or loans.",
+    "usageExample": "最近那个口子风控松了，群里都在发教程教人怎么偷渡，用假地址跨区域申请，下卡率还挺高。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "T0158": {
+    "title": "Order Intake",
+    "keywords": [
+      "Order Intake",
+      "Acquiring"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illicit data trading, the act of a black-market service provider accepting data lookup requests, such as performing a background check on a specified individual.",
+    "description": "In illicit data trading, the act of a black-market service provider accepting data lookup requests, such as performing a background check on a specified individual.",
+    "usageExample": "\"Accepting orders, same-day response guaranteed.\"",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

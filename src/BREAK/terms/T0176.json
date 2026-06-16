@@ -1,0 +1,35 @@
+{
+  "T0176": {
+    "title": "手工打扶贫粉",
+    "keywords": [
+      "手工打扶贫粉"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "黑产团伙通过人工方式在社交媒体等渠道大规模收集扶贫对象个人信息的行为。",
+    "description": "手工打扶贫粉是黑产针对弱势群体的定向信息采集手段，操作者伪装成帮扶人员，诱导扶贫对象提供身份证、住址等隐私。这些数据被整理后出售给诈骗团伙，用于实施扶贫补贴诈骗或身份冒用。该行为直接利用社会善意，危害性极大。",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS04",
+      "BS01",
+      "BS02"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

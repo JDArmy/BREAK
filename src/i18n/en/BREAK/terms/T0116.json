@@ -1,0 +1,36 @@
+{
+  "T0116": {
+    "title": "Fish-Killing Scam",
+    "keywords": [
+      "Fish-Killing Scam",
+      "Fish Killing Plate (killing fish, sharks)"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "A telecom fraud scheme where scammers cast a wide net by disseminating false information online, waiting for victims to click links or respond to messages. Once hooked, victims are further manipulated, primarily in loan or investment-related scams.",
+    "description": "This term draws an analogy to real-life fishing, where 'anglers' lure victims and 'gutters' execute the fraud steps, causing financial loss to the victim.",
+    "relatedRisks": [
+      "R0095",
+      "R0150",
+      "R0084",
+      "R0131"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001",
+      "AT0063",
+      "AT0071"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008",
+      "TA0043"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

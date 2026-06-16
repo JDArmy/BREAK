@@ -1,0 +1,35 @@
+{
+  "T0216": {
+    "title": "补单",
+    "keywords": [
+      "补单"
+    ],
+    "aliases": [],
+    "category": "业务欺诈",
+    "definition": "一种通过虚构订单来伪造销量、规避平台处罚或骗取补贴的营销欺诈作弊行为。",
+    "description": "商家或刷单团伙组织大量虚假账号下单，制造商品热销假象以提升搜索排名。在电商大促期间，补单行为尤为猖獗，用于套取平台发放的优惠券和推广佣金。这种行为严重破坏市场公平，损害真实消费者利益。",
+    "usageExample": "需要测评补单的商家请找我 一手品牌",
+    "relatedRisks": [
+      "R0017-001",
+      "R0017",
+      "R0005"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0044",
+      "AT0009",
+      "AT0016"
+    ],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0006",
+      "TA0007"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

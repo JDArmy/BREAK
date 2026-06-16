@@ -1,0 +1,35 @@
+{
+  "T0283": {
+    "title": "C料",
+    "keywords": [
+      "C料"
+    ],
+    "aliases": [],
+    "category": "跑分洗钱",
+    "definition": "C料指博彩平台的非法资金，来源于赌博、下注等交易。",
+    "description": "在洗钱场景中，C料特指境外博彩平台产生的资金，包括赌客充值、下注流转及平台盈利等环节的款项。跑分团伙通过收购个人银行账户或第三方支付码，将C料分散转移并最终变现。由于博彩平台资金体量大、流转频繁，C料成为跑分洗钱的重要资金来源，但因其明显的非法属性，极易被银行和支付机构的风控系统拦截。",
+    "usageExample": "直盘纯BC料.零风险，新人小白都可做。点位8，有押来谈，来量。",
+    "relatedRisks": [
+      "R0060",
+      "R0093",
+      "R0095"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026",
+      "AT0039",
+      "AT0040"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014",
+      "TA0015"
+    ],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

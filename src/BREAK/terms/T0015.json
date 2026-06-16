@@ -1,0 +1,27 @@
+{
+  "T0015": {
+    "title": "裸下",
+    "keywords": [
+      "裸下"
+    ],
+    "aliases": [],
+    "category": "营销欺诈",
+    "definition": "指不使用任何优惠券或折扣，直接以原价下单的做单方式。",
+    "description": "裸下常见于商家自刷销量或黄牛代下场景，做单用户按原价下单后，商家通过返利方式将货款和佣金返还。这种方式规避了平台对优惠券叠加的风控规则，使交易看起来更接近正常消费，从而降低被系统识别为虚假交易的风险。",
+    "relatedRisks": [
+      "R0003",
+      "R0005",
+      "R0070"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0002"
+    ],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

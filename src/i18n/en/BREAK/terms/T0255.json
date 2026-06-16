@@ -1,0 +1,35 @@
+{
+  "T0255": {
+    "title": "Lead Account",
+    "keywords": [
+      "Lead Account",
+      "Front of the Car"
+    ],
+    "aliases": [],
+    "category": "Business Fraud",
+    "definition": "引流链路中负责发起流量引导的第一个账号或入口。",
+    "description": "车头账号通常权重高、活跃度好，是整个引流阵列的发动机。它通过发布爆款内容、占据热门车位等方式吸引初始流量，然后将用户逐步引导至后续的收割账号或诈骗群组。一旦车头账号被封，整个引流链路就会瘫痪，因此黑灰产会投入大量资源维护车头。",
+    "relatedRisks": [
+      "R0017",
+      "R0017-001",
+      "R0005"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0044",
+      "AT0009",
+      "AT0016"
+    ],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0006",
+      "TA0007"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

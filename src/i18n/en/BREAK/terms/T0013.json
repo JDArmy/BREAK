@@ -1,0 +1,35 @@
+{
+  "T0013": {
+    "title": "Empty Package",
+    "keywords": [
+      "Empty Package",
+      "fake shipment",
+      "brushing parcel",
+      "ghost package",
+      "dummy delivery",
+      "empty box shipping",
+      "synthetic tracking",
+      "phantom order fulfillment",
+      "void shipment"
+    ],
+    "aliases": [],
+    "category": "Marketing Fraud",
+    "definition": "An empty parcel, typically sent by merchants engaged in fake order brushing or fraudulent transactions. This package contains no actual goods—it may be an empty box or filled with worthless filler—to fabricate the appearance of shipment and delivery, thereby artificially inflating a store's sales volume and credibility.",
+    "description": "An empty parcel, typically sent by merchants engaged in fake order brushing or fraudulent transactions. This package contains no actual goods—it may be an empty box or filled with worthless filler—to fabricate the appearance of shipment and delivery, thereby artificially inflating a store's sales volume and credibility.",
+    "relatedRisks": [
+      "R0003",
+      "R0005",
+      "R0070"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0002"
+    ],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

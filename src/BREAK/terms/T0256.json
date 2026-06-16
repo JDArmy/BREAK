@@ -1,0 +1,36 @@
+{
+  "T0256": {
+    "title": "车位",
+    "keywords": [
+      "车位"
+    ],
+    "aliases": [],
+    "category": "业务欺诈",
+    "definition": "平台上可用于展现内容、承接和引导流量的入口位置。",
+    "description": "车位可以是短视频的热榜位置、信息流广告位、评论区置顶位等。黑灰产会通过刷量、刷赞等手段抢占这些高曝光车位，将虚假或欺诈内容推送到更多用户面前。抢到好的车位，意味着获得了巨大的流量入口，是引流成功的关键一步。",
+    "usageExample": "“赶紧的，今晚的热榜车位抢到了，快把那个菠菜链接挂上去。”",
+    "relatedRisks": [
+      "R0017",
+      "R0017-001",
+      "R0005"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0044",
+      "AT0009",
+      "AT0016"
+    ],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0006",
+      "TA0007"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS05",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

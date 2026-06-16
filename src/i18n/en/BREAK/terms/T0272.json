@@ -1,0 +1,33 @@
+{
+  "T0272": {
+    "title": "Traffic Front End",
+    "keywords": [
+      "Traffic Front End",
+      "Front End"
+    ],
+    "aliases": [],
+    "category": "Business Fraud",
+    "definition": "前端指引流链条中用于吸引用户首次点击或访问的入口页面或内容。",
+    "description": "这包括伪造的短视频、虚假广告落地页或钓鱼链接，是黑产接触受害者的第一触点。前端设计极具诱惑性，目的是最大化吸引流量点击，并将用户无缝导入后续的诈骗或套取信息的环节。",
+    "relatedRisks": [
+      "R0024",
+      "R0007-003"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0005",
+      "AT0050"
+    ],
+    "relatedThreatActors": [
+      "TA0013",
+      "TA0009"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS05",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

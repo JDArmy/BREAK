@@ -1,0 +1,31 @@
+{
+  "T0125": {
+    "title": "喂猪",
+    "keywords": [
+      "喂猪"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "诈骗团伙诱使受害者持续投入资金，以榨取其全部价值的黑话。",
+    "description": "在“杀猪盘”或虚假投资骗局中，当受害者开始小额试水后，操盘手会利用其贪念或情感依赖，不断编造理由催促其追加投资。这个过程如同给猪喂食催肥，目的是在最后“宰杀”时能骗取更多钱财。受害者往往在“喂猪”阶段投入毕生积蓄甚至借贷投入。",
+    "usageExample": "先别急着杀，再喂猪一段时间，我看他还能从亲戚那借到不少钱。",
+    "relatedRisks": [
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001",
+      "AT0070"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008",
+      "TA0042"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

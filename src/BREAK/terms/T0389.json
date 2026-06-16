@@ -1,0 +1,25 @@
+{
+  "T0389": {
+    "title": "两证一卡",
+    "keywords": [
+      "两证一卡"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "指申请贷款时需提供身份证、驾驶证和银行卡的审核模式，比“一证一卡”多一层身份验证。",
+    "description": "这是车贷欺诈中一种常见的资质要求，黑产中介会为客户伪造驾驶证等全套假证来匹配这一要求。通过增加证件数量，制造资质合规的假象，以骗取金融机构的信任，从而套取更高额度的贷款。",
+    "usageExample": "两证一卡 信用记录 5.7结算； 一证一卡 信用记录 5结算",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

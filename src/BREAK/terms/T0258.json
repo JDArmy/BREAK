@@ -1,0 +1,27 @@
+{
+  "T0258": {
+    "title": "端内直举",
+    "keywords": [
+      "端内直举"
+    ],
+    "aliases": [],
+    "category": "业务欺诈",
+    "definition": "端内直举指在客户端内直接对目标账号或内容发起举报，以触发平台处罚的恶意竞争手段。",
+    "description": "黑灰产从业者利用平台举报机制，组织人手或使用脚本对竞争对手的账号、视频进行集中举报。通过短时间内大量举报，触发平台的自动审核或处罚机制，导致对方限流、降权或封号。常用于打压同行、清除异己，破坏正常的商业竞争环境。",
+    "relatedRisks": [
+      "R0068",
+      "R0068-002"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0034"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

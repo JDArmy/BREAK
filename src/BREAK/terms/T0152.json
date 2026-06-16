@@ -1,0 +1,35 @@
+{
+  "T0152": {
+    "title": "软件杀",
+    "keywords": [
+      "软件杀"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "诈骗者通过远程控制软件直接操控受害者手机进行转账的诈骗手法。",
+    "description": "诈骗者冒充客服或执法人员，诱导受害者下载伪装成正常应用的远程控制软件，并骗取对方开启无障碍服务权限。一旦得手，诈骗者便可实时监控手机屏幕、获取短信内容，并在受害者毫无察觉的情况下，直接操作其手机银行APP完成转账或盗刷。",
+    "usageExample": "他按对方要求下了个会议软件，开了共享屏幕，结果就被软件杀了，眼睁睁看着手机自己动，把钱转走了。",
+    "relatedRisks": [
+      "R0044",
+      "R0032",
+      "R0131"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0064",
+      "AT0066",
+      "AT0067",
+      "AT0053-002"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0043"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

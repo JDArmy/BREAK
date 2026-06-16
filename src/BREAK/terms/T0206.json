@@ -1,0 +1,29 @@
+{
+  "T0206": {
+    "title": "风控料",
+    "keywords": [
+      "风控料"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指从金融平台风控系统泄露的、经过初步分析标记的用户数据集合。",
+    "description": "这些数据通常包含用户的信用评级、消费习惯、风险标签等敏感信息，多由内部人员或第三方服务商泄露。黑产利用这些精准画像，进行定制化的营销欺诈、贷款诈骗等非法活动。因其针对性强，诈骗成功率远高于盲打。",
+    "usageExample": "“出实时借条料,风控料,有量,保一手,价格优。”",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

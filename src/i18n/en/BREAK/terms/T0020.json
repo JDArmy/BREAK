@@ -1,0 +1,42 @@
+{
+  "T0020": {
+    "title": "Compensation Abuse",
+    "keywords": [
+      "Compensation Abuse",
+      "refund fraud",
+      "malicious refunding",
+      "payout abuse",
+      "compensation scamming",
+      "refund exploit",
+      "claims abuse",
+      "refund churning",
+      "settlement abuse"
+    ],
+    "aliases": [
+      "Compensation Deputy"
+    ],
+    "category": "Marketing Fraud",
+    "definition": "A homophone for 'compensation,' referring to cash refunds issued for product quality or authenticity issues during after-sales. In this context, it specifically denotes malicious refund fraud where cybercriminals exploit platform loopholes or business rules to illicitly obtain payouts.",
+    "description": "A homophone for 'compensation,' referring to cash refunds issued for product quality or authenticity issues during after-sales. In this context, it specifically denotes malicious refund fraud where cybercriminals exploit platform loopholes or business rules to illicitly obtain payouts.",
+    "usageExample": "那帮人专门买有运费险的商品，收到货就挑刺申请赔付，一个月能搞不少钱。",
+    "relatedRisks": [
+      "R0068",
+      "R0068-002"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0034"
+    ],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [
+      {
+        "title": "Internet black and gray industry research report in the first half of 2024",
+        "link": "https://www.threathunter.cn/blog/2024-50e66f87-abe6-4928-b031-c5c2c83c1cf0"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

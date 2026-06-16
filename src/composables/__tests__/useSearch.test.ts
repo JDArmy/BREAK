@@ -26,6 +26,9 @@ vi.mock("@/BREAK", () => ({
       TA0001: { title: "羊毛党", keywords: ["薅羊毛"], directCauseRisks: ["R0001"] },
       TA0018: { title: "恶意黑客", keywords: ["攻击者"], directCauseRisks: ["R0032"] },
     },
+    terms: {
+      T0001: { title: "报丹", keywords: ["报丹", "报单"], aliases: ["报单"], category: "营销欺诈" },
+    },
   },
 }));
 
@@ -96,6 +99,22 @@ const mockMessages = ref<Record<string, unknown>>({
           title: "恶意黑客",
           keywords: ["攻击者"],
           description: "利用技术手段进行非法操作的黑客",
+        },
+      },
+      terms: {
+        T0001: {
+          title: "报单",
+          keywords: ["报单", "报丹"],
+          aliases: ["报丹"],
+          category: "营销欺诈",
+          definition: "将非法操作或交易上报给团伙内部管理者。",
+          description: "黄牛代下人员登记下单记录及收款账号，用于组织者统计和结算。",
+          references: [
+            {
+              title: "【黑产大数据】电商黄牛党产业链分析报告",
+              link: "https://www.threathunter.cn/blog/fc4b4d8d000",
+            },
+          ],
         },
       },
     },
@@ -170,6 +189,22 @@ const mockMessages = ref<Record<string, unknown>>({
           description: "Hackers using technical means for illegal operations",
         },
       },
+      terms: {
+        T0001: {
+          title: "Order Reporting",
+          keywords: ["Order Reporting", "report order", "bao dan"],
+          aliases: ["bao dan"],
+          category: "marketing fraud",
+          definition: "Reporting an illicit order or operation to an upstream organizer.",
+          description: "Participants submit order and payout details for internal settlement and statistics.",
+          references: [
+            {
+              title: "【黑产大数据】电商黄牛党产业链分析报告",
+              link: "https://www.threathunter.cn/blog/fc4b4d8d000",
+            },
+          ],
+        },
+      },
     },
   },
 });
@@ -199,6 +234,7 @@ describe("useSearch", () => {
       expect(result.avoidance).toEqual([]);
       expect(result.attackTool).toEqual([]);
       expect(result.threatActor).toEqual([]);
+      expect(result.term).toEqual([]);
     });
 
     it("纯空格返回空结果", () => {
@@ -247,6 +283,7 @@ describe("useSearch", () => {
         ...result.avoidance,
         ...result.attackTool,
         ...result.threatActor,
+        ...result.term,
       ];
       expect(allResults.length).toBeGreaterThan(0);
     });
@@ -294,6 +331,12 @@ describe("useSearch", () => {
       const result = search("MFA");
       expect(result.avoidance.length).toBeGreaterThan(0);
       expect(result.avoidance[0].id).toBe("A0007");
+    });
+
+    it("按黑话或规范词搜索术语", () => {
+      const { search } = useSearch();
+      expect(search("报丹").term[0].id).toBe("T0001");
+      expect(search("报单").term[0].id).toBe("T0001");
     });
   });
 
@@ -359,6 +402,13 @@ describe("useSearch", () => {
       expect(result.attackTool.length).toBeGreaterThan(0);
       expect(result.attackTool[0].id).toBe("AT0064");
     });
+
+    it("按英文术语别名搜索", () => {
+      const { search } = useSearch();
+      const result = search("report order");
+      expect(result.term.length).toBeGreaterThan(0);
+      expect(result.term[0].id).toBe("T0001");
+    });
   });
 
   describe("结果格式", () => {
@@ -390,6 +440,7 @@ describe("useSearch", () => {
       expect(result.avoidance.length).toBeLessThanOrEqual(5);
       expect(result.attackTool.length).toBeLessThanOrEqual(5);
       expect(result.threatActor.length).toBeLessThanOrEqual(5);
+      expect(result.term.length).toBeLessThanOrEqual(5);
     });
   });
 });

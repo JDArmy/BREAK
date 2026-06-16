@@ -1,0 +1,25 @@
+{
+  "T0398": {
+    "title": "短期拆借",
+    "keywords": [
+      "短期拆借"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "指个人或非法金融组织专为银行贷款到期无力归还的客户提供垫资还款，并收取高额利息的短期资金服务。",
+    "description": "当借款人的银行贷款到期无法自筹资金归还时，民间“短拆”中介会介入垫资帮其还清贷款，待银行续贷放款后再抽回本金并收取砍头息或高额服务费。这种操作多面向中小企业主，金额从10万到500万不等。一旦续贷审批不通过，借款人将同时背上银行贷款和民间高息两笔债务，极易被暴力催收。",
+    "usageExample": "收【中小企业短拆】，10-500万",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

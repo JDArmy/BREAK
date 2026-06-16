@@ -5,7 +5,11 @@
     "description": "Rug Pull 是加密货币领域常见的欺诈手段。项目方通过虚假宣传吸引用户投资或提供流动性，然后通过移除流动性池、转移合约所有权、利用后门功能等方式卷走资金。部分项目表面合法但预埋代码漏洞，在合适时机收割用户。",
     "complexity": "中级",
     "influence": "投资者资金全部损失，破坏 Web3 生态信任，引发监管关注。",
-    "avoidances": [],
+    "avoidances": [
+      "A0122",
+      "A0123",
+      "A0124"
+    ],
     "references": [
       {
         "title": "How to Spot a Rug Pull",

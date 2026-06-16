@@ -1,0 +1,47 @@
+{
+  "T0259": {
+    "title": "High-Follower Account",
+    "keywords": [
+      "High-Follower Account",
+      "High Fan Account"
+    ],
+    "aliases": [],
+    "category": "Business Fraud",
+    "definition": "高粉号指拥有大量粉丝的社交媒体账号，被用作推广引流的基础工具。",
+    "description": "这类账号通常通过内容搬运、虚假刷量或批量注册养成，具备一定的影响力伪装。号商或营销团队利用其发布软广、引导粉丝跳转，或作为矩阵号的一员进行联动炒作。高粉号是虚假营销中的核心资产，用于提升引流效率和转化率。",
+    "usageExample": "Have xx mailbox and high fan account Didi",
+    "relatedRisks": [
+      "R0017",
+      "R0017-001",
+      "R0005",
+      "R0024",
+      "R0007-003",
+      "R0030",
+      "R0030-001",
+      "R0032"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0044",
+      "AT0009",
+      "AT0016",
+      "AT0005",
+      "AT0050",
+      "AT0003",
+      "AT0007",
+      "AT0021"
+    ],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0006",
+      "TA0007",
+      "TA0013"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

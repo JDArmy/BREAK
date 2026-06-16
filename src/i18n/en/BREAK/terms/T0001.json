@@ -1,0 +1,42 @@
+{
+  "T0001": {
+    "title": "Order Reporting",
+    "keywords": [
+      "Order Reporting",
+      "task reporting",
+      "order settlement",
+      "fraud ring reporting",
+      "internal declaration",
+      "ring settlement",
+      "task assignment",
+      "performance tracking",
+      "operation reporting"
+    ],
+    "aliases": [
+      "Baodan"
+    ],
+    "category": "Marketing Fraud",
+    "definition": "The act of reporting an illicit operation or transaction to an internal manager or coordinator within a fraud ring for settlement, task assignment, or performance tracking.",
+    "description": "The act of reporting an illicit operation or transaction to an internal manager or coordinator within a fraud ring for settlement, task assignment, or performance tracking.",
+    "relatedRisks": [
+      "R0003",
+      "R0005",
+      "R0070"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0002"
+    ],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [
+      {
+        "title": "Black Market Data: E-commerce Scalper Industry Chain Analysis Report",
+        "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "T0297": {
+    "title": "Operation Boss",
+    "keywords": [
+      "Operation Boss",
+      "Mr. Pan"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "盘总是诈骗或博彩盘口的实际控制人，负责统筹资金流转与团伙指挥。",
+    "description": "盘总在诈骗或博彩盘口中处于顶层，决定资金分配、洗钱路径和人员分工。他们通过下级代理、车队和码商构建资金清洗网络，将非法所得层层转移。一旦盘口被端，盘总往往是首要追查对象，其控制的资金池规模通常很大。",
+    "usageExample": "Team members who want to move bricks will have plenty of tea; intermediary managers are welcome to come and talk.",
+    "relatedRisks": [
+      "R0060",
+      "R0093"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0014",
+      "TA0015",
+      "TA0006-003"
+    ],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

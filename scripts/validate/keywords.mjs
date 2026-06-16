@@ -9,6 +9,7 @@ const categoryDirs = [
   "avoidances",
   "attack-tools",
   "threat-actors",
+  "terms",
 ];
 
 const localeRoots = [
@@ -40,7 +41,7 @@ function sanitizeKeywords(rawKeywords) {
   return keywords;
 }
 
-function processFile(filePath) {
+function processFile(filePath, locale) {
   const data = readJson(filePath);
   const next = {};
   let changed = false;
@@ -48,7 +49,10 @@ function processFile(filePath) {
   for (const [key, entity] of Object.entries(data)) {
     const currentKeywords = Array.isArray(entity.keywords) ? entity.keywords : [];
     const sanitizedKeywords = sanitizeKeywords(currentKeywords);
-    const nextEntity = { ...entity, keywords: sanitizedKeywords };
+    const nextEntity =
+      locale === "en" && !Array.isArray(entity.keywords)
+        ? { ...entity }
+        : { ...entity, keywords: sanitizedKeywords };
 
     next[key] = nextEntity;
     if (JSON.stringify(currentKeywords) !== JSON.stringify(sanitizedKeywords)) {
@@ -77,13 +81,17 @@ function main() {
 
       for (const file of files) {
         const filePath = path.join(fullDir, file);
-        const { raw, changed } = processFile(filePath);
+        const { raw, changed } = processFile(filePath, locale);
 
         if (changed) {
           touchedFiles.push(filePath);
         }
 
         for (const [key, entity] of Object.entries(raw)) {
+          if (locale === "en" && !Array.isArray(entity.keywords)) {
+            continue;
+          }
+
           const rawKeywords = Array.isArray(entity.keywords) ? entity.keywords : [];
           const normalizedKeywords = rawKeywords.map((item) => normalizeKeyword(item));
           const nonEmptyKeywords = normalizedKeywords.filter(Boolean);

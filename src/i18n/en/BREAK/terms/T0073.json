@@ -1,0 +1,28 @@
+{
+  "T0073": {
+    "title": "Fresh Data",
+    "keywords": [
+      "Fresh Data",
+      "Live Feed"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illicit data trading, refers to personal or organizational information that is still valid and can be used immediately. This data is typically up-to-date, accurate, and directly usable for various illegal activities, giving it high value on the underground market.",
+    "description": "In illicit data trading, refers to personal or organizational information that is still valid and can be used immediately. This data is typically up-to-date, accurate, and directly usable for various illegal activities, giving it high value on the underground market.",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

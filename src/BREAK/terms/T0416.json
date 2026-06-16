@@ -1,0 +1,25 @@
+{
+  "T0416": {
+    "title": "全包装",
+    "keywords": [
+      "全包装"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "黑产中对借款人进行全方位虚假资质包装的欺诈手段。",
+    "description": "中介为无任何资质的客户伪造全套虚假材料，包括假企业营业执照、假银行流水、假社保公积金缴纳记录，甚至租用场地冒充经营场所。这种操作成本高、周期长，但能申请到高额贷款。一旦成功，客户与中介瓜分贷款后跑路，留给金融机构巨额坏账。",
+    "usageExample": "周边客户全包装，25-49周岁，半年查询不超6。3天放款，40万一户。",
+    "relatedRisks": [
+      "R0146",
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

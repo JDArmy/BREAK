@@ -1,0 +1,29 @@
+{
+  "T0208": {
+    "title": "助贷料",
+    "keywords": [
+      "助贷料"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指从网贷平台泄露的贷款申请人全套资料，包括身份证、银行卡、征信报告等。",
+    "description": "这些数据由助贷平台或金融机构内部泄露，经黑产中介按信用等级分类后高价出售。下游诈骗团伙购买后，冒充平台客服以“解冻费”“保证金”等名义对受害人实施二次诈骗。由于掌握了受害人的详细借款信息，此类诈骗极具迷惑性。",
+    "usageExample": "“各种助贷料,欢迎来撩”",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

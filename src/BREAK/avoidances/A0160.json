@@ -1,0 +1,16 @@
+{
+  "A0160": {
+    "title": "代码审计与漏洞赏金",
+    "category": "TC01",
+    "definition": "多方审计并建立漏洞赏金激励发现问题",
+    "description": "见R0159第一条和R0177第三条。",
+    "complexity": "中级",
+    "limitation": "同R0159/R0177",
+    "references": [],
+    "updated": "2026-06-16",
+    "keywords": [
+      "代码审计",
+      "漏洞赏金"
+    ]
+  }
+}

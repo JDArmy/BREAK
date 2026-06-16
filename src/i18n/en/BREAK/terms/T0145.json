@@ -1,0 +1,30 @@
+{
+  "T0145": {
+    "title": "Scam Script",
+    "keywords": [
+      "Scam Script",
+      "Storybook"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "A pre-written conversational script used by fraudsters during phone calls with victims. These scripts meticulously plan how scammers should steer the conversation, respond to potential questions, and manipulate the victim's emotions to coerce them into actions like transferring money or disclosing personal information.",
+    "description": "A pre-written conversational script used by fraudsters during phone calls with victims. These scripts meticulously plan how scammers should steer the conversation, respond to potential questions, and manipulate the victim's emotions to coerce them into actions like transferring money or disclosing personal information.",
+    "usageExample": "组长在开工前分发新版话术本，要求所有人把冒充客服退款的那几页背熟，遇到质疑就翻到第三页的应对话术。",
+    "relatedRisks": [
+      "R0095",
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0008",
+      "TA0015",
+      "TA0042"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

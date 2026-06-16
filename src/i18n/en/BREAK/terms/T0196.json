@@ -1,0 +1,34 @@
+{
+  "T0196": {
+    "title": "Full Association Lookup",
+    "keywords": [
+      "Full Association Lookup",
+      "Big Correlation"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "黑产查档中一种深度关联查询服务，可输出目标人物的同住、同机构、同婚姻、同乘机、同出入境等多维度关联关系。",
+    "description": "大关联通过打通多源数据，将目标人物的社会关系网完整还原，常用于追债、背景调查或情报挖掘。操作方式包括内鬼批量导出、系统撞库或跨部门数据拼凑，输出结果包含关联人姓名、身份证号及关系类型。该服务风险极高，易引发连锁隐私泄露和下游犯罪升级。",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

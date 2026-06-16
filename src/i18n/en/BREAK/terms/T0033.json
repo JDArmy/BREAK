@@ -1,0 +1,35 @@
+{
+  "T0033": {
+    "title": "Proxy Loan",
+    "keywords": [
+      "Proxy Loan",
+      "nominee borrower",
+      "credit proxy",
+      "loan mule",
+      "fronting fraud",
+      "third-party application",
+      "borrower substitution",
+      "credit surrogate",
+      "straw borrower"
+    ],
+    "aliases": [
+      "Bang Dai"
+    ],
+    "category": "Credit Fraud",
+    "definition": "A practice where an individual with no personal need for credit applies for a loan on behalf of someone else. The nominal borrower completes the application, signs the contract, and receives the funds, then transfers the money to the actual borrower. This includes both consensual arrangements and cases where the nominal borrower is unwittingly used, the latter being known as AB lending and carrying significant fraud risk.",
+    "description": "A practice where an individual with no personal need for credit applies for a loan on behalf of someone else. The nominal borrower completes the application, signs the contract, and receives the funds, then transfers the money to the actual borrower. This includes both consensual arrangements and cases where the nominal borrower is unwittingly used, the latter being known as AB lending and carrying significant fraud risk.",
+    "usageExample": "我朋友征信花了贷不了款，中介就让我帮他做帮贷，钱下来后直接转给他，现在逾期了银行天天找我。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "T0037": {
+    "title": "操单",
+    "keywords": [
+      "操单"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "指黑灰产中具备操作信贷申请全流程的能力或渠道。",
+    "description": "在信贷欺诈语境下，“操单”并非指物理单据，而是指中介掌握着能够成功办理贷款的资源和手段。中介通过包装客户资料、打通审批关节或利用银行漏洞来完成贷款申请。拥有“一手操单”意味着直接对接资金方或核心审批人，成功率更高，收费也更贵。",
+    "usageExample": "我这边实力操单，无视黑白户，只要没法院执行就能过，点位面谈。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

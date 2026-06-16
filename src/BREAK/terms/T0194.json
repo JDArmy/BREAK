@@ -1,0 +1,35 @@
+{
+  "T0194": {
+    "title": "真地址",
+    "keywords": [
+      "真地址"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "黑产查档服务中从官方系统非法获取的、包含完整门牌号的详细住址信息。",
+    "description": "真地址区别于仅到区县的模糊地址，通常通过内鬼查询户籍、社保或快递系统直接拉出。这类数据被用于上门催收、线下报复、精准诈骗或资产摸排，危害性极高。因其定位精确，交易价格远高于假地址，且常搭配姓名、身份证号一同出售。",
+    "usageExample": "“个户真地址 2版随机出 当天回。”",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

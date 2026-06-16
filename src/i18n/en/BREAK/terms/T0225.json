@@ -1,0 +1,28 @@
+{
+  "T0225": {
+    "title": "Off-Platform Direct Complaint",
+    "keywords": [
+      "Off-Platform Direct Complaint",
+      "Straight Lift"
+    ],
+    "aliases": [],
+    "category": "Business Fraud",
+    "definition": "绕过平台内部举报系统，通过12315、信访等外部官方渠道直接举报营销欺诈活动。",
+    "description": "黑灰产从业者或受害用户利用外部监管力量对营销欺诈行为施加压力，常见于平台内维权无果后升级至官方投诉。这种方式能触发行政介入，迫使平台或欺诈方快速响应，但也可能被恶意利用来敲诈商家。操作者通常收集截图、交易记录等证据，向12315热线或邮政信访部门提交材料，风险在于可能暴露自身参与灰产活动的痕迹。",
+    "relatedRisks": [
+      "R0068",
+      "R0068-002"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0034"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

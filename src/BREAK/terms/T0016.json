@@ -1,0 +1,43 @@
+{
+  "T0016": {
+    "title": "猫池",
+    "keywords": [
+      "猫池"
+    ],
+    "aliases": [],
+    "category": "营销欺诈",
+    "definition": "指卡商持有的、插在猫池设备上用于批量收发短信验证码的实物SIM卡。",
+    "description": "猫池卡是接码产业链的硬件基础，卡商通过猫池设备同时操控大量手机卡，为下游黑灰产提供验证码接收服务。这些卡源多来自运营商漏洞、物联网卡违规转售或实名信息冒用，被广泛用于批量注册账号、薅取平台福利等营销欺诈活动。猫池卡的存在使得黑产可以低成本、大规模地绕过平台的身份验证机制。",
+    "relatedRisks": [
+      "R0030",
+      "R0030-001",
+      "R0030-005"
+    ],
+    "relatedAvoidances": [
+      "A0007-001"
+    ],
+    "relatedAttackTools": [
+      "AT0004",
+      "AT0006",
+      "AT0001-002"
+    ],
+    "relatedThreatActors": [
+      "TA0003",
+      "TA0004"
+    ],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [
+      {
+        "title": "“断卡”行动趋势下，卡商生态的现状",
+        "link": "https://www.secrss.com/articles/56050"
+      },
+      {
+        "title": "【黑产大数据】2024年互联网黑灰产趋势年度总结",
+        "link": "https://www.threathunter.cn/blog/2024-37b58782-063b-4426-a2f8-6de6622dbca7"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

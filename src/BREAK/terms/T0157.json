@@ -1,0 +1,36 @@
+{
+  "T0157": {
+    "title": "挂米报单",
+    "keywords": [
+      "挂米报单"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "非法数据交易中，买家先支付押金并提交定制需求的下单方式。",
+    "description": "在数据黑市中，“米”代指钱，“挂米”即预付定金。买家提出特定查档需求后，需先缴纳押金，服务方才开始作业，完成后多退少补。这种机制锁定了交易意愿，防止买家跑单，也便于服务方根据预付款排期或转包给上游数据接口。",
+    "usageExample": "“无盲流水私户收单1个月180 3个月280 6个月360 所有流水一律挂米报单禁止扯皮 全网0手”",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

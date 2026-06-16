@@ -61,6 +61,7 @@ declare module 'vue' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SearchDialog: typeof import('./src/components/SearchDialog.vue')['default']
+    TermDetail: typeof import('./src/components/TermDetail.vue')['default']
     ThemeToggle: typeof import('./src/components/ThemeToggle.vue')['default']
     ThreatActorDetail: typeof import('./src/components/ThreatActorDetail.vue')['default']
   }

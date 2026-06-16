@@ -1,0 +1,25 @@
+{
+  "T0057": {
+    "title": "水钱",
+    "keywords": [
+      "水钱"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "在信贷欺诈黑话中，指专门向赌客发放的非法高利贷。",
+    "description": "这类贷款通常由赌场周边人员或线上赌博平台关联方提供，以日息或周息计算，利率极高。放贷者瞄准输红眼急需翻本的赌客，一旦借款人无法偿还，便会采取暴力催收或胁迫手段。这种资金流动往往与洗钱和地下钱庄关联，极易引发次生犯罪。",
+    "usageExample": "他昨晚在赌场输光了，找场子里的档头拿了十万块水钱，说好借十还十三，结果一周没还上，被追债的堵了门。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

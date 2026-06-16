@@ -1,0 +1,25 @@
+{
+  "T0039": {
+    "title": "放水",
+    "keywords": [
+      "放水"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "指银行在特定时期放宽信贷审批标准，使得贷款或信用卡申请更容易获批。",
+    "description": "放水期通常由银行业务压力、政策调整或系统漏洞导致，表现为降低征信要求、提高容忍度或简化流程。黑灰产中介会迅速捕捉此类信号，组织大批量申请，集中骗取信贷资金。这种窗口期往往短暂，中介会紧急通知客户“抓紧上车”。",
+    "usageExample": "内部消息，这两天XX银行大放水，无视查询次数，抓紧时间上车，晚了就关了。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

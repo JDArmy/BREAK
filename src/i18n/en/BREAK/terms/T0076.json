@@ -1,0 +1,28 @@
+{
+  "T0076": {
+    "title": "Niche Data",
+    "keywords": [
+      "Niche Data",
+      "Unpopular Material"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illicit data trading, refers to personal or organizational information with low demand and little market interest. This type of data may be less popular on the underground market due to limited use cases or a small target audience, resulting in lower trading volume and value.",
+    "description": "In illicit data trading, refers to personal or organizational information with low demand and little market interest. This type of data may be less popular on the underground market due to limited use cases or a small target audience, resulting in lower trading volume and value.",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

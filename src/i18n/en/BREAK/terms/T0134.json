@@ -1,0 +1,30 @@
+{
+  "T0134": {
+    "title": "Mule Training",
+    "keywords": [
+      "Mule Training",
+      "Horse Training"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "The process of identifying and targeting potential victims, referred to as 'horses.' This involves finding susceptible individuals, approaching them through various means, building trust, and ultimately executing the fraud.",
+    "description": "The process of identifying and targeting potential victims, referred to as 'horses.' This involves finding susceptible individuals, approaching them through various means, building trust, and ultimately executing the fraud.",
+    "usageExample": "那组专门训马的，先打电话冒充北京专家，再寄假药和伪造的康复案例，把老太太训得服服帖帖，最后连养老钱都掏空了。",
+    "relatedRisks": [
+      "R0060",
+      "R0095"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0014",
+      "TA0015"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

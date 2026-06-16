@@ -1,0 +1,39 @@
+{
+  "T0089": {
+    "title": "查档",
+    "keywords": [
+      "查档"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指黑产团伙通过手机号等单一信息，非法查询目标人物完整档案资料的服务。",
+    "description": "查档是地下数据交易中的核心服务之一，黑产分子利用内鬼、系统漏洞或此前泄露的数据库，向客户提供指定人员的详细资料。服务内容涵盖身份信息、银行卡号、名下资产、开房记录等高度敏感数据。这类服务通常按条收费，是下游诈骗、敲诈勒索、精准营销等犯罪活动的重要信息来源。",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

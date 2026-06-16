@@ -1,0 +1,29 @@
+{
+  "T0377": {
+    "title": "三包",
+    "keywords": [
+      "三包"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "黑产中介为背债人垫付的交通食宿费用，最终会从背债所得中扣除。",
+    "description": "在组织他人进行贷款诈骗的“背债”业务中，黑产中介会先承担背债人前往指定城市的差旅及操作期间的食宿开销，以此吸引和锁定参与者。这笔前期垫资被称为“三包”，是控制背债人的一种手段。待贷款审批通过或款项到账后，中介会在结算分成时，将这笔费用连本带利从背债人应得的部分中扣除。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】汽车贷款欺诈产业链解构",
+        "link": "https://www.threathunter.cn/blog/8acce28b732"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "T0315": {
+    "title": "Smooth-Pass QR",
+    "keywords": [
+      "Smooth-Pass QR",
+      "Silky Code"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "跑分洗钱中交易成功率极高、几乎不触发风控拦截的收款二维码，是黑产眼中“稳定不掉”的收钱通道。",
+    "description": "丝滑码的核心价值在于“不罚站”——即付款扫码后不会因风控弹窗或拦截导致交易失败。黑产通过养号、模拟正常消费行为等手段把码养得“干净”，再投入电诈或跑分环节接收赃款。这类码流转顺畅，资金到账快，能大幅降低受害者起疑和平台介入的风险，因此报价通常更高，需求也最旺。",
+    "usageExample": "招车，来任意丝滑码车卡车，量大不罚站·拒绝一切空放。",
+    "relatedRisks": [
+      "R0060",
+      "R0093"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

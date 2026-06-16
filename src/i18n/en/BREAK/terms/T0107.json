@@ -1,0 +1,31 @@
+{
+  "T0107": {
+    "title": "Bird Lead",
+    "keywords": [
+      "Bird Lead",
+      "Bird"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "A term referring to individuals who spend most of their time at home or in confined environments, such as students or homemakers. These people have limited outside contact and often seek online income opportunities, making them prime targets for scams that promise easy money through fake part-time jobs or task-based commissions.",
+    "description": "A term referring to individuals who spend most of their time at home or in confined environments, such as students or homemakers. These people have limited outside contact and often seek online income opportunities, making them prime targets for scams that promise easy money through fake part-time jobs or task-based commissions.",
+    "relatedRisks": [
+      "R0095",
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

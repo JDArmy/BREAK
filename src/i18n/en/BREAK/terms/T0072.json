@@ -1,0 +1,29 @@
+{
+  "T0072": {
+    "title": "Skimmed Card Data",
+    "keywords": [
+      "Skimmed Card Data",
+      "Track Material"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illicit data trading, bank card information obtained through tampered POS terminals. This information is generally highly precise and is typically resold to third parties for targeted marketing, fraud, and other illicit activities.",
+    "description": "In illicit data trading, bank card information obtained through tampered POS terminals. This information is generally highly precise and is typically resold to third parties for targeted marketing, fraud, and other illicit activities.",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

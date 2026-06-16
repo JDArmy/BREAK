@@ -1,0 +1,25 @@
+{
+  "T0371": {
+    "title": "强制",
+    "keywords": [
+      "强制"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "借款人单方面停止偿还贷款，主动切断与平台的还款联系。",
+    "description": "借款人因无力承担高额利息或对催收产生抵触，选择彻底放弃还款。他们通常会更换联系方式、卸载APP，并准备承受爆通讯录、征信污点等后果。在黑产圈常被讨论为一种对抗非法高炮平台的极端止损方式。",
+    "usageExample": "我准备把那个高炮强制了，利息太高还不起了，老哥有没有强制过的，会不会冻结我的支付软件。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

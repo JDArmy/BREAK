@@ -1,0 +1,25 @@
+{
+  "T0414": {
+    "title": "老黑",
+    "keywords": [
+      "老黑"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "黑产中指征信记录极差、已被金融机构列入黑名单的借款人。",
+    "description": "这类人因严重逾期、失信等行为，已无法通过正规渠道获得贷款。黑产中介利用部分网贷平台风控漏洞，或通过伪造资料、包装身份等手段，专门为这类“老黑”申请贷款。此类操作往往涉及高额手续费，且极易引发暴力催收等衍生问题。",
+    "usageExample": "老黑专属，矩阵产品，黑户可做。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

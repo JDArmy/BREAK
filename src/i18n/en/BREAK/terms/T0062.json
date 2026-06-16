@@ -1,0 +1,29 @@
+{
+  "T0062": {
+    "title": "Online Lending",
+    "keywords": [
+      "Online Lending",
+      "WWD",
+      "Online Loan"
+    ],
+    "aliases": [
+      "WWD"
+    ],
+    "category": "Credit Fraud",
+    "definition": "Abbreviation for \"online lending,\" referring to loan products facilitated through internet platforms, often involving P2P lending, online microloans, and online consumer loans. In credit fraud, it commonly appears in advertisements for illicit credit intermediary services, offering to secure loans or handle overdue payments for blacklisted online borrowers in exchange for intermediary fees.",
+    "description": "Abbreviation for \"online lending,\" referring to loan products facilitated through internet platforms, often involving P2P lending, online microloans, and online consumer loans. In credit fraud, it commonly appears in advertisements for illicit credit intermediary services, offering to secure loans or handle overdue payments for blacklisted online borrowers in exchange for intermediary fees.",
+    "usageExample": "他搞了一堆假资料，专门找那些不上征信的网贷口子下款，撸下来就是工资，根本没打算还。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

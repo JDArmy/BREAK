@@ -1,0 +1,36 @@
+{
+  "T0201": {
+    "title": "Full Vehicle File",
+    "keywords": [
+      "Full Vehicle File",
+      "Car Stall"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "指非法数据交易中包含车主姓名、身份证号等核心三要素的车辆档案数据。",
+    "description": "这类数据通常来源于车管所内部泄露，是黑产查档服务中的高价值信息。黑产人员通过内鬼或系统漏洞获取后，用于精准诈骗、身份冒用或债务催收。因其信息完整度高，常被下游犯罪团伙高价收购。",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

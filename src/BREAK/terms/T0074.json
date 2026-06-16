@@ -1,0 +1,27 @@
+{
+  "T0074": {
+    "title": "精准料",
+    "keywords": [
+      "精准料"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "在非法数据交易中，指经过精细筛选和验证、真实性极高的个人信息或账户资料。",
+    "description": "这类数据通常包含详细的联系方式、资产状况或特定消费记录，由专业团伙进行清洗和标注。诈骗分子利用其高准确性实施定向钓鱼或商业欺诈，成功率远超普通料。在黑市交易中，精准料常按条高价出售，是导致大额资金损失的核心工具。",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "T0324": {
+    "title": "Card-and-QR Bundle",
+    "keywords": [
+      "Card-and-QR Bundle",
+      "Card Code"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "银行卡与收款二维码打包组合的资源包，是跑分洗钱中供下游成员快速选用的收款通道集合。",
+    "description": "卡码将银行卡号和对应支付二维码捆绑成资源单元，方便跑分车手、码商按需切换收款方式。黑产通过群组或暗网分发卡码包，接单时根据金额大小、支付渠道要求选择对应卡或码进行收款。这种组合形式降低了收款工具调配成本，也使得资金入口更加碎片化，增加追踪难度。",
+    "usageExample": "空降直盘料，3000到10万，卡码都来，全天开 找长期合作车 欢迎各位老板。",
+    "relatedRisks": [
+      "R0060",
+      "R0093"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026",
+      "AT0039",
+      "AT0040"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

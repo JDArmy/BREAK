@@ -1,0 +1,39 @@
+{
+  "T0098": {
+    "title": "Forced Account Login",
+    "keywords": [
+      "Forced Account Login",
+      "Strong"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "A term used in underground data markets to describe the forced unauthorized access to a user’s platform account through sophisticated techniques. Attackers extract sensitive information such as specific order details and then supply that data to downstream buyers. In midstream data sales, advertisements are often tagged with “forced login” to signal the data’s origin.",
+    "description": "A term used in underground data markets to describe the forced unauthorized access to a user’s platform account through sophisticated techniques. Attackers extract sensitive information such as specific order details and then supply that data to downstream buyers. In midstream data sales, advertisements are often tagged with “forced login” to signal the data’s origin.",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [
+      {
+        "title": "[Underground Data Insights] 2024 Data Breach Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

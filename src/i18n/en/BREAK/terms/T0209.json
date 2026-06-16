@@ -1,0 +1,36 @@
+{
+  "T0209": {
+    "title": "Small-Loan App Data",
+    "keywords": [
+      "Small-Loan App Data",
+      "Rongdan"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "指一类申请门槛极低、审批流程简单的小微型网贷平台，其用户数据在非法交易中被称为“融担料”。",
+    "description": "这类平台通常缺乏严格风控，吸引大量急需用钱的借款人。黑产人员获取这些平台的用户信息后，会将其打包成“融担料”进行倒卖。下游买家利用这些数据实施精准诈骗或二次营销，因数据真实度高，危害性极大。",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01",
+      "BS02",
+      "BS04"
+    ],
+    "references": [
+      {
+        "title": "[Black Big Data] Data Leakage Risk Situation Report in the First Half of 2025",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

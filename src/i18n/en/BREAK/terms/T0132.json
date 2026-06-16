@@ -1,0 +1,36 @@
+{
+  "T0132": {
+    "title": "Mule Leads",
+    "keywords": [
+      "Mule Leads",
+      "Horse Feed"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "The script used to build rapport and lure elderly victims into scams, similar to 'pig feed' in pig-butchering schemes.",
+    "description": "The script used to build rapport and lure elderly victims into scams, similar to 'pig feed' in pig-butchering schemes.",
+    "usageExample": "这套马料专门针对糖尿病和高血压的老马，先送免费血糖仪，再讲胰岛修复的假案例，最后逼单卖那个三无胶囊。",
+    "relatedRisks": [
+      "R0150",
+      "R0060",
+      "R0095"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001",
+      "AT0070"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008",
+      "TA0042",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "T0230": {
+    "title": "破限",
+    "keywords": [
+      "破限"
+    ],
+    "aliases": [],
+    "category": "业务欺诈",
+    "definition": "通过技术手段绕过平台或系统设定的限制规则，如提现上限、等级限制或封禁。",
+    "description": "黑灰产在营销欺诈中，利用漏洞或定制工具突破平台风控限制，以获取更大收益。例如破解提现频次、绕过交易额度或解除设备封禁，常配合改机、IP代理等技术。操作者需逆向分析应用逻辑或购买破限服务，成功后能持续套取资金，但一旦被平台发现，相关账号和资金链会被追溯打击。",
+    "usageExample": "境外卡扣破限，稳定出款，无视风控。",
+    "relatedRisks": [
+      "R0030",
+      "R0030-001",
+      "R0032"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0003",
+      "AT0007",
+      "AT0021"
+    ],
+    "relatedThreatActors": [
+      "TA0007"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "T0098": {
+    "title": "强登",
+    "keywords": [
+      "强登"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指黑产利用技术手段强行登录用户账号，以窃取内部敏感信息的行为。",
+    "description": "攻击者通常利用漏洞或撞库等方式突破平台防护，强行进入用户账号后台，窃取订单详情、地址等隐私数据。这些高价值信息随后被整理出售给下游诈骗或营销团伙，在数据交易广告中常标注“强登”以表明数据来源和鲜活度。",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

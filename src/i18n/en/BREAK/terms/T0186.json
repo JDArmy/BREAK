@@ -1,0 +1,35 @@
+{
+  "T0186": {
+    "title": "Subscriber Lookup",
+    "keywords": [
+      "Subscriber Lookup",
+      "Owner"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illicit data trading, refers to the personal information of the actual user or registered owner of a phone number, including name, national ID number, and linked accounts.",
+    "description": "In illicit data trading, refers to the personal information of the actual user or registered owner of a phone number, including name, national ID number, and linked accounts.",
+    "usageExample": "\"Phone owner info at 4 USD each, orders fulfilled via insider access, any escrow accepted, priority for those with existing groups\"",
+    "relatedRisks": [
+      "R0078",
+      "R0089",
+      "R0092",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

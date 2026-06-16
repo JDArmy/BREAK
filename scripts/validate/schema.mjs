@@ -64,11 +64,28 @@ const categories = [
     requireKeywords: true,
   },
   {
+    name: "terms",
+    dir: "src/BREAK/terms",
+    schemaKey: "terms",
+    filePattern: /^T\d{4}\.json$/,
+    keyPattern: /^T\d{4}$/,
+    requireKeywords: true,
+  },
+  {
     name: "business-scenes",
     dir: "src/BREAK/business-scenes",
     schemaKey: "businessScenes",
     filePattern: /^BS\d{2}\.json$/,
     keyPattern: /^BS\d{2}$/,
+  },
+];
+
+const enKeywordCategories = [
+  {
+    name: "en-risks",
+    dir: "src/i18n/en/BREAK/risks",
+    filePattern: /^R\d{4}\.json$/,
+    keyPattern: /^R\d{4}(?:-\d{3})?$/,
   },
 ];
 
@@ -132,6 +149,58 @@ for (const category of categories) {
         if (duplicates.length > 0) {
           addKeywordIssue(`${filePath}.${key}: keywords 存在重复项 ${[...new Set(duplicates)].join(", ")}`);
         }
+      }
+    }
+  }
+
+  console.log(`✅ ${category.name}: 已校验 ${count} 条`);
+}
+
+for (const category of enKeywordCategories) {
+  const files = readdirSync(category.dir).filter((file) => file.endsWith(".json"));
+  let count = 0;
+
+  for (const file of files) {
+    const filePath = join(category.dir, file);
+    if (!category.filePattern.test(file)) {
+      addIssue(`${filePath}: 文件名不符合 ${category.name} 命名规则`);
+    }
+
+    let data;
+    try {
+      data = JSON.parse(readFileSync(filePath, "utf-8"));
+    } catch (error) {
+      addIssue(`${filePath}: JSON 解析失败: ${error.message}`);
+      continue;
+    }
+
+    if (!data || typeof data !== "object" || Array.isArray(data)) {
+      addIssue(`${filePath}: 顶层必须是对象`);
+      continue;
+    }
+
+    const expectedParentKey = file.replace(/\.json$/, "");
+    for (const [key, entity] of Object.entries(data)) {
+      count++;
+      if (!category.keyPattern.test(key)) {
+        addIssue(`${filePath}.${key}: ID 不符合命名规则`);
+      }
+      if (key !== expectedParentKey && !key.startsWith(`${expectedParentKey}-`)) {
+        addIssue(`${filePath}.${key}: key 与文件名 ${expectedParentKey} 不匹配`);
+      }
+      if (!entity || typeof entity !== "object" || Array.isArray(entity)) {
+        addIssue(`${filePath}.${key}: 实体必须是对象`);
+        continue;
+      }
+
+      const keywords = Array.isArray(entity.keywords) ? entity.keywords : [];
+      const normalized = keywords.map((item) => String(item).trim()).filter(Boolean);
+      const duplicates = normalized.filter((item, index) => normalized.indexOf(item) !== index);
+      if (normalized.length === 0) {
+        addKeywordIssue(`${filePath}.${key}: keywords 不能为空`);
+      }
+      if (duplicates.length > 0) {
+        addKeywordIssue(`${filePath}.${key}: keywords 存在重复项 ${[...new Set(duplicates)].join(", ")}`);
       }
     }
   }

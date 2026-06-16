@@ -1,0 +1,34 @@
+{
+  "T0339": {
+    "title": "Cash-Out Disposal",
+    "keywords": [
+      "Cash-Out Disposal",
+      "Discharge"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "在洗钱场景中，卸货是指将已接收非法资金的账户通过取现、兑换或购物等方式将赃款套出的末端兑现行为。",
+    "description": "当诈骗资金经过多层账户转移后，最后一道“卸货”环节负责将资金彻底取出，通常由“车手”在ATM取现、购买贵金属或转入其他可控账户来完成。该操作要求快速、隐蔽，常配合“维护”人员实时监控账户状态，防止被冻结。卸货成功意味着洗钱流程闭环，资金回归黑产团伙手中，是打击洗钱的关键节点。",
+    "usageExample": "招车，一二道卡车，双押维护，大混，笔笔维护到卸货。",
+    "relatedRisks": [
+      "R0060",
+      "R0093",
+      "R0095"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0039",
+      "AT0040"
+    ],
+    "relatedThreatActors": [
+      "TA0014",
+      "TA0015"
+    ],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

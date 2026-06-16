@@ -1,0 +1,33 @@
+{
+  "T0312": {
+    "title": "小额码",
+    "keywords": [
+      "小额码"
+    ],
+    "aliases": [],
+    "category": "跑分洗钱",
+    "definition": "小额码是专门用于收取1000元以下交易的收款二维码，因风控难度低，被广泛用于跑分洗钱。",
+    "description": "为规避大额交易触发的风控规则，黑产将非法资金拆分成无数笔小额交易。小额码就是用于接收这些碎片化资金的工具，单笔金额通常在几十到几百元。大量的小额码被跑分平台组织起来，通过“抢单”模式让普通用户完成收款和转账，以此清洗资金，隐蔽性极强。",
+    "usageExample": "小额码接回u，福利来担保，量大稳定。",
+    "relatedRisks": [
+      "R0060",
+      "R0093",
+      "R0095"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014",
+      "TA0015"
+    ],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

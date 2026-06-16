@@ -1,0 +1,34 @@
+{
+  "T0183": {
+    "title": "文全",
+    "keywords": [
+      "文全"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "查档服务中仅提供户口本成员信息纯文字描述的类型，包含亲属姓名、身份证号等。",
+    "description": "黑产提供的文字版户籍信息，不包含照片，但包含姓名、身份证号及亲属关系等关键文字数据。这种纯文本格式便于快速传输和整理，常被用于批量匹配撞库或作为进一步查询全户信息的索引。",
+    "usageExample": "“文全带关系，支持春江担保”",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

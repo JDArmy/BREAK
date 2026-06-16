@@ -1,0 +1,35 @@
+{
+  "T0174": {
+    "title": "Slow Track Query",
+    "keywords": [
+      "Slow Track Query",
+      "Slow Line"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illegal data trading, a method used by upstream sources to obtain data, characterized by slow query speeds (one day to several days), with sources possibly being special channels such as corporate insiders.",
+    "description": "In illegal data trading, a method used by upstream sources to obtain data, characterized by slow query speeds (one day to several days), with sources possibly being special channels such as corporate insiders.",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "T0223": {
+    "title": "盗U",
+    "keywords": [
+      "盗U"
+    ],
+    "aliases": [],
+    "category": "业务欺诈",
+    "definition": "盗U指通过非法手段窃取他人加密货币（如USDT）的行为。",
+    "description": "黑灰产常通过钓鱼链接、恶意合约或私钥窃取等方式，获取受害者钱包权限并转走资产。被盗的虚拟货币通常经过混币器或跑分平台进行多层清洗，最终变现。由于区块链交易的匿名性，追回损失极为困难，受害者往往面临直接的经济损失。",
+    "relatedRisks": [
+      "R0121",
+      "R0060",
+      "R0094",
+      "R0138"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0060",
+      "AT0039",
+      "AT0067"
+    ],
+    "relatedThreatActors": [
+      "TA0014",
+      "TA0039"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS15",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

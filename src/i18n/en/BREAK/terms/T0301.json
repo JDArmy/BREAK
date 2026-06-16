@@ -1,0 +1,31 @@
+{
+  "T0301": {
+    "title": "Cash-Out Crew",
+    "keywords": [
+      "Cash-Out Crew",
+      "Cash Fleet"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "取现车队是专门负责将非法资金通过ATM取现或消费变现的线下团伙。",
+    "description": "取现车队持有大量他人银行卡，在资金到账后迅速分散至各地ATM机取款或通过购买虚拟商品、黄金等方式套现。他们分工明确，有负责取款的、有负责望风的、有负责转移现金的。这种线下兑现是洗钱链条的最后一环，风险极高，常伴随暴力看守卡主等行为。",
+    "usageExample": "Withdraw cash from the fleet, the car can support the maintenance of the car, the point is high, no bank card is required, just press it.",
+    "relatedRisks": [
+      "R0060",
+      "R0093"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0014",
+      "TA0015",
+      "TA0006-003"
+    ],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

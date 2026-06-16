@@ -1,0 +1,28 @@
+{
+  "T0072": {
+    "title": "轨道料",
+    "keywords": [
+      "轨道料"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "轨道料指在非法数据交易中通过改装POS机侧录获取的银行卡轨道信息。",
+    "description": "黑产通过在POS机中植入侧录模块，窃取银行卡磁条数据及密码。这类数据极其精准，可直接用于复制伪卡进行盗刷，或转卖给下游团伙实施电信诈骗。轨道料属于核心金融数据，一旦泄露，将直接威胁持卡人的资金安全。",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

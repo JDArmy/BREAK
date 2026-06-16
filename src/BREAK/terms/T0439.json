@@ -1,0 +1,25 @@
+{
+  "T0439": {
+    "title": "下水",
+    "keywords": [
+      "下水"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "借款人从首次借贷开始，逐步陷入以贷养贷直至债务失控的过程。",
+    "description": "债务人因无法偿还初始借款，被迫借新还旧，利息和本金不断滚大，最终债务全面失控。下水过程中，借款人常被诱导至高利贷、套路贷等非法渠道，陷入更深的经济困境，与上岸形成鲜明对比。",
+    "usageExample": "发了信息，但还没回，不知道有没有结果，真的不能再借了！上岸过两次都下水了。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

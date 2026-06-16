@@ -1,0 +1,26 @@
+{
+  "T0047": {
+    "title": "No-Collateral Loan",
+    "keywords": [
+      "No-Collateral Loan",
+      "Empty"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "Typically refers to issuing loans without any collateral or guarantee. In current usage, it is more often a term from underground lending, describing loans issued by individuals or illegal financial institutions operating without a legitimate business license.",
+    "description": "Typically refers to issuing loans without any collateral or guarantee. In current usage, it is more often a term from underground lending, describing loans issued by individuals or illegal financial institutions operating without a legitimate business license.",
+    "usageExample": "银行下不来的都去找空放了，利息高得吓人，但当天就能拿钱。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

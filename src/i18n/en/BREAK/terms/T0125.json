@@ -1,0 +1,32 @@
+{
+  "T0125": {
+    "title": "Feeding the Pig",
+    "keywords": [
+      "Feeding the Pig",
+      "Feed the Pigs"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "Refers to the behavior where fraudsters use various tactics and scripts to lure victims into continuously transferring money to fraudulent accounts or purchasing virtual goods. These victims are like 'pigs being fed,' constantly drained of money by the fraudsters. This process is often carried out through fake investment schemes, rebate scams, online gambling, and other fraudulent setups. Fraudsters use various methods to make victims believe they can profit, thereby encouraging them to invest more money.",
+    "description": "Refers to the behavior where fraudsters use various tactics and scripts to lure victims into continuously transferring money to fraudulent accounts or purchasing virtual goods. These victims are like 'pigs being fed,' constantly drained of money by the fraudsters. This process is often carried out through fake investment schemes, rebate scams, online gambling, and other fraudulent setups. Fraudsters use various methods to make victims believe they can profit, thereby encouraging them to invest more money.",
+    "usageExample": "先别急着杀，再喂猪一段时间，我看他还能从亲戚那借到不少钱。",
+    "relatedRisks": [
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001",
+      "AT0070"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008",
+      "TA0042"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

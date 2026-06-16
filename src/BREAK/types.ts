@@ -44,3 +44,20 @@ export interface ThreatActor {
   references: Reference[];
   updated?: string;
 }
+
+export interface Term {
+  title: string;
+  keywords: string[];
+  aliases: string[];
+  category: string;
+  definition: string;
+  description: string;
+  usageExample?: string;
+  relatedRisks: string[];
+  relatedAvoidances: string[];
+  relatedAttackTools: string[];
+  relatedThreatActors: string[];
+  relatedBusinessScenes: string[];
+  references: Reference[];
+  updated?: string;
+}

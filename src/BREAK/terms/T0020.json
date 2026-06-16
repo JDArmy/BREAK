@@ -1,0 +1,35 @@
+{
+  "T0020": {
+    "title": "赔付",
+    "keywords": [
+      "赔付",
+      "赔副"
+    ],
+    "aliases": [
+      "赔副"
+    ],
+    "category": "营销欺诈",
+    "definition": "指黑灰产利用平台售后规则漏洞，通过恶意退款或索赔进行非法获利的行为。",
+    "description": "黑灰产团伙针对电商平台的无理由退货、运费险或假一赔三等政策，通过虚构商品质量问题、掉包退货或恶意差评等方式要挟商家进行现金赔偿。该行为已形成产业链，严重损害商家利益并扰乱市场秩序。",
+    "usageExample": "那帮人专门买有运费险的商品，收到货就挑刺申请赔付，一个月能搞不少钱。",
+    "relatedRisks": [
+      "R0068",
+      "R0068-002"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0034"
+    ],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [
+      {
+        "title": "2024上半年度互联网黑灰产研究报告",
+        "link": "https://www.threathunter.cn/blog/2024-50e66f87-abe6-4928-b031-c5c2c83c1cf0"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

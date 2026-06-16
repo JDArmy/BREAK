@@ -1,0 +1,29 @@
+{
+  "T0054": {
+    "title": "企业孵化",
+    "keywords": [
+      "企业孵化"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "企业孵化指黑产批量注册或收购空壳公司，并伪造经营数据以骗取企业贷款的操作。",
+    "description": "黑产通过购买沉睡公司或注册新壳，为其虚开发票、制造虚假流水和纳税记录。经过数月包装后，这些公司看似经营稳定，实则用于向银行申请大额税票贷，资金到手后立即通过多级账户转移，最终逃废债务。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [
+      {
+        "title": "2024年上半年信贷欺诈风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-ab1e8b8c-509b-44e7-9dbe-d7271765ae2c"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

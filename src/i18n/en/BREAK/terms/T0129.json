@@ -1,0 +1,32 @@
+{
+  "T0129": {
+    "title": "Pig Trough",
+    "keywords": [
+      "Pig Trough"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "A chat or dating tool used in pig-butchering scams. Scammers refer to victims as 'pigs,' dating sites as 'pigsties,' chat tools as 'pig troughs,' and the chat scripts as 'pig feed.' In telecom fraud, scammers use these scripts to build emotional bonds, presenting themselves as ideal partners to manipulate and deceive victims.",
+    "description": "A chat or dating tool used in pig-butchering scams. Scammers refer to victims as 'pigs,' dating sites as 'pigsties,' chat tools as 'pig troughs,' and the chat scripts as 'pig feed.' In telecom fraud, scammers use these scripts to build emotional bonds, presenting themselves as ideal partners to manipulate and deceive victims.",
+    "usageExample": "那个组刚换了新猪食槽，现在全用某加密聊天软件，每天按三班倒给猪灌饲料，养肥了直接推给杀鱼组。",
+    "relatedRisks": [
+      "R0150",
+      "R0095"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001",
+      "AT0070"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008",
+      "TA0042"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

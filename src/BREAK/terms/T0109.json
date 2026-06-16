@@ -1,0 +1,29 @@
+{
+  "T0109": {
+    "title": "喂鸟",
+    "keywords": [
+      "喂鸟"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "诈骗分子向目标受害者发送小额金钱或利益，以建立信任并验证其财务账户有效性的试探行为。",
+    "description": "通过这种“喂食”操作，诈骗者让受害者放松警惕，习惯接收来自诈骗方的资金流。此举旨在为后续诱导受害者进行大额投入或骗取核心财务信息做铺垫。一旦受害者对“小甜头”产生依赖，便更容易落入大额诈骗陷阱。",
+    "relatedRisks": [
+      "R0095",
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

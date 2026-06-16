@@ -1,0 +1,29 @@
+{
+  "T0359": {
+    "title": "Accompanied Gambling",
+    "keywords": [
+      "Accompanied Gambling",
+      "Pai Wai"
+    ],
+    "aliases": [],
+    "category": "Gambling",
+    "definition": "带人参赌并参与赌场抽水收益分成的陪赌行为。",
+    "description": "拍围者以熟客身份拉拢新人入场，表面陪同赌博，实则按人头或下注额从赌场抽水中提成。这种模式让赌场客源不断，拍围者坐享分成，新人则在陪赌氛围中快速输光本金。",
+    "relatedRisks": [
+      "R0097",
+      "R0060"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0016",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS06",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "T0345": {
+    "title": "Commission Split",
+    "keywords": [
+      "Commission Split",
+      "RBI Bit"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "跑分洗钱中按洗钱金额比例向账户提供方支付佣金的方式。",
+    "description": "跑分团伙使用他人银行账户或支付账户转移非法资金时，会按洗钱金额的一定比例向账户持有人支付报酬，以此激励更多人提供账户。常见于电信诈骗、网络赌博等黑产资金清洗环节，账户提供者往往在不知情或默许下成为洗钱链条的一环，面临法律追责和账户冻结风险。",
+    "usageExample": "等额10w以上的AB卡都拿来打一打点位，按老规矩算。",
+    "relatedRisks": [
+      "R0060",
+      "R0093",
+      "R0094"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026",
+      "AT0039",
+      "AT0040"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

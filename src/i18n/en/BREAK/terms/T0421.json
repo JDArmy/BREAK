@@ -1,0 +1,26 @@
+{
+  "T0421": {
+    "title": "Show-Funds Placement",
+    "keywords": [
+      "Show-Funds Placement",
+      "Bright Assets to Settle Accounts"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "黑产通过短期存入大额资金制造虚假资金实力，以骗取贷款的行为。",
+    "description": "在申请大额贷款时，黑产会引入外部资金方，将一笔巨款短期存入借款人的账户，以此向银行证明其资金实力。一旦贷款审批通过并成功放款，这笔用于“亮资摆账”的资金会被迅速转走。这导致金融机构基于虚假的资信状况发放贷款，面临巨大坏账风险。",
+    "usageExample": "The project funds are disclosed, the company's capital is increased, the capital is verified, and the accounts are posted.",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

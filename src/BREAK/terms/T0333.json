@@ -1,0 +1,31 @@
+{
+  "T0333": {
+    "title": "码接回U/ 码回U",
+    "keywords": [
+      "码接回U/ 码回U"
+    ],
+    "aliases": [],
+    "category": "跑分洗钱",
+    "definition": "码接回U是黑产利用收款码接收人民币后，再以USDT形式返还资金的洗钱手法。",
+    "description": "此方式结合了二维码支付的便捷性与加密货币的匿名性。黑产通过大量收集来的个人收款码接收非法资金，资金进入账户后，再购买USDT返还给上游。这种模式将资金链路切割为“法币入-虚拟币出”，使得资金追踪在进入虚拟币环节后变得极为困难，常用于电信诈骗的快速分赃。",
+    "usageExample": "老板 可以 小额50-1000 码接回U吗？",
+    "relatedRisks": [
+      "R0121",
+      "R0060"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0060",
+      "AT0039"
+    ],
+    "relatedThreatActors": [
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS15"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

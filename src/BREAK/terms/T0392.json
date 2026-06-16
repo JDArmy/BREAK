@@ -1,0 +1,30 @@
+{
+  "T0392": {
+    "title": "顶名车",
+    "keywords": [
+      "顶名车"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "黑产招募征信良好的“白户”代他人购车，实际用车方断供后将风险转嫁给代购人和金融机构的欺诈模式。",
+    "description": "黑产支付报酬，诱骗征信良好的客户出借身份为他人贷款买车。车辆实际由网约车公司或资信不良者使用，他们支付少量月供后便断供，并将车辆处置获利。最终，代购的“顶名”人背负巨额债务，金融机构形成坏账。",
+    "usageExample": "顶名车人人2-5台，10天搞完",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [
+      {
+        "title": "【信贷欺诈】车贷欺诈产业链之\"顶名车\"欺诈手法揭秘",
+        "link": "https://mp.weixin.qq.com/s?__biz=MzI3NDY3NDUxNg==&mid=2247498306&idx=1&sn=f0b8ef9fd1c4af8416be162a7d37d9f1"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

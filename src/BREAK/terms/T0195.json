@@ -1,0 +1,35 @@
+{
+  "T0195": {
+    "title": "假地址",
+    "keywords": [
+      "假地址"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "黑产查档场景中仅提供省、市、区三级行政区划的模糊地址信息。",
+    "description": "假地址无法定位到具体门牌或小区，多用于初步筛选、批量画像或降低交易成本。数据贩子常以低价吸引买家，实际交付内容只有行政区划名称，不具备直接落地能力。在催收、诈骗链条中，假地址往往作为引流款，后续再引导买家购买真地址升级服务。",
+    "usageExample": "“全国假地址个户12r，继续秒 欢迎咨询。”",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

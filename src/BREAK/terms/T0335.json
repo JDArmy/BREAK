@@ -1,0 +1,35 @@
+{
+  "T0335": {
+    "title": "代付",
+    "keywords": [
+      "代付"
+    ],
+    "aliases": [],
+    "category": "跑分洗钱",
+    "definition": "代付是代替黑产完成资金支付或提现，充当非法资金中转站的行为。",
+    "description": "代付人员根据指令，使用自己的支付账户为黑产完成特定付款，如代缴费用、代发工资或代付货款。常见于网络赌博平台为赌客提现、诈骗团伙为“话务员”发工资等场景。代付行为将非法资金混入日常支付流，模糊了资金的最终去向，代付者从中赚取手续费，但同样面临极高的法律风险。",
+    "usageExample": "嘿！老板，需要代付吗？“扫码、代买、代订、代结人头费用，代结一切费用。",
+    "relatedRisks": [
+      "R0060",
+      "R0093"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0039",
+      "AT0040"
+    ],
+    "relatedThreatActors": [
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [
+      {
+        "title": "诈骗洗钱模式揭露：挂单充值洗钱、商户洗钱等新模式全面蔓延",
+        "link": "https://k.sina.cn/article_7857201856_1d45362c001906fzea.html?from=tech"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

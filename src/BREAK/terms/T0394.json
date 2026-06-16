@@ -1,0 +1,25 @@
+{
+  "T0394": {
+    "title": "套车",
+    "keywords": [
+      "套车"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "指急需用钱的客户主动或被招募，通过贷款购车后将车辆立即转卖套取现金的欺诈行为。",
+    "description": "黑产中介专门物色信用记录差但仍有贷款资格的“黑户”，以“融车”名义包装成正规业务。操作时由中介垫付首付或包装资质，客户上个人户购车后一周内将新车折价卖给车贩，到手现金约15万。这种模式实质是骗取金融机构信贷资金，车辆被快速销赃后贷款断供，形成坏账。",
+    "usageExample": "黑户套车广东操作可以做2-3台,上个人户操作一周 到手15w 年龄20-55岁。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

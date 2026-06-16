@@ -1,0 +1,32 @@
+{
+  "T0019": {
+    "title": "Aged Blank Account",
+    "keywords": [
+      "Aged Blank Account",
+      "clean account",
+      "fresh account",
+      "unused profile",
+      "zero-history account",
+      "virgin account",
+      "newly registered",
+      "blank profile",
+      "untouched account"
+    ],
+    "aliases": [],
+    "category": "Marketing Fraud",
+    "definition": "Refers to newly registered accounts with no transaction history. Due to their clean, unused status, these accounts are considered safe to purchase and are often acquired by fraud rings for fake order generation and review manipulation.",
+    "description": "Refers to newly registered accounts with no transaction history. Due to their clean, unused status, these accounts are considered safe to purchase and are often acquired by fraud rings for fake order generation and review manipulation.",
+    "usageExample": "最近平台风控严，新号不好使，得找一批满月白号来做任务才稳。",
+    "relatedRisks": [
+      "R0005"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

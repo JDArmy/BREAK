@@ -1,0 +1,35 @@
+{
+  "T0149": {
+    "title": "扣雷",
+    "keywords": [
+      "扣雷"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "黑产组织在结算时剔除用于监控的虚假数据，以惩罚或测试下线。",
+    "description": "黑产上线为检验下线推广或刷量工作的真实性，会在任务名单中混入虚构的监控数据，即“雷”。结算时，若发现下线提交的成果中包含这些无效数据，上线便会执行扣雷，即扣除相应报酬或施以其他惩罚，以此确保下线不敢弄虚作假。",
+    "usageExample": "这批量跑完，上头说雷太多，要扣雷结算，等于我们白干三天。",
+    "relatedRisks": [
+      "R0044",
+      "R0032",
+      "R0131"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0064",
+      "AT0066",
+      "AT0067",
+      "AT0053-002"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0043"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

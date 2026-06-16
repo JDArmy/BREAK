@@ -1,0 +1,9 @@
+{
+  "A0150": {
+    "title": "OTA通道加密与完整性保护",
+    "definition": "使用TLS等加密协议保护OTA更新传输过程，防止中间人攻击",
+    "description": "传输层防护：强制HTTPS/TLS通信；证书固定防MITM；完整性校验和；分片传输验证；断点续传保护；服务器身份认证。",
+    "complexity": "Basic",
+    "limitation": "需要可靠网络；证书管理；老旧设备支持差"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "T0433": {
+    "title": "买断",
+    "keywords": [
+      "买断"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "黑产向中介一次性支付费用，买断客户或银行卡的后续操作权与收益。",
+    "description": "在信贷欺诈中，黑产通过支付一笔固定费用，从中介手中买断客户资源，后续贷款申请、套现等操作全部由黑产独立完成，中介不再参与分润。在洗钱场景下，买断指一次性购买银行卡，不再归还持卡人，用于长期接收、转移非法资金，直至卡片被风控或冻结。这种模式切断了资金追溯链条，增加了追踪难度。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

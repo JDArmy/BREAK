@@ -1,0 +1,33 @@
+{
+  "T0265": {
+    "title": "Lead Handling",
+    "keywords": [
+      "Lead Handling",
+      "Catch Powder"
+    ],
+    "aliases": [],
+    "category": "Business Fraud",
+    "definition": "接粉指在引流链条中，由专人负责新加好友后的首轮对话运营，以快速建立信任并筛选目标。",
+    "description": "该环节通常由专业聊天团队执行，通过预设话术与用户进行初步互动，目的是将引流来的陌生人转化为可进一步收割的潜在受害者。常见于杀猪盘、色情诈骗等场景，接粉质量直接影响后续诈骗转化率。",
+    "usageExample": "Professional traffic drainage from overseas countries, high-quality powder [recommended to use receiving powder] Thank you 007",
+    "relatedRisks": [
+      "R0024",
+      "R0007-003"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0005",
+      "AT0050"
+    ],
+    "relatedThreatActors": [
+      "TA0013",
+      "TA0009"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "T0174": {
+    "title": "慢线",
+    "keywords": [
+      "慢线"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "数据查询速度缓慢、需一天至数天反馈的非法渠道。",
+    "description": "慢线指依赖特殊关系或人工操作的查档方式，如企业内鬼手动导出数据。虽然时效性差，但可能获取到快线无法覆盖的深层信息，如历史记录或加密档案。慢线常用于非紧急的批量数据倒卖，是黑产长期渗透的隐蔽通道。",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

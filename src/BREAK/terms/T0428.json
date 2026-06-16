@@ -1,0 +1,24 @@
+{
+  "T0428": {
+    "title": "点位",
+    "keywords": [
+      "点位"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "黑产团伙根据操作风险高低向客户抽取的服务费比例。",
+    "description": "在信贷欺诈、跑分等黑产活动中，中介或操作方会根据业务的风险等级收取不同点位的费用。操作渠道越隐蔽、涉及金额越大、被风控拦截概率越高，点位就越高。例如，利用虚假企业进行大额背债的点位远高于普通个人消费贷包装。点位是黑产衡量风险与收益的核心指标，高点位往往意味着更高的欺诈成功率或更严重的法律后果。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

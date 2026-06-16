@@ -1,0 +1,36 @@
+{
+  "T0005": {
+    "title": "Big Score",
+    "keywords": [
+      "Big Score",
+      "high-value target",
+      "large-scale breach",
+      "big profit margin",
+      "high-value scheme",
+      "lucrative target",
+      "whale target",
+      "major score",
+      "big haul"
+    ],
+    "aliases": [],
+    "category": "Marketing Fraud",
+    "definition": "In fraud contexts, 'big meat' denotes a target or operation with exceptionally high profit margins, such as large-scale data breaches, high-value cyberattack targets, or schemes generating substantial, ongoing illicit revenue.",
+    "description": "In fraud contexts, 'big meat' denotes a target or operation with exceptionally high profit margins, such as large-scale data breaches, high-value cyberattack targets, or schemes generating substantial, ongoing illicit revenue.",
+    "relatedRisks": [
+      "R0009",
+      "R0055",
+      "R0064"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0001",
+      "TA0001-001"
+    ],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

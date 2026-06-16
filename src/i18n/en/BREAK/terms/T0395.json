@@ -1,0 +1,26 @@
+{
+  "T0395": {
+    "title": "Nominee-Owned Property",
+    "keywords": [
+      "Nominee-Owned Property",
+      "Householding Agent"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "指实际购房人并非真实需求方，而是有偿以个人名义替第三方持有房产，以此骗取银行按揭贷款的操作。",
+    "description": "在房贷欺诈链条中，开发商为快速回笼资金或套现离场，会招募征信干净的“代持人”签订虚假购房合同。代持人出面申请房贷，银行放款后资金归开发商使用，房产名义上挂在代持人名下。双方私下签有回购协议，约定两三年内由开发商回购该房产。一旦市场下行或开发商资金链断裂，代持人将独自承担巨额债务。",
+    "usageExample": "Sign a repurchase agency to hold the house. The house will be repurchased from the client within 2 years of operation. The house is worth 70-80 yuan.",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

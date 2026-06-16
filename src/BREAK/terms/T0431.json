@@ -1,0 +1,25 @@
+{
+  "T0431": {
+    "title": "自带前期",
+    "keywords": [
+      "自带前期"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "背债人或中介自带资金用于贷款前期的资质包装和日常开销。",
+    "description": "在背债欺诈操作中，部分参与者需要自行承担包装借款资质所需的全部前期费用，包括购买营业执照、刷流水、补缴社保公积金、甚至维持表面经营的日常开销。这种模式通常意味着中介不垫资，将资金风险转嫁给背债人或下游。自带前期的操作往往针对金额更大、审核更严的企业贷款，一旦包装失败，参与者将面临巨额资金损失。",
+    "usageExample": "一手渠道，保司法，日结，外汇：大量收人，带护照，周期30天，保底600到1000万，自带前期。",
+    "relatedRisks": [
+      "R0146",
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

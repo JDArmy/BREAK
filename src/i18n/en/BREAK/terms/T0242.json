@@ -1,0 +1,31 @@
+{
+  "T0242": {
+    "title": "Reverse Scam",
+    "keywords": [
+      "Reverse Scam",
+      "Fried Fish"
+    ],
+    "aliases": [],
+    "category": "Business Fraud",
+    "definition": "一种以虚假福利为诱饵，反向骗取参与者资金的欺诈手段。",
+    "description": "黑产人员常在社交群组或论坛发布伪造的“薅羊毛”教程或活动链接，诱导他人先投入本金或支付佣金。参与者以为能获得高额返利，实际上资金被黑产卷走，俗称“反撸”。这种手法利用信息差和贪利心理，在营销欺诈链条中充当引流和收割的角色。",
+    "usageExample": "群里有人发了个充50返100的链接，结果充完就被拉黑，典型的炸鱼套路。",
+    "relatedRisks": [
+      "R0009",
+      "R0055",
+      "R0064"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0001",
+      "TA0001-001"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

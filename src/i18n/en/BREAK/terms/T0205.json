@@ -1,0 +1,30 @@
+{
+  "T0205": {
+    "title": "IOU App Data",
+    "keywords": [
+      "IOU App Data",
+      "IOU Material"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "指高利贷或私人借贷中，包含借款人签订的借条、身份信息及联系方式的用户数据包。",
+    "description": "这类数据通常从非法的借贷平台或私人放贷团伙内部流出，包含详细的借款人隐私信息。黑产收购后，用于进行二次诈骗、暴力催收或转卖给其他犯罪团伙。由于数据真实且涉及债务关系，受害者极易上当。",
+    "usageExample": "\"Issue real-time borrowing materials, risk control materials, quantity, first-hand guarantee, excellent price\"",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

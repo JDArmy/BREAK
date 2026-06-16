@@ -1,0 +1,25 @@
+{
+  "T0381": {
+    "title": "Black Room",
+    "keywords": [
+      "Black Room"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "指借款人的账户因风险行为被金融机构风控系统限制，导致无法正常借款的状态。",
+    "description": "当借款人的账户被标记为“黑屋”，意味着其账户因逾期、频繁申请、资料异常等行为触发了平台的风控规则，进入了功能受限的“小黑屋”。处于此状态的用户将面临额度被冻结、借款申请被秒拒或无法享受任何金融服务的情况。这是平台在发现风险后采取的一种自动惩戒和隔离措施。",
+    "usageExample": "去年11月开始黑屋，昨天还款日忘了还了，逾期一天会上征信吗？",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "T0035": {
+    "title": "Error Code Fix",
+    "keywords": [
+      "Error Code Fix",
+      "decline override",
+      "error code bypass",
+      "funding block removal",
+      "loan unlock service",
+      "system decline fix",
+      "override code service",
+      "disbursement unblock",
+      "credit decision override"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "An informal service or guarantee offered within the credit intermediary ecosystem, promising to resolve specific error codes that prevent loan disbursement. When a financial institution's system flags a transaction and blocks funding, these intermediaries claim they can provide the necessary fix or override code to force the loan through.",
+    "description": "An informal service or guarantee offered within the credit intermediary ecosystem, promising to resolve specific error codes that prevent loan disbursement. When a financial institution's system flags a transaction and blocks funding, these intermediaries claim they can provide the necessary fix or override code to force the loan through.",
+    "usageExample": "我这单子银行提示代码E018拒了，找了个中介说包解，收费20个点，不知道是不是真的能解开。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

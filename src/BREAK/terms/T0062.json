@@ -1,0 +1,28 @@
+{
+  "T0062": {
+    "title": "网贷",
+    "keywords": [
+      "网贷",
+      "WWD"
+    ],
+    "aliases": [
+      "WWD"
+    ],
+    "category": "信贷欺诈",
+    "definition": "指通过互联网平台发放的、常被黑产利用进行欺诈性申请的小额贷款。",
+    "description": "黑产团伙利用虚假身份信息或冒用他人资料，批量注册并申请各类网贷产品。他们通常针对风控薄弱的小额现金贷平台，通过“撸口子”的方式恶意套现，下款后即失联。这种行为导致大量网贷平台产生坏账，也是造成暴力催收乱象的诱因之一。",
+    "usageExample": "他搞了一堆假资料，专门找那些不上征信的网贷口子下款，撸下来就是工资，根本没打算还。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "T0113": {
+    "title": "钓鱼",
+    "keywords": [
+      "钓鱼"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "黑产中指诈骗分子通过虚假信息诱骗受害者逐步上钩的过程。",
+    "description": "诈骗团伙利用虚假投资、中奖通知或冒充熟人等话术，持续投放诱饵信息，逐步获取受害者信任。受害者一旦轻信，便会被诱导提供个人敏感信息或直接转账汇款。该手法是各类电信网络诈骗的通用前端环节，后续常衔接“杀鱼”等具体骗局。",
+    "relatedRisks": [
+      "R0095",
+      "R0150",
+      "R0084",
+      "R0131"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001",
+      "AT0063",
+      "AT0071"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008",
+      "TA0043"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

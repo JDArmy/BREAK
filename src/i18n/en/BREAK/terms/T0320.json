@@ -1,0 +1,36 @@
+{
+  "T0320": {
+    "title": "Bank Direct-Scan QR",
+    "keywords": [
+      "Bank Direct-Scan QR",
+      "Bank Direct Scan"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "跑分洗钱中利用银行App生成的收款二维码进行直接扫码转账，把赃款伪装成普通银行交易。",
+    "description": "银行直扫走的是银行自有通道，资金在银行体系内流转，黑产认为这比第三方支付码更“稳”，风控相对滞后。跑分团伙用银行直扫码接收大额赃款，付款方通过银行App扫码即可完成转账，交易记录看起来像正常的个人间转账。这种码常与“码回码”“码回U”等模式搭配，把人民币洗成虚拟币或外汇，进一步切断资金追溯链条。",
+    "usageExample": "Exchange rate ceiling, code return code, code return u, bank direct scan, UnionPay code.",
+    "relatedRisks": [
+      "R0060",
+      "R0093",
+      "R0121"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026",
+      "AT0039",
+      "AT0040",
+      "AT0060"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS15"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

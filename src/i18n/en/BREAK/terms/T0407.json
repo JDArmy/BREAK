@@ -1,0 +1,26 @@
+{
+  "T0407": {
+    "title": "Legit-Channel Operator",
+    "keywords": [
+      "Legit-Channel Operator",
+      "Regular Army"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "持有国家牌照、受监管的金融机构提供的贷款产品。",
+    "description": "这类产品由银行或持牌消费金融公司发行，利率和条款相对透明，但审核较严。黑产语境中常将其与非法贷款对比，用以区分“正规”与“地下”渠道，或作为欺诈目标的筛选条件。",
+    "usageExample": "目前总负债30多个，正规军延期一个月左右，现在也没固定收入流水，也没有营业执照，自己名下有一套全款房，市值200个，有房本，没结婚。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

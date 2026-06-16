@@ -1,0 +1,34 @@
+{
+  "T0182": {
+    "title": "Full Household File",
+    "keywords": [
+      "Full Household File",
+      "Whole Head and Whole Household"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illicit data trading, a type of record-checking service that retrieves the ID photos and information of all immediate family members listed in a household register, with “full head” referring to all available headshot photos.",
+    "description": "In illicit data trading, this is a category of record-checking service. “Full-head full household” means the service can access the ID photos and personal information of every direct relative registered in the household booklet, where “full head” specifically denotes all portrait photographs of the family members.",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

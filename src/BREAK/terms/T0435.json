@@ -1,0 +1,27 @@
+{
+  "T0435": {
+    "title": "个性化分期",
+    "keywords": [
+      "个性化分期"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "代理维权黑产为逾期债务人向平台协商调整还款计划的操作。",
+    "description": "代理维权机构利用债务人的实际困难，通过代理投诉或虚假协商手段，向银行或网贷平台申请重新制定分期还款方案。过程中常涉及伪造证明材料、恶意投诉施压等非法行为，债务人不仅面临个人信息被倒卖的风险，还可能因虚假材料导致法律追责。",
+    "usageExample": "债务优化，征信异议申诉，资金业务，信用卡个性化分期最长60期。",
+    "relatedRisks": [
+      "R0096",
+      "R0096-001"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0029"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

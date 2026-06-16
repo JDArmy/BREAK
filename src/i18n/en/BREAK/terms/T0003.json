@@ -1,0 +1,36 @@
+{
+  "T0003": {
+    "title": "Bulk Arbitrage Flip",
+    "keywords": [
+      "Bulk Arbitrage Flip",
+      "bulk buying arbitrage",
+      "promo scalping",
+      "price gap exploitation",
+      "bulk resale",
+      "promo arbitrage",
+      "scalper bulk buy",
+      "discount scalping",
+      "arbitrage flipping"
+    ],
+    "aliases": [],
+    "category": "Marketing Fraud",
+    "definition": "In e-commerce fraud, 'big scalp' refers to an arbitrage tactic where individuals exploit steep discounts or price gaps to purchase goods in bulk and resell them for profit, typically during promotional events.",
+    "description": "In e-commerce fraud, 'big scalp' refers to an arbitrage tactic where individuals exploit steep discounts or price gaps to purchase goods in bulk and resell them for profit, typically during promotional events.",
+    "relatedRisks": [
+      "R0009",
+      "R0055",
+      "R0064"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0001",
+      "TA0001-001"
+    ],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

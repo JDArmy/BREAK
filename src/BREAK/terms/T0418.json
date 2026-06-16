@@ -1,0 +1,25 @@
+{
+  "T0418": {
+    "title": "精养",
+    "keywords": [
+      "精养"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "黑产为背债人提供全链条垫资养护，以骗取更高额贷款的前期准备行为。",
+    "description": "在背债欺诈中，中介或团伙对背债人实施“三包”（包吃、包住、包出行）并垫付前期费用，如房贷首付、车贷首付、税费，甚至购买企业执照的费用。通过这种全垫资模式，将背债人包装成优质客户，待贷款发放后瓜分资金，背债人则承担全部债务。",
+    "usageExample": "房信企车，精养模式，要求纯白户，年龄23到48，前期费用全垫。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

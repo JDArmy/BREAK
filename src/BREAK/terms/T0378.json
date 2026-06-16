@@ -1,0 +1,24 @@
+{
+  "T0378": {
+    "title": "放水 / 发水",
+    "keywords": [
+      "放水 / 发水"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "指金融机构短期内放宽风控规则，使信用不良者也能获批贷款。",
+    "description": "这是黑产和中介圈内流传的“情报”，指某些银行或平台在特定时段调整了信贷审批系统，降低了准入门槛。这种风控策略的松动可能是系统漏洞、业绩冲刺或策略调整所致，为征信差、负债高的客户提供了骗贷窗口。黑产会迅速组织人手，利用这个短暂的机会集中申请，以套取资金。",
+    "usageExample": "最近X行偷偷放水，平时点进去都没额度，这次随便申了一下，居然给了6万，秒过。",
+    "relatedRisks": [],
+    "relatedAvoidances": [
+      "A0015"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "T0099": {
+    "title": "Account Sweeping",
+    "keywords": [
+      "Account Sweeping",
+      "Scan Number"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "The process of using automated tools or scripts to attempt account logins in bulk in order to identify valid credentials. This technique typically exploits previously leaked account information to find accounts whose passwords have not been changed or that have weak security. Credential stuffing is commonly used for account validation, data misuse, and secondary attacks, endangering personal privacy and financial assets.",
+    "description": "The process of using automated tools or scripts to attempt account logins in bulk in order to identify valid credentials. This technique typically exploits previously leaked account information to find accounts whose passwords have not been changed or that have weak security. Credential stuffing is commonly used for account validation, data misuse, and secondary attacks, endangering personal privacy and financial assets.",
+    "relatedRisks": [
+      "R0090"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [
+      {
+        "title": "Alert: API Credential Stuffing Attacks Have Become a Major Account Security Threat",
+        "link": "https://www.threathunter.cn/blog/6a6fd45548f"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

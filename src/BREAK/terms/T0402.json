@@ -1,0 +1,26 @@
+{
+  "T0402": {
+    "title": "账号 / id贷",
+    "keywords": [
+      "账号 / id贷"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "以手机账号作为抵押物发放的短期非法高利贷。",
+    "description": "借款人需交出苹果ID或安卓账号控制权，放贷方以此要挟还款，一旦逾期即锁定设备或窃取隐私数据。这种贷款周期极短、利息极高，专门针对急需用钱且无其他抵押物的群体，常见于社交媒体和地下借贷渠道。",
+    "usageExample": "黑户最少都是要苹果12P以上，第一单ID贷1800到手1200，一个星期还款",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS04",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

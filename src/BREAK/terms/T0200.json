@@ -1,0 +1,36 @@
+{
+  "T0200": {
+    "title": "名下车",
+    "keywords": [
+      "名下车"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "黑产提供的一种可查询个人名下全部登记车辆信息的非法数据服务。",
+    "description": "名下车数据通常来自车管所内鬼或系统接口泄露，输出字段包括车牌号、车型、登记日期及车主身份。该服务被用于资产调查、抵押诈骗、车辆追踪或非法催收，能直接暴露目标财产状况。黑产常按页或按次出售，并搭配过户记录、违章处理人等衍生服务，形成完整车务信息链。",
+    "usageExample": "“源头车务 一页 三页 名下车 过户记录 违章处理人 车管所车务 当天回。”",
+    "relatedRisks": [
+      "R0078",
+      "R0089",
+      "R0092",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

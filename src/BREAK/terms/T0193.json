@@ -1,0 +1,36 @@
+{
+  "T0193": {
+    "title": "名电时",
+    "keywords": [
+      "名电时"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "黑产数据交易中一种包含姓名、手机号与时间字段的标准化数据格式。",
+    "description": "名电时是数据贩子按字段打包出售的基础信息包，通常来源于内鬼泄露、系统拖库或社工库整合。买家按条或按批次下单，用于电诈引流、催收定位或精准营销投放。因含实时时间戳，常被用来判断数据新鲜度和目标活跃窗口，价格随时效波动。",
+    "usageExample": "“名电时每天都在出，有需要的老板请提前下单预定。”",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS02",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

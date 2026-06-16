@@ -1,0 +1,29 @@
+{
+  "T0007": {
+    "title": "发卡",
+    "keywords": [
+      "发卡"
+    ],
+    "aliases": [],
+    "category": "营销欺诈",
+    "definition": "指专门用于交易各类黑产虚拟物料、账号及作案工具的自动化在线寄售平台。",
+    "description": "发卡平台是黑产的基础设施，商户在此上架社交账号、手机黑卡、钓鱼工具等非法商品，买家可全自动下单购买。它极大地降低了黑产交易的门槛，使得各类欺诈资源能像普通商品一样快速流转，是黑产洗钱和物料分销的核心枢纽。",
+    "relatedRisks": [],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0027"
+    ],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04"
+    ],
+    "references": [
+      {
+        "title": "黑灰产规模化的背后——由发卡平台组成的资源交易网",
+        "link": "https://www.163.com/dy/article/ED1Q6CVF0518STKV.html"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

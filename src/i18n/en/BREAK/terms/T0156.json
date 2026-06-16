@@ -1,0 +1,35 @@
+{
+  "T0156": {
+    "title": "Guaranteed Real, Not Guaranteed Complete",
+    "keywords": [
+      "Guaranteed Real, Not Guaranteed Complete",
+      "Fidelity But Not Leakage"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illicit data trading, a transaction term used by illegal data lookup services to guarantee the authenticity of the data while disclaiming any responsibility for its completeness. It serves as a liability waiver for the seller.",
+    "description": "In illicit data trading, a transaction term used by illegal data lookup services to guarantee the authenticity of the data while disclaiming any responsibility for its completeness. It serves as a liability waiver for the seller.",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

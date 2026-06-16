@@ -1,0 +1,25 @@
+{
+  "T0422": {
+    "title": "佩奇 / 配企",
+    "keywords": [
+      "佩奇 / 配企"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "黑产为背债人配置空壳企业，用于骗取金融机构贷款。",
+    "description": "在背债骗贷中，黑产会将提前注册或购买的空壳公司过户给背债人，使其成为名义上的企业主。随后通过刷流水、做假合同等方式“配企”，将空壳包装成有经营实体的公司，以此向银行申请企业贷款。贷款到手后，背债人背负债务，黑产瓜分资金。",
+    "usageExample": "全国行口，来就定额300到500稳放，沟通性强，真实加佩奇，大胆来咨询。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "T0016": {
+    "title": "SIM Bank",
+    "keywords": [
+      "SIM Bank",
+      "modem pool",
+      "SIM farm",
+      "SMS gateway",
+      "bulk SMS device",
+      "SIM box",
+      "GSM modem array",
+      "verification farm",
+      "SIM hosting"
+    ],
+    "aliases": [],
+    "category": "Marketing Fraud",
+    "definition": "A modem pool, a telephone-based expansion device that can accept multiple simultaneous dial-up connections. When fitted with SIM cards, it can send and receive multiple SMS messages or make calls concurrently. Historically used by institutions like post offices, customs, banks, and call centers for remote networking, it has been repurposed by grey-market actors as a tool for bulk account registration, reselling access, or conducting fraud attacks against internet platforms through mass 'spray' techniques.",
+    "description": "A 'modem pool card' refers to a physical SIM card held by a card dealer, typically inserted into a modem pool device for receiving SMS verification codes. Dealers source these cards primarily from major carriers, virtual network operators, and IoT card channels.",
+    "relatedRisks": [
+      "R0030",
+      "R0030-001",
+      "R0030-005"
+    ],
+    "relatedAvoidances": [
+      "A0007-001"
+    ],
+    "relatedAttackTools": [
+      "AT0004",
+      "AT0006",
+      "AT0001-002"
+    ],
+    "relatedThreatActors": [
+      "TA0003",
+      "TA0004"
+    ],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [
+      {
+        "title": "The current status of the card merchant ecosystem under the trend of “cutting off cards”",
+        "link": "https://www.secrss.com/articles/56050"
+      },
+      {
+        "title": "[Black Production Big Data] Annual Summary of Internet Black and Gray Production Trends in 2024",
+        "link": "https://www.threathunter.cn/blog/2024-37b58782-063b-4426-a2f8-6de6622dbca7"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

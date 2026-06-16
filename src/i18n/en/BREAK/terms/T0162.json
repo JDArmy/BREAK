@@ -1,0 +1,42 @@
+{
+  "T0162": {
+    "title": "Forced Account Takeover",
+    "keywords": [
+      "Forced Account Takeover",
+      "Strong"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In underground data trading, the act of forcibly logging into a user account through technical means to extract private information.",
+    "description": "In underground data trading, the act of forcibly logging into a user account through technical means to extract private information.",
+    "usageExample": "\"Forced login data — anyone who's sourced it knows. Straight from the source. Hit me up to talk price.\"",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS02",
+      "BS04"
+    ],
+    "references": [
+      {
+        "title": "2024 Data Breach Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

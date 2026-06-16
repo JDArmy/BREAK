@@ -1,0 +1,33 @@
+{
+  "T0064": {
+    "title": "Debt Relief Scam",
+    "keywords": [
+      "Debt Relief Scam",
+      "Debt Optimization"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "Originally a standard financial term for restructuring debt, lowering costs, extending repayment periods, or consolidating debts to ease repayment pressure, it is used here specifically to describe malicious exploitation by underground actors who offer illicit post-loan services such as counter-collection, negotiating repayment plans, mortgage deferrals, and account suspensions for profit.",
+    "description": "These agent-based schemes often involve fabricating false reasons, submitting fraudulent documents, and launching malicious complaints against financial institutions.",
+    "usageExample": "中介收了他一万块做债务优化，其实就是帮他伪造了假的困难证明去跟银行谈，最后银行报警，他的卡全被冻结了。",
+    "relatedRisks": [
+      "R0096",
+      "R0096-001"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0029"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [
+      {
+        "title": "Exposing the Underground Industry Behind Illegal \"Agent Rights Protection\" in the Financial Sector",
+        "link": "https://www.threathunter.cn/blog/e78513e348b"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

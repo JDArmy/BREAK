@@ -1,0 +1,31 @@
+{
+  "T0261": {
+    "title": "后端",
+    "keywords": [
+      "后端"
+    ],
+    "aliases": [],
+    "category": "业务欺诈",
+    "definition": "后端指流量被引流后最终实现交易或沉淀用户的承接页面或私域环境。",
+    "description": "在引流链路中，前端负责吸引眼球，后端则负责收割变现，如搭建虚假购物网站、客服聊天界面或私密社群。后端设计直接影响欺诈活动的成功率和客单价。它是整个引流诈骗链条中实现非法牟利的最终闭环。",
+    "relatedRisks": [
+      "R0024",
+      "R0007-003"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0005",
+      "AT0050"
+    ],
+    "relatedThreatActors": [
+      "TA0013",
+      "TA0009"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

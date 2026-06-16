@@ -1,0 +1,29 @@
+{
+  "T0215": {
+    "title": "Black Five Categories",
+    "keywords": [
+      "Black Five Categories"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "指从电商平台泄露的五类敏感商品消费者数据，包括药品、医疗器械、丰胸、减肥和增高产品。",
+    "description": "由于购买这些商品的用户有明确的隐私顾虑和消费需求，其数据在黑市价值很高。黑产获取这些数据后，会转卖给其他诈骗团伙，用于冒充专家回访、推销假药或保健品等精准诈骗活动。",
+    "usageExample": "“Providing black five-category data such as weight loss, freckle removal, and breast enhancement, users who placed orders in real time saw amazing results!!”",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

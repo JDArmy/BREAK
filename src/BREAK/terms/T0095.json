@@ -1,0 +1,28 @@
+{
+  "T0095": {
+    "title": "料站",
+    "keywords": [
+      "料站"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指在黑市中专门用于交易CVV料等银行卡盗刷信息的平台或站点。",
+    "description": "料站是信用卡盗刷产业链的线上交易市场，由众多料主提供货源，主要出售包含卡号、有效期、CVV码等信息的“料”。交易双方通常使用虚拟货币结算以规避监管，站点本身则提供担保和仲裁服务。这类平台极大地降低了盗刷犯罪的门槛，使不具备攻击能力的料客也能轻易获取犯罪工具。",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

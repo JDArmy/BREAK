@@ -1,6 +1,6 @@
 {
   "name": "break",
-  "version": "2.9.0",
+  "version": "2.10.0",
   "private": true,
   "type": "module",
   "engines": {
@@ -16,6 +16,9 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "validate:data": "node scripts/validate/schema.mjs && node scripts/validate/i18n-sync.mjs --strict && node scripts/validate/keywords.mjs && node scripts/validate/relations.mjs && node scripts/validate/business-scenes.mjs",
+    "import:terms:zh-content": "node scripts/import/generate-term-zh-content-overrides.mjs",
+    "import:terms:zh-keywords": "node scripts/import/generate-term-zh-keyword-overrides.mjs",
+    "import:terms:en-keywords": "node scripts/import/generate-term-en-keyword-overrides.mjs",
     "audit:keywords": "node scripts/validate/keywords.mjs",
     "fix:keywords": "node scripts/validate/keywords.mjs --write",
     "list:keyword-batches": "node scripts/validate/keyword-batches.mjs",

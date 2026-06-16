@@ -1,0 +1,28 @@
+{
+  "T0074": {
+    "title": "Precision Data",
+    "keywords": [
+      "Precision Data",
+      "Precise Material"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illicit data trading, refers to highly accurate and detailed personal or organizational information. This data has been carefully filtered and verified to ensure authenticity and validity, often including specific contact details, addresses, and account information. It can be directly used for targeted marketing, fraud, and other illegal activities, commanding the highest value on the black market.",
+    "description": "In illicit data trading, refers to highly accurate and detailed personal or organizational information. This data has been carefully filtered and verified to ensure authenticity and validity, often including specific contact details, addresses, and account information. It can be directly used for targeted marketing, fraud, and other illegal activities, commanding the highest value on the black market.",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

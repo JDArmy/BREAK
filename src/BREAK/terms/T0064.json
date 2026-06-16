@@ -1,0 +1,32 @@
+{
+  "T0064": {
+    "title": "债务优化",
+    "keywords": [
+      "债务优化"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "黑产以优化债务为名，通过伪造材料、恶意投诉等手段非法牟利的代理服务。",
+    "description": "黑产团伙打着“法律援助”的幌子，为负债人提供停息挂账、协商分期等代理服务。他们通过伪造贫困证明、住院病历等虚假材料向金融机构施压，甚至教唆客户恶意拖欠。这种操作不仅骗取客户高额服务费，还导致金融机构面临合规风险，破坏了正常的信贷秩序。",
+    "usageExample": "中介收了他一万块做债务优化，其实就是帮他伪造了假的困难证明去跟银行谈，最后银行报警，他的卡全被冻结了。",
+    "relatedRisks": [
+      "R0096",
+      "R0096-001"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0029"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [
+      {
+        "title": "【信贷欺诈】揭露金融领域非法“代理维权”背后的黑色产业",
+        "link": "https://www.threathunter.cn/blog/e78513e348b"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

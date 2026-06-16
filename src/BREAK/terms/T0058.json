@@ -1,0 +1,25 @@
+{
+  "T0058": {
+    "title": "双黑",
+    "keywords": [
+      "双黑"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "指个人征信报告中同时存在严重逾期和失信被执行等多项不良记录。",
+    "description": "黑产中介常以此精准筛选并锁定那些走投无路的借贷人。这类人群因无法通过正规渠道获得贷款，成为黑中介眼中的“优质客户”。中介通过包装虚假资料、利用银行审批漏洞等方式协助其骗取贷款，从中收取高额手续费，最终导致金融机构坏账风险激增。",
+    "usageExample": "中介在群里发广告说‘专业操作双黑口子，无视黑白，是人就来’，其实就是骗那些征信烂掉的人去搞贷款。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

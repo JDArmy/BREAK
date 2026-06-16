@@ -1,0 +1,29 @@
+{
+  "T0080": {
+    "title": "Domestic Fullz",
+    "keywords": [
+      "Domestic Fullz",
+      "Inner Material"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "Refers to the four key pieces of domestic card information: bank card number, password, cardholder's ID number, and registered phone number (also known as CVV fullz). This data contains citizens' personal information and is typically resold to third parties for targeted marketing, fraud, and other illegal activities.",
+    "description": "Refers to the four key pieces of domestic card information: bank card number, password, cardholder's ID number, and registered phone number (also known as CVV fullz). This data contains citizens' personal information and is typically resold to third parties for targeted marketing, fraud, and other illegal activities.",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

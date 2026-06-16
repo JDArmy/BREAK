@@ -5,7 +5,11 @@
     "description": "日食攻击针对P2P网络中的单个节点，攻击者通过女巫节点占据目标节点的所有连接槽位，使其与真实网络隔离。被隔离的节点只能从攻击者处接收信息，攻击者可向其提供虚假区块链视图、隐藏交易、双花攻击、或使其进行错误的共识投票。对于轻节点和SPV客户端尤其脆弱。",
     "complexity": "高级",
     "influence": "节点接收虚假区块链数据，交易被双花，共识投票被操纵，网络分区。",
-    "avoidances": [],
+    "avoidances": [
+      "A0158",
+      "A0159",
+      "A0160"
+    ],
     "references": [
       {
         "title": "Eclipse Attacks on Bitcoin's Peer-to-Peer Network",

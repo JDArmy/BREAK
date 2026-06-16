@@ -1,0 +1,29 @@
+{
+  "T0095": {
+    "title": "Data Marketplace",
+    "keywords": [
+      "Data Marketplace",
+      "Material Station"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "A black market platform specifically for selling CVV data. Members of these platforms transact using cryptocurrency. The platforms are backed by thousands of data suppliers who specialize in providing fresh CVV information. Due to risk and technical barriers, these suppliers choose to sell the data directly rather than using it themselves.",
+    "description": "A black market platform specifically for selling CVV data. Members of these platforms transact using cryptocurrency. The platforms are backed by thousands of data suppliers who specialize in providing fresh CVV information. Due to risk and technical barriers, these suppliers choose to sell the data directly rather than using it themselves.",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

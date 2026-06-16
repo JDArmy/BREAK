@@ -1,0 +1,31 @@
+{
+  "T0370": {
+    "title": "Fake Mortgage-Free Car",
+    "keywords": [
+      "Fake Mortgage-Free Car",
+      "Holiday exemption/forced Exemption"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "在车辆抵押登记完成前，黑产勾结车主将按揭车辆过户给第三方以逃避抵押。",
+    "description": "黑产中介利用车辆贷款审批与抵押登记之间的时间差，协助车主在银行放款后、办理抵押前，迅速将车辆过户转卖。这导致金融机构无法落实抵押权，形成坏账。常见于二手车交易市场，中介从中收取高额服务费，而银行面临钱车两空的损失。",
+    "usageExample": "中介说能搞假免抵，让我提车后别去车管所签抵押，直接过户给他找的下家，结果银行追着我要债。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [
+      {
+        "title": "[Black Big Data] Deconstruction of the auto loan fraud industry chain",
+        "link": "https://www.threathunter.cn/blog/8acce28b732"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

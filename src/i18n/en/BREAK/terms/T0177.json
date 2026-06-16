@@ -1,0 +1,30 @@
+{
+  "T0177": {
+    "title": "Ponzi-App Data Harvesting",
+    "keywords": [
+      "Ponzi-App Data Harvesting",
+      "Capital Disk APP Data Collection"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illicit data trading, the practice of harvesting personal information from investors in fraudulent investment schemes (known as “capital pools”), typically targeting individuals who hold bank cards, which are then sold to downstream groups for card fraud and money laundering.",
+    "description": "In illicit data trading, this refers to the process by which underground syndicates collect personal data from “investors” involved in fraudulent investment platforms or capital pool schemes. These investors usually possess bank cards, and their information is sold to downstream actors who use it to conduct card-based fraud and money laundering through payment routing.",
+    "usageExample": "“Massive supply of pyramid scheme leads and poverty relief scheme leads, capital pool app data collection — serious buyers only! Scammers stay away!” This appears in illegal data trading contexts involving sensitive personal information queries.",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "T0152": {
+    "title": "Software Kill",
+    "keywords": [
+      "Software Kill"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "A scam where fraudsters trick victims into installing a remote-control app, often disguised as a legitimate application. The victim is then persuaded to grant accessibility service permissions, allowing the scammer to take full control of the device, harvest information, and manipulate the phone to transfer money from the victim's bank account or trick them into sending funds to a designated account.",
+    "description": "A scam where fraudsters trick victims into installing a remote-control app, often disguised as a legitimate application. The victim is then persuaded to grant accessibility service permissions, allowing the scammer to take full control of the device, harvest information, and manipulate the phone to transfer money from the victim's bank account or trick them into sending funds to a designated account.",
+    "usageExample": "他按对方要求下了个会议软件，开了共享屏幕，结果就被软件杀了，眼睁睁看着手机自己动，把钱转走了。",
+    "relatedRisks": [
+      "R0044",
+      "R0032",
+      "R0131"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0064",
+      "AT0066",
+      "AT0067",
+      "AT0053-002"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0043"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

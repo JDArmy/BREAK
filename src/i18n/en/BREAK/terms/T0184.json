@@ -1,0 +1,35 @@
+{
+  "T0184": {
+    "title": "Spouse Lookup",
+    "keywords": [
+      "Spouse Lookup",
+      "Interface po/library Po"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illicit data trading, “po” stands for spouse. “API po” refers to obtaining a target’s spouse information by exploiting API vulnerabilities; “database po” refers to querying spouse data from social engineering databases.",
+    "description": "In illicit data trading, the term “po” is shorthand for spouse. “API po” describes the method of acquiring a target’s marital partner information through exploiting security flaws in application programming interfaces. “Database po” refers to retrieving spouse-related data from a social engineering or doxing database.",
+    "usageExample": "“Nationwide text-based spouse records with divorce/marriage status, includes both parties’ frequently used numbers, with dates, instant delivery.”",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "T0426": {
+    "title": "Upfront Costs",
+    "keywords": [
+      "Upfront Costs",
+      "Cost"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "在背债骗贷操作中，为包装借款人资质所投入的前期费用总称。",
+    "description": "背债中介在操作大额贷款欺诈时，需要为背债人打造虚假的优质借款人形象，这涉及一系列前期投入。这些成本包括购买空壳企业执照、办理虚假过户、制造虚假经营流水、补缴社保或公积金等。中介通常将这些成本转嫁给背债人或下游中介，以降低自身风险。一旦贷款失败或被风控拦截，这些投入将成为沉没成本，加剧参与方的财务损失。",
+    "usageExample": "全网收单：年化3.6%接单包落地，成本低，先息后本，随借随还，无压力。",
+    "relatedRisks": [
+      "R0146",
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

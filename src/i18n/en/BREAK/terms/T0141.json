@@ -1,0 +1,36 @@
+{
+  "T0141": {
+    "title": "Instant-Scan Pack",
+    "keywords": [
+      "Instant-Scan Pack",
+      "Scan As Soon As You Send It"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "A rapid QR code payment action required when a payment code is displayed, as these codes are time-sensitive. To avoid expiration, the code must be scanned immediately by a merchant device or another user's scanning function to complete the transaction.",
+    "description": "A rapid QR code payment action required when a payment code is displayed, as these codes are time-sensitive. To avoid expiration, the code must be scanned immediately by a merchant device or another user's scanning function to complete the transaction.",
+    "usageExample": "“群里一直催‘发就扫’，我码刚出来不到十秒就被扫走了，根本来不及反应。”",
+    "relatedRisks": [
+      "R0044",
+      "R0032",
+      "R0131"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0064",
+      "AT0066",
+      "AT0067",
+      "AT0053-002"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0043"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

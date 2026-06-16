@@ -1,0 +1,31 @@
+{
+  "T0118": {
+    "title": "Student Lead",
+    "keywords": [
+      "Student Lead",
+      "Student Fish"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "In fraud contexts, refers to students, particularly those seeking part-time work. Due to their flexible schedules and lack of experience, they are prime targets. Scammers post seemingly legitimate job ads, such as online surveys or ad clicking, requiring upfront 'deposits' or 'training fees' for non-existent or exploitative work.",
+    "description": "In fraud contexts, refers to students, particularly those seeking part-time work. Due to their flexible schedules and lack of experience, they are prime targets. Scammers post seemingly legitimate job ads, such as online surveys or ad clicking, requiring upfront 'deposits' or 'training fees' for non-existent or exploitative work.",
+    "relatedRisks": [
+      "R0095",
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

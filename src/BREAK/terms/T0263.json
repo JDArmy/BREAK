@@ -1,0 +1,35 @@
+{
+  "T0263": {
+    "title": "假粉",
+    "keywords": [
+      "假粉"
+    ],
+    "aliases": [],
+    "category": "业务欺诈",
+    "definition": "假粉指通过非自然增长手段获取的、无真实社交价值的虚假粉丝账号。",
+    "description": "这些账号通常由机器批量注册生成，缺乏真实用户行为，仅用于虚增账号的关注量。在引流场景中，假粉用来营造虚假的热度和信任度，吸引真实用户上钩。大量使用假粉会严重污染平台数据，并成为后续诈骗活动的流量基础。",
+    "usageExample": "出假粉，上码上q，可做数据",
+    "relatedRisks": [
+      "R0017",
+      "R0017-001",
+      "R0005"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0044",
+      "AT0009",
+      "AT0016"
+    ],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0006",
+      "TA0007"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "T0008": {
+    "title": "Payout",
+    "keywords": [
+      "Payout",
+      "commission payout",
+      "task commission",
+      "rebate payout",
+      "payout settlement",
+      "task reimbursement",
+      "commission return",
+      "payout processing",
+      "participant payout"
+    ],
+    "aliases": [
+      "Return Home"
+    ],
+    "category": "Marketing Fraud",
+    "definition": "The return of funds or commission in marketing fraud, where a task organizer pays a participant after task completion, often including reimbursement for upfront costs and a commission in scalper reselling schemes.",
+    "description": "The return of funds or commission in marketing fraud, where a task organizer pays a participant after task completion, often including reimbursement for upfront costs and a commission in scalper reselling schemes.",
+    "relatedRisks": [
+      "R0003",
+      "R0005",
+      "R0070"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0002"
+    ],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

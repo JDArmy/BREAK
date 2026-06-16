@@ -1,0 +1,36 @@
+{
+  "T0103": {
+    "title": "拖库",
+    "keywords": [
+      "拖库"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指黑客通过技术手段从目标服务器上整体导出数据库的窃取行为。",
+    "description": "攻击者通过漏洞利用、权限提升或内鬼配合，获得数据库的完全访问权限后，将整个数据库文件打包下载。窃取的数据通常包含海量用户信息，是后续“卖库”和“洗料”的源头，对企业和用户造成无法挽回的损失。",
+    "relatedRisks": [
+      "R0078",
+      "R0089",
+      "R0092",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01",
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

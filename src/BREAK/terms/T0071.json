@@ -1,0 +1,30 @@
+{
+  "T0071": {
+    "title": "Gm料",
+    "keywords": [
+      "Gm料"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "Gm料指在非法数据交易中专为股民定制的个人信息数据。",
+    "description": "这类数据精准定位高净值或活跃股民，包含其投资偏好、持仓情况等敏感信息。黑产利用这些数据实施荐股诈骗、诱导接盘等非法活动，单笔诈骗金额往往巨大。因其转化率高、变现能力强，Gm料在暗网交易中属于高价商品。",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01",
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

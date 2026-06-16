@@ -1,0 +1,29 @@
+{
+  "T0146": {
+    "title": "盒饭",
+    "keywords": [
+      "盒饭"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "诈骗者冒充大客户，用虚假大额订单诱骗商家垫付货款的骗局。",
+    "description": "诈骗者通常伪装成学校、部队等权威单位，以紧急采购为名联系商家，订购其不经营的特定品牌商品。当商家表示无货时，诈骗者便提供一个虚假供应商的联系方式，诱骗商家先行垫资采购。商家一旦向假供应商打款，诈骗者便会失联，导致商家钱货两空。",
+    "usageExample": "昨天有个饭店老板接到个部队的盒饭大单，垫了八万块买指定罐头，结果对方和供应商一起消失了。",
+    "relatedRisks": [
+      "R0095",
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

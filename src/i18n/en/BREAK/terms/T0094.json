@@ -1,0 +1,30 @@
+{
+  "T0094": {
+    "title": "Data Buyer",
+    "keywords": [
+      "Data Buyer",
+      "Diners"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "An individual or organization that purchases leaked data from data suppliers or other sources to conduct various illegal activities for profit. Data buyers commonly use the data for financial fraud, identity theft, cyberattacks, spam and advertising campaigns, social engineering attacks, resale, and data bartering. They are a critical link in the underground data trade, causing widespread harm to individuals, businesses, and society.",
+    "description": "An individual or organization that purchases leaked data from data suppliers or other sources to conduct various illegal activities for profit. Data buyers commonly use the data for financial fraud, identity theft, cyberattacks, spam and advertising campaigns, social engineering attacks, resale, and data bartering. They are a critical link in the underground data trade, causing widespread harm to individuals, businesses, and society.",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

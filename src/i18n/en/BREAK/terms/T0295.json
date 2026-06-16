@@ -1,0 +1,31 @@
+{
+  "T0295": {
+    "title": "Unwitting Merchant",
+    "keywords": [
+      "Unwitting Merchant",
+      "White Merchant"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "被黑产利用作为洗钱渠道但自身不知情的正规商户。",
+    "description": "黑产通过盗刷或诈骗获取资金后，在白商户处购买高价值商品或服务，再转卖变现。商户在不知情中成为洗钱环节的一环，账户可能因异常交易被冻结。这种手法常见于电商平台，利用真实交易掩盖资金流向，给商户带来合规风险。",
+    "relatedRisks": [
+      "R0060",
+      "R0093"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0039",
+      "AT0040"
+    ],
+    "relatedThreatActors": [
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

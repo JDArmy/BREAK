@@ -35,18 +35,22 @@ const risks = loadAllJson(join(ROOT, "risks"));
 const avoidances = loadAllJson(join(ROOT, "avoidances"));
 const attackTools = loadAllJson(join(ROOT, "attack-tools"));
 const threatActors = loadAllJson(join(ROOT, "threat-actors"));
+const terms = loadAllJson(join(ROOT, "terms"));
 const businessScenes = loadAllJson(join(ROOT, "business-scenes"));
 
 const enRisks = loadAllJson(join(I18N_EN_ROOT, "risks"));
 const enAvoidances = loadAllJson(join(I18N_EN_ROOT, "avoidances"));
 const enAttackTools = loadAllJson(join(I18N_EN_ROOT, "attack-tools"));
 const enThreatActors = loadAllJson(join(I18N_EN_ROOT, "threat-actors"));
+const enTerms = loadAllJson(join(I18N_EN_ROOT, "terms"));
 const enBusinessScenes = loadAllJson(join(I18N_EN_ROOT, "business-scenes"));
 
 const riskIds = Object.keys(risks);
 const avoidanceIds = Object.keys(avoidances);
 const attackToolIds = Object.keys(attackTools);
 const threatActorIds = Object.keys(threatActors);
+const termIds = Object.keys(terms);
+const businessSceneIds = Object.keys(businessScenes);
 
 describe("数据完整性", () => {
   describe("必填字段", () => {
@@ -92,6 +96,17 @@ describe("数据完整性", () => {
       expect(missing, `缺少必填字段: ${missing.join(", ")}`).toEqual([]);
     });
 
+    it("所有 Term 条目均含 title, category, definition, description", () => {
+      const missing: string[] = [];
+      for (const [id, entity] of Object.entries(terms)) {
+        if (!entity.title) missing.push(`${id}.title`);
+        if (!entity.category) missing.push(`${id}.category`);
+        if (!entity.definition) missing.push(`${id}.definition`);
+        if (!entity.description) missing.push(`${id}.description`);
+      }
+      expect(missing, `缺少必填字段: ${missing.join(", ")}`).toEqual([]);
+    });
+
     it("所有 Risk 条目均含 keywords", () => {
       const missing: string[] = [];
       for (const [id, entity] of Object.entries(risks)) {
@@ -132,6 +147,26 @@ describe("数据完整性", () => {
       expect(missing, `缺少 keywords: ${missing.join(", ")}`).toEqual([]);
     });
 
+    it("所有 Term 条目均含 keywords", () => {
+      const missing: string[] = [];
+      for (const [id, entity] of Object.entries(terms)) {
+        if (!Array.isArray(entity.keywords) || entity.keywords.length === 0) {
+          missing.push(`${id}.keywords`);
+        }
+      }
+      expect(missing, `缺少 keywords: ${missing.join(", ")}`).toEqual([]);
+    });
+
+    it("所有英文 Risk 条目均含 keywords", () => {
+      const missing: string[] = [];
+      for (const [id, entity] of Object.entries(enRisks)) {
+        if (!Array.isArray(entity.keywords) || entity.keywords.length === 0) {
+          missing.push(`${id}.keywords`);
+        }
+      }
+      expect(missing, `英文 Risk 缺少 keywords: ${missing.slice(0, 10).join(", ")}${missing.length > 10 ? ` ...共${missing.length}条` : ""}`).toEqual([]);
+    });
+
     it("所有关键词不得存在大小写意义上的重复，也不得直接复写 title", () => {
       const issues: string[] = [];
       const allEntities = [
@@ -139,6 +174,7 @@ describe("数据完整性", () => {
         ...Object.entries(avoidances).map(([id, e]) => [id, e] as const),
         ...Object.entries(attackTools).map(([id, e]) => [id, e] as const),
         ...Object.entries(threatActors).map(([id, e]) => [id, e] as const),
+        ...Object.entries(terms).map(([id, e]) => [id, e] as const),
       ];
 
       for (const [id, entity] of allEntities) {
@@ -176,6 +212,7 @@ describe("数据完整性", () => {
         ...Object.entries(avoidances).map(([id, e]) => [id, e] as const),
         ...Object.entries(attackTools).map(([id, e]) => [id, e] as const),
         ...Object.entries(threatActors).map(([id, e]) => [id, e] as const),
+        ...Object.entries(terms).map(([id, e]) => [id, e] as const),
       ];
       for (const [id, entity] of allEntities) {
         const refs = entity.references as Array<Record<string, unknown>> | undefined;
@@ -298,6 +335,56 @@ describe("数据完整性", () => {
       }
       expect(invalid, `无效引用: ${invalid.slice(0, 10).join(", ")}`).toEqual([]);
     });
+
+    it("所有 Term.relatedRisks 引用的 ID 在 Risk 中存在", () => {
+      const invalid: string[] = [];
+      for (const [id, entity] of Object.entries(terms)) {
+        for (const ref of (entity.relatedRisks as string[] | undefined) || []) {
+          if (!riskIds.includes(ref)) invalid.push(`${id}.relatedRisks: ${ref}`);
+        }
+      }
+      expect(invalid, `无效引用: ${invalid.slice(0, 10).join(", ")}`).toEqual([]);
+    });
+
+    it("所有 Term.relatedAvoidances 引用的 ID 在 Avoidance 中存在", () => {
+      const invalid: string[] = [];
+      for (const [id, entity] of Object.entries(terms)) {
+        for (const ref of (entity.relatedAvoidances as string[] | undefined) || []) {
+          if (!avoidanceIds.includes(ref)) invalid.push(`${id}.relatedAvoidances: ${ref}`);
+        }
+      }
+      expect(invalid, `无效引用: ${invalid.slice(0, 10).join(", ")}`).toEqual([]);
+    });
+
+    it("所有 Term.relatedAttackTools 引用的 ID 在 AttackTool 中存在", () => {
+      const invalid: string[] = [];
+      for (const [id, entity] of Object.entries(terms)) {
+        for (const ref of (entity.relatedAttackTools as string[] | undefined) || []) {
+          if (!attackToolIds.includes(ref)) invalid.push(`${id}.relatedAttackTools: ${ref}`);
+        }
+      }
+      expect(invalid, `无效引用: ${invalid.slice(0, 10).join(", ")}`).toEqual([]);
+    });
+
+    it("所有 Term.relatedThreatActors 引用的 ID 在 ThreatActor 中存在", () => {
+      const invalid: string[] = [];
+      for (const [id, entity] of Object.entries(terms)) {
+        for (const ref of (entity.relatedThreatActors as string[] | undefined) || []) {
+          if (!threatActorIds.includes(ref)) invalid.push(`${id}.relatedThreatActors: ${ref}`);
+        }
+      }
+      expect(invalid, `无效引用: ${invalid.slice(0, 10).join(", ")}`).toEqual([]);
+    });
+
+    it("所有 Term.relatedBusinessScenes 引用的 ID 在 BusinessScene 中存在", () => {
+      const invalid: string[] = [];
+      for (const [id, entity] of Object.entries(terms)) {
+        for (const ref of (entity.relatedBusinessScenes as string[] | undefined) || []) {
+          if (!businessSceneIds.includes(ref)) invalid.push(`${id}.relatedBusinessScenes: ${ref}`);
+        }
+      }
+      expect(invalid, `无效引用: ${invalid.slice(0, 10).join(", ")}`).toEqual([]);
+    });
   });
 
   describe("i18n 同步", () => {
@@ -317,6 +404,10 @@ describe("数据完整性", () => {
       expect(Object.keys(enThreatActors).length).toBe(threatActorIds.length);
     });
 
+    it("中英文 Term 条目数一致", () => {
+      expect(Object.keys(enTerms).length).toBe(termIds.length);
+    });
+
     it("中英文 BusinessScene 条目数一致", () => {
       expect(Object.keys(enBusinessScenes).length).toBe(Object.keys(businessScenes).length);
     });
@@ -334,6 +425,9 @@ describe("数据完整性", () => {
       }
       for (const id of threatActorIds) {
         if (!enThreatActors[id]) missing.push(`threatActor:${id}`);
+      }
+      for (const id of termIds) {
+        if (!enTerms[id]) missing.push(`term:${id}`);
       }
       expect(missing, `EN 缺少 key: ${missing.slice(0, 10).join(", ")}`).toEqual([]);
     });

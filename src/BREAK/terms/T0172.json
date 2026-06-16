@@ -1,0 +1,29 @@
+{
+  "T0172": {
+    "title": "柜台",
+    "keywords": [
+      "柜台"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "黑产对银行内部人员的代称，暗示其能提供真实可靠的金融数据。",
+    "description": "柜台通常指被收买或利用的银行职员，他们滥用权限非法查询客户账户、流水等敏感信息。黑产以此标榜数据来源权威、时效性强，用于吸引买家。这类内鬼行为直接破坏金融机构公信力，是金融诈骗和洗钱活动的重要一环。",
+    "usageExample": "“柜台 全系列 周日回 价格超低 拿单砍我”",
+    "relatedRisks": [
+      "R0078"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "T0094": {
+    "title": "料客",
+    "keywords": [
+      "料客"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指在黑产链条中，购买并使用泄露数据从事非法活动的个人或组织。",
+    "description": "料客是地下数据交易的终端消费者或二级分销商，他们从料主或料站购买各类数据，并将其转化为实际犯罪收益。常见的下游活动包括实施金融诈骗、盗刷银行卡、进行社交工程攻击或二次转卖数据。他们是泄露数据危害的直接执行者，将信息滥用的风险转化为现实。",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

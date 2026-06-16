@@ -1,0 +1,28 @@
+{
+  "T0027": {
+    "title": "有肉",
+    "keywords": [
+      "有肉"
+    ],
+    "aliases": [],
+    "category": "营销欺诈",
+    "definition": "黑灰产对某项欺诈活动或目标具有高额经济回报的评价。",
+    "description": "从业者用“肉”指代利润，“有肉”即意味着攻击某个平台、参与某次营销活动或执行某种欺诈手法能带来丰厚的非法收益。判断一个目标是否“有肉”，是黑产决定是否投入资源和人力进行攻击的核心依据。高额返现、大额无门槛优惠券、高价值实物礼品等活动，通常被标记为“有肉”的目标。",
+    "relatedRisks": [
+      "R0009",
+      "R0055",
+      "R0064"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0001",
+      "TA0001-001"
+    ],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

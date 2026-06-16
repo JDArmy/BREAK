@@ -1,0 +1,28 @@
+{
+  "T0005": {
+    "title": "大肉",
+    "keywords": [
+      "大肉"
+    ],
+    "aliases": [],
+    "category": "营销欺诈",
+    "definition": "指黑产活动中利润空间极大、价值极高的目标或单次非法收益。",
+    "description": "在羊毛党或黑客圈内，“大肉”意味着发现了平台存在严重漏洞或高额无门槛优惠，可供团伙一次性攫取巨额利益。这类目标往往涉及金融支付漏洞或大额满减活动，一旦被攻破，将给企业造成灾难性的资金损失。",
+    "relatedRisks": [
+      "R0009",
+      "R0055",
+      "R0064"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0001",
+      "TA0001-001"
+    ],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

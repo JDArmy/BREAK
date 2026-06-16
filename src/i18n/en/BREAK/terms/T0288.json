@@ -1,0 +1,29 @@
+{
+  "T0288": {
+    "title": "Erotic-Chat Funds",
+    "keywords": [
+      "Erotic-Chat Funds",
+      "Chat"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "铯聊指通过社交软件进行色情诱导以骗取转账付款的诈骗手法。",
+    "description": "铯聊是色情引流诈骗的变体说法，黑灰产从业者通过社交软件伪装成色情服务提供者，诱导受害人添加好友后进行私密聊天。在聊天过程中以各种名目要求受害人转账付款，但从不提供实际服务。这类诈骗手法成本低、隐蔽性强，受害人往往因羞于报案而让犯罪分子逍遥法外，资金追回难度极大。",
+    "relatedRisks": [
+      "R0060",
+      "R0095"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0014",
+      "TA0015"
+    ],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

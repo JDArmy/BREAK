@@ -1,0 +1,25 @@
+{
+  "T0053": {
+    "title": "内返",
+    "keywords": [
+      "内返"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "内返指支付给促成欺诈贷款的内部员工或中介的返点佣金。",
+    "description": "在骗贷链条中，内返是驱动银行内部人员或贷款中介违规操作的利益输送。他们为了获取高额返利，会主动协助黑产包装虚假资料、放松审核标准，甚至直接利用内部权限放行高风险申请，导致大量坏账。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS02",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

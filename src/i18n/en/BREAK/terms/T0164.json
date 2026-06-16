@@ -1,0 +1,36 @@
+{
+  "T0164": {
+    "title": "Social Data Pull",
+    "keywords": [
+      "Social Data Pull",
+      "Slight Mention"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In underground data trading, an illegal operation that uses technical tools to export private data such as chat logs and contact lists from mainstream social platforms.",
+    "description": "In underground data trading, an illegal operation that uses technical tools to export private data such as chat logs and contact lists from mainstream social platforms.",
+    "usageExample": "\"Exclusive forced extraction, micro-extraction without notes, comes with all social platform accounts, no conversion needed, with avatars, document receipt. Don't report sensitive stuff.\"",
+    "relatedRisks": [
+      "R0078",
+      "R0089",
+      "R0092",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

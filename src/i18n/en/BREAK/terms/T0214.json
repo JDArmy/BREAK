@@ -1,0 +1,31 @@
+{
+  "T0214": {
+    "title": "Gift-Card Installment Data",
+    "keywords": [
+      "Gift-Card Installment Data",
+      "Card Coupon material/E Card Material"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "指支持购买E卡或卡券并分期还款的小型套现平台，其用户信息在非法交易中被称为“卡券料”。",
+    "description": "这类平台允许用户购买虚拟卡券后转卖套现，实质是非法放贷。黑产收集这些参与套现的用户数据，打包成“卡券料”出售。这些数据常被用于推销其他非法借贷产品，或对用户实施精准诈骗。",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01",
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

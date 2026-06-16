@@ -1,0 +1,41 @@
+{
+  "T0229": {
+    "title": "秒死",
+    "keywords": [
+      "秒死"
+    ],
+    "aliases": [],
+    "category": "业务欺诈",
+    "definition": "账号或设备在登录后极短时间内被平台风控系统封禁。",
+    "description": "黑灰产使用黑设备、异常IP或同质化脚本登录时，触发平台实时风控导致“秒死”。这常见于批量注册、撞库或养号初期，账号存活时间极短，无法用于后续欺诈。操作者需不断更换IP、设备指纹或登录环境来对抗，但成功率低，大量账号资源因此报废，增加黑产成本。",
+    "usageExample": "三网实名白号，所有功能正常，包登陆，包秒死，出货中。",
+    "relatedRisks": [
+      "R0017",
+      "R0017-001",
+      "R0005",
+      "R0030",
+      "R0030-001",
+      "R0032"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0044",
+      "AT0009",
+      "AT0016",
+      "AT0003",
+      "AT0007",
+      "AT0021"
+    ],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0006",
+      "TA0007"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

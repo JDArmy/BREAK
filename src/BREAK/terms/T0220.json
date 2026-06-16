@@ -1,0 +1,34 @@
+{
+  "T0220": {
+    "title": "窜货",
+    "keywords": [
+      "窜货"
+    ],
+    "aliases": [],
+    "category": "业务欺诈",
+    "definition": "窜货指经销商将商品跨区域或跨渠道违规销售，以牟取不正当利益。",
+    "description": "在电商场景中，黑灰产利用不同平台间的补贴差价，将低价渠道获取的商品搬运到高价平台销售，破坏品牌方的价格体系。这种行为常与虚假交易、刷单配合，套取平台补贴或逃避授权限制。窜货不仅损害品牌方利益，也扰乱了市场秩序。",
+    "relatedRisks": [
+      "R0017",
+      "R0017-001",
+      "R0005"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0044",
+      "AT0009",
+      "AT0016"
+    ],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0006",
+      "TA0007"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

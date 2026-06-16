@@ -1,0 +1,24 @@
+{
+  "T0049": {
+    "title": "撸贷",
+    "keywords": [
+      "撸贷"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "撸贷指以不还款为目的，通过伪造资料批量申请并骗取小额网贷资金的行为。",
+    "description": "黑产从业者利用虚假身份、伪造的收入证明或工作信息，在多个平台集中申请贷款。一旦资金到手，立即切断联系并逃废债务，造成机构坏账。这种操作常针对风控薄弱、放款快的小额现金贷产品，是典型的骗贷手法。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

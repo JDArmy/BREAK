@@ -1,0 +1,31 @@
+{
+  "T0128": {
+    "title": "Pig Feed",
+    "keywords": [
+      "Pig Feed"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "Pre-scripted dialogues or scripts used to lure victims into scams.",
+    "description": "Pre-scripted dialogues or scripts used to lure victims into scams.",
+    "usageExample": "这套猪饲料是针对离异女性的，开场白要用情感共鸣的话题切入。",
+    "relatedRisks": [
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001",
+      "AT0070"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008",
+      "TA0042"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "T0310": {
+    "title": "聚合码",
+    "keywords": [
+      "聚合码"
+    ],
+    "aliases": [],
+    "category": "跑分洗钱",
+    "definition": "聚合码是整合了多种支付方式的收款二维码，黑产利用其掩盖资金流向，增加追踪难度。",
+    "description": "聚合码将微信、支付宝、云闪付等多种支付入口整合为一个二维码，方便用户支付。黑产利用这一特性，让受害者扫码后通过不同渠道付款，以此混淆资金来源和去向。在洗钱场景中，聚合码常被用于接收“团购料”等小额多笔的非法资金，以规避单一渠道的风控。",
+    "usageExample": "招聚合码收小额团购料，28个点，单笔90-110，日量1500-2000。",
+    "relatedRisks": [
+      "R0060",
+      "R0093",
+      "R0094"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026",
+      "AT0039",
+      "AT0040"
+    ],
+    "relatedThreatActors": [
+      "TA0014",
+      "TA0006-003"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "T0114": {
+    "title": "Friend-Social Lead",
+    "keywords": [
+      "Friend-Social Lead",
+      "Friend Fish"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "In fraud operations, a category of targets who are cultivated through feigned friendship or impersonation of a friend to gain trust. This strategy exploits interpersonal relationships and emotional trust to facilitate the scam.",
+    "description": "In fraud operations, a category of targets who are cultivated through feigned friendship or impersonation of a friend to gain trust. This strategy exploits interpersonal relationships and emotional trust to facilitate the scam.",
+    "relatedRisks": [
+      "R0095",
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

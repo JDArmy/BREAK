@@ -1,0 +1,35 @@
+{
+  "T0164": {
+    "title": "微提",
+    "keywords": [
+      "微提"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "黑产利用技术工具，非法导出大众社交平台用户聊天记录及联系人等私有数据。",
+    "description": "通常利用系统漏洞或权限滥用，在用户无感知的情况下批量提取社交账号内的私密信息。提取出的数据包含文字、图片、视频等聊天内容，可用于敲诈勒索、精准营销或下游诈骗，对个人隐私造成严重侵害。",
+    "usageExample": "“微提最新技术，只要账号就能出通讯录和聊天记录，需要的老板滴滴。”",
+    "relatedRisks": [
+      "R0078",
+      "R0089",
+      "R0092",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

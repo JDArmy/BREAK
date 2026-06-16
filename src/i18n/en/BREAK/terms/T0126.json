@@ -1,0 +1,33 @@
+{
+  "T0126": {
+    "title": "Streetwalking Account",
+    "keywords": [
+      "Streetwalking Account",
+      "Station Street Number"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "Refers to WeChat accounts primarily used for promotion and marketing by exploiting social media features like 'People Nearby' to gain exposure. In plain terms, these accounts make themselves discoverable in the 'People Nearby' function to display advertisements and attract more attention and potential customers.",
+    "description": "These accounts typically use female profile images to attract male followers or to direct traffic to other accounts via QR codes. Accounts operated in this manner are called street-walking accounts and are commonly used in pig-butchering scams.",
+    "usageExample": "这批站街号刚挂上附近的人，一晚上就有几十个男的来加好友。",
+    "relatedRisks": [
+      "R0150",
+      "R0095"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001",
+      "AT0070"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008",
+      "TA0042"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

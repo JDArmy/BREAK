@@ -1,0 +1,32 @@
+{
+  "T0031": {
+    "title": "一机多单",
+    "keywords": [
+      "一机多单",
+      "一鸡多蛋"
+    ],
+    "aliases": [
+      "一鸡多蛋"
+    ],
+    "category": "营销欺诈",
+    "definition": "指一台POS机违规绑定多个商户，用于信用卡套现或养卡。",
+    "description": "此操作违反银联一机一户的规定，是羊毛党进行信用卡养卡的常用手段。通过在一台POS机上模拟多个不同行业的商户，持卡人可以制造虚假的多元化消费记录，规避银行风控，并利用不同商户的费率差异套取更多信用卡积分或返现。这种行为属于违规甚至违法操作，是金融欺诈的一种形式。",
+    "relatedRisks": [
+      "R0009",
+      "R0055",
+      "R0064"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0001",
+      "TA0001-001"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

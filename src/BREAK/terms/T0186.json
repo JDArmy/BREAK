@@ -1,0 +1,34 @@
+{
+  "T0186": {
+    "title": "机主",
+    "keywords": [
+      "机主"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指手机号码实际使用者或实名登记者的个人身份信息。",
+    "description": "在非法数据交易中，机主信息通常包含姓名、身份证号及关联账户等核心隐私。黑产人员通过内部工号或泄露渠道获取这些数据，用于精准诈骗、账户盗用或身份冒用。这类信息常以低价批量出售，成为下游犯罪的基础资源。",
+    "usageExample": "机主4u一个，工号出单，支持任何担保，有群的先单子。",
+    "relatedRisks": [
+      "R0078",
+      "R0089",
+      "R0092",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

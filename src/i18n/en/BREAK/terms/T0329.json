@@ -1,0 +1,34 @@
+{
+  "T0329": {
+    "title": "Cryptocurrency",
+    "keywords": [
+      "Cryptocurrency"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "加密货币是黑灰产用于混淆资金流向的虚拟资产，充当匿名清洗非法所得的转移媒介。",
+    "description": "在跑分洗钱链条中，加密货币（如USDT、BTC）被用作核心清洗工具。黑产人员将非法人民币资金兑换为加密货币，利用其去中心化和跨境特性，切断资金与原始犯罪的关联。该方式常见于跨境网赌、诈骗回款等场景，因其难以追踪，极大增加了执法机关冻结和追查的难度。",
+    "usageExample": "💰💰高价白资 收加密货币💰💰 04 运作模式跑分洗钱的常见模式与利益分配",
+    "relatedRisks": [
+      "R0060",
+      "R0093",
+      "R0121"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026",
+      "AT0060",
+      "AT0039"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS15"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

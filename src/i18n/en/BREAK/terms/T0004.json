@@ -1,0 +1,33 @@
+{
+  "T0004": {
+    "title": "Dropshipping",
+    "keywords": [
+      "Dropshipping",
+      "order fulfillment",
+      "third-party fulfillment",
+      "logistics obscuring",
+      "fulfillment service",
+      "shipping proxy",
+      "blind dropshipping",
+      "package forwarding",
+      "order masking"
+    ],
+    "aliases": [
+      "Wearing Hair"
+    ],
+    "category": "Marketing Fraud",
+    "definition": "A service model in e-commerce fraud where a third party handles order fulfillment on behalf of the original seller, including packaging, logistics, and shipping, often to obscure the source of illicit goods.",
+    "description": "A service model in e-commerce fraud where a third party handles order fulfillment on behalf of the original seller, including packaging, logistics, and shipping, often to obscure the source of illicit goods.",
+    "relatedRisks": [
+      "R0005"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

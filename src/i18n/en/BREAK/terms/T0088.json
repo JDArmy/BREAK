@@ -1,0 +1,28 @@
+{
+  "T0088": {
+    "title": "Stock Advisory Lead Data",
+    "keywords": [
+      "Stock Advisory Lead Data",
+      "Diagnostic Information"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illegal data trading, this refers to sensitive client information from stock trading platforms or investment advisory firms, such as personal identity data, trading history, and investment preferences. Once illegally obtained by cybercriminals, this data is usually resold to third parties for illegal activities such as targeted marketing and fraud.",
+    "description": "In illegal data trading, this refers to sensitive client information from stock trading platforms or investment advisory firms, such as personal identity data, trading history, and investment preferences. Once illegally obtained by cybercriminals, this data is usually resold to third parties for illegal activities such as targeted marketing and fraud.",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

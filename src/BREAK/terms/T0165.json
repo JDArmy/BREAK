@@ -1,0 +1,34 @@
+{
+  "T0165": {
+    "title": "过库",
+    "keywords": [
+      "过库"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "黑产对非法获取的个人信息进行数据库比对去重，筛选出新鲜可用数据的操作。",
+    "description": "黑产从业者维护一个庞大的历史数据库，新获取的数据需先“过库”，剔除已失效、重复或已被多次倒卖的旧数据。经过清洗的数据被称为“新鲜料”，在市场上能卖出更高价格，用于下游的精准诈骗或营销。",
+    "usageExample": "“新到一批料子，已经过库，全是没被用过的纯一手，要的来。”",
+    "relatedRisks": [
+      "R0078",
+      "R0089",
+      "R0092",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

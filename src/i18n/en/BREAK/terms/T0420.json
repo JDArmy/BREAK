@@ -1,0 +1,26 @@
+{
+  "T0420": {
+    "title": "Four-Flow Consistency",
+    "keywords": [
+      "Four-Flow Consistency",
+      "Four Streams In One"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "黑产伪造合同、物流、资金、发票四方面数据，以包装虚假企业经营状况。",
+    "description": "在企业背债骗贷中，黑产为将空壳公司包装成正常经营的企业，会安排虚假的上下游交易合同、伪造物流单据、制造资金流水并虚开发票，使四方面数据相互印证。这种高度仿真的数据闭环能有效欺骗金融机构的风控系统，以骗取高额企业贷款。",
+    "usageExample": "全国贸易带量增量资金服务，企业孵化，上下游合同包票，四流合一，年中美化财务数据。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

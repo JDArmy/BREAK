@@ -1,0 +1,31 @@
+{
+  "T0127": {
+    "title": "猪",
+    "keywords": [
+      "猪"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "诈骗团伙内部对诈骗目标、受害者的蔑称，意指待宰割的对象。",
+    "description": "在诈骗链条中，受害者被彻底物化，被视作可以带来收益的“猪”。从寻找目标开始，诈骗分子就将其当作待养肥的牲畜，毫无怜悯之心。这个称呼反映了诈骗团伙对受害者的极端冷漠和物化，是黑产内部去人性化操作的一部分。",
+    "usageExample": "这头猪养了两个月，终于可以杀了，准备收网。",
+    "relatedRisks": [
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001",
+      "AT0070"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008",
+      "TA0042"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

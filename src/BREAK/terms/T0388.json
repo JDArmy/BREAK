@@ -1,0 +1,25 @@
+{
+  "T0388": {
+    "title": "一证一卡",
+    "keywords": [
+      "一证一卡"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "指贷款申请时仅需提供身份证和银行卡的简易模式，常见于车贷欺诈场景。",
+    "description": "黑产利用部分金融机构审核宽松的漏洞，仅凭身份证和银行卡就为客户申请车贷。实际操作中，黑产往往会为客户伪造驾驶证等配套假证，以通过审核。这种模式极易被用于“买车套现”等欺诈活动。",
+    "usageExample": "两证一卡 信用记录 5.7结算；一证一卡 信用记录 5结算",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

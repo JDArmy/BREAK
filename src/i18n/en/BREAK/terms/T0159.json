@@ -1,0 +1,29 @@
+{
+  "T0159": {
+    "title": "Result Delivery",
+    "keywords": [
+      "Result Delivery",
+      "Reply"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illicit data trading, synonymous with delivering results, referring to the act of the service provider returning the queried data to the buyer, marking the completion of the transaction.",
+    "description": "In illicit data trading, synonymous with delivering results, referring to the act of the service provider returning the queried data to the buyer, marking the completion of the transaction.",
+    "usageExample": "\"Direct from the source, price: 200 RMB, results delivered in about ten minutes, affordable and cheap.\"",
+    "relatedRisks": [
+      "R0078"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

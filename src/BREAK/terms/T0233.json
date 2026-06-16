@@ -1,0 +1,38 @@
+{
+  "T0233": {
+    "title": "上车",
+    "keywords": [
+      "上车"
+    ],
+    "aliases": [],
+    "category": "业务欺诈",
+    "definition": "黑产圈内指抓住某个正在生效的套利或赔付漏洞窗口，及时参与操作。",
+    "description": "这类项目存活周期极短，通常几小时到几天就会被平台风控封堵，因此“上车”强调抢时间窗口。组织者会在群内发布项目状态，催促成员尽快用指定账号和手法完成刷单、虚假理赔等动作。一旦错过窗口，同一漏洞可能永久失效，参与者只能等待下一波漏洞放出。",
+    "usageExample": "这个运费险口子还能上车，要做的赶紧私我拿链接。",
+    "relatedRisks": [
+      "R0068",
+      "R0068-002",
+      "R0017",
+      "R0017-001",
+      "R0005"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0044",
+      "AT0009",
+      "AT0016"
+    ],
+    "relatedThreatActors": [
+      "TA0034",
+      "TA0009",
+      "TA0006",
+      "TA0007"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

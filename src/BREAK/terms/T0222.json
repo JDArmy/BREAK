@@ -1,0 +1,43 @@
+{
+  "T0222": {
+    "title": "代注册",
+    "keywords": [
+      "代注册"
+    ],
+    "aliases": [],
+    "category": "业务欺诈",
+    "definition": "代注册是代替他人批量创建平台账号的服务，常用于绕过实名限制或批量养号。",
+    "description": "黑灰产利用接码平台、虚拟号码或虚假身份信息，短时间内注册大量账号，用于后续的刷单、引流或诈骗。该服务为下游黑产提供了基础资源，是账号黑产链条的源头环节。批量注册的账号极易被用于发送垃圾信息或实施精准欺诈。",
+    "usageExample": "接代注册，口子快关了，要的速度。",
+    "relatedRisks": [
+      "R0030",
+      "R0030-001",
+      "R0017",
+      "R0017-001",
+      "R0005",
+      "R0032"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0003",
+      "AT0006",
+      "AT0044",
+      "AT0009",
+      "AT0016",
+      "AT0007",
+      "AT0021"
+    ],
+    "relatedThreatActors": [
+      "TA0003",
+      "TA0009",
+      "TA0006",
+      "TA0007"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

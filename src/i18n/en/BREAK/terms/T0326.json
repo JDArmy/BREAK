@@ -1,0 +1,33 @@
+{
+  "T0326": {
+    "title": "Third-Party Payment Platform",
+    "keywords": [
+      "Third-Party Payment Platform",
+      "Tripartite"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "第三方支付平台，黑产将其作为银行卡与最终收款账户之间的资金隔断层，用于跑分洗钱中的支付跳转。",
+    "description": "三方支付平台提供钱包充值、转账、消费等接口，黑产将赃款从银行卡转入三方账户，再通过多账户互转或购买虚拟商品等方式切断资金追溯路径。常见操作包括利用三方账户间转账、代付、发红包等功能进行资金混淆。因其独立于银行清算体系，可形成信息孤岛，成为跑分链条中关键的隔离层。",
+    "usageExample": "Three squares for large amounts, two cards for large amounts, must pass three squares, and sweep back.",
+    "relatedRisks": [
+      "R0060",
+      "R0093"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026",
+      "AT0039",
+      "AT0040"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

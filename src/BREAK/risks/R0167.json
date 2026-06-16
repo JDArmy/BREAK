@@ -5,7 +5,11 @@
     "description": "DAO 通过代币投票进行治理决策。攻击者可通过大量购买或借贷治理代币、利用闪电贷临时获得投票权、贿赂代币持有者、利用提案机制漏洞等方式，操纵投票结果通过恶意提案，如转移资金、修改合约参数、授予自己特权等。",
     "complexity": "高级",
     "influence": "DAO 资金被盗或滥用，治理机制失效，社区信任崩塌。",
-    "avoidances": [],
+    "avoidances": [
+      "A0119",
+      "A0120",
+      "A0121"
+    ],
     "references": [
       {
         "title": "DAO Governance Attack Vectors",

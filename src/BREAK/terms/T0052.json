@@ -1,0 +1,25 @@
+{
+  "T0052": {
+    "title": "买菜卡",
+    "keywords": [
+      "买菜卡"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "买菜卡指被黑产用于日常小额套现或洗钱活动的银行卡。",
+    "description": "黑产利用这类卡片在商户进行小额高频的虚假交易，模拟日常买菜等消费场景来规避风控。这些卡片通常来源非法，用于将诈骗或赌博资金化整为零地洗出，一旦被风控识别，卡内资金会被迅速转移。",
+    "usageExample": "他手里那批买菜卡每天在便利店刷几十笔，每笔几十块，用来把电诈的钱洗白。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

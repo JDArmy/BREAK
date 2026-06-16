@@ -1,0 +1,33 @@
+{
+  "T0039": {
+    "title": "Credit Easing",
+    "keywords": [
+      "Credit Easing",
+      "approval window",
+      "loose lending",
+      "easy credit period",
+      "underwriting easing",
+      "credit flood",
+      "approval rate spike",
+      "lending spree",
+      "relaxed underwriting"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "A loosening of lending standards by a financial institution, making credit approval easier. This can involve lowering interest rates, reducing credit score requirements, relaxing restrictions on loan usage, or streamlining the approval process.",
+    "description": "A loosening of lending standards by a financial institution, making credit approval easier. This can involve lowering interest rates, reducing credit score requirements, relaxing restrictions on loan usage, or streamlining the approval process.",
+    "usageExample": "内部消息，这两天XX银行大放水，无视查询次数，抓紧时间上车，晚了就关了。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

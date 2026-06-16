@@ -1,0 +1,30 @@
+{
+  "T0034": {
+    "title": "白户",
+    "keywords": [
+      "白户"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "指在征信系统中缺乏信用记录，导致金融机构难以评估其风险的个人。",
+    "description": "白户因无任何借贷历史，常被黑灰产视为优质物料，在Telegram、推特等平台被公开售卖。欺诈团伙利用这类身份申请贷款或信用卡，绕过风控模型，实施大规模信贷欺诈。被招募的“白户背债人”往往在不知情或利益诱惑下成为骗贷链条的一环，最终面临法律追责。",
+    "usageExample": "最近手头紧，看到群里有人收白户背债，说只要去签个字就能拿几万块，这种好事靠谱吗？",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】金融欺诈中的亡命之徒",
+        "link": "https://www.threathunter.cn/blog/f17db99edff"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

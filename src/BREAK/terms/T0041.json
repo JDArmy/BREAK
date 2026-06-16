@@ -1,0 +1,32 @@
+{
+  "T0041": {
+    "title": "公积金包装",
+    "keywords": [
+      "公积金包装",
+      "公积金伪造"
+    ],
+    "aliases": [
+      "公积金伪造"
+    ],
+    "category": "信贷欺诈",
+    "definition": "黑产通过伪造公积金数据或虚构劳动关系，包装出虚假的公积金缴纳记录，用于骗取金融机构个人信贷产品。",
+    "description": "黑产利用技术手段伪造虚假的公积金APP数据，或通过虚构劳动关系为客户补缴公积金，使其在申请消费贷、工薪贷时通过银行的资质审核。这种操作专门针对依赖公积金数据做风控的信贷产品，帮助无资质人员套取大额资金。一旦得手，金融机构将面临坏账损失。",
+    "relatedRisks": [
+      "R0146",
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [
+      {
+        "title": "【信贷欺诈】“公积金伪造”骗贷手法分析",
+        "link": "https://www.threathunter.cn/blog/a6c71ff0534"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

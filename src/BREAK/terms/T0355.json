@@ -1,0 +1,28 @@
+{
+  "T0355": {
+    "title": "开水箱",
+    "keywords": [
+      "开水箱"
+    ],
+    "aliases": [],
+    "category": "赌博",
+    "definition": "赌场工作人员对抽水金额进行清点结算。",
+    "description": "每场赌局结束后，荷官或账房将台面抽水归拢，现场清点现金或筹码，核对账目后封存入库。开水箱是赌场内部风控的关键动作，直接反映当台当日的抽水收益，防止工作人员私吞或账实不符。",
+    "relatedRisks": [
+      "R0097",
+      "R0060"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0016",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS06",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

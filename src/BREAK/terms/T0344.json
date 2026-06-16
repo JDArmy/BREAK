@@ -1,0 +1,35 @@
+{
+  "T0344": {
+    "title": "点位",
+    "keywords": [
+      "点位"
+    ],
+    "aliases": [],
+    "category": "跑分洗钱",
+    "definition": "在洗钱场景中，点位是指洗钱各环节参与方按比例抽取的佣金费率，用于利益分配。",
+    "description": "在跑分洗钱链条中，从“一道”到“卸货”的每个层级都会按约定点位抽取佣金，例如总流水的1%到5%不等。点位高低取决于账户质量、风险等级和资金规模，黑产群组中常以“点位57+”等形式招募合作方。点位分配机制是维系洗钱网络运转的核心利益纽带，也是黑产内部谈判的焦点。",
+    "usageExample": "招一道大混卡U车：汇率20+，点位57+，全程维护卸货。",
+    "relatedRisks": [
+      "R0060",
+      "R0093",
+      "R0095"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026",
+      "AT0039",
+      "AT0040"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014",
+      "TA0015"
+    ],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

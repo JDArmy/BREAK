@@ -1,0 +1,34 @@
+{
+  "T0091": {
+    "title": "开盒",
+    "keywords": [
+      "开盒"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指黑灰产分子非法获取并公开曝光他人隐私数据的行为。",
+    "description": "开盒是网络黑灰产中一种常见的恶意曝光手段，操作者通常在匿名群聊或社交平台上进行。他们整合从社工库、泄露数据库等渠道获取的碎片信息，拼凑出目标的身份证号、住址、社交关系、财务记录等完整档案。这种行为往往出于报复、炫耀或敲诈目的，会对受害者的人身安全和名誉造成严重威胁。",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

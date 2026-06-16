@@ -1,0 +1,34 @@
+{
+  "T0322": {
+    "title": "一类卡",
+    "keywords": [
+      "一类卡"
+    ],
+    "aliases": [],
+    "category": "跑分洗钱",
+    "definition": "银行体系中交易限额和权限最高的个人储蓄账户，是黑产跑分洗钱的首选资金入口。",
+    "description": "一类卡拥有单日大额转账、网银全功能开通等最高权限，黑产专门收购此类卡用于接收诈骗或赌资等上游非法资金。资金进入后通过多级拆分、跨行快转等方式快速离析，利用其高额度特性减少触发银行风控的概率。在黑市交易中，一类卡常与盾卡、信用卡、公户等打包出售，形成完整收款矩阵。",
+    "usageExample": "收一类卡、信用卡、盾卡、公户、无卡人头。",
+    "relatedRisks": [
+      "R0060",
+      "R0093"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026",
+      "AT0039",
+      "AT0040"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014",
+      "TA0015"
+    ],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

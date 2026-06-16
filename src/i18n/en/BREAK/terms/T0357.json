@@ -1,0 +1,29 @@
+{
+  "T0357": {
+    "title": "Table-Opening Fee",
+    "keywords": [
+      "Table-Opening Fee",
+      "Buy Diamonds"
+    ],
+    "aliases": [],
+    "category": "Gambling",
+    "definition": "线上赌博组织向赌博软件供应商支付的房间开通费用。",
+    "description": "网赌平台按开设的赌博房间数量向软件方付费，买钻越多，能同时容纳的赌局越多。这笔费用是网赌运营的固定成本，软件供应商借此持续获利，而平台则通过拉客下注来覆盖成本并赚取抽水。",
+    "relatedRisks": [
+      "R0097",
+      "R0060"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0016",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS06",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

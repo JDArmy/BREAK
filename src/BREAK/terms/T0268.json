@@ -1,0 +1,34 @@
+{
+  "T0268": {
+    "title": "开评号",
+    "keywords": [
+      "开评号"
+    ],
+    "aliases": [],
+    "category": "业务欺诈",
+    "definition": "开评号指具备评论权限、专用于发布刷评内容的黑产账号资源。",
+    "description": "这类账号通常绕过平台实名或行为门槛，被用于批量发布虚假好评、恶意差评或引导性评论。在电商刷单、舆情操控等场景中，开评号是执行水军任务的核心工具，能快速伪造口碑或攻击竞争对手。",
+    "relatedRisks": [
+      "R0017",
+      "R0017-001",
+      "R0005"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0044",
+      "AT0009",
+      "AT0016"
+    ],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0006",
+      "TA0007"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

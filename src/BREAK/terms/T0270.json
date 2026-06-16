@@ -1,0 +1,40 @@
+{
+  "T0270": {
+    "title": "跑量",
+    "keywords": [
+      "跑量"
+    ],
+    "aliases": [],
+    "category": "业务欺诈",
+    "definition": "跑量指通过投放或刷量手段获取大规模流量，以测试转化率或制造虚假热度。",
+    "description": "黑产从业者利用批量账号或自动化脚本，短时间内制造大量点击、曝光或访问。这常用于新上线诈骗页面的引流测试，或为直播、商品刷取虚假人气，以吸引真实用户跟风参与。",
+    "relatedRisks": [
+      "R0017",
+      "R0017-001",
+      "R0005",
+      "R0024",
+      "R0007-003"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0044",
+      "AT0009",
+      "AT0016",
+      "AT0005",
+      "AT0050"
+    ],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0006",
+      "TA0007",
+      "TA0013"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS05",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

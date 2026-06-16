@@ -1,0 +1,44 @@
+{
+  "T0009": {
+    "title": "Fixed Payout",
+    "keywords": [
+      "Fixed Payout",
+      "fixed commission",
+      "task payout",
+      "predetermined payout",
+      "fixed rebate",
+      "fixed reward",
+      "task reward",
+      "fixed compensation",
+      "payout listing"
+    ],
+    "aliases": [],
+    "category": "Marketing Fraud",
+    "definition": "Fixed payout, referring to the predetermined amount a task participant (bonus abuser) receives upon completing an assignment in fraud or grey-market operations. This term commonly appears in task groups involving proxy purchasing or compensation claims, where the payout is explicitly stated in the task listing.",
+    "description": "Fixed payout, referring to the predetermined amount a task participant (bonus abuser) receives upon completing an assignment in fraud or grey-market operations. This term commonly appears in task groups involving proxy purchasing or compensation claims, where the payout is explicitly stated in the task listing.",
+    "usageExample": "XXX Ginger Shampoo & Conditioner for strengthening roots and oil control, silicone-free, 4/CZ0001 xK2ZWxxxx/:// XXX Both can be selected in quantity 2, with a 25-yuan coupon. Pay 195, rebate 9.35%, cost 176.7, fixed payout 184. Kunshan, Suzhou, Jiangsu Province, XXX + XXX Name: Code XXX, use your own phone number. Note: 'XXX' indicates redacted content. In this case, 'cost' refers to the minimum upfront payment the proxy buyer must cover, and 'fixed payout' refers to the fixed return amount.",
+    "relatedRisks": [
+      "R0003",
+      "R0005",
+      "R0070",
+      "R0009",
+      "R0055",
+      "R0064",
+      "R0068",
+      "R0068-002"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0002",
+      "TA0001",
+      "TA0001-001",
+      "TA0034"
+    ],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

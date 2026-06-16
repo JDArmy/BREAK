@@ -1,0 +1,26 @@
+{
+  "T0358": {
+    "title": "Referral Rebate",
+    "keywords": [
+      "Referral Rebate",
+      "Gate Fee"
+    ],
+    "aliases": [],
+    "category": "Gambling",
+    "definition": "赌场按赌客下注金额给予的返点回扣。",
+    "description": "赌场为留住大额赌客，会按投注流水的一定比例返还现金或筹码。门子费通常日结，下注越多返点越高，刺激赌客持续加注。这种返点机制让赌客产生“输钱也有回本”的错觉，实际进一步放大了赌资损耗。",
+    "relatedRisks": [
+      "R0097"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0016"
+    ],
+    "relatedBusinessScenes": [
+      "BS06"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

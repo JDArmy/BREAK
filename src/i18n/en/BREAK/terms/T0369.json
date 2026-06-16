@@ -1,0 +1,26 @@
+{
+  "T0369": {
+    "title": "Forced Loan Activation",
+    "keywords": [
+      "Forced Loan Activation",
+      "Forced By Force"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "以不正当手段强制开通贷款服务，通常伴随盗取客户信息或虚假扣款。",
+    "description": "黑产人员利用掌握的客户资料，在客户不知情或未授权的情况下，强行为其开通贷款产品并扣取手续费或利息。操作者常通过技术手段绕过风控审核，或利用内部渠道批量操作。该行为直接导致受害人背负不明债务，资金受损且难以追索。",
+    "usageExample": "他们搞了一批料子，直接暴力强开，下款就扣砍头息，客户收到催收电话才知道自己被贷款了。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

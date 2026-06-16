@@ -1,0 +1,33 @@
+{
+  "T0023": {
+    "title": "刷粉",
+    "keywords": [
+      "刷粉",
+      "唰芬"
+    ],
+    "aliases": [
+      "唰芬"
+    ],
+    "category": "营销欺诈",
+    "definition": "指通过批量注册或购买虚假账号，为特定社交媒体账号增加粉丝数的黑灰产行为。",
+    "description": "黑灰产利用群控系统或接码平台批量产出僵尸账号，用于关注指定目标，制造虚假人气。这些假粉通常无真实互动，用于诈骗引流、夸大广告效果或骗取平台创作者激励，最终误导真实用户或广告商。",
+    "usageExample": "新号开播没流量，先找渠道刷粉把门面撑起来，不然没人信你。",
+    "relatedRisks": [
+      "R0030",
+      "R0030-001"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0006"
+    ],
+    "relatedThreatActors": [
+      "TA0003"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

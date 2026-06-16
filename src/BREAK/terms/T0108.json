@@ -1,0 +1,30 @@
+{
+  "T0108": {
+    "title": "杀鸟盘",
+    "keywords": [
+      "杀鸟盘"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "一种针对居家群体，以“刷单返佣”“高薪兼职”为诱饵，诱骗目标垫付资金或交纳押金的诈骗模式。",
+    "description": "诈骗分子通过小额返利获取信任后，诱导受害者投入大额本金，随后以“任务未完成”等理由拒绝返款。这种模式高度依赖社交平台引流，是当前高发的电诈类型之一。受害者往往在投入全部积蓄后才意识到被骗。",
+    "relatedRisks": [
+      "R0095",
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

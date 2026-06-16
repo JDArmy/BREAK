@@ -1,0 +1,31 @@
+{
+  "T0305": {
+    "title": "群引导",
+    "keywords": [
+      "群引导"
+    ],
+    "aliases": [],
+    "category": "跑分洗钱",
+    "definition": "群引导是诈骗团伙在社交群聊或TG中，通过话术和演员配合，持续诱导受害者完成付款或转账的操控手段。",
+    "description": "诈骗分子利用大众社交群聊或TG等工具建立群组，安排“演员”烘托氛围，营造虚假的盈利或抢单场景。通过持续的话术引导，操控群内成员逐步完成付款、投资或刷单等操作，将诈骗与洗钱环节联动。受害者往往在群体压力和从众心理下，多次转账，最终遭受大额财产损失。",
+    "usageExample": "群里又开始引导了，几个演员在那唱双簧，忽悠新人投钱。",
+    "relatedRisks": [
+      "R0060",
+      "R0093"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0014",
+      "TA0015",
+      "TA0006-003"
+    ],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

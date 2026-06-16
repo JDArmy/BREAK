@@ -1,0 +1,37 @@
+{
+  "T0007": {
+    "title": "Carding Shop",
+    "keywords": [
+      "Carding Shop",
+      "carding marketplace",
+      "virtual goods shop",
+      "account shop",
+      "invite code shop",
+      "digital goods market",
+      "fraud tool shop",
+      "carding platform",
+      "underground marketplace"
+    ],
+    "aliases": [],
+    "category": "Marketing Fraud",
+    "definition": "An online marketplace, evolved from early game card trading platforms, where vendors sell virtual goods and services such as social media accounts, invitation codes, software keys, and fraud tools, acting as an intermediary for illicit transactions.",
+    "description": "An online marketplace, evolved from early game card trading platforms, where vendors sell virtual goods and services such as social media accounts, invitation codes, software keys, and fraud tools, acting as an intermediary for illicit transactions.",
+    "relatedRisks": [],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0027"
+    ],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04"
+    ],
+    "references": [
+      {
+        "title": "The Scale of Black and Gray Markets: Transaction Networks Built on Card Issuing Platforms",
+        "link": "https://www.163.com/dy/article/ED1Q6CVF0518STKV.html"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

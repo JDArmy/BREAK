@@ -5,7 +5,11 @@
     "description": "工业物联网连接着生产设备、传感器、控制系统等关键基础设施。攻击者可通过入侵IIoT设备来：篡改生产参数造成产品质量问题、破坏设备运行引发安全事故、窃取工业机密、发起针对性勒索。IIoT设备通常生命周期长、难以更新、使用不安全的工业协议（如Modbus、SCADA），且与IT网络互联后暴露面扩大。",
     "complexity": "高级",
     "influence": "生产线瘫痪，设备损毁，人员伤亡，工业机密泄露，供应链中断。",
-    "avoidances": [],
+    "avoidances": [
+      "A0146",
+      "A0147",
+      "A0148"
+    ],
     "references": [
       {
         "title": "ICS-CERT Advisories",

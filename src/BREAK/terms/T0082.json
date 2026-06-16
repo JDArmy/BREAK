@@ -1,0 +1,29 @@
+{
+  "T0082": {
+    "title": "实时料",
+    "keywords": [
+      "实时料"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指刚被窃取、未经转手的一手个人信息或组织数据，在黑产市场上因时效最新而叫价最高。",
+    "description": "实时料强调数据的新鲜度和即时可用性，通常来自刚发生的系统入侵、内鬼泄露或钓鱼收割。黑产拿到后会在短时间内通过自动发卡平台或暗网群组快速分销，抢在数据失效前完成变现。买家拿到后多用于实时诈骗、撞库攻击或注册恶意账号，延迟越短成功率越高。",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0027"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

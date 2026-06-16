@@ -1,0 +1,37 @@
+{
+  "T0012": {
+    "title": "接码",
+    "keywords": [
+      "接码"
+    ],
+    "aliases": [],
+    "category": "营销欺诈",
+    "definition": "指黑灰产通过接码平台获取他人手机号验证码，用于批量注册账号或绕过身份验证。",
+    "description": "接码是黑灰产实现账号批量注册的核心环节，卡商通过猫池等设备持有大量黑卡，接码平台将验证码自动转发给做单用户。这些接码号被用于薅取平台新用户福利、参与活动抽奖或进行虚假交易，严重破坏平台营销规则。接码行为直接关联侵犯公民个人信息和网络黑产链条。",
+    "relatedRisks": [
+      "R0030",
+      "R0030-001",
+      "R0030-005"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0006",
+      "AT0004",
+      "AT0001-002"
+    ],
+    "relatedThreatActors": [
+      "TA0003",
+      "TA0004"
+    ],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [
+      {
+        "title": "2024上半年度海外电商平台风险研究报告",
+        "link": "https://www.threathunter.cn/blog/2024-c4d0fcec-8464-4e21-a997-887ad34025d1"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

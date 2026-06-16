@@ -1,0 +1,38 @@
+{
+  "T0299": {
+    "title": "QR Code Broker",
+    "keywords": [
+      "QR Code Broker",
+      "Code Provider"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "码商是专门提供收款二维码供黑产洗钱使用的中间角色。",
+    "description": "码商通过注册、租借或购买方式囤积个人码、商户码和聚合支付码，再提供给跑分平台或诈骗团伙用于收款。他们按交易额抽成，将非法资金拆散流入不同账户，以此规避风控。码商的存在大幅降低了洗钱的技术门槛，使资金链路更隐蔽。",
+    "usageExample": "For small-amount collection, find a fleet code provider with an exchange rate of 12",
+    "relatedRisks": [
+      "R0060",
+      "R0093"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026",
+      "AT0039",
+      "AT0040"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [
+      {
+        "title": "Fraud and money laundering models revealed: New models such as order and recharge money laundering and merchant money laundering are spreading across the board",
+        "link": "https://k.sina.cn/article_7857201856_1d45362c001906fzea.html?from=tech"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "T0075": {
+    "title": "料",
+    "keywords": [
+      "料"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "在黑灰产语境中，泛指被非法获取并用于牟利的各类敏感数据。",
+    "description": "这些数据涵盖个人信息、企业机密、登录凭证等，是网络诈骗、盗刷和营销欺诈的基础资源。黑产链条中，料通常经过多次倒卖，从原始毛料加工为精准料，最终被下游犯罪团伙用于变现。",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01",
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

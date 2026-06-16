@@ -1,0 +1,34 @@
+{
+  "T0219": {
+    "title": "CVV",
+    "keywords": [
+      "CVV"
+    ],
+    "aliases": [],
+    "category": "Business Fraud",
+    "definition": "CVV是银行卡背面签名栏上的安全验证码，用于验证持卡人身份。",
+    "description": "在信用卡欺诈场景中，CVV常与卡号、有效期等信息一同被非法获取并出售，用于线上盗刷。黑灰产通过钓鱼网站、数据库拖库或恶意软件窃取完整的信用卡信息，随后在境外网站或虚拟商品平台快速变现。CVV泄露意味着卡片面临极高的盗用风险。",
+    "usageExample": "出一批新鲜CVV，全球可挑，走担保。",
+    "relatedRisks": [
+      "R0094",
+      "R0138",
+      "R0121"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0067",
+      "AT0039"
+    ],
+    "relatedThreatActors": [
+      "TA0039",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS01",
+      "BS15"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

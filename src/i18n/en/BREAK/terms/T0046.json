@@ -1,0 +1,29 @@
+{
+  "T0046": {
+    "title": "Exploit",
+    "keywords": [
+      "Exploit",
+      "Button",
+      "Mouth"
+    ],
+    "aliases": [
+      "Button"
+    ],
+    "category": "Credit Fraud",
+    "definition": "Synonymous with 'loophole,' typically referring to a vulnerability or weakness in the credit application process that can be exploited by fraudsters to perpetrate loan fraud. In credit fraud, fraudsters seek out and exploit these 'loopholes' to commit fraud, such as by forging documents to obtain loans or using fake transactions to extract credit funds.",
+    "description": "Synonymous with 'loophole,' typically referring to a vulnerability or weakness in the credit application process that can be exploited by fraudsters to perpetrate loan fraud. In credit fraud, fraudsters seek out and exploit these 'loopholes' to commit fraud, such as by forging documents to obtain loans or using fake transactions to extract credit funds.",
+    "usageExample": "最近新出的那个消费贷口子很松，不用面签，赶紧上人。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

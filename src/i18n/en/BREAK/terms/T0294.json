@@ -1,0 +1,34 @@
+{
+  "T0294": {
+    "title": "No-Questions Funds",
+    "keywords": [
+      "No-Questions Funds",
+      "No Information"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "不区分资金来源、全盘接收的洗钱操作。",
+    "description": "洗钱中介或跑分团队对上游提供的资金不进行任何审查，无论是诈骗、赌博还是色情黑产所得，均直接接入清洗流程。这种操作效率高但风险极大，容易因涉及重案资金被追踪。无视料常见于短期套现场景，参与者往往因贪图快钱而忽略法律后果。",
+    "usageExample": "Regardless of materials, money is what matters.",
+    "relatedRisks": [
+      "R0060",
+      "R0093",
+      "R0095"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014",
+      "TA0015"
+    ],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "T0087": {
+    "title": "First-Hand Data",
+    "keywords": [
+      "First-Hand Data",
+      "First Hand Materials"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illegal data trading, this refers to personal or organizational data that has not been resold. Because it has not passed through multiple hands, first-hand material is typically fresher, more complete, and more accurate, making it more valuable on underground markets.",
+    "description": "In illegal data trading, this refers to personal or organizational data that has not been resold. Because it has not passed through multiple hands, first-hand material is typically fresher, more complete, and more accurate, making it more valuable on underground markets.",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "T0317": {
+    "title": "Payment QR",
+    "keywords": [
+      "Payment QR",
+      "Payment Code"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "跑分语境下被黑产用于代收、归集赃款的收款二维码或支付链接，是资金流转的入口工具。",
+    "description": "支付码本身是正常收付款介质，但在跑分链条里被异化为“接钱”的容器。黑产把大量支付码分发给下游“车手”或直接嵌入诈骗话术中，让受害人扫码付款，资金瞬间进入控制范围。随后通过多级转账、混币、购买虚拟资产等方式把赃款洗白，整个过程高度依赖支付码的快速分发和轮换，以对抗平台的风控追溯。",
+    "relatedRisks": [
+      "R0060",
+      "R0093"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026",
+      "AT0039",
+      "AT0040"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

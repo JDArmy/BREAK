@@ -1,0 +1,29 @@
+{
+  "T0032": {
+    "title": "AB贷",
+    "keywords": [
+      "AB贷"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "一种利用征信良好者作为贷款背债人的欺诈模式。",
+    "description": "诈骗团伙寻找急需用钱但征信不佳的A，诱骗其找来征信良好的B作为担保人或名义借款人。中介通过伪造资料帮助B获得贷款，款项由A使用，但债务和法律责任却由B承担。最终A和中介瓜分贷款后消失，B在不知情或被迫的情况下背负巨额债务，常引发严重的社会和金融风险。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [
+      {
+        "title": "2024年上半年信贷欺诈风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-ab1e8b8c-509b-44e7-9dbe-d7271765ae2c"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

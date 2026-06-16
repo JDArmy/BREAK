@@ -1,0 +1,31 @@
+{
+  "T0122": {
+    "title": "惑猪",
+    "keywords": [
+      "惑猪"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "诈骗流程中对目标进行深度洗脑和情感操控的阶段，旨在瓦解其防备心理。",
+    "description": "在“杀猪盘”等交友诱导类诈骗中，操盘手会按照话术剧本，通过高频聊天、嘘寒问暖、分享虚假生活等方式，与受害者建立虚假的亲密关系。此阶段的核心是获取信任，让受害者对诈骗分子产生情感依赖，为后续诱导投资或转账铺路。一旦“惑猪”成功，受害者往往对骗局深信不疑。",
+    "usageExample": "这个客户防御心很重，组长让我再惑猪两天，别急着提钱的事。",
+    "relatedRisks": [
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001",
+      "AT0070"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008",
+      "TA0042"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

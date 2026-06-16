@@ -1,0 +1,28 @@
+{
+  "T0081": {
+    "title": "Customs Data",
+    "keywords": [
+      "Customs Data",
+      "Customs Clearance"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illegal data trading, this term refers to data stolen during the customs clearance process for overseas shipments. Such data is called “customs clearance material” and is illegally sold for profit by cybercriminals.",
+    "description": "In illegal data trading, this term refers to data stolen during the customs clearance process for overseas shipments. Such data is called “customs clearance material” and is illegally sold for profit by cybercriminals.",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

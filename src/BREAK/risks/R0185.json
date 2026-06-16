@@ -5,7 +5,11 @@
     "description": "元宇宙中的虚拟资产具有真实经济价值，成为攻击者目标。盗窃手段包括：利用智能合约漏洞转移NFT资产、通过社会工程骗取钱包私钥、入侵游戏服务器窃取道具、利用交易系统漏洞复制资产、钓鱼网站诱导授权等。虚拟资产的数字化特性使其易被批量盗取和快速转移，且跨境追踪困难。",
     "complexity": "高级",
     "influence": "用户虚拟财产损失，元宇宙经济体系失衡，平台信誉受损。",
-    "avoidances": [],
+    "avoidances": [
+      "A0155",
+      "A0156",
+      "A0157"
+    ],
     "references": [
       {
         "title": "Virtual Asset Security Best Practices",

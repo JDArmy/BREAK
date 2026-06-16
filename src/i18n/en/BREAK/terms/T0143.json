@@ -1,0 +1,30 @@
+{
+  "T0143": {
+    "title": "Scam Pusher",
+    "keywords": [
+      "Scam Pusher",
+      "Dog Push"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "A colloquial label for individuals working in online gambling promotion, often in Southeast Asia, who use social platforms and deceptive scripts to lure victims into online betting and lottery schemes. The term reflects the harsh working conditions, low pay, and exploitative environment, with workers sometimes self-mockingly comparing themselves to stray dogs.",
+    "description": "A colloquial label for individuals working in online gambling promotion, often in Southeast Asia, who use social platforms and deceptive scripts to lure victims into online betting and lottery schemes. The term reflects the harsh working conditions, low pay, and exploitative environment, with workers sometimes self-mockingly comparing themselves to stray dogs.",
+    "usageExample": "“那些天天在群里发盈利截图、说跟着导师稳赚的，基本都是狗推，号封了一批又换一批。”",
+    "relatedRisks": [
+      "R0095",
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0008",
+      "TA0015",
+      "TA0042"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

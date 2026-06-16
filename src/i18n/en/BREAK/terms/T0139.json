@@ -1,0 +1,42 @@
+{
+  "T0139": {
+    "title": "Malicious Payload",
+    "keywords": [
+      "Malicious Payload",
+      "Poison Bag"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "A malicious file or program package infected with malware, viruses, or trojans that, once opened, allows fraud rings to monitor the victim's device. In telecom fraud, operators supply these poisoned packages to affiliates, who then engineer scenarios to trick victims into opening them on their computers, enabling remote collection of passwords, browsing history, and other sensitive data for fraud.",
+    "description": "A malicious file or program package infected with malware, viruses, or trojans that, once opened, allows fraud rings to monitor the victim's device. In telecom fraud, operators supply these poisoned packages to affiliates, who then engineer scenarios to trick victims into opening them on their computers, enabling remote collection of passwords, browsing history, and other sensitive data for fraud.",
+    "usageExample": "“他让我下载那个认证包，说是银行的安全插件，打开之后电脑就被人远程操控了。”",
+    "relatedRisks": [
+      "R0044",
+      "R0032",
+      "R0131",
+      "R0095",
+      "R0150",
+      "R0060"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0064",
+      "AT0066",
+      "AT0067",
+      "AT0053-002"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0043",
+      "TA0008",
+      "TA0042",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

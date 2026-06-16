@@ -1,0 +1,29 @@
+{
+  "T0215": {
+    "title": "黑五类",
+    "keywords": [
+      "黑五类"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指从电商平台泄露的五类敏感商品消费者数据，包括药品、医疗器械、丰胸、减肥和增高产品。",
+    "description": "由于购买这些商品的用户有明确的隐私顾虑和消费需求，其数据在黑市价值很高。黑产获取这些数据后，会转卖给其他诈骗团伙，用于冒充专家回访、推销假药或保健品等精准诈骗活动。",
+    "usageExample": "“出减肥祛斑丰胸等黑五类数据 实时下单用户 效果嘎嘎猛!!”",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

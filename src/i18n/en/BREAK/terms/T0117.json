@@ -1,0 +1,33 @@
+{
+  "T0117": {
+    "title": "Sexual Lure Lead",
+    "keywords": [
+      "Sexual Lure Lead",
+      "Color Fish"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "A vivid term for internet users lured into scams by sexually explicit content. In cyber fraud, explicit material is used as bait for scams, payment fraud, or personal data theft, designed to hook those who seek out or accidentally click on such content.",
+    "description": "A vivid term for internet users lured into scams by sexually explicit content. In cyber fraud, explicit material is used as bait for scams, payment fraud, or personal data theft, designed to hook those who seek out or accidentally click on such content.",
+    "relatedRisks": [
+      "R0095",
+      "R0150",
+      "R0060"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "T0437": {
+    "title": "狗催 / 催狗",
+    "keywords": [
+      "狗催 / 催狗"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "对第三方催收人员带有贬义的称呼。",
+    "description": "在信贷欺诈和债务催收语境中，债务人用此词指代那些采取威胁、恐吓、骚扰等高压手段的催收公司或个人。这些催收方不顾及债务人实际情况，通过频繁电话轰炸、辱骂、爆通讯录等方式施压，迫使债务人尽快还款，常引发激烈对抗。",
+    "usageExample": "打电话一上来就问你在xx上的欠款什么时候处理，我奇了怪了，然后问他是不是打错电话了，后面他才给我来一句他不是狗催，是专门处理利息的，问我需不需要处理。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

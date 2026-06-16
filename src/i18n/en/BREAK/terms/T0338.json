@@ -1,0 +1,35 @@
+{
+  "T0338": {
+    "title": "Card-and-PIN Redemption",
+    "keywords": [
+      "Card-and-PIN Redemption",
+      "Card Secret Verification"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "在洗钱场景中，卡密核销是指将非法获取的电子卡卡号和密码绑定至账号或进行消费以完成虚拟资产兑现的操作。",
+    "description": "黑产人员利用诈骗资金购入电子卡后，由下游“卡密核销”人员将卡密绑定到指定应用或平台账户，使其转化为可使用的余额或服务。这一过程常涉及电商卡、游戏点卡、充值卡等多种虚拟卡券，通过即时通讯群组或暗网发布“回收卡密”任务来招募执行者。该行为将赃款转化为难以追踪的虚拟资产，是跑分洗钱中常见的清洗环节。",
+    "usageExample": "会买购物卡的来，购物卡密核销，回收一张你得650。",
+    "relatedRisks": [
+      "R0060",
+      "R0093"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026",
+      "AT0039",
+      "AT0040"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS02",
+      "BS06"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "T0056": {
+    "title": "融车",
+    "keywords": [
+      "融车"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "融车指黑产利用虚假资料骗取汽车贷款并将车辆套现的欺诈行为。",
+    "description": "黑产招募征信白户，为其包装虚假的工作和收入证明，以购车名义骗取金融机构的贷款。车辆到手后，他们并不真实使用，而是立即将新车作为抵押或直接变卖套取现金，随后断供，造成车贷坏账。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

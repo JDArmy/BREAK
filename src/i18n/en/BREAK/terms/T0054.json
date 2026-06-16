@@ -1,0 +1,30 @@
+{
+  "T0054": {
+    "title": "Company Incubation",
+    "keywords": [
+      "Company Incubation",
+      "Business Incubation"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "A fraudulent scheme in which criminals create or manipulate shell companies to illegally obtain business loans or other financial gains. The companies are fabricated with falsified financial reports to apply for bank loans; once the funds are disbursed, they are immediately transferred and concealed to avoid detection or used for illicit purposes, such as tax-invoice loan fraud.",
+    "description": "A fraudulent scheme in which criminals create or manipulate shell companies to illegally obtain business loans or other financial gains. The companies are fabricated with falsified financial reports to apply for bank loans; once the funds are disbursed, they are immediately transferred and concealed to avoid detection or used for illicit purposes, such as tax-invoice loan fraud.",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [
+      {
+        "title": "Credit Fraud Risk Situation Report for the First Half of 2024",
+        "link": "https://www.threathunter.cn/blog/2024-ab1e8b8c-509b-44e7-9dbe-d7271765ae2c"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

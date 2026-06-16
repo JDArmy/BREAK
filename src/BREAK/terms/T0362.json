@@ -1,0 +1,27 @@
+{
+  "T0362": {
+    "title": "透视",
+    "keywords": [
+      "透视"
+    ],
+    "aliases": [],
+    "category": "赌博",
+    "definition": "在赌博作弊场景中，“透视”指黑产利用摄像设备、作弊软件或系统后门实时窥探对手底牌的技术手段。",
+    "description": "常见做法包括在牌桌或赌博APP里植入针孔摄像头、改装扑克感应器，或者直接买通平台运维植入后门，把对手手牌画面传到作弊者终端。这种作弊让庄家或老千能在下注前就锁定胜局，配合杀猪盘、百家乐等玩法快速榨干赌客。一旦被识破，往往引发暴力冲突或团伙内讧。",
+    "relatedRisks": [
+      "R0097"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0066"
+    ],
+    "relatedThreatActors": [
+      "TA0016"
+    ],
+    "relatedBusinessScenes": [
+      "BS06"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

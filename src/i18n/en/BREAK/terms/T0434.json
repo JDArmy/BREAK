@@ -1,0 +1,33 @@
+{
+  "T0434": {
+    "title": "Interest Suspension Arrangement",
+    "keywords": [
+      "Interest Suspension Arrangement",
+      "Suspension of Pending Accounts"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "代理维权机构代替债务人向银行申请减免利息罚息并分期归还本金的操作。",
+    "description": "代理维权机构以债务人名义与银行协商，声称可减免信用卡逾期利息和违约金，仅偿还本金并分期支付。实际操作中，代理方常伪造贫困证明、病历等材料，并收取高额服务费，导致债务人个人信息泄露、债务未减反增，甚至被银行列入黑名单。",
+    "usageExample": "信用卡和网贷逾期的，即将逾期做停息挂账。",
+    "relatedRisks": [
+      "R0096",
+      "R0096-001"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0029"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [
+      {
+        "title": "[Credit Fraud] Exposing the black industry behind illegal \"agency rights protection\" in the financial field",
+        "link": "https://www.threathunter.cn/blog/e78513e348b"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

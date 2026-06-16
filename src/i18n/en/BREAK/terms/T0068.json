@@ -1,0 +1,28 @@
+{
+  "T0068": {
+    "title": "Refreshed Data",
+    "keywords": [
+      "Refreshed Data",
+      "Renovation Material"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illicit data trading, old data that has been processed and updated to appear new or more valuable. The refurbishment process may include supplementation, modification, and deduplication, with the goal of enhancing the data's accuracy and validity to increase its market value within underground networks.",
+    "description": "In illicit data trading, old data that has been processed and updated to appear new or more valuable. The refurbishment process may include supplementation, modification, and deduplication, with the goal of enhancing the data's accuracy and validity to increase its market value within underground networks.",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

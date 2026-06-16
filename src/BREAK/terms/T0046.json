@@ -1,0 +1,28 @@
+{
+  "T0046": {
+    "title": "口子",
+    "keywords": [
+      "口子",
+      "扣子"
+    ],
+    "aliases": [
+      "扣子"
+    ],
+    "category": "信贷欺诈",
+    "definition": "指信贷审批流程或风控系统中可被利用的漏洞或弱点。",
+    "description": "黑产从业者会专门研究各金融平台的审核机制，寻找规则上的缺口，如资料校验不严、系统响应延迟等。一旦发现可利用的口子，便会组织人手集中攻击，通过伪造资料、虚假交易等方式批量骗取贷款。这种漏洞信息在黑产群内被高价买卖，传播迅速。",
+    "usageExample": "最近新出的那个消费贷口子很松，不用面签，赶紧上人。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

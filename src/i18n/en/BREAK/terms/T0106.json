@@ -1,0 +1,31 @@
+{
+  "T0106": {
+    "title": "Bird Hooking",
+    "keywords": [
+      "Bird Hooking",
+      "Hanging Bird"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "The act of tagging a potential victim as a target or marking them as successfully deceived. This labeling system helps fraud rings track and manage their pool of targets, allowing them to execute scams more efficiently.",
+    "description": "The act of tagging a potential victim as a target or marking them as successfully deceived. This labeling system helps fraud rings track and manage their pool of targets, allowing them to execute scams more efficiently.",
+    "relatedRisks": [
+      "R0095",
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008",
+      "TA0042"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

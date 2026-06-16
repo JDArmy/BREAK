@@ -1,0 +1,38 @@
+{
+  "T0090": {
+    "title": "解密",
+    "keywords": [
+      "解密"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指黑产针对快递隐私面单，利用单号和部分打码信息还原完整手机号的操作。",
+    "description": "解密服务主要服务于电诈团伙和营销黑产，是快递信息泄露链条的关键一环。操作者通过非法渠道获取快递单号及对应的虚拟号码或打码手机号，再借助内部系统权限或破解工具进行还原。获取完整手机号后，这些信息会被用于精准诈骗、广告推广或二次贩卖，直接侵害用户隐私。",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

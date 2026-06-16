@@ -1,0 +1,30 @@
+{
+  "T0105": {
+    "title": "洗客",
+    "keywords": [
+      "洗客"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "黑产环节中对上游泄露数据进行清洗、筛选和属性补充，以提升数据利用价值的行为。",
+    "description": "操作者会对非法获取的用户信息进行过滤，剔除空号、无效号码，并补全归属地、年龄段等标签。清洗后的数据能帮助下游诈骗或营销团伙实现更精准的欺诈投放，大幅提高作恶成功率。此类行为直接加剧了个人隐私泄露后的二次侵害风险。",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01",
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

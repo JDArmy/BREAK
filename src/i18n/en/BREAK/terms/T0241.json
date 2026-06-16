@@ -1,0 +1,44 @@
+{
+  "T0241": {
+    "title": "Self-Trading",
+    "keywords": [
+      "Self-Trading",
+      "Left and Right Hands"
+    ],
+    "aliases": [],
+    "category": "Business Fraud",
+    "definition": "指同一人同时操控买卖双方账号虚构交易，骗取平台营销补贴或套取资金。",
+    "description": "操作者通常注册或控制多个账号，一边扮演买家下单，一边扮演卖家接单，伪造完整的交易闭环。这种手法常见于电商平台的新人补贴、满减活动或拉新奖励场景，通过虚假刷单制造交易流水。一旦平台风控未能识别，黑产即可将补贴款套现，导致平台资金直接损失。",
+    "usageExample": "那个工作室靠左右手刷了上万单新人优惠，把平台补贴全薅光了。",
+    "relatedRisks": [
+      "R0017",
+      "R0017-001",
+      "R0005",
+      "R0094",
+      "R0138",
+      "R0121"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0044",
+      "AT0009",
+      "AT0016",
+      "AT0067",
+      "AT0039"
+    ],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0006",
+      "TA0007",
+      "TA0039",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04",
+      "BS15"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

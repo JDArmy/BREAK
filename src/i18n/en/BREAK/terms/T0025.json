@@ -1,0 +1,30 @@
+{
+  "T0025": {
+    "title": "No Shield",
+    "keywords": [
+      "No Shield",
+      "unprotected endpoint",
+      "risk control gap",
+      "unmonitored API",
+      "bypassable verification",
+      "missing rate limit",
+      "unshielded transaction"
+    ],
+    "aliases": [],
+    "category": "Marketing Fraud",
+    "definition": "No Shield",
+    "description": "Refers to the absence of risk control measures. In black/gray market terminology, the risk control systems of targeted platforms are called 'shields,' analogous to firewalls. Fraudsters bypass platform verification to exploit physical goods or vouchers. Different businesses and scenarios have their own shields, such as a bank's USB security key or Taobao's risk control shield.",
+    "relatedRisks": [
+      "R0005"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

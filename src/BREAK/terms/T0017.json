@@ -1,0 +1,27 @@
+{
+  "T0017": {
+    "title": "秒杀",
+    "keywords": [
+      "秒杀",
+      "眇殺"
+    ],
+    "aliases": [
+      "眇殺"
+    ],
+    "category": "营销欺诈",
+    "definition": "指营销活动中被黑灰产利用自动化工具极速抢购优惠商品的欺诈行为。",
+    "description": "黑灰产利用定制化脚本或外挂程序，在促销活动开始的瞬间自动完成下单流程，抢购限量优惠商品或券包。该行为导致正常用户无法获得优惠，严重破坏营销活动的公平性，常与下游变现环节结合，形成规模化套利。",
+    "usageExample": "昨晚那个半价茅台活动，脚本哥直接秒杀了几百单，我们手动根本抢不到。",
+    "relatedRisks": [
+      "R0005"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "T0171": {
+    "title": "Residual Data",
+    "keywords": [
+      "Residual Data",
+      "Leftovers"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illegal trading, partial data obtained after a one-time lookup, often referred to as \"leftover information,\" which is frequently resold by intermediaries to social engineering databases.",
+    "description": "In illegal trading, partial data obtained after a one-time lookup, often referred to as \"leftover information,\" which is frequently resold by intermediaries to social engineering databases.",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

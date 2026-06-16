@@ -1,0 +1,27 @@
+{
+  "T0438": {
+    "title": "上岸",
+    "keywords": [
+      "上岸"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "借款人还清所有债务、摆脱债务困境的状态。",
+    "description": "在金融信贷黑灰产语境中，指债务人通过自身努力或借助代理维权等手段，彻底清偿所有欠款，结束以贷养贷的恶性循环。上岸后，债务人不再受催收骚扰，恢复正常生活，但过程中可能涉及非法套现、协商减免等灰色操作。",
+    "usageExample": "负债不到6万怎么才能上岸呢，征信呆账，条子被标记2次黑了，上班工资太低了暂时这里走不了。",
+    "relatedRisks": [
+      "R0096",
+      "R0096-001"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0029"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

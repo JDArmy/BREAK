@@ -1,0 +1,33 @@
+{
+  "T0234": {
+    "title": "Cash Out",
+    "keywords": [
+      "Cash Out"
+    ],
+    "aliases": [],
+    "category": "Business Fraud",
+    "definition": "通过伪造交易、滥用活动规则等手段，把平台发放的优惠券、红包、积分等非现金资产兑换成现金。",
+    "description": "常见于电商补贴、支付返现等营销活动中，黑产利用批量账号和虚假订单制造虚假流水，套取平台补贴。操作链条通常涉及卡商、刷手和资金通道，变现后按比例分赃。平台一旦风控滞后，单场活动可能被套走数十万甚至上百万资金。",
+    "usageExample": "Get started with credit card cash out quickly, simple and efficient ⚡Can be cashed out to your account",
+    "relatedRisks": [
+      "R0094",
+      "R0138",
+      "R0121"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0067",
+      "AT0039"
+    ],
+    "relatedThreatActors": [
+      "TA0039",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS15"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

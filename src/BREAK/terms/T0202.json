@@ -1,0 +1,34 @@
+{
+  "T0202": {
+    "title": "车小档",
+    "keywords": [
+      "车小档"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指非法数据交易中仅包含车牌、车型等基本信息的车辆档案数据。",
+    "description": "相比车大档，这类数据不含车主个人身份信息，泄露源头同样多为车管所或保险系统。黑产常将其用于套牌、规避交通处罚或作为进一步获取车主信息的跳板。因其获取成本较低，在市场中流通量较大。",
+    "relatedRisks": [
+      "R0078",
+      "R0089",
+      "R0092",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

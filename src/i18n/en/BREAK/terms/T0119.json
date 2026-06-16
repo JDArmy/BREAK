@@ -1,0 +1,36 @@
+{
+  "T0119": {
+    "title": "Gaming Lead",
+    "keywords": [
+      "Gaming Lead",
+      "Game Fish"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "A specific target group in scams, referring to online gamers who are deeply engaged in gaming and less cautious about in-game transactions. Scammers exploit game-related content to defraud them.",
+    "description": "A specific target group in scams, referring to online gamers who are deeply engaged in gaming and less cautious about in-game transactions. Scammers exploit game-related content to defraud them.",
+    "relatedRisks": [
+      "R0095",
+      "R0150",
+      "R0084",
+      "R0131"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001",
+      "AT0063",
+      "AT0071"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008",
+      "TA0043"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS06"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

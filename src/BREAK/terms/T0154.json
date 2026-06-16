@@ -1,0 +1,35 @@
+{
+  "T0154": {
+    "title": "云扣",
+    "keywords": [
+      "云扣"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "指通过云闪付等移动支付渠道直接划扣或转移的诈骗赃款。",
+    "description": "在电诈洗钱环节中，云闪付因其绑卡快、到账即时，常被用于快速归集受害者转入的资金。诈骗团伙通过诱导受害者下载云闪付、绑定涉案银行卡或扫码支付，实现“秒扣”后立即将资金拆分转走。云扣资金往往经过多层账户清洗，最终流入跑分平台或虚拟币兑换渠道，追查难度大。",
+    "relatedRisks": [
+      "R0044",
+      "R0032",
+      "R0131"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0064",
+      "AT0066",
+      "AT0067",
+      "AT0053-002"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0043"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS01",
+      "BS15"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

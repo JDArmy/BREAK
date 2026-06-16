@@ -1,0 +1,29 @@
+{
+  "T0138": {
+    "title": "垫蓝",
+    "keywords": [
+      "垫蓝"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "垫蓝是诈骗分子在实施资金诈骗前，向受害人账户或展示界面预先注入的一笔虚假资金或虚假流水。",
+    "description": "垫蓝常见于刷单返利、虚假投资理财等骗局。操盘手通过后台改单或PS伪造转账截图，让受害人误以为已收到佣金或盈利，从而诱使其继续加大投入。这笔钱实际上从未真实到账，只是用来制造“平台可信、收益真实”的错觉，一旦受害人投入大额本金，资金便会被立即转走或无法提现。",
+    "usageExample": "“他给我看了后台余额，说已经垫了五万在里面，让我放心跟单，结果那数字全是假的。”",
+    "relatedRisks": [
+      "R0095",
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "T0040": {
+    "title": "反催收",
+    "keywords": [
+      "反催收"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "指黑产组织通过伪造材料、恶意投诉等非法手段帮助债务人逃避还款责任的行为。",
+    "description": "反催收团伙通常以“法务咨询”为幌子，教唆债务人恶意拖欠债务。他们通过伪造贫困证明、病历或教唆客户进行恶意投诉来向金融机构施压，以达到减免债务或逃废债的目的。这种行为严重破坏金融秩序，参与者不仅面临债务追索，还可能因诈骗被追究刑事责任。",
+    "usageExample": "我找了法务做反催收，他们让我把电话都转接给他们，说能帮我停息挂账，结果收了钱就拉黑我了。",
+    "relatedRisks": [
+      "R0096-001",
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0029"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

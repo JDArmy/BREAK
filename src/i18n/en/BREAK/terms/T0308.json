@@ -1,0 +1,34 @@
+{
+  "T0308": {
+    "title": "Personal QR Code",
+    "keywords": [
+      "Personal QR Code",
+      "Personal Code"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "个码是使用个人身份注册的收款二维码，交易额度有限但风控相对宽松，常用于小额洗钱。",
+    "description": "黑产人员通过收集或购买普通用户的个人收款码，用于接收非法资金。这类二维码通常有单笔和单日交易限额，但因其分散、隐蔽，初期不易触发风控。在跑分平台中，大量个码被用于碎片化收款，将大额赃款拆分成无数小额交易，增加追踪难度。",
+    "usageExample": "收几个丝滑个码，要求单日3000以内能用的，点位好商量。",
+    "relatedRisks": [
+      "R0060",
+      "R0093",
+      "R0094"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026",
+      "AT0039",
+      "AT0040"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

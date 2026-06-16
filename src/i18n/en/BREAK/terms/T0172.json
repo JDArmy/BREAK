@@ -1,0 +1,30 @@
+{
+  "T0172": {
+    "title": "Counter Channel",
+    "keywords": [
+      "Counter Channel",
+      "Counter"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In data leak lookups, a term used by underground actors to refer to bank insiders, highlighting the reliability of the channel and authenticity of the data, typically involving financial fraud insiders abusing their authority.",
+    "description": "In data leak lookups, a term used by underground actors to refer to bank insiders, highlighting the reliability of the channel and authenticity of the data, typically involving financial fraud insiders abusing their authority.",
+    "usageExample": "\"Counter service, full range, returns on Sunday, super low prices—hit me up for orders.\"",
+    "relatedRisks": [
+      "R0078"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

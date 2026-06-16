@@ -1,0 +1,26 @@
+{
+  "T0350": {
+    "title": "Shill Play",
+    "keywords": [
+      "Shill Play",
+      "Speculation"
+    ],
+    "aliases": [],
+    "category": "Gambling",
+    "definition": "赌博组织者为吸引真实赌客而制造的虚假赌博假象。",
+    "description": "新赌场或赌局启动时，组织者会安排人员假装赌客下注，营造生意火爆的假象，诱导围观者参与。线上赌博平台则可能通过后台操控输赢，让新玩家先赢后输，最终陷入赌博陷阱。",
+    "relatedRisks": [
+      "R0097"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0016"
+    ],
+    "relatedBusinessScenes": [
+      "BS06"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

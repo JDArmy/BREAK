@@ -1,0 +1,33 @@
+{
+  "T0170": {
+    "title": "库主",
+    "keywords": [
+      "库主"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "掌握并运营社工库、撞库数据或泄露数据库的地下核心人物。",
+    "description": "库主是地下数据交易生态的关键节点，负责非法获取、整理和分发海量敏感数据。他们通过售卖、订阅或会员制提供查询服务，构建起数据黑产的上游供应链。库主常与内鬼、黑客合作，持续更新数据源，是各类精准欺诈和身份冒用的基础支撑。",
+    "usageExample": "“银行卡流水 任何银行 稳定 快线周日也就是今晚晚上发车 周2周3回单”",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

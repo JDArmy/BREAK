@@ -1,0 +1,25 @@
+{
+  "T0048": {
+    "title": "空卡",
+    "keywords": [
+      "空卡"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "一种恶意透支信用卡并逃避还款责任的欺诈行为。",
+    "description": "操作者通过大额消费、现金套现、消费分期等方式将信用额度全部耗尽，然后故意不还款。常见手法包括使用虚假身份申请信用卡后刷空，或利用循环套现将资金用于非法活动。这种行为直接给发卡机构造成坏账损失，是信用卡诈骗中的典型手段。",
+    "usageExample": "那批料申下来的卡全做空卡处理，刷完就扔，不用考虑还。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

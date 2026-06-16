@@ -1,0 +1,29 @@
+{
+  "T0153": {
+    "title": "色粉",
+    "keywords": [
+      "色粉"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "指被带有性暗示或擦边内容吸引、进而成为诈骗目标对象的关注者或联系人群体。",
+    "description": "黑产从业者在社交平台或群组中批量发布软色情、挑逗图文或短视频，利用好奇与欲望引流，把点击、加好友的用户沉淀为可转化的“色粉”。这些账号后续常被用于精准推送赌博、虚假投资或裸聊敲诈链接，也可打包转卖给下游诈骗团伙。色粉本身处于灰色地带，一旦被导入付费或诈骗环节，就完成了从流量到受害者的切换。",
+    "relatedRisks": [
+      "R0095",
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0008",
+      "TA0015",
+      "TA0042"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS05"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

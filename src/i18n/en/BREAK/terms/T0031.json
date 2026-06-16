@@ -1,0 +1,39 @@
+{
+  "T0031": {
+    "title": "Multi-Merchant Terminal",
+    "keywords": [
+      "Multi-Merchant Terminal",
+      "multi-merchant binding",
+      "POS terminal hijacking",
+      "terminal stacking",
+      "merchant hopping",
+      "one terminal multiple MID",
+      "terminal multi-tenancy",
+      "POS bonus abuse",
+      "multi-MID POS"
+    ],
+    "aliases": [
+      "One Chicken and Many Eggs"
+    ],
+    "category": "Marketing Fraud",
+    "definition": "One Chicken, Multiple Eggs",
+    "description": "Synonymous with 'One Device, Multiple Orders,' meaning one POS machine can be bound to multiple merchants. Strictly speaking, UnionPay requires one machine per merchant, making the 'one device, multiple orders' practice non-compliant. It is a common operation used by bonus hunters for credit card maintenance.",
+    "relatedRisks": [
+      "R0009",
+      "R0055",
+      "R0064"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0001",
+      "TA0001-001"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

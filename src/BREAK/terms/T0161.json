@@ -1,0 +1,29 @@
+{
+  "T0161": {
+    "title": "担保双压",
+    "keywords": [
+      "担保双压"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "非法数据交易中，买卖双方互相质押利益以保障交易真实性的风险对冲机制。",
+    "description": "常见于地下数据市场的高价值情报交易，双方通过互相掌握对方敏感信息或预付押金形成制衡，防止一方拿钱跑路或提供假数据。这种担保通常由中间人主持，一旦交易完成，双方归还质押物，否则违约方会面临信息被公开或资金损失的风险。",
+    "usageExample": "“这批一手料子走担保双压，你压三万我压三万，谁先玩花样谁的钱就没了。”",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

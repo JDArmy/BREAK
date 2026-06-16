@@ -1,0 +1,24 @@
+{
+  "T0050": {
+    "title": "Naked Application",
+    "keywords": [
+      "Naked Application"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "A method of applying for a credit card by submitting only the application form without providing any additional supporting documents, such as proof of assets or income. This term is commonly used in loan application scenarios.",
+    "description": "A method of applying for a credit card by submitting only the application form without providing any additional supporting documents, such as proof of assets or income. This term is commonly used in loan application scenarios.",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

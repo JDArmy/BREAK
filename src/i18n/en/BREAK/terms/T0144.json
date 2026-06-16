@@ -1,0 +1,33 @@
+{
+  "T0144": {
+    "title": "Phone Operator",
+    "keywords": [
+      "Phone Operator",
+      "Operator"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "A person in a fraud operation who makes direct phone contact with victims, using scripted pitches to gain their trust and reel them in before handing them off to other fraudsters who execute the financial scam.",
+    "description": "A person in a fraud operation who makes direct phone contact with victims, using scripted pitches to gain their trust and reel them in before handing them off to other fraudsters who execute the financial scam.",
+    "usageExample": "“先是话务员打电话说我快递丢了要理赔，让我加客服QQ，后面就开始一步步套我银行卡信息。”",
+    "relatedRisks": [
+      "R0095",
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008",
+      "TA0042"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

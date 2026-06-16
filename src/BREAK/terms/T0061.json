@@ -1,0 +1,32 @@
+{
+  "T0061": {
+    "title": "退息退费",
+    "keywords": [
+      "退息退费"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "黑产通过恶意投诉或伪造材料，逼迫金融机构退还已收取的各类合规费用。",
+    "description": "黑产团伙以“代理维权”为名，教唆客户或直接代理客户向监管机构发起海量投诉。他们利用金融机构息事宁人的心态，要求退还利息、手续费甚至本金，并从中抽取高额佣金。这种恶意投诉不仅扰乱了金融秩序，还挤占了普通消费者的正常维权渠道。",
+    "usageExample": "中介帮他把网贷的利息全退回来了，收了30%的手续费，还让他把通讯录里的朋友都介绍过来做退息退费。",
+    "relatedRisks": [
+      "R0096",
+      "R0096-001"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0029"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [
+      {
+        "title": "【信贷欺诈】揭露金融领域非法“代理维权”背后的黑色产业",
+        "link": "https://www.threathunter.cn/blog/e78513e348b"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

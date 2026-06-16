@@ -1,0 +1,40 @@
+{
+  "T0277": {
+    "title": "刷量",
+    "keywords": [
+      "刷量"
+    ],
+    "aliases": [],
+    "category": "业务欺诈",
+    "definition": "刷量是指利用虚假账号或自动化脚本，批量制造虚假数据指标的行为。",
+    "description": "黑产通过卡商接码平台获取大量虚拟号，配合群控软件对指定视频、直播或商品进行点赞、播放、评论。目的是欺骗平台推荐算法，营造虚假热度，诱导真实用户跟风关注或下单。这严重破坏平台生态，常与刷单诈骗、假货推广绑定。",
+    "relatedRisks": [
+      "R0016",
+      "R0030",
+      "R0030-001",
+      "R0017",
+      "R0017-001",
+      "R0005"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0006",
+      "AT0044",
+      "AT0009",
+      "AT0016"
+    ],
+    "relatedThreatActors": [
+      "TA0003",
+      "TA0009",
+      "TA0006",
+      "TA0007"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS05",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

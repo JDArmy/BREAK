@@ -1,0 +1,29 @@
+{
+  "T0237": {
+    "title": "wwg教程",
+    "keywords": [
+      "wwg教程"
+    ],
+    "aliases": [],
+    "category": "业务欺诈",
+    "definition": "一套专门教人如何在对方账号无明显违规记录的情况下，利用平台规则漏洞将其恶意举报至封禁的操作指南。",
+    "description": "教程通常拆解平台审核机制的弱点，比如利用批量投诉触发自动处罚、伪造违规截图等。使用者无需掌握高深技术，按步骤操作即可让竞争对手店铺、直播间或营销号下架。这类教程在灰产群内以网盘链接或文档形式传播，是恶意竞争和勒索变现的常用工具。",
+    "usageExample": "送你XX平台wwg教程要不要",
+    "relatedRisks": [
+      "R0068",
+      "R0068-002"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0034"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS05",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

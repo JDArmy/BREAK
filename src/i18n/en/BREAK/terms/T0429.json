@@ -1,0 +1,26 @@
+{
+  "T0429": {
+    "title": "Upfront Interest Deduction",
+    "keywords": [
+      "Upfront Interest Deduction",
+      "Beheading"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "高利贷放款时预先从本金中扣除的利息部分。",
+    "description": "在非法借贷或地下钱庄操作中，出借人放款时并不支付全额本金，而是直接扣除一笔高额利息，借款人实际到手金额远低于合同金额。这种做法掩盖了真实利率，使借款人从一开始就陷入债务陷阱。砍头息常见于短期现金贷、套路贷等场景，是黑产快速榨取借款人资金的手段，极易引发暴力催收和连环诈骗。",
+    "usageExample": "这个票，共扣了600多的砍头息。服务费一百多，我最后一次下，逾期快十年了。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

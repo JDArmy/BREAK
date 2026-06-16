@@ -1,0 +1,26 @@
+{
+  "T0374": {
+    "title": "Lead Brokering",
+    "keywords": [
+      "Lead Brokering",
+      "Flying Orders"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "贷款中介将无法消化的客户转交给其他中介操作，以获取佣金分成。",
+    "description": "当贷款中介发现客户资质无法匹配现有渠道时，会将客户资料转卖给其他有放款渠道的中介。这种行为常导致客户信息被多次倒卖，增加信息泄露风险。转单方无需付出后续劳动即可获得佣金，而客户可能面临更高的服务费或陷入套路贷陷阱。",
+    "usageExample": "这个客户资质太差了，我这边渠道做不了，直接飞单给老李那边，一个号能返现两万。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

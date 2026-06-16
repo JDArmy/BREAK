@@ -1,0 +1,28 @@
+{
+  "T0028": {
+    "title": "云黑",
+    "keywords": [
+      "云黑"
+    ],
+    "aliases": [],
+    "category": "营销欺诈",
+    "definition": "被云闪付平台风控系统标记并限制参与营销活动的账号。",
+    "description": "云闪付为防范营销欺诈，会对异常账号进行风控标记，这类账号被称为“云黑”。一旦被列入云黑名单，用户将无法参与云闪付推出的各类优惠、红包或抽奖活动。黑灰产在组织薅羊毛行动时，会优先筛选非云黑账号进行批量操作，以规避平台限制，确保能顺利套取营销资金。",
+    "relatedRisks": [
+      "R0009",
+      "R0055",
+      "R0064"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0001",
+      "TA0001-001"
+    ],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "T0296": {
+    "title": "黑商户",
+    "keywords": [
+      "黑商户"
+    ],
+    "aliases": [],
+    "category": "跑分洗钱",
+    "definition": "知情并主动配合黑产进行洗钱的商户账户。",
+    "description": "黑产通过租用、购买或分成合作的方式控制商户账户，用于接收诈骗或赌博赃款。黑商户通常提供支付接口或收款码，将非法资金伪装成正常营业收入，再通过提现或转账完成清洗。这种合作是洗钱链条中的关键节点，组织化程度高，打击难度大。",
+    "relatedRisks": [
+      "R0060",
+      "R0093"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0039",
+      "AT0040"
+    ],
+    "relatedThreatActors": [
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2025年互联网黑灰产趋势年度总结",
+        "link": "https://www.163.com/dy/article/KJ2QH6LE0518STKV.html"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

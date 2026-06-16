@@ -1,0 +1,34 @@
+{
+  "T0160": {
+    "title": "Escrow Broker",
+    "keywords": [
+      "Escrow Broker",
+      "Guarantee Agency"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illicit data trading, refers to an intermediary role responsible for verifying the credentials of both parties, overseeing the transaction process, and ensuring its successful completion. This model increases trust between buyers and sellers, standardizes the illicit data trade workflow, and to some extent facilitates the smooth execution of illegal data deals.",
+    "description": "In illicit data trading, refers to an intermediary role responsible for verifying the credentials of both parties, overseeing the transaction process, and ensuring its successful completion. This model increases trust between buyers and sellers, standardizes the illicit data trade workflow, and to some extent facilitates the smooth execution of illegal data deals.",
+    "usageExample": "\"Scam prevention reminder: Be cautious in transactions, it is recommended to go through a top-tier intermediary.\"",
+    "relatedRisks": [
+      "R0078"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS04"
+    ],
+    "references": [
+      {
+        "title": "2024 Data Breach Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

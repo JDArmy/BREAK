@@ -1,0 +1,35 @@
+{
+  "T0198": {
+    "title": "Cohabitation Lookup",
+    "keywords": [
+      "Cohabitation Lookup",
+      "Check If You Live Together"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "黑产查档中通过非法手段获取特定人员同住人信息的定向查询服务。",
+    "description": "查同住通常依赖酒店系统、户籍或社区网格数据，由内鬼或技术渗透直接拉取。结果多用于债务催收、婚外情调查或人身威胁，能精准锁定目标的生活轨迹与同居关系。该服务因涉及高度敏感隐私，在数据黑市中属于高价值、高风险品类，常与开房记录打包出售。",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

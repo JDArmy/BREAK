@@ -1,0 +1,36 @@
+{
+  "T0203": {
+    "title": "Travel-Trail Lookup",
+    "keywords": [
+      "Travel-Trail Lookup",
+      "Flying Fire"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "指黑产通过非法获取航班、火车票等出行记录，追踪个人行踪的服务。",
+    "description": "数据多源自票务系统内部泄露或第三方接口滥用，黑产将其包装为查档服务出售。该服务常被用于跟踪特定目标、商业竞争对手或进行精准的诈骗活动。因其能实时反映个人动态，对个人隐私和安全构成严重威胁。",
+    "usageExample": "\"Feihuo + Entry and Exit Records, low price/fast order response\"",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

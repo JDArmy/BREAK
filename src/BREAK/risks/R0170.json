@@ -5,7 +5,11 @@
     "description": "MEV（Miner/Maximal Extractable Value）是指矿工/验证者通过控制区块内交易顺序获取的额外利益。常见手法包括：抢先交易（Front-running）、夹击交易（Sandwich Attack）、套利交易重排等。用户的交易被恶意重排后，可能遭受滑点损失、交易失败或被迫以不利价格成交。",
     "complexity": "高级",
     "influence": "用户交易成本增加，遭受价格滑点损失，区块链公平性受损。",
-    "avoidances": [],
+    "avoidances": [
+      "A0128",
+      "A0129",
+      "A0130"
+    ],
     "references": [
       {
         "title": "Flashbots MEV Research",

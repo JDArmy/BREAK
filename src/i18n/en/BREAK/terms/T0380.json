@@ -1,0 +1,26 @@
+{
+  "T0380": {
+    "title": "Completion Window",
+    "keywords": [
+      "Completion Window",
+      "Graduate"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "黑产对完成一个完整骗贷操作周期所需时长的俗称。",
+    "description": "在信贷欺诈语境中，“毕业”指从包装虚假资料、申请贷款到最终成功下款的整个流程结束。黑产常用“X天毕业”来宣传其骗贷方案的效率，以此吸引急用钱或想赖账的客户。这个时间越短，意味着该团伙的造假能力和渠道效率越高，能更快地套取资金并转移风险。",
+    "usageExample": "一手渠道最高点位结算，15到30天毕业，出水300到800万，客户绕行，只对接中介。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "T0158": {
+    "title": "收单",
+    "keywords": [
+      "收单"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "非法数据交易中，黑产服务方接收并受理客户的数据查询订单。",
+    "description": "在数据黑产链条里，“收单”是服务方对外发布接单信号，表示可以承接各类查档、查流水、查轨迹等需求。收单方通常扮演渠道角色，自身未必持有数据源，而是将订单集中后转给上游接口或内部人员处理，赚取差价。",
+    "usageExample": "“收单，当天必回”",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

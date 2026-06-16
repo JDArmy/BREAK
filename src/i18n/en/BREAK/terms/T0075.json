@@ -1,0 +1,31 @@
+{
+  "T0075": {
+    "title": "Leaked Data",
+    "keywords": [
+      "Leaked Data",
+      "Material"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "Typically refers to sensitive data that has been illegally obtained and may be used for malicious purposes. This data includes, but is not limited to, personal information, corporate data, trade secrets, and user login credentials.",
+    "description": "Typically refers to sensitive data that has been illegally obtained and may be used for malicious purposes. This data includes, but is not limited to, personal information, corporate data, trade secrets, and user login credentials.",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01",
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

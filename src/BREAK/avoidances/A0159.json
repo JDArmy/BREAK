@@ -1,0 +1,16 @@
+{
+  "A0159": {
+    "title": "合约升级与紧急暂停",
+    "category": "TC01",
+    "definition": "实施可升级合约设计和紧急暂停机制应对漏洞",
+    "description": "见R0177第一条及R0161第二条。",
+    "complexity": "高级",
+    "limitation": "同R0177/R0161",
+    "references": [],
+    "updated": "2026-06-16",
+    "keywords": [
+      "可升级合约",
+      "紧急暂停"
+    ]
+  }
+}

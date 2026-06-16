@@ -1,0 +1,34 @@
+{
+  "T0170": {
+    "title": "Database Owner",
+    "keywords": [
+      "Database Owner",
+      "Library Owner"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "A key figure who owns and operates social engineering databases, credential-stuffing data, or leaked databases, acquiring, organizing, and managing large volumes of sensitive data through illegal channels to offer query, sale, and subscription services, forming the core ecosystem of underground data trading.",
+    "description": "A key figure who owns and operates social engineering databases, credential-stuffing data, or leaked databases, acquiring, organizing, and managing large volumes of sensitive data through illegal channels to offer query, sale, and subscription services, forming the core ecosystem of underground data trading.",
+    "usageExample": "\"Bank transaction records for any bank, stable, fast line—departing Sunday night, returns Tuesday or Wednesday.\"",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

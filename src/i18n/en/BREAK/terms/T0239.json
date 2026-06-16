@@ -1,0 +1,44 @@
+{
+  "T0239": {
+    "title": "Direct Login Account",
+    "keywords": [
+      "Direct Login Account",
+      "Direct Number"
+    ],
+    "aliases": [],
+    "category": "Business Fraud",
+    "definition": "无需短信验证码或密码即可直接登录的账号，多由黑产通过协议漏洞或撞库手段批量产出。",
+    "description": "这类账号省去了二次验证环节，方便黑产快速切换设备进行批量操作，如刷单、发广告或洗钱。直登号在号商市场中溢价较高，常按平台、活跃度和是否带支付功能分档售卖。买家拿到手后直接挂脚本运行，极大降低了作案的时间成本。",
+    "usageExample": "TG direct account, agreement account, new account, large quantity in stock",
+    "relatedRisks": [
+      "R0017",
+      "R0017-001",
+      "R0005",
+      "R0030",
+      "R0030-001",
+      "R0032"
+    ],
+    "relatedAvoidances": [
+      "A0007-001"
+    ],
+    "relatedAttackTools": [
+      "AT0044",
+      "AT0009",
+      "AT0016",
+      "AT0003",
+      "AT0007",
+      "AT0021"
+    ],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0006",
+      "TA0007"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

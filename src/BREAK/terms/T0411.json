@@ -1,0 +1,31 @@
+{
+  "T0411": {
+    "title": "上人中介",
+    "keywords": [
+      "上人中介"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "黑产链条中负责为贷款中介介绍客户的引流角色。",
+    "description": "上人中介不直接操作贷款，而是利用自身渠道寻找有贷款需求的客户，并将其介绍给合作的中介或操盘手。他们从中赚取佣金或提成，是黑产获客环节的重要一环。大量自称有客户资源的中介活跃于各类社交群组，实际转化率参差不齐。",
+    "usageExample": "长期收上人中介，口嗨勿扰，爱吃饼的勿扰，事多爱做梦的勿扰。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS04",
+      "BS11"
+    ],
+    "references": [
+      {
+        "title": "【信贷欺诈】车贷欺诈产业链之\"免抵车\"欺诈手法揭秘",
+        "link": "https://www.threathunter.cn/blog/a469288539b"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

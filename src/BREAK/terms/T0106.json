@@ -1,0 +1,30 @@
+{
+  "T0106": {
+    "title": "挂鸟",
+    "keywords": [
+      "挂鸟"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "诈骗团伙内部将潜在或已得手的受害者列为攻击目标或标记为“已上钩”对象的黑话。",
+    "description": "团伙通过这种标记系统对受害者进行分类管理，以便分配不同话务员进行后续跟进和深度诈骗。这种流水线式的管理让团伙能高效追踪诈骗进度，确保不遗漏任何可榨取的目标。一旦被“挂鸟”，受害者将面临持续且定制化的骗局攻击。",
+    "relatedRisks": [
+      "R0095",
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008",
+      "TA0042"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

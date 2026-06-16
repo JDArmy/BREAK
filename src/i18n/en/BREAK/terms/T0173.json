@@ -1,0 +1,37 @@
+{
+  "T0173": {
+    "title": "Fast Track Query",
+    "keywords": [
+      "Fast Track Query",
+      "Express"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illegal data trading, a method used by upstream sources to obtain data, characterized by fast query speeds (results within minutes), with sources possibly being public authority systems or high-efficiency channels.",
+    "description": "In illegal data trading, a method used by upstream sources to obtain data, characterized by fast query speeds (results within minutes), with sources possibly being public authority systems or high-efficiency channels.",
+    "usageExample": "\"Bank transaction records for any bank, stable, fast line—departing Sunday night, returns Tuesday or Wednesday.\"",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

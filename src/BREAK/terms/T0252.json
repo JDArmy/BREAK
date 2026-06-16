@@ -1,0 +1,41 @@
+{
+  "T0252": {
+    "title": "打粉",
+    "keywords": [
+      "打粉"
+    ],
+    "aliases": [],
+    "category": "业务欺诈",
+    "definition": "为账号批量增加虚假粉丝，以制造影响力并变现的操作。",
+    "description": "黑灰产通过机器注册、盗用账号或招募真人兼职等方式，为特定账号快速填充粉丝量，使其在数据上显得有影响力。这些虚假粉丝常用于直播带货时营造虚假人气，骗取商家坑位费，或用于后续的诈骗引流。打粉是流量造假产业链的源头环节之一。",
+    "usageExample": "“接WS打粉，TG群接单，按万计数，隔天出工单，分流链接稳定。”",
+    "relatedRisks": [
+      "R0017",
+      "R0017-001",
+      "R0005",
+      "R0024",
+      "R0007-003"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0044",
+      "AT0009",
+      "AT0016",
+      "AT0005",
+      "AT0050"
+    ],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0006",
+      "TA0007",
+      "TA0013"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS05",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "T0065": {
+    "title": "职业背债人",
+    "keywords": [
+      "职业背债人"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "职业背债人是指被黑产招募，以自身名义替他人承担贷款债务并获取少量报酬的人员。",
+    "description": "这类人员通常征信记录清白但急需用钱，被黑产中介包装后，以个人名义申请车贷、房贷、信贷或企业贷款。放款后资金被幕后团伙抽走，背债人仅获得少量分成，却要承担全部债务和征信污点。该模式常见于有组织骗贷，最终导致金融机构坏账，背债人则面临法律追偿和信用破产。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】恶意贷款中介揭秘",
+        "link": "https://zhuanlan.zhihu.com/p/17601711058"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

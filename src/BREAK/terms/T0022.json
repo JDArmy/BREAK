@@ -1,0 +1,36 @@
+{
+  "T0022": {
+    "title": "锁单",
+    "keywords": [
+      "锁单",
+      "锁丹"
+    ],
+    "aliases": [
+      "锁丹"
+    ],
+    "category": "营销欺诈",
+    "definition": "指黑灰产在电商大促期间利用程序批量下单但不付款，以占用库存或优惠名额的行为。",
+    "description": "黑灰产在识别到价格漏洞或高价值优惠券后，通过自动化工具瞬间生成大量待支付订单，将商品库存锁定。此举旨在囤货居奇或待价而沽，导致商家无法正常销售，其他消费者无法购买。",
+    "usageExample": "别急着付款，先把低价货全部锁单，等价格涨回去咱们再转手卖订单。",
+    "relatedRisks": [
+      "R0003",
+      "R0005",
+      "R0070"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0002"
+    ],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [
+      {
+        "title": "2024上半年度互联网黑灰产研究报告",
+        "link": "https://www.threathunter.cn/blog/2024-50e66f87-abe6-4928-b031-c5c2c83c1cf0"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

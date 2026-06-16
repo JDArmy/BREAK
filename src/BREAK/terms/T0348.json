@@ -1,0 +1,28 @@
+{
+  "T0348": {
+    "title": "半点\\熟某点\\上一九\\半一九",
+    "keywords": [
+      "半点\\熟某点\\上一九\\半一九"
+    ],
+    "aliases": [],
+    "category": "赌博",
+    "definition": "赌博中不同的抽水计算方式，用于描述庄家从赌注中抽取利润的比例。",
+    "description": "半点指抽水5%，上一九指抽水10%，半一九介于两者之间，通常为7.5%左右。这些术语用于约定庄家收益，不同赌局或针对不同赌客会灵活调整点数，熟客可能享受更低抽水，是赌场控制盈利和吸引赌客的核心手段。",
+    "relatedRisks": [
+      "R0097",
+      "R0060"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0016",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS06",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

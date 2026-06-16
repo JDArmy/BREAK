@@ -1,0 +1,29 @@
+{
+  "T0356": {
+    "title": "Bet Recorder",
+    "keywords": [
+      "Bet Recorder",
+      "Look At the Pile"
+    ],
+    "aliases": [],
+    "category": "Gambling",
+    "definition": "在赌桌上负责记录每位赌客押注金额与输赢情况的人员。",
+    "description": "看堆紧盯台面筹码动向，实时报出每位赌客的下注数额和输赢结果，确保赌场抽水准确无误。这个角色需要眼明手快，防止赌客浑水摸鱼，也是赌场监控作弊的第一道防线。",
+    "relatedRisks": [
+      "R0097",
+      "R0060"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0016",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS06",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

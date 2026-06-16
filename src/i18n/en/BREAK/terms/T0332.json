@@ -1,0 +1,32 @@
+{
+  "T0332": {
+    "title": "OTC Exchange",
+    "keywords": [
+      "OTC Exchange",
+      "Acceptance"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "承兑在黑产语境下特指将人民币现金兑换为USDT等加密货币的操作。",
+    "description": "承兑商是连接法币资金池与虚拟币池的关键角色。他们接收来自诈骗、赌博等非法活动的人民币资金，然后向对方支付等值的加密货币。这一过程帮助黑产将高风险的法币“洗白”为相对匿名的虚拟资产，实现了资金从受监管的银行体系向灰色地带的转移，是洗钱链条中的核心兑换环节。",
+    "usageExample": "Then accept the second change through Yu'e Bao and return it to U.",
+    "relatedRisks": [
+      "R0121",
+      "R0060"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0060",
+      "AT0039"
+    ],
+    "relatedThreatActors": [
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS15"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

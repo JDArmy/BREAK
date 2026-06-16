@@ -1,0 +1,35 @@
+{
+  "T0085": {
+    "title": "International Fullz",
+    "keywords": [
+      "International Fullz",
+      "External Materials"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "Refers to the four key pieces of information for overseas cards: bank card account number, password, cardholder ID number, and linked mobile number (also known as CVV fullz). This information contains citizens’ personal data and is usually resold to third parties for illegal activities such as targeted marketing and fraud.",
+    "description": "Refers to the four key pieces of information for overseas cards: bank card account number, password, cardholder ID number, and linked mobile number (also known as CVV fullz). This information contains citizens’ personal data and is usually resold to third parties for illegal activities such as targeted marketing and fraud.",
+    "relatedRisks": [
+      "R0078",
+      "R0089",
+      "R0092",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

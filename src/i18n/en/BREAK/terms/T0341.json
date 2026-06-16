@@ -1,0 +1,36 @@
+{
+  "T0341": {
+    "title": "Quick-Pay Card Charge",
+    "keywords": [
+      "Quick-Pay Card Charge",
+      "Quick Buckle"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "在洗钱场景中，快捷卡扣是指通过非法调用快捷支付接口盗刷他人银行卡资金的账户盗刷方式。",
+    "description": "黑产人员利用泄露的银行卡信息，绑定快捷支付协议或截取验证码，在无需持卡人二次确认的情况下完成扣款。该操作常与“卡商”提供的四件套信息配合，资金直接转入跑分账户。快捷卡扣因其隐蔽性强、到账快，成为小额高频盗刷洗钱的常用手段，受害者往往在收到银行账单后才发现被盗。",
+    "usageExample": "本群提供一道快捷卡扣，需方需在30分钟内给支付视频，如超时未提供，默认未到账。",
+    "relatedRisks": [
+      "R0060",
+      "R0093",
+      "R0094"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026",
+      "AT0039",
+      "AT0040"
+    ],
+    "relatedThreatActors": [
+      "TA0003",
+      "TA0004",
+      "TA0006-003",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

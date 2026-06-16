@@ -1,0 +1,29 @@
+{
+  "T0029": {
+    "title": "1元党",
+    "keywords": [
+      "1元党"
+    ],
+    "aliases": [],
+    "category": "营销欺诈",
+    "definition": "泛指热衷于利用优惠活动以极低成本获取商品或服务的羊毛党群体。",
+    "description": "该群体最初指只购买一元商品的用户，后演变为对羊毛党的统称，成员包括宝妈、大学生及兼职人员等。他们活跃于各类社交群组，系统性地搜集、分享并利用各平台的漏洞或促销规则，通过叠加优惠券、红包等方式实现低成本甚至零成本购物。他们的行为常游走在灰色地带，规模化操作时即演变为黑灰产链条的一部分。",
+    "relatedRisks": [
+      "R0009",
+      "R0055",
+      "R0064"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0001",
+      "TA0001-001"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

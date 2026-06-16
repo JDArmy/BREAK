@@ -1,0 +1,29 @@
+{
+  "T0112": {
+    "title": "出水",
+    "keywords": [
+      "出水"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "诈骗团伙内部黑话，指受害者已上钩，即将或正在转出钱财的关键时刻。",
+    "description": "在诈骗语境中，“鱼”代表受害者，“水”隐喻金钱，“出水”意味着鱼离开了水，即受害者已完全进入圈套。此时诈骗进入收网阶段，团伙会全力诱导受害者完成转账。该词标志着诈骗进程已进入实质性的资金收割环节。",
+    "relatedRisks": [
+      "R0095",
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

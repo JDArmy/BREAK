@@ -1,0 +1,31 @@
+{
+  "T0086": {
+    "title": "Dating Data",
+    "keywords": [
+      "Dating Data",
+      "Dating Material"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illegal data trading, this refers to user information obtained from dating sites, including personal profiles, contact details, and dating records. Once illegally obtained by cybercriminals, this data is usually resold to third parties for illegal activities such as targeted marketing and fraud.",
+    "description": "In illegal data trading, this refers to user information obtained from dating sites, including personal profiles, contact details, and dating records. Once illegally obtained by cybercriminals, this data is usually resold to third parties for illegal activities such as targeted marketing and fraud.",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS04",
+      "BS01",
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

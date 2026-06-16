@@ -5,7 +5,11 @@
     "description": "自私挖矿是一种矿工策略攻击。矿工挖出新区块后不立即广播，而是继续在私有链上挖矿。当公共链追上时，选择性地公布私有链使其成为主链，作废其他矿工的工作。这种策略可使拥有超过33%算力的矿池获得超出其算力占比的收益，同时降低网络整体安全性和浪费算力资源。",
     "complexity": "高级",
     "influence": "诚实矿工收益降低，算力资源浪费，区块链安全性下降，中心化趋势加剧。",
-    "avoidances": [],
+    "avoidances": [
+      "A0164",
+      "A0165",
+      "A0166"
+    ],
     "references": [
       {
         "title": "Majority is not Enough: Bitcoin Mining is Vulnerable",

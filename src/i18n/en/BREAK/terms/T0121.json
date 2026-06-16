@@ -1,0 +1,31 @@
+{
+  "T0121": {
+    "title": "Mark",
+    "keywords": [
+      "Mark",
+      "Fish"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "A general term for fraud targets or victims. 'Fish' or 'water fish' typically refers to individuals who are easily deceived and lack vigilance, much like fish that are easily caught in water. Fraudsters exploit the weaknesses of these individuals through various deceptive tactics.",
+    "description": "03 Fraud Terminology Related to 'Pig'",
+    "usageExample": "那个组昨晚群发了两万条短信，一晚上就上了三十多条鱼。",
+    "relatedRisks": [
+      "R0095",
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

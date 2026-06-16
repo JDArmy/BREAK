@@ -1,0 +1,25 @@
+{
+  "T0055": {
+    "title": "7-14 Payday Trap",
+    "keywords": [
+      "7-14 Payday Trap",
+      "714 Anti-Aircraft Gun"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "A form of short-term, high-interest lending in credit fraud scenarios, typically involving 7- or 14-day loan terms characterized by exorbitant upfront interest deductions and late fees. \"Upfront interest deduction\" refers to the practice of deducting a portion of the principal as interest at the time of loan issuance; for example, a borrower might receive only 1,050 yuan on a 1,400 yuan loan, with the deducted amount being the upfront interest.",
+    "description": "A form of short-term, high-interest lending in credit fraud scenarios, typically involving 7- or 14-day loan terms characterized by exorbitant upfront interest deductions and late fees. \"Upfront interest deduction\" refers to the practice of deducting a portion of the principal as interest at the time of loan issuance; for example, a borrower might receive only 1,050 yuan on a 1,400 yuan loan, with the deducted amount being the upfront interest.",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

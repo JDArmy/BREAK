@@ -1,0 +1,29 @@
+{
+  "T0110": {
+    "title": "醉鸟",
+    "keywords": [
+      "醉鸟"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "诈骗分子通过长期的情感或信任关系培养，使受害者完全放松警惕并产生依赖的精神控制状态。",
+    "description": "诈骗者通过精心策划的长时间交流，让受害者在情感或财务上对诈骗者言听计从。处于“醉鸟”状态的受害者往往丧失了基本的判断力，对诈骗者的指令深信不疑。这种深度洗脑使得受害者在被骗时不仅不反抗，甚至会协助诈骗者。",
+    "relatedRisks": [
+      "R0095",
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

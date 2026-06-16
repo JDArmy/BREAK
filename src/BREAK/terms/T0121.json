@@ -1,0 +1,30 @@
+{
+  "T0121": {
+    "title": "鱼",
+    "keywords": [
+      "鱼"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "诈骗团伙对潜在受害者的黑话统称，指那些警惕性低、容易上钩的目标人群。",
+    "description": "诈骗分子将寻找受害者比作“捕鱼”，把筛选目标称为“选鱼”。他们通过非法获取的名单或广撒网式群发信息，筛选出容易轻信他人、缺乏防范意识的“鱼”。一旦有人回应，就会被标记为可进一步诱骗的“上钩的鱼”，进入后续诈骗流程。",
+    "usageExample": "那个组昨晚群发了两万条短信，一晚上就上了三十多条鱼。",
+    "relatedRisks": [
+      "R0095",
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

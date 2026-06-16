@@ -1,0 +1,15 @@
+{
+  "A0158": {
+    "title": "智能合约形式化验证",
+    "category": "TC01",
+    "definition": "使用数学方法严格证明合约逻辑正确性",
+    "description": "见R0159第三条。",
+    "complexity": "高级",
+    "limitation": "同R0159",
+    "references": [],
+    "updated": "2026-06-16",
+    "keywords": [
+      "形式化验证"
+    ]
+  }
+}

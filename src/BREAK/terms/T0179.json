@@ -1,0 +1,34 @@
+{
+  "T0179": {
+    "title": "个户",
+    "keywords": [
+      "个户"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "包含身份证大头照、姓名、身份证号及详细住址的个人基础档案信息。",
+    "description": "这是非法数据交易中最基础的个人信息单元，通常包含公民的身份证正面照片、姓名与身份证号二要素以及详细住址。此类信息是进行身份冒用、精准诈骗的基础物料，因其信息完整度高，在黑产中流通频繁。",
+    "usageExample": "“个户,身份正反,晚上6点前秒”",
+    "relatedRisks": [
+      "R0078",
+      "R0089",
+      "R0092",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

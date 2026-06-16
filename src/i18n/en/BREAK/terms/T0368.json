@@ -1,0 +1,26 @@
+{
+  "T0368": {
+    "title": "Table Banker",
+    "keywords": [
+      "Table Banker",
+      "Palm Stall"
+    ],
+    "aliases": [],
+    "category": "Gambling",
+    "definition": "在赌博黑产中，“掌档”指牌桌上直接经手赌资收付、按输赢结果分发现金的操盘手。",
+    "description": "掌档是每局赌资流转的终端执行者，负责点钞、抽头、赔付，确保现金在赌客与庄家间即时清算。他们通常深得摇把子信任，掌握现场资金池，也容易成为内盗或黑吃黑的缺口。在线上赌局中，掌档角色被系统自动结算替代，但线下仍依赖其维持赌桌秩序和资金闭环。",
+    "relatedRisks": [
+      "R0097"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0016"
+    ],
+    "relatedBusinessScenes": [
+      "BS06"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

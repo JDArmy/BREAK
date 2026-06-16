@@ -1,0 +1,32 @@
+{
+  "T0336": {
+    "title": "小额代收",
+    "keywords": [
+      "小额代收"
+    ],
+    "aliases": [],
+    "category": "跑分洗钱",
+    "definition": "小额代收是黑产利用他人账户接收多笔小额非法资金，以规避风控的洗钱手段。",
+    "description": "为躲避银行和支付平台对大额、频繁交易的风控监测，黑产将大额赃款拆分成无数笔小额资金，分散到大量代收账户中。这些代收账户的持有者接收资金后，再统一归集转给上家。这种“化整为零”的策略常见于跑分平台的初期接单环节，能有效降低单笔交易被拦截的风险，是洗钱链条中的前端分流措施。",
+    "usageExample": "跑芬 小额代收 大量来码",
+    "relatedRisks": [
+      "R0060",
+      "R0093"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026",
+      "AT0039",
+      "AT0040"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

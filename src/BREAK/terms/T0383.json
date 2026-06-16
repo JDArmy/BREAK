@@ -1,0 +1,25 @@
+{
+  "T0383": {
+    "title": "行口关系",
+    "keywords": [
+      "行口关系"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "黑产通过渗透银行内部建立的、可操控信贷审批的违规关系网。",
+    "description": "“行口关系”是比普通“渠道”更深层的腐败网络，指黑产通过收买、勾结银行内部关键岗位人员，实现对信贷审批流程的系统性操控。这种关系能确保为资质不符的申请人违规放款，是黑产中介彰显实力、吸引合作的核心资本。其后果是直接导致金融机构坏账风险急剧升高，并破坏信贷体系的公平性。",
+    "usageExample": "行口关系硬，可单数据，可一条龙。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "T0069": {
+    "title": "扶贫料",
+    "keywords": [
+      "扶贫料"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "扶贫料指在非法数据交易中与扶贫对象相关的个人信息。",
+    "description": "这类数据通常包含低收入人群的详细身份、住址及补贴信息，被黑产非法获取后转卖。下游买家利用这些信息对防范意识较弱的群体实施定向诈骗，如冒充扶贫办发放补贴等。由于数据真实度高，此类诈骗成功率较高，社会危害性极大。",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

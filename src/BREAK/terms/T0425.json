@@ -1,0 +1,25 @@
+{
+  "T0425": {
+    "title": "破黑",
+    "keywords": [
+      "破黑"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "通过特定操作解除银行或网贷平台的风控限制，恢复被冻结的借款或提额功能。",
+    "description": "在信贷欺诈中，部分用户因触发风控规则被系统关入“黑屋”，导致无法借款或提额。黑产中介或用户通过伪造消费记录、绑定特定联名卡、变更设备指纹等手段，绕过平台的风控模型，强行恢复账户功能。这类操作常伴随虚假交易和身份伪造，一旦被平台发现，可能引发更严厉的账户冻结或法律责任。",
+    "usageExample": "前几天靠xx联名卡成功破黑，额度15k04。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

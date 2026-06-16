@@ -1,0 +1,26 @@
+{
+  "T0058": {
+    "title": "Double Blacklist",
+    "keywords": [
+      "Double Blacklist",
+      "Double Black"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "\"Double blacklisting\" refers to an individual having two types of adverse records in the credit reporting system: being on both a credit blacklist and a debt blacklist.",
+    "description": "A credit blacklist records behaviors such as overdue payments and defaults, while a debt blacklist tracks outstanding obligations like unpaid bank loans or maxed-out credit cards. When an individual appears on both lists, they are considered \"double blacklisted.\" This term frequently appears in advertisements from illicit credit intermediaries who target such individuals with loan offers. These fraudulent intermediaries exploit the borrowers' desperation, advertising fake loan assistance services that promise to resolve their credit issues and secure loans. In reality, they charge exorbitant fees without delivering results, often pushing victims deeper into debt.",
+    "usageExample": "中介在群里发广告说‘专业操作双黑口子，无视黑白，是人就来’，其实就是骗那些征信烂掉的人去搞贷款。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "T0412": {
+    "title": "一手操作",
+    "keywords": [
+      "一手操作"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "黑产中指直接掌控核心资金与渠道资源的关键操盘手。",
+    "description": "一手操作方通常掌握着最终的资金来源、银行内部关系或核心包装技术，是欺诈链条的顶层。他们极少直接接触客户，而是通过层层代理分发业务。市面上大量自称“一手”的中介多为中间商，真正的操盘手为规避风险，只与特定渠道合作，身份高度隐蔽。",
+    "usageExample": "人工面对面，灵活沟通，大数据65以上，本地一手操作。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

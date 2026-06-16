@@ -1,0 +1,31 @@
+{
+  "T0303": {
+    "title": "Cardless Identity Provider",
+    "keywords": [
+      "Cardless Identity Provider",
+      "No Card Head"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "无卡人头是仅提供身份信息而不提供实体银行卡的供体。",
+    "description": "无卡人头通常只提供身份证照片、手持照等用于线上实名认证，帮助黑产绕过平台注册环节。他们不直接提供银行卡，但被用于注册的虚拟账户同样可用于接收和转移资金。这种模式降低了人头的风险感知，使其更容易被招募。",
+    "usageExample": "Who wants the head of a person without a card? I have a 5,000 non-teller limit of xx bank in my name.",
+    "relatedRisks": [
+      "R0060",
+      "R0093"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0014",
+      "TA0015",
+      "TA0006-003"
+    ],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "T0080": {
+    "title": "内料",
+    "keywords": [
+      "内料"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "在非法数据交易中，指境内银行卡的卡号、密码、持卡人身份证号及绑定手机号这四类核心信息。",
+    "description": "这四大件是实施盗刷、洗钱和账户接管的关键数据，通常通过钓鱼网站、木马程序或系统漏洞获取。黑产团伙利用其直接转移资金，或用于注册虚假账户进行跑分洗钱，对公民财产安全构成直接威胁。",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

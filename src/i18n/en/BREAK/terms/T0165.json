@@ -1,0 +1,35 @@
+{
+  "T0165": {
+    "title": "Database Deduping",
+    "keywords": [
+      "Database Deduping",
+      "Pass Warehouse"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In underground data trading, the practice of comparing newly provided data against an existing illicit personal information database to filter out duplicates or historical records, ensuring freshness.",
+    "description": "In underground data trading, the practice of comparing newly provided data against an existing illicit personal information database to filter out duplicates or historical records, ensuring freshness.",
+    "usageExample": "\"Direct data intake, mixed gender, over 25, 15 per record, deduped against the library. Data handover at midnight, payment by 8 PM next day. Capable operators, look here.\"",
+    "relatedRisks": [
+      "R0078",
+      "R0089",
+      "R0092",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

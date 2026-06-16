@@ -1,0 +1,33 @@
+{
+  "T0133": {
+    "title": "Mule Recruitment Script",
+    "keywords": [
+      "Mule Recruitment Script",
+      "Horse Rope"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "The contact information of an elderly scam victim.",
+    "description": "The contact information of an elderly scam victim.",
+    "usageExample": "这批马绳是从某三甲医院内鬼手里拿的，全是近期确诊癌症的，电话和家庭住址都有，训马组已经开始逐个联系了。",
+    "relatedRisks": [
+      "R0095",
+      "R0150",
+      "R0060"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0008",
+      "TA0015",
+      "TA0042",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

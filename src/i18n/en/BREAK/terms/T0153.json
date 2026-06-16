@@ -1,0 +1,30 @@
+{
+  "T0153": {
+    "title": "Sexual-Lure Traffic",
+    "keywords": [
+      "Sexual-Lure Traffic",
+      "Toner"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "Refers to users lured in by scammers who post sexually suggestive or provocative content. These posts often operate in a legal gray zone, exploiting curiosity or desire to attract a large number of users—primarily male—to click, follow, add as a friend, or visit specific links. The acquisition and sale of such leads is a common tactic in online fraud operations.",
+    "description": "Refers to users lured in by scammers who post sexually suggestive or provocative content. These posts often operate in a legal gray zone, exploiting curiosity or desire to attract a large number of users—primarily male—to click, follow, add as a friend, or visit specific links. The acquisition and sale of such leads is a common tactic in online fraud operations.",
+    "relatedRisks": [
+      "R0095",
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0008",
+      "TA0015",
+      "TA0042"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS05"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

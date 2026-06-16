@@ -1,0 +1,25 @@
+{
+  "T0424": {
+    "title": "洗白",
+    "keywords": [
+      "洗白"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "黑产通过非法手段消除或掩盖个人不良信用记录的行为。",
+    "description": "黑产代理以“征信修复”为名，通过伪造证明、恶意投诉金融机构或利用系统漏洞等方式，试图删除或修改征信报告中的逾期、呆账等负面信息。这种行为不仅骗取客户高额服务费，更严重扰乱金融信用体系，且所谓的“洗白”往往无法真正实现。",
+    "usageExample": "征信修复洗白，先处理后收费，不成功不收费。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

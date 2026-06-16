@@ -1,0 +1,42 @@
+{
+  "BS17": {
+    "title": "元宇宙",
+    "description": "元宇宙、虚拟世界、VR/AR、数字人、虚拟资产等场景的安全风险",
+    "updated": "2026-06-16",
+    "riskDimensions": {
+      "RD12": {
+        "title": "虚拟资产",
+        "riskScenes": [
+          "RS22"
+        ],
+        "updated": "2026-06-16"
+      },
+      "RD13": {
+        "title": "虚拟环境安全",
+        "riskScenes": [
+          "RS23"
+        ],
+        "updated": "2026-06-16"
+      }
+    },
+    "riskScenes": {
+      "RS22": {
+        "title": "虚拟资产欺诈",
+        "risks": [
+          "R0183",
+          "R0184",
+          "R0185"
+        ],
+        "updated": "2026-06-16"
+      },
+      "RS23": {
+        "title": "VR/AR与虚拟世界风险",
+        "risks": [
+          "R0191",
+          "R0192"
+        ],
+        "updated": "2026-06-16"
+      }
+    }
+  }
+}

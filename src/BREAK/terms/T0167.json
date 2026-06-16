@@ -1,0 +1,29 @@
+{
+  "T0167": {
+    "title": "无盲",
+    "keywords": [
+      "无盲"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "黑产中表示数据查询成功率极高，通常暗示数据来源于警方内部人员泄露。",
+    "description": "“无盲”意味着查询无死角、无失败，能精准获取银行流水、开卡信息、户籍资料等高度敏感数据。这种渠道通常涉及公职人员利用职务之便违规查询，风险极大，是黑产数据链的最顶端。",
+    "usageExample": "“无盲查流水，对公对私都有，周四统一发车，散单批量都接。”",
+    "relatedRisks": [
+      "R0078"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

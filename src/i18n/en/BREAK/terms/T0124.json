@@ -1,0 +1,34 @@
+{
+  "T0124": {
+    "title": "Pig-Butchering Scam",
+    "keywords": [
+      "Pig-Butchering Scam",
+      "Pig Killing Plate"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "A scam where fraudsters 'fatten up the pig before slaughtering it.' It typically involves gaining the victim's affection and trust through online chatting and fake romantic relationships. Eventually, the fraudster lures the victim into depositing and transferring money on platforms disguised as investment, wealth management, or gambling sites. Initially, withdrawals may be allowed to encourage larger deposits, but later the platform shuts down withdrawal functions and absconds with all the victim's funds, completing the 'pig slaughter.'",
+    "description": "A scam where fraudsters 'fatten up the pig before slaughtering it.' It typically involves gaining the victim's affection and trust through online chatting and fake romantic relationships. Eventually, the fraudster lures the victim into depositing and transferring money on platforms disguised as investment, wealth management, or gambling sites. Initially, withdrawals may be allowed to encourage larger deposits, but later the platform shuts down withdrawal functions and absconds with all the victim's funds, completing the 'pig slaughter.'",
+    "usageExample": "他们团队去年做了一个杀猪盘，三个月骗了上千万，用的就是虚拟币平台。",
+    "relatedRisks": [
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001",
+      "AT0070"
+    ],
+    "relatedThreatActors": [
+      "TA0039",
+      "TA0015",
+      "TA0008",
+      "TA0042"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS15"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

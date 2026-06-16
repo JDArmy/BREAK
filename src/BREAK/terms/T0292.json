@@ -1,0 +1,32 @@
+{
+  "T0292": {
+    "title": "盗刷",
+    "keywords": [
+      "盗刷"
+    ],
+    "aliases": [],
+    "category": "跑分洗钱",
+    "definition": "通过窃取支付信息进行未经授权交易或取现的非法行为。",
+    "description": "黑产利用钓鱼网站、伪基站或恶意软件获取他人银行卡、信用卡信息，克隆卡片或绑定支付账户进行盗刷。盗刷资金常被用于购买虚拟商品、充值卡或转入跑分平台，快速变现或清洗。这种行为直接侵害个人财产安全，是电诈和金融欺诈中常见的赃款获取手段。",
+    "usageExample": "小额支付码接盗刷料",
+    "relatedRisks": [
+      "R0060",
+      "R0093"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026",
+      "AT0039",
+      "AT0040"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "T0187": {
+    "title": "Three-Network Data",
+    "keywords": [
+      "Three-Network Data",
+      "Three Networks"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "Refers to China's three major telecom operators—China Mobile, China Telecom, and China Unicom—specifically the subscriber data tied to their phone numbers.",
+    "description": "Refers to China's three major telecom operators—China Mobile, China Telecom, and China Unicom—specifically the subscriber data tied to their phone numbers.",
+    "usageExample": "\"Bulk queries for phone numbers registered under the three major carriers, rock-bottom prices\"",
+    "relatedRisks": [
+      "R0078",
+      "R0089",
+      "R0092",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

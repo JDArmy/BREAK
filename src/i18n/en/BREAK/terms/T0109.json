@@ -1,0 +1,30 @@
+{
+  "T0109": {
+    "title": "Feeding the Bird",
+    "keywords": [
+      "Feeding the Bird",
+      "Feed the Birds"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "The tactic of sending small amounts of money or other minor benefits to targeted victims in order to build trust or verify the validity of their financial accounts. By 'feeding' the victim, scammers lower their guard and condition them to accept funds or communications, setting the stage for a larger fraudulent scheme.",
+    "description": "The tactic of sending small amounts of money or other minor benefits to targeted victims in order to build trust or verify the validity of their financial accounts. By 'feeding' the victim, scammers lower their guard and condition them to accept funds or communications, setting the stage for a larger fraudulent scheme.",
+    "relatedRisks": [
+      "R0095",
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

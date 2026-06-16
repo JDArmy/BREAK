@@ -1,0 +1,45 @@
+{
+  "T0260": {
+    "title": "Account Seller",
+    "keywords": [
+      "Account Seller",
+      "Account Dealer"
+    ],
+    "aliases": [],
+    "category": "Business Fraud",
+    "definition": "号商指专门批量注册、养号并贩卖各类社交平台账号的黑灰产从业者。",
+    "description": "号商拥有完整的账号生产链条，从接码平台获取验证码到模拟真人养号，最终将账号分级出售。下游买家利用这些账号进行刷量、引流、诈骗或水军活动。号商是黑灰产的基础资源供给方，支撑了大量网络欺诈行为。",
+    "usageExample": "Source first-hand dealer",
+    "relatedRisks": [
+      "R0011",
+      "R0030",
+      "R0030-001",
+      "R0017",
+      "R0017-001",
+      "R0005",
+      "R0032"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0006",
+      "AT0044",
+      "AT0009",
+      "AT0016",
+      "AT0003",
+      "AT0007",
+      "AT0021"
+    ],
+    "relatedThreatActors": [
+      "TA0007",
+      "TA0003",
+      "TA0009",
+      "TA0006"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

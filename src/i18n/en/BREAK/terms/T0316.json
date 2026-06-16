@@ -1,0 +1,35 @@
+{
+  "T0316": {
+    "title": "Fixed-Amount QR",
+    "keywords": [
+      "Fixed-Amount QR",
+      "Setup Code"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "跑分洗钱中可预设固定金额的支付链接或二维码，用于精准收取特定面额的非法资金。",
+    "description": "设置码常被绑定到虚拟商品支付场景，比如Q币、点券充值，黑产把充值金额锁死在某个档位，让付款方只能按预设金额支付。这样既能避免多付少付带来的对账麻烦，又能把赃款伪装成正常的虚拟消费。跑分团伙大量收购这类码，配合自动发卡平台实现“付款即发货”，完成资金清洗和资产转换。",
+    "usageExample": "Recruitment: Set code, aggregate, personal, Didi Cash.",
+    "relatedRisks": [
+      "R0060",
+      "R0093",
+      "R0094"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0027",
+      "AT0026",
+      "AT0039",
+      "AT0040"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "T0293": {
+    "title": "Passing Funds Downstream",
+    "keywords": [
+      "Passing Funds Downstream",
+      "Discharge"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "诈骗团伙将非法资金分发给下游进行清洗的行为。",
+    "description": "放料是洗钱链条的上游环节，诈骗团伙将电信诈骗、赌博等非法所得交由跑分团队或洗钱中介处理。下游通过分散转账、购买虚拟币或利用商户账户将赃款洗白。放料者通常不直接参与清洗，而是通过抽成获利，风险转嫁给执行层。",
+    "usageExample": "Long-term release: capital plate",
+    "relatedRisks": [
+      "R0060",
+      "R0093",
+      "R0095"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014",
+      "TA0015"
+    ],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS15",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "T0168": {
+    "title": "猎魔/lm",
+    "keywords": [
+      "猎魔/lm"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "在社工库中通过零散线索进行模糊匹配，挖掘特定目标敏感信息的查询方式。",
+    "description": "攻击者利用目标的已知信息，在社工库中进行关联搜索，拼凑出完整的身份、社交、金融画像。这种查询常用于人肉搜索、精准诈骗的前期情报收集，能极大提高下游犯罪的成功率。",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

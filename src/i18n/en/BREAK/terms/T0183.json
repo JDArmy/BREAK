@@ -1,0 +1,35 @@
+{
+  "T0183": {
+    "title": "Full Household Text Record",
+    "keywords": [
+      "Full Household Text Record",
+      "Full Text"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illicit data trading, within the context of record-checking services, this refers to a complete textual description of all members listed in a household register, including relatives’ names and national ID numbers.",
+    "description": "In illicit data trading, used in the record-checking context, this refers to the full written record of household registration members. It includes detailed text-based information such as the names and ID numbers of all relatives in the household.",
+    "usageExample": "“Full text with relationship details, supports Chunjiang guarantee verification.”",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

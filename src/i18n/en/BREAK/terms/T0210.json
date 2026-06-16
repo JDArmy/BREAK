@@ -1,0 +1,34 @@
+{
+  "T0210": {
+    "title": "Gold-Installment Data",
+    "keywords": [
+      "Gold-Installment Data",
+      "Gold Material"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "指支持黄金购买并分期还款的小型非法套现平台，其用户信息在数据黑市中被称为“黄金料”。",
+    "description": "这类平台以购买黄金为幌子，实则帮助用户套取现金，并收取高额手续费。黑产人员将参与套现的用户个人信息整理成“黄金料”出售。这些数据常被用于二次诈骗，受害者不仅面临财产损失，还可能因套现行为卷入法律纠纷。",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [
+      {
+        "title": "[Black Big Data] Data Leakage Risk Situation Report in the First Half of 2025",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

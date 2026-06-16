@@ -1,0 +1,33 @@
+{
+  "T0061": {
+    "title": "Fee Refund Abuse",
+    "keywords": [
+      "Fee Refund Abuse",
+      "Interest and Fee Refund"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "Refers to the refunding of financial charges such as annual fees, processing fees, membership fees, entitlement fees, interest, and penalty fees. While originally a standard financial term, it is used here specifically to describe malicious exploitation by underground actors.",
+    "description": "Refers to the refunding of financial charges such as annual fees, processing fees, membership fees, entitlement fees, interest, and penalty fees. While originally a standard financial term, it is used here specifically to describe malicious exploitation by underground actors.",
+    "usageExample": "中介帮他把网贷的利息全退回来了，收了30%的手续费，还让他把通讯录里的朋友都介绍过来做退息退费。",
+    "relatedRisks": [
+      "R0096",
+      "R0096-001"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0029"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [
+      {
+        "title": "Exposing the Underground Industry Behind Illegal \"Agent Rights Protection\" in the Financial Sector",
+        "link": "https://www.threathunter.cn/blog/e78513e348b"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

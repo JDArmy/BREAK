@@ -1,0 +1,33 @@
+{
+  "T0250": {
+    "title": "开波",
+    "keywords": [
+      "开波"
+    ],
+    "aliases": [],
+    "category": "业务欺诈",
+    "definition": "“开播”的谐音黑话，指开启直播进行带货或引流。",
+    "description": "黑灰产从业者在群聊或任务发布中，为避免触发平台关键词监控，常用“开波”代替“开播”。一旦开播，就会利用准备好的话术、剧本或虚假人设，向观众进行欺诈性营销或引流至外部私域。这是直播诈骗链条中的启动环节。",
+    "usageExample": "“兄弟们，今晚八点准时开波，素材都准备好，别掉链子。”",
+    "relatedRisks": [
+      "R0024",
+      "R0007-003"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0005",
+      "AT0050"
+    ],
+    "relatedThreatActors": [
+      "TA0013",
+      "TA0009"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS05",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

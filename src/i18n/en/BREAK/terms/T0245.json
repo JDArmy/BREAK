@@ -1,0 +1,35 @@
+{
+  "T0245": {
+    "title": "Cashout Merchant",
+    "keywords": [
+      "Cashout Merchant",
+      "Cake Shop"
+    ],
+    "aliases": [],
+    "category": "Business Fraud",
+    "definition": "直播平台上专门低价收购用户虚拟礼物的黑产组织，与“超市”功能相同。",
+    "description": "这类灰产渠道通常以“蛋糕店”等代号在私密社群传播，为持有礼物的用户提供变现服务。他们通过低价买入、高价转卖给需要打榜的客户，从中赚取差价，完成虚拟资产的非法流通。这种行为破坏了平台直播生态，并可能涉及洗钱风险。",
+    "usageExample": "别在直播间乱加那些蛋糕店的微信，他们收礼物的价格压得特别低。",
+    "relatedRisks": [
+      "R0094",
+      "R0138",
+      "R0121"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0067",
+      "AT0039"
+    ],
+    "relatedThreatActors": [
+      "TA0039",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS05",
+      "BS15"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

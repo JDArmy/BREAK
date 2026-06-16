@@ -1,0 +1,33 @@
+{
+  "T0096": {
+    "title": "猎魔",
+    "keywords": [
+      "猎魔"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指在社工库中，利用姓名等模糊信息结合辅助字段进行筛选，精准定位目标数据的手法。",
+    "description": "猎魔是社工库查询中的一种常用技巧，当攻击者只知道目标姓名时，会利用返回结果中的生日、地区、性别等辅助信息进行交叉比对。通过这种方式，他们能从海量同名数据中精准筛选出特定目标的完整档案。这一手法是实施精准诈骗和人肉搜索的关键步骤。",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

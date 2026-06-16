@@ -1,0 +1,27 @@
+{
+  "T0093": {
+    "title": "料主",
+    "keywords": [
+      "料主"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指在黑产链条中，掌握并批量出售一手泄露数据的主要人物或组织。",
+    "description": "料主是数据泄露源头的直接控制者，他们通过内鬼、黑客攻击或漏洞利用等手段获取新鲜数据，并进行分类整理。作为地下交易的上游，料主将数据高价批发给下游的料客，是各类诈骗、身份盗窃等犯罪活动的源头供货商。他们通常只负责出货，不直接参与终端犯罪，以此降低自身风险。",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

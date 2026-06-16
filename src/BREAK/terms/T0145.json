@@ -1,0 +1,29 @@
+{
+  "T0145": {
+    "title": "话术本",
+    "keywords": [
+      "话术本"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "诈骗团伙用于通话诱导的预设对话脚本。",
+    "description": "话术本是诈骗组织内部编写的标准化操作手册，详细规定了不同诈骗阶段的说辞、情绪引导和应变策略。一线人员严格按本执行，从建立信任到制造恐慌，最终操控受害者转账或泄露信息。这种流水线式操作大幅降低了诈骗门槛，使话务员能高效批量实施犯罪。",
+    "usageExample": "组长在开工前分发新版话术本，要求所有人把冒充客服退款的那几页背熟，遇到质疑就翻到第三页的应对话术。",
+    "relatedRisks": [
+      "R0095",
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0008",
+      "TA0015",
+      "TA0042"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

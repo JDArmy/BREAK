@@ -1,0 +1,30 @@
+{
+  "T0107": {
+    "title": "鸟",
+    "keywords": [
+      "鸟"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "在“杀鸟盘”骗局中，特指长期居家、社交圈窄且希望通过网络获取收入的易骗人群。",
+    "description": "这类人群主要包括学生、家庭主妇等，他们渴望通过互联网兼职赚钱，却缺乏足够的社会经验。诈骗分子利用这种心理，用“刷单返佣”等话术诱骗其入局。在团伙内部，这些易受骗的特定群体被统称为“鸟”。",
+    "relatedRisks": [
+      "R0095",
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

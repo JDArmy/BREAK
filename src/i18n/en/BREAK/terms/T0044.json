@@ -1,0 +1,26 @@
+{
+  "T0044": {
+    "title": "Application Submission",
+    "keywords": [
+      "Application Submission",
+      "Incoming Parts"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "Refers to the act of preparing and submitting application materials to a loan company or bank's system, typically occurring within the credit application process. This step marks the official start of a loan application. The application submission process can involve fraudulent activities, such as submitting fake materials like fabricated business bank statements, falsified personal income streams, or forged housing provident fund records.",
+    "description": "Refers to the act of preparing and submitting application materials to a loan company or bank's system, typically occurring within the credit application process. This step marks the official start of a loan application. The application submission process can involve fraudulent activities, such as submitting fake materials like fabricated business bank statements, falsified personal income streams, or forged housing provident fund records.",
+    "usageExample": "这批料都养好了，今晚统一进件，争取一波全下。",
+    "relatedRisks": [
+      "R0146",
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

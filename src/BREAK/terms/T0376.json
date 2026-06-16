@@ -1,0 +1,25 @@
+{
+  "T0376": {
+    "title": "跟单",
+    "keywords": [
+      "跟单"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "供单中介全程陪同客户到操作现场，监督贷款过程直至分赃完成。",
+    "description": "在缺乏信任的中介合作中，提供客户的一方为了防止被截胡或飞单，会全程跟随客户到贷款操作现场。跟单者监督整个包装、申请、放款流程，确保在贷款成功后能按约定比例拿到佣金。这常见于异地操作或首次合作的中介之间。",
+    "usageExample": "跟单全包，见人就给5千，不下款给5万，发完资料先转1千诚意金。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "T0056": {
+    "title": "Car Loan Cash-Out",
+    "keywords": [
+      "Car Loan Cash-Out",
+      "Car Melting"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "A fraudulent practice of obtaining auto loans or leases using fabricated personal, financial, or employment information without genuine intent to purchase a vehicle. Fraudsters bypass risk controls to secure financing, then dispose of the vehicle to cash out the proceeds, a scheme known as \"vehicle financing cash-out.\"",
+    "description": "Also refers to a deceptive transaction method where fictitious car sales are used to defraud lending institutions. For example, a fabricated vehicle purchase contract is used to apply for a loan or lease when no actual car transaction takes place.",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

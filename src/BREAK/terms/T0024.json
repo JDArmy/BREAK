@@ -1,0 +1,34 @@
+{
+  "T0024": {
+    "title": "无损套",
+    "keywords": [
+      "无损套"
+    ],
+    "aliases": [],
+    "category": "营销欺诈",
+    "definition": "指黑灰产利用平台规则漏洞，将优惠券或红包以近乎零成本的方式变现为现金。",
+    "description": "黑灰产通过虚假交易、自买自卖或串通商家等手段，将平台发放的优惠券、购物补贴转化为现金。该操作无需实际物流或仅通过空包网完成，直接套取平台营销资金，造成平台巨额资损。",
+    "usageExample": "这次活动有漏洞，领了券找指定渠道无损套，100块券到手95。",
+    "relatedRisks": [
+      "R0017",
+      "R0003",
+      "R0005",
+      "R0070"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0002"
+    ],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】电商黄牛党产业链分析报告",
+        "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

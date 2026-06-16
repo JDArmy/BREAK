@@ -1,0 +1,38 @@
+{
+  "T0034": {
+    "title": "Credit Invisible",
+    "keywords": [
+      "Credit Invisible",
+      "thin file",
+      "no-hit profile",
+      "credit newbie",
+      "unscored consumer",
+      "zero-record applicant",
+      "ghost profile",
+      "credit file farming",
+      "synthetic identity precursor"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "A person with little to no credit history, making it difficult for lenders to assess their risk profile. In underground fraud ecosystems, these individuals are treated as a raw material and are frequently traded on platforms such as Telegram, X (formerly Twitter), and Potato.",
+    "description": "Fraudsters exploit credit invisibles to commit loan fraud by fabricating credit documentation or submitting forged applications. Because financial institutions lack historical data on these individuals, they can be used to obtain credit illicitly. Those who participate in carrying this debt are often referred to as \"debt mules\" or \"professional debt bearers.\"",
+    "usageExample": "最近手头紧，看到群里有人收白户背债，说只要去签个字就能拿几万块，这种好事靠谱吗？",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [
+      {
+        "title": "The Desperados of Financial Fraud: A Dark Industry Data Report",
+        "link": "https://www.threathunter.cn/blog/f17db99edff"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

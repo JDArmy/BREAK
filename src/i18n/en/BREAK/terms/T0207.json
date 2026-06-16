@@ -1,0 +1,30 @@
+{
+  "T0207": {
+    "title": "Multi-Lender Data",
+    "keywords": [
+      "Multi-Lender Data",
+      "Long Loan"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "指从网贷共享数据库中泄露的，记录借款人短期内向多家机构申请贷款行为的数据。",
+    "description": "这类数据源自多家网贷公司共建的风控系统，用于识别高风险借款人。黑产获取后，可精准定位急需用钱的人群，实施“注销校园贷”“贷款保证金”等针对性诈骗。泄露源头通常是系统接口被滥用或内部人员倒卖。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [
+      {
+        "title": "[Black Industry Big Data] Annual Summary of Internet Black and Gray Industry Trends in the First Half of 2025",
+        "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

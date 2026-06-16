@@ -1,0 +1,28 @@
+{
+  "T0159": {
+    "title": "回单",
+    "keywords": [
+      "回单"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "非法数据交易中，服务方完成查询并将结果返回给买家的交付动作。",
+    "description": "回单意味着数据查询已完成并交付，是黑产交易闭环的关键节点。服务方在收到上游反馈后，将包含个人隐私、账户流水等信息的文档或截图发给买家，交易即告结束。回单时效常被用作竞争力卖点，强调“快速回单”以吸引急于获取信息的买家。",
+    "usageExample": "“源头直出，价格:200人民币，十分钟左右回单，实惠便宜”",
+    "relatedRisks": [
+      "R0078"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

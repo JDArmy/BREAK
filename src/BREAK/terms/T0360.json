@@ -1,0 +1,29 @@
+{
+  "T0360": {
+    "title": "QP",
+    "keywords": [
+      "QP"
+    ],
+    "aliases": [],
+    "category": "赌博",
+    "definition": "黑灰产对利用棋牌平台进行赌博活动的隐晦指称。",
+    "description": "QP表面是棋牌游戏缩写，实际在电诈和网赌圈内专指以房卡模式组织的线上赌局。组织者通过社交软件拉群、开设虚拟房间，赌客购买房卡入局，平台抽头获利。这种模式隐蔽性强，资金流转快，已成为网络赌博的主流形态之一。",
+    "relatedRisks": [
+      "R0097",
+      "R0060"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0016",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS06",
+      "BS04",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

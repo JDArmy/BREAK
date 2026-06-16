@@ -1,0 +1,29 @@
+{
+  "T0354": {
+    "title": "Settlement House",
+    "keywords": [
+      "Settlement House",
+      "Water House"
+    ],
+    "aliases": [],
+    "category": "Gambling",
+    "definition": "专门处理赌资流转和洗钱的窝点或团伙。",
+    "description": "水房承接赌场或网赌平台的资金分流任务，通过多级账户快速拆分、归集赌资，切断资金溯源路径。操作人员使用大量他人账户进行高频转账，最终将资金洗白后回流给幕后庄家。一旦被查，水房往往是整个资金链中最先暴露的节点。",
+    "relatedRisks": [
+      "R0097",
+      "R0060"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0014",
+      "TA0016"
+    ],
+    "relatedBusinessScenes": [
+      "BS06",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

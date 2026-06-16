@@ -1,0 +1,28 @@
+{
+  "T0077": {
+    "title": "Raw Data",
+    "keywords": [
+      "Raw Data",
+      "Woolen Material"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "Refers to unprocessed, uncleaned, or unsorted raw data, typically containing large amounts of untreated personal or corporate information. Because it has not been filtered or organized, it may include a significant amount of useless or redundant information.",
+    "description": "Refers to unprocessed, uncleaned, or unsorted raw data, typically containing large amounts of untreated personal or corporate information. Because it has not been filtered or organized, it may include a significant amount of useless or redundant information.",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "T0321": {
+    "title": "银联码",
+    "keywords": [
+      "银联码"
+    ],
+    "aliases": [],
+    "category": "跑分洗钱",
+    "definition": "银联体系内用于接收或转移非法资金的支付二维码，是跑分洗钱中依赖银行清算网络的收款入口。",
+    "description": "银联码依托银联跨行清算网络，覆盖绝大多数银行账户，黑产将其作为跑分收款的前端工具。操作时由码商或跑分平台生成动态或静态二维码，供受害人扫码付款，资金经银联通道快速归集到控制账户。因其银行级覆盖广、到账快，常被用于拆分小额多笔赃款，绕过风控监测。",
+    "usageExample": "码回码，码回u，银联码。",
+    "relatedRisks": [
+      "R0060",
+      "R0093"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026",
+      "AT0039",
+      "AT0040"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

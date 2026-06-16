@@ -1,0 +1,29 @@
+{
+  "T0051": {
+    "title": "慢企",
+    "keywords": [
+      "慢企"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "慢企指黑产通过真实过户并长期包装空壳企业，以骗取银行大额税票贷的手法。",
+    "description": "黑产将空壳公司法人正式变更为背债人，并按银行要求等待3-6个月的变更期。期间他们会伪造经营流水、开票和纳税记录，将企业包装成正常经营的优质客户，以此绕过风控模型，申请高额度企业贷款后逃废债务。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】金融欺诈中的亡命之徒",
+        "link": "https://www.threathunter.cn/blog/f17db99edff"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

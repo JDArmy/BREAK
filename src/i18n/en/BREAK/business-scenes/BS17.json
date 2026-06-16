@@ -1,0 +1,22 @@
+{
+  "BS17": {
+    "title": "Metaverse",
+    "description": "Security risks in metaverse, virtual worlds, VR/AR, digital humans, virtual assets and other scenarios",
+    "riskDimensions": {
+      "RD12": {
+        "title": "Virtual Assets"
+      },
+      "RD13": {
+        "title": "Virtual Environment Security"
+      }
+    },
+    "riskScenes": {
+      "RS22": {
+        "title": "Virtual Asset Fraud"
+      },
+      "RS23": {
+        "title": "VR/AR & Virtual World Risks"
+      }
+    }
+  }
+}

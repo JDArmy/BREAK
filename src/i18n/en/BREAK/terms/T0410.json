@@ -1,0 +1,26 @@
+{
+  "T0410": {
+    "title": "Big Trouble",
+    "keywords": [
+      "Big Trouble",
+      "Serious Illness"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "黑产中指被利用进行金融贴现或试药骗保的绝症患者。",
+    "description": "黑产中介专门寻找身患绝症、有医院病危通知的患者，利用其身份进行金融欺诈。常见操作包括以试药名义招募患者，或利用其身份办理高额保险、贷款贴现，在患者去世前套取现金。家属往往因高额回报被引诱配合签署虚假协议，最终面临法律追偿风险。",
+    "usageExample": "大病客户来，48岁以下试药员，到手70个，签完合同就给现！",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

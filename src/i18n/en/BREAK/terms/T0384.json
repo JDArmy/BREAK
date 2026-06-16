@@ -1,0 +1,26 @@
+{
+  "T0384": {
+    "title": "Hot-Market Product",
+    "keywords": [
+      "Hot-Market Product",
+      "Air Outlet Business"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "黑产圈内对当前容易下款、风控宽松的贷款产品或诈骗机会的统称。",
+    "description": "“风口业务”是黑产圈子里的流行术语，指代那些因市场变化、政策漏洞或技术缺陷而出现的短期套利机会。这类业务通常具有申请门槛低、下款快、额度高的特点，是黑产集中攻击的目标。它可能是一个新上线的金融产品，也可能是某个风控策略暂时失效的旧产品，伴随极高的欺诈风险。",
+    "usageExample": "最新风口业务，不看征信大数据，没有前期，纯线上操作，到手可得4万以上。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

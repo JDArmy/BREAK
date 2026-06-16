@@ -1,0 +1,26 @@
+{
+  "T0389": {
+    "title": "Two IDs, One Card",
+    "keywords": [
+      "Two IDs, One Card",
+      "Two Certificates and One Card"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "指申请贷款时需提供身份证、驾驶证和银行卡的审核模式，比“一证一卡”多一层身份验证。",
+    "description": "这是车贷欺诈中一种常见的资质要求，黑产中介会为客户伪造驾驶证等全套假证来匹配这一要求。通过增加证件数量，制造资质合规的假象，以骗取金融机构的信任，从而套取更高额度的贷款。",
+    "usageExample": "Two certificates and one card, credit record 5.7 settlement; one certificate and one card, credit record 5 settlement",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

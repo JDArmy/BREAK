@@ -1,0 +1,35 @@
+{
+  "T0232": {
+    "title": "Harvest Intake",
+    "keywords": [
+      "Harvest Intake",
+      "Collect Vegetables"
+    ],
+    "aliases": [],
+    "category": "Business Fraud",
+    "definition": "刷单买手在完成虚假交易后，实际签收商品、确认收货并发布好评的关键步骤。",
+    "description": "在电商刷单链条中，“收菜”标志着一单任务的完结，买手收到空包或小礼品后，按脚本确认收货并给出五星好评。组织者通过此环节验证任务完成度，随后向买手返还本金和佣金。这一行为直接伪造了交易闭环，欺骗平台信用体系，大量“收菜”能短期内堆砌虚假信誉，但易被平台物流和评价分析模型识别。",
+    "relatedRisks": [
+      "R0017",
+      "R0017-001",
+      "R0005"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0044",
+      "AT0009",
+      "AT0016"
+    ],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0006",
+      "TA0007"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

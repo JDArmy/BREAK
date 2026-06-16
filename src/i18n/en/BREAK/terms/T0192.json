@@ -1,0 +1,36 @@
+{
+  "T0192": {
+    "title": "Phone Attribution Lookup",
+    "keywords": [
+      "Phone Attribution Lookup",
+      "Return By Hand"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illicit data trading, refers to querying the carrier and geographic origin of a phone number, often used for precise targeting or correlation analysis of an individual.",
+    "description": "In illicit data trading, refers to querying the carrier and geographic origin of a phone number, often used for precise targeting or correlation analysis of an individual.",
+    "usageExample": "\"Can filter by region, phone number origin, real-name verification, contact to order\"",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

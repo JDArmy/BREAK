@@ -1,0 +1,37 @@
+{
+  "T0006": {
+    "title": "Reverse Arbitrage Loss",
+    "keywords": [
+      "Reverse Arbitrage Loss",
+      "arbitrage loss",
+      "scalper loss",
+      "promo loss",
+      "failed flip",
+      "loss on promo",
+      "arbitrage fail",
+      "promo misjudgment"
+    ],
+    "aliases": [
+      "Anti-Halogen"
+    ],
+    "category": "Marketing Fraud",
+    "definition": "The scenario where fraudsters or scalpers attempting to exploit promotional offers or loopholes end up losing money due to market fluctuations or misjudged pricing, resulting in a net loss instead of profit.",
+    "description": "The scenario where fraudsters or scalpers attempting to exploit promotional offers or loopholes end up losing money due to market fluctuations or misjudged pricing, resulting in a net loss instead of profit.",
+    "relatedRisks": [
+      "R0009",
+      "R0055",
+      "R0064"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0001",
+      "TA0001-001"
+    ],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

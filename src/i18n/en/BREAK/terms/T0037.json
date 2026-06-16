@@ -1,0 +1,33 @@
+{
+  "T0037": {
+    "title": "Loan Processing",
+    "keywords": [
+      "Loan Processing",
+      "full-cycle handling",
+      "loan origination service",
+      "credit packaging",
+      "application processing",
+      "credit file building",
+      "loan document prep",
+      "credit intermediary service",
+      "loan ops"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "Refers to the operational documents and records generated throughout the credit lifecycle, including applications, approvals, disbursements, and repayments. In underground parlance, it also denotes a practitioner's demonstrated ability to handle loan processing, as in phrases like \"full-cycle handling\" or \"high-capability processing.\"",
+    "description": "Refers to the operational documents and records generated throughout the credit lifecycle, including applications, approvals, disbursements, and repayments. In underground parlance, it also denotes a practitioner's demonstrated ability to handle loan processing, as in phrases like \"full-cycle handling\" or \"high-capability processing.\"",
+    "usageExample": "我这边实力操单，无视黑白户，只要没法院执行就能过，点位面谈。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

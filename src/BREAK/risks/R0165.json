@@ -5,7 +5,11 @@
     "description": "攻击者利用物联网设备的安全漏洞（如默认密码、未修补漏洞）批量控制设备，形成僵尸网络（如Mirai、Mozi等）。这些僵尸网络可发起大规模DDoS攻击、进行加密货币挖矿、发送垃圾邮件或作为攻击跳板。",
     "complexity": "高级",
     "influence": "设备性能下降或瘫痪，成为攻击基础设施的一部分，影响互联网稳定性。",
-    "avoidances": [],
+    "avoidances": [
+      "A0113",
+      "A0114",
+      "A0115"
+    ],
     "references": [
       {
         "title": "Mirai Botnet Analysis",

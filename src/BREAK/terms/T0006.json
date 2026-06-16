@@ -1,0 +1,31 @@
+{
+  "T0006": {
+    "title": "反撸",
+    "keywords": [
+      "反撸",
+      "反卤"
+    ],
+    "aliases": [
+      "反卤"
+    ],
+    "category": "营销欺诈",
+    "definition": "指羊毛党在参与优惠活动或利用漏洞套利时，因行情下跌或操作失误导致投入成本无法收回，反而亏本的情况。",
+    "description": "例如囤积大量实物商品后市场价格暴跌，或因触发风控导致账号、资金被冻结。这种“反被平台薅”的现象，常发生在黑产团伙对活动力度预估错误或遭遇商家“砍单”时，是黑产套利失败后的自嘲说法。",
+    "relatedRisks": [
+      "R0009",
+      "R0055",
+      "R0064"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0001",
+      "TA0001-001"
+    ],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

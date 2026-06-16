@@ -1,0 +1,30 @@
+{
+  "T0287": {
+    "title": "空降料",
+    "keywords": [
+      "空降料"
+    ],
+    "aliases": [],
+    "category": "跑分洗钱",
+    "definition": "空降料指通过色情引流、刷单任务等手法直接骗取受害人资金的非法所得。",
+    "description": "空降料是黑灰产对情色诈骗所得资金的称呼，诈骗团伙通过社交软件发布色情引流信息，以预付定金、会员费、保证金等名义诱骗受害人转账。这类资金直接来源于受害人账户，流转链条相对简单，但涉及大量个人转账记录。黑灰产需要大量个人收款码或账户来分散接收空降料，以规避银行风控和警方追踪。",
+    "usageExample": "空降料需找个人经营码車 汇率非常高",
+    "relatedRisks": [
+      "R0060",
+      "R0095"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0014",
+      "TA0015"
+    ],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "T0082": {
+    "title": "Real-Time Data",
+    "keywords": [
+      "Real-Time Data",
+      "Real-Time Information"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "Refers to the latest first-hand data, i.e., personal or organizational information that has just been stolen. This type of material is the easiest to sell and commands the highest price.",
+    "description": "Refers to the latest first-hand data, i.e., personal or organizational information that has just been stolen. This type of material is the easiest to sell and commands the highest price.",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0027"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "T0060": {
+    "title": "偷渡",
+    "keywords": [
+      "偷渡"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "黑产利用银行风控漏洞或政策差异，绕过正规审批流程非法获取信用卡或贷款。",
+    "description": "操作者通常会研究不同银行或不同地区的审批松紧度，利用系统漏洞提交虚假资料或进行异地申请。一旦“偷渡”成功，他们会迅速套取信用额度并弃用卡片，给银行造成直接坏账损失。这种行为严重扰乱了金融信贷秩序，是反欺诈部门重点监控的对象。",
+    "usageExample": "最近那个口子风控松了，群里都在发教程教人怎么偷渡，用假地址跨区域申请，下卡率还挺高。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

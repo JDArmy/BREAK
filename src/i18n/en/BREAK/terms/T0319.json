@@ -1,0 +1,33 @@
+{
+  "T0319": {
+    "title": "Reverse Scan",
+    "keywords": [
+      "Reverse Scan",
+      "Anti-Sweep"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "跑分洗钱中收款方用设备主动扫描付款方的付款码来完成收款的方式，常见于线下或POS场景。",
+    "description": "反扫把主动权放在收款方手里，付款方只需亮出付款码，资金就被划走，在黑产中常用于线下洗钱或“手机车”操作。比如用POS机反扫受害者的付款码，或者让“车手”拿着设备去扫赌客的码，资金流向更隐蔽，不容易被付款方察觉异常。这种模式需要硬件和场景配合，但能有效规避线上风控，是线下跑分的重要手法。",
+    "usageExample": "Let’s do an anti-car sweep, mobile phone\\gold anti-car sweep, major supermarkets anti-car sweep! ! !",
+    "relatedRisks": [
+      "R0060",
+      "R0093"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026",
+      "AT0039",
+      "AT0040"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

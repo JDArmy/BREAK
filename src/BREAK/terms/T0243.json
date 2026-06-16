@@ -1,0 +1,34 @@
+{
+  "T0243": {
+    "title": "超市",
+    "keywords": [
+      "超市"
+    ],
+    "aliases": [],
+    "category": "业务欺诈",
+    "definition": "直播平台上专门低价收购用户虚拟礼物的黑产套利组织。",
+    "description": "这类组织长期潜伏在各大直播间，主动联系抽中高价值礼物的游客，以现金折价回收礼物。他们利用平台虚拟物品无法直接提现的规则，为急于变现的用户提供灰色通道，再通过其他账号将礼物打赏给指定主播完成洗钱或套利。这种行为严重扰乱了平台的虚拟经济体系。",
+    "usageExample": "我昨天抽中个城堡，刚挂出去就被超市的人私信问要不要出。",
+    "relatedRisks": [
+      "R0094",
+      "R0138",
+      "R0121"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0067",
+      "AT0039"
+    ],
+    "relatedThreatActors": [
+      "TA0039",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS05",
+      "BS15"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "T0405": {
+    "title": "搂贷",
+    "keywords": [
+      "搂贷"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "通过虚假借款合同非法侵占借款人房产的欺诈行为。",
+    "description": "黑产团伙诱骗房产持有者签订含房产买卖条款的借款协议，利用借款人急需资金或法律意识薄弱的特点，最终通过诉讼或暴力手段夺取房产。老年人是主要受害群体，整个过程设计精密，追索难度大。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

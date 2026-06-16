@@ -1,0 +1,30 @@
+{
+  "T0276": {
+    "title": "升单",
+    "keywords": [
+      "升单"
+    ],
+    "aliases": [],
+    "category": "业务欺诈",
+    "definition": "升单是指在引流完成后，通过话术诱导消费者购买远超初始预期的更高价商品或服务。",
+    "description": "在美容、医美或保健品黑产中，先用低价体验引流到店，再由销售团队进行高压话术洗脑，逼迫或诱导消费者层层加码消费。消费者往往从几十元的体验被忽悠成几千甚至几万的套餐，且常伴随贷款陷阱。这是典型的线下杀猪盘变现环节。",
+    "usageExample": "说是免费体验，结果到店就被关在小房间里升单，不掏几万块根本出不来。",
+    "relatedRisks": [
+      "R0017",
+      "R0005"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0007"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS01",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

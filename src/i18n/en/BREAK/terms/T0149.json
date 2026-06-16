@@ -1,0 +1,36 @@
+{
+  "T0149": {
+    "title": "Funds Intercept",
+    "keywords": [
+      "Funds Intercept",
+      "Buckle Thunder"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "A quality-control measure in underground operations where dummy data, known as \"mines,\" are planted in task lists to detect fraudulent reporting by downline operatives. During settlement, the organizer reviews the list to verify work quality. Deducting these planted entries from the operative's payable count is referred to as \"deducting the mines.\"",
+    "description": "A quality-control measure in underground operations where dummy data, known as \"mines,\" are planted in task lists to detect fraudulent reporting by downline operatives. During settlement, the organizer reviews the list to verify work quality. Deducting these planted entries from the operative's payable count is referred to as \"deducting the mines.\"",
+    "usageExample": "这批量跑完，上头说雷太多，要扣雷结算，等于我们白干三天。",
+    "relatedRisks": [
+      "R0044",
+      "R0032",
+      "R0131"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0064",
+      "AT0066",
+      "AT0067",
+      "AT0053-002"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0043"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

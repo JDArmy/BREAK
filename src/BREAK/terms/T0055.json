@@ -1,0 +1,24 @@
+{
+  "T0055": {
+    "title": "714高炮",
+    "keywords": [
+      "714高炮"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "714高炮指期限7天或14天、收取高额砍头息和逾期费的非法超利贷。",
+    "description": "黑产运营的非法借贷平台以无抵押、秒到账为诱饵，实际放款时扣除30%以上的砍头息。借款人一旦逾期，将面临暴力催收和高额罚息。这种模式常伴随非法获取通讯录等行为，用于威胁借款人，是典型的套路贷。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

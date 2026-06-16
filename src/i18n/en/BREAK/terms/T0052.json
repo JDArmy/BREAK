@@ -1,0 +1,26 @@
+{
+  "T0052": {
+    "title": "Grocery Card",
+    "keywords": [
+      "Grocery Card",
+      "Food Card"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "A credit or debit card widely used for small-value purchases, such as groceries, to disguise illegal cash-out schemes or other fraudulent activities. These cards are often obtained through illicit means or fraudulent applications and are used to conduct sham transactions or other forms of fraud.",
+    "description": "The term \"grocery card\" originates from its use in small-value purchases, such as groceries, to conceal the true purpose of illegal transactions. In these cases, fraudsters may collude with merchants to fabricate purchase records and facilitate cash-outs.",
+    "usageExample": "他手里那批买菜卡每天在便利店刷几十笔，每笔几十块，用来把电诈的钱洗白。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

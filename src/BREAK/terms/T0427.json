@@ -1,0 +1,25 @@
+{
+  "T0427": {
+    "title": "结算层 / 成数",
+    "keywords": [
+      "结算层 / 成数"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "贷款欺诈中各方按约定比例分配放款金额的结算比例。",
+    "description": "在背债或中介合作获客的贷款欺诈链条中，贷款放款后，资金方、操作方、背债人及各级中介会按事先约定的比例进行分润。这个比例通常以“成数”表示，如7成即分走总放款额的70%。结算层决定了各环节的收益分配，层级越高、掌握资金或渠道资源越核心的参与者，分到的成数往往越高。这种分润机制激励了中介层层转介，也放大了信贷欺诈的规模。",
+    "usageExample": "一手资方7成结算（净利润）返点丰厚，双白优先。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

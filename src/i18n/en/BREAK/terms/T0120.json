@@ -1,0 +1,30 @@
+{
+  "T0120": {
+    "title": "Pregnant-Woman Lead",
+    "keywords": [
+      "Pregnant-Woman Lead",
+      "Pregnant Fish"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "In fraud scenarios, refers to pregnant women, who often have more free time and are targeted by scammers with fake work-from-home opportunities like data entry. These scams require upfront 'material fees' or 'membership fees' for promised income that never materializes.",
+    "description": "In fraud scenarios, refers to pregnant women, who often have more free time and are targeted by scammers with fake work-from-home opportunities like data entry. These scams require upfront 'material fees' or 'membership fees' for promised income that never materializes.",
+    "relatedRisks": [
+      "R0095",
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

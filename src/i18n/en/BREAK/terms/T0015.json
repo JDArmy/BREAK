@@ -1,0 +1,35 @@
+{
+  "T0015": {
+    "title": "Direct Order",
+    "keywords": [
+      "Direct Order",
+      "no-discount order",
+      "rebate farming",
+      "cashback order",
+      "merchant kickback",
+      "direct rebate",
+      "order rebating",
+      "bare order",
+      "no-coupon purchase"
+    ],
+    "aliases": [],
+    "category": "Marketing Fraud",
+    "definition": "Placing an order without using any coupons or discounts. This practice typically exploits individual merchant rebate schemes, such as ordering a 200-yuan item with the merchant's address and receiving a 20-yuan kickback.",
+    "description": "Placing an order without using any coupons or discounts. This practice typically exploits individual merchant rebate schemes, such as ordering a 200-yuan item with the merchant's address and receiving a 20-yuan kickback.",
+    "relatedRisks": [
+      "R0003",
+      "R0005",
+      "R0070"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0002"
+    ],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

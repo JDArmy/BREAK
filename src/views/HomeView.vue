@@ -5,6 +5,7 @@ import RiskDetail from "@/components/RiskDetail.vue";
 import AvoidanceDetail from "@/components/AvoidanceDetail.vue";
 import AttackToolDetail from "@/components/AttackToolDetail.vue";
 import ThreatActorDetail from "@/components/ThreatActorDetail.vue";
+import TermDetail from "@/components/TermDetail.vue";
 import { ref, watch, computed } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import { useBreakpoints } from "@/composables/useBreakpoints";
@@ -41,6 +42,7 @@ const subAttackToolsCount = computed(() => Object.keys(BREAK.attackTools).filter
 // 统计所有威胁行为者（包括子行为者）
 const totalThreatActors = computed(() => Object.keys(BREAK.threatActors).length);
 const subThreatActorsCount = computed(() => Object.keys(BREAK.threatActors).filter(key => key.includes('-')).length);
+const totalTerms = computed(() => Object.keys(BREAK.terms).length);
 
 //分商业场景查看风险
 interface SceneBREAK {
@@ -276,6 +278,31 @@ const threatActorDetailClose = () => {
   threatActorDrawer.value = false;
   router.push({ name: "home" });
 };
+
+// 黑话术语抽屉
+const termDrawer = ref(false);
+const termKey = ref("");
+watch(
+  () => [route.name, route.params.tKey] as const,
+  ([routeName, rawTKey]) => {
+    if (routeName === "termDetail") {
+      const nextKey = getSingleRouteParam(rawTKey);
+      if (nextKey && hasOwn(BREAK.terms, nextKey)) {
+        termKey.value = nextKey;
+        termDrawer.value = true;
+        return;
+      }
+      router.replace({ name: "home" });
+      return;
+    }
+    termDrawer.value = false;
+  },
+  { immediate: true }
+);
+const termDetailClose = () => {
+  termDrawer.value = false;
+  router.push({ name: "home" });
+};
 </script>
 
 <template>
@@ -308,6 +335,10 @@ const threatActorDetailClose = () => {
           <div class="stat-label">{{ $t("stats.threatActors") }}</div>
           <div class="stat-number">{{ totalThreatActors }}</div>
           <div v-if="subThreatActorsCount > 0" class="stat-sub">{{ $t("stats.subThreatActors") }} {{ subThreatActorsCount }}</div>
+        </router-link>
+        <router-link to="/terms" class="stat-card">
+          <div class="stat-label">{{ $t("stats.terms") }}</div>
+          <div class="stat-number">{{ totalTerms }}</div>
         </router-link>
       </div>
     </el-col>
@@ -465,6 +496,12 @@ const threatActorDetailClose = () => {
     v-on:drawer-close="threatActorDetailClose"
     :drawer="threatActorDrawer"
     :taKey="threatActorKey"
+  />
+  <TermDetail
+    v-if="termDrawer"
+    v-on:drawer-close="termDetailClose"
+    :drawer="termDrawer"
+    :tKey="termKey"
   />
 </template>
 

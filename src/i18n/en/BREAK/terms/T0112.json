@@ -1,0 +1,30 @@
+{
+  "T0112": {
+    "title": "Successful Conversion",
+    "keywords": [
+      "Successful Conversion",
+      "Out of Water"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "A slang term indicating that a victim has taken the bait and is about to lose money. In fraud jargon, victims are referred to as 'fish,' and 'water' is a metaphor for money. 'Coming out of the water' signifies the moment the victim falls into the trap and their funds are about to be stolen.",
+    "description": "A slang term indicating that a victim has taken the bait and is about to lose money. In fraud jargon, victims are referred to as 'fish,' and 'water' is a metaphor for money. 'Coming out of the water' signifies the moment the victim falls into the trap and their funds are about to be stolen.",
+    "relatedRisks": [
+      "R0095",
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "T0306": {
+    "title": "Onboard A Card",
+    "keywords": [
+      "Onboard A Card",
+      "Card On"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "上卡是跑分洗钱链条中，个人将自己的银行卡提供给黑产团伙，用于接收、转移非法资金的行为。",
+    "description": "黑产团伙为规避资金追踪，大量招募“卡农”提供银行卡作为收款和转账工具。参与者通常被佣金诱惑，明知或应知资金来路不正，仍将自己的银行卡、U盾等全套交出，用于接收诈骗赃款。一旦涉案，提供银行卡者将面临账户冻结、信用惩戒乃至刑事追责的风险。",
+    "usageExample": "新来的中介说，只要上卡走个账，就能拿88U红包，听着就不靠谱。",
+    "relatedRisks": [
+      "R0060",
+      "R0093"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

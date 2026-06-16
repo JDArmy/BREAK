@@ -1,0 +1,30 @@
+{
+  "T0302": {
+    "title": "人头",
+    "keywords": [
+      "人头"
+    ],
+    "aliases": [],
+    "category": "跑分洗钱",
+    "definition": "人头是向黑产出租或出卖自己身份信息和账户的个人。",
+    "description": "人头为赚取佣金，主动或被动地将身份证、银行卡、支付账户等提供给跑分团伙使用，用于注册商户、接收赃款或充当法人。他们往往不清楚资金的具体来源和去向，但一旦涉案，作为账户持有人将首先面临法律制裁。",
+    "usageExample": "人头点位：4u，上车来。",
+    "relatedRisks": [
+      "R0060",
+      "R0093"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

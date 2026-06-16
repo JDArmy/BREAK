@@ -1,0 +1,22 @@
+{
+  "T0218": {
+    "title": "采退",
+    "keywords": [
+      "采退"
+    ],
+    "aliases": [],
+    "category": "业务欺诈",
+    "definition": "采退是黑灰产以套取补贴或返点为目的，先大量采购商品再集中退货的欺诈行为。",
+    "description": "操作者通常利用平台的新人优惠、满减补贴或推广佣金政策，批量下单后触发退货流程，从而套取差价或返利。在电商大促期间尤为活跃，通过虚假交易制造虚假销量，扰乱平台风控体系。该行为不仅造成商家资损，还可能导致正常用户被误伤。",
+    "usageExample": "这波活动可以采退，先下单拿补贴，后面再统一退掉。",
+    "relatedRisks": [],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

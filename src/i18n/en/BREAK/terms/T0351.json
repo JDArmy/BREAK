@@ -1,0 +1,29 @@
+{
+  "T0351": {
+    "title": "Rake",
+    "keywords": [
+      "Rake",
+      "Pump Water"
+    ],
+    "aliases": [],
+    "category": "Gambling",
+    "definition": "庄家按比例从赌资中抽取的利润。",
+    "description": "抽水是赌场的主要盈利模式，无论赌客输赢，庄家都从每笔下注中按固定比例抽成。线下赌场可能由扒头子现场收取，线上平台则自动结算，长期下来赌客必然处于劣势。",
+    "relatedRisks": [
+      "R0097",
+      "R0060"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0016",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS06",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

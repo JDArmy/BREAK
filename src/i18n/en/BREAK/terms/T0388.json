@@ -1,0 +1,26 @@
+{
+  "T0388": {
+    "title": "One ID, One Card",
+    "keywords": [
+      "One ID, One Card",
+      "One certificate, One Card"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "指贷款申请时仅需提供身份证和银行卡的简易模式，常见于车贷欺诈场景。",
+    "description": "黑产利用部分金融机构审核宽松的漏洞，仅凭身份证和银行卡就为客户申请车贷。实际操作中，黑产往往会为客户伪造驾驶证等配套假证，以通过审核。这种模式极易被用于“买车套现”等欺诈活动。",
+    "usageExample": "Two certificates and one card, credit record 5.7 settlement; one certificate and one card, credit record 5 settlement",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

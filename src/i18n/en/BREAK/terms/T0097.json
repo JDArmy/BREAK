@@ -1,0 +1,29 @@
+{
+  "T0097": {
+    "title": "Database Sale",
+    "keywords": [
+      "Database Sale",
+      "Selling Warehouse"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "The illicit practice of selling database information. Individuals or groups involved in database selling acquire large volumes of sensitive data—such as personal information and account credentials—through various means and then trade it on underground markets for illegal profit. Sellers may exaggerate the value and utility of the data to attract buyers. While the short-term gains can be substantial, the activity carries extreme legal and ethical risks.",
+    "description": "The illicit practice of selling database information. Individuals or groups involved in database selling acquire large volumes of sensitive data—such as personal information and account credentials—through various means and then trade it on underground markets for illegal profit. Sellers may exaggerate the value and utility of the data to attract buyers. While the short-term gains can be substantial, the activity carries extreme legal and ethical risks.",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

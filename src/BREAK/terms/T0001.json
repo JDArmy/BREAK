@@ -1,0 +1,35 @@
+{
+  "T0001": {
+    "title": "报单",
+    "keywords": [
+      "报单",
+      "报丹"
+    ],
+    "aliases": [
+      "报丹"
+    ],
+    "category": "营销欺诈",
+    "definition": "指黑产团伙成员将完成的非法操作或交易结果上报给上级管理者，用于统一结算佣金或统计业绩。",
+    "description": "在营销欺诈活动中，下游执行者完成刷单、虚假注册等任务后，需通过内部通讯工具向协调人“报单”。管理者据此核对任务量并发放相应报酬，是团伙内部分赃和任务管理的关键环节。该流程确保了非法活动的有序进行和利益链条的闭环。",
+    "relatedRisks": [
+      "R0003",
+      "R0005",
+      "R0070"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0002"
+    ],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】电商黄牛党产业链分析报告",
+        "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

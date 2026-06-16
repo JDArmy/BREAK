@@ -1,0 +1,26 @@
+{
+  "T0057": {
+    "title": "Loan Sharking",
+    "keywords": [
+      "Loan Sharking",
+      "Water Money"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "In underground lending contexts, \"water money\" refers to usurious loans, specifically short-term, high-interest loans closely tied to gambling activities.",
+    "description": "In underground lending contexts, \"water money\" refers to usurious loans, specifically short-term, high-interest loans closely tied to gambling activities.",
+    "usageExample": "他昨晚在赌场输光了，找场子里的档头拿了十万块水钱，说好借十还十三，结果一周没还上，被追债的堵了门。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

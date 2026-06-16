@@ -1,0 +1,35 @@
+{
+  "T0169": {
+    "title": "Data Completion",
+    "keywords": [
+      "Data Completion",
+      "Complete"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In data trading contexts, a type of lookup service where missing identity numbers, names, and addresses are completed using technical means or social engineering databases.",
+    "description": "In data trading contexts, a type of lookup service where missing identity numbers, names, and addresses are completed using technical means or social engineering databases.",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

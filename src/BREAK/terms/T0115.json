@@ -1,0 +1,36 @@
+{
+  "T0115": {
+    "title": "撒鱼饵",
+    "keywords": [
+      "撒鱼饵"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "诈骗分子大规模散布虚假广告或信息以筛选潜在受害者的预备行为。",
+    "description": "黑产通过群发短信、社交群组或网页弹窗，将“贷款提额”“疫苗预约”等虚假服务作为诱饵广泛传播。该环节不直接实施诈骗，而是等待有需求的受害者主动联系，为后续的“杀鱼”环节筛选出容易得手的目标。",
+    "usageExample": "团伙头目在群里催问手下，‘今天的料撒得够不够多，怎么还没几条鱼咬钩’。他们说的撒鱼饵，就是看谁发的钓鱼短信链接被点开得多。",
+    "relatedRisks": [
+      "R0095",
+      "R0150",
+      "R0084",
+      "R0131"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001",
+      "AT0063",
+      "AT0071"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008",
+      "TA0043"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

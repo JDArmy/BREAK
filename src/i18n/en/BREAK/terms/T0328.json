@@ -1,0 +1,34 @@
+{
+  "T0328": {
+    "title": "Digital RMB Gateway",
+    "keywords": [
+      "Digital RMB Gateway",
+      "Digital Gateway"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "拦截用户数字人民币充值请求并切换至他人设备完成充值的技术手段，黑产借此将诈骗资金直接导入控制钱包。",
+    "description": "数字网关通过技术手段劫持正常用户的数字人民币充值流程，将原本应由用户本人设备完成的充值操作，重定向到黑产持有的设备上执行。这样受害人资金直接充入黑产数字钱包，绕过了用户自身的钱包绑定和风控校验。该手法利用设备切换实现资金绕流，单笔金额通常在300到20000元之间，可全天候自动化运行，隐蔽性极高。",
+    "usageExample": "数字人民币网关，单笔300-20000，24小时在线不掉。",
+    "relatedRisks": [
+      "R0060",
+      "R0093",
+      "R0094"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026",
+      "AT0039",
+      "AT0040"
+    ],
+    "relatedThreatActors": [
+      "TA0014",
+      "TA0006-003"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

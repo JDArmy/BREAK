@@ -1,0 +1,33 @@
+{
+  "T0171": {
+    "title": "剩菜",
+    "keywords": [
+      "剩菜"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "一次性查档后未被直接使用、剩余可转售的部分数据。",
+    "description": "在非法数据交易中，剩菜指单次查询后多出的个人信息，如多余的身份证号或住址。这些数据不会被丢弃，而是由中间商二次打包，流入社工库或低价出售给下游黑产。剩菜的流转扩大了数据泄露范围，使更多受害者面临骚扰和诈骗风险。",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

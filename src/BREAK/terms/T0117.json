@@ -1,0 +1,32 @@
+{
+  "T0117": {
+    "title": "色鱼",
+    "keywords": [
+      "色鱼"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "黑产内部对因寻求色情内容而落入诈骗陷阱的男性群体的称呼。",
+    "description": "诈骗分子在色情网站或社交平台投放带有木马或虚假付费链接的色情内容，引诱用户点击。受害者往往因羞于启齿，在被小额扣款或盗取通讯录后，更容易在后续的裸聊敲诈中被迫支付高额封口费。此类骗局利用人性弱点，风险极高。",
+    "relatedRisks": [
+      "R0095",
+      "R0150",
+      "R0060"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

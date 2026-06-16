@@ -1,0 +1,29 @@
+{
+  "T0213": {
+    "title": "租机料",
+    "keywords": [
+      "租机料"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指从手机租赁平台泄露的用户订单数据，包含手机型号、租期、还款记录及个人身份信息。",
+    "description": "黑产通过渗透租赁平台后台或收买内部人员获取这些数据。买家利用这些信息，对租机用户实施定向营销或冒充平台客服进行诈骗。这些数据还能被用于恶意催收，或筛选出有资金需求的用户进行二次欺诈。",
+    "usageExample": "需租机料 隔天实时下机 数据 能测的联系",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

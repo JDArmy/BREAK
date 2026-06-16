@@ -1,0 +1,39 @@
+{
+  "T0135": {
+    "title": "Lead Vendor",
+    "keywords": [
+      "Lead Vendor",
+      "Vegetable Vendor"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "Illicit data brokers who illegally obtain and sell citizens' personal information to unscrupulous businesses or individuals. They collect data through various unlawful methods and trade it via underground channels, violating privacy rights and fueling identity theft, fraud, and other criminal activities.",
+    "description": "Illicit data brokers who illegally obtain and sell citizens' personal information to unscrupulous businesses or individuals. They collect data through various unlawful methods and trade it via underground channels, violating privacy rights and fueling identity theft, fraud, and other criminal activities.",
+    "usageExample": "最近严打，菜商都转到电报上交易了，一手的银行流水数据按条卖，二手的病历数据打包价，买主全是做精准电诈的。",
+    "relatedRisks": [
+      "R0095",
+      "R0150",
+      "R0084",
+      "R0131"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001",
+      "AT0063",
+      "AT0071"
+    ],
+    "relatedThreatActors": [
+      "TA0020",
+      "TA0015",
+      "TA0008",
+      "TA0043",
+      "TA0042"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

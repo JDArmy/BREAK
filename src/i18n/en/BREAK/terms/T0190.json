@@ -1,0 +1,36 @@
+{
+  "T0190": {
+    "title": "QR-Code Reverse Lookup",
+    "keywords": [
+      "QR-Code Reverse Lookup",
+      "Code Reverse"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illicit data trading, a type of record lookup service where a software account's QR code is used to query the associated user's phone number.",
+    "description": "In illicit data trading, a type of record lookup service where a software account's QR code is used to query the associated user's phone number.",
+    "usageExample": "\"Accepting QR reverse lookups, all reverse queries welcome, high efficiency and speed, no tricks\"",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

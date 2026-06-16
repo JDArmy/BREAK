@@ -1,0 +1,31 @@
+{
+  "T0111": {
+    "title": "Mom Lead",
+    "keywords": [
+      "Mom Lead",
+      "Baoma Fish"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "A term for homemakers targeted in telecom fraud. These individuals often have spare time and seek to supplement household income through online part-time work. Scammers post fake job ads on social platforms, requiring upfront deposits or membership fees for tasks like manual piecework or order processing, and then disappear with the collected funds.",
+    "description": "A term for homemakers targeted in telecom fraud. These individuals often have spare time and seek to supplement household income through online part-time work. Scammers post fake job ads on social platforms, requiring upfront deposits or membership fees for tasks like manual piecework or order processing, and then disappear with the collected funds.",
+    "relatedRisks": [
+      "R0095",
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

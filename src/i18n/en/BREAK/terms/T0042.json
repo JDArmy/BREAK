@@ -1,0 +1,31 @@
+{
+  "T0042": {
+    "title": "Credit Hungry",
+    "keywords": [
+      "Credit Hungry",
+      "Hanado"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "Refers to individuals who frequently apply for credit cards or loans. This behavior is often viewed by financial institutions as a higher-risk indicator, as frequent applications may signal urgent financial needs or poor credit management. Such individuals typically have numerous credit inquiry records on their credit reports, which can negatively impact future credit applications.",
+    "description": "'Frequent applicants' may also be exploited by underground fraud rings for credit fraud, such as in 'debt restructuring' schemes, where fraudsters use upfront funds to help individuals pay off existing debts before saddling them with even higher loan obligations.",
+    "usageExample": "他征信上全是申请记录，典型的纯花户，现在正规银行都不给批了。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [
+      {
+        "title": "Credit Fraud Risk Landscape Report for the First Half of 2024",
+        "link": "https://www.threathunter.cn/blog/2024-ab1e8b8c-509b-44e7-9dbe-d7271765ae2c"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

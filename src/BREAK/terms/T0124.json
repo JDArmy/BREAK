@@ -1,0 +1,33 @@
+{
+  "T0124": {
+    "title": "杀猪盘",
+    "keywords": [
+      "杀猪盘"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "一种以网络交友为名，诱骗受害者在虚假平台进行投资或赌博，最终卷走所有资金的诈骗模式。",
+    "description": "诈骗团伙通过“精聊”与受害者建立网恋关系后，会将其引入自己搭建的虚假投资、博彩网站。初期会让受害者小额盈利并成功提现，诱使其加大投入。待受害者投入大额资金后，平台便会以各种理由拒绝提现，最终关闭跑路。整个过程被形象地称为“找猪-养猪-杀猪”。",
+    "usageExample": "他们团队去年做了一个杀猪盘，三个月骗了上千万，用的就是虚拟币平台。",
+    "relatedRisks": [
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001",
+      "AT0070"
+    ],
+    "relatedThreatActors": [
+      "TA0039",
+      "TA0015",
+      "TA0008",
+      "TA0042"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS15"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

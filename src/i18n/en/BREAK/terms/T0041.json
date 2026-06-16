@@ -1,0 +1,33 @@
+{
+  "T0041": {
+    "title": "Fake Provident Fund",
+    "keywords": [
+      "Fake Provident Fund",
+      "Provident Fund Forgery",
+      "Provident Fund Packaging"
+    ],
+    "aliases": [
+      "Provident Fund Forgery"
+    ],
+    "category": "Credit Fraud",
+    "definition": "Refers to the fraudulent fabrication of housing provident fund data in a fake mobile app or the creation of fictitious employment relationships to help clients make supplementary housing fund contributions, ultimately aimed at defrauding consumer loans, payroll loans, and other personal credit products from banks and financial institutions.",
+    "description": "Refers to the fraudulent fabrication of housing provident fund data in a fake mobile app or the creation of fictitious employment relationships to help clients make supplementary housing fund contributions, ultimately aimed at defrauding consumer loans, payroll loans, and other personal credit products from banks and financial institutions.",
+    "relatedRisks": [
+      "R0146",
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [
+      {
+        "title": "Analysis of Housing Provident Fund Forgery Loan Fraud Techniques",
+        "link": "https://www.threathunter.cn/blog/a6c71ff0534"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "T0136": {
+    "title": "Offline App Promotion",
+    "keywords": [
+      "Offline App Promotion",
+      "Push"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "An offline extension of online fraud, distinct from legitimate ground promotion. In cybercrime, it involves promoting scam platforms, illegal products, or services through in-person tactics, such as offering gifts to lure people into downloading malicious apps that enable remote control of their phones for unauthorized money transfers.",
+    "description": "An offline extension of online fraud, distinct from legitimate ground promotion. In cybercrime, it involves promoting scam platforms, illegal products, or services through in-person tactics, such as offering gifts to lure people into downloading malicious apps that enable remote control of their phones for unauthorized money transfers.",
+    "usageExample": "上个月在菜市场门口摆摊，送鸡蛋让人扫二维码下载那个假理财APP，后台直接开了远程控制，好几个老太太的银行卡都被划空了。",
+    "relatedRisks": [
+      "R0095",
+      "R0150"
+    ],
+    "relatedAvoidances": [
+      "A0007-001"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0008",
+      "TA0015",
+      "TA0042"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

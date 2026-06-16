@@ -1,0 +1,34 @@
+{
+  "T0307": {
+    "title": "First-Hand Source Panel",
+    "keywords": [
+      "First-Hand Source Panel",
+      "One Hand Straight Deal"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "一手直盘是直接掌控诈骗资金来源与核心收款通道的上游黑产操盘者，拥有稳定的非法资金池。",
+    "description": "作为洗钱产业链的头部，一手直盘掌握着最源头的非法资金，如赌博、诈骗等赃款。他们直接控制着大量用于收款的银行卡、支付账户或虚拟币地址，能提供“一手”的洗钱通道。下游的跑分团队或洗钱中介需要对接他们，以获取稳定的“料”进行清洗。",
+    "usageExample": "一手直盘找合作，菠菜料，常规精料混料都有，通道稳定。",
+    "relatedRisks": [
+      "R0060",
+      "R0093"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014",
+      "TA0015"
+    ],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS15",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

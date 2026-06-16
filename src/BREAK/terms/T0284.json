@@ -1,0 +1,36 @@
+{
+  "T0284": {
+    "title": "黑白资",
+    "keywords": [
+      "黑白资"
+    ],
+    "aliases": [],
+    "category": "跑分洗钱",
+    "definition": "黑白资指黑灰产对非法资金和表面合法资金的分类。",
+    "description": "黑灰产将洗钱资金分为黑资和白资两类，黑资直接来源于诈骗、赌博等犯罪活动，白资则是经过多层清洗后表面上看似合法的资金。洗钱团伙根据资金来源安排不同的处理流程，黑资需要经过更多中间环节才能转化为白资。这种分类帮助黑灰产评估洗钱难度和成本，也决定了跑分团队收取的点位高低。",
+    "usageExample": "队长期接各黑白资。 卡接回u，长期大量出u。",
+    "relatedRisks": [
+      "R0060",
+      "R0093",
+      "R0095",
+      "R0094"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026",
+      "AT0039",
+      "AT0040"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014",
+      "TA0015"
+    ],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

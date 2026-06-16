@@ -1,0 +1,31 @@
+{
+  "T0123": {
+    "title": "精聊",
+    "keywords": [
+      "精聊"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "诈骗团伙内部指代通过深度情感聊天建立信任，进而实施诈骗的作案手法。",
+    "description": "这是“杀猪盘”的核心操作环节，操盘手伪装成高富帅、白富美等优质异性身份，使用精心编排的话术与目标进行长时间的精神交流。通过“精聊”建立恋爱关系后，再以掌握漏洞、内幕消息等为由，引诱受害者参与虚假投资、赌博或高价购买劣质商品。整个过程强调情感铺垫，以最大化骗取金额。",
+    "usageExample": "他精聊技术很厉害，养了一个月的号，让那个女的把房子都抵押了。",
+    "relatedRisks": [
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001",
+      "AT0070"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008",
+      "TA0042"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

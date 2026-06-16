@@ -1,0 +1,33 @@
+{
+  "T0100": {
+    "title": "手剥",
+    "keywords": [
+      "手剥"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指下游黑产通过手动拨打电话的方式对受害者进行直接骚扰或诈骗。",
+    "description": "在非法数据交易链条中，下游的营销或诈骗团伙获取个人信息后，采用人工拨号的方式逐一联系目标。这种“手拨”方式相比自动呼叫更灵活，常用于实施高回报的精准诈骗或推销。黑产内部常用该词反馈数据转化效果。",
+    "relatedRisks": [
+      "R0078",
+      "R0089",
+      "R0092",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

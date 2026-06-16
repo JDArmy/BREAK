@@ -1,0 +1,26 @@
+{
+  "T0036": {
+    "title": "纯白户",
+    "keywords": [
+      "纯白户"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "指在征信系统中完全空白，无任何信贷记录的个人。",
+    "description": "纯白户比普通白户的信用记录更干净，因此在黑灰产中价值更高，常被作为骗贷、洗钱的顶级物料。黑产通过社交媒体招募此类人群，包装虚假资料后向多家机构同时申请高额贷款。一旦资金到手，背债人往往被抛弃，留下无法追偿的烂账。",
+    "usageExample": "中介说纯白户能贷得更多，让我把身份证给他，他帮我包装申请，下款了分我三成，这会不会是坑？",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS04",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

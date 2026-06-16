@@ -1,0 +1,34 @@
+{
+  "T0156": {
+    "title": "保真不保漏",
+    "keywords": [
+      "保真不保漏"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "非法数据交易中，查档服务商对数据真实性负责但不保证字段完整的免责约定。",
+    "description": "黑产数据贩子在出售个人隐私信息时，常以“保真不保漏”作为交易口径，意思是能保证姓名、身份证号等核心项真实，但地址、联系方式等可能缺失或陈旧。这种条款降低了买家的预期，也减少了因数据不全引发的纠纷，实际上是为自身货源不稳定或二次转卖数据做免责铺垫。",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

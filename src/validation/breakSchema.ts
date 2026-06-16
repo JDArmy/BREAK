@@ -60,6 +60,23 @@ export const threatActorSchema = z.object({
   updated: z.string().optional(),
 });
 
+export const termSchema = z.object({
+  title: nonEmptyString,
+  keywords: keywordArray,
+  aliases: z.array(nonEmptyString).default([]),
+  category: nonEmptyString,
+  definition: nonEmptyString,
+  description: nonEmptyString,
+  usageExample: z.string().optional(),
+  relatedRisks: idArray,
+  relatedAvoidances: idArray,
+  relatedAttackTools: idArray,
+  relatedThreatActors: idArray,
+  relatedBusinessScenes: idArray,
+  references: z.array(referenceSchema).default([]),
+  updated: z.string().optional(),
+});
+
 export const businessSceneSchema = z.object({
   title: nonEmptyString,
   description: z.string().optional(),
@@ -86,6 +103,7 @@ export const entitySchemas = {
   avoidances: avoidanceSchema,
   attackTools: attackToolSchema,
   threatActors: threatActorSchema,
+  terms: termSchema,
   businessScenes: businessSceneSchema,
 } as const;
 

@@ -1,0 +1,30 @@
+{
+  "T0065": {
+    "title": "Straw Borrower",
+    "keywords": [
+      "Straw Borrower",
+      "Professional Debtor"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "An individual who is paid to assume debt on behalf of others, typically possessing a clean credit history, urgent need for cash, and no ability to repay. Under the packaging of fraud rings, they apply for loans related to vehicles, real estate, credit, or businesses in their own name, receiving a cut of the proceeds while saddled with substantial liabilities.",
+    "description": "An individual who is paid to assume debt on behalf of others, typically possessing a clean credit history, urgent need for cash, and no ability to repay. Under the packaging of fraud rings, they apply for loans related to vehicles, real estate, credit, or businesses in their own name, receiving a cut of the proceeds while saddled with substantial liabilities.",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [
+      {
+        "title": "[Black Market Intelligence] Exposing Malicious Loan Brokers",
+        "link": "https://zhuanlan.zhihu.com/p/17601711058"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

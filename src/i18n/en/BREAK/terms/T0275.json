@@ -1,0 +1,35 @@
+{
+  "T0275": {
+    "title": "Flash QR Code",
+    "keywords": [
+      "Flash QR Code",
+      "Flash Code"
+    ],
+    "aliases": [],
+    "category": "Business Fraud",
+    "definition": "闪码是指在短视频或直播画面中，以极短时间闪现的引流二维码。",
+    "description": "黑产将二维码嵌入视频帧中，利用人眼难以察觉但截图可捕捉的特性，绕过平台内容审核。用户观看时若未暂停则无法看清，但通过录屏或截图即可获取。该手法广泛用于色粉引流、私彩外围或擦边直播导流，将公域流量转化为私域用户。",
+    "usageExample": "那个直播间突然闪了一下，我截图一看是个闪码，扫进去全是赌博广告。",
+    "relatedRisks": [
+      "R0094",
+      "R0138",
+      "R0121"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0067",
+      "AT0039"
+    ],
+    "relatedThreatActors": [
+      "TA0039",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS05",
+      "BS15"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

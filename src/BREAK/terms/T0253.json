@@ -1,0 +1,32 @@
+{
+  "T0253": {
+    "title": "B引流",
+    "keywords": [
+      "B引流"
+    ],
+    "aliases": [],
+    "category": "业务欺诈",
+    "definition": "利用两个账号在评论区一问一答，隐性引导用户关注产品或服务的引流策略。",
+    "description": "操作时，一个账号扮演普通用户提问，另一个账号以过来人身份回答并推荐目标产品或服务，营造出真实口碑推荐的假象。这种双簧戏码能有效绕过平台对直接广告的审查，降低用户戒备心。常见于医疗美容、保健品、金融诈骗等黑五类广告的引流。",
+    "usageExample": "“最近那个祛痘的AB引流效果不错，小号问‘怎么去痘印’，大号回‘用XX凝胶’，转化率很高。”",
+    "relatedRisks": [
+      "R0024",
+      "R0007-003"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0005",
+      "AT0050"
+    ],
+    "relatedThreatActors": [
+      "TA0013",
+      "TA0009"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

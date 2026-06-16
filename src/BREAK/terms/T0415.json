@@ -1,0 +1,25 @@
+{
+  "T0415": {
+    "title": "老哥",
+    "keywords": [
+      "老哥"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "黑产中指借钱后恶意不还的职业骗贷人。",
+    "description": "这类人抱着“借到就是赚到”的心态，专门寻找风控宽松的网贷平台进行欺诈。他们活跃于各类社群，交流如何规避催收、拖延还款，甚至分享哪些平台容易下款。其行为直接导致平台坏账率攀升，是反欺诈系统重点识别对象。",
+    "usageExample": "老哥们，在线客服申请停催，好不容易转人工说申请停催，人工也不搭理，一直不回复，咋回事。有没有停催过的老哥教教咋说？",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

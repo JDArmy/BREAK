@@ -1,0 +1,40 @@
+{
+  "T0266": {
+    "title": "截流",
+    "keywords": [
+      "截流"
+    ],
+    "aliases": [],
+    "category": "业务欺诈",
+    "definition": "截流指通过技术或内容手段拦截竞争对手的流量，将用户强行导向己方平台的一种恶意引流行为。",
+    "description": "黑产从业者常利用关键词劫持、恶意弹窗或仿冒页面等方式，在用户访问正规渠道时截取其流量。该手段广泛用于电商刷单、博彩推广等场景，能直接窃取竞争对手的客户资源，造成对方经济损失。",
+    "usageExample": "出**截流股民粉，有上粉视频结算记录，能当天款的来",
+    "relatedRisks": [
+      "R0017",
+      "R0017-001",
+      "R0005",
+      "R0024",
+      "R0007-003"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0044",
+      "AT0009",
+      "AT0016",
+      "AT0005",
+      "AT0050"
+    ],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0006",
+      "TA0007",
+      "TA0013"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

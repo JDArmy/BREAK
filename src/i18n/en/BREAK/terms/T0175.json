@@ -1,0 +1,33 @@
+{
+  "T0175": {
+    "title": "Data Euphemism",
+    "keywords": [
+      "Data Euphemism",
+      "Fruit",
+      "Data"
+    ],
+    "aliases": [
+      "Fruit"
+    ],
+    "category": "Data Leakage",
+    "definition": "In illegal data trading, a slang term for \"data\" used on public social platforms like Tieba to evade content censorship.",
+    "description": "In illegal data trading, a slang term for \"data\" used on public social platforms like Tieba to evade content censorship.",
+    "usageExample": "\"Selling various first-hand fruit, complete customer info—full refund if a single entry doesn’t match.\"",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

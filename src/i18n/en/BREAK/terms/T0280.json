@@ -1,0 +1,40 @@
+{
+  "T0280": {
+    "title": "Underground Traffic",
+    "keywords": [
+      "Underground Traffic",
+      "Underwater"
+    ],
+    "aliases": [],
+    "category": "Business Fraud",
+    "definition": "水下广告是指规避平台审核机制，通过非官方渠道进行的违规内容推广。",
+    "description": "黑产利用内容伪装、闪码、评论区截流等手段，在平台禁止的品类（如网赚、黑五类、色情）中进行引流。操作者通过虚假账号发布软文或视频，将流量引向私域或违规落地页。这种操作直接抢夺平台商业收入，且内容往往涉及诈骗，是平台风控重点打击对象。",
+    "relatedRisks": [
+      "R0024",
+      "R0007-003",
+      "R0094",
+      "R0138",
+      "R0121"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0005",
+      "AT0050",
+      "AT0067",
+      "AT0039"
+    ],
+    "relatedThreatActors": [
+      "TA0013",
+      "TA0009",
+      "TA0039",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04",
+      "BS15"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

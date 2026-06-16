@@ -1,0 +1,28 @@
+{
+  "T0003": {
+    "title": "大撸笔",
+    "keywords": [
+      "大撸笔"
+    ],
+    "aliases": [],
+    "category": "营销欺诈",
+    "definition": "指羊毛党利用电商平台的大额优惠或价格漏洞，大量购入低价商品再转卖套利的规模化欺诈行为。",
+    "description": "操作者会紧盯平台促销规则缺陷，通过自动化脚本瞬间抢购大量超低价商品，囤货后通过二手渠道加价卖出。这种“大撸”行为不仅侵占普通消费者权益，更可能直接导致商家因资损而破产，是职业羊毛党的核心牟利手段。",
+    "relatedRisks": [
+      "R0009",
+      "R0055",
+      "R0064"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0001",
+      "TA0001-001"
+    ],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

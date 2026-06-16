@@ -1,0 +1,25 @@
+{
+  "T0063": {
+    "title": "网花",
+    "keywords": [
+      "网花"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "指个人因频繁申请网贷，导致大数据征信记录变得极其混乱和糟糕的状态。",
+    "description": "这类用户往往在短期内向多个平台申请贷款，征信报告上留下大量查询记录和负债信息。黑产中介将这些“网花”用户视为潜在客户，向他们推销所谓的“大数据洗白”或“强制下款”服务。实际上，这种混乱的数据状态很难修复，用户往往陷入以贷养贷的恶性循环。",
+    "usageExample": "他现在网花了，正规平台都拒，只能找那些黑中介去碰瓷，结果越贷越花，最后彻底变成网黑。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

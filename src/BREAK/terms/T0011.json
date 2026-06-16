@@ -1,0 +1,32 @@
+{
+  "T0011": {
+    "title": "黄牛代下",
+    "keywords": [
+      "黄牛代下"
+    ],
+    "aliases": [],
+    "category": "营销欺诈",
+    "definition": "指黑灰产组织真人用户远程代下单，批量套取平台限购优惠商品并转卖牟利的行为。",
+    "description": "黄牛代下由上游货主提供下单方案和资金，下游做单人员使用个人账号按指定地址下单，商品到货后由货主集中收货并转售。这种模式绕开平台对单账号的限购风控，将真实用户作为下单工具，实现规模化薅取。真人代下使得交易行为更接近正常消费，增加了平台识别难度。",
+    "relatedRisks": [
+      "R0003",
+      "R0005",
+      "R0070"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0002"
+    ],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】电商黄牛党产业链分析报告",
+        "link": "https://www.threathunter.cn/blog/fc4b4d8d000"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

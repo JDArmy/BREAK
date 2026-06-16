@@ -1,0 +1,34 @@
+{
+  "T0361": {
+    "title": "Money Mule",
+    "keywords": [
+      "Money Mule",
+      "Basket"
+    ],
+    "aliases": [],
+    "category": "Gambling",
+    "definition": "在赌博黑产中，“提篮子”指利用关系网替赌场或涉赌团伙收转非法资金、摆平外围麻烦的中间人。",
+    "description": "这类角色通常不直接参赌，而是靠自身“背景”为赌资流动提供掩护，把现金、跑分款或加密货币从赌客端转运到庄家端，规避风控和执法追查。他们往往与地方势力或内部人员有勾连，充当资金通道和关系协调的双重保险。一旦链路被查，提篮子的人会成为切断资金的关键突破口。",
+    "relatedRisks": [
+      "R0060",
+      "R0093",
+      "R0097"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014",
+      "TA0016"
+    ],
+    "relatedBusinessScenes": [
+      "BS06",
+      "BS15",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

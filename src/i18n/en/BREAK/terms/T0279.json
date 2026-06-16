@@ -1,0 +1,32 @@
+{
+  "T0279": {
+    "title": "Compliant Traffic",
+    "keywords": [
+      "Compliant Traffic",
+      "On Water"
+    ],
+    "aliases": [],
+    "category": "Business Fraud",
+    "definition": "水上广告是指通过平台官方合规渠道进行的付费推广或达人合作。",
+    "description": "这是白产或灰产用来对比黑产“水下”操作的概念。水上广告走正规商务流程，有合同发票，内容受平台监管。虽然成本高，但数据真实可追溯。在引流圈内，常用来区分正规推广与黑灰产违规引流。",
+    "relatedRisks": [
+      "R0024",
+      "R0007-003"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0005",
+      "AT0050"
+    ],
+    "relatedThreatActors": [
+      "TA0013",
+      "TA0009"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

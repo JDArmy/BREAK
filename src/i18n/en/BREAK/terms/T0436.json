@@ -1,0 +1,28 @@
+{
+  "T0436": {
+    "title": "Debt Custody",
+    "keywords": [
+      "Debt Custody",
+      "Debt Escrow"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "代理维权机构承诺代债务人处理催收并协商减免债务的服务。",
+    "description": "代理维权机构以债务托管名义接管债务人的催收电话，声称可协商减免债务，实则收取高额托管费。操作中常涉及伪造材料、恶意投诉等非法手段，导致债务人个人信息被滥用、债务问题恶化，甚至因虚假承诺而错过最佳还款时机。",
+    "usageExample": "债务托管不看账户150一个月。",
+    "relatedRisks": [
+      "R0096",
+      "R0096-001"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0029"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

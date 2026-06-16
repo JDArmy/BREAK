@@ -1,0 +1,29 @@
+{
+  "T0224": {
+    "title": "Switch Fraud",
+    "keywords": [
+      "Switch Fraud",
+      "Bag Swapper"
+    ],
+    "aliases": [],
+    "category": "Business Fraud",
+    "definition": "掉包师指利用平台退货机制，通过“买真退假”的方式骗取正品商品的黑灰产从业者。",
+    "description": "操作者购买高价正品后，将仿冒品或空包退回，利用快递签收与平台退款的时间差牟利。掉包师通常针对奢侈品、电子产品等高价值商品，并可能勾结快递员进行虚假签收。这种行为直接导致商家钱货两空，推高了平台的运营成本。",
+    "relatedRisks": [
+      "R0017",
+      "R0005"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0007"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

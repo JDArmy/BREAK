@@ -1,0 +1,33 @@
+{
+  "T0150": {
+    "title": "Risk Control Bypass",
+    "keywords": [
+      "Risk Control Bypass",
+      "Break the Sky"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "The act of using various technical methods to bypass or crack a system's risk-control mechanisms. This allows fraudsters to conduct illegal activities without restrictions, such as increasing payment limits or bypassing identity verification.",
+    "description": "The act of using various technical methods to bypass or crack a system's risk-control mechanisms. This allows fraudsters to conduct illegal activities without restrictions, such as increasing payment limits or bypassing identity verification.",
+    "usageExample": "这套新系统风控太严，之前的脚本不行了，技术组正在研究新的破空方案。",
+    "relatedRisks": [
+      "R0095",
+      "R0032"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0043"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS02",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

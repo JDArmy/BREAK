@@ -1,0 +1,25 @@
+{
+  "T0049": {
+    "title": "Loan Farming",
+    "keywords": [
+      "Loan Farming",
+      "Loan"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "A fraudulent practice involving the frequent application and use of microloans or online lending products with no intention of repayment. This typically involves fabricating personal information, income certificates, and employment records to obtain loan funds through deception and then evading repayment.",
+    "description": "A fraudulent practice involving the frequent application and use of microloans or online lending products with no intention of repayment. This typically involves fabricating personal information, income certificates, and employment records to obtain loan funds through deception and then evading repayment.",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

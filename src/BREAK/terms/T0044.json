@@ -1,0 +1,25 @@
+{
+  "T0044": {
+    "title": "进件",
+    "keywords": [
+      "进件"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "指将准备好的贷款申请资料提交至金融机构审批系统的操作环节。",
+    "description": "这是信贷流程中的关键一步，标志着贷款申请正式进入审核阶段。在黑产欺诈中，进件环节常伴随虚假材料的批量提交，包括伪造的企业流水、个人银行流水或虚假公积金数据。黑产利用这些包装后的资料，对风控规则进行针对性突破，以骗取高额授信。",
+    "usageExample": "这批料都养好了，今晚统一进件，争取一波全下。",
+    "relatedRisks": [
+      "R0146",
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

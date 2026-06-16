@@ -1,0 +1,30 @@
+{
+  "T0390": {
+    "title": "Vehicle Green Book",
+    "keywords": [
+      "Vehicle Green Book",
+      "Big Book"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "在车贷欺诈中，指机动车登记证书，即车辆的“户口本”。",
+    "description": "机动车登记证书是车辆所有权的法律证明，在车贷欺诈中，它是办理抵押贷款或进行车辆非法转卖的关键凭证。黑产常通过挂失补办、骗取客户信任等手段获取“大本”，进而将车辆非法过户或抵押套现。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [
+      {
+        "title": "[Black Big Data] Deconstruction of the auto loan fraud industry chain",
+        "link": "https://www.threathunter.cn/blog/8acce28b732"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

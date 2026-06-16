@@ -1,0 +1,28 @@
+{
+  "T0067": {
+    "title": "Broad-Sweep Data",
+    "keywords": [
+      "Broad-Sweep Data",
+      "General Material"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illicit data trading, broad but non-specific personal or organizational data. This type of data has usually not undergone fine screening or verification, may contain a large amount of useless information, and has low accuracy and validity. Consequently, its value on underground markets is typically low.",
+    "description": "In illicit data trading, broad but non-specific personal or organizational data. This type of data has usually not undergone fine screening or verification, may contain a large amount of useless information, and has low accuracy and validity. Consequently, its value on underground markets is typically low.",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

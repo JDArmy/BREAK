@@ -1,0 +1,34 @@
+{
+  "T0180": {
+    "title": "神父",
+    "keywords": [
+      "神父"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "公民身份证正反面的高清照片或扫描件，包含姓名、住址、证件号等核心身份信息。",
+    "description": "黑产术语，指获取到的身份证正反面高清图片，信息完整且真实有效。这些资料常被用于绕过实名认证、注册非法账号或伪造证件，是身份冒用类犯罪的核心物料。",
+    "usageExample": "“全国神父 真实有效期 6u 全天都在 有多少来多少”",
+    "relatedRisks": [
+      "R0078",
+      "R0089",
+      "R0092",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

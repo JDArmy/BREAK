@@ -1,0 +1,25 @@
+{
+  "T0043": {
+    "title": "黑户",
+    "keywords": [
+      "黑户"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "指因严重不良信用记录被金融机构列入黑名单，无法通过正规渠道获得贷款的个人。",
+    "description": "这类人通常有拖欠、违约等历史，其名下账户因难以追踪资金流向，常被黑产购买或租用作为洗钱通道。黑产利用黑户的个人信息在多个平台进行“撞库”攻击，测试能否冒用其身份申请贷款或信用产品。一旦成功，所有债务和风险均由原身份持有人承担。",
+    "usageExample": "他那身份都成黑户了，正规路子走不通，只能拿来跑分用。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

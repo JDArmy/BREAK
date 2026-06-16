@@ -1,0 +1,34 @@
+{
+  "T0102": {
+    "title": "社工库",
+    "keywords": [
+      "社工库"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指攻击者整合多渠道泄露数据构建的非法综合信息库。",
+    "description": "黑产通过收集公开数据、拖库数据及社交工程获取的信息，整合成包含个人身份、联系方式、社会关系等内容的数据库。攻击者利用该库能快速掌握目标的详细画像，从而实施高成功率的定向诈骗、勒索或账号盗用。",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

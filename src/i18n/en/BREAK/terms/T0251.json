@@ -1,0 +1,35 @@
+{
+  "T0251": {
+    "title": "Farm Account Cluster",
+    "keywords": [
+      "Farm Account Cluster",
+      "Group Number"
+    ],
+    "aliases": [],
+    "category": "Business Fraud",
+    "definition": "由黑灰产操控、在特定时间有组织地大规模参与活动以套利的账号群体。",
+    "description": "这些账号通常由群控系统统一管理，在平台推出高价值奖励活动或抽奖时，集中涌入以博取奖品。它们分工明确，有的负责参与，有的负责接收和转移赃物。集团号的出现会瞬间消耗大量活动预算，导致真实用户无法获得奖励，严重干扰平台运营数据。",
+    "relatedRisks": [
+      "R0017",
+      "R0017-001",
+      "R0005"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0044",
+      "AT0009",
+      "AT0016"
+    ],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0006",
+      "TA0007"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "T0151": {
+    "title": "Face Verification Bypass",
+    "keywords": [
+      "Face Verification Bypass",
+      "Fall Out"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "The act of using technical methods to bypass or crack facial recognition systems, commonly seen in telecom fraud scenarios. This may involve using photos, videos, or deepfake technology to spoof the system, enabling fraudsters to perform illegal operations like payment verification or account access without restriction.",
+    "description": "The act of using technical methods to bypass or crack facial recognition systems, commonly seen in telecom fraud scenarios. This may involve using photos, videos, or deepfake technology to spoof the system, enabling fraudsters to perform illegal operations like payment verification or account access without restriction.",
+    "usageExample": "光有密码不够，还得找人做破脸，不然那笔大额转账过不去。",
+    "relatedRisks": [
+      "R0044",
+      "R0032",
+      "R0131"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0064",
+      "AT0066",
+      "AT0067",
+      "AT0053-002"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0043"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

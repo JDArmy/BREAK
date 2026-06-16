@@ -26,6 +26,7 @@ const categories = [
   { name: "Avoidances", zhDir: "src/BREAK/avoidances", enDir: "src/i18n/en/BREAK/avoidances" },
   { name: "AttackTools", zhDir: "src/BREAK/attack-tools", enDir: "src/i18n/en/BREAK/attack-tools" },
   { name: "ThreatActors", zhDir: "src/BREAK/threat-actors", enDir: "src/i18n/en/BREAK/threat-actors" },
+  { name: "Terms", zhDir: "src/BREAK/terms", enDir: "src/i18n/en/BREAK/terms" },
   { name: "BusinessScenes", zhDir: "src/BREAK/business-scenes", enDir: "src/i18n/en/BREAK/business-scenes" },
 ];
 

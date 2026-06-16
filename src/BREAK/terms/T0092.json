@@ -1,0 +1,30 @@
+{
+  "T0092": {
+    "title": "库主",
+    "keywords": [
+      "库主"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指在地下数据交易中，掌握并运营大规模泄露数据库的关键人物。",
+    "description": "库主是黑产数据生态的顶层角色，他们负责非法获取、整理和持续更新各类社工库与撞库数据。通过向料主收购或自行攻击收集，库主掌握着海量敏感信息，并向料客提供查询、订阅或打包售卖服务。他们构建并维护着地下数据交易的核心基础设施，是泄露数据流转的源头。",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

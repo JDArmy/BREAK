@@ -1,11 +1,12 @@
 import { ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
 import Fuse from "fuse.js";
+import type { FuseResultMatch } from "fuse.js";
 import BREAK from "@/BREAK";
 import { getMessageStringArray, getNestedMessageValue } from "@/utils/i18nMessage";
 
 /** 实体类型 */
-export type EntityType = "risk" | "avoidance" | "attackTool" | "threatActor";
+export type EntityType = "risk" | "avoidance" | "attackTool" | "threatActor" | "term";
 
 /** 搜索结果条目 */
 export interface SearchResult {
@@ -24,10 +25,13 @@ interface IndexableItem {
   id: string;
   title: string;
   keywords?: string[];
+  aliases?: string[];
+  category?: string;
   definition?: string;
   description?: string;
   influence?: string;
   limitation?: string;
+  usageExample?: string;
 }
 
 /** 各类型的 Fuse 索引配置 */
@@ -79,6 +83,20 @@ const FUSE_CONFIGS: Record<
     i18nPath: "BREAK.threatActors",
     idKey: "taKey",
   },
+  term: {
+    keys: [
+      { name: "id", weight: 2.2 },
+      { name: "title", weight: 2.1 },
+      { name: "keywords", weight: 1.8 },
+      { name: "aliases", weight: 1.6 },
+      { name: "definition", weight: 1.4 },
+      { name: "description", weight: 1 },
+      { name: "category", weight: 0.8 },
+      { name: "usageExample", weight: 0.7 },
+    ],
+    i18nPath: "BREAK.terms",
+    idKey: "tKey",
+  },
 };
 
 /** 各类型对应的 BREAK 数据 key */
@@ -87,6 +105,7 @@ const BREAK_KEYS: Record<EntityType, keyof typeof BREAK> = {
   avoidance: "avoidances",
   attackTool: "attackTools",
   threatActor: "threatActors",
+  term: "terms",
 };
 
 /** 从 i18n messages 构建可索引的实体列表 */
@@ -118,6 +137,12 @@ function buildIndexableItems(
       description: (i18nEntity.description as string) || undefined,
       influence: (i18nEntity.influence as string) || undefined,
       limitation: (i18nEntity.limitation as string) || undefined,
+      aliases: getMessageStringArray(
+        localeMessages,
+        `${config.i18nPath}.${id}.aliases`
+      ),
+      category: (i18nEntity.category as string) || undefined,
+      usageExample: (i18nEntity.usageExample as string) || undefined,
     });
   }
   return items;
@@ -126,7 +151,7 @@ function buildIndexableItems(
 /** 从 Fuse matches 中提取匹配片段 */
 export function extractSnippetForSearch(
   item: IndexableItem,
-  matches: readonly Fuse.FuseResultMatch[] | undefined,
+  matches: readonly FuseResultMatch[] | undefined,
   query: string
 ): string {
   const fallback = item.description || item.definition || "";
@@ -147,10 +172,13 @@ export function extractSnippetForSearch(
     const searchableFields = [
       "title",
       "keywords",
+      "aliases",
+      "category",
       "definition",
       "description",
       "influence",
       "limitation",
+      "usageExample",
     ] as const;
     for (const fieldName of searchableFields) {
       const fieldValue = item[fieldName];
@@ -173,8 +201,8 @@ export function extractSnippetForSearch(
 
   // 取第一个匹配字段，提取包含匹配的片段
   const firstMatch = matches[0];
-  const fieldName = firstMatch.key as string;
-  const fieldValue = (item as Record<string, unknown>)[fieldName] as string | string[];
+  const fieldName = firstMatch.key as keyof IndexableItem;
+  const fieldValue = item[fieldName];
   if (!fieldValue) return fallback;
 
   if (Array.isArray(fieldValue)) {
@@ -237,6 +265,7 @@ export function useSearch() {
       avoidance: [],
       attackTool: [],
       threatActor: [],
+      term: [],
     };
 
     if (!query.trim() || !fuseInstances.value) return results;

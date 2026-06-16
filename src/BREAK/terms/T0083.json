@@ -1,0 +1,28 @@
+{
+  "T0083": {
+    "title": "死料",
+    "keywords": [
+      "死料"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "在非法数据交易中，指已经失效、无法再利用的个人或组织数据，黑产内部视为无价值库存。",
+    "description": "死料通常因时间过久、信息变更或原平台风控升级而失去使用价值，比如已注销的手机号、被冻结的银行卡或失效的登录凭证。这类数据在市场上无人问津，有时被当作垃圾数据掺入料包中充数，用来坑骗不懂行的下游买家。一旦被识别为死料，基本只能废弃，无法进入后续诈骗或营销环节。",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -30,6 +30,11 @@ const router = createRouter({
       component: HomeView,
     },
     {
+      path: "/terms/:tKey",
+      name: "termDetail",
+      component: HomeView,
+    },
+    {
       path: "/business-scene/:bsKey",
       name: "businessScene",
       component: HomeView,
@@ -53,6 +58,11 @@ const router = createRouter({
       path: "/threat-actors",
       name: "threatActors",
       component: () => import("@/views/ThreatActorsView.vue"),
+    },
+    {
+      path: "/terms",
+      name: "terms",
+      component: () => import("@/views/TermsView.vue"),
     },
     {
       path: "/relation/:type/:key",

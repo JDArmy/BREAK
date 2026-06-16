@@ -1,0 +1,26 @@
+{
+  "T0432": {
+    "title": "Discount Lead Intake",
+    "keywords": [
+      "Discount Lead Intake",
+      "Freezing Point Receipt"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "贷款中介以极低费用从其他渠道接收客户资源的获客模式。",
+    "description": "在贷款欺诈中介网络中，当某中介拥有充足的消化渠道或资金方时，会以远低于市场价的费用从其他中介处批量接收客户资源，这种模式被称为冰点收单。它通过中介间的资源互补，快速匹配借款需求与欺诈渠道，提高客户转化率。冰点收单往往意味着客户资质要求被放宽，背后常伴随虚假资料包装和风控规避操作，风险高度集中。",
+    "usageExample": "一张身份证秒批20万！有还款记录来就批，冰点收单。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

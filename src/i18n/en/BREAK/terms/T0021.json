@@ -1,0 +1,36 @@
+{
+  "T0021": {
+    "title": "Shield Bypass",
+    "keywords": [
+      "Shield Bypass",
+      "risk engine evasion",
+      "captcha bypass",
+      "bot detection bypass",
+      "WAF bypass",
+      "fingerprint spoofing",
+      "device spoofing",
+      "anti-fraud bypass",
+      "rule engine bypass"
+    ],
+    "aliases": [],
+    "category": "Marketing Fraud",
+    "definition": "Refers to bypassing a platform's risk control systems. This term is commonly used by fraud technicians, scalpers, and money laundering groups as a preliminary step to evade security measures before attacking platform services or stealing data.",
+    "description": "Refers to bypassing a platform's risk control systems. This term is commonly used by fraud technicians, scalpers, and money laundering groups as a preliminary step to evade security measures before attacking platform services or stealing data.",
+    "usageExample": "这个活动新加了设备指纹校验，不先破盾的话，我们写的脚本根本登录不上去。",
+    "relatedRisks": [
+      "R0003",
+      "R0005",
+      "R0070"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0002"
+    ],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

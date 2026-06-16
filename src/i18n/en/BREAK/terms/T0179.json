@@ -1,0 +1,35 @@
+{
+  "T0179": {
+    "title": "Basic Identity File",
+    "keywords": [
+      "Basic Identity File",
+      "Individual Household"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illicit data trading, a basic personal profile record that includes a close-up ID photo, full name, national ID number (two-factor elements), and detailed residential address.",
+    "description": "In illicit data trading, this refers to a foundational personal dossier containing a headshot-style ID photo, the individual’s name and ID number (the two core verification elements), along with their full residential address.",
+    "usageExample": "“Individual household records, front and back of ID, guaranteed before 6 PM.”",
+    "relatedRisks": [
+      "R0078",
+      "R0089",
+      "R0092",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

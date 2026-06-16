@@ -1,0 +1,33 @@
+{
+  "T0137": {
+    "title": "Chat Proxy",
+    "keywords": [
+      "Chat Proxy",
+      "Chat On Behalf Of"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "A fraud scheme in which hired chatters post fake profiles and messages on social platforms, forums, and classified ad sites to impersonate fictitious personas, gradually building trust with targets in order to defraud them or lure them into illegal activities such as prostitution, online gambling, or scams.",
+    "description": "A fraud scheme in which hired chatters post fake profiles and messages on social platforms, forums, and classified ad sites to impersonate fictitious personas, gradually building trust with targets in order to defraud them or lure them into illegal activities such as prostitution, online gambling, or scams.",
+    "usageExample": "“那个号聊了两天就开始让我下注，后来才知道对面根本不是本人，是代聊在照着剧本演。”",
+    "relatedRisks": [
+      "R0150",
+      "R0095"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001",
+      "AT0070"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008",
+      "TA0042"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

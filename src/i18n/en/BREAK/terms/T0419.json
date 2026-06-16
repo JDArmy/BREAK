@@ -1,0 +1,26 @@
+{
+  "T0419": {
+    "title": "Existing Business License",
+    "keywords": [
+      "Existing Business License",
+      "Current Photo"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "黑产提前准备并养好的、可立即过户给背债人的现有营业执照。",
+    "description": "在企业背债操作中，黑产团伙会提前注册公司并持续养护，制造出经营数据良好的假象。当找到合适的背债人后，直接将公司过户，背债人无需从零开始“养”执照。这能大幅缩短骗贷周期，快速套取企业经营贷等高额度资金。",
+    "usageExample": "快企现照，押金入场，马上过户变更，有客户的抓紧安排。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

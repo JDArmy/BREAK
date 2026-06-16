@@ -1,0 +1,26 @@
+{
+  "T0063": {
+    "title": "Credit Profile Dilution",
+    "keywords": [
+      "Credit Profile Dilution",
+      "Net Flower"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "Refers to a credit profile that has become \"messy\" due to excessive online loan applications, where the borrower has taken out too many online loans, regardless of whether those loans are reported to credit bureaus, leaving extensive traces in alternative credit databases.",
+    "description": "This typically results from individuals frequently applying for online loans, leading to \"multi-platform borrowing\" that complicates and muddies their credit data. Indicators include an excessive number of recent credit inquiries, multiple outstanding loan records, high credit card utilization rates, and elevated debt levels.",
+    "usageExample": "他现在网花了，正规平台都拒，只能找那些黑中介去碰瓷，结果越贷越花，最后彻底变成网黑。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

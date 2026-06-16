@@ -1,0 +1,25 @@
+{
+  "T0408": {
+    "title": "傻子车",
+    "keywords": [
+      "傻子车"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "利用智力障碍或生活无法自理者身份申请的欺诈性车贷。",
+    "description": "黑产组织招募缺乏判断能力的弱势群体，以其名义购车贷款，事后将车辆转卖获利，风险全部转嫁给金融机构。这类操作门槛极低，黑产通过简单包装即可骗过风控，导致坏账高发。",
+    "usageExample": "傻子车，全国户籍，有信用记录，三到五天结束，保三期风控，一手操作。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

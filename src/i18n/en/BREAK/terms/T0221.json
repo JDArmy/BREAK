@@ -1,0 +1,43 @@
+{
+  "T0221": {
+    "title": "Account Babysitting",
+    "keywords": [
+      "Account Babysitting",
+      "Hanging On Behalf Of"
+    ],
+    "aliases": [],
+    "category": "Business Fraud",
+    "definition": "代挂是黑灰产提供的代理挂机服务，用于批量维持账号在线状态并自动执行任务。",
+    "description": "操作者利用脚本或群控系统，代替客户保持账号活跃，自动完成签到、浏览、点赞等任务以获取平台奖励或养号。该服务广泛应用于刷量工作室，通过批量操作大量账号来薅取平台羊毛。长期代挂会导致平台生态数据失真，并挤占正常用户权益。",
+    "usageExample": "接代挂，稳定月入，躺着等提现。",
+    "relatedRisks": [
+      "R0009",
+      "R0055",
+      "R0064",
+      "R0017",
+      "R0017-001",
+      "R0005",
+      "R0034"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0044",
+      "AT0009",
+      "AT0016"
+    ],
+    "relatedThreatActors": [
+      "TA0001",
+      "TA0001-001",
+      "TA0009",
+      "TA0006",
+      "TA0007"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS06",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

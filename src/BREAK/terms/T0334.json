@@ -1,0 +1,32 @@
+{
+  "T0334": {
+    "title": "卡接",
+    "keywords": [
+      "卡接"
+    ],
+    "aliases": [],
+    "category": "跑分洗钱",
+    "definition": "卡接是直接使用银行卡接收并处理非法资金的行为。",
+    "description": "卡接是跑分洗钱中最基础、最直接的方式。操作者提供自己的银行卡作为一级或二级收款账户，接收诈骗或赌博款项后，通过ATM取现、柜面取款或网银转账等方式将资金转移。由于银行风控系统日益严格，此类账户极易被快速冻结，因此黑产需要不断寻找新的“卡农”提供新的银行卡，以维持资金链不断裂。",
+    "relatedRisks": [
+      "R0060",
+      "R0093",
+      "R0094"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026",
+      "AT0039",
+      "AT0040"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

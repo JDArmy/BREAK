@@ -1,0 +1,28 @@
+{
+  "T0066": {
+    "title": "Resold Data",
+    "keywords": [
+      "Resold Data",
+      "Second Hand Materials"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illicit data trading, personal or organizational data that has been resold one or more times, also known as 'historical material.' Compared to first-hand data, second-hand material may suffer from incompleteness, inaccuracy, or tampering due to multiple transfers, and its value is typically lower.",
+    "description": "In illicit data trading, personal or organizational data that has been resold one or more times, also known as 'historical material.' Compared to first-hand data, second-hand material may suffer from incompleteness, inaccuracy, or tampering due to multiple transfers, and its value is typically lower.",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

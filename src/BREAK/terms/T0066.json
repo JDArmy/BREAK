@@ -1,0 +1,27 @@
+{
+  "T0066": {
+    "title": "二手料",
+    "keywords": [
+      "二手料"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "二手料指在非法数据交易中已被转手一次或多次的个人或企业数据。",
+    "description": "这类数据因多次倒卖，常出现字段缺失、信息过时或被篡改的情况，准确性和有效性大打折扣。在黑产链条中，二手料通常被用于广撒网的诈骗或低质量的营销推广。其交易价格远低于一手料，买家多为预算有限的下游黑产从业者。",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "T0122": {
+    "title": "Pig Conditioning",
+    "keywords": [
+      "Pig Conditioning",
+      "Confused Pig"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "The act of confusing and luring victims through various means to make them believe false information or scams, leading them step by step into a fraud trap. This process often involves psychological manipulation and social engineering techniques aimed at lowering the victim's guard and gradually building trust, ultimately resulting in the victim being deceived and suffering financial loss.",
+    "description": "The act of confusing and luring victims through various means to make them believe false information or scams, leading them step by step into a fraud trap. This process often involves psychological manipulation and social engineering techniques aimed at lowering the victim's guard and gradually building trust, ultimately resulting in the victim being deceived and suffering financial loss.",
+    "usageExample": "这个客户防御心很重，组长让我再惑猪两天，别急着提钱的事。",
+    "relatedRisks": [
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001",
+      "AT0070"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008",
+      "TA0042"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

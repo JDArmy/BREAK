@@ -1,0 +1,39 @@
+{
+  "T0090": {
+    "title": "Decryption",
+    "keywords": [
+      "Decryption",
+      "Decrypt"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "A decryption service that targets privacy-protected shipping labels. By inputting a tracking number and a virtual phone number (or a partially masked phone number), the service decrypts and reveals the full, unmasked phone number.",
+    "description": "A decryption service that targets privacy-protected shipping labels. By inputting a tracking number and a virtual phone number (or a partially masked phone number), the service decrypts and reveals the full, unmasked phone number.",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [
+      {
+        "title": "2024 Data Breach Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

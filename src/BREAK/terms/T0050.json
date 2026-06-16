@@ -1,0 +1,24 @@
+{
+  "T0050": {
+    "title": "裸申",
+    "keywords": [
+      "裸申"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "裸申指申请信用卡或贷款时完全不提交任何资质证明，仅填写基础表单的申请方式。",
+    "description": "申请人故意不提供财产、收入等辅助材料，利用部分产品宽松的进件门槛进行尝试。黑产常用此方式批量测试银行或平台的审批漏洞，以低成本筛选出风控薄弱的渠道，为后续大规模欺诈铺路。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

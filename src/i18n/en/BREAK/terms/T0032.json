@@ -1,0 +1,37 @@
+{
+  "T0032": {
+    "title": "AB Loan Scam",
+    "keywords": [
+      "AB Loan Scam",
+      "proxy borrower scam",
+      "guarantor fraud",
+      "credit mule recruitment",
+      "loan stacking fraud",
+      "nominee loan scheme",
+      "debt mule",
+      "credit washing scheme",
+      "assisted lending fraud"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "AB Loan",
+    "description": "An AB loan is a type of loan fraud, also known as proxy lending, assisted lending, or relationship-based lending. In this scheme, A is the person needing funds but has poor credit and cannot obtain a loan directly. B, who has good credit, is deceived into acting as a guarantor or the primary loan applicant. The loan funds are actually used by A, while B unknowingly becomes the ultimate debtor, bearing the debt and repayment responsibility.",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [
+      {
+        "title": "Credit Fraud Risk Situation Report for the First Half of 2024",
+        "link": "https://www.threathunter.cn/blog/2024-ab1e8b8c-509b-44e7-9dbe-d7271765ae2c"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

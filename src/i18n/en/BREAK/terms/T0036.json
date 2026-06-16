@@ -1,0 +1,34 @@
+{
+  "T0036": {
+    "title": "Credit Blank",
+    "keywords": [
+      "Credit Blank",
+      "zero-file applicant",
+      "no-record profile",
+      "clean slate credit",
+      "unscorable consumer",
+      "blank-file identity",
+      "credit file seeding",
+      "pristine profile",
+      "empty bureau file"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "An individual whose credit file is completely empty, containing no records of loans or credit cards. This pristine credit profile is a commodity in underground fraud supply chains and is actively sold on channels like Telegram, X (formerly Twitter), and Potato for use in loan fraud and money laundering schemes.",
+    "description": "An individual whose credit file is completely empty, containing no records of loans or credit cards. This pristine credit profile is a commodity in underground fraud supply chains and is actively sold on channels like Telegram, X (formerly Twitter), and Potato for use in loan fraud and money laundering schemes.",
+    "usageExample": "中介说纯白户能贷得更多，让我把身份证给他，他帮我包装申请，下款了分我三成，这会不会是坑？",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS04",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

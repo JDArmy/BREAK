@@ -1,0 +1,26 @@
+{
+  "T0397": {
+    "title": "Direct Debt Carry",
+    "keywords": [
+      "Direct Debt Carry",
+      "Straight Back"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "指银行直接承担贷款风险与坏账损失，对不良资产包进行自主清收处置的业务模式，黑产常借此虚构信用背书。",
+    "description": "黑产中介对外谎称有“银行直背”渠道，能操作银行内部坏账消化或不良资产包处置，以此包装成官方背书吸引客户。实际上银行极少将不良资产直接外包给外部个人，中介只是利用这个名头骗取信任，暗地里操作的是背债、包装贷款等违规业务。客户一旦上钩，往往被诱导签署虚假协议，最终面临法律追偿。",
+    "usageExample": "Local direct memorization, get 300+, finish in 10 days, single blank, one or two inquiries are acceptable. All the asset packages will be stopped soon, so hurry up and take a break to do two orders.",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "T0271": {
+    "title": "Burner Account",
+    "keywords": [
+      "Burner Account",
+      "Cannon Fodder"
+    ],
+    "aliases": [],
+    "category": "Business Fraud",
+    "definition": "炮灰号指用于试探平台风控规则或执行高风险操作的一次性账号。",
+    "description": "这类账号被黑产用作敢死队，专门进行批量关注、私信、发布违规内容等敏感操作。一旦触发风控被封禁，操作者会立即启用新的炮灰号继续行动，以此保护高价值的主号不受牵连。",
+    "usageExample": "Why don't you give him a bad review? Get a cannon fodder account and find some liars to review him.",
+    "relatedRisks": [
+      "R0017",
+      "R0017-001",
+      "R0005"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0044",
+      "AT0009",
+      "AT0016"
+    ],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0006",
+      "TA0007"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

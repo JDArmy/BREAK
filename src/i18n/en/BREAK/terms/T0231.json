@@ -1,0 +1,36 @@
+{
+  "T0231": {
+    "title": "Fake Ordering",
+    "keywords": [
+      "Fake Ordering",
+      "Brushing Orders"
+    ],
+    "aliases": [],
+    "category": "Business Fraud",
+    "definition": "通过伪造订单、评价等虚假交易数据，欺骗平台算法和消费者以获取不正当曝光。",
+    "description": "黑灰产组织商家或刷手，利用自买自卖、发空包等方式制造虚假销量和好评，提升店铺权重。操作者通过社交群组招募买手，模拟真实购物流程，完成下单、付款、收货全链路。这种行为扭曲市场公平竞争，导致消费者被误导，平台信誉受损，严重时触发法律风险。",
+    "usageExample": "电商平台刷单220一单，是兄弟就来找我，稳定结算。",
+    "relatedRisks": [
+      "R0017-001",
+      "R0017",
+      "R0005"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0044",
+      "AT0009",
+      "AT0016"
+    ],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0006",
+      "TA0007"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

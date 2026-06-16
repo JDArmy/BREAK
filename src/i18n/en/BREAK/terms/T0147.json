@@ -1,0 +1,47 @@
+{
+  "T0147": {
+    "title": "Card Deduction",
+    "keywords": [
+      "Card Deduction",
+      "Buckle"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "A card-not-present debit method that allows a transaction to be completed using only the cardholder's bank account number, name, ID number, phone number, and SMS verification code.",
+    "description": "A card-not-present debit method that allows a transaction to be completed using only the cardholder's bank account number, name, ID number, phone number, and SMS verification code.",
+    "usageExample": "他点了个链接填了信息，卡扣就发生了，卡里钱被分三笔转走，银行发来短信才知道。",
+    "relatedRisks": [
+      "R0095",
+      "R0150",
+      "R0084",
+      "R0131",
+      "R0044",
+      "R0032",
+      "R0060"
+    ],
+    "relatedAvoidances": [
+      "A0007-001"
+    ],
+    "relatedAttackTools": [
+      "AT0053-001",
+      "AT0063",
+      "AT0071",
+      "AT0064",
+      "AT0066",
+      "AT0067",
+      "AT0053-002"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008",
+      "TA0043",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

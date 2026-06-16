@@ -1,0 +1,27 @@
+{
+  "T0353": {
+    "title": "Loan Sharking",
+    "keywords": [
+      "Loan Sharking",
+      "Put the cannons\\put the numbers\\put the claws\\put the Numbers"
+    ],
+    "aliases": [],
+    "category": "Gambling",
+    "definition": "向赌客发放高利贷的行为。",
+    "description": "赌场或外围人员向输急眼的赌客现场放款，按日或按局计息，形成高额债务。放码仔通常与赌厅配合，赌客一旦借款，后续还款常伴随暴力催收。这种操作让赌客越陷越深，是赌场榨取超额利润的核心环节。",
+    "relatedRisks": [
+      "R0097"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0016"
+    ],
+    "relatedBusinessScenes": [
+      "BS06",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

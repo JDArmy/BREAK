@@ -1,0 +1,25 @@
+{
+  "T0406": {
+    "title": "空降兵",
+    "keywords": [
+      "空降兵"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "被跨地域招募用于信贷欺诈的异地户籍工具人。",
+    "description": "黑产中介在全国物色无稳定职业或信用空白者，批量运送至目标城市集中申请贷款。这些人充当“人头”完成面签等环节，一旦贷款到手即消失，放款机构难以追偿。",
+    "usageExample": "全国、空降兵、三无人员、不需要驾驶证",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

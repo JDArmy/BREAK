@@ -23,7 +23,7 @@ const selectedIndex = ref(-1);
 const inputRef = ref<InstanceType<typeof import("element-plus")["ElInput"]> | null>(null);
 
 const emptyResults = () =>
-  ({ risk: [], avoidance: [], attackTool: [], threatActor: [] }) as Record<
+  ({ risk: [], avoidance: [], attackTool: [], threatActor: [], term: [] }) as Record<
     EntityType,
     SearchResult[]
   >;
@@ -32,7 +32,7 @@ const emptyResults = () =>
 const flatResults = computed(() => {
   const flat: (SearchResult & { groupIndex: number })[] = [];
   let groupIdx = 0;
-  for (const type of ["risk", "avoidance", "attackTool", "threatActor"] as EntityType[]) {
+  for (const type of ["risk", "avoidance", "attackTool", "threatActor", "term"] as EntityType[]) {
     for (const r of resultsDebounced.value[type]) {
       flat.push({ ...r, groupIndex: groupIdx });
     }
@@ -50,6 +50,7 @@ const groupLabels: Record<EntityType, string> = {
   avoidance: "search.groupAvoidance",
   attackTool: "search.groupAttackTool",
   threatActor: "search.groupThreatActor",
+  term: "search.groupTerm",
 };
 
 // 各类型对应的详情路由
@@ -58,6 +59,7 @@ const detailRoutes: Record<EntityType, { name: string; paramKey: string }> = {
   avoidance: { name: "avoidanceDetail", paramKey: "aKey" },
   attackTool: { name: "attackToolDetail", paramKey: "atKey" },
   threatActor: { name: "threatActorDetail", paramKey: "taKey" },
+  term: { name: "termDetail", paramKey: "tKey" },
 };
 
 // 防抖搜索
@@ -105,6 +107,7 @@ function selectResult(result: SearchResult) {
       avoidance: '/avoidances',
       attackTool: '/attack-tools',
       threatActor: '/threat-actors',
+      term: '/terms',
     };
     router.push(`${listRoutes[result.type]}#${result.id}`);
   }
@@ -221,7 +224,7 @@ function handleTouchStart(index: number) {
 
     <!-- 搜索结果 -->
     <div class="search-results" v-if="debouncedQuery.trim()">
-      <template v-for="type in (['risk', 'avoidance', 'attackTool', 'threatActor'] as EntityType[])" :key="type">
+      <template v-for="type in (['risk', 'avoidance', 'attackTool', 'threatActor', 'term'] as EntityType[])" :key="type">
         <div v-if="resultsDebounced[type]?.length" class="result-group">
           <div class="result-group-header">
             {{ t(groupLabels[type]) }}

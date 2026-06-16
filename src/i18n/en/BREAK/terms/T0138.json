@@ -1,0 +1,30 @@
+{
+  "T0138": {
+    "title": "Trust-Seeding Float",
+    "keywords": [
+      "Trust-Seeding Float",
+      "Cushion Blue"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "A telecom fraud tactic where scammers deposit fake funds into a victim's account to create the illusion that a promised payout has been received, tricking the victim into proceeding further with the scam.",
+    "description": "A telecom fraud tactic where scammers deposit fake funds into a victim's account to create the illusion that a promised payout has been received, tricking the victim into proceeding further with the scam.",
+    "usageExample": "“他给我看了后台余额，说已经垫了五万在里面，让我放心跟单，结果那数字全是假的。”",
+    "relatedRisks": [
+      "R0095",
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

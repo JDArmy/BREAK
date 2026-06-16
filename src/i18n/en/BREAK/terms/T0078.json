@@ -1,0 +1,29 @@
+{
+  "T0078": {
+    "title": "Maternal-and-Infant Data",
+    "keywords": [
+      "Maternal-and-Infant Data",
+      "Maternal and Infant Materials"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illicit data trading, refers to personal information or data related to mothers and infants, such as details of pregnant women, infant birth dates, and purchase records for maternal and baby products. Once illegally obtained by underground actors, this data is typically resold to third parties for targeted marketing, fraud, and other illegal activities.",
+    "description": "In illicit data trading, refers to personal information or data related to mothers and infants, such as details of pregnant women, infant birth dates, and purchase records for maternal and baby products. Once illegally obtained by underground actors, this data is typically resold to third parties for targeted marketing, fraud, and other illegal activities.",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

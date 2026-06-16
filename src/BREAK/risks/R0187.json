@@ -5,7 +5,11 @@
     "description": "长程攻击(Long-range Attack)是PoS共识机制特有的威胁。攻击者获取早期权益持有者的私钥后，可以从区块链历史中的任意点分叉并构建替代链。由于PoS验证不需要实际算力消耗（无成本模拟，Nothing-at-Stake），攻击者可以低成本构造更长的链。新加入网络的节点可能将伪造链误认为是主链。",
     "complexity": "高级",
     "influence": "区块链历史被改写，交易被逆转，新节点接受虚假链，共识机制信任崩塌。",
-    "avoidances": [],
+    "avoidances": [
+      "A0161",
+      "A0162",
+      "A0163"
+    ],
     "references": [
       {
         "title": "Long-Range Attacks on Proof-of-Stake",

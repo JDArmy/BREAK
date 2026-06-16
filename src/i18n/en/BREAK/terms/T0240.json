@@ -1,0 +1,42 @@
+{
+  "T0240": {
+    "title": "Obfuscated Data Pack",
+    "keywords": [
+      "Obfuscated Data Pack",
+      "Seed Material"
+    ],
+    "aliases": [],
+    "category": "Business Fraud",
+    "definition": "黑产对“资料”一词的谐音黑话，专指用于注册、认证或诈骗的个人信息、账户凭证等素材。",
+    "description": "为了绕过平台关键词过滤，黑产在群聊和交易帖中用“籽料”替代“资料”进行沟通。这些素材包括身份证正反面、手持照、银行卡号、手机号等，是批量注册账号和养号的基础原料。籽料交易往往按套出售，新鲜度和匹配度直接决定价格。",
+    "usageExample": "你想不想每天都可以搞5000，看我籽料里的群",
+    "relatedRisks": [
+      "R0017",
+      "R0017-001",
+      "R0005",
+      "R0024",
+      "R0007-003"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0044",
+      "AT0009",
+      "AT0016",
+      "AT0005",
+      "AT0050"
+    ],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0006",
+      "TA0007",
+      "TA0013"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS01",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

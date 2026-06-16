@@ -1,0 +1,27 @@
+{
+  "T0067": {
+    "title": "泛料",
+    "keywords": [
+      "泛料"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "泛料指在非法数据交易中未经筛选、范围宽泛且精准度低的个人信息集合。",
+    "description": "这类数据通常来源杂乱，包含大量无效、重复或错误的记录，缺乏针对性。黑产从业者购买泛料后，往往需要投入额外成本进行清洗和筛选，才能用于诈骗或营销。因其转化率极低，泛料在市场上价格低廉，常被用于群发钓鱼短信等低端攻击。",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

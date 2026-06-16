@@ -1,0 +1,33 @@
+{
+  "T0244": {
+    "title": "仓播",
+    "keywords": [
+      "仓播"
+    ],
+    "aliases": [],
+    "category": "业务欺诈",
+    "definition": "在仓库场景中进行的直播带货，以堆积的货品营造源头直发氛围。",
+    "description": "主播常站在堆满商品的仓库货架前，利用视觉冲击和“没有中间商赚差价”的话术吸引观众下单。这种场景容易获取用户信任，但也常被黑产利用，通过虚假仓播销售仿冒品或进行虚假发货诈骗。",
+    "usageExample": "昨晚看那个仓播，主播站在一堆鞋盒中间喊全网最低价，结果发货全是假货。",
+    "relatedRisks": [
+      "R0024",
+      "R0007-003"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0005",
+      "AT0050"
+    ],
+    "relatedThreatActors": [
+      "TA0013",
+      "TA0009"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS05",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

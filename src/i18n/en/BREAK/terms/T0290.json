@@ -1,0 +1,37 @@
+{
+  "T0290": {
+    "title": "Second-Hop Funds",
+    "keywords": [
+      "Second-Hop Funds",
+      "Second Capital"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "经过初步清洗后再次流转的非法资金。",
+    "description": "黑产将诈骗或赌博所得的一手赃款通过多层转账、混币或虚假交易进行初步清洗，形成二道资金。这种资金已脱离原始来源账户，隐蔽性更高，常被用于下游跑分、购买虚拟币或转入白商户账户。二道资金是洗钱链条中的关键中转环节，增加了追踪难度。",
+    "usageExample": "The material is looking for a car to cooperate with, and the second fund is available.",
+    "relatedRisks": [
+      "R0060",
+      "R0093",
+      "R0095"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026",
+      "AT0039",
+      "AT0040"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014",
+      "TA0015"
+    ],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS15",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

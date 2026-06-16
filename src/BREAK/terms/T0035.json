@@ -1,0 +1,25 @@
+{
+  "T0035": {
+    "title": "包解",
+    "keywords": [
+      "包解"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "指信贷中介声称能解决贷款审批中因特定错误代码导致的放款失败问题。",
+    "description": "在贷款流程中，当金融机构系统返回特定风控错误代码导致无法下款时，部分中介会兜售“包解”服务。他们利用内部漏洞、伪造材料或勾结内部人员来解除系统限制，帮助申请者强行下款。这种操作往往伴随高额服务费，且极易引发后续的骗贷风险。",
+    "usageExample": "我这单子银行提示代码E018拒了，找了个中介说包解，收费20个点，不知道是不是真的能解开。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

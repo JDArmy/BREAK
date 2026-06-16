@@ -1,0 +1,32 @@
+{
+  "T0343": {
+    "title": "限鹅",
+    "keywords": [
+      "限鹅"
+    ],
+    "aliases": [],
+    "category": "跑分洗钱",
+    "definition": "在洗钱场景中，限鹅是“限额”的谐音，指支付账户或交易二维码的单笔或单日交易金额上限。",
+    "description": "黑产人员在跑分转账时需时刻关注账户的“限鹅”，避免因超出限额导致交易失败或触发风控。不同支付通道和账户类型的限额差异很大，团伙内部会专门安排“维护”人员监控限额变动。一旦账户被限额，需立即切换新账户或调整拆单策略，否则会导致资金链路中断，影响洗钱效率。",
+    "relatedRisks": [
+      "R0060",
+      "R0093",
+      "R0094"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026",
+      "AT0039",
+      "AT0040"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

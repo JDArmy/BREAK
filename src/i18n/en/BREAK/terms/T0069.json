@@ -1,0 +1,33 @@
+{
+  "T0069": {
+    "title": "Subsidy Recipient Data",
+    "keywords": [
+      "Subsidy Recipient Data",
+      "Poverty Alleviation Materials"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illicit data trading, personal information or data related to individuals targeted by poverty alleviation programs. After being illegally obtained by underground actors, this data is typically resold to third parties for targeted marketing, fraud, and other illicit activities.",
+    "description": "In illicit data trading, personal information or data related to individuals targeted by poverty alleviation programs. After being illegally obtained by underground actors, this data is typically resold to third parties for targeted marketing, fraud, and other illicit activities.",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [
+      {
+        "title": "[Black Market Intelligence] 2024 Data Breach Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

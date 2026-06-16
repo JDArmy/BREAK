@@ -1,0 +1,26 @@
+{
+  "T0375": {
+    "title": "Lead Intake",
+    "keywords": [
+      "Lead Intake",
+      "Acquiring"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "拥有放款渠道的中介从其他中介处收购有贷款需求的客户资源。",
+    "description": "掌握稳定放款渠道的中介，通过发布“收单”信息吸引其他中介提供客户。收单方根据客户资质定价，放款成功后按比例返佣给供单方。这种模式形成了黑产中介间的利益链条，客户信息在流转中不断被转卖，极易被用于二次诈骗。",
+    "usageExample": "橙信收单，签单现返2万，内返6个点，无套路，有单的来。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

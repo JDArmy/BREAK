@@ -1,0 +1,25 @@
+{
+  "T0364": {
+    "title": "摇把子",
+    "keywords": [
+      "摇把子"
+    ],
+    "aliases": [],
+    "category": "赌博",
+    "definition": "在赌博黑产中，“摇把子”指掌控整个赌场运营、调度资金与人手的一把手负责人。",
+    "description": "摇把子通常不直接上桌，而是幕后统筹场地租赁、人员招募、资金池管理和外围安保，确保赌局持续运转。他们与提篮子、掌档等角色形成垂直管理链，出事时往往最先切断联系、转移资产。在线上赌场中，摇把子可能化身平台管理员，远程操控赔率、封盘和资金归集。",
+    "relatedRisks": [
+      "R0097"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0016"
+    ],
+    "relatedBusinessScenes": [
+      "BS06"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

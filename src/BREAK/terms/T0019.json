@@ -1,0 +1,24 @@
+{
+  "T0019": {
+    "title": "满月白号",
+    "keywords": [
+      "满月白号"
+    ],
+    "aliases": [],
+    "category": "营销欺诈",
+    "definition": "指注册满一个月且无任何交易记录的白账号，因安全性高而被黑产用于刷单。",
+    "description": "此类账号因注册时间达标且行为干净，能绕过平台针对新号的初级风控策略。黑产购买后常用于批量刷销量、刷评价或参与邀请拉新活动，以低成本获取平台营销奖励，是营销欺诈的基础资源之一。",
+    "usageExample": "最近平台风控严，新号不好使，得找一批满月白号来做任务才稳。",
+    "relatedRisks": [
+      "R0005"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

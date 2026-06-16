@@ -1,0 +1,38 @@
+{
+  "T0262": {
+    "title": "Bot Traffic",
+    "keywords": [
+      "Bot Traffic",
+      "Machine Brush"
+    ],
+    "aliases": [],
+    "category": "Business Fraud",
+    "definition": "机刷指利用自动化脚本或物理设备，模拟真人操作以批量制造虚假数据指标的行为。",
+    "description": "通过群控系统、云手机或定制软件，对指定目标进行批量点赞、播放、下单等操作。机刷能快速伪造人气，用于电商刷单、直播刷量或应用商店刷榜。该行为严重干扰平台数据真实性，误导消费者决策，属于典型的虚假营销欺诈。",
+    "usageExample": "Source: A large number of ready-made machines with thousands of powders in the US area.",
+    "relatedRisks": [
+      "R0017",
+      "R0017-001",
+      "R0005"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0044",
+      "AT0009",
+      "AT0016"
+    ],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0006",
+      "TA0007"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS06",
+      "BS05",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

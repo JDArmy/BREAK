@@ -1,0 +1,34 @@
+{
+  "T0028": {
+    "title": "Cloud Blacklist",
+    "keywords": [
+      "Cloud Blacklist",
+      "UnionPay blacklist",
+      "QuickPass blacklist",
+      "cloud payment ban",
+      "promo ban list",
+      "risk-flagged account",
+      "payment token block"
+    ],
+    "aliases": [],
+    "category": "Marketing Fraud",
+    "definition": "Cloud Black",
+    "description": "Refers to a blacklisted UnionPay QuickPass account. Accounts flagged by UnionPay's risk control are restricted from participating in certain promotional activities.",
+    "relatedRisks": [
+      "R0009",
+      "R0055",
+      "R0064"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0001",
+      "TA0001-001"
+    ],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

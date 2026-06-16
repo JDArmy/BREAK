@@ -1,0 +1,32 @@
+{
+  "T0150": {
+    "title": "破空",
+    "keywords": [
+      "破空"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "黑产人员突破平台风控系统的技术手段。",
+    "description": "破空是黑产对抗安全策略的核心环节，攻击者通过脚本、改机工具、IP代理等手段，绕过平台的设备指纹、行为检测等风控规则。成功破空后，黑产可批量注册账号、领取优惠券或进行撞库攻击，为下游诈骗、刷量等行为铺路。",
+    "usageExample": "这套新系统风控太严，之前的脚本不行了，技术组正在研究新的破空方案。",
+    "relatedRisks": [
+      "R0095",
+      "R0032"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0043"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS02",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

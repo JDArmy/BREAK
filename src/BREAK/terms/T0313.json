@@ -1,0 +1,30 @@
+{
+  "T0313": {
+    "title": "大额码",
+    "keywords": [
+      "大额码"
+    ],
+    "aliases": [],
+    "category": "跑分洗钱",
+    "definition": "跑分洗钱中用于单笔收取2000元以上资金的收款二维码，是专门承接高额度赃款的支付工具。",
+    "description": "黑产把大额码当作“跑量”的核心通道，单笔金额越大越利于快速归集和转移非法资金。这类码通常由被招募的“码商”提供，对接电诈、赌博等上游资金，通过高频大额交易把赃款打散再回流。一旦被风控盯上，大额码极易触发冻结，但因其洗钱效率高，仍是跑分链条中的抢手资源。",
+    "usageExample": "长期招车，大额码车，量大无忧。",
+    "relatedRisks": [
+      "R0060",
+      "R0093"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

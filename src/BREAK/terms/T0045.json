@@ -1,0 +1,30 @@
+{
+  "T0045": {
+    "title": "快企",
+    "keywords": [
+      "快企"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "黑产通过“无痕过户”将养好的企业快速转让给骗贷人，以规避法人变更时间规则进行融资骗贷的手法。",
+    "description": "黑产提前养好具有大额经营数据和税票记录的空壳企业，通过操作使银行无法通过工商信息判断企业的真实变更情况。骗贷人接手后，可在20至45天内以新法人身份申请多笔大额企业税票贷。这种手法旨在利用时间差，在银行察觉前集中套取大量资金。",
+    "usageExample": "刚过户了一家快企，数据养了半年，这几天抓紧安排进件。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】金融欺诈中的亡命之徒",
+        "link": "https://www.threathunter.cn/blog/f17db99edff"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

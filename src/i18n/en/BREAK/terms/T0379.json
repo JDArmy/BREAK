@@ -1,0 +1,26 @@
+{
+  "T0379": {
+    "title": "Risk-Control Seasoning Period",
+    "keywords": [
+      "Risk-Control Seasoning Period",
+      "Risk Control Period"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "黑产为规避金融机构监测，指使或代替背债人进行短期正常还款的伪装期。",
+    "description": "在利用虚假身份或包装材料骗取贷款后，为延缓金融机构发现骗贷行为，黑产会要求或代替背债人在初期按时偿还月供。这段人为制造的“良好还款记录”时期就是风控期，目的是麻痹风控系统，为后续申请更大额度的贷款或直接卷款跑路争取时间。风控期越长，骗贷行为暴露的风险就越被延后。",
+    "usageExample": "XX地区操作，背XXXX到手XXX，资产包，风控三年。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "T0417": {
+    "title": "Light Profile Enhancement",
+    "keywords": [
+      "Light Profile Enhancement",
+      "Light Packaging"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "黑产对借款人资料进行有限度的虚假包装以通过贷款审批。",
+    "description": "操作者通过虚增收入流水、优化征信报告、调整资产负债比例等方式，对借款申请材料进行定向“美化”。常见于信贷欺诈场景，目的是提升金融机构的授信通过率和额度。此类包装通常不改变核心身份，只做表面数据修饰，隐蔽性较强。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

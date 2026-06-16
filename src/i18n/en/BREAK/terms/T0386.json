@@ -1,0 +1,26 @@
+{
+  "T0386": {
+    "title": "Underground Method",
+    "keywords": [
+      "Underground Method",
+      "Yeluzi"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "指无金融牌照、逃避监管、采用非法手段运营的贷款平台或放贷组织。",
+    "description": "这类平台通常游离于监管之外，通过自建App或社群私下放贷。它们常伴随超高利率、暴力催收等行为，是套路贷和非法经营的重灾区。借款人一旦陷入，不仅面临财产损失，还可能遭受人身威胁。",
+    "usageExample": "最近9个月基本靠野路子还款",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

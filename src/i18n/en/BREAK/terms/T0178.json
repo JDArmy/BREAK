@@ -1,0 +1,40 @@
+{
+  "T0178": {
+    "title": "Background Check Service",
+    "keywords": [
+      "Background Check Service",
+      "Check Files"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illicit data trading, a service that provides access to a specified individual’s personal records and background files, such as retrieving identity information, addresses, bank card numbers, and asset holdings linked to a single phone number.",
+    "description": "In illicit data trading, this refers to a service offered by underground groups that can retrieve a target’s personal dossier. For example, by using a single phone number, they can look up associated identity details including residential address, bank card numbers, and assets under the person’s name. Record-checking services encompass inquiry-based lookups, decryption services, and forced account access services.",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [
+      {
+        "title": "[Underground Big Data] 2024 Data Breach Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

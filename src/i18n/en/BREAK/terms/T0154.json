@@ -1,0 +1,36 @@
+{
+  "T0154": {
+    "title": "Cloud Deduction",
+    "keywords": [
+      "Cloud Deduction",
+      "Cloud Buckle"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "Refers to fraudulent funds directly deducted or transferred through the UnionPay QuickPass payment system.",
+    "description": "Refers to fraudulent funds directly deducted or transferred through the UnionPay QuickPass payment system.",
+    "relatedRisks": [
+      "R0044",
+      "R0032",
+      "R0131"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0064",
+      "AT0066",
+      "AT0067",
+      "AT0053-002"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0043"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS01",
+      "BS15"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

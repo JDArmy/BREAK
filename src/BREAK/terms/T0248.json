@@ -1,0 +1,40 @@
+{
+  "T0248": {
+    "title": "回流",
+    "keywords": [
+      "回流"
+    ],
+    "aliases": [],
+    "category": "业务欺诈",
+    "definition": "用户将直播平台获得的虚拟礼物低价转卖给第三方变现的灰产行为。",
+    "description": "游客在抽奖或活动中获得高价值礼物后，并不直接消费，而是通过场外交易卖给回收礼物的黑产组织。黑产再将这些礼物用于打赏洗钱或完成高额任务，形成一条完整的虚拟资产变现链条。这种行为绕过了平台的官方兑换渠道，造成资金流失。",
+    "usageExample": "中了个跑车礼物自己用不上，直接回流给超市换了三百块钱。",
+    "relatedRisks": [
+      "R0034",
+      "R0005",
+      "R0094",
+      "R0138",
+      "R0121"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0016",
+      "AT0009",
+      "AT0067",
+      "AT0039"
+    ],
+    "relatedThreatActors": [
+      "TA0006",
+      "TA0039",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS05",
+      "BS06",
+      "BS15"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

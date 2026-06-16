@@ -1,0 +1,37 @@
+{
+  "T0309": {
+    "title": "商家码",
+    "keywords": [
+      "商家码"
+    ],
+    "aliases": [],
+    "category": "跑分洗钱",
+    "definition": "商家码是以商户名义开通的收款二维码，具备更高交易额度和稳定性，是黑产清洗资金的重要通道。",
+    "description": "相较于个人码，商家码拥有更高的收款限额和更稳定的通道，能承受更大的资金流水。黑产团伙通过注册虚假商户或收购现有商户的收款码，将其作为核心收款工具。这类通道因交易量大，一旦被用于洗钱，极易引发大规模资金风险，是风控的重点监控对象。",
+    "usageExample": "招车，卡车，聚合码，商家码，一切丝滑通道来对接。",
+    "relatedRisks": [
+      "R0060",
+      "R0095",
+      "R0093",
+      "R0094"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026",
+      "AT0039",
+      "AT0040"
+    ],
+    "relatedThreatActors": [
+      "TA0014",
+      "TA0015",
+      "TA0006-003"
+    ],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS02",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

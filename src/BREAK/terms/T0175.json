@@ -1,0 +1,32 @@
+{
+  "T0175": {
+    "title": "数据",
+    "keywords": [
+      "数据",
+      "水果"
+    ],
+    "aliases": [
+      "水果"
+    ],
+    "category": "数据泄露",
+    "definition": "公开社交平台上规避审查的“数据”隐语。",
+    "description": "黑产在贴吧等平台用水果代指非法获取的个人信息，以躲避关键词过滤。这类隐语常出现在兜售帖中，搭配“一手”“齐全”等词强调数据质量。它模糊了交易意图，使普通用户难以察觉，却精准触达黑产买家，助长信息倒卖。",
+    "usageExample": "“出各种一手水果客户信息齐全，一条对不上全赔”",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

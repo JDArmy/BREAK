@@ -1,0 +1,33 @@
+{
+  "T0340": {
+    "title": "Quick Burn",
+    "keywords": [
+      "Quick Burn",
+      "Quick Kill/Quick Shark"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "在洗钱场景中，快杀是指在极短时间内完成诈骗话术诱导和资金转移，以躲避受害人察觉和风控拦截的快速作案方式。",
+    "description": "黑产团伙利用实时获取的网贷申请数据或受害人信息，在几分钟内完成诈骗通话、诱导转账和多级账户分拆。这种模式要求“话务员”“跑分人员”高度协同，通常在深夜或平台风控薄弱时段操作。快杀得手后资金迅速进入洗钱链路，受害人往往在发现异常时资金已被卸货，追回难度极大。",
+    "usageExample": "出网贷实时申请数据，适合快杀/跑分，来一手盘口，中介勿扰。",
+    "relatedRisks": [
+      "R0060",
+      "R0093"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026",
+      "AT0039",
+      "AT0040"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

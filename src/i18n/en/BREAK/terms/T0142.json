@@ -1,0 +1,36 @@
+{
+  "T0142": {
+    "title": "Scam Bookmaker",
+    "keywords": [
+      "Scam Bookmaker",
+      "Dog Village"
+    ],
+    "aliases": [],
+    "category": "Telecom Fraud",
+    "definition": "A term for underground casinos or illegal gambling dens where operators rig game outcomes and enforce unfair rules to cheat participants out of their money, using methods such as cheating software and insider manipulation to ensure the house or favored players win.",
+    "description": "A term for underground casinos or illegal gambling dens where operators rig game outcomes and enforce unfair rules to cheat participants out of their money, using methods such as cheating software and insider manipulation to ensure the house or favored players win.",
+    "usageExample": "“那个台子连黑三把我就知道是狗庄在后台改了结果，根本不可能让你赢钱走。”",
+    "relatedRisks": [
+      "R0150",
+      "R0095",
+      "R0097"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001",
+      "AT0070"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008",
+      "TA0042",
+      "TA0016"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS06"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

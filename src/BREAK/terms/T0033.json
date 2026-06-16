@@ -1,0 +1,28 @@
+{
+  "T0033": {
+    "title": "帮贷",
+    "keywords": [
+      "帮贷",
+      "帮黛"
+    ],
+    "aliases": [
+      "帮黛"
+    ],
+    "category": "信贷欺诈",
+    "definition": "指无真实借贷意愿的人替他人向金融机构申请贷款并转交资金的行为。",
+    "description": "帮贷操作中，名义借款人负责出面申请、签署合同并接收放款，随后将资金转交给实际用款人。其中一种高风险变体是AB贷，即在名义借款人不知情的情况下被利用身份贷款，导致其背负巨额债务。这种模式常被黑中介用于骗取金融机构资金，最终造成信贷坏账。",
+    "usageExample": "我朋友征信花了贷不了款，中介就让我帮他做帮贷，钱下来后直接转给他，现在逾期了银行天天找我。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "T0182": {
+    "title": "全头全户",
+    "keywords": [
+      "全头全户"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "查档服务中能查询到户口本内所有直系亲属身份证照片及信息的类型。",
+    "description": "这是非法查档服务中信息最全面的类型，黑产可获取整个家庭所有成员的身份证照片及户籍信息。此类数据泄露危害极大，常被用于针对家庭的精准诈骗、敲诈勒索或团伙式身份冒用。",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

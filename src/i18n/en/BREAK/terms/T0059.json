@@ -1,0 +1,26 @@
+{
+  "T0059": {
+    "title": "Shell Company",
+    "keywords": [
+      "Shell Company",
+      "Casing"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "In the context of credit fraud, \"shell leasing\" refers to the use of an existing, nominally legitimate company (a shell company) to conduct fraudulent financial activities.",
+    "description": "Such companies typically have little to no actual business operations and exist primarily to appear as legitimate entities in financial or credit transactions, enabling fraudsters to obtain loans, letters of credit, or other financial services. Through shell leasing operations, fraudsters can quickly execute large-scale financial fraud under the guise of a seemingly legitimate company, leaving the heavily indebted shell behind for credit institutions to bear the risks and losses.",
+    "usageExample": "他们团队专门去乡下收老头老太太的身份证注册公司，养半年流水就开始套壳骗贷，等银行反应过来，公司早就注销了。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

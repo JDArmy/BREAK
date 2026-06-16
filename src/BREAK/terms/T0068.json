@@ -1,0 +1,27 @@
+{
+  "T0068": {
+    "title": "翻新料",
+    "keywords": [
+      "翻新料"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "翻新料指在非法数据交易中经过加工处理、伪装成新数据的旧数据。",
+    "description": "黑产从业者通过补充虚假信息、修改时间戳或去重等手段，将过时数据重新包装出售。这种数据表面上看似新鲜有效，实则核心信息陈旧，买家使用时容易导致诈骗失败或营销受阻。翻新料常用于欺骗下游买家，以次充好，牟取暴利。",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

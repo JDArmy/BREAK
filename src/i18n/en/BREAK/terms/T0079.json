@@ -1,0 +1,29 @@
+{
+  "T0079": {
+    "title": "Waybill Data",
+    "keywords": [
+      "Waybill Data",
+      "Face Sheet"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "Refers to courier waybills, which are documents used in the shipping industry to record sender and recipient information, as well as product weight, price, and other related details. Once illegally obtained by underground actors, this data is typically resold to third parties for targeted marketing, fraud, and other illegal activities.",
+    "description": "Refers to courier waybills, which are documents used in the shipping industry to record sender and recipient information, as well as product weight, price, and other related details. Once illegally obtained by underground actors, this data is typically resold to third parties for targeted marketing, fraud, and other illegal activities.",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

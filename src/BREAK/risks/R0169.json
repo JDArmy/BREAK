@@ -5,7 +5,11 @@
     "description": "预言机为智能合约提供链外数据（如价格、天气等）。攻击者可通过操纵数据源、攻击预言机节点、利用价格延迟、在低流动性市场制造虚假价格等方式，使预言机报告错误数据，导致 DeFi 协议错误清算、价格错误计算等，从中获利。",
     "complexity": "高级",
     "influence": "DeFi 协议资金损失，用户被错误清算，市场价格机制失效。",
-    "avoidances": [],
+    "avoidances": [
+      "A0125",
+      "A0126",
+      "A0127"
+    ],
     "references": [
       {
         "title": "Oracle Manipulation Attacks",

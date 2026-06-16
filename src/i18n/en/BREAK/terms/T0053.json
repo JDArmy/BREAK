@@ -1,0 +1,26 @@
+{
+  "T0053": {
+    "title": "Internal Kickback",
+    "keywords": [
+      "Internal Kickback",
+      "Return Within"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "An incentive mechanism used to reward sales personnel, intermediaries, or internal employees who facilitate the sale of credit products, loan disbursements, or related financial services. This commission or bonus is paid for each successfully completed transaction, such as an approved loan or credit card application, to motivate more aggressive promotion of the products or services.",
+    "description": "In the context of credit fraud, internal commissions may be exploited when sales personnel or intermediaries deliberately relax applicant vetting standards or even falsify application materials to secure loan approvals for unqualified applicants in order to earn higher commissions.",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS02",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

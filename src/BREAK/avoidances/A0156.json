@@ -1,0 +1,18 @@
+{
+  "A0156": {
+    "title": "链上声誉与信用体系",
+    "category": "TC01",
+    "definition": "基于链上行为数据构建信誉评分，替代传统KYC身份验证",
+    "description": "信誉系统：链上交易历史；智能合约交互；DeFi信用分；社交图谱；Sybil抗性；灵魂绑定代币。",
+    "complexity": "中级",
+    "limitation": "历史数据可能不足；操纵风险；隐私泄露；标准不统一",
+    "references": [],
+    "updated": "2026-06-16",
+    "keywords": [
+      "链上信誉",
+      "信用评分",
+      "SBT",
+      "Sybil防护"
+    ]
+  }
+}

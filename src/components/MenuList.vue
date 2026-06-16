@@ -36,6 +36,7 @@ const knowledgeRoutes: Record<string, string> = {
   avoidances: "/avoidances",
   attackTools: "/attack-tools",
   threatActors: "/threat-actors",
+  terms: "/terms",
 };
 
 const handleKnowledgeCommand = (command: string) => {
@@ -52,7 +53,7 @@ const handleMobileNav = (path: string) => {
 };
 
 const isKnowledgeActive = (fullPath: string) =>
-  ["/risks", "/avoidances", "/attack-tools", "/threat-actors"].includes(
+  ["/risks", "/avoidances", "/attack-tools", "/threat-actors", "/terms"].includes(
     getActiveIndex(fullPath)
   );
 
@@ -126,6 +127,9 @@ const getActiveIndex = (fullPath: string) => {
         </div>
         <div class="mobile-nav-item" :class="{ active: getActiveIndex(route.fullPath) === '/threat-actors' }" @click="handleMobileNav('/threat-actors')">
           <span>{{ $t("threatActors") }}</span>
+        </div>
+        <div class="mobile-nav-item" :class="{ active: getActiveIndex(route.fullPath) === '/terms' }" @click="handleMobileNav('/terms')">
+          <span>{{ $t("terms") }}</span>
         </div>
       </div>
 
@@ -227,6 +231,7 @@ const getActiveIndex = (fullPath: string) => {
           <el-dropdown-item command="avoidances">{{ $t("menu.avoidances") }}</el-dropdown-item>
           <el-dropdown-item command="attackTools">{{ $t("attackTools") }}</el-dropdown-item>
           <el-dropdown-item command="threatActors">{{ $t("threatActors") }}</el-dropdown-item>
+          <el-dropdown-item command="terms">{{ $t("terms") }}</el-dropdown-item>
         </el-dropdown-menu>
       </template>
     </el-dropdown>

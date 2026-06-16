@@ -1,0 +1,43 @@
+{
+  "T0238": {
+    "title": "炸码",
+    "keywords": [
+      "炸码"
+    ],
+    "aliases": [],
+    "category": "业务欺诈",
+    "definition": "通过高频请求、协议攻击等手段把对手的引流二维码打到无法正常访问，从而切断其流量入口。",
+    "description": "常见于黑灰产之间的流量争夺战，一方用DDoS或接口刷量工具对竞品的二维码链接进行饱和攻击，导致扫码后跳转失败或页面卡死。攻击目标通常是支付码、群邀请码或活动入口码，目的是让对手的推广链路瘫痪，自己则趁机抢占同一批用户。",
+    "usageExample": "工作室出假粉，补量，炸码，真人精聊",
+    "relatedRisks": [
+      "R0017",
+      "R0017-001",
+      "R0005",
+      "R0094",
+      "R0138",
+      "R0121"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0044",
+      "AT0009",
+      "AT0016",
+      "AT0067",
+      "AT0039"
+    ],
+    "relatedThreatActors": [
+      "TA0009",
+      "TA0006",
+      "TA0007",
+      "TA0039",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS02",
+      "BS04",
+      "BS15"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

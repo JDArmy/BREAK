@@ -5,6 +5,7 @@ import avoidanceCategories from "./avoidance-categories";
 import businessScenes from "./business-scenes";
 import attackTools from "./attack-tools";
 import threatActors from "./threat-actors";
+import terms from "./terms";
 
 const BREAK = {
   ...basicInfo, //BREAK框架基础信息
@@ -14,6 +15,7 @@ const BREAK = {
   ...businessScenes, //业务场景
   ...attackTools, //攻击工具
   ...threatActors, //威胁行为者
+  ...terms, //行业黑话/术语
 };
 
 export default BREAK;

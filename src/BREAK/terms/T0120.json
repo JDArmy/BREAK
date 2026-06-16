@@ -1,0 +1,29 @@
+{
+  "T0120": {
+    "title": "孕妇鱼",
+    "keywords": [
+      "孕妇鱼"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "诈骗团伙对以孕妇为主要目标的群体的内部称呼。",
+    "description": "针对孕妇空闲时间多、希望居家创收的心理，诈骗分子在宝妈群或母婴论坛发布“手工活外包”“居家客服”等虚假兼职。通常要求受害者先交纳材料费或押金，随后以各种理由拒绝支付报酬，最终卷款失联。该群体防范意识相对薄弱，容易反复受骗。",
+    "relatedRisks": [
+      "R0095",
+      "R0150"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

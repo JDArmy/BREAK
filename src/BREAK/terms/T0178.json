@@ -1,0 +1,39 @@
+{
+  "T0178": {
+    "title": "查档",
+    "keywords": [
+      "查档"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "黑产提供通过手机号等单一信息反向查询目标人员全套档案资料的非法服务。",
+    "description": "黑产利用内鬼或漏洞，根据一个手机号即可查询到目标的身份、地址、银行卡号、名下资产等敏感信息。此类服务通常涵盖查询、解密、强登等多种类型，是非法数据交易中的核心服务之一，为下游诈骗和勒索提供精准情报。",
+    "relatedRisks": [
+      "R0092",
+      "R0078",
+      "R0089",
+      "R0109"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

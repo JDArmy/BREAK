@@ -1,0 +1,27 @@
+{
+  "T0088": {
+    "title": "诊股料",
+    "keywords": [
+      "诊股料"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "在非法数据交易中，指从股票投资平台或投顾公司非法获取的客户敏感信息，黑产称为“诊股料”。",
+    "description": "这类数据涵盖个人身份、交易记录、持仓偏好和联系方式等，多由内部员工泄露或系统入侵获取。黑产将诊股料转售给荐股诈骗团伙、非法配资平台或精准营销机构，用于实施投资诱导、虚假荐股或收取高额服务费。受害人因信息精准匹配，容易误信对方为正规投顾，最终造成资金损失。",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

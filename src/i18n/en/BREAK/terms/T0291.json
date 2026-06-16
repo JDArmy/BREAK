@@ -1,0 +1,35 @@
+{
+  "T0291": {
+    "title": "Launderable Funds",
+    "keywords": [
+      "Launderable Funds",
+      "Laundering Funds"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "待清洗或正在清洗中的非法资金。",
+    "description": "洗资泛指黑产通过跑分、虚假交易、虚拟币兑换等方式处理的赃款。它可能来自电信诈骗、网络赌博或数据倒卖，处于从“黑钱”到“白资”的转化过程中。洗资的流转涉及多个账户和平台，是洗钱操作的核心对象，一旦被截获，整个链条将暴露。",
+    "usageExample": "Mobile phone, call me for small amount of capital laundering, rent q gray property at high price, and make money💰",
+    "relatedRisks": [
+      "R0060",
+      "R0093",
+      "R0095"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0026"
+    ],
+    "relatedThreatActors": [
+      "TA0006-003",
+      "TA0014",
+      "TA0015"
+    ],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS15",
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

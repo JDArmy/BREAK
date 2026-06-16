@@ -1,0 +1,27 @@
+{
+  "T0070": {
+    "title": "隔夜料",
+    "keywords": [
+      "隔夜料"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "隔夜料指在非法数据交易中，攻击者窃取后故意延迟一段时间才出售的数据。",
+    "description": "攻击者为规避风控追踪或等待热度下降，会将刚窃取的数据囤积一段时间再流入黑市。这种延迟交易使得数据泄露的发现和应急响应严重滞后，受害者往往在不知情的情况下持续遭受损失。隔夜料常用于针对特定目标的精准诈骗，因其隐蔽性强而备受黑产青睐。",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

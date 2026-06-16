@@ -1,0 +1,28 @@
+{
+  "T0352": {
+    "title": "电投",
+    "keywords": [
+      "电投"
+    ],
+    "aliases": [],
+    "category": "赌博",
+    "definition": "通过手机实时连接远程赌场进行押注的赌博方式。",
+    "description": "赌客使用手机观看现场画面并电话指令下注，常见于押单双等简单玩法。这种方式打破了地域限制，使境外赌场能直接渗透境内赌客，资金通过地下钱庄流转，隐蔽性强。",
+    "relatedRisks": [
+      "R0097",
+      "R0060"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0016",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS06",
+      "BS01"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

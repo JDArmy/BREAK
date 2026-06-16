@@ -1,0 +1,26 @@
+{
+  "T0043": {
+    "title": "Credit Blacklist",
+    "keywords": [
+      "Credit Blacklist",
+      "Kuroto"
+    ],
+    "aliases": [],
+    "category": "Credit Fraud",
+    "definition": "Typically refers to individuals with adverse credit histories who have been blacklisted by banks. These individuals may have been blacklisted by financial institutions due to loan defaults, breaches of contract, or other negative credit behaviors, meaning they can hardly obtain loans or credit cards through legitimate channels. Accounts belonging to blacklisted individuals are sometimes used by underground actors for money laundering, transferring illicit proceeds through these accounts to obscure the illegal source of funds. Fraud rings may also use the personal information of blacklisted individuals to attempt credential stuffing attacks across different financial institutions, testing whether this information can be used to successfully apply for loans or credit products.",
+    "description": "Typically refers to individuals with adverse credit histories who have been blacklisted by banks. These individuals may have been blacklisted by financial institutions due to loan defaults, breaches of contract, or other negative credit behaviors, meaning they can hardly obtain loans or credit cards through legitimate channels. Accounts belonging to blacklisted individuals are sometimes used by underground actors for money laundering, transferring illicit proceeds through these accounts to obscure the illegal source of funds. Fraud rings may also use the personal information of blacklisted individuals to attempt credential stuffing attacks across different financial institutions, testing whether this information can be used to successfully apply for loans or credit products.",
+    "usageExample": "他那身份都成黑户了，正规路子走不通，只能拿来跑分用。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

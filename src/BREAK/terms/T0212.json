@@ -1,0 +1,28 @@
+{
+  "T0212": {
+    "title": "机票料",
+    "keywords": [
+      "机票料"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指从航空系统泄露的完整机票订单数据，包含乘机人姓名、身份证号、航班号等敏感信息。",
+    "description": "这些数据通常由票务系统内部人员泄露或被黑客攻击窃取。诈骗团伙购买后，会冒充航空公司客服，以航班取消需改签或退票为由，诱导受害者进行转账操作。由于骗子能准确说出航班信息，此类诈骗成功率极高。",
+    "usageExample": "“出未起飞机票料”",
+    "relatedRisks": [
+      "R0078",
+      "R0089"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

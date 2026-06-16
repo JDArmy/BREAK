@@ -1,0 +1,28 @@
+{
+  "T0021": {
+    "title": "破盾",
+    "keywords": [
+      "破盾"
+    ],
+    "aliases": [],
+    "category": "营销欺诈",
+    "definition": "指黑灰产技术人员破解或绕过平台安全风控系统的技术手段。",
+    "description": "黑灰产利用漏洞扫描、协议破解、模拟器改机等技术，对抗平台的人机验证、设备指纹及行为分析。成功破盾后，才能进行大规模的账号注册、抢购或数据爬取，是实施各类网络攻击和营销欺诈的前置步骤。",
+    "usageExample": "这个活动新加了设备指纹校验，不先破盾的话，我们写的脚本根本登录不上去。",
+    "relatedRisks": [
+      "R0003",
+      "R0005",
+      "R0070"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0002"
+    ],
+    "relatedBusinessScenes": [
+      "BS02"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}

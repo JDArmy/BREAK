@@ -5,7 +5,11 @@
     "description": "私钥是控制区块链资产的唯一凭证，一旦泄露无法撤销。攻击者可通过钓鱼、恶意软件、社会工程、不安全存储等方式获取私钥。此外，助记词泄露、多签门槛设置不当、密钥生成随机性不足等也会造成资产风险。",
     "complexity": "中级",
     "influence": "用户数字资产被盗且无法追回，平台托管资产面临安全威胁。",
-    "avoidances": [],
+    "avoidances": [
+      "A0104",
+      "A0105",
+      "A0106"
+    ],
     "references": [
       {
         "title": "Cryptocurrency Wallet Security Best Practices",

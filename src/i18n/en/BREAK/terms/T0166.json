@@ -1,0 +1,34 @@
+{
+  "T0166": {
+    "title": "Private Invite-Only Group",
+    "keywords": [
+      "Private Invite-Only Group",
+      "Private Domain Group"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In underground data trading, a non-public group chat that typically requires an invitation link or admin approval to join, blocking entry by outsiders.",
+    "description": "In underground data trading, a non-public group chat that typically requires an invitation link or admin approval to join, blocking entry by outsiders.",
+    "relatedRisks": [
+      "R0078"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01",
+      "BS04"
+    ],
+    "references": [
+      {
+        "title": "2024 Data Breach Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      }
+    ],
+    "updated": "2026-06-16"
+  }
+}

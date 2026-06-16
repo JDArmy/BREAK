@@ -1,0 +1,32 @@
+{
+  "T0126": {
+    "title": "站街号",
+    "keywords": [
+      "站街号"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "利用社交软件“附近的人”功能进行虚假定位和形象包装，用于引流获客的营销或诈骗账号。",
+    "description": "操作者通常将账号头像和相册包装成年轻貌美的女性，通过修改定位软件将自己“站”在繁华商圈或目标人群密集的区域。这类账号利用男性的猎奇心理吸引关注，好友通过后，再引导至色情服务、酒托、或“杀猪盘”等下游诈骗环节，是黑产引流的常见前端工具。",
+    "usageExample": "这批站街号刚挂上附近的人，一晚上就有几十个男的来加好友。",
+    "relatedRisks": [
+      "R0150",
+      "R0095"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [
+      "AT0053-001",
+      "AT0070"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008",
+      "TA0042"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [],
+    "updated": "2026-06-16"
+  }
+}
