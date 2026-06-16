@@ -6,8 +6,7 @@
     "limitation": "Completely ineffective against attack behavior that perfectly simulates normal user access.",
     "references": [
       {
-        "title": "Guide to Intrusion Detection and Prevention Systems - NIST SP 800-94",
-        "link": "https://csrc.nist.gov/pubs/sp/800/94/final"
+        "title": "Guide to Intrusion Detection and Prevention Systems (IDPS)"
       },
       {
         "title": "MITRE D3FEND: Connected Honeynet Technique"

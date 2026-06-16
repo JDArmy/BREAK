@@ -7,12 +7,12 @@
     "limitation": "局限性：成本问题： 建立完备的灾难恢复机制可能需要大量投资，对于一些小型组织而言可能难以负担。无法预测的灾难： 有些灾难是无法预测和预防的，因此灾难恢复机制可能无法覆盖所有情况。依赖供应链： 如果供应链中的某个环节受到影响，可能会影响到灾难恢复机制的执行。人为因素： 人为错误、失误或疏忽可能导致灾难恢复计划的执行失败。",
     "references": [
       {
-        "title": "Contingency Planning Guide for Federal Information Systems - NIST SP 800-34 Rev. 1",
-        "link": "https://csrc.nist.gov/pubs/sp/800/34/r1/final"
+        "link": "https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final",
+        "title": "Contingency Planning Guide for Federal Information Systems"
       },
       {
-        "title": "NIST SP 800-34 Rev. 1: Contingency Planning Guide for Federal Information Systems",
-        "link": "https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final"
+        "link": "https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final",
+        "title": "Contingency Planning Guide for Federal Information Systems"
       }
     ],
     "updated": "2026-06-13",

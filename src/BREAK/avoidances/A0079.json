@@ -7,8 +7,8 @@
     "limitation": "特权访问管理的局限性包括：①部署和集成复杂度高，需要与现有IT系统深度对接。②过于严格的管控可能影响运维效率，需要平衡安全与效率。③云原生环境下的特权管理面临新挑战，如临时凭证、服务账号等。④无法完全防止已获得特权的内部恶意人员的蓄意破坏。⑤密码轮换可能导致依赖该密码的自动化流程中断。",
     "references": [
       {
-        "title": "Privileged Access Management - NIST",
-        "link": "https://csrc.nist.gov/glossary/term/privileged_access_management"
+        "link": "https://csrc.nist.gov/glossary/term/privileged_user",
+        "title": "privileged user - Glossary - NIST Computer Security Resource Center"
       },
       {
         "title": "特权访问管理最佳实践 - CyberArk",

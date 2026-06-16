@@ -8,8 +8,8 @@
     "limitation": "熔断机制可能被滥用或成为攻击目标；误报导致正常交易受阻；机器学习模型需要持续训练和更新；检测系统本身可能成为单点故障",
     "references": [
       {
-        "title": "Price Oracle Manipulation & Protection",
-        "link": "https://medium.com/@ancilartech/price-oracle-manipulation-protection-safeguarding-your-blockchain-applications-0d5ad1a94f64"
+        "link": "https://github.com/calvwang9/oracle-manipulation",
+        "title": "Price oracle manipulation attacks in defi - GitHub"
       }
     ],
     "updated": "2026-06-16",

@@ -7,8 +7,8 @@
     "limitation": "供应链安全审计的局限性包括：①开源生态系统庞大，完全审计所有依赖组件的工作量巨大。②零日漏洞和未公开的后门难以通过常规审计发现。③供应链攻击手法不断演进，审计标准和工具需要持续更新。④对于闭源商业软件，审计深度受限于供应商的配合程度。⑤SBOM的标准化和自动化程度仍有待提高。",
     "references": [
       {
-        "title": "NIST Cybersecurity Supply Chain Risk Management",
-        "link": "https://csrc.nist.gov/projects/cyber-supply-chain-risk-management"
+        "link": "https://csrc.nist.gov/projects/cyber-supply-chain-risk-management",
+        "title": "Cybersecurity Supply Chain Risk Management - NIST CSRC"
       },
       {
         "title": "软件供应链安全发展洞察报告(2024) - 安全内参",

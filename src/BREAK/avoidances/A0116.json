@@ -8,8 +8,8 @@
     "limitation": "用户可能设置弱密码或忘记密码；增加设备初始配置复杂度，影响用户体验；部分用户可能跳过安全设置或使用弱密码；密码重置机制可能成为新的攻击面",
     "references": [
       {
-        "title": "Mitigating Default Password Risks in CCTV",
-        "link": "https://www.researchgate.net/publication/387853753_Mitigating_Default_Password_Risks_in_CCTV"
+        "link": "https://www.cisa.gov/news-events/alerts/2022/05/17/weak-security-controls-and-practices-routinely-exploited-initial-access",
+        "title": "Weak Security Controls and Practices Routinely Exploited for Initial ..."
       }
     ],
     "updated": "2026-06-16",

@@ -7,8 +7,8 @@
     "limitation": "水印可能会随着数字信号的编辑而消失或无法还原，譬如：图片的裁剪、视频的剪辑、音频的剪辑等。",
     "references": [
       {
-        "title": "Digital watermarking and steganography - NIST DADS",
-        "link": "https://xlinux.nist.gov/dads/HTML/digitalWatermark.html"
+        "link": "https://csrc.nist.gov/csrc/media/projects/piv/documents/fips201-public-comments/digimarc.pdf",
+        "title": "[PDF] enhancing personal identity verification with digital watermarks ..."
       },
       {
         "title": "C2PA Specification: Content Credentials for Media Provenance and Integrity",

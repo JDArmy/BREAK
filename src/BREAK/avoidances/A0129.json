@@ -8,8 +8,8 @@
     "limitation": "需要两笔交易，Gas成本和时间成本翻倍；用户体验差，等待时间长；不适合需要即时执行的场景；攻击者可能通过分析链上模式推测意图",
     "references": [
       {
-        "title": "Game-Theoretic Analysis of MEV Attacks and Mitigation Strategies",
-        "link": "https://www.researchgate.net/publication/395639461_Game-Theoretic_Analysis_of_MEV_Attacks_and_Mitigation_Strategies_in_Decentralized_Finance"
+        "link": "https://arxiv.org/html/2407.19572v1",
+        "title": "Maximal Extractable Value Mitigation Approaches in Ethereum and ..."
       }
     ],
     "updated": "2026-06-16",

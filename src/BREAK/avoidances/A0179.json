@@ -5,8 +5,8 @@
     "description": "在IoT设备中集成可信执行环境(TEE)或安全芯片，防御硬件攻击。",
     "references": [
       {
-        "link": "https://globalplatform.org/specs-library/trusted-execution-environment-tee/",
-        "title": "GlobalPlatform TEE Specifications"
+        "link": "https://globalplatform.org/specs-library/tee-internal-core-api-specification/",
+        "title": "GlobalPlatform TEE Internal Core API Specification v1.4"
       }
     ],
     "keywords": [

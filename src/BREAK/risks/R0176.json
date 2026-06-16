@@ -14,8 +14,8 @@
     ],
     "references": [
       {
-        "title": "Timestamp Dependence Vulnerability",
-        "link": "https://consensys.github.io/smart-contract-best-practices/development-recommendations/solidity-specific/timestamp-dependence/"
+        "link": "https://owasp.org/www-project-smart-contract-top-10/2023/en/src/SC03-timestamp-dependence.html",
+        "title": "Vulnerability: Timestamp Dependence"
       }
     ],
     "updated": "2026-06-15",

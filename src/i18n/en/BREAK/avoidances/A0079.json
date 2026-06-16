@@ -6,7 +6,7 @@
     "limitation": "The limitations of privileged access management include: (1) high deployment and integration complexity requiring deep integration with existing IT systems; (2) overly strict controls may affect operational efficiency, requiring a balance between security and efficiency; (3) privileged management in cloud-native environments faces new challenges such as temporary credentials and service accounts; (4) cannot completely prevent deliberate sabotage by insiders who have already obtained privileges; (5) password rotation may cause automated processes that depend on those passwords to break.",
     "references": [
       {
-        "title": "Privileged Access Management - NIST"
+        "title": "privileged user - Glossary - NIST Computer Security Resource Center"
       },
       {
         "title": "Privileged Access Management Best Practices - CyberArk"

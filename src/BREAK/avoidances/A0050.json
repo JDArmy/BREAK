@@ -7,8 +7,8 @@
     "limitation": "DLP系统的局限性包括误报、内容识别挑战、终端设备限制、不可控的终端设备、内部威胁、实时性延迟、复杂性以及引入成本，需要组织在部署时综合考虑和管理。",
     "references": [
       {
-        "title": "Guide to Protecting the Confidentiality of Personally Identifiable Information - NIST SP 800-122",
-        "link": "https://csrc.nist.gov/pubs/sp/800/122/final"
+        "link": "https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-122.pdf",
+        "title": "[PDF] Guide to Protecting the Confidentiality of Personally"
       },
       {
         "title": "NIST SP 800-53 Rev. 5: Security and Privacy Controls for Information Systems and Organizations (SC-7, SC-8, SC-28)",

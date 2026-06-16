@@ -7,8 +7,8 @@
     "limitation": "对于完全模拟正常用户访问的攻击行为无能为力",
     "references": [
       {
-        "title": "Guide to Intrusion Detection and Prevention Systems - NIST SP 800-94",
-        "link": "https://csrc.nist.gov/pubs/sp/800/94/final"
+        "link": "https://csrc.nist.gov/pubs/sp/800/94/final",
+        "title": "Guide to Intrusion Detection and Prevention Systems (IDPS)"
       },
       {
         "title": "MITRE D3FEND: Connected Honeynet Technique",

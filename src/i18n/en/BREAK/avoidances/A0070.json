@@ -6,7 +6,7 @@
     "limitation": "The limitations of supply chain security auditing include: (1) the open-source ecosystem is vast, and fully auditing all dependent components requires enormous effort; (2) zero-day vulnerabilities and undisclosed backdoors are difficult to discover through routine audits; (3) supply chain attack methods continue to evolve, requiring continuous updates to audit standards and tools; (4) for closed-source commercial software, audit depth is limited by vendor cooperation; (5) standardization and automation of SBOM still need improvement.",
     "references": [
       {
-        "title": "NIST Cybersecurity Supply Chain Risk Management"
+        "title": "Cybersecurity Supply Chain Risk Management - NIST CSRC"
       },
       {
         "title": "Software Supply Chain Security Development Insight Report (2024) - SecRSS"

@@ -5,8 +5,8 @@
     "description": "为多签钱包交易设置强制等待期，防止社会工程紧急攻击。",
     "references": [
       {
-        "link": "https://gnosis-safe.io/app/",
-        "title": "Gnosis Safe Multi-Signature Documentation"
+        "link": "https://github.com/gnosis/MultiSigWallet",
+        "title": "GitHub - gnosis/MultiSigWallet: Allows multiple parties to agree on ..."
       }
     ],
     "keywords": [

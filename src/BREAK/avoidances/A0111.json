@@ -8,8 +8,8 @@
     "limitation": "版本单调递增限制了灵活性，紧急回退到旧版本困难；回滚保护实施不当可能导致设备无法恢复；需要可靠的时间源防止时间回滚攻击",
     "references": [
       {
-        "title": "The Importance of Secure Firmware Updates",
-        "link": "https://www.researchgate.net/publication/384687421_The_Importance_of_Secure_Firmware_Updates_in_Maintaining_System_Integrity"
+        "link": "https://trustedcomputinggroup.org/resource/tcg-guidance-for-secure-update-of-software-and-firmware-on-embedded-systems/",
+        "title": "TCG Guidance for Secure Update of Software and Firmware on ..."
       }
     ],
     "updated": "2026-06-16",

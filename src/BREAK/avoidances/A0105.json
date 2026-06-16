@@ -8,8 +8,8 @@
     "limitation": "安全性取决于用户密码强度，弱密码易被暴力破解；内存中的明文私钥仍可能被内存转储攻击获取；无法防护恶意软件或rootkit；用户忘记密码将永久丢失私钥",
     "references": [
       {
-        "title": "Effects of and prevention of leaking a private key",
-        "link": "https://crypto.stackexchange.com/questions/111636/"
+        "link": "https://www.thesslstore.com/blog/heres-what-happens-when-your-private-key-gets-compromised/",
+        "title": "Here's what happens when your Private Key gets compromised"
       }
     ],
     "updated": "2026-06-16",
