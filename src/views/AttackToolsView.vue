@@ -29,6 +29,15 @@ watch(
   { immediate: true }
 );
 
+watch(
+  () => route.params.atKey,
+  (atKey) => {
+    if (atKey && typeof atKey === 'string' && BREAK.attackTools[atKey]) {
+      selectedAttackToolKey.value = atKey;
+    }
+  }
+);
+
 const attackToolItems = computed(() =>
   attackToolKeys.map((atKey) => {
     const attackTool = BREAK.attackTools[atKey];
@@ -88,6 +97,7 @@ const openRelationGraph = (atKey: string) => {
   <KnowledgeSplitView
     :title="$t('attackTools')"
     route-name="attackTools"
+    detail-route-name="attackToolsDetail"
     :items="attackToolItems"
     :selected-key="selectedAttackToolKey"
     :search-placeholder="$t('search.attackToolPlaceholder')"

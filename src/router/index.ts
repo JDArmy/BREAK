@@ -1,10 +1,5 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import {
-  ensureRelationPerfStart,
-  logRelationPerf,
-  relationPerfNow,
-} from "@/views/relation/relationPerf";
 import { loadNetworkECharts, loadSankeyECharts } from "@/views/relation/relationECharts";
 
 const loadRelationView = () => import("@/views/RelationView.vue");
@@ -63,8 +58,18 @@ const router = createRouter({
       component: () => import("@/views/RisksView.vue"),
     },
     {
+      path: "/risks/detail/:rKey",
+      name: "risksDetail",
+      component: () => import("@/views/RisksView.vue"),
+    },
+    {
       path: "/avoidances",
       name: "avoidances",
+      component: () => import("@/views/AvoidancesView.vue"),
+    },
+    {
+      path: "/avoidances/detail/:aKey",
+      name: "avoidancesDetail",
       component: () => import("@/views/AvoidancesView.vue"),
     },
     {
@@ -73,8 +78,18 @@ const router = createRouter({
       component: () => import("@/views/AttackToolsView.vue"),
     },
     {
+      path: "/attack-tools/detail/:atKey",
+      name: "attackToolsDetail",
+      component: () => import("@/views/AttackToolsView.vue"),
+    },
+    {
       path: "/threat-actors",
       name: "threatActors",
+      component: () => import("@/views/ThreatActorsView.vue"),
+    },
+    {
+      path: "/threat-actors/detail/:taKey",
+      name: "threatActorsDetail",
       component: () => import("@/views/ThreatActorsView.vue"),
     },
     {
@@ -83,16 +98,14 @@ const router = createRouter({
       component: () => import("@/views/TermsView.vue"),
     },
     {
+      path: "/terms/detail/:tKey",
+      name: "termsDetail",
+      component: () => import("@/views/TermsView.vue"),
+    },
+    {
       path: "/relation/:type/:key",
       name: "relation",
-      component: () => {
-        const startedAt = relationPerfNow();
-        logRelationPerf("route component import start");
-        return loadRelationView().then((component) => {
-          logRelationPerf("route component import done", undefined, startedAt);
-          return component;
-        });
-      },
+      component: loadRelationView,
     },
     {
       path: "/:pathMatch(.*)*",
@@ -127,26 +140,12 @@ const router = createRouter({
 
 router.beforeEach((to) => {
   if (to.name === "relation") {
-    ensureRelationPerfStart("router beforeEach", {
-      path: to.fullPath,
-    });
-    logRelationPerf("router beforeEach relation", {
-      path: to.fullPath,
-    });
     const view = typeof to.query.view === "string" ? to.query.view : "";
     if (view === "network" || (view !== "sankey" && window.innerWidth >= 768)) {
       void loadNetworkECharts();
     } else {
       void loadSankeyECharts();
     }
-  }
-});
-
-router.afterEach((to) => {
-  if (to.name === "relation") {
-    logRelationPerf("router afterEach relation", {
-      path: to.fullPath,
-    });
   }
 });
 

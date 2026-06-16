@@ -30,6 +30,14 @@ watch(
   { immediate: true }
 );
 
+watch(
+  () => route.params.aKey,
+  (key) => {
+    if (key && BREAK.avoidances[key as string]) selectedAvoidanceKey.value = key as string;
+  },
+  { immediate: true }
+);
+
 const avoidanceItems = computed(() =>
   avoidanceKeys
     .filter(

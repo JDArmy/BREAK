@@ -1,5 +1,4 @@
 import type { ECharts } from "echarts/core";
-import { measureRelationPerf, relationPerfNow } from "@/views/relation/relationPerf";
 
 type EChartsInit = (dom: HTMLElement) => ECharts;
 
@@ -8,7 +7,6 @@ let sankeyEChartsPromise: Promise<EChartsInit> | null = null;
 
 export const loadNetworkECharts = () => {
   if (!networkEChartsPromise) {
-    const startedAt = relationPerfNow();
     networkEChartsPromise = Promise.all([
       import("echarts/core"),
       import("echarts/charts"),
@@ -21,7 +19,6 @@ export const loadNetworkECharts = () => {
         components.TooltipComponent,
         renderers.CanvasRenderer,
       ]);
-      measureRelationPerf("load network echarts done", startedAt);
       return core.init;
     });
   }
@@ -31,7 +28,6 @@ export const loadNetworkECharts = () => {
 
 export const loadSankeyECharts = () => {
   if (!sankeyEChartsPromise) {
-    const startedAt = relationPerfNow();
     sankeyEChartsPromise = Promise.all([
       import("echarts/core"),
       import("echarts/charts"),
@@ -44,7 +40,6 @@ export const loadSankeyECharts = () => {
         components.TooltipComponent,
         renderers.CanvasRenderer,
       ]);
-      measureRelationPerf("load sankey echarts done", startedAt);
       return core.init;
     });
   }

@@ -16,7 +16,6 @@ import { useI18n } from "vue-i18n";
 import { languages, setLocale } from "@/i18n";
 import { onMounted, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
-import { markRelationPerfStart } from "@/views/relation/relationPerf";
 import { preloadRelationView } from "@/router";
 
 const { locale } = useI18n();
@@ -51,7 +50,6 @@ const handleKnowledgeCommand = (command: string) => {
 
 const handleMobileNav = (path: string) => {
   if (path.startsWith("/relation/")) {
-    markRelationPerfStart("mobile menu", { path });
     preloadRelationView("sankey");
   }
   router.push(path);
@@ -60,7 +58,6 @@ const handleMobileNav = (path: string) => {
 
 const handleDesktopMenuSelect = (index: string) => {
   if (index.startsWith("/relation/")) {
-    markRelationPerfStart("desktop menu", { path: index });
     preloadRelationView("network");
   }
 };

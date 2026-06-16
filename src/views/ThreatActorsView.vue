@@ -29,6 +29,15 @@ watch(
   { immediate: true }
 );
 
+watch(
+  () => route.params.taKey,
+  (taKey) => {
+    if (taKey && typeof taKey === 'string' && BREAK.threatActors[taKey]) {
+      selectedThreatActorKey.value = taKey;
+    }
+  }
+);
+
 const threatActorItems = computed(() =>
   threatActorKeys.map((taKey) => {
     const threatActor = BREAK.threatActors[taKey];
@@ -77,6 +86,7 @@ const openRelationGraph = (taKey: string) => {
   <KnowledgeSplitView
     :title="$t('threatActors')"
     route-name="threatActors"
+    detail-route-name="threatActorsDetail"
     :items="threatActorItems"
     :selected-key="selectedThreatActorKey"
     :search-placeholder="$t('search.threatActorPlaceholder')"

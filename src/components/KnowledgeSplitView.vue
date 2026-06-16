@@ -18,6 +18,7 @@ interface KnowledgeItem {
 const props = defineProps<{
   title: string;
   routeName: string;
+  detailRouteName?: string;
   items: KnowledgeItem[];
   selectedKey: string;
   searchPlaceholder: string;
@@ -58,14 +59,29 @@ const selectItem = (key: string, updateRoute = true) => {
     mobileListScrollTop.value = mobileListRef.value.scrollTop;
   }
   emit("select", key);
-  // 只在需要时更新路由，避免替换搜索跳转的历史记录
+
   if (updateRoute) {
-    router.replace({ name: props.routeName, hash: `#${key}` });
+    if (isMobile.value && props.detailRouteName) {
+      // 移动端使用独立的详情路由
+      router.push({ name: props.detailRouteName, params: { [getParamKey()]: key } });
+    } else {
+      // PC端使用 hash
+      router.replace({ name: props.routeName, hash: `#${key}` });
+    }
   }
-  // 移动端选中后切换到详情态
+
   if (isMobile.value) {
     mobileView.value = "detail";
   }
+};
+
+const getParamKey = () => {
+  if (props.routeName === "risks") return "rKey";
+  if (props.routeName === "avoidances") return "aKey";
+  if (props.routeName === "attackTools") return "atKey";
+  if (props.routeName === "threatActors") return "taKey";
+  if (props.routeName === "terms") return "tKey";
+  return "key";
 };
 
 const scrollSelectedItemToMobileListCenter = () => {
@@ -88,7 +104,11 @@ const scrollSelectedItemToMobileListCenter = () => {
 };
 
 const backToList = () => {
-  mobileView.value = "list";
+  if (isMobile.value && props.detailRouteName) {
+    router.push({ name: props.routeName });
+  } else {
+    mobileView.value = "list";
+  }
   nextTick(() => {
     requestAnimationFrame(() => {
       if (!scrollSelectedItemToMobileListCenter() && mobileListRef.value) {
@@ -131,10 +151,31 @@ watch(
   { immediate: true }
 );
 
+// 移动端监听路由参数变化
+watch(
+  () => route.params,
+  (params) => {
+    if (!isMobile.value) return;
+    const paramKey = getParamKey();
+    const key = params[paramKey] as string | undefined;
+    if (key && props.items.some((item) => item.id === key)) {
+      if (key !== props.selectedKey) {
+        emit("select", key);
+      }
+      mobileView.value = "detail";
+    } else if (route.name === props.routeName) {
+      mobileView.value = "list";
+    }
+  },
+  { immediate: true }
+);
+
 // 屏幕尺寸变化时重置视图状态
 watch(isMobile, (mobile) => {
   if (!mobile) {
     mobileView.value = "list";
+  } else if (route.params[getParamKey()] && selectedItem.value) {
+    mobileView.value = "detail";
   } else if (route.hash && selectedItem.value) {
     mobileView.value = "detail";
   }

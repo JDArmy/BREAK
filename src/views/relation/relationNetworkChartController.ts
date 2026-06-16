@@ -1,7 +1,6 @@
 import { ref, type Ref } from "vue";
 import type { ECharts, EChartsOption } from "echarts/core";
 import type { GraphLink, GraphNode, NetworkLayoutMode } from "@/views/relation/relationTypes";
-import { logRelationPerf, measureRelationPerf, relationPerfNow } from "@/views/relation/relationPerf";
 import { loadNetworkECharts } from "@/views/relation/relationECharts";
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;
@@ -186,7 +185,6 @@ export const createNetworkChartController = ({
 
   const updateNetworkSelection = () => {
     if (!networkChart || activeView.value !== "network") return;
-    const startedAt = relationPerfNow();
     const networkData = getVisibleNetworkData();
     networkChart.setOption(
       {
@@ -200,41 +198,24 @@ export const createNetworkChartController = ({
       { notMerge: false, lazyUpdate: false }
     );
     clearNetworkNodeHighlight();
-    measureRelationPerf("network selection update done", startedAt, {
-      nodes: networkData.nodes.length,
-      links: networkData.links.length,
-    });
   };
 
   const renderNetworkChart = (notMerge = false) => {
     if (activeView.value !== "network" || !networkChartRef.value) return;
     const requestId = ++renderRequestId;
-    const renderStartedAt = relationPerfNow();
-    logRelationPerf("network render start", {
-      notMerge,
-      hasChart: Boolean(networkChart),
-      layout: networkState.layout,
-    });
 
     const applyNetworkOption = async () => {
       if (!networkChartRef.value || activeView.value !== "network" || requestId !== renderRequestId) return;
 
       if (!networkChart) {
-        const initStartedAt = relationPerfNow();
         const init = await loadNetworkECharts();
         if (!networkChartRef.value || activeView.value !== "network" || requestId !== renderRequestId) return;
         networkChart = init(networkChartRef.value);
         bindNetworkChartEvents();
-        measureRelationPerf("network chart init done", initStartedAt);
       }
       hideNetworkTooltip();
 
-      const visibleDataStartedAt = relationPerfNow();
       const networkData = getVisibleNetworkData();
-      measureRelationPerf("network render visible data ready", visibleDataStartedAt, {
-        nodes: networkData.nodes.length,
-        links: networkData.links.length,
-      });
       const isForceLayout = networkState.layout === "force";
       const style = getComputedStyle(document.documentElement);
       const tooltipBackground = style.getPropertyValue("--break-tooltip-bg").trim();
@@ -336,32 +317,15 @@ export const createNetworkChartController = ({
         ],
       } satisfies EChartsOption;
 
-      const setOptionStartedAt = relationPerfNow();
       networkChart.setOption(option, { notMerge, lazyUpdate: false });
-      measureRelationPerf("network setOption done", setOptionStartedAt, {
-        nodes: networkData.nodes.length,
-        links: networkData.links.length,
-        notMerge,
-        layout: networkState.layout,
-      });
       clearNetworkNodeHighlight();
-      const resizeStartedAt = relationPerfNow();
       networkChart.resize();
-      measureRelationPerf("network resize done", resizeStartedAt);
       if (isMobile.value) {
         requestAnimationFrame(() => {
           if (requestId !== renderRequestId) return;
-          const centerStartedAt = relationPerfNow();
           centerSelectedNodeInScroller(networkData);
-          measureRelationPerf("network center selected node done", centerStartedAt);
         });
       }
-      measureRelationPerf("network render done", renderStartedAt, {
-        nodes: networkData.nodes.length,
-        links: networkData.links.length,
-        notMerge,
-        layout: networkState.layout,
-      });
     };
 
     void applyNetworkOption();

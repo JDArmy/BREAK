@@ -3,7 +3,6 @@ import BREAK from "@/BREAK";
 import type { Router, RouteLocationNormalizedLoaded } from "vue-router";
 import { createRelationTypeMapping, RelationType } from "@/views/relation/relationTypes";
 import { normalizeRelationViewMode, type RelationViewMode } from "@/views/relation/relationViewState";
-import { logRelationPerf, measureRelationPerf, relationPerfNow } from "@/views/relation/relationPerf";
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;
 
@@ -76,22 +75,11 @@ export const setupRelationViewEffects = ({
 
   const ensureNetworkData = (options?: { render?: boolean }) => {
     if (networkDataReady) return;
-    const genGraphStartedAt = relationPerfNow();
     genNetworkGraphData(RelationType.all, relType.value, relKey.value, options);
     networkDataReady = true;
-    measureRelationPerf("gen network graph data done", genGraphStartedAt, {
-      type: relType.value,
-      key: relKey.value,
-    });
   };
 
   onMounted(() => {
-    const mountedEffectsStartedAt = relationPerfNow();
-    logRelationPerf("effects mounted start", {
-      type: route.params.type,
-      key: route.params.key,
-      activeView: activeView.value,
-    });
     if (
       !Object.values(RelationType).includes(route.params.type as RelationType) ||
       !Object.keys(
@@ -116,29 +104,17 @@ export const setupRelationViewEffects = ({
         });
       return;
     }
-    const addRootStartedAt = relationPerfNow();
     addRootNode();
-    measureRelationPerf("add root node done", addRootStartedAt);
-    const initialRenderStartedAt = relationPerfNow();
     if (activeView.value === "network") {
       ensureNetworkData({ render: false });
-      logRelationPerf("initial network render start", {
-        activeView: activeView.value,
-      });
       renderNetworkChart(false);
-      measureRelationPerf("initial network render done", initialRenderStartedAt);
     } else {
-      logRelationPerf("initial sankey render start", {
-        activeView: activeView.value,
-      });
       renderSankeyChart();
-      measureRelationPerf("initial sankey render done", initialRenderStartedAt);
     }
     window.addEventListener("resize", resizeNetworkChart);
     window.addEventListener("resize", resizeSankeyChart);
     document.addEventListener("pointerdown", handleGlobalPointerDown);
     hasMounted = true;
-    measureRelationPerf("effects mounted sync done", mountedEffectsStartedAt);
   });
 
   onBeforeUnmount(() => {

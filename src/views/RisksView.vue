@@ -12,7 +12,9 @@ const router = useRouter();
 const { t, locale, messages } = useI18n();
 
 const risks = Object.keys(BREAK.risks);
-const selectedRiskKey = ref(route.hash.replace("#", "") || risks[0] || "");
+const selectedRiskKey = ref(
+  (route.params.rKey as string) || route.hash.replace("#", "") || risks[0] || ""
+);
 
 const riskItems = computed(() =>
   risks.map((rKey) => {
@@ -44,6 +46,14 @@ watch(
   { immediate: true }
 );
 
+watch(
+  () => route.params.rKey,
+  (key) => {
+    if (key && BREAK.risks[key as string]) selectedRiskKey.value = key as string;
+  },
+  { immediate: true }
+);
+
 const selectedRisk = computed(() => BREAK.risks[selectedRiskKey.value]);
 
 const getRiskDescriptionTools = (rKey: string) =>
@@ -69,6 +79,7 @@ const openRelationGraph = (rKey: string) => {
   <KnowledgeSplitView
     :title="$t('menu.risks')"
     route-name="risks"
+    detail-route-name="risksDetail"
     :items="riskItems"
     :selected-key="selectedRiskKey"
     :search-placeholder="$t('search.riskPlaceholder')"

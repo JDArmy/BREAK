@@ -3,7 +3,6 @@ import { defineAsyncComponent, defineComponent, onMounted } from "vue";
 import RelationSankeyPane from "@/components/relation/RelationSankeyPane.vue";
 import RelationSelectorBar from "@/components/relation/RelationSelectorBar.vue";
 import { useRelationViewModel } from "@/views/relation/useRelationViewModel";
-import { logRelationPerf } from "@/views/relation/relationPerf";
 import { loadNetworkECharts, loadSankeyECharts } from "@/views/relation/relationECharts";
 import "element-plus/es/components/drawer/style/css";
 
@@ -23,11 +22,6 @@ export default defineComponent({
   setup() {
     const viewModel = useRelationViewModel();
     onMounted(() => {
-      logRelationPerf("RelationView mounted", {
-        type: viewModel.relType.value,
-        key: viewModel.relKey.value,
-        activeView: viewModel.activeView.value,
-      });
       const preloadSecondaryView = () => {
         void loadRelationNodeDetailDrawer();
         if (viewModel.activeView.value === "sankey") {

@@ -29,6 +29,15 @@ watch(
   { immediate: true }
 );
 
+watch(
+  () => route.params.tKey,
+  (tKey) => {
+    if (tKey && typeof tKey === 'string' && BREAK.terms[tKey]) {
+      selectedTermKey.value = tKey;
+    }
+  }
+);
+
 const localeMessages = computed(() => messages.value[locale.value] as Record<string, unknown>);
 
 const getTermString = (termKey: string, field: string) =>
@@ -69,6 +78,7 @@ const selectedTermAliases = computed(() => getTermStringArray(selectedTermKey.va
   <KnowledgeSplitView
     :title="$t('terms')"
     route-name="terms"
+    detail-route-name="termsDetail"
     :items="termItems"
     :selected-key="selectedTermKey"
     :search-placeholder="$t('search.termPlaceholder')"

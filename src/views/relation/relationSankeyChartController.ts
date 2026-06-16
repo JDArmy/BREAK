@@ -2,7 +2,6 @@ import { ref, type ComputedRef, type Ref } from "vue";
 import type { ECharts } from "echarts/core";
 import type { SankeyLink, SankeyNode } from "@/views/relation/relationTypes";
 import type { SankeyLabelOverflow, SankeyNodeAlign } from "@/views/relation/relationViewState";
-import { logRelationPerf, measureRelationPerf, relationPerfNow } from "@/views/relation/relationPerf";
 import { loadSankeyECharts } from "@/views/relation/relationECharts";
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;
@@ -63,23 +62,11 @@ export const createSankeyChartController = ({
   const renderSankeyChart = (attempt = 0) => {
     if (activeView.value !== "sankey" || !sankeyChartRef.value) return;
     const requestId = ++renderRequestId;
-    const renderStartedAt = relationPerfNow();
     const currentSankeyData = sankeyData.value;
     sankeyHasData.value = currentSankeyData.nodes.length > 0;
-    logRelationPerf("sankey render start", {
-      attempt,
-      hasChart: Boolean(sankeyChart),
-      nodes: currentSankeyData.nodes.length,
-      links: currentSankeyData.links.length,
-    });
     sankeyChartRef.value.style.height = `${sankeyChartHeight.value}px`;
 
     if (sankeyChartRef.value.clientWidth === 0 || sankeyChartRef.value.clientHeight === 0) {
-      logRelationPerf("sankey render deferred; empty DOM size", {
-        attempt,
-        width: sankeyChartRef.value.clientWidth,
-        height: sankeyChartRef.value.clientHeight,
-      });
       if (attempt >= 6) return;
       if (pendingRenderFrame !== null) {
         cancelAnimationFrame(pendingRenderFrame);
@@ -95,11 +82,9 @@ export const createSankeyChartController = ({
       if (!sankeyChartRef.value || activeView.value !== "sankey" || requestId !== renderRequestId) return;
 
       if (!sankeyChart) {
-        const initStartedAt = relationPerfNow();
         const init = await loadSankeyECharts();
         if (!sankeyChartRef.value || activeView.value !== "sankey" || requestId !== renderRequestId) return;
         sankeyChart = init(sankeyChartRef.value);
-        measureRelationPerf("sankey chart init done", initStartedAt);
       }
       sankeyChart.dispatchAction({ type: "hideTip" });
       const style = getComputedStyle(document.documentElement);
@@ -107,7 +92,6 @@ export const createSankeyChartController = ({
       const tooltipBorder = style.getPropertyValue("--break-tooltip-border").trim();
       const tooltipText = style.getPropertyValue("--break-tooltip-text").trim();
 
-      const setOptionStartedAt = relationPerfNow();
       sankeyChart.setOption({
         backgroundColor: getComputedStyle(document.documentElement)
           .getPropertyValue("--break-bg-primary")
@@ -182,10 +166,6 @@ export const createSankeyChartController = ({
           },
         ],
       });
-      measureRelationPerf("sankey setOption done", setOptionStartedAt, {
-        nodes: currentSankeyData.nodes.length,
-        links: currentSankeyData.links.length,
-      });
       sankeyChart.off("dblclick");
       sankeyChart.on("dblclick", (params) => {
         const node = params.data as Partial<SankeyNode>;
@@ -196,11 +176,6 @@ export const createSankeyChartController = ({
       if (!isMobile.value) {
         sankeyChart.resize();
       }
-      measureRelationPerf("sankey render done", renderStartedAt, {
-        nodes: currentSankeyData.nodes.length,
-        links: currentSankeyData.links.length,
-        attempt,
-      });
     };
 
     void applySankeyOption();

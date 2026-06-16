@@ -11,7 +11,6 @@ import {
   networkNodeSize,
   networkRootNodeSize,
 } from "@/views/relation/relationTypes";
-import { measureRelationPerf, relationPerfNow } from "@/views/relation/relationPerf";
 
 interface CreateNetworkDataHelpersOptions {
   nodes: Node[];
@@ -346,7 +345,6 @@ export const createNetworkDataHelpers = ({
   });
 
   const getVisibleNetworkData = () => {
-    const startedAt = relationPerfNow();
     const filterLineTypeSet = new Set(filterLineType.value);
     const nodeTypeById = new Map(nodes.map((node) => [node.id, node.type]));
     const relationLegendColorByLabel = new Map(
@@ -427,18 +425,10 @@ export const createNetworkDataHelpers = ({
       }
     });
 
-    const result = {
+    return {
       nodes: graphNodes,
       links: [...linkMap.values()],
     };
-    measureRelationPerf("get visible network data done", startedAt, {
-      sourceNodes: nodes.length,
-      sourceLines: lines.length,
-      visibleNodes: result.nodes.length,
-      visibleLinks: result.links.length,
-      layout: networkState.layout,
-    });
-    return result;
   };
 
   return {

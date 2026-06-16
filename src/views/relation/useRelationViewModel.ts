@@ -17,17 +17,8 @@ import {
   relationLineColors,
   RelationType,
 } from "@/views/relation/relationTypes";
-import {
-  ensureRelationPerfStart,
-  logRelationPerf,
-  measureRelationPerf,
-  relationPerfNow,
-} from "@/views/relation/relationPerf";
 
 export const useRelationViewModel = () => {
-  ensureRelationPerfStart("relation setup direct entry");
-  const setupStartedAt = relationPerfNow();
-  logRelationPerf("view setup start");
   const route = useRoute();
   const router = useRouter();
   const { t, locale } = useI18n();
@@ -103,12 +94,6 @@ export const useRelationViewModel = () => {
     dropdown1,
     setDropdownInstance,
     networkInteractionsBridge,
-  });
-
-  measureRelationPerf("view setup done", setupStartedAt, {
-    type: relationView.relType.value,
-    key: relationView.relKey.value,
-    activeView: relationView.activeView.value,
   });
 
   return {
