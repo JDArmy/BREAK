@@ -1,0 +1,18 @@
+{
+  "R0191": {
+    "title": "AR/VR Device Security Risks",
+    "definition": "Special security threats faced by Augmented Reality (AR) and Virtual Reality (VR) devices that may lead to privacy breaches, physical harm, or device hijacking.",
+    "description": "AR/VR devices integrate numerous sensors (cameras, microphones, eye tracking, gesture recognition, etc.) and immersive interactions, facing unique risks: continuous user visual and auditory monitoring after device hijacking, stealing eye-tracking data to infer sensitive information (such as passwords, health conditions), tampering with reality overlay content to mislead user behavior, VR motion sickness attacks affecting physical health, minors' exposure to inappropriate content, etc. Device firmware and application ecosystem lack adequate security protections.",
+    "complexity": "Advanced",
+    "influence": "Comprehensive user privacy leakage, biometric data stolen, physical space security threats, mental health impacts.",
+    "references": [
+      {
+        "title": "VR/AR Security and Privacy Challenges",
+        "keywords": []
+      }
+    ],
+    "keywords": [
+      "VR privacy"
+    ]
+  }
+}

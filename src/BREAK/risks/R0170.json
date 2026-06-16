@@ -1,0 +1,27 @@
+{
+  "R0170": {
+    "title": "MEV攻击（矿工可提取价值）",
+    "definition": "矿工或验证者通过重新排序、插入或审查交易来提取额外价值，损害普通用户利益。",
+    "description": "MEV（Miner/Maximal Extractable Value）是指矿工/验证者通过控制区块内交易顺序获取的额外利益。常见手法包括：抢先交易（Front-running）、夹击交易（Sandwich Attack）、套利交易重排等。用户的交易被恶意重排后，可能遭受滑点损失、交易失败或被迫以不利价格成交。",
+    "complexity": "高级",
+    "influence": "用户交易成本增加，遭受价格滑点损失，区块链公平性受损。",
+    "avoidances": [],
+    "references": [
+      {
+        "title": "Flashbots MEV Research",
+        "link": "https://docs.flashbots.net/"
+      }
+    ],
+    "updated": "2026-06-15",
+    "keywords": [
+      "MEV攻击（矿工可提取价值）",
+      "MEV攻击",
+      "矿工可提取价值",
+      "抢先交易",
+      "夹击攻击",
+      "交易重排",
+      "front-running",
+      "sandwich attack"
+    ]
+  }
+}

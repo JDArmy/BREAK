@@ -1,0 +1,18 @@
+{
+  "R0180": {
+    "title": "Connected Vehicle (V2X) Security Risks",
+    "definition": "Security threats faced by vehicle-to-everything communication systems that may lead to traffic accidents, privacy breaches, or remote vehicle control.",
+    "description": "V2X enables communication between vehicle-to-vehicle (V2V), vehicle-to-infrastructure (V2I), and vehicle-to-pedestrian (V2P). Attackers can: forge false traffic information causing accidents, hijack vehicle communication systems, remotely control critical vehicle functions (brakes, steering), steal driver location and driving data, interfere with autonomous driving decisions, etc. Vehicle CAN bus, OBD ports, and in-vehicle entertainment systems are all potential attack surfaces.",
+    "complexity": "Expert",
+    "influence": "Traffic accidents causing casualties, vehicles remotely controlled, user location privacy leaked, autonomous driving system failure.",
+    "references": [
+      {
+        "title": "Vehicle Cybersecurity Best Practices",
+        "keywords": []
+      }
+    ],
+    "keywords": [
+      "connected vehicle"
+    ]
+  }
+}

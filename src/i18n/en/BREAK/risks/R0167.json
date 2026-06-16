@@ -1,0 +1,18 @@
+{
+  "R0167": {
+    "title": "DAO Governance Attacks",
+    "definition": "Attackers manipulating governance tokens or voting mechanisms to control decision-making power in Decentralized Autonomous Organizations (DAOs).",
+    "description": "DAOs make governance decisions through token voting. Attackers can manipulate voting results to pass malicious proposals (such as transferring funds, modifying contract parameters, granting themselves privileges) by buying or borrowing large amounts of governance tokens, using flash loans to temporarily gain voting power, bribing token holders, or exploiting proposal mechanism vulnerabilities.",
+    "complexity": "Expert",
+    "influence": "DAO funds are stolen or misused, governance mechanisms fail, community trust collapses.",
+    "references": [
+      {
+        "title": "DAO Governance Attack Vectors",
+        "keywords": []
+      }
+    ],
+    "keywords": [
+      "governance attack"
+    ]
+  }
+}

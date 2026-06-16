@@ -1,0 +1,18 @@
+{
+  "R0162": {
+    "title": "Private Key Leakage and Management Risks",
+    "definition": "Blockchain wallet private keys being stolen, leaked, or improperly managed, leading to digital asset theft.",
+    "description": "Private keys are the sole credential for controlling blockchain assets; once leaked, the action is irreversible. Attackers can obtain private keys through phishing, malware, social engineering, or insecure storage. Additionally, seed phrase leakage, improper multi-signature threshold settings, or insufficient key generation randomness can also create asset risks.",
+    "complexity": "Intermediate",
+    "influence": "User digital assets are stolen and cannot be recovered; platform custodial assets face security threats.",
+    "references": [
+      {
+        "title": "Cryptocurrency Wallet Security Best Practices",
+        "keywords": []
+      }
+    ],
+    "keywords": [
+      "private key leak"
+    ]
+  }
+}

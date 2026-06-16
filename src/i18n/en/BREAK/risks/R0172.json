@@ -1,0 +1,18 @@
+{
+  "R0172": {
+    "title": "Sybil Attack",
+    "definition": "Attackers create numerous fake identity nodes to control or disrupt decentralized network operations.",
+    "description": "Sybil attack refers to attackers controlling multiple forged node identities in P2P networks to gain disproportionate influence. Can be used to: manipulate voting and consensus, surround and isolate target nodes, launch eclipse attacks, pollute routing tables, disrupt reputation systems, etc. Blockchain, social networks, IoT and other decentralized systems all face this threat.",
+    "complexity": "Advanced",
+    "influence": "Network consensus manipulated, node communication isolated, decentralization characteristics nullified, system security degraded.",
+    "references": [
+      {
+        "title": "Sybil Attack on Blockchain",
+        "keywords": []
+      }
+    ],
+    "keywords": [
+      "Sybil attack"
+    ]
+  }
+}

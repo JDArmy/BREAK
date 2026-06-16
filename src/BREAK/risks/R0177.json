@@ -1,0 +1,26 @@
+{
+  "R0177": {
+    "title": "不可升级合约设计缺陷",
+    "definition": "智能合约部署后无法修改或升级，设计缺陷或漏洞将永久存在，造成长期风险。",
+    "description": "区块链智能合约的不可篡改特性是双刃剑。未设计升级机制的合约一旦部署，即使发现严重漏洞或业务逻辑错误也无法修复，只能弃用并重新部署。这会导致：已锁定资产无法取回、业务逻辑错误持续影响、无法适应需求变化。即使使用代理模式等升级方案，也可能引入新的中心化风险和升级权限滥用问题。",
+    "complexity": "高级",
+    "influence": "合约漏洞无法修复，资金永久锁定，业务无法迭代优化。",
+    "avoidances": [],
+    "references": [
+      {
+        "title": "Smart Contract Upgradeability",
+        "link": "https://docs.openzeppelin.com/upgrades-plugins/1.x/proxies"
+      }
+    ],
+    "updated": "2026-06-15",
+    "keywords": [
+      "不可升级合约设计缺陷",
+      "不可升级合约",
+      "合约设计缺陷",
+      "合约升级",
+      "代理模式",
+      "合约治理",
+      "immutable contract"
+    ]
+  }
+}

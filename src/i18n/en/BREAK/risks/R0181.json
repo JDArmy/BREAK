@@ -1,0 +1,18 @@
+{
+  "R0181": {
+    "title": "OTA Update Hijacking",
+    "definition": "Attackers hijack the Over-The-Air (OTA) update process of IoT devices to implant malicious firmware or prevent security updates.",
+    "description": "OTA update is the primary method for remotely upgrading IoT device firmware. Attackers can hijack update channels through man-in-the-middle attacks, forge update servers, exploit update protocol vulnerabilities, etc., to push malicious firmware or prevent security patch installation. If update packages lack encryption signature verification or have verification mechanism flaws, devices will install malicious firmware and be controlled long-term.",
+    "complexity": "Expert",
+    "influence": "Devices implanted with backdoor firmware, security vulnerabilities cannot be fixed, batch devices continuously controlled.",
+    "references": [
+      {
+        "title": "Secure OTA Update Best Practices",
+        "keywords": []
+      }
+    ],
+    "keywords": [
+      "OTA hijacking"
+    ]
+  }
+}

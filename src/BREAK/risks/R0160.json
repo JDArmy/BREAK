@@ -1,0 +1,25 @@
+{
+  "R0160": {
+    "title": "闪电贷攻击",
+    "definition": "利用DeFi协议中的闪电贷功能，在单笔交易内借入大量资产进行价格操纵或套利攻击。",
+    "description": "闪电贷允许用户在无抵押的情况下借入大量加密资产，但必须在同一交易内归还。攻击者利用这一特性，通过操纵预言机价格、利用协议间价差、触发清算机制等方式获利，给DeFi协议造成巨额损失。",
+    "complexity": "高级",
+    "influence": "导致DeFi协议资金池被掏空，用户资产损失，破坏市场价格机制。",
+    "avoidances": [],
+    "references": [
+      {
+        "title": "Flash Loan Attack Explained",
+        "link": "https://consensys.io/blog/what-is-a-flash-loan-attack"
+      }
+    ],
+    "updated": "2026-06-15",
+    "keywords": [
+      "闪电贷攻击",
+      "DeFi攻击",
+      "价格操纵",
+      "预言机攻击",
+      "无抵押借贷",
+      "flash loan attack"
+    ]
+  }
+}

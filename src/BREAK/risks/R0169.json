@@ -1,0 +1,25 @@
+{
+  "R0169": {
+    "title": "预言机操纵",
+    "definition": "攻击者操纵区块链预言机提供的外部数据，影响依赖该数据的智能合约和 DeFi 协议。",
+    "description": "预言机为智能合约提供链外数据（如价格、天气等）。攻击者可通过操纵数据源、攻击预言机节点、利用价格延迟、在低流动性市场制造虚假价格等方式，使预言机报告错误数据，导致 DeFi 协议错误清算、价格错误计算等，从中获利。",
+    "complexity": "高级",
+    "influence": "DeFi 协议资金损失，用户被错误清算，市场价格机制失效。",
+    "avoidances": [],
+    "references": [
+      {
+        "title": "Oracle Manipulation Attacks",
+        "link": "https://blog.chain.link/what-is-oracle-manipulation/"
+      }
+    ],
+    "updated": "2026-06-15",
+    "keywords": [
+      "预言机操纵",
+      "价格操纵",
+      "数据源攻击",
+      "预言机攻击",
+      "价格预言机",
+      "oracle manipulation"
+    ]
+  }
+}

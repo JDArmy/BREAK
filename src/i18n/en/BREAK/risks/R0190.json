@@ -1,0 +1,18 @@
+{
+  "R0190": {
+    "title": "Internet of Medical Things (IoMT) Security Risks",
+    "definition": "Special security threats faced by medical IoT devices that may directly endanger patient life safety and privacy.",
+    "description": "IoMT connects critical medical devices such as pacemakers, insulin pumps, infusion pumps, and patient monitors. Attackers can control devices through wireless hijacking, firmware tampering, and protocol vulnerabilities, causing: incorrect medication dosages leading to patient casualties, tampering with vital signs data misleading diagnoses, shutting down life-saving equipment, stealing sensitive patient health privacy, etc. Medical devices are typically difficult to update, have long certification cycles and service lives, with weak security protections.",
+    "complexity": "Expert",
+    "influence": "Patient life safety threatened, massive health privacy leaks, medical accidents, hospital operations paralyzed, legal liability.",
+    "references": [
+      {
+        "title": "FDA Medical Device Cybersecurity Guidance",
+        "keywords": []
+      }
+    ],
+    "keywords": [
+      "medical device security"
+    ]
+  }
+}

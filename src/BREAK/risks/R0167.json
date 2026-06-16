@@ -1,0 +1,25 @@
+{
+  "R0167": {
+    "title": "DAO治理攻击",
+    "definition": "攻击者通过操纵治理代币或投票机制，控制去中心化自治组织（DAO）的决策权。",
+    "description": "DAO 通过代币投票进行治理决策。攻击者可通过大量购买或借贷治理代币、利用闪电贷临时获得投票权、贿赂代币持有者、利用提案机制漏洞等方式，操纵投票结果通过恶意提案，如转移资金、修改合约参数、授予自己特权等。",
+    "complexity": "高级",
+    "influence": "DAO 资金被盗或滥用，治理机制失效，社区信任崩塌。",
+    "avoidances": [],
+    "references": [
+      {
+        "title": "DAO Governance Attack Vectors",
+        "link": "https://blog.openzeppelin.com/secure-smart-contract-guidelines-the-dangers-of-price-oracles"
+      }
+    ],
+    "updated": "2026-06-15",
+    "keywords": [
+      "DAO治理攻击",
+      "治理代币操纵",
+      "投票攻击",
+      "提案恶意",
+      "闪电贷投票",
+      "governance attack"
+    ]
+  }
+}

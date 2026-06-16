@@ -1,0 +1,18 @@
+{
+  "R0164": {
+    "title": "Firmware Tampering and Backdoors",
+    "definition": "IoT device firmware being injected with malicious code or backdoors, leading to device function manipulation or data theft.",
+    "description": "Attackers tamper with device firmware through supply chain poisoning, OTA update hijacking, or physical access, planting backdoor programs. Tampered firmware can remain dormant long-term, continuously stealing data, monitoring user behavior, or triggering malicious actions at specific times, and is difficult to detect with conventional security software.",
+    "complexity": "Expert",
+    "influence": "Devices are monitored long-term, data continuously leaked, becoming an entry point for Advanced Persistent Threats (APT).",
+    "references": [
+      {
+        "title": "IoT Firmware Security Best Practices",
+        "keywords": []
+      }
+    ],
+    "keywords": [
+      "firmware tampering"
+    ]
+  }
+}

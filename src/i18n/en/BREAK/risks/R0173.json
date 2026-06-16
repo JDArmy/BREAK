@@ -1,0 +1,18 @@
+{
+  "R0173": {
+    "title": "Gas Fee Manipulation",
+    "definition": "Attackers manipulate blockchain transaction gas fees to affect transaction order or cause network congestion.",
+    "description": "Gas fees determine transaction priority in blocks. Attackers can: set extremely high gas fees for front-running, send large amounts of low-gas transactions to clog the network, exploit gas price volatility for arbitrage, manipulate gas auction mechanisms, etc., causing ordinary user transactions to delay or fail, or forcing users to pay higher fees.",
+    "complexity": "Advanced",
+    "influence": "User transaction costs skyrocket, network congestion paralysis, transaction order maliciously manipulated.",
+    "references": [
+      {
+        "title": "Ethereum Gas Fee Manipulation",
+        "keywords": []
+      }
+    ],
+    "keywords": [
+      "gas manipulation"
+    ]
+  }
+}

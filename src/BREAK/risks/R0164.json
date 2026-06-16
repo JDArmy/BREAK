@@ -1,0 +1,26 @@
+{
+  "R0164": {
+    "title": "固件篡改与后门",
+    "definition": "物联网设备固件被植入恶意代码或后门，导致设备功能被操控或数据被窃取。",
+    "description": "攻击者通过供应链投毒、OTA更新劫持、物理接触等方式篡改设备固件，植入后门程序。被篡改的固件可长期潜伏，持续窃取数据、监控用户行为，或在特定时机触发恶意行为，且难以被常规安全软件检测。",
+    "complexity": "高级",
+    "influence": "设备长期被监控，数据持续泄露，成为高级持续威胁（APT）的入口。",
+    "avoidances": [],
+    "references": [
+      {
+        "title": "IoT Firmware Security Best Practices",
+        "link": "https://www.nist.gov/publications/recommendations-iot-device-manufacturers"
+      }
+    ],
+    "updated": "2026-06-15",
+    "keywords": [
+      "固件篡改与后门",
+      "固件篡改",
+      "固件后门",
+      "IoT后门",
+      "固件安全",
+      "OTA劫持",
+      "firmware tampering"
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "R0190": {
+    "title": "医疗物联网(IoMT)安全风险",
+    "definition": "医疗物联网设备面临的特殊安全威胁，可能直接危及患者生命安全和隐私。",
+    "description": "医疗物联网(IoMT)连接着心脏起搏器、胰岛素泵、输液泵、监护仪等关键医疗设备。攻击者可通过无线劫持、固件篡改、协议漏洞等方式控制设备，造成：错误用药剂量导致患者伤亡、篡改生命体征数据误导诊断、关闭救生设备、窃取患者敏感健康隐私等。医疗设备通常更新困难、认证周期长、使用寿命长，安全防护薄弱。",
+    "complexity": "高级",
+    "influence": "患者生命安全受威胁，健康隐私大规模泄露，医疗事故，医院运营瘫痪，法律责任。",
+    "avoidances": [],
+    "references": [
+      {
+        "title": "FDA Medical Device Cybersecurity Guidance",
+        "link": "https://www.fda.gov/medical-devices/digital-health-center-excellence/cybersecurity"
+      }
+    ],
+    "updated": "2026-06-15",
+    "keywords": [
+      "医疗物联网(IoMT)安全风险",
+      "医疗物联网",
+      "IoMT安全",
+      "医疗设备安全",
+      "植入式设备",
+      "健康隐私",
+      "medical device security"
+    ]
+  }
+}

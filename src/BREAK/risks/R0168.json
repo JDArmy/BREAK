@@ -1,0 +1,26 @@
+{
+  "R0168": {
+    "title": "Rug Pull（项目方跑路）",
+    "definition": "Web3 项目方在募集资金或吸引流动性后突然撤资消失，投资者资金归零。",
+    "description": "Rug Pull 是加密货币领域常见的欺诈手段。项目方通过虚假宣传吸引用户投资或提供流动性，然后通过移除流动性池、转移合约所有权、利用后门功能等方式卷走资金。部分项目表面合法但预埋代码漏洞，在合适时机收割用户。",
+    "complexity": "中级",
+    "influence": "投资者资金全部损失，破坏 Web3 生态信任，引发监管关注。",
+    "avoidances": [],
+    "references": [
+      {
+        "title": "How to Spot a Rug Pull",
+        "link": "https://www.coindesk.com/learn/what-is-a-rug-pull-in-crypto/"
+      }
+    ],
+    "updated": "2026-06-15",
+    "keywords": [
+      "Rug Pull（项目方跑路）",
+      "Rug Pull",
+      "项目方跑路",
+      "卷款跑路",
+      "撤资退出骗局",
+      "流动性撤出",
+      "exit scam"
+    ]
+  }
+}

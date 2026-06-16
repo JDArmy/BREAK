@@ -1,0 +1,27 @@
+{
+  "R0171": {
+    "title": "51%攻击（双花攻击）",
+    "definition": "攻击者控制区块链网络超过51%的算力或权益，从而操纵区块链共识机制实施双花等攻击。",
+    "description": "当攻击者掌握区块链网络过半的计算能力（PoW）或质押代币（PoS）时，可以重组区块链历史、逆转已确认交易、实施双花攻击（同一资产多次支付）、审查特定交易等。对于算力较小的区块链网络，此类攻击成本较低且更易实施。",
+    "complexity": "高级",
+    "influence": "交易无法信任，资产被双花盗取，区块链共识机制崩溃，网络价值归零。",
+    "avoidances": [],
+    "references": [
+      {
+        "title": "51% Attack Explained",
+        "link": "https://www.investopedia.com/terms/1/51-attack.asp"
+      }
+    ],
+    "updated": "2026-06-15",
+    "keywords": [
+      "51%攻击（双花攻击）",
+      "51%攻击",
+      "双花攻击",
+      "算力攻击",
+      "共识攻击",
+      "区块重组",
+      "majority attack",
+      "double-spend"
+    ]
+  }
+}

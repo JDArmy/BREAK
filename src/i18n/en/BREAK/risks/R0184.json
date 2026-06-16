@@ -1,0 +1,18 @@
+{
+  "R0184": {
+    "title": "Metaverse Identity Theft",
+    "definition": "Attackers stealing or forging users' virtual identities in the metaverse to conduct fraud, harassment, or asset theft.",
+    "description": "In the metaverse, users engage in social activities and transactions through digital identities (avatars, accounts, NFT identities, etc.). Attackers can steal account credentials, forge similar avatar identities, use deepfake technology to impersonate others, etc., to conduct fraud, scam friends, steal virtual assets, damage reputation, and harass in the metaverse. The imperfection of decentralized identity systems makes identity verification and accountability difficult.",
+    "complexity": "Advanced",
+    "influence": "User virtual assets stolen, social network relationships disrupted, reputation damaged, fraud losses incurred.",
+    "references": [
+      {
+        "title": "Metaverse Identity Security",
+        "keywords": []
+      }
+    ],
+    "keywords": [
+      "identity theft"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "R0174": {
+    "title": "链上隐私泄露",
+    "definition": "区块链交易的公开透明特性导致用户身份、资产、交易行为等隐私信息被追踪分析。",
+    "description": "公链上所有交易记录永久公开可查，攻击者可通过链上数据分析、地址聚类、交易图谱分析等技术手段，关联用户真实身份与钱包地址，追踪资产流向和交易习惯。即使使用假名地址，也可能通过交易模式、金额特征、时间关联等被去匿名化。",
+    "complexity": "高级",
+    "influence": "用户资产和交易隐私完全暴露，成为针对性攻击目标，引发安全和监管风险。",
+    "avoidances": [],
+    "references": [
+      {
+        "title": "Blockchain Privacy Issues",
+        "link": "https://www.sciencedirect.com/science/article/pii/S1574013720304391"
+      }
+    ],
+    "updated": "2026-06-15",
+    "keywords": [
+      "链上隐私泄露",
+      "地址追踪",
+      "交易分析",
+      "去匿名化",
+      "区块链隐私",
+      "on-chain privacy leak"
+    ]
+  }
+}

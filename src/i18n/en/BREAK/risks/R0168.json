@@ -1,0 +1,19 @@
+{
+  "R0168": {
+    "title": "Rug Pull (Exit Scam)",
+    "definition": "Web3 project teams suddenly withdrawing funds and disappearing after raising capital or attracting liquidity, causing investor funds to become worthless.",
+    "description": "Rug Pull is a common fraud method in the cryptocurrency space. Project teams attract users to invest or provide liquidity through false promotions, then abscond with funds by removing liquidity pools, transferring contract ownership, or exploiting backdoor functions. Some projects appear legitimate but have pre-embedded code vulnerabilities that harvest users at the opportune moment.",
+    "complexity": "Intermediate",
+    "influence": "Complete loss of investor funds, damage to Web3 ecosystem trust, attracts regulatory attention.",
+    "references": [
+      {
+        "title": "How to Spot a Rug Pull",
+        "keywords": []
+      }
+    ],
+    "keywords": [
+      "Rug Pull",
+      "exit scam"
+    ]
+  }
+}

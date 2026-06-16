@@ -1,0 +1,26 @@
+{
+  "R0172": {
+    "title": "女巫攻击（Sybil Attack）",
+    "definition": "攻击者创建大量虚假身份节点，试图控制或破坏去中心化网络的运作。",
+    "description": "女巫攻击指在P2P网络中，攻击者通过控制多个伪造节点身份来获得不成比例的影响力。可用于：操纵投票和共识、包围并孤立目标节点、发起日食攻击、污染路由表、破坏声誉系统等。区块链、社交网络、物联网等去中心化系统都面临此威胁。",
+    "complexity": "高级",
+    "influence": "网络共识被操纵，节点通信被隔离，去中心化特性失效，系统安全性降级。",
+    "avoidances": [],
+    "references": [
+      {
+        "title": "Sybil Attack on Blockchain",
+        "link": "https://en.wikipedia.org/wiki/Sybil_attack"
+      }
+    ],
+    "updated": "2026-06-15",
+    "keywords": [
+      "女巫攻击（Sybil Attack）",
+      "女巫攻击",
+      "虚假节点",
+      "身份伪造",
+      "节点欺骗",
+      "P2P攻击",
+      "Sybil attack"
+    ]
+  }
+}

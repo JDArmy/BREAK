@@ -1,0 +1,18 @@
+{
+  "R0182": {
+    "title": "IoT Data Tampering Attack",
+    "definition": "Attackers tamper with data transmitted or stored by IoT devices, leading to incorrect decisions or system failure.",
+    "description": "IoT devices collect, transmit, and store large amounts of sensitive data. Without integrity protection, attackers can tamper with data through man-in-the-middle attacks, device intrusion, etc. Typical scenarios include: tampering sensor readings to affect automated decisions (such as temperature, pressure, humidity), modifying device logs to cover attack traces, forging authentication data, tampering control commands, etc. In industrial, medical, and smart city scenarios, this may cause serious consequences.",
+    "complexity": "Advanced",
+    "influence": "Dangerous decisions based on incorrect data, system control failure, attack behavior hidden, audit logs untrustworthy.",
+    "references": [
+      {
+        "title": "IoT Data Integrity Protection",
+        "keywords": []
+      }
+    ],
+    "keywords": [
+      "data tampering"
+    ]
+  }
+}

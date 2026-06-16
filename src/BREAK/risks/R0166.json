@@ -1,0 +1,26 @@
+{
+  "R0166": {
+    "title": "IoT设备默认凭据风险",
+    "definition": "物联网设备使用出厂默认用户名密码未修改，导致被批量攻破。",
+    "description": "大量IoT设备出厂时使用相同的默认凭据（如admin/admin），用户部署后未修改或无法修改。攻击者利用公开的默认凭据列表进行批量扫描和登录，轻松控制大量设备。部分设备甚至存在硬编码凭据或隐藏后门账号。",
+    "complexity": "初级",
+    "influence": "设备被批量控制，用户数据泄露，设备被纳入僵尸网络。",
+    "avoidances": [],
+    "references": [
+      {
+        "title": "Default Password Lists",
+        "link": "https://github.com/danielmiessler/SecLists/tree/master/Passwords/Default-Credentials"
+      }
+    ],
+    "updated": "2026-06-15",
+    "keywords": [
+      "IoT设备默认凭据风险",
+      "默认凭据",
+      "默认密码",
+      "弱口令",
+      "硬编码密码",
+      "IoT弱密码",
+      "default credentials"
+    ]
+  }
+}

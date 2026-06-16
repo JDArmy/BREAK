@@ -1,0 +1,23 @@
+{
+  "R0159": {
+    "title": "Smart Contract Vulnerabilities",
+    "definition": "Security flaws in blockchain smart contract code that can be exploited by attackers to steal assets or disrupt contract logic.",
+    "description": "Once deployed on the blockchain, smart contracts are typically immutable. Code vulnerabilities (such as reentrancy attacks, integer overflows, permission control flaws) can lead to severe financial losses. Attackers can trigger vulnerabilities through carefully crafted transactions to transfer digital assets or manipulate contract state.",
+    "complexity": "Expert",
+    "influence": "Causes loss of platform or user digital assets, disrupts smart contract business logic, damages blockchain application reputation.",
+    "references": [
+      {
+        "title": "OWASP Smart Contract Top 10",
+        "keywords": []
+      },
+      {
+        "title": "The DAO Attack Analysis",
+        "keywords": []
+      }
+    ],
+    "keywords": [
+      "reentrancy",
+      "smart contract vulnerability"
+    ]
+  }
+}

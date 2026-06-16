@@ -1,0 +1,20 @@
+{
+  "R0165": {
+    "title": "IoT Botnets",
+    "definition": "Large numbers of compromised IoT devices organized into botnets for launching distributed attacks or other malicious activities.",
+    "description": "Attackers exploit security vulnerabilities in IoT devices (such as default passwords, unpatched vulnerabilities) to control devices in bulk, forming botnets (such as Mirai, Mozi). These botnets can launch large-scale DDoS attacks, perform cryptocurrency mining, send spam, or serve as attack springboards.",
+    "complexity": "Advanced",
+    "influence": "Device performance degradation or failure, becoming part of attack infrastructure, affecting internet stability.",
+    "references": [
+      {
+        "title": "Mirai Botnet Analysis",
+        "keywords": []
+      }
+    ],
+    "keywords": [
+      "Mirai",
+      "IoT DDoS",
+      "IoT botnet"
+    ]
+  }
+}

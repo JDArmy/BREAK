@@ -1,0 +1,18 @@
+{
+  "R0185": {
+    "title": "Virtual World Asset Theft",
+    "definition": "Illegal theft or transfer of users' virtual assets (equipment, items, currency, NFTs, etc.) in the metaverse.",
+    "description": "Virtual assets in the metaverse have real economic value, making them targets for attackers. Theft methods include: exploiting smart contract vulnerabilities to transfer NFT assets, obtaining wallet private keys through social engineering, hacking game servers to steal items, exploiting trading system vulnerabilities to duplicate assets, phishing websites to induce authorization, etc. The digital nature of virtual assets makes them easy to steal in bulk and quickly transfer, with cross-border tracking being difficult.",
+    "complexity": "Advanced",
+    "influence": "User virtual property losses, metaverse economic system imbalance, platform reputation damage.",
+    "references": [
+      {
+        "title": "Virtual Asset Security Best Practices",
+        "keywords": []
+      }
+    ],
+    "keywords": [
+      "virtual asset theft"
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "R0189": {
+    "title": "传感器欺骗攻击",
+    "definition": "攻击者通过物理或电子手段欺骗物联网传感器，使其采集到虚假数据，导致系统做出错误决策。",
+    "description": "传感器是物联网系统的数据来源，其准确性直接影响系统决策。攻击者可通过多种方式欺骗传感器：物理干扰（如用强光欺骗光传感器、用热源欺骗温度传感器）、电磁干扰、信号注入、传感器饱和攻击等。在自动驾驶、工业控制、智能家居、安防监控等场景中，虚假传感器数据可能导致严重后果。",
+    "complexity": "高级",
+    "influence": "系统基于错误数据做出危险决策，安全机制被绕过，事故风险增加，监控失效。",
+    "avoidances": [],
+    "references": [
+      {
+        "title": "Sensor Spoofing Attacks on IoT Systems",
+        "link": "https://www.usenix.org/conference/usenixsecurity17/technical-sessions/presentation/trippel"
+      }
+    ],
+    "updated": "2026-06-15",
+    "keywords": [
+      "传感器欺骗攻击",
+      "传感器欺骗",
+      "传感器攻击",
+      "虚假数据",
+      "物理欺骗",
+      "信号注入",
+      "sensor spoofing"
+    ]
+  }
+}

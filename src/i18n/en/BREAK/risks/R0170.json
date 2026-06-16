@@ -1,0 +1,19 @@
+{
+  "R0170": {
+    "title": "MEV Attacks (Miner Extractable Value)",
+    "definition": "Miners or validators extracting additional value by reordering, inserting, or censoring transactions, harming ordinary user interests.",
+    "description": "MEV (Miner/Maximal Extractable Value) refers to the additional profit miners/validators gain by controlling the order of transactions within blocks. Common tactics include: front-running, sandwich attacks, and arbitrage transaction reordering. When users' transactions are maliciously reordered, they may suffer slippage losses, transaction failures, or be forced to settle at unfavorable prices.",
+    "complexity": "Expert",
+    "influence": "Increased user transaction costs, price slippage losses, blockchain fairness compromised.",
+    "references": [
+      {
+        "title": "Flashbots MEV Research",
+        "keywords": []
+      }
+    ],
+    "keywords": [
+      "front-running",
+      "sandwich attack"
+    ]
+  }
+}

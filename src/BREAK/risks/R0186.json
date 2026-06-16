@@ -1,0 +1,26 @@
+{
+  "R0186": {
+    "title": "日食攻击（Eclipse Attack）",
+    "definition": "攻击者通过控制目标节点的所有网络连接，将其与诚实网络隔离，操纵其接收的区块链信息。",
+    "description": "日食攻击针对P2P网络中的单个节点，攻击者通过女巫节点占据目标节点的所有连接槽位，使其与真实网络隔离。被隔离的节点只能从攻击者处接收信息，攻击者可向其提供虚假区块链视图、隐藏交易、双花攻击、或使其进行错误的共识投票。对于轻节点和SPV客户端尤其脆弱。",
+    "complexity": "高级",
+    "influence": "节点接收虚假区块链数据，交易被双花，共识投票被操纵，网络分区。",
+    "avoidances": [],
+    "references": [
+      {
+        "title": "Eclipse Attacks on Bitcoin's Peer-to-Peer Network",
+        "link": "https://www.usenix.org/conference/usenixsecurity15/technical-sessions/presentation/heilman"
+      }
+    ],
+    "updated": "2026-06-15",
+    "keywords": [
+      "日食攻击（Eclipse Attack）",
+      "日食攻击",
+      "节点隔离",
+      "网络分区",
+      "P2P攻击",
+      "连接垄断",
+      "eclipse attack"
+    ]
+  }
+}

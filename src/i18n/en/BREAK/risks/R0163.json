@@ -1,0 +1,18 @@
+{
+  "R0163": {
+    "title": "Smart Device Hijacking",
+    "definition": "Attackers gaining control of IoT smart devices through vulnerabilities to steal data, monitor users, or launch attacks.",
+    "description": "IoT devices are often compromised remotely due to firmware vulnerabilities, weak passwords, or lack of security updates. Hijacked devices can be used for eavesdropping, surveillance, data theft, or incorporated into botnets for DDoS attacks, and may serve as a gateway for infiltrating internal networks.",
+    "complexity": "Advanced",
+    "influence": "User privacy leakage, devices become attack tools, corporate internal networks are infiltrated.",
+    "references": [
+      {
+        "title": "OWASP IoT Top 10",
+        "keywords": []
+      }
+    ],
+    "keywords": [
+      "IoT hijacking"
+    ]
+  }
+}

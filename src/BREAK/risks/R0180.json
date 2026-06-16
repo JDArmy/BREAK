@@ -1,0 +1,27 @@
+{
+  "R0180": {
+    "title": "车联网(V2X)安全风险",
+    "definition": "车联网通信系统面临的安全威胁，可能导致交通事故、隐私泄露或车辆被远程控制。",
+    "description": "车联网(V2X)实现车与车(V2V)、车与基础设施(V2I)、车与行人(V2P)的通信。攻击者可通过：伪造虚假交通信息引发事故、劫持车辆通信系统、远程控制车辆关键功能（刹车、转向）、窃取车主位置和行驶数据、干扰自动驾驶决策等方式威胁安全。车辆CAN总线、OBD接口、车载娱乐系统等都是潜在攻击面。",
+    "complexity": "高级",
+    "influence": "交通事故致人伤亡，车辆被远程控制，用户行踪隐私泄露，自动驾驶系统失效。",
+    "avoidances": [],
+    "references": [
+      {
+        "title": "Vehicle Cybersecurity Best Practices",
+        "link": "https://www.nhtsa.gov/technology-innovation/vehicle-cybersecurity"
+      }
+    ],
+    "updated": "2026-06-15",
+    "keywords": [
+      "车联网(V2X)安全风险",
+      "车联网",
+      "V2X安全",
+      "智能汽车",
+      "远程劫持",
+      "CAN总线",
+      "自动驾驶安全",
+      "connected vehicle"
+    ]
+  }
+}

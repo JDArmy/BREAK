@@ -1,0 +1,18 @@
+{
+  "R0189": {
+    "title": "Sensor Spoofing Attack",
+    "definition": "Attackers deceive IoT sensors through physical or electronic means to collect false data, causing systems to make incorrect decisions.",
+    "description": "Sensors are the data source for IoT systems, and their accuracy directly affects system decisions. Attackers can deceive sensors through various methods: physical interference (such as using bright light to deceive light sensors, heat sources to deceive temperature sensors), electromagnetic interference, signal injection, sensor saturation attacks, etc. In autonomous driving, industrial control, smart home, and security monitoring scenarios, false sensor data may lead to serious consequences.",
+    "complexity": "Advanced",
+    "influence": "System makes dangerous decisions based on incorrect data, security mechanisms bypassed, accident risks increased, monitoring fails.",
+    "references": [
+      {
+        "title": "Sensor Spoofing Attacks on IoT Systems",
+        "keywords": []
+      }
+    ],
+    "keywords": [
+      "sensor spoofing"
+    ]
+  }
+}

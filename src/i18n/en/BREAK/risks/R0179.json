@@ -1,0 +1,18 @@
+{
+  "R0179": {
+    "title": "Industrial IoT (IIoT) Security Risks",
+    "definition": "Special security threats faced by Industrial IoT devices and systems that may lead to production disruption, equipment damage, or personal safety accidents.",
+    "description": "Industrial IoT connects critical infrastructure such as production equipment, sensors, and control systems. Attackers can infiltrate IIoT devices to: tamper with production parameters causing product quality issues, damage equipment operation leading to safety accidents, steal industrial secrets, launch targeted ransomware. IIoT devices typically have long lifecycles, are difficult to update, use insecure industrial protocols (such as Modbus, SCADA), and have expanded attack surfaces when interconnected with IT networks.",
+    "complexity": "Expert",
+    "influence": "Production line paralysis, equipment destruction, personnel casualties, industrial secret leakage, supply chain disruption.",
+    "references": [
+      {
+        "title": "ICS-CERT Advisories",
+        "keywords": []
+      }
+    ],
+    "keywords": [
+      "industrial IoT"
+    ]
+  }
+}

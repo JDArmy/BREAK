@@ -1,0 +1,26 @@
+{
+  "R0181": {
+    "title": "OTA更新劫持",
+    "definition": "攻击者劫持物联网设备的空中下载(OTA)更新过程，植入恶意固件或阻止安全更新。",
+    "description": "OTA更新是物联网设备远程升级固件的主要方式。攻击者可通过中间人攻击劫持更新通道、伪造更新服务器、利用更新协议漏洞等方式，向设备推送恶意固件或阻止安全补丁安装。如果更新包未加密签名验证或验证机制存在缺陷，设备将安装恶意固件并长期被控制。",
+    "complexity": "高级",
+    "influence": "设备被植入后门固件，安全漏洞无法修复，批量设备被持续控制。",
+    "avoidances": [],
+    "references": [
+      {
+        "title": "Secure OTA Update Best Practices",
+        "link": "https://www.iotsecurityfoundation.org/best-practice-guidelines/"
+      }
+    ],
+    "updated": "2026-06-15",
+    "keywords": [
+      "OTA更新劫持",
+      "OTA劫持",
+      "固件更新劫持",
+      "空中下载攻击",
+      "更新通道劫持",
+      "恶意固件推送",
+      "OTA hijacking"
+    ]
+  }
+}

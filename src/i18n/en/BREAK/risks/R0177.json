@@ -1,0 +1,18 @@
+{
+  "R0177": {
+    "title": "Immutable Contract Design Flaws",
+    "definition": "Smart contracts cannot be modified or upgraded after deployment; design flaws or vulnerabilities will exist permanently, creating long-term risks.",
+    "description": "The immutability of blockchain smart contracts is a double-edged sword. Contracts deployed without upgrade mechanisms cannot be fixed even when serious vulnerabilities or business logic errors are discovered; they can only be abandoned and redeployed. This leads to: locked assets cannot be retrieved, business logic errors continue to affect operations, inability to adapt to changing requirements. Even using proxy patterns and other upgrade solutions may introduce new centralization risks and upgrade authority abuse issues.",
+    "complexity": "Advanced",
+    "influence": "Contract vulnerabilities cannot be fixed, funds permanently locked, business cannot iterate and optimize.",
+    "references": [
+      {
+        "title": "Smart Contract Upgradeability",
+        "keywords": []
+      }
+    ],
+    "keywords": [
+      "immutable contract"
+    ]
+  }
+}

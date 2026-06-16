@@ -1,0 +1,31 @@
+{
+  "R0159": {
+    "title": "智能合约漏洞",
+    "definition": "区块链智能合约代码中存在的安全缺陷，可被攻击者利用窃取资产或破坏合约逻辑。",
+    "description": "智能合约一旦部署到区块链上通常无法修改，代码中的漏洞（如重入攻击、整数溢出、权限控制缺陷等）可能导致严重的资金损失。攻击者可通过精心构造的交易触发漏洞，转移合约中的数字资产或操纵合约状态。",
+    "complexity": "高级",
+    "influence": "造成平台或用户的数字资产损失，破坏智能合约业务逻辑，影响区块链应用信誉。",
+    "avoidances": [],
+    "references": [
+      {
+        "title": "OWASP Smart Contract Top 10",
+        "link": "https://owasp.org/www-project-smart-contract-top-10/"
+      },
+      {
+        "title": "The DAO Attack Analysis",
+        "link": "https://www.gemini.com/cryptopedia/the-dao-hack-makerdao"
+      }
+    ],
+    "updated": "2026-06-15",
+    "keywords": [
+      "智能合约漏洞",
+      "合约安全",
+      "重入攻击",
+      "整数溢出",
+      "权限漏洞",
+      "区块链安全",
+      "reentrancy",
+      "smart contract vulnerability"
+    ]
+  }
+}

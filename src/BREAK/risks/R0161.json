@@ -1,0 +1,25 @@
+{
+  "R0161": {
+    "title": "跨链桥攻击",
+    "definition": "针对区块链跨链桥协议的攻击，通过利用桥接合约漏洞或验证机制缺陷窃取锁定资产。",
+    "description": "跨链桥用于在不同区块链之间转移资产，通常需要在源链锁定资产并在目标链铸造等值代币。攻击者可利用桥接合约的漏洞、多签验证缺陷、预言机操纵等方式，在未锁定资产的情况下铸造代币，或直接窃取锁定池中的资产。",
+    "complexity": "高级",
+    "influence": "造成跨链桥资金池被盗，用户跨链资产损失，影响多链生态互操作性。",
+    "avoidances": [],
+    "references": [
+      {
+        "title": "Cross-Chain Bridge Security",
+        "link": "https://blog.chainalysis.com/reports/cross-chain-bridge-hacks-2022/"
+      }
+    ],
+    "updated": "2026-06-15",
+    "keywords": [
+      "跨链桥攻击",
+      "桥接协议",
+      "跨链安全",
+      "多链攻击",
+      "资产桥接",
+      "cross-chain bridge attack"
+    ]
+  }
+}

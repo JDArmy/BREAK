@@ -1,0 +1,18 @@
+{
+  "R0175": {
+    "title": "Blockchain Replay Attack",
+    "definition": "Attackers replay a legitimate transaction from one chain on another chain or the same chain, causing assets to be transferred repeatedly.",
+    "description": "In blockchain fork or cross-chain scenarios, if transaction signatures do not include chain ID or other replay protection identifiers, attackers can copy a user's signed transaction from one chain and execute it on another. Typical scenarios include two chains after a hard fork, cross-chain transfers, contract upgrades, etc. Users may unknowingly lose assets on multiple chains.",
+    "complexity": "Advanced",
+    "influence": "User assets are repeatedly transferred on multiple chains, causing additional losses.",
+    "references": [
+      {
+        "title": "Replay Attack Protection",
+        "keywords": []
+      }
+    ],
+    "keywords": [
+      "replay attack"
+    ]
+  }
+}

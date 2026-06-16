@@ -1,0 +1,26 @@
+{
+  "R0182": {
+    "title": "IoT数据篡改攻击",
+    "definition": "攻击者篡改物联网设备传输或存储的数据，导致错误决策或系统失效。",
+    "description": "物联网设备采集、传输和存储大量敏感数据，如果缺乏完整性保护，攻击者可通过中间人攻击、设备入侵等方式篡改数据。典型场景包括：篡改传感器读数影响自动化决策（如温度、压力、湿度）、修改设备日志掩盖攻击痕迹、伪造身份认证数据、篡改控制指令等。在工业、医疗、智慧城市等场景中可能造成严重后果。",
+    "complexity": "高级",
+    "influence": "基于错误数据做出危险决策，系统控制失效，攻击行为被隐藏，审计日志不可信。",
+    "avoidances": [],
+    "references": [
+      {
+        "title": "IoT Data Integrity Protection",
+        "link": "https://www.nist.gov/publications/cybersecurity-framework-iot"
+      }
+    ],
+    "updated": "2026-06-15",
+    "keywords": [
+      "IoT数据篡改攻击",
+      "数据篡改",
+      "传感器数据伪造",
+      "数据完整性",
+      "IoT数据攻击",
+      "控制指令篡改",
+      "data tampering"
+    ]
+  }
+}

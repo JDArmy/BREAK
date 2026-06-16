@@ -1,0 +1,18 @@
+{
+  "R0161": {
+    "title": "Cross-Chain Bridge Attacks",
+    "definition": "Attacks targeting blockchain cross-chain bridge protocols by exploiting bridge contract vulnerabilities or validation mechanism flaws to steal locked assets.",
+    "description": "Cross-chain bridges facilitate asset transfers between different blockchains, typically requiring assets to be locked on the source chain and equivalent tokens minted on the target chain. Attackers can exploit bridge contract vulnerabilities, multi-signature validation flaws, or oracle manipulation to mint tokens without locking assets, or directly steal assets from the locked pool.",
+    "complexity": "Expert",
+    "influence": "Causes cross-chain bridge fund pool theft, user cross-chain asset losses, and impacts multi-chain ecosystem interoperability.",
+    "references": [
+      {
+        "title": "Cross-Chain Bridge Security",
+        "keywords": []
+      }
+    ],
+    "keywords": [
+      "cross-chain bridge attack"
+    ]
+  }
+}

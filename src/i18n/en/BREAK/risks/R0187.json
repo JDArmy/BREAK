@@ -1,0 +1,19 @@
+{
+  "R0187": {
+    "title": "Long-Range Attack / Nothing-at-Stake",
+    "definition": "In PoS blockchains, attackers use historical private keys to construct an alternative chain from the genesis block, attempting to overwrite the main chain history.",
+    "description": "Long-range attack is a threat specific to PoS consensus mechanisms. After obtaining private keys of early stakeholders, attackers can fork from any point in blockchain history and build an alternative chain. Since PoS validation requires no actual computing power (nothing-at-stake), attackers can construct longer chains at low cost. Newly joining nodes may mistake the forged chain as the main chain.",
+    "complexity": "Expert",
+    "influence": "Blockchain history rewritten, transactions reversed, new nodes accept false chain, consensus mechanism trust collapses.",
+    "references": [
+      {
+        "title": "Long-Range Attacks on Proof-of-Stake",
+        "keywords": []
+      }
+    ],
+    "keywords": [
+      "long-range attack",
+      "nothing-at-stake"
+    ]
+  }
+}

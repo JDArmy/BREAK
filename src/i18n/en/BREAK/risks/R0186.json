@@ -1,0 +1,18 @@
+{
+  "R0186": {
+    "title": "Eclipse Attack",
+    "definition": "Attackers control all network connections of a target node, isolating it from the honest network and manipulating the blockchain information it receives.",
+    "description": "Eclipse attack targets individual nodes in P2P networks. Attackers use Sybil nodes to occupy all connection slots of the target node, isolating it from the real network. The isolated node can only receive information from attackers, who can provide false blockchain views, hide transactions, execute double-spend attacks, or cause incorrect consensus votes. Lightweight nodes and SPV clients are especially vulnerable.",
+    "complexity": "Expert",
+    "influence": "Node receives false blockchain data, transactions double-spent, consensus voting manipulated, network partitioned.",
+    "references": [
+      {
+        "title": "Eclipse Attacks on Bitcoin's Peer-to-Peer Network",
+        "keywords": []
+      }
+    ],
+    "keywords": [
+      "eclipse attack"
+    ]
+  }
+}

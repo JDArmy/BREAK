@@ -1,0 +1,18 @@
+{
+  "R0160": {
+    "title": "Flash Loan Attacks",
+    "definition": "Exploiting flash loan features in DeFi protocols to borrow large amounts of assets within a single transaction for price manipulation or arbitrage attacks.",
+    "description": "Flash loans allow users to borrow large amounts of crypto assets without collateral, but must be repaid within the same transaction. Attackers exploit this feature by manipulating oracle prices, exploiting price differences between protocols, or triggering liquidation mechanisms for profit, causing huge losses to DeFi protocols.",
+    "complexity": "Expert",
+    "influence": "Leads to DeFi protocol fund pool depletion, user asset losses, and disruption of market pricing mechanisms.",
+    "references": [
+      {
+        "title": "Flash Loan Attack Explained",
+        "keywords": []
+      }
+    ],
+    "keywords": [
+      "flash loan attack"
+    ]
+  }
+}

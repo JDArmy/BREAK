@@ -1,0 +1,18 @@
+{
+  "R0188": {
+    "title": "Selfish Mining",
+    "definition": "Miners deliberately hide mined blocks and reveal them at strategic times to gain excess profits, undermining blockchain fairness.",
+    "description": "Selfish mining is a strategic miner attack. After mining a new block, the miner does not immediately broadcast it but continues mining on a private chain. When the public chain catches up, they selectively reveal the private chain to make it the main chain, invalidating other miners' work. This strategy allows mining pools with over 33% hash power to gain revenue exceeding their hash power share, while reducing overall network security and wasting computational resources.",
+    "complexity": "Expert",
+    "influence": "Honest miner revenue reduced, computational resources wasted, blockchain security degraded, centralization trend intensified.",
+    "references": [
+      {
+        "title": "Majority is not Enough: Bitcoin Mining is Vulnerable",
+        "keywords": []
+      }
+    ],
+    "keywords": [
+      "selfish mining"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "R0176": {
+    "title": "Timestamp Dependence Attack",
+    "definition": "Smart contracts rely on block timestamps for logic decisions; miners can manipulate timestamps to affect contract execution results.",
+    "description": "Smart contracts often use block timestamps (block.timestamp) to implement time-related logic, such as lottery draws, option expiration, interest calculations, etc. Miners can freely set block timestamps within a certain range (typically 15 seconds). Attackers can exploit this feature to manipulate contract results, such as selecting favorable draw times, triggering early or delaying execution, etc.",
+    "complexity": "Advanced",
+    "influence": "Contract logic manipulated, lottery results predictable, time-sensitive business fails.",
+    "references": [
+      {
+        "title": "Timestamp Dependence Vulnerability",
+        "keywords": []
+      }
+    ],
+    "keywords": [
+      "timestamp manipulation"
+    ]
+  }
+}

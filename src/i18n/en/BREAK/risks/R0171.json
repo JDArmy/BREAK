@@ -1,0 +1,19 @@
+{
+  "R0171": {
+    "title": "51% Attack (Double-Spend Attack)",
+    "definition": "Attackers control over 51% of a blockchain network's hash power or stake, manipulating the consensus mechanism to execute double-spend and other attacks.",
+    "description": "When attackers control over half of a blockchain network's computing power (PoW) or staked tokens (PoS), they can reorganize blockchain history, reverse confirmed transactions, execute double-spend attacks (spending the same asset multiple times), censor specific transactions, etc. For smaller blockchain networks with lower hash power, such attacks are less costly and easier to execute.",
+    "complexity": "Expert",
+    "influence": "Transactions become untrustworthy, assets stolen through double-spending, blockchain consensus mechanism collapses, network value becomes worthless.",
+    "references": [
+      {
+        "title": "51% Attack Explained",
+        "keywords": []
+      }
+    ],
+    "keywords": [
+      "majority attack",
+      "double-spend"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "R0169": {
+    "title": "Oracle Manipulation",
+    "definition": "Attackers manipulating external data provided by blockchain oracles to affect smart contracts and DeFi protocols that depend on that data.",
+    "description": "Oracles provide off-chain data (such as prices, weather) to smart contracts. Attackers can manipulate data sources, attack oracle nodes, exploit price delays, or create false prices in low-liquidity markets to cause oracles to report incorrect data, leading to erroneous liquidations in DeFi protocols, incorrect price calculations, and profiting from these manipulations.",
+    "complexity": "Expert",
+    "influence": "DeFi protocol fund losses, users incorrectly liquidated, market pricing mechanisms fail.",
+    "references": [
+      {
+        "title": "Oracle Manipulation Attacks",
+        "keywords": []
+      }
+    ],
+    "keywords": [
+      "oracle manipulation"
+    ]
+  }
+}

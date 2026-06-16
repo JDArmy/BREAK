@@ -1,0 +1,18 @@
+{
+  "R0166": {
+    "title": "IoT Default Credential Risks",
+    "definition": "IoT devices using factory default usernames and passwords that remain unchanged, leading to bulk compromise.",
+    "description": "Many IoT devices ship with identical default credentials (such as admin/admin), which users fail to change or cannot change after deployment. Attackers use publicly available default credential lists for bulk scanning and login, easily controlling large numbers of devices. Some devices even have hardcoded credentials or hidden backdoor accounts.",
+    "complexity": "Beginner",
+    "influence": "Devices are controlled in bulk, user data is leaked, devices are incorporated into botnets.",
+    "references": [
+      {
+        "title": "Default Password Lists",
+        "keywords": []
+      }
+    ],
+    "keywords": [
+      "default credentials"
+    ]
+  }
+}

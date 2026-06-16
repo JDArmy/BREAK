@@ -1,0 +1,26 @@
+{
+  "R0178": {
+    "title": "IoT侧信道攻击",
+    "definition": "通过分析物联网设备运行时的物理特征（功耗、电磁辐射、声音等）获取敏感信息或密钥。",
+    "description": "侧信道攻击利用设备在执行操作时产生的物理侧信道信息来推断内部数据。常见手段包括：功耗分析攻击（SPA/DPA）、电磁辐射分析、时序攻击、声学攻击、温度分析等。攻击者无需直接破解加密算法，通过物理信号即可提取密钥、还原敏感数据。物联网设备因资源受限和物理可接近性而尤其脆弱。",
+    "complexity": "高级",
+    "influence": "加密密钥被提取，设备固件被完整复制，用户隐私数据泄露。",
+    "avoidances": [],
+    "references": [
+      {
+        "title": "Side-Channel Attacks on IoT",
+        "link": "https://www.usenix.org/conference/usenixsecurity19/presentation/van-geest"
+      }
+    ],
+    "updated": "2026-06-15",
+    "keywords": [
+      "IoT侧信道攻击",
+      "侧信道攻击",
+      "功耗分析",
+      "电磁泄漏",
+      "时序攻击",
+      "物理攻击",
+      "side-channel attack"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "R0174": {
+    "title": "On-Chain Privacy Leakage",
+    "definition": "The public and transparent nature of blockchain transactions leads to user identity, assets, and transaction behavior privacy information being tracked and analyzed.",
+    "description": "All transaction records on public chains are permanently public and accessible. Attackers can use on-chain data analysis, address clustering, transaction graph analysis and other techniques to correlate users' real identities with wallet addresses, track asset flows and transaction habits. Even with pseudonymous addresses, de-anonymization is possible through transaction patterns, amount characteristics, time correlations, etc.",
+    "complexity": "Advanced",
+    "influence": "User assets and transaction privacy completely exposed, becoming targets for targeted attacks, triggering security and regulatory risks.",
+    "references": [
+      {
+        "title": "Blockchain Privacy Issues",
+        "keywords": []
+      }
+    ],
+    "keywords": [
+      "on-chain privacy leak"
+    ]
+  }
+}
