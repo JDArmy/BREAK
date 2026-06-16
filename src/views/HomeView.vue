@@ -10,10 +10,14 @@ import { ref, watch, computed } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import { useBreakpoints } from "@/composables/useBreakpoints";
 import { useI18n } from "vue-i18n";
+import { prefetchAllKnowledgeViews, prefetchRelationView } from "@/composables/useRoutePrefetch";
 
 import "element-plus/es/components/row/style/css";
 import "element-plus/es/components/col/style/css";
 import { ElRow, ElCol } from "element-plus";
+
+prefetchAllKnowledgeViews();
+prefetchRelationView();
 
 const router = useRouter();
 const route = useRoute();

@@ -7,13 +7,14 @@ import KnowledgeSplitView from "@/components/KnowledgeSplitView.vue";
 import ReferenceList from "@/components/ReferenceList.vue";
 import { getMessageStringArray, getNestedMessageValue } from "@/utils/i18nMessage";
 import { useBreakpoints } from "@/composables/useBreakpoints";
-import { prefetchAllKnowledgeViews } from "@/composables/useRoutePrefetch";
+import { prefetchAllKnowledgeViews, prefetchRelationView } from "@/composables/useRoutePrefetch";
 
 const route = useRoute();
 const { locale, messages } = useI18n();
 const { isMobile } = useBreakpoints();
 
 prefetchAllKnowledgeViews();
+prefetchRelationView();
 
 const termKeys = Object.keys(BREAK.terms);
 
