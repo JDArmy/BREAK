@@ -3,7 +3,12 @@
     "category": "AC01",
     "title": "医疗设备专用安全网关",
     "description": "部署专用安全网关隔离医疗IoT设备，实施严格访问控制。",
-    "references": [],
+    "references": [
+      {
+        "link": "https://www.fda.gov/medical-devices/digital-health-center-excellence/cybersecurity",
+        "title": "FDA Medical Device Cybersecurity"
+      }
+    ],
     "keywords": [
       "医疗设备专用安全网关"
     ],

@@ -3,7 +3,12 @@
     "category": "AC01",
     "title": "MEV保护机制",
     "description": "使用私有内存池、交易加密、公平排序等技术防止抢跑。",
-    "references": [],
+    "references": [
+      {
+        "link": "https://docs.flashbots.net/",
+        "title": "Flashbots Documentation"
+      }
+    ],
     "keywords": [
       "MEV保护机制"
     ],

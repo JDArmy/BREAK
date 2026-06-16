@@ -4,6 +4,12 @@
     "description": "Enforce NFT royalties at protocol level through smart contracts, making them unbypasable.",
     "keywords": [
       "On-Chain Royalty Enforcement"
+    ],
+    "references": [
+      {
+        "link": "https://eips.ethereum.org/EIPS/eip-2981",
+        "title": "EIP-2981: NFT Royalty Standard"
+      }
     ]
   }
 }

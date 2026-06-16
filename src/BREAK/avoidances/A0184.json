@@ -3,7 +3,12 @@
     "category": "AC02",
     "title": "智能家居隐私开关",
     "description": "为智能设备提供物理或软件隐私开关，用户可主动断开音视频采集。",
-    "references": [],
+    "references": [
+      {
+        "link": "https://www.consumer.ftc.gov/articles/how-protect-your-privacy-when-using-smart-home-devices",
+        "title": "FTC Smart Home Privacy"
+      }
+    ],
     "keywords": [
       "智能家居隐私开关"
     ],

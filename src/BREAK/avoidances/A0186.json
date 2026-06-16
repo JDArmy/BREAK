@@ -3,7 +3,12 @@
     "category": "AC01",
     "title": "边缘计算安全容器",
     "description": "使用安全容器技术隔离边缘计算节点，防止横向渗透。",
-    "references": [],
+    "references": [
+      {
+        "link": "https://kubernetes.io/docs/concepts/security/",
+        "title": "Kubernetes Security Best Practices"
+      }
+    ],
     "keywords": [
       "边缘计算安全容器"
     ],

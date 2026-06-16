@@ -8,7 +8,16 @@
     "avoidances": [
       "A0176"
     ],
-    "references": [],
+    "references": [
+      {
+        "link": "https://blog.openzeppelin.com/secure-smart-contract-guidelines/",
+        "title": "DApp Frontend Security Guidelines"
+      },
+      {
+        "link": "https://docs.ipfs.tech/concepts/content-addressing/",
+        "title": "IPFS Content Addressing and Security"
+      }
+    ],
     "keywords": [
       "DApp前端劫持"
     ],

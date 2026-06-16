@@ -3,7 +3,12 @@
     "category": "AC01",
     "title": "Layer2桥接安全审计",
     "description": "对跨链桥合约进行专业审计，实施多签验证和延迟提款机制。",
-    "references": [],
+    "references": [
+      {
+        "link": "https://l2beat.com/",
+        "title": "L2BEAT Layer2 Security Analysis"
+      }
+    ],
     "keywords": [
       "Layer2桥接安全审计"
     ],

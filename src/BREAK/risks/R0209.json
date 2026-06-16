@@ -9,7 +9,16 @@
       "A0030",
       "A0182"
     ],
-    "references": [],
+    "references": [
+      {
+        "link": "https://gzca.miit.gov.cn/zwgk/wlxxaq/gztz/art/2025/art_ebaf1ebcaecc4464be015c5b05e5ff19.html",
+        "title": "工业互联网网络安全情况通报(2025年第1期)"
+      },
+      {
+        "link": "https://www.cisa.gov/sites/default/files/publications/iot-security-best-practices.pdf",
+        "title": "CISA IoT Security Best Practices"
+      }
+    ],
     "keywords": [
       "非法外联与C2控制"
     ],

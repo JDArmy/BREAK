@@ -4,6 +4,16 @@
     "definition": "Account abstraction standards like ERC-4337 introduce new attack surfaces including UserOperation validation bypass, Paymaster abuse, and malicious aggregators.",
     "keywords": [
       "Account Abstraction Wallet Risk"
+    ],
+    "references": [
+      {
+        "link": "https://eips.ethereum.org/EIPS/eip-4337",
+        "title": "EIP-4337: Account Abstraction"
+      },
+      {
+        "link": "https://www.alchemy.com/blog/account-abstraction",
+        "title": "Account Abstraction Security Considerations"
+      }
     ]
   }
 }

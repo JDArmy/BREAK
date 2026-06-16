@@ -4,6 +4,12 @@
     "description": "Professional audit of cross-chain bridge contracts, implementing multi-sig verification and delayed withdrawal mechanisms.",
     "keywords": [
       "Layer2 Bridge Security Audit"
+    ],
+    "references": [
+      {
+        "link": "https://l2beat.com/",
+        "title": "L2BEAT Layer2 Security Analysis"
+      }
     ]
   }
 }

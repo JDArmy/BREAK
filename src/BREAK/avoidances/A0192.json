@@ -3,7 +3,12 @@
     "category": "AC01",
     "title": "3D内容AI审核",
     "description": "使用AI技术自动识别3D虚拟内容中的违规元素。",
-    "references": [],
+    "references": [
+      {
+        "link": "https://www.meta.com/safety-center/",
+        "title": "Meta Content Moderation"
+      }
+    ],
     "keywords": [
       "3D内容AI审核"
     ],

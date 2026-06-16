@@ -9,7 +9,16 @@
       "A0056",
       "A0173"
     ],
-    "references": [],
+    "references": [
+      {
+        "link": "https://l2beat.com/scaling/risk",
+        "title": "L2BEAT - Layer2 Bridge Risk Analysis"
+      },
+      {
+        "link": "https://www.certik.com/resources/blog/cross-chain-bridge-security",
+        "title": "Cross-Chain Bridge Security Analysis"
+      }
+    ],
     "keywords": [
       "Layer2桥接风险"
     ],

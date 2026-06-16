@@ -4,6 +4,12 @@
     "description": "Deploy dedicated security gateway to isolate medical IoT devices with strict access control.",
     "keywords": [
       "Medical Device Security Gateway"
+    ],
+    "references": [
+      {
+        "link": "https://www.fda.gov/medical-devices/digital-health-center-excellence/cybersecurity",
+        "title": "FDA Medical Device Cybersecurity"
+      }
     ]
   }
 }

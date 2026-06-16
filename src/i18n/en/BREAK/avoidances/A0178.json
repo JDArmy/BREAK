@@ -4,6 +4,12 @@
     "description": "Defend AI models against adversarial examples and poisoning attacks to ensure decision reliability.",
     "keywords": [
       "AIoT Model Security Protection"
+    ],
+    "references": [
+      {
+        "link": "https://www.nist.gov/itl/ai-risk-management-framework",
+        "title": "NIST AI Risk Management Framework"
+      }
     ]
   }
 }

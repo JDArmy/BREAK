@@ -3,7 +3,12 @@
     "category": "AC01",
     "title": "AIoT模型安全防护",
     "description": "对AI模型进行对抗样本防御和投毒检测，确保决策可靠性。",
-    "references": [],
+    "references": [
+      {
+        "link": "https://www.nist.gov/itl/ai-risk-management-framework",
+        "title": "NIST AI Risk Management Framework"
+      }
+    ],
     "keywords": [
       "AIoT模型安全防护"
     ],

@@ -4,6 +4,16 @@
     "definition": "Attackers hijack IPFS gateways or poison DNS to tamper with DApp frontend code, replacing payment addresses or injecting malicious interactions without user awareness.",
     "keywords": [
       "DApp Frontend Hijacking"
+    ],
+    "references": [
+      {
+        "link": "https://blog.openzeppelin.com/secure-smart-contract-guidelines/",
+        "title": "DApp Frontend Security Guidelines"
+      },
+      {
+        "link": "https://docs.ipfs.tech/concepts/content-addressing/",
+        "title": "IPFS Content Addressing and Security"
+      }
     ]
   }
 }

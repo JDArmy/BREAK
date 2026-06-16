@@ -4,6 +4,12 @@
     "description": "Implement firmware signature verification and secure boot in XR devices to prevent malicious firmware.",
     "keywords": [
       "XR Device Trusted Boot"
+    ],
+    "references": [
+      {
+        "link": "https://www.nist.gov/programs-projects/mobile-security",
+        "title": "NIST Mobile Security"
+      }
     ]
   }
 }

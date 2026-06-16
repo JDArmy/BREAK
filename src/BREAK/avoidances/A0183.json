@@ -3,7 +3,12 @@
     "category": "AC01",
     "title": "工业协议深度包检测",
     "description": "对工业协议进行深度包检测，识别和拦截攻击流量。",
-    "references": [],
+    "references": [
+      {
+        "link": "https://www.enisa.europa.eu/publications/critical-infrastructure-and-services-security",
+        "title": "ENISA Industrial Security"
+      }
+    ],
     "keywords": [
       "工业协议深度包检测"
     ],

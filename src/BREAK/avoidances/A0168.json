@@ -3,7 +3,12 @@
     "category": "AC01",
     "title": "EIP安全验证机制",
     "description": "对新提案的交易请求进行安全验证，提示用户潜在风险。",
-    "references": [],
+    "references": [
+      {
+        "link": "https://eips.ethereum.org/",
+        "title": "Ethereum Improvement Proposals"
+      }
+    ],
     "keywords": [
       "EIP安全验证机制"
     ],

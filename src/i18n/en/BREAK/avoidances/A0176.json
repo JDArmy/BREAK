@@ -4,6 +4,12 @@
     "description": "Ensure frontend is not tampered through Subresource Integrity (SRI), IPFS hash verification, etc.",
     "keywords": [
       "DApp Frontend Integrity Verification"
+    ],
+    "references": [
+      {
+        "link": "https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity",
+        "title": "MDN Subresource Integrity"
+      }
     ]
   }
 }

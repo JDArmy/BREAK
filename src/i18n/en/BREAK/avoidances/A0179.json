@@ -4,6 +4,12 @@
     "description": "Integrate Trusted Execution Environment (TEE) or security chips in IoT devices to defend against hardware attacks.",
     "keywords": [
       "IoT Hardware Security Module"
+    ],
+    "references": [
+      {
+        "link": "https://globalplatform.org/specs-library/trusted-execution-environment-tee/",
+        "title": "GlobalPlatform TEE Specifications"
+      }
     ]
   }
 }

@@ -3,7 +3,12 @@
     "category": "AC02",
     "title": "Telegram官方认证",
     "description": "使用Telegram官方认证徽章识别真实机器人和社群，避免钓鱼。",
-    "references": [],
+    "references": [
+      {
+        "link": "https://telegram.org/verify",
+        "title": "Telegram Verification Guidelines"
+      }
+    ],
     "keywords": [
       "Telegram官方认证"
     ],

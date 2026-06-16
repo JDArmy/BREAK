@@ -4,6 +4,12 @@
     "description": "Set mandatory waiting period for multi-signature wallet transactions to prevent social engineering emergency attacks.",
     "keywords": [
       "Multi-Sig Timelock Mechanism"
+    ],
+    "references": [
+      {
+        "link": "https://gnosis-safe.io/app/",
+        "title": "Gnosis Safe Multi-Signature Documentation"
+      }
     ]
   }
 }

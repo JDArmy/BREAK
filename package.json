@@ -15,7 +15,7 @@
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "validate:data": "node scripts/validate/schema.mjs && node scripts/validate/i18n-sync.mjs --strict && node scripts/validate/keywords.mjs && node scripts/validate/relations.mjs && node scripts/validate/business-scenes.mjs",
+    "validate:data": "node scripts/validate/schema.mjs && node scripts/validate/i18n-sync.mjs --strict && node scripts/validate/keywords.mjs && node scripts/validate/relations.mjs && node scripts/validate/business-scenes.mjs && node scripts/validate/require-references.mjs",
     "import:terms:zh-content": "node scripts/import/generate-term-zh-content-overrides.mjs",
     "import:terms:zh-keywords": "node scripts/import/generate-term-zh-keyword-overrides.mjs",
     "import:terms:en-keywords": "node scripts/import/generate-term-en-keyword-overrides.mjs",

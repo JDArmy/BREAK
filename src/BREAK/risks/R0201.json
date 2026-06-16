@@ -8,7 +8,16 @@
     "avoidances": [
       "A0174"
     ],
-    "references": [],
+    "references": [
+      {
+        "link": "https://eips.ethereum.org/EIPS/eip-4337",
+        "title": "EIP-4337: Account Abstraction"
+      },
+      {
+        "link": "https://www.alchemy.com/blog/account-abstraction",
+        "title": "Account Abstraction Security Considerations"
+      }
+    ],
     "keywords": [
       "账户抽象钱包风险"
     ],

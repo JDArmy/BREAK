@@ -4,6 +4,12 @@
     "description": "Security audit of blockchain development tools, SDKs, wallet plugins to detect malicious code and backdoors.",
     "keywords": [
       "Blockchain Supply Chain Security Audit"
+    ],
+    "references": [
+      {
+        "link": "https://www.cisa.gov/supply-chain-security",
+        "title": "CISA Supply Chain Security"
+      }
     ]
   }
 }

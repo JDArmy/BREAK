@@ -4,6 +4,12 @@
     "description": "Isolate virtual and real identities at technical and regulatory levels to prevent correlation analysis.",
     "keywords": [
       "Cross Virtual-Real Identity Isolation"
+    ],
+    "references": [
+      {
+        "link": "https://gdpr.eu/",
+        "title": "GDPR Privacy Regulation"
+      }
     ]
   }
 }

@@ -4,6 +4,16 @@
     "definition": "Attacks on medical IoT devices (pacemakers, insulin pumps, monitors, etc.) may directly threaten patient life safety.",
     "keywords": [
       "Medical IoT Specific Risk"
+    ],
+    "references": [
+      {
+        "link": "https://metc.njtc.edu.cn/info/1141/5622.htm",
+        "title": "最具风险联网设备年度报告-医疗物联网"
+      },
+      {
+        "link": "https://www.fda.gov/medical-devices/digital-health-center-excellence/cybersecurity",
+        "title": "FDA Medical Device Cybersecurity"
+      }
     ]
   }
 }

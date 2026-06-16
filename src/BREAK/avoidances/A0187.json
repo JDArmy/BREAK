@@ -3,7 +3,12 @@
     "category": "AC01",
     "title": "数字虚拟人水印验证",
     "description": "为合法数字虚拟人添加不可见水印，通过C2PA标准验证真伪。",
-    "references": [],
+    "references": [
+      {
+        "link": "https://c2pa.org/",
+        "title": "C2PA Content Authenticity"
+      }
+    ],
     "keywords": [
       "数字虚拟人水印验证"
     ],

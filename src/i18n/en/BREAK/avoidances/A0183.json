@@ -4,6 +4,12 @@
     "description": "Deep packet inspection of industrial protocols to identify and block attack traffic.",
     "keywords": [
       "Industrial Protocol Deep Packet Inspection"
+    ],
+    "references": [
+      {
+        "link": "https://www.enisa.europa.eu/publications/critical-infrastructure-and-services-security",
+        "title": "ENISA Industrial Security"
+      }
     ]
   }
 }

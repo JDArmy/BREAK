@@ -4,6 +4,16 @@
     "definition": "Attackers exploit security vulnerabilities in industrial IoT protocols like Modbus, OPC-UA, Profinet to achieve unauthorized access and device control.",
     "keywords": [
       "Industrial Protocol Vulnerability Exploitation"
+    ],
+    "references": [
+      {
+        "link": "https://www.cisa.gov/ics",
+        "title": "CISA Industrial Control Systems"
+      },
+      {
+        "link": "https://www.enisa.europa.eu/publications/good-practices-for-security-of-iot",
+        "title": "ENISA IoT Security Good Practices"
+      }
     ]
   }
 }

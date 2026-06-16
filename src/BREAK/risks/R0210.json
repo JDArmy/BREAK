@@ -8,7 +8,16 @@
     "avoidances": [
       "A0183"
     ],
-    "references": [],
+    "references": [
+      {
+        "link": "https://www.cisa.gov/ics",
+        "title": "CISA Industrial Control Systems"
+      },
+      {
+        "link": "https://www.enisa.europa.eu/publications/good-practices-for-security-of-iot",
+        "title": "ENISA IoT Security Good Practices"
+      }
+    ],
     "keywords": [
       "工业协议漏洞利用"
     ],

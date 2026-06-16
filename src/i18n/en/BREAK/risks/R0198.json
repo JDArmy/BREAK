@@ -4,6 +4,16 @@
     "definition": "Token economic model vulnerabilities in smart contracts allow unauthorized minting (inflation) or burning (deflation) of tokens, disrupting economic balance.",
     "keywords": [
       "Token Inflation/Deflation Vulnerability"
+    ],
+    "references": [
+      {
+        "link": "https://consensys.io/diligence/blog/2019/09/stop-using-soliditys-transfer-now/",
+        "title": "Smart Contract Token Economics Security"
+      },
+      {
+        "link": "https://github.com/crytic/building-secure-contracts",
+        "title": "Building Secure Smart Contracts"
+      }
     ]
   }
 }

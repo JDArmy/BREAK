@@ -4,6 +4,16 @@
     "definition": "Attackers exploit vulnerabilities in Ethereum Improvement Proposals (EIP) or other blockchain protocol features to craft phishing transactions that trick users into signing malicious authorizations.",
     "keywords": [
       "EIP/Protocol Phishing Attack"
+    ],
+    "references": [
+      {
+        "link": "https://m.sohu.com/a/911507899_122029326/",
+        "title": "2025年上半年区块链安全与反洗钱报告-慢雾科技"
+      },
+      {
+        "link": "https://eips.ethereum.org/",
+        "title": "Ethereum Improvement Proposals"
+      }
     ]
   }
 }

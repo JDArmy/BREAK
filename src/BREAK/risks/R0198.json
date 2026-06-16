@@ -9,7 +9,16 @@
       "A0056",
       "A0171"
     ],
-    "references": [],
+    "references": [
+      {
+        "link": "https://consensys.io/diligence/blog/2019/09/stop-using-soliditys-transfer-now/",
+        "title": "Smart Contract Token Economics Security"
+      },
+      {
+        "link": "https://github.com/crytic/building-secure-contracts",
+        "title": "Building Secure Smart Contracts"
+      }
+    ],
     "keywords": [
       "代币增发/通缩漏洞"
     ],

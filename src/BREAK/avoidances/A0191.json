@@ -3,7 +3,12 @@
     "category": "AC02",
     "title": "空间数据隐私保护",
     "description": "对眼动、手势等敏感传感器数据进行差分隐私处理和本地化。",
-    "references": [],
+    "references": [
+      {
+        "link": "https://xrsi.org/xr-safety-framework",
+        "title": "XR Safety Framework"
+      }
+    ],
     "keywords": [
       "空间数据隐私保护"
     ],

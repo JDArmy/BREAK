@@ -4,6 +4,16 @@
     "definition": "Virtual asset interoperability protocols between metaverse platforms have vulnerabilities that may cause asset transfer failures, double-spending or theft.",
     "keywords": [
       "Virtual Asset Cross-Platform Transfer Risk"
+    ],
+    "references": [
+      {
+        "link": "https://www.secrss.com/articles/45265",
+        "title": "元宇宙虚拟资产互操作安全"
+      },
+      {
+        "link": "https://ethereum.org/en/nft/",
+        "title": "Ethereum NFT Standards"
+      }
     ]
   }
 }

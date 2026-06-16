@@ -4,6 +4,12 @@
     "description": "Use security container technology to isolate edge computing nodes and prevent lateral movement.",
     "keywords": [
       "Edge Computing Security Container"
+    ],
+    "references": [
+      {
+        "link": "https://kubernetes.io/docs/concepts/security/",
+        "title": "Kubernetes Security Best Practices"
+      }
     ]
   }
 }

@@ -4,6 +4,16 @@
     "definition": "Remote provisioning capabilities of embedded SIM (eSIM) and integrated SIM (iSIM) are exploited by attackers for SIM hijacking and identity theft.",
     "keywords": [
       "eSIM/iSIM Hijacking"
+    ],
+    "references": [
+      {
+        "link": "https://www.gsma.com/esim/",
+        "title": "GSMA eSIM Specifications"
+      },
+      {
+        "link": "https://www.enisa.europa.eu/publications/info-notes/mobile-security",
+        "title": "ENISA Mobile Security Guidelines"
+      }
     ]
   }
 }

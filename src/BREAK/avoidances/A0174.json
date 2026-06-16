@@ -3,7 +3,12 @@
     "category": "AC01",
     "title": "账户抽象安全审计",
     "description": "审计ERC-4337相关合约，验证UserOperation和Paymaster安全性。",
-    "references": [],
+    "references": [
+      {
+        "link": "https://eips.ethereum.org/EIPS/eip-4337",
+        "title": "EIP-4337: Account Abstraction"
+      }
+    ],
     "keywords": [
       "账户抽象安全审计"
     ],

@@ -8,7 +8,16 @@
     "avoidances": [
       "A0194"
     ],
-    "references": [],
+    "references": [
+      {
+        "link": "https://www.secrss.com/articles/45265",
+        "title": "元宇宙身份关联攻击分析"
+      },
+      {
+        "link": "https://www.w3.org/TR/did-core/",
+        "title": "W3C Decentralized Identifiers (DIDs)"
+      }
+    ],
     "keywords": [
       "跨虚实身份关联攻击"
     ],

@@ -4,6 +4,12 @@
     "description": "Apply differential privacy and localization to sensitive sensor data like eye tracking and gestures.",
     "keywords": [
       "Spatial Data Privacy Protection"
+    ],
+    "references": [
+      {
+        "link": "https://xrsi.org/xr-safety-framework",
+        "title": "XR Safety Framework"
+      }
     ]
   }
 }

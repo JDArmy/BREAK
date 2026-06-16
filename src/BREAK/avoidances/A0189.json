@@ -3,7 +3,12 @@
     "category": "AC01",
     "title": "虚拟资产跨链验证",
     "description": "使用跨链桥和原子交换确保虚拟资产转移的安全性。",
-    "references": [],
+    "references": [
+      {
+        "link": "https://ethereum.org/en/developers/docs/standards/tokens/",
+        "title": "Ethereum Token Standards"
+      }
+    ],
     "keywords": [
       "虚拟资产跨链验证"
     ],

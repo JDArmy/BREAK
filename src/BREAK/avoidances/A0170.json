@@ -3,7 +3,12 @@
     "category": "AC01",
     "title": "多签时间锁机制",
     "description": "为多签钱包交易设置强制等待期，防止社会工程紧急攻击。",
-    "references": [],
+    "references": [
+      {
+        "link": "https://gnosis-safe.io/app/",
+        "title": "Gnosis Safe Multi-Signature Documentation"
+      }
+    ],
     "keywords": [
       "多签时间锁机制"
     ],

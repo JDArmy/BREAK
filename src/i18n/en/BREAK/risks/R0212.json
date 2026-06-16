@@ -4,6 +4,16 @@
     "definition": "Attackers hijack vehicle-to-vehicle (V2V) and vehicle-to-infrastructure (V2I) communications to send false information interfering with driving decisions.",
     "keywords": [
       "V2X Communication Attack"
+    ],
+    "references": [
+      {
+        "link": "https://www.nhtsa.gov/technology-innovation/vehicle-cybersecurity",
+        "title": "NHTSA Vehicle Cybersecurity"
+      },
+      {
+        "link": "https://www.iso.org/standard/70918.html",
+        "title": "ISO/SAE 21434 Road vehicles Cybersecurity"
+      }
     ]
   }
 }

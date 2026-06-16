@@ -4,6 +4,12 @@
     "description": "Security verification of transaction requests from new proposals, alerting users to potential risks.",
     "keywords": [
       "EIP Security Verification Mechanism"
+    ],
+    "references": [
+      {
+        "link": "https://eips.ethereum.org/",
+        "title": "Ethereum Improvement Proposals"
+      }
     ]
   }
 }

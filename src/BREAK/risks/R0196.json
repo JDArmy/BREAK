@@ -8,7 +8,16 @@
     "avoidances": [
       "A0091"
     ],
-    "references": [],
+    "references": [
+      {
+        "link": "https://xueqiu.com/2642768288/362355777",
+        "title": "量子威胁下的区块链安全挑战"
+      },
+      {
+        "link": "https://ethereum.org/en/roadmap/security/",
+        "title": "Ethereum Quantum Resistance Roadmap"
+      }
+    ],
     "keywords": [
       "量子计算威胁"
     ],

@@ -3,7 +3,12 @@
     "category": "AC01",
     "title": "DApp前端完整性验证",
     "description": "通过子资源完整性(SRI)、IPFS哈希验证等确保前端未被篡改。",
-    "references": [],
+    "references": [
+      {
+        "link": "https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity",
+        "title": "MDN Subresource Integrity"
+      }
+    ],
     "keywords": [
       "DApp前端完整性验证"
     ],

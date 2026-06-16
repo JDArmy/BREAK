@@ -3,7 +3,12 @@
     "category": "AC01",
     "title": "IoT流量监控与异常检测",
     "description": "监控IoT设备网络流量，检测异常外联行为。",
-    "references": [],
+    "references": [
+      {
+        "link": "https://www.cisa.gov/ics",
+        "title": "CISA ICS Security"
+      }
+    ],
     "keywords": [
       "IoT流量监控与异常检测"
     ],

@@ -8,7 +8,16 @@
     "avoidances": [
       "A0181"
     ],
-    "references": [],
+    "references": [
+      {
+        "link": "https://metc.njtc.edu.cn/info/1141/5622.htm",
+        "title": "最具风险联网设备年度报告-医疗物联网"
+      },
+      {
+        "link": "https://www.fda.gov/medical-devices/digital-health-center-excellence/cybersecurity",
+        "title": "FDA Medical Device Cybersecurity"
+      }
+    ],
     "keywords": [
       "医疗物联网专项风险"
     ],

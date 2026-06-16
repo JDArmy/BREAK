@@ -3,7 +3,12 @@
     "category": "AC01",
     "title": "代币经济模型审计",
     "description": "审计智能合约的铸造/销毁权限和供应量控制逻辑。",
-    "references": [],
+    "references": [
+      {
+        "link": "https://consensys.io/diligence/audits/",
+        "title": "ConsenSys Smart Contract Audit"
+      }
+    ],
     "keywords": [
       "代币经济模型审计"
     ],

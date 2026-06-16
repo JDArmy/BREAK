@@ -4,6 +4,12 @@
     "description": "Add invisible watermarks to legitimate digital avatars, verifying authenticity through C2PA standard.",
     "keywords": [
       "Digital Avatar Watermark Verification"
+    ],
+    "references": [
+      {
+        "link": "https://c2pa.org/",
+        "title": "C2PA Content Authenticity"
+      }
     ]
   }
 }

@@ -9,7 +9,16 @@
       "A0018-001",
       "A0175"
     ],
-    "references": [],
+    "references": [
+      {
+        "link": "https://arxiv.org/abs/1904.05234",
+        "title": "An Empirical Analysis of Privacy in the Lightning Network"
+      },
+      {
+        "link": "https://www.chainalysis.com/blog/cryptocurrency-privacy/",
+        "title": "On-Chain Privacy Analysis"
+      }
+    ],
     "keywords": [
       "链上数据隐私泄露"
     ],

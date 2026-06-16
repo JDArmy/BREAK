@@ -3,7 +3,12 @@
     "category": "AC02",
     "title": "元宇宙身份联邦认证",
     "description": "建立跨平台的去中心化身份(DID)认证体系，防止身份冒充。",
-    "references": [],
+    "references": [
+      {
+        "link": "https://www.w3.org/TR/did-core/",
+        "title": "W3C Decentralized Identifiers"
+      }
+    ],
     "keywords": [
       "元宇宙身份联邦认证"
     ],

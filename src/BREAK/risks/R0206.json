@@ -8,7 +8,16 @@
     "avoidances": [
       "A0179"
     ],
-    "references": [],
+    "references": [
+      {
+        "link": "http://finance.people.com.cn/n1/2025/0311/c1004-40436497.html",
+        "title": "2024年网络安全深度洞察-硬件供应链风险"
+      },
+      {
+        "link": "https://www.nist.gov/itl/executive-order-improving-nations-cybersecurity/hardware-supply-chain-security",
+        "title": "NIST Hardware Supply Chain Security"
+      }
+    ],
     "keywords": [
       "IoT硬件供应链攻击"
     ],

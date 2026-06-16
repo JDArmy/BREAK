@@ -3,7 +3,12 @@
     "category": "AC01",
     "title": "XR设备可信启动",
     "description": "XR设备实施固件签名验证和安全启动，防止恶意固件。",
-    "references": [],
+    "references": [
+      {
+        "link": "https://www.nist.gov/programs-projects/mobile-security",
+        "title": "NIST Mobile Security"
+      }
+    ],
     "keywords": [
       "XR设备可信启动"
     ],

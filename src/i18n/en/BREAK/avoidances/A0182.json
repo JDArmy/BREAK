@@ -4,6 +4,12 @@
     "description": "Monitor IoT device network traffic to detect abnormal outbound connections.",
     "keywords": [
       "IoT Traffic Monitoring and Anomaly Detection"
+    ],
+    "references": [
+      {
+        "link": "https://www.cisa.gov/ics",
+        "title": "CISA ICS Security"
+      }
     ]
   }
 }

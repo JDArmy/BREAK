@@ -3,7 +3,12 @@
     "category": "AC02",
     "title": "跨虚实身份隔离",
     "description": "技术和规则层面隔离虚拟身份和真实身份，防止关联分析。",
-    "references": [],
+    "references": [
+      {
+        "link": "https://gdpr.eu/",
+        "title": "GDPR Privacy Regulation"
+      }
+    ],
     "keywords": [
       "跨虚实身份隔离"
     ],

@@ -4,6 +4,12 @@
     "description": "Use private mempools, transaction encryption, fair ordering to prevent front-running.",
     "keywords": [
       "MEV Protection Mechanism"
+    ],
+    "references": [
+      {
+        "link": "https://docs.flashbots.net/",
+        "title": "Flashbots Documentation"
+      }
     ]
   }
 }

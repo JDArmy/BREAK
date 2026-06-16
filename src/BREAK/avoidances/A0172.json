@@ -3,7 +3,12 @@
     "category": "AC01",
     "title": "链上版税强制执行",
     "description": "通过智能合约在协议层面强制执行NFT版税，无法绕过。",
-    "references": [],
+    "references": [
+      {
+        "link": "https://eips.ethereum.org/EIPS/eip-2981",
+        "title": "EIP-2981: NFT Royalty Standard"
+      }
+    ],
     "keywords": [
       "链上版税强制执行"
     ],

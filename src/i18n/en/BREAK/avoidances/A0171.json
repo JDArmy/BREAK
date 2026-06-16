@@ -4,6 +4,12 @@
     "description": "Audit smart contract minting/burning permissions and supply control logic.",
     "keywords": [
       "Token Economic Model Audit"
+    ],
+    "references": [
+      {
+        "link": "https://consensys.io/diligence/audits/",
+        "title": "ConsenSys Smart Contract Audit"
+      }
     ]
   }
 }

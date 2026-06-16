@@ -4,6 +4,12 @@
     "description": "Use Telegram official verification badges to identify authentic bots and communities, avoiding phishing.",
     "keywords": [
       "Telegram Official Verification"
+    ],
+    "references": [
+      {
+        "link": "https://telegram.org/verify",
+        "title": "Telegram Verification Guidelines"
+      }
     ]
   }
 }
