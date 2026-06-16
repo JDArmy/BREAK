@@ -14,6 +14,16 @@
     ],
     "definition": "AI-generated synthetic media that convincingly replaces or manipulates a person's appearance, voice, or actions in videos, images, or audio, enabling sophisticated impersonation and misinformation.",
     "description": "Deepfake technology leverages deep learning models, particularly generative adversarial networks (GANs) and diffusion models, to create highly realistic but fabricated media. Face-swapping deepfakes replace one person's face with another in video footage, voice cloning replicates speech patterns and timbre from small audio samples, and full-body synthesis generates entirely artificial personas. Initially requiring significant technical expertise, deepfake creation has become accessible through user-friendly applications and online services. Malicious applications include financial fraud through impersonating executives in video calls to authorize fraudulent transfers, creating non-consensual pornography, spreading political disinformation, manipulating evidence, and conducting sophisticated social engineering attacks. Detection techniques analyze inconsistencies in facial movements, lighting, audio-visual synchronization, and artifacts introduced by generation algorithms, but the arms race between creation and detection continues to escalate. Watermarking, blockchain provenance tracking, and multi-factor authentication for high-stakes communications serve as mitigation strategies.",
-    "usageExample": "Fraudsters used deepfake video technology to impersonate a company CEO in a video conference call, convincing a finance manager to transfer $35 million to an attacker-controlled account."
+    "usageExample": "Fraudsters used deepfake video technology to impersonate a company CEO in a video conference call, convincing a finance manager to transfer $35 million to an attacker-controlled account.",
+    "references": [
+      {
+        "title": "刘宪权:人工智能时代深度伪造行为的刑法规制 | 政治与法律202511|...",
+        "link": "https://www.163.com/dy/article/KDTR0FTO0530W1MT.html"
+      },
+      {
+        "title": "01 生成式人工智能背景下提升学生批判性思维素养:深度伪造内容...",
+        "link": "https://www.jianshu.com/p/ed9316cb5b5d"
+      }
+    ]
   }
 }

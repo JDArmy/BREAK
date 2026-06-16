@@ -32,6 +32,7 @@ export const avoidanceSchema = z.object({
   category: nonEmptyString,
   definition: nonEmptyString,
   description: nonEmptyString,
+  complexity: nonEmptyString.optional(),
   limitation: z.string().optional(),
   references: z.array(referenceSchema).default([]),
   updated: z.string().optional(),

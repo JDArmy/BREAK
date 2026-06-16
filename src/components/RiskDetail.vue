@@ -5,6 +5,7 @@ import BREAK from "@/BREAK";
 import AvoidanceDetail from "@/components/AvoidanceDetail.vue";
 import AttackToolDetail from "@/components/AttackToolDetail.vue";
 import ThreatActorDetail from "@/components/ThreatActorDetail.vue";
+import TermDetail from "@/components/TermDetail.vue";
 import ReferenceList from "@/components/ReferenceList.vue";
 
 import "element-plus/es/components/drawer/style/css";
@@ -49,6 +50,9 @@ const getRelatedTerms = (rKey: string) =>
   Object.keys(BREAK.terms).filter((tKey) =>
     BREAK.terms[tKey].relatedRisks.includes(rKey)
   );
+
+const termDrawer = ref(false);
+const termKey = ref("");
 
 const openRelationGraph = (rKey: string) => {
   const route = router.resolve({
@@ -129,14 +133,14 @@ const openRelationGraph = (rKey: string) => {
     <div class="desc" v-if="getRelatedTerms(rKey).length > 0">
       <strong>{{ $t("terms") }}:&nbsp;</strong>
       <div class="entity-links">
-        <router-link
+        <button
           v-for="tKey in getRelatedTerms(rKey)"
           :key="tKey"
-          :to="{ name: 'terms', hash: `#${tKey}` }"
           class="entity-link"
+          @click="termKey = tKey; termDrawer = true"
         >
           {{ tKey }}: {{ $t(`BREAK.terms.${tKey}.title`) }}
-        </router-link>
+        </button>
       </div>
     </div>
     <div class="desc" v-if="risks[rKey as keyof typeof risks].references?.length > 0">
@@ -207,6 +211,13 @@ const openRelationGraph = (rKey: string) => {
     v-on:drawer-close="threatActorDrawer = false"
     :drawer="threatActorDrawer"
     :taKey="threatActorKey"
+  />
+
+  <!-- 术语详情页 -->
+  <TermDetail
+    v-on:drawer-close="termDrawer = false"
+    :drawer="termDrawer"
+    :tKey="termKey"
   />
 </template>
 

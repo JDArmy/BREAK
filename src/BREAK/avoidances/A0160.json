@@ -3,9 +3,9 @@
     "title": "代码审计与漏洞赏金",
     "category": "TC01",
     "definition": "多方审计并建立漏洞赏金激励发现问题",
-    "description": "见R0159第一条和R0177第三条。",
+    "description": "在上线前后引入内部代码审计、第三方安全审计、公开漏洞赏金和持续复测机制，鼓励研究者报告合约逻辑、权限、资产流转、跨链交互和依赖组件中的安全问题。",
     "complexity": "中级",
-    "limitation": "同R0159/R0177",
+    "limitation": "代码审计和漏洞赏金无法保证发现全部缺陷，效果取决于审计范围、审计深度、赏金吸引力和修复闭环；业务逻辑变更后仍需重新评估。",
     "references": [
       {
         "title": "Bug Bounty Programs for Blockchain",

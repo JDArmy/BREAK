@@ -14,6 +14,16 @@
     ],
     "definition": "Automated systems that use machine learning algorithms to personalize content, product, or service recommendations for users based on behavioral data, preferences, and predictive modeling.",
     "description": "Algorithmic recommendation systems analyze vast quantities of user interaction data including browsing history, purchase patterns, engagement metrics, and demographic information to predict and surface content likely to maximize specific objectives such as engagement, conversion, or time-on-platform. These systems power content feeds on social media, product suggestions in e-commerce, video recommendations, news curation, and advertisement targeting. While offering personalization benefits, these algorithms raise significant concerns: creation of filter bubbles that limit exposure to diverse viewpoints, amplification of misinformation and extreme content that generates engagement, manipulation of user behavior through addiction-optimizing designs, discriminatory outcomes when training data reflects societal biases, and lack of transparency regarding ranking criteria. Regulatory frameworks increasingly require disclosure of algorithmic ranking factors, user controls to disable personalization, human review of high-impact decisions, and regular auditing to detect discriminatory patterns or harmful content amplification.",
-    "usageExample": "A social media platform's recommendation algorithm progressively showed users more extreme political content to maximize engagement, contributing to polarization and amplification of misinformation during election periods."
+    "usageExample": "A social media platform's recommendation algorithm progressively showed users more extreme political content to maximize engagement, contributing to polarization and amplification of misinformation during election periods.",
+    "references": [
+      {
+        "title": "解决终身学习迁移学习:30年ILP介绍,四万字|算法|二阶|示例|alice...",
+        "link": "https://www.163.com/dy/article/JB4CHNCJ05567BBF.html"
+      },
+      {
+        "title": "“强化学习可解释性”最新2022综述_腾讯新闻",
+        "link": "https://new.qq.com/omn/20220117/20220117A0539600.html"
+      }
+    ]
   }
 }

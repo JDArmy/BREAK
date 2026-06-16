@@ -5,6 +5,7 @@ export interface Reference {
 
 export interface Risk {
   title: string;
+  keywords: string[];
   definition: string;
   description: string;
   complexity: string;
@@ -16,9 +17,11 @@ export interface Risk {
 
 export interface Avoidance {
   title: string;
+  keywords: string[];
   category: string;
   definition: string;
   description: string;
+  complexity?: string;
   limitation?: string;
   references: Reference[];
   updated?: string;
@@ -26,6 +29,7 @@ export interface Avoidance {
 
 export interface AttackTool {
   title: string;
+  keywords: string[];
   description: string;
   avoidances: string[];
   directCauseRisks: string[];
@@ -36,6 +40,7 @@ export interface AttackTool {
 
 export interface ThreatActor {
   title: string;
+  keywords: string[];
   description: string;
   directCauseRisks: string[];
   indirectSupportRisks: string[];

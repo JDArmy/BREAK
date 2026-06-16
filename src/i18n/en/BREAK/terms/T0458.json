@@ -14,6 +14,16 @@
     ],
     "definition": "Online services that provide temporary virtual phone numbers for receiving SMS verification codes, enabling fraudsters to bypass phone-based authentication and register mass accounts anonymously.",
     "description": "SMS reception platforms operate as commercial services offering temporary or disposable phone numbers that can receive SMS messages online without requiring physical SIM cards. These platforms maintain pools of real phone numbers from various countries and carriers, accessible through web interfaces or APIs. Users pay per message or through subscription models to receive verification codes for account registration, enabling mass account creation while circumventing anti-fraud phone verification systems. Advanced platforms offer dedicated numbers, number selection by region, and immediate message delivery. These services are heavily utilized in account farming operations, bonus abuse schemes, and review manipulation campaigns where operators need hundreds or thousands of verified accounts. While some legitimate uses exist for privacy protection, the overwhelming adoption by fraud actors has made these platforms a critical infrastructure for automated abuse.",
-    "usageExample": "A scalper group used an SMS reception platform to register 5,000 e-commerce accounts within hours to exploit a limited-time promotional offer."
+    "usageExample": "A scalper group used an SMS reception platform to register 5,000 e-commerce accounts within hours to exploit a limited-time promotional offer.",
+    "references": [
+      {
+        "title": "【依法守“复”】《明码标价和禁止价格欺诈规定》解读|价格法|标价...",
+        "link": "https://www.163.com/dy/article/H9C40P960534128J.html"
+      },
+      {
+        "title": "揭秘网络黑产—接码平台",
+        "link": "https://paper.dzwww.com/sdfzb/data/20210928/7/pdf/202109283.pdf"
+      }
+    ]
   }
 }

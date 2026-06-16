@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import BREAK from "@/BREAK";
+import TermDetail from "@/components/TermDetail.vue";
 import AvoidanceDetail from "@/components/AvoidanceDetail.vue";
 import ReferenceList from "@/components/ReferenceList.vue";
 
@@ -18,6 +19,8 @@ defineEmits(["drawerClose"]);
 
 const avoidanceDrawer = ref(false);
 const avoidanceKey = ref("");
+const termDrawer = ref(false);
+const termKey = ref("");
 
 const { getInnerDrawerWidth } = useDrawerWidth();
 
@@ -89,14 +92,14 @@ const getRelatedTerms = (atKey: string) =>
     <div class="desc" v-if="getRelatedTerms(atKey).length > 0">
       <strong>{{ $t("terms") }}:&nbsp;</strong>
       <div class="entity-links">
-        <router-link
+        <button
           v-for="tKey in getRelatedTerms(atKey)"
           :key="tKey"
-          :to="{ name: 'terms', hash: `#${tKey}` }"
           class="entity-link"
+          @click="termKey = tKey; termDrawer = true"
         >
           {{ tKey }}: {{ $t(`BREAK.terms.${tKey}.title`) }}
-        </router-link>
+        </button>
       </div>
     </div>
     <div class="desc" v-if="BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].references?.length > 0">
@@ -114,6 +117,12 @@ const getRelatedTerms = (atKey: string) =>
     v-on:drawer-close="avoidanceDrawer = false"
     :drawer="avoidanceDrawer"
     :aKey="avoidanceKey"
+  />
+  <!-- 术语详情页 -->
+  <TermDetail
+    v-on:drawer-close="termDrawer = false"
+    :drawer="termDrawer"
+    :tKey="termKey"
   />
 </template>
 

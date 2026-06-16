@@ -14,6 +14,16 @@
     ],
     "definition": "Software tools that modify or randomize device identifiers and hardware fingerprints, enabling fraudsters to evade device-based detection and create unlimited 'new' device identities on the same hardware.",
     "description": "Device spoofing tools manipulate the identification parameters that platforms use to track and rate-limit devices. On rooted Android devices, these tools can modify IMEI numbers, Android ID, MAC addresses, device serial numbers, build properties, sensor fingerprints, and other hardware identifiers. They may also spoof GPS locations, modify screen resolution and DPI, randomize font lists and installed app signatures, and alter network parameters. Combined with account rotation, these tools enable a single physical device to appear as unlimited unique devices, defeating device bans and rate limits. Advanced tools offer profile management for saving and switching between consistent device identities, randomization algorithms that generate realistic fingerprint combinations, and anti-detection features that hide root access or tool presence. Platforms defend through multi-factor device fingerprinting combining dozens of parameters that are difficult to spoof consistently, behavioral analysis detecting unnatural patterns, and server-side validation of claimed device characteristics.",
-    "usageExample": "Scalpers used device spoofing tools to reset device fingerprints after each purchase attempt, allowing a single phone to appear as hundreds of different devices to circumvent per-device purchase limits on a flash sale."
+    "usageExample": "Scalpers used device spoofing tools to reset device fingerprints after each purchase attempt, allowing a single phone to appear as hundreds of different devices to circumvent per-device purchase limits on a flash sale.",
+    "references": [
+      {
+        "title": "IEMI工具详解:IMEI修改技术原理与合法应用实战-CSDN博客",
+        "link": "https://blog.csdn.net/weixin_35364187/article/details/151773439"
+      },
+      {
+        "title": "设备风控攻防新挑战——定制ROM改机 - 知乎",
+        "link": "https://zhuanlan.zhihu.com/p/143740629"
+      }
+    ]
   }
 }

@@ -3,9 +3,9 @@
     "title": "合约升级与紧急暂停",
     "category": "TC01",
     "definition": "实施可升级合约设计和紧急暂停机制应对漏洞",
-    "description": "见R0177第一条及R0161第二条。",
+    "description": "为智能合约预留受控升级能力，并配置紧急暂停、分级权限、多签审批和时间锁等机制，使团队在发现严重漏洞、跨链桥异常或资产流转异常时能够快速止损并完成修复。",
     "complexity": "高级",
-    "limitation": "同R0177/R0161",
+    "limitation": "升级和暂停能力会引入治理中心化、权限滥用和密钥托管风险；若权限边界、审批流程或时间锁设计不当，防护机制本身也可能成为攻击入口。",
     "references": [
       {
         "title": "Smart Contract Upgrade Patterns",

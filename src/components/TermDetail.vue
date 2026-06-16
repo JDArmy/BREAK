@@ -43,7 +43,7 @@ const aliases = computed(() =>
       </div>
     </template>
     <div class="desc">
-      <strong>{{ $t("ID") }}:&nbsp;</strong>
+      <strong>{{ $t("termId") }}:&nbsp;</strong>
       <router-link :to="{ name: 'terms', hash: `#${tKey}` }" class="id-link">
         {{ tKey }}
       </router-link>

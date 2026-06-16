@@ -2,8 +2,8 @@
   "A0160": {
     "title": "Code Audit and Bug Bounty",
     "definition": "Conduct multi-party audits and establish bug bounty programs to incentivize vulnerability discovery",
-    "description": "See item 1 of R0159 and item 3 of R0177.",
+    "description": "Introduce internal code review, third-party security audits, public bug bounty programs, and continuous retesting before and after launch to encourage researchers to report issues in contract logic, permissions, asset flows, cross-chain interactions, and dependent components.",
     "complexity": "Intermediate",
-    "limitation": "Same as R0159/R0177"
+    "limitation": "Audits and bug bounties cannot guarantee that all defects are found. Effectiveness depends on scope, depth, bounty incentives, and remediation follow-through, and business-logic changes require renewed assessment."
   }
 }

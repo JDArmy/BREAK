@@ -24,7 +24,20 @@
     "relatedAttackTools": [],
     "relatedThreatActors": [],
     "relatedBusinessScenes": [],
-    "references": [],
+    "references": [
+      {
+        "title": "DNS劫持_360百科",
+        "link": "https://upimg.baike.so.com/doc/5394872-5632022.html"
+      },
+      {
+        "title": "什么是DNS劫持(非常详细),零基础入门网络安全,看这一篇就够了-CSDN博...",
+        "link": "https://blog.csdn.net/SpringJavaMyBatis/article/details/143905018"
+      },
+      {
+        "title": "什么是 DNS 劫持?如何检测与预防 - 知乎",
+        "link": "https://zhuanlan.zhihu.com/p/637366489"
+      }
+    ],
     "updated": "2026-06-16"
   }
 }

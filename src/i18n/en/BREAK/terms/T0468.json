@@ -14,6 +14,20 @@
     ],
     "definition": "The practice of manipulating individuals through psychological tactics to divulge confidential information, grant unauthorized access, or perform actions that compromise security, bypassing technical controls by exploiting human psychology.",
     "description": "Social engineering represents a class of attack vectors that target human decision-making rather than technical vulnerabilities. Attackers exploit psychological principles including authority bias, urgency, fear, curiosity, reciprocity, and trust to manipulate targets into compromising security. Common techniques include phishing emails impersonating trusted entities, pretexting scenarios that establish false contexts for information requests, baiting schemes that promise rewards for risky actions, tailgating to gain physical access, and impersonation of IT support or executives to extract credentials. Advanced operations conduct reconnaissance through social media and public records to craft convincing pretexts, use multiple communication channels to reinforce legitimacy, and establish long-term rapport before making requests. Social engineering attacks succeed because they exploit universal human cognitive biases that persist regardless of technical security measures. Defense requires security awareness training, verification procedures for sensitive requests, incident reporting channels, and organizational cultures that encourage questioning suspicious interactions without fear of repercussions.",
-    "usageExample": "An attacker called an employee impersonating IT support, created urgency by claiming a security incident required immediate password reset, and successfully obtained credentials that provided access to corporate systems."
+    "usageExample": "An attacker called an employee impersonating IT support, created urgency by claiming a security incident required immediate password reset, and successfully obtained credentials that provided access to corporate systems.",
+    "references": [
+      {
+        "title": "译文| 详解社会工程学:犯罪分子如何利用人类行为|黑客_网易订阅",
+        "link": "https://www.163.com/dy/article/GKHSJNIP0511DM95.html"
+      },
+      {
+        "title": "杜金:自由主义2.0_腾讯新闻",
+        "link": "https://new.qq.com/omn/20210506/20210506A011X400.html"
+      },
+      {
+        "title": "什么是 IP 地址 – 定义和解释 - 知乎",
+        "link": "https://zhuanlan.zhihu.com/p/418179348"
+      }
+    ]
   }
 }

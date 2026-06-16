@@ -3,9 +3,9 @@
     "title": "智能合约形式化验证",
     "category": "TC01",
     "definition": "使用数学方法严格证明合约逻辑正确性",
-    "description": "见R0159第三条。",
+    "description": "在合约开发阶段使用形式化规格、模型检查、符号执行或定理证明等方法，对关键资产流转、权限控制、状态转换和边界条件进行数学化验证，提前发现重入、溢出、权限绕过等高影响漏洞。",
     "complexity": "高级",
-    "limitation": "同R0159",
+    "limitation": "形式化验证成本高、依赖准确的规格建模，难以覆盖预言机、跨链交互、治理流程和外部系统行为；验证结论也需要随合约升级持续维护。",
     "references": [
       {
         "title": "Formal Verification of Smart Contracts",

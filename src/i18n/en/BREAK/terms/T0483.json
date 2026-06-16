@@ -14,6 +14,16 @@
     ],
     "definition": "Automated programs or code sequences that perform repetitive tasks, often used by fraudsters to execute mass operations like account registration, credential testing, or transaction automation.",
     "description": "Scripts in the fraud context range from simple browser automation using tools like Selenium or Puppeteer to sophisticated programs that integrate CAPTCHA solving, proxy rotation, and anti-detection measures. Attackers deploy scripts for credential stuffing attacks testing stolen password databases against multiple sites, inventory snatching for limited-release products, vote manipulation, review posting, social media engagement fraud, and mass account creation. Modern scripts employ headless browsers to execute JavaScript, randomize timing and interaction patterns to mimic human behavior, rotate IP addresses through proxy pools, solve or bypass CAPTCHA challenges through third-party services, and handle complex multi-step workflows. Detection relies on behavioral analysis identifying superhuman speed or consistency, device fingerprinting detecting reused browser profiles, CAPTCHA challenges that scripts struggle to solve, and honeypot techniques that trap automated interactions. While scripting technology itself is neutral, enabling legitimate automation and testing, the accessibility of fraud-focused scripting frameworks has lowered barriers for abuse operations.",
-    "usageExample": "Scalpers used custom scripts to purchase 10,000 concert tickets within 30 seconds of release by automatically solving CAPTCHAs and submitting orders faster than human purchasers could complete checkout."
+    "usageExample": "Scalpers used custom scripts to purchase 10,000 concert tickets within 30 seconds of release by automatically solving CAPTCHAs and submitting orders faster than human purchasers could complete checkout.",
+    "references": [
+      {
+        "title": "链接脚本(Linker Script)解析 - 简书",
+        "link": "https://www.jianshu.com/p/5945ff76fd41"
+      },
+      {
+        "title": "脚本Script介绍-CSDN博客",
+        "link": "https://blog.csdn.net/qq_51522554/article/details/153683187"
+      }
+    ]
   }
 }

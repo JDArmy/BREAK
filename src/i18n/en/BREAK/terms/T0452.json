@@ -13,6 +13,20 @@
     "aliases": [],
     "definition": "Self-executing program code deployed on blockchains that automatically triggers and executes transactions or operations based on preset conditions.",
     "description": "Smart contracts are automated programs running on blockchain networks, with their code and execution results being completely transparent and immutable. Once deployed, contracts execute automatically according to written logic without human intervention. Widely applied in DeFi, NFT, DAO, and other decentralized application scenarios, though code vulnerabilities may lead to asset losses. Smart contracts eliminate intermediaries in traditional agreements, enabling trustless automated execution. Written in languages like Solidity and Vyper, they are deployed on platforms such as Ethereum and BNB Chain. Every contract interaction is recorded on-chain, ensuring traceability and transparency. However, smart contract security is crucial; vulnerabilities like reentrancy attacks, integer overflows, and logic errors have caused billions in losses. Major protocols undergo professional security audits and formal verification before launch. Smart contracts form the foundation of the Web3 ecosystem, enabling innovations like decentralized exchanges, lending protocols, and automated market makers.",
-    "usageExample": "A DeFi lending protocol uses smart contracts to automatically execute collateral deposits, loan distributions, interest calculations, and liquidations without requiring centralized platform operators."
+    "usageExample": "A DeFi lending protocol uses smart contracts to automatically execute collateral deposits, loan distributions, interest calculations, and liquidations without requiring centralized platform operators.",
+    "references": [
+      {
+        "title": "教程丨三分钟教你制作专属NFT智能合约|区块链|应用程序|源代码|元数 ...",
+        "link": "https://dy.163.com/article/GJANNOBQ0514832I.html"
+      },
+      {
+        "title": "开启新纪元: 隐私计算在金融领域应用发展报告2021(完整版)|数据源|...",
+        "link": "https://www.163.com/dy/article/GN95K1P805198086.html"
+      },
+      {
+        "title": "智能合约概述:挑战、进展和平台 - 简书",
+        "link": "https://www.jianshu.com/p/b5be22f3f3ff"
+      }
+    ]
   }
 }

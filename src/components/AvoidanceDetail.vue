@@ -1,5 +1,7 @@
 <script setup lang="ts">
+import { ref } from "vue";
 import BREAK from "@/BREAK";
+import TermDetail from "@/components/TermDetail.vue";
 import ReferenceList from "@/components/ReferenceList.vue";
 
 import "element-plus/es/components/drawer/style/css";
@@ -20,6 +22,9 @@ const getRelatedTerms = (aKey: string) =>
   Object.keys(BREAK.terms).filter((tKey) =>
     BREAK.terms[tKey].relatedAvoidances.includes(aKey)
   );
+
+const termDrawer = ref(false);
+const termKey = ref("");
 </script>
 
 <template>
@@ -75,14 +80,14 @@ const getRelatedTerms = (aKey: string) =>
     <div class="desc" v-if="getRelatedTerms(aKey).length > 0">
       <strong>{{ $t("terms") }}:&nbsp;</strong>
       <div class="entity-links">
-        <router-link
+        <button
           v-for="tKey in getRelatedTerms(aKey)"
           :key="tKey"
-          :to="{ name: 'terms', hash: `#${tKey}` }"
           class="entity-link"
+          @click="termKey = tKey; termDrawer = true"
         >
           {{ tKey }}: {{ $t(`BREAK.terms.${tKey}.title`) }}
-        </router-link>
+        </button>
       </div>
     </div>
     <div class="desc" v-if="BREAK.avoidances[aKey as keyof typeof BREAK.avoidances].references?.length > 0">
@@ -95,6 +100,13 @@ const getRelatedTerms = (aKey: string) =>
       </el-button>
     </div>
   </el-drawer>
+
+  <!-- 术语详情页 -->
+  <TermDetail
+    v-on:drawer-close="termDrawer = false"
+    :drawer="termDrawer"
+    :tKey="termKey"
+  />
 </template>
 
 <style scoped>

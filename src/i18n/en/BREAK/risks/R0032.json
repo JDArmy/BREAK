@@ -82,7 +82,7 @@
     "definition": "Attempting to log in by brute-forcing verification codes to obtain valid credentials.",
     "description": "Verification code brute force risk refers to attackers attempting to break verification codes by continuously trying various possibilities to gain access to a system or account. Causes include: weak verification code design; lack of security protections such as frequently changing codes or lockout mechanisms; reuse of the same verification code across multiple locations; and inadequate verification code generation algorithms.",
     "complexity": "Intermediate",
-    "influence": "User identity compromise.",
+    "influence": "Defeats verification-code protections, allowing attackers to take over accounts, bypass login checks, or trigger subsequent fraud operations.",
     "references": [
       {
         "title": "Brute Force - MITRE ATT&CK T1110"

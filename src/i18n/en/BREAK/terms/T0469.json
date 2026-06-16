@@ -14,6 +14,20 @@
     ],
     "definition": "The unauthorized interception and redirection of network traffic between users and legitimate destinations, enabling attackers to steal data, inject malicious content, or redirect users to fraudulent sites.",
     "description": "Traffic hijacking encompasses multiple attack vectors that intercept communications between clients and servers. Network-level hijacking exploits vulnerabilities in routing protocols like BGP to redirect traffic at the ISP or backbone level, while local attacks compromise routers, DNS servers, or wireless networks to intercept traffic within specific networks. Proxy-based hijacking installs malicious software that forces all network traffic through attacker-controlled servers. HTTP hijacking injects advertisements, malware, or phishing content into unencrypted web traffic, commonly executed by compromised ISPs or public Wi-Fi operators. Session hijacking steals authentication cookies or tokens to impersonate legitimate users. These attacks enable credential theft, financial fraud, malware distribution, surveillance, and censorship. HTTPS encryption protects against many hijacking vectors but remains vulnerable to certificate authority compromise, downgrade attacks, or user acceptance of invalid certificates. Defense measures include HTTPS enforcement, DNSSEC implementation, VPN usage, certificate pinning, and network monitoring for anomalous routing.",
-    "usageExample": "Attackers hijacked BGP routes for a cryptocurrency exchange, redirecting traffic to a phishing clone for two hours and stealing login credentials from over 300 users attempting to access their accounts."
+    "usageExample": "Attackers hijacked BGP routes for a cryptocurrency exchange, redirecting traffic to a phishing clone for two hours and stealing login credentials from over 300 users attempting to access their accounts.",
+    "references": [
+      {
+        "title": "流量劫持判几年?DNS域名劫持、网页跳转、弹窗广告犯罪判几年 ?|反...",
+        "link": "https://www.163.com/dy/article/H4CE5N670541BQVC.html"
+      },
+      {
+        "title": "前DeepSeek骨干罗福莉官宣加入小米/iPhone霸榜双11手机销量前三/...",
+        "link": "https://new.qq.com/rain/a/20251113A019ET00"
+      },
+      {
+        "title": "广告流量反作弊风控中的模型应用 - 简书",
+        "link": "https://www.jianshu.com/p/e6888e9efe5c"
+      }
+    ]
   }
 }

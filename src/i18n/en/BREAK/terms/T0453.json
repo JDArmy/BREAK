@@ -12,6 +12,16 @@
     "aliases": [],
     "definition": "An instant blockchain borrowing mechanism without collateral requirements, demanding funds be borrowed and returned within the same transaction block, otherwise the transaction automatically reverts.",
     "description": "Flash loans are a specialized lending method provided by DeFi protocols, allowing users to borrow large amounts without collateral, but requiring completion of the entire borrow-use-repay process within a single transaction. This mechanism is widely used for legitimate purposes like arbitrage and liquidations, but is also frequently exploited by attackers for price manipulation, reentrancy attacks, and other malicious activities. The atomic nature of blockchain transactions ensures that if repayment conditions aren't met, the entire transaction reverts, protecting lenders. Flash loans enable capital-efficient strategies previously impossible in traditional finance, such as instant arbitrage across multiple exchanges or collateral swaps. However, attackers leverage flash loans to manipulate oracle prices, drain liquidity pools, or exploit smart contract vulnerabilities. Notable attacks have resulted in tens of millions in losses. DeFi protocols implement defenses including price oracle decentralization, transaction slippage limits, and time-weighted average prices to mitigate flash loan attack risks.",
-    "usageExample": "An attacker borrows 100 million dollars via flash loan, manipulates a DEX price oracle through massive swaps, exploits the distorted price to drain a lending protocol, repays the loan, and profits from the difference—all within a single transaction."
+    "usageExample": "An attacker borrows 100 million dollars via flash loan, manipulates a DEX price oracle through massive swaps, exploits the distorted price to drain a lending protocol, repays the loan, and profits from the difference—all within a single transaction.",
+    "references": [
+      {
+        "title": "科普|无抵押借巨资的闪电贷是什么?缘何频频成为DeFi暴雷帮凶...",
+        "link": "https://new.qq.com/omn/20211229/20211229A049IH00.html"
+      },
+      {
+        "title": "金色观察丨一文带你读懂什么是闪电贷 - 知乎",
+        "link": "https://zhuanlan.zhihu.com/p/385431947"
+      }
+    ]
   }
 }
