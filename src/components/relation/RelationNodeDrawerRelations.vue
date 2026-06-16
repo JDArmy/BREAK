@@ -66,9 +66,9 @@ const relationRowClassName = ({ row }: { row: { isActive: boolean } }) =>
       :row-class-name="relationRowClassName"
       class="node-relation-table"
     >
-      <el-table-column prop="relationSummary" :label="t('relationView.allRelations')" min-width="132" />
-      <el-table-column prop="directness" :label="t('relationView.csvHeaderDirectness')" width="76" />
-      <el-table-column :label="t('relationView.csvHeaderTargetTitle')" min-width="164">
+      <el-table-column prop="relationSummary" :label="t('relationView.allRelations')" min-width="34%" />
+      <el-table-column prop="directness" :label="t('relationView.csvHeaderDirectness')" width="64" />
+      <el-table-column :label="t('relationView.csvHeaderTargetTitle')" min-width="44%">
         <template #default="{ row }">
           <button
             type="button"
@@ -191,12 +191,12 @@ const relationRowClassName = ({ row }: { row: { isActive: boolean } }) =>
   }
 
   .node-relation-table-scroll {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    overflow-x: hidden;
   }
 
   .node-relation-table {
-    min-width: 430px;
+    width: 100% !important;
   }
 
   .node-relation-table :deep(.el-table__cell) {
@@ -204,9 +204,10 @@ const relationRowClassName = ({ row }: { row: { isActive: boolean } }) =>
   }
 
   .node-relation-table :deep(.cell) {
-    padding: 0 6px;
+    padding: 0 5px;
     font-size: 11px;
     line-height: 1.35;
+    overflow-wrap: anywhere;
   }
 
   .node-relation-link {
