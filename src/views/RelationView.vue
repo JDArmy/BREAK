@@ -1,11 +1,16 @@
 <script lang="ts">
-import { defineComponent } from "vue";
-import RelationNodeDetailDrawer from "@/components/relation/RelationNodeDetailDrawer.vue";
-import RelationNetworkPane from "@/components/relation/RelationNetworkPane.vue";
+import { defineAsyncComponent, defineComponent, onMounted } from "vue";
 import RelationSankeyPane from "@/components/relation/RelationSankeyPane.vue";
 import RelationSelectorBar from "@/components/relation/RelationSelectorBar.vue";
 import { useRelationViewModel } from "@/views/relation/useRelationViewModel";
+import { logRelationPerf } from "@/views/relation/relationPerf";
+import { loadNetworkECharts, loadSankeyECharts } from "@/views/relation/relationECharts";
 import "element-plus/es/components/drawer/style/css";
+
+const loadRelationNetworkPane = () => import("@/components/relation/RelationNetworkPane.vue");
+const loadRelationNodeDetailDrawer = () => import("@/components/relation/RelationNodeDetailDrawer.vue");
+const RelationNetworkPane = defineAsyncComponent(loadRelationNetworkPane);
+const RelationNodeDetailDrawer = defineAsyncComponent(loadRelationNodeDetailDrawer);
 
 export default defineComponent({
   name: "RelationView",
@@ -15,7 +20,31 @@ export default defineComponent({
     RelationSankeyPane,
     RelationSelectorBar,
   },
-  setup: useRelationViewModel,
+  setup() {
+    const viewModel = useRelationViewModel();
+    onMounted(() => {
+      logRelationPerf("RelationView mounted", {
+        type: viewModel.relType.value,
+        key: viewModel.relKey.value,
+        activeView: viewModel.activeView.value,
+      });
+      const preloadSecondaryView = () => {
+        void loadRelationNodeDetailDrawer();
+        if (viewModel.activeView.value === "sankey") {
+          void loadRelationNetworkPane();
+          void loadNetworkECharts();
+        } else {
+          void loadSankeyECharts();
+        }
+      };
+      if ("requestIdleCallback" in window) {
+        window.requestIdleCallback(preloadSecondaryView, { timeout: 1500 });
+      } else {
+        window.setTimeout(preloadSecondaryView, 800);
+      }
+    });
+    return viewModel;
+  },
 });
 </script>
 
@@ -29,7 +58,7 @@ export default defineComponent({
     />
 
     <el-tabs v-model="activeView" class="relation-tabs">
-      <el-tab-pane :label="$t('relationView.network')" name="network">
+      <el-tab-pane :label="$t('relationView.network')" name="network" :lazy="activeView !== 'network'">
         <RelationNetworkPane
           :set-network-pane-element="setNetworkPaneElement"
           :set-network-scroller-element="setNetworkScrollerElement"
@@ -76,9 +105,10 @@ export default defineComponent({
           @open-touch-node-detail-drawer="openTouchNodeDetailDrawer"
         />
       </el-tab-pane>
-      <el-tab-pane :label="$t('relationView.attackPath')" name="sankey">
+      <el-tab-pane :label="$t('relationView.attackPath')" name="sankey" :lazy="activeView !== 'sankey'">
         <RelationSankeyPane
-          :sankey-data="sankeyData"
+          :active="activeView === 'sankey'"
+          :has-data="sankeyHasData"
           :chart-min-width="sankeyChartMinWidth"
           :set-sankey-chart-element="setSankeyChartElement"
         />
@@ -86,6 +116,7 @@ export default defineComponent({
     </el-tabs>
 
     <RelationNodeDetailDrawer
+      v-if="nodeDetailDrawerVisible"
       v-model="nodeDetailDrawerVisible"
       :selected-network-node="selectedNetworkNode"
       :selected-network-node-title="selectedNetworkNodeTitle"

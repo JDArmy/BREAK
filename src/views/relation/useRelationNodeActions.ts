@@ -29,7 +29,12 @@ interface UseRelationNodeActionsOptions {
   buildNodeSummary: (nodeId: string) => NodeSummary;
   isDirectRelationLine: (lineText: string) => boolean;
   getRelationSourceFields: (line: Line) => string[];
-  genNetworkGraphData: (reqType: RelationType, currentNodeType: RelationType, currentNodeId: string) => void;
+  genNetworkGraphData: (
+    reqType: RelationType,
+    currentNodeType: RelationType,
+    currentNodeId: string,
+    options?: { render?: boolean }
+  ) => void;
   renderNetworkChart: (notMerge?: boolean) => void;
 }
 

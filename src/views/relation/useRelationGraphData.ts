@@ -140,9 +140,9 @@ export const useRelationGraphData = ({
   const getNodeTypeTitle = (type: string) =>
     isRelationEntityType(type) ? RelationTypeMapping[type].title : type;
 
-  const getRelationSourceFields = (line: Line) => {
-    const fromType = nodes.find((node) => node.id === line.from)?.type;
-    const toType = nodes.find((node) => node.id === line.to)?.type;
+  const getRelationSourceFields = (line: Line, sourceType?: string, targetType?: string) => {
+    const fromType = sourceType ?? nodes.find((node) => node.id === line.from)?.type;
+    const toType = targetType ?? nodes.find((node) => node.id === line.to)?.type;
     const fields = new Set<string>();
 
     if (line.text === t("relationLine.avoidanceMeans")) {

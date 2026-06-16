@@ -78,49 +78,236 @@ export const createRelationAttackPathData = ({
     return [...new Set([...threatActor.buildAttackTools, ...threatActor.useAttackTools])];
   };
 
-  const buildAttackPaths = () => {
+  const attackToolRiskMap = new Map<string, string[]>();
+  Object.keys(BREAK.attackTools).forEach((attackToolKey) => {
+    attackToolRiskMap.set(attackToolKey, getAttackToolRiskKeys(attackToolKey));
+  });
+
+  const threatActorRiskMap = new Map<string, string[]>();
+  const threatActorAttackToolMap = new Map<string, string[]>();
+  Object.keys(BREAK.threatActors).forEach((threatActorKey) => {
+    threatActorRiskMap.set(threatActorKey, getThreatActorRiskKeys(threatActorKey));
+    threatActorAttackToolMap.set(threatActorKey, getThreatActorAttackToolKeys(threatActorKey));
+  });
+
+  const allRiskKeys = Object.keys(BREAK.risks);
+  const addUniqueMapValue = (map: Map<string, string[]>, key: string, value: string) => {
+    const values = map.get(key);
+    if (values) {
+      if (!values.includes(value)) values.push(value);
+      return;
+    }
+    map.set(key, [value]);
+  };
+
+  const riskToAttackTools = new Map<string, string[]>();
+  const riskToThreatActors = new Map<string, string[]>();
+  const attackToolToThreatActors = new Map<string, string[]>();
+  const avoidanceToRisks = new Map<string, string[]>();
+
+  attackToolRiskMap.forEach((riskKeys, attackToolKey) => {
+    riskKeys.forEach((riskKey) => addUniqueMapValue(riskToAttackTools, riskKey, attackToolKey));
+  });
+
+  threatActorRiskMap.forEach((riskKeys, threatActorKey) => {
+    riskKeys.forEach((riskKey) => addUniqueMapValue(riskToThreatActors, riskKey, threatActorKey));
+  });
+
+  threatActorAttackToolMap.forEach((attackToolKeys, threatActorKey) => {
+    attackToolKeys.forEach((attackToolKey) => addUniqueMapValue(attackToolToThreatActors, attackToolKey, threatActorKey));
+  });
+
+  allRiskKeys.forEach((riskKey) => {
+    const risk = BREAK.risks[riskKey as keyof typeof BREAK.risks];
+    risk.avoidances.forEach((avoidanceKey) => addUniqueMapValue(avoidanceToRisks, avoidanceKey, riskKey));
+  });
+
+  const getOrderedRiskKeys = (riskKeySet: Set<string>) => allRiskKeys.filter((riskKey) => riskKeySet.has(riskKey));
+
+  const getCandidateRiskKeys = () => {
+    switch (relType.value) {
+      case RelationType.risk:
+        return BREAK.risks[relKey.value as keyof typeof BREAK.risks] ? [relKey.value] : [];
+      case RelationType.attackTool:
+        return getOrderedRiskKeys(new Set(attackToolRiskMap.get(relKey.value) ?? []));
+      case RelationType.threatActor: {
+        const riskKeySet = new Set(threatActorRiskMap.get(relKey.value) ?? []);
+        (threatActorAttackToolMap.get(relKey.value) ?? []).forEach((attackToolKey) => {
+          (attackToolRiskMap.get(attackToolKey) ?? []).forEach((riskKey) => riskKeySet.add(riskKey));
+        });
+        return getOrderedRiskKeys(riskKeySet);
+      }
+      case RelationType.avoidance:
+        return getOrderedRiskKeys(new Set(avoidanceToRisks.get(relKey.value) ?? []));
+      case RelationType.term:
+        return [];
+      default:
+        return allRiskKeys;
+    }
+  };
+
+  const buildAttackPathsForRisk = (
+    riskKey: string,
+    options: { attackToolKey?: string; avoidanceKey?: string; threatActorKey?: string } = {}
+  ) => {
     const paths: AttackPath[] = [];
+    const risk = BREAK.risks[riskKey as keyof typeof BREAK.risks];
+    if (!risk) return paths;
 
-    Object.keys(BREAK.risks).forEach((riskKey) => {
-      const risk = BREAK.risks[riskKey as keyof typeof BREAK.risks];
-      const riskAvoidances = risk.avoidances.length > 0 ? risk.avoidances : [undefined];
+    const riskAvoidances = options.avoidanceKey
+      ? risk.avoidances.includes(options.avoidanceKey)
+        ? [options.avoidanceKey]
+        : []
+      : risk.avoidances.length > 0
+        ? risk.avoidances
+        : [undefined];
+    if (riskAvoidances.length === 0) return paths;
 
-      const relatedAttackToolKeys = Object.keys(BREAK.attackTools).filter((attackToolKey) =>
-        getAttackToolRiskKeys(attackToolKey).includes(riskKey)
-      );
-      const relatedThreatActorKeys = Object.keys(BREAK.threatActors).filter((threatActorKey) =>
-        getThreatActorRiskKeys(threatActorKey).includes(riskKey)
-      );
+    const indexedAttackToolKeys = riskToAttackTools.get(riskKey) ?? [];
+    const relatedAttackToolKeys = options.attackToolKey
+      ? indexedAttackToolKeys.includes(options.attackToolKey)
+        ? [options.attackToolKey]
+        : []
+      : indexedAttackToolKeys;
+    const relatedThreatActorKeys = riskToThreatActors.get(riskKey) ?? [];
 
-      relatedAttackToolKeys.forEach((attackToolKey) => {
-        const toolThreatActorKeys = Object.keys(BREAK.threatActors).filter((threatActorKey) =>
-          getThreatActorAttackToolKeys(threatActorKey).includes(attackToolKey)
-        );
-        const threatActorKeys = toolThreatActorKeys.length > 0 ? toolThreatActorKeys : relatedThreatActorKeys;
+    relatedAttackToolKeys.forEach((attackToolKey) => {
+      const toolThreatActorKeys = attackToolToThreatActors.get(attackToolKey) ?? [];
+      const candidateThreatActorKeys = toolThreatActorKeys.length > 0 ? toolThreatActorKeys : relatedThreatActorKeys;
+      const threatActorKeys = options.threatActorKey
+        ? candidateThreatActorKeys.includes(options.threatActorKey)
+          ? [options.threatActorKey]
+          : []
+        : candidateThreatActorKeys;
 
-        if (threatActorKeys.length > 0) {
-          threatActorKeys.forEach((threatActorKey) => {
-            riskAvoidances.forEach((avoidanceKey) => {
-              paths.push({ threatActorKey, attackToolKey, riskKey, avoidanceKey });
-            });
-          });
-        } else {
+      if (threatActorKeys.length > 0) {
+        threatActorKeys.forEach((threatActorKey) => {
           riskAvoidances.forEach((avoidanceKey) => {
-            paths.push({ attackToolKey, riskKey, avoidanceKey });
+            paths.push({ threatActorKey, attackToolKey, riskKey, avoidanceKey });
           });
-        }
-      });
-
-      if (relatedAttackToolKeys.length === 0) {
-        relatedThreatActorKeys.forEach((threatActorKey) => {
-          riskAvoidances.forEach((avoidanceKey) => {
-            paths.push({ threatActorKey, riskKey, avoidanceKey });
-          });
+        });
+      } else if (!options.threatActorKey) {
+        riskAvoidances.forEach((avoidanceKey) => {
+          paths.push({ attackToolKey, riskKey, avoidanceKey });
         });
       }
     });
 
+    if (relatedAttackToolKeys.length === 0) {
+      const threatActorKeys = options.threatActorKey
+        ? relatedThreatActorKeys.includes(options.threatActorKey)
+          ? [options.threatActorKey]
+          : []
+        : relatedThreatActorKeys;
+
+      threatActorKeys.forEach((threatActorKey) => {
+        riskAvoidances.forEach((avoidanceKey) => {
+          paths.push({ threatActorKey, riskKey, avoidanceKey });
+        });
+      });
+    }
+
+    return paths;
+  };
+
+  const buildAttackPaths = () => {
+    const paths: AttackPath[] = [];
+    const options = {
+      attackToolKey: relType.value === RelationType.attackTool ? relKey.value : undefined,
+      avoidanceKey: relType.value === RelationType.avoidance ? relKey.value : undefined,
+      threatActorKey: relType.value === RelationType.threatActor ? relKey.value : undefined,
+    };
+
+    getCandidateRiskKeys().forEach((riskKey) => {
+      paths.push(...buildAttackPathsForRisk(riskKey, options));
+    });
+
     return paths.filter(matchesSelectedEntity);
+  };
+
+  const createEmptySankeyData = () => {
+    const nodeMap = new Map<string, {
+      name: string;
+      depth?: number;
+      entityType: Exclude<RelationType, RelationType.all>;
+      entityKey: string;
+      itemStyle: { color: string };
+    }>();
+    const linkMap = new Map<string, { source: string; target: string; value: number }>();
+
+    const addNode = (type: Exclude<RelationType, RelationType.all>, key: string, depth: number) => {
+      const nodeKey = `${type}:${key}`;
+      const existingNode = nodeMap.get(nodeKey);
+      if (existingNode) {
+        return existingNode.name;
+      }
+
+      const name = getSankeyNodeName(type, key);
+      nodeMap.set(nodeKey, {
+          name,
+          depth,
+          entityType: type,
+          entityKey: key,
+          itemStyle: {
+            color: RelationTypeMapping[type].color,
+          },
+      });
+      return name;
+    };
+
+    const addLink = (source: string, target: string) => {
+      const linkKey = `${source}->${target}`;
+      const existing = linkMap.get(linkKey);
+      if (existing) {
+        existing.value += 1;
+      } else {
+        linkMap.set(linkKey, { source, target, value: 1 });
+      }
+    };
+
+    const addPath = (path: AttackPath) => {
+      const pathNodes: string[] = [];
+      if (path.threatActorKey) {
+        pathNodes.push(addNode(RelationType.threatActor, path.threatActorKey, 0));
+      }
+      if (path.attackToolKey) {
+        pathNodes.push(addNode(RelationType.attackTool, path.attackToolKey, 1));
+      }
+      pathNodes.push(addNode(RelationType.risk, path.riskKey, 2));
+      if (path.avoidanceKey) {
+        pathNodes.push(addNode(RelationType.avoidance, path.avoidanceKey, 3));
+      }
+
+      pathNodes.forEach((nodeName, index) => {
+        const nextNodeName = pathNodes[index + 1];
+        if (nextNodeName) {
+          addLink(nodeName, nextNodeName);
+        }
+      });
+    };
+
+    return {
+      addPath,
+      toData: () => ({
+        nodes: [...nodeMap.values()],
+        links: [...linkMap.values()],
+      }),
+    };
+  };
+
+  const buildSankeyData = () => {
+    const sankey = createEmptySankeyData();
+    const options = {
+      attackToolKey: relType.value === RelationType.attackTool ? relKey.value : undefined,
+      avoidanceKey: relType.value === RelationType.avoidance ? relKey.value : undefined,
+      threatActorKey: relType.value === RelationType.threatActor ? relKey.value : undefined,
+    };
+
+    getCandidateRiskKeys().forEach((riskKey) => {
+      buildAttackPathsForRisk(riskKey, options).forEach(sankey.addPath);
+    });
+
+    return sankey.toData();
   };
 
   const selectedNodeAttackPathSummary = computed(() => {
@@ -152,67 +339,7 @@ export const createRelationAttackPathData = ({
   });
 
   const sankeyData = computed(() => {
-    const nodeMap = new Map<string, {
-      name: string;
-      depth?: number;
-      entityType: Exclude<RelationType, RelationType.all>;
-      entityKey: string;
-      itemStyle: { color: string };
-    }>();
-    const linkMap = new Map<string, { source: string; target: string; value: number }>();
-    const paths = buildAttackPaths();
-
-    const addNode = (type: Exclude<RelationType, RelationType.all>, key: string, depth: number) => {
-      const name = getSankeyNodeName(type, key);
-      if (!nodeMap.has(name)) {
-        nodeMap.set(name, {
-          name,
-          depth,
-          entityType: type,
-          entityKey: key,
-          itemStyle: {
-            color: RelationTypeMapping[type].color,
-          },
-        });
-      }
-      return name;
-    };
-
-    const addLink = (source: string, target: string) => {
-      const linkKey = `${source}->${target}`;
-      const existing = linkMap.get(linkKey);
-      if (existing) {
-        existing.value += 1;
-      } else {
-        linkMap.set(linkKey, { source, target, value: 1 });
-      }
-    };
-
-    paths.forEach((path) => {
-      const pathNodes: string[] = [];
-      if (path.threatActorKey) {
-        pathNodes.push(addNode(RelationType.threatActor, path.threatActorKey, 0));
-      }
-      if (path.attackToolKey) {
-        pathNodes.push(addNode(RelationType.attackTool, path.attackToolKey, 1));
-      }
-      pathNodes.push(addNode(RelationType.risk, path.riskKey, 2));
-      if (path.avoidanceKey) {
-        pathNodes.push(addNode(RelationType.avoidance, path.avoidanceKey, 3));
-      }
-
-      pathNodes.forEach((nodeName, index) => {
-        const nextNodeName = pathNodes[index + 1];
-        if (nextNodeName) {
-          addLink(nodeName, nextNodeName);
-        }
-      });
-    });
-
-    return {
-      nodes: [...nodeMap.values()],
-      links: [...linkMap.values()],
-    };
+    return buildSankeyData();
   });
 
   const sankeyChartHeight = computed(() => {

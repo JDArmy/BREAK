@@ -14,8 +14,10 @@ import iconTranslate from "@/components/icons/iconTranslate.vue";
 import { ArrowDown, Search, Menu as MenuIcon } from "@element-plus/icons-vue";
 import { useI18n } from "vue-i18n";
 import { languages, setLocale } from "@/i18n";
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
+import { markRelationPerfStart } from "@/views/relation/relationPerf";
+import { preloadRelationView } from "@/router";
 
 const { locale } = useI18n();
 const router = useRouter();
@@ -48,14 +50,44 @@ const handleKnowledgeCommand = (command: string) => {
 };
 
 const handleMobileNav = (path: string) => {
+  if (path.startsWith("/relation/")) {
+    markRelationPerfStart("mobile menu", { path });
+    preloadRelationView("sankey");
+  }
   router.push(path);
   mobileMenuOpen.value = false;
 };
+
+const handleDesktopMenuSelect = (index: string) => {
+  if (index.startsWith("/relation/")) {
+    markRelationPerfStart("desktop menu", { path: index });
+    preloadRelationView("network");
+  }
+};
+
+onMounted(() => {
+  const preload = () => preloadRelationView(window.innerWidth < 768 ? "sankey" : "network");
+  if ("requestIdleCallback" in window) {
+    window.requestIdleCallback(preload, { timeout: 2000 });
+  } else {
+    window.setTimeout(preload, 1200);
+  }
+});
 
 const isKnowledgeActive = (fullPath: string) =>
   ["/risks", "/avoidances", "/attack-tools", "/threat-actors", "/terms"].includes(
     getActiveIndex(fullPath)
   );
+
+const getActiveKnowledge = (fullPath: string) => {
+  const path = getActiveIndex(fullPath);
+  if (path === "/risks") return "risks";
+  if (path === "/avoidances") return "avoidances";
+  if (path === "/attack-tools") return "attackTools";
+  if (path === "/threat-actors") return "threatActors";
+  if (path === "/terms") return "terms";
+  return "";
+};
 
 const getActiveIndex = (fullPath: string) => {
   if (fullPath.match(/^\/business-scene\//)) return "/";
@@ -195,6 +227,7 @@ const getActiveIndex = (fullPath: string) => {
     :ellipsis="false"
     :router="true"
     class="hidden-sm-and-down desktop-menu"
+    @select="handleDesktopMenuSelect"
   >
     <div style="display: flex; align-items: center; cursor: pointer" @click="$router.push('/')">
       <img src="/logo.png" class="logo" alt="JDArmy BREAK" />
@@ -227,11 +260,11 @@ const getActiveIndex = (fullPath: string) => {
       </span>
       <template #dropdown>
         <el-dropdown-menu>
-          <el-dropdown-item command="risks">{{ $t("menu.risks") }}</el-dropdown-item>
-          <el-dropdown-item command="avoidances">{{ $t("menu.avoidances") }}</el-dropdown-item>
-          <el-dropdown-item command="attackTools">{{ $t("attackTools") }}</el-dropdown-item>
-          <el-dropdown-item command="threatActors">{{ $t("threatActors") }}</el-dropdown-item>
-          <el-dropdown-item command="terms">{{ $t("terms") }}</el-dropdown-item>
+          <el-dropdown-item command="risks" :class="{ 'is-active': getActiveKnowledge($route.fullPath) === 'risks' }">{{ $t("menu.risks") }}</el-dropdown-item>
+          <el-dropdown-item command="avoidances" :class="{ 'is-active': getActiveKnowledge($route.fullPath) === 'avoidances' }">{{ $t("menu.avoidances") }}</el-dropdown-item>
+          <el-dropdown-item command="attackTools" :class="{ 'is-active': getActiveKnowledge($route.fullPath) === 'attackTools' }">{{ $t("attackTools") }}</el-dropdown-item>
+          <el-dropdown-item command="threatActors" :class="{ 'is-active': getActiveKnowledge($route.fullPath) === 'threatActors' }">{{ $t("threatActors") }}</el-dropdown-item>
+          <el-dropdown-item command="terms" :class="{ 'is-active': getActiveKnowledge($route.fullPath) === 'terms' }">{{ $t("terms") }}</el-dropdown-item>
         </el-dropdown-menu>
       </template>
     </el-dropdown>
@@ -467,6 +500,16 @@ const getActiveIndex = (fullPath: string) => {
   color: var(--el-menu-active-color);
 }
 
+.knowledge-menu.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--el-menu-active-color);
+}
+
 .translate {
   padding: 0 10px;
 }
@@ -572,6 +615,22 @@ const getActiveIndex = (fullPath: string) => {
 .mobile-github {
   display: inline-flex;
   color: var(--break-text-muted);
+}
+
+/* 下拉菜单所有项的悬停效果 */
+:deep(.el-dropdown-menu__item:not(.is-active):hover) {
+  background-color: var(--el-fill-color-light) !important;
+}
+
+/* 下拉菜单激活项样式 */
+:deep(.el-dropdown-menu__item.is-active) {
+  color: var(--el-color-primary) !important;
+  background-color: var(--el-color-primary-light-9) !important;
+}
+
+:deep(.el-dropdown-menu__item.is-active:hover) {
+  background-color: var(--el-color-primary-light-7) !important;
+  color: var(--el-color-primary) !important;
 }
 </style>
 

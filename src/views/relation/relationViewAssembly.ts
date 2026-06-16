@@ -4,6 +4,7 @@ import { setupRelationViewEffects } from "@/views/relation/relationViewEffects";
 import { createRelationViewState } from "@/views/relation/relationViewState";
 import { useRelationGraphData } from "@/views/relation/useRelationGraphData";
 import { useRelationNodeActions } from "@/views/relation/useRelationNodeActions";
+import { logRelationPerf, measureRelationPerf, relationPerfNow } from "@/views/relation/relationPerf";
 import type { createRelationTypeMapping, graphColors, relationLineColors } from "@/views/relation/relationTypes";
 import type { RouteLocationNormalizedLoaded, Router } from "vue-router";
 import type { DropdownInstance } from "element-plus";
@@ -47,6 +48,9 @@ export const createRelationViewAssembly = ({
   setDropdownInstance,
   networkInteractionsBridge,
 }: CreateRelationViewAssemblyOptions) => {
+  const assemblyStartedAt = relationPerfNow();
+  logRelationPerf("assembly start");
+  const viewStateStartedAt = relationPerfNow();
   const viewState = createRelationViewState({
     route,
     t,
@@ -54,7 +58,9 @@ export const createRelationViewAssembly = ({
     width,
     renderNetworkChartBridge,
   });
+  measureRelationPerf("create relation view state done", viewStateStartedAt);
 
+  const destructureViewStateStartedAt = relationPerfNow();
   const {
     activeView,
     handleNetworkLayoutCommand,
@@ -80,7 +86,9 @@ export const createRelationViewAssembly = ({
     selectSankeyNode,
     zoomNetworkChart,
   } = viewState;
+  measureRelationPerf("destructure relation view state done", destructureViewStateStartedAt);
 
+  const graphDataStartedAt = relationPerfNow();
   const graphData = useRelationGraphData({
     t,
     isDark,
@@ -92,7 +100,9 @@ export const createRelationViewAssembly = ({
     getRelationLineColor,
     renderNetworkChart: (notMerge) => renderNetworkChartBridge.current(notMerge),
   });
+  measureRelationPerf("use relation graph data done", graphDataStartedAt);
 
+  const destructureGraphDataStartedAt = relationPerfNow();
   const {
     addRootNode,
     clearDraggedNodePositions,
@@ -106,7 +116,9 @@ export const createRelationViewAssembly = ({
     selectedNetworkNode,
     selectedNetworkNodeId,
   } = graphData;
+  measureRelationPerf("destructure graph data done", destructureGraphDataStartedAt);
 
+  const networkHelpersStartedAt = relationPerfNow();
   const { getVisibleNetworkData, toContextNode } = createNetworkDataHelpers({
     nodes: graphData.nodes,
     lines: graphData.lines,
@@ -123,12 +135,14 @@ export const createRelationViewAssembly = ({
     wrapLabelText: graphData.wrapLabelText,
     getGraphColor,
     getRelationSourceFields,
-    findNodeById: graphData.findNodeById,
   });
+  measureRelationPerf("create network data helpers done", networkHelpersStartedAt);
 
+  const sankeyControllerStartedAt = relationPerfNow();
   const sankeyController = createSankeyChartController({
     t,
     isDark,
+    isMobile,
     activeView,
     sankeyChartHeight: graphData.sankeyChartHeight,
     sankeyData: graphData.sankeyData,
@@ -146,7 +160,9 @@ export const createRelationViewAssembly = ({
     sankeyTop,
     onSelectNode: selectSankeyNode,
   });
+  measureRelationPerf("create sankey controller done", sankeyControllerStartedAt);
 
+  const networkControllerStartedAt = relationPerfNow();
   const networkController = createNetworkChartController({
     t,
     isDark,
@@ -161,8 +177,10 @@ export const createRelationViewAssembly = ({
     getDownloadFilename: () => `relation-${relType.value}-${relKey.value}.png`,
     interactionsBridge: networkInteractionsBridge,
   });
+  measureRelationPerf("create network controller done", networkControllerStartedAt);
   renderNetworkChartBridge.current = networkController.renderNetworkChart;
 
+  const nodeActionsStartedAt = relationPerfNow();
   const nodeActions = useRelationNodeActions({
     t,
     router,
@@ -180,14 +198,18 @@ export const createRelationViewAssembly = ({
     genNetworkGraphData,
     renderNetworkChart: networkController.renderNetworkChart,
   });
+  measureRelationPerf("use relation node actions done", nodeActionsStartedAt);
 
+  const bridgeStartedAt = relationPerfNow();
   networkInteractionsBridge.handleNodeTouch = (node) => nodeActions.handleNodeTouch(node as ReturnType<typeof toContextNode>);
   networkInteractionsBridge.openNodeDetail = (node) =>
     nodeActions.focusNodeInDrawer((node as ReturnType<typeof toContextNode>).id);
   networkInteractionsBridge.nodeClick = (node, event) =>
     nodeActions.nodeClick(node as ReturnType<typeof toContextNode>, event);
   setClearDraggedNodePositions(clearDraggedNodePositions);
+  measureRelationPerf("wire interaction bridge done", bridgeStartedAt);
 
+  const effectsStartedAt = relationPerfNow();
   setupRelationViewEffects({
     t,
     route,
@@ -197,7 +219,6 @@ export const createRelationViewAssembly = ({
     activeView,
     relType,
     relKey,
-    sankeyData: graphData.sankeyData,
     getCurrentEntityOptions: graphData.getCurrentEntityOptions,
     RelationTypeMapping,
     addRootNode,
@@ -210,14 +231,19 @@ export const createRelationViewAssembly = ({
     updateSankeyTheme: sankeyController.updateSankeyTheme,
     resizeNetworkChart: networkController.resizeNetworkChart,
     resizeSankeyChart: sankeyController.resizeSankeyChart,
+    hideNetworkTooltip: networkController.hideNetworkTooltip,
+    hideSankeyTooltip: sankeyController.hideSankeyTooltip,
     handleGlobalPointerDown: nodeActions.handleGlobalPointerDown,
     disposeNetworkChart: networkController.disposeNetworkChart,
     disposeSankeyChart: sankeyController.disposeSankeyChart,
     filterLineType: graphData.filterLineType,
     selectedNetworkNodeId,
   });
+  measureRelationPerf("setup relation view effects done", effectsStartedAt);
+  measureRelationPerf("assembly done", assemblyStartedAt);
 
-  return {
+  const returnStartedAt = relationPerfNow();
+  const relationView = {
     ...graphData,
     ...networkController,
     ...nodeActions,
@@ -234,4 +260,6 @@ export const createRelationViewAssembly = ({
     sankeyChartMinWidth,
     zoomNetworkChart,
   };
+  measureRelationPerf("assembly return object prepared", returnStartedAt);
+  return relationView;
 };

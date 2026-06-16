@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, onMounted, ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
 import type { RelationType } from "@/views/relation/relationTypes";
 
@@ -27,7 +27,9 @@ const selectedKey = computed({
   set: (value: string) => emit("update:relKey", value),
 });
 
-const entitySelectOptions = computed(() => {
+const entitySelectOptionsReady = ref(false);
+
+const buildEntitySelectOptions = () => {
   const currentMapping = props.RelationTypeMapping[props.relType];
   if (!currentMapping) return [];
 
@@ -35,7 +37,43 @@ const entitySelectOptions = computed(() => {
     label: `${key}:${t(`BREAK.${currentMapping.BreakKey}.${key}.title`)}`,
     value: key,
   }));
+};
+
+const currentEntityOption = computed(() => {
+  const currentMapping = props.RelationTypeMapping[props.relType];
+  if (!currentMapping || !props.relKey) return [];
+  return [
+    {
+      label: `${props.relKey}:${t(`BREAK.${currentMapping.BreakKey}.${props.relKey}.title`)}`,
+      value: props.relKey,
+    },
+  ];
 });
+
+const entitySelectOptions = computed(() => {
+  if (!entitySelectOptionsReady.value) {
+    return currentEntityOption.value;
+  }
+  return buildEntitySelectOptions();
+});
+
+onMounted(() => {
+  const markReady = () => {
+    entitySelectOptionsReady.value = true;
+  };
+  if ("requestIdleCallback" in window) {
+    window.requestIdleCallback(markReady, { timeout: 800 });
+  } else {
+    window.setTimeout(markReady, 200);
+  }
+});
+
+watch(
+  () => props.relType,
+  () => {
+    entitySelectOptionsReady.value = true;
+  }
+);
 </script>
 
 <template>

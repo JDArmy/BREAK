@@ -1,6 +1,8 @@
 import { ref, type Ref } from "vue";
-import { init, type ECharts, type EChartsOption } from "echarts/core";
+import type { ECharts, EChartsOption } from "echarts/core";
 import type { GraphLink, GraphNode, NetworkLayoutMode } from "@/views/relation/relationTypes";
+import { logRelationPerf, measureRelationPerf, relationPerfNow } from "@/views/relation/relationPerf";
+import { loadNetworkECharts } from "@/views/relation/relationECharts";
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;
 
@@ -44,6 +46,7 @@ export const createNetworkChartController = ({
   let longPressTimer: ReturnType<typeof setTimeout> | undefined;
   let longPressNode: GraphNode | undefined;
   let longPressStart: { x: number; y: number } | undefined;
+  let renderRequestId = 0;
 
   const clearLongPressTimer = () => {
     if (longPressTimer) {
@@ -52,6 +55,10 @@ export const createNetworkChartController = ({
     }
     longPressNode = undefined;
     longPressStart = undefined;
+  };
+
+  const hideNetworkTooltip = () => {
+    networkChart?.dispatchAction({ type: "hideTip" });
   };
 
   const setNetworkChartElement = (element: HTMLDivElement | undefined) => {
@@ -176,6 +183,7 @@ export const createNetworkChartController = ({
 
   const updateNetworkSelection = () => {
     if (!networkChart || activeView.value !== "network") return;
+    const startedAt = relationPerfNow();
     const networkData = getVisibleNetworkData();
     networkChart.setOption(
       {
@@ -189,122 +197,175 @@ export const createNetworkChartController = ({
       { notMerge: false, lazyUpdate: false }
     );
     clearNetworkNodeHighlight();
+    measureRelationPerf("network selection update done", startedAt, {
+      nodes: networkData.nodes.length,
+      links: networkData.links.length,
+    });
   };
 
   const renderNetworkChart = (notMerge = false) => {
     if (activeView.value !== "network" || !networkChartRef.value) return;
-    if (!networkChart) {
-      networkChart = init(networkChartRef.value);
-      bindNetworkChartEvents();
-    }
+    const requestId = ++renderRequestId;
+    const renderStartedAt = relationPerfNow();
+    logRelationPerf("network render start", {
+      notMerge,
+      hasChart: Boolean(networkChart),
+      layout: networkState.layout,
+    });
 
-    const networkData = getVisibleNetworkData();
-    const isForceLayout = networkState.layout === "force";
-    const style = getComputedStyle(document.documentElement);
-    const tooltipBackground = style.getPropertyValue("--break-tooltip-bg").trim();
-    const tooltipBorder = style.getPropertyValue("--break-tooltip-border").trim();
-    const tooltipText = style.getPropertyValue("--break-tooltip-text").trim();
-    const option = {
-      backgroundColor: getGraphColor("background"),
-      animationDurationUpdate: 300,
-      tooltip: {
-        trigger: "item",
-        showDelay: 500,
-        backgroundColor: tooltipBackground,
-        borderColor: tooltipBorder,
-        borderWidth: 1,
-        textStyle: {
-          color: tooltipText,
+    const applyNetworkOption = async () => {
+      if (!networkChartRef.value || activeView.value !== "network" || requestId !== renderRequestId) return;
+
+      if (!networkChart) {
+        const initStartedAt = relationPerfNow();
+        const init = await loadNetworkECharts();
+        if (!networkChartRef.value || activeView.value !== "network" || requestId !== renderRequestId) return;
+        networkChart = init(networkChartRef.value);
+        bindNetworkChartEvents();
+        measureRelationPerf("network chart init done", initStartedAt);
+      }
+      hideNetworkTooltip();
+
+      const visibleDataStartedAt = relationPerfNow();
+      const networkData = getVisibleNetworkData();
+      measureRelationPerf("network render visible data ready", visibleDataStartedAt, {
+        nodes: networkData.nodes.length,
+        links: networkData.links.length,
+      });
+      const isForceLayout = networkState.layout === "force";
+      const style = getComputedStyle(document.documentElement);
+      const tooltipBackground = style.getPropertyValue("--break-tooltip-bg").trim();
+      const tooltipBorder = style.getPropertyValue("--break-tooltip-border").trim();
+      const tooltipText = style.getPropertyValue("--break-tooltip-text").trim();
+      const option = {
+        backgroundColor: getGraphColor("background"),
+        animationDurationUpdate: 300,
+        tooltip: {
+          trigger: "item",
+          enterable: false,
+          showDelay: 500,
+          backgroundColor: tooltipBackground,
+          borderColor: tooltipBorder,
+          borderWidth: 1,
+          textStyle: {
+            color: tooltipText,
+          },
+          formatter: (params: { dataType?: string; data?: GraphNode | GraphLink }) => {
+            if (params.dataType === "node") {
+              return (params.data as GraphNode).text.replace(/\n/g, "<br>");
+            }
+            if (params.dataType === "edge") {
+              const link = params.data as GraphLink;
+              const fields = link.sourceFields.length
+                ? `<br>${t("relationView.sourceFields")}: ${link.sourceFields.join(", ")}`
+                : "";
+              return `${link.text}${fields}`;
+            }
+            return "";
+          },
         },
-        formatter: (params: { dataType?: string; data?: GraphNode | GraphLink }) => {
-          if (params.dataType === "node") {
-            return (params.data as GraphNode).text.replace(/\n/g, "<br>");
-          }
-          if (params.dataType === "edge") {
-            const link = params.data as GraphLink;
-            const fields = link.sourceFields.length
-              ? `<br>${t("relationView.sourceFields")}: ${link.sourceFields.join(", ")}`
-              : "";
-            return `${link.text}${fields}`;
-          }
-          return "";
-        },
-      },
-      series: [
-        {
-          type: "graph",
-          layout: isForceLayout ? "force" : "none",
-          data: networkData.nodes,
-          links: networkData.links,
-          center: ["52%", "50%"],
-          roam: true,
-          draggable: true,
-          force: isForceLayout
-            ? {
-                repulsion: 1240,
-                edgeLength: [260, 440],
-                gravity: 0.022,
-                friction: 0.22,
-                preventOverlap: 44,
-                layoutAnimation: true,
-              }
-            : undefined,
-          label: {
-            show: true,
-            color: getGraphColor("nodeText"),
-            fontSize: 8,
-            lineHeight: 10,
-            width: 48,
-            overflow: "break",
-            formatter: (params: { data?: GraphNode }) => params.data?.labelText ?? "",
-            rich: {},
-          },
-          lineStyle: {
-            color: getGraphColor("line"),
-            opacity: isDark.value ? 0.42 : 0.52,
-            curveness: 0.18,
-          },
-          edgeLabel: {
-            show: false,
-            color: getGraphColor("lineText"),
-            fontSize: 12,
-            formatter: (params: { data?: GraphLink }) => params.data?.text ?? "",
-          },
-          emphasis: {
-            focus: "adjacency",
-            lineStyle: {
-              width: 2,
-            },
-          },
-          blur: {
-            itemStyle: {
-              opacity: isDark.value ? 0.12 : 0.15,
-            },
+        series: [
+          {
+            type: "graph",
+            layout: isForceLayout ? "force" : "none",
+            data: networkData.nodes,
+            links: networkData.links,
+            center: ["52%", "50%"],
+            roam: true,
+            draggable: true,
+            force: isForceLayout
+              ? {
+                  repulsion: 1240,
+                  edgeLength: [260, 440],
+                  gravity: 0.022,
+                  friction: 0.22,
+                  preventOverlap: 44,
+                  layoutAnimation: true,
+                }
+              : undefined,
             label: {
-              opacity: isDark.value ? 0.20 : 0.24,
+              show: true,
+              color: getGraphColor("nodeText"),
+              fontSize: 8,
+              lineHeight: 10,
+              width: 48,
+              overflow: "break",
+              formatter: (params: { data?: GraphNode }) => params.data?.labelText ?? "",
+              rich: {},
             },
             lineStyle: {
-              opacity: isDark.value ? 0.06 : 0.08,
+              color: getGraphColor("line"),
+              opacity: isDark.value ? 0.42 : 0.52,
+              curveness: 0.18,
             },
+            edgeLabel: {
+              show: false,
+              color: getGraphColor("lineText"),
+              fontSize: 12,
+              formatter: (params: { data?: GraphLink }) => params.data?.text ?? "",
+            },
+            emphasis: {
+              focus: "adjacency",
+              lineStyle: {
+                width: 2,
+              },
+            },
+            blur: {
+              itemStyle: {
+                opacity: isDark.value ? 0.12 : 0.15,
+              },
+              label: {
+                opacity: isDark.value ? 0.20 : 0.24,
+              },
+              lineStyle: {
+                opacity: isDark.value ? 0.06 : 0.08,
+              },
+            },
+            zoom: networkState.zoom,
+            scaleLimit: {
+              min: 0.2,
+              max: 3,
+            },
+            animation: isForceLayout,
           },
-          zoom: networkState.zoom,
-          scaleLimit: {
-            min: 0.2,
-            max: 3,
-          },
-          animation: isForceLayout,
-        },
-      ],
-    } satisfies EChartsOption;
+        ],
+      } satisfies EChartsOption;
 
-    networkChart.setOption(option, { notMerge, lazyUpdate: false });
-    clearNetworkNodeHighlight();
-    networkChart.resize();
-    requestAnimationFrame(() => centerSelectedNodeInScroller(networkData));
+      const setOptionStartedAt = relationPerfNow();
+      networkChart.setOption(option, { notMerge, lazyUpdate: false });
+      measureRelationPerf("network setOption done", setOptionStartedAt, {
+        nodes: networkData.nodes.length,
+        links: networkData.links.length,
+        notMerge,
+        layout: networkState.layout,
+      });
+      clearNetworkNodeHighlight();
+      const resizeStartedAt = relationPerfNow();
+      networkChart.resize();
+      measureRelationPerf("network resize done", resizeStartedAt);
+      if (isMobile.value) {
+        requestAnimationFrame(() => {
+          if (requestId !== renderRequestId) return;
+          const centerStartedAt = relationPerfNow();
+          centerSelectedNodeInScroller(networkData);
+          measureRelationPerf("network center selected node done", centerStartedAt);
+        });
+      }
+      measureRelationPerf("network render done", renderStartedAt, {
+        nodes: networkData.nodes.length,
+        links: networkData.links.length,
+        notMerge,
+        layout: networkState.layout,
+      });
+    };
+
+    void applyNetworkOption();
   };
 
   const disposeNetworkChart = () => {
+    renderRequestId += 1;
     clearLongPressTimer();
+    hideNetworkTooltip();
     networkChart?.dispose();
     networkChart = null;
   };
@@ -348,5 +409,6 @@ export const createNetworkChartController = ({
     setNetworkScrollerElement,
     updateNetworkSelection,
     resizeNetworkChart,
+    hideNetworkTooltip,
   };
 };

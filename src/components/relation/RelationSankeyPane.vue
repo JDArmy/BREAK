@@ -2,7 +2,8 @@
 import { type ComponentPublicInstance } from "vue";
 
 const props = defineProps<{
-  sankeyData: { nodes: unknown[]; links: unknown[] };
+  active: boolean;
+  hasData: boolean;
   chartMinWidth?: number;
   setSankeyChartElement?: (element: HTMLDivElement | undefined) => void;
 }>();
@@ -14,11 +15,11 @@ const setRef = (el: Element | ComponentPublicInstance | null) => {
 
 <template>
   <div class="sankey-pane">
-    <div v-if="sankeyData.nodes.length === 0" class="sankey-empty">
+    <div v-if="active && !hasData" class="sankey-empty">
       {{ $t("relationView.noAttackPath") }}
     </div>
     <div
-      v-show="sankeyData.nodes.length > 0"
+      v-show="active"
       :ref="setRef"
       class="sankey-chart"
       :style="{ minWidth: chartMinWidth ? `${chartMinWidth}px` : undefined }"

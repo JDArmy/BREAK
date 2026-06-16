@@ -2,16 +2,12 @@ import { useRoute, useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
 import { useTheme } from "@/composables/useTheme";
 import { useBreakpoints } from "@/composables/useBreakpoints";
-import { use } from "echarts/core";
-import { GraphChart, SankeyChart } from "echarts/charts";
-import { LegendComponent, TooltipComponent } from "echarts/components";
-import { CanvasRenderer } from "echarts/renderers";
-  import {
-    createRelationDropdownRef,
-    createRelationDropdownBinder,
-    createNetworkInteractionsBridge,
-    createRenderNetworkChartBridge,
-  } from "@/views/relation/relationViewBridges";
+import {
+  createRelationDropdownRef,
+  createRelationDropdownBinder,
+  createNetworkInteractionsBridge,
+  createRenderNetworkChartBridge,
+} from "@/views/relation/relationViewBridges";
 import { createRelationViewAssembly } from "@/views/relation/relationViewAssembly";
 import {
   createRelationTypeMapping,
@@ -21,10 +17,17 @@ import {
   relationLineColors,
   RelationType,
 } from "@/views/relation/relationTypes";
-
-use([GraphChart, SankeyChart, LegendComponent, TooltipComponent, CanvasRenderer]);
+import {
+  ensureRelationPerfStart,
+  logRelationPerf,
+  measureRelationPerf,
+  relationPerfNow,
+} from "@/views/relation/relationPerf";
 
 export const useRelationViewModel = () => {
+  ensureRelationPerfStart("relation setup direct entry");
+  const setupStartedAt = relationPerfNow();
+  logRelationPerf("view setup start");
   const route = useRoute();
   const router = useRouter();
   const { t, locale } = useI18n();
@@ -100,6 +103,12 @@ export const useRelationViewModel = () => {
     dropdown1,
     setDropdownInstance,
     networkInteractionsBridge,
+  });
+
+  measureRelationPerf("view setup done", setupStartedAt, {
+    type: relationView.relType.value,
+    key: relationView.relKey.value,
+    activeView: relationView.activeView.value,
   });
 
   return {

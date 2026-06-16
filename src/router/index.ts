@@ -1,5 +1,23 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import {
+  ensureRelationPerfStart,
+  logRelationPerf,
+  relationPerfNow,
+} from "@/views/relation/relationPerf";
+import { loadNetworkECharts, loadSankeyECharts } from "@/views/relation/relationECharts";
+
+const loadRelationView = () => import("@/views/RelationView.vue");
+type RelationPreloadTarget = "network" | "sankey";
+
+export const preloadRelationView = (target?: RelationPreloadTarget) => {
+  void loadRelationView();
+  if (target === "network") {
+    void loadNetworkECharts();
+  } else if (target === "sankey") {
+    void loadSankeyECharts();
+  }
+};
 
 const router = createRouter({
   history: createWebHashHistory(),
@@ -67,7 +85,14 @@ const router = createRouter({
     {
       path: "/relation/:type/:key",
       name: "relation",
-      component: () => import("@/views/RelationView.vue"),
+      component: () => {
+        const startedAt = relationPerfNow();
+        logRelationPerf("route component import start");
+        return loadRelationView().then((component) => {
+          logRelationPerf("route component import done", undefined, startedAt);
+          return component;
+        });
+      },
     },
     {
       path: "/:pathMatch(.*)*",
@@ -98,6 +123,31 @@ const router = createRouter({
 
     return { top: 0 };
   },
+});
+
+router.beforeEach((to) => {
+  if (to.name === "relation") {
+    ensureRelationPerfStart("router beforeEach", {
+      path: to.fullPath,
+    });
+    logRelationPerf("router beforeEach relation", {
+      path: to.fullPath,
+    });
+    const view = typeof to.query.view === "string" ? to.query.view : "";
+    if (view === "network" || (view !== "sankey" && window.innerWidth >= 768)) {
+      void loadNetworkECharts();
+    } else {
+      void loadSankeyECharts();
+    }
+  }
+});
+
+router.afterEach((to) => {
+  if (to.name === "relation") {
+    logRelationPerf("router afterEach relation", {
+      path: to.fullPath,
+    });
+  }
 });
 
 export default router;

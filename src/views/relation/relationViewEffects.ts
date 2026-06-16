@@ -3,6 +3,7 @@ import BREAK from "@/BREAK";
 import type { Router, RouteLocationNormalizedLoaded } from "vue-router";
 import { createRelationTypeMapping, RelationType } from "@/views/relation/relationTypes";
 import { normalizeRelationViewMode, type RelationViewMode } from "@/views/relation/relationViewState";
+import { logRelationPerf, measureRelationPerf, relationPerfNow } from "@/views/relation/relationPerf";
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;
 
@@ -15,11 +16,15 @@ interface SetupRelationViewEffectsOptions {
   activeView: Ref<RelationViewMode>;
   relType: Ref<RelationType>;
   relKey: Ref<string>;
-  sankeyData: Ref<unknown>;
   getCurrentEntityOptions: Ref<Record<string, unknown>>;
   RelationTypeMapping: ReturnType<typeof createRelationTypeMapping>;
   addRootNode: () => void;
-  genNetworkGraphData: (reqType: RelationType, currentNodeType: RelationType, currentNodeId: string) => void;
+  genNetworkGraphData: (
+    reqType: RelationType,
+    currentNodeType: RelationType,
+    currentNodeId: string,
+    options?: { render?: boolean }
+  ) => void;
   rebuildGraphData: () => void;
   refreshGraphAfterVisible: () => void;
   renderNetworkChart: (notMerge?: boolean) => void;
@@ -28,6 +33,8 @@ interface SetupRelationViewEffectsOptions {
   updateSankeyTheme: () => void;
   resizeNetworkChart: () => void;
   resizeSankeyChart: () => void;
+  hideNetworkTooltip: () => void;
+  hideSankeyTooltip: () => void;
   handleGlobalPointerDown: (event: PointerEvent) => void;
   disposeNetworkChart: () => void;
   disposeSankeyChart: () => void;
@@ -44,7 +51,6 @@ export const setupRelationViewEffects = ({
   activeView,
   relType,
   relKey,
-  sankeyData,
   getCurrentEntityOptions,
   RelationTypeMapping,
   addRootNode,
@@ -57,13 +63,35 @@ export const setupRelationViewEffects = ({
   updateSankeyTheme,
   resizeNetworkChart,
   resizeSankeyChart,
+  hideNetworkTooltip,
+  hideSankeyTooltip,
   handleGlobalPointerDown,
   disposeNetworkChart,
   disposeSankeyChart,
   filterLineType,
   selectedNetworkNodeId,
 }: SetupRelationViewEffectsOptions) => {
+  let hasMounted = false;
+  let networkDataReady = false;
+
+  const ensureNetworkData = (options?: { render?: boolean }) => {
+    if (networkDataReady) return;
+    const genGraphStartedAt = relationPerfNow();
+    genNetworkGraphData(RelationType.all, relType.value, relKey.value, options);
+    networkDataReady = true;
+    measureRelationPerf("gen network graph data done", genGraphStartedAt, {
+      type: relType.value,
+      key: relKey.value,
+    });
+  };
+
   onMounted(() => {
+    const mountedEffectsStartedAt = relationPerfNow();
+    logRelationPerf("effects mounted start", {
+      type: route.params.type,
+      key: route.params.key,
+      activeView: activeView.value,
+    });
     if (
       !Object.values(RelationType).includes(route.params.type as RelationType) ||
       !Object.keys(
@@ -88,15 +116,29 @@ export const setupRelationViewEffects = ({
         });
       return;
     }
+    const addRootStartedAt = relationPerfNow();
     addRootNode();
-    genNetworkGraphData(RelationType.all, relType.value, relKey.value);
-    nextTick(() => {
-      renderNetworkChart(true);
+    measureRelationPerf("add root node done", addRootStartedAt);
+    const initialRenderStartedAt = relationPerfNow();
+    if (activeView.value === "network") {
+      ensureNetworkData({ render: false });
+      logRelationPerf("initial network render start", {
+        activeView: activeView.value,
+      });
+      renderNetworkChart(false);
+      measureRelationPerf("initial network render done", initialRenderStartedAt);
+    } else {
+      logRelationPerf("initial sankey render start", {
+        activeView: activeView.value,
+      });
       renderSankeyChart();
-    });
+      measureRelationPerf("initial sankey render done", initialRenderStartedAt);
+    }
     window.addEventListener("resize", resizeNetworkChart);
     window.addEventListener("resize", resizeSankeyChart);
     document.addEventListener("pointerdown", handleGlobalPointerDown);
+    hasMounted = true;
+    measureRelationPerf("effects mounted sync done", mountedEffectsStartedAt);
   });
 
   onBeforeUnmount(() => {
@@ -133,19 +175,29 @@ export const setupRelationViewEffects = ({
   );
 
   watch(
-    () => [route.params.type, route.params.key],
+    [() => route.params.type, () => route.params.key],
     () => {
       relType.value = route.params.type as RelationType;
       relKey.value = route.params.key as string;
-      refreshGraphAfterVisible();
+      networkDataReady = false;
+      if (activeView.value === "network") {
+        refreshGraphAfterVisible();
+        networkDataReady = true;
+      }
     }
   );
 
   watch(locale, () => {
     filterLineType.value = [];
-    rebuildGraphData();
+    networkDataReady = false;
+    if (activeView.value === "network") {
+      rebuildGraphData();
+      networkDataReady = true;
+    }
     nextTick(() => {
-      renderNetworkChart(true);
+      if (activeView.value === "network") {
+        renderNetworkChart(true);
+      }
       renderSankeyChart();
     });
   });
@@ -167,13 +219,20 @@ export const setupRelationViewEffects = ({
         });
       }
 
+      if (!hasMounted) {
+        return;
+      }
+
+      hideNetworkTooltip();
+      hideSankeyTooltip();
+
       if (activeView.value === "sankey") {
         nextTick(renderSankeyChart);
       } else {
+        ensureNetworkData({ render: false });
         nextTick(() => renderNetworkChart(true));
       }
-    },
-    { immediate: true }
+    }
   );
 
   watch(
@@ -187,13 +246,12 @@ export const setupRelationViewEffects = ({
   );
 
   watch(
-    sankeyData,
+    [activeView, relType, relKey, selectedNetworkNodeId],
     () => {
-      if (activeView.value === "sankey") {
+      if (hasMounted && activeView.value === "sankey") {
         nextTick(renderSankeyChart);
       }
-    },
-    { deep: true }
+    }
   );
 
   watch(isDark, () => {

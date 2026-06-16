@@ -6,6 +6,7 @@ import {
   type RelationGraphBuilderContext,
   type Translate,
 } from "@/views/relation/relationGraphBuilderShared";
+import { logRelationPerf, measureRelationPerf, relationPerfNow } from "@/views/relation/relationPerf";
 import { createRiskRelationBuilder } from "@/views/relation/relationGraphRiskBuilder";
 import { createTermRelationBuilder } from "@/views/relation/relationGraphTermBuilder";
 import { createThreatActorRelationBuilder } from "@/views/relation/relationGraphThreatActorBuilder";
@@ -89,11 +90,29 @@ export const createRelationGraphBuilder = ({
     relationLegendItems.value.filter((item) => totalLineType.value.includes(item.label))
   );
 
-  const setNetworkGraphData = () => {
+  const setNetworkGraphData = (options?: { render?: boolean }) => {
+    const startedAt = relationPerfNow();
+    const before = {
+      rawNodes: nodes.length,
+      rawLines: lines.length,
+    };
     uniqNodes();
     uniqLines();
     getLineType();
-    renderNetworkChart();
+    measureRelationPerf("set network graph data prepared", startedAt, {
+      ...before,
+      nodes: nodes.length,
+      lines: lines.length,
+      lineTypes: totalLineType.value.length,
+    });
+    if (options?.render !== false) {
+      const renderStartedAt = relationPerfNow();
+      renderNetworkChart();
+      measureRelationPerf("set network graph data render requested", renderStartedAt, {
+        nodes: nodes.length,
+        lines: lines.length,
+      });
+    }
   };
 
   const draggedNodePositions = ref<Record<string, { x: number; y: number }>>({});
@@ -146,8 +165,17 @@ export const createRelationGraphBuilder = ({
   const genNetworkGraphData = (
     reqType: RelationType,
     currentNodeType: RelationType,
-    currentNodeId: string
+    currentNodeId: string,
+    options?: { render?: boolean }
   ) => {
+    const startedAt = relationPerfNow();
+    logRelationPerf("gen network graph data start", {
+      reqType,
+      currentNodeType,
+      currentNodeId,
+      beforeNodes: nodes.length,
+      beforeLines: lines.length,
+    });
     if (currentNodeType === RelationType.risk) {
       if (reqType == RelationType.avoidance) {
         riskBuilder.addAvoidance(currentNodeId);
@@ -216,7 +244,14 @@ export const createRelationGraphBuilder = ({
         termBuilder.addRelatedEntities(currentNodeId);
       }
     }
-    setNetworkGraphData();
+    setNetworkGraphData(options);
+    measureRelationPerf("gen network graph data end", startedAt, {
+      reqType,
+      currentNodeType,
+      currentNodeId,
+      nodes: nodes.length,
+      lines: lines.length,
+    });
   };
 
   return {

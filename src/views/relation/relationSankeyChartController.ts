@@ -1,13 +1,16 @@
 import { ref, type ComputedRef, type Ref } from "vue";
-import { init, type ECharts } from "echarts/core";
+import type { ECharts } from "echarts/core";
 import type { SankeyLink, SankeyNode } from "@/views/relation/relationTypes";
 import type { SankeyLabelOverflow, SankeyNodeAlign } from "@/views/relation/relationViewState";
+import { logRelationPerf, measureRelationPerf, relationPerfNow } from "@/views/relation/relationPerf";
+import { loadSankeyECharts } from "@/views/relation/relationECharts";
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;
 
 interface CreateSankeyChartControllerOptions {
   t: Translate;
   isDark: Ref<boolean>;
+  isMobile: Ref<boolean>;
   activeView: Ref<"network" | "sankey">;
   sankeyChartHeight: ComputedRef<number>;
   sankeyData: ComputedRef<{ nodes: SankeyNode[]; links: SankeyLink[] }>;
@@ -29,6 +32,7 @@ interface CreateSankeyChartControllerOptions {
 export const createSankeyChartController = ({
   t,
   isDark,
+  isMobile,
   activeView,
   sankeyChartHeight,
   sankeyData,
@@ -47,8 +51,10 @@ export const createSankeyChartController = ({
   onSelectNode,
 }: CreateSankeyChartControllerOptions) => {
   const sankeyChartRef = ref<HTMLDivElement>();
+  const sankeyHasData = ref(false);
   let sankeyChart: ECharts | null = null;
   let pendingRenderFrame: number | null = null;
+  let renderRequestId = 0;
 
   const setSankeyChartElement = (element: HTMLDivElement | undefined) => {
     sankeyChartRef.value = element;
@@ -56,9 +62,24 @@ export const createSankeyChartController = ({
 
   const renderSankeyChart = (attempt = 0) => {
     if (activeView.value !== "sankey" || !sankeyChartRef.value) return;
+    const requestId = ++renderRequestId;
+    const renderStartedAt = relationPerfNow();
+    const currentSankeyData = sankeyData.value;
+    sankeyHasData.value = currentSankeyData.nodes.length > 0;
+    logRelationPerf("sankey render start", {
+      attempt,
+      hasChart: Boolean(sankeyChart),
+      nodes: currentSankeyData.nodes.length,
+      links: currentSankeyData.links.length,
+    });
     sankeyChartRef.value.style.height = `${sankeyChartHeight.value}px`;
 
     if (sankeyChartRef.value.clientWidth === 0 || sankeyChartRef.value.clientHeight === 0) {
+      logRelationPerf("sankey render deferred; empty DOM size", {
+        attempt,
+        width: sankeyChartRef.value.clientWidth,
+        height: sankeyChartRef.value.clientHeight,
+      });
       if (attempt >= 6) return;
       if (pendingRenderFrame !== null) {
         cancelAnimationFrame(pendingRenderFrame);
@@ -70,95 +91,119 @@ export const createSankeyChartController = ({
       return;
     }
 
-    if (!sankeyChart) {
-      sankeyChart = init(sankeyChartRef.value);
-    }
-    const style = getComputedStyle(document.documentElement);
-    const tooltipBackground = style.getPropertyValue("--break-tooltip-bg").trim();
-    const tooltipBorder = style.getPropertyValue("--break-tooltip-border").trim();
-    const tooltipText = style.getPropertyValue("--break-tooltip-text").trim();
+    const applySankeyOption = async () => {
+      if (!sankeyChartRef.value || activeView.value !== "sankey" || requestId !== renderRequestId) return;
 
-    sankeyChart.setOption({
-      backgroundColor: getComputedStyle(document.documentElement)
-        .getPropertyValue("--break-bg-primary")
-        .trim(),
-      tooltip: {
-        trigger: "item",
-        triggerOn: "mousemove",
-        backgroundColor: tooltipBackground,
-        borderColor: tooltipBorder,
-        borderWidth: 1,
-        textStyle: {
-          color: tooltipText,
-        },
-        formatter: (params: {
-          dataType?: string;
-          name?: string;
-          value?: number;
-          data?: Partial<SankeyNode & SankeyLink>;
-        }) => {
-          const value = params.value ?? params.data?.value ?? 0;
-          if (params.dataType === "edge") {
-            return [
-              `${String(params.data?.source ?? "")} -> ${String(params.data?.target ?? "")}`,
-              `${t("relationView.pathCount")}: ${value}`,
-            ].join("<br>");
-          }
-
-          return [String(params.name ?? params.data?.name ?? ""), `${t("relationView.pathCount")}: ${value}`].join(
-            "<br>"
-          );
-        },
-      },
-      series: [
-        {
-          type: "sankey",
-          data: sankeyData.value.nodes,
-          links: sankeyData.value.links,
-          left: sankeyLeft.value,
-          right: sankeyRight.value,
-          top: sankeyTop.value,
-          bottom: sankeyBottom.value,
-          nodeWidth: sankeyNodeWidth.value,
-          nodeGap: sankeyNodeGap.value,
-          nodeAlign: sankeyNodeAlign.value,
-          layoutIterations: sankeyLayoutIterations.value,
-          draggable: true,
-          emphasis: {
-            focus: "adjacency",
-          },
-          lineStyle: {
-            color: "gradient",
-            curveness: 0.5,
-            opacity: isDark.value ? 0.28 : 0.36,
-          },
-          label: {
-            color: getComputedStyle(document.documentElement)
-              .getPropertyValue("--break-text-primary")
-              .trim(),
-            fontSize: sankeyLabelFontSize.value,
-            lineHeight: sankeyLabelLineHeight.value,
-            width: sankeyLabelWidth.value,
-            overflow: sankeyLabelOverflow.value,
-            ellipsis: sankeyLabelOverflow.value === "truncate" ? "..." : undefined,
-          },
-          itemStyle: {
-            borderColor: getComputedStyle(document.documentElement)
-              .getPropertyValue("--break-border")
-              .trim(),
-            borderWidth: 1,
-          },
-        },
-      ],
-    });
-    sankeyChart.off("dblclick");
-    sankeyChart.on("dblclick", (params) => {
-      const node = params.data as Partial<SankeyNode>;
-      if (node.entityType && node.entityKey) {
-        onSelectNode(node as SankeyNode);
+      if (!sankeyChart) {
+        const initStartedAt = relationPerfNow();
+        const init = await loadSankeyECharts();
+        if (!sankeyChartRef.value || activeView.value !== "sankey" || requestId !== renderRequestId) return;
+        sankeyChart = init(sankeyChartRef.value);
+        measureRelationPerf("sankey chart init done", initStartedAt);
       }
-    });
-    sankeyChart.resize();
+      sankeyChart.dispatchAction({ type: "hideTip" });
+      const style = getComputedStyle(document.documentElement);
+      const tooltipBackground = style.getPropertyValue("--break-tooltip-bg").trim();
+      const tooltipBorder = style.getPropertyValue("--break-tooltip-border").trim();
+      const tooltipText = style.getPropertyValue("--break-tooltip-text").trim();
+
+      const setOptionStartedAt = relationPerfNow();
+      sankeyChart.setOption({
+        backgroundColor: getComputedStyle(document.documentElement)
+          .getPropertyValue("--break-bg-primary")
+          .trim(),
+        animation: !isMobile.value,
+        tooltip: {
+          trigger: "item",
+          triggerOn: "mousemove",
+          backgroundColor: tooltipBackground,
+          borderColor: tooltipBorder,
+          borderWidth: 1,
+          textStyle: {
+            color: tooltipText,
+          },
+          formatter: (params: {
+            dataType?: string;
+            name?: string;
+            value?: number;
+            data?: Partial<SankeyNode & SankeyLink>;
+          }) => {
+            const value = params.value ?? params.data?.value ?? 0;
+            if (params.dataType === "edge") {
+              return [
+                `${String(params.data?.source ?? "")} -> ${String(params.data?.target ?? "")}`,
+                `${t("relationView.pathCount")}: ${value}`,
+              ].join("<br>");
+            }
+
+            return [String(params.name ?? params.data?.name ?? ""), `${t("relationView.pathCount")}: ${value}`].join(
+              "<br>"
+            );
+          },
+        },
+        series: [
+          {
+            type: "sankey",
+            data: currentSankeyData.nodes,
+            links: currentSankeyData.links,
+            left: sankeyLeft.value,
+            right: sankeyRight.value,
+            top: sankeyTop.value,
+            bottom: sankeyBottom.value,
+            nodeWidth: sankeyNodeWidth.value,
+            nodeGap: sankeyNodeGap.value,
+            nodeAlign: sankeyNodeAlign.value,
+            layoutIterations: sankeyLayoutIterations.value,
+            draggable: true,
+            emphasis: {
+              focus: "adjacency",
+            },
+            lineStyle: {
+              color: "gradient",
+              curveness: 0.5,
+              opacity: isDark.value ? 0.28 : 0.36,
+            },
+            label: {
+              color: getComputedStyle(document.documentElement)
+                .getPropertyValue("--break-text-primary")
+                .trim(),
+              fontSize: sankeyLabelFontSize.value,
+              lineHeight: sankeyLabelLineHeight.value,
+              width: sankeyLabelWidth.value,
+              overflow: sankeyLabelOverflow.value,
+              ellipsis: sankeyLabelOverflow.value === "truncate" ? "..." : undefined,
+            },
+            itemStyle: {
+              borderColor: getComputedStyle(document.documentElement)
+                .getPropertyValue("--break-border")
+                .trim(),
+              borderWidth: 1,
+            },
+          },
+        ],
+      });
+      measureRelationPerf("sankey setOption done", setOptionStartedAt, {
+        nodes: currentSankeyData.nodes.length,
+        links: currentSankeyData.links.length,
+      });
+      sankeyChart.off("dblclick");
+      sankeyChart.on("dblclick", (params) => {
+        const node = params.data as Partial<SankeyNode>;
+        if (node.entityType && node.entityKey) {
+          onSelectNode(node as SankeyNode);
+        }
+      });
+      if (!isMobile.value) {
+        sankeyChart.resize();
+      }
+      measureRelationPerf("sankey render done", renderStartedAt, {
+        nodes: currentSankeyData.nodes.length,
+        links: currentSankeyData.links.length,
+        attempt,
+      });
+    };
+
+    void applySankeyOption();
   };
 
   const updateSankeyTheme = () => {
@@ -167,12 +212,19 @@ export const createSankeyChartController = ({
   };
 
   const disposeSankeyChart = () => {
+    renderRequestId += 1;
     if (pendingRenderFrame !== null) {
       cancelAnimationFrame(pendingRenderFrame);
       pendingRenderFrame = null;
     }
+    sankeyChart?.dispatchAction({ type: "hideTip" });
     sankeyChart?.dispose();
     sankeyChart = null;
+    sankeyHasData.value = false;
+  };
+
+  const hideSankeyTooltip = () => {
+    sankeyChart?.dispatchAction({ type: "hideTip" });
   };
 
   const resizeSankeyChart = () => {
@@ -186,5 +238,7 @@ export const createSankeyChartController = ({
     updateSankeyTheme,
     setSankeyChartElement,
     sankeyChartRef,
+    hideSankeyTooltip,
+    sankeyHasData,
   };
 };
