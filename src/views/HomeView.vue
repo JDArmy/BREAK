@@ -472,7 +472,7 @@ const termDetailClose = () => {
                     <span class="sidebar-arrow">{{ hideSubRisks[rKey] ? '▶' : '▼' }}</span>
                   </td>
                   <td class="parent-risk-link">
-                    <router-link class="link" :to="'/risks/' + rKey">{{
+                    <router-link class="link" :to="{ name: 'riskDetail', params: { rKey } }">{{
                       $t(`BREAK.risks.${rKey}.title`)
                     }}</router-link>
                   </td>
@@ -491,7 +491,7 @@ const termDetailClose = () => {
                     </svg>
                   </td>
                   <td class="sub-risk-link">
-                    <router-link class="link" :to="'/risks/' + srKey">{{
+                    <router-link class="link" :to="{ name: 'riskDetail', params: { rKey: srKey } }">{{
                       $t(`BREAK.risks.${srKey}.title`)
                     }}</router-link>
                   </td>
@@ -500,7 +500,7 @@ const termDetailClose = () => {
                 </tbody>
               </table>
               <!-- 无子风险时 -->
-              <router-link class="link" v-else :to="'/risks/' + rKey">{{
+              <router-link class="link" v-else :to="{ name: 'riskDetail', params: { rKey } }">{{
                 $t(`BREAK.risks.${rKey}.title`)
               }}</router-link>
             </li>
