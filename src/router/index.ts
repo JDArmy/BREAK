@@ -74,7 +74,11 @@ const router = createRouter({
       redirect: "/",
     },
   ],
-  scrollBehavior(to) {
+  scrollBehavior(to, _from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    }
+
     if (to.hash) {
       return new Promise((resolve) => {
         const tryScroll = (attempts = 0) => {
@@ -91,6 +95,8 @@ const router = createRouter({
         setTimeout(() => tryScroll(), 100);
       });
     }
+
+    return { top: 0 };
   },
 });
 

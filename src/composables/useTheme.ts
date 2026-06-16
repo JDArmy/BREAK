@@ -9,7 +9,7 @@ const THEME_STORAGE_KEY = "break-theme";
 function getInitialTheme(): ThemeMode {
   const saved = localStorage.getItem(THEME_STORAGE_KEY);
   if (saved === "light" || saved === "dark" || saved === "system") return saved;
-  return "system";
+  return "dark";
 }
 
 /** 在 DOM 上应用/移除 dark class */

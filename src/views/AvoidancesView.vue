@@ -96,11 +96,10 @@ const relatedTermKeys = computed(() =>
 );
 
 const openRelationGraph = (aKey: string) => {
-  const relRoute = router.resolve({
+  router.push({
     name: "relation",
     params: { type: "avoidance", key: aKey },
   });
-  window.open(relRoute.href, "_blank", "noopener,noreferrer");
 };
 </script>
 

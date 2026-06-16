@@ -58,11 +58,10 @@ const getRelatedTerms = (rKey: string) =>
   );
 
 const openRelationGraph = (rKey: string) => {
-  const relRoute = router.resolve({
+  router.push({
     name: "relation",
     params: { type: "risk", key: rKey },
   });
-  window.open(relRoute.href, "_blank", "noopener,noreferrer");
 };
 </script>
 

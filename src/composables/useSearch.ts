@@ -244,7 +244,7 @@ export function useSearch() {
         keys: config.keys,
         threshold: 0.4, // 宽松阈值，支持模糊匹配
         includeMatches: true,
-        minMatchCharLength: 2,
+        minMatchCharLength: 1,
       });
     }
 

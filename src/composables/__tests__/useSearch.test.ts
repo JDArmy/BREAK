@@ -245,6 +245,12 @@ describe("useSearch", () => {
   });
 
   describe("中文搜索", () => {
+    it("单字符查询也返回结果", () => {
+      const { search } = useSearch();
+      const result = search("羊");
+      expect(result.risk.length + result.threatActor.length).toBeGreaterThan(0);
+    });
+
     it("按标题搜索风险", () => {
       const { search } = useSearch();
       const result = search("羊毛");

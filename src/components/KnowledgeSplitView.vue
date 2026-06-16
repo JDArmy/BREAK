@@ -31,6 +31,8 @@ const route = useRoute();
 const router = useRouter();
 const { isMobile } = useBreakpoints();
 const query = ref("");
+const mobileListRef = ref<HTMLElement>();
+const mobileListScrollTop = ref(0);
 
 // 移动端两态：list / detail
 const mobileView = ref<"list" | "detail">("list");
@@ -52,6 +54,9 @@ const filteredItems = computed(() => {
 
 const selectItem = (key: string, updateRoute = true) => {
   if (!props.items.some((item) => item.id === key)) return;
+  if (isMobile.value && mobileListRef.value) {
+    mobileListScrollTop.value = mobileListRef.value.scrollTop;
+  }
   emit("select", key);
   // 只在需要时更新路由，避免替换搜索跳转的历史记录
   if (updateRoute) {
@@ -65,12 +70,20 @@ const selectItem = (key: string, updateRoute = true) => {
 
 const backToList = () => {
   mobileView.value = "list";
+  nextTick(() => {
+    requestAnimationFrame(() => {
+      if (mobileListRef.value) {
+        mobileListRef.value.scrollTop = mobileListScrollTop.value;
+      }
+    });
+  });
 };
 
 watch(
   () => props.selectedKey,
   (key) => {
     if (!key) return;
+    if (isMobile.value) return;
     nextTick(() => {
       document
         .querySelector(`[data-knowledge-key="${key}"]`)
@@ -170,7 +183,7 @@ watch(isMobile, (mobile) => {
             :placeholder="searchPlaceholder"
           />
         </div>
-        <div class="knowledge-list">
+        <div ref="mobileListRef" class="knowledge-list">
           <button
             v-for="item in filteredItems"
             :key="item.id"

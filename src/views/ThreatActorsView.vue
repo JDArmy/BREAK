@@ -66,11 +66,10 @@ const relatedTermKeys = computed(() =>
 );
 
 const openRelationGraph = (taKey: string) => {
-  const relRoute = router.resolve({
+  router.push({
     name: "relation",
     params: { type: "threat-actor", key: taKey },
   });
-  window.open(relRoute.href, "_blank", "noopener,noreferrer");
 };
 </script>
 

@@ -77,11 +77,10 @@ const relatedTermKeys = computed(() =>
 );
 
 const openRelationGraph = (atKey: string) => {
-  const relRoute = router.resolve({
+  router.push({
     name: "relation",
     params: { type: "attack-tool", key: atKey },
   });
-  window.open(relRoute.href, "_blank", "noopener,noreferrer");
 };
 </script>
 
