@@ -8,26 +8,49 @@ import "element-plus/es/components/drawer/style/css";
 import "element-plus/theme-chalk/display.css";
 
 import GithubPane from "@/components/GithubPane.vue";
-import SearchDialog from "@/components/SearchDialog.vue";
 import ThemeToggle from "@/components/ThemeToggle.vue";
 import iconTranslate from "@/components/icons/iconTranslate.vue";
 import { ArrowDown, Search, Menu as MenuIcon } from "@element-plus/icons-vue";
 import { useI18n } from "vue-i18n";
 import { languages, setLocale } from "@/i18n";
-import { onMounted, ref } from "vue";
+import { defineAsyncComponent, onMounted, onUnmounted, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import { preloadRelationView } from "@/router";
 import { prefetchAllKnowledgeViews } from "@/composables/useRoutePrefetch";
+
+const loadSearchDialog = () => import("@/components/SearchDialog.vue");
+const SearchDialog = defineAsyncComponent(loadSearchDialog);
 
 const { locale } = useI18n();
 const router = useRouter();
 const route = useRoute();
 const searchOpen = ref(false);
+const searchDialogEnabled = ref(false);
 const mobileMenuOpen = ref(false);
 const shortcutHint =
   typeof navigator !== "undefined" && navigator.platform?.includes("Mac")
     ? "⌘K"
     : "Ctrl+K";
+
+const preloadSearchDialog = () => {
+  searchDialogEnabled.value = true;
+  void loadSearchDialog();
+};
+
+const scheduleDelayedIdle = (callback: () => void, delay: number) => {
+  window.setTimeout(() => {
+    if ("requestIdleCallback" in window) {
+      window.requestIdleCallback(callback, { timeout: 3000 });
+    } else {
+      callback();
+    }
+  }, delay);
+};
+
+const openSearchDialog = () => {
+  preloadSearchDialog();
+  searchOpen.value = true;
+};
 
 const handleLocaleChange = (lang: string) => {
   setLocale(lang);
@@ -78,19 +101,33 @@ const handleKnowledgeMenuVisible = (visible: boolean) => {
   }
 };
 
+const handleGlobalKeydown = (event: KeyboardEvent) => {
+  if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
+    event.preventDefault();
+    if (searchOpen.value) {
+      searchOpen.value = false;
+    } else {
+      openSearchDialog();
+    }
+  }
+};
+
 onMounted(() => {
+  document.addEventListener("keydown", handleGlobalKeydown);
   if (window.innerWidth >= 768) {
+    preloadSearchDialog();
     prefetchAllKnowledgeViews();
     preloadRelationView("network");
     return;
   }
 
   const preload = () => preloadRelationView("sankey");
-  if ("requestIdleCallback" in window) {
-    window.requestIdleCallback(preload, { timeout: 12000 });
-  } else {
-    window.setTimeout(preload, 12000);
-  }
+  scheduleDelayedIdle(preload, 12000);
+  scheduleDelayedIdle(preloadSearchDialog, 18000);
+});
+
+onUnmounted(() => {
+  document.removeEventListener("keydown", handleGlobalKeydown);
 });
 
 const isKnowledgeActive = (fullPath: string) =>
@@ -133,7 +170,7 @@ const getActiveIndex = (fullPath: string) => {
       {{ $t("BREAK.name") }}
     </h3>
     <div class="mobile-nav-right">
-      <div class="mobile-search" @click="searchOpen = true">
+      <div class="mobile-search" @click="openSearchDialog">
         <el-icon><Search /></el-icon>
       </div>
       <div class="mobile-hamburger" @click="handleMobileMenuOpen">
@@ -261,7 +298,7 @@ const getActiveIndex = (fullPath: string) => {
     </div>
 
     <div class="flex-grow">
-      <div class="search-trigger" @click="searchOpen = true">
+      <div class="search-trigger" @click="openSearchDialog">
         <el-icon><Search /></el-icon>
         <span class="search-placeholder">{{ $t("search.placeholder") }}</span>
         <span class="search-shortcut">{{ shortcutHint }}</span>
@@ -371,7 +408,7 @@ const getActiveIndex = (fullPath: string) => {
 
   </el-menu>
 
-  <SearchDialog v-model="searchOpen" />
+  <SearchDialog v-if="searchDialogEnabled" v-model="searchOpen" />
 </template>
 
 <style scoped>

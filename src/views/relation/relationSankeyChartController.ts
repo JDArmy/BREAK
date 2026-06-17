@@ -248,7 +248,15 @@ export const createSankeyChartController = ({
       }
     };
 
-    void applySankeyOption();
+    if (isMobile.value && !sankeyChart) {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          void applySankeyOption();
+        });
+      });
+    } else {
+      void applySankeyOption();
+    }
   };
 
   const updateSankeyTheme = () => {
