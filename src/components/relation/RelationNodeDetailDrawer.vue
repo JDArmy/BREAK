@@ -20,6 +20,10 @@ interface RelationSummary {
   otherNodeType: string;
   otherNodeTitle: string;
   sourceFields: string[];
+  evidenceLabel: string;
+  explanation: string;
+  impactHint: string;
+  qualityFlags: string[];
 }
 
 interface RootRelationSummary {
@@ -27,6 +31,10 @@ interface RootRelationSummary {
   text: string;
   directness: string;
   sourceFields: string[];
+  evidenceLabel: string;
+  explanation: string;
+  impactHint: string;
+  qualityFlags: string[];
 }
 
 interface PathNodeSummary {
@@ -58,6 +66,25 @@ interface RootPreviewSummary {
   groupedCounts: Record<string, number>;
 }
 
+interface AttackPathExplanation {
+  pathKey: string;
+  threatActorId?: string;
+  attackToolId?: string;
+  riskId: string;
+  avoidanceId?: string;
+  summary: string;
+  defensiveFocus: string[];
+  qualityFlags: string[];
+  steps: Array<{
+    fromId: string;
+    toId: string;
+    relationType: string;
+    sourceFields: string[];
+    attackIntent: string;
+    defensiveMeaning: string;
+  }>;
+}
+
 const props = defineProps<{
   modelValue: boolean;
   selectedNetworkNode: DetailNode | null;
@@ -70,6 +97,7 @@ const props = defineProps<{
   selectedNodeRootPath: RootPathSummary | null;
   selectedNodeAttackPathSummary: string[];
   selectedNodeAttackPathDescription: string;
+  selectedNodeAttackPathExplanations: AttackPathExplanation[];
   selectedNodeRootPreview: RootPreviewSummary | null;
   isCurrentNodeRoot: boolean;
   selectedNetworkRelations: RelationSummary[];
@@ -127,6 +155,7 @@ const drawerVisible = computed({
         :selected-node-root-path="selectedNodeRootPath"
         :selected-node-attack-path-summary="selectedNodeAttackPathSummary"
         :selected-node-attack-path-description="selectedNodeAttackPathDescription"
+        :selected-node-attack-path-explanations="selectedNodeAttackPathExplanations"
         :selected-node-root-preview="selectedNodeRootPreview"
         :rel-key="relKey"
         :get-node-type-title="getNodeTypeTitle"

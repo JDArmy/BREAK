@@ -142,6 +142,7 @@ export default defineComponent({
       :selected-node-root-path="selectedNodeRootPath"
       :selected-node-attack-path-summary="selectedNodeAttackPathSummary"
       :selected-node-attack-path-description="selectedNodeAttackPathDescription"
+      :selected-node-attack-path-explanations="selectedNodeAttackPathExplanations"
       :selected-node-root-preview="selectedNodeRootPreview"
       :selected-network-relations="selectedNetworkRelations"
       :rel-key="relKey"

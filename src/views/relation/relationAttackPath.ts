@@ -5,6 +5,7 @@ import {
   isRelationEntityType,
   RelationType,
   type AttackPath,
+  type AttackPathExplanation,
   type Node,
 } from "@/views/relation/relationTypes";
 
@@ -44,6 +45,126 @@ export const createRelationAttackPathData = ({
       case RelationType.term:
         return "";
     }
+  };
+
+  const buildPathKey = (path: AttackPath) =>
+    [
+      path.threatActorKey ? `${RelationType.threatActor}:${path.threatActorKey}` : "",
+      path.attackToolKey ? `${RelationType.attackTool}:${path.attackToolKey}` : "",
+      `${RelationType.risk}:${path.riskKey}`,
+      path.avoidanceKey ? `${RelationType.avoidance}:${path.avoidanceKey}` : "",
+    ]
+      .filter(Boolean)
+      .join("->");
+
+  const hasPathNode = (path: AttackPath, node: Node) => {
+    if (node.type === RelationType.threatActor) return path.threatActorKey === node.id;
+    if (node.type === RelationType.attackTool) return path.attackToolKey === node.id;
+    if (node.type === RelationType.risk) return path.riskKey === node.id;
+    if (node.type === RelationType.avoidance) return path.avoidanceKey === node.id;
+    return false;
+  };
+
+  const getToolRiskFields = (attackToolKey: string, riskKey: string) => {
+    const attackTool = BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools];
+    const fields: string[] = [];
+    if (attackTool.directCauseRisks.includes(riskKey)) fields.push("AttackTool.directCauseRisks");
+    if (attackTool.indirectSupportRisks.includes(riskKey)) fields.push("AttackTool.indirectSupportRisks");
+    return fields;
+  };
+
+  const getThreatActorToolFields = (threatActorKey: string, attackToolKey: string) => {
+    const threatActor = BREAK.threatActors[threatActorKey as keyof typeof BREAK.threatActors];
+    const fields: string[] = [];
+    if (threatActor.useAttackTools.includes(attackToolKey)) fields.push("ThreatActor.useAttackTools");
+    if (threatActor.buildAttackTools.includes(attackToolKey)) fields.push("ThreatActor.buildAttackTools");
+    return fields;
+  };
+
+  const getThreatActorRiskFields = (threatActorKey: string, riskKey: string) => {
+    const threatActor = BREAK.threatActors[threatActorKey as keyof typeof BREAK.threatActors];
+    const fields: string[] = [];
+    if (threatActor.directCauseRisks.includes(riskKey)) fields.push("ThreatActor.directCauseRisks");
+    if (threatActor.indirectSupportRisks.includes(riskKey)) fields.push("ThreatActor.indirectSupportRisks");
+    return fields;
+  };
+
+  const explainAttackPath = (path: AttackPath): AttackPathExplanation => {
+    const steps: AttackPathExplanation["steps"] = [];
+    const qualityFlags: string[] = [];
+    const defensiveFocus: string[] = [];
+
+    if (path.threatActorKey && path.attackToolKey) {
+      const sourceFields = getThreatActorToolFields(path.threatActorKey, path.attackToolKey);
+      steps.push({
+        fromId: path.threatActorKey,
+        toId: path.attackToolKey,
+        relationType: sourceFields.includes("ThreatActor.buildAttackTools")
+          ? t("relationLine.buildAttackTool")
+          : t("relationLine.useAttackTool"),
+        sourceFields,
+        attackIntent: t("relationView.attackPathIntent.actorToTool"),
+        defensiveMeaning: t("relationView.attackPathDefense.actorToTool"),
+      });
+      if (sourceFields.length === 0) qualityFlags.push(t("relationView.qualityFlagMissingSource"));
+    }
+
+    if (path.attackToolKey) {
+      const sourceFields = getToolRiskFields(path.attackToolKey, path.riskKey);
+      steps.push({
+        fromId: path.attackToolKey,
+        toId: path.riskKey,
+        relationType: sourceFields.includes("AttackTool.directCauseRisks")
+          ? t("relationLine.directCauseRisk")
+          : t("relationLine.indirectSupportRisk"),
+        sourceFields,
+        attackIntent: t("relationView.attackPathIntent.toolToRisk"),
+        defensiveMeaning: t("relationView.attackPathDefense.toolToRisk"),
+      });
+      if (sourceFields.length === 0) qualityFlags.push(t("relationView.qualityFlagMissingSource"));
+    } else if (path.threatActorKey) {
+      const sourceFields = getThreatActorRiskFields(path.threatActorKey, path.riskKey);
+      steps.push({
+        fromId: path.threatActorKey,
+        toId: path.riskKey,
+        relationType: sourceFields.includes("ThreatActor.directCauseRisks")
+          ? t("relationLine.directCauseRisk")
+          : t("relationLine.indirectSupportRisk"),
+        sourceFields,
+        attackIntent: t("relationView.attackPathIntent.actorToRisk"),
+        defensiveMeaning: t("relationView.attackPathDefense.actorToRisk"),
+      });
+      if (sourceFields.length === 0) qualityFlags.push(t("relationView.qualityFlagMissingSource"));
+    }
+
+    if (path.avoidanceKey) {
+      steps.push({
+        fromId: path.riskKey,
+        toId: path.avoidanceKey,
+        relationType: t("relationLine.avoidanceMeans"),
+        sourceFields: ["Risk.avoidances"],
+        attackIntent: t("relationView.attackPathIntent.riskToAvoidance"),
+        defensiveMeaning: t("relationView.attackPathDefense.riskToAvoidance"),
+      });
+      defensiveFocus.push(path.avoidanceKey);
+    } else {
+      qualityFlags.push(t("relationView.qualityFlagMissingAvoidance"));
+    }
+
+    return {
+      pathKey: buildPathKey(path),
+      threatActorId: path.threatActorKey,
+      attackToolId: path.attackToolKey,
+      riskId: path.riskKey,
+      avoidanceId: path.avoidanceKey,
+      summary: t("relationView.attackPathExplanationSummary", {
+        count: steps.length,
+        risk: path.riskKey,
+      }),
+      defensiveFocus,
+      qualityFlags,
+      steps,
+    };
   };
 
   const matchesSelectedEntity = (path: AttackPath) => {
@@ -338,6 +459,22 @@ export const createRelationAttackPathData = ({
     return describeAttackPathRole(node.type);
   });
 
+  const selectedNodeAttackPathExplanations = computed(() => {
+    const node = selectedNetworkNode.value;
+    if (!node || !isRelationEntityType(node.type) || node.type === RelationType.term) return [];
+
+    const seenPathKeys = new Set<string>();
+    return buildAttackPaths()
+      .filter((path) => hasPathNode(path, node))
+      .map(explainAttackPath)
+      .filter((path) => {
+        if (seenPathKeys.has(path.pathKey)) return false;
+        seenPathKeys.add(path.pathKey);
+        return true;
+      })
+      .slice(0, 3);
+  });
+
   const sankeyData = computed(() => {
     return buildSankeyData();
   });
@@ -361,6 +498,7 @@ export const createRelationAttackPathData = ({
     sankeyChartHeight,
     sankeyData,
     selectedNodeAttackPathDescription,
+    selectedNodeAttackPathExplanations,
     selectedNodeAttackPathSummary,
   };
 };

@@ -24,6 +24,13 @@ describe("relationGraphInsights", () => {
     { from: "RISK", text: "规避手段", to: "AVOID" },
     { from: "RISK", text: "关联术语", to: "TERM" },
   ];
+  const explainRelation = (line: Line) => ({
+    evidenceLevel: line.text === "直接导致风险" ? "direct" : "indirect",
+    explanation: `explain:${line.text}`,
+    impactHint: `impact:${line.text}`,
+    qualityFlags: [],
+  });
+  const formatEvidenceLevel = (level: string) => `evidence:${level}`;
 
   const createInsights = (selectedNodeId: string) =>
     createRelationGraphInsights({
@@ -37,6 +44,8 @@ describe("relationGraphInsights", () => {
       getRelationPriority: (lineText) => relationPriority[lineText] ?? 99,
       isDirectRelationLine: (lineText) => lineText === "直接导致风险",
       getRelationSourceFields: (line) => [`source:${line.text}`],
+      explainRelation,
+      formatEvidenceLevel,
     });
 
   it("builds a prioritized root path explanation through a multi-hop graph", () => {
@@ -137,6 +146,8 @@ describe("relationGraphInsights", () => {
       getRelationPriority: (lineText) => relationPriority[lineText] ?? 99,
       isDirectRelationLine: (lineText) => lineText === "直接导致风险",
       getRelationSourceFields: (line) => [`source:${line.text}`],
+      explainRelation,
+      formatEvidenceLevel,
     });
 
     expect(insights.rootNodeRelations.value).toEqual([
@@ -144,6 +155,11 @@ describe("relationGraphInsights", () => {
         text: "直接导致风险",
         direction: "relationView.rootToNode",
         directness: "relationView.direct",
+        evidenceLevel: "direct",
+        evidenceLabel: "evidence:direct",
+        explanation: "explain:直接导致风险",
+        impactHint: "impact:直接导致风险",
+        qualityFlags: [],
         sourceFields: ["source:直接导致风险"],
         priority: 1,
       },

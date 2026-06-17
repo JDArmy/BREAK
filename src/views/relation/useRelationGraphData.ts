@@ -1,6 +1,7 @@
 import { computed, reactive, ref, type Ref } from "vue";
 import BREAK from "@/BREAK";
 import { createRelationAttackPathData } from "@/views/relation/relationAttackPath";
+import { createRelationExplanationHelpers } from "@/views/relation/relationExplanation";
 import { createRelationGraphBuilder } from "@/views/relation/relationGraphBuilder";
 import { createRelationGraphInsights } from "@/views/relation/relationGraphInsights";
 import {
@@ -154,63 +155,13 @@ export const useRelationGraphData = ({
   const getNodeTypeTitle = (type: string) =>
     isRelationEntityType(type) ? RelationTypeMapping[type].title : type;
 
-  const getRelationSourceFields = (line: Line, sourceType?: string, targetType?: string) => {
-    const fromType = sourceType ?? nodes.find((node) => node.id === line.from)?.type;
-    const toType = targetType ?? nodes.find((node) => node.id === line.to)?.type;
-    const fields = new Set<string>();
-
-    if (line.text === t("relationLine.avoidanceMeans")) {
-      if (fromType === RelationType.risk) fields.add("Risk.avoidances");
-      if (fromType === RelationType.attackTool || toType === RelationType.attackTool) fields.add("AttackTool.avoidances");
-    }
-    if (line.text === t("relationLine.directCauseRisk")) {
-      if (fromType === RelationType.attackTool) fields.add("AttackTool.directCauseRisks");
-      if (fromType === RelationType.threatActor) fields.add("ThreatActor.directCauseRisks");
-    }
-    if (line.text === t("relationLine.indirectSupportRisk")) {
-      if (fromType === RelationType.attackTool) fields.add("AttackTool.indirectSupportRisks");
-      if (fromType === RelationType.threatActor) fields.add("ThreatActor.indirectSupportRisks");
-    }
-    if (line.text === t("relationLine.buildAttackTool")) fields.add("ThreatActor.buildAttackTools");
-    if (line.text === t("relationLine.useAttackTool")) fields.add("ThreatActor.useAttackTools");
-    if (line.text === t("relationLine.relatedTerm")) {
-      if (fromType === RelationType.term && toType === RelationType.risk) fields.add("Term.relatedRisks");
-      if (fromType === RelationType.term && toType === RelationType.avoidance) fields.add("Term.relatedAvoidances");
-      if (fromType === RelationType.term && toType === RelationType.attackTool) fields.add("Term.relatedAttackTools");
-      if (fromType === RelationType.term && toType === RelationType.threatActor) fields.add("Term.relatedThreatActors");
-    }
-    if (line.text === t("relationLine.attackToolMaker")) fields.add("ThreatActor.buildAttackTools");
-    if (line.text === t("relationLine.causeRisk")) {
-      if (fromType === RelationType.attackTool) {
-        fields.add("AttackTool.directCauseRisks");
-        fields.add("AttackTool.indirectSupportRisks");
-      }
-      if (fromType === RelationType.threatActor) {
-        fields.add("ThreatActor.directCauseRisks");
-        fields.add("ThreatActor.indirectSupportRisks");
-      }
-    }
-    if (line.text === t("relationLine.subRisk")) fields.add("Risk child ID");
-    if (line.text === t("relationLine.subAvoidance")) fields.add("Avoidance child ID");
-    if (line.text === t("relationLine.subAttackTool")) fields.add("AttackTool child ID");
-    if (line.text === t("relationLine.subThreatActor")) fields.add("ThreatActor child ID");
-
-    return [...fields];
-  };
-
-  const getRelationPriority = (lineText: string) => {
-    if (lineText === t("relationLine.directCauseRisk")) return 0;
-    if (lineText === t("relationLine.buildAttackTool")) return 1;
-    if (lineText === t("relationLine.useAttackTool")) return 2;
-    if (lineText === t("relationLine.avoidanceMeans")) return 3;
-    if (lineText === t("relationLine.indirectSupportRisk")) return 4;
-    return 5;
-  };
-
-  const isDirectRelationLine = (lineText: string) =>
-    [t("relationLine.directCauseRisk"), t("relationLine.buildAttackTool"), t("relationLine.useAttackTool")].includes(
-      lineText
-    );
+  const {
+    explainRelation,
+    formatEvidenceLevel,
+    getRelationPriority,
+    getRelationSourceFields,
+    isDirectRelationLine,
+  } = createRelationExplanationHelpers({ t, nodes });
 
   const wrapLabelText = (text: string, maxLineLength = 10) => {
     const [id, title = ""] = text.replace(/<br\s*\/?>/gi, "\n").split("\n");
@@ -290,12 +241,15 @@ export const useRelationGraphData = ({
     getRelationPriority,
     isDirectRelationLine,
     getRelationSourceFields,
+    explainRelation,
+    formatEvidenceLevel,
   });
 
   const {
     sankeyChartHeight,
     sankeyData,
     selectedNodeAttackPathDescription,
+    selectedNodeAttackPathExplanations,
     selectedNodeAttackPathSummary,
   } = createRelationAttackPathData({
     t,
@@ -365,6 +319,7 @@ export const useRelationGraphData = ({
     selectedNetworkRelationCounts,
     selectedNetworkRelations,
     selectedNodeAttackPathDescription,
+    selectedNodeAttackPathExplanations,
     selectedNodeAttackPathSummary,
     selectedNodePathRelationKeys,
     selectedNodeRootPath,

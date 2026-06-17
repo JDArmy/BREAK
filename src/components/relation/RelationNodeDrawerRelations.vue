@@ -11,6 +11,10 @@ interface RelationSummary {
   otherNodeType: string;
   otherNodeTitle: string;
   sourceFields: string[];
+  evidenceLabel: string;
+  explanation: string;
+  impactHint: string;
+  qualityFlags: string[];
 }
 
 const props = defineProps<{
@@ -66,9 +70,16 @@ const relationRowClassName = ({ row }: { row: { isActive: boolean } }) =>
       :row-class-name="relationRowClassName"
       class="node-relation-table"
     >
-      <el-table-column prop="relationSummary" :label="t('relationView.allRelations')" min-width="34%" />
-      <el-table-column prop="directness" :label="t('relationView.csvHeaderDirectness')" width="64" />
-      <el-table-column :label="t('relationView.csvHeaderTargetTitle')" min-width="44%">
+      <el-table-column prop="relationSummary" :label="t('relationView.allRelations')" min-width="26%" />
+      <el-table-column :label="t('relationView.csvHeaderDirectness')" width="88">
+        <template #default="{ row }">
+          <div class="node-relation-badges">
+            <span class="node-relation-badge">{{ row.directness }}</span>
+            <span class="node-relation-badge">{{ row.evidenceLabel }}</span>
+          </div>
+        </template>
+      </el-table-column>
+      <el-table-column :label="t('relationView.csvHeaderTargetTitle')" min-width="30%">
         <template #default="{ row }">
           <button
             type="button"
@@ -79,6 +90,20 @@ const relationRowClassName = ({ row }: { row: { isActive: boolean } }) =>
             <span class="node-relation-link-id">{{ row.otherNodeId }}</span>
             <span>{{ row.otherNodeTitle }}</span>
           </button>
+        </template>
+      </el-table-column>
+      <el-table-column :label="t('relationView.explanation')" min-width="34%">
+        <template #default="{ row }">
+          <div class="node-relation-explain">
+            <div>{{ row.explanation }}</div>
+            <div class="node-relation-impact">{{ row.impactHint }}</div>
+            <div v-if="row.sourceFields.length" class="node-relation-fields">
+              {{ t("relationView.sourceFields") }}: {{ row.sourceFields.join(", ") }}
+            </div>
+            <div v-if="row.qualityFlags.length" class="node-relation-fields">
+              {{ row.qualityFlags.join(", ") }}
+            </div>
+          </div>
         </template>
       </el-table-column>
     </el-table>
@@ -165,6 +190,39 @@ const relationRowClassName = ({ row }: { row: { isActive: boolean } }) =>
 
 .node-relation-link-id {
   font-weight: 600;
+}
+
+.node-relation-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+}
+
+.node-relation-badge {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  padding: 2px 6px;
+  border: 1px solid var(--break-border);
+  border-radius: 999px;
+  color: var(--break-text-secondary);
+  font-size: 11px;
+  line-height: 1.2;
+  white-space: normal;
+}
+
+.node-relation-explain {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--break-text-primary);
+}
+
+.node-relation-impact,
+.node-relation-fields {
+  color: var(--break-text-muted);
+  overflow-wrap: anywhere;
 }
 
 @media (max-width: 767px) {

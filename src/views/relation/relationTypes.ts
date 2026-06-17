@@ -25,6 +25,20 @@ export interface Line {
   to: string;
 }
 
+export type RelationEvidenceLevel = "direct" | "indirect" | "inferred" | "review";
+
+export interface RelationExplanation {
+  relationKey: string;
+  fromId: string;
+  toId: string;
+  relationType: string;
+  sourceFields: string[];
+  evidenceLevel: RelationEvidenceLevel;
+  explanation: string;
+  impactHint: string;
+  qualityFlags: string[];
+}
+
 export interface RelationLegendItem {
   color: string;
   label: string;
@@ -89,6 +103,27 @@ export interface AttackPath {
   attackToolKey?: string;
   riskKey: string;
   avoidanceKey?: string;
+}
+
+export interface AttackPathExplanationStep {
+  fromId: string;
+  toId: string;
+  relationType: string;
+  sourceFields: string[];
+  attackIntent: string;
+  defensiveMeaning: string;
+}
+
+export interface AttackPathExplanation {
+  pathKey: string;
+  threatActorId?: string;
+  attackToolId?: string;
+  riskId: string;
+  avoidanceId?: string;
+  summary: string;
+  defensiveFocus: string[];
+  qualityFlags: string[];
+  steps: AttackPathExplanationStep[];
 }
 
 export const getColorFromCSS = (varName: string): string => {

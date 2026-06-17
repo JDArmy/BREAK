@@ -113,6 +113,54 @@
     "previewRelationCount": "Relations",
     "allRelations": "All Relations",
     "sourceFields": "Source Fields",
+    "explanation": "Explanation",
+    "defensiveFocus": "Defensive Focus",
+    "qualityFlagMissingSource": "Missing explicit source field",
+    "qualityFlagReview": "Review relation semantics",
+    "qualityFlagMissingAvoidance": "Missing avoidance coverage",
+    "evidenceLevel": {
+      "direct": "Direct Evidence",
+      "indirect": "Indirect Evidence",
+      "inferred": "Inferred",
+      "review": "Review"
+    },
+    "relationExplanation": {
+      "riskAvoidance": "This relation means the risk explicitly references an avoidance measure that can mitigate or reduce it.",
+      "toolAvoidance": "This relation means the attack tool explicitly references an avoidance measure that can limit or counter it.",
+      "avoidance": "This relation carries a defensive or mitigation meaning between the current entity and an avoidance measure.",
+      "directCauseRisk": "This relation means the source entity is marked as directly causing the target risk.",
+      "indirectSupportRisk": "This relation means the source entity indirectly supports or relates to the target risk.",
+      "buildAttackTool": "This relation means the threat actor can build, maintain, or develop the attack tool.",
+      "useAttackTool": "This relation means the threat actor uses the attack tool in related activity.",
+      "causeRisk": "This relation summarizes direct and indirect risk-causation fields for quick exposure review.",
+      "relatedTerm": "This relation comes from term-related entity fields and explains terminology context.",
+      "subEntity": "This relation comes from child entity IDs and explains parent-child ownership.",
+      "attackToolMaker": "This relation traces the attack tool back to its builder.",
+      "review": "This relation does not yet have a specific explanation template; review it with the source fields."
+    },
+    "relationImpact": {
+      "avoidance": "Analysis value: candidate defensive coverage or blocking point.",
+      "directCauseRisk": "Analysis value: prioritize this direct source-to-risk chain.",
+      "indirectSupportRisk": "Analysis value: useful context, but it should not be treated as direct causality.",
+      "threatActorTool": "Analysis value: helps explain actor capability and operating style.",
+      "causeRisk": "Analysis value: useful for finding risk sources, but direct and indirect fields should be distinguished.",
+      "relatedTerm": "Analysis value: improves semantic search and term explanation.",
+      "subEntity": "Analysis value: expands the detailed scenarios or techniques under a parent entity.",
+      "review": "Analysis value: this relation needs further human or AI judgment."
+    },
+    "attackPathExplanationSummary": "This path contains {count} reasoning steps, with {risk} as the core risk.",
+    "attackPathIntent": {
+      "actorToTool": "Attack intent: the threat actor gains executable capability through tool use or development.",
+      "toolToRisk": "Attack intent: the attack tool drives the risk, either directly or indirectly.",
+      "actorToRisk": "Attack intent: the threat actor has a direct or indirect association with the risk.",
+      "riskToAvoidance": "Attack intent: after the risk node, mitigation depends on an avoidance measure."
+    },
+    "attackPathDefense": {
+      "actorToTool": "Defensive meaning: monitor actor tooling, usage traces, and capability-building signals.",
+      "toolToRisk": "Defensive meaning: build detection or controls around tool behavior, triggers, and risk outcomes.",
+      "actorToRisk": "Defensive meaning: prioritize reviewing the evidence chain between the actor and the risk.",
+      "riskToAvoidance": "Defensive meaning: this avoidance measure is the direct mitigation candidate for the path."
+    },
     "pathCount": "Related Path Count",
     "moreRelations": "{count} more relations not shown"
   },

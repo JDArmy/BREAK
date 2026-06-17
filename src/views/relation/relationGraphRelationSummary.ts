@@ -62,6 +62,11 @@ export const createRelationGraphRelationSummary = ({
         directness: baseOptions.isDirectRelationLine(line.text)
           ? baseOptions.t("relationView.direct")
           : baseOptions.t("relationView.indirect"),
+        evidenceLevel: baseOptions.explainRelation(line).evidenceLevel,
+        evidenceLabel: baseOptions.formatEvidenceLevel(baseOptions.explainRelation(line).evidenceLevel),
+        explanation: baseOptions.explainRelation(line).explanation,
+        impactHint: baseOptions.explainRelation(line).impactHint,
+        qualityFlags: baseOptions.explainRelation(line).qualityFlags,
         sourceFields: baseOptions.getRelationSourceFields(line),
         priority: baseOptions.getRelationPriority(line.text),
       }))

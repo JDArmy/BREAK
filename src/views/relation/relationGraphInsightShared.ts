@@ -11,6 +11,13 @@ export interface RelationGraphInsightBaseOptions {
   getRelationPriority: (lineText: string) => number;
   isDirectRelationLine: (lineText: string) => boolean;
   getRelationSourceFields: (line: Line) => string[];
+  explainRelation: (line: Line) => {
+    evidenceLevel: string;
+    explanation: string;
+    impactHint: string;
+    qualityFlags: string[];
+  };
+  formatEvidenceLevel: (level: string) => string;
 }
 
 export const createRelationGraphInsightHelpers = ({
@@ -21,18 +28,26 @@ export const createRelationGraphInsightHelpers = ({
   getRelationPriority,
   isDirectRelationLine,
   getRelationSourceFields,
+  explainRelation,
+  formatEvidenceLevel,
 }: RelationGraphInsightBaseOptions) => {
   const findNodeById = (id: string) => nodes.find((node) => node.id === id);
 
   const buildRelationSummary = (line: Line, nodeId: string) => {
     const otherNodeId = line.from === nodeId ? line.to : line.from;
     const otherNode = findNodeById(otherNodeId);
+    const explanation = explainRelation(line);
     return {
       relationKey: `${line.from}::${line.text}::${line.to}`,
       direction: line.from === nodeId ? t("relationView.outgoing") : t("relationView.incoming"),
       text: line.text,
       priority: getRelationPriority(line.text),
       directness: isDirectRelationLine(line.text) ? t("relationView.direct") : t("relationView.indirect"),
+      evidenceLevel: explanation.evidenceLevel,
+      evidenceLabel: formatEvidenceLevel(explanation.evidenceLevel),
+      explanation: explanation.explanation,
+      impactHint: explanation.impactHint,
+      qualityFlags: explanation.qualityFlags,
       otherNodeId,
       otherNodeType: otherNode ? getNodeTypeTitle(otherNode.type) : "",
       otherNodeTitle:

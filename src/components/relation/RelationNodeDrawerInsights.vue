@@ -6,6 +6,10 @@ interface RootRelationSummary {
   text: string;
   directness: string;
   sourceFields: string[];
+  evidenceLabel: string;
+  explanation: string;
+  impactHint: string;
+  qualityFlags: string[];
 }
 
 interface PathNodeSummary {
@@ -37,11 +41,31 @@ interface RootPreviewSummary {
   groupedCounts: Record<string, number>;
 }
 
+interface AttackPathExplanation {
+  pathKey: string;
+  threatActorId?: string;
+  attackToolId?: string;
+  riskId: string;
+  avoidanceId?: string;
+  summary: string;
+  defensiveFocus: string[];
+  qualityFlags: string[];
+  steps: Array<{
+    fromId: string;
+    toId: string;
+    relationType: string;
+    sourceFields: string[];
+    attackIntent: string;
+    defensiveMeaning: string;
+  }>;
+}
+
 defineProps<{
   rootNodeRelations: RootRelationSummary[];
   selectedNodeRootPath: RootPathSummary | null;
   selectedNodeAttackPathSummary: string[];
   selectedNodeAttackPathDescription: string;
+  selectedNodeAttackPathExplanations: AttackPathExplanation[];
   selectedNodeRootPreview: RootPreviewSummary | null;
   relKey: string;
   getNodeTypeTitle: (type: string) => string;
@@ -74,6 +98,8 @@ const { t } = useI18n();
         <div v-if="relation.sourceFields.length" class="node-relation-fields">
           {{ t("relationView.sourceFields") }}: {{ relation.sourceFields.join(", ") }}
         </div>
+        <div class="node-relation-fields">{{ relation.explanation }}</div>
+        <div class="node-relation-fields">{{ relation.impactHint }}</div>
       </div>
     </div>
   </div>
@@ -164,6 +190,37 @@ const { t } = useI18n();
       </div>
       <div class="node-role-list">
         <span v-for="role in selectedNodeAttackPathSummary" :key="role" class="node-role-chip">{{ role }}</span>
+      </div>
+      <div
+        v-for="path in selectedNodeAttackPathExplanations"
+        :key="path.pathKey"
+        class="node-attack-path-card"
+      >
+        <div class="node-path-summary">{{ path.summary }}</div>
+        <div class="node-attack-path-chain">
+          <div
+            v-for="(step, index) in path.steps"
+            :key="`${path.pathKey}-${step.fromId}-${step.toId}-${index}`"
+            class="node-attack-path-step"
+          >
+            <div class="node-attack-path-edge">
+              <span class="node-path-node-id">{{ step.fromId }}</span>
+              <span>{{ step.relationType }}</span>
+              <span class="node-path-node-id">{{ step.toId }}</span>
+            </div>
+            <div class="node-relation-fields">{{ step.attackIntent }}</div>
+            <div class="node-relation-fields">{{ step.defensiveMeaning }}</div>
+            <div v-if="step.sourceFields.length" class="node-relation-fields">
+              {{ t("relationView.sourceFields") }}: {{ step.sourceFields.join(", ") }}
+            </div>
+          </div>
+        </div>
+        <div v-if="path.defensiveFocus.length" class="node-relation-fields">
+          {{ t("relationView.defensiveFocus") }}: {{ path.defensiveFocus.join(", ") }}
+        </div>
+        <div v-if="path.qualityFlags.length" class="node-relation-fields">
+          {{ path.qualityFlags.join(", ") }}
+        </div>
       </div>
     </div>
   </div>
@@ -356,6 +413,35 @@ const { t } = useI18n();
 .node-detail-counts {
   color: var(--break-text-muted);
   font-size: 12px;
+}
+
+.node-attack-path-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 10px;
+  border-top: 1px solid var(--break-border);
+}
+
+.node-attack-path-chain {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.node-attack-path-step {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.node-attack-path-edge {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .node-attack-role-panel {

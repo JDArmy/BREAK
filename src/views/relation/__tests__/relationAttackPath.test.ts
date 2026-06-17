@@ -98,6 +98,24 @@ describe("relationAttackPath", () => {
 
     expect(attackPath.selectedNodeAttackPathSummary.value).toEqual(["relationView.pathRoleRisk"]);
     expect(attackPath.selectedNodeAttackPathDescription.value).toBe("relationView.pathRoleRiskDesc");
+    expect(attackPath.selectedNodeAttackPathExplanations.value[0]).toEqual(
+      expect.objectContaining({
+        riskId: "R0005-001",
+        summary: "relationView.attackPathExplanationSummary",
+        steps: expect.arrayContaining([
+          expect.objectContaining({
+            relationType: "relationLine.directCauseRisk",
+            sourceFields: ["AttackTool.directCauseRisks"],
+            attackIntent: "relationView.attackPathIntent.toolToRisk",
+          }),
+          expect.objectContaining({
+            relationType: "relationLine.avoidanceMeans",
+            sourceFields: ["Risk.avoidances"],
+            defensiveMeaning: "relationView.attackPathDefense.riskToAvoidance",
+          }),
+        ]),
+      })
+    );
   });
 
   it("returns no attack-path role for terms and expands mobile Sankey height for dense layers", () => {

@@ -16,6 +16,13 @@ interface CreateRelationGraphInsightsOptions {
   getRelationPriority: (lineText: string) => number;
   isDirectRelationLine: (lineText: string) => boolean;
   getRelationSourceFields: (line: Line) => string[];
+  explainRelation: (line: Line) => {
+    evidenceLevel: string;
+    explanation: string;
+    impactHint: string;
+    qualityFlags: string[];
+  };
+  formatEvidenceLevel: (level: string) => string;
 }
 
 export const createRelationGraphInsights = ({
@@ -29,6 +36,8 @@ export const createRelationGraphInsights = ({
   getRelationPriority,
   isDirectRelationLine,
   getRelationSourceFields,
+  explainRelation,
+  formatEvidenceLevel,
 }: CreateRelationGraphInsightsOptions) => {
   const {
     buildNodeSummary,
@@ -51,6 +60,8 @@ export const createRelationGraphInsights = ({
     getRelationPriority,
     isDirectRelationLine,
     getRelationSourceFields,
+    explainRelation,
+    formatEvidenceLevel,
   });
 
   const {

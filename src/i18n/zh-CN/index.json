@@ -113,6 +113,54 @@
     "previewRelationCount": "关系数",
     "allRelations": "全部关系",
     "sourceFields": "来源字段",
+    "explanation": "解释",
+    "defensiveFocus": "防御焦点",
+    "qualityFlagMissingSource": "缺少明确来源字段",
+    "qualityFlagReview": "建议复核关系语义",
+    "qualityFlagMissingAvoidance": "缺少规避措施覆盖",
+    "evidenceLevel": {
+      "direct": "直接证据",
+      "indirect": "间接证据",
+      "inferred": "推导关系",
+      "review": "待复核"
+    },
+    "relationExplanation": {
+      "riskAvoidance": "该关系表示风险实体显式关联了可用于缓解或规避该风险的手段。",
+      "toolAvoidance": "该关系表示攻击工具显式关联了可限制、削弱或应对该工具的规避手段。",
+      "avoidance": "该关系表示当前实体与规避手段之间存在防御或缓解语义。",
+      "directCauseRisk": "该关系表示源实体被标注为会直接造成目标风险。",
+      "indirectSupportRisk": "该关系表示源实体对目标风险有间接支撑或关联作用。",
+      "buildAttackTool": "该关系表示威胁行为者具备制作、维护或建设该攻击工具的能力。",
+      "useAttackTool": "该关系表示威胁行为者会使用该攻击工具开展相关活动。",
+      "causeRisk": "该关系汇总了直接造成和间接关联风险的字段，适合快速判断风险暴露面。",
+      "relatedTerm": "该关系来自术语实体的相关实体字段，用于解释术语上下文。",
+      "subEntity": "该关系来自子实体 ID 层级，用于说明主条目和细分条目之间的归属。",
+      "attackToolMaker": "该关系表示攻击工具可追溯到对应的工具建设者。",
+      "review": "该关系暂时缺少更细的解释模板，建议结合来源字段复核。"
+    },
+    "relationImpact": {
+      "avoidance": "分析价值：可作为防御覆盖或阻断点候选。",
+      "directCauseRisk": "分析价值：应优先关注源实体到目标风险的直接风险链路。",
+      "indirectSupportRisk": "分析价值：适合用于补充上下游背景，但不应等同于直接因果。",
+      "threatActorTool": "分析价值：有助于理解攻击者能力来源和行动方式。",
+      "causeRisk": "分析价值：可用于快速定位风险来源，但需要区分直接和间接字段。",
+      "relatedTerm": "分析价值：用于补充语义检索和术语解释。",
+      "subEntity": "分析价值：用于展开主条目的细分场景或手法。",
+      "review": "分析价值：该关系需要人工或 AI 进一步判断。"
+    },
+    "attackPathExplanationSummary": "该路径包含 {count} 段推导，核心风险为 {risk}。",
+    "attackPathIntent": {
+      "actorToTool": "攻击意图：威胁行为者通过使用或建设工具形成可执行能力。",
+      "toolToRisk": "攻击意图：攻击工具推动风险发生，可能是直接造成也可能是间接支撑。",
+      "actorToRisk": "攻击意图：威胁行为者与风险之间存在直接或间接风险关联。",
+      "riskToAvoidance": "攻击意图：路径在风险节点收束后，需要通过规避手段削弱影响。"
+    },
+    "attackPathDefense": {
+      "actorToTool": "防御意义：可关注攻击者工具画像、工具使用痕迹和能力建设迹象。",
+      "toolToRisk": "防御意义：可围绕工具行为、触发条件和风险结果设置检测或控制。",
+      "actorToRisk": "防御意义：可优先复核该攻击者与风险之间的证据链。",
+      "riskToAvoidance": "防御意义：该规避手段是当前路径的直接缓解候选。"
+    },
     "pathCount": "关联路径数",
     "moreRelations": "另有 {count} 条关系未显示"
   },
