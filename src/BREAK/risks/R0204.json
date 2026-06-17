@@ -6,7 +6,9 @@
     "influence": "DeFi用户交易滑点增大，利益受损",
     "limitation": "依赖区块生产者权限",
     "avoidances": [
-      "A0177"
+      "A0177",
+      "A0128",
+      "A0130"
     ],
     "references": [
       {

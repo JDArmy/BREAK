@@ -8,7 +8,10 @@
         "link": "https://www.163.com/dy/article/JCU216GI051200BP.html"
       }
     ],
-    "buildAttackTools": [],
+    "buildAttackTools": [
+      "AT0050",
+      "AT0070"
+    ],
     "useAttackTools": [
       "AT0001-002",
       "AT0003",

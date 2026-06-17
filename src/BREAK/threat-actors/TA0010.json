@@ -8,7 +8,9 @@
         "link": "https://owasp.org/www-project-automated-threats-to-web-applications/"
       }
     ],
-    "buildAttackTools": [],
+    "buildAttackTools": [
+      "AT0047"
+    ],
     "useAttackTools": [
       "AT0031",
       "AT0041",

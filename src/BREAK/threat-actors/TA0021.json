@@ -9,7 +9,9 @@
       }
     ],
     "buildAttackTools": [],
-    "useAttackTools": [],
+    "useAttackTools": [
+      "AT0063"
+    ],
     "directCauseRisks": [
       "R0038",
       "R0059",

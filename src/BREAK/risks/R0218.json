@@ -6,7 +6,9 @@
     "influence": "空间数据可反推用户行为和环境信息",
     "limitation": "需要应用层权限",
     "avoidances": [
-      "A0191"
+      "A0191",
+      "A0069",
+      "A0080"
     ],
     "references": [
       {

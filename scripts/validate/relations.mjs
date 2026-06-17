@@ -46,6 +46,18 @@ function coverage(records, field) {
   };
 }
 
+function threatActorToolCoverage(records) {
+  const covered = records.filter(
+    ({ entity }) => hasValues(entity, 'buildAttackTools') || hasValues(entity, 'useAttackTools'),
+  ).length;
+  return {
+    total: records.length,
+    covered,
+    empty: records.length - covered,
+    rate: records.length ? Number(((covered / records.length) * 100).toFixed(2)) : 0,
+  };
+}
+
 function addIssue(issues, severity, type, message, details = {}) {
   issues.push({ severity, type, message, ...details });
 }
@@ -150,8 +162,9 @@ function collectRelationAudit() {
     { name: 'AttackTool.directCauseRisks', ...coverage(attackTools, 'directCauseRisks') },
     { name: 'AttackTool.indirectSupportRisks', ...coverage(attackTools, 'indirectSupportRisks') },
     { name: 'AttackTool.avoidances', ...coverage(attackTools, 'avoidances') },
-    { name: 'ThreatActor.buildAttackTools', ...coverage(threatActors, 'buildAttackTools') },
-    { name: 'ThreatActor.useAttackTools', ...coverage(threatActors, 'useAttackTools') },
+    { name: 'ThreatActor.attackTools', ...threatActorToolCoverage(threatActors) },
+    { name: 'ThreatActor.buildAttackTools', observationOnly: true, ...coverage(threatActors, 'buildAttackTools') },
+    { name: 'ThreatActor.useAttackTools', observationOnly: true, ...coverage(threatActors, 'useAttackTools') },
     { name: 'ThreatActor.directCauseRisks', ...coverage(threatActors, 'directCauseRisks') },
     { name: 'ThreatActor.indirectSupportRisks', ...coverage(threatActors, 'indirectSupportRisks') },
   ];

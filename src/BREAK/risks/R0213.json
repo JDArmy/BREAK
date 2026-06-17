@@ -6,7 +6,9 @@
     "influence": "边缘节点物理分散，难以统一防护",
     "limitation": "需要物理接近或远程漏洞",
     "avoidances": [
-      "A0186"
+      "A0186",
+      "A0068",
+      "A0078"
     ],
     "references": [
       {

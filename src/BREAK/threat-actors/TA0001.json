@@ -83,7 +83,9 @@
         "link": "https://mp.weixin.qq.com/s?__biz=MzA3NDI5MzUwNg==&mid=2651611390&idx=1&sn=597c559f4fee79e60dd841e9d159cb60&chksm=85e3ad3755b27c772a1bb0ded98b5c487eb38d1979df2a7ac361d4cca97133cf2c205fc8f847&scene=27"
       }
     ],
-    "buildAttackTools": [],
+    "buildAttackTools": [
+      "AT0023"
+    ],
     "useAttackTools": [
       "AT0005",
       "AT0014",

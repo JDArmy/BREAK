@@ -6,7 +6,9 @@
     "influence": "虚拟资产流动性受阻，用户损失",
     "limitation": "需要跨平台协议漏洞",
     "avoidances": [
-      "A0189"
+      "A0189",
+      "A0102",
+      "A0164"
     ],
     "references": [
       {

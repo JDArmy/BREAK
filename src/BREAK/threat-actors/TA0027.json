@@ -8,7 +8,9 @@
         "link": "https://en.wikipedia.org/wiki/Match_fixing"
       }
     ],
-    "buildAttackTools": [],
+    "buildAttackTools": [
+      "AT0049"
+    ],
     "useAttackTools": [
       "AT0002",
       "AT0034-001",

@@ -55,7 +55,9 @@
         "link": "https://mp.weixin.qq.com/s/_Xynz_Qy0UTwHWEkMTeEVg"
       }
     ],
-    "buildAttackTools": [],
+    "buildAttackTools": [
+      "AT0026"
+    ],
     "useAttackTools": [
       "AT0001",
       "AT0039-001",

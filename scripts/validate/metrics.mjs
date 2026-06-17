@@ -20,7 +20,6 @@ const issueLabels = {
   attack_tool_without_avoidances: '攻击工具缺少规避手段',
   threat_actor_without_tools: '威胁行为者缺少工具关系',
   business_scene_without_risks: '业务场景未覆盖风险',
-  business_scene_high_duplicate_risks: '业务场景风险重复引用偏高',
 };
 
 function loadJsonRecords(relativeDir) {
@@ -69,6 +68,25 @@ function summarizeCoverage(name, records, field) {
     covered,
     empty: emptyItems.length,
     rate: percent(covered, records.length),
+    emptyItems,
+  };
+}
+
+function summarizeThreatActorToolCoverage(threatActors) {
+  const emptyItems = threatActors
+    .filter(
+      ({ entity }) => !hasArrayValues(entity, 'buildAttackTools') && !hasArrayValues(entity, 'useAttackTools'),
+    )
+    .map(({ key, entity }) => ({ key, title: entity.title || '' }));
+  const covered = threatActors.length - emptyItems.length;
+
+  return {
+    name: 'ThreatActor.attackTools',
+    field: 'attackTools',
+    total: threatActors.length,
+    covered,
+    empty: emptyItems.length,
+    rate: percent(covered, threatActors.length),
     emptyItems,
   };
 }
@@ -180,7 +198,6 @@ function collectSceneIssues(businessScenes) {
   return businessScenes.flatMap(({ key, entity }) => {
     const sceneRisks = collectBusinessSceneRisks(entity);
     const uniqueRisks = unique(sceneRisks);
-    const duplicateRiskCount = sceneRisks.length - uniqueRisks.length;
     const issues = [];
 
     if (uniqueRisks.length === 0) {
@@ -189,16 +206,6 @@ function collectSceneIssues(businessScenes) {
         key,
         title: entity.title || '',
         message: `BusinessScene 未覆盖风险: ${key}`,
-      });
-    }
-    if (sceneRisks.length > 0 && duplicateRiskCount / sceneRisks.length >= 0.15) {
-      issues.push({
-        type: 'business_scene_high_duplicate_risks',
-        key,
-        title: entity.title || '',
-        duplicateRiskCount,
-        riskCount: sceneRisks.length,
-        message: `BusinessScene 风险重复引用偏高: ${key}`,
       });
     }
 
@@ -210,6 +217,7 @@ function buildMaintenanceTasks({ relationCoverage, weakRelations, sceneIssues })
   const tasks = [];
 
   for (const item of relationCoverage.filter((entry) => entry.empty > 0 || entry.rate < 95)) {
+    if (item.observationOnly) continue;
     tasks.push({
       priority: item.rate < 85 ? 'P1' : 'P2',
       type: 'relation_coverage',
@@ -294,8 +302,9 @@ function buildReport() {
     summarizeCoverage('AttackTool.directCauseRisks', attackTools, 'directCauseRisks'),
     summarizeCoverage('AttackTool.indirectSupportRisks', attackTools, 'indirectSupportRisks'),
     summarizeCoverage('AttackTool.avoidances', attackTools, 'avoidances'),
-    summarizeCoverage('ThreatActor.buildAttackTools', threatActors, 'buildAttackTools'),
-    summarizeCoverage('ThreatActor.useAttackTools', threatActors, 'useAttackTools'),
+    summarizeThreatActorToolCoverage(threatActors),
+    { ...summarizeCoverage('ThreatActor.buildAttackTools', threatActors, 'buildAttackTools'), observationOnly: true },
+    { ...summarizeCoverage('ThreatActor.useAttackTools', threatActors, 'useAttackTools'), observationOnly: true },
     summarizeCoverage('ThreatActor.directCauseRisks', threatActors, 'directCauseRisks'),
     summarizeCoverage('ThreatActor.indirectSupportRisks', threatActors, 'indirectSupportRisks'),
   ];
@@ -441,6 +450,23 @@ function renderMarkdown(report) {
   } else {
     for (const item of report.sceneIssues) {
       lines.push(`- [${item.type}] ${item.message}`);
+    }
+  }
+
+  lines.push('', '## 业务场景重复引用观察', '');
+  const duplicateScenes = report.businessSceneCoverage.filter((item) => item.duplicateRiskCount > 0);
+  if (duplicateScenes.length === 0) {
+    lines.push('未发现业务场景内重复引用。');
+  } else {
+    lines.push('重复引用用于提示同一风险在同一业务场景内跨子场景复用，不直接生成维护任务。');
+    lines.push('');
+    lines.push('| 场景 | 总引用 | 唯一风险 | 重复引用 | 重复率 |');
+    lines.push('| --- | ---: | ---: | ---: | ---: |');
+    for (const item of duplicateScenes.slice(0, 20)) {
+      const duplicateRate = percent(item.duplicateRiskCount, item.riskCount);
+      lines.push(
+        `| ${item.key} ${item.title} | ${item.riskCount} | ${item.uniqueRiskCount} | ${item.duplicateRiskCount} | ${duplicateRate}% |`,
+      );
     }
   }
 

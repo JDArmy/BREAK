@@ -6,7 +6,9 @@
     "influence": "匿名性被破坏，用户现实安全受威胁",
     "limitation": "需要大量数据和分析能力",
     "avoidances": [
-      "A0194"
+      "A0194",
+      "A0069",
+      "A0155"
     ],
     "references": [
       {
