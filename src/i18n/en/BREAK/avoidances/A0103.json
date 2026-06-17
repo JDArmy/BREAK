@@ -7,6 +7,11 @@
     "limitation": "Chain-agnostic design increases architectural complexity and incurs higher development and testing costs; it may sacrifice some performance in exchange for generality; given the significant differences in characteristics across chains, achieving full chain agnosticism may be impractical.",
     "keywords": [
       "Chain-Agnostic Design and Redundant Architecture"
+    ],
+    "references": [
+      {
+        "title": "Oracle Security for DeFi"
+      }
     ]
   }
 }

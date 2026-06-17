@@ -10,6 +10,7 @@ interface RelationTypeItem {
 }
 
 interface RelationLegendItem {
+  key: string;
   color: string;
   label: string;
   fields: string[];
@@ -94,10 +95,10 @@ const filterLineTypeModel = computed({
     <el-checkbox-group v-model="filterLineTypeModel" @change="emit('filter')">
       <el-checkbox
         v-for="item in visibleRelationLegendItems"
-        :key="item.label"
-        :name="item.label"
+        :key="item.key"
+        :name="item.key"
         class="filter-checkbox"
-        :value="item.label"
+        :value="item.key"
       >
         <span class="filter-line-item">
           <span class="legend-line-color" :style="{ backgroundColor: item.color }"></span>

@@ -7,6 +7,11 @@
     "limitation": "High on-chain storage costs, with large volumes of signature records consuming significant gas; requires storage cleanup to prevent unbounded growth; state synchronization delays may occur in distributed systems; improper implementation may lead to DoS.",
     "keywords": [
       "Signature Consumption and State Tracking"
+    ],
+    "references": [
+      {
+        "title": "Smart Contract Code Freeze Before Deployment"
+      }
     ]
   }
 }

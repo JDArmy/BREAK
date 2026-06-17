@@ -3,22 +3,22 @@
 > 文档版本：1.0  
 > 制定日期：2026-06-17  
 > 适用范围：关系图谱、攻击路径、节点详情、关系解释、分析视角、质量治理视图  
-> 当前阶段：P1 关系解释和攻击路径解释已基本落地，P2/P3 后续能力继续推进
+> 当前阶段：P1/P2 节点解释、路径解释、防御覆盖和业务场景影响已落地，下一阶段推进质量治理
 
 ## 0. 当前实施状态
 
 > 状态更新时间：2026-06-17
-> 对应提交：`15375b8 Improve relation drawer path explainability`
+> 对应提交：`8e83f16 Merge branch 'main' into feature/visual-analysis-explainability`
 
 ### 0.1 阶段状态
 
 | 阶段 | 状态 | 当前结论 |
 |------|------|----------|
-| Phase 0：基线确认 | 部分完成 | 已完成关系页数据链路梳理和问题识别，但未沉淀独立的验收样本清单和截图基线文档 |
-| Phase 1：关系解释核心 | 基本完成 | 已新增 `relationExplanation.ts`，关系摘要具备来源字段、证据级别、解释、影响提示和质量标记；节点关系列表已支持解释展示和筛选 |
-| Phase 2：攻击路径解释 | 基本完成 | Sankey 路径已保留解释对象，抽屉内支持路径组合筛选、逐段来源字段、攻击意图、防御意义和缺规避提示 |
-| Phase 3：节点摘要与防御覆盖 | 部分完成 | 已新增“为什么重要”摘要和节点防御覆盖摘要；重复的根节点上下文预览已移除；仍需继续补业务场景影响和质量治理联动 |
-| Phase 4：分析视角与质量治理 | 未开始 | 尚未增加任务型视角切换，也未将审计报告接入前端治理视图 |
+| Phase 0：基线确认 | 部分完成 | 已完成关系页数据链路梳理、问题识别和主要验收样本的测试覆盖；仍缺独立截图基线文档 |
+| Phase 1：关系解释核心 | 完成 | 已新增 `relationExplanation.ts`，关系摘要具备来源字段、证据级别、解释、影响提示和质量标记；tooltip、节点关系列表、CSV 复制均能消费解释对象 |
+| Phase 2：攻击路径解释 | 完成 | Sankey 路径已保留解释对象，抽屉内支持路径组合筛选、逐段来源字段、攻击意图、防御意义和缺规避提示 |
+| Phase 3：节点摘要、防御覆盖与业务影响 | 完成 | 已新增“为什么重要”、节点防御覆盖和业务场景影响摘要；抽屉洞察已拆分为独立子组件 |
+| Phase 4：分析视角与质量治理 | 未开始 | 尚未增加任务型视角切换，也未将审计报告接入前端治理视图；这是下一阶段优先事项 |
 | Phase 5：业务场景图谱 | 未开始 | 尚未实现 BusinessScene / RiskScene 出发的解释型关系图谱 |
 
 ### 0.2 已落地能力
@@ -29,6 +29,8 @@
 - 攻击路径逐段解释：已展示来源字段、攻击意图、防御意义、推荐处置和缺规避质量提示。
 - 节点分析摘要：已按实体类型展示“为什么重要”、关联类型分布和高/低覆盖提示。
 - 防御覆盖摘要：已新增 `relationCoverageAnalysis.ts`，Risk / Avoidance / AttackTool / ThreatActor 可展示覆盖范围、候选规避、风险/工具/攻击者覆盖指标。
+- 业务场景影响摘要：已新增 `relationBusinessSceneImpact.ts` 和 `RelationNodeBusinessSceneImpactBlock.vue`，可从 Risk / Avoidance / AttackTool / ThreatActor / Term 推导命中的业务场景、风险场景和风险清单；映射关系只读取 `src/BREAK/business-scenes`，不写回 Risk 实体。
+- 组件结构治理：`RelationNodeDrawerInsights.vue` 已拆分为根节点关系、为什么重要、防御覆盖、攻击路径四个子组件，共享类型与样式独立维护。
 - 抽屉复用：关系网络和 Sankey 节点详情已收敛到同一个 `RelationNodeDetailDrawer`。
 - 交互质量：已处理路径筛选下拉、无效筛选项、tooltip 延时与层级、ID/标题展示、重复分隔线、重复上下文预览等问题。
 - 中英文文案：本轮新增关系解释和攻击路径解释文案已同步维护。
@@ -36,12 +38,21 @@
 
 ### 0.3 尚未完成能力
 
-- 业务场景影响摘要尚未接入节点详情。
 - 质量治理前端视图，包括弱关系、缺覆盖、场景异常、待复核关系的列表和图谱定位。
 - 任务型分析视角切换，包括风险视角、攻击者视角、防御视角和薄弱关系视角。
 - BusinessScene / RiskScene 出发的业务场景图谱。
 - 前端可消费的维护报告 JSON。
 - `relationBusinessSceneGraph.test.ts`。
+
+### 0.4 下一阶段优先级
+
+| 优先级 | 工作项 | 目标 |
+|--------|--------|------|
+| P0 | 业务场景影响摘要 | 已完成：节点详情可解释风险/规避/工具/攻击者/术语影响了哪些业务场景和风险场景 |
+| P0 | 前端可消费质量报告 | 将 `audit:relations`、`audit:metrics`、`audit:maintenance` 的关键问题转为 JSON，供关系页高亮和列表使用 |
+| P1 | 任务型分析视角 | 增加风险视角、攻击者视角、防御视角、薄弱关系视角的默认筛选和说明 |
+| P1 | 业务场景图谱 | 支持从 BusinessScene / RiskScene 进入解释型关系图谱 |
+| P2 | 截图基线与交互回归 | 固化抽屉、tooltip、筛选、移动端布局的 Playwright 截图基线 |
 
 ## 1. 背景与目标
 
@@ -366,6 +377,7 @@ interface AttackPathStepExplanation {
 - 对 Avoidance 计算覆盖风险数、覆盖工具数、覆盖场景数。
 - 对 AttackTool 显示可用规避措施及其覆盖范围。
 - 对缺少规避措施或只有间接规避的风险给出提示。
+- 当前已完成节点级防御覆盖摘要，下一步应补业务场景影响和质量治理联动。
 
 覆盖类型建议：
 
@@ -454,7 +466,7 @@ interface AttackPathStepExplanation {
 - 验收样本清单
 - 当前问题截图或记录
 
-### Phase 1：关系解释核心，3-5 天（基本完成）
+### Phase 1：关系解释核心，3-5 天（完成）
 
 任务：
 
@@ -468,8 +480,9 @@ interface AttackPathStepExplanation {
 - 边关系解释能力
 - 关系来源字段完整显示
 - 单元测试通过
+- 当前已落地：`relationExplanation.ts`、关系 tooltip、节点关系列表、CSV 解释字段、`relationExplanation.test.ts`
 
-### Phase 2：攻击路径解释，5-8 天（基本完成）
+### Phase 2：攻击路径解释，5-8 天（完成）
 
 任务：
 
@@ -484,8 +497,9 @@ interface AttackPathStepExplanation {
 - 可选择单条攻击路径
 - 可解释路径成立依据
 - 可定位阻断点和覆盖缺口
+- 当前已落地：抽屉路径组合筛选、动态下拉选项、逐段攻击意图/防御意义、缺规避提示、`relationAttackPath.test.ts`
 
-### Phase 3：节点摘要与防御覆盖，4-6 天（部分完成）
+### Phase 3：节点摘要与防御覆盖，4-6 天（基本完成）
 
 任务：
 
@@ -499,6 +513,8 @@ interface AttackPathStepExplanation {
 - 节点详情具备“为什么重要”说明
 - 风险和规避的覆盖关系清晰可见
 - 覆盖缺口可被维护者识别
+- 当前已落地：`relationGraphInsights.ts` 节点摘要、`relationCoverageAnalysis.ts` 覆盖摘要、抽屉洞察组件拆分、`relationCoverageAnalysis.test.ts`
+- 剩余缺口：业务场景影响摘要尚未进入节点详情
 
 ### Phase 4：分析视角与质量治理，6-10 天（未开始）
 

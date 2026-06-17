@@ -7,6 +7,11 @@
     "limitation": "Some vendors do not provide long-term firmware support, leaving devices without updates after end-of-life; automatic updates may introduce compatibility issues or new vulnerabilities; devices may be temporarily unavailable during the update process; certain devices require manual updates, making large-scale management difficult.",
     "keywords": [
       "IoT Device Firmware Security Update Mechanism"
+    ],
+    "references": [
+      {
+        "title": "Access Control Hardening for Smart Contracts"
+      }
     ]
   }
 }

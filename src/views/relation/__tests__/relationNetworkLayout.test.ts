@@ -33,11 +33,11 @@ describe("relationNetworkLayout", () => {
     },
   ];
   const lines: Line[] = [
-    { from: "ROOT", text: "规避手段", to: "AVOID" },
-    { from: "ROOT", text: "攻击工具", to: "TOOL" },
-    { from: "ROOT", text: "攻击工具", to: "TOOL" },
-    { from: "ACTOR", text: "使用攻击工具", to: "TOOL" },
-    { from: "ROOT", text: "关联术语", to: "TERM" },
+    { from: "ROOT", relationKey: "relationLine.avoidanceMeans", text: "规避手段", to: "AVOID" },
+    { from: "ROOT", relationKey: "relationLine.directCauseRisk", text: "攻击工具", to: "TOOL" },
+    { from: "ROOT", relationKey: "relationLine.directCauseRisk", text: "攻击工具", to: "TOOL" },
+    { from: "ACTOR", relationKey: "relationLine.useAttackTool", text: "使用攻击工具", to: "TOOL" },
+    { from: "ROOT", relationKey: "relationLine.relatedTerm", text: "关联术语", to: "TERM" },
   ];
 
   const createHelpers = (options?: {
@@ -66,19 +66,19 @@ describe("relationNetworkLayout", () => {
       filterSubNode: ref(options?.filterSubNode ?? true),
       filterLineType: ref(
         options?.filterLineType ?? [
-          "规避手段",
-          "攻击工具",
-          "使用攻击工具",
-          "关联术语",
+          "relationLine.avoidanceMeans",
+          "relationLine.directCauseRisk",
+          "relationLine.useAttackTool",
+          "relationLine.relatedTerm",
         ]
       ),
       draggedNodePositions: ref(options?.draggedNodePositions ?? {}),
       networkState: { layout: options?.layout ?? "horizontal" },
       relationLegendItems: ref([
-        { color: "#a", label: "规避手段" },
-        { color: "#b", label: "攻击工具" },
-        { color: "#c", label: "使用攻击工具" },
-        { color: "#d", label: "关联术语" },
+        { key: "relationLine.avoidanceMeans", color: "#a", label: "规避手段" },
+        { key: "relationLine.directCauseRisk", color: "#b", label: "攻击工具" },
+        { key: "relationLine.useAttackTool", color: "#c", label: "使用攻击工具" },
+        { key: "relationLine.relatedTerm", color: "#d", label: "关联术语" },
       ]),
       isDark: ref(options?.isDark ?? false),
       getRelationTypeColor: (type) => `color:${type}`,
@@ -88,7 +88,7 @@ describe("relationNetworkLayout", () => {
         `${fromType}->${toType}:${line.text}`,
       ],
       explainRelation: (line, fromType, toType) => ({
-        relationKey: `${line.from}::${line.text}::${line.to}`,
+        relationKey: `${line.from}::${line.relationKey ?? line.text}::${line.to}`,
         fromId: line.from,
         toId: line.to,
         relationType: line.text,
@@ -157,7 +157,7 @@ describe("relationNetworkLayout", () => {
         RelationType.avoidance,
       ],
       filterSubNode: false,
-      filterLineType: ["攻击工具"],
+      filterLineType: ["relationLine.directCauseRisk"],
     });
     const visibleData = helpers.getVisibleNetworkData();
 

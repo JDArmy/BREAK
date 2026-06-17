@@ -38,6 +38,7 @@ export const addRelationLine = (
 ) => {
   context.lines.push({
     from,
+    relationKey,
     text: context.t(relationKey),
     to,
   } as Line);

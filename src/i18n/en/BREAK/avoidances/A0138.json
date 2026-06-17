@@ -7,6 +7,11 @@
     "limitation": "Clock desynchronization may cause verification failures; attackers can still replay messages within the validity window; expiration time must be reasonably configured to balance security and availability; block timestamps may be slightly manipulated by miners.",
     "keywords": [
       "Timestamp and Expiration Mechanism"
+    ],
+    "references": [
+      {
+        "title": "Smart Contract Parameter Governance"
+      }
     ]
   }
 }

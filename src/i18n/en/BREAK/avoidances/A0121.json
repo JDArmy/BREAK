@@ -7,6 +7,11 @@
     "limitation": "Automated analysis may generate false positives or false negatives; requires 24/7 manual on-call support and community participation; emergency mechanisms may be abused; high costs for monitoring and response infrastructure; limited detection capability against novel attack vectors.",
     "keywords": [
       "DAO Governance Proposal Monitoring and Emergency Response"
+    ],
+    "references": [
+      {
+        "title": "Smart Contract Permission Separation"
+      }
     ]
   }
 }

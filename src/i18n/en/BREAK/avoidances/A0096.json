@@ -7,6 +7,11 @@
     "limitation": "Static analysis is prone to false positives and false negatives; it cannot detect complex business logic vulnerabilities; its ability to detect novel attack patterns is limited; it must be used in conjunction with manual auditing.",
     "keywords": [
       "Smart Contract Static Analysis Tools"
+    ],
+    "references": [
+      {
+        "title": "Avoiding Smart Contract Vulnerabilities"
+      }
     ]
   }
 }

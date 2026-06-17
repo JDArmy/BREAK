@@ -7,6 +7,11 @@
     "limitation": "Requires reliable network; Certificate management; Poor support for legacy devices.",
     "keywords": [
       "OTA Channel Encryption and Integrity Protection"
+    ],
+    "references": [
+      {
+        "title": "Contract Upgrade Authorization Control"
+      }
     ]
   }
 }

@@ -109,10 +109,10 @@ const openRelationGraph = (taKey: string) => {
         <h3>{{ $t("description") }}</h3>
         <p>{{ $t(`BREAK.threatActors.${selectedThreatActorKey}.description`) }}</p>
       </section>
-      <section v-if="selectedThreatActor.keywords?.length" class="detail-section">
+      <section v-if="getMessageStringArray(localeMessages, `BREAK.threatActors.${selectedThreatActorKey}.keywords`).length" class="detail-section">
         <h3>{{ $t("keywords") }}</h3>
         <div class="keywords">
-          <span v-for="(keyword, index) in selectedThreatActor.keywords" :key="index" class="keyword-tag">
+          <span v-for="keyword in getMessageStringArray(localeMessages, `BREAK.threatActors.${selectedThreatActorKey}.keywords`)" :key="keyword" class="keyword-tag">
             {{ keyword }}
           </span>
         </div>

@@ -63,9 +63,9 @@ describe("relationGraphBuilder", () => {
   it("应该提取所有连线类型", () => {
     const nodes: { id: string; name: string; category: number }[] = [];
     const lines = [
-      { source: "R01", target: "A01", text: "规避手段" },
-      { source: "R01", target: "AT01", text: "攻击工具" },
-      { source: "R02", target: "A01", text: "规避手段" },
+      { source: "R01", target: "A01", relationKey: "relationLine.avoidanceMeans", text: "规避手段" },
+      { source: "R01", target: "AT01", relationKey: "relationLine.directCauseRisk", text: "攻击工具" },
+      { source: "R02", target: "A01", relationKey: "relationLine.avoidanceMeans", text: "规避手段" },
     ];
 
     const builder = createRelationGraphBuilder({
@@ -83,6 +83,9 @@ describe("relationGraphBuilder", () => {
     });
 
     builder.getLineType();
-    expect(builder.totalLineType.value).toEqual(["规避手段", "攻击工具"]);
+    expect(builder.totalLineType.value).toEqual([
+      "relationLine.avoidanceMeans",
+      "relationLine.directCauseRisk",
+    ]);
   });
 });

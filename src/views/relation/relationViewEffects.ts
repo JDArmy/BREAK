@@ -2,7 +2,10 @@ import { nextTick, onBeforeUnmount, onMounted, watch, type Ref } from "vue";
 import BREAK from "@/BREAK";
 import type { Router, RouteLocationNormalizedLoaded } from "vue-router";
 import { createRelationTypeMapping, RelationType } from "@/views/relation/relationTypes";
-import { normalizeRelationViewMode, type RelationViewMode } from "@/views/relation/relationViewState";
+import {
+  normalizeRelationViewMode,
+  type RelationViewMode,
+} from "@/views/relation/relationViewState";
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;
 
@@ -24,9 +27,10 @@ interface SetupRelationViewEffectsOptions {
     currentNodeId: string,
     options?: { render?: boolean }
   ) => void;
-  rebuildGraphData: () => void;
+  rebuildGraphData: (options?: { render?: boolean }) => void;
   refreshGraphAfterVisible: () => void;
   renderNetworkChart: (notMerge?: boolean) => void;
+  recreateNetworkChart: () => void;
   updateNetworkSelection: () => void;
   renderSankeyChart: () => void;
   updateSankeyTheme: () => void;
@@ -38,7 +42,6 @@ interface SetupRelationViewEffectsOptions {
   handleGlobalPointerDown: (event: PointerEvent) => void;
   disposeNetworkChart: () => void;
   disposeSankeyChart: () => void;
-  filterLineType: Ref<string[]>;
   selectedNetworkNodeId: Ref<string>;
 }
 
@@ -58,6 +61,7 @@ export const setupRelationViewEffects = ({
   rebuildGraphData,
   refreshGraphAfterVisible,
   renderNetworkChart,
+  recreateNetworkChart,
   updateNetworkSelection,
   renderSankeyChart,
   updateSankeyTheme,
@@ -69,7 +73,6 @@ export const setupRelationViewEffects = ({
   handleGlobalPointerDown,
   disposeNetworkChart,
   disposeSankeyChart,
-  filterLineType,
   selectedNetworkNodeId,
 }: SetupRelationViewEffectsOptions) => {
   let hasMounted = false;
@@ -110,8 +113,10 @@ export const setupRelationViewEffects = ({
     if (activeView.value === "network") {
       ensureNetworkData({ render: false });
       renderNetworkChart(false);
-    } else {
+    } else if (activeView.value === "sankey") {
       renderSankeyChart();
+    } else {
+      ensureNetworkData({ render: false });
     }
     window.addEventListener("resize", resizeNetworkChart);
     window.addEventListener("resize", resizeSankeyChart);
@@ -162,23 +167,24 @@ export const setupRelationViewEffects = ({
       if (activeView.value === "network") {
         refreshGraphAfterVisible();
         networkDataReady = true;
+      } else if (activeView.value === "analysis") {
+        ensureNetworkData({ render: false });
       }
     }
   );
 
   watch(locale, () => {
-    filterLineType.value = [];
     normalizeAttackPathFilters();
     networkDataReady = false;
-    if (activeView.value === "network") {
-      rebuildGraphData();
-      networkDataReady = true;
-    }
+    rebuildGraphData({ render: false });
+    networkDataReady = true;
     nextTick(() => {
       if (activeView.value === "network") {
+        recreateNetworkChart();
         renderNetworkChart(true);
+      } else if (activeView.value === "sankey") {
+        renderSankeyChart();
       }
-      renderSankeyChart();
     });
   });
 
@@ -208,9 +214,11 @@ export const setupRelationViewEffects = ({
 
       if (activeView.value === "sankey") {
         nextTick(renderSankeyChart);
-      } else {
+      } else if (activeView.value === "network") {
         ensureNetworkData({ render: false });
         nextTick(() => renderNetworkChart(true));
+      } else {
+        ensureNetworkData({ render: false });
       }
     }
   );

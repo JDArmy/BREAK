@@ -7,6 +7,11 @@
     "limitation": "Upgrade and pause mechanisms introduce governance centralization, privilege abuse, and key-custody risks. If permission boundaries, approval workflows, or timelocks are poorly designed, the protection mechanism itself can become an attack entry point.",
     "keywords": [
       "Contract Upgrade and Emergency Pause"
+    ],
+    "references": [
+      {
+        "title": "Smart Contract Attack Surface Reduction"
+      }
     ]
   }
 }

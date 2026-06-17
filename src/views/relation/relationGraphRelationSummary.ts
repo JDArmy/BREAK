@@ -1,5 +1,9 @@
 import { computed, type Ref } from "vue";
-import { isRelationEntityType, RelationType } from "@/views/relation/relationTypes";
+import {
+  getRelationLineKey,
+  isRelationEntityType,
+  RelationType,
+} from "@/views/relation/relationTypes";
 import {
   createRelationGraphInsightHelpers,
   type RelationGraphInsightBaseOptions,
@@ -56,20 +60,27 @@ export const createRelationGraphRelationSummary = ({
         (line) =>
           (line.from === relKey.value && line.to === node.id) || (line.from === node.id && line.to === relKey.value)
       )
-      .map((line) => ({
-        text: line.text,
-        direction: line.from === relKey.value ? baseOptions.t("relationView.rootToNode") : baseOptions.t("relationView.nodeToRoot"),
-        directness: baseOptions.isDirectRelationLine(line.text)
-          ? baseOptions.t("relationView.direct")
-          : baseOptions.t("relationView.indirect"),
-        evidenceLevel: baseOptions.explainRelation(line).evidenceLevel,
-        evidenceLabel: baseOptions.formatEvidenceLevel(baseOptions.explainRelation(line).evidenceLevel),
-        explanation: baseOptions.explainRelation(line).explanation,
-        impactHint: baseOptions.explainRelation(line).impactHint,
-        qualityFlags: baseOptions.explainRelation(line).qualityFlags,
-        sourceFields: baseOptions.getRelationSourceFields(line),
-        priority: baseOptions.getRelationPriority(line.text),
-      }))
+      .map((line) => {
+        const relationLineKey = getRelationLineKey(line);
+        const explanation = baseOptions.explainRelation(line);
+        return {
+          text: line.text,
+          direction:
+            line.from === relKey.value
+              ? baseOptions.t("relationView.rootToNode")
+              : baseOptions.t("relationView.nodeToRoot"),
+          directness: baseOptions.isDirectRelationLine(relationLineKey)
+            ? baseOptions.t("relationView.direct")
+            : baseOptions.t("relationView.indirect"),
+          evidenceLevel: explanation.evidenceLevel,
+          evidenceLabel: baseOptions.formatEvidenceLevel(explanation.evidenceLevel),
+          explanation: explanation.explanation,
+          impactHint: explanation.impactHint,
+          qualityFlags: explanation.qualityFlags,
+          sourceFields: baseOptions.getRelationSourceFields(line),
+          priority: baseOptions.getRelationPriority(relationLineKey),
+        };
+      })
       .sort((a, b) => a.priority - b.priority);
   });
 

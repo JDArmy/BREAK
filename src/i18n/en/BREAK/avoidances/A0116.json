@@ -7,6 +7,11 @@
     "limitation": "Users may set weak passwords or forget their passwords; increases the complexity of initial device configuration, impacting user experience; some users may skip security setup or use weak passwords; the password reset mechanism may become a new attack surface.",
     "keywords": [
       "Mandatory Initial Password Configuration"
+    ],
+    "references": [
+      {
+        "title": "Risk Control for Cross-chain Bridges"
+      }
     ]
   }
 }

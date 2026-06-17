@@ -17,11 +17,11 @@
     "usageExample": "An attacker exploited SQL injection in a login form by entering `admin' OR '1'='1` as username, bypassing authentication and gaining administrative access to extract the entire user database containing 500,000 records.",
     "references": [
       {
-        "title": "什么是SQL 注入?SQL 注入及防范措施(非常详细)零基础入门到精通,收藏这...",
+        "title": "What is SQL injection? Detailed prevention measures from beginner to advanced level",
         "link": "https://blog.csdn.net/Libra1313/article/details/143759210"
       },
       {
-        "title": "什么是SQL注入?SQL注入详解(非常详细)零基础入门到精通,收藏这...",
+        "title": "SQL injection explained in detail, from beginner to advanced level",
         "link": "https://www.yunweipai.com/45863.html"
       }
     ],

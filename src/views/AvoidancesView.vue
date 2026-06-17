@@ -162,10 +162,10 @@ const openRelationGraph = (aKey: string) => {
         <h3>{{ $t("limitation") }}</h3>
         <p>{{ $t(`BREAK.avoidances.${selectedAvoidanceKey}.limitation`) }}</p>
       </section>
-      <section v-if="selectedAvoidance.keywords?.length" class="detail-section">
+      <section v-if="getMessageStringArray(localeMessages, `BREAK.avoidances.${selectedAvoidanceKey}.keywords`).length" class="detail-section">
         <h3>{{ $t("keywords") }}</h3>
         <div class="keywords">
-          <span v-for="(keyword, index) in selectedAvoidance.keywords" :key="index" class="keyword-tag">
+          <span v-for="keyword in getMessageStringArray(localeMessages, `BREAK.avoidances.${selectedAvoidanceKey}.keywords`)" :key="keyword" class="keyword-tag">
             {{ keyword }}
           </span>
         </div>

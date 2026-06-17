@@ -7,6 +7,11 @@
     "limitation": "Off-chain transactions require both parties to be online or rely on third-party coordination; exit mechanisms may leak information; L2 solutions may still record transaction data; increases system complexity and user comprehension costs.",
     "keywords": [
       "Off-Chain Transactions and State Channels"
+    ],
+    "references": [
+      {
+        "title": "DeFi Risk Warnings and Reminders"
+      }
     ]
   }
 }

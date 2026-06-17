@@ -93,6 +93,78 @@
   line-height: 1.5;
 }
 
+.node-business-scene-panel {
+  gap: 9px;
+}
+
+.node-business-scene-summary {
+  color: var(--break-text-secondary);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.node-business-scene-table {
+  display: grid;
+  gap: 0;
+  min-width: 0;
+  border: 1px solid var(--break-border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.node-business-scene-table-head,
+.node-business-scene-row {
+  display: grid;
+  grid-template-columns: minmax(128px, 0.8fr) minmax(120px, 1.2fr);
+  min-width: 0;
+}
+
+.node-business-scene-table-head {
+  background: color-mix(in srgb, var(--break-bg) 80%, transparent);
+  color: var(--break-text-muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.node-business-scene-table-head span,
+.node-business-scene-row > div {
+  min-width: 0;
+  padding: 7px 9px;
+}
+
+.node-business-scene-table-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.node-business-scene-row {
+  color: var(--break-text-secondary);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.node-business-scene-row + .node-business-scene-row {
+  border-top: 1px solid var(--break-border);
+}
+
+.node-business-scene-name {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  color: var(--break-text-primary);
+  overflow-wrap: anywhere;
+}
+
+.node-business-scene-name span {
+  color: var(--break-text-muted);
+  font-weight: 600;
+}
+
+.node-business-scene-dimensions {
+  color: var(--break-text-secondary);
+  overflow-wrap: anywhere;
+}
+
 .node-coverage-panel {
   gap: 9px;
 }

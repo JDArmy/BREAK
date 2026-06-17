@@ -7,6 +7,11 @@
     "limitation": "Time weighting reduces the liquidity value of tokens and impacts market activity. The timelock mechanism lowers governance efficiency and slows emergency response. Calculating and storing historical holding data increases on-chain costs. The system may be manipulated by long-term holders.",
     "keywords": [
       "Time-Weighted Voting and Timelock Mechanism"
+    ],
+    "references": [
+      {
+        "title": "Security Alerting for Smart Contracts"
+      }
     ]
   }
 }

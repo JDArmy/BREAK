@@ -7,6 +7,11 @@
     "limitation": "Formal verification is costly and depends on accurate specification modeling. It may not cover oracle behavior, cross-chain interactions, governance processes, or external systems, and verification results must be maintained as contracts evolve.",
     "keywords": [
       "Formal Verification of Smart Contracts"
+    ],
+    "references": [
+      {
+        "title": "DeFi Contract Governance Review"
+      }
     ]
   }
 }

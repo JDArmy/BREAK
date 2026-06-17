@@ -7,6 +7,11 @@
     "limitation": "Legacy contracts may not support chain ID; improper nonce management can lead to stuck transactions; cross-chain bridges still require additional protection; cannot prevent authorization replay exploits.",
     "keywords": [
       "Chain ID and Nonce Mechanism"
+    ],
+    "references": [
+      {
+        "title": "Smart Contract Access Logging"
+      }
     ]
   }
 }

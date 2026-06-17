@@ -7,6 +7,11 @@
     "limitation": "ZK proof generation is computationally intensive, resulting in high Gas costs; high technical complexity makes development and auditing difficult; potential conflicts with existing regulatory frameworks; the privacy contract ecosystem is still immature.",
     "keywords": [
       "Zero-Knowledge Proofs and On-Chain Privacy Contracts"
+    ],
+    "references": [
+      {
+        "title": "Smart Contract Vulnerability Scanning"
+      }
     ]
   }
 }

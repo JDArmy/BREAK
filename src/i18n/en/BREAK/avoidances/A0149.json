@@ -7,6 +7,11 @@
     "limitation": "Complex key management; increased latency due to signature verification; certificate expiration requires handling.",
     "keywords": [
       "Firmware OTA Update Signature Verification"
+    ],
+    "references": [
+      {
+        "title": "Transaction Risk Control"
+      }
     ]
   }
 }

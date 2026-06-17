@@ -7,6 +7,11 @@
     "limitation": "Circuit breaker mechanisms may be abused or become attack targets themselves; false positives can disrupt normal transactions; machine learning models require continuous training and updates; the detection system itself may become a single point of failure.",
     "keywords": [
       "Automated Detection and Circuit Breaker for Oracle Manipulation"
+    ],
+    "references": [
+      {
+        "title": "Smart Contract Incident Response"
+      }
     ]
   }
 }

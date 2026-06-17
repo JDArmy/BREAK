@@ -116,10 +116,10 @@ const openRelationGraph = (rKey: string) => {
           <p>{{ $t(`BREAK.risks.${selectedRiskKey}.influence`) }}</p>
         </div>
       </section>
-      <section v-if="selectedRisk.keywords?.length" class="detail-section">
+      <section v-if="getMessageStringArray(localeMessages, `BREAK.risks.${selectedRiskKey}.keywords`).length" class="detail-section">
         <h3>{{ $t("keywords") }}</h3>
         <div class="keywords">
-          <span v-for="(keyword, index) in selectedRisk.keywords" :key="index" class="keyword-tag">
+          <span v-for="keyword in getMessageStringArray(localeMessages, `BREAK.risks.${selectedRiskKey}.keywords`)" :key="keyword" class="keyword-tag">
             {{ keyword }}
           </span>
         </div>

@@ -7,6 +7,11 @@
     "limitation": "The TWAP mechanism may lag behind the actual price during periods of extreme market volatility; multi-source oracles increase system complexity and gas costs; the oracle itself must still be protected from attacks.",
     "keywords": [
       "Oracle Price Verification Mechanism"
+    ],
+    "references": [
+      {
+        "title": "Formal Verification for Smart Contracts"
+      }
     ]
   }
 }

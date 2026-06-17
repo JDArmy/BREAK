@@ -7,6 +7,11 @@
     "limitation": "Can only detect known private key formats and may miss custom formats; cannot prevent developers from leaking secrets through other channels; leaks that have already been pushed to remote repositories are difficult to completely revoke; scanning tools may produce false positives, impacting development efficiency.",
     "keywords": [
       "Source Code and Configuration File Secret Scanning"
+    ],
+    "references": [
+      {
+        "title": "Reentrancy Attack Prevention"
+      }
     ]
   }
 }

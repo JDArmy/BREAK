@@ -7,6 +7,11 @@
     "limitation": "Security depends on the strength of the user password; weak passwords are susceptible to brute-force attacks. The plaintext private key in memory may still be extracted through memory dump attacks. This method cannot defend against malware or rootkits. If the user forgets the password, the private key will be permanently lost.",
     "keywords": [
       "Encrypted Storage and Password Protection of Private Keys"
+    ],
+    "references": [
+      {
+        "title": "Transaction Slippage Protection"
+      }
     ]
   }
 }

@@ -7,6 +7,11 @@
     "limitation": "Strict slippage limits may cause frequent transaction failures; cannot prevent all types of MEV attacks; difficult to set a reasonable slippage when liquidity is insufficient; limit orders may remain unfilled for extended periods.",
     "keywords": [
       "Transaction Slippage Protection and Limit Orders"
+    ],
+    "references": [
+      {
+        "title": "Key Management for Contract Administration"
+      }
     ]
   }
 }

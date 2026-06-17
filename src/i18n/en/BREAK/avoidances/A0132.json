@@ -12,6 +12,11 @@
       "reorg monitoring",
       "consensus anomaly",
       "block confirmation risk"
+    ],
+    "references": [
+      {
+        "title": "Smart Contract Code Review Checklist"
+      }
     ]
   }
 }

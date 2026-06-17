@@ -10,6 +10,11 @@
     "description": "Credential stuffing attacks exploit users' habits of reusing the same credentials across multiple platforms. Attackers obtain massive collections of username-password combinations from data breaches and use automated tools to attempt bulk logins on target platforms. When a match succeeds, they gain account control and proceed with theft, fraud, or account resale for profit. Unlike brute-force attacks which try random password combinations, credential stuffing uses real user credential pairs that have been verified to work on at least one platform, resulting in significantly higher success rates and making detection much harder with traditional defense mechanisms. The attack typically employs sophisticated techniques including distributed IP addresses to avoid rate limiting, rotating user agents to mimic legitimate browsers, and advanced evasion methods to bypass security controls such as CAPTCHAs and behavioral analysis. Successful attacks can lead to unauthorized access to financial accounts, exposure of personal data, and enable further downstream fraud activities including identity theft, financial fraud, and unauthorized purchases. The impact extends beyond individual victims to platforms that suffer reputation damage and regulatory scrutiny.",
     "category": "Business Security",
     "aliases": [],
-    "usageExample": "The fraud group used credential stuffing automation to compromise tens of thousands of accounts."
+    "usageExample": "The fraud group used credential stuffing automation to compromise tens of thousands of accounts.",
+    "references": [
+      {
+        "title": "OWASP - Credential Stuffing"
+      }
+    ]
   }
 }

@@ -7,6 +7,11 @@
     "limitation": "Requires deep expertise in mathematics and formal methods; the verification process is complex and extremely costly; can only verify explicitly defined properties and cannot cover all possible security issues; the learning curve for verification tools is steep.",
     "keywords": [
       "Formal Verification of Smart Contracts"
+    ],
+    "references": [
+      {
+        "title": "Smart Contract Security Audit"
+      }
     ]
   }
 }

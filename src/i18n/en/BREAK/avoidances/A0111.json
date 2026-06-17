@@ -7,6 +7,11 @@
     "limitation": "Monotonically increasing version numbers limit flexibility, making emergency rollback to previous versions difficult; improper implementation of rollback protection may render the device unrecoverable; a reliable time source is required to prevent time-based rollback attacks",
     "keywords": [
       "Firmware Update Signature Verification and Rollback Protection"
+    ],
+    "references": [
+      {
+        "title": "Safe Multi-Signature Governance"
+      }
     ]
   }
 }

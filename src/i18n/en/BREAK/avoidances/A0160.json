@@ -7,6 +7,11 @@
     "limitation": "Audits and bug bounties cannot guarantee that all defects are found. Effectiveness depends on scope, depth, bounty incentives, and remediation follow-through, and business-logic changes require renewed assessment.",
     "keywords": [
       "Code Audit and Bug Bounty"
+    ],
+    "references": [
+      {
+        "title": "Smart Contract Secure Release Process"
+      }
     ]
   }
 }

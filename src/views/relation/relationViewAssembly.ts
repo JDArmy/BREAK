@@ -99,6 +99,7 @@ export const createRelationViewAssembly = ({
 
   const graphData = useRelationGraphData({
     t,
+    locale,
     isDark,
     isMobile,
     relType,
@@ -259,6 +260,7 @@ export const createRelationViewAssembly = ({
     rebuildGraphData,
     refreshGraphAfterVisible,
     renderNetworkChart: networkController.renderNetworkChart,
+    recreateNetworkChart: networkController.recreateNetworkChart,
     updateNetworkSelection: networkController.updateNetworkSelection,
     renderSankeyChart: sankeyController.renderSankeyChart,
     updateSankeyTheme: sankeyController.updateSankeyTheme,
@@ -270,7 +272,6 @@ export const createRelationViewAssembly = ({
     handleGlobalPointerDown: nodeActions.handleGlobalPointerDown,
     disposeNetworkChart: networkController.disposeNetworkChart,
     disposeSankeyChart: sankeyController.disposeSankeyChart,
-    filterLineType: graphData.filterLineType,
     selectedNetworkNodeId,
   });
 

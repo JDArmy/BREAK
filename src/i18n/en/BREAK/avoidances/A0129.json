@@ -7,6 +7,11 @@
     "limitation": "Requires two transactions, doubling both gas costs and time costs; poor user experience due to extended waiting periods; unsuitable for scenarios requiring instant execution; attackers may still infer user intent through on-chain pattern analysis.",
     "keywords": [
       "Commit-Reveal Mechanism"
+    ],
+    "references": [
+      {
+        "title": "Contract Risk Disclosure"
+      }
     ]
   }
 }

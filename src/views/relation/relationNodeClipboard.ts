@@ -1,4 +1,5 @@
 import type { RelationNodeActionBaseOptions, Translate } from "@/views/relation/relationNodeActionShared";
+import { getRelationLineKey } from "@/views/relation/relationTypes";
 
 interface CreateCopyContextNodeCsvOptions extends RelationNodeActionBaseOptions {
   t: Translate;
@@ -39,7 +40,9 @@ export const createCopyContextNodeCsv = ({
       sourceNode.type,
       sourceNode.title,
       line.text,
-      isDirectRelationLine(line.text) ? t("relationView.direct") : t("relationView.indirect"),
+      isDirectRelationLine(getRelationLineKey(line))
+        ? t("relationView.direct")
+        : t("relationView.indirect"),
       explanation && formatEvidenceLevel ? formatEvidenceLevel(explanation.evidenceLevel) : "",
       explanation?.explanation ?? "",
       explanation?.impactHint ?? "",

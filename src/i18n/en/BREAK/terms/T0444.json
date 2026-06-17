@@ -12,6 +12,14 @@
     "definition": "Algorithmic discrimination refers to the phenomenon where algorithmic systems produce unfair differential treatment toward different user groups, causing specific groups to suffer adverse impacts.",
     "description": "Algorithmic discrimination stems from multiple sources including biases embedded in training data that reflect historical prejudices, flaws in model design that fail to account for fairness considerations, or improper business objective settings that prioritize profit maximization over equitable treatment. This leads algorithms to produce systematic differential treatment toward different groups during decision-making processes. Common manifestations include price discrimination based on detailed user profiles where loyal customers are charged more, restrictions on credit approval or employment opportunities for specific demographic groups based on proxy variables, and biased display of search and recommendation results that favor certain products or viewpoints while suppressing others. Algorithmic discrimination not only violates fundamental fairness principles but may also solidify and amplify existing social biases by encoding them into automated systems that affect millions of users. It infringes upon users' legitimate rights to equal treatment and can perpetuate existing inequalities while creating economic harm to vulnerable groups. The Algorithmic Recommendation Regulations for Internet Information Services explicitly require that algorithm service providers must not use algorithms to implement unreasonable differential treatment, and regulatory authorities have begun penalizing platforms that engage in such practices.",
     "usageExample": "This platform was penalized by regulators for implementing price discrimination against loyal customers through algorithmic discrimination",
-    "category": "Business Security"
+    "category": "Business Security",
+    "references": [
+      {
+        "title": "Provisions on the Administration of Algorithmic Recommendation for Internet Information Services"
+      },
+      {
+        "title": "Legal regulation research on algorithmic discrimination in the big-data era"
+      }
+    ]
   }
 }

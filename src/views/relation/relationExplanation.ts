@@ -1,5 +1,6 @@
 import {
   RelationType,
+  getRelationLineKey,
   type Line,
   type Node,
   type RelationEvidenceLevel,
@@ -13,22 +14,19 @@ interface CreateRelationExplanationHelpersOptions {
   nodes: Node[];
 }
 
-const relationLineKeys = [
-  "avoidanceMeans",
-  "directCauseRisk",
-  "indirectSupportRisk",
-  "buildAttackTool",
-  "useAttackTool",
-  "causeRisk",
-  "relatedTerm",
-  "subRisk",
-  "subAvoidance",
-  "subAttackTool",
-  "subThreatActor",
-  "attackToolMaker",
-] as const;
-
-type RelationLineKey = (typeof relationLineKeys)[number];
+type RelationLineKey =
+  | "avoidanceMeans"
+  | "directCauseRisk"
+  | "indirectSupportRisk"
+  | "buildAttackTool"
+  | "useAttackTool"
+  | "causeRisk"
+  | "relatedTerm"
+  | "subRisk"
+  | "subAvoidance"
+  | "subAttackTool"
+  | "subThreatActor"
+  | "attackToolMaker";
 
 export interface RelationExplanationCoverageItem {
   key: RelationLineKey;
@@ -179,7 +177,7 @@ export const createRelationExplanationHelpers = ({
     );
     const fields = new Set<string>();
 
-    if (line.text === t("relationLine.avoidanceMeans")) {
+    if (getRelationLineKey(line) === "relationLine.avoidanceMeans") {
       if (fromType === RelationType.risk) fields.add("Risk.avoidances");
       if (
         fromType === RelationType.attackTool ||
@@ -187,23 +185,23 @@ export const createRelationExplanationHelpers = ({
       )
         fields.add("AttackTool.avoidances");
     }
-    if (line.text === t("relationLine.directCauseRisk")) {
+    if (getRelationLineKey(line) === "relationLine.directCauseRisk") {
       if (fromType === RelationType.attackTool)
         fields.add("AttackTool.directCauseRisks");
       if (fromType === RelationType.threatActor)
         fields.add("ThreatActor.directCauseRisks");
     }
-    if (line.text === t("relationLine.indirectSupportRisk")) {
+    if (getRelationLineKey(line) === "relationLine.indirectSupportRisk") {
       if (fromType === RelationType.attackTool)
         fields.add("AttackTool.indirectSupportRisks");
       if (fromType === RelationType.threatActor)
         fields.add("ThreatActor.indirectSupportRisks");
     }
-    if (line.text === t("relationLine.buildAttackTool"))
+    if (getRelationLineKey(line) === "relationLine.buildAttackTool")
       fields.add("ThreatActor.buildAttackTools");
-    if (line.text === t("relationLine.useAttackTool"))
+    if (getRelationLineKey(line) === "relationLine.useAttackTool")
       fields.add("ThreatActor.useAttackTools");
-    if (line.text === t("relationLine.relatedTerm")) {
+    if (getRelationLineKey(line) === "relationLine.relatedTerm") {
       if (fromType === RelationType.term && toType === RelationType.risk)
         fields.add("Term.relatedRisks");
       if (fromType === RelationType.term && toType === RelationType.avoidance)
@@ -213,9 +211,9 @@ export const createRelationExplanationHelpers = ({
       if (fromType === RelationType.term && toType === RelationType.threatActor)
         fields.add("Term.relatedThreatActors");
     }
-    if (line.text === t("relationLine.attackToolMaker"))
+    if (getRelationLineKey(line) === "relationLine.attackToolMaker")
       fields.add("ThreatActor.buildAttackTools");
-    if (line.text === t("relationLine.causeRisk")) {
+    if (getRelationLineKey(line) === "relationLine.causeRisk") {
       if (fromType === RelationType.attackTool) {
         fields.add("AttackTool.directCauseRisks");
         fields.add("AttackTool.indirectSupportRisks");
@@ -225,12 +223,12 @@ export const createRelationExplanationHelpers = ({
         fields.add("ThreatActor.indirectSupportRisks");
       }
     }
-    if (line.text === t("relationLine.subRisk")) fields.add("Risk child ID");
-    if (line.text === t("relationLine.subAvoidance"))
+    if (getRelationLineKey(line) === "relationLine.subRisk") fields.add("Risk child ID");
+    if (getRelationLineKey(line) === "relationLine.subAvoidance")
       fields.add("Avoidance child ID");
-    if (line.text === t("relationLine.subAttackTool"))
+    if (getRelationLineKey(line) === "relationLine.subAttackTool")
       fields.add("AttackTool child ID");
-    if (line.text === t("relationLine.subThreatActor"))
+    if (getRelationLineKey(line) === "relationLine.subThreatActor")
       fields.add("ThreatActor child ID");
 
     return [...fields];
@@ -238,26 +236,26 @@ export const createRelationExplanationHelpers = ({
 
   const getRelationEvidenceLevel = (line: Line): RelationEvidenceLevel => {
     if (
-      line.text === t("relationLine.directCauseRisk") ||
-      line.text === t("relationLine.buildAttackTool") ||
-      line.text === t("relationLine.useAttackTool") ||
-      line.text === t("relationLine.avoidanceMeans")
+      getRelationLineKey(line) === "relationLine.directCauseRisk" ||
+      getRelationLineKey(line) === "relationLine.buildAttackTool" ||
+      getRelationLineKey(line) === "relationLine.useAttackTool" ||
+      getRelationLineKey(line) === "relationLine.avoidanceMeans"
     ) {
       return "direct";
     }
     if (
-      line.text === t("relationLine.indirectSupportRisk") ||
-      line.text === t("relationLine.causeRisk")
+      getRelationLineKey(line) === "relationLine.indirectSupportRisk" ||
+      getRelationLineKey(line) === "relationLine.causeRisk"
     ) {
       return "indirect";
     }
     if (
-      line.text === t("relationLine.relatedTerm") ||
-      line.text === t("relationLine.subRisk") ||
-      line.text === t("relationLine.subAvoidance") ||
-      line.text === t("relationLine.subAttackTool") ||
-      line.text === t("relationLine.subThreatActor") ||
-      line.text === t("relationLine.attackToolMaker")
+      getRelationLineKey(line) === "relationLine.relatedTerm" ||
+      getRelationLineKey(line) === "relationLine.subRisk" ||
+      getRelationLineKey(line) === "relationLine.subAvoidance" ||
+      getRelationLineKey(line) === "relationLine.subAttackTool" ||
+      getRelationLineKey(line) === "relationLine.subThreatActor" ||
+      getRelationLineKey(line) === "relationLine.attackToolMaker"
     ) {
       return "inferred";
     }
@@ -265,16 +263,39 @@ export const createRelationExplanationHelpers = ({
   };
 
   const getRelationPriority = (lineText: string) => {
-    if (lineText === t("relationLine.directCauseRisk")) return 0;
-    if (lineText === t("relationLine.buildAttackTool")) return 1;
-    if (lineText === t("relationLine.useAttackTool")) return 2;
-    if (lineText === t("relationLine.avoidanceMeans")) return 3;
-    if (lineText === t("relationLine.indirectSupportRisk")) return 4;
+    if (
+      lineText === "relationLine.directCauseRisk" ||
+      lineText === t("relationLine.directCauseRisk")
+    )
+      return 0;
+    if (
+      lineText === "relationLine.buildAttackTool" ||
+      lineText === t("relationLine.buildAttackTool")
+    )
+      return 1;
+    if (
+      lineText === "relationLine.useAttackTool" ||
+      lineText === t("relationLine.useAttackTool")
+    )
+      return 2;
+    if (
+      lineText === "relationLine.avoidanceMeans" ||
+      lineText === t("relationLine.avoidanceMeans")
+    )
+      return 3;
+    if (
+      lineText === "relationLine.indirectSupportRisk" ||
+      lineText === t("relationLine.indirectSupportRisk")
+    )
+      return 4;
     return 5;
   };
 
   const isDirectRelationLine = (lineText: string) =>
     [
+      "relationLine.directCauseRisk",
+      "relationLine.buildAttackTool",
+      "relationLine.useAttackTool",
       t("relationLine.directCauseRisk"),
       t("relationLine.buildAttackTool"),
       t("relationLine.useAttackTool"),
@@ -292,7 +313,7 @@ export const createRelationExplanationHelpers = ({
     );
     const prefix = "relationView.relationExplanation";
 
-    if (line.text === t("relationLine.avoidanceMeans")) {
+    if (getRelationLineKey(line) === "relationLine.avoidanceMeans") {
       if (fromType === RelationType.risk) return t(`${prefix}.riskAvoidance`);
       if (
         fromType === RelationType.attackTool ||
@@ -301,27 +322,27 @@ export const createRelationExplanationHelpers = ({
         return t(`${prefix}.toolAvoidance`);
       return t(`${prefix}.avoidance`);
     }
-    if (line.text === t("relationLine.directCauseRisk"))
+    if (getRelationLineKey(line) === "relationLine.directCauseRisk")
       return t(`${prefix}.directCauseRisk`);
-    if (line.text === t("relationLine.indirectSupportRisk"))
+    if (getRelationLineKey(line) === "relationLine.indirectSupportRisk")
       return t(`${prefix}.indirectSupportRisk`);
-    if (line.text === t("relationLine.buildAttackTool"))
+    if (getRelationLineKey(line) === "relationLine.buildAttackTool")
       return t(`${prefix}.buildAttackTool`);
-    if (line.text === t("relationLine.useAttackTool"))
+    if (getRelationLineKey(line) === "relationLine.useAttackTool")
       return t(`${prefix}.useAttackTool`);
-    if (line.text === t("relationLine.causeRisk"))
+    if (getRelationLineKey(line) === "relationLine.causeRisk")
       return t(`${prefix}.causeRisk`);
-    if (line.text === t("relationLine.relatedTerm"))
+    if (getRelationLineKey(line) === "relationLine.relatedTerm")
       return t(`${prefix}.relatedTerm`);
     if (
-      line.text === t("relationLine.subRisk") ||
-      line.text === t("relationLine.subAvoidance") ||
-      line.text === t("relationLine.subAttackTool") ||
-      line.text === t("relationLine.subThreatActor")
+      getRelationLineKey(line) === "relationLine.subRisk" ||
+      getRelationLineKey(line) === "relationLine.subAvoidance" ||
+      getRelationLineKey(line) === "relationLine.subAttackTool" ||
+      getRelationLineKey(line) === "relationLine.subThreatActor"
     ) {
       return t(`${prefix}.subEntity`);
     }
-    if (line.text === t("relationLine.attackToolMaker"))
+    if (getRelationLineKey(line) === "relationLine.attackToolMaker")
       return t(`${prefix}.attackToolMaker`);
     return t(`${prefix}.review`);
   };
@@ -329,27 +350,27 @@ export const createRelationExplanationHelpers = ({
   const getRelationImpactHint = (line: Line) => {
     const prefix = "relationView.relationImpact";
 
-    if (line.text === t("relationLine.avoidanceMeans"))
+    if (getRelationLineKey(line) === "relationLine.avoidanceMeans")
       return t(`${prefix}.avoidance`);
-    if (line.text === t("relationLine.directCauseRisk"))
+    if (getRelationLineKey(line) === "relationLine.directCauseRisk")
       return t(`${prefix}.directCauseRisk`);
-    if (line.text === t("relationLine.indirectSupportRisk"))
+    if (getRelationLineKey(line) === "relationLine.indirectSupportRisk")
       return t(`${prefix}.indirectSupportRisk`);
     if (
-      line.text === t("relationLine.buildAttackTool") ||
-      line.text === t("relationLine.useAttackTool")
+      getRelationLineKey(line) === "relationLine.buildAttackTool" ||
+      getRelationLineKey(line) === "relationLine.useAttackTool"
     ) {
       return t(`${prefix}.threatActorTool`);
     }
-    if (line.text === t("relationLine.causeRisk"))
+    if (getRelationLineKey(line) === "relationLine.causeRisk")
       return t(`${prefix}.causeRisk`);
-    if (line.text === t("relationLine.relatedTerm"))
+    if (getRelationLineKey(line) === "relationLine.relatedTerm")
       return t(`${prefix}.relatedTerm`);
     if (
-      line.text === t("relationLine.subRisk") ||
-      line.text === t("relationLine.subAvoidance") ||
-      line.text === t("relationLine.subAttackTool") ||
-      line.text === t("relationLine.subThreatActor")
+      getRelationLineKey(line) === "relationLine.subRisk" ||
+      getRelationLineKey(line) === "relationLine.subAvoidance" ||
+      getRelationLineKey(line) === "relationLine.subAttackTool" ||
+      getRelationLineKey(line) === "relationLine.subThreatActor"
     ) {
       return t(`${prefix}.subEntity`);
     }
@@ -373,7 +394,7 @@ export const createRelationExplanationHelpers = ({
     }
 
     return {
-      relationKey: `${line.from}::${line.text}::${line.to}`,
+      relationKey: `${line.from}::${getRelationLineKey(line)}::${line.to}`,
       fromId: line.from,
       toId: line.to,
       relationType: line.text,

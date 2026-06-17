@@ -7,6 +7,11 @@
     "limitation": "Rug pulls may still occur after the lock-up period expires, merely delaying the inevitable; developers may hold hidden tokens through other addresses; the locking contract itself may contain vulnerabilities; excessively long lock-up periods may hinder normal project operations.",
     "keywords": [
       "Liquidity Locking and Token Vesting Schedule"
+    ],
+    "references": [
+      {
+        "title": "Third-party Security Audit for Smart Contracts"
+      }
     ]
   }
 }

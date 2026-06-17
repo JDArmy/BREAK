@@ -70,11 +70,11 @@ const aliases = computed(() =>
         <span v-for="alias in aliases" :key="alias" class="tag-chip">{{ alias }}</span>
       </div>
     </div>
-    <div v-if="BREAK.terms[tKey as keyof typeof BREAK.terms].keywords?.length" class="desc">
+    <div v-if="getMessageStringArray(localeMessages, `BREAK.terms.${tKey}.keywords`).length" class="desc">
       <strong>{{ $t("keywords") }}:&nbsp;</strong>
       <div class="tag-list">
         <span
-          v-for="keyword in BREAK.terms[tKey as keyof typeof BREAK.terms].keywords"
+          v-for="keyword in getMessageStringArray(localeMessages, `BREAK.terms.${tKey}.keywords`)"
           :key="keyword"
           class="tag-chip"
         >

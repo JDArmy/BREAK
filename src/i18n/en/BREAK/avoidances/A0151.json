@@ -7,6 +7,11 @@
     "limitation": "Extended deployment cycle; high management complexity; slow response to emergency updates.",
     "keywords": [
       "Phased OTA Deployment and Canary Release"
+    ],
+    "references": [
+      {
+        "title": "Smart Contract Source Code Verification"
+      }
     ]
   }
 }

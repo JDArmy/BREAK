@@ -3,11 +3,11 @@ import type { RouteLocationNormalizedLoaded } from "vue-router";
 import { networkLayoutOptions, networkLayoutZoom, RelationType, type NetworkLayoutMode, type SankeyNode } from "@/views/relation/relationTypes";
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;
-export type RelationViewMode = "network" | "sankey";
+export type RelationViewMode = "network" | "sankey" | "analysis";
 export type SankeyLabelOverflow = "truncate" | "break";
 export type SankeyNodeAlign = "justify" | "left" | "right";
 
-export const relationViewModes = ["network", "sankey"] as const;
+export const relationViewModes = ["network", "sankey", "analysis"] as const;
 
 export const normalizeRelationViewMode = (view: unknown, fallback: RelationViewMode): RelationViewMode =>
   typeof view === "string" && relationViewModes.includes(view as RelationViewMode)

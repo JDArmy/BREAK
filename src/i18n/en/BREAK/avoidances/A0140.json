@@ -7,6 +7,11 @@
     "limitation": "Increases system complexity and gas costs; storage layout management is difficult and error-prone; centralized upgrade authority may be abused; the proxy contract itself is non-upgradeable, creating a single point of failure.",
     "keywords": [
       "Proxy Contract Upgrade Pattern"
+    ],
+    "references": [
+      {
+        "title": "Protected Deployment for Smart Contracts"
+      }
     ]
   }
 }

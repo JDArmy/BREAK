@@ -27,6 +27,7 @@ export interface Node {
 
 export interface Line {
   from: string;
+  relationKey?: string;
   text: string;
   to: string;
 }
@@ -50,6 +51,7 @@ export interface RelationExplanation {
 }
 
 export interface RelationLegendItem {
+  key: string;
   color: string;
   label: string;
   fields: string[];
@@ -161,6 +163,59 @@ export interface AttackPathExplanation {
   steps: AttackPathExplanationStep[];
 }
 
+export type AttackPathFilterType =
+  | RelationType.threatActor
+  | RelationType.attackTool
+  | RelationType.risk
+  | RelationType.avoidance;
+
+export type AttackPathFilters = Partial<Record<AttackPathFilterType, string>>;
+
+export interface AttackPathFilterOption {
+  key: string;
+  label: string;
+  count: number;
+}
+
+export interface AttackPathDetailNode {
+  type: AttackPathFilterType;
+  key: string;
+  label: string;
+}
+
+export interface AttackPathDetailSegment {
+  source: AttackPathDetailNode;
+  target: AttackPathDetailNode;
+  relation: string;
+  reason: string;
+  sourceFields: string[];
+}
+
+export interface AttackPathDetail {
+  id: string;
+  label: string;
+  nodes: AttackPathDetailNode[];
+  segments: AttackPathDetailSegment[];
+}
+
+export interface RiskAvoidanceCoverageItem {
+  avoidanceKey: string;
+  avoidanceTitle: string;
+  source: "risk" | "attackTool" | "both";
+  sourceLabel: string;
+  pathCount: number;
+  attackToolLabels: string[];
+  sourceFields: string[];
+}
+
+export interface RiskAvoidanceCoverage {
+  totalCount: number;
+  directCount: number;
+  attackToolCount: number;
+  overlapCount: number;
+  items: RiskAvoidanceCoverageItem[];
+}
+
 export type NodeCoverageSeverity = "normal" | "warning" | "danger";
 
 export interface NodeCoverageMetric {
@@ -182,6 +237,37 @@ export interface NodeCoverageSummary {
   severity: NodeCoverageSeverity;
   metrics: NodeCoverageMetric[];
   items: NodeCoverageItem[];
+  notice?: string;
+}
+
+export interface NodeBusinessSceneImpactRisk {
+  id: string;
+  title: string;
+  sourceFields: string[];
+}
+
+export interface NodeBusinessSceneImpactRiskScene {
+  id: string;
+  title: string;
+  riskCount: number;
+  risks: NodeBusinessSceneImpactRisk[];
+}
+
+export interface NodeBusinessSceneImpactItem {
+  id: string;
+  title: string;
+  dimensionTitles: string[];
+  riskCount: number;
+  riskSceneCount: number;
+  riskScenes: NodeBusinessSceneImpactRiskScene[];
+}
+
+export interface NodeBusinessSceneImpactSummary {
+  title: string;
+  summary: string;
+  metrics: NodeCoverageMetric[];
+  items: NodeBusinessSceneImpactItem[];
+  risks: NodeBusinessSceneImpactRisk[];
   notice?: string;
 }
 
@@ -276,6 +362,8 @@ export const networkLayoutOptions: {
   { value: "hierarchical", labelKey: "relationLayout.hierarchical" },
   { value: "force", labelKey: "relationLayout.force" },
 ];
+
+export const getRelationLineKey = (line: Line) => line.relationKey || line.text;
 
 export const networkLayoutZoom: Record<NetworkLayoutMode, number> = {
   horizontal: 1.0,

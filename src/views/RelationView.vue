@@ -1,10 +1,12 @@
 <script lang="ts">
 import { defineAsyncComponent, defineComponent, onMounted } from "vue";
+import RelationAnalysisPane from "@/components/relation/RelationAnalysisPane.vue";
 import RelationGraphContextMenu from "@/components/relation/RelationGraphContextMenu.vue";
 import RelationGraphTouchActions from "@/components/relation/RelationGraphTouchActions.vue";
 import RelationSankeyPane from "@/components/relation/RelationSankeyPane.vue";
 import RelationSelectorBar from "@/components/relation/RelationSelectorBar.vue";
 import { useRelationViewModel } from "@/views/relation/useRelationViewModel";
+import { RelationType } from "@/views/relation/relationTypes";
 import {
   loadNetworkECharts,
   loadSankeyECharts,
@@ -24,6 +26,7 @@ export default defineComponent({
   name: "RelationView",
   components: {
     RelationNodeDetailDrawer,
+    RelationAnalysisPane,
     RelationGraphContextMenu,
     RelationGraphTouchActions,
     RelationNetworkPane,
@@ -58,7 +61,10 @@ export default defineComponent({
         window.setTimeout(preloadSecondaryView, 800);
       }
     });
-    return viewModel;
+    return {
+      ...viewModel,
+      RelationType,
+    };
   },
 });
 </script>
@@ -126,19 +132,50 @@ export default defineComponent({
           :active="activeView === 'sankey'"
           :has-data="sankeyHasData"
           :chart-min-width="sankeyChartMinWidth"
+          :set-sankey-chart-element="setSankeyChartElement"
+        />
+      </el-tab-pane>
+      <el-tab-pane
+        :label="$t('relationView.analysis')"
+        name="analysis"
+        :lazy="activeView !== 'analysis'"
+      >
+        <RelationAnalysisPane
+          :active="activeView === 'analysis'"
           :relation-type-mapping="RelationTypeMapping"
-          :attack-path-details="attackPathDetails"
           :attack-path-filter-options="attackPathFilterOptions"
           :attack-path-filters="attackPathFilters"
           :filtered-attack-path-count="filteredAttackPaths.length"
           :has-active-attack-path-filters="hasActiveAttackPathFilters"
           :risk-avoidance-coverage="riskAvoidanceCoverage"
           :selected-attack-path-detail="selectedAttackPathDetail"
-          :selected-attack-path-id="selectedAttackPathDetail?.id || ''"
-          :set-sankey-chart-element="setSankeyChartElement"
+          :selected-node-analysis-summary="selectedNodeAnalysisSummary"
+          :selected-node-attack-path-summary="selectedNodeAttackPathSummary"
+          :selected-node-attack-path-description="selectedNodeAttackPathDescription"
+          :selected-node-attack-path-explanations="
+            selectedNodeAttackPathExplanations
+          "
+          :selected-node-business-scene-impact-summary="
+            selectedNodeBusinessSceneImpactSummary
+          "
+          :selected-node-coverage-summary="selectedNodeCoverageSummary"
+          :current-entity-type-title="RelationTypeMapping[relType].title"
+          :selected-network-node-title="selectedNetworkNodeTitle"
+          :root-node-relations="rootNodeRelations"
+          :selected-node-root-path="selectedNodeRootPath"
+          :rel-key="relKey"
+          :is-path-node-current-selection="isPathNodeCurrentSelection"
+          :is-current-node-root="isCurrentNodeRoot"
           @update:attack-path-filters="attackPathFilters = $event"
-          @select-attack-path="selectAttackPath"
           @reset-attack-path-filters="resetAttackPathFilters"
+          @apply-avoidance-filter="
+            attackPathFilters = {
+              ...(attackPathFilters || {}),
+              [RelationType.avoidance]: $event,
+            }
+          "
+          @focus-node="focusNodeInDrawer"
+          @open-node-as-root="openNodeAsRootById"
         />
       </el-tab-pane>
     </el-tabs>
@@ -184,6 +221,9 @@ export default defineComponent({
       :selected-node-attack-path-description="selectedNodeAttackPathDescription"
       :selected-node-attack-path-explanations="
         selectedNodeAttackPathExplanations
+      "
+      :selected-node-business-scene-impact-summary="
+        selectedNodeBusinessSceneImpactSummary
       "
       :selected-node-coverage-summary="selectedNodeCoverageSummary"
       :selected-network-relations="selectedNetworkRelations"

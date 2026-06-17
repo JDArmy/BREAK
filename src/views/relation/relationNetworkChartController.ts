@@ -453,16 +453,24 @@ export const createNetworkChartController = ({
     void applyNetworkOption();
   };
 
-  const disposeNetworkChart = () => {
+  const releaseNetworkChart = () => {
     renderRequestId += 1;
     clearLongPressTimer();
     hideNetworkTooltip();
-    exitAppFullscreen();
     networkChart
       ?.getDom()
       .removeEventListener("contextmenu", preventMobileNativeContextMenu);
     networkChart?.dispose();
     networkChart = null;
+  };
+
+  const recreateNetworkChart = () => {
+    releaseNetworkChart();
+  };
+
+  const disposeNetworkChart = () => {
+    exitAppFullscreen();
+    releaseNetworkChart();
     removeNativeContextMenuHandler(networkChartRef.value);
   };
 
@@ -536,6 +544,7 @@ export const createNetworkChartController = ({
     enterFullscreen,
     networkChartRef,
     networkPaneRef,
+    recreateNetworkChart,
     renderNetworkChart,
     setNetworkChartElement,
     setNetworkPaneElement,

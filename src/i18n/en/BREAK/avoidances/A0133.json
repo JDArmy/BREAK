@@ -7,6 +7,11 @@
     "limitation": "Reliance on external data and third-party cooperation; attackers may use their own hashrate to bypass monitoring; emergency measures may impact legitimate users; not all attack vectors can be prevented",
     "keywords": [
       "Hashrate Rental Market Monitoring and Incident Response"
+    ],
+    "references": [
+      {
+        "title": "Secure Smart Contract Development Guidelines"
+      }
     ]
   }
 }

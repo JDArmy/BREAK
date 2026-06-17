@@ -120,10 +120,10 @@ const openRelationGraph = (atKey: string) => {
         <h3>{{ $t("description") }}</h3>
         <p>{{ $t(`BREAK.attackTools.${selectedAttackToolKey}.description`) }}</p>
       </section>
-      <section v-if="selectedAttackTool.keywords?.length" class="detail-section">
+      <section v-if="getMessageStringArray(localeMessages, `BREAK.attackTools.${selectedAttackToolKey}.keywords`).length" class="detail-section">
         <h3>{{ $t("keywords") }}</h3>
         <div class="keywords">
-          <span v-for="(keyword, index) in selectedAttackTool.keywords" :key="index" class="keyword-tag">
+          <span v-for="keyword in getMessageStringArray(localeMessages, `BREAK.attackTools.${selectedAttackToolKey}.keywords`)" :key="keyword" class="keyword-tag">
             {{ keyword }}
           </span>
         </div>

@@ -7,6 +7,11 @@
     "limitation": "Users may employ weak passwords or reuse passwords across multiple devices; some low-end devices do not support password modification or multi-factor authentication; forgotten passwords may lead to device lockout; mandatory password policies may negatively impact user experience.",
     "keywords": [
       "Strong Authentication and Default Credential Changes for IoT Devices"
+    ],
+    "references": [
+      {
+        "title": "Smart Contract Upgrade Safety"
+      }
     ]
   }
 }

@@ -98,6 +98,24 @@ describe("relationAttackPath", () => {
         }),
       ])
     );
+    expect(attackPath.attackPathDetails.value.length).toBeGreaterThan(0);
+    expect(attackPath.filteredAttackPaths.value.length).toBeGreaterThan(0);
+    expect(attackPath.attackPathFilterOptions.value[RelationType.risk]).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          key: "R0005-001",
+          label: "BREAK.risks.R0005-001.title",
+        }),
+      ])
+    );
+    expect(attackPath.selectedAttackPathDetail.value).toEqual(
+      expect.objectContaining({
+        id: expect.any(String),
+        nodes: expect.arrayContaining([
+          expect.objectContaining({ type: RelationType.attackTool, key: "AT0001" }),
+        ]),
+      })
+    );
   });
 
   it("filters selected-node path roles and descriptions by the current relation context", () => {

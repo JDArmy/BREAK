@@ -7,6 +7,7 @@ import RelationNodeDrawerInsights from "@/components/relation/RelationNodeDrawer
 import RelationNodeDrawerRelations from "@/components/relation/RelationNodeDrawerRelations.vue";
 import type {
   AttackPathExplanation,
+  NodeBusinessSceneImpactSummary,
   NodeAnalysisSummary,
   NodeCoverageSummary,
   RootPathSummary,
@@ -47,6 +48,7 @@ const props = defineProps<{
   selectedNodeAttackPathSummary: string[];
   selectedNodeAttackPathDescription: string;
   selectedNodeAttackPathExplanations: AttackPathExplanation[];
+  selectedNodeBusinessSceneImpactSummary: NodeBusinessSceneImpactSummary | null;
   selectedNodeCoverageSummary: NodeCoverageSummary | null;
   isCurrentNodeRoot: boolean;
   selectedNetworkRelations: RelationSummary[];
@@ -109,6 +111,9 @@ const drawerVisible = computed({
         "
         :selected-node-attack-path-explanations="
           selectedNodeAttackPathExplanations
+        "
+        :selected-node-business-scene-impact-summary="
+          selectedNodeBusinessSceneImpactSummary
         "
         :selected-node-coverage-summary="selectedNodeCoverageSummary"
         :rel-key="relKey"

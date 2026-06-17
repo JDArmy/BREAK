@@ -7,6 +7,11 @@
     "limitation": "Price updates exhibit lag, making them untimely during severe market volatility; attackers may bypass the mechanism through sustained manipulation; storing historical prices on-chain increases gas costs; sufficient trading volume is required to support price discovery.",
     "keywords": [
       "Time-Weighted Average Price (TWAP) Mechanism"
+    ],
+    "references": [
+      {
+        "title": "Security Patch Management for Smart Contracts"
+      }
     ]
   }
 }

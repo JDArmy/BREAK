@@ -7,6 +7,11 @@
     "limitation": "Machine learning models require large amounts of training data and are prone to false positives; emerging botnets may use encrypted communication to evade detection; DGA domains are generated rapidly, making real-time blacklist updates difficult; limited effectiveness in detecting encrypted traffic.",
     "keywords": [
       "IoT Traffic Anomaly Detection and C&C Communication Blocking"
+    ],
+    "references": [
+      {
+        "title": "On-chain Asset Risk Monitoring"
+      }
     ]
   }
 }

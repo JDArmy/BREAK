@@ -7,6 +7,11 @@
     "limitation": "Software-based methods have limited effectiveness; may impact performance; difficult to completely eliminate leakage.",
     "keywords": [
       "Software-Level Side-Channel Mitigation"
+    ],
+    "references": [
+      {
+        "title": "Oracle Source Validation"
+      }
     ]
   }
 }

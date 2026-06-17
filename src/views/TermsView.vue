@@ -114,7 +114,7 @@ const selectedTermAliases = computed(() => getTermStringArray(selectedTermKey.va
           </span>
         </div>
       </section>
-      <section v-if="selectedTerm.keywords?.length" class="detail-section">
+      <section v-if="getTermStringArray(selectedTermKey, 'keywords').length" class="detail-section">
         <h3>{{ $t("keywords") }}</h3>
         <div class="keywords">
           <span v-for="keyword in getTermStringArray(selectedTermKey, 'keywords')" :key="keyword" class="keyword-tag">

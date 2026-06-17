@@ -183,6 +183,17 @@ for (const category of categories) {
         }
       }
 
+      for (const [index, zhReference] of (Array.isArray(zhEntity.references) ? zhEntity.references : []).entries()) {
+        const enReference = Array.isArray(enEntity.references) ? enEntity.references[index] : undefined;
+        if (isMissingEnglishValue(zhReference.title, enReference?.title)) {
+          issues.push(`${category.name}.${id}.references[${index}].title: missing English reference title`);
+          continue;
+        }
+        if (hasChineseText(enReference?.title)) {
+          issues.push(`${category.name}.${id}.references[${index}].title: English reference title contains Chinese text`);
+        }
+      }
+
       if (category.checkBusinessSceneNestedTitles) {
         for (const [key, value] of Object.entries(merged.riskDimensions ?? {})) {
           if (hasChineseText(value.title)) {

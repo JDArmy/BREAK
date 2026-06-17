@@ -1,6 +1,7 @@
 import type { Ref } from "vue";
 import {
   RelationType,
+  getRelationLineKey,
   isRelationEntityType,
   type GraphLink,
   type GraphNode,
@@ -22,7 +23,7 @@ interface CreateNetworkDataHelpersOptions {
   filterLineType: Ref<string[]>;
   draggedNodePositions: Ref<Record<string, { x: number; y: number }>>;
   networkState: { layout: NetworkLayoutMode };
-  relationLegendItems: Ref<{ color: string; label: string }[]>;
+  relationLegendItems: Ref<{ key?: string; color: string; label: string }[]>;
   isDark: Ref<boolean>;
   getRelationTypeColor: (
     type: Exclude<RelationType, RelationType.all>
@@ -545,8 +546,8 @@ export const createNetworkDataHelpers = ({
   const getVisibleNetworkData = () => {
     const filterLineTypeSet = new Set(filterLineType.value);
     const nodeTypeById = new Map(nodes.map((node) => [node.id, node.type]));
-    const relationLegendColorByLabel = new Map(
-      relationLegendItems.value.map((item) => [item.label, item.color])
+    const relationLegendColorByKey = new Map(
+      relationLegendItems.value.map((item) => [item.key ?? item.label, item.color])
     );
     const styleContext: NetworkGraphStyleContext = {
       lineColor: getGraphColor("line"),
@@ -613,7 +614,8 @@ export const createNetworkDataHelpers = ({
     applyNetworkLayout(graphNodes, groupedNodes, styleContext);
 
     lines.forEach((line) => {
-      if (!filterLineTypeSet.has(line.text)) return;
+      const lineKey = getRelationLineKey(line);
+      if (!filterLineTypeSet.has(lineKey)) return;
       if (!visibleNodeKeys.has(line.from) || !visibleNodeKeys.has(line.to))
         return;
       const fromType = nodeTypeById.get(line.from);
@@ -622,7 +624,7 @@ export const createNetworkDataHelpers = ({
       const sourceNode = nodes.find((node) => node.id === line.from);
       const targetNode = nodes.find((node) => node.id === line.to);
 
-      const linkKey = `${line.from}->${line.to}->${line.text}`;
+      const linkKey = `${line.from}->${line.to}->${lineKey}`;
       if (!linkMap.has(linkKey)) {
         const explanation = explainRelation(line, fromType, toType);
         const sourceTitle = normalizeGraphText(
@@ -650,7 +652,7 @@ export const createNetworkDataHelpers = ({
           evidenceLabel: formatEvidenceLevel(explanation.evidenceLevel),
           lineStyle: {
             color:
-              relationLegendColorByLabel.get(line.text) ??
+              relationLegendColorByKey.get(lineKey) ??
               styleContext.lineColor,
             opacity: isDark.value ? 0.42 : 0.52,
             curveness: 0.18,

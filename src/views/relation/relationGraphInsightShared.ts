@@ -1,4 +1,10 @@
-import { isRelationEntityType, RelationType, type Line, type Node } from "@/views/relation/relationTypes";
+import {
+  isRelationEntityType,
+  RelationType,
+  getRelationLineKey,
+  type Line,
+  type Node,
+} from "@/views/relation/relationTypes";
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;
 
@@ -37,12 +43,15 @@ export const createRelationGraphInsightHelpers = ({
     const otherNodeId = line.from === nodeId ? line.to : line.from;
     const otherNode = findNodeById(otherNodeId);
     const explanation = explainRelation(line);
+    const relationLineKey = getRelationLineKey(line);
     return {
-      relationKey: `${line.from}::${line.text}::${line.to}`,
+      relationKey: `${line.from}::${relationLineKey}::${line.to}`,
       direction: line.from === nodeId ? t("relationView.outgoing") : t("relationView.incoming"),
       text: line.text,
-      priority: getRelationPriority(line.text),
-      directness: isDirectRelationLine(line.text) ? t("relationView.direct") : t("relationView.indirect"),
+      relationLineKey,
+      priority: getRelationPriority(relationLineKey),
+      directness: isDirectRelationLine(relationLineKey) ? t("relationView.direct") : t("relationView.indirect"),
+      directnessKey: isDirectRelationLine(relationLineKey) ? "direct" : "indirect",
       evidenceLevel: explanation.evidenceLevel,
       evidenceLabel: formatEvidenceLevel(explanation.evidenceLevel),
       explanation: explanation.explanation,

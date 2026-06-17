@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import RelationNodeAnalysisBlock from "@/components/relation/RelationNodeAnalysisBlock.vue";
 import RelationNodeAttackPathBlock from "@/components/relation/RelationNodeAttackPathBlock.vue";
+import RelationNodeBusinessSceneImpactBlock from "@/components/relation/RelationNodeBusinessSceneImpactBlock.vue";
 import RelationNodeCoverageBlock from "@/components/relation/RelationNodeCoverageBlock.vue";
 import RelationNodeRootRelationBlock from "@/components/relation/RelationNodeRootRelationBlock.vue";
 import type {
   AttackPathExplanation,
+  NodeBusinessSceneImpactSummary,
   NodeAnalysisSummary,
   NodeCoverageSummary,
   RootPathSummary,
@@ -19,6 +21,7 @@ defineProps<{
   selectedNodeAttackPathSummary: string[];
   selectedNodeAttackPathDescription: string;
   selectedNodeAttackPathExplanations: AttackPathExplanation[];
+  selectedNodeBusinessSceneImpactSummary: NodeBusinessSceneImpactSummary | null;
   selectedNodeCoverageSummary: NodeCoverageSummary | null;
   relKey: string;
   isPathNodeCurrentSelection: (nodeId: string) => boolean;
@@ -42,6 +45,9 @@ const emit = defineEmits<{
     @open-node-as-root="emit('open-node-as-root', $event)"
   />
   <RelationNodeAnalysisBlock :summary="selectedNodeAnalysisSummary" />
+  <RelationNodeBusinessSceneImpactBlock
+    :summary="selectedNodeBusinessSceneImpactSummary"
+  />
   <RelationNodeCoverageBlock :summary="selectedNodeCoverageSummary" />
   <RelationNodeAttackPathBlock
     :selected-node-attack-path-summary="selectedNodeAttackPathSummary"

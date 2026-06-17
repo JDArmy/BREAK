@@ -1,6 +1,7 @@
 import { computed, reactive, ref, type Ref } from "vue";
 import BREAK from "@/BREAK";
 import { createRelationAttackPathData } from "@/views/relation/relationAttackPath";
+import { createRelationBusinessSceneImpact } from "@/views/relation/relationBusinessSceneImpact";
 import { createRelationCoverageAnalysis } from "@/views/relation/relationCoverageAnalysis";
 import { createRelationExplanationHelpers } from "@/views/relation/relationExplanation";
 import { createRelationGraphBuilder } from "@/views/relation/relationGraphBuilder";
@@ -18,6 +19,7 @@ type Translate = (key: string, params?: Record<string, unknown>) => string;
 
 interface UseRelationGraphDataOptions {
   t: Translate;
+  locale: Ref<string>;
   isDark: Ref<boolean>;
   isMobile: Ref<boolean>;
   relType: Ref<RelationType>;
@@ -55,6 +57,7 @@ interface UseRelationGraphDataOptions {
 
 export const useRelationGraphData = ({
   t,
+  locale,
   isMobile,
   relType,
   relKey,
@@ -72,88 +75,104 @@ export const useRelationGraphData = ({
   });
   const selectedNetworkNodeId = ref(relKey.value);
 
-  const relationLegendItems = computed<RelationLegendItem[]>(() => [
-    {
-      color: getRelationLineColor("avoidanceMeans"),
-      label: t("relationLine.avoidanceMeans"),
-      fields: ["Risk.avoidances", "AttackTool.avoidances"],
-    },
-    {
-      color: getRelationLineColor("directCauseRisk"),
-      label: t("relationLine.directCauseRisk"),
-      fields: ["AttackTool.directCauseRisks", "ThreatActor.directCauseRisks"],
-    },
-    {
-      color: getRelationLineColor("indirectSupportRisk"),
-      label: t("relationLine.indirectSupportRisk"),
-      fields: [
-        "AttackTool.indirectSupportRisks",
-        "ThreatActor.indirectSupportRisks",
-      ],
-    },
-    {
-      color: getRelationLineColor("buildAttackTool"),
-      label: t("relationLine.buildAttackTool"),
-      fields: ["ThreatActor.buildAttackTools"],
-    },
-    {
-      color: getRelationLineColor("useAttackTool"),
-      label: t("relationLine.useAttackTool"),
-      fields: ["ThreatActor.useAttackTools"],
-    },
-    {
-      color: getRelationLineColor("causeRisk"),
-      label: t("relationLine.causeRisk"),
-      fields: [
-        "AttackTool.directCauseRisks",
-        "AttackTool.indirectSupportRisks",
-        "ThreatActor.directCauseRisks",
-      ],
-    },
-    {
-      color: getRelationLineColor("relatedTerm"),
-      label: t("relationLine.relatedTerm"),
-      fields: [
-        "Term.relatedRisks",
-        "Term.relatedAvoidances",
-        "Term.relatedAttackTools",
-        "Term.relatedThreatActors",
-      ],
-    },
-    {
-      color: getRelationLineColor("subRisk"),
-      label: t("relationLine.subRisk"),
-      fields: ["Risk child ID"],
-    },
-    {
-      color: getRelationLineColor("subAvoidance"),
-      label: t("relationLine.subAvoidance"),
-      fields: ["Avoidance child ID"],
-    },
-    {
-      color: getRelationLineColor("subAttackTool"),
-      label: t("relationLine.subAttackTool"),
-      fields: ["AttackTool child ID"],
-    },
-    {
-      color: getRelationLineColor("subThreatActor"),
-      label: t("relationLine.subThreatActor"),
-      fields: ["ThreatActor child ID"],
-    },
-    {
-      color: getRelationLineColor("attackToolMaker"),
-      label: t("relationLine.attackToolMaker"),
-      fields: ["ThreatActor.buildAttackTools"],
-    },
-  ]);
+  const relationLegendItems = computed<RelationLegendItem[]>(() => {
+    void locale.value;
+    return [
+      {
+        key: "relationLine.avoidanceMeans",
+        color: getRelationLineColor("avoidanceMeans"),
+        label: t("relationLine.avoidanceMeans"),
+        fields: ["Risk.avoidances", "AttackTool.avoidances"],
+      },
+      {
+        key: "relationLine.directCauseRisk",
+        color: getRelationLineColor("directCauseRisk"),
+        label: t("relationLine.directCauseRisk"),
+        fields: ["AttackTool.directCauseRisks", "ThreatActor.directCauseRisks"],
+      },
+      {
+        key: "relationLine.indirectSupportRisk",
+        color: getRelationLineColor("indirectSupportRisk"),
+        label: t("relationLine.indirectSupportRisk"),
+        fields: [
+          "AttackTool.indirectSupportRisks",
+          "ThreatActor.indirectSupportRisks",
+        ],
+      },
+      {
+        key: "relationLine.buildAttackTool",
+        color: getRelationLineColor("buildAttackTool"),
+        label: t("relationLine.buildAttackTool"),
+        fields: ["ThreatActor.buildAttackTools"],
+      },
+      {
+        key: "relationLine.useAttackTool",
+        color: getRelationLineColor("useAttackTool"),
+        label: t("relationLine.useAttackTool"),
+        fields: ["ThreatActor.useAttackTools"],
+      },
+      {
+        key: "relationLine.causeRisk",
+        color: getRelationLineColor("causeRisk"),
+        label: t("relationLine.causeRisk"),
+        fields: [
+          "AttackTool.directCauseRisks",
+          "AttackTool.indirectSupportRisks",
+          "ThreatActor.directCauseRisks",
+        ],
+      },
+      {
+        key: "relationLine.relatedTerm",
+        color: getRelationLineColor("relatedTerm"),
+        label: t("relationLine.relatedTerm"),
+        fields: [
+          "Term.relatedRisks",
+          "Term.relatedAvoidances",
+          "Term.relatedAttackTools",
+          "Term.relatedThreatActors",
+        ],
+      },
+      {
+        key: "relationLine.subRisk",
+        color: getRelationLineColor("subRisk"),
+        label: t("relationLine.subRisk"),
+        fields: ["Risk child ID"],
+      },
+      {
+        key: "relationLine.subAvoidance",
+        color: getRelationLineColor("subAvoidance"),
+        label: t("relationLine.subAvoidance"),
+        fields: ["Avoidance child ID"],
+      },
+      {
+        key: "relationLine.subAttackTool",
+        color: getRelationLineColor("subAttackTool"),
+        label: t("relationLine.subAttackTool"),
+        fields: ["AttackTool child ID"],
+      },
+      {
+        key: "relationLine.subThreatActor",
+        color: getRelationLineColor("subThreatActor"),
+        label: t("relationLine.subThreatActor"),
+        fields: ["ThreatActor child ID"],
+      },
+      {
+        key: "relationLine.attackToolMaker",
+        color: getRelationLineColor("attackToolMaker"),
+        label: t("relationLine.attackToolMaker"),
+        fields: ["ThreatActor.buildAttackTools"],
+      },
+    ];
+  });
 
-  const relationTypeItems = computed(() =>
-    Object.entries(RelationTypeMapping).map(([key, item]) => ({
+  const relationTypeItems = computed(() => {
+    void locale.value;
+    return Object.entries(RelationTypeMapping).map(([key, item]) => ({
       key,
       title: item.title,
       color: item.color,
-    }))
-  );
+    }));
+  });
 
   const subNodeFilterColor = computed(() => getGraphColor("subNodeFill"));
 
@@ -169,6 +188,7 @@ export const useRelationGraphData = ({
     type: Exclude<RelationType, RelationType.all>,
     key: string
   ) => {
+    void locale.value;
     const breakKey = RelationTypeMapping[type].BreakKey;
     return t(`BREAK.${breakKey}.${key}.title`);
   };
@@ -187,6 +207,7 @@ export const useRelationGraphData = ({
     type: Exclude<RelationType, RelationType.all>,
     key: string
   ) => {
+    void locale.value;
     const breakKey = RelationTypeMapping[type].BreakKey;
     return t(`BREAK.${breakKey}.${key}.title`);
   };
@@ -224,8 +245,10 @@ export const useRelationGraphData = ({
   const formatRelationFieldsTooltip = (fields: string[]) =>
     fields.map((field) => escapeTooltipHtml(field)).join("<br>");
 
-  const getNodeTypeTitle = (type: string) =>
-    isRelationEntityType(type) ? RelationTypeMapping[type].title : type;
+  const getNodeTypeTitle = (type: string) => {
+    void locale.value;
+    return isRelationEntityType(type) ? RelationTypeMapping[type].title : type;
+  };
 
   const {
     explainRelation,
@@ -319,8 +342,18 @@ export const useRelationGraphData = ({
   });
 
   const {
+    attackPathDetails,
+    attackPathFilterOptions,
+    attackPathFilters,
+    filteredAttackPaths,
+    hasActiveAttackPathFilters,
+    normalizeAttackPathFilters,
+    resetAttackPathFilters,
+    riskAvoidanceCoverage,
     sankeyChartHeight,
     sankeyData,
+    selectAttackPath,
+    selectedAttackPathDetail,
     selectedNodeAttackPathDescription,
     selectedNodeAttackPathExplanations,
     selectedNodeAttackPathSummary,
@@ -342,6 +375,13 @@ export const useRelationGraphData = ({
     selectedNetworkNode,
     getNodeTitle,
   });
+
+  const { selectedNodeBusinessSceneImpactSummary } =
+    createRelationBusinessSceneImpact({
+      t,
+      selectedNetworkNode,
+      getNodeTitle,
+    });
 
   let refreshGraphRequestId = 0;
 
@@ -367,12 +407,16 @@ export const useRelationGraphData = ({
 
   return {
     addRootNode,
+    attackPathDetails,
+    attackPathFilterOptions,
+    attackPathFilters,
     buildNodeSummary,
     clearDraggedNodePositions,
     draggedNodePositions,
     filterLineType,
     filterRelationType,
     filterSubNode,
+    filteredAttackPaths,
     ensureRelationNode,
     explainRelation,
     findNodeById,
@@ -385,20 +429,26 @@ export const useRelationGraphData = ({
     getRelationPriority,
     getRelationSourceFields,
     getSankeyNodeName,
+    hasActiveAttackPathFilters,
     isDirectRelationLine,
     isPathNodeCurrentSelection,
     isRelationOnSelectedPath,
     isCurrentNodeRoot,
     jsonData,
     lines,
+    normalizeAttackPathFilters,
     nodes,
     rebuildGraphData,
     refreshGraphAfterVisible,
     relationLegendItems,
     relationTypeItems,
     rootNodeRelations,
+    resetAttackPathFilters,
+    riskAvoidanceCoverage,
     sankeyChartHeight,
     sankeyData,
+    selectAttackPath,
+    selectedAttackPathDetail,
     selectedNetworkNode,
     selectedNetworkNodeId,
     selectedNetworkNodeTitle,
@@ -408,6 +458,7 @@ export const useRelationGraphData = ({
     selectedNodeAttackPathDescription,
     selectedNodeAttackPathExplanations,
     selectedNodeAttackPathSummary,
+    selectedNodeBusinessSceneImpactSummary,
     selectedNodeCoverageSummary,
     selectedNodePathRelationKeys,
     selectedNodeRootPath,

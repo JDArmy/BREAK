@@ -7,6 +7,11 @@
     "limitation": "Reliance on the integrity of third-party services; validators themselves may still front-run transactions; mature private mempools are not available on all chains; may reduce transaction execution speed; protection effectiveness of L2 private mempools is limited.",
     "keywords": [
       "Private Mempool and MEV Protection Services"
+    ],
+    "references": [
+      {
+        "title": "User-side Transaction Risk Warning"
+      }
     ]
   }
 }

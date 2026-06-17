@@ -7,6 +7,11 @@
     "limitation": "Only protects against reentrancy attacks and cannot defend against other types of flash loan attacks; requires developers to correctly identify all functions that need protection; may increase gas consumption.",
     "keywords": [
       "Reentrancy Attack Protection"
+    ],
+    "references": [
+      {
+        "title": "Flash Loan Attacks: How They Work & How to Prevent Them"
+      }
     ]
   }
 }

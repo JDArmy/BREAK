@@ -1,5 +1,10 @@
 import { computed, type ComputedRef, type Ref } from "vue";
-import { isRelationEntityType, type Line, type Node } from "@/views/relation/relationTypes";
+import {
+  getRelationLineKey,
+  isRelationEntityType,
+  type Line,
+  type Node,
+} from "@/views/relation/relationTypes";
 
 interface CreateRelationGraphRootAnalysisOptions {
   relKey: Ref<string>;
@@ -74,7 +79,7 @@ export const createRelationGraphRootAnalysis = ({
       const neighbors = adjacency.get(current.nodeId) ?? [];
       neighbors
         .slice()
-        .sort((a, b) => getRelationPriority(a.line.text) - getRelationPriority(b.line.text))
+        .sort((a, b) => getRelationPriority(getRelationLineKey(a.line)) - getRelationPriority(getRelationLineKey(b.line)))
         .forEach(({ nextId, line }) => {
           if (visited.has(nextId)) return;
           visited.add(nextId);

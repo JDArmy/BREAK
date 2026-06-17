@@ -7,6 +7,11 @@
     "limitation": "Manual audits depend on the experience and expertise of the auditors, which may result in missed complex logical vulnerabilities. Audits involve high costs and long cycles. Additionally, audits are only applicable to a specific version of the code, and any subsequent modifications require a re-audit.",
     "keywords": [
       "Smart Contract Security Audit"
+    ],
+    "references": [
+      {
+        "title": "Smart Contract Vulnerabilities and Mitigation Strategies"
+      }
     ]
   }
 }

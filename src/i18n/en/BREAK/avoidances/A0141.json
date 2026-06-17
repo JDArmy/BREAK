@@ -7,6 +7,11 @@
     "limitation": "Modularization increases interaction complexity between contracts; multiple contract calls incur higher gas costs; interface changes may lead to compatibility issues; excessive decomposition can hinder maintainability.",
     "keywords": [
       "Modular and Minimal Contract Design"
+    ],
+    "references": [
+      {
+        "title": "Smart Contract Rollback Strategy"
+      }
     ]
   }
 }

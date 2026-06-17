@@ -7,6 +7,11 @@
     "limitation": "Scanning may be mistaken for an attack; not all device types and credential combinations can be detected; remote remediation depends on device management interfaces; the scanning process itself may expose credential attempt logs; ineffective for devices that do not support remote management.",
     "keywords": [
       "Default Credential Scanning and Auto-Remediation"
+    ],
+    "references": [
+      {
+        "title": "Smart Contract Deployment Review"
+      }
     ]
   }
 }

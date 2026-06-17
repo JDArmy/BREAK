@@ -7,6 +7,11 @@
     "limitation": "Privacy protocols may be exploited for money laundering and face regulatory pressure; mixing services may exit-scam or be shut down by law enforcement; full anonymity impacts compliance and business applications; advances in chain analysis techniques may eventually compromise privacy protections.",
     "keywords": [
       "Address Obfuscation and Privacy Protocol Usage"
+    ],
+    "references": [
+      {
+        "title": "Runtime Monitoring for Smart Contracts"
+      }
     ]
   }
 }

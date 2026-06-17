@@ -7,6 +7,11 @@
     "limitation": "Audits cannot guarantee the discovery of all vulnerabilities, and novel attack techniques may bypass known detection methods; emergency pause mechanisms may be abused or become attack targets themselves; monitoring systems may generate false positives, impacting normal operations.",
     "keywords": [
       "Cross-Chain Bridge Smart Contract Auditing and Monitoring"
+    ],
+    "references": [
+      {
+        "title": "Flash Loan Security Monitoring"
+      }
     ]
   }
 }

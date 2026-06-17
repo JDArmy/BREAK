@@ -7,6 +7,11 @@
     "limitation": "Cannot prevent devices from being infected, only reduces the impact; large-scale DDoS attacks may still overwhelm rate limiting; requires continuous threat intelligence updates; rate limiting may affect legitimate high-traffic applications; costs increase with traffic volume.",
     "keywords": [
       "IoT Botnet Traffic Filtering and Rate Limiting"
+    ],
+    "references": [
+      {
+        "title": "Risk Control for Stablecoin Operations"
+      }
     ]
   }
 }

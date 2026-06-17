@@ -7,6 +7,11 @@
     "limitation": "HSM devices are costly, with a single unit ranging from tens of thousands to hundreds of thousands of RMB. Cloud KMS charges per API call, leading to significant costs in high-frequency scenarios. Performance is constrained by hardware, and signing speeds are typically lower than software implementations. Requires additional operational maintenance and backup solutions.",
     "keywords": [
       "Hardware Security Module (HSM) Private Key Storage"
+    ],
+    "references": [
+      {
+        "title": "DeFi Protocol Security Hardening"
+      }
     ]
   }
 }

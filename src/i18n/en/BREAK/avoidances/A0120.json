@@ -7,6 +7,11 @@
     "limitation": "Reduces the flexibility and autonomy of the DAO; multi-signature introduces centralization risks, which may be exploited or subject to insider malfeasance; complex privilege segmentation leads to high implementation and communication costs; excessive restrictions may result in governance paralysis.",
     "keywords": [
       "Governance Scope Limitation and Multi-Signature Protection"
+    ],
+    "references": [
+      {
+        "title": "Security Operations for DeFi Protocols"
+      }
     ]
   }
 }

@@ -7,6 +7,11 @@
     "limitation": "Audits are costly and time-consuming; there is no guarantee that all defects will be discovered; formal verification has a high technical barrier; passing an audit does not equate to absolute security; attack techniques continue to evolve.",
     "keywords": [
       "Comprehensive Auditing and Formal Verification"
+    ],
+    "references": [
+      {
+        "title": "Smart Contract Security Baseline"
+      }
     ]
   }
 }

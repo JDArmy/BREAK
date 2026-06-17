@@ -2,6 +2,7 @@ import { ref, type ComputedRef, type Ref } from "vue";
 import type { ECharts } from "echarts/core";
 import type { SankeyLink, SankeyNode } from "@/views/relation/relationTypes";
 import type {
+  RelationViewMode,
   SankeyLabelOverflow,
   SankeyNodeAlign,
 } from "@/views/relation/relationViewState";
@@ -13,7 +14,7 @@ interface CreateSankeyChartControllerOptions {
   t: Translate;
   isDark: Ref<boolean>;
   isMobile: Ref<boolean>;
-  activeView: Ref<"network" | "sankey">;
+  activeView: Ref<RelationViewMode>;
   sankeyChartHeight: ComputedRef<number>;
   sankeyData: ComputedRef<{ nodes: SankeyNode[]; links: SankeyLink[] }>;
   sankeyBottom: ComputedRef<number>;

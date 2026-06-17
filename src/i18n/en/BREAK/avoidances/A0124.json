@@ -7,6 +7,11 @@
     "limitation": "Detection systems have latency and may fail to issue alerts before a Rug Pull is completed; false positives may trigger panic selling; insurance coverage is limited and costly; recovery mechanisms rely on community governance and are difficult to execute; not all types of Rug Pulls can be prevented.",
     "keywords": [
       "Real-Time Rug Pull Detection and Insurance Mechanisms"
+    ],
+    "references": [
+      {
+        "title": "Smart Contract Attack Simulation"
+      }
     ]
   }
 }

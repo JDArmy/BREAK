@@ -7,6 +7,11 @@
     "limitation": "Requires a PKI infrastructure, resulting in high deployment and maintenance costs; legacy devices may not support certificate-based authentication; certificate management (renewal, revocation) is complex; delayed revocation after certificate compromise still poses a risk; difficult to promote for consumer-grade devices.",
     "keywords": [
       "Certificate-Based Device Authentication"
+    ],
+    "references": [
+      {
+        "title": "Smart Contract Source Code Disclosure"
+      }
     ]
   }
 }

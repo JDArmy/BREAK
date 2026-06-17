@@ -7,6 +7,11 @@
     "limitation": "High deployment and maintenance costs for NAC; potential blocking of legitimate devices, impacting business operations; automated remediation may conflict with device functionality; difficulty retrofitting already-connected devices.",
     "keywords": [
       "IoT Device Security Configuration Enforcement"
+    ],
+    "references": [
+      {
+        "title": "Risk Control for On-chain Lending"
+      }
     ]
   }
 }

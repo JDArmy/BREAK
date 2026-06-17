@@ -7,6 +7,11 @@
     "limitation": "Network isolation increases network architecture complexity and management overhead; it may affect device interoperability and collaborative functions; it requires specialized networking expertise to configure; and retrofitting already deployed devices can incur high costs.",
     "keywords": [
       "Network Isolation and Access Control for IoT Devices"
+    ],
+    "references": [
+      {
+        "title": "Parameter Validation for Smart Contracts"
+      }
     ]
   }
 }

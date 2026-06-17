@@ -90,3 +90,37 @@ export interface NodeCoverageSummary {
   }>;
   notice?: string;
 }
+
+export interface NodeBusinessSceneImpactRisk {
+  id: string;
+  title: string;
+  sourceFields: string[];
+}
+
+export interface NodeBusinessSceneImpactRiskScene {
+  id: string;
+  title: string;
+  riskCount: number;
+  risks: NodeBusinessSceneImpactRisk[];
+}
+
+export interface NodeBusinessSceneImpactItem {
+  id: string;
+  title: string;
+  dimensionTitles: string[];
+  riskCount: number;
+  riskSceneCount: number;
+  riskScenes: NodeBusinessSceneImpactRiskScene[];
+}
+
+export interface NodeBusinessSceneImpactSummary {
+  title: string;
+  summary: string;
+  metrics: Array<{
+    label: string;
+    value: number;
+  }>;
+  items: NodeBusinessSceneImpactItem[];
+  risks: NodeBusinessSceneImpactRisk[];
+  notice?: string;
+}

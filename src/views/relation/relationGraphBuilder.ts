@@ -9,7 +9,7 @@ import {
 import { createRiskRelationBuilder } from "@/views/relation/relationGraphRiskBuilder";
 import { createTermRelationBuilder } from "@/views/relation/relationGraphTermBuilder";
 import { createThreatActorRelationBuilder } from "@/views/relation/relationGraphThreatActorBuilder";
-import { createRelationTypeMapping, type Line, type Node, RelationType } from "@/views/relation/relationTypes";
+import { createRelationTypeMapping, getRelationLineKey, type Line, type Node, RelationType } from "@/views/relation/relationTypes";
 
 interface CreateRelationGraphBuilderOptions {
   t: Translate;
@@ -20,7 +20,7 @@ interface CreateRelationGraphBuilderOptions {
   jsonData: { rootId: string };
   selectedNetworkNodeId: Ref<string>;
   RelationTypeMapping: ReturnType<typeof createRelationTypeMapping>;
-  relationLegendItems: Ref<{ color: string; label: string; fields: string[] }[]>;
+  relationLegendItems: Ref<{ key?: string; color: string; label: string; fields: string[] }[]>;
   getGraphNodeText: (type: Exclude<RelationType, RelationType.all>, key: string) => string;
   renderNetworkChart: (notMerge?: boolean) => void;
 }
@@ -53,8 +53,9 @@ export const createRelationGraphBuilder = ({
   const getLineType = () => {
     totalLineType.value.splice(0, totalLineType.value.length);
     lines.forEach((line) => {
-      if (!totalLineType.value.includes(line.text)) {
-        totalLineType.value.push(line.text);
+      const lineKey = getRelationLineKey(line);
+      if (!totalLineType.value.includes(lineKey)) {
+        totalLineType.value.push(lineKey);
       }
     });
     totalLineType.value.forEach((lineType) => {
@@ -86,7 +87,7 @@ export const createRelationGraphBuilder = ({
   };
 
   const visibleRelationLegendItems = computed(() =>
-    relationLegendItems.value.filter((item) => totalLineType.value.includes(item.label))
+    relationLegendItems.value.filter((item) => totalLineType.value.includes(item.key ?? item.label))
   );
 
   const setNetworkGraphData = (options?: { render?: boolean }) => {
@@ -135,14 +136,15 @@ export const createRelationGraphBuilder = ({
   const threatActorBuilder = createThreatActorRelationBuilder(builderContext);
   const termBuilder = createTermRelationBuilder(builderContext);
 
-  function rebuildGraphData() {
+  function rebuildGraphData(options?: { render?: boolean }) {
     jsonData.rootId = relKey.value;
     selectedNetworkNodeId.value = relKey.value;
     clearDraggedNodePositions();
+    totalLineType.value.splice(0, totalLineType.value.length);
     nodes.splice(0, nodes.length);
     lines.splice(0, lines.length);
     addRootNode();
-    genNetworkGraphData(RelationType.all, relType.value, relKey.value);
+    genNetworkGraphData(RelationType.all, relType.value, relKey.value, options);
   }
 
   const genNetworkGraphData = (

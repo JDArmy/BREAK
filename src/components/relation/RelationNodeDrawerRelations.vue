@@ -4,9 +4,12 @@ import { useI18n } from "vue-i18n";
 
 interface RelationSummary {
   relationKey: string;
+  relationLineKey: string;
   direction: string;
+  directionKey?: string;
   text: string;
   directness: string;
+  directnessKey?: string;
   otherNodeId: string;
   otherNodeType: string;
   otherNodeTitle: string;
@@ -55,13 +58,13 @@ const relationMatchesFilters = (
 ) =>
   (ignoredFilter === "direction" ||
     !filters.direction ||
-    relation.direction === filters.direction) &&
+    (relation.directionKey ?? relation.direction) === filters.direction) &&
   (ignoredFilter === "relationType" ||
     !filters.relationType ||
-    relation.text === filters.relationType) &&
+    relation.relationLineKey === filters.relationType) &&
   (ignoredFilter === "directness" ||
     !filters.directness ||
-    relation.directness === filters.directness);
+    (relation.directnessKey ?? relation.directness) === filters.directness);
 
 const getCandidateRelationsForFilter = (ignoredFilter: RelationFilterKey) =>
   props.selectedNetworkRelations.filter((relation) =>
@@ -71,17 +74,17 @@ const getCandidateRelationsForFilter = (ignoredFilter: RelationFilterKey) =>
 const relationFilterOptions = computed(() => ({
   directions: uniqueSortedValues(
     getCandidateRelationsForFilter("direction").map(
-      (relation) => relation.direction
+      (relation) => relation.directionKey ?? relation.direction
     )
   ),
   relationTypes: uniqueSortedValues(
     getCandidateRelationsForFilter("relationType").map(
-      (relation) => relation.text
+      (relation) => relation.relationLineKey
     )
   ),
   directness: uniqueSortedValues(
     getCandidateRelationsForFilter("directness").map(
-      (relation) => relation.directness
+      (relation) => relation.directnessKey ?? relation.directness
     )
   ),
 }));
@@ -99,6 +102,20 @@ const tableRows = computed(() =>
     isActive: props.isRelationOnSelectedPath(relation.relationKey),
   }))
 );
+
+const getDirectionLabel = (directionKey: string) =>
+  directionKey === "outgoing"
+    ? t("relationView.outgoing")
+    : directionKey === "incoming"
+      ? t("relationView.incoming")
+      : directionKey;
+
+const getDirectnessLabel = (directnessKey: string) =>
+  directnessKey === "direct"
+    ? t("relationView.direct")
+    : directnessKey === "indirect"
+      ? t("relationView.indirect")
+      : directnessKey;
 
 const hasRelationFilters = computed(() =>
   Boolean(
@@ -221,7 +238,7 @@ const relationRowClassName = ({ row }: { row: { isActive: boolean } }) =>
               :key="option"
               :value="option"
             >
-              {{ option }}
+              {{ getDirectionLabel(option) }}
             </option>
           </select>
         </label>
@@ -236,7 +253,7 @@ const relationRowClassName = ({ row }: { row: { isActive: boolean } }) =>
               :key="option"
               :value="option"
             >
-              {{ option }}
+              {{ t(option) }}
             </option>
           </select>
         </label>
@@ -251,7 +268,7 @@ const relationRowClassName = ({ row }: { row: { isActive: boolean } }) =>
               :key="option"
               :value="option"
             >
-              {{ option }}
+              {{ getDirectnessLabel(option) }}
             </option>
           </select>
         </label>

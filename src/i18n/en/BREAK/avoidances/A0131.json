@@ -7,6 +7,11 @@
     "limitation": "Raising the barrier also increases network participation costs; it cannot completely eliminate the possibility of attacks; large mining pools or exchanges may accumulate sufficient control; centralization risks in PoS staking.",
     "keywords": [
       "Increasing Consensus Algorithm Attack Costs"
+    ],
+    "references": [
+      {
+        "title": "Security Education for Smart Contract Users"
+      }
     ]
   }
 }

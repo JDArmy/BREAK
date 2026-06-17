@@ -7,6 +7,11 @@
     "limitation": "Requires hardware support (TPM or equivalent chip), increasing costs; key management is complex, as a private key compromise exposes the entire device series to risk; prevents users from installing custom firmware, limiting openness; implementation errors may render devices inoperable (bricking).",
     "keywords": [
       "Firmware Secure Boot Mechanism"
+    ],
+    "references": [
+      {
+        "title": "Paused Mode and Circuit Breakers for Smart Contracts"
+      }
     ]
   }
 }
