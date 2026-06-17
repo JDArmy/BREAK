@@ -1,0 +1,16 @@
+{
+  "R0251": {
+    "title": "汽车OTA更新劫持",
+    "definition": "攻击者篡改或重放车端OTA包，植入恶意固件或阻断修复。",
+    "keywords": [
+      "汽车OTA更新劫持",
+      "R0251"
+    ],
+    "references": [
+      {
+        "title": "ISO/SAE 21434 Road vehicles Cybersecurity",
+        "link": "https://www.iso.org/standard/70918.html"
+      }
+    ]
+  }
+}

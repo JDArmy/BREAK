@@ -1,0 +1,15 @@
+{
+  "A0215": {
+    "title": "RAG知识库权限隔离",
+    "description": "按租户、角色和文档敏感级别隔离RAG索引与检索结果，防止跨权限召回。",
+    "references": [
+      {
+        "title": "OWASP Top 10 for Large Language Model Applications"
+      }
+    ],
+    "keywords": [
+      "RAG知识库权限隔离",
+      "A0215"
+    ]
+  }
+}

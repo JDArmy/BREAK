@@ -1,0 +1,19 @@
+{
+  "A0214": {
+    "category": "AC03",
+    "title": "模型输出安全评估",
+    "description": "对模型输出进行有害内容、隐私泄露、幻觉、偏见和越权建议评估。",
+    "references": [
+      {
+        "title": "NIST AI Risk Management Framework",
+        "link": "https://www.nist.gov/itl/ai-risk-management-framework"
+      }
+    ],
+    "keywords": [
+      "模型输出安全评估",
+      "A0214"
+    ],
+    "updated": "2026-06-17",
+    "definition": "对模型输出进行有害内容、隐私泄露、幻觉、偏见和越权建议评估。"
+  }
+}

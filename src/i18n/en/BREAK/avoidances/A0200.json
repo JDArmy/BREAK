@@ -1,0 +1,15 @@
+{
+  "A0200": {
+    "title": "构建制品签名与来源证明",
+    "description": "对构建产物、镜像和依赖生成签名、SLSA来源证明和可验证发布记录。",
+    "references": [
+      {
+        "title": "Software Bill of Materials - CISA"
+      }
+    ],
+    "keywords": [
+      "构建制品签名与来源证明",
+      "A0200"
+    ]
+  }
+}

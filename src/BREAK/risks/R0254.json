@@ -1,0 +1,26 @@
+{
+  "R0254": {
+    "title": "供应商远程访问滥用",
+    "definition": "第三方供应商远程运维账号、VPN或工具被盗用进入企业环境。",
+    "description": "第三方供应商远程运维账号、VPN或工具被盗用进入企业环境。",
+    "complexity": "高级",
+    "influence": "可能造成业务滥用、数据泄露、资金损失、合规处罚或供应链扩散风险。",
+    "avoidances": [
+      "A0079",
+      "A0068",
+      "A0019"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "供应商远程访问滥用",
+      "供应商远程访问",
+      "R0254"
+    ],
+    "updated": "2026-06-17"
+  }
+}

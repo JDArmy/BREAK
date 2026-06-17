@@ -1,0 +1,16 @@
+{
+  "R0232": {
+    "title": "SaaS第三方应用授权滥用",
+    "definition": "员工授权高权限第三方SaaS应用读取邮件、网盘或客户数据。",
+    "keywords": [
+      "SaaS第三方应用授权滥用",
+      "R0232"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

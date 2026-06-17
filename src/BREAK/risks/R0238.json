@@ -1,0 +1,25 @@
+{
+  "R0238": {
+    "title": "虚假转化与安装农场",
+    "definition": "黑灰产通过设备农场和脚本模拟注册、安装、留存和转化。",
+    "description": "黑灰产通过设备农场和脚本模拟注册、安装、留存和转化。",
+    "complexity": "中级",
+    "influence": "可能造成业务滥用、数据泄露、资金损失、合规处罚或供应链扩散风险。",
+    "avoidances": [
+      "A0209",
+      "A0210",
+      "A0021"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "虚假转化与安装农场",
+      "R0238"
+    ],
+    "updated": "2026-06-17"
+  }
+}

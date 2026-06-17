@@ -1,0 +1,16 @@
+{
+  "R0253": {
+    "title": "去中心化身份凭证伪造",
+    "definition": "攻击者伪造DID或可验证凭证，冒充用户、机构或资格证明。",
+    "keywords": [
+      "去中心化身份凭证伪造",
+      "R0253"
+    ],
+    "references": [
+      {
+        "title": "W3C Decentralized Identifiers (DIDs) v1.0",
+        "link": "https://www.w3.org/TR/did-core/"
+      }
+    ]
+  }
+}

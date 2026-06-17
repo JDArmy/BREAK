@@ -1,0 +1,26 @@
+{
+  "R0235": {
+    "title": "拒付与退款滥用",
+    "definition": "用户或团伙通过拒付、空包、虚假售后证据获取不当退款。",
+    "description": "用户或团伙通过拒付、空包、虚假售后证据获取不当退款。",
+    "complexity": "中级",
+    "influence": "可能造成业务滥用、数据泄露、资金损失、合规处罚或供应链扩散风险。",
+    "avoidances": [
+      "A0208",
+      "A0015",
+      "A0077"
+    ],
+    "references": [
+      {
+        "title": "PCI Data Security Standard",
+        "link": "https://www.pcisecuritystandards.org/standards/pci-dss/"
+      }
+    ],
+    "keywords": [
+      "拒付与退款滥用",
+      "拒付与退款",
+      "R0235"
+    ],
+    "updated": "2026-06-17"
+  }
+}

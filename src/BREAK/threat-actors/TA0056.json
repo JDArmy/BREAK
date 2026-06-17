@@ -1,0 +1,33 @@
+{
+  "TA0056": {
+    "title": "广告归因作弊团伙",
+    "description": "通过安装农场、点击注入和虚假转化骗取广告预算或佣金。",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "buildAttackTools": [
+      "AT0091"
+    ],
+    "useAttackTools": [
+      "AT0091",
+      "AT0044"
+    ],
+    "directCauseRisks": [
+      "R0237",
+      "R0238",
+      "R0239"
+    ],
+    "indirectSupportRisks": [
+      "R0008"
+    ],
+    "keywords": [
+      "广告归因作弊团伙",
+      "广告归因作弊",
+      "TA0056"
+    ],
+    "updated": "2026-06-17"
+  }
+}

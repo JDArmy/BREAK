@@ -1,0 +1,19 @@
+{
+  "A0199": {
+    "category": "AC01",
+    "title": "CI/CD流水线最小权限治理",
+    "description": "限制流水线令牌、Runner、制品库和部署凭证权限，降低构建链路被滥用风险。",
+    "references": [
+      {
+        "title": "OWASP Top 10 CI/CD Security Risks",
+        "link": "https://owasp.org/www-project-top-10-ci-cd-security-risks/"
+      }
+    ],
+    "keywords": [
+      "CI/CD流水线最小权限治理",
+      "A0199"
+    ],
+    "updated": "2026-06-17",
+    "definition": "限制流水线令牌、Runner、制品库和部署凭证权限，降低构建链路被滥用风险。"
+  }
+}

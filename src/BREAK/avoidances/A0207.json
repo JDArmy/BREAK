@@ -1,0 +1,20 @@
+{
+  "A0207": {
+    "category": "AC01",
+    "title": "支付账户与商户准入审核",
+    "description": "对商户、收款账户、法人、设备和历史风险进行准入审核与持续复核。",
+    "references": [
+      {
+        "title": "PCI Data Security Standard",
+        "link": "https://www.pcisecuritystandards.org/standards/pci-dss/"
+      }
+    ],
+    "keywords": [
+      "支付账户与商户准入审核",
+      "支付账户商户准入审核",
+      "A0207"
+    ],
+    "updated": "2026-06-17",
+    "definition": "对商户、收款账户、法人、设备和历史风险进行准入审核与持续复核。"
+  }
+}

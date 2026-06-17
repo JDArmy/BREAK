@@ -1,0 +1,15 @@
+{
+  "TA0059": {
+    "title": "账号接管团伙",
+    "description": "通过MFA疲劳、会话令牌重放和钓鱼工具接管用户或员工账号。",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0"
+      }
+    ],
+    "keywords": [
+      "账号接管团伙",
+      "TA0059"
+    ]
+  }
+}

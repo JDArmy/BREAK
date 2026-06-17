@@ -1,0 +1,15 @@
+{
+  "A0202": {
+    "title": "SBOM生成与漏洞影响分析",
+    "description": "为应用、镜像和固件生成SBOM，并在新漏洞披露时快速定位受影响资产。",
+    "references": [
+      {
+        "title": "Software Bill of Materials - CISA"
+      }
+    ],
+    "keywords": [
+      "SBOM生成与漏洞影响分析",
+      "A0202"
+    ]
+  }
+}

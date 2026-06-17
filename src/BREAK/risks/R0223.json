@@ -1,0 +1,25 @@
+{
+  "R0223": {
+    "title": "API对象级越权风险",
+    "definition": "接口只校验登录态但未校验对象归属，攻击者可枚举访问他人资源。",
+    "description": "接口只校验登录态但未校验对象归属，攻击者可枚举访问他人资源。",
+    "complexity": "初级",
+    "influence": "可能造成业务滥用、数据泄露、资金损失、合规处罚或供应链扩散风险。",
+    "avoidances": [
+      "A0196",
+      "A0218"
+    ],
+    "references": [
+      {
+        "title": "OWASP API Security Top 10 2023",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+      }
+    ],
+    "keywords": [
+      "API对象级越权风险",
+      "API对象级越权",
+      "R0223"
+    ],
+    "updated": "2026-06-17"
+  }
+}

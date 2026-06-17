@@ -1,0 +1,25 @@
+{
+  "R0234": {
+    "title": "商户套现与虚假交易",
+    "definition": "商户通过虚假订单、循环交易或异常退款进行套现和资金转移。",
+    "description": "商户通过虚假订单、循环交易或异常退款进行套现和资金转移。",
+    "complexity": "中级",
+    "influence": "可能造成业务滥用、数据泄露、资金损失、合规处罚或供应链扩散风险。",
+    "avoidances": [
+      "A0207",
+      "A0077",
+      "A0208"
+    ],
+    "references": [
+      {
+        "title": "PCI Data Security Standard",
+        "link": "https://www.pcisecuritystandards.org/standards/pci-dss/"
+      }
+    ],
+    "keywords": [
+      "商户套现与虚假交易",
+      "R0234"
+    ],
+    "updated": "2026-06-17"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "R0236": {
+    "title": "支付令牌化配置错误",
+    "definition": "支付令牌、卡号替代值或绑定关系配置不当，导致越权扣款或数据泄露。",
+    "description": "支付令牌、卡号替代值或绑定关系配置不当，导致越权扣款或数据泄露。",
+    "complexity": "高级",
+    "influence": "可能造成业务滥用、数据泄露、资金损失、合规处罚或供应链扩散风险。",
+    "avoidances": [
+      "A0207",
+      "A0050",
+      "A0196"
+    ],
+    "references": [
+      {
+        "title": "PCI Data Security Standard",
+        "link": "https://www.pcisecuritystandards.org/standards/pci-dss/"
+      }
+    ],
+    "keywords": [
+      "支付令牌化配置错误",
+      "R0236"
+    ],
+    "updated": "2026-06-17"
+  }
+}

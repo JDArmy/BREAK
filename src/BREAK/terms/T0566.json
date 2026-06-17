@@ -1,0 +1,30 @@
+{
+  "T0566": {
+    "title": "落地页劫持",
+    "aliases": [],
+    "category": "业务安全",
+    "keywords": [
+      "落地页劫持",
+      "T0566"
+    ],
+    "definition": "落地页劫持是业务安全、数据安全、供应链安全或新兴技术安全中的关键概念。",
+    "description": "落地页劫持常用于描述风险识别、攻击手法、控制措施或安全运营中的具体对象。",
+    "usageExample": "在业务安全评估中需要识别落地页劫持相关风险并建立对应控制。",
+    "relatedRisks": [
+      "R0239"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "updated": "2026-06-17"
+  }
+}

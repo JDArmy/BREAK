@@ -1,0 +1,24 @@
+{
+  "R0224": {
+    "title": "API批量调用资源耗尽",
+    "definition": "攻击者批量调用高成本接口消耗额度、库存、算力或第三方服务费用。",
+    "description": "攻击者批量调用高成本接口消耗额度、库存、算力或第三方服务费用。",
+    "complexity": "中级",
+    "influence": "可能造成业务滥用、数据泄露、资金损失、合规处罚或供应链扩散风险。",
+    "avoidances": [
+      "A0197",
+      "A0195"
+    ],
+    "references": [
+      {
+        "title": "OWASP API Security Top 10 2023",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+      }
+    ],
+    "keywords": [
+      "API批量调用资源耗尽",
+      "R0224"
+    ],
+    "updated": "2026-06-17"
+  }
+}

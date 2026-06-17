@@ -1,0 +1,25 @@
+{
+  "R0237": {
+    "title": "广告点击注入",
+    "definition": "攻击者在安装或转化前注入虚假点击，抢占归因收益。",
+    "description": "攻击者在安装或转化前注入虚假点击，抢占归因收益。",
+    "complexity": "中级",
+    "influence": "可能造成业务滥用、数据泄露、资金损失、合规处罚或供应链扩散风险。",
+    "avoidances": [
+      "A0209",
+      "A0210",
+      "A0016"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "广告点击注入",
+      "R0237"
+    ],
+    "updated": "2026-06-17"
+  }
+}

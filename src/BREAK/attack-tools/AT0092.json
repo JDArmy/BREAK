@@ -1,0 +1,30 @@
+{
+  "AT0092": {
+    "title": "数据导出与DLP绕过工具",
+    "description": "用于批量导出协作文档、拆分压缩、规避水印和外发审计的工具。",
+    "avoidances": [
+      "A0206",
+      "A0211",
+      "A0050"
+    ],
+    "directCauseRisks": [
+      "R0240",
+      "R0255"
+    ],
+    "indirectSupportRisks": [
+      "R0233"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "数据导出与DLP绕过工具",
+      "数据导出与DLP绕过",
+      "AT0092"
+    ],
+    "updated": "2026-06-17"
+  }
+}

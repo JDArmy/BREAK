@@ -1,0 +1,19 @@
+{
+  "A0206": {
+    "category": "AC02",
+    "title": "企业协作数据防泄漏",
+    "description": "对网盘、IM、邮件、知识库和协作文档执行敏感数据识别、共享控制和外发审计。",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "企业协作数据防泄漏",
+      "A0206"
+    ],
+    "updated": "2026-06-17",
+    "definition": "对网盘、IM、邮件、知识库和协作文档执行敏感数据识别、共享控制和外发审计。"
+  }
+}

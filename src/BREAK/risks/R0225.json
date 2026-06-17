@@ -1,0 +1,24 @@
+{
+  "R0225": {
+    "title": "Webhook伪造与事件重放",
+    "definition": "攻击者伪造或重放Webhook事件触发虚假支付、发货、授权或状态变更。",
+    "description": "攻击者伪造或重放Webhook事件触发虚假支付、发货、授权或状态变更。",
+    "complexity": "中级",
+    "influence": "可能造成业务滥用、数据泄露、资金损失、合规处罚或供应链扩散风险。",
+    "avoidances": [
+      "A0219",
+      "A0198"
+    ],
+    "references": [
+      {
+        "title": "OWASP API Security Top 10 2023",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+      }
+    ],
+    "keywords": [
+      "Webhook伪造与事件重放",
+      "R0225"
+    ],
+    "updated": "2026-06-17"
+  }
+}

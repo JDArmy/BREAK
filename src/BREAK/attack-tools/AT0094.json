@@ -1,0 +1,30 @@
+{
+  "AT0094": {
+    "title": "MFA轰炸与会话劫持工具",
+    "description": "用于MFA疲劳攻击、Cookie窃取、Token重放和会话接管。",
+    "avoidances": [
+      "A0217",
+      "A0218",
+      "A0026"
+    ],
+    "directCauseRisks": [
+      "R0246",
+      "R0247"
+    ],
+    "indirectSupportRisks": [
+      "R0032"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "MFA轰炸与会话劫持工具",
+      "MFA轰炸与会话劫持",
+      "AT0094"
+    ],
+    "updated": "2026-06-17"
+  }
+}

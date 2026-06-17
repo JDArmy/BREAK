@@ -1,0 +1,25 @@
+{
+  "R0239": {
+    "title": "联盟营销佣金欺诈",
+    "definition": "渠道通过Cookie stuffing、虚假流量或劫持落地页骗取佣金。",
+    "description": "渠道通过Cookie stuffing、虚假流量或劫持落地页骗取佣金。",
+    "complexity": "中级",
+    "influence": "可能造成业务滥用、数据泄露、资金损失、合规处罚或供应链扩散风险。",
+    "avoidances": [
+      "A0210",
+      "A0209",
+      "A0037"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "联盟营销佣金欺诈",
+      "R0239"
+    ],
+    "updated": "2026-06-17"
+  }
+}

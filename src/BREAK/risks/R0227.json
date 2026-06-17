@@ -1,0 +1,30 @@
+{
+  "R0227": {
+    "title": "构建产物投毒风险",
+    "definition": "攻击者篡改构建产物、镜像或发布包，将后门带入生产环境。",
+    "description": "攻击者篡改构建产物、镜像或发布包，将后门带入生产环境。",
+    "complexity": "高级",
+    "influence": "可能造成业务滥用、数据泄露、资金损失、合规处罚或供应链扩散风险。",
+    "avoidances": [
+      "A0200",
+      "A0201",
+      "A0202"
+    ],
+    "references": [
+      {
+        "title": "OWASP Top 10 CI/CD Security Risks",
+        "link": "https://owasp.org/www-project-top-10-ci-cd-security-risks/"
+      },
+      {
+        "title": "Software Bill of Materials - CISA",
+        "link": "https://www.cisa.gov/topics/information-communications-technology-supply-chain-security/sbom"
+      }
+    ],
+    "keywords": [
+      "构建产物投毒风险",
+      "构建产物投毒",
+      "R0227"
+    ],
+    "updated": "2026-06-17"
+  }
+}

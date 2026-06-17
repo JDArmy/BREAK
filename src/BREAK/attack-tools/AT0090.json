@@ -1,0 +1,31 @@
+{
+  "AT0090": {
+    "title": "支付欺诈自动化工具",
+    "description": "用于批量下单、虚假交易、退款滥用和拒付证据伪造的自动化工具。",
+    "avoidances": [
+      "A0207",
+      "A0208",
+      "A0077"
+    ],
+    "directCauseRisks": [
+      "R0234",
+      "R0235",
+      "R0236"
+    ],
+    "indirectSupportRisks": [
+      "R0005"
+    ],
+    "references": [
+      {
+        "title": "PCI Data Security Standard",
+        "link": "https://www.pcisecuritystandards.org/standards/pci-dss/"
+      }
+    ],
+    "keywords": [
+      "支付欺诈自动化工具",
+      "支付欺诈自动化",
+      "AT0090"
+    ],
+    "updated": "2026-06-17"
+  }
+}

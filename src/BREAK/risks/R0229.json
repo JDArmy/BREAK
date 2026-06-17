@@ -1,0 +1,24 @@
+{
+  "R0229": {
+    "title": "SBOM缺失导致漏洞影响不可见",
+    "definition": "组织无法快速判断新披露漏洞是否影响自身产品和供应商交付。",
+    "description": "组织无法快速判断新披露漏洞是否影响自身产品和供应商交付。",
+    "complexity": "中级",
+    "influence": "可能造成业务滥用、数据泄露、资金损失、合规处罚或供应链扩散风险。",
+    "avoidances": [
+      "A0202",
+      "A0070"
+    ],
+    "references": [
+      {
+        "title": "Software Bill of Materials - CISA",
+        "link": "https://www.cisa.gov/topics/information-communications-technology-supply-chain-security/sbom"
+      }
+    ],
+    "keywords": [
+      "SBOM缺失导致漏洞影响不可见",
+      "R0229"
+    ],
+    "updated": "2026-06-17"
+  }
+}

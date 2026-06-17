@@ -1,0 +1,16 @@
+{
+  "R0248": {
+    "title": "移动应用重打包欺诈",
+    "definition": "攻击者重打包App植入广告、钓鱼页或风控绕过逻辑。",
+    "keywords": [
+      "移动应用重打包欺诈",
+      "R0248"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

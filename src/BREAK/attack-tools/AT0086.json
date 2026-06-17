@@ -1,0 +1,28 @@
+{
+  "AT0086": {
+    "title": "Webhook重放工具",
+    "description": "用于捕获、修改和重放Webhook事件，测试签名验证和幂等处理缺陷。",
+    "avoidances": [
+      "A0219",
+      "A0198"
+    ],
+    "directCauseRisks": [
+      "R0225"
+    ],
+    "indirectSupportRisks": [
+      "R0223"
+    ],
+    "references": [
+      {
+        "title": "OWASP API Security Top 10 2023",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+      }
+    ],
+    "keywords": [
+      "Webhook重放工具",
+      "Webhook重放",
+      "AT0086"
+    ],
+    "updated": "2026-06-17"
+  }
+}

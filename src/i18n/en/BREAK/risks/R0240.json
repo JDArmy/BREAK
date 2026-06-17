@@ -1,0 +1,16 @@
+{
+  "R0240": {
+    "title": "数据共享越权使用",
+    "definition": "业务、供应商或合作方超出授权目的使用共享数据。",
+    "keywords": [
+      "数据共享越权使用",
+      "R0240"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

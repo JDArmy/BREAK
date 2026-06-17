@@ -1,0 +1,15 @@
+{
+  "A0220": {
+    "title": "移动应用完整性与运行时防护",
+    "description": "检测重打包、Hook、调试、模拟环境和运行时篡改，保护客户端业务逻辑。",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0"
+      }
+    ],
+    "keywords": [
+      "移动应用完整性与运行时防护",
+      "A0220"
+    ]
+  }
+}

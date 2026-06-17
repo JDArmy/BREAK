@@ -1,0 +1,20 @@
+{
+  "A0197": {
+    "category": "AC01",
+    "title": "API速率限制与配额控制",
+    "description": "按用户、设备、IP、租户、接口和业务动作实施动态限流、配额和熔断。",
+    "references": [
+      {
+        "title": "OWASP API Security Top 10 2023",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+      }
+    ],
+    "keywords": [
+      "API速率限制与配额控制",
+      "API速率限制配额控制",
+      "A0197"
+    ],
+    "updated": "2026-06-17",
+    "definition": "按用户、设备、IP、租户、接口和业务动作实施动态限流、配额和熔断。"
+  }
+}

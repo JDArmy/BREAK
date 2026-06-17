@@ -1,0 +1,20 @@
+{
+  "A0211": {
+    "category": "AC01",
+    "title": "数据共享审批与用途限制",
+    "description": "对数据共享、导出、训练、分析和第三方使用设置审批、最小化和用途约束。",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "数据共享审批与用途限制",
+      "数据共享审批用途限制",
+      "A0211"
+    ],
+    "updated": "2026-06-17",
+    "definition": "对数据共享、导出、训练、分析和第三方使用设置审批、最小化和用途约束。"
+  }
+}

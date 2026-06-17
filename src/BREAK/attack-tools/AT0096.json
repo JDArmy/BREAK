@@ -1,0 +1,30 @@
+{
+  "AT0096": {
+    "title": "CDN与边缘配置攻击工具",
+    "description": "用于测试缓存键、头部污染、边缘函数和WAF规则缺陷的工具。",
+    "avoidances": [
+      "A0221",
+      "A0204",
+      "A0198"
+    ],
+    "directCauseRisks": [
+      "R0249",
+      "R0250"
+    ],
+    "indirectSupportRisks": [
+      "R0222"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "CDN与边缘配置攻击工具",
+      "CDN与边缘配置攻击",
+      "AT0096"
+    ],
+    "updated": "2026-06-17"
+  }
+}

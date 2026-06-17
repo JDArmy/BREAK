@@ -1,0 +1,20 @@
+{
+  "A0195": {
+    "category": "AC03",
+    "title": "API资产发现与目录治理",
+    "description": "建立统一API资产目录、影子API发现、接口归属和生命周期治理，降低未知接口暴露风险。",
+    "references": [
+      {
+        "title": "OWASP API Security Top 10 2023",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+      }
+    ],
+    "keywords": [
+      "API资产发现与目录治理",
+      "API资产发现目录治理",
+      "A0195"
+    ],
+    "updated": "2026-06-17",
+    "definition": "建立统一API资产目录、影子API发现、接口归属和生命周期治理，降低未知接口暴露风险。"
+  }
+}

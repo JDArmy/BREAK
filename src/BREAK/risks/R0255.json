@@ -1,0 +1,26 @@
+{
+  "R0255": {
+    "title": "客户成功与客服工单数据泄露",
+    "definition": "客服、CRM或工单系统中客户隐私、密钥、截图和业务信息被越权访问或外发。",
+    "description": "客服、CRM或工单系统中客户隐私、密钥、截图和业务信息被越权访问或外发。",
+    "complexity": "中级",
+    "influence": "可能造成业务滥用、数据泄露、资金损失、合规处罚或供应链扩散风险。",
+    "avoidances": [
+      "A0206",
+      "A0211",
+      "A0050"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "客户成功与客服工单数据泄露",
+      "客户成功与客服工单数据",
+      "R0255"
+    ],
+    "updated": "2026-06-17"
+  }
+}

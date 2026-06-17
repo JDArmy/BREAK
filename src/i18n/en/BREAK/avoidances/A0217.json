@@ -1,0 +1,15 @@
+{
+  "A0217": {
+    "title": "MFA抗疲劳与高 Risk验证",
+    "description": "对MFA轰炸、推送疲劳和异常登录使用号码匹配、风险验证和冷却策略。",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0"
+      }
+    ],
+    "keywords": [
+      "MFA抗疲劳与高 Risk验证",
+      "A0217"
+    ]
+  }
+}

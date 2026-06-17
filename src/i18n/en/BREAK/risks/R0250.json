@@ -1,0 +1,16 @@
+{
+  "R0250": {
+    "title": "边缘函数配置滥用",
+    "definition": "边缘函数或WAF规则被错误配置，导致鉴权绕过、数据转发或流量劫持。",
+    "keywords": [
+      "边缘函数配置滥用",
+      "R0250"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

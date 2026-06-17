@@ -1,0 +1,17 @@
+{
+  "T0536": {
+    "title": "SBOM",
+    "keywords": [
+      "SBOM",
+      "T0536"
+    ],
+    "definition": "SBOM is a key business security concept.",
+    "description": "SBOM is used in risk identification, attack analysis, control design, or security operations.",
+    "usageExample": "Assess SBOM related risks and controls.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0"
+      }
+    ]
+  }
+}

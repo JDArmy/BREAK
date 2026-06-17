@@ -1,0 +1,20 @@
+{
+  "A0216": {
+    "category": "AC01",
+    "title": "提示注入防护与上下文隔离",
+    "description": "分离系统指令、用户输入和外部内容，对工具调用参数做策略校验。",
+    "references": [
+      {
+        "title": "OWASP Top 10 for Large Language Model Applications",
+        "link": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"
+      }
+    ],
+    "keywords": [
+      "提示注入防护与上下文隔离",
+      "提示注入防护上下文隔离",
+      "A0216"
+    ],
+    "updated": "2026-06-17",
+    "definition": "分离系统指令、用户输入和外部内容，对工具调用参数做策略校验。"
+  }
+}

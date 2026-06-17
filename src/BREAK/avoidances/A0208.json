@@ -1,0 +1,20 @@
+{
+  "A0208": {
+    "category": "AC03",
+    "title": "退款与争议风控策略",
+    "description": "对退款、拒付、售后和理赔建立行为模型、证据链校验和人工复核机制。",
+    "references": [
+      {
+        "title": "PCI Data Security Standard",
+        "link": "https://www.pcisecuritystandards.org/standards/pci-dss/"
+      }
+    ],
+    "keywords": [
+      "退款与争议风控策略",
+      "退款争议风控策略",
+      "A0208"
+    ],
+    "updated": "2026-06-17",
+    "definition": "对退款、拒付、售后和理赔建立行为模型、证据链校验和人工复核机制。"
+  }
+}

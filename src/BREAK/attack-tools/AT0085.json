@@ -1,0 +1,33 @@
+{
+  "AT0085": {
+    "title": "API枚举与越权测试工具",
+    "description": "用于枚举API路径、参数、对象ID和权限边界的自动化工具。",
+    "avoidances": [
+      "A0195",
+      "A0196",
+      "A0197",
+      "A0218"
+    ],
+    "directCauseRisks": [
+      "R0222",
+      "R0223",
+      "R0224",
+      "R0247"
+    ],
+    "indirectSupportRisks": [
+      "R0225"
+    ],
+    "references": [
+      {
+        "title": "OWASP API Security Top 10 2023",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+      }
+    ],
+    "keywords": [
+      "API枚举与越权测试工具",
+      "API枚举与越权测试",
+      "AT0085"
+    ],
+    "updated": "2026-06-17"
+  }
+}

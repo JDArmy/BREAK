@@ -1,0 +1,25 @@
+{
+  "R0231": {
+    "title": "云IAM过度授权",
+    "definition": "云账号、角色或服务账号拥有超出业务需要的权限，被盗后扩大影响面。",
+    "description": "云账号、角色或服务账号拥有超出业务需要的权限，被盗后扩大影响面。",
+    "complexity": "中级",
+    "influence": "可能造成业务滥用、数据泄露、资金损失、合规处罚或供应链扩散风险。",
+    "avoidances": [
+      "A0203",
+      "A0079",
+      "A0068"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "云IAM过度授权",
+      "R0231"
+    ],
+    "updated": "2026-06-17"
+  }
+}

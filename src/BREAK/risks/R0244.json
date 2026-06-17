@@ -1,0 +1,25 @@
+{
+  "R0244": {
+    "title": "RAG越权召回",
+    "definition": "检索增强系统返回用户无权访问的文档片段或敏感知识。",
+    "description": "检索增强系统返回用户无权访问的文档片段或敏感知识。",
+    "complexity": "高级",
+    "influence": "可能造成业务滥用、数据泄露、资金损失、合规处罚或供应链扩散风险。",
+    "avoidances": [
+      "A0215",
+      "A0216",
+      "A0206"
+    ],
+    "references": [
+      {
+        "title": "OWASP Top 10 for Large Language Model Applications",
+        "link": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"
+      }
+    ],
+    "keywords": [
+      "RAG越权召回",
+      "R0244"
+    ],
+    "updated": "2026-06-17"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "A0196": {
+    "category": "AC01",
+    "title": "API强授权与对象级访问控制",
+    "description": "对API对象、租户、资源和动作执行服务端授权校验，防止越权访问。",
+    "references": [
+      {
+        "title": "OWASP API Security Top 10 2023",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+      }
+    ],
+    "keywords": [
+      "API强授权与对象级访问控制",
+      "API强授权对象级访问控制",
+      "A0196"
+    ],
+    "updated": "2026-06-17",
+    "definition": "对API对象、租户、资源和动作执行服务端授权校验，防止越权访问。"
+  }
+}

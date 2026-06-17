@@ -1,0 +1,26 @@
+{
+  "R0226": {
+    "title": "CI/CD流水线凭证泄露",
+    "definition": "流水线日志、变量、Runner或构建脚本泄露部署凭证和云密钥。",
+    "description": "流水线日志、变量、Runner或构建脚本泄露部署凭证和云密钥。",
+    "complexity": "高级",
+    "influence": "可能造成业务滥用、数据泄露、资金损失、合规处罚或供应链扩散风险。",
+    "avoidances": [
+      "A0199",
+      "A0200",
+      "A0201"
+    ],
+    "references": [
+      {
+        "title": "OWASP Top 10 CI/CD Security Risks",
+        "link": "https://owasp.org/www-project-top-10-ci-cd-security-risks/"
+      }
+    ],
+    "keywords": [
+      "CI/CD流水线凭证泄露",
+      "CI/CD流水线凭证",
+      "R0226"
+    ],
+    "updated": "2026-06-17"
+  }
+}

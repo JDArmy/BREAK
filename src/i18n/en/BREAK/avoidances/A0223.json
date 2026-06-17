@@ -1,0 +1,15 @@
+{
+  "A0223": {
+    "title": "去中心化身份凭证验证",
+    "description": "验证DID、VC签发方、撤销状态和展示策略，降低身份凭证伪造风险。",
+    "references": [
+      {
+        "title": "W3C Decentralized Identifiers (DIDs) v1.0"
+      }
+    ],
+    "keywords": [
+      "去中心化身份凭证验证",
+      "A0223"
+    ]
+  }
+}

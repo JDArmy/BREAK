@@ -1,0 +1,17 @@
+{
+  "T0531": {
+    "title": "CI/CD",
+    "keywords": [
+      "CI/CD",
+      "T0531"
+    ],
+    "definition": "CI/CD is a key business security concept.",
+    "description": "CI/CD is used in risk identification, attack analysis, control design, or security operations.",
+    "usageExample": "Assess CI/CD related risks and controls.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0"
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "R0241": {
+    "title": "隐私影响评估缺失",
+    "definition": "新业务或模型上线前未评估个人信息处理风险和合规义务。",
+    "description": "新业务或模型上线前未评估个人信息处理风险和合规义务。",
+    "complexity": "初级",
+    "influence": "可能造成业务滥用、数据泄露、资金损失、合规处罚或供应链扩散风险。",
+    "avoidances": [
+      "A0212",
+      "A0054"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "隐私影响评估缺失",
+      "R0241"
+    ],
+    "updated": "2026-06-17"
+  }
+}

@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "npm run lint && npm run type-check && npm run validate:data && npm run test && npm run build-only",
+    "build": "npm run lint && npm run type-check && npm run validate:data && npm run test && npm run build-only && npm run audit:bundle:check",
     "preview": "vite preview",
     "build-only": "vite build",
     "analyze": "ANALYZE=1 vite build",
@@ -23,6 +23,7 @@
     "audit:references": "node scripts/validate/references.mjs",
     "audit:metrics": "node scripts/validate/metrics.mjs",
     "audit:bundle": "node scripts/validate/bundle-budget.mjs",
+    "audit:bundle:check": "node scripts/validate/bundle-budget.mjs --check-only",
     "audit:maintenance": "npm run audit:references && npm run audit:relations && npm run audit:metrics && node scripts/validate/bundle-budget.mjs --no-fail && node scripts/validate/maintenance.mjs",
     "test": "vitest run",
     "test:watch": "vitest"

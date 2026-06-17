@@ -1,0 +1,29 @@
+{
+  "TA0057": {
+    "title": "数据经纪与越权使用方",
+    "description": "超出授权范围收集、共享、再加工或售卖业务数据的组织或个人。",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "buildAttackTools": [],
+    "useAttackTools": [
+      "AT0092"
+    ],
+    "directCauseRisks": [
+      "R0240",
+      "R0241"
+    ],
+    "indirectSupportRisks": [
+      "R0089"
+    ],
+    "keywords": [
+      "数据经纪与越权使用方",
+      "数据经纪与越权使用",
+      "TA0057"
+    ],
+    "updated": "2026-06-17"
+  }
+}

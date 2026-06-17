@@ -1,0 +1,26 @@
+{
+  "R0246": {
+    "title": "MFA疲劳攻击",
+    "definition": "攻击者持续发起MFA推送诱导用户误批准登录。",
+    "description": "攻击者持续发起MFA推送诱导用户误批准登录。",
+    "complexity": "初级",
+    "influence": "可能造成业务滥用、数据泄露、资金损失、合规处罚或供应链扩散风险。",
+    "avoidances": [
+      "A0217",
+      "A0018",
+      "A0059"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "MFA疲劳攻击",
+      "MFA疲劳",
+      "R0246"
+    ],
+    "updated": "2026-06-17"
+  }
+}

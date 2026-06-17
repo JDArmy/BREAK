@@ -1,0 +1,30 @@
+{
+  "AT0097": {
+    "title": "车联网OTA与接口测试工具",
+    "description": "用于测试OTA包签名、车联网API、诊断接口和V2X通信安全的工具。",
+    "avoidances": [
+      "A0222",
+      "A0185",
+      "A0149"
+    ],
+    "directCauseRisks": [
+      "R0251",
+      "R0252"
+    ],
+    "indirectSupportRisks": [
+      "R0212"
+    ],
+    "references": [
+      {
+        "title": "ISO/SAE 21434 Road vehicles Cybersecurity",
+        "link": "https://www.iso.org/standard/70918.html"
+      }
+    ],
+    "keywords": [
+      "车联网OTA与接口测试工具",
+      "车联网OTA与接口测试",
+      "AT0097"
+    ],
+    "updated": "2026-06-17"
+  }
+}

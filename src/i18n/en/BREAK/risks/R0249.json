@@ -1,0 +1,16 @@
+{
+  "R0249": {
+    "title": "CDN缓存投毒",
+    "definition": "攻击者通过缓存键混淆、头部污染或边缘规则缺陷污染缓存内容。",
+    "keywords": [
+      "CDN缓存投毒",
+      "R0249"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

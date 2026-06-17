@@ -1,0 +1,16 @@
+{
+  "R0222": {
+    "title": "影子API暴露 Risk",
+    "definition": "未登记或废弃API仍可被访问，导致敏感能力绕过正式治理。",
+    "keywords": [
+      "影子API暴露 Risk",
+      "R0222"
+    ],
+    "references": [
+      {
+        "title": "OWASP API Security Top 10 2023",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+      }
+    ]
+  }
+}

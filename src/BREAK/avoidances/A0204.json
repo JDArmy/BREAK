@@ -1,0 +1,20 @@
+{
+  "A0204": {
+    "category": "AC03",
+    "title": "云配置基线与漂移检测",
+    "description": "对云存储、网络、安全组、KMS和日志配置建立基线并检测配置漂移。",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "云配置基线与漂移检测",
+      "云配置基线漂移检测",
+      "A0204"
+    ],
+    "updated": "2026-06-17",
+    "definition": "对云存储、网络、安全组、KMS和日志配置建立基线并检测配置漂移。"
+  }
+}

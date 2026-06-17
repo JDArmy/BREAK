@@ -1,0 +1,16 @@
+{
+  "R0237": {
+    "title": "广告点击注入",
+    "definition": "攻击者在安装或转化前注入虚假点击，抢占归因收益。",
+    "keywords": [
+      "广告点击注入",
+      "R0237"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ]
+  }
+}

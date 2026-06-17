@@ -1,0 +1,25 @@
+{
+  "R0247": {
+    "title": "会话令牌重放",
+    "definition": "攻击者窃取Cookie、Token或会话凭据后在其他设备重放登录。",
+    "description": "攻击者窃取Cookie、Token或会话凭据后在其他设备重放登录。",
+    "complexity": "中级",
+    "influence": "可能造成业务滥用、数据泄露、资金损失、合规处罚或供应链扩散风险。",
+    "avoidances": [
+      "A0218",
+      "A0026",
+      "A0019"
+    ],
+    "references": [
+      {
+        "title": "OWASP API Security Top 10 2023",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+      }
+    ],
+    "keywords": [
+      "会话令牌重放",
+      "R0247"
+    ],
+    "updated": "2026-06-17"
+  }
+}

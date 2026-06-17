@@ -1,0 +1,31 @@
+{
+  "TA0060": {
+    "title": "移动应用仿冒团伙",
+    "description": "重打包、分发和运营仿冒移动应用以窃取账号、广告收益或支付信息。",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "buildAttackTools": [
+      "AT0095"
+    ],
+    "useAttackTools": [
+      "AT0095",
+      "AT0066"
+    ],
+    "directCauseRisks": [
+      "R0248"
+    ],
+    "indirectSupportRisks": [
+      "R0051"
+    ],
+    "keywords": [
+      "移动应用仿冒团伙",
+      "移动应用仿冒",
+      "TA0060"
+    ],
+    "updated": "2026-06-17"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "R0242": {
+    "title": "训练数据版权与授权风险",
+    "definition": "AI训练数据来源、授权或版权不清，导致合规和商业纠纷。",
+    "description": "AI训练数据来源、授权或版权不清，导致合规和商业纠纷。",
+    "complexity": "中级",
+    "influence": "可能造成业务滥用、数据泄露、资金损失、合规处罚或供应链扩散风险。",
+    "avoidances": [
+      "A0213",
+      "A0212"
+    ],
+    "references": [
+      {
+        "title": "NIST AI Risk Management Framework",
+        "link": "https://www.nist.gov/itl/ai-risk-management-framework"
+      }
+    ],
+    "keywords": [
+      "训练数据版权与授权风险",
+      "训练数据版权与授权",
+      "R0242"
+    ],
+    "updated": "2026-06-17"
+  }
+}

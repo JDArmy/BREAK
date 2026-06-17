@@ -1,0 +1,26 @@
+{
+  "R0233": {
+    "title": "协作文档外链泄露",
+    "definition": "网盘、文档、IM文件或知识库被外链分享后长期暴露。",
+    "description": "网盘、文档、IM文件或知识库被外链分享后长期暴露。",
+    "complexity": "初级",
+    "influence": "可能造成业务滥用、数据泄露、资金损失、合规处罚或供应链扩散风险。",
+    "avoidances": [
+      "A0206",
+      "A0035",
+      "A0050"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "协作文档外链泄露",
+      "协作文档外链",
+      "R0233"
+    ],
+    "updated": "2026-06-17"
+  }
+}

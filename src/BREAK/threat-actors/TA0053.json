@@ -1,0 +1,31 @@
+{
+  "TA0053": {
+    "title": "云资源滥用者",
+    "description": "利用云密钥、过度授权和配置错误访问云资源或挖掘数据价值的攻击者。",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "buildAttackTools": [],
+    "useAttackTools": [
+      "AT0088",
+      "AT0096"
+    ],
+    "directCauseRisks": [
+      "R0230",
+      "R0231",
+      "R0254"
+    ],
+    "indirectSupportRisks": [
+      "R0081"
+    ],
+    "keywords": [
+      "云资源滥用者",
+      "云资源滥用",
+      "TA0053"
+    ],
+    "updated": "2026-06-17"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "A0198": {
+    "title": "API输入校验与契约测试",
+    "description": "基于OpenAPI契约、类型约束和负载测试校验输入，减少注入和参数污染。",
+    "references": [
+      {
+        "title": "OWASP API Security Top 10 2023"
+      }
+    ],
+    "keywords": [
+      "API输入校验与契约测试",
+      "A0198"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "R0230": {
+    "title": "云存储桶公开暴露",
+    "definition": "对象存储或快照被错误配置为公开访问，造成数据泄露。",
+    "description": "对象存储或快照被错误配置为公开访问，造成数据泄露。",
+    "complexity": "初级",
+    "influence": "可能造成业务滥用、数据泄露、资金损失、合规处罚或供应链扩散风险。",
+    "avoidances": [
+      "A0204",
+      "A0050",
+      "A0080"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "云存储桶公开暴露",
+      "R0230"
+    ],
+    "updated": "2026-06-17"
+  }
+}

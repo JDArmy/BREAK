@@ -1,0 +1,19 @@
+{
+  "A0203": {
+    "category": "AC01",
+    "title": "云身份权限收敛",
+    "description": "持续发现云端过度授权、长期密钥和跨账号信任，实施最小权限与临时凭证。",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "云身份权限收敛",
+      "A0203"
+    ],
+    "updated": "2026-06-17",
+    "definition": "持续发现云端过度授权、长期密钥和跨账号信任，实施最小权限与临时凭证。"
+  }
+}

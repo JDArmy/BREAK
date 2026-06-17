@@ -1,0 +1,15 @@
+{
+  "A0222": {
+    "title": "车联网OTA安全 Governance",
+    "description": "对车端OTA包、升级通道、回滚策略和版本灰度实施签名验证与安全监控。",
+    "references": [
+      {
+        "title": "ISO/SAE 21434 Road vehicles Cybersecurity"
+      }
+    ],
+    "keywords": [
+      "车联网OTA安全 Governance",
+      "A0222"
+    ]
+  }
+}

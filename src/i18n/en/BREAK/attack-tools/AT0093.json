@@ -1,0 +1,15 @@
+{
+  "AT0093": {
+    "title": "AI数据投毒与提示注入 Tool",
+    "description": "用于生成投毒样本、提示注入载荷、RAG越权检索和模型输出探测。",
+    "references": [
+      {
+        "title": "OWASP Top 10 for Large Language Model Applications"
+      }
+    ],
+    "keywords": [
+      "AI数据投毒与提示注入 Tool",
+      "AT0093"
+    ]
+  }
+}

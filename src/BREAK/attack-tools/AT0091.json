@@ -1,0 +1,31 @@
+{
+  "AT0091": {
+    "title": "广告归因作弊工具",
+    "description": "用于点击注入、安装农场、虚假转化和联盟佣金欺诈的工具。",
+    "avoidances": [
+      "A0209",
+      "A0210",
+      "A0021"
+    ],
+    "directCauseRisks": [
+      "R0237",
+      "R0238",
+      "R0239"
+    ],
+    "indirectSupportRisks": [
+      "R0008"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "广告归因作弊工具",
+      "广告归因作弊",
+      "AT0091"
+    ],
+    "updated": "2026-06-17"
+  }
+}

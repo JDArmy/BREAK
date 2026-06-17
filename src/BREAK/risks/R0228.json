@@ -1,0 +1,24 @@
+{
+  "R0228": {
+    "title": "依赖混淆与恶意包投毒",
+    "definition": "攻击者发布同名或近似依赖包诱导构建系统下载恶意组件。",
+    "description": "攻击者发布同名或近似依赖包诱导构建系统下载恶意组件。",
+    "complexity": "高级",
+    "influence": "可能造成业务滥用、数据泄露、资金损失、合规处罚或供应链扩散风险。",
+    "avoidances": [
+      "A0201",
+      "A0202"
+    ],
+    "references": [
+      {
+        "title": "Software Bill of Materials - CISA",
+        "link": "https://www.cisa.gov/topics/information-communications-technology-supply-chain-security/sbom"
+      }
+    ],
+    "keywords": [
+      "依赖混淆与恶意包投毒",
+      "R0228"
+    ],
+    "updated": "2026-06-17"
+  }
+}

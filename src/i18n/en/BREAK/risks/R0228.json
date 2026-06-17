@@ -1,0 +1,16 @@
+{
+  "R0228": {
+    "title": "依赖混淆与恶意包投毒",
+    "definition": "攻击者发布同名或近似依赖包诱导构建系统下载恶意组件。",
+    "keywords": [
+      "依赖混淆与恶意包投毒",
+      "R0228"
+    ],
+    "references": [
+      {
+        "title": "Software Bill of Materials - CISA",
+        "link": "https://www.cisa.gov/topics/information-communications-technology-supply-chain-security/sbom"
+      }
+    ]
+  }
+}

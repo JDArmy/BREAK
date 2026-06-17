@@ -1,0 +1,15 @@
+{
+  "AT0087": {
+    "title": "CI/CD凭证扫描与投毒 Tool",
+    "description": "用于搜索流水线凭证、篡改构建脚本或向制品注入恶意代码的工具集合。",
+    "references": [
+      {
+        "title": "OWASP Top 10 CI/CD Security Risks"
+      }
+    ],
+    "keywords": [
+      "CI/CD凭证扫描与投毒 Tool",
+      "AT0087"
+    ]
+  }
+}

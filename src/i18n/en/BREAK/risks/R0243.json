@@ -1,0 +1,16 @@
+{
+  "R0243": {
+    "title": "训练数据投毒 Risk",
+    "definition": "攻击者污染训练集、反馈数据或标注结果，影响模型行为。",
+    "keywords": [
+      "训练数据投毒 Risk",
+      "R0243"
+    ],
+    "references": [
+      {
+        "title": "NIST AI Risk Management Framework",
+        "link": "https://www.nist.gov/itl/ai-risk-management-framework"
+      }
+    ]
+  }
+}

@@ -2,6 +2,12 @@
 
 ## 2.14.2
 
+- 新增：扩充业务风险数据规模
+  - 新增 34 个风险、29 个规避手段、13 个攻击工具、11 个威胁行为者和 79 个行业术语
+  - 同步中英文实体数据、业务场景归类和构建产物
+- 优化：Bundle 预算进入强门禁
+  - `npm run build`、CI 和 GitHub Pages Deploy 均在构建后执行 `audit:bundle:check`
+  - `bundle-budget` 支持 `--check-only`，门禁模式不刷新报告文件
 - 新增：文档统计一致性校验脚本
   - `validate:data` 现在会检查 README、README_CN、ROADMAP 的实体规模、参考资料口径和版本号
   - 防止数据规模更新后文档统计再次漂移

@@ -1,0 +1,15 @@
+{
+  "A0201": {
+    "title": "依赖锁定与恶意包检测",
+    "description": "使用锁文件、私有代理仓库、恶意包扫描和依赖审计控制供应链投毒。",
+    "references": [
+      {
+        "title": "Software Bill of Materials - CISA"
+      }
+    ],
+    "keywords": [
+      "依赖锁定与恶意包检测",
+      "A0201"
+    ]
+  }
+}

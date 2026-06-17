@@ -1,0 +1,33 @@
+{
+  "TA0058": {
+    "title": "AI数据投毒者",
+    "description": "通过污染训练数据、反馈数据、知识库和提示上下文影响模型行为。",
+    "references": [
+      {
+        "title": "NIST AI Risk Management Framework",
+        "link": "https://www.nist.gov/itl/ai-risk-management-framework"
+      }
+    ],
+    "buildAttackTools": [
+      "AT0093"
+    ],
+    "useAttackTools": [
+      "AT0093"
+    ],
+    "directCauseRisks": [
+      "R0242",
+      "R0243",
+      "R0244",
+      "R0245"
+    ],
+    "indirectSupportRisks": [
+      "R0117"
+    ],
+    "keywords": [
+      "AI数据投毒者",
+      "AI数据投毒",
+      "TA0058"
+    ],
+    "updated": "2026-06-17"
+  }
+}

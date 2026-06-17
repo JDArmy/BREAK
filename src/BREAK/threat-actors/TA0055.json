@@ -1,0 +1,33 @@
+{
+  "TA0055": {
+    "title": "支付欺诈团伙",
+    "description": "围绕商户套现、拒付、退款和支付令牌滥用牟利的黑灰产团伙。",
+    "references": [
+      {
+        "title": "PCI Data Security Standard",
+        "link": "https://www.pcisecuritystandards.org/standards/pci-dss/"
+      }
+    ],
+    "buildAttackTools": [
+      "AT0090"
+    ],
+    "useAttackTools": [
+      "AT0090",
+      "AT0026"
+    ],
+    "directCauseRisks": [
+      "R0234",
+      "R0235",
+      "R0236"
+    ],
+    "indirectSupportRisks": [
+      "R0060"
+    ],
+    "keywords": [
+      "支付欺诈团伙",
+      "支付欺诈",
+      "TA0055"
+    ],
+    "updated": "2026-06-17"
+  }
+}

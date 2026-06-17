@@ -1,0 +1,15 @@
+{
+  "AT0096": {
+    "title": "CDN与边缘配置 Attack Tool",
+    "description": "用于测试缓存键、头部污染、边缘函数和WAF规则缺陷的工具。",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0"
+      }
+    ],
+    "keywords": [
+      "CDN与边缘配置 Attack Tool",
+      "AT0096"
+    ]
+  }
+}

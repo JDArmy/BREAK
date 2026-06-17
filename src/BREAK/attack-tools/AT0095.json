@@ -1,0 +1,29 @@
+{
+  "AT0095": {
+    "title": "移动应用重打包工具链",
+    "description": "用于反编译、修改、签名和分发重打包移动应用的工具链。",
+    "avoidances": [
+      "A0220",
+      "A0013",
+      "A0055"
+    ],
+    "directCauseRisks": [
+      "R0248"
+    ],
+    "indirectSupportRisks": [
+      "R0051"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "移动应用重打包工具链",
+      "移动应用重打包",
+      "AT0095"
+    ],
+    "updated": "2026-06-17"
+  }
+}

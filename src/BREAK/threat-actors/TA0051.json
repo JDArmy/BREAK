@@ -1,0 +1,34 @@
+{
+  "TA0051": {
+    "title": "API滥用者",
+    "description": "专门枚举和滥用公开API、影子API、Webhook和会话令牌的攻击者。",
+    "references": [
+      {
+        "title": "OWASP API Security Top 10 2023",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+      }
+    ],
+    "buildAttackTools": [],
+    "useAttackTools": [
+      "AT0085",
+      "AT0086",
+      "AT0094"
+    ],
+    "directCauseRisks": [
+      "R0222",
+      "R0223",
+      "R0224",
+      "R0225",
+      "R0247"
+    ],
+    "indirectSupportRisks": [
+      "R0001"
+    ],
+    "keywords": [
+      "API滥用者",
+      "API滥用",
+      "TA0051"
+    ],
+    "updated": "2026-06-17"
+  }
+}

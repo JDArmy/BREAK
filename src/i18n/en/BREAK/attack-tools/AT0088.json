@@ -1,0 +1,15 @@
+{
+  "AT0088": {
+    "title": "云配置扫描与密钥利用 Tool",
+    "description": "用于枚举云资源、检测公开存储、利用泄露密钥和横向移动的工具。",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0"
+      }
+    ],
+    "keywords": [
+      "云配置扫描与密钥利用 Tool",
+      "AT0088"
+    ]
+  }
+}

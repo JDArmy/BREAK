@@ -1,0 +1,20 @@
+{
+  "A0221": {
+    "category": "AC03",
+    "title": "边缘与CDN规则变更审计",
+    "description": "审计CDN、WAF、边缘函数和缓存规则变更，防止边缘配置被滥用。",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "边缘与CDN规则变更审计",
+      "边缘CDN规则变更审计",
+      "A0221"
+    ],
+    "updated": "2026-06-17",
+    "definition": "审计CDN、WAF、边缘函数和缓存规则变更，防止边缘配置被滥用。"
+  }
+}

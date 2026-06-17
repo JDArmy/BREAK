@@ -1,0 +1,25 @@
+{
+  "R0253": {
+    "title": "去中心化身份凭证伪造",
+    "definition": "攻击者伪造DID或可验证凭证，冒充用户、机构或资格证明。",
+    "description": "攻击者伪造DID或可验证凭证，冒充用户、机构或资格证明。",
+    "complexity": "中级",
+    "influence": "可能造成业务滥用、数据泄露、资金损失、合规处罚或供应链扩散风险。",
+    "avoidances": [
+      "A0223",
+      "A0188",
+      "A0155"
+    ],
+    "references": [
+      {
+        "title": "W3C Decentralized Identifiers (DIDs) v1.0",
+        "link": "https://www.w3.org/TR/did-core/"
+      }
+    ],
+    "keywords": [
+      "去中心化身份凭证伪造",
+      "R0253"
+    ],
+    "updated": "2026-06-17"
+  }
+}

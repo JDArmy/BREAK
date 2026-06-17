@@ -1,0 +1,15 @@
+{
+  "A0218": {
+    "title": "会话令牌绑定与重放检测",
+    "description": "将会话与设备、网络、客户端证明绑定，并检测Cookie/Token重放。",
+    "references": [
+      {
+        "title": "OWASP API Security Top 10 2023"
+      }
+    ],
+    "keywords": [
+      "会话令牌绑定与重放检测",
+      "A0218"
+    ]
+  }
+}

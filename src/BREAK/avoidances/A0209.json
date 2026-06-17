@@ -1,0 +1,20 @@
+{
+  "A0209": {
+    "category": "AC03",
+    "title": "广告投放与归因反作弊",
+    "description": "识别虚假曝光、点击注入、归因劫持、安装农场和异常转化链路。",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "广告投放与归因反作弊",
+      "广告投放归因反作弊",
+      "A0209"
+    ],
+    "updated": "2026-06-17",
+    "definition": "识别虚假曝光、点击注入、归因劫持、安装农场和异常转化链路。"
+  }
+}

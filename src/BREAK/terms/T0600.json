@@ -1,0 +1,30 @@
+{
+  "T0600": {
+    "title": "客服数据泄露",
+    "aliases": [],
+    "category": "业务安全",
+    "keywords": [
+      "客服数据泄露",
+      "T0600"
+    ],
+    "definition": "客服数据泄露是业务安全、数据安全、供应链安全或新兴技术安全中的关键概念。",
+    "description": "客服数据泄露常用于描述风险识别、攻击手法、控制措施或安全运营中的具体对象。",
+    "usageExample": "在业务安全评估中需要识别客服数据泄露相关风险并建立对应控制。",
+    "relatedRisks": [
+      "R0255"
+    ],
+    "relatedAvoidances": [],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "updated": "2026-06-17"
+  }
+}

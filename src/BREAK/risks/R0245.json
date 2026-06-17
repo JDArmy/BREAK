@@ -1,0 +1,26 @@
+{
+  "R0245": {
+    "title": "模型输出泄露敏感信息",
+    "definition": "模型在对话、摘要或代码生成中输出训练数据、系统提示或内部资料。",
+    "description": "模型在对话、摘要或代码生成中输出训练数据、系统提示或内部资料。",
+    "complexity": "中级",
+    "influence": "可能造成业务滥用、数据泄露、资金损失、合规处罚或供应链扩散风险。",
+    "avoidances": [
+      "A0214",
+      "A0215",
+      "A0035"
+    ],
+    "references": [
+      {
+        "title": "OWASP Top 10 for Large Language Model Applications",
+        "link": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"
+      }
+    ],
+    "keywords": [
+      "模型输出泄露敏感信息",
+      "模型输出敏感信息",
+      "R0245"
+    ],
+    "updated": "2026-06-17"
+  }
+}

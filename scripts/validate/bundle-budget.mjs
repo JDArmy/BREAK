@@ -7,6 +7,7 @@ const reportDir = path.join(projectRoot, 'research/search-reports');
 const reportJsonPath = path.join(reportDir, 'bundle-budget.json');
 const reportMdPath = path.join(reportDir, 'bundle-budget.md');
 const noFail = process.argv.includes('--no-fail');
+const checkOnly = process.argv.includes('--check-only');
 
 const budgets = {
   maxJsChunkBytes: 500 * 1024,
@@ -140,15 +141,21 @@ function renderMarkdown(report) {
 }
 
 const report = buildReport();
-ensureDir(reportDir);
-writeJson(reportJsonPath, report);
-fs.writeFileSync(reportMdPath, renderMarkdown(report));
+if (!checkOnly) {
+  ensureDir(reportDir);
+  writeJson(reportJsonPath, report);
+  fs.writeFileSync(reportMdPath, renderMarkdown(report));
+}
 
 console.log('\n=== BREAK Bundle 预算报告 ===\n');
 console.log(`assets=${report.summary.assetCount}, js=${report.summary.jsCount}`);
 console.log(`largestJs=${report.summary.largestJs?.file || 'n/a'} ${report.summary.largestJs?.kb || 0}kB`);
 console.log(`issues=${report.issues.length}`);
-console.log(`\n报告已保存到: ${reportMdPath}`);
+if (checkOnly) {
+  console.log('\ncheckOnly=true，未刷新报告文件');
+} else {
+  console.log(`\n报告已保存到: ${reportMdPath}`);
+}
 
 if (report.issues.length > 0 && !noFail) {
   process.exitCode = 1;

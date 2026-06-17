@@ -1,0 +1,33 @@
+{
+  "TA0052": {
+    "title": "供应链投毒者",
+    "description": "通过依赖包、构建链路、制品库和发布流程实施投毒的攻击者。",
+    "references": [
+      {
+        "title": "Software Bill of Materials - CISA",
+        "link": "https://www.cisa.gov/topics/information-communications-technology-supply-chain-security/sbom"
+      }
+    ],
+    "buildAttackTools": [
+      "AT0087"
+    ],
+    "useAttackTools": [
+      "AT0087"
+    ],
+    "directCauseRisks": [
+      "R0226",
+      "R0227",
+      "R0228",
+      "R0229"
+    ],
+    "indirectSupportRisks": [
+      "R0072"
+    ],
+    "keywords": [
+      "供应链投毒者",
+      "供应链投毒",
+      "TA0052"
+    ],
+    "updated": "2026-06-17"
+  }
+}
