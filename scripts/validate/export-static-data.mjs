@@ -63,7 +63,8 @@ function getGeneratedAt() {
     return new Date(process.env.BREAK_DATA_GENERATED_AT).toISOString();
   }
 
-  const committedAt = execFileSync('git', ['log', '-1', '--format=%cI'], {
+  const sourcePaths = exportConfigs.map((config) => config.dir);
+  const committedAt = execFileSync('git', ['log', '-1', '--format=%cI', '--', ...sourcePaths], {
     cwd: projectRoot,
     encoding: 'utf8',
   }).trim();

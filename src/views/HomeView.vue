@@ -50,7 +50,7 @@ const totalThreatActors = computed(() => Object.keys(BREAK.threatActors).length)
 const subThreatActorsCount = computed(() => Object.keys(BREAK.threatActors).filter(key => key.includes('-')).length);
 const totalTerms = computed(() => Object.keys(BREAK.terms).length);
 
-//分商业场景查看风险
+//分业务场景查看风险
 interface SceneBREAK {
   riskDimensions: {
     [key: string]: {
@@ -441,7 +441,7 @@ const termDetailClose = () => {
             :sm="24"
             :md="scene.size"
           >
-          <h4 class="risk-scene-title" :title="scene.key">
+          <h4 class="risk-scene-title" :title="'风险场景 ID: ' + scene.key">
             <!-- <a :href="'/risk-demensions/' + rdKey"> -->
             {{
               $t(

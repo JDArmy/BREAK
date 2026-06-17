@@ -17,6 +17,8 @@ const localeRoots = [
   { locale: "en", root: "src/i18n/en/BREAK" },
 ];
 
+const idOnlyKeywordPattern = /^[A-Z]{1,2}\d{4}(?:-\d{3})?$/;
+
 function normalizeKeyword(value) {
   return String(value || "")
     .replace(/\s+/g, " ")
@@ -44,7 +46,7 @@ function sanitizeKeywords(rawKeywords) {
 function processFile(filePath, locale) {
   const data = readJson(filePath);
   const next = {};
-  let changed = false;
+  const suggestions = [];
 
   for (const [key, entity] of Object.entries(data)) {
     const currentKeywords = Array.isArray(entity.keywords) ? entity.keywords : [];
@@ -55,21 +57,27 @@ function processFile(filePath, locale) {
         : { ...entity, keywords: sanitizedKeywords };
 
     next[key] = nextEntity;
+
     if (JSON.stringify(currentKeywords) !== JSON.stringify(sanitizedKeywords)) {
-      changed = true;
+      suggestions.push({
+        filePath,
+        key,
+        current: currentKeywords,
+        suggested: sanitizedKeywords,
+      });
     }
   }
 
-  if (writeMode && changed) {
+  if (writeMode && suggestions.length > 0) {
     writeJson(filePath, next);
   }
 
-  return { raw: data, data: next, changed };
+  return { raw: data, suggestions };
 }
 
 function main() {
   const issues = [];
-  const touchedFiles = [];
+  const suggestions = [];
 
   for (const { locale, root } of localeRoots) {
     for (const dir of categoryDirs) {
@@ -81,11 +89,8 @@ function main() {
 
       for (const file of files) {
         const filePath = path.join(fullDir, file);
-        const { raw, changed } = processFile(filePath, locale);
-
-        if (changed) {
-          touchedFiles.push(filePath);
-        }
+        const { raw, suggestions: fileSuggestions } = processFile(filePath, locale);
+        suggestions.push(...fileSuggestions);
 
         for (const [key, entity] of Object.entries(raw)) {
           if (locale === "en" && !Array.isArray(entity.keywords)) {
@@ -113,13 +118,15 @@ function main() {
           if (dedupedKeywords.length !== nonEmptyKeywords.length) {
             issues.push(`${filePath}.${key}: keywords 存在重复`);
           }
+
+          for (const keyword of nonEmptyKeywords) {
+            if (idOnlyKeywordPattern.test(keyword)) {
+              issues.push(`${filePath}.${key}: keywords 不应使用纯实体 ID "${keyword}"`);
+            }
+          }
         }
       }
     }
-  }
-
-  if (writeMode) {
-    console.log(`✅ 已规范化 ${touchedFiles.length} 个 JSON 文件中的 keywords`);
   }
 
   if (issues.length > 0) {
@@ -133,9 +140,21 @@ function main() {
     process.exit(1);
   }
 
-  if (!writeMode) {
-    console.log("✅ keywords 审计通过");
+  if (writeMode) {
+    console.log(`✅ 已规范化 ${suggestions.length} 个实体的 keywords`);
+  } else if (suggestions.length > 0) {
+    console.log(`\nℹ️ keywords 可规范化建议，共 ${suggestions.length} 个实体；脚本只报告，不写入实体数据。`);
+    for (const suggestion of suggestions.slice(0, 40)) {
+      console.log(`- ${suggestion.filePath}.${suggestion.key}`);
+      console.log(`  current: ${JSON.stringify(suggestion.current)}`);
+      console.log(`  suggested: ${JSON.stringify(suggestion.suggested)}`);
+    }
+    if (suggestions.length > 40) {
+      console.log(`... 另有 ${suggestions.length - 40} 个建议未显示`);
+    }
   }
+
+  console.log("✅ keywords 审计通过");
 }
 
 main();

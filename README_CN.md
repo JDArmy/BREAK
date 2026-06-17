@@ -82,7 +82,7 @@ npm run type-check
 ```
 
 `npm run validate:data` 会执行 JSON Schema 校验、i18n key 同步检查和关系覆盖审计。
-`npm run build` 会执行 `lint`、`type-check`、`validate:data`、`test`、`test:coverage`、`export:data`、`build-only`、`audit:bundle:check`、`validate:docs-build`、`validate:data-export`、`test:smoke` 和 `test:performance`。
+`npm run build` 会执行 `lint`、`type-check`、`validate:data`、`test`、`test:coverage`、`validate:docs-build`、`export:data`、`build-only`、`audit:bundle:check`、`validate:data-export`、`test:smoke` 和 `test:performance`。
 `npm run test:coverage` 会对关系分析、搜索、安全 i18n 和 BREAK 数据工具执行核心逻辑覆盖率门禁。
 `npm run export:data` 会生成 `public/data/break-data.json` 和 `public/data/break-manifest.json` 静态数据包。
 `npm run validate:data-export` 会检查公共数据包、manifest hash、实体计数、版本号和 GitHub Pages 产物同步状态。

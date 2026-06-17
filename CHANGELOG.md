@@ -32,6 +32,11 @@
   - 新增 `validate:data-export` 校验数据包、manifest hash、实体计数、版本号和 GitHub Pages 产物同步
   - `npm run build`、CI 和 GitHub Pages Deploy 会生成并校验静态数据包
   - 静态数据 manifest 使用提交时间生成，避免重复构建产生无意义时间戳漂移
+- 优化：关键词审计和 Pages 构建顺序
+  - `keywords` 审计新增纯实体 ID 关键词拦截，并清理新扩展数据中的 ID 占位关键词
+  - `fix:keywords` 保持显式写入模式，普通 `validate:data` 只报告不改写实体文件
+  - `npm run build`、CI 和 Deploy 会先检查已提交 `docs/` 同步状态，再重新生成 Pages 产物用于后续 smoke/performance 验证
+  - 统一中文界面中的“业务场景”表述
 - 新增：关系图谱回归测试覆盖
   - 补充 Sankey 攻击路径、路径角色说明和移动端高度测试
   - 补充根节点路径解释、关系洞察和局部预览统计测试
