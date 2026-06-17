@@ -1,7 +1,9 @@
 {
   "T0500": {
     "keywords": [
-      "Cold Wallet"
+      "Cold Wallet",
+      "Ledger",
+      "Trezor"
     ],
     "definition": "A cryptocurrency wallet where private keys are stored entirely offline without internet connectivity, providing the highest level of security.",
     "description": "Cold wallets prevent remote hacking through physical air-gapping. Common forms include hardware wallets (dedicated devices) and paper wallets (printed private keys). They are ideal for long-term storage of large assets but offer less convenience and require protection against physical theft, device damage, and supply chain attacks.",

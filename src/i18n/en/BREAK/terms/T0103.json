@@ -2,7 +2,14 @@
   "T0103": {
     "title": "Database Dump",
     "keywords": [
-      "Database Dump"
+      "Database Dump",
+      "DB exfiltration",
+      "mass data theft",
+      "SQL dump",
+      "credential harvesting",
+      "insider data theft",
+      "privilege escalation dump",
+      "bulk extraction"
     ],
     "aliases": [],
     "category": "Data Leakage",

@@ -1,7 +1,8 @@
 {
   "T0515": {
     "keywords": [
-      "Firewall"
+      "Firewall",
+      "WAF"
     ],
     "definition": "A security device or software that monitors and controls network traffic, permitting or blocking data packets based on predetermined security rules.",
     "description": "A firewall serves as the first line of defense in network security, deployed at network perimeters or on individual hosts. Based on their operational methodology, firewalls are categorized into several types, including packet-filtering firewalls, stateful inspection firewalls, application-layer firewalls (such as Web Application Firewalls, or WAFs), and next-generation firewalls (NGFWs). These systems filter traffic by examining attributes such as IP addresses, ports, protocols, and application signatures to enforce security policies and block unauthorized access and malicious attacks. Modern firewalls often integrate advanced capabilities including Intrusion Prevention Systems (IPS), Deep Packet Inspection (DPI), and threat intelligence feeds to provide comprehensive protection against evolving threats.",

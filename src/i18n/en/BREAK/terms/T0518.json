@@ -1,7 +1,8 @@
 {
   "T0518": {
     "keywords": [
-      "Digital Certificate"
+      "Digital Certificate",
+      "PKI"
     ],
     "definition": "An electronic document issued by a trusted third party (Certificate Authority, CA) to verify the identity of a public key holder.",
     "description": "A digital certificate is a core component of the Public Key Infrastructure (PKI), formatted according to the X.509 standard. It contains the public key, holder information, issuer details, validity period, and a digital signature. SSL/TLS certificates are used for identity authentication and encrypted communication on HTTPS websites, while code signing certificates are used to verify the identity of software publishers.",

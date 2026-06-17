@@ -2,7 +2,15 @@
   "T0165": {
     "title": "Database Deduping",
     "keywords": [
-      "Database Deduping"
+      "Database Deduping",
+      "deduplication",
+      "freshness check",
+      "data cleansing",
+      "deduped base",
+      "cross-reference filter",
+      "duplicate removal",
+      "new data filter",
+      "fresh base"
     ],
     "aliases": [],
     "category": "Data Leakage",

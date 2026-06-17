@@ -2,7 +2,12 @@
   "T0469": {
     "title": "Traffic Hijacking",
     "keywords": [
-      "Traffic Hijacking"
+      "Traffic Hijacking",
+      "network interception",
+      "man-in-the-middle",
+      "session hijacking",
+      "BGP hijacking",
+      "HTTP redirection"
     ],
     "aliases": [],
     "definition": "The unauthorized interception and redirection of network traffic between users and legitimate destinations, enabling attackers to steal data, inject malicious content, or redirect users to fraudulent sites.",

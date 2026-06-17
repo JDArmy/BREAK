@@ -1,7 +1,8 @@
 {
   "T0501": {
     "keywords": [
-      "Hot Wallet"
+      "Hot Wallet",
+      "MetaMask"
     ],
     "definition": "A cryptocurrency wallet where private keys are stored on an internet-connected device, enabling fast transactions but with lower security.",
     "description": "Hot wallets include browser extension wallets, mobile app wallets, and exchange-hosted wallets, providing a convenient DeFi interaction experience. Due to their online nature, hot wallets face multiple risks such as malware, phishing attacks, and exchange breaches, making them suitable for storing small amounts of funds for daily transactions.",

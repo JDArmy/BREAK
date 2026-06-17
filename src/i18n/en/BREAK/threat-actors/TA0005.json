@@ -8,7 +8,12 @@
       }
     ],
     "keywords": [
-      "Data Brokers"
+      "Data Brokers",
+      "stolen data vendor",
+      "identity data broker",
+      "PII seller",
+      "fullz vendor",
+      "breach data seller"
     ]
   },
   "TA0005-001": {
@@ -21,7 +26,11 @@
       }
     ],
     "keywords": [
-      "Card Farmer"
+      "Card Farmer",
+      "bank card supplier",
+      "mule account supplier",
+      "bank account source",
+      "fund transfer account supplier"
     ]
   },
   "TA0005-002": {
@@ -33,7 +42,11 @@
       }
     ],
     "keywords": [
-      "Data Harvester"
+      "Data Harvester",
+      "personal information harvester",
+      "PII collector",
+      "data collection ring",
+      "lead harvester"
     ]
   }
 }

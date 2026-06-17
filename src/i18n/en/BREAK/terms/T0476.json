@@ -2,7 +2,12 @@
   "T0476": {
     "title": "Cross-Site Scripting",
     "keywords": [
-      "Cross-Site Scripting"
+      "Cross-Site Scripting",
+      "XSS",
+      "script injection",
+      "DOM-based XSS",
+      "reflected XSS",
+      "stored XSS"
     ],
     "aliases": [
       "XSS Gongji"

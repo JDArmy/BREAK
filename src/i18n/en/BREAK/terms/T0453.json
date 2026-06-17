@@ -2,7 +2,12 @@
   "T0453": {
     "title": "Flash Loan",
     "keywords": [
-      "Flash Loan"
+      "flash loan",
+      "flash loan attack",
+      "uncollateralized loan",
+      "atomic transaction",
+      "DeFi exploit",
+      "Aave flash loan"
     ],
     "aliases": [],
     "definition": "An instant blockchain borrowing mechanism without collateral requirements, demanding funds be borrowed and returned within the same transaction block, otherwise the transaction automatically reverts.",

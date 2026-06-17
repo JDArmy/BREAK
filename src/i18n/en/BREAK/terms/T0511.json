@@ -1,7 +1,8 @@
 {
   "T0511": {
     "keywords": [
-      "Botnet"
+      "Botnet",
+      "Bot"
     ],
     "definition": "A network of internet-connected devices infected with malware and controlled remotely by an attacker to perform coordinated malicious activities.",
     "description": "Botnets serve as versatile platforms for a wide range of cybercriminal operations, including distributed denial-of-service (DDoS) attacks, spam campaigns, credential stuffing and password brute-forcing, cryptocurrency mining, click fraud, data exfiltration, and malware distribution. Modern botnets can scale to millions of nodes, leveraging sophisticated evasion techniques such as encrypted C&C communications, multi-layered proxy chains, and modular malware architectures that allow dynamic payload updates. The sheer scale and distributed nature of these networks pose a critical threat to internet infrastructure, making takedown operations complex and requiring coordinated efforts between law enforcement agencies, security researchers, and network operators.",

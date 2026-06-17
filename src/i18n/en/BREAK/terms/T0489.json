@@ -1,7 +1,8 @@
 {
   "T0489": {
     "keywords": [
-      "Smart Contract"
+      "Smart Contract",
+      "Solidity"
     ],
     "definition": "A computer program deployed on a blockchain that automatically executes predetermined rules, operating immutably and according to its encoded logic once deployed.",
     "description": "Smart contracts represent a core application of blockchain technology, enabling trustless automated transactions by encoding contractual terms into executable programs. When predefined conditions are met, the contract automatically executes corresponding operations such as fund transfers or data recording. The immutability and transparency of smart contracts have led to their widespread adoption in Web3 scenarios including DeFi, NFTs, and DAOs, while simultaneously introducing security challenges related to irreparable code vulnerabilities.",
