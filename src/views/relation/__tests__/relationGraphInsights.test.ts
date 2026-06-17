@@ -24,6 +24,13 @@ describe("relationGraphInsights", () => {
     { from: "RISK", text: "规避手段", to: "AVOID" },
     { from: "RISK", text: "关联术语", to: "TERM" },
   ];
+  const explainRelation = (line: Line) => ({
+    evidenceLevel: line.text === "直接导致风险" ? "direct" : "indirect",
+    explanation: `explain:${line.text}`,
+    impactHint: `impact:${line.text}`,
+    qualityFlags: [],
+  });
+  const formatEvidenceLevel = (level: string) => `evidence:${level}`;
 
   const createInsights = (selectedNodeId: string) =>
     createRelationGraphInsights({
@@ -37,6 +44,8 @@ describe("relationGraphInsights", () => {
       getRelationPriority: (lineText) => relationPriority[lineText] ?? 99,
       isDirectRelationLine: (lineText) => lineText === "直接导致风险",
       getRelationSourceFields: (line) => [`source:${line.text}`],
+      explainRelation,
+      formatEvidenceLevel,
     });
 
   it("builds a prioritized root path explanation through a multi-hop graph", () => {
@@ -60,6 +69,10 @@ describe("relationGraphInsights", () => {
             otherNodeId: "TOOL",
             otherNodeTitle: "attack-tool:TOOL",
             sourceFields: ["source:使用攻击工具"],
+            evidenceLevel: "evidence:indirect",
+            explanation: "explain:使用攻击工具",
+            impactHint: "impact:使用攻击工具",
+            qualityFlags: [],
           }),
           targetNode: expect.objectContaining({ id: "TOOL", title: "attack-tool:TOOL" }),
           isCurrentTarget: false,
@@ -137,6 +150,8 @@ describe("relationGraphInsights", () => {
       getRelationPriority: (lineText) => relationPriority[lineText] ?? 99,
       isDirectRelationLine: (lineText) => lineText === "直接导致风险",
       getRelationSourceFields: (line) => [`source:${line.text}`],
+      explainRelation,
+      formatEvidenceLevel,
     });
 
     expect(insights.rootNodeRelations.value).toEqual([
@@ -145,6 +160,10 @@ describe("relationGraphInsights", () => {
         direction: "relationView.rootToNode",
         directness: "relationView.direct",
         sourceFields: ["source:直接导致风险"],
+        evidenceLevel: "evidence:direct",
+        explanation: "explain:直接导致风险",
+        impactHint: "impact:直接导致风险",
+        qualityFlags: [],
         priority: 1,
       },
     ]);

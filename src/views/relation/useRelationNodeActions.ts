@@ -13,7 +13,14 @@ import {
   type NodeSummary,
   type Translate,
 } from "@/views/relation/relationNodeActionShared";
-import { RelationType, type Line, type Node, isRelationEntityType, createRelationTypeMapping } from "@/views/relation/relationTypes";
+import {
+  RelationType,
+  type Line,
+  type Node,
+  isRelationEntityType,
+  createRelationTypeMapping,
+  type RelationExplanation,
+} from "@/views/relation/relationTypes";
 
 interface UseRelationNodeActionsOptions {
   t: Translate;
@@ -31,6 +38,8 @@ interface UseRelationNodeActionsOptions {
   buildNodeSummary: (nodeId: string) => NodeSummary;
   isDirectRelationLine: (lineText: string) => boolean;
   getRelationSourceFields: (line: Line) => string[];
+  explainRelation: (line: Line) => RelationExplanation;
+  formatEvidenceLevel: (level: string) => string;
   genNetworkGraphData: (
     reqType: RelationType,
     currentNodeType: RelationType,
@@ -56,6 +65,8 @@ export const useRelationNodeActions = ({
   buildNodeSummary,
   isDirectRelationLine,
   getRelationSourceFields,
+  explainRelation,
+  formatEvidenceLevel,
   genNetworkGraphData,
   renderNetworkChart,
 }: UseRelationNodeActionsOptions) => {
@@ -105,6 +116,8 @@ export const useRelationNodeActions = ({
     buildNodeSummary,
     isDirectRelationLine,
     getRelationSourceFields,
+    explainRelation,
+    formatEvidenceLevel,
     getContextNodeId: () => nodeId.value,
   });
   const copySelectedNodeCsv = createCopyContextNodeCsv({
@@ -116,6 +129,8 @@ export const useRelationNodeActions = ({
     buildNodeSummary,
     isDirectRelationLine,
     getRelationSourceFields,
+    explainRelation,
+    formatEvidenceLevel,
     getContextNodeId: () => selectedNetworkNodeId.value,
   });
 

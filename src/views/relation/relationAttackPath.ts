@@ -5,6 +5,12 @@ import {
   isRelationEntityType,
   RelationType,
   type AttackPath,
+  type AttackPathDetail,
+  type AttackPathFilterOption,
+  type AttackPathFilters,
+  type AttackPathFilterType,
+  type AttackPathNodeRef,
+  type AttackPathSegment,
   type Node,
 } from "@/views/relation/relationTypes";
 
@@ -15,9 +21,12 @@ interface CreateRelationAttackPathOptions {
   isMobile?: Ref<boolean>;
   relType: Ref<RelationType>;
   relKey: Ref<string>;
+  attackPathFilters: Ref<AttackPathFilters>;
+  selectedAttackPathId: Ref<string>;
   selectedNetworkNode: ComputedRef<Node | null>;
   RelationTypeMapping: ReturnType<typeof createRelationTypeMapping>;
   getSankeyNodeName: (type: Exclude<RelationType, RelationType.all>, key: string) => string;
+  getNodeTitle: (type: Exclude<RelationType, RelationType.all>, key: string) => string;
 }
 
 export const createRelationAttackPathData = ({
@@ -25,11 +34,20 @@ export const createRelationAttackPathData = ({
   isMobile,
   relType,
   relKey,
+  attackPathFilters,
+  selectedAttackPathId,
   selectedNetworkNode,
   RelationTypeMapping,
   getSankeyNodeName,
+  getNodeTitle,
 }: CreateRelationAttackPathOptions) => {
   const isMobileView = () => isMobile?.value === true;
+  const filterTypes: AttackPathFilterType[] = [
+    RelationType.threatActor,
+    RelationType.attackTool,
+    RelationType.risk,
+    RelationType.avoidance,
+  ];
 
   const describeAttackPathRole = (nodeType: Exclude<RelationType, RelationType.all>) => {
     switch (nodeType) {
@@ -62,6 +80,19 @@ export const createRelationAttackPathData = ({
         return true;
     }
   };
+
+  const getPathKey = (path: AttackPath, type: AttackPathFilterType) => {
+    if (type === RelationType.threatActor) return path.threatActorKey;
+    if (type === RelationType.attackTool) return path.attackToolKey;
+    if (type === RelationType.risk) return path.riskKey;
+    return path.avoidanceKey;
+  };
+
+  const matchesPathFilters = (path: AttackPath) =>
+    filterTypes.every((type) => {
+      const filterValue = attackPathFilters.value[type];
+      return !filterValue || getPathKey(path, type) === filterValue;
+    });
 
   const getAttackToolRiskKeys = (attackToolKey: string) => {
     const attackTool = BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools];
@@ -123,6 +154,155 @@ export const createRelationAttackPathData = ({
   });
 
   const getOrderedRiskKeys = (riskKeySet: Set<string>) => allRiskKeys.filter((riskKey) => riskKeySet.has(riskKey));
+
+  const entityExists = (type: AttackPathFilterType, key?: string) => {
+    if (!key) return false;
+    const breakKey = RelationTypeMapping[type].BreakKey as keyof typeof BREAK;
+    return key in BREAK[breakKey];
+  };
+
+  const getEntityLabel = (type: AttackPathFilterType, key: string) => {
+    const title = getNodeTitle(type, key);
+    return `${key} ${title}`;
+  };
+
+  const getPathNodeRef = (type: AttackPathFilterType, key: string): AttackPathNodeRef => {
+    const title = getNodeTitle(type, key);
+    return {
+      type,
+      key,
+      title,
+      label: `${RelationTypeMapping[type].title}: ${key} ${title}`,
+    };
+  };
+
+  const getThreatActorToolFields = (threatActorKey: string, attackToolKey: string) => {
+    const threatActor = BREAK.threatActors[threatActorKey as keyof typeof BREAK.threatActors];
+    const fields: string[] = [];
+    if (threatActor.buildAttackTools.includes(attackToolKey)) fields.push("ThreatActor.buildAttackTools");
+    if (threatActor.useAttackTools.includes(attackToolKey)) fields.push("ThreatActor.useAttackTools");
+    return fields;
+  };
+
+  const getThreatActorRiskFields = (threatActorKey: string, riskKey: string) => {
+    const threatActor = BREAK.threatActors[threatActorKey as keyof typeof BREAK.threatActors];
+    const fields: string[] = [];
+    if (threatActor.directCauseRisks.includes(riskKey)) fields.push("ThreatActor.directCauseRisks");
+    if (threatActor.indirectSupportRisks.includes(riskKey)) fields.push("ThreatActor.indirectSupportRisks");
+    return fields;
+  };
+
+  const getAttackToolRiskFields = (attackToolKey: string, riskKey: string) => {
+    const attackTool = BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools];
+    const fields: string[] = [];
+    if (attackTool.directCauseRisks.includes(riskKey)) fields.push("AttackTool.directCauseRisks");
+    if (attackTool.indirectSupportRisks.includes(riskKey)) fields.push("AttackTool.indirectSupportRisks");
+    return fields;
+  };
+
+  const getRiskAvoidanceFields = (riskKey: string, avoidanceKey: string) => {
+    const risk = BREAK.risks[riskKey as keyof typeof BREAK.risks];
+    return risk.avoidances.includes(avoidanceKey) ? ["Risk.avoidances"] : [];
+  };
+
+  const getSegmentRelation = (fields: string[]) => {
+    if (fields.includes("ThreatActor.buildAttackTools")) return t("relationLine.buildAttackTool");
+    if (fields.includes("ThreatActor.useAttackTools")) return t("relationLine.useAttackTool");
+    if (fields.includes("AttackTool.directCauseRisks") || fields.includes("ThreatActor.directCauseRisks")) {
+      return t("relationLine.directCauseRisk");
+    }
+    if (fields.includes("AttackTool.indirectSupportRisks") || fields.includes("ThreatActor.indirectSupportRisks")) {
+      return t("relationLine.indirectSupportRisk");
+    }
+    if (fields.includes("Risk.avoidances")) return t("relationLine.avoidanceMeans");
+    return t("relationLine.causeRisk");
+  };
+
+  const getSegmentReason = (fields: string[]) => {
+    if (fields.includes("ThreatActor.buildAttackTools") && fields.includes("ThreatActor.useAttackTools")) {
+      return t("relationView.pathReasonBuildAndUseTool");
+    }
+    if (fields.includes("ThreatActor.buildAttackTools")) return t("relationView.pathReasonBuildTool");
+    if (fields.includes("ThreatActor.useAttackTools")) return t("relationView.pathReasonUseTool");
+    if (fields.some((field) => field.endsWith(".directCauseRisks"))) return t("relationView.pathReasonDirectRisk");
+    if (fields.some((field) => field.endsWith(".indirectSupportRisks"))) return t("relationView.pathReasonIndirectRisk");
+    if (fields.includes("Risk.avoidances")) return t("relationView.pathReasonRiskAvoidance");
+    return t("relationView.pathReasonRelated");
+  };
+
+  const buildSegment = (
+    source: AttackPathNodeRef,
+    target: AttackPathNodeRef,
+    sourceFields: string[]
+  ): AttackPathSegment => ({
+    source,
+    target,
+    relation: getSegmentRelation(sourceFields),
+    sourceFields,
+    reason: getSegmentReason(sourceFields),
+  });
+
+  const getAttackPathId = (path: AttackPath) =>
+    [
+      path.threatActorKey ?? "-",
+      path.attackToolKey ?? "-",
+      path.riskKey,
+      path.avoidanceKey ?? "-",
+    ].join("|");
+
+  const buildAttackPathDetail = (path: AttackPath): AttackPathDetail => {
+    const nodes: AttackPathNodeRef[] = [];
+    const segments: AttackPathSegment[] = [];
+
+    if (path.threatActorKey) nodes.push(getPathNodeRef(RelationType.threatActor, path.threatActorKey));
+    if (path.attackToolKey) nodes.push(getPathNodeRef(RelationType.attackTool, path.attackToolKey));
+    nodes.push(getPathNodeRef(RelationType.risk, path.riskKey));
+    if (path.avoidanceKey) nodes.push(getPathNodeRef(RelationType.avoidance, path.avoidanceKey));
+
+    if (path.threatActorKey && path.attackToolKey) {
+      segments.push(
+        buildSegment(
+          getPathNodeRef(RelationType.threatActor, path.threatActorKey),
+          getPathNodeRef(RelationType.attackTool, path.attackToolKey),
+          getThreatActorToolFields(path.threatActorKey, path.attackToolKey)
+        )
+      );
+    }
+    if (path.attackToolKey) {
+      segments.push(
+        buildSegment(
+          getPathNodeRef(RelationType.attackTool, path.attackToolKey),
+          getPathNodeRef(RelationType.risk, path.riskKey),
+          getAttackToolRiskFields(path.attackToolKey, path.riskKey)
+        )
+      );
+    } else if (path.threatActorKey) {
+      segments.push(
+        buildSegment(
+          getPathNodeRef(RelationType.threatActor, path.threatActorKey),
+          getPathNodeRef(RelationType.risk, path.riskKey),
+          getThreatActorRiskFields(path.threatActorKey, path.riskKey)
+        )
+      );
+    }
+    if (path.avoidanceKey) {
+      segments.push(
+        buildSegment(
+          getPathNodeRef(RelationType.risk, path.riskKey),
+          getPathNodeRef(RelationType.avoidance, path.avoidanceKey),
+          getRiskAvoidanceFields(path.riskKey, path.avoidanceKey)
+        )
+      );
+    }
+
+    return {
+      id: getAttackPathId(path),
+      label: nodes.map((node) => node.key).join(" -> "),
+      path,
+      nodes,
+      segments,
+    };
+  };
 
   const getCandidateRiskKeys = () => {
     switch (relType.value) {
@@ -225,6 +405,52 @@ export const createRelationAttackPathData = ({
     return paths.filter(matchesSelectedEntity);
   };
 
+  const attackPaths = computed(() => buildAttackPaths());
+  const filteredAttackPaths = computed(() => attackPaths.value.filter(matchesPathFilters));
+  const attackPathDetails = computed(() => filteredAttackPaths.value.map(buildAttackPathDetail));
+
+  const getAttackPathFilterOptions = (type: AttackPathFilterType): AttackPathFilterOption[] => {
+    const counts = new Map<string, number>();
+    attackPaths.value.forEach((path) => {
+      const key = getPathKey(path, type);
+      if (!entityExists(type, key)) return;
+      counts.set(key, (counts.get(key) ?? 0) + 1);
+    });
+
+    return [...counts.entries()]
+      .map(([key, count]) => ({
+        key,
+        label: getEntityLabel(type, key),
+        count,
+      }))
+      .sort((a, b) => b.count - a.count || a.key.localeCompare(b.key));
+  };
+
+  const attackPathFilterOptions = computed<Record<AttackPathFilterType, AttackPathFilterOption[]>>(() => ({
+    [RelationType.threatActor]: getAttackPathFilterOptions(RelationType.threatActor),
+    [RelationType.attackTool]: getAttackPathFilterOptions(RelationType.attackTool),
+    [RelationType.risk]: getAttackPathFilterOptions(RelationType.risk),
+    [RelationType.avoidance]: getAttackPathFilterOptions(RelationType.avoidance),
+  }));
+
+  const hasActiveAttackPathFilters = computed(() =>
+    filterTypes.some((type) => Boolean(attackPathFilters.value[type]))
+  );
+
+  const selectedAttackPathDetail = computed(() => {
+    const details = attackPathDetails.value;
+    return details.find((detail) => detail.id === selectedAttackPathId.value) ?? details[0] ?? null;
+  });
+
+  const resetAttackPathFilters = () => {
+    attackPathFilters.value = {};
+    selectedAttackPathId.value = "";
+  };
+
+  const selectAttackPath = (pathId: string) => {
+    selectedAttackPathId.value = pathId;
+  };
+
   const createEmptySankeyData = () => {
     const nodeMap = new Map<string, {
       name: string;
@@ -297,15 +523,7 @@ export const createRelationAttackPathData = ({
 
   const buildSankeyData = () => {
     const sankey = createEmptySankeyData();
-    const options = {
-      attackToolKey: relType.value === RelationType.attackTool ? relKey.value : undefined,
-      avoidanceKey: relType.value === RelationType.avoidance ? relKey.value : undefined,
-      threatActorKey: relType.value === RelationType.threatActor ? relKey.value : undefined,
-    };
-
-    getCandidateRiskKeys().forEach((riskKey) => {
-      buildAttackPathsForRisk(riskKey, options).forEach(sankey.addPath);
-    });
+    filteredAttackPaths.value.forEach(sankey.addPath);
 
     return sankey.toData();
   };
@@ -315,7 +533,7 @@ export const createRelationAttackPathData = ({
     if (!node || !isRelationEntityType(node.type)) return [];
     if (node.type === RelationType.term) return [];
 
-    const matchingPaths = buildAttackPaths().filter((path) => {
+    const matchingPaths = attackPaths.value.filter((path) => {
       if (node.type === RelationType.threatActor) return path.threatActorKey === node.id;
       if (node.type === RelationType.attackTool) return path.attackToolKey === node.id;
       if (node.type === RelationType.risk) return path.riskKey === node.id;
@@ -358,8 +576,16 @@ export const createRelationAttackPathData = ({
   });
 
   return {
+    attackPathDetails,
+    attackPathFilterOptions,
+    attackPaths,
+    filteredAttackPaths,
+    hasActiveAttackPathFilters,
+    resetAttackPathFilters,
     sankeyChartHeight,
     sankeyData,
+    selectAttackPath,
+    selectedAttackPathDetail,
     selectedNodeAttackPathDescription,
     selectedNodeAttackPathSummary,
   };

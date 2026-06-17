@@ -1,6 +1,12 @@
 import type { DropdownInstance } from "element-plus";
 import type { Ref } from "vue";
-import { createRelationTypeMapping, RelationType, type Line, type Node } from "@/views/relation/relationTypes";
+import {
+  createRelationTypeMapping,
+  RelationType,
+  type Line,
+  type Node,
+  type RelationExplanation,
+} from "@/views/relation/relationTypes";
 
 export type Translate = (key: string, params?: Record<string, unknown>) => string;
 
@@ -20,6 +26,8 @@ export interface RelationNodeActionBaseOptions {
   buildNodeSummary: (nodeId: string) => NodeSummary;
   isDirectRelationLine: (lineText: string) => boolean;
   getRelationSourceFields: (line: Line) => string[];
+  explainRelation?: (line: Line) => RelationExplanation;
+  formatEvidenceLevel?: (level: string) => string;
 }
 
 export interface RelationNodeContextState {

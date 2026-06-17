@@ -1,12 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
-
-interface RootRelationSummary {
-  direction: string;
-  text: string;
-  directness: string;
-  sourceFields: string[];
-}
+import type { RootRelationSummary } from "@/views/relation/relationTypes";
 
 interface PathNodeSummary {
   id: string;
@@ -70,6 +64,12 @@ const { t } = useI18n();
           <span class="node-relation-direction">{{ relation.direction }}</span>
           <span>{{ relation.text }}</span>
           <span class="node-relation-directness">{{ relation.directness }}</span>
+          <span class="node-relation-directness">{{ relation.evidenceLevel }}</span>
+        </div>
+        <div class="node-relation-fields">{{ relation.explanation }}</div>
+        <div class="node-relation-fields">{{ relation.impactHint }}</div>
+        <div v-if="relation.qualityFlags.length" class="node-relation-quality">
+          {{ relation.qualityFlags.join(" / ") }}
         </div>
         <div v-if="relation.sourceFields.length" class="node-relation-fields">
           {{ t("relationView.sourceFields") }}: {{ relation.sourceFields.join(", ") }}
@@ -231,6 +231,13 @@ const { t } = useI18n();
 .node-relation-fields,
 .node-relation-more {
   color: var(--break-text-muted);
+  font-size: 12px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+.node-relation-quality {
+  color: var(--el-color-warning);
   font-size: 12px;
   line-height: 1.65;
   overflow-wrap: anywhere;

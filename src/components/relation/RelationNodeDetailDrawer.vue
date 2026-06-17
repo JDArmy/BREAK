@@ -5,28 +5,11 @@ import { useBreakpoints } from "@/composables/useBreakpoints";
 import RelationNodeDrawerHeader from "@/components/relation/RelationNodeDrawerHeader.vue";
 import RelationNodeDrawerInsights from "@/components/relation/RelationNodeDrawerInsights.vue";
 import RelationNodeDrawerRelations from "@/components/relation/RelationNodeDrawerRelations.vue";
+import type { RelationSummary, RootRelationSummary } from "@/views/relation/relationTypes";
 
 interface DetailNode {
   id: string;
   type: string;
-}
-
-interface RelationSummary {
-  relationKey: string;
-  direction: string;
-  text: string;
-  directness: string;
-  otherNodeId: string;
-  otherNodeType: string;
-  otherNodeTitle: string;
-  sourceFields: string[];
-}
-
-interface RootRelationSummary {
-  direction: string;
-  text: string;
-  directness: string;
-  sourceFields: string[];
 }
 
 interface PathNodeSummary {

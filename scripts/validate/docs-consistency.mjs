@@ -87,7 +87,7 @@ function countTestFiles() {
 }
 
 const testFileCount = countTestFiles();
-const expectedTestTotal = 85;
+const expectedTestTotal = 88;
 const buildGateScripts = [
   'lint',
   'type-check',

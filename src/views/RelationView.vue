@@ -99,7 +99,18 @@ export default defineComponent({
           :active="activeView === 'sankey'"
           :has-data="sankeyHasData"
           :chart-min-width="sankeyChartMinWidth"
+          :relation-type-mapping="RelationTypeMapping"
+          :attack-path-details="attackPathDetails"
+          :attack-path-filter-options="attackPathFilterOptions"
+          :attack-path-filters="attackPathFilters"
+          :filtered-attack-path-count="filteredAttackPaths.length"
+          :has-active-attack-path-filters="hasActiveAttackPathFilters"
+          :selected-attack-path-detail="selectedAttackPathDetail"
+          :selected-attack-path-id="selectedAttackPathDetail?.id || ''"
           :set-sankey-chart-element="setSankeyChartElement"
+          @update:attack-path-filters="attackPathFilters = $event"
+          @select-attack-path="selectAttackPath"
+          @reset-attack-path-filters="resetAttackPathFilters"
         />
       </el-tab-pane>
     </el-tabs>

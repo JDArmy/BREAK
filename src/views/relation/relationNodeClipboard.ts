@@ -14,6 +14,8 @@ export const createCopyContextNodeCsv = ({
   buildNodeSummary,
   isDirectRelationLine,
   getRelationSourceFields,
+  explainRelation,
+  formatEvidenceLevel,
   getContextNodeId,
 }: CreateCopyContextNodeCsvOptions) => async () => {
   const node = findNodeById(getContextNodeId());
@@ -29,6 +31,7 @@ export const createCopyContextNodeCsv = ({
   const relationRows = relationLines.map((line) => {
     const sourceNode = buildNodeSummary(line.from);
     const targetNode = buildNodeSummary(line.to);
+    const explanation = explainRelation?.(line);
     relatedNodes.set(sourceNode.id, sourceNode);
     relatedNodes.set(targetNode.id, targetNode);
     return [
@@ -37,6 +40,10 @@ export const createCopyContextNodeCsv = ({
       sourceNode.title,
       line.text,
       isDirectRelationLine(line.text) ? t("relationView.direct") : t("relationView.indirect"),
+      explanation && formatEvidenceLevel ? formatEvidenceLevel(explanation.evidenceLevel) : "",
+      explanation?.explanation ?? "",
+      explanation?.impactHint ?? "",
+      explanation?.qualityFlags.join(" | ") ?? "",
       targetNode.id,
       targetNode.type,
       targetNode.title,
@@ -72,6 +79,10 @@ export const createCopyContextNodeCsv = ({
       t("relationView.csvHeaderSourceTitle"),
       t("relationView.csvHeaderRelation"),
       t("relationView.csvHeaderDirectness"),
+      t("relationView.csvHeaderEvidence"),
+      t("relationView.csvHeaderExplanation"),
+      t("relationView.csvHeaderImpact"),
+      t("relationView.csvHeaderQualityFlags"),
       t("relationView.csvHeaderTargetId"),
       t("relationView.csvHeaderTargetType"),
       t("relationView.csvHeaderTargetTitle"),

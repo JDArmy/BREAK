@@ -34,6 +34,7 @@ interface SetupRelationViewEffectsOptions {
   resizeSankeyChart: () => void;
   hideNetworkTooltip: () => void;
   hideSankeyTooltip: () => void;
+  normalizeAttackPathFilters: () => void;
   handleGlobalPointerDown: (event: PointerEvent) => void;
   disposeNetworkChart: () => void;
   disposeSankeyChart: () => void;
@@ -64,6 +65,7 @@ export const setupRelationViewEffects = ({
   resizeSankeyChart,
   hideNetworkTooltip,
   hideSankeyTooltip,
+  normalizeAttackPathFilters,
   handleGlobalPointerDown,
   disposeNetworkChart,
   disposeSankeyChart,
@@ -155,6 +157,7 @@ export const setupRelationViewEffects = ({
     () => {
       relType.value = route.params.type as RelationType;
       relKey.value = route.params.key as string;
+      normalizeAttackPathFilters();
       networkDataReady = false;
       if (activeView.value === "network") {
         refreshGraphAfterVisible();
@@ -165,6 +168,7 @@ export const setupRelationViewEffects = ({
 
   watch(locale, () => {
     filterLineType.value = [];
+    normalizeAttackPathFilters();
     networkDataReady = false;
     if (activeView.value === "network") {
       rebuildGraphData();

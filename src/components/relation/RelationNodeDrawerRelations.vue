@@ -1,17 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useI18n } from "vue-i18n";
-
-interface RelationSummary {
-  relationKey: string;
-  direction: string;
-  text: string;
-  directness: string;
-  otherNodeId: string;
-  otherNodeType: string;
-  otherNodeTitle: string;
-  sourceFields: string[];
-}
+import type { RelationSummary } from "@/views/relation/relationTypes";
 
 const props = defineProps<{
   selectedNetworkRelations: RelationSummary[];
@@ -68,6 +58,7 @@ const relationRowClassName = ({ row }: { row: { isActive: boolean } }) =>
     >
       <el-table-column prop="relationSummary" :label="t('relationView.allRelations')" min-width="34%" />
       <el-table-column prop="directness" :label="t('relationView.csvHeaderDirectness')" width="64" />
+      <el-table-column prop="evidenceLevel" :label="t('relationView.csvHeaderEvidence')" width="86" />
       <el-table-column :label="t('relationView.csvHeaderTargetTitle')" min-width="44%">
         <template #default="{ row }">
           <button
@@ -79,6 +70,17 @@ const relationRowClassName = ({ row }: { row: { isActive: boolean } }) =>
             <span class="node-relation-link-id">{{ row.otherNodeId }}</span>
             <span>{{ row.otherNodeTitle }}</span>
           </button>
+        </template>
+      </el-table-column>
+      <el-table-column :label="t('relationView.csvHeaderExplanation')" min-width="48%">
+        <template #default="{ row }">
+          <div class="node-relation-explain">
+            <span>{{ row.explanation }}</span>
+            <span>{{ row.impactHint }}</span>
+            <span v-if="row.qualityFlags.length" class="node-relation-quality">
+              {{ row.qualityFlags.join(" / ") }}
+            </span>
+          </div>
         </template>
       </el-table-column>
     </el-table>
@@ -165,6 +167,18 @@ const relationRowClassName = ({ row }: { row: { isActive: boolean } }) =>
 
 .node-relation-link-id {
   font-weight: 600;
+}
+
+.node-relation-explain {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  color: var(--break-text-secondary);
+  overflow-wrap: anywhere;
+}
+
+.node-relation-quality {
+  color: var(--el-color-warning);
 }
 
 @media (max-width: 767px) {

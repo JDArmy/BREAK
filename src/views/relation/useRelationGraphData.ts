@@ -1,6 +1,7 @@
 import { computed, reactive, ref, type Ref } from "vue";
 import BREAK from "@/BREAK";
 import { createRelationAttackPathData } from "@/views/relation/relationAttackPath";
+import { createRelationExplanationHelpers } from "@/views/relation/relationExplanation";
 import { createRelationGraphBuilder } from "@/views/relation/relationGraphBuilder";
 import { createRelationGraphInsights } from "@/views/relation/relationGraphInsights";
 import {
@@ -9,6 +10,7 @@ import {
   isRelationEntityType,
   type Line,
   type Node,
+  type AttackPathFilters,
   type RelationLegendItem,
 } from "@/views/relation/relationTypes";
 
@@ -44,6 +46,8 @@ export const useRelationGraphData = ({
     lines,
   });
   const selectedNetworkNodeId = ref(relKey.value);
+  const attackPathFilters = ref<AttackPathFilters>({});
+  const selectedAttackPathId = ref("");
 
   const relationLegendItems = computed<RelationLegendItem[]>(() => [
     {
@@ -212,6 +216,11 @@ export const useRelationGraphData = ({
       lineText
     );
 
+  const { explainRelation, formatEvidenceLevel } = createRelationExplanationHelpers({
+    t,
+    getRelationSourceFields,
+  });
+
   const wrapLabelText = (text: string, maxLineLength = 10) => {
     const [id, title = ""] = text.replace(/<br\s*\/?>/gi, "\n").split("\n");
     if (!title) return id;
@@ -290,11 +299,21 @@ export const useRelationGraphData = ({
     getRelationPriority,
     isDirectRelationLine,
     getRelationSourceFields,
+    explainRelation,
+    formatEvidenceLevel,
   });
 
   const {
+    attackPathDetails,
+    attackPathFilterOptions,
+    attackPaths,
+    filteredAttackPaths,
+    hasActiveAttackPathFilters,
+    resetAttackPathFilters,
     sankeyChartHeight,
     sankeyData,
+    selectAttackPath,
+    selectedAttackPathDetail,
     selectedNodeAttackPathDescription,
     selectedNodeAttackPathSummary,
   } = createRelationAttackPathData({
@@ -302,10 +321,33 @@ export const useRelationGraphData = ({
     isMobile,
     relType,
     relKey,
+    attackPathFilters,
+    selectedAttackPathId,
     selectedNetworkNode,
     RelationTypeMapping,
     getSankeyNodeName,
+    getNodeTitle,
   });
+
+  const normalizeAttackPathFilters = () => {
+    const nextFilters: AttackPathFilters = {};
+
+    for (const [type, value] of Object.entries(attackPathFilters.value) as [keyof AttackPathFilters, string][]) {
+      if (!value) continue;
+      const options = attackPathFilterOptions.value[type] ?? [];
+      if (options.some((option) => option.key === value)) {
+        nextFilters[type] = value;
+      }
+    }
+
+    attackPathFilters.value = nextFilters;
+    if (
+      selectedAttackPathId.value &&
+      !attackPathDetails.value.some((detail) => detail.id === selectedAttackPathId.value)
+    ) {
+      selectedAttackPathId.value = "";
+    }
+  };
 
   let refreshGraphRequestId = 0;
 
@@ -329,14 +371,21 @@ export const useRelationGraphData = ({
 
   return {
     addRootNode,
+    attackPathDetails,
+    attackPathFilterOptions,
+    attackPathFilters,
+    attackPaths,
     buildNodeSummary,
     clearDraggedNodePositions,
     draggedNodePositions,
     filterLineType,
     filterRelationType,
     filterSubNode,
+    filteredAttackPaths,
     ensureRelationNode,
+    explainRelation,
     findNodeById,
+    formatEvidenceLevel,
     formatRelationFieldsTooltip,
     genNetworkGraphData,
     getCurrentEntityOptions,
@@ -345,6 +394,7 @@ export const useRelationGraphData = ({
     getRelationPriority,
     getRelationSourceFields,
     getSankeyNodeName,
+    hasActiveAttackPathFilters,
     isDirectRelationLine,
     isPathNodeCurrentSelection,
     isRelationOnSelectedPath,
@@ -352,13 +402,18 @@ export const useRelationGraphData = ({
     jsonData,
     lines,
     nodes,
+    normalizeAttackPathFilters,
     rebuildGraphData,
     refreshGraphAfterVisible,
     relationLegendItems,
+    resetAttackPathFilters,
     relationTypeItems,
     rootNodeRelations,
     sankeyChartHeight,
     sankeyData,
+    selectAttackPath,
+    selectedAttackPathDetail,
+    selectedAttackPathId,
     selectedNetworkNode,
     selectedNetworkNodeId,
     selectedNetworkNodeTitle,

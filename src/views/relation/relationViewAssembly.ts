@@ -151,6 +151,8 @@ export const createRelationViewAssembly = ({
     buildNodeSummary,
     isDirectRelationLine,
     getRelationSourceFields,
+    explainRelation: graphData.explainRelation,
+    formatEvidenceLevel: graphData.formatEvidenceLevel,
     genNetworkGraphData,
     renderNetworkChart: (notMerge) => renderNetworkChartBridge.current(notMerge),
   });
@@ -238,6 +240,7 @@ export const createRelationViewAssembly = ({
     resizeSankeyChart: sankeyController.resizeSankeyChart,
     hideNetworkTooltip: networkController.hideNetworkTooltip,
     hideSankeyTooltip: sankeyController.hideSankeyTooltip,
+    normalizeAttackPathFilters: graphData.normalizeAttackPathFilters,
     handleGlobalPointerDown: nodeActions.handleGlobalPointerDown,
     disposeNetworkChart: networkController.disposeNetworkChart,
     disposeSankeyChart: sankeyController.disposeSankeyChart,

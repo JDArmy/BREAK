@@ -1,7 +1,7 @@
 import type { Ref } from "vue";
 import { createRelationGraphRelationSummary } from "@/views/relation/relationGraphRelationSummary";
 import { createRelationGraphRootAnalysis } from "@/views/relation/relationGraphRootAnalysis";
-import { RelationType, type Line, type Node } from "@/views/relation/relationTypes";
+import { RelationType, type Line, type Node, type RelationExplanation } from "@/views/relation/relationTypes";
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;
 
@@ -16,6 +16,8 @@ interface CreateRelationGraphInsightsOptions {
   getRelationPriority: (lineText: string) => number;
   isDirectRelationLine: (lineText: string) => boolean;
   getRelationSourceFields: (line: Line) => string[];
+  explainRelation: (line: Line) => RelationExplanation;
+  formatEvidenceLevel: (level: string) => string;
 }
 
 export const createRelationGraphInsights = ({
@@ -29,6 +31,8 @@ export const createRelationGraphInsights = ({
   getRelationPriority,
   isDirectRelationLine,
   getRelationSourceFields,
+  explainRelation,
+  formatEvidenceLevel,
 }: CreateRelationGraphInsightsOptions) => {
   const {
     buildNodeSummary,
@@ -51,6 +55,8 @@ export const createRelationGraphInsights = ({
     getRelationPriority,
     isDirectRelationLine,
     getRelationSourceFields,
+    explainRelation,
+    formatEvidenceLevel,
   });
 
   const {

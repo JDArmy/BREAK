@@ -25,6 +25,33 @@ export interface Line {
   to: string;
 }
 
+export interface RelationExplanation {
+  evidenceLevel: string;
+  explanation: string;
+  impactHint: string;
+  qualityFlags: string[];
+}
+
+export interface RelationSummary extends RelationExplanation {
+  relationKey: string;
+  direction: string;
+  text: string;
+  priority: number;
+  directness: string;
+  otherNodeId: string;
+  otherNodeType: string;
+  otherNodeTitle: string;
+  sourceFields: string[];
+}
+
+export interface RootRelationSummary extends RelationExplanation {
+  direction: string;
+  text: string;
+  directness: string;
+  sourceFields: string[];
+  priority: number;
+}
+
 export interface RelationLegendItem {
   color: string;
   label: string;
@@ -89,6 +116,43 @@ export interface AttackPath {
   attackToolKey?: string;
   riskKey: string;
   avoidanceKey?: string;
+}
+
+export type AttackPathFilterType =
+  | RelationType.threatActor
+  | RelationType.attackTool
+  | RelationType.risk
+  | RelationType.avoidance;
+
+export type AttackPathFilters = Partial<Record<AttackPathFilterType, string>>;
+
+export interface AttackPathFilterOption {
+  key: string;
+  label: string;
+  count: number;
+}
+
+export interface AttackPathNodeRef {
+  type: AttackPathFilterType;
+  key: string;
+  title: string;
+  label: string;
+}
+
+export interface AttackPathSegment {
+  source: AttackPathNodeRef;
+  target: AttackPathNodeRef;
+  relation: string;
+  sourceFields: string[];
+  reason: string;
+}
+
+export interface AttackPathDetail {
+  id: string;
+  label: string;
+  path: AttackPath;
+  nodes: AttackPathNodeRef[];
+  segments: AttackPathSegment[];
 }
 
 export const getColorFromCSS = (varName: string): string => {

@@ -1,4 +1,11 @@
-import { isRelationEntityType, RelationType, type Line, type Node } from "@/views/relation/relationTypes";
+import {
+  isRelationEntityType,
+  RelationType,
+  type Line,
+  type Node,
+  type RelationExplanation,
+  type RelationSummary,
+} from "@/views/relation/relationTypes";
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;
 
@@ -11,6 +18,8 @@ export interface RelationGraphInsightBaseOptions {
   getRelationPriority: (lineText: string) => number;
   isDirectRelationLine: (lineText: string) => boolean;
   getRelationSourceFields: (line: Line) => string[];
+  explainRelation: (line: Line) => RelationExplanation;
+  formatEvidenceLevel: (level: string) => string;
 }
 
 export const createRelationGraphInsightHelpers = ({
@@ -21,18 +30,25 @@ export const createRelationGraphInsightHelpers = ({
   getRelationPriority,
   isDirectRelationLine,
   getRelationSourceFields,
+  explainRelation,
+  formatEvidenceLevel,
 }: RelationGraphInsightBaseOptions) => {
   const findNodeById = (id: string) => nodes.find((node) => node.id === id);
 
-  const buildRelationSummary = (line: Line, nodeId: string) => {
+  const buildRelationSummary = (line: Line, nodeId: string): RelationSummary => {
     const otherNodeId = line.from === nodeId ? line.to : line.from;
     const otherNode = findNodeById(otherNodeId);
+    const explanation = explainRelation(line);
     return {
       relationKey: `${line.from}::${line.text}::${line.to}`,
       direction: line.from === nodeId ? t("relationView.outgoing") : t("relationView.incoming"),
       text: line.text,
       priority: getRelationPriority(line.text),
       directness: isDirectRelationLine(line.text) ? t("relationView.direct") : t("relationView.indirect"),
+      evidenceLevel: formatEvidenceLevel(explanation.evidenceLevel),
+      explanation: explanation.explanation,
+      impactHint: explanation.impactHint,
+      qualityFlags: explanation.qualityFlags,
       otherNodeId,
       otherNodeType: otherNode ? getNodeTypeTitle(otherNode.type) : "",
       otherNodeTitle:
