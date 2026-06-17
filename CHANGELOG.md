@@ -8,6 +8,9 @@
 - 优化：Bundle 预算进入强门禁
   - `npm run build`、CI 和 GitHub Pages Deploy 均在构建后执行 `audit:bundle:check`
   - `bundle-budget` 支持 `--check-only`，门禁模式不刷新报告文件
+- 新增：docs 构建产物同步校验
+  - `npm run build`、CI 和 GitHub Pages Deploy 均会检查 `docs/` 是否与当前源码构建结果一致
+  - 防止 GitHub Pages 发布产物和源码变更漂移
 - 新增：文档统计一致性校验脚本
   - `validate:data` 现在会检查 README、README_CN、ROADMAP 的实体规模、参考资料口径和版本号
   - 防止数据规模更新后文档统计再次漂移

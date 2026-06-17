@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "npm run lint && npm run type-check && npm run validate:data && npm run test && npm run build-only && npm run audit:bundle:check",
+    "build": "npm run lint && npm run type-check && npm run validate:data && npm run test && npm run build-only && npm run audit:bundle:check && npm run validate:docs-build",
     "preview": "vite preview",
     "build-only": "vite build",
     "analyze": "ANALYZE=1 vite build",
@@ -16,6 +16,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "validate:data": "node scripts/validate/schema.mjs && node scripts/validate/i18n-sync.mjs --strict && node scripts/validate/keywords.mjs && node scripts/validate/check-entity-relations.mjs && node scripts/validate/relations.mjs && node scripts/validate/business-scenes.mjs && node scripts/validate/require-references.mjs && node scripts/validate/docs-consistency.mjs",
+    "validate:docs-build": "node scripts/validate/docs-build-sync.mjs",
     "audit:keywords": "node scripts/validate/keywords.mjs",
     "fix:keywords": "node scripts/validate/keywords.mjs --write",
     "list:keyword-batches": "node scripts/validate/keyword-batches.mjs",
