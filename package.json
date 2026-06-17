@@ -15,7 +15,7 @@
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "validate:data": "node scripts/validate/schema.mjs && node scripts/validate/i18n-sync.mjs --strict && node scripts/validate/keywords.mjs && node scripts/validate/check-entity-relations.mjs && node scripts/validate/relations.mjs && node scripts/validate/business-scenes.mjs && node scripts/validate/require-references.mjs",
+    "validate:data": "node scripts/validate/schema.mjs && node scripts/validate/i18n-sync.mjs --strict && node scripts/validate/keywords.mjs && node scripts/validate/check-entity-relations.mjs && node scripts/validate/relations.mjs && node scripts/validate/business-scenes.mjs && node scripts/validate/require-references.mjs && node scripts/validate/docs-consistency.mjs",
     "audit:keywords": "node scripts/validate/keywords.mjs",
     "fix:keywords": "node scripts/validate/keywords.mjs --write",
     "list:keyword-batches": "node scripts/validate/keyword-batches.mjs",
