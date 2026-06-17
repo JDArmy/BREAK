@@ -83,8 +83,16 @@ export interface GraphNode {
 export interface GraphLink {
   source: string;
   target: string;
+  sourceTitle: string;
+  targetTitle: string;
+  sourceTypeTitle: string;
+  targetTypeTitle: string;
+  sourceDisplay: string;
+  targetDisplay: string;
   text: string;
   sourceFields: string[];
+  explanation: RelationExplanation;
+  evidenceLabel: string;
   lineStyle: {
     color: string;
     opacity: number;

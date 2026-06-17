@@ -9,6 +9,7 @@ import { useRelationGraphData } from "@/views/relation/useRelationGraphData";
 import { useRelationNodeActions } from "@/views/relation/useRelationNodeActions";
 import type {
   createRelationTypeMapping,
+  GraphLink,
   graphColors,
   relationLineColors,
   SankeyNode,
@@ -36,6 +37,7 @@ interface CreateRelationViewAssemblyOptions {
   networkInteractionsBridge: {
     handleNodeTouch: (node: unknown) => void;
     openNodeDetail: (node: unknown) => void;
+    openRelationDetail: (link: unknown) => void;
     nodeClick: (node: unknown, event: MouseEvent) => void;
   };
 }
@@ -139,6 +141,9 @@ export const createRelationViewAssembly = ({
     wrapLabelText: graphData.wrapLabelText,
     getGraphColor,
     getRelationSourceFields,
+    explainRelation: graphData.explainRelation,
+    formatEvidenceLevel: graphData.formatEvidenceLevel,
+    getNodeTypeTitle: graphData.getNodeTypeTitle,
   });
 
   const nodeActions = useRelationNodeActions({
@@ -218,12 +223,20 @@ export const createRelationViewAssembly = ({
   });
   renderNetworkChartBridge.current = networkController.renderNetworkChart;
 
+  const selectedNetworkRelationDetail = ref<GraphLink | null>(null);
+  const closeNetworkRelationDetail = () => {
+    selectedNetworkRelationDetail.value = null;
+  };
+
   networkInteractionsBridge.handleNodeTouch = (node) =>
     nodeActions.handleNodeTouch(node as ReturnType<typeof toContextNode>);
   networkInteractionsBridge.openNodeDetail = (node) =>
     nodeActions.focusNodeInDrawer(
       (node as ReturnType<typeof toContextNode>).id
     );
+  networkInteractionsBridge.openRelationDetail = (link) => {
+    selectedNetworkRelationDetail.value = link as GraphLink;
+  };
   networkInteractionsBridge.nodeClick = (node, event) =>
     nodeActions.nodeClick(node as ReturnType<typeof toContextNode>, event);
   setClearDraggedNodePositions(clearDraggedNodePositions);
@@ -264,6 +277,7 @@ export const createRelationViewAssembly = ({
     ...nodeActions,
     ...sankeyController,
     activeView,
+    closeNetworkRelationDetail,
     dropdown1,
     setDropdownInstance,
     setRelationPageElement,
@@ -271,6 +285,7 @@ export const createRelationViewAssembly = ({
     networkLayoutTooltip,
     networkState,
     refreshNetworkChart,
+    selectedNetworkRelationDetail,
     relKey,
     relType,
     sankeyChartMinWidth,

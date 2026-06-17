@@ -22,8 +22,33 @@ interface UseRelationGraphDataOptions {
   relType: Ref<RelationType>;
   relKey: Ref<string>;
   RelationTypeMapping: ReturnType<typeof createRelationTypeMapping>;
-  getGraphColor: (key: "background" | "line" | "lineText" | "nodeText" | "nodeBorder" | "subNodeFill" | "subNodeBorder" | "selectedNodeBorder" | "selectedNodeGlow") => string;
-  getRelationLineColor: (key: "avoidanceMeans" | "directCauseRisk" | "indirectSupportRisk" | "buildAttackTool" | "useAttackTool" | "causeRisk" | "relatedTerm" | "subRisk" | "subAvoidance" | "subAttackTool" | "subThreatActor" | "attackToolMaker") => string;
+  getGraphColor: (
+    key:
+      | "background"
+      | "line"
+      | "lineText"
+      | "nodeText"
+      | "nodeBorder"
+      | "subNodeFill"
+      | "subNodeBorder"
+      | "selectedNodeBorder"
+      | "selectedNodeGlow"
+  ) => string;
+  getRelationLineColor: (
+    key:
+      | "avoidanceMeans"
+      | "directCauseRisk"
+      | "indirectSupportRisk"
+      | "buildAttackTool"
+      | "useAttackTool"
+      | "causeRisk"
+      | "relatedTerm"
+      | "subRisk"
+      | "subAvoidance"
+      | "subAttackTool"
+      | "subThreatActor"
+      | "attackToolMaker"
+  ) => string;
   renderNetworkChart: (notMerge?: boolean) => void;
 }
 
@@ -60,7 +85,10 @@ export const useRelationGraphData = ({
     {
       color: getRelationLineColor("indirectSupportRisk"),
       label: t("relationLine.indirectSupportRisk"),
-      fields: ["AttackTool.indirectSupportRisks", "ThreatActor.indirectSupportRisks"],
+      fields: [
+        "AttackTool.indirectSupportRisks",
+        "ThreatActor.indirectSupportRisks",
+      ],
     },
     {
       color: getRelationLineColor("buildAttackTool"),
@@ -75,7 +103,11 @@ export const useRelationGraphData = ({
     {
       color: getRelationLineColor("causeRisk"),
       label: t("relationLine.causeRisk"),
-      fields: ["AttackTool.directCauseRisks", "AttackTool.indirectSupportRisks", "ThreatActor.directCauseRisks"],
+      fields: [
+        "AttackTool.directCauseRisks",
+        "AttackTool.indirectSupportRisks",
+        "ThreatActor.directCauseRisks",
+      ],
     },
     {
       color: getRelationLineColor("relatedTerm"),
@@ -87,11 +119,31 @@ export const useRelationGraphData = ({
         "Term.relatedThreatActors",
       ],
     },
-    { color: getRelationLineColor("subRisk"), label: t("relationLine.subRisk"), fields: ["Risk child ID"] },
-    { color: getRelationLineColor("subAvoidance"), label: t("relationLine.subAvoidance"), fields: ["Avoidance child ID"] },
-    { color: getRelationLineColor("subAttackTool"), label: t("relationLine.subAttackTool"), fields: ["AttackTool child ID"] },
-    { color: getRelationLineColor("subThreatActor"), label: t("relationLine.subThreatActor"), fields: ["ThreatActor child ID"] },
-    { color: getRelationLineColor("attackToolMaker"), label: t("relationLine.attackToolMaker"), fields: ["ThreatActor.buildAttackTools"] },
+    {
+      color: getRelationLineColor("subRisk"),
+      label: t("relationLine.subRisk"),
+      fields: ["Risk child ID"],
+    },
+    {
+      color: getRelationLineColor("subAvoidance"),
+      label: t("relationLine.subAvoidance"),
+      fields: ["Avoidance child ID"],
+    },
+    {
+      color: getRelationLineColor("subAttackTool"),
+      label: t("relationLine.subAttackTool"),
+      fields: ["AttackTool child ID"],
+    },
+    {
+      color: getRelationLineColor("subThreatActor"),
+      label: t("relationLine.subThreatActor"),
+      fields: ["ThreatActor child ID"],
+    },
+    {
+      color: getRelationLineColor("attackToolMaker"),
+      label: t("relationLine.attackToolMaker"),
+      fields: ["ThreatActor.buildAttackTools"],
+    },
   ]);
 
   const relationTypeItems = computed(() =>
@@ -105,30 +157,48 @@ export const useRelationGraphData = ({
   const subNodeFilterColor = computed(() => getGraphColor("subNodeFill"));
 
   const getBreakKey = (type: RelationType) =>
-    RelationTypeMapping[type as keyof typeof RelationTypeMapping].BreakKey as keyof typeof BREAK;
+    RelationTypeMapping[type as keyof typeof RelationTypeMapping]
+      .BreakKey as keyof typeof BREAK;
 
-  const getCurrentEntityOptions = computed(() => BREAK[getBreakKey(relType.value)] as Record<string, unknown>);
+  const getCurrentEntityOptions = computed(
+    () => BREAK[getBreakKey(relType.value)] as Record<string, unknown>
+  );
 
-  const getEntityTitle = (type: Exclude<RelationType, RelationType.all>, key: string) => {
+  const getEntityTitle = (
+    type: Exclude<RelationType, RelationType.all>,
+    key: string
+  ) => {
     const breakKey = RelationTypeMapping[type].BreakKey;
     return t(`BREAK.${breakKey}.${key}.title`);
   };
 
-  const getNodeLabel = (type: Exclude<RelationType, RelationType.all>, key: string) =>
-    `${key} ${getEntityTitle(type, key)}`;
+  const getNodeLabel = (
+    type: Exclude<RelationType, RelationType.all>,
+    key: string
+  ) => `${key} ${getEntityTitle(type, key)}`;
 
-  const getSankeyNodeName = (type: Exclude<RelationType, RelationType.all>, key: string) =>
-    `${RelationTypeMapping[type].title}: ${getNodeLabel(type, key)}`;
+  const getSankeyNodeName = (
+    type: Exclude<RelationType, RelationType.all>,
+    key: string
+  ) => `${RelationTypeMapping[type].title}: ${getNodeLabel(type, key)}`;
 
-  const getNodeTitle = (type: Exclude<RelationType, RelationType.all>, key: string) => {
+  const getNodeTitle = (
+    type: Exclude<RelationType, RelationType.all>,
+    key: string
+  ) => {
     const breakKey = RelationTypeMapping[type].BreakKey;
     return t(`BREAK.${breakKey}.${key}.title`);
   };
 
-  const getGraphNodeText = (type: Exclude<RelationType, RelationType.all>, key: string) =>
-    `${key}\n${getNodeTitle(type, key)}`;
+  const getGraphNodeText = (
+    type: Exclude<RelationType, RelationType.all>,
+    key: string
+  ) => `${key}\n${getNodeTitle(type, key)}`;
 
-  const ensureRelationNode = (type: Exclude<RelationType, RelationType.all>, key: string) => {
+  const ensureRelationNode = (
+    type: Exclude<RelationType, RelationType.all>,
+    key: string
+  ) => {
     const existingNode = nodes.find((node) => node.id === key);
     if (existingNode) return existingNode;
 
@@ -150,7 +220,8 @@ export const useRelationGraphData = ({
       .replace(/"/g, "&quot;")
       .replace(/'/g, "&#39;");
 
-  const formatRelationFieldsTooltip = (fields: string[]) => fields.map((field) => escapeTooltipHtml(field)).join("<br>");
+  const formatRelationFieldsTooltip = (fields: string[]) =>
+    fields.map((field) => escapeTooltipHtml(field)).join("<br>");
 
   const getNodeTypeTitle = (type: string) =>
     isRelationEntityType(type) ? RelationTypeMapping[type].title : type;
@@ -279,8 +350,10 @@ export const useRelationGraphData = ({
     });
   };
 
-  const isPathNodeCurrentSelection = (nodeId: string) => selectedNetworkNodeId.value === nodeId;
-  const isRelationOnSelectedPath = (relationKey: string) => selectedNodePathRelationKeys.value.has(relationKey);
+  const isPathNodeCurrentSelection = (nodeId: string) =>
+    selectedNetworkNodeId.value === nodeId;
+  const isRelationOnSelectedPath = (relationKey: string) =>
+    selectedNodePathRelationKeys.value.has(relationKey);
 
   return {
     addRootNode,
@@ -291,7 +364,9 @@ export const useRelationGraphData = ({
     filterRelationType,
     filterSubNode,
     ensureRelationNode,
+    explainRelation,
     findNodeById,
+    formatEvidenceLevel,
     formatRelationFieldsTooltip,
     genNetworkGraphData,
     getCurrentEntityOptions,

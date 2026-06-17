@@ -5,13 +5,20 @@ import RelationGraphTouchActions from "@/components/relation/RelationGraphTouchA
 import RelationSankeyPane from "@/components/relation/RelationSankeyPane.vue";
 import RelationSelectorBar from "@/components/relation/RelationSelectorBar.vue";
 import { useRelationViewModel } from "@/views/relation/useRelationViewModel";
-import { loadNetworkECharts, loadSankeyECharts } from "@/views/relation/relationECharts";
+import {
+  loadNetworkECharts,
+  loadSankeyECharts,
+} from "@/views/relation/relationECharts";
 import "element-plus/es/components/drawer/style/css";
 
-const loadRelationNetworkPane = () => import("@/components/relation/RelationNetworkPane.vue");
-const loadRelationNodeDetailDrawer = () => import("@/components/relation/RelationNodeDetailDrawer.vue");
+const loadRelationNetworkPane = () =>
+  import("@/components/relation/RelationNetworkPane.vue");
+const loadRelationNodeDetailDrawer = () =>
+  import("@/components/relation/RelationNodeDetailDrawer.vue");
 const RelationNetworkPane = defineAsyncComponent(loadRelationNetworkPane);
-const RelationNodeDetailDrawer = defineAsyncComponent(loadRelationNodeDetailDrawer);
+const RelationNodeDetailDrawer = defineAsyncComponent(
+  loadRelationNodeDetailDrawer
+);
 
 export default defineComponent({
   name: "RelationView",
@@ -60,7 +67,11 @@ export default defineComponent({
     />
 
     <el-tabs v-model="activeView" class="relation-tabs">
-      <el-tab-pane :label="$t('relationView.network')" name="network" :lazy="activeView !== 'network'">
+      <el-tab-pane
+        :label="$t('relationView.network')"
+        name="network"
+        :lazy="activeView !== 'network'"
+      >
         <RelationNetworkPane
           :set-network-pane-element="setNetworkPaneElement"
           :set-network-scroller-element="setNetworkScrollerElement"
@@ -77,6 +88,7 @@ export default defineComponent({
           :sub-node-filter-color="subNodeFilterColor"
           :visible-relation-legend-items="visibleRelationLegendItems"
           :format-relation-fields-tooltip="formatRelationFieldsTooltip"
+          :selected-relation-detail="selectedNetworkRelationDetail"
           @fullscreen="enterFullscreen"
           @zoom-in="zoomNetworkChart(0.08)"
           @zoom-out="zoomNetworkChart(-0.08)"
@@ -92,9 +104,14 @@ export default defineComponent({
           @update:filter-sub-node="filterSubNode = $event"
           @update:filter-line-type="filterLineType = $event"
           @filter="doFilter"
+          @close-relation-detail="closeNetworkRelationDetail"
         />
       </el-tab-pane>
-      <el-tab-pane :label="$t('relationView.attackPath')" name="sankey" :lazy="activeView !== 'sankey'">
+      <el-tab-pane
+        :label="$t('relationView.attackPath')"
+        name="sankey"
+        :lazy="activeView !== 'sankey'"
+      >
         <RelationSankeyPane
           :active="activeView === 'sankey'"
           :has-data="sankeyHasData"
@@ -142,7 +159,9 @@ export default defineComponent({
       :selected-node-root-path="selectedNodeRootPath"
       :selected-node-attack-path-summary="selectedNodeAttackPathSummary"
       :selected-node-attack-path-description="selectedNodeAttackPathDescription"
-      :selected-node-attack-path-explanations="selectedNodeAttackPathExplanations"
+      :selected-node-attack-path-explanations="
+        selectedNodeAttackPathExplanations
+      "
       :selected-node-root-preview="selectedNodeRootPreview"
       :selected-network-relations="selectedNetworkRelations"
       :rel-key="relKey"

@@ -1,15 +1,36 @@
 import { describe, expect, it } from "vitest";
 import { ref } from "vue";
 import { createNetworkDataHelpers } from "../relationNetworkLayout";
-import { RelationType, type Line, type NetworkLayoutMode, type Node } from "../relationTypes";
+import {
+  RelationType,
+  type Line,
+  type NetworkLayoutMode,
+  type Node,
+} from "../relationTypes";
 
 describe("relationNetworkLayout", () => {
   const nodes: Node[] = [
     { id: "ROOT", type: RelationType.risk, text: "Root<br/>Risk", color: "" },
-    { id: "TOOL", type: RelationType.attackTool, text: "AttackTool", color: "" },
-    { id: "ACTOR", type: RelationType.threatActor, text: "ThreatActor", color: "" },
+    {
+      id: "TOOL",
+      type: RelationType.attackTool,
+      text: "AttackTool",
+      color: "",
+    },
+    {
+      id: "ACTOR",
+      type: RelationType.threatActor,
+      text: "ThreatActor",
+      color: "",
+    },
     { id: "AVOID", type: RelationType.avoidance, text: "Avoidance", color: "" },
-    { id: "TERM", type: RelationType.term, text: "Term", color: "", data: { isSubNode: true } },
+    {
+      id: "TERM",
+      type: RelationType.term,
+      text: "Term",
+      color: "",
+      data: { isSubNode: true },
+    },
   ];
   const lines: Line[] = [
     { from: "ROOT", text: "规避手段", to: "AVOID" },
@@ -33,15 +54,24 @@ describe("relationNetworkLayout", () => {
       lines,
       relKey: ref("ROOT"),
       selectedNetworkNodeId: ref(options?.selectedNetworkNodeId ?? ""),
-      filterRelationType: ref(options?.filterRelationType ?? [
-        RelationType.risk,
-        RelationType.avoidance,
-        RelationType.attackTool,
-        RelationType.threatActor,
-        RelationType.term,
-      ]),
+      filterRelationType: ref(
+        options?.filterRelationType ?? [
+          RelationType.risk,
+          RelationType.avoidance,
+          RelationType.attackTool,
+          RelationType.threatActor,
+          RelationType.term,
+        ]
+      ),
       filterSubNode: ref(options?.filterSubNode ?? true),
-      filterLineType: ref(options?.filterLineType ?? ["规避手段", "攻击工具", "使用攻击工具", "关联术语"]),
+      filterLineType: ref(
+        options?.filterLineType ?? [
+          "规避手段",
+          "攻击工具",
+          "使用攻击工具",
+          "关联术语",
+        ]
+      ),
       draggedNodePositions: ref(options?.draggedNodePositions ?? {}),
       networkState: { layout: options?.layout ?? "horizontal" },
       relationLegendItems: ref([
@@ -54,11 +84,29 @@ describe("relationNetworkLayout", () => {
       getRelationTypeColor: (type) => `color:${type}`,
       wrapLabelText: (text, maxLineLength) => `${text}|${maxLineLength}`,
       getGraphColor: (key) => `graph:${key}`,
-      getRelationSourceFields: (line, fromType, toType) => [`${fromType}->${toType}:${line.text}`],
+      getRelationSourceFields: (line, fromType, toType) => [
+        `${fromType}->${toType}:${line.text}`,
+      ],
+      explainRelation: (line, fromType, toType) => ({
+        relationKey: `${line.from}::${line.text}::${line.to}`,
+        fromId: line.from,
+        toId: line.to,
+        relationType: line.text,
+        sourceFields: [`${fromType}->${toType}:${line.text}`],
+        evidenceLevel: "direct",
+        explanation: `explain:${line.text}`,
+        impactHint: `impact:${line.text}`,
+        qualityFlags: [],
+      }),
+      formatEvidenceLevel: (level) => `evidence:${level}`,
+      getNodeTypeTitle: (type) => `type:${type}`,
     });
 
   it("deduplicates links, normalizes node labels, and applies selection styling in complex visible data", () => {
-    const helpers = createHelpers({ selectedNetworkNodeId: "TOOL", layout: "split" });
+    const helpers = createHelpers({
+      selectedNetworkNodeId: "TOOL",
+      layout: "split",
+    });
     const visibleData = helpers.getVisibleNetworkData();
 
     expect(visibleData.nodes).toHaveLength(5);
@@ -69,14 +117,23 @@ describe("relationNetworkLayout", () => {
           source: "ROOT",
           target: "TOOL",
           text: "攻击工具",
+          sourceDisplay: "type:risk: Root Risk",
+          targetDisplay: "type:attack-tool: AttackTool",
           sourceFields: ["risk->attack-tool:攻击工具"],
+          evidenceLabel: "evidence:direct",
+          explanation: expect.objectContaining({
+            explanation: "explain:攻击工具",
+            impactHint: "impact:攻击工具",
+          }),
           lineStyle: expect.objectContaining({ color: "#b", opacity: 0.52 }),
         }),
       ])
     );
 
     const rootNode = visibleData.nodes.find((node) => node.id === "ROOT");
-    expect(rootNode).toEqual(expect.objectContaining({ text: "Root\nRisk", fixed: true, x: 0, y: 0 }));
+    expect(rootNode).toEqual(
+      expect.objectContaining({ text: "Root\nRisk", fixed: true, x: 0, y: 0 })
+    );
 
     const selectedTool = visibleData.nodes.find((node) => node.id === "TOOL");
     expect(selectedTool).toEqual(
@@ -94,13 +151,21 @@ describe("relationNetworkLayout", () => {
 
   it("filters relation types, sub nodes, and line types consistently", () => {
     const helpers = createHelpers({
-      filterRelationType: [RelationType.risk, RelationType.attackTool, RelationType.avoidance],
+      filterRelationType: [
+        RelationType.risk,
+        RelationType.attackTool,
+        RelationType.avoidance,
+      ],
       filterSubNode: false,
       filterLineType: ["攻击工具"],
     });
     const visibleData = helpers.getVisibleNetworkData();
 
-    expect(visibleData.nodes.map((node) => node.id).sort()).toEqual(["AVOID", "ROOT", "TOOL"]);
+    expect(visibleData.nodes.map((node) => node.id).sort()).toEqual([
+      "AVOID",
+      "ROOT",
+      "TOOL",
+    ]);
     expect(visibleData.links).toEqual([
       expect.objectContaining({
         source: "ROOT",
@@ -131,12 +196,17 @@ describe("relationNetworkLayout", () => {
         }),
       })
     );
-    expect(visibleData.links.find((link) => link.text === "关联术语")?.lineStyle.opacity).toBe(0.42);
+    expect(
+      visibleData.links.find((link) => link.text === "关联术语")?.lineStyle
+        .opacity
+    ).toBe(0.42);
   });
 
   it("converts rendered graph nodes back to context-menu nodes", () => {
     const helpers = createHelpers({ selectedNetworkNodeId: "ROOT" });
-    const graphNode = helpers.getVisibleNetworkData().nodes.find((node) => node.id === "ROOT");
+    const graphNode = helpers
+      .getVisibleNetworkData()
+      .nodes.find((node) => node.id === "ROOT");
 
     expect(graphNode).toBeDefined();
     expect(helpers.toContextNode(graphNode!)).toEqual({

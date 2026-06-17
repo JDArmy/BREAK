@@ -3,7 +3,44 @@
 > 文档版本：1.0  
 > 制定日期：2026-06-17  
 > 适用范围：关系图谱、攻击路径、节点详情、关系解释、分析视角、质量治理视图  
-> 当前阶段：专项规划，等待拆分实施任务
+> 当前阶段：P1 关系解释和攻击路径解释已基本落地，P2/P3 后续能力继续推进
+
+## 0. 当前实施状态
+
+> 状态更新时间：2026-06-17
+> 对应提交：`15375b8 Improve relation drawer path explainability`
+
+### 0.1 阶段状态
+
+| 阶段 | 状态 | 当前结论 |
+|------|------|----------|
+| Phase 0：基线确认 | 部分完成 | 已完成关系页数据链路梳理和问题识别，但未沉淀独立的验收样本清单和截图基线文档 |
+| Phase 1：关系解释核心 | 基本完成 | 已新增 `relationExplanation.ts`，关系摘要具备来源字段、证据级别、解释、影响提示和质量标记；节点关系列表已支持解释展示和筛选 |
+| Phase 2：攻击路径解释 | 基本完成 | Sankey 路径已保留解释对象，抽屉内支持路径组合筛选、逐段来源字段、攻击意图、防御意义和缺规避提示 |
+| Phase 3：节点摘要与防御覆盖 | 部分完成 | 已有攻击路径角色、根节点路径和上下文预览；尚未完成各实体类型固定的“为什么重要”摘要和独立防御覆盖分析 |
+| Phase 4：分析视角与质量治理 | 未开始 | 尚未增加任务型视角切换，也未将审计报告接入前端治理视图 |
+| Phase 5：业务场景图谱 | 未开始 | 尚未实现 BusinessScene / RiskScene 出发的解释型关系图谱 |
+
+### 0.2 已落地能力
+
+- 关系解释派生结构：已支持 `sourceFields`、`evidenceLevel`、`explanation`、`impactHint`、`qualityFlags`。
+- 节点抽屉关系列表：已支持方向、关系类型、直接性筛选，筛选项会随组合动态收窄。
+- 攻击路径解释：已支持 ThreatActor / AttackTool / Risk / Avoidance 组合筛选和路径详情摘要。
+- 攻击路径逐段解释：已展示来源字段、攻击意图、防御意义、推荐处置和缺规避质量提示。
+- 抽屉复用：关系网络和 Sankey 节点详情已收敛到同一个 `RelationNodeDetailDrawer`。
+- 交互质量：已处理路径筛选下拉、无效筛选项、tooltip 延时与层级、ID/标题展示、重复分隔线等问题。
+- 中英文文案：本轮新增关系解释和攻击路径解释文案已同步维护。
+- 测试覆盖：`relationAttackPath`、`relationExplanation`、`relationGraphInsights`、`relationNetworkLayout` 相关测试已通过。
+
+### 0.3 尚未完成能力
+
+- 独立的 Risk / Avoidance 防御覆盖分析模块。
+- 每类实体固定的“为什么重要”摘要，包括高关联、低覆盖、路径中间层等提示。
+- 质量治理前端视图，包括弱关系、缺覆盖、场景异常、待复核关系的列表和图谱定位。
+- 任务型分析视角切换，包括风险视角、攻击者视角、防御视角和薄弱关系视角。
+- BusinessScene / RiskScene 出发的业务场景图谱。
+- 前端可消费的维护报告 JSON。
+- `relationCoverageAnalysis.test.ts` 和 `relationBusinessSceneGraph.test.ts`。
 
 ## 1. 背景与目标
 
@@ -391,7 +428,7 @@ interface AttackPathStepExplanation {
 
 ## 8. 实施阶段
 
-### Phase 0：基线确认，1-2 天
+### Phase 0：基线确认，1-2 天（部分完成）
 
 任务：
 
@@ -416,7 +453,7 @@ interface AttackPathStepExplanation {
 - 验收样本清单
 - 当前问题截图或记录
 
-### Phase 1：关系解释核心，3-5 天
+### Phase 1：关系解释核心，3-5 天（基本完成）
 
 任务：
 
@@ -431,7 +468,7 @@ interface AttackPathStepExplanation {
 - 关系来源字段完整显示
 - 单元测试通过
 
-### Phase 2：攻击路径解释，5-8 天
+### Phase 2：攻击路径解释，5-8 天（基本完成）
 
 任务：
 
@@ -447,7 +484,7 @@ interface AttackPathStepExplanation {
 - 可解释路径成立依据
 - 可定位阻断点和覆盖缺口
 
-### Phase 3：节点摘要与防御覆盖，4-6 天
+### Phase 3：节点摘要与防御覆盖，4-6 天（部分完成）
 
 任务：
 
@@ -462,7 +499,7 @@ interface AttackPathStepExplanation {
 - 风险和规避的覆盖关系清晰可见
 - 覆盖缺口可被维护者识别
 
-### Phase 4：分析视角与质量治理，6-10 天
+### Phase 4：分析视角与质量治理，6-10 天（未开始）
 
 任务：
 
@@ -477,7 +514,7 @@ interface AttackPathStepExplanation {
 - 审计报告能驱动可视化治理
 - 维护者可以从问题列表定位到实体和关系
 
-### Phase 5：业务场景图谱，5-8 天
+### Phase 5：业务场景图谱，5-8 天（未开始）
 
 任务：
 
@@ -654,16 +691,26 @@ interface AttackPathStepExplanation {
 
 建议从下面 10 个任务开始：
 
-1. 梳理所有关系类型和来源字段，生成关系解释覆盖清单。
-2. 新增 `relationExplanation.ts`，统一生成边解释。
-3. 改造节点详情关系列表，显示来源字段和解释。
-4. 改造 Sankey 数据结构，保留完整路径对象。
-5. 新增路径详情面板，展示逐段解释。
-6. 为 Risk 节点生成规避覆盖摘要。
-7. 为 AttackTool 节点生成直接/间接风险摘要。
-8. 为 ThreatActor 节点生成使用/制作工具摘要。
-9. 将弱关系和缺覆盖问题整理为前端可消费 JSON。
-10. 补齐 relation explanation、attack path explanation、coverage analysis 单元测试。
+1. [部分完成] 梳理所有关系类型和来源字段，生成关系解释覆盖清单。
+
+   当前关系解释已覆盖主要来源字段，但尚未形成独立覆盖清单文档。
+2. [已完成] 新增 `relationExplanation.ts`，统一生成边解释。
+3. [已完成] 改造节点详情关系列表，显示来源字段和解释。
+4. [已完成] 改造 Sankey 数据结构，保留完整路径对象。
+5. [已完成] 新增路径详情面板，展示逐段解释。
+6. [部分完成] 为 Risk 节点生成规避覆盖摘要。
+
+   攻击路径内已体现规避候选和缺规避提示，但尚未形成独立 Risk 覆盖分析模块。
+7. [部分完成] 为 AttackTool 节点生成直接/间接风险摘要。
+
+   关系解释和攻击路径内已体现工具到风险关系，但尚未形成固定节点摘要区块。
+8. [部分完成] 为 ThreatActor 节点生成使用/制作工具摘要。
+
+   攻击路径内已体现威胁行为者到工具关系，但尚未形成固定节点摘要区块。
+9. [未开始] 将弱关系和缺覆盖问题整理为前端可消费 JSON。
+10. [部分完成] 补齐 relation explanation、attack path explanation、coverage analysis 单元测试。
+
+    已覆盖 relation explanation 和 attack path；coverage analysis 测试尚未新增。
 
 ## 16. 结论
 

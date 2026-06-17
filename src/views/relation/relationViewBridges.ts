@@ -8,13 +8,14 @@ export const createRenderNetworkChartBridge = () => ({
 export const createNetworkInteractionsBridge = <TContextNode>() => ({
   handleNodeTouch: (() => {}) as (node: TContextNode) => void,
   openNodeDetail: (() => {}) as (node: TContextNode) => void,
+  openRelationDetail: (() => {}) as (link: unknown) => void,
   nodeClick: (() => {}) as (node: TContextNode, event: MouseEvent) => void,
 });
 
 export const createRelationDropdownRef = () => ref<DropdownInstance>();
 
-export const createRelationDropdownBinder = (dropdownRef: ReturnType<typeof createRelationDropdownRef>) => (
-  instance: DropdownInstance | undefined
-) => {
-  dropdownRef.value = instance;
-};
+export const createRelationDropdownBinder =
+  (dropdownRef: ReturnType<typeof createRelationDropdownRef>) =>
+  (instance: DropdownInstance | undefined) => {
+    dropdownRef.value = instance;
+  };

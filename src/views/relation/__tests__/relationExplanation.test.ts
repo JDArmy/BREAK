@@ -41,7 +41,10 @@ describe("relationExplanation", () => {
       expect.objectContaining({
         evidenceLevel: "review",
         sourceFields: [],
-        qualityFlags: ["relationView.qualityFlagMissingSource", "relationView.qualityFlagReview"],
+        qualityFlags: [
+          "relationView.qualityFlagMissingSource",
+          "relationView.qualityFlagReview",
+        ],
       })
     );
   });
@@ -60,5 +63,35 @@ describe("relationExplanation", () => {
         explanation: "relationView.relationExplanation.riskAvoidance",
       })
     );
+  });
+
+  it("keeps explanation coverage for every configured relation line", () => {
+    const coverage = helpers.relationExplanationCoverage;
+
+    expect(coverage.map((item) => item.relationKey)).toEqual([
+      "relationLine.avoidanceMeans",
+      "relationLine.directCauseRisk",
+      "relationLine.indirectSupportRisk",
+      "relationLine.buildAttackTool",
+      "relationLine.useAttackTool",
+      "relationLine.causeRisk",
+      "relationLine.relatedTerm",
+      "relationLine.subRisk",
+      "relationLine.subAvoidance",
+      "relationLine.subAttackTool",
+      "relationLine.subThreatActor",
+      "relationLine.attackToolMaker",
+    ]);
+
+    coverage.forEach((item) => {
+      expect(item.explanationKey).toMatch(
+        /^relationView\.relationExplanation\./
+      );
+      expect(item.impactKey).toMatch(/^relationView\.relationImpact\./);
+      expect(item.sourceFields.length).toBeGreaterThan(0);
+      expect(["direct", "indirect", "inferred", "review"]).toContain(
+        item.evidenceLevel
+      );
+    });
   });
 });
