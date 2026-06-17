@@ -4,6 +4,9 @@
     "definition": "The use of decentralized identity technologies such as DID to achieve identity verification without relying on centralized authorities.",
     "description": "DID scheme: W3C DID standard; on-chain identity anchoring; verifiable credentials; selective disclosure; self-sovereign identity; cross-platform interoperability.",
     "complexity": "Advanced",
-    "limitation": "Immature ecosystem; poor user experience; low regulatory acceptance."
+    "limitation": "Immature ecosystem; poor user experience; low regulatory acceptance.",
+    "keywords": [
+      "Decentralized On-Chain Identity Verification"
+    ]
   }
 }

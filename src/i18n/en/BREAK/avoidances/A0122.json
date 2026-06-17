@@ -4,6 +4,9 @@
     "definition": "Conduct third-party code audits before project launch and publicly verify the contract source code on blockchain explorers.",
     "description": "Reduce rug pull risks through transparency and professional review. Implementation points: Engage reputable auditing firms (e.g., CertiK, Quantstamp) to perform comprehensive code audits and publicly release audit reports; verify and publish contract source code on blockchain explorers such as Etherscan, allowing investors to inspect it; focus on checking for hidden mint functions, transaction pause functions, owner privileges, liquidity withdrawal backdoors, and other common rug pull techniques; examine upgrade permissions of proxy contracts to ensure they cannot be maliciously replaced; audited code should not be modified thereafter, and if modifications are required, a re-audit is necessary. Platforms like Coinbase recommend that investors prioritize projects that have undergone auditing.",
     "complexity": "Intermediate",
-    "limitation": "Audits cannot guarantee the discovery of all vulnerabilities and are costly (ranging from tens of thousands to hundreds of thousands of dollars); audit reports may be falsified or taken out of context; even audited projects may still conduct rug pulls through other means (e.g., social engineering); open-source code does not equate to security."
+    "limitation": "Audits cannot guarantee the discovery of all vulnerabilities and are costly (ranging from tens of thousands to hundreds of thousands of dollars); audit reports may be falsified or taken out of context; even audited projects may still conduct rug pulls through other means (e.g., social engineering); open-source code does not equate to security.",
+    "keywords": [
+      "Smart Contract Code Auditing and Public Verification"
+    ]
   }
 }

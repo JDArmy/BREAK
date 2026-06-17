@@ -1,24 +1,23 @@
 {
   "TA0048": {
     "title": "IoT Botnet Operators",
-    "description": "通过漏洞利用、默认凭据爆破、固件后门和恶意软件感染控制大量物联网设备的攻击者。其目标包括DDoS、代理转发、挖矿、横向移动、数据篡改和设备勒索，也可能利用工业、医疗或车联网设备造成物理世界影响。",
+    "description": "Attackers who control large numbers of IoT devices through vulnerability exploitation, default-credential attacks, firmware backdoors, and malware infection. Their goals include DDoS, proxy forwarding, mining, lateral movement, data tampering, and device extortion, and they may also use industrial, medical, or connected-vehicle devices to create physical-world impact.",
     "references": [
       {
-        "title": "Mirai Botnet source code"
+        "title": "Mirai Botnet source code",
+        "link": "https://github.com/jgamblin/Mirai-Source-Code"
       },
       {
-        "title": "CISA Securing IoT Devices"
+        "title": "CISA Securing IoT Devices",
+        "link": "https://www.cisa.gov/resources-tools/resources/securing-internet-things-iot-devices"
       },
       {
-        "title": "ENISA Baseline Security Recommendations for IoT"
+        "title": "ENISA Baseline Security Recommendations for IoT",
+        "link": "https://www.enisa.europa.eu/publications/baseline-security-recommendations-for-iot"
       }
     ],
     "keywords": [
-      "IoT Botnet Operators",
-      "物联网攻击者",
-      "Mirai运营者",
-      "设备劫持团伙",
-      "IoT恶意软件运营者"
+      "IoT Botnet Operators"
     ]
   }
 }

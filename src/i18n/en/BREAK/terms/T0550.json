@@ -1,17 +1,18 @@
 {
   "T0550": {
-    "title": "数据分类分级",
+    "title": "Data Classification and Grading",
     "keywords": [
-      "数据分类分级",
-      "T0550"
+      "Data Classification and Grading"
     ],
-    "definition": "数据分类分级 is a key business security concept.",
-    "description": "数据分类分级 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 数据分类分级 related risks and controls.",
+    "definition": "A governance practice that categorizes data by sensitivity, business value, and required protection level.",
+    "description": "Data Classification and Grading is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Data Classification and Grading related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

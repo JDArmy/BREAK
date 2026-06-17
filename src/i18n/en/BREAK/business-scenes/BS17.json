@@ -5,14 +5,56 @@
     "riskDimensions": {
       "RD07": {
         "title": "Metaverse Security"
+      },
+      "RD02": {
+        "title": "Operations Dimension"
+      },
+      "RD03": {
+        "title": "Identity Dimension"
+      },
+      "RD04": {
+        "title": "Adversarial Dimension"
+      },
+      "RD06": {
+        "title": "Blockchain and Virtual Asset Dimension"
+      },
+      "RD08": {
+        "title": "Metaverse and Spatial Computing Dimension"
       }
     },
     "riskScenes": {
       "RS22": {
-        "title": "Virtual Asset Fraud"
+        "title": "Virtual Asset and Economic Fraud"
       },
       "RS23": {
-        "title": "VR/AR & Virtual World Risks"
+        "title": "Virtual Identity, XR, and Immersive Content Security"
+      },
+      "RS02": {
+        "title": "Compliance and Governance Risk"
+      },
+      "RS04": {
+        "title": "API and Automation Attack"
+      },
+      "RS05": {
+        "title": "Content and Community Governance"
+      },
+      "RS06": {
+        "title": "Internal and Supply-Chain Security"
+      },
+      "RS07": {
+        "title": "Account Takeover and Identity Theft"
+      },
+      "RS09": {
+        "title": "Registration, Authentication, and Account Abuse"
+      },
+      "RS10": {
+        "title": "Endpoint, Client, and Communication Adversarial Risk"
+      },
+      "RS18": {
+        "title": "On-Chain Privacy, NFT, and Virtual Asset Trading"
+      },
+      "RS27": {
+        "title": "Location, Trajectory, and Spatial Data Fraud"
       }
     }
   }

@@ -14,6 +14,12 @@
 - 新增：静态站 smoke 测试
   - `npm run build`、CI 和 GitHub Pages Deploy 会用 Playwright 验证首页、知识页和关系页构建产物可加载
   - 捕获主要路由的渲染失败和运行时错误
+- 新增：静态站运行时性能预算
+  - `npm run build`、CI 和 GitHub Pages Deploy 会检查首页、风险页和 Sankey 关系页的加载耗时、资源体积和请求数量
+  - 补齐 GitHub Pages 构建产物的运行时性能回归保护
+- 新增：英文 i18n 质量校验
+  - `validate:data` 会检查英文实体字段缺失和英文展示内容中的中文残留
+  - 修正英文风险、规避手段、攻击工具、威胁行为者、术语和业务场景数据的翻译覆盖
 - 新增：文档统计一致性校验脚本
   - `validate:data` 现在会检查 README、README_CN、ROADMAP 的实体规模、参考资料口径和版本号
   - 防止数据规模更新后文档统计再次漂移

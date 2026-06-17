@@ -13,6 +13,9 @@
         "link": "https://www.certik.com/resources/blog/multi-signature-wallet-security",
         "title": "Multisig Best Practices to Maximize Transaction Security - Polygon"
       }
-    ]
+    ],
+    "description": "Attackers use social engineering (fake urgent proposals, impersonating team members) to trick multi-signature wallet signers into quickly approving malicious transactions.",
+    "complexity": "Intermediate",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

@@ -1,17 +1,18 @@
 {
   "T0526": {
-    "title": "重放攻击",
+    "title": "Replay Attack",
     "keywords": [
-      "重放攻击",
-      "T0526"
+      "Replay Attack"
     ],
-    "definition": "重放攻击 is a key business security concept.",
-    "description": "重放攻击 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 重放攻击 related risks and controls.",
+    "definition": "An attack that reuses a valid request, event, token, or signature to trigger an operation again.",
+    "description": "Replay Attack is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Replay Attack related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

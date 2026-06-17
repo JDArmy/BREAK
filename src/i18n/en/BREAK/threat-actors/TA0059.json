@@ -1,15 +1,15 @@
 {
   "TA0059": {
-    "title": "账号接管团伙",
-    "description": "通过MFA疲劳、会话令牌重放和钓鱼工具接管用户或员工账号。",
+    "title": "Account Takeover Groups",
+    "description": "Groups that take over user or employee accounts through MFA fatigue, session-token replay, and phishing tools.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0"
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
       }
     ],
     "keywords": [
-      "账号接管团伙",
-      "TA0059"
+      "Account Takeover Groups"
     ]
   }
 }

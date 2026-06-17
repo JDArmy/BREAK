@@ -1,17 +1,18 @@
 {
   "T0589": {
-    "title": "车联网API",
+    "title": "Connected-Vehicle API",
     "keywords": [
-      "车联网API",
-      "T0589"
+      "Connected-Vehicle API"
     ],
-    "definition": "车联网API is a key business security concept.",
-    "description": "车联网API is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 车联网API related risks and controls.",
+    "definition": "An API that exposes vehicle status, location, remote-control, diagnostics, or service capabilities.",
+    "description": "Connected-Vehicle API is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Connected-Vehicle API related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

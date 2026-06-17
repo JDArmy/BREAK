@@ -13,6 +13,9 @@
       {
         "title": "Privacy and data protection in mobile applications - ENISA"
       }
-    ]
+    ],
+    "description": "Remote provisioning capabilities of embedded SIM (eSIM) and integrated SIM (iSIM) are exploited by attackers for SIM hijacking and identity theft.",
+    "complexity": "Advanced",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

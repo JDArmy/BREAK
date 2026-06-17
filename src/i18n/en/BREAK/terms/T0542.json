@@ -1,17 +1,18 @@
 {
   "T0542": {
-    "title": "临时凭证",
+    "title": "Temporary Credential",
     "keywords": [
-      "临时凭证",
-      "T0542"
+      "Temporary Credential"
     ],
-    "definition": "临时凭证 is a key business security concept.",
-    "description": "临时凭证 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 临时凭证 related risks and controls.",
+    "definition": "A short-lived credential issued for bounded access, reducing exposure compared with long-lived secrets.",
+    "description": "Temporary Credential is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Temporary Credential related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

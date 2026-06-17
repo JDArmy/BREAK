@@ -4,6 +4,9 @@
     "definition": "Implementing upgradeable contract designs and emergency pause mechanisms to address vulnerabilities",
     "description": "Reserve controlled upgrade capability for smart contracts and configure emergency pause, tiered permissions, multisig approval, and timelock mechanisms so teams can contain losses and deploy fixes when severe vulnerabilities, cross-chain bridge anomalies, or abnormal asset flows are detected.",
     "complexity": "Advanced",
-    "limitation": "Upgrade and pause mechanisms introduce governance centralization, privilege abuse, and key-custody risks. If permission boundaries, approval workflows, or timelocks are poorly designed, the protection mechanism itself can become an attack entry point."
+    "limitation": "Upgrade and pause mechanisms introduce governance centralization, privilege abuse, and key-custody risks. If permission boundaries, approval workflows, or timelocks are poorly designed, the protection mechanism itself can become an attack entry point.",
+    "keywords": [
+      "Contract Upgrade and Emergency Pause"
+    ]
   }
 }

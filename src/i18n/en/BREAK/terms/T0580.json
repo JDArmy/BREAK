@@ -1,17 +1,18 @@
 {
   "T0580": {
-    "title": "APK签名",
+    "title": "APK Signing",
     "keywords": [
-      "APK签名",
-      "T0580"
+      "APK Signing"
     ],
-    "definition": "APK签名 is a key business security concept.",
-    "description": "APK签名 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess APK签名 related risks and controls.",
+    "definition": "The signing process that lets Android verify the publisher and integrity of an application package.",
+    "description": "APK Signing is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess APK Signing related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

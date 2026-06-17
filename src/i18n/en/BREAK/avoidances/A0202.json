@@ -1,15 +1,16 @@
 {
   "A0202": {
-    "title": "SBOM生成与漏洞影响分析",
-    "description": "为应用、镜像和固件生成SBOM，并在新漏洞披露时快速定位受影响资产。",
+    "title": "SBOM Generation and Vulnerability Impact Analysis",
+    "description": "Generate SBOMs for applications, images, and firmware, and quickly locate affected assets when new vulnerabilities are disclosed.",
     "references": [
       {
-        "title": "Software Bill of Materials - CISA"
+        "title": "Software Bill of Materials - CISA",
+        "link": "https://www.cisa.gov/topics/information-communications-technology-supply-chain-security/sbom"
       }
     ],
     "keywords": [
-      "SBOM生成与漏洞影响分析",
-      "A0202"
-    ]
+      "SBOM Generation and Vulnerability Impact Analysis"
+    ],
+    "definition": "Generate SBOMs for applications, images, and firmware, and quickly locate affected assets when new vulnerabilities are disclosed."
   }
 }

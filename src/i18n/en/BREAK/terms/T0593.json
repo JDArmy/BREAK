@@ -1,17 +1,18 @@
 {
   "T0593": {
-    "title": "VC撤销",
+    "title": "VC Revocation",
     "keywords": [
-      "VC撤销",
-      "T0593"
+      "VC Revocation"
     ],
-    "definition": "VC撤销 is a key business security concept.",
-    "description": "VC撤销 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess VC撤销 related risks and controls.",
+    "definition": "A mechanism for invalidating or checking the current validity status of a verifiable credential.",
+    "description": "VC Revocation is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess VC Revocation related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

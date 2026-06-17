@@ -4,6 +4,9 @@
     "definition": "Establish an automated firmware update process to promptly patch device vulnerabilities and prevent attackers from exploiting known vulnerabilities to hijack devices.",
     "description": "Outdated firmware is a primary cause of smart device hijacking. Protective measures include: enabling automatic update features on devices, or regularly checking and installing firmware updates; using signature verification mechanisms to ensure firmware source authenticity and prevent malicious firmware from being implanted; deploying unified firmware management platforms (such as MDM) for enterprise IoT devices to manage updates at scale; monitoring vendor security advisories and promptly responding to high-risk vulnerabilities; and network-isolating or replacing legacy devices that can no longer be updated. Many botnet attacks (such as Mirai) exploit default credentials and unpatched vulnerabilities to achieve large-scale hijacking.",
     "complexity": "Basic",
-    "limitation": "Some vendors do not provide long-term firmware support, leaving devices without updates after end-of-life; automatic updates may introduce compatibility issues or new vulnerabilities; devices may be temporarily unavailable during the update process; certain devices require manual updates, making large-scale management difficult."
+    "limitation": "Some vendors do not provide long-term firmware support, leaving devices without updates after end-of-life; automatic updates may introduce compatibility issues or new vulnerabilities; devices may be temporarily unavailable during the update process; certain devices require manual updates, making large-scale management difficult.",
+    "keywords": [
+      "IoT Device Firmware Security Update Mechanism"
+    ]
   }
 }

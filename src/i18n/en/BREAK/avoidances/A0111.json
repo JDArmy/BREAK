@@ -4,6 +4,9 @@
     "definition": "Cryptographic signature verification of firmware update packages and prevention of downgrading to vulnerable older versions",
     "description": "Ensures firmware update sources are trusted and protected against downgrade attacks. Measures include: update packages signed with manufacturer's private key, with signature verification performed by the device before installation; monotonically increasing version number mechanism to reject firmware versions lower than the current installed version; recording the minimum installed security version number in tamper-proof storage; using encrypted channels (TLS) during the update process to prevent man-in-the-middle attacks; and automatic fallback to the last known working version upon failure rather than entering an unusable state. NHTSA guidance on vehicle firmware over-the-air updates emphasizes the importance of these measures.",
     "complexity": "Intermediate",
-    "limitation": "Monotonically increasing version numbers limit flexibility, making emergency rollback to previous versions difficult; improper implementation of rollback protection may render the device unrecoverable; a reliable time source is required to prevent time-based rollback attacks"
+    "limitation": "Monotonically increasing version numbers limit flexibility, making emergency rollback to previous versions difficult; improper implementation of rollback protection may render the device unrecoverable; a reliable time source is required to prevent time-based rollback attacks",
+    "keywords": [
+      "Firmware Update Signature Verification and Rollback Protection"
+    ]
   }
 }

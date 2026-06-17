@@ -1,16 +1,18 @@
 {
   "R0236": {
-    "title": "支付令牌化配置错误",
-    "definition": "支付令牌、卡号替代值或绑定关系配置不当，导致越权扣款或数据泄露。",
+    "title": "Payment Tokenization Misconfiguration",
+    "definition": "Payment tokens, card substitutes, or binding relationships are misconfigured, causing unauthorized charges or data exposure.",
     "keywords": [
-      "支付令牌化配置错误",
-      "R0236"
+      "Payment Tokenization Misconfiguration"
     ],
     "references": [
       {
         "title": "PCI Data Security Standard",
         "link": "https://www.pcisecuritystandards.org/standards/pci-dss/"
       }
-    ]
+    ],
+    "description": "Payment tokens, card substitutes, or binding relationships are misconfigured, causing unauthorized charges or data exposure.",
+    "complexity": "Advanced",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

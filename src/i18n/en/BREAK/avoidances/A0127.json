@@ -4,6 +4,9 @@
     "definition": "Using machine learning and rule engines to detect oracle data anomalies in real time and trigger circuit breaker mechanisms to protect the protocol.",
     "description": "Proactively monitor oracle behavior and automatically defend against attacks upon detection. Detection dimensions: price spike detection — price changes exceeding a threshold within a short time window; volume anomalies — price changes without matching trading volume; cross-market arbitrage discrepancies — a single market's price deviating excessively from others; oracle update frequency anomalies. Circuit breaker measures: suspending contract functions dependent on the oracle (e.g., lending, liquidation); switching to backup oracles or manual intervention; capping single-operation amounts; delaying sensitive operations until price stabilization. LLM-driven detection tools can identify novel manipulation patterns. A balance must be struck between false positive rate and response speed.",
     "complexity": "Advanced",
-    "limitation": "Circuit breaker mechanisms may be abused or become attack targets themselves; false positives can disrupt normal transactions; machine learning models require continuous training and updates; the detection system itself may become a single point of failure."
+    "limitation": "Circuit breaker mechanisms may be abused or become attack targets themselves; false positives can disrupt normal transactions; machine learning models require continuous training and updates; the detection system itself may become a single point of failure.",
+    "keywords": [
+      "Automated Detection and Circuit Breaker for Oracle Manipulation"
+    ]
   }
 }

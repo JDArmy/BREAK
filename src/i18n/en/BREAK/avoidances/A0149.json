@@ -4,6 +4,9 @@
     "definition": "Digital signature verification of firmware packages delivered via OTA to ensure trusted origin and integrity against tampering.",
     "description": "Prevents malicious firmware from being implanted through OTA. Measures: firmware packages signed with the vendor's private key; device-side verification using the embedded public key; secure hashing algorithms; certificate chain validation; anti-rollback version enforcement; automatic rollback upon update failure.",
     "complexity": "Intermediate",
-    "limitation": "Complex key management; increased latency due to signature verification; certificate expiration requires handling."
+    "limitation": "Complex key management; increased latency due to signature verification; certificate expiration requires handling.",
+    "keywords": [
+      "Firmware OTA Update Signature Verification"
+    ]
   }
 }

@@ -1,17 +1,18 @@
 {
   "T0577": {
-    "title": "Cookie重放",
+    "title": "Cookie Replay",
     "keywords": [
-      "Cookie重放",
-      "T0577"
+      "Cookie Replay"
     ],
-    "definition": "Cookie重放 is a key business security concept.",
-    "description": "Cookie重放 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess Cookie重放 related risks and controls.",
+    "definition": "Reuse of a stolen session cookie to impersonate a user from another client or device.",
+    "description": "Cookie Replay is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Cookie Replay related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

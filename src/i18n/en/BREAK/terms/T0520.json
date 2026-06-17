@@ -14,6 +14,12 @@
         "title": "Virtualization/Sandbox Evasion - MITRE ATT&CK"
       }
     ],
-    "title": "Sandbox"
+    "title": "Sandbox",
+    "aliases": [
+      "Sandbox",
+      "Isolated environment",
+      "Sandbox alias 3"
+    ],
+    "category": "Business Security"
   }
 }

@@ -1,15 +1,15 @@
 {
   "TA0053": {
-    "title": "云资源滥用者",
-    "description": "利用云密钥、过度授权和配置错误访问云资源或挖掘数据价值的攻击者。",
+    "title": "Cloud Resource Abusers",
+    "description": "Attackers who use cloud keys, excessive privileges, and misconfiguration to access cloud resources or extract data value.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0"
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
       }
     ],
     "keywords": [
-      "云资源滥用者",
-      "TA0053"
+      "Cloud Resource Abusers"
     ]
   }
 }

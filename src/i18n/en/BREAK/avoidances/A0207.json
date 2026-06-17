@@ -1,15 +1,16 @@
 {
   "A0207": {
-    "title": "支付账户与商户准入审核",
-    "description": "对商户、收款账户、法人、设备和历史风险进行准入审核与持续复核。",
+    "title": "Payment Account and Merchant Onboarding Review",
+    "description": "Review merchants, collection accounts, legal entities, devices, and historical risk during onboarding and continuous review.",
     "references": [
       {
-        "title": "PCI Data Security Standard"
+        "title": "PCI Data Security Standard",
+        "link": "https://www.pcisecuritystandards.org/standards/pci-dss/"
       }
     ],
     "keywords": [
-      "支付账户与商户准入审核",
-      "A0207"
-    ]
+      "Payment Account and Merchant Onboarding Review"
+    ],
+    "definition": "Review merchants, collection accounts, legal entities, devices, and historical risk during onboarding and continuous review."
   }
 }

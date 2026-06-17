@@ -1,15 +1,20 @@
 {
   "A0197": {
-    "title": "API速率限制与配额控制",
-    "description": "按用户、设备、IP、租户、接口和业务动作实施动态限流、配额和熔断。",
+    "title": "API Rate Limiting and Quota Control",
+    "description": "Apply dynamic limits, quotas, and circuit breakers by user, device, IP, tenant, endpoint, and business action.",
     "references": [
       {
-        "title": "OWASP API Security Top 10 2023"
+        "title": "OWASP API Security Top 10 2023",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
       }
     ],
     "keywords": [
-      "API速率限制与配额控制",
-      "A0197"
-    ]
+      "API Rate Limiting and Quota Control",
+      "API Rate Limiting and Quota Control controls",
+      "API Rate Limiting and Quota Control monitoring",
+      "API Rate Limiting and Quota Control policy",
+      "API security"
+    ],
+    "definition": "Apply dynamic limits, quotas, and circuit breakers by user, device, IP, tenant, endpoint, and business action."
   }
 }

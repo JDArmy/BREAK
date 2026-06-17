@@ -14,6 +14,9 @@
         "link": "https://www.nist.gov/programs-projects/mobile-security",
         "title": "NIST Mobile Device Security"
       }
-    ]
+    ],
+    "description": "Attackers exploit firmware vulnerabilities in VR/AR headsets, controllers and other XR devices to achieve device control, data theft or malicious code implantation.",
+    "complexity": "Advanced",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

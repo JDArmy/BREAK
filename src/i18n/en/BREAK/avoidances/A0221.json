@@ -1,15 +1,16 @@
 {
   "A0221": {
-    "title": "边缘与CDN规则变更审计",
-    "description": "审计CDN、WAF、边缘函数和缓存规则变更，防止边缘配置被滥用。",
+    "title": "Edge and CDN Rule Change Audit",
+    "description": "Audit CDN, WAF, edge-function, and cache-rule changes to prevent edge configuration abuse.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0"
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
       }
     ],
     "keywords": [
-      "边缘与CDN规则变更审计",
-      "A0221"
-    ]
+      "Edge and CDN Rule Change Audit"
+    ],
+    "definition": "Audit CDN, WAF, edge-function, and cache-rule changes to prevent edge configuration abuse."
   }
 }

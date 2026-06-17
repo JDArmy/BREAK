@@ -4,6 +4,9 @@
     "definition": "Submitting transactions through private mempools to bypass public mempools and avoid being monitored and front-run by MEV bots.",
     "description": "Pending transactions in the public mempool can be analyzed and front-run by MEV bots. Protection solutions include: using services such as Flashbots Protect and MEV Blocker to send transactions directly to validators; transactions do not enter the public mempool, thereby avoiding surveillance; validators commit not to engage in front-running or sandwich attacks; users can set transaction privacy levels and maximum acceptable MEV; partial MEV rebates may be returned to users. Suitable for high-value scenarios such as large transactions, NFT minting, and DeFi operations. Research by CoW DAO indicates that this can effectively defend against front-running and sandwich attacks.",
     "complexity": "Basic",
-    "limitation": "Reliance on the integrity of third-party services; validators themselves may still front-run transactions; mature private mempools are not available on all chains; may reduce transaction execution speed; protection effectiveness of L2 private mempools is limited."
+    "limitation": "Reliance on the integrity of third-party services; validators themselves may still front-run transactions; mature private mempools are not available on all chains; may reduce transaction execution speed; protection effectiveness of L2 private mempools is limited.",
+    "keywords": [
+      "Private Mempool and MEV Protection Services"
+    ]
   }
 }

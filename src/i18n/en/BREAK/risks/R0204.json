@@ -14,6 +14,9 @@
         "link": "https://www.paradigm.xyz/2020/08/ethereum-is-a-dark-forest",
         "title": "Ethereum is a Dark Forest - MEV Threats"
       }
-    ]
+    ],
+    "description": "Miners or validators exploit transaction ordering rights to front-run user transactions through gas fee bidding or collude with arbitrage bots to extract MEV profits.",
+    "complexity": "Advanced",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

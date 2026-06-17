@@ -4,6 +4,9 @@
     "definition": "Conducting multiple rounds of code auditing and formal verification before deployment to ensure that immutable contracts are as defect-free as possible.",
     "description": "Defects in immutable contracts cannot be fixed, so thorough review before deployment is essential. Measures include: audits by at least two independent auditing firms; automated scanning with tools such as Slither and Mythril; formal verification of critical properties (fund conservation, permission correctness); internal code review and peer review; public disclosure of code for community review; running a comprehensive test suite covering edge cases; long-term testing on testnets; and establishing a bug bounty program. ADforensics emphasizes the critical role of auditing for immutable contracts.",
     "complexity": "Advanced",
-    "limitation": "Audits are costly and time-consuming; there is no guarantee that all defects will be discovered; formal verification has a high technical barrier; passing an audit does not equate to absolute security; attack techniques continue to evolve."
+    "limitation": "Audits are costly and time-consuming; there is no guarantee that all defects will be discovered; formal verification has a high technical barrier; passing an audit does not equate to absolute security; attack techniques continue to evolve.",
+    "keywords": [
+      "Comprehensive Auditing and Formal Verification"
+    ]
   }
 }

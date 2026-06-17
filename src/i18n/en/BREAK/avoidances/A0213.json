@@ -1,15 +1,19 @@
 {
   "A0213": {
-    "title": "AI训练数据 Governance",
-    "description": "治理训练数据来源、授权、敏感信息、版权风险和数据投毒检测。",
+    "title": "AI Training Data Governance",
+    "description": "Govern training-data provenance, authorization, sensitive information, copyright risk, and data-poisoning detection.",
     "references": [
       {
-        "title": "NIST AI Risk Management Framework"
+        "title": "NIST AI Risk Management Framework",
+        "link": "https://www.nist.gov/itl/ai-risk-management-framework"
       }
     ],
     "keywords": [
-      "AI训练数据 Governance",
-      "A0213"
-    ]
+      "AI Training Data Governance",
+      "AI Training Data Governance controls",
+      "AI Training Data Governance monitoring",
+      "AI Training Data Governance policy"
+    ],
+    "definition": "Govern training-data provenance, authorization, sensitive information, copyright risk, and data-poisoning detection."
   }
 }

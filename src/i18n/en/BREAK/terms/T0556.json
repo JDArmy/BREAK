@@ -1,17 +1,18 @@
 {
   "T0556": {
-    "title": "拒付",
+    "title": "Chargeback",
     "keywords": [
-      "拒付",
-      "T0556"
+      "Chargeback"
     ],
-    "definition": "拒付 is a key business security concept.",
-    "description": "拒付 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 拒付 related risks and controls.",
+    "definition": "A payment reversal initiated through a card issuer or payment network after a dispute.",
+    "description": "Chargeback is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Chargeback related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

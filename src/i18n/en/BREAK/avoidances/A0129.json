@@ -4,6 +4,9 @@
     "definition": "A two-phase transaction scheme that splits the transaction into a commit phase (submitting a hash) and a reveal phase (disclosing the original content), concealing transaction details until front-running is no longer possible.",
     "description": "The two-phase commit prevents premature exposure of transaction contents. Implementation flow: In the first phase, the user submits a hash of the transaction parameters along with a random salt; after waiting for a certain number of block confirmations, the second phase begins; in the second phase, the user submits the original parameters, and the smart contract verifies that the hash matches before execution. A commit window is enforced, and if it expires, the transaction fails. Threshold encryption techniques can be employed so that decryption is only possible upon reaching a specific block height. This mechanism is suitable for fairness-sensitive scenarios such as auctions, voting, and order books. Game-theoretic analysis demonstrates that it can eliminate information asymmetry advantages.",
     "complexity": "Advanced",
-    "limitation": "Requires two transactions, doubling both gas costs and time costs; poor user experience due to extended waiting periods; unsuitable for scenarios requiring instant execution; attackers may still infer user intent through on-chain pattern analysis."
+    "limitation": "Requires two transactions, doubling both gas costs and time costs; poor user experience due to extended waiting periods; unsuitable for scenarios requiring instant execution; attackers may still infer user intent through on-chain pattern analysis.",
+    "keywords": [
+      "Commit-Reveal Mechanism"
+    ]
   }
 }

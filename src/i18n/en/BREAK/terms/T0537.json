@@ -1,17 +1,18 @@
 {
   "T0537": {
-    "title": "依赖混淆",
+    "title": "Dependency Confusion",
     "keywords": [
-      "依赖混淆",
-      "T0537"
+      "Dependency Confusion"
     ],
-    "definition": "依赖混淆 is a key business security concept.",
-    "description": "依赖混淆 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 依赖混淆 related risks and controls.",
+    "definition": "A supply-chain attack in which a malicious public package with a matching name is chosen instead of the intended internal dependency.",
+    "description": "Dependency Confusion is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Dependency Confusion related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

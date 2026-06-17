@@ -4,6 +4,9 @@
     "definition": "A voting power calculation method weighted by token holding duration, combined with a mandatory delay on proposal execution, to prevent flash loan-based temporary acquisition of voting rights.",
     "description": "Flash loan attackers can borrow a large number of governance tokens, vote, and return them within a single transaction. A time-weighted mechanism can defend against such attacks. Implementation methods: Voting power is based not only on the number of tokens held but also on the holding duration (e.g., square root or linear weighting). Voting power is calculated at the time of the proposal snapshot, and tokens acquired after the snapshot cannot participate in that proposal's vote. An execution delay (timelock), typically 24–72 hours, is enforced after a proposal passes, giving the community time to detect malicious proposals and respond. An emergency veto mechanism (e.g., a multi-signature committee) is allowed during the delay period. The DAO governance framework proposed by a16z emphasizes the importance of the time dimension, significantly raising the cost of attacks.",
     "complexity": "Intermediate",
-    "limitation": "Time weighting reduces the liquidity value of tokens and impacts market activity. The timelock mechanism lowers governance efficiency and slows emergency response. Calculating and storing historical holding data increases on-chain costs. The system may be manipulated by long-term holders."
+    "limitation": "Time weighting reduces the liquidity value of tokens and impacts market activity. The timelock mechanism lowers governance efficiency and slows emergency response. Calculating and storing historical holding data increases on-chain costs. The system may be manipulated by long-term holders.",
+    "keywords": [
+      "Time-Weighted Voting and Timelock Mechanism"
+    ]
   }
 }

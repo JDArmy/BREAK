@@ -4,6 +4,9 @@
     "definition": "Using on-chain monitoring systems to detect Rug Pull characteristics in real time and mitigate investor losses through insurance or recovery protocols.",
     "description": "Establishing early warning and loss compensation mechanisms. Detection methods: monitoring large-scale liquidity withdrawals, contract permission changes, abnormal token transfers, and other Rug Pull signals; analyzing token holding distribution to detect highly concentrated holdings (a small number of addresses holding the majority of tokens); tracking developer address behavior, such as suddenly transferring large amounts of tokens to exchanges; utilizing real-time detection engines from protocols like Rugsafe. Insurance mechanisms: investors purchase DeFi insurance (e.g., Nexus Mutual) and can receive compensation after a Rug Pull occurs; protocols like Rugsafe attempt to recover funds or compensate victims through multi-chain recovery mechanisms upon detecting a Rug Pull. This serves as the last line of passive defense.",
     "complexity": "Advanced",
-    "limitation": "Detection systems have latency and may fail to issue alerts before a Rug Pull is completed; false positives may trigger panic selling; insurance coverage is limited and costly; recovery mechanisms rely on community governance and are difficult to execute; not all types of Rug Pulls can be prevented."
+    "limitation": "Detection systems have latency and may fail to issue alerts before a Rug Pull is completed; false positives may trigger panic selling; insurance coverage is limited and costly; recovery mechanisms rely on community governance and are difficult to execute; not all types of Rug Pulls can be prevented.",
+    "keywords": [
+      "Real-Time Rug Pull Detection and Insurance Mechanisms"
+    ]
   }
 }

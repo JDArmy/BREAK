@@ -1,17 +1,18 @@
 {
   "T0584": {
-    "title": "边缘函数",
+    "title": "Edge Function",
     "keywords": [
-      "边缘函数",
-      "T0584"
+      "Edge Function"
     ],
-    "definition": "边缘函数 is a key business security concept.",
-    "description": "边缘函数 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 边缘函数 related risks and controls.",
+    "definition": "Code executed at CDN or edge locations to transform requests, responses, authentication, or routing.",
+    "description": "Edge Function is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Edge Function related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

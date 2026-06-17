@@ -2,15 +2,11 @@
   "T0456": {
     "title": "Data Broker",
     "keywords": [
-      "Data Broker",
-      "data dealer",
-      "PII seller",
-      "underground data trade",
-      "credential merchant",
-      "leaked data vendor"
+      "Data Broker"
     ],
     "aliases": [
-      "Liaoshang"
+      "Liaoshang",
+      "Data Broker alias 2"
     ],
     "definition": "Underground vendors who specialize in trading stolen personal information, credentials, and user databases acquired through hacking, data breaches, or insider threats.",
     "description": "Data brokers operate in the cybercrime underground economy, acting as middlemen between data thieves and fraudsters. They aggregate vast quantities of personally identifiable information (PII) including phone numbers, ID cards, bank accounts, and login credentials obtained from data breaches, phishing campaigns, or corrupt insiders. These vendors categorize data by freshness, completeness, and industry sector, selling them through private channels, dark web marketplaces, or encrypted messaging groups. Pricing varies based on data quality and verification status. Data brokers enable downstream fraud operations including account takeovers, identity theft, precision phishing, and credential stuffing attacks. Their services are foundational to the fraud ecosystem, providing the raw material that powers various illicit schemes.",
@@ -28,6 +24,7 @@
         "title": "服装设计师如何整理专属面料库?十年经验总结 (内含文档)|梭织|纱线...",
         "link": "https://zhuanlan.zhihu.com/p/449164483"
       }
-    ]
+    ],
+    "category": "Business Security"
   }
 }

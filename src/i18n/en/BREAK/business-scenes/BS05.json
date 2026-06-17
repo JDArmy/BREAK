@@ -10,33 +10,55 @@
       },
       "RD04": {
         "title": "Adversarial Dimension"
+      },
+      "RD01": {
+        "title": "Transaction Dimension"
       }
     },
     "riskScenes": {
       "RS01": {
-        "title": "Marketing Risk"
+        "title": "Marketing and Growth Fraud"
       },
       "RS02": {
-        "title": "Compliance Risk"
+        "title": "Compliance and Governance Risk"
       },
       "RS04": {
-        "title": "Illegal Request Risk"
+        "title": "API and Automation Attack"
       },
       "RS05": {
-        "title": "Content Risk"
+        "title": "Content and Community Governance"
       },
       "RS06": {
-        "title": "Internal Risk"
+        "title": "Internal and Supply-Chain Security"
       },
       "RS07": {
-        "title": "Identity Theft Risk"
+        "title": "Account Takeover and Identity Theft"
       },
       "RS09": {
-        "title": "Identity Verification Risk"
+        "title": "Registration, Authentication, and Account Abuse"
       },
       "RS10": {
-        "title": "Endpoint Adversarial Risk"
+        "title": "Endpoint, Client, and Communication Adversarial Risk"
+      },
+      "RS03": {
+        "title": "Customer and Resource Abuse"
+      },
+      "RS08": {
+        "title": "Payment, Funding, and Financial Fraud"
+      },
+      "RS11": {
+        "title": "Merchant, Supplier, and Fulfillment-Party Risk"
+      },
+      "RS14": {
+        "title": "API, Cloud-Native, and Non-Human Identity Security"
+      },
+      "RS25": {
+        "title": "After-Sales, Refund, and Claims Abuse"
+      },
+      "RS26": {
+        "title": "Algorithm, Pricing, and Platform Governance"
       }
-    }
+    },
+    "description": "Education and knowledge-service scenarios covering courses, memberships, refunds, content, and account abuse."
   }
 }

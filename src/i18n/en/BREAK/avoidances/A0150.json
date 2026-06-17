@@ -4,6 +4,9 @@
     "definition": "Using encryption protocols such as TLS to protect the transmission process of OTA updates and prevent man-in-the-middle attacks.",
     "description": "Transport layer protection: Enforce HTTPS/TLS communication; Certificate pinning to prevent MITM; Integrity checksum verification; Chunked transmission verification; Resumable download protection; Server identity authentication.",
     "complexity": "Basic",
-    "limitation": "Requires reliable network; Certificate management; Poor support for legacy devices."
+    "limitation": "Requires reliable network; Certificate management; Poor support for legacy devices.",
+    "keywords": [
+      "OTA Channel Encryption and Integrity Protection"
+    ]
   }
 }

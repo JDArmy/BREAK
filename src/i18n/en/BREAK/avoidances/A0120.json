@@ -4,6 +4,9 @@
     "definition": "Restrict the scope of operations that DAO governance can execute, and place high-risk operations under the protection of multi-signature or higher-threshold mechanisms.",
     "description": "Reduce attack value by limiting governance privileges. Design principles: Classify operations so that routine parameter adjustments can be voted on by the DAO, while high-risk operations such as fund transfers and contract upgrades require higher thresholds; implement dual governance, where major decisions require dual approval from both token holders and a multi-signature committee; set upper and lower bounds for governance-adjustable parameters to prevent system crashes caused by extreme parameter settings via governance votes; impose a single-transaction cap and a cooldown period on treasury fund transfers; use non-upgradeable designs for critical contracts or require extremely high voting thresholds for upgrades. QuillAudits research indicates that limiting governance privileges is key to protection.",
     "complexity": "Intermediate",
-    "limitation": "Reduces the flexibility and autonomy of the DAO; multi-signature introduces centralization risks, which may be exploited or subject to insider malfeasance; complex privilege segmentation leads to high implementation and communication costs; excessive restrictions may result in governance paralysis."
+    "limitation": "Reduces the flexibility and autonomy of the DAO; multi-signature introduces centralization risks, which may be exploited or subject to insider malfeasance; complex privilege segmentation leads to high implementation and communication costs; excessive restrictions may result in governance paralysis.",
+    "keywords": [
+      "Governance Scope Limitation and Multi-Signature Protection"
+    ]
   }
 }

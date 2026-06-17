@@ -1,15 +1,16 @@
 {
   "A0211": {
-    "title": "数据共享审批与用途限制",
-    "description": "对数据共享、导出、训练、分析和第三方使用设置审批、最小化和用途约束。",
+    "title": "Data-Sharing Approval and Purpose Limitation",
+    "description": "Apply approval, minimization, and purpose constraints to data sharing, export, training, analytics, and third-party use.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0"
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
       }
     ],
     "keywords": [
-      "数据共享审批与用途限制",
-      "A0211"
-    ]
+      "Data-Sharing Approval and Purpose Limitation"
+    ],
+    "definition": "Apply approval, minimization, and purpose constraints to data sharing, export, training, analytics, and third-party use."
   }
 }

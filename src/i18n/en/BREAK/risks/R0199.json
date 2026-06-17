@@ -14,6 +14,9 @@
         "link": "https://eips.ethereum.org/EIPS/eip-2981",
         "title": "EIP-2981: NFT Royalty Standard"
       }
-    ]
+    ],
+    "description": "Attackers bypass NFT marketplace royalty mechanisms through off-market trades or custom contracts, depriving creators of secondary sales revenue.",
+    "complexity": "Intermediate",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

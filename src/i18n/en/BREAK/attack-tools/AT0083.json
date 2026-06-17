@@ -1,16 +1,19 @@
 {
   "AT0083": {
     "title": "Industrial and Vehicle Protocol Exploitation Tools",
-    "description": "针对工业控制、车联网V2X、医疗物联网和边缘设备协议的扫描与利用工具集合。攻击者可利用Modbus、OPC-UA、Profinet、CAN、V2X、BLE、MQTT等协议缺陷或配置错误实施未授权访问、指令注入、传感器数据伪造、医疗设备控制和车联网消息欺骗。",
+    "description": "Scanning and exploitation tools for industrial control, connected-vehicle V2X, medical IoT, and edge-device protocols. Attackers may exploit protocol flaws or misconfigurations in Modbus, OPC-UA, Profinet, CAN, V2X, BLE, MQTT, and similar systems to perform unauthorized access, command injection, sensor-data forgery, medical-device control, or connected-vehicle message spoofing.",
     "references": [
       {
-        "title": "Modbus Penetration Testing Framework"
+        "title": "Modbus Penetration Testing Framework",
+        "link": "https://github.com/theralfbrown/smod"
       },
       {
-        "title": "CANard CAN bus toolkit"
+        "title": "CANard CAN bus toolkit",
+        "link": "https://github.com/ericevenchick/canard"
       },
       {
-        "title": "OWASP Medical Device Security"
+        "title": "OWASP Medical Device Security",
+        "link": "https://owasp.org/www-project-medical-device-security/"
       }
     ],
     "keywords": [

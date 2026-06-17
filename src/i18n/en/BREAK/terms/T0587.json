@@ -1,17 +1,18 @@
 {
   "T0587": {
-    "title": "固件签名",
+    "title": "Firmware Signing",
     "keywords": [
-      "固件签名",
-      "T0587"
+      "Firmware Signing"
     ],
-    "definition": "固件签名 is a key business security concept.",
-    "description": "固件签名 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 固件签名 related risks and controls.",
+    "definition": "A cryptographic control that verifies firmware origin and integrity before installation or execution.",
+    "description": "Firmware Signing is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Firmware Signing related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

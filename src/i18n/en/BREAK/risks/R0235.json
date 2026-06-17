@@ -1,16 +1,18 @@
 {
   "R0235": {
-    "title": "拒付与退款滥用",
-    "definition": "用户或团伙通过拒付、空包、虚假售后证据获取不当退款。",
+    "title": "Chargeback and Refund Abuse",
+    "definition": "Users or organized groups obtain improper refunds through chargebacks, empty-package claims, or fabricated after-sales evidence.",
     "keywords": [
-      "拒付与退款滥用",
-      "R0235"
+      "Chargeback and Refund Abuse"
     ],
     "references": [
       {
         "title": "PCI Data Security Standard",
         "link": "https://www.pcisecuritystandards.org/standards/pci-dss/"
       }
-    ]
+    ],
+    "description": "Users or organized groups obtain improper refunds through chargebacks, empty-package claims, or fabricated after-sales evidence.",
+    "complexity": "Intermediate",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

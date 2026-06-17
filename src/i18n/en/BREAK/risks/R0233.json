@@ -1,16 +1,18 @@
 {
   "R0233": {
-    "title": "协作文档外链泄露",
-    "definition": "网盘、文档、IM文件或知识库被外链分享后长期暴露。",
+    "title": "Collaboration Document Link Leakage",
+    "definition": "Cloud drives, documents, IM files, or knowledge bases remain exposed for long periods through shared external links.",
     "keywords": [
-      "协作文档外链泄露",
-      "R0233"
+      "Collaboration Document Link Leakage"
     ],
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0",
         "link": "https://www.nist.gov/cyberframework"
       }
-    ]
+    ],
+    "description": "Cloud drives, documents, IM files, or knowledge bases remain exposed for long periods through shared external links.",
+    "complexity": "Beginner",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

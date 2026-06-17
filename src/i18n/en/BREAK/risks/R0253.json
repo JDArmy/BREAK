@@ -1,16 +1,18 @@
 {
   "R0253": {
-    "title": "去中心化身份凭证伪造",
-    "definition": "攻击者伪造DID或可验证凭证，冒充用户、机构或资格证明。",
+    "title": "Decentralized Identity Credential Forgery",
+    "definition": "Attackers forge DIDs or verifiable credentials to impersonate users, organizations, or qualifications.",
     "keywords": [
-      "去中心化身份凭证伪造",
-      "R0253"
+      "Decentralized Identity Credential Forgery"
     ],
     "references": [
       {
         "title": "W3C Decentralized Identifiers (DIDs) v1.0",
         "link": "https://www.w3.org/TR/did-core/"
       }
-    ]
+    ],
+    "description": "Attackers forge DIDs or verifiable credentials to impersonate users, organizations, or qualifications.",
+    "complexity": "Intermediate",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

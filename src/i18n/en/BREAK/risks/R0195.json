@@ -14,6 +14,9 @@
         "link": "https://telegram.org/faq#q-how-are-secret-chats-different",
         "title": "Telegram FAQ"
       }
-    ]
+    ],
+    "description": "As Web3 communities primarily use Telegram, attackers create fake official bots or hijack community groups to trick users into connecting wallets or revealing seed phrases.",
+    "complexity": "Intermediate",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

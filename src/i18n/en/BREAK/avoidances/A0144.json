@@ -4,6 +4,9 @@
     "definition": "Reducing side-channel information leakage through software implementation techniques",
     "description": "Software-level protection: constant-time cryptographic libraries; avoiding key-dependent branching; memory access pattern obfuscation; using bit masks instead of conditionals; periodic key rotation; minimizing privileged code scope.",
     "complexity": "Intermediate",
-    "limitation": "Software-based methods have limited effectiveness; may impact performance; difficult to completely eliminate leakage."
+    "limitation": "Software-based methods have limited effectiveness; may impact performance; difficult to completely eliminate leakage.",
+    "keywords": [
+      "Software-Level Side-Channel Mitigation"
+    ]
   }
 }

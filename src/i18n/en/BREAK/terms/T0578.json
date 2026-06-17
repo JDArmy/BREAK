@@ -1,17 +1,18 @@
 {
   "T0578": {
-    "title": "Token绑定",
+    "title": "Token Binding",
     "keywords": [
-      "Token绑定",
-      "T0578"
+      "Token Binding"
     ],
-    "definition": "Token绑定 is a key business security concept.",
-    "description": "Token绑定 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess Token绑定 related risks and controls.",
+    "definition": "A control that binds a token to a device, client, network, or cryptographic proof to limit replay.",
+    "description": "Token Binding is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Token Binding related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

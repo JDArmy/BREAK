@@ -1,16 +1,19 @@
 {
   "AT0081": {
     "title": "IoT Firmware and Device Exploitation Tools",
-    "description": "面向物联网设备的漏洞扫描、固件提取、反编译、默认凭据尝试和远程利用工具集合。攻击者可通过这些工具发现暴露设备、分析固件后门、植入恶意固件、劫持设备控制权或将设备纳入僵尸网络。",
+    "description": "Toolsets for vulnerability scanning, firmware extraction, reverse engineering, default-credential testing, and remote exploitation of IoT devices. Attackers use them to discover exposed devices, analyze firmware backdoors, implant malicious firmware, hijack device control, or enroll devices into botnets.",
     "references": [
       {
-        "title": "OWASP Firmware Security Testing Methodology"
+        "title": "OWASP Firmware Security Testing Methodology",
+        "link": "https://github.com/scriptingxss/owasp-fstm"
       },
       {
-        "title": "Binwalk firmware analysis tool"
+        "title": "Binwalk firmware analysis tool",
+        "link": "https://github.com/ReFirmLabs/binwalk"
       },
       {
-        "title": "OWASP Internet of Things"
+        "title": "OWASP Internet of Things",
+        "link": "https://owasp.org/www-project-internet-of-things/"
       }
     ],
     "keywords": [

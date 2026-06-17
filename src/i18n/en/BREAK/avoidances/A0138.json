@@ -4,6 +4,9 @@
     "definition": "A mechanism that attaches a creation timestamp and expiration time to signed messages, limiting their validity period to prevent old messages from being replayed.",
     "description": "Time constraints reduce the replay attack window. Implementation approach: include creation timestamp and expiration deadline in the signature; the contract verifies that the current time falls within the validity period; use block numbers instead of timestamps to avoid time manipulation; reject expired signatures immediately; record used signature hashes for dual verification. Cube Exchange notes that timestamps serve as an effective complement to nonces.",
     "complexity": "Basic",
-    "limitation": "Clock desynchronization may cause verification failures; attackers can still replay messages within the validity window; expiration time must be reasonably configured to balance security and availability; block timestamps may be slightly manipulated by miners."
+    "limitation": "Clock desynchronization may cause verification failures; attackers can still replay messages within the validity window; expiration time must be reasonably configured to balance security and availability; block timestamps may be slightly manipulated by miners.",
+    "keywords": [
+      "Timestamp and Expiration Mechanism"
+    ]
   }
 }

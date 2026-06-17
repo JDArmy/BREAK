@@ -14,6 +14,9 @@
         "link": "https://github.com/crytic/building-secure-contracts",
         "title": "Building Secure Smart Contracts"
       }
-    ]
+    ],
+    "description": "Token economic model vulnerabilities in smart contracts allow unauthorized minting (inflation) or burning (deflation) of tokens, disrupting economic balance.",
+    "complexity": "Advanced",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

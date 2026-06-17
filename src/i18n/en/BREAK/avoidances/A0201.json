@@ -1,15 +1,19 @@
 {
   "A0201": {
-    "title": "依赖锁定与恶意包检测",
-    "description": "使用锁文件、私有代理仓库、恶意包扫描和依赖审计控制供应链投毒。",
+    "title": "Dependency Pinning and Malicious Package Detection",
+    "description": "Use lock files, private proxy repositories, malicious-package scanning, and dependency audits to control supply-chain poisoning.",
     "references": [
       {
-        "title": "Software Bill of Materials - CISA"
+        "title": "Software Bill of Materials - CISA",
+        "link": "https://www.cisa.gov/topics/information-communications-technology-supply-chain-security/sbom"
       }
     ],
     "keywords": [
-      "依赖锁定与恶意包检测",
-      "A0201"
-    ]
+      "Dependency Pinning and Malicious Package Detection",
+      "Dependency Pinning and Malicious Package Detection controls",
+      "Dependency Pinning and Malicious Package Detection monitoring",
+      "Dependency Pinning and Malicious Package Detection policy"
+    ],
+    "definition": "Use lock files, private proxy repositories, malicious-package scanning, and dependency audits to control supply-chain poisoning."
   }
 }

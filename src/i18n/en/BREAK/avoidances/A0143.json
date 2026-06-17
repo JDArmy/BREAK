@@ -4,6 +4,9 @@
     "definition": "Implementing protective measures at the hardware level to reduce the risk of leaking sensitive information through side channels such as power consumption and electromagnetic emissions.",
     "description": "Side-channel attacks infer sensitive data such as cryptographic keys by analyzing physical characteristics of a device, including power consumption, timing, and electromagnetic radiation. Countermeasures include: using constant-time algorithms to avoid data-dependent operation timing; adding random delays and noise to interfere with measurements; implementing power masking techniques; employing hardware security modules to protect key operations; applying physical shielding to reduce electromagnetic leakage; and conducting regular audits of cryptographic implementations.",
     "complexity": "Advanced",
-    "limitation": "Hardware-based protections increase costs; introduce performance overhead; achieving complete protection is difficult; and specialized expertise is required."
+    "limitation": "Hardware-based protections increase costs; introduce performance overhead; achieving complete protection is difficult; and specialized expertise is required.",
+    "keywords": [
+      "Hardware Side-Channel Protection Design"
+    ]
   }
 }

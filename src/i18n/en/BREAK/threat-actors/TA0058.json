@@ -1,15 +1,15 @@
 {
   "TA0058": {
-    "title": "AI数据投毒者",
-    "description": "通过污染训练数据、反馈数据、知识库和提示上下文影响模型行为。",
+    "title": "AI Data Poisoners",
+    "description": "Attackers who influence model behavior by poisoning training data, feedback data, knowledge bases, and prompt context.",
     "references": [
       {
-        "title": "NIST AI Risk Management Framework"
+        "title": "NIST AI Risk Management Framework",
+        "link": "https://www.nist.gov/itl/ai-risk-management-framework"
       }
     ],
     "keywords": [
-      "AI数据投毒者",
-      "TA0058"
+      "AI Data Poisoners"
     ]
   }
 }

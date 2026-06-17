@@ -1,17 +1,18 @@
 {
   "T0597": {
-    "title": "客户成功系统",
+    "title": "Customer Success System",
     "keywords": [
-      "客户成功系统",
-      "T0597"
+      "Customer Success System"
     ],
-    "definition": "客户成功系统 is a key business security concept.",
-    "description": "客户成功系统 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 客户成功系统 related risks and controls.",
+    "definition": "A system used to manage customer adoption, support signals, health scores, and engagement workflows.",
+    "description": "Customer Success System is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Customer Success System related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

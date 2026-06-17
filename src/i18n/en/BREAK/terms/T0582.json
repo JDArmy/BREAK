@@ -1,17 +1,18 @@
 {
   "T0582": {
-    "title": "CDN缓存键",
+    "title": "CDN Cache Key",
     "keywords": [
-      "CDN缓存键",
-      "T0582"
+      "CDN Cache Key"
     ],
-    "definition": "CDN缓存键 is a key business security concept.",
-    "description": "CDN缓存键 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess CDN缓存键 related risks and controls.",
+    "definition": "The request attributes used by a CDN to decide whether two requests map to the same cached object.",
+    "description": "CDN Cache Key is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess CDN Cache Key related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

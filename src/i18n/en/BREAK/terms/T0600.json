@@ -1,17 +1,18 @@
 {
   "T0600": {
-    "title": "客服数据泄露",
+    "title": "Customer Support Data Leakage",
     "keywords": [
-      "客服数据泄露",
-      "T0600"
+      "Customer Support Data Leakage"
     ],
-    "definition": "客服数据泄露 is a key business security concept.",
-    "description": "客服数据泄露 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 客服数据泄露 related risks and controls.",
+    "definition": "Exposure or unauthorized export of customer information contained in support, ticket, or service workflows.",
+    "description": "Customer Support Data Leakage is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Customer Support Data Leakage related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

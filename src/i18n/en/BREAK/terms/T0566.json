@@ -1,17 +1,18 @@
 {
   "T0566": {
-    "title": "落地页劫持",
+    "title": "Landing Page Hijacking",
     "keywords": [
-      "落地页劫持",
-      "T0566"
+      "Landing Page Hijacking"
     ],
-    "definition": "落地页劫持 is a key business security concept.",
-    "description": "落地页劫持 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 落地页劫持 related risks and controls.",
+    "definition": "A tactic that diverts or manipulates landing pages to capture traffic, credentials, conversions, or commissions.",
+    "description": "Landing Page Hijacking is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Landing Page Hijacking related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

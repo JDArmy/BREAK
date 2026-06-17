@@ -3,7 +3,10 @@
     "title": "Layer2 Bridge Risk",
     "definition": "Asset bridges between Layer2 scaling solutions (Rollup, sidechains) and mainchain have security vulnerabilities that may result in funds being locked or stolen.",
     "keywords": [
-      "Layer2 Bridge Risk"
+      "Layer2 Bridge Risk",
+      "Layer2 Bridge Risk pattern",
+      "Layer2 Bridge Risk indicators",
+      "Layer2 Bridge Risk mitigation"
     ],
     "references": [
       {
@@ -14,6 +17,9 @@
         "link": "https://www.certik.com/resources/blog/cross-chain-bridge-security",
         "title": "Blockchain Cross-Chain Bridge Security: Challenges, Solutions, and ..."
       }
-    ]
+    ],
+    "description": "Asset bridges between Layer2 scaling solutions (Rollup, sidechains) and mainchain have security vulnerabilities that may result in funds being locked or stolen.",
+    "complexity": "Advanced",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

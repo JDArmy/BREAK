@@ -4,6 +4,9 @@
     "definition": "Automated tools that scan smart contract source code or bytecode to identify common vulnerability patterns and security flaws.",
     "description": "Static analysis tools automatically detect security issues in smart contracts through techniques such as pattern matching, data flow analysis, and symbolic execution. Commonly used tools include Slither (static analysis based on Solidity AST), Mythril (symbolic execution and taint analysis), Securify (formal verification), and others. These tools can quickly identify common issues such as reentrancy vulnerabilities, integer overflows, unchecked external calls, and access control flaws. It is recommended to integrate them into the CI/CD pipeline during the development process to enable continuous security detection. Combining multiple tools can improve detection coverage and reduce the risk of false negatives.",
     "complexity": "Intermediate",
-    "limitation": "Static analysis is prone to false positives and false negatives; it cannot detect complex business logic vulnerabilities; its ability to detect novel attack patterns is limited; it must be used in conjunction with manual auditing."
+    "limitation": "Static analysis is prone to false positives and false negatives; it cannot detect complex business logic vulnerabilities; its ability to detect novel attack patterns is limited; it must be used in conjunction with manual auditing.",
+    "keywords": [
+      "Smart Contract Static Analysis Tools"
+    ]
   }
 }

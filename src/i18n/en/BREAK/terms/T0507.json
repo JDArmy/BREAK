@@ -1,8 +1,7 @@
 {
   "T0507": {
     "keywords": [
-      "Whaling Attack",
-      "BEC"
+      "Whaling Attack"
     ],
     "definition": "A highly targeted spear-phishing attack aimed specifically at senior executives (e.g., CEO, CFO) to steal sensitive information or authorize fraudulent high-value financial transactions.",
     "description": "Whaling attacks represent an extreme form of spear phishing where threat actors impersonate board members, business partners, or regulatory authorities to exploit the decision-making authority of C-suite executives. These attacks leverage time pressure and the executive's privileged access to induce unauthorized large-sum wire transfers or the disclosure of trade secrets and other confidential business intelligence. The average financial loss from whaling significantly exceeds that of conventional phishing campaigns, and the FBI classifies this attack vector as a primary form of Business Email Compromise (BEC) fraud.",
@@ -15,6 +14,12 @@
         "title": "What is a Whaling Attack? - Fortinet"
       }
     ],
-    "title": "Whaling Attack"
+    "title": "Whaling Attack",
+    "aliases": [
+      "Whaling Attack",
+      "Executive phishing",
+      "BEC"
+    ],
+    "category": "Business Security"
   }
 }

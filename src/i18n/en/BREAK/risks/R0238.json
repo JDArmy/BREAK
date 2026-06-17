@@ -1,16 +1,18 @@
 {
   "R0238": {
-    "title": "虚假转化与安装农场",
-    "definition": "黑灰产通过设备农场和脚本模拟注册、安装、留存和转化。",
+    "title": "Fake Conversion and Install Farm Fraud",
+    "definition": "Fraud operators use device farms and scripts to simulate registrations, installs, retention, and conversions.",
     "keywords": [
-      "虚假转化与安装农场",
-      "R0238"
+      "Fake Conversion and Install Farm Fraud"
     ],
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0",
         "link": "https://www.nist.gov/cyberframework"
       }
-    ]
+    ],
+    "description": "Fraud operators use device farms and scripts to simulate registrations, installs, retention, and conversions.",
+    "complexity": "Intermediate",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

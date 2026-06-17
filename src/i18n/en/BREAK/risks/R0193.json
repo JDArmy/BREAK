@@ -14,6 +14,9 @@
         "link": "https://www.chainalysis.com/blog/blockchain-security/",
         "title": "Blockchain Security: Preventing Threats Before They Strike"
       }
-    ]
+    ],
+    "description": "Attackers compromise blockchain development tools, SDKs, wallet plugins and other supply chain components to inject malicious code, affecting numerous downstream projects and users.",
+    "complexity": "Advanced",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

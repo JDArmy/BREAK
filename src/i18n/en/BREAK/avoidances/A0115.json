@@ -4,6 +4,9 @@
     "definition": "Implement DDoS traffic filtering and rate limiting at the network perimeter to mitigate the impact of attacks originating from compromised devices.",
     "description": "Even if a device is infected, its attack capability should be restricted. Mitigation measures include: deploying DDoS scrubbing services (e.g., Cloudflare, Akamai) at the upstream ISP or CDN layer to filter large-scale botnet attacks; setting outbound traffic quotas for individual IoT devices, with automatic rate limiting or blocking of abnormally high traffic; applying behavior-based rate limiting instead of fixed thresholds; deploying Botnet Traffic Filter (BTF) to identify and drop traffic matching botnet signatures; and integrating with threat intelligence feeds to update botnet IP blacklists in real time. This serves as the last line of defense in a defense-in-depth strategy.",
     "complexity": "Intermediate",
-    "limitation": "Cannot prevent devices from being infected, only reduces the impact; large-scale DDoS attacks may still overwhelm rate limiting; requires continuous threat intelligence updates; rate limiting may affect legitimate high-traffic applications; costs increase with traffic volume."
+    "limitation": "Cannot prevent devices from being infected, only reduces the impact; large-scale DDoS attacks may still overwhelm rate limiting; requires continuous threat intelligence updates; rate limiting may affect legitimate high-traffic applications; costs increase with traffic volume.",
+    "keywords": [
+      "IoT Botnet Traffic Filtering and Rate Limiting"
+    ]
   }
 }

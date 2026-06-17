@@ -1,15 +1,15 @@
 {
   "TA0052": {
-    "title": "供应链投毒者",
-    "description": "通过依赖包、构建链路、制品库和发布流程实施投毒的攻击者。",
+    "title": "Supply-Chain Poisoners",
+    "description": "Attackers who poison dependency packages, build chains, artifact repositories, and release processes.",
     "references": [
       {
-        "title": "Software Bill of Materials - CISA"
+        "title": "Software Bill of Materials - CISA",
+        "link": "https://www.cisa.gov/topics/information-communications-technology-supply-chain-security/sbom"
       }
     ],
     "keywords": [
-      "供应链投毒者",
-      "TA0052"
+      "Supply-Chain Poisoners"
     ]
   }
 }

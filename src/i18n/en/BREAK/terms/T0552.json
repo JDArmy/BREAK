@@ -2,16 +2,17 @@
   "T0552": {
     "title": "DPIA",
     "keywords": [
-      "DPIA",
-      "T0552"
+      "DPIA"
     ],
-    "definition": "DPIA is a key business security concept.",
-    "description": "DPIA is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess DPIA related risks and controls.",
+    "definition": "A data protection impact assessment used to evaluate high-risk personal-data processing and mitigation measures.",
+    "description": "DPIA is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess DPIA related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

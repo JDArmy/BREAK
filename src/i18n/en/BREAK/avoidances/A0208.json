@@ -1,15 +1,16 @@
 {
   "A0208": {
-    "title": "退款与争议风控策略",
-    "description": "对退款、拒付、售后和理赔建立行为模型、证据链校验和人工复核机制。",
+    "title": "Refund and Dispute Risk-Control Strategy",
+    "description": "Build behavior models, evidence-chain validation, and manual review for refunds, chargebacks, after-sales cases, and claims.",
     "references": [
       {
-        "title": "PCI Data Security Standard"
+        "title": "PCI Data Security Standard",
+        "link": "https://www.pcisecuritystandards.org/standards/pci-dss/"
       }
     ],
     "keywords": [
-      "退款与争议风控策略",
-      "A0208"
-    ]
+      "Refund and Dispute Risk-Control Strategy"
+    ],
+    "definition": "Build behavior models, evidence-chain validation, and manual review for refunds, chargebacks, after-sales cases, and claims."
   }
 }

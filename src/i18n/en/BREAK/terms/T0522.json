@@ -1,17 +1,18 @@
 {
   "T0522": {
-    "title": "影子API",
+    "title": "Shadow API",
     "keywords": [
-      "影子API",
-      "T0522"
+      "Shadow API"
     ],
-    "definition": "影子API is a key business security concept.",
-    "description": "影子API is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 影子API related risks and controls.",
+    "definition": "An undocumented, unmanaged, or deprecated API that remains reachable outside the official API inventory.",
+    "description": "Shadow API is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Shadow API related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

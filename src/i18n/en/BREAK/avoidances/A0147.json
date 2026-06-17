@@ -4,6 +4,9 @@
     "definition": "Implementing authentication and encryption for industrial protocols such as Modbus and OPC to prevent unauthorized access and tampering.",
     "description": "Industrial protocols often lack built-in security design. Hardening measures include: using encrypted versions (OPC UA, Modbus/TCP with TLS); deploying protocol gateways to filter anomalies; restricting commands via whitelisting; detecting abnormal behavior; and conducting regular audits.",
     "complexity": "Advanced",
-    "limitation": "Legacy device incompatibility; performance impact; compatibility issues."
+    "limitation": "Legacy device incompatibility; performance impact; compatibility issues.",
+    "keywords": [
+      "Industrial Protocol Security Hardening"
+    ]
   }
 }

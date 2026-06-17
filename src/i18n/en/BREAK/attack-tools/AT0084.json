@@ -1,16 +1,19 @@
 {
   "AT0084": {
     "title": "Metaverse and XR Attack Tools",
-    "description": "面向元宇宙平台、虚拟资产交易、XR设备和沉浸式社交环境的攻击工具集合。常见能力包括虚拟资产交易欺诈脚本、虚拟身份冒充、空间数据采集、XR固件漏洞利用、3D内容滥用、虚拟骚扰自动化和跨平台资产转移欺骗。",
+    "description": "Toolsets targeting metaverse platforms, virtual-asset transactions, XR devices, and immersive social environments. Common capabilities include virtual-asset transaction fraud scripts, virtual-identity impersonation, spatial-data collection, XR firmware exploitation, 3D content abuse, automated virtual harassment, and cross-platform asset-transfer deception.",
     "references": [
       {
-        "title": "OWASP Top 10 Metaverse Security Risks"
+        "title": "OWASP Top 10 Metaverse Security Risks",
+        "link": "https://owasp.org/www-project-metaverse-top-10/"
       },
       {
-        "title": "XR Safety Initiative"
+        "title": "XR Safety Initiative",
+        "link": "https://xrsafetyinitiative.org/"
       },
       {
-        "title": "NIST Cybersecurity for IoT Program"
+        "title": "NIST Cybersecurity for IoT Program",
+        "link": "https://www.nist.gov/itl/applied-cybersecurity/nist-cybersecurity-iot-program"
       }
     ],
     "keywords": [

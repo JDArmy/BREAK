@@ -1,16 +1,18 @@
 {
   "R0254": {
-    "title": "供应商远程访问滥用",
-    "definition": "第三方供应商远程运维账号、VPN或工具被盗用进入企业环境。",
+    "title": "Supplier Remote Access Abuse",
+    "definition": "Third-party supplier remote-maintenance accounts, VPNs, or tools are stolen and used to enter enterprise environments.",
     "keywords": [
-      "供应商远程访问滥用",
-      "R0254"
+      "Supplier Remote Access Abuse"
     ],
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0",
         "link": "https://www.nist.gov/cyberframework"
       }
-    ]
+    ],
+    "description": "Third-party supplier remote-maintenance accounts, VPNs, or tools are stolen and used to enter enterprise environments.",
+    "complexity": "Advanced",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

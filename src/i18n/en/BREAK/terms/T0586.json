@@ -1,17 +1,18 @@
 {
   "T0586": {
-    "title": "OTA更新",
+    "title": "OTA Update",
     "keywords": [
-      "OTA更新",
-      "T0586"
+      "OTA Update"
     ],
-    "definition": "OTA更新 is a key business security concept.",
-    "description": "OTA更新 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess OTA更新 related risks and controls.",
+    "definition": "An over-the-air software or firmware update delivered remotely to devices or vehicles.",
+    "description": "OTA Update is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess OTA Update related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

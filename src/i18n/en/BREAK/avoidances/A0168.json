@@ -10,6 +10,7 @@
         "link": "https://eips.ethereum.org/",
         "title": "Ethereum Improvement Proposals"
       }
-    ]
+    ],
+    "definition": "Security verification of transaction requests from new proposals, alerting users to potential risks."
   }
 }

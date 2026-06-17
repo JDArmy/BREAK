@@ -1,15 +1,15 @@
 {
   "TA0060": {
-    "title": "移动应用仿冒团伙",
-    "description": "重打包、分发和运营仿冒移动应用以窃取账号、广告收益或支付信息。",
+    "title": "Mobile App Impersonation Groups",
+    "description": "Groups that repackage, distribute, and operate counterfeit mobile apps to steal accounts, ad revenue, or payment information.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0"
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
       }
     ],
     "keywords": [
-      "移动应用仿冒团伙",
-      "TA0060"
+      "Mobile App Impersonation Groups"
     ]
   }
 }

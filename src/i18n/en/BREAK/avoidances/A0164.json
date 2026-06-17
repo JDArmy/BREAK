@@ -4,6 +4,9 @@
     "definition": "Establish cross-chain asset mapping relationships to track the flow of assets across different blockchains.",
     "description": "Tracking system: on-chain mapping table; cross-chain indexing; asset fingerprinting; flow path analysis; aggregate monitoring; anomaly alerting; forensic support.",
     "complexity": "Advanced",
-    "limitation": "Difficulties in cross-chain data integration; challenges in tracking privacy coins; delays in new chain integration."
+    "limitation": "Difficulties in cross-chain data integration; challenges in tracking privacy coins; delays in new chain integration.",
+    "keywords": [
+      "Multi-Chain Asset Mapping and Tracking"
+    ]
   }
 }

@@ -1,15 +1,20 @@
 {
   "A0204": {
-    "title": "云配置基线与漂移检测",
-    "description": "对云存储、网络、安全组、KMS和日志配置建立基线并检测配置漂移。",
+    "title": "Cloud Configuration Baselines and Drift Detection",
+    "description": "Establish baselines for cloud storage, network, security group, KMS, and logging configurations, and detect configuration drift.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0"
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
       }
     ],
     "keywords": [
-      "云配置基线与漂移检测",
-      "A0204"
-    ]
+      "Cloud Configuration Baselines and Drift Detection",
+      "Cloud Configuration Baselines and Drift Detection controls",
+      "Cloud Configuration Baselines and Drift Detection monitoring",
+      "Cloud Configuration Baselines and Drift Detection policy",
+      "cloud security"
+    ],
+    "definition": "Establish baselines for cloud storage, network, security group, KMS, and logging configurations, and detect configuration drift."
   }
 }

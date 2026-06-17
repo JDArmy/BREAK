@@ -1,16 +1,18 @@
 {
   "R0231": {
-    "title": "云IAM过度授权",
-    "definition": "云账号、角色或服务账号拥有超出业务需要的权限，被盗后扩大影响面。",
+    "title": "Excessive Cloud IAM Privileges",
+    "definition": "Cloud users, roles, or service accounts hold permissions beyond business need, expanding blast radius after compromise.",
     "keywords": [
-      "云IAM过度授权",
-      "R0231"
+      "Excessive Cloud IAM Privileges"
     ],
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0",
         "link": "https://www.nist.gov/cyberframework"
       }
-    ]
+    ],
+    "description": "Cloud users, roles, or service accounts hold permissions beyond business need, expanding blast radius after compromise.",
+    "complexity": "Intermediate",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

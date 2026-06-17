@@ -1,16 +1,18 @@
 {
   "R0237": {
-    "title": "广告点击注入",
-    "definition": "攻击者在安装或转化前注入虚假点击，抢占归因收益。",
+    "title": "Ad Click Injection",
+    "definition": "Attackers inject fake clicks before installation or conversion to steal attribution revenue.",
     "keywords": [
-      "广告点击注入",
-      "R0237"
+      "Ad Click Injection"
     ],
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0",
         "link": "https://www.nist.gov/cyberframework"
       }
-    ]
+    ],
+    "description": "Attackers inject fake clicks before installation or conversion to steal attribution revenue.",
+    "complexity": "Intermediate",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

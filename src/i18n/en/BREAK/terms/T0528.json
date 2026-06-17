@@ -1,17 +1,18 @@
 {
   "T0528": {
-    "title": "API网关",
+    "title": "API Gateway",
     "keywords": [
-      "API网关",
-      "T0528"
+      "API Gateway"
     ],
-    "definition": "API网关 is a key business security concept.",
-    "description": "API网关 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess API网关 related risks and controls.",
+    "definition": "An entry layer that centralizes API routing, authentication, rate limiting, logging, and policy enforcement.",
+    "description": "API Gateway is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess API Gateway related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

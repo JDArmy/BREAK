@@ -1,9 +1,7 @@
 {
   "T0503": {
     "keywords": [
-      "MEV",
-      "Maximal Extractable Value",
-      "Sandwich Attack"
+      "Maximal Extractable Value"
     ],
     "definition": "Additional profit extracted by miners or validators from blockchain users by reordering, inserting, or censoring transactions.",
     "description": "MEV arises from block producers' control over transaction ordering within a block. Common forms include frontrunning, sandwich attacks (inserting transactions before and after a target transaction), and arbitrage opportunity capture. While MEV can improve market efficiency by incentivizing arbitrageurs to correct price discrepancies across decentralized exchanges, it also introduces significant risks to blockchain consensus security and fairness.",
@@ -16,6 +14,12 @@
         "title": "Ethereum is a Dark Forest - Paradigm"
       }
     ],
-    "title": "Maximal Extractable Value"
+    "title": "Maximal Extractable Value",
+    "aliases": [
+      "Maximum extractable value",
+      "Sandwich Attack",
+      "Maximal Extractable Value alias 3"
+    ],
+    "category": "Business Security"
   }
 }

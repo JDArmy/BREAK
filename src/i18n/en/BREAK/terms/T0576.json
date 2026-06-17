@@ -1,17 +1,18 @@
 {
   "T0576": {
-    "title": "会话令牌",
+    "title": "Session Token",
     "keywords": [
-      "会话令牌",
-      "T0576"
+      "Session Token"
     ],
-    "definition": "会话令牌 is a key business security concept.",
-    "description": "会话令牌 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 会话令牌 related risks and controls.",
+    "definition": "A credential representing an authenticated session, often stored in a cookie or bearer token.",
+    "description": "Session Token is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Session Token related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

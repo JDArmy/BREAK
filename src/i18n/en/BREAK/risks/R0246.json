@@ -1,16 +1,18 @@
 {
   "R0246": {
-    "title": "MFA疲劳 Attack",
-    "definition": "攻击者持续发起MFA推送诱导用户误批准登录。",
+    "title": "MFA Fatigue Attack",
+    "definition": "Attackers repeatedly trigger MFA prompts to induce users to approve a login by mistake.",
     "keywords": [
-      "MFA疲劳 Attack",
-      "R0246"
+      "MFA Fatigue Attack"
     ],
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0",
         "link": "https://www.nist.gov/cyberframework"
       }
-    ]
+    ],
+    "description": "Attackers repeatedly trigger MFA prompts to induce users to approve a login by mistake.",
+    "complexity": "Beginner",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

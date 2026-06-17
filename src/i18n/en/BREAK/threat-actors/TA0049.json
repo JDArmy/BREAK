@@ -1,24 +1,23 @@
 {
   "TA0049": {
     "title": "Industrial and Connected Vehicle Attackers",
-    "description": "针对工业控制、车联网、医疗物联网和关键基础设施设备的攻击者，通常掌握工控协议、车载网络、医疗设备通信和传感器欺骗技术。其攻击可能导致生产中断、车辆误判、医疗设备异常、传感器数据污染或物理安全事故。",
+    "description": "Attackers targeting industrial control, connected vehicles, medical IoT, and critical infrastructure devices. They typically understand industrial protocols, in-vehicle networks, medical-device communication, and sensor spoofing. Their attacks may cause production interruption, vehicle misjudgment, medical-device abnormality, sensor-data pollution, or physical safety incidents.",
     "references": [
       {
-        "title": "MITRE ATT&CK for ICS"
+        "title": "MITRE ATT&CK for ICS",
+        "link": "https://attack.mitre.org/matrices/ics/"
       },
       {
-        "title": "OWASP Medical Device Security"
+        "title": "OWASP Medical Device Security",
+        "link": "https://owasp.org/www-project-medical-device-security/"
       },
       {
-        "title": "CISA Industrial Control Systems"
+        "title": "CISA Industrial Control Systems",
+        "link": "https://www.cisa.gov/topics/industrial-control-systems"
       }
     ],
     "keywords": [
-      "Industrial and Connected Vehicle Attackers",
-      "工控攻击者",
-      "V2X攻击者",
-      "医疗物联网攻击者",
-      "传感器欺骗攻击者"
+      "Industrial and Connected Vehicle Attackers"
     ]
   }
 }

@@ -2,16 +2,17 @@
   "T0527": {
     "title": "OpenAPI",
     "keywords": [
-      "OpenAPI",
-      "T0527"
+      "OpenAPI"
     ],
-    "definition": "OpenAPI is a key business security concept.",
-    "description": "OpenAPI is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess OpenAPI related risks and controls.",
+    "definition": "A specification format used to describe HTTP APIs, endpoints, parameters, schemas, and authentication methods.",
+    "description": "OpenAPI is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess OpenAPI related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

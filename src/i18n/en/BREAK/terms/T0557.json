@@ -1,17 +1,18 @@
 {
   "T0557": {
-    "title": "退款欺诈",
+    "title": "Refund Fraud",
     "keywords": [
-      "退款欺诈",
-      "T0557"
+      "Refund Fraud"
     ],
-    "definition": "退款欺诈 is a key business security concept.",
-    "description": "退款欺诈 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 退款欺诈 related risks and controls.",
+    "definition": "Abuse of refund, return, after-sales, or claim processes to obtain improper compensation.",
+    "description": "Refund Fraud is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Refund Fraud related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

@@ -13,6 +13,9 @@
       {
         "title": "SP 800-183, Networks of 'Things' | CSRC"
       }
-    ]
+    ],
+    "description": "Attackers compromise IoT device AI decision systems through model poisoning, adversarial examples and other means, causing misjudgment or malicious behavior.",
+    "complexity": "Advanced",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

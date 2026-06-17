@@ -1,16 +1,19 @@
 {
   "AT0078": {
     "title": "Blockchain Node and Consensus Attack Tools",
-    "description": "针对区块链P2P网络和共识层的攻击工具集合，可用于构造恶意节点、批量生成节点身份、操纵对等连接、模拟链重组、隐藏或延迟区块广播，以及在测试网或私有网络中验证51%攻击、女巫攻击、日食攻击、长程攻击和自私挖矿策略。此类工具通常需要控制节点基础设施、算力或质押资源。",
+    "description": "Toolsets targeting blockchain P2P networks and consensus layers. They can construct malicious nodes, generate many node identities, manipulate peer connections, simulate chain reorganizations, hide or delay block propagation, and validate 51 percent, Sybil, eclipse, long-range, or selfish-mining strategies in test or private networks. These tools usually require control of node infrastructure, hash power, stake weight, or network connectivity.",
     "references": [
       {
-        "title": "Bitcoin Eclipse Attacks and Countermeasures"
+        "title": "Bitcoin Eclipse Attacks and Countermeasures",
+        "link": "https://www.usenix.org/conference/usenixsecurity15/technical-sessions/presentation/heilman"
       },
       {
-        "title": "Selfish Mining in Bitcoin"
+        "title": "Selfish Mining in Bitcoin",
+        "link": "https://arxiv.org/abs/1311.0243"
       },
       {
-        "title": "Ethereum Proof-of-Stake Consensus Specifications"
+        "title": "Ethereum Proof-of-Stake Consensus Specifications",
+        "link": "https://github.com/ethereum/consensus-specs"
       }
     ],
     "keywords": [

@@ -4,6 +4,9 @@
     "definition": "Conducting rigorous third-party audits of core cross-chain bridge contracts and implementing real-time monitoring mechanisms to detect anomalous transactions.",
     "description": "Vulnerabilities in cross-chain bridge smart contracts are a primary attack vector. Protective measures include: conducting security audits by multiple independent firms prior to deployment; performing formal verification of critical functions such as locking, minting, and burning; implementing on-chain monitoring systems to detect large transfers, abnormal minting, and unexpected contract calls; setting transaction limits and rate limiting, with additional verification or time delays required for single transfers exceeding thresholds; deploying emergency pause mechanisms to quickly freeze contracts upon detecting an attack; and conducting regular code reviews and bug bounty programs.",
     "complexity": "Intermediate",
-    "limitation": "Audits cannot guarantee the discovery of all vulnerabilities, and novel attack techniques may bypass known detection methods; emergency pause mechanisms may be abused or become attack targets themselves; monitoring systems may generate false positives, impacting normal operations."
+    "limitation": "Audits cannot guarantee the discovery of all vulnerabilities, and novel attack techniques may bypass known detection methods; emergency pause mechanisms may be abused or become attack targets themselves; monitoring systems may generate false positives, impacting normal operations.",
+    "keywords": [
+      "Cross-Chain Bridge Smart Contract Auditing and Monitoring"
+    ]
   }
 }

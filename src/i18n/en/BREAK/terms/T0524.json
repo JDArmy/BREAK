@@ -2,16 +2,17 @@
   "T0524": {
     "title": "Webhook",
     "keywords": [
-      "Webhook",
-      "T0524"
+      "Webhook"
     ],
-    "definition": "Webhook is a key business security concept.",
-    "description": "Webhook is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess Webhook related risks and controls.",
+    "definition": "An event callback delivered over HTTP from one system to another when a business event occurs.",
+    "description": "Webhook is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Webhook related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

@@ -1,16 +1,18 @@
 {
   "R0252": {
-    "title": "车载数据接口滥用",
-    "definition": "车联网API、诊断接口或第三方车载应用被滥用读取位置和驾驶数据。",
+    "title": "Connected-Vehicle Data Interface Abuse",
+    "definition": "Connected-vehicle APIs, diagnostic interfaces, or third-party in-vehicle apps are abused to read location and driving data.",
     "keywords": [
-      "车载数据接口滥用",
-      "R0252"
+      "Connected-Vehicle Data Interface Abuse"
     ],
     "references": [
       {
         "title": "ISO/SAE 21434 Road vehicles Cybersecurity",
         "link": "https://www.iso.org/standard/70918.html"
       }
-    ]
+    ],
+    "description": "Connected-vehicle APIs, diagnostic interfaces, or third-party in-vehicle apps are abused to read location and driving data.",
+    "complexity": "Intermediate",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

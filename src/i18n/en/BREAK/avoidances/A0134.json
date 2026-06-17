@@ -4,6 +4,9 @@
     "definition": "Avoiding address reuse and utilizing mixing services or privacy protocols (e.g., Tornado Cash, Zcash) to conceal transaction relationships.",
     "description": "On-chain transactions are publicly transparent, and address reuse leads to privacy leakage. Protection methods include: using a new address for each transaction (automatically derived by HD wallets); using privacy coins (Monero, Zcash) for sensitive transactions; breaking address linkage through mixing services (with compliance risks noted); adopting stealth address technology so that recipient addresses cannot be associated; and avoiding linking on-chain addresses to real-world identities (KYC platforms, social media). L2BEAT privacy best practices emphasize that address reuse is the greatest privacy risk.",
     "complexity": "Basic",
-    "limitation": "Privacy protocols may be exploited for money laundering and face regulatory pressure; mixing services may exit-scam or be shut down by law enforcement; full anonymity impacts compliance and business applications; advances in chain analysis techniques may eventually compromise privacy protections."
+    "limitation": "Privacy protocols may be exploited for money laundering and face regulatory pressure; mixing services may exit-scam or be shut down by law enforcement; full anonymity impacts compliance and business applications; advances in chain analysis techniques may eventually compromise privacy protections.",
+    "keywords": [
+      "Address Obfuscation and Privacy Protocol Usage"
+    ]
   }
 }

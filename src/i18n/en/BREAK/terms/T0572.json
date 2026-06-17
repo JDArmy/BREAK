@@ -1,17 +1,18 @@
 {
   "T0572": {
-    "title": "模型输出审计",
+    "title": "Model Output Audit",
     "keywords": [
-      "模型输出审计",
-      "T0572"
+      "Model Output Audit"
     ],
-    "definition": "模型输出审计 is a key business security concept.",
-    "description": "模型输出审计 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 模型输出审计 related risks and controls.",
+    "definition": "Review and monitoring of model outputs for safety, privacy, compliance, accuracy, and policy violations.",
+    "description": "Model Output Audit is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Model Output Audit related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

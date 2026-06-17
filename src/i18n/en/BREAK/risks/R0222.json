@@ -1,16 +1,22 @@
 {
   "R0222": {
-    "title": "影子API暴露 Risk",
-    "definition": "未登记或废弃API仍可被访问，导致敏感能力绕过正式治理。",
+    "title": "Shadow API Exposure Risk",
+    "definition": "Undocumented or deprecated APIs remain reachable, allowing sensitive capabilities to bypass formal governance.",
     "keywords": [
-      "影子API暴露 Risk",
-      "R0222"
+      "Shadow API Exposure Risk",
+      "Shadow API Exposure Risk pattern",
+      "Shadow API Exposure Risk indicators",
+      "Shadow API Exposure Risk mitigation",
+      "API security"
     ],
     "references": [
       {
         "title": "OWASP API Security Top 10 2023",
         "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
       }
-    ]
+    ],
+    "description": "Undocumented or deprecated APIs remain reachable, allowing sensitive capabilities to bypass formal governance.",
+    "complexity": "Intermediate",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

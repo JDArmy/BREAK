@@ -35,6 +35,7 @@ jobs:
       - run: npm run audit:bundle:check
       - run: npm run validate:docs-build
       - run: npm run test:smoke
+      - run: npm run test:performance
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
         with:

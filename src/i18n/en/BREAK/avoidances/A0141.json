@@ -4,6 +4,9 @@
     "definition": "Decomposing complex systems into independent modules, keeping each contract simple to reduce vulnerability risks and audit difficulty.",
     "description": "Simple contracts are easier to audit and verify. Design principles: single responsibility—each contract performs only one function; modular design—composing functionality through interfaces; using audited libraries (OpenZeppelin) rather than custom implementations; avoiding over-optimization that compromises code readability; keeping functions short with clear logic; and maintaining thorough code comments and documentation. Best practices from Kaia and Dotsquares emphasize that simplicity is the foundation of security.",
     "complexity": "Basic",
-    "limitation": "Modularization increases interaction complexity between contracts; multiple contract calls incur higher gas costs; interface changes may lead to compatibility issues; excessive decomposition can hinder maintainability."
+    "limitation": "Modularization increases interaction complexity between contracts; multiple contract calls incur higher gas costs; interface changes may lead to compatibility issues; excessive decomposition can hinder maintainability.",
+    "keywords": [
+      "Modular and Minimal Contract Design"
+    ]
   }
 }

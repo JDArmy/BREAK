@@ -4,6 +4,9 @@
     "definition": "Records used signatures or message hashes, rejects reuse, and marks them as consumed immediately after verification.",
     "description": "Prevents the same signature from being used multiple times. Implementation details: Maintain a hash mapping of used signatures (used mapping); mark the signature as used immediately after successful verification; use Bloom filters to optimize storage; periodically clean up expired signature records; ensure the marking operation is non-reversible (even if subsequent logic fails). The Cyfrin Solodit checklist emphasizes that the nonce should not be rolled back after consumption.",
     "complexity": "Intermediate",
-    "limitation": "High on-chain storage costs, with large volumes of signature records consuming significant gas; requires storage cleanup to prevent unbounded growth; state synchronization delays may occur in distributed systems; improper implementation may lead to DoS."
+    "limitation": "High on-chain storage costs, with large volumes of signature records consuming significant gas; requires storage cleanup to prevent unbounded growth; state synchronization delays may occur in distributed systems; improper implementation may lead to DoS.",
+    "keywords": [
+      "Signature Consumption and State Tracking"
+    ]
   }
 }

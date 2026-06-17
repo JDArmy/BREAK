@@ -2,16 +2,9 @@
   "T0480": {
     "title": "Data Compliance",
     "keywords": [
-      "Data Compliance",
-      "data protection regulation",
-      "data governance",
-      "regulatory compliance",
-      "data localization",
-      "cross-border data transfer"
+      "Data Compliance"
     ],
-    "aliases": [
-      "Shuju Heguі"
-    ],
+    "aliases": [],
     "definition": "The organizational practices and legal obligations to collect, process, store, and transfer data in accordance with applicable privacy laws, security standards, and regulatory requirements.",
     "description": "Data compliance encompasses adherence to diverse regulatory frameworks governing how organizations handle personal and sensitive information. Key regulations include GDPR in Europe requiring consent mechanisms and data subject rights, China's Personal Information Protection Law (PIPL) and Data Security Law establishing strict data localization and security requirements, and sector-specific standards like HIPAA for healthcare and PCI DSS for payment data. Compliance obligations include obtaining valid consent for data collection, implementing appropriate technical and organizational security measures, maintaining data processing records, conducting privacy impact assessments for high-risk processing, establishing data breach notification procedures, appointing data protection officers, and implementing cross-border transfer mechanisms like Standard Contractual Clauses or Binding Corporate Rules. Non-compliance results in substantial fines (up to 4% of global revenue under GDPR), operational restrictions, reputational damage, and civil liability. Organizations require comprehensive data governance programs mapping data flows, classifying information sensitivity, implementing privacy-by-design principles, and maintaining ongoing compliance monitoring.",
     "usageExample": "A multinational corporation faced €50 million in GDPR fines for inadequate consent mechanisms, unlawful cross-border data transfers, and failure to honor data deletion requests from European users.",
@@ -24,6 +17,7 @@
         "title": "什么是数据安全合规_数据安全合规简介_数据安全合规的优势以及...",
         "link": "https://www.zhihu.com/question/605801619/answer/3520316687"
       }
-    ]
+    ],
+    "category": "Business Security"
   }
 }

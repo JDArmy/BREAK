@@ -1,17 +1,18 @@
 {
   "T0543": {
-    "title": "对象存储桶",
+    "title": "Object Storage Bucket",
     "keywords": [
-      "对象存储桶",
-      "T0543"
+      "Object Storage Bucket"
     ],
-    "definition": "对象存储桶 is a key business security concept.",
-    "description": "对象存储桶 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 对象存储桶 related risks and controls.",
+    "definition": "A logical container in cloud object storage used to hold files, snapshots, logs, and other unstructured data.",
+    "description": "Object Storage Bucket is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Object Storage Bucket related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

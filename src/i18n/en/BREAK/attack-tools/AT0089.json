@@ -1,15 +1,15 @@
 {
   "AT0089": {
-    "title": "SaaS OAuth滥用 Tool",
-    "description": "用于诱导授权、枚举SaaS权限和批量导出邮件/网盘数据的工具。",
+    "title": "SaaS OAuth Abuse Tool",
+    "description": "Tools for inducing authorization, enumerating SaaS permissions, and exporting mail or drive data at scale.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0"
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
       }
     ],
     "keywords": [
-      "SaaS OAuth滥用 Tool",
-      "AT0089"
+      "SaaS OAuth Abuse Tool"
     ]
   }
 }

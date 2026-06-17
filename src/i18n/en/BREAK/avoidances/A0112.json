@@ -4,6 +4,9 @@
     "definition": "Continuously monitor firmware integrity and use physical protection mechanisms to detect and respond to hardware-level tampering attempts.",
     "description": "Detect firmware tampering at runtime and physically protect the chip. Techniques include: periodically computing firmware hashes and comparing them against a trusted baseline; using hardware tamper switches that trigger alerts or data wiping upon physical intrusion; incorporating tamper-evident traces in PCB designs that activate protection when broken; encapsulating critical chips with epoxy resin to increase the difficulty of physical reverse engineering; and deploying Remote Attestation mechanisms to allow a remote server to verify the firmware state of the device. Applicable to high-security scenarios such as ATMs, POS terminals, and industrial control systems.",
     "complexity": "Advanced",
-    "limitation": "Physical protection increases manufacturing costs; sophisticated attackers may still bypass physical safeguards; continuous monitoring consumes additional computing resources; false positives may render the device unavailable."
+    "limitation": "Physical protection increases manufacturing costs; sophisticated attackers may still bypass physical safeguards; continuous monitoring consumes additional computing resources; false positives may render the device unavailable.",
+    "keywords": [
+      "Firmware Integrity Monitoring and Physical Tamper Resistance"
+    ]
   }
 }

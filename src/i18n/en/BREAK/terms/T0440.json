@@ -2,10 +2,7 @@
   "T0440": {
     "title": "Underground Economy",
     "keywords": [
-      "Underground Economy",
-      "Black Industry",
-      "Gray Industry",
-      "Cyber Crime Industry"
+      "Underground Economy"
     ],
     "aliases": [
       "Black Industry",
@@ -13,6 +10,7 @@
     ],
     "definition": "Underground economy refers to industrial chains that exploit network vulnerabilities or regulatory loopholes through technical means or organized operations to carry out illegal profit-making activities.",
     "description": "The underground economy is a collective term for black and gray industries on the internet. Black industry refers to clearly illegal criminal activities such as fraud, theft, and money laundering, while gray industry operates in legal gray zones, including fake transactions, bonus abuse, and data scraping. The underground economy has formed a complete industrial chain with distinct divisions of labor and high professionalization. Upstream actors provide tools and resources such as card merchants who supply payment cards, account sellers who provide bulk registered accounts, and data brokers who trade stolen credentials. Midstream operators implement specific attacks including credential stuffing to take over accounts, traffic manipulation to game platform algorithms, and direct fraud schemes targeting users. Downstream participants handle monetization through various channels and conduct money laundering to obscure the illegal origins of funds. This sophisticated ecosystem continuously evolves its techniques to evade detection and enforcement, causing severe harm to internet companies through financial losses and reputation damage, while exposing users to fraud, identity theft, and privacy violations.",
-    "usageExample": "This gang is a typical underground economy organization"
+    "usageExample": "This gang is a typical underground economy organization",
+    "category": "Business Security"
   }
 }

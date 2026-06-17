@@ -10,9 +10,10 @@
       }
     ],
     "keywords": [
-      "anonymous proxy detection",
-      "proxy fingerprinting",
-      "VPN detection"
+      "Proxy Detection",
+      "Proxy Detection controls",
+      "Proxy Detection monitoring",
+      "Proxy Detection policy"
     ]
   },
   "A0038-001": {
@@ -27,9 +28,10 @@
       }
     ],
     "keywords": [
-      "HTTP proxy detection",
-      "forward proxy detection",
-      "proxy header check"
+      "Web Access Proxy Detection",
+      "Web Access Proxy Detection controls",
+      "Web Access Proxy Detection monitoring",
+      "Web Access Proxy Detection policy"
     ]
   },
   "A0038-002": {
@@ -44,9 +46,10 @@
       }
     ],
     "keywords": [
-      "SOCKS proxy detection",
-      "VPN detection",
-      "network proxy check"
+      "Network Proxy Detection",
+      "Network Proxy Detection controls",
+      "Network Proxy Detection monitoring",
+      "Network Proxy Detection policy"
     ]
   }
 }

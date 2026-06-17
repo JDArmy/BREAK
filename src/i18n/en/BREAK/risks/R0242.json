@@ -1,16 +1,21 @@
 {
   "R0242": {
-    "title": "训练数据版权与授权 Risk",
-    "definition": "AI训练数据来源、授权或版权不清，导致合规和商业纠纷。",
+    "title": "Training Data Copyright and Authorization Risk",
+    "definition": "AI training data has unclear provenance, authorization, or copyright status, creating compliance and commercial disputes.",
     "keywords": [
-      "训练数据版权与授权 Risk",
-      "R0242"
+      "Training Data Copyright and Authorization Risk",
+      "Training Data Copyright and Authorization Risk pattern",
+      "Training Data Copyright and Authorization Risk indicators",
+      "Training Data Copyright and Authorization Risk mitigation"
     ],
     "references": [
       {
         "title": "NIST AI Risk Management Framework",
         "link": "https://www.nist.gov/itl/ai-risk-management-framework"
       }
-    ]
+    ],
+    "description": "AI training data has unclear provenance, authorization, or copyright status, creating compliance and commercial disputes.",
+    "complexity": "Intermediate",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

@@ -1,16 +1,18 @@
 {
   "R0241": {
-    "title": "隐私影响评估缺失",
-    "definition": "新业务或模型上线前未评估个人信息处理风险和合规义务。",
+    "title": "Missing Privacy Impact Assessment",
+    "definition": "New businesses or models go live without assessing personal-information processing risks and compliance obligations.",
     "keywords": [
-      "隐私影响评估缺失",
-      "R0241"
+      "Missing Privacy Impact Assessment"
     ],
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0",
         "link": "https://www.nist.gov/cyberframework"
       }
-    ]
+    ],
+    "description": "New businesses or models go live without assessing personal-information processing risks and compliance obligations.",
+    "complexity": "Beginner",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

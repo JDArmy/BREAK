@@ -1,15 +1,15 @@
 {
   "AT0086": {
-    "title": "Webhook重放 Tool",
-    "description": "用于捕获、修改和重放Webhook事件，测试签名验证和幂等处理缺陷。",
+    "title": "Webhook Replay Tool",
+    "description": "Tooling that captures, modifies, and replays webhook events to test signature verification and idempotency defects.",
     "references": [
       {
-        "title": "OWASP API Security Top 10 2023"
+        "title": "OWASP API Security Top 10 2023",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
       }
     ],
     "keywords": [
-      "Webhook重放 Tool",
-      "AT0086"
+      "Webhook Replay Tool"
     ]
   }
 }

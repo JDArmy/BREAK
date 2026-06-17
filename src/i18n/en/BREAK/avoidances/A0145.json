@@ -4,6 +4,9 @@
     "definition": "Deploy monitoring systems to detect side-channel attack attempts against devices",
     "description": "Detection measures: abnormal power consumption monitoring; physical access logging; anomalous probe signal detection; tamper-evident enclosure sensors; intrusion alarm systems.",
     "complexity": "Intermediate",
-    "limitation": "Passive defense; attackers may bypass monitoring"
+    "limitation": "Passive defense; attackers may bypass monitoring",
+    "keywords": [
+      "Side-Channel Attack Detection and Monitoring"
+    ]
   }
 }

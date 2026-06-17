@@ -1,17 +1,18 @@
 {
   "T0563": {
-    "title": "联盟营销",
+    "title": "Affiliate Marketing",
     "keywords": [
-      "联盟营销",
-      "T0563"
+      "Affiliate Marketing"
     ],
-    "definition": "联盟营销 is a key business security concept.",
-    "description": "联盟营销 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 联盟营销 related risks and controls.",
+    "definition": "A channel model in which partners are paid for referred traffic, leads, conversions, or sales.",
+    "description": "Affiliate Marketing is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Affiliate Marketing related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

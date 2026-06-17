@@ -4,6 +4,9 @@
     "definition": "Locking liquidity pool tokens in time-lock contracts and implementing vesting periods for team tokens to prevent developers from abruptly withdrawing funds.",
     "description": "Restricting malicious developer capabilities through locking mechanisms. Specific measures include: locking Liquidity Provider Tokens (LP Tokens) in third-party escrow contracts (e.g., Unicrypt, Team Finance) with a set unlock time (typically 6+ months); implementing linear vesting for team and advisor tokens, releasing them in batches rather than all at once; making lock information publicly verifiable on-chain for investor verification; using multi-signature wallets to manage team tokens to prevent single-actor malicious behavior; voluntarily renouncing contract ownership or transferring ownership to a time-lock contract. Tools such as SolidityScan can detect whether a project has implemented these protections.",
     "complexity": "Basic",
-    "limitation": "Rug pulls may still occur after the lock-up period expires, merely delaying the inevitable; developers may hold hidden tokens through other addresses; the locking contract itself may contain vulnerabilities; excessively long lock-up periods may hinder normal project operations."
+    "limitation": "Rug pulls may still occur after the lock-up period expires, merely delaying the inevitable; developers may hold hidden tokens through other addresses; the locking contract itself may contain vulnerabilities; excessively long lock-up periods may hinder normal project operations.",
+    "keywords": [
+      "Liquidity Locking and Token Vesting Schedule"
+    ]
   }
 }

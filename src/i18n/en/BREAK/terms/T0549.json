@@ -2,16 +2,17 @@
   "T0549": {
     "title": "DLP",
     "keywords": [
-      "DLP",
-      "T0549"
+      "DLP"
     ],
-    "definition": "DLP is a key business security concept.",
-    "description": "DLP is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess DLP related risks and controls.",
+    "definition": "Data loss prevention controls that detect, classify, restrict, and audit sensitive data movement.",
+    "description": "DLP is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess DLP related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

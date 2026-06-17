@@ -12,12 +12,9 @@
     ],
     "keywords": [
       "Malicious Content Detection",
-      "content moderation",
-      "UGC moderation",
-      "harmful content detection",
-      "abuse detection",
-      "trust and safety",
-      "policy enforcement"
+      "Malicious Content Detection controls",
+      "Malicious Content Detection monitoring",
+      "Malicious Content Detection policy"
     ]
   },
   "A0006-001": {
@@ -56,11 +53,9 @@
     ],
     "keywords": [
       "Automated Malicious Image Detection",
-      "image moderation",
-      "visual moderation",
-      "image abuse detection",
-      "image safety",
-      "OCR filtering"
+      "Automated Malicious Image Detection controls",
+      "Automated Malicious Image Detection monitoring",
+      "Automated Malicious Image Detection policy"
     ]
   },
   "A0006-003": {
@@ -76,10 +71,9 @@
     ],
     "keywords": [
       "Automated Malicious Audio Detection",
-      "audio moderation",
-      "voice moderation",
-      "audio abuse detection",
-      "audio safety detection"
+      "Automated Malicious Audio Detection controls",
+      "Automated Malicious Audio Detection monitoring",
+      "Automated Malicious Audio Detection policy"
     ]
   },
   "A0006-004": {
@@ -95,10 +89,9 @@
     ],
     "keywords": [
       "Automated Malicious Video Detection",
-      "video moderation",
-      "stream moderation",
-      "video abuse detection",
-      "video safety detection"
+      "Automated Malicious Video Detection controls",
+      "Automated Malicious Video Detection monitoring",
+      "Automated Malicious Video Detection policy"
     ]
   },
   "A0006-005": {
@@ -117,11 +110,9 @@
     ],
     "keywords": [
       "Automated Malicious Link Detection",
-      "malicious URL detection",
-      "phishing URL detection",
-      "URL reputation",
-      "link scanning",
-      "safe browsing"
+      "Automated Malicious Link Detection controls",
+      "Automated Malicious Link Detection monitoring",
+      "Automated Malicious Link Detection policy"
     ]
   },
   "A0006-006": {
@@ -136,11 +127,9 @@
     ],
     "keywords": [
       "Automated Malicious Document Detection",
-      "malicious document scanning",
-      "office document security",
-      "macro malware detection",
-      "document safety scanning",
-      "file inspection"
+      "Automated Malicious Document Detection controls",
+      "Automated Malicious Document Detection monitoring",
+      "Automated Malicious Document Detection policy"
     ]
   },
   "A0006-007": {
@@ -155,11 +144,9 @@
     ],
     "keywords": [
       "Automated Malicious Text Detection",
-      "text moderation",
-      "NLP moderation",
-      "harmful text detection",
-      "spam text detection",
-      "content filtering"
+      "Automated Malicious Text Detection controls",
+      "Automated Malicious Text Detection monitoring",
+      "Automated Malicious Text Detection policy"
     ]
   },
   "A0006-008": {
@@ -174,11 +161,9 @@
     ],
     "keywords": [
       "Automated AI-Generated Content Detection",
-      "AI content detection",
-      "synthetic content detection",
-      "AI-generated text detection",
-      "AI-generated image detection",
-      "deepfake detection"
+      "Automated AI-Generated Content Detection controls",
+      "Automated AI-Generated Content Detection monitoring",
+      "Automated AI-Generated Content Detection policy"
     ]
   }
 }

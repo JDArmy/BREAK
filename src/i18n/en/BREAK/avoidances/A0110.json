@@ -4,6 +4,9 @@
     "definition": "A security mechanism that ensures a device only runs trusted, untampered firmware through cryptographic signature verification.",
     "description": "Secure Boot verifies firmware integrity during device startup to prevent loading of tampered or malicious firmware. Implementation steps include: storing a hardware Root of Trust key; signing firmware images with the manufacturer's private key; verifying signatures with the public key at boot time and denying boot if verification fails; employing a layered verification approach where each stage validates the next (UEFI Secure Boot model); and using a hardware Trusted Platform Module (TPM) to store integrity measurements. This mechanism is widely deployed in critical devices such as servers, IoT devices, and routers to ensure an unbroken chain of trust from hardware to the operating system.",
     "complexity": "Advanced",
-    "limitation": "Requires hardware support (TPM or equivalent chip), increasing costs; key management is complex, as a private key compromise exposes the entire device series to risk; prevents users from installing custom firmware, limiting openness; implementation errors may render devices inoperable (bricking)."
+    "limitation": "Requires hardware support (TPM or equivalent chip), increasing costs; key management is complex, as a private key compromise exposes the entire device series to risk; prevents users from installing custom firmware, limiting openness; implementation errors may render devices inoperable (bricking).",
+    "keywords": [
+      "Firmware Secure Boot Mechanism"
+    ]
   }
 }

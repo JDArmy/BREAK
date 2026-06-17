@@ -4,6 +4,9 @@
     "definition": "A dedicated hardware device used to store and manage private keys, where keys never leave the hardware environment and all signing operations are performed within the hardware.",
     "description": "HSM represents the highest security level for protecting private keys against leakage. Private keys are generated inside the hardware and are never exported in plaintext; all signing and encryption operations are completed within the HSM, and applications can only invoke interfaces without directly accessing the private keys. HSMs feature physical protection mechanisms, where any attempt to physically tamper with the device triggers key self-destruction. They support access control and audit logging, recording all key usage. Compliant with security standards such as FIPS 140-2/140-3. Suitable for high-value scenarios such as exchange hot wallets, payment gateways, and CA certificate issuance. Cloud-based KMS offerings (e.g., AWS KMS, Azure Key Vault) represent managed forms of HSM.",
     "complexity": "Intermediate",
-    "limitation": "HSM devices are costly, with a single unit ranging from tens of thousands to hundreds of thousands of RMB. Cloud KMS charges per API call, leading to significant costs in high-frequency scenarios. Performance is constrained by hardware, and signing speeds are typically lower than software implementations. Requires additional operational maintenance and backup solutions."
+    "limitation": "HSM devices are costly, with a single unit ranging from tens of thousands to hundreds of thousands of RMB. Cloud KMS charges per API call, leading to significant costs in high-frequency scenarios. Performance is constrained by hardware, and signing speeds are typically lower than software implementations. Requires additional operational maintenance and backup solutions.",
+    "keywords": [
+      "Hardware Security Module (HSM) Private Key Storage"
+    ]
   }
 }

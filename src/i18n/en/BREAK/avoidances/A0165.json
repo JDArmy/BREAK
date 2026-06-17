@@ -4,6 +4,9 @@
     "definition": "Using professional tools such as Chainalysis to analyze suspicious transactions and addresses",
     "description": "Analysis tools: address labeling database; transaction graph; fund flow tracking; correlation analysis; risk scoring; compliance check; AML screening.",
     "complexity": "Intermediate",
-    "limitation": "High tool costs; adversarial privacy techniques; false positive issues; requires professional personnel"
+    "limitation": "High tool costs; adversarial privacy techniques; false positive issues; requires professional personnel",
+    "keywords": [
+      "Blockchain Analysis Tool Application"
+    ]
   }
 }

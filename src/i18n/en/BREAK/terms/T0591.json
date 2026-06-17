@@ -2,16 +2,17 @@
   "T0591": {
     "title": "DID",
     "keywords": [
-      "DID",
-      "T0591"
+      "DID"
     ],
-    "definition": "DID is a key business security concept.",
-    "description": "DID is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess DID related risks and controls.",
+    "definition": "A decentralized identifier that enables verifiable, self-managed digital identity without a central registry dependency.",
+    "description": "DID is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess DID related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

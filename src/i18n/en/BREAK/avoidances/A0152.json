@@ -4,6 +4,9 @@
     "definition": "Leveraging blockchain-based NFT technology to verify ownership of virtual assets and establish a traceable transaction history.",
     "description": "Blockchain-based ownership verification: NFTs record ownership; metadata stored on IPFS; publicly auditable transaction history; smart contract-managed transfers; double-spending prevention; cross-platform interoperability standards.",
     "complexity": "Intermediate",
-    "limitation": "Dependence on blockchain availability; complexity of cross-chain asset management; persistent control by centralized platforms."
+    "limitation": "Dependence on blockchain availability; complexity of cross-chain asset management; persistent control by centralized platforms.",
+    "keywords": [
+      "On-Chain Asset Ownership Verification and Traceability in the Metaverse"
+    ]
   }
 }

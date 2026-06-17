@@ -2,12 +2,7 @@
   "T0470": {
     "title": "DNS Hijacking",
     "keywords": [
-      "DNS Hijacking",
-      "DNS poisoning",
-      "DNS cache poisoning",
-      "DNS redirection",
-      "pharming",
-      "DNS spoofing"
+      "DNS Hijacking"
     ],
     "aliases": [
       "DNS Jiechi"
@@ -28,6 +23,7 @@
         "title": "https会被dns劫持么?怎么防止网站被dns劫持? - 知乎",
         "link": "https://zhuanlan.zhihu.com/p/637366489"
       }
-    ]
+    ],
+    "category": "Business Security"
   }
 }

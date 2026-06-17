@@ -1,15 +1,16 @@
 {
   "A0219": {
-    "title": "Webhook签名验证与重放保护",
-    "description": "对Webhook事件做签名校验、时间戳窗口、幂等处理和事件来源验证。",
+    "title": "Webhook Signature Verification and Replay Protection",
+    "description": "Verify webhook signatures, timestamp windows, idempotency, and event origin.",
     "references": [
       {
-        "title": "OWASP API Security Top 10 2023"
+        "title": "OWASP API Security Top 10 2023",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
       }
     ],
     "keywords": [
-      "Webhook签名验证与重放保护",
-      "A0219"
-    ]
+      "Webhook Signature Verification and Replay Protection"
+    ],
+    "definition": "Verify webhook signatures, timestamp windows, idempotency, and event origin."
   }
 }

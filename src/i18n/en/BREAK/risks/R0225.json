@@ -1,16 +1,18 @@
 {
   "R0225": {
-    "title": "Webhook伪造与事件重放",
-    "definition": "攻击者伪造或重放Webhook事件触发虚假支付、发货、授权或状态变更。",
+    "title": "Webhook Forgery and Event Replay",
+    "definition": "Attackers forge or replay webhook events to trigger false payments, shipments, authorizations, or status changes.",
     "keywords": [
-      "Webhook伪造与事件重放",
-      "R0225"
+      "Webhook Forgery and Event Replay"
     ],
     "references": [
       {
         "title": "OWASP API Security Top 10 2023",
         "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
       }
-    ]
+    ],
+    "description": "Attackers forge or replay webhook events to trigger false payments, shipments, authorizations, or status changes.",
+    "complexity": "Intermediate",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

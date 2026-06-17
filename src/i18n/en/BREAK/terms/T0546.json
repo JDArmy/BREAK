@@ -1,17 +1,18 @@
 {
   "T0546": {
-    "title": "OAuth授权",
+    "title": "OAuth Grant",
     "keywords": [
-      "OAuth授权",
-      "T0546"
+      "OAuth Grant"
     ],
-    "definition": "OAuth授权 is a key business security concept.",
-    "description": "OAuth授权 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess OAuth授权 related risks and controls.",
+    "definition": "An authorization grant that lets an application access resources on behalf of a user or tenant.",
+    "description": "OAuth Grant is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess OAuth Grant related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

@@ -1,15 +1,15 @@
 {
   "AT0087": {
-    "title": "CI/CD凭证扫描与投毒 Tool",
-    "description": "用于搜索流水线凭证、篡改构建脚本或向制品注入恶意代码的工具集合。",
+    "title": "CI/CD Credential Scanning and Poisoning Tool",
+    "description": "Toolsets for finding pipeline credentials, modifying build scripts, or injecting malicious code into artifacts.",
     "references": [
       {
-        "title": "OWASP Top 10 CI/CD Security Risks"
+        "title": "OWASP Top 10 CI/CD Security Risks",
+        "link": "https://owasp.org/www-project-top-10-ci-cd-security-risks/"
       }
     ],
     "keywords": [
-      "CI/CD凭证扫描与投毒 Tool",
-      "AT0087"
+      "CI/CD Credential Scanning and Poisoning Tool"
     ]
   }
 }

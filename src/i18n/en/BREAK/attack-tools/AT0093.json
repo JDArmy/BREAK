@@ -1,15 +1,15 @@
 {
   "AT0093": {
-    "title": "AI数据投毒与提示注入 Tool",
-    "description": "用于生成投毒样本、提示注入载荷、RAG越权检索和模型输出探测。",
+    "title": "AI Data Poisoning and Prompt Injection Tool",
+    "description": "Tooling that generates poisoning samples, prompt-injection payloads, unauthorized RAG retrieval probes, and model-output tests.",
     "references": [
       {
-        "title": "OWASP Top 10 for Large Language Model Applications"
+        "title": "OWASP Top 10 for Large Language Model Applications",
+        "link": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"
       }
     ],
     "keywords": [
-      "AI数据投毒与提示注入 Tool",
-      "AT0093"
+      "AI Data Poisoning and Prompt Injection Tool"
     ]
   }
 }

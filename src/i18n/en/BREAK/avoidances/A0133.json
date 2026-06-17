@@ -4,6 +4,9 @@
     "definition": "Monitoring anomalous activities on hashrate rental platforms and activating incident response plans when suspected 51% attack preparations are detected",
     "description": "Attackers often rent hashrate through platforms such as NiceHash to launch attacks. Defense strategies include: monitoring hashrate rental markets to detect large-scale hashrate rentals targeting the local blockchain; tracking the hashrate sources and patterns of historical 51% attacks; cooperating with rental platforms to suspend services upon detecting suspicious rental behavior; establishing community alert mechanisms for rapid response by miners and node operators; and preparing contingency plans, including temporarily increasing confirmation requirements, suspending large withdrawals, and contacting exchanges to halt deposits and withdrawals. Platforms such as Bitpanda emphasize the importance of incident response.",
     "complexity": "Intermediate",
-    "limitation": "Reliance on external data and third-party cooperation; attackers may use their own hashrate to bypass monitoring; emergency measures may impact legitimate users; not all attack vectors can be prevented"
+    "limitation": "Reliance on external data and third-party cooperation; attackers may use their own hashrate to bypass monitoring; emergency measures may impact legitimate users; not all attack vectors can be prevented",
+    "keywords": [
+      "Hashrate Rental Market Monitoring and Incident Response"
+    ]
   }
 }

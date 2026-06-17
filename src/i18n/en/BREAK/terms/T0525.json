@@ -1,17 +1,18 @@
 {
   "T0525": {
-    "title": "幂等性",
+    "title": "Idempotency",
     "keywords": [
-      "幂等性",
-      "T0525"
+      "Idempotency"
     ],
-    "definition": "幂等性 is a key business security concept.",
-    "description": "幂等性 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 幂等性 related risks and controls.",
+    "definition": "A property that allows repeated requests with the same intent to produce the same business result without duplicate side effects.",
+    "description": "Idempotency is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Idempotency related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

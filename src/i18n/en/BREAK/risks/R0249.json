@@ -1,16 +1,18 @@
 {
   "R0249": {
-    "title": "CDN缓存投毒",
-    "definition": "攻击者通过缓存键混淆、头部污染或边缘规则缺陷污染缓存内容。",
+    "title": "CDN Cache Poisoning",
+    "definition": "Attackers poison cached content through cache-key confusion, header pollution, or edge-rule defects.",
     "keywords": [
-      "CDN缓存投毒",
-      "R0249"
+      "CDN Cache Poisoning"
     ],
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0",
         "link": "https://www.nist.gov/cyberframework"
       }
-    ]
+    ],
+    "description": "Attackers poison cached content through cache-key confusion, header pollution, or edge-rule defects.",
+    "complexity": "Advanced",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

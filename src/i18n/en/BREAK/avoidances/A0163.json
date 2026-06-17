@@ -4,6 +4,9 @@
     "definition": "Collect only necessary data and restrict its usage scope to reduce the risk of data breaches",
     "description": "Data governance: minimization principle; purpose limitation; retention period; regular purging; anonymization; de-identification; privacy impact assessment.",
     "complexity": "Basic",
-    "limitation": "Conflict with business requirements; changes in regulatory requirements; purging may affect functionality"
+    "limitation": "Conflict with business requirements; changes in regulatory requirements; purging may affect functionality",
+    "keywords": [
+      "Data Minimization and Purpose Limitation"
+    ]
   }
 }

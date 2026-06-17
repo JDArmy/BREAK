@@ -1,15 +1,16 @@
 {
   "A0220": {
-    "title": "移动应用完整性与运行时防护",
-    "description": "检测重打包、Hook、调试、模拟环境和运行时篡改，保护客户端业务逻辑。",
+    "title": "Mobile App Integrity and Runtime Protection",
+    "description": "Detect repackaging, hooking, debugging, emulation, and runtime tampering to protect client-side business logic.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0"
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
       }
     ],
     "keywords": [
-      "移动应用完整性与运行时防护",
-      "A0220"
-    ]
+      "Mobile App Integrity and Runtime Protection"
+    ],
+    "definition": "Detect repackaging, hooking, debugging, emulation, and runtime tampering to protect client-side business logic."
   }
 }

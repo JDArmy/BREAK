@@ -4,6 +4,9 @@
     "definition": "A universal design approach independent of any specific blockchain, ensuring that the bridge protocol does not rely on the availability or security of a single chain.",
     "description": "Cross-chain bridges should not overly depend on the specific mechanisms of any single chain. Design principles include: protocol operation being completely independent of the operational status of a single chain; failure of the source chain should not affect asset security on the target chain; use of standardized cross-chain message formats to facilitate multi-chain integration; implementation of redundant verification mechanisms so that data from one chain can be verified by other chains; avoiding locking all assets in a single contract or on a single chain; designing an upgradeable architecture that allows rapid fixes without redeployment when issues are identified. This design enhances the system's risk resilience and long-term maintainability.",
     "complexity": "Advanced",
-    "limitation": "Chain-agnostic design increases architectural complexity and incurs higher development and testing costs; it may sacrifice some performance in exchange for generality; given the significant differences in characteristics across chains, achieving full chain agnosticism may be impractical."
+    "limitation": "Chain-agnostic design increases architectural complexity and incurs higher development and testing costs; it may sacrifice some performance in exchange for generality; given the significant differences in characteristics across chains, achieving full chain agnosticism may be impractical.",
+    "keywords": [
+      "Chain-Agnostic Design and Redundant Architecture"
+    ]
   }
 }

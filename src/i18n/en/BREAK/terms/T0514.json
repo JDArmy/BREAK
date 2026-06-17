@@ -1,7 +1,7 @@
 {
   "T0514": {
     "keywords": [
-      "Zero-day"
+      "Zero-day Vulnerability"
     ],
     "definition": "A security vulnerability that is unknown to the software vendor or the public, for which no patch is available, allowing attackers to exploit it without any existing defense.",
     "description": "The term '0-day' originates from the fact that zero days have elapsed since the vulnerability was discovered and exploited before a patch is released. These vulnerabilities are extremely dangerous because there is no known defense, enabling attackers to infiltrate systems silently and without detection. Zero-day exploits are highly sought after in underground markets and are widely used by nation-state hackers, APT groups, and cyber weapon developers. Once a zero-day vulnerability is publicly disclosed, it becomes an N-day vulnerability.",
@@ -14,6 +14,12 @@
         "title": "Microsoft Security Response Center Blog"
       }
     ],
-    "title": "Zero-day Vulnerability"
+    "title": "Zero-day Vulnerability",
+    "aliases": [
+      "Zero-day",
+      "Zero-day vulnerability",
+      "Undisclosed vulnerability"
+    ],
+    "category": "Business Security"
   }
 }

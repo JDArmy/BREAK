@@ -2,9 +2,7 @@
   "T0445": {
     "title": "Filter Bubble",
     "keywords": [
-      "Filter Bubble",
-      "Echo Chamber",
-      "Information Cocoon"
+      "Filter Bubble"
     ],
     "aliases": [
       "Echo Chamber",
@@ -12,6 +10,7 @@
     ],
     "definition": "Filter bubble refers to the phenomenon where overly personalized recommendation algorithms narrow users' information access, trapping them in homogeneous information environments.",
     "description": "The filter bubble concept originates from scholar Cass Sunstein's research on how algorithmic recommendation systems filter and push content based on users' historical behaviors, causing users to be exposed to similar information over extended periods while rarely encountering different viewpoints and diverse content. To improve user retention metrics and click-through rates, algorithms continuously recommend content aligned with user preferences, forming a positive feedback loop that leads to progressively narrowed user perspectives and deepened cognitive biases. This phenomenon can trigger several serious consequences for individuals and society. At the individual level, filter bubbles lead to group polarization where people become more extreme in their views due to lack of exposure to moderate or opposing perspectives, reduced information diversity that limits knowledge and understanding of complex issues, and impaired independent thinking abilities as users become accustomed to content that simply confirms their existing beliefs. The Algorithmic Recommendation Regulations for Internet Information Services specifically address this issue by requiring platforms to provide options not targeting personal characteristics, thereby safeguarding users' algorithmic transparency and choice rights. Breaking out of filter bubbles requires conscious effort from both platforms implementing diversification mechanisms and users actively seeking varied information sources.",
-    "usageExample": "This user lacked awareness of external changes due to long-term exposure to a filter bubble"
+    "usageExample": "This user lacked awareness of external changes due to long-term exposure to a filter bubble",
+    "category": "Business Security"
   }
 }

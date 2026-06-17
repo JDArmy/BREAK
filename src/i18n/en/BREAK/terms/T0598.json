@@ -1,17 +1,18 @@
 {
   "T0598": {
-    "title": "CRM数据",
+    "title": "CRM Data",
     "keywords": [
-      "CRM数据",
-      "T0598"
+      "CRM Data"
     ],
-    "definition": "CRM数据 is a key business security concept.",
-    "description": "CRM数据 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess CRM数据 related risks and controls.",
+    "definition": "Customer relationship management data such as contacts, account records, opportunities, notes, and interaction history.",
+    "description": "CRM Data is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess CRM Data related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

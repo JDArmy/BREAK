@@ -1,15 +1,16 @@
 {
   "A0200": {
-    "title": "构建制品签名与来源证明",
-    "description": "对构建产物、镜像和依赖生成签名、SLSA来源证明和可验证发布记录。",
+    "title": "Build Artifact Signing and Provenance",
+    "description": "Generate signatures, SLSA provenance, and verifiable release records for build outputs, images, and dependencies.",
     "references": [
       {
-        "title": "Software Bill of Materials - CISA"
+        "title": "Software Bill of Materials - CISA",
+        "link": "https://www.cisa.gov/topics/information-communications-technology-supply-chain-security/sbom"
       }
     ],
     "keywords": [
-      "构建制品签名与来源证明",
-      "A0200"
-    ]
+      "Build Artifact Signing and Provenance"
+    ],
+    "definition": "Generate signatures, SLSA provenance, and verifiable release records for build outputs, images, and dependencies."
   }
 }

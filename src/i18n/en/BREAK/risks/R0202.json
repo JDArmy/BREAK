@@ -13,6 +13,9 @@
       {
         "title": "Chainalysis: The Blockchain Data Platform"
       }
-    ]
+    ],
+    "description": "Blockchain transaction transparency allows tracking of user behavior, asset holdings and identity through MEV bot monitoring, address clustering analysis and other means.",
+    "complexity": "Intermediate",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

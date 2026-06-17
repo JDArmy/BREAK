@@ -1,8 +1,7 @@
 {
   "T0492": {
     "keywords": [
-      "DAO",
-      "Decentralized Autonomous Organization"
+      "DAO"
     ],
     "definition": "A decentralized organizational structure where rules are transparently encoded in smart contracts and governance is democratically executed through token-based voting.",
     "description": "A DAO encodes organizational rules into smart contracts, enabling all decisions to be made through token holder voting while automating fund management and execution. This structure eliminates traditional hierarchical layers, creating a trustless environment where governance is transparent and verifiable on-chain. However, DAOs face significant security challenges including governance attacks, proposal manipulation, and social engineering risks targeting multi-signature wallet signers.",
@@ -15,6 +14,10 @@
         "title": "The DAO Canon - a16z crypto"
       }
     ],
-    "title": "DAO"
+    "title": "DAO",
+    "aliases": [
+      "Decentralized autonomous organization"
+    ],
+    "category": "Business Security"
   }
 }

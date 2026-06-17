@@ -1,24 +1,23 @@
 {
   "TA0047": {
     "title": "Wallet Drainer Groups",
-    "description": "围绕加密钱包、助记词、私钥和DApp授权实施盗币活动的团伙。常通过钓鱼页面、恶意浏览器插件、Telegram Bot、虚假空投、仿冒钱包App、剪贴板劫持和恶意签名请求诱导用户泄露密钥或授权转移资产。",
+    "description": "Groups that steal crypto assets by targeting wallets, seed phrases, private keys, and DApp authorizations. They commonly use phishing pages, malicious browser extensions, Telegram bots, fake airdrops, counterfeit wallet apps, clipboard hijacking, and malicious signing requests to trick users into revealing secrets or authorizing asset transfer.",
     "references": [
       {
-        "title": "Chainalysis: Crypto Drainers"
+        "title": "Chainalysis: Crypto Drainers",
+        "link": "https://www.chainalysis.com/blog/crypto-drainers/"
       },
       {
-        "title": "MetaMask Security Center"
+        "title": "MetaMask Security Center",
+        "link": "https://support.metamask.io/privacy-and-security/staying-safe-in-web3/"
       },
       {
-        "title": "FBI Cryptocurrency Investment Fraud"
+        "title": "FBI Cryptocurrency Investment Fraud",
+        "link": "https://www.ic3.gov/"
       }
     ],
     "keywords": [
-      "Wallet Drainer Groups",
-      "钱包Drainer团伙",
-      "助记词钓鱼团伙",
-      "授权盗币",
-      "加密钱包诈骗"
+      "Wallet Drainer Groups"
     ]
   }
 }

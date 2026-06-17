@@ -1,15 +1,16 @@
 {
   "A0223": {
-    "title": "去中心化身份凭证验证",
-    "description": "验证DID、VC签发方、撤销状态和展示策略，降低身份凭证伪造风险。",
+    "title": "Decentralized Identity Credential Verification",
+    "description": "Verify DID and VC issuers, revocation status, and presentation policies to reduce credential forgery risk.",
     "references": [
       {
-        "title": "W3C Decentralized Identifiers (DIDs) v1.0"
+        "title": "W3C Decentralized Identifiers (DIDs) v1.0",
+        "link": "https://www.w3.org/TR/did-core/"
       }
     ],
     "keywords": [
-      "去中心化身份凭证验证",
-      "A0223"
-    ]
+      "Decentralized Identity Credential Verification"
+    ],
+    "definition": "Verify DID and VC issuers, revocation status, and presentation policies to reduce credential forgery risk."
   }
 }

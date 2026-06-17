@@ -1,17 +1,18 @@
 {
   "T0554": {
-    "title": "数据经纪",
+    "title": "Data Broker",
     "keywords": [
-      "数据经纪",
-      "T0554"
+      "Data Broker"
     ],
-    "definition": "数据经纪 is a key business security concept.",
-    "description": "数据经纪 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 数据经纪 related risks and controls.",
+    "definition": "An organization or individual that collects, aggregates, processes, shares, or sells data from multiple sources.",
+    "description": "Data Broker is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Data Broker related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

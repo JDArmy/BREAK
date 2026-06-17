@@ -4,6 +4,9 @@
     "definition": "Moving the majority of transactions off-chain or to Layer 2, submitting aggregated data to the main chain only when necessary, thereby reducing on-chain privacy exposure.",
     "description": "Off-chain transactions are not publicly recorded, protecting privacy. Implementation methods: using state channels such as Lightning Network and Raiden for high-frequency, small-value transactions; adopting Rollup technologies (zkRollup, Optimistic Rollup) where transaction details are not posted on-chain, only proofs are submitted; conducting privacy-sensitive operations through sidechains or L2 solutions (Arbitrum, Optimism); using off-chain order books with only final settlement recorded on-chain. Stanford research indicates that off-chain solutions can meet compliance requirements while preserving privacy.",
     "complexity": "Intermediate",
-    "limitation": "Off-chain transactions require both parties to be online or rely on third-party coordination; exit mechanisms may leak information; L2 solutions may still record transaction data; increases system complexity and user comprehension costs."
+    "limitation": "Off-chain transactions require both parties to be online or rely on third-party coordination; exit mechanisms may leak information; L2 solutions may still record transaction data; increases system complexity and user comprehension costs.",
+    "keywords": [
+      "Off-Chain Transactions and State Channels"
+    ]
   }
 }

@@ -1,16 +1,18 @@
 {
   "R0239": {
-    "title": "联盟营销佣金欺诈",
-    "definition": "渠道通过Cookie stuffing、虚假流量或劫持落地页骗取佣金。",
+    "title": "Affiliate Commission Fraud",
+    "definition": "Channels use cookie stuffing, fake traffic, or landing-page hijacking to obtain commissions improperly.",
     "keywords": [
-      "联盟营销佣金欺诈",
-      "R0239"
+      "Affiliate Commission Fraud"
     ],
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0",
         "link": "https://www.nist.gov/cyberframework"
       }
-    ]
+    ],
+    "description": "Channels use cookie stuffing, fake traffic, or landing-page hijacking to obtain commissions improperly.",
+    "complexity": "Intermediate",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

@@ -5,14 +5,50 @@
     "riskDimensions": {
       "RD06": {
         "title": "IoT Security"
+      },
+      "RD02": {
+        "title": "Operations Dimension"
+      },
+      "RD03": {
+        "title": "Identity Dimension"
+      },
+      "RD04": {
+        "title": "Adversarial Dimension"
+      },
+      "RD07": {
+        "title": "IoT and Device Dimension"
       }
     },
     "riskScenes": {
       "RS19": {
-        "title": "IoT Device & Data Security"
+        "title": "IoT Device Firmware, Identity, and Connectivity Security"
       },
       "RS20": {
-        "title": "Industrial & V2X Security"
+        "title": "Industrial, Connected-Vehicle, and Medical IoT Security"
+      },
+      "RS02": {
+        "title": "Compliance and Governance Risk"
+      },
+      "RS04": {
+        "title": "API and Automation Attack"
+      },
+      "RS06": {
+        "title": "Internal and Supply-Chain Security"
+      },
+      "RS07": {
+        "title": "Account Takeover and Identity Theft"
+      },
+      "RS09": {
+        "title": "Registration, Authentication, and Account Abuse"
+      },
+      "RS10": {
+        "title": "Endpoint, Client, and Communication Adversarial Risk"
+      },
+      "RS14": {
+        "title": "API, Cloud-Native, and Non-Human Identity Security"
+      },
+      "RS21": {
+        "title": "IoT Data, Sensor, and Edge Security"
       }
     }
   }

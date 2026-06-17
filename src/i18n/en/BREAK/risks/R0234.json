@@ -1,16 +1,18 @@
 {
   "R0234": {
-    "title": "商户套现与虚假交易",
-    "definition": "商户通过虚假订单、循环交易或异常退款进行套现和资金转移。",
+    "title": "Merchant Cash-Out and Fake Transaction Fraud",
+    "definition": "Merchants use fake orders, circular transactions, or abnormal refunds to cash out and transfer funds.",
     "keywords": [
-      "商户套现与虚假交易",
-      "R0234"
+      "Merchant Cash-Out and Fake Transaction Fraud"
     ],
     "references": [
       {
         "title": "PCI Data Security Standard",
         "link": "https://www.pcisecuritystandards.org/standards/pci-dss/"
       }
-    ]
+    ],
+    "description": "Merchants use fake orders, circular transactions, or abnormal refunds to cash out and transfer funds.",
+    "complexity": "Intermediate",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

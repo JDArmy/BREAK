@@ -4,6 +4,9 @@
     "definition": "Utilizing zero-knowledge proof technology to verify transaction validity without revealing transaction details, thereby achieving on-chain privacy protection.",
     "description": "ZK technology proves the truth of a statement without disclosing the underlying information. Application approaches: zk-SNARKs prove sufficient account balance without exposing the specific amount; zk-STARKs enable private smart contracts where execution results are verifiable but the process remains confidential; use privacy-focused smart contract platforms such as Aztec and Secret Network; implement a balanced approach to regulatory compliance by providing audit keys to oversight authorities. Research by Chainlink indicates that ZK is a key technology for achieving both on-chain privacy and compliance.",
     "complexity": "Advanced",
-    "limitation": "ZK proof generation is computationally intensive, resulting in high Gas costs; high technical complexity makes development and auditing difficult; potential conflicts with existing regulatory frameworks; the privacy contract ecosystem is still immature."
+    "limitation": "ZK proof generation is computationally intensive, resulting in high Gas costs; high technical complexity makes development and auditing difficult; potential conflicts with existing regulatory frameworks; the privacy contract ecosystem is still immature.",
+    "keywords": [
+      "Zero-Knowledge Proofs and On-Chain Privacy Contracts"
+    ]
   }
 }

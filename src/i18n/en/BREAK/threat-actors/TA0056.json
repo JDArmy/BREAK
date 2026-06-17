@@ -1,15 +1,15 @@
 {
   "TA0056": {
-    "title": "广告归因作弊团伙",
-    "description": "通过安装农场、点击注入和虚假转化骗取广告预算或佣金。",
+    "title": "Ad Attribution Fraud Groups",
+    "description": "Groups that use install farms, click injection, and fake conversions to steal ad budgets or commissions.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0"
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
       }
     ],
     "keywords": [
-      "广告归因作弊团伙",
-      "TA0056"
+      "Ad Attribution Fraud Groups"
     ]
   }
 }

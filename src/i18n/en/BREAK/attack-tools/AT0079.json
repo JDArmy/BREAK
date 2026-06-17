@@ -1,16 +1,19 @@
 {
   "AT0079": {
     "title": "Wallet Phishing and Drainer Tools",
-    "description": "面向加密钱包用户的钓鱼和授权盗币工具，通常伪装成空投、NFT铸造、DApp登录、交易签名确认或EIP授权页面，诱导用户泄露助记词、私钥或签署恶意授权交易。高级工具会结合Telegram Bot、仿冒钱包插件、剪贴板劫持、恶意DApp前端和链上监控，自动转移被授权资产。",
+    "description": "Phishing and authorization-drainer tools targeting crypto wallet users. They commonly impersonate airdrops, NFT mints, DApp logins, transaction confirmations, or EIP authorization pages to trick users into revealing seed phrases, private keys, or signing malicious approvals. Advanced kits combine Telegram bots, fake wallet extensions, clipboard hijacking, malicious DApp frontends, and on-chain monitoring to automatically transfer authorized assets.",
     "references": [
       {
-        "title": "MetaMask Security: Protect your wallet"
+        "title": "MetaMask Security: Protect your wallet",
+        "link": "https://support.metamask.io/privacy-and-security/staying-safe-in-web3/"
       },
       {
-        "title": "Wallet drainers and approval phishing overview"
+        "title": "Wallet drainers and approval phishing overview",
+        "link": "https://www.chainalysis.com/blog/crypto-drainers/"
       },
       {
-        "title": "EIP-712 Typed structured data hashing and signing"
+        "title": "EIP-712 Typed structured data hashing and signing",
+        "link": "https://eips.ethereum.org/EIPS/eip-712"
       }
     ],
     "keywords": [

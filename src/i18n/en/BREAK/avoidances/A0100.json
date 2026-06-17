@@ -4,6 +4,9 @@
     "definition": "Implement reentrancy protection mechanisms to prevent bypassing security checks through reentrant calls during flash loan execution.",
     "description": "Flash loan attacks are often combined with reentrancy vulnerabilities, where the attacker re-calls contract functions within callback functions. Protective measures include: using OpenZeppelin's ReentrancyGuard modifier; adopting the Checks-Effects-Interactions pattern to complete state updates before making external calls; employing mutex lock mechanisms to prevent function reentrancy; and marking critical functions with the nonReentrant modifier. Implementation requires adding protection to all functions involving external calls and state changes to ensure state consistency.",
     "complexity": "Intermediate",
-    "limitation": "Only protects against reentrancy attacks and cannot defend against other types of flash loan attacks; requires developers to correctly identify all functions that need protection; may increase gas consumption."
+    "limitation": "Only protects against reentrancy attacks and cannot defend against other types of flash loan attacks; requires developers to correctly identify all functions that need protection; may increase gas consumption.",
+    "keywords": [
+      "Reentrancy Attack Protection"
+    ]
   }
 }

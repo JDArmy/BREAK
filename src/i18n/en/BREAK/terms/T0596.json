@@ -1,17 +1,18 @@
 {
   "T0596": {
-    "title": "第三方运维",
+    "title": "Third-Party Operations",
     "keywords": [
-      "第三方运维",
-      "T0596"
+      "Third-Party Operations"
     ],
-    "definition": "第三方运维 is a key business security concept.",
-    "description": "第三方运维 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 第三方运维 related risks and controls.",
+    "definition": "Operational activities performed by external service providers, integrators, or maintenance teams.",
+    "description": "Third-Party Operations is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Third-Party Operations related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

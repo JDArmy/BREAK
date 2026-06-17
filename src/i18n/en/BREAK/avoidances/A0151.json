@@ -4,6 +4,9 @@
     "definition": "A strategy of deploying updates through small-scale pilots and gradual rollout to minimize the impact of batch update failures or malicious updates.",
     "description": "Cautious deployment strategy: small-scale canary testing; monitoring the status of updated devices; emergency suspension in case of anomalies; A/B testing; automatic rollback mechanism; user-selectable update timing.",
     "complexity": "Intermediate",
-    "limitation": "Extended deployment cycle; high management complexity; slow response to emergency updates."
+    "limitation": "Extended deployment cycle; high management complexity; slow response to emergency updates.",
+    "keywords": [
+      "Phased OTA Deployment and Canary Release"
+    ]
   }
 }

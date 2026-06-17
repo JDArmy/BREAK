@@ -1,15 +1,16 @@
 {
   "A0214": {
-    "title": "模型输出安全评估",
-    "description": "对模型输出进行有害内容、隐私泄露、幻觉、偏见和越权建议评估。",
+    "title": "Model Output Safety Evaluation",
+    "description": "Evaluate model outputs for harmful content, privacy leakage, hallucination, bias, and unauthorized advice.",
     "references": [
       {
-        "title": "NIST AI Risk Management Framework"
+        "title": "NIST AI Risk Management Framework",
+        "link": "https://www.nist.gov/itl/ai-risk-management-framework"
       }
     ],
     "keywords": [
-      "模型输出安全评估",
-      "A0214"
-    ]
+      "Model Output Safety Evaluation"
+    ],
+    "definition": "Evaluate model outputs for harmful content, privacy leakage, hallucination, bias, and unauthorized advice."
   }
 }

@@ -4,6 +4,9 @@
     "definition": "The use of mathematical methods to rigorously prove the correctness of smart contract code, ensuring that the contract's behavior conforms to its intended specification.",
     "description": "Formal verification provides the highest level of assurance for smart contract security by validating correctness through mathematical proofs rather than testing. The verification process involves: defining formal specifications (describing what the contract should do using mathematical logic), constructing formal models, and verifying properties using theorem proving or model checking tools. It can prove critical properties such as fund conservation, state consistency, and permission correctness. Commonly used tools include the K Framework, Coq, Isabelle, and others. Formal verification is particularly suitable for high-value contracts (e.g., core DeFi protocol contracts, cross-chain bridge contracts) and the verification of critical security properties.",
     "complexity": "Advanced",
-    "limitation": "Requires deep expertise in mathematics and formal methods; the verification process is complex and extremely costly; can only verify explicitly defined properties and cannot cover all possible security issues; the learning curve for verification tools is steep."
+    "limitation": "Requires deep expertise in mathematics and formal methods; the verification process is complex and extremely costly; can only verify explicitly defined properties and cannot cover all possible security issues; the learning curve for verification tools is steep.",
+    "keywords": [
+      "Formal Verification of Smart Contracts"
+    ]
   }
 }

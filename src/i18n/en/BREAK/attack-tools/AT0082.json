@@ -1,16 +1,19 @@
 {
   "AT0082": {
     "title": "IoT Botnet and C2 Tools",
-    "description": "用于感染、控制和调度大量物联网设备的恶意软件与命令控制工具。此类工具常扫描弱口令或已知漏洞设备，植入轻量级恶意程序，通过C2服务器下发DDoS、挖矿、代理转发或横向移动任务，并可篡改设备数据或阻断正常服务。",
+    "description": "Malware and command-and-control tools used to infect, control, and schedule large numbers of IoT devices. They commonly scan for weak passwords or known vulnerabilities, deploy lightweight malware, and issue DDoS, mining, proxy, or lateral-movement tasks through C2 servers. They may also tamper with device data or disrupt normal service.",
     "references": [
       {
-        "title": "Mirai Botnet source code"
+        "title": "Mirai Botnet source code",
+        "link": "https://github.com/jgamblin/Mirai-Source-Code"
       },
       {
-        "title": "CISA Securing Internet of Things Devices"
+        "title": "CISA Securing Internet of Things Devices",
+        "link": "https://www.cisa.gov/resources-tools/resources/securing-internet-things-iot-devices"
       },
       {
-        "title": "ENISA Baseline Security Recommendations for IoT"
+        "title": "ENISA Baseline Security Recommendations for IoT",
+        "link": "https://www.enisa.europa.eu/publications/baseline-security-recommendations-for-iot"
       }
     ],
     "keywords": [

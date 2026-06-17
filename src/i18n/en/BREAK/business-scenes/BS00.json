@@ -15,70 +15,101 @@
         "title": "Adversarial Dimension"
       },
       "RD05": {
-        "title": "Blockchain Security"
+        "title": "AI and Data Dimension"
       },
       "RD06": {
-        "title": "IoT Security"
+        "title": "Blockchain and Virtual Asset Dimension"
       },
       "RD07": {
-        "title": "Metaverse Security"
+        "title": "IoT and Device Dimension"
+      },
+      "RD08": {
+        "title": "Metaverse and Spatial Computing Dimension"
       }
     },
     "riskScenes": {
       "RS01": {
-        "title": "Marketing Risk"
+        "title": "Marketing and Growth Fraud"
       },
       "RS02": {
-        "title": "Compliance Risk"
+        "title": "Compliance and Governance Risk"
       },
       "RS03": {
-        "title": "Customer Risk"
+        "title": "Customer and Resource Abuse"
       },
       "RS04": {
-        "title": "Illegal Request Risk"
+        "title": "API and Automation Attack"
       },
       "RS05": {
-        "title": "Content Risk"
+        "title": "Content and Community Governance"
       },
       "RS06": {
-        "title": "Internal Risk"
+        "title": "Internal and Supply-Chain Security"
       },
       "RS07": {
-        "title": "Identity Theft Risk"
+        "title": "Account Takeover and Identity Theft"
       },
       "RS08": {
-        "title": "Payment/Financial Risk"
+        "title": "Payment, Funding, and Financial Fraud"
       },
       "RS09": {
-        "title": "Identity Verification Risk"
+        "title": "Registration, Authentication, and Account Abuse"
       },
       "RS10": {
-        "title": "Endpoint Adversarial Risk"
+        "title": "Endpoint, Client, and Communication Adversarial Risk"
       },
       "RS11": {
-        "title": "Merchant Risk"
+        "title": "Merchant, Supplier, and Fulfillment-Party Risk"
       },
       "RS12": {
-        "title": "Web3 Ecosystem Attacks"
+        "title": "Game and Virtual Entitlement Risk"
       },
       "RS15": {
-        "title": "Smart Contract & DeFi Security"
+        "title": "Smart Contract and DeFi Security"
       },
       "RS17": {
-        "title": "Blockchain Infrastructure Security"
+        "title": "Blockchain Infrastructure and Consensus Security"
       },
       "RS19": {
-        "title": "IoT Device & Data Security"
+        "title": "IoT Device Firmware, Identity, and Connectivity Security"
       },
       "RS20": {
-        "title": "Industrial & V2X Security"
+        "title": "Industrial, Connected-Vehicle, and Medical IoT Security"
       },
       "RS22": {
-        "title": "Virtual Asset Fraud"
+        "title": "Virtual Asset and Economic Fraud"
       },
       "RS23": {
-        "title": "VR/AR & Virtual World Risks"
+        "title": "Virtual Identity, XR, and Immersive Content Security"
+      },
+      "RS13": {
+        "title": "AI Model, Agent, and Data Security"
+      },
+      "RS14": {
+        "title": "API, Cloud-Native, and Non-Human Identity Security"
+      },
+      "RS16": {
+        "title": "Wallet, Key, and Signing Authorization Risk"
+      },
+      "RS18": {
+        "title": "On-Chain Privacy, NFT, and Virtual Asset Trading"
+      },
+      "RS21": {
+        "title": "IoT Data, Sensor, and Edge Security"
+      },
+      "RS24": {
+        "title": "Booking, Ticketing, and Inventory Resource Abuse"
+      },
+      "RS25": {
+        "title": "After-Sales, Refund, and Claims Abuse"
+      },
+      "RS26": {
+        "title": "Algorithm, Pricing, and Platform Governance"
+      },
+      "RS27": {
+        "title": "Location, Trajectory, and Spatial Data Fraud"
       }
-    }
+    },
+    "description": "All BREAK business security scenarios and cross-domain risk dimensions."
   }
 }

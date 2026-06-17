@@ -1,17 +1,18 @@
 {
   "T0555": {
-    "title": "支付令牌化",
+    "title": "Payment Tokenization",
     "keywords": [
-      "支付令牌化",
-      "T0555"
+      "Payment Tokenization"
     ],
-    "definition": "支付令牌化 is a key business security concept.",
-    "description": "支付令牌化 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 支付令牌化 related risks and controls.",
+    "definition": "A payment protection technique that replaces sensitive card or account data with a tokenized substitute.",
+    "description": "Payment Tokenization is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Payment Tokenization related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

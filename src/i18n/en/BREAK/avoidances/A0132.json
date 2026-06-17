@@ -4,6 +4,12 @@
     "definition": "Restrict the number of consecutive blocks produced by a single miner and monitor chain reorganization behavior to promptly detect signs of a 51% attack.",
     "description": "Detect and limit an attacker's ability to control the chain. Technical implementation: restrict the number of consecutive blocks produced by the same miner/validator (e.g., no more than 3 consecutive blocks); monitor the depth and frequency of chain reorganizations, triggering alerts when thresholds are exceeded; track the number of confirmations for large transactions to detect double-spend attempts; exchanges and payment processors increase confirmation requirements (e.g., from 6 to 50+); deploy real-time monitoring systems to detect sudden concentration of hash power. Research by MIT DCI indicates that consecutive block limits can significantly increase the difficulty of attacks.",
     "complexity": "Intermediate",
-    "limitation": "Limiting consecutive blocks may affect network efficiency; increasing confirmation requirements degrades user experience; monitoring systems may generate false positives; cannot prevent attacks, only delay detection."
+    "limitation": "Limiting consecutive blocks may affect network efficiency; increasing confirmation requirements degrades user experience; monitoring systems may generate false positives; cannot prevent attacks, only delay detection.",
+    "keywords": [
+      "Consecutive Block Limit and Reorganization Detection",
+      "Consecutive Block Limit and Reorganization Detection controls",
+      "Consecutive Block Limit and Reorganization Detection monitoring",
+      "Consecutive Block Limit and Reorganization Detection policy"
+    ]
   }
 }

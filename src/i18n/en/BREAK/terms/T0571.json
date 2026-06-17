@@ -1,17 +1,18 @@
 {
   "T0571": {
-    "title": "训练数据投毒",
+    "title": "Training Data Poisoning",
     "keywords": [
-      "训练数据投毒",
-      "T0571"
+      "Training Data Poisoning"
     ],
-    "definition": "训练数据投毒 is a key business security concept.",
-    "description": "训练数据投毒 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 训练数据投毒 related risks and controls.",
+    "definition": "Manipulation of training, feedback, or labeling data to influence model behavior.",
+    "description": "Training Data Poisoning is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Training Data Poisoning related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

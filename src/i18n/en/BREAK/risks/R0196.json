@@ -14,6 +14,9 @@
         "link": "https://ethereum.org/en/roadmap/security/",
         "title": "Ethereum Quantum Resistance Roadmap"
       }
-    ]
+    ],
+    "description": "Quantum computers may break the Elliptic Curve Cryptography (ECC) used by blockchains before 2028, threatening private key security and transaction integrity.",
+    "complexity": "Advanced",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

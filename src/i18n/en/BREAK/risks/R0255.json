@@ -1,16 +1,18 @@
 {
   "R0255": {
-    "title": "客户成功与客服工单数据泄露",
-    "definition": "客服、CRM或工单系统中客户隐私、密钥、截图和业务信息被越权访问或外发。",
+    "title": "Customer Success and Support Ticket Data Leakage",
+    "definition": "Customer privacy data, keys, screenshots, and business information in support, CRM, or ticket systems are accessed or exported without authorization.",
     "keywords": [
-      "客户成功与客服工单数据泄露",
-      "R0255"
+      "Customer Success and Support Ticket Data Leakage"
     ],
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0",
         "link": "https://www.nist.gov/cyberframework"
       }
-    ]
+    ],
+    "description": "Customer privacy data, keys, screenshots, and business information in support, CRM, or ticket systems are accessed or exported without authorization.",
+    "complexity": "Intermediate",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

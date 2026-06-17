@@ -1,17 +1,18 @@
 {
   "T0581": {
-    "title": "运行时防护",
+    "title": "Runtime Protection",
     "keywords": [
-      "运行时防护",
-      "T0581"
+      "Runtime Protection"
     ],
-    "definition": "运行时防护 is a key business security concept.",
-    "description": "运行时防护 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 运行时防护 related risks and controls.",
+    "definition": "Controls that detect or resist tampering, hooking, debugging, emulation, and runtime manipulation.",
+    "description": "Runtime Protection is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Runtime Protection related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

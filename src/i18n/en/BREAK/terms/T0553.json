@@ -1,17 +1,18 @@
 {
   "T0553": {
-    "title": "用途限制",
+    "title": "Purpose Limitation",
     "keywords": [
-      "用途限制",
-      "T0553"
+      "Purpose Limitation"
     ],
-    "definition": "用途限制 is a key business security concept.",
-    "description": "用途限制 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 用途限制 related risks and controls.",
+    "definition": "A privacy principle requiring data to be used only for specified, explicit, and legitimate purposes.",
+    "description": "Purpose Limitation is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Purpose Limitation related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

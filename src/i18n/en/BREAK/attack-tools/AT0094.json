@@ -1,15 +1,15 @@
 {
   "AT0094": {
-    "title": "MFA轰炸与会话劫持 Tool",
-    "description": "用于MFA疲劳攻击、Cookie窃取、Token重放和会话接管。",
+    "title": "MFA Bombing and Session Hijacking Tool",
+    "description": "Tools for MFA fatigue attacks, cookie theft, token replay, and session takeover.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0"
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
       }
     ],
     "keywords": [
-      "MFA轰炸与会话劫持 Tool",
-      "AT0094"
+      "MFA Bombing and Session Hijacking Tool"
     ]
   }
 }

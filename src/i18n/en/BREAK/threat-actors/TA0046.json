@@ -1,24 +1,23 @@
 {
   "TA0046": {
     "title": "Malicious Blockchain Node Operators",
-    "description": "控制区块链节点、矿池、验证者或大量伪造节点身份以影响P2P网络和共识过程的行为者。其行为包括女巫攻击、日食攻击、链重组、长程攻击、自私挖矿、51%攻击和交易重放利用，通常需要节点资源、算力、质押权重或网络连接控制能力。",
+    "description": "Actors who control blockchain nodes, mining pools, validators, or large numbers of forged node identities to influence P2P networks and consensus processes. Their behaviors include Sybil attacks, eclipse attacks, chain reorganizations, long-range attacks, selfish mining, 51 percent attacks, and transaction-replay abuse, often requiring node resources, hash power, stake weight, or network connectivity control.",
     "references": [
       {
-        "title": "Bitcoin Eclipse Attacks and Countermeasures"
+        "title": "Bitcoin Eclipse Attacks and Countermeasures",
+        "link": "https://www.usenix.org/conference/usenixsecurity15/technical-sessions/presentation/heilman"
       },
       {
-        "title": "Selfish Mining in Bitcoin"
+        "title": "Selfish Mining in Bitcoin",
+        "link": "https://arxiv.org/abs/1311.0243"
       },
       {
-        "title": "Ethereum Proof-of-Stake Consensus Specifications"
+        "title": "Ethereum Proof-of-Stake Consensus Specifications",
+        "link": "https://github.com/ethereum/consensus-specs"
       }
     ],
     "keywords": [
-      "Malicious Blockchain Node Operators",
-      "恶意验证者",
-      "恶意矿工",
-      "女巫节点运营者",
-      "共识攻击者"
+      "Malicious Blockchain Node Operators"
     ]
   }
 }

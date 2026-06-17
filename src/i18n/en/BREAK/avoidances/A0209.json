@@ -1,15 +1,16 @@
 {
   "A0209": {
-    "title": "广告投放与归因反作弊",
-    "description": "识别虚假曝光、点击注入、归因劫持、安装农场和异常转化链路。",
+    "title": "Ad Delivery and Attribution Anti-Fraud",
+    "description": "Detect fake impressions, click injection, attribution hijacking, install farms, and abnormal conversion chains.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0"
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
       }
     ],
     "keywords": [
-      "广告投放与归因反作弊",
-      "A0209"
-    ]
+      "Ad Delivery and Attribution Anti-Fraud"
+    ],
+    "definition": "Detect fake impressions, click injection, attribution hijacking, install farms, and abnormal conversion chains."
   }
 }

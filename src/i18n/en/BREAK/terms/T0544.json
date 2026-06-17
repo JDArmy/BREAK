@@ -1,17 +1,18 @@
 {
   "T0544": {
-    "title": "配置漂移",
+    "title": "Configuration Drift",
     "keywords": [
-      "配置漂移",
-      "T0544"
+      "Configuration Drift"
     ],
-    "definition": "配置漂移 is a key business security concept.",
-    "description": "配置漂移 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 配置漂移 related risks and controls.",
+    "definition": "A deviation between the actual runtime configuration and the approved security or operations baseline.",
+    "description": "Configuration Drift is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Configuration Drift related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

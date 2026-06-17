@@ -1,17 +1,18 @@
 {
   "T0561": {
-    "title": "点击注入",
+    "title": "Click Injection",
     "keywords": [
-      "点击注入",
-      "T0561"
+      "Click Injection"
     ],
-    "definition": "点击注入 is a key business security concept.",
-    "description": "点击注入 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 点击注入 related risks and controls.",
+    "definition": "A mobile attribution fraud technique that inserts fake clicks shortly before conversion to steal credit.",
+    "description": "Click Injection is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Click Injection related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

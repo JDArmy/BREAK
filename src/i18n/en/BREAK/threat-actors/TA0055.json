@@ -1,15 +1,15 @@
 {
   "TA0055": {
-    "title": "支付欺诈团伙",
-    "description": "围绕商户套现、拒付、退款和支付令牌滥用牟利的黑灰产团伙。",
+    "title": "Payment Fraud Groups",
+    "description": "Fraud groups that profit from merchant cash-out, chargebacks, refunds, and payment-token abuse.",
     "references": [
       {
-        "title": "PCI Data Security Standard"
+        "title": "PCI Data Security Standard",
+        "link": "https://www.pcisecuritystandards.org/standards/pci-dss/"
       }
     ],
     "keywords": [
-      "支付欺诈团伙",
-      "TA0055"
+      "Payment Fraud Groups"
     ]
   }
 }

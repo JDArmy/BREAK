@@ -4,6 +4,9 @@
     "definition": "Raising the economic and technical barriers to 51% attacks by increasing computational power/staking requirements and improving consensus mechanisms.",
     "description": "The feasibility of a 51% attack depends on the cost-to-benefit ratio. Defensive measures include: PoW chains increasing total hash power to make it difficult for attackers to acquire 51% of the computational power; PoS chains requiring high staking thresholds, forcing attackers to control a large number of tokens while facing slashing risks; adopting hybrid consensus (PoW+PoS) or Delegated Proof of Stake (DPoS) to decentralize control; implementing checkpoint mechanisms to periodically finalize blocks and prevent deep rollbacks; deploying slashing mechanisms that confiscate staked assets upon detecting malicious behavior. Bitcoin is largely immune to 51% attacks due to its immense hash power, but smaller PoW coins remain vulnerable.",
     "complexity": "Advanced",
-    "limitation": "Raising the barrier also increases network participation costs; it cannot completely eliminate the possibility of attacks; large mining pools or exchanges may accumulate sufficient control; centralization risks in PoS staking."
+    "limitation": "Raising the barrier also increases network participation costs; it cannot completely eliminate the possibility of attacks; large mining pools or exchanges may accumulate sufficient control; centralization risks in PoS staking.",
+    "keywords": [
+      "Increasing Consensus Algorithm Attack Costs"
+    ]
   }
 }

@@ -1,16 +1,18 @@
 {
   "R0230": {
-    "title": "云存储桶公开暴露",
-    "definition": "对象存储或快照被错误配置为公开访问，造成数据泄露。",
+    "title": "Public Cloud Storage Bucket Exposure",
+    "definition": "Object storage buckets or snapshots are misconfigured for public access, causing data leakage.",
     "keywords": [
-      "云存储桶公开暴露",
-      "R0230"
+      "Public Cloud Storage Bucket Exposure"
     ],
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0",
         "link": "https://www.nist.gov/cyberframework"
       }
-    ]
+    ],
+    "description": "Object storage buckets or snapshots are misconfigured for public access, causing data leakage.",
+    "complexity": "Beginner",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

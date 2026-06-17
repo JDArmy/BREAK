@@ -2,15 +2,11 @@
   "T0461": {
     "title": "CAPTCHA Solving Service",
     "keywords": [
-      "CAPTCHA Solving Service",
-      "CAPTCHA bypass",
-      "human verification farm",
-      "OCR solving service",
-      "anti-bot circumvention",
-      "verification code breaking"
+      "CAPTCHA Solving Service"
     ],
     "aliases": [
-      "Dama Platform"
+      "Dama Platform",
+      "CAPTCHA Solving Service alias 2"
     ],
     "definition": "Commercial services that provide automated or human-powered solutions to bypass CAPTCHA challenges, enabling bots and scrapers to circumvent anti-automation protections on websites and applications.",
     "description": "CAPTCHA solving services operate as intermediary platforms connecting clients who need CAPTCHAs solved with either AI-powered OCR systems or crowdsourced human workers in low-wage regions. These services offer APIs that seamlessly integrate into automation scripts, accepting CAPTCHA images and returning solved text within seconds. Advanced platforms support multiple CAPTCHA types including text recognition, reCAPTCHA v2/v3, hCaptcha, image classification challenges, and slider puzzles. Pricing is typically per-solve with volume discounts, ranging from $0.50 to $3 per 1,000 solves. While marketed as tools for testing and accessibility, these services are predominantly used by scalpers, account farmers, credential stuffers, and web scrapers to defeat security controls. The existence of these services creates an asymmetry where defense mechanisms are systematically bypassed through economic outsourcing.",
@@ -28,6 +24,7 @@
         "title": "【Python爬虫--scrapy+selenium框架】超详细的Python爬虫scrapy+selenium...",
         "link": "https://blog.csdn.net/m0_67844671/article/details/139361507"
       }
-    ]
+    ],
+    "category": "Business Security"
   }
 }

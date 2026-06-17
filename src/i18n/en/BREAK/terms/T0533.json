@@ -1,17 +1,18 @@
 {
   "T0533": {
-    "title": "制品库",
+    "title": "Artifact Repository",
     "keywords": [
-      "制品库",
-      "T0533"
+      "Artifact Repository"
     ],
-    "definition": "制品库 is a key business security concept.",
-    "description": "制品库 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 制品库 related risks and controls.",
+    "definition": "A repository that stores build outputs, packages, container images, and release artifacts.",
+    "description": "Artifact Repository is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Artifact Repository related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

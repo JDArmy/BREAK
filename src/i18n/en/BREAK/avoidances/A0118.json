@@ -4,6 +4,9 @@
     "definition": "Using PKI certificates or hardware security keys instead of username and password combinations to fundamentally eliminate password-related risks.",
     "description": "Modern authentication methods prevent password guessing or credential leakage. Implementation approach: Issue a unique X.509 certificate to each device, authenticating with the certificate instead of a password at device startup; use hardware security keys (such as FIDO2 devices) for two-factor authentication; deploy a PKI infrastructure to manage the certificate lifecycle (issuance, revocation, renewal); store the certificate private key in the device's TPM or secure element to prevent extraction; support Certificate Revocation Lists (CRL) or Online Certificate Status Protocol (OCSP) for rapid revocation of compromised devices. Suitable for enterprise-grade IoT deployments, such as industrial sensors and smart building systems.",
     "complexity": "Advanced",
-    "limitation": "Requires a PKI infrastructure, resulting in high deployment and maintenance costs; legacy devices may not support certificate-based authentication; certificate management (renewal, revocation) is complex; delayed revocation after certificate compromise still poses a risk; difficult to promote for consumer-grade devices."
+    "limitation": "Requires a PKI infrastructure, resulting in high deployment and maintenance costs; legacy devices may not support certificate-based authentication; certificate management (renewal, revocation) is complex; delayed revocation after certificate compromise still poses a risk; difficult to promote for consumer-grade devices.",
+    "keywords": [
+      "Certificate-Based Device Authentication"
+    ]
   }
 }

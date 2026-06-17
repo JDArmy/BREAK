@@ -1,15 +1,16 @@
 {
   "A0206": {
-    "title": "企业协作数据防泄漏",
-    "description": "对网盘、IM、邮件、知识库和协作文档执行敏感数据识别、共享控制和外发审计。",
+    "title": "Enterprise Collaboration Data Loss Prevention",
+    "description": "Apply sensitive-data discovery, sharing control, and outbound audit to cloud drives, IM, email, knowledge bases, and collaboration documents.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0"
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
       }
     ],
     "keywords": [
-      "企业协作数据防泄漏",
-      "A0206"
-    ]
+      "Enterprise Collaboration Data Loss Prevention"
+    ],
+    "definition": "Apply sensitive-data discovery, sharing control, and outbound audit to cloud drives, IM, email, knowledge bases, and collaboration documents."
   }
 }

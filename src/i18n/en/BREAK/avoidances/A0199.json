@@ -1,15 +1,19 @@
 {
   "A0199": {
-    "title": "CI/CD流水线最小权限 Governance",
-    "description": "限制流水线令牌、Runner、制品库和部署凭证权限，降低构建链路被滥用风险。",
+    "title": "Least-Privilege CI/CD Pipeline Governance",
+    "description": "Limit permissions for pipeline tokens, runners, artifact repositories, and deployment credentials to reduce build-chain abuse.",
     "references": [
       {
-        "title": "OWASP Top 10 CI/CD Security Risks"
+        "title": "OWASP Top 10 CI/CD Security Risks",
+        "link": "https://owasp.org/www-project-top-10-ci-cd-security-risks/"
       }
     ],
     "keywords": [
-      "CI/CD流水线最小权限 Governance",
-      "A0199"
-    ]
+      "Least-Privilege CI/CD Pipeline Governance",
+      "Least-Privilege CI/CD Pipeline Governance controls",
+      "Least-Privilege CI/CD Pipeline Governance monitoring",
+      "Least-Privilege CI/CD Pipeline Governance policy"
+    ],
+    "definition": "Limit permissions for pipeline tokens, runners, artifact repositories, and deployment credentials to reduce build-chain abuse."
   }
 }

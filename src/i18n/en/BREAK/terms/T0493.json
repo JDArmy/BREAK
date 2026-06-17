@@ -1,7 +1,7 @@
 {
   "T0493": {
     "keywords": [
-      "Rollup"
+      "Layer2"
     ],
     "definition": "A scaling solution built on top of a blockchain mainnet (Layer1) that enhances transaction processing capacity while maintaining security.",
     "description": "Layer2 solutions significantly boost transaction throughput and reduce gas fees by moving the bulk of transaction computation off-chain, submitting only the final state to the main chain. Common implementations include Optimistic Rollups, ZK-Rollups, and state channels, which process transactions off-chain and periodically anchor proofs or state commitments to the Layer1 for settlement and security. However, these solutions introduce new security challenges, including cross-chain bridge vulnerabilities, data availability concerns, and sequencer centralization risks.",
@@ -14,6 +14,12 @@
         "title": "L2BEAT - Layer 2 Analytics"
       }
     ],
-    "title": "Layer2"
+    "title": "Layer2",
+    "aliases": [
+      "Layer 2 network",
+      "Layer 2",
+      "Rollup"
+    ],
+    "category": "Business Security"
   }
 }

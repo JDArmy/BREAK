@@ -4,6 +4,9 @@
     "definition": "A pattern that uses a proxy contract to enable upgradeable contract logic while keeping data storage unchanged, allowing bug fixes without state loss.",
     "description": "Contracts are immutable once deployed, but the proxy pattern enables upgradeability. Common patterns include: Transparent Proxy, where user calls are forwarded to an implementation contract; UUPS (Universal Upgradeable Proxy Standard), where upgrade logic resides in the implementation contract; Beacon Proxy, where multiple proxies share a single implementation; and the Diamond Pattern, which enables modular upgrades. Key considerations: the proxy contract holds the data while the implementation contract contains only logic; upgrades require strict access controls (multi-signature or timelocks); and storage slot collisions must be carefully avoided. The Ethereum.org documentation provides detailed best practices for upgrades.",
     "complexity": "Advanced",
-    "limitation": "Increases system complexity and gas costs; storage layout management is difficult and error-prone; centralized upgrade authority may be abused; the proxy contract itself is non-upgradeable, creating a single point of failure."
+    "limitation": "Increases system complexity and gas costs; storage layout management is difficult and error-prone; centralized upgrade authority may be abused; the proxy contract itself is non-upgradeable, creating a single point of failure.",
+    "keywords": [
+      "Proxy Contract Upgrade Pattern"
+    ]
   }
 }

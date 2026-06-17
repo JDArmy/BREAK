@@ -1,17 +1,18 @@
 {
   "T0523": {
-    "title": "对象级授权",
+    "title": "Object-Level Authorization",
     "keywords": [
-      "对象级授权",
-      "T0523"
+      "Object-Level Authorization"
     ],
-    "definition": "对象级授权 is a key business security concept.",
-    "description": "对象级授权 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 对象级授权 related risks and controls.",
+    "definition": "A server-side authorization check that verifies whether the caller is allowed to access a specific object or resource instance.",
+    "description": "Object-Level Authorization is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Object-Level Authorization related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

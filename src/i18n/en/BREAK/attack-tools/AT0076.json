@@ -1,16 +1,19 @@
 {
   "AT0076": {
     "title": "Smart Contract Exploitation Framework",
-    "description": "用于发现、验证和组合利用智能合约漏洞的自动化工具集合。此类工具通常集成合约字节码分析、ABI调用构造、交易模拟、重入与权限绕过测试、时间戳依赖验证、代理合约升级路径分析等能力，可帮助攻击者快速定位可获利漏洞并生成利用交易。合法安全团队也会在审计和红队演练中使用类似能力验证风险，但在黑灰产场景中，攻击者会将其用于主网资产盗取、合约状态操纵和漏洞批量扫描。",
+    "description": "An automated toolset for discovering, validating, and chaining smart-contract vulnerabilities. It combines bytecode analysis, ABI call construction, transaction simulation, reentrancy and access-control testing, timestamp-dependency checks, and proxy-upgrade path analysis to help attackers locate profitable flaws and generate exploit transactions. Legitimate security teams may use similar capabilities in audits and red-team exercises, while adversaries use them for mainnet asset theft, contract-state manipulation, and vulnerability scanning at scale.",
     "references": [
       {
-        "title": "Trail of Bits Slither"
+        "title": "Trail of Bits Slither",
+        "link": "https://github.com/crytic/slither"
       },
       {
-        "title": "Foundry Ethereum development toolkit"
+        "title": "Foundry Ethereum development toolkit",
+        "link": "https://github.com/foundry-rs/foundry"
       },
       {
-        "title": "Consensys Smart Contract Best Practices"
+        "title": "Consensys Smart Contract Best Practices",
+        "link": "https://consensys.github.io/smart-contract-best-practices/"
       }
     ],
     "keywords": [

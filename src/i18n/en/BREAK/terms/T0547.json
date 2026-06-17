@@ -1,17 +1,18 @@
 {
   "T0547": {
-    "title": "第三方应用授权",
+    "title": "Third-Party App Authorization",
     "keywords": [
-      "第三方应用授权",
-      "T0547"
+      "Third-Party App Authorization"
     ],
-    "definition": "第三方应用授权 is a key business security concept.",
-    "description": "第三方应用授权 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 第三方应用授权 related risks and controls.",
+    "definition": "Permission granted to an external application to access enterprise SaaS data, APIs, or account capabilities.",
+    "description": "Third-Party App Authorization is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Third-Party App Authorization related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

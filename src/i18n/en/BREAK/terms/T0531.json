@@ -2,16 +2,17 @@
   "T0531": {
     "title": "CI/CD",
     "keywords": [
-      "CI/CD",
-      "T0531"
+      "CI/CD"
     ],
-    "definition": "CI/CD is a key business security concept.",
-    "description": "CI/CD is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess CI/CD related risks and controls.",
+    "definition": "Continuous integration and continuous delivery pipelines used to build, test, package, and release software.",
+    "description": "CI/CD is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess CI/CD related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

@@ -4,6 +4,9 @@
     "definition": "Devices are shipped without a default password, or users are forced to create a unique password upon first startup before the device can be used.",
     "description": "This approach fundamentally eliminates the risk associated with universal default passwords. Implementation methods include: shipping devices without any default password, requiring password creation during initial configuration; using a device-unique random initial password (e.g., derived from the MAC address) printed on a label; enforcing a mandatory password change upon first login and restricting device functionality until the change is completed; requiring passwords to meet complexity requirements (length, character types); providing real-time feedback on password strength; and maintaining a password change history to prevent reuse. The Cybersecurity Tech Accord advocates for the elimination of universal default passwords, and certification bodies such as TÜV SÜD have adopted this as an IoT security standard.",
     "complexity": "Basic",
-    "limitation": "Users may set weak passwords or forget their passwords; increases the complexity of initial device configuration, impacting user experience; some users may skip security setup or use weak passwords; the password reset mechanism may become a new attack surface."
+    "limitation": "Users may set weak passwords or forget their passwords; increases the complexity of initial device configuration, impacting user experience; some users may skip security setup or use weak passwords; the password reset mechanism may become a new attack surface.",
+    "keywords": [
+      "Mandatory Initial Password Configuration"
+    ]
   }
 }

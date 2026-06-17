@@ -4,6 +4,12 @@
     "definition": "Setting caps on the borrowing amount and scope of impact for a single transaction to reduce the potential impact of flash loan attacks.",
     "description": "Mitigating attack risks by limiting the scale of flash loans. Specific measures include: setting a maximum amount cap for a single flash loan; limiting the maximum impact ratio of a single transaction on a liquidity pool (e.g., not exceeding 10% of the total pool); implementing rate limiting to restrict the frequency of large operations within a short timeframe; and adding extra verification steps or time delays for large transactions. These limitations ensure that even if an attack occurs, the losses are kept within an acceptable range, without affecting normal users' legitimate usage needs.",
     "complexity": "Basic",
-    "limitation": "Overly strict limits can impair the protocol's capital efficiency and user experience; limits need to be dynamically adjusted based on market conditions; cannot completely prevent small-scale arbitrage attacks."
+    "limitation": "Overly strict limits can impair the protocol's capital efficiency and user experience; limits need to be dynamically adjusted based on market conditions; cannot completely prevent small-scale arbitrage attacks.",
+    "keywords": [
+      "Flash Loan Limit Control",
+      "Flash Loan Limit Control controls",
+      "Flash Loan Limit Control monitoring",
+      "Flash Loan Limit Control policy"
+    ]
   }
 }

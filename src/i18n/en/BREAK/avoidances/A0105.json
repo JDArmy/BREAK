@@ -4,6 +4,9 @@
     "definition": "Private keys are encrypted using a strong password or key derivation function before storage, with the plaintext key only existing briefly in memory.",
     "description": "For scenarios where Hardware Security Modules (HSMs) are unavailable, encrypted storage serves as a fundamental safeguard. Implementation methods include: generating encryption keys from user passwords using key derivation functions such as PBKDF2 or Argon2; encrypting private keys with strong encryption algorithms like AES-256 before storage; decrypting the private key only for in-memory use and immediately zeroing it out after use; avoiding writing private keys to logs, temporary files, or swap partitions; protecting the encryption key itself by leveraging operating system keychains (macOS Keychain, Windows DPAPI); and restricting access to private key files with appropriate file permissions (Unix 600). This approach is widely adopted in blockchain wallets, such as BIP39 mnemonic phrase encryption.",
     "complexity": "Basic",
-    "limitation": "Security depends on the strength of the user password; weak passwords are susceptible to brute-force attacks. The plaintext private key in memory may still be extracted through memory dump attacks. This method cannot defend against malware or rootkits. If the user forgets the password, the private key will be permanently lost."
+    "limitation": "Security depends on the strength of the user password; weak passwords are susceptible to brute-force attacks. The plaintext private key in memory may still be extracted through memory dump attacks. This method cannot defend against malware or rootkits. If the user forgets the password, the private key will be permanently lost.",
+    "keywords": [
+      "Encrypted Storage and Password Protection of Private Keys"
+    ]
   }
 }

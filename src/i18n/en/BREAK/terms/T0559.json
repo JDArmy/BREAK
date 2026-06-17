@@ -1,17 +1,18 @@
 {
   "T0559": {
-    "title": "虚假交易",
+    "title": "Fake Transaction",
     "keywords": [
-      "虚假交易",
-      "T0559"
+      "Fake Transaction"
     ],
-    "definition": "虚假交易 is a key business security concept.",
-    "description": "虚假交易 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 虚假交易 related risks and controls.",
+    "definition": "A fabricated or collusive transaction used to inflate activity, move funds, earn rewards, or bypass controls.",
+    "description": "Fake Transaction is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Fake Transaction related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

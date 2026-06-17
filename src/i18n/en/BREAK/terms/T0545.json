@@ -2,16 +2,17 @@
   "T0545": {
     "title": "SaaS",
     "keywords": [
-      "SaaS",
-      "T0545"
+      "SaaS"
     ],
-    "definition": "SaaS is a key business security concept.",
-    "description": "SaaS is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess SaaS related risks and controls.",
+    "definition": "Software as a service delivered through a provider-operated application and managed through tenant-level configuration.",
+    "description": "SaaS is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess SaaS related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

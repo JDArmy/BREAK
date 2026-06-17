@@ -1,15 +1,15 @@
 {
   "AT0085": {
-    "title": "API枚举与越权测试 Tool",
-    "description": "用于枚举API路径、参数、对象ID和权限边界的自动化工具。",
+    "title": "API Enumeration and Authorization Testing Tool",
+    "description": "Automation for enumerating API paths, parameters, object IDs, and authorization boundaries.",
     "references": [
       {
-        "title": "OWASP API Security Top 10 2023"
+        "title": "OWASP API Security Top 10 2023",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
       }
     ],
     "keywords": [
-      "API枚举与越权测试 Tool",
-      "AT0085"
+      "API Enumeration and Authorization Testing Tool"
     ]
   }
 }

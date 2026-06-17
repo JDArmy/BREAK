@@ -1,16 +1,18 @@
 {
   "R0250": {
-    "title": "边缘函数配置滥用",
-    "definition": "边缘函数或WAF规则被错误配置，导致鉴权绕过、数据转发或流量劫持。",
+    "title": "Edge Function Configuration Abuse",
+    "definition": "Misconfigured edge functions or WAF rules cause authentication bypass, data forwarding, or traffic hijacking.",
     "keywords": [
-      "边缘函数配置滥用",
-      "R0250"
+      "Edge Function Configuration Abuse"
     ],
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0",
         "link": "https://www.nist.gov/cyberframework"
       }
-    ]
+    ],
+    "description": "Misconfigured edge functions or WAF rules cause authentication bypass, data forwarding, or traffic hijacking.",
+    "complexity": "Intermediate",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

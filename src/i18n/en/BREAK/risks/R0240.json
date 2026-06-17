@@ -1,16 +1,18 @@
 {
   "R0240": {
-    "title": "数据共享越权使用",
-    "definition": "业务、供应商或合作方超出授权目的使用共享数据。",
+    "title": "Unauthorized Use of Shared Data",
+    "definition": "Business teams, suppliers, or partners use shared data beyond the authorized purpose.",
     "keywords": [
-      "数据共享越权使用",
-      "R0240"
+      "Unauthorized Use of Shared Data"
     ],
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0",
         "link": "https://www.nist.gov/cyberframework"
       }
-    ]
+    ],
+    "description": "Business teams, suppliers, or partners use shared data beyond the authorized purpose.",
+    "complexity": "Intermediate",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

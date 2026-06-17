@@ -1,16 +1,18 @@
 {
   "R0251": {
-    "title": "汽车OTA更新劫持",
-    "definition": "攻击者篡改或重放车端OTA包，植入恶意固件或阻断修复。",
+    "title": "Automotive OTA Update Hijacking",
+    "definition": "Attackers tamper with or replay vehicle OTA packages to implant malicious firmware or block fixes.",
     "keywords": [
-      "汽车OTA更新劫持",
-      "R0251"
+      "Automotive OTA Update Hijacking"
     ],
     "references": [
       {
         "title": "ISO/SAE 21434 Road vehicles Cybersecurity",
         "link": "https://www.iso.org/standard/70918.html"
       }
-    ]
+    ],
+    "description": "Attackers tamper with or replay vehicle OTA packages to implant malicious firmware or block fixes.",
+    "complexity": "Advanced",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

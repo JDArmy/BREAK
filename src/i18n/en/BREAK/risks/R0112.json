@@ -12,12 +12,9 @@
     ],
     "keywords": [
       "Office Environment Risk",
-      "office security",
-      "workplace security",
-      "physical security",
-      "social engineering",
-      "data leakage",
-      "insider threat"
+      "Office Environment Risk pattern",
+      "Office Environment Risk indicators",
+      "Office Environment Risk mitigation"
     ]
   },
   "R0112-001": {
@@ -36,12 +33,9 @@
     ],
     "keywords": [
       "Bring Your Own Device (BYOD) Risk",
-      "BYOD",
-      "bring your own device",
-      "mobile device management",
-      "MDM",
-      "unmanaged devices",
-      "personal device risk"
+      "Bring Your Own Device (BYOD) Risk pattern",
+      "Bring Your Own Device (BYOD) Risk indicators",
+      "Bring Your Own Device (BYOD) Risk mitigation"
     ]
   },
   "R0112-002": {
@@ -77,12 +71,7 @@
       }
     ],
     "keywords": [
-      "Unauthorized Device Connection",
-      "rogue USB",
-      "unauthorized device",
-      "unapproved hardware",
-      "removable media risk",
-      "rogue peripheral"
+      "Unauthorized Device Connection"
     ]
   },
   "R0112-004": {
@@ -140,12 +129,9 @@
     ],
     "keywords": [
       "Wireless Network Risk",
-      "Wi-Fi security",
-      "WiFi security",
-      "rogue access point",
-      "evil twin attack",
-      "WPA cracking",
-      "wireless intrusion"
+      "Wireless Network Risk pattern",
+      "Wireless Network Risk indicators",
+      "Wireless Network Risk mitigation"
     ]
   }
 }

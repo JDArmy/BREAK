@@ -13,6 +13,9 @@
         "link": "https://docs.ipfs.tech/concepts/content-addressing/",
         "title": "IPFS Content Addressing and Security"
       }
-    ]
+    ],
+    "description": "Attackers hijack IPFS gateways or poison DNS to tamper with DApp frontend code, replacing payment addresses or injecting malicious interactions without user awareness.",
+    "complexity": "Intermediate",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

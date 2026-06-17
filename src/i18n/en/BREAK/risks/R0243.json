@@ -1,16 +1,21 @@
 {
   "R0243": {
-    "title": "训练数据投毒 Risk",
-    "definition": "攻击者污染训练集、反馈数据或标注结果，影响模型行为。",
+    "title": "Training Data Poisoning Risk",
+    "definition": "Attackers contaminate training sets, feedback data, or labeling results to influence model behavior.",
     "keywords": [
-      "训练数据投毒 Risk",
-      "R0243"
+      "Training Data Poisoning Risk",
+      "Training Data Poisoning Risk pattern",
+      "Training Data Poisoning Risk indicators",
+      "Training Data Poisoning Risk mitigation"
     ],
     "references": [
       {
         "title": "NIST AI Risk Management Framework",
         "link": "https://www.nist.gov/itl/ai-risk-management-framework"
       }
-    ]
+    ],
+    "description": "Attackers contaminate training sets, feedback data, or labeling results to influence model behavior.",
+    "complexity": "Advanced",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

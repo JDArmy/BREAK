@@ -1,17 +1,18 @@
 {
   "T0539": {
-    "title": "锁文件",
+    "title": "Lock File",
     "keywords": [
-      "锁文件",
-      "T0539"
+      "Lock File"
     ],
-    "definition": "锁文件 is a key business security concept.",
-    "description": "锁文件 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 锁文件 related risks and controls.",
+    "definition": "A file that records exact dependency versions and integrity metadata to make builds repeatable.",
+    "description": "Lock File is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Lock File related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

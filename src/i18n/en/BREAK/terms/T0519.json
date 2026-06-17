@@ -1,7 +1,6 @@
 {
   "T0519": {
     "keywords": [
-      "VPN",
       "Virtual Private Network"
     ],
     "definition": "A technology that establishes an encrypted tunnel over a public network, enabling users to securely access internal network resources remotely.",
@@ -15,6 +14,11 @@
         "title": "Enterprise VPN Security - CISA"
       }
     ],
-    "title": "Virtual Private Network"
+    "title": "Virtual Private Network",
+    "aliases": [
+      "Virtual Private Network",
+      "Encrypted tunnel"
+    ],
+    "category": "Business Security"
   }
 }

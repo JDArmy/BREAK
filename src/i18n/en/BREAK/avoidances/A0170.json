@@ -10,6 +10,7 @@
         "link": "https://gnosis-safe.io/app/",
         "title": "GitHub - gnosis/MultiSigWallet: Allows multiple parties to agree on ..."
       }
-    ]
+    ],
+    "definition": "Set mandatory waiting period for multi-signature wallet transactions to prevent social engineering emergency attacks."
   }
 }

@@ -1,15 +1,16 @@
 {
   "A0210": {
-    "title": "联盟营销与渠道质量评分",
-    "description": "对联盟渠道、推广素材、落地页、转化设备和佣金行为建立质量评分。",
+    "title": "Affiliate Marketing and Channel Quality Scoring",
+    "description": "Score affiliate channels, creatives, landing pages, conversion devices, and commission behavior for quality and fraud risk.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0"
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
       }
     ],
     "keywords": [
-      "联盟营销与渠道质量评分",
-      "A0210"
-    ]
+      "Affiliate Marketing and Channel Quality Scoring"
+    ],
+    "definition": "Score affiliate channels, creatives, landing pages, conversion devices, and commission behavior for quality and fraud risk."
   }
 }

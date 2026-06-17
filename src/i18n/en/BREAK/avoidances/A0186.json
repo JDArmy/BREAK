@@ -10,6 +10,7 @@
         "link": "https://kubernetes.io/docs/concepts/security/",
         "title": "Kubernetes Security Best Practices"
       }
-    ]
+    ],
+    "definition": "Use security container technology to isolate edge computing nodes and prevent lateral movement."
   }
 }

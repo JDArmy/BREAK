@@ -4,6 +4,12 @@
     "definition": "Implementing encryption and access control mechanisms for sensitive data to restrict unauthorized read access.",
     "description": "Data Protection: Store sensitive data off-chain; retain only hashes on-chain; encrypt data before uploading to the chain; utilize access control lists; apply proxy re-encryption; enforce threshold decryption.",
     "complexity": "Advanced",
-    "limitation": "Reduced transparency; complex key management; performance overhead."
+    "limitation": "Reduced transparency; complex key management; performance overhead.",
+    "keywords": [
+      "On-Chain Data Access Control",
+      "On-Chain Data Access Control controls",
+      "On-Chain Data Access Control monitoring",
+      "On-Chain Data Access Control policy"
+    ]
   }
 }

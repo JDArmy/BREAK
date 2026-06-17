@@ -1,15 +1,15 @@
 {
   "AT0091": {
-    "title": "广告归因作弊 Tool",
-    "description": "用于点击注入、安装农场、虚假转化和联盟佣金欺诈的工具。",
+    "title": "Ad Attribution Fraud Tool",
+    "description": "Tooling for click injection, install farms, fake conversions, and affiliate commission fraud.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0"
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
       }
     ],
     "keywords": [
-      "广告归因作弊 Tool",
-      "AT0091"
+      "Ad Attribution Fraud Tool"
     ]
   }
 }

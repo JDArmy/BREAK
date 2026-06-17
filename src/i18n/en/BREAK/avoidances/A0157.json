@@ -4,6 +4,9 @@
     "definition": "Using zero-knowledge proofs to complete identity verification, proving compliance without exposing specific information.",
     "description": "Privacy-preserving KYC: zk-SNARKs for proving age/nationality; selective attribute disclosure; off-chain verification with on-chain proof; regulatory auditability; user-controlled data.",
     "complexity": "Advanced",
-    "limitation": "High technical complexity; unknown regulatory acceptance; high computational cost."
+    "limitation": "High technical complexity; unknown regulatory acceptance; high computational cost.",
+    "keywords": [
+      "Zero-Knowledge KYC and Privacy Protection"
+    ]
   }
 }

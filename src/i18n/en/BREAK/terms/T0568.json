@@ -1,17 +1,18 @@
 {
   "T0568": {
-    "title": "向量数据库",
+    "title": "Vector Database",
     "keywords": [
-      "向量数据库",
-      "T0568"
+      "Vector Database"
     ],
-    "definition": "向量数据库 is a key business security concept.",
-    "description": "向量数据库 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 向量数据库 related risks and controls.",
+    "definition": "A database optimized for storing embeddings and performing similarity search over unstructured content.",
+    "description": "Vector Database is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Vector Database related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

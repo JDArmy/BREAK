@@ -4,6 +4,9 @@
     "definition": "The use of mathematical methods to rigorously prove the logical correctness of a contract.",
     "description": "Use formal specifications, model checking, symbolic execution, or theorem proving during smart-contract development to mathematically verify critical asset flows, access control, state transitions, and boundary conditions, catching high-impact flaws such as reentrancy, overflow, and privilege bypass before deployment.",
     "complexity": "Advanced",
-    "limitation": "Formal verification is costly and depends on accurate specification modeling. It may not cover oracle behavior, cross-chain interactions, governance processes, or external systems, and verification results must be maintained as contracts evolve."
+    "limitation": "Formal verification is costly and depends on accurate specification modeling. It may not cover oracle behavior, cross-chain interactions, governance processes, or external systems, and verification results must be maintained as contracts evolve.",
+    "keywords": [
+      "Formal Verification of Smart Contracts"
+    ]
   }
 }

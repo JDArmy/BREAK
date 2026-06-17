@@ -13,6 +13,9 @@
       {
         "title": "NIST Cybersecurity for IoT Program"
       }
-    ]
+    ],
+    "description": "Attackers compromise IoT edge computing nodes to steal locally processed sensitive data or tamper with AI inference results.",
+    "complexity": "Advanced",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

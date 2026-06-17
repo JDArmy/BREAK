@@ -4,6 +4,9 @@
     "definition": "Mandatory modification of factory default passwords, implementation of strong password policies or multi-factor authentication to prevent attackers from hijacking devices through weak credentials.",
     "description": "Weak credentials represent the most common entry point for large-scale hijacking of IoT devices. Protective measures include: forcing users to change default passwords during device initialization and prohibiting the use of factory passwords; enforcing password complexity requirements (length, character types); enabling multi-factor authentication or certificate-based authentication on supported devices; regularly rotating device credentials, especially for administrator accounts; disabling unnecessary management interfaces (Telnet, SSH, etc.) or restricting their listening addresses; scanning the network for devices using default credentials and enforcing changes. The Mirai botnet demonstrated rapid propagation precisely by scanning for devices using default usernames and passwords.",
     "complexity": "Basic",
-    "limitation": "Users may employ weak passwords or reuse passwords across multiple devices; some low-end devices do not support password modification or multi-factor authentication; forgotten passwords may lead to device lockout; mandatory password policies may negatively impact user experience."
+    "limitation": "Users may employ weak passwords or reuse passwords across multiple devices; some low-end devices do not support password modification or multi-factor authentication; forgotten passwords may lead to device lockout; mandatory password policies may negatively impact user experience.",
+    "keywords": [
+      "Strong Authentication and Default Credential Changes for IoT Devices"
+    ]
   }
 }

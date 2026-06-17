@@ -1,17 +1,18 @@
 {
   "T0585": {
-    "title": "WAF规则",
+    "title": "WAF Rule",
     "keywords": [
-      "WAF规则",
-      "T0585"
+      "WAF Rule"
     ],
-    "definition": "WAF规则 is a key business security concept.",
-    "description": "WAF规则 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess WAF规则 related risks and controls.",
+    "definition": "A web application firewall rule used to detect, block, challenge, or log suspicious HTTP traffic.",
+    "description": "WAF Rule is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess WAF Rule related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

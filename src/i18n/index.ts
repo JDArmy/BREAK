@@ -11,10 +11,16 @@ import cnBREAK from "../BREAK";
  * - 结构字段（ID 数组、references[].link、updated 等）从中文源保留
  * - 翻译字段（title、description 等）从英文翻译覆盖
  */
+const replaceArrayTranslationKeys = new Set(["keywords", "aliases"]);
+
 function mergeWithStructure(
   structure: unknown,
-  translations: unknown
+  translations: unknown,
+  key?: string
 ): unknown {
+  if (replaceArrayTranslationKeys.has(key ?? "") && Array.isArray(structure)) {
+    return Array.isArray(translations) ? translations : [];
+  }
   if (translations === undefined || translations === null) return structure;
   if (structure === undefined || structure === null) return translations;
   if (typeof structure !== "object") return translations;
@@ -35,6 +41,12 @@ function mergeWithStructure(
   const result: Record<string, unknown> = {
     ...(structure as Record<string, unknown>),
   };
+  for (const arrayKey of replaceArrayTranslationKeys) {
+    const structVal = (structure as Record<string, unknown>)[arrayKey];
+    if (Array.isArray(structVal) && !(arrayKey in (translations as Record<string, unknown>))) {
+      result[arrayKey] = [];
+    }
+  }
   for (const [key, transVal] of Object.entries(
     translations as Record<string, unknown>
   )) {
@@ -42,11 +54,13 @@ function mergeWithStructure(
     if (transVal !== undefined) {
       // 两者都是数组：逐元素递归合并
       if (Array.isArray(transVal) && Array.isArray(structVal)) {
-        result[key] = (structVal as unknown[]).map((item, idx) =>
-          idx < (transVal as unknown[]).length
-            ? mergeWithStructure(item, (transVal as unknown[])[idx])
-            : item
-        );
+        result[key] = replaceArrayTranslationKeys.has(key)
+          ? transVal
+          : (structVal as unknown[]).map((item, idx) =>
+              idx < (transVal as unknown[]).length
+                ? mergeWithStructure(item, (transVal as unknown[])[idx], key)
+                : item
+            );
       } else if (
         typeof transVal === "object" &&
         transVal !== null &&
@@ -56,7 +70,7 @@ function mergeWithStructure(
         !Array.isArray(structVal)
       ) {
         // 嵌套对象：递归合并
-        result[key] = mergeWithStructure(structVal, transVal);
+        result[key] = mergeWithStructure(structVal, transVal, key);
       } else {
         // 翻译文本覆盖结构值
         result[key] = transVal;

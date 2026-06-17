@@ -4,6 +4,9 @@
     "definition": "Real-time monitoring of proposal content and voting behavior, triggering alerts and emergency response mechanisms upon detecting anomalous proposals.",
     "description": "Establish an active defense system to detect and respond to governance attacks. Monitoring scope: Automated analysis of proposal code to detect suspicious operations (e.g., large fund transfers, permission changes, contract self-destruction); monitoring voting patterns to identify anomalies (e.g., concentrated voting with large amounts of tokens in a short period, voting addresses suddenly acquiring substantial tokens); tracking proposer history and on-chain behavior; collaborating with security firms for manual review. Emergency mechanisms: Broadcasting warnings through community channels upon detecting malicious proposals; activating emergency pause (Guardian) mechanisms, allowing multi-signature or high-privilege accounts to freeze suspicious proposals; providing fast veto channels to lower the rejection threshold; continuous monitoring during the timelock period before proposal execution. Platforms like Guardrail offer dedicated DAO governance monitoring services.",
     "complexity": "Advanced",
-    "limitation": "Automated analysis may generate false positives or false negatives; requires 24/7 manual on-call support and community participation; emergency mechanisms may be abused; high costs for monitoring and response infrastructure; limited detection capability against novel attack vectors."
+    "limitation": "Automated analysis may generate false positives or false negatives; requires 24/7 manual on-call support and community participation; emergency mechanisms may be abused; high costs for monitoring and response infrastructure; limited detection capability against novel attack vectors.",
+    "keywords": [
+      "DAO Governance Proposal Monitoring and Emergency Response"
+    ]
   }
 }

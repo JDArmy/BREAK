@@ -4,6 +4,9 @@
     "definition": "Enforcing minimum security standards for IoT devices through network access control and automated scanning before granting network access.",
     "description": "Preventing insecure devices from becoming nodes in botnets at the access layer. Implementation measures: Deploying NAC (Network Access Control) systems to check firmware versions, password strength, and open ports before devices join the network; using 802.1X authentication to isolate devices that fail security checks into a restricted VLAN; periodically scanning devices within the network to identify those using default credentials, outdated firmware, or unnecessary open ports and notifying administrators; automated remediation tools pushing security configurations (e.g., disabling Telnet, enforcing password changes); forcibly disconnecting devices that cannot be remediated. Security solutions such as BitLyft emphasize implementing security configurations from the deployment phase.",
     "complexity": "Intermediate",
-    "limitation": "High deployment and maintenance costs for NAC; potential blocking of legitimate devices, impacting business operations; automated remediation may conflict with device functionality; difficulty retrofitting already-connected devices."
+    "limitation": "High deployment and maintenance costs for NAC; potential blocking of legitimate devices, impacting business operations; automated remediation may conflict with device functionality; difficulty retrofitting already-connected devices.",
+    "keywords": [
+      "IoT Device Security Configuration Enforcement"
+    ]
   }
 }

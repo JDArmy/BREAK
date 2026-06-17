@@ -4,6 +4,9 @@
     "definition": "A mechanism that uses multiple independent decentralized node networks to verify cross-chain transactions, rather than relying on a single verifier or centralized signing mechanism.",
     "description": "The core security issue with cross-chain bridges lies in the centralization of the verification mechanism or an insufficient number of nodes. Defensive measures include: deploying independent decentralized verification networks for each cross-chain channel; requiring majority consensus (e.g., more than two-thirds of nodes) to finalize cross-chain transfers; mandating that verification nodes stake assets, which are subject to slashing in the event of malicious behavior; employing threshold signatures or multi-signature schemes to prevent single points of failure; and ensuring verification nodes are operated by different entities across geographically distributed locations and infrastructures. Chainlink CCIP adopts this architecture, reducing the attack surface by decentralizing trust.",
     "complexity": "Advanced",
-    "limitation": "Decentralized verification networks increase system complexity and operational costs; verification speed may be slower than centralized solutions; incentive mechanisms are required to attract a sufficient number of independent verification nodes; node staking requirements may limit participation."
+    "limitation": "Decentralized verification networks increase system complexity and operational costs; verification speed may be slower than centralized solutions; incentive mechanisms are required to attract a sufficient number of independent verification nodes; node staking requirements may limit participation.",
+    "keywords": [
+      "Decentralized Cross-Chain Verification Network"
+    ]
   }
 }

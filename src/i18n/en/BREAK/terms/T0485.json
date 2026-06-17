@@ -2,16 +2,9 @@
   "T0485": {
     "title": "Emulator",
     "keywords": [
-      "Emulator",
-      "device emulation",
-      "virtual device",
-      "Android emulator",
-      "mobile emulator",
-      "environment simulation"
+      "Emulator"
     ],
-    "aliases": [
-      "Moniqi"
-    ],
+    "aliases": [],
     "definition": "Software that replicates the functionality of mobile devices or other systems on computers, enabling fraudsters to run mobile apps in controlled environments for automated abuse or testing.",
     "description": "Emulators in fraud operations serve as scalable platforms for running mobile applications without physical devices. Attackers use Android emulators like BlueStacks, Nox, or custom builds to operate multiple virtual devices simultaneously from a single computer, each appearing as distinct mobile devices to target applications. This enables mass account registration, automated gameplay for virtual currency farming, bonus abuse across device-based promotions, testing of fraud techniques without device costs, and circumventing device-based rate limits. Advanced fraud operations combine emulators with device spoofing to randomize device fingerprints, GPS spoofing for location-based restrictions, automation frameworks for scripted interactions, and cloud infrastructure for massive parallel operations. Apps attempt to detect emulators by checking for emulator-specific files and properties, analyzing hardware characteristics, detecting virtualization artifacts, and examining sensor data patterns. The cat-and-mouse game continues as emulator technologies improve realism while detection techniques become more sophisticated.",
     "usageExample": "A fraud operation ran 500 emulator instances on cloud servers to farm virtual currency in a mobile game, creating automated accounts that completed tasks 24/7 before selling the currency to legitimate players.",
@@ -28,6 +21,7 @@
         "title": "iOS下的自定义键盘(译) - 简书",
         "link": "https://www.jianshu.com/p/0713849954de/"
       }
-    ]
+    ],
+    "category": "Business Security"
   }
 }

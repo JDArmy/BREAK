@@ -1,8 +1,7 @@
 {
   "T0496": {
     "keywords": [
-      "Oracle",
-      "Chainlink"
+      "Oracle"
     ],
     "definition": "A third-party service that provides external real-world data to blockchain smart contracts.",
     "description": "Since blockchains cannot actively fetch off-chain data, oracles serve as bridges that feed information such as prices, weather data, and sports results to smart contracts. Oracles are critical infrastructure for DeFi protocols, but centralized oracles pose a single point of failure risk, while decentralized oracles may also be subject to manipulation or delay attacks.",
@@ -15,6 +14,11 @@
         "title": "Introduction to Oracles - Ethereum"
       }
     ],
-    "title": "Oracle"
+    "title": "Oracle",
+    "aliases": [
+      "Blockchain oracle",
+      "Price feed"
+    ],
+    "category": "Business Security"
   }
 }

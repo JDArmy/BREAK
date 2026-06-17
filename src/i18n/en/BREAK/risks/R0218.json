@@ -14,6 +14,9 @@
         "link": "https://xrsi.org/xr-safety-framework",
         "title": "XR Safety Initiative Framework"
       }
-    ]
+    ],
+    "description": "Biometric and environmental data such as eye tracking, gestures, spatial positioning collected by XR devices are accessed without authorization, leaking user privacy.",
+    "complexity": "Intermediate",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

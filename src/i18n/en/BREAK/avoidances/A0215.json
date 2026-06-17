@@ -1,15 +1,16 @@
 {
   "A0215": {
-    "title": "RAG知识库权限隔离",
-    "description": "按租户、角色和文档敏感级别隔离RAG索引与检索结果，防止跨权限召回。",
+    "title": "RAG Knowledge-Base Permission Isolation",
+    "description": "Isolate RAG indexes and retrieval results by tenant, role, and document sensitivity to prevent cross-permission recall.",
     "references": [
       {
-        "title": "OWASP Top 10 for Large Language Model Applications"
+        "title": "OWASP Top 10 for Large Language Model Applications",
+        "link": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"
       }
     ],
     "keywords": [
-      "RAG知识库权限隔离",
-      "A0215"
-    ]
+      "RAG Knowledge-Base Permission Isolation"
+    ],
+    "definition": "Isolate RAG indexes and retrieval results by tenant, role, and document sensitivity to prevent cross-permission recall."
   }
 }

@@ -1,15 +1,16 @@
 {
   "A0212": {
-    "title": "隐私影响评估与合规留痕",
-    "description": "对新业务、模型和数据处理活动执行PIA/DPIA并保留合规证据链。",
+    "title": "Privacy Impact Assessment and Compliance Evidence",
+    "description": "Perform PIA/DPIA for new businesses, models, and data-processing activities, and retain compliance evidence.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0"
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
       }
     ],
     "keywords": [
-      "隐私影响评估与合规留痕",
-      "A0212"
-    ]
+      "Privacy Impact Assessment and Compliance Evidence"
+    ],
+    "definition": "Perform PIA/DPIA for new businesses, models, and data-processing activities, and retain compliance evidence."
   }
 }

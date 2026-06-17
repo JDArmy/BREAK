@@ -1,10 +1,12 @@
 {
   "R0227": {
-    "title": "构建产物投毒 Risk",
-    "definition": "攻击者篡改构建产物、镜像或发布包，将后门带入生产环境。",
+    "title": "Build Artifact Poisoning Risk",
+    "definition": "Attackers tamper with build artifacts, container images, or release packages to introduce backdoors into production.",
     "keywords": [
-      "构建产物投毒 Risk",
-      "R0227"
+      "Build Artifact Poisoning Risk",
+      "Build Artifact Poisoning Risk pattern",
+      "Build Artifact Poisoning Risk indicators",
+      "Build Artifact Poisoning Risk mitigation"
     ],
     "references": [
       {
@@ -15,6 +17,9 @@
         "title": "Software Bill of Materials - CISA",
         "link": "https://www.cisa.gov/topics/information-communications-technology-supply-chain-security/sbom"
       }
-    ]
+    ],
+    "description": "Attackers tamper with build artifacts, container images, or release packages to introduce backdoors into production.",
+    "complexity": "Advanced",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

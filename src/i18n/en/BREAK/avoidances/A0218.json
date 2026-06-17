@@ -1,15 +1,20 @@
 {
   "A0218": {
-    "title": "会话令牌绑定与重放检测",
-    "description": "将会话与设备、网络、客户端证明绑定，并检测Cookie/Token重放。",
+    "title": "Session Token Binding and Replay Detection",
+    "description": "Bind sessions to device, network, and client attestation, and detect cookie or token replay.",
     "references": [
       {
-        "title": "OWASP API Security Top 10 2023"
+        "title": "OWASP API Security Top 10 2023",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
       }
     ],
     "keywords": [
-      "会话令牌绑定与重放检测",
-      "A0218"
-    ]
+      "Session Token Binding and Replay Detection",
+      "Session Token Binding and Replay Detection controls",
+      "Session Token Binding and Replay Detection monitoring",
+      "Session Token Binding and Replay Detection policy",
+      "session security"
+    ],
+    "definition": "Bind sessions to device, network, and client attestation, and detect cookie or token replay."
   }
 }

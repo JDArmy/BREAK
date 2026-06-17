@@ -4,6 +4,9 @@
     "definition": "A trust scoring mechanism built on on-chain behavioral data, serving as an alternative to traditional KYC identity verification.",
     "description": "Reputation systems: on-chain transaction history; smart contract interactions; DeFi credit scores; social graphs; Sybil resistance; soulbound tokens.",
     "complexity": "Intermediate",
-    "limitation": "Insufficient historical data; risk of manipulation; privacy leakage; lack of standardized frameworks."
+    "limitation": "Insufficient historical data; risk of manipulation; privacy leakage; lack of standardized frameworks.",
+    "keywords": [
+      "On-Chain Reputation and Credit Systems"
+    ]
   }
 }

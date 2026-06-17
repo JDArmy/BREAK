@@ -4,6 +4,12 @@
     "definition": "Simultaneously using multiple independent oracle data sources with aggregation algorithms and anomaly detection mechanisms to prevent single data source manipulation.",
     "description": "Relying on a single oracle is susceptible to manipulation, while multi-source aggregation raises the cost of attack. Implementation methods: Integrate multiple decentralized oracles such as Chainlink, Band Protocol, and API3; use median or weighted average algorithms to aggregate prices rather than directly using a single value; set anomaly detection thresholds to exclude or downgrade individual data sources when deviations are excessive; require consensus from at least N (e.g., 3) data sources before accepting a price update; monitor price deviations between data sources and trigger alerts when thresholds are exceeded. The OWASP Smart Contract Top 10 classifies oracle manipulation as an SC02-level vulnerability, emphasizing the importance of multi-source verification.",
     "complexity": "Intermediate",
-    "limitation": "Multiple oracles increase gas costs and latency; all oracles may be affected by the same underlying data sources; aggregation algorithms may be studied and exploited by attackers; scenarios involving data source failures must be handled."
+    "limitation": "Multiple oracles increase gas costs and latency; all oracles may be affected by the same underlying data sources; aggregation algorithms may be studied and exploited by attackers; scenarios involving data source failures must be handled.",
+    "keywords": [
+      "Multi-Source Oracle Aggregation and Anomaly Detection",
+      "Multi-Source Oracle Aggregation and Anomaly Detection controls",
+      "Multi-Source Oracle Aggregation and Anomaly Detection monitoring",
+      "Multi-Source Oracle Aggregation and Anomaly Detection policy"
+    ]
   }
 }

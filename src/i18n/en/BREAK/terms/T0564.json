@@ -1,17 +1,18 @@
 {
   "T0564": {
-    "title": "佣金欺诈",
+    "title": "Commission Fraud",
     "keywords": [
-      "佣金欺诈",
-      "T0564"
+      "Commission Fraud"
     ],
-    "definition": "佣金欺诈 is a key business security concept.",
-    "description": "佣金欺诈 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 佣金欺诈 related risks and controls.",
+    "definition": "Abuse of commission rules through fake traffic, self-dealing, hijacking, or manipulated conversions.",
+    "description": "Commission Fraud is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Commission Fraud related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

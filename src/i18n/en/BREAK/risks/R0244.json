@@ -1,16 +1,18 @@
 {
   "R0244": {
-    "title": "RAG越权召回",
-    "definition": "检索增强系统返回用户无权访问的文档片段或敏感知识。",
+    "title": "Unauthorized RAG Retrieval",
+    "definition": "Retrieval-augmented systems return document fragments or sensitive knowledge that the user is not authorized to access.",
     "keywords": [
-      "RAG越权召回",
-      "R0244"
+      "Unauthorized RAG Retrieval"
     ],
     "references": [
       {
         "title": "OWASP Top 10 for Large Language Model Applications",
         "link": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"
       }
-    ]
+    ],
+    "description": "Retrieval-augmented systems return document fragments or sensitive knowledge that the user is not authorized to access.",
+    "complexity": "Advanced",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

@@ -1,16 +1,18 @@
 {
   "R0224": {
-    "title": "API批量调用资源耗尽",
-    "definition": "攻击者批量调用高成本接口消耗额度、库存、算力或第三方服务费用。",
+    "title": "API Bulk-Call Resource Exhaustion",
+    "definition": "Attackers call costly APIs at scale to consume quotas, inventory, compute capacity, or third-party service spend.",
     "keywords": [
-      "API批量调用资源耗尽",
-      "R0224"
+      "API Bulk-Call Resource Exhaustion"
     ],
     "references": [
       {
         "title": "OWASP API Security Top 10 2023",
         "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
       }
-    ]
+    ],
+    "description": "Attackers call costly APIs at scale to consume quotas, inventory, compute capacity, or third-party service spend.",
+    "complexity": "Intermediate",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

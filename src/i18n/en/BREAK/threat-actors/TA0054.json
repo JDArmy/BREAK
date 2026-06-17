@@ -1,15 +1,15 @@
 {
   "TA0054": {
-    "title": "SaaS数据窃取者",
-    "description": "通过OAuth授权、管理员账号或外链分享窃取SaaS与协作数据。",
+    "title": "SaaS Data Thieves",
+    "description": "Actors who steal SaaS and collaboration data through OAuth grants, administrator accounts, or external sharing links.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0"
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
       }
     ],
     "keywords": [
-      "SaaS数据窃取者",
-      "TA0054"
+      "SaaS Data Thieves"
     ]
   }
 }

@@ -1,16 +1,22 @@
 {
   "R0223": {
-    "title": "API对象级越权 Risk",
-    "definition": "接口只校验登录态但未校验对象归属，攻击者可枚举访问他人资源。",
+    "title": "API Object-Level Authorization Risk",
+    "definition": "The API checks only the login state but not object ownership, allowing attackers to enumerate and access other users' resources.",
     "keywords": [
-      "API对象级越权 Risk",
-      "R0223"
+      "API Object-Level Authorization Risk",
+      "API Object-Level Authorization Risk pattern",
+      "API Object-Level Authorization Risk indicators",
+      "API Object-Level Authorization Risk mitigation",
+      "API security"
     ],
     "references": [
       {
         "title": "OWASP API Security Top 10 2023",
         "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
       }
-    ]
+    ],
+    "description": "The API checks only the login state but not object ownership, allowing attackers to enumerate and access other users' resources.",
+    "complexity": "Beginner",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

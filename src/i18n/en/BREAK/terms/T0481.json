@@ -2,16 +2,9 @@
   "T0481": {
     "title": "Privacy Compliance",
     "keywords": [
-      "Privacy Compliance",
-      "privacy regulation",
-      "user consent",
-      "privacy rights",
-      "data subject rights",
-      "privacy-by-design"
+      "Privacy Compliance"
     ],
-    "aliases": [
-      "Yinsi Heguі"
-    ],
+    "aliases": [],
     "definition": "The legal and ethical obligations to protect individuals' personal information privacy through transparent practices, user consent, data minimization, and respect for privacy rights.",
     "description": "Privacy compliance focuses specifically on protecting individual privacy rights within broader data protection frameworks. Core principles include transparency through clear privacy notices explaining collection and use purposes, lawful basis for processing such as explicit consent or legitimate interest, data minimization collecting only necessary information, purpose limitation using data only for stated purposes, accuracy maintaining correct information, storage limitation retaining data only as long as needed, and security protecting against unauthorized access. Individuals possess rights including access to their data, correction of inaccuracies, deletion (right to be forgotten), data portability, objection to processing, and restriction of automated decision-making. Organizations must implement privacy-by-design principles integrating privacy considerations into system architecture, conduct privacy impact assessments for high-risk processing, establish consent management platforms, provide accessible privacy controls, and maintain audit trails of processing activities. Emerging privacy regulations emphasize proportionality, accountability, and user agency over data.",
     "usageExample": "An app company received regulatory sanctions for collecting precise location data without explicit user consent, failing to provide clear privacy notices, and sharing user data with third parties beyond stated purposes.",
@@ -24,6 +17,7 @@
         "title": "【数说法律】App隐私政策的合规之道(上)",
         "link": "https://mp.weixin.qq.com/s?__biz=MzI2NzkwMjA0Mg==&mid=2247504728&idx=4&sn=287c09619f0fb41a7db0bbd8980725e0&chksm=eaf55e6ddd82d77b426e5414ba1b60fd66a7375249d17ed99f25a503cf9fe78d2359d93ed894&scene=27"
       }
-    ]
+    ],
+    "category": "Business Security"
   }
 }

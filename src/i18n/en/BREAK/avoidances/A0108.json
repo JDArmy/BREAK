@@ -4,6 +4,9 @@
     "definition": "Deploying smart devices in a segregated network zone to restrict communication with critical systems and reduce the blast radius in the event of compromise.",
     "description": "Network isolation is an effective measure to prevent the lateral spread of a single device compromise. Implementation methods include: using dedicated IoT VLANs or subnets that are physically separated from office and production networks; enforcing strict Access Control Lists (ACLs) at the gateway to allow devices access only to necessary services; prohibiting lateral communication between IoT devices unless business-critical; deploying firewall rules to restrict outbound connections from devices to prevent them from becoming nodes in a botnet; and implementing IP whitelisting for device management interfaces, allowing access only from the administrator network. This defense-in-depth strategy ensures that even if a device is compromised, attackers face significant difficulty in moving laterally.",
     "complexity": "Intermediate",
-    "limitation": "Network isolation increases network architecture complexity and management overhead; it may affect device interoperability and collaborative functions; it requires specialized networking expertise to configure; and retrofitting already deployed devices can incur high costs."
+    "limitation": "Network isolation increases network architecture complexity and management overhead; it may affect device interoperability and collaborative functions; it requires specialized networking expertise to configure; and retrofitting already deployed devices can incur high costs.",
+    "keywords": [
+      "Network Isolation and Access Control for IoT Devices"
+    ]
   }
 }

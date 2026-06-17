@@ -5,6 +5,18 @@
     "riskDimensions": {
       "RD05": {
         "title": "Blockchain Security"
+      },
+      "RD02": {
+        "title": "Operations Dimension"
+      },
+      "RD03": {
+        "title": "Identity Dimension"
+      },
+      "RD04": {
+        "title": "Adversarial Dimension"
+      },
+      "RD06": {
+        "title": "Blockchain and Virtual Asset Dimension"
       }
     },
     "riskScenes": {
@@ -12,10 +24,34 @@
         "title": "Web3 Ecosystem Attacks"
       },
       "RS15": {
-        "title": "Smart Contract & DeFi Security"
+        "title": "Smart Contract and DeFi Security"
       },
       "RS17": {
-        "title": "Blockchain Infrastructure Security"
+        "title": "Blockchain Infrastructure and Consensus Security"
+      },
+      "RS02": {
+        "title": "Compliance and Governance Risk"
+      },
+      "RS04": {
+        "title": "API and Automation Attack"
+      },
+      "RS06": {
+        "title": "Internal and Supply-Chain Security"
+      },
+      "RS07": {
+        "title": "Account Takeover and Identity Theft"
+      },
+      "RS09": {
+        "title": "Registration, Authentication, and Account Abuse"
+      },
+      "RS14": {
+        "title": "API, Cloud-Native, and Non-Human Identity Security"
+      },
+      "RS16": {
+        "title": "Wallet, Key, and Signing Authorization Risk"
+      },
+      "RS18": {
+        "title": "On-Chain Privacy, NFT, and Virtual Asset Trading"
       }
     }
   }

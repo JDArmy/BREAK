@@ -17,32 +17,42 @@
     },
     "riskScenes": {
       "RS01": {
-        "title": "Marketing Risk"
+        "title": "Marketing and Growth Fraud"
       },
       "RS02": {
-        "title": "Compliance Risk"
+        "title": "Compliance and Governance Risk"
       },
       "RS04": {
-        "title": "Illegal Request Risk"
+        "title": "API and Automation Attack"
       },
       "RS06": {
-        "title": "Internal Risk"
+        "title": "Internal and Supply-Chain Security"
       },
       "RS07": {
-        "title": "Identity Theft Risk"
+        "title": "Account Takeover and Identity Theft"
       },
       "RS08": {
-        "title": "Payment/Financial Risk"
+        "title": "Payment, Funding, and Financial Fraud"
       },
       "RS09": {
-        "title": "Identity Verification Risk"
+        "title": "Registration, Authentication, and Account Abuse"
       },
       "RS10": {
-        "title": "Endpoint Adversarial Risk"
+        "title": "Endpoint, Client, and Communication Adversarial Risk"
       },
       "RS12": {
-        "title": "Gaming Risk"
+        "title": "Game and Virtual Entitlement Risk"
+      },
+      "RS05": {
+        "title": "Content and Community Governance"
+      },
+      "RS14": {
+        "title": "API, Cloud-Native, and Non-Human Identity Security"
+      },
+      "RS25": {
+        "title": "After-Sales, Refund, and Claims Abuse"
       }
-    }
+    },
+    "description": "Government and public-service scenarios covering public accounts, identity verification, appointment resources, and service abuse."
   }
 }

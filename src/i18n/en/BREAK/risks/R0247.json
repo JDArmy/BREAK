@@ -1,16 +1,18 @@
 {
   "R0247": {
-    "title": "会话令牌重放",
-    "definition": "攻击者窃取Cookie、Token或会话凭据后在其他设备重放登录。",
+    "title": "Session Token Replay",
+    "definition": "Attackers replay stolen cookies, tokens, or session credentials from another device.",
     "keywords": [
-      "会话令牌重放",
-      "R0247"
+      "Session Token Replay"
     ],
     "references": [
       {
         "title": "OWASP API Security Top 10 2023",
         "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
       }
-    ]
+    ],
+    "description": "Attackers replay stolen cookies, tokens, or session credentials from another device.",
+    "complexity": "Intermediate",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

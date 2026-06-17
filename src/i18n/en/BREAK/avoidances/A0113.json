@@ -4,6 +4,9 @@
     "definition": "Using machine learning models to detect abnormal network behavior in IoT devices, and identifying and blocking botnet C&C (Command and Control) communication.",
     "description": "Botnets rely on C&C servers to issue commands, and severing this communication can disrupt attacks. Detection methods: using machine learning to analyze device traffic characteristics and identify botnet features such as DGA domains, abnormal DNS queries, and non-standard port communication; deploying Deep Packet Inspection (DPI) at the gateway to identify known botnet protocols (e.g., Mirai variants); monitoring for sudden large-scale outbound connections and scanning behavior; establishing a baseline of normal traffic and triggering alerts upon deviation. Blocking measures: DNS filtering to block known C&C domains; firewall rules to restrict devices to whitelisted services only; automatically isolating infected devices upon detection.",
     "complexity": "Advanced",
-    "limitation": "Machine learning models require large amounts of training data and are prone to false positives; emerging botnets may use encrypted communication to evade detection; DGA domains are generated rapidly, making real-time blacklist updates difficult; limited effectiveness in detecting encrypted traffic."
+    "limitation": "Machine learning models require large amounts of training data and are prone to false positives; emerging botnets may use encrypted communication to evade detection; DGA domains are generated rapidly, making real-time blacklist updates difficult; limited effectiveness in detecting encrypted traffic.",
+    "keywords": [
+      "IoT Traffic Anomaly Detection and C&C Communication Blocking"
+    ]
   }
 }

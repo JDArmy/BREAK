@@ -2,9 +2,7 @@
   "T0447": {
     "title": "Social Engineering Database",
     "keywords": [
-      "Social Engineering Database",
-      "Personal Info Database",
-      "Doxing Database"
+      "Social Engineering Database"
     ],
     "aliases": [
       "Doxing Database",
@@ -12,6 +10,7 @@
     ],
     "definition": "A social engineering database is an illegal database that stores and retrieves citizens' personal information, used to implement social engineering attacks and other cybercrime activities.",
     "description": "Social engineering databases are massive collections of citizens' personal information obtained by cybercriminals through various illicit means including data breaches where hackers penetrate corporate or government systems, network attacks targeting vulnerable websites and services, insider theft by corrupt employees with access to sensitive databases, and other illegal acquisition methods. These raw data collections are then systematically organized, deduplicated to remove redundant entries, categorized by data type and completeness, and formed into searchable databases with query interfaces. The databases contain extensive sensitive information including full legal names, government-issued ID numbers, mobile phone numbers, residential and work addresses, bank card numbers and financial account details, social media accounts and associated profile information, passwords for various online services, and numerous other personal identifiers. Cybercriminals actively exploit these databases to conduct targeted fraud schemes with personalized scripts, account theft operations to take over valuable accounts, extortion and blackmail using exposed private information, and various other profit-driven criminal activities. The establishment, ongoing maintenance, commercial sale, and operational use of social engineering databases all constitute serious illegal criminal acts under data protection and cybercrime statutes, specifically violating Article 253-1 of the Criminal Law regarding infringement of citizens' personal information, with maximum penalties reaching seven years imprisonment.",
-    "usageExample": "This criminal gang obtained detailed victim information through social engineering databases to implement telecom fraud"
+    "usageExample": "This criminal gang obtained detailed victim information through social engineering databases to implement telecom fraud",
+    "category": "Business Security"
   }
 }

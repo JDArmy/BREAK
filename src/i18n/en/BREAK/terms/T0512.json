@@ -1,7 +1,6 @@
 {
   "T0512": {
     "keywords": [
-      "APT",
       "Advanced Persistent Threat"
     ],
     "definition": "A prolonged and targeted cyber intrusion campaign conducted by highly skilled threat actors, often with nation-state backing, aimed at compromising specific targets for strategic advantage.",
@@ -15,6 +14,11 @@
         "title": "Groups - MITRE ATT&CK"
       }
     ],
-    "title": "Advanced Persistent Threat"
+    "title": "Advanced Persistent Threat",
+    "aliases": [
+      "APT",
+      "Advanced persistent threat"
+    ],
+    "category": "Business Security"
   }
 }

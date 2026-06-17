@@ -1,17 +1,18 @@
 {
   "T0588": {
-    "title": "诊断接口",
+    "title": "Diagnostic Interface",
     "keywords": [
-      "诊断接口",
-      "T0588"
+      "Diagnostic Interface"
     ],
-    "definition": "诊断接口 is a key business security concept.",
-    "description": "诊断接口 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 诊断接口 related risks and controls.",
+    "definition": "A maintenance interface used to inspect, configure, test, or update devices and vehicle systems.",
+    "description": "Diagnostic Interface is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Diagnostic Interface related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

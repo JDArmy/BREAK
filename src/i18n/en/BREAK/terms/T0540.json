@@ -1,17 +1,18 @@
 {
   "T0540": {
-    "title": "软件供应链",
+    "title": "Software Supply Chain",
     "keywords": [
-      "软件供应链",
-      "T0540"
+      "Software Supply Chain"
     ],
-    "definition": "软件供应链 is a key business security concept.",
-    "description": "软件供应链 is used in risk identification, attack analysis, control design, or security operations.",
-    "usageExample": "Assess 软件供应链 related risks and controls.",
+    "definition": "The ecosystem of source code, dependencies, build systems, tools, artifacts, and release processes used to deliver software.",
+    "description": "Software Supply Chain is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "usageExample": "Assess Software Supply Chain related exposure and define the corresponding controls.",
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
-    ]
+    ],
+    "category": "Business Security",
+    "aliases": []
   }
 }

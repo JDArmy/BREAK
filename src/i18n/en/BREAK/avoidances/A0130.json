@@ -4,6 +4,9 @@
     "definition": "Set a maximum slippage tolerance for transactions; if exceeded, the transaction automatically fails, preventing severe losses from sandwich attacks.",
     "description": "Slippage protection limits the profit potential of MEV attacks. Implementation methods: set the minAmountOut parameter during DEX transactions so that the transaction fails if the actual execution price falls below this value; calculate a reasonable slippage based on liquidity and transaction size (typically 0.5%–5%); use limit orders instead of market orders, waiting for the price to reach the desired level before execution; monitor the mempool and cancel transactions when signs of a sandwich attack are detected; split large transactions into multiple smaller ones to reduce the impact of each individual trade. While this cannot completely prevent MEV, it can keep losses within an acceptable range. CoW Protocol further mitigates MEV impact through a batch auction mechanism.",
     "complexity": "Basic",
-    "limitation": "Strict slippage limits may cause frequent transaction failures; cannot prevent all types of MEV attacks; difficult to set a reasonable slippage when liquidity is insufficient; limit orders may remain unfilled for extended periods."
+    "limitation": "Strict slippage limits may cause frequent transaction failures; cannot prevent all types of MEV attacks; difficult to set a reasonable slippage when liquidity is insufficient; limit orders may remain unfilled for extended periods.",
+    "keywords": [
+      "Transaction Slippage Protection and Limit Orders"
+    ]
   }
 }

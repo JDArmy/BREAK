@@ -4,6 +4,9 @@
     "definition": "Real-time monitoring of industrial control system operational status, with an established incident response mechanism for rapid security event handling.",
     "description": "Monitoring architecture: IDS/IPS dedicated to ICS traffic; SIEM for security event correlation; baseline behavior modeling; anomaly alerting; emergency response plan drills; backup systems.",
     "complexity": "Advanced",
-    "limitation": "Shortage of specialized personnel; high false positive rate; incident response may disrupt production operations."
+    "limitation": "Shortage of specialized personnel; high false positive rate; incident response may disrupt production operations.",
+    "keywords": [
+      "ICS Security Monitoring and Incident Response"
+    ]
   }
 }

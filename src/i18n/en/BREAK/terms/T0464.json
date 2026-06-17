@@ -2,15 +2,11 @@
   "T0464": {
     "title": "Money Laundering",
     "keywords": [
-      "Money Laundering",
-      "proceeds concealment",
-      "illegal fund integration",
-      "dirty money cleaning",
-      "financial crime concealment",
-      "illicit fund legitimization"
+      "Money Laundering"
     ],
     "aliases": [
-      "Xiqian"
+      "Xiqian",
+      "Money Laundering alias 2"
     ],
     "definition": "The criminal process of disguising the origins of illegally obtained money by passing it through complex transfers and transactions to make it appear legitimate and difficult to trace.",
     "description": "Money laundering is a systematic process typically divided into three stages: placement (introducing illegal funds into the financial system), layering (executing complex transactions to obscure the money trail), and integration (returning laundered funds to criminals in seemingly legitimate form). Modern laundering operations utilize diverse channels including shell companies, cryptocurrency mixing services, trade-based laundering, real estate purchases, online gambling platforms, and cross-border transfers through jurisdictions with weak oversight. Digital currencies and decentralized finance platforms have introduced new laundering vectors that exploit regulatory gaps and pseudonymity. Criminals employ money mules, nested service providers, and professional laundering networks to maximize distance between illicit sources and final destinations. Financial institutions implement Anti-Money Laundering (AML) programs using transaction monitoring, Know Your Customer (KYC) procedures, and suspicious activity reporting to detect and prevent laundering operations.",
@@ -24,6 +20,7 @@
         "title": "什么是洗钱罪?_中国人大网",
         "link": "http://www.npc.gov.cn/zgrdw/npc/flsyywd/flwd/2002-04/19/content_293387.htm"
       }
-    ]
+    ],
+    "category": "Business Security"
   }
 }

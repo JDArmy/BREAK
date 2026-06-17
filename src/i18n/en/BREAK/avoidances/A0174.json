@@ -10,6 +10,7 @@
         "link": "https://eips.ethereum.org/EIPS/eip-4337",
         "title": "EIP-4337: Account Abstraction"
       }
-    ]
+    ],
+    "definition": "Audit ERC-4337 related contracts, verifying UserOperation and Paymaster security."
   }
 }

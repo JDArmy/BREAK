@@ -13,6 +13,9 @@
       {
         "title": "Hardware Security | CSRC"
       }
-    ]
+    ],
+    "description": "Attackers implant backdoors in IoT device chips, firmware, communication modules and other hardware supply chain components for long-term persistence and remote control.",
+    "complexity": "Advanced",
+    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
   }
 }

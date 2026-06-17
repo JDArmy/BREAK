@@ -10,24 +10,34 @@
       },
       "RD04": {
         "title": "Adversarial Dimension"
+      },
+      "RD01": {
+        "title": "Transaction Dimension"
       }
     },
     "riskScenes": {
       "RS02": {
-        "title": "Compliance Risk"
+        "title": "Compliance and Governance Risk"
       },
       "RS04": {
-        "title": "Illegal Request Risk"
+        "title": "API and Automation Attack"
       },
       "RS06": {
-        "title": "Internal Risk"
+        "title": "Internal and Supply-Chain Security"
       },
       "RS07": {
-        "title": "Identity Theft Risk"
+        "title": "Account Takeover and Identity Theft"
       },
       "RS09": {
-        "title": "Identity Verification Risk"
+        "title": "Registration, Authentication, and Account Abuse"
+      },
+      "RS14": {
+        "title": "API, Cloud-Native, and Non-Human Identity Security"
+      },
+      "RS24": {
+        "title": "Booking, Ticketing, and Inventory Resource Abuse"
       }
-    }
+    },
+    "description": "Insurance scenarios covering sales conduct, underwriting, claims, complaints, and agent risk."
   }
 }
