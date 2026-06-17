@@ -17,6 +17,7 @@ import { languages, setLocale } from "@/i18n";
 import { onMounted, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import { preloadRelationView } from "@/router";
+import { prefetchAllKnowledgeViews } from "@/composables/useRoutePrefetch";
 
 const { locale } = useI18n();
 const router = useRouter();
@@ -41,6 +42,7 @@ const knowledgeRoutes: Record<string, string> = {
 };
 
 const handleKnowledgeCommand = (command: string) => {
+  prefetchAllKnowledgeViews();
   const path = knowledgeRoutes[command];
   if (path) {
     router.push(path);
@@ -49,11 +51,19 @@ const handleKnowledgeCommand = (command: string) => {
 };
 
 const handleMobileNav = (path: string) => {
+  if (path !== "/" && !path.startsWith("/relation/")) {
+    prefetchAllKnowledgeViews();
+  }
   if (path.startsWith("/relation/")) {
     preloadRelationView("sankey");
   }
   router.push(path);
   mobileMenuOpen.value = false;
+};
+
+const handleMobileMenuOpen = () => {
+  mobileMenuOpen.value = true;
+  window.setTimeout(prefetchAllKnowledgeViews, 1200);
 };
 
 const handleDesktopMenuSelect = (index: string) => {
@@ -62,12 +72,24 @@ const handleDesktopMenuSelect = (index: string) => {
   }
 };
 
+const handleKnowledgeMenuVisible = (visible: boolean) => {
+  if (visible) {
+    prefetchAllKnowledgeViews();
+  }
+};
+
 onMounted(() => {
-  const preload = () => preloadRelationView(window.innerWidth < 768 ? "sankey" : "network");
+  if (window.innerWidth >= 768) {
+    prefetchAllKnowledgeViews();
+    preloadRelationView("network");
+    return;
+  }
+
+  const preload = () => preloadRelationView("sankey");
   if ("requestIdleCallback" in window) {
-    window.requestIdleCallback(preload, { timeout: 2000 });
+    window.requestIdleCallback(preload, { timeout: 12000 });
   } else {
-    window.setTimeout(preload, 1200);
+    window.setTimeout(preload, 12000);
   }
 });
 
@@ -114,7 +136,7 @@ const getActiveIndex = (fullPath: string) => {
       <div class="mobile-search" @click="searchOpen = true">
         <el-icon><Search /></el-icon>
       </div>
-      <div class="mobile-hamburger" @click="mobileMenuOpen = true">
+      <div class="mobile-hamburger" @click="handleMobileMenuOpen">
         <el-icon :size="20"><MenuIcon /></el-icon>
       </div>
     </div>
@@ -253,8 +275,9 @@ const getActiveIndex = (fullPath: string) => {
       class="knowledge-menu"
       :class="{ 'is-active': isKnowledgeActive($route.fullPath) }"
       @command="handleKnowledgeCommand"
+      @visible-change="handleKnowledgeMenuVisible"
     >
-      <span class="el-dropdown-link">
+      <span class="el-dropdown-link" @mouseenter="prefetchAllKnowledgeViews" @focus="prefetchAllKnowledgeViews">
         {{ $t("menu.knowledge") }}<el-icon><arrow-down /></el-icon>
       </span>
       <template #dropdown>
