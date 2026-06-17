@@ -11,7 +11,7 @@
     ],
     "aliases": [
       "Maochi",
-      "SIM Box alias 2"
+      "SIM Gateway"
     ],
     "definition": "Hardware devices that host dozens to hundreds of SIM cards simultaneously, enabling automated SMS reception, voice calls, and mobile network operations for fraud, spam, or telecom bypass purposes.",
     "description": "SIM boxes are specialized hardware devices designed to manage large quantities of SIM cards in a centralized system, often connected to computers for automated control. These devices range from small 8-port units to industrial racks holding 128+ cards, featuring remote management interfaces and API integration. Originally used for legitimate VoIP termination, SIM boxes are now predominantly employed by fraud operations for receiving verification codes at scale, bypassing SMS rate limits, distributing spam messages across multiple numbers, and rotating phone numbers to evade detection. Advanced setups include automatic SIM rotation, geographic distribution to avoid carrier detection, and integration with device farms for complete account creation workflows. Telecom operators actively combat SIM box operations as they facilitate fraud and result in revenue loss from bypass traffic.",

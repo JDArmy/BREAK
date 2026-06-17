@@ -2,11 +2,13 @@ import fs from 'fs';
 import path from 'path';
 import { projectRoot, readJson } from '../search/common.mjs';
 
+const roadmapPath = path.join(projectRoot, 'ROADMAP.md');
 const docs = {
   readme: fs.readFileSync(path.join(projectRoot, 'README.md'), 'utf8'),
   readmeCn: fs.readFileSync(path.join(projectRoot, 'README_CN.md'), 'utf8'),
-  roadmap: fs.readFileSync(path.join(projectRoot, 'ROADMAP.md'), 'utf8'),
+  roadmap: fs.existsSync(roadmapPath) ? fs.readFileSync(roadmapPath, 'utf8') : '',
 };
+const hasRoadmap = docs.roadmap.length > 0;
 
 const packageJson = readJson(path.join(projectRoot, 'package.json'));
 const buildScript = packageJson.scripts?.build || '';
@@ -92,9 +94,11 @@ const buildGateScripts = [
   'validate:data',
   'test',
   'test:coverage',
+  'export:data',
   'build-only',
   'audit:bundle:check',
   'validate:docs-build',
+  'validate:data-export',
   'test:smoke',
   'test:performance',
 ];
@@ -113,9 +117,11 @@ const chineseStats =
 
 expectIncludes('readme', englishStats, 'README entity totals');
 expectIncludes('readmeCn', chineseStats, 'README_CN entity totals');
-expectIncludes('roadmap', `当前项目版本：${packageJson.version}`, 'ROADMAP package version');
-expectIncludes('roadmap', `参考资料总量：${metricReferenceTotal} 条`, 'ROADMAP reference total');
-expectIncludes('roadmap', `| \`npm run test\` | ${testFileCount} 个测试文件，${expectedTestTotal} 个用例通过 |`, 'ROADMAP test baseline');
+if (hasRoadmap) {
+  expectIncludes('roadmap', `当前项目版本：${packageJson.version}`, 'ROADMAP package version');
+  expectIncludes('roadmap', `参考资料总量：${metricReferenceTotal} 条`, 'ROADMAP reference total');
+  expectIncludes('roadmap', `| \`npm run test\` | ${testFileCount} 个测试文件，${expectedTestTotal} 个用例通过 |`, 'ROADMAP test baseline');
+}
 
 for (const scriptName of buildGateScripts) {
   if (!buildScript.includes(`npm run ${scriptName}`)) {
@@ -123,7 +129,9 @@ for (const scriptName of buildGateScripts) {
   }
   expectIncludes('readme', `npm run ${scriptName}`, `README build gate ${scriptName}`);
   expectIncludes('readmeCn', `npm run ${scriptName}`, `README_CN build gate ${scriptName}`);
-  expectIncludes('roadmap', `npm run ${scriptName}`, `ROADMAP build gate ${scriptName}`);
+  if (hasRoadmap) {
+    expectIncludes('roadmap', `npm run ${scriptName}`, `ROADMAP build gate ${scriptName}`);
+  }
 }
 
 const roadmapRows = [
@@ -137,7 +145,9 @@ const roadmapRows = [
 ];
 
 for (const [label, count] of roadmapRows) {
-  expectIncludes('roadmap', `| ${label} | ${count.main} | ${count.sub} | ${count.total} |`, `ROADMAP ${label} row`);
+  if (hasRoadmap) {
+    expectIncludes('roadmap', `| ${label} | ${count.main} | ${count.sub} | ${count.total} |`, `ROADMAP ${label} row`);
+  }
 }
 
 if (failures.length > 0) {

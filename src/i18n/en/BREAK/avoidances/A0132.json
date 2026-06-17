@@ -7,9 +7,11 @@
     "limitation": "Limiting consecutive blocks may affect network efficiency; increasing confirmation requirements degrades user experience; monitoring systems may generate false positives; cannot prevent attacks, only delay detection.",
     "keywords": [
       "Consecutive Block Limit and Reorganization Detection",
-      "Consecutive Block Limit and Reorganization Detection controls",
-      "Consecutive Block Limit and Reorganization Detection monitoring",
-      "Consecutive Block Limit and Reorganization Detection policy"
+      "chain reorganization detection",
+      "consecutive block limit",
+      "reorg monitoring",
+      "consensus anomaly",
+      "block confirmation risk"
     ]
   }
 }

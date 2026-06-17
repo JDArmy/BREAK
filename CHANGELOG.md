@@ -20,12 +20,18 @@
 - 新增：英文 i18n 质量校验
   - `validate:data` 会检查英文实体字段缺失和英文展示内容中的中文残留
   - 修正英文风险、规避手段、攻击工具、威胁行为者、术语和业务场景数据的翻译覆盖
+  - 补充模板化英文关键词/别名检测，并清理残留的生成式占位内容
 - 新增：文档统计一致性校验脚本
   - `validate:data` 现在会检查 README、README_CN、ROADMAP 的实体规模、参考资料口径和版本号
   - 防止数据规模更新后文档统计再次漂移
 - 优化：文档验证基线同步
   - `docs-consistency` 现在会检查测试文件数、测试用例数和 `npm run build` 的完整门禁链路
   - 同步 README/README_CN 的校验命令说明，覆盖 coverage、docs build、smoke 和 performance 门禁
+- 新增：静态数据导出
+  - 新增 `export:data` 生成 `public/data/break-data.json` 和 `public/data/break-manifest.json`
+  - 新增 `validate:data-export` 校验数据包、manifest hash、实体计数、版本号和 GitHub Pages 产物同步
+  - `npm run build`、CI 和 GitHub Pages Deploy 会生成并校验静态数据包
+  - 静态数据 manifest 使用提交时间生成，避免重复构建产生无意义时间戳漂移
 - 新增：关系图谱回归测试覆盖
   - 补充 Sankey 攻击路径、路径角色说明和移动端高度测试
   - 补充根节点路径解释、关系洞察和局部预览统计测试

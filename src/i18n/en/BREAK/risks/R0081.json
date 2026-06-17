@@ -12,9 +12,11 @@
     ],
     "keywords": [
       "Supply Chain Risk",
-      "Supply Chain Risk pattern",
-      "Supply Chain Risk indicators",
-      "Supply Chain Risk mitigation"
+      "supply chain attack",
+      "supply chain compromise",
+      "third-party risk",
+      "supplier compromise",
+      "upstream compromise"
     ]
   },
   "R0081-001": {
@@ -30,9 +32,11 @@
     ],
     "keywords": [
       "Software Supply Chain Risk",
-      "Software Supply Chain Risk pattern",
-      "Software Supply Chain Risk indicators",
-      "Software Supply Chain Risk mitigation"
+      "software supply chain attack",
+      "dependency confusion",
+      "malicious package",
+      "CI/CD compromise",
+      "package hijacking"
     ]
   },
   "R0081-002": {
@@ -48,9 +52,11 @@
     ],
     "keywords": [
       "Hardware Supply Chain Risk",
-      "Hardware Supply Chain Risk pattern",
-      "Hardware Supply Chain Risk indicators",
-      "Hardware Supply Chain Risk mitigation"
+      "hardware trojan",
+      "firmware tampering",
+      "component backdoor",
+      "counterfeit hardware",
+      "hardware tampering"
     ]
   },
   "R0081-003": {
@@ -66,10 +72,11 @@
     ],
     "keywords": [
       "Cloud Service Supply Chain Risk",
-      "Cloud Service Supply Chain Risk pattern",
-      "Cloud Service Supply Chain Risk indicators",
-      "Cloud Service Supply Chain Risk mitigation",
-      "cloud security"
+      "cloud provider compromise",
+      "SaaS supply chain",
+      "managed service compromise",
+      "third-party cloud risk",
+      "cloud dependency risk"
     ]
   },
   "R0081-004": {
@@ -85,9 +92,11 @@
     ],
     "keywords": [
       "Outsourced Personnel Risk",
-      "Outsourced Personnel Risk pattern",
-      "Outsourced Personnel Risk indicators",
-      "Outsourced Personnel Risk mitigation"
+      "insider threat",
+      "contractor risk",
+      "vendor insider",
+      "third-party personnel",
+      "privileged contractor"
     ]
   },
   "R0081-005": {
@@ -103,9 +112,13 @@
     ],
     "keywords": [
       "Open Source Component Poisoning Risk",
-      "Open Source Component Poisoning Risk pattern",
-      "Open Source Component Poisoning Risk indicators",
-      "Open Source Component Poisoning Risk mitigation"
+      "typosquatting",
+      "dependency confusion",
+      "malicious package",
+      "package takeover",
+      "open source backdoor",
+      "npm malware",
+      "PyPI malware"
     ]
   }
 }

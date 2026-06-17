@@ -7,9 +7,11 @@
     "limitation": "Overly strict limits can impair the protocol's capital efficiency and user experience; limits need to be dynamically adjusted based on market conditions; cannot completely prevent small-scale arbitrage attacks.",
     "keywords": [
       "Flash Loan Limit Control",
-      "Flash Loan Limit Control controls",
-      "Flash Loan Limit Control monitoring",
-      "Flash Loan Limit Control policy"
+      "flash loan risk limit",
+      "borrow cap",
+      "protocol exposure limit",
+      "same-block abuse prevention",
+      "DeFi risk control"
     ]
   }
 }

@@ -4,9 +4,11 @@
     "definition": "IoT devices infected with trojans actively connect to C2 servers to receive remote commands, becoming part of botnets.",
     "keywords": [
       "Illegal Outbound and C2 Control",
-      "Illegal Outbound and C2 Control controls",
-      "Illegal Outbound and C2 Control monitoring",
-      "Illegal Outbound and C2 Control policy"
+      "C2 traffic",
+      "unauthorized outbound connection",
+      "command and control",
+      "egress control bypass",
+      "beaconing detection"
     ],
     "references": [
       {

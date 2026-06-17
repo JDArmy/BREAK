@@ -12,9 +12,12 @@
     ],
     "keywords": [
       "Business Logic Tampering Risk",
-      "Business Logic Tampering Risk pattern",
-      "Business Logic Tampering Risk indicators",
-      "Business Logic Tampering Risk mitigation"
+      "business logic abuse",
+      "parameter tampering",
+      "workflow bypass",
+      "transaction tampering",
+      "race condition",
+      "logic flaw exploitation"
     ]
   }
 }

@@ -68,6 +68,8 @@ npm run audit:references
 npm run audit:maintenance
 npm run test
 npm run test:coverage
+npm run export:data
+npm run validate:data-export
 npm run validate:docs-build
 npm run test:smoke
 npm run test:performance
@@ -80,10 +82,19 @@ npm run type-check
 ```
 
 `npm run validate:data` 会执行 JSON Schema 校验、i18n key 同步检查和关系覆盖审计。
-`npm run build` 会执行 `lint`、`type-check`、`validate:data`、`test`、`test:coverage`、`build-only`、`audit:bundle:check`、`validate:docs-build`、`test:smoke` 和 `test:performance`。
+`npm run build` 会执行 `lint`、`type-check`、`validate:data`、`test`、`test:coverage`、`export:data`、`build-only`、`audit:bundle:check`、`validate:docs-build`、`validate:data-export`、`test:smoke` 和 `test:performance`。
 `npm run test:coverage` 会对关系分析、搜索、安全 i18n 和 BREAK 数据工具执行核心逻辑覆盖率门禁。
+`npm run export:data` 会生成 `public/data/break-data.json` 和 `public/data/break-manifest.json` 静态数据包。
+`npm run validate:data-export` 会检查公共数据包、manifest hash、实体计数、版本号和 GitHub Pages 产物同步状态。
 `npm run validate:docs-build` 会检查已提交的 `docs/` GitHub Pages 产物是否与当前构建输出一致。
 `npm run test:smoke` 和 `npm run test:performance` 会使用 Playwright 验证生成后的静态站点。
 `npm run audit:metrics` 会生成内容可信度、关系覆盖、分类分布和业务场景覆盖基线报告。
 `npm run audit:bundle` 会基于 `docs/assets` 检查构建产物是否超过 bundle 预算。
 `npm run audit:maintenance` 会刷新审计报告并生成统一维护汇总。
+
+### 静态数据
+
+- Manifest：<https://break.jd.army/data/break-manifest.json>
+- 数据包：<https://break.jd.army/data/break-data.json>
+
+静态数据包提供当前中文 BREAK 数据，并包含版本、生成信息、实体计数、字节数和 SHA-256 校验值，便于外部工具直接消费。

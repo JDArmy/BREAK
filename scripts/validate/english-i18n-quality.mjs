@@ -42,6 +42,18 @@ const categories = [
 ];
 
 const replaceArrayTranslationKeys = new Set(["keywords", "aliases"]);
+const generatedKeywordSuffixes = [
+  "control",
+  "controls",
+  "risk",
+  "detection",
+  "governance",
+  "monitoring",
+  "policy",
+  "mitigation",
+  "indicators",
+  "pattern",
+];
 
 function loadJson(file) {
   return JSON.parse(readFileSync(file, "utf8"));
@@ -98,6 +110,24 @@ function hasChineseText(value) {
   return /[\u4e00-\u9fff]/.test(JSON.stringify(value ?? ""));
 }
 
+function escapeRegExp(value) {
+  return String(value ?? "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function isGeneratedKeyword(value, title) {
+  const text = String(value ?? "").trim();
+  if (!text) return false;
+  if (/\skeyword\s\d+$/i.test(text)) return true;
+  if (!title) return false;
+
+  const suffixPattern = generatedKeywordSuffixes.map(escapeRegExp).join("|");
+  return new RegExp(`^${escapeRegExp(title)}\\s(?:${suffixPattern})$`, "i").test(text);
+}
+
+function isGeneratedAlias(value) {
+  return /\salias\s\d+$/i.test(String(value ?? "").trim());
+}
+
 function isMissingEnglishValue(zhValue, enValue) {
   if (Array.isArray(zhValue) && zhValue.length === 0) {
     return false;
@@ -138,6 +168,18 @@ for (const category of categories) {
         }
         if (hasChineseText(merged[field])) {
           issues.push(`${category.name}.${id}.${field}: English display value contains Chinese text`);
+        }
+      }
+
+      for (const keyword of Array.isArray(enEntity.keywords) ? enEntity.keywords : []) {
+        if (isGeneratedKeyword(keyword, enEntity.title)) {
+          issues.push(`${category.name}.${id}.keywords: generated/template keyword "${keyword}"`);
+        }
+      }
+
+      for (const alias of Array.isArray(enEntity.aliases) ? enEntity.aliases : []) {
+        if (isGeneratedAlias(alias)) {
+          issues.push(`${category.name}.${id}.aliases: generated/template alias "${alias}"`);
         }
       }
 

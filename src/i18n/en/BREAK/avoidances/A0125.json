@@ -7,9 +7,11 @@
     "limitation": "Multiple oracles increase gas costs and latency; all oracles may be affected by the same underlying data sources; aggregation algorithms may be studied and exploited by attackers; scenarios involving data source failures must be handled.",
     "keywords": [
       "Multi-Source Oracle Aggregation and Anomaly Detection",
-      "Multi-Source Oracle Aggregation and Anomaly Detection controls",
-      "Multi-Source Oracle Aggregation and Anomaly Detection monitoring",
-      "Multi-Source Oracle Aggregation and Anomaly Detection policy"
+      "oracle aggregation",
+      "price feed validation",
+      "oracle deviation monitoring",
+      "TWAP comparison",
+      "DeFi oracle security"
     ]
   }
 }

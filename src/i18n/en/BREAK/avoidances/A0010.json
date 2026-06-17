@@ -11,9 +11,11 @@
     ],
     "keywords": [
       "Terminal Abnormal Environment Detection",
-      "Terminal Abnormal Environment Detection controls",
-      "Terminal Abnormal Environment Detection monitoring",
-      "Terminal Abnormal Environment Detection policy"
+      "device fingerprinting",
+      "anomaly detection",
+      "device environment check",
+      "abnormal device detection",
+      "terminal environment detection"
     ]
   },
   "A0010-001": {
@@ -29,9 +31,11 @@
     ],
     "keywords": [
       "Emulator Detection",
-      "Emulator Detection controls",
-      "Emulator Detection monitoring",
-      "Emulator Detection policy"
+      "emulator check",
+      "Android emulator detection",
+      "virtual device detection",
+      "QEMU detection",
+      "Genymotion detection"
     ]
   },
   "A0010-002": {
@@ -46,10 +50,10 @@
     ],
     "keywords": [
       "Cloud Phone Detection",
-      "Cloud Phone Detection controls",
-      "Cloud Phone Detection monitoring",
-      "Cloud Phone Detection policy",
-      "cloud security"
+      "cloud phone check",
+      "virtual phone detection",
+      "cloud handset detection",
+      "phone farm detection"
     ]
   },
   "A0010-003": {
@@ -64,9 +68,11 @@
     ],
     "keywords": [
       "ROOT/Jailbreak Detection",
-      "ROOT/Jailbreak Detection controls",
-      "ROOT/Jailbreak Detection monitoring",
-      "ROOT/Jailbreak Detection policy"
+      "root detection",
+      "jailbreak detection",
+      "rooted device detection",
+      "jailbroken device detection",
+      "anti-rooting"
     ]
   },
   "A0010-004": {
@@ -81,9 +87,12 @@
     ],
     "keywords": [
       "Cheat/Plugin Detection",
-      "Cheat/Plugin Detection controls",
-      "Cheat/Plugin Detection monitoring",
-      "Cheat/Plugin Detection policy"
+      "anti-cheat",
+      "cheat detection",
+      "plugin detection",
+      "mod menu detection",
+      "game hack detection",
+      "DLL injection detection"
     ]
   },
   "A0010-005": {
@@ -99,9 +108,11 @@
     ],
     "keywords": [
       "Multi-Instance Detection",
-      "Multi-Instance Detection controls",
-      "Multi-Instance Detection monitoring",
-      "Multi-Instance Detection policy"
+      "multi-instance check",
+      "multi-open detection",
+      "instance limiting",
+      "multi-login detection",
+      "parallel instance detection"
     ]
   },
   "A0010-006": {
@@ -117,9 +128,11 @@
     ],
     "keywords": [
       "Debugger Detection",
-      "Debugger Detection controls",
-      "Debugger Detection monitoring",
-      "Debugger Detection policy"
+      "anti-debugging",
+      "debugger check",
+      "debug detection",
+      "process debugging detection",
+      "runtime debugger detection"
     ]
   },
   "A0010-007": {
@@ -134,9 +147,11 @@
     ],
     "keywords": [
       "Virtual Machine Detection",
-      "Virtual Machine Detection controls",
-      "Virtual Machine Detection monitoring",
-      "Virtual Machine Detection policy"
+      "VM detection",
+      "virtual machine check",
+      "sandbox detection",
+      "hypervisor detection",
+      "virtualized environment detection"
     ]
   },
   "A0010-008": {
@@ -151,9 +166,11 @@
     ],
     "keywords": [
       "Headless Browser Detection",
-      "Headless Browser Detection controls",
-      "Headless Browser Detection monitoring",
-      "Headless Browser Detection policy"
+      "headless Chrome detection",
+      "headless mode detection",
+      "browser automation detection",
+      "bot browser detection",
+      "Puppeteer detection"
     ]
   },
   "A0010-009": {
@@ -168,9 +185,11 @@
     ],
     "keywords": [
       "HOOK Detection",
-      "HOOK Detection controls",
-      "HOOK Detection monitoring",
-      "HOOK Detection policy"
+      "anti-hooking",
+      "API hooking detection",
+      "runtime hooking detection",
+      "function hooking",
+      "inline hooking"
     ]
   }
 }

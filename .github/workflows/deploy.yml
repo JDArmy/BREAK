@@ -32,9 +32,11 @@ jobs:
       - run: npm run validate:data
       - run: npm run test
       - run: npm run test:coverage
+      - run: npm run export:data
       - run: npm run build-only
       - run: npm run audit:bundle:check
       - run: npm run validate:docs-build
+      - run: npm run validate:data-export
       - run: npm run test:smoke
       - run: npm run test:performance
       - uses: actions/configure-pages@v4

@@ -15,9 +15,11 @@
     ],
     "keywords": [
       "Generative AI Risk",
-      "Generative AI Risk pattern",
-      "Generative AI Risk indicators",
-      "Generative AI Risk mitigation"
+      "AIGC risk",
+      "genAI risk",
+      "LLM risk",
+      "AI content risk",
+      "model governance risk"
     ]
   },
   "R0071-001": {
@@ -56,9 +58,11 @@
     ],
     "keywords": [
       "AIGC Compliance Risk",
-      "AIGC Compliance Risk pattern",
-      "AIGC Compliance Risk indicators",
-      "AIGC Compliance Risk mitigation"
+      "AI compliance risk",
+      "unsafe model output",
+      "policy-violating AI content",
+      "illegal generated content",
+      "responsible AI risk"
     ]
   },
   "R0071-003": {
@@ -94,9 +98,11 @@
     ],
     "keywords": [
       "AI Hallucination Risk",
-      "AI Hallucination Risk pattern",
-      "AI Hallucination Risk indicators",
-      "AI Hallucination Risk mitigation"
+      "LLM hallucination",
+      "fabricated AI output",
+      "AI confabulation",
+      "false AI answers",
+      "model hallucinations"
     ]
   },
   "R0071-005": {
@@ -112,9 +118,11 @@
     ],
     "keywords": [
       "AI Model Poisoning Risk",
-      "AI Model Poisoning Risk pattern",
-      "AI Model Poisoning Risk indicators",
-      "AI Model Poisoning Risk mitigation"
+      "training data poisoning",
+      "model backdoor",
+      "poisoned model",
+      "malicious fine-tuning",
+      "data poisoning attack"
     ]
   }
 }

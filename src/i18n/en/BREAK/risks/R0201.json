@@ -4,9 +4,11 @@
     "definition": "Account abstraction standards like ERC-4337 introduce new attack surfaces including UserOperation validation bypass, Paymaster abuse, and malicious aggregators.",
     "keywords": [
       "Account Abstraction Wallet Risk",
-      "Account Abstraction Wallet Risk pattern",
-      "Account Abstraction Wallet Risk indicators",
-      "Account Abstraction Wallet Risk mitigation"
+      "account abstraction wallet",
+      "ERC-4337 risk",
+      "paymaster abuse",
+      "bundler risk",
+      "smart wallet authorization"
     ],
     "references": [
       {

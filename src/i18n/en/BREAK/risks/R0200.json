@@ -4,9 +4,11 @@
     "definition": "Asset bridges between Layer2 scaling solutions (Rollup, sidechains) and mainchain have security vulnerabilities that may result in funds being locked or stolen.",
     "keywords": [
       "Layer2 Bridge Risk",
-      "Layer2 Bridge Risk pattern",
-      "Layer2 Bridge Risk indicators",
-      "Layer2 Bridge Risk mitigation"
+      "L2 bridge security",
+      "cross-chain message risk",
+      "bridge liquidity risk",
+      "rollup withdrawal risk",
+      "bridge validator compromise"
     ],
     "references": [
       {
