@@ -17,7 +17,7 @@
 | Phase 0：基线确认 | 部分完成 | 已完成关系页数据链路梳理和问题识别，但未沉淀独立的验收样本清单和截图基线文档 |
 | Phase 1：关系解释核心 | 基本完成 | 已新增 `relationExplanation.ts`，关系摘要具备来源字段、证据级别、解释、影响提示和质量标记；节点关系列表已支持解释展示和筛选 |
 | Phase 2：攻击路径解释 | 基本完成 | Sankey 路径已保留解释对象，抽屉内支持路径组合筛选、逐段来源字段、攻击意图、防御意义和缺规避提示 |
-| Phase 3：节点摘要与防御覆盖 | 部分完成 | 已有攻击路径角色、根节点路径和上下文预览；尚未完成各实体类型固定的“为什么重要”摘要和独立防御覆盖分析 |
+| Phase 3：节点摘要与防御覆盖 | 部分完成 | 已新增“为什么重要”摘要和节点防御覆盖摘要；重复的根节点上下文预览已移除；仍需继续补业务场景影响和质量治理联动 |
 | Phase 4：分析视角与质量治理 | 未开始 | 尚未增加任务型视角切换，也未将审计报告接入前端治理视图 |
 | Phase 5：业务场景图谱 | 未开始 | 尚未实现 BusinessScene / RiskScene 出发的解释型关系图谱 |
 
@@ -27,20 +27,21 @@
 - 节点抽屉关系列表：已支持方向、关系类型、直接性筛选，筛选项会随组合动态收窄。
 - 攻击路径解释：已支持 ThreatActor / AttackTool / Risk / Avoidance 组合筛选和路径详情摘要。
 - 攻击路径逐段解释：已展示来源字段、攻击意图、防御意义、推荐处置和缺规避质量提示。
+- 节点分析摘要：已按实体类型展示“为什么重要”、关联类型分布和高/低覆盖提示。
+- 防御覆盖摘要：已新增 `relationCoverageAnalysis.ts`，Risk / Avoidance / AttackTool / ThreatActor 可展示覆盖范围、候选规避、风险/工具/攻击者覆盖指标。
 - 抽屉复用：关系网络和 Sankey 节点详情已收敛到同一个 `RelationNodeDetailDrawer`。
-- 交互质量：已处理路径筛选下拉、无效筛选项、tooltip 延时与层级、ID/标题展示、重复分隔线等问题。
+- 交互质量：已处理路径筛选下拉、无效筛选项、tooltip 延时与层级、ID/标题展示、重复分隔线、重复上下文预览等问题。
 - 中英文文案：本轮新增关系解释和攻击路径解释文案已同步维护。
-- 测试覆盖：`relationAttackPath`、`relationExplanation`、`relationGraphInsights`、`relationNetworkLayout` 相关测试已通过。
+- 测试覆盖：`relationAttackPath`、`relationCoverageAnalysis`、`relationExplanation`、`relationGraphInsights`、`relationNetworkLayout` 相关测试已通过。
 
 ### 0.3 尚未完成能力
 
-- 独立的 Risk / Avoidance 防御覆盖分析模块。
-- 每类实体固定的“为什么重要”摘要，包括高关联、低覆盖、路径中间层等提示。
+- 业务场景影响摘要尚未接入节点详情。
 - 质量治理前端视图，包括弱关系、缺覆盖、场景异常、待复核关系的列表和图谱定位。
 - 任务型分析视角切换，包括风险视角、攻击者视角、防御视角和薄弱关系视角。
 - BusinessScene / RiskScene 出发的业务场景图谱。
 - 前端可消费的维护报告 JSON。
-- `relationCoverageAnalysis.test.ts` 和 `relationBusinessSceneGraph.test.ts`。
+- `relationBusinessSceneGraph.test.ts`。
 
 ## 1. 背景与目标
 

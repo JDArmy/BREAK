@@ -163,7 +163,7 @@ export default defineComponent({
       :selected-node-attack-path-explanations="
         selectedNodeAttackPathExplanations
       "
-      :selected-node-root-preview="selectedNodeRootPreview"
+      :selected-node-coverage-summary="selectedNodeCoverageSummary"
       :selected-network-relations="selectedNetworkRelations"
       :rel-key="relKey"
       :get-node-type-title="getNodeTypeTitle"

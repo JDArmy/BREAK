@@ -110,9 +110,6 @@
     "pathRoleRiskDesc": "This node sits in the outcome part of the attack path and represents the risk being directly caused or indirectly driven.",
     "pathRoleAvoidance": "Appears as Avoidance",
     "pathRoleAvoidanceDesc": "This node sits at the closing part of the attack path and represents a mitigation or avoidance measure.",
-    "rootPreview": "Preview as Root Context",
-    "previewNodeCount": "Nodes",
-    "previewRelationCount": "Relations",
     "allRelations": "All Relations",
     "relationFilters": "Relation Filters",
     "filterDirection": "Filter direction",
@@ -160,6 +157,37 @@
       "missingRiskLink": "This attack tool has no explicit risk link yet and should be reviewed.",
       "rootPath": "This node can return to the root through a {count}-hop path."
     },
+    "nodeCoverageBlockTitle": "Defensive Coverage",
+    "nodeCoverageTitle": {
+      "risk": "Avoidance coverage for risk \"{title}\"",
+      "avoidance": "Coverage scope for avoidance \"{title}\"",
+      "attackTool": "Risk and avoidance coverage for attack tool \"{title}\"",
+      "threatActor": "Capability coverage for threat actor \"{title}\""
+    },
+    "nodeCoverageSummary": {
+      "risk": "{total} candidate avoidances: {direct} from the risk, {tool} from related tools, {overlap} shared by both.",
+      "avoidance": "This avoidance covers {risks} risks and {tools} attack tools, and traces back to {actors} related threat actors.",
+      "attackTool": "This tool is associated with {risks} risks and already has {avoidances} avoidances that may limit or mitigate it.",
+      "threatActor": "This actor is associated with {tools} attack tools and {risks} risks, which helps bound the capability scope."
+    },
+    "nodeCoverageMetricDirect": "Risk coverage",
+    "nodeCoverageMetricTool": "Tool coverage",
+    "nodeCoverageMetricOverlap": "Overlap coverage",
+    "nodeCoverageMetricRisk": "Risk",
+    "nodeCoverageMetricAvoidance": "Avoidance",
+    "nodeCoverageMetricThreatActor": "Threat Actor",
+    "nodeCoverageMetaDirect": "From the risk's own avoidance list",
+    "nodeCoverageMetaBoth": "Referenced by both risk and related tools",
+    "nodeCoverageMetaTool": "From attack-tool avoidance list",
+    "nodeCoverageMetaRisk": "From risk avoidance or risk-linked fields",
+    "nodeCoverageMetaThreatActor": "From threat-actor risk-link fields",
+    "nodeCoverageNotice": {
+      "risk": "This risk has no avoidance coverage yet and should be prioritized for mitigation work.",
+      "avoidance": "This avoidance currently does not cover a clear risk or tool and should be reviewed.",
+      "attackTool": "This attack tool is not linked to a clear risk yet and should be completed.",
+      "threatActor": "This threat actor is not linked to tools or risks yet and should be reviewed."
+    },
+    "hiddenCoverageItemCount": "Another {count} coverage items are hidden. Check the relation list or attack paths for more context.",
     "evidenceLevel": {
       "direct": "Direct Evidence",
       "indirect": "Indirect Evidence",

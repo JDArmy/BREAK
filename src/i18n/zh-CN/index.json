@@ -110,9 +110,6 @@
     "pathRoleRiskDesc": "该节点位于攻击路径核心结果段，代表被直接造成或被间接推动的风险后果。",
     "pathRoleAvoidance": "作为规避手段出现",
     "pathRoleAvoidanceDesc": "该节点位于攻击路径收束段，代表可用于缓解、规避或削弱风险的手段。",
-    "rootPreview": "切换为根节点后的上下文预览",
-    "previewNodeCount": "节点数",
-    "previewRelationCount": "关系数",
     "allRelations": "全部关系",
     "relationFilters": "关系筛选",
     "filterDirection": "筛选方向",
@@ -160,6 +157,37 @@
       "missingRiskLink": "当前攻击工具暂未看到明确风险链路，需要继续复核。",
       "rootPath": "当前节点可通过 {count} 跳路径回到根节点。"
     },
+    "nodeCoverageBlockTitle": "防御覆盖",
+    "nodeCoverageTitle": {
+      "risk": "风险「{title}」的规避覆盖",
+      "avoidance": "规避手段「{title}」的覆盖范围",
+      "attackTool": "攻击工具「{title}」的风险与规避覆盖",
+      "threatActor": "威胁行为者「{title}」的能力覆盖"
+    },
+    "nodeCoverageSummary": {
+      "risk": "共 {total} 个候选规避手段，其中 {direct} 个来自风险自身、{tool} 个来自相关工具、{overlap} 个同时被风险和工具引用。",
+      "avoidance": "该规避手段覆盖 {risks} 个风险、{tools} 个攻击工具，并可追溯到 {actors} 个相关威胁行为者。",
+      "attackTool": "该工具关联 {risks} 个风险，并已有 {avoidances} 个可用于限制或缓解该工具的规避手段。",
+      "threatActor": "该行为者关联 {tools} 个攻击工具和 {risks} 个风险，可用于判断能力面与优先复核范围。"
+    },
+    "nodeCoverageMetricDirect": "风险覆盖",
+    "nodeCoverageMetricTool": "工具覆盖",
+    "nodeCoverageMetricOverlap": "重叠覆盖",
+    "nodeCoverageMetricRisk": "风险",
+    "nodeCoverageMetricAvoidance": "规避手段",
+    "nodeCoverageMetricThreatActor": "威胁行为者",
+    "nodeCoverageMetaDirect": "来自风险自身规避清单",
+    "nodeCoverageMetaBoth": "风险与相关工具同时引用",
+    "nodeCoverageMetaTool": "来自攻击工具规避清单",
+    "nodeCoverageMetaRisk": "来自风险规避或风险关联字段",
+    "nodeCoverageMetaThreatActor": "来自威胁行为者风险关联字段",
+    "nodeCoverageNotice": {
+      "risk": "该风险暂无规避覆盖，应优先补齐防御或缓解手段。",
+      "avoidance": "该规避手段暂未覆盖明确风险或工具，建议复核适用范围。",
+      "attackTool": "该攻击工具暂未关联风险，建议优先补齐风险链路。",
+      "threatActor": "该威胁行为者暂未关联工具或风险，建议复核能力画像。"
+    },
+    "hiddenCoverageItemCount": "还有 {count} 个覆盖对象未显示，请在关系列表或攻击路径中继续查看。",
     "evidenceLevel": {
       "direct": "直接证据",
       "indirect": "间接证据",

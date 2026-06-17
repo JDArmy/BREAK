@@ -5,6 +5,13 @@ import { useBreakpoints } from "@/composables/useBreakpoints";
 import RelationNodeDrawerHeader from "@/components/relation/RelationNodeDrawerHeader.vue";
 import RelationNodeDrawerInsights from "@/components/relation/RelationNodeDrawerInsights.vue";
 import RelationNodeDrawerRelations from "@/components/relation/RelationNodeDrawerRelations.vue";
+import type {
+  AttackPathExplanation,
+  NodeAnalysisSummary,
+  NodeCoverageSummary,
+  RootPathSummary,
+  RootRelationSummary,
+} from "@/components/relation/relationNodeDrawerInsightTypes";
 
 interface DetailNode {
   id: string;
@@ -26,97 +33,6 @@ interface RelationSummary {
   qualityFlags: string[];
 }
 
-interface RootRelationSummary {
-  direction: string;
-  text: string;
-  directness: string;
-  sourceFields: string[];
-  evidenceLabel: string;
-  explanation: string;
-  impactHint: string;
-  qualityFlags: string[];
-}
-
-interface PathNodeSummary {
-  id: string;
-  type: string;
-  title: string;
-}
-
-interface PathStepSummary {
-  relation: {
-    direction: string;
-    text: string;
-    directness: string;
-    sourceFields: string[];
-  };
-  targetNode: PathNodeSummary;
-  isCurrentTarget: boolean;
-}
-
-interface RootPathSummary {
-  hopCount: number;
-  startNode: PathNodeSummary;
-  steps: PathStepSummary[];
-}
-
-interface RootPreviewSummary {
-  nodeCount: number;
-  lineCount: number;
-  groupedCounts: Record<string, number>;
-}
-
-interface NodeAnalysisSummary {
-  summary: string;
-  highlights: string[];
-  notices: string[];
-}
-
-interface AttackPathExplanation {
-  pathKey: string;
-  pathCount: number;
-  threatActors: Array<{
-    id: string;
-    title: string;
-    type: string;
-  }>;
-  threatActorId?: string;
-  attackTool?: {
-    id: string;
-    title: string;
-    type: string;
-  };
-  attackToolId?: string;
-  risk: {
-    id: string;
-    title: string;
-    type: string;
-  };
-  riskId: string;
-  avoidance?: {
-    id: string;
-    title: string;
-    type: string;
-  };
-  avoidanceId?: string;
-  summary: string;
-  analysisFinding: string;
-  recommendedAction: string;
-  evidenceFields: string[];
-  defensiveFocus: string[];
-  qualityFlags: string[];
-  steps: Array<{
-    fromId: string;
-    fromTitle: string;
-    toId: string;
-    toTitle: string;
-    relationType: string;
-    sourceFields: string[];
-    attackIntent: string;
-    defensiveMeaning: string;
-  }>;
-}
-
 const props = defineProps<{
   modelValue: boolean;
   selectedNetworkNode: DetailNode | null;
@@ -131,7 +47,7 @@ const props = defineProps<{
   selectedNodeAttackPathSummary: string[];
   selectedNodeAttackPathDescription: string;
   selectedNodeAttackPathExplanations: AttackPathExplanation[];
-  selectedNodeRootPreview: RootPreviewSummary | null;
+  selectedNodeCoverageSummary: NodeCoverageSummary | null;
   isCurrentNodeRoot: boolean;
   selectedNetworkRelations: RelationSummary[];
   relKey: string;
@@ -194,9 +110,8 @@ const drawerVisible = computed({
         :selected-node-attack-path-explanations="
           selectedNodeAttackPathExplanations
         "
-        :selected-node-root-preview="selectedNodeRootPreview"
+        :selected-node-coverage-summary="selectedNodeCoverageSummary"
         :rel-key="relKey"
-        :get-node-type-title="getNodeTypeTitle"
         :is-path-node-current-selection="isPathNodeCurrentSelection"
         :is-current-node-root="isCurrentNodeRoot"
         @focus-node="emit('focus-node', $event)"

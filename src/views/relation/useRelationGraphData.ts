@@ -1,6 +1,7 @@
 import { computed, reactive, ref, type Ref } from "vue";
 import BREAK from "@/BREAK";
 import { createRelationAttackPathData } from "@/views/relation/relationAttackPath";
+import { createRelationCoverageAnalysis } from "@/views/relation/relationCoverageAnalysis";
 import { createRelationExplanationHelpers } from "@/views/relation/relationExplanation";
 import { createRelationGraphBuilder } from "@/views/relation/relationGraphBuilder";
 import { createRelationGraphInsights } from "@/views/relation/relationGraphInsights";
@@ -334,6 +335,14 @@ export const useRelationGraphData = ({
     getNodeTitle,
   });
 
+  const { selectedNodeCoverageSummary } = createRelationCoverageAnalysis({
+    t,
+    relType,
+    relKey,
+    selectedNetworkNode,
+    getNodeTitle,
+  });
+
   let refreshGraphRequestId = 0;
 
   const refreshGraphAfterVisible = () => {
@@ -399,6 +408,7 @@ export const useRelationGraphData = ({
     selectedNodeAttackPathDescription,
     selectedNodeAttackPathExplanations,
     selectedNodeAttackPathSummary,
+    selectedNodeCoverageSummary,
     selectedNodePathRelationKeys,
     selectedNodeRootPath,
     selectedNodeRootPreview,

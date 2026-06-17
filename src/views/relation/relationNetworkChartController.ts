@@ -315,6 +315,7 @@ export const createNetworkChartController = ({
           trigger: "item",
           enterable: false,
           showDelay: 500,
+          extraCssText: "z-index: 650 !important;",
           backgroundColor: tooltipBackground,
           borderColor: tooltipBorder,
           borderWidth: 1,
