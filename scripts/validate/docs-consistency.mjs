@@ -9,6 +9,7 @@ const docs = {
 };
 
 const packageJson = readJson(path.join(projectRoot, 'package.json'));
+const buildScript = packageJson.scripts?.build || '';
 
 const entityDirs = {
   risks: 'src/BREAK/risks',
@@ -63,6 +64,41 @@ function expectIncludes(docName, snippet, description) {
   }
 }
 
+function countTestFiles() {
+  const roots = [path.join(projectRoot, 'src')];
+  const testFilePattern = /\.(test|spec)\.(ts|tsx)$/;
+  let total = 0;
+
+  while (roots.length > 0) {
+    const current = roots.pop();
+    for (const entry of fs.readdirSync(current, { withFileTypes: true })) {
+      const fullPath = path.join(current, entry.name);
+      if (entry.isDirectory()) {
+        roots.push(fullPath);
+      } else if (testFilePattern.test(entry.name) && fullPath.includes(`${path.sep}__tests__${path.sep}`)) {
+        total += 1;
+      }
+    }
+  }
+
+  return total;
+}
+
+const testFileCount = countTestFiles();
+const expectedTestTotal = 85;
+const buildGateScripts = [
+  'lint',
+  'type-check',
+  'validate:data',
+  'test',
+  'test:coverage',
+  'build-only',
+  'audit:bundle:check',
+  'validate:docs-build',
+  'test:smoke',
+  'test:performance',
+];
+
 const englishStats =
   `The current framework catalogues ${counts.risks.total} risk items, ` +
   `${counts.avoidances.total} avoidance measures, ${counts.attackTools.total} attack tools, ` +
@@ -79,6 +115,16 @@ expectIncludes('readme', englishStats, 'README entity totals');
 expectIncludes('readmeCn', chineseStats, 'README_CN entity totals');
 expectIncludes('roadmap', `当前项目版本：${packageJson.version}`, 'ROADMAP package version');
 expectIncludes('roadmap', `参考资料总量：${metricReferenceTotal} 条`, 'ROADMAP reference total');
+expectIncludes('roadmap', `| \`npm run test\` | ${testFileCount} 个测试文件，${expectedTestTotal} 个用例通过 |`, 'ROADMAP test baseline');
+
+for (const scriptName of buildGateScripts) {
+  if (!buildScript.includes(`npm run ${scriptName}`)) {
+    failures.push(`package.json: build 脚本缺少门禁 npm run ${scriptName}`);
+  }
+  expectIncludes('readme', `npm run ${scriptName}`, `README build gate ${scriptName}`);
+  expectIncludes('readmeCn', `npm run ${scriptName}`, `README_CN build gate ${scriptName}`);
+  expectIncludes('roadmap', `npm run ${scriptName}`, `ROADMAP build gate ${scriptName}`);
+}
 
 const roadmapRows = [
   ['Risk', counts.risks],

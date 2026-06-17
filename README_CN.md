@@ -67,11 +67,23 @@ npm run audit:metrics
 npm run audit:references
 npm run audit:maintenance
 npm run test
+npm run test:coverage
+npm run validate:docs-build
+npm run test:smoke
+npm run test:performance
 npm run build
 npm run audit:bundle
+npm run audit:bundle:check
+npm run build-only
+npm run lint
+npm run type-check
 ```
 
 `npm run validate:data` 会执行 JSON Schema 校验、i18n key 同步检查和关系覆盖审计。
+`npm run build` 会执行 `lint`、`type-check`、`validate:data`、`test`、`test:coverage`、`build-only`、`audit:bundle:check`、`validate:docs-build`、`test:smoke` 和 `test:performance`。
+`npm run test:coverage` 会对关系分析、搜索、安全 i18n 和 BREAK 数据工具执行核心逻辑覆盖率门禁。
+`npm run validate:docs-build` 会检查已提交的 `docs/` GitHub Pages 产物是否与当前构建输出一致。
+`npm run test:smoke` 和 `npm run test:performance` 会使用 Playwright 验证生成后的静态站点。
 `npm run audit:metrics` 会生成内容可信度、关系覆盖、分类分布和业务场景覆盖基线报告。
 `npm run audit:bundle` 会基于 `docs/assets` 检查构建产物是否超过 bundle 预算。
 `npm run audit:maintenance` 会刷新审计报告并生成统一维护汇总。

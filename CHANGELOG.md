@@ -23,6 +23,9 @@
 - 新增：文档统计一致性校验脚本
   - `validate:data` 现在会检查 README、README_CN、ROADMAP 的实体规模、参考资料口径和版本号
   - 防止数据规模更新后文档统计再次漂移
+- 优化：文档验证基线同步
+  - `docs-consistency` 现在会检查测试文件数、测试用例数和 `npm run build` 的完整门禁链路
+  - 同步 README/README_CN 的校验命令说明，覆盖 coverage、docs build、smoke 和 performance 门禁
 - 新增：关系图谱回归测试覆盖
   - 补充 Sankey 攻击路径、路径角色说明和移动端高度测试
   - 补充根节点路径解释、关系洞察和局部预览统计测试
