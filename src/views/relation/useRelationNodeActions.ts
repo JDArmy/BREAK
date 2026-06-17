@@ -13,7 +13,13 @@ import {
   type NodeSummary,
   type Translate,
 } from "@/views/relation/relationNodeActionShared";
-import { RelationType, type Line, type Node, isRelationEntityType, createRelationTypeMapping } from "@/views/relation/relationTypes";
+import {
+  RelationType,
+  type Line,
+  type Node,
+  isRelationEntityType,
+  createRelationTypeMapping,
+} from "@/views/relation/relationTypes";
 
 interface UseRelationNodeActionsOptions {
   t: Translate;
@@ -26,7 +32,10 @@ interface UseRelationNodeActionsOptions {
   selectedNetworkNode: ComputedRef<Node | null>;
   selectedNetworkNodeId: Ref<string>;
   RelationTypeMapping: ReturnType<typeof createRelationTypeMapping>;
-  ensureRelationNode: (type: Exclude<RelationType, RelationType.all>, key: string) => Node;
+  ensureRelationNode: (
+    type: Exclude<RelationType, RelationType.all>,
+    key: string
+  ) => Node;
   findNodeById: (id: string) => Node | undefined;
   buildNodeSummary: (nodeId: string) => NodeSummary;
   isDirectRelationLine: (lineText: string) => boolean;
@@ -125,10 +134,15 @@ export const useRelationNodeActions = ({
     setContextAvailability(node);
   };
 
-  const prepareNodeActions = (type: Exclude<RelationType, RelationType.all>, id: string) => {
+  const prepareNodeActions = (
+    type: Exclude<RelationType, RelationType.all>,
+    id: string
+  ) => {
     const hasCurrentRootRelations = lines.length > 0;
     if (!hasCurrentRootRelations) {
-      genNetworkGraphData(RelationType.all, relType.value, relKey.value, { render: false });
+      genNetworkGraphData(RelationType.all, relType.value, relKey.value, {
+        render: false,
+      });
     }
     const node = findNodeById(id) ?? ensureRelationNode(type, id);
     selectedNetworkNodeId.value = id;
@@ -138,7 +152,9 @@ export const useRelationNodeActions = ({
 
   const scrollDrawerToTop = () => {
     nextTick(() => {
-      const drawerBody = document.querySelector(".relation-drawer .el-drawer__body");
+      const drawerBody = document.querySelector(
+        ".relation-drawer .el-drawer__body"
+      );
       if (drawerBody instanceof HTMLElement) {
         drawerBody.scrollTop = 0;
       }
@@ -206,15 +222,19 @@ export const useRelationNodeActions = ({
     if (drawerCopyFeedbackTimer) {
       clearTimeout(drawerCopyFeedbackTimer);
     }
-    drawerCopyFeedbackTimer = setTimeout(() => {
-      drawerCopyFeedbackMessage.value = "";
-    }, result.ok ? 1500 : 2200);
+    drawerCopyFeedbackTimer = setTimeout(
+      () => {
+        drawerCopyFeedbackMessage.value = "";
+      },
+      result.ok ? 1500 : 2200
+    );
     return result;
   };
 
   const openSelectedNodeAsRoot = () => {
     const node = selectedNetworkNode.value;
-    if (!node || !isRelationEntityType(node.type) || node.id === relKey.value) return;
+    if (!node || !isRelationEntityType(node.type) || node.id === relKey.value)
+      return;
     pushRelationNodeRoute(router, node.type, node.id);
   };
 
@@ -232,7 +252,8 @@ export const useRelationNodeActions = ({
 
   const openNodeAsRootById = (nodeId: string) => {
     const node = findNodeById(nodeId);
-    if (!node || !isRelationEntityType(node.type) || node.id === relKey.value) return;
+    if (!node || !isRelationEntityType(node.type) || node.id === relKey.value)
+      return;
     pushRelationNodeRoute(router, node.type, node.id);
   };
 
@@ -251,7 +272,7 @@ export const useRelationNodeActions = ({
   };
 
   const openNodeDetailDrawer = () => {
-    nodeDetailDrawerVisible.value = true;
+    focusNodeInDrawer(selectedNetworkNodeId.value);
   };
 
   const doFilter = () => {

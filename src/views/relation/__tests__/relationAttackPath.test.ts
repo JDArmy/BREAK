@@ -1,12 +1,22 @@
 import { computed, ref } from "vue";
 import { describe, expect, it } from "vitest";
 import { createRelationAttackPathData } from "../relationAttackPath";
-import { createRelationTypeMapping, RelationType, type Node } from "../relationTypes";
+import {
+  createRelationTypeMapping,
+  RelationType,
+  type Node,
+} from "../relationTypes";
 
 describe("relationAttackPath", () => {
   const t = (key: string) => key;
-  const relationTypeMapping = createRelationTypeMapping(t, (type) => `color:${type}`);
-  const getSankeyNodeName = (type: Exclude<RelationType, RelationType.all>, key: string) => `${type}:${key}`;
+  const relationTypeMapping = createRelationTypeMapping(
+    t,
+    (type) => `color:${type}`
+  );
+  const getSankeyNodeName = (
+    type: Exclude<RelationType, RelationType.all>,
+    key: string
+  ) => `${type}:${key}`;
 
   const createAttackPathData = (options: {
     relType: RelationType;
@@ -23,7 +33,8 @@ describe("relationAttackPath", () => {
       selectedNetworkNode: computed(() => selectedNode.value),
       RelationTypeMapping: relationTypeMapping,
       getSankeyNodeName,
-      getNodeTitle: (type, key) => `BREAK.${relationTypeMapping[type].BreakKey}.${key}.title`,
+      getNodeTitle: (type, key) =>
+        `BREAK.${relationTypeMapping[type].BreakKey}.${key}.title`,
     });
   };
 
@@ -33,11 +44,15 @@ describe("relationAttackPath", () => {
       relKey: "AT0001",
     });
 
-    const nodeKeys = new Set(attackPath.sankeyData.value.nodes.map((node) => `${node.entityType}:${node.entityKey}`));
+    const nodeKeys = new Set(
+      attackPath.sankeyData.value.nodes.map(
+        (node) => `${node.entityType}:${node.entityKey}`
+      )
+    );
     expect(nodeKeys).toContain("threat-actor:TA0017");
     expect(nodeKeys).toContain("attack-tool:AT0001");
     expect(nodeKeys).toContain("risk:R0005-001");
-    expect(nodeKeys).toContain("avoidance:A0001");
+    expect(nodeKeys).toContain("avoidance:A0016-003");
 
     expect(attackPath.sankeyData.value.nodes).toEqual(
       expect.arrayContaining([
@@ -57,7 +72,7 @@ describe("relationAttackPath", () => {
           itemStyle: { color: "color:risk" },
         }),
         expect.objectContaining({
-          name: "avoidance:A0001",
+          name: "avoidance:A0016-003",
           depth: 3,
           itemStyle: { color: "color:avoidance" },
         }),
@@ -78,7 +93,7 @@ describe("relationAttackPath", () => {
         }),
         expect.objectContaining({
           source: "risk:R0005-001",
-          target: "avoidance:A0001",
+          target: "avoidance:A0016-003",
           value: expect.any(Number),
         }),
       ])
@@ -97,8 +112,12 @@ describe("relationAttackPath", () => {
       },
     });
 
-    expect(attackPath.selectedNodeAttackPathSummary.value).toEqual(["relationView.pathRoleRisk"]);
-    expect(attackPath.selectedNodeAttackPathDescription.value).toBe("relationView.pathRoleRiskDesc");
+    expect(attackPath.selectedNodeAttackPathSummary.value).toEqual([
+      "relationView.pathRoleRisk",
+    ]);
+    expect(attackPath.selectedNodeAttackPathDescription.value).toBe(
+      "relationView.pathRoleRiskDesc"
+    );
     expect(attackPath.selectedNodeAttackPathExplanations.value[0]).toEqual(
       expect.objectContaining({
         riskId: "R0005-001",
@@ -116,11 +135,20 @@ describe("relationAttackPath", () => {
         ]),
         analysisFinding: "relationView.attackPathFinding.toolRisk",
         recommendedAction: "relationView.attackPathRecommendedAction.toolRisk",
-        evidenceFields: expect.arrayContaining(["ThreatActor.useAttackTools", "AttackTool.directCauseRisks", "Risk.avoidances"]),
+        evidenceFields: expect.arrayContaining([
+          "ThreatActor.useAttackTools",
+          "AttackTool.directCauseRisks",
+          "AttackTool.avoidances",
+          "Risk.avoidances",
+        ]),
         steps: expect.arrayContaining([
           expect.objectContaining({
-            relationType: expect.stringMatching(/^relationLine\.(buildAttackTool|useAttackTool)$/),
-            sourceFields: expect.arrayContaining(["ThreatActor.useAttackTools"]),
+            relationType: expect.stringMatching(
+              /^relationLine\.(buildAttackTool|useAttackTool)$/
+            ),
+            sourceFields: expect.arrayContaining([
+              "ThreatActor.useAttackTools",
+            ]),
             attackIntent: "relationView.attackPathIntent.actorToTool",
             toTitle: "BREAK.attackTools.AT0001.title",
           }),
@@ -131,7 +159,10 @@ describe("relationAttackPath", () => {
           }),
           expect.objectContaining({
             relationType: "relationLine.avoidanceMeans",
-            sourceFields: ["Risk.avoidances"],
+            sourceFields: expect.arrayContaining([
+              "AttackTool.avoidances",
+              "Risk.avoidances",
+            ]),
             defensiveMeaning: "relationView.attackPathDefense.riskToAvoidance",
           }),
         ]),
@@ -151,16 +182,21 @@ describe("relationAttackPath", () => {
       },
     });
 
-    const groupedPath = attackPath.selectedNodeAttackPathExplanations.value.find(
-      (path) => path.attackToolId === "AT0002" && path.avoidanceId === "A0001"
-    );
+    const groupedPath =
+      attackPath.selectedNodeAttackPathExplanations.value.find(
+        (path) =>
+          path.attackToolId === "AT0002" && path.avoidanceId === "A0010-001"
+      );
 
+    expect(
+      attackPath.selectedNodeAttackPathExplanations.value.length
+    ).toBeGreaterThan(3);
     expect(groupedPath).toEqual(
       expect.objectContaining({
-        pathKey: "attack-tool:AT0002->risk:R0001->avoidance:A0001",
+        pathKey: "attack-tool:AT0002->risk:R0001->avoidance:A0010-001",
         riskId: "R0001",
         attackToolId: "AT0002",
-        avoidanceId: "A0001",
+        avoidanceId: "A0010-001",
       })
     );
     expect(groupedPath?.pathCount).toBeGreaterThan(1);
@@ -173,6 +209,48 @@ describe("relationAttackPath", () => {
         toTitle: "BREAK.attackTools.AT0002.title",
         sourceFields: ["ThreatActor.useAttackTools"],
       })
+    );
+  });
+
+  it("prioritizes attack-tool-specific avoidances over generic risk avoidances", () => {
+    const attackPath = createAttackPathData({
+      relType: RelationType.risk,
+      relKey: "R0001",
+      selectedNode: {
+        id: "R0001",
+        type: RelationType.risk,
+        text: "流程自动化",
+        color: "",
+      },
+    });
+
+    const proxyPaths = attackPath.selectedNodeAttackPathExplanations.value
+      .filter(
+        (path) =>
+          path.threatActors.some((actor) => actor.id === "TA0038") &&
+          path.attackToolId === "AT0034-001" &&
+          path.riskId === "R0001"
+      )
+      .map((path) => path.avoidanceId);
+
+    expect(proxyPaths).toEqual([
+      "A0016-001",
+      "A0029-002",
+      "A0038",
+      "A0038-002",
+    ]);
+    expect(proxyPaths).not.toContain("A0001");
+
+    const proxyIpIntelligencePath =
+      attackPath.selectedNodeAttackPathExplanations.value.find(
+        (path) =>
+          path.attackToolId === "AT0034-001" &&
+          path.riskId === "R0001" &&
+          path.avoidanceId === "A0016-001"
+      );
+
+    expect(proxyIpIntelligencePath?.evidenceFields).toEqual(
+      expect.arrayContaining(["AttackTool.avoidances", "Risk.avoidances"])
     );
   });
 

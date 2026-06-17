@@ -9,7 +9,13 @@ export enum RelationType {
   all = "all",
 }
 
-export type NetworkLayoutMode = "horizontal" | "lanes" | "split" | "radial" | "hierarchical" | "force";
+export type NetworkLayoutMode =
+  | "horizontal"
+  | "lanes"
+  | "split"
+  | "radial"
+  | "hierarchical"
+  | "force";
 
 export interface Node {
   id: string;
@@ -25,7 +31,11 @@ export interface Line {
   to: string;
 }
 
-export type RelationEvidenceLevel = "direct" | "indirect" | "inferred" | "review";
+export type RelationEvidenceLevel =
+  | "direct"
+  | "indirect"
+  | "inferred"
+  | "review";
 
 export interface RelationExplanation {
   relationKey: string;
@@ -103,6 +113,7 @@ export interface AttackPath {
   attackToolKey?: string;
   riskKey: string;
   avoidanceKey?: string;
+  avoidanceSourceFields?: string[];
 }
 
 export interface AttackPathExplanationStep {
@@ -222,7 +233,10 @@ export const getRelationLineColors = () => ({
   attackToolMaker: getColorFromCSS("--break-line-maker"),
 });
 
-export const networkLayoutOptions: { value: NetworkLayoutMode; labelKey: string }[] = [
+export const networkLayoutOptions: {
+  value: NetworkLayoutMode;
+  labelKey: string;
+}[] = [
   { value: "horizontal", labelKey: "relationLayout.horizontal" },
   { value: "lanes", labelKey: "relationLayout.lanes" },
   { value: "split", labelKey: "relationLayout.split" },
@@ -244,48 +258,76 @@ export const networkNodeSize = 58;
 export const networkRootNodeSize = 64;
 export const networkLabelMaxLineLength = 5;
 
-export const isRelationEntityType = (type: string): type is Exclude<RelationType, RelationType.all> =>
-  [RelationType.risk, RelationType.avoidance, RelationType.attackTool, RelationType.threatActor, RelationType.term].includes(
-    type as Exclude<RelationType, RelationType.all>
-  );
+export const isRelationEntityType = (
+  type: string
+): type is Exclude<RelationType, RelationType.all> =>
+  [
+    RelationType.risk,
+    RelationType.avoidance,
+    RelationType.attackTool,
+    RelationType.threatActor,
+    RelationType.term,
+  ].includes(type as Exclude<RelationType, RelationType.all>);
 
 export const createRelationTypeMapping = (
   t: (key: string) => string,
-  getRelationTypeColor: (type: Exclude<RelationType, RelationType.all>) => string
+  getRelationTypeColor: (
+    type: Exclude<RelationType, RelationType.all>
+  ) => string
 ) => ({
   [RelationType.risk]: {
-    get title() { return t("relationType.risk"); },
+    get title() {
+      return t("relationType.risk");
+    },
     relType: RelationType.risk,
     BreakKey: "risks",
-    get color() { return getRelationTypeColor(RelationType.risk); },
+    get color() {
+      return getRelationTypeColor(RelationType.risk);
+    },
     disableContextMenu: ref<boolean>(false),
   },
   [RelationType.avoidance]: {
-    get title() { return t("relationType.avoidance"); },
+    get title() {
+      return t("relationType.avoidance");
+    },
     relType: RelationType.avoidance,
     BreakKey: "avoidances",
-    get color() { return getRelationTypeColor(RelationType.avoidance); },
+    get color() {
+      return getRelationTypeColor(RelationType.avoidance);
+    },
     disableContextMenu: ref<boolean>(false),
   },
   [RelationType.attackTool]: {
-    get title() { return t("relationType.attackTool"); },
+    get title() {
+      return t("relationType.attackTool");
+    },
     relType: RelationType.attackTool,
     BreakKey: "attackTools",
-    get color() { return getRelationTypeColor(RelationType.attackTool); },
+    get color() {
+      return getRelationTypeColor(RelationType.attackTool);
+    },
     disableContextMenu: ref<boolean>(false),
   },
   [RelationType.threatActor]: {
-    get title() { return t("relationType.threatActor"); },
+    get title() {
+      return t("relationType.threatActor");
+    },
     relType: RelationType.threatActor,
     BreakKey: "threatActors",
-    get color() { return getRelationTypeColor(RelationType.threatActor); },
+    get color() {
+      return getRelationTypeColor(RelationType.threatActor);
+    },
     disableContextMenu: ref<boolean>(false),
   },
   [RelationType.term]: {
-    get title() { return t("relationType.term"); },
+    get title() {
+      return t("relationType.term");
+    },
     relType: RelationType.term,
     BreakKey: "terms",
-    get color() { return getRelationTypeColor(RelationType.term); },
+    get color() {
+      return getRelationTypeColor(RelationType.term);
+    },
     disableContextMenu: ref<boolean>(false),
   },
 });

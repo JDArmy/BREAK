@@ -1,5 +1,8 @@
 import { createNetworkDataHelpers } from "@/views/relation/relationNetworkLayout";
-import { createNetworkChartController, createSankeyChartController } from "@/views/relation/relationViewControllers";
+import {
+  createNetworkChartController,
+  createSankeyChartController,
+} from "@/views/relation/relationViewControllers";
 import { setupRelationViewEffects } from "@/views/relation/relationViewEffects";
 import { createRelationViewState } from "@/views/relation/relationViewState";
 import { useRelationGraphData } from "@/views/relation/useRelationGraphData";
@@ -32,6 +35,7 @@ interface CreateRelationViewAssemblyOptions {
   setDropdownInstance: (instance: DropdownInstance | undefined) => void;
   networkInteractionsBridge: {
     handleNodeTouch: (node: unknown) => void;
+    openNodeDetail: (node: unknown) => void;
     nodeClick: (node: unknown, event: MouseEvent) => void;
   };
 }
@@ -54,7 +58,8 @@ export const createRelationViewAssembly = ({
 }: CreateRelationViewAssemblyOptions) => {
   const relationPageRef = ref<HTMLDivElement>();
   const setRelationPageElement = (element: unknown) => {
-    relationPageRef.value = element instanceof HTMLDivElement ? element : undefined;
+    relationPageRef.value =
+      element instanceof HTMLDivElement ? element : undefined;
   };
 
   const viewState = createRelationViewState({
@@ -99,7 +104,8 @@ export const createRelationViewAssembly = ({
     RelationTypeMapping,
     getGraphColor,
     getRelationLineColor,
-    renderNetworkChart: (notMerge) => renderNetworkChartBridge.current(notMerge),
+    renderNetworkChart: (notMerge) =>
+      renderNetworkChartBridge.current(notMerge),
   });
 
   const {
@@ -152,11 +158,15 @@ export const createRelationViewAssembly = ({
     isDirectRelationLine,
     getRelationSourceFields,
     genNetworkGraphData,
-    renderNetworkChart: (notMerge) => renderNetworkChartBridge.current(notMerge),
+    renderNetworkChart: (notMerge) =>
+      renderNetworkChartBridge.current(notMerge),
   });
 
   const openSankeyNodeActions = (node: SankeyNode, event?: MouseEvent) => {
-    const contextNode = nodeActions.prepareNodeActions(node.entityType, node.entityKey);
+    const contextNode = nodeActions.prepareNodeActions(
+      node.entityType,
+      node.entityKey
+    );
     if (event) {
       nodeActions.nodeClick(contextNode, event);
     } else {
@@ -208,9 +218,12 @@ export const createRelationViewAssembly = ({
   });
   renderNetworkChartBridge.current = networkController.renderNetworkChart;
 
-  networkInteractionsBridge.handleNodeTouch = (node) => nodeActions.handleNodeTouch(node as ReturnType<typeof toContextNode>);
+  networkInteractionsBridge.handleNodeTouch = (node) =>
+    nodeActions.handleNodeTouch(node as ReturnType<typeof toContextNode>);
   networkInteractionsBridge.openNodeDetail = (node) =>
-    nodeActions.focusNodeInDrawer((node as ReturnType<typeof toContextNode>).id);
+    nodeActions.focusNodeInDrawer(
+      (node as ReturnType<typeof toContextNode>).id
+    );
   networkInteractionsBridge.nodeClick = (node, event) =>
     nodeActions.nodeClick(node as ReturnType<typeof toContextNode>, event);
   setClearDraggedNodePositions(clearDraggedNodePositions);

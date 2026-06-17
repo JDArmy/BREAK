@@ -1,7 +1,10 @@
 import { ref, type ComputedRef, type Ref } from "vue";
 import type { ECharts } from "echarts/core";
 import type { SankeyLink, SankeyNode } from "@/views/relation/relationTypes";
-import type { SankeyLabelOverflow, SankeyNodeAlign } from "@/views/relation/relationViewState";
+import type {
+  SankeyLabelOverflow,
+  SankeyNodeAlign,
+} from "@/views/relation/relationViewState";
 import { loadSankeyECharts } from "@/views/relation/relationECharts";
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;
@@ -96,7 +99,10 @@ export const createSankeyChartController = ({
     sankeyHasData.value = currentSankeyData.nodes.length > 0;
     sankeyChartRef.value.style.height = `${sankeyChartHeight.value}px`;
 
-    if (sankeyChartRef.value.clientWidth === 0 || sankeyChartRef.value.clientHeight === 0) {
+    if (
+      sankeyChartRef.value.clientWidth === 0 ||
+      sankeyChartRef.value.clientHeight === 0
+    ) {
       if (attempt >= 6) return;
       if (pendingRenderFrame !== null) {
         cancelAnimationFrame(pendingRenderFrame);
@@ -109,18 +115,34 @@ export const createSankeyChartController = ({
     }
 
     const applySankeyOption = async () => {
-      if (!sankeyChartRef.value || activeView.value !== "sankey" || requestId !== renderRequestId) return;
+      if (
+        !sankeyChartRef.value ||
+        activeView.value !== "sankey" ||
+        requestId !== renderRequestId
+      )
+        return;
 
       if (!sankeyChart) {
         const init = await loadSankeyECharts();
-        if (!sankeyChartRef.value || activeView.value !== "sankey" || requestId !== renderRequestId) return;
+        if (
+          !sankeyChartRef.value ||
+          activeView.value !== "sankey" ||
+          requestId !== renderRequestId
+        )
+          return;
         sankeyChart = init(sankeyChartRef.value);
-        sankeyChart.getDom().addEventListener("contextmenu", preventMobileNativeContextMenu);
+        sankeyChart
+          .getDom()
+          .addEventListener("contextmenu", preventMobileNativeContextMenu);
       }
       sankeyChart.dispatchAction({ type: "hideTip" });
       const style = getComputedStyle(document.documentElement);
-      const tooltipBackground = style.getPropertyValue("--break-tooltip-bg").trim();
-      const tooltipBorder = style.getPropertyValue("--break-tooltip-border").trim();
+      const tooltipBackground = style
+        .getPropertyValue("--break-tooltip-bg")
+        .trim();
+      const tooltipBorder = style
+        .getPropertyValue("--break-tooltip-border")
+        .trim();
       const tooltipText = style.getPropertyValue("--break-tooltip-text").trim();
 
       sankeyChart.setOption({
@@ -132,6 +154,9 @@ export const createSankeyChartController = ({
           show: !isMobile.value,
           trigger: "item",
           triggerOn: "mousemove",
+          enterable: false,
+          showDelay: 500,
+          extraCssText: "z-index: 650 !important;",
           backgroundColor: tooltipBackground,
           borderColor: tooltipBorder,
           borderWidth: 1,
@@ -152,9 +177,10 @@ export const createSankeyChartController = ({
               ].join("<br>");
             }
 
-            return [String(params.name ?? params.data?.name ?? ""), `${t("relationView.pathCount")}: ${value}`].join(
-              "<br>"
-            );
+            return [
+              String(params.name ?? params.data?.name ?? ""),
+              `${t("relationView.pathCount")}: ${value}`,
+            ].join("<br>");
           },
         },
         series: [
@@ -187,7 +213,8 @@ export const createSankeyChartController = ({
               lineHeight: sankeyLabelLineHeight.value,
               width: sankeyLabelWidth.value,
               overflow: sankeyLabelOverflow.value,
-              ellipsis: sankeyLabelOverflow.value === "truncate" ? "..." : undefined,
+              ellipsis:
+                sankeyLabelOverflow.value === "truncate" ? "..." : undefined,
             },
             itemStyle: {
               borderColor: getComputedStyle(document.documentElement)
@@ -214,13 +241,27 @@ export const createSankeyChartController = ({
         }
       });
       sankeyChart.on("contextmenu", (params) => {
-        if (params.dataType !== "node" || !isSankeyNode(params.data) || !params.event?.event) return;
+        if (
+          params.dataType !== "node" ||
+          !isSankeyNode(params.data) ||
+          !params.event?.event
+        )
+          return;
         params.event.event.preventDefault();
         onOpenNodeActions(params.data, params.event.event as MouseEvent);
       });
       sankeyChart.on("mousedown", (params) => {
-        if (!isMobile.value || params.dataType !== "node" || !isSankeyNode(params.data)) return;
-        const chartEvent = params.event as { offsetX?: number; offsetY?: number; event?: MouseEvent | PointerEvent };
+        if (
+          !isMobile.value ||
+          params.dataType !== "node" ||
+          !isSankeyNode(params.data)
+        )
+          return;
+        const chartEvent = params.event as {
+          offsetX?: number;
+          offsetY?: number;
+          event?: MouseEvent | PointerEvent;
+        };
         const nativeEvent = chartEvent.event;
         const startX = chartEvent.offsetX ?? nativeEvent?.clientX ?? 0;
         const startY = chartEvent.offsetY ?? nativeEvent?.clientY ?? 0;
@@ -236,7 +277,12 @@ export const createSankeyChartController = ({
       sankeyChart.on("mouseup", clearLongPressTimer);
       sankeyChart.getZr().on("pointermove", (event) => {
         if (!longPressStart) return;
-        if (Math.hypot(event.offsetX - longPressStart.x, event.offsetY - longPressStart.y) > 10) {
+        if (
+          Math.hypot(
+            event.offsetX - longPressStart.x,
+            event.offsetY - longPressStart.y
+          ) > 10
+        ) {
           clearLongPressTimer();
         }
       });
@@ -264,7 +310,9 @@ export const createSankeyChartController = ({
       pendingRenderFrame = null;
     }
     sankeyChart?.dispatchAction({ type: "hideTip" });
-    sankeyChart?.getDom().removeEventListener("contextmenu", preventMobileNativeContextMenu);
+    sankeyChart
+      ?.getDom()
+      .removeEventListener("contextmenu", preventMobileNativeContextMenu);
     sankeyChart?.dispose();
     sankeyChart = null;
     sankeyHasData.value = false;

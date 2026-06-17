@@ -18,8 +18,14 @@ interface CreateRelationAttackPathOptions {
   relKey: Ref<string>;
   selectedNetworkNode: ComputedRef<Node | null>;
   RelationTypeMapping: ReturnType<typeof createRelationTypeMapping>;
-  getSankeyNodeName: (type: Exclude<RelationType, RelationType.all>, key: string) => string;
-  getNodeTitle: (type: Exclude<RelationType, RelationType.all>, key: string) => string;
+  getSankeyNodeName: (
+    type: Exclude<RelationType, RelationType.all>,
+    key: string
+  ) => string;
+  getNodeTitle: (
+    type: Exclude<RelationType, RelationType.all>,
+    key: string
+  ) => string;
 }
 
 export const createRelationAttackPathData = ({
@@ -34,7 +40,9 @@ export const createRelationAttackPathData = ({
 }: CreateRelationAttackPathOptions) => {
   const isMobileView = () => isMobile?.value === true;
 
-  const describeAttackPathRole = (nodeType: Exclude<RelationType, RelationType.all>) => {
+  const describeAttackPathRole = (
+    nodeType: Exclude<RelationType, RelationType.all>
+  ) => {
     switch (nodeType) {
       case RelationType.threatActor:
         return t("relationView.pathRoleThreatActorDesc");
@@ -51,8 +59,12 @@ export const createRelationAttackPathData = ({
 
   const buildPathKey = (path: AttackPath) =>
     [
-      path.threatActorKey ? `${RelationType.threatActor}:${path.threatActorKey}` : "",
-      path.attackToolKey ? `${RelationType.attackTool}:${path.attackToolKey}` : "",
+      path.threatActorKey
+        ? `${RelationType.threatActor}:${path.threatActorKey}`
+        : "",
+      path.attackToolKey
+        ? `${RelationType.attackTool}:${path.attackToolKey}`
+        : "",
       `${RelationType.risk}:${path.riskKey}`,
       path.avoidanceKey ? `${RelationType.avoidance}:${path.avoidanceKey}` : "",
     ]
@@ -61,70 +73,117 @@ export const createRelationAttackPathData = ({
 
   const buildPathGroupKey = (path: AttackPath) =>
     [
-      path.attackToolKey ? `${RelationType.attackTool}:${path.attackToolKey}` : "no-tool",
+      path.attackToolKey
+        ? `${RelationType.attackTool}:${path.attackToolKey}`
+        : "no-tool",
       `${RelationType.risk}:${path.riskKey}`,
-      path.avoidanceKey ? `${RelationType.avoidance}:${path.avoidanceKey}` : "no-avoidance",
+      path.avoidanceKey
+        ? `${RelationType.avoidance}:${path.avoidanceKey}`
+        : "no-avoidance",
     ].join("->");
 
   const hasPathNode = (path: AttackPath, node: Node) => {
-    if (node.type === RelationType.threatActor) return path.threatActorKey === node.id;
-    if (node.type === RelationType.attackTool) return path.attackToolKey === node.id;
+    if (node.type === RelationType.threatActor)
+      return path.threatActorKey === node.id;
+    if (node.type === RelationType.attackTool)
+      return path.attackToolKey === node.id;
     if (node.type === RelationType.risk) return path.riskKey === node.id;
-    if (node.type === RelationType.avoidance) return path.avoidanceKey === node.id;
+    if (node.type === RelationType.avoidance)
+      return path.avoidanceKey === node.id;
     return false;
   };
 
   const getToolRiskFields = (attackToolKey: string, riskKey: string) => {
-    const attackTool = BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools];
+    const attackTool =
+      BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools];
     const fields: string[] = [];
-    if (attackTool.directCauseRisks.includes(riskKey)) fields.push("AttackTool.directCauseRisks");
-    if (attackTool.indirectSupportRisks.includes(riskKey)) fields.push("AttackTool.indirectSupportRisks");
+    if (attackTool.directCauseRisks.includes(riskKey))
+      fields.push("AttackTool.directCauseRisks");
+    if (attackTool.indirectSupportRisks.includes(riskKey))
+      fields.push("AttackTool.indirectSupportRisks");
     return fields;
   };
 
-  const getThreatActorToolFields = (threatActorKey: string, attackToolKey: string) => {
-    const threatActor = BREAK.threatActors[threatActorKey as keyof typeof BREAK.threatActors];
+  const getThreatActorToolFields = (
+    threatActorKey: string,
+    attackToolKey: string
+  ) => {
+    const threatActor =
+      BREAK.threatActors[threatActorKey as keyof typeof BREAK.threatActors];
     const fields: string[] = [];
-    if (threatActor.useAttackTools.includes(attackToolKey)) fields.push("ThreatActor.useAttackTools");
-    if (threatActor.buildAttackTools.includes(attackToolKey)) fields.push("ThreatActor.buildAttackTools");
+    if (threatActor.useAttackTools.includes(attackToolKey))
+      fields.push("ThreatActor.useAttackTools");
+    if (threatActor.buildAttackTools.includes(attackToolKey))
+      fields.push("ThreatActor.buildAttackTools");
     return fields;
   };
 
-  const getThreatActorRiskFields = (threatActorKey: string, riskKey: string) => {
-    const threatActor = BREAK.threatActors[threatActorKey as keyof typeof BREAK.threatActors];
+  const getThreatActorRiskFields = (
+    threatActorKey: string,
+    riskKey: string
+  ) => {
+    const threatActor =
+      BREAK.threatActors[threatActorKey as keyof typeof BREAK.threatActors];
     const fields: string[] = [];
-    if (threatActor.directCauseRisks.includes(riskKey)) fields.push("ThreatActor.directCauseRisks");
-    if (threatActor.indirectSupportRisks.includes(riskKey)) fields.push("ThreatActor.indirectSupportRisks");
+    if (threatActor.directCauseRisks.includes(riskKey))
+      fields.push("ThreatActor.directCauseRisks");
+    if (threatActor.indirectSupportRisks.includes(riskKey))
+      fields.push("ThreatActor.indirectSupportRisks");
     return fields;
   };
 
-  const buildEntitySummary = (type: Exclude<RelationType, RelationType.all>, id: string) => ({
+  const buildEntitySummary = (
+    type: Exclude<RelationType, RelationType.all>,
+    id: string
+  ) => ({
     id,
     title: getNodeTitle(type, id),
     type,
   });
 
-  const unique = <T,>(values: T[]) => [...new Set(values)];
+  const unique = <T>(values: T[]) => [...new Set(values)];
 
-  const explainAttackPath = (path: AttackPath, groupedPaths: AttackPath[] = [path]): AttackPathExplanation => {
+  const explainAttackPath = (
+    path: AttackPath,
+    groupedPaths: AttackPath[] = [path]
+  ): AttackPathExplanation => {
     const steps: AttackPathExplanation["steps"] = [];
     const qualityFlags: string[] = [];
     const defensiveFocus: string[] = [];
-    const threatActorIds = unique(groupedPaths.map((item) => item.threatActorKey).filter(Boolean) as string[]);
-    const threatActors = threatActorIds.map((id) => buildEntitySummary(RelationType.threatActor, id));
-    const attackTool = path.attackToolKey ? buildEntitySummary(RelationType.attackTool, path.attackToolKey) : undefined;
+    const threatActorIds = unique(
+      groupedPaths
+        .map((item) => item.threatActorKey)
+        .filter(Boolean) as string[]
+    );
+    const threatActors = threatActorIds.map((id) =>
+      buildEntitySummary(RelationType.threatActor, id)
+    );
+    const attackTool = path.attackToolKey
+      ? buildEntitySummary(RelationType.attackTool, path.attackToolKey)
+      : undefined;
     const risk = buildEntitySummary(RelationType.risk, path.riskKey);
-    const avoidance = path.avoidanceKey ? buildEntitySummary(RelationType.avoidance, path.avoidanceKey) : undefined;
+    const avoidance = path.avoidanceKey
+      ? buildEntitySummary(RelationType.avoidance, path.avoidanceKey)
+      : undefined;
 
     if (path.threatActorKey && path.attackToolKey) {
       const sourceFields = unique(
-        threatActorIds.flatMap((threatActorKey) => getThreatActorToolFields(threatActorKey, path.attackToolKey as string))
+        threatActorIds.flatMap((threatActorKey) =>
+          getThreatActorToolFields(threatActorKey, path.attackToolKey as string)
+        )
       );
       steps.push({
-        fromId: threatActorIds.length > 1 ? t("relationView.groupedThreatActors", { count: threatActorIds.length }) : path.threatActorKey,
+        fromId:
+          threatActorIds.length > 1
+            ? t("relationView.groupedThreatActors", {
+                count: threatActorIds.length,
+              })
+            : path.threatActorKey,
         fromTitle:
           threatActorIds.length > 1
-            ? t("relationView.groupedThreatActors", { count: threatActorIds.length })
+            ? t("relationView.groupedThreatActors", {
+                count: threatActorIds.length,
+              })
             : getNodeTitle(RelationType.threatActor, path.threatActorKey),
         toId: path.attackToolKey,
         toTitle: getNodeTitle(RelationType.attackTool, path.attackToolKey),
@@ -135,7 +194,8 @@ export const createRelationAttackPathData = ({
         attackIntent: t("relationView.attackPathIntent.actorToTool"),
         defensiveMeaning: t("relationView.attackPathDefense.actorToTool"),
       });
-      if (sourceFields.length === 0) qualityFlags.push(t("relationView.qualityFlagMissingSource"));
+      if (sourceFields.length === 0)
+        qualityFlags.push(t("relationView.qualityFlagMissingSource"));
     }
 
     if (path.attackToolKey) {
@@ -152,9 +212,13 @@ export const createRelationAttackPathData = ({
         attackIntent: t("relationView.attackPathIntent.toolToRisk"),
         defensiveMeaning: t("relationView.attackPathDefense.toolToRisk"),
       });
-      if (sourceFields.length === 0) qualityFlags.push(t("relationView.qualityFlagMissingSource"));
+      if (sourceFields.length === 0)
+        qualityFlags.push(t("relationView.qualityFlagMissingSource"));
     } else if (path.threatActorKey) {
-      const sourceFields = getThreatActorRiskFields(path.threatActorKey, path.riskKey);
+      const sourceFields = getThreatActorRiskFields(
+        path.threatActorKey,
+        path.riskKey
+      );
       steps.push({
         fromId: path.threatActorKey,
         fromTitle: getNodeTitle(RelationType.threatActor, path.threatActorKey),
@@ -167,17 +231,22 @@ export const createRelationAttackPathData = ({
         attackIntent: t("relationView.attackPathIntent.actorToRisk"),
         defensiveMeaning: t("relationView.attackPathDefense.actorToRisk"),
       });
-      if (sourceFields.length === 0) qualityFlags.push(t("relationView.qualityFlagMissingSource"));
+      if (sourceFields.length === 0)
+        qualityFlags.push(t("relationView.qualityFlagMissingSource"));
     }
 
     if (path.avoidanceKey) {
+      const sourceFields =
+        path.avoidanceSourceFields && path.avoidanceSourceFields.length > 0
+          ? path.avoidanceSourceFields
+          : ["Risk.avoidances"];
       steps.push({
         fromId: path.riskKey,
         fromTitle: getNodeTitle(RelationType.risk, path.riskKey),
         toId: path.avoidanceKey,
         toTitle: getNodeTitle(RelationType.avoidance, path.avoidanceKey),
         relationType: t("relationLine.avoidanceMeans"),
-        sourceFields: ["Risk.avoidances"],
+        sourceFields,
         attackIntent: t("relationView.attackPathIntent.riskToAvoidance"),
         defensiveMeaning: t("relationView.attackPathDefense.riskToAvoidance"),
       });
@@ -214,23 +283,29 @@ export const createRelationAttackPathData = ({
             actorCount: threatActorIds.length,
             tool: attackTool.title,
             risk: risk.title,
-            relation: steps.find((step) => step.toId === path.riskKey)?.relationType ?? t("relationLine.causeRisk"),
-            avoidance: avoidance?.title ?? t("relationView.noAvoidanceCoverage"),
+            relation:
+              steps.find((step) => step.toId === path.riskKey)?.relationType ??
+              t("relationLine.causeRisk"),
+            avoidance:
+              avoidance?.title ?? t("relationView.noAvoidanceCoverage"),
           })
         : t("relationView.attackPathFinding.actorRisk", {
             actorCount: threatActorIds.length,
             risk: risk.title,
-            avoidance: avoidance?.title ?? t("relationView.noAvoidanceCoverage"),
+            avoidance:
+              avoidance?.title ?? t("relationView.noAvoidanceCoverage"),
           }),
       recommendedAction: attackTool
         ? t("relationView.attackPathRecommendedAction.toolRisk", {
             tool: attackTool.title,
             risk: risk.title,
-            avoidance: avoidance?.title ?? t("relationView.noAvoidanceCoverage"),
+            avoidance:
+              avoidance?.title ?? t("relationView.noAvoidanceCoverage"),
           })
         : t("relationView.attackPathRecommendedAction.actorRisk", {
             risk: risk.title,
-            avoidance: avoidance?.title ?? t("relationView.noAvoidanceCoverage"),
+            avoidance:
+              avoidance?.title ?? t("relationView.noAvoidanceCoverage"),
           }),
       evidenceFields: unique(steps.flatMap((step) => step.sourceFields)),
       defensiveFocus,
@@ -252,7 +327,9 @@ export const createRelationAttackPathData = ({
       }
     });
 
-    return [...groupedPaths.values()].map((items) => explainAttackPath(items[0], items));
+    return [...groupedPaths.values()].map((items) =>
+      explainAttackPath(items[0], items)
+    );
   };
 
   const matchesSelectedEntity = (path: AttackPath) => {
@@ -273,18 +350,36 @@ export const createRelationAttackPathData = ({
   };
 
   const getAttackToolRiskKeys = (attackToolKey: string) => {
-    const attackTool = BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools];
-    return [...new Set([...attackTool.directCauseRisks, ...attackTool.indirectSupportRisks])];
+    const attackTool =
+      BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools];
+    return [
+      ...new Set([
+        ...attackTool.directCauseRisks,
+        ...attackTool.indirectSupportRisks,
+      ]),
+    ];
   };
 
   const getThreatActorRiskKeys = (threatActorKey: string) => {
-    const threatActor = BREAK.threatActors[threatActorKey as keyof typeof BREAK.threatActors];
-    return [...new Set([...threatActor.directCauseRisks, ...threatActor.indirectSupportRisks])];
+    const threatActor =
+      BREAK.threatActors[threatActorKey as keyof typeof BREAK.threatActors];
+    return [
+      ...new Set([
+        ...threatActor.directCauseRisks,
+        ...threatActor.indirectSupportRisks,
+      ]),
+    ];
   };
 
   const getThreatActorAttackToolKeys = (threatActorKey: string) => {
-    const threatActor = BREAK.threatActors[threatActorKey as keyof typeof BREAK.threatActors];
-    return [...new Set([...threatActor.buildAttackTools, ...threatActor.useAttackTools])];
+    const threatActor =
+      BREAK.threatActors[threatActorKey as keyof typeof BREAK.threatActors];
+    return [
+      ...new Set([
+        ...threatActor.buildAttackTools,
+        ...threatActor.useAttackTools,
+      ]),
+    ];
   };
 
   const attackToolRiskMap = new Map<string, string[]>();
@@ -295,12 +390,22 @@ export const createRelationAttackPathData = ({
   const threatActorRiskMap = new Map<string, string[]>();
   const threatActorAttackToolMap = new Map<string, string[]>();
   Object.keys(BREAK.threatActors).forEach((threatActorKey) => {
-    threatActorRiskMap.set(threatActorKey, getThreatActorRiskKeys(threatActorKey));
-    threatActorAttackToolMap.set(threatActorKey, getThreatActorAttackToolKeys(threatActorKey));
+    threatActorRiskMap.set(
+      threatActorKey,
+      getThreatActorRiskKeys(threatActorKey)
+    );
+    threatActorAttackToolMap.set(
+      threatActorKey,
+      getThreatActorAttackToolKeys(threatActorKey)
+    );
   });
 
   const allRiskKeys = Object.keys(BREAK.risks);
-  const addUniqueMapValue = (map: Map<string, string[]>, key: string, value: string) => {
+  const addUniqueMapValue = (
+    map: Map<string, string[]>,
+    key: string,
+    value: string
+  ) => {
     const values = map.get(key);
     if (values) {
       if (!values.includes(value)) values.push(value);
@@ -315,39 +420,58 @@ export const createRelationAttackPathData = ({
   const avoidanceToRisks = new Map<string, string[]>();
 
   attackToolRiskMap.forEach((riskKeys, attackToolKey) => {
-    riskKeys.forEach((riskKey) => addUniqueMapValue(riskToAttackTools, riskKey, attackToolKey));
+    riskKeys.forEach((riskKey) =>
+      addUniqueMapValue(riskToAttackTools, riskKey, attackToolKey)
+    );
   });
 
   threatActorRiskMap.forEach((riskKeys, threatActorKey) => {
-    riskKeys.forEach((riskKey) => addUniqueMapValue(riskToThreatActors, riskKey, threatActorKey));
+    riskKeys.forEach((riskKey) =>
+      addUniqueMapValue(riskToThreatActors, riskKey, threatActorKey)
+    );
   });
 
   threatActorAttackToolMap.forEach((attackToolKeys, threatActorKey) => {
-    attackToolKeys.forEach((attackToolKey) => addUniqueMapValue(attackToolToThreatActors, attackToolKey, threatActorKey));
+    attackToolKeys.forEach((attackToolKey) =>
+      addUniqueMapValue(attackToolToThreatActors, attackToolKey, threatActorKey)
+    );
   });
 
   allRiskKeys.forEach((riskKey) => {
     const risk = BREAK.risks[riskKey as keyof typeof BREAK.risks];
-    risk.avoidances.forEach((avoidanceKey) => addUniqueMapValue(avoidanceToRisks, avoidanceKey, riskKey));
+    risk.avoidances.forEach((avoidanceKey) =>
+      addUniqueMapValue(avoidanceToRisks, avoidanceKey, riskKey)
+    );
   });
 
-  const getOrderedRiskKeys = (riskKeySet: Set<string>) => allRiskKeys.filter((riskKey) => riskKeySet.has(riskKey));
+  const getOrderedRiskKeys = (riskKeySet: Set<string>) =>
+    allRiskKeys.filter((riskKey) => riskKeySet.has(riskKey));
 
   const getCandidateRiskKeys = () => {
     switch (relType.value) {
       case RelationType.risk:
-        return BREAK.risks[relKey.value as keyof typeof BREAK.risks] ? [relKey.value] : [];
+        return BREAK.risks[relKey.value as keyof typeof BREAK.risks]
+          ? [relKey.value]
+          : [];
       case RelationType.attackTool:
-        return getOrderedRiskKeys(new Set(attackToolRiskMap.get(relKey.value) ?? []));
+        return getOrderedRiskKeys(
+          new Set(attackToolRiskMap.get(relKey.value) ?? [])
+        );
       case RelationType.threatActor: {
         const riskKeySet = new Set(threatActorRiskMap.get(relKey.value) ?? []);
-        (threatActorAttackToolMap.get(relKey.value) ?? []).forEach((attackToolKey) => {
-          (attackToolRiskMap.get(attackToolKey) ?? []).forEach((riskKey) => riskKeySet.add(riskKey));
-        });
+        (threatActorAttackToolMap.get(relKey.value) ?? []).forEach(
+          (attackToolKey) => {
+            (attackToolRiskMap.get(attackToolKey) ?? []).forEach((riskKey) =>
+              riskKeySet.add(riskKey)
+            );
+          }
+        );
         return getOrderedRiskKeys(riskKeySet);
       }
       case RelationType.avoidance:
-        return getOrderedRiskKeys(new Set(avoidanceToRisks.get(relKey.value) ?? []));
+        return getOrderedRiskKeys(
+          new Set(avoidanceToRisks.get(relKey.value) ?? [])
+        );
       case RelationType.term:
         return [];
       default:
@@ -357,20 +481,54 @@ export const createRelationAttackPathData = ({
 
   const buildAttackPathsForRisk = (
     riskKey: string,
-    options: { attackToolKey?: string; avoidanceKey?: string; threatActorKey?: string } = {}
+    options: {
+      attackToolKey?: string;
+      avoidanceKey?: string;
+      threatActorKey?: string;
+    } = {}
   ) => {
     const paths: AttackPath[] = [];
     const risk = BREAK.risks[riskKey as keyof typeof BREAK.risks];
     if (!risk) return paths;
 
-    const riskAvoidances = options.avoidanceKey
-      ? risk.avoidances.includes(options.avoidanceKey)
-        ? [options.avoidanceKey]
-        : []
-      : risk.avoidances.length > 0
-        ? risk.avoidances
-        : [undefined];
-    if (riskAvoidances.length === 0) return paths;
+    const getPathAvoidances = (attackToolKey?: string) => {
+      const attackTool = attackToolKey
+        ? BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools]
+        : undefined;
+      const attackToolAvoidances = attackTool?.avoidances ?? [];
+      const riskAvoidances = risk.avoidances;
+      const candidateAvoidances =
+        attackToolAvoidances.length > 0
+          ? attackToolAvoidances.filter((avoidanceKey) =>
+              riskAvoidances.includes(avoidanceKey)
+            ).length > 0
+            ? attackToolAvoidances.filter((avoidanceKey) =>
+                riskAvoidances.includes(avoidanceKey)
+              )
+            : attackToolAvoidances
+          : riskAvoidances;
+      const filteredAvoidances = options.avoidanceKey
+        ? candidateAvoidances.includes(options.avoidanceKey)
+          ? [options.avoidanceKey]
+          : []
+        : candidateAvoidances.length > 0
+          ? candidateAvoidances
+          : [undefined];
+
+      return filteredAvoidances.map((avoidanceKey) => ({
+        avoidanceKey,
+        sourceFields: avoidanceKey
+          ? [
+              ...(attackToolAvoidances.includes(avoidanceKey)
+                ? ["AttackTool.avoidances"]
+                : []),
+              ...(riskAvoidances.includes(avoidanceKey)
+                ? ["Risk.avoidances"]
+                : []),
+            ]
+          : [],
+      }));
+    };
 
     const indexedAttackToolKeys = riskToAttackTools.get(riskKey) ?? [];
     const relatedAttackToolKeys = options.attackToolKey
@@ -381,8 +539,12 @@ export const createRelationAttackPathData = ({
     const relatedThreatActorKeys = riskToThreatActors.get(riskKey) ?? [];
 
     relatedAttackToolKeys.forEach((attackToolKey) => {
-      const toolThreatActorKeys = attackToolToThreatActors.get(attackToolKey) ?? [];
-      const candidateThreatActorKeys = toolThreatActorKeys.length > 0 ? toolThreatActorKeys : relatedThreatActorKeys;
+      const toolThreatActorKeys =
+        attackToolToThreatActors.get(attackToolKey) ?? [];
+      const candidateThreatActorKeys =
+        toolThreatActorKeys.length > 0
+          ? toolThreatActorKeys
+          : relatedThreatActorKeys;
       const threatActorKeys = options.threatActorKey
         ? candidateThreatActorKeys.includes(options.threatActorKey)
           ? [options.threatActorKey]
@@ -391,14 +553,31 @@ export const createRelationAttackPathData = ({
 
       if (threatActorKeys.length > 0) {
         threatActorKeys.forEach((threatActorKey) => {
-          riskAvoidances.forEach((avoidanceKey) => {
-            paths.push({ threatActorKey, attackToolKey, riskKey, avoidanceKey });
-          });
+          getPathAvoidances(attackToolKey).forEach(
+            ({ avoidanceKey, sourceFields }) => {
+              if (options.avoidanceKey && !avoidanceKey) return;
+              paths.push({
+                threatActorKey,
+                attackToolKey,
+                riskKey,
+                avoidanceKey,
+                avoidanceSourceFields: sourceFields,
+              });
+            }
+          );
         });
       } else if (!options.threatActorKey) {
-        riskAvoidances.forEach((avoidanceKey) => {
-          paths.push({ attackToolKey, riskKey, avoidanceKey });
-        });
+        getPathAvoidances(attackToolKey).forEach(
+          ({ avoidanceKey, sourceFields }) => {
+            if (options.avoidanceKey && !avoidanceKey) return;
+            paths.push({
+              attackToolKey,
+              riskKey,
+              avoidanceKey,
+              avoidanceSourceFields: sourceFields,
+            });
+          }
+        );
       }
     });
 
@@ -410,8 +589,14 @@ export const createRelationAttackPathData = ({
         : relatedThreatActorKeys;
 
       threatActorKeys.forEach((threatActorKey) => {
-        riskAvoidances.forEach((avoidanceKey) => {
-          paths.push({ threatActorKey, riskKey, avoidanceKey });
+        getPathAvoidances().forEach(({ avoidanceKey, sourceFields }) => {
+          if (options.avoidanceKey && !avoidanceKey) return;
+          paths.push({
+            threatActorKey,
+            riskKey,
+            avoidanceKey,
+            avoidanceSourceFields: sourceFields,
+          });
         });
       });
     }
@@ -422,9 +607,12 @@ export const createRelationAttackPathData = ({
   const buildAttackPaths = () => {
     const paths: AttackPath[] = [];
     const options = {
-      attackToolKey: relType.value === RelationType.attackTool ? relKey.value : undefined,
-      avoidanceKey: relType.value === RelationType.avoidance ? relKey.value : undefined,
-      threatActorKey: relType.value === RelationType.threatActor ? relKey.value : undefined,
+      attackToolKey:
+        relType.value === RelationType.attackTool ? relKey.value : undefined,
+      avoidanceKey:
+        relType.value === RelationType.avoidance ? relKey.value : undefined,
+      threatActorKey:
+        relType.value === RelationType.threatActor ? relKey.value : undefined,
     };
 
     getCandidateRiskKeys().forEach((riskKey) => {
@@ -435,16 +623,26 @@ export const createRelationAttackPathData = ({
   };
 
   const createEmptySankeyData = () => {
-    const nodeMap = new Map<string, {
-      name: string;
-      depth?: number;
-      entityType: Exclude<RelationType, RelationType.all>;
-      entityKey: string;
-      itemStyle: { color: string };
-    }>();
-    const linkMap = new Map<string, { source: string; target: string; value: number }>();
+    const nodeMap = new Map<
+      string,
+      {
+        name: string;
+        depth?: number;
+        entityType: Exclude<RelationType, RelationType.all>;
+        entityKey: string;
+        itemStyle: { color: string };
+      }
+    >();
+    const linkMap = new Map<
+      string,
+      { source: string; target: string; value: number }
+    >();
 
-    const addNode = (type: Exclude<RelationType, RelationType.all>, key: string, depth: number) => {
+    const addNode = (
+      type: Exclude<RelationType, RelationType.all>,
+      key: string,
+      depth: number
+    ) => {
       const nodeKey = `${type}:${key}`;
       const existingNode = nodeMap.get(nodeKey);
       if (existingNode) {
@@ -453,13 +651,13 @@ export const createRelationAttackPathData = ({
 
       const name = getSankeyNodeName(type, key);
       nodeMap.set(nodeKey, {
-          name,
-          depth,
-          entityType: type,
-          entityKey: key,
-          itemStyle: {
-            color: RelationTypeMapping[type].color,
-          },
+        name,
+        depth,
+        entityType: type,
+        entityKey: key,
+        itemStyle: {
+          color: RelationTypeMapping[type].color,
+        },
       });
       return name;
     };
@@ -477,7 +675,9 @@ export const createRelationAttackPathData = ({
     const addPath = (path: AttackPath) => {
       const pathNodes: string[] = [];
       if (path.threatActorKey) {
-        pathNodes.push(addNode(RelationType.threatActor, path.threatActorKey, 0));
+        pathNodes.push(
+          addNode(RelationType.threatActor, path.threatActorKey, 0)
+        );
       }
       if (path.attackToolKey) {
         pathNodes.push(addNode(RelationType.attackTool, path.attackToolKey, 1));
@@ -507,9 +707,12 @@ export const createRelationAttackPathData = ({
   const buildSankeyData = () => {
     const sankey = createEmptySankeyData();
     const options = {
-      attackToolKey: relType.value === RelationType.attackTool ? relKey.value : undefined,
-      avoidanceKey: relType.value === RelationType.avoidance ? relKey.value : undefined,
-      threatActorKey: relType.value === RelationType.threatActor ? relKey.value : undefined,
+      attackToolKey:
+        relType.value === RelationType.attackTool ? relKey.value : undefined,
+      avoidanceKey:
+        relType.value === RelationType.avoidance ? relKey.value : undefined,
+      threatActorKey:
+        relType.value === RelationType.threatActor ? relKey.value : undefined,
     };
 
     getCandidateRiskKeys().forEach((riskKey) => {
@@ -525,18 +728,25 @@ export const createRelationAttackPathData = ({
     if (node.type === RelationType.term) return [];
 
     const matchingPaths = buildAttackPaths().filter((path) => {
-      if (node.type === RelationType.threatActor) return path.threatActorKey === node.id;
-      if (node.type === RelationType.attackTool) return path.attackToolKey === node.id;
+      if (node.type === RelationType.threatActor)
+        return path.threatActorKey === node.id;
+      if (node.type === RelationType.attackTool)
+        return path.attackToolKey === node.id;
       if (node.type === RelationType.risk) return path.riskKey === node.id;
-      if (node.type === RelationType.avoidance) return path.avoidanceKey === node.id;
+      if (node.type === RelationType.avoidance)
+        return path.avoidanceKey === node.id;
       return false;
     });
 
     const roleSet = new Set<string>();
-    if (matchingPaths.some((path) => path.threatActorKey === node.id)) roleSet.add(t("relationView.pathRoleThreatActor"));
-    if (matchingPaths.some((path) => path.attackToolKey === node.id)) roleSet.add(t("relationView.pathRoleAttackTool"));
-    if (matchingPaths.some((path) => path.riskKey === node.id)) roleSet.add(t("relationView.pathRoleRisk"));
-    if (matchingPaths.some((path) => path.avoidanceKey === node.id)) roleSet.add(t("relationView.pathRoleAvoidance"));
+    if (matchingPaths.some((path) => path.threatActorKey === node.id))
+      roleSet.add(t("relationView.pathRoleThreatActor"));
+    if (matchingPaths.some((path) => path.attackToolKey === node.id))
+      roleSet.add(t("relationView.pathRoleAttackTool"));
+    if (matchingPaths.some((path) => path.riskKey === node.id))
+      roleSet.add(t("relationView.pathRoleRisk"));
+    if (matchingPaths.some((path) => path.avoidanceKey === node.id))
+      roleSet.add(t("relationView.pathRoleAvoidance"));
 
     return [...roleSet];
   });
@@ -549,9 +759,16 @@ export const createRelationAttackPathData = ({
 
   const selectedNodeAttackPathExplanations = computed(() => {
     const node = selectedNetworkNode.value;
-    if (!node || !isRelationEntityType(node.type) || node.type === RelationType.term) return [];
+    if (
+      !node ||
+      !isRelationEntityType(node.type) ||
+      node.type === RelationType.term
+    )
+      return [];
 
-    return explainGroupedAttackPaths(buildAttackPaths().filter((path) => hasPathNode(path, node))).slice(0, 3);
+    return explainGroupedAttackPaths(
+      buildAttackPaths().filter((path) => hasPathNode(path, node))
+    );
   });
 
   const sankeyData = computed(() => {
@@ -559,11 +776,14 @@ export const createRelationAttackPathData = ({
   });
 
   const sankeyChartHeight = computed(() => {
-    const nodesByDepth = sankeyData.value.nodes.reduce<Record<number, number>>((acc, node) => {
-      const depth = node.depth ?? 0;
-      acc[depth] = (acc[depth] ?? 0) + 1;
-      return acc;
-    }, {});
+    const nodesByDepth = sankeyData.value.nodes.reduce<Record<number, number>>(
+      (acc, node) => {
+        const depth = node.depth ?? 0;
+        acc[depth] = (acc[depth] ?? 0) + 1;
+        return acc;
+      },
+      {}
+    );
     const maxLayerNodeCount = Math.max(1, ...Object.values(nodesByDepth));
 
     if (isMobileView()) {
