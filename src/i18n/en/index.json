@@ -115,8 +115,10 @@
     "sourceFields": "Source Fields",
     "explanation": "Explanation",
     "defensiveFocus": "Defensive Focus",
+    "keyEvidence": "Key Evidence",
     "relatedThreatActors": "Related Threat Actors",
     "groupedThreatActors": "{count} threat actors",
+    "noAvoidanceCoverage": "No explicit avoidance coverage",
     "qualityFlagMissingSource": "Missing explicit source field",
     "qualityFlagReview": "Review relation semantics",
     "qualityFlagMissingAvoidance": "Missing avoidance coverage",
@@ -152,6 +154,14 @@
     },
     "attackPathExplanationSummary": "This path contains {count} reasoning steps, with {risk} as the core risk.",
     "attackPathGroupedExplanationSummary": "Merged {pathCount} similar paths across {actorCount} threat actors, with {risk} as the core risk.",
+    "attackPathFinding": {
+      "toolRisk": "{actorCount} threat actors connect to \"{risk}\" through \"{tool}\". The tool-to-risk relation is \"{relation}\", and the current mitigation candidate is \"{avoidance}\".",
+      "actorRisk": "{actorCount} threat actors connect directly to \"{risk}\". The current mitigation candidate is \"{avoidance}\"."
+    },
+    "attackPathRecommendedAction": {
+      "toolRisk": "Prioritize traces of \"{tool}\", then validate whether \"{avoidance}\" sufficiently covers the trigger conditions of \"{risk}\".",
+      "actorRisk": "Prioritize the evidence chain between the threat actor and \"{risk}\", then validate whether \"{avoidance}\" is an effective mitigation."
+    },
     "attackPathIntent": {
       "actorToTool": "Attack intent: the threat actor gains executable capability through tool use or development.",
       "toolToRisk": "Attack intent: the attack tool drives the risk, either directly or indirectly.",

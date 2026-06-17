@@ -19,6 +19,7 @@ interface CreateRelationAttackPathOptions {
   selectedNetworkNode: ComputedRef<Node | null>;
   RelationTypeMapping: ReturnType<typeof createRelationTypeMapping>;
   getSankeyNodeName: (type: Exclude<RelationType, RelationType.all>, key: string) => string;
+  getNodeTitle: (type: Exclude<RelationType, RelationType.all>, key: string) => string;
 }
 
 export const createRelationAttackPathData = ({
@@ -29,6 +30,7 @@ export const createRelationAttackPathData = ({
   selectedNetworkNode,
   RelationTypeMapping,
   getSankeyNodeName,
+  getNodeTitle,
 }: CreateRelationAttackPathOptions) => {
   const isMobileView = () => isMobile?.value === true;
 
@@ -96,19 +98,36 @@ export const createRelationAttackPathData = ({
     return fields;
   };
 
+  const buildEntitySummary = (type: Exclude<RelationType, RelationType.all>, id: string) => ({
+    id,
+    title: getNodeTitle(type, id),
+    type,
+  });
+
+  const unique = <T,>(values: T[]) => [...new Set(values)];
+
   const explainAttackPath = (path: AttackPath, groupedPaths: AttackPath[] = [path]): AttackPathExplanation => {
     const steps: AttackPathExplanation["steps"] = [];
     const qualityFlags: string[] = [];
     const defensiveFocus: string[] = [];
-    const threatActorIds = [...new Set(groupedPaths.map((item) => item.threatActorKey).filter(Boolean) as string[])];
+    const threatActorIds = unique(groupedPaths.map((item) => item.threatActorKey).filter(Boolean) as string[]);
+    const threatActors = threatActorIds.map((id) => buildEntitySummary(RelationType.threatActor, id));
+    const attackTool = path.attackToolKey ? buildEntitySummary(RelationType.attackTool, path.attackToolKey) : undefined;
+    const risk = buildEntitySummary(RelationType.risk, path.riskKey);
+    const avoidance = path.avoidanceKey ? buildEntitySummary(RelationType.avoidance, path.avoidanceKey) : undefined;
 
     if (path.threatActorKey && path.attackToolKey) {
-      const sourceFields = [
-        ...new Set(threatActorIds.flatMap((threatActorKey) => getThreatActorToolFields(threatActorKey, path.attackToolKey as string))),
-      ];
+      const sourceFields = unique(
+        threatActorIds.flatMap((threatActorKey) => getThreatActorToolFields(threatActorKey, path.attackToolKey as string))
+      );
       steps.push({
         fromId: threatActorIds.length > 1 ? t("relationView.groupedThreatActors", { count: threatActorIds.length }) : path.threatActorKey,
+        fromTitle:
+          threatActorIds.length > 1
+            ? t("relationView.groupedThreatActors", { count: threatActorIds.length })
+            : getNodeTitle(RelationType.threatActor, path.threatActorKey),
         toId: path.attackToolKey,
+        toTitle: getNodeTitle(RelationType.attackTool, path.attackToolKey),
         relationType: sourceFields.includes("ThreatActor.buildAttackTools")
           ? t("relationLine.buildAttackTool")
           : t("relationLine.useAttackTool"),
@@ -123,7 +142,9 @@ export const createRelationAttackPathData = ({
       const sourceFields = getToolRiskFields(path.attackToolKey, path.riskKey);
       steps.push({
         fromId: path.attackToolKey,
+        fromTitle: getNodeTitle(RelationType.attackTool, path.attackToolKey),
         toId: path.riskKey,
+        toTitle: getNodeTitle(RelationType.risk, path.riskKey),
         relationType: sourceFields.includes("AttackTool.directCauseRisks")
           ? t("relationLine.directCauseRisk")
           : t("relationLine.indirectSupportRisk"),
@@ -136,7 +157,9 @@ export const createRelationAttackPathData = ({
       const sourceFields = getThreatActorRiskFields(path.threatActorKey, path.riskKey);
       steps.push({
         fromId: path.threatActorKey,
+        fromTitle: getNodeTitle(RelationType.threatActor, path.threatActorKey),
         toId: path.riskKey,
+        toTitle: getNodeTitle(RelationType.risk, path.riskKey),
         relationType: sourceFields.includes("ThreatActor.directCauseRisks")
           ? t("relationLine.directCauseRisk")
           : t("relationLine.indirectSupportRisk"),
@@ -150,7 +173,9 @@ export const createRelationAttackPathData = ({
     if (path.avoidanceKey) {
       steps.push({
         fromId: path.riskKey,
+        fromTitle: getNodeTitle(RelationType.risk, path.riskKey),
         toId: path.avoidanceKey,
+        toTitle: getNodeTitle(RelationType.avoidance, path.avoidanceKey),
         relationType: t("relationLine.avoidanceMeans"),
         sourceFields: ["Risk.avoidances"],
         attackIntent: t("relationView.attackPathIntent.riskToAvoidance"),
@@ -164,10 +189,13 @@ export const createRelationAttackPathData = ({
     return {
       pathKey: buildPathGroupKey(path),
       pathCount: groupedPaths.length,
-      threatActorIds,
+      threatActors,
       threatActorId: path.threatActorKey,
+      attackTool,
       attackToolId: path.attackToolKey,
+      risk,
       riskId: path.riskKey,
+      avoidance,
       avoidanceId: path.avoidanceKey,
       summary:
         groupedPaths.length > 1
@@ -175,12 +203,36 @@ export const createRelationAttackPathData = ({
               pathCount: groupedPaths.length,
               actorCount: threatActorIds.length,
               stepCount: steps.length,
-              risk: path.riskKey,
+              risk: risk.title,
             })
           : t("relationView.attackPathExplanationSummary", {
               count: steps.length,
-              risk: path.riskKey,
+              risk: risk.title,
             }),
+      analysisFinding: attackTool
+        ? t("relationView.attackPathFinding.toolRisk", {
+            actorCount: threatActorIds.length,
+            tool: attackTool.title,
+            risk: risk.title,
+            relation: steps.find((step) => step.toId === path.riskKey)?.relationType ?? t("relationLine.causeRisk"),
+            avoidance: avoidance?.title ?? t("relationView.noAvoidanceCoverage"),
+          })
+        : t("relationView.attackPathFinding.actorRisk", {
+            actorCount: threatActorIds.length,
+            risk: risk.title,
+            avoidance: avoidance?.title ?? t("relationView.noAvoidanceCoverage"),
+          }),
+      recommendedAction: attackTool
+        ? t("relationView.attackPathRecommendedAction.toolRisk", {
+            tool: attackTool.title,
+            risk: risk.title,
+            avoidance: avoidance?.title ?? t("relationView.noAvoidanceCoverage"),
+          })
+        : t("relationView.attackPathRecommendedAction.actorRisk", {
+            risk: risk.title,
+            avoidance: avoidance?.title ?? t("relationView.noAvoidanceCoverage"),
+          }),
+      evidenceFields: unique(steps.flatMap((step) => step.sourceFields)),
       defensiveFocus,
       qualityFlags,
       steps,

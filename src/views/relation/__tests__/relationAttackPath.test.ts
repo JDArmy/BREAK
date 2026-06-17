@@ -23,6 +23,7 @@ describe("relationAttackPath", () => {
       selectedNetworkNode: computed(() => selectedNode.value),
       RelationTypeMapping: relationTypeMapping,
       getSankeyNodeName,
+      getNodeTitle: (type, key) => `BREAK.${relationTypeMapping[type].BreakKey}.${key}.title`,
     });
   };
 
@@ -101,14 +102,27 @@ describe("relationAttackPath", () => {
     expect(attackPath.selectedNodeAttackPathExplanations.value[0]).toEqual(
       expect.objectContaining({
         riskId: "R0005-001",
+        risk: expect.objectContaining({
+          id: "R0005-001",
+          title: "BREAK.risks.R0005-001.title",
+        }),
         summary: "relationView.attackPathGroupedExplanationSummary",
         pathCount: expect.any(Number),
-        threatActorIds: expect.arrayContaining(["TA0017"]),
+        threatActors: expect.arrayContaining([
+          expect.objectContaining({
+            id: "TA0017",
+            title: "BREAK.threatActors.TA0017.title",
+          }),
+        ]),
+        analysisFinding: "relationView.attackPathFinding.toolRisk",
+        recommendedAction: "relationView.attackPathRecommendedAction.toolRisk",
+        evidenceFields: expect.arrayContaining(["ThreatActor.useAttackTools", "AttackTool.directCauseRisks", "Risk.avoidances"]),
         steps: expect.arrayContaining([
           expect.objectContaining({
             relationType: expect.stringMatching(/^relationLine\.(buildAttackTool|useAttackTool)$/),
             sourceFields: expect.arrayContaining(["ThreatActor.useAttackTools"]),
             attackIntent: "relationView.attackPathIntent.actorToTool",
+            toTitle: "BREAK.attackTools.AT0001.title",
           }),
           expect.objectContaining({
             relationType: "relationLine.directCauseRisk",
@@ -150,11 +164,13 @@ describe("relationAttackPath", () => {
       })
     );
     expect(groupedPath?.pathCount).toBeGreaterThan(1);
-    expect(groupedPath?.threatActorIds.length).toBeGreaterThan(1);
+    expect(groupedPath?.threatActors.length).toBeGreaterThan(1);
     expect(groupedPath?.steps[0]).toEqual(
       expect.objectContaining({
         fromId: "relationView.groupedThreatActors",
+        fromTitle: "relationView.groupedThreatActors",
         toId: "AT0002",
+        toTitle: "BREAK.attackTools.AT0002.title",
         sourceFields: ["ThreatActor.useAttackTools"],
       })
     );

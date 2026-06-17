@@ -44,17 +44,41 @@ interface RootPreviewSummary {
 interface AttackPathExplanation {
   pathKey: string;
   pathCount: number;
-  threatActorIds: string[];
+  threatActors: Array<{
+    id: string;
+    title: string;
+    type: string;
+  }>;
   threatActorId?: string;
+  attackTool?: {
+    id: string;
+    title: string;
+    type: string;
+  };
   attackToolId?: string;
+  risk: {
+    id: string;
+    title: string;
+    type: string;
+  };
   riskId: string;
+  avoidance?: {
+    id: string;
+    title: string;
+    type: string;
+  };
   avoidanceId?: string;
   summary: string;
+  analysisFinding: string;
+  recommendedAction: string;
+  evidenceFields: string[];
   defensiveFocus: string[];
   qualityFlags: string[];
   steps: Array<{
     fromId: string;
+    fromTitle: string;
     toId: string;
+    toTitle: string;
     relationType: string;
     sourceFields: string[];
     attackIntent: string;
@@ -198,31 +222,32 @@ const { t } = useI18n();
         :key="path.pathKey"
         class="node-attack-path-card"
       >
-        <div class="node-path-summary">{{ path.summary }}</div>
-        <div v-if="path.threatActorIds.length > 1" class="node-relation-fields">
-          {{ t("relationView.relatedThreatActors") }}: {{ path.threatActorIds.join(", ") }}
-        </div>
-        <div class="node-attack-path-chain">
-          <div
-            v-for="(step, index) in path.steps"
-            :key="`${path.pathKey}-${step.fromId}-${step.toId}-${index}`"
-            class="node-attack-path-step"
-          >
-            <div class="node-attack-path-edge">
-              <span class="node-path-node-id">{{ step.fromId }}</span>
-              <span>{{ step.relationType }}</span>
-              <span class="node-path-node-id">{{ step.toId }}</span>
-            </div>
-            <div class="node-relation-fields">{{ step.attackIntent }}</div>
-            <div class="node-relation-fields">{{ step.defensiveMeaning }}</div>
-            <div v-if="step.sourceFields.length" class="node-relation-fields">
-              {{ t("relationView.sourceFields") }}: {{ step.sourceFields.join(", ") }}
-            </div>
+        <div class="node-path-summary">{{ path.analysisFinding }}</div>
+        <div class="node-attack-key-entities">
+          <div v-if="path.attackTool" class="node-attack-entity">
+            <span class="node-attack-entity-label">{{ t("relationType.attackTool") }}</span>
+            <strong>{{ path.attackTool.title }}</strong>
+            <span>{{ path.attackTool.id }}</span>
+          </div>
+          <div class="node-attack-entity">
+            <span class="node-attack-entity-label">{{ t("relationType.risk") }}</span>
+            <strong>{{ path.risk.title }}</strong>
+            <span>{{ path.risk.id }}</span>
+          </div>
+          <div v-if="path.avoidance" class="node-attack-entity">
+            <span class="node-attack-entity-label">{{ t("relationType.avoidance") }}</span>
+            <strong>{{ path.avoidance.title }}</strong>
+            <span>{{ path.avoidance.id }}</span>
           </div>
         </div>
-        <div v-if="path.defensiveFocus.length" class="node-relation-fields">
-          {{ t("relationView.defensiveFocus") }}: {{ path.defensiveFocus.join(", ") }}
+        <div v-if="path.threatActors.length" class="node-relation-fields">
+          {{ t("relationView.relatedThreatActors") }}:
+          {{ path.threatActors.map((actor) => `${actor.title} (${actor.id})`).join(", ") }}
         </div>
+        <div v-if="path.evidenceFields.length" class="node-relation-fields">
+          {{ t("relationView.keyEvidence") }}: {{ path.evidenceFields.join(", ") }}
+        </div>
+        <div class="node-attack-action">{{ path.recommendedAction }}</div>
         <div v-if="path.qualityFlags.length" class="node-relation-fields">
           {{ path.qualityFlags.join(", ") }}
         </div>
@@ -428,24 +453,41 @@ const { t } = useI18n();
   border-top: 1px solid var(--break-border);
 }
 
-.node-attack-path-chain {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+.node-attack-key-entities {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
 }
 
-.node-attack-path-step {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.node-attack-path-edge {
+.node-attack-entity {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
   align-items: center;
   font-size: 12px;
+}
+
+.node-attack-entity span:last-child {
+  color: var(--break-text-muted);
+}
+
+.node-attack-entity-label {
+  display: inline-flex;
+  padding: 2px 6px;
+  border: 1px solid var(--break-border);
+  border-radius: 999px;
+  color: var(--break-text-secondary);
+  font-size: 11px;
+}
+
+.node-attack-action {
+  padding: 8px 10px;
+  border: 1px solid color-mix(in srgb, var(--el-color-success) 22%, var(--break-border));
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--el-color-success) 5%, var(--break-bg));
+  color: var(--break-text-secondary);
+  font-size: 12px;
+  line-height: 1.6;
   font-weight: 600;
 }
 

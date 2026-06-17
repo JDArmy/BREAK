@@ -115,8 +115,10 @@
     "sourceFields": "来源字段",
     "explanation": "解释",
     "defensiveFocus": "防御焦点",
+    "keyEvidence": "关键证据",
     "relatedThreatActors": "关联威胁行为者",
     "groupedThreatActors": "{count} 个威胁行为者",
+    "noAvoidanceCoverage": "暂无明确规避覆盖",
     "qualityFlagMissingSource": "缺少明确来源字段",
     "qualityFlagReview": "建议复核关系语义",
     "qualityFlagMissingAvoidance": "缺少规避措施覆盖",
@@ -152,6 +154,14 @@
     },
     "attackPathExplanationSummary": "该路径包含 {count} 段推导，核心风险为 {risk}。",
     "attackPathGroupedExplanationSummary": "已合并 {pathCount} 条同类路径，涉及 {actorCount} 个威胁行为者，核心风险为 {risk}。",
+    "attackPathFinding": {
+      "toolRisk": "{actorCount} 个威胁行为者通过「{tool}」关联到「{risk}」，工具到风险关系为「{relation}」，当前缓解候选为「{avoidance}」。",
+      "actorRisk": "{actorCount} 个威胁行为者直接关联到「{risk}」，当前缓解候选为「{avoidance}」。"
+    },
+    "attackPathRecommendedAction": {
+      "toolRisk": "建议优先核查「{tool}」的使用痕迹，并围绕「{risk}」的触发条件验证「{avoidance}」是否足够覆盖。",
+      "actorRisk": "建议优先复核威胁行为者与「{risk}」之间的证据链，并确认「{avoidance}」是否可作为有效缓解。"
+    },
     "attackPathIntent": {
       "actorToTool": "攻击意图：威胁行为者通过使用或建设工具形成可执行能力。",
       "toolToRisk": "攻击意图：攻击工具推动风险发生，可能是直接造成也可能是间接支撑。",

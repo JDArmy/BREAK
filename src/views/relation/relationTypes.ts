@@ -107,22 +107,36 @@ export interface AttackPath {
 
 export interface AttackPathExplanationStep {
   fromId: string;
+  fromTitle: string;
   toId: string;
+  toTitle: string;
   relationType: string;
   sourceFields: string[];
   attackIntent: string;
   defensiveMeaning: string;
 }
 
+export interface AttackPathEntitySummary {
+  id: string;
+  title: string;
+  type: Exclude<RelationType, RelationType.all>;
+}
+
 export interface AttackPathExplanation {
   pathKey: string;
   pathCount: number;
-  threatActorIds: string[];
+  threatActors: AttackPathEntitySummary[];
   threatActorId?: string;
+  attackTool?: AttackPathEntitySummary;
   attackToolId?: string;
+  risk: AttackPathEntitySummary;
   riskId: string;
+  avoidance?: AttackPathEntitySummary;
   avoidanceId?: string;
   summary: string;
+  analysisFinding: string;
+  recommendedAction: string;
+  evidenceFields: string[];
   defensiveFocus: string[];
   qualityFlags: string[];
   steps: AttackPathExplanationStep[];

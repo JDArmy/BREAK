@@ -259,6 +259,7 @@ export const useRelationGraphData = ({
     selectedNetworkNode,
     RelationTypeMapping,
     getSankeyNodeName,
+    getNodeTitle,
   });
 
   let refreshGraphRequestId = 0;

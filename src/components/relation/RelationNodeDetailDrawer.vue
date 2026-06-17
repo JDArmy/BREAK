@@ -69,17 +69,41 @@ interface RootPreviewSummary {
 interface AttackPathExplanation {
   pathKey: string;
   pathCount: number;
-  threatActorIds: string[];
+  threatActors: Array<{
+    id: string;
+    title: string;
+    type: string;
+  }>;
   threatActorId?: string;
+  attackTool?: {
+    id: string;
+    title: string;
+    type: string;
+  };
   attackToolId?: string;
+  risk: {
+    id: string;
+    title: string;
+    type: string;
+  };
   riskId: string;
+  avoidance?: {
+    id: string;
+    title: string;
+    type: string;
+  };
   avoidanceId?: string;
   summary: string;
+  analysisFinding: string;
+  recommendedAction: string;
+  evidenceFields: string[];
   defensiveFocus: string[];
   qualityFlags: string[];
   steps: Array<{
     fromId: string;
+    fromTitle: string;
     toId: string;
+    toTitle: string;
     relationType: string;
     sourceFields: string[];
     attackIntent: string;
