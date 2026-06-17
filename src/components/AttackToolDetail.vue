@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { defineAsyncComponent, ref } from "vue";
 import BREAK from "@/BREAK";
-import TermDetail from "@/components/TermDetail.vue";
-import AvoidanceDetail from "@/components/AvoidanceDetail.vue";
 import ReferenceList from "@/components/ReferenceList.vue";
 
 import "element-plus/es/components/drawer/style/css";
@@ -10,6 +8,9 @@ import "element-plus/es/components/button/style/css";
 import { ArrowLeft } from "@element-plus/icons-vue";
 import iconRelation from "./icons/iconRelation.vue";
 import { useDrawerWidth } from "@/composables/useDrawerWidth";
+
+const TermDetail = defineAsyncComponent(() => import("@/components/TermDetail.vue"));
+const AvoidanceDetail = defineAsyncComponent(() => import("@/components/AvoidanceDetail.vue"));
 
 defineProps<{
   drawer: boolean;
@@ -114,12 +115,14 @@ const getRelatedTerms = (atKey: string) =>
   </el-drawer>
   <!-- 手段详情页 -->
   <AvoidanceDetail
+    v-if="avoidanceDrawer"
     v-on:drawer-close="avoidanceDrawer = false"
     :drawer="avoidanceDrawer"
     :aKey="avoidanceKey"
   />
   <!-- 术语详情页 -->
   <TermDetail
+    v-if="termDrawer"
     v-on:drawer-close="termDrawer = false"
     :drawer="termDrawer"
     :tKey="termKey"

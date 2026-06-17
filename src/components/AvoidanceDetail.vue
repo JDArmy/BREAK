@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { defineAsyncComponent, ref } from "vue";
 import BREAK from "@/BREAK";
-import TermDetail from "@/components/TermDetail.vue";
 import ReferenceList from "@/components/ReferenceList.vue";
 
 import "element-plus/es/components/drawer/style/css";
@@ -9,6 +8,8 @@ import "element-plus/es/components/button/style/css";
 import { ArrowLeft } from "@element-plus/icons-vue";
 import iconRelation from "./icons/iconRelation.vue";
 import { useDrawerWidth } from "@/composables/useDrawerWidth";
+
+const TermDetail = defineAsyncComponent(() => import("@/components/TermDetail.vue"));
 
 defineProps<{
   drawer: boolean;
@@ -103,6 +104,7 @@ const termKey = ref("");
 
   <!-- 术语详情页 -->
   <TermDetail
+    v-if="termDrawer"
     v-on:drawer-close="termDrawer = false"
     :drawer="termDrawer"
     :tKey="termKey"

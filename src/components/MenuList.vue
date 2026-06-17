@@ -27,6 +27,7 @@ const route = useRoute();
 const searchOpen = ref(false);
 const searchDialogEnabled = ref(false);
 const mobileMenuOpen = ref(false);
+const localeChanging = ref(false);
 const shortcutHint =
   typeof navigator !== "undefined" && navigator.platform?.includes("Mac")
     ? "⌘K"
@@ -52,8 +53,14 @@ const openSearchDialog = () => {
   searchOpen.value = true;
 };
 
-const handleLocaleChange = (lang: string) => {
-  setLocale(lang);
+const handleLocaleChange = async (lang: string) => {
+  if (localeChanging.value) return;
+  localeChanging.value = true;
+  try {
+    await setLocale(lang as keyof typeof languages);
+  } finally {
+    localeChanging.value = false;
+  }
 };
 
 const knowledgeRoutes: Record<string, string> = {
@@ -249,7 +256,7 @@ const getActiveIndex = (fullPath: string) => {
 
       <div class="mobile-nav-actions">
         <ThemeToggle />
-        <el-dropdown trigger="click" @command="handleLocaleChange">
+        <el-dropdown trigger="click" :disabled="localeChanging" @command="handleLocaleChange">
           <span class="mobile-locale-toggle">
             <icon-translate />
             <span>{{ languages[locale as keyof typeof languages] }}</span>
@@ -384,7 +391,7 @@ const getActiveIndex = (fullPath: string) => {
 
     <ThemeToggle />
 
-    <el-dropdown class="translate" trigger="click" @command="handleLocaleChange">
+    <el-dropdown class="translate" trigger="click" :disabled="localeChanging" @command="handleLocaleChange">
       <span class="el-dropdown-link">
         <icon-translate />
         <span class="locale-label">{{ languages[locale as keyof typeof languages] }}</span>

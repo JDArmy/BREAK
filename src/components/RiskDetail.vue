@@ -1,11 +1,7 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { defineAsyncComponent, ref } from "vue";
 import { useRouter } from "vue-router";
 import BREAK from "@/BREAK";
-import AvoidanceDetail from "@/components/AvoidanceDetail.vue";
-import AttackToolDetail from "@/components/AttackToolDetail.vue";
-import ThreatActorDetail from "@/components/ThreatActorDetail.vue";
-import TermDetail from "@/components/TermDetail.vue";
 import ReferenceList from "@/components/ReferenceList.vue";
 
 import "element-plus/es/components/drawer/style/css";
@@ -14,6 +10,11 @@ import { ArrowLeft } from "@element-plus/icons-vue";
 
 import iconRelation from "./icons/iconRelation.vue";
 import { useDrawerWidth } from "@/composables/useDrawerWidth";
+
+const AvoidanceDetail = defineAsyncComponent(() => import("@/components/AvoidanceDetail.vue"));
+const AttackToolDetail = defineAsyncComponent(() => import("@/components/AttackToolDetail.vue"));
+const ThreatActorDetail = defineAsyncComponent(() => import("@/components/ThreatActorDetail.vue"));
+const TermDetail = defineAsyncComponent(() => import("@/components/TermDetail.vue"));
 
 defineProps<{
   drawer: boolean;
@@ -194,6 +195,7 @@ const openRelationGraph = (rKey: string) => {
   </el-drawer>
   <!-- 手段详情页 -->
   <AvoidanceDetail
+    v-if="avoidanceDrawer"
     v-on:drawer-close="avoidanceDrawer = false"
     :drawer="avoidanceDrawer"
     :aKey="avoidanceKey"
@@ -201,6 +203,7 @@ const openRelationGraph = (rKey: string) => {
 
   <!-- 攻击工具详情页 -->
   <AttackToolDetail
+    v-if="attackToolDrawer"
     v-on:drawer-close="attackToolDrawer = false"
     :drawer="attackToolDrawer"
     :atKey="attackToolKey"
@@ -208,6 +211,7 @@ const openRelationGraph = (rKey: string) => {
 
   <!-- 威胁行为者详情页 -->
   <ThreatActorDetail
+    v-if="threatActorDrawer"
     v-on:drawer-close="threatActorDrawer = false"
     :drawer="threatActorDrawer"
     :taKey="threatActorKey"
@@ -215,6 +219,7 @@ const openRelationGraph = (rKey: string) => {
 
   <!-- 术语详情页 -->
   <TermDetail
+    v-if="termDrawer"
     v-on:drawer-close="termDrawer = false"
     :drawer="termDrawer"
     :tKey="termKey"

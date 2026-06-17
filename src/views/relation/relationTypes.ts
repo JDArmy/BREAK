@@ -180,6 +180,29 @@ export interface RiskAvoidanceCoverage {
   items: RiskAvoidanceCoverageItem[];
 }
 
+export type NodeCoverageSeverity = "normal" | "warning" | "danger";
+
+export interface NodeCoverageMetric {
+  label: string;
+  value: number;
+}
+
+export interface NodeCoverageItem {
+  key: string;
+  title: string;
+  meta: string;
+  sourceFields: string[];
+}
+
+export interface NodeCoverageSummary {
+  title: string;
+  summary: string;
+  severity: NodeCoverageSeverity;
+  metrics: NodeCoverageMetric[];
+  items: NodeCoverageItem[];
+  notice?: string;
+}
+
 export const getColorFromCSS = (varName: string): string => {
   const style = getComputedStyle(document.documentElement);
   const value = style.getPropertyValue(varName).trim();

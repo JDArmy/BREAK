@@ -2,7 +2,6 @@ import { createI18n } from "vue-i18n";
 import en from "./en/index.json";
 import cn from "./zh-CN/index.json";
 
-import enBREAK from "./en/BREAK";
 import cnBREAK from "../BREAK";
 
 /**
@@ -85,11 +84,6 @@ const languages = {
   cn: "中文",
 };
 
-const messages = {
-  en: { ...en, BREAK: mergeWithStructure(cnBREAK, enBREAK) as typeof enBREAK },
-  cn: { ...cn, BREAK: cnBREAK },
-};
-
 const LOCALE_STORAGE_KEY = "break-locale";
 
 type Locale = "cn" | "en";
@@ -105,16 +99,44 @@ const getInitialLocale = (): Locale => {
   return "cn";
 };
 
+const initialLocale = getInitialLocale();
+
+const messages = {
+  en,
+  cn: { ...cn, BREAK: cnBREAK },
+};
+
 const i18n = createI18n({
   legacy: false,
-  locale: getInitialLocale(),
+  locale: initialLocale,
   fallbackLocale: "cn",
   messages: messages,
 });
 
-const setLocale = (locale: Locale) => {
+let enBreakMessagePromise: Promise<void> | null = null;
+
+const ensureLocaleMessages = async (locale: Locale) => {
+  if (locale === "cn") return;
+  if (i18n.global.getLocaleMessage("en").BREAK) return;
+
+  if (!enBreakMessagePromise) {
+    enBreakMessagePromise = import("./en/BREAK").then(({ default: enBREAK }) => {
+      i18n.global.setLocaleMessage("en", {
+        ...en,
+        BREAK: mergeWithStructure(cnBREAK, enBREAK) as typeof enBREAK,
+      });
+    });
+  }
+
+  await enBreakMessagePromise;
+};
+
+const initLocaleMessages = () => ensureLocaleMessages(initialLocale);
+
+const setLocale = async (locale: Locale) => {
+  await ensureLocaleMessages(locale);
   localStorage.setItem(LOCALE_STORAGE_KEY, locale);
   i18n.global.locale.value = locale;
 };
 
-export { i18n, languages, setLocale, LOCALE_STORAGE_KEY };
+export { i18n, initLocaleMessages, languages, setLocale, LOCALE_STORAGE_KEY };
