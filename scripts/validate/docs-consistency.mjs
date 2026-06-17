@@ -103,6 +103,7 @@ const buildGateScripts = [
   'test:smoke',
   'test:performance',
   'test:relation-stability',
+  'test:lighthouse',
 ];
 const documentedUtilityScripts = ['schema:docs:write'];
 

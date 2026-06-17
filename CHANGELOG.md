@@ -66,6 +66,10 @@
   - 新增 `test:relation-stability`，使用 Playwright 覆盖 5 个高关联实体和 6 种网络布局
   - 验证复杂图谱 canvas 非空渲染、布局切换、节点/关系筛选和节点详情抽屉可用
   - `npm run build`、CI 和 GitHub Pages Deploy 将执行该稳定性脚本
+- 新增：Lighthouse 桌面/移动端基线
+  - 新增 `test:lighthouse`，对首页、风险页和 Sankey 关系页执行 Lighthouse performance/a11y/best-practices/SEO 基线检查
+  - `npm run build`、CI 和 GitHub Pages Deploy 将执行 Lighthouse 基线
+  - 当前基线重点防止退化，后续优化目标是提高移动端 LCP 和无障碍分数
 - 修复：同步中文 README 数据规模统计，保持与当前数据口径一致
 - 优化：关系审计和指标脚本口径
   - ThreatActor 工具关系按 build/use 合并覆盖统计

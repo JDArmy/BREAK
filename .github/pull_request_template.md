@@ -18,8 +18,7 @@
 - [ ] `npm run audit:references`
 - [ ] `npm run audit:metrics`
 - [ ] `npm run test`
-- [ ] `npm run build-only`
-- [ ] `npm run audit:bundle`
+- [ ] `npm run build`
 
 ## 说明
 

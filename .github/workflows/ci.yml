@@ -28,3 +28,5 @@ jobs:
       - run: npm run validate:data-export
       - run: npm run test:smoke
       - run: npm run test:performance
+      - run: npm run test:relation-stability
+      - run: npm run test:lighthouse
