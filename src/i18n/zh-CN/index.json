@@ -115,6 +115,8 @@
     "sourceFields": "来源字段",
     "explanation": "解释",
     "defensiveFocus": "防御焦点",
+    "relatedThreatActors": "关联威胁行为者",
+    "groupedThreatActors": "{count} 个威胁行为者",
     "qualityFlagMissingSource": "缺少明确来源字段",
     "qualityFlagReview": "建议复核关系语义",
     "qualityFlagMissingAvoidance": "缺少规避措施覆盖",
@@ -149,6 +151,7 @@
       "review": "分析价值：该关系需要人工或 AI 进一步判断。"
     },
     "attackPathExplanationSummary": "该路径包含 {count} 段推导，核心风险为 {risk}。",
+    "attackPathGroupedExplanationSummary": "已合并 {pathCount} 条同类路径，涉及 {actorCount} 个威胁行为者，核心风险为 {risk}。",
     "attackPathIntent": {
       "actorToTool": "攻击意图：威胁行为者通过使用或建设工具形成可执行能力。",
       "toolToRisk": "攻击意图：攻击工具推动风险发生，可能是直接造成也可能是间接支撑。",

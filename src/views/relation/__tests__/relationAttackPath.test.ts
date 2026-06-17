@@ -101,8 +101,15 @@ describe("relationAttackPath", () => {
     expect(attackPath.selectedNodeAttackPathExplanations.value[0]).toEqual(
       expect.objectContaining({
         riskId: "R0005-001",
-        summary: "relationView.attackPathExplanationSummary",
+        summary: "relationView.attackPathGroupedExplanationSummary",
+        pathCount: expect.any(Number),
+        threatActorIds: expect.arrayContaining(["TA0017"]),
         steps: expect.arrayContaining([
+          expect.objectContaining({
+            relationType: expect.stringMatching(/^relationLine\.(buildAttackTool|useAttackTool)$/),
+            sourceFields: expect.arrayContaining(["ThreatActor.useAttackTools"]),
+            attackIntent: "relationView.attackPathIntent.actorToTool",
+          }),
           expect.objectContaining({
             relationType: "relationLine.directCauseRisk",
             sourceFields: ["AttackTool.directCauseRisks"],
@@ -114,6 +121,41 @@ describe("relationAttackPath", () => {
             defensiveMeaning: "relationView.attackPathDefense.riskToAvoidance",
           }),
         ]),
+      })
+    );
+  });
+
+  it("groups repeated paths that only differ by threat actor", () => {
+    const attackPath = createAttackPathData({
+      relType: RelationType.risk,
+      relKey: "R0001",
+      selectedNode: {
+        id: "R0001",
+        type: RelationType.risk,
+        text: "风险",
+        color: "",
+      },
+    });
+
+    const groupedPath = attackPath.selectedNodeAttackPathExplanations.value.find(
+      (path) => path.attackToolId === "AT0002" && path.avoidanceId === "A0001"
+    );
+
+    expect(groupedPath).toEqual(
+      expect.objectContaining({
+        pathKey: "attack-tool:AT0002->risk:R0001->avoidance:A0001",
+        riskId: "R0001",
+        attackToolId: "AT0002",
+        avoidanceId: "A0001",
+      })
+    );
+    expect(groupedPath?.pathCount).toBeGreaterThan(1);
+    expect(groupedPath?.threatActorIds.length).toBeGreaterThan(1);
+    expect(groupedPath?.steps[0]).toEqual(
+      expect.objectContaining({
+        fromId: "relationView.groupedThreatActors",
+        toId: "AT0002",
+        sourceFields: ["ThreatActor.useAttackTools"],
       })
     );
   });

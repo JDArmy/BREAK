@@ -68,6 +68,8 @@ interface RootPreviewSummary {
 
 interface AttackPathExplanation {
   pathKey: string;
+  pathCount: number;
+  threatActorIds: string[];
   threatActorId?: string;
   attackToolId?: string;
   riskId: string;

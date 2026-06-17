@@ -57,6 +57,13 @@ export const createRelationAttackPathData = ({
       .filter(Boolean)
       .join("->");
 
+  const buildPathGroupKey = (path: AttackPath) =>
+    [
+      path.attackToolKey ? `${RelationType.attackTool}:${path.attackToolKey}` : "no-tool",
+      `${RelationType.risk}:${path.riskKey}`,
+      path.avoidanceKey ? `${RelationType.avoidance}:${path.avoidanceKey}` : "no-avoidance",
+    ].join("->");
+
   const hasPathNode = (path: AttackPath, node: Node) => {
     if (node.type === RelationType.threatActor) return path.threatActorKey === node.id;
     if (node.type === RelationType.attackTool) return path.attackToolKey === node.id;
@@ -89,15 +96,18 @@ export const createRelationAttackPathData = ({
     return fields;
   };
 
-  const explainAttackPath = (path: AttackPath): AttackPathExplanation => {
+  const explainAttackPath = (path: AttackPath, groupedPaths: AttackPath[] = [path]): AttackPathExplanation => {
     const steps: AttackPathExplanation["steps"] = [];
     const qualityFlags: string[] = [];
     const defensiveFocus: string[] = [];
+    const threatActorIds = [...new Set(groupedPaths.map((item) => item.threatActorKey).filter(Boolean) as string[])];
 
     if (path.threatActorKey && path.attackToolKey) {
-      const sourceFields = getThreatActorToolFields(path.threatActorKey, path.attackToolKey);
+      const sourceFields = [
+        ...new Set(threatActorIds.flatMap((threatActorKey) => getThreatActorToolFields(threatActorKey, path.attackToolKey as string))),
+      ];
       steps.push({
-        fromId: path.threatActorKey,
+        fromId: threatActorIds.length > 1 ? t("relationView.groupedThreatActors", { count: threatActorIds.length }) : path.threatActorKey,
         toId: path.attackToolKey,
         relationType: sourceFields.includes("ThreatActor.buildAttackTools")
           ? t("relationLine.buildAttackTool")
@@ -152,19 +162,45 @@ export const createRelationAttackPathData = ({
     }
 
     return {
-      pathKey: buildPathKey(path),
+      pathKey: buildPathGroupKey(path),
+      pathCount: groupedPaths.length,
+      threatActorIds,
       threatActorId: path.threatActorKey,
       attackToolId: path.attackToolKey,
       riskId: path.riskKey,
       avoidanceId: path.avoidanceKey,
-      summary: t("relationView.attackPathExplanationSummary", {
-        count: steps.length,
-        risk: path.riskKey,
-      }),
+      summary:
+        groupedPaths.length > 1
+          ? t("relationView.attackPathGroupedExplanationSummary", {
+              pathCount: groupedPaths.length,
+              actorCount: threatActorIds.length,
+              stepCount: steps.length,
+              risk: path.riskKey,
+            })
+          : t("relationView.attackPathExplanationSummary", {
+              count: steps.length,
+              risk: path.riskKey,
+            }),
       defensiveFocus,
       qualityFlags,
       steps,
     };
+  };
+
+  const explainGroupedAttackPaths = (paths: AttackPath[]) => {
+    const groupedPaths = new Map<string, AttackPath[]>();
+
+    paths.forEach((path) => {
+      const groupKey = buildPathGroupKey(path);
+      const existingPaths = groupedPaths.get(groupKey);
+      if (existingPaths) {
+        existingPaths.push(path);
+      } else {
+        groupedPaths.set(groupKey, [path]);
+      }
+    });
+
+    return [...groupedPaths.values()].map((items) => explainAttackPath(items[0], items));
   };
 
   const matchesSelectedEntity = (path: AttackPath) => {
@@ -463,16 +499,7 @@ export const createRelationAttackPathData = ({
     const node = selectedNetworkNode.value;
     if (!node || !isRelationEntityType(node.type) || node.type === RelationType.term) return [];
 
-    const seenPathKeys = new Set<string>();
-    return buildAttackPaths()
-      .filter((path) => hasPathNode(path, node))
-      .map(explainAttackPath)
-      .filter((path) => {
-        if (seenPathKeys.has(path.pathKey)) return false;
-        seenPathKeys.add(path.pathKey);
-        return true;
-      })
-      .slice(0, 3);
+    return explainGroupedAttackPaths(buildAttackPaths().filter((path) => hasPathNode(path, node))).slice(0, 3);
   });
 
   const sankeyData = computed(() => {

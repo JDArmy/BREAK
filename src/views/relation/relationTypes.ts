@@ -116,6 +116,8 @@ export interface AttackPathExplanationStep {
 
 export interface AttackPathExplanation {
   pathKey: string;
+  pathCount: number;
+  threatActorIds: string[];
   threatActorId?: string;
   attackToolId?: string;
   riskId: string;

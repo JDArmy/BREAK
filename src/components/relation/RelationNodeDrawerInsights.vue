@@ -43,6 +43,8 @@ interface RootPreviewSummary {
 
 interface AttackPathExplanation {
   pathKey: string;
+  pathCount: number;
+  threatActorIds: string[];
   threatActorId?: string;
   attackToolId?: string;
   riskId: string;
@@ -197,6 +199,9 @@ const { t } = useI18n();
         class="node-attack-path-card"
       >
         <div class="node-path-summary">{{ path.summary }}</div>
+        <div v-if="path.threatActorIds.length > 1" class="node-relation-fields">
+          {{ t("relationView.relatedThreatActors") }}: {{ path.threatActorIds.join(", ") }}
+        </div>
         <div class="node-attack-path-chain">
           <div
             v-for="(step, index) in path.steps"

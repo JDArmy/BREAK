@@ -115,6 +115,8 @@
     "sourceFields": "Source Fields",
     "explanation": "Explanation",
     "defensiveFocus": "Defensive Focus",
+    "relatedThreatActors": "Related Threat Actors",
+    "groupedThreatActors": "{count} threat actors",
     "qualityFlagMissingSource": "Missing explicit source field",
     "qualityFlagReview": "Review relation semantics",
     "qualityFlagMissingAvoidance": "Missing avoidance coverage",
@@ -149,6 +151,7 @@
       "review": "Analysis value: this relation needs further human or AI judgment."
     },
     "attackPathExplanationSummary": "This path contains {count} reasoning steps, with {risk} as the core risk.",
+    "attackPathGroupedExplanationSummary": "Merged {pathCount} similar paths across {actorCount} threat actors, with {risk} as the core risk.",
     "attackPathIntent": {
       "actorToTool": "Attack intent: the threat actor gains executable capability through tool use or development.",
       "toolToRisk": "Attack intent: the attack tool drives the risk, either directly or indirectly.",
