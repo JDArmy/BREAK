@@ -71,7 +71,9 @@ npm run test:coverage
 npm run validate:schema-docs
 npm run schema:docs:write
 npm run export:data
+npm run export:data-package
 npm run validate:data-export
+npm run validate:data-package
 npm run validate:docs-build
 npm run test:smoke
 npm run test:performance
@@ -86,12 +88,14 @@ npm run type-check
 ```
 
 `npm run validate:data` runs JSON Schema validation, i18n key synchronization, relationship coverage auditing, and generated schema documentation checks.
-`npm run build` runs `lint`, `type-check`, `validate:data`, `test`, `test:coverage`, `validate:schema-docs`, `validate:docs-build`, `export:data`, `build-only`, `audit:bundle:check`, `validate:data-export`, `test:smoke`, `test:performance`, `test:relation-stability`, and `test:lighthouse`.
+`npm run build` runs `lint`, `type-check`, `validate:data`, `test`, `test:coverage`, `validate:schema-docs`, `validate:docs-build`, `export:data`, `export:data-package`, `build-only`, `audit:bundle:check`, `validate:data-export`, `validate:data-package`, `test:smoke`, `test:performance`, `test:relation-stability`, and `test:lighthouse`.
 `npm run test:coverage` enforces the core logic coverage baseline for relation analysis, search, safe i18n, and BREAK data utilities.
 `npm run validate:schema-docs` checks [DATA_SCHEMA.md](./DATA_SCHEMA.md) against `src/validation/breakSchema.ts`.
 `npm run schema:docs:write` regenerates [DATA_SCHEMA.md](./DATA_SCHEMA.md) after schema changes.
 `npm run export:data` writes the static data bundle to `public/data/break-data.json` and `public/data/break-manifest.json`.
+`npm run export:data-package` writes an npm package evaluation artifact to `dist/break-data-package`.
 `npm run validate:data-export` checks the public data bundle, manifest hash, entity counts, version, and copied GitHub Pages artifacts.
+`npm run validate:data-package` checks the npm package boundary, runtime entry, type declarations, README, manifest hash, and version alignment.
 `npm run validate:docs-build` checks that the committed `docs/` GitHub Pages artifacts match the current build output.
 `npm run test:smoke`, `npm run test:performance`, `npm run test:relation-stability`, and `npm run test:lighthouse` validate the generated static site with Playwright/Chromium.
 `npm run audit:metrics` generates the content trust, relation coverage, category distribution, and business scene coverage baseline.
@@ -104,3 +108,9 @@ npm run type-check
 - Data bundle: <https://break.jd.army/data/break-data.json>
 
 The static bundle exposes the current Chinese BREAK data with version, generation metadata, counts, byte size, and SHA-256 checksum for downstream tools.
+
+### npm Data Package Evaluation
+
+`npm run export:data-package` creates `dist/break-data-package` as an evaluation artifact for a future `@jdarmy/break-data` package. The artifact is data-only: it excludes the Vue app, ECharts runtime, and browser UI code, and includes `data/break-data.json`, `data/break-manifest.json`, `index.js`, `index.d.ts`, and its own README.
+
+The package version mirrors the BREAK application version. The generated manifest keeps the same SHA-256 checksum and entity counts as the GitHub Pages static data bundle, so downstream users can evaluate npm consumption without changing the canonical data source.

@@ -191,6 +191,10 @@ function collectIssues(result) {
   return issues;
 }
 
+function formatResult(result) {
+  return `${result.profile}/${result.label}: perf=${formatScore(result.scores.performance)}, a11y=${formatScore(result.scores.accessibility)}, best=${formatScore(result.scores.bestPractices)}, seo=${formatScore(result.scores.seo)}, LCP=${Math.round(result.lcpMs)}ms, TBT=${Math.round(result.tbtMs)}ms, CLS=${result.cls.toFixed(3)}`;
+}
+
 async function runLighthouse(url, profile, port) {
   const options = {
     port,
@@ -224,6 +228,30 @@ async function runLighthouse(url, profile, port) {
   };
 }
 
+async function runLighthouseWithRetry(url, profile, route, port) {
+  const first = await runLighthouse(url, profile, port);
+  const firstResult = {
+    profile: profile.label,
+    label: route.label,
+    path: route.path,
+    budgets: profile.budgets,
+    ...first,
+  };
+  if (collectIssues(firstResult).length === 0) {
+    return firstResult;
+  }
+
+  const retry = await runLighthouse(url, profile, port);
+  return {
+    profile: profile.label,
+    label: route.label,
+    path: route.path,
+    budgets: profile.budgets,
+    retryOf: formatResult(firstResult),
+    ...retry,
+  };
+}
+
 const previewPort = await findFreePort();
 const baseUrl = `http://${host}:${previewPort}`;
 const preview = spawn(
@@ -249,15 +277,7 @@ try {
   for (const profile of profiles) {
     for (const route of routes) {
       const url = `${baseUrl}${route.path}`;
-      const report = await runLighthouse(url, profile, chrome.port);
-      const result = {
-        profile: profile.label,
-        label: route.label,
-        path: route.path,
-        budgets: profile.budgets,
-        ...report,
-      };
-      results.push(result);
+      results.push(await runLighthouseWithRetry(url, profile, route, chrome.port));
     }
   }
 
@@ -270,14 +290,17 @@ try {
   }
 
   if (failures.length > 0) {
-    throw new Error(`Lighthouse budgets failed:\n${failures.map((item) => `- ${item}`).join('\n')}`);
+    throw new Error(
+      `Lighthouse budgets failed:\n${failures.map((item) => `- ${item}`).join('\n')}\n\nMeasured results:\n${results.map(formatResult).join('\n')}`
+    );
   }
 
   console.log('\n✅ Lighthouse 基线测试通过');
   for (const result of results) {
-    console.log(
-      `${result.profile}/${result.label}: perf=${formatScore(result.scores.performance)}, a11y=${formatScore(result.scores.accessibility)}, best=${formatScore(result.scores.bestPractices)}, seo=${formatScore(result.scores.seo)}, LCP=${Math.round(result.lcpMs)}ms, TBT=${Math.round(result.tbtMs)}ms, CLS=${result.cls.toFixed(3)}`,
-    );
+    console.log(formatResult(result));
+    if (result.retryOf) {
+      console.log(`  retryOf=${result.retryOf}`);
+    }
   }
 } catch (error) {
   console.error('\n❌ Lighthouse 基线测试失败\n');

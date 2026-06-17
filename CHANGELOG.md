@@ -70,6 +70,11 @@
   - 新增 `test:lighthouse`，对首页、风险页和 Sankey 关系页执行 Lighthouse performance/a11y/best-practices/SEO 基线检查
   - `npm run build`、CI 和 GitHub Pages Deploy 将执行 Lighthouse 基线
   - 当前基线重点防止退化，后续优化目标是提高移动端 LCP 和无障碍分数
+- 新增：npm 数据包评估产物
+  - 新增 `export:data-package`，基于 `public/data` 生成 `dist/break-data-package`
+  - 评估包名为 `@jdarmy/break-data`，包含 JSON 数据、manifest、运行时入口、类型声明和独立 README
+  - 新增 `validate:data-package` 校验包边界、版本、manifest hash、类型声明和 README
+  - `npm run build`、CI 和 GitHub Pages Deploy 会生成并校验 npm 数据包评估产物
 - 修复：同步中文 README 数据规模统计，保持与当前数据口径一致
 - 优化：关系审计和指标脚本口径
   - ThreatActor 工具关系按 build/use 合并覆盖统计
