@@ -75,6 +75,14 @@
   - 评估包名为 `@jdarmy/break-data`，包含 JSON 数据、manifest、运行时入口、类型声明和独立 README
   - 新增 `validate:data-package` 校验包边界、版本、manifest hash、类型声明和 README
   - `npm run build`、CI 和 GitHub Pages Deploy 会生成并校验 npm 数据包评估产物
+- 优化：工程化闭环同步
+  - ROADMAP 重新纳入版本库，避免本地路线图校验通过但对外文档未更新
+  - CI 和 GitHub Pages Deploy 显式补齐 `validate:schema-docs`、`export:data-package` 和 `validate:data-package`
+  - `docs-consistency` 会检查 CI/Deploy workflow 与本地 build 门禁同步
+  - PR 模板和数据变更 Issue 模板补充 CHANGELOG 分类、数据包影响和验证清单
+- 新增：关系洞察回归用例
+  - 补充选中节点缺失时回退根节点的测试
+  - 补充多跳路径不误报根节点直接关系的测试，测试基线更新为 91 个用例
 - 修复：同步中文 README 数据规模统计，保持与当前数据口径一致
 - 优化：关系审计和指标脚本口径
   - ThreatActor 工具关系按 build/use 合并覆盖统计

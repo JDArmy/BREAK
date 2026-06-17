@@ -89,7 +89,7 @@ npm run type-check
 
 `npm run validate:data` runs JSON Schema validation, i18n key synchronization, relationship coverage auditing, and generated schema documentation checks.
 `npm run build` runs `lint`, `type-check`, `validate:data`, `test`, `test:coverage`, `validate:schema-docs`, `validate:docs-build`, `export:data`, `export:data-package`, `build-only`, `audit:bundle:check`, `validate:data-export`, `validate:data-package`, `test:smoke`, `test:performance`, `test:relation-stability`, and `test:lighthouse`.
-`npm run test:coverage` enforces the core logic coverage baseline for relation analysis, search, safe i18n, and BREAK data utilities.
+`npm run test:coverage` enforces the core logic coverage baseline for relation analysis, Sankey attack paths, root/path insights, search, safe i18n, and BREAK data utilities.
 `npm run validate:schema-docs` checks [DATA_SCHEMA.md](./DATA_SCHEMA.md) against `src/validation/breakSchema.ts`.
 `npm run schema:docs:write` regenerates [DATA_SCHEMA.md](./DATA_SCHEMA.md) after schema changes.
 `npm run export:data` writes the static data bundle to `public/data/break-data.json` and `public/data/break-manifest.json`.

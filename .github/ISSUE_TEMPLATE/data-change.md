@@ -29,8 +29,16 @@ assignees: ""
 - ThreatActor：
 - BusinessScene：
 
+## 对外影响
+
+- 变更类型：新增 / 修改 / 删除 / 关系调整 / 文档修正
+- 是否影响 `CHANGELOG.md`：
+- 是否影响 `DATA_SCHEMA.md`：
+- 是否影响静态数据包或 npm 数据包评估：
+
 ## 复核项
 
 - [ ] 参考资料来源可信
 - [ ] 关系字段引用的 ID 已存在
 - [ ] 中英文内容需要同步
+- [ ] 需要在 CHANGELOG 中标注 data/app/docs/build 影响类型
