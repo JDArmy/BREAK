@@ -12,9 +12,18 @@ import {
   type AttackPathNodeRef,
   type AttackPathSegment,
   type Node,
+  type RiskAvoidanceCoverage,
+  type RiskAvoidanceCoverageItem,
+  type RiskAvoidanceCoverageSource,
 } from "@/views/relation/relationTypes";
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;
+
+const sourceOrder: Record<RiskAvoidanceCoverageSource, number> = {
+  both: 0,
+  risk: 1,
+  attackTool: 2,
+};
 
 interface CreateRelationAttackPathOptions {
   t: Translate;
@@ -164,6 +173,12 @@ export const createRelationAttackPathData = ({
   const getEntityLabel = (type: AttackPathFilterType, key: string) => {
     const title = getNodeTitle(type, key);
     return `${key} ${title}`;
+  };
+
+  const getRiskAvoidanceCoverageSourceLabel = (source: RiskAvoidanceCoverageSource) => {
+    if (source === "both") return t("relationView.coverageSourceBoth");
+    if (source === "attackTool") return t("relationView.coverageSourceAttackTool");
+    return t("relationView.coverageSourceRisk");
   };
 
   const getPathNodeRef = (type: AttackPathFilterType, key: string): AttackPathNodeRef => {
@@ -409,6 +424,67 @@ export const createRelationAttackPathData = ({
   const filteredAttackPaths = computed(() => attackPaths.value.filter(matchesPathFilters));
   const attackPathDetails = computed(() => filteredAttackPaths.value.map(buildAttackPathDetail));
 
+  const riskAvoidanceCoverage = computed<RiskAvoidanceCoverage | null>(() => {
+    if (relType.value !== RelationType.risk) return null;
+    const risk = BREAK.risks[relKey.value as keyof typeof BREAK.risks];
+    if (!risk) return null;
+
+    const directAvoidanceKeys = new Set(risk.avoidances);
+    const toolAvoidanceMap = new Map<string, string[]>();
+    const relatedAttackToolKeys = riskToAttackTools.get(relKey.value) ?? [];
+
+    relatedAttackToolKeys.forEach((attackToolKey) => {
+      const attackTool = BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools];
+      attackTool.avoidances.forEach((avoidanceKey) => addUniqueMapValue(toolAvoidanceMap, avoidanceKey, attackToolKey));
+    });
+
+    const allAvoidanceKeys = [...new Set([...directAvoidanceKeys, ...toolAvoidanceMap.keys()])];
+    const items: RiskAvoidanceCoverageItem[] = allAvoidanceKeys
+      .filter((avoidanceKey) => avoidanceKey in BREAK.avoidances)
+      .map((avoidanceKey) => {
+        const attackToolKeys = toolAvoidanceMap.get(avoidanceKey) ?? [];
+        const directRisk = directAvoidanceKeys.has(avoidanceKey);
+        const source: RiskAvoidanceCoverageSource = directRisk && attackToolKeys.length > 0
+          ? "both"
+          : attackToolKeys.length > 0
+            ? "attackTool"
+            : "risk";
+        const pathCount = attackPaths.value.filter((path) => path.avoidanceKey === avoidanceKey).length;
+
+        return {
+          avoidanceKey,
+          avoidanceTitle: getNodeTitle(RelationType.avoidance, avoidanceKey),
+          label: getEntityLabel(RelationType.avoidance, avoidanceKey),
+          source,
+          sourceLabel: getRiskAvoidanceCoverageSourceLabel(source),
+          directRisk,
+          attackToolKeys,
+          attackToolLabels: attackToolKeys.map((attackToolKey) => getEntityLabel(RelationType.attackTool, attackToolKey)),
+          pathCount,
+          sourceFields: [
+            ...(directRisk ? ["Risk.avoidances"] : []),
+            ...(attackToolKeys.length ? ["AttackTool.avoidances"] : []),
+          ],
+        };
+      })
+      .sort(
+        (a, b) =>
+          sourceOrder[a.source] - sourceOrder[b.source] ||
+          b.pathCount - a.pathCount ||
+          a.avoidanceKey.localeCompare(b.avoidanceKey)
+      );
+
+    return {
+      riskKey: relKey.value,
+      riskTitle: getNodeTitle(RelationType.risk, relKey.value),
+      directCount: items.filter((item) => item.directRisk).length,
+      attackToolCount: items.filter((item) => item.attackToolKeys.length > 0).length,
+      overlapCount: items.filter((item) => item.source === "both").length,
+      totalCount: items.length,
+      items,
+    };
+  });
+
   const getAttackPathFilterOptions = (type: AttackPathFilterType): AttackPathFilterOption[] => {
     const counts = new Map<string, number>();
     attackPaths.value.forEach((path) => {
@@ -582,6 +658,7 @@ export const createRelationAttackPathData = ({
     filteredAttackPaths,
     hasActiveAttackPathFilters,
     resetAttackPathFilters,
+    riskAvoidanceCoverage,
     sankeyChartHeight,
     sankeyData,
     selectAttackPath,

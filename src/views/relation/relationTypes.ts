@@ -155,6 +155,31 @@ export interface AttackPathDetail {
   segments: AttackPathSegment[];
 }
 
+export type RiskAvoidanceCoverageSource = "risk" | "attackTool" | "both";
+
+export interface RiskAvoidanceCoverageItem {
+  avoidanceKey: string;
+  avoidanceTitle: string;
+  label: string;
+  source: RiskAvoidanceCoverageSource;
+  sourceLabel: string;
+  directRisk: boolean;
+  attackToolKeys: string[];
+  attackToolLabels: string[];
+  pathCount: number;
+  sourceFields: string[];
+}
+
+export interface RiskAvoidanceCoverage {
+  riskKey: string;
+  riskTitle: string;
+  directCount: number;
+  attackToolCount: number;
+  overlapCount: number;
+  totalCount: number;
+  items: RiskAvoidanceCoverageItem[];
+}
+
 export const getColorFromCSS = (varName: string): string => {
   const style = getComputedStyle(document.documentElement);
   const value = style.getPropertyValue(varName).trim();

@@ -8,6 +8,7 @@ import {
   type AttackPathFilters,
   type AttackPathFilterType,
   type createRelationTypeMapping,
+  type RiskAvoidanceCoverage,
 } from "@/views/relation/relationTypes";
 
 const props = defineProps<{
@@ -20,6 +21,7 @@ const props = defineProps<{
   attackPathFilters: AttackPathFilters;
   filteredAttackPathCount: number;
   hasActiveAttackPathFilters: boolean;
+  riskAvoidanceCoverage: RiskAvoidanceCoverage | null;
   selectedAttackPathDetail: AttackPathDetail | null;
   selectedAttackPathId: string;
   setSankeyChartElement?: (element: HTMLDivElement | undefined) => void;
@@ -57,6 +59,10 @@ const pathOptions = computed(() =>
     value: detail.id,
   }))
 );
+
+const applyAvoidanceCoverageFilter = (avoidanceKey: string) => {
+  updateFilter(RelationType.avoidance, avoidanceKey);
+};
 </script>
 
 <template>
@@ -100,6 +106,50 @@ const pathOptions = computed(() =>
 
     <div v-if="active && !hasData" class="sankey-empty">
       {{ $t("relationView.noAttackPath") }}
+    </div>
+
+    <div v-if="active && riskAvoidanceCoverage" class="sankey-coverage">
+      <div class="sankey-coverage-header">
+        <div>
+          <h3>{{ t("relationView.coverageMode") }}</h3>
+          <p>
+            {{ t("relationView.coverageModeSummary", {
+              total: riskAvoidanceCoverage.totalCount,
+              direct: riskAvoidanceCoverage.directCount,
+              tool: riskAvoidanceCoverage.attackToolCount,
+              overlap: riskAvoidanceCoverage.overlapCount,
+            }) }}
+          </p>
+        </div>
+      </div>
+      <div class="sankey-coverage-list">
+        <button
+          v-for="item in riskAvoidanceCoverage.items"
+          :key="item.avoidanceKey"
+          type="button"
+          :class="[
+            'sankey-coverage-item',
+            `sankey-coverage-item-${item.source}`,
+            attackPathFilters[RelationType.avoidance] === item.avoidanceKey ? 'sankey-coverage-item-active' : '',
+          ]"
+          @click="applyAvoidanceCoverageFilter(item.avoidanceKey)"
+        >
+          <span class="sankey-coverage-main">
+            <strong>{{ item.avoidanceKey }}</strong>
+            <span>{{ item.avoidanceTitle }}</span>
+          </span>
+          <span class="sankey-coverage-meta">
+            <span>{{ item.sourceLabel }}</span>
+            <span>{{ t("relationView.coveragePathCount", { count: item.pathCount }) }}</span>
+          </span>
+          <span v-if="item.attackToolLabels.length" class="sankey-coverage-tools">
+            {{ t("relationView.coverageToolSources") }}: {{ item.attackToolLabels.join(", ") }}
+          </span>
+          <span class="sankey-coverage-fields">
+            {{ t("relationView.sourceFields") }}: {{ item.sourceFields.join(", ") }}
+          </span>
+        </button>
+      </div>
     </div>
 
     <div v-if="active && selectedAttackPathDetail" class="sankey-detail">
@@ -230,6 +280,84 @@ const pathOptions = computed(() =>
   font-size: 14px;
 }
 
+.sankey-coverage {
+  margin: 0 12px 12px;
+  padding: 12px;
+  border: 1px solid var(--break-border);
+  background: var(--break-bg-secondary);
+}
+
+.sankey-coverage-header h3 {
+  margin: 0 0 4px;
+  color: var(--break-text-primary);
+  font-size: 14px;
+}
+
+.sankey-coverage-header p {
+  margin: 0;
+  color: var(--break-text-secondary);
+  font-size: 12px;
+}
+
+.sankey-coverage-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.sankey-coverage-item {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 5px;
+  padding: 9px;
+  border: 1px solid var(--break-border);
+  background: var(--break-bg-card);
+  color: var(--break-text-secondary);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.sankey-coverage-item:hover,
+.sankey-coverage-item-active {
+  border-color: var(--el-color-primary);
+}
+
+.sankey-coverage-item-both {
+  border-left: 3px solid var(--el-color-success);
+}
+
+.sankey-coverage-item-risk {
+  border-left: 3px solid var(--el-color-primary);
+}
+
+.sankey-coverage-item-attackTool {
+  border-left: 3px solid var(--el-color-warning);
+}
+
+.sankey-coverage-main,
+.sankey-coverage-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 8px;
+  align-items: center;
+}
+
+.sankey-coverage-main {
+  color: var(--break-text-primary);
+  font-size: 13px;
+}
+
+.sankey-coverage-meta,
+.sankey-coverage-tools,
+.sankey-coverage-fields {
+  font-size: 12px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
 .sankey-detail {
   margin: 0 12px 12px;
   padding: 12px;
@@ -344,6 +472,15 @@ const pathOptions = computed(() =>
   .sankey-detail {
     margin: 0 8px 8px;
     padding: 10px;
+  }
+
+  .sankey-coverage {
+    margin: 0 8px 8px;
+    padding: 10px;
+  }
+
+  .sankey-coverage-list {
+    grid-template-columns: 1fr;
   }
 
   .sankey-detail-header {

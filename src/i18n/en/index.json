@@ -162,6 +162,13 @@
     "pathReasonIndirectRisk": "The source entity is recorded as indirectly supporting or driving this risk.",
     "pathReasonRiskAvoidance": "This avoidance comes from the risk's own avoidance list.",
     "pathReasonRelated": "This path segment comes from entity relationship fields.",
+    "coverageMode": "Avoidance Coverage",
+    "coverageModeSummary": "{total} avoidances: {direct} from the risk, {tool} from related tools, {overlap} shared.",
+    "coverageSourceRisk": "Risk coverage",
+    "coverageSourceAttackTool": "Tool coverage",
+    "coverageSourceBoth": "Risk + tool coverage",
+    "coveragePathCount": "{count} paths",
+    "coverageToolSources": "Tool sources",
     "moreRelations": "{count} more relations not shown"
   },
   "nodeFilter": "Node Filter:",

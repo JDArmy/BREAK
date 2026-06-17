@@ -169,6 +169,33 @@ describe("relationAttackPath", () => {
     ]);
   });
 
+  it("summarizes risk avoidance coverage by risk and attack-tool source", () => {
+    const attackPath = createAttackPathData({
+      relType: RelationType.risk,
+      relKey: "R0005-001",
+    });
+
+    expect(attackPath.riskAvoidanceCoverage.value).toEqual(
+      expect.objectContaining({
+        riskKey: "R0005-001",
+        totalCount: expect.any(Number),
+        directCount: expect.any(Number),
+        attackToolCount: expect.any(Number),
+        items: expect.arrayContaining([
+          expect.objectContaining({
+            avoidanceKey: "A0001",
+            directRisk: true,
+            sourceFields: expect.arrayContaining(["Risk.avoidances"]),
+            pathCount: expect.any(Number),
+          }),
+        ]),
+      })
+    );
+    expect(attackPath.riskAvoidanceCoverage.value?.totalCount).toBeGreaterThan(0);
+    expect(attackPath.riskAvoidanceCoverage.value?.items.some((item) => item.attackToolKeys.length > 0)).toBe(true);
+    expect(attackPath.riskAvoidanceCoverage.value?.items.every((item) => item.sourceLabel.startsWith("relationView."))).toBe(true);
+  });
+
   it("selects a requested attack path detail and falls back when the id is unavailable", () => {
     const attackPath = createAttackPathData({
       relType: RelationType.attackTool,

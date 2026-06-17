@@ -105,6 +105,7 @@ export default defineComponent({
           :attack-path-filters="attackPathFilters"
           :filtered-attack-path-count="filteredAttackPaths.length"
           :has-active-attack-path-filters="hasActiveAttackPathFilters"
+          :risk-avoidance-coverage="riskAvoidanceCoverage"
           :selected-attack-path-detail="selectedAttackPathDetail"
           :selected-attack-path-id="selectedAttackPathDetail?.id || ''"
           :set-sankey-chart-element="setSankeyChartElement"

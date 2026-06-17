@@ -162,6 +162,13 @@
     "pathReasonIndirectRisk": "来源实体被记录为间接支撑或推动该风险。",
     "pathReasonRiskAvoidance": "该规避手段来自风险自身的规避清单。",
     "pathReasonRelated": "该路径段来自实体关系字段。",
+    "coverageMode": "规避覆盖",
+    "coverageModeSummary": "共 {total} 个规避手段：{direct} 个来自风险自身，{tool} 个来自相关工具，{overlap} 个两者重叠。",
+    "coverageSourceRisk": "风险自身覆盖",
+    "coverageSourceAttackTool": "工具覆盖",
+    "coverageSourceBoth": "风险 + 工具覆盖",
+    "coveragePathCount": "{count} 条路径",
+    "coverageToolSources": "工具来源",
     "moreRelations": "另有 {count} 条关系未显示"
   },
   "nodeFilter": "节点筛选：",
