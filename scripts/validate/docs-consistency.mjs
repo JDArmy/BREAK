@@ -102,6 +102,7 @@ const buildGateScripts = [
   'validate:data-export',
   'test:smoke',
   'test:performance',
+  'test:relation-stability',
 ];
 const documentedUtilityScripts = ['schema:docs:write'];
 

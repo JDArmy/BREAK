@@ -75,6 +75,7 @@ npm run validate:data-export
 npm run validate:docs-build
 npm run test:smoke
 npm run test:performance
+npm run test:relation-stability
 npm run build
 npm run audit:bundle
 npm run audit:bundle:check
@@ -84,14 +85,14 @@ npm run type-check
 ```
 
 `npm run validate:data` runs JSON Schema validation, i18n key synchronization, relationship coverage auditing, and generated schema documentation checks.
-`npm run build` runs `lint`, `type-check`, `validate:data`, `test`, `test:coverage`, `validate:schema-docs`, `validate:docs-build`, `export:data`, `build-only`, `audit:bundle:check`, `validate:data-export`, `test:smoke`, and `test:performance`.
+`npm run build` runs `lint`, `type-check`, `validate:data`, `test`, `test:coverage`, `validate:schema-docs`, `validate:docs-build`, `export:data`, `build-only`, `audit:bundle:check`, `validate:data-export`, `test:smoke`, `test:performance`, and `test:relation-stability`.
 `npm run test:coverage` enforces the core logic coverage baseline for relation analysis, search, safe i18n, and BREAK data utilities.
 `npm run validate:schema-docs` checks [DATA_SCHEMA.md](./DATA_SCHEMA.md) against `src/validation/breakSchema.ts`.
 `npm run schema:docs:write` regenerates [DATA_SCHEMA.md](./DATA_SCHEMA.md) after schema changes.
 `npm run export:data` writes the static data bundle to `public/data/break-data.json` and `public/data/break-manifest.json`.
 `npm run validate:data-export` checks the public data bundle, manifest hash, entity counts, version, and copied GitHub Pages artifacts.
 `npm run validate:docs-build` checks that the committed `docs/` GitHub Pages artifacts match the current build output.
-`npm run test:smoke` and `npm run test:performance` validate the generated static site with Playwright.
+`npm run test:smoke`, `npm run test:performance`, and `npm run test:relation-stability` validate the generated static site with Playwright.
 `npm run audit:metrics` generates the content trust, relation coverage, category distribution, and business scene coverage baseline.
 `npm run audit:bundle` checks the generated `docs/assets` bundle against the current performance budget.
 `npm run audit:maintenance` refreshes the audit reports and writes a unified maintenance summary.
