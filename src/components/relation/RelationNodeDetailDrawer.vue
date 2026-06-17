@@ -2,17 +2,20 @@
 import { computed } from "vue";
 import { useI18n } from "vue-i18n";
 import { useBreakpoints } from "@/composables/useBreakpoints";
-import RelationNodeDrawerHeader from "@/components/relation/RelationNodeDrawerHeader.vue";
-import RelationNodeDrawerInsights from "@/components/relation/RelationNodeDrawerInsights.vue";
-import RelationNodeDrawerRelations from "@/components/relation/RelationNodeDrawerRelations.vue";
+import RelationNodeDetailContent from "@/components/relation/RelationNodeDetailContent.vue";
 import type {
   AttackPathExplanation,
-  NodeBusinessSceneImpactSummary,
   NodeAnalysisSummary,
+  NodeBusinessSceneImpactSummary,
   NodeCoverageSummary,
   RootPathSummary,
   RootRelationSummary,
 } from "@/components/relation/relationNodeDrawerInsightTypes";
+import type {
+  AttackPathFilterOption,
+  AttackPathFilterType,
+  AttackPathFilters,
+} from "@/views/relation/relationTypes";
 
 interface DetailNode {
   id: string;
@@ -48,6 +51,9 @@ const props = defineProps<{
   selectedNodeAttackPathSummary: string[];
   selectedNodeAttackPathDescription: string;
   selectedNodeAttackPathExplanations: AttackPathExplanation[];
+  attackPathFilterOptions: Record<AttackPathFilterType, AttackPathFilterOption[]>;
+  attackPathFilters: AttackPathFilters;
+  hasActiveAttackPathFilters: boolean;
   selectedNodeBusinessSceneImpactSummary: NodeBusinessSceneImpactSummary | null;
   selectedNodeCoverageSummary: NodeCoverageSummary | null;
   isCurrentNodeRoot: boolean;
@@ -66,6 +72,8 @@ const emit = defineEmits<{
   "view-detail": [];
   "open-detail-new-window": [];
   "open-as-root": [];
+  "update:attack-path-filters": [value: AttackPathFilters];
+  "reset-attack-path-filters": [];
   "focus-node": [nodeId: string];
   "open-node-as-root": [nodeId: string];
   "open-node-detail": [nodeId: string];
@@ -91,17 +99,10 @@ const drawerVisible = computed({
     class="relation-drawer"
   >
     <div v-if="selectedNetworkNode" class="drawer-section">
-      <RelationNodeDrawerHeader
+      <RelationNodeDetailContent
         :selected-network-node="selectedNetworkNode"
         :selected-network-node-title="selectedNetworkNodeTitle"
         :selected-network-relation-counts="selectedNetworkRelationCounts"
-        :rel-key="relKey"
-        :get-node-type-title="getNodeTypeTitle"
-        @view-detail="emit('view-detail')"
-        @open-detail-new-window="emit('open-detail-new-window')"
-        @open-as-root="emit('open-as-root')"
-      />
-      <RelationNodeDrawerInsights
         :root-node-relations="rootNodeRelations"
         :selected-node-root-path="selectedNodeRootPath"
         :selected-node-analysis-summary="selectedNodeAnalysisSummary"
@@ -112,22 +113,29 @@ const drawerVisible = computed({
         :selected-node-attack-path-explanations="
           selectedNodeAttackPathExplanations
         "
+        :attack-path-filter-options="attackPathFilterOptions"
+        :attack-path-filters="attackPathFilters"
+        :has-active-attack-path-filters="hasActiveAttackPathFilters"
         :selected-node-business-scene-impact-summary="
           selectedNodeBusinessSceneImpactSummary
         "
         :selected-node-coverage-summary="selectedNodeCoverageSummary"
+        :selected-network-relations="selectedNetworkRelations"
         :rel-key="relKey"
+        :get-node-type-title="getNodeTypeTitle"
         :is-path-node-current-selection="isPathNodeCurrentSelection"
+        :is-relation-on-selected-path="isRelationOnSelectedPath"
         :is-current-node-root="isCurrentNodeRoot"
+        :drawer-copy-feedback-message="drawerCopyFeedbackMessage"
+        :drawer-copy-feedback-type="drawerCopyFeedbackType"
+        @copy-csv="emit('copy-csv')"
+        @view-detail="emit('view-detail')"
+        @open-detail-new-window="emit('open-detail-new-window')"
+        @open-as-root="emit('open-as-root')"
+        @update:attack-path-filters="emit('update:attack-path-filters', $event)"
+        @reset-attack-path-filters="emit('reset-attack-path-filters')"
         @focus-node="emit('focus-node', $event)"
         @open-node-as-root="emit('open-node-as-root', $event)"
-      />
-      <RelationNodeDrawerRelations
-        :selected-network-relations="selectedNetworkRelations"
-        :is-relation-on-selected-path="isRelationOnSelectedPath"
-        :copy-feedback-message="drawerCopyFeedbackMessage"
-        :copy-feedback-type="drawerCopyFeedbackType"
-        @copy-csv="emit('copy-csv')"
         @open-node-detail="emit('open-node-detail', $event)"
       />
     </div>

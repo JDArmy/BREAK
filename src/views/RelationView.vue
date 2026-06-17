@@ -143,12 +143,14 @@ export default defineComponent({
         <RelationAnalysisPane
           :active="activeView === 'analysis'"
           :relation-type-mapping="RelationTypeMapping"
+          :attack-path-details="attackPathDetails"
           :attack-path-filter-options="attackPathFilterOptions"
           :attack-path-filters="attackPathFilters"
           :filtered-attack-path-count="filteredAttackPaths.length"
           :has-active-attack-path-filters="hasActiveAttackPathFilters"
           :risk-avoidance-coverage="riskAvoidanceCoverage"
           :selected-attack-path-detail="selectedAttackPathDetail"
+          :selected-network-node="selectedNetworkNode"
           :selected-node-analysis-summary="selectedNodeAnalysisSummary"
           :selected-node-attack-path-summary="selectedNodeAttackPathSummary"
           :selected-node-attack-path-description="selectedNodeAttackPathDescription"
@@ -159,15 +161,25 @@ export default defineComponent({
             selectedNodeBusinessSceneImpactSummary
           "
           :selected-node-coverage-summary="selectedNodeCoverageSummary"
-          :current-entity-type-title="RelationTypeMapping[relType].title"
           :selected-network-node-title="selectedNetworkNodeTitle"
+          :selected-network-relation-counts="selectedNetworkRelationCounts"
+          :selected-network-relations="selectedNetworkRelations"
           :root-node-relations="rootNodeRelations"
           :selected-node-root-path="selectedNodeRootPath"
           :rel-key="relKey"
+          :get-node-type-title="getNodeTypeTitle"
           :is-path-node-current-selection="isPathNodeCurrentSelection"
+          :is-relation-on-selected-path="isRelationOnSelectedPath"
           :is-current-node-root="isCurrentNodeRoot"
+          :drawer-copy-feedback-message="drawerCopyFeedbackMessage"
+          :drawer-copy-feedback-type="drawerCopyFeedbackType"
+          @copy-csv="copySelectedNodeCsv"
+          @view-detail="gotoSelectedNodeDetailView"
+          @open-detail-new-window="openSelectedNodeDetailInNewWindow"
+          @open-as-root="openSelectedNodeAsRoot"
           @update:attack-path-filters="attackPathFilters = $event"
           @reset-attack-path-filters="resetAttackPathFilters"
+          @select-attack-path="selectAttackPath"
           @apply-avoidance-filter="
             attackPathFilters = {
               ...(attackPathFilters || {}),
@@ -176,6 +188,7 @@ export default defineComponent({
           "
           @focus-node="focusNodeInDrawer"
           @open-node-as-root="openNodeAsRootById"
+          @open-node-detail="gotoNodeDetailViewById"
         />
       </el-tab-pane>
     </el-tabs>
@@ -222,6 +235,9 @@ export default defineComponent({
       :selected-node-attack-path-explanations="
         selectedNodeAttackPathExplanations
       "
+      :attack-path-filter-options="attackPathFilterOptions"
+      :attack-path-filters="attackPathFilters"
+      :has-active-attack-path-filters="hasActiveAttackPathFilters"
       :selected-node-business-scene-impact-summary="
         selectedNodeBusinessSceneImpactSummary
       "
@@ -238,6 +254,8 @@ export default defineComponent({
       @view-detail="gotoSelectedNodeDetailView"
       @open-detail-new-window="openSelectedNodeDetailInNewWindow"
       @open-as-root="openSelectedNodeAsRoot"
+      @update:attack-path-filters="attackPathFilters = $event"
+      @reset-attack-path-filters="resetAttackPathFilters"
       @focus-node="focusNodeInDrawer"
       @open-node-detail="gotoNodeDetailViewById"
       @open-node-as-root="openNodeAsRootById"
@@ -283,13 +301,16 @@ export default defineComponent({
 
 @media (max-width: 767px) {
   .relation-page {
-    height: calc(100dvh - 94px);
+    height: auto;
     min-height: 0;
+    overflow: visible;
     padding: 0 6px 2px;
   }
 
   .relation-tabs {
     min-height: 0;
+    height: auto;
+    overflow: visible;
   }
 
   .relation-tabs :deep(.el-tabs__header) {
@@ -310,7 +331,7 @@ export default defineComponent({
   }
 
   .relation-tabs :deep(.el-tabs__content) {
-    height: calc(100% - 38px);
+    height: auto;
   }
 
   .relation-page--mobile-sankey {
@@ -328,6 +349,10 @@ export default defineComponent({
 
   .relation-page--mobile-sankey :deep(.el-tab-pane) {
     height: auto;
+  }
+
+  .relation-page :deep(.el-tab-pane) {
+    overflow: visible;
   }
 }
 </style>

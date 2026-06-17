@@ -1,112 +1,70 @@
 <script setup lang="ts">
-import { computed, reactive, watch } from "vue";
+import { computed, ref } from "vue";
 import { useI18n } from "vue-i18n";
-import type {
-  AttackPathEntity,
-  AttackPathExplanation,
-} from "@/components/relation/relationNodeDrawerInsightTypes";
+import type { AttackPathExplanation } from "@/components/relation/relationNodeDrawerInsightTypes";
+import {
+  RelationType,
+  type AttackPathFilterOption,
+  type AttackPathFilterType,
+  type AttackPathFilters,
+} from "@/views/relation/relationTypes";
 import "@/components/relation/relationNodeDrawerInsights.css";
 
 const props = defineProps<{
   selectedNodeAttackPathSummary: string[];
   selectedNodeAttackPathDescription: string;
   selectedNodeAttackPathExplanations: AttackPathExplanation[];
+  attackPathFilterOptions: Record<AttackPathFilterType, AttackPathFilterOption[]>;
+  attackPathFilters: AttackPathFilters;
+  hasActiveAttackPathFilters: boolean;
+}>();
+
+const emit = defineEmits<{
+  "update:attack-path-filters": [value: AttackPathFilters];
+  "reset-attack-path-filters": [];
 }>();
 
 const { t } = useI18n();
 
-const DEFAULT_ATTACK_PATH_PREVIEW_LIMIT = 3;
-const FILTERED_ATTACK_PATH_RENDER_LIMIT = 30;
-
-const attackPathFilters = reactive({
-  threatActorId: "",
-  attackToolId: "",
-  riskId: "",
-  avoidanceId: "",
-});
-
-const formatFilterOptionLabel = (entity: AttackPathEntity) =>
-  `${entity.title} (${entity.id})`;
-
-const uniqueEntityOptions = (entities: Array<AttackPathEntity | undefined>) => {
-  const optionMap = new Map<string, AttackPathEntity>();
-  entities.forEach((entity) => {
-    if (entity && !optionMap.has(entity.id)) {
-      optionMap.set(entity.id, entity);
-    }
-  });
-
-  return [...optionMap.values()].sort((first, second) =>
-    first.id.localeCompare(second.id, undefined, {
-      numeric: true,
-      sensitivity: "base",
-    })
-  );
-};
-
-type AttackPathFilterKey = keyof typeof attackPathFilters;
-type AttackPathFilterValues = Record<AttackPathFilterKey, string>;
+const DEFAULT_ATTACK_PATH_PREVIEW_LIMIT = 2;
+const showAllAttackPaths = ref(false);
 
 const pathMatchesFilters = (
   path: AttackPathExplanation,
-  filters: AttackPathFilterValues,
-  ignoredFilter?: AttackPathFilterKey
+  filters: AttackPathFilters,
+  ignoredFilter?: AttackPathFilterType
 ) =>
-  (ignoredFilter === "threatActorId" ||
-    !filters.threatActorId ||
-    path.threatActors.some((actor) => actor.id === filters.threatActorId)) &&
-  (ignoredFilter === "attackToolId" ||
-    !filters.attackToolId ||
-    path.attackTool?.id === filters.attackToolId) &&
-  (ignoredFilter === "riskId" ||
-    !filters.riskId ||
-    path.risk.id === filters.riskId) &&
-  (ignoredFilter === "avoidanceId" ||
-    !filters.avoidanceId ||
-    path.avoidance?.id === filters.avoidanceId);
-
-const getCandidatePathsForFilter = (ignoredFilter: AttackPathFilterKey) =>
-  props.selectedNodeAttackPathExplanations.filter((path) =>
-    pathMatchesFilters(path, attackPathFilters, ignoredFilter)
-  );
-
-const attackPathFilterOptions = computed(() => ({
-  threatActors: uniqueEntityOptions(
-    getCandidatePathsForFilter("threatActorId").flatMap(
-      (path) => path.threatActors
-    )
-  ),
-  attackTools: uniqueEntityOptions(
-    getCandidatePathsForFilter("attackToolId").map((path) => path.attackTool)
-  ),
-  risks: uniqueEntityOptions(
-    getCandidatePathsForFilter("riskId").map((path) => path.risk)
-  ),
-  avoidances: uniqueEntityOptions(
-    getCandidatePathsForFilter("avoidanceId").map((path) => path.avoidance)
-  ),
-}));
+  (ignoredFilter === RelationType.threatActor ||
+    !filters[RelationType.threatActor] ||
+    path.threatActors.some(
+      (actor) => actor.id === filters[RelationType.threatActor]
+    )) &&
+  (ignoredFilter === RelationType.attackTool ||
+    !filters[RelationType.attackTool] ||
+    path.attackTool?.id === filters[RelationType.attackTool]) &&
+  (ignoredFilter === RelationType.risk ||
+    !filters[RelationType.risk] ||
+    path.risk.id === filters[RelationType.risk]) &&
+  (ignoredFilter === RelationType.avoidance ||
+    !filters[RelationType.avoidance] ||
+    path.avoidance?.id === filters[RelationType.avoidance]);
 
 const filteredAttackPathExplanations = computed(() =>
   props.selectedNodeAttackPathExplanations.filter((path) =>
-    pathMatchesFilters(path, attackPathFilters)
+    pathMatchesFilters(path, props.attackPathFilters)
   )
 );
 
-const hasAttackPathFilters = computed(() =>
-  Boolean(
-    attackPathFilters.threatActorId ||
-      attackPathFilters.attackToolId ||
-      attackPathFilters.riskId ||
-      attackPathFilters.avoidanceId
-  )
-);
+const hasAttackPathFilters = computed(() => props.hasActiveAttackPathFilters);
 
 const visibleAttackPathExplanations = computed(() => {
-  const limit = hasAttackPathFilters.value
-    ? FILTERED_ATTACK_PATH_RENDER_LIMIT
-    : DEFAULT_ATTACK_PATH_PREVIEW_LIMIT;
-  return filteredAttackPathExplanations.value.slice(0, limit);
+  if (showAllAttackPaths.value) {
+    return filteredAttackPathExplanations.value;
+  }
+  return filteredAttackPathExplanations.value.slice(
+    0,
+    DEFAULT_ATTACK_PATH_PREVIEW_LIMIT
+  );
 });
 
 const hiddenAttackPathCount = computed(
@@ -116,9 +74,10 @@ const hiddenAttackPathCount = computed(
 );
 
 const getDisplayedThreatActors = (path: AttackPathExplanation) => {
-  if (!attackPathFilters.threatActorId) return path.threatActors;
+  const threatActorId = props.attackPathFilters[RelationType.threatActor];
+  if (!threatActorId) return path.threatActors;
   return path.threatActors.filter(
-    (actor) => actor.id === attackPathFilters.threatActorId
+    (actor) => actor.id === threatActorId
   );
 };
 
@@ -180,57 +139,20 @@ const openAttackPathSelect = (event: MouseEvent) => {
   selectElement.click();
 };
 
-const resetAttackPathFilters = () => {
-  attackPathFilters.threatActorId = "";
-  attackPathFilters.attackToolId = "";
-  attackPathFilters.riskId = "";
-  attackPathFilters.avoidanceId = "";
+const updateAttackPathFilter = (
+  type: AttackPathFilterType,
+  value: string | undefined
+) => {
+  showAllAttackPaths.value = false;
+  emit("update:attack-path-filters", {
+    ...props.attackPathFilters,
+    [type]: value || undefined,
+  });
 };
 
-watch(
-  attackPathFilterOptions,
-  (options) => {
-    if (
-      attackPathFilters.threatActorId &&
-      !options.threatActors.some(
-        (option) => option.id === attackPathFilters.threatActorId
-      )
-    ) {
-      attackPathFilters.threatActorId = "";
-    }
-    if (
-      attackPathFilters.attackToolId &&
-      !options.attackTools.some(
-        (option) => option.id === attackPathFilters.attackToolId
-      )
-    ) {
-      attackPathFilters.attackToolId = "";
-    }
-    if (
-      attackPathFilters.riskId &&
-      !options.risks.some((option) => option.id === attackPathFilters.riskId)
-    ) {
-      attackPathFilters.riskId = "";
-    }
-    if (
-      attackPathFilters.avoidanceId &&
-      !options.avoidances.some(
-        (option) => option.id === attackPathFilters.avoidanceId
-      )
-    ) {
-      attackPathFilters.avoidanceId = "";
-    }
-  },
-  { flush: "post" }
-);
-
-watch(
-  () =>
-    props.selectedNodeAttackPathExplanations
-      .map((path) => path.pathKey)
-      .join("|"),
-  () => resetAttackPathFilters()
-);
+const toggleShowAllAttackPaths = () => {
+  showAllAttackPaths.value = !showAllAttackPaths.value;
+};
 </script>
 
 <template>
@@ -273,19 +195,31 @@ watch(
             @click="openAttackPathSelect"
           >
             <span>{{ t("relationView.filterThreatActor") }}</span>
-            <select v-model="attackPathFilters.threatActorId">
+            <select
+              id="attack-path-filter-threat-actor"
+              name="attack-path-filter-threat-actor"
+              :value="attackPathFilters[RelationType.threatActor] ?? ''"
+              @change="
+                updateAttackPathFilter(
+                  RelationType.threatActor,
+                  ($event.target as HTMLSelectElement).value
+                )
+              "
+            >
               <option value="">
                 {{ t("relationView.allAttackPathFilterOptions") }}
               </option>
               <option
-                v-for="option in attackPathFilterOptions.threatActors"
-                :key="option.id"
-                :value="option.id"
+                v-for="option in attackPathFilterOptions[RelationType.threatActor]"
+                :key="option.key"
+                :value="option.key"
               >
-                {{ formatFilterOptionLabel(option) }}
+                {{ `${option.label} (${option.key})` }}
               </option>
               <option
-                v-if="attackPathFilterOptions.threatActors.length === 0"
+                v-if="
+                  attackPathFilterOptions[RelationType.threatActor].length === 0
+                "
                 disabled
               >
                 {{ t("relationView.noAttackPathFilterOptions") }}
@@ -297,19 +231,31 @@ watch(
             @click="openAttackPathSelect"
           >
             <span>{{ t("relationView.filterAttackTool") }}</span>
-            <select v-model="attackPathFilters.attackToolId">
+            <select
+              id="attack-path-filter-attack-tool"
+              name="attack-path-filter-attack-tool"
+              :value="attackPathFilters[RelationType.attackTool] ?? ''"
+              @change="
+                updateAttackPathFilter(
+                  RelationType.attackTool,
+                  ($event.target as HTMLSelectElement).value
+                )
+              "
+            >
               <option value="">
                 {{ t("relationView.allAttackPathFilterOptions") }}
               </option>
               <option
-                v-for="option in attackPathFilterOptions.attackTools"
-                :key="option.id"
-                :value="option.id"
+                v-for="option in attackPathFilterOptions[RelationType.attackTool]"
+                :key="option.key"
+                :value="option.key"
               >
-                {{ formatFilterOptionLabel(option) }}
+                {{ `${option.label} (${option.key})` }}
               </option>
               <option
-                v-if="attackPathFilterOptions.attackTools.length === 0"
+                v-if="
+                  attackPathFilterOptions[RelationType.attackTool].length === 0
+                "
                 disabled
               >
                 {{ t("relationView.noAttackPathFilterOptions") }}
@@ -321,19 +267,29 @@ watch(
             @click="openAttackPathSelect"
           >
             <span>{{ t("relationView.filterRisk") }}</span>
-            <select v-model="attackPathFilters.riskId">
+            <select
+              id="attack-path-filter-risk"
+              name="attack-path-filter-risk"
+              :value="attackPathFilters[RelationType.risk] ?? ''"
+              @change="
+                updateAttackPathFilter(
+                  RelationType.risk,
+                  ($event.target as HTMLSelectElement).value
+                )
+              "
+            >
               <option value="">
                 {{ t("relationView.allAttackPathFilterOptions") }}
               </option>
               <option
-                v-for="option in attackPathFilterOptions.risks"
-                :key="option.id"
-                :value="option.id"
+                v-for="option in attackPathFilterOptions[RelationType.risk]"
+                :key="option.key"
+                :value="option.key"
               >
-                {{ formatFilterOptionLabel(option) }}
+                {{ `${option.label} (${option.key})` }}
               </option>
               <option
-                v-if="attackPathFilterOptions.risks.length === 0"
+                v-if="attackPathFilterOptions[RelationType.risk].length === 0"
                 disabled
               >
                 {{ t("relationView.noAttackPathFilterOptions") }}
@@ -345,19 +301,31 @@ watch(
             @click="openAttackPathSelect"
           >
             <span>{{ t("relationView.filterAvoidance") }}</span>
-            <select v-model="attackPathFilters.avoidanceId">
+            <select
+              id="attack-path-filter-avoidance"
+              name="attack-path-filter-avoidance"
+              :value="attackPathFilters[RelationType.avoidance] ?? ''"
+              @change="
+                updateAttackPathFilter(
+                  RelationType.avoidance,
+                  ($event.target as HTMLSelectElement).value
+                )
+              "
+            >
               <option value="">
                 {{ t("relationView.allAttackPathFilterOptions") }}
               </option>
               <option
-                v-for="option in attackPathFilterOptions.avoidances"
-                :key="option.id"
-                :value="option.id"
+                v-for="option in attackPathFilterOptions[RelationType.avoidance]"
+                :key="option.key"
+                :value="option.key"
               >
-                {{ formatFilterOptionLabel(option) }}
+                {{ `${option.label} (${option.key})` }}
               </option>
               <option
-                v-if="attackPathFilterOptions.avoidances.length === 0"
+                v-if="
+                  attackPathFilterOptions[RelationType.avoidance].length === 0
+                "
                 disabled
               >
                 {{ t("relationView.noAttackPathFilterOptions") }}
@@ -368,7 +336,7 @@ watch(
             type="button"
             class="node-filter-clear-button"
             :disabled="!hasAttackPathFilters"
-            @click="resetAttackPathFilters"
+            @click="emit('reset-attack-path-filters')"
           >
             {{ t("relationView.clearAttackPathFilters") }}
           </button>
@@ -434,13 +402,22 @@ watch(
       >
         {{ t("relationView.noFilteredAttackPaths") }}
       </div>
-      <div v-else-if="hiddenAttackPathCount > 0" class="node-relation-more">
+      <button
+        v-else-if="hiddenAttackPathCount > 0 || showAllAttackPaths"
+        type="button"
+        class="node-relation-more node-attack-path-more-button"
+        @click="toggleShowAllAttackPaths"
+      >
         {{
-          t("relationView.hiddenAttackPathCount", {
-            count: hiddenAttackPathCount,
-          })
+          showAllAttackPaths
+            ? t("relationView.collapseAttackPathCount", {
+                count: hiddenAttackPathCount,
+              })
+            : t("relationView.hiddenAttackPathCount", {
+                count: hiddenAttackPathCount,
+              })
         }}
-      </div>
+      </button>
     </div>
   </div>
 </template>

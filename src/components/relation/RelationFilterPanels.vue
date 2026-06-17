@@ -67,7 +67,7 @@ const filterLineTypeModel = computed({
       <el-checkbox
         v-for="item in relationTypeItems"
         :key="item.key"
-        :name="item.key"
+        :name="`node-filter-${item.key}`"
         class="filter-checkbox"
         :value="item.key"
       >
@@ -77,7 +77,12 @@ const filterLineTypeModel = computed({
         </span>
       </el-checkbox>
     </el-checkbox-group>
-    <el-checkbox v-model="filterSubNodeModel" class="filter-checkbox" @change="emit('filter')">
+    <el-checkbox
+      v-model="filterSubNodeModel"
+      class="filter-checkbox"
+      name="node-filter-sub-node"
+      @change="emit('filter')"
+    >
       <span class="filter-item-with-color">
         <span class="legend-node-color" :style="{ backgroundColor: subNodeFilterColor }"></span>
         <span>{{ t("subNodeFilter") }}</span>
@@ -96,7 +101,7 @@ const filterLineTypeModel = computed({
       <el-checkbox
         v-for="item in visibleRelationLegendItems"
         :key="item.key"
-        :name="item.key"
+        :name="`line-filter-${item.key}`"
         class="filter-checkbox"
         :value="item.key"
       >

@@ -407,7 +407,9 @@ const termDetailClose = () => {
       <div class="scene-selector-wrapper">
         <span class="control-label">{{ $t("businessScene") }}:</span>
         <el-select
+          id="business-scene-selector"
           v-model="bsKeySelected"
+          name="business-scene-selector"
           :size="componentSize"
           :placeholder="$t('allScenes')"
           class="scene-selector"
@@ -422,7 +424,12 @@ const termDetailClose = () => {
       </div>
       <div class="subrisk-controls-wrapper">
         <span class="control-label">{{ $t("subRiskDisplay") }}:</span>
-        <el-radio-group :size="componentSize" v-model="hideAllSubRisks" class="subrisk-toggle">
+        <el-radio-group
+          v-model="hideAllSubRisks"
+          class="subrisk-toggle"
+          name="subrisk-toggle"
+          :size="componentSize"
+        >
           <el-radio-button :value="false">{{
             $t("showAllSubRisks")
           }}</el-radio-button>

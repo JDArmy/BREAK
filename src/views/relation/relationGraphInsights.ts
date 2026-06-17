@@ -12,7 +12,11 @@ type Translate = (key: string, params?: Record<string, unknown>) => string;
 
 interface NodeAnalysisSummary {
   summary: string;
-  highlights: string[];
+  highlights: Array<{
+    label: string;
+    type: string;
+    ids: string[];
+  }>;
   notices: string[];
 }
 
@@ -112,14 +116,20 @@ export const createRelationGraphInsights = ({
         }
       });
 
-      const relatedTypeCounts = [...relatedNodeIds].reduce<
-        Record<string, number>
-      >((counts, nodeId) => {
+      const relatedTypeGroups = [...relatedNodeIds].reduce<
+        Record<string, string[]>
+      >((groups, nodeId) => {
         const relatedNode = nodes.find((item) => item.id === nodeId);
-        if (!relatedNode) return counts;
-        counts[relatedNode.type] = (counts[relatedNode.type] ?? 0) + 1;
-        return counts;
+        if (!relatedNode) return groups;
+        groups[relatedNode.type] = [...(groups[relatedNode.type] ?? []), nodeId];
+        return groups;
       }, {});
+      const relatedTypeCounts = Object.fromEntries(
+        Object.entries(relatedTypeGroups).map(([type, ids]) => [
+          type,
+          ids.length,
+        ])
+      );
 
       const getCount = (type: RelationType) => relatedTypeCounts[type] ?? 0;
       const relationCount = incoming + outgoing;
@@ -148,12 +158,14 @@ export const createRelationGraphInsights = ({
         .sort(([firstType], [secondType]) =>
           firstType.localeCompare(secondType)
         )
-        .map(([relatedType, count]) =>
-          t("relationView.nodeAnalysisRelatedCount", {
+        .map(([relatedType, count]) => ({
+          label: t("relationView.nodeAnalysisRelatedCount", {
             type: getNodeTypeTitle(relatedType),
             count,
-          })
-        );
+          }),
+          type: relatedType,
+          ids: [...(relatedTypeGroups[relatedType] ?? [])].sort(),
+        }));
 
       const notices: string[] = [];
       if (relationCount >= 8) {

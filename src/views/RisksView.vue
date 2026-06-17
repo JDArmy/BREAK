@@ -57,11 +57,18 @@ watch(
 );
 
 const selectedRisk = computed(() => BREAK.risks[selectedRiskKey.value]);
+const localeMessages = computed(() => messages.value[locale.value] as Record<string, unknown>);
 
 const getRiskDescriptionTools = (rKey: string) =>
   Object.keys(BREAK.attackTools).filter((atKey) => {
     const at = BREAK.attackTools[atKey as keyof typeof BREAK.attackTools];
     return at.directCauseRisks.includes(rKey) || at.indirectSupportRisks.includes(rKey);
+  });
+
+const getRiskThreatActors = (rKey: string) =>
+  Object.keys(BREAK.threatActors).filter((taKey) => {
+    const ta = BREAK.threatActors[taKey as keyof typeof BREAK.threatActors];
+    return ta.directCauseRisks.includes(rKey) || ta.indirectSupportRisks.includes(rKey);
   });
 
 const getRelatedTerms = (rKey: string) =>
@@ -98,7 +105,7 @@ const openRelationGraph = (rKey: string) => {
         </el-button>
       </div>
 
-      <section class="detail-section">
+      <section class="detail-section" data-detail-anchor="risks">
         <h3>{{ $t("riskDefinition") }}</h3>
         <p>{{ $t(`BREAK.risks.${selectedRiskKey}.definition`) }}</p>
       </section>
@@ -124,7 +131,7 @@ const openRelationGraph = (rKey: string) => {
           </span>
         </div>
       </section>
-      <section class="detail-section">
+      <section class="detail-section" data-detail-anchor="avoidances">
         <h3>{{ $t("riskAvoidances") }}</h3>
         <div class="entity-links">
           <router-link
@@ -137,7 +144,7 @@ const openRelationGraph = (rKey: string) => {
           </router-link>
         </div>
       </section>
-      <section v-if="getRiskDescriptionTools(selectedRiskKey).length" class="detail-section">
+      <section v-if="getRiskDescriptionTools(selectedRiskKey).length" class="detail-section" data-detail-anchor="attack-tools">
         <h3>{{ $t("attackTools") }}</h3>
         <div class="entity-links">
           <router-link
@@ -150,7 +157,20 @@ const openRelationGraph = (rKey: string) => {
           </router-link>
         </div>
       </section>
-      <section v-if="getRelatedTerms(selectedRiskKey).length" class="detail-section">
+      <section v-if="getRiskThreatActors(selectedRiskKey).length" class="detail-section" data-detail-anchor="threat-actors">
+        <h3>{{ $t("threatActors") }}</h3>
+        <div class="entity-links">
+          <router-link
+            v-for="taKey in getRiskThreatActors(selectedRiskKey)"
+            :key="taKey"
+            :to="isMobile ? { name: 'threatActorsDetail', params: { taKey } } : { name: 'threatActors', hash: `#${taKey}` }"
+            class="entity-link"
+          >
+            {{ taKey }}: {{ $t(`BREAK.threatActors.${taKey}.title`) }}
+          </router-link>
+        </div>
+      </section>
+      <section v-if="getRelatedTerms(selectedRiskKey).length" class="detail-section" data-detail-anchor="terms">
         <h3>{{ $t("terms") }}</h3>
         <div class="entity-links">
           <router-link
@@ -163,7 +183,7 @@ const openRelationGraph = (rKey: string) => {
           </router-link>
         </div>
       </section>
-      <section v-if="selectedRisk.references?.length" class="detail-section">
+      <section v-if="selectedRisk.references?.length" class="detail-section" data-detail-anchor="references">
         <h3>{{ $t("riskReference") }}</h3>
         <ReferenceList type="risks" :entity-key="selectedRiskKey" />
       </section>

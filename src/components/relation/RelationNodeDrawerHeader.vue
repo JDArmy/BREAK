@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
 import { TopRight } from "@element-plus/icons-vue";
+import "@/components/relation/relationNodeDrawerInsights.css";
 
 interface DetailNode {
   id: string;
   type: string;
 }
 
-defineProps<{
+withDefaults(defineProps<{
   selectedNetworkNode: DetailNode;
   selectedNetworkNodeTitle: string;
   selectedNetworkRelationCounts: {
@@ -16,43 +17,62 @@ defineProps<{
   };
   relKey: string;
   getNodeTypeTitle: (type: string) => string;
-}>();
+  showOpenAsRootAction?: boolean;
+}>(), {
+  showOpenAsRootAction: true,
+});
 
 const emit = defineEmits<{
   "view-detail": [];
   "open-detail-new-window": [];
   "open-as-root": [];
+  "filter-relations-by-direction": [direction: "incoming" | "outgoing"];
 }>();
 
 const { t } = useI18n();
 </script>
 
 <template>
-  <button type="button" class="node-detail-title" @click="emit('open-detail-new-window')">
-    <span class="node-detail-id">{{ selectedNetworkNode.id }}</span>
-    <span class="node-detail-name">{{ selectedNetworkNodeTitle }}</span>
-  </button>
-  <div class="node-detail-type">
-    {{ getNodeTypeTitle(selectedNetworkNode.type) }}
-  </div>
-  <div class="node-detail-counts">
-    <span>{{ t("relationView.incoming") }}: {{ selectedNetworkRelationCounts.incoming }}</span>
-    <span>{{ t("relationView.outgoing") }}: {{ selectedNetworkRelationCounts.outgoing }}</span>
-  </div>
-  <div class="node-detail-actions">
-    <el-button size="small" @click="emit('view-detail')">
-      <span class="menu-action-with-icon">
-        <el-icon><TopRight /></el-icon>
-        <span>{{ t("viewDetail") }}</span>
+  <div class="node-insight-panel node-detail-panel">
+    <button type="button" class="node-detail-title" @click="emit('open-detail-new-window')">
+      <span class="node-detail-id">{{ selectedNetworkNode.id }}</span>
+      <span class="node-detail-name">{{ selectedNetworkNodeTitle }}</span>
+    </button>
+    <div class="node-detail-meta">
+      <span class="node-detail-type">
+        {{ getNodeTypeTitle(selectedNetworkNode.type) }}
       </span>
-    </el-button>
-    <el-button
-      size="small"
-      :disabled="selectedNetworkNode.id === relKey"
-      @click="emit('open-as-root')"
-    >
-      {{ t("openAsRoot") }}
-    </el-button>
+      <button
+        type="button"
+        class="node-detail-meta-action"
+        @click="emit('filter-relations-by-direction', 'incoming')"
+      >
+        {{ t("relationView.incoming") }}: {{ selectedNetworkRelationCounts.incoming }}
+      </button>
+      <button
+        type="button"
+        class="node-detail-meta-action"
+        @click="emit('filter-relations-by-direction', 'outgoing')"
+      >
+        {{ t("relationView.outgoing") }}: {{ selectedNetworkRelationCounts.outgoing }}
+      </button>
+    </div>
+    <div class="node-detail-actions">
+      <el-button size="small" @click="emit('view-detail')">
+        <span class="menu-action-with-icon">
+          <el-icon><TopRight /></el-icon>
+          <span>{{ t("viewDetail") }}</span>
+        </span>
+      </el-button>
+      <el-button
+        v-if="showOpenAsRootAction"
+        size="small"
+        :disabled="selectedNetworkNode.id === relKey"
+        @click="emit('open-as-root')"
+      >
+        {{ t("openAsRoot") }}
+      </el-button>
+    </div>
   </div>
 </template>
 
@@ -71,6 +91,10 @@ const { t } = useI18n();
   cursor: pointer;
 }
 
+.node-detail-panel {
+  gap: 8px;
+}
+
 .node-detail-title:hover .node-detail-id,
 .node-detail-title:hover .node-detail-name {
   color: var(--el-color-primary);
@@ -87,30 +111,35 @@ const { t } = useI18n();
   overflow-wrap: anywhere;
 }
 
-.node-detail-type {
-  display: inline-flex;
-  align-items: center;
-  padding: 2px 6px;
-  margin-bottom: 6px;
-  border: 1px solid var(--break-border);
-  border-radius: 999px;
-  color: var(--break-text-secondary);
-  font-size: 11px;
-  background: transparent;
-}
-
-.node-detail-counts,
+.node-detail-meta,
 .node-detail-actions {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 6px;
-  margin-bottom: 6px;
+  gap: 6px 10px;
 }
 
-.node-detail-counts {
+.node-detail-meta {
   color: var(--break-text-muted);
   font-size: 12px;
+}
+
+.node-detail-type {
+  color: var(--break-text-secondary);
+  font-weight: 700;
+}
+
+.node-detail-meta-action {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.node-detail-meta-action:hover {
+  color: var(--el-color-primary);
 }
 
 .menu-action-with-icon {
@@ -135,14 +164,9 @@ const { t } = useI18n();
     line-height: 1.45;
   }
 
-  .node-detail-type {
-    margin-bottom: 5px;
-  }
-
-  .node-detail-counts,
+  .node-detail-meta,
   .node-detail-actions {
     gap: 5px;
-    margin-bottom: 5px;
   }
 
   .node-detail-actions {

@@ -76,6 +76,15 @@
   overflow-wrap: anywhere;
 }
 
+.node-analysis-chip-button {
+  cursor: pointer;
+}
+
+.node-analysis-chip-button:hover {
+  border-color: var(--el-color-primary);
+  color: var(--break-text-primary);
+}
+
 .node-analysis-notices {
   display: flex;
   flex-direction: column;
@@ -254,6 +263,21 @@
   overflow-wrap: anywhere;
 }
 
+.node-attack-path-more-button {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--break-border);
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--break-bg-soft) 88%, transparent);
+  text-align: left;
+  cursor: pointer;
+}
+
+.node-attack-path-more-button:hover {
+  border-color: color-mix(in srgb, var(--el-color-primary) 30%, var(--break-border));
+  color: var(--break-text-secondary);
+}
+
 .node-relation-directness {
   display: inline-flex;
   align-items: center;
@@ -424,7 +448,7 @@
 .node-attack-filter-grid {
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 8px;
   min-width: 0;
   max-width: 100%;
@@ -496,6 +520,7 @@
 }
 
 .node-filter-clear-button {
+  grid-column: 1 / -1;
   justify-self: end;
   width: auto;
   padding: 2px 0;

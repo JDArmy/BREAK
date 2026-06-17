@@ -105,7 +105,7 @@ const openRelationGraph = (taKey: string) => {
         </el-button>
       </div>
 
-      <section class="detail-section">
+      <section class="detail-section" data-detail-anchor="threat-actors">
         <h3>{{ $t("description") }}</h3>
         <p>{{ $t(`BREAK.threatActors.${selectedThreatActorKey}.description`) }}</p>
       </section>
@@ -117,7 +117,7 @@ const openRelationGraph = (taKey: string) => {
           </span>
         </div>
       </section>
-      <section v-if="selectedThreatActor.directCauseRisks.length" class="detail-section">
+      <section v-if="selectedThreatActor.directCauseRisks.length" class="detail-section" data-detail-anchor="risks">
         <h3>{{ $t("relationLine.directCauseRisk") }}</h3>
         <div class="entity-links">
           <router-link
@@ -130,7 +130,7 @@ const openRelationGraph = (taKey: string) => {
           </router-link>
         </div>
       </section>
-      <section v-if="selectedThreatActor.indirectSupportRisks.length" class="detail-section">
+      <section v-if="selectedThreatActor.indirectSupportRisks.length" class="detail-section" data-detail-anchor="risks">
         <h3>{{ $t("relationLine.indirectSupportRisk") }}</h3>
         <div class="entity-links">
           <router-link
@@ -143,7 +143,7 @@ const openRelationGraph = (taKey: string) => {
           </router-link>
         </div>
       </section>
-      <section v-if="selectedThreatActor.buildAttackTools.length" class="detail-section">
+      <section v-if="selectedThreatActor.buildAttackTools.length" class="detail-section" data-detail-anchor="attack-tools">
         <h3>{{ $t("buildAttackTools") }}</h3>
         <div class="entity-links">
           <router-link
@@ -156,7 +156,7 @@ const openRelationGraph = (taKey: string) => {
           </router-link>
         </div>
       </section>
-      <section v-if="selectedThreatActor.useAttackTools.length" class="detail-section">
+      <section v-if="selectedThreatActor.useAttackTools.length" class="detail-section" data-detail-anchor="attack-tools">
         <h3>{{ $t("useAttackTools") }}</h3>
         <div class="entity-links">
           <router-link
@@ -169,7 +169,7 @@ const openRelationGraph = (taKey: string) => {
           </router-link>
         </div>
       </section>
-      <section v-if="relatedTermKeys.length" class="detail-section">
+      <section v-if="relatedTermKeys.length" class="detail-section" data-detail-anchor="terms">
         <h3>{{ $t("terms") }}</h3>
         <div class="entity-links">
           <router-link
@@ -182,7 +182,7 @@ const openRelationGraph = (taKey: string) => {
           </router-link>
         </div>
       </section>
-      <section v-if="selectedThreatActor.references?.length" class="detail-section">
+      <section v-if="selectedThreatActor.references?.length" class="detail-section" data-detail-anchor="references">
         <h3>{{ $t("references") }}</h3>
         <ReferenceList type="threatActors" :entity-key="selectedThreatActorKey" />
       </section>

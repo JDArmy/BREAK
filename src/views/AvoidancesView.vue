@@ -124,8 +124,10 @@ const openRelationGraph = (aKey: string) => {
   >
     <template #filters>
       <el-select
+        id="avoidance-category-filter"
         v-model="selectedCategory"
         class="avoidance-category-filter"
+        name="avoidance-category-filter"
         size="small"
         clearable
         :placeholder="$t('allCategories')"
@@ -150,7 +152,7 @@ const openRelationGraph = (aKey: string) => {
         </el-button>
       </div>
 
-      <section class="detail-section">
+      <section class="detail-section" data-detail-anchor="avoidances">
         <h3>{{ $t("definition") }}</h3>
         <p>{{ $t(`BREAK.avoidances.${selectedAvoidanceKey}.definition`) }}</p>
       </section>
@@ -177,7 +179,7 @@ const openRelationGraph = (aKey: string) => {
           {{ $t(`BREAK.avoidanceCategories.${selectedAvoidance.category}.title`) }}
         </p>
       </section>
-      <section v-if="relatedRiskKeys.length" class="detail-section">
+      <section v-if="relatedRiskKeys.length" class="detail-section" data-detail-anchor="risks">
         <h3>{{ $t("risks") }}</h3>
         <div class="entity-links">
           <router-link
@@ -190,7 +192,7 @@ const openRelationGraph = (aKey: string) => {
           </router-link>
         </div>
       </section>
-      <section v-if="relatedAttackToolKeys.length" class="detail-section">
+      <section v-if="relatedAttackToolKeys.length" class="detail-section" data-detail-anchor="attack-tools">
         <h3>{{ $t("attackTools") }}</h3>
         <div class="entity-links">
           <router-link
@@ -203,7 +205,7 @@ const openRelationGraph = (aKey: string) => {
           </router-link>
         </div>
       </section>
-      <section v-if="relatedTermKeys.length" class="detail-section">
+      <section v-if="relatedTermKeys.length" class="detail-section" data-detail-anchor="terms">
         <h3>{{ $t("terms") }}</h3>
         <div class="entity-links">
           <router-link
@@ -216,7 +218,7 @@ const openRelationGraph = (aKey: string) => {
           </router-link>
         </div>
       </section>
-      <section v-if="selectedAvoidance.references?.length" class="detail-section">
+      <section v-if="selectedAvoidance.references?.length" class="detail-section" data-detail-anchor="references">
         <h3>{{ $t("references") }}</h3>
         <ReferenceList type="avoidances" :entity-key="selectedAvoidanceKey" />
       </section>

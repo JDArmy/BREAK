@@ -33,6 +33,7 @@ const router = useRouter();
 const { isMobile } = useBreakpoints();
 const query = ref("");
 const mobileListRef = ref<HTMLElement>();
+const detailRef = ref<HTMLElement>();
 const mobileListScrollTop = ref(0);
 
 // 移动端两态：list / detail
@@ -103,6 +104,28 @@ const scrollSelectedItemToMobileListCenter = () => {
   return true;
 };
 
+const scrollDetailAnchorIntoView = () => {
+  const detailAnchor = route.query.detailAnchor;
+  if (typeof detailAnchor !== "string" || !detailAnchor) return;
+
+  nextTick(() => {
+    requestAnimationFrame(() => {
+      const detail = detailRef.value;
+      if (!detail) return;
+
+      const target = detail.querySelector<HTMLElement>(
+        `[data-detail-anchor="${CSS.escape(detailAnchor)}"]`
+      );
+      if (!target) return;
+
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  });
+};
+
 const backToList = () => {
   if (isMobile.value && props.detailRouteName) {
     router.push({ name: props.routeName });
@@ -130,6 +153,14 @@ watch(
     });
   },
   { immediate: true }
+);
+
+watch(
+  () => [props.selectedKey, route.query.detailAnchor, mobileView.value],
+  () => {
+    scrollDetailAnchorIntoView();
+  },
+  { immediate: true, flush: "post" }
 );
 
 watch(
@@ -197,8 +228,10 @@ watch(isMobile, (mobile) => {
         <h3 class="knowledge-title">{{ title }}</h3>
         <slot name="filters" />
         <el-input
+          id="knowledge-search"
           v-model="query"
           class="knowledge-search"
+          name="knowledge-search"
           size="small"
           clearable
           :placeholder="searchPlaceholder"
@@ -227,7 +260,7 @@ watch(isMobile, (mobile) => {
       </div>
     </aside>
 
-    <main class="knowledge-detail">
+    <main ref="detailRef" class="knowledge-detail">
       <template v-if="selectedItem">
         <slot :selected-key="selectedKey" />
       </template>
@@ -243,8 +276,10 @@ watch(isMobile, (mobile) => {
           <h3 class="knowledge-title">{{ title }}</h3>
           <slot name="filters" />
           <el-input
+            id="knowledge-mobile-search"
             v-model="query"
             class="knowledge-search"
+            name="knowledge-mobile-search"
             size="small"
             clearable
             :placeholder="searchPlaceholder"
@@ -286,7 +321,7 @@ watch(isMobile, (mobile) => {
           <span class="knowledge-name">{{ selectedItem.title }}</span>
         </span>
       </div>
-      <main class="knowledge-detail knowledge-mobile-detail">
+      <main ref="detailRef" class="knowledge-detail knowledge-mobile-detail">
         <template v-if="selectedItem">
           <slot :selected-key="selectedKey" />
         </template>

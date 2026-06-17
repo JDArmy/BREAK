@@ -24,6 +24,7 @@ import iconGithub from "@/components/icons/iconGithub.vue";
 
       <el-footer>
         <div class="footer">
+          <div class="mobile-desktop-hint">{{ $t("mobileDesktopHint") }}</div>
           ©2024-2026 JD.Army
           <span class="github">
             <a href="https://github.com/JDArmy/BREAK" target="_blank" rel="noopener noreferrer">
@@ -68,5 +69,19 @@ import iconGithub from "@/components/icons/iconGithub.vue";
 
 .github {
   font-size: 150%;
+}
+
+.mobile-desktop-hint {
+  display: none;
+  margin-bottom: 4px;
+  color: var(--break-text-muted);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+@media (max-width: 767px) {
+  .mobile-desktop-hint {
+    display: block;
+  }
 }
 </style>

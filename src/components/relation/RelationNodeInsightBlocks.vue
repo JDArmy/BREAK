@@ -1,5 +1,9 @@
 <script setup lang="ts">
-import RelationNodeInsightBlocks from "@/components/relation/RelationNodeInsightBlocks.vue";
+import RelationNodeAnalysisBlock from "@/components/relation/RelationNodeAnalysisBlock.vue";
+import RelationNodeAttackPathBlock from "@/components/relation/RelationNodeAttackPathBlock.vue";
+import RelationNodeBusinessSceneImpactBlock from "@/components/relation/RelationNodeBusinessSceneImpactBlock.vue";
+import RelationNodeCoverageBlock from "@/components/relation/RelationNodeCoverageBlock.vue";
+import RelationNodeRootRelationBlock from "@/components/relation/RelationNodeRootRelationBlock.vue";
 import type {
   AttackPathExplanation,
   NodeAnalysisSummary,
@@ -13,11 +17,14 @@ import type {
   AttackPathFilterType,
   AttackPathFilters,
 } from "@/views/relation/relationTypes";
+import "@/components/relation/relationNodeDrawerInsights.css";
 
 defineProps<{
   rootNodeRelations: RootRelationSummary[];
   selectedNodeRootPath: RootPathSummary | null;
   selectedNodeAnalysisSummary: NodeAnalysisSummary | null;
+  selectedNodeType: string;
+  selectedNodeId: string;
   selectedNodeAttackPathSummary: string[];
   selectedNodeAttackPathDescription: string;
   selectedNodeAttackPathExplanations: AttackPathExplanation[];
@@ -26,6 +33,8 @@ defineProps<{
   hasActiveAttackPathFilters: boolean;
   selectedNodeBusinessSceneImpactSummary: NodeBusinessSceneImpactSummary | null;
   selectedNodeCoverageSummary: NodeCoverageSummary | null;
+  showRootRelationBlock?: boolean;
+  showAttackPathBlock?: boolean;
   relKey: string;
   isPathNodeCurrentSelection: (nodeId: string) => boolean;
   isCurrentNodeRoot: boolean;
@@ -40,26 +49,34 @@ const emit = defineEmits<{
 </script>
 
 <template>
-  <RelationNodeInsightBlocks
+  <RelationNodeRootRelationBlock
+    v-if="showRootRelationBlock !== false"
     :root-node-relations="rootNodeRelations"
     :selected-node-root-path="selectedNodeRootPath"
-    :selected-node-analysis-summary="selectedNodeAnalysisSummary"
+    :rel-key="relKey"
+    :is-path-node-current-selection="isPathNodeCurrentSelection"
+    :is-current-node-root="isCurrentNodeRoot"
+    @focus-node="emit('focus-node', $event)"
+    @open-node-as-root="emit('open-node-as-root', $event)"
+  />
+  <RelationNodeAnalysisBlock
+    :summary="selectedNodeAnalysisSummary"
+    :selected-node-type="selectedNodeType"
+    :selected-node-id="selectedNodeId"
+  />
+  <RelationNodeBusinessSceneImpactBlock
+    :summary="selectedNodeBusinessSceneImpactSummary"
+  />
+  <RelationNodeCoverageBlock :summary="selectedNodeCoverageSummary" />
+  <RelationNodeAttackPathBlock
+    v-if="showAttackPathBlock !== false"
     :selected-node-attack-path-summary="selectedNodeAttackPathSummary"
     :selected-node-attack-path-description="selectedNodeAttackPathDescription"
     :selected-node-attack-path-explanations="selectedNodeAttackPathExplanations"
     :attack-path-filter-options="attackPathFilterOptions"
     :attack-path-filters="attackPathFilters"
     :has-active-attack-path-filters="hasActiveAttackPathFilters"
-    :selected-node-business-scene-impact-summary="
-      selectedNodeBusinessSceneImpactSummary
-    "
-    :selected-node-coverage-summary="selectedNodeCoverageSummary"
-    :rel-key="relKey"
-    :is-path-node-current-selection="isPathNodeCurrentSelection"
-    :is-current-node-root="isCurrentNodeRoot"
     @update:attack-path-filters="emit('update:attack-path-filters', $event)"
     @reset-attack-path-filters="emit('reset-attack-path-filters')"
-    @focus-node="emit('focus-node', $event)"
-    @open-node-as-root="emit('open-node-as-root', $event)"
   />
 </template>

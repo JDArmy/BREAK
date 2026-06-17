@@ -34,7 +34,11 @@ export interface RootPathSummary {
 
 export interface NodeAnalysisSummary {
   summary: string;
-  highlights: string[];
+  highlights: Array<{
+    label: string;
+    type: string;
+    ids: string[];
+  }>;
   notices: string[];
 }
 

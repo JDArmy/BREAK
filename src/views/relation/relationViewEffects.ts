@@ -144,6 +144,7 @@ export const setupRelationViewEffects = ({
   watch(
     () => [relType.value, relKey.value],
     ([newType, newKey]) => {
+      selectedNetworkNodeId.value = newKey;
       if (newType !== route.params.type || newKey !== route.params.key) {
         router.push({
           name: "relation",
@@ -162,13 +163,15 @@ export const setupRelationViewEffects = ({
     () => {
       relType.value = route.params.type as RelationType;
       relKey.value = route.params.key as string;
+      selectedNetworkNodeId.value = relKey.value;
       normalizeAttackPathFilters();
       networkDataReady = false;
       if (activeView.value === "network") {
         refreshGraphAfterVisible();
         networkDataReady = true;
       } else if (activeView.value === "analysis") {
-        ensureNetworkData({ render: false });
+        rebuildGraphData({ render: false });
+        networkDataReady = true;
       }
     }
   );

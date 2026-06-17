@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, reactive, watch } from "vue";
+import { computed, reactive, ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
 
 interface RelationSummary {
@@ -39,6 +39,9 @@ const relationFilters = reactive({
   relationType: "",
   directness: "",
 });
+
+const RELATION_PREVIEW_LIMIT = 15;
+const showAllRelations = ref(false);
 
 const uniqueSortedValues = (values: string[]) =>
   [...new Set(values.filter(Boolean))].sort((first, second) =>
@@ -103,6 +106,16 @@ const tableRows = computed(() =>
   }))
 );
 
+const visibleTableRows = computed(() =>
+  showAllRelations.value
+    ? tableRows.value
+    : tableRows.value.slice(0, RELATION_PREVIEW_LIMIT)
+);
+
+const hiddenRelationCount = computed(
+  () => tableRows.value.length - visibleTableRows.value.length
+);
+
 const getDirectionLabel = (directionKey: string) =>
   directionKey === "outgoing"
     ? t("relationView.outgoing")
@@ -129,7 +142,21 @@ const resetRelationFilters = () => {
   relationFilters.direction = "";
   relationFilters.relationType = "";
   relationFilters.directness = "";
+  showAllRelations.value = false;
 };
+
+const setDirectionFilter = (direction: "incoming" | "outgoing") => {
+  relationFilters.direction = direction;
+  showAllRelations.value = false;
+};
+
+const toggleShowAllRelations = () => {
+  showAllRelations.value = !showAllRelations.value;
+};
+
+defineExpose({
+  setDirectionFilter,
+});
 
 const openRelationSelect = (event: MouseEvent) => {
   const selectElement = (event.currentTarget as HTMLElement).querySelector(
@@ -152,6 +179,17 @@ watch(
       .map((relation) => relation.relationKey)
       .join("|"),
   () => resetRelationFilters()
+);
+
+watch(
+  () => ({
+    direction: relationFilters.direction,
+    relationType: relationFilters.relationType,
+    directness: relationFilters.directness,
+  }),
+  () => {
+    showAllRelations.value = false;
+  }
 );
 
 watch(
@@ -220,7 +258,7 @@ const relationRowClassName = ({ row }: { row: { isActive: boolean } }) =>
         <span>
           {{
             t("relationView.filteredRelationCount", {
-              count: tableRows.length,
+              count: visibleTableRows.length,
               total: selectedNetworkRelations.length,
             })
           }}
@@ -229,7 +267,11 @@ const relationRowClassName = ({ row }: { row: { isActive: boolean } }) =>
       <div class="node-relation-filter-grid">
         <label class="node-relation-filter-select" @click="openRelationSelect">
           <span>{{ t("relationView.filterDirection") }}</span>
-          <select v-model="relationFilters.direction">
+          <select
+            id="relation-filter-direction"
+            v-model="relationFilters.direction"
+            name="relation-filter-direction"
+          >
             <option value="">
               {{ t("relationView.allRelationFilterOptions") }}
             </option>
@@ -244,7 +286,11 @@ const relationRowClassName = ({ row }: { row: { isActive: boolean } }) =>
         </label>
         <label class="node-relation-filter-select" @click="openRelationSelect">
           <span>{{ t("relationView.filterRelationType") }}</span>
-          <select v-model="relationFilters.relationType">
+          <select
+            id="relation-filter-type"
+            v-model="relationFilters.relationType"
+            name="relation-filter-type"
+          >
             <option value="">
               {{ t("relationView.allRelationFilterOptions") }}
             </option>
@@ -259,7 +305,11 @@ const relationRowClassName = ({ row }: { row: { isActive: boolean } }) =>
         </label>
         <label class="node-relation-filter-select" @click="openRelationSelect">
           <span>{{ t("relationView.filterDirectness") }}</span>
-          <select v-model="relationFilters.directness">
+          <select
+            id="relation-filter-directness"
+            v-model="relationFilters.directness"
+            name="relation-filter-directness"
+          >
             <option value="">
               {{ t("relationView.allRelationFilterOptions") }}
             </option>
@@ -286,7 +336,7 @@ const relationRowClassName = ({ row }: { row: { isActive: boolean } }) =>
 
   <div class="node-relation-table-scroll">
     <el-table
-      :data="tableRows"
+      :data="visibleTableRows"
       size="small"
       stripe
       table-layout="fixed"
@@ -344,6 +394,20 @@ const relationRowClassName = ({ row }: { row: { isActive: boolean } }) =>
       </el-table-column>
     </el-table>
   </div>
+  <button
+    v-if="hiddenRelationCount > 0 || showAllRelations"
+    type="button"
+    class="node-relation-more node-attack-path-more-button"
+    @click="toggleShowAllRelations"
+  >
+    {{
+      showAllRelations
+        ? t("relationView.collapseRelationCount")
+        : t("relationView.hiddenRelationCount", {
+            count: hiddenRelationCount,
+          })
+    }}
+  </button>
 </template>
 
 <style scoped>

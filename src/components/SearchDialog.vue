@@ -201,8 +201,10 @@ function handleTouchStart(index: number) {
     <!-- 搜索输入框 -->
     <div class="search-input-wrapper">
       <el-input
+        id="global-search"
         ref="inputRef"
         v-model="query"
+        name="global-search"
         :placeholder="t('search.placeholder')"
         size="large"
         clearable

@@ -94,7 +94,7 @@ const selectedTermAliases = computed(() => getTermStringArray(selectedTermKey.va
         </div>
       </div>
 
-      <section class="detail-section">
+      <section class="detail-section" data-detail-anchor="terms">
         <h3>{{ $t("definition") }}</h3>
         <p>{{ $t(`BREAK.terms.${selectedTermKey}.definition`) }}</p>
       </section>
@@ -126,7 +126,7 @@ const selectedTermAliases = computed(() => getTermStringArray(selectedTermKey.va
         <h3>{{ $t("usageExample") }}</h3>
         <p>{{ $t(`BREAK.terms.${selectedTermKey}.usageExample`) }}</p>
       </section>
-      <section v-if="selectedTerm.relatedThreatActors.length" class="detail-section">
+      <section v-if="selectedTerm.relatedThreatActors.length" class="detail-section" data-detail-anchor="threat-actors">
         <h3>{{ $t("threatActors") }}</h3>
         <div class="entity-links">
           <router-link
@@ -139,7 +139,7 @@ const selectedTermAliases = computed(() => getTermStringArray(selectedTermKey.va
           </router-link>
         </div>
       </section>
-      <section v-if="selectedTerm.relatedAttackTools.length" class="detail-section">
+      <section v-if="selectedTerm.relatedAttackTools.length" class="detail-section" data-detail-anchor="attack-tools">
         <h3>{{ $t("attackTools") }}</h3>
         <div class="entity-links">
           <router-link
@@ -152,7 +152,7 @@ const selectedTermAliases = computed(() => getTermStringArray(selectedTermKey.va
           </router-link>
         </div>
       </section>
-      <section v-if="selectedTerm.relatedRisks.length" class="detail-section">
+      <section v-if="selectedTerm.relatedRisks.length" class="detail-section" data-detail-anchor="risks">
         <h3>{{ $t("risks") }}</h3>
         <div class="entity-links">
           <router-link
@@ -165,7 +165,7 @@ const selectedTermAliases = computed(() => getTermStringArray(selectedTermKey.va
           </router-link>
         </div>
       </section>
-      <section v-if="selectedTerm.relatedAvoidances.length" class="detail-section">
+      <section v-if="selectedTerm.relatedAvoidances.length" class="detail-section" data-detail-anchor="avoidances">
         <h3>{{ $t("riskAvoidances") }}</h3>
         <div class="entity-links">
           <router-link
@@ -178,7 +178,7 @@ const selectedTermAliases = computed(() => getTermStringArray(selectedTermKey.va
           </router-link>
         </div>
       </section>
-      <section v-if="selectedTerm.relatedBusinessScenes.length" class="detail-section">
+      <section v-if="selectedTerm.relatedBusinessScenes.length" class="detail-section" data-detail-anchor="business-scenes">
         <h3>{{ $t("businessScenes") }}</h3>
         <div class="entity-links">
           <router-link
@@ -191,7 +191,7 @@ const selectedTermAliases = computed(() => getTermStringArray(selectedTermKey.va
           </router-link>
         </div>
       </section>
-      <section v-if="selectedTerm.references?.length" class="detail-section">
+      <section v-if="selectedTerm.references?.length" class="detail-section" data-detail-anchor="references">
         <h3>{{ $t("references") }}</h3>
         <ReferenceList type="terms" :entity-key="selectedTermKey" />
       </section>

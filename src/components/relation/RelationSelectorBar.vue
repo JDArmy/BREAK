@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
-import type { RelationType } from "@/views/relation/relationTypes";
+import { RelationType } from "@/views/relation/relationTypes";
 
 const props = defineProps<{
   relType: RelationType;
@@ -26,6 +26,12 @@ const selectedKey = computed({
   get: () => props.relKey,
   set: (value: string) => emit("update:relKey", value),
 });
+
+const selectableRelationTypes = computed(() =>
+  Object.entries(props.RelationTypeMapping).filter(
+    ([key]) => key !== RelationType.term
+  )
+);
 
 const entitySelectOptionsReady = ref(false);
 
@@ -78,18 +84,25 @@ watch(
 
 <template>
   <div class="relation-selector">
-    <el-select v-model="selectedType" class="relation-select">
+    <el-select
+      id="relation-selector-type"
+      v-model="selectedType"
+      class="relation-select"
+      name="relation-selector-type"
+    >
       <el-option
-        v-for="(item, key) in RelationTypeMapping"
+        v-for="[key, item] in selectableRelationTypes"
         :key="key"
         :label="item.title"
         :value="key"
       />
     </el-select>
     <el-select-v2
+      id="relation-selector-key"
       v-model="selectedKey"
       class="relation-key-select"
       filterable
+      name="relation-selector-key"
       :height="320"
       :item-height="34"
       :options="entitySelectOptions"
