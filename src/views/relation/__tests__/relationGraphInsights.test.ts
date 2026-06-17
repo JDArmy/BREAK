@@ -6,17 +6,28 @@ import { RelationType, type Line, type Node } from "../relationTypes";
 describe("relationGraphInsights", () => {
   const t = (key: string) => key;
   const relationPriority: Record<string, number> = {
-    "直接导致风险": 1,
-    "使用攻击工具": 2,
-    "关联术语": 8,
-    "规避手段": 9,
+    直接导致风险: 1,
+    使用攻击工具: 2,
+    关联术语: 8,
+    规避手段: 9,
   };
   const nodes: Node[] = [
-    { id: "ROOT", type: RelationType.threatActor, text: "root actor", color: "" },
+    {
+      id: "ROOT",
+      type: RelationType.threatActor,
+      text: "root actor",
+      color: "",
+    },
     { id: "TOOL", type: RelationType.attackTool, text: "tool", color: "" },
     { id: "RISK", type: RelationType.risk, text: "risk", color: "" },
     { id: "AVOID", type: RelationType.avoidance, text: "avoidance", color: "" },
-    { id: "TERM", type: RelationType.term, text: "term", color: "", data: { isSubNode: true } },
+    {
+      id: "TERM",
+      type: RelationType.term,
+      text: "term",
+      color: "",
+      data: { isSubNode: true },
+    },
   ];
   const lines: Line[] = [
     { from: "ROOT", text: "使用攻击工具", to: "TOOL" },
@@ -70,7 +81,10 @@ describe("relationGraphInsights", () => {
             otherNodeTitle: "attack-tool:TOOL",
             sourceFields: ["source:使用攻击工具"],
           }),
-          targetNode: expect.objectContaining({ id: "TOOL", title: "attack-tool:TOOL" }),
+          targetNode: expect.objectContaining({
+            id: "TOOL",
+            title: "attack-tool:TOOL",
+          }),
           isCurrentTarget: false,
         }),
         expect.objectContaining({
@@ -79,7 +93,10 @@ describe("relationGraphInsights", () => {
             direction: "relationView.outgoing",
             directness: "relationView.direct",
           }),
-          targetNode: expect.objectContaining({ id: "RISK", title: "risk:RISK" }),
+          targetNode: expect.objectContaining({
+            id: "RISK",
+            title: "risk:RISK",
+          }),
           isCurrentTarget: false,
         }),
         expect.objectContaining({
@@ -87,7 +104,10 @@ describe("relationGraphInsights", () => {
             relationKey: "RISK::规避手段::AVOID",
             direction: "relationView.outgoing",
           }),
-          targetNode: expect.objectContaining({ id: "AVOID", title: "avoidance:AVOID" }),
+          targetNode: expect.objectContaining({
+            id: "AVOID",
+            title: "avoidance:AVOID",
+          }),
           isCurrentTarget: true,
         }),
       ],
@@ -104,12 +124,22 @@ describe("relationGraphInsights", () => {
     const insights = createInsights("RISK");
 
     expect(insights.selectedNetworkNodeTitle.value).toBe("risk:RISK");
-    expect(insights.selectedNetworkRelationCounts.value).toEqual({ incoming: 1, outgoing: 2 });
-    expect(insights.selectedNetworkRelations.value.map((relation) => relation.text)).toEqual([
-      "直接导致风险",
-      "关联术语",
-      "规避手段",
-    ]);
+    expect(insights.selectedNodeAnalysisSummary.value).toEqual(
+      expect.objectContaining({
+        summary: "relationView.nodeAnalysis.risk",
+        highlights: expect.arrayContaining([
+          "relationView.nodeAnalysisRelatedCount",
+        ]),
+        notices: ["relationView.nodeAnalysisNotice.rootPath"],
+      })
+    );
+    expect(insights.selectedNetworkRelationCounts.value).toEqual({
+      incoming: 1,
+      outgoing: 2,
+    });
+    expect(
+      insights.selectedNetworkRelations.value.map((relation) => relation.text)
+    ).toEqual(["直接导致风险", "关联术语", "规避手段"]);
     expect(insights.selectedNetworkRelations.value[0]).toEqual(
       expect.objectContaining({
         direction: "relationView.incoming",
@@ -136,10 +166,7 @@ describe("relationGraphInsights", () => {
       t,
       relKey: ref("ROOT"),
       nodes,
-      lines: [
-        ...lines,
-        { from: "ROOT", text: "直接导致风险", to: "RISK" },
-      ],
+      lines: [...lines, { from: "ROOT", text: "直接导致风险", to: "RISK" }],
       selectedNetworkNodeId: ref("RISK"),
       getNodeTitle: (type, key) => `${type}:${key}`,
       getNodeTypeTitle: (type) => `type:${type}`,

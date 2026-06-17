@@ -157,6 +157,7 @@ export default defineComponent({
       :selected-network-relation-counts="selectedNetworkRelationCounts"
       :root-node-relations="rootNodeRelations"
       :selected-node-root-path="selectedNodeRootPath"
+      :selected-node-analysis-summary="selectedNodeAnalysisSummary"
       :selected-node-attack-path-summary="selectedNodeAttackPathSummary"
       :selected-node-attack-path-description="selectedNodeAttackPathDescription"
       :selected-node-attack-path-explanations="

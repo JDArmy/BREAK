@@ -143,6 +143,23 @@
     "qualityFlagMissingSource": "缺少明确来源字段",
     "qualityFlagReview": "建议复核关系语义",
     "qualityFlagMissingAvoidance": "缺少规避措施覆盖",
+    "nodeAnalysisTitle": "为什么重要",
+    "nodeAnalysis": {
+      "risk": "该风险「{title}」关联 {relations} 条关系，连接 {attackTools} 个攻击工具、{threatActors} 个威胁行为者和 {avoidances} 个规避手段。",
+      "avoidance": "该规避手段「{title}」关联 {relations} 条关系，覆盖 {risks} 个风险，并连接 {attackTools} 个攻击工具。",
+      "attack-tool": "该攻击工具「{title}」关联 {relations} 条关系，连接 {risks} 个风险、{threatActors} 个威胁行为者和 {avoidances} 个规避手段。",
+      "threat-actor": "该威胁行为者「{title}」关联 {relations} 条关系，连接 {attackTools} 个攻击工具和 {risks} 个风险。",
+      "term": "该术语「{title}」关联 {relations} 条关系，连接 {risks} 个风险、{avoidances} 个规避手段、{attackTools} 个攻击工具和 {threatActors} 个威胁行为者。",
+      "default": "该节点「{title}」关联 {relations} 条关系。"
+    },
+    "nodeAnalysisRelatedCount": "{type} {count} 个",
+    "nodeAnalysisNotice": {
+      "highConnectivity": "该节点连接较多，适合作为关系分析入口。",
+      "lowConnectivity": "该节点关联较少，当前更偏局部观察。",
+      "missingAvoidance": "当前风险尚未看到明确规避覆盖，需要继续补齐。",
+      "missingRiskLink": "当前攻击工具暂未看到明确风险链路，需要继续复核。",
+      "rootPath": "当前节点可通过 {count} 跳路径回到根节点。"
+    },
     "evidenceLevel": {
       "direct": "直接证据",
       "indirect": "间接证据",

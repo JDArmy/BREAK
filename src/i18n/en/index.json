@@ -143,6 +143,23 @@
     "qualityFlagMissingSource": "Missing explicit source field",
     "qualityFlagReview": "Review relation semantics",
     "qualityFlagMissingAvoidance": "Missing avoidance coverage",
+    "nodeAnalysisTitle": "Why It Matters",
+    "nodeAnalysis": {
+      "risk": "Risk \"{title}\" has {relations} relations, connecting {attackTools} attack tools, {threatActors} threat actors, and {avoidances} avoidance measures.",
+      "avoidance": "Avoidance \"{title}\" has {relations} relations, covering {risks} risks and connecting {attackTools} attack tools.",
+      "attack-tool": "Attack tool \"{title}\" has {relations} relations, connecting {risks} risks, {threatActors} threat actors, and {avoidances} avoidance measures.",
+      "threat-actor": "Threat actor \"{title}\" has {relations} relations, connecting {attackTools} attack tools and {risks} risks.",
+      "term": "Term \"{title}\" has {relations} relations, connecting {risks} risks, {avoidances} avoidance measures, {attackTools} attack tools, and {threatActors} threat actors.",
+      "default": "Node \"{title}\" has {relations} relations."
+    },
+    "nodeAnalysisRelatedCount": "{type} {count}",
+    "nodeAnalysisNotice": {
+      "highConnectivity": "This node has many connections and is useful as a relation analysis entry point.",
+      "lowConnectivity": "This node has few relations and is currently more useful for local inspection.",
+      "missingAvoidance": "This risk has no explicit avoidance coverage yet and needs follow-up.",
+      "missingRiskLink": "This attack tool has no explicit risk link yet and should be reviewed.",
+      "rootPath": "This node can return to the root through a {count}-hop path."
+    },
     "evidenceLevel": {
       "direct": "Direct Evidence",
       "indirect": "Indirect Evidence",

@@ -66,6 +66,12 @@ interface RootPreviewSummary {
   groupedCounts: Record<string, number>;
 }
 
+interface NodeAnalysisSummary {
+  summary: string;
+  highlights: string[];
+  notices: string[];
+}
+
 interface AttackPathExplanation {
   pathKey: string;
   pathCount: number;
@@ -121,6 +127,7 @@ const props = defineProps<{
   };
   rootNodeRelations: RootRelationSummary[];
   selectedNodeRootPath: RootPathSummary | null;
+  selectedNodeAnalysisSummary: NodeAnalysisSummary | null;
   selectedNodeAttackPathSummary: string[];
   selectedNodeAttackPathDescription: string;
   selectedNodeAttackPathExplanations: AttackPathExplanation[];
@@ -179,9 +186,14 @@ const drawerVisible = computed({
       <RelationNodeDrawerInsights
         :root-node-relations="rootNodeRelations"
         :selected-node-root-path="selectedNodeRootPath"
+        :selected-node-analysis-summary="selectedNodeAnalysisSummary"
         :selected-node-attack-path-summary="selectedNodeAttackPathSummary"
-        :selected-node-attack-path-description="selectedNodeAttackPathDescription"
-        :selected-node-attack-path-explanations="selectedNodeAttackPathExplanations"
+        :selected-node-attack-path-description="
+          selectedNodeAttackPathDescription
+        "
+        :selected-node-attack-path-explanations="
+          selectedNodeAttackPathExplanations
+        "
         :selected-node-root-preview="selectedNodeRootPreview"
         :rel-key="relKey"
         :get-node-type-title="getNodeTypeTitle"

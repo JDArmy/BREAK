@@ -42,6 +42,12 @@ interface RootPreviewSummary {
   groupedCounts: Record<string, number>;
 }
 
+interface NodeAnalysisSummary {
+  summary: string;
+  highlights: string[];
+  notices: string[];
+}
+
 interface AttackPathExplanation {
   pathKey: string;
   pathCount: number;
@@ -90,6 +96,7 @@ interface AttackPathExplanation {
 const props = defineProps<{
   rootNodeRelations: RootRelationSummary[];
   selectedNodeRootPath: RootPathSummary | null;
+  selectedNodeAnalysisSummary: NodeAnalysisSummary | null;
   selectedNodeAttackPathSummary: string[];
   selectedNodeAttackPathDescription: string;
   selectedNodeAttackPathExplanations: AttackPathExplanation[];
@@ -327,6 +334,39 @@ watch(
 </script>
 
 <template>
+  <div v-if="selectedNodeAnalysisSummary" class="node-explain-block">
+    <h3>{{ t("relationView.nodeAnalysisTitle") }}</h3>
+    <div class="node-insight-panel node-analysis-panel">
+      <div class="node-analysis-summary">
+        {{ selectedNodeAnalysisSummary.summary }}
+      </div>
+      <div
+        v-if="selectedNodeAnalysisSummary.highlights.length"
+        class="node-analysis-chip-list"
+      >
+        <span
+          v-for="highlight in selectedNodeAnalysisSummary.highlights"
+          :key="highlight"
+          class="node-analysis-chip"
+        >
+          {{ highlight }}
+        </span>
+      </div>
+      <div
+        v-if="selectedNodeAnalysisSummary.notices.length"
+        class="node-analysis-notices"
+      >
+        <div
+          v-for="notice in selectedNodeAnalysisSummary.notices"
+          :key="notice"
+          class="node-analysis-notice"
+        >
+          {{ notice }}
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div v-if="rootNodeRelations.length" class="node-explain-block">
     <h3>{{ t("relationView.rootRelation") }}</h3>
     <div class="node-insight-panel">
@@ -747,6 +787,55 @@ watch(
   font-size: 12px;
   line-height: 1.45;
   overflow-wrap: anywhere;
+}
+
+.node-analysis-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.node-analysis-summary {
+  color: var(--break-text-secondary);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.node-analysis-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.node-analysis-chip {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  padding: 2px 7px;
+  border: 1px solid var(--break-border);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--break-bg-soft) 72%, transparent);
+  color: var(--break-text-secondary);
+  font-size: 11px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.node-analysis-notices {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.node-analysis-notice {
+  padding: 6px 8px;
+  border: 1px solid
+    color-mix(in srgb, var(--el-color-warning) 18%, var(--break-border));
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--el-color-warning) 5%, var(--break-bg));
+  color: var(--break-text-secondary);
+  font-size: 11px;
+  line-height: 1.5;
 }
 
 .node-relation-item {
