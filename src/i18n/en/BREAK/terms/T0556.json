@@ -2,7 +2,12 @@
   "T0556": {
     "title": "Chargeback",
     "keywords": [
-      "Chargeback"
+      "Chargeback",
+      "payment dispute",
+      "transaction reversal",
+      "card dispute",
+      "issuer dispute",
+      "chargeback fraud"
     ],
     "definition": "A payment reversal initiated through a card issuer or payment network after a dispute.",
     "description": "Chargeback is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

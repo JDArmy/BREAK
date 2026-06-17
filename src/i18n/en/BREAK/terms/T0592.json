@@ -2,7 +2,12 @@
   "T0592": {
     "title": "Verifiable Credential",
     "keywords": [
-      "Verifiable Credential"
+      "Verifiable Credential",
+      "VC",
+      "digital credential",
+      "credential proof",
+      "issuer signature",
+      "verifiable claim"
     ],
     "definition": "A tamper-evident credential whose issuer, subject, claims, and status can be cryptographically verified.",
     "description": "Verifiable Credential is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

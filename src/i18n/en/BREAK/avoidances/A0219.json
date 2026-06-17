@@ -9,7 +9,12 @@
       }
     ],
     "keywords": [
-      "Webhook Signature Verification and Replay Protection"
+      "Webhook Signature Verification and Replay Protection",
+      "webhook signature verification",
+      "timestamp window",
+      "replay protection",
+      "idempotency key",
+      "event origin validation"
     ],
     "definition": "Verify webhook signatures, timestamp windows, idempotency, and event origin."
   }

@@ -2,7 +2,12 @@
   "T0522": {
     "title": "Shadow API",
     "keywords": [
-      "Shadow API"
+      "Shadow API",
+      "undocumented API",
+      "unmanaged endpoint",
+      "deprecated API",
+      "API inventory",
+      "API discovery"
     ],
     "definition": "An undocumented, unmanaged, or deprecated API that remains reachable outside the official API inventory.",
     "description": "Shadow API is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

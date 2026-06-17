@@ -10,9 +10,11 @@
     ],
     "keywords": [
       "Least-Privilege CI/CD Pipeline Governance",
-      "Least-Privilege CI/CD Pipeline Governance controls",
-      "Least-Privilege CI/CD Pipeline Governance monitoring",
-      "Least-Privilege CI/CD Pipeline Governance policy"
+      "CI/CD least privilege",
+      "runner hardening",
+      "pipeline token scope",
+      "deployment credential control",
+      "build security"
     ],
     "definition": "Limit permissions for pipeline tokens, runners, artifact repositories, and deployment credentials to reduce build-chain abuse."
   }

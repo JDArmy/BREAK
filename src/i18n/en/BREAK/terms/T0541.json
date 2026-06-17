@@ -2,7 +2,12 @@
   "T0541": {
     "title": "Cloud IAM",
     "keywords": [
-      "Cloud IAM"
+      "Cloud IAM",
+      "cloud identity",
+      "access policy",
+      "service account",
+      "role permission",
+      "least privilege"
     ],
     "definition": "Cloud identity and access management controls for users, roles, service accounts, policies, and permissions.",
     "description": "Cloud IAM is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

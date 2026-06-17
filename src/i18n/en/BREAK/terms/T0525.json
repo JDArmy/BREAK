@@ -2,7 +2,12 @@
   "T0525": {
     "title": "Idempotency",
     "keywords": [
-      "Idempotency"
+      "Idempotency",
+      "idempotency key",
+      "duplicate request protection",
+      "safe retry",
+      "event deduplication",
+      "transaction consistency"
     ],
     "definition": "A property that allows repeated requests with the same intent to produce the same business result without duplicate side effects.",
     "description": "Idempotency is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

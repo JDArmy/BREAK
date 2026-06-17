@@ -3,7 +3,12 @@
     "title": "API Bulk-Call Resource Exhaustion",
     "definition": "Attackers call costly APIs at scale to consume quotas, inventory, compute capacity, or third-party service spend.",
     "keywords": [
-      "API Bulk-Call Resource Exhaustion"
+      "API Bulk-Call Resource Exhaustion",
+      "bulk API calls",
+      "resource exhaustion",
+      "API quota abuse",
+      "high-cost endpoint",
+      "rate limiting"
     ],
     "references": [
       {

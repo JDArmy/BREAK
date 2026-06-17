@@ -2,7 +2,12 @@
   "T0585": {
     "title": "WAF Rule",
     "keywords": [
-      "WAF Rule"
+      "WAF Rule",
+      "web application firewall",
+      "HTTP filtering rule",
+      "attack signature",
+      "traffic challenge",
+      "request blocking"
     ],
     "definition": "A web application firewall rule used to detect, block, challenge, or log suspicious HTTP traffic.",
     "description": "WAF Rule is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

@@ -2,7 +2,12 @@
   "T0543": {
     "title": "Object Storage Bucket",
     "keywords": [
-      "Object Storage Bucket"
+      "Object Storage Bucket",
+      "cloud bucket",
+      "object storage",
+      "public bucket",
+      "storage policy",
+      "bucket exposure"
     ],
     "definition": "A logical container in cloud object storage used to hold files, snapshots, logs, and other unstructured data.",
     "description": "Object Storage Bucket is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

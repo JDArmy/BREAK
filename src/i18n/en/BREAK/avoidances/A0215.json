@@ -9,7 +9,12 @@
       }
     ],
     "keywords": [
-      "RAG Knowledge-Base Permission Isolation"
+      "RAG Knowledge-Base Permission Isolation",
+      "RAG permission isolation",
+      "tenant-aware retrieval",
+      "document sensitivity label",
+      "vector index access control",
+      "knowledge base security"
     ],
     "definition": "Isolate RAG indexes and retrieval results by tenant, role, and document sensitivity to prevent cross-permission recall."
   }

@@ -3,7 +3,12 @@
     "title": "Edge Function Configuration Abuse",
     "definition": "Misconfigured edge functions or WAF rules cause authentication bypass, data forwarding, or traffic hijacking.",
     "keywords": [
-      "Edge Function Configuration Abuse"
+      "Edge Function Configuration Abuse",
+      "edge function abuse",
+      "WAF rule misconfiguration",
+      "edge routing hijack",
+      "authentication bypass",
+      "CDN security"
     ],
     "references": [
       {

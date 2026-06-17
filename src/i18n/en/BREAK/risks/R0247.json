@@ -3,7 +3,12 @@
     "title": "Session Token Replay",
     "definition": "Attackers replay stolen cookies, tokens, or session credentials from another device.",
     "keywords": [
-      "Session Token Replay"
+      "Session Token Replay",
+      "session replay",
+      "cookie replay",
+      "token theft",
+      "session hijacking",
+      "token binding"
     ],
     "references": [
       {

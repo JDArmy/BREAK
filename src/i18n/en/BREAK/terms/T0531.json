@@ -2,7 +2,12 @@
   "T0531": {
     "title": "CI/CD",
     "keywords": [
-      "CI/CD"
+      "CI/CD",
+      "continuous integration",
+      "continuous delivery",
+      "pipeline security",
+      "build automation",
+      "deployment pipeline"
     ],
     "definition": "Continuous integration and continuous delivery pipelines used to build, test, package, and release software.",
     "description": "CI/CD is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

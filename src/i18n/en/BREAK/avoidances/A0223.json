@@ -9,7 +9,12 @@
       }
     ],
     "keywords": [
-      "Decentralized Identity Credential Verification"
+      "Decentralized Identity Credential Verification",
+      "DID verification",
+      "verifiable credential validation",
+      "issuer trust",
+      "VC revocation check",
+      "presentation policy"
     ],
     "definition": "Verify DID and VC issuers, revocation status, and presentation policies to reduce credential forgery risk."
   }

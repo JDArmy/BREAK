@@ -2,7 +2,12 @@
   "T0569": {
     "title": "Knowledge-Base Permission",
     "keywords": [
-      "Knowledge-Base Permission"
+      "Knowledge-Base Permission",
+      "document permission",
+      "RAG access control",
+      "tenant isolation",
+      "knowledge authorization",
+      "content ACL"
     ],
     "definition": "Access rules that determine which users, roles, or tenants can retrieve specific knowledge-base content.",
     "description": "Knowledge-Base Permission is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

@@ -2,7 +2,12 @@
   "T0593": {
     "title": "VC Revocation",
     "keywords": [
-      "VC Revocation"
+      "VC Revocation",
+      "credential revocation",
+      "revocation registry",
+      "credential status",
+      "VC validity",
+      "issuer revocation"
     ],
     "definition": "A mechanism for invalidating or checking the current validity status of a verifiable credential.",
     "description": "VC Revocation is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

@@ -2,7 +2,12 @@
   "T0590": {
     "title": "V2X Certificate",
     "keywords": [
-      "V2X Certificate"
+      "V2X Certificate",
+      "vehicle certificate",
+      "V2X trust",
+      "connected-vehicle PKI",
+      "message authentication",
+      "transport security"
     ],
     "definition": "A certificate used to authenticate vehicle-to-everything communications and related trust relationships.",
     "description": "V2X Certificate is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

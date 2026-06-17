@@ -10,9 +10,11 @@
     ],
     "keywords": [
       "Connected-Vehicle OTA Security Governance",
-      "Connected-Vehicle OTA Security Governance controls",
-      "Connected-Vehicle OTA Security Governance monitoring",
-      "Connected-Vehicle OTA Security Governance policy"
+      "OTA signature verification",
+      "vehicle update security",
+      "firmware rollback protection",
+      "canary rollout",
+      "automotive cybersecurity"
     ],
     "definition": "Apply signature verification and security monitoring to vehicle OTA packages, upgrade channels, rollback policies, and phased releases."
   }

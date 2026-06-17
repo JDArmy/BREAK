@@ -2,7 +2,12 @@
   "T0578": {
     "title": "Token Binding",
     "keywords": [
-      "Token Binding"
+      "Token Binding",
+      "bound token",
+      "device-bound credential",
+      "proof-of-possession token",
+      "replay prevention",
+      "session binding"
     ],
     "definition": "A control that binds a token to a device, client, network, or cryptographic proof to limit replay.",
     "description": "Token Binding is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

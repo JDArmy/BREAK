@@ -3,7 +3,12 @@
     "title": "SaaS Third-Party App Authorization Abuse",
     "definition": "Employees grant high-privilege SaaS applications access to mail, drive, or customer data.",
     "keywords": [
-      "SaaS Third-Party App Authorization Abuse"
+      "SaaS Third-Party App Authorization Abuse",
+      "SaaS OAuth abuse",
+      "third-party app grant",
+      "admin consent",
+      "mail data access",
+      "drive data export"
     ],
     "references": [
       {

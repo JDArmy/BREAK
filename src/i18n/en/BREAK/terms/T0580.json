@@ -2,7 +2,12 @@
   "T0580": {
     "title": "APK Signing",
     "keywords": [
-      "APK Signing"
+      "APK Signing",
+      "Android signing",
+      "app signature",
+      "package integrity",
+      "signing certificate",
+      "APK verification"
     ],
     "definition": "The signing process that lets Android verify the publisher and integrity of an application package.",
     "description": "APK Signing is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

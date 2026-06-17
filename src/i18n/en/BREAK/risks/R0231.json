@@ -3,7 +3,12 @@
     "title": "Excessive Cloud IAM Privileges",
     "definition": "Cloud users, roles, or service accounts hold permissions beyond business need, expanding blast radius after compromise.",
     "keywords": [
-      "Excessive Cloud IAM Privileges"
+      "Excessive Cloud IAM Privileges",
+      "cloud IAM",
+      "over-privileged role",
+      "service account permissions",
+      "cross-account trust",
+      "least privilege"
     ],
     "references": [
       {

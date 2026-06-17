@@ -9,7 +9,12 @@
       }
     ],
     "keywords": [
-      "Mobile App Integrity and Runtime Protection"
+      "Mobile App Integrity and Runtime Protection",
+      "mobile app integrity",
+      "repackaging detection",
+      "hook detection",
+      "runtime protection",
+      "anti-tampering"
     ],
     "definition": "Detect repackaging, hooking, debugging, emulation, and runtime tampering to protect client-side business logic."
   }

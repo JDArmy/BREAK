@@ -4,9 +4,11 @@
     "definition": "Attackers contaminate training sets, feedback data, or labeling results to influence model behavior.",
     "keywords": [
       "Training Data Poisoning Risk",
-      "Training Data Poisoning Risk pattern",
-      "Training Data Poisoning Risk indicators",
-      "Training Data Poisoning Risk mitigation"
+      "training data poisoning",
+      "poisoned labels",
+      "feedback poisoning",
+      "model behavior manipulation",
+      "AI security"
     ],
     "references": [
       {

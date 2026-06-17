@@ -9,7 +9,12 @@
       }
     ],
     "keywords": [
-      "Build Artifact Signing and Provenance"
+      "Build Artifact Signing and Provenance",
+      "artifact signing",
+      "build provenance",
+      "SLSA attestation",
+      "image signing",
+      "release integrity"
     ],
     "definition": "Generate signatures, SLSA provenance, and verifiable release records for build outputs, images, and dependencies."
   }

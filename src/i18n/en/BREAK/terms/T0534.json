@@ -2,7 +2,12 @@
   "T0534": {
     "title": "Build Signing",
     "keywords": [
-      "Build Signing"
+      "Build Signing",
+      "artifact signature",
+      "release signing",
+      "code signing",
+      "build integrity",
+      "provenance verification"
     ],
     "definition": "A mechanism that cryptographically signs build artifacts so consumers can verify origin and integrity.",
     "description": "Build Signing is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

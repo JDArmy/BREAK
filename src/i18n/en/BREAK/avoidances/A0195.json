@@ -10,10 +10,11 @@
     ],
     "keywords": [
       "API Asset Discovery and Catalog Governance",
-      "API Asset Discovery and Catalog Governance controls",
-      "API Asset Discovery and Catalog Governance monitoring",
-      "API Asset Discovery and Catalog Governance policy",
-      "API security"
+      "API asset inventory",
+      "shadow API discovery",
+      "API ownership",
+      "endpoint lifecycle",
+      "API governance"
     ],
     "definition": "Maintain a unified API asset catalog, shadow API discovery, interface ownership, and lifecycle governance to reduce unknown interface exposure."
   }

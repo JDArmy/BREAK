@@ -3,9 +3,11 @@
     "title": "Quota Control",
     "keywords": [
       "Quota Control",
-      "Quota Control controls",
-      "Quota Control monitoring",
-      "Quota Control policy"
+      "usage quota",
+      "resource quota",
+      "consumption limit",
+      "tenant quota",
+      "billing protection"
     ],
     "definition": "A policy that limits total resource consumption such as calls, transactions, inventory, credits, or compute usage.",
     "description": "Quota Control is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

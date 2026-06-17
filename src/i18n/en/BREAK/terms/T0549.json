@@ -2,7 +2,12 @@
   "T0549": {
     "title": "DLP",
     "keywords": [
-      "DLP"
+      "DLP",
+      "data loss prevention",
+      "sensitive data control",
+      "outbound data monitoring",
+      "data exfiltration prevention",
+      "content inspection"
     ],
     "definition": "Data loss prevention controls that detect, classify, restrict, and audit sensitive data movement.",
     "description": "DLP is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

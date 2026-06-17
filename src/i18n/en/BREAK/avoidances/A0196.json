@@ -10,10 +10,11 @@
     ],
     "keywords": [
       "Strong API Authorization and Object-Level Access Control",
-      "Strong API Authorization and Object-Level Access Control controls",
-      "Strong API Authorization and Object-Level Access Control monitoring",
-      "Strong API Authorization and Object-Level Access Control policy",
-      "API security"
+      "object-level access control",
+      "tenant authorization",
+      "resource ownership check",
+      "BOLA prevention",
+      "API authorization"
     ],
     "definition": "Enforce server-side authorization for API objects, tenants, resources, and actions to prevent unauthorized access."
   }

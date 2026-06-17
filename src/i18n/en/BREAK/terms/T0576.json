@@ -2,7 +2,12 @@
   "T0576": {
     "title": "Session Token",
     "keywords": [
-      "Session Token"
+      "Session Token",
+      "session credential",
+      "bearer token",
+      "cookie token",
+      "authentication token",
+      "login session"
     ],
     "definition": "A credential representing an authenticated session, often stored in a cookie or bearer token.",
     "description": "Session Token is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

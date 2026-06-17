@@ -2,7 +2,12 @@
   "T0532": {
     "title": "Runner",
     "keywords": [
-      "Runner"
+      "Runner",
+      "CI runner",
+      "build runner",
+      "pipeline executor",
+      "job execution environment",
+      "runner isolation"
     ],
     "definition": "An execution environment that runs CI/CD jobs, build scripts, tests, and deployment tasks.",
     "description": "Runner is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

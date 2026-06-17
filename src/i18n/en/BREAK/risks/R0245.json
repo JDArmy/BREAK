@@ -3,7 +3,12 @@
     "title": "Sensitive Information Leakage in Model Output",
     "definition": "Models disclose training data, system prompts, or internal materials in conversations, summaries, or generated code.",
     "keywords": [
-      "Sensitive Information Leakage in Model Output"
+      "Sensitive Information Leakage in Model Output",
+      "model output leakage",
+      "prompt disclosure",
+      "training data extraction",
+      "sensitive data exposure",
+      "AI privacy"
     ],
     "references": [
       {

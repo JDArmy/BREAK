@@ -3,7 +3,12 @@
     "title": "Unauthorized RAG Retrieval",
     "definition": "Retrieval-augmented systems return document fragments or sensitive knowledge that the user is not authorized to access.",
     "keywords": [
-      "Unauthorized RAG Retrieval"
+      "Unauthorized RAG Retrieval",
+      "RAG permission bypass",
+      "unauthorized retrieval",
+      "vector database access",
+      "knowledge base isolation",
+      "tenant data leakage"
     ],
     "references": [
       {

@@ -2,7 +2,12 @@
   "T0546": {
     "title": "OAuth Grant",
     "keywords": [
-      "OAuth Grant"
+      "OAuth Grant",
+      "authorization grant",
+      "OAuth consent",
+      "delegated access",
+      "access token",
+      "scope permission"
     ],
     "definition": "An authorization grant that lets an application access resources on behalf of a user or tenant.",
     "description": "OAuth Grant is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

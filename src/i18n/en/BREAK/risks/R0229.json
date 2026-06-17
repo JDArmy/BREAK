@@ -3,7 +3,12 @@
     "title": "Invisible Vulnerability Impact from Missing SBOM",
     "definition": "The organization cannot quickly determine whether newly disclosed vulnerabilities affect its products or supplier deliveries.",
     "keywords": [
-      "Invisible Vulnerability Impact from Missing SBOM"
+      "Invisible Vulnerability Impact from Missing SBOM",
+      "missing SBOM",
+      "vulnerability impact analysis",
+      "component inventory",
+      "software bill of materials",
+      "supplier exposure"
     ],
     "references": [
       {

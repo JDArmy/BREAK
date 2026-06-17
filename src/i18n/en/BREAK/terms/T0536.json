@@ -2,7 +2,12 @@
   "T0536": {
     "title": "SBOM",
     "keywords": [
-      "SBOM"
+      "SBOM",
+      "software bill of materials",
+      "component inventory",
+      "dependency inventory",
+      "vulnerability impact",
+      "supply-chain visibility"
     ],
     "definition": "A software bill of materials that lists the components, dependencies, and versions included in software.",
     "description": "SBOM is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

@@ -10,10 +10,11 @@
     ],
     "keywords": [
       "API Rate Limiting and Quota Control",
-      "API Rate Limiting and Quota Control controls",
-      "API Rate Limiting and Quota Control monitoring",
-      "API Rate Limiting and Quota Control policy",
-      "API security"
+      "API rate limiting",
+      "quota control",
+      "dynamic throttling",
+      "circuit breaker",
+      "abuse prevention"
     ],
     "definition": "Apply dynamic limits, quotas, and circuit breakers by user, device, IP, tenant, endpoint, and business action."
   }

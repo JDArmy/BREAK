@@ -3,7 +3,12 @@
     "title": "Dependency Confusion and Malicious Package Poisoning",
     "definition": "Attackers publish same-name or look-alike packages that cause build systems to download malicious components.",
     "keywords": [
-      "Dependency Confusion and Malicious Package Poisoning"
+      "Dependency Confusion and Malicious Package Poisoning",
+      "dependency confusion",
+      "malicious package",
+      "package typosquatting",
+      "private package namespace",
+      "supply-chain attack"
     ],
     "references": [
       {

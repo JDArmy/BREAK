@@ -10,10 +10,11 @@
     ],
     "keywords": [
       "Cloud Configuration Baselines and Drift Detection",
-      "Cloud Configuration Baselines and Drift Detection controls",
-      "Cloud Configuration Baselines and Drift Detection monitoring",
-      "Cloud Configuration Baselines and Drift Detection policy",
-      "cloud security"
+      "cloud baseline",
+      "configuration drift",
+      "security group review",
+      "KMS configuration",
+      "cloud posture"
     ],
     "definition": "Establish baselines for cloud storage, network, security group, KMS, and logging configurations, and detect configuration drift."
   }

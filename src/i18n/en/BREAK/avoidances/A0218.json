@@ -10,9 +10,10 @@
     ],
     "keywords": [
       "Session Token Binding and Replay Detection",
-      "Session Token Binding and Replay Detection controls",
-      "Session Token Binding and Replay Detection monitoring",
-      "Session Token Binding and Replay Detection policy",
+      "session token binding",
+      "cookie replay detection",
+      "client attestation",
+      "device binding",
       "session security"
     ],
     "definition": "Bind sessions to device, network, and client attestation, and detect cookie or token replay."

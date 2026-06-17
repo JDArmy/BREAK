@@ -2,7 +2,12 @@
   "T0529": {
     "title": "Rate Limiting",
     "keywords": [
-      "Rate Limiting"
+      "Rate Limiting",
+      "request throttling",
+      "traffic shaping",
+      "quota enforcement",
+      "abuse prevention",
+      "API protection"
     ],
     "definition": "A control that restricts request frequency by identity, device, IP, tenant, endpoint, or business action.",
     "description": "Rate Limiting is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

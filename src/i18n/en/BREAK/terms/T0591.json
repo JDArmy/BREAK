@@ -2,7 +2,12 @@
   "T0591": {
     "title": "DID",
     "keywords": [
-      "DID"
+      "DID",
+      "decentralized identifier",
+      "self-sovereign identity",
+      "DID document",
+      "identifier resolution",
+      "identity proof"
     ],
     "definition": "A decentralized identifier that enables verifiable, self-managed digital identity without a central registry dependency.",
     "description": "DID is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

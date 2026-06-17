@@ -2,7 +2,12 @@
   "T0573": {
     "title": "Model Hallucination",
     "keywords": [
-      "Model Hallucination"
+      "Model Hallucination",
+      "fabricated output",
+      "unsupported answer",
+      "LLM hallucination",
+      "false generation",
+      "model reliability"
     ],
     "definition": "A model output that appears plausible but is unsupported, incorrect, fabricated, or misleading.",
     "description": "Model Hallucination is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

@@ -2,7 +2,12 @@
   "T0538": {
     "title": "Malicious Package",
     "keywords": [
-      "Malicious Package"
+      "Malicious Package",
+      "package malware",
+      "dependency backdoor",
+      "credential stealing package",
+      "typosquatting package",
+      "supply-chain malware"
     ],
     "definition": "A software package that contains hidden code for credential theft, backdoors, data exfiltration, or other abuse.",
     "description": "Malicious Package is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

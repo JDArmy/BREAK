@@ -2,7 +2,12 @@
   "T0567": {
     "title": "RAG",
     "keywords": [
-      "RAG"
+      "RAG",
+      "retrieval augmented generation",
+      "knowledge retrieval",
+      "LLM context",
+      "vector search",
+      "grounded generation"
     ],
     "definition": "Retrieval-augmented generation, where a model retrieves external knowledge and uses it as context for generation.",
     "description": "RAG is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

@@ -2,7 +2,12 @@
   "T0570": {
     "title": "Prompt Injection",
     "keywords": [
-      "Prompt Injection"
+      "Prompt Injection",
+      "instruction override",
+      "LLM jailbreak",
+      "external content injection",
+      "tool-call manipulation",
+      "prompt attack"
     ],
     "definition": "An attack that places instructions in user input or external content to override intended model behavior.",
     "description": "Prompt Injection is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

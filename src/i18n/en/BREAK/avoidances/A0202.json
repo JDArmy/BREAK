@@ -9,7 +9,12 @@
       }
     ],
     "keywords": [
-      "SBOM Generation and Vulnerability Impact Analysis"
+      "SBOM Generation and Vulnerability Impact Analysis",
+      "SBOM generation",
+      "component inventory",
+      "vulnerability impact analysis",
+      "software bill of materials",
+      "asset exposure"
     ],
     "definition": "Generate SBOMs for applications, images, and firmware, and quickly locate affected assets when new vulnerabilities are disclosed."
   }

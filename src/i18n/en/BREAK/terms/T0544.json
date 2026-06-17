@@ -2,7 +2,12 @@
   "T0544": {
     "title": "Configuration Drift",
     "keywords": [
-      "Configuration Drift"
+      "Configuration Drift",
+      "baseline drift",
+      "cloud misconfiguration",
+      "configuration monitoring",
+      "posture drift",
+      "change detection"
     ],
     "definition": "A deviation between the actual runtime configuration and the approved security or operations baseline.",
     "description": "Configuration Drift is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

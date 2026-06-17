@@ -2,7 +2,12 @@
   "T0568": {
     "title": "Vector Database",
     "keywords": [
-      "Vector Database"
+      "Vector Database",
+      "embedding database",
+      "similarity search",
+      "vector index",
+      "nearest neighbor search",
+      "semantic retrieval"
     ],
     "definition": "A database optimized for storing embeddings and performing similarity search over unstructured content.",
     "description": "Vector Database is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

@@ -2,7 +2,12 @@
   "T0540": {
     "title": "Software Supply Chain",
     "keywords": [
-      "Software Supply Chain"
+      "Software Supply Chain",
+      "build pipeline",
+      "dependency ecosystem",
+      "artifact provenance",
+      "release process",
+      "supplier risk"
     ],
     "definition": "The ecosystem of source code, dependencies, build systems, tools, artifacts, and release processes used to deliver software.",
     "description": "Software Supply Chain is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

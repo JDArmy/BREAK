@@ -2,7 +2,12 @@
   "T0526": {
     "title": "Replay Attack",
     "keywords": [
-      "Replay Attack"
+      "Replay Attack",
+      "request replay",
+      "event replay",
+      "token replay",
+      "signature replay",
+      "timestamp window"
     ],
     "definition": "An attack that reuses a valid request, event, token, or signature to trigger an operation again.",
     "description": "Replay Attack is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

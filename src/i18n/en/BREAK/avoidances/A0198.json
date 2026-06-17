@@ -9,7 +9,12 @@
       }
     ],
     "keywords": [
-      "API Input Validation and Contract Testing"
+      "API Input Validation and Contract Testing",
+      "OpenAPI contract testing",
+      "input validation",
+      "schema validation",
+      "parameter pollution",
+      "API fuzzing"
     ],
     "definition": "Validate input through OpenAPI contracts, type constraints, and payload testing to reduce injection and parameter pollution."
   }

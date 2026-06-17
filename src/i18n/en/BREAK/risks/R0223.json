@@ -4,10 +4,11 @@
     "definition": "The API checks only the login state but not object ownership, allowing attackers to enumerate and access other users' resources.",
     "keywords": [
       "API Object-Level Authorization Risk",
-      "API Object-Level Authorization Risk pattern",
-      "API Object-Level Authorization Risk indicators",
-      "API Object-Level Authorization Risk mitigation",
-      "API security"
+      "object-level authorization",
+      "BOLA",
+      "IDOR",
+      "resource ownership check",
+      "API access control"
     ],
     "references": [
       {

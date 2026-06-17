@@ -2,7 +2,12 @@
   "T0550": {
     "title": "Data Classification and Grading",
     "keywords": [
-      "Data Classification and Grading"
+      "Data Classification and Grading",
+      "data sensitivity",
+      "classification label",
+      "data protection level",
+      "information grading",
+      "data governance"
     ],
     "definition": "A governance practice that categorizes data by sensitivity, business value, and required protection level.",
     "description": "Data Classification and Grading is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

@@ -3,7 +3,12 @@
     "title": "Decentralized Identity Credential Forgery",
     "definition": "Attackers forge DIDs or verifiable credentials to impersonate users, organizations, or qualifications.",
     "keywords": [
-      "Decentralized Identity Credential Forgery"
+      "Decentralized Identity Credential Forgery",
+      "DID forgery",
+      "verifiable credential fraud",
+      "VC issuer validation",
+      "credential revocation",
+      "decentralized identity"
     ],
     "references": [
       {

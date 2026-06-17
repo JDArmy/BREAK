@@ -2,7 +2,12 @@
   "T0584": {
     "title": "Edge Function",
     "keywords": [
-      "Edge Function"
+      "Edge Function",
+      "serverless edge",
+      "CDN function",
+      "edge compute",
+      "request transformation",
+      "edge routing"
     ],
     "definition": "Code executed at CDN or edge locations to transform requests, responses, authentication, or routing.",
     "description": "Edge Function is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

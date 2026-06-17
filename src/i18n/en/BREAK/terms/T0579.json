@@ -2,7 +2,12 @@
   "T0579": {
     "title": "Mobile App Repackaging",
     "keywords": [
-      "Mobile App Repackaging"
+      "Mobile App Repackaging",
+      "APK repackaging",
+      "app tampering",
+      "fake app",
+      "resigned app",
+      "mobile malware"
     ],
     "definition": "Modification and redistribution of a mobile app package after decompilation, patching, and resigning.",
     "description": "Mobile App Repackaging is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

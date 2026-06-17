@@ -2,7 +2,12 @@
   "T0600": {
     "title": "Customer Support Data Leakage",
     "keywords": [
-      "Customer Support Data Leakage"
+      "Customer Support Data Leakage",
+      "support data leak",
+      "ticket data exposure",
+      "customer privacy leak",
+      "support screenshot leakage",
+      "CRM data exposure"
     ],
     "definition": "Exposure or unauthorized export of customer information contained in support, ticket, or service workflows.",
     "description": "Customer Support Data Leakage is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

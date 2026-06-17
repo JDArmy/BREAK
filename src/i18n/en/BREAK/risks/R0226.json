@@ -3,7 +3,12 @@
     "title": "CI/CD Pipeline Credential Exposure",
     "definition": "Pipeline logs, variables, runners, or build scripts expose deployment credentials and cloud keys.",
     "keywords": [
-      "CI/CD Pipeline Credential Exposure"
+      "CI/CD Pipeline Credential Exposure",
+      "CI/CD secrets",
+      "pipeline credential leakage",
+      "runner token exposure",
+      "deployment key leak",
+      "build log secrets"
     ],
     "references": [
       {

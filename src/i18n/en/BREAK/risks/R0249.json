@@ -3,7 +3,12 @@
     "title": "CDN Cache Poisoning",
     "definition": "Attackers poison cached content through cache-key confusion, header pollution, or edge-rule defects.",
     "keywords": [
-      "CDN Cache Poisoning"
+      "CDN Cache Poisoning",
+      "cache poisoning",
+      "CDN cache key",
+      "header pollution",
+      "edge cache abuse",
+      "web cache deception"
     ],
     "references": [
       {

@@ -2,7 +2,12 @@
   "T0535": {
     "title": "SLSA",
     "keywords": [
-      "SLSA"
+      "SLSA",
+      "software supply-chain levels",
+      "build provenance",
+      "supply-chain integrity",
+      "attestation",
+      "trusted build"
     ],
     "definition": "Supply-chain Levels for Software Artifacts, a framework for improving build provenance and supply-chain integrity.",
     "description": "SLSA is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

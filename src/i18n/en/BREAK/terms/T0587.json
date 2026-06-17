@@ -2,7 +2,12 @@
   "T0587": {
     "title": "Firmware Signing",
     "keywords": [
-      "Firmware Signing"
+      "Firmware Signing",
+      "firmware signature",
+      "secure boot",
+      "code signing",
+      "firmware integrity",
+      "trusted update"
     ],
     "definition": "A cryptographic control that verifies firmware origin and integrity before installation or execution.",
     "description": "Firmware Signing is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

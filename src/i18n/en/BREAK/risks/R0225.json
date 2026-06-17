@@ -3,7 +3,12 @@
     "title": "Webhook Forgery and Event Replay",
     "definition": "Attackers forge or replay webhook events to trigger false payments, shipments, authorizations, or status changes.",
     "keywords": [
-      "Webhook Forgery and Event Replay"
+      "Webhook Forgery and Event Replay",
+      "webhook replay",
+      "event forgery",
+      "signature verification",
+      "idempotency",
+      "timestamp window"
     ],
     "references": [
       {

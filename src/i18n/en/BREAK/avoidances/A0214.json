@@ -9,7 +9,12 @@
       }
     ],
     "keywords": [
-      "Model Output Safety Evaluation"
+      "Model Output Safety Evaluation",
+      "model output evaluation",
+      "harmful content testing",
+      "privacy leakage testing",
+      "hallucination review",
+      "AI safety"
     ],
     "definition": "Evaluate model outputs for harmful content, privacy leakage, hallucination, bias, and unauthorized advice."
   }

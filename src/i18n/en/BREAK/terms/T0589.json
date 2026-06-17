@@ -2,7 +2,12 @@
   "T0589": {
     "title": "Connected-Vehicle API",
     "keywords": [
-      "Connected-Vehicle API"
+      "Connected-Vehicle API",
+      "vehicle API",
+      "remote vehicle control",
+      "vehicle status API",
+      "telematics API",
+      "car data access"
     ],
     "definition": "An API that exposes vehicle status, location, remote-control, diagnostics, or service capabilities.",
     "description": "Connected-Vehicle API is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

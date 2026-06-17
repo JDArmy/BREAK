@@ -2,7 +2,12 @@
   "T0583": {
     "title": "Cache Poisoning",
     "keywords": [
-      "Cache Poisoning"
+      "Cache Poisoning",
+      "web cache poisoning",
+      "CDN cache poisoning",
+      "header pollution",
+      "cache key confusion",
+      "cached content tampering"
     ],
     "definition": "An attack that causes a cache to store and serve attacker-controlled or incorrect content.",
     "description": "Cache Poisoning is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

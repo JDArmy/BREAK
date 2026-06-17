@@ -9,7 +9,12 @@
       }
     ],
     "keywords": [
-      "Cloud Identity Permission Reduction"
+      "Cloud Identity Permission Reduction",
+      "cloud IAM review",
+      "least privilege",
+      "temporary credentials",
+      "cross-account trust",
+      "permission reduction"
     ],
     "definition": "Continuously detect excessive cloud permissions, long-lived keys, and cross-account trusts, then enforce least privilege and temporary credentials."
   }

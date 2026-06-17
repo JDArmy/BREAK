@@ -2,7 +2,12 @@
   "T0572": {
     "title": "Model Output Audit",
     "keywords": [
-      "Model Output Audit"
+      "Model Output Audit",
+      "AI output review",
+      "model monitoring",
+      "safety evaluation",
+      "privacy leakage test",
+      "hallucination review"
     ],
     "definition": "Review and monitoring of model outputs for safety, privacy, compliance, accuracy, and policy violations.",
     "description": "Model Output Audit is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

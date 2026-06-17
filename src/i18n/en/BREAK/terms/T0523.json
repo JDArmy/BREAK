@@ -2,7 +2,12 @@
   "T0523": {
     "title": "Object-Level Authorization",
     "keywords": [
-      "Object-Level Authorization"
+      "Object-Level Authorization",
+      "BOLA",
+      "IDOR",
+      "resource ownership check",
+      "object permission",
+      "API authorization"
     ],
     "definition": "A server-side authorization check that verifies whether the caller is allowed to access a specific object or resource instance.",
     "description": "Object-Level Authorization is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

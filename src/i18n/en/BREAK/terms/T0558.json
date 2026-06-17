@@ -2,7 +2,12 @@
   "T0558": {
     "title": "Merchant Cash-Out",
     "keywords": [
-      "Merchant Cash-Out"
+      "Merchant Cash-Out",
+      "fake merchant transaction",
+      "circular transaction",
+      "payment cash-out",
+      "merchant collusion",
+      "cash-out fraud"
     ],
     "definition": "A fraud pattern in which merchants use fake or circular transactions to convert payment channels into cash.",
     "description": "Merchant Cash-Out is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

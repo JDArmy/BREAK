@@ -2,7 +2,12 @@
   "T0574": {
     "title": "MFA Fatigue",
     "keywords": [
-      "MFA Fatigue"
+      "MFA Fatigue",
+      "push fatigue",
+      "MFA bombing",
+      "approval fatigue",
+      "number matching",
+      "account takeover"
     ],
     "definition": "A social-engineering tactic that repeatedly triggers MFA prompts until a user approves one by mistake.",
     "description": "MFA Fatigue is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

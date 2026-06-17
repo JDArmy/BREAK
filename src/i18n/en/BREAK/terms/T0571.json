@@ -2,7 +2,12 @@
   "T0571": {
     "title": "Training Data Poisoning",
     "keywords": [
-      "Training Data Poisoning"
+      "Training Data Poisoning",
+      "data poisoning",
+      "poisoned dataset",
+      "label poisoning",
+      "feedback poisoning",
+      "model manipulation"
     ],
     "definition": "Manipulation of training, feedback, or labeling data to influence model behavior.",
     "description": "Training Data Poisoning is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

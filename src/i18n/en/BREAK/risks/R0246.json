@@ -3,7 +3,12 @@
     "title": "MFA Fatigue Attack",
     "definition": "Attackers repeatedly trigger MFA prompts to induce users to approve a login by mistake.",
     "keywords": [
-      "MFA Fatigue Attack"
+      "MFA Fatigue Attack",
+      "MFA fatigue",
+      "push bombing",
+      "number matching",
+      "account takeover",
+      "social engineering"
     ],
     "references": [
       {

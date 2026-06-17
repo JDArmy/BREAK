@@ -4,9 +4,11 @@
     "definition": "Attackers tamper with build artifacts, container images, or release packages to introduce backdoors into production.",
     "keywords": [
       "Build Artifact Poisoning Risk",
-      "Build Artifact Poisoning Risk pattern",
-      "Build Artifact Poisoning Risk indicators",
-      "Build Artifact Poisoning Risk mitigation"
+      "artifact poisoning",
+      "container image tampering",
+      "release package backdoor",
+      "build provenance",
+      "software supply chain"
     ],
     "references": [
       {

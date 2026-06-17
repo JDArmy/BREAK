@@ -2,7 +2,12 @@
   "T0545": {
     "title": "SaaS",
     "keywords": [
-      "SaaS"
+      "SaaS",
+      "software as a service",
+      "tenant configuration",
+      "cloud application",
+      "SaaS security",
+      "application permission"
     ],
     "definition": "Software as a service delivered through a provider-operated application and managed through tenant-level configuration.",
     "description": "SaaS is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

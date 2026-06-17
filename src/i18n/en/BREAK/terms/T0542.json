@@ -2,7 +2,12 @@
   "T0542": {
     "title": "Temporary Credential",
     "keywords": [
-      "Temporary Credential"
+      "Temporary Credential",
+      "short-lived credential",
+      "STS token",
+      "temporary access key",
+      "session credential",
+      "credential rotation"
     ],
     "definition": "A short-lived credential issued for bounded access, reducing exposure compared with long-lived secrets.",
     "description": "Temporary Credential is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

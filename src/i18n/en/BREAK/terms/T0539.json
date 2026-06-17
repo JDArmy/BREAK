@@ -2,7 +2,12 @@
   "T0539": {
     "title": "Lock File",
     "keywords": [
-      "Lock File"
+      "Lock File",
+      "dependency lock",
+      "version pinning",
+      "package integrity",
+      "repeatable build",
+      "dependency resolution"
     ],
     "definition": "A file that records exact dependency versions and integrity metadata to make builds repeatable.",
     "description": "Lock File is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

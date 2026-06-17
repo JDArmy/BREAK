@@ -10,9 +10,11 @@
     ],
     "keywords": [
       "Dependency Pinning and Malicious Package Detection",
-      "Dependency Pinning and Malicious Package Detection controls",
-      "Dependency Pinning and Malicious Package Detection monitoring",
-      "Dependency Pinning and Malicious Package Detection policy"
+      "dependency pinning",
+      "lock file",
+      "malicious package scanning",
+      "private package proxy",
+      "supply-chain defense"
     ],
     "definition": "Use lock files, private proxy repositories, malicious-package scanning, and dependency audits to control supply-chain poisoning."
   }

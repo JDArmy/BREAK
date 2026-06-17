@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "npm run lint && npm run type-check && npm run validate:data && npm run test && npm run build-only && npm run audit:bundle:check && npm run validate:docs-build && npm run test:smoke && npm run test:performance",
+    "build": "npm run lint && npm run type-check && npm run validate:data && npm run test && npm run test:coverage && npm run build-only && npm run audit:bundle:check && npm run validate:docs-build && npm run test:smoke && npm run test:performance",
     "preview": "vite preview",
     "build-only": "vite build",
     "analyze": "ANALYZE=1 vite build",
@@ -29,6 +29,7 @@
     "audit:bundle:check": "node scripts/validate/bundle-budget.mjs --check-only",
     "audit:maintenance": "npm run audit:references && npm run audit:relations && npm run audit:metrics && node scripts/validate/bundle-budget.mjs --no-fail && node scripts/validate/maintenance.mjs",
     "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
     "test:watch": "vitest"
   },
   "dependencies": {
@@ -47,6 +48,7 @@
     "@types/node": "^22.15.0",
     "@vitejs/plugin-vue": "^6.0.7",
     "@vitejs/plugin-vue-jsx": "^5.1.5",
+    "@vitest/coverage-v8": "^4.1.9",
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/eslint-config-typescript": "^14.7.0",
     "@vue/tsconfig": "^0.7.0",

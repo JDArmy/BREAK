@@ -2,7 +2,12 @@
   "T0577": {
     "title": "Cookie Replay",
     "keywords": [
-      "Cookie Replay"
+      "Cookie Replay",
+      "session cookie replay",
+      "stolen cookie",
+      "session hijacking",
+      "browser token replay",
+      "cookie theft"
     ],
     "definition": "Reuse of a stolen session cookie to impersonate a user from another client or device.",
     "description": "Cookie Replay is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

@@ -2,7 +2,12 @@
   "T0582": {
     "title": "CDN Cache Key",
     "keywords": [
-      "CDN Cache Key"
+      "CDN Cache Key",
+      "cache key",
+      "CDN caching",
+      "vary header",
+      "cache partitioning",
+      "web cache security"
     ],
     "definition": "The request attributes used by a CDN to decide whether two requests map to the same cached object.",
     "description": "CDN Cache Key is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

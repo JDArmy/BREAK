@@ -3,7 +3,12 @@
     "title": "Public Cloud Storage Bucket Exposure",
     "definition": "Object storage buckets or snapshots are misconfigured for public access, causing data leakage.",
     "keywords": [
-      "Public Cloud Storage Bucket Exposure"
+      "Public Cloud Storage Bucket Exposure",
+      "public storage bucket",
+      "object storage exposure",
+      "cloud snapshot leak",
+      "misconfigured bucket",
+      "data leakage"
     ],
     "references": [
       {

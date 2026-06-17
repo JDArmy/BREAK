@@ -4,10 +4,11 @@
     "definition": "Undocumented or deprecated APIs remain reachable, allowing sensitive capabilities to bypass formal governance.",
     "keywords": [
       "Shadow API Exposure Risk",
-      "Shadow API Exposure Risk pattern",
-      "Shadow API Exposure Risk indicators",
-      "Shadow API Exposure Risk mitigation",
-      "API security"
+      "shadow API",
+      "undocumented API",
+      "deprecated endpoint",
+      "API inventory gap",
+      "API governance"
     ],
     "references": [
       {

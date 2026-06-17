@@ -2,7 +2,12 @@
   "T0581": {
     "title": "Runtime Protection",
     "keywords": [
-      "Runtime Protection"
+      "Runtime Protection",
+      "anti-tampering",
+      "hook detection",
+      "debugger detection",
+      "emulator detection",
+      "mobile runtime security"
     ],
     "definition": "Controls that detect or resist tampering, hooking, debugging, emulation, and runtime manipulation.",
     "description": "Runtime Protection is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",

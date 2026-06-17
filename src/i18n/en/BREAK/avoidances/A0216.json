@@ -9,7 +9,12 @@
       }
     ],
     "keywords": [
-      "Prompt Injection Defense and Context Isolation"
+      "Prompt Injection Defense and Context Isolation",
+      "prompt injection defense",
+      "context isolation",
+      "tool call policy",
+      "external content filtering",
+      "LLM security"
     ],
     "definition": "Separate system instructions, user input, and external content, and apply policy checks to tool-call parameters."
   }

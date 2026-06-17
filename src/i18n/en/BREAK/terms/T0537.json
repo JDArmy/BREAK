@@ -2,7 +2,12 @@
   "T0537": {
     "title": "Dependency Confusion",
     "keywords": [
-      "Dependency Confusion"
+      "Dependency Confusion",
+      "package namespace confusion",
+      "malicious dependency",
+      "internal package hijack",
+      "supply-chain attack",
+      "package resolution"
     ],
     "definition": "A supply-chain attack in which a malicious public package with a matching name is chosen instead of the intended internal dependency.",
     "description": "Dependency Confusion is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
