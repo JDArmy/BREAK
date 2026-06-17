@@ -68,6 +68,8 @@ npm run audit:references
 npm run audit:maintenance
 npm run test
 npm run test:coverage
+npm run validate:schema-docs
+npm run schema:docs:write
 npm run export:data
 npm run validate:data-export
 npm run validate:docs-build
@@ -81,9 +83,11 @@ npm run lint
 npm run type-check
 ```
 
-`npm run validate:data` runs JSON Schema validation, i18n key synchronization, and relationship coverage auditing.
-`npm run build` runs `lint`, `type-check`, `validate:data`, `test`, `test:coverage`, `validate:docs-build`, `export:data`, `build-only`, `audit:bundle:check`, `validate:data-export`, `test:smoke`, and `test:performance`.
+`npm run validate:data` runs JSON Schema validation, i18n key synchronization, relationship coverage auditing, and generated schema documentation checks.
+`npm run build` runs `lint`, `type-check`, `validate:data`, `test`, `test:coverage`, `validate:schema-docs`, `validate:docs-build`, `export:data`, `build-only`, `audit:bundle:check`, `validate:data-export`, `test:smoke`, and `test:performance`.
 `npm run test:coverage` enforces the core logic coverage baseline for relation analysis, search, safe i18n, and BREAK data utilities.
+`npm run validate:schema-docs` checks [DATA_SCHEMA.md](./DATA_SCHEMA.md) against `src/validation/breakSchema.ts`.
+`npm run schema:docs:write` regenerates [DATA_SCHEMA.md](./DATA_SCHEMA.md) after schema changes.
 `npm run export:data` writes the static data bundle to `public/data/break-data.json` and `public/data/break-manifest.json`.
 `npm run validate:data-export` checks the public data bundle, manifest hash, entity counts, version, and copied GitHub Pages artifacts.
 `npm run validate:docs-build` checks that the committed `docs/` GitHub Pages artifacts match the current build output.

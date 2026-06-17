@@ -37,6 +37,10 @@
   - `fix:keywords` 保持显式写入模式，普通 `validate:data` 只报告不改写实体文件
   - `npm run build`、CI 和 Deploy 会先检查已提交 `docs/` 同步状态，再重新生成 Pages 产物用于后续 smoke/performance 验证
   - 统一中文界面中的“业务场景”表述
+- 新增：数据 Schema 文档生成
+  - 新增 `DATA_SCHEMA.md` 说明实体文件规则、字段约束、引用结构和关系语义
+  - 新增 `schema:docs:write` 从 `src/validation/breakSchema.ts` 生成文档
+  - 新增 `validate:schema-docs` 并接入 `validate:data` 和 `npm run build`，防止 Schema 文档漂移
 - 新增：关系图谱回归测试覆盖
   - 补充 Sankey 攻击路径、路径角色说明和移动端高度测试
   - 补充根节点路径解释、关系洞察和局部预览统计测试

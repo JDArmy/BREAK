@@ -68,6 +68,8 @@ npm run audit:references
 npm run audit:maintenance
 npm run test
 npm run test:coverage
+npm run validate:schema-docs
+npm run schema:docs:write
 npm run export:data
 npm run validate:data-export
 npm run validate:docs-build
@@ -81,9 +83,11 @@ npm run lint
 npm run type-check
 ```
 
-`npm run validate:data` 会执行 JSON Schema 校验、i18n key 同步检查和关系覆盖审计。
-`npm run build` 会执行 `lint`、`type-check`、`validate:data`、`test`、`test:coverage`、`validate:docs-build`、`export:data`、`build-only`、`audit:bundle:check`、`validate:data-export`、`test:smoke` 和 `test:performance`。
+`npm run validate:data` 会执行 JSON Schema 校验、i18n key 同步检查、关系覆盖审计和生成式 Schema 文档同步检查。
+`npm run build` 会执行 `lint`、`type-check`、`validate:data`、`test`、`test:coverage`、`validate:schema-docs`、`validate:docs-build`、`export:data`、`build-only`、`audit:bundle:check`、`validate:data-export`、`test:smoke` 和 `test:performance`。
 `npm run test:coverage` 会对关系分析、搜索、安全 i18n 和 BREAK 数据工具执行核心逻辑覆盖率门禁。
+`npm run validate:schema-docs` 会检查 [DATA_SCHEMA.md](./DATA_SCHEMA.md) 是否与 `src/validation/breakSchema.ts` 同步。
+`npm run schema:docs:write` 会在 Schema 变更后重新生成 [DATA_SCHEMA.md](./DATA_SCHEMA.md)。
 `npm run export:data` 会生成 `public/data/break-data.json` 和 `public/data/break-manifest.json` 静态数据包。
 `npm run validate:data-export` 会检查公共数据包、manifest hash、实体计数、版本号和 GitHub Pages 产物同步状态。
 `npm run validate:docs-build` 会检查已提交的 `docs/` GitHub Pages 产物是否与当前构建输出一致。

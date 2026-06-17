@@ -94,6 +94,7 @@ const buildGateScripts = [
   'validate:data',
   'test',
   'test:coverage',
+  'validate:schema-docs',
   'validate:docs-build',
   'export:data',
   'build-only',
@@ -102,6 +103,7 @@ const buildGateScripts = [
   'test:smoke',
   'test:performance',
 ];
+const documentedUtilityScripts = ['schema:docs:write'];
 
 const englishStats =
   `The current framework catalogues ${counts.risks.total} risk items, ` +
@@ -117,6 +119,8 @@ const chineseStats =
 
 expectIncludes('readme', englishStats, 'README entity totals');
 expectIncludes('readmeCn', chineseStats, 'README_CN entity totals');
+expectIncludes('readme', '[DATA_SCHEMA.md](./DATA_SCHEMA.md)', 'README schema docs link');
+expectIncludes('readmeCn', '[DATA_SCHEMA.md](./DATA_SCHEMA.md)', 'README_CN schema docs link');
 if (hasRoadmap) {
   expectIncludes('roadmap', `当前项目版本：${packageJson.version}`, 'ROADMAP package version');
   expectIncludes('roadmap', `参考资料总量：${metricReferenceTotal} 条`, 'ROADMAP reference total');
@@ -131,6 +135,14 @@ for (const scriptName of buildGateScripts) {
   expectIncludes('readmeCn', `npm run ${scriptName}`, `README_CN build gate ${scriptName}`);
   if (hasRoadmap) {
     expectIncludes('roadmap', `npm run ${scriptName}`, `ROADMAP build gate ${scriptName}`);
+  }
+}
+
+for (const scriptName of documentedUtilityScripts) {
+  expectIncludes('readme', `npm run ${scriptName}`, `README utility script ${scriptName}`);
+  expectIncludes('readmeCn', `npm run ${scriptName}`, `README_CN utility script ${scriptName}`);
+  if (hasRoadmap) {
+    expectIncludes('roadmap', `npm run ${scriptName}`, `ROADMAP utility script ${scriptName}`);
   }
 }
 
