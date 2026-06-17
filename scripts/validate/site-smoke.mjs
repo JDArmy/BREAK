@@ -50,6 +50,18 @@ const routes = [
   { path: '/#/relation/risk/R0001?view=sankey', text: /R0001|攻击路径|Attack Path|关系网络|Network/i },
 ];
 
+function isSameOrigin(url, baseUrl) {
+  try {
+    return new URL(url).origin === new URL(baseUrl).origin;
+  } catch {
+    return false;
+  }
+}
+
+function formatRequest(request) {
+  return `${request.method()} ${request.url()}`;
+}
+
 const port = await findFreePort();
 const baseUrl = `http://${host}:${port}`;
 const preview = spawn(
@@ -74,13 +86,30 @@ try {
   browser = await chromium.launch({ headless: true });
   const page = await browser.newPage({ viewport: { width: 1366, height: 900 } });
   const runtimeErrors = [];
+  const resourceErrors = [];
   page.on('pageerror', (error) => {
     runtimeErrors.push(error.message);
   });
   page.on('console', (message) => {
     if (message.type() === 'error') {
+      if (message.text().startsWith('Failed to load resource:')) {
+        return;
+      }
       runtimeErrors.push(message.text());
     }
+  });
+  page.on('requestfailed', (request) => {
+    if (!isSameOrigin(request.url(), baseUrl)) {
+      return;
+    }
+    resourceErrors.push(`${formatRequest(request)} failed: ${request.failure()?.errorText ?? 'unknown'}`);
+  });
+  page.on('response', (response) => {
+    const status = response.status();
+    if (status < 400 || !isSameOrigin(response.url(), baseUrl)) {
+      return;
+    }
+    resourceErrors.push(`${response.request().method()} ${response.url()} returned HTTP ${status}`);
   });
 
   for (const route of routes) {
@@ -100,6 +129,9 @@ try {
 
   if (runtimeErrors.length > 0) {
     throw new Error(`Runtime errors during smoke test:\n${runtimeErrors.map((item) => `- ${item}`).join('\n')}`);
+  }
+  if (resourceErrors.length > 0) {
+    throw new Error(`Same-origin resource errors during smoke test:\n${resourceErrors.map((item) => `- ${item}`).join('\n')}`);
   }
 
   console.log('\n✅ 站点 smoke 测试通过');

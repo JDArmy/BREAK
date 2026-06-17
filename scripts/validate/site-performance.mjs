@@ -97,6 +97,18 @@ function collectBudgetIssues(result) {
   return issues;
 }
 
+function isSameOrigin(url, baseUrl) {
+  try {
+    return new URL(url).origin === new URL(baseUrl).origin;
+  } catch {
+    return false;
+  }
+}
+
+function formatRequest(request) {
+  return `${request.method()} ${request.url()}`;
+}
+
 const port = await findFreePort();
 const baseUrl = `http://${host}:${port}`;
 const preview = spawn(
@@ -121,6 +133,7 @@ try {
   browser = await chromium.launch({ headless: true });
   const results = [];
   const runtimeErrors = [];
+  const resourceErrors = [];
 
   for (const route of routes) {
     const context = await browser.newContext({ viewport: { width: 1366, height: 900 } });
@@ -130,8 +143,26 @@ try {
     });
     page.on('console', (message) => {
       if (message.type() === 'error') {
+        if (message.text().startsWith('Failed to load resource:')) {
+          return;
+        }
         runtimeErrors.push(`${route.label}: ${message.text()}`);
       }
+    });
+    page.on('requestfailed', (request) => {
+      if (!isSameOrigin(request.url(), baseUrl)) {
+        return;
+      }
+      resourceErrors.push(
+        `${route.label}: ${formatRequest(request)} failed: ${request.failure()?.errorText ?? 'unknown'}`,
+      );
+    });
+    page.on('response', (response) => {
+      const status = response.status();
+      if (status < 400 || !isSameOrigin(response.url(), baseUrl)) {
+        return;
+      }
+      resourceErrors.push(`${route.label}: ${response.request().method()} ${response.url()} returned HTTP ${status}`);
     });
 
     const startedAt = Date.now();
@@ -166,6 +197,9 @@ try {
   const budgetIssues = results.flatMap(collectBudgetIssues);
   if (runtimeErrors.length > 0) {
     throw new Error(`Runtime errors during performance test:\n${runtimeErrors.map((item) => `- ${item}`).join('\n')}`);
+  }
+  if (resourceErrors.length > 0) {
+    throw new Error(`Same-origin resource errors during performance test:\n${resourceErrors.map((item) => `- ${item}`).join('\n')}`);
   }
   if (budgetIssues.length > 0) {
     throw new Error(`Performance budgets exceeded:\n${budgetIssues.map((item) => `- ${item}`).join('\n')}`);
