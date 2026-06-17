@@ -18,13 +18,15 @@ import { RelationType, type Line, type Node, isRelationEntityType, createRelatio
 interface UseRelationNodeActionsOptions {
   t: Translate;
   router: Router;
-  networkPaneRef: Ref<HTMLDivElement | undefined>;
+  contextMenuPaneRef: Ref<HTMLDivElement | undefined>;
   dropdown1: Ref<DropdownInstance | undefined>;
   relKey: Ref<string>;
+  relType: Ref<RelationType>;
   lines: Line[];
   selectedNetworkNode: ComputedRef<Node | null>;
   selectedNetworkNodeId: Ref<string>;
   RelationTypeMapping: ReturnType<typeof createRelationTypeMapping>;
+  ensureRelationNode: (type: Exclude<RelationType, RelationType.all>, key: string) => Node;
   findNodeById: (id: string) => Node | undefined;
   buildNodeSummary: (nodeId: string) => NodeSummary;
   isDirectRelationLine: (lineText: string) => boolean;
@@ -41,13 +43,15 @@ interface UseRelationNodeActionsOptions {
 export const useRelationNodeActions = ({
   t,
   router,
-  networkPaneRef,
+  contextMenuPaneRef,
   dropdown1,
   relKey,
+  relType,
   lines,
   selectedNetworkNode,
   selectedNetworkNodeId,
   RelationTypeMapping,
+  ensureRelationNode,
   findNodeById,
   buildNodeSummary,
   isDirectRelationLine,
@@ -66,7 +70,7 @@ export const useRelationNodeActions = ({
     openContextMenuAtPointer,
     setContextAvailability,
   } = createRelationNodeContextMenu({
-    networkPaneRef,
+    contextMenuPaneRef,
     dropdown1,
     relKey,
     RelationTypeMapping,
@@ -119,6 +123,17 @@ export const useRelationNodeActions = ({
     openContextMenuAtPointer(e);
     dropdown1.value?.handleOpen();
     setContextAvailability(node);
+  };
+
+  const prepareNodeActions = (type: Exclude<RelationType, RelationType.all>, id: string) => {
+    const hasCurrentRootRelations = lines.length > 0;
+    if (!hasCurrentRootRelations) {
+      genNetworkGraphData(RelationType.all, relType.value, relKey.value, { render: false });
+    }
+    const node = findNodeById(id) ?? ensureRelationNode(type, id);
+    selectedNetworkNodeId.value = id;
+    setContextAvailability(node);
+    return node;
   };
 
   const scrollDrawerToTop = () => {
@@ -271,6 +286,7 @@ export const useRelationNodeActions = ({
     openNodeDetailDrawer,
     openSelectedNodeAsRoot,
     openTouchNodeDetailDrawer,
+    prepareNodeActions,
     toggleLineFilter,
     toggleNodeFilter,
     touchActionClose,

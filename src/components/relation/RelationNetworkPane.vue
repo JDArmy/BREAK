@@ -1,17 +1,13 @@
 <script setup lang="ts">
-import type { DropdownInstance } from "element-plus";
 import type { ComponentPublicInstance } from "vue";
 import RelationFilterPanels from "@/components/relation/RelationFilterPanels.vue";
-import RelationGraphContextMenu from "@/components/relation/RelationGraphContextMenu.vue";
 import RelationGraphToolbar from "@/components/relation/RelationGraphToolbar.vue";
-import RelationGraphTouchActions from "@/components/relation/RelationGraphTouchActions.vue";
-import { RelationType, type NetworkLayoutMode } from "@/views/relation/relationTypes";
+import type { NetworkLayoutMode } from "@/views/relation/relationTypes";
 
 const props = defineProps<{
   setNetworkPaneElement?: (element: HTMLDivElement | undefined) => void;
   setNetworkScrollerElement?: (element: HTMLDivElement | undefined) => void;
   setNetworkChartElement?: (element: HTMLDivElement | undefined) => void;
-  setDropdownInstance?: (instance: DropdownInstance | undefined) => void;
   networkLayoutTooltip: string;
   networkLayoutOptions: { value: NetworkLayoutMode; labelKey: string }[];
   networkState: { layout: NetworkLayoutMode };
@@ -24,11 +20,6 @@ const props = defineProps<{
   subNodeFilterColor?: string;
   visibleRelationLegendItems: { color: string; label: string; fields: string[] }[];
   formatRelationFieldsTooltip: (fields: string[]) => string;
-  dropdownStyle: Record<string, string | number>;
-  RelationTypeMapping: Record<string, { title: string; disableContextMenu: { value: boolean } }>;
-  disableContextMenuAll: boolean;
-  disableContextMenuOpenAsRoot: boolean;
-  touchActionVisible: boolean;
 }>();
 
 const emit = defineEmits<{
@@ -47,13 +38,6 @@ const emit = defineEmits<{
   "update:filterSubNode": [value: boolean];
   "update:filterLineType": [value: string[]];
   filter: [];
-  clickContextMenu: [reqType: RelationType];
-  gotoNewRelationView: [];
-  openContextNodeDetailDrawer: [];
-  copyContextNodeCsv: [];
-  gotoItemDetailView: [];
-  touchActionClose: [];
-  openTouchNodeDetailDrawer: [];
 }>();
 
 const setNetworkPaneRef = (el: Element | ComponentPublicInstance | null) => {
@@ -108,32 +92,6 @@ const setNetworkScrollerRef = (el: Element | ComponentPublicInstance | null) => 
       @update:filter-sub-node="emit('update:filterSubNode', $event)"
       @update:filter-line-type="emit('update:filterLineType', $event)"
       @filter="emit('filter')"
-    />
-
-    <RelationGraphContextMenu
-      :set-dropdown-instance="setDropdownInstance"
-      :dropdown-style="dropdownStyle"
-      :RelationTypeMapping="RelationTypeMapping"
-      :disable-context-menu-all="disableContextMenuAll"
-      :disable-context-menu-open-as-root="disableContextMenuOpenAsRoot"
-      @click-context-menu="emit('clickContextMenu', $event)"
-      @goto-new-relation-view="emit('gotoNewRelationView')"
-      @open-context-node-detail-drawer="emit('openContextNodeDetailDrawer')"
-      @copy-context-node-csv="emit('copyContextNodeCsv')"
-      @goto-item-detail-view="emit('gotoItemDetailView')"
-    />
-
-    <RelationGraphTouchActions
-      :touch-action-visible="touchActionVisible"
-      :RelationTypeMapping="RelationTypeMapping"
-      :disable-context-menu-all="disableContextMenuAll"
-      :disable-context-menu-open-as-root="disableContextMenuOpenAsRoot"
-      @click-context-menu="emit('clickContextMenu', $event)"
-      @goto-new-relation-view="emit('gotoNewRelationView')"
-      @open-touch-node-detail-drawer="emit('openTouchNodeDetailDrawer')"
-      @copy-context-node-csv="emit('copyContextNodeCsv')"
-      @goto-item-detail-view="emit('gotoItemDetailView')"
-      @touch-action-close="emit('touchActionClose')"
     />
   </div>
 </template>
@@ -191,6 +149,8 @@ const setNetworkScrollerRef = (el: Element | ComponentPublicInstance | null) => 
     width: max(1180px, 260vw);
     height: max(940px, 190vh);
     min-height: 940px;
+    -webkit-touch-callout: none;
+    user-select: none;
   }
 }
 </style>

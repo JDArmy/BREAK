@@ -127,6 +127,20 @@ export const useRelationGraphData = ({
   const getGraphNodeText = (type: Exclude<RelationType, RelationType.all>, key: string) =>
     `${key}\n${getNodeTitle(type, key)}`;
 
+  const ensureRelationNode = (type: Exclude<RelationType, RelationType.all>, key: string) => {
+    const existingNode = nodes.find((node) => node.id === key);
+    if (existingNode) return existingNode;
+
+    const node = {
+      id: key,
+      type,
+      text: getGraphNodeText(type, key),
+      color: "",
+    } as Node;
+    nodes.push(node);
+    return node;
+  };
+
   const escapeTooltipHtml = (value: unknown) =>
     String(value ?? "")
       .replace(/&/g, "&amp;")
@@ -321,6 +335,7 @@ export const useRelationGraphData = ({
     filterLineType,
     filterRelationType,
     filterSubNode,
+    ensureRelationNode,
     findNodeById,
     formatRelationFieldsTooltip,
     genNetworkGraphData,

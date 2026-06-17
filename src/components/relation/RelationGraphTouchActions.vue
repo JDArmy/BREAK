@@ -7,6 +7,7 @@ defineProps<{
   RelationTypeMapping: Record<string, { title: string; disableContextMenu: { value: boolean } }>;
   disableContextMenuAll: boolean;
   disableContextMenuOpenAsRoot: boolean;
+  showRelationFetchActions?: boolean;
 }>();
 
 const emit = defineEmits<{
@@ -35,23 +36,25 @@ const emit = defineEmits<{
       <div class="touch-action-item" @click="emit('copyContextNodeCsv')">
         {{ $t('relationView.copyRelatedEntities') }}
       </div>
-      <div class="touch-action-divider"></div>
-      <div
-        v-for="(item, key) in RelationTypeMapping"
-        :key="key"
-        class="touch-action-item"
-        :class="{ disabled: item.disableContextMenu.value }"
-        @click="!item.disableContextMenu.value && emit('clickContextMenu', key as RelationType)"
-      >
-        {{ item.title }}
-      </div>
-      <div
-        class="touch-action-item"
-        :class="{ disabled: disableContextMenuAll }"
-        @click="!disableContextMenuAll && emit('clickContextMenu', RelationType.all)"
-      >
-        {{ $t('fetchAllRelations') }}
-      </div>
+      <template v-if="showRelationFetchActions">
+        <div class="touch-action-divider"></div>
+        <div
+          v-for="(item, key) in RelationTypeMapping"
+          :key="key"
+          class="touch-action-item"
+          :class="{ disabled: item.disableContextMenu.value }"
+          @click="!item.disableContextMenu.value && emit('clickContextMenu', key as RelationType)"
+        >
+          {{ item.title }}
+        </div>
+        <div
+          class="touch-action-item"
+          :class="{ disabled: disableContextMenuAll }"
+          @click="!disableContextMenuAll && emit('clickContextMenu', RelationType.all)"
+        >
+          {{ $t('fetchAllRelations') }}
+        </div>
+      </template>
       <div class="touch-action-divider"></div>
       <div class="touch-action-item" @click="emit('gotoItemDetailView')">
         <span class="menu-action-with-icon">

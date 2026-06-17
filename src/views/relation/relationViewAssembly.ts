@@ -4,10 +4,15 @@ import { setupRelationViewEffects } from "@/views/relation/relationViewEffects";
 import { createRelationViewState } from "@/views/relation/relationViewState";
 import { useRelationGraphData } from "@/views/relation/useRelationGraphData";
 import { useRelationNodeActions } from "@/views/relation/useRelationNodeActions";
-import type { createRelationTypeMapping, graphColors, relationLineColors } from "@/views/relation/relationTypes";
+import type {
+  createRelationTypeMapping,
+  graphColors,
+  relationLineColors,
+  SankeyNode,
+} from "@/views/relation/relationTypes";
 import type { RouteLocationNormalizedLoaded, Router } from "vue-router";
 import type { DropdownInstance } from "element-plus";
-import type { Ref } from "vue";
+import { ref, type Ref } from "vue";
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;
 
@@ -47,6 +52,11 @@ export const createRelationViewAssembly = ({
   setDropdownInstance,
   networkInteractionsBridge,
 }: CreateRelationViewAssemblyOptions) => {
+  const relationPageRef = ref<HTMLDivElement>();
+  const setRelationPageElement = (element: unknown) => {
+    relationPageRef.value = element instanceof HTMLDivElement ? element : undefined;
+  };
+
   const viewState = createRelationViewState({
     route,
     t,
@@ -77,7 +87,6 @@ export const createRelationViewAssembly = ({
     sankeyRight,
     sankeyTop,
     setClearDraggedNodePositions,
-    selectSankeyNode,
     zoomNetworkChart,
   } = viewState;
 
@@ -97,6 +106,7 @@ export const createRelationViewAssembly = ({
     addRootNode,
     clearDraggedNodePositions,
     buildNodeSummary,
+    ensureRelationNode,
     genNetworkGraphData,
     isDirectRelationLine,
     rebuildGraphData,
@@ -125,6 +135,40 @@ export const createRelationViewAssembly = ({
     getRelationSourceFields,
   });
 
+  const nodeActions = useRelationNodeActions({
+    t,
+    router,
+    contextMenuPaneRef: relationPageRef,
+    dropdown1,
+    relKey,
+    relType,
+    lines,
+    selectedNetworkNode,
+    selectedNetworkNodeId,
+    RelationTypeMapping,
+    ensureRelationNode,
+    findNodeById: graphData.findNodeById,
+    buildNodeSummary,
+    isDirectRelationLine,
+    getRelationSourceFields,
+    genNetworkGraphData,
+    renderNetworkChart: (notMerge) => renderNetworkChartBridge.current(notMerge),
+  });
+
+  const openSankeyNodeActions = (node: SankeyNode, event?: MouseEvent) => {
+    const contextNode = nodeActions.prepareNodeActions(node.entityType, node.entityKey);
+    if (event) {
+      nodeActions.nodeClick(contextNode, event);
+    } else {
+      nodeActions.handleNodeTouch(contextNode);
+    }
+  };
+
+  const openSankeyNodeDetail = (node: SankeyNode) => {
+    nodeActions.prepareNodeActions(node.entityType, node.entityKey);
+    nodeActions.focusNodeInDrawer(node.entityKey);
+  };
+
   const sankeyController = createSankeyChartController({
     t,
     isDark,
@@ -144,7 +188,8 @@ export const createRelationViewAssembly = ({
     sankeyNodeGap,
     sankeyNodeWidth,
     sankeyTop,
-    onSelectNode: selectSankeyNode,
+    onOpenNodeDetail: openSankeyNodeDetail,
+    onOpenNodeActions: openSankeyNodeActions,
   });
 
   const networkController = createNetworkChartController({
@@ -162,24 +207,6 @@ export const createRelationViewAssembly = ({
     interactionsBridge: networkInteractionsBridge,
   });
   renderNetworkChartBridge.current = networkController.renderNetworkChart;
-
-  const nodeActions = useRelationNodeActions({
-    t,
-    router,
-    networkPaneRef: networkController.networkPaneRef,
-    dropdown1,
-    relKey,
-    lines,
-    selectedNetworkNode,
-    selectedNetworkNodeId,
-    RelationTypeMapping,
-    findNodeById: graphData.findNodeById,
-    buildNodeSummary,
-    isDirectRelationLine,
-    getRelationSourceFields,
-    genNetworkGraphData,
-    renderNetworkChart: networkController.renderNetworkChart,
-  });
 
   networkInteractionsBridge.handleNodeTouch = (node) => nodeActions.handleNodeTouch(node as ReturnType<typeof toContextNode>);
   networkInteractionsBridge.openNodeDetail = (node) =>
@@ -226,6 +253,7 @@ export const createRelationViewAssembly = ({
     activeView,
     dropdown1,
     setDropdownInstance,
+    setRelationPageElement,
     handleNetworkLayoutCommand,
     networkLayoutTooltip,
     networkState,

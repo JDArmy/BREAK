@@ -25,7 +25,8 @@ interface CreateSankeyChartControllerOptions {
   sankeyRight: ComputedRef<number>;
   sankeyTop: ComputedRef<number>;
   sankeyLabelWidth: ComputedRef<number>;
-  onSelectNode: (node: SankeyNode) => void;
+  onOpenNodeDetail: (node: SankeyNode) => void;
+  onOpenNodeActions: (node: SankeyNode, event?: MouseEvent) => void;
 }
 
 export const createSankeyChartController = ({
@@ -47,16 +48,45 @@ export const createSankeyChartController = ({
   sankeyRight,
   sankeyTop,
   sankeyLabelWidth,
-  onSelectNode,
+  onOpenNodeDetail,
+  onOpenNodeActions,
 }: CreateSankeyChartControllerOptions) => {
   const sankeyChartRef = ref<HTMLDivElement>();
   const sankeyHasData = ref(false);
   let sankeyChart: ECharts | null = null;
   let pendingRenderFrame: number | null = null;
+  let longPressTimer: ReturnType<typeof setTimeout> | undefined;
+  let longPressNode: SankeyNode | undefined;
+  let longPressStart: { x: number; y: number } | undefined;
   let renderRequestId = 0;
 
+  const preventMobileNativeContextMenu = (event: Event) => {
+    if (!isMobile.value) return;
+    event.preventDefault();
+  };
+
+  const isSankeyNode = (data: unknown): data is SankeyNode => {
+    const node = data as Partial<SankeyNode>;
+    return Boolean(node?.entityType && node.entityKey);
+  };
+
+  const removeNativeContextMenuHandler = (element?: HTMLDivElement) => {
+    element?.removeEventListener("contextmenu", preventMobileNativeContextMenu);
+  };
+
+  const clearLongPressTimer = () => {
+    if (longPressTimer) {
+      clearTimeout(longPressTimer);
+      longPressTimer = undefined;
+    }
+    longPressNode = undefined;
+    longPressStart = undefined;
+  };
+
   const setSankeyChartElement = (element: HTMLDivElement | undefined) => {
+    removeNativeContextMenuHandler(sankeyChartRef.value);
     sankeyChartRef.value = element;
+    element?.addEventListener("contextmenu", preventMobileNativeContextMenu);
   };
 
   const renderSankeyChart = (attempt = 0) => {
@@ -85,6 +115,7 @@ export const createSankeyChartController = ({
         const init = await loadSankeyECharts();
         if (!sankeyChartRef.value || activeView.value !== "sankey" || requestId !== renderRequestId) return;
         sankeyChart = init(sankeyChartRef.value);
+        sankeyChart.getDom().addEventListener("contextmenu", preventMobileNativeContextMenu);
       }
       sankeyChart.dispatchAction({ type: "hideTip" });
       const style = getComputedStyle(document.documentElement);
@@ -98,6 +129,7 @@ export const createSankeyChartController = ({
           .trim(),
         animation: !isMobile.value,
         tooltip: {
+          show: !isMobile.value,
           trigger: "item",
           triggerOn: "mousemove",
           backgroundColor: tooltipBackground,
@@ -167,12 +199,50 @@ export const createSankeyChartController = ({
         ],
       });
       sankeyChart.off("dblclick");
+      sankeyChart.off("contextmenu");
+      sankeyChart.off("mousedown");
+      sankeyChart.off("mouseup");
+      sankeyChart.getZr().off("pointermove");
+      sankeyChart.getZr().off("pointerup");
+      sankeyChart.getZr().off("pointercancel");
+      sankeyChart.getZr().off("globalout");
       sankeyChart.on("dblclick", (params) => {
-        const node = params.data as Partial<SankeyNode>;
+        if (params.dataType !== "node" || !isSankeyNode(params.data)) return;
+        const node = params.data;
         if (node.entityType && node.entityKey) {
-          onSelectNode(node as SankeyNode);
+          onOpenNodeDetail(node as SankeyNode);
         }
       });
+      sankeyChart.on("contextmenu", (params) => {
+        if (params.dataType !== "node" || !isSankeyNode(params.data) || !params.event?.event) return;
+        params.event.event.preventDefault();
+        onOpenNodeActions(params.data, params.event.event as MouseEvent);
+      });
+      sankeyChart.on("mousedown", (params) => {
+        if (!isMobile.value || params.dataType !== "node" || !isSankeyNode(params.data)) return;
+        const chartEvent = params.event as { offsetX?: number; offsetY?: number; event?: MouseEvent | PointerEvent };
+        const nativeEvent = chartEvent.event;
+        const startX = chartEvent.offsetX ?? nativeEvent?.clientX ?? 0;
+        const startY = chartEvent.offsetY ?? nativeEvent?.clientY ?? 0;
+        clearLongPressTimer();
+        longPressNode = params.data;
+        longPressStart = { x: startX, y: startY };
+        longPressTimer = setTimeout(() => {
+          if (!longPressNode) return;
+          onOpenNodeActions(longPressNode);
+          clearLongPressTimer();
+        }, 800);
+      });
+      sankeyChart.on("mouseup", clearLongPressTimer);
+      sankeyChart.getZr().on("pointermove", (event) => {
+        if (!longPressStart) return;
+        if (Math.hypot(event.offsetX - longPressStart.x, event.offsetY - longPressStart.y) > 10) {
+          clearLongPressTimer();
+        }
+      });
+      sankeyChart.getZr().on("pointerup", clearLongPressTimer);
+      sankeyChart.getZr().on("pointercancel", clearLongPressTimer);
+      sankeyChart.getZr().on("globalout", clearLongPressTimer);
       if (!isMobile.value) {
         sankeyChart.resize();
       }
@@ -188,14 +258,17 @@ export const createSankeyChartController = ({
 
   const disposeSankeyChart = () => {
     renderRequestId += 1;
+    clearLongPressTimer();
     if (pendingRenderFrame !== null) {
       cancelAnimationFrame(pendingRenderFrame);
       pendingRenderFrame = null;
     }
     sankeyChart?.dispatchAction({ type: "hideTip" });
+    sankeyChart?.getDom().removeEventListener("contextmenu", preventMobileNativeContextMenu);
     sankeyChart?.dispose();
     sankeyChart = null;
     sankeyHasData.value = false;
+    removeNativeContextMenuHandler(sankeyChartRef.value);
   };
 
   const hideSankeyTooltip = () => {

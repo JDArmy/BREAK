@@ -9,6 +9,7 @@ const props = defineProps<{
   RelationTypeMapping: Record<string, { title: string; disableContextMenu: { value: boolean } }>;
   disableContextMenuAll: boolean;
   disableContextMenuOpenAsRoot: boolean;
+  showRelationFetchActions?: boolean;
 }>();
 
 const emit = defineEmits<{
@@ -41,22 +42,24 @@ const setDropdownRef = (instance: DropdownInstance | undefined) => {
         <el-dropdown-item @click="emit('copyContextNodeCsv')">
           {{ $t('relationView.copyRelatedEntities') }}
         </el-dropdown-item>
-        <el-dropdown-item
-          v-for="([key, item], index) in Object.entries(RelationTypeMapping)"
-          :key="key"
-          :divided="index === 0"
-          :disabled="item.disableContextMenu.value"
-          @click="emit('clickContextMenu', key as RelationType)"
-        >
-          {{ item.title }}
-        </el-dropdown-item>
-        <el-dropdown-item
-          :disabled="disableContextMenuAll"
-          @click="emit('clickContextMenu', RelationType.all)"
-        >
-          {{ $t('fetchAllRelations') }}
-        </el-dropdown-item>
-        <el-dropdown-item divided @click="emit('gotoItemDetailView')">
+        <template v-if="showRelationFetchActions">
+          <el-dropdown-item
+            v-for="([key, item], index) in Object.entries(RelationTypeMapping)"
+            :key="key"
+            :divided="index === 0"
+            :disabled="item.disableContextMenu.value"
+            @click="emit('clickContextMenu', key as RelationType)"
+          >
+            {{ item.title }}
+          </el-dropdown-item>
+          <el-dropdown-item
+            :disabled="disableContextMenuAll"
+            @click="emit('clickContextMenu', RelationType.all)"
+          >
+            {{ $t('fetchAllRelations') }}
+          </el-dropdown-item>
+        </template>
+        <el-dropdown-item :divided="showRelationFetchActions" @click="emit('gotoItemDetailView')">
           <span class="menu-action-with-icon">
             <el-icon><TopRight /></el-icon>
             <span>{{ $t('viewDetail') }}</span>

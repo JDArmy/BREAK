@@ -65,6 +65,8 @@ const setRef = (el: Element | ComponentPublicInstance | null) => {
 
   .sankey-chart {
     min-height: 100%;
+    -webkit-touch-callout: none;
+    user-select: none;
   }
 
   .sankey-empty {

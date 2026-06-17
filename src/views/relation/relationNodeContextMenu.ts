@@ -7,14 +7,14 @@ import {
 } from "@/views/relation/relationTypes";
 
 interface CreateRelationNodeContextMenuOptions {
-  networkPaneRef: Ref<HTMLDivElement | undefined>;
+  contextMenuPaneRef: Ref<HTMLDivElement | undefined>;
   dropdown1: Ref<DropdownInstance | undefined>;
   relKey: Ref<string>;
   RelationTypeMapping: ReturnType<typeof createRelationTypeMapping>;
 }
 
 export const createRelationNodeContextMenu = ({
-  networkPaneRef,
+  contextMenuPaneRef,
   dropdown1,
   relKey,
   RelationTypeMapping,
@@ -44,7 +44,7 @@ export const createRelationNodeContextMenu = ({
   };
 
   const applyContextMenuPosition = (rawLeft: number, rawTop: number) => {
-    const pane = networkPaneRef.value;
+    const pane = contextMenuPaneRef.value;
     if (!pane) return;
 
     const rect = pane.getBoundingClientRect();
@@ -57,7 +57,7 @@ export const createRelationNodeContextMenu = ({
   };
 
   const openContextMenuAtPointer = (event: MouseEvent) => {
-    const pane = networkPaneRef.value;
+    const pane = contextMenuPaneRef.value;
     if (!pane) return;
 
     const rect = pane.getBoundingClientRect();

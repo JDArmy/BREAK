@@ -48,6 +48,15 @@ export const createNetworkChartController = ({
   let renderRequestId = 0;
   let bodyOverflowBeforeAppFullscreen: string | null = null;
 
+  const preventMobileNativeContextMenu = (event: Event) => {
+    if (!isMobile.value) return;
+    event.preventDefault();
+  };
+
+  const removeNativeContextMenuHandler = (element?: HTMLDivElement) => {
+    element?.removeEventListener("contextmenu", preventMobileNativeContextMenu);
+  };
+
   const clearLongPressTimer = () => {
     if (longPressTimer) {
       clearTimeout(longPressTimer);
@@ -62,7 +71,9 @@ export const createNetworkChartController = ({
   };
 
   const setNetworkChartElement = (element: HTMLDivElement | undefined) => {
+    removeNativeContextMenuHandler(networkChartRef.value);
     networkChartRef.value = element;
+    element?.addEventListener("contextmenu", preventMobileNativeContextMenu);
   };
 
   const setNetworkPaneElement = (element: HTMLDivElement | undefined) => {
@@ -211,6 +222,7 @@ export const createNetworkChartController = ({
         const init = await loadNetworkECharts();
         if (!networkChartRef.value || activeView.value !== "network" || requestId !== renderRequestId) return;
         networkChart = init(networkChartRef.value);
+        networkChart.getDom().addEventListener("contextmenu", preventMobileNativeContextMenu);
         bindNetworkChartEvents();
       }
       hideNetworkTooltip();
@@ -336,8 +348,10 @@ export const createNetworkChartController = ({
     clearLongPressTimer();
     hideNetworkTooltip();
     exitAppFullscreen();
+    networkChart?.getDom().removeEventListener("contextmenu", preventMobileNativeContextMenu);
     networkChart?.dispose();
     networkChart = null;
+    removeNativeContextMenuHandler(networkChartRef.value);
   };
 
   const resizeNetworkChart = () => {

@@ -1,5 +1,7 @@
 <script lang="ts">
 import { defineAsyncComponent, defineComponent, onMounted } from "vue";
+import RelationGraphContextMenu from "@/components/relation/RelationGraphContextMenu.vue";
+import RelationGraphTouchActions from "@/components/relation/RelationGraphTouchActions.vue";
 import RelationSankeyPane from "@/components/relation/RelationSankeyPane.vue";
 import RelationSelectorBar from "@/components/relation/RelationSelectorBar.vue";
 import { useRelationViewModel } from "@/views/relation/useRelationViewModel";
@@ -15,6 +17,8 @@ export default defineComponent({
   name: "RelationView",
   components: {
     RelationNodeDetailDrawer,
+    RelationGraphContextMenu,
+    RelationGraphTouchActions,
     RelationNetworkPane,
     RelationSankeyPane,
     RelationSelectorBar,
@@ -43,7 +47,11 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="relation-page" :class="{ 'relation-page--mobile-sankey': activeView === 'sankey' }">
+  <div
+    :ref="setRelationPageElement"
+    class="relation-page"
+    :class="{ 'relation-page--mobile-sankey': activeView === 'sankey' }"
+  >
     <RelationSelectorBar
       v-model:rel-type="relType"
       v-model:rel-key="relKey"
@@ -57,7 +65,6 @@ export default defineComponent({
           :set-network-pane-element="setNetworkPaneElement"
           :set-network-scroller-element="setNetworkScrollerElement"
           :set-network-chart-element="setNetworkChartElement"
-          :set-dropdown-instance="setDropdownInstance"
           :network-layout-tooltip="networkLayoutTooltip"
           :network-layout-options="networkLayoutOptions"
           :network-state="networkState"
@@ -70,11 +77,6 @@ export default defineComponent({
           :sub-node-filter-color="subNodeFilterColor"
           :visible-relation-legend-items="visibleRelationLegendItems"
           :format-relation-fields-tooltip="formatRelationFieldsTooltip"
-          :dropdown-style="dropdownStyle"
-          :RelationTypeMapping="RelationTypeMapping"
-          :disable-context-menu-all="disableContextMenuAll"
-          :disable-context-menu-open-as-root="disableContextMenuOpenAsRoot"
-          :touch-action-visible="touchActionVisible"
           @fullscreen="enterFullscreen"
           @zoom-in="zoomNetworkChart(0.08)"
           @zoom-out="zoomNetworkChart(-0.08)"
@@ -90,13 +92,6 @@ export default defineComponent({
           @update:filter-sub-node="filterSubNode = $event"
           @update:filter-line-type="filterLineType = $event"
           @filter="doFilter"
-          @click-context-menu="clickContextMenu"
-          @goto-new-relation-view="gotoNewRelationView"
-          @open-context-node-detail-drawer="openContextNodeDetailDrawer"
-          @copy-context-node-csv="copyContextNodeCsv"
-          @goto-item-detail-view="gotoItemDetailView"
-          @touch-action-close="touchActionClose"
-          @open-touch-node-detail-drawer="openTouchNodeDetailDrawer"
         />
       </el-tab-pane>
       <el-tab-pane :label="$t('relationView.attackPath')" name="sankey" :lazy="activeView !== 'sankey'">
@@ -108,6 +103,34 @@ export default defineComponent({
         />
       </el-tab-pane>
     </el-tabs>
+
+    <RelationGraphContextMenu
+      :set-dropdown-instance="setDropdownInstance"
+      :dropdown-style="dropdownStyle"
+      :RelationTypeMapping="RelationTypeMapping"
+      :disable-context-menu-all="disableContextMenuAll"
+      :disable-context-menu-open-as-root="disableContextMenuOpenAsRoot"
+      :show-relation-fetch-actions="activeView === 'network'"
+      @click-context-menu="clickContextMenu"
+      @goto-new-relation-view="gotoNewRelationView"
+      @open-context-node-detail-drawer="openContextNodeDetailDrawer"
+      @copy-context-node-csv="copyContextNodeCsv"
+      @goto-item-detail-view="gotoItemDetailView"
+    />
+
+    <RelationGraphTouchActions
+      :touch-action-visible="touchActionVisible"
+      :RelationTypeMapping="RelationTypeMapping"
+      :disable-context-menu-all="disableContextMenuAll"
+      :disable-context-menu-open-as-root="disableContextMenuOpenAsRoot"
+      :show-relation-fetch-actions="activeView === 'network'"
+      @click-context-menu="clickContextMenu"
+      @goto-new-relation-view="gotoNewRelationView"
+      @open-touch-node-detail-drawer="openTouchNodeDetailDrawer"
+      @copy-context-node-csv="copyContextNodeCsv"
+      @goto-item-detail-view="gotoItemDetailView"
+      @touch-action-close="touchActionClose"
+    />
 
     <RelationNodeDetailDrawer
       v-if="nodeDetailDrawerVisible"
