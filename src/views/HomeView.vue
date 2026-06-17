@@ -1,23 +1,20 @@
 <script setup lang="ts">
 import BREAK from "@/BREAK";
 
-import RiskDetail from "@/components/RiskDetail.vue";
-import AvoidanceDetail from "@/components/AvoidanceDetail.vue";
-import AttackToolDetail from "@/components/AttackToolDetail.vue";
-import ThreatActorDetail from "@/components/ThreatActorDetail.vue";
-import TermDetail from "@/components/TermDetail.vue";
-import { ref, watch, computed } from "vue";
+import { defineAsyncComponent, ref, watch, computed } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import { useBreakpoints } from "@/composables/useBreakpoints";
 import { useI18n } from "vue-i18n";
-import { prefetchAllKnowledgeViews, prefetchRelationView } from "@/composables/useRoutePrefetch";
 
 import "element-plus/es/components/row/style/css";
 import "element-plus/es/components/col/style/css";
 import { ElRow, ElCol } from "element-plus";
 
-prefetchAllKnowledgeViews();
-prefetchRelationView();
+const RiskDetail = defineAsyncComponent(() => import("@/components/RiskDetail.vue"));
+const AvoidanceDetail = defineAsyncComponent(() => import("@/components/AvoidanceDetail.vue"));
+const AttackToolDetail = defineAsyncComponent(() => import("@/components/AttackToolDetail.vue"));
+const ThreatActorDetail = defineAsyncComponent(() => import("@/components/ThreatActorDetail.vue"));
+const TermDetail = defineAsyncComponent(() => import("@/components/TermDetail.vue"));
 
 const router = useRouter();
 const route = useRoute();

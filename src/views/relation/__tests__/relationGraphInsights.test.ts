@@ -80,6 +80,11 @@ describe("relationGraphInsights", () => {
             otherNodeId: "TOOL",
             otherNodeTitle: "attack-tool:TOOL",
             sourceFields: ["source:使用攻击工具"],
+            evidenceLevel: "indirect",
+            evidenceLabel: "evidence:indirect",
+            explanation: "explain:使用攻击工具",
+            impactHint: "impact:使用攻击工具",
+            qualityFlags: [],
           }),
           targetNode: expect.objectContaining({
             id: "TOOL",
@@ -190,6 +195,27 @@ describe("relationGraphInsights", () => {
         sourceFields: ["source:直接导致风险"],
         priority: 1,
       },
+    ]);
+  });
+
+  it("falls back to the root node when the selected node is unavailable", () => {
+    const insights = createInsights("MISSING");
+
+    expect(insights.selectedNetworkNode.value?.id).toBe("ROOT");
+    expect(insights.selectedNetworkNodeTitle.value).toBe("threat-actor:ROOT");
+    expect(insights.isCurrentNodeRoot.value).toBe(true);
+    expect(insights.rootNodeRelations.value).toEqual([]);
+    expect(insights.selectedNodeRootPath.value).toBeNull();
+  });
+
+  it("does not report root-node relations for nodes that are only connected through a path", () => {
+    const insights = createInsights("AVOID");
+
+    expect(insights.rootNodeRelations.value).toEqual([]);
+    expect(insights.selectedNodeRootPath.value?.steps.map((step) => step.relation.relationKey)).toEqual([
+      "ROOT::使用攻击工具::TOOL",
+      "TOOL::直接导致风险::RISK",
+      "RISK::规避手段::AVOID",
     ]);
   });
 });

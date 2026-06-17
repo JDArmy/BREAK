@@ -151,6 +151,7 @@ const router = createRouter({
 
 router.beforeEach((to) => {
   if (to.name === "relation") {
+    if (window.innerWidth < 768) return;
     const view = typeof to.query.view === "string" ? to.query.view : "";
     if (view === "network" || (view !== "sankey" && window.innerWidth >= 768)) {
       void loadNetworkECharts();

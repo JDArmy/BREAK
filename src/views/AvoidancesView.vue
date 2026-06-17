@@ -7,15 +7,11 @@ import KnowledgeSplitView from "@/components/KnowledgeSplitView.vue";
 import ReferenceList from "@/components/ReferenceList.vue";
 import { getMessageStringArray } from "@/utils/i18nMessage";
 import { useBreakpoints } from "@/composables/useBreakpoints";
-import { prefetchAllKnowledgeViews, prefetchRelationView } from "@/composables/useRoutePrefetch";
 
 const route = useRoute();
 const router = useRouter();
 const { t, locale, messages } = useI18n();
 const { isMobile } = useBreakpoints();
-
-prefetchAllKnowledgeViews();
-prefetchRelationView();
 
 const avoidanceKeys = Object.keys(BREAK.avoidances);
 // 优先从路由参数获取，否则从 hash 获取，最后使用默认值

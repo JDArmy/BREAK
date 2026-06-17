@@ -34,7 +34,6 @@ stats.html
 CLAUDE.md
 AGENT.md
 code.command
-ROADMAP.md
 TODO.md
 research/
 scripts/*
@@ -45,3 +44,4 @@ scripts/search/*
 !scripts/validate/*.mjs
 .claude/
 plans/
+VISUAL_ANALYSIS_EXPLAINABILITY_PLAN.md

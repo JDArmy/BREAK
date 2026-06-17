@@ -1,7 +1,7 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
-import { i18n } from "./i18n";
+import { i18n, initLocaleMessages } from "./i18n";
 
 import "element-plus/theme-chalk/dark/css-vars.css";
 import "./assets/main.css";
@@ -16,4 +16,12 @@ app.config.errorHandler = (err, instance, info) => {
 
 app.use(i18n);
 app.use(router);
-app.mount("#app");
+
+initLocaleMessages()
+  .then(() => {
+    app.mount("#app");
+  })
+  .catch((error) => {
+    console.error("Failed to load initial locale messages:", error);
+    app.mount("#app");
+  });

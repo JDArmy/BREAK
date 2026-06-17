@@ -33,6 +33,14 @@ export default defineComponent({
   setup() {
     const viewModel = useRelationViewModel();
     onMounted(() => {
+      const isMobileViewport = window.innerWidth < 768;
+      const schedulePreload = () => {
+        if ("requestIdleCallback" in window) {
+          window.requestIdleCallback(preloadSecondaryView, { timeout: 3000 });
+        } else {
+          preloadSecondaryView();
+        }
+      };
       const preloadSecondaryView = () => {
         void loadRelationNodeDetailDrawer();
         if (viewModel.activeView.value === "sankey") {
@@ -42,7 +50,9 @@ export default defineComponent({
           void loadSankeyECharts();
         }
       };
-      if ("requestIdleCallback" in window) {
+      if (isMobileViewport) {
+        window.setTimeout(schedulePreload, 12000);
+      } else if ("requestIdleCallback" in window) {
         window.requestIdleCallback(preloadSecondaryView, { timeout: 1500 });
       } else {
         window.setTimeout(preloadSecondaryView, 800);
@@ -116,7 +126,19 @@ export default defineComponent({
           :active="activeView === 'sankey'"
           :has-data="sankeyHasData"
           :chart-min-width="sankeyChartMinWidth"
+          :relation-type-mapping="RelationTypeMapping"
+          :attack-path-details="attackPathDetails"
+          :attack-path-filter-options="attackPathFilterOptions"
+          :attack-path-filters="attackPathFilters"
+          :filtered-attack-path-count="filteredAttackPaths.length"
+          :has-active-attack-path-filters="hasActiveAttackPathFilters"
+          :risk-avoidance-coverage="riskAvoidanceCoverage"
+          :selected-attack-path-detail="selectedAttackPathDetail"
+          :selected-attack-path-id="selectedAttackPathDetail?.id || ''"
           :set-sankey-chart-element="setSankeyChartElement"
+          @update:attack-path-filters="attackPathFilters = $event"
+          @select-attack-path="selectAttackPath"
+          @reset-attack-path-filters="resetAttackPathFilters"
         />
       </el-tab-pane>
     </el-tabs>

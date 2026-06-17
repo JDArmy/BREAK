@@ -8,28 +8,59 @@ import "element-plus/es/components/drawer/style/css";
 import "element-plus/theme-chalk/display.css";
 
 import GithubPane from "@/components/GithubPane.vue";
-import SearchDialog from "@/components/SearchDialog.vue";
 import ThemeToggle from "@/components/ThemeToggle.vue";
 import iconTranslate from "@/components/icons/iconTranslate.vue";
 import { ArrowDown, Search, Menu as MenuIcon } from "@element-plus/icons-vue";
 import { useI18n } from "vue-i18n";
 import { languages, setLocale } from "@/i18n";
-import { onMounted, ref } from "vue";
+import { defineAsyncComponent, onMounted, onUnmounted, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import { preloadRelationView } from "@/router";
+import { prefetchAllKnowledgeViews } from "@/composables/useRoutePrefetch";
+
+const loadSearchDialog = () => import("@/components/SearchDialog.vue");
+const SearchDialog = defineAsyncComponent(loadSearchDialog);
 
 const { locale } = useI18n();
 const router = useRouter();
 const route = useRoute();
 const searchOpen = ref(false);
+const searchDialogEnabled = ref(false);
 const mobileMenuOpen = ref(false);
+const localeChanging = ref(false);
 const shortcutHint =
   typeof navigator !== "undefined" && navigator.platform?.includes("Mac")
     ? "⌘K"
     : "Ctrl+K";
 
-const handleLocaleChange = (lang: string) => {
-  setLocale(lang);
+const preloadSearchDialog = () => {
+  searchDialogEnabled.value = true;
+  void loadSearchDialog();
+};
+
+const scheduleDelayedIdle = (callback: () => void, delay: number) => {
+  window.setTimeout(() => {
+    if ("requestIdleCallback" in window) {
+      window.requestIdleCallback(callback, { timeout: 3000 });
+    } else {
+      callback();
+    }
+  }, delay);
+};
+
+const openSearchDialog = () => {
+  preloadSearchDialog();
+  searchOpen.value = true;
+};
+
+const handleLocaleChange = async (lang: string) => {
+  if (localeChanging.value) return;
+  localeChanging.value = true;
+  try {
+    await setLocale(lang as keyof typeof languages);
+  } finally {
+    localeChanging.value = false;
+  }
 };
 
 const knowledgeRoutes: Record<string, string> = {
@@ -41,6 +72,7 @@ const knowledgeRoutes: Record<string, string> = {
 };
 
 const handleKnowledgeCommand = (command: string) => {
+  prefetchAllKnowledgeViews();
   const path = knowledgeRoutes[command];
   if (path) {
     router.push(path);
@@ -49,11 +81,19 @@ const handleKnowledgeCommand = (command: string) => {
 };
 
 const handleMobileNav = (path: string) => {
+  if (path !== "/" && !path.startsWith("/relation/")) {
+    prefetchAllKnowledgeViews();
+  }
   if (path.startsWith("/relation/")) {
     preloadRelationView("sankey");
   }
   router.push(path);
   mobileMenuOpen.value = false;
+};
+
+const handleMobileMenuOpen = () => {
+  mobileMenuOpen.value = true;
+  window.setTimeout(prefetchAllKnowledgeViews, 1200);
 };
 
 const handleDesktopMenuSelect = (index: string) => {
@@ -62,13 +102,39 @@ const handleDesktopMenuSelect = (index: string) => {
   }
 };
 
-onMounted(() => {
-  const preload = () => preloadRelationView(window.innerWidth < 768 ? "sankey" : "network");
-  if ("requestIdleCallback" in window) {
-    window.requestIdleCallback(preload, { timeout: 2000 });
-  } else {
-    window.setTimeout(preload, 1200);
+const handleKnowledgeMenuVisible = (visible: boolean) => {
+  if (visible) {
+    prefetchAllKnowledgeViews();
   }
+};
+
+const handleGlobalKeydown = (event: KeyboardEvent) => {
+  if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
+    event.preventDefault();
+    if (searchOpen.value) {
+      searchOpen.value = false;
+    } else {
+      openSearchDialog();
+    }
+  }
+};
+
+onMounted(() => {
+  document.addEventListener("keydown", handleGlobalKeydown);
+  if (window.innerWidth >= 768) {
+    preloadSearchDialog();
+    prefetchAllKnowledgeViews();
+    preloadRelationView("network");
+    return;
+  }
+
+  const preload = () => preloadRelationView("sankey");
+  scheduleDelayedIdle(preload, 12000);
+  scheduleDelayedIdle(preloadSearchDialog, 18000);
+});
+
+onUnmounted(() => {
+  document.removeEventListener("keydown", handleGlobalKeydown);
 });
 
 const isKnowledgeActive = (fullPath: string) =>
@@ -111,10 +177,10 @@ const getActiveIndex = (fullPath: string) => {
       {{ $t("BREAK.name") }}
     </h3>
     <div class="mobile-nav-right">
-      <div class="mobile-search" @click="searchOpen = true">
+      <div class="mobile-search" @click="openSearchDialog">
         <el-icon><Search /></el-icon>
       </div>
-      <div class="mobile-hamburger" @click="mobileMenuOpen = true">
+      <div class="mobile-hamburger" @click="handleMobileMenuOpen">
         <el-icon :size="20"><MenuIcon /></el-icon>
       </div>
     </div>
@@ -190,7 +256,7 @@ const getActiveIndex = (fullPath: string) => {
 
       <div class="mobile-nav-actions">
         <ThemeToggle />
-        <el-dropdown trigger="click" @command="handleLocaleChange">
+        <el-dropdown trigger="click" :disabled="localeChanging" @command="handleLocaleChange">
           <span class="mobile-locale-toggle">
             <icon-translate />
             <span>{{ languages[locale as keyof typeof languages] }}</span>
@@ -239,7 +305,7 @@ const getActiveIndex = (fullPath: string) => {
     </div>
 
     <div class="flex-grow">
-      <div class="search-trigger" @click="searchOpen = true">
+      <div class="search-trigger" @click="openSearchDialog">
         <el-icon><Search /></el-icon>
         <span class="search-placeholder">{{ $t("search.placeholder") }}</span>
         <span class="search-shortcut">{{ shortcutHint }}</span>
@@ -253,8 +319,9 @@ const getActiveIndex = (fullPath: string) => {
       class="knowledge-menu"
       :class="{ 'is-active': isKnowledgeActive($route.fullPath) }"
       @command="handleKnowledgeCommand"
+      @visible-change="handleKnowledgeMenuVisible"
     >
-      <span class="el-dropdown-link">
+      <span class="el-dropdown-link" @mouseenter="prefetchAllKnowledgeViews" @focus="prefetchAllKnowledgeViews">
         {{ $t("menu.knowledge") }}<el-icon><arrow-down /></el-icon>
       </span>
       <template #dropdown>
@@ -324,7 +391,7 @@ const getActiveIndex = (fullPath: string) => {
 
     <ThemeToggle />
 
-    <el-dropdown class="translate" trigger="click" @command="handleLocaleChange">
+    <el-dropdown class="translate" trigger="click" :disabled="localeChanging" @command="handleLocaleChange">
       <span class="el-dropdown-link">
         <icon-translate />
         <span class="locale-label">{{ languages[locale as keyof typeof languages] }}</span>
@@ -348,7 +415,7 @@ const getActiveIndex = (fullPath: string) => {
 
   </el-menu>
 
-  <SearchDialog v-model="searchOpen" />
+  <SearchDialog v-if="searchDialogEnabled" v-model="searchOpen" />
 </template>
 
 <style scoped>

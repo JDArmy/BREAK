@@ -54,6 +54,45 @@
 - 优化：静态站运行时回归测试
   - smoke/performance 测试改为对同源资源失败强阻断，并忽略已降级处理的第三方统计/API 资源加载失败
   - 保留主路由、构建资源和业务页面渲染的回归保护，避免外部服务 403 误伤本地 Pages 验证
+- 新增：Sankey 攻击路径分析增强
+  - 攻击路径支持按 ThreatActor、AttackTool、Risk、Avoidance 继续筛选
+  - 路径详情展示 ThreatActor -> AttackTool -> Risk -> Avoidance 的可读链路
+  - 每段路径说明来源字段和成立原因，区分制作工具、使用工具、直接造成、间接支撑和风险规避
+  - Risk 视角新增规避覆盖面板，区分风险自身规避、相关工具规避和两者重叠来源
+  - 关系洞察新增证据等级、关系解释、分析影响和质量标记
+  - 节点关系抽屉与 CSV 导出同步补充解释字段，便于回归比对复杂图谱交互结果
+  - 补充攻击路径筛选、路径详情、规避覆盖和推导依据单元测试，测试基线更新为 89 个用例
+- 新增：复杂关系图谱稳定性验收
+  - 新增 `test:relation-stability`，使用 Playwright 覆盖 5 个高关联实体和 6 种网络布局
+  - 验证复杂图谱 canvas 非空渲染、布局切换、节点/关系筛选和节点详情抽屉可用
+  - `npm run build`、CI 和 GitHub Pages Deploy 将执行该稳定性脚本
+- 新增：Lighthouse 桌面/移动端基线
+  - 新增 `test:lighthouse`，对首页、风险页和 Sankey 关系页执行 Lighthouse performance/a11y/best-practices/SEO 基线检查
+  - `npm run build`、CI 和 GitHub Pages Deploy 将执行 Lighthouse 基线
+  - 当前基线重点防止退化，后续优化目标是提高移动端 LCP 和无障碍分数
+- 新增：npm 数据包评估产物
+  - 新增 `export:data-package`，基于 `public/data` 生成 `dist/break-data-package`
+  - 评估包名为 `@jdarmy/break-data`，包含 JSON 数据、manifest、运行时入口、类型声明和独立 README
+  - 新增 `validate:data-package` 校验包边界、版本、manifest hash、类型声明和 README
+  - `npm run build`、CI 和 GitHub Pages Deploy 会生成并校验 npm 数据包评估产物
+- 优化：工程化闭环同步
+  - ROADMAP 重新纳入版本库，避免本地路线图校验通过但对外文档未更新
+  - CI 和 GitHub Pages Deploy 显式补齐 `validate:schema-docs`、`export:data-package` 和 `validate:data-package`
+  - `docs-consistency` 会检查 CI/Deploy workflow 与本地 build 门禁同步
+  - PR 模板和数据变更 Issue 模板补充 CHANGELOG 分类、数据包影响和验证清单
+- 新增：关系洞察回归用例
+  - 补充选中节点缺失时回退根节点的测试
+  - 补充多跳路径不误报根节点直接关系的测试，测试基线更新为 91 个用例
+- 优化：路由预取策略
+  - PC 端挂载后立即预取知识页和关系图，优先保证菜单点击响应速度
+  - 移动端改为菜单打开后延迟预取、点击具体知识项时按需预取，降低首屏和菜单动画阶段的资源竞争
+  - 关系图仍按入口和当前视图定向预取 ECharts 能力
+- 优化：移动端 Lighthouse 首屏负载
+  - 搜索弹窗改为按需加载，PC 端继续预加载，移动端仅在点击搜索或延迟空闲阶段加载
+  - 移动端关系页不再在路由守卫阶段抢先加载 ECharts，Sankey 图表初始化延后到页面骨架首帧之后
+  - 关系页次级视图预加载按 PC/移动端分流，降低移动端 Sankey 首屏主线程竞争
+  - 英文 BREAK 数据改为按语言设置按需加载：初始语言为中文时不再加载英文实体翻译，初始语言或切换语言为英文时再加载
+  - 首页详情抽屉和嵌套详情抽屉改为异步组件，减少首页首屏 JS 解析量
 - 修复：同步中文 README 数据规模统计，保持与当前数据口径一致
 - 优化：关系审计和指标脚本口径
   - ThreatActor 工具关系按 build/use 合并覆盖统计

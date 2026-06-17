@@ -165,21 +165,11 @@ watch(() => props.modelValue, (open) => {
   }
 });
 
-// 全局快捷键 Cmd+K / Ctrl+K
-function handleGlobalKeydown(e: KeyboardEvent) {
-  if ((e.metaKey || e.ctrlKey) && e.key === "k") {
-    e.preventDefault();
-    emit("update:modelValue", !props.modelValue);
-  }
-}
-
 onMounted(() => {
-  document.addEventListener("keydown", handleGlobalKeydown);
   document.addEventListener("keydown", handleKeydown);
 });
 
 onUnmounted(() => {
-  document.removeEventListener("keydown", handleGlobalKeydown);
   document.removeEventListener("keydown", handleKeydown);
 });
 

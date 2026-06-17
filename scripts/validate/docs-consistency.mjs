@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { execFileSync } from 'child_process';
 import { projectRoot, readJson } from '../search/common.mjs';
 
 const roadmapPath = path.join(projectRoot, 'ROADMAP.md');
@@ -7,8 +8,11 @@ const docs = {
   readme: fs.readFileSync(path.join(projectRoot, 'README.md'), 'utf8'),
   readmeCn: fs.readFileSync(path.join(projectRoot, 'README_CN.md'), 'utf8'),
   roadmap: fs.existsSync(roadmapPath) ? fs.readFileSync(roadmapPath, 'utf8') : '',
+  ciWorkflow: fs.readFileSync(path.join(projectRoot, '.github/workflows/ci.yml'), 'utf8'),
+  deployWorkflow: fs.readFileSync(path.join(projectRoot, '.github/workflows/deploy.yml'), 'utf8'),
+  pullRequestTemplate: fs.readFileSync(path.join(projectRoot, '.github/pull_request_template.md'), 'utf8'),
+  dataChangeIssueTemplate: fs.readFileSync(path.join(projectRoot, '.github/ISSUE_TEMPLATE/data-change.md'), 'utf8'),
 };
-const hasRoadmap = docs.roadmap.length > 0;
 
 const packageJson = readJson(path.join(projectRoot, 'package.json'));
 const buildScript = packageJson.scripts?.build || '';
@@ -66,6 +70,18 @@ function expectIncludes(docName, snippet, description) {
   }
 }
 
+function isTracked(fileName) {
+  try {
+    execFileSync('git', ['ls-files', '--error-unmatch', fileName], {
+      cwd: projectRoot,
+      stdio: 'ignore',
+    });
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 function countTestFiles() {
   const roots = [path.join(projectRoot, 'src')];
   const testFilePattern = /\.(test|spec)\.(ts|tsx)$/;
@@ -87,7 +103,7 @@ function countTestFiles() {
 }
 
 const testFileCount = countTestFiles();
-const expectedTestTotal = 85;
+const expectedTestTotal = 91;
 const buildGateScripts = [
   'lint',
   'type-check',
@@ -97,11 +113,15 @@ const buildGateScripts = [
   'validate:schema-docs',
   'validate:docs-build',
   'export:data',
+  'export:data-package',
   'build-only',
   'audit:bundle:check',
   'validate:data-export',
+  'validate:data-package',
   'test:smoke',
   'test:performance',
+  'test:relation-stability',
+  'test:lighthouse',
 ];
 const documentedUtilityScripts = ['schema:docs:write'];
 
@@ -121,7 +141,12 @@ expectIncludes('readme', englishStats, 'README entity totals');
 expectIncludes('readmeCn', chineseStats, 'README_CN entity totals');
 expectIncludes('readme', '[DATA_SCHEMA.md](./DATA_SCHEMA.md)', 'README schema docs link');
 expectIncludes('readmeCn', '[DATA_SCHEMA.md](./DATA_SCHEMA.md)', 'README_CN schema docs link');
-if (hasRoadmap) {
+if (!docs.roadmap) {
+  failures.push('ROADMAP.md: 缺少路线图文档');
+} else {
+  if (!isTracked('ROADMAP.md')) {
+    failures.push('ROADMAP.md: 必须纳入版本库，不能只作为本地忽略文件存在');
+  }
   expectIncludes('roadmap', `当前项目版本：${packageJson.version}`, 'ROADMAP package version');
   expectIncludes('roadmap', `参考资料总量：${metricReferenceTotal} 条`, 'ROADMAP reference total');
   expectIncludes('roadmap', `| \`npm run test\` | ${testFileCount} 个测试文件，${expectedTestTotal} 个用例通过 |`, 'ROADMAP test baseline');
@@ -133,17 +158,23 @@ for (const scriptName of buildGateScripts) {
   }
   expectIncludes('readme', `npm run ${scriptName}`, `README build gate ${scriptName}`);
   expectIncludes('readmeCn', `npm run ${scriptName}`, `README_CN build gate ${scriptName}`);
-  if (hasRoadmap) {
-    expectIncludes('roadmap', `npm run ${scriptName}`, `ROADMAP build gate ${scriptName}`);
-  }
+  expectIncludes('roadmap', `npm run ${scriptName}`, `ROADMAP build gate ${scriptName}`);
+  expectIncludes('ciWorkflow', `npm run ${scriptName}`, `CI workflow build gate ${scriptName}`);
+  expectIncludes('deployWorkflow', `npm run ${scriptName}`, `Deploy workflow build gate ${scriptName}`);
 }
 
 for (const scriptName of documentedUtilityScripts) {
   expectIncludes('readme', `npm run ${scriptName}`, `README utility script ${scriptName}`);
   expectIncludes('readmeCn', `npm run ${scriptName}`, `README_CN utility script ${scriptName}`);
-  if (hasRoadmap) {
-    expectIncludes('roadmap', `npm run ${scriptName}`, `ROADMAP utility script ${scriptName}`);
-  }
+  expectIncludes('roadmap', `npm run ${scriptName}`, `ROADMAP utility script ${scriptName}`);
+}
+
+for (const snippet of ['CHANGELOG.md', 'data / app / docs / build', 'npm run export:data-package']) {
+  expectIncludes('pullRequestTemplate', snippet, `PR template contribution gate ${snippet}`);
+}
+
+for (const snippet of ['CHANGELOG.md', '静态数据包或 npm 数据包评估', 'data/app/docs/build']) {
+  expectIncludes('dataChangeIssueTemplate', snippet, `data issue template contribution gate ${snippet}`);
 }
 
 const roadmapRows = [
@@ -157,9 +188,7 @@ const roadmapRows = [
 ];
 
 for (const [label, count] of roadmapRows) {
-  if (hasRoadmap) {
-    expectIncludes('roadmap', `| ${label} | ${count.main} | ${count.sub} | ${count.total} |`, `ROADMAP ${label} row`);
-  }
+  expectIncludes('roadmap', `| ${label} | ${count.main} | ${count.sub} | ${count.total} |`, `ROADMAP ${label} row`);
 }
 
 if (failures.length > 0) {
