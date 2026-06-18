@@ -161,6 +161,7 @@ export default defineComponent({
             selectedNodeBusinessSceneImpactSummary
           "
           :selected-node-coverage-summary="selectedNodeCoverageSummary"
+          :selected-node-special-insight-summary="selectedNodeSpecialInsightSummary"
           :selected-network-node-title="selectedNetworkNodeTitle"
           :selected-network-relation-counts="selectedNetworkRelationCounts"
           :selected-network-relations="selectedNetworkRelations"

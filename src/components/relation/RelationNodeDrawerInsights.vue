@@ -18,6 +18,8 @@ defineProps<{
   rootNodeRelations: RootRelationSummary[];
   selectedNodeRootPath: RootPathSummary | null;
   selectedNodeAnalysisSummary: NodeAnalysisSummary | null;
+  selectedNodeType: string;
+  selectedNodeId: string;
   selectedNodeAttackPathSummary: string[];
   selectedNodeAttackPathDescription: string;
   selectedNodeAttackPathExplanations: AttackPathExplanation[];
@@ -44,6 +46,8 @@ const emit = defineEmits<{
     :root-node-relations="rootNodeRelations"
     :selected-node-root-path="selectedNodeRootPath"
     :selected-node-analysis-summary="selectedNodeAnalysisSummary"
+    :selected-node-type="selectedNodeType"
+    :selected-node-id="selectedNodeId"
     :selected-node-attack-path-summary="selectedNodeAttackPathSummary"
     :selected-node-attack-path-description="selectedNodeAttackPathDescription"
     :selected-node-attack-path-explanations="selectedNodeAttackPathExplanations"

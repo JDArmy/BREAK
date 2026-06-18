@@ -95,6 +95,31 @@ export interface NodeCoverageSummary {
   notice?: string;
 }
 
+export interface NodeSpecialInsightSection {
+  title: string;
+  summary: string;
+  metrics: Array<{
+    label: string;
+    value: number;
+  }>;
+  items: Array<{
+    id: string;
+    title: string;
+    type: string;
+    meta: string;
+    sourceFields: string[];
+  }>;
+  notice?: string;
+}
+
+export interface NodeSpecialInsightSummary {
+  title: string;
+  summary: string;
+  severity: "normal" | "warning" | "danger";
+  sections: NodeSpecialInsightSection[];
+  recommendation?: string;
+}
+
 export interface NodeBusinessSceneImpactRisk {
   id: string;
   title: string;

@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, nextTick, ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
 import RelationNodeDetailContent from "@/components/relation/RelationNodeDetailContent.vue";
+import RelationNodeSpecialInsightBlock from "@/components/relation/RelationNodeSpecialInsightBlock.vue";
 import {
   RelationType,
   type AttackPathDetail,
@@ -16,6 +17,7 @@ import type {
   NodeAnalysisSummary,
   NodeBusinessSceneImpactSummary,
   NodeCoverageSummary,
+  NodeSpecialInsightSummary,
   RootPathSummary,
   RootRelationSummary,
 } from "@/components/relation/relationNodeDrawerInsightTypes";
@@ -58,6 +60,7 @@ const props = defineProps<{
   selectedNodeAttackPathExplanations: AttackPathExplanation[];
   selectedNodeBusinessSceneImpactSummary: NodeBusinessSceneImpactSummary | null;
   selectedNodeCoverageSummary: NodeCoverageSummary | null;
+  selectedNodeSpecialInsightSummary: NodeSpecialInsightSummary | null;
   selectedNetworkNodeTitle: string;
   selectedNetworkRelationCounts: {
     incoming: number;
@@ -90,6 +93,10 @@ const emit = defineEmits<{
 }>();
 
 const { t } = useI18n();
+const coverageColumnRef = ref<HTMLElement | null>(null);
+const pathColumnRef = ref<HTMLElement | null>(null);
+const detailColumnRef = ref<HTMLElement | null>(null);
+const preserveScrollPane = ref<"left" | "middle" | "right" | null>(null);
 
 const filterTypes: AttackPathFilterType[] = [
   RelationType.threatActor,
@@ -105,9 +112,52 @@ const updateFilter = (type: AttackPathFilterType, value: string | undefined) => 
   });
 };
 
+const applySpecialInsightFilter = (payload: { type: string; id: string }) => {
+  preserveScrollPane.value = "left";
+  const nextFilters: AttackPathFilters = {};
+  if (payload.type === RelationType.avoidance) {
+    nextFilters[RelationType.avoidance] = payload.id;
+  } else if (payload.type === RelationType.attackTool) {
+    nextFilters[RelationType.attackTool] = payload.id;
+  } else if (payload.type === RelationType.threatActor) {
+    nextFilters[RelationType.threatActor] = payload.id;
+  } else if (payload.type === RelationType.risk) {
+    nextFilters[RelationType.risk] = payload.id;
+  }
+
+  emit("update:attack-path-filters", nextFilters);
+};
+
+const emitAttackPathFilters = (
+  filters: AttackPathFilters,
+  preservePane: "left" | "middle" | "right"
+) => {
+  preserveScrollPane.value = preservePane;
+  emit("update:attack-path-filters", filters);
+};
+
+const applyLeftAvoidanceFilter = (avoidanceKey: string) => {
+  preserveScrollPane.value = "left";
+  emit("apply-avoidance-filter", avoidanceKey);
+};
+
+const selectMiddleAttackPath = (pathId: string) => {
+  preserveScrollPane.value = "middle";
+  emit("select-attack-path", pathId);
+};
+
+const emitRightAction = <T extends unknown[]>(
+  eventName: Parameters<typeof emit>[0],
+  ...args: T
+) => {
+  preserveScrollPane.value = "right";
+  emit(eventName, ...(args as never));
+};
+
 const hasAnyAnalysis = computed(
   () =>
     props.selectedNodeAnalysisSummary ||
+    props.selectedNodeSpecialInsightSummary ||
     props.selectedNodeBusinessSceneImpactSummary ||
     props.selectedNodeCoverageSummary ||
     props.selectedNodeAttackPathSummary.length > 0 ||
@@ -119,6 +169,35 @@ const hasAnyAnalysis = computed(
 const displayedCoverageItems = computed(() => {
   return props.riskAvoidanceCoverage?.items ?? [];
 });
+
+const resetColumnScroll = () => {
+  nextTick(() => {
+    const preservedPane = preserveScrollPane.value;
+    preserveScrollPane.value = null;
+    [
+      { key: "left", column: coverageColumnRef.value },
+      { key: "middle", column: pathColumnRef.value },
+      { key: "right", column: detailColumnRef.value },
+    ].forEach(({ key, column }) => {
+      if (key === preservedPane) return;
+      if (!column) return;
+      column.scrollTop = 0;
+      column.scrollLeft = 0;
+    });
+  });
+};
+
+watch(
+  () => [
+    props.selectedNetworkNode?.type ?? "",
+    props.selectedNetworkNode?.id ?? "",
+    props.attackPathFilters[RelationType.threatActor] ?? "",
+    props.attackPathFilters[RelationType.attackTool] ?? "",
+    props.attackPathFilters[RelationType.risk] ?? "",
+    props.attackPathFilters[RelationType.avoidance] ?? "",
+  ],
+  resetColumnScroll
+);
 </script>
 
 <template>
@@ -177,212 +256,259 @@ const displayedCoverageItems = computed(() => {
       </div>
 
       <div class="relation-analysis-columns">
-        <aside class="relation-analysis-column relation-analysis-coverage-column">
-          <div
-            v-if="riskAvoidanceCoverage"
-            class="node-explain-block relation-analysis-coverage"
+        <div class="relation-analysis-column-shell">
+          <aside
+            id="relation-analysis-coverage-column"
+            ref="coverageColumnRef"
+            class="relation-analysis-column relation-analysis-coverage-column"
           >
-            <h3>{{ t("relationView.coverageMode") }}</h3>
-            <div class="node-insight-panel">
-              <div class="relation-analysis-summary">
-                {{
-                  t("relationView.coverageModeSummary", {
-                    total: riskAvoidanceCoverage.totalCount,
-                    direct: riskAvoidanceCoverage.directCount,
-                    tool: riskAvoidanceCoverage.attackToolCount,
-                    overlap: riskAvoidanceCoverage.overlapCount,
-                  })
-                }}
-              </div>
-              <div class="relation-analysis-coverage-list">
-                <button
-                  v-for="item in displayedCoverageItems"
-                  :key="item.avoidanceKey"
-                  type="button"
-                  :class="[
-                    'relation-analysis-coverage-item',
-                    `relation-analysis-coverage-item-${item.source}`,
-                    attackPathFilters[RelationType.avoidance] ===
-                    item.avoidanceKey
-                      ? 'relation-analysis-coverage-item-active'
-                      : '',
-                  ]"
-                  @click="emit('apply-avoidance-filter', item.avoidanceKey)"
-                >
-                  <span class="relation-analysis-item-title">
-                    <strong>{{ item.avoidanceTitle }}</strong>
-                    <span>{{ item.avoidanceKey }}</span>
-                  </span>
-                  <span class="relation-analysis-item-meta">
-                    {{ item.sourceLabel }} /
-                    {{
-                      t("relationView.coveragePathCount", {
-                        count: item.pathCount,
-                      })
-                    }}
-                  </span>
-                  <span
-                    v-if="item.attackToolLabels.length"
-                    class="relation-analysis-item-meta"
+            <div
+              v-if="riskAvoidanceCoverage"
+              class="node-explain-block relation-analysis-coverage"
+            >
+              <h3>{{ t("relationView.coverageMode") }}</h3>
+              <div class="node-insight-panel">
+                <div class="relation-analysis-summary">
+                  {{
+                    t("relationView.coverageModeSummary", {
+                      total: riskAvoidanceCoverage.totalCount,
+                      direct: riskAvoidanceCoverage.directCount,
+                      tool: riskAvoidanceCoverage.attackToolCount,
+                      overlap: riskAvoidanceCoverage.overlapCount,
+                    })
+                  }}
+                </div>
+                <div class="relation-analysis-coverage-list">
+                  <button
+                    v-for="item in displayedCoverageItems"
+                    :key="item.avoidanceKey"
+                    type="button"
+                    :class="[
+                      'relation-analysis-coverage-item',
+                      `relation-analysis-coverage-item-${item.source}`,
+                      attackPathFilters[RelationType.avoidance] ===
+                      item.avoidanceKey
+                        ? 'relation-analysis-coverage-item-active'
+                        : '',
+                    ]"
+                    @click="applyLeftAvoidanceFilter(item.avoidanceKey)"
                   >
-                    {{ t("relationView.coverageToolSources") }}:
-                    {{ item.attackToolLabels.join(", ") }}
-                  </span>
-                </button>
+                    <span class="relation-analysis-item-title">
+                      <strong>{{ item.avoidanceTitle }}</strong>
+                      <span>{{ item.avoidanceKey }}</span>
+                    </span>
+                    <span class="relation-analysis-item-meta">
+                      {{ item.sourceLabel }} /
+                      {{
+                        t("relationView.coveragePathCount", {
+                          count: item.pathCount,
+                        })
+                      }}
+                    </span>
+                    <span
+                      v-if="item.attackToolLabels.length"
+                      class="relation-analysis-item-meta"
+                    >
+                      {{ t("relationView.coverageToolSources") }}:
+                      {{ item.attackToolLabels.join(", ") }}
+                    </span>
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        </aside>
+            <RelationNodeSpecialInsightBlock
+              v-else
+              :summary="selectedNodeSpecialInsightSummary"
+              :interactive="true"
+              @apply-filter="applySpecialInsightFilter"
+            />
+          </aside>
+          <el-backtop
+            class="relation-analysis-pane-backtop"
+            target="#relation-analysis-coverage-column"
+            :title="t('backtop')"
+            :aria-label="t('backtop')"
+            :visibility-height="240"
+          />
+        </div>
 
-        <aside class="relation-analysis-column relation-analysis-path-column">
-          <div
-            v-if="selectedAttackPathDetail"
-            class="node-explain-block relation-analysis-path-detail"
+        <div class="relation-analysis-column-shell">
+          <aside
+            id="relation-analysis-path-column"
+            ref="pathColumnRef"
+            class="relation-analysis-column relation-analysis-path-column"
           >
-            <h3>{{ t("relationView.pathDetail") }}</h3>
-            <div class="node-insight-panel">
-              <div class="relation-analysis-summary">
-                {{
-                  t("relationView.filteredSimplePathCount", {
-                    count: filteredAttackPathCount,
-                  })
-                }}
-              </div>
-              <div class="relation-analysis-path-chain">
-                <span
-                  v-for="(node, index) in selectedAttackPathDetail.nodes"
-                  :key="`${node.type}:${node.key}`"
-                  class="relation-analysis-path-node"
-                >
-                  <span>{{ node.label }}</span>
+            <div
+              v-if="selectedAttackPathDetail"
+              class="node-explain-block relation-analysis-path-detail"
+            >
+              <h3>{{ t("relationView.pathDetail") }}</h3>
+              <div class="node-insight-panel">
+                <div class="relation-analysis-summary">
+                  {{
+                    t("relationView.filteredSimplePathCount", {
+                      count: filteredAttackPathCount,
+                    })
+                  }}
+                </div>
+                <div class="relation-analysis-path-chain">
                   <span
-                    v-if="index < selectedAttackPathDetail.nodes.length - 1"
-                    class="relation-analysis-path-arrow"
-                    >-></span
+                    v-for="(node, index) in selectedAttackPathDetail.nodes"
+                    :key="`${node.type}:${node.key}`"
+                    class="relation-analysis-path-node"
                   >
-                </span>
-              </div>
-              <div class="relation-analysis-segments">
-                <div
-                  v-for="segment in selectedAttackPathDetail.segments"
-                  :key="`${segment.source.type}:${segment.source.key}->${segment.target.type}:${segment.target.key}`"
-                  class="relation-analysis-segment"
-                >
-                  <div class="relation-analysis-segment-main">
-                    <strong>{{ segment.source.label }}</strong>
-                    <span>{{ segment.relation }}</span>
-                    <strong>{{ segment.target.label }}</strong>
-                  </div>
-                  <div class="relation-analysis-item-meta">
-                    {{ segment.reason }}
-                  </div>
-                  <div class="relation-analysis-item-meta">
-                    {{ t("relationView.sourceFields") }}:
-                    {{ segment.sourceFields.join(", ") }}
+                    <span>{{ node.label }}</span>
+                    <span
+                      v-if="index < selectedAttackPathDetail.nodes.length - 1"
+                      class="relation-analysis-path-arrow"
+                      >-></span
+                    >
+                  </span>
+                </div>
+                <div class="relation-analysis-segments">
+                  <div
+                    v-for="segment in selectedAttackPathDetail.segments"
+                    :key="`${segment.source.type}:${segment.source.key}->${segment.target.type}:${segment.target.key}`"
+                    class="relation-analysis-segment"
+                  >
+                    <div class="relation-analysis-segment-main">
+                      <strong>{{ segment.source.label }}</strong>
+                      <span>{{ segment.relation }}</span>
+                      <strong>{{ segment.target.label }}</strong>
+                    </div>
+                    <div class="relation-analysis-item-meta">
+                      {{ segment.reason }}
+                    </div>
+                    <div class="relation-analysis-item-meta">
+                      {{ t("relationView.sourceFields") }}:
+                      {{ segment.sourceFields.join(", ") }}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="node-explain-block relation-analysis-all-paths">
-            <h3>{{ t("relationView.allPaths") }}</h3>
-            <div class="node-insight-panel">
-              <div class="relation-analysis-summary">
-                {{
-                  t("relationView.filteredSimplePathCount", {
-                    count: attackPathDetails.length,
-                  })
-                }}
-              </div>
-              <div class="relation-analysis-path-list">
-                <button
-                  v-for="path in attackPathDetails"
-                  :key="path.id"
-                  type="button"
-                  :class="[
-                    'relation-analysis-path-list-item',
-                    selectedAttackPathDetail?.id === path.id
-                      ? 'relation-analysis-path-list-item-active'
-                      : '',
-                  ]"
-                  @click="emit('select-attack-path', path.id)"
-                >
-                  <span class="relation-analysis-path-list-title">
-                    {{ path.label }}
-                  </span>
-                  <span class="relation-analysis-item-meta">
-                    {{ path.segments.length }} {{ t("relationView.pathSegments") }}
-                  </span>
-                </button>
+            <div class="node-explain-block relation-analysis-all-paths">
+              <h3>{{ t("relationView.allPaths") }}</h3>
+              <div class="node-insight-panel">
+                <div class="relation-analysis-summary">
+                  {{
+                    t("relationView.filteredSimplePathCount", {
+                      count: attackPathDetails.length,
+                    })
+                  }}
+                </div>
+                <div class="relation-analysis-path-list">
+                  <button
+                    v-for="path in attackPathDetails"
+                    :key="path.id"
+                    type="button"
+                    :class="[
+                      'relation-analysis-path-list-item',
+                      selectedAttackPathDetail?.id === path.id
+                        ? 'relation-analysis-path-list-item-active'
+                        : '',
+                    ]"
+                    @click="selectMiddleAttackPath(path.id)"
+                  >
+                    <span class="relation-analysis-path-list-title">
+                      {{ path.label }}
+                    </span>
+                    <span class="relation-analysis-item-meta">
+                      {{ path.segments.length }}
+                      {{ t("relationView.pathSegments") }}
+                    </span>
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        </aside>
+          </aside>
+          <el-backtop
+            class="relation-analysis-pane-backtop"
+            target="#relation-analysis-path-column"
+            :title="t('backtop')"
+            :aria-label="t('backtop')"
+            :visibility-height="240"
+          />
+        </div>
 
-        <div class="relation-analysis-column relation-analysis-main">
-          <div v-if="selectedNetworkNode" class="node-explain-block">
-            <h3>{{ t("relationView.relationDetail") }}</h3>
-            <div class="node-insight-panel relation-analysis-detail-panel">
-              <RelationNodeDetailContent
-                :selected-network-node="selectedNetworkNode"
-                :selected-network-node-title="selectedNetworkNodeTitle"
-                :selected-network-relation-counts="
-                  selectedNetworkRelationCounts
-                "
-                :root-node-relations="rootNodeRelations"
-                :selected-node-root-path="selectedNodeRootPath"
-                :selected-node-analysis-summary="selectedNodeAnalysisSummary"
-                :selected-node-attack-path-summary="
-                  selectedNodeAttackPathSummary
-                "
-                :selected-node-attack-path-description="
-                  selectedNodeAttackPathDescription
-                "
-                :selected-node-attack-path-explanations="
-                  selectedNodeAttackPathExplanations
-                "
-                :attack-path-filter-options="attackPathFilterOptions"
-                :attack-path-filters="attackPathFilters"
-                :has-active-attack-path-filters="hasActiveAttackPathFilters"
-                :selected-node-business-scene-impact-summary="
-                  selectedNodeBusinessSceneImpactSummary
-                "
-                :selected-node-coverage-summary="selectedNodeCoverageSummary"
-                :show-root-relation-block="false"
-                :show-attack-path-block="false"
-                :selected-network-relations="selectedNetworkRelations"
-                :rel-key="relKey"
-                :get-node-type-title="getNodeTypeTitle"
-                :is-path-node-current-selection="
-                  isPathNodeCurrentSelection
-                "
-                :is-relation-on-selected-path="isRelationOnSelectedPath"
-                :is-current-node-root="isCurrentNodeRoot"
-                :drawer-copy-feedback-message="drawerCopyFeedbackMessage"
-                :drawer-copy-feedback-type="drawerCopyFeedbackType"
-                :show-open-as-root-action="false"
-                @copy-csv="emit('copy-csv')"
-                @view-detail="emit('view-detail')"
-                @open-detail-new-window="emit('open-detail-new-window')"
-                @open-as-root="emit('open-as-root')"
-                @update:attack-path-filters="
-                  emit('update:attack-path-filters', $event)
-                "
-                @reset-attack-path-filters="emit('reset-attack-path-filters')"
-                @focus-node="emit('focus-node', $event)"
-                @open-node-as-root="emit('open-node-as-root', $event)"
-                @open-node-detail="emit('open-node-detail', $event)"
-              />
+        <div class="relation-analysis-column-shell">
+          <div
+            id="relation-analysis-detail-column"
+            ref="detailColumnRef"
+            class="relation-analysis-column relation-analysis-main"
+          >
+            <div v-if="selectedNetworkNode" class="node-explain-block">
+              <h3>{{ t("relationView.relationDetail") }}</h3>
+              <div class="node-insight-panel relation-analysis-detail-panel">
+                <RelationNodeDetailContent
+                  :selected-network-node="selectedNetworkNode"
+                  :selected-network-node-title="selectedNetworkNodeTitle"
+                  :selected-network-relation-counts="
+                    selectedNetworkRelationCounts
+                  "
+                  :root-node-relations="rootNodeRelations"
+                  :selected-node-root-path="selectedNodeRootPath"
+                  :selected-node-analysis-summary="selectedNodeAnalysisSummary"
+                  :selected-node-attack-path-summary="
+                    selectedNodeAttackPathSummary
+                  "
+                  :selected-node-attack-path-description="
+                    selectedNodeAttackPathDescription
+                  "
+                  :selected-node-attack-path-explanations="
+                    selectedNodeAttackPathExplanations
+                  "
+                  :attack-path-filter-options="attackPathFilterOptions"
+                  :attack-path-filters="attackPathFilters"
+                  :has-active-attack-path-filters="hasActiveAttackPathFilters"
+                  :selected-node-business-scene-impact-summary="
+                    selectedNodeBusinessSceneImpactSummary
+                  "
+                  :selected-node-coverage-summary="selectedNodeCoverageSummary"
+                  :show-root-relation-block="false"
+                  :show-attack-path-block="false"
+                  :selected-network-relations="selectedNetworkRelations"
+                  :rel-key="relKey"
+                  :get-node-type-title="getNodeTypeTitle"
+                  :is-path-node-current-selection="
+                    isPathNodeCurrentSelection
+                  "
+                  :is-relation-on-selected-path="isRelationOnSelectedPath"
+                  :is-current-node-root="isCurrentNodeRoot"
+                  :drawer-copy-feedback-message="drawerCopyFeedbackMessage"
+                  :drawer-copy-feedback-type="drawerCopyFeedbackType"
+                  :show-open-as-root-action="false"
+                  @copy-csv="emitRightAction('copy-csv')"
+                  @view-detail="emitRightAction('view-detail')"
+                  @open-detail-new-window="
+                    emitRightAction('open-detail-new-window')
+                  "
+                  @open-as-root="emitRightAction('open-as-root')"
+                  @update:attack-path-filters="
+                    emitAttackPathFilters($event, 'right')
+                  "
+                  @reset-attack-path-filters="
+                    emitRightAction('reset-attack-path-filters')
+                  "
+                  @focus-node="emitRightAction('focus-node', $event)"
+                  @open-node-as-root="
+                    emitRightAction('open-node-as-root', $event)
+                  "
+                  @open-node-detail="emitRightAction('open-node-detail', $event)"
+                />
+              </div>
             </div>
           </div>
+          <el-backtop
+            class="relation-analysis-pane-backtop"
+            target="#relation-analysis-detail-column"
+            :title="t('backtop')"
+            :aria-label="t('backtop')"
+            :visibility-height="240"
+          />
         </div>
       </div>
     </template>
-    <el-backtop
-      v-if="active"
-      target=".relation-analysis-pane"
-      :visibility-height="240"
-    />
   </div>
 </template>
 
@@ -419,8 +545,15 @@ const displayedCoverageItems = computed(() => {
   min-height: 0;
 }
 
+.relation-analysis-column-shell {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+}
+
 .relation-analysis-column {
   min-width: 0;
+  height: 100%;
   min-height: 0;
   overflow: auto;
   padding-right: 2px;
@@ -428,7 +561,7 @@ const displayedCoverageItems = computed(() => {
 }
 
 .relation-analysis-detail-panel {
-  padding: 10px 12px;
+  padding: 12px;
   background: transparent;
 }
 
@@ -467,6 +600,34 @@ const displayedCoverageItems = computed(() => {
   min-width: 0;
 }
 
+.relation-analysis-pane-backtop {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  z-index: 2;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  padding: 0;
+  border: 1px solid var(--break-border);
+  background: var(--break-bg-card);
+  box-shadow: 0 6px 18px
+    color-mix(in srgb, var(--break-text-primary) 10%, transparent);
+}
+
+.relation-analysis-pane-backtop:hover {
+  border-color: var(--el-color-primary);
+  background: color-mix(
+    in srgb,
+    var(--el-color-primary) 8%,
+    var(--break-bg-card)
+  );
+}
+
+.relation-analysis-pane-backtop :deep(.el-icon) {
+  font-size: 14px;
+}
+
 .relation-analysis-empty {
   display: flex;
   min-height: 320px;
@@ -487,19 +648,27 @@ const displayedCoverageItems = computed(() => {
 .relation-analysis-segments,
 .relation-analysis-path-list {
   display: grid;
-  gap: 8px;
+  gap: 10px;
   margin-top: 10px;
 }
 
-.relation-analysis-coverage-item {
+.relation-analysis-coverage-item,
+.relation-analysis-segment,
+.relation-analysis-path-list-item {
   display: flex;
   min-width: 0;
   flex-direction: column;
   gap: 4px;
-  padding: 8px 9px;
-  border: 1px solid var(--break-border);
-  background: var(--break-bg-card);
+  padding: 10px 12px;
+  border: 1px solid color-mix(in srgb, var(--break-border) 86%, var(--el-color-primary));
+  border-radius: 7px;
+  background: color-mix(in srgb, var(--break-bg-card) 84%, transparent);
   color: var(--break-text-secondary);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--break-border) 24%, transparent);
+}
+
+.relation-analysis-coverage-item,
+.relation-analysis-path-list-item {
   font: inherit;
   text-align: left;
   cursor: pointer;
@@ -508,18 +677,28 @@ const displayedCoverageItems = computed(() => {
 .relation-analysis-coverage-item:hover,
 .relation-analysis-coverage-item-active {
   border-color: var(--el-color-primary);
+  background: color-mix(in srgb, var(--el-color-primary) 5%, var(--break-bg-card));
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--el-color-primary) 22%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--el-color-primary) 10%, transparent);
 }
 
 .relation-analysis-coverage-item-both {
-  border-left: 3px solid var(--el-color-success);
+  box-shadow:
+    inset 3px 0 0 var(--el-color-success),
+    inset 0 0 0 1px color-mix(in srgb, var(--break-border) 24%, transparent);
 }
 
 .relation-analysis-coverage-item-risk {
-  border-left: 3px solid var(--el-color-primary);
+  box-shadow:
+    inset 3px 0 0 var(--el-color-primary),
+    inset 0 0 0 1px color-mix(in srgb, var(--break-border) 24%, transparent);
 }
 
 .relation-analysis-coverage-item-attackTool {
-  border-left: 3px solid var(--el-color-warning);
+  box-shadow:
+    inset 3px 0 0 var(--el-color-warning),
+    inset 0 0 0 1px color-mix(in srgb, var(--break-border) 24%, transparent);
 }
 
 .relation-analysis-item-title {
@@ -557,31 +736,21 @@ const displayedCoverageItems = computed(() => {
   color: var(--break-text-muted);
 }
 
-.relation-analysis-segment {
-  padding: 8px;
-  border: 1px solid var(--break-border);
-  background: var(--break-bg-card);
-}
-
 .relation-analysis-path-list-item {
-  display: flex;
-  min-width: 0;
-  flex-direction: column;
-  gap: 4px;
-  padding: 8px 9px;
-  border: 1px solid var(--break-border);
-  border-left: 3px solid var(--el-color-primary);
-  background: var(--break-bg-card);
-  color: var(--break-text-secondary);
-  font: inherit;
-  text-align: left;
-  cursor: pointer;
+  box-shadow:
+    inset 3px 0 0 var(--el-color-primary),
+    inset 0 0 0 1px color-mix(in srgb, var(--break-border) 24%, transparent);
 }
 
 .relation-analysis-path-list-item:hover,
 .relation-analysis-path-list-item-active {
   border-color: var(--el-color-primary);
+  background: color-mix(in srgb, var(--el-color-primary) 5%, var(--break-bg-card));
   color: var(--break-text-primary);
+  box-shadow:
+    inset 3px 0 0 var(--el-color-primary),
+    inset 0 0 0 1px color-mix(in srgb, var(--el-color-primary) 22%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--el-color-primary) 10%, transparent);
 }
 
 .relation-analysis-path-list-title {
@@ -611,6 +780,11 @@ const displayedCoverageItems = computed(() => {
     grid-template-columns: 1fr;
   }
 
+  .relation-analysis-pane-backtop {
+    right: 10px;
+    bottom: 10px;
+  }
+
   .relation-analysis-filter-grid {
     grid-template-columns: repeat(2, minmax(132px, 1fr));
   }
@@ -630,6 +804,10 @@ const displayedCoverageItems = computed(() => {
   .relation-analysis-column {
     overflow: visible;
     padding-right: 0;
+  }
+
+  .relation-analysis-pane-backtop {
+    display: none;
   }
 
   .relation-analysis-filter-bar {

@@ -240,6 +240,22 @@ export interface NodeCoverageSummary {
   notice?: string;
 }
 
+export interface NodeSpecialInsightSection {
+  title: string;
+  summary: string;
+  metrics: NodeCoverageMetric[];
+  items: NodeCoverageItem[];
+  notice?: string;
+}
+
+export interface NodeSpecialInsightSummary {
+  title: string;
+  summary: string;
+  severity: NodeCoverageSeverity;
+  sections: NodeSpecialInsightSection[];
+  recommendation?: string;
+}
+
 export interface NodeBusinessSceneImpactRisk {
   id: string;
   title: string;

@@ -368,13 +368,14 @@ export const useRelationGraphData = ({
     getNodeTitle,
   });
 
-  const { selectedNodeCoverageSummary } = createRelationCoverageAnalysis({
+  const { selectedNodeCoverageSummary, selectedNodeSpecialInsightSummary } =
+    createRelationCoverageAnalysis({
     t,
     relType,
     relKey,
     selectedNetworkNode,
     getNodeTitle,
-  });
+    });
 
   const { selectedNodeBusinessSceneImpactSummary } =
     createRelationBusinessSceneImpact({
@@ -463,6 +464,7 @@ export const useRelationGraphData = ({
     selectedNodePathRelationKeys,
     selectedNodeRootPath,
     selectedNodeRootPreview,
+    selectedNodeSpecialInsightSummary,
     subNodeFilterColor,
     visibleRelationLegendItems,
     wrapLabelText,

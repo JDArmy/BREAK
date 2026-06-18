@@ -102,6 +102,80 @@
   line-height: 1.5;
 }
 
+.node-special-insight-panel {
+  gap: 10px;
+  background: transparent;
+}
+
+.node-special-insight-summary {
+  color: var(--break-text-secondary);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.node-special-insight-anchor-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.node-special-insight-anchor {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  padding: 3px 9px;
+  border: 1px solid var(--break-border);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--break-bg-soft) 72%, transparent);
+  color: var(--break-text-secondary);
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.35;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+
+.node-special-insight-anchor:hover,
+.node-special-insight-anchor:focus-visible {
+  border-color: var(--el-color-primary);
+  color: var(--el-color-primary);
+  outline: none;
+}
+
+.node-special-insight-section {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid color-mix(in srgb, var(--break-border) 78%, var(--el-color-primary));
+  border-radius: 8px;
+  background: transparent;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--break-border) 38%, transparent);
+  overflow: hidden;
+}
+
+.node-special-insight-section .node-coverage-list {
+  gap: 10px;
+  padding: 4px 2px 2px;
+}
+
+.node-special-insight-section-head {
+  display: grid;
+  gap: 3px;
+}
+
+.node-special-insight-section-head strong {
+  color: var(--break-text-primary);
+  font-size: 12px;
+}
+
+.node-special-insight-section-head span {
+  color: var(--break-text-secondary);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
 .node-business-scene-panel {
   gap: 9px;
 }
@@ -219,6 +293,68 @@
   gap: 3px;
   padding-top: 8px;
   border-top: 1px solid var(--break-border);
+}
+
+.node-coverage-item[role="button"] {
+  gap: 4px;
+  padding: 10px 12px;
+  border: 1px solid color-mix(in srgb, var(--break-border) 86%, var(--el-color-primary));
+  border-radius: 7px;
+  background: color-mix(in srgb, var(--break-bg-card) 84%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--break-border) 24%, transparent);
+  cursor: pointer;
+}
+
+.node-coverage-item[role="button"]:hover,
+.node-coverage-item[role="button"]:focus-visible {
+  border-color: var(--el-color-primary);
+  background: color-mix(in srgb, var(--el-color-primary) 5%, var(--break-bg-card));
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--el-color-primary) 22%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--el-color-primary) 10%, transparent);
+  outline: none;
+}
+
+.node-coverage-item[role="button"]:hover .node-coverage-item-main strong,
+.node-coverage-item[role="button"]:hover .node-coverage-item-main span,
+.node-coverage-item[role="button"]:focus-visible .node-coverage-item-main strong,
+.node-coverage-item[role="button"]:focus-visible .node-coverage-item-main span {
+  color: var(--el-color-primary);
+}
+
+button.node-coverage-item {
+  width: 100%;
+  padding: 8px 0 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+button.node-coverage-item:hover .node-coverage-item-main strong,
+button.node-coverage-item:hover .node-coverage-item-main span {
+  color: var(--el-color-primary);
+}
+
+button.node-coverage-item.node-special-insight-item,
+.node-coverage-item.node-special-insight-item {
+  gap: 4px;
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid color-mix(in srgb, var(--break-border) 82%, var(--el-color-primary));
+  border-radius: 7px;
+  background: color-mix(in srgb, var(--break-bg-card) 84%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--break-border) 26%, transparent);
+}
+
+button.node-coverage-item.node-special-insight-item:hover,
+.node-coverage-item.node-special-insight-item:hover {
+  border-color: var(--el-color-primary);
+  background: color-mix(in srgb, var(--el-color-primary) 5%, var(--break-bg-card));
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--el-color-primary) 24%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--el-color-primary) 12%, transparent);
 }
 
 .node-coverage-item-main {
