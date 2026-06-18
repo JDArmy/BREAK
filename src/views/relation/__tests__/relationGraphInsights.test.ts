@@ -133,7 +133,21 @@ describe("relationGraphInsights", () => {
       expect.objectContaining({
         summary: "relationView.nodeAnalysis.risk",
         highlights: expect.arrayContaining([
-          "relationView.nodeAnalysisRelatedCount",
+          {
+            label: "relationView.nodeAnalysisRelatedCount",
+            type: "attack-tool",
+            ids: ["TOOL"],
+          },
+          {
+            label: "relationView.nodeAnalysisRelatedCount",
+            type: "avoidance",
+            ids: ["AVOID"],
+          },
+          {
+            label: "relationView.nodeAnalysisRelatedCount",
+            type: "term",
+            ids: ["TERM"],
+          },
         ]),
         notices: ["relationView.nodeAnalysisNotice.rootPath"],
       })

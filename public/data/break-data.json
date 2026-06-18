@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "packageVersion": "2.14.2",
-  "generatedAt": "2026-06-17T03:31:54.000Z",
+  "packageVersion": "2.14.8",
+  "generatedAt": "2026-06-18T05:34:26.000Z",
   "locale": "zh-CN",
   "data": {
     "risks": {
@@ -12259,10 +12259,6 @@
           {
             "link": "https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-150.pdf",
             "title": "[PDF] Guide to Cyber Threat Information Sharing"
-          },
-          {
-            "link": "https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-150.pdf",
-            "title": "[PDF] Guide to Cyber Threat Information Sharing"
           }
         ],
         "title": "威胁情报",
@@ -14206,10 +14202,6 @@
         ],
         "limitation": "局限性：成本问题： 建立完备的灾难恢复机制可能需要大量投资，对于一些小型组织而言可能难以负担。无法预测的灾难： 有些灾难是无法预测和预防的，因此灾难恢复机制可能无法覆盖所有情况。依赖供应链： 如果供应链中的某个环节受到影响，可能会影响到灾难恢复机制的执行。人为因素： 人为错误、失误或疏忽可能导致灾难恢复计划的执行失败。",
         "references": [
-          {
-            "link": "https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final",
-            "title": "Contingency Planning Guide for Federal Information Systems"
-          },
           {
             "link": "https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final",
             "title": "Contingency Planning Guide for Federal Information Systems"
