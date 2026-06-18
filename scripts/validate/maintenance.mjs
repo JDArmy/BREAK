@@ -11,6 +11,7 @@ const sourceFiles = {
   relations: 'relationship-coverage.json',
   metrics: 'metrics-baseline.json',
   bundle: 'bundle-budget.json',
+  lighthouseSankey: 'lighthouse-mobile-sankey-trace.json',
 };
 
 const priorityRank = {
@@ -227,6 +228,32 @@ function addBundleTasks(tasks, source) {
   }
 }
 
+function addLighthouseSankeyTasks(tasks, source) {
+  if (!source.available) return;
+
+  const tbtMs = Number(source.report.metrics?.tbtMs ?? 0);
+  const performanceScore = Number(source.report.metrics?.performanceScore ?? 0);
+  if (tbtMs > 600) {
+    addTask(tasks, {
+      priority: 'P1',
+      source: source.name,
+      type: 'mobile_sankey_tbt',
+      title: `移动端 Sankey TBT 偏高: ${tbtMs}ms，优先分析入口脚本、Element Plus 和 ECharts/zrender 长任务`,
+      count: 1,
+      details: [
+        {
+          performanceScore,
+          tbtMs,
+          topMainThread: source.report.mainThreadWork?.[0]?.group,
+          topMainThreadMs: source.report.mainThreadWork?.[0]?.durationMs,
+          topLongTaskUrl: source.report.longTasks?.[0]?.url,
+          topLongTaskMs: source.report.longTasks?.[0]?.durationMs,
+        },
+      ],
+    });
+  }
+}
+
 function summarizeTasks(tasks) {
   const byPriority = Object.fromEntries(Object.keys(priorityRank).map((priority) => [priority, 0]));
   const bySource = {};
@@ -262,6 +289,7 @@ function buildReport() {
   addRelationTasks(tasks, byName.relations);
   addMetricsTasks(tasks, byName.metrics);
   addBundleTasks(tasks, byName.bundle);
+  addLighthouseSankeyTasks(tasks, byName.lighthouseSankey);
   sortTasks(tasks);
 
   return {

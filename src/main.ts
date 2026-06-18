@@ -17,11 +17,34 @@ app.config.errorHandler = (err, instance, info) => {
 app.use(i18n);
 app.use(router);
 
-initLocaleMessages()
-  .then(() => {
-    app.mount("#app");
-  })
-  .catch((error) => {
+const shouldLoadInitialLocaleBeforeMount =
+  typeof window !== "undefined" && window.innerWidth >= 768;
+
+if (shouldLoadInitialLocaleBeforeMount) {
+  initLocaleMessages().catch((error) => {
     console.error("Failed to load initial locale messages:", error);
-    app.mount("#app");
   });
+}
+
+app.mount("#app");
+
+const scheduleInitLocaleMessages = () => {
+  const run = () => {
+    initLocaleMessages().catch((error) => {
+      console.error("Failed to load initial locale messages:", error);
+    });
+  };
+
+  if ("requestIdleCallback" in window) {
+    window.requestIdleCallback(run, { timeout: 3000 });
+    return;
+  }
+
+  window.setTimeout(run, 0);
+};
+
+window.requestAnimationFrame(() => {
+  if (!shouldLoadInitialLocaleBeforeMount) {
+    scheduleInitLocaleMessages();
+  }
+});

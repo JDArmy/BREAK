@@ -162,29 +162,32 @@ const getActiveIndex = (fullPath: string) => {
 
 <template>
   <!-- 移动端导航栏 -->
-  <el-menu
-    :default-active="getActiveIndex($route.fullPath)"
-    mode="horizontal"
-    :ellipsis="false"
-    :router="false"
-    class="hidden-md-and-up mobile-menu"
-    style="height: 100%"
-  >
-    <div style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); cursor: pointer" @click="$router.push('/')">
+  <nav class="hidden-md-and-up mobile-nav" aria-label="Mobile navigation">
+    <el-menu
+      :default-active="getActiveIndex($route.fullPath)"
+      mode="horizontal"
+      :ellipsis="false"
+      :router="false"
+      class="mobile-menu"
+      style="height: 100%"
+      role="none"
+    >
+    <button class="mobile-logo-button" type="button" aria-label="JDArmy BREAK" @click="$router.push('/')">
       <img src="/logo.png" class="logo" width="50" alt="" />
-    </div>
+    </button>
     <h3 class="banner" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%">
       {{ $t("BREAK.name") }}
     </h3>
-    <div class="mobile-nav-right">
-      <div class="mobile-search" @click="openSearchDialog">
+    <div class="mobile-nav-right" role="none">
+      <button class="mobile-search" type="button" :aria-label="$t('search.placeholder')" @click="openSearchDialog">
         <el-icon><Search /></el-icon>
-      </div>
-      <div class="mobile-hamburger" @click="handleMobileMenuOpen">
+      </button>
+      <button class="mobile-hamburger" type="button" :aria-label="$t('menu.knowledge')" @click="handleMobileMenuOpen">
         <el-icon :size="20"><MenuIcon /></el-icon>
-      </div>
+      </button>
     </div>
-  </el-menu>
+    </el-menu>
+  </nav>
 
   <!-- 移动端侧滑菜单 -->
   <el-drawer
@@ -284,32 +287,38 @@ const getActiveIndex = (fullPath: string) => {
   </el-drawer>
 
   <!-- 桌面端导航栏 -->
-  <el-menu
-    :default-active="getActiveIndex($route.fullPath)"
-    mode="horizontal"
-    :ellipsis="false"
-    :router="true"
-    class="hidden-sm-and-down desktop-menu"
-    role="navigation"
-    aria-label="Main navigation"
-    @select="handleDesktopMenuSelect"
-  >
-    <div style="display: flex; align-items: center; cursor: pointer" @click="$router.push('/')">
-      <img src="/logo.png" class="logo" alt="JDArmy BREAK" />
+  <nav class="hidden-sm-and-down desktop-nav" aria-label="Main navigation">
+    <el-menu
+      :default-active="getActiveIndex($route.fullPath)"
+      mode="horizontal"
+      :ellipsis="false"
+      :router="true"
+      class="desktop-menu"
+      role="none"
+      @select="handleDesktopMenuSelect"
+    >
+    <div role="none" style="display: flex; align-items: center;">
+      <button class="desktop-logo-button" type="button" aria-label="JDArmy BREAK" @click="$router.push('/')">
+      <img src="/logo.png" class="logo" width="40" height="40" alt="JDArmy BREAK" />
+      </button>
     </div>
 
-    <div style="display: flex; align-items: center;">
+    <div role="none" style="display: flex; align-items: center;">
       <h3 class="banner">
         {{ $t("BREAK.name") }}
       </h3>
     </div>
 
-    <div class="flex-grow">
-      <div class="search-trigger" @click="openSearchDialog">
+    <div class="flex-grow" role="none">
+      <button
+        class="search-trigger"
+        type="button"
+        @click="openSearchDialog"
+      >
         <el-icon><Search /></el-icon>
         <span class="search-placeholder">{{ $t("search.placeholder") }}</span>
         <span class="search-shortcut">{{ shortcutHint }}</span>
-      </div>
+      </button>
     </div>
     <el-menu-item class="" index="/">{{ $t("menu.home") }}</el-menu-item>
     <el-menu-item index="/relation/risk/R0001">{{
@@ -321,7 +330,14 @@ const getActiveIndex = (fullPath: string) => {
       @command="handleKnowledgeCommand"
       @visible-change="handleKnowledgeMenuVisible"
     >
-      <span class="el-dropdown-link" @mouseenter="prefetchAllKnowledgeViews" @focus="prefetchAllKnowledgeViews">
+      <span
+        class="el-dropdown-link"
+        :aria-label="$t('menu.knowledge')"
+        role="button"
+        tabindex="0"
+        @mouseenter="prefetchAllKnowledgeViews"
+        @focus="prefetchAllKnowledgeViews"
+      >
         {{ $t("menu.knowledge") }}<el-icon><arrow-down /></el-icon>
       </span>
       <template #dropdown>
@@ -336,7 +352,7 @@ const getActiveIndex = (fullPath: string) => {
     </el-dropdown>
 
     <el-dropdown class="outside-link">
-      <span class="el-dropdown-link"
+      <span class="el-dropdown-link" aria-label="JDArmy" role="button" tabindex="0"
         >JDArmy<el-icon>
           <arrow-down />
         </el-icon>
@@ -392,7 +408,7 @@ const getActiveIndex = (fullPath: string) => {
     <ThemeToggle />
 
     <el-dropdown class="translate" trigger="click" :disabled="localeChanging" @command="handleLocaleChange">
-      <span class="el-dropdown-link">
+      <span class="el-dropdown-link" :aria-label="languages[locale as keyof typeof languages]" role="button" tabindex="0">
         <icon-translate />
         <span class="locale-label">{{ languages[locale as keyof typeof languages] }}</span>
         <el-icon><arrow-down /></el-icon>
@@ -409,11 +425,12 @@ const getActiveIndex = (fullPath: string) => {
       </template>
     </el-dropdown>
 
-    <div class="github">
+    <div class="github" role="none">
       <github-pane />
     </div>
 
-  </el-menu>
+    </el-menu>
+  </nav>
 
   <SearchDialog v-if="searchDialogEnabled" v-model="searchOpen" />
 </template>
@@ -425,6 +442,41 @@ const getActiveIndex = (fullPath: string) => {
   margin: 5px;
   width: 40px;
 }
+
+.mobile-nav,
+.desktop-nav {
+  height: 100%;
+}
+
+.mobile-logo-button,
+.desktop-logo-button,
+.mobile-search,
+.mobile-hamburger {
+  border: 0;
+  background: transparent;
+  color: var(--break-text-primary);
+  font: inherit;
+  cursor: pointer;
+}
+
+.mobile-logo-button,
+.desktop-logo-button {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.mobile-logo-button {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.desktop-logo-button {
+  min-height: var(--el-menu-item-height);
+}
+
 .flex-grow {
   flex-grow: 1;
   display: flex;
@@ -437,10 +489,14 @@ const getActiveIndex = (fullPath: string) => {
   display: flex;
   align-items: center;
   gap: 6px;
+  box-sizing: border-box;
   padding: 4px 12px;
+  border: 0;
   border-radius: 6px;
   background: var(--break-bg-secondary);
+  color: var(--break-text-primary);
   cursor: pointer;
+  font-family: inherit;
   transition: background-color 0.2s;
   max-width: 260px;
   width: 100%;
@@ -459,7 +515,7 @@ const getActiveIndex = (fullPath: string) => {
 .search-placeholder {
   flex: 1;
   font-size: 13px;
-  color: var(--break-text-muted);
+  color: var(--break-text-secondary);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -467,7 +523,7 @@ const getActiveIndex = (fullPath: string) => {
 
 .search-shortcut {
   font-size: 11px;
-  color: var(--break-text-muted);
+  color: var(--break-text-secondary);
   padding: 2px 5px;
   border: 1px solid var(--break-border);
   border-radius: 3px;
@@ -485,14 +541,13 @@ const getActiveIndex = (fullPath: string) => {
 }
 
 .mobile-search {
-  cursor: pointer;
-  color: var(--break-text-primary);
   font-size: 18px;
+  display: flex;
+  align-items: center;
+  padding: 4px;
 }
 
 .mobile-hamburger {
-  cursor: pointer;
-  color: var(--break-text-primary);
   display: flex;
   align-items: center;
   padding: 4px;

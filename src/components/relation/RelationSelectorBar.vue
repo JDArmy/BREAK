@@ -89,6 +89,7 @@ watch(
       v-model="selectedType"
       class="relation-select"
       name="relation-selector-type"
+      :aria-label="t('relationView.relationType')"
     >
       <el-option
         v-for="[key, item] in selectableRelationTypes"
@@ -103,6 +104,7 @@ watch(
       class="relation-key-select"
       filterable
       name="relation-selector-key"
+      :aria-label="t('relationView.currentEntity')"
       :height="320"
       :item-height="34"
       :options="entitySelectOptions"

@@ -27,7 +27,12 @@ import iconGithub from "@/components/icons/iconGithub.vue";
           <div class="mobile-desktop-hint">{{ $t("mobileDesktopHint") }}</div>
           ©2024-2026 JD.Army
           <span class="github">
-            <a href="https://github.com/JDArmy/BREAK" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/JDArmy/BREAK"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="JDArmy BREAK GitHub"
+            >
               <icon-github />
             </a>
           </span>

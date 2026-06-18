@@ -110,6 +110,24 @@ async function waitForChrome(port, timeoutMs = 15000) {
   throw new Error(`Chromium remote debugging endpoint did not become ready: ${endpoint}`);
 }
 
+async function waitForExit(child, timeoutMs = 5000) {
+  if (child.exitCode !== null || child.signalCode !== null) return;
+
+  await Promise.race([
+    once(child, 'exit'),
+    new Promise((resolve) => setTimeout(resolve, timeoutMs)),
+  ]);
+}
+
+function removeTempDir(dir) {
+  try {
+    fs.rmSync(dir, { recursive: true, force: true, maxRetries: 5, retryDelay: 300 });
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    console.warn(`Warning: failed to remove temporary Chromium profile ${dir}: ${message}`);
+  }
+}
+
 async function launchChrome() {
   const port = await findFreePort();
   const userDataDir = fs.mkdtempSync(path.join(os.tmpdir(), 'break-lighthouse-'));
@@ -139,16 +157,18 @@ async function launchChrome() {
     await waitForChrome(port);
   } catch (error) {
     chrome.kill('SIGTERM');
-    fs.rmSync(userDataDir, { recursive: true, force: true });
+    await waitForExit(chrome);
+    removeTempDir(userDataDir);
     const message = error instanceof Error ? error.message : String(error);
     throw new Error(`${message}\n${output.trim()}`);
   }
 
   return {
     port,
-    close: () => {
+    close: async () => {
       chrome.kill('SIGTERM');
-      fs.rmSync(userDataDir, { recursive: true, force: true, maxRetries: 3, retryDelay: 200 });
+      await waitForExit(chrome);
+      removeTempDir(userDataDir);
     },
   };
 }
@@ -311,6 +331,6 @@ try {
   }
   process.exitCode = 1;
 } finally {
-  chrome?.close();
+  await chrome?.close();
   preview.kill('SIGTERM');
 }

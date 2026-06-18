@@ -1,4 +1,9 @@
 {
+  "BREAK": {
+    "name": "JDARMY BREAK",
+    "title": "业务风险枚举与规避知识",
+    "description": "BREAK（Business Risk Enumeration & Avoidance Knowledge）一个开放知识框架"
+  },
   "menu": {
     "home": "首页",
     "knowledge": "知识库",
@@ -355,6 +360,8 @@
     },
     "qualityFlagReview": "关系语义待复核",
     "qualityFlagMissingSource": "缺少来源字段",
+    "relationType": "关系类型",
+    "currentEntity": "当前实体",
     "pathFilterPlaceholder": "筛选路径",
     "filteredSimplePathCount": "当前筛选命中 {count} 条攻击路径。",
     "resetPathFilters": "清空筛选",
@@ -457,6 +464,7 @@
     "groupTerm": "行业术语"
   },
   "theme": {
+    "current": "当前主题",
     "light": "亮色",
     "dark": "暗色",
     "system": "跟随系统"

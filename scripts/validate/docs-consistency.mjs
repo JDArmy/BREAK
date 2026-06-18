@@ -1,13 +1,10 @@
 import fs from 'fs';
 import path from 'path';
-import { execFileSync } from 'child_process';
 import { projectRoot, readJson } from '../search/common.mjs';
 
-const roadmapPath = path.join(projectRoot, 'ROADMAP.md');
 const docs = {
   readme: fs.readFileSync(path.join(projectRoot, 'README.md'), 'utf8'),
   readmeCn: fs.readFileSync(path.join(projectRoot, 'README_CN.md'), 'utf8'),
-  roadmap: fs.existsSync(roadmapPath) ? fs.readFileSync(roadmapPath, 'utf8') : '',
   ciWorkflow: fs.readFileSync(path.join(projectRoot, '.github/workflows/ci.yml'), 'utf8'),
   deployWorkflow: fs.readFileSync(path.join(projectRoot, '.github/workflows/deploy.yml'), 'utf8'),
   pullRequestTemplate: fs.readFileSync(path.join(projectRoot, '.github/pull_request_template.md'), 'utf8'),
@@ -70,40 +67,6 @@ function expectIncludes(docName, snippet, description) {
   }
 }
 
-function isTracked(fileName) {
-  try {
-    execFileSync('git', ['ls-files', '--error-unmatch', fileName], {
-      cwd: projectRoot,
-      stdio: 'ignore',
-    });
-    return true;
-  } catch {
-    return false;
-  }
-}
-
-function countTestFiles() {
-  const roots = [path.join(projectRoot, 'src')];
-  const testFilePattern = /\.(test|spec)\.(ts|tsx)$/;
-  let total = 0;
-
-  while (roots.length > 0) {
-    const current = roots.pop();
-    for (const entry of fs.readdirSync(current, { withFileTypes: true })) {
-      const fullPath = path.join(current, entry.name);
-      if (entry.isDirectory()) {
-        roots.push(fullPath);
-      } else if (testFilePattern.test(entry.name) && fullPath.includes(`${path.sep}__tests__${path.sep}`)) {
-        total += 1;
-      }
-    }
-  }
-
-  return total;
-}
-
-const testFileCount = countTestFiles();
-const expectedTestTotal = 91;
 const buildGateScripts = [
   'lint',
   'type-check',
@@ -141,16 +104,6 @@ expectIncludes('readme', englishStats, 'README entity totals');
 expectIncludes('readmeCn', chineseStats, 'README_CN entity totals');
 expectIncludes('readme', '[DATA_SCHEMA.md](./DATA_SCHEMA.md)', 'README schema docs link');
 expectIncludes('readmeCn', '[DATA_SCHEMA.md](./DATA_SCHEMA.md)', 'README_CN schema docs link');
-if (!docs.roadmap) {
-  failures.push('ROADMAP.md: 缺少路线图文档');
-} else {
-  if (!isTracked('ROADMAP.md')) {
-    failures.push('ROADMAP.md: 必须纳入版本库，不能只作为本地忽略文件存在');
-  }
-  expectIncludes('roadmap', `当前项目版本：${packageJson.version}`, 'ROADMAP package version');
-  expectIncludes('roadmap', `参考资料总量：${metricReferenceTotal} 条`, 'ROADMAP reference total');
-  expectIncludes('roadmap', `| \`npm run test\` | ${testFileCount} 个测试文件，${expectedTestTotal} 个用例通过 |`, 'ROADMAP test baseline');
-}
 
 for (const scriptName of buildGateScripts) {
   if (!buildScript.includes(`npm run ${scriptName}`)) {
@@ -158,7 +111,6 @@ for (const scriptName of buildGateScripts) {
   }
   expectIncludes('readme', `npm run ${scriptName}`, `README build gate ${scriptName}`);
   expectIncludes('readmeCn', `npm run ${scriptName}`, `README_CN build gate ${scriptName}`);
-  expectIncludes('roadmap', `npm run ${scriptName}`, `ROADMAP build gate ${scriptName}`);
   expectIncludes('ciWorkflow', `npm run ${scriptName}`, `CI workflow build gate ${scriptName}`);
   expectIncludes('deployWorkflow', `npm run ${scriptName}`, `Deploy workflow build gate ${scriptName}`);
 }
@@ -166,7 +118,6 @@ for (const scriptName of buildGateScripts) {
 for (const scriptName of documentedUtilityScripts) {
   expectIncludes('readme', `npm run ${scriptName}`, `README utility script ${scriptName}`);
   expectIncludes('readmeCn', `npm run ${scriptName}`, `README_CN utility script ${scriptName}`);
-  expectIncludes('roadmap', `npm run ${scriptName}`, `ROADMAP utility script ${scriptName}`);
 }
 
 for (const snippet of ['CHANGELOG.md', 'data / app / docs / build', 'npm run export:data-package']) {
@@ -175,20 +126,6 @@ for (const snippet of ['CHANGELOG.md', 'data / app / docs / build', 'npm run exp
 
 for (const snippet of ['CHANGELOG.md', '静态数据包或 npm 数据包评估', 'data/app/docs/build']) {
   expectIncludes('dataChangeIssueTemplate', snippet, `data issue template contribution gate ${snippet}`);
-}
-
-const roadmapRows = [
-  ['Risk', counts.risks],
-  ['Avoidance', counts.avoidances],
-  ['AttackTool', counts.attackTools],
-  ['ThreatActor', counts.threatActors],
-  ['Term', counts.terms],
-  ['BusinessScene', counts.businessScenes],
-  ['AvoidanceCategory', counts.avoidanceCategories],
-];
-
-for (const [label, count] of roadmapRows) {
-  expectIncludes('roadmap', `| ${label} | ${count.main} | ${count.sub} | ${count.total} |`, `ROADMAP ${label} row`);
 }
 
 if (failures.length > 0) {

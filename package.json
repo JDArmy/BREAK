@@ -1,6 +1,6 @@
 {
   "name": "break",
-  "version": "2.14.2",
+  "version": "2.14.7",
   "private": true,
   "type": "module",
   "engines": {
@@ -34,11 +34,13 @@
     "audit:references": "node scripts/validate/references.mjs",
     "audit:metrics": "node scripts/validate/metrics.mjs",
     "audit:bundle": "node scripts/validate/bundle-budget.mjs",
+    "audit:lighthouse-sankey": "node scripts/validate/lighthouse-sankey-trace.mjs",
     "audit:bundle:check": "node scripts/validate/bundle-budget.mjs --check-only",
-    "audit:maintenance": "npm run audit:references && npm run audit:relations && npm run audit:metrics && node scripts/validate/bundle-budget.mjs --no-fail && node scripts/validate/maintenance.mjs",
+    "audit:maintenance": "npm run audit:references && npm run audit:relations && npm run audit:metrics && node scripts/validate/bundle-budget.mjs --no-fail && npm run audit:lighthouse-sankey && node scripts/validate/maintenance.mjs",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "collect:risk-cases": "node scripts/research/collect-cases.mjs"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",

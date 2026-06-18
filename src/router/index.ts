@@ -1,7 +1,8 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+import RelationRouteShell from "@/views/RelationRouteShell.vue";
 import { loadNetworkECharts, loadSankeyECharts } from "@/views/relation/relationECharts";
 
+const loadHomeView = () => import("@/views/HomeView.vue");
 const loadRelationView = () => import("@/views/RelationView.vue");
 type RelationPreloadTarget = "network" | "sankey";
 
@@ -20,42 +21,42 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: HomeView,
+      component: loadHomeView,
     },
     {
       path: "/risks/:rKey",
       name: "riskDetail",
-      component: HomeView,
+      component: loadHomeView,
     },
     {
       path: "/avoidances/:aKey",
       name: "avoidanceDetail",
-      component: HomeView,
+      component: loadHomeView,
     },
     {
       path: "/attack-tools/:atKey",
       name: "attackToolDetail",
-      component: HomeView,
+      component: loadHomeView,
     },
     {
       path: "/threat-actors/:taKey",
       name: "threatActorDetail",
-      component: HomeView,
+      component: loadHomeView,
     },
     {
       path: "/terms/:tKey",
       name: "termDetail",
-      component: HomeView,
+      component: loadHomeView,
     },
     {
       path: "/business-scene/:bsKey",
       name: "businessScene",
-      component: HomeView,
+      component: loadHomeView,
     },
     {
       path: "/business-scene/:bsKey/risks/:rKey",
       name: "businessSceneRiskDetail",
-      component: HomeView,
+      component: loadHomeView,
     },
     {
       path: "/risks",
@@ -110,7 +111,7 @@ const router = createRouter({
     {
       path: "/relation/:type/:key",
       name: "relation",
-      component: loadRelationView,
+      component: RelationRouteShell,
     },
     {
       path: "/:pathMatch(.*)*",

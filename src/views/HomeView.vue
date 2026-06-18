@@ -367,10 +367,10 @@ const termDetailClose = () => {
 <template>
   <el-row class="header" align="middle">
     <el-col :span="24" :offset="0" style="text-align: center">
-      <h3 style="margin-bottom: 0">
+      <h1 class="home-title">
         {{ $t("BREAK.title") }} v{{ BREAK.version }}
-      </h3>
-      <h6 style="color: var(--break-text-muted); margin-top: 0.2em; margin-bottom: 0.3em">{{ $t("BREAK.description") }}</h6>
+      </h1>
+      <p class="home-description">{{ $t("BREAK.description") }}</p>
       <div class="last-updated">
         {{ $t("lastUpdated") }}: {{ BREAK.updated }}
       </div>
@@ -413,6 +413,7 @@ const termDetailClose = () => {
           :size="componentSize"
           :placeholder="$t('allScenes')"
           class="scene-selector"
+          :aria-label="$t('businessScene')"
         >
           <el-option
             v-for="(bsVal, bsKey) in BREAK.businessScenes"
@@ -429,6 +430,7 @@ const termDetailClose = () => {
           class="subrisk-toggle"
           name="subrisk-toggle"
           :size="componentSize"
+          :aria-label="$t('subRiskDisplay')"
         >
           <el-radio-button :value="false">{{
             $t("showAllSubRisks")
@@ -498,6 +500,7 @@ const termDetailClose = () => {
               <table
                 class="risk-with-sub"
                 style="width: 100%; border-spacing: 0px"
+                :aria-label="$t(`BREAK.risks.${rKey}.title`)"
                 v-if="subRisks[rKey]"
               >
                 <tbody>
@@ -799,6 +802,17 @@ const termDetailClose = () => {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.home-title {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+.home-description {
+  color: var(--break-text-secondary);
+  margin: 0.2em 0 0.3em;
+}
+
 .stat-card:hover,
 .stat-card:active {
   transform: translateY(-4px);
@@ -887,6 +901,9 @@ const termDetailClose = () => {
 }
 
 .subrisk-toggle {
+  --el-radio-button-checked-bg-color: var(--blue-700);
+  --el-radio-button-checked-border-color: var(--blue-700);
+  --el-radio-button-checked-text-color: var(--slate-white);
   font-size: 0;
 }
 

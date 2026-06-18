@@ -217,4 +217,23 @@ describe("relationNetworkLayout", () => {
       data: undefined,
     });
   });
+
+  it("places nodes in lane, radial, and hierarchical layouts without dropping visible relations", () => {
+    const laneData = createHelpers({ layout: "lanes" }).getVisibleNetworkData();
+    const radialData = createHelpers({ layout: "radial" }).getVisibleNetworkData();
+    const hierarchicalData = createHelpers({
+      layout: "hierarchical",
+    }).getVisibleNetworkData();
+
+    expect(laneData.nodes.find((node) => node.id === "ACTOR")).toEqual(
+      expect.objectContaining({ y: -440 })
+    );
+    expect(radialData.nodes.find((node) => node.id === "ACTOR")?.x).toBeLessThan(0);
+    expect(hierarchicalData.nodes.find((node) => node.id === "AVOID")).toEqual(
+      expect.objectContaining({ x: 660 })
+    );
+    expect(laneData.links).toHaveLength(4);
+    expect(radialData.links).toHaveLength(4);
+    expect(hierarchicalData.links).toHaveLength(4);
+  });
 });

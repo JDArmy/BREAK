@@ -38,7 +38,12 @@ getGithubData();
 
 <template>
   <div>
-    <a href="https://github.com/JDArmy/BREAK" target="_blank" rel="noopener noreferrer">
+    <a
+      href="https://github.com/JDArmy/BREAK"
+      target="_blank"
+      rel="noopener noreferrer"
+      :aria-label="`JDArmy BREAK GitHub ${stargazersCount} stars ${forksCount} forks`"
+    >
       <icon-github />
       <span class="description">
         <icon-star />{{ stargazersCount }} <icon-fork />{{ forksCount }}

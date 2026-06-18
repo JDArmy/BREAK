@@ -1,5 +1,48 @@
 # Change log
 
+## 2.14.7
+
+- 调整：移除路线图文件跟踪
+  - 删除 `ROADMAP.md`，并同步取消文档一致性校验对该文件的强依赖
+  - 保留 README、README_CN、Schema 文档和构建门禁的同步校验
+
+## 2.14.6
+
+- 新增：关系图谱边界回归样本
+  - 新增人工异常夹具，覆盖空关系根节点、重复关系线去重、超高 fan-out、多类型密集路径和选中节点响应式切换
+  - 补充真实稀疏/密集风险样本，防止 Sankey 攻击路径分组、路径解释和关系洞察在数据规模变化时回退
+  - 测试基线更新为 11 个测试文件、112 个用例
+
+## 2.14.5
+
+- 优化：提升 Lighthouse 无障碍基线
+  - 为桌面和移动端导航、搜索入口、主题/语言切换、GitHub 链接补充可访问名称和更稳定的导航语义
+  - 为首页业务场景筛选、子风险切换和业务场景矩阵补充表单/表格语义，并提升 Footer 与控件对比度
+  - Lighthouse a11y 基线提升到 desktop/home 90、desktop/risks 91、desktop/relation-sankey 91、mobile/home 95、mobile/risks 100、mobile/relation-sankey 96
+
+## 2.14.4
+
+- 修复：稳定桌面端 Lighthouse CLS 基线
+  - 固定应用顶层 Header/Footer 占位高度，避免首帧布局和 Element Plus 默认容器高度切换造成位移
+  - Footer 从 sticky 占位改为普通流式底部区域，降低首页和知识库页面的 CLS 波动
+
+## 2.14.3
+
+- 优化：移动端 Sankey 关系页首屏性能
+  - 首页相关路由改为按需加载，直达关系页时不再提前拉取 HomeView 和首页业务场景矩阵依赖
+  - 新增关系页路由轻量 shell，移动端先展示首屏骨架后再加载完整关系页，PC 端保持立即加载以优先保证点击响应速度
+  - 入口启动不再等待完整 BREAK 语言消息注入完成后才挂载应用，语言实体消息改为空闲阶段初始化
+  - mobile/relation-sankey 最新 trace：performance 91、LCP 2406ms、TBT 195ms、CLS 0；相比上轮回归点 LCP 从约 5709ms 降至约 2406ms
+- 优化：Sankey Lighthouse trace 诊断报告
+  - `audit:lighthouse-sankey` 新增 LCP phase、render-blocking resource、critical network request 和 slow network request 输出
+  - 便于区分移动端瓶颈是主线程、网络请求、CSS 阻塞还是首屏可绘制内容延迟
+- 新增：关系图谱回归测试补强
+  - 补充 Sankey 攻击路径、路径解释、关系洞察和复杂图谱交互的回归样本
+  - 测试基线更新为 9 个测试文件、102 个用例，并保持核心逻辑覆盖率门禁通过
+- 合并：关系图谱可解释性增强分支
+  - 合入业务场景影响解释、分析面板和关系说明增强
+  - 测试基线更新为 10 个测试文件、106 个用例
+
 ## 2.14.2
 
 - 新增：扩充业务风险数据规模
@@ -92,7 +135,20 @@
   - 移动端关系页不再在路由守卫阶段抢先加载 ECharts，Sankey 图表初始化延后到页面骨架首帧之后
   - 关系页次级视图预加载按 PC/移动端分流，降低移动端 Sankey 首屏主线程竞争
   - 英文 BREAK 数据改为按语言设置按需加载：初始语言为中文时不再加载英文实体翻译，初始语言或切换语言为英文时再加载
+  - 中文/英文完整 BREAK 实体消息改为按当前语言异步注入，避免 i18n 入口静态绑定全量实体数据
+  - mobile/relation-sankey 最新 trace：performance 94、LCP 2252ms、TBT 148ms，最大主线程类别降为 Script Evaluation 433ms
   - 首页详情抽屉和嵌套详情抽屉改为异步组件，减少首页首屏 JS 解析量
+- 优化：参考资料重复链接清理
+  - 去重 A0016“威胁情报”和 A0058“灾难恢复”的重复 reference
+  - `audit:references` 已清零，`audit:metrics` 参考资料总量更新为 1066
+- 新增：风险案例采集研究脚本
+  - 新增 `collect:risk-cases`，用于按 Risk 批量搜索、抓取正文并提炼典型案例
+  - 支持 `--dry-run`、`--limit`、`--risk`、`--resume`、`--only-failed` 和 `--no-fetch-body` 控制采集范围
+  - 新增项目协作规则和 Scrapingdog 搜索技能说明，API 密钥均通过环境变量读取
+- 新增：移动端 Sankey Lighthouse trace 报告
+  - 新增 `audit:lighthouse-sankey`，输出 `research/search-reports/lighthouse-mobile-sankey-trace.{json,md}`
+  - 报告提取 mobile/relation-sankey 的 LCP/TBT、main-thread breakdown、long task、bootup time 和最大脚本请求
+  - `audit:maintenance` 会读取该报告，并在移动端 Sankey TBT 偏高时生成 P1 维护任务
 - 修复：同步中文 README 数据规模统计，保持与当前数据口径一致
 - 优化：关系审计和指标脚本口径
   - ThreatActor 工具关系按 build/use 合并覆盖统计

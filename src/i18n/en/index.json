@@ -1,4 +1,9 @@
 {
+  "BREAK": {
+    "name": "JDARMY BREAK",
+    "title": "Business Risk Enumeration & Avoidance Knowledge",
+    "description": "BREAK is an open knowledge framework for business risk enumeration and avoidance."
+  },
   "menu": {
     "home": "Home",
     "knowledge": "Knowledge Base",
@@ -355,6 +360,8 @@
     },
     "qualityFlagReview": "Relation semantics need review",
     "qualityFlagMissingSource": "Missing source fields",
+    "relationType": "Relation type",
+    "currentEntity": "Current entity",
     "pathFilterPlaceholder": "Filter paths",
     "filteredSimplePathCount": "{count} attack paths match the current filters.",
     "resetPathFilters": "Reset filters",
@@ -457,6 +464,7 @@
     "groupTerm": "Slang Terms"
   },
   "theme": {
+    "current": "Current theme",
     "light": "Light",
     "dark": "Dark",
     "system": "System"

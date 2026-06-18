@@ -2,8 +2,6 @@ import { createI18n } from "vue-i18n";
 import en from "./en/index.json";
 import cn from "./zh-CN/index.json";
 
-import cnBREAK from "../BREAK";
-
 /**
  * 深度合并结构数据与翻译文本
  * 以中文结构数据为基础，用英文翻译文本覆盖对应字段
@@ -87,6 +85,7 @@ const languages = {
 const LOCALE_STORAGE_KEY = "break-locale";
 
 type Locale = "cn" | "en";
+type BreakMessages = typeof import("../BREAK").default;
 
 const getInitialLocale = (): Locale => {
   const saved = localStorage.getItem(LOCALE_STORAGE_KEY);
@@ -103,7 +102,7 @@ const initialLocale = getInitialLocale();
 
 const messages = {
   en,
-  cn: { ...cn, BREAK: cnBREAK },
+  cn,
 };
 
 const i18n = createI18n({
@@ -113,14 +112,50 @@ const i18n = createI18n({
   messages: messages,
 });
 
+let cnBreakMessagePromise: Promise<BreakMessages> | null = null;
 let enBreakMessagePromise: Promise<void> | null = null;
 
-const ensureLocaleMessages = async (locale: Locale) => {
-  if (locale === "cn") return;
-  if (i18n.global.getLocaleMessage("en").BREAK) return;
+const hasBreakMessages = (locale: Locale) => {
+  const breakMessages = (i18n.global.getLocaleMessage(locale) as Record<string, unknown>)
+    .BREAK;
+  return Boolean(
+    breakMessages &&
+      typeof breakMessages === "object" &&
+      "risks" in breakMessages &&
+      "avoidances" in breakMessages &&
+      "attackTools" in breakMessages &&
+      "threatActors" in breakMessages
+  );
+};
+
+const loadCnBreakMessages = () => {
+  if (!cnBreakMessagePromise) {
+    cnBreakMessagePromise = import("../BREAK").then(
+      ({ default: cnBREAK }) => cnBREAK
+    );
+  }
+
+  return cnBreakMessagePromise;
+};
+
+const ensureCnLocaleMessages = async () => {
+  if (hasBreakMessages("cn")) return;
+
+  const cnBREAK = await loadCnBreakMessages();
+  i18n.global.setLocaleMessage("cn", {
+    ...cn,
+    BREAK: cnBREAK,
+  });
+};
+
+const ensureEnLocaleMessages = async () => {
+  if (hasBreakMessages("en")) return;
 
   if (!enBreakMessagePromise) {
-    enBreakMessagePromise = import("./en/BREAK").then(({ default: enBREAK }) => {
+    enBreakMessagePromise = Promise.all([
+      loadCnBreakMessages(),
+      import("./en/BREAK"),
+    ]).then(([cnBREAK, { default: enBREAK }]) => {
       i18n.global.setLocaleMessage("en", {
         ...en,
         BREAK: mergeWithStructure(cnBREAK, enBREAK) as typeof enBREAK,
@@ -129,6 +164,15 @@ const ensureLocaleMessages = async (locale: Locale) => {
   }
 
   await enBreakMessagePromise;
+};
+
+const ensureLocaleMessages = async (locale: Locale) => {
+  if (locale === "cn") {
+    await ensureCnLocaleMessages();
+    return;
+  }
+
+  await ensureEnLocaleMessages();
 };
 
 const initLocaleMessages = () => ensureLocaleMessages(initialLocale);
