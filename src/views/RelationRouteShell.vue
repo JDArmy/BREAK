@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, markRaw, onMounted, shallowRef, type Component } from "vue";
+import { computed, markRaw, shallowRef, type Component } from "vue";
 import { useRoute } from "vue-router";
 import { initLocaleMessages } from "@/i18n";
 
@@ -12,42 +12,32 @@ const currentEntity = computed(() => {
   return [type, key].filter(Boolean).join(" / ");
 });
 
-onMounted(() => {
-  const loadRelationView = () => {
-    void Promise.all([initLocaleMessages(), import("@/views/RelationView.vue")]).then(([, mod]) => {
-      relationViewComponent.value = markRaw(mod.default);
-    });
-  };
+const loadRelationView = () => {
+  void Promise.all([initLocaleMessages(), import("@/views/RelationView.vue")]).then(([, mod]) => {
+    relationViewComponent.value = markRaw(mod.default);
+  });
+};
 
-  if (window.innerWidth >= 768) {
-    loadRelationView();
-    return;
-  }
-
-  if ("requestIdleCallback" in window) {
-    window.requestIdleCallback(loadRelationView, { timeout: 2000 });
-    return;
-  }
-
+if (window.innerWidth >= 768) {
+  loadRelationView();
+} else if ("requestIdleCallback" in window) {
+  window.requestIdleCallback(loadRelationView, { timeout: 2000 });
+} else {
   window.setTimeout(loadRelationView, 0);
-});
+}
 </script>
 
 <template>
   <section v-if="!relationViewComponent" class="relation-route-shell" aria-busy="true">
-    <div class="relation-route-shell__bar">
-      <span>JDArmy BREAK</span>
-      <strong>{{ currentEntity }}</strong>
-    </div>
-    <div class="relation-route-shell__tabs">
-      <span></span>
-      <span></span>
-    </div>
-    <div class="relation-route-shell__canvas">
-      <i></i>
-      <i></i>
-      <i></i>
-      <i></i>
+    <div class="relation-route-shell__panel">
+      <div class="relation-route-shell__spinner" aria-hidden="true"></div>
+      <div>
+        <div class="relation-route-shell__title">JDArmy BREAK</div>
+        <div class="relation-route-shell__meta">
+          {{ $t("relationView.network") }}
+          <span v-if="currentEntity">/ {{ currentEntity }}</span>
+        </div>
+      </div>
     </div>
   </section>
   <component :is="relationViewComponent" v-else />
@@ -56,82 +46,51 @@ onMounted(() => {
 <style scoped>
 .relation-route-shell {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   min-height: calc(100dvh - 132px);
   padding: 12px;
   background: var(--break-bg-primary);
   color: var(--break-text-primary);
 }
 
-.relation-route-shell__bar {
+.relation-route-shell__panel {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  min-height: 42px;
-  border-bottom: 1px solid var(--break-border);
-  font-size: 0.875rem;
+  gap: 14px;
+  min-width: min(360px, 100%);
+  padding: 18px 20px;
+  border: 1px solid var(--break-border);
+  border-radius: 8px;
+  background: var(--break-bg-card);
 }
 
-.relation-route-shell__bar strong {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+.relation-route-shell__spinner {
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--break-border);
+  border-top-color: var(--break-link);
+  border-radius: 50%;
+  animation: relation-route-shell-spin 0.8s linear infinite;
+}
+
+.relation-route-shell__title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.relation-route-shell__meta {
+  margin-top: 2px;
   color: var(--break-text-muted);
   font-size: 0.75rem;
+  line-height: 1.4;
 }
 
-.relation-route-shell__tabs {
-  display: flex;
-  gap: 8px;
-  padding: 12px 0;
-}
-
-.relation-route-shell__tabs span {
-  display: block;
-  width: 88px;
-  height: 26px;
-  border-radius: 4px;
-  background: var(--break-bg-secondary);
-}
-
-.relation-route-shell__canvas {
-  position: relative;
-  flex: 1;
-  min-height: 360px;
-  border: 1px solid var(--break-border);
-  background:
-    linear-gradient(90deg, var(--break-border) 1px, transparent 1px),
-    linear-gradient(var(--break-border) 1px, transparent 1px);
-  background-size: 48px 48px;
-}
-
-.relation-route-shell__canvas i {
-  position: absolute;
-  display: block;
-  width: 86px;
-  height: 28px;
-  border-radius: 4px;
-  background: var(--break-bg-secondary);
-  border: 1px solid var(--break-border);
-}
-
-.relation-route-shell__canvas i:nth-child(1) {
-  left: 8%;
-  top: 18%;
-}
-
-.relation-route-shell__canvas i:nth-child(2) {
-  left: 38%;
-  top: 36%;
-}
-
-.relation-route-shell__canvas i:nth-child(3) {
-  right: 10%;
-  top: 28%;
-}
-
-.relation-route-shell__canvas i:nth-child(4) {
-  left: 24%;
-  bottom: 18%;
+@keyframes relation-route-shell-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 767px) {
@@ -140,12 +99,9 @@ onMounted(() => {
     padding: 8px;
   }
 
-  .relation-route-shell__bar {
-    min-height: 38px;
-  }
-
-  .relation-route-shell__canvas {
-    min-height: 520px;
+  .relation-route-shell__panel {
+    min-width: 0;
+    width: 100%;
   }
 }
 </style>

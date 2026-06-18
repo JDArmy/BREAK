@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import RelationRouteShell from "@/views/RelationRouteShell.vue";
+import { initLocaleMessages } from "@/i18n";
 import { loadNetworkECharts, loadSankeyECharts } from "@/views/relation/relationECharts";
 
 const loadHomeView = () => import("@/views/HomeView.vue");
@@ -154,6 +155,8 @@ router.beforeEach((to) => {
   if (to.name === "relation") {
     if (window.innerWidth < 768) return;
     const view = typeof to.query.view === "string" ? to.query.view : "";
+    void initLocaleMessages();
+    void loadRelationView();
     if (view === "network" || (view !== "sankey" && window.innerWidth >= 768)) {
       void loadNetworkECharts();
     } else {

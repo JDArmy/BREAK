@@ -69,6 +69,7 @@ const threatActorItems = computed(() =>
 );
 
 const selectedThreatActor = computed(() => BREAK.threatActors[selectedThreatActorKey.value]);
+const localeMessages = computed(() => messages.value[locale.value] as Record<string, unknown>);
 
 const relatedTermKeys = computed(() =>
   Object.keys(BREAK.terms).filter((tKey) =>

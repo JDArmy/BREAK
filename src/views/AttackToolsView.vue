@@ -68,6 +68,7 @@ const attackToolItems = computed(() =>
 );
 
 const selectedAttackTool = computed(() => BREAK.attackTools[selectedAttackToolKey.value]);
+const localeMessages = computed(() => messages.value[locale.value] as Record<string, unknown>);
 
 const builderThreatActorKeys = computed(() =>
   Object.keys(BREAK.threatActors).filter((taKey) =>

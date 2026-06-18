@@ -86,6 +86,7 @@ watch(selectedCategory, () => {
 
 
 const selectedAvoidance = computed(() => BREAK.avoidances[selectedAvoidanceKey.value]);
+const localeMessages = computed(() => messages.value[locale.value] as Record<string, unknown>);
 
 const relatedRiskKeys = computed(() =>
   Object.keys(BREAK.risks).filter((rKey) =>

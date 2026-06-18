@@ -7,7 +7,9 @@ let sankeyEChartsPromise: Promise<EChartsInit> | null = null;
 
 export const loadNetworkECharts = () => {
   if (!networkEChartsPromise) {
-    networkEChartsPromise = import("./relationEChartsCore").then(({ initRelationECharts }) => initRelationECharts);
+    networkEChartsPromise = import("./relationNetworkEChartsCore").then(
+      ({ initRelationNetworkECharts }) => initRelationNetworkECharts
+    );
   }
 
   return networkEChartsPromise;
@@ -15,7 +17,9 @@ export const loadNetworkECharts = () => {
 
 export const loadSankeyECharts = () => {
   if (!sankeyEChartsPromise) {
-    sankeyEChartsPromise = import("./relationEChartsCore").then(({ initRelationECharts }) => initRelationECharts);
+    sankeyEChartsPromise = import("./relationSankeyEChartsCore").then(
+      ({ initRelationSankeyECharts }) => initRelationSankeyECharts
+    );
   }
 
   return sankeyEChartsPromise;
