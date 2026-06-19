@@ -75,7 +75,6 @@ const buildGateScripts = [
   'test',
   'test:coverage',
   'validate:schema-docs',
-  'validate:docs-build',
   'export:data',
   'export:data-package',
   'build-only',

@@ -14,7 +14,7 @@
     "summary": "On November 24, 2025, an attacker published five consecutive versions of a malicious PyPI package named 'perfviewer', leveraging dependency confusion techniques to trick developers into downloading it. Upon installation, the package executed a remote trojan implantation targeting Windows systems.",
     "references": [
       {
-        "title": "Supply Chain Poisoning Alert | Malicious Py Packages Deploy Windows Trojan via Remote Implantation - Zhihu"
+        "title": "Risk Alert on the 'Black Cat' Gang Using Search Engines to Distribute Bundled Remote Control Trojan Horse Installers of Well-Known Applications"
       }
     ]
   }

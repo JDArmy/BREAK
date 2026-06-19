@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineAsyncComponent, defineComponent, onMounted } from "vue";
+import { defineAsyncComponent, defineComponent, onMounted, onUnmounted } from "vue";
 import RelationAnalysisPane from "@/components/relation/RelationAnalysisPane.vue";
 import RelationGraphContextMenu from "@/components/relation/RelationGraphContextMenu.vue";
 import RelationGraphTouchActions from "@/components/relation/RelationGraphTouchActions.vue";
@@ -35,16 +35,19 @@ export default defineComponent({
   },
   setup() {
     const viewModel = useRelationViewModel();
+    let preloadTimer: ReturnType<typeof setTimeout> | null = null;
+    let preloadIdleHandle: number | null = null;
     onMounted(() => {
       const isMobileViewport = window.innerWidth < 768;
       const schedulePreload = () => {
         if ("requestIdleCallback" in window) {
-          window.requestIdleCallback(preloadSecondaryView, { timeout: 3000 });
+          preloadIdleHandle = window.requestIdleCallback(preloadSecondaryView, { timeout: 3000 });
         } else {
           preloadSecondaryView();
         }
       };
       const preloadSecondaryView = () => {
+        preloadIdleHandle = null;
         void loadRelationNodeDetailDrawer();
         if (viewModel.activeView.value === "sankey") {
           void loadRelationNetworkPane();
@@ -54,11 +57,21 @@ export default defineComponent({
         }
       };
       if (isMobileViewport) {
-        window.setTimeout(schedulePreload, 12000);
+        preloadTimer = window.setTimeout(schedulePreload, 12000);
       } else if ("requestIdleCallback" in window) {
-        window.requestIdleCallback(preloadSecondaryView, { timeout: 1500 });
+        preloadIdleHandle = window.requestIdleCallback(preloadSecondaryView, { timeout: 1500 });
       } else {
-        window.setTimeout(preloadSecondaryView, 800);
+        preloadTimer = window.setTimeout(preloadSecondaryView, 800);
+      }
+    });
+    onUnmounted(() => {
+      if (preloadTimer !== null) {
+        clearTimeout(preloadTimer);
+        preloadTimer = null;
+      }
+      if (preloadIdleHandle !== null && "cancelIdleCallback" in window) {
+        window.cancelIdleCallback(preloadIdleHandle);
+        preloadIdleHandle = null;
       }
     });
     return {

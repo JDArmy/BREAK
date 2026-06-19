@@ -63,7 +63,6 @@ declare module 'vue' {
     RelationSankeyPane: typeof import('./src/components/relation/RelationSankeyPane.vue')['default']
     RelationSelectorBar: typeof import('./src/components/relation/RelationSelectorBar.vue')['default']
     RiskDetail: typeof import('./src/components/RiskDetail.vue')['default']
-    RiskRelation: typeof import('./src/components/RiskRelation.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SearchDialog: typeof import('./src/components/SearchDialog.vue')['default']

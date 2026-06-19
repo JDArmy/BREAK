@@ -88,12 +88,38 @@ const categories = [
   },
 ];
 
+const idOnlyKeywordPattern = /^[A-Z]{1,2}\d{4}(?:-\d{3})?$/;
+
 const enKeywordCategories = [
   {
     name: "en-risks",
     dir: "src/i18n/en/BREAK/risks",
     filePattern: /^R\d{4}\.json$/,
     keyPattern: /^R\d{4}(?:-\d{3})?$/,
+  },
+  {
+    name: "en-avoidances",
+    dir: "src/i18n/en/BREAK/avoidances",
+    filePattern: /^A\d{4}\.json$/,
+    keyPattern: /^A\d{4}(?:-\d{3})?$/,
+  },
+  {
+    name: "en-attack-tools",
+    dir: "src/i18n/en/BREAK/attack-tools",
+    filePattern: /^AT\d{4}\.json$/,
+    keyPattern: /^AT\d{4}(?:-\d{3})?$/,
+  },
+  {
+    name: "en-threat-actors",
+    dir: "src/i18n/en/BREAK/threat-actors",
+    filePattern: /^TA\d{4}\.json$/,
+    keyPattern: /^TA\d{4}(?:-\d{3})?$/,
+  },
+  {
+    name: "en-terms",
+    dir: "src/i18n/en/BREAK/terms",
+    filePattern: /^T\d{4}\.json$/,
+    keyPattern: /^T\d{4}$/,
   },
   {
     name: "en-cases",
@@ -163,6 +189,11 @@ for (const category of categories) {
         if (duplicates.length > 0) {
           addKeywordIssue(`${filePath}.${key}: keywords 存在重复项 ${[...new Set(duplicates)].join(", ")}`);
         }
+        for (const keyword of normalized) {
+          if (idOnlyKeywordPattern.test(keyword)) {
+            addKeywordIssue(`${filePath}.${key}: keywords 不应使用纯实体 ID "${keyword}"`);
+          }
+        }
       }
     }
   }
@@ -215,6 +246,11 @@ for (const category of enKeywordCategories) {
       }
       if (duplicates.length > 0) {
         addKeywordIssue(`${filePath}.${key}: keywords 存在重复项 ${[...new Set(duplicates)].join(", ")}`);
+      }
+      for (const keyword of normalized) {
+        if (idOnlyKeywordPattern.test(keyword)) {
+          addKeywordIssue(`${filePath}.${key}: keywords 不应使用纯实体 ID "${keyword}"`);
+        }
       }
     }
   }

@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { ensureDir, projectRoot, writeJson } from '../search/common.mjs';
 
-const assetsDir = path.join(projectRoot, 'docs/assets');
+const assetsDir = path.join(projectRoot, 'dist/assets');
 const reportDir = path.join(projectRoot, 'research/search-reports');
 const reportJsonPath = path.join(reportDir, 'bundle-budget.json');
 const reportMdPath = path.join(reportDir, 'bundle-budget.md');
@@ -23,7 +23,7 @@ function formatKb(bytes) {
 
 function listAssets() {
   if (!fs.existsSync(assetsDir)) {
-    throw new Error('docs/assets 不存在，请先运行 npm run build-only');
+    throw new Error('dist/assets 不存在，请先运行 npm run build-only');
   }
 
   return fs

@@ -84,9 +84,21 @@ const resultsDebounced = computed(() => {
 // 高亮匹配文本
 function highlightText(text: string, queryStr: string): string {
   if (!queryStr.trim()) return text;
-  const escaped = queryStr.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const regex = new RegExp(`(${escaped})`, "gi");
-  return text.replace(regex, '<mark class="search-highlight">$1</mark>');
+  // text 来自外部 JSON 数据（含 case），必须先 HTML 转义，防止 <img onerror=...> 等注入执行
+  const escapedText = text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+  // queryStr 同样转义后参与匹配，避免转义字符（如 &）错配
+  const escapedQuery = queryStr
+    .replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+  const regex = new RegExp(`(${escapedQuery})`, "gi");
+  return escapedText.replace(regex, '<mark class="search-highlight">$1</mark>');
 }
 
 // 选择搜索结果

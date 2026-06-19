@@ -1,5 +1,30 @@
 # Change log
 
+## 2.20.0
+
+- 构建产物不再入库，outDir 由 docs 改回 dist：此前 vite outDir 为 docs 且把构建产物 commit 进 git，docs/assets 在历史中累计约 218MB、涉及 203 次提交，仓库随迭代单调膨胀；改回 dist（已被 .gitignore 忽略）后产物仅由 GitHub Actions（deploy.yml）构建部署，停止本地提交产物
+- build 链顺序重排解决 vite 清空 dist 冲突：vite 8 emptyOutDir 默认 true（不看 .gitignore，只看 outDir 是否在 project root 内），改 dist 后 build-only 会清空 dist 删掉 export:data-package 生成的 dist/break-data-package；将 build-only 提到 export:data-package 之前，保证数据包产物在 dist 清空后才生成
+- 删除 docs-build-sync.mjs 及 validate:docs-build 门禁：该脚本专为 docs 入库设计（检查 git status -- docs），产物不入库后失去意义；同步移除 package.json scripts 定义、ci/deploy workflow 调用、docs-consistency.mjs buildGateScripts 数组项、README/README_CN 说明（docs-consistency 门禁五处联动）
+- 路径与配置同步：static-data-export.mjs（docs/data→dist/data）、bundle-budget.mjs（docs/assets→dist/assets）、deploy.yml 上传路径（docs→dist）；public/data/*.json 改为由 export:data 生成不再入库（git rm --cached + .gitignore）；eslint 移除 **/docs/** 忽略项
+- 删除 docs/ 目录全部 95 个构建产物文件（CNAME/favicon/logo/data/assets 均为 public/ 源的构建副本，public/ 仍保留源并由 vite 拷入 dist/）
+
+## 2.19.1
+
+- schema.mjs 英文关键词校验补全覆盖：enKeywordCategories 此前只覆盖 en-risks/en-cases，漏掉 en-avoidances/en-attack-tools/en-threat-actors/en-terms 的 keywords 校验；补全为全部 6 类，并新增纯实体 ID 关键词检查（与 keywords.mjs 对齐），消除空值/重复/ID-only 漏报
+- 修复 relation 模块多处 requestIdleCallback/setTimeout 未配对清理：RelationView(12s 预加载)、RelationRouteShell、MenuList(12s/18s 预加载)、RelationSelectorBar 的 idle/timer 回调在组件卸载后仍可能触发，改为 onUnmounted 取消
+- relationViewEffects 非法路由参数反模式修复：alert+location.reload 丢弃 SPA 状态且 .then 无 .catch，改为 ElMessage 提示 + router.replace 纯路由跳转，提取 performInitialRender 在路由合法后补跑初始化；relationGraphBuilder 内同类 alert 一并改为 ElMessage
+- 详情组件模板全表遍历改为 computed 缓存：RiskDetail/RisksView/AttackToolDetail/AvoidanceDetail/ThreatActorDetail 的 getRelatedTerms 等函数在 v-if+v-for 中重复调用 Object.keys(BREAK.*) 全表扫描，改为按当前 key 的 computed
+- KnowledgeSplitView 全局 document.querySelector 改为组件内 ref：选中项滚动此前用 document.querySelector('[data-knowledge-key]') 全局定位，多实例会命中第一个串扰，改为 desktopListRef 局部查询并加 CSS.escape
+- build 脚本去重：validate:data 内的 schema-docs.mjs 与 build 链的 validate:schema-docs 是同一脚本跑两遍，从 validate:data 移除（build 链仍保留以满足 docs-consistency 门禁）
+
+## 2.19.0
+
+- 修复 useCases 案例懒加载失败后永久卡死：cnLoadingPromise 缓存了 rejected Promise 但永不重置，首次加载因网络/动态 import 失败后，后续 ensureCases、locale 切换、搜索索引重建都拿到同一个 rejected Promise，案例功能彻底瘫痪只能刷新整页；改为失败时 catch 清空缓存并 rethrow，允许重试
+- 修复 SearchDialog 搜索高亮的 v-html XSS 风险：highlightText 只对 query 做了正则转义，text（来自 result.title/result.snippet，部分源自外部 case JSON）未做 HTML 转义直接拼进 <mark>，title 含 <img onerror=...> 等会执行；改为对 text 先按项目既有风格做完整 HTML 转义再插入 <mark>，query 同步转义后参与匹配
+- 恢复关系悬空护栏：validate:data 调用 relations.mjs 未传 --strict，引用悬空等 error 级问题在 build 中不会失败（当前数据恰好零悬空未暴露，但失去护栏）；validate:data 改为 relations.mjs --strict，与 i18n-sync.mjs --strict 范式一致
+- 修复 vite vue 分包失效：vue 组用 id.includes("node_modules/vue") 会误匹配 vue-router/vue-i18n，且 Vite 8/Rolldown 下 priority 全为 0 时 Vue 运行时被打进 208KB 的 i18n chunk 而非独立缓存；vue 组改为精确正则 /[\\/]node_modules[\\/]vue[\\/]/ + priority 10，Vue 运行时独立成 111KB chunk，i18n 主 chunk 由 208KB 瘦身到 96KB，跨页面切换缓存命中率提升
+- 移除误提交进 git 的一次性链接可达性扫描报告 reference-validation-report.json 并加入 .gitignore，避免临时扫描产物污染版本库
+
 ## 2.18.3
 
 - 移动端关系网络面板限高由 calc(100dvh - 140px) 调整为 calc(100dvh - 130px)，画布可视区高度增加 10px

@@ -16,7 +16,7 @@
     "summary": "Attackers exploit the OAuth device authorization flow to register malicious OAuth applications in Microsoft Entra ID, using phishing to trick users into completing authorization and hijacking access and refresh tokens, achieving persistent control over Microsoft 365 accounts that bypasses MFA to access email, files, and other core data long-term.",
     "references": [
       {
-        "title": "Alert! OAuth Token Hijacking Goes Mainstream: Persistent Microsoft 365 Attack Wave with Pervasive Control"
+        "title": "Research on the Mechanism and Defense of Microsoft 365 Phishing Attacks Under OAuth Device Code Flow Abuse"
       }
     ]
   }

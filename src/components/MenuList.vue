@@ -38,15 +38,31 @@ const preloadSearchDialog = () => {
   void loadSearchDialog();
 };
 
+// 延迟 + idle 预加载，返回清理函数以便组件卸载时取消尚未触发的回调
 const scheduleDelayedIdle = (callback: () => void, delay: number) => {
-  window.setTimeout(() => {
+  let timer: ReturnType<typeof setTimeout> | null = null;
+  let idleHandle: number | null = null;
+  timer = setTimeout(() => {
+    timer = null;
     if ("requestIdleCallback" in window) {
-      window.requestIdleCallback(callback, { timeout: 3000 });
+      idleHandle = window.requestIdleCallback(callback, { timeout: 3000 });
     } else {
       callback();
     }
   }, delay);
+  return () => {
+    if (timer !== null) {
+      clearTimeout(timer);
+      timer = null;
+    }
+    if (idleHandle !== null && "cancelIdleCallback" in window) {
+      window.cancelIdleCallback(idleHandle);
+      idleHandle = null;
+    }
+  };
 };
+
+const pendingCleanups: Array<() => void> = [];
 
 const openSearchDialog = () => {
   preloadSearchDialog();
@@ -130,12 +146,16 @@ onMounted(() => {
   }
 
   const preload = () => preloadRelationView("sankey");
-  scheduleDelayedIdle(preload, 12000);
-  scheduleDelayedIdle(preloadSearchDialog, 18000);
+  pendingCleanups.push(scheduleDelayedIdle(preload, 12000));
+  pendingCleanups.push(scheduleDelayedIdle(preloadSearchDialog, 18000));
 });
 
 onUnmounted(() => {
   document.removeEventListener("keydown", handleGlobalKeydown);
+  while (pendingCleanups.length > 0) {
+    const cleanup = pendingCleanups.pop();
+    cleanup?.();
+  }
 });
 
 const isKnowledgeActive = (fullPath: string) =>

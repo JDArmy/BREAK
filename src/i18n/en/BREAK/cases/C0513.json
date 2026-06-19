@@ -14,7 +14,7 @@
     "summary": "During the reverse engineering of an Android application, the developer captured login request packets and identified encrypted username and password fields. By analyzing the encryption algorithm, the credentials were successfully decrypted and used to simulate a login. Packet capture helps locate critical sections within encrypted or obfuscated code, providing leads for further reverse engineerin",
     "references": [
       {
-        "title": "Android Reverse Engineering - Packet Capture Analysis (Tool Collection) - Zhihu"
+        "title": "A Collection of Android Reverse Engineering Tools / Awesome Android Reverse Tools - GitHub"
       }
     ]
   }

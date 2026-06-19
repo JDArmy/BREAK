@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, watch } from "vue";
+import { computed, onMounted, onUnmounted, ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
 import { RelationType } from "@/views/relation/relationTypes";
 
@@ -63,14 +63,29 @@ const entitySelectOptions = computed(() => {
   return buildEntitySelectOptions();
 });
 
+let readyTimer: ReturnType<typeof setTimeout> | null = null;
+let readyIdleHandle: number | null = null;
+
 onMounted(() => {
   const markReady = () => {
+    readyIdleHandle = null;
     entitySelectOptionsReady.value = true;
   };
   if ("requestIdleCallback" in window) {
-    window.requestIdleCallback(markReady, { timeout: 800 });
+    readyIdleHandle = window.requestIdleCallback(markReady, { timeout: 800 });
   } else {
-    window.setTimeout(markReady, 200);
+    readyTimer = window.setTimeout(markReady, 200);
+  }
+});
+
+onUnmounted(() => {
+  if (readyTimer !== null) {
+    clearTimeout(readyTimer);
+    readyTimer = null;
+  }
+  if (readyIdleHandle !== null && "cancelIdleCallback" in window) {
+    window.cancelIdleCallback(readyIdleHandle);
+    readyIdleHandle = null;
   }
 });
 

@@ -11,7 +11,6 @@ export default [
     name: "app/files-to-ignore",
     ignores: [
       "**/dist/**",
-      "**/docs/**",
       "**/coverage/**",
       "savejson.js",
       "**/*.cjs",

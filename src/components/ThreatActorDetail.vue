@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import BREAK from "@/BREAK";
-import { defineAsyncComponent, ref } from "vue";
+import { defineAsyncComponent, ref, computed } from "vue";
 import ReferenceList from "@/components/ReferenceList.vue";
 
 import "element-plus/es/components/drawer/style/css";
@@ -11,7 +11,7 @@ import { useDrawerWidth } from "@/composables/useDrawerWidth";
 
 const TermDetail = defineAsyncComponent(() => import("@/components/TermDetail.vue"));
 
-defineProps<{
+const props = defineProps<{
   drawer: boolean;
   taKey: string;
 }>();
@@ -19,10 +19,13 @@ defineEmits(["drawerClose"]);
 
 const { getInnerDrawerWidth } = useDrawerWidth();
 
-const getRelatedTerms = (taKey: string) =>
-  Object.keys(BREAK.terms).filter((tKey) =>
+// 缓存到当前 taKey，避免模板 v-if+v-for 重复全表遍历
+const relatedTerms = computed(() => {
+  const taKey = props.taKey;
+  return Object.keys(BREAK.terms).filter((tKey) =>
     BREAK.terms[tKey].relatedThreatActors.includes(taKey)
   );
+});
 
 const termDrawer = ref(false);
 const termKey = ref("");
@@ -71,11 +74,11 @@ const termKey = ref("");
       <strong>{{ $t("description") }}:&nbsp;</strong>
       {{ $t(`BREAK.threatActors.${taKey}.description`) }}
     </div>
-    <div class="desc" v-if="getRelatedTerms(taKey).length > 0">
+    <div class="desc" v-if="relatedTerms.length > 0">
       <strong>{{ $t("terms") }}:&nbsp;</strong>
       <div class="entity-links">
         <button
-          v-for="tKey in getRelatedTerms(taKey)"
+          v-for="tKey in relatedTerms"
           :key="tKey"
           class="entity-link"
           @click="termKey = tKey; termDrawer = true"

@@ -33,10 +33,9 @@ jobs:
       - run: npm run test
       - run: npm run test:coverage
       - run: npm run validate:schema-docs
-      - run: npm run validate:docs-build
       - run: npm run export:data
-      - run: npm run export:data-package
       - run: npm run build-only
+      - run: npm run export:data-package
       - run: npm run audit:bundle:check
       - run: npm run validate:data-export
       - run: npm run validate:data-package
@@ -47,6 +46,6 @@ jobs:
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: docs
+          path: dist
       - id: deployment
         uses: actions/deploy-pages@v4

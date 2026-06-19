@@ -14,7 +14,7 @@
     "summary": "In a password change function, an attacker intercepted Bob's password change request and altered the UserID parameter from Bob's ID (e.g., 2) to Alice's ID (e.g., 1). Because the backend did not verify the relationship between the requester and the target account, the system directly changed Alice's account password, resulting in cross-account data tampering.",
     "references": [
       {
-        "title": "A Brief Discussion on Logic Vulnerabilities: Privilege Escalation, Password Recovery Flaws, Payment Logic Flaws, Malicious Attacks on Designated Accounts..."
+        "title": "Qi-An-Xin Offensive and Defensive Community: Logic Issues in Password Modification During Penetration Testing"
       }
     ]
   }

@@ -6,8 +6,8 @@ import { projectRoot, readJson } from '../search/common.mjs';
 const packageJson = readJson(path.join(projectRoot, 'package.json'));
 const publicDataPath = path.join(projectRoot, 'public/data/break-data.json');
 const publicManifestPath = path.join(projectRoot, 'public/data/break-manifest.json');
-const docsDataPath = path.join(projectRoot, 'docs/data/break-data.json');
-const docsManifestPath = path.join(projectRoot, 'docs/data/break-manifest.json');
+const docsDataPath = path.join(projectRoot, 'dist/data/break-data.json');
+const docsManifestPath = path.join(projectRoot, 'dist/data/break-manifest.json');
 
 const expectedCounts = {
   risks: countRecords('src/BREAK/risks'),
@@ -61,10 +61,10 @@ const docsDataText = readText(docsDataPath, issues);
 const docsManifestText = readText(docsManifestPath, issues);
 
 if (publicDataText && docsDataText) {
-  expectEqual(issues, 'docs data 与 public data 不一致', docsDataText, publicDataText);
+  expectEqual(issues, 'dist data 与 public data 不一致', docsDataText, publicDataText);
 }
 if (publicManifestText && docsManifestText) {
-  expectEqual(issues, 'docs manifest 与 public manifest 不一致', docsManifestText, publicManifestText);
+  expectEqual(issues, 'dist manifest 与 public manifest 不一致', docsManifestText, publicManifestText);
 }
 
 let data;

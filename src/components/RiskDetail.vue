@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineAsyncComponent, ref } from "vue";
+import { defineAsyncComponent, ref, computed } from "vue";
 import { useRouter } from "vue-router";
 import BREAK from "@/BREAK";
 import ReferenceList from "@/components/ReferenceList.vue";
@@ -16,7 +16,7 @@ const AttackToolDetail = defineAsyncComponent(() => import("@/components/AttackT
 const ThreatActorDetail = defineAsyncComponent(() => import("@/components/ThreatActorDetail.vue"));
 const TermDetail = defineAsyncComponent(() => import("@/components/TermDetail.vue"));
 
-defineProps<{
+const props = defineProps<{
   drawer: boolean;
   rKey: string;
 }>();
@@ -33,24 +33,29 @@ const threatActorKey = ref("");
 
 const { getDrawerWidth } = useDrawerWidth();
 
-const getRiskDescriptionTools = (rKey: string) => {
+// 全表遍历结果按当前 rKey 缓存，避免模板 v-if+v-for 重复扫描
+const descriptionTools = computed(() => {
+  const rKey = props.rKey;
   return Object.keys(BREAK.attackTools).filter((atKey) => {
     const at = BREAK.attackTools[atKey as keyof typeof BREAK.attackTools];
     return at.directCauseRisks.includes(rKey) || at.indirectSupportRisks.includes(rKey);
   });
-};
+});
 
-const getRiskThreatActors = (rKey: string) => {
+const riskThreatActors = computed(() => {
+  const rKey = props.rKey;
   return Object.keys(BREAK.threatActors).filter((taKey) => {
     const ta = BREAK.threatActors[taKey as keyof typeof BREAK.threatActors];
     return ta.directCauseRisks.includes(rKey) || ta.indirectSupportRisks.includes(rKey);
   });
-};
+});
 
-const getRelatedTerms = (rKey: string) =>
-  Object.keys(BREAK.terms).filter((tKey) =>
+const relatedTerms = computed(() => {
+  const rKey = props.rKey;
+  return Object.keys(BREAK.terms).filter((tKey) =>
     BREAK.terms[tKey].relatedRisks.includes(rKey)
   );
+});
 
 const termDrawer = ref(false);
 const termKey = ref("");
@@ -131,11 +136,11 @@ const openRelationGraph = (rKey: string) => {
         </button>
       </div>
     </div>
-    <div class="desc" v-if="getRelatedTerms(rKey).length > 0">
+    <div class="desc" v-if="relatedTerms.length > 0">
       <strong>{{ $t("terms") }}:&nbsp;</strong>
       <div class="entity-links">
         <button
-          v-for="tKey in getRelatedTerms(rKey)"
+          v-for="tKey in relatedTerms"
           :key="tKey"
           class="entity-link"
           @click="termKey = tKey; termDrawer = true"
@@ -148,11 +153,11 @@ const openRelationGraph = (rKey: string) => {
       <strong>{{ $t("riskReference") }}:&nbsp;</strong>
       <ReferenceList type="risks" :entityKey="rKey" />
     </div>
-    <div class="desc" v-if="getRiskDescriptionTools(rKey).length > 0">
+    <div class="desc" v-if="descriptionTools.length > 0">
       <strong>{{ $t("attackTools") }}:&nbsp;</strong>
       <div class="entity-links">
         <button
-          v-for="atKey in getRiskDescriptionTools(rKey)"
+          v-for="atKey in descriptionTools"
           :key="atKey"
           class="entity-link"
           @click="attackToolKey = atKey; attackToolDrawer = true"
@@ -161,11 +166,11 @@ const openRelationGraph = (rKey: string) => {
         </button>
       </div>
     </div>
-    <div class="desc" v-if="getRiskThreatActors(rKey).length > 0">
+    <div class="desc" v-if="riskThreatActors.length > 0">
       <strong>{{ $t("threatActors") }}:&nbsp;</strong>
       <div class="entity-links">
         <button
-          v-for="taKey in getRiskThreatActors(rKey)"
+          v-for="taKey in riskThreatActors"
           :key="taKey"
           class="entity-link"
           @click="threatActorKey = taKey; threatActorDrawer = true"

@@ -15,7 +15,11 @@ const enCaseFiles = import.meta.glob("../i18n/en/BREAK/cases/C*.json");
 
 function loadCnCases(): Promise<Cases> {
   if (cnLoadingPromise) return cnLoadingPromise;
-  cnLoadingPromise = loadCases();
+  // 失败时清空缓存并 rethrow，避免把 rejected Promise 永久缓存导致案例功能瘫痪
+  cnLoadingPromise = loadCases().catch((err) => {
+    cnLoadingPromise = null;
+    throw err;
+  });
   return cnLoadingPromise;
 }
 
