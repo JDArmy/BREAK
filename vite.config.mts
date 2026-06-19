@@ -38,7 +38,7 @@ const codeSplittingGroups = [
   { name: "echarts", test: toChunkTest("node_modules/echarts") },
   { name: "vue-router", test: toChunkTest("node_modules/vue-router") },
   { name: "vue-i18n", test: toChunkTest("node_modules/vue-i18n") },
-  { name: "vue", test: toChunkTest("node_modules/vue") },
+  { name: "vue", test: (id: string) => /[\\/]node_modules[\\/]vue[\\/]/.test(id), priority: 10 },
   { name: "element-plus", test: toChunkTest("node_modules/element-plus") },
 ];
 

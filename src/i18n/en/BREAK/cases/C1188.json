@@ -14,7 +14,7 @@
     "summary": "CVE-2024-21626 allows an attacker to exploit leaked file descriptors via container startup parameters such as --entrypoint, directly overwriting executable files on the host and achieving full container escape to the host. This vulnerability involves scenarios where a privileged user executes a malicious container image.",
     "references": [
       {
-        "title": "CVE-2024-21626 Container Escape Vulnerability - Zhihu"
+        "title": "runc File Descriptor Leak Vulnerability (CVE-2024-21626) - Alibaba Cloud Vulnerability Database"
       }
     ]
   }

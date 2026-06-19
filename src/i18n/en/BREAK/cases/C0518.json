@@ -14,7 +14,7 @@
     "summary": "Using a sample Android app called \"PremiumTool,\" this article demonstrates how to locate and bypass its local license verification logic with Frida dynamic hooking. Static analysis with Jadx-GUI reveals a plain string comparison inside the LicenseManager class, allowing an attacker to hook the method and force it to always return true, thereby unlocking the pro features.",
     "references": [
       {
-        "title": "Practical Frida Reverse Analysis: Step-by-step guide to cracking Android app license verification (with case code)"
+        "title": "First Encounter with Frida - Java Layer Hooking in Android Reverse Engineering"
       }
     ]
   }

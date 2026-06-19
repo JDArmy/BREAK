@@ -1,5 +1,13 @@
 # Change log
 
+## 2.19.0
+
+- 修复 useCases 案例懒加载失败后永久卡死：cnLoadingPromise 缓存了 rejected Promise 但永不重置，首次加载因网络/动态 import 失败后，后续 ensureCases、locale 切换、搜索索引重建都拿到同一个 rejected Promise，案例功能彻底瘫痪只能刷新整页；改为失败时 catch 清空缓存并 rethrow，允许重试
+- 修复 SearchDialog 搜索高亮的 v-html XSS 风险：highlightText 只对 query 做了正则转义，text（来自 result.title/result.snippet，部分源自外部 case JSON）未做 HTML 转义直接拼进 <mark>，title 含 <img onerror=...> 等会执行；改为对 text 先按项目既有风格做完整 HTML 转义再插入 <mark>，query 同步转义后参与匹配
+- 恢复关系悬空护栏：validate:data 调用 relations.mjs 未传 --strict，引用悬空等 error 级问题在 build 中不会失败（当前数据恰好零悬空未暴露，但失去护栏）；validate:data 改为 relations.mjs --strict，与 i18n-sync.mjs --strict 范式一致
+- 修复 vite vue 分包失效：vue 组用 id.includes("node_modules/vue") 会误匹配 vue-router/vue-i18n，且 Vite 8/Rolldown 下 priority 全为 0 时 Vue 运行时被打进 208KB 的 i18n chunk 而非独立缓存；vue 组改为精确正则 /[\\/]node_modules[\\/]vue[\\/]/ + priority 10，Vue 运行时独立成 111KB chunk，i18n 主 chunk 由 208KB 瘦身到 96KB，跨页面切换缓存命中率提升
+- 移除误提交进 git 的一次性链接可达性扫描报告 reference-validation-report.json 并加入 .gitignore，避免临时扫描产物污染版本库
+
 ## 2.18.3
 
 - 移动端关系网络面板限高由 calc(100dvh - 140px) 调整为 calc(100dvh - 130px)，画布可视区高度增加 10px

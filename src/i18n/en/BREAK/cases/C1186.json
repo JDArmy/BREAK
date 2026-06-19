@@ -15,7 +15,7 @@
     "summary": "In December 2020, a backdoor was implanted into the software update package for SolarWinds' Orion platform, compromising thousands of institutional customers, including U.S. government agencies such as the National Security Agency and major enterprises. Attackers injected malicious code through the official update channel, enabling long-term persistence and large-scale data exfiltration from downs",
     "references": [
       {
-        "title": "Highly Recommended: An Open-Source Security Detection Tool to Prevent Software Supply Chain Poisoning - Zhihu"
+        "title": "SUNBURST Additional Technical Details"
       }
     ]
   }

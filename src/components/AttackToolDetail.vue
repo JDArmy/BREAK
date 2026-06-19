@@ -38,6 +38,7 @@ const getRelatedTerms = (atKey: string) =>
 <template>
   <!-- 攻击工具详情页 -->
   <el-drawer
+    v-if="atKey && BREAK.attackTools[atKey as keyof typeof BREAK.attackTools]"
     :model-value="drawer"
     @closed="$emit('drawerClose')"
     :title="$t('attackTools')"

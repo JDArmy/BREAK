@@ -31,6 +31,7 @@ const termKey = ref("");
 <template>
   <!-- 手段详情页 -->
   <el-drawer
+    v-if="aKey && BREAK.avoidances[aKey as keyof typeof BREAK.avoidances]"
     :model-value="drawer"
     @closed="$emit('drawerClose')"
     :title="$t('avoidance')"

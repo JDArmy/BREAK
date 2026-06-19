@@ -15,7 +15,7 @@
     "summary": "CVE-2019-5736 is one of the most impactful container escape vulnerabilities, existing in the runc runtime. A malicious container can obtain the host's runc binary path via /proc/self/exe and overwrite it, enabling arbitrary code execution on the host. Mitigation requires updating runc to version 1.0-rc6 or later, or adopting sandboxed runtimes such as gVisor.",
     "references": [
       {
-        "title": "Container Security Best Practices: Preventing Container Escape and Attacks - JianShu"
+        "title": "CVE-2019-5736: runc Container Escape Vulnerability Alert"
       }
     ]
   }

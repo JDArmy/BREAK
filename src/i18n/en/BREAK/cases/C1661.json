@@ -13,7 +13,7 @@
     "summary": "A security review of domestic banking APIs found security flaws across 38 banks, with 20 banks exhibiting high-risk unauthorized access vulnerabilities in their credit card APIs. Attackers could exploit these interfaces to bypass authorization checks and access sensitive cardholder information or perform unauthorized operations.",
     "references": [
       {
-        "title": "Wang An Jia Bai Jia Forum | Liu Shun, Xu Lixiang: A Casual Talk on Enterprise API Security - Zhihu"
+        "title": "Financial Industry at a Regulatory Crossroads: API Security in Focus"
       }
     ]
   }

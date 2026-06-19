@@ -14,7 +14,7 @@
     "summary": "During analysis of a foreign website, the core API was found to return encrypted strings. By setting browser breakpoints, the API request was intercepted and the decryption method was traced. Analysis of the JavaScript code confirmed the use of AES encryption. A large language model was then used to assist in analyzing and reconstructing the encryption and decryption algorithms, successfully decry",
     "references": [
       {
-        "title": "Cracking API encryption reverse interface analysis, this article covers it all - Reverse API CSDN Blog"
+        "title": "iOSSignatureAnalysis: iOS App Signature and Interface Analysis Example - GitHub"
       }
     ]
   }

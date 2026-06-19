@@ -23,6 +23,15 @@ const lowQualityDomains = [
 const includeI18nLinkIssues = process.argv.includes('--include-i18n-link-issues');
 const compareI18nLinks = process.argv.includes('--compare-i18n-links');
 
+function containsCjk(text) {
+  return /[\u3400-\u9fff\uf900-\ufaff]/u.test(String(text || ''));
+}
+
+function isMissingOrUntranslatedReferenceTitle(zhTitle, enTitle) {
+  if (!enTitle) return true;
+  return containsCjk(zhTitle) && enTitle === zhTitle;
+}
+
 function severityForIssue(type) {
   if (['duplicate_link', 'low_quality_domain'].includes(type)) return 'warning';
   if (['i18n_reference_count_mismatch', 'i18n_reference_link_mismatch'].includes(type)) return 'review';
@@ -159,7 +168,7 @@ function checkI18nSync(entityType, zhRecords, issues, i18nStats) {
     zhRefs.forEach((zhRef, index) => {
       const zhTitle = String(zhRef.title || '').trim();
       const enTitle = String(enRefs[index]?.title || '').trim();
-      if (!enTitle || enTitle === zhTitle) {
+      if (isMissingOrUntranslatedReferenceTitle(zhTitle, enTitle)) {
         stats.referenceTitleMismatches++;
         if (includeI18nLinkIssues) {
           addIssue(issues, {

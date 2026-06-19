@@ -14,7 +14,7 @@
     "summary": "During the payment process, an attacker captured order data packets from transactions with and without a coupon, then analyzed parameter differences. On a third purchase, the attacker changed the use_coupon parameter from 0 to 4 or 6, thereby reusing or stealing a coupon that did not belong to the current account or had exceeded its usage limit, bypassing business rules to gain illicit benefits.",
     "references": [
       {
-        "title": "Web Attack and Defense - Business Logic: Purchase Payments, Quantity Modification, Price Tampering, Order Points Hedging, Discounts..."
+        "title": "Shopping Platform Coupon Loophole Emerges: Should User Purchases Be Honored? - Xinhua News"
       }
     ]
   }
