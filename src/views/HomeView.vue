@@ -238,8 +238,8 @@ const getSubRisks = (prKey: string) => {
 };
 
 // 以父风险为key，将子风险放到value的对象中
-const subRisks = ref(Object());
-const hideSubRisks = ref(Object());
+const subRisks = ref<Record<string, string[]>>({});
+const hideSubRisks = ref<Record<string, boolean>>({});
 Object.keys(BREAK.risks).forEach((prKey) => {
   if (prKey.includes("-")) return;
   const srKeys = getSubRisks(prKey);

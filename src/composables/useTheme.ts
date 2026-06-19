@@ -7,6 +7,7 @@ const THEME_STORAGE_KEY = "break-theme";
 
 /** 获取初始主题偏好 */
 function getInitialTheme(): ThemeMode {
+  if (typeof localStorage === "undefined") return "dark";
   const saved = localStorage.getItem(THEME_STORAGE_KEY);
   if (saved === "light" || saved === "dark" || saved === "system") return saved;
   return "dark";
@@ -14,6 +15,7 @@ function getInitialTheme(): ThemeMode {
 
 /** 在 DOM 上应用/移除 dark class */
 function applyTheme(isDark: boolean) {
+  if (typeof document === "undefined") return;
   const html = document.documentElement;
   if (isDark) {
     html.classList.add("dark");
@@ -24,8 +26,12 @@ function applyTheme(isDark: boolean) {
 
 // ===== 模块级单例状态，所有组件共享 =====
 const theme = ref<ThemeMode>(getInitialTheme());
-const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-const systemDark = ref(mediaQuery.matches);
+// SSR 守卫：与 useBreakpoints 一致，无 window 时不访问 matchMedia
+const mediaQuery =
+  typeof window !== "undefined" && typeof window.matchMedia === "function"
+    ? window.matchMedia("(prefers-color-scheme: dark)")
+    : null;
+const systemDark = ref(mediaQuery?.matches ?? false);
 
 // 实际是否暗色
 const isDark = computed(
@@ -47,10 +53,13 @@ export function useTheme() {
   // 设置主题
   function setTheme(mode: ThemeMode) {
     theme.value = mode;
-    localStorage.setItem(THEME_STORAGE_KEY, mode);
+    if (typeof localStorage !== "undefined") {
+      localStorage.setItem(THEME_STORAGE_KEY, mode);
+    }
   }
 
   onMounted(() => {
+    if (!mediaQuery) return;
     if (mediaListenerCount === 0) {
       mediaQuery.addEventListener("change", onMediaChange);
     }
@@ -58,6 +67,7 @@ export function useTheme() {
   });
 
   onUnmounted(() => {
+    if (!mediaQuery) return;
     mediaListenerCount--;
     if (mediaListenerCount === 0) {
       mediaQuery.removeEventListener("change", onMediaChange);

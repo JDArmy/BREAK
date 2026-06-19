@@ -2,10 +2,7 @@
   "extends": "@tsconfig/node18/tsconfig.json",
   "include": [
     "vite.config.*",
-    "vitest.config.*",
-    "cypress.config.*",
-    "nightwatch.conf.*",
-    "playwright.config.*"
+    "vitest.config.*"
   ],
   "compilerOptions": {
     "composite": true,

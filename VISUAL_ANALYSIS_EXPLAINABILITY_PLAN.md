@@ -649,7 +649,6 @@ interface AttackPathStepExplanation {
 | `npm run audit:metrics` | 内容规模、弱关系、场景问题、维护任务 |
 | `npm run audit:maintenance` | 统一维护汇总 |
 | `npm run validate:data` | 数据结构和中英文同步基础校验 |
-| `npm run validate:docs-build` | 静态站构建产物同步校验 |
 
 ### 12.2 建议新增输出
 

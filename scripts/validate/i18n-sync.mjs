@@ -57,6 +57,9 @@ for (const cat of categories) {
 if (strict && hasErrors) {
   console.log("\n❌ i18n 同步检查失败（--strict 模式）");
   process.exit(1);
-} else if (!hasErrors) {
+} else if (hasErrors) {
+  // 非 strict 模式：有差异但不阻断，明确提示避免手动调用误判为同步
+  console.log("\n⚠️ 检测到中英文数据差异（非 strict 模式未阻断，CI 使用 --strict 会失败）");
+} else {
   console.log("\n✅ 所有实体中英文数据同步");
 }

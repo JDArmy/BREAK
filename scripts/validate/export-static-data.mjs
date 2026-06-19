@@ -65,11 +65,18 @@ function getGeneratedAt() {
   }
 
   const sourcePaths = exportConfigs.map((config) => config.dir);
-  const committedAt = execFileSync('git', ['log', '-1', '--format=%cI', '--', ...sourcePaths], {
-    cwd: projectRoot,
-    encoding: 'utf8',
-  }).trim();
-  return new Date(committedAt).toISOString();
+  let committedAt = '';
+  try {
+    committedAt = execFileSync('git', ['log', '-1', '--format=%cI', '--', ...sourcePaths], {
+      cwd: projectRoot,
+      encoding: 'utf8',
+    }).trim();
+  } catch {
+    // git 不可用或无仓库时回退到当前时间
+  }
+  const parsed = new Date(committedAt);
+  // 新文件/无提交历史时 committedAt 为空，new Date('') 得到 Invalid Date，回退到当前时间避免崩溃
+  return Number.isNaN(parsed.getTime()) ? new Date().toISOString() : parsed.toISOString();
 }
 
 const generatedAt = getGeneratedAt();

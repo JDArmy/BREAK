@@ -1,5 +1,15 @@
 # Change log
 
+## 2.20.4
+
+- HomeView 的 subRisks/hideSubRisks 由 ref(Object()) 反模式改为 ref<Record<string, ...>>({})，消除动态键访问的脆弱写法
+- useTheme/useAnchorTable 补 SSR window/localStorage 守卫，与 useBreakpoints 对齐：matchMedia/innerHeight/localStorage 在无 window 环境下安全降级
+- export-static-data.mjs 的 generatedAt 加 fallback：git log 取提交时间在新文件/无历史/无 git 时返回空，new Date('') 崩溃，改为回退当前时间
+- i18n-sync.mjs 非 strict 模式有差异时不再静默 exit(0)，改为打印 ⚠️ 提示避免手动调用误判为同步
+- tsconfig.node.json 移除 cypress/nightwatch/playwright 三个死 glob（项目无对应配置文件）
+- .prettierrc trailingComma 由 es5 改为 all，与 TS 项目习惯一致
+- VISUAL_ANALYSIS_EXPLAINABILITY_PLAN.md 删除已废弃的 validate:docs-build 脚本引用（该脚本随 docs 入库机制一并移除）
+
 ## 2.20.3
 
 - CI workflow 仅在 PR 时触发：ci.yml 去掉 push:main 触发，只保留 pull_request。push main 时只跑 Deploy（含全量校验+部署），消除与 CI 的重复；PR 合并前仍有自动校验
