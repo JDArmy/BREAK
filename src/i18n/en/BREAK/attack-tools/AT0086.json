@@ -4,8 +4,7 @@
     "description": "Tooling that captures, modifies, and replays webhook events to test signature verification and idempotency defects.",
     "references": [
       {
-        "title": "OWASP API Security Top 10 2023",
-        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+        "title": "OWASP API Security Top 10 2023"
       }
     ],
     "keywords": [

@@ -16,6 +16,7 @@ const route = {
 const reportDir = path.join(projectRoot, 'research/search-reports');
 const reportJsonPath = path.join(reportDir, 'lighthouse-mobile-sankey-trace.json');
 const reportMdPath = path.join(reportDir, 'lighthouse-mobile-sankey-trace.md');
+const lighthouseTimeoutMs = Number(process.env.LIGHTHOUSE_SANKEY_TIMEOUT_MS || 90000);
 
 const mobileProfile = {
   formFactor: 'mobile',
@@ -472,6 +473,17 @@ function renderMarkdown(report) {
   return `${lines.join('\n')}\n`;
 }
 
+function withTimeout(promise, timeoutMs, label) {
+  let timer;
+  const timeout = new Promise((_, reject) => {
+    timer = setTimeout(() => {
+      reject(new Error(`${label} timed out after ${timeoutMs}ms`));
+    }, timeoutMs);
+  });
+
+  return Promise.race([promise, timeout]).finally(() => clearTimeout(timer));
+}
+
 async function runLighthouse(url, port) {
   const options = {
     port,
@@ -484,7 +496,11 @@ async function runLighthouse(url, port) {
     throttlingMethod: 'simulate',
     disableStorageReset: false,
   };
-  const runnerResult = await lighthouse(url, options);
+  const runnerResult = await withTimeout(
+    lighthouse(url, options),
+    lighthouseTimeoutMs,
+    'Mobile Sankey Lighthouse trace',
+  );
   if (!runnerResult?.lhr) {
     throw new Error(`Lighthouse did not return a report for ${url}`);
   }

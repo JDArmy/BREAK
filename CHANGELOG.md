@@ -3,6 +3,11 @@
 ## 2.18.3
 
 - 移动端关系网络面板限高由 calc(100dvh - 140px) 调整为 calc(100dvh - 130px)，画布可视区高度增加 10px
+- 首页改用轻量 BREAK 数据入口，普通首页首屏不再加载规避手段、攻击工具、威胁行为者和术语全量实体；详情抽屉路由按需加载完整 BREAK 数据
+- 修正 references 维护审计口径：英文 i18n 默认只维护引用标题，不再把中文结构源中的 references[].link 缺失误报为链接不一致；清理英文 i18n 中残留的 references[].link
+- 补充 cases 懒加载缓存测试和首页轻量计数一致性测试，覆盖率提升到 92%+
+- 提高 mobile Sankey Lighthouse trace 超时时间并支持环境变量配置，避免维护审计偶发 30 秒超时
+- 完整 build 链路改为生成 docs 后再校验当前 build 产物，保留单独 validate:docs-build 的严格检查
 
 ## 2.18.2
 

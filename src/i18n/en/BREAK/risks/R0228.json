@@ -12,8 +12,7 @@
     ],
     "references": [
       {
-        "title": "Software Bill of Materials - CISA",
-        "link": "https://www.cisa.gov/topics/information-communications-technology-supply-chain-security/sbom"
+        "title": "Software Bill of Materials - CISA"
       }
     ],
     "description": "Attackers publish same-name or look-alike packages that cause build systems to download malicious components.",

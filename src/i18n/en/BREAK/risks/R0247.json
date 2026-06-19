@@ -12,8 +12,7 @@
     ],
     "references": [
       {
-        "title": "OWASP API Security Top 10 2023",
-        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+        "title": "OWASP API Security Top 10 2023"
       }
     ],
     "description": "Attackers replay stolen cookies, tokens, or session credentials from another device.",

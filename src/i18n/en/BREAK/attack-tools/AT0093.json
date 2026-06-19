@@ -4,8 +4,7 @@
     "description": "Tooling that generates poisoning samples, prompt-injection payloads, unauthorized RAG retrieval probes, and model-output tests.",
     "references": [
       {
-        "title": "OWASP Top 10 for Large Language Model Applications",
-        "link": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"
+        "title": "OWASP Top 10 for Large Language Model Applications"
       }
     ],
     "keywords": [

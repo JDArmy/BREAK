@@ -4,16 +4,13 @@
     "description": "Attackers who control large numbers of IoT devices through vulnerability exploitation, default-credential attacks, firmware backdoors, and malware infection. Their goals include DDoS, proxy forwarding, mining, lateral movement, data tampering, and device extortion, and they may also use industrial, medical, or connected-vehicle devices to create physical-world impact.",
     "references": [
       {
-        "title": "Mirai Botnet source code",
-        "link": "https://github.com/jgamblin/Mirai-Source-Code"
+        "title": "Mirai Botnet source code"
       },
       {
-        "title": "CISA Securing IoT Devices",
-        "link": "https://www.cisa.gov/resources-tools/resources/securing-internet-things-iot-devices"
+        "title": "CISA Securing IoT Devices"
       },
       {
-        "title": "ENISA Baseline Security Recommendations for IoT",
-        "link": "https://www.enisa.europa.eu/publications/baseline-security-recommendations-for-iot"
+        "title": "ENISA Baseline Security Recommendations for IoT"
       }
     ],
     "keywords": [

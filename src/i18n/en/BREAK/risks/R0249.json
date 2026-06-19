@@ -12,8 +12,7 @@
     ],
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "NIST Cybersecurity Framework 2.0"
       }
     ],
     "description": "Attackers poison cached content through cache-key confusion, header pollution, or edge-rule defects.",

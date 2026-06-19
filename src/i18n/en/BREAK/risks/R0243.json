@@ -12,8 +12,7 @@
     ],
     "references": [
       {
-        "title": "NIST AI Risk Management Framework",
-        "link": "https://www.nist.gov/itl/ai-risk-management-framework"
+        "title": "NIST AI Risk Management Framework"
       }
     ],
     "description": "Attackers contaminate training sets, feedback data, or labeling results to influence model behavior.",

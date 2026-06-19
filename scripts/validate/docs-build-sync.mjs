@@ -14,6 +14,12 @@ const changed = git(['status', '--porcelain', '--', 'docs'])
   .filter(Boolean);
 
 if (changed.length > 0) {
+  if (process.env.DOCS_BUILD_GENERATED === '1') {
+    console.log('\n✅ docs 构建产物已由当前 build 生成');
+    console.log(`changed=${changed.length}`);
+    process.exit(0);
+  }
+
   console.error('\n❌ docs 构建产物未同步\n');
   console.error('请先运行 npm run build-only，并提交 docs/ 下生成的构建产物变化。');
   console.error('');

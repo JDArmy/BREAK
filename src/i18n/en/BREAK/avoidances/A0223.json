@@ -4,8 +4,7 @@
     "description": "Verify DID and VC issuers, revocation status, and presentation policies to reduce credential forgery risk.",
     "references": [
       {
-        "title": "W3C Decentralized Identifiers (DIDs) v1.0",
-        "link": "https://www.w3.org/TR/did-core/"
+        "title": "W3C Decentralized Identifiers (DIDs) v1.0"
       }
     ],
     "keywords": [

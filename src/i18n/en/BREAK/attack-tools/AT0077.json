@@ -4,16 +4,13 @@
     "description": "Automated attack scripts and arbitrage execution tools for DeFi protocols. They are commonly used for flash-loan call chains, oracle price manipulation, MEV frontrunning or sandwich trading, liquidity-pool manipulation, rug-pull fund withdrawal, and governance-vote manipulation. These scripts orchestrate lending, swapping, collateral, liquidation, and governance calls into one transaction or a small transaction set, using simulation and gas-strategy optimization to improve success rates.",
     "references": [
       {
-        "title": "Aave Flash Loans documentation",
-        "link": "https://docs.aave.com/developers/guides/flash-loans"
+        "title": "Aave Flash Loans documentation"
       },
       {
-        "title": "Flash Boys 2.0: Frontrunning in Decentralized Exchanges",
-        "link": "https://arxiv.org/abs/1904.05234"
+        "title": "Flash Boys 2.0: Frontrunning in Decentralized Exchanges"
       },
       {
-        "title": "Chainlink Oracle Security Considerations",
-        "link": "https://docs.chain.link/data-feeds/selecting-data-feeds#risk-mitigation"
+        "title": "Chainlink Oracle Security Considerations"
       }
     ],
     "keywords": [

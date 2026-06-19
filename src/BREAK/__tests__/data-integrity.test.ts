@@ -6,6 +6,7 @@
 import { describe, it, expect } from "vitest";
 import { readFileSync, readdirSync } from "fs";
 import { join } from "path";
+import homeBREAK from "../home";
 
 /** 读取指定目录下所有 JSON 文件并合并为扁平字典 */
 function loadAllJson(dir: string): Record<string, Record<string, unknown>> {
@@ -52,7 +53,21 @@ const threatActorIds = Object.keys(threatActors);
 const termIds = Object.keys(terms);
 const businessSceneIds = Object.keys(businessScenes);
 
+const countSubEntities = (ids: string[]) => ids.filter((id) => id.includes("-")).length;
+
 describe("数据完整性", () => {
+  it("首页轻量数据计数与完整实体数据一致", () => {
+    expect(homeBREAK.entityCounts).toEqual({
+      avoidances: avoidanceIds.length,
+      subAvoidances: countSubEntities(avoidanceIds),
+      attackTools: attackToolIds.length,
+      subAttackTools: countSubEntities(attackToolIds),
+      threatActors: threatActorIds.length,
+      subThreatActors: countSubEntities(threatActorIds),
+      terms: termIds.length,
+    });
+  });
+
   describe("必填字段", () => {
     it("所有 Risk 条目均含 title, definition, description, complexity, influence, avoidances", () => {
       const missing: string[] = [];

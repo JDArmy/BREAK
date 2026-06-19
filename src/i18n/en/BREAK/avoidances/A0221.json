@@ -4,8 +4,7 @@
     "description": "Audit CDN, WAF, edge-function, and cache-rule changes to prevent edge configuration abuse.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "NIST Cybersecurity Framework 2.0"
       }
     ],
     "keywords": [

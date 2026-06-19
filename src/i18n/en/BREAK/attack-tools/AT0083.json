@@ -4,16 +4,13 @@
     "description": "Scanning and exploitation tools for industrial control, connected-vehicle V2X, medical IoT, and edge-device protocols. Attackers may exploit protocol flaws or misconfigurations in Modbus, OPC-UA, Profinet, CAN, V2X, BLE, MQTT, and similar systems to perform unauthorized access, command injection, sensor-data forgery, medical-device control, or connected-vehicle message spoofing.",
     "references": [
       {
-        "title": "Modbus Penetration Testing Framework",
-        "link": "https://github.com/theralfbrown/smod"
+        "title": "Modbus Penetration Testing Framework"
       },
       {
-        "title": "CANard CAN bus toolkit",
-        "link": "https://github.com/ericevenchick/canard"
+        "title": "CANard CAN bus toolkit"
       },
       {
-        "title": "OWASP Medical Device Security",
-        "link": "https://owasp.org/www-project-medical-device-security/"
+        "title": "OWASP Medical Device Security"
       }
     ],
     "keywords": [

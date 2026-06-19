@@ -4,16 +4,13 @@
     "description": "Attackers targeting industrial control, connected vehicles, medical IoT, and critical infrastructure devices. They typically understand industrial protocols, in-vehicle networks, medical-device communication, and sensor spoofing. Their attacks may cause production interruption, vehicle misjudgment, medical-device abnormality, sensor-data pollution, or physical safety incidents.",
     "references": [
       {
-        "title": "MITRE ATT&CK for ICS",
-        "link": "https://attack.mitre.org/matrices/ics/"
+        "title": "MITRE ATT&CK for ICS"
       },
       {
-        "title": "OWASP Medical Device Security",
-        "link": "https://owasp.org/www-project-medical-device-security/"
+        "title": "OWASP Medical Device Security"
       },
       {
-        "title": "CISA Industrial Control Systems",
-        "link": "https://www.cisa.gov/topics/industrial-control-systems"
+        "title": "CISA Industrial Control Systems"
       }
     ],
     "keywords": [

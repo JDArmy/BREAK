@@ -12,8 +12,7 @@
     ],
     "references": [
       {
-        "title": "OWASP API Security Top 10 2023",
-        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+        "title": "OWASP API Security Top 10 2023"
       }
     ],
     "description": "The API checks only the login state but not object ownership, allowing attackers to enumerate and access other users' resources.",

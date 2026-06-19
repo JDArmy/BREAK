@@ -4,16 +4,13 @@
     "description": "Malware and command-and-control tools used to infect, control, and schedule large numbers of IoT devices. They commonly scan for weak passwords or known vulnerabilities, deploy lightweight malware, and issue DDoS, mining, proxy, or lateral-movement tasks through C2 servers. They may also tamper with device data or disrupt normal service.",
     "references": [
       {
-        "title": "Mirai Botnet source code",
-        "link": "https://github.com/jgamblin/Mirai-Source-Code"
+        "title": "Mirai Botnet source code"
       },
       {
-        "title": "CISA Securing Internet of Things Devices",
-        "link": "https://www.cisa.gov/resources-tools/resources/securing-internet-things-iot-devices"
+        "title": "CISA Securing Internet of Things Devices"
       },
       {
-        "title": "ENISA Baseline Security Recommendations for IoT",
-        "link": "https://www.enisa.europa.eu/publications/baseline-security-recommendations-for-iot"
+        "title": "ENISA Baseline Security Recommendations for IoT"
       }
     ],
     "keywords": [

@@ -4,16 +4,13 @@
     "description": "Toolsets for vulnerability scanning, firmware extraction, reverse engineering, default-credential testing, and remote exploitation of IoT devices. Attackers use them to discover exposed devices, analyze firmware backdoors, implant malicious firmware, hijack device control, or enroll devices into botnets.",
     "references": [
       {
-        "title": "OWASP Firmware Security Testing Methodology",
-        "link": "https://github.com/scriptingxss/owasp-fstm"
+        "title": "OWASP Firmware Security Testing Methodology"
       },
       {
-        "title": "Binwalk firmware analysis tool",
-        "link": "https://github.com/ReFirmLabs/binwalk"
+        "title": "Binwalk firmware analysis tool"
       },
       {
-        "title": "OWASP Internet of Things",
-        "link": "https://owasp.org/www-project-internet-of-things/"
+        "title": "OWASP Internet of Things"
       }
     ],
     "keywords": [

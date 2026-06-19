@@ -4,8 +4,7 @@
     "description": "Apply dynamic limits, quotas, and circuit breakers by user, device, IP, tenant, endpoint, and business action.",
     "references": [
       {
-        "title": "OWASP API Security Top 10 2023",
-        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+        "title": "OWASP API Security Top 10 2023"
       }
     ],
     "keywords": [

@@ -4,8 +4,7 @@
     "description": "Limit permissions for pipeline tokens, runners, artifact repositories, and deployment credentials to reduce build-chain abuse.",
     "references": [
       {
-        "title": "OWASP Top 10 CI/CD Security Risks",
-        "link": "https://owasp.org/www-project-top-10-ci-cd-security-risks/"
+        "title": "OWASP Top 10 CI/CD Security Risks"
       }
     ],
     "keywords": [

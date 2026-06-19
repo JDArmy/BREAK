@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import BREAK from "@/BREAK";
+import BREAK from "@/BREAK/home";
 
 import { defineAsyncComponent, ref, watch, computed } from "vue";
 import { useRouter, useRoute } from "vue-router";
@@ -30,22 +30,30 @@ const getSingleRouteParam = (param: unknown) =>
 const hasOwn = <T extends object>(obj: T, key: string) =>
   Object.prototype.hasOwnProperty.call(obj, key);
 
+type FullBREAK = typeof import("@/BREAK").default;
+let fullBreakPromise: Promise<FullBREAK> | null = null;
+
+const loadFullBREAK = () => {
+  fullBreakPromise ??= import("@/BREAK").then(({ default: fullBREAK }) => fullBREAK);
+  return fullBreakPromise;
+};
+
 // 统计所有风险（包括子风险）
 const totalRisks = computed(() => Object.keys(BREAK.risks).length);
 const subRisksCount = computed(() => Object.keys(BREAK.risks).filter(key => key.includes('-')).length);
 
 // 统计所有规避手段（包括子手段）
-const totalAvoidances = computed(() => Object.keys(BREAK.avoidances).length);
-const subAvoidancesCount = computed(() => Object.keys(BREAK.avoidances).filter(key => key.includes('-')).length);
+const totalAvoidances = computed(() => BREAK.entityCounts.avoidances);
+const subAvoidancesCount = computed(() => BREAK.entityCounts.subAvoidances);
 
 // 统计所有攻击工具（包括子工具）
-const totalAttackTools = computed(() => Object.keys(BREAK.attackTools).length);
-const subAttackToolsCount = computed(() => Object.keys(BREAK.attackTools).filter(key => key.includes('-')).length);
+const totalAttackTools = computed(() => BREAK.entityCounts.attackTools);
+const subAttackToolsCount = computed(() => BREAK.entityCounts.subAttackTools);
 
 // 统计所有威胁行为者（包括子行为者）
-const totalThreatActors = computed(() => Object.keys(BREAK.threatActors).length);
-const subThreatActorsCount = computed(() => Object.keys(BREAK.threatActors).filter(key => key.includes('-')).length);
-const totalTerms = computed(() => Object.keys(BREAK.terms).length);
+const totalThreatActors = computed(() => BREAK.entityCounts.threatActors);
+const subThreatActorsCount = computed(() => BREAK.entityCounts.subThreatActors);
+const totalTerms = computed(() => BREAK.entityCounts.terms);
 
 //分业务场景查看风险
 interface SceneBREAK {
@@ -78,13 +86,41 @@ const visualTextLength = (value: string) =>
 const clamp = (value: number, min: number, max: number) =>
   Math.max(min, Math.min(max, value));
 
+const isChineseLocale = computed(() => locale.value === "cn");
+
+const getLocalizedText = (path: string, cnText: string) =>
+  isChineseLocale.value ? cnText : String(t(path));
+
+const getBusinessSceneTitle = (bsKey: string) =>
+  getLocalizedText(
+    `BREAK.businessScenes.${bsKey}.title`,
+    BREAK.businessScenes[bsKey]?.title ?? bsKey
+  );
+
+const getRiskDimensionTitle = (dimensionKey: string) =>
+  getLocalizedText(
+    `BREAK.businessScenes.${bsKeySelected.value}.riskDimensions.${dimensionKey}.title`,
+    BREAK.businessScenes[bsKeySelected.value].riskDimensions[dimensionKey]?.title ?? dimensionKey
+  );
+
+const getRiskSceneTitle = (sceneKey: string) =>
+  getLocalizedText(
+    `BREAK.businessScenes.${bsKeySelected.value}.riskScenes.${sceneKey}.title`,
+    BREAK.businessScenes[bsKeySelected.value].riskScenes[sceneKey]?.title ?? sceneKey
+  );
+
+const getRiskTitle = (riskKey: string) =>
+  getLocalizedText(`BREAK.risks.${riskKey}.title`, BREAK.risks[riskKey]?.title ?? riskKey);
+
+const getRiskDefinition = (riskKey: string) =>
+  getLocalizedText(`BREAK.risks.${riskKey}.definition`, BREAK.risks[riskKey]?.definition ?? "");
+
 const getSceneColumnWidth = (sceneKey: string) => {
   const isEnglish = locale.value === 'en';
-  const sceneTitle = String(t(`BREAK.businessScenes.${bsKeySelected.value}.riskScenes.${sceneKey}.title`));
+  const sceneTitle = getRiskSceneTitle(sceneKey);
   const risks = sceneBREAK.value.riskScenes[sceneKey as keyof typeof sceneBREAK.value.riskScenes]?.risks ?? [];
   const maxRiskTitleLength = risks.reduce((maxLength, riskKey) => {
-    const riskTitle = String(t(`BREAK.risks.${riskKey}.title`));
-    return Math.max(maxLength, visualTextLength(riskTitle));
+    return Math.max(maxLength, visualTextLength(getRiskTitle(riskKey)));
   }, 0);
   const contentLength = Math.max(visualTextLength(sceneTitle), maxRiskTitleLength);
   const minWidth = isEnglish ? SCENE_MIN_WIDTH_EN : SCENE_MIN_WIDTH_CN;
@@ -268,10 +304,12 @@ const avoidanceDrawer = ref(false);
 const avoidanceKey = ref("");
 watch(
   () => [route.name, route.params.aKey] as const,
-  ([routeName, rawAKey]) => {
+  async ([routeName, rawAKey]) => {
     if (routeName === "avoidanceDetail") {
       const nextKey = getSingleRouteParam(rawAKey);
-      if (nextKey && hasOwn(BREAK.avoidances, nextKey)) {
+      const fullBREAK = await loadFullBREAK();
+      if (route.name !== routeName || route.params.aKey !== rawAKey) return;
+      if (nextKey && hasOwn(fullBREAK.avoidances, nextKey)) {
         avoidanceKey.value = nextKey;
         avoidanceDrawer.value = true;
         return;
@@ -293,10 +331,12 @@ const attackToolDrawer = ref(false);
 const attackToolKey = ref("");
 watch(
   () => [route.name, route.params.atKey] as const,
-  ([routeName, rawAtKey]) => {
+  async ([routeName, rawAtKey]) => {
     if (routeName === "attackToolDetail") {
       const nextKey = getSingleRouteParam(rawAtKey);
-      if (nextKey && hasOwn(BREAK.attackTools, nextKey)) {
+      const fullBREAK = await loadFullBREAK();
+      if (route.name !== routeName || route.params.atKey !== rawAtKey) return;
+      if (nextKey && hasOwn(fullBREAK.attackTools, nextKey)) {
         attackToolKey.value = nextKey;
         attackToolDrawer.value = true;
         return;
@@ -318,10 +358,12 @@ const threatActorDrawer = ref(false);
 const threatActorKey = ref("");
 watch(
   () => [route.name, route.params.taKey] as const,
-  ([routeName, rawTaKey]) => {
+  async ([routeName, rawTaKey]) => {
     if (routeName === "threatActorDetail") {
       const nextKey = getSingleRouteParam(rawTaKey);
-      if (nextKey && hasOwn(BREAK.threatActors, nextKey)) {
+      const fullBREAK = await loadFullBREAK();
+      if (route.name !== routeName || route.params.taKey !== rawTaKey) return;
+      if (nextKey && hasOwn(fullBREAK.threatActors, nextKey)) {
         threatActorKey.value = nextKey;
         threatActorDrawer.value = true;
         return;
@@ -343,10 +385,12 @@ const termDrawer = ref(false);
 const termKey = ref("");
 watch(
   () => [route.name, route.params.tKey] as const,
-  ([routeName, rawTKey]) => {
+  async ([routeName, rawTKey]) => {
     if (routeName === "termDetail") {
       const nextKey = getSingleRouteParam(rawTKey);
-      if (nextKey && hasOwn(BREAK.terms, nextKey)) {
+      const fullBREAK = await loadFullBREAK();
+      if (route.name !== routeName || route.params.tKey !== rawTKey) return;
+      if (nextKey && hasOwn(fullBREAK.terms, nextKey)) {
         termKey.value = nextKey;
         termDrawer.value = true;
         return;
@@ -418,7 +462,7 @@ const termDetailClose = () => {
           <el-option
             v-for="(bsVal, bsKey) in BREAK.businessScenes"
             :key="bsKey"
-            :label="bsKey + ': ' + $t(`BREAK.businessScenes.${bsKey}.title`)"
+            :label="bsKey + ': ' + getBusinessSceneTitle(String(bsKey))"
             :value="bsKey"
           />
         </el-select>
@@ -458,9 +502,7 @@ const termDetailClose = () => {
         <div class="risk-card">
         <h3 class="risk-dimension-title" :title="dimension.key">
           {{
-            $t(
-              `BREAK.businessScenes.${bsKeySelected}.riskDimensions.${dimension.key}.title`
-            )
+            getRiskDimensionTitle(dimension.key)
           }}
         </h3>
 
@@ -480,9 +522,7 @@ const termDetailClose = () => {
           <h4 class="risk-scene-title" :title="'风险场景 ID: ' + scene.key">
             <!-- <a :href="'/risk-demensions/' + rdKey"> -->
             {{
-              $t(
-                `BREAK.businessScenes.${bsKeySelected}.riskScenes.${scene.key}.title`
-              )
+              getRiskSceneTitle(scene.key)
             }}
 
             <!-- </a> -->
@@ -493,7 +533,7 @@ const termDetailClose = () => {
               :class="subRisks[rKey] ? 's-risk' : 'risk'"
               v-for="rKey in getRisks(sceneBREAK.riskScenes, scene.key)"
               :key="rKey"
-              :title="rKey + ': ' + $t(`BREAK.risks.${rKey}.definition`)"
+              :title="rKey + ': ' + getRiskDefinition(rKey)"
               :style="hideSubRisks[rKey] ? '' : 'padding:0 0 3px 0;'"
             >
               <!-- 有子风险时，显示子风险列表 -->
@@ -519,7 +559,7 @@ const termDetailClose = () => {
                       :to="bsKeySelected === defaultBusinessSceneKey
                         ? { name: 'riskDetail', params: { rKey } }
                         : { name: 'businessSceneRiskDetail', params: { bsKey: bsKeySelected, rKey } }">{{
-                      $t(`BREAK.risks.${rKey}.title`)
+	                      getRiskTitle(rKey)
                     }}</router-link>
                   </td>
                   <td style="width: 1px"></td>
@@ -527,7 +567,7 @@ const termDetailClose = () => {
                 <tr
                   class="sub-risk"
                   :key="srKey"
-                  :title="srKey + ': ' + $t(`BREAK.risks.${srKey}.definition`)"
+	                  :title="srKey + ': ' + getRiskDefinition(srKey)"
                   v-for="(srKey, index) in subRisks[rKey]"
                   v-show="!hideSubRisks[rKey]"
                 >
@@ -542,7 +582,7 @@ const termDetailClose = () => {
                       :to="bsKeySelected === defaultBusinessSceneKey
                         ? { name: 'riskDetail', params: { rKey: srKey } }
                         : { name: 'businessSceneRiskDetail', params: { bsKey: bsKeySelected, rKey: srKey } }">{{
-                      $t(`BREAK.risks.${srKey}.title`)
+	                      getRiskTitle(srKey)
                     }}</router-link>
                   </td>
                   <td style="width: 1px"></td>
@@ -556,7 +596,7 @@ const termDetailClose = () => {
                 :to="bsKeySelected === defaultBusinessSceneKey
                   ? { name: 'riskDetail', params: { rKey } }
                   : { name: 'businessSceneRiskDetail', params: { bsKey: bsKeySelected, rKey } }">{{
-                $t(`BREAK.risks.${rKey}.title`)
+	                getRiskTitle(rKey)
               }}</router-link>
             </li>
           </ul>

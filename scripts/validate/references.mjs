@@ -21,6 +21,7 @@ const lowQualityDomains = [
   'zhuanlan.zhihu.com',
 ];
 const includeI18nLinkIssues = process.argv.includes('--include-i18n-link-issues');
+const compareI18nLinks = process.argv.includes('--compare-i18n-links');
 
 function severityForIssue(type) {
   if (['duplicate_link', 'low_quality_domain'].includes(type)) return 'warning';
@@ -108,6 +109,7 @@ function checkI18nSync(entityType, zhRecords, issues, i18nStats) {
     type: entityType,
     entitiesChecked: zhRecords.length,
     referenceCountMismatches: 0,
+    referenceTitleMismatches: 0,
     referenceLinkMismatches: 0,
   };
 
@@ -155,19 +157,50 @@ function checkI18nSync(entityType, zhRecords, issues, i18nStats) {
     }
 
     zhRefs.forEach((zhRef, index) => {
-      const zhLink = normalizeLink(zhRef.link);
-      const enLink = normalizeLink(enRefs[index]?.link);
-      if (zhLink !== enLink) {
-        stats.referenceLinkMismatches++;
+      const zhTitle = String(zhRef.title || '').trim();
+      const enTitle = String(enRefs[index]?.title || '').trim();
+      if (!enTitle || enTitle === zhTitle) {
+        stats.referenceTitleMismatches++;
         if (includeI18nLinkIssues) {
           addIssue(issues, {
-            type: 'i18n_reference_link_mismatch',
+            type: 'i18n_reference_title_missing_or_untranslated',
             entityType,
             entityKey: key,
             entityTitle: zhEntity.title || '',
             refIndex: index,
-            zhLink,
-            enLink,
+            zhTitle,
+            enTitle,
+          });
+        }
+      }
+
+      if (compareI18nLinks) {
+        const zhLink = normalizeLink(zhRef.link);
+        const enLink = normalizeLink(enRefs[index]?.link);
+        if (zhLink !== enLink) {
+          stats.referenceLinkMismatches++;
+          if (includeI18nLinkIssues) {
+            addIssue(issues, {
+              type: 'i18n_reference_link_mismatch',
+              entityType,
+              entityKey: key,
+              entityTitle: zhEntity.title || '',
+              refIndex: index,
+              zhLink,
+              enLink,
+            });
+          }
+        }
+      } else if (enRefs[index] && Object.prototype.hasOwnProperty.call(enRefs[index], 'link')) {
+        stats.referenceLinkMismatches++;
+        if (includeI18nLinkIssues) {
+          addIssue(issues, {
+            type: 'i18n_reference_link_in_translation',
+            entityType,
+            entityKey: key,
+            entityTitle: zhEntity.title || '',
+            refIndex: index,
+            link: enRefs[index].link,
           });
         }
       }
@@ -216,12 +249,12 @@ function renderMarkdown(stats, issues, i18nStats) {
   }
 
   lines.push('', '## i18n 参考资料同步概览', '');
-  lines.push('默认报告只汇总 i18n reference 链接差异；如需逐条输出，运行 `npm run audit:references -- --include-i18n-link-issues`。');
-  lines.push('', '| 类别 | 检查实体数 | 引用数量不一致实体 | 引用链接不一致条目 |');
-  lines.push('| --- | ---: | ---: | ---: |');
+  lines.push('英文 i18n 文件只维护引用标题，不维护 `references[].link`。默认检查引用数量、英文标题是否缺失或未翻译，以及英文文件是否误写 link；如需兼容旧口径比较中英文 link，运行 `npm run audit:references -- --compare-i18n-links`。');
+  lines.push('', '| 类别 | 检查实体数 | 引用数量不一致实体 | 英文标题缺失/未翻译条目 | 英文误写 link 条目 |');
+  lines.push('| --- | ---: | ---: | ---: | ---: |');
   for (const item of i18nStats) {
     lines.push(
-      `| ${item.type} | ${item.entitiesChecked} | ${item.referenceCountMismatches} | ${item.referenceLinkMismatches} |`,
+      `| ${item.type} | ${item.entitiesChecked} | ${item.referenceCountMismatches} | ${item.referenceTitleMismatches} | ${item.referenceLinkMismatches} |`,
     );
   }
 
@@ -249,6 +282,9 @@ function renderMarkdown(stats, issues, i18nStats) {
     );
     if (issue.link || issue.zhLink || issue.enLink) {
       lines.push(`  - link: ${issue.link || `${issue.zhLink || '(empty)'} -> ${issue.enLink || '(empty)'}`}`);
+    }
+    if (issue.zhTitle !== undefined || issue.enTitle !== undefined) {
+      lines.push(`  - title: ${issue.zhTitle || '(empty)'} -> ${issue.enTitle || '(empty)'}`);
     }
     if (issue.domain) {
       lines.push(`  - domain: ${issue.domain}`);
@@ -292,7 +328,7 @@ function main() {
   console.log('\n## i18n 参考资料同步概览');
   for (const item of i18nStats) {
     console.log(
-      `${item.type}: countMismatch=${item.referenceCountMismatches}, linkMismatch=${item.referenceLinkMismatches}`,
+      `${item.type}: countMismatch=${item.referenceCountMismatches}, titleMismatch=${item.referenceTitleMismatches}, translatedLinks=${item.referenceLinkMismatches}`,
     );
   }
   console.log('\n## 问题汇总');

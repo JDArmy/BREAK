@@ -17,12 +17,10 @@
     "usageExample": "An attacker injected XSS payload into a forum post that stole session cookies from 2,000 logged-in users who viewed the thread, enabling account takeover across the platform.",
     "references": [
       {
-        "title": "Cross Site Scripting (XSS) | OWASP Foundation",
-        "link": "https://www.owasp.org/index.php/XSS_Attacks"
+        "title": "Cross Site Scripting (XSS) | OWASP Foundation"
       },
       {
-        "title": "Cross-site scripting (XSS) explained: core concepts in one article",
-        "link": "https://blog.csdn.net/2301_77472496/article/details/156947232"
+        "title": "Cross-site scripting (XSS) explained: core concepts in one article"
       }
     ],
     "category": "Business Security"

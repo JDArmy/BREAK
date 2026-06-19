@@ -25,8 +25,7 @@
     "limitation": "Key management: the security of encryption depends on proper key management. If keys are poorly managed, they may be leaked or lost, making data unrecoverable or accessible to unauthorized parties. Performance impact: the encryption and decryption process may introduce some performance overhead. For large-scale data storage and frequent data access, encryption may cause certain delays.",
     "references": [
       {
-        "title": "Recommendation for Key Management - NIST SP 800-57 Part 1 Rev. 5",
-        "link": "https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final"
+        "title": "Recommendation for Key Management - NIST SP 800-57 Part 1 Rev. 5"
       }
     ],
     "keywords": [
@@ -42,8 +41,7 @@
     "limitation": "Main limitations include performance overhead, log management challenges, privacy and compliance issues, false positives and false negatives, complexity and configuration management challenges, confidentiality concerns, and technical limitations.",
     "references": [
       {
-        "title": "Guide to Computer Security Log Management - NIST SP 800-92",
-        "link": "https://csrc.nist.gov/pubs/sp/800/92/final"
+        "title": "Guide to Computer Security Log Management - NIST SP 800-92"
       }
     ],
     "keywords": [
@@ -59,8 +57,7 @@
     "limitation": "Data erasure is not a one-time operation; multiple passes are needed to ensure data cannot be recovered. The process is relatively slow and time-consuming. The effectiveness of data erasure is affected by the storage medium — for example, solid-state drives (SSDs) are harder to erase completely.",
     "references": [
       {
-        "title": "Guidelines for Media Sanitization - NIST SP 800-88 Rev. 1",
-        "link": "https://csrc.nist.gov/pubs/sp/800/88/r1/final"
+        "title": "Guidelines for Media Sanitization - NIST SP 800-88 Rev. 1"
       }
     ],
     "keywords": [
