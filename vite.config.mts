@@ -64,7 +64,7 @@ export default defineConfig({
   base: "./",
   build: {
     minify: "terser",
-    outDir: "docs",
+    outDir: "dist",
     rolldownOptions: {
       logLevel: "silent",
       output: {

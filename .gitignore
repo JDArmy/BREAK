@@ -14,6 +14,10 @@ dist-ssr
 coverage
 *.local
 
+# 静态数据导出产物，由 npm run export:data 生成，不纳入版本库
+public/data/break-data.json
+public/data/break-manifest.json
+
 /cypress/videos/
 /cypress/screenshots/
 

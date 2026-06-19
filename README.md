@@ -75,7 +75,6 @@ npm run export:data
 npm run export:data-package
 npm run validate:data-export
 npm run validate:data-package
-npm run validate:docs-build
 npm run test:smoke
 npm run test:performance
 npm run test:relation-stability
@@ -89,7 +88,7 @@ npm run type-check
 ```
 
 `npm run validate:data` runs JSON Schema validation, i18n key synchronization, relationship coverage auditing, and generated schema documentation checks.
-`npm run build` runs `lint`, `type-check`, `validate:data`, `test`, `test:coverage`, `validate:schema-docs`, `validate:docs-build`, `export:data`, `export:data-package`, `build-only`, `audit:bundle:check`, `validate:data-export`, `validate:data-package`, `test:smoke`, `test:performance`, `test:relation-stability`, and `test:lighthouse`.
+`npm run build` runs `lint`, `type-check`, `validate:data`, `test`, `test:coverage`, `validate:schema-docs`, `export:data`, `build-only`, `export:data-package`, `audit:bundle:check`, `validate:data-export`, `validate:data-package`, `test:smoke`, `test:performance`, `test:relation-stability`, and `test:lighthouse`.
 `npm run test:coverage` enforces the core logic coverage baseline for relation analysis, Sankey attack paths, root/path insights, search, safe i18n, and BREAK data utilities.
 `npm run validate:schema-docs` checks [DATA_SCHEMA.md](./DATA_SCHEMA.md) against `src/validation/breakSchema.ts`.
 `npm run schema:docs:write` regenerates [DATA_SCHEMA.md](./DATA_SCHEMA.md) after schema changes.
@@ -97,10 +96,9 @@ npm run type-check
 `npm run export:data-package` writes an npm package evaluation artifact to `dist/break-data-package`.
 `npm run validate:data-export` checks the public data bundle, manifest hash, entity counts, version, and copied GitHub Pages artifacts.
 `npm run validate:data-package` checks the npm package boundary, runtime entry, type declarations, README, manifest hash, and version alignment.
-`npm run validate:docs-build` checks that the committed `docs/` GitHub Pages artifacts match the current build output.
 `npm run test:smoke`, `npm run test:performance`, `npm run test:relation-stability`, and `npm run test:lighthouse` validate the generated static site with Playwright/Chromium.
 `npm run audit:metrics` generates the content trust, relation coverage, category distribution, and business scene coverage baseline.
-`npm run audit:bundle` checks the generated `docs/assets` bundle against the current performance budget.
+`npm run audit:bundle` checks the generated `dist/assets` bundle against the current performance budget.
 `npm run audit:maintenance` refreshes the audit reports and writes a unified maintenance summary.
 
 ### Static Data
