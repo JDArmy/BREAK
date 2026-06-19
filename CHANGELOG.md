@@ -1,5 +1,11 @@
 # Change log
 
+## 2.18.2
+
+- 移动端关系网络画布改为面板限高一屏 + 画布在面板内可平移滚动：面板限高 calc(100dvh - 140px)，画布保留可平移大画布（节点保持分散布局），避免页面被撑高的同时不挤压节点
+- 修复 .network-graph-pane / .sankey-pane 因 content-box 边框超出父容器被裁剪、移动端右侧与底部边框不可见的问题：两者改为 box-sizing:border-box
+- 移动端 .el-main padding 由 20px 调整为 10px（--el-main-padding）
+
 ## 2.18.1
 
 - 修复关系节点详情移动端路径操作按钮样式中的 `:deep()` 选择器：普通 CSS 文件改用后代选择器，避免 Vite 8 / lightningcss minify 阶段提示非法伪类
@@ -7,9 +13,8 @@
 
 ## 2.18.0
 
-- 移动端关系网络画布收敛到一屏内：原本画布固定为 max(1180px,260vw) × max(940px,190vh) 的可平移大画布，导致页面被撑高超出一屏；改为面板限高（calc(100dvh - 129px)）、画布宽高填满面板，节点通过 ECharts 内部缩放/拖拽浏览
-- 关系网络面板在移动端新增 relation-page--mobile-network 限高布局，el-tabs__content / el-tab-pane 限高 overflow:hidden，避免画布把页面整体撑高
-- RelationNetworkPane 移动端 .network-canvas-scroll 改为 overflow:hidden，.network-chart 改为 100% 宽高，移除 min-height:940px
+- 移动端关系网络画布限高一屏：原本画布固定为 max(1180px,260vw) × max(940px,190vh) 的可平移大画布，导致页面被撑高超出一屏；新增 relation-page--mobile-network 限高布局，面板限高（calc(100dvh - 140px)）、el-tabs__content / el-tab-pane 限高 overflow:hidden，画布在面板内可平移滚动，避免画布把页面整体撑高
+- RelationNetworkPane 移动端 .network-canvas-scroll 保留 overflow:auto 支持平移，画布高度由 190vh 调整为 160vh
 - 修复 .network-graph-pane 因 content-box 导致边框超出父容器被裁剪、移动端右侧与底部边框不可见的问题：改为 box-sizing:border-box
 
 ## 2.17.1

@@ -85,6 +85,10 @@ import iconGithub from "@/components/icons/iconGithub.vue";
 }
 
 @media (max-width: 767px) {
+  .el-main {
+    --el-main-padding: 10px;
+  }
+
   .mobile-desktop-hint {
     display: block;
   }

@@ -317,17 +317,18 @@ const setNetworkScrollerRef = (
     border: 0;
   }
 
+  /* 面板限高一屏（由 RelationView 的 relation-page--mobile-network 控制），
+     画布在面板内可平移滚动，节点保持分散的大画布布局，避免挤成一坨。 */
   .network-canvas-scroll {
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    overflow: auto;
     -webkit-overflow-scrolling: touch;
   }
 
-  /* 画布收敛到一屏内，节点通过 ECharts 内部缩放/拖拽浏览，不再使用超宽超高的可滚动大画布 */
   .network-chart {
-    width: 100%;
-    height: 100%;
+    width: max(1180px, 260vw);
+    height: max(940px, 160vh);
     -webkit-touch-callout: none;
     user-select: none;
   }

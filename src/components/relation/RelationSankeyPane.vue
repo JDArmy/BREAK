@@ -31,6 +31,7 @@ const setRef = (el: Element | ComponentPublicInstance | null) => {
 
 <style scoped>
 .sankey-pane {
+  box-sizing: border-box;
   position: relative;
   width: 100%;
   height: 100%;

@@ -362,7 +362,7 @@ export default defineComponent({
   /* 关系网络在移动端限制为一屏：面板限高、画布在面板内通过 ECharts 缩放/拖拽浏览，
      不再把页面整体撑高到超出一屏。 */
   .relation-page--mobile-network {
-    height: calc(100dvh - 129px);
+    height: calc(100dvh - 140px);
     min-height: 0;
     overflow: hidden;
   }
