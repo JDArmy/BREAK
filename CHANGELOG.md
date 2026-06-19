@@ -8,6 +8,9 @@
 - 补充 cases 懒加载缓存测试和首页轻量计数一致性测试，覆盖率提升到 92%+
 - 提高 mobile Sankey Lighthouse trace 超时时间并支持环境变量配置，避免维护审计偶发 30 秒超时
 - 完整 build 链路改为生成 docs 后再校验当前 build 产物，保留单独 validate:docs-build 的严格检查
+- 移动端完整 BREAK 文案预加载改为首屏后延迟 15 秒，并在省流量、2g、slow-2g 网络下跳过；进入抽屉、列表、搜索和关系图等需要完整数据的路由时仍按需加载
+- 优化 build 速度：test:relation-stability 与 test:lighthouse 改为仅次版本（minor）变化时才运行，补丁版本（如 2.18.3 → 2.18.4）自动跳过，省去约 100s 浏览器测试；取不到对比版本时默认运行，不削弱保护
+- relation-stability 复杂图谱稳定性测试的 fixture 数量由 5 降为 3，减少重复渲染耗时
 
 ## 2.18.2
 

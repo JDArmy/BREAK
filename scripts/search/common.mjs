@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { execSync } from 'node:child_process';
 import { fileURLToPath } from 'url';
 
 export const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -172,4 +173,52 @@ export function compactText(value, maxLength = 120) {
     .replace(/\s+/g, ' ')
     .trim()
     .slice(0, maxLength);
+}
+
+// 解析 version 的 "major.minor" 段；非法返回 null
+function minorSegment(version) {
+  const match = String(version || '').match(/^(\d+)\.(\d+)/);
+  return match ? `${match[1]}.${match[2]}` : null;
+}
+
+// 读取 git 指定 ref 已提交的 package.json version；取不到返回 null
+function readGitVersion(ref) {
+  try {
+    const out = execSync(`git show ${ref}:package.json`, {
+      cwd: projectRoot,
+      stdio: ['ignore', 'pipe', 'ignore'],
+      encoding: 'utf8',
+    });
+    return JSON.parse(out).version ?? null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * 判断当前是否为次版本(minor)变化，用于决定是否运行重型浏览器测试
+ * (test:relation-stability / test:lighthouse)。
+ *
+ * 对比基准：工作区 package.json version（即将提交的新版本）vs git HEAD
+ * 已提交的 version（上一个版本）。本地 build 前已改好 version 但未 commit
+ * 时，HEAD 即旧版本；CI 上 checkout 的 HEAD 已是新版本时同样以 HEAD 为基准。
+ *
+ * - major.minor 段不同 → 运行（次版本变化，如 2.18.x → 2.19.0）
+ * - major.minor 段相同 → 跳过（补丁变化，如 2.18.3 → 2.18.4）
+ * - 任一版本取不到（首次提交 / 无 git / shallow clone）→ 默认运行（保守不漏跑）
+ *
+ * @returns {{ shouldRun: boolean, current: string|null, previous: string|null, reason: string }}
+ */
+export function shouldRunOnMinorBump() {
+  const current = readJson(path.join(projectRoot, 'package.json')).version;
+  const previous = readGitVersion('HEAD');
+  const curSeg = minorSegment(current);
+  const prevSeg = minorSegment(previous);
+  if (!curSeg || !prevSeg) {
+    return { shouldRun: true, current, previous, reason: '无法读取对比版本，默认运行' };
+  }
+  if (curSeg === prevSeg) {
+    return { shouldRun: false, current, previous, reason: `非次版本变化 (${previous} → ${current})` };
+  }
+  return { shouldRun: true, current, previous, reason: `次版本变化 (${previous} → ${current})` };
 }

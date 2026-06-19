@@ -19,6 +19,7 @@ app.use(router);
 
 const shouldLoadInitialLocaleBeforeMount =
   typeof window !== "undefined" && window.innerWidth >= 768;
+const MOBILE_IDLE_PRELOAD_DELAY_MS = 15000;
 
 if (shouldLoadInitialLocaleBeforeMount) {
   initLocaleMessages().catch((error) => {
@@ -28,23 +29,43 @@ if (shouldLoadInitialLocaleBeforeMount) {
 
 app.mount("#app");
 
-const scheduleInitLocaleMessages = () => {
-  const run = () => {
-    initLocaleMessages().catch((error) => {
-      console.error("Failed to load initial locale messages:", error);
-    });
+const getConnection = () => {
+  const navigatorWithConnection = navigator as Navigator & {
+    connection?: {
+      saveData?: boolean;
+      effectiveType?: string;
+    };
   };
-
-  if ("requestIdleCallback" in window) {
-    window.requestIdleCallback(run, { timeout: 3000 });
-    return;
-  }
-
-  window.setTimeout(run, 0);
+  return navigatorWithConnection.connection;
 };
 
-window.requestAnimationFrame(() => {
-  if (!shouldLoadInitialLocaleBeforeMount) {
-    scheduleInitLocaleMessages();
-  }
-});
+const shouldPreloadOnMobileConnection = () => {
+  const connection = getConnection();
+  if (!connection) return true;
+  if (connection.saveData) return false;
+  return !["slow-2g", "2g"].includes(connection.effectiveType ?? "");
+};
+
+const preloadLocaleMessages = () => {
+  initLocaleMessages().catch((error) => {
+    console.error("Failed to load initial locale messages:", error);
+  });
+};
+
+const scheduleMobileLocalePreload = () => {
+  if (typeof window === "undefined" || shouldLoadInitialLocaleBeforeMount) return;
+  if (!shouldPreloadOnMobileConnection()) return;
+
+  window.setTimeout(() => {
+    if (!shouldPreloadOnMobileConnection()) return;
+
+    if ("requestIdleCallback" in window) {
+      window.requestIdleCallback(preloadLocaleMessages, { timeout: 5000 });
+      return;
+    }
+
+    preloadLocaleMessages();
+  }, MOBILE_IDLE_PRELOAD_DELAY_MS);
+};
+
+window.requestAnimationFrame(scheduleMobileLocalePreload);

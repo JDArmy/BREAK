@@ -6,6 +6,27 @@ import { loadNetworkECharts, loadSankeyECharts } from "@/views/relation/relation
 const loadHomeView = () => import("@/views/HomeView.vue");
 const loadRelationView = () => import("@/views/RelationView.vue");
 type RelationPreloadTarget = "network" | "sankey";
+const routesNeedFullLocaleMessages = new Set([
+  "riskDetail",
+  "businessSceneRiskDetail",
+  "avoidanceDetail",
+  "attackToolDetail",
+  "threatActorDetail",
+  "termDetail",
+  "risks",
+  "risksDetail",
+  "avoidances",
+  "avoidancesDetail",
+  "attackTools",
+  "attackToolsDetail",
+  "threatActors",
+  "threatActorsDetail",
+  "terms",
+  "termsDetail",
+  "cases",
+  "casesDetail",
+  "relation",
+]);
 
 export const preloadRelationView = (target?: RelationPreloadTarget) => {
   void loadRelationView();
@@ -162,10 +183,13 @@ const router = createRouter({
 });
 
 router.beforeEach((to) => {
+  if (routesNeedFullLocaleMessages.has(String(to.name))) {
+    void initLocaleMessages();
+  }
+
   if (to.name === "relation") {
     if (window.innerWidth < 768) return;
     const view = typeof to.query.view === "string" ? to.query.view : "";
-    void initLocaleMessages();
     void loadRelationView();
     if (view === "network" || (view !== "sankey" && window.innerWidth >= 768)) {
       void loadNetworkECharts();

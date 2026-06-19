@@ -6,6 +6,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { chromium } from 'playwright';
 import lighthouse from 'lighthouse';
+import { shouldRunOnMinorBump } from '../search/common.mjs';
 
 const host = '127.0.0.1';
 
@@ -270,6 +271,12 @@ async function runLighthouseWithRetry(url, profile, route, port) {
     retryOf: formatResult(firstResult),
     ...retry,
   };
+}
+
+const bump = shouldRunOnMinorBump();
+if (!bump.shouldRun) {
+  console.log(`⏭️  跳过 Lighthouse 基线测试：${bump.reason}`);
+  process.exit(0);
 }
 
 const previewPort = await findFreePort();

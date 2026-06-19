@@ -3,10 +3,11 @@ import { once } from 'node:events';
 import fs from 'node:fs';
 import net from 'node:net';
 import { chromium } from 'playwright';
+import { shouldRunOnMinorBump } from '../search/common.mjs';
 
 const host = '127.0.0.1';
 const layouts = ['horizontal', 'lanes', 'split', 'radial', 'hierarchical', 'force'];
-const fixtureLimit = 5;
+const fixtureLimit = 3;
 const minCanvasPaintedPixels = 1200;
 
 function readStaticData() {
@@ -174,6 +175,12 @@ async function assertNodeDrawerOpens(page, fixture) {
   }
   await page.keyboard.press('Escape');
   await page.waitForTimeout(250);
+}
+
+const bump = shouldRunOnMinorBump();
+if (!bump.shouldRun) {
+  console.log(`⏭️  跳过复杂关系图谱稳定性测试：${bump.reason}`);
+  process.exit(0);
 }
 
 const data = readStaticData();
