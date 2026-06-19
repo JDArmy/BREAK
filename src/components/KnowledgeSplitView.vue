@@ -262,11 +262,11 @@ watch(isMobile, (mobile) => {
           @click="selectItem(item.id)"
         >
           <span class="knowledge-id">{{ item.id }}</span>
-          <span class="knowledge-name">
-            {{ item.title }}
+          <span class="knowledge-name">{{ item.title }}</span>
+          <span v-if="item.subtitle || item.badge" class="knowledge-subtitle">
+            <span v-if="item.subtitle" class="knowledge-subtitle-text">{{ item.subtitle }}</span>
             <span v-if="item.badge" class="knowledge-badge" :class="item.badgeType">{{ item.badge }}</span>
           </span>
-          <span v-if="item.subtitle" class="knowledge-subtitle">{{ item.subtitle }}</span>
         </button>
         <div v-if="filteredItems.length === 0" class="knowledge-empty">
           {{ $t("search.noResults") }}
@@ -310,11 +310,11 @@ watch(isMobile, (mobile) => {
             @click="selectItem(item.id)"
           >
             <span class="knowledge-id">{{ item.id }}</span>
-            <span class="knowledge-name">
-              {{ item.title }}
+            <span class="knowledge-name">{{ item.title }}</span>
+            <span v-if="item.subtitle || item.badge" class="knowledge-subtitle">
+              <span v-if="item.subtitle" class="knowledge-subtitle-text">{{ item.subtitle }}</span>
               <span v-if="item.badge" class="knowledge-badge" :class="item.badgeType">{{ item.badge }}</span>
             </span>
-            <span v-if="item.subtitle" class="knowledge-subtitle">{{ item.subtitle }}</span>
           </button>
           <div v-if="filteredItems.length === 0" class="knowledge-empty">
             {{ $t("search.noResults") }}
@@ -442,7 +442,6 @@ watch(isMobile, (mobile) => {
 
 .knowledge-badge {
   display: inline-block;
-  margin-left: 6px;
   padding: 2px 8px;
   background: var(--break-bg-secondary);
   border: 1px solid var(--break-border);
@@ -451,6 +450,7 @@ watch(isMobile, (mobile) => {
   font-weight: 400;
   color: var(--break-text-secondary);
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .knowledge-badge.ac01 {
@@ -502,14 +502,21 @@ html.dark .knowledge-badge.ac04 {
 }
 
 .knowledge-subtitle {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   grid-column: 2;
+  min-width: 0;
+  font-size: 12px;
+  color: var(--break-text-secondary);
+}
+
+.knowledge-subtitle-text {
+  flex: 1 1 auto;
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 12px;
-  color: var(--break-text-secondary);
 }
 
 .knowledge-detail {
