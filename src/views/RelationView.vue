@@ -73,7 +73,10 @@ export default defineComponent({
   <div
     :ref="setRelationPageElement"
     class="relation-page"
-    :class="{ 'relation-page--mobile-sankey': activeView === 'sankey' }"
+    :class="{
+      'relation-page--mobile-sankey': activeView === 'sankey',
+      'relation-page--mobile-network': activeView === 'network',
+    }"
   >
     <RelationSelectorBar
       v-model:rel-type="relType"
@@ -354,6 +357,32 @@ export default defineComponent({
 
   .relation-page :deep(.el-tab-pane) {
     overflow: visible;
+  }
+
+  /* 关系网络在移动端限制为一屏：面板限高、画布在面板内通过 ECharts 缩放/拖拽浏览，
+     不再把页面整体撑高到超出一屏。 */
+  .relation-page--mobile-network {
+    height: calc(100dvh - 129px);
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .relation-page--mobile-network .relation-tabs {
+    flex: 1;
+    min-height: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .relation-page--mobile-network :deep(.el-tabs__content) {
+    height: calc(100% - 41px);
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .relation-page--mobile-network :deep(.el-tab-pane) {
+    height: 100%;
+    overflow: hidden;
   }
 }
 </style>

@@ -164,6 +164,7 @@ const setNetworkScrollerRef = (
 
 <style scoped>
 .network-graph-pane {
+  box-sizing: border-box;
   position: relative;
   width: 100%;
   height: 100%;
@@ -303,6 +304,7 @@ const setNetworkScrollerRef = (
 @media (max-width: 767px) {
   .network-graph-pane {
     overflow: hidden;
+    min-height: 0;
   }
 
   .network-graph-pane--app-fullscreen {
@@ -316,15 +318,16 @@ const setNetworkScrollerRef = (
   }
 
   .network-canvas-scroll {
+    width: 100%;
     height: 100%;
-    overflow: auto;
+    overflow: hidden;
     -webkit-overflow-scrolling: touch;
   }
 
+  /* 画布收敛到一屏内，节点通过 ECharts 内部缩放/拖拽浏览，不再使用超宽超高的可滚动大画布 */
   .network-chart {
-    width: max(1180px, 260vw);
-    height: max(940px, 190vh);
-    min-height: 940px;
+    width: 100%;
+    height: 100%;
     -webkit-touch-callout: none;
     user-select: none;
   }

@@ -1,5 +1,12 @@
 # Change log
 
+## 2.18.0
+
+- 移动端关系网络画布收敛到一屏内：原本画布固定为 max(1180px,260vw) × max(940px,190vh) 的可平移大画布，导致页面被撑高超出一屏；改为面板限高（calc(100dvh - 129px)）、画布宽高填满面板，节点通过 ECharts 内部缩放/拖拽浏览
+- 关系网络面板在移动端新增 relation-page--mobile-network 限高布局，el-tabs__content / el-tab-pane 限高 overflow:hidden，避免画布把页面整体撑高
+- RelationNetworkPane 移动端 .network-canvas-scroll 改为 overflow:hidden，.network-chart 改为 100% 宽高，移除 min-height:940px
+- 修复 .network-graph-pane 因 content-box 导致边框超出父容器被裁剪、移动端右侧与底部边框不可见的问题：改为 box-sizing:border-box
+
 ## 2.17.1
 
 - 修复知识库列表项 badge（案例分类/规避分类等）被长标题挤出可视区的问题：badge 由标题行内联改为移至摘要行右侧（flex 布局，badge 不收缩、标题与摘要各自省略），长标题下 badge 始终可见
