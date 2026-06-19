@@ -39,10 +39,6 @@ jobs:
       - run: npm run audit:bundle:check
       - run: npm run validate:data-export
       - run: npm run validate:data-package
-      - run: npm run test:smoke
-      - run: npm run test:performance
-      - run: npm run test:relation-stability
-      - run: npm run test:lighthouse
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
         with:

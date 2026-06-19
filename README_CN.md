@@ -88,7 +88,7 @@ npm run type-check
 ```
 
 `npm run validate:data` 会执行 JSON Schema 校验、i18n key 同步检查、关系覆盖审计和生成式 Schema 文档同步检查。
-`npm run build` 会执行 `lint`、`type-check`、`validate:data`、`test`、`test:coverage`、`validate:schema-docs`、`export:data`、`build-only`、`export:data-package`、`audit:bundle:check`、`validate:data-export`、`validate:data-package`、`test:smoke`、`test:performance`、`test:relation-stability` 和 `test:lighthouse`。
+`npm run build` 会执行 `lint`、`type-check`、`validate:data`、`test`、`test:coverage`、`validate:schema-docs`、`export:data`、`build-only`、`export:data-package`、`audit:bundle:check`、`validate:data-export` 和 `validate:data-package`。
 `npm run test:coverage` 会对关系分析、Sankey 攻击路径、根节点路径洞察、搜索、安全 i18n 和 BREAK 数据工具执行核心逻辑覆盖率门禁。
 `npm run validate:schema-docs` 会检查 [DATA_SCHEMA.md](./DATA_SCHEMA.md) 是否与 `src/validation/breakSchema.ts` 同步。
 `npm run schema:docs:write` 会在 Schema 变更后重新生成 [DATA_SCHEMA.md](./DATA_SCHEMA.md)。
@@ -96,7 +96,7 @@ npm run type-check
 `npm run export:data-package` 会生成 `dist/break-data-package` npm 数据包评估产物。
 `npm run validate:data-export` 会检查公共数据包、manifest hash、实体计数、版本号和 GitHub Pages 产物同步状态。
 `npm run validate:data-package` 会检查 npm 包边界、运行时入口、类型声明、README、manifest hash 和版本一致性。
-`npm run test:smoke`、`npm run test:performance`、`npm run test:relation-stability` 和 `npm run test:lighthouse` 会使用 Playwright/Chromium 验证生成后的静态站点。
+`npm run test:smoke`、`npm run test:performance`、`npm run test:relation-stability` 和 `npm run test:lighthouse` 会使用 Playwright/Chromium 验证生成后的静态站点。这 4 个仅在本地开发环境运行（不进 CI/Deploy），按需手动执行。
 `npm run audit:metrics` 会生成内容可信度、关系覆盖、分类分布和业务场景覆盖基线报告。
 `npm run audit:bundle` 会基于 `dist/assets` 检查构建产物是否超过 bundle 预算。
 `npm run audit:maintenance` 会刷新审计报告并生成统一维护汇总。

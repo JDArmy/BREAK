@@ -1,5 +1,10 @@
 # Change log
 
+## 2.20.1
+
+- CI 与 Deploy 不再运行 Playwright e2e：test:smoke/test:performance/test:relation-stability/test:lighthouse 此前在 GitHub Actions runner 上因 Playwright Chromium 浏览器二进制缓存缺失而失败（chromium_headless_shell-1228 不存在），阻断部署；改为这 4 个 e2e 仅在本地开发环境手动运行，不进 build 链与 CI/Deploy
+- 同步从 package.json build 链、ci.yml、deploy.yml、docs-consistency.mjs buildGateScripts 门禁数组移除这 4 个 gate（五处联动），README/README_CN 更新说明为"仅本地运行"；脚本定义保留以便本地手动 npm run
+
 ## 2.20.0
 
 - 构建产物不再入库，outDir 由 docs 改回 dist：此前 vite outDir 为 docs 且把构建产物 commit 进 git，docs/assets 在历史中累计约 218MB、涉及 203 次提交，仓库随迭代单调膨胀；改回 dist（已被 .gitignore 忽略）后产物仅由 GitHub Actions（deploy.yml）构建部署，停止本地提交产物

@@ -81,10 +81,6 @@ const buildGateScripts = [
   'audit:bundle:check',
   'validate:data-export',
   'validate:data-package',
-  'test:smoke',
-  'test:performance',
-  'test:relation-stability',
-  'test:lighthouse',
 ];
 const documentedUtilityScripts = ['schema:docs:write'];
 
