@@ -1,5 +1,10 @@
 # Change log
 
+## 2.18.1
+
+- 修复关系节点详情移动端路径操作按钮样式中的 `:deep()` 选择器：普通 CSS 文件改用后代选择器，避免 Vite 8 / lightningcss minify 阶段提示非法伪类
+- 保持完整 `npm run build` 门禁通过，确认生产构建不再出现 `[lightningcss minify] 'deep' is not recognized` 警告
+
 ## 2.18.0
 
 - 移动端关系网络画布收敛到一屏内：原本画布固定为 max(1180px,260vw) × max(940px,190vh) 的可平移大画布，导致页面被撑高超出一屏；改为面板限高（calc(100dvh - 129px)）、画布宽高填满面板，节点通过 ECharts 内部缩放/拖拽浏览

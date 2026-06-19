@@ -789,7 +789,7 @@ button.node-coverage-item.node-special-insight-item:hover,
     gap: 6px;
   }
 
-  .node-path-node-actions :deep(.el-button) {
+  .node-path-node-actions .el-button {
     justify-content: center;
     margin-left: 0;
     min-width: 0;
