@@ -1,5 +1,9 @@
 # Change log
 
+## 2.20.2
+
+- 升级 GitHub Actions 到 Node 24 运行时，消除 Node 20 deprecation warning：actions/checkout v4→v5、setup-node v4→v5、configure-pages v4→v6、upload-pages-artifact v3→v5、deploy-pages v4→v5（ci.yml/deploy.yml/link-check.yml 同步）；setup-node 的 node-version 仍保持 20.19.0（项目代码运行时，满足 engines）
+
 ## 2.20.1
 
 - CI 与 Deploy 不再运行 Playwright e2e：test:smoke/test:performance/test:relation-stability/test:lighthouse 此前在 GitHub Actions runner 上因 Playwright Chromium 浏览器二进制缓存缺失而失败（chromium_headless_shell-1228 不存在），阻断部署；改为这 4 个 e2e 仅在本地开发环境手动运行，不进 build 链与 CI/Deploy
