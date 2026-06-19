@@ -74,11 +74,7 @@ const localeMessages = computed(() => messages.value[locale.value] as Record<str
 
 const { getCasesByThreatActor, ensureCases, cases } = useCasesByRisk();
 const relatedCases = computed(() => getCasesByThreatActor(selectedThreatActorKey.value));
-const casesExpanded = ref(false);
-const expandCases = async () => {
-  await ensureCases();
-  casesExpanded.value = true;
-};
+void ensureCases();
 
 const relatedTermKeys = computed(() =>
   Object.keys(BREAK.terms).filter((tKey) =>
@@ -192,10 +188,9 @@ const openRelationGraph = (taKey: string) => {
           </router-link>
         </div>
       </section>
-      <section class="detail-section" data-detail-anchor="cases">
+      <section v-if="relatedCases.length" class="detail-section" data-detail-anchor="cases">
         <h3>{{ $t("relatedCases") }}</h3>
-        <button v-if="!casesExpanded" class="entity-link" @click="expandCases">{{ $t("loadRelatedCases") }}</button>
-        <div v-else-if="relatedCases.length" class="entity-links">
+        <div class="entity-links">
           <router-link
             v-for="cKey in relatedCases"
             :key="cKey"
@@ -205,7 +200,6 @@ const openRelationGraph = (taKey: string) => {
             {{ cKey }}: {{ cases[cKey]?.title }}
           </router-link>
         </div>
-        <p v-else class="text-muted">{{ $t("noRelatedCases") }}</p>
       </section>
       <section v-if="selectedThreatActor.references?.length" class="detail-section" data-detail-anchor="references">
         <h3>{{ $t("references") }}</h3>

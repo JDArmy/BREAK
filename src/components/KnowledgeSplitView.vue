@@ -155,6 +155,20 @@ watch(
   { immediate: true }
 );
 
+// 列表项变化时（如 cases 懒加载后从空变满），若选中项已可访问则滚动到该项
+watch(
+  () => props.items.length,
+  (len) => {
+    if (!len || !props.selectedKey || isMobile.value) return;
+    if (!props.items.some((item) => item.id === props.selectedKey)) return;
+    nextTick(() => {
+      document
+        .querySelector(`[data-knowledge-key="${props.selectedKey}"]`)
+        ?.scrollIntoView({ block: "nearest" });
+    });
+  }
+);
+
 watch(
   () => [props.selectedKey, route.query.detailAnchor, mobileView.value],
   () => {

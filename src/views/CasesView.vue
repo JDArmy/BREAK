@@ -28,6 +28,16 @@ const categoryLabel = (category: string) => {
   return t(`caseCategory_${key}`);
 };
 
+const CATEGORY_KEYS = [
+  "criminal_verdict",
+  "administrative_enforcement",
+  "security_incident",
+  "vulnerability_advisory",
+  "academic_research",
+  "news_report",
+];
+const selectedCategory = ref("");
+
 const caseKeys = computed(() => Object.keys(cases.value));
 
 const getInitialKey = () => {
@@ -57,22 +67,45 @@ watch(
 );
 
 const caseItems = computed(() =>
-  caseKeys.value.map((caseKey) => {
-    const c = cases.value[caseKey];
-    if (!c) return { id: caseKey, title: "", subtitle: "", badge: "", searchText: "" };
-    const category = c.category;
-    return {
-      id: caseKey,
-      title: c.title,
-      subtitle: c.summary.slice(0, 48),
-      badge: categoryLabel(category),
-      searchText: [c.title, ...(c.keywords || []), c.summary, category].filter(Boolean).join(" "),
-    };
-  })
+  caseKeys.value
+    .filter((caseKey) => {
+      const c = cases.value[caseKey];
+      if (!c) return false;
+      if (!selectedCategory.value) return true;
+      const catKey = CATEGORY_ZH_TO_KEY[c.category] || c.category;
+      return catKey === selectedCategory.value;
+    })
+    .map((caseKey) => {
+      const c = cases.value[caseKey];
+      if (!c) return { id: caseKey, title: "", subtitle: "", badge: "", searchText: "" };
+      const category = c.category;
+      return {
+        id: caseKey,
+        title: c.title,
+        subtitle: c.summary.slice(0, 48),
+        badge: categoryLabel(category),
+        searchText: [c.title, ...(c.keywords || []), c.summary, category].filter(Boolean).join(" "),
+      };
+    })
 );
 
 const selectedCase = computed(() => cases.value[selectedCaseKey.value]);
 const selectedKeywords = computed(() => (selectedCase.value?.keywords) || []);
+
+// 案例数据懒加载：直接访问 /cases 时首屏 cases 尚未加载完成，
+// selectedCaseKey 此前拿不到 caseKeys[0] 而为空。加载完成后补选第一个。
+watch(caseKeys, (keys) => {
+  if (!keys.length) return;
+  if (cases.value[selectedCaseKey.value]) return;
+  selectedCaseKey.value = keys[0];
+});
+
+// 切换分类筛选时，若当前选中项不在筛选结果中，选第一个
+watch(selectedCategory, () => {
+  if (selectedCategory.value && !caseItems.value.some((item) => item.id === selectedCaseKey.value)) {
+    selectedCaseKey.value = caseItems.value[0]?.id || "";
+  }
+});
 </script>
 
 <template>
@@ -85,6 +118,24 @@ const selectedKeywords = computed(() => (selectedCase.value?.keywords) || []);
     :search-placeholder="$t('search.casePlaceholder')"
     @select="selectedCaseKey = $event"
   >
+    <template #filters>
+      <el-select
+        id="case-category-filter"
+        v-model="selectedCategory"
+        class="case-category-filter"
+        name="case-category-filter"
+        size="small"
+        clearable
+        :placeholder="$t('allCategories')"
+      >
+        <el-option
+          v-for="key in CATEGORY_KEYS"
+          :key="key"
+          :label="$t(`caseCategory_${key}`)"
+          :value="key"
+        />
+      </el-select>
+    </template>
     <article v-if="selectedCase" class="detail-panel">
       <div class="detail-heading">
         <div>
@@ -176,6 +227,10 @@ const selectedKeywords = computed(() => (selectedCase.value?.keywords) || []);
 </template>
 
 <style scoped>
+.case-category-filter {
+  flex: 0 0 96px;
+}
+
 .keywords {
   display: flex;
   flex-wrap: wrap;
