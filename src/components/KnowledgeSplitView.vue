@@ -33,6 +33,7 @@ const router = useRouter();
 const { isMobile } = useBreakpoints();
 const query = ref("");
 const mobileListRef = ref<HTMLElement>();
+const desktopListRef = ref<HTMLElement>();
 const detailRef = ref<HTMLElement>();
 const mobileListScrollTop = ref(0);
 
@@ -147,8 +148,8 @@ watch(
     if (!key) return;
     if (isMobile.value) return;
     nextTick(() => {
-      document
-        .querySelector(`[data-knowledge-key="${key}"]`)
+      desktopListRef.value
+        ?.querySelector(`[data-knowledge-key="${CSS.escape(key)}"]`)
         ?.scrollIntoView({ block: "nearest" });
     });
   },
@@ -162,8 +163,8 @@ watch(
     if (!len || !props.selectedKey || isMobile.value) return;
     if (!props.items.some((item) => item.id === props.selectedKey)) return;
     nextTick(() => {
-      document
-        .querySelector(`[data-knowledge-key="${props.selectedKey}"]`)
+      desktopListRef.value
+        ?.querySelector(`[data-knowledge-key="${CSS.escape(props.selectedKey)}"]`)
         ?.scrollIntoView({ block: "nearest" });
     });
   }
@@ -251,7 +252,7 @@ watch(isMobile, (mobile) => {
           :placeholder="searchPlaceholder"
         />
       </div>
-      <div class="knowledge-list">
+      <div ref="desktopListRef" class="knowledge-list">
         <button
           v-for="item in filteredItems"
           :key="item.id"

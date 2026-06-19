@@ -1,5 +1,14 @@
 # Change log
 
+## 2.19.1
+
+- schema.mjs 英文关键词校验补全覆盖：enKeywordCategories 此前只覆盖 en-risks/en-cases，漏掉 en-avoidances/en-attack-tools/en-threat-actors/en-terms 的 keywords 校验；补全为全部 6 类，并新增纯实体 ID 关键词检查（与 keywords.mjs 对齐），消除空值/重复/ID-only 漏报
+- 修复 relation 模块多处 requestIdleCallback/setTimeout 未配对清理：RelationView(12s 预加载)、RelationRouteShell、MenuList(12s/18s 预加载)、RelationSelectorBar 的 idle/timer 回调在组件卸载后仍可能触发，改为 onUnmounted 取消
+- relationViewEffects 非法路由参数反模式修复：alert+location.reload 丢弃 SPA 状态且 .then 无 .catch，改为 ElMessage 提示 + router.replace 纯路由跳转，提取 performInitialRender 在路由合法后补跑初始化；relationGraphBuilder 内同类 alert 一并改为 ElMessage
+- 详情组件模板全表遍历改为 computed 缓存：RiskDetail/RisksView/AttackToolDetail/AvoidanceDetail/ThreatActorDetail 的 getRelatedTerms 等函数在 v-if+v-for 中重复调用 Object.keys(BREAK.*) 全表扫描，改为按当前 key 的 computed
+- KnowledgeSplitView 全局 document.querySelector 改为组件内 ref：选中项滚动此前用 document.querySelector('[data-knowledge-key]') 全局定位，多实例会命中第一个串扰，改为 desktopListRef 局部查询并加 CSS.escape
+- build 脚本去重：validate:data 内的 schema-docs.mjs 与 build 链的 validate:schema-docs 是同一脚本跑两遍，从 validate:data 移除（build 链仍保留以满足 docs-consistency 门禁）
+
 ## 2.19.0
 
 - 修复 useCases 案例懒加载失败后永久卡死：cnLoadingPromise 缓存了 rejected Promise 但永不重置，首次加载因网络/动态 import 失败后，后续 ensureCases、locale 切换、搜索索引重建都拿到同一个 rejected Promise，案例功能彻底瘫痪只能刷新整页；改为失败时 catch 清空缓存并 rethrow，允许重试

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineAsyncComponent, ref } from "vue";
+import { defineAsyncComponent, ref, computed } from "vue";
 import BREAK from "@/BREAK";
 import ReferenceList from "@/components/ReferenceList.vue";
 
@@ -12,7 +12,7 @@ import { useDrawerWidth } from "@/composables/useDrawerWidth";
 const TermDetail = defineAsyncComponent(() => import("@/components/TermDetail.vue"));
 const AvoidanceDetail = defineAsyncComponent(() => import("@/components/AvoidanceDetail.vue"));
 
-defineProps<{
+const props = defineProps<{
   drawer: boolean;
   atKey: string;
 }>();
@@ -25,14 +25,17 @@ const termKey = ref("");
 
 const { getInnerDrawerWidth } = useDrawerWidth();
 
-const getAttackToolAvoidances = (atKey: string) => {
-  return BREAK.attackTools[atKey as keyof typeof BREAK.attackTools].avoidances;
-};
+// 缓存到当前 atKey，避免模板 v-if+v-for 重复取值/全表遍历
+const attackToolAvoidances = computed(
+  () => BREAK.attackTools[props.atKey as keyof typeof BREAK.attackTools].avoidances
+);
 
-const getRelatedTerms = (atKey: string) =>
-  Object.keys(BREAK.terms).filter((tKey) =>
+const relatedTerms = computed(() => {
+  const atKey = props.atKey;
+  return Object.keys(BREAK.terms).filter((tKey) =>
     BREAK.terms[tKey].relatedAttackTools.includes(atKey)
   );
+});
 </script>
 
 <template>
@@ -78,11 +81,11 @@ const getRelatedTerms = (atKey: string) =>
       <strong>{{ $t("description") }}:&nbsp;</strong>
       {{ $t(`BREAK.attackTools.${atKey}.description`) }}
     </div>
-    <div class="desc" v-if="getAttackToolAvoidances(atKey).length > 0">
+    <div class="desc" v-if="attackToolAvoidances.length > 0">
       <strong>{{ $t("avoidance") }}:&nbsp;</strong>
       <div class="entity-links">
         <button
-          v-for="aKey in getAttackToolAvoidances(atKey)"
+          v-for="aKey in attackToolAvoidances"
           :key="aKey"
           class="entity-link"
           @click="avoidanceKey = aKey; avoidanceDrawer = true"
@@ -91,11 +94,11 @@ const getRelatedTerms = (atKey: string) =>
         </button>
       </div>
     </div>
-    <div class="desc" v-if="getRelatedTerms(atKey).length > 0">
+    <div class="desc" v-if="relatedTerms.length > 0">
       <strong>{{ $t("terms") }}:&nbsp;</strong>
       <div class="entity-links">
         <button
-          v-for="tKey in getRelatedTerms(atKey)"
+          v-for="tKey in relatedTerms"
           :key="tKey"
           class="entity-link"
           @click="termKey = tKey; termDrawer = true"

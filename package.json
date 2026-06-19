@@ -1,6 +1,6 @@
 {
   "name": "break",
-  "version": "2.19.0",
+  "version": "2.19.1",
   "private": true,
   "type": "module",
   "engines": {
@@ -15,7 +15,7 @@
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "validate:data": "node scripts/validate/schema.mjs && node scripts/validate/i18n-sync.mjs --strict && node scripts/validate/english-i18n-quality.mjs && node scripts/validate/keywords.mjs && node scripts/validate/check-entity-relations.mjs && node scripts/validate/relations.mjs --strict && node scripts/validate/business-scenes.mjs && node scripts/validate/require-references.mjs && node scripts/validate/schema-docs.mjs && node scripts/validate/docs-consistency.mjs",
+    "validate:data": "node scripts/validate/schema.mjs && node scripts/validate/i18n-sync.mjs --strict && node scripts/validate/english-i18n-quality.mjs && node scripts/validate/keywords.mjs && node scripts/validate/check-entity-relations.mjs && node scripts/validate/relations.mjs --strict && node scripts/validate/business-scenes.mjs && node scripts/validate/require-references.mjs && node scripts/validate/docs-consistency.mjs",
     "validate:docs-build": "node scripts/validate/docs-build-sync.mjs",
     "validate:data-export": "node scripts/validate/static-data-export.mjs",
     "validate:data-package": "node scripts/validate/data-package.mjs",

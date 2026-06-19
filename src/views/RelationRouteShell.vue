@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, markRaw, shallowRef, type Component } from "vue";
+import { computed, markRaw, onUnmounted, shallowRef, type Component } from "vue";
 import { useRoute } from "vue-router";
 import { initLocaleMessages } from "@/i18n";
 
@@ -12,8 +12,16 @@ const currentEntity = computed(() => {
   return [type, key].filter(Boolean).join(" / ");
 });
 
+let loadTimer: ReturnType<typeof setTimeout> | null = null;
+let loadIdleHandle: number | null = null;
+let cancelled = false;
+
 const loadRelationView = () => {
+  loadIdleHandle = null;
+  loadTimer = null;
   void Promise.all([initLocaleMessages(), import("@/views/RelationView.vue")]).then(([, mod]) => {
+    // 组件已卸载则不再写入，避免操作已销毁的响应式状态
+    if (cancelled) return;
     relationViewComponent.value = markRaw(mod.default);
   });
 };
@@ -21,10 +29,22 @@ const loadRelationView = () => {
 if (window.innerWidth >= 768) {
   loadRelationView();
 } else if ("requestIdleCallback" in window) {
-  window.requestIdleCallback(loadRelationView, { timeout: 2000 });
+  loadIdleHandle = window.requestIdleCallback(loadRelationView, { timeout: 2000 });
 } else {
-  window.setTimeout(loadRelationView, 0);
+  loadTimer = window.setTimeout(loadRelationView, 0);
 }
+
+onUnmounted(() => {
+  cancelled = true;
+  if (loadTimer !== null) {
+    clearTimeout(loadTimer);
+    loadTimer = null;
+  }
+  if (loadIdleHandle !== null && "cancelIdleCallback" in window) {
+    window.cancelIdleCallback(loadIdleHandle);
+    loadIdleHandle = null;
+  }
+});
 </script>
 
 <template>

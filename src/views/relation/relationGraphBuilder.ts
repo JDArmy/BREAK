@@ -1,4 +1,5 @@
 import { computed, ref, type Ref } from "vue";
+import { ElMessage } from "element-plus";
 import BREAK from "@/BREAK";
 import { createAttackToolRelationBuilder } from "@/views/relation/relationGraphAttackToolBuilder";
 import { createAvoidanceRelationBuilder } from "@/views/relation/relationGraphAvoidanceBuilder";
@@ -111,7 +112,13 @@ export const createRelationGraphBuilder = ({
     const items = BREAK[breakItemAttr.BreakKey as keyof typeof BREAK];
     const item = items[relKey.value as keyof typeof items] as { title: string };
     if (item === undefined) {
-      alert(t("unknownId"));
+      ElMessage({
+        message: t("unknownId"),
+        type: "warning",
+        plain: true,
+        duration: 2200,
+        grouping: true,
+      });
       return;
     }
 

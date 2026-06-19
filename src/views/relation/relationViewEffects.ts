@@ -1,4 +1,5 @@
 import { nextTick, onBeforeUnmount, onMounted, watch, type Ref } from "vue";
+import { ElMessage } from "element-plus";
 import BREAK from "@/BREAK";
 import type { Router, RouteLocationNormalizedLoaded } from "vue-router";
 import { createRelationTypeMapping, RelationType } from "@/views/relation/relationTypes";
@@ -77,6 +78,8 @@ export const setupRelationViewEffects = ({
 }: SetupRelationViewEffectsOptions) => {
   let hasMounted = false;
   let networkDataReady = false;
+  // 非法参数重定向后，标记需要在参数合法时补跑首次初始化
+  let needsInit = false;
 
   const ensureNetworkData = (options?: { render?: boolean }) => {
     if (networkDataReady) return;
@@ -84,31 +87,18 @@ export const setupRelationViewEffects = ({
     networkDataReady = true;
   };
 
-  onMounted(() => {
-    if (
-      !Object.values(RelationType).includes(route.params.type as RelationType) ||
-      !Object.keys(
-        BREAK[
-          RelationTypeMapping[
-            route.params.type as keyof typeof RelationTypeMapping
-          ].BreakKey as keyof typeof BREAK
-        ]
-      ).includes(route.params.key as string)
-    ) {
-      alert(t("unknownTypeOrId"));
-      router
-        .push({
-          name: "relation",
-          params: {
-            type: "risk",
-            key: "R0001",
-          },
-        })
-        .then(() => {
-          location.reload();
-        });
-      return;
-    }
+  const isRouteParamsValid = () =>
+    Object.values(RelationType).includes(route.params.type as RelationType) &&
+    Object.keys(
+      BREAK[
+        RelationTypeMapping[
+          route.params.type as keyof typeof RelationTypeMapping
+        ].BreakKey as keyof typeof BREAK
+      ]
+    ).includes(route.params.key as string);
+
+  // 首次渲染初始化：根节点 + 首屏图表 + 全局监听。可被 onMounted 或路由 watch 补跑。
+  const performInitialRender = () => {
     addRootNode();
     if (activeView.value === "network") {
       ensureNetworkData({ render: false });
@@ -122,6 +112,31 @@ export const setupRelationViewEffects = ({
     window.addEventListener("resize", resizeSankeyChart);
     document.addEventListener("pointerdown", handleGlobalPointerDown);
     hasMounted = true;
+  };
+
+  onMounted(() => {
+    if (!isRouteParamsValid()) {
+      // 路由参数非法：用 ElMessage 提示并重定向到合法默认路由，标记待初始化。
+      // 不再用 alert 阻塞 UI、不再 location.reload 丢弃 SPA 状态。
+      ElMessage({
+        message: t("unknownTypeOrId"),
+        type: "warning",
+        plain: true,
+        duration: 2200,
+        grouping: true,
+      });
+      needsInit = true;
+      router.replace({
+        name: "relation",
+        params: {
+          type: "risk",
+          key: "R0001",
+        },
+        query: route.query,
+      });
+      return;
+    }
+    performInitialRender();
   });
 
   onBeforeUnmount(() => {
@@ -165,6 +180,12 @@ export const setupRelationViewEffects = ({
       relKey.value = route.params.key as string;
       selectedNetworkNodeId.value = relKey.value;
       normalizeAttackPathFilters();
+      // 非法参数重定向后，参数已合法时补跑首次初始化（仅一次）
+      if (needsInit) {
+        needsInit = false;
+        performInitialRender();
+        return;
+      }
       networkDataReady = false;
       if (activeView.value === "network") {
         refreshGraphAfterVisible();
