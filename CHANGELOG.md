@@ -1,5 +1,9 @@
 # Change log
 
+## 2.20.3
+
+- CI workflow 仅在 PR 时触发：ci.yml 去掉 push:main 触发，只保留 pull_request。push main 时只跑 Deploy（含全量校验+部署），消除与 CI 的重复；PR 合并前仍有自动校验
+
 ## 2.20.2
 
 - 升级 GitHub Actions 到 Node 24 运行时，消除 Node 20 deprecation warning：actions/checkout v4→v5、setup-node v4→v5、configure-pages v4→v6、upload-pages-artifact v3→v5、deploy-pages v4→v5（ci.yml/deploy.yml/link-check.yml 同步）；setup-node 的 node-version 仍保持 20.19.0（项目代码运行时，满足 engines）
