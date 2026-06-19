@@ -62,7 +62,12 @@ const localeMessages = computed(() => messages.value[locale.value] as Record<str
 
 const { getCasesByRisk, ensureCases, cases } = useCasesByRisk();
 const relatedCases = computed(() => getCasesByRisk(selectedRiskKey.value));
-void ensureCases();
+// 相关案例懒加载：点击展开才加载 cases 数据，避免 risks 页首屏拉取 3MB 案例数据
+const casesExpanded = ref(false);
+const expandCases = async () => {
+  await ensureCases();
+  casesExpanded.value = true;
+};
 
 const getRiskDescriptionTools = (rKey: string) =>
   Object.keys(BREAK.attackTools).filter((atKey) => {
@@ -188,9 +193,10 @@ const openRelationGraph = (rKey: string) => {
           </router-link>
         </div>
       </section>
-      <section v-if="relatedCases.length" class="detail-section" data-detail-anchor="cases">
+      <section class="detail-section" data-detail-anchor="cases">
         <h3>{{ $t("relatedCases") }}</h3>
-        <div class="entity-links">
+        <button v-if="!casesExpanded" class="entity-link" @click="expandCases">{{ $t("loadRelatedCases") }}</button>
+        <div v-else-if="relatedCases.length" class="entity-links">
           <router-link
             v-for="cKey in relatedCases"
             :key="cKey"
@@ -200,6 +206,7 @@ const openRelationGraph = (rKey: string) => {
             {{ cKey }}: {{ cases[cKey]?.title }}
           </router-link>
         </div>
+        <p v-else class="text-muted">{{ $t("noRelatedCases") }}</p>
       </section>
       <section v-if="selectedRisk.references?.length" class="detail-section" data-detail-anchor="references">
         <h3>{{ $t("riskReference") }}</h3>
