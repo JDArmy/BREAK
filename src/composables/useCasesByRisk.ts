@@ -24,7 +24,7 @@ function buildMap(cases: Record<string, { [k in CaseRefField]?: string[] }>, fie
 }
 
 export function useCasesByRisk() {
-  const { cases, ensureCases } = useCases();
+  const { cases, ensureCases, loaded } = useCases();
 
   const risksMap = computed(() => buildMap(cases.value, "relatedRisks"));
   const attackToolsMap = computed(() => buildMap(cases.value, "relatedAttackTools"));
@@ -33,6 +33,7 @@ export function useCasesByRisk() {
   return {
     ensureCases,
     cases,
+    loaded,
     getCasesByRisk(riskKey: string): string[] {
       return risksMap.value.get(riskKey) ?? [];
     },

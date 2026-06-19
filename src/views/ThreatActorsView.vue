@@ -8,6 +8,7 @@ import ReferenceList from "@/components/ReferenceList.vue";
 import { getMessageStringArray } from "@/utils/i18nMessage";
 import { useBreakpoints } from "@/composables/useBreakpoints";
 import { useCasesByRisk } from "@/composables/useCasesByRisk";
+import { useLazyCasesSection } from "@/composables/useLazyCasesSection";
 
 const route = useRoute();
 const router = useRouter();
@@ -72,9 +73,10 @@ const threatActorItems = computed(() =>
 const selectedThreatActor = computed(() => BREAK.threatActors[selectedThreatActorKey.value]);
 const localeMessages = computed(() => messages.value[locale.value] as Record<string, unknown>);
 
-const { getCasesByThreatActor, ensureCases, cases } = useCasesByRisk();
+const { getCasesByThreatActor, ensureCases, cases, loaded } = useCasesByRisk();
 const relatedCases = computed(() => getCasesByThreatActor(selectedThreatActorKey.value));
-void ensureCases();
+// 相关案例滚动懒加载：进入可视区才拉取案例数据，避免详情页首屏加载 3MB 案例数据
+const { sectionRef: casesSectionRef } = useLazyCasesSection(() => ensureCases());
 
 const relatedTermKeys = computed(() =>
   Object.keys(BREAK.terms).filter((tKey) =>
@@ -188,9 +190,19 @@ const openRelationGraph = (taKey: string) => {
           </router-link>
         </div>
       </section>
-      <section v-if="relatedCases.length" class="detail-section" data-detail-anchor="cases">
+      <section
+        v-if="!loaded || relatedCases.length"
+        ref="casesSectionRef"
+        class="detail-section"
+        data-detail-anchor="cases"
+      >
         <h3>{{ $t("relatedCases") }}</h3>
-        <div class="entity-links">
+        <div v-if="!loaded" class="entity-links">
+          <span class="text-muted">{{ $t("loadingRelatedCases") }}</span>
+          <!-- 兜底：自动加载意外未触发时，可手动加载 -->
+          <button class="entity-link" @click="ensureCases()">{{ $t("loadRelatedCases") }}</button>
+        </div>
+        <div v-else class="entity-links">
           <router-link
             v-for="cKey in relatedCases"
             :key="cKey"
