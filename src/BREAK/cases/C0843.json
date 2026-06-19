@@ -1,0 +1,31 @@
+{
+  "C0843": {
+    "title": "微软报告：AI使钓鱼攻击效率提升4.5倍",
+    "keywords": [
+      "微软",
+      "数字防御报告",
+      "AI生成钓鱼邮件",
+      "点击率",
+      "社会工程学",
+      "网络钓鱼",
+      "攻击效率"
+    ],
+    "summary": "2025年10月，微软年度《数字防御报告》指出，AI生成的钓鱼邮件点击率达54%，而传统钓鱼邮件仅为12%，效率提升4.5倍。AI使犯罪分子能编写更具针对性的钓鱼邮件，使用受害者本地语言，设计更具欺骗性的诱饵。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0084-001"
+    ],
+    "references": [
+      {
+        "title": "微软称:AI使钓鱼攻击效率提升4.5倍,利润可能增加50倍",
+        "link": "https://cbinews.com/net/jcxgn3"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-10",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0041"
+    ]
+  }
+}

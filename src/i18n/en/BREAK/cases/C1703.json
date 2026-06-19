@@ -1,0 +1,21 @@
+{
+  "C1703": {
+    "title": "OAuth Consent Phishing Explained and Prevented",
+    "keywords": [
+      "OAuth consent phishing",
+      "Microsoft Entra",
+      "phishing attack",
+      "malicious third-party apps",
+      "authorization abuse",
+      "SaaS security",
+      "data access permissions",
+      "authentication bypass"
+    ],
+    "summary": "A Microsoft Tech Community article details how OAuth consent phishing works: attackers trick users into granting high-privilege permissions to malicious third-party apps, enabling access to sensitive data such as emails and files. The attack exploits the OAuth authorization mechanism to bypass traditional password-based defenses and directly obtain data access.",
+    "references": [
+      {
+        "title": "OAuth consent phishing explained and prevented"
+      }
+    ]
+  }
+}

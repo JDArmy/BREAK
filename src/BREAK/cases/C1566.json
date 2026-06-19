@@ -1,0 +1,32 @@
+{
+  "C1566": {
+    "title": "CertiK分析DApp前端劫持攻击向量",
+    "keywords": [
+      "CertiK",
+      "DEF CON 32",
+      "DApp安全",
+      "前端劫持",
+      "客户端攻击",
+      "服务器端漏洞",
+      "私钥泄露",
+      "智能合约",
+      "Web3安全",
+      "加密资产盗窃"
+    ],
+    "summary": "CertiK安全工程师在DEF CON 32会议上发表分析，指出DApp面临客户端攻击和服务器端攻击等独特风险。攻击者可通过劫持前端代码窃取用户加密资产，或通过服务器端漏洞获取私钥完全控制智能合约及关联资产。该分析直接对应DApp前端劫持的攻击场景。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0203"
+    ],
+    "references": [
+      {
+        "title": "Web2 Meets Web3: Hacking Decentralized Applications - CertiK",
+        "link": "https://www.certik.com/blog/web2-meets-web3-hacking-decentralized-applications"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-08",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "C1554": {
+    "title": "Stargate桥接架构与动态实证分析揭示托管攻击风险",
+    "keywords": [
+      "Stargate",
+      "跨链桥",
+      "托管攻击",
+      "LayerZero",
+      "桥接合约",
+      "资产锁定",
+      "实证分析",
+      "DeFi安全"
+    ],
+    "summary": "研究对Stargate跨链桥进行实证分析，发现托管攻击可利用源链上的桥接合约。该案例表明Stargate桥有时可被利用，存在资产锁定或被盗风险。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0200"
+    ],
+    "references": [
+      {
+        "title": "Seamlessly Transferring Assets through Layer-0 Bridges: An Empirical Analysis of Stargate Bridge's Architecture and Dynamics",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3589335.3651964"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0077"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

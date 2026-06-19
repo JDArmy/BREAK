@@ -1,0 +1,35 @@
+{
+  "C1654": {
+    "title": "AvatarHunter：基于用户步态特征的非侵入式去匿名化攻击",
+    "keywords": [
+      "AvatarHunter",
+      "步态特征",
+      "去匿名化攻击",
+      "VR安全",
+      "VRChat",
+      "虚拟化身",
+      "跨虚实身份关联",
+      "IEEE",
+      "元数据隐私"
+    ],
+    "summary": "研究团队提出AvatarHunter攻击方法，通过录制VR场景中受害者虚拟形象的多视角视频，非侵入式收集其步态信息，在VRChat平台实验中实现封闭世界92.1%、开放世界66.9%的攻击成功率，可在用户无感知的情况下识别其真实身份，突破虚拟化身伪装。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0221"
+    ],
+    "references": [
+      {
+        "title": "De-anonymization Attacks on Metaverse - IEEE Xplore",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10229062"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-05",
+    "relatedAttackTools": [
+      "AT0084"
+    ],
+    "relatedThreatActors": [
+      "TA0050"
+    ]
+  }
+}

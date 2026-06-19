@@ -10,6 +10,7 @@ const entityDirs = {
   threatActors: "threat-actors",
   terms: "terms",
   businessScenes: "business-scenes",
+  cases: "cases",
 };
 
 function readJson(filePath) {
@@ -68,6 +69,7 @@ const attackTools = loadEntities(entityDirs.attackTools);
 const threatActors = loadEntities(entityDirs.threatActors);
 const terms = loadEntities(entityDirs.terms);
 const businessScenes = loadEntities(entityDirs.businessScenes);
+const cases = loadEntities(entityDirs.cases);
 
 const riskIds = ids(risks);
 const avoidanceIds = ids(avoidances);
@@ -146,6 +148,15 @@ for (const record of terms) {
   }
 }
 
+for (const record of cases) {
+  if (!Array.isArray(record.entity.relatedRisks) || record.entity.relatedRisks.length === 0) {
+    addIssue(issues, record.file, record.id, "relatedRisks 不能为空");
+  }
+  checkRefs(issues, record, "relatedRisks", riskIds, "Risk");
+  checkRefs(issues, record, "relatedAttackTools", attackToolIds, "AttackTool");
+  checkRefs(issues, record, "relatedThreatActors", threatActorIds, "ThreatActor");
+}
+
 for (const ref of businessSceneRiskRefs) {
   if (!riskIds.has(ref)) {
     issues.push(`src/BREAK/business-scenes: riskScenes 引用了不存在的 Risk: ${ref}`);
@@ -194,3 +205,4 @@ console.log("\n✅ 实体关系质量检查通过");
 console.log(`avoidanceCategories=${avoidanceCategoryIds.size}`);
 console.log(`risks=${risks.length}, avoidances=${avoidances.length}, attackTools=${attackTools.length}`);
 console.log(`threatActors=${threatActors.length}, terms=${terms.length}, businessScenes=${businessScenes.length}`);
+console.log(`cases=${cases.length}`);

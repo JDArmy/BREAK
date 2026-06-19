@@ -1,0 +1,33 @@
+{
+  "C0863": {
+    "title": ".wxx勒索病毒攻击者采用双重/三重勒索策略",
+    "keywords": [
+      "wxx勒索病毒",
+      "双重勒索",
+      "三重勒索",
+      "勒索软件即服务",
+      "RaaS",
+      "数据泄露威胁",
+      "基础设施破坏",
+      "加密文件",
+      "勒索攻击"
+    ],
+    "summary": "2025年6月7日的资料显示，.wxx勒索病毒背后的攻击者采用双重勒索策略，除加密文件外还威胁公开窃取的数据；甚至采用三重勒索，威胁破坏受害者的基础设施，以增加支付压力。攻击者通过勒索软件即服务（RaaS）模式运作，使攻击更加普遍。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0085-002"
+    ],
+    "references": [
+      {
+        "title": "别让.wxx勒索病毒毁了你的数据:恢复技巧与预防小贴士|airmail|...",
+        "link": "https://m.163.com/dy/article/K1FP7Q4805535CDC.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-06",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0017"
+    ]
+  }
+}

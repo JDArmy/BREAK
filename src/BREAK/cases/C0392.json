@@ -1,0 +1,30 @@
+{
+  "C0392": {
+    "title": "僵尸账户泛滥：探究（不）删除闲置在线账户的挑战与动机",
+    "keywords": [
+      "僵尸账户",
+      "未删除账户",
+      "在线账户管理",
+      "数字安全",
+      "用户行为",
+      "数据隐私",
+      "僵尸店铺",
+      "账户弃用",
+      "网络安全意识"
+    ],
+    "summary": "该研究探讨了用户不删除闲置在线账户的挑战和动机。这些被遗弃的账户存储着潜在敏感数据，但已无人管理，成为数字世界中的“僵尸账户”，与电商平台上停止运营但店铺页面仍在的“僵尸店铺”现象类似。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0033"
+    ],
+    "references": [
+      {
+        "title": "Too Many Zombies: Exploring Challenges and Motivations for (Not) Deleting Unused Online Accounts",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3772318.3790497"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

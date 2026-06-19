@@ -1,0 +1,30 @@
+{
+  "C1663": {
+    "title": "AI大模型训练中遭Sleep函数资源消耗攻击",
+    "keywords": [
+      "AI大模型训练",
+      "Sleep函数攻击",
+      "GPU资源消耗",
+      "算力浪费",
+      "Huggingface",
+      "恶意代码注入",
+      "训练任务中断",
+      "集群安全"
+    ],
+    "summary": "2024年10月披露的国内AI大模型训练安全事件中，攻击者通过恶意使用Sleep函数暂停训练任务，导致GPU利用率大幅下降（计算与休息比达1:1），严重浪费昂贵算力资源。该攻击针对256卡以上大型训练任务，隐蔽性强且损失巨大。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0224"
+    ],
+    "references": [
+      {
+        "title": "前所未有:GPU集群恶意代码注入?模型投毒?​资源消耗攻击?_腾讯...",
+        "link": "https://new.qq.com/rain/a/20241019A04F4600"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-10",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

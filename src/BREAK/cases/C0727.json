@@ -1,0 +1,35 @@
+{
+  "C0727": {
+    "title": "ICCV 2025论文揭示针对Scaffold联邦学习的后门攻击BadSFL",
+    "keywords": [
+      "联邦学习",
+      "后门攻击",
+      "Scaffold",
+      "BadSFL",
+      "ICCV 2025",
+      "模型投毒",
+      "生成对抗网络",
+      "隐私计算"
+    ],
+    "summary": "NTU与0G Labs等机构提出了一种名为BadSFL的新型后门攻击方法，专门针对Scaffold联邦学习框架。攻击者通过篡改用于校正客户端漂移的控制变元，将良性客户端转化为攻击帮凶，并利用GAN增强的数据投毒策略，在保持隐蔽性的同时显著增强了后门在全局模型中的持久性，攻击效果可持续超过60轮。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0071-005",
+      "R0133"
+    ],
+    "references": [
+      {
+        "title": "ICCV 2025 | 新型后门攻击直指Scaffold联邦学习,NTU联手0G Labs...",
+        "link": "https://new.qq.com/rain/a/20250809A03O5O00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-08",
+    "relatedAttackTools": [
+      "AT0093"
+    ],
+    "relatedThreatActors": [
+      "TA0058"
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "C1175": {
+    "title": "领英API被利用下载7亿用户数据",
+    "keywords": [
+      "领英",
+      "API接口",
+      "数据爬取",
+      "暗网",
+      "用户数据泄露",
+      "7亿用户",
+      "API滥用",
+      "业务逻辑漏洞"
+    ],
+    "summary": "2021年7月，媒体报道领英有超过7亿用户数据在暗网出售。黑客利用领英的API接口，通过合法的调用方式，大规模下载用户数据。此事件凸显了API接口被滥用于数据爬取的业务逻辑风险。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0126-003"
+    ],
+    "references": [
+      {
+        "title": "永安在线发布2022年Q1API安全研究报告...",
+        "link": "https://m.sohu.com/a/541733317_100109628/?pvid=000115_3w_a"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-07",
+    "relatedAttackTools": [
+      "AT0061",
+      "AT0085"
+    ],
+    "relatedThreatActors": [
+      "TA0051",
+      "TA0040"
+    ]
+  }
+}

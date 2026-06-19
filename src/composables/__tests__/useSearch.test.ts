@@ -218,6 +218,15 @@ vi.mock("vue-i18n", () => ({
   }),
 }));
 
+// Mock useCases（cases 懒加载，测试用空数据）
+vi.mock("@/composables/useCases", () => ({
+  useCases: () => ({
+    cases: ref({}),
+    loaded: ref(false),
+    ensureCases: () => Promise.resolve(),
+  }),
+}));
+
 // 导入被测模块（在 mock 之后）
 import { extractSnippetForSearch, useSearch } from "@/composables/useSearch";
 

@@ -1,0 +1,34 @@
+{
+  "C0840": {
+    "title": "AI语音克隆企业高管诈骗案",
+    "keywords": [
+      "AI语音克隆",
+      "高管诈骗",
+      "深度伪造",
+      "电信诈骗",
+      "CFO冒充",
+      "语音合成",
+      "转账诈骗",
+      "社会工程学"
+    ],
+    "summary": "2024年，深圳某科技公司犯罪分子利用AI语音克隆技术，通过分析公开视频提取CFO语音样本并高度仿真其声音，冒充CFO致电财务人员，以紧急支付货款为由下达转账指令，最终骗取198万元。该技术可实时变声并模拟背景噪音，欺骗性极强。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0084-001"
+    ],
+    "references": [
+      {
+        "title": "“识别、拦截双攻略”AI时代的钓鱼网站陷阱案例-腾讯云开发者社区...",
+        "link": "https://cloud.tencent.com/developer/article/2574600"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024",
+    "relatedAttackTools": [
+      "AT0059"
+    ],
+    "relatedThreatActors": [
+      "TA0031"
+    ]
+  }
+}

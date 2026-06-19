@@ -1,0 +1,20 @@
+{
+  "C0875": {
+    "title": "Microsoft Security Blog Reveals Cloud Compute Theft: Attackers Exploit Automation to Abuse CPU/GPU for Mining",
+    "keywords": [
+      "cloud compute theft",
+      "cryptocurrency mining",
+      "CPU abuse",
+      "GPU abuse",
+      "Microsoft security blog",
+      "cloud resource abuse",
+      "cryptojacking"
+    ],
+    "summary": "In a July 2023 blog post, the Microsoft Security team highlighted a growing trend of compute theft targeting cloud environments, where attackers use automated methods to illegally occupy CPU or GPU resources for cryptocurrency mining. The article emphasizes that such mining would be economically unviable if attackers had to pay for the compute resources used, indicating they must be stealing cloud",
+    "references": [
+      {
+        "title": "Cryptojacking: Understanding and defending against cloud compute..."
+      }
+    ]
+  }
+}

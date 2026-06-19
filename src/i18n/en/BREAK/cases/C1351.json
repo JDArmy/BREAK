@@ -1,0 +1,22 @@
+{
+  "C1351": {
+    "title": "Academic Research Confirms Cloud Platform Dangling Resources Can Be Hijacked for Malicious Attacks",
+    "keywords": [
+      "dangling resources",
+      "cloud platform hijacking",
+      "resource cleanup",
+      "malware distribution",
+      "computing power theft",
+      "USENIX NSDI 2024",
+      "cloud vulnerability",
+      "resource release",
+      "cloud abuse"
+    ],
+    "summary": "A research paper published at USENIX NSDI 2024 titled 'Cloudy with a Chance of Cyberattacks: Dangling Resources Abuse on Cloud Platforms' confirms that attackers can hijack released but uncleaned resources on cloud platforms, which originally belonged to legitimate organizations. Attackers exploit these hijacked resources to launch attacks against the original service customers, such as distributi",
+    "references": [
+      {
+        "title": "Cloudy with a Chance of Cyberattacks: Dangling Resources Abuse on Cloud ..."
+      }
+    ]
+  }
+}

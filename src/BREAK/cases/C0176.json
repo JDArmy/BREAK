@@ -1,0 +1,33 @@
+{
+  "C0176": {
+    "title": "对抗性：感知广告屏蔽遭遇对抗性机器学习",
+    "keywords": [
+      "对抗性机器学习",
+      "感知广告屏蔽",
+      "广告屏蔽绕过",
+      "机器学习攻击",
+      "检测管道",
+      "发布商",
+      "广告网络",
+      "Adblock",
+      "对抗样本"
+    ],
+    "summary": "该研究展示了广告屏蔽器检测管道可能被对抗性机器学习攻击，允许发布商或广告网络绕过广告屏蔽器的检测，甚至滥用其高权限级别来规避屏蔽。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0013"
+    ],
+    "references": [
+      {
+        "title": "Adversarial: Perceptual ad blocking meets adversarial machine learning",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3319535.3354222"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2019-01",
+    "relatedAttackTools": [
+      "AT0093"
+    ],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "C1638": {
+    "title": "沉浸式虚拟现实攻击与人体操纵杆研究",
+    "keywords": [
+      "虚拟现实攻击",
+      "人体操纵杆",
+      "VR安全",
+      "沉浸式用户控制",
+      "物理移动操纵",
+      "XR设备",
+      "固件攻击",
+      "IEEE",
+      "安全风险"
+    ],
+    "summary": "该研究探讨了利用VR系统漏洞控制沉浸式用户的攻击方式。攻击者可通过操纵VR系统，在用户无感知的情况下，影响其物理移动和交互，展示了VR系统被攻破后可能带来的新型安全风险。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0217"
+    ],
+    "references": [
+      {
+        "title": "Immersive virtual reality attacks and the human joystick",
+        "link": "https://ieeexplore.ieee.org/abstract/document/8675340/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0084",
+      "AT0081",
+      "AT0054"
+    ],
+    "relatedThreatActors": [
+      "TA0050",
+      "TA0049"
+    ]
+  }
+}

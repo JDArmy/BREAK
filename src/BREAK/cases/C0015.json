@@ -1,0 +1,30 @@
+{
+  "C0015": {
+    "title": "GitHub项目：在线拍卖欺诈出价机器人检测",
+    "keywords": [
+      "在线拍卖",
+      "出价机器人检测",
+      "MLOps管道",
+      "欺诈检测",
+      "Facebook Recruiting IV",
+      "Kaggle数据集",
+      "自动化出价",
+      "秒拍出价",
+      "GitHub开源项目"
+    ],
+    "summary": "该项目构建了一个端到端的MLOps管道，用于检测在线拍卖中的欺诈性（机器人）出价行为。项目使用Kaggle的“Facebook Recruiting IV: Human or Robot?”数据集，旨在识别自动化机器人提交的欺诈性出价，以应对在线拍卖平台面临的自动化秒拍出价威胁。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0003-001"
+    ],
+    "references": [
+      {
+        "title": "GitHub - fakhrulfaiz/bid-bot-detection: An end-to-end MLOps pipeline to ...",
+        "link": "https://github.com/fakhrulfaiz/bid-bot-detection"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C0960": {
+    "title": "Cloudflare Uses Machine Learning to Detect Residential Proxy Botnet Attacks",
+    "keywords": [
+      "bot management",
+      "machine learning model v8",
+      "residential proxy detection",
+      "IP rotation",
+      "botnet attacks",
+      "IP reputation bypass",
+      "distributed attack detection",
+      "Cloudflare bot detection"
+    ],
+    "summary": "Cloudflare released v8 of its Bot Management machine learning model, specifically designed to identify distributed attacks originating from residential proxy IPs. Attackers use residential proxy networks to hide real IPs and rotate them frequently, bypassing traditional defenses based on IP reputation and rate limiting. The model detects such abuse without relying on IP blocking, avoiding collater",
+    "references": [
+      {
+        "title": "Using Machine Learning to Detect Bot Attacks That Leverage..."
+      }
+    ]
+  }
+}

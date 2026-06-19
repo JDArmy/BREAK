@@ -1,0 +1,36 @@
+{
+  "C0281": {
+    "title": "针对消费级3D打印机的数据渗出与远程利用攻击",
+    "keywords": [
+      "3D打印机",
+      "数据渗出",
+      "远程利用",
+      "MakerBot",
+      "未认证Web服务器",
+      "传输层安全缺陷",
+      "知识产权窃取",
+      "消费级设备安全"
+    ],
+    "summary": "该研究揭示了针对消费级3D打印机的数据渗出和远程利用攻击。研究发现，打印机将已打印和正在打印的对象数据存储在一个未认证的Web服务器上，且传输层安全实现存在缺陷，导致敏感知识产权数据可被远程窃取和操控。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0028"
+    ],
+    "references": [
+      {
+        "title": "A data exfiltration and remote exploitation attack on consumer 3D printers",
+        "link": "https://ieeexplore.ieee.org/abstract/document/7487008/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2016-06",
+    "relatedAttackTools": [
+      "AT0081",
+      "AT0092"
+    ],
+    "relatedThreatActors": [
+      "TA0018",
+      "TA0030"
+    ]
+  }
+}

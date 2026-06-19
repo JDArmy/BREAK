@@ -1,0 +1,35 @@
+{
+  "C1698": {
+    "title": "Capital One 数据泄露事件",
+    "keywords": [
+      "Capital One",
+      "数据泄露",
+      "AWS",
+      "S3存储桶",
+      "云安全配置错误",
+      "IAM权限过度",
+      "API密钥泄露",
+      "客户信息泄露"
+    ],
+    "summary": "2019年，Capital One因AWS云存储配置错误，导致攻击者利用权限过度的API密钥访问S3存储桶，泄露约1亿客户数据。根本原因是权限管理不当，攻击者获取了超出业务需要的访问权限，扩大了攻击影响。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0231"
+    ],
+    "references": [
+      {
+        "title": "2025年,我们应当如何保护云安全?-腾讯云开发者社区-腾讯云",
+        "link": "https://cloud.tencent.com/developer/article/2486778"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2019-07",
+    "relatedAttackTools": [
+      "AT0088"
+    ],
+    "relatedThreatActors": [
+      "TA0018",
+      "TA0053"
+    ]
+  }
+}

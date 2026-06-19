@@ -1,0 +1,30 @@
+{
+  "C0681": {
+    "title": "个人使用网盘上传正常文件被运营商判定违规限速",
+    "keywords": [
+      "百度网盘",
+      "移动宽带",
+      "上传限速",
+      "运营商",
+      "PCDN",
+      "违规判定",
+      "宽带速率限制",
+      "工信部申诉"
+    ],
+    "summary": "用户反映使用移动宽带向百度网盘上传备份文件时，千兆宽带被运营商限制上传速率至5M，并被判定为违规使用。用户质疑为何向网盘上传正常文件会被认定为违规，以及为何同样行为在其他城市未遇限速。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0069"
+    ],
+    "references": [
+      {
+        "title": "个人用网盘NAS为什么违规",
+        "link": "https://hca.miit.gov.cn/jactpub/front/mailpubdetail.do?transactId=1032624&sysid=87"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-02",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

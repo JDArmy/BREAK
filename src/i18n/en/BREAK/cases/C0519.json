@@ -1,0 +1,21 @@
+{
+  "C0519": {
+    "title": "Claude Code Source Code Leak: An In-Depth Analysis of Community Reverse Engineering Techniques",
+    "keywords": [
+      "Claude Code",
+      "Anthropic",
+      "reverse engineering",
+      "source code leak",
+      "Source Map",
+      "DMCA",
+      "copyright infringement",
+      "decompilation"
+    ],
+    "summary": "The article discusses how the community reverse-engineered Anthropic's Claude Code product through decompilation, reconstructing a clearly modular source code structure. Although it is a decompilation artifact, the code exhibits good modularity with distinct boundaries between functional modules and a clear separation of type definitions and implementations. The article also notes that most jurisd",
+    "references": [
+      {
+        "title": "Claude Code Source Code Leak Incident: In-depth Analysis of Community Reverse Engineering Techniques - Zhihu"
+      }
+    ]
+  }
+}

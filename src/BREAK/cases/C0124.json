@@ -1,0 +1,34 @@
+{
+  "C0124": {
+    "title": "DECAF系统检测移动应用广告欺诈",
+    "keywords": [
+      "DECAF",
+      "移动广告欺诈",
+      "广告展示欺诈",
+      "应用内广告",
+      "自动化检测",
+      "微软研究院",
+      "视觉元素扫描",
+      "广告放置规则"
+    ],
+    "summary": "研究团队设计DECAF系统，用于自动发现移动应用中的广告展示欺诈。该系统通过自动化应用导航和视觉元素扫描，检测广告是否违反可扩展的放置与显示规则。DECAF已应用于1150款平板应用和50000款手机应用，被微软广告欺诈团队用于发现大量广告欺诈实例。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0008"
+    ],
+    "references": [
+      {
+        "title": "{DECAF}: Detecting and characterizing ad fraud in mobile apps",
+        "link": "https://www.usenix.org/conference/nsdi14/technical-sessions/presentation/liu_bin"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2014",
+    "relatedAttackTools": [
+      "AT0091"
+    ],
+    "relatedThreatActors": [
+      "TA0056"
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "C1475": {
+    "title": "Itron-Centron CL200智能电表节点篡改攻击",
+    "keywords": [
+      "智能电表",
+      "Itron-Centron CL200",
+      "EEPROM",
+      "ID篡改",
+      "能耗数据盗窃",
+      "物理捕获",
+      "内存转储",
+      "IoT安全",
+      "节点模拟攻击"
+    ],
+    "summary": "攻击者通过物理捕获Itron-Centron CL200智能电表，分析其EEPROM内存转储，发现设备ID存储于本地且无读写保护。攻击者将另一电表ID复制填入EEPROM，使该设备模拟另一智能电表，导致能耗数据被盗。日志显示两个不同设备共享同一ID但功耗值不同，造成能源盗窃及经济损失。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0182"
+    ],
+    "references": [
+      {
+        "title": "物联网安全漏洞案例研究与解决方案-腾讯云开发者社区-腾讯云",
+        "link": "https://www.cloud.tencent.com/developer/article/1543779"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2019-11",
+    "relatedAttackTools": [
+      "AT0081"
+    ],
+    "relatedThreatActors": [
+      "TA0049"
+    ]
+  }
+}

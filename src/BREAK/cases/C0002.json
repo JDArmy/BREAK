@@ -1,0 +1,33 @@
+{
+  "C0002": {
+    "title": "登录重放攻击示例：监听者无需解密即可冒充登录",
+    "keywords": [
+      "登录重放攻击",
+      "MD5加密",
+      "请求重放",
+      "中间人攻击",
+      "协议级自动化",
+      "身份冒充",
+      "Web安全",
+      "会话劫持"
+    ],
+    "summary": "在常规Web登录流程中，用户密码经MD5加密后提交。攻击者通过监听截获登录URL（如包含MD5密码和账号的请求），无需解密明文，直接将该请求重放发送至服务器，即可冒充用户身份成功登录系统，暴露了协议级自动化重放的风险。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0001-001"
+    ],
+    "references": [
+      {
+        "title": "安全防护 — 请求重放和中间人攻击 - 简书",
+        "link": "https://www.jianshu.com/p/fae7d1a1a9bf"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-11",
+    "relatedAttackTools": [
+      "AT0014",
+      "AT0035"
+    ],
+    "relatedThreatActors": []
+  }
+}

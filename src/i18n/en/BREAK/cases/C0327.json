@@ -1,0 +1,21 @@
+{
+  "C0327": {
+    "title": "China's First Inactive SIM SMS Hijacking Case: Using Unactivated SIMs to Register Accounts",
+    "keywords": [
+      "inactive SIM hijacking",
+      "SMS verification interception",
+      "telecom insider",
+      "fake account registration",
+      "WeChat fraud",
+      "unactivated SIM card",
+      "SMS hijacking exploit",
+      "carrier system breach"
+    ],
+    "summary": "Hunan Xianshang Technology used automated software to register internet accounts in bulk with inactive phone numbers. When platforms sent verification SMS, the messages appeared to fail but actually reached the carrier's system. An insider at the telecom operator provided server IP, account credentials, and passwords, enabling connection to the carrier's system and interception of SMS verification",
+    "references": [
+      {
+        "title": "China's first case of empty number SMS hijacking: using inactive SIM cards to register accounts - Ninghua Online"
+      }
+    ]
+  }
+}

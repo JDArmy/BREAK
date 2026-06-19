@@ -1,0 +1,37 @@
+{
+  "C1518": {
+    "title": "PyPI包lightning遭供应链攻击，窃取开发者凭证并毒化仓库",
+    "keywords": [
+      "PyPI",
+      "lightning",
+      "供应链攻击",
+      "恶意代码",
+      "GitHub Token",
+      "云凭证",
+      "仓库毒化",
+      "开源库",
+      "Python包",
+      "开发者凭证"
+    ],
+    "summary": "Python软件包索引(PyPI)中下载量过百万的深度学习包“lightning”被植入恶意代码，用以窃取GitHub Token和云凭证，并进一步污染其他代码仓库。该事件严重威胁依赖开源库的整个加密开发生态。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0193"
+    ],
+    "references": [
+      {
+        "title": "重明链迹丨每周区块链安全要闻(0427-0503)-腾讯云开发者社区-腾讯云",
+        "link": "https://cloud.tencent.com/developer/article/2664422"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-05",
+    "relatedAttackTools": [
+      "AT0064",
+      "AT0087"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

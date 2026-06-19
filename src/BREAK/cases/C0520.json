@@ -1,0 +1,32 @@
+{
+  "C0520": {
+    "title": "C#反编译破解软件方法",
+    "keywords": [
+      "C#",
+      "反编译",
+      "逆向",
+      "软件破解",
+      "License验证",
+      "授权绕过",
+      "代码修改",
+      "逆向工程"
+    ],
+    "summary": "文章介绍了通过反编译工具对C#编写的软件进行逆向破解的方法：先使用反编译工具还原出软件源码，然后分析源码找到License验证位置，最后修改反编译代码以绕过授权验证。该方法直接针对软件的授权机制进行逆向破解。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0051"
+    ],
+    "references": [
+      {
+        "title": "C# 反编译破解软件方法 - Linybo2008 - 博客园",
+        "link": "https://www.cnblogs.com/linybo/p/13358799.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2020-07",
+    "relatedAttackTools": [
+      "AT0028"
+    ],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "C0011": {
+    "title": "电商平台优惠券枚举漏洞研究",
+    "keywords": [
+      "电商平台",
+      "优惠券枚举",
+      "暴力破解",
+      "ID枚举",
+      "安全弱点",
+      "e-commerce security",
+      "coupon code",
+      "攻击向量",
+      "Web安全"
+    ],
+    "summary": "一项关于电商平台安全弱点的研究指出，攻击者可以通过暴力破解优惠券ID来枚举所有存在的优惠券代码。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0002"
+    ],
+    "references": [
+      {
+        "title": "All your shops are belong to us: security weaknesses in e-commerce platforms",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3543507.3583319"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0023",
+      "AT0042"
+    ],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "C1491": {
+    "title": "比特币P2P网络日食攻击研究",
+    "keywords": [
+      "比特币",
+      "P2P网络",
+      "日食攻击",
+      "Eclipse Attack",
+      "双花攻击",
+      "交易隐藏",
+      "区块链",
+      "节点隔离",
+      "IP地址垄断"
+    ],
+    "summary": "该研究提出了针对比特币P2P网络的日食攻击。攻击允许控制足够数量IP地址的对手垄断目标节点的所有连接，将其与网络的其余部分隔离。被隔离的节点只能从攻击者处接收信息，攻击者可向其提供虚假的区块链视图，实现交易隐藏或双花攻击。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0186"
+    ],
+    "references": [
+      {
+        "title": "Eclipse attacks on Bitcoin's peer-to-peer network - ACM Digital Library",
+        "link": "https://dl.acm.org/doi/10.5555/2831143.2831152"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0078"
+    ],
+    "relatedThreatActors": [
+      "TA0046"
+    ]
+  }
+}

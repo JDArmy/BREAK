@@ -1,0 +1,21 @@
+{
+  "C1358": {
+    "title": "Badger DAO Permission Vulnerability Attack Incident",
+    "keywords": [
+      "Badger DAO",
+      "DeFi",
+      "permission vulnerability",
+      "malicious wallet request",
+      "token approval",
+      "frontend attack",
+      "smart contract security",
+      "$120 million"
+    ],
+    "summary": "In December 2021, the DeFi protocol Badger DAO suffered an attack resulting in a loss of approximately $120 million. The attacker injected malicious wallet requests into the user interface, tricking users into approving token spending permissions for a malicious address, thereby gaining control of user vault funds and transferring them.",
+    "references": [
+      {
+        "title": "DeFi Protocol Security Incident Roundup: The Second-Largest Hack Just Happened Last Month..."
+      }
+    ]
+  }
+}

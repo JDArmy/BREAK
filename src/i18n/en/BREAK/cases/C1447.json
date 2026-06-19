@@ -1,0 +1,20 @@
+{
+  "C1447": {
+    "title": "Replay Attacks and Defenses Against Cross-Shard Consensus in Sharded Distributed Ledgers",
+    "keywords": [
+      "cross-shard replay attack",
+      "sharded distributed ledger",
+      "Ethereum",
+      "account-based blockchain",
+      "transaction replay",
+      "sharding",
+      "blockchain consensus"
+    ],
+    "summary": "This academic paper investigates cross-shard replay attacks in sharded distributed ledgers, highlighting account-based blockchains like Ethereum as common application scenarios. It directly addresses the problem of replay attacks in cross-chain or sharded contexts as defined in risk taxonomies.",
+    "references": [
+      {
+        "title": "Replay attacks and defenses against cross-shard consensus in sharded distributed ledgers"
+      }
+    ]
+  }
+}

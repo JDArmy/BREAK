@@ -1,0 +1,34 @@
+{
+  "C0595": {
+    "title": "苹果工程师奥德泄露多款未发布产品及敏感信息",
+    "keywords": [
+      "苹果",
+      "商业秘密泄露",
+      "iOS工程师",
+      "未发布产品",
+      "内部威胁",
+      "钓鱼执法",
+      "华尔街日报",
+      "员工泄密",
+      "产品开发政策"
+    ],
+    "summary": "苹果iOS软件工程师奥德（Aude）在职5年间，利用工作之便接触并泄露了至少6款未发布产品信息，包括iPhone、Vision Pro等。他向《华尔街日报》记者发送了1万多条匿名爆料短信，并泄露产品开发政策、监管合规战略及员工人数等敏感信息。最终被苹果解雇并起诉。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0059",
+      "R0244"
+    ],
+    "references": [
+      {
+        "title": "苹果内鬼被抓!泄密6款产品,私下与女记者约会_腾讯新闻",
+        "link": "https://new.qq.com/rain/a/20240424A069VW00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-04",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0024"
+    ]
+  }
+}

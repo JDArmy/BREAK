@@ -1,0 +1,34 @@
+{
+  "C0359": {
+    "title": "挤门缝、试密码……拱墅警方破获盗窃案",
+    "keywords": [
+      "密码喷射",
+      "试密码",
+      "暴力破解",
+      "门缝挤入",
+      "盗窃",
+      "杭州",
+      "拱墅",
+      "潮鸣派出所",
+      "物理入侵",
+      "密码锁"
+    ],
+    "summary": "杭州拱墅区一窃贼首次通过门缝挤入仓库行窃，店主升级为密码锁后，窃贼通过反复试错成功破解密码再次盗窃。警方最终将其抓获并追回被盗物品。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0032-002"
+    ],
+    "references": [
+      {
+        "title": "挤门缝、试密码……拱墅警方破获盗窃案--中国警察网",
+        "link": "https://www.cpd.com.cn/wsjwlm/zhejiang/gongye/yxjx/126/t_1219637.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-01",
+    "relatedAttackTools": [
+      "AT0068"
+    ],
+    "relatedThreatActors": []
+  }
+}

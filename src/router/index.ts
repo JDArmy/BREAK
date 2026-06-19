@@ -110,6 +110,16 @@ const router = createRouter({
       component: () => import("@/views/TermsView.vue"),
     },
     {
+      path: "/cases",
+      name: "cases",
+      component: () => import("@/views/CasesView.vue"),
+    },
+    {
+      path: "/cases/detail/:cKey",
+      name: "casesDetail",
+      component: () => import("@/views/CasesView.vue"),
+    },
+    {
       path: "/relation/:type/:key",
       name: "relation",
       component: RelationRouteShell,

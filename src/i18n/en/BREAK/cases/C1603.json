@@ -1,0 +1,22 @@
+{
+  "C1603": {
+    "title": "CVE-2017-12235: Remote Code Execution in Profinet DCP Protocol",
+    "keywords": [
+      "CVE-2017-12235",
+      "Profinet",
+      "DCP protocol",
+      "remote code execution",
+      "industrial protocol vulnerability",
+      "PN-DCP",
+      "Identify Request",
+      "unauthorized access",
+      "NVD"
+    ],
+    "summary": "A vulnerability in the Profinet Discovery and Configuration Protocol (DCP) implementation allows attackers to send specially crafted PN-DCP Identify Request packets, potentially leading to unauthorized access or remote code execution on affected devices.",
+    "references": [
+      {
+        "title": "CVE-2017-12235 Detail"
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "C0965": {
+    "title": "十元改 IP 属地：低价 IP 代理服务泛滥",
+    "keywords": [
+      "IP代理",
+      "IP属地",
+      "电商平台",
+      "黑IP识别绕过",
+      "IP封禁",
+      "代理服务",
+      "月费",
+      "卖家"
+    ],
+    "summary": "2022 年 6 月，媒体报道有卖家在电商平台以低至 10 元至 20 多元的月费提供国外 IP 代理服务，部分店铺销量超 400 件。此类服务允许用户随意更改 IP 属地，为绕过基于 IP 地址的封禁或黑名单识别提供了廉价且易得的工具。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0099"
+    ],
+    "references": [
+      {
+        "title": "一歼7失事致1死2伤;贤合庄回应陈赫收过亿加盟费;十元改IP属地...",
+        "link": "https://new.qq.com/rain/a/20220609A06DR600"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-06",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0011"
+    ]
+  }
+}

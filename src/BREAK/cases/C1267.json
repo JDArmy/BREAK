@@ -1,0 +1,31 @@
+{
+  "C1267": {
+    "title": "ARP欺骗攻击实现局域网内流量劫持",
+    "keywords": [
+      "ARP欺骗",
+      "中间人攻击",
+      "流量劫持",
+      "Bettercap",
+      "局域网安全",
+      "ARP协议",
+      "MAC地址伪造",
+      "数据窃听"
+    ],
+    "summary": "ARP欺骗是局域网内常见的中间人攻击手法。攻击者通过发送伪造的ARP响应包，将网关IP地址映射到攻击者设备的MAC地址上，使局域网内所有受害者的网络流量都经过攻击者设备转发。Bettercap等工具可实施此类攻击，实现数据窃听和篡改，且ARP协议本身缺乏认证机制。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0142"
+    ],
+    "references": [
+      {
+        "title": "GitHub - frostbits-security/MITM-cheatsheet: All MITM attacks in one ...",
+        "link": "https://github.com/frostbits-security/MITM-cheatsheet"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0072"
+    ],
+    "relatedThreatActors": []
+  }
+}

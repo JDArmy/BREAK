@@ -1,0 +1,22 @@
+{
+  "C1167": {
+    "title": "Detecting API Enumeration Attacks: Rules and Cases",
+    "keywords": [
+      "API enumeration attack",
+      "BOLA vulnerability",
+      "OWASP API Security Top 10",
+      "user ID traversal",
+      "UUID enumeration",
+      "unauthorized resource access",
+      "GitHub security documentation",
+      "API endpoint probing",
+      "rate limit bypass"
+    ],
+    "summary": "A GitHub security skills document explains that API enumeration attacks often involve attackers systematically probing API endpoints using sequential or predictable identifiers to discover and access unauthorized resources. For example, attackers may iterate through user IDs like /api/v1/users/1001 or exploit UUIDs leaked from list endpoints to enumerate user profiles, representing exploitation of",
+    "references": [
+      {
+        "title": "Detecting API Enumeration Attacks - GitHub"
+      }
+    ]
+  }
+}

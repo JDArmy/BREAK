@@ -1,0 +1,33 @@
+{
+  "C0027": {
+    "title": "云晁科技公司因不正当竞争被罚240万元",
+    "keywords": [
+      "云晁科技",
+      "不正当竞争",
+      "反不正当竞争法",
+      "海淀区市场监督管理局",
+      "抢占客户",
+      "侵占样机",
+      "篡改软件系统",
+      "行政处罚",
+      "240万元罚款"
+    ],
+    "summary": "北京市海淀区市场监督管理局认定云晁科技公司存在不正当竞争行为，包括抢占客户、侵占样机、篡改客户后台软件系统等，违反了《中华人民共和国反不正当竞争法》，对其处以240万元罚款。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0003-004"
+    ],
+    "references": [
+      {
+        "title": "...抢占客户、侵占样机、篡改客户后台软件系统;因不正当竞争被罚...",
+        "link": "https://cloud.tencent.com/developer/article/1958755"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-05",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0022"
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "C1583": {
+    "title": "IEEE论文分析基于硬件供应链漏洞的APT攻击案例",
+    "keywords": [
+      "IEEE",
+      "高级持续性威胁",
+      "APT",
+      "供应链漏洞",
+      "硬件后门",
+      "硬件供应链攻击",
+      "IoT安全",
+      "远程控制",
+      "长期潜伏"
+    ],
+    "summary": "IEEE在2025年发表的一篇关于高级持续性威胁（APT）的论文中，专门分析了利用供应链漏洞进行攻击的案例，其中一部分聚焦于硬件导向的利用。论文指出，攻击者通过破坏硬件供应链，建立隐藏后门，实现对目标系统的长期潜伏和远程控制，是典型的IoT硬件供应链攻击研究。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0206"
+    ],
+    "references": [
+      {
+        "title": "Advanced Persistent Threats Based on Supply Chain Vulnerabilities: Challenges, Solutions, and Future Directions",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10838587/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025",
+    "relatedAttackTools": [
+      "AT0081"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

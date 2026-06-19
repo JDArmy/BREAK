@@ -1,0 +1,35 @@
+{
+  "C0203": {
+    "title": "星援App为明星刷流量被查封，半年吸金800余万",
+    "keywords": [
+      "星援App",
+      "流量造假",
+      "刷量",
+      "微博",
+      "蔡徐坤",
+      "数据造假",
+      "北京警方",
+      "查封",
+      "饭圈"
+    ],
+    "summary": "2019年6月，首都网警通报，为明星微博“流量注水”的幕后推手“星援”App被北京警方查封。该App利用粉丝给明星刷流量的需求疯狂牟利，半年内吸金800余万元。此前蔡徐坤一条微博出现“过亿转发量”引发数据造假争议。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0016"
+    ],
+    "references": [
+      {
+        "title": "“肖战糊了”事件背后饭圈乱象:追星进课堂,打榜刷量应援忙_明星",
+        "link": "https://www.sohu.com/a/451054805_161795"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2019-06",
+    "relatedAttackTools": [
+      "AT0046"
+    ],
+    "relatedThreatActors": [
+      "TA0019"
+    ]
+  }
+}

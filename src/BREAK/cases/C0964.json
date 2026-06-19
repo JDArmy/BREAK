@@ -1,0 +1,30 @@
+{
+  "C0964": {
+    "title": "机器学习驱动的反钓鱼黑名单攻击研究",
+    "keywords": [
+      "反钓鱼黑名单",
+      "机器学习攻击",
+      "黑名单绕过",
+      "钓鱼网站检测",
+      "IP地址变换",
+      "代理规避",
+      "黑名单覆盖漏洞",
+      "更新延迟",
+      "网络安全防御"
+    ],
+    "summary": "该研究指出，反钓鱼黑名单作为主要防御机制，存在覆盖不完整和更新延迟的局限性，使其易被复杂攻击者规避。攻击者利用黑名单的这些弱点，通过不断变化的 IP 地址和代理等技术手段，绕过基于黑名单的钓鱼网站检测系统。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0099"
+    ],
+    "references": [
+      {
+        "title": "Machine Learning-Enabled Attacks on Anti-Phishing Blacklists",
+        "link": "https://ieeexplore.ieee.org/document/10798104"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C1723": {
+    "title": "Authentication Flaws Leading to Session Hijacking",
+    "keywords": [
+      "broken authentication",
+      "session hijacking",
+      "credential leak",
+      "token misconfiguration",
+      "PayPal",
+      "account takeover",
+      "payment fraud",
+      "unauthorized transaction"
+    ],
+    "summary": "Analyzing authentication vulnerability cases involving credential leaks and session hijacking, where token misconfigurations allow attackers to hijack sessions and perform unauthorized operations such as fraudulent fund transfers.",
+    "references": [
+      {
+        "title": "An empirical analysis of incorrect account remediation in the case of broken authentication"
+      }
+    ]
+  }
+}

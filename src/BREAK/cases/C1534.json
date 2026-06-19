@@ -1,0 +1,30 @@
+{
+  "C1534": {
+    "title": "加密货币交易所区块链系统面临量子计算攻击风险分析",
+    "keywords": [
+      "后量子密码学",
+      "区块链安全",
+      "椭圆曲线密码学",
+      "ECDSA",
+      "量子计算攻击",
+      "加密货币交易所",
+      "数字签名",
+      "PQC"
+    ],
+    "summary": "2024年1月23日发布的研究指出，当前加密货币交易所的区块链系统主要采用椭圆曲线密码学（ECC）生成钱包密钥对，并使用椭圆曲线数字签名算法（ECDSA）生成交易签名。随着量子计算技术成熟，量子计算机可能伪造ECDSA产生的签名，使区块链系统面临量子计算攻击风险。研究提出基于后量子密码学（PQC）的区块链系统以增强安全性。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0196"
+    ],
+    "references": [
+      {
+        "title": "The Security Performance Analysis of Blockchain System Based on Post-Quantum Cryptography--A Case Study of Cryptocurrency Exchanges",
+        "link": "https://arxiv.org/abs/2404.16837"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-01",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

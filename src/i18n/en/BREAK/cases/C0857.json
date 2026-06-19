@@ -1,0 +1,22 @@
+{
+  "C0857": {
+    "title": "LockBit Ransomware Group Adopts Double Extortion Tactics",
+    "keywords": [
+      "LockBit",
+      "double extortion",
+      "ransomware-as-a-service",
+      "data leak site",
+      "file encryption",
+      "RaaS",
+      "Mikhail Vasiliev",
+      "LockBit 1.0",
+      "ransomware attack"
+    ],
+    "summary": "Since emerging in 2019, the LockBit ransomware group upgraded its extortion strategy during the 1.0 phase by creating a data leak site to publicly expose victim data alongside file encryption, aiming to increase pressure on victims and achieve 'double extortion.' The group later evolved into one of the most influential ransomware-as-a-service operations, with over a thousand victims.",
+    "references": [
+      {
+        "title": "The LockBit Ransomware Gang Mystery and On-Chain Address Analysis"
+      }
+    ]
+  }
+}

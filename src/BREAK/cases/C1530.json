@@ -1,0 +1,31 @@
+{
+  "C1530": {
+    "title": "GitHub - avechuch0/telegram-bigbang：监控恶意Telegram机器人集合",
+    "keywords": [
+      "Telegram Bot",
+      "钓鱼工具包",
+      "恶意Bot",
+      "数据泄露",
+      "欺诈监控",
+      "GitHub",
+      "Telegram",
+      "敏感信息收集"
+    ],
+    "summary": "该项目旨在监控和删除恶意Telegram Bot收集的钓鱼数据。项目说明指出，这些恶意Bot是钓鱼工具包的一部分，用于接收受害者提交的敏感信息。通过监听并删除这些数据，可以阻止欺诈和数据泄露。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0195"
+    ],
+    "references": [
+      {
+        "title": "GitHub - avechuch0/telegram-bigbang: Monitor collections of malicious ...",
+        "link": "https://github.com/avechuch0/telegram-bigbang"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0063"
+    ],
+    "relatedThreatActors": []
+  }
+}

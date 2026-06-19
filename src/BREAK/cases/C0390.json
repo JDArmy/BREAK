@@ -1,0 +1,31 @@
+{
+  "C0390": {
+    "title": "SEC单日暂停379家休眠空壳公司交易",
+    "keywords": [
+      "SEC",
+      "休眠空壳公司",
+      "交易暂停",
+      "Microcap",
+      "信息披露",
+      "僵尸企业",
+      "证券欺诈",
+      "监管执法",
+      "美国证券交易委员会"
+    ],
+    "summary": "SEC加大打击力度，在单日内暂停了379家休眠空壳公司的交易，创下历史记录。这些公司长期不披露信息，处于休眠状态，是典型的僵尸企业。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0033"
+    ],
+    "references": [
+      {
+        "title": "SEC Microcap Fraud-Fighting Initiative Expels 379 Dormant Shell ...",
+        "link": "https://www.sec.gov/newsroom/press-releases/2012-2012-91htm"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2012",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

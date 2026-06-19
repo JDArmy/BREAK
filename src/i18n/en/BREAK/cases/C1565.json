@@ -1,0 +1,21 @@
+{
+  "C1565": {
+    "title": "Axios Supply Chain Poisoning: Compromised Front-End HTTP Library Propagates Malicious Code via Dependency Chain",
+    "keywords": [
+      "Axios supply chain poisoning",
+      "JavaScript HTTP library compromise",
+      "npm malicious package",
+      "dependency chain propagation",
+      "remote code execution",
+      "credential theft",
+      "front-end library backdoor",
+      "obfuscation anti-debugging"
+    ],
+    "summary": "In April 2026, the National Cybersecurity Notification Center issued an alert regarding a supply chain poisoning attack targeting the JavaScript HTTP library Axios. Malicious code was concealed using obfuscation, self-deletion, and anti-debugging techniques, executing upon developer installation or update to steal credentials and achieve remote code execution. As Axios is a direct dependency for n",
+    "references": [
+      {
+        "title": "Supply Chain Poisoning Attacks Surge: Apifox, LiteLLM, Axios Hit in Succession, Open Source Ecosystem ..."
+      }
+    ]
+  }
+}

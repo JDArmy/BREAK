@@ -1,0 +1,36 @@
+{
+  "C0169": {
+    "title": "让FPS玩家头疼的AI外挂，终究没逃过法律的制裁",
+    "keywords": [
+      "AI外挂",
+      "AI视觉识别",
+      "自瞄锁头",
+      "无畏契约",
+      "FPS游戏",
+      "腾讯安全团队",
+      "江西余江警方",
+      "制售外挂",
+      "作弊封禁"
+    ],
+    "summary": "2023年9月，江西余江警方破获国内首例“AI外挂”制售案件，抓获10名犯罪嫌疑人。该外挂利用AI视觉识别技术实现快速自瞄锁头，在《无畏契约》等多款FPS游戏中通用。腾讯安全团队协助警方打击，累计封禁作弊账号超10万个。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0012"
+    ],
+    "references": [
+      {
+        "title": "让FPS玩家头疼的AI外挂,终究没逃过法律的制裁-腾讯新闻",
+        "link": "https://view.inews.qq.com/k/20230925A0AF5K00?no-redirect=1&web_channel=wap&openApp=false"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-09",
+    "relatedAttackTools": [
+      "AT0049",
+      "AT0053"
+    ],
+    "relatedThreatActors": [
+      "TA0012"
+    ]
+  }
+}

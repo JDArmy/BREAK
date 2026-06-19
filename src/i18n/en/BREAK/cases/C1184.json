@@ -1,0 +1,23 @@
+{
+  "C1184": {
+    "title": "China National Cybersecurity Center Reports Multiple Supply Chain Poisoning Incidents",
+    "keywords": [
+      "supply chain poisoning",
+      "Apifox",
+      "LiteLLM",
+      "Axios",
+      "open source malware injection",
+      "credential theft",
+      "remote code execution",
+      "National Cybersecurity Notification Center",
+      "dependency chain attack",
+      "AI supply chain risk"
+    ],
+    "summary": "In April 2026, the National Cybersecurity Notification Center of China detected multiple supply chain poisoning attacks targeting API development tool Apifox, Python library LiteLLM, and JavaScript HTTP library Axios. Attackers injected malicious code into widely used components such as Axios by compromising open-source software repositories and commercial tools, leading to credential theft, remot",
+    "references": [
+      {
+        "title": "National Cybersecurity Notification Center: Recent Surge in Supply Chain Poisoning Attacks Involving..."
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "C1529": {
+    "title": "Conning the Crypto Conman: End-to-End Analysis of Cryptocurrency-Based Technical Support Scams",
+    "keywords": [
+      "cryptocurrency scams",
+      "technical support scams",
+      "phishing",
+      "private key leakage",
+      "Twitter scams",
+      "Telegram bot fraud",
+      "crypto fraud analysis"
+    ],
+    "summary": "A research paper presented at the IEEE Symposium on Security and Privacy that analyzes cryptocurrency-based technical support scams. Scammers use Twitter as an initial contact point, then redirect victims to platforms like Telegram to complete the fraud, including tricking victims into revealing private keys or transferring funds to scam wallets.",
+    "references": [
+      {
+        "title": "Conning the crypto conman: End-to-end analysis of cryptocurrency-based technical support scams"
+      }
+    ]
+  }
+}

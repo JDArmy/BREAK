@@ -1,0 +1,29 @@
+{
+  "C1655": {
+    "title": "元宇宙中的伪装攻击：化身身份安全新威胁",
+    "keywords": [
+      "元宇宙",
+      "虚拟化身",
+      "去匿名化攻击",
+      "运动模式分析",
+      "身份安全",
+      "跨虚实身份关联",
+      "化身身份推断",
+      "IEEE"
+    ],
+    "summary": "该研究提出了一种针对元宇宙用户身份的去匿名化攻击。通过分析虚拟化身的运动模式，攻击者可以推断出用户的真实身份，对基于化身的身份安全构成严重威胁。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0221"
+    ],
+    "references": [
+      {
+        "title": "Disguised Attack in the Metaverse: A New Threat to Avatar-Based Identity Security",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11354974/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

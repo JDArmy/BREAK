@@ -1,0 +1,31 @@
+{
+  "C1324": {
+    "title": "纽约金融公司审计发现65个未授权AI工具",
+    "keywords": [
+      "影子AI",
+      "未授权AI工具",
+      "金融公司审计",
+      "Prompt Security",
+      "Itamar Golan",
+      "AI治理",
+      "合规风险",
+      "SaaS安全"
+    ],
+    "summary": "Prompt Security CEO Itamar Golan披露，一家纽约金融公司的安全主管原以为内部使用的AI工具不足10个，但经过10天审计后实际发现65个未经授权的解决方案，其中多数缺乏正式许可，暴露了影子AI在受监管行业的严重蔓延。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0153"
+    ],
+    "references": [
+      {
+        "title": "隐形AI风险浮现:安全专家呼吁该治理“影子AI”了|合规性|应用程序|隐 ...",
+        "link": "https://www.163.com/dy/article/JOS4BMJ60511ALHJ.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0041"
+    ]
+  }
+}

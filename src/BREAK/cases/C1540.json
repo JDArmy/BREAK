@@ -1,0 +1,38 @@
+{
+  "C1540": {
+    "title": "LAPSUS$组织利用会话令牌重放攻击突破微软等巨头",
+    "keywords": [
+      "LAPSUS$",
+      "会话令牌重放",
+      "多因素认证绕过",
+      "Azure DevOps",
+      "英伟达",
+      "三星",
+      "微软",
+      "社会工程攻击",
+      "暗网",
+      "数据窃取"
+    ],
+    "summary": "LAPSUS$黑客组织在2022年3月攻击微软时，利用从公共代码存储库获取的已泄露会话令牌，结合会话令牌重放攻击技术，绕过目标企业的多因素认证（MFA）防护，成功窃取Azure DevOps服务器37GB数据。该组织还通过暗网购买密码和会话令牌，对英伟达、三星等十余家企业实施攻击。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0197",
+      "R0247"
+    ],
+    "references": [
+      {
+        "title": "年仅16岁的\"天才黑客\",连续入侵三星、微软、英伟达等巨头_腾讯新闻",
+        "link": "https://new.qq.com/omn/20221109/20221109A04MSW00.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-03",
+    "relatedAttackTools": [
+      "AT0010",
+      "AT0094"
+    ],
+    "relatedThreatActors": [
+      "TA0017"
+    ]
+  }
+}

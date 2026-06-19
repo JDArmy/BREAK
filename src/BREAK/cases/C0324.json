@@ -1,0 +1,36 @@
+{
+  "C0324": {
+    "title": "微软警告：OAuth重定向滥用导致钓鱼和恶意软件传播",
+    "keywords": [
+      "OAuth",
+      "重定向滥用",
+      "钓鱼攻击",
+      "恶意软件传播",
+      "Microsoft",
+      "授权流程",
+      "第三方应用",
+      "SaaS安全",
+      "身份验证绕过"
+    ],
+    "summary": "微软观察到利用OAuth重定向滥用进行的钓鱼攻击。攻击者向受害者发送钓鱼链接，点击后会触发OAuth授权流程，诱导用户授予恶意应用权限。该方式可被用于窃取数据或传播恶意软件，其核心在于利用用户对第三方登录的信任，绕过原有的安全验证。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0030-002",
+      "R0232"
+    ],
+    "references": [
+      {
+        "title": "OAuth redirection abuse enables phishing and malware delivery",
+        "link": "https://www.microsoft.com/en-us/security/blog/2026/03/02/oauth-redirection-abuse-enables-phishing-malware-delivery/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-03",
+    "relatedAttackTools": [
+      "AT0089"
+    ],
+    "relatedThreatActors": [
+      "TA0054"
+    ]
+  }
+}

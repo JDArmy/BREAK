@@ -1,0 +1,22 @@
+{
+  "C0304": {
+    "title": "Analysis of DDoS Attacks Against 911 Emergency Services",
+    "keywords": [
+      "911 emergency services",
+      "DDoS attack",
+      "mobile botnet",
+      "baseband firmware rootkit",
+      "public safety answering point",
+      "emergency call system",
+      "anonymous attack",
+      "service disruption",
+      "North Carolina"
+    ],
+    "summary": "Researchers demonstrate how attackers can launch anonymous DDoS attacks against 911 emergency services using a mobile phone botnet. By leveraging a rootkit embedded in baseband firmware, attackers can randomize phone identifiers and repeatedly place emergency calls, overwhelming public safety answering points and preventing legitimate calls from being processed. Simulations show that fewer than 6,",
+    "references": [
+      {
+        "title": "9-1-1 DDoS: attacks, analysis and mitigation"
+      }
+    ]
+  }
+}

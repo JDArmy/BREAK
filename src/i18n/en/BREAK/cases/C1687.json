@@ -1,0 +1,20 @@
+{
+  "C1687": {
+    "title": "Widespread Supply Chain Compromise Impacting npm Ecosystem",
+    "keywords": [
+      "npm supply chain attack",
+      "dependency confusion",
+      "package hijacking",
+      "typosquatting",
+      "malicious npm package",
+      "CISA alert",
+      "software supply chain compromise"
+    ],
+    "summary": "CISA issued an alert about a broad software supply chain attack targeting the npm ecosystem. Malicious actors used techniques such as dependency confusion, package hijacking, and typosquatting to upload harmful packages to the public npm registry, causing numerous developers and build systems to unknowingly download and execute malicious code, posing a serious supply chain security threat.",
+    "references": [
+      {
+        "title": "Widespread Supply Chain Compromise Impacting npm Ecosystem"
+      }
+    ]
+  }
+}

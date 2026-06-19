@@ -1,0 +1,34 @@
+{
+  "C0732": {
+    "title": "利用AI生成虚假“覃悦晴被活埋”事件谣言",
+    "keywords": [
+      "AI生成虚假信息",
+      "覃悦晴",
+      "活埋谣言",
+      "成都网络辟谣",
+      "深度伪造",
+      "生成式AI风险",
+      "虚假新闻",
+      "恐慌情绪"
+    ],
+    "summary": "2025年2月，网络上流传所谓“覃悦晴于2025年2月23日被活埋”的谣言，内容结合AI生成图片与文字，捏造多个事发地，试图渲染恐慌情绪。经成都网络辟谣核查，该事件纯属捏造，网传血腥图片实为旧闻，AI生成内容被用于编造和传播虚假信息。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0071"
+    ],
+    "references": [
+      {
+        "title": "成都:“覃悦晴被活埋”纯属谣言,AI生成内容风险需警惕|成都市|...",
+        "link": "https://k.sina.cn/article_5182171545_134e1a999020021dua.html?from=news"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-02",
+    "relatedAttackTools": [
+      "AT0056"
+    ],
+    "relatedThreatActors": [
+      "TA0041"
+    ]
+  }
+}

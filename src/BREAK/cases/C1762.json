@@ -1,0 +1,35 @@
+{
+  "C1762": {
+    "title": "Android重打包攻击实验案例",
+    "keywords": [
+      "Android重打包攻击",
+      "反编译APK",
+      "恶意代码注入",
+      "应用签名绕过",
+      "移动应用安全",
+      "GitHub实验项目",
+      "Thomas Rüegg",
+      "Patrick Wissiak",
+      "重打包欺诈"
+    ],
+    "summary": "GitHub上的Android重打包攻击实验项目展示了攻击者如何修改合法APP注入恶意代码并重新分发。实验通过反编译APK、注入恶意代码、重新打包并签名，最终在虚拟机上成功触发恶意行为，演示了重打包攻击的完整流程。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0248"
+    ],
+    "references": [
+      {
+        "title": "thomasruegg/android-repackaging-attack - GitHub",
+        "link": "https://github.com/thomasruegg/android-repackaging-attack"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0028",
+      "AT0095"
+    ],
+    "relatedThreatActors": [
+      "TA0012"
+    ]
+  }
+}

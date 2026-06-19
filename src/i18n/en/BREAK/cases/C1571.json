@@ -1,0 +1,21 @@
+{
+  "C1571": {
+    "title": "Price of MEV: Towards a Game Theoretical Approach to MEV",
+    "keywords": [
+      "MEV",
+      "game theory",
+      "miner",
+      "gas price manipulation",
+      "frontrunning",
+      "blockchain",
+      "transaction ordering",
+      "Ethereum"
+    ],
+    "summary": "This study examines MEV from a game theory perspective, discussing how miners manipulate gas prices to capture MEV profits and analyzing extraction methods under symmetric gas efficiency.",
+    "references": [
+      {
+        "title": "Price of mev: towards a game theoretical approach to mev"
+      }
+    ]
+  }
+}

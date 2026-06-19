@@ -1,0 +1,22 @@
+{
+  "C0775": {
+    "title": "National cryptographic algorithm becomes key to compliance in fintech security",
+    "keywords": [
+      "SM2 algorithm",
+      "national cryptographic algorithm",
+      "SSL certificate",
+      "WebTrust",
+      "vTrus",
+      "Tianwei Chengxin",
+      "domestic browser",
+      "HTTPS encryption",
+      "fintech compliance"
+    ],
+    "summary": "The vTrus SSL certificate supporting China's SM2 algorithm, built by Tianwei Chengxin, has passed international WebTrust audit certification and has its root certificate pre-installed in multiple domestic browsers. After websites deploy dual-algorithm certificates (international plus national cryptographic), browsers can provide compliant HTTPS encryption, meeting information security requirements",
+    "references": [
+      {
+        "title": "Invited to Attend the 'Fintech Security and Data Security Summit'"
+      }
+    ]
+  }
+}

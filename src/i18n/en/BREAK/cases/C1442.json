@@ -1,0 +1,19 @@
+{
+  "C1442": {
+    "title": "Time Tells All: De-anonymization Attack Targeting Blockchain RPC Users",
+    "keywords": [
+      "blockchain RPC de-anonymization",
+      "IP address pseudonymous address linking",
+      "RPC request timing analysis",
+      "metadata privacy attack",
+      "network layer privacy leakage",
+      "blockchain infrastructure attack"
+    ],
+    "summary": "This academic study presents a novel de-anonymization attack that links blockchain RPC users' IP addresses to their on-chain pseudonymous addresses. The attack requires no transaction fees and does not assume an active network eavesdropper; it works solely by analyzing metadata such as the timing of RPC requests. The research reveals that user privacy at the infrastructure network layer can be com",
+    "references": [
+      {
+        "title": "Time Tells All: Deanonymization of Blockchain RPC Users with Zero..."
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "C1145": {
+    "title": "NFT市场异常交易检测",
+    "keywords": [
+      "NFT",
+      "洗售交易",
+      "wash trading",
+      "异常检测",
+      "市场操纵",
+      "反洗钱",
+      "欺诈检测",
+      "区块链"
+    ],
+    "summary": "该研究关注NFT市场因缺乏监管而存在的洗钱、欺诈和洗售交易等重大问题，并致力于开发检测NFT市场中洗售交易的算法。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0122"
+    ],
+    "references": [
+      {
+        "title": "[PDF] Abnormal Trading Detection in the NFT Market",
+        "link": "https://kdd.org/kdd2023/wp-content/uploads/2023/11/song2023abnormal.pdf"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

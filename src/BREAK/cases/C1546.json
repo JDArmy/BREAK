@@ -1,0 +1,28 @@
+{
+  "C1546": {
+    "title": "Creator Standard合约级解决方案应对版税绕过",
+    "keywords": [
+      "Creator Standard",
+      "NFT版税绕过",
+      "智能合约",
+      "版税规避",
+      "钱包转账",
+      "创作者",
+      "titanmesh"
+    ],
+    "summary": "针对NFT版税被绕过的风险，Creator Standard提出了一种智能合约级别的解决方案，允许创作者决定其NFT可与哪些程序交互，同时不牺牲基本的钱包到钱包转账功能，旨在从技术层面阻止版税规避行为。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0199"
+    ],
+    "references": [
+      {
+        "title": "GitHub - titanmesh-io/creator-standard: The Creator Standard is a smart ...",
+        "link": "https://github.com/titanmesh-io/creator-standard"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

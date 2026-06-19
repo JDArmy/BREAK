@@ -1,0 +1,31 @@
+{
+  "C1742": {
+    "title": "美国法院判决Anthropic使用盗版书籍训练AI不构成合理使用",
+    "keywords": [
+      "Anthropic",
+      "Claude",
+      "AI训练",
+      "版权侵权",
+      "合理使用",
+      "盗版书籍",
+      "训练数据",
+      "集体诉讼",
+      "加州北区法院"
+    ],
+    "summary": "美国加州北区法院在作家诉Anthropic案中裁定，虽然将合法购买的书籍扫描用于AI训练可能构成合理使用，但Anthropic从盗版网站下载数百万本受版权保护的书籍用于训练Claude模型的行为，不能适用合理使用抗辩，构成版权侵权，后续将就损害进行审判。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0242"
+    ],
+    "references": [
+      {
+        "title": "AI训练版权重大判决:合法扫描可接受,盗版下载仍侵权_腾讯新闻",
+        "link": "https://news.qq.com/rain/a/20250704A06FU000"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-07",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

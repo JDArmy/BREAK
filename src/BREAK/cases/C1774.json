@@ -1,0 +1,31 @@
+{
+  "C1774": {
+    "title": "利用WAF请求体大小限制绕过Cloudflare防护",
+    "keywords": [
+      "Cloudflare",
+      "WAF",
+      "请求体大小限制",
+      "绕过",
+      "HTTP请求",
+      "安全检测",
+      "边缘函数",
+      "配置滥用"
+    ],
+    "summary": "安全研究人员发现，Cloudflare WAF在处理HTTP请求时仅检查前8KB（免费版）或128KB（企业版）的内容。攻击者可利用此配置特性，发送超大请求体，将恶意载荷隐藏在未检查部分，从而成功绕过WAF的安全检测。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0250"
+    ],
+    "references": [
+      {
+        "title": "GitHub - abund4nt/bypass-waf: Modern techniques to bypass the most ...",
+        "link": "https://github.com/abund4nt/bypass-waf"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0096"
+    ],
+    "relatedThreatActors": []
+  }
+}

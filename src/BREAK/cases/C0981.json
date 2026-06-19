@@ -1,0 +1,32 @@
+{
+  "C0981": {
+    "title": "腾讯游戏安全公告处罚坐挂车行为",
+    "keywords": [
+      "腾讯游戏安全",
+      "坐挂车",
+      "作弊玩家",
+      "恶意组队",
+      "游戏违规处罚",
+      "带老板",
+      "反作弊",
+      "安全公告"
+    ],
+    "summary": "腾讯游戏安全团队发布公告，对游戏内有违规行为的玩家进行处罚，违规行为明确包括“与作弊玩家组队坐挂车”、“恶意组队”等，表明官方将主动与开挂者组队获益的行为列为打击对象。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0102"
+    ],
+    "references": [
+      {
+        "title": "安全信息公告_腾讯新闻",
+        "link": "https://new.qq.com/rain/a/20230524A07S4V00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-05",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0028"
+    ]
+  }
+}

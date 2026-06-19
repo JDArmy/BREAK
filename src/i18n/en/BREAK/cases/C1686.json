@@ -1,0 +1,23 @@
+{
+  "C1686": {
+    "title": "Self-Replicating Worm Hits 180+ npm Packages to Steal Credentials",
+    "keywords": [
+      "npm supply chain attack",
+      "self-replicating worm",
+      "credential theft",
+      "cloud tokens",
+      "dependency confusion",
+      "package typosquatting",
+      "CI/CD compromise",
+      "ReversingLabs",
+      "rxnt-authentication",
+      "malicious npm package"
+    ],
+    "summary": "ReversingLabs uncovered an npm supply chain attack where over 180 packages were infected with a self-replicating worm designed to steal cloud token credentials. The attack originated from a malicious package named rxnt-authentication, published on npm on September 14, 2025, which leveraged dependency confusion and package typosquatting to compromise CI/CD environments and spread laterally.",
+    "references": [
+      {
+        "title": "Self-Replicating Worm Hits 180+ npm Packages to Steal Credentials in ..."
+      }
+    ]
+  }
+}

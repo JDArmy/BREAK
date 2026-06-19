@@ -1,0 +1,35 @@
+{
+  "C0148": {
+    "title": "ChatGPT风口下的灰色“生意经”：卖号卖课多为噱头",
+    "keywords": [
+      "ChatGPT",
+      "账号倒卖",
+      "电商平台",
+      "社交群",
+      "OpenAI",
+      "欺诈风险",
+      "账号失效",
+      "二道贩子",
+      "隐私泄露",
+      "央视新闻"
+    ],
+    "summary": "2023年5月，媒体调查发现电商平台、社交群等存在大量售卖ChatGPT账号的商家，价格从25元至259元不等。这些账号交易存在欺诈风险，有买家反映账号不到一个月即失效，且部分商家提供的服务实为“二道贩子”镜像，存在泄露用户隐私的风险。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0011"
+    ],
+    "references": [
+      {
+        "title": "ChatGPT风口下的灰色“生意经”:“山寨”版充斥网络 卖号卖课多为...",
+        "link": "https://news.cctv.com/2023/05/25/ARTIwdelbbF8fRuzY0wldLPi230525.shtml"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-05",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0007",
+      "TA0009"
+    ]
+  }
+}

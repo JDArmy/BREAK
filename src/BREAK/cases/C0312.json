@@ -1,0 +1,29 @@
+{
+  "C0312": {
+    "title": "Web服务器Slow HTTP DoS攻击漏洞实证研究",
+    "keywords": [
+      "Slow HTTP DoS",
+      "拒绝服务攻击",
+      "Web服务器安全",
+      "流量比例检测",
+      "连接资源耗尽",
+      "HTTP协议漏洞",
+      "实证研究",
+      "攻击检测方法"
+    ],
+    "summary": "一项实证研究对互联网上的HTTP服务器进行了Slow HTTP DoS攻击漏洞检测，发现部分服务器易受此类攻击。攻击者通过缓慢发送HTTP请求，占用服务器连接资源，使正常用户无法访问。研究提出了基于流量比例特征的检测方法。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0029"
+    ],
+    "references": [
+      {
+        "title": "How secure are web servers? An empirical study of slow HTTP DoS attacks and detection",
+        "link": "https://ieeexplore.ieee.org/abstract/document/7784605/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

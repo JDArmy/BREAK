@@ -1,0 +1,35 @@
+{
+  "C1716": {
+    "title": "00后女子上海恶意薅羊毛被刑拘",
+    "keywords": [
+      "恶意薅羊毛",
+      "虚假投诉",
+      "拒付车费",
+      "打车平台",
+      "多手机号注册",
+      "退款滥用",
+      "上海",
+      "刑事拘留",
+      "00后"
+    ],
+    "summary": "一名00后女子在上海使用多手机号注册多个打车平台，以各种理由投诉拒付车费，实施恶意薅羊毛行为，最终被警方刑事拘留。该案例揭示了通过虚假投诉和拒付手段进行退款滥用的犯罪模式。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0235"
+    ],
+    "references": [
+      {
+        "title": "00后女子上海恶意薅羊毛被刑拘,暴露了哪些规则漏洞?_新浪新闻",
+        "link": "https://news.sina.com.cn/zx/2025-07-02/doc-infeanhm4426666.shtml"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-07",
+    "relatedAttackTools": [
+      "AT0001"
+    ],
+    "relatedThreatActors": [
+      "TA0001"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "C1401": {
+    "title": "Beanstalk DAO Governance Attack Incident",
+    "keywords": [
+      "Beanstalk DAO",
+      "governance attack",
+      "flash loan",
+      "malicious proposal",
+      "BIP18",
+      "BIP19",
+      "emergency commit function",
+      "DeFi",
+      "voting power",
+      "fund drain"
+    ],
+    "summary": "In 2022, Beanstalk DAO suffered a governance attack where the attacker used flash loans to acquire a large amount of governance tokens, gained a supermajority voting power, and then executed malicious proposals through an emergency commit function, stealing approximately $181 million in funds. The attack involved two proposals: BIP18 as a trojan proposal and BIP19 as a distraction proposal.",
+    "references": [
+      {
+        "title": "Governance Attack - Cyfrin Glossary"
+      }
+    ]
+  }
+}

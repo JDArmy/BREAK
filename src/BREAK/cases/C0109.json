@@ -1,0 +1,33 @@
+{
+  "C0109": {
+    "title": "LinkedIn文章揭示虚假安装的后续损失",
+    "keywords": [
+      "mobile ad fraud",
+      "fake installs",
+      "user retention",
+      "lifetime value",
+      "ad spend",
+      "marketing analytics",
+      "attribution fraud",
+      "app install fraud"
+    ],
+    "summary": "一篇行业分析指出，四分之一的移动应用安装可能是欺诈性的。虚假安装不仅浪费了广告预算，更大的损失在于其被计为真实安装后，会污染用户留存率、应用内收入和生命周期价值等所有下游指标，导致营销人员无法准确评估渠道表现。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0008-003"
+    ],
+    "references": [
+      {
+        "title": "1 in 4 Installs Are Often Fraudulent. The Bigger Loss Starts After the ...",
+        "link": "https://www.linkedin.com/pulse/1-4-installs-often-fraudulent-bigger-loss-starts-after-fake-install-b2buc"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0091"
+    ],
+    "relatedThreatActors": [
+      "TA0056"
+    ]
+  }
+}

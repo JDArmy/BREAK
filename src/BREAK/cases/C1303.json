@@ -1,0 +1,36 @@
+{
+  "C1303": {
+    "title": "TeamPCP利用被盗CI/CD凭证入侵Checkmarx GitHub Actions",
+    "keywords": [
+      "TeamPCP",
+      "Checkmarx",
+      "GitHub Actions",
+      "CI/CD凭证",
+      "供应链攻击",
+      "管道令牌",
+      "横向移动",
+      "持久化访问",
+      "API密钥滥用",
+      "非人类身份"
+    ],
+    "summary": "TeamPCP组织在2026年3月19日后利用被盗的CI/CD凭证入侵了2个GitHub Actions工作流，导致凭证失窃并可能发起供应链攻击，攻击者通过自动化管道令牌实现横向移动和持久化访问。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0149"
+    ],
+    "references": [
+      {
+        "title": "TeamPCP Hacks Checkmarx GitHub Actions Using Stolen CI Credentials",
+        "link": "https://thehackernews.com/2026/03/teampcp-hacks-checkmarx-github-actions.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-03",
+    "relatedAttackTools": [
+      "AT0087"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "C0297": {
+    "title": "RECUR攻击：利用递归熵引导反事实利用与反思的资源耗尽攻击",
+    "keywords": [
+      "RECUR攻击",
+      "递归熵引导",
+      "反事实利用",
+      "资源耗尽",
+      "大型推理模型",
+      "LRM",
+      "过度反思",
+      "推理模型脆弱性",
+      "吞吐量下降",
+      "对抗性攻击"
+    ],
+    "summary": "研究人员提出RECUR攻击方法，通过构造反事实问题诱发大型推理模型（LRM）的过度反思，导致输出长度增加11倍、吞吐量下降90%，从而消耗计算资源。该攻击揭示了推理过程本身固有的资源耗尽脆弱性。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0029-002"
+    ],
+    "references": [
+      {
+        "title": "RECUR: Resource Exhaustion Attack via Recursive-Entropy Guided ...",
+        "link": "https://arxiv.org/html/2602.08214v1"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

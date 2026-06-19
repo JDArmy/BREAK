@@ -1,0 +1,34 @@
+{
+  "C1455": {
+    "title": "Aztec Connect旧合约漏洞遭210万美元攻击",
+    "keywords": [
+      "Aztec Connect",
+      "智能合约漏洞",
+      "不可升级合约",
+      "DeFi攻击",
+      "资产滞留",
+      "去中心化风险",
+      "合约设计缺陷",
+      "以太坊Layer2"
+    ],
+    "summary": "Aztec Connect的旧版合约因设计为完全不可变且无升级能力，当漏洞被利用时，部分代币滞留在不可升级合约中无法取出。系统本为去中心化而放弃升级权限，却因不可升级设计缺陷导致资产损失，凸显了不可变性的双刃剑效应。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0177"
+    ],
+    "references": [
+      {
+        "title": "Aztec Connect Hit by $2.1 Million Exploit in Old Contract",
+        "link": "https://capwolf.com/aztec-connect-hit-by-2-1-million-exploit-in-old-contract/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0077"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

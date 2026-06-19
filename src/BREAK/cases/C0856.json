@@ -1,0 +1,32 @@
+{
+  "C0856": {
+    "title": "Phobos采用RaaS模式由附属成员实施攻击",
+    "keywords": [
+      "Phobos",
+      "勒索软件即服务",
+      "RaaS",
+      "附属成员",
+      "赎金分成",
+      "Chainalysis",
+      "勒索软件变种",
+      "网络犯罪商业模式"
+    ],
+    "summary": "2024年2月，Chainalysis报告指出，Phobos等勒索软件变种采用了勒索软件即服务（RaaS）模式。被称为附属公司的外部人员可访问恶意软件实施攻击，作为交换，需向该变种的核心运营商支付赎金收益的一部分，体现了典型的分成商业模式。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0085-001"
+    ],
+    "references": [
+      {
+        "title": "Chainalysis:2023年勒索软件支付金额突破10亿美元 - 币界网",
+        "link": "https://www.528btc.com/news/116174213.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-02",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0017"
+    ]
+  }
+}

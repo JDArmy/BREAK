@@ -1,0 +1,42 @@
+{
+  "C1293": {
+    "title": "ClawHavoc供应链投毒事件：AI智能体工具滥用导致系统失陷",
+    "keywords": [
+      "供应链投毒",
+      "ClawHavoc",
+      "OpenClaw",
+      "ClickFix 2.0",
+      "社会工程学",
+      "反向Shell",
+      "API密钥窃取",
+      "加密货币钱包",
+      "AI智能体安全",
+      "供应链污染"
+    ],
+    "summary": "安全机构Koi Security于2026年1月披露针对OpenClaw生态的供应链投毒攻击“ClawHavoc”。攻击者利用“ClickFix 2.0”社会工程学手段，在技能说明文档中伪装前置安装要求，诱导开发者下载恶意二进制文件，建立反向Shell远程控制通道，窃取API密钥、加密货币钱包私钥及SSH密钥。该事件涉及335个组织级投毒源头，暴露了AI智能体在工具调用中因供应链污染导致的越权与失控风险。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0148"
+    ],
+    "references": [
+      {
+        "title": "腾讯云 OpenClaw 安全解决方案:阻断智能体越权与供应链投毒的防御体系",
+        "link": "https://cloud.tencent.com/developer/article/2642850"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-01",
+    "relatedAttackTools": [
+      "AT0075",
+      "AT0013",
+      "AT0064",
+      "AT0074",
+      "AT0093"
+    ],
+    "relatedThreatActors": [
+      "TA0052",
+      "TA0041",
+      "TA0058"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "C1606": {
+    "title": "OPC UA .NET Standard Stack Authentication Bypass Vulnerability",
+    "keywords": [
+      "OPC UA authentication bypass",
+      ".NET Standard Stack vulnerability",
+      "OPC Foundation advisory",
+      "GHSA-h958-fxgg-g7w3",
+      "unauthorized OPC UA access",
+      "industrial IoT protocol security"
+    ],
+    "summary": "A security vulnerability in the OPC UA .NET Standard Stack allows unauthenticated attackers to bypass application authentication mechanisms and gain unauthorized access to OPC UA servers, impacting industrial IoT communication security.",
+    "references": [
+      {
+        "title": "Security Update for the OPC UA .NET Standard Stack"
+      }
+    ]
+  }
+}

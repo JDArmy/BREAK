@@ -1,0 +1,21 @@
+{
+  "C1472": {
+    "title": "V2X Communication Security Faces Three Major Threats: Fake Messages, Trajectory Tracking, and Replay Attacks",
+    "keywords": [
+      "V2X communication security",
+      "BSM message forgery",
+      "trajectory tracking",
+      "replay attack",
+      "GPS privacy leakage",
+      "misbehavior detection",
+      "V2X certificate revocation",
+      "vehicular ad hoc network threats"
+    ],
+    "summary": "Vehicular V2X systems are vulnerable due to their open broadcast nature. Attackers can inject fabricated BSM messages—such as falsely reporting an oncoming ambulance or road construction ahead—causing surrounding vehicles to brake suddenly or trigger chain-reaction collisions. By persistently monitoring fixed vehicle IDs combined with GPS location data, adversaries can reconstruct a driver’s compl",
+    "references": [
+      {
+        "title": "Wireless Technologies in Modern Smart Vehicles 37: V2X (9) - V2X Certificate Revocation - CSDN Blog"
+      }
+    ]
+  }
+}

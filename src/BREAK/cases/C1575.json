@@ -1,0 +1,34 @@
+{
+  "C1575": {
+    "title": "针对物联网中神经网络解释器的模型投毒攻击",
+    "keywords": [
+      "模型投毒攻击",
+      "神经网络解释器",
+      "物联网安全",
+      "AIoT",
+      "对抗样本",
+      "模型行为操纵",
+      "工业自动化",
+      "IEEE",
+      "资源受限系统"
+    ],
+    "summary": "该研究提出了首个针对神经网络解释器的模型投毒攻击，无需辅助数据集即可操纵模型行为。攻击者通过投毒改变AI模型决策，对资源受限的物联网系统构成严重威胁，可导致工业自动化等关键应用出现误判。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0205"
+    ],
+    "references": [
+      {
+        "title": "Model Poisoning Attack Against Neural Network Interpreters in IoT ...",
+        "link": "https://ieeexplore.ieee.org/document/10734226"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0093"
+    ],
+    "relatedThreatActors": [
+      "TA0058"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "C1539": {
+    "title": "Drift因持久化Nonce社会工程攻击损失2.85亿美元",
+    "keywords": [
+      "Drift Protocol",
+      "Nonce 社会工程攻击",
+      "管理员账户接管",
+      "2.85亿美元损失",
+      "朝鲜黑客",
+      "加密货币盗窃",
+      "多签钱包",
+      "社会工程学"
+    ],
+    "summary": "2026年4月1日，Drift协议因基于Nonce的社会工程攻击损失2.85亿美元。攻击者利用社会工程学手段实现管理员账户接管，该攻击模式暴露了与朝鲜有关的加密货币盗窃模式。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0197"
+    ],
+    "references": [
+      {
+        "title": "Drift Loses $285 Million in Durable Nonce Social Engineering Attack ...",
+        "link": "https://thehackernews.com/2026/04/drift-loses-285-million-in-durable.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-04",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0039"
+    ]
+  }
+}

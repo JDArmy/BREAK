@@ -1,0 +1,31 @@
+{
+  "C0723": {
+    "title": "LLM代码生成中的幻觉：汽车领域案例研究",
+    "keywords": [
+      "大语言模型",
+      "代码生成",
+      "AI幻觉",
+      "汽车领域",
+      "安全关键系统",
+      "LLM",
+      "代码错误",
+      "生成式AI风险",
+      "自动驾驶",
+      "arXiv"
+    ],
+    "summary": "该研究聚焦于LLM在代码生成中的幻觉现象，特别是在汽车领域的应用。LLM生成的代码看似正确但可能存在错误，这种幻觉在汽车等安全关键领域可能导致严重后果。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0071-004"
+    ],
+    "references": [
+      {
+        "title": "Hallucination in LLM-Based Code Generation: An Automotive Case Study",
+        "link": "https://arxiv.org/abs/2508.11257"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

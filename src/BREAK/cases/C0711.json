@@ -1,0 +1,40 @@
+{
+  "C0711": {
+    "title": "AI生成涉军虚假信息被通报",
+    "keywords": [
+      "AIGC",
+      "涉军虚假信息",
+      "网络涉军生态治理",
+      "AI生成内容合规",
+      "网信中国",
+      "恶搞军人形象",
+      "低俗二创",
+      "违法违规账号处置"
+    ],
+    "summary": "2026年网络涉军生态治理专项行动中，通报多起利用AI制作发布涉军虚假信息典型案例。包括AI编造虚假涉军故事、低俗二创、恶搞军人形象等，相关违法违规账号被依法处置，凸显AIGC内容合规风险。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0071-002"
+    ],
+    "references": [
+      {
+        "title": "AI生成涉军虚假信息被通报,如何守住内容安全底线?",
+        "link": "https://zhuanlan.zhihu.com/p/2048718644415407049"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-06",
+    "relatedAttackTools": [
+      "AT0056",
+      "AT0057",
+      "AT0058",
+      "AT0059",
+      "AT0093"
+    ],
+    "relatedThreatActors": [
+      "TA0031",
+      "TA0041",
+      "TA0058"
+    ]
+  }
+}

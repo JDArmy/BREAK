@@ -1,0 +1,30 @@
+{
+  "C1693": {
+    "title": "SBOM生成工具差异导致漏洞检测数量高度可变",
+    "keywords": [
+      "SBOM",
+      "Syft",
+      "Trivy",
+      "漏洞检测",
+      "Docker镜像",
+      "软件供应链安全",
+      "SBOM生成工具",
+      "实证研究",
+      "漏洞可见性"
+    ],
+    "summary": "一项针对2313个Docker镜像的实证研究发现，使用不同SBOM生成工具（如Syft、Trivy）和不同格式生成的SBOM，在漏洞检测数量上存在高度可变性，揭示了SBOM生成方式直接影响漏洞可见性的问题。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0229"
+    ],
+    "references": [
+      {
+        "title": "Impacts of Software Bill of Materials (SBOM) Generation on ...",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3689944.3696164"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C1498": {
+    "title": "CTF Challenge on Long-Range Attacks in Proof-of-Stake Blockchains",
+    "keywords": [
+      "PoS blockchain",
+      "long-range attack",
+      "costless simulation",
+      "CTF challenge",
+      "miniblockchain2",
+      "consensus security",
+      "GitHub project",
+      "attack reproduction"
+    ],
+    "summary": "A GitHub-hosted CTF challenge project built on a Proof-of-Stake blockchain susceptible to long-range attacks. It provides a vulnerable PoS blockchain environment where participants must exploit long-range attack flaws to complete the challenge, accompanied by a detailed solution guide.",
+    "references": [
+      {
+        "title": "Optimal Selfish Mining-Based Denial-of-Service Attack"
+      }
+    ]
+  }
+}

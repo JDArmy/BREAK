@@ -1,0 +1,33 @@
+{
+  "C1319": {
+    "title": "Volt Typhoon 利用“Living off the Land”技术发动攻击",
+    "keywords": [
+      "Volt Typhoon",
+      "Living off the Land",
+      "LotL",
+      "Active Directory",
+      "关键基础设施",
+      "端点检测与响应",
+      "EDR规避",
+      "凭证窃取",
+      "CISA"
+    ],
+    "summary": "2023年5月，国际网络安全机构发布关于中国国家支持的黑客组织Volt Typhoon的咨询。该组织针对美国关键基础设施，利用“Living off the Land”技术，将恶意命令伪装成正常管理活动，规避端点检测与响应，并试图窃取Active Directory数据库文件。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0152"
+    ],
+    "references": [
+      {
+        "title": "⚠️Advisory: Volt Typhoon Uses \"Living off the Land\" to Attack",
+        "link": "https://www.innovativecomp.com/advisory-volt-typhoon-uses-living-off-the-land-to-attack/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-05",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "C1547": {
+    "title": "学术研究揭示NFT版税绕过机制",
+    "keywords": [
+      "NFT版税绕过",
+      "场外交易",
+      "OTC",
+      "智能合约",
+      "版税规避",
+      "ACM CCS 2022",
+      "NFT市场协议",
+      "安全漏洞",
+      "创作者经济"
+    ],
+    "summary": "ACM CCS 2022论文《Understanding security issues in the NFT ecosystem》指出，卖家可通过场外交易（OTC）方式完全绕过NFT市场协议，逃避向创作者支付版税。卖家将NFT上架后，与买家私下协商交易，不通过市场合约完成转移，从而规避了市场内置的版税费用。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0199"
+    ],
+    "references": [
+      {
+        "title": "Understanding security issues in the NFT ecosystem",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3548606.3559342"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-11",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

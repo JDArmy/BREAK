@@ -1,0 +1,29 @@
+{
+  "C1642": {
+    "title": "评估与缓解手持移动设备眼动追踪的隐私影响",
+    "keywords": [
+      "眼动追踪",
+      "隐私泄露",
+      "手持移动设备",
+      "注视数据",
+      "用户敏感信息",
+      "空间计算",
+      "移动端隐私风险",
+      "隐私影响评估"
+    ],
+    "summary": "该研究首次提供了通过手持移动设备采集的注视数据导致隐私泄露的证据，表明眼动数据可被用于推断用户敏感信息，揭示了移动端空间计算场景下的隐私风险。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0218"
+    ],
+    "references": [
+      {
+        "title": "Assessing and Mitigating the Privacy Implications of Eye Tracking on ...",
+        "link": "https://dl.acm.org/doi/10.1145/3746452"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

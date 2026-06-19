@@ -1,0 +1,35 @@
+{
+  "C1468": {
+    "title": "Clorox公司IIoT生产线遭勒索软件攻击",
+    "keywords": [
+      "Clorox",
+      "勒索软件",
+      "IIoT",
+      "生产线",
+      "制造业",
+      "供应链中断",
+      "工业物联网安全",
+      "生产系统攻击",
+      "财务损失"
+    ],
+    "summary": "2023年，消费品公司Clorox遭受勒索软件攻击，被迫关闭其IIoT连接的生产线数周。攻击严重影响了公司的生产和供应链，导致产品短缺和财务损失，凸显了勒索软件对制造业IIoT环境的破坏性影响。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0179"
+    ],
+    "references": [
+      {
+        "title": "Multi-Stage Deep Learning for Intrusion Detection in Industrial ...",
+        "link": "https://ieeexplore.ieee.org/iel8/6287639/10820123/10949493.pdf"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023",
+    "relatedAttackTools": [
+      "AT0013"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

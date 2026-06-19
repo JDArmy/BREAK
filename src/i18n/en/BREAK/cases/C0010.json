@@ -1,0 +1,23 @@
+{
+  "C0010": {
+    "title": "Automated Crawler Attack on Government Server Causes System Paralysis",
+    "keywords": [
+      "web scraping attack",
+      "government server overload",
+      "Shenzhen residence permit system",
+      "183 requests per second",
+      "high-frequency automated queries",
+      "server paralysis",
+      "cloud storage data exfiltration",
+      "illegal data acquisition",
+      "programmer conviction",
+      "residence permit platform DDoS"
+    ],
+    "summary": "On May 2, 2018, a software launched high-frequency automated queries against the Shenzhen residence permit system within two hours, reaching 183 requests per second and totaling over 1.51 million queries. The scraped data was saved to cloud storage. The automated attack caused the Shenzhen Public Security Bureau's residence permit service platform server to become overloaded and unable to operate ",
+    "references": [
+      {
+        "title": "...3 Years, a Programmer Sentenced to 18 Months: Crawler Software Automated Attacks on Government Servers"
+      }
+    ]
+  }
+}

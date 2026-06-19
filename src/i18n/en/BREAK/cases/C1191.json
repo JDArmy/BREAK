@@ -1,0 +1,22 @@
+{
+  "C1191": {
+    "title": "Alibaba Cloud Container Service and Security Center Named CAICT Cloud-Native Security Benchmark Case",
+    "keywords": [
+      "Alibaba Cloud",
+      "Container Service",
+      "Cloud Security Center",
+      "CAICT",
+      "cloud-native security benchmark",
+      "container escape",
+      "image vulnerabilities",
+      "runtime protection",
+      "cloud-native runtime security"
+    ],
+    "summary": "In January 2025, a joint solution from Alibaba Cloud Container Service and Cloud Security Center was recognized as a “Cloud-Native Security Benchmark Case” by the China Academy of Information and Communications Technology (CAICT). The solution focuses on building an integrated cloud-native runtime protection system to address runtime threats such as container escape and image vulnerabilities.",
+    "references": [
+      {
+        "title": "Alibaba Cloud Container Service & Cloud Security Center Team Wins CAICT 'Cloud-Native Security Benchmark Case' Award..."
+      }
+    ]
+  }
+}

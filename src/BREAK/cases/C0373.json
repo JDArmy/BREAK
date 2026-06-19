@@ -1,0 +1,32 @@
+{
+  "C0373": {
+    "title": "针对IoT设备的SMS验证码暴力破解攻击研究",
+    "keywords": [
+      "IoT设备",
+      "SMS验证码",
+      "暴力破解",
+      "账户接管",
+      "认证绕过",
+      "自动化攻击工具",
+      "密码重置漏洞"
+    ],
+    "summary": "一篇发表于2018年的学术论文指出，现有的IoT设备账户通过SMS验证码重置密码的机制存在漏洞，攻击者可利用自动化工具对SMS认证码进行暴力破解，从而窃取用户账户。该研究开发了自动化工具，通过暴力破解SMS验证码来接管IoT设备账户。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0032-004"
+    ],
+    "references": [
+      {
+        "title": "Cracking IoT Device User Account via Brute-force Attack to SMS ...",
+        "link": "https://dl.acm.org/doi/10.1145/3203422.3203426"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2018",
+    "relatedAttackTools": [
+      "AT0023",
+      "AT0068"
+    ],
+    "relatedThreatActors": []
+  }
+}

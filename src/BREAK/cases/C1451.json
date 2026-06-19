@@ -1,0 +1,33 @@
+{
+  "C1451": {
+    "title": "Solidity智能合约时间戳操纵漏洞与修复",
+    "keywords": [
+      "Solidity",
+      "智能合约",
+      "时间戳操纵",
+      "block.timestamp",
+      "彩票合约",
+      "矿工操纵",
+      "随机源",
+      "Ethereum"
+    ],
+    "summary": "文章描述了一个彩票合约因使用block.timestamp控制开奖逻辑而几乎损失5万美元的案例。恶意矿工可在约900秒窗口内操纵区块时间戳，从而选择自己作为中奖者。文章提供了安全的替代方案，如使用长时间窗口和更安全的随机源。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0176"
+    ],
+    "references": [
+      {
+        "title": "Fix Smart Contract Timestamp Attacks in 20 Minutes (Before You Lose Money)",
+        "link": "https://markaicode.com/smart-contract-timestamp-security/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0076"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

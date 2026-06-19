@@ -1,0 +1,34 @@
+{
+  "C1617": {
+    "title": "基于物理感知的卡车队列V2X入侵检测系统",
+    "keywords": [
+      "卡车队列",
+      "V2X",
+      "入侵检测系统",
+      "虚假数据注入",
+      "物理感知",
+      "V2V通信",
+      "V2I通信",
+      "车联网安全"
+    ],
+    "summary": "一个开源项目实现了针对联网卡车纵向队列的物理感知入侵检测系统，利用V2V和V2I通信来检测虚假数据注入攻击。该系统通过分析车辆物理运动状态与通信数据的一致性，识别攻击者注入的虚假信息，防止对队列行驶决策的干扰。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0212"
+    ],
+    "references": [
+      {
+        "title": "chloekentebe/physics-aware-platoon-ids - GitHub",
+        "link": "https://github.com/chloekentebe/physics-aware-platoon-ids"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0083"
+    ],
+    "relatedThreatActors": [
+      "TA0049",
+      "TA0061"
+    ]
+  }
+}

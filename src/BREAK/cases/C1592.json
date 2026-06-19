@@ -1,0 +1,34 @@
+{
+  "C1592": {
+    "title": "个人医疗设备通信易受多种网络攻击",
+    "keywords": [
+      "个人医疗设备",
+      "PMD",
+      "中间人攻击",
+      "重放攻击",
+      "拒绝服务攻击",
+      "虚假数据注入",
+      "HEKA入侵检测系统",
+      "医疗物联网安全",
+      "IEEE CNS"
+    ],
+    "summary": "研究显示，现代智能健康系统中的个人医疗设备（PMD）通信缺乏安全特性，外部攻击者可接入设备通信，实施中间人攻击、重放攻击、虚假数据注入和拒绝服务攻击，窃取敏感健康数据或干扰设备功能，直接威胁患者安全。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0208"
+    ],
+    "references": [
+      {
+        "title": "Heka: A novel intrusion detection system for attacks to personal medical devices",
+        "link": "https://ieeexplore.ieee.org/abstract/document/9162311/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2020-06",
+    "relatedAttackTools": [
+      "AT0072",
+      "AT0081"
+    ],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "C0439": {
+    "title": "BigCommerce商户遭遇无法阻止的持续性撞卡攻击",
+    "keywords": [
+      "BigCommerce",
+      "撞卡攻击",
+      "信用卡盗刷",
+      "虚假订单",
+      "支付验证",
+      "电商平台安全"
+    ],
+    "summary": "一家使用BigCommerce平台的商户遭遇了持续性的撞卡攻击，攻击者利用盗取的信用卡信息在其店铺进行批量验证。该商户及平台方均表示难以有效阻止此次攻击，导致大量虚假订单尝试和支付验证请求，严重影响了正常业务运营。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0040"
+    ],
+    "references": [
+      {
+        "title": "Carding Attack on BigCommerce - Unable to stop due to platform ...",
+        "link": "https://www.reddit.com/r/bigcommerce/comments/1oqalfa/carding_attack_on_bigcommerce_unable_to_stop_due/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0042"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0055"
+    ]
+  }
+}

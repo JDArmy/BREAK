@@ -1,0 +1,22 @@
+{
+  "C1654": {
+    "title": "AvatarHunter: Non-Invasive De-Anonymization Attack Exploiting User Gait Features",
+    "keywords": [
+      "AvatarHunter",
+      "gait recognition",
+      "de-anonymization attack",
+      "VR security",
+      "VRChat",
+      "virtual avatar",
+      "cross-reality identity linkage",
+      "IEEE",
+      "metadata privacy"
+    ],
+    "summary": "Researchers propose AvatarHunter, an attack method that non-invasively collects gait information by recording multi-view videos of a victim's virtual avatar in VR scenarios. In experiments on VRChat, it achieves a closed-world attack success rate of 92.1% and an open-world rate of 66.9%, enabling identification of the user's real identity without their awareness and bypassing avatar-based disguise",
+    "references": [
+      {
+        "title": "De-anonymization Attacks on Metaverse - IEEE Xplore"
+      }
+    ]
+  }
+}

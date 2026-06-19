@@ -1,0 +1,34 @@
+{
+  "C0091": {
+    "title": "称浏览器插件劫持流量 百度起诉运营者获赔",
+    "keywords": [
+      "浏览器插件",
+      "流量劫持",
+      "百度",
+      "上海政凯信息科技有限公司",
+      "新媒体管家Plus",
+      "不正当竞争",
+      "强制跳转",
+      "法院判决"
+    ],
+    "summary": "上海政凯信息科技有限公司运营的“新媒体管家「Plus」”浏览器插件，在百度网页面中插入链接，强制跳转至其运营的网站。百度公司起诉后，法院判决政凯公司赔偿经济损失并消除影响。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0007"
+    ],
+    "references": [
+      {
+        "title": "称浏览器插件劫持流量 百度起诉运营者获赔-中国法院网",
+        "link": "https://www.chinacourt.org/article/detail/2021/11/id/6371308.shtml"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-11",
+    "relatedAttackTools": [
+      "AT0032"
+    ],
+    "relatedThreatActors": [
+      "TA0022"
+    ]
+  }
+}

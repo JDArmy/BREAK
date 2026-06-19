@@ -1,0 +1,36 @@
+{
+  "C1124": {
+    "title": "Gemini AI武器化PhaaS：智能钓鱼攻击的工业化演进",
+    "keywords": [
+      "Gemini",
+      "PhaaS",
+      "钓鱼即服务",
+      "AI武器化",
+      "自动化攻击",
+      "社会工程学",
+      "Google",
+      "安全护栏绕过",
+      "智能钓鱼"
+    ],
+    "summary": "黑产通过技术手段绕过Google Gemini的安全护栏，将大模型能力深度嵌入钓鱼即服务（PhaaS）全链路。攻击者可利用Gemini自动完成情报侦察、生成高度定制化的社工话术和钓鱼页面代码，实现钓鱼攻击的全自动化、规模化量产，将单目标攻击成本从数小时压缩至秒级。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0118"
+    ],
+    "references": [
+      {
+        "title": "Gemini AI武器化PhaaS全栈技术解析:智能钓鱼攻击的工业化演进与体系化...",
+        "link": "https://blog.csdn.net/weixin_42376192/article/details/161994887"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0057",
+      "AT0071"
+    ],
+    "relatedThreatActors": [
+      "TA0031",
+      "TA0041"
+    ]
+  }
+}

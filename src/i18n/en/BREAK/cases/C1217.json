@@ -1,0 +1,20 @@
+{
+  "C1217": {
+    "title": "PoisonedFL: Multi-Round Consistency Model Poisoning Attack in Federated Learning",
+    "keywords": [
+      "federated learning",
+      "model poisoning attack",
+      "PoisonedFL",
+      "multi-round consistency",
+      "privacy-preserving computation",
+      "defense mechanisms",
+      "client robustness"
+    ],
+    "summary": "This study introduces PoisonedFL, a novel model poisoning attack that forces malicious clients to maintain multi-round consistency in model updates, successfully breaching eight state-of-the-art defense mechanisms and outperforming seven existing attack methods. The findings reveal that federated learning systems are more vulnerable than previously assumed, highlighting the urgent need for new def",
+    "references": [
+      {
+        "title": "Model Poisoning Attacks to Federated Learning via Multi-Round..."
+      }
+    ]
+  }
+}

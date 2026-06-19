@@ -1,0 +1,23 @@
+{
+  "C1413": {
+    "title": "Inverse Finance Oracle Manipulation Incident",
+    "keywords": [
+      "Inverse Finance",
+      "SushiSwap",
+      "TWAP oracle",
+      "price manipulation",
+      "flash loan attack",
+      "INV",
+      "WETH",
+      "DeFi exploit",
+      "collateral valuation",
+      "on-chain arbitrage"
+    ],
+    "summary": "In April 2022, an attacker exploited the low liquidity of the INV-WETH trading pair on SushiSwap, using approximately $1.035 million worth of WETH to sharply pump the price of INV. Because Inverse Finance's TWAP oracle had an excessively short time window, sampling prices from only two adjacent blocks, the protocol mistakenly accepted INV as collateral at the manipulated high price. The attacker t",
+    "references": [
+      {
+        "title": "Inverse Finance Case Recap: Oracle Manipulation Tactics Multiply, On-Chain Arbitrage Unfolds..."
+      }
+    ]
+  }
+}

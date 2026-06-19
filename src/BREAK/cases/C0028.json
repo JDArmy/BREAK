@@ -1,0 +1,33 @@
+{
+  "C0028": {
+    "title": "中国票务抢票应用生态系统研究",
+    "keywords": [
+      "票务抢票应用",
+      "黄牛",
+      "抢票机器人",
+      "不正当抢占",
+      "票务生态系统",
+      "中国票务",
+      "USENIX Security",
+      "票务资源"
+    ],
+    "summary": "一项关于中国票务抢票应用生态系统的研究指出，黄牛利用抢票机器人程序直接获取大量票务资源。该研究以中国为典型案例，探讨了票务抢购中的不正当抢占行为。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0003-004"
+    ],
+    "references": [
+      {
+        "title": "Tickets or privacy? understand the ecosystem of chinese ticket grabbing apps",
+        "link": "https://www.usenix.org/conference/usenixsecurity24/presentation/liu-yijing"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0045"
+    ],
+    "relatedThreatActors": [
+      "TA0002"
+    ]
+  }
+}

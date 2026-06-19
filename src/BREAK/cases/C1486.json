@@ -1,0 +1,31 @@
+{
+  "C1486": {
+    "title": "比特币轻客户端日食攻击检测方案",
+    "keywords": [
+      "比特币",
+      "轻客户端",
+      "日食攻击",
+      "Eclipse Attack",
+      "P2P网络",
+      "区块链视图",
+      "时间戳检测",
+      "gossip协议",
+      "无许可区块链"
+    ],
+    "summary": "比特币等无许可区块链系统的客户端依赖P2P网络收发交易，若客户端未连接到至少一个诚实节点，则可能遭受日食攻击，攻击者控制其所有连接并提供一个恶意分叉的区块链视图。该攻击可导致客户端基于扭曲的交易记录做出灾难性商业决策。研究提出了基于可疑区块时间戳和利用互联网自然连接进行区块链视图 gossip 的两种检测方案。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0186"
+    ],
+    "references": [
+      {
+        "title": "Decentralized Lightweight Detection of Eclipse Attacks on Bitcoin Clients",
+        "link": "https://ieeexplore.ieee.org/abstract/document/9284663/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2020-11",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

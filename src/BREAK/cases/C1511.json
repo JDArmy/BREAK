@@ -1,0 +1,34 @@
+{
+  "C1511": {
+    "title": "扩展现实设备安全与隐私分析",
+    "keywords": [
+      "扩展现实",
+      "XR设备",
+      "安全攻击",
+      "隐私保护",
+      "防御机制",
+      "AR/VR安全",
+      "设备安全分析",
+      "虚拟现实安全"
+    ],
+    "summary": "2024年2月，一篇学术论文对扩展现实（XR）设备的安全和隐私攻击及防御进行了以设备为中心的分析，强调了需要强大且具有隐私意识的安全机制来保护XR设备，并提出了未来的研究方向和设计考虑。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0191"
+    ],
+    "references": [
+      {
+        "title": "Augmenting Security and Privacy in the Virtual Realm: An Analysis of ...",
+        "link": "https://arxiv.org/pdf/2402.03114"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-02",
+    "relatedAttackTools": [
+      "AT0084"
+    ],
+    "relatedThreatActors": [
+      "TA0050"
+    ]
+  }
+}

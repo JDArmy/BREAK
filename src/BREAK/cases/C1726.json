@@ -1,0 +1,35 @@
+{
+  "C1726": {
+    "title": "Boaxxe恶意软件点击欺诈生态剖析",
+    "keywords": [
+      "Boaxxe",
+      "点击欺诈",
+      "广告点击注入",
+      "恶意软件",
+      "流量变现",
+      "欺诈流量",
+      "广告生态系统",
+      "Matthieu Faou"
+    ],
+    "summary": "Matthieu Faou等学者对Boaxxe恶意软件进行了7个月的纵向监测，详细剖析了其点击欺诈运作方案。该恶意软件通过自动点击广告生成欺诈流量，并利用广告生态系统中的特定参与者将欺诈流量注入合法市场以牟利。研究识别了可被施压以阻断点击欺诈流量变现的关键节点。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0237"
+    ],
+    "references": [
+      {
+        "title": "Follow the traffic: Stopping click fraud by disrupting the value chain",
+        "link": "https://ieeexplore.ieee.org/abstract/document/7907001/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2016-12",
+    "relatedAttackTools": [
+      "AT0013",
+      "AT0044"
+    ],
+    "relatedThreatActors": [
+      "TA0056"
+    ]
+  }
+}

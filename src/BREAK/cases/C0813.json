@@ -1,0 +1,31 @@
+{
+  "C0813": {
+    "title": "Zscaler因第三方平台遭供应链攻击致数据被窃",
+    "keywords": [
+      "Zscaler",
+      "供应链攻击",
+      "第三方平台",
+      "数据泄露",
+      "网络安全",
+      "客户支持工单",
+      "产品许可信息",
+      "漏洞利用"
+    ],
+    "summary": "全球网络安全公司Zscaler因第三方平台遭到供应链攻击，导致其数据被窃取。攻击者利用第三方平台的漏洞或权限，非法访问了Zscaler的系统，窃取了包括产品许可信息、客户支持工单等在内的敏感数据，凸显了网络安全公司自身也难以避免供应链风险。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0081"
+    ],
+    "references": [
+      {
+        "title": "网络空间安全动态(202533期)-教育数字化建设与服务中心",
+        "link": "https://metc.njtc.edu.cn/info/1141/5902.htm"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0023"
+    ]
+  }
+}

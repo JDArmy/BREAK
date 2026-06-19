@@ -1,0 +1,36 @@
+{
+  "C1078": {
+    "title": "连接商场免费WiFi致信用卡被盗刷",
+    "keywords": [
+      "山寨WiFi",
+      "免费WiFi",
+      "信用卡盗刷",
+      "无线网络风险",
+      "中间人攻击",
+      "个人信息窃取",
+      "商场WiFi",
+      "支付安全",
+      "江苏省公安厅"
+    ],
+    "summary": "2024年11月10日，李某在逛商场时连接了一个无密码的免费WiFi，期间使用手机银行支付后，连续收到多条短信提醒，发现信用卡被盗刷4笔，共计损失5300元。警方提醒该WiFi可能为不法分子搭建的“山寨WiFi”，用于窃取用户隐私信息和支付数据。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0112-006"
+    ],
+    "references": [
+      {
+        "title": "江苏省公安厅 防范提示 警惕!免费WiFi也能成为“盗贼”!",
+        "link": "http://gat.jiangsu.gov.cn/art/2024/12/18/art_89956_11449174.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-11",
+    "relatedAttackTools": [
+      "AT0069",
+      "AT0072"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

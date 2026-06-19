@@ -1,0 +1,21 @@
+{
+  "C1503": {
+    "title": "PhyScout: A Sensor Spoofing Attack Detection Framework",
+    "keywords": [
+      "PhyScout",
+      "sensor spoofing",
+      "spoofing detection",
+      "spatiotemporal consistency",
+      "sensor attacks",
+      "IoT defense framework",
+      "physical-layer spoofing",
+      "attack detection framework"
+    ],
+    "summary": "Researchers developed the PhyScout defense framework to detect spoofing attacks targeting sensors. The framework leverages spatiotemporal consistency to identify attacks, overcoming limitations of existing solutions that are restricted to specific attack types, require GPU computation, and suffer from high detection latency, aiming to provide holistic protection against various sensor spoofing att",
+    "references": [
+      {
+        "title": "PhyScout: Detecting Sensor Spoofing Attacks via Spatio-temporal ..."
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "C0561": {
+    "title": "伪装成消费者诈骗网络商家，男子获刑三年六个月",
+    "keywords": [
+      "恶意拒收",
+      "诈骗罪",
+      "电商平台漏洞",
+      "拒收快递",
+      "笔记本电脑",
+      "供应链损失",
+      "非法占有",
+      "宋某"
+    ],
+    "summary": "犯罪分子利用电商平台漏洞，在货物发出后拒收，到货后伪装成卖家重新寄走商品。通过拒收大件商品（如笔记本电脑）的方式，非法占有商家货物，造成卖家供应链损失。犯罪分子最终因诈骗罪获刑三年六个月。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0054-004"
+    ],
+    "references": [
+      {
+        "title": "伪装成消费者诈骗网络商家，男子获刑三年六个月",
+        "link": "https://k.sina.cn/article_1644114654_61ff32de02001vzga.html?from=news"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-11",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0010"
+    ]
+  }
+}

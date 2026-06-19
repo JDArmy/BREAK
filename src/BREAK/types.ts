@@ -66,3 +66,25 @@ export interface Term {
   references: Reference[];
   updated?: string;
 }
+
+export type CaseCategory =
+  | "criminal_verdict"
+  | "administrative_enforcement"
+  | "security_incident"
+  | "vulnerability_advisory"
+  | "academic_research"
+  | "news_report";
+
+export interface CaseEntity {
+  title: string;
+  keywords: string[];
+  summary: string;
+  description?: string;
+  category: CaseCategory;
+  incidentTime?: string;
+  relatedRisks: string[];
+  relatedAttackTools: string[];
+  relatedThreatActors: string[];
+  references: Reference[];
+  updated?: string;
+}

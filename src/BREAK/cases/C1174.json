@@ -1,0 +1,40 @@
+{
+  "C1174": {
+    "title": "幻想池平台API业务逻辑滥用致推荐奖励金被窃取",
+    "keywords": [
+      "API业务逻辑滥用",
+      "幻想池平台",
+      "OTP设计缺陷",
+      "速率限制缺失",
+      "推荐奖励金窃取",
+      "支付端点暴露",
+      "自动化攻击链",
+      "渗透测试",
+      "API安全评估"
+    ],
+    "summary": "某移动端幻想池平台API渗透测试发现，攻击者可通过组合OTP设计缺陷、缺失的速率限制及公开的内部支付方式端点，构造完全自动化的业务逻辑滥用链，在不进行任何真实支付的情况下，从推荐计划中提取真实货币奖励。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0126-003"
+    ],
+    "references": [
+      {
+        "title": "API Security Assessment — Business Logic Abuse in a ... - GitHub",
+        "link": "https://github.com/rickyma18/api-pentest-otp-business-logic"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0061",
+      "AT0023",
+      "AT0014",
+      "AT0085",
+      "AT0090"
+    ],
+    "relatedThreatActors": [
+      "TA0001",
+      "TA0051",
+      "TA0055"
+    ]
+  }
+}

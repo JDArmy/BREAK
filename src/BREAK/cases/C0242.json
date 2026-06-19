@@ -1,0 +1,28 @@
+{
+  "C0242": {
+    "title": "YouTube上的产品垃圾信息：一项案例研究",
+    "keywords": [
+      "YouTube",
+      "产品垃圾",
+      "垃圾视频",
+      "SEO污染",
+      "内容质量",
+      "搜索结果污染",
+      "平台治理"
+    ],
+    "summary": "该案例研究揭示了YouTube平台上存在大量产品垃圾视频，这些视频通过低质量的SEO内容污染产品搜索结果。研究发现垃圾视频的比例相当高，严重影响了平台的内容质量和用户搜索体验。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0021"
+    ],
+    "references": [
+      {
+        "title": "Product spam on youtube: A case study",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3627508.3638303"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

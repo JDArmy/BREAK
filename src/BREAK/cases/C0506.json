@@ -1,0 +1,34 @@
+{
+  "C0506": {
+    "title": "欺诈者在国际绕过欺诈中伪装踪迹的程度研究",
+    "keywords": [
+      "国际通信绕过欺诈",
+      "欺诈者踪迹伪装",
+      "运营商网络拓扑",
+      "模拟器规避检测",
+      "虚拟设备识别绕过",
+      "OpenCellID",
+      "电信欺诈",
+      "ACM CCS",
+      "网络拓扑分析"
+    ],
+    "summary": "2024年发表的学术研究探讨了欺诈者在国际通信绕过欺诈中如何伪装其踪迹。研究提取了运营商网络拓扑结构，并分析了欺诈者如何利用模拟器等手段进行伪装，以规避检测。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0050-001"
+    ],
+    "references": [
+      {
+        "title": "Battle of Wits: To What Extent Can Fraudsters Disguise Their Tracks in International bypass Fraud?",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3634737.3657023"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-05",
+    "relatedAttackTools": [
+      "AT0002",
+      "AT0048"
+    ],
+    "relatedThreatActors": []
+  }
+}

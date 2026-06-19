@@ -1,0 +1,32 @@
+{
+  "C1759": {
+    "title": "MFA疲劳攻击辅助获取绕过码",
+    "keywords": [
+      "MFA疲劳攻击",
+      "MFA绕过",
+      "多重身份验证",
+      "社会工程学",
+      "身份认证绕过",
+      "验证码泄露",
+      "多因素认证",
+      "安全分析"
+    ],
+    "summary": "2026年4月，安全分析指出，攻击者利用MFA疲劳攻击作为辅助手段，频繁发送MFA验证请求施压，迫使用户批准欺诈性请求，同时伺机诱导用户泄露MFA绕过码，从而完全绕过MFA防护，获取系统访问权限。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0246"
+    ],
+    "references": [
+      {
+        "title": "MFA(多重身份验证)绕过码风险解析,如何管控MFA绕过风险,筑牢身份认证...",
+        "link": "https://blog.csdn.net/ITmoster/article/details/160594926"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-04",
+    "relatedAttackTools": [
+      "AT0094"
+    ],
+    "relatedThreatActors": []
+  }
+}

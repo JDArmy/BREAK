@@ -1,0 +1,33 @@
+{
+  "C1749": {
+    "title": "检测与防御AI模型的数据投毒攻击",
+    "keywords": [
+      "数据投毒",
+      "AI模型安全",
+      "对抗训练",
+      "统计异常检测",
+      "CIFAR-10",
+      "欺诈检测",
+      "训练数据投毒",
+      "模型鲁棒性"
+    ],
+    "summary": "实验结果表明，数据投毒会显著降低模型性能，在图像识别任务中分类准确率下降高达27%，在欺诈检测模型中下降22%。研究提出的防御机制，包括统计异常检测和对抗训练，成功减轻了投毒影响。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0243"
+    ],
+    "references": [
+      {
+        "title": "Detecting and Preventing Data Poisoning Attacks on AI Models",
+        "link": "https://arxiv.org/pdf/2503.09302"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0093"
+    ],
+    "relatedThreatActors": [
+      "TA0058"
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "C1436": {
+    "title": "Manta Network DDoS攻击导致Gas费飙升",
+    "keywords": [
+      "Manta Network",
+      "DDoS攻击",
+      "Gas费飙升",
+      "RPC节点拥堵",
+      "Gas费补偿",
+      "0.001 ETH",
+      "Gas费操纵",
+      "2024年1月"
+    ],
+    "summary": "2024年1月，Manta Network遭遇非法DDoS攻击，导致RPC节点严重拥堵。攻击期间，大量待处理交易堆积，引发Gas费竞价战，用户被迫支付远高于正常水平的Gas费。Manta Network随后宣布，将退还用户在攻击期间支付的高于0.001 ETH的Gas费，以补偿用户损失。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0173"
+    ],
+    "references": [
+      {
+        "title": "Manta Network：将对在网络遭遇 DDoS 攻击期间花费高于 0.001 ETH Gas 费的用户进行补偿",
+        "link": "https://cloud.tencent.com/developer/news/1296841"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-01",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

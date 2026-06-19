@@ -1,0 +1,22 @@
+{
+  "C1691": {
+    "title": "Log4j Vulnerability Response Delays Expose SBOM Gaps",
+    "keywords": [
+      "Log4j",
+      "SBOM",
+      "Software Bill of Materials",
+      "vulnerability response",
+      "dependency visibility",
+      "Apache Log4j",
+      "Java application security",
+      "OWASP",
+      "software supply chain security"
+    ],
+    "summary": "In late 2021, a critical vulnerability in Apache Log4j impacted nearly all Java-based applications. Many organizations lacked visibility into their software components and dependencies, making it difficult to assess whether systems were compromised. This led to significant delays in responding to the discovered vulnerability, highlighting the inability to quickly determine impact without a Softwar",
+    "references": [
+      {
+        "title": "Advisory on Software Bill of Materials and Real-time Vulnerability ..."
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "C0011": {
+    "title": "Research on Coupon Code Enumeration Vulnerabilities in E-Commerce Platforms",
+    "keywords": [
+      "coupon enumeration",
+      "brute-force attack",
+      "ID enumeration",
+      "e-commerce security",
+      "coupon code",
+      "attack vector",
+      "web security"
+    ],
+    "summary": "A study on e-commerce platform security weaknesses reveals that attackers can enumerate all valid coupon codes by brute-forcing coupon IDs.",
+    "references": [
+      {
+        "title": "All Your Shops Are Belong to Us: Security Weaknesses in E-Commerce Platforms"
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C1299": {
+    "title": "API Key Leak Exposes Enterprise Employee Data via HR System",
+    "keywords": [
+      "API key leak",
+      "Base64 encoding",
+      "HR system",
+      "employee data exposure",
+      "broken authentication",
+      "main.js",
+      "Ace Candelario",
+      "subdomain enumeration"
+    ],
+    "summary": "In February 2020, bug bounty hunter Ace Candelario discovered an unobfuscated Base64-encoded API key in a main.js file during subdomain enumeration. The key granted access to an HR system API endpoint, allowing an attacker to retrieve, view, delete, and update all employee records. The vulnerability was classified as broken user authentication.",
+    "references": [
+      {
+        "title": "API Security Technology and Practice_3.3 API KEY Leak Vulnerability Read Online-QQ Reading"
+      }
+    ]
+  }
+}

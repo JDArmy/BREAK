@@ -1,0 +1,32 @@
+{
+  "C0854": {
+    "title": "RaaS成为勒索攻击主流框架",
+    "keywords": [
+      "勒索软件即服务",
+      "RaaS",
+      "Conti",
+      "REvil",
+      "LockBit",
+      "勒索攻击",
+      "网络犯罪商业模式",
+      "赎金分成"
+    ],
+    "summary": "2025年5月，FreeBuf报道称勒索软件即服务（RaaS）已成为网络犯罪主要商业模式。RaaS运营商向附属团伙提供可定制的勒索软件、基础设施和支付处理，收取20%-30%的赎金分成。Conti、REvil和LockBit等组织已建立成熟运营架构，配备用户友好型仪表盘和客服门户。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0085-001"
+    ],
+    "references": [
+      {
+        "title": "勒索软件即服务(RaaS)已成为勒索攻击的主流框架 - FreeBuf网络...",
+        "link": "https://www.freebuf.com/articles/es/430370.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-05",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0017"
+    ]
+  }
+}

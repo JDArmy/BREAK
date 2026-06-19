@@ -1,0 +1,34 @@
+{
+  "C1403": {
+    "title": "Deus DAO 单点依赖风险与闪电贷治理攻击",
+    "keywords": [
+      "Deus DAO",
+      "闪电贷",
+      "治理攻击",
+      "单点依赖",
+      "DAO 漏洞",
+      "治理接管",
+      "IEEE",
+      "安全分析"
+    ],
+    "summary": "IEEE 会议论文《Unveiling Vulnerabilities in DAO》分析了 54 个真实攻击事件，指出 Deus DAO 因依赖单一组件而面临重大风险，同时闪电贷与多起治理攻击相关。研究将治理接管列为 DAO 关键漏洞之一。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0167"
+    ],
+    "references": [
+      {
+        "title": "Unveiling vulnerabilities in DAO: A comprehensive security analysis and protective framework",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10411467/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0077"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

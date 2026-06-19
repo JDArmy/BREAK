@@ -1,0 +1,21 @@
+{
+  "C0512": {
+    "title": "Reverse Engineering API Encryption and Decryption Analysis",
+    "keywords": [
+      "API reverse engineering",
+      "AES decryption",
+      "browser breakpoint debugging",
+      "CryptoJS",
+      "JavaScript reverse engineering",
+      "HTTP request interception",
+      "LLM-assisted analysis",
+      "encryption algorithm reconstruction"
+    ],
+    "summary": "During analysis of a foreign website, the core API was found to return encrypted strings. By setting browser breakpoints, the API request was intercepted and the decryption method was traced. Analysis of the JavaScript code confirmed the use of AES encryption. A large language model was then used to assist in analyzing and reconstructing the encryption and decryption algorithms, successfully decry",
+    "references": [
+      {
+        "title": "Cracking API encryption reverse interface analysis, this article covers it all - Reverse API CSDN Blog"
+      }
+    ]
+  }
+}

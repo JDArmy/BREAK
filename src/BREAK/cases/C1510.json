@@ -1,0 +1,37 @@
+{
+  "C1510": {
+    "title": "鸿蒙AR/VR数据安全与隐私保护实践",
+    "keywords": [
+      "鸿蒙",
+      "AR/VR",
+      "数据安全",
+      "隐私保护",
+      "IMU",
+      "眼动追踪",
+      "SLAM",
+      "重放攻击",
+      "差分隐私",
+      "空间锚点"
+    ],
+    "summary": "2025年4月，一篇技术文章分析了AR/VR设备面临的多模态数据采集隐私风险，包括IMU运动数据、眼动追踪生物特征、空间锚点等敏感信息泄露。文章指出未受保护的SLAM数据可能遭受重放攻击导致虚拟物体错位，并提出了基于鸿蒙系统的加密和差分隐私保护方案。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0191"
+    ],
+    "references": [
+      {
+        "title": "鸿蒙AR/VR开发:05-AR/VR数据安全与隐私保护实践 - 简书",
+        "link": "https://www.jianshu.com/p/f1213b6cb304"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-04",
+    "relatedAttackTools": [
+      "AT0084",
+      "AT0086"
+    ],
+    "relatedThreatActors": [
+      "TA0050"
+    ]
+  }
+}

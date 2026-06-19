@@ -1,0 +1,23 @@
+{
+  "C0868": {
+    "title": "CISA Releases #StopRansomware Guide, Highlights Double Extortion Trends",
+    "keywords": [
+      "CISA",
+      "StopRansomware",
+      "double extortion",
+      "data exfiltration",
+      "ransomware",
+      "file encryption",
+      "ransom",
+      "FBI",
+      "NSA",
+      "MS-ISAC"
+    ],
+    "summary": "The CISA guide notes that ransomware renders systems unusable by encrypting files, after which malicious actors demand a ransom for decryption. Attackers have evolved more destructive tactics, including stealing data and threatening to leak it—known as double extortion.",
+    "references": [
+      {
+        "title": "#StopRansomware Guide | CISA"
+      }
+    ]
+  }
+}

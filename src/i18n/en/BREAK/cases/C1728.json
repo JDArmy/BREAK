@@ -1,0 +1,21 @@
+{
+  "C1728": {
+    "title": "Investigation and Case Study of Click Fraud Malware",
+    "keywords": [
+      "click fraud",
+      "malware",
+      "ad traffic fraud",
+      "monetization",
+      "ad click injection",
+      "fake traffic",
+      "Tommy Blizard",
+      "Nikola Livic"
+    ],
+    "summary": "A 2012 paper by Tommy Blizard and Nikola Livic examines how malware is used to generate fraudulent advertising traffic. The study details how such attacks produce seemingly natural fake ad clicks at massive scale while remaining stealthy, allowing illicit monetization. The paper also proposes new methods to counter this form of malware-driven revenue generation.",
+    "references": [
+      {
+        "title": "Click-fraud monetizing malware: A survey and case study"
+      }
+    ]
+  }
+}

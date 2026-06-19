@@ -85,6 +85,7 @@ for (const expectedType of [
   'BreakAttackTool',
   'BreakThreatActor',
   'BreakTerm',
+  'BreakCase',
 ]) {
   expectIncludes(issues, 'index.d.ts', typeText, expectedType);
 }

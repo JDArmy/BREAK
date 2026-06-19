@@ -1,0 +1,23 @@
+{
+  "C1709": {
+    "title": "You Have Been LaTeXpOsEd: A Systematic Analysis of Information Leakage in Preprint Archives Using Large Language Models",
+    "keywords": [
+      "preprint archives",
+      "information leakage",
+      "Google Drive links",
+      "API key exposure",
+      "large language models",
+      "arXiv",
+      "collaborative documents",
+      "link-based access",
+      "semantic leakage",
+      "LaTeX"
+    ],
+    "summary": "A systematic study reveals information leakage in preprint archives, including exposed Google Drive links, API keys, and various forms of semantic leakage. The research indicates that documents shared for collaboration can inadvertently lead to link-based access leaks, where private documents or credentials become exposed through shared links.",
+    "references": [
+      {
+        "title": "You Have Been LaTeXpOsEd: A Systematic Analysis of Information Leakage in Preprint Archives Using Large Language Models"
+      }
+    ]
+  }
+}

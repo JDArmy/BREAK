@@ -1,0 +1,35 @@
+{
+  "C1543": {
+    "title": "Balancer协议通缩代币漏洞",
+    "keywords": [
+      "Balancer",
+      "通缩代币",
+      "DeFi安全",
+      "闪电贷攻击",
+      "资金损失",
+      "协议漏洞",
+      "代币机制",
+      "AMM"
+    ],
+    "summary": "Balancer协议因对通缩代币处理不当，攻击者利用该漏洞造成约52万美元的损失。自2020年上线以来，Balancer多次遭遇类似安全事件，最早可追溯到早期的通缩代币漏洞。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0198"
+    ],
+    "references": [
+      {
+        "title": "5年6次事故损失破亿,回顾老牌DeFi协议Balancer的黑客光顾史_腾讯...",
+        "link": "https://view.inews.qq.com/a/20251104A02PWU00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-11",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0077"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

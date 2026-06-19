@@ -1,0 +1,34 @@
+{
+  "C1658": {
+    "title": "vAPI靶场API1越权漏洞示例",
+    "keywords": [
+      "vAPI",
+      "API越权",
+      "对象级越权",
+      "IDOR",
+      "Authorization-Token",
+      "用户枚举",
+      "漏洞靶场",
+      "FreeBuf"
+    ],
+    "summary": "vAPI漏洞靶场的API1接口存在对象级越权漏洞。在获取用户信息时，接口仅验证了Authorization-Token的有效性，未校验Token对应的用户与请求中目标用户ID的归属关系。攻击者只需拥有任意有效Token，即可通过枚举用户ID获取其他用户的敏感信息，甚至修改他人数据。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0223"
+    ],
+    "references": [
+      {
+        "title": "vAPI-API漏洞靶场通关指南 - FreeBuf网络安全行业门户",
+        "link": "https://www.freebuf.com/vuls/332312.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-05",
+    "relatedAttackTools": [
+      "AT0085"
+    ],
+    "relatedThreatActors": [
+      "TA0051"
+    ]
+  }
+}

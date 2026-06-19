@@ -1,0 +1,31 @@
+{
+  "C1470": {
+    "title": "特斯拉Autopilot遭NHTSA安全调查：11起事故致1人死亡",
+    "keywords": [
+      "特斯拉",
+      "Autopilot",
+      "NHTSA",
+      "自动驾驶",
+      "安全调查",
+      "交通事故",
+      "静态障碍物识别",
+      "紧急车辆碰撞",
+      "车联网安全"
+    ],
+    "summary": "2021年8月，美国国家公路交通安全管理局（NHTSA）对特斯拉Autopilot自动辅助驾驶系统展开安全调查，涉及2014-2021年款76.5万辆Model Y/X/S/3。调查源于11起开启Autopilot的特斯拉车辆撞上停放在路边并开启警示灯的紧急车辆（含7辆警车）的事故，共致1人死亡、多人受伤。部分司机存在酒驾或分心驾驶行为，暴露了自动驾驶系统在识别静态障碍物方面的缺陷。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0180"
+    ],
+    "references": [
+      {
+        "title": "特斯拉遭安全调查:11起事故中7辆警车被撞,3司机酒驾1人死亡_腾讯...",
+        "link": "https://new.qq.com/omn/ENT20190/20210820A0AB6Q00.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-08",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

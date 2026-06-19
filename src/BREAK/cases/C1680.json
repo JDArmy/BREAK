@@ -1,0 +1,37 @@
+{
+  "C1680": {
+    "title": "IronWorm与新变种Miasma蠕虫通过供应链攻击入侵npm",
+    "keywords": [
+      "npm",
+      "供应链攻击",
+      "IronWorm",
+      "Miasma",
+      "恶意包",
+      "Rust",
+      "窃密程序",
+      "蠕虫",
+      "构建投毒",
+      "后门"
+    ],
+    "summary": "2026年6月，npm生态系统遭受多起供应链攻击，威胁行为者利用50多个合法npm包的恶意版本和投毒版本，分发Rust编写的窃密程序和自传播蠕虫。攻击者通过篡改这些包的代码，使得使用它们的项目在构建时生成带有后门的产物。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0227"
+    ],
+    "references": [
+      {
+        "title": "IronWorm and New Miasma Worm Variant Hit npm in Supply Chain Attacks",
+        "link": "https://thehackernews.com/2026/06/ironworm-and-new-miasma-worm-variant.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-06",
+    "relatedAttackTools": [
+      "AT0013",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "C0896": {
+    "title": "百姓案例 | 一套账号密码行走网络?当心“撞库”盗窃你个人信息",
+    "keywords": [
+      "撞库",
+      "Steam扫号器",
+      "批量扫号",
+      "公民个人信息",
+      "游戏账号",
+      "盗取密码",
+      "非法获利",
+      "邮箱账号"
+    ],
+    "summary": "2023年7月案例显示，犯罪分子购买公民个人邮箱账号等信息，通过Steam扫号器进行撞库，批量盗取公民的Steam游戏账号和密码，实施非法获利。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0090"
+    ],
+    "references": [
+      {
+        "title": "百姓案例 | 一套账号密码行走网络?当心“撞库”盗窃你个人信息",
+        "link": "https://mp.weixin.qq.com/s?__biz=MzA3NTQ4ODg4OA==&mid=2650897131&idx=3&sn=9650bfae4d8aa56563d1dc51246e5113&chksm=849a11fcb3ed98ea80f7633fc6917330fe1de9f99ae9d1f98752b230d36cdeb4b126c0ad904f&scene=27"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-07",
+    "relatedAttackTools": [
+      "AT0042"
+    ],
+    "relatedThreatActors": []
+  }
+}

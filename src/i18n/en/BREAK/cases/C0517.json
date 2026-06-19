@@ -1,0 +1,23 @@
+{
+  "C0517": {
+    "title": "iOS App Hardening Whitepaper: IPA Encryption, Decompilation Defense, and Source-less Obfuscation",
+    "keywords": [
+      "iOS app hardening",
+      "IPA encryption",
+      "decompilation defense",
+      "symbol obfuscation",
+      "Ipa Guard",
+      "class-dump",
+      "IDA Pro",
+      "jailbreak detection",
+      "binary perturbation",
+      "source-less obfuscation"
+    ],
+    "summary": "The article reveals that in jailbroken environments with widespread decompilation tools, attackers can rapidly parse symbol tables, method names, and logic structures from IPA files using class-dump or IDA Pro, exposing core algorithms, payment flows, and encryption protocols. An unprotected IPA is nearly equivalent to open-source code. It introduces defense solutions like Ipa Guard that apply sym",
+    "references": [
+      {
+        "title": "iOS App Hardening White Paper: IPA File Encryption, Decompilation Protection, and Source-less Obfuscation"
+      }
+    ]
+  }
+}

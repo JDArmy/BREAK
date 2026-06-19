@@ -1,0 +1,21 @@
+{
+  "C0311": {
+    "title": "Real-Time Detection of Slow HTTP/2 Denial-of-Service Attacks",
+    "keywords": [
+      "Slow HTTP/2 DoS",
+      "denial-of-service attack",
+      "event sequence analysis",
+      "real-time detection",
+      "HTTP/2 protocol",
+      "web server vulnerability",
+      "traffic analysis",
+      "empirical study"
+    ],
+    "summary": "Researchers conducted an empirical study of Slow HTTP/2 DoS attacks against web servers on the internet and identified multiple vulnerable servers. Attackers exploit HTTP/2 protocol features by sending requests slowly to exhaust server resources, causing denial of service. The study proposes a real-time detection scheme based on event sequence analysis.",
+    "references": [
+      {
+        "title": "Delays Have Dangerous Ends: Slow HTTP/2 DoS Attacks Into the Wild and Their Real-Time Detection Using Event Sequence Analysis"
+      }
+    ]
+  }
+}

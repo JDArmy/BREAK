@@ -1,0 +1,37 @@
+{
+  "C1173": {
+    "title": "法拉利API接口权限滥用致客户信息完全接管",
+    "keywords": [
+      "法拉利",
+      "API",
+      "权限滥用",
+      "客户信息接管",
+      "业务逻辑缺陷",
+      "api.ferrari.com",
+      "超级管理员",
+      "车联网安全"
+    ],
+    "summary": "2023年1月，安全研究人员发现法拉利系统api.ferrari.com存在业务逻辑缺陷，经销商测试网站JS代码暴露了API密钥。攻击者利用该密钥访问后台用户管理接口，可创建超级管理员账户，进而访问、修改、删除所有客户信息及管理CMS功能。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0126-003"
+    ],
+    "references": [
+      {
+        "title": "2023年车联网重大安全事件汇总_腾讯新闻",
+        "link": "https://new.qq.com/rain/a/20240115A00XJK00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-01",
+    "relatedAttackTools": [
+      "AT0061",
+      "AT0085",
+      "AT0097"
+    ],
+    "relatedThreatActors": [
+      "TA0051",
+      "TA0061"
+    ]
+  }
+}

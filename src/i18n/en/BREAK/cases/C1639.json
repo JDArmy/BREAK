@@ -1,0 +1,22 @@
+{
+  "C1639": {
+    "title": "Investigating Attacks on AR/VR Systems: A Forensic Methodology",
+    "keywords": [
+      "AR/VR forensics",
+      "attack investigation",
+      "log analysis",
+      "XR firmware",
+      "USENIX Security",
+      "case study",
+      "attack behavior analysis",
+      "augmented reality security",
+      "virtual reality forensics"
+    ],
+    "summary": "A study on forensic investigation of attacks targeting AR/VR systems, demonstrating the effectiveness of its methodology through two case studies. The research unifies logs across the AR/VR software stack to analyze and investigate attack behaviors against these systems.",
+    "references": [
+      {
+        "title": "Principled and Automated Approach for Investigating AR/VR Attacks"
+      }
+    ]
+  }
+}

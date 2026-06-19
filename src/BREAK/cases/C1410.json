@@ -1,0 +1,31 @@
+{
+  "C1410": {
+    "title": "韩国首次逮捕与Memecoin Rug Pull相关的嫌疑人",
+    "keywords": [
+      "韩国",
+      "Pump.fun",
+      "Memecoin",
+      "Rug Pull",
+      "逮捕",
+      "加密货币诈骗",
+      "投资者损失",
+      "项目方跑路"
+    ],
+    "summary": "韩国检察官逮捕了与Pump.fun平台上Memecoin Rug Pull相关的嫌疑人，该骗局导致投资者损失约59.9万美元。这是韩国首次因Memecoin Rug Pull实施逮捕。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0168"
+    ],
+    "references": [
+      {
+        "title": "South Korea Makes First Arrest Tied to Memecoin Rug Pull: report",
+        "link": "https://cointelegraph.com/news/south-korea-first-arrest-memecoin-rug-pull-report"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0039"
+    ]
+  }
+}

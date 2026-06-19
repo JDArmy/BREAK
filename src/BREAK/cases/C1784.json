@@ -1,0 +1,31 @@
+{
+  "C1784": {
+    "title": "FRAC框架设计抵御去中心化身份系统中的凭证欺诈",
+    "keywords": [
+      "FRAC",
+      "去中心化身份",
+      "凭证欺诈",
+      "访问控制",
+      "Merkle树",
+      "防欺诈",
+      "凭证撤销",
+      "IEEE",
+      "可证明安全"
+    ],
+    "summary": "2026年3月发表于IEEE的研究提出FRAC（灵活防欺诈访问控制）框架，旨在解决去中心化身份系统中凭证欺诈问题，如凭证盗窃和已撤销凭证重用。该框架通过Merkle树实现格式无关的防欺诈机制，仅需轻量级哈希和签名验证即可防止恶意凭证使用，为抵抗凭证伪造提供了可证明的安全方案。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0253"
+    ],
+    "references": [
+      {
+        "title": "Flexible and Privacy-Preserving Access Control Framework for Decentralized Identity Systems",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11450467/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-03",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

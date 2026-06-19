@@ -1,0 +1,23 @@
+{
+  "C1683": {
+    "title": "Preinstall to persistence: Inside the Red Hat npm Miasma credential stealing campaign",
+    "keywords": [
+      "npm",
+      "supply chain attack",
+      "credential stealing",
+      "Red Hat",
+      "CI/CD",
+      "preinstall script",
+      "malicious package",
+      "GitHub",
+      "cloud credentials",
+      "worm-like propagation"
+    ],
+    "summary": "Microsoft disclosed a large-scale npm supply chain attack in which threat actors compromised packages associated with @redhat-cloud-services and injected malicious code across more than 90 versions. The malware exploited npm preinstall scripts to execute silently in CI/CD environments and developer systems, stealing GitHub, cloud platform, and local machine credentials, then republished trusted pa",
+    "references": [
+      {
+        "title": "Preinstall to persistence: Inside the Red Hat npm Miasma credential ..."
+      }
+    ]
+  }
+}

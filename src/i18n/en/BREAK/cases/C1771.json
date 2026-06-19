@@ -1,0 +1,21 @@
+{
+  "C1771": {
+    "title": "Supabase Edge Functions JWT Authentication Bypass Risk",
+    "keywords": [
+      "Supabase",
+      "Edge Functions",
+      "JWT",
+      "service role key",
+      "authentication bypass",
+      "Authorization Bearer",
+      "401 error",
+      "Edge Function configuration"
+    ],
+    "summary": "A Supabase community discussion highlights that the service role key, while granting database permissions within code, does not automatically bypass JWT verification on Edge Function gateways. If JWT verification is enabled on an Edge Function, requests must still include a valid Authorization: Bearer header; otherwise, a 401 Unauthorized error is returned. This reveals a risk where authentication",
+    "references": [
+      {
+        "title": "[Edge Functions] Invoking any Edge Function fails with 401 ..."
+      }
+    ]
+  }
+}

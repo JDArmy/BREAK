@@ -1,0 +1,21 @@
+{
+  "C1619": {
+    "title": "Detection of Compromised Nodes to Mitigate Poisoning Attacks in IoT Networks",
+    "keywords": [
+      "IoT network",
+      "poisoning attack",
+      "node compromise detection",
+      "NoComP framework",
+      "neural network",
+      "data integrity",
+      "edge computing security",
+      "malicious data injection"
+    ],
+    "summary": "This study proposes a framework called NoComP for identifying compromised nodes in IoT networks. Attackers infiltrate and control IoT nodes to inject malicious data, known as poisoning attacks, thereby corrupting the entire dataset. The framework employs neural network algorithms to detect and remove these compromised nodes, preserving data integrity.",
+    "references": [
+      {
+        "title": "GitHub - Vuseghesa/Detection_Compromise_Nodes"
+      }
+    ]
+  }
+}

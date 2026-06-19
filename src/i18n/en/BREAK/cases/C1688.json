@@ -1,0 +1,23 @@
+{
+  "C1688": {
+    "title": "36 Malicious npm Packages Exploited Redis, PostgreSQL to Deploy Backdoors",
+    "keywords": [
+      "malicious npm packages",
+      "dependency confusion",
+      "Strapi plugin",
+      "postinstall script",
+      "Redis exploitation",
+      "PostgreSQL backdoor",
+      "supply chain attack",
+      "npm malware",
+      "package manager attack",
+      "data exfiltration"
+    ],
+    "summary": "Security researchers discovered 36 malicious npm packages disguised as Strapi plugins that executed malicious code immediately upon installation via postinstall scripts. These packages leveraged dependency confusion techniques to target Redis and PostgreSQL database services, achieving persistent access and data theft, demonstrating how attackers exploit package manager automation scripts to deliv",
+    "references": [
+      {
+        "title": "36 Malicious npm Packages Exploited Redis, PostgreSQL to Deploy ..."
+      }
+    ]
+  }
+}

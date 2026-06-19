@@ -1,0 +1,31 @@
+{
+  "C1646": {
+    "title": "HarassGuard系统：利用视觉语言模型检测社交VR中的骚扰行为",
+    "keywords": [
+      "HarassGuard",
+      "视觉语言模型",
+      "社交VR",
+      "骚扰检测",
+      "元宇宙安全",
+      "内容审核",
+      "物理骚扰",
+      "隐私保护",
+      "主动检测"
+    ],
+    "summary": "一篇2026年的学术论文介绍了HarassGuard系统，该系统基于视觉语言模型，仅通过视觉输入检测社交VR中的物理骚扰行为。研究指出，社交VR平台在提供沉浸式体验的同时，也让用户面临严重的网络骚扰风险，而现有的安全措施多为被动响应。该系统旨在提供一种保护隐私的主动检测方案，准确率最高可达88.09%。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0219"
+    ],
+    "references": [
+      {
+        "title": "HarassGuard: Detecting Harassment Behaviors in Social Virtual Reality with Vision-Language Models",
+        "link": "https://arxiv.org/abs/2604.00592"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-04",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

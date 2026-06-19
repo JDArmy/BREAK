@@ -1,0 +1,21 @@
+{
+  "C1595": {
+    "title": "Implantable Medical Devices Face Multiple Feasible Attack Threats",
+    "keywords": [
+      "implantable medical devices",
+      "pacemaker",
+      "insulin pump",
+      "wireless attack",
+      "communication vulnerabilities",
+      "IoMT",
+      "security trade-offs",
+      "CPS security"
+    ],
+    "summary": "This study examines the security trade-offs in implantable medical devices such as pacemakers and insulin pumps, cataloging feasible attacks against them. Attackers can exploit communication vulnerabilities to launch wireless attacks, tampering with device parameters or disrupting therapy, thereby directly endangering patient lives.",
+    "references": [
+      {
+        "title": "Security Tradeoffs in Cyber Physical Systems: A Case Study Survey on Implantable Medical Devices"
+      }
+    ]
+  }
+}

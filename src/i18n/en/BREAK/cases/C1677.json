@@ -1,0 +1,21 @@
+{
+  "C1677": {
+    "title": "Typosquatted npm Packages Steal Cloud and CI/CD Secrets",
+    "keywords": [
+      "typosquatting",
+      "malicious npm packages",
+      "cloud credential theft",
+      "CI/CD secret exfiltration",
+      "Mini Shai-Hulud",
+      "supply chain attack",
+      "dependency confusion",
+      "Microsoft security team"
+    ],
+    "summary": "Microsoft’s security team identified an attack campaign dubbed Mini Shai-Hulud that uses typosquatted malicious npm packages to steal cloud credentials and CI/CD secrets from developer environments. The report details the attack chain, detection opportunities, and mitigation guidance to help organizations identify and disrupt related activity.",
+    "references": [
+      {
+        "title": "Typosquatted npm Packages Used to Steal Cloud and CI/CD Secrets"
+      }
+    ]
+  }
+}

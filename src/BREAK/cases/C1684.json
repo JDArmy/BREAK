@@ -1,0 +1,34 @@
+{
+  "C1684": {
+    "title": "恶意Py包perfviewer开展Windows木马远程植入攻击",
+    "keywords": [
+      "PyPI",
+      "perfviewer",
+      "依赖混淆",
+      "恶意包投毒",
+      "Windows木马",
+      "远程植入",
+      "供应链攻击",
+      "Python恶意包"
+    ],
+    "summary": "2025年11月24日，攻击者连续发布5个版本的恶意PyPI组件包perfviewer，利用依赖混淆攻击手法，诱导开发者下载。该包在安装时执行远程木马植入，对Windows系统构成威胁。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0228"
+    ],
+    "references": [
+      {
+        "title": "供应链投毒预警 | 恶意Py包开展Windows木马远程植入攻击 - 知乎",
+        "link": "https://zhuanlan.zhihu.com/p/1976237169065624278"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-11",
+    "relatedAttackTools": [
+      "AT0013"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

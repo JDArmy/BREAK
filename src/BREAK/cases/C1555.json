@@ -1,0 +1,29 @@
+{
+  "C1555": {
+    "title": "跨链桥安全攻击面与防御研究综述",
+    "keywords": [
+      "跨链桥",
+      "攻击面",
+      "防御",
+      "攻击分类",
+      "保险机制",
+      "区块链安全",
+      "Layer2",
+      "跨链协议"
+    ],
+    "summary": "研究调查了35起跨链桥攻击事件，建立攻击分类体系，并探讨建立保险机制以补偿用户在攻击中的损失。该综述系统梳理了跨链桥的各类攻击向量。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0200"
+    ],
+    "references": [
+      {
+        "title": "Security of cross-chain bridges: Attack surfaces, defenses, and open problems",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3678890.3678894"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C0785": {
+    "title": "Trivy Supply Chain Attack: CI/CD Pipeline Credential Theft",
+    "keywords": [
+      "Trivy supply chain attack",
+      "CI/CD pipeline security",
+      "credential theft malware",
+      "software supply chain compromise",
+      "distribution channel abuse",
+      "CI/CD malware injection",
+      "Trivy vulnerability scanner",
+      "supply chain detection defense"
+    ],
+    "summary": "A threat actor abused the trusted Trivy distribution channel to inject credential-stealing malware into CI/CD pipelines globally. This analysis details the attacker techniques, intrusion methods, and provides security teams with concrete steps for detection and defense against similar attacks. The incident highlights the severe risk of development tools becoming attack vectors within the software ",
+    "references": [
+      {
+        "title": "Guidance for detecting, investigating, and defending against the Trivy ..."
+      }
+    ]
+  }
+}

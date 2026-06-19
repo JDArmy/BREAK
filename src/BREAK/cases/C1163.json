@@ -1,0 +1,32 @@
+{
+  "C1163": {
+    "title": "柏林DPA要求苹果和谷歌下架DeepSeek应用",
+    "keywords": [
+      "柏林数据保护局",
+      "Apple",
+      "Google",
+      "DeepSeek",
+      "数字服务法",
+      "DSA",
+      "GDPR",
+      "数据跨境传输",
+      "应用下架",
+      "数据保护"
+    ],
+    "summary": "2025年9月30日报道，柏林数据保护局（DPA）援引《数字服务法》（DSA）第16条，向苹果和谷歌发出通知，要求其下架DeepSeek应用，理由是涉嫌违反GDPR规定将数据非法传输至中国。此举引发争议，被认为是用内容审核工具处理复杂数据跨境纠纷，可能使平台成为隐私争议的准司法仲裁者。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0125"
+    ],
+    "references": [
+      {
+        "title": "From Transfers to Takedowns: Can Article 16 DSA Police GDPR ...",
+        "link": "https://r.search.yahoo.com/_ylt=Awrij6oKeDJqIAMAcRtXNyoA;_ylu=Y29sbwNiZjEEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1782902027/RO=10/RU=https%3a%2f%2fwww.crossborderdataforum.org%2ffrom-transfers-to-takedowns-can-article-16-dsa-police-gdpr-violations%2f/RK=2/RS=gg8b94JPA9kQb8ha3jD7sVpiLUk-"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-09",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

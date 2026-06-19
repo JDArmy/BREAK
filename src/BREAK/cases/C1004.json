@@ -1,0 +1,31 @@
+{
+  "C1004": {
+    "title": "腾讯游戏安全中心对演员违规行为的封号处罚",
+    "keywords": [
+      "腾讯游戏安全中心",
+      "演员行为",
+      "封号处罚",
+      "高段位排位",
+      "游戏违规",
+      "榜单剔除",
+      "安全系统"
+    ],
+    "summary": "2026年5月29日，腾讯游戏安全中心发布案例，经核实某玩家存在演员违规行为，被处以封号180天及剔除榜单的处罚。该案例展示了游戏安全系统通过数据与历史违规情况核实后，对高段位排位对局中演员行为的严厉处罚。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0107"
+    ],
+    "references": [
+      {
+        "title": "腾讯游戏安全中心 - 腾讯游戏",
+        "link": "https://gamesafe.qq.com/article/805.shtml"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-05",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0027"
+    ]
+  }
+}

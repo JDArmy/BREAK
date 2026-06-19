@@ -1,0 +1,36 @@
+{
+  "C1463": {
+    "title": "黑客利用ScadaBR旧漏洞攻击水厂工控系统",
+    "keywords": [
+      "ScadaBR",
+      "CVE-2021-26829",
+      "跨站脚本",
+      "XSS",
+      "TwoNet",
+      "工控系统",
+      "水处理厂",
+      "蜜罐",
+      "人机界面篡改",
+      "工业物联网安全"
+    ],
+    "summary": "2025年12月，亲俄黑客组织TwoNet利用2021年已修复的ScadaBR漏洞（CVE-2021-26829）入侵水处理厂工控系统蜜罐，篡改人机界面登录页面。该漏洞为跨站脚本漏洞，可执行任意代码、劫持用户会话，若作用于真实工业场景，可能导致生产中断、设备失控等灾难性后果。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0179"
+    ],
+    "references": [
+      {
+        "title": "4年前旧漏洞,被黑客利用成功入侵水厂工控系统,并且篡改登录界面炫技！",
+        "link": "https://cloud.tencent.com/developer/article/2596782"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-12",
+    "relatedAttackTools": [
+      "AT0054"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

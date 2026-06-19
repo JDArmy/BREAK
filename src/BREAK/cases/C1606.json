@@ -1,0 +1,29 @@
+{
+  "C1606": {
+    "title": "OPC UA .NET Standard Stack认证绕过漏洞",
+    "keywords": [
+      "OPC UA",
+      ".NET Standard Stack",
+      "认证绕过",
+      "未授权访问",
+      "工业物联网",
+      "OPC Foundation",
+      "GHSA-h958-fxgg-g7w3",
+      "安全公告"
+    ],
+    "summary": "OPC UA .NET Standard Stack存在安全漏洞，允许未授权攻击者绕过应用程序认证机制，对OPC UA服务器实施未授权访问。该漏洞影响工业物联网通信安全。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0210"
+    ],
+    "references": [
+      {
+        "title": "Security Update for the OPC UA .NET Standard Stack - GitHub",
+        "link": "https://github.com/OPCFoundation/UA-.NETStandard/security/advisories/GHSA-h958-fxgg-g7w3"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

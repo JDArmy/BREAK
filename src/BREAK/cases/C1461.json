@@ -1,0 +1,29 @@
+{
+  "C1461": {
+    "title": "电磁侧信道攻击 - ACM数字图书馆",
+    "keywords": [
+      "电磁侧信道攻击",
+      "IoT安全",
+      "电磁辐射分析",
+      "侧信道分析技术",
+      "物联网设备",
+      "物理特征提取",
+      "敏感信息泄露",
+      "ACM文献"
+    ],
+    "summary": "该文献探讨了利用电磁侧信道分析技术来调查物联网设备的安全性。摘要明确指出，物联网设备极大地扩展了攻击视野，通过分析设备运行时产生的电磁辐射等物理特征，攻击者可以获取敏感信息，对IoT安全构成严重威胁。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0178"
+    ],
+    "references": [
+      {
+        "title": "Electromagnetic side-channel attacks - ACM Digital Library",
+        "link": "https://dl.acm.org/doi/10.1145/3236454.3236512"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

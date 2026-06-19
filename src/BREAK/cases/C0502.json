@@ -1,0 +1,40 @@
+{
+  "C0502": {
+    "title": "网约车平台黑产利用虚拟手机号注册或盗号实施低价“代下单”",
+    "keywords": [
+      "网约车",
+      "黑产",
+      "虚拟手机号",
+      "盗号",
+      "代下单",
+      "风控绕过",
+      "虚假设备环境",
+      "账号注册",
+      "低价下单",
+      "赚取差价"
+    ],
+    "summary": "黑产们通过虚拟手机号码注册或通过盗号获取网约车平台账号，为乘客操作低价“代下单”，从中赚取差价。该行为利用虚假设备环境或盗取的账号协助他人完成网约车下单，绕过平台的风控机制，属于典型的代下单黑产操作。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0049"
+    ],
+    "references": [
+      {
+        "title": "网约车刷单或构成犯罪,一场与黑产的较力正在上演_上观新闻",
+        "link": "https://www.jfdaily.com/staticsg/res/html/web/newsDetail.html?id=691680&sid=200"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-12",
+    "relatedAttackTools": [
+      "AT0001",
+      "AT0006",
+      "AT0038"
+    ],
+    "relatedThreatActors": [
+      "TA0001",
+      "TA0007",
+      "TA0017"
+    ]
+  }
+}

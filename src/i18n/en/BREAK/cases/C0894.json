@@ -1,0 +1,21 @@
+{
+  "C0894": {
+    "title": "Alert! API Account Enumeration Attacks Have Become a Major Threat to Account Security",
+    "keywords": [
+      "API account enumeration attack",
+      "account enumeration",
+      "credential stuffing attack",
+      "password recovery API",
+      "bulk account harvesting",
+      "API error message enumeration",
+      "consumer finance platform",
+      "gaming company"
+    ],
+    "summary": "An August 2022 security report indicates that illicit actors are launching account enumeration attacks via API endpoints to harvest registered user accounts in bulk. One case revealed that a consumer finance platform was exploited because its password recovery API returned distinct responses, allowing attackers to enumerate registered phone numbers. In another case, a gaming company's event API er",
+    "references": [
+      {
+        "title": "Warning! API Account-Checking Attacks Have Become a Major Threat to Account Security | Black Industry | Credential Stuffing - NetEase Subscription"
+      }
+    ]
+  }
+}

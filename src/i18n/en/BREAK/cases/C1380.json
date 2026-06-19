@@ -1,0 +1,21 @@
+{
+  "C1380": {
+    "title": "Mirai Botnet Leverages IoT Devices to Launch Massive DDoS Attacks",
+    "keywords": [
+      "Mirai",
+      "botnet",
+      "IoT devices",
+      "DDoS attacks",
+      "weak passwords",
+      "IoT security",
+      "malware",
+      "device hijacking"
+    ],
+    "summary": "The Mirai botnet scanned for and infected IoT devices with weak password vulnerabilities, conscripting them into a botnet that launched some of the largest DDoS attacks on record. The attacks ceased only after the creator was arrested. The incident exposed the significant risk of IoT devices being hijacked for cyberattacks due to weak credentials.",
+    "references": [
+      {
+        "title": "Consumer, Commercial, and Industrial IoT (In)Security: Attack Taxonomy and Case Studies"
+      }
+    ]
+  }
+}

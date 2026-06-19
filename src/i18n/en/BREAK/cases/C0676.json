@@ -1,0 +1,21 @@
+{
+  "C0676": {
+    "title": "Azure Blob Storage Becomes a High-Value Target for Threat Actors",
+    "keywords": [
+      "Azure Blob Storage",
+      "cloud storage security",
+      "attack chain",
+      "misconfiguration",
+      "credential leak",
+      "cloud tactics",
+      "threat actor",
+      "Microsoft Security"
+    ],
+    "summary": "Microsoft's security blog analysis indicates that Azure Blob Storage has become a high-value target for threat actors due to its critical role in storing and managing massive amounts of unstructured data. Attackers employ sophisticated attack chains, exploiting misconfigurations, leaked credentials, and evolving cloud tactics to conduct targeted intrusions and abuse of the service.",
+    "references": [
+      {
+        "title": "Inside the attack chain: Threat activity targeting Azure Blob Storage..."
+      }
+    ]
+  }
+}

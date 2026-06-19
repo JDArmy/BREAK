@@ -1,0 +1,21 @@
+{
+  "C1429": {
+    "title": "Detecting Sybil Attacks in Vehicular Fog Networks Using RSSI and Blockchain",
+    "keywords": [
+      "Sybil attack",
+      "RSSI",
+      "blockchain",
+      "vehicular fog networks",
+      "VANET",
+      "fake identity detection",
+      "V2X security",
+      "consensus verification"
+    ],
+    "summary": "In vehicular fog networks, researchers propose a blockchain-based mechanism to detect Sybil attacks. The approach uses RSSI (Received Signal Strength Indicator) techniques to identify simple Sybil attack cases and leverages blockchain for verification, preventing attackers from forging multiple fake vehicle identities.",
+    "references": [
+      {
+        "title": "Detecting Sybil Attacks in Vehicular Fog Networks Using RSSI and Blockchain"
+      }
+    ]
+  }
+}

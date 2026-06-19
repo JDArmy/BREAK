@@ -1,0 +1,21 @@
+{
+  "C1396": {
+    "title": "Silex Botnet Attack Damages IoT Devices with Default Credentials",
+    "keywords": [
+      "Silex",
+      "botnet",
+      "IoT",
+      "default credentials",
+      "bricking",
+      "malware",
+      "DDoS",
+      "embedded devices"
+    ],
+    "summary": "The Silex botnet exploited default credentials on IoT devices, permanently damaging or bricking a large number of them. What began as a prank led to real, widespread destruction, highlighting the severity of default credential risks.",
+    "references": [
+      {
+        "title": "OWASP IoT Top 10 Series: Weak or Hardcoded Password Policy"
+      }
+    ]
+  }
+}

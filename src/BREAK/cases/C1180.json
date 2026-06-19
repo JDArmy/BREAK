@@ -1,0 +1,32 @@
+{
+  "C1180": {
+    "title": "基于行为模式的API滥用检测系统",
+    "keywords": [
+      "API滥用检测",
+      "行为模式分析",
+      "实时检测系统",
+      "经济拒绝服务攻击",
+      "未授权访问",
+      "暴力破解",
+      "API安全",
+      "IEEE会议论文"
+    ],
+    "summary": "IEEE会议论文介绍了一种基于行为模式的API滥用实时检测系统。该系统针对经济拒绝服务攻击、未授权访问、暴力破解用户认证和行为API滥用等威胁进行防护，表明API滥用已成为学术界和工业界共同关注的安全问题。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0126"
+    ],
+    "references": [
+      {
+        "title": "A Real-Time Approach to Detecting API Abuses Based on Behavioral ...",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10600657"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-04",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0051"
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "C0822": {
+    "title": "澳大利亚税务局150名员工因涉嫌参与GST诈骗被调查",
+    "keywords": [
+      "澳大利亚税务局",
+      "ATO",
+      "内部威胁",
+      "GST诈骗",
+      "Protego行动",
+      "员工账号被盗",
+      "税务欺诈",
+      "内部人员调查"
+    ],
+    "summary": "澳大利亚税务局（ATO）在“Protego行动”调查后，对150名内部员工展开调查，怀疑他们参与了一起大规模的消费税（GST）诈骗案。该案件揭示了内部员工可能利用其合法账号权限或被盗账号进行欺诈活动，严重影响了国家税收系统的完整性。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0083-001"
+    ],
+    "references": [
+      {
+        "title": "ATO investigated 150 staff members for involvement in GST ...",
+        "link": "https://r.search.yahoo.com/_ylt=AwrFeBXcaTNqMAIAxQ9XNyoA;_ylu=Y29sbwNiZjEEcG9zAzUEdnRpZAMEc2VjA3Ny/RV=2/RE=1782963933/RO=10/RU=https%3a%2f%2fwww.counterfraud.gov.au%2fcase-studies%2fato-investigated-150-staff-members-involvement-gst-scam-sparked-operation-protego/RK=2/RS=xMNtZglnVxhsZjm7wR2MR3ipnko-"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0024"
+    ]
+  }
+}

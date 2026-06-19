@@ -1,0 +1,36 @@
+{
+  "C0833": {
+    "title": "上海理工大学开展“弱口令”专项自查整治工作",
+    "keywords": [
+      "弱口令",
+      "上海理工大学",
+      "专项自查",
+      "admin",
+      "password",
+      "123456",
+      "口令明文保存",
+      "账号转借",
+      "安全意识",
+      "安全责任制考核"
+    ],
+    "summary": "2026年6月，上海理工大学信息化办公室发布通知，要求全校排查信息系统（网站）弱口令，杜绝使用admin、password、123456等弱密码，并加强安全意识宣传，防范口令明文保存、账号转借等问题。学校将同步扫描探测弱口令，未整改者纳入安全责任制考核。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0083"
+    ],
+    "references": [
+      {
+        "title": "关于开展“弱口令”专项自查整治工作的通知",
+        "link": "https://net.usst.edu.cn/_t811/2026/0608/c6850a365193/page.htm"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-06",
+    "relatedAttackTools": [
+      "AT0068"
+    ],
+    "relatedThreatActors": [
+      "TA0021"
+    ]
+  }
+}

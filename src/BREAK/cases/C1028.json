@@ -1,0 +1,30 @@
+{
+  "C1028": {
+    "title": "美国法院裁定：经他人许可使用其密码属联邦犯罪",
+    "keywords": [
+      "CFAA",
+      "密码共享",
+      "第九巡回上诉法院",
+      "未经授权访问",
+      "计算机欺诈与滥用法",
+      "员工账号共享",
+      "刑事犯罪",
+      "账号凭据"
+    ],
+    "summary": "美国第九巡回上诉法院裁定，在获得他人许可但未获得网站所有者授权的情况下，使用他人的密码登录系统，属于违反《计算机欺诈与滥用法》（CFAA）的联邦犯罪行为。该判例将未经授权的密码共享行为明确界定为刑事犯罪，对员工间共享公司系统账号凭据的行为具有直接的法律警示意义。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0111-001"
+    ],
+    "references": [
+      {
+        "title": "Password Sharing Is Now a Crime - Schneier on Security",
+        "link": "https://www.schneier.com/blog/archives/2016/07/password_sharin_1.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2016-07",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

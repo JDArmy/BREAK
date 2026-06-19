@@ -1,0 +1,37 @@
+{
+  "C1564": {
+    "title": "Bybit交易所1.5亿美元被盗案：Safe{Wallet}前端注入恶意代码",
+    "keywords": [
+      "Bybit",
+      "Safe{Wallet}",
+      "前端注入",
+      "恶意JavaScript",
+      "delegatecall",
+      "多签钱包",
+      "加密货币盗窃",
+      "DApp劫持",
+      "Lazarus Group",
+      "Ethereum"
+    ],
+    "summary": "2025年2月，Bybit交易所遭遇史上最大加密货币盗窃案，损失约15亿美元。攻击者通过入侵Safe{Wallet}开发者机器，向其前端界面注入恶意JavaScript代码，导致多签用户在批准交易时看到的是正常转账，实际却执行了将资产转移至攻击者控制的合约的delegatecall。该事件揭示了DApp前端被篡改后，用户界面与底层交易逻辑分离的严重风险。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0203"
+    ],
+    "references": [
+      {
+        "title": "Alternate Top 15 — Web3 Attack Vectors (Beyond Smart Contracts)",
+        "link": "https://scs.owasp.org/sctop10/Web3-Attack-Vectors-Top15/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-02",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0079"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

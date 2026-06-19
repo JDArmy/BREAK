@@ -1,0 +1,33 @@
+{
+  "C1653": {
+    "title": "元宇宙去匿名化攻击研究：识别VR化身背后的真实身份",
+    "keywords": [
+      "元宇宙",
+      "去匿名化攻击",
+      "VR化身",
+      "运动特征",
+      "身份识别",
+      "虚拟现实",
+      "隐私泄露",
+      "IEEE"
+    ],
+    "summary": "IEEE会议论文指出，虚拟现实虽可通过化身保护用户身份，但近期提出的去匿名化攻击证明了识别VR化身背后用户真实身份的可行性。该研究提出基于受害者固有运动特征的攻击方法，表明外部攻击者能够将用户的真实身份与其虚拟化身进行关联。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0221"
+    ],
+    "references": [
+      {
+        "title": "De-anonymization Attacks on Metaverse | IEEE Conference Publication ...",
+        "link": "https://xplorestaging.ieee.org/document/10229062/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0084"
+    ],
+    "relatedThreatActors": [
+      "TA0050"
+    ]
+  }
+}

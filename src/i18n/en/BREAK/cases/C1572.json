@@ -1,0 +1,22 @@
+{
+  "C1572": {
+    "title": "SoK: MEV Countermeasures",
+    "keywords": [
+      "MEV",
+      "maximal extractable value",
+      "gas fee manipulation",
+      "frontrunning",
+      "priority gas auction",
+      "PGA",
+      "MEV auction",
+      "network congestion",
+      "blockchain transaction ordering"
+    ],
+    "summary": "This research systematically examines countermeasures against MEV, including setting appropriate fees or using MEV auctions. It also notes that priority gas auctions (PGA) can lead to network congestion.",
+    "references": [
+      {
+        "title": "SoK: MEV countermeasures"
+      }
+    ]
+  }
+}

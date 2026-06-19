@@ -1,0 +1,34 @@
+{
+  "C1497": {
+    "title": "无许可最长链全序广播中的资源建模",
+    "keywords": [
+      "最长链协议",
+      "长程攻击",
+      "PoS",
+      "资源流失攻击",
+      "历史私钥",
+      "分叉攻击",
+      "区块链共识",
+      "无成本模拟",
+      "total-order broadcast",
+      "permissionless"
+    ],
+    "summary": "该研究指出PoS系统更易受长程攻击，并演示了针对最长链协议的长程攻击，包括资源流失攻击的一般案例。攻击者利用历史私钥从早期区块分叉，低成本构造替代链以覆盖主链历史。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0187"
+    ],
+    "references": [
+      {
+        "title": "Modeling resources in permissionless longest-chain total-order broadcast",
+        "link": "https://arxiv.org/abs/2211.12050"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-11",
+    "relatedAttackTools": [
+      "AT0078"
+    ],
+    "relatedThreatActors": []
+  }
+}

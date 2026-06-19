@@ -1,0 +1,33 @@
+{
+  "C0376": {
+    "title": "大量博主因《星空》钓鱼邮件被骗：骗子伪装开发者盗号",
+    "keywords": [
+      "钓鱼邮件",
+      "账号盗取",
+      "YouTube",
+      "Starfield",
+      "游戏博主",
+      "伪装开发者",
+      "凭证窃取",
+      "社交工程"
+    ],
+    "summary": "不法分子利用玩家对游戏《星空》的期待，伪装成Starfield开发人员，向YouTube游戏博主发起大规模钓鱼攻击，通过钓鱼邮件盗取博主们的油管账户。该事件展示了以伪装身份方式骗取登录凭证的典型账号盗取手法。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0032"
+    ],
+    "references": [
+      {
+        "title": "大量博主因《星空》钓鱼邮件被骗!骗子伪装成开发者来盗号_游戏...",
+        "link": "https://m.sohu.com/a/676539529_121124836"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0063"
+    ],
+    "relatedThreatActors": [
+      "TA0059"
+    ]
+  }
+}

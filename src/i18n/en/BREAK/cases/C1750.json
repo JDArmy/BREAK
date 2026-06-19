@@ -1,0 +1,19 @@
+{
+  "C1750": {
+    "title": "Machine Learning Security and Data Poisoning: Are We Ready?",
+    "keywords": [
+      "data poisoning attacks",
+      "training data contamination",
+      "adversarial machine learning",
+      "model poisoning",
+      "poisoning defenses",
+      "arXiv"
+    ],
+    "summary": "This article reviews poisoning attacks that compromise machine learning models by corrupting their training data. It examines how attackers contaminate training datasets to manipulate model behavior.",
+    "references": [
+      {
+        "title": "Machine Learning Security against Data Poisoning: Are We ... - arXiv"
+      }
+    ]
+  }
+}

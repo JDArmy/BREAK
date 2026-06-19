@@ -1,0 +1,30 @@
+{
+  "C0570": {
+    "title": "用POS机套现655万消费券案102人被抓",
+    "keywords": [
+      "POS机套现",
+      "消费券",
+      "虚构交易",
+      "套现",
+      "655万",
+      "卡券限制突破",
+      "102人被抓",
+      "风控漏洞"
+    ],
+    "summary": "2023年6月13日，监管针对POS机套现消费券情况加强风控，破获一起利用POS机套现消费券案件，涉及金额655万元，抓获102名犯罪嫌疑人。该案暴露了消费券使用环节的严重漏洞，犯罪分子通过POS机虚构交易，将限定使用场景的消费券非法套现，突破了消费券的使用限制。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0055-001"
+    ],
+    "references": [
+      {
+        "title": "用POS机套现655万消费券,102人被抓 - 知乎",
+        "link": "https://zhuanlan.zhihu.com/p/636683123"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-06",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

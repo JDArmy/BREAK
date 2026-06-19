@@ -1,0 +1,21 @@
+{
+  "C1616": {
+    "title": "Machine Learning-Based Intrusion Detection System for False Messages in VANETs",
+    "keywords": [
+      "VANETs",
+      "false messages",
+      "intrusion detection",
+      "machine learning",
+      "V2V communication",
+      "V2I communication",
+      "classification model",
+      "IEEE"
+    ],
+    "summary": "A study proposes an intrusion detection system targeting false messages in vehicular ad hoc networks. The system uses machine learning classification models trained on vehicle-to-vehicle and vehicle-to-infrastructure communication data under both attack and normal scenarios, aiming to classify received messages as genuine or false and improve false information detection accuracy.",
+    "references": [
+      {
+        "title": "VANETs-Based Intrusion Detection System for False Message"
+      }
+    ]
+  }
+}

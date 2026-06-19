@@ -1,0 +1,34 @@
+{
+  "C1171": {
+    "title": "通过切换请求方法绕过速率限制",
+    "keywords": [
+      "速率限制绕过",
+      "HTTP方法切换",
+      "POST转GET",
+      "Content-Type绕过",
+      "API限流",
+      "接口安全",
+      "Web应用防火墙",
+      "请求方法篡改",
+      "VulnTech"
+    ],
+    "summary": "某些应用的速率限制仅针对特定HTTP方法（如POST）配置，攻击者通过将请求方法从POST切换为GET，或使用不同Content-Type头（如application/x-www-form-urlencoded替代application/json），成功绕过接口限流机制，实现无限制的API调用。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0126-002"
+    ],
+    "references": [
+      {
+        "title": "VulnTech Rate Limit Bypass - VulnTech Notes",
+        "link": "https://vulntech.com/tutorial/tutorial/website-penetration-testing/rate-limit-bypass/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0061"
+    ],
+    "relatedThreatActors": [
+      "TA0051"
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "C0821": {
+    "title": "IC3 警告：网络犯罪分子利用撞库和钓鱼攻击窃取企业账户",
+    "keywords": [
+      "IC3",
+      "FBI",
+      "账户接管",
+      "撞库攻击",
+      "钓鱼攻击",
+      "企业账户盗窃",
+      "直接存款欺诈",
+      "社会工程学",
+      "员工凭证泄露",
+      "薪资账户重定向"
+    ],
+    "summary": "美国互联网犯罪投诉中心（IC3）发布警告，详述了网络犯罪分子如何通过暴力破解、钓鱼邮件、社会工程学等手段获取员工登录凭证，进而接管企业银行、薪资或健康储蓄账户。犯罪分子通过更改直接存款信息，将员工工资或企业资金重定向至其控制的账户，造成直接经济损失。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0083-001"
+    ],
+    "references": [
+      {
+        "title": "Account Takeover Fraud (ATO) - Internet Crime Complaint Center",
+        "link": "https://www.ic3.gov/CrimeInfo/AccountTakeover"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0042",
+      "AT0063",
+      "AT0068"
+    ],
+    "relatedThreatActors": [
+      "TA0059"
+    ]
+  }
+}

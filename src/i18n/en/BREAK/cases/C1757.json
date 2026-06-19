@@ -1,0 +1,21 @@
+{
+  "C1757": {
+    "title": "Uber MFA Fatigue Attack",
+    "keywords": [
+      "Uber",
+      "MFA fatigue attack",
+      "multi-factor authentication",
+      "push bombing",
+      "teenage hacker",
+      "internal system breach",
+      "data leak",
+      "social engineering"
+    ],
+    "summary": "In September 2022, a 17-year-old hacker launched an MFA fatigue attack against Uber. The attacker repeatedly logged in, sending a flood of MFA push requests to an employee's phone, inducing the victim to mistakenly tap \"approve.\" Eventually, the overwhelmed employee confirmed the request, bypassing MFA protection and allowing the hacker to breach Uber's internal systems and steal personal informat",
+    "references": [
+      {
+        "title": "Cloud Phishing: New Tricks and the 'Crown Jewels' - Tencent Cloud Developer Community"
+      }
+    ]
+  }
+}

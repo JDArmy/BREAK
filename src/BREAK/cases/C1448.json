@@ -1,0 +1,29 @@
+{
+  "C1448": {
+    "title": "什么是重放攻击？ | Chainlink",
+    "keywords": [
+      "重放攻击",
+      "区块链安全",
+      "交易重放",
+      "Chainlink",
+      "网络欺诈",
+      "数据捕获",
+      "认证绕过",
+      "智能合约"
+    ],
+    "summary": "该资料将重放攻击定义为恶意行为者捕获并重传有效数据，以在网络中实现欺诈性认证或执行未经授权的操作。这与区块链中交易重放导致资产损失的风险定义相符。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0175"
+    ],
+    "references": [
+      {
+        "title": "What Is a Replay Attack? | Chainlink",
+        "link": "https://chain.link/education-hub/replay-attack"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

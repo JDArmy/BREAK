@@ -1,0 +1,34 @@
+{
+  "C0682": {
+    "title": "某省属高校老师非法扫描上传秘密级文件案",
+    "keywords": [
+      "涉密合同",
+      "违规复印",
+      "手机扫描",
+      "互联网泄密",
+      "高校泄密",
+      "莫某某",
+      "汤某某",
+      "秘密级文件",
+      "上传滥用"
+    ],
+    "summary": "2021年6月，某省属高校下属机构工作人员莫某某违规复印涉密合同。回校后，莫某某将2份涉密合同复印件交给教师汤某某，汤某某让学生用手机APP扫描涉密合同复印件，并将扫描件存储在连接互联网的设备中，造成泄密。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0069"
+    ],
+    "references": [
+      {
+        "title": "案例分享|互联网时代，你可能一不小心就泄密啦!",
+        "link": "https://mp.weixin.qq.com/s?__biz=MzIxMzcxNjEwMA==&mid=2247494267&idx=3&sn=e09c8ac801465af2f64f12606b04b3c6&chksm=97b03790a0c7be86b3fef9507468ddcd44ba1f70cf42503f60e307fcde956dc7d7de5809860b&scene=27"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-06",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0021",
+      "TA0024"
+    ]
+  }
+}

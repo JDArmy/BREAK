@@ -1,0 +1,34 @@
+{
+  "C0730": {
+    "title": "GEO灰色产业链向AI投喂虚假信息进行数据投毒",
+    "keywords": [
+      "GEO",
+      "生成式引擎优化",
+      "AI数据投毒",
+      "虚假信息",
+      "伪造专家身份",
+      "大模型安全",
+      "AI模型投毒",
+      "大河报"
+    ],
+    "summary": "据《大河报》报道，有GEO（生成式引擎优化）服务商通过伪造专家身份、虚构研究报告等方式，向AI“投喂”虚假信息，进行有组织的数据投毒。其目的是让特定品牌信息以客观答案形式优先出现在AI对话框中，甚至排名第一。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0071-005"
+    ],
+    "references": [
+      {
+        "title": "全方位治理,堵住AI数据“投毒”漏洞",
+        "link": "https://www.peopleapp.com/column/30050323311-500007101652"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-09",
+    "relatedAttackTools": [
+      "AT0093"
+    ],
+    "relatedThreatActors": [
+      "TA0058"
+    ]
+  }
+}

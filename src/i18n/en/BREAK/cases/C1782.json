@@ -1,0 +1,21 @@
+{
+  "C1782": {
+    "title": "Detecting Connected Vehicle Location Anomalies via RAN Data to Prevent Hijacking Attacks",
+    "keywords": [
+      "connected vehicle",
+      "RAN",
+      "location anomaly detection",
+      "hijacking attack",
+      "vehicle network interface",
+      "radio access network",
+      "telemetry monitoring",
+      "automotive cybersecurity"
+    ],
+    "summary": "A study proposes a location anomaly detection module based on wireless radio access network (RAN) event monitoring, capable of identifying abnormal behavior where the same device appears in multiple locations simultaneously—a potential indicator of hijacking attacks against connected vehicles where attackers exploit vehicle network interfaces for unauthorized control.",
+    "references": [
+      {
+        "title": "Navigating Connected Car Cybersecurity: Location Anomaly Detection with RAN Data"
+      }
+    ]
+  }
+}

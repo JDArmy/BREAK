@@ -1,0 +1,22 @@
+{
+  "C1660": {
+    "title": "Unauthorized Access to E-Commerce Platform Store Revenue Data",
+    "keywords": [
+      "BOLA",
+      "IDOR",
+      "API endpoint enumeration",
+      "revenue data exposure",
+      "e-commerce platform",
+      "shop data scraping",
+      "OWASP API Security",
+      "object-level authorization bypass",
+      "unauthorized data access"
+    ],
+    "summary": "An e-commerce platform provided revenue charts for its hosted shops. An attacker discovered that the API endpoint pattern was /shops/{shopName}/revenue_data.json and used another API to obtain a list of all shop names. By scripting bulk replacement of the shop name in the URL, the attacker accessed sales data for thousands of stores without authorization, representing a classic case of object-leve",
+    "references": [
+      {
+        "title": "API1:2023 Broken Object Level Authorization - OWASP API Security"
+      }
+    ]
+  }
+}

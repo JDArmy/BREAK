@@ -1,0 +1,35 @@
+{
+  "C1542": {
+    "title": "aBNBc代币无限铸币漏洞事件",
+    "keywords": [
+      "Ankr",
+      "aBNBc",
+      "无限铸币漏洞",
+      "DeFi攻击",
+      "套利",
+      "派盾",
+      "代币价格归零",
+      "智能合约漏洞"
+    ],
+    "summary": "2022年12月，DeFi协议Ankr的aBNBc代币合约被发现存在无限铸币漏洞。安全团队派盾指出，攻击者利用特定函数漏洞可无限铸造aBNBc代币，导致代币价格几乎归零，攻击者通过套利获利约1500万美元。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0198"
+    ],
+    "references": [
+      {
+        "title": "aBNBc差点归零!3000块套利1500万,DeFi协议Ankr攻击事件始末 - 知乎",
+        "link": "https://zhuanlan.zhihu.com/p/588939182"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-12",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0077"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

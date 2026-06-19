@@ -1,0 +1,34 @@
+{
+  "C1664": {
+    "title": "AWS WAF凭证填充攻击缓解项目",
+    "keywords": [
+      "凭证填充",
+      "AWS WAF",
+      "速率限制",
+      "Flask API",
+      "CloudWatch",
+      "金融科技",
+      "攻击缓解",
+      "批量请求"
+    ],
+    "summary": "该项目展示了一个针对金融科技API的凭证填充攻击缓解方案。攻击者通过Python脚本模拟对Flask API的登录端点发起批量凭证填充攻击，试图耗尽目标系统的认证资源。项目利用AWS WAF的基于速率的规则来限制API请求频率，并配置CloudWatch日志进行监控，以阻止或限制可疑的批量请求活动。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0224"
+    ],
+    "references": [
+      {
+        "title": "GitHub - Mujidatdada/credential-stuffing-mitigation: The core objective ...",
+        "link": "https://github.com/Mujidatdada/credential-stuffing-mitigation"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0023",
+      "AT0061"
+    ],
+    "relatedThreatActors": [
+      "TA0051"
+    ]
+  }
+}

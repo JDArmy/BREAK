@@ -1,0 +1,34 @@
+{
+  "C0001": {
+    "title": "当握手揭示真相：通过TLS指纹识别检测恶意网络机器人",
+    "keywords": [
+      "TLS指纹",
+      "JA4",
+      "恶意机器人检测",
+      "Bad Bots",
+      "自动化脚本",
+      "协议特征",
+      "TLS握手",
+      "网络流量分析",
+      "学术论文"
+    ],
+    "summary": "学术论文提出利用TLS指纹识别技术（JA4方法）在协议层面检测恶意自动化程序（Bad Bots）。该方法通过分析TLS握手过程中的协议特征来区分自动化脚本与真实用户，属于协议级自动化行为的检测手段。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0001-001"
+    ],
+    "references": [
+      {
+        "title": "When Handshakes Tell the Truth: Detecting Web Bad Bots via TLS ...",
+        "link": "https://arxiv.org/html/2602.09606v1"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0023"
+    ],
+    "relatedThreatActors": [
+      "TA0013"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C1668": {
+    "title": "Webhook Forgery on Zendesk Trigger in n8n",
+    "keywords": [
+      "n8n",
+      "Zendesk",
+      "webhook forgery",
+      "HMAC-SHA256",
+      "unsigned request",
+      "event replay",
+      "automated workflow",
+      "GHSA-38c7-23hj-2wgq"
+    ],
+    "summary": "The Zendesk trigger node in the n8n platform contains a webhook forgery vulnerability. Once an attacker knows the webhook URL, they can send unsigned POST requests with arbitrary data to trigger workflows. The node fails to validate the HMAC-SHA256 signature appended by Zendesk, allowing any party to inject forged Zendesk event payloads and trigger sensitive operations within automated workflows.",
+    "references": [
+      {
+        "title": "Webhook Forgery on Zendesk Trigger · Advisory · n8n-io/n8n · GitHub"
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C0373": {
+    "title": "Brute-Force Attacks on SMS Verification Codes for IoT Device Account Takeover",
+    "keywords": [
+      "IoT device",
+      "SMS verification code",
+      "brute-force attack",
+      "account takeover",
+      "authentication bypass",
+      "automated attack tool",
+      "password reset vulnerability",
+      "SMS brute forcing"
+    ],
+    "summary": "A 2018 academic paper identifies a vulnerability in the password reset mechanism of IoT device accounts that relies on SMS verification codes. Attackers can use automated tools to brute-force the SMS codes and gain unauthorized account access. The study develops an automation tool to demonstrate account takeover by brute-forcing SMS verification codes.",
+    "references": [
+      {
+        "title": "Cracking IoT Device User Account via Brute-force Attack to SMS"
+      }
+    ]
+  }
+}

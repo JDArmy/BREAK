@@ -1,0 +1,33 @@
+{
+  "C0505": {
+    "title": "SIM Box绕过欺诈检测的人工智能方法研究",
+    "keywords": [
+      "SIM Box",
+      "Bypass Fraud",
+      "人工智能",
+      "欺诈检测",
+      "电信运营商",
+      "国际通话",
+      "SIM卡",
+      "机器学习",
+      "arXive"
+    ],
+    "summary": "2017年发表的学术论文指出，电信公司因SIM Box绕过欺诈（Bypass Fraud）遭受严重损失。欺诈者使用SIM盒设备将国际通话伪装为本地通话，以规避国际结算费用。研究提出利用人工智能算法挖掘运营商数据，检测用于绕过国际通话的SIM卡。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0050-001"
+    ],
+    "references": [
+      {
+        "title": "Bypass fraud detection: Artificial intelligence approach",
+        "link": "https://arxiv.org/abs/1711.04627"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2017-11",
+    "relatedAttackTools": [
+      "AT0004"
+    ],
+    "relatedThreatActors": []
+  }
+}

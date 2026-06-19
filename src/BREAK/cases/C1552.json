@@ -1,0 +1,31 @@
+{
+  "C1552": {
+    "title": "跨链桥七大关键漏洞分析",
+    "keywords": [
+      "跨链桥",
+      "安全漏洞",
+      "Layer2",
+      "桥接风险",
+      "Web3安全",
+      "资金被盗",
+      "DeFi",
+      "DefiLlama",
+      "系统性风险"
+    ],
+    "summary": "据DefiLlama报道，跨链桥累计被盗资金超过28亿美元，几乎占整个Web3行业被盗资金总量的大部分。文章详细剖析了跨链桥存在的七大关键漏洞，揭示了桥接环节的系统性安全风险。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0200"
+    ],
+    "references": [
+      {
+        "title": "一文读懂跨链桥的七大关键漏洞",
+        "link": "https://cloud.tencent.com/developer/news/1311943"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-02",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

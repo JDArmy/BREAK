@@ -1,0 +1,29 @@
+{
+  "C1457": {
+    "title": "SPECK密码深度学习侧信道攻击",
+    "keywords": [
+      "SPECK",
+      "深度学习",
+      "侧信道攻击",
+      "功耗分析",
+      "物联网安全",
+      "轻量级密码",
+      "SPECK-32/64",
+      "密钥恢复"
+    ],
+    "summary": "研究人员提出基于深度学习的侧信道分析技术，针对物联网中广泛使用的轻量级密码SPECK-32/64进行攻击。通过少于250条功耗轨迹，成功恢复8字节密钥。该研究首次对SPECK实施深度学习侧信道攻击，凸显了物联网设备在物理安全方面的脆弱性。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0178"
+    ],
+    "references": [
+      {
+        "title": "Deep learning-based profiling side-channel attacks in SPECK cipher - Nature",
+        "link": "https://www.nature.com/articles/s41598-025-08888-1"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

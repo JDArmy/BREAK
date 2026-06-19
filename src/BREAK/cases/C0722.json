@@ -1,0 +1,29 @@
+{
+  "C0722": {
+    "title": "LLM幻觉检测中的快速内存高效微调模型",
+    "keywords": [
+      "LLM",
+      "幻觉检测",
+      "微调模型",
+      "忠实性幻觉",
+      "事实性幻觉",
+      "医疗AI",
+      "高风险领域",
+      "模型集成"
+    ],
+    "summary": "研究指出LLM在医疗等高风险领域可能产生幻觉，导致基于错误信息的决策。提出通过微调模型集成来检测幻觉，强调幻觉分为忠实性幻觉和事实性幻觉，对安全关键领域构成严重风险。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0071-004"
+    ],
+    "references": [
+      {
+        "title": "Hallucination Detection in LLMs: Fast and Memory-Efficient ...",
+        "link": "https://arxiv.org/html/2409.02976v1"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

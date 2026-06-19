@@ -1,0 +1,31 @@
+{
+  "C1400": {
+    "title": "Indexed Finance DAO 连续治理攻击案例",
+    "keywords": [
+      "Indexed Finance",
+      "DAO",
+      "治理攻击",
+      "代币收购",
+      "投票权操纵",
+      "SoK",
+      "智能合约",
+      "去中心化自治组织"
+    ],
+    "summary": "学术论文《SoK: Attacks on DAOs》将 Indexed Finance DAO 作为案例研究对象，分析了该 DAO 通过代币收购方式遭受的两次连续治理攻击。攻击者利用治理代币获取手段操纵投票权，从而控制 DAO 决策。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0167"
+    ],
+    "references": [
+      {
+        "title": "Sok: Attacks on daos",
+        "link": "https://arxiv.org/abs/2406.15071"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

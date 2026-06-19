@@ -1,0 +1,38 @@
+{
+  "C1612": {
+    "title": "V2X应用欺骗平台(VASP)框架发布",
+    "keywords": [
+      "VASP",
+      "V2X",
+      "车联网",
+      "欺骗攻击",
+      "仿真框架",
+      "VEINS",
+      "OMNeT++",
+      "SUMO",
+      "虚假信息注入",
+      "车联网安全"
+    ],
+    "summary": "研究人员公开了一个名为VASP（V2X Application Spoofing Platform）的框架，专门用于模拟针对V2X网络的攻击。该框架基于VEINS仿真环境，可模拟车辆间（V2V）和车辆与基础设施间（V2I）通信中的欺骗与虚假信息注入攻击，旨在为车联网安全研究提供测试工具。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0212"
+    ],
+    "references": [
+      {
+        "title": "GitHub - quic/vasp: VASP is a framework to simulate attacks on V2X ...",
+        "link": "https://github.com/quic/vasp"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023",
+    "relatedAttackTools": [
+      "AT0083",
+      "AT0097"
+    ],
+    "relatedThreatActors": [
+      "TA0049",
+      "TA0061"
+    ]
+  }
+}

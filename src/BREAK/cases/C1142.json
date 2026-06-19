@@ -1,0 +1,30 @@
+{
+  "C1142": {
+    "title": "NFT Rug Pulls 实证研究",
+    "keywords": [
+      "NFT",
+      "Rug Pull",
+      "拉地毯骗局",
+      "欺诈",
+      "区块链安全",
+      "智能合约",
+      "跑路",
+      "Web3",
+      "加密货币"
+    ],
+    "summary": "一项测量研究指出，NFT“拉地毯”骗局是最主要的NFT诈骗类型之一，其定义是NFT项目开发者放弃项目并卷款跑路。该研究对此类欺诈行为进行了深入分析。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0122"
+    ],
+    "references": [
+      {
+        "title": "Miracle or Mirage? A Measurement Study of NFT Rug Pulls",
+        "link": "https://dl.acm.org/doi/10.1145/3626782"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

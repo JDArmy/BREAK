@@ -1,0 +1,21 @@
+{
+  "C0004": {
+    "title": "Cloudflare Finds 31% of APIs Are Shadow APIs",
+    "keywords": [
+      "shadow APIs",
+      "Cloudflare",
+      "API endpoint discovery",
+      "attack surface management",
+      "machine learning",
+      "unmanaged APIs",
+      "data leaks",
+      "API sprawl"
+    ],
+    "summary": "Cloudflare's machine learning models discovered that organizations have 31% more API endpoints than they self-report. These undocumented and unmanaged shadow APIs create a large invisible attack surface, often introduced unintentionally through frequent code changes, and if exploited could lead to data leaks and unpatched vulnerabilities.",
+    "references": [
+      {
+        "title": "theNET | Three Ways to Stay Ahead of New API Threats | Cloudflare"
+      }
+    ]
+  }
+}

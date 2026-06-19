@@ -1,0 +1,34 @@
+{
+  "C0540": {
+    "title": "225次“异常”退货退款都能成功，暴露出什么问题？",
+    "keywords": [
+      "异常退货",
+      "掉包",
+      "批量退款",
+      "电商平台",
+      "诈骗",
+      "消费者权益",
+      "山东警方",
+      "账号",
+      "高价商品",
+      "低价物品"
+    ],
+    "summary": "山东一消费者通过多个账号下单高价商品后掉包退回低价物品，半年内连续操作225次异常退货退款，导致商家直接损失超5万元，被警方立案调查。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0054-001"
+    ],
+    "references": [
+      {
+        "title": "225次“异常”退货退款都能成功,暴露出什么问题?-辽宁省阜新市...",
+        "link": "https://fx.lncourt.gov.cn/article/detail/2025/12/id/9121697.shtml"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-12",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0010"
+    ]
+  }
+}

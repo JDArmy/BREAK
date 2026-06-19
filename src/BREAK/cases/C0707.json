@@ -1,0 +1,29 @@
+{
+  "C0707": {
+    "title": "全球首例AIGC平台侵权案判决",
+    "keywords": [
+      "AIGC平台侵权",
+      "生成式AI",
+      "广州互联网法院",
+      "侵权判决",
+      "AI生成内容",
+      "责任边界",
+      "AIGC隐私泄露"
+    ],
+    "summary": "2024年2月8日，广州互联网法院对全球AIGC平台侵权第一案作出判决，认定生成式AI平台在内容生成过程中涉及侵权。该案为AIGC服务提供者的责任边界提供了司法判例，涉及AI生成内容对他人权益的侵害。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0071-001"
+    ],
+    "references": [
+      {
+        "title": "AIGC平台侵权被判!企业不必过度惊慌——“全球首例生成式AI”判决解读...",
+        "link": "https://zhuanlan.zhihu.com/p/685297771"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-02",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

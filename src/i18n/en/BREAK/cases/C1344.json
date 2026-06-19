@@ -1,0 +1,22 @@
+{
+  "C1344": {
+    "title": "Post-Quantum Cryptography Faces New Challenge: Breakthrough in Lattice-Based Cryptanalysis",
+    "keywords": [
+      "post-quantum cryptography",
+      "lattice-based cryptography",
+      "SVP problem",
+      "400 dimensions",
+      "cryptanalysis",
+      "quantum computing",
+      "PQC",
+      "security parameters",
+      "attack breakthrough"
+    ],
+    "summary": "In January 2026, researchers have pushed attack capabilities against the Shortest Vector Problem (SVP) to nearly 400 dimensions, potentially threatening mainstream post-quantum cryptographic schemes, according to a Science and Technology Daily report. Previous milestones at 200 and 210 dimensions already signaled major advances in lattice cryptanalysis, providing critical reference for the dynamic",
+    "references": [
+      {
+        "title": "Quantum-Resistant Cryptography: Building the \"Moat\" for Future Digital Security"
+      }
+    ]
+  }
+}

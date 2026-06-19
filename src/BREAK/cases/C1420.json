@@ -1,0 +1,36 @@
+{
+  "C1420": {
+    "title": "以太坊MEV生态中夹击攻击与套利交易重排研究",
+    "keywords": [
+      "MEV",
+      "以太坊",
+      "夹击攻击",
+      "套利交易",
+      "最大可提取价值",
+      "私有交易架构",
+      "背跑",
+      "矿工可提取价值"
+    ],
+    "summary": "2024年5月发布的学术研究对以太坊MEV生态进行了重新测量，识别了套利交易和夹击攻击两类主要MEV活动。研究指出，在2022年9月以太坊合并前，约6.75亿美元的MEV价值被提取。该研究设计了盈利识别算法，分析了私有交易架构对MEV的影响及背跑（back-running）机制的采用情况。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0170"
+    ],
+    "references": [
+      {
+        "title": "Remeasuring the arbitrage and sandwich attacks of maximal extractable value in Ethereum",
+        "link": "https://arxiv.org/abs/2405.17944"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-05",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0077",
+      "AT0078"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

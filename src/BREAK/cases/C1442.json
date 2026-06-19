@@ -1,0 +1,32 @@
+{
+  "C1442": {
+    "title": "Time Tells All: 针对区块链RPC用户的去匿名化攻击研究",
+    "keywords": [
+      "区块链",
+      "RPC",
+      "去匿名化",
+      "隐私泄露",
+      "元数据分析",
+      "IP地址",
+      "假名地址",
+      "网络层隐私",
+      "基础设施攻击"
+    ],
+    "summary": "学术研究提出了一种新颖的去匿名化攻击方法，能够将区块链RPC用户的IP地址与该用户在链上的假名地址关联起来。该攻击无需支付交易费用，也无需假设存在主动的网络窃听者，仅通过分析RPC请求的时间等元数据即可实现。该研究揭示了即使不进行链上交易分析，用户的基础设施网络层隐私也存在被泄露和关联的风险。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0174"
+    ],
+    "references": [
+      {
+        "title": "Time Tells All: Deanonymization of Blockchain RPC Users with Zero ...",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3719027.3765082"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0080"
+    ],
+    "relatedThreatActors": []
+  }
+}

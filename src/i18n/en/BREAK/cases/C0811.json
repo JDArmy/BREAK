@@ -1,0 +1,21 @@
+{
+  "C0811": {
+    "title": "GitHub Hit by Severe Supply Chain Poisoning Attack",
+    "keywords": [
+      "GitHub supply chain attack",
+      "Discord Top.gg breach",
+      "PyPI mirror poisoning",
+      "colorama malware",
+      "Python SDK backdoor",
+      "token theft",
+      "Checkmarx",
+      "account hijacking"
+    ],
+    "summary": "In March 2024, attackers compromised the GitHub account of Discord Top.gg and tampered with its Python SDK repository by adding a malicious dependency on a package named 'colorama' in requirements.txt. The malicious package, hosted on a fake PyPI mirror, was designed to steal browser data, Discord tokens, and cryptocurrency wallet information. The attackers hijacked the account and injected malici",
+    "references": [
+      {
+        "title": "GitHub Hit by Severe Supply Chain Poisoning Attack"
+      }
+    ]
+  }
+}

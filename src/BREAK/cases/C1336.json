@@ -1,0 +1,37 @@
+{
+  "C1336": {
+    "title": "CAPTCHAgeddon攻击活动利用虚假验证码传播恶意软件",
+    "keywords": [
+      "CAPTCHAgeddon",
+      "ClickFix",
+      "虚假验证码",
+      "恶意软件传播",
+      "PowerShell",
+      "浏览器端攻击",
+      "信息窃取",
+      "远程控制",
+      "社会工程学"
+    ],
+    "summary": "一场名为CAPTCHAgeddon的复杂恶意软件活动，利用伪造的CAPTCHA验证页面，诱骗用户执行恶意PowerShell命令。该活动被认为是传统虚假浏览器更新诈骗的下一代变种，通过浏览器端攻击方法，诱骗用户主动执行恶意代码，实现信息窃取或远程控制。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0154"
+    ],
+    "references": [
+      {
+        "title": "CAPTCHAgeddon - New ClickFix Attack Leverages Fake Captcha to Deliver ...",
+        "link": "https://cybersecuritynews.com/captchageddon-new-clickfix-attack/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0075",
+      "AT0013",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0012",
+      "TA0018"
+    ]
+  }
+}

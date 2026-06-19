@@ -1,0 +1,35 @@
+{
+  "C1662": {
+    "title": "Capital One数据泄露事件：AWS配置错误与IDOR漏洞",
+    "keywords": [
+      "Capital One",
+      "数据泄露",
+      "AWS",
+      "配置错误",
+      "IDOR",
+      "不安全的直接对象引用",
+      "API对象级越权",
+      "云安全",
+      "客户数据"
+    ],
+    "summary": "2019年，攻击者利用AWS配置错误和IDOR（不安全的直接对象引用）漏洞，获取了Capital One超过1亿客户的数据，包括信用卡申请信息、银行账户信息和个人识别信息。这是美国历史上最大的数据泄露事件之一，导致Capital One支付了超过8000万美元的罚款。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0223"
+    ],
+    "references": [
+      {
+        "title": "012_Web安全攻防实战：IDOR不安全直接对象引用漏洞深度分析与防护...",
+        "link": "https://cloud.tencent.com/developer/article/2590379"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2019",
+    "relatedAttackTools": [
+      "AT0088"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

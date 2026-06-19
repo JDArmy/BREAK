@@ -1,0 +1,38 @@
+{
+  "C0416": {
+    "title": "Microsoft 365 MFA 绕过事件",
+    "keywords": [
+      "Microsoft 365",
+      "MFA 绕过",
+      "Microsoft Authenticator",
+      "安全默认值",
+      "令牌盗窃",
+      "中间人攻击",
+      "MFA 疲劳攻击",
+      "单因素认证",
+      "云账户安全"
+    ],
+    "summary": "某企业用户的 Microsoft 365 账号在启用了安全默认值的情况下，攻击者仅通过单因素认证就成功登录。尽管用户已设置手机 Microsoft Authenticator 应用进行 MFA，但登录日志显示攻击者绕过了多因素认证。该案例讨论了 MFA 疲劳攻击、令牌盗窃和中间人攻击等常见的 MFA 绕过方式。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0036"
+    ],
+    "references": [
+      {
+        "title": "How did a hacker bypass our multi-factor? - Microsoft Q&A",
+        "link": "https://learn.microsoft.com/en-us/answers/questions/5316432/how-did-a-hacker-bypass-our-multi-factor"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-05",
+    "relatedAttackTools": [
+      "AT0072",
+      "AT0094",
+      "AT0063",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0059"
+    ]
+  }
+}

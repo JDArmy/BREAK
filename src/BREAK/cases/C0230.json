@@ -1,0 +1,31 @@
+{
+  "C0230": {
+    "title": "美国政府网站遭SEO污染攻击",
+    "keywords": [
+      "美国政府网站",
+      "SEO污染攻击",
+      "SEO poisoning",
+      ".gov域名",
+      "恶意PDF",
+      "文件上传漏洞",
+      "Google索引",
+      "色情跳转",
+      "Granicus"
+    ],
+    "summary": "2025年12月，美国多州及地方政府的.gov域名遭遇大规模SEO污染攻击。攻击者利用政府网站公开的文件上传功能，上传含恶意链接的PDF文件，这些文件被Google索引后，用户点击官方域名链接会跳转至色情内容页面。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0018"
+    ],
+    "references": [
+      {
+        "title": "中本聪消失十五年:百万枚比特币沉睡之谜;GPT-5.2登场:OpenAI正面迎 ...",
+        "link": "https://www.163.com/dy/article/KGR8MPF90511ALHJ.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-12",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

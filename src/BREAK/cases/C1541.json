@@ -1,0 +1,34 @@
+{
+  "C1541": {
+    "title": "Resolv协议黑客攻击事件",
+    "keywords": [
+      "Resolv",
+      "USR",
+      "铸币漏洞",
+      "预言机操控",
+      "代币增发",
+      "DeFi攻击",
+      "USDC"
+    ],
+    "summary": "攻击者利用Resolv协议USR铸币函数中的关键漏洞，仅用约10万美元USDC操控预言机，实现未经授权的代币增发，破坏了协议的经济平衡。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0198"
+    ],
+    "references": [
+      {
+        "title": "Resolv协议黑客攻击事件深度研究报告,谁是最后买单人?_腾讯新闻",
+        "link": "https://news.qq.com/rain/a/20260323A03KES00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-03",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0077"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

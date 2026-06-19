@@ -1,0 +1,29 @@
+{
+  "C1144": {
+    "title": "NFT可疑交易研究",
+    "keywords": [
+      "NFT",
+      "洗售交易",
+      "wash trading",
+      "可疑交易",
+      "欺诈",
+      "区块链",
+      "数字藏品",
+      "市场操纵"
+    ],
+    "summary": "该研究指出，当NFT所有者/创建者将自己的NFT转移到另一个钱包时，就发生了洗售交易。这种欺诈行为在不受监管的NFT市场中难以杜绝。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0122"
+    ],
+    "references": [
+      {
+        "title": "Suspicious trading in nonfungible tokens (NFTs) - ScienceDirect.com",
+        "link": "https://www.sciencedirect.com/science/article/pii/S0378720623001465"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

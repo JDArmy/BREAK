@@ -1,0 +1,36 @@
+{
+  "C1295": {
+    "title": "Agentjacking攻击：AI编码智能体被诱骗执行恶意代码",
+    "keywords": [
+      "Agentjacking",
+      "AI编码智能体",
+      "Sentry",
+      "错误报告机制",
+      "恶意代码执行",
+      "开发者环境",
+      "工具滥用",
+      "过度自主风险",
+      "AI安全"
+    ],
+    "summary": "2026年6月，安全研究人员披露Agentjacking攻击技术，该攻击可滥用Sentry错误报告机制，诱骗AI编码智能体在开发者机器上执行恶意代码。攻击者通过精心构造的错误信息，使智能体在自主处理任务时调用恶意工具或执行危险操作，从而控制开发者环境。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0148"
+    ],
+    "references": [
+      {
+        "title": "Agentjacking Attack Tricks AI Coding Agents Into Running Malicious Code",
+        "link": "https://thehackernews.com/2026/06/agentjacking-attack-tricks-ai-coding.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-06",
+    "relatedAttackTools": [
+      "AT0074",
+      "AT0093"
+    ],
+    "relatedThreatActors": [
+      "TA0041"
+    ]
+  }
+}

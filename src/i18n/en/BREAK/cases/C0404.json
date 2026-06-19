@@ -1,0 +1,23 @@
+{
+  "C0404": {
+    "title": "Cookie Theft to Business Email Compromise: Attackers Use AiTM Phishing Sites as Entry Point",
+    "keywords": [
+      "AiTM phishing",
+      "adversary-in-the-middle attack",
+      "cookie theft",
+      "session hijacking",
+      "business email compromise",
+      "BEC",
+      "MFA bypass",
+      "Microsoft security team",
+      "financial fraud",
+      "session cookie theft"
+    ],
+    "summary": "Microsoft security researchers discovered that attackers used adversary-in-the-middle (AiTM) phishing sites to steal user session cookies. Even when the targeted organization had multi-factor authentication (MFA) enabled, attackers could use the stolen cookies containing MFA claims to bypass authentication and directly access user accounts. The attackers then accessed finance-related emails and fi",
+    "references": [
+      {
+        "title": "From Cookie Theft to BEC: Attackers Use AiTM Phishing Sites as Entry..."
+      }
+    ]
+  }
+}

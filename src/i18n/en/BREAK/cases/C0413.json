@@ -1,0 +1,20 @@
+{
+  "C0413": {
+    "title": "Phishing-as-a-Service Platform EvilProxy Bypasses Two-Factor Authentication",
+    "keywords": [
+      "EvilProxy",
+      "phishing-as-a-service",
+      "reverse proxy",
+      "cookie injection",
+      "MFA bypass",
+      "Fortune 500",
+      "account takeover"
+    ],
+    "summary": "EvilProxy is a phishing-as-a-service platform that uses reverse proxy and cookie injection techniques to proxy victims' sessions after they complete two-factor authentication, thereby bypassing MFA. The platform has been used to target employees of multiple Fortune 500 companies and steal account access.",
+    "references": [
+      {
+        "title": "Bypassing Two-Factor Authentication! Phishing-as-a-Service Platform EvilProxy Arrives - Tencent Cloud Developer Community..."
+      }
+    ]
+  }
+}

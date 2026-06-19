@@ -1,0 +1,32 @@
+{
+  "C1261": {
+    "title": "GPS 欺骗仿真与检测：基于 Python、射频分析及机器学习",
+    "keywords": [
+      "GPS欺骗",
+      "信号模拟",
+      "机器学习检测",
+      "射频分析",
+      "Python",
+      "地理位置欺诈",
+      "GPS spoofing",
+      "RF信号",
+      "异常检测"
+    ],
+    "summary": "该项目展示了GPS欺骗攻击的模拟与检测，通过伪造GPS信号欺骗接收器，使其报告错误位置。项目模拟了移动设备被欺骗后偏离原轨迹的过程，并利用机器学习技术对伪造数据点进行检测。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0141"
+    ],
+    "references": [
+      {
+        "title": "ParveetKumar/GPS-Spoofing-Simulation-Detection-Framework - GitHub",
+        "link": "https://github.com/ParveetKumar/GPS-Spoofing-Simulation-Detection-Framework"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0024"
+    ],
+    "relatedThreatActors": []
+  }
+}

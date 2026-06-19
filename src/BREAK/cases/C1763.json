@@ -1,0 +1,35 @@
+{
+  "C1763": {
+    "title": "二次打包攻击典型场景：植入广告SDK、替换支付收款方",
+    "keywords": [
+      "二次打包",
+      "植入广告SDK",
+      "替换支付收款方",
+      "移动应用重打包欺诈",
+      "恶意代码",
+      "第三方分发渠道",
+      "支付接口篡改",
+      "App安全"
+    ],
+    "summary": "攻击者获取App安装包后，通过二次打包植入恶意代码。常见场景包括：在App中插入广告SDK，重新打包后在第三方渠道分发以获取广告收益；修改支付接口参数，将收款账号替换为攻击者自己的账号，导致用户资金被盗。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0248"
+    ],
+    "references": [
+      {
+        "title": "你的App客户端真的安全吗？反编译、二次打包、调试攻击全解析...",
+        "link": "https://developer.cloud.tencent.com/article/2657120?policyId=1003"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-04",
+    "relatedAttackTools": [
+      "AT0095"
+    ],
+    "relatedThreatActors": [
+      "TA0055",
+      "TA0060"
+    ]
+  }
+}

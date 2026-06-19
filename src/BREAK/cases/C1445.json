@@ -1,0 +1,30 @@
+{
+  "C1445": {
+    "title": "SCWE-055：签名重放攻击防护缺失漏洞",
+    "keywords": [
+      "签名重放攻击",
+      "智能合约安全",
+      "OWASP",
+      "SCWE-055",
+      "防重放措施",
+      "nonce",
+      "链标识",
+      "区块链认证绕过",
+      "交易签名复用"
+    ],
+    "summary": "OWASP 智能合约安全弱点分类将签名重放攻击列为 SCWE-055。当有效签名从先前交易被复用于不同上下文（如另一交易或合约调用）时，攻击者可绕过认证，执行未授权操作。该弱点强调必须实施防重放措施，如唯一 nonce 或链标识。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0175"
+    ],
+    "references": [
+      {
+        "title": "SCWE-055: Missing Protection against Signature Replay Attacks",
+        "link": "https://scs.owasp.org/SCWE/SCSVS-CRYPTO/SCWE-055/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

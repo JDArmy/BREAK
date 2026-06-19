@@ -1,0 +1,33 @@
+{
+  "C1114": {
+    "title": "通过轻量级方法攻击ChatGPT的真实世界案例研究",
+    "keywords": [
+      "ChatGPT",
+      "提示注入",
+      "大语言模型",
+      "LLM安全",
+      "对抗攻击",
+      "轻量级攻击",
+      "模型操纵",
+      "安全案例研究"
+    ],
+    "summary": "该报告展示了一个真实世界的案例研究，演示了如何通过提示注入攻击大型语言模型平台（如ChatGPT）。攻击者利用轻量级方法构造恶意指令，试图操纵模型行为。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0117-001"
+    ],
+    "references": [
+      {
+        "title": "A Real-World Case Study of Attacking ChatGPT via Lightweight ...",
+        "link": "https://arxiv.org/html/2504.16125v1"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0093"
+    ],
+    "relatedThreatActors": [
+      "TA0041"
+    ]
+  }
+}

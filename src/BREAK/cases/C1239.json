@@ -1,0 +1,32 @@
+{
+  "C1239": {
+    "title": "Frankenstein身份欺诈：拼接真实信息构建虚假信用档案",
+    "keywords": [
+      "合成身份欺诈",
+      "信用档案",
+      "社会安全号码",
+      "爆仓",
+      "信用记录滥用",
+      "FluxForce AI",
+      "虚假信用档案",
+      "身份拼接"
+    ],
+    "summary": "欺诈者将儿童的社会安全号码与虚假姓名、地址组合，创建合成身份。这些身份从小额信用开始，通过按时还款建立良好信用记录，随后执行“爆仓”计划，最大化信用额度后消失。受害者多年后才发现信用记录被滥用，此类合成档案常在地下市场转售。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0136"
+    ],
+    "references": [
+      {
+        "title": "Detecting Synthetic Identity Fraud in Real-Time - FluxForce AI",
+        "link": "https://www.fluxforce.ai/blog/detecting-synthetic-identity-fraud-real-time"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-09",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0055"
+    ]
+  }
+}

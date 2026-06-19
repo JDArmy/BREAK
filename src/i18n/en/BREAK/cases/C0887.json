@@ -1,0 +1,22 @@
+{
+  "C0887": {
+    "title": "Unauthorized Access Vulnerability in Driving Training System Exposes Millions of Student Records in Guangzhou",
+    "keywords": [
+      "driving training platform app",
+      "unauthorized access vulnerability",
+      "student personal information leak",
+      "data security management policy",
+      "Guangzhou police",
+      "unencrypted personal information",
+      "app data security",
+      "administrative warning",
+      "fine"
+    ],
+    "summary": "During a 2022 inspection, Guangzhou police discovered that a driving training platform app developed by a tech company stored over 10.7 million student personal information records, including names, ID numbers, and phone numbers. The company failed to establish data security management policies, did not apply de-identification or encryption to the data, and the system contained an unauthorized acc",
+    "references": [
+      {
+        "title": "10 Million Student Records at Risk of Leakage, Guangzhou Company Penalized by Police"
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C1460": {
+    "title": "Hardware/Software Cooperative Design Against Power Side-Channel Attacks on IoT Devices",
+    "keywords": [
+      "power side-channel attacks",
+      "IoT device security",
+      "hardware/software co-design",
+      "secure processor architecture",
+      "masked software implementation",
+      "resource-constrained devices",
+      "side-channel leakage suppression",
+      "IEEE Internet of Things Journal"
+    ],
+    "summary": "This study highlights the growing importance of protecting secret information on IoT devices as the technology expands. Since IoT devices are susceptible to physical access by third parties, power side-channel attacks that leak physical information pose a significant threat. The paper proposes a hardware/software cooperative design that combines a secure processor architecture with masked software",
+    "references": [
+      {
+        "title": "Hardware/software cooperative design against power side-channel attacks on IoT devices"
+      }
+    ]
+  }
+}

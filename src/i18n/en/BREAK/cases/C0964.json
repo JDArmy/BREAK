@@ -1,0 +1,21 @@
+{
+  "C0964": {
+    "title": "Machine Learning-Driven Attacks Against Anti-Phishing Blacklists",
+    "keywords": [
+      "anti-phishing blacklist",
+      "blacklist evasion",
+      "IP rotation",
+      "proxy circumvention",
+      "coverage gaps",
+      "update latency",
+      "phishing detection bypass",
+      "machine learning attacks"
+    ],
+    "summary": "This study examines how anti-phishing blacklists, a primary defense mechanism, suffer from incomplete coverage and update delays that make them vulnerable to sophisticated evasion. Attackers exploit these weaknesses by using techniques such as rotating IP addresses and proxies to bypass blacklist-based phishing site detection systems.",
+    "references": [
+      {
+        "title": "Machine Learning-Enabled Attacks on Anti-Phishing Blacklists"
+      }
+    ]
+  }
+}

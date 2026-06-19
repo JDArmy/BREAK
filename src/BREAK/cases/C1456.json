@@ -1,0 +1,36 @@
+{
+  "C1456": {
+    "title": "特斯拉Model S钥匙扣侧信道攻击",
+    "keywords": [
+      "特斯拉",
+      "Model S",
+      "钥匙扣",
+      "侧信道攻击",
+      "射频捕获",
+      "物理信号泄露",
+      "车辆进入系统",
+      "嵌入式设备",
+      "鲁汶大学"
+    ],
+    "summary": "2018年，比利时鲁汶大学研究人员对特斯拉Model S钥匙扣实施真实侧信道攻击。攻击者结合射频捕获与计算技术，利用钥匙扣的物理信号泄露，成功破解车辆进入系统。该案例展示了针对嵌入式物联网设备的侧信道攻击在现实中的可行性。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0178"
+    ],
+    "references": [
+      {
+        "title": "Hidden threats of IoT devices and side-channel attacks - Namecheap",
+        "link": "https://www.namecheap.com/blog/hidden-threats-of-iot-devices-and-side-channel-attacks/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2018",
+    "relatedAttackTools": [
+      "AT0081",
+      "AT0083"
+    ],
+    "relatedThreatActors": [
+      "TA0049"
+    ]
+  }
+}

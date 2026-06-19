@@ -1,0 +1,38 @@
+{
+  "C0805": {
+    "title": "33个恶意npm包利用依赖混淆攻击收集开发者环境信息",
+    "keywords": [
+      "npm",
+      "依赖混淆",
+      "恶意包",
+      "供应链攻击",
+      "开发者环境",
+      "信息收集",
+      "Microsoft",
+      "dependency confusion",
+      "开源组件投毒",
+      "包管理器"
+    ],
+    "summary": "2026年5月，Microsoft披露了一起依赖混淆攻击活动，攻击者利用33个恶意npm包收集开发者环境和构建环境的侦察数据。这些包利用包管理器优先从公共仓库拉取依赖的特性，发布与企业内部包同名的恶意公共包，从而实现对下游用户的供应链攻击。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0081-005",
+      "R0193",
+      "R0228"
+    ],
+    "references": [
+      {
+        "title": "Malicious npm packages abuse dependency confusion to profile developer ...",
+        "link": "https://www.microsoft.com/en-us/security/blog/2026/05/29/33-malicious-npm-packages-abuse-dependency-confusion-profile-developer-environments/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-05",
+    "relatedAttackTools": [
+      "AT0087"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "C0494": {
+    "title": "现代图像验证码安全与地下打码服务研究",
+    "keywords": [
+      "图像验证码",
+      "验证码安全",
+      "打码服务",
+      "地下市场",
+      "人机识别绕过",
+      "腾讯验证码",
+      "谷歌验证码",
+      "12306验证码",
+      "攻击框架"
+    ],
+    "summary": "研究论文对当前流行的图像验证码进行分类（选择型、滑动型、点击型），提出针对每类的攻击框架，并系统评估了对腾讯、谷歌、12306等10个真实世界图像验证码的攻击效果。同时识别了152个地下打码服务，揭示了地下打码市场的规模与商业生态。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0047"
+    ],
+    "references": [
+      {
+        "title": "Towards understanding the security of modern image captchas and underground captcha-solving services",
+        "link": "https://ieeexplore.ieee.org/abstract/document/8665729/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2019-03",
+    "relatedAttackTools": [
+      "AT0008",
+      "AT0029"
+    ],
+    "relatedThreatActors": [
+      "TA0001",
+      "TA0006",
+      "TA0017"
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "C1373": {
+    "title": "杭州假冒imToken钱包盗币案",
+    "keywords": [
+      "假冒钱包",
+      "imToken",
+      "助记词",
+      "盗币",
+      "虚拟货币",
+      "杭州警方",
+      "私钥泄露",
+      "有组织犯罪"
+    ],
+    "summary": "2021年上半年，杭州警方破获一起利用假冒虚拟货币钱包“imToken”APP非法获取他人钱包助记词的案件。犯罪团伙通过仿冒钱包应用诱导用户下载并导入助记词，从而盗取虚拟货币资产，形成境内开发运维、境外实施盗取的有组织犯罪产业链。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0162"
+    ],
+    "references": [
+      {
+        "title": "杭州警方通报一批涉网案件,告诉你骗子套路有多深|侦查|涉网_手机...",
+        "link": "https://dy.163.com/article/H50R5ADM05149B3S.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-01",
+    "relatedAttackTools": [
+      "AT0066"
+    ],
+    "relatedThreatActors": [
+      "TA0047",
+      "TA0039"
+    ]
+  }
+}

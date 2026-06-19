@@ -1,0 +1,33 @@
+{
+  "C1211": {
+    "title": "Amir Hossein Golshan因SIM卡交换诈骗被判8年监禁",
+    "keywords": [
+      "SIM卡交换诈骗",
+      "SIM swapping",
+      "Amir Hossein Golshan",
+      "美国司法部",
+      "刑事判决",
+      "账户接管",
+      "身份盗窃",
+      "赔偿金"
+    ],
+    "summary": "Amir Hossein Golshan，25岁，因实施一系列SIM卡交换诈骗和欺诈活动，被美国地区法官Otis D. Wright II判处8年监禁，并被责令支付超过121万美元的赔偿金。该判决体现了司法部门对SIM卡交换犯罪的严厉打击。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0132"
+    ],
+    "references": [
+      {
+        "title": "'SIM Swapper' Sentenced to Eight Years in Prison for Campaign of ...",
+        "link": "https://www.justice.gov/usao-cdca/pr/sim-swapper-sentenced-eight-years-prison-campaign-fraud-and-deception-including"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0062"
+    ],
+    "relatedThreatActors": [
+      "TA0059"
+    ]
+  }
+}

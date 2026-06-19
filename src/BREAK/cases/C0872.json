@@ -1,0 +1,29 @@
+{
+  "C0872": {
+    "title": "3500个网站遭劫持，利用隐蔽脚本秘密挖矿",
+    "keywords": [
+      "cryptojacking",
+      "JavaScript miner",
+      "browser-based mining",
+      "CoinHive",
+      "website hijacking",
+      "crypto mining malware",
+      "stealth mining",
+      "resource hijacking"
+    ],
+    "summary": "一场新的攻击活动攻陷了全球超过3500个网站，通过注入JavaScript加密货币矿工脚本，利用访问者的浏览器计算资源进行秘密挖矿。这标志着基于浏览器的加密劫持攻击的回归，此前此类攻击曾因CoinHive等服务而流行。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0086"
+    ],
+    "references": [
+      {
+        "title": "3,500 Websites Hijacked to Secretly Mine Crypto Using Stealth ...",
+        "link": "https://thehackernews.com/2025/07/3500-websites-hijacked-to-secretly-mine.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

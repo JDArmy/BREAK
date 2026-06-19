@@ -1,0 +1,32 @@
+{
+  "C1588": {
+    "title": "eSIM安全威胁综合调查",
+    "keywords": [
+      "eSIM",
+      "iSIM",
+      "配置文件劫持",
+      "身份盗用",
+      "安全威胁",
+      "移动通信",
+      "漏洞分析",
+      "机密性",
+      "完整性",
+      "可用性"
+    ],
+    "summary": "该学术研究系统性地分析了eSIM技术面临的安全威胁，指出攻击者可利用配置文件安装过程中的漏洞，劫持用户身份。研究将eSIM配置文件劫持和身份盗用列为关键威胁，并探讨了其对用户机密性、完整性和可用性的影响。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0207"
+    ],
+    "references": [
+      {
+        "title": "A Comprehensive Survey on the Security of eSIM: Threats, Challenges, and Future Directions",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11274305/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-09",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

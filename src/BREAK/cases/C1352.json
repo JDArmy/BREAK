@@ -1,0 +1,33 @@
+{
+  "C1352": {
+    "title": "GPU远程代码执行攻击：利用漏洞劫持GPU算力",
+    "keywords": [
+      "GPU",
+      "远程代码执行",
+      "固件漏洞",
+      "驱动漏洞",
+      "算力劫持",
+      "加密货币挖矿",
+      "恶意代码",
+      "arXiv"
+    ],
+    "summary": "学术研究全面分析了针对GPU的远程代码执行攻击，演示了利用GPU固件或驱动漏洞在目标系统上执行恶意代码的攻击方法。攻击者可通过这些漏洞非法获取并控制受害者GPU计算资源，将其用于加密货币挖矿或其他计算密集型任务。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0158"
+    ],
+    "references": [
+      {
+        "title": "Crypto Miner Attack: GPU Remote Code Execution Attacks - arXiv",
+        "link": "https://arxiv.org/abs/2502.10439"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0054"
+    ],
+    "relatedThreatActors": [
+      "TA0044"
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "C1268": {
+    "title": "微软365 OAuth令牌窃取攻击潮",
+    "keywords": [
+      "OAuth设备授权流",
+      "令牌窃取",
+      "Microsoft Entra ID",
+      "恶意OAuth应用",
+      "钓鱼攻击",
+      "MFA绕过",
+      "持久化控制",
+      "微软365",
+      "APT29",
+      "刷新令牌劫持"
+    ],
+    "summary": "攻击者利用OAuth设备授权流，在Microsoft Entra ID中注册恶意OAuth应用，通过钓鱼诱导用户完成授权并劫持访问令牌与刷新令牌，实现对微软365账号的持久化控制，可绕过MFA长期访问邮件、文件等核心数据。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0143"
+    ],
+    "references": [
+      {
+        "title": "警惕!OAuth令牌劫持成主流:微软365持续攻击潮,持久化控制无孔不入_微软...",
+        "link": "https://blog.csdn.net/weixin_42376192/article/details/158263424"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-02",
+    "relatedAttackTools": [
+      "AT0089",
+      "AT0063",
+      "AT0072"
+    ],
+    "relatedThreatActors": [
+      "TA0054"
+    ]
+  }
+}

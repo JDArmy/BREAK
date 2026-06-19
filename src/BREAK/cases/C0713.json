@@ -1,0 +1,36 @@
+{
+  "C0713": {
+    "title": "利用AI制作发布涉军虚假信息违法违规账号被处置",
+    "keywords": [
+      "AI生成",
+      "涉军虚假信息",
+      "账号处置",
+      "中央网信办",
+      "军队形象",
+      "网络谣言",
+      "AIGC合规",
+      "内容治理",
+      "虚假故事",
+      "人工智能"
+    ],
+    "summary": "2026年6月，军队职能部门会同中央网信办整治利用AI制作发布涉军虚假信息问题，依法处置一批违法违规账号。典型案例包括利用AI编造虚假涉军故事，误导公众认知，损害军队形象。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0071-002"
+    ],
+    "references": [
+      {
+        "title": "大反转,确认系AI生成,违法违规账号被处置",
+        "link": "https://view.inews.qq.com/a/20260609A07DI400"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-06",
+    "relatedAttackTools": [
+      "AT0056"
+    ],
+    "relatedThreatActors": [
+      "TA0041"
+    ]
+  }
+}

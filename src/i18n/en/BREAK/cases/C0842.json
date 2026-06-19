@@ -1,0 +1,21 @@
+{
+  "C0842": {
+    "title": "Okta Warns of Surge in AI-Driven Phishing Attacks",
+    "keywords": [
+      "Okta",
+      "AI-driven phishing",
+      "generative AI phishing",
+      "phishing sites",
+      "identity spoofing",
+      "Microsoft 365 login spoof",
+      "Google Workspace phishing",
+      "MFA bypass techniques"
+    ],
+    "summary": "In July 2025, Okta issued a security advisory warning that attackers are using publicly available AI tools to generate phishing sites that are highly realistic replicas of corporate login pages, matching details like CAPTCHA placement and fonts, and can even simulate interactive flows such as login failures, significantly increasing the likelihood of deceiving users.",
+    "references": [
+      {
+        "title": "AI Hacker Assistants: Surge in Generative AI Phishing Attacks Poses Severe Challenges for Enterprise Security"
+      }
+    ]
+  }
+}

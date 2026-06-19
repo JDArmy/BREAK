@@ -1,0 +1,32 @@
+{
+  "C0858": {
+    "title": "三重勒索方法增加 DDoS 攻击威胁",
+    "keywords": [
+      "三重勒索",
+      "DDoS攻击",
+      "勒索软件",
+      "双重勒索",
+      "数据泄露",
+      "加密数据",
+      "关键基础设施",
+      "赎金",
+      "Conti",
+      "LockBit"
+    ],
+    "summary": "2023 年 11 月的分析指出，双重勒索攻击已变得普遍，涉及渗透受害者网络、泄露敏感数据、删除备份和加密数据。更进一步，三重勒索方法已经出现，使整个过程变得更加复杂，包括对受害者的关键基础设施发起 DDoS 攻击以获取赎金，进一步增加受害者支付压力。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0085-002"
+    ],
+    "references": [
+      {
+        "title": "超越赎金:揭示勒索软件攻击的真正成本|受害者_网易订阅",
+        "link": "https://www.163.com/dy/article/IISHNKC90518WEPJ.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-11",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

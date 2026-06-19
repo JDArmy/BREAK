@@ -1,0 +1,35 @@
+{
+  "C1186": {
+    "title": "SolarWinds软件更新包后门事件",
+    "keywords": [
+      "SolarWinds",
+      "Orion平台",
+      "软件更新",
+      "后门",
+      "供应链攻击",
+      "APT29",
+      "Sunburst",
+      "美国国家安全局",
+      "软件供应链安全"
+    ],
+    "summary": "2020年12月，SolarWinds公司发布的Orion平台软件更新包中被植入后门，导致数千家机构客户被入侵，包括美国国家安全局等政府部门和大型企业。攻击者通过在官方更新渠道注入恶意代码，实现了对下游用户的长期潜伏和大规模数据窃取，成为软件供应链安全领域的标志性事件。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0127"
+    ],
+    "references": [
+      {
+        "title": "重磅推荐:防止软件供应链被投毒,一款开源的安全检测工具 - 知乎",
+        "link": "https://zhuanlan.zhihu.com/p/501338612"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2020-12",
+    "relatedAttackTools": [
+      "AT0013"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

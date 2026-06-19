@@ -1,0 +1,36 @@
+{
+  "C0875": {
+    "title": "微软安全博客揭示云环境算力盗用：攻击者利用自动化滥用CPU/GPU挖矿",
+    "keywords": [
+      "云安全",
+      "算力盗用",
+      "加密货币挖矿",
+      "CPU滥用",
+      "GPU滥用",
+      "微软安全",
+      "云资源滥用",
+      "加密劫持"
+    ],
+    "summary": "微软安全团队在2023年7月发布的博客中指出，针对云环境的算力盗用攻击日益增多，攻击者利用自动化手段在云平台中非法占用CPU或GPU计算资源进行加密货币挖矿。文章强调，如果攻击者需要为所使用的计算资源付费，则此类挖矿行为在经济上不可行，因此攻击者必然通过盗用他人云账号或资源来实施，凸显了云算力盗用的核心特征。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0086",
+      "R0158"
+    ],
+    "references": [
+      {
+        "title": "Cryptojacking: Understanding and defending against cloud compute ...",
+        "link": "https://www.microsoft.com/en-us/security/blog/2023/07/25/cryptojacking-understanding-and-defending-against-cloud-compute-resource-abuse/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-07",
+    "relatedAttackTools": [
+      "AT0023",
+      "AT0061"
+    ],
+    "relatedThreatActors": [
+      "TA0053"
+    ]
+  }
+}

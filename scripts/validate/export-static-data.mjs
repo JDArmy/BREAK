@@ -17,6 +17,7 @@ const exportConfigs = [
   { key: 'terms', dir: 'src/BREAK/terms' },
   { key: 'businessScenes', dir: 'src/BREAK/business-scenes' },
   { key: 'avoidanceCategories', dir: 'src/BREAK/avoidance-categories' },
+  { key: 'cases', dir: 'src/BREAK/cases' },
 ];
 
 function sortedObject(value) {
@@ -109,5 +110,5 @@ console.log('\n✅ 静态数据导出完成');
 console.log(`data=${path.relative(projectRoot, dataPath)}`);
 console.log(`manifest=${path.relative(projectRoot, manifestPath)}`);
 console.log(
-  `entities=${counts.risks.total}/${counts.avoidances.total}/${counts.attackTools.total}/${counts.threatActors.total}/${counts.terms.total}/${counts.businessScenes.total}/${counts.avoidanceCategories.total}`
+  `entities=${counts.risks.total}/${counts.avoidances.total}/${counts.attackTools.total}/${counts.threatActors.total}/${counts.terms.total}/${counts.businessScenes.total}/${counts.avoidanceCategories.total}/${counts.cases.total}`
 );

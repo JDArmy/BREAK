@@ -1,0 +1,32 @@
+{
+  "C1591": {
+    "title": "Palo Alto Networks Unit 42 研究发现医疗设备存在严重漏洞",
+    "keywords": [
+      "医疗设备安全",
+      "输液泵漏洞",
+      "X光机",
+      "CT扫描仪",
+      "MRI",
+      "CVE-2019-11687",
+      "Unit 42",
+      "Palo Alto Networks",
+      "医院网络安全",
+      "物联网安全"
+    ],
+    "summary": "Palo Alto Networks的Unit 42威胁研究发现，医疗设备是医院网络中最薄弱的环节。75%的输液泵存在至少一个漏洞或安全警报。成像设备尤其易受攻击，51%的X光机暴露于严重常见漏洞CVE-2019-11687，44%的CT扫描仪和31%的MRI机器也暴露于严重CVE。这些漏洞可能被攻击者利用，威胁患者生命安全。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0208"
+    ],
+    "references": [
+      {
+        "title": "面对性命攸关的时刻,如何实现可靠的医疗物联网安全_腾讯新闻",
+        "link": "https://view.inews.qq.com/a/20230120A02FB600"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-01",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

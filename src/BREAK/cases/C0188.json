@@ -1,0 +1,35 @@
+{
+  "C0188": {
+    "title": "阳谷警方捣毁利用“群控”设备为直播间刷人气的网络水军窝点",
+    "keywords": [
+      "群控设备",
+      "网络水军",
+      "直播间刷人气",
+      "虚假流量",
+      "阳谷警方",
+      "挂人气",
+      "账号操控",
+      "直播数据造假",
+      "非法操纵账号"
+    ],
+    "summary": "2025年2月，山东阳谷警方捣毁两个网络水军窝点。犯罪嫌疑人利用“群控”设备，为网络直播间制造虚假人气，非法操纵大量账号模拟真人互动，以提升直播间数据并从中获利。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0016-001"
+    ],
+    "references": [
+      {
+        "title": "利用“群控”设备为直播间刷人气 阳谷警方捣毁两个网络水军窝点|摄 ...",
+        "link": "https://www.163.com/dy/article/JOCG6CQC0514CFC7.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-02",
+    "relatedAttackTools": [
+      "AT0009"
+    ],
+    "relatedThreatActors": [
+      "TA0019"
+    ]
+  }
+}

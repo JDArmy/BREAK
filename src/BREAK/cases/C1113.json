@@ -1,0 +1,35 @@
+{
+  "C1113": {
+    "title": "香港公司CFO深度伪造诈骗案损失2560万美元",
+    "keywords": [
+      "深度伪造",
+      "AI诈骗",
+      "视频通话欺诈",
+      "CFO冒充",
+      "跨国公司",
+      "金融诈骗",
+      "实时换脸",
+      "香港",
+      "Arup"
+    ],
+    "summary": "2024年2月，香港一家跨国公司的办公室遭遇深度伪造诈骗。犯罪分子利用深度伪造技术冒充公司首席财务官进行视频通话，诱骗一名财务人员向诈骗者转账2560万美元。该事件是AI深度伪造技术被用于实时视频通话欺诈、实施金融诈骗的典型案例。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0116"
+    ],
+    "references": [
+      {
+        "title": "Deepfakes and Fraud: Real-World Examples of AI Misuse",
+        "link": "https://digitalcommons.unomaha.edu/ncitereportsresearch/136/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-02",
+    "relatedAttackTools": [
+      "AT0056"
+    ],
+    "relatedThreatActors": [
+      "TA0031"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "C1351": {
+    "title": "学术研究证实云平台悬空资源可被劫持用于恶意攻击",
+    "keywords": [
+      "悬空资源",
+      "云平台安全",
+      "劫持攻击",
+      "恶意软件分发",
+      "算力盗用",
+      "USENIX NSDI 2024",
+      "资源释放",
+      "云安全漏洞"
+    ],
+    "summary": "发表在USENIX NSDI 2024会议上的研究论文《Cloudy with a Chance of Cyberattacks: Dangling Resources Abuse on Cloud Platforms》证实，攻击者可以劫持云平台上已释放但未清理的资源，这些资源原本属于合法组织。攻击者利用这些被劫持的资源对原服务客户发起攻击，例如分发恶意软件，实现了对云算力的非法占用和滥用。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0158"
+    ],
+    "references": [
+      {
+        "title": "Cloudy with a Chance of Cyberattacks: Dangling Resources Abuse on Cloud ...",
+        "link": "https://arxiv.org/html/2403.19368v1"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-03",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0053"
+    ]
+  }
+}

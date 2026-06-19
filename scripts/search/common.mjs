@@ -36,6 +36,12 @@ export const entityConfigs = {
   threatActors: {
     aliasOf: 'threat-actors',
   },
+  cases: {
+    label: 'cases',
+    zhDir: 'src/BREAK/cases',
+    enDir: 'src/i18n/en/BREAK/cases',
+    titlePath: 'BREAK.cases',
+  },
 };
 
 export function normalizeEntityType(type) {

@@ -1,0 +1,29 @@
+{
+  "C1503": {
+    "title": "PhyScout传感器欺骗攻击检测框架研究",
+    "keywords": [
+      "PhyScout",
+      "传感器欺骗攻击",
+      "欺骗攻击检测",
+      "时空一致性",
+      "传感器安全",
+      "防御框架",
+      "spoofing detection",
+      "IoT安全"
+    ],
+    "summary": "研究团队开发了PhyScout防御框架，用于检测针对传感器的欺骗攻击。该框架利用时空一致性来识别攻击，克服了现有方案仅限特定攻击类型、需GPU计算和检测延迟高等局限，旨在为各类传感器欺骗攻击提供整体防护。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0189"
+    ],
+    "references": [
+      {
+        "title": "PhyScout: Detecting Sensor Spoofing Attacks via Spatio-temporal ...",
+        "link": "https://dl.acm.org/doi/10.1145/3658644.3670290"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

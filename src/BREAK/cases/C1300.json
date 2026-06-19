@@ -1,0 +1,36 @@
+{
+  "C1300": {
+    "title": "GitHub Actions遭利用致14个热门开源项目令牌泄露",
+    "keywords": [
+      "GitHub Actions",
+      "CI/CD",
+      "令牌泄露",
+      "开源项目",
+      "供应链安全",
+      "谷歌",
+      "微软",
+      "AWS",
+      "Red Hat",
+      "API密钥滥用"
+    ],
+    "summary": "2024年8月，攻击者通过CI/CD工作流中的GitHub Actions工具窃取了谷歌、微软、AWS和Red Hat等多家科技巨头的开源项目令牌。这些令牌被用于访问代码仓库和云资源，导致供应链安全风险激增。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0149"
+    ],
+    "references": [
+      {
+        "title": "GitHub Actions遭利用,14个热门开源项目令牌泄露风险激增_腾讯新闻",
+        "link": "https://new.qq.com/rain/a/20240815A04M3V00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-08",
+    "relatedAttackTools": [
+      "AT0087"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

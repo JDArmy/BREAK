@@ -1,0 +1,21 @@
+{
+  "C1786": {
+    "title": "DISC: A Decentralized Identity System with Self-Sovereign Credential Aggregation to Counter Credential Forgery",
+    "keywords": [
+      "decentralized identity",
+      "self-sovereign credential aggregation",
+      "credential forgery",
+      "DISC system",
+      "privacy preservation",
+      "IEEE paper",
+      "forgery-resistant identity",
+      "verifiable credentials"
+    ],
+    "summary": "A 2025 IEEE paper introduces DISC, a decentralized identity system with self-sovereign credential aggregation, addressing credential forgery and privacy protection in decentralized identity scenarios. The scheme uses a credential aggregation mechanism to strengthen identity assurance and prevent malicious forgery or misuse, providing a technical reference for building forgery-resistant decentraliz",
+    "references": [
+      {
+        "title": "DISC: Decentralized Identity System With Self-Sovereign Credential Aggregation"
+      }
+    ]
+  }
+}

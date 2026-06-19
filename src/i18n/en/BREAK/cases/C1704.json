@@ -1,0 +1,21 @@
+{
+  "C1704": {
+    "title": "Consent Phishing in the Browser Identity Attacks Matrix",
+    "keywords": [
+      "consent phishing",
+      "OAuth abuse",
+      "browser identity attacks",
+      "SaaS security",
+      "phishing links",
+      "GitHub security project",
+      "identity matrix",
+      "third-party app authorization"
+    ],
+    "summary": "A GitHub security project describes consent phishing techniques where attackers send phishing links requesting targets to grant access to sensitive data or perform critical operations. This technique is cataloged in the browser identity attacks matrix and represents a typical abuse of the OAuth authorization mechanism.",
+    "references": [
+      {
+        "title": "Consent phishing - browser-identity-attacks-matrix - GitHub"
+      }
+    ]
+  }
+}

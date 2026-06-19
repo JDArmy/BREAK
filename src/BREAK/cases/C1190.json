@@ -1,0 +1,30 @@
+{
+  "C1190": {
+    "title": "Capital One因配置错误导致数据泄露事件",
+    "keywords": [
+      "Capital One",
+      "数据泄露",
+      "云基础设施",
+      "配置错误",
+      "存储桶权限",
+      "IAM",
+      "云安全",
+      "AWS S3"
+    ],
+    "summary": "2019年，Capital One因云基础设施配置错误（如存储桶权限不当）导致超过1亿客户数据泄露。该事件是云配置漏洞引发严重后果的标志性案例，凸显了IAM权限管理及存储安全的重要性。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0128"
+    ],
+    "references": [
+      {
+        "title": "Survey on Kubernetes Misconfiguration Vulnerabilities and Best Practices",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11344470/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2019",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

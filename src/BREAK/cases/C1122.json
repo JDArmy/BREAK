@@ -1,0 +1,31 @@
+{
+  "C1122": {
+    "title": "HouYi：针对LLM集成应用的新型黑盒提示注入攻击",
+    "keywords": [
+      "HouYi",
+      "LLM集成应用",
+      "黑盒攻击",
+      "提示注入",
+      "提示词窃取",
+      "Notion",
+      "大语言模型安全",
+      "应用安全分析"
+    ],
+    "summary": "研究团队对36个实际集成了LLM的商业应用进行了安全分析，发现其中31个应用易受提示注入攻击。他们提出了一种名为HouYi的新型黑盒攻击技术，该技术能够实现无限制的任意LLM使用和窃取应用提示词等严重后果。包括Notion在内的10家厂商已确认了这些漏洞，该漏洞可能影响数百万用户。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0117"
+    ],
+    "references": [
+      {
+        "title": "Prompt Injection attack against LLM-integrated Applications",
+        "link": "https://arxiv.org/html/2306.05499v3"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0093"
+    ],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "C0402": {
+    "title": "Slack漏洞致攻击者可强制用户重定向窃取会话Cookie",
+    "keywords": [
+      "Slack",
+      "会话重定向",
+      "Cookie窃取",
+      "会话劫持",
+      "漏洞赏金",
+      "Web安全漏洞",
+      "登录凭据盗用",
+      "OAuth"
+    ],
+    "summary": "2019年，漏洞赏金平台研究人员发现Slack存在漏洞，允许攻击者强制用户进行虚假会话重定向，从而窃取其会话Cookie。该漏洞使攻击者能够访问Slack中共享的任何数据，对大量组织构成严重威胁。Slack在24小时内修复了该漏洞。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0035-001"
+    ],
+    "references": [
+      {
+        "title": "会话劫持和会话劫持攻击",
+        "link": "https://www.kaspersky.com.cn/resource-center/definitions/what-is-session-hijacking"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2019",
+    "relatedAttackTools": [
+      "AT0030",
+      "AT0063",
+      "AT0072",
+      "AT0094"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

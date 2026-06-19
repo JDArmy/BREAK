@@ -1,0 +1,22 @@
+{
+  "C0244": {
+    "title": "A Survey of Machine Learning Applications in Spam Filtering by Major Email Providers",
+    "keywords": [
+      "machine learning",
+      "spam filtering",
+      "Gmail",
+      "Yahoo",
+      "Outlook",
+      "content analysis",
+      "malicious links",
+      "deceptive advertising",
+      "ISP email security"
+    ],
+    "summary": "This study surveys how machine learning techniques are applied in the spam filtering systems of major Internet Service Providers (ISPs) such as Gmail, Yahoo, and Outlook. It examines how these providers leverage content analysis and machine learning algorithms to identify and filter spam, including malicious links, deceptive advertisements, and fraudulent messages, in order to protect users from u",
+    "references": [
+      {
+        "title": "Machine learning for email spam filtering: review ... - ScienceDirect"
+      }
+    ]
+  }
+}

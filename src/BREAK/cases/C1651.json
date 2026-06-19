@@ -1,0 +1,32 @@
+{
+  "C1651": {
+    "title": "SEC指控三家做市商及九名个人欺诈",
+    "keywords": [
+      "SEC",
+      "做市商",
+      "加密资产",
+      "市场操纵",
+      "虚假交易",
+      "欺诈",
+      "美国证券交易委员会",
+      "2024-166",
+      "wash trading",
+      "crypto"
+    ],
+    "summary": "美国证券交易委员会（SEC）对三家自称做市商的公司及九名个人提起欺诈指控，指控他们通过虚假交易和市场操纵行为，人为影响加密资产市场供需和价格。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0220"
+    ],
+    "references": [
+      {
+        "title": "SEC Charges Three So-Called Market Makers and Nine Individuals ...",
+        "link": "https://www.sec.gov/newsroom/press-releases/2024-166"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-10",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

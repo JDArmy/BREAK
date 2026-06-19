@@ -1,0 +1,35 @@
+{
+  "C0517": {
+    "title": "iOS应用加固白皮书：IPA文件加密、反编译防护与无源码混淆",
+    "keywords": [
+      "iOS应用加固",
+      "IPA文件加密",
+      "反编译防护",
+      "符号混淆",
+      "Ipa Guard",
+      "class-dump",
+      "IDA Pro",
+      "越狱环境",
+      "二进制扰动",
+      "无源码混淆"
+    ],
+    "summary": "文章揭示在越狱环境与反编译工具普及下，攻击者通过class-dump或IDA Pro可快速解析IPA文件中的符号表、方法名与逻辑结构，导致核心算法、支付流程、加密协议暴露。未加固的IPA文件几乎等同于“公开源代码”。文中介绍了Ipa Guard等工具对IPA进行符号混淆、资源混淆与二进制扰动的防护方案。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0051"
+    ],
+    "references": [
+      {
+        "title": "...iOS 应用加固白皮书,IPA 文件加密、反编译防护与无源码混淆...",
+        "link": "https://www.jianshu.com/p/aadec4fabdf0"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-10",
+    "relatedAttackTools": [
+      "AT0028",
+      "AT0015"
+    ],
+    "relatedThreatActors": []
+  }
+}

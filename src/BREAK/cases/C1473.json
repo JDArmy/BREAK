@@ -1,0 +1,35 @@
+{
+  "C1473": {
+    "title": "技嘉主板固件后门可被中间人劫持",
+    "keywords": [
+      "技嘉",
+      "主板固件",
+      "后门",
+      "中间人攻击",
+      "HTTP明文传输",
+      "固件更新劫持",
+      "OTA更新",
+      "供应链安全"
+    ],
+    "summary": "技嘉271款主板的固件更新过程被发现存在后门，更新文件通过HTTP明文传输，未进行加密。攻击者可发起中间人攻击劫持更新通道，替换固件，使主板下载并安装恶意固件，从而长期控制设备。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0181"
+    ],
+    "references": [
+      {
+        "title": "技嘉主板固件被发现存在后门 很容易遭到中间人劫持 涉及271款主板...",
+        "link": "https://www.landiannews.com/archives/98948.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-06",
+    "relatedAttackTools": [
+      "AT0072",
+      "AT0081"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

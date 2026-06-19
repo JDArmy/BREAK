@@ -1,0 +1,30 @@
+{
+  "C1549": {
+    "title": "NFT 经济学：创作者版税的价值",
+    "keywords": [
+      "NFT版税",
+      "创作者版税",
+      "版税绕过",
+      "NFT市场",
+      "创作者经济",
+      "智能合约",
+      "版税支付",
+      "arXiv预印本"
+    ],
+    "summary": "arXiv预印本论文《Economics of NFTs: The value of creator royalties》探讨了NFT市场中版税支付的触发机制。研究指出，战略性交易可解锁创作者价值，允许其绕过传统市场低效环节，间接涉及版税绕过对创作者经济的影响。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0199"
+    ],
+    "references": [
+      {
+        "title": "Economics of NFTs: The value of creator royalties",
+        "link": "https://arxiv.org/abs/2212.00292"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-12",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

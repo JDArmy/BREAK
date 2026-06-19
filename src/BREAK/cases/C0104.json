@@ -1,0 +1,35 @@
+{
+  "C0104": {
+    "title": "BotSpot：一种用于发现移动广告中机器人安装欺诈的混合学习框架",
+    "keywords": [
+      "BotSpot",
+      "混合学习框架",
+      "机器人安装欺诈",
+      "移动广告",
+      "虚假安装检测",
+      "自动化脚本",
+      "安装农场",
+      "广告欺诈"
+    ],
+    "summary": "该研究聚焦移动广告中的机器人安装欺诈问题，提出一种混合学习框架BotSpot用于检测虚假安装。通过分析广告主反馈的安装是否正常或为机器人安装的数据，构建模型识别利用自动化脚本或机器人账号模拟用户安装的欺诈行为，并展示了相关案例。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0008-003",
+      "R0238"
+    ],
+    "references": [
+      {
+        "title": "BotSpot: A hybrid learning framework to uncover bot install fraud in mobile advertising",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3340531.3412690"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0023",
+      "AT0044"
+    ],
+    "relatedThreatActors": [
+      "TA0056"
+    ]
+  }
+}

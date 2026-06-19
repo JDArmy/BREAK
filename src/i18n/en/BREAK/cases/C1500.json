@@ -1,0 +1,23 @@
+{
+  "C1500": {
+    "title": "Miner Cartel Coordinating Selfish Mining Attack Detected in Monacoin",
+    "keywords": [
+      "Monacoin",
+      "selfish mining",
+      "miner cartel",
+      "collaborative attack",
+      "block withholding",
+      "selective broadcasting",
+      "hash power share",
+      "blockchain security",
+      "PoW consensus",
+      "statistical detection"
+    ],
+    "summary": "Researchers identified a miner cartel in the Monacoin blockchain, where miners secretly shared newly mined block information in advance to coordinate selfish mining attacks. This collaborative attack leveraged block withholding and selective broadcasting to enable the miner group to earn rewards exceeding their share of hash power.",
+    "references": [
+      {
+        "title": "Statistical detection of selfish mining in proof-of-work ..."
+      }
+    ]
+  }
+}

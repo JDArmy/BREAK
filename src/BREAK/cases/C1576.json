@@ -1,0 +1,29 @@
+{
+  "C1576": {
+    "title": "利用深度学习应对物联网中的对抗攻击",
+    "keywords": [
+      "对抗攻击",
+      "深度学习",
+      "物联网安全",
+      "AIoT",
+      "对抗样本",
+      "AI模型鲁棒性",
+      "IEEE",
+      "防御机制"
+    ],
+    "summary": "该研究指出，对抗攻击对包括物联网在内的各种应用中的AI模型性能构成严重威胁。研究探讨了利用多种AI模型来防御这些专门攻击，强调了对抗样本对物联网AI系统决策的潜在危害。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0205"
+    ],
+    "references": [
+      {
+        "title": "Addressing Adversarial Attacks in IoT Using Deep Learning AI Models",
+        "link": "https://ieeexplore.ieee.org/document/10930870"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

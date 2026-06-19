@@ -1,0 +1,35 @@
+{
+  "C1386": {
+    "title": "Mirai僵尸网络攻击Krebs on Security博客",
+    "keywords": [
+      "Mirai",
+      "僵尸网络",
+      "DDoS攻击",
+      "Krebs on Security",
+      "Brian Krebs",
+      "IoT设备",
+      "默认密码",
+      "620 Gbps",
+      "CISA"
+    ],
+    "summary": "2016年9月，Mirai僵尸网络对安全记者Brian Krebs的博客发起大规模DDoS攻击，攻击流量超过620 Gbps，成为当时有记录以来最大规模的攻击之一。该僵尸网络利用数十万台不安全物联网设备的默认密码进行感染和控制。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0165"
+    ],
+    "references": [
+      {
+        "title": "Heightened DDoS Threat Posed by Mirai and Other Botnets - CISA",
+        "link": "https://www.cisa.gov/news-events/alerts/2016/10/14/heightened-ddos-threat-posed-mirai-and-other-botnets"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2016-09",
+    "relatedAttackTools": [
+      "AT0082"
+    ],
+    "relatedThreatActors": [
+      "TA0048"
+    ]
+  }
+}

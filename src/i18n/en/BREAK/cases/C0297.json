@@ -1,0 +1,23 @@
+{
+  "C0297": {
+    "title": "RECUR Attack: Resource Exhaustion via Recursive Entropy-Guided Counterfactual Exploitation and Reflection",
+    "keywords": [
+      "RECUR attack",
+      "recursive entropy-guided",
+      "counterfactual exploitation",
+      "resource exhaustion",
+      "large reasoning models",
+      "LRM",
+      "excessive reflection",
+      "reasoning model vulnerability",
+      "throughput degradation",
+      "adversarial attack"
+    ],
+    "summary": "Researchers propose the RECUR attack method, which induces excessive reflection in large reasoning models (LRMs) by constructing counterfactual problems, leading to an 11× increase in output length and a 90% drop in throughput, thereby consuming computational resources. This attack reveals inherent resource exhaustion vulnerabilities within the reasoning process itself.",
+    "references": [
+      {
+        "title": "RECUR: Resource Exhaustion Attack via Recursive-Entropy Guided ..."
+      }
+    ]
+  }
+}

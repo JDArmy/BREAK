@@ -1,0 +1,35 @@
+{
+  "C1602": {
+    "title": "CVE-2014-0750：Modbus TCP认证绕过漏洞",
+    "keywords": [
+      "CVE-2014-0750",
+      "Modbus TCP",
+      "认证绕过",
+      "工业控制系统",
+      "未授权访问",
+      "远程控制",
+      "SCADA",
+      "协议漏洞",
+      "ICS安全"
+    ],
+    "summary": "该漏洞允许攻击者绕过Modbus TCP协议的认证机制，实现对工业控制系统的未授权访问。漏洞影响范围涉及缺乏认证措施的Modbus TCP设备，可被利用进行远程控制。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0210"
+    ],
+    "references": [
+      {
+        "title": "GitHub - InfoSec-DB/ModBusPwn: Modbus TCP exploitation, targeting ...",
+        "link": "https://github.com/InfoSec-DB/ModBusPwn"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2014",
+    "relatedAttackTools": [
+      "AT0083"
+    ],
+    "relatedThreatActors": [
+      "TA0049"
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "C0677": {
+    "title": "从 js map 泄露到接管 OSS 对象存储的一次经典案例分享",
+    "keywords": [
+      "js.map泄露",
+      "Vue源码审计",
+      "阿里云OSS",
+      "AccessKey泄露",
+      "STS Token",
+      "对象存储接管",
+      "小程序安全",
+      "云存储滥用",
+      "硬编码凭证",
+      "前端源码泄露"
+    ],
+    "summary": "渗透测试人员通过分析某小程序前端泄露的 js.map 文件，恢复 Vue 源码并审计接口逻辑，发现后端存在硬编码的阿里云 OSS 敏感配置接口。通过构造请求成功获取 AccessKey 和 Secret 及临时 STS Token，进而接管多个对象存储桶，可对存储桶内文件进行增删改查，并发现大量服务器备份、数据库及日志文件。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0069-002"
+    ],
+    "references": [
+      {
+        "title": "从 js map 泄露到接管 OSS 对象存储的一次经典案例分享-先知社区",
+        "link": "https://xz.aliyun.com/news/14031"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-05",
+    "relatedAttackTools": [
+      "AT0088",
+      "AT0085"
+    ],
+    "relatedThreatActors": [
+      "TA0053"
+    ]
+  }
+}

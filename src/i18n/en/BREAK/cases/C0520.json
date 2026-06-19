@@ -1,0 +1,20 @@
+{
+  "C0520": {
+    "title": "C# Decompilation-Based Software Cracking Method",
+    "keywords": [
+      "C# decompilation",
+      "reverse engineering",
+      "software cracking",
+      "license verification bypass",
+      "code modification",
+      "decompiler tools",
+      "authorization bypass"
+    ],
+    "summary": "The article details a method for reverse engineering software written in C# by using decompilation tools. The process involves restoring the source code with a decompiler, analyzing the code to locate the license verification logic, and then modifying the decompiled code to bypass authorization checks.",
+    "references": [
+      {
+        "title": "C# Decompilation Software Cracking Method - Linybo2008 - Blog Park"
+      }
+    ]
+  }
+}

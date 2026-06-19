@@ -1,0 +1,35 @@
+{
+  "C1265": {
+    "title": "中间人攻击类型详解：Wi-Fi欺骗、HTTPS欺骗、SSL劫持、DNS欺骗",
+    "keywords": [
+      "中间人攻击",
+      "Wi-Fi欺骗",
+      "HTTPS欺骗",
+      "SSL劫持",
+      "DNS欺骗",
+      "电子邮件劫持",
+      "ARP欺骗",
+      "流量劫持",
+      "伪造接入点",
+      "网络安全"
+    ],
+    "summary": "CSDN文章列举了五种典型中间人攻击类型：Wi-Fi欺骗通过创建虚假同名Wi-Fi接入点劫持用户流量；HTTPS欺骗通过欺骗浏览器让用户访问伪造的可信站点；SSL劫持拦截HTTP到HTTPS的重定向过程植入恶意链接；DNS欺骗迫使浏览器在攻击者控制下访问伪造地址；电子邮件劫持通过获取邮件服务器权限拦截通信。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0142"
+    ],
+    "references": [
+      {
+        "title": "一文读懂中间人攻击:类型、案例与防护全攻略_中间人攻击案例-CSDN博客",
+        "link": "https://blog.csdn.net/shangguanliubei/article/details/149416043"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-07",
+    "relatedAttackTools": [
+      "AT0069",
+      "AT0072"
+    ],
+    "relatedThreatActors": []
+  }
+}

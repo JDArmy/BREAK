@@ -1,0 +1,32 @@
+{
+  "C0974": {
+    "title": "狄某有话说丨违规详情说明",
+    "keywords": [
+      "王者荣耀",
+      "送人头",
+      "信誉分",
+      "排位赛",
+      "巅峰赛",
+      "处罚标准",
+      "游戏环境",
+      "违规行为"
+    ],
+    "summary": "《王者荣耀》官方发布违规说明，明确对排位赛和巅峰赛中送人头等违规行为的处罚标准。其中，星耀及以上段位的送人头行为至少扣除4分信誉分，巅峰赛至少扣除5分，其他模式也有相应处罚，旨在维护游戏环境。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0101"
+    ],
+    "references": [
+      {
+        "title": "狄某有话说丨违规详情说明",
+        "link": "https://pvp.qq.com/web201706/newsdetail.shtml?G_Biz=18&tid=462994"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2020-06",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0028"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "C1644": {
+    "title": "Meta-Guardian: An On-device Application to Mitigate Psychography Data Leakage in Immersive Technologies",
+    "keywords": [
+      "immersive technologies",
+      "psychography",
+      "data leakage",
+      "eye tracking",
+      "facial tracking",
+      "on-device application",
+      "privacy protection",
+      "Meta XR SDK",
+      "spatial computing"
+    ],
+    "summary": "This study evaluates the leakage risks of facial and eye-tracking data streams in immersive technologies, highlighting that personal physiological data can be exposed to the Internet of Everything. It develops an on-device application to mitigate psychography data leakage.",
+    "references": [
+      {
+        "title": "Meta-Guardian: An Early Evaluation of an On-Device Application to Mitigate Psychography Data Leakage in Immersive Technologies"
+      }
+    ]
+  }
+}

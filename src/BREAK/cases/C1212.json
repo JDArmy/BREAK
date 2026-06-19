@@ -1,0 +1,35 @@
+{
+  "C1212": {
+    "title": "九人因涉嫌 SIM 卡交换犯罪团伙被起诉",
+    "keywords": [
+      "SIM swapping",
+      "电信欺诈",
+      "手机号码劫持",
+      "Krebs on Security",
+      "美国起诉",
+      "爱尔兰籍嫌疑人",
+      "账户接管",
+      "短信拦截",
+      "SIM卡交换团伙"
+    ],
+    "summary": "2019 年 5 月，八名美国人和一名爱尔兰人因涉嫌通过 SIM 卡交换劫持手机号码，被以电信欺诈罪起诉。该团伙通过非法转移受害者手机号码至受控 SIM 卡，拦截短信和电话，进而接管在线账户。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0132"
+    ],
+    "references": [
+      {
+        "title": "Nine Charged in Alleged SIM Swapping Ring - Krebs on Security",
+        "link": "https://krebsonsecurity.com/2019/05/nine-charged-in-alleged-sim-swapping-ring/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2019-05",
+    "relatedAttackTools": [
+      "AT0062"
+    ],
+    "relatedThreatActors": [
+      "TA0059"
+    ]
+  }
+}

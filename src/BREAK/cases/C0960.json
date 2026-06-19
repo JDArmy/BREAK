@@ -1,0 +1,31 @@
+{
+  "C0960": {
+    "title": "Cloudflare 利用机器学习检测住宅代理僵尸网络攻击",
+    "keywords": [
+      "Cloudflare",
+      "Bot Management",
+      "机器学习",
+      "住宅代理",
+      "僵尸网络",
+      "IP轮换",
+      "分布式攻击",
+      "bot检测",
+      "IP信誉绕过"
+    ],
+    "summary": "Cloudflare 发布其 Bot Management 机器学习模型 v8，专门识别利用住宅代理 IP 发起的分布式攻击。攻击者通过住宅代理网络隐藏真实 IP 并频繁轮换，绕过基于 IP 信誉和速率限制的传统防御。该模型在不依赖 IP 封锁的情况下检测此类滥用，避免误伤合法用户。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0099"
+    ],
+    "references": [
+      {
+        "title": "Using machine learning to detect bot attacks that leverage ...",
+        "link": "https://blog.cloudflare.com/residential-proxy-bot-detection-using-machine-learning/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-06",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

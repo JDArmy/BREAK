@@ -1,0 +1,35 @@
+{
+  "C0241": {
+    "title": "中国被指控用垃圾信息淹没社交媒体，以挤占封锁抗议报道",
+    "keywords": [
+      "中国",
+      "社交媒体",
+      "垃圾信息",
+      "信息干扰",
+      "新冠疫情",
+      "封锁抗议",
+      "舆论操控",
+      "平台合规",
+      "Guardian报道"
+    ],
+    "summary": "2022年12月，中国被指控利用垃圾信息淹没社交媒体平台，以压制关于新冠封锁抗议的报道。大量虚假或重复的帖子被用于干扰正常信息传播，降低用户体验并引发合规性担忧。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0021"
+    ],
+    "references": [
+      {
+        "title": "China accused of flooding social media with spam to crowd out ...",
+        "link": "https://www.theguardian.com/world/2022/dec/04/china-accused-of-flooding-social-media-spam-covid-protests"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-12",
+    "relatedAttackTools": [
+      "AT0050"
+    ],
+    "relatedThreatActors": [
+      "TA0019"
+    ]
+  }
+}

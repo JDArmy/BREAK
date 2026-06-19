@@ -1,0 +1,34 @@
+{
+  "C0523": {
+    "title": "广东省通信管理局查处一批违反用户个人信息保护规定APP",
+    "keywords": [
+      "广东省通信管理局",
+      "APP违规通报",
+      "个人信息保护",
+      "反编译",
+      "明文存储密码",
+      "向日葵保险",
+      "夸克",
+      "Java代码反编译",
+      "移动应用安全",
+      "行政责令整改"
+    ],
+    "summary": "2020年11月，广东省通信管理局通报88款问题App，存在“反编译”“明文存储密码”等安全隐患。被通报App包括向日葵保险、夸克等，其Java代码反编译风险被明确指出，运营企业被责令整改或行政处罚。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0051"
+    ],
+    "references": [
+      {
+        "title": "这88款问题App被广东通报!_澎湃号·政务_澎湃新闻-The Paper",
+        "link": "https://www.thepaper.cn/newsDetail_forward_10140661"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2020-11",
+    "relatedAttackTools": [
+      "AT0028"
+    ],
+    "relatedThreatActors": []
+  }
+}

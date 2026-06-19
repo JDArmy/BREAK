@@ -1,0 +1,35 @@
+{
+  "C1381": {
+    "title": "美国司法部捣毁300万设备规模的物联网僵尸网络",
+    "keywords": [
+      "美国司法部",
+      "物联网僵尸网络",
+      "DDoS攻击",
+      "31.4 Tbps",
+      "智能设备劫持",
+      "勒索攻击",
+      "僵尸网络捣毁",
+      "300万设备",
+      "IoT安全"
+    ],
+    "summary": "美国司法部捣毁了一个由300万台物联网设备组成的僵尸网络，该网络被用于发动创纪录的31.4 Tbps DDoS攻击。攻击者劫持大量物联网设备组成僵尸网络进行勒索性攻击。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0163"
+    ],
+    "references": [
+      {
+        "title": "DoJ Disrupts 3 Million-Device IoT Botnets Behind Record 31.4 Tbps ...",
+        "link": "https://thehackernews.com/2026/03/doj-disrupts-3-million-device-iot.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-03",
+    "relatedAttackTools": [
+      "AT0082"
+    ],
+    "relatedThreatActors": [
+      "TA0048"
+    ]
+  }
+}

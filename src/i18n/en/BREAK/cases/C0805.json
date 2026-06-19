@@ -1,0 +1,23 @@
+{
+  "C0805": {
+    "title": "33 Malicious npm Packages Use Dependency Confusion to Harvest Developer Environment Data",
+    "keywords": [
+      "npm",
+      "dependency confusion",
+      "malicious packages",
+      "supply chain attack",
+      "developer environment reconnaissance",
+      "package manager",
+      "open-source component poisoning",
+      "typosquatting",
+      "private package impersonation",
+      "build environment"
+    ],
+    "summary": "In May 2026, Microsoft disclosed a dependency confusion campaign in which attackers used 33 malicious npm packages to collect reconnaissance data from developer and build environments. The packages exploited the package manager's default behavior of pulling dependencies from public registries by publishing malicious public packages with names matching internal private packages, enabling a supply c",
+    "references": [
+      {
+        "title": "Malicious npm packages abuse dependency confusion to profile developer ..."
+      }
+    ]
+  }
+}

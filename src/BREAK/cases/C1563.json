@@ -1,0 +1,30 @@
+{
+  "C1563": {
+    "title": "MEV-Shield：一款旨在检测与防范 MEV 攻击的防御工具",
+    "keywords": [
+      "MEV",
+      "三明治攻击",
+      "DeFi",
+      "防御工具",
+      "交易数据隐私",
+      "链上数据泄露",
+      "MEV-Shield",
+      "公开交易数据",
+      "攻击模拟"
+    ],
+    "summary": "MEV Shield是一个防御工具，通过模拟攻击和演算优化策略来保护DeFi用户免受三明治攻击和MEV提取，从防御侧印证了利用公开交易数据进行攻击的普遍性。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0202"
+    ],
+    "references": [
+      {
+        "title": "GitHub - CodeMongerrr/MEV-Shield: A defensive tool designed to detect ...",
+        "link": "https://github.com/CodeMongerrr/MEV-Shield"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C0403": {
+    "title": "Exploiting XSS to Steal Cookies for Admin Session Hijacking",
+    "keywords": [
+      "XSS cookie theft",
+      "session hijacking attack",
+      "PHPSESSID",
+      "BurpSuite cookie manipulation",
+      "stored XSS payload",
+      "admin panel takeover",
+      "BlueLotus_XSSReceiver",
+      "attack chain reproduction"
+    ],
+    "summary": "On March 14, 2026, a security researcher set up an XSS attack environment by injecting a malicious script into a message board. When an administrator reviewed the message, the payload was triggered, stealing their cookie containing the PHPSESSID. Using BurpSuite to replace the cookie, the researcher gained direct access to the admin panel without a username or password, fully reproducing the attac",
+    "references": [
+      {
+        "title": "Practical Guide from Scratch: Using XSS to Steal Cookies for Session Hijacking (Illustrated)_Burp XS..."
+      }
+    ]
+  }
+}

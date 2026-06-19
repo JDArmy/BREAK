@@ -1,0 +1,35 @@
+{
+  "C1551": {
+    "title": "Poly Network跨链桥被盗案分析",
+    "keywords": [
+      "Poly Network",
+      "跨链桥",
+      "被盗",
+      "安全漏洞",
+      "Layer2",
+      "桥接风险",
+      "区块链安全",
+      "欧科云链研究院"
+    ],
+    "summary": "针对Poly Network跨链桥被盗事件，欧科云链研究院专家指出跨链桥技术尚处早期，存在安全隐患。该事件是跨链桥安全漏洞的典型代表，引发了对跨链桥技术安全性的广泛讨论。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0200"
+    ],
+    "references": [
+      {
+        "title": "“不安的跨链桥”:如何从Poly Network“被盗案”中吸取教训?",
+        "link": "https://new.qq.com/rain/a/20210828A0B6DP00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-08",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0077"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "C1746": {
+    "title": "调查论文揭示深度学习中的数据投毒攻击",
+    "keywords": [
+      "数据投毒",
+      "深度学习",
+      "训练数据投毒",
+      "模型安全",
+      "攻击分类",
+      "隐蔽性攻击",
+      "arXiv",
+      "survey"
+    ],
+    "summary": "一篇关于数据投毒攻击的调查论文，从多个维度对攻击进行分类，深入分析了针对深度学习模型的训练数据投毒攻击的特征和底层设计。论文指出此类攻击具有隐蔽性，难以被人类检测，对模型安全构成严重威胁。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0243"
+    ],
+    "references": [
+      {
+        "title": "Data Poisoning in Deep Learning: A Survey - arXiv",
+        "link": "https://arxiv.org/html/2503.22759v1"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0093"
+    ],
+    "relatedThreatActors": [
+      "TA0058"
+    ]
+  }
+}

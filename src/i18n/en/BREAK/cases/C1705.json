@@ -1,0 +1,21 @@
+{
+  "C1705": {
+    "title": "App Consent Grant Investigation | Microsoft Learn",
+    "keywords": [
+      "Microsoft Learn",
+      "app consent grant",
+      "OAuth attack",
+      "SaaS security",
+      "incident response",
+      "malicious app",
+      "permission abuse",
+      "security operations"
+    ],
+    "summary": "Microsoft's official documentation guides how to identify and investigate app consent grant attacks, protect data, and minimize risk. It provides investigation and mitigation measures for scenarios where attackers trick users into granting malicious apps high-privilege access to organizational data.",
+    "references": [
+      {
+        "title": "App consent grant investigation | Microsoft Learn"
+      }
+    ]
+  }
+}

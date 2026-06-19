@@ -1,0 +1,30 @@
+{
+  "C1499": {
+    "title": "针对比特币系统的自私挖矿拒绝服务攻击（SDoS）",
+    "keywords": [
+      "Bitcoin",
+      "自私挖矿",
+      "拒绝服务攻击",
+      "SDoS",
+      "Selfish Mining",
+      "算力攻击",
+      "区块链安全",
+      "挖矿策略"
+    ],
+    "summary": "研究提出了一种基于自私挖矿的拒绝服务攻击（SDoS），并进一步设计了三种更贪婪的攻击策略：竞争贪婪 SDoS、轨迹贪婪 SDoS 和混合贪婪 SDoS。实验表明，若攻击者掌握 14% 全网算力即可提高收益（自私挖矿为 25%，SDoS 为 19.6%），掌握 15% 算力则可发动 51% 攻击。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0188"
+    ],
+    "references": [
+      {
+        "title": "Optimal selfish mining-based denial-of-service attack",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10288509/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-10",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

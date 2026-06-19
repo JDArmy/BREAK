@@ -1,0 +1,31 @@
+{
+  "C1467": {
+    "title": "Colonial Pipeline勒索软件攻击",
+    "keywords": [
+      "Colonial Pipeline",
+      "勒索软件攻击",
+      "关键基础设施",
+      "工业控制系统",
+      "ICS安全",
+      "OT系统",
+      "燃油管道",
+      "供应链中断",
+      "DarkSide"
+    ],
+    "summary": "Colonial Pipeline遭受勒索软件攻击，导致其燃油管道系统被迫关闭，引发美国东海岸燃油供应紧张。该事件凸显了关键基础设施工业控制系统面临的网络安全威胁，攻击者通过IT网络渗透到OT系统，造成物理世界的大规模服务中断。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0179"
+    ],
+    "references": [
+      {
+        "title": "Industrial IoT Security Threats: Top Risks and Mitigation Strategies 2025",
+        "link": "https://deviceauthority.com/industrial-iot-security-threats-top-risks-and-mitigation-strategies-2025/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-05",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

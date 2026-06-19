@@ -1,0 +1,37 @@
+{
+  "C1631": {
+    "title": "BAYC Discord遭钓鱼攻击致NFT被盗",
+    "keywords": [
+      "BAYC",
+      "Discord",
+      "钓鱼攻击",
+      "NFT被盗",
+      "Tornado Cash",
+      "跨平台安全",
+      "区块链钱包",
+      "虚拟资产",
+      "社会工程学"
+    ],
+    "summary": "2022年6月，BAYC官方Discord服务器遭短暂攻击，黑客发布钓鱼链接，导致价值约200 ETH的NFT被盗。黑客将资产转移至多个地址，部分资金转入Tornado Cash。此事件暴露了跨平台（Discord到区块链钱包）交互中的安全漏洞，导致用户资产在不知情下被转移。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0216"
+    ],
+    "references": [
+      {
+        "title": "PA日报|日本通过稳定币法案;BAYC的Discord遭钓鱼攻击_腾讯新闻",
+        "link": "https://news.qq.com/rain/a/20220605A081Y200"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-06",
+    "relatedAttackTools": [
+      "AT0063",
+      "AT0060"
+    ],
+    "relatedThreatActors": [
+      "TA0018",
+      "TA0039"
+    ]
+  }
+}

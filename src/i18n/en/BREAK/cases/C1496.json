@@ -1,0 +1,23 @@
+{
+  "C1496": {
+    "title": "Closing the Proof-of-Stake Security Gap: A Signature-Based Defense Against Malicious Validators in Long-Range Attacks",
+    "keywords": [
+      "Proof-of-Stake",
+      "long-range attacks",
+      "nothing-at-stake",
+      "malicious validators",
+      "signature defense",
+      "blockchain fork",
+      "historical private keys",
+      "transaction history rewrite",
+      "PoS security",
+      "consensus mechanism"
+    ],
+    "summary": "This research proposes a signature-based defense mechanism against long-range attacks in Proof-of-Stake blockchains. The attack scenario involves malicious validators using historical private keys to fork from early blocks, constructing an alternative chain to rewrite transaction history, exploiting the nothing-at-stake property to threaten network consistency.",
+    "references": [
+      {
+        "title": "Modeling Resources in Permissionless Longest-Chain Total-Order Broadcast"
+      }
+    ]
+  }
+}

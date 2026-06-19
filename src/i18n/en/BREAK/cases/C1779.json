@@ -1,0 +1,20 @@
+{
+  "C1779": {
+    "title": "OBD-II Dongle Vulnerabilities Exploited to Access Vehicle Location and Diagnostic Data",
+    "keywords": [
+      "OBD-II dongle vulnerabilities",
+      "vehicle location exposure",
+      "CAN bus traffic interception",
+      "diagnostic data theft",
+      "onboard diagnostic interface exploit",
+      "remote vehicle attack",
+      "USENIX"
+    ],
+    "summary": "Security researchers discovered vulnerabilities in OBD-II dongles that allow attackers to obtain vehicle location, diagnostic data, and CAN bus traffic, demonstrating the practical risk of abusing the onboard diagnostic interface to steal sensitive driving data.",
+    "references": [
+      {
+        "title": "[PDF] Comprehensive Vulnerability Analysis of OBD-II Dongles as A New ..."
+      }
+    ]
+  }
+}

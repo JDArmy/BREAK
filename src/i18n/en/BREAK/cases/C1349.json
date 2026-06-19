@@ -1,0 +1,21 @@
+{
+  "C1349": {
+    "title": "NIST Confirms AI Systems Vulnerable to Data Manipulation Leading to Behavioral Anomalies",
+    "keywords": [
+      "NIST",
+      "AI data manipulation",
+      "adversarial attacks",
+      "untrusted data",
+      "AI behavioral anomalies",
+      "AI security guidance",
+      "model poisoning",
+      "black-box AI"
+    ],
+    "summary": "The U.S. National Institute of Standards and Technology (NIST) has identified that AI systems can malfunction when exposed to untrusted data, and attackers are actively exploiting this weakness. NIST published guidance on attack types and mitigations but acknowledged that no foolproof protection currently exists, underscoring the black-box nature of AI decision-making that can become unexplainable",
+    "references": [
+      {
+        "title": "NIST Identifies Types of Cyberattacks That Manipulate Behavior of AI ..."
+      }
+    ]
+  }
+}

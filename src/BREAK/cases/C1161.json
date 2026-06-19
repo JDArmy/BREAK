@@ -1,0 +1,29 @@
+{
+  "C1161": {
+    "title": "Uber 因跨境数据传输违规被罚 2.9 亿欧元",
+    "keywords": [
+      "Uber",
+      "GDPR",
+      "跨境数据传输",
+      "荷兰数据保护机构",
+      "罚款",
+      "欧洲经济区",
+      "员工数据",
+      "隐私合规"
+    ],
+    "summary": "Uber 因在超过 27 个月的时间里，未能对从欧洲经济区司机传输至美国的个人数据实施适当的安全保障措施，违反了 GDPR 关于数据跨境传输的规定，被荷兰数据保护机构处以 2.9 亿欧元罚款。此案为涉及员工数据跨境传输的合规风险敲响了警钟。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0125"
+    ],
+    "references": [
+      {
+        "title": "Uber's 290 Million Euro GDPR Fine: A Cross-Border Data Wake-Up Call",
+        "link": "https://wlg.law/ubers-290-million-euro-gdpr-fine-a-cross-border-data-wake-up-call/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

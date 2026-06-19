@@ -1,0 +1,33 @@
+{
+  "C1769": {
+    "title": "非侵入式入侵 —— Web缓存污染与请求走私",
+    "keywords": [
+      "Web缓存污染",
+      "请求走私",
+      "CDN缓存投毒",
+      "Varnish",
+      "Cloudflare",
+      "缓存键",
+      "XSS",
+      "重定向攻击",
+      "vivo安全团队"
+    ],
+    "summary": "2023年3月，vivo互联网安全团队发布技术文章，解析Web缓存污染攻击原理。攻击者通过构造与正常用户相同缓存键但包含恶意内容的请求，使CDN等前置缓存服务器缓存恶意响应。后续用户访问同一缓存键接口时，直接获得被污染的响应，可能导致XSS、重定向等攻击。文章还介绍了缓存键定位方法及禁用缓存等防御措施。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0249"
+    ],
+    "references": [
+      {
+        "title": "非侵入式入侵 —— Web缓存污染与请求走私-腾讯云开发者社区-腾讯云",
+        "link": "https://cloud.tencent.com/developer/article/2239506"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-03",
+    "relatedAttackTools": [
+      "AT0096"
+    ],
+    "relatedThreatActors": []
+  }
+}

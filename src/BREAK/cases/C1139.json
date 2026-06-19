@@ -1,0 +1,38 @@
+{
+  "C1139": {
+    "title": "Bybit被盗资金通过混币平台eXch清洗",
+    "keywords": [
+      "Bybit",
+      "eXch",
+      "混币器",
+      "洗钱",
+      "黑客攻击",
+      "ETH",
+      "跨链",
+      "比特币",
+      "链上追踪",
+      "Lazarus"
+    ],
+    "summary": "2025年2月，交易所Bybit遭黑客攻击，大量ETH被盗。链上侦探发现，黑客将至少29,000个ETH通过无需KYC的中心化混币器eXch进行清洗，并跨链转换为比特币。eXch公开拒绝配合Bybit追回资金，声称维护去中心化理念。此前，该平台已多次被用于清洗黑客攻击所得。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0121"
+    ],
+    "references": [
+      {
+        "title": "混币平台成洗钱温床?深扒Bybit遭黑事件中“逆行者”eXch",
+        "link": "http://finance.sina.com.cn/blockchain/roll/2025-02-25/doc-inemrzsu0150482.shtml"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-02",
+    "relatedAttackTools": [
+      "AT0060"
+    ],
+    "relatedThreatActors": [
+      "TA0014",
+      "TA0039",
+      "TA0045"
+    ]
+  }
+}

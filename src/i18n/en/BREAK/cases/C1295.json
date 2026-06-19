@@ -1,0 +1,22 @@
+{
+  "C1295": {
+    "title": "Agentjacking Attack: AI Coding Agents Tricked into Executing Malicious Code",
+    "keywords": [
+      "Agentjacking",
+      "AI coding agent",
+      "Sentry",
+      "error reporting mechanism",
+      "malicious code execution",
+      "developer environment",
+      "tool abuse",
+      "excessive autonomy",
+      "AI safety"
+    ],
+    "summary": "In June 2026, security researchers disclosed the Agentjacking attack technique, which abuses the Sentry error reporting mechanism to trick AI coding agents into executing malicious code on developer machines. By crafting deceptive error messages, attackers can cause agents to invoke malicious tools or perform dangerous operations during autonomous task processing, thereby compromising the develope",
+    "references": [
+      {
+        "title": "Agentjacking Attack Tricks AI Coding Agents Into Running Malicious Code"
+      }
+    ]
+  }
+}

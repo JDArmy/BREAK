@@ -1,0 +1,38 @@
+{
+  "C1779": {
+    "title": "OBD-II 加密狗漏洞可被滥用来获取车辆位置和诊断数据",
+    "keywords": [
+      "OBD-II",
+      "加密狗",
+      "漏洞",
+      "车辆位置",
+      "诊断数据",
+      "CAN总线",
+      "车载数据接口",
+      "远程攻击",
+      "车辆安全",
+      "USENIX"
+    ],
+    "summary": "安全研究人员发现，OBD-II 加密狗存在漏洞，攻击者可通过这些漏洞从受害车辆中获取位置信息、车辆诊断数据以及 CAN 总线流量，展示了车载诊断接口被滥用以窃取敏感驾驶数据的实际风险。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0252"
+    ],
+    "references": [
+      {
+        "title": "[PDF] Comprehensive Vulnerability Analysis of OBD-II Dongles as A New ...",
+        "link": "https://www.usenix.org/system/files/sec20summer_wen_prepub.pdf"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0081",
+      "AT0083",
+      "AT0097"
+    ],
+    "relatedThreatActors": [
+      "TA0049",
+      "TA0061"
+    ]
+  }
+}

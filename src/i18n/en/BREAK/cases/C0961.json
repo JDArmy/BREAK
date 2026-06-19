@@ -1,0 +1,20 @@
+{
+  "C0961": {
+    "title": "FBI Issues Alert on Risks of Evading Residential Proxy Networks",
+    "keywords": [
+      "FBI alert",
+      "residential proxy networks",
+      "IP blacklist bypass",
+      "traffic routing",
+      "infected devices",
+      "law enforcement tracking",
+      "cybercrime"
+    ],
+    "summary": "The FBI issued an alert warning that criminals are using residential proxy networks to conceal their real IP addresses, making it impossible to trace IPs linked to criminal activity back to the attackers. By routing traffic through infected residential devices, these proxies help attackers bypass IP blacklist detection and law enforcement tracking.",
+    "references": [
+      {
+        "title": "Evading Residential Proxy Networks: Protecting Your Devices ... - FBI"
+      }
+    ]
+  }
+}

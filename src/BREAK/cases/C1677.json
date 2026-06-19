@@ -1,0 +1,35 @@
+{
+  "C1677": {
+    "title": "Typosquatted npm包窃取云和CI/CD密钥",
+    "keywords": [
+      "Typosquatting",
+      "npm恶意包",
+      "云凭证窃取",
+      "CI/CD密钥泄露",
+      "Mini Shai-Hulud",
+      "供应链攻击",
+      "依赖混淆",
+      "Microsoft安全团队"
+    ],
+    "summary": "Microsoft 安全团队发现名为 Mini Shai-Hulud 的攻击活动，利用拼写错误的恶意 npm 包针对开发者环境中的云凭证和 CI/CD 密钥进行窃取。报告详细描述了攻击链、检测机会和缓解指导，帮助组织识别和中断相关活动。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0226",
+      "R0228"
+    ],
+    "references": [
+      {
+        "title": "Typosquatted npm packages used to steal cloud and CI/CD secrets",
+        "link": "https://www.microsoft.com/en-us/security/blog/2026/05/28/typosquatted-npm-packages-used-steal-cloud-ci-cd-secrets/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-05",
+    "relatedAttackTools": [
+      "AT0087"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

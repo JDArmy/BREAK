@@ -1,0 +1,29 @@
+{
+  "C1736": {
+    "title": "学术研究提出联盟营销欺诈控制方法",
+    "keywords": [
+      "联盟营销",
+      "欺诈控制",
+      "Cookie Stuffing",
+      "佣金欺诈",
+      "模拟测试环境",
+      "IEEE",
+      "affiliate marketing",
+      "fraud detection"
+    ],
+    "summary": "IEEE论文《Controlling risks and fraud in affiliate marketing》提出了一个模拟和测试环境，用于检测和控制不同的欺诈场景，包括Cookie Stuffing欺诈。该研究展示了如何通过技术手段控制此类欺诈的实施。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0239"
+    ],
+    "references": [
+      {
+        "title": "Controlling risks and fraud in affiliate marketing: A simulation and testing environment",
+        "link": "https://ieeexplore.ieee.org/document/7906986/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

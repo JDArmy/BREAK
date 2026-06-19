@@ -1,0 +1,32 @@
+{
+  "C1059": {
+    "title": "违规架设GOIP设备 4人因“帮信罪”获刑",
+    "keywords": [
+      "GOIP设备",
+      "帮助信息网络犯罪活动罪",
+      "帮信罪",
+      "违规架设",
+      "通信公司",
+      "远程拨号",
+      "诈骗",
+      "未授权设备接入"
+    ],
+    "summary": "2019年8月至2020年3月，姜某、陈某等4人共谋，将8台GOIP设备未经授权安装到某通信公司营业部办公用房内，并插入大量手机卡用于远程拨号。该设备接入营业部网络后实施诈骗，致20名被害人损失29万余元。4人均因帮助信息网络犯罪活动罪获刑。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0112-003"
+    ],
+    "references": [
+      {
+        "title": "违规架设GOIP设备 4人因“帮信罪”获刑-成都法院网",
+        "link": "http://cdfy.scssfw.gov.cn/article/detail/2021/11/id/6399820.shtml"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2019-08",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0015"
+    ]
+  }
+}

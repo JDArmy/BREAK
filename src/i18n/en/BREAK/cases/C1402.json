@@ -1,0 +1,21 @@
+{
+  "C1402": {
+    "title": "Analysis of a DAO Governance Attack Case Dataset",
+    "keywords": [
+      "DAO governance attack",
+      "smart contract vulnerability",
+      "governance manipulation",
+      "decentralized autonomous organization",
+      "proposal attack",
+      "governance contract",
+      "blockchain governance",
+      "IEEE"
+    ],
+    "summary": "The IEEE paper 'Understanding Security Issues in the DAO Governance Process' compiles 11 DAO governance attack cases, identifying vulnerabilities across three key components: governance contracts, documentation, and proposals. The analysis reveals that some DAOs permit external entities to control governance contracts or allow developers to arbitrarily alter contract logic, leading to manipulation",
+    "references": [
+      {
+        "title": "Understanding Security Issues in the DAO Governance Process"
+      }
+    ]
+  }
+}

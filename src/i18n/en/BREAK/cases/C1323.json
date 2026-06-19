@@ -1,0 +1,22 @@
+{
+  "C1323": {
+    "title": "Samsung Engineers Leak Source Code via ChatGPT",
+    "keywords": [
+      "Samsung",
+      "ChatGPT",
+      "source code leak",
+      "shadow AI",
+      "data leakage",
+      "OpenAI",
+      "training data",
+      "confidential information",
+      "AI safety"
+    ],
+    "summary": "Multiple Samsung engineers used ChatGPT for debugging and development, pasting confidential source code into the public AI tool. OpenAI retains user prompts as training data, exposing Samsung's proprietary information to potential third-party access or unintended reuse, making this a classic case of shadow AI data leakage.",
+    "references": [
+      {
+        "title": "PDF Shadow AI and the Samsung Data Leak: How Unmonitored AI Use Breaches ..."
+      }
+    ]
+  }
+}

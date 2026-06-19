@@ -1,0 +1,37 @@
+{
+  "C0521": {
+    "title": "黑客反编译软件控制18万个摄像头供人偷窥，获利80万，获刑5年",
+    "keywords": [
+      "巫某某",
+      "摄像头",
+      "反编译",
+      "非法控制计算机信息系统罪",
+      "偷窥",
+      "APP",
+      "数据库",
+      "摄像头漏洞",
+      "获利80万"
+    ],
+    "summary": "2018年4月，被告人巫某某通过反编译软件获取某品牌摄像头用户名和密码数据库，搭建APP入侵并控制摄像头18万余个，向会员收取费用提供实时监控画面，获利80余万元。法院以非法控制计算机信息系统罪判处其有期徒刑5年。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0051"
+    ],
+    "references": [
+      {
+        "title": "黑客反编译软件控制18万个摄像头供人偷窥,获利80万,获刑5年",
+        "link": "https://mp.weixin.qq.com/s?__biz=MjM5NTc2MDYxMw==&mid=2458549899&idx=3&sn=bf93e17da3a7bc1e769a3df836767cb9&chksm=b00a692c5f0614829e486b2dfef40a7316e74efc41ed3d04819e4960cf690f0494ac47d40f57&scene=27"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2018-04",
+    "relatedAttackTools": [
+      "AT0028",
+      "AT0054",
+      "AT0066"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

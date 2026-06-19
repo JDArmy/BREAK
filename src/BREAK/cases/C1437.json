@@ -1,0 +1,33 @@
+{
+  "C1437": {
+    "title": "EIP-1559基础费用操纵攻击研究",
+    "keywords": [
+      "EIP-1559",
+      "基础费用操纵",
+      "以太坊",
+      "Gas费机制",
+      "矿工攻击",
+      "交易费操纵",
+      "算力攻击",
+      "需求曲线",
+      "区块链安全",
+      "费用市场"
+    ],
+    "summary": "学术研究揭示，以太坊EIP-1559交易费机制在需求曲线稳定的保守假设下，易受少数攻击者（如20%算力的矿工）操纵。攻击者可通过策略性发送交易操纵基础费用，且较小矿工可能被激励加入攻击。该研究为理解Gas费拍卖机制被操纵的风险提供了理论依据。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0173"
+    ],
+    "references": [
+      {
+        "title": "Base Fee Manipulation In Ethereum's EIP-1559 Transaction Fee Mechanism",
+        "link": "https://arxiv.org/pdf/2304.11478"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

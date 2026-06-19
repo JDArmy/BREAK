@@ -1,0 +1,20 @@
+{
+  "C1510": {
+    "title": "HarmonyOS AR/VR Data Security and Privacy Protection Practices",
+    "keywords": [
+      "HarmonyOS AR/VR security",
+      "IMU data privacy",
+      "eye-tracking biometrics protection",
+      "SLAM replay attack",
+      "differential privacy AR/VR",
+      "spatial anchor data leak",
+      "multimodal data privacy"
+    ],
+    "summary": "In April 2025, a technical article analyzed the privacy risks of multimodal data collection on AR/VR devices, including the leakage of sensitive information such as IMU motion data, eye-tracking biometrics, and spatial anchors. It pointed out that unprotected SLAM data could be subject to replay attacks causing virtual object misplacement, and proposed encryption and differential privacy protectio",
+    "references": [
+      {
+        "title": "HarmonyOS AR/VR Development: 05-AR/VR Data Security and Privacy Protection Practices - Jian Shu"
+      }
+    ]
+  }
+}

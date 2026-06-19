@@ -1,0 +1,29 @@
+{
+  "C0347": {
+    "title": "SEC 发布主/子账户风险警示",
+    "keywords": [
+      "SEC",
+      "主账户",
+      "子账户",
+      "内幕交易",
+      "风险警示",
+      "监管规避",
+      "经纪商",
+      "美国证券交易委员会"
+    ],
+    "summary": "美国证券交易委员会（SEC）发布风险警示，指出内幕交易可能通过子账户进行以规避检测。主账户持有人（若非注册经纪商）可能利用子账户隐藏交易行为，使监管难以追踪实际控制人，构成典型的子账号滥用风险。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0031"
+    ],
+    "references": [
+      {
+        "title": "[PDF] National Exam Risk Alert on Master/Sub-accounts - SEC.gov",
+        "link": "https://www.sec.gov/about/offices/ocie/riskalert-mastersubaccounts.pdf"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

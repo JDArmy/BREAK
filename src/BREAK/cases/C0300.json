@@ -1,0 +1,33 @@
+{
+  "C0300": {
+    "title": "KillNet组织利用CC-Attack脚本发起DDoS攻击",
+    "keywords": [
+      "KillNet",
+      "CC-Attack",
+      "DDoS",
+      "HTTP洪水攻击",
+      "开放代理",
+      "SecurityScorecard",
+      "僵尸网络",
+      "流量中继"
+    ],
+    "summary": "SecurityScorecard分析发现，黑客组织KillNet利用名为CC-Attack的脚本发起分布式拒绝服务攻击。该脚本自动化利用开放代理服务器中继攻击流量，向目标服务器发送大量伪造HTTP请求，耗尽服务器资源，属于典型的CC攻击行为。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0029-003"
+    ],
+    "references": [
+      {
+        "title": "KillNet Utilizes CC-Attack: A Quick & Dirty DDoS Method",
+        "link": "https://securityscorecard.com/blog/killnet-utilizes-cc-attack-a-quick-dirty-ddos-method/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0023"
+    ],
+    "relatedThreatActors": [
+      "TA0017"
+    ]
+  }
+}

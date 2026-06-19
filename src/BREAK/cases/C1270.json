@@ -1,0 +1,35 @@
+{
+  "C1270": {
+    "title": "单点登录身份账户不一致漏洞导致账户接管",
+    "keywords": [
+      "单点登录",
+      "SSO",
+      "身份账户不一致",
+      "邮箱回收",
+      "账户接管",
+      "OAuth",
+      "Google",
+      "身份绑定",
+      "认证漏洞"
+    ],
+    "summary": "研究发现SSO系统高度依赖电子邮件地址绑定身份，但忽略邮箱可被重复使用的缺陷。攻击者通过获取已回收的电子邮件地址，利用SSO认证流程，无需密码即可接管原用户关联的在线账户，影响80%的受测热门网站。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0143"
+    ],
+    "references": [
+      {
+        "title": "单点登录SSO的身份账户不一致漏洞-腾讯云开发者社区-腾讯云",
+        "link": "https://cloud.tencent.com/developer/article/2298407"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-06",
+    "relatedAttackTools": [
+      "AT0051"
+    ],
+    "relatedThreatActors": [
+      "TA0059"
+    ]
+  }
+}

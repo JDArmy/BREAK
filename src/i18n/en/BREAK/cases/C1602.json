@@ -1,0 +1,22 @@
+{
+  "C1602": {
+    "title": "CVE-2014-0750: Modbus TCP Authentication Bypass Vulnerability",
+    "keywords": [
+      "CVE-2014-0750",
+      "Modbus TCP",
+      "authentication bypass",
+      "industrial control systems",
+      "unauthorized access",
+      "remote control",
+      "SCADA",
+      "protocol vulnerability",
+      "ICS"
+    ],
+    "summary": "This vulnerability allows attackers to bypass the authentication mechanism of the Modbus TCP protocol, leading to unauthorized access to industrial control systems. It affects Modbus TCP devices lacking authentication measures and can be exploited for remote control.",
+    "references": [
+      {
+        "title": "GitHub - InfoSec-DB/ModBusPwn: Modbus TCP Exploitation, Targeting"
+      }
+    ]
+  }
+}

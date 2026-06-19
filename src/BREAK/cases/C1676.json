@@ -1,0 +1,35 @@
+{
+  "C1676": {
+    "title": "Xygeni GitHub Action 标签投毒漏洞导致 CI/CD 凭证泄露",
+    "keywords": [
+      "GitHub Actions",
+      "标签投毒",
+      "CI/CD安全",
+      "凭证泄露",
+      "Xygeni",
+      "CVE-2026-31976",
+      "供应链攻击",
+      "可变标签",
+      "DevSecOps"
+    ],
+    "summary": "2026年3月3日，攻击者利用泄露的 GitHub App 凭证对 Xygeni 官方的 xygeni-action GitHub Action 实施标签投毒攻击。攻击者将可变的 v5 标签指向未合并 PR 中的恶意提交，任何引用 @v5 的工作流都会拉取并执行恶意代码。该后门在 CI 运行环境中注册上线、执行任意系统命令并回传数据，漏洞编号 CVE-2026-31976，CVSS 评分 9.4。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0226"
+    ],
+    "references": [
+      {
+        "title": "可变标签陷阱Xygeni GitHub Action高危漏洞危及CI/CD流水线-安全...",
+        "link": "https://www.anquanke.com/post/id/315171"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-03",
+    "relatedAttackTools": [
+      "AT0087"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

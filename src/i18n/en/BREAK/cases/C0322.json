@@ -1,0 +1,21 @@
+{
+  "C0322": {
+    "title": "Barracuda Warns of Surging Advanced OAuth Phishing Attacks Exploiting Protocol Flaws to Hijack Accounts",
+    "keywords": [
+      "OAuth phishing",
+      "account takeover",
+      "Barracuda",
+      "authorization flow",
+      "authentication bypass",
+      "third-party authorization",
+      "OAuth protocol exploit",
+      "advanced phishing campaign"
+    ],
+    "summary": "Cybersecurity firm Barracuda issued an urgent alert about a global surge in advanced phishing attacks that exploit OAuth protocol vulnerabilities. Attackers craft malicious links to trick users into completing OAuth authorization flows, gaining access and silently taking over accounts. This method bypasses traditional authentication systems by directly leveraging third-party authorization mechanis",
+    "references": [
+      {
+        "title": "Beware of 'Authorization Means Compromise'! Barracuda Warns: Advanced OAuth Phishing is Quietly Taking Over Your..."
+      }
+    ]
+  }
+}

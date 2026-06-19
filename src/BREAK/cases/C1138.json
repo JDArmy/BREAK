@@ -1,0 +1,38 @@
+{
+  "C1138": {
+    "title": "内蒙古警方破获120亿虚拟货币洗钱案",
+    "keywords": [
+      "虚拟货币洗钱",
+      "USDT",
+      "波场链",
+      "以太坊链",
+      "Telegram",
+      "内蒙古警方",
+      "网络传销",
+      "诈骗资金",
+      "匿名账户",
+      "上游犯罪"
+    ],
+    "summary": "2022年，内蒙古通辽警方破获特大利用虚拟货币洗钱案。犯罪团伙通过Telegram发展下线，将网络传销、诈骗、赌博等犯罪资金通过波场链和以太坊链转换为USDT，再招募人员注册匿名区块链账户，将USDT兑换为人民币回流给上游犯罪集团。警方抓获63人，收缴违法所得约1.3亿元。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0121"
+    ],
+    "references": [
+      {
+        "title": "120亿虚拟货币洗钱案侦破:洗钱犯罪趋势与刑事应对,加密货币监管仍...",
+        "link": "https://view.inews.qq.com/a/20221212A05KRK00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-12",
+    "relatedAttackTools": [
+      "AT0043",
+      "AT0060"
+    ],
+    "relatedThreatActors": [
+      "TA0014",
+      "TA0038"
+    ]
+  }
+}

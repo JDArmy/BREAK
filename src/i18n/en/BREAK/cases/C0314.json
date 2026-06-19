@@ -1,0 +1,22 @@
+{
+  "C0314": {
+    "title": "DNS DDoS Amplification Attack Detection Using Multi-Layer Perceptron",
+    "keywords": [
+      "DNS amplification attack",
+      "DDoS detection",
+      "multi-layer perceptron",
+      "MLP classifier",
+      "denial of service",
+      "ADAM optimization",
+      "SGD optimization",
+      "DNS resolver",
+      "network traffic analysis"
+    ],
+    "summary": "Focusing on DNS amplification attacks, this study employs a multi-layer perceptron (MLP) classifier to analyze network traffic data for detection. Attackers exploit DNS resolvers to amplify small queries into large traffic volumes, overwhelming the victim's network and causing denial of service. The research incorporates optimization techniques such as ADAM and SGD to enhance detection performance",
+    "references": [
+      {
+        "title": "DNS DDoS Amplification Attack Detection Using Multi-Layer Perceptron ..."
+      }
+    ]
+  }
+}

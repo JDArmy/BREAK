@@ -1,0 +1,35 @@
+{
+  "C1320": {
+    "title": "利用计划任务实施“就地取材”攻击",
+    "keywords": [
+      "Windows计划任务",
+      "Living off the Land",
+      "持久化",
+      "横向移动",
+      "Tarrask",
+      "RedLine",
+      "Emotet",
+      "CIS",
+      "恶意软件",
+      "任务计划程序"
+    ],
+    "summary": "CIS发布指南分析攻击者如何滥用Windows计划任务实施Living off the Land攻击。计划任务是攻击者常用的自动化恶意活动技术，用于启动感染、建立持久化和横向移动。包括Tarrask、RedLine、Emotet等恶意软件家族均曾利用计划任务。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0152"
+    ],
+    "references": [
+      {
+        "title": "Abusing Scheduled Tasks with Living off the Land Attacks",
+        "link": "https://www.cisecurity.org/insights/blog/abusing-scheduled-tasks-with-living-off-the-land-attacks"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0013"
+    ],
+    "relatedThreatActors": [
+      "TA0012"
+    ]
+  }
+}

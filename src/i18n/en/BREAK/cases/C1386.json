@@ -1,0 +1,21 @@
+{
+  "C1386": {
+    "title": "Mirai Botnet Attacks Krebs on Security Blog",
+    "keywords": [
+      "Mirai botnet",
+      "DDoS attack",
+      "Krebs on Security",
+      "Brian Krebs",
+      "IoT devices",
+      "default passwords",
+      "620 Gbps",
+      "CISA"
+    ],
+    "summary": "In September 2016, the Mirai botnet launched a massive DDoS attack against security journalist Brian Krebs' blog, with traffic exceeding 620 Gbps, making it one of the largest attacks on record at the time. The botnet infected and controlled hundreds of thousands of insecure IoT devices by exploiting default passwords.",
+    "references": [
+      {
+        "title": "Heightened DDoS Threat Posed by Mirai and Other Botnets - CISA"
+      }
+    ]
+  }
+}

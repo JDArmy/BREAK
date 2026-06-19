@@ -1,0 +1,22 @@
+{
+  "C1692": {
+    "title": "SBOM Generation Process Can Be Maliciously Manipulated to Distort Vulnerability Reports",
+    "keywords": [
+      "SBOM generation",
+      "malicious manipulation",
+      "vulnerability report distortion",
+      "SBOM integrity",
+      "software bill of materials",
+      "SBOM consumption tools",
+      "supply chain transparency",
+      "tampered SBOM",
+      "arXiv"
+    ],
+    "summary": "Research reveals that the SBOM generation process for popular programming languages is susceptible to covert manipulation by malicious insiders, rendering the resulting SBOM data untrustworthy. Meanwhile, tools designed to consume SBOMs lack sufficient capability to detect and handle tampered or compromised SBOM data, potentially producing misleading vulnerability reports.",
+    "references": [
+      {
+        "title": "Supply Chain Insecurity: The Lack of Integrity Protection in SBOM Solutions"
+      }
+    ]
+  }
+}

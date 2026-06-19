@@ -1,0 +1,22 @@
+{
+  "C0374": {
+    "title": "OTP Brute-Force Attack Payload Lists Published on GitHub",
+    "keywords": [
+      "OTP brute-force",
+      "dictionary file",
+      "numeric verification code",
+      "GitHub payload",
+      "rate limiting bypass",
+      "brute-force payload",
+      "security research",
+      "4-digit OTP",
+      "6-digit OTP"
+    ],
+    "summary": "Security researchers have publicly released dedicated dictionary files on GitHub containing all possible combinations of 4-digit, 5-digit, and 6-digit numeric verification codes. These payloads can be used for brute-force testing or attacks against applications lacking rate limiting.",
+    "references": [
+      {
+        "title": "GitHub - iamtutu/OTP_bruteforce_payloads: 4, 5, and 6 OTP for"
+      }
+    ]
+  }
+}

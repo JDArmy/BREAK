@@ -1,0 +1,23 @@
+{
+  "C0677": {
+    "title": "From JS Map Leak to OSS Bucket Takeover: A Classic Case Study",
+    "keywords": [
+      "js.map leak",
+      "Vue source code audit",
+      "Alibaba Cloud OSS",
+      "AccessKey exposure",
+      "STS token",
+      "object storage takeover",
+      "mini-program security",
+      "cloud storage abuse",
+      "hardcoded credentials",
+      "frontend source code leak"
+    ],
+    "summary": "During a penetration test, analysts recovered Vue source code from a leaked frontend JavaScript map file of a mini-program. By auditing the API logic, they discovered a hardcoded endpoint exposing Alibaba Cloud OSS credentials. Exploiting this, they obtained an AccessKey, Secret, and temporary STS token, which granted full CRUD control over multiple object storage buckets. The compromised buckets ",
+    "references": [
+      {
+        "title": "A classic case sharing from js map leakage to taking over OSS object storage - Xianzhi Community"
+      }
+    ]
+  }
+}

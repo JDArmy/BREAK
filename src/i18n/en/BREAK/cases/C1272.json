@@ -1,0 +1,20 @@
+{
+  "C1272": {
+    "title": "SSO Authentication Flaw Leading to Arbitrary User Login",
+    "keywords": [
+      "SSO authentication flaw",
+      "arbitrary user login",
+      "JS encryption reverse engineering",
+      "credential misuse",
+      "OAuth bypass",
+      "mobile app authentication bypass",
+      "order data exposure"
+    ],
+    "summary": "A mobile app's SSO flow had a flaw where the sub-application did not properly use the SSO-issued credentials, instead building its own encrypted authentication system. By reverse-engineering the JavaScript encryption, an attacker could obtain parameters like user phone numbers and craft requests to bypass authentication, enabling arbitrary user login and access to sensitive data such as order reco",
+    "references": [
+      {
+        "title": "From SSO Authentication Flaws to Arbitrary User Login Vulnerability - Xianzhi Community"
+      }
+    ]
+  }
+}

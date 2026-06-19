@@ -1,0 +1,36 @@
+{
+  "C1389": {
+    "title": "Mirai创作者认罪并协助FBI打击网络犯罪",
+    "keywords": [
+      "Mirai",
+      "僵尸网络",
+      "Paras Jha",
+      "Josiah White",
+      "Dalton Norman",
+      "FBI",
+      "Kelihos",
+      "DDoS攻击",
+      "物联网安全",
+      "认罪协议"
+    ],
+    "summary": "2017年12月，Mirai僵尸网络的三名创作者Paras Jha、Josiah White和Dalton Norman认罪，承认制造和劫持数十万台物联网设备用于发起大规模DDoS攻击。三人随后协助FBI调查其他网络犯罪案件，包括Kelihos僵尸网络和Memcached DDoS攻击。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0165"
+    ],
+    "references": [
+      {
+        "title": "Mirai Botnet创作者帮助FBI打击网络犯罪以避免入狱 - 腾讯云开发...",
+        "link": "https://cloud.tencent.com/developer/news/314967"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2017-12",
+    "relatedAttackTools": [
+      "AT0082"
+    ],
+    "relatedThreatActors": [
+      "TA0048"
+    ]
+  }
+}

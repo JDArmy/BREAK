@@ -1,0 +1,35 @@
+{
+  "C0808": {
+    "title": "2022年npm生态wsrcsv后门木马传播事件",
+    "keywords": [
+      "npm",
+      "typosquatting",
+      "wsrcsv",
+      "后门木马",
+      "开源组件投毒",
+      "供应链攻击",
+      "恶意包",
+      "nsrvmzuq",
+      "天问平台"
+    ],
+    "summary": "2022年10月，天问平台发现用户nsrvmzuq在npm生态中上传了152个npm包，这些包的名称大多与下载量较高的包相似，属于typosquatting攻击。这些恶意包最终都会释放恶意后门wsrcsv.exe，对下游用户构成严重安全威胁。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0081-005"
+    ],
+    "references": [
+      {
+        "title": "【天问】2022年npm生态软件供应链攻击年度回顾 | 星图实验室",
+        "link": "https://tianwen.qianxin.com/blog/2023/01/16/npm-annual-malicious-packages-2022/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-10",
+    "relatedAttackTools": [
+      "AT0013"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

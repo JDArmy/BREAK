@@ -1,0 +1,38 @@
+{
+  "C1597": {
+    "title": "如何利用手机木马远程控制",
+    "keywords": [
+      "手机木马",
+      "远程控制",
+      "Metasploit",
+      "msfvenom",
+      "反向TCP连接",
+      "Android后门",
+      "C2通道",
+      "Kali Linux",
+      "渗透测试"
+    ],
+    "summary": "实验演示使用Kali平台生成APK后门，通过msfvenom创建反向TCP连接木马，在Android设备上安装后，使用Metasploit控制台建立C2通道，成功获取手机Shell，实现对手机的远程控制，包括摄像头调用、录音、文件查看等操作。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0209"
+    ],
+    "references": [
+      {
+        "title": "如何利用手机木马远程控制 - 阅读清单 - 腾讯云开发者社区-腾讯云",
+        "link": "https://cloud.tencent.com/developer/inventory/32351/article/1808937"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-04",
+    "relatedAttackTools": [
+      "AT0013",
+      "AT0015",
+      "AT0048",
+      "AT0054"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

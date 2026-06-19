@@ -1,0 +1,36 @@
+{
+  "C1377": {
+    "title": "科沃斯智能家居设备“监视事件”引发隐私安全担忧",
+    "keywords": [
+      "科沃斯",
+      "智能家居",
+      "隐私安全",
+      "黑客入侵",
+      "远程控制",
+      "固件漏洞",
+      "弱密码",
+      "摄像头劫持",
+      "偷拍"
+    ],
+    "summary": "2024年，智能家居行业曝出隐私安全漏洞问题，科沃斯等品牌的设备被指存在被黑客远程控制的风险。攻击者可利用固件漏洞或弱密码入侵智能摄像头、麦克风等设备，窃取用户敏感信息或进行非法监控。事件引发公众对智能家居设备被劫持后用于偷拍、窃听的广泛担忧。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0163"
+    ],
+    "references": [
+      {
+        "title": "智能家居安全,每个人身边的安全问题",
+        "link": "https://mp.weixin.qq.com/s?__biz=MzIwODc0ODY2MQ==&mid=2247532906&idx=3&sn=1bfdaa9f5f25cde34b1f4aa22696e974&chksm=977c6870a00be1662ad5f9f97df7049c18451255eb86ee163aee000219bf5be3220ae8fafe7e&scene=27"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-09",
+    "relatedAttackTools": [
+      "AT0081",
+      "AT0055"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

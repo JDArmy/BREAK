@@ -1,0 +1,36 @@
+{
+  "C0784": {
+    "title": "Trivy供应链攻击事件：恶意二进制文件通过官方渠道分发",
+    "keywords": [
+      "Trivy",
+      "供应链攻击",
+      "恶意二进制文件",
+      "凭证窃取",
+      "CVE-2026-33634",
+      "CI/CD管道",
+      "构建工具投毒",
+      "软件供应链风险",
+      "GitLab"
+    ],
+    "summary": "攻击者同时入侵了Trivy的官方分发渠道，发布了被篡改的v0.69.4版本二进制文件。该恶意载荷为凭证窃取木马，能从所有运行Trivy扫描的CI/CD管道中收集环境变量、云令牌、SSH密钥和CI/CD机密。该事件被分配了CVE-2026-33634，CVSS评分高达9.4，属于典型的软件供应链构建工具投毒攻击。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0081-001",
+      "R0227"
+    ],
+    "references": [
+      {
+        "title": "Pipeline security lessons from March supply chain incidents",
+        "link": "https://about.gitlab.com/blog/pipeline-security-lessons-from-march-supply-chain-incidents/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-03",
+    "relatedAttackTools": [
+      "AT0087"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

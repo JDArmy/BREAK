@@ -1,0 +1,21 @@
+{
+  "C1556": {
+    "title": "EIP-7702 Phishing Attack",
+    "keywords": [
+      "EIP-7702",
+      "ERC-4337",
+      "EntryPoint",
+      "phishing",
+      "account abstraction",
+      "UserOperation",
+      "wallet activation",
+      "attack vector"
+    ],
+    "summary": "This research highlights that ERC-4337 enables remote, repeatable account activation via the EntryPoint during validation, providing attackers with unlimited activation opportunities. Any future UserOperation, even a malicious one, could be exploited to activate an account, introducing new attack vectors.",
+    "references": [
+      {
+        "title": "EIP-7702 Phishing Attack"
+      }
+    ]
+  }
+}

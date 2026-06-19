@@ -1,0 +1,33 @@
+{
+  "C1556": {
+    "title": "EIP-7702 钓鱼攻击",
+    "keywords": [
+      "EIP-7702",
+      "ERC-4337",
+      "EntryPoint",
+      "phishing",
+      "account abstraction",
+      "UserOperation",
+      "wallet activation",
+      "attack vector"
+    ],
+    "summary": "该研究指出ERC-4337通过EntryPoint在验证期间启用远程、可重复的账户激活，这为攻击者提供了无限制的激活机会。任何未来的UserOperation，即使是恶意的，都可能被利用来激活账户，从而引入新的攻击向量。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0201"
+    ],
+    "references": [
+      {
+        "title": "EIP-7702 Phishing Attack",
+        "link": "https://arxiv.org/abs/2512.12174"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0079"
+    ],
+    "relatedThreatActors": [
+      "TA0039"
+    ]
+  }
+}

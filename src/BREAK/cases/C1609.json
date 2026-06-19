@@ -1,0 +1,33 @@
+{
+  "C1609": {
+    "title": "Modbus/TCP网络攻击的实现与检测",
+    "keywords": [
+      "Modbus/TCP",
+      "拒绝服务攻击",
+      "DoS",
+      "网络攻击检测",
+      "工业控制系统",
+      "ICS安全",
+      "阈值检测",
+      "Modbus协议"
+    ],
+    "summary": "一篇学术论文聚焦Modbus/TCP协议，研究了相关的拒绝服务（DoS）等网络攻击的实现方式，并探讨了基于阈值的检测方法。研究展示了针对Modbus/TCP协议的具体攻击手段。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0210"
+    ],
+    "references": [
+      {
+        "title": "Implementation and detection of modbus cyberattacks",
+        "link": "https://ieeexplore.ieee.org/abstract/document/9200287/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0083"
+    ],
+    "relatedThreatActors": [
+      "TA0049"
+    ]
+  }
+}

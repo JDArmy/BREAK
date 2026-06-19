@@ -1,0 +1,20 @@
+{
+  "C1178": {
+    "title": "SoundCloud Data Exposure Incident: Nearly 30 Million Accounts Impacted by API Enumeration Abuse",
+    "keywords": [
+      "API enumeration abuse",
+      "API interface attack",
+      "SoundCloud data exposure",
+      "account data theft",
+      "API scraping",
+      "large-scale data exfiltration",
+      "API abuse"
+    ],
+    "summary": "SoundCloud suffered a data exposure incident impacting nearly 30 million accounts. Attackers exploited API enumeration abuse to exfiltrate data rather than directly breaching the database. This incident highlights the risk of large-scale data theft through API interface attacks.",
+    "references": [
+      {
+        "title": "SoundCloud Data Exposure Incident: Nearly 30 Million Accounts ..."
+      }
+    ]
+  }
+}

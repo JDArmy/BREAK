@@ -1,0 +1,29 @@
+{
+  "C0963": {
+    "title": "Phishfarm 框架测量浏览器钓鱼黑名单规避技术有效性",
+    "keywords": [
+      "Phishfarm",
+      "phishing",
+      "browser blacklist",
+      "evasion",
+      "IP rotation",
+      "malicious URL detection",
+      "anti-phishing",
+      "blacklist bypass"
+    ],
+    "summary": "研究提出 Phishfarm 框架，用于测量钓鱼网站规避浏览器黑名单的有效性。攻击者通过获取大量 IP 地址并频繁更换，在钓鱼网站被列入黑名单后迅速切换至新 IP，从而持续绕过浏览器的恶意 URL 黑名单检测，保持钓鱼攻击的有效性。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0099"
+    ],
+    "references": [
+      {
+        "title": "Phishfarm: A scalable framework for measuring the effectiveness of evasion techniques against browser phishing blacklists",
+        "link": "https://ieeexplore.ieee.org/abstract/document/8835369/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

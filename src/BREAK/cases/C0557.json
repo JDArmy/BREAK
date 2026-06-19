@@ -1,0 +1,31 @@
+{
+  "C0557": {
+    "title": "Refunded but Rewarded: 现金返还奖励引擎双重获利攻击研究",
+    "keywords": [
+      "现金返还",
+      "双重获利",
+      "退款漏洞",
+      "借记卡",
+      "信用卡",
+      "奖励引擎",
+      "闪退套利",
+      "发卡机构",
+      "交易时间差"
+    ],
+    "summary": "学术研究发现，某借记卡现金返还计划（发卡机构A）在用户退款后从不调整已发放的奖励，导致攻击者可利用此漏洞实施“双重获利”攻击。另一信用卡发卡机构（B）则存在账单周期时间差，允许用户在商户退货窗口关闭前赎回奖励，实现退款前先套取奖励。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0054-003"
+    ],
+    "references": [
+      {
+        "title": "Refunded but Rewarded: The Double Dip Attack on Cashback Reward Engines",
+        "link": "https://arxiv.org/abs/2604.16427"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-04",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

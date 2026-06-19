@@ -1,0 +1,31 @@
+{
+  "C0868": {
+    "title": "CISA发布#StopRansomware指南，揭示双重勒索趋势",
+    "keywords": [
+      "CISA",
+      "StopRansomware",
+      "双重勒索",
+      "数据泄露",
+      "勒索软件",
+      "加密文件",
+      "赎金",
+      "FBI",
+      "NSA",
+      "MS-ISAC"
+    ],
+    "summary": "CISA指南指出，勒索软件通过加密文件使系统不可用，恶意行为者随后要求支付赎金以换取解密。攻击者已演进出更具破坏性的策略，包括窃取数据并威胁泄露，即双重勒索。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0085"
+    ],
+    "references": [
+      {
+        "title": "#StopRansomware Guide | CISA",
+        "link": "https://www.cisa.gov/stopransomware/ransomware-guide"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

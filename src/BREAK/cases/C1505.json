@@ -1,0 +1,29 @@
+{
+  "C1505": {
+    "title": "Matter协议物联网设备传感器操纵异常检测研究",
+    "keywords": [
+      "Matter协议",
+      "物联网设备",
+      "传感器欺骗",
+      "数据注入攻击",
+      "异常检测",
+      "传感器操纵",
+      "IoT安全",
+      "故障传感器"
+    ],
+    "summary": "研究关注Matter协议物联网设备中传感器欺骗和数据注入攻击的安全问题。攻击者操纵传感器输入可导致设备产生错误行为，此类传感器操纵攻击是异常检测领域的严重关切问题，故障传感器数据可能引发设备误动作。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0189"
+    ],
+    "references": [
+      {
+        "title": "Anomaly Detection for Sensor Manipulation in Matter Enabled-IoT Devices ...",
+        "link": "https://ieeexplore.ieee.org/document/10940262"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

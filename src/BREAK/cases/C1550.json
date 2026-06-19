@@ -1,0 +1,31 @@
+{
+  "C1550": {
+    "title": "跨链桥Multichain创始人被中国警方带走调查",
+    "keywords": [
+      "Multichain",
+      "跨链桥",
+      "创始人被捕",
+      "中国警方",
+      "资金冻结",
+      "代币暴跌",
+      "Layer2桥接",
+      "合规风险",
+      "用户资产安全"
+    ],
+    "summary": "华人跨链桥项目Multichain因涉及刑事犯罪，其首席执行官等人被中国警方带走调查，导致代币价格一夜暴跌。该事件暴露了跨链桥项目在合规与资金安全方面的重大风险，用户资产面临被冻结或无法提取的困境。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0200"
+    ],
+    "references": [
+      {
+        "title": "从跨链桥Multichain被抓说起:做跨链技术创业,要注意哪些法律风险...",
+        "link": "https://zhuanlan.zhihu.com/p/687990489"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-03",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "C0709": {
+    "title": "Research Reveals Attack Methods for Extracting Training Data from Large Language Models",
+    "keywords": [
+      "training data extraction attack",
+      "large language models",
+      "GPT-2",
+      "privacy leakage",
+      "personally identifiable information",
+      "model memorization",
+      "data recovery",
+      "USENIX Security",
+      "AIGC privacy"
+    ],
+    "summary": "A research paper published at USENIX Security 2021 demonstrates that under specific settings, attackers can perform training data extraction attacks by querying large language models like GPT-2 to recover personally identifiable information (such as names, email addresses, and phone numbers) from their training data. Experiments show that even after training, models may memorize and leak portions ",
+    "references": [
+      {
+        "title": "Extracting Training Data from Large Language Models - USENIX"
+      }
+    ]
+  }
+}

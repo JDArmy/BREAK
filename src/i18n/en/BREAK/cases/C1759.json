@@ -1,0 +1,20 @@
+{
+  "C1759": {
+    "title": "MFA Fatigue Attacks Used to Extract Bypass Codes",
+    "keywords": [
+      "MFA fatigue attack",
+      "MFA bypass code",
+      "multi-factor authentication bypass",
+      "social engineering MFA",
+      "verification code leak",
+      "MFA push bombing",
+      "identity authentication bypass"
+    ],
+    "summary": "In April 2026, security analysis revealed that attackers are using MFA fatigue attacks as an auxiliary method, bombarding users with frequent MFA verification requests to pressure them into approving fraudulent requests, while simultaneously tricking them into disclosing MFA bypass codes, thereby completely circumventing MFA protection and gaining system access.",
+    "references": [
+      {
+        "title": "Analysis of MFA Bypass Code Risks: How to Manage MFA Bypass Risks and Strengthen Identity Authentication..."
+      }
+    ]
+  }
+}

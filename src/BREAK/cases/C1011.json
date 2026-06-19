@@ -1,0 +1,32 @@
+{
+  "C1011": {
+    "title": "EVE Online面临打金团伙与RMT威胁",
+    "keywords": [
+      "EVE Online",
+      "Gold Farming",
+      "RMT",
+      "真实货币交易",
+      "打金团伙",
+      "异常检测",
+      "游戏经济",
+      "MMORPG",
+      "ACM"
+    ],
+    "summary": "学术研究指出，大型多人在线角色扮演游戏《EVE Online》持续面临打金团伙（Gold Farming Groups）和真实货币交易（RMT）的威胁。这些行为通过异常检测框架被识别，它们破坏游戏内经济平衡和公平竞争环境。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0108"
+    ],
+    "references": [
+      {
+        "title": "Unveiling Shadow Markets: A Scalable Anomaly Detection Framework for ...",
+        "link": "https://dl.acm.org/doi/10.1145/3744736.3749355"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0025"
+    ]
+  }
+}

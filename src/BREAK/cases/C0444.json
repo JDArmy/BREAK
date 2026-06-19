@@ -1,0 +1,30 @@
+{
+  "C0444": {
+    "title": "OWASP定义支付卡破解为自动化威胁",
+    "keywords": [
+      "OWASP",
+      "OAT-010",
+      "支付卡破解",
+      "Card Cracking",
+      "自动化威胁",
+      "暴力破解",
+      "CSC",
+      "CVV",
+      "Web应用安全"
+    ],
+    "summary": "OWASP将支付卡破解（OAT-010）定义为针对应用支付卡流程的暴力破解攻击，旨在识别缺失的开始日期、到期日期和/或卡安全码（CSC），该安全码也被称为CVN2、CVC、CV2或CID。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0041"
+    ],
+    "references": [
+      {
+        "title": "OAT-010 Card Cracking - OWASP Foundation",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-010_Card_Cracking"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

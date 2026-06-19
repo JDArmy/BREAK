@@ -1,0 +1,36 @@
+{
+  "C0086": {
+    "title": "重庆破获“视频插码”案：短视频嵌入二维码为赌博色情引流",
+    "keywords": [
+      "视频插码",
+      "短视频引流",
+      "二维码",
+      "网络赌博",
+      "色情引流",
+      "康某犯罪团伙",
+      "重庆公安",
+      "广告推广费",
+      "平台账号"
+    ],
+    "summary": "重庆公安网安部门查明，以康某为首的犯罪团伙为赚取涉黄、赌、诈平台广告推广费，接收含有赌博、色情等链接的二维码，插入到短视频中，利用平台账号发布数十万条已“插码”短视频。网民观看后扫描二维码，即被引流至网络色情、赌博、诈骗网页，造成巨大财产损失。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0007-003"
+    ],
+    "references": [
+      {
+        "title": "整治广告推广引流犯罪 公安部公布8起典型案例",
+        "link": "https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=6992995239179912681&source=50001&sub_source=50001_011"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-09",
+    "relatedAttackTools": [
+      "AT0067"
+    ],
+    "relatedThreatActors": [
+      "TA0016",
+      "TA0017"
+    ]
+  }
+}

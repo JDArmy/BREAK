@@ -1,0 +1,36 @@
+{
+  "C0837": {
+    "title": "158年公司“一夜毁灭”,只因一员工弱密码被黑客“猜中”:数据全锁...",
+    "keywords": [
+      "KNP",
+      "Akira",
+      "勒索软件",
+      "弱密码",
+      "暴力破解",
+      "数据加密",
+      "赎金",
+      "破产",
+      "员工安全意识"
+    ],
+    "summary": "2023年6月，英国百年运输企业KNP因一名员工使用弱密码，被黑客组织Akira暴力破解并入侵内部系统。黑客加密所有业务数据并索要500万英镑赎金，公司无力支付，最终导致系统瘫痪、数据无法恢复，公司宣布破产，700多名员工失业。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0083"
+    ],
+    "references": [
+      {
+        "title": "158年公司“一夜毁灭”,只因一员工弱密码被黑客“猜中”:数据全锁...",
+        "link": "http://h5.ifeng.com/c/vivo/v002KH7i2cQdo3dUoXQUgjRCOOrYxeTxhRntl5zJGbpsc1I__"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-06",
+    "relatedAttackTools": [
+      "AT0068"
+    ],
+    "relatedThreatActors": [
+      "TA0018",
+      "TA0021"
+    ]
+  }
+}

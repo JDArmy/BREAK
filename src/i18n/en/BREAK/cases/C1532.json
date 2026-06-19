@@ -1,0 +1,23 @@
+{
+  "C1532": {
+    "title": "Academic Research Reveals Imminent Quantum Threat to Cryptocurrencies",
+    "keywords": [
+      "quantum computing threat cryptocurrency",
+      "fault-tolerant quantum computer",
+      "elliptic curve discrete logarithm problem",
+      "instant spending attack",
+      "superconducting qubit architecture",
+      "photonic quantum architecture",
+      "private key compromise",
+      "transaction integrity attack",
+      "mempool attack vector",
+      "post-quantum cryptography"
+    ],
+    "summary": "An academic paper indicates that the first fault-tolerant quantum computers with fast clock speeds, such as superconducting and photonic architectures, could break the 256-bit elliptic curve discrete logarithm problem within minutes. This would enable attackers to launch instant spending attacks on cryptocurrency transactions in the public mempool, directly threatening transaction integrity and pr",
+    "references": [
+      {
+        "title": "Securing Elliptic Curve Cryptocurrencies against Quantum ... - arXiv"
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "C1523": {
+    "title": "Terra链上项目遭批量谷歌关键词广告投放钓鱼攻击",
+    "keywords": [
+      "Terra",
+      "谷歌广告钓鱼",
+      "钓鱼攻击",
+      "恶意授权",
+      "Astroport",
+      "Nexus Protocol",
+      "Anchor Protocol",
+      "加密货币盗窃",
+      "私钥泄露"
+    ],
+    "summary": "2022年4月12日至21日，Terra链上约52个地址的资金被恶意转出，总损失约431万美元。经分析确认，攻击为批量谷歌关键词广告投放钓鱼，用户在搜索Astroport、Nexus Protocol等知名项目时，点击搜索结果中看似正常的广告链接后被诱导签署恶意授权。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0194"
+    ],
+    "references": [
+      {
+        "title": "PA日报|美对俄制裁扩大至加密矿企;TON基金会已募集逾10亿美元...",
+        "link": "https://new.qq.com/omn/20220421/20220421A0C9RV00.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-04",
+    "relatedAttackTools": [
+      "AT0063",
+      "AT0079"
+    ],
+    "relatedThreatActors": [
+      "TA0039"
+    ]
+  }
+}

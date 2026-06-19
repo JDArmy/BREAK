@@ -1,0 +1,21 @@
+{
+  "C1416": {
+    "title": "Crypto Lending Protocol Themis Hit by Oracle Manipulation Attack",
+    "keywords": [
+      "Themis protocol",
+      "crypto lending",
+      "oracle manipulation attack",
+      "price manipulation",
+      "DeFi exploit",
+      "on-chain attack",
+      "liquidation logic",
+      "Chengdu LianAn"
+    ],
+    "summary": "On June 28, 2023, the crypto lending protocol Themis suffered an oracle manipulation attack. The attacker exploited external price data fed by the oracle to distort the protocol's normal lending or liquidation logic, ultimately profiting approximately $370,000.",
+    "references": [
+      {
+        "title": "Chengdu Lian'an Security Monthly Report | June Blockchain Ecosystem Security Incidents: Losses Exceed $97.664 Million"
+      }
+    ]
+  }
+}

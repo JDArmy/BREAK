@@ -1,0 +1,22 @@
+{
+  "C1271": {
+    "title": "Fortinet FortiCloud SSO Authentication Bypass Vulnerability",
+    "keywords": [
+      "Fortinet",
+      "FortiGate",
+      "FortiCloud SSO",
+      "authentication bypass",
+      "CVE-2026",
+      "OAuth abuse",
+      "SSO vulnerability",
+      "in-the-wild exploitation",
+      "session validation missing"
+    ],
+    "summary": "An SSO authentication bypass vulnerability exists in Fortinet FortiGate devices due to missing session validation logic in FortiCloud SSO. Attackers can leverage a legitimate FortiCloud account to bypass authentication and log into other users' devices. The vulnerability has a severity score of 9.8, and in-the-wild exploitation has been observed targeting fully patched appliances.",
+    "references": [
+      {
+        "title": "Fortinet Confirms Active FortiCloud SSO Bypass on Fully Patched Systems"
+      }
+    ]
+  }
+}

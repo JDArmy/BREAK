@@ -1,0 +1,19 @@
+{
+  "C0866": {
+    "title": "Company in Laishan, Yantai Hit by WannaCry Ransomware Attack",
+    "keywords": [
+      "WannaCry",
+      "ransomware attack",
+      "file upload vulnerability",
+      "backdoor implant",
+      "database encryption",
+      "Yantai Laishan"
+    ],
+    "summary": "In February 2026, a company's servers in Laishan, Yantai were infected with ransomware, locking its databases. Investigation revealed that attackers exploited a file upload vulnerability in the business system to implant a backdoor, which then deployed the WannaCry ransomware, encrypting a large number of files.",
+    "references": [
+      {
+        "title": "Company Files 'Poisoned and Encrypted': Laishan Cyber Police Investigate a Ransomware Attack Case"
+      }
+    ]
+  }
+}

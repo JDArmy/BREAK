@@ -1,0 +1,35 @@
+{
+  "C1033": {
+    "title": "Telegram创始人杜罗夫透露FBI曾试图在其应用中植入后门",
+    "keywords": [
+      "Telegram",
+      "Pavel Durov",
+      "FBI",
+      "后门",
+      "植入后门",
+      "加密通信",
+      "政府监控",
+      "开源工具",
+      "工程师招募"
+    ],
+    "summary": "Telegram创始人Pavel Durov在采访中透露，美国联邦调查局（FBI）曾试图秘密招募其工程师，并说服其使用某些充当后门的开源工具，以获取对Telegram系统的控制权。Durov本人也在美国机场多次被FBI特工接触询问。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0111-002"
+    ],
+    "references": [
+      {
+        "title": "Telegram创始人被捕案：杜罗夫命运如何？各方人士发声全汇总",
+        "link": "https://new.qq.com/rain/a/20240826A058PN00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-08",
+    "relatedAttackTools": [
+      "AT0011"
+    ],
+    "relatedThreatActors": [
+      "TA0030"
+    ]
+  }
+}

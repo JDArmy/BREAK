@@ -1,0 +1,36 @@
+{
+  "C1402": {
+    "title": "DAO 治理攻击案例数据集分析",
+    "keywords": [
+      "DAO",
+      "治理攻击",
+      "智能合约漏洞",
+      "治理操纵",
+      "区块链安全",
+      "去中心化自治组织",
+      "提案攻击",
+      "IEEE"
+    ],
+    "summary": "IEEE 论文《Understanding Security Issues in the DAO Governance Process》收集了 11 个 DAO 治理攻击案例，涵盖治理合约、文档和提案三个关键组件中的漏洞。分析发现部分 DAO 允许外部实体控制治理合约，或开发者可任意更改合约逻辑，导致治理过程被操纵。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0167"
+    ],
+    "references": [
+      {
+        "title": "Understanding security issues in the dao governance process",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10891888/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0077",
+      "AT0078",
+      "AT0079"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

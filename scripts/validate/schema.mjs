@@ -78,6 +78,14 @@ const categories = [
     filePattern: /^BS\d{2}\.json$/,
     keyPattern: /^BS\d{2}$/,
   },
+  {
+    name: "cases",
+    dir: "src/BREAK/cases",
+    schemaKey: "cases",
+    filePattern: /^C\d{4}\.json$/,
+    keyPattern: /^C\d{4}$/,
+    requireKeywords: true,
+  },
 ];
 
 const enKeywordCategories = [
@@ -86,6 +94,12 @@ const enKeywordCategories = [
     dir: "src/i18n/en/BREAK/risks",
     filePattern: /^R\d{4}\.json$/,
     keyPattern: /^R\d{4}(?:-\d{3})?$/,
+  },
+  {
+    name: "en-cases",
+    dir: "src/i18n/en/BREAK/cases",
+    filePattern: /^C\d{4}\.json$/,
+    keyPattern: /^C\d{4}$/,
   },
 ];
 

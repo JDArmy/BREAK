@@ -1,0 +1,22 @@
+{
+  "C0651": {
+    "title": "Automation Apps Exploited for Intimate Partner Surveillance and Harassment",
+    "keywords": [
+      "automation apps",
+      "intimate partner violence",
+      "iOS Shortcuts",
+      "Android Tasker",
+      "IFTTT",
+      "tech abuse",
+      "USENIX Security",
+      "surveillance harassment",
+      "in-app messaging harassment"
+    ],
+    "summary": "A USENIX Security 2025 study reveals that automation apps such as iOS Shortcuts and Android Tasker can be weaponized by abusers to monitor, impersonate, overwhelm, and control victims. Researchers identified 1,014 publicly shared shortcut recipes capable of enabling surveillance and harassment.",
+    "references": [
+      {
+        "title": "Abusability of automation apps in intimate partner violence"
+      }
+    ]
+  }
+}

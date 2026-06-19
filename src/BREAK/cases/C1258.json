@@ -1,0 +1,35 @@
+{
+  "C1258": {
+    "title": "“外挂”改定位 在家躺平薅羊毛",
+    "keywords": [
+      "货运平台",
+      "诈骗案",
+      "外挂",
+      "GPS定位修改",
+      "虚假订单",
+      "优惠券补贴",
+      "地理位置欺诈",
+      "上海青浦警方",
+      "薅羊毛"
+    ],
+    "summary": "2022年2月，上海青浦警方破获一起货运平台诈骗案。犯罪嫌疑人利用第三方软件修改GPS定位，虚假完成货运订单，骗取平台发放的优惠券补贴差价。通过发布虚假订单、使用外挂模拟位置、上传虚假照片等手段，累计诈骗订单2万余单，涉案金额达100万余元。最终，程某等20人因涉嫌诈骗罪被采取刑事强制措施。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0141"
+    ],
+    "references": [
+      {
+        "title": "“外挂”改定位 在家躺平薅羊毛_澎湃号·政务_澎湃新闻-The Paper",
+        "link": "https://www.thepaper.cn/newsDetail_forward_16836882"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-02",
+    "relatedAttackTools": [
+      "AT0024"
+    ],
+    "relatedThreatActors": [
+      "TA0001"
+    ]
+  }
+}

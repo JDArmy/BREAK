@@ -1,0 +1,23 @@
+{
+  "C0371": {
+    "title": "WordPress App Builder Plugin OTP Brute Force Vulnerability (CVE-2024-9302)",
+    "keywords": [
+      "WordPress",
+      "App Builder",
+      "CVE-2024-9302",
+      "OTP brute force",
+      "verification code brute force",
+      "Wordfence",
+      "password reset",
+      "privilege escalation",
+      "plugin vulnerability",
+      "CVSS 9.8"
+    ],
+    "summary": "Disclosed in October 2024, a critical vulnerability (CVE-2024-9302) exists in the WordPress App Builder plugin version 5.3.7 and earlier. The password reset function's OTP verification mechanism lacks brute-force protection, allowing unauthenticated attackers to enumerate OTP codes and take over any user account, including administrators. The CVSS score is 9.8.",
+    "references": [
+      {
+        "title": "NVD - CVE-2024-9302"
+      }
+    ]
+  }
+}

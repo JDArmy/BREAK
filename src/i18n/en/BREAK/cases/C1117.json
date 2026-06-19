@@ -1,0 +1,20 @@
+{
+  "C1117": {
+    "title": "DAN Jailbreak Attack",
+    "keywords": [
+      "DAN jailbreak",
+      "direct prompt injection",
+      "dual-role-playing",
+      "LLM safety bypass",
+      "AI model attack",
+      "guardrail circumvention",
+      "prompt injection"
+    ],
+    "summary": "A jailbreak technique known as DAN (Do Anything Now) uses a dual-role-playing format for prompt injection. The attacker instructs the model to assume an unrestricted 'DAN' persona, thereby bypassing safety guardrails to execute previously forbidden commands.",
+    "references": [
+      {
+        "title": "SahilHaiHum/llm-prompt-attacks-extended. - GitHub"
+      }
+    ]
+  }
+}

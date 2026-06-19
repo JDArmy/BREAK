@@ -1,0 +1,36 @@
+{
+  "C0380": {
+    "title": "“撞库”团伙盗号1.29万个,涉案近千万元",
+    "keywords": [
+      "撞库",
+      "盗号",
+      "盐城警方",
+      "大型网购平台",
+      "账号盗取",
+      "家庭宽带",
+      "网络黑产",
+      "刑事侦查"
+    ],
+    "summary": "盐城警方破获一起团伙“撞库”盗号案。嫌疑人利用家庭宽带地址在短时间内反复尝试登录大型网购平台，成功盗取1.29万个账号，涉案金额近千万元。该案在进一步侦查中。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0032"
+    ],
+    "references": [
+      {
+        "title": "“撞库”团伙盗号1.29万个,涉案近千万元|黑客_网易订阅",
+        "link": "https://dy.163.com/article/GP1A1OAD053469KC.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-11",
+    "relatedAttackTools": [
+      "AT0042"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0007",
+      "TA0017"
+    ]
+  }
+}

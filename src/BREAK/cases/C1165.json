@@ -1,0 +1,38 @@
+{
+  "C1165": {
+    "title": "路径与敏感信息发现实践",
+    "keywords": [
+      "路径爆破",
+      "Dirsearch",
+      "御剑",
+      "敏感文件发现",
+      "备份文件泄露",
+      "config.php",
+      "状态码判断",
+      "未授权访问",
+      "渗透测试",
+      "Web安全"
+    ],
+    "summary": "渗透测试中，攻击者使用Dirsearch、御剑等工具对目标网站进行路径爆破，批量枚举后台路径、备份文件、数据库文件等敏感资源。通过构造URL+后缀名请求，根据状态码判断路径是否存在，从而发现未授权访问的敏感文件，如config.php配置文件及.sql数据库备份。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0126-001"
+    ],
+    "references": [
+      {
+        "title": "路径与敏感信息发现 - FreeBuf网络安全行业门户",
+        "link": "https://www.freebuf.com/articles/web/263211.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-02",
+    "relatedAttackTools": [
+      "AT0005",
+      "AT0068"
+    ],
+    "relatedThreatActors": [
+      "TA0013",
+      "TA0018"
+    ]
+  }
+}

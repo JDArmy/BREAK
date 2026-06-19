@@ -1,0 +1,35 @@
+{
+  "C1443": {
+    "title": "区块链地址投毒攻击的大规模测量与分析",
+    "keywords": [
+      "区块链地址投毒",
+      "以太坊",
+      "BSC",
+      "地址投毒攻击",
+      "链上隐私泄露",
+      "USENIX",
+      "大规模测量",
+      "小额代币",
+      "地址相似性",
+      "链上交易分析"
+    ],
+    "summary": "研究通过在以太坊和BSC上进行两年的大规模测量，识别出比公开报告多13倍的地址投毒攻击企图。攻击者通过向用户钱包发送小额代币，利用地址相似性、时间关联等策略，诱骗用户误复制投毒地址进行转账，从而窃取资产。该研究揭示了攻击者如何利用链上交易的公开透明特性，分析用户交易习惯并实施针对性攻击。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0174"
+    ],
+    "references": [
+      {
+        "title": "Blockchain Address Poisoning - USENIX",
+        "link": "https://www.usenix.org/conference/usenixsecurity25/presentation/tsuchiya"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0080"
+    ],
+    "relatedThreatActors": [
+      "TA0039"
+    ]
+  }
+}

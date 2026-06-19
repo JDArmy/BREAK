@@ -1,0 +1,34 @@
+{
+  "C1323": {
+    "title": "三星工程师通过ChatGPT泄露源代码事件",
+    "keywords": [
+      "Samsung",
+      "ChatGPT",
+      "源代码泄露",
+      "影子AI",
+      "数据泄露",
+      "OpenAI",
+      "训练数据",
+      "机密信息",
+      "AI安全"
+    ],
+    "summary": "多名三星工程师使用ChatGPT辅助调试和开发，将机密源代码粘贴至该公共AI工具。OpenAI系统将用户提示保留为训练数据，导致三星专有信息面临被第三方获取或意外复用的风险，构成典型的影子AI数据泄露案例。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0153"
+    ],
+    "references": [
+      {
+        "title": "PDF Shadow AI and the Samsung Data Leak: How Unmonitored AI Use Breaches ...",
+        "link": "https://www.strategicaiguidance.com/wp-content/uploads/2025/10/Shadow-AI-and-the-Samsung-Data-Leak.pdf"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0093"
+    ],
+    "relatedThreatActors": [
+      "TA0021"
+    ]
+  }
+}

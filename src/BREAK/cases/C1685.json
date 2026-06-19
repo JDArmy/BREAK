@@ -1,0 +1,32 @@
+{
+  "C1685": {
+    "title": "PackAttack记录2017-2023年包管理器攻击事件",
+    "keywords": [
+      "PackAttack",
+      "包管理器攻击",
+      "typosquatting",
+      "依赖混淆",
+      "PyPI",
+      "npm",
+      "RubyGems",
+      "PowerShell Gallery",
+      "恶意包投毒"
+    ],
+    "summary": "Karneades/PackAttack项目记录了2017年至2023年间发生在PyPI、npm、RubyGems和PowerShell Gallery等平台的包管理器攻击事件，包括typosquatting和依赖混淆攻击。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0228"
+    ],
+    "references": [
+      {
+        "title": "ecosyste-ms/typosquatting-dataset - GitHub",
+        "link": "https://github.com/ecosyste-ms/typosquatting-dataset"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

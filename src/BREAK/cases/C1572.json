@@ -1,0 +1,30 @@
+{
+  "C1572": {
+    "title": "SoK：MEV 应对措施",
+    "keywords": [
+      "MEV",
+      "最大可提取价值",
+      "Gas费操纵",
+      "抢跑",
+      "优先级Gas拍卖",
+      "PGA",
+      "MEV拍卖",
+      "网络拥堵",
+      "区块链交易排序"
+    ],
+    "summary": "该研究系统化梳理了MEV的应对措施，提及通过设置适当的费用或通过MEV拍卖来应对。同时指出，优先级Gas拍卖（PGA）会导致网络拥堵。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0204"
+    ],
+    "references": [
+      {
+        "title": "SoK: MEV countermeasures",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3689931.3694911"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

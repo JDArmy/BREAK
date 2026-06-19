@@ -1,0 +1,34 @@
+{
+  "C0366": {
+    "title": "CAUDIT系统缓解SSH暴力破解攻击",
+    "keywords": [
+      "SSH",
+      "暴力破解",
+      "凭证爆破",
+      "CAUDIT",
+      "NSDI",
+      "USENIX",
+      "审计系统",
+      "登录检测",
+      "攻击缓解"
+    ],
+    "summary": "USENIX NSDI '19会议上发表的论文提出CAUDIT系统，用于持续审计SSH服务器以缓解暴力破解攻击。研究指出，凭证猜测攻击流量占攻击尝试的大部分，系统通过检测异常登录行为来防御凭证爆破，实验表明攻击尝试减少约100倍。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0032-003"
+    ],
+    "references": [
+      {
+        "title": "{CAUDIT}: Continuous auditing of {SSH} servers to mitigate {Brute-Force} attacks",
+        "link": "https://www.usenix.org/conference/nsdi19/presentation/cao"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0068"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

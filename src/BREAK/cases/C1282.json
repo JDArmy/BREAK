@@ -1,0 +1,36 @@
+{
+  "C1282": {
+    "title": "内容农场污染搜索引擎与信息生态",
+    "keywords": [
+      "内容农场",
+      "搜索引擎污染",
+      "SEO",
+      "低质量内容",
+      "爬虫",
+      "信息流",
+      "微信公众号",
+      "谣言传播",
+      "流量分成",
+      "广告分成"
+    ],
+    "summary": "内容农场（Content Farm）伴随搜索引擎诞生，通过爬虫或写手批量生产低质量内容，擅长SEO，在搜索结果中排名常高于原创网站。其污染PC端搜索引擎和移动端信息流，在微信、公众号、视频号等平台广泛存在，并导致谣言传播。参与者包括撰文者、网站经营者和导流者，形成以流量和广告分成为核心的利益链条。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0145"
+    ],
+    "references": [
+      {
+        "title": "互联网毒瘤——内容农场 - 有价值炮灰 - 博客园",
+        "link": "https://www.cnblogs.com/pannengzhi/p/12386268.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2020-03",
+    "relatedAttackTools": [
+      "AT0005"
+    ],
+    "relatedThreatActors": [
+      "TA0013"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C0226": {
+    "title": "US Government Websites Hit by SEO Poisoning Attack",
+    "keywords": [
+      "SEO poisoning attack",
+      ".gov domain hijack",
+      "PDF malicious file upload",
+      "Granicus file upload vulnerability",
+      "search engine index manipulation",
+      "government website redirect",
+      "pornographic ad redirect",
+      "domain redirect exploit"
+    ],
+    "summary": "In December 2025, a large-scale SEO poisoning attack targeted .gov domains across multiple US states and local governments. Attackers exploited public file upload functions on government websites to upload PDF files containing malicious links. Once these files were indexed by search engines, users clicking on official domain links were redirected to pages containing pornographic advertisements and",
+    "references": [
+      {
+        "title": "U.S. government website hit by SEO poisoning attack: Official domain tampered to redirect to pornographic content entry"
+      }
+    ]
+  }
+}

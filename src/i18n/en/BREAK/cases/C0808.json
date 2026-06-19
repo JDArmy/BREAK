@@ -1,0 +1,22 @@
+{
+  "C0808": {
+    "title": "2022 npm Ecosystem wsrcsv Backdoor Trojan Distribution Incident",
+    "keywords": [
+      "npm",
+      "typosquatting",
+      "wsrcsv",
+      "backdoor trojan",
+      "open-source component poisoning",
+      "supply chain attack",
+      "malicious package",
+      "nsrvmzuq",
+      "Tianwen platform"
+    ],
+    "summary": "In October 2022, the Tianwen platform detected that a user named nsrvmzuq uploaded 152 packages to the npm ecosystem. Most of these package names closely resembled popular packages, constituting a typosquatting attack. All malicious packages ultimately dropped the wsrcsv.exe backdoor, posing a severe security threat to downstream users.",
+    "references": [
+      {
+        "title": "Tianwen: 2022 Annual Review of npm Ecosystem Software Supply Chain Attacks | Star Map Lab"
+      }
+    ]
+  }
+}

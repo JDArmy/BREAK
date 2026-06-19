@@ -1,0 +1,35 @@
+{
+  "C1415": {
+    "title": "HEALTH 代币价格操纵事件",
+    "keywords": [
+      "HEALTH代币",
+      "价格操纵",
+      "闪电贷",
+      "PancakeSwap",
+      "BSC链",
+      "WBNB",
+      "智能合约漏洞",
+      "预言机操纵"
+    ],
+    "summary": "2023年5月，攻击者在BSC链上通过闪电贷借出WBNB，在PancakeSwap上兑换HEALTH代币后，利用智能合约的漏洞，反复执行转账操作以操纵代币价格，最终通过反向兑换获利约16个WBNB。该攻击利用了协议对代币价格的错误计算逻辑。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0169"
+    ],
+    "references": [
+      {
+        "title": "价格操纵——HEALTH_health 闪电贷-CSDN博客",
+        "link": "https://blog.csdn.net/2301_78046362/article/details/130790581"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-05",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0077"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

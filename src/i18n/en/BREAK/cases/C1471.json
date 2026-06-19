@@ -1,0 +1,23 @@
+{
+  "C1471": {
+    "title": "V2X Road Test Triggers Emergency Braking Due to Ghost Vehicle Spoofed BSM Attack",
+    "keywords": [
+      "V2X spoofing",
+      "ghost vehicle attack",
+      "BSM injection",
+      "connected vehicle security",
+      "autonomous driving safety",
+      "V2X protocol stack",
+      "Raspberry Pi",
+      "message spoofing",
+      "emergency braking",
+      "vehicle-to-everything"
+    ],
+    "summary": "In August 2025, an autonomous driving pilot zone experienced a near-miss during V2X road testing when a test vehicle performed an emergency brake after receiving a Basic Safety Message (BSM) claiming a vehicle ahead was braking hard. Investigation revealed the message did not originate from any legitimate vehicle; an attacker used a Raspberry Pi and an open-source V2X protocol stack to inject a sp",
+    "references": [
+      {
+        "title": "Who Is Your Car \"Chatting\" With? V2X Communication Security from Beginner to Breach: Just One Forged Message Away - CSDN"
+      }
+    ]
+  }
+}

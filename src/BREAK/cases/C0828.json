@@ -1,0 +1,34 @@
+{
+  "C0828": {
+    "title": "AI语音克隆成为新型BEC攻击：深度伪造CEO诈骗",
+    "keywords": [
+      "AI语音克隆",
+      "深度伪造",
+      "BEC攻击",
+      "CEO诈骗",
+      "社交欺骗",
+      "高管声音模拟",
+      "电话诈骗",
+      "Keepnet Labs"
+    ],
+    "summary": "据Keepnet Labs数据，2025年美国深度伪造相关欺诈损失达11亿美元，较前一年的3.6亿美元增长三倍。攻击者利用AI语音克隆技术，仅需3秒音频即可复制高管声音，通过电话冒充CEO对员工实施诈骗，北美地区此类攻击激增1740%。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0083-002"
+    ],
+    "references": [
+      {
+        "title": "Deepfake CEO Scam: Voice Cloning Is the New BEC",
+        "link": "https://www.dhsolutionsnow.com/post/deepfake-ceo-scam-voice-cloning-is-the-new-bec"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025",
+    "relatedAttackTools": [
+      "AT0059"
+    ],
+    "relatedThreatActors": [
+      "TA0031"
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "C1428": {
+    "title": "Kad网络中的女巫攻击漏洞分析",
+    "keywords": [
+      "Kad网络",
+      "女巫攻击",
+      "Sybil Attack",
+      "P2P文件共享",
+      "身份伪造",
+      "漏洞分析",
+      "节点伪装",
+      "网络安全"
+    ],
+    "summary": "研究人员通过分析Kad协议及其源代码，发现Kad网络存在多个女巫攻击漏洞。攻击者可伪装成正常节点任意加入Kad网络，利用这些漏洞进行身份伪造，从而破坏P2P文件共享系统的安全性和可靠性。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0172"
+    ],
+    "references": [
+      {
+        "title": "Research on the P2P Sybil attack and the detection mechanism",
+        "link": "https://ieeexplore.ieee.org/document/8343002/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

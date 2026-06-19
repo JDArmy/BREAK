@@ -1,0 +1,29 @@
+{
+  "C1016": {
+    "title": "Pikachu平台水平越权演示案例",
+    "keywords": [
+      "Pikachu",
+      "水平越权",
+      "URL篡改",
+      "用户名参数",
+      "漏洞练习平台",
+      "未授权访问",
+      "WEB安全",
+      "逻辑越权"
+    ],
+    "summary": "在Pikachu漏洞练习平台中，登录用户通过修改URL中的用户名参数，可直接查看其他用户个人信息，演示了同权限用户间通过篡改参数实现水平越权的攻击方式。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0109"
+    ],
+    "references": [
+      {
+        "title": "WEB漏洞-逻辑越权之水平垂直越权 - CSDN博客",
+        "link": "https://blog.csdn.net/weixin_45441315/article/details/119848189"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

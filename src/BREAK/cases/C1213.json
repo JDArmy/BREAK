@@ -1,0 +1,35 @@
+{
+  "C1213": {
+    "title": "FBI 2024 年调查 982 起 SIM 卡交换攻击，损失近 2600 万美元",
+    "keywords": [
+      "FBI",
+      "SIM卡交换攻击",
+      "SIM swap",
+      "电信诈骗",
+      "账户接管",
+      "多因素认证",
+      "短信验证码拦截",
+      "移动运营商",
+      "2024年网络犯罪"
+    ],
+    "summary": "根据 Avast 引用的数据，2024 年 FBI 调查了 982 起 SIM 卡交换攻击案件，总损失接近 2600 万美元。攻击者通过欺骗运营商将受害者手机号转移到自己控制的 SIM 卡上，拦截验证码并接管金融账户。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0132"
+    ],
+    "references": [
+      {
+        "title": "What Is a SIM Swap Attack and How Can You Prevent It? - Avast",
+        "link": "https://www.avast.com/c-sim-swap-scam"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024",
+    "relatedAttackTools": [
+      "AT0062"
+    ],
+    "relatedThreatActors": [
+      "TA0015"
+    ]
+  }
+}

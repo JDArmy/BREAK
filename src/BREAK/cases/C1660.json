@@ -1,0 +1,36 @@
+{
+  "C1660": {
+    "title": "电商平台店铺营收数据越权访问",
+    "keywords": [
+      "电商平台",
+      "营收数据",
+      "越权访问",
+      "对象级越权",
+      "API漏洞",
+      "店铺数据泄露",
+      "BOLA",
+      "OWASP API Security"
+    ],
+    "summary": "某电商平台为入驻网店提供营收图表，攻击者通过浏览器请求发现API端点模式为/shops/{shopName}/revenue_data.json，并利用另一API获取所有网店名称列表。通过编写脚本批量替换URL中的店铺名称，攻击者未经验证即获取了数千家电商店铺的销售数据，属于典型的对象级越权。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0223"
+    ],
+    "references": [
+      {
+        "title": "API1:2023 Broken Object Level Authorization - OWASP API Security ...",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0xa1-broken-object-level-authorization/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0023",
+      "AT0061",
+      "AT0085"
+    ],
+    "relatedThreatActors": [
+      "TA0010",
+      "TA0051"
+    ]
+  }
+}

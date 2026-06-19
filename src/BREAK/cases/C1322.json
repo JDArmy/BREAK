@@ -1,0 +1,37 @@
+{
+  "C1322": {
+    "title": "Petya/NotPetya 利用LotL工具进行大规模传播",
+    "keywords": [
+      "Petya",
+      "NotPetya",
+      "Living off the Land",
+      "LotL",
+      "Mimikatz",
+      "PsExec",
+      "WMI",
+      "横向移动",
+      "凭据窃取",
+      "无文件攻击"
+    ],
+    "summary": "2017年全球爆发的Petya/NotPetya攻击大量利用Living off the Land技术。攻击者使用Mimikatz从内存转储凭据，并利用窃取的账户凭据通过PsExec和WMI命令行工具在网络上远程执行自身，实现横向移动。整个过程未使用传统恶意文件，而是滥用系统内置工具和合法管理软件。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0152"
+    ],
+    "references": [
+      {
+        "title": "什么是Living off the Land? - 努力奋斗小青年 - 博客园",
+        "link": "https://www.cnblogs.com/taoyuanming/p/12929307.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2017",
+    "relatedAttackTools": [
+      "AT0013",
+      "AT0054"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

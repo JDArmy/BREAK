@@ -1,0 +1,31 @@
+{
+  "C1432": {
+    "title": "无线传感器网络中Sybil节点窃取身份攻击",
+    "keywords": [
+      "无线传感器网络",
+      "WSN",
+      "Sybil攻击",
+      "女巫攻击",
+      "身份窃取",
+      "Sybil节点",
+      "轻量级防御",
+      "传感器节点",
+      "数据丢失",
+      "IEEE"
+    ],
+    "summary": "在无线传感器网络（WSN）中，Sybil攻击表现为一个恶意设备非法宣称多个身份。这些额外身份被称为Sybil节点。攻击形式包括直接通信、间接通信、伪造身份和盗用身份等。由于传感器节点能量有限，需要轻量级防御方案。该攻击会导致合法节点与恶意节点共享数据时发生数据丢失。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0172"
+    ],
+    "references": [
+      {
+        "title": "A review: Sybil attack detection techniques in WSN",
+        "link": "https://ieeexplore.ieee.org/abstract/document/8067865/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

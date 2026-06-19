@@ -1,0 +1,33 @@
+{
+  "C1745": {
+    "title": "学术论文揭示基因组语言模型训练数据投毒攻击",
+    "keywords": [
+      "基因组语言模型",
+      "训练数据投毒",
+      "后门攻击",
+      "定向控制",
+      "预训练",
+      "微调",
+      "基因组学",
+      "安全威胁"
+    ],
+    "summary": "一项系统性研究展示了针对基因组语言模型的训练数据投毒攻击。攻击者通过在预训练或微调阶段注入恶意数据，实现对模型的定向控制。该研究首次揭示了在基因组学领域，训练数据投毒可被用于植入后门，影响模型行为。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0243"
+    ],
+    "references": [
+      {
+        "title": "Poisoning the Genome: Targeted Backdoor Attacks",
+        "link": "https://arxiv.org/html/2603.27465v2"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0093"
+    ],
+    "relatedThreatActors": [
+      "TA0058"
+    ]
+  }
+}

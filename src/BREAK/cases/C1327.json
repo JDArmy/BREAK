@@ -1,0 +1,37 @@
+{
+  "C1327": {
+    "title": "研发人员私用OpenClaw Agent致API密钥泄露",
+    "keywords": [
+      "OpenClaw",
+      "自主AI Agent",
+      "API密钥泄露",
+      "影子AI",
+      "内网安全",
+      "凭证窃取",
+      "研发运维",
+      "EDR绕过",
+      "云服务凭证"
+    ],
+    "summary": "某中型科技企业研发人员为简化运维，私下在办公终端部署开源自主AI Agent工具OpenClaw，并赋予其过高权限。该工具配置文件中明文存储了数据库API密钥、云服务商凭证等敏感信息。由于传统EDR无法识别其行为模式，导致敏感凭证被非法窃取，形成内网安全缺口。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0153"
+    ],
+    "references": [
+      {
+        "title": "从影子AI泄露事件看自主AI Agent安全治理:原理、风险与解决方案",
+        "link": "https://blog.csdn.net/weixin_42376192/article/details/158035936"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-02",
+    "relatedAttackTools": [
+      "AT0074",
+      "AT0093"
+    ],
+    "relatedThreatActors": [
+      "TA0021",
+      "TA0041"
+    ]
+  }
+}

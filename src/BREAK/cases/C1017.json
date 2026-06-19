@@ -1,0 +1,38 @@
+{
+  "C1017": {
+    "title": "境外开源工具Ollama存在未授权访问高危漏洞",
+    "keywords": [
+      "Ollama",
+      "未授权访问",
+      "高危漏洞",
+      "11434端口",
+      "大模型私有化部署",
+      "算力盗取",
+      "数据泄露",
+      "鉴权缺失"
+    ],
+    "summary": "用于私有化部署大模型的工具Ollama默认配置存在未授权访问漏洞。其服务默认开放11434端口且无任何鉴权机制，导致未授权用户能够随意访问模型，通过特定接口调用模型服务、获取模型信息，甚至删除模型文件或窃取数据，存在数据泄露和算力盗取风险。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0109"
+    ],
+    "references": [
+      {
+        "title": "关于境外开源工具Ollama存在未授权访问高危漏洞的情况通报",
+        "link": "http://hdc.cczu.edu.cn/hdxxzx/2025/0423/c8768a389006/page.htm"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-04",
+    "relatedAttackTools": [
+      "AT0054",
+      "AT0085",
+      "AT0088"
+    ],
+    "relatedThreatActors": [
+      "TA0044",
+      "TA0053",
+      "TA0018"
+    ]
+  }
+}

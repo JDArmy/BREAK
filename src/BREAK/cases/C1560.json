@@ -1,0 +1,32 @@
+{
+  "C1560": {
+    "title": "通过交易关联攻击实现莱特币去匿名化",
+    "keywords": [
+      "莱特币",
+      "去匿名化",
+      "交易关联攻击",
+      "区块链隐私",
+      "链上数据",
+      "身份追踪",
+      "Litecoin",
+      "deanonymization",
+      "transaction-linkage"
+    ],
+    "summary": "该研究通过收集数字信息并在莱特币区块链上定位目标交易，实施交易关联攻击，将购买信息与区块链上的目标交易关联起来，从而实现对莱特币用户的去匿名化。这展示了如何利用公开的链上交易数据进行身份追踪。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0202"
+    ],
+    "references": [
+      {
+        "title": "Deanonymization of litecoin through transaction-linkage attacks",
+        "link": "https://ieeexplore.ieee.org/abstract/document/9079078/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0080"
+    ],
+    "relatedThreatActors": []
+  }
+}

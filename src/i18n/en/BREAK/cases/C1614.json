@@ -1,0 +1,21 @@
+{
+  "C1614": {
+    "title": "Detecting C-V2X Spoofing Attacks Using Physical Layer Characteristics",
+    "keywords": [
+      "C-V2X",
+      "spoofing attack",
+      "physical layer security",
+      "cellular vehicle-to-everything",
+      "intelligent transportation systems",
+      "message authenticity",
+      "cryptographic verification",
+      "IEEE"
+    ],
+    "summary": "A study highlights that while Cellular Vehicle-to-Everything (C-V2X) communication supports intelligent transportation systems, it is vulnerable to spoofing attacks where attackers inject false information, compromising safety. Traditional cryptographic verification cannot guarantee message authenticity after credential leakage. The research proposes leveraging physical layer security features to ",
+    "references": [
+      {
+        "title": "Detection of C-V2X Spoofing Attacks Using Physical Layer Features"
+      }
+    ]
+  }
+}

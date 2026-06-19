@@ -1,0 +1,34 @@
+{
+  "C0504": {
+    "title": "天津公安打掉虚拟设备帮助境外电信诈骗犯罪团伙",
+    "keywords": [
+      "伪基站",
+      "GOIP设备",
+      "电信诈骗",
+      "帮助信息网络犯罪活动罪",
+      "天津公安",
+      "境外犯罪团伙",
+      "通信欺诈",
+      "技术支持"
+    ],
+    "summary": "2022年5月，天津公安部门接到线索，犯罪嫌疑人在天津西青区通过架设虚拟设备，帮助境外犯罪团伙实施电信诈骗。该行为属于典型的利用虚拟设备进行通信欺诈，为下游犯罪提供技术支持。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0050-001"
+    ],
+    "references": [
+      {
+        "title": "背着“伪基站”哪里跑!天津公安打掉一为境外电信诈骗提供帮助犯罪...",
+        "link": "https://world.huanqiu.com/article/48iLCBqmZBA"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-05",
+    "relatedAttackTools": [
+      "AT0004"
+    ],
+    "relatedThreatActors": [
+      "TA0015"
+    ]
+  }
+}

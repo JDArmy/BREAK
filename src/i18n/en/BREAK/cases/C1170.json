@@ -1,0 +1,21 @@
+{
+  "C1170": {
+    "title": "Mastodon Rate Limit Bypass via X-Forwarded-For Header Spoofing",
+    "keywords": [
+      "Mastodon",
+      "X-Forwarded-For",
+      "Client-IP",
+      "rate limit bypass",
+      "IP spoofing",
+      "brute-force",
+      "API abuse",
+      "GHSA-c2r5-cfqr-c553"
+    ],
+    "summary": "A vulnerability in the Mastodon social platform allows attackers to spoof IP addresses by setting the X-Forwarded-For or Client-IP HTTP headers, thereby bypassing IP-based rate limiting. This flaw can be exploited to circumvent frequency controls on login attempts, API calls, and other operations, potentially leading to brute-force attacks or resource abuse.",
+    "references": [
+      {
+        "title": "Bypassing rate limiting with X-Forwarded-For header - GitHub"
+      }
+    ]
+  }
+}

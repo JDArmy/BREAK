@@ -1,0 +1,34 @@
+{
+  "C1405": {
+    "title": "Tornado Cash 合约变形治理攻击",
+    "keywords": [
+      "Tornado Cash",
+      "DAO治理攻击",
+      "合约变形",
+      "治理接管",
+      "协议接管",
+      "智能合约安全",
+      "投票漏洞",
+      "Beanstalk"
+    ],
+    "summary": "Smart Contract Hacking 指南将 Tornado Cash 的治理攻击列为典型案例，攻击者通过合约变形技术实现协议接管，展示了控制协议治理即可窃取资金的攻击模式。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0167"
+    ],
+    "references": [
+      {
+        "title": "DAO Governance Attacks: Beanstalk, Tornado Cash & Voting Exploits (2026 ...",
+        "link": "https://smartcontractshacking.com/attacks/dao-governance-attacks"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0077"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

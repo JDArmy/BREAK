@@ -1,0 +1,39 @@
+{
+  "C1371": {
+    "title": "跨链桥攻击研究：2021-2024年发生49起事件",
+    "keywords": [
+      "跨链桥攻击",
+      "区块链安全",
+      "攻击交易检测",
+      "业务逻辑漏洞",
+      "DeFi安全",
+      "跨链桥",
+      "加密货币盗窃",
+      "智能合约漏洞"
+    ],
+    "summary": "研究收集了2021年6月至2024年9月间发生的49起跨链桥攻击事件，其中22起针对跨链桥业务逻辑。这些攻击共造成近43亿美元的损失。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0161"
+    ],
+    "references": [
+      {
+        "title": "Safeguarding Blockchain Ecosystem: Understanding and Detecting Attack Transactions on Cross-chain Bridges",
+        "link": "https://arxiv.org/html/2410.14493v2"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-09",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0077",
+      "AT0078",
+      "AT0079"
+    ],
+    "relatedThreatActors": [
+      "TA0045",
+      "TA0046",
+      "TA0047"
+    ]
+  }
+}

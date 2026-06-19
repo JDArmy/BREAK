@@ -1,0 +1,34 @@
+{
+  "C0423": {
+    "title": "黑产团伙以“扫码领鸡蛋”诱骗用户扫码登录盗号",
+    "keywords": [
+      "扫码领鸡蛋",
+      "盗号",
+      "黑产团伙",
+      "地推",
+      "扫码登录",
+      "盗取账号",
+      "虚拟资产",
+      "刑事拘留"
+    ],
+    "summary": "2025年12月，黑产团伙组织地推人员，以线下“扫码领鸡蛋”为名，诱骗用户配合登录，通过技术手段盗取用户账号，用于售卖、发布违规违法信息或盗刷虚拟资产获利。该团伙5名犯罪嫌疑人已被依法刑事拘留。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0038"
+    ],
+    "references": [
+      {
+        "title": "扫码领鸡蛋?警惕被黑产团伙“扫码盗号”",
+        "link": "https://www.163.com/dy/article/KGGJJTLM0514R9KQ.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-12",
+    "relatedAttackTools": [
+      "AT0067"
+    ],
+    "relatedThreatActors": [
+      "TA0017"
+    ]
+  }
+}

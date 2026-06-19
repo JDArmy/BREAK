@@ -1,0 +1,34 @@
+{
+  "C1741": {
+    "title": "笔神作文指控学而思大模型侵权案",
+    "keywords": [
+      "笔神作文",
+      "学而思",
+      "MathGPT",
+      "大模型训练",
+      "数据爬取",
+      "版权侵权",
+      "AI授权",
+      "训练数据纠纷"
+    ],
+    "summary": "2023年6月，北京笔神作文公司指控合作伙伴学而思，在未经授权和许可的情况下，利用其接口爬取超过两百万次作文数据，用于训练其数学大模型MathGPT和AI助手。笔神作文要求学而思公开道歉、删除数据并求偿1元。该事件凸显了AI训练数据来源和授权不清引发的商业纠纷。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0242"
+    ],
+    "references": [
+      {
+        "title": "大模型侵权第一案,学而思或被起诉偷数据_腾讯新闻",
+        "link": "https://new.qq.com/rain/a/20230613A03WO900/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-06",
+    "relatedAttackTools": [
+      "AT0005"
+    ],
+    "relatedThreatActors": [
+      "TA0022"
+    ]
+  }
+}

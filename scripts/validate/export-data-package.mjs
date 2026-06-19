@@ -68,6 +68,18 @@ export interface BreakAvoidanceCategory {
   description: string;
 }
 
+export interface BreakCase {
+  title: string;
+  keywords: string[];
+  summary: string;
+  description?: string;
+  category: string;
+  incidentTime?: string;
+  relatedRisks: string[];
+  references?: BreakReference[];
+  updated?: string;
+}
+
 export interface BreakDataCollections {
   risks: Record<string, BreakRisk>;
   avoidances: Record<string, BreakAvoidance>;
@@ -76,6 +88,7 @@ export interface BreakDataCollections {
   terms: Record<string, BreakTerm>;
   businessScenes: Record<string, BreakBusinessScene>;
   avoidanceCategories: Record<string, BreakAvoidanceCategory>;
+  cases: Record<string, BreakCase>;
 }
 
 export interface BreakDataBundle {

@@ -1,0 +1,32 @@
+{
+  "C0796": {
+    "title": "微软发现Shai-Hulud 2.0云原生供应链攻击",
+    "keywords": [
+      "Shai-Hulud 2.0",
+      "云原生供应链攻击",
+      "微软安全团队",
+      "供应链污染",
+      "云安全威胁",
+      "入侵检测",
+      "Microsoft Defender",
+      "威胁调查",
+      "云原生生态"
+    ],
+    "summary": "微软安全团队发现并分析了Shai-Hulud 2.0供应链攻击事件，这是近年来在云原生生态系统中观察到的最重大入侵之一。攻击者通过污染供应链环节，对云环境构成严重威胁，微软为此发布了详细的检测、调查和防御指南。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0081-003"
+    ],
+    "references": [
+      {
+        "title": "Shai-Hulud 2.0: Guidance for detecting, investigating, and defending ...",
+        "link": "https://www.microsoft.com/en-us/security/blog/2025/12/09/shai-hulud-2-0-guidance-for-detecting-investigating-and-defending-against-the-supply-chain-attack/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

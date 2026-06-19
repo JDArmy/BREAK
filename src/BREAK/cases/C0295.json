@@ -1,0 +1,30 @@
+{
+  "C0295": {
+    "title": "域名遭遇DDoS与CC攻击导致资源耗尽",
+    "keywords": [
+      "DDoS攻击",
+      "CC攻击",
+      "域名安全",
+      "服务器资源耗尽",
+      "带宽挤占",
+      "腾讯云",
+      "防护指南",
+      "流量清洗"
+    ],
+    "summary": "腾讯云开发者社区文章描述了域名业务面临的DDoS和CC攻击。DDoS攻击通过“人海战术”挤占服务器带宽，CC攻击则通过大量伪装合法的请求消耗服务器CPU和连接资源，最终导致服务器资源耗尽、服务瘫痪。文章提供了从监控到治理的全流程防护指南。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0029-002"
+    ],
+    "references": [
+      {
+        "title": "域名遭盗刷、遇攻击?从发现到解决,这篇全流程防护指南请收好...",
+        "link": "https://cloud.tencent.com/developer/article/2472259"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-08",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

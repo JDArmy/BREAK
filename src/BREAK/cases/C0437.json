@@ -1,0 +1,36 @@
+{
+  "C0437": {
+    "title": "Indusface揭示撞卡攻击的验证与变现链条",
+    "keywords": [
+      "撞卡攻击",
+      "信用卡验证",
+      "暗网交易",
+      "机器人程序",
+      "电商平台",
+      "支付欺诈",
+      "数据变现",
+      "Indusface"
+    ],
+    "summary": "Indusface分析指出，撞卡攻击中攻击者利用机器人程序在多个电商和支付平台上进行大量小额交易，以测试被盗信用卡数据的有效性。验证成功的卡片信息会被整理成列表，在暗网上以更高价格出售给其他网络犯罪分子，或用于购买高价值商品、礼品卡等。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0040"
+    ],
+    "references": [
+      {
+        "title": "Carding Attacks: What is it and How to Prevent Carding Fraud?",
+        "link": "https://www.indusface.com/learning/what-is-a-carding-attack-and-how-to-prevent-it/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0023",
+      "AT0010",
+      "AT0090"
+    ],
+    "relatedThreatActors": [
+      "TA0055",
+      "TA0005"
+    ]
+  }
+}

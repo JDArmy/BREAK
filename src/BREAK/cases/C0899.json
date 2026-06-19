@@ -1,0 +1,37 @@
+{
+  "C0899": {
+    "title": "Canva数据泄露事件：黑客利用撞库攻击获取1.39亿用户数据",
+    "keywords": [
+      "Canva",
+      "数据泄露",
+      "撞库攻击",
+      "凭证破解",
+      "GnosticPlayers",
+      "批量扫号",
+      "1.39亿用户",
+      "澳大利亚",
+      "个人信息泄露"
+    ],
+    "summary": "2019年5月，黑客GnosticPlayers攻击澳大利亚科技公司Canva，通过撞库和凭证破解技术获取了1.39亿用户的登录凭证及个人信息。该黑客累计从不同平台窃取了近10亿用户数据。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0090"
+    ],
+    "references": [
+      {
+        "title": "A Case Study of Credential Stuffing Attack: Canva Data Breach",
+        "link": "https://ieeexplore.ieee.org/document/9799087/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2019-05",
+    "relatedAttackTools": [
+      "AT0042",
+      "AT0068"
+    ],
+    "relatedThreatActors": [
+      "TA0018",
+      "TA0017"
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "C1578": {
+    "title": "AIoT环境中的AI模型操纵与对抗性威胁研究",
+    "keywords": [
+      "AIoT",
+      "对抗性攻击",
+      "模型投毒",
+      "后门攻击",
+      "模型提取",
+      "逃避攻击",
+      "推理攻击",
+      "物联网安全",
+      "AI模型操纵",
+      "IEEE"
+    ],
+    "summary": "该研究论文探讨了在AIoT环境中，攻击者如何利用逃避、投毒、后门嵌入、模型提取和推理攻击等手段操纵AI模型。这些攻击威胁到AIoT系统的安全性和可信度，凸显了AIoT融合攻击的现实风险。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0205"
+    ],
+    "references": [
+      {
+        "title": "AI Model Manipulation and Adversarial Threats in Internet of Things ...",
+        "link": "https://ieeexplore.ieee.org/document/11547572/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0093"
+    ],
+    "relatedThreatActors": [
+      "TA0058"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C1726": {
+    "title": "Anatomy of the Boaxxe Malware Click Fraud Ecosystem",
+    "keywords": [
+      "Boaxxe malware",
+      "click fraud",
+      "ad click injection",
+      "traffic monetization",
+      "ad fraud ecosystem",
+      "Matthieu Faou",
+      "fraudulent traffic",
+      "malware click bot"
+    ],
+    "summary": "Matthieu Faou and fellow researchers conducted a seven-month longitudinal study of the Boaxxe malware, detailing its click fraud operation. The malware generates fraudulent traffic by automatically clicking ads and leverages specific actors within the advertising ecosystem to inject this traffic into legitimate markets for profit. The study identifies key nodes that can be pressured to disrupt the",
+    "references": [
+      {
+        "title": "Follow the traffic: Stopping click fraud by disrupting the value chain"
+      }
+    ]
+  }
+}

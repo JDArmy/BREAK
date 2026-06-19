@@ -1,0 +1,33 @@
+{
+  "C1748": {
+    "title": "针对机器学习的中毒攻击：机器学习可信吗？",
+    "keywords": [
+      "机器学习",
+      "中毒攻击",
+      "训练数据投毒",
+      "对抗样本",
+      "NIST",
+      "模型安全",
+      "AI安全",
+      "数据污染"
+    ],
+    "summary": "美国国家标准与技术研究院（NIST）的出版物指出，对机器学习系统的一个重要威胁是攻击者控制训练数据或训练过程，目的是在模型部署时修改其对特定测试数据的预测。该攻击历史悠久，最早针对蠕虫签名开发。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0243"
+    ],
+    "references": [
+      {
+        "title": "Poisoning Attacks Against Machine Learning: Can Machine Learning Be ...",
+        "link": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=934932"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0093"
+    ],
+    "relatedThreatActors": [
+      "TA0058"
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "C1754": {
+    "title": "LLM02:2023 数据泄露风险定义与示例场景",
+    "keywords": [
+      "OWASP",
+      "LLM",
+      "数据泄露",
+      "敏感信息",
+      "提示词注入",
+      "输出过滤",
+      "训练数据",
+      "大语言模型安全"
+    ],
+    "summary": "OWASP在LLM应用Top 10中定义数据泄露漏洞，指LLM意外通过响应泄露敏感信息、专有算法或其他机密细节。示例场景包括：用户无意中提问可能泄露敏感信息，LLM因缺乏输出过滤直接回复机密数据；攻击者故意用精心设计的提示词探测LLM，试图提取其从训练数据中记忆的敏感信息。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0245"
+    ],
+    "references": [
+      {
+        "title": "LLM02:2023 - Data Leakage - OWASP Foundation",
+        "link": "https://owasp.org/www-project-top-10-for-large-language-model-applications/Archive/0_1_vulns/Data_Leakage.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

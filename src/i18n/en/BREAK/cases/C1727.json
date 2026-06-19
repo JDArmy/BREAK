@@ -1,0 +1,22 @@
+{
+  "C1727": {
+    "title": "FCFraud: Detecting Automated Click Fraud from the User Side",
+    "keywords": [
+      "FCFraud",
+      "click fraud detection",
+      "ad fraud",
+      "botnet",
+      "automated clicker",
+      "user-side detection",
+      "OS-level detection",
+      "malware",
+      "ad click injection"
+    ],
+    "summary": "Md. Shahrear Iqbal et al. proposed FCFraud in 2016, a technique for detecting automated click fraud at the operating system level. It targets botnet-infected user machines where automated clickers simulate fake ad clicks to defraud advertisers, achieving 99.6% ad request classification accuracy and 100% fraudulent process identification rate.",
+    "references": [
+      {
+        "title": "Fcfraud: Fighting click-fraud from the user side"
+      }
+    ]
+  }
+}

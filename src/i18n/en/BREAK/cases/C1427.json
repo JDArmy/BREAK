@@ -1,0 +1,22 @@
+{
+  "C1427": {
+    "title": "Sybil Attack Application in the P2P Botnet Storm",
+    "keywords": [
+      "P2P botnet",
+      "Storm botnet",
+      "Sybil attack",
+      "Sybil nodes",
+      "Kademlia",
+      "Overnet protocol",
+      "C&C communication",
+      "index poisoning",
+      "activity monitoring"
+    ],
+    "summary": "Defenders deploy Sybil nodes to counter the Storm P2P botnet. An attacker fabricates multiple Sybil nodes from a single malicious entity, placing them in the query paths of legitimate nodes to disrupt or block the botnet's C&C communication, employing strategies such as index poisoning and activity monitoring.",
+    "references": [
+      {
+        "title": "What Is a Sybil Attack - Tencent Cloud Developer Community"
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "C0098": {
+    "title": "Improving Click Fraud Detection with Real-Time Data Fusion in IEEE 2008 Research",
+    "keywords": [
+      "click fraud detection",
+      "real-time data fusion",
+      "CCFDP",
+      "pay-per-click advertising",
+      "client-side detection",
+      "server-side detection",
+      "IEEE 2008",
+      "ad fraud prevention",
+      "multi-source data fusion",
+      "automated click scripts"
+    ],
+    "summary": "This study identifies click fraud as a criminal activity in pay-per-click online advertising, where automated scripts or programs simulate legitimate user clicks to generate charges without genuine interest. It proposes CCFDP V1.0, a real-time detection and prevention system that fuses client-side and server-side multi-source data, and tests it using real advertising campaign data, demonstrating t",
+    "references": [
+      {
+        "title": "Improving Click Fraud Detection by Real-Time Data Fusion"
+      }
+    ]
+  }
+}

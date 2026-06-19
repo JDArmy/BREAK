@@ -1,0 +1,34 @@
+{
+  "C0094": {
+    "title": "安装插件劫持网页流量被百度公司起诉 上海一信息科技公司因不正当竞争一审被判赔83万元",
+    "keywords": [
+      "新媒体管家Plus",
+      "浏览器插件",
+      "百度流量劫持",
+      "不正当竞争",
+      "上海政凯",
+      "强制跳转",
+      "网页篡改",
+      "插件恶意推广"
+    ],
+    "summary": "上海政凯信息科技有限公司运营的“新媒体管家Plus”浏览器插件，在百度网页面中插入链接，强制跳转至其运营的网站页面，劫持百度流量。法院认定构成不正当竞争，判赔83万元。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0007"
+    ],
+    "references": [
+      {
+        "title": "安装插件劫持网页流量被百度公司起诉 上海一信息科技公司因不正当竞争一审被判赔83万元",
+        "link": "http://jmstl.hljcourt.gov.cn/public/detail.php?id=7020"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-11",
+    "relatedAttackTools": [
+      "AT0032"
+    ],
+    "relatedThreatActors": [
+      "TA0009"
+    ]
+  }
+}

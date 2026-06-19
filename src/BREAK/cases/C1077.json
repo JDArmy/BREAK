@@ -1,0 +1,39 @@
+{
+  "C1077": {
+    "title": "校园周边“免费Wi-Fi”实为黑客陷阱",
+    "keywords": [
+      "伪Wi-Fi",
+      "免费Wi-Fi",
+      "校园安全",
+      "信息泄露",
+      "教务系统",
+      "账号被盗",
+      "勒索",
+      "钓鱼热点",
+      "Campus-Free-WiFi",
+      "高校"
+    ],
+    "summary": "2025年2月，多地高校曝出学生因连接不明Wi-Fi导致信息泄露案例。某高校学生小李在咖啡馆连接名为“Campus-Free-WiFi”的网络后，教务系统账号被盗，课程信息被篡改，黑客还通过邮件勒索赎金。此类伪Wi-Fi可导致学籍系统、校园卡账号被盗用，甚至隐私文件被窃取或加密勒索。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0112-006"
+    ],
+    "references": [
+      {
+        "title": "@同学们 校园周边的“免费Wi-Fi”可能是黑客陷阱!真实案例→",
+        "link": "https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=12671030232652029131&channelId=1119&track_id=30ae5d7f-4d76-4bab-ae90-f1b05fd7d726"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-02",
+    "relatedAttackTools": [
+      "AT0069",
+      "AT0063",
+      "AT0072"
+    ],
+    "relatedThreatActors": [
+      "TA0018",
+      "TA0015"
+    ]
+  }
+}

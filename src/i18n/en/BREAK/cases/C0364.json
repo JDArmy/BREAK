@@ -1,0 +1,20 @@
+{
+  "C0364": {
+    "title": "Credential Brute-Force Attack in the Canva Data Breach",
+    "keywords": [
+      "credential stuffing",
+      "credential brute-force",
+      "Canva breach",
+      "GnosticPlayers",
+      "automated login attack",
+      "password list attack",
+      "login interface exploitation"
+    ],
+    "summary": "In the Canva data breach, the attacker GnosticPlayers used credential stuffing—a form of brute-force attack—to steal user data. The attack involved large-scale automated attempts against login interfaces, leveraging previously leaked credential sets or common password lists to successfully gain access to valid accounts, resulting in the exposure of a large volume of user information.",
+    "references": [
+      {
+        "title": "A case study of credential stuffing attack: Canva data breach"
+      }
+    ]
+  }
+}

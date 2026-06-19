@@ -1,0 +1,22 @@
+{
+  "C1657": {
+    "title": "Shadow APIs Exploited in Optus Telecom Incident to Leak Personally Identifiable Information",
+    "keywords": [
+      "Optus",
+      "Telecom",
+      "shadow API",
+      "zombie API",
+      "OWASP API Security Top 10",
+      "PII leak",
+      "unauthorized access",
+      "API exposure",
+      "data breach"
+    ],
+    "summary": "In December 2022, security analysis revealed that the techniques used in the Optus Telecom incident closely mirrored common shadow API risks found in customer environments. Publicly exposed APIs, also known as shadow or zombie APIs, required no authorization or authentication and were inadvertently left accessible on the internet, allowing attackers to leak personally identifiable information (PII",
+    "references": [
+      {
+        "title": "Exploited OWASP API Vulnerabilities, Bypassing API Security - Zhihu"
+      }
+    ]
+  }
+}

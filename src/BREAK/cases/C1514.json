@@ -1,0 +1,33 @@
+{
+  "C1514": {
+    "title": "英国16岁女孩在《地平线世界》元宇宙游戏中遭虚拟轮奸",
+    "keywords": [
+      "元宇宙",
+      "虚拟轮奸",
+      "Horizon Worlds",
+      "Meta",
+      "VR安全",
+      "性侵",
+      "英国警方",
+      "虚拟角色",
+      "接触保护"
+    ],
+    "summary": "2024年伊始，英国一名16岁女孩报案称其在Meta《地平线世界》VR游戏中创建的虚拟角色遭到多名成年男性陌生人轮奸。因未设置‘接触保护’功能，其角色被侵犯。英国警方正式立案调查，这是警方首次调查元宇宙性犯罪。受害者遭受与现实性侵同等的心理创伤。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0192"
+    ],
+    "references": [
+      {
+        "title": "元宇宙性侵案:\"虚拟强奸\"是不是真正的强奸?_腾讯新闻",
+        "link": "https://new.qq.com/rain/a/20240111A0932M00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-01",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0050"
+    ]
+  }
+}

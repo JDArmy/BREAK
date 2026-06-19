@@ -1,0 +1,35 @@
+{
+  "C1172": {
+    "title": "国内网购平台API逻辑漏洞致11.8亿订单数据泄露",
+    "keywords": [
+      "API逻辑漏洞",
+      "订单数据泄露",
+      "网购平台",
+      "API业务逻辑滥用",
+      "数据安全",
+      "接口安全",
+      "逻辑缺陷",
+      "用户隐私"
+    ],
+    "summary": "2021年6月，国内某网购平台因两个API接口组合存在逻辑缺陷，攻击者利用该漏洞非法获取了11.8亿条用户订单数据。该事件属于典型的API业务逻辑滥用，通过合法API调用实现了非预期的数据访问。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0126-003"
+    ],
+    "references": [
+      {
+        "title": "由API逻辑漏洞引发的千万级数据泄露事件 - 知乎",
+        "link": "https://zhuanlan.zhihu.com/p/646613583"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-06",
+    "relatedAttackTools": [
+      "AT0061",
+      "AT0085"
+    ],
+    "relatedThreatActors": [
+      "TA0051"
+    ]
+  }
+}

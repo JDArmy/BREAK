@@ -1,0 +1,32 @@
+{
+  "C1714": {
+    "title": "FTC与佛罗里达州起诉Chargebacks911妨碍消费者争议解决",
+    "keywords": [
+      "FTC",
+      "Chargebacks911",
+      "拒付",
+      "退款滥用",
+      "消费者争议",
+      "信用卡拒付",
+      "佛罗里达州总检察长",
+      "不公平手段"
+    ],
+    "summary": "美国联邦贸易委员会（FTC）和佛罗里达州总检察长对Chargebacks911公司提起诉讼，指控其自2016年起，通过不公平手段阻挠消费者通过信用卡拒付流程对交易提出争议，干扰了消费者正当的退款权利。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0235"
+    ],
+    "references": [
+      {
+        "title": "FTC, Florida Attorney General Sue Chargebacks911 for Thwarting ...",
+        "link": "https://www.ftc.gov/news-events/news/press-releases/2023/04/ftc-florida-attorney-general-sue-chargebacks911-thwarting-consumers-who-were-trying-reverse-disputed"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-04",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0009"
+    ]
+  }
+}

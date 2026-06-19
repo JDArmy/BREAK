@@ -1,0 +1,22 @@
+{
+  "C0444": {
+    "title": "OWASP Defines Payment Card Cracking as an Automated Threat",
+    "keywords": [
+      "OWASP",
+      "OAT-010",
+      "payment card cracking",
+      "card cracking",
+      "automated threat",
+      "brute-force attack",
+      "CSC",
+      "CVV",
+      "web application security"
+    ],
+    "summary": "OWASP classifies payment card cracking (OAT-010) as a brute-force attack targeting application payment card flows, aiming to identify missing start dates, expiry dates, and/or card security codes (CSC), also known as CVN2, CVC, CV2, or CID.",
+    "references": [
+      {
+        "title": "OAT-010 Card Cracking - OWASP Foundation"
+      }
+    ]
+  }
+}

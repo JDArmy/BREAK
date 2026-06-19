@@ -1,0 +1,29 @@
+{
+  "C1613": {
+    "title": "基于张量的V2X系统欺骗检测框架研究",
+    "keywords": [
+      "V2X",
+      "欺骗检测",
+      "张量",
+      "车联网",
+      "智能交通系统",
+      "通信安全",
+      "伪造消息",
+      "方向性信息处理"
+    ],
+    "summary": "一篇学术论文提出了一种创新的检测与缓解框架，专门用于识别和应对V2X通信中的欺骗攻击。该方案结合了方向性信息处理技术，旨在提升智能交通系统中车辆间及车辆与基础设施通信的安全性，防止攻击者通过伪造消息干扰驾驶决策。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0212"
+    ],
+    "references": [
+      {
+        "title": "Spoofer Detection Framework for V2X Systems via Tensor-Based ...",
+        "link": "https://ieeexplore.ieee.org/iel8/6287639/11323511/11370720.pdf"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

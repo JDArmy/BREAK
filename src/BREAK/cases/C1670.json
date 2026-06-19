@@ -1,0 +1,33 @@
+{
+  "C1670": {
+    "title": "GitHub仓库泄露AWS密钥应急响应案例",
+    "keywords": [
+      "AWS",
+      "访问密钥",
+      "GitHub",
+      "凭证泄露",
+      "CI/CD",
+      "秘密扫描",
+      "应急响应",
+      "密钥轮换",
+      "DevOps安全"
+    ],
+    "summary": "一个模拟的金融科技场景：开发者意外将AWS访问密钥提交到GitHub仓库，触发GitHub秘密扫描告警。响应团队需确认密钥是否被使用、评估影响范围并安全轮换。该案例展示了CI/CD中凭证泄露的典型风险与响应流程。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0226"
+    ],
+    "references": [
+      {
+        "title": "0x9reedark/cloud-credential-incident-response-playbook - GitHub",
+        "link": "https://github.com/0x9reedark/cloud-credential-incident-response-playbook"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0087",
+      "AT0088"
+    ],
+    "relatedThreatActors": []
+  }
+}

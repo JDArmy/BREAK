@@ -1,0 +1,34 @@
+{
+  "C1624": {
+    "title": "FTC就AI语音克隆诈骗发出消费者警示",
+    "keywords": [
+      "FTC",
+      "AI语音克隆",
+      "深度伪造",
+      "消费者警示",
+      "冒充亲友诈骗",
+      "语音诈骗",
+      "人工智能欺诈",
+      "消费者保护"
+    ],
+    "summary": "美国联邦贸易委员会（FTC）发布消费者警示，指出诈骗者正利用AI语音克隆技术，使其索要钱财或信息的请求听起来更加可信。FTC正在采取行动打击此类有害行为，提醒公众警惕利用AI克隆声音冒充亲友的诈骗。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0214"
+    ],
+    "references": [
+      {
+        "title": "Fighting back against harmful voice cloning - FTC Consumer Advice",
+        "link": "https://consumer.ftc.gov/consumer-alerts/2024/04/fighting-back-against-harmful-voice-cloning"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-04",
+    "relatedAttackTools": [
+      "AT0059"
+    ],
+    "relatedThreatActors": [
+      "TA0041"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C1604": {
+    "title": "CVE-2020-3409: Profinet Stack Denial-of-Service Vulnerability",
+    "keywords": [
+      "CVE-2020-3409",
+      "Profinet",
+      "denial of service",
+      "protocol stack vulnerability",
+      "ICS",
+      "malicious packet",
+      "network attack",
+      "industrial control system"
+    ],
+    "summary": "A flaw in the Profinet protocol stack implementation allows attackers to trigger a denial-of-service condition by sending crafted network packets, disrupting availability in industrial control systems.",
+    "references": [
+      {
+        "title": "CVE-2020-3409 Detail"
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "C1681": {
+    "title": "SUNSPOT Backdoor Implanted on SolarWinds Build Server",
+    "keywords": [
+      "SUNSPOT implant",
+      "SolarWinds build server",
+      "software build process compromise",
+      "supply chain attack",
+      "CISA",
+      "APT29",
+      "backdoor insertion"
+    ],
+    "summary": "Threat actors used an implant named SUNSPOT to access SolarWinds' build server and insert a backdoor during the software build process, leading to a supply chain attack affecting thousands of downstream organizations.",
+    "references": [
+      {
+        "title": "Defending Against Software Supply Chain Attacks - CISA"
+      }
+    ]
+  }
+}

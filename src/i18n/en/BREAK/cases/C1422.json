@@ -1,0 +1,22 @@
+{
+  "C1422": {
+    "title": "Monero Hit by 51% Attack from Qubic Project",
+    "keywords": [
+      "Monero",
+      "51% attack",
+      "hash rate attack",
+      "block reorganization",
+      "double-spend",
+      "Qubic",
+      "privacy coin",
+      "Sergey Ivancheglo",
+      "orphaned blocks"
+    ],
+    "summary": "In August 2025, the Qubic project, led by a former IOTA co-founder, gained control of over 50% of Monero's hash rate and executed a block reorganization attack. The incident caused a 6-block-deep chain reorganization, leaving approximately 60 blocks orphaned. Qubic acquired the ability to reorganize blocks, censor transactions, and perform double-spends, sparking widespread debate across the crypt",
+    "references": [
+      {
+        "title": "Monero Suffers 51% Attack: Who Is the Mysterious Attacker Qubic?"
+      }
+    ]
+  }
+}

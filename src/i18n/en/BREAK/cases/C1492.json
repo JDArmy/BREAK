@@ -1,0 +1,21 @@
+{
+  "C1492": {
+    "title": "A Survey on Long-Range Attacks for Proof of Stake Protocols",
+    "keywords": [
+      "Proof of Stake",
+      "PoS",
+      "long-range attacks",
+      "costless simulation",
+      "consensus mechanism",
+      "historical private keys",
+      "alternative chain",
+      "genesis block"
+    ],
+    "summary": "This survey systematically examines long-range attack scenarios in Proof of Stake protocols, progressing from simple to complex cases to analyze how attackers exploit historical private keys to build alternative chains from the genesis block, attempting to overwrite the canonical chain history. It highlights that since PoS validation requires no real computational expenditure, attackers can constr",
+    "references": [
+      {
+        "title": "[PDF] Pikachu: Securing PoS Blockchains from Long-Range Attacks by ..."
+      }
+    ]
+  }
+}

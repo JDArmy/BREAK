@@ -1,0 +1,34 @@
+{
+  "C0612": {
+    "title": "重庆警方破获利用信用卡代还App套现案",
+    "keywords": [
+      "信用卡代还",
+      "App套现",
+      "虚假交易",
+      "重庆警方",
+      "非法经营",
+      "支付结算",
+      "套现团伙",
+      "60亿"
+    ],
+    "summary": "重庆警方破获一起通过App建立虚假商品交易订单，为信用卡恶意套现代还的案件。犯罪团伙利用该模式在短时间内获利200多万元，涉及的信用卡套现金额高达60亿元。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0062-001"
+    ],
+    "references": [
+      {
+        "title": "涉及金额超60亿 重庆警方破获一起利用信用卡代还App套现案",
+        "link": "https://www.cls.cn/detail/1682249"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-05",
+    "relatedAttackTools": [
+      "AT0066"
+    ],
+    "relatedThreatActors": [
+      "TA0055"
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "C1170": {
+    "title": "Mastodon通过X-Forwarded-For头绕过速率限制漏洞",
+    "keywords": [
+      "Mastodon",
+      "X-Forwarded-For",
+      "Client-IP",
+      "速率限制绕过",
+      "IP伪造",
+      "暴力破解",
+      "API滥用",
+      "GHSA-c2r5-cfqr-c553"
+    ],
+    "summary": "Mastodon社交平台存在一个安全漏洞，攻击者可通过设置X-Forwarded-For或Client-IP HTTP头来伪造IP地址，从而绕过基于IP的速率限制机制。该漏洞允许攻击者绕过登录尝试、API调用等操作的频率控制，可能导致暴力破解或资源滥用。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0126-002"
+    ],
+    "references": [
+      {
+        "title": "Bypassing rate limiting with X-Forwarded-For header - GitHub",
+        "link": "https://github.com/mastodon/mastodon/security/advisories/GHSA-c2r5-cfqr-c553"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0035",
+      "AT0061",
+      "AT0068"
+    ],
+    "relatedThreatActors": [
+      "TA0018",
+      "TA0051"
+    ]
+  }
+}

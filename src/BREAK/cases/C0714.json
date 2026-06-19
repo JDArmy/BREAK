@@ -1,0 +1,31 @@
+{
+  "C0714": {
+    "title": "AIGC平台著作权侵权全球第一案（奥特曼案）",
+    "keywords": [
+      "AIGC",
+      "著作权侵权",
+      "奥特曼",
+      "广州互联网法院",
+      "复制权",
+      "改编权",
+      "生成内容",
+      "平台责任",
+      "全球首例"
+    ],
+    "summary": "2024年，广州互联网法院判决某AI平台在提供AIGC服务过程中侵犯了原告对奥特曼作品享有的复制权和改编权。法院认定AI平台生成内容侵权，应承担民事责任，成为全球首例AIGC平台著作权侵权案。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0071-002"
+    ],
+    "references": [
+      {
+        "title": "AIGC与著作权:从两个“第一案”讲起",
+        "link": "https://new.qq.com/rain/a/20240313A08C8800"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-03",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

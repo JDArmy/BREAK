@@ -1,0 +1,22 @@
+{
+  "C0505": {
+    "title": "AI-Based Detection of SIM Box Bypass Fraud",
+    "keywords": [
+      "SIM box",
+      "bypass fraud",
+      "AI detection",
+      "machine learning",
+      "telecom operators",
+      "international call routing",
+      "SIM card",
+      "fraud detection",
+      "arXiv"
+    ],
+    "summary": "A 2017 academic paper highlights that telecom operators suffer heavy losses from SIM box bypass fraud, where fraudsters use SIM box devices to disguise international calls as local traffic and avoid settlement fees. The study proposes applying AI algorithms to mine operator data and identify SIM cards used for bypassing international calls.",
+    "references": [
+      {
+        "title": "Bypass fraud detection: Artificial intelligence approach"
+      }
+    ]
+  }
+}

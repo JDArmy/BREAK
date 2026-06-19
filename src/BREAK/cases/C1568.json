@@ -1,0 +1,30 @@
+{
+  "C1568": {
+    "title": "SecureSign研究揭示DApp前端代码注入攻击",
+    "keywords": [
+      "DApp前端劫持",
+      "代码注入攻击",
+      "移动Web3安全",
+      "DNS劫持",
+      "证书颁发机构攻击",
+      "交易地址替换",
+      "SecureSign",
+      "EIP-6963",
+      "沙箱防护"
+    ],
+    "summary": "一项关于移动Web3安全的研究指出，攻击者可通过向DApp前端注入恶意代码实施攻击。利用DNS劫持或受感染的证书颁发机构，攻击者能够篡改DApp前端，在用户不知情的情况下替换交易地址或执行恶意操作，直接威胁用户资产安全。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0203"
+    ],
+    "references": [
+      {
+        "title": "SecureSign: Bridging Security and UX in Mobile Web3 through Emulated EIP-6963 Sandboxing",
+        "link": "https://arxiv.org/abs/2511.14611"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

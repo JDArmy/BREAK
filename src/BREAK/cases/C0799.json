@@ -1,0 +1,36 @@
+{
+  "C0799": {
+    "title": "朝鲜利用虚假面试投放恶意NPM包攻击云原生应用",
+    "keywords": [
+      "朝鲜",
+      "虚假面试",
+      "恶意NPM包",
+      "BeaverTail",
+      "InvisibleFerret",
+      "云原生应用",
+      "供应链攻击",
+      "开发者凭证窃取"
+    ],
+    "summary": "2025年中期，朝鲜攻击者通过虚假面试诱骗开发者下载67个恶意NPM包，下载量超17000次，植入BeaverTail等恶意软件，感染开发者环境并窃取凭证。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0081-003"
+    ],
+    "references": [
+      {
+        "title": "Supply Chain Attacks in Cloud Native Web Applications",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11473029/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025",
+    "relatedAttackTools": [
+      "AT0013",
+      "AT0064",
+      "AT0087"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

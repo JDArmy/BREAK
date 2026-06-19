@@ -1,0 +1,33 @@
+{
+  "C1440": {
+    "title": "时间揭示一切：零交易费用下区块链RPC用户的去匿名化",
+    "keywords": [
+      "区块链隐私",
+      "去匿名化攻击",
+      "RPC节点",
+      "IP地址关联",
+      "时间分析",
+      "零交易费",
+      "公链追踪",
+      "网络层隐私",
+      "假名关联"
+    ],
+    "summary": "研究人员提出一种新颖的去匿名化攻击方法，能够将区块链RPC用户的IP地址与其区块链假名关联起来，且该攻击不产生任何交易费用。通过数学建模、大规模账本测量和真实世界攻击验证，该攻击利用时间分析技术实现了对区块链用户的去匿名化，揭示了公链交易公开透明特性下用户身份和网络地址被追踪的严重隐私风险。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0174",
+      "R0202"
+    ],
+    "references": [
+      {
+        "title": "Time Tells All: Deanonymization of Blockchain RPC Users with Zero ...",
+        "link": "https://arxiv.org/pdf/2508.21440"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0080"
+    ],
+    "relatedThreatActors": []
+  }
+}

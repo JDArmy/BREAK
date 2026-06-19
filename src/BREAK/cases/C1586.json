@@ -1,0 +1,36 @@
+{
+  "C1586": {
+    "title": "SIM交换犯罪趋势与eSIM漏洞研究",
+    "keywords": [
+      "SIM交换",
+      "eSIM",
+      "身份验证漏洞",
+      "身份盗用",
+      "移动服务劫持",
+      "欺诈性SIM复制",
+      "SIM swapping",
+      "eSIM安全",
+      "用户验证流程",
+      "金融数据泄露"
+    ],
+    "summary": "一项2022年的学术研究分析了全球SIM交换犯罪趋势，指出在已实施eSIM的地区，用于更换SIM卡的用户身份验证流程存在漏洞，易受身份盗用攻击。攻击者通过欺诈性复制SIM卡接管移动服务，进而访问敏感的个人和财务数据。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0207"
+    ],
+    "references": [
+      {
+        "title": "A study of the emerging trends in SIM swapping crime and effective countermeasures",
+        "link": "https://ieeexplore.ieee.org/abstract/document/9900510/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-08",
+    "relatedAttackTools": [
+      "AT0062"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "C1630": {
+    "title": "IEEE学术研究：元宇宙环境中的社会工程攻击模型",
+    "keywords": [
+      "元宇宙",
+      "社会工程攻击",
+      "虚拟化身",
+      "沉浸需求",
+      "网络威胁演变",
+      "IEEE",
+      "学术会议",
+      "虚拟购物欺骗"
+    ],
+    "summary": "2023年IEEE国际会议论文提出了元宇宙中社会工程攻击的概念模型。研究指出，用户对虚拟化身的使用需求、心理需求和沉浸需求是攻击得逞的原因。论文描述了攻击者如何利用伪造的虚拟化身冒充用户朋友，在虚拟购物等场景中实施欺骗，展示了传统网络威胁在三维虚拟世界中的演变形态。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0215"
+    ],
+    "references": [
+      {
+        "title": "Social engineering in metaverse environment",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10195442/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-07",
+    "relatedAttackTools": [
+      "AT0084"
+    ],
+    "relatedThreatActors": [
+      "TA0050"
+    ]
+  }
+}

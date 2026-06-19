@@ -1,0 +1,21 @@
+{
+  "C1174": {
+    "title": "Fantasy Pool Platform API Business Logic Abuse Enables Theft of Referral Rewards",
+    "keywords": [
+      "API business logic abuse",
+      "OTP design flaw",
+      "missing rate limiting",
+      "referral reward theft",
+      "payment endpoint exposure",
+      "automated attack chain",
+      "penetration testing",
+      "API security assessment"
+    ],
+    "summary": "A penetration test on a mobile Fantasy Pool platform uncovered an API business logic flaw allowing attackers to chain OTP design weaknesses, missing rate limits, and exposed internal payment endpoints into a fully automated abuse sequence. This enabled extraction of real monetary referral rewards without completing any actual payment.",
+    "references": [
+      {
+        "title": "API Security Assessment — Business Logic Abuse in a ... - GitHub"
+      }
+    ]
+  }
+}

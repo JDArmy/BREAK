@@ -1,0 +1,36 @@
+{
+  "C1452": {
+    "title": "SUUM攻击：针对以太坊类区块链的零成本时间戳操纵攻击",
+    "keywords": [
+      "SUUM攻击",
+      "区块扣留",
+      "时间戳操纵",
+      "以太坊",
+      "以太经典",
+      "以太坊PoW",
+      "矿池",
+      "Nakamoto共识",
+      "难度控制",
+      "零成本攻击"
+    ],
+    "summary": "研究人员发现一种名为SUUM（Staircase-Unrestricted Uncle Maker）的新型区块扣留攻击，专门针对基于时间戳的Nakamoto式区块链。攻击者通过区块扣留、时间戳操纵和难度风险控制，以零成本和极低难度风险发起持续性攻击，无限期地从诚实参与者处榨取奖励。截至2025年10月，统计显示四个主要矿池已在以太坊1.x、以太经典和以太坊PoW上通过操纵时间戳实施SUUM攻击。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0176"
+    ],
+    "references": [
+      {
+        "title": "Timestamp-based Nakamoto-style Blockchains are Vulnerable - arXiv",
+        "link": "https://arxiv.org/html/2505.05328v5"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-10",
+    "relatedAttackTools": [
+      "AT0078"
+    ],
+    "relatedThreatActors": [
+      "TA0046"
+    ]
+  }
+}

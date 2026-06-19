@@ -1,0 +1,35 @@
+{
+  "C0515": {
+    "title": "SOHO路由器遭入侵导致DNS劫持与对手中间人攻击",
+    "keywords": [
+      "SOHO router",
+      "DNS hijacking",
+      "adversary-in-the-middle",
+      "AiTM",
+      "Microsoft Threat Intelligence",
+      "network traffic interception",
+      "HTTP/HTTPS analysis",
+      "router compromise"
+    ],
+    "summary": "微软威胁情报团队评估认为，攻击者通过入侵SOHO路由器进行DNS劫持，进而可能实施大规模的对手中间人（AiTM）攻击。此类攻击可能包括主动拦截网络流量，这与通过中间人方式分析HTTP/HTTPS请求的技术原理一致。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0051-002"
+    ],
+    "references": [
+      {
+        "title": "SOHO router compromise leads to DNS hijacking and adversary-in-the ...",
+        "link": "https://www.microsoft.com/en-us/security/blog/2026/04/07/soho-router-compromise-leads-to-dns-hijacking-and-adversary-in-the-middle-attacks/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-04",
+    "relatedAttackTools": [
+      "AT0072",
+      "AT0054"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

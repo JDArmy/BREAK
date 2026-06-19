@@ -1,0 +1,23 @@
+{
+  "C1706": {
+    "title": "Unsolicited Shared Files Appearing in OneDrive Account",
+    "keywords": [
+      "OneDrive",
+      "Microsoft",
+      "unsolicited shared files",
+      "PDF",
+      "reporting tool failure",
+      "account compromise",
+      "cloud storage abuse",
+      "phishing",
+      "collaboration link leak",
+      "user reporting"
+    ],
+    "summary": "Since December 2025, a user's OneDrive account has been receiving multiple unsolicited PDF files from unknown sources. Attempts to report these files through OneDrive's built-in reporting tool consistently failed with errors, preventing the user from flagging or removing the content through normal channels. The user is concerned the account may have been compromised and has requested an urgent inv",
+    "references": [
+      {
+        "title": "Critical Security Incident: Unsolicited Files in OneDrive – Reporting ..."
+      }
+    ]
+  }
+}

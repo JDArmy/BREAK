@@ -1,0 +1,37 @@
+{
+  "C0010": {
+    "title": "爬虫软件自动化攻击政府服务器致系统瘫痪",
+    "keywords": [
+      "爬虫软件",
+      "自动化攻击",
+      "政府服务器",
+      "系统瘫痪",
+      "深圳市居住证系统",
+      "高频查询",
+      "服务器阻塞",
+      "数据保存云盘",
+      "程序员判刑",
+      "非法获取数据"
+    ],
+    "summary": "2018年5月2日，某软件在两小时内对深圳市居住证系统发起高频自动化查询攻击，每秒访问量达183次，共计查询信息151万余条次，并将数据保存至云盘。该自动化程序攻击导致深圳市公安局居住证服务平台服务器阻塞，无法正常运行。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0001"
+    ],
+    "references": [
+      {
+        "title": "...3 年、一程序员被判 18 个月:爬虫软件对政府服务器进行自动化...",
+        "link": "https://cloud.tencent.com/developer/article/2010221?areaSource=102001.11&traceId=Lgeb3Q8VKNrwjBYzr74CC"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2018-05",
+    "relatedAttackTools": [
+      "AT0005",
+      "AT0023"
+    ],
+    "relatedThreatActors": [
+      "TA0013"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "C0673": {
+    "title": "Lsky Pro Image Host Modification Guide: Removing Upload Restrictions and Adding Native Video Support",
+    "keywords": [
+      "Lsky Pro source code modification",
+      "all-format file upload bypass",
+      "video storage image host",
+      "front-end video playback",
+      "Lsky Pro video support",
+      "image host abuse technique",
+      "upload restriction removal"
+    ],
+    "summary": "A technical guide detailing how to modify the source code of Lsky Pro image hosting service to support all-format file uploads instead of images only, and to enable front-end video playback. The guide demonstrates how a normal image hosting service can be repurposed for video storage and playback, representing a typical technical implementation of image host abuse risks.",
+    "references": [
+      {
+        "title": "Lsky Pro image hosting modification guide: remove upload restrictions and add native video support - Zhihu"
+      }
+    ]
+  }
+}

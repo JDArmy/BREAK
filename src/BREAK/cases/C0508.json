@@ -1,0 +1,32 @@
+{
+  "C0508": {
+    "title": "使用Frida和Termux绕过模拟器检测的测试案例",
+    "keywords": [
+      "Frida",
+      "Termux",
+      "模拟器检测绕过",
+      "Android",
+      "JavaScript注入",
+      "EmulatorDetectionByPass",
+      "动态插桩",
+      "虚拟设备识别",
+      "移动安全测试"
+    ],
+    "summary": "该项目提供了一个测试案例，用于检查在Android系统中使用Frida和Termux工具绕过模拟器检测的方法，并观察应用程序对JavaScript注入的反应。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0050-001"
+    ],
+    "references": [
+      {
+        "title": "EmulatorDetectionByPass/README.md at main · Ms-dev3 ... - GitHub",
+        "link": "https://github.com/Ms-dev3/EmulatorDetectionByPass/blob/main/README.md"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0015"
+    ],
+    "relatedThreatActors": []
+  }
+}

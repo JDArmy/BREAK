@@ -1,0 +1,31 @@
+{
+  "C1151": {
+    "title": "欧洲议会决议禁止警方公共场所人脸识别,因算法歧视弊大于利",
+    "keywords": [
+      "欧洲议会",
+      "人脸识别禁令",
+      "公共场所",
+      "算法歧视",
+      "预测性监管",
+      "公民评分",
+      "执法AI",
+      "误识率",
+      "基本权利"
+    ],
+    "summary": "2021年10月6日，欧洲议会通过决议，禁止警方在公共场所使用大规模人脸识别等AI工具。决议指出，AI对少数民族、LGBT人群、老年人和女性的误识率更高，存在算法偏见，大规模应用于执法领域会损害公民基本权利。决议要求算法必须透明、可追溯，并禁止基于行为数据进行预测性监管和公民评分。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0123"
+    ],
+    "references": [
+      {
+        "title": "欧洲议会决议禁止警方公共场所人脸识别,因算法歧视弊大于利|人工智能...",
+        "link": "https://www.163.com/dy/article/GLQQIL3F05129QAF.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-10",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

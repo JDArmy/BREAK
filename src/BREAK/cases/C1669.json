@@ -1,0 +1,36 @@
+{
+  "C1669": {
+    "title": "CVE-2026-28465：OpenClaw 语音通话插件 Webhook 验证绕过漏洞",
+    "keywords": [
+      "CVE-2026-28465",
+      "OpenClaw",
+      "Voice-Call Plugin",
+      "Webhook验证绕过",
+      "X-Forwarded-For",
+      "反向代理",
+      "事件伪造",
+      "状态变更",
+      "NVD"
+    ],
+    "summary": "OpenClaw语音通话插件存在不安全的Webhook验证漏洞。远程攻击者可通过操纵反向代理配置中的Forwarded或X-Forwarded-*头，绕过Webhook验证，伪造Webhook事件。该漏洞允许攻击者伪造事件触发虚假状态变更。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0225"
+    ],
+    "references": [
+      {
+        "title": "Nvd - Cve-2026-28465",
+        "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-28465"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-02",
+    "relatedAttackTools": [
+      "AT0086",
+      "AT0096"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "C1661": {
+    "title": "20家银行信用卡API接口未授权访问风险",
+    "keywords": [
+      "银行信用卡API",
+      "未授权访问",
+      "API对象级越权",
+      "API安全缺陷",
+      "信用卡敏感信息",
+      "权限绕过",
+      "金融API安全",
+      "安全调研"
+    ],
+    "summary": "安全研究人员对国内银行API安全进行调研，发现38家银行的API存在安全缺陷，其中20家银行的信用卡API接口存在未授权访问等高风险缺陷。攻击者可利用这些接口绕过权限校验，访问他人信用卡敏感信息或执行未授权操作。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0223"
+    ],
+    "references": [
+      {
+        "title": "​网安加·百家讲坛 | 刘顺、许理想:漫谈企业API安全 - 知乎",
+        "link": "https://zhuanlan.zhihu.com/p/640654573"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-06",
+    "relatedAttackTools": [
+      "AT0085"
+    ],
+    "relatedThreatActors": [
+      "TA0051"
+    ]
+  }
+}

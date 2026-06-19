@@ -1,0 +1,39 @@
+{
+  "C1732": {
+    "title": "通过无效流量视角理解和检测移动广告欺诈",
+    "keywords": [
+      "移动广告欺诈",
+      "无效流量",
+      "点击农场",
+      "虚假转化",
+      "安装农场",
+      "安卓系统",
+      "作弊策略",
+      "移动广告",
+      "广告欺诈检测"
+    ],
+    "summary": "研究揭示了移动广告欺诈中的作弊策略，包括使用超级点击农场。研究发现，这些农场中的设备运行着旧版安卓系统，通过组合多种作弊手段覆盖更多设备，以模拟虚假的用户交互和转化行为。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0238"
+    ],
+    "references": [
+      {
+        "title": "Understanding and detecting mobile ad fraud through the lens of invalid traffic",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3460120.3484547"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0002",
+      "AT0009",
+      "AT0016",
+      "AT0044",
+      "AT0091"
+    ],
+    "relatedThreatActors": [
+      "TA0001",
+      "TA0056"
+    ]
+  }
+}

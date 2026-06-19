@@ -1,0 +1,37 @@
+{
+  "C0883": {
+    "title": "IBM报告揭示自动化凭证盗窃激增",
+    "keywords": [
+      "IBM X-Force",
+      "威胁情报报告",
+      "信息窃取程序",
+      "凭证盗窃",
+      "网络钓鱼",
+      "AI攻击",
+      "多因素验证规避",
+      "自动化攻击"
+    ],
+    "summary": "根据IBM《2025年X-Force威胁情报指数报告》，2024年包含信息窃取程序的网络钓鱼邮件增加84%，攻击者利用AI实现大规模推送，导致凭证失窃事件占所有安全事件近三分之一。信息窃取程序可快速盗取登录信息，缩短攻击时间，并规避多因素验证。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0088"
+    ],
+    "references": [
+      {
+        "title": "2024年亚太地区受到的网络攻击占总数的三分之一以上,Linux系统...",
+        "link": "https://m.163.com/dy/article/JTOI6ADJ05509EKV.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-04",
+    "relatedAttackTools": [
+      "AT0064",
+      "AT0063",
+      "AT0057"
+    ],
+    "relatedThreatActors": [
+      "TA0031",
+      "TA0041"
+    ]
+  }
+}

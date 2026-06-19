@@ -1,0 +1,36 @@
+{
+  "C0102": {
+    "title": "在线广告网络按点击付费流中的点击欺诈检测",
+    "keywords": [
+      "点击欺诈",
+      "按点击付费",
+      "在线广告网络",
+      "PPC",
+      "虚假点击",
+      "广告商",
+      "发布商",
+      "自动化脚本",
+      "机器人点击"
+    ],
+    "summary": "在线广告的按点击付费模式面临严重欺诈问题：攻击者通过自动化脚本或机器人点击广告，无真实兴趣，以此消耗广告商预算或获取非法收入。此类欺诈不仅耗尽广告商资金，还破坏广告商与发布商之间的信任，引发多起针对大型广告网络的集体诉讼。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0008-002"
+    ],
+    "references": [
+      {
+        "title": "Detecting click fraud in pay-per-click streams of online advertising networks",
+        "link": "https://ieeexplore.ieee.org/abstract/document/4595871/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2008-06",
+    "relatedAttackTools": [
+      "AT0023",
+      "AT0044"
+    ],
+    "relatedThreatActors": [
+      "TA0001"
+    ]
+  }
+}

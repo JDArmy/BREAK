@@ -1,0 +1,31 @@
+{
+  "C1648": {
+    "title": "Web3元宇宙金融犯罪研究揭示洗钱交易与市场操纵",
+    "keywords": [
+      "Web3",
+      "元宇宙",
+      "金融犯罪",
+      "洗钱",
+      "市场操纵",
+      "虚拟经济",
+      "去中心化",
+      "学术研究",
+      "IEEE"
+    ],
+    "summary": "2023年2月发表的学术研究系统梳理了Web3元宇宙生态中的金融犯罪类型，包括诈骗、恶意攻击、洗钱交易、非法服务等。研究指出，由于缺乏行业标准和监管规则，去中心化元宇宙吸引了大量用户和资本，也催生了操纵市场、制造投机泡沫等金融犯罪行为。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0220"
+    ],
+    "references": [
+      {
+        "title": "Financial crimes in web3-empowered metaverse: Taxonomy, countermeasures, and opportunities",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10045768/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-02",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

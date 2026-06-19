@@ -1,0 +1,38 @@
+{
+  "C0844": {
+    "title": "新型钓鱼工具包InboxPrime AI内置AI邮件生成器，实现自动化钓鱼",
+    "keywords": [
+      "InboxPrime AI",
+      "钓鱼工具包",
+      "AI邮件生成器",
+      "恶意软件即服务",
+      "MaaS",
+      "凭证窃取",
+      "邮件安全",
+      "内容过滤绕过",
+      "社会工程攻击"
+    ],
+    "summary": "2025年12月，网络安全研究人员发现钓鱼工具包InboxPrime AI，其核心功能是内置AI邮件生成器，能创建包括主题行在内的完整钓鱼邮件，模仿正规商务通信。该工具以恶意软件即服务模式销售，可生成多变体邮件以绕过基于内容特征签名的过滤器，大幅提升攻击规模和效率。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0084-001"
+    ],
+    "references": [
+      {
+        "title": "新型高级钓鱼工具包利用AI与MFA绕过技术大规模窃取凭证_腾讯新闻",
+        "link": "https://news.qq.com/rain/a/20251215A02ZTJ00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-12",
+    "relatedAttackTools": [
+      "AT0063",
+      "AT0071",
+      "AT0057"
+    ],
+    "relatedThreatActors": [
+      "TA0012",
+      "TA0031"
+    ]
+  }
+}

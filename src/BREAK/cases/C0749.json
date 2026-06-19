@@ -1,0 +1,30 @@
+{
+  "C0749": {
+    "title": "唐山银行APP因强制、频繁、过度索取权限被通报整改",
+    "keywords": [
+      "唐山银行",
+      "唐行企业银行",
+      "APP隐私合规",
+      "过度索取权限",
+      "河北省通信管理局",
+      "通报整改",
+      "隐私政策",
+      "银行应用"
+    ],
+    "summary": "河北省通信管理局通报指出，唐山银行旗下“唐行企业银行”APP因强制、频繁、过度索取权限问题被点名，要求限期整改。该应用在通报后已完成整改，并更新了隐私政策弹窗提示。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0074"
+    ],
+    "references": [
+      {
+        "title": "又一银行APP因隐私合规问题被要求整改_搜狐网",
+        "link": "https://m.sohu.com/sa/840977234_122014422"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-12",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

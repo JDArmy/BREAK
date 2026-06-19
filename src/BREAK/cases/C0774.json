@@ -1,0 +1,30 @@
+{
+  "C0774": {
+    "title": "《密码法》要求关键信息基础设施使用国密算法",
+    "keywords": [
+      "密码法",
+      "国密算法",
+      "商用密码",
+      "关键信息基础设施",
+      "银联POS终端",
+      "SM系列算法",
+      "中国人民银行",
+      "支付系统",
+      "合规风险"
+    ],
+    "summary": "《密码法》明确要求关键信息基础设施使用商用密码（国密算法）进行保护。金融行业如央行要求支付系统优先采用国密算法，例如银联POS终端需支持SM系列算法。未遵守该法规的组织可能面临监管处罚和合规风险。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0079"
+    ],
+    "references": [
+      {
+        "title": "数据安全_笔记系列02:国密算法(商用密码算法)详解",
+        "link": "https://blog.csdn.net/fen_fen/article/details/145834830"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

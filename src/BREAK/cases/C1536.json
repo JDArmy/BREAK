@@ -1,0 +1,30 @@
+{
+  "C1536": {
+    "title": "量子区块链增强消费物联网安全研究",
+    "keywords": [
+      "量子区块链",
+      "消费物联网安全",
+      "后量子密码",
+      "量子计算威胁",
+      "量子货币安全协议",
+      "分布式账本",
+      "量子账本验证",
+      "IEEE"
+    ],
+    "summary": "2024年12月9日发表的研究指出，量子计算解决了当今大多数加密形式背后的数学难题，对当前非对称加密方法构成重大挑战。区块链技术面临量子计算带来的前所未有的安全威胁，研究提出了一套基于量子的协议和技术，包括量子货币安全协议、分布式账本数据块、量子账本验证等，以增强消费物联网网络在量子威胁下的安全性。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0196"
+    ],
+    "references": [
+      {
+        "title": "Enhancing security using quantum blockchain in consumer IoT networks",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10783049/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-12",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

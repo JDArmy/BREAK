@@ -1,0 +1,34 @@
+{
+  "C1449": {
+    "title": "SUUM攻击：基于时间戳的Nakamoto式区块链漏洞",
+    "keywords": [
+      "SUUM攻击",
+      "区块扣留攻击",
+      "时间戳操纵",
+      "Nakamoto共识",
+      "区块链漏洞",
+      "Ethereum 1.x",
+      "难度控制",
+      "奖励榨取"
+    ],
+    "summary": "研究揭示了SUUM（Staircase-Unrestricted Uncle Maker）攻击，这是首个针对基于时间戳的Nakamoto式区块链的区块扣留攻击。攻击者通过区块扣留、时间戳操纵和难度风险控制，能够以零成本和最小难度风险持续发动攻击，无限期地从诚实参与者那里榨取奖励，威胁区块链安全。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0176"
+    ],
+    "references": [
+      {
+        "title": "Timestamp Manipulation: Timestamp-based Nakamoto-style Blockchains are Vulnerable",
+        "link": "https://arxiv.org/abs/2505.05328"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-05",
+    "relatedAttackTools": [
+      "AT0078"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

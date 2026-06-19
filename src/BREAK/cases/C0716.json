@@ -1,0 +1,36 @@
+{
+  "C0716": {
+    "title": "国家网络安全通报中心通报大模型工具Ollama存在安全风险",
+    "keywords": [
+      "Ollama",
+      "大模型工具",
+      "未授权访问",
+      "模型窃取",
+      "数据泄露",
+      "算力盗取",
+      "安全加固",
+      "国家网络安全通报中心",
+      "AIGC安全"
+    ],
+    "summary": "国家网络安全通报中心通报，开源大模型工具Ollama默认配置存在未授权访问与模型窃取等安全隐患，可能导致数据泄露、算力盗取、服务中断。鉴于大量用户私有化部署该工具且未修改默认配置，极易引发网络和数据安全事件，建议用户立即进行安全加固。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0071-002"
+    ],
+    "references": [
+      {
+        "title": "【产业互联网周报】国家网络安全通报中心通报:大模型工具Ollama...",
+        "link": "https://view.inews.qq.com/k/20250311A095QK00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-03",
+    "relatedAttackTools": [
+      "AT0093"
+    ],
+    "relatedThreatActors": [
+      "TA0041",
+      "TA0058"
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "C0057": {
+    "title": "杨浦区商场积分套利停车费诈骗案",
+    "keywords": [
+      "积分套利",
+      "虚拟注册",
+      "恶意软件",
+      "停车费诈骗",
+      "A商场App",
+      "薅羊毛",
+      "虚假账号",
+      "营销活动作弊",
+      "杨浦区"
+    ],
+    "summary": "2020年至2021年，杨某某、夏某某等人利用恶意软件在A商场官方App内虚拟注册新用户获取积分，使用积分抵扣停车费。涉案车辆约120辆，每辆车绑定手机号达上千个，通过虚假账号套取平台营销活动积分获利。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0005"
+    ],
+    "references": [
+      {
+        "title": "靠“薅羊毛”生财,他们被判刑了|app|羊毛党|停车费_网易订阅",
+        "link": "https://dy.163.com/article/GGNUT58E05506BEH.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2020-12",
+    "relatedAttackTools": [
+      "AT0003",
+      "AT0023"
+    ],
+    "relatedThreatActors": [
+      "TA0001"
+    ]
+  }
+}

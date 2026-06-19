@@ -1,0 +1,22 @@
+{
+  "C1346": {
+    "title": "Cloudflare Deploys Post-Quantum Hybrid Key Agreement to Defend Against Harvest-Now-Decrypt-Later Attacks",
+    "keywords": [
+      "Cloudflare",
+      "post-quantum cryptography",
+      "hybrid key agreement",
+      "X25519MLKEM768",
+      "ML-KEM",
+      "harvest-now-decrypt-later",
+      "quantum-resistant encryption",
+      "PQC",
+      "TLS"
+    ],
+    "summary": "Cloudflare has been researching post-quantum cryptography since 2017 and has now deployed post-quantum hybrid key agreement protocols such as X25519MLKEM768. The move aims to counter harvest-now-decrypt-later attacks, where adversaries collect encrypted data today with the intent of decrypting it once sufficiently powerful quantum computers become available. Cloudflare plans to achieve full post-q",
+    "references": [
+      {
+        "title": "Post-quantum cryptography (PQC) - SSL/TLS - Cloudflare Docs"
+      }
+    ]
+  }
+}

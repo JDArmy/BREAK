@@ -1,0 +1,19 @@
+{
+  "C1487": {
+    "title": "Eclipse Attack Detection for Bitcoin Light Clients (Journal Version)",
+    "keywords": [
+      "bitcoin light client eclipse attack detection",
+      "suspicious block timestamp detection",
+      "gossip protocol eclipse detection",
+      "PoW blockchain eclipse resistance",
+      "network traffic analysis blockchain",
+      "eclipse attack mitigation"
+    ],
+    "summary": "A blockchain client that fails to connect to at least one honest node can be tricked into accepting a malicious forked view of the chain, known as an eclipse attack. The attacker controls all connections, preventing the client from distinguishing the real blockchain from the attacker's view. This study proposes two detection schemes: one based on suspicious block timestamps and another that levera",
+    "references": [
+      {
+        "title": "Decentralized and Lightweight Approach to Detect Eclipse Attacks on Proof of Work Blockchains"
+      }
+    ]
+  }
+}

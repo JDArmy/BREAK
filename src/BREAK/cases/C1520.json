@@ -1,0 +1,34 @@
+{
+  "C1520": {
+    "title": "PhantomRaven恶意软件在126个npm包中窃取GitHub令牌",
+    "keywords": [
+      "PhantomRaven",
+      "npm",
+      "GitHub",
+      "恶意软件",
+      "令牌窃取",
+      "供应链攻击",
+      "开源包",
+      "远程依赖项"
+    ],
+    "summary": "研究人员发现名为PhantomRaven的恶意软件活动，通过126个恶意npm包利用远程依赖项窃取GitHub令牌，对依赖这些开源包的开发者和项目构成严重威胁。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0193"
+    ],
+    "references": [
+      {
+        "title": "PhantomRaven Malware Found in 126 npm Packages Stealing GitHub Tokens ...",
+        "link": "https://thehackernews.com/2025/10/phantomraven-malware-found-in-126-npm.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-10",
+    "relatedAttackTools": [
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

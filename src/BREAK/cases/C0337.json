@@ -1,0 +1,40 @@
+{
+  "C0337": {
+    "title": "Europol捣毁SIM农场网络，涉及4900万虚假账号",
+    "keywords": [
+      "Europol",
+      "SIM农场",
+      "SIM卡批量注册",
+      "虚假账户",
+      "欺诈损失",
+      "SIMCARTEL行动",
+      "设备农场",
+      "物联网卡注册",
+      "虚假转化",
+      "安装农场"
+    ],
+    "summary": "欧洲刑警组织通过SIMCARTEL行动捣毁了一个SIM农场网络，该农场利用大量SIM卡批量注册虚假账户，用于实施欺诈活动。该网络支撑了4900万个虚假账户，并造成了500万欧元的欺诈损失。此案例直接展示了通过设备农场进行大规模虚假注册和欺诈的典型模式。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0030-006",
+      "R0238"
+    ],
+    "references": [
+      {
+        "title": "Europol Dismantles SIM Farm Network Powering 49 Million Fake Accounts ...",
+        "link": "https://thehackernews.com/2025/10/europol-dismantles-sim-farm-network.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-10",
+    "relatedAttackTools": [
+      "AT0001",
+      "AT0004",
+      "AT0006"
+    ],
+    "relatedThreatActors": [
+      "TA0001",
+      "TA0003"
+    ]
+  }
+}

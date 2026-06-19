@@ -1,0 +1,32 @@
+{
+  "C1276": {
+    "title": "白宫邮件被黑事件",
+    "keywords": [
+      "白宫邮件",
+      "钓鱼攻击",
+      "域名仿冒",
+      "accounts-google.com",
+      "Google账户",
+      "凭据窃取",
+      "恶意链接",
+      "鱼叉式网络钓鱼"
+    ],
+    "summary": "2015年，攻击者发送伪装来自白宫的邮件，内含恶意链接，引导受害者至伪造的Google登录页面，以窃取Google账户凭据。攻击者使用了与Google相似的域名“accounts-google.com”进行钓鱼。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0144"
+    ],
+    "references": [
+      {
+        "title": "钓鱼攻击：相似域名识别及如何有效预防攻击 - CSDN博客",
+        "link": "https://blog.csdn.net/weixin_37813152/article/details/132193270"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2015",
+    "relatedAttackTools": [
+      "AT0063"
+    ],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C1574": {
+    "title": "Adversarial Attacks Against AI-Based IoT Malware Detection Systems: A Case Study",
+    "keywords": [
+      "adversarial attacks",
+      "AI malware detection",
+      "IoT security",
+      "adversarial examples",
+      "AIoT",
+      "malware evasion",
+      "IEEE",
+      "consumer electronics"
+    ],
+    "summary": "This study evaluates the vulnerability of AI-powered IoT malware detection systems to adversarial attacks. Attackers successfully evaded AI detection using adversarial examples, allowing malware to persist within IoT consumer electronics and potentially cause significant damage, directly demonstrating the threat adversarial attacks pose to AIoT decision-making.",
+    "references": [
+      {
+        "title": "An Adversarial Attack on Artificial Intelligence Malware Detection in ..."
+      }
+    ]
+  }
+}

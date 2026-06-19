@@ -1,0 +1,33 @@
+{
+  "C1015": {
+    "title": "某企业订单查询模块存在垂直越权漏洞",
+    "keywords": [
+      "垂直越权",
+      "订单查询",
+      "IDOR",
+      "未授权访问",
+      "用户隐私泄露",
+      "接口安全",
+      "参数篡改",
+      "SRC漏洞"
+    ],
+    "summary": "某企业用户中心订单查询接口未对请求参数做身份校验。攻击者登录普通用户账号后，通过修改订单ID参数，可未授权查看全站任意用户的订单详情，导致手机号、收货地址等隐私信息泄露。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0109"
+    ],
+    "references": [
+      {
+        "title": "SRC每日漏洞复现学习系列（第2篇）垂直越权漏洞+漏洞报告模板",
+        "link": "https://zone.ci/secarticles/wx/535792.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0085"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

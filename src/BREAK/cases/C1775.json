@@ -1,0 +1,31 @@
+{
+  "C1775": {
+    "title": "利用HTTP解析差异绕过多个主流WAF",
+    "keywords": [
+      "WAF绕过",
+      "HTTP解析差异",
+      "模糊测试",
+      "AWS",
+      "Azure",
+      "Cloud Armor",
+      "Cloudflare",
+      "ModSecurity",
+      "边缘函数滥用"
+    ],
+    "summary": "研究团队通过模糊测试发现AWS、Azure、Cloud Armor、Cloudflare和ModSecurity等5款主流WAF存在1207个绕过漏洞。攻击者利用WAF与后端服务器对HTTP请求头及分段内容的解析差异，使用非恶意组件成功绕过WAF规则。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0250"
+    ],
+    "references": [
+      {
+        "title": "WAFFLED: Exploiting Parsing Discrepancies to Bypass Web Application ...",
+        "link": "https://arxiv.org/html/2503.10846v1"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-03",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

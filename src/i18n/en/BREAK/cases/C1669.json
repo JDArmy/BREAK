@@ -1,0 +1,22 @@
+{
+  "C1669": {
+    "title": "CVE-2026-28465: OpenClaw Voice-Call Plugin Webhook Verification Bypass",
+    "keywords": [
+      "CVE-2026-28465",
+      "OpenClaw",
+      "Voice-Call Plugin",
+      "webhook verification bypass",
+      "X-Forwarded-For",
+      "reverse proxy",
+      "event forgery",
+      "state change",
+      "NVD"
+    ],
+    "summary": "The OpenClaw voice-call plugin contains an insecure webhook verification flaw. Remote attackers can bypass webhook verification by manipulating Forwarded or X-Forwarded-* headers in reverse proxy configurations, enabling them to forge webhook events and trigger false state changes.",
+    "references": [
+      {
+        "title": "NVD - CVE-2026-28465"
+      }
+    ]
+  }
+}

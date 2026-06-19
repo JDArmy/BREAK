@@ -1,0 +1,21 @@
+{
+  "C1707": {
+    "title": "File Sharing to Unauthorized Domain Leads to Data Exposure Risk",
+    "keywords": [
+      "Azure AD",
+      "Microsoft Defender for Cloud Apps",
+      "domain allowlist",
+      "unauthorized access",
+      "file sharing",
+      "data exposure",
+      "collaboration platform",
+      "permission misconfiguration"
+    ],
+    "summary": "An organization configured Azure AD domain allowlists to restrict file sharing to authorized domains only. However, the security team discovered that some files were shared with unauthorized domains, potentially exposing sensitive data to external parties. The issue involved an integration gap between Microsoft Defender for Cloud Apps and the domain allowlist feature, highlighting exposure risks c",
+    "references": [
+      {
+        "title": "File Shared with unauthorized domain | Microsoft Community Hub"
+      }
+    ]
+  }
+}

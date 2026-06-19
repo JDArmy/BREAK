@@ -1,0 +1,19 @@
+{
+  "C1521": {
+    "title": "Inferno Drainer Exploits EIP-7702 Upgrade for New Phishing Attack",
+    "keywords": [
+      "Inferno Drainer",
+      "EIP-7702",
+      "Ethereum phishing",
+      "MetaMask malicious approval",
+      "EOA smart contract",
+      "asset transfer exploit"
+    ],
+    "summary": "On May 24, 2025, the phishing group Inferno Drainer leveraged the Ethereum EIP-7702 upgrade to carry out a novel attack, resulting in a single loss of approximately $150,000. EIP-7702 allows externally owned accounts (EOAs) to temporarily gain smart contract functionality, and attackers used an authorized MetaMask to trick users into signing malicious approvals, thereby transferring assets.",
+    "references": [
+      {
+        "title": "[Security Monthly Report] | Approximately $182 million lost in May due to hacks, scams, etc...."
+      }
+    ]
+  }
+}

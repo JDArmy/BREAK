@@ -1,0 +1,32 @@
+{
+  "C1787": {
+    "title": "Secretation方案利用DID和VC实现防凭证伪造的去中心化秘密管理",
+    "keywords": [
+      "Secretation",
+      "去中心化身份",
+      "DID",
+      "可验证凭证",
+      "VC",
+      "秘密管理",
+      "凭证伪造",
+      "密钥份额",
+      "IEEE",
+      "去中心化"
+    ],
+    "summary": "2021年IEEE会议论文提出Secretation方案，基于去中心化身份和可验证凭证实现可扩展的去中心化秘密管理。该方案设计确保即使攻击者控制部分密钥份额，凭证伪造仍不可行，因为颁发机构仍掌控另一密钥份额，从而在架构层面防止身份凭证被伪造。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0253"
+    ],
+    "references": [
+      {
+        "title": "Secretation: Toward a decentralised identity and verifiable credentials based scalable and decentralised secret management solution",
+        "link": "https://ieeexplore.ieee.org/abstract/document/9461144/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-01",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

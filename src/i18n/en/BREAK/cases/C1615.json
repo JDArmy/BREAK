@@ -1,0 +1,22 @@
+{
+  "C1615": {
+    "title": "Real-World Evaluation of Protocol-Compliant Denial-of-Service Attacks on V2X",
+    "keywords": [
+      "C-V2X",
+      "forward collision warning",
+      "FCW",
+      "protocol-compliant DoS",
+      "UDP flooding",
+      "basic safety message",
+      "channel congestion",
+      "V2X attack",
+      "driving decision disruption"
+    ],
+    "summary": "A paper presents a real-world case study of protocol-compliant denial-of-service attacks against C-V2X forward collision warning systems. Attackers congest communication channels by sending high-frequency UDP packets at the transport layer and oversized basic safety messages at the application layer, preventing vehicles from properly receiving and processing safety-related information and thus dis",
+    "references": [
+      {
+        "title": "Real-World Evaluation of Protocol-Compliant Denial-of-Service Attacks"
+      }
+    ]
+  }
+}

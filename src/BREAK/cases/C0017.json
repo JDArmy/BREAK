@@ -1,0 +1,36 @@
+{
+  "C0017": {
+    "title": "FH6拍卖行狙击手",
+    "keywords": [
+      "Forza Horizon 6",
+      "拍卖行狙击",
+      "秒拍出价",
+      "自动化脚本",
+      "游戏外挂",
+      "GitHub",
+      "FrostyIsBored",
+      "买断",
+      "竞拍自动化"
+    ],
+    "summary": "这是一个为《极限竞速：地平线6》设计的自动化拍卖行狙击工具。它能监控拍卖行中用户设定的车辆，一旦出现立即买断，收集车辆后循环操作。该工具声称能在5分钟内成功狙击一辆车，成功率约10%。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0003-001"
+    ],
+    "references": [
+      {
+        "title": "GitHub - FrostyIsBored/FH6-Auction-House-Sniper: Automatic Auction ...",
+        "link": "https://github.com/FrostyIsBored/FH6-Auction-House-Sniper"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0023",
+      "AT0049"
+    ],
+    "relatedThreatActors": [
+      "TA0025",
+      "TA0028"
+    ]
+  }
+}

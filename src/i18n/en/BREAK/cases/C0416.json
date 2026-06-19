@@ -1,0 +1,21 @@
+{
+  "C0416": {
+    "title": "Microsoft 365 MFA Bypass Incident",
+    "keywords": [
+      "Microsoft 365 MFA bypass",
+      "Microsoft Authenticator",
+      "token theft",
+      "adversary-in-the-middle attack",
+      "MFA fatigue attack",
+      "single-factor authentication",
+      "security defaults bypass",
+      "cloud account takeover"
+    ],
+    "summary": "An attacker successfully logged into a corporate Microsoft 365 account using only single-factor authentication, despite security defaults being enabled. The user had set up the Microsoft Authenticator app for MFA, but sign-in logs showed the attacker bypassed multi-factor authentication. This case discusses common MFA bypass methods such as MFA fatigue attacks, token theft, and adversary-in-the-mi",
+    "references": [
+      {
+        "title": "How Did a Hacker Bypass Our Multi-Factor? - Microsoft Q&A"
+      }
+    ]
+  }
+}

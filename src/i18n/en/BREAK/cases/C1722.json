@@ -1,0 +1,21 @@
+{
+  "C1722": {
+    "title": "Systematic Vulnerabilities Found in Payment Platform Penetration Test",
+    "keywords": [
+      "payment platform penetration test",
+      "price manipulation",
+      "unauthorized data access",
+      "payment token misconfiguration",
+      "session token flaws",
+      "privilege escalation",
+      "merchant payment security",
+      "token configuration errors"
+    ],
+    "summary": "A penetration test on a merchant payment platform uncovered critical vulnerabilities including price manipulation and unauthorized access to sensitive data, likely caused by misconfiguration of payment or session tokens, leading to privilege escalation and data leakage.",
+    "references": [
+      {
+        "title": "Penetration Testing of a Merchant Payment Platform; Systemic Vulnerabilities and Compliance-Centric Mitigation"
+      }
+    ]
+  }
+}

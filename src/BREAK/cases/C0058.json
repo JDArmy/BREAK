@@ -1,0 +1,32 @@
+{
+  "C0058": {
+    "title": "拼多多系统漏洞被薅近千万元事件",
+    "keywords": [
+      "拼多多",
+      "系统漏洞",
+      "羊毛党",
+      "无门槛券",
+      "营销活动作弊",
+      "大规模套利",
+      "社交平台扩散",
+      "2019"
+    ],
+    "summary": "2019年初，拼多多出现系统漏洞，用户可免费领取100元无门槛购物券。羊毛党迅速通过社交平台扩散消息，在一夜之间被薅走近千万元，展现了羊毛党利用平台营销活动漏洞进行大规模套利的行为。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0005"
+    ],
+    "references": [
+      {
+        "title": "羊毛党的演变史:互联网背面的掘金者-虎嗅网",
+        "link": "https://www.huxiu.com/article/3455329.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2019-01",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0001"
+    ]
+  }
+}

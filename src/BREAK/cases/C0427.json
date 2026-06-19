@@ -1,0 +1,31 @@
+{
+  "C0427": {
+    "title": "利用QRLJacker进行二维码钓鱼攻击的影响分析与模拟",
+    "keywords": [
+      "QRLJacker",
+      "二维码钓鱼",
+      "quishing",
+      "登录认证劫持",
+      "QR code phishing",
+      "停车计时器欺诈",
+      "攻击模拟",
+      "IEEE"
+    ],
+    "summary": "该研究分析了网络犯罪分子如何劫持合法的二维码用于登录认证，包括在停车计时器上使用欺诈性二维码等手段，并进行了攻击模拟。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0038"
+    ],
+    "references": [
+      {
+        "title": "Impact analysis and attack simulation on quishing (a qc code phishing) using qrljacker",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10698628/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0067"
+    ],
+    "relatedThreatActors": []
+  }
+}

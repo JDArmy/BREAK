@@ -1,0 +1,23 @@
+{
+  "C0797": {
+    "title": "Microsoft Investigates Stealthy Intrusion via Third-Party Vendor Management Relationships",
+    "keywords": [
+      "Microsoft",
+      "third-party vendor",
+      "supply chain attack",
+      "lateral movement",
+      "persistence",
+      "remote access",
+      "identity infrastructure",
+      "stealthy intrusion",
+      "cloud services",
+      "vendor management"
+    ],
+    "summary": "Microsoft's security team released a case study detailing a stealthy intrusion that exploited third-party vendor management relationships, identity infrastructure, and operational tools. Attackers moved laterally through trusted third-party systems and maintained long-term access to the enterprise environment, evading conventional detection methods.",
+    "references": [
+      {
+        "title": "Undermining the trust boundary: Investigating a stealthy intrusion ..."
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "C1706": {
+    "title": "OneDrive账户收到不明来源共享文件",
+    "keywords": [
+      "OneDrive",
+      "Microsoft",
+      "未经请求的共享文件",
+      "PDF文件",
+      "报告工具故障",
+      "账户入侵",
+      "云存储安全",
+      "协作文档外链泄露",
+      "钓鱼攻击",
+      "用户举报"
+    ],
+    "summary": "自2025年12月起，一名用户的OneDrive账户持续收到来自未知来源的多个未经请求的PDF文件。用户尝试通过OneDrive内置的报告工具举报这些文件，但工具持续返回错误，导致无法通过正常渠道标记或移除这些内容。用户担忧账户可能已被入侵，并请求微软进行紧急调查。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0233"
+    ],
+    "references": [
+      {
+        "title": "Critical Security Incident: Unsolicited Files in OneDrive – Reporting ...",
+        "link": "https://learn.microsoft.com/en-us/answers/questions/5762705/critical-security-incident-unsolicited-files-in-on"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-12",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

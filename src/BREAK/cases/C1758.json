@@ -1,0 +1,36 @@
+{
+  "C1758": {
+    "title": "MFA疲劳攻击成为黑客新策略",
+    "keywords": [
+      "MFA疲劳攻击",
+      "多因素认证",
+      "推送轰炸",
+      "Lapsus$",
+      "Yanluowang",
+      "微软",
+      "思科",
+      "凭证填充",
+      "社会工程学",
+      "身份验证绕过"
+    ],
+    "summary": "2022年9月，安全报告指出MFA疲劳攻击在威胁行为者中越来越流行。攻击者运行脚本，使用被盗凭据反复登录，向目标手机发送无尽MFA推送请求流，造成“疲劳”感，最终迫使目标因不堪其扰而点击“批准”或误操作，从而绕过MFA。Lapsus$和Yanluowang等组织已成功利用此技术攻破微软、思科等大型组织。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0246"
+    ],
+    "references": [
+      {
+        "title": "MFA疲劳攻击:备受黑客青睐的新策略",
+        "link": "https://mp.weixin.qq.com/s?__biz=MzUzNDYxOTA1NA==&mid=2247531598&idx=2&sn=90528ddfe77497d33195162ef0d1c991&chksm=fa93ca8fcde44399087442a7d026985811995e0b9adffb1cd12c5d7371f5657e99024c85c21f&scene=27"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-09",
+    "relatedAttackTools": [
+      "AT0094"
+    ],
+    "relatedThreatActors": [
+      "TA0059"
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "C1585": {
+    "title": "eSIM/iSIM远程配置风险与SIM交换攻击研究",
+    "keywords": [
+      "eSIM",
+      "iSIM",
+      "远程配置",
+      "SIM交换攻击",
+      "隐私风险",
+      "安全风险",
+      "USENIX Security",
+      "移动服务劫持",
+      "身份盗用",
+      "第三方网络路由"
+    ],
+    "summary": "一项实证研究揭示了eSIM技术如何通过远程配置功能引入新的隐私和安全风险。研究发现，旅行eSIM常将用户数据路由至第三方网络，且不透明的配置流程使攻击者可能利用远程管理特性进行SIM卡劫持，从而接管用户移动服务，实施身份盗用。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0207"
+    ],
+    "references": [
+      {
+        "title": "{eSIMplicity} or {eSIMplification}? Privacy and Security Risks in the {eSIM} Ecosystem",
+        "link": "https://www.usenix.org/conference/usenixsecurity25/presentation/motallebighomi"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0062"
+    ],
+    "relatedThreatActors": [
+      "TA0059"
+    ]
+  }
+}

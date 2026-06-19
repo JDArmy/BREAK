@@ -1,0 +1,37 @@
+{
+  "C0900": {
+    "title": "23andMe数据泄露事件：基于暴力破解和撞库的扫号攻击",
+    "keywords": [
+      "23andMe",
+      "数据泄露",
+      "暴力破解",
+      "撞库",
+      "扫号攻击",
+      "基因数据",
+      "健康数据",
+      "凭证填充",
+      "自动化攻击"
+    ],
+    "summary": "23andMe遭遇的数据泄露事件中，攻击者采用相对简单但高效的暴力破解和撞库技术，通过自动化手段大规模尝试登录用户账号，成功访问并窃取了大量用户的基因和健康数据。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0090"
+    ],
+    "references": [
+      {
+        "title": "The 23andMe Data Breach: Analyzing Credential Stuffing Attacks ...",
+        "link": "https://arxiv.org/pdf/2502.04303"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0042",
+      "AT0023",
+      "AT0068"
+    ],
+    "relatedThreatActors": [
+      "TA0059",
+      "TA0018"
+    ]
+  }
+}

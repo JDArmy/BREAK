@@ -1,0 +1,33 @@
+{
+  "C1117": {
+    "title": "DAN 越狱攻击",
+    "keywords": [
+      "DAN",
+      "越狱攻击",
+      "直接提示注入",
+      "双重角色扮演",
+      "提示注入",
+      "LLM安全",
+      "安全护栏绕过",
+      "AI模型攻击"
+    ],
+    "summary": "一种名为DAN（Do Anything Now）的越狱攻击，利用双重角色扮演格式进行提示注入。攻击者要求模型扮演一个不受任何限制的“DAN”角色，从而绕过安全护栏，执行原本被禁止的指令。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0117-001"
+    ],
+    "references": [
+      {
+        "title": "SahilHaiHum/llm-prompt-attacks-extended. - GitHub",
+        "link": "https://github.com/SahilHaiHum/llm-prompt-attacks-extended."
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0093"
+    ],
+    "relatedThreatActors": [
+      "TA0041"
+    ]
+  }
+}

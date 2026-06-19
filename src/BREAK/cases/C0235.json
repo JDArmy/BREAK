@@ -1,0 +1,30 @@
+{
+  "C0235": {
+    "title": "快手因违法信息未及时处置被行政处罚",
+    "keywords": [
+      "快手",
+      "违法信息",
+      "行政处罚",
+      "青少年模式",
+      "网络安全法",
+      "内容审核",
+      "短视频平台",
+      "未成年人保护"
+    ],
+    "summary": "2024年11月，快手公司因短视频中存在违法信息未及时处置，且青少年模式落实不到位，导致违法信息扩散，危害未成年人身心健康。公安机关依据《网络安全法》对其给予警告处罚，并责令全面排查清理违法信息。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0020"
+    ],
+    "references": [
+      {
+        "title": "快手违规被罚背后：低俗内容屡禁不止 业务增速放缓_腾讯新闻",
+        "link": "https://news.qq.com/rain/a/20241206A037YB00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-11",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

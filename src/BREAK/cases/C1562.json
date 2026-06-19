@@ -1,0 +1,32 @@
+{
+  "C1562": {
+    "title": "基于概念格的比特币地址去匿名化",
+    "keywords": [
+      "比特币",
+      "去匿名化",
+      "概念格",
+      "形式概念分析",
+      "地址聚类",
+      "交易追踪",
+      "链上隐私",
+      "用户身份关联",
+      "区块链分析"
+    ],
+    "summary": "该研究探索了一种基于概念格的比特币地址去匿名化方法，通过形式概念分析技术追踪用户身份，揭示了比特币交易可被聚类分析并关联到真实身份的风险。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0202"
+    ],
+    "references": [
+      {
+        "title": "De anonymization of Bitcoin addresses based on concept lattice",
+        "link": "https://dl.acm.org/doi/full/10.1145/3708635.3708643"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0080"
+    ],
+    "relatedThreatActors": []
+  }
+}

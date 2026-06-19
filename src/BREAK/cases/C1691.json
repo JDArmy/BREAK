@@ -1,0 +1,31 @@
+{
+  "C1691": {
+    "title": "Log4j漏洞响应延迟暴露SBOM缺失问题",
+    "keywords": [
+      "Log4j",
+      "SBOM",
+      "软件物料清单",
+      "漏洞响应",
+      "依赖关系可见性",
+      "Apache Log4j",
+      "Java应用安全",
+      "OWASP",
+      "软件供应链安全"
+    ],
+    "summary": "2021年底Apache Log4j曝出严重漏洞，几乎影响所有基于Java的应用。许多组织因缺乏对自身软件组件和依赖关系的可见性，难以评估系统是否被入侵，导致对已发现漏洞的响应严重延迟，凸显了没有SBOM就无法快速判断漏洞影响的问题。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0229"
+    ],
+    "references": [
+      {
+        "title": "Advisory on Software Bill of Materials and Real-time Vulnerability ...",
+        "link": "https://owasp.org/blog/2025/02/24/advisory-on-implementation-of-software-bill-of-materials-for-vulnerability-management"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-12",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

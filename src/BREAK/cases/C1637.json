@@ -1,0 +1,35 @@
+{
+  "C1637": {
+    "title": "VR头显勒索软件攻击漏洞研究",
+    "keywords": [
+      "VR头显安全",
+      "勒索软件",
+      "Oculus Quest 2",
+      "Android恶意软件移植",
+      "固件攻击",
+      "XR设备",
+      "攻击面",
+      "IEEE"
+    ],
+    "summary": "研究人员探索了针对VR头显的勒索软件攻击可行性。研究以Oculus Quest 2为测试环境，验证了Android勒索软件可被移植并攻击该设备，表明独立式VR头显可能成为恶意软件的攻击目标，其攻击面可被利用。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0217"
+    ],
+    "references": [
+      {
+        "title": "VR Headset Ransomware Attack Vulnerability - IEEE Xplore",
+        "link": "https://ieeexplore.ieee.org/document/10667339"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0084",
+      "AT0013"
+    ],
+    "relatedThreatActors": [
+      "TA0018",
+      "TA0050"
+    ]
+  }
+}

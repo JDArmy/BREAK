@@ -1,0 +1,34 @@
+{
+  "C0310": {
+    "title": "万安公安破获一起DDoS黑客攻击案件",
+    "keywords": [
+      "DDoS攻击",
+      "拒绝服务攻击",
+      "黑客攻击",
+      "万安县公安局",
+      "网络安全",
+      "攻击脚本",
+      "网站安全",
+      "网络犯罪"
+    ],
+    "summary": "2022年12月，万安县公安局网监大队根据上级线索，发现居民宋某在网上对某网站发起DDoS攻击，涉嫌危害网络安全。民警通过分析研判锁定嫌疑人位置后将其传唤。经查，宋某在为他人搭建网站过程中获取了DDoS攻击脚本，实施了拒绝服务攻击。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0029"
+    ],
+    "references": [
+      {
+        "title": "万安公安:破获一起DDoS黑客攻击案件 - 公安 - 江西政法网",
+        "link": "https://www.jxzfw.gov.cn/2022/1208/2022120845474.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-12",
+    "relatedAttackTools": [
+      "AT0023"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

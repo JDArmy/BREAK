@@ -1,0 +1,29 @@
+{
+  "C0020": {
+    "title": "让大家了解一下什么是拍卖狙击",
+    "keywords": [
+      "拍卖狙击",
+      "auction sniping",
+      "Facebook",
+      "出价策略",
+      "计时出价",
+      "游戏拍卖",
+      "拍卖机制",
+      "竞拍行为"
+    ],
+    "summary": "Facebook帖子解释了拍卖狙击的定义，即玩家通过精确计时，在搜索刷新时以更快速度出价，从而在拍卖中获胜。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0003-002"
+    ],
+    "references": [
+      {
+        "title": "Just so everyone knows what auction sniping is - Facebook",
+        "link": "https://www.facebook.com/groups/fh5group/posts/4025243374400719/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

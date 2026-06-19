@@ -1,0 +1,36 @@
+{
+  "C0926": {
+    "title": "泉州警方提醒：中奖诈骗等10类骗局节后高发",
+    "keywords": [
+      "泉州",
+      "反诈骗中心",
+      "节后防骗",
+      "中奖诈骗",
+      "钓鱼网站",
+      "转账汇款",
+      "短信诈骗",
+      "电话诈骗",
+      "平台诈骗",
+      "2023"
+    ],
+    "summary": "2023年2月，泉州市反诈骗中心发布节后防骗指南，梳理包括中奖诈骗在内的10种常见骗局。诈骗分子通过短信或电话通知用户“中奖”，引诱其登录钓鱼网站或转账汇款，骗取钱财。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0095"
+    ],
+    "references": [
+      {
+        "title": "泉州已有人被骗100多万元!还有这些…当心10类新老骗局!",
+        "link": "https://m.163.com/dy/article/HTF4EFHE054572GV.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-02",
+    "relatedAttackTools": [
+      "AT0063"
+    ],
+    "relatedThreatActors": [
+      "TA0015"
+    ]
+  }
+}

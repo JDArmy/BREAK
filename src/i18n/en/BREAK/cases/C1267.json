@@ -1,0 +1,21 @@
+{
+  "C1267": {
+    "title": "ARP Spoofing Attack for Traffic Interception in Local Area Networks",
+    "keywords": [
+      "ARP spoofing",
+      "man-in-the-middle attack",
+      "traffic interception",
+      "Bettercap",
+      "LAN security",
+      "ARP protocol",
+      "MAC address forgery",
+      "packet sniffing"
+    ],
+    "summary": "ARP spoofing is a common man-in-the-middle attack technique within LANs. Attackers send forged ARP reply packets to map the gateway IP address to their own MAC address, causing all victim traffic to pass through the attacker's device. Tools like Bettercap can execute such attacks, enabling data eavesdropping and tampering, while the ARP protocol itself lacks an authentication mechanism.",
+    "references": [
+      {
+        "title": "GitHub - frostbits-security/MITM-cheatsheet: All MITM Attacks in One Place"
+      }
+    ]
+  }
+}

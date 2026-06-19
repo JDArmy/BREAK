@@ -1,0 +1,35 @@
+{
+  "C1393": {
+    "title": "Mirai僵尸网络黑客被勒令支付860万美元赔偿",
+    "keywords": [
+      "Mirai",
+      "僵尸网络",
+      "DDoS攻击",
+      "物联网设备",
+      "Dyn",
+      "损害赔偿",
+      "居家监禁",
+      "美国联邦法院",
+      "IoT安全"
+    ],
+    "summary": "一名22岁的黑客因协助发动一系列利用Mirai僵尸网络的大规模DDoS攻击，被美国联邦法院判处支付860万美元损害赔偿，并执行6个月居家监禁。该黑客参与利用被感染的物联网设备组建僵尸网络，对Dyn等目标发动攻击，造成严重网络中断。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0165"
+    ],
+    "references": [
+      {
+        "title": "Mirai botnet hacker ordered to pay $8.6 million in damages",
+        "link": "https://www.reuters.com/article/world/us/mirai-botnet-hacker-ordered-to-pay-86-million-in-damages-idUSKCN1N02VX/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2018-11",
+    "relatedAttackTools": [
+      "AT0082"
+    ],
+    "relatedThreatActors": [
+      "TA0048"
+    ]
+  }
+}

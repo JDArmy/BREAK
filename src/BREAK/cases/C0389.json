@@ -1,0 +1,30 @@
+{
+  "C0389": {
+    "title": "SEC暂停255家休眠空壳公司交易",
+    "keywords": [
+      "SEC",
+      "空壳驱逐行动",
+      "休眠空壳公司",
+      "股票交易暂停",
+      "微型股欺诈",
+      "反欺诈执法",
+      "证券监管",
+      "空壳公司"
+    ],
+    "summary": "美国证券交易委员会（SEC）发起“空壳驱逐行动”，一次性暂停了255家休眠空壳公司的股票交易。这些公司处于休眠状态，缺乏运营活动，极易被滥用进行欺诈。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0033"
+    ],
+    "references": [
+      {
+        "title": "SEC Continues Microcap Fraud Crackdown, Proactively Suspends ...",
+        "link": "https://www.sec.gov/newsroom/press-releases/2014-21"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2014",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

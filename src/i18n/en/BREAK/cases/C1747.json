@@ -1,0 +1,21 @@
+{
+  "C1747": {
+    "title": "OWASP LLM03: Definition of Training Data Poisoning Risk",
+    "keywords": [
+      "OWASP",
+      "GenAI",
+      "LLM",
+      "training data poisoning",
+      "integrity attack",
+      "AI safety",
+      "data contamination",
+      "model behavior manipulation"
+    ],
+    "summary": "The OWASP GenAI security project defines training data poisoning as an integrity attack where adversaries tamper with training data to impair a model's ability to produce correct predictions. This directly aligns with the risk description of attackers contaminating the training set to influence model behavior.",
+    "references": [
+      {
+        "title": "LLM03: Training Data Poisoning - OWASP Gen AI Security Project"
+      }
+    ]
+  }
+}

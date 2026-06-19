@@ -1,0 +1,23 @@
+{
+  "C1535": {
+    "title": "Post-Quantum Blockchain: A Survey on Cryptographic Resilience Against Quantum Computing Attacks",
+    "keywords": [
+      "post-quantum blockchain",
+      "blockchain cryptography",
+      "quantum computing attacks",
+      "Shor's algorithm",
+      "Grover's algorithm",
+      "quantum-resistant cryptography",
+      "distributed ledger technology",
+      "public-key cryptography",
+      "hash functions",
+      "quantum threat"
+    ],
+    "summary": "A survey published on January 23, 2020, highlights that while blockchains rely on public-key cryptography and hash functions for security, advances in quantum computing make attacks based on Shor's and Grover's algorithms feasible in the near term. These algorithms threaten both cryptographic primitives, necessitating a redesign of blockchain systems to adopt quantum-resistant schemes. The paper e",
+    "references": [
+      {
+        "title": "Towards post-quantum blockchain: A review on blockchain cryptography resistant to quantum computing attacks"
+      }
+    ]
+  }
+}

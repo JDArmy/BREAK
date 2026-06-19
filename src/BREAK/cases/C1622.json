@@ -1,0 +1,36 @@
+{
+  "C1622": {
+    "title": "OpenAI语音克隆技术引发冒充拜登事件",
+    "keywords": [
+      "OpenAI",
+      "Voice Engine",
+      "语音克隆",
+      "深度伪造",
+      "拜登",
+      "冒充",
+      "虚假电话",
+      "美国联邦通信委员会",
+      "防滥用"
+    ],
+    "summary": "2024年1月，有人利用深度伪造技术克隆美国总统拜登的声音，向新罕布什尔州民众拨打虚假电话，意图阻碍正常投票。此事促使美国联邦通信委员会采取行动，宣布此类活动属于非法。OpenAI也因此在发布Voice Engine时加强了防滥用措施。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0214"
+    ],
+    "references": [
+      {
+        "title": "深伪可怕吗?OpenAI现在还想克隆你的声音_腾讯新闻",
+        "link": "https://new.qq.com/rain/a/20240402A07FWB00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-01",
+    "relatedAttackTools": [
+      "AT0059",
+      "AT0056"
+    ],
+    "relatedThreatActors": [
+      "TA0031"
+    ]
+  }
+}

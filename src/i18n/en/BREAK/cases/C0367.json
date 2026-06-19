@@ -1,0 +1,22 @@
+{
+  "C0367": {
+    "title": "Beijing Education Company’s Scheduling System Breached via Password Brute-Force, Leading to Data Leak",
+    "keywords": [
+      "academic scheduling system",
+      "password brute-force",
+      "data leak",
+      "education company",
+      "Haidian cyber police",
+      "weak password",
+      "backend data",
+      "administrative fine",
+      "order information exposure"
+    ],
+    "summary": "On August 1, 2023, a post on an overseas forum exposed over 700,000 order records from a Beijing-based education company. An investigation by Haidian cyber police found that the company’s academic scheduling system transmitted account credentials without encryption, making it susceptible to brute-force attacks. Attackers cracked passwords through brute-force methods, gained access, and exported la",
+    "references": [
+      {
+        "title": "Ministry of Public Security announces four cybersecurity administrative penalty cases involving weak password accounts and website defacement - Tencent"
+      }
+    ]
+  }
+}

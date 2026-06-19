@@ -1,0 +1,22 @@
+{
+  "C1300": {
+    "title": "GitHub Actions Exploited to Leak Tokens from 14 Popular Open-Source Projects",
+    "keywords": [
+      "GitHub Actions token leak",
+      "CI/CD pipeline exploitation",
+      "open-source token theft",
+      "API key abuse",
+      "supply chain attack",
+      "Google open-source token leak",
+      "Microsoft GitHub Actions exploit",
+      "AWS token compromise",
+      "Red Hat repository access"
+    ],
+    "summary": "In August 2024, attackers exploited GitHub Actions in CI/CD workflows to steal open-source project tokens from major tech companies including Google, Microsoft, AWS, and Red Hat. These tokens were used to access code repositories and cloud resources, significantly escalating supply chain security risks.",
+    "references": [
+      {
+        "title": "GitHub Actions Exploited, Token Leak Risk Surges in 14 Popular Open Source Projects_Tencent News"
+      }
+    ]
+  }
+}

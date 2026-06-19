@@ -1,0 +1,21 @@
+{
+  "C1172": {
+    "title": "API Logic Flaw in Domestic E-Commerce Platform Exposes 1.18 Billion Order Records",
+    "keywords": [
+      "API logic vulnerability",
+      "order data leak",
+      "e-commerce platform",
+      "API business logic abuse",
+      "data security",
+      "interface security",
+      "logic flaw",
+      "user privacy"
+    ],
+    "summary": "In June 2021, a domestic e-commerce platform suffered a data leak of 1.18 billion user order records due to a logic flaw in the combination of two API interfaces. Attackers exploited this vulnerability to gain unauthorized access to data through legitimate API calls, representing a typical case of API business logic abuse.",
+    "references": [
+      {
+        "title": "Massive Data Leak of Tens of Millions Caused by API Logic Flaw - Zhihu"
+      }
+    ]
+  }
+}

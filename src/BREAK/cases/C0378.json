@@ -1,0 +1,35 @@
+{
+  "C0378": {
+    "title": "直接绕过账号密码!腾讯协助抓捕特大盗号团伙:涉案3000多万",
+    "keywords": [
+      "木马程序",
+      "盗取登录态",
+      "游戏账号",
+      "虚拟装备",
+      "腾讯",
+      "盗号团伙",
+      "绕过密码验证",
+      "网络黑产"
+    ],
+    "summary": "腾讯协助警方捣毁一个利用木马程序盗窃网民游戏账号及虚拟装备的犯罪链条，涉案金额高达3000多万元。犯罪分子采用新型盗号方式，通过盗取“登录态”数据绕过账号密码验证，直接接管用户账号。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0032"
+    ],
+    "references": [
+      {
+        "title": "直接绕过账号密码!腾讯协助抓捕特大盗号团伙:涉案3000多万|木马程 ...",
+        "link": "https://www.163.com/dy/article/JOKTPRDR0511CPVM.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-02",
+    "relatedAttackTools": [
+      "AT0013",
+      "AT0030"
+    ],
+    "relatedThreatActors": [
+      "TA0059"
+    ]
+  }
+}

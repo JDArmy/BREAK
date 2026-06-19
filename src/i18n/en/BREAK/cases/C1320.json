@@ -1,0 +1,23 @@
+{
+  "C1320": {
+    "title": "Abusing Scheduled Tasks with Living off the Land Attacks",
+    "keywords": [
+      "Windows Scheduled Tasks",
+      "Living off the Land",
+      "persistence",
+      "lateral movement",
+      "Tarrask",
+      "RedLine",
+      "Emotet",
+      "CIS",
+      "malware",
+      "Task Scheduler"
+    ],
+    "summary": "CIS released guidance analyzing how attackers abuse Windows Scheduled Tasks to carry out Living off the Land attacks. Scheduled tasks are a common technique used by attackers to automate malicious activities, initiating infections, establishing persistence, and moving laterally. Malware families including Tarrask, RedLine, and Emotet have exploited scheduled tasks.",
+    "references": [
+      {
+        "title": "Abusing Scheduled Tasks with Living off the Land Attacks"
+      }
+    ]
+  }
+}

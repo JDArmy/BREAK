@@ -1,0 +1,33 @@
+{
+  "C1474": {
+    "title": "柠檬集团预装恶意固件感染890万部安卓手机",
+    "keywords": [
+      "Lemon Group",
+      "Guerilla恶意软件",
+      "安卓固件",
+      "供应链攻击",
+      "广告欺诈",
+      "预装恶意软件",
+      "OTA更新劫持"
+    ],
+    "summary": "2023年5月，安全报告披露网络犯罪组织Lemon Group通过第三方供应商在固件组件中植入Guerilla恶意软件，预先感染全球890万部安卓手机，用于窃取数据、广告欺诈等恶意活动。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0181"
+    ],
+    "references": [
+      {
+        "title": "可怕!安卓恶意软件曝光 50个品牌890万部手机被感染 |固件|服务器|安 ...",
+        "link": "https://www.163.com/dy/article/I5BVUU0L05476C4F.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-05",
+    "relatedAttackTools": [
+      "AT0011"
+    ],
+    "relatedThreatActors": [
+      "TA0017"
+    ]
+  }
+}

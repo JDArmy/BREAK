@@ -1,0 +1,39 @@
+{
+  "C0097": {
+    "title": "泰国联盟佣金回调劫持司法裁判原则",
+    "keywords": [
+      "泰国最高法院",
+      "联盟佣金劫持",
+      "回调劫持",
+      "Cookie覆盖",
+      "广告欺诈",
+      "计算机犯罪法",
+      "佣金转移",
+      "IT欺诈"
+    ],
+    "summary": "泰国最高法院在IT欺诈、电子操纵及佣金转移案件中确立裁判原则：第三方通过覆盖跟踪Cookie、拦截重定向链、向回调URL注入联盟ID或使用恶意软件/浏览器扩展替换联盟ID等方式劫持佣金，导致错误联盟方获得佣金，合法联盟方损失佣金。此类行为在泰国法下可构成计算机犯罪、民事违约及刑事欺诈。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0008-001"
+    ],
+    "references": [
+      {
+        "title": "Affiliate Commission Callback Hijack Claims in THAILAND",
+        "link": "https://r.search.yahoo.com/_ylt=AwrFSGycbDNqPgIAJfpXNyoA;_ylu=Y29sbwNiZjEEcG9zAzUEdnRpZAMEc2VjA3Ny/RV=2/RE=1782964637/RO=10/RU=http%3a%2f%2flawgratis.com%2fblog-detail%2faffiliate-commission-callback-hijack-claims-in-thailand/RK=2/RS=EkCrpzAe1X57HQ3ki0ie90xU7I8-"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-05",
+    "relatedAttackTools": [
+      "AT0032",
+      "AT0030",
+      "AT0091",
+      "AT0064",
+      "AT0072"
+    ],
+    "relatedThreatActors": [
+      "TA0056",
+      "TA0055"
+    ]
+  }
+}

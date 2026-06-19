@@ -1,0 +1,22 @@
+{
+  "C0016": {
+    "title": "Sniping Attack in Auction Process Allows Attackers to Manipulate Bids",
+    "keywords": [
+      "sniping attack",
+      "auction vulnerability",
+      "cancelBid",
+      "front-running",
+      "NextGen",
+      "smart contract",
+      "bid manipulation",
+      "automated attack",
+      "Code4rena"
+    ],
+    "summary": "An attacker exploits a sniping attack during the auction process by calling cancelBid() after each bid to cancel the previous bid, enabling them to acquire any token at an extremely low cost. This vulnerability allows attackers to front-run bids and manipulate auction outcomes through unfair automated means.",
+    "references": [
+      {
+        "title": "Sniping Attack During the Auction Process Allows Attackers to ... - GitHub"
+      }
+    ]
+  }
+}

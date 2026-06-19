@@ -1,0 +1,32 @@
+{
+  "C0369": {
+    "title": "CISA预警：网络攻击者针对美国组织实施密码喷洒攻击",
+    "keywords": [
+      "CISA",
+      "密码喷洒",
+      "Password Spraying",
+      "凭证爆破",
+      "暴力破解",
+      "账户锁定策略",
+      "网络攻击",
+      "美国组织"
+    ],
+    "summary": "美国网络安全与基础设施安全局（CISA）发布警报，指出恶意网络攻击者越来越多地使用一种称为密码喷洒（Password Spraying）的暴力破解方式，针对美国及海外组织进行攻击。该攻击属于凭证爆破的一种变体，通过少量常用密码对大量账号进行尝试，以规避账户锁定策略。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0032-003"
+    ],
+    "references": [
+      {
+        "title": "Brute Force Attacks Conducted by Cyber Actors - CISA",
+        "link": "https://www.cisa.gov/news-events/alerts/2018/03/27/brute-force-attacks-conducted-cyber-actors"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2018-03",
+    "relatedAttackTools": [
+      "AT0068"
+    ],
+    "relatedThreatActors": []
+  }
+}

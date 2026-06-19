@@ -1,0 +1,33 @@
+{
+  "C0861": {
+    "title": "2024 年上半年勒索攻击组织普遍采用多重勒索",
+    "keywords": [
+      "勒索攻击",
+      "多重勒索",
+      "双重勒索",
+      "三重勒索",
+      "数据窃取",
+      "加密数据",
+      "DDoS攻击",
+      "勒索组织",
+      "2024上半年"
+    ],
+    "summary": "2024 年 8 月的勒索攻击组织盘点指出，当前攻击者普遍采用“窃取文件+加密数据”双重勒索策略，更有甚者在双重勒索的基础上增加 DDoS 攻击和骚扰与受害者的客户、合作伙伴联系，进一步施加压力，形成多重勒索。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0085-002"
+    ],
+    "references": [
+      {
+        "title": "2024年上半年勒索攻击组织盘点",
+        "link": "https://www.antiy.cn/research/notice&report/research_report/RansomwareInventory_202406.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-08",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0017"
+    ]
+  }
+}

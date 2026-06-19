@@ -1,0 +1,31 @@
+{
+  "C1492": {
+    "title": "PoS 协议长程攻击综述",
+    "keywords": [
+      "Proof of Stake",
+      "PoS",
+      "长程攻击",
+      "无成本模拟",
+      "区块链安全",
+      "共识机制",
+      "历史私钥",
+      "替代链",
+      "创世区块"
+    ],
+    "summary": "该综述系统性地梳理了PoS协议中的长程攻击场景，从简单到复杂案例逐步分析攻击者如何利用历史私钥从创世区块构建替代链，试图覆盖主链历史。文章指出，由于PoS验证无需实际算力消耗，攻击者可低成本构造更长链，新节点可能将伪造链误认为主链。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0187"
+    ],
+    "references": [
+      {
+        "title": "A survey on long-range attacks for proof of stake protocols",
+        "link": "https://ieeexplore.ieee.org/abstract/document/8653269/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2019-02",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "C1553": {
+    "title": "跨链桥RenBridge被用于洗钱超5亿美元",
+    "keywords": [
+      "RenBridge",
+      "跨链桥",
+      "洗钱",
+      "Elliptic",
+      "加密资产",
+      "链上分析",
+      "Layer2",
+      "犯罪资金",
+      "匿名化"
+    ],
+    "summary": "Elliptic分析报告指出，RenBridge跨链桥被用于清洗至少5.4亿美元来自盗窃、欺诈、勒索软件等犯罪活动的加密资产。这暴露了跨链桥被恶意利用进行大规模洗钱的严重安全隐患。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0200"
+    ],
+    "references": [
+      {
+        "title": "over half a billion dollars laundered through a cross-chain bridge",
+        "link": "https://www.elliptic.co/blog/analysis/cross-chain-crime-more-than-half-a-billion-dollars-has-been-laundered-through-a-cross-chain-bridge"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0060"
+    ],
+    "relatedThreatActors": [
+      "TA0014",
+      "TA0038",
+      "TA0039"
+    ]
+  }
+}

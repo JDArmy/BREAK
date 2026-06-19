@@ -1,0 +1,32 @@
+{
+  "C1031": {
+    "title": "企业内部账号凭据共享行为普遍存在",
+    "keywords": [
+      "账号共享",
+      "工作场所",
+      "凭据共享",
+      "员工行为",
+      "安全管理",
+      "身份验证",
+      "内部威胁",
+      "ACM研究"
+    ],
+    "summary": "2019年一项关于工作场所账号共享实践的研究指出，员工以多种方式与同事共享账号凭据，并采用自己的方法保护这些共享账号。该研究揭示了企业内部账号共享现象的普遍性及其带来的安全管理挑战。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0111-001"
+    ],
+    "references": [
+      {
+        "title": "Normal and easy: Account sharing practices in the workplace",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3359185"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2019-01",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0021"
+    ]
+  }
+}

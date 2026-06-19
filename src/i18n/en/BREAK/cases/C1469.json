@@ -1,0 +1,23 @@
+{
+  "C1469": {
+    "title": "Cyberattack on German Steel Plant Causes Physical Damage",
+    "keywords": [
+      "German steel plant",
+      "cyberattack",
+      "advanced persistent threat",
+      "spear-phishing",
+      "industrial control system",
+      "blast furnace control",
+      "physical damage",
+      "production network breach",
+      "OT network",
+      "ICS security incident"
+    ],
+    "summary": "A German steel plant suffered an advanced persistent threat attack in which threat actors used spear-phishing emails to infiltrate the office network and subsequently breach the production network. The attackers gained access to the blast furnace control system, preventing a proper shutdown and resulting in significant physical damage.",
+    "references": [
+      {
+        "title": "A multi-layer industrial-IoT attack taxonomy: Layers, dimensions, techniques and application"
+      }
+    ]
+  }
+}

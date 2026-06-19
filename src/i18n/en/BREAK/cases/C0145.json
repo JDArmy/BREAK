@@ -1,0 +1,21 @@
+{
+  "C0145": {
+    "title": "Customer Account Takeover: A Multi-Billion Dollar Problem",
+    "keywords": [
+      "account takeover",
+      "ATO",
+      "session hijacking",
+      "infostealer malware",
+      "session cookies",
+      "MFA bypass",
+      "credential theft",
+      "cyber threat"
+    ],
+    "summary": "A report reveals that platforms with 5 million to 300 million users face a median account takeover (ATO) exposure rate of 1.4%. Of particular concern is the rise of session hijacking techniques, where attackers use infostealer malware to steal session cookies, bypass MFA, and take over user accounts.",
+    "references": [
+      {
+        "title": "Customer Account Takeovers: The Multi-Billion Dollar Problem You Don't ..."
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "C0962": {
+    "title": "利用不精确 IP 黑名单准确发现恶意 IP 集群",
+    "keywords": [
+      "IP黑名单",
+      "恶意IP集群",
+      "IP轮换",
+      "规避检测",
+      "黑名单不完整",
+      "攻击者行为",
+      "IP信誉",
+      "网络安全"
+    ],
+    "summary": "研究指出，攻击者通过使用多个 IP 地址组成的集群发起恶意活动，能够更好地规避检测。传统的 IP 黑名单往往不完整且更新滞后，攻击者利用这种局限性，通过轮换或分散使用 IP 地址，使得单个恶意 IP 难以被列入黑名单，从而绕过封锁。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0099"
+    ],
+    "references": [
+      {
+        "title": "(Un) wisdom of crowds: Accurately spotting malicious IP clusters using not-so-accurate IP blacklists",
+        "link": "https://ieeexplore.ieee.org/abstract/document/7839928/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

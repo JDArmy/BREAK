@@ -1,0 +1,37 @@
+{
+  "C1502": {
+    "title": "自动驾驶传感器欺骗攻击综述揭示多种攻击面",
+    "keywords": [
+      "自动驾驶",
+      "传感器欺骗攻击",
+      "GNSS欺骗",
+      "激光雷达注入",
+      "雷达干扰",
+      "电磁攻击",
+      "传感器融合",
+      "感知失败",
+      "综述"
+    ],
+    "summary": "学术综述论文系统梳理了针对自动驾驶车辆的传感器欺骗攻击，包括GNSS欺骗、激光雷达注入、雷达干扰和电磁攻击等。这些恶意干扰可误导单个感知模块或破坏跨传感器融合，导致感知失败、规划错误和不安全行为，证实了传感器欺骗攻击对自动驾驶系统的严重威胁。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0189"
+    ],
+    "references": [
+      {
+        "title": "SoK: How Sensor Attacks Disrupt Autonomous Vehicles: An End-to-end ...",
+        "link": "https://arxiv.org/pdf/2509.11120v2"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0024",
+      "AT0083",
+      "AT0097"
+    ],
+    "relatedThreatActors": [
+      "TA0049",
+      "TA0061"
+    ]
+  }
+}

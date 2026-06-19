@@ -1,0 +1,31 @@
+{
+  "C1632": {
+    "title": "NFT收藏大户遭黑客攻击损失千万资产",
+    "keywords": [
+      "NFT被盗",
+      "私钥泄露",
+      "无聊猿猴",
+      "Bored Ape Yacht Club",
+      "Mutant Ape Yacht Club",
+      "OpenSea",
+      "larrylawliet.eth",
+      "钱包安全",
+      "虚拟资产盗窃"
+    ],
+    "summary": "2022年2月，NFT收藏大户larrylawliet.eth因钱包私钥泄露，其持有的无聊猿猴、变异猿猴等价值约1079万元人民币的NFT在几分钟内被黑客转走。事件涉及多个NFT系列，暴露了用户在不同平台间管理资产时因私钥泄露导致跨平台资产被盗的风险。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0216"
+    ],
+    "references": [
+      {
+        "title": "半年暴涨1350倍,天价NFT头像被盗,1000多万元血本无归_腾讯新闻",
+        "link": "https://view.inews.qq.com/a/20220202A093RP00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-02",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

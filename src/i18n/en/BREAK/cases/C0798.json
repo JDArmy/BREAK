@@ -1,0 +1,22 @@
+{
+  "C0798": {
+    "title": "Microsoft Exposes Storm-2949 Using Stolen Credentials for Large-Scale Cloud Resource Theft",
+    "keywords": [
+      "Storm-2949",
+      "Microsoft",
+      "credential theft",
+      "cloud resource hijacking",
+      "lateral movement",
+      "compute power theft",
+      "supply chain attack",
+      "identity compromise",
+      "cloud intrusion"
+    ],
+    "summary": "Microsoft's security team disclosed that the threat actor group Storm-2949, by stealing legitimate user credentials without deploying malware, progressively escalated from identity compromise to large-scale data exfiltration and resource abuse across cloud environments. The attackers leveraged trusted systems to move laterally within cloud platforms, persistently occupying cloud resources while re",
+    "references": [
+      {
+        "title": "How Storm-2949 turned a compromised identity into a cloud-wide breach"
+      }
+    ]
+  }
+}

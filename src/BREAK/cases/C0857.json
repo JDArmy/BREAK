@@ -1,0 +1,31 @@
+{
+  "C0857": {
+    "title": "LockBit 勒索团伙引入双重勒索策略",
+    "keywords": [
+      "LockBit",
+      "双重勒索",
+      "勒索软件即服务",
+      "数据泄露站点",
+      "文件加密",
+      "RaaS",
+      "Mikhail Vasiliev",
+      "LockBit 1.0",
+      "勒索攻击"
+    ],
+    "summary": "全球头号勒索团伙 LockBit 自 2019 年首次亮相后，在 1.0 版本运营期间升级勒索策略，创建用于公开受害者数据的站点，配合文件加密，试图进一步施压受害者，达成“双重勒索”目的。该团伙后来发展成为最具影响力的勒索软件即服务组织之一，受害者数量超过一千个。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0085-002"
+    ],
+    "references": [
+      {
+        "title": "全球头号勒索团伙LockBit谜案及链上地址分析_腾讯新闻",
+        "link": "https://new.qq.com/rain/a/20240223A086B200"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2019-09",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

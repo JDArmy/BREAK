@@ -1,0 +1,31 @@
+{
+  "C1043": {
+    "title": "BYOD在医院环境中的安全问题及缓解策略",
+    "keywords": [
+      "BYOD",
+      "自带设备办公",
+      "医院网络安全",
+      "个人健康信息泄露",
+      "数据泄露",
+      "医疗保健",
+      "安全缓解策略",
+      "澳大利亚",
+      "自带设备风险"
+    ],
+    "summary": "研究指出，在澳大利亚，2017-2018年间24%的数据泄露事件与BYOD相关。在医疗保健领域，BYOD设置下可能发生个人健康信息泄露，导致违反法规。该研究探讨了医院环境中BYOD带来的安全问题和缓解策略。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0112-001"
+    ],
+    "references": [
+      {
+        "title": "BYOD in hospitals-security issues and mitigation strategies",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3290688.3290729"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2018",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

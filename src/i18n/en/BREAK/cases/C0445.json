@@ -1,0 +1,21 @@
+{
+  "C0445": {
+    "title": "Credit Card Brute-Force Attacks: An Overlooked Attack Vector",
+    "keywords": [
+      "credit card brute-force",
+      "BIN enumeration",
+      "payment card cracking",
+      "Luhn algorithm",
+      "CVV enumeration",
+      "distributed enumeration",
+      "PAN enumeration",
+      "payment infrastructure"
+    ],
+    "summary": "A 2026 report identifies credit card brute-forcing, also known as BIN enumeration or card cracking, as a systemic vulnerability. Attackers exploit publicly available Bank Identification Numbers combined with the Luhn algorithm to perform distributed enumeration of Primary Account Numbers, expiration dates, and CVVs. Traditional fraud detection systems often miss these attacks because the transacti",
+    "references": [
+      {
+        "title": "Credit Card Brute Force: The Overlooked Attack Vector [2026]"
+      }
+    ]
+  }
+}

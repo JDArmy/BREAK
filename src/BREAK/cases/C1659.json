@@ -1,0 +1,35 @@
+{
+  "C1659": {
+    "title": "Java应用水平越权漏洞示例",
+    "keywords": [
+      "水平越权",
+      "Java Web",
+      "Spring Framework",
+      "订单查询",
+      "IDOR",
+      "敏感信息泄露",
+      "OWASP Top10",
+      "API对象级越权"
+    ],
+    "summary": "在Java Web应用示例中，订单查询接口仅通过路径参数获取订单ID进行查询，未从安全上下文中获取当前登录用户身份，也未校验该订单是否属于当前用户。攻击者通过遍历订单ID即可获取其他用户的订单详情，造成敏感信息泄露。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0223"
+    ],
+    "references": [
+      {
+        "title": "别让你的 Java 应用裸奔！OWASP Top10 全漏洞原理、复现与一站式...",
+        "link": "https://cloud.tencent.com/developer/article/2655703"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-04",
+    "relatedAttackTools": [
+      "AT0085"
+    ],
+    "relatedThreatActors": [
+      "TA0018",
+      "TA0051"
+    ]
+  }
+}

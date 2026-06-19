@@ -1,0 +1,29 @@
+{
+  "C1458": {
+    "title": "混合信号物联网设备噪声侧信道攻击",
+    "keywords": [
+      "混合信号",
+      "物联网设备",
+      "侧信道攻击",
+      "TVLA测试",
+      "信息泄露",
+      "密钥恢复",
+      "噪声",
+      "IoT安全"
+    ],
+    "summary": "该研究评估了混合信号物联网设备中的侧信道攻击漏洞。通过TVLA测试，在多种情况下检测到信息泄露，并在一个案例中成功演示了基于泄露的密钥恢复攻击。该工作揭示了混合信号设备中新型侧信道攻击向量的存在。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0178"
+    ],
+    "references": [
+      {
+        "title": "Leaky noise: New side-channel attack vectors in mixed-signal IoT devices",
+        "link": "https://tches.iacr.org/index.php/TCHES/article/view/8297"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

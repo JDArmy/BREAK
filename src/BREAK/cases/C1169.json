@@ -1,0 +1,31 @@
+{
+  "C1169": {
+    "title": "利用HTTP/2多路复用与请求管线化绕过速率限制",
+    "keywords": [
+      "HTTP/2",
+      "多路复用",
+      "请求管线化",
+      "速率限制绕过",
+      "API安全",
+      "TLS连接",
+      "并行流",
+      "速率限制器",
+      "HackTricks"
+    ],
+    "summary": "现代速率限制器实现常基于TCP连接或HTTP/1.1请求计数，而非HTTP/2流数量。攻击者可在同一TLS连接上复用数百个并行流，使大量请求在速率限制器看来仅为一个连接，从而绕过限制。该技术于2023至2025年间被广泛记录。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0126-002"
+    ],
+    "references": [
+      {
+        "title": "Rate Limit Bypass - HackTricks",
+        "link": "https://hacktricks.wiki/en/pentesting-web/rate-limit-bypass.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

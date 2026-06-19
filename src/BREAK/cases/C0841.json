@@ -1,0 +1,39 @@
+{
+  "C0841": {
+    "title": "西班牙警方捣毁AI驱动钓鱼团伙",
+    "keywords": [
+      "生成式AI",
+      "网络钓鱼",
+      "AI钓鱼流水线",
+      "多语言钓鱼邮件",
+      "语音钓鱼",
+      "号码伪造",
+      "西班牙国家警察",
+      "欧洲刑警组织",
+      "验证码诈骗",
+      "银行欺诈"
+    ],
+    "summary": "2025年11月，西班牙联合欧洲多国捣毁一个利用生成式AI进行大规模网络钓鱼的犯罪团伙。该团伙构建AI钓鱼流水线，自动生成多语言钓鱼邮件与语音脚本，利用号码伪造技术冒充银行，诱导受害者泄露验证码，涉案金额高达数百万欧元。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0084-001"
+    ],
+    "references": [
+      {
+        "title": "西班牙警方联合欧洲多国捣毁AI驱动钓鱼团伙,数百受害者获救...",
+        "link": "https://cloud.tencent.com/developer/article/2584940"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-11",
+    "relatedAttackTools": [
+      "AT0057",
+      "AT0059",
+      "AT0063",
+      "AT0073"
+    ],
+    "relatedThreatActors": [
+      "TA0031"
+    ]
+  }
+}

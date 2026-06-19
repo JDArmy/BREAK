@@ -1,0 +1,21 @@
+{
+  "C0419": {
+    "title": "A Survey of MFA Bypass Attack Techniques",
+    "keywords": [
+      "MFA bypass",
+      "brute-force token",
+      "OTP brute force",
+      "authentication flaw",
+      "MFA weakness",
+      "token cracking",
+      "dynamic verification code",
+      "MFA attack vector"
+    ],
+    "summary": "An academic study on multi-factor authentication reveals weaknesses in MFA systems and discusses common bypass vectors, such as brute-forcing tokens. Once an attacker obtains a username and password, they may attempt to brute-force time-based one-time codes to circumvent MFA protection.",
+    "references": [
+      {
+        "title": "On Data Protection Using Multi-Factor Authentication"
+      }
+    ]
+  }
+}

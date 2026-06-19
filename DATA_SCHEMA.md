@@ -1,6 +1,6 @@
 # BREAK Data Schema
 
-> Generated from `src/validation/breakSchema.ts` for package version `2.14.8`.
+> Generated from `src/validation/breakSchema.ts` for package version `2.15.0`.
 > Last schema doc review: 2026-06-17. Run `npm run schema:docs:write` after schema changes.
 
 This document describes the committed JSON data model used by the BREAK knowledge base. The source of truth is the Zod schema in `src/validation/breakSchema.ts`; `npm run validate:schema-docs` checks this document against that source.
@@ -15,6 +15,7 @@ This document describes the committed JSON data model used by the BREAK knowledg
 | ThreatActor | `src/BREAK/threat-actors` | `TA0001.json` | `TA0001 or TA0001-001` | 70 total (61 main, 9 sub) |
 | Term | `src/BREAK/terms` | `T0001.json` | `T0001` | 600 total (600 main, 0 sub) |
 | BusinessScene | `src/BREAK/business-scenes` | `BS00.json` | `BS00` | 18 total (18 main, 0 sub) |
+| Case | `src/BREAK/cases` | `C0001.json` | `C0001` | 1797 total (1797 main, 0 sub) |
 
 Parent and child records live in the parent JSON file. For example, `R0001-001` belongs in `src/BREAK/risks/R0001.json`.
 
@@ -130,6 +131,24 @@ Parent and child records live in the parent JSON file. For example, `R0001-001` 
 | `risks` | string | optional | 业务场景直接引用的风险 ID 列表。 Target: Risk. |
 | `riskDimensions` | Record<RiskDimensionId, RiskDimension> | required | 风险维度映射；key 为风险维度 ID，value 包含标题和风险场景 ID 列表。 |
 | `riskScenes` | Record<RiskSceneId, RiskScene> | required | 风险场景映射；key 为风险场景 ID，value 包含标题和风险 ID 列表。 |
+| `updated` | string | optional | 最近更新日期，建议使用 YYYY-MM-DD。 |
+
+### Case
+
+典型案例条目，描述与风险相关的真实案例/事件/判例/通报/研究。
+
+| Field | Type | Requirement | Description |
+|-------|------|-------------|-------------|
+| `title` | string | required | 展示标题。 |
+| `keywords` | string | required | 搜索关键词；必须非空，且不能重复。 |
+| `summary` | string | required | 案例摘要，80-150 字事实性描述。 |
+| `description` | string | optional | 详细说明。 |
+| `category` | "criminal_verdict" \| "administrative_enforcement" \| "security_incident" \| "vulnerability_advisory" \| "academic_research" \| "news_report" | required | 分类 ID 或分类名称。 |
+| `incidentTime` | string | optional | 案例发生时间，YYYY 或 YYYY-MM。 |
+| `relatedRisks` | string | required | 相关风险 ID 列表。 Target: Risk. |
+| `relatedAttackTools` | string | optional, defaults to empty array | 相关攻击工具 ID 列表。 Target: AttackTool. |
+| `relatedThreatActors` | string | optional, defaults to empty array | 相关威胁行为者 ID 列表。 Target: ThreatActor. |
+| `references` | Reference[] | optional, defaults to empty array | 参考资料列表。 |
 | `updated` | string | optional | 最近更新日期，建议使用 YYYY-MM-DD。 |
 
 ## Relationship Semantics

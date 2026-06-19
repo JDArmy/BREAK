@@ -1,0 +1,34 @@
+{
+  "C1789": {
+    "title": "xz后门黑客潜伏时间线,开源软件供应链安全分水岭",
+    "keywords": [
+      "xz后门",
+      "供应链攻击",
+      "liblzma",
+      "SSH后门",
+      "Jia Tan",
+      "开源投毒",
+      "Linux发行版",
+      "远程代码执行",
+      "维护者渗透",
+      "CVE-2024-3094"
+    ],
+    "summary": "攻击者Jia Tan在两年半内潜伏为xz压缩库的贡献者，最终获得维护权限，并在核心组件liblzma中植入后门。该后门可使攻击者通过SSH发送隐藏命令，在未授权的情况下远程执行任意代码，完全控制目标系统。该漏洞被发现时，已接近流入多个Linux发行版，可能造成全球性影响。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0254"
+    ],
+    "references": [
+      {
+        "title": "xz后门黑客潜伏时间线,开源软件供应链安全分水岭 |笔记",
+        "link": "https://new.qq.com/rain/a/20240403A05FJD00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-03",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

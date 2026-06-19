@@ -1,0 +1,34 @@
+{
+  "C1182": {
+    "title": "国家通报中心预警多起供应链投毒攻击事件",
+    "keywords": [
+      "供应链投毒",
+      "国家网络安全通报中心",
+      "Apifox",
+      "LiteLLM",
+      "Axios",
+      "OpenClaw",
+      "凭据窃取",
+      "远程代码执行",
+      "依赖链攻击",
+      "AI应用安全"
+    ],
+    "summary": "国家网络安全通报中心监测发现，近期集中爆发多起供应链投毒攻击，涉及API研发工具Apifox、Python库LiteLLM及JavaScript库Axios。其中Axios投毒因OpenClaw等大量AI应用直接依赖该库，风险通过依赖链向终端用户蔓延，可导致凭据窃取、远程代码执行等危害。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0127"
+    ],
+    "references": [
+      {
+        "title": "国家网络安全通报中心:近期集中爆发多起供应链投毒攻击事件,涉及...",
+        "link": "https://www.whhlwdj.gov.cn/view/4430.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-04",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

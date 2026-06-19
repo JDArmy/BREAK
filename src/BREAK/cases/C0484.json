@@ -1,0 +1,34 @@
+{
+  "C0484": {
+    "title": "未成年人利用购买QQ号绕过游戏实名认证",
+    "keywords": [
+      "未成年人",
+      "QQ号",
+      "购买",
+      "绕过",
+      "游戏实名认证",
+      "防沉迷",
+      "身份识别",
+      "漏洞",
+      "腾讯"
+    ],
+    "summary": "2023年10月30日，手游未成年评测发现，未成年人通过购买来的QQ号登录游戏时，可以利用原号主（成年人）的实名信息绕过实名认证环节。这一漏洞使得游戏防沉迷系统的身份识别机制被直接绕过。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0046"
+    ],
+    "references": [
+      {
+        "title": "手游未成年评测发布!QQ存在漏洞,未成年可绕过游戏实名认证-腾讯新闻",
+        "link": "https://view.inews.qq.com/k/20231030A0A1JQ00?no-redirect=1&web_channel=wap&openApp=false"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-10",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0007",
+      "TA0010"
+    ]
+  }
+}

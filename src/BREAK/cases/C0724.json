@@ -1,0 +1,30 @@
+{
+  "C0724": {
+    "title": "LLM幻觉问题全面综述",
+    "keywords": [
+      "大语言模型",
+      "LLM幻觉",
+      "事实准确性",
+      "模型可靠性",
+      "综述",
+      "哈尔滨工业大学",
+      "华为",
+      "AI安全"
+    ],
+    "summary": "哈工大与华为团队发布50页综述，详细梳理了LLM幻觉问题的各个方面。指出幻觉是LLM长期存在的挑战，影响模型可靠性，特别是在需要事实准确性的领域。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0071-004"
+    ],
+    "references": [
+      {
+        "title": "LLM幻觉问题全梳理!哈工大团队50页综述重磅发布",
+        "link": "https://aidc.shisu.edu.cn/b3/0a/c13626a176906/page.htm"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-11",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

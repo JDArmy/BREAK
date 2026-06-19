@@ -1,0 +1,31 @@
+{
+  "C0309": {
+    "title": "DDoS攻击的法律规制研究",
+    "keywords": [
+      "DDoS攻击",
+      "法律规制",
+      "分布式拒绝服务",
+      "网络犯罪",
+      "日本",
+      "德国",
+      "澳大利亚",
+      "法律责任",
+      "IEEE"
+    ],
+    "summary": "IEEE学术会议论文探讨了与DDoS攻击相关事件的法律规制问题。文章指出，DDoS攻击是当前最危险且最普遍的网络攻击之一，一次大规模DDoS攻击可能造成数十亿美元的损失，并分析了日本、德国和澳大利亚等国在追究DDoS攻击法律责任方面的法律文件。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0029-004"
+    ],
+    "references": [
+      {
+        "title": "Legal regulation of incidents related to DDoS attacks",
+        "link": "https://ieeexplore.ieee.org/abstract/document/9322874/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2020-09",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

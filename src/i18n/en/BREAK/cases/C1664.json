@@ -1,0 +1,21 @@
+{
+  "C1664": {
+    "title": "AWS WAF Credential Stuffing Attack Mitigation Project",
+    "keywords": [
+      "credential stuffing",
+      "AWS WAF",
+      "rate limiting",
+      "Flask API",
+      "CloudWatch",
+      "fintech",
+      "attack mitigation",
+      "bulk requests"
+    ],
+    "summary": "This project demonstrates a credential stuffing mitigation solution for a fintech API. Attackers simulate bulk credential stuffing attacks against a Flask API login endpoint using Python scripts, attempting to exhaust authentication resources. The project leverages AWS WAF rate-based rules to limit API request frequency and configures CloudWatch logs for monitoring, aiming to block or restrict sus",
+    "references": [
+      {
+        "title": "GitHub - Mujidatdada/credential-stuffing-mitigation: The core objective"
+      }
+    ]
+  }
+}

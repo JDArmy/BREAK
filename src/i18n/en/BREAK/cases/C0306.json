@@ -1,0 +1,22 @@
+{
+  "C0306": {
+    "title": "Hacker Sentenced for DDoS Attack on Alipay",
+    "keywords": [
+      "DDoS attack",
+      "Alipay",
+      "Ant Financial",
+      "Cloud Dike",
+      "traffic scrubbing",
+      "blackhole routing",
+      "distributed denial of service",
+      "IDC",
+      "criminal verdict"
+    ],
+    "summary": "A hacker was convicted for launching a DDoS attack against Alipay. The assault generated massive traffic that exceeded the IDC's internal defenses, forcing Ant Financial to activate China Telecom's Cloud Dike overseas blackhole service for traffic scrubbing. The incident highlights the tangible threat of DDoS attacks to financial services.",
+    "references": [
+      {
+        "title": "He was sentenced for DDoS attacking Alipay"
+      }
+    ]
+  }
+}

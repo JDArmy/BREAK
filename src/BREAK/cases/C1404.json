@@ -1,0 +1,35 @@
+{
+  "C1404": {
+    "title": "Compound 治理攻击案例研究",
+    "keywords": [
+      "Compound",
+      "DAO治理攻击",
+      "DeFi安全",
+      "COMP代币",
+      "提案投票",
+      "治理漏洞",
+      "Gate Learn",
+      "链上治理",
+      "防御措施"
+    ],
+    "summary": "Gate Learn 文章以 Compound 为案例，详细分析了其遭受的治理攻击方法、短期与长期风险，以及通过技术改进和治理流程优化来防范此类攻击的措施。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0167"
+    ],
+    "references": [
+      {
+        "title": "Understanding Governance Attacks: A Case Study of Compound",
+        "link": "https://www.gate.com/learn/articles/understanding-governance-attacks-a-case-study-of-compound/4221"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0077"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

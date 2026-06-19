@@ -1,0 +1,34 @@
+{
+  "C0442": {
+    "title": "F5防范礼品卡破解攻击案例",
+    "keywords": [
+      "礼品卡破解",
+      "暴力枚举",
+      "F5",
+      "分布式云机器人防御",
+      "自动化攻击",
+      "支付卡破解",
+      "余额查询",
+      "Bot攻击"
+    ],
+    "summary": "某奢侈品牌遭遇自动化礼品卡破解攻击，攻击者利用余额查询和结账时应用余额功能，以真实客户100倍的频率进行暴力枚举。F5分布式云机器人防御方案部署后，攻击者停止针对该公司，98.5%的礼品卡余额查询流量为自动化请求。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0041"
+    ],
+    "references": [
+      {
+        "title": "Prevent Gift Card Cracking: Brute Force Enumeration - F5",
+        "link": "https://www.f5.com/go/solution/gift-card-cracking"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0023",
+      "AT0061"
+    ],
+    "relatedThreatActors": [
+      "TA0001"
+    ]
+  }
+}

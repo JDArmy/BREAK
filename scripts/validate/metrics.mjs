@@ -252,6 +252,7 @@ function buildReport() {
   const avoidances = loadEntities('avoidances');
   const attackTools = loadEntities('attack-tools');
   const threatActors = loadEntities('threat-actors');
+  const cases = loadEntities('cases');
   const businessScenes = loadJsonRecords('src/BREAK/business-scenes');
   const avoidanceCategories = loadJsonRecords('src/BREAK/avoidance-categories');
 
@@ -260,6 +261,7 @@ function buildReport() {
     avoidances: summarizeEntity('avoidances', avoidances),
     attackTools: summarizeEntity('attackTools', attackTools),
     threatActors: summarizeEntity('threatActors', threatActors),
+    cases: summarizeEntity('cases', cases),
     businessScenes: {
       key: 'businessScenes',
       total: businessScenes.length,

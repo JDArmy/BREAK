@@ -10,6 +10,7 @@ const categoryDirs = [
   "attack-tools",
   "threat-actors",
   "terms",
+  "cases",
 ];
 
 const localeRoots = [

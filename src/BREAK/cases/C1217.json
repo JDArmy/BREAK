@@ -1,0 +1,30 @@
+{
+  "C1217": {
+    "title": "PoisonedFL: 联邦学习多轮一致性模型投毒攻击",
+    "keywords": [
+      "联邦学习",
+      "模型投毒攻击",
+      "PoisonedFL",
+      "多轮一致性",
+      "隐私计算",
+      "防御机制",
+      "客户端",
+      "鲁棒性"
+    ],
+    "summary": "该研究提出了一种名为PoisonedFL的新型模型投毒攻击方法，通过强制恶意客户端在多轮训练中保持模型更新的多轮一致性，成功攻破了8种最先进的防御机制，并优于7种现有攻击方法。研究表明联邦学习系统比先前认为的更加脆弱，凸显了开发新防御机制的紧迫性。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0133"
+    ],
+    "references": [
+      {
+        "title": "Model Poisoning Attacks to Federated Learning via Multi-Round ...",
+        "link": "https://arxiv.org/abs/2404.15611"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-04",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "C1141": {
+    "title": "NFT洗售交易与洗钱分析",
+    "keywords": [
+      "NFT",
+      "洗售交易",
+      "Wash Trading",
+      "洗钱",
+      "Chainalysis",
+      "加密犯罪",
+      "市场操纵",
+      "虚假交易",
+      "数字资产"
+    ],
+    "summary": "Chainalysis的报告指出，在新兴的NFT资产类别中，检测到大量的洗售交易（Wash Trading）和部分洗钱活动。洗售交易通过关联方反复交易制造虚假繁荣，误导投资者。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0122"
+    ],
+    "references": [
+      {
+        "title": "NFT Money Laundering and Wash Trading - Chainalysis",
+        "link": "https://www.chainalysis.com/blog/2022-crypto-crime-report-preview-nft-wash-trading-money-laundering/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0014"
+    ]
+  }
+}

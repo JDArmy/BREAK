@@ -1,0 +1,31 @@
+{
+  "C1532": {
+    "title": "学术研究揭示量子计算机对加密货币的即时威胁",
+    "keywords": [
+      "量子计算机",
+      "加密货币",
+      "椭圆曲线密码学",
+      "即时花费攻击",
+      "容错量子计算机",
+      "超导量子",
+      "光子架构",
+      "私钥安全",
+      "交易完整性"
+    ],
+    "summary": "学术论文指出，首批快速时钟的容错量子计算机（如超导、光子架构）可在数分钟内破解256位椭圆曲线离散对数问题。这将使攻击者能够对公共内存池中的加密货币交易实施‘即时花费攻击’，直接威胁交易完整性和私钥安全。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0196"
+    ],
+    "references": [
+      {
+        "title": "Securing Elliptic Curve Cryptocurrencies against Quantum ... - arXiv",
+        "link": "https://arxiv.org/abs/2603.28846"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-03",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

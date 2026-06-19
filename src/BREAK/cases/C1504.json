@@ -1,0 +1,28 @@
+{
+  "C1504": {
+    "title": "利用程序分析合成传感器欺骗攻击",
+    "keywords": [
+      "传感器欺骗攻击",
+      "程序分析",
+      "信号注入",
+      "无线传感器",
+      "传感器读数轨迹",
+      "安全漏洞",
+      "物理系统安全"
+    ],
+    "summary": "研究人员提出一种利用程序分析框架生成传感器欺骗攻击的方法。分析师可据此生成能驱动系统进入危险状态的传感器读数轨迹。作为案例研究，该系统生成了用于欺骗无线传感器的伪造无线信号，展示了信号注入攻击的可行性。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0189"
+    ],
+    "references": [
+      {
+        "title": "Using program analysis to synthesize sensor spoofing attacks",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3052973.3053038"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

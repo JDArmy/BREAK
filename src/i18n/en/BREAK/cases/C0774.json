@@ -1,0 +1,21 @@
+{
+  "C0774": {
+    "title": "Cryptography Law mandates national cryptographic algorithms for critical information infrastructure",
+    "keywords": [
+      "Cryptography Law",
+      "national cryptographic algorithms",
+      "commercial cryptography",
+      "critical information infrastructure",
+      "UnionPay POS terminal",
+      "SM series algorithms",
+      "People's Bank of China",
+      "payment system compliance"
+    ],
+    "summary": "China's Cryptography Law requires critical information infrastructure to adopt commercial national cryptographic algorithms for protection. Financial regulators such as the People's Bank of China mandate payment systems to prioritize national algorithms, with UnionPay POS terminals required to support the SM series. Organizations failing to comply may face regulatory penalties and compliance risks",
+    "references": [
+      {
+        "title": "Data Security Notes Series 02: Detailed Explanation of National Cryptographic Algorithms (Commercial Cryptographic Algorithms)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C0554": {
+    "title": "Pinduoduo Billion-Yuan Subsidy Coupon Exploit Incident",
+    "keywords": [
+      "Pinduoduo",
+      "coupon vulnerability",
+      "no-threshold coupon",
+      "automated claiming",
+      "refund arbitrage",
+      "flash refund exploit",
+      "black-market syndicate",
+      "platform loss"
+    ],
+    "summary": "In the early hours of January 20, 2019, Pinduoduo experienced a critical technical flaw that allowed users to claim 100-yuan no-threshold coupons. Black-market groups exploited the vulnerability by using automated scripts to mass-acquire coupons and then immediately initiating refunds on orders to extract the coupon value, causing substantial financial losses for the platform.",
+    "references": [
+      {
+        "title": "A Brief History of Billion-Yuan Subsidies: How a Marketing Product Reshaped Pinduoduo"
+      }
+    ]
+  }
+}

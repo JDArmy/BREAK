@@ -1,0 +1,31 @@
+{
+  "C1159": {
+    "title": "微信青少年模式下视频号可搜出低俗内容",
+    "keywords": [
+      "微信",
+      "视频号",
+      "青少年模式",
+      "低俗内容",
+      "内容过滤",
+      "未成年人保护",
+      "大麻",
+      "合规风险",
+      "游戏下载"
+    ],
+    "summary": "2021年6月3日，实测发现微信App在青少年模式下，视频号仍可搜索出低俗内容，并可链接到游戏服务号进行下载安装。在视频号搜索栏输入“mariguana”（大麻）会出现疑似吸食大麻的相关视频，表明内容过滤机制存在严重漏洞。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0124"
+    ],
+    "references": [
+      {
+        "title": "仍可搜出低俗内容!App“青少年模式”成摆设?",
+        "link": "https://www.jfdaily.com/wx/detail.do?id=373530"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-06",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

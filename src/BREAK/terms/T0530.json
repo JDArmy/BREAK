@@ -6,9 +6,9 @@
     "keywords": [
       "配额控制"
     ],
-    "definition": "配额控制是业务安全、数据安全、供应链安全或新兴技术安全中的关键概念。",
-    "description": "配额控制常用于描述风险识别、攻击手法、控制措施或安全运营中的具体对象。",
-    "usageExample": "在业务安全评估中需要识别配额控制相关风险并建立对应控制。",
+    "definition": "一种限制总资源消耗（如调用次数、交易量、库存、信用额度或计算用量）的策略。",
+    "description": "配额控制用于在 BREAK 业务安全分析中识别相关风险、滥用模式、控制需求及运营信号。",
+    "usageExample": "评估与配额控制相关的暴露面，并定义相应的控制措施。",
     "relatedRisks": [],
     "relatedAvoidances": [],
     "relatedAttackTools": [],

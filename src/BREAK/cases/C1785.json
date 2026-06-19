@@ -1,0 +1,32 @@
+{
+  "C1785": {
+    "title": "基于以太坊的DID/VC平台在税务场景中检测合成身份欺诈",
+    "keywords": [
+      "去中心化身份",
+      "DID",
+      "可验证凭证",
+      "零知识证明",
+      "以太坊",
+      "合成身份欺诈",
+      "女巫攻击",
+      "税务欺诈检测",
+      "区块链身份管理",
+      "IEEE"
+    ],
+    "summary": "2025年IEEE会议论文展示了一个基于以太坊的去中心化身份管理平台，利用DID和可验证凭证（VC）及零知识证明，在模拟的美国税务申报场景中检测合成身份欺诈。测试针对1万个合成身份，实现95%的欺诈检测率，较中心化系统提升25%，并有效抵抗女巫攻击，验证了去中心化身份在防止身份伪造方面的潜力。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0253"
+    ],
+    "references": [
+      {
+        "title": "Decentralized Blockchain-Based Digital Identity Management for Fraud Prevention in the US",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11472520/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-07",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

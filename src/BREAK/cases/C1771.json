@@ -1,0 +1,30 @@
+{
+  "C1771": {
+    "title": "Supabase边缘函数JWT鉴权绕过风险",
+    "keywords": [
+      "Supabase",
+      "Edge Functions",
+      "JWT",
+      "service role key",
+      "鉴权绕过",
+      "Authorization Bearer",
+      "401错误",
+      "边缘函数配置",
+      "GitHub Discussions"
+    ],
+    "summary": "Supabase社区讨论指出，服务角色密钥（service role key）虽在代码内提供数据库权限，但不会自动绕过边缘函数网关的JWT验证。若边缘函数启用了JWT验证，请求仍需携带有效的Authorization: Bearer头部，否则将导致401未授权错误，揭示了边缘函数配置中鉴权机制可能被错误依赖或绕过的风险。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0250"
+    ],
+    "references": [
+      {
+        "title": "[Edge Functions] Invoking any Edge Function fails with 401 ...",
+        "link": "https://github.com/orgs/supabase/discussions/36548"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "C1573": {
+    "title": "Flashbots下以太坊Gas拍卖的第一价格密封拍卖",
+    "keywords": [
+      "以太坊",
+      "Flashbots",
+      "Gas拍卖",
+      "MEV",
+      "矿工",
+      "Gas费操纵",
+      "密封投标拍卖",
+      "抢先交易"
+    ],
+    "summary": "该研究探讨了在Flashbots下的以太坊Gas拍卖机制，指出矿工通过操纵Gas费获取利润，MEV的存在导致了盲目的Gas费竞价。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0204"
+    ],
+    "references": [
+      {
+        "title": "First-price sealed-bid auction for ethereum gas auction under flashbots",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10271857/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

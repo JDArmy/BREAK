@@ -1,0 +1,23 @@
+{
+  "C1365": {
+    "title": "Poly Network Cross-Chain Bridge Attack",
+    "keywords": [
+      "Poly Network",
+      "cross-chain bridge exploit",
+      "relay chain vulnerability",
+      "hash collision",
+      "validator public key",
+      "Ethereum",
+      "Binance Smart Chain",
+      "Polygon",
+      "crypto asset theft",
+      "DeFi exploit"
+    ],
+    "summary": "In August 2021, the cross-chain interoperability protocol Poly Network was exploited by an attacker who leveraged a contract vulnerability allowing the replacement of relay chain validator public keys. Through hash collision, the attacker invoked a method to modify the public key, gained control of validators, and signed malicious transactions, stealing approximately $610 million in crypto assets ",
+    "references": [
+      {
+        "title": "Cross-Chain Bridge Attack Roundup: What Are the Common Vulnerabilities? | Contract | Method | Protocol"
+      }
+    ]
+  }
+}

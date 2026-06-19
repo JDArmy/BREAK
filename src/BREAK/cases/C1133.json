@@ -1,0 +1,34 @@
+{
+  "C1133": {
+    "title": "央视曝光AI拟声骗局",
+    "keywords": [
+      "AI拟声",
+      "语音克隆",
+      "电信诈骗",
+      "央视曝光",
+      "深度伪造",
+      "实时对话交互",
+      "冒充亲友",
+      "反诈"
+    ],
+    "summary": "2024年4月9日，央视《超级新闻场》报道新型诈骗手法，提醒公众警惕AI拟声骗局。诈骗分子利用AI技术高度还原人声音色，并可进行实时对话交互，冒充亲友实施诈骗。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0120"
+    ],
+    "references": [
+      {
+        "title": "[超级新闻场]新型诈骗要当心 民警识破AI拟声骗局_新闻频道_央视网...",
+        "link": "https://news.cctv.com/2024/04/09/VIDEpadgfgMZp6KlgLNJsl76240409.shtml"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-04",
+    "relatedAttackTools": [
+      "AT0059"
+    ],
+    "relatedThreatActors": [
+      "TA0031"
+    ]
+  }
+}

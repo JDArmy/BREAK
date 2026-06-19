@@ -1,0 +1,32 @@
+{
+  "C1422": {
+    "title": "门罗币遭Qubic项目51%算力攻击",
+    "keywords": [
+      "门罗币",
+      "Monero",
+      "51%攻击",
+      "算力攻击",
+      "区块重组",
+      "双花攻击",
+      "Qubic",
+      "隐私币",
+      "Sergey Ivancheglo",
+      "孤块"
+    ],
+    "summary": "2025年8月，前IOTA联合创始人领导的Qubic项目控制了门罗币超过50%的算力，实施了区块重组攻击。攻击导致链上出现6个区块深的重组，约60个区块被弃置为孤块。Qubic具备了重组区块、审查交易及实施双重支付的能力，引发加密行业对隐私币安全性的广泛讨论。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0171"
+    ],
+    "references": [
+      {
+        "title": "门罗币遭遇 51% 算力攻击:神秘攻击者 Qubic 是谁?",
+        "link": "https://m.163.com/dy/article/K7I4TIGL05568W0A.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-08",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

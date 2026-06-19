@@ -1,0 +1,29 @@
+{
+  "C1531": {
+    "title": "Coinbase发布量子计算机威胁预警",
+    "keywords": [
+      "Coinbase",
+      "量子计算",
+      "比特币",
+      "区块链安全",
+      "加密体系",
+      "量子威胁",
+      "市场恐慌"
+    ],
+    "summary": "Coinbase发布预警，指出量子计算机可能威胁约700万枚比特币的安全。该预警出现在市场恐慌指数逼近10、比特币跌破6万美元的背景下，凸显了量子计算对现有区块链加密体系构成的潜在系统性风险。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0196"
+    ],
+    "references": [
+      {
+        "title": "重明链迹丨每周区块链安全要闻(0608-0614)-腾讯云开发者社区-腾讯云",
+        "link": "https://developer.cloud.tencent.com/article/2689126?policyId=1004"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-06",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

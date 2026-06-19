@@ -1,0 +1,22 @@
+{
+  "C1762": {
+    "title": "Android Repackaging Attack Experiment Case Study",
+    "keywords": [
+      "Android repackaging attack",
+      "APK decompilation",
+      "malicious code injection",
+      "app signature bypass",
+      "mobile app security",
+      "GitHub experiment",
+      "Thomas Rüegg",
+      "Patrick Wissiak",
+      "repackaging fraud"
+    ],
+    "summary": "A GitHub-hosted experimental project demonstrates how attackers modify legitimate Android apps by injecting malicious code and redistributing them. The experiment walks through decompiling an APK, injecting malicious payloads, repackaging and signing the app, and successfully triggering malicious behavior on a virtual machine, illustrating the full repackaging attack lifecycle.",
+    "references": [
+      {
+        "title": "thomasruegg/android-repackaging-attack - GitHub"
+      }
+    ]
+  }
+}

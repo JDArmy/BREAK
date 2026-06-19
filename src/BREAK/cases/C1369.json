@@ -1,0 +1,29 @@
+{
+  "C1369": {
+    "title": "Multichain跨链桥异常资金转移事件",
+    "keywords": [
+      "Multichain",
+      "跨链桥",
+      "异常资金转移",
+      "多签密钥",
+      "资产锁定",
+      "Web3安全",
+      "2023年7月"
+    ],
+    "summary": "2023年7月，跨链桥Multichain发生异常资金流出，涉及金额高达2.1亿美元。事件起因与项目方控制权及多签密钥安全相关，导致大量锁定资产被转移。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0161"
+    ],
+    "references": [
+      {
+        "title": "7月Web3安全态势：黑客活动猖獗，各类事件涉及总金额超4亿美元",
+        "link": "https://new.qq.com/rain/a/20230802A05YBN00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-07",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

@@ -8,4 +8,5 @@ export function prefetchAllKnowledgeViews() {
   void import("@/views/AttackToolsView.vue");
   void import("@/views/ThreatActorsView.vue");
   void import("@/views/TermsView.vue");
+  void import("@/views/CasesView.vue");
 }

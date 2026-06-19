@@ -1,0 +1,30 @@
+{
+  "C1616": {
+    "title": "基于机器学习的VANETs虚假消息入侵检测系统",
+    "keywords": [
+      "VANETs",
+      "车联网",
+      "虚假消息",
+      "入侵检测系统",
+      "机器学习",
+      "V2V通信",
+      "V2I通信",
+      "分类模型",
+      "IEEE"
+    ],
+    "summary": "一项研究提出了针对车联网中虚假消息的入侵检测系统。该系统基于机器学习分类模型，利用车辆间（V2V）和车辆与基础设施间（V2I）在攻击和正常场景下的通信数据进行训练，旨在对接收到的消息进行真假分类，提高虚假信息检测准确率。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0212"
+    ],
+    "references": [
+      {
+        "title": "VANETs based Intrusion Detection System for False Message ...",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10370894"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

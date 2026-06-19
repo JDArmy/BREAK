@@ -1,0 +1,31 @@
+{
+  "C0750": {
+    "title": "租机APP迪瓜租手机、租心享、租掌门被通报隐私违规",
+    "keywords": [
+      "迪瓜租手机",
+      "租心享",
+      "租掌门",
+      "国家计算机病毒应急处理中心",
+      "隐私政策",
+      "违规通报",
+      "租机平台",
+      "数据合规",
+      "APP隐私违规"
+    ],
+    "summary": "2026年6月，国家计算机病毒应急处理中心通报71款违规应用，迪瓜租手机、租心享、租掌门三款租机类平台因未以显著方式提示隐私政策、未完整公示信息等四项违规行为被点名，暴露了租机行业的数据合规问题。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0074"
+    ],
+    "references": [
+      {
+        "title": "租机APP齐踩线隐私红线,迪瓜租手机、租心享、租掌门被点名通报...",
+        "link": "https://news.qq.com/rain/a/20260604A05UVQ00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-06",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

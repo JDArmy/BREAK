@@ -1,0 +1,30 @@
+{
+  "C1558": {
+    "title": "ERC-4337 EntryPoint v0.9 安全警告：initCode 行为变更可能影响账户安全",
+    "keywords": [
+      "ERC-4337",
+      "EntryPoint",
+      "initCode",
+      "账户抽象",
+      "智能合约钱包",
+      "eth-infinitism",
+      "安全变更",
+      "UserOperation",
+      "账户安全"
+    ],
+    "summary": "ERC-4337 EntryPoint v0.9 版本引入一项变更：若账户已存在，initCode 将被静默忽略而不再回滚。官方警告称，此前合约可能假设非零 initCode 代表首次 UserOperation，该假设不再成立，依赖旧行为的账户合约安全可能受影响。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0201"
+    ],
+    "references": [
+      {
+        "title": "Releases · eth-infinitism/account-abstraction - GitHub",
+        "link": "https://github.com/eth-infinitism/account-abstraction/releases"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

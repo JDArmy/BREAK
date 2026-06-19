@@ -1,0 +1,36 @@
+{
+  "C1673": {
+    "title": "CI/CD流水线API滥用导致凭证泄露研究",
+    "keywords": [
+      "CI/CD pipeline",
+      "API security",
+      "credential leak",
+      "YAML misconfiguration",
+      "supply chain attack",
+      "malicious code injection",
+      "CI/CD security",
+      "凭证泄露"
+    ],
+    "summary": "一项面向威胁的研究指出，CI/CD流水线中因API滥用、YAML文件配置错误等问题导致凭证泄露。攻击者通过供应链攻击等方式注入恶意代码，利用泄露的凭证进行渗透。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0226"
+    ],
+    "references": [
+      {
+        "title": "A Threat-Oriented Study of API Security Challenges in CI/CD Pipelines",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11331540/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0087",
+      "AT0088",
+      "AT0085"
+    ],
+    "relatedThreatActors": [
+      "TA0052",
+      "TA0051"
+    ]
+  }
+}

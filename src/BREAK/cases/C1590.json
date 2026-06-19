@@ -1,0 +1,42 @@
+{
+  "C1590": {
+    "title": "eSIM国内松绑后的安全问题",
+    "keywords": [
+      "eSIM",
+      "远程配置",
+      "养号",
+      "诈骗",
+      "虚拟身份",
+      "云服务器",
+      "群发诈骗信息",
+      "eSIM劫持"
+    ],
+    "summary": "报道指出，eSIM技术的跨区域远程配置功能被犯罪集团利用，进行大规模“养号”诈骗。犯罪分子租用云服务器批量生成虚拟eSIM身份，每个主账号下挂载数十个子号码，用于群发诈骗信息，增加了追踪和打击难度。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0207"
+    ],
+    "references": [
+      {
+        "title": "eSIM国内松绑,安全问题怎么管?_诈骗案_用户_设备",
+        "link": "https://news.sohu.com/a/944598432_122014422"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-10",
+    "relatedAttackTools": [
+      "AT0001",
+      "AT0003",
+      "AT0006",
+      "AT0016",
+      "AT0048"
+    ],
+    "relatedThreatActors": [
+      "TA0003",
+      "TA0007",
+      "TA0015",
+      "TA0017",
+      "TA0033"
+    ]
+  }
+}

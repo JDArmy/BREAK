@@ -1,0 +1,30 @@
+{
+  "C0853": {
+    "title": "RaaS与IAB产业结合降低攻击门槛",
+    "keywords": [
+      "勒索软件即服务",
+      "RaaS",
+      "初始访问代理",
+      "IAB",
+      "网络犯罪商业模式",
+      "攻击门槛",
+      "勒索工具",
+      "入侵权限"
+    ],
+    "summary": "2021年11月，安全脉搏分析指出，勒索软件即服务（RaaS）已成为成熟商业模式，开发者按月或一次性收费向犯罪组织提供勒索工具，获利后按比例分成。同时，初始访问代理（IAB）业务兴起，为RaaS组织提供直接网络入口权限，进一步节省了攻击者的入侵时间和成本。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0085-001"
+    ],
+    "references": [
+      {
+        "title": "勒索软件即服务与IAB产业浅析 - SecPulse.COM | 安全脉搏",
+        "link": "https://www.secpulse.com/archives/169331.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-11",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

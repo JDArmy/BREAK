@@ -1,0 +1,34 @@
+{
+  "C0865": {
+    "title": "多家企业财务账套遭Locked勒索病毒加密",
+    "keywords": [
+      "Locked勒索病毒",
+      "财务账套",
+      "数据库加密",
+      "勒索攻击",
+      "企业数据安全",
+      "文件解密恢复",
+      "赎金勒索",
+      "系统破坏"
+    ],
+    "summary": "2023年6月，多家企业求助称其财务账套被Locked勒索病毒加密，数据无法读取，文件无法打开。攻击者通过加密数据库文件勒索赎金，部分企业计算机系统也遭到破坏，造成重大损失。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0085"
+    ],
+    "references": [
+      {
+        "title": "数据库服务器中了Locked勒索病毒攻击后的快速解密恢复方法...",
+        "link": "https://cloud.tencent.com/developer/news/1111079"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-06",
+    "relatedAttackTools": [
+      "AT0013"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

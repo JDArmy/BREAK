@@ -1,0 +1,33 @@
+{
+  "C0532": {
+    "title": "建设银行信用卡用户频遭第三方公司催收背后",
+    "keywords": [
+      "建设银行",
+      "信用卡催收",
+      "第三方催收公司",
+      "暴力催收",
+      "骚扰电话",
+      "消费金融",
+      "逾期贷款",
+      "个人信息泄露",
+      "监管投诉"
+    ],
+    "summary": "2024年5月报道指出，消费金融公司在进行逾期贷款催收时，存在采用暴力、威胁、恐吓、骚扰等不正当手段的现象，建设银行信用卡用户频遭第三方公司恶意骚扰催收。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0053"
+    ],
+    "references": [
+      {
+        "title": "建设银行信用卡用户频遭第三方公司催收背后_新浪新闻",
+        "link": "https://news.sina.com.cn/s/2024-05-17/doc-inavpcqu1223514.shtml"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-05",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0029"
+    ]
+  }
+}

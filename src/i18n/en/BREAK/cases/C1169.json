@@ -1,0 +1,22 @@
+{
+  "C1169": {
+    "title": "Bypassing Rate Limits via HTTP/2 Multiplexing and Request Pipelining",
+    "keywords": [
+      "HTTP/2",
+      "multiplexing",
+      "request pipelining",
+      "rate limit bypass",
+      "API",
+      "TLS connection",
+      "parallel streams",
+      "rate limiter",
+      "HackTricks"
+    ],
+    "summary": "Modern rate limiters often count TCP connections or HTTP/1.1 requests rather than HTTP/2 streams. Attackers can multiplex hundreds of parallel streams over a single TLS connection, making a flood of requests appear as just one connection to the rate limiter and thereby evading restrictions. This technique was widely documented between 2023 and 2025.",
+    "references": [
+      {
+        "title": "Rate Limit Bypass - HackTricks"
+      }
+    ]
+  }
+}

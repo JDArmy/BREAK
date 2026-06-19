@@ -1,0 +1,32 @@
+{
+  "C1376": {
+    "title": "BitFloor交易所钱包密钥备份未加密致2.4万比特币被盗",
+    "keywords": [
+      "BitFloor",
+      "比特币被盗",
+      "私钥泄露",
+      "钱包密钥",
+      "未加密备份",
+      "交易所安全",
+      "黑客攻击",
+      "Roman Shtylman"
+    ],
+    "summary": "2012年5月，黑客攻击BitFloor交易所并盗取24000枚比特币。攻击根源在于钱包密钥备份未加密，使攻击者能够轻易获取钱包密钥，进而盗取巨额加密资产，最终导致交易所关闭。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0162"
+    ],
+    "references": [
+      {
+        "title": "SAFEIS安全指南|史上损失最严重的加密盗窃事件回顾及六大防盗策略...",
+        "link": "https://news.souhu.com/a/560156570_121404314"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2012-05",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C1489": {
+    "title": "Detecting Eclipse Attacks Inside TEE",
+    "keywords": [
+      "eclipse attack detection",
+      "TEE",
+      "enclave",
+      "proof-of-work",
+      "difficulty parameter",
+      "Ethereum",
+      "blockchain fork",
+      "malicious fork detection"
+    ],
+    "summary": "This study proposes a method for reliably detecting extended eclipse attacks even when the attacker controls all network connections. By monitoring difficulty parameter changes in proof-of-work protocols, the algorithm detects suppression of new blocks and attacker attempts to force enclave clients onto a malicious fork by lowering the difficulty.",
+    "references": [
+      {
+        "title": "Am I Eclipsed? A Smart Detector of Eclipse Attacks for Ethereum"
+      }
+    ]
+  }
+}

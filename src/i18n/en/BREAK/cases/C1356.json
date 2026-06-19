@@ -1,0 +1,22 @@
+{
+  "C1356": {
+    "title": "Empirical Study on Reentrancy Detection Tools: 99.8% False Positives",
+    "keywords": [
+      "reentrancy detection",
+      "smart contract",
+      "false positive rate",
+      "Ethereum",
+      "Mythril",
+      "Sailfish",
+      "vulnerability detection tool",
+      "empirical study",
+      "ICSE 2023"
+    ],
+    "summary": "A 2023 IEEE/ACM ICSE paper empirically evaluates reentrancy detection on 230,548 verified smart contracts, finding that over 99.8% of flagged contracts are false positives and that tools missed vulnerabilities in real-world reentrancy attacks from the past two years.",
+    "references": [
+      {
+        "title": "Turn the Rudder: A Beacon of Reentrancy Detection for Smart Contracts on Ethereum"
+      }
+    ]
+  }
+}

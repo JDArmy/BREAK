@@ -1,0 +1,22 @@
+{
+  "C1592": {
+    "title": "Personal Medical Device Communications Vulnerable to Multiple Network Attacks",
+    "keywords": [
+      "personal medical device",
+      "PMD",
+      "man-in-the-middle attack",
+      "replay attack",
+      "denial-of-service attack",
+      "false data injection",
+      "HEKA intrusion detection system",
+      "medical IoT security",
+      "IEEE CNS"
+    ],
+    "summary": "Research reveals that personal medical device (PMD) communications in modern smart health systems lack security features, allowing external attackers to access device communications and carry out man-in-the-middle attacks, replay attacks, false data injection, and denial-of-service attacks, thereby stealing sensitive health data or disrupting device functions and directly threatening patient safet",
+    "references": [
+      {
+        "title": "Heka: A Novel Intrusion Detection System for Attacks on Personal Medical Devices"
+      }
+    ]
+  }
+}

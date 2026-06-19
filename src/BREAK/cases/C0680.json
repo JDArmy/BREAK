@@ -1,0 +1,36 @@
+{
+  "C0680": {
+    "title": "违规使用扫描软件致涉密文件上传至网盘泄密案",
+    "keywords": [
+      "扫描软件",
+      "涉密文件",
+      "网盘泄密",
+      "暴力破解",
+      "会议纪要",
+      "国家安全",
+      "互联网扫描",
+      "境外社交媒体",
+      "上传滥用"
+    ],
+    "summary": "某机关工作人员因贪图便利，违规使用互联网扫描软件扫描涉密会议纪要，导致文件被自动备份至网盘。其网盘账号密码遭暴力破解，攻击者获取了3年间扫描的127份涉密文件，后经境外社交媒体传播，造成重大失泄密事件，对国家安全构成现实威胁。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0069"
+    ],
+    "references": [
+      {
+        "title": "警惕扫描成泄密“推手” -中国法院网",
+        "link": "https://www.chinacourt.org/article/detail/2025/04/id/8803733.shtml"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-04",
+    "relatedAttackTools": [
+      "AT0042",
+      "AT0068"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

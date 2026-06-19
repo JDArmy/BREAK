@@ -1,0 +1,35 @@
+{
+  "C1118": {
+    "title": "Forcepoint X-Labs发现10个活跃网站上的间接提示注入载荷",
+    "keywords": [
+      "间接提示注入",
+      "Forcepoint X-Labs",
+      "AI安全",
+      "大语言模型",
+      "HTML注释注入",
+      "金融欺诈",
+      "API密钥窃取",
+      "拒绝服务攻击",
+      "威胁狩猎"
+    ],
+    "summary": "Forcepoint X-Labs在公开网络基础设施的主动威胁狩猎中，通过遥测技术标记了10个已验证的间接提示注入载荷，这些载荷存在于活跃网站上。攻击者将恶意指令隐藏在网页HTML注释中，当AI代理爬取或总结这些页面时，会摄入并执行这些指令。发现的载荷涉及金融欺诈、数据销毁、API密钥窃取和AI拒绝服务攻击等意图，触发模式包括“忽略之前的指令”和“如果你是一个大语言模型”等。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0117-002"
+    ],
+    "references": [
+      {
+        "title": "10 Indirect Prompt Injection Payloads Caught in the Wild - Forcepoint",
+        "link": "https://www.forcepoint.com/blog/x-labs/indirect-prompt-injection-payloads"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-04",
+    "relatedAttackTools": [
+      "AT0093"
+    ],
+    "relatedThreatActors": [
+      "TA0058"
+    ]
+  }
+}

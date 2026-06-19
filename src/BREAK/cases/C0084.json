@@ -1,0 +1,34 @@
+{
+  "C0084": {
+    "title": "抖音主播直播中展示色情导流二维码被刑拘",
+    "keywords": [
+      "抖音直播",
+      "色情导流",
+      "二维码",
+      "约炮软件",
+      "非法利用信息网络罪",
+      "刑事拘留",
+      "黑产账号",
+      "平台封禁"
+    ],
+    "summary": "抖音平台发现某主播在直播间人气提升后，突然展示色情导流二维码，引导观众下载“约炮”软件。平台识别后立即封禁账号直播权限，并将线索上报公安机关，犯罪嫌疑人因涉嫌非法利用信息网络罪被依法刑事拘留。该行为属于在用户浏览正常直播内容时诱导跳转至站外非法软件。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0007-003"
+    ],
+    "references": [
+      {
+        "title": "抖音:2025年至今已无限期封禁89万个色情导流黑产账号,66名违法...",
+        "link": "https://www.jfdaily.com/staticsg/res/html/web/newsDetail.html?id=973187&sid=11"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-08",
+    "relatedAttackTools": [
+      "AT0067"
+    ],
+    "relatedThreatActors": [
+      "TA0017"
+    ]
+  }
+}

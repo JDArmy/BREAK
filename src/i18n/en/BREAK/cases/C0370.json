@@ -1,0 +1,21 @@
+{
+  "C0370": {
+    "title": "GSM Hijacking and SMS Sniffing Used to Steal Verification Codes for Fraud",
+    "keywords": [
+      "GSM hijacking",
+      "SMS sniffing",
+      "IMSI catcher",
+      "verification code interception",
+      "2G vulnerability",
+      "SIM swapping",
+      "payment fraud",
+      "social engineering attack"
+    ],
+    "summary": "In 2018, attackers across multiple regions in China used GSM hijacking and SMS sniffing techniques to intercept SMS verification codes while victims slept. By combining these codes with personally identifiable information obtained through social engineering, they conducted unauthorized transactions and fraudulent online loans. The attack exploited vulnerabilities in the 2G network to capture SMS m",
+    "references": [
+      {
+        "title": "Money vanishes during sleep? \"SMS verification codes\" are no longer safe - Tencent Cloud Developer Community"
+      }
+    ]
+  }
+}

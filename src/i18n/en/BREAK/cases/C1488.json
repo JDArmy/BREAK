@@ -1,0 +1,18 @@
+{
+  "C1488": {
+    "title": "Ethereum Eclipse Attack Detection Framework",
+    "keywords": [
+      "Ethereum eclipse attack detection",
+      "Eclipse attack formal model",
+      "P2P node isolation defense",
+      "blockchain consensus security",
+      "Ethereum peer connection monopolization"
+    ],
+    "summary": "Eclipse attacks isolate a victim node by monopolizing its peer connections, posing a serious threat to Ethereum's consensus mechanism. This study proposes a detection framework based on a formal adversarial model for Ethereum's P2P network, aiming to systematically identify and defend against such attacks and protect nodes from being isolated from the honest network.",
+    "references": [
+      {
+        "title": "A Robust Eclipse Attack Detection Framework for Ethereum Networks"
+      }
+    ]
+  }
+}

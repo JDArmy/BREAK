@@ -1,0 +1,23 @@
+{
+  "C0716": {
+    "title": "China National Cybersecurity Notification Center Warns of Security Risks in Ollama LLM Tool",
+    "keywords": [
+      "Ollama",
+      "large language model tool",
+      "unauthorized access",
+      "model theft",
+      "data leakage",
+      "computational resource hijacking",
+      "security hardening",
+      "National Cybersecurity Notification Center",
+      "AIGC security",
+      "default configuration vulnerability"
+    ],
+    "summary": "The National Cybersecurity Notification Center has issued a warning that the default configuration of the open-source large language model tool Ollama contains vulnerabilities such as unauthorized access and model theft, potentially leading to data leakage, computational resource hijacking, and service disruption. As many users deploy the tool privately without modifying default settings, it poses",
+    "references": [
+      {
+        "title": "Industrial Internet Weekly | National Cybersecurity Notification Center Alert: Large Model Tool Ollama..."
+      }
+    ]
+  }
+}

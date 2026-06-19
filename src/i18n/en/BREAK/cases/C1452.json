@@ -1,0 +1,23 @@
+{
+  "C1452": {
+    "title": "SUUM Attack: Zero-Cost Timestamp Manipulation on Ethereum-like Blockchains",
+    "keywords": [
+      "SUUM attack",
+      "block withholding",
+      "timestamp manipulation",
+      "Ethereum",
+      "Ethereum Classic",
+      "EthereumPoW",
+      "mining pools",
+      "Nakamoto consensus",
+      "difficulty control",
+      "zero-cost attack"
+    ],
+    "summary": "Researchers have identified a novel block withholding attack called SUUM (Staircase-Unrestricted Uncle Maker) targeting timestamp-based Nakamoto-style blockchains. By combining block withholding, timestamp manipulation, and difficulty risk control, attackers can launch sustained attacks at zero cost and with very low difficulty risk, indefinitely extracting rewards from honest participants. As of ",
+    "references": [
+      {
+        "title": "Timestamp-based Nakamoto-style Blockchains are Vulnerable - arXiv"
+      }
+    ]
+  }
+}

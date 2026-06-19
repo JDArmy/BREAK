@@ -1,0 +1,35 @@
+{
+  "C0009": {
+    "title": "因这事,温某某被判刑...",
+    "keywords": [
+      "游戏外挂",
+      "辅助脚本",
+      "破坏计算机信息系统",
+      "游戏公平性",
+      "温某某",
+      "自动化脚本",
+      "刑事判刑",
+      "游戏安全"
+    ],
+    "summary": "公安机关侦查查明，犯罪嫌疑人温某某编写了针对某游戏的专用辅助脚本，并将该脚本嵌入游戏环境中使用。该脚本通过自动化方式干预游戏正常流程，破坏了游戏的公平性，最终温某某因相关犯罪行为被依法判刑。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0001"
+    ],
+    "references": [
+      {
+        "title": "因这事,温某某被判刑...",
+        "link": "https://mp.weixin.qq.com/s?__biz=MzIyNDE3OTA2Nw==&mid=2655601128&idx=1&sn=97e598b54d0c4ee00db3c422cadeb18b&chksm=f2f6a54e89ede5702fd10ad116d1b7e220d781be208b2ff3f716fc6cfc5bb9c4c8bd2b489a36&scene=27"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-09",
+    "relatedAttackTools": [
+      "AT0023",
+      "AT0049"
+    ],
+    "relatedThreatActors": [
+      "TA0012"
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "C0786": {
+    "title": "PyPI与npm恶意包激增：针对DevOps和CI/CD环境的供应链攻击",
+    "keywords": [
+      "PyPI",
+      "npm",
+      "恶意包",
+      "供应链攻击",
+      "DevOps",
+      "CI/CD",
+      "凭证窃取",
+      "加密货币钱包",
+      "macOS",
+      "AI工作流"
+    ],
+    "summary": "安全研究发现，含有恶意软件的PyPI和npm包数量激增，这些包专门窃取开发者凭证、CI/CD数据及加密货币钱包。攻击活动针对macOS系统、AI工作流和云环境配置，通过污染开源软件包注册表来实施软件供应链攻击，对依赖公共包管理器的DevOps管道构成严重威胁。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0081-001"
+    ],
+    "references": [
+      {
+        "title": "PyPI, npm, and AI Tools Exploited in Malware Surge Targeting DevOps and ...",
+        "link": "https://thehackernews.com/2025/06/malicious-pypi-package-masquerades-as.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-06",
+    "relatedAttackTools": [
+      "AT0087",
+      "AT0088"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

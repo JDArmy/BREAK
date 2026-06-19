@@ -1,0 +1,22 @@
+{
+  "C1423": {
+    "title": "Horizen (ZenCash) Suffers 51% Attack with Over $500K in Losses",
+    "keywords": [
+      "Horizen",
+      "ZenCash",
+      "51% attack",
+      "double spend attack",
+      "privacy coin",
+      "blockchain security",
+      "hashrate control",
+      "malicious miner",
+      "delayed function defense"
+    ],
+    "summary": "In early 2018, the privacy coin Horizen (formerly ZenCash) was hit by a 51% attack. A malicious miner gained control of more than 51% of the blockchain network's computing power and injected fraudulent transactions, resulting in losses exceeding $500,000. The incident prompted the Horizen team to develop a defense mechanism that penalizes malicious miners through a delayed function.",
+    "references": [
+      {
+        "title": "A Solution to 51% Attacks? Penalizing Miners Before They Happen"
+      }
+    ]
+  }
+}

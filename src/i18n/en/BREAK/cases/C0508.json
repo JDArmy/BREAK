@@ -1,0 +1,22 @@
+{
+  "C0508": {
+    "title": "A Test Case for Bypassing Emulator Detection Using Frida and Termux",
+    "keywords": [
+      "Frida",
+      "Termux",
+      "emulator detection bypass",
+      "Android",
+      "JavaScript injection",
+      "EmulatorDetectionByPass",
+      "dynamic instrumentation",
+      "virtual device identification",
+      "mobile security testing"
+    ],
+    "summary": "This project provides a test case that examines methods for bypassing emulator detection on Android using Frida and Termux, and observes how applications react to JavaScript injection.",
+    "references": [
+      {
+        "title": "EmulatorDetectionByPass/README.md at main · Ms-dev3 ... - GitHub"
+      }
+    ]
+  }
+}

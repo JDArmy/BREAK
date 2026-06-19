@@ -1,0 +1,40 @@
+{
+  "C0845": {
+    "title": "微软与OpenAI联合研究：多国黑客组织利用ChatGPT等AI工具升级网络攻击",
+    "keywords": [
+      "微软",
+      "OpenAI",
+      "ChatGPT",
+      "大语言模型",
+      "网络钓鱼",
+      "APT",
+      "Forest Blizzard",
+      "Emerald Sleet",
+      "Crimson Sandstorm",
+      "威胁情报"
+    ],
+    "summary": "2024年2月，微软与OpenAI联合研究发现，来自俄罗斯、朝鲜、伊朗的黑客组织正使用ChatGPT等生成式AI工具进行目标研究、改进脚本和构建社交工程技巧。例如，朝鲜黑客组织利用LLM起草网络钓鱼活动内容，伊朗黑客组织使用LLM生成钓鱼邮件，俄罗斯黑客组织则利用LLM了解卫星通信协议等技术参数。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0084-001"
+    ],
+    "references": [
+      {
+        "title": "微软、OpenAI 阻止俄罗斯、朝鲜的黑客使用 AI 大模型|钛媒体AGI...",
+        "link": "https://new.qq.com/rain/a/20240215A030MA00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-02",
+    "relatedAttackTools": [
+      "AT0057",
+      "AT0063",
+      "AT0093"
+    ],
+    "relatedThreatActors": [
+      "TA0018",
+      "TA0033",
+      "TA0041"
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "C1350": {
+    "title": "个人笔记本电脑遭Monero挖矿木马入侵致CPU资源被长期盗用",
+    "keywords": [
+      "Monero",
+      "挖矿木马",
+      "Nanopool",
+      "AddInProcess.exe",
+      "进程注入",
+      "算力盗用",
+      "密码窃取器",
+      "Malwarebytes",
+      "持久化",
+      "CPU占用率"
+    ],
+    "summary": "一名网络安全专业学生发现其Windows笔记本电脑CPU占用率异常高达48%，经调查发现攻击者利用合法的微软AddInProcess.exe进程注入Monero挖矿程序，连接至Nanopool矿池进行加密货币挖矿。该恶意软件通过伪装成系统进程实现持久化驻留，最终检出1997个恶意文件，包括木马和密码窃取器，属于典型的算力盗用攻击。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0158"
+    ],
+    "references": [
+      {
+        "title": "gagandeep-codes/cryptojacking-incident-response - GitHub",
+        "link": "https://github.com/gagandeep-codes/cryptojacking-incident-response"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-04",
+    "relatedAttackTools": [
+      "AT0013",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0012",
+      "TA0018"
+    ]
+  }
+}

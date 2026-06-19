@@ -1,0 +1,38 @@
+{
+  "C1269": {
+    "title": "Uber子域名接管绕过SSO认证",
+    "keywords": [
+      "Uber",
+      "子域名接管",
+      "SSO认证绕过",
+      "Amazon CloudFront",
+      "cookie共享",
+      "CSRF防护绕过",
+      "单点登录",
+      "会话劫持",
+      "OAuth滥用"
+    ],
+    "summary": "Uber的SSO系统基于子域名cookie共享实现认证。攻击者通过接管未注册的Amazon CloudFront子域名saostatic.uber.com，结合CSRF防护绕过，窃取共享会话cookie，最终绕过auth.uber.com的单点登录认证，控制任意Uber子域名账户。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0143"
+    ],
+    "references": [
+      {
+        "title": "挖洞经验 | 看我如何通过子域名接管绕过Uber单点登录认证机制...",
+        "link": "https://cloud.tencent.com/developer/article/1047451"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2018-02",
+    "relatedAttackTools": [
+      "AT0089",
+      "AT0096",
+      "AT0094"
+    ],
+    "relatedThreatActors": [
+      "TA0018",
+      "TA0059"
+    ]
+  }
+}

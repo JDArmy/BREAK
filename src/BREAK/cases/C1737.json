@@ -1,0 +1,33 @@
+{
+  "C1737": {
+    "title": "联盟营销风险与欺诈场景探索",
+    "keywords": [
+      "联盟营销",
+      "佣金欺诈",
+      "Cookie stuffing",
+      "广告主",
+      "欺诈场景",
+      "arXiv",
+      "风险"
+    ],
+    "summary": "arXiv论文从广告主视角探讨联盟营销技术中的风险与欺诈场景，指出Cookie stuffing欺诈可有效结合其他方法，在用户不知情的情况下植入多家广告商的Cookie，从而骗取佣金。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0239"
+    ],
+    "references": [
+      {
+        "title": "Exploring risk and fraud scenarios in affiliate marketing technologies from the advertisers perspective",
+        "link": "https://arxiv.org/abs/1606.01428"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0032",
+      "AT0091"
+    ],
+    "relatedThreatActors": [
+      "TA0056"
+    ]
+  }
+}

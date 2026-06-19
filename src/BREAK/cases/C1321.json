@@ -1,0 +1,32 @@
+{
+  "C1321": {
+    "title": "离地攻击（LotL）：无文件PowerShell攻击技术",
+    "keywords": [
+      "Living off the Land",
+      "LotL",
+      "无文件攻击",
+      "PowerShell",
+      "LOLbins",
+      "Base64编码",
+      "内存执行",
+      "规避杀毒软件",
+      "攻击技术指南",
+      "安全研究"
+    ],
+    "summary": "2025年10月，安全研究人员发布LotL攻击技术指南，指出攻击者利用PowerShell等系统内置工具和LOLbins执行无文件攻击。攻击者可通过Base64编码的PowerShell命令直接在内存中下载并执行恶意负载，不写入磁盘，从而规避传统杀毒软件检测。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0152"
+    ],
+    "references": [
+      {
+        "title": "Living off the Land (LotL): Fileless PowerShell Attack Techniques",
+        "link": "https://hackersterminal.com/living-off-the-land-lotl-fileless-attacks/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-10",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

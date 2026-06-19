@@ -1,0 +1,32 @@
+{
+  "C1383": {
+    "title": "技嘉主板固件后门争议",
+    "keywords": [
+      "技嘉",
+      "主板固件",
+      "后门",
+      "安全漏洞",
+      "固件篡改",
+      "Eclypsium",
+      "供应链攻击",
+      "UEFI"
+    ],
+    "summary": "知名安全机构指出技嘉主板固件存在安全漏洞，该漏洞可被视为“后门”，可能允许攻击者利用固件缺陷进行恶意操作，引发广泛关注，技嘉随后对此进行了回应。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0164"
+    ],
+    "references": [
+      {
+        "title": "技嘉主板固件惹争议!知名安全机构称存在“后门”，技嘉已回应_腾讯...",
+        "link": "https://new.qq.com/rain/a/20230602A03LVE00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-06",
+    "relatedAttackTools": [
+      "AT0081"
+    ],
+    "relatedThreatActors": []
+  }
+}

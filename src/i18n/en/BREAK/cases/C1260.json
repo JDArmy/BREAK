@@ -1,0 +1,21 @@
+{
+  "C1260": {
+    "title": "GPS Spoofing Attack Detection in Autonomous Vehicles Using Adaptive DBSCAN",
+    "keywords": [
+      "GPS spoofing",
+      "autonomous vehicles",
+      "DBSCAN",
+      "anomaly detection",
+      "vehicle localization",
+      "signal spoofing",
+      "real-time detection",
+      "navigation safety"
+    ],
+    "summary": "This study highlights that autonomous vehicles are susceptible to GPS spoofing attacks, where adversaries transmit deceptive signals to mislead the vehicle positioning system, causing erroneous navigation or hazardous maneuvers. It proposes a real-time detection method based on an adaptive DBSCAN algorithm, capable of effectively identifying multiple types of GPS spoofing attacks with a detection ",
+    "references": [
+      {
+        "title": "GPS Spoofing Attack Detection in Autonomous Vehicles Using Adaptive Tuning"
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "C1724": {
+    "title": "The 'Xingyuan' App and the Cai Xukun 100 Million Retweet Case",
+    "keywords": [
+      "Xingyuan App",
+      "Cai Kunmiao",
+      "Sina Weibo",
+      "retweet manipulation",
+      "packet interception",
+      "decompilation",
+      "fake traffic",
+      "computer information system intrusion",
+      "click injection"
+    ],
+    "summary": "In 2018, Cai Kunmiao, founder of the 'Xingyuan' App, intercepted Sina Weibo data packets and decompiled them, inserting forged interfaces into the app. This allowed users to retweet posts in bulk without logging in, enabling data fraud. The method was used to create the incident of 'Cai Xukun's single Weibo post being retweeted over 100 million times,' essentially injecting fake clicks to hijack t",
+    "references": [
+      {
+        "title": "Mastermind Behind 'Cai Xukun's Weibo Repost Exceeding 100 Million' Sentenced; Used Illegal Gains to Buy Three Apartments _ Tencent..."
+      }
+    ]
+  }
+}

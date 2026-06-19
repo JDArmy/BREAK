@@ -1,0 +1,32 @@
+{
+  "C0706": {
+    "title": "百度AI智能回答生成律师虚假判刑信息构成名誉侵权",
+    "keywords": [
+      "百度",
+      "AI智能回答",
+      "模型幻觉",
+      "名誉侵权",
+      "律师",
+      "虚假判刑信息",
+      "AIGC",
+      "隐私泄露",
+      "生成式人工智能",
+      "民事判决"
+    ],
+    "summary": "南京律师李小亮发现百度AI智能回答在搜索其姓名时，错误生成其被判刑三年的文字并配律师袍照片。法院认定该AI生成内容因模型幻觉导致，包含贬损性词汇，造成社会评价受损，判决百度公司书面道歉并强制执行。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0071-001"
+    ],
+    "references": [
+      {
+        "title": "“百度AI称一律师被判刑,并配上穿着律师袍的照片”构成侵权:百度...",
+        "link": "https://view.inews.qq.com/a/20260509A02Z1I00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-03",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

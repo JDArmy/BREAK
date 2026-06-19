@@ -1,0 +1,30 @@
+{
+  "C1589": {
+    "title": "消费者远程SIM配置协议安全分析",
+    "keywords": [
+      "eSIM",
+      "iSIM",
+      "远程SIM配置",
+      "SIM劫持",
+      "身份盗用",
+      "消费者远程配置协议",
+      "安全分析",
+      "协议漏洞",
+      "移动安全"
+    ],
+    "summary": "该研究分析了消费者远程SIM配置协议的安全性，指出攻击者可能利用协议漏洞安装错误的配置文件或劫持手机号码。研究强调了远程配置过程可能被滥用于实施SIM卡劫持攻击，从而导致身份盗用。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0207"
+    ],
+    "references": [
+      {
+        "title": "Security analysis of the consumer remote sim provisioning protocol",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3663761"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

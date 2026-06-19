@@ -1,0 +1,37 @@
+{
+  "C0795": {
+    "title": "Notepad++更新程序被入侵分发后门",
+    "keywords": [
+      "Notepad++",
+      "WinGUp",
+      "Chrysalis后门",
+      "软件供应链攻击",
+      "更新劫持",
+      "Lotus Blossom",
+      "恶意软件分发",
+      "托管基础设施入侵"
+    ],
+    "summary": "2025年6月至10月，威胁行为者入侵Notepad++的托管基础设施，将更新程序WinGUp的流量重定向至恶意服务器，向用户分发名为Chrysalis的后门。攻击者即使在失去服务器立足点后，仍利用有效凭证继续劫持更新流量，构成复杂的软件供应链攻击。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0081-003"
+    ],
+    "references": [
+      {
+        "title": "网络安全威胁转向生态系统:从AI技能恶意软件到31Tbps攻击",
+        "link": "https://new.qq.com/rain/a/20260210A0326L00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-06",
+    "relatedAttackTools": [
+      "AT0013",
+      "AT0052",
+      "AT0064",
+      "AT0087"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

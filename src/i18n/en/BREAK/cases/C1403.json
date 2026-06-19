@@ -1,0 +1,21 @@
+{
+  "C1403": {
+    "title": "Deus DAO Single-Point Dependency Risk and Flash Loan Governance Attack",
+    "keywords": [
+      "Deus DAO",
+      "flash loan",
+      "governance attack",
+      "single-point dependency",
+      "DAO vulnerability",
+      "governance takeover",
+      "IEEE",
+      "security analysis"
+    ],
+    "summary": "An IEEE conference paper analyzing 54 real-world attacks identifies Deus DAO as facing significant risk due to single-component dependency, while flash loans are linked to multiple governance attacks. The study lists governance takeover as a critical DAO vulnerability.",
+    "references": [
+      {
+        "title": "Unveiling Vulnerabilities in DAO: A Comprehensive Security Analysis and Protective Framework"
+      }
+    ]
+  }
+}

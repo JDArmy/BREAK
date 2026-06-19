@@ -1,0 +1,30 @@
+{
+  "C1218": {
+    "title": "联邦学习投毒攻击与防御综述",
+    "keywords": [
+      "联邦学习",
+      "投毒攻击",
+      "防御策略",
+      "模型安全",
+      "隐私计算",
+      "全局模型操纵",
+      "客户端安全",
+      "鲁棒性"
+    ],
+    "summary": "该综述全面分析了联邦学习中的投毒攻击及其防御策略。研究指出，由于客户端数据集和训练过程的不可见性，联邦学习面临多种安全威胁，投毒攻击可显著影响全局模型，恶意攻击者可阻止模型收敛甚至操纵预测结果。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0133"
+    ],
+    "references": [
+      {
+        "title": "Poisoning Attacks and Defenses in Federated Learning: A Survey",
+        "link": "https://arxiv.org/abs/2301.05795"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-01",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

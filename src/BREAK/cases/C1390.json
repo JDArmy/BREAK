@@ -1,0 +1,34 @@
+{
+  "C1390": {
+    "title": "Mirai僵尸网络攻击Dyn DNS服务事件",
+    "keywords": [
+      "Mirai",
+      "Dyn",
+      "DDoS",
+      "IoT僵尸网络",
+      "DNS攻击",
+      "物联网设备",
+      "IP摄像头",
+      "Mirai僵尸网络"
+    ],
+    "summary": "2016年10月，Mirai僵尸网络利用大量被感染的物联网设备（如IP摄像头和家用路由器）对DNS服务商Dyn发起大规模DDoS攻击，导致美国东海岸大面积互联网瘫痪，影响了Twitter、Netflix等主要网站。该事件展示了IoT僵尸网络的巨大破坏力。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0165"
+    ],
+    "references": [
+      {
+        "title": "Mirai (malware) - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Mirai_(malware)"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2016-10",
+    "relatedAttackTools": [
+      "AT0082"
+    ],
+    "relatedThreatActors": [
+      "TA0048"
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "C1342": {
+    "title": "NIST正式发布首批三项后量子密码标准",
+    "keywords": [
+      "NIST",
+      "后量子密码",
+      "FIPS 203",
+      "FIPS 204",
+      "FIPS 205",
+      "抗量子加密",
+      "量子安全",
+      "密码迁移",
+      "标准化"
+    ],
+    "summary": "2024年8月，美国国家标准与技术研究院（NIST）正式发布首批三项后量子密码标准（FIPS 203、204、205），标志着后量子密码迁移进入标准化阶段。随后发布的迁移草案指导各行业从传统加密算法向抗量子密码过渡，以应对未来量子计算机对RSA、ECC等经典算法的破解威胁。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0156"
+    ],
+    "references": [
+      {
+        "title": "后量子密码迁移完整指南:从现在到2035年,企业该怎么做? - 知乎",
+        "link": "https://zhuanlan.zhihu.com/p/2040397001842504627"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-08",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

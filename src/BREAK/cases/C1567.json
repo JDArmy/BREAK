@@ -1,0 +1,29 @@
+{
+  "C1567": {
+    "title": "学术研究揭示DNS劫持对DApp前端的攻击",
+    "keywords": [
+      "DNS劫持",
+      "DApp",
+      "前端攻击",
+      "Web3",
+      "软件供应链安全",
+      "恶意前端",
+      "交易地址替换",
+      "恶意代码注入"
+    ],
+    "summary": "一篇关于Web3软件供应链安全的学术论文指出，DNS劫持是DApp面临的关键攻击向量。攻击者可通过DNS劫持将用户引导至恶意前端，在用户不知情的情况下替换交易地址或注入恶意代码，直接威胁用户资产安全。该研究从学术角度验证了DApp前端劫持风险。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0203"
+    ],
+    "references": [
+      {
+        "title": "Software Supply Chain Security of Web3",
+        "link": "https://arxiv.org/abs/2511.12274"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

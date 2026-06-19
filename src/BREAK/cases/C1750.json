@@ -1,0 +1,32 @@
+{
+  "C1750": {
+    "title": "机器学习安全对抗数据投毒：我们是否已做好准备？",
+    "keywords": [
+      "机器学习安全",
+      "数据投毒攻击",
+      "训练数据污染",
+      "对抗攻击",
+      "模型安全",
+      "投毒防御",
+      "arXiv"
+    ],
+    "summary": "该文章回顾了通过破坏用于训练机器学习模型的数据来进行的投毒攻击。这类攻击是攻击者污染训练数据，从而影响模型行为的具体体现。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0243"
+    ],
+    "references": [
+      {
+        "title": "Machine Learning Security against Data Poisoning: Are We ... - arXiv",
+        "link": "https://arxiv.org/html/2204.05986v3"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0093"
+    ],
+    "relatedThreatActors": [
+      "TA0058"
+    ]
+  }
+}

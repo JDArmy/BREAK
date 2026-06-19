@@ -1,0 +1,35 @@
+{
+  "C0364": {
+    "title": "Canva数据泄露事件中的凭证爆破攻击",
+    "keywords": [
+      "凭证填充",
+      "凭证爆破",
+      "Canva",
+      "GnosticPlayers",
+      "数据泄露",
+      "暴力破解",
+      "自动化攻击",
+      "登录接口"
+    ],
+    "summary": "Canva数据泄露事件中，攻击者GnosticPlayers使用凭证填充（一种暴力破解形式）窃取用户数据。该攻击通过自动化工具对登录接口进行大规模尝试，利用已泄露的凭证集合或常见密码列表，成功获取有效账户的访问权限，导致大量用户信息泄露。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0032-003"
+    ],
+    "references": [
+      {
+        "title": "A case study of credential stuffing attack: Canva data breach",
+        "link": "https://ieeexplore.ieee.org/abstract/document/9799087/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0023",
+      "AT0042",
+      "AT0068"
+    ],
+    "relatedThreatActors": [
+      "TA0040"
+    ]
+  }
+}

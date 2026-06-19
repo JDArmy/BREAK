@@ -1,0 +1,29 @@
+{
+  "C0418": {
+    "title": "MFA 绕过攻击技术研究",
+    "keywords": [
+      "MFA bypass",
+      "multi-factor authentication",
+      "brute force token",
+      "man-in-the-middle attack",
+      "OTP weakness",
+      "data theft",
+      "authentication bypass",
+      "cybersecurity"
+    ],
+    "summary": "一项关于多因素认证的研究揭示了多种 MFA 绕过攻击方式，包括利用漏洞攻击、中间人攻击、数据盗窃以及一次性密码（OTP）分发过程中的弱点。研究指出，暴力破解令牌是绕过 MFA 的常见攻击向量之一。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0036"
+    ],
+    "references": [
+      {
+        "title": "Beyond Passwords: The Essence and Impact of Multi-Factor Authentication in Cybersecurity",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11140909/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

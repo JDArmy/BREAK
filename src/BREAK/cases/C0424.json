@@ -1,0 +1,30 @@
+{
+  "C0424": {
+    "title": "QRLJacking：利用“扫码登录”功能的会话劫持攻击",
+    "keywords": [
+      "QRLJacking",
+      "二维码登录劫持",
+      "扫码登录",
+      "会话劫持",
+      "社会工程学",
+      "OWASP",
+      "账户劫持"
+    ],
+    "summary": "QRLJacking（二维码登录劫持）是一种社会工程学攻击向量，影响所有依赖“扫码登录”功能的应用。攻击者诱骗受害者扫描攻击者的二维码，导致会话被劫持，从而获得账户访问权限。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0038"
+    ],
+    "references": [
+      {
+        "title": "Qrljacking - OWASP Foundation",
+        "link": "https://owasp.org/www-community/attacks/Qrljacking"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0067"
+    ],
+    "relatedThreatActors": []
+  }
+}

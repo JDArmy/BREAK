@@ -1,0 +1,35 @@
+{
+  "C0726": {
+    "title": "微软聊天机器人Tay等现实世界数据投毒攻击案例",
+    "keywords": [
+      "数据投毒",
+      "AI模型投毒",
+      "对抗攻击",
+      "聊天机器人",
+      "Tay",
+      "Gmail垃圾邮件分类器",
+      "自动驾驶",
+      "数据标签伪造",
+      "微软"
+    ],
+    "summary": "文章列举了多个数据投毒的现实案例：微软的Twitter聊天机器人Tay在协同攻击后变得具有攻击性；垃圾邮件发送者试图歪曲Gmail垃圾邮件分类器；以及一项关于自动驾驶系统的研究发现，攻击者可通过插入伪造的数据标签对（如用限速标志代替停车标志）欺骗AI，导致车辆做出错误决策。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0071-005"
+    ],
+    "references": [
+      {
+        "title": "AI时代数据投毒攻击的防范策略与应对措施|算法|ai|分类器|大模型_网 ...",
+        "link": "https://dy.163.com/article/J8EBUVHK0511ALHJ.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-07",
+    "relatedAttackTools": [
+      "AT0093"
+    ],
+    "relatedThreatActors": [
+      "TA0058"
+    ]
+  }
+}

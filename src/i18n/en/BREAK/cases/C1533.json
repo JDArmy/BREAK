@@ -1,0 +1,23 @@
+{
+  "C1533": {
+    "title": "IBM 133-Qubit Quantum Computer Cracks 5-Bit Elliptic Curve Key",
+    "keywords": [
+      "quantum computing",
+      "elliptic curve cryptography",
+      "ECC",
+      "Shor's algorithm",
+      "quantum attack",
+      "IBM",
+      "ibm_torino",
+      "133-qubit",
+      "key cracking",
+      "cryptographic security"
+    ],
+    "summary": "On July 11, 2025, an experiment on IBM's 133-qubit quantum computer ibm_torino successfully cracked a 5-bit elliptic curve cryptography key using a Shor-style quantum attack. The experiment employed a 15-qubit circuit and extracted the secret scalar k=7 from 16,384 samples via quantum interference. Although the key length was only 5 bits, this marks the first demonstration of a feasible quantum at",
+    "references": [
+      {
+        "title": "Breaking a 5-Bit Elliptic Curve Key using a 133-Qubit Quantum Computer"
+      }
+    ]
+  }
+}

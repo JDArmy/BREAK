@@ -1,0 +1,23 @@
+{
+  "C1314": {
+    "title": "Threat Actors Use Reverse Proxy for AiTM Attacks to Bypass MFA",
+    "keywords": [
+      "reverse proxy",
+      "AiTM attack",
+      "MFA bypass",
+      "Cisco Talos",
+      "Tycoon 2FA",
+      "Rockstar 2FA",
+      "Evilproxy",
+      "phishing-as-a-service",
+      "authentication cookie theft",
+      "adversary-in-the-middle"
+    ],
+    "summary": "Cisco Talos researchers discovered that cybercriminals are using reverse proxies to conduct adversary-in-the-middle attacks, successfully bypassing MFA. Attackers position themselves between the victim and the legitimate website, intercepting login credentials and post-MFA authentication cookies. Phishing-as-a-service platforms like Tycoon 2FA, Rockstar 2FA, and Evilproxy lower the technical barri",
+    "references": [
+      {
+        "title": "Threat Actors Bypass MFA Using AiTM Attack via Reverse Proxies"
+      }
+    ]
+  }
+}

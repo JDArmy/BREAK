@@ -1,0 +1,31 @@
+{
+  "C0772": {
+    "title": "即时通讯系统采用SM2/SM3/SM4混合加密框架满足合规要求",
+    "keywords": [
+      "SM2",
+      "SM3",
+      "SM4",
+      "即时通讯",
+      "混合加密",
+      "国密算法",
+      "商用密码",
+      "数据安全",
+      "合规"
+    ],
+    "summary": "一项研究提出混合加密框架，将SM2用于密钥交换和认证，SM4用于消息加密，SM3用于完整性验证，以应对即时通讯系统中的安全威胁。该框架旨在满足中国密码法对商用密码应用的要求，确保数据机密性、完整性和可用性，是国密算法合规应用的正面案例。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0079"
+    ],
+    "references": [
+      {
+        "title": "Enhancing security in instant messaging systems with a hybrid SM2 ...",
+        "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12435676/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-09",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

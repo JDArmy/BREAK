@@ -1,0 +1,20 @@
+{
+  "C1431": {
+    "title": "Sybil Attacks Threaten Blockchain Consensus Mechanisms and 51% Attack Risks",
+    "keywords": [
+      "Sybil attack",
+      "blockchain consensus",
+      "51% attack",
+      "double-spending",
+      "hash rate",
+      "fake identities",
+      "node control"
+    ],
+    "summary": "In blockchain networks, a Sybil attack occurs when a single node controls multiple identities, undermining redundancy. If an attacker creates enough fake identities, they can outvote honest nodes and refuse to receive or transmit blocks. In larger-scale attacks, when the attacker controls the majority of computing power or hash rate, they can launch a 51% attack, reversing transactions and causing",
+    "references": [
+      {
+        "title": "Sybil Attack - Tencent Cloud Developer Community"
+      }
+    ]
+  }
+}

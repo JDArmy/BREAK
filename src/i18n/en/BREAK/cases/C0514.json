@@ -1,0 +1,21 @@
+{
+  "C0514": {
+    "title": "HTTPS Interception Weakens TLS Security",
+    "keywords": [
+      "HTTPS interception",
+      "TLS security",
+      "man-in-the-middle attack",
+      "certificate validation",
+      "CISA alert",
+      "traffic inspection",
+      "end-to-end encryption",
+      "server certificate chain"
+    ],
+    "summary": "CISA issued an alert warning that HTTPS inspection products work by intercepting HTTPS traffic and performing man-in-the-middle attacks. During this process, sensitive client data may be transmitted to malicious parties posing as the target server. Many HTTPS inspection products fail to properly validate the server certificate chain and do not communicate errors to the user, thereby weakening the ",
+    "references": [
+      {
+        "title": "HTTPS Interception Weakens TLS Security - CISA"
+      }
+    ]
+  }
+}

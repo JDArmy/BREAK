@@ -1,0 +1,36 @@
+{
+  "C0830": {
+    "title": "假冒OpenAI的加密货币钱包钓鱼攻击",
+    "keywords": [
+      "OpenAI",
+      "加密货币钱包",
+      "钓鱼攻击",
+      "域名伪造",
+      "MetaMask",
+      "WalletConnect",
+      "空投诈骗",
+      "社交工程",
+      "资产转移"
+    ],
+    "summary": "2024年1月，诈骗者通过伪造OpenAI官方域名（openai.com-token.info），发送主题为“限时OpenAI DEFI代币空投”的钓鱼邮件，诱导用户连接MetaMask或WalletConnect等加密货币钱包。一旦连接，钓鱼网站自动将用户钱包中的所有加密货币和NFT资产转移至攻击者钱包。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0083-002"
+    ],
+    "references": [
+      {
+        "title": "保持在线安全,详解6种Web3社交工程攻击方式_腾讯新闻",
+        "link": "https://new.qq.com/rain/a/20240131A04KZ900"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-01",
+    "relatedAttackTools": [
+      "AT0063",
+      "AT0079"
+    ],
+    "relatedThreatActors": [
+      "TA0039"
+    ]
+  }
+}

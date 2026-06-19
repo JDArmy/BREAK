@@ -1,0 +1,29 @@
+{
+  "C1453": {
+    "title": "以太坊社区讨论时间戳操纵是否仍可能及用户如何发现",
+    "keywords": [
+      "以太坊",
+      "时间戳操纵",
+      "智能合约安全",
+      "区块时间戳",
+      "矿工操纵",
+      "Ethereum StackExchange",
+      "时间戳依赖",
+      "区块链安全"
+    ],
+    "summary": "以太坊StackExchange论坛上有用户提问，在当前以太坊网络环境下，时间戳操纵攻击是否仍然可能发生，以及如果可能，用户能否发现并规避这种攻击。该讨论反映了社区对智能合约中区块时间戳依赖风险的持续关注，矿工在约15秒范围内可自由设置时间戳的特性可能被用于操纵合约执行结果。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0176"
+    ],
+    "references": [
+      {
+        "title": "Is timestamp manipulation still possible? And if yes, can users spot ...",
+        "link": "https://ethereum.stackexchange.com/questions/99427/is-timestamp-manipulation-still-possible-and-if-yes-can-users-spot-that-and-di"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

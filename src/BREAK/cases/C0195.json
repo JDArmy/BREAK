@@ -1,0 +1,34 @@
+{
+  "C0195": {
+    "title": "python之微博批量关注，互粉",
+    "keywords": [
+      "微博",
+      "Python",
+      "批量关注",
+      "互粉",
+      "自动化脚本",
+      "CSDN",
+      "爬虫"
+    ],
+    "summary": "该CSDN博客文章介绍了利用Python脚本实现微博批量关注的方法。思路包括登录微博账号加入互粉群，获取群内大量用户ID，然后通过程序自动执行批量关注操作，以实现快速互粉涨粉的目的。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0016-002"
+    ],
+    "references": [
+      {
+        "title": "python之微博批量关注,互粉_csdn互粉群-CSDN博客",
+        "link": "https://blog.csdn.net/songyan_love/article/details/79578073/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2018-03",
+    "relatedAttackTools": [
+      "AT0023",
+      "AT0005"
+    ],
+    "relatedThreatActors": [
+      "TA0001"
+    ]
+  }
+}

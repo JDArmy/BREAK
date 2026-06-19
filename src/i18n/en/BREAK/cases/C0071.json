@@ -1,0 +1,23 @@
+{
+  "C0071": {
+    "title": "Alipay App Wake-up Strategy Hijacking Case",
+    "keywords": [
+      "Alipay",
+      "URL Scheme",
+      "alipay://",
+      "wake-up hijacking",
+      "Jiazhengjia",
+      "Jiangsu Bama",
+      "pre-litigation act preservation",
+      "Pudong New Area Court",
+      "traffic hijacking",
+      "iOS redirect"
+    ],
+    "summary": "In November 2020, Alipay discovered that when users selected \"Alipay\" for payment on iOS, the interface was forcibly redirected to a selection pop-up for the \"Jiazhengjia\" app, causing payment failures and leading users to question Alipay's security. Investigation revealed that Jiangsu Bama Software Technology Co., Ltd. had defined its Jiazhengjia app's URL Scheme identically as \"alipay://\", sever",
+    "references": [
+      {
+        "title": "Special report | Judicial analysis of internet traffic hijacking _ Tencent News"
+      }
+    ]
+  }
+}

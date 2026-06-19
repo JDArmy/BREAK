@@ -1,0 +1,34 @@
+{
+  "C0712": {
+    "title": "女子用AI批量编造博眼球文案被行政处罚",
+    "keywords": [
+      "AI批量编造",
+      "博眼球文案",
+      "行政处罚",
+      "网络谣言",
+      "自媒体平台",
+      "AIGC合规",
+      "虚假信息传播",
+      "AI生成内容"
+    ],
+    "summary": "一女子利用AI工具批量编造、炮制各类博眼球文案，通过网络社群、自媒体平台大肆发布传播，赚取不当收益。该女子认为AI生成信息都是真实的，不会被查处，最终被警方行政处罚。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0071-002"
+    ],
+    "references": [
+      {
+        "title": "女子用AI批量编造博眼球文案发布传播被行政处罚",
+        "link": "https://news.qq.com/rain/a/20260616A072PA00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-06",
+    "relatedAttackTools": [
+      "AT0053"
+    ],
+    "relatedThreatActors": [
+      "TA0041"
+    ]
+  }
+}

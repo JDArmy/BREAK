@@ -1,0 +1,50 @@
+{
+  "C0823": {
+    "title": "FBI警告：针对金融机构的账户接管欺诈",
+    "keywords": [
+      "FBI",
+      "IC3",
+      "账户接管",
+      "金融机构",
+      "网络钓鱼",
+      "登录凭证窃取",
+      "在线银行欺诈",
+      "身份冒充",
+      "金融犯罪"
+    ],
+    "summary": "FBI发布警告，指出网络犯罪分子通过冒充金融机构工作人员或伪造金融机构网站，诱骗受害者提供登录凭证，从而非法获取其在线银行、薪资或健康储蓄账户的访问权限。自2025年1月以来，IC3已收到超过5100起相关投诉，总损失超过2.62亿美元。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0083-001"
+    ],
+    "references": [
+      {
+        "title": "Internet Crime Complaint Center (IC3) | Account Takeover ...",
+        "link": "https://www.ic3.gov/PSA/2025/PSA251125"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-11",
+    "relatedAttackTools": [
+      "AT0063",
+      "AT0071",
+      "AT0064",
+      "AT0059",
+      "AT0072",
+      "AT0075",
+      "AT0056",
+      "AT0057",
+      "AT0094",
+      "AT0090"
+    ],
+    "relatedThreatActors": [
+      "TA0059",
+      "TA0015",
+      "TA0031",
+      "TA0043",
+      "TA0055",
+      "TA0033",
+      "TA0017"
+    ]
+  }
+}

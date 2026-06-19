@@ -1,0 +1,23 @@
+{
+  "C1321": {
+    "title": "Living off the Land (LotL): Fileless PowerShell Attack Techniques",
+    "keywords": [
+      "Living off the Land",
+      "LotL",
+      "fileless attack",
+      "PowerShell",
+      "LOLbins",
+      "Base64 encoding",
+      "in-memory execution",
+      "evade antivirus",
+      "attack technique guide",
+      "security research"
+    ],
+    "summary": "In October 2025, security researchers published a guide on LotL attack techniques, detailing how attackers leverage built-in system tools like PowerShell and LOLbins to carry out fileless attacks. Malicious payloads can be downloaded and executed directly in memory using Base64-encoded PowerShell commands without writing to disk, thereby evading traditional antivirus detection.",
+    "references": [
+      {
+        "title": "Living off the Land (LotL): Fileless PowerShell Attack Techniques"
+      }
+    ]
+  }
+}

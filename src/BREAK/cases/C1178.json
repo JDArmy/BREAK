@@ -1,0 +1,34 @@
+{
+  "C1178": {
+    "title": "SoundCloud数据泄露事件：API枚举滥用影响近3000万账户",
+    "keywords": [
+      "SoundCloud",
+      "数据泄露",
+      "API滥用",
+      "数据枚举",
+      "账户安全",
+      "API接口攻击",
+      "大规模数据窃取",
+      "信息安全事件"
+    ],
+    "summary": "SoundCloud遭遇数据泄露事件，近3000万账户受影响。攻击者通过数据枚举和API滥用手段实施攻击，而非直接入侵数据库。该事件表明攻击者利用API接口进行大规模数据窃取，属于典型的API滥用风险。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0126"
+    ],
+    "references": [
+      {
+        "title": "SoundCloud Data Exposure Incident: Nearly 30 Million Accounts ...",
+        "link": "https://r.search.yahoo.com/_ylt=AwrNaj14ozJqMAIA4AtXNyoA;_ylu=Y29sbwNiZjEEcG9zAzQEdnRpZAMEc2VjA3Ny/RV=2/RE=1782913145/RO=10/RU=https%3a%2f%2fundercodenews.com%2fsoundcloud-data-exposure-incident-nearly-30-million-accounts-impacted-by-api-enumeration-abuse%2f/RK=2/RS=yfcDhiY4tP3NrpOViUejTuP.l6c-"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0085",
+      "AT0061"
+    ],
+    "relatedThreatActors": [
+      "TA0051"
+    ]
+  }
+}

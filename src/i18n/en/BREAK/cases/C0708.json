@@ -1,0 +1,21 @@
+{
+  "C0708": {
+    "title": "Ollama Default Configuration Exposes Data Leakage and Model Theft Risks",
+    "keywords": [
+      "Ollama default configuration",
+      "LLM tool vulnerability",
+      "unauthorized access",
+      "model theft",
+      "DeepSeek deployment",
+      "private deployment risk",
+      "computational resource theft",
+      "National Cybersecurity Notification Center"
+    ],
+    "summary": "China's National Cybersecurity Notification Center issued a warning about security vulnerabilities in the default configuration of the open-source LLM tool Ollama, including unauthorized access and model theft. Given the widespread deployment of large models like DeepSeek, many users deploy Ollama privately without changing default settings, creating risks of data leakage, computational resource t",
+    "references": [
+      {
+        "title": "Industrial Internet Weekly | National Cybersecurity Notification Center Alert: Large Model Tool Ollama..."
+      }
+    ]
+  }
+}

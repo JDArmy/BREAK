@@ -1,0 +1,39 @@
+{
+  "C0323": {
+    "title": "微软揭露：威胁行为者滥用OAuth应用程序进行自动化金融攻击",
+    "keywords": [
+      "OAuth",
+      "Microsoft 365",
+      "金融攻击",
+      "凭证窃取",
+      "横向移动",
+      "云安全",
+      "第三方应用授权",
+      "威胁行为者",
+      "自动化攻击"
+    ],
+    "summary": "微软安全团队于2023年12月披露，威胁组织滥用OAuth应用程序作为自动化工具，实施金融动机的攻击。攻击者利用OAuth授权机制，创建或控制具有高权限的第三方应用，通过合法的认证流程获取对企业云服务（如Microsoft 365）的持久访问权限，进而进行凭证窃取、数据外泄和横向移动等恶意活动。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0030-002",
+      "R0143",
+      "R0232"
+    ],
+    "references": [
+      {
+        "title": "Threat actors misuse OAuth applications to automate financially driven ...",
+        "link": "https://www.microsoft.com/en-us/security/blog/2023/12/12/threat-actors-misuse-oauth-applications-to-automate-financially-driven-attacks/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-12",
+    "relatedAttackTools": [
+      "AT0089",
+      "AT0061"
+    ],
+    "relatedThreatActors": [
+      "TA0054",
+      "TA0055"
+    ]
+  }
+}

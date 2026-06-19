@@ -1,0 +1,21 @@
+{
+  "C1790": {
+    "title": "CISA Warns Ransomware Gangs Exploit Unpatched SimpleHelp Remote Monitoring Tool for Intrusions",
+    "keywords": [
+      "CISA",
+      "SimpleHelp",
+      "ransomware",
+      "remote monitoring and management",
+      "RMM",
+      "unpatched vulnerabilities",
+      "vendor remote access",
+      "AA25-163A"
+    ],
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) issued a security advisory confirming that ransomware attackers are actively exploiting vulnerabilities in unpatched SimpleHelp remote monitoring and management software to breach target networks. CISA urges software vendors, downstream customers, and end users to apply mitigations immediately.",
+    "references": [
+      {
+        "title": "Ransomware Actors Exploit Unpatched SimpleHelp Remote Monitoring and Management Software"
+      }
+    ]
+  }
+}

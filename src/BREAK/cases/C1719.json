@@ -1,0 +1,34 @@
+{
+  "C1719": {
+    "title": "亚马逊对退款不退货选项设置限制",
+    "keywords": [
+      "亚马逊",
+      "退款不退货",
+      "退款滥用",
+      "拒付",
+      "虚假索赔",
+      "卖家保护",
+      "电商平台",
+      "仅退款",
+      "信用评估"
+    ],
+    "summary": "亚马逊为防范潜在的退款滥用，对‘退款但不退货’选项设置严格限制，仅适用于无退货滥用记录的客户，且只有信用良好的卖家才能注册该解决方案。此举旨在减少消费者利用退款政策进行虚假索赔。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0235"
+    ],
+    "references": [
+      {
+        "title": "货还在路上就被仅退款,Temu卖家绷不住了|亚马逊|无门槛优惠券_网易...",
+        "link": "https://www.163.com/dy/article/JCCGTP7H0511FTUD.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-09",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0010",
+      "TA0037"
+    ]
+  }
+}

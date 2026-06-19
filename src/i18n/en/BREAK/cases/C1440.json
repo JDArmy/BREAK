@@ -1,0 +1,22 @@
+{
+  "C1440": {
+    "title": "Time Tells All: Deanonymization of Blockchain RPC Users with Zero Transaction Fees",
+    "keywords": [
+      "blockchain deanonymization",
+      "RPC node privacy",
+      "IP-pseudonym linkage",
+      "temporal analysis",
+      "zero-fee attack",
+      "public ledger tracing",
+      "network-layer de-anonymization",
+      "on-chain identity correlation",
+      "blockchain measurement"
+    ],
+    "summary": "Researchers present a novel deanonymization attack that links blockchain RPC users' IP addresses to their on-chain pseudonyms without incurring any transaction fees. Validated through mathematical modeling, large-scale ledger measurements, and real-world attacks, the method exploits temporal analysis to de-anonymize users, exposing severe privacy risks where user identities and network addresses c",
+    "references": [
+      {
+        "title": "Time Tells All: Deanonymization of Blockchain RPC Users"
+      }
+    ]
+  }
+}

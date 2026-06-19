@@ -1,0 +1,22 @@
+{
+  "C1327": {
+    "title": "Developer's Unauthorized Use of OpenClaw Agent Leads to API Key Leak",
+    "keywords": [
+      "OpenClaw",
+      "autonomous AI agent",
+      "API key leak",
+      "shadow AI",
+      "internal network security",
+      "credential theft",
+      "DevOps",
+      "EDR bypass",
+      "cloud service credentials"
+    ],
+    "summary": "A developer at a mid-sized tech company privately deployed the open-source autonomous AI agent tool OpenClaw on office endpoints to simplify operations, granting it excessive permissions. The tool's configuration file stored sensitive information such as database API keys and cloud service credentials in plaintext. Because traditional EDR solutions could not recognize its behavioral patterns, the ",
+    "references": [
+      {
+        "title": "Shadow AI Incident Reveals Autonomous AI Agent Security Governance: Principles, Risks, and Solutions"
+      }
+    ]
+  }
+}

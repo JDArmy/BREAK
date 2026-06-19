@@ -1,0 +1,37 @@
+{
+  "C1679": {
+    "title": "Hades PyPI 攻击：19 个软件包被投毒以自动运行 Bun 凭据窃取器",
+    "keywords": [
+      "PyPI",
+      "Hades",
+      "供应链攻击",
+      "恶意软件包",
+      "凭据窃取",
+      "Bun",
+      "OIDC",
+      "构建产物投毒",
+      "Python",
+      "包管理器"
+    ],
+    "summary": "2026年6月，名为Hades的恶意活动在PyPI上投放了19个被投毒的软件包。这些包内置了凭据窃取器，并可利用开发者的OIDC信任配置，将木马化版本的PyPI包推送到被入侵系统，实现横向传播。攻击者通过篡改包内容，将后门植入使用这些包的Python项目构建产物中。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0227"
+    ],
+    "references": [
+      {
+        "title": "Hades PyPI Attack: 19 Packages Poisoned to Auto-Run Bun Credential Stealer",
+        "link": "https://thehackernews.com/2026/06/hades-pypi-attack-19-packages-poisoned.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-06",
+    "relatedAttackTools": [
+      "AT0064",
+      "AT0087"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

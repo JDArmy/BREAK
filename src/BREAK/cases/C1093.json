@@ -1,0 +1,34 @@
+{
+  "C1093": {
+    "title": "上海警方破获恶意软件“霸屏”播放广告案",
+    "keywords": [
+      "恶意软件",
+      "霸屏",
+      "非法控制计算机信息系统",
+      "广告投放",
+      "上海警方",
+      "手机系统",
+      "强制播放",
+      "牟利"
+    ],
+    "summary": "上海警方破获一起非法控制计算机信息系统案，犯罪嫌疑人通过恶意软件以“霸屏”方式强制播放广告牟利，属于利用恶意手段进行广告投放的典型案例。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0115"
+    ],
+    "references": [
+      {
+        "title": "恶意软件“霸屏”播放广告牟利 上海警方破获一起非法控制手机系统...",
+        "link": "https://sh.cctv.com/2022/08/20/ARTIwcd6NhOBibERvf9GuwOI220820.shtml"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-08",
+    "relatedAttackTools": [
+      "AT0013"
+    ],
+    "relatedThreatActors": [
+      "TA0012"
+    ]
+  }
+}

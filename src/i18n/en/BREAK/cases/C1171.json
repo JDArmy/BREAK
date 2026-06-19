@@ -1,0 +1,20 @@
+{
+  "C1171": {
+    "title": "Bypassing Rate Limiting by Switching HTTP Request Methods",
+    "keywords": [
+      "rate limiting bypass",
+      "HTTP method switching",
+      "POST to GET bypass",
+      "Content-Type bypass",
+      "API rate limit bypass",
+      "request method tampering",
+      "WAF bypass"
+    ],
+    "summary": "Rate limiting in some applications is configured only for specific HTTP methods such as POST. Attackers bypass the rate limiting mechanism by switching the request method from POST to GET, or by using a different Content-Type header such as application/x-www-form-urlencoded instead of application/json, enabling unlimited API calls.",
+    "references": [
+      {
+        "title": "VulnTech Rate Limit Bypass - VulnTech Notes"
+      }
+    ]
+  }
+}

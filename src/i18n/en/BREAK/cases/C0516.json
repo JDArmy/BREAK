@@ -1,0 +1,22 @@
+{
+  "C0516": {
+    "title": "Java Decompilation Offensive and Defensive Practices: Exposing Code Leakage Risks and 5 Core Protection Techniques",
+    "keywords": [
+      "Java decompilation",
+      "CFR",
+      "JD-GUI",
+      "Java bytecode",
+      "code leakage",
+      "Procyon",
+      "hardcoded keys",
+      "reverse engineering",
+      "application security"
+    ],
+    "summary": "The article highlights that due to the highly standardized structure of Java .class files, attackers can easily reconstruct source code logic using decompilation tools like JD-GUI and CFR, leading to the leakage of core algorithms, business processes, and sensitive configuration information such as hardcoded keys and database connection strings. It demonstrates the process of using the CFR decompi",
+    "references": [
+      {
+        "title": "Java Decompilation Offense and Defense in Practice: Revealing Code Leakage Risks and 5 Core Protection Technologies - CSDN Blog"
+      }
+    ]
+  }
+}

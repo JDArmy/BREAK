@@ -22,6 +22,7 @@ const entityDirs = {
   terms: 'src/BREAK/terms',
   businessScenes: 'src/BREAK/business-scenes',
   avoidanceCategories: 'src/BREAK/avoidance-categories',
+  cases: 'src/BREAK/cases',
 };
 
 function loadRecords(relativeDir) {
@@ -92,13 +93,14 @@ const englishStats =
   `The current framework catalogues ${counts.risks.total} risk items, ` +
   `${counts.avoidances.total} avoidance measures, ${counts.attackTools.total} attack tools, ` +
   `${counts.threatActors.total} threat actors, ${counts.terms.total} industry terms, ` +
-  `${counts.businessScenes.total} business scenes, and ${counts.avoidanceCategories.total} avoidance categories`;
+  `${counts.businessScenes.total} business scenes, ${counts.avoidanceCategories.total} avoidance categories, ` +
+  `and ${counts.cases.total} cases`;
 
 const chineseStats =
   `目前框架共收集和整理风险点 ${counts.risks.total} 个、规避手段 ${counts.avoidances.total} 个、` +
   `攻击工具 ${counts.attackTools.total} 个、威胁行为者 ${counts.threatActors.total} 个、` +
   `行业术语 ${counts.terms.total} 个、业务场景 ${counts.businessScenes.total} 个、` +
-  `规避手段分类 ${counts.avoidanceCategories.total} 个`;
+  `规避手段分类 ${counts.avoidanceCategories.total} 个、案例 ${counts.cases.total} 个`;
 
 expectIncludes('readme', englishStats, 'README entity totals');
 expectIncludes('readmeCn', chineseStats, 'README_CN entity totals');
@@ -138,6 +140,6 @@ if (failures.length > 0) {
 
 console.log('\n✅ 文档统计一致性检查通过');
 console.log(
-  `entities=${counts.risks.total}/${counts.avoidances.total}/${counts.attackTools.total}/${counts.threatActors.total}/${counts.terms.total}/${counts.businessScenes.total}/${counts.avoidanceCategories.total}`
+  `entities=${counts.risks.total}/${counts.avoidances.total}/${counts.attackTools.total}/${counts.threatActors.total}/${counts.terms.total}/${counts.businessScenes.total}/${counts.avoidanceCategories.total}/${counts.cases.total}`
 );
 console.log(`metricReferences=${metricReferenceTotal}`);

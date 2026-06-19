@@ -1,0 +1,33 @@
+{
+  "C1699": {
+    "title": "AWS IAM权限提升检测项目",
+    "keywords": [
+      "AWS",
+      "IAM",
+      "权限提升",
+      "CloudTrail",
+      "GuardDuty",
+      "Lambda",
+      "过度授权",
+      "安全检测",
+      "云安全",
+      "权限策略"
+    ],
+    "summary": "该项目模拟了AWS IAM权限提升场景，故意创建错误配置的IAM环境，从低权限用户提升权限并利用CloudTrail、GuardDuty等工具检测攻击，旨在理解IAM策略弱点。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0231"
+    ],
+    "references": [
+      {
+        "title": "GitHub - jmcoded0/AWS-IAM-Privilege-Escalation-Detection",
+        "link": "https://github.com/jmcoded0/AWS-IAM-Privilege-Escalation-Detection"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0088"
+    ],
+    "relatedThreatActors": []
+  }
+}

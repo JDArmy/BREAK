@@ -1,0 +1,20 @@
+{
+  "C1667": {
+    "title": "n8n GitHub Webhook Trigger Missing Signature Verification Allows Event Forgery",
+    "keywords": [
+      "n8n GitHub webhook",
+      "HMAC-SHA256 signature verification",
+      "webhook forgery",
+      "unsigned POST request",
+      "trigger node",
+      "event replay",
+      "unauthorized request"
+    ],
+    "summary": "The GitHub Webhook trigger node in the n8n workflow platform does not implement HMAC-SHA256 signature verification. An attacker who knows the Webhook URL can send unsigned POST requests with arbitrary data to trigger workflows, thereby forging GitHub Webhook events.",
+    "references": [
+      {
+        "title": "Webhook Forgery on Github Webhook Trigger · Advisory · n8n-io/n8n · GitHub"
+      }
+    ]
+  }
+}

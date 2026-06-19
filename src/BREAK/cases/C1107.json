@@ -1,0 +1,36 @@
+{
+  "C1107": {
+    "title": "韩国高中生利用Deepfake制作并出售色情内容被捕",
+    "keywords": [
+      "Deepfake",
+      "深度伪造",
+      "色情内容",
+      "Telegram",
+      "韩国",
+      "高中生",
+      "AI生成",
+      "定制视频",
+      "低龄化犯罪",
+      "庆尚北道"
+    ],
+    "summary": "2024年9月，韩国庆尚北道一名高中生因涉嫌使用深度伪造技术制作色情内容，并通过Telegram平台出售获利被警方拘捕。该嫌疑人声称可为买家定制基于其家庭成员、熟人或名人的伪造视频，此案是韩国深度伪造性犯罪低龄化趋势的典型案例。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0116"
+    ],
+    "references": [
+      {
+        "title": "售卖“深度伪造”色情内容,韩国一高中生被抓",
+        "link": "https://m.gmw.cn/2024-09/07/content_1303841653.htm"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-09",
+    "relatedAttackTools": [
+      "AT0056"
+    ],
+    "relatedThreatActors": [
+      "TA0041"
+    ]
+  }
+}

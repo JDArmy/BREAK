@@ -1,0 +1,34 @@
+{
+  "C1426": {
+    "title": "Bitcoin Gold再次遭51%攻击损失7万美元",
+    "keywords": [
+      "Bitcoin Gold",
+      "BTG",
+      "51%攻击",
+      "双花攻击",
+      "区块链安全",
+      "哈希算力",
+      "加密货币",
+      "网络信誉"
+    ],
+    "summary": "2020年1月，Bitcoin Gold再次面临51%攻击，与2018年攻击类似，同样的漏洞被利用。攻击者双花了价值7万美元的BTG，进一步玷污了该网络的信誉，凸显了区块链依赖有限哈希算力的持续风险。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0171"
+    ],
+    "references": [
+      {
+        "title": "51%攻击-CSDN博客",
+        "link": "https://blog.csdn.net/2301_77604523/article/details/144166440"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2020-01",
+    "relatedAttackTools": [
+      "AT0078"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

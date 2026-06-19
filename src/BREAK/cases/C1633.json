@@ -1,0 +1,33 @@
+{
+  "C1633": {
+    "title": "利用虚拟货币跨平台转移掩饰犯罪所得案",
+    "keywords": [
+      "掩饰隐瞒犯罪所得",
+      "虚拟货币",
+      "跨平台转移",
+      "OKEX",
+      "洗钱",
+      "资金追踪",
+      "安某某",
+      "虚拟资产"
+    ],
+    "summary": "被告人安某某等人通过OKEX等网络交易平台，将他人犯罪所得用于购买虚拟货币，再以虚拟货币形式实现资金的快速跨平台转移，以此帮助犯罪分子逃避公安机关追查，构成掩饰、隐瞒犯罪所得罪。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0216"
+    ],
+    "references": [
+      {
+        "title": "依法惩治掩饰、隐瞒犯罪所得、犯罪所得收益犯罪典型案例 - 中华人民共和国最...",
+        "link": "https://www.court.gov.cn/zixun/xiangqing/474151.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-08",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0014",
+      "TA0038"
+    ]
+  }
+}

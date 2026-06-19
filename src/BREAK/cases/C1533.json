@@ -1,0 +1,32 @@
+{
+  "C1533": {
+    "title": "IBM 133量子比特量子计算机破解5位椭圆曲线密钥",
+    "keywords": [
+      "量子计算",
+      "椭圆曲线密码学",
+      "ECC",
+      "Shor算法",
+      "量子攻击",
+      "IBM",
+      "ibm_torino",
+      "133量子比特",
+      "密钥破解",
+      "密码学安全"
+    ],
+    "summary": "2025年7月11日，一项实验在IBM的133量子比特量子计算机ibm_torino上，利用Shor式量子攻击成功破解了一个5位椭圆曲线密码学密钥。实验使用15量子比特电路，从16384次采样中通过量子干涉提取出秘密标量k=7，尽管密钥长度仅为5位，但该实验首次在真实量子硬件上演示了对椭圆曲线密码学的量子攻击可行性，验证了量子计算对ECC的现实威胁。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0196"
+    ],
+    "references": [
+      {
+        "title": "Breaking a 5-Bit Elliptic Curve Key using a 133-Qubit Quantum Computer",
+        "link": "https://arxiv.org/abs/2507.10592"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-07",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "C1507": {
+    "title": "Palo Alto Networks报告：超75%医用输液泵存在已知安全漏洞",
+    "keywords": [
+      "Palo Alto Networks",
+      "医用输液泵",
+      "安全漏洞",
+      "医疗物联网",
+      "IoMT",
+      "漏洞利用",
+      "医疗设备安全",
+      "固件更新",
+      "CVE"
+    ],
+    "summary": "Palo Alto Networks的研究报告显示，超过75%的医用输液泵存在已知安全漏洞，其中超过一半易受2019年公开的两个特定漏洞影响，凸显医疗设备更新周期长与安全风险增加的矛盾。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0190"
+    ],
+    "references": [
+      {
+        "title": "您的医疗物联网安全吗?-智慧医院建设-智慧医疗网",
+        "link": "http://www.cn-witmed.com/list/33/11335.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C1605": {
+    "title": "CVE-2024-48989: Recent Profinet Protocol Vulnerability",
+    "keywords": [
+      "CVE-2024-48989",
+      "Profinet",
+      "ICS",
+      "protocol vulnerability",
+      "unauthorized operation",
+      "NVD",
+      "Siemens",
+      "industrial control protocol"
+    ],
+    "summary": "A publicly disclosed Profinet-related security flaw from 2024 that could allow attackers to exploit protocol weaknesses and perform unauthorized operations on industrial control systems.",
+    "references": [
+      {
+        "title": "CVE-2024-48989 Detail"
+      }
+    ]
+  }
+}

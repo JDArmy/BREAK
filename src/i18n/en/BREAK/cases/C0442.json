@@ -1,0 +1,20 @@
+{
+  "C0442": {
+    "title": "F5 Defends Against Gift Card Cracking Attacks",
+    "keywords": [
+      "gift card cracking",
+      "brute force enumeration",
+      "F5 Distributed Cloud Bot Defense",
+      "automated attacks",
+      "payment card cracking",
+      "balance inquiry",
+      "bot attack"
+    ],
+    "summary": "A luxury brand faced automated gift card cracking attacks, with attackers brute-forcing balance inquiries and checkout balance applications at 100 times the frequency of legitimate customers. After deploying F5 Distributed Cloud Bot Defense, the attacks ceased, and 98.5% of gift card balance inquiry traffic was identified as automated requests.",
+    "references": [
+      {
+        "title": "Prevent Gift Card Cracking: Brute Force Enumeration - F5"
+      }
+    ]
+  }
+}

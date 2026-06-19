@@ -1,0 +1,34 @@
+{
+  "C1729": {
+    "title": "幽灵点击：通过注入脚本劫持人类点击的广告欺诈",
+    "keywords": [
+      "幽灵点击",
+      "广告欺诈",
+      "点击劫持",
+      "服务器端脚本注入",
+      "123.php",
+      "广告归因",
+      "虚假点击",
+      "Ghost Click",
+      "Ad Fraud"
+    ],
+    "summary": "该研究披露了一种名为“幽灵点击”的广告欺诈手法。攻击者通过在受害者访问的网页中注入服务器端脚本（如123.php），每当用户进行正常点击时，该脚本会在后台触发对广告的虚假点击，从而劫持真实用户的点击行为以骗取广告归因收益。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0237"
+    ],
+    "references": [
+      {
+        "title": "Dissecting ghost clicks: Ad fraud via misdirected human clicks",
+        "link": "https://dl.acm.org/doi/abs/10.1145/2420950.2420954"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0091"
+    ],
+    "relatedThreatActors": [
+      "TA0056"
+    ]
+  }
+}

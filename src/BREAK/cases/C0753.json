@@ -1,0 +1,30 @@
+{
+  "C0753": {
+    "title": "美国《2022年关键基础设施网络事件报告法》",
+    "keywords": [
+      "CIRCIA",
+      "关键基础设施",
+      "网络事件报告",
+      "CISA",
+      "72小时报告义务",
+      "美国网络安全",
+      "合规风险",
+      "关保"
+    ],
+    "summary": "2022年，美国通过《关键基础设施网络事件报告法》（CIRCIA），要求关键基础设施领域的实体在72小时内向网络安全和基础设施安全局（CISA）报告网络事件。该法案旨在加强关键基础设施的网络安全，未能遵守此类报告义务将构成合规风险。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0075"
+    ],
+    "references": [
+      {
+        "title": "Cyber Incident Reporting for Critical Infrastructure Act of 2022 ... - CISA",
+        "link": "https://www.cisa.gov/topics/cyber-threats-and-advisories/information-sharing/cyber-incident-reporting-critical-infrastructure-act-2022-circia"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-03",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

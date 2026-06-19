@@ -1,0 +1,34 @@
+{
+  "C1652": {
+    "title": "AvatarHunter：基于用户运动特征的元宇宙去匿名化攻击",
+    "keywords": [
+      "AvatarHunter",
+      "去匿名化攻击",
+      "元宇宙",
+      "虚拟现实",
+      "运动特征",
+      "行为模式",
+      "用户身份关联",
+      "隐私泄露",
+      "VR安全"
+    ],
+    "summary": "研究人员提出了一种名为AvatarHunter的非侵入式、用户无感知的去匿名化攻击方法。该攻击利用受害者在虚拟现实中固有的运动特征，通过分析其行为模式来识别隐藏在虚拟化身背后的真实用户身份，证明了在元宇宙中突破匿名保护、关联虚实身份的可行性。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0221"
+    ],
+    "references": [
+      {
+        "title": "De-Anonymizing Avatars in Virtual Reality - ACM Digital Library",
+        "link": "https://dl.acm.org/doi/abs/10.1109/TMC.2024.3426046"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0084"
+    ],
+    "relatedThreatActors": [
+      "TA0050"
+    ]
+  }
+}

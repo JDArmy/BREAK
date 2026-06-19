@@ -1,0 +1,21 @@
+{
+  "C1455": {
+    "title": "Aztec Connect Legacy Contract Vulnerability Exploited for $2.1 Million",
+    "keywords": [
+      "Aztec Connect",
+      "smart contract vulnerability",
+      "non-upgradable contract",
+      "DeFi exploit",
+      "asset trapping",
+      "immutability risk",
+      "contract design flaw",
+      "Ethereum Layer2"
+    ],
+    "summary": "A vulnerability in Aztec Connect's legacy contract, which was designed to be fully immutable with no upgrade capability, was exploited. As a result, a portion of the tokens became trapped in the non-upgradable contract and could not be withdrawn. The system had intentionally relinquished upgrade permissions for decentralization, but the immutable design flaw led to asset loss, highlighting the dou",
+    "references": [
+      {
+        "title": "Aztec Connect Hit by $2.1 Million Exploit in Old Contract"
+      }
+    ]
+  }
+}

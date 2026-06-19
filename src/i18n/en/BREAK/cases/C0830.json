@@ -1,0 +1,22 @@
+{
+  "C0830": {
+    "title": "Fake OpenAI Cryptocurrency Wallet Phishing Attack",
+    "keywords": [
+      "OpenAI phishing",
+      "crypto wallet drainer",
+      "MetaMask scam",
+      "WalletConnect phishing",
+      "fake airdrop token",
+      "domain spoofing",
+      "NFT theft",
+      "DEFI token scam",
+      "wallet connection exploit"
+    ],
+    "summary": "In January 2024, scammers sent phishing emails with the subject \"Limited-Time OpenAI DEFI Token Airdrop\" using a spoofed OpenAI domain (openai.com-token.info), tricking users into connecting cryptocurrency wallets like MetaMask or WalletConnect. Once connected, the phishing site automatically transferred all cryptocurrency and NFT assets from the user's wallet to the attacker's wallet.",
+    "references": [
+      {
+        "title": "Stay Safe Online: A Detailed Look at 6 Web3 Social Engineering Attack Methods"
+      }
+    ]
+  }
+}

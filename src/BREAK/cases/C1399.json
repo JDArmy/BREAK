@@ -1,0 +1,34 @@
+{
+  "C1399": {
+    "title": "案例研究：重大物联网僵尸网络攻击的经验教训",
+    "keywords": [
+      "Mirai",
+      "Reaper",
+      "IoT僵尸网络",
+      "默认凭据",
+      "僵尸网络攻击",
+      "设备安全",
+      "物联网安全",
+      "凭据管理"
+    ],
+    "summary": "通过对Mirai和Reaper等重大IoT僵尸网络攻击案例的研究，总结出的关键教训之一是必须更改设备默认凭据。许多用户忽略这一简单措施，导致设备易受攻击。制造商也应承担起实施更强安全措施的责任。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0166"
+    ],
+    "references": [
+      {
+        "title": "Case Study: Lessons Learned from Major IoT Botnet Attacks",
+        "link": "https://enicomp.com/case-study-lessons-learned-from-major-iot-botnet-attacks/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0081",
+      "AT0082"
+    ],
+    "relatedThreatActors": [
+      "TA0048"
+    ]
+  }
+}

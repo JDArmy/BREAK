@@ -1,0 +1,31 @@
+{
+  "C1545": {
+    "title": "零版税NFT市场兴起与版税绕过争议",
+    "keywords": [
+      "NFT版税",
+      "零版税",
+      "SudoSwap",
+      "Magic Eden",
+      "OpenSea",
+      "x2y2",
+      "创作者经济",
+      "版税规避",
+      "NFT市场"
+    ],
+    "summary": "随着NFT市场发展，部分平台如SudoSwap完全取消版税支付以吸引流动性，而Magic Eden等平台也转向使版税变为可选。这种市场层面的转变使得NFT买家可通过选择零版税市场或进行场外交易，轻松规避向创作者支付版税，动摇了创作者经济的根基。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0199"
+    ],
+    "references": [
+      {
+        "title": "零版税 NFT:创作者经济的范式转变 or 投机者的阴谋? - 知乎",
+        "link": "https://zhuanlan.zhihu.com/p/583781740"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-11",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

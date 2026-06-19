@@ -1,0 +1,34 @@
+{
+  "C1358": {
+    "title": "Badger DAO权限漏洞攻击事件",
+    "keywords": [
+      "Badger DAO",
+      "DeFi",
+      "权限漏洞",
+      "恶意钱包请求",
+      "代币授权",
+      "前端攻击",
+      "1.2亿美元",
+      "智能合约安全"
+    ],
+    "summary": "2021年12月，DeFi协议Badger DAO遭受攻击，损失约1.2亿美元。攻击者通过在用户界面植入恶意钱包请求，诱骗用户为恶意地址批准代币使用权限，从而控制用户金库资金并转移。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0159"
+    ],
+    "references": [
+      {
+        "title": "DeFi 协议安全事故汇总|损失最二大的黑客攻击事件就发生在上个月...",
+        "link": "https://new.qq.com/rain/a/20220420A06ZDY00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-12",
+    "relatedAttackTools": [
+      "AT0079"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

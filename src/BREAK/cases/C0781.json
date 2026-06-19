@@ -1,0 +1,36 @@
+{
+  "C0781": {
+    "title": "GitHub员工设备被黑导致代码库数据泄露事件",
+    "keywords": [
+      "GitHub",
+      "代码库泄露",
+      "员工设备被黑",
+      "恶意载荷",
+      "投放器",
+      "第二阶段载荷",
+      "guardrails-ai",
+      "数据泄露"
+    ],
+    "summary": "2026年5月，GitHub遭入侵，攻击者通过攻破员工设备获取内部访问权限，导致3800个代码库数据被泄露。攻击中植入的恶意载荷为投放器，配置为从外部服务器获取第二阶段载荷，被评估为与之前guardrails-ai包遭入侵相关的恶意软件变种。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0080"
+    ],
+    "references": [
+      {
+        "title": "GitHub Breached — Employee Device Hack Led to Exfiltration of 3,800 ...",
+        "link": "https://thehackernews.com/2026/05/github-investigating-teampcp-claimed.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-05",
+    "relatedAttackTools": [
+      "AT0013",
+      "AT0054",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

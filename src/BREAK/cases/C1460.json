@@ -1,0 +1,30 @@
+{
+  "C1460": {
+    "title": "面向物联网设备功耗侧信道攻击的软硬件协同设计",
+    "keywords": [
+      "IoT设备",
+      "功耗侧信道攻击",
+      "软硬件协同设计",
+      "安全处理器架构",
+      "掩码软件实现",
+      "资源受限设备",
+      "侧信道泄露抑制",
+      "IEEE Internet of Things Journal"
+    ],
+    "summary": "该研究指出，随着物联网发展，保护IoT设备上的秘密信息日益重要。由于IoT设备易被第三方物理访问，通过功耗侧信道泄露物理信息的攻击构成重大威胁。文章提出一种软硬件协同设计，结合安全处理器架构与掩码软件实现，在维持低功耗和实时性的同时，有效抑制功耗侧信道泄露，保护资源受限的IoT设备。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0178"
+    ],
+    "references": [
+      {
+        "title": "Hardware/software cooperative design against power side-channel attacks on IoT devices",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10404032/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-01",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

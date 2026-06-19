@@ -1,0 +1,20 @@
+{
+  "C0860": {
+    "title": "BlackCat Ransomware Adopts Multi-Extortion Tactics",
+    "keywords": [
+      "BlackCat ransomware",
+      "multi-extortion",
+      "double extortion",
+      "triple extortion",
+      "DDoS",
+      "data leak",
+      "encryption ransomware"
+    ],
+    "summary": "An analysis report from July 2023 indicates that the BlackCat ransomware group has added harassment or DDoS attack threats on top of its existing double-extortion strategy of encrypting files, forming a multi-extortion approach. The group also employs an 'encryption-less data leak' model, further diversifying its pressure tactics.",
+    "references": [
+      {
+        "title": "Beware of Data Breaches Caused by BlackCat Ransomware"
+      }
+    ]
+  }
+}

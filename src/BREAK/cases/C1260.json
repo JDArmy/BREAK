@@ -1,0 +1,33 @@
+{
+  "C1260": {
+    "title": "基于自适应DBSCAN的自动驾驶车辆GPS欺骗攻击检测",
+    "keywords": [
+      "GPS欺骗",
+      "自动驾驶汽车",
+      "DBSCAN",
+      "异常检测",
+      "车辆定位",
+      "信号欺骗",
+      "实时检测",
+      "导航安全"
+    ],
+    "summary": "该研究指出，自动驾驶汽车易受GPS欺骗攻击，攻击者通过发送欺骗性信号误导车辆定位系统，导致错误导航或危险操作。研究提出了一种基于自适应DBSCAN的实时检测方法，能有效识别多种GPS欺骗攻击，检测准确率高达98%以上。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0141"
+    ],
+    "references": [
+      {
+        "title": "GPS Spoofing Attack Detection in Autonomous Vehicles Using Adaptive DBSCAN",
+        "link": "https://arxiv.org/html/2510.10766v1"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0024"
+    ],
+    "relatedThreatActors": [
+      "TA0049"
+    ]
+  }
+}

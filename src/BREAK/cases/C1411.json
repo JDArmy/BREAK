@@ -1,0 +1,32 @@
+{
+  "C1411": {
+    "title": "韩国首次在 Meme 币 Rug Pull 案中实施逮捕并提起公诉",
+    "keywords": [
+      "South Korea",
+      "Meme Coin",
+      "Rug Pull",
+      "Solana",
+      "DEX",
+      "prosecution",
+      "arrest",
+      "crypto fraud",
+      "investor loss"
+    ],
+    "summary": "韩国检察官对Solana Meme币项目团队提起该国首例DEX Rug Pull诉讼，指控其通过Meme币项目募集资金后跑路，导致投资者受损。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0168"
+    ],
+    "references": [
+      {
+        "title": "South Korea Makes First Arrest and Prosecution in Meme Coin Rug Pull Case",
+        "link": "https://beincrypto.com/solana-meme-coin-south-korea-dex-indictment/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0039"
+    ]
+  }
+}

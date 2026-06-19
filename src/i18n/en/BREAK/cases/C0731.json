@@ -1,0 +1,22 @@
+{
+  "C0731": {
+    "title": "Samsung Electronics Chip Secrets Leaked via ChatGPT",
+    "keywords": [
+      "Samsung Electronics",
+      "ChatGPT",
+      "chip secret leak",
+      "data leakage",
+      "generative AI",
+      "trade secrets",
+      "training data",
+      "sensitive information",
+      "employee disclosure"
+    ],
+    "summary": "Less than 20 days after adopting ChatGPT, Samsung Electronics experienced a leak of confidential chip secrets. Employees inadvertently entered sensitive data into the model, causing the company's core trade secrets to be absorbed by the generative AI system and potentially exposed, highlighting the severe data leakage risks posed by generative AI automatically collecting user information as traini",
+    "references": [
+      {
+        "title": "National Governance: Mitigating Generative AI Risks Through Rule of Law"
+      }
+    ]
+  }
+}

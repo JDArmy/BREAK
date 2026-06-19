@@ -1,0 +1,20 @@
+{
+  "C1665": {
+    "title": "Stripe Webhook Signature Bypass via Empty Secret Enables Unlimited Quota Fraud",
+    "keywords": [
+      "Stripe webhook bypass",
+      "empty secret signature bypass",
+      "quota fraud",
+      "new-api webhook",
+      "forged webhook event",
+      "payment bypass",
+      "QuantumNous"
+    ],
+    "summary": "A critical vulnerability in the Stripe webhook handler of the QuantumNous/new-api project allows attackers to bypass signature verification by exploiting a default empty webhook secret. By forging webhook events, attackers can top up arbitrary quotas without actual payment. The flaw also enables cross-payment-gateway order completion, where orders created through other payment methods can be fulfi",
+    "references": [
+      {
+        "title": "Stripe Webhook Signature Bypass via Empty Secret Enables"
+      }
+    ]
+  }
+}

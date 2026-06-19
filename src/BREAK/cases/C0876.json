@@ -1,0 +1,36 @@
+{
+  "C0876": {
+    "title": "SoK研究揭示多起重大加密劫持恶意软件攻击实例",
+    "keywords": [
+      "加密劫持",
+      "恶意软件",
+      "服务器挖矿",
+      "Monero",
+      "Coinhive",
+      "IEEE S&P",
+      "YouTube",
+      "任天堂",
+      "Zoom",
+      "政府服务器"
+    ],
+    "summary": "2021年IEEE安全研讨会论文系统梳理了加密劫持恶意软件，指出银行业、政府军事服务器、YouTube、任天堂、Zoom等均曾成为加密劫持攻击受害者，攻击者利用服务器计算资源未经授权挖掘加密货币。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0086"
+    ],
+    "references": [
+      {
+        "title": "SoK: cryptojacking malware",
+        "link": "https://ieeexplore.ieee.org/abstract/document/9581251/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-09",
+    "relatedAttackTools": [
+      "AT0013"
+    ],
+    "relatedThreatActors": [
+      "TA0012"
+    ]
+  }
+}

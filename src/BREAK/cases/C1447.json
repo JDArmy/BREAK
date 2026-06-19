@@ -1,0 +1,31 @@
+{
+  "C1447": {
+    "title": "分片分布式账本中跨分片共识的重放攻击与防御",
+    "keywords": [
+      "replay attack",
+      "cross-shard consensus",
+      "sharded distributed ledger",
+      "Ethereum",
+      "account-based blockchain",
+      "blockchain security",
+      "transaction replay",
+      "sharding"
+    ],
+    "summary": "该学术论文研究了分片分布式账本中的跨分片重放攻击，并指出基于账户的区块链（如以太坊）是常见的应用场景。这直接对应了风险定义中跨链或分片场景下的重放攻击问题。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0175"
+    ],
+    "references": [
+      {
+        "title": "Replay attacks and defenses against cross-shard consensus in sharded distributed ledgers",
+        "link": "https://ieeexplore.ieee.org/abstract/document/9230373/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0078"
+    ],
+    "relatedThreatActors": []
+  }
+}

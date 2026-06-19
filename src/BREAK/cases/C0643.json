@@ -1,0 +1,33 @@
+{
+  "C0643": {
+    "title": "凑单退款的法律风险分析",
+    "keywords": [
+      "凑单退款",
+      "拆单套利",
+      "满减优惠",
+      "欺诈",
+      "民法典",
+      "撤销交易",
+      "消费者权益",
+      "电商平台",
+      "法律风险"
+    ],
+    "summary": "法律咨询平台分析指出，若消费者以套取优惠为目的频繁凑单退款，可能构成欺诈。例如，消费者多次凑单享受满减优惠后立即退回非必需商品，仅保留低价商品，商家可依据《民法典》主张撤销交易并要求返还优惠金额。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0064"
+    ],
+    "references": [
+      {
+        "title": "凑单退款违法吗-找法网",
+        "link": "https://www.findlaw.cn/wenda/q_59459304.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-06",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0001"
+    ]
+  }
+}

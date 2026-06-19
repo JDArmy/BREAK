@@ -1,0 +1,23 @@
+{
+  "C1557": {
+    "title": "Delegated Keys for Smart Wallets: Enabling Secure Transaction Execution from Apple Watch via ERC-4337 and Kernel Wallet",
+    "keywords": [
+      "ERC-4337",
+      "Kernel Wallet",
+      "Apple Watch",
+      "smart wallet",
+      "delegated keys",
+      "biometric verification",
+      "UserOperation",
+      "Bundler",
+      "transaction security",
+      "account abstraction"
+    ],
+    "summary": "This research examines the security of executing transactions from an Apple Watch using ERC-4337 and Kernel Wallet. It highlights that when a server submits ERC-4337 UserOperations to a Bundler without per-transaction biometric verification, an attacker who gains access to the smartwatch could submit malicious UserOperations.",
+    "references": [
+      {
+        "title": "Delegated Keys for Smart Wallets: Enabling Secure Transaction Execution from Apple Watch via ERC-4337 & Kernel Wallet"
+      }
+    ]
+  }
+}

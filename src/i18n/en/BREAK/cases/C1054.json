@@ -1,0 +1,20 @@
+{
+  "C1054": {
+    "title": "Personal Digital Device Physical Security Protection Guide",
+    "keywords": [
+      "CISA",
+      "physical security",
+      "digital devices",
+      "unauthorized physical access",
+      "hard drive cloning",
+      "information leakage",
+      "device security protection"
+    ],
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) warns that attackers who gain physical access to a computer or device can easily copy files, data, or even clone entire hard drives, leading to information leakage.",
+    "references": [
+      {
+        "title": "Protect the Physical Security of Your Digital Devices - CISA"
+      }
+    ]
+  }
+}

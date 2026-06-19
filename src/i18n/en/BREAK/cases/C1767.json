@@ -1,0 +1,23 @@
+{
+  "C1767": {
+    "title": "Mass-Scale Cache Poisoning Vulnerability Discovery",
+    "keywords": [
+      "cache poisoning",
+      "cache key confusion",
+      "header poisoning",
+      "Apache Traffic Server",
+      "CVE-2021-27577",
+      "X-Forwarded-Scheme",
+      "Cloudflare",
+      "Fastly",
+      "CDN",
+      "denial of service"
+    ],
+    "summary": "In February 2022, security researcher Youstin discovered over 70 cache poisoning vulnerabilities across multiple bug bounty programs using techniques such as cache key confusion and header poisoning. The attacks involved Apache Traffic Server's mishandling of URL fragments (CVE-2021-27577), redirect loops caused by the X-Forwarded-Scheme header, and exploitation of misconfigurations in Cloudflare ",
+    "references": [
+      {
+        "title": "Summary of Large-Scale Cache Poisoning - Xianzhi Community"
+      }
+    ]
+  }
+}

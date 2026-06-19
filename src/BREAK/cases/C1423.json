@@ -1,0 +1,35 @@
+{
+  "C1423": {
+    "title": "Horizen(ZenCash)遭51%攻击损失超50万美元",
+    "keywords": [
+      "Horizen",
+      "ZenCash",
+      "51%攻击",
+      "双花攻击",
+      "隐私数字货币",
+      "区块链安全",
+      "算力控制",
+      "恶意矿工",
+      "延时函数防御"
+    ],
+    "summary": "2018年初，隐私数字货币Horizen（原ZenCash）遭遇51%攻击，一名恶意矿工控制了超过51%的区块链网络计算能力，向系统注入错误交易，导致损失超过50万美元。该事件促使Horizen团队研发了通过延时函数处罚恶意矿工的防御方案。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0171"
+    ],
+    "references": [
+      {
+        "title": "加密51%攻击的解决方案?在发生之前处罚矿工",
+        "link": "https://cloud.tencent.com/developer/news/327004"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2018-01",
+    "relatedAttackTools": [
+      "AT0078"
+    ],
+    "relatedThreatActors": [
+      "TA0046"
+    ]
+  }
+}

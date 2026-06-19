@@ -1,0 +1,21 @@
+{
+  "C1745": {
+    "title": "Training Data Poisoning Attacks Against Genomic Language Models",
+    "keywords": [
+      "genomic language model",
+      "training data poisoning",
+      "backdoor attack",
+      "targeted model control",
+      "pre-training",
+      "fine-tuning",
+      "genomics",
+      "model poisoning"
+    ],
+    "summary": "A systematic study demonstrates training data poisoning attacks against genomic language models. Attackers can inject malicious data during pre-training or fine-tuning to achieve targeted control over the model. This research reveals for the first time that training data poisoning can be used to implant backdoors and manipulate model behavior in the genomics domain.",
+    "references": [
+      {
+        "title": "Poisoning the Genome: Targeted Backdoor Attacks"
+      }
+    ]
+  }
+}

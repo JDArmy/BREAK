@@ -1,0 +1,34 @@
+{
+  "C1600": {
+    "title": "Mirai 僵尸网络利用物联网设备发起 DDoS 攻击",
+    "keywords": [
+      "Mirai",
+      "僵尸网络",
+      "物联网设备",
+      "DDoS攻击",
+      "C2服务器",
+      "域名解析基础设施",
+      "网络瘫痪",
+      "非法外联"
+    ],
+    "summary": "2016 年 Mirai 攻击利用受感染的物联网设备组建僵尸网络，通过 C2 服务器发动针对域名解析基础设施的分布式拒绝服务攻击，导致欧洲和北美大面积网络瘫痪，估计造成 1.1 亿美元经济损失。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0209"
+    ],
+    "references": [
+      {
+        "title": "Identification domain fronting traffic for revealing obfuscated C2 communications",
+        "link": "https://ieeexplore.ieee.org/abstract/document/9750455/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2016",
+    "relatedAttackTools": [
+      "AT0082"
+    ],
+    "relatedThreatActors": [
+      "TA0048"
+    ]
+  }
+}

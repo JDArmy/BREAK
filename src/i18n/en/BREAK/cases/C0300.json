@@ -1,0 +1,21 @@
+{
+  "C0300": {
+    "title": "KillNet Group Leverages CC-Attack Script for DDoS Campaigns",
+    "keywords": [
+      "KillNet",
+      "CC-Attack",
+      "DDoS",
+      "HTTP flood",
+      "open proxy",
+      "SecurityScorecard",
+      "botnet",
+      "traffic relay"
+    ],
+    "summary": "SecurityScorecard analysis reveals that the hacktivist group KillNet is using a script called CC-Attack to launch distributed denial-of-service attacks. The script automates the exploitation of open proxy servers to relay attack traffic, flooding target servers with forged HTTP requests to exhaust resources, characteristic of a typical challenge collapsar attack.",
+    "references": [
+      {
+        "title": "KillNet Utilizes CC-Attack: A Quick & Dirty DDoS Method"
+      }
+    ]
+  }
+}

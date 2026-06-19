@@ -1,0 +1,30 @@
+{
+  "C1756": {
+    "title": "LLM02:2025 敏感信息泄露风险",
+    "keywords": [
+      "OWASP",
+      "GenAI",
+      "LLM02",
+      "敏感信息泄露",
+      "模型输出",
+      "逆向攻击",
+      "训练数据",
+      "不安全输出处理",
+      "风险列表"
+    ],
+    "summary": "OWASP GenAI风险列表指出，配置不当的模型输出可能泄露专有算法或数据。泄露训练数据可能使模型面临逆向攻击，攻击者可通过模型输出来推断训练数据中的敏感信息。该风险强调了不安全的输出处理可能导致敏感信息泄露。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0245"
+    ],
+    "references": [
+      {
+        "title": "LLM02:2025 Sensitive Information Disclosure",
+        "link": "https://genai.owasp.org/llmrisk/llm02-insecure-output-handling/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

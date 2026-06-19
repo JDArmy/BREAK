@@ -1,0 +1,32 @@
+{
+  "C1262": {
+    "title": "GPS欺骗：检测无人机中的GPS欺诈",
+    "keywords": [
+      "GPS欺骗",
+      "无人机",
+      "GPS欺诈",
+      "地理位置欺诈",
+      "信号伪造",
+      "无人机安全",
+      "GPS spoofing",
+      "UAV",
+      "定位系统欺骗"
+    ],
+    "summary": "该研究分析了恶意人员如何利用GPS欺骗攻击无人机，通过伪造GPS信号误导无人机定位系统，展示了地理位置欺诈在无人机领域的实际应用风险。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0141"
+    ],
+    "references": [
+      {
+        "title": "Gps spoofing: Detecting gps fraud in unmanned aerial vehicles",
+        "link": "https://ieeexplore.ieee.org/abstract/document/9307036/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0024"
+    ],
+    "relatedThreatActors": []
+  }
+}

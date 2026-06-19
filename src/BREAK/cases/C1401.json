@@ -1,0 +1,37 @@
+{
+  "C1401": {
+    "title": "Beanstalk DAO 治理攻击事件",
+    "keywords": [
+      "Beanstalk DAO",
+      "治理攻击",
+      "闪电贷",
+      "恶意提案",
+      "BIP18",
+      "BIP19",
+      "紧急提交函数",
+      "DeFi",
+      "投票权",
+      "资金窃取"
+    ],
+    "summary": "2022 年，Beanstalk DAO 遭受治理攻击，攻击者利用闪电贷获取大量治理代币，获得超级多数投票权后，通过紧急提交函数执行恶意提案，窃取约 1.81 亿美元资金。攻击使用了两个提案，其中 BIP18 为木马提案，BIP19 为转移注意力的提案。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0167"
+    ],
+    "references": [
+      {
+        "title": "Governance Attack - Cyfrin Glossary",
+        "link": "https://www.cyfrin.io/glossary/governance-attack"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0077"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

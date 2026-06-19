@@ -1,0 +1,21 @@
+{
+  "C1173": {
+    "title": "Ferrari API Permission Abuse Led to Full Customer Data Takeover",
+    "keywords": [
+      "Ferrari API vulnerability",
+      "api.ferrari.com",
+      "API permission abuse",
+      "customer data takeover",
+      "business logic flaw",
+      "super admin creation",
+      "connected vehicle security",
+      "API key exposure"
+    ],
+    "summary": "In January 2023, security researchers discovered a business logic flaw in Ferrari's system at api.ferrari.com, where JS code on a dealer test site exposed API keys. Attackers could use the keys to access backend user management interfaces, create super admin accounts, and then view, modify, or delete all customer information and manage CMS functions.",
+    "references": [
+      {
+        "title": "Summary of Major Automotive Cybersecurity Incidents in 2023 - Tencent News"
+      }
+    ]
+  }
+}

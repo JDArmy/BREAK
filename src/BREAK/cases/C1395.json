@@ -1,0 +1,34 @@
+{
+  "C1395": {
+    "title": "默认凭据漏洞：暴露IP摄像头的案例研究",
+    "keywords": [
+      "默认凭据",
+      "IP摄像头",
+      "IoT安全",
+      "弱口令",
+      "视频监控",
+      "IEEE",
+      "设备暴露",
+      "网络空间测绘"
+    ],
+    "summary": "2023年IEEE会议论文研究了IoT设备默认凭据风险，特别聚焦于IP摄像头。研究发现大量联网IP摄像头仍使用制造商默认密码，极易被恶意行为者访问。攻击者可获取图像及更多敏感数据，用于犯罪活动。研究通过两个案例表明，使用默认凭据直接连接互联网的IP摄像头数量惊人。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0166"
+    ],
+    "references": [
+      {
+        "title": "Default credentials vulnerability: The case study of exposed ip cams",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10224944/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-07",
+    "relatedAttackTools": [
+      "AT0068"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

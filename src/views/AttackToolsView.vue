@@ -7,6 +7,7 @@ import KnowledgeSplitView from "@/components/KnowledgeSplitView.vue";
 import ReferenceList from "@/components/ReferenceList.vue";
 import { getMessageStringArray } from "@/utils/i18nMessage";
 import { useBreakpoints } from "@/composables/useBreakpoints";
+import { useCasesByRisk } from "@/composables/useCasesByRisk";
 
 const route = useRoute();
 const router = useRouter();
@@ -69,6 +70,10 @@ const attackToolItems = computed(() =>
 
 const selectedAttackTool = computed(() => BREAK.attackTools[selectedAttackToolKey.value]);
 const localeMessages = computed(() => messages.value[locale.value] as Record<string, unknown>);
+
+const { getCasesByAttackTool, ensureCases, cases } = useCasesByRisk();
+const relatedCases = computed(() => getCasesByAttackTool(selectedAttackToolKey.value));
+void ensureCases();
 
 const builderThreatActorKeys = computed(() =>
   Object.keys(BREAK.threatActors).filter((taKey) =>
@@ -204,6 +209,19 @@ const openRelationGraph = (atKey: string) => {
             class="entity-link"
           >
             {{ tKey }}: {{ $t(`BREAK.terms.${tKey}.title`) }}
+          </router-link>
+        </div>
+      </section>
+      <section v-if="relatedCases.length" class="detail-section" data-detail-anchor="cases">
+        <h3>{{ $t("relatedCases") }}</h3>
+        <div class="entity-links">
+          <router-link
+            v-for="cKey in relatedCases"
+            :key="cKey"
+            :to="isMobile ? { name: 'casesDetail', params: { cKey } } : { name: 'cases', hash: `#${cKey}` }"
+            class="entity-link"
+          >
+            {{ cKey }}: {{ cases[cKey]?.title }}
           </router-link>
         </div>
       </section>

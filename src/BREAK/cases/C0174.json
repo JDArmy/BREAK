@@ -1,0 +1,30 @@
+{
+  "C0174": {
+    "title": "广告战：反广告屏蔽过滤列表的回顾性测量与分析",
+    "keywords": [
+      "anti-adblock",
+      "filter lists",
+      "ad blocking",
+      "advertising",
+      "measurement",
+      "retrospective analysis",
+      "third-party domains",
+      "circumvention"
+    ],
+    "summary": "该研究回顾性测量和分析了反广告屏蔽过滤列表，发现第三方域名通过绕过过滤规则来投放广告。研究探讨了广告屏蔽器与反广告屏蔽器之间的对抗，以及反广告屏蔽器如何检测广告屏蔽器并提示用户。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0013"
+    ],
+    "references": [
+      {
+        "title": "The ad wars: retrospective measurement and analysis of anti-adblock filter lists",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3131365.3131387"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2017-01",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

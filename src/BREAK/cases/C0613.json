@@ -1,0 +1,30 @@
+{
+  "C0613": {
+    "title": "出借信用卡内资金，为何不是民间借贷",
+    "keywords": [
+      "信用卡套现",
+      "转贷",
+      "民间借贷",
+      "最高人民检察院",
+      "POS机套现",
+      "芮某",
+      "崔某",
+      "套取金融机构贷款"
+    ],
+    "summary": "最高人民检察院披露案例，芮某通过崔某提供的POS机刷信用卡套现后，将2.3万元借给崔某。该行为被认定为套取金融机构贷款转贷，不属于合法的民间借贷关系。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0062-001"
+    ],
+    "references": [
+      {
+        "title": "出借信用卡内资金,为何不是民间借贷_中华人民共和国最高人民检察院",
+        "link": "https://www.spp.gov.cn/spp/zdgz/202403/t20240327_650395.shtml"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-03",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

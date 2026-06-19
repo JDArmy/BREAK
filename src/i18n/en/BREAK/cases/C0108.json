@@ -1,0 +1,21 @@
+{
+  "C0108": {
+    "title": "Fraudlogix Breaks Down Mobile App Install Fraud Techniques",
+    "keywords": [
+      "Fraudlogix",
+      "install fraud",
+      "click injection",
+      "SDK spoofing",
+      "device farms",
+      "fake installs",
+      "mobile ad fraud",
+      "app install fraud"
+    ],
+    "summary": "Fraudlogix highlights how mobile app install fraud exploits fake installs, click injection, SDK spoofing, and device farms to drain advertising budgets. Fraudsters use these techniques to simulate large volumes of fake installs, contaminating downstream metrics such as retention rates and in-app revenue, preventing advertisers from accurately measuring the effectiveness of genuine user acquisition",
+    "references": [
+      {
+        "title": "Install Fraud: Click Injection, SDK Spoofing & Fake Installs | Fraudlogix"
+      }
+    ]
+  }
+}

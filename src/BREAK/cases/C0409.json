@@ -1,0 +1,35 @@
+{
+  "C0409": {
+    "title": "优步（Uber）MFA疲劳攻击事件",
+    "keywords": [
+      "Uber",
+      "MFA疲劳攻击",
+      "多因素认证",
+      "社会工程学",
+      "凭证窃取",
+      "WhatsApp钓鱼",
+      "内部服务器入侵",
+      "身份验证绕过"
+    ],
+    "summary": "2022年9月，一名18岁黑客在获取优步员工凭据后，持续向该员工发送一个多小时的MFA推送通知进行轰炸。随后，攻击者在WhatsApp上联系该员工，冒充优步IT团队成员，声称需要批准请求才能停止通知。该员工因疲劳和误导最终批准了请求，导致黑客成功进入优步内部服务器。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0036-001",
+      "R0246"
+    ],
+    "references": [
+      {
+        "title": "应对MFA疲劳：保护您的网络安全_黑客_用户名_认证 - 搜狐",
+        "link": "https://www.sohu.com/a/761197452_120286678"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-09",
+    "relatedAttackTools": [
+      "AT0094"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

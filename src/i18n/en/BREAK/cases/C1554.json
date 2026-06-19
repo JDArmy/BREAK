@@ -1,0 +1,21 @@
+{
+  "C1554": {
+    "title": "Stargate Bridge Architecture and Dynamic Empirical Analysis Reveal Custodial Attack Risks",
+    "keywords": [
+      "Stargate",
+      "cross-chain bridge",
+      "custodial attack",
+      "LayerZero",
+      "bridge contract",
+      "asset lockup",
+      "empirical analysis",
+      "DeFi exploit"
+    ],
+    "summary": "This study conducts an empirical analysis of the Stargate cross-chain bridge, finding that custodial attacks can exploit the bridge contracts on the source chain. The case indicates that the Stargate bridge can sometimes be exploited, posing risks of asset lockup or theft.",
+    "references": [
+      {
+        "title": "Seamlessly Transferring Assets through Layer-0 Bridges: An Empirical Analysis of Stargate Bridge's Architecture and Dynamics"
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "C1027": {
+    "title": "前员工账号被用于入侵企业内网",
+    "keywords": [
+      "CISA",
+      "前员工账号",
+      "VPN",
+      "内网渗透",
+      "凭据泄露",
+      "未注销账号",
+      "横向移动",
+      "网络管理员",
+      "身份验证"
+    ],
+    "summary": "美国网络安全与基础设施安全局（CISA）发布警报，确认一起网络攻击事件中，不明威胁行为者利用一名前员工的账号，成功获取了网络管理员凭据，进而通过内部VPN访问点进行身份验证，横向渗透至受害组织的本地环境。该案例揭示了离职员工账号未及时注销或凭据被共享/泄露所导致的严重安全风险。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0111-001"
+    ],
+    "references": [
+      {
+        "title": "Threat Actor Leverages Compromised Account of Former Employee to ... - CISA",
+        "link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-046a"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-02",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0024"
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "C1722": {
+    "title": "支付平台渗透测试发现系统性漏洞",
+    "keywords": [
+      "支付平台",
+      "渗透测试",
+      "价格操纵",
+      "未授权访问",
+      "支付令牌",
+      "会话令牌",
+      "配置错误",
+      "越权操作",
+      "数据泄露",
+      "商户支付"
+    ],
+    "summary": "对商户支付平台进行渗透测试，发现包括价格操纵、未授权访问敏感数据等严重漏洞，这些漏洞可能源于支付令牌或会话令牌配置错误，导致越权操作和数据泄露。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0236"
+    ],
+    "references": [
+      {
+        "title": "Penetration Testing of a Merchant Payment Platform; Systemic Vulnerabilities and Compliance-Centric Mitigation",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11049241/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "C0825": {
+    "title": "临沂多起冒充领导诈骗案预警",
+    "keywords": [
+      "冒充领导诈骗",
+      "电信网络诈骗",
+      "微信",
+      "社交欺骗",
+      "转账汇款",
+      "临沂",
+      "兰山区",
+      "党政机关",
+      "紧急预警"
+    ],
+    "summary": "2021年6月，临沂兰山区发生13起冒充党政机关事业单位领导的电信网络诈骗案件。诈骗分子通过微信大面积撒网添加工作人员为好友，伪装身份后以关心工作、急需转账等话术骗取受害人信任，最终诱导其转账汇款。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0083-002"
+    ],
+    "references": [
+      {
+        "title": "警方紧急预警!临沂近期发生多起冒充领导诈骗案|公安_网易订阅",
+        "link": "https://dy.163.com/article/GD3MEKCK0545RCRS.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-06",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0015"
+    ]
+  }
+}

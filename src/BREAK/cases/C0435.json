@@ -1,0 +1,32 @@
+{
+  "C0435": {
+    "title": "FraudBlocker识别并阻断协同式撞卡攻击",
+    "keywords": [
+      "FraudBlocker",
+      "carding attack",
+      "coordinated attack",
+      "stolen credit cards",
+      "card testing",
+      "e-commerce",
+      "transaction fraud",
+      "payment security",
+      "fraud detection"
+    ],
+    "summary": "FraudBlocker记录了一次针对其平台的协同式撞卡攻击。攻击者试图使用多个被盗信用卡凭证完成交易，以验证哪些卡仍处于活跃状态。该攻击主要针对高交易量、安全措施较少的小型电商平台，通过批量测试筛选出可用的有效卡片。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0040"
+    ],
+    "references": [
+      {
+        "title": "How We Identified and Blocked a Coordinated Carding Attack",
+        "link": "https://fraudblocker.com/articles/carding-attacks-%F0%9F%92%B3-we-were-targeted-and-heres-how-we-beat-them"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0055"
+    ]
+  }
+}

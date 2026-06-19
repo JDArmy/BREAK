@@ -1,0 +1,31 @@
+{
+  "C0103": {
+    "title": "广告点击欺诈检测：机器学习与深度学习方法研究",
+    "keywords": [
+      "广告点击欺诈",
+      "机器学习",
+      "深度学习",
+      "特征工程",
+      "无效点击",
+      "Juniper Research",
+      "在线广告",
+      "点击欺诈检测",
+      "虚假点击"
+    ],
+    "summary": "Juniper Research报告估计，到2023年底，广告欺诈给广告商造成的损失将达840亿美元，占全球在线广告支出的22%以上。预计17%的PC和桌面端点击为无效点击，无法带来广告支出回报。研究采用特征工程方法区分机器人与真实用户点击。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0008-002"
+    ],
+    "references": [
+      {
+        "title": "Ad click fraud detection using machine learning and deep learning algorithms",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10847816/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-01",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

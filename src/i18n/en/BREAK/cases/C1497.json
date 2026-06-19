@@ -1,0 +1,23 @@
+{
+  "C1497": {
+    "title": "Modeling resources in permissionless longest-chain total-order broadcast",
+    "keywords": [
+      "longest-chain protocol",
+      "long-range attack",
+      "Proof-of-Stake",
+      "resource depletion attack",
+      "historical private keys",
+      "forking attack",
+      "blockchain consensus",
+      "costless simulation",
+      "total-order broadcast",
+      "permissionless"
+    ],
+    "summary": "This study shows that Proof-of-Stake systems are more susceptible to long-range attacks and demonstrates such attacks against longest-chain protocols, including a general case of resource depletion attacks. An attacker forks from an early block using historical private keys and constructs an alternative chain at low cost to overwrite the main chain's history.",
+    "references": [
+      {
+        "title": "GitHub - goudanwang/miniblockchain2"
+      }
+    ]
+  }
+}

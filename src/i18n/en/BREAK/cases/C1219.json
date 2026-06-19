@@ -1,0 +1,21 @@
+{
+  "C1219": {
+    "title": "Local Model Poisoning Attacks Against Byzantine-Robust Federated Learning Systems",
+    "keywords": [
+      "federated learning",
+      "local model poisoning",
+      "Byzantine robustness",
+      "defense mechanisms",
+      "privacy-preserving computation",
+      "USENIX Security",
+      "adversarial attacks",
+      "machine learning security"
+    ],
+    "summary": "This study introduces a local model poisoning attack method targeting Byzantine-robust federated learning systems. Experiments demonstrate that the attack successfully compromises four state-of-the-art Byzantine-robust defense mechanisms, revealing that federated learning systems remain highly vulnerable to poisoning threats even with defenses in place.",
+    "references": [
+      {
+        "title": "Local Model Poisoning Attacks to Byzantine-Robust Federated Learning"
+      }
+    ]
+  }
+}

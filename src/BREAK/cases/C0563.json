@@ -1,0 +1,32 @@
+{
+  "C0563": {
+    "title": "女子利用拼多多漏洞拒收快递申请全额退款",
+    "keywords": [
+      "拼多多",
+      "恶意拒收",
+      "全额退款",
+      "薅羊毛",
+      "快递漏洞",
+      "商家维权",
+      "非法占有",
+      "武汉"
+    ],
+    "summary": "湖北武汉一女子利用拼多多平台漏洞，用另一个账号下单并要求分开发快递。送达后，女子仅拒收其中一件商品，取走另外三件，却申请全额退款，以此方式非法占有商品，造成商家损失。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0054-004"
+    ],
+    "references": [
+      {
+        "title": "...商家选择起诉维权|武汉市|拼多多|薅羊毛|湖北省|快递_手机新浪网",
+        "link": "https://news.sina.cn/2024-01-13/detail-inachywn1600708.d.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-01",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0001"
+    ]
+  }
+}

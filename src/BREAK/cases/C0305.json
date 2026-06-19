@@ -1,0 +1,36 @@
+{
+  "C0305": {
+    "title": "FBI捣毁大规模DDoS攻击背后的物联网僵尸网络",
+    "keywords": [
+      "FBI",
+      "物联网僵尸网络",
+      "DDoS攻击",
+      "Aisuru",
+      "Kimwolf",
+      "JackSkid",
+      "Mossad",
+      "分布式拒绝服务",
+      "僵尸网络捣毁",
+      "KrebsOnSecurity"
+    ],
+    "summary": "美国联邦执法机构捣毁了四个名为Aisuru、Kimwolf、JackSkid和Mossad的物联网僵尸网络，这些僵尸网络对一系列创纪录的分布式拒绝服务（DDoS）攻击负责。攻击利用了大量被感染的物联网设备，产生巨大的流量洪流，旨在瘫痪目标服务。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0029-004"
+    ],
+    "references": [
+      {
+        "title": "Feds Disrupt IoT Botnets Behind Huge DDoS Attacks",
+        "link": "https://krebsonsecurity.com/2026/03/feds-disrupt-iot-botnets-behind-huge-ddos-attacks/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-03",
+    "relatedAttackTools": [
+      "AT0082"
+    ],
+    "relatedThreatActors": [
+      "TA0048"
+    ]
+  }
+}

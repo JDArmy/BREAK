@@ -1,0 +1,34 @@
+{
+  "C1490": {
+    "title": "我是否被日食？以太坊日食攻击智能检测器",
+    "keywords": [
+      "Ethereum",
+      "日食攻击",
+      "Eclipse Attack",
+      "智能检测器",
+      "区块链安全",
+      "节点隔离",
+      "P2P网络",
+      "恶意连接",
+      "攻击检测"
+    ],
+    "summary": "该研究针对以太坊网络中的日食攻击设计了一个智能检测器。日食攻击使恶意行为者能够通过控制目标用户的所有传出连接来隔离系统用户，此类攻击在区块链应用中难以被检测。该检测器旨在解决这一难题，帮助用户识别自身是否被日食攻击隔离。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0186"
+    ],
+    "references": [
+      {
+        "title": "Am I eclipsed? A smart detector of eclipse attacks for Ethereum",
+        "link": "https://www.sciencedirect.com/science/article/abs/pii/S0167404818313798"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0078"
+    ],
+    "relatedThreatActors": [
+      "TA0046"
+    ]
+  }
+}

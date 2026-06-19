@@ -1,0 +1,32 @@
+{
+  "C1450": {
+    "title": "区块链市场机制中的时间边界操纵攻击",
+    "keywords": [
+      "时间戳操纵",
+      "区块链市场",
+      "边界攻击",
+      "McAfee双重拍卖",
+      "连续双重拍卖",
+      "市场操纵",
+      "时间攻击面",
+      "密封投标市场",
+      "公平性破坏",
+      "延迟攻击"
+    ],
+    "summary": "该论文指出，即使共识、不可篡改性和可审计性得到保证，时间也是一个独立的攻击面。攻击者利用延迟和时间戳操纵，在定期密封投标市场（如McAfee双重拍卖）和连续双重拍卖中系统性地破坏公平性和效率，因为区块链无法强制执行事件应被观察或最终确定的时间。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0176"
+    ],
+    "references": [
+      {
+        "title": "Timing is the New Attack: Blockchain Cannot Prevent Market Manipulation at the Boundary",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11449682/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-02",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

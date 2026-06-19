@@ -1,0 +1,37 @@
+{
+  "C1565": {
+    "title": "Axios供应链投毒事件：前端HTTP库被污染致恶意代码沿依赖链传播",
+    "keywords": [
+      "供应链投毒",
+      "Axios",
+      "JavaScript",
+      "HTTP库",
+      "恶意代码",
+      "依赖链传播",
+      "远程代码执行",
+      "凭据窃取",
+      "前端安全",
+      "npm"
+    ],
+    "summary": "2026年4月，国家网络安全通报中心预警，JavaScript HTTP库Axios遭供应链投毒攻击。恶意代码通过混淆、自清除及反调试技术隐藏，在开发者安装或更新时执行，窃取凭据并实现远程代码执行。由于Axios被大量AI应用及插件生态直接依赖，恶意代码沿依赖链渗透至终端用户运行环境，造成广泛的敏感数据泄露风险。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0203"
+    ],
+    "references": [
+      {
+        "title": "供应链投毒攻击集中爆发:Apifox、LiteLLM、Axios 相继中招,开源生 ...",
+        "link": "https://zhuanlan.zhihu.com/p/2026960260481466672"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-04",
+    "relatedAttackTools": [
+      "AT0013",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

@@ -6,9 +6,9 @@
     "keywords": [
       "APK签名"
     ],
-    "definition": "APK签名是业务安全、数据安全、供应链安全或新兴技术安全中的关键概念。",
-    "description": "APK签名常用于描述风险识别、攻击手法、控制措施或安全运营中的具体对象。",
-    "usageExample": "在业务安全评估中需要识别APK签名相关风险并建立对应控制。",
+    "definition": "APK 签名是让 Android 系统验证应用包发布者身份与完整性的签名过程。",
+    "description": "在 BREAK 业务安全分析中，APK 签名用于识别相关风险、滥用模式、控制要求及运营信号。",
+    "usageExample": "评估与 APK 签名相关的暴露面，并定义相应的控制措施。",
     "relatedRisks": [
       "R0222",
       "R0223",

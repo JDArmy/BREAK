@@ -1,0 +1,30 @@
+{
+  "C1348": {
+    "title": "端侧AI推理面临对抗攻击威胁",
+    "keywords": [
+      "端侧AI",
+      "推理安全",
+      "对抗攻击",
+      "预训练模型",
+      "移动平台",
+      "隐私威胁",
+      "防御方案",
+      "黑箱风险",
+      "系统综述"
+    ],
+    "summary": "一篇关于端侧AI推理安全的系统综述指出，随着预训练AI模型在移动平台上的广泛使用，其安全与隐私威胁日益增加。特别是对抗攻击等类别缺乏有效的防御方案，暴露了端侧AI模型在决策过程中易受操纵且其内部脆弱性难以解释和防御的黑箱问题。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0157"
+    ],
+    "references": [
+      {
+        "title": "Protecting On-Device AI Inference: A Systematic Review of Attacks and ...",
+        "link": "https://arxiv.org/abs/2605.29450"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "C1778": {
+    "title": "OTA升级过程易受中间人攻击与固件欺骗威胁",
+    "keywords": [
+      "汽车OTA",
+      "中间人攻击",
+      "固件欺骗",
+      "未授权访问",
+      "固件重放",
+      "恶意固件植入",
+      "Secure OTA",
+      "GitHub安全项目",
+      "车联网安全"
+    ],
+    "summary": "GitHub安全项目指出，汽车OTA更新过程易受多种网络安全威胁，包括中间人攻击（可劫持通信）、固件欺骗（可伪造升级包）以及未授权访问。攻击者通过这些手段可篡改或重放OTA包，植入恶意固件。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0251"
+    ],
+    "references": [
+      {
+        "title": "MCS Project 1 - Secure OTA - GitHub",
+        "link": "https://github.com/SEA-ME/MCS_Secure-OTA"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0072",
+      "AT0097"
+    ],
+    "relatedThreatActors": [
+      "TA0049",
+      "TA0061"
+    ]
+  }
+}

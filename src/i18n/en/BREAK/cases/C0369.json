@@ -1,0 +1,20 @@
+{
+  "C0369": {
+    "title": "CISA Alert: Cyber Attackers Targeting U.S. Organizations with Password Spraying",
+    "keywords": [
+      "CISA",
+      "password spraying",
+      "credential brute-force",
+      "account lockout policy",
+      "TTPs",
+      "targeted intrusion",
+      "U.S. organizations"
+    ],
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) issued an alert warning that malicious cyber actors are increasingly using password spraying, a variant of brute-force credential attacks, against U.S. and overseas organizations. This technique attempts a small set of common passwords against many accounts to evade account lockout policies.",
+    "references": [
+      {
+        "title": "Brute Force Attacks Conducted by Cyber Actors - CISA"
+      }
+    ]
+  }
+}

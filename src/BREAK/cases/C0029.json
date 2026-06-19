@@ -1,0 +1,31 @@
+{
+  "C0029": {
+    "title": "中国老年人医疗服务中的黄牛检测研究",
+    "keywords": [
+      "老年人医疗服务",
+      "黄牛检测",
+      "医疗号源",
+      "用户画像",
+      "医疗资源",
+      "IEEE",
+      "不正当抢占",
+      "医院"
+    ],
+    "summary": "一项关于中国老年人医疗服务的研究指出，黄牛行为严重消耗了医院资源，破坏了医疗秩序。部分用户为了紧急治疗，不得不向黄牛支付更高价格，这体现了医疗号源被不正当抢占的问题。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0003-004"
+    ],
+    "references": [
+      {
+        "title": "User profiling in elderly healthcare services in China: Scalper detection",
+        "link": "https://ieeexplore.ieee.org/abstract/document/8401867/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0002"
+    ]
+  }
+}

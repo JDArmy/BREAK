@@ -1,0 +1,23 @@
+{
+  "C1182": {
+    "title": "National Notification Center Warns of Multiple Supply Chain Poisoning Attacks",
+    "keywords": [
+      "supply chain poisoning",
+      "Apifox",
+      "LiteLLM",
+      "Axios",
+      "OpenClaw",
+      "dependency chain attack",
+      "credential theft",
+      "remote code execution",
+      "AI application security",
+      "software supply chain"
+    ],
+    "summary": "The National Cybersecurity Notification Center detected a recent surge in supply chain poisoning attacks targeting the API development tool Apifox, the Python library LiteLLM, and the JavaScript library Axios. The Axios compromise poses heightened risk as numerous AI applications like OpenClaw directly depend on it, allowing threats to propagate through dependency chains to end users and potential",
+    "references": [
+      {
+        "title": "National Cybersecurity Notification Center: Recent Surge in Supply Chain Poisoning Attacks Involving..."
+      }
+    ]
+  }
+}

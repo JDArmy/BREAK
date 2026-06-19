@@ -1,0 +1,22 @@
+{
+  "C1582": {
+    "title": "Cloudflare Analysis: Microchips and IoT Devices Become New Vectors for Supply Chain Attacks",
+    "keywords": [
+      "Cloudflare",
+      "supply chain attack",
+      "microchip",
+      "IoT device",
+      "firmware implant",
+      "hardware security",
+      "operational technology",
+      "OT",
+      "malicious code"
+    ],
+    "summary": "In a March 2022 analysis, Cloudflare noted that while software supply chain attacks remain the most common, attack methods have diversified. Adversaries can target hardware such as microchips, laptops, IoT devices, and operational technology (OT), even implanting malicious code at the firmware level. This highlights the broad range of potential targets in hardware supply chains, where everything f",
+    "references": [
+      {
+        "title": "theNET | Defending Against Software Supply Chain Attacks | Cloudflare"
+      }
+    ]
+  }
+}

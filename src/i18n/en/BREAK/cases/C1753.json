@@ -1,0 +1,21 @@
+{
+  "C1753": {
+    "title": "RAG Data Loader Attack Leads to Unauthorized Data Access",
+    "keywords": [
+      "RAG pipeline",
+      "data loader vulnerability",
+      "unauthorized data access",
+      "malicious document injection",
+      "privilege escalation in retrieval",
+      "LLM application security",
+      "data injection attack",
+      "retrieval augmented generation"
+    ],
+    "summary": "A security weakness in the data loader component of a RAG pipeline allows attackers to import malicious documents, resulting in unauthorized data access and the generation of harmful content. Any client that imports documents can trigger this vulnerability, causing the system to return sensitive information the client is not authorized to view.",
+    "references": [
+      {
+        "title": "The Hidden Threat in Plain Text: Attacking RAG Data Loaders"
+      }
+    ]
+  }
+}

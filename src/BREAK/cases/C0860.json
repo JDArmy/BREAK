@@ -1,0 +1,30 @@
+{
+  "C0860": {
+    "title": "BlackCat 勒索软件采用多重勒索策略",
+    "keywords": [
+      "BlackCat",
+      "勒索软件",
+      "多重勒索",
+      "双重勒索",
+      "三重勒索",
+      "DDoS",
+      "数据泄露",
+      "加密勒索"
+    ],
+    "summary": "2023 年 7 月的分析报告指出，BlackCat 勒索软件在“加密文件”双重勒索策略基础上，增加骚扰或 DDoS 攻击威胁，构成多重勒索。该组织也存在“不加密只泄露”的勒索模式，进一步丰富了其施压手段。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0085-002"
+    ],
+    "references": [
+      {
+        "title": "警惕因BlackCat勒索软件造成的数据泄露",
+        "link": "https://m.antiy.cn/research/notice&report/research_report/BlackCat_Analysis.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-07",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

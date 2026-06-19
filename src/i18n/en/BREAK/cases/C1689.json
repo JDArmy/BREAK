@@ -1,0 +1,21 @@
+{
+  "C1689": {
+    "title": "Apache Log4j Vulnerability Incident",
+    "keywords": [
+      "Apache Log4j",
+      "Log4Shell",
+      "remote code execution",
+      "Java logging library",
+      "SBOM",
+      "software bill of materials",
+      "vulnerability impact assessment",
+      "incident response"
+    ],
+    "summary": "In late 2021, the widely used Java logging library Apache Log4j disclosed a critical vulnerability affecting nearly all Java-based applications. Due to the lack of an SBOM, organizations could not quickly identify whether their own products or supplier deliverables contained the affected Log4j version, making it difficult to assess the scope of impact and prioritize remediation. This highlighted t",
+    "references": [
+      {
+        "title": "SBOM Explained: What Is a Software Bill of Materials? - FreeBuf Cybersecurity Portal"
+      }
+    ]
+  }
+}

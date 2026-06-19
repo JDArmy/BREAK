@@ -1,0 +1,21 @@
+{
+  "C0325": {
+    "title": "Analysis and Prevention of Recent OAuth Vulnerability Exploits",
+    "keywords": [
+      "OAuth 2.0",
+      "callback URL validation",
+      "phishing page",
+      "identity impersonation",
+      "account takeover",
+      "vulnerability analysis",
+      "Tencent Cloud",
+      "authorization exploit"
+    ],
+    "summary": "Tencent Cloud Developer Community published an analysis revealing that some OAuth 2.0 providers fail to properly validate callback URLs or have bypassable validation, allowing hackers to craft phishing pages that trick users into authorizing access, thereby gaining account permissions and enabling identity impersonation.",
+    "references": [
+      {
+        "title": "Analysis and prevention suggestions for the recent 'eye-catching OAuth vulnerability' - Tencent Cloud Development..."
+      }
+    ]
+  }
+}

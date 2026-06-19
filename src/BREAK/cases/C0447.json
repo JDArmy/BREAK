@@ -1,0 +1,32 @@
+{
+  "C0447": {
+    "title": "曝光:直播带货假货TOP100",
+    "keywords": [
+      "直播带货",
+      "假货",
+      "常熟市监局",
+      "古驰",
+      "阿迪达斯",
+      "库存尾单",
+      "虚假库存",
+      "商标侵权"
+    ],
+    "summary": "江苏常熟市场监督管理局查处一起直播带货造假案，主播在直播间展示假冒“古驰”“阿迪”等商标，以“库存尾单”名义销售假货。顾客下单后，直播间后台立即下架删除相关假货链接，属于利用虚假库存诱导交易。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0042"
+    ],
+    "references": [
+      {
+        "title": "曝光:直播带货假货TOP100_腾讯新闻",
+        "link": "https://news.qq.com/rain/a/20200817A0RBJL00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2020-08",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0036"
+    ]
+  }
+}

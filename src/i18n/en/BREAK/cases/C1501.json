@@ -1,0 +1,22 @@
+{
+  "C1501": {
+    "title": "Feasibility of Semi-Selfish Mining Attacks Under Undetected Conditions",
+    "keywords": [
+      "semi-selfish mining",
+      "selfish mining",
+      "block reward",
+      "mining pool",
+      "hashrate",
+      "fork detection",
+      "mining attack",
+      "blockchain",
+      "game theory"
+    ],
+    "summary": "This study examines the feasibility of semi-selfish mining attacks, where a mining pool sponsors a selfish mining operation to gain excess rewards. Honest miners may exit upon detecting abnormal fork behavior, while the attacker leverages this strategy to continuously earn a disproportionate share of block rewards without being detected.",
+    "references": [
+      {
+        "title": "Is semi‐selfish mining available without being detected?"
+      }
+    ]
+  }
+}

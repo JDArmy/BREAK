@@ -1,0 +1,22 @@
+{
+  "C1778": {
+    "title": "OTA Update Process Vulnerable to Man-in-the-Middle Attacks and Firmware Spoofing",
+    "keywords": [
+      "automotive OTA security",
+      "man-in-the-middle attack",
+      "firmware spoofing",
+      "unauthorized access",
+      "firmware replay",
+      "malicious firmware injection",
+      "secure OTA",
+      "GitHub security project",
+      "connected vehicle security"
+    ],
+    "summary": "A GitHub security project highlights that automotive OTA update processes are susceptible to multiple cybersecurity threats, including man-in-the-middle attacks that can hijack communications, firmware spoofing that can forge update packages, and unauthorized access. Attackers can use these methods to tamper with or replay OTA packages and implant malicious firmware.",
+    "references": [
+      {
+        "title": "MCS Project 1 - Secure OTA - GitHub"
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "C1443": {
+    "title": "Large-Scale Measurement and Analysis of Blockchain Address Poisoning Attacks",
+    "keywords": [
+      "blockchain address poisoning",
+      "Ethereum",
+      "BSC",
+      "address poisoning attack",
+      "on-chain privacy leak",
+      "USENIX",
+      "large-scale measurement",
+      "dust token",
+      "address similarity",
+      "on-chain transaction analysis"
+    ],
+    "summary": "A large-scale two-year measurement on Ethereum and BSC identifies 13 times more address poisoning attempts than publicly reported. Attackers send small tokens to user wallets and exploit address similarity and temporal correlation to trick victims into copying poisoned addresses, stealing assets. The study reveals how attackers leverage the transparency of on-chain transactions to analyze user hab",
+    "references": [
+      {
+        "title": "Blockchain Address Poisoning - USENIX"
+      }
+    ]
+  }
+}

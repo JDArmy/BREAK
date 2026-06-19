@@ -1,0 +1,36 @@
+{
+  "C1525": {
+    "title": "黑客反被钓鱼损失4800万美元：恶意授权合约攻击",
+    "keywords": [
+      "恶意授权合约",
+      "approve函数",
+      "无限授权",
+      "transferFrom",
+      "钓鱼网站",
+      "数字资产被盗",
+      "ERC-20",
+      "链上资产转移",
+      "白帽钓鱼"
+    ],
+    "summary": "一名曾攻击UXLINK项目的黑客，因误信伪装成白帽协商平台的钓鱼网站，签署了恶意智能合约的无限额度授权交易，导致其钱包内约4800万美元数字资产被转移。攻击者利用ERC-20标准的approve函数诱导用户授予无限授权，随后通过transferFrom函数转走资产。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0194"
+    ],
+    "references": [
+      {
+        "title": "黑客反被“钓鱼”?4800万美元数字资产在链上“蒸发”背后的安全...",
+        "link": "https://cloud.tencent.com/developer/article/2583766"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-11",
+    "relatedAttackTools": [
+      "AT0079"
+    ],
+    "relatedThreatActors": [
+      "TA0045",
+      "TA0047"
+    ]
+  }
+}

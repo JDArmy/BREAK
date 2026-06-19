@@ -1,0 +1,21 @@
+{
+  "C1276": {
+    "title": "White House Email Spoofing Incident",
+    "keywords": [
+      "White House email spoofing",
+      "phishing attack",
+      "domain impersonation",
+      "accounts-google.com",
+      "Google account credential theft",
+      "malicious links",
+      "spear phishing",
+      "typosquatting"
+    ],
+    "summary": "In 2015, attackers sent emails appearing to originate from the White House, containing malicious links that directed victims to a fake Google login page to steal Google account credentials. The phishing scheme used the domain 'accounts-google.com' to mimic Google's legitimate site.",
+    "references": [
+      {
+        "title": "Phishing Attacks: Similar Domain Identification and Effective Prevention Methods - CSDN Blog"
+      }
+    ]
+  }
+}

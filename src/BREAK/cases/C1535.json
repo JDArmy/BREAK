@@ -1,0 +1,32 @@
+{
+  "C1535": {
+    "title": "后量子区块链综述：区块链密码学抵御量子计算攻击",
+    "keywords": [
+      "后量子区块链",
+      "区块链密码学",
+      "量子计算攻击",
+      "Shor算法",
+      "Grover算法",
+      "抗量子密码系统",
+      "分布式账本技术",
+      "公钥密码学",
+      "哈希函数",
+      "量子威胁"
+    ],
+    "summary": "2020年1月23日发表的综述文章指出，区块链通过公钥密码学和哈希函数提供安全特性，但量子计算的快速发展使得基于Shor算法和Grover算法的攻击在近期成为可能。这些算法威胁公钥密码学和哈希函数，迫使区块链重新设计以采用抗量子攻击的密码系统。文章研究了后量子密码系统现状及其在区块链和分布式账本技术中的应用。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0196"
+    ],
+    "references": [
+      {
+        "title": "Towards post-quantum blockchain: A review on blockchain cryptography resistant to quantum computing attacks",
+        "link": "https://ieeexplore.ieee.org/abstract/document/8967098/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2020-01",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

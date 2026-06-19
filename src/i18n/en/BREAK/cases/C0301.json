@@ -1,0 +1,22 @@
+{
+  "C0301": {
+    "title": "HTTP Flood Mitigation: A Metadata-Based Detection Approach",
+    "keywords": [
+      "HTTP GET flood",
+      "metadata analysis",
+      "botnet",
+      "CC attack",
+      "IEEE",
+      "application-layer DDoS",
+      "request frequency anomaly",
+      "real-time big data analytics",
+      "attack mitigation"
+    ],
+    "summary": "A 2015 IEEE conference paper proposes a metadata monitoring method to defend against HTTP GET flood attacks. Attackers use botnets to exhaust server resources with massive volumes of legitimate-looking HTTP GET requests. The approach identifies IP addresses with anomalous request frequencies through real-time big data analytics and maintains normal service even under 9 Gbps attack traffic.",
+    "references": [
+      {
+        "title": "Mitigating HTTP flooding attacks with meta-data analysis"
+      }
+    ]
+  }
+}

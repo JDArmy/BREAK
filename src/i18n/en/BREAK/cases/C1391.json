@@ -1,0 +1,22 @@
+{
+  "C1391": {
+    "title": "Paras Jha Used Mirai Botnet to Attack Rutgers University",
+    "keywords": [
+      "Paras Jha",
+      "Mirai",
+      "botnet",
+      "DDoS attack",
+      "Rutgers University",
+      "IoT botnet",
+      "ProTraf Solutions",
+      "network outage",
+      "campus cyberattack"
+    ],
+    "summary": "Between 2014 and 2015, college student Paras Jha launched repeated DDoS attacks against Rutgers University's network using an IoT botnet he built with approximately 40,000 zombie nodes, aiming to force the school to switch its DDoS protection provider. The attacks crippled the registration system and caused prolonged campus network outages, severely disrupting academic operations.",
+    "references": [
+      {
+        "title": "The Strange Story of the Teens Behind the Mirai Botnet"
+      }
+    ]
+  }
+}

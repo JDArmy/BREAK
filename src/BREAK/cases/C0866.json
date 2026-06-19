@@ -1,0 +1,33 @@
+{
+  "C0866": {
+    "title": "烟台莱山某公司遭WannaCry勒索病毒攻击",
+    "keywords": [
+      "WannaCry",
+      "勒索病毒",
+      "文件上传漏洞",
+      "后门程序",
+      "数据库加密",
+      "网警查处",
+      "烟台莱山",
+      "勒索攻击"
+    ],
+    "summary": "2026年2月，烟台莱山某公司服务器感染勒索病毒，数据库被锁定无法使用。经查，攻击者利用业务系统文件上传漏洞植入后门程序，投放WannaCry勒索病毒，导致大量文件被加密。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0085"
+    ],
+    "references": [
+      {
+        "title": "公司文件“中毒加密”，莱山网警查处一起勒索病毒攻击案件",
+        "link": "https://yantai.dzwww.com/dz2022/202602/t20260203_17391291.htm"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-02",
+    "relatedAttackTools": [
+      "AT0013",
+      "AT0054"
+    ],
+    "relatedThreatActors": []
+  }
+}

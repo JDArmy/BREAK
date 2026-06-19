@@ -1,0 +1,36 @@
+{
+  "C0325": {
+    "title": "针对近期“博全球眼球的OAuth漏洞”的分析与防范建议",
+    "keywords": [
+      "OAuth 2.0",
+      "回调URL校验",
+      "钓鱼页面",
+      "身份冒用",
+      "账户权限",
+      "漏洞分析",
+      "腾讯云",
+      "授权诱导"
+    ],
+    "summary": "腾讯云开发者社区发文分析指出，部分OAuth 2.0提供方因未对回调URL进行有效校验，或校验可被绕过，导致黑客能够构造钓鱼页面，利用该漏洞诱导用户授权，进而获取用户账户权限，实现身份冒用。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0030-002"
+    ],
+    "references": [
+      {
+        "title": "针对近期“博全球眼球的OAuth漏洞”的分析与防范建议-腾讯云开发...",
+        "link": "https://cloud.tencent.com/developer/article/1035354"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2018-02",
+    "relatedAttackTools": [
+      "AT0063",
+      "AT0071",
+      "AT0089"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

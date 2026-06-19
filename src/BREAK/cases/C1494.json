@@ -1,0 +1,32 @@
+{
+  "C1494": {
+    "title": "权益证明区块链上的权益流失攻击",
+    "keywords": [
+      "权益流失攻击",
+      "PoS区块链",
+      "后验腐蚀",
+      "长程攻击",
+      "无成本模拟",
+      "历史私钥",
+      "分叉攻击",
+      "主链完整性"
+    ],
+    "summary": "该研究探讨了PoS区块链中的权益流失攻击，包括后验腐蚀和长程攻击。攻击者可利用历史私钥从早期区块分叉并构建替代链，由于无成本模拟特性，攻击成本极低，威胁主链历史完整性。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0187"
+    ],
+    "references": [
+      {
+        "title": "Stake-bleeding attacks on proof-of-stake blockchains",
+        "link": "https://ieeexplore.ieee.org/abstract/document/8525396/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2018",
+    "relatedAttackTools": [
+      "AT0078"
+    ],
+    "relatedThreatActors": []
+  }
+}

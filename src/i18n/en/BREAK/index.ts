@@ -8,6 +8,7 @@ const businessSceneFiles = import.meta.glob("./business-scenes/*.json", { eager:
 const attackToolFiles = import.meta.glob("./attack-tools/*.json", { eager: true });
 const threatActorFiles = import.meta.glob("./threat-actors/*.json", { eager: true });
 const termFiles = import.meta.glob("./terms/*.json", { eager: true });
+const caseFiles = import.meta.glob("./cases/*.json", { eager: true });
 
 const BREAK = {
   ...basicInfo,
@@ -18,6 +19,7 @@ const BREAK = {
   attackTools: loadJsonModules(attackToolFiles),
   threatActors: loadJsonModules(threatActorFiles),
   terms: loadJsonModules(termFiles),
+  cases: loadJsonModules(caseFiles),
 };
 
 export default BREAK;

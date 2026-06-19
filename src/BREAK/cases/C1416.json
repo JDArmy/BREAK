@@ -1,0 +1,35 @@
+{
+  "C1416": {
+    "title": "加密借贷协议Themis遭预言机操纵攻击",
+    "keywords": [
+      "Themis",
+      "加密借贷协议",
+      "预言机操纵攻击",
+      "价格操纵",
+      "DeFi安全",
+      "链上攻击",
+      "清算逻辑",
+      "成都链安"
+    ],
+    "summary": "2023年6月28日，加密借贷协议Themis遭到预言机操纵攻击，攻击者通过操纵预言机提供的外部价格数据，影响协议的正常借贷或清算逻辑，最终获利约37万美元。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0169"
+    ],
+    "references": [
+      {
+        "title": "成都链安安全月报|6月区块链生态安全事件损失超9766.4 万美元_数据...",
+        "link": "https://blog.csdn.net/CDLianan/article/details/131569552"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-06",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0077"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

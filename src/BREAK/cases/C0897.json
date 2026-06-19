@@ -1,0 +1,34 @@
+{
+  "C0897": {
+    "title": "威胁猎人《2022年API安全研究报告》发布,平均每月受攻击API数量超...",
+    "keywords": [
+      "API安全",
+      "威胁猎人",
+      "社交平台",
+      "扫号攻击",
+      "撞库攻击",
+      "黑产团伙",
+      "账号安全",
+      "2022年报告"
+    ],
+    "summary": "2022年威胁猎人报告指出，监测到大量针对社交平台的扫号、撞库攻击，其中不乏专业黑产团伙参与。部分大型社交平台因API接口存在问题而屡遭攻击，导致账号安全事件频发。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0090"
+    ],
+    "references": [
+      {
+        "title": "威胁猎人《2022年API安全研究报告》发布,平均每月受攻击API数量超...",
+        "link": "https://maimai.cn/article/detail?fid=1772294146&efid=U6Dt3WPxckan3Un3ODidNQ"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022",
+    "relatedAttackTools": [
+      "AT0042"
+    ],
+    "relatedThreatActors": [
+      "TA0017"
+    ]
+  }
+}

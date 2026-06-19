@@ -1,0 +1,34 @@
+{
+  "C1349": {
+    "title": "NIST确认AI系统易受数据操纵导致行为异常",
+    "keywords": [
+      "NIST",
+      "AI系统",
+      "数据操纵",
+      "对抗攻击",
+      "行为异常",
+      "网络安全",
+      "AI安全指南",
+      "不可信数据"
+    ],
+    "summary": "美国国家标准与技术研究院（NIST）指出，AI系统在接触不可信数据时会出现故障，攻击者正利用此漏洞。NIST发布了相关攻击类型及缓解指南，但同时承认目前尚无万无一失的保护方法。这凸显了AI系统内部决策因数据偏见或恶意篡改而变得不可解释和不可控的黑箱本质。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0157"
+    ],
+    "references": [
+      {
+        "title": "NIST Identifies Types of Cyberattacks That Manipulate Behavior of AI ...",
+        "link": "https://www.nist.gov/news-events/news/2024/01/nist-identifies-types-cyberattacks-manipulate-behavior-ai-systems"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-01",
+    "relatedAttackTools": [
+      "AT0093"
+    ],
+    "relatedThreatActors": [
+      "TA0058"
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "C1780": {
+    "title": "无线远程信息处理系统威胁：恶意应用可滥用接口攻击联网汽车",
+    "keywords": [
+      "智能网联汽车",
+      "无线远程信息处理系统",
+      "车载接口安全",
+      "远程攻击",
+      "非授权控制",
+      "数据窃取",
+      "恶意应用",
+      "车联网安全"
+    ],
+    "summary": "研究指出，智能网联汽车配备的无线远程信息处理系统存在多个接口漏洞，恶意应用或智能连接设备可利用这些接口发起远程攻击，甚至通过用户智能手机滥用车辆接口，实现非授权控制和数据窃取。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0252"
+    ],
+    "references": [
+      {
+        "title": "Wireless telematics systems in emerging intelligent and connected vehicles: Threats and solutions",
+        "link": "https://ieeexplore.ieee.org/abstract/document/8315214/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2018-12",
+    "relatedAttackTools": [
+      "AT0054",
+      "AT0083",
+      "AT0097"
+    ],
+    "relatedThreatActors": [
+      "TA0049",
+      "TA0061"
+    ]
+  }
+}

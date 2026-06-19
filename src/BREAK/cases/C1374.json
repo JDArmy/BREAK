@@ -1,0 +1,30 @@
+{
+  "C1374": {
+    "title": "Hyperliquid钱包私钥泄露致2100万美元被盗",
+    "keywords": [
+      "Hyperliquid",
+      "钱包私钥泄露",
+      "2100万美元被盗",
+      "加密货币交易所",
+      "资产转移",
+      "访问权限",
+      "安全事件"
+    ],
+    "summary": "Hyperliquid平台遭遇钱包攻击，损失2100万美元。与智能合约漏洞或交易所攻击不同，此次事件直接源于私钥泄露，攻击者获得了钱包登录凭证的直接访问权限，从而转走资产。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0162"
+    ],
+    "references": [
+      {
+        "title": "$21 Million Vanishes After Hyperliquid Wallet Hack",
+        "link": "https://cryptonews.net/news/security/31772067/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0047"
+    ]
+  }
+}

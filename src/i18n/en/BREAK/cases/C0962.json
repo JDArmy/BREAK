@@ -1,0 +1,21 @@
+{
+  "C0962": {
+    "title": "Accurately Discovering Malicious IP Clusters Using Imprecise IP Blacklists",
+    "keywords": [
+      "IP blacklist",
+      "malicious IP cluster",
+      "IP rotation",
+      "evasion detection",
+      "blacklist incompleteness",
+      "attacker behavior",
+      "IP reputation",
+      "network security"
+    ],
+    "summary": "Research indicates that attackers can better evade detection by launching malicious activities through clusters of multiple IP addresses. Traditional IP blacklists are often incomplete and suffer from update delays. Attackers exploit this limitation by rotating or distributing IP addresses, making it difficult for individual malicious IPs to be blocklisted, thereby bypassing blocking.",
+    "references": [
+      {
+        "title": "(Un)wisdom of Crowds: Accurately Spotting Malicious IP Clusters Using Not-So-Accurate IP Blacklists"
+      }
+    ]
+  }
+}

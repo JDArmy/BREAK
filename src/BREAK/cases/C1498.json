@@ -1,0 +1,31 @@
+{
+  "C1498": {
+    "title": "PoS区块链长程攻击CTF挑战",
+    "keywords": [
+      "PoS区块链",
+      "长程攻击",
+      "无成本模拟",
+      "CTF挑战",
+      "miniblockchain2",
+      "共识安全",
+      "GitHub项目",
+      "攻击复现"
+    ],
+    "summary": "GitHub上的一个CTF挑战项目，基于易受长程攻击的PoS区块链构建。该项目提供了一个易受攻击的PoS区块链环境，参与者需要利用长程攻击漏洞完成挑战，并提供了详细的解决方案指南。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0187"
+    ],
+    "references": [
+      {
+        "title": "GitHub - goudanwang/miniblockchain2",
+        "link": "https://github.com/goudanwang/miniblockchain2"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0078"
+    ],
+    "relatedThreatActors": []
+  }
+}

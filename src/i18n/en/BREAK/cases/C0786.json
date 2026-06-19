@@ -1,0 +1,22 @@
+{
+  "C0786": {
+    "title": "Surge in Malicious PyPI and npm Packages Targeting DevOps and CI/CD Environments",
+    "keywords": [
+      "PyPI malicious packages",
+      "npm malware",
+      "supply chain attack",
+      "DevOps pipeline security",
+      "CI/CD credential theft",
+      "cryptocurrency wallet stealer",
+      "macOS malware",
+      "AI workflow compromise",
+      "open-source registry poisoning"
+    ],
+    "summary": "Security researchers have identified a sharp increase in malicious PyPI and npm packages designed to steal developer credentials, CI/CD data, and cryptocurrency wallets. The campaigns target macOS systems, AI workflows, and cloud environment configurations, compromising open-source package registries to execute software supply chain attacks that pose a severe threat to DevOps pipelines relying on ",
+    "references": [
+      {
+        "title": "PyPI, npm, and AI Tools Exploited in Malware Surge Targeting DevOps and ..."
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "C1786": {
+    "title": "DISC系统提出自主权凭证聚合以应对凭证伪造风险",
+    "keywords": [
+      "去中心化身份",
+      "自主权凭证聚合",
+      "凭证伪造",
+      "DISC系统",
+      "隐私保护",
+      "身份安全",
+      "IEEE论文",
+      "防伪造"
+    ],
+    "summary": "2025年IEEE论文介绍DISC（去中心化身份系统与自主权凭证聚合）方案，重点解决去中心化身份场景中的凭证伪造、隐私保护等关键问题。该方案通过凭证聚合机制增强身份安全，防止凭证被恶意伪造或滥用，为构建防伪造的去中心化身份体系提供了技术参考。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0253"
+    ],
+    "references": [
+      {
+        "title": "DISC: Decentralized Identity System With Self-Sovereign Credential Aggregation",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11260514/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-01",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

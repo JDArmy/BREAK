@@ -1,0 +1,30 @@
+{
+  "C1709": {
+    "title": "你已被 LaTeXpOsEd：基于大语言模型对预印本存档信息泄露的系统性分析",
+    "keywords": [
+      "预印本",
+      "信息泄露",
+      "Google Drive",
+      "API密钥",
+      "大语言模型",
+      "arXiv",
+      "协作文档",
+      "链接泄露",
+      "语义泄露"
+    ],
+    "summary": "一项系统分析发现，预印本存档中存在信息泄露问题，包括 Google Drive 链接、API 密钥以及各种语义泄露。研究指出，这些文档可能因便于协作而被共享，导致基于链接的访问泄露，例如私有文档或密钥通过共享链接暴露。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0233"
+    ],
+    "references": [
+      {
+        "title": "You Have Been LaTeXpOsEd: A Systematic Analysis of Information Leakage in Preprint Archives Using Large Language Models",
+        "link": "https://arxiv.org/abs/2510.03761"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

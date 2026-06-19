@@ -1,0 +1,34 @@
+{
+  "C0812": {
+    "title": "欧委会确认Trivy供应链攻击导致数据泄露",
+    "keywords": [
+      "供应链攻击",
+      "Trivy",
+      "数据泄露",
+      "欧委会",
+      "安全工具污染",
+      "供应链投毒",
+      "92GB压缩数据",
+      "国家网络安全通报中心"
+    ],
+    "summary": "2026年4月，国家网络安全通报中心通报近期多起供应链投毒事件，其中欧委会确认Trivy供应链攻击导致数据泄露，被盗92GB压缩数据。攻击者通过污染安全工具Trivy的供应链，窃取敏感数据。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0081"
+    ],
+    "references": [
+      {
+        "title": "网络安全周报(2026年4月1日-4月26)第371期 - 知乎",
+        "link": "https://zhuanlan.zhihu.com/p/2032016709259882946"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-04",
+    "relatedAttackTools": [
+      "AT0087"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

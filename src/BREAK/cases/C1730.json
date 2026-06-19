@@ -1,0 +1,33 @@
+{
+  "C1730": {
+    "title": "类人攻击：在野点击欺诈的自主性剖析",
+    "keywords": [
+      "类人攻击",
+      "点击欺诈",
+      "广告点击注入",
+      "欺诈检测",
+      "广告归因",
+      "虚假点击",
+      "移动广告",
+      "ACM CCS"
+    ],
+    "summary": "该研究定义了一种名为“类人攻击”的点击欺诈类型，其行为模式几乎与正常用户点击无异。攻击者通过直接向广告代码中注入欺诈点击代码，使得虚假点击难以被传统检测手段识别，从而更有效地骗取广告归因收益。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0237"
+    ],
+    "references": [
+      {
+        "title": "Dissecting click fraud autonomy in the wild",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3460120.3484546"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0091"
+    ],
+    "relatedThreatActors": [
+      "TA0056"
+    ]
+  }
+}

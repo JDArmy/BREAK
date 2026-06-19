@@ -1,0 +1,19 @@
+{
+  "C1590": {
+    "title": "Security Issues After eSIM Domestic Deregulation",
+    "keywords": [
+      "eSIM remote provisioning",
+      "number farming",
+      "virtual eSIM identities",
+      "cloud server fraud",
+      "mass spam messages",
+      "eSIM hijacking"
+    ],
+    "summary": "Reports indicate that the cross-region remote provisioning feature of eSIM technology is being exploited by criminal groups for large-scale number farming fraud. Criminals rent cloud servers to generate virtual eSIM identities in bulk, attaching dozens of sub-numbers under each main account to send mass spam messages, increasing the difficulty of tracking and enforcement.",
+    "references": [
+      {
+        "title": "eSIM Unlocked Domestically, But How to Manage Security? _ Fraud Cases _ Users _ Devices"
+      }
+    ]
+  }
+}

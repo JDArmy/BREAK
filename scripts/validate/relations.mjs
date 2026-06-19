@@ -67,6 +67,7 @@ function collectRelationAudit() {
   const avoidances = loadEntities('avoidances');
   const attackTools = loadEntities('attack-tools');
   const threatActors = loadEntities('threat-actors');
+  const cases = loadEntities('cases');
   const businessScenes = loadBusinessScenes();
 
   const riskIds = ids(risks);
@@ -167,6 +168,7 @@ function collectRelationAudit() {
     { name: 'ThreatActor.useAttackTools', observationOnly: true, ...coverage(threatActors, 'useAttackTools') },
     { name: 'ThreatActor.directCauseRisks', ...coverage(threatActors, 'directCauseRisks') },
     { name: 'ThreatActor.indirectSupportRisks', ...coverage(threatActors, 'indirectSupportRisks') },
+    { name: 'Case.relatedRisks', observationOnly: true, ...coverage(cases, 'relatedRisks') },
   ];
 
   return {
@@ -177,6 +179,7 @@ function collectRelationAudit() {
       attackTools: attackTools.length,
       threatActors: threatActors.length,
       businessScenes: businessScenes.length,
+      cases: cases.length,
     },
     summaries,
     review: {

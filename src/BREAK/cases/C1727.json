@@ -1,0 +1,37 @@
+{
+  "C1727": {
+    "title": "FCFraud：从用户侧检测自动化点击欺诈",
+    "keywords": [
+      "FCFraud",
+      "点击欺诈检测",
+      "广告欺诈",
+      "僵尸网络",
+      "自动化点击器",
+      "用户侧检测",
+      "操作系统层",
+      "恶意软件",
+      "广告点击注入"
+    ],
+    "summary": "Md. Shahrear Iqbal等人在2016年提出FCFraud技术，用于从操作系统层面检测自动化点击欺诈。该技术针对攻击者利用僵尸网络感染用户机器，通过自动化点击器模拟虚假广告点击以骗取广告主费用的行为，实现了99.6%的广告请求分类准确率和100%的欺诈进程识别率。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0237"
+    ],
+    "references": [
+      {
+        "title": "Fcfraud: Fighting click-fraud from the user side",
+        "link": "https://ieeexplore.ieee.org/abstract/document/7423147/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2016-01",
+    "relatedAttackTools": [
+      "AT0044",
+      "AT0091"
+    ],
+    "relatedThreatActors": [
+      "TA0001",
+      "TA0056"
+    ]
+  }
+}

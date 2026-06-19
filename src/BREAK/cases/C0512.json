@@ -1,0 +1,35 @@
+{
+  "C0512": {
+    "title": "破解API加密逆向接口分析",
+    "keywords": [
+      "API加密逆向",
+      "AES解密",
+      "浏览器断点调试",
+      "CryptoJS",
+      "JavaScript逆向",
+      "HTTP请求拦截",
+      "大模型辅助分析",
+      "加密算法还原"
+    ],
+    "summary": "分析某国外站点时发现核心API返回加密字符串。通过浏览器断点调试，拦截到API请求，跟踪到解密方法。分析JS代码确认使用了AES加密，最终利用大模型辅助分析并还原加解密算法，成功解密获取数据。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0051-002"
+    ],
+    "references": [
+      {
+        "title": "破解API加密逆向接口分析,看这篇就够了_逆向api-CSDN博客",
+        "link": "https://blog.csdn.net/qq_42952437/article/details/143271297"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-10",
+    "relatedAttackTools": [
+      "AT0015",
+      "AT0014",
+      "AT0028",
+      "AT0057"
+    ],
+    "relatedThreatActors": []
+  }
+}

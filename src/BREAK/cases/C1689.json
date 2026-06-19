@@ -1,0 +1,32 @@
+{
+  "C1689": {
+    "title": "Apache Log4j 漏洞事件",
+    "keywords": [
+      "Apache Log4j",
+      "Log4Shell",
+      "远程代码执行",
+      "Java日志库",
+      "SBOM",
+      "软件物料清单",
+      "漏洞影响评估",
+      "应急响应"
+    ],
+    "summary": "2021年底，广泛使用的Java日志库Apache Log4j曝出严重漏洞，几乎影响所有基于Java的应用。由于缺乏SBOM，组织无法快速识别自身产品或供应商交付物中是否包含受影响的Log4j版本，导致漏洞影响范围和修复优先级难以评估，凸显了软件物料清单在应急响应中的关键作用。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0229"
+    ],
+    "references": [
+      {
+        "title": "SBOM 详解:什么是软件物料清单? - FreeBuf网络安全行业门户",
+        "link": "https://www.freebuf.com/articles/es/478161.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-12",
+    "relatedAttackTools": [
+      "AT0054"
+    ],
+    "relatedThreatActors": []
+  }
+}

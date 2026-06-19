@@ -1,0 +1,30 @@
+{
+  "C1700": {
+    "title": "GCP IAM强化：从过度授权到最小权限",
+    "keywords": [
+      "GCP",
+      "IAM",
+      "过度授权",
+      "最小权限",
+      "服务账号",
+      "审计",
+      "JIT",
+      "云安全",
+      "权限强化"
+    ],
+    "summary": "该项目比较了GCP中不安全与安全的IAM设计，展示了过度授权的服务账号如何拥有广泛权限和更大攻击面，并通过审计和JIT模拟进行强化，遵循最小权限原则。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0231"
+    ],
+    "references": [
+      {
+        "title": "ANTONINAOTIENO/GCP-IAM-Hardening-From-Overprivileged-Access-to ...",
+        "link": "https://github.com/ANTONINAOTIENO/GCP-IAM-Hardening-From-Overprivileged-Access-to-Least-Privilege-with-Audit-JIT-Simulation"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

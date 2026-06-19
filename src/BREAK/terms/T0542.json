@@ -6,9 +6,9 @@
     "keywords": [
       "临时凭证"
     ],
-    "definition": "临时凭证是业务安全、数据安全、供应链安全或新兴技术安全中的关键概念。",
-    "description": "临时凭证常用于描述风险识别、攻击手法、控制措施或安全运营中的具体对象。",
-    "usageExample": "在业务安全评估中需要识别临时凭证相关风险并建立对应控制。",
+    "definition": "一种短期有效的凭证，用于限定范围的访问，相比长期密钥能降低暴露风险。",
+    "description": "临时凭证用于在BREAK业务安全分析中识别相关风险、滥用模式、控制需求和操作信号。",
+    "usageExample": "评估临时凭证相关的暴露面并定义相应的控制措施。",
     "relatedRisks": [],
     "relatedAvoidances": [],
     "relatedAttackTools": [],

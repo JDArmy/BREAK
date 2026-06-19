@@ -1,0 +1,21 @@
+{
+  "C1609": {
+    "title": "Implementation and Detection of Modbus/TCP Network Attacks",
+    "keywords": [
+      "Modbus/TCP",
+      "denial-of-service attack",
+      "DoS",
+      "network attack detection",
+      "industrial control systems",
+      "ICS security",
+      "threshold detection",
+      "Modbus protocol"
+    ],
+    "summary": "An academic paper focusing on the Modbus/TCP protocol, examining the implementation of network attacks such as denial-of-service (DoS) and exploring threshold-based detection methods. The study demonstrates specific attack techniques against the Modbus/TCP protocol.",
+    "references": [
+      {
+        "title": "Implementation and Detection of Modbus Cyberattacks"
+      }
+    ]
+  }
+}

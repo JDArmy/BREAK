@@ -1,0 +1,35 @@
+{
+  "C0807": {
+    "title": "175个恶意npm包借CDN隐身进行钓鱼攻击",
+    "keywords": [
+      "npm",
+      "恶意包",
+      "CDN",
+      "钓鱼攻击",
+      "供应链安全",
+      "开源组件投毒",
+      "软件包注册表",
+      "恶意软件包"
+    ],
+    "summary": "2025年11月，攻击者在npm官方注册表中发布了至少175个恶意软件包，累计被下载超过2.6万次。这些包利用CDN隐藏恶意行为，实施精心设计的钓鱼攻击，对下游用户构成严重安全威胁。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0081-005"
+    ],
+    "references": [
+      {
+        "title": "175个恶意npm包借CDN“隐身” 2.6万次下载背后是一场精心设计的钓鱼攻击...",
+        "link": "https://dy.163.com/article/KDM2UPBG0556CG2E.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-11",
+    "relatedAttackTools": [
+      "AT0063",
+      "AT0096"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

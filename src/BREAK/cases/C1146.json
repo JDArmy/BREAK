@@ -1,0 +1,31 @@
+{
+  "C1146": {
+    "title": "美国司法部指控NFT欺诈与洗钱案",
+    "keywords": [
+      "NFT",
+      "欺诈",
+      "洗钱",
+      "美国司法部",
+      "刑事指控",
+      "数字资产",
+      "投资者损失",
+      "NFT rug pull"
+    ],
+    "summary": "美国司法部宣布对两名被告提起指控，他们涉嫌实施NFT欺诈和洗钱计划。检察官指出，NFT资产看似是致富的好机会，但最终只会导致投资者损失钱财。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0122"
+    ],
+    "references": [
+      {
+        "title": "Two Defendants Charged In Non-Fungible Token (\"NFT\") Fraud And Money ...",
+        "link": "https://www.justice.gov/usao-sdny/pr/two-defendants-charged-non-fungible-token-nft-fraud-and-money-laundering-scheme-0"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0039"
+    ]
+  }
+}

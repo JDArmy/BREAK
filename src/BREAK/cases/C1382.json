@@ -1,0 +1,36 @@
+{
+  "C1382": {
+    "title": "集客AP固件后门事件",
+    "keywords": [
+      "集客AP固件",
+      "K2T路由器",
+      "DNS劫持",
+      "后门",
+      "肉鸡",
+      "黑产",
+      "固件篡改",
+      "斐讯",
+      "恶意DNS请求",
+      "物联网安全"
+    ],
+    "summary": "用户发现其K2T路由器刷入的集客AP固件（JIKEAP_K2T_QCA956X_6.2_2020二月版本）在无设备连接时，自动向人民网、qq、微博等发起DNS请求，怀疑固件被植入后门，设备被用作肉鸡从事黑产活动。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0164"
+    ],
+    "references": [
+      {
+        "title": "实锤集客AP固件后门-斐讯无线路由器以及其它斐迅网络设备-恩山...",
+        "link": "https://www.right.com.cn/FORUM/thread-3402070-1-1.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2020-03",
+    "relatedAttackTools": [
+      "AT0081"
+    ],
+    "relatedThreatActors": [
+      "TA0048"
+    ]
+  }
+}

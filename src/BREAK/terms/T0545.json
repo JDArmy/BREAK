@@ -6,9 +6,9 @@
     "keywords": [
       "SaaS"
     ],
-    "definition": "SaaS是业务安全、数据安全、供应链安全或新兴技术安全中的关键概念。",
-    "description": "SaaS常用于描述风险识别、攻击手法、控制措施或安全运营中的具体对象。",
-    "usageExample": "在业务安全评估中需要识别SaaS相关风险并建立对应控制。",
+    "definition": "通过提供商运营的应用程序交付、并通过租户级配置进行管理的软件即服务。",
+    "description": "SaaS 用于在 BREAK 业务安全分析中识别相关风险、滥用模式、控制要求和运营信号。",
+    "usageExample": "评估 SaaS 相关暴露面并定义相应的控制措施。",
     "relatedRisks": [
       "R0232"
     ],

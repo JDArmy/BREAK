@@ -1,0 +1,33 @@
+{
+  "C1579": {
+    "title": "物联网中可穿戴设备数据投毒攻击检测研究",
+    "keywords": [
+      "物联网",
+      "可穿戴设备",
+      "数据投毒攻击",
+      "人类活动识别",
+      "机器学习",
+      "AIoT融合攻击",
+      "训练数据污染",
+      "模型安全"
+    ],
+    "summary": "该研究指出，在智能家居、医疗等物联网生态中，用于人类活动识别的机器学习模型易受数据投毒攻击。攻击者通过污染训练数据，可操纵模型决策，影响系统功能。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0205"
+    ],
+    "references": [
+      {
+        "title": "Adaptive and Robust Data Poisoning Detection and Sanitization in ...",
+        "link": "https://arxiv.org/pdf/2511.02894"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0093"
+    ],
+    "relatedThreatActors": [
+      "TA0058"
+    ]
+  }
+}

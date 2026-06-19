@@ -1,0 +1,21 @@
+{
+  "C1637": {
+    "title": "Ransomware Attack Feasibility Study on VR Headsets",
+    "keywords": [
+      "VR headset security",
+      "ransomware",
+      "Oculus Quest 2",
+      "Android malware porting",
+      "firmware attack",
+      "XR device",
+      "attack surface",
+      "IEEE"
+    ],
+    "summary": "Researchers explored the feasibility of ransomware attacks targeting VR headsets. Using the Oculus Quest 2 as a test environment, the study demonstrated that Android ransomware can be ported and used to compromise the device, indicating that standalone VR headsets may become targets for malware and their attack surfaces can be exploited.",
+    "references": [
+      {
+        "title": "VR Headset Ransomware Attack Vulnerability - IEEE Xplore"
+      }
+    ]
+  }
+}

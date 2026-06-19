@@ -1,0 +1,21 @@
+{
+  "C0722": {
+    "title": "Fast Memory-Efficient Fine-Tuned Models for LLM Hallucination Detection",
+    "keywords": [
+      "LLM",
+      "hallucination detection",
+      "fine-tuned model",
+      "faithfulness hallucination",
+      "factual hallucination",
+      "medical AI",
+      "high-stakes domain",
+      "model ensemble"
+    ],
+    "summary": "This study highlights that LLMs can produce hallucinations in high-stakes domains such as healthcare, leading to decisions based on incorrect information. It proposes a fine-tuned model ensemble for hallucination detection, distinguishing between faithfulness hallucinations and factual hallucinations, which pose serious risks in safety-critical applications.",
+    "references": [
+      {
+        "title": "Hallucination Detection in LLMs: Fast and Memory-Efficient ..."
+      }
+    ]
+  }
+}

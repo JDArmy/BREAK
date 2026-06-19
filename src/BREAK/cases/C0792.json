@@ -1,0 +1,36 @@
+{
+  "C0792": {
+    "title": "Keenadu固件后门通过签名OTA更新感染安卓平板电脑",
+    "keywords": [
+      "Keenadu",
+      "固件后门",
+      "Android平板",
+      "OTA更新",
+      "供应链攻击",
+      "广告欺诈",
+      "数据窃取",
+      "远程控制",
+      "The Hacker News"
+    ],
+    "summary": "Keenadu固件后门通过签名的OTA更新感染安卓平板电脑，攻击者利用供应链攻击方式在固件层面植入后门，实现对设备的远程控制、广告欺诈和数据窃取，影响了13715台设备。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0081-002"
+    ],
+    "references": [
+      {
+        "title": "Keenadu Firmware Backdoor Infects Android Tablets via Signed OTA Updates",
+        "link": "https://thehackernews.com/2026/02/keenadu-firmware-backdoor-infects.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-02",
+    "relatedAttackTools": [
+      "AT0011",
+      "AT0081"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

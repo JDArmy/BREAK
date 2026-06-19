@@ -1,0 +1,22 @@
+{
+  "C1671": {
+    "title": "Claude Code GitHub Action Vulnerability Leaks Workflow Secrets",
+    "keywords": [
+      "Claude Code",
+      "GitHub Action",
+      "prompt injection",
+      "CI/CD security",
+      "credential leakage",
+      "Microsoft Threat Intelligence",
+      "Anthropic",
+      "workflow secrets",
+      "AI supply chain"
+    ],
+    "summary": "Microsoft's threat intelligence team discovered a prompt injection vulnerability in Claude Code's GitHub Action that allows attackers to access sensitive secrets within CI/CD workflows under specific conditions. The flaw highlights how AI-powered CI/CD tools can become a new vector for credential leakage.",
+    "references": [
+      {
+        "title": "Securing CI/CD in an Agentic World: Claude Code Github Action Case"
+      }
+    ]
+  }
+}

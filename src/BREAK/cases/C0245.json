@@ -1,0 +1,31 @@
+{
+  "C0245": {
+    "title": "社交媒体垃圾内容检测与分类系统文献综述",
+    "keywords": [
+      "社交媒体",
+      "垃圾内容检测",
+      "虚假账号",
+      "假新闻",
+      "机器学习",
+      "深度学习",
+      "文本分类",
+      "Facebook",
+      "Twitter",
+      "YouTube"
+    ],
+    "summary": "该综述指出社交媒体中垃圾内容急剧增加，包括恶意链接、虚假应用、假账号、假新闻、虚假评论和谣言等。研究强调在Facebook、Twitter、YouTube和电子邮件等平台上，用户难以识别这些垃圾消息，导致安全风险和用户体验下降。该综述系统梳理了机器学习、深度学习和基于文本的检测方法在垃圾内容识别中的应用。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0021"
+    ],
+    "references": [
+      {
+        "title": "A systematic literature review on spam content detection and classification",
+        "link": "https://peerj.com/articles/cs-830/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

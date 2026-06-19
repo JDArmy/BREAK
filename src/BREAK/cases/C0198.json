@@ -1,0 +1,35 @@
+{
+  "C0198": {
+    "title": "央视调查：快速涨粉有“诀窍” 互关互赞制造流量假象",
+    "keywords": [
+      "央视",
+      "共同关注",
+      "快速涨粉",
+      "互关互赞",
+      "虚假流量",
+      "刷量",
+      "批量关注",
+      "流量造假",
+      "社交平台"
+    ],
+    "summary": "央视《共同关注》栏目调查发现，网络上存在通过互相关注、互相点赞等方式快速涨粉的“诀窍”，制造流量假象。这种虚假流量无法反映账号真实质量，违反了诚实守信原则，属于典型的批量关注和刷量行为。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0016-002"
+    ],
+    "references": [
+      {
+        "title": "[共同关注]关注·调查:快速涨粉有“诀窍” 互关互赞制造流量假象...",
+        "link": "http://m.app.cctv.com/vsetv/detail/C10318/50c0ff7cfa4f48f78a8a2fc1eaf7aced/index.shtml"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0023",
+      "AT0046"
+    ],
+    "relatedThreatActors": [
+      "TA0019"
+    ]
+  }
+}

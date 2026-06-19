@@ -1,0 +1,20 @@
+{
+  "C0298": {
+    "title": "Runtime Detection of CPU-Exhaustion DoS Attacks",
+    "keywords": [
+      "application-layer DoS",
+      "CPU exhaustion",
+      "runtime detection",
+      "resource exhaustion",
+      "algorithmic complexity vulnerability",
+      "low-rate attack",
+      "server protection"
+    ],
+    "summary": "This research proposes a detection mechanism for application-layer CPU-exhaustion denial-of-service attacks. Unlike traditional high-volume attacks, these attacks exploit algorithmic or implementation vulnerabilities to consume significant server CPU resources with a small number of carefully crafted requests, and they lack identifiable patterns.",
+    "references": [
+      {
+        "title": "Coda: Runtime Detection of Application-Layer CPU-Exhaustion DoS Attacks ..."
+      }
+    ]
+  }
+}

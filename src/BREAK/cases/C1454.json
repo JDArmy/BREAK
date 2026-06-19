@@ -1,0 +1,33 @@
+{
+  "C1454": {
+    "title": "Parity钱包多签库漏洞导致巨额ETH永久冻结",
+    "keywords": [
+      "Parity钱包",
+      "多签合约",
+      "自毁函数",
+      "ETH冻结",
+      "智能合约漏洞",
+      "不可升级合约",
+      "以太坊",
+      "合约设计缺陷",
+      "2017年"
+    ],
+    "summary": "2017年11月，Parity钱包使用的多签合约库因自毁函数漏洞被意外触发，导致约51万ETH（当时价值约1.5亿美元）被永久锁定在合约中。由于合约未设计升级机制，漏洞无法修复，资金无法取回，成为不可升级合约设计缺陷的典型灾难案例。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0177"
+    ],
+    "references": [
+      {
+        "title": "区块链智能合约的漏洞风险与解决方法 - 知乎",
+        "link": "https://zhuanlan.zhihu.com/p/1892524343252194904"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2017-11",
+    "relatedAttackTools": [
+      "AT0076"
+    ],
+    "relatedThreatActors": []
+  }
+}

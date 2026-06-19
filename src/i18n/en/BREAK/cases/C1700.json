@@ -1,0 +1,21 @@
+{
+  "C1700": {
+    "title": "GCP IAM Hardening: From Over-Privileged to Least Privilege",
+    "keywords": [
+      "GCP IAM",
+      "over-privileged",
+      "least privilege",
+      "service account",
+      "IAM audit",
+      "JIT access",
+      "cloud permissions",
+      "privilege hardening"
+    ],
+    "summary": "This project compares insecure and secure IAM designs in GCP, demonstrating how over-privileged service accounts gain broad permissions and a larger attack surface, and applies hardening through auditing and JIT simulation following the principle of least privilege.",
+    "references": [
+      {
+        "title": "ANTONINAOTIENO/GCP-IAM-Hardening-From-Overprivileged-Access-to ..."
+      }
+    ]
+  }
+}

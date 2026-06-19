@@ -1,0 +1,35 @@
+{
+  "C1176": {
+    "title": "SoundCloud数据暴露事件：近3000万账户因API枚举滥用受影响",
+    "keywords": [
+      "SoundCloud",
+      "data exposure",
+      "API enumeration",
+      "API abuse",
+      "user accounts",
+      "data scraping",
+      "information disclosure"
+    ],
+    "summary": "SoundCloud遭遇数据暴露事件，近3000万账户受影响。该事件由数据枚举和API滥用导致，而非直接数据库入侵。攻击者通过API接口进行大规模数据枚举，获取用户信息。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0126"
+    ],
+    "references": [
+      {
+        "title": "SoundCloud Data Exposure Incident: Nearly 30 Million Accounts Impacted ...",
+        "link": "https://undercodenews.com/soundcloud-data-exposure-incident-nearly-30-million-accounts-impacted-by-api-enumeration-abuse/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0005",
+      "AT0085",
+      "AT0061"
+    ],
+    "relatedThreatActors": [
+      "TA0051",
+      "TA0013"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C1587": {
+    "title": "NIST Mobile Threat Catalog: Physical SIM Swap Threat",
+    "keywords": [
+      "NIST",
+      "mobile threat catalog",
+      "physical SIM swap",
+      "eSIM",
+      "iSIM",
+      "SIM hijacking",
+      "physical attack",
+      "mobile security"
+    ],
+    "summary": "The NIST Mobile Threat Catalog identifies physical SIM swapping as a threat where attackers replace a user's SIM card with a malicious one to execute harmful programs. As a countermeasure, devices with integrated SIM (eSIM) are recommended since eSIMs are harder to physically replace, increasing attack complexity.",
+    "references": [
+      {
+        "title": "PHY-6 · Mobile Threat Catalogue - NIST"
+      }
+    ]
+  }
+}

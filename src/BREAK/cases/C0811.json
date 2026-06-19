@@ -1,0 +1,37 @@
+{
+  "C0811": {
+    "title": "GitHub遭遇严重供应链“投毒”攻击",
+    "keywords": [
+      "GitHub",
+      "供应链投毒",
+      "Discord Top.gg",
+      "PyPI",
+      "colorama",
+      "恶意依赖",
+      "令牌窃取",
+      "Python SDK",
+      "Checkmarx",
+      "账户劫持"
+    ],
+    "summary": "2024年3月，黑客入侵Discord Top.gg的GitHub账户，篡改其Python SDK仓库，在requirements.txt中添加了对恶意“colorama”包的依赖。该恶意包托管在伪造的PyPI镜像上，可窃取浏览器数据、Discord令牌及加密货币钱包信息。攻击者通过劫持账户、提交恶意代码等方式，将后门植入开发者的构建产物中。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0081",
+      "R0227"
+    ],
+    "references": [
+      {
+        "title": "GitHub遭遇严重供应链“投毒”攻击_腾讯新闻",
+        "link": "https://new.qq.com/rain/a/20240326A08OFX00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-03",
+    "relatedAttackTools": [
+      "AT0087"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

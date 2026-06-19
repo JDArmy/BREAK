@@ -1,0 +1,33 @@
+{
+  "C1548": {
+    "title": "IEEE论文探讨区块链上版税友好交易与绕过问题",
+    "keywords": [
+      "IEEE",
+      "区块链",
+      "版税友好交易",
+      "NFT",
+      "版税绕过",
+      "软件许可",
+      "数字资产",
+      "智能合约",
+      "创作者经济"
+    ],
+    "summary": "IEEE 2023年发表的论文《Royalty-friendly digital asset exchanges on blockchains》指出，在软件许可类NFT用例中，版税分配面临挑战，必须防止恶意用户绕过规则。论文提出需在区块链层面解决此问题，以保障创作者的版税收益。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0199"
+    ],
+    "references": [
+      {
+        "title": "Royalty-friendly digital asset exchanges on blockchains",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10144324/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-06",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0010"
+    ]
+  }
+}

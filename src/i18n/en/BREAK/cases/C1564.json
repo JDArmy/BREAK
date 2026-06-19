@@ -1,0 +1,23 @@
+{
+  "C1564": {
+    "title": "Bybit $1.5 Billion Heist: Malicious Code Injected into Safe{Wallet} Frontend",
+    "keywords": [
+      "Bybit",
+      "Safe{Wallet}",
+      "frontend injection",
+      "malicious JavaScript",
+      "delegatecall",
+      "multisig wallet",
+      "crypto theft",
+      "DApp hijacking",
+      "Lazarus Group",
+      "Ethereum"
+    ],
+    "summary": "In February 2025, cryptocurrency exchange Bybit suffered the largest crypto theft in history, losing approximately $1.5 billion. Attackers compromised a Safe{Wallet} developer's machine and injected malicious JavaScript into the wallet's frontend interface. This caused multisig users to see a normal transfer on screen while the transaction actually executed a delegatecall, transferring assets to a",
+    "references": [
+      {
+        "title": "Alternate Top 15 — Web3 Attack Vectors (Beyond Smart Contracts)"
+      }
+    ]
+  }
+}

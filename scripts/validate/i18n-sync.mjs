@@ -28,6 +28,7 @@ const categories = [
   { name: "ThreatActors", zhDir: "src/BREAK/threat-actors", enDir: "src/i18n/en/BREAK/threat-actors" },
   { name: "Terms", zhDir: "src/BREAK/terms", enDir: "src/i18n/en/BREAK/terms" },
   { name: "BusinessScenes", zhDir: "src/BREAK/business-scenes", enDir: "src/i18n/en/BREAK/business-scenes" },
+  { name: "Cases", zhDir: "src/BREAK/cases", enDir: "src/i18n/en/BREAK/cases" },
 ];
 
 let hasErrors = false;

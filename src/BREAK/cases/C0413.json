@@ -1,0 +1,36 @@
+{
+  "C0413": {
+    "title": "钓鱼即服务平台EvilProxy绕过双因素验证",
+    "keywords": [
+      "EvilProxy",
+      "钓鱼即服务",
+      "反向代理",
+      "Cookie注入",
+      "多因素认证绕过",
+      "MFA",
+      "财富五百强",
+      "账户窃取"
+    ],
+    "summary": "EvilProxy是一个钓鱼即服务平台，利用反向代理与Cookie注入技术，在受害者完成双因子认证后代理其会话，从而绕过MFA。该平台已被用于攻击多家财富五百强公司员工，窃取账户访问权限。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0036"
+    ],
+    "references": [
+      {
+        "title": "可绕过双因素验证!钓鱼即服务平台EvilProxy来了-腾讯云开发者社区...",
+        "link": "https://cloud.tencent.com/developer/article/2161915"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-11",
+    "relatedAttackTools": [
+      "AT0071",
+      "AT0072"
+    ],
+    "relatedThreatActors": [
+      "TA0018",
+      "TA0059"
+    ]
+  }
+}

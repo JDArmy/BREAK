@@ -1,0 +1,43 @@
+{
+  "C1181": {
+    "title": "AI幻觉代码依赖引发Slopsquatting供应链攻击",
+    "keywords": [
+      "Slopsquatting",
+      "AI幻觉",
+      "供应链攻击",
+      "PyPI",
+      "npm",
+      "恶意包",
+      "ccxt-mexc-futures",
+      "数字货币盗窃",
+      "代码依赖"
+    ],
+    "summary": "安全研究员发现，攻击者利用AI生成代码时产生的幻觉包名（如data-validator-pro），在PyPI、npm等仓库抢注并植入恶意代码。2025年4月，PyPI恶意包ccxt-mexc-futures窃取用户数字货币资产，损失超百万美元。此类攻击无需开发者操作失误，仅利用AI缺陷即可渗透，隐蔽性强且规模化。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0127"
+    ],
+    "references": [
+      {
+        "title": "幻觉成灾:AI代码依赖陷阱引爆软件供应链新型致命威胁",
+        "link": "https://blog.csdn.net/weixin_42376192/article/details/157320120"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-04",
+    "relatedAttackTools": [
+      "AT0093",
+      "AT0079",
+      "AT0064",
+      "AT0057",
+      "AT0087"
+    ],
+    "relatedThreatActors": [
+      "TA0052",
+      "TA0039",
+      "TA0047",
+      "TA0041",
+      "TA0058"
+    ]
+  }
+}

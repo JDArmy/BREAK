@@ -1,0 +1,31 @@
+{
+  "C0328": {
+    "title": "运营商内鬼贩卖空号成电诈帮凶",
+    "keywords": [
+      "运营商内鬼",
+      "空号贩卖",
+      "电诈帮凶",
+      "空号注册",
+      "电信网络诈骗",
+      "身份隐匿",
+      "互联网平台账号"
+    ],
+    "summary": "该报道指出运营商内部人员利用职务之便，贩卖空号资源，为电信网络诈骗等犯罪活动提供帮助。空号被用于注册各类互联网平台账号，使犯罪分子能够隐匿真实身份，实施下游违法犯罪行为。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0030-004"
+    ],
+    "references": [
+      {
+        "title": "运营商内鬼贩卖空号 成电诈帮凶",
+        "link": "https://www.sztv.com.cn/ysz/zx/rd/79765026.shtml"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-08",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0024"
+    ]
+  }
+}

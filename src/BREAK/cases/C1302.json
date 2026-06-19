@@ -1,0 +1,35 @@
+{
+  "C1302": {
+    "title": "Trivy安全扫描器GitHub Actions遭入侵，75个标签被劫持",
+    "keywords": [
+      "Trivy",
+      "GitHub Actions",
+      "供应链攻击",
+      "CI/CD机密泄露",
+      "标签劫持",
+      "令牌窃取",
+      "安全扫描器",
+      "非人类身份",
+      "API密钥滥用"
+    ],
+    "summary": "攻击者通过GitHub Actions强制推送75个标签，导致Trivy项目的CI/CD机密暴露，攻击者可利用这些泄露的令牌窃取数据并在开发者系统中建立持久化访问，构成典型的供应链攻击。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0149"
+    ],
+    "references": [
+      {
+        "title": "Trivy Security Scanner GitHub Actions Breached, 75 Tags Hijacked to ...",
+        "link": "https://thehackernews.com/2026/03/trivy-security-scanner-github-actions.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-03",
+    "relatedAttackTools": [
+      "AT0087"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

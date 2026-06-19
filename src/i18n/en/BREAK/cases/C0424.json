@@ -1,0 +1,20 @@
+{
+  "C0424": {
+    "title": "QRLJacking: Session Hijacking via QR Code Login Exploitation",
+    "keywords": [
+      "QRLJacking",
+      "QR code login hijacking",
+      "scan to login",
+      "session hijacking",
+      "social engineering",
+      "OWASP",
+      "account takeover"
+    ],
+    "summary": "QRLJacking is a social engineering attack vector that affects applications relying on QR code login. Attackers trick victims into scanning an attacker-controlled QR code, leading to session hijacking and unauthorized account access.",
+    "references": [
+      {
+        "title": "Qrljacking - OWASP Foundation"
+      }
+    ]
+  }
+}

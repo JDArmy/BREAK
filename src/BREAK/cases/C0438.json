@@ -1,0 +1,36 @@
+{
+  "C0438": {
+    "title": "美国珠宝商遭遇撞卡攻击导致支付渠道黑名单风险",
+    "keywords": [
+      "撞卡攻击",
+      "珠宝商",
+      "支付渠道黑名单",
+      "Indusface",
+      "AppTrana",
+      "信用卡欺诈",
+      "机器人模拟",
+      "第三方支付",
+      "虚假交易"
+    ],
+    "summary": "一家美国珠宝商遭遇持续性撞卡攻击，攻击者利用多个浏览器模拟机器人，使用伪造或盗取的信用卡信息及随机生成的邮箱地址尝试下单。尽管订单未成功，但大量虚假交易导致该商户面临被第三方支付提供商列入黑名单的风险，可能造成每日数十万美元的损失。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0040"
+    ],
+    "references": [
+      {
+        "title": "Mitigating Carding for a US-Based Jewellery Company - Indusface",
+        "link": "https://www.indusface.com/resources/case-studies/mitigating-carding-attacks/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0022",
+      "AT0023",
+      "AT0090"
+    ],
+    "relatedThreatActors": [
+      "TA0055"
+    ]
+  }
+}

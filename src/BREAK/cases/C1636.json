@@ -1,0 +1,31 @@
+{
+  "C1636": {
+    "title": "VR-S1000固件使用硬编码密钥漏洞",
+    "keywords": [
+      "VR-S1000",
+      "固件",
+      "硬编码密钥",
+      "加密密钥",
+      "密码分析",
+      "CVE",
+      "GitHub安全公告",
+      "XR设备"
+    ],
+    "summary": "VR-S1000固件2.37及更早版本使用硬编码的加密密钥，这可能允许攻击者分析特定产品用户的密码。该漏洞被记录在GitHub安全公告中。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0217"
+    ],
+    "references": [
+      {
+        "title": "VR-S1000 firmware Ver. 2.37 and earlier uses a hard-coded...",
+        "link": "https://github.com/advisories/GHSA-gqfx-jp8p-5v6q"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0081"
+    ],
+    "relatedThreatActors": []
+  }
+}

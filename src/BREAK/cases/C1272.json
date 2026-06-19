@@ -1,0 +1,37 @@
+{
+  "C1272": {
+    "title": "SSO认证缺陷导致任意用户登录漏洞",
+    "keywords": [
+      "SSO",
+      "单点登录",
+      "认证缺陷",
+      "任意用户登录",
+      "JS加密破解",
+      "凭证滥用",
+      "移动APP",
+      "订单数据泄露",
+      "OAuth"
+    ],
+    "summary": "某APP的SSO单点登录流程存在缺陷，子应用未正确使用SSO颁发的凭证，而是自建加密认证系统。攻击者通过破解JS加密获取用户手机号等参数，构造请求绕过认证，实现任意用户登录，获取订单记录等敏感数据。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0143"
+    ],
+    "references": [
+      {
+        "title": "从SSO认证缺陷到任意用户登录漏洞-先知社区",
+        "link": "https://xz.aliyun.com/news/13288"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-02",
+    "relatedAttackTools": [
+      "AT0028",
+      "AT0035",
+      "AT0085"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

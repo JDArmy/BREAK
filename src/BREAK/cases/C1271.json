@@ -1,0 +1,33 @@
+{
+  "C1271": {
+    "title": "Fortinet FortiCloud SSO认证绕过漏洞",
+    "keywords": [
+      "Fortinet",
+      "FortiGate",
+      "FortiCloud SSO",
+      "认证绕过",
+      "CVE-2026",
+      "OAuth滥用",
+      "SSO漏洞",
+      "在野利用",
+      "会话验证缺失"
+    ],
+    "summary": "Fortinet FortiGate设备存在SSO认证绕过漏洞，攻击者利用FortiCloud SSO会话验证逻辑缺失，通过合法FortiCloud账户绕过认证，登录其他用户设备。漏洞评分9.8，已发现针对已完全修补设备的在野利用活动。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0143"
+    ],
+    "references": [
+      {
+        "title": "Fortinet Confirms Active FortiCloud SSO Bypass on Fully Patched ...",
+        "link": "https://thehackernews.com/2026/01/fortinet-confirms-active-forticloud-sso.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-01",
+    "relatedAttackTools": [
+      "AT0089"
+    ],
+    "relatedThreatActors": []
+  }
+}

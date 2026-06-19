@@ -1,0 +1,32 @@
+{
+  "C0892": {
+    "title": "美国电话电报公司(AT&T)一年两次泄露用户数据",
+    "keywords": [
+      "AT&T",
+      "数据泄露",
+      "暗网",
+      "用户信息",
+      "社保号",
+      "客户数据",
+      "电信运营商",
+      "隐私安全"
+    ],
+    "summary": "2024年，美国电话电报公司(AT&T)7300万用户信息被泄露至暗网，泄露数据包括客户全名、联系方式、社保号、邮箱、地址、电话、生日等。该公司今年两次发生此类用户数据泄露事件，涉及美国第三大零售无线运营商的庞大客户群体。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0089"
+    ],
+    "references": [
+      {
+        "title": "盘点:2024年全球窃密泄密事件",
+        "link": "https://news.qq.com/rain/a/20241223A01BWX00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024",
+    "relatedAttackTools": [
+      "AT0010"
+    ],
+    "relatedThreatActors": []
+  }
+}

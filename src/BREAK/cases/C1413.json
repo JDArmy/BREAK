@@ -1,0 +1,36 @@
+{
+  "C1413": {
+    "title": "Inverse Finance 预言机操纵事件",
+    "keywords": [
+      "Inverse Finance",
+      "SushiSwap",
+      "TWAP预言机",
+      "价格操纵",
+      "闪电贷攻击",
+      "INV",
+      "WETH",
+      "DeFi安全",
+      "抵押品清算",
+      "链上套利"
+    ],
+    "summary": "2022年4月，攻击者利用SushiSwap上INV-WETH交易对流动性低的特点，用约103.5万美元的WETH大幅拉升INV价格。由于Inverse Finance的TWAP预言机时间窗口过短，仅取相邻两个区块的价格，导致协议错误地以被操纵的高价接受了INV抵押品，攻击者借此借出价值约1,475万美元的多种加密资产。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0169"
+    ],
+    "references": [
+      {
+        "title": "Inverse Finance案件还原:预言机操纵层出不穷,链上套利上演...",
+        "link": "https://xw.qq.com/cmsid/20220409A035K800"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-04",
+    "relatedAttackTools": [
+      "AT0077"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

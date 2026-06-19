@@ -1,0 +1,37 @@
+{
+  "C0411": {
+    "title": "黑客渗透测试之2FA绕过钓鱼神器:Evilginx2",
+    "keywords": [
+      "Evilginx2",
+      "2FA绕过",
+      "中间人攻击",
+      "会话劫持",
+      "钓鱼工具",
+      "多因素认证",
+      "MFA",
+      "Cookie窃取",
+      "反向代理"
+    ],
+    "summary": "Evilginx2是一款能代理真实登录页面的工具，可捕获用户名、密码及会话Cookie，从而直接绕过双因素认证（2FA）。它通过中间人攻击方式，在用户完成MFA验证后窃取会话令牌，实现账户劫持。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0036"
+    ],
+    "references": [
+      {
+        "title": "黑客渗透测试之2FA绕过钓鱼神器:Evilginx2 - 知乎",
+        "link": "https://zhuanlan.zhihu.com/p/2017996727001588824"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-03",
+    "relatedAttackTools": [
+      "AT0072",
+      "AT0063",
+      "AT0094"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

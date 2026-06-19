@@ -1,6 +1,6 @@
 {
   "name": "break",
-  "version": "2.14.8",
+  "version": "2.15.0",
   "private": true,
   "type": "module",
   "engines": {
@@ -40,7 +40,7 @@
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "test:watch": "vitest",
-    "collect:risk-cases": "node scripts/research/collect-cases.mjs"
+    "import:cases": "node scripts/research/import-cases.mjs"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",

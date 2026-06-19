@@ -1,0 +1,38 @@
+{
+  "C1365": {
+    "title": "Poly Network跨链桥攻击事件",
+    "keywords": [
+      "Poly Network",
+      "跨链桥攻击",
+      "中继链漏洞",
+      "哈希冲突",
+      "验证者公钥",
+      "以太坊",
+      "币安智能链",
+      "Polygon",
+      "加密资产盗窃",
+      "DeFi安全"
+    ],
+    "summary": "2021年8月，跨链互操作协议Poly Network遭黑客攻击，攻击者利用中继链验证者公钥可被替换的合约漏洞，通过哈希冲突调用修改公钥方法，控制验证者后签署恶意交易，在以太坊、币安智能链、Polygon三链上窃取约6.1亿美元加密资产。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0161"
+    ],
+    "references": [
+      {
+        "title": "盘点跨链桥攻击事件,跨链桥有哪些常见漏洞?_合约_方法_协议",
+        "link": "https://www.sohu.com/a/540401531_121118710"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-08",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0077",
+      "AT0078"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

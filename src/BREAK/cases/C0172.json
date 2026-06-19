@@ -1,0 +1,31 @@
+{
+  "C0172": {
+    "title": "使用差分执行分析测量与瓦解反广告屏蔽器",
+    "keywords": [
+      "anti-adblocker",
+      "differential execution analysis",
+      "ad blocking",
+      "JavaScript rewriting",
+      "API hooking",
+      "web measurement",
+      "Alexa top sites",
+      "Zhu Shitong",
+      "NSF"
+    ],
+    "summary": "该研究通过差分执行分析自动检测反广告屏蔽器，发现Alexa排名前1万网站中30.5%部署了反广告屏蔽机制，其中90%以上无可见警告。研究还开发了JavaScript重写和API钩子方案，帮助广告屏蔽器绕过反广告屏蔽检测。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0013"
+    ],
+    "references": [
+      {
+        "title": "Measuring and disrupting anti-adblockers using differential execution analysis",
+        "link": "https://par.nsf.gov/biblio/10073731"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2018-01",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

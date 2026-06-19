@@ -1,0 +1,35 @@
+{
+  "C0798": {
+    "title": "微软披露Storm-2949利用盗用身份凭证实施云资源大规模窃取",
+    "keywords": [
+      "Storm-2949",
+      "微软",
+      "Microsoft",
+      "身份凭证窃取",
+      "云资源窃取",
+      "横向移动",
+      "云安全",
+      "算力盗用",
+      "供应链攻击",
+      "身份泄露"
+    ],
+    "summary": "微软安全团队披露，攻击组织Storm-2949通过窃取合法用户身份凭证，在未使用恶意软件的情况下，从身份泄露逐步扩展至对整个云环境的大规模数据窃取和资源滥用。攻击者利用受信任系统在云平台内部横向移动，长期占用云资源而不被发现。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0081-003",
+      "R0158"
+    ],
+    "references": [
+      {
+        "title": "How Storm-2949 turned a compromised identity into a cloud-wide breach",
+        "link": "https://www.microsoft.com/en-us/security/blog/2026/05/18/storm-2949-turned-compromised-identity-into-cloud-wide-breach/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-05",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0053"
+    ]
+  }
+}

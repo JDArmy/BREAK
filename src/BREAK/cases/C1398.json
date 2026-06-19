@@ -1,0 +1,37 @@
+{
+  "C1398": {
+    "title": "Mirai 僵尸网络取证分析",
+    "keywords": [
+      "Mirai",
+      "botnet",
+      "IoT",
+      "default credentials",
+      "brute force",
+      "port 23",
+      "Telnet",
+      "DDoS",
+      "malware"
+    ],
+    "summary": "对Mirai僵尸网络的分析显示，受感染的IoT设备是通过扫描23端口或使用默认凭据进行暴力破解攻击而被发现并强制加入僵尸网络的。这揭示了默认凭据是Mirai成功构建僵尸网络的关键因素之一。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0166"
+    ],
+    "references": [
+      {
+        "title": "Mirai Botnet Forensic Analysis - Cyber",
+        "link": "https://westoahu.hawaii.edu/cyber/forensics-weekly-executive-summmaries/mirai-botnet-forensic-analysis/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0082",
+      "AT0068",
+      "AT0054"
+    ],
+    "relatedThreatActors": [
+      "TA0048",
+      "TA0012"
+    ]
+  }
+}

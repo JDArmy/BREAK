@@ -1,0 +1,37 @@
+{
+  "C1367": {
+    "title": "2026年跨链桥攻击态势",
+    "keywords": [
+      "跨链桥攻击",
+      "派盾",
+      "PeckShield",
+      "加密货币盗窃",
+      "区块链安全",
+      "跨链协议",
+      "黑客攻击",
+      "DeFi安全",
+      "资产损失",
+      "2026年"
+    ],
+    "summary": "据派盾监测，截至2026年5月中旬，加密领域已发生8起重大跨链桥相关攻击事件，黑客从跨链协议中累计盗取约3.286亿美元，显示跨链桥攻击持续高发，损失规模巨大。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0161"
+    ],
+    "references": [
+      {
+        "title": "2026年已发生8起重大跨链桥攻击,累计损失3.286亿美元 | PANews",
+        "link": "https://www.panewslab.com/zh/articles/019e3990-ba19-75c7-a651-f6b4757acc98"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-05",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0077"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

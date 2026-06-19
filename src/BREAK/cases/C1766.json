@@ -1,0 +1,31 @@
+{
+  "C1766": {
+    "title": "研究指出Android反重打包技术面临挑战",
+    "keywords": [
+      "Android",
+      "反重打包",
+      "应用重打包",
+      "移动应用安全",
+      "恶意软件分发",
+      "代码保护绕过",
+      "攻击者优势",
+      "arXiv"
+    ],
+    "summary": "研究论文指出，应用重打包指修改现有移动应用并重新分发，以诱使用户安装重打包的恶意版本。尽管存在反重打包技术，但Android生态系统中大量可用的重打包应用表明，攻击者能够检测并绕过这些防护，攻击方占据优势。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0248"
+    ],
+    "references": [
+      {
+        "title": "You Shall not Repackage! Demystifying Anti-Repackaging on Android",
+        "link": "https://arxiv.org/abs/2009.04718"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0095"
+    ],
+    "relatedThreatActors": []
+  }
+}

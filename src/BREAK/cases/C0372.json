@@ -1,0 +1,34 @@
+{
+  "C0372": {
+    "title": "Keycloak分离密码与OTP暴力破解防护以阻止OTP绕过攻击",
+    "keywords": [
+      "Keycloak",
+      "OTP",
+      "双因素认证",
+      "暴力破解",
+      "身份管理",
+      "安全缺陷",
+      "账户接管",
+      "GitHub"
+    ],
+    "summary": "2024年，开源身份管理软件Keycloak发现安全缺陷，攻击者在获取用户密码后，可对OTP验证码进行暴力猜测攻击，从而绕过双因素认证。为此，Keycloak在issue #46164中提出了将密码和OTP暴力破解防护策略分离的增强方案，以防止OTP被暴力破解导致账户被接管。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0032-004"
+    ],
+    "references": [
+      {
+        "title": "Separate password and OTP brute force protection to prevent OTP ...",
+        "link": "https://github.com/keycloak/keycloak/issues/46164"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024",
+    "relatedAttackTools": [
+      "AT0068"
+    ],
+    "relatedThreatActors": [
+      "TA0059"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C0414": {
+    "title": "Google Disrupts Large-Scale Phishing Campaign: Session Cookie Theft Bypasses MFA",
+    "keywords": [
+      "Google Threat Analysis Group",
+      "large-scale phishing",
+      "session cookie theft",
+      "bypass MFA",
+      "Russian-speaking hackers",
+      "malware",
+      "account hijacking",
+      "multi-factor authentication bypass"
+    ],
+    "summary": "Google's Threat Analysis Group disclosed that a group of Russian-speaking hackers has been sending phishing emails to distribute malware and steal browser session cookies since late 2019. Even with multi-factor authentication enabled, attackers can hijack accounts using the stolen session cookies, bypassing MFA protection.",
+    "references": [
+      {
+        "title": "US Treasury Secretary Says Ransomware Threatens Economy, Google Warns 2 Billion Chrome Users |..."
+      }
+    ]
+  }
+}

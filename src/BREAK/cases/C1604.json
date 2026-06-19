@@ -1,0 +1,32 @@
+{
+  "C1604": {
+    "title": "CVE-2020-3409：Profinet协议栈拒绝服务漏洞",
+    "keywords": [
+      "CVE-2020-3409",
+      "Profinet",
+      "拒绝服务",
+      "协议栈漏洞",
+      "工业控制系统",
+      "ICS安全",
+      "恶意报文",
+      "网络攻击"
+    ],
+    "summary": "该漏洞影响Profinet协议栈实现，攻击者可通过发送恶意网络报文导致设备拒绝服务，影响工业控制系统的可用性。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0210"
+    ],
+    "references": [
+      {
+        "title": "Nvd - Cve-2020-3409",
+        "link": "https://nvd.nist.gov/vuln/detail/CVE-2020-3409"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2020",
+    "relatedAttackTools": [
+      "AT0083"
+    ],
+    "relatedThreatActors": []
+  }
+}

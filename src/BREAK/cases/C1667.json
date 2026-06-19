@@ -1,0 +1,29 @@
+{
+  "C1667": {
+    "title": "n8n GitHub Webhook触发器未验证签名导致伪造事件",
+    "keywords": [
+      "n8n",
+      "GitHub Webhook",
+      "HMAC-SHA256",
+      "签名验证",
+      "Webhook伪造",
+      "事件重放",
+      "触发器节点",
+      "未授权请求"
+    ],
+    "summary": "n8n工作流平台的GitHub Webhook触发器节点未实现HMAC-SHA256签名验证。知晓Webhook URL的攻击者可发送未签名的POST请求，携带任意数据触发工作流，从而伪造GitHub Webhook事件。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0225"
+    ],
+    "references": [
+      {
+        "title": "Webhook Forgery on Github Webhook Trigger · Advisory · n8n-io/n8n · GitHub",
+        "link": "https://github.com/n8n-io/n8n/security/advisories/GHSA-mqpr-49jj-32rc"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

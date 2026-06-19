@@ -1,0 +1,32 @@
+{
+  "C0806": {
+    "title": "数千次下载的恶意npm包冒充typescript-eslint和@types/node",
+    "keywords": [
+      "npm",
+      "typosquatting",
+      "typescript-eslint",
+      "@types/node",
+      "供应链攻击",
+      "恶意包",
+      "开源组件投毒",
+      "安全研究"
+    ],
+    "summary": "2024年12月，安全研究人员发现攻击者上传了冒充typescript-eslint和@types/node等合法npm包的恶意typosquatting包，累计数千次下载。这些伪造包名为@typescript_eslinter/eslint和types-node，分别用于下载木马和获取第二阶段载荷，对下游用户构成严重供应链安全威胁。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0081-005"
+    ],
+    "references": [
+      {
+        "title": "Thousands Download Malicious npm Libraries Impersonating Legitimate Tools",
+        "link": "https://thehackernews.com/2024/12/thousands-download-malicious-npm.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-12",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

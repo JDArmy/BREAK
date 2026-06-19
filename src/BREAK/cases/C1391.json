@@ -1,0 +1,35 @@
+{
+  "C1391": {
+    "title": "Paras Jha利用Mirai僵尸网络攻击罗格斯大学",
+    "keywords": [
+      "Paras Jha",
+      "Mirai",
+      "僵尸网络",
+      "DDoS攻击",
+      "罗格斯大学",
+      "物联网安全",
+      "IoT僵尸网络",
+      "网络犯罪",
+      "ProTraf Solutions"
+    ],
+    "summary": "2014年至2015年，大学生Paras Jha为迫使学校更换DDoS防护服务商，利用其构建的包含约4万个僵尸节点的物联网僵尸网络，多次对罗格斯大学网络发起DDoS攻击，导致注册系统瘫痪、校园网络长时间中断，严重影响教学秩序。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0165"
+    ],
+    "references": [
+      {
+        "title": "The Strange Story of the Teens Behind the Mirai Botnet",
+        "link": "https://spectrum.ieee.org/mirai-botnet"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2014-11",
+    "relatedAttackTools": [
+      "AT0082"
+    ],
+    "relatedThreatActors": [
+      "TA0048"
+    ]
+  }
+}

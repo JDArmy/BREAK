@@ -1,0 +1,34 @@
+{
+  "C1509": {
+    "title": "VR密室逃脱游戏窃取25项个人数据实验",
+    "keywords": [
+      "VR密室逃脱",
+      "隐私风险",
+      "个人数据推断",
+      "元宇宙安全",
+      "对抗性VR游戏",
+      "AR/VR设备安全",
+      "行为生物特征",
+      "匿名用户识别"
+    ],
+    "summary": "一项隐私研究让50名参与者体验看似无害的VR密室逃脱游戏，数分钟内对抗性程序便精确推断出身高、臂展、年龄、性别等超过25项个人数据属性。研究指出，元宇宙环境可被恶意构建以隐蔽方式从匿名用户处推断大量个人信息，主动攻击在VR环境中构成巨大隐私风险。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0191"
+    ],
+    "references": [
+      {
+        "title": "Exploring the privacy risks of adversarial VR game design",
+        "link": "https://arxiv.org/abs/2207.13176"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-07",
+    "relatedAttackTools": [
+      "AT0084"
+    ],
+    "relatedThreatActors": [
+      "TA0050"
+    ]
+  }
+}

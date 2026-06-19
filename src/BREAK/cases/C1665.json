@@ -1,0 +1,35 @@
+{
+  "C1665": {
+    "title": "通过空密钥绕过 Stripe Webhook 签名导致无限配额欺诈",
+    "keywords": [
+      "Stripe Webhook",
+      "签名绕过",
+      "空密钥",
+      "配额欺诈",
+      "new-api",
+      "伪造事件",
+      "支付绕过",
+      "webhook签名验证",
+      "QuantumNous"
+    ],
+    "summary": "在QuantumNous/new-api项目中，Stripe Webhook处理器存在严重漏洞。攻击者利用默认空Webhook密钥绕过签名验证，伪造Webhook事件，从而在未实际支付的情况下为自己的账户充值任意配额。漏洞还涉及跨支付网关的订单完成，攻击者可通过伪造的Stripe Webhook完成通过其他支付方式创建的订单。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0225"
+    ],
+    "references": [
+      {
+        "title": "Stripe Webhook Signature Bypass via Empty Secret Enables ...",
+        "link": "https://github.com/QuantumNous/new-api/security/advisories/GHSA-xff3-5c9p-2mr4"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0086",
+      "AT0090"
+    ],
+    "relatedThreatActors": [
+      "TA0055"
+    ]
+  }
+}

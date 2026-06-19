@@ -1,0 +1,33 @@
+{
+  "C1681": {
+    "title": "SUNSPOT后门植入SolarWinds构建服务器",
+    "keywords": [
+      "SUNSPOT",
+      "SolarWinds",
+      "构建服务器",
+      "后门植入",
+      "供应链攻击",
+      "软件构建过程",
+      "CISA",
+      "APT29"
+    ],
+    "summary": "威胁行为者使用名为SUNSPOT的植入程序访问SolarWinds的构建服务器，在软件构建过程中插入后门，导致下游数千家组织遭受供应链攻击。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0227"
+    ],
+    "references": [
+      {
+        "title": "[PDF] Defending Against Software Supply Chain Attacks - CISA",
+        "link": "https://www.cisa.gov/sites/default/files/publications/defending_against_software_supply_chain_attacks_508.pdf"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0087"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

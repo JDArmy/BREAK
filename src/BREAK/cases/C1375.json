@@ -1,0 +1,32 @@
+{
+  "C1375": {
+    "title": "Mt. Gox交易所私钥泄露致85万比特币被盗",
+    "keywords": [
+      "Mt. Gox",
+      "私钥泄露",
+      "比特币被盗",
+      "加密货币交易所",
+      "冷钱包",
+      "热钱包",
+      "安全审计",
+      "区块链取证"
+    ],
+    "summary": "2011年至2014年，Mt. Gox交易所因账户私钥泄露且未审计发现漏洞，导致超过85万比特币被盗。交易所定期重复使用已泄露私钥的比特币地址，使被盗资金损失持续扩大，成为史上最大加密货币盗窃案。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0162"
+    ],
+    "references": [
+      {
+        "title": "SAFEIS安全指南|史上损失最严重的加密盗窃事件回顾及六大防盗策略...",
+        "link": "https://news.sohu.com/a/560156570_121404314"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2011-09",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

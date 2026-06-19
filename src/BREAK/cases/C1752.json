@@ -1,0 +1,31 @@
+{
+  "C1752": {
+    "title": "RAG系统跨用户信息泄露风险",
+    "keywords": [
+      "RAG系统",
+      "跨用户信息泄露",
+      "越权召回",
+      "多租户部署",
+      "访问控制绕过",
+      "提示注入",
+      "检索增强生成",
+      "数据隔离"
+    ],
+    "summary": "在多租户部署的RAG系统中，攻击者利用模型提示与检索系统之间的不一致性，绕过访问控制机制，导致跨用户信息泄露。攻击者通过构造特定查询，使系统返回其他用户无权访问的文档片段，造成敏感知识外泄。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0244"
+    ],
+    "references": [
+      {
+        "title": "Provably Secure Retrieval-Augmented Generation - arXiv.org",
+        "link": "https://arxiv.org/pdf/2508.01084"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0093"
+    ],
+    "relatedThreatActors": []
+  }
+}

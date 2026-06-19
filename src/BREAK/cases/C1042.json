@@ -1,0 +1,33 @@
+{
+  "C1042": {
+    "title": "BYOD环境下的用户信息安全行为与数据泄露研究",
+    "keywords": [
+      "BYOD",
+      "自带设备办公",
+      "数据泄露",
+      "用户行为",
+      "信息安全",
+      "保护动机理论",
+      "移动设备安全",
+      "员工疏忽",
+      "合规行为"
+    ],
+    "summary": "研究指出，用户行为是数据泄露的重要因素。在BYOD环境中，员工因未遵守安全策略使用个人移动设备，导致数据泄露事件频发。该研究引用数据称，用户疏忽和不合规行为已成为信息安全的最薄弱环节，直接导致未经授权的人员访问个人信息，造成数据泄露。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0112-001"
+    ],
+    "references": [
+      {
+        "title": "User information security behavior towards data breach in Bring Your Own Device (BYOD) enabled organizations-leveraging protection motivation theory",
+        "link": "https://ieeexplore.ieee.org/abstract/document/8479178/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2018-04",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0021"
+    ]
+  }
+}

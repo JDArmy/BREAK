@@ -1,0 +1,21 @@
+{
+  "C1748": {
+    "title": "Poisoning Attacks Against Machine Learning: Can ML Be Trusted?",
+    "keywords": [
+      "machine learning",
+      "poisoning attacks",
+      "training data poisoning",
+      "adversarial examples",
+      "NIST",
+      "model integrity",
+      "AI safety",
+      "data contamination"
+    ],
+    "summary": "A NIST publication highlights that a key threat to machine learning systems involves attackers controlling training data or the training process to alter model predictions on specific test inputs at deployment. The attack has a long history, dating back to early work on worm signature development.",
+    "references": [
+      {
+        "title": "Poisoning Attacks Against Machine Learning: Can Machine Learning Be ..."
+      }
+    ]
+  }
+}

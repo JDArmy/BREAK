@@ -1,0 +1,21 @@
+{
+  "C1190": {
+    "title": "Capital One Data Breach Caused by Cloud Misconfiguration",
+    "keywords": [
+      "Capital One",
+      "data breach",
+      "cloud infrastructure",
+      "misconfiguration",
+      "storage bucket permissions",
+      "IAM",
+      "AWS S3",
+      "cloud security"
+    ],
+    "summary": "In 2019, a cloud infrastructure misconfiguration at Capital One, including improperly set storage bucket permissions, exposed the personal data of over 100 million customers. The incident became a landmark case of how cloud configuration flaws can lead to severe consequences, highlighting the critical importance of IAM permission management and storage security.",
+    "references": [
+      {
+        "title": "Survey on Kubernetes Misconfiguration Vulnerabilities and Best Practices"
+      }
+    ]
+  }
+}

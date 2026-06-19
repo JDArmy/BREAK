@@ -1,0 +1,33 @@
+{
+  "C0197": {
+    "title": "篡改猴Tampermonkey微博批量取关脚本",
+    "keywords": [
+      "Tampermonkey",
+      "篡改猴",
+      "微博",
+      "批量取关",
+      "用户脚本",
+      "自动化脚本",
+      "关注列表清理",
+      "知乎"
+    ],
+    "summary": "该知乎文章介绍了一款基于篡改猴（Tampermonkey）的微博批量取关脚本。因微博虽有批量取关功能但需挨个勾选，作者开发此脚本以实现自动化批量取消关注，用于清理关注列表。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0016-002"
+    ],
+    "references": [
+      {
+        "title": "篡改猴Tampermonkey微博批量取关脚本 - 知乎",
+        "link": "https://zhuanlan.zhihu.com/p/666664182"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-11",
+    "relatedAttackTools": [
+      "AT0023",
+      "AT0032"
+    ],
+    "relatedThreatActors": []
+  }
+}

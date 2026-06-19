@@ -1,0 +1,39 @@
+{
+  "C0842": {
+    "title": "Okta警告AI驱动钓鱼攻击激增",
+    "keywords": [
+      "Okta",
+      "AI驱动钓鱼",
+      "生成式AI",
+      "钓鱼网站",
+      "身份仿冒",
+      "企业安全",
+      "Microsoft 365",
+      "Google Workspace",
+      "多因素认证绕过"
+    ],
+    "summary": "2025年7月，Okta发布安全通告，指出攻击者利用公开AI工具在几秒内生成与企业登录页面高度仿真的钓鱼网站，连验证码位置、字体等细节都分毫不差，并能模拟登录失败等交互流程，极大增加了用户受骗几率。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0084-001"
+    ],
+    "references": [
+      {
+        "title": "AI黑客助手:生成式AI钓鱼攻击激增,企业安全面临严峻挑战_搜狐网",
+        "link": "https://m.sohu.com/a/944527468_122362510/?pvid=000115_3w_a"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-07",
+    "relatedAttackTools": [
+      "AT0056",
+      "AT0057",
+      "AT0063",
+      "AT0071"
+    ],
+    "relatedThreatActors": [
+      "TA0031",
+      "TA0041"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "C1297": {
+    "title": "MCP Security Risks: Confused Deputy Problem and Data Exfiltration",
+    "keywords": [
+      "MCP security",
+      "confused deputy problem",
+      "prompt injection",
+      "data exfiltration",
+      "AI agent",
+      "tool calls",
+      "OWASP cheat sheet"
+    ],
+    "summary": "The OWASP MCP Security Cheat Sheet highlights a confused deputy problem in MCP servers, where the server executes actions with its own broad permissions rather than the requesting user's. Attackers exploit prompt injection to encode sensitive data into seemingly benign tool calls, such as search queries or email subjects, enabling data exfiltration through legitimate channels.",
+    "references": [
+      {
+        "title": "MCP Security - OWASP Cheat Sheet Series"
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "C1543": {
+    "title": "Balancer Protocol Deflationary Token Vulnerability",
+    "keywords": [
+      "Balancer deflationary token exploit",
+      "DeFi protocol vulnerability",
+      "AMM token mechanism flaw",
+      "flash loan attack vector",
+      "tokenomics exploit",
+      "liquidity pool manipulation"
+    ],
+    "summary": "The Balancer protocol mishandled deflationary tokens, allowing an attacker to exploit the vulnerability and resulting in a loss of approximately $520,000. Since its launch in 2020, Balancer has encountered multiple similar security incidents, with the earliest dating back to early deflationary token exploits.",
+    "references": [
+      {
+        "title": "Five Accidents in Six Years with Losses Exceeding 100 Million: A Look Back at the Hacking History of the Veteran DeFi Protocol Balancer - Tencent..."
+      }
+    ]
+  }
+}

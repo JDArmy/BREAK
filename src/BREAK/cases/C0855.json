@@ -1,0 +1,30 @@
+{
+  "C0855": {
+    "title": "勒索攻击SaaS化降低传播门槛",
+    "keywords": [
+      "勒索软件即服务",
+      "RaaS",
+      "勒索攻击",
+      "黑色产业",
+      "网络攻击",
+      "腾讯研究院",
+      "利润分成",
+      "攻击门槛"
+    ],
+    "summary": "2021年8月，腾讯研究院分析指出，勒索软件即服务（RaaS）成为网络攻击新模式。勒索软件黑色产业层级分明、全链条协作，开发者更新病毒，各级分销者点击鼠标即可分利润。某勒索攻击软件依靠这种模式仅一年多就敛财20亿美元，攻击门槛大幅降低。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0085-001"
+    ],
+    "references": [
+      {
+        "title": "一文读懂勒索攻击：特征、趋势与挑战_腾讯新闻",
+        "link": "https://new.qq.com/omn/ENT20190/20210830A0AKPQ00.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-08",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

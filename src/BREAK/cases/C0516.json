@@ -1,0 +1,33 @@
+{
+  "C0516": {
+    "title": "Java反编译攻防实战：揭秘代码泄露风险与5大防护核心技术",
+    "keywords": [
+      "Java反编译",
+      "CFR",
+      "JD-GUI",
+      "字节码",
+      "代码泄露",
+      "Procyon",
+      "硬编码密钥",
+      "逆向工程",
+      "应用安全"
+    ],
+    "summary": "文章指出Java字节码因.class文件结构高度规范化，攻击者可借助JD-GUI、CFR等反编译工具轻易还原源码逻辑，导致核心算法、业务流程及硬编码密钥、数据库连接字符串等敏感配置信息泄露。文中演示了使用CFR反编译器将Example.class还原为Java源码的过程，并列举了商业逻辑泄露、安全机制绕过等典型风险场景。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0051"
+    ],
+    "references": [
+      {
+        "title": "【Java反编译攻防实战】：揭秘代码泄露风险与5大防护核心技术-CSDN博客",
+        "link": "https://blog.csdn.net/PoliSeed/article/details/153730180"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-10",
+    "relatedAttackTools": [
+      "AT0028"
+    ],
+    "relatedThreatActors": []
+  }
+}

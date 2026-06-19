@@ -1,0 +1,34 @@
+{
+  "C1513": {
+    "title": "VR游戏《Beat Saber》玩家运动数据可唯一识别真实身份",
+    "keywords": [
+      "VR游戏",
+      "Beat Saber",
+      "运动数据",
+      "用户识别",
+      "数字指纹",
+      "元宇宙隐私",
+      "加州大学伯克利分校",
+      "匿名数据去匿名化",
+      "虚拟现实安全"
+    ],
+    "summary": "美国加州大学伯克利分校的研究分析了超过50000名VR游戏《Beat Saber》玩家的250万条匿名VR数据记录，发现仅需100秒的运动数据就能以超过94%的准确率对个人用户进行唯一识别，甚至2秒的运动数据即可识别一半用户。这表明用户在元宇宙中互动时留下的数字指纹可被用于反向追踪其真实身份。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0192",
+      "R0215",
+      "R0219",
+      "R0221"
+    ],
+    "references": [
+      {
+        "title": "自元宇宙性侵案后,这次罪犯又将手伸向了11岁少女……_腾讯新闻",
+        "link": "https://new.qq.com/rain/a/20230328A07JTL00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-02",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

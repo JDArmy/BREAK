@@ -1,0 +1,32 @@
+{
+  "C1782": {
+    "title": "利用 RAN 数据检测网联汽车位置异常以防范劫持攻击",
+    "keywords": [
+      "网联汽车",
+      "RAN",
+      "位置异常检测",
+      "劫持攻击",
+      "车载数据接口",
+      "无线接入网",
+      "网络安全",
+      "车辆安全"
+    ],
+    "summary": "研究提出一种基于无线接入网（RAN）事件监控的位置异常检测模块，可识别同一设备在多个位置同时出现的异常行为，这可能是针对网联汽车的劫持攻击指标，攻击者通过滥用车辆网络接口实现非法控制。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0252"
+    ],
+    "references": [
+      {
+        "title": "Navigating Connected Car Cybersecurity: Location Anomaly Detection with RAN Data",
+        "link": "https://arxiv.org/abs/2407.02698"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-07",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0061"
+    ]
+  }
+}

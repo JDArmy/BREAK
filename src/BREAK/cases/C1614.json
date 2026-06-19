@@ -1,0 +1,31 @@
+{
+  "C1614": {
+    "title": "利用物理层特征检测C-V2X欺骗攻击的研究",
+    "keywords": [
+      "C-V2X",
+      "欺骗攻击",
+      "物理层安全",
+      "蜂窝车联网",
+      "智能交通系统",
+      "消息真实性",
+      "密码学验证",
+      "IEEE"
+    ],
+    "summary": "一项研究指出，蜂窝车联网（C-V2X）通信虽支撑智能交通系统，但易受欺骗攻击，攻击者可注入虚假信息危及安全。传统密码学验证无法保证凭证泄露后的消息真实性，该研究提出利用物理层安全特性来检测此类欺骗攻击。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0212"
+    ],
+    "references": [
+      {
+        "title": "Detection of C-V2X Spoofing Attacks using Physical Layer Features and ...",
+        "link": "https://ieeexplore.ieee.org/document/11130047"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0061"
+    ]
+  }
+}

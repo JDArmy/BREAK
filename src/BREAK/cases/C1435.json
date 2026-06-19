@@ -1,0 +1,36 @@
+{
+  "C1435": {
+    "title": "Rollup交易费定价攻击",
+    "keywords": [
+      "Rollup",
+      "交易费定价",
+      "Gas费操纵",
+      "定价攻击",
+      "L2费用",
+      "数据可用性费",
+      "区块链",
+      "激励机制",
+      "Layer2"
+    ],
+    "summary": "学术研究指出，现有Rollup交易费机制存在严重定价错误，攻击者可利用这些漏洞发起攻击。攻击者通过操纵L2费用、L1数据可用性费用和L1 Gas费之间的定价失衡，进行攻击，影响交易成本和顺序。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0173"
+    ],
+    "references": [
+      {
+        "title": "Unaligned Incentives: Pricing Attacks Against Blockchain Rollups",
+        "link": "https://arxiv.org/pdf/2509.17126"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0077",
+      "AT0078"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

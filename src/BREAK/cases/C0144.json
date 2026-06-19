@@ -1,0 +1,36 @@
+{
+  "C0144": {
+    "title": "FBI警告：账户接管欺诈通过冒充金融机构支持人员实施",
+    "keywords": [
+      "FBI",
+      "IC3",
+      "账户接管",
+      "ATO欺诈",
+      "冒充金融机构",
+      "社交工程",
+      "钓鱼网站",
+      "资金窃取",
+      "网络犯罪"
+    ],
+    "summary": "FBI发布警报，指出网络犯罪分子通过冒充金融机构员工或网站，利用社交工程和钓鱼网站等手段获取受害者银行、薪资等账户的登录凭证，进而实施账户接管（ATO）欺诈，窃取资金或信息。自2025年1月以来，IC3已收到超5100起相关投诉，损失逾2.62亿美元。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0011-002",
+      "R0083-001"
+    ],
+    "references": [
+      {
+        "title": "Account Takeover Fraud via Impersonation of Financial Institution ... - FBI",
+        "link": "https://www.fbi.gov/investigate/cyber/alerts/2025/account-takeover-fraud-via-impersonation-of-financial-institution-support"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-11",
+    "relatedAttackTools": [
+      "AT0063"
+    ],
+    "relatedThreatActors": [
+      "TA0059"
+    ]
+  }
+}

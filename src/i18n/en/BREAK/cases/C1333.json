@@ -1,0 +1,20 @@
+{
+  "C1333": {
+    "title": "Massive ClickFix Phishing Campaign Targets Hotel Systems to Spread PureRAT Remote Access Trojan",
+    "keywords": [
+      "ClickFix phishing",
+      "PureRAT trojan",
+      "hotel system attack",
+      "remote access trojan",
+      "Push Security disclosure",
+      "malicious command execution",
+      "ClickFix campaign 2025"
+    ],
+    "summary": "In November 2025, Push Security disclosed a large-scale ClickFix phishing campaign targeting hotel systems. The operation embedded videos, countdown timers, and a counter showing 'users verified in the last hour' on fake verification pages to enhance deception. Attackers tricked users into copying and executing malicious commands, ultimately delivering the PureRAT remote access trojan to achieve r",
+    "references": [
+      {
+        "title": "Large-Scale ClickFix Phishing Attacks Target Hotel Systems with PureRAT ..."
+      }
+    ]
+  }
+}

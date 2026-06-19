@@ -1,0 +1,41 @@
+{
+  "C1723": {
+    "title": "身份验证漏洞导致会话劫持",
+    "keywords": [
+      "broken authentication",
+      "session hijacking",
+      "credential leak",
+      "token misconfiguration",
+      "PayPal",
+      "account takeover",
+      "payment fraud",
+      "unauthorized transaction"
+    ],
+    "summary": "分析身份验证漏洞案例，包括用户凭证泄露和会话劫持，其中令牌配置不当可能导致攻击者劫持会话，进行未授权操作，如越权扣款。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0236"
+    ],
+    "references": [
+      {
+        "title": "An empirical analysis of incorrect account remediation in the case of broken authentication",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10360844/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0030",
+      "AT0094",
+      "AT0072",
+      "AT0068",
+      "AT0085",
+      "AT0090"
+    ],
+    "relatedThreatActors": [
+      "TA0059",
+      "TA0055",
+      "TA0018",
+      "TA0051"
+    ]
+  }
+}

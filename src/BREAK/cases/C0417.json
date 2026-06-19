@@ -1,0 +1,37 @@
+{
+  "C0417": {
+    "title": "基于 MitM 钓鱼工具包的 2FA 绕过攻击",
+    "keywords": [
+      "中间人攻击",
+      "MitM",
+      "钓鱼工具包",
+      "双因素认证绕过",
+      "2FA",
+      "多因素认证",
+      "MFA",
+      "账户接管",
+      "网络犯罪",
+      "安全研究"
+    ],
+    "summary": "2022年2月，安全研究人员发现多个网站使用中间人（MitM）钓鱼工具包，这些工具包能够拦截双因素认证（2FA）安全代码，允许网络犯罪分子绕过这一验证环节，从而接管用户账户。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0036"
+    ],
+    "references": [
+      {
+        "title": "...个网站使用MitM钓鱼工具包,允许网络犯罪分子绕过 2FA 身份验证...",
+        "link": "https://zhuanlan.zhihu.com/p/452160687"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-02",
+    "relatedAttackTools": [
+      "AT0072",
+      "AT0063"
+    ],
+    "relatedThreatActors": [
+      "TA0059"
+    ]
+  }
+}

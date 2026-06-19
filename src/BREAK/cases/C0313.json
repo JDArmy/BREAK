@@ -1,0 +1,29 @@
+{
+  "C0313": {
+    "title": "大规模DoS生态系统宏观特征分析",
+    "keywords": [
+      "DoS攻击",
+      "反射放大攻击",
+      "DNS放大",
+      "拒绝服务",
+      "互联网安全",
+      "僵尸网络",
+      "流量攻击",
+      "网络安全测量"
+    ],
+    "summary": "研究通过对互联网DoS攻击的宏观监测，揭示了超过2000万次反射放大DoS攻击事件。攻击利用开放服务（如DNS）将少量请求放大为巨大流量，导致目标网络带宽耗尽、服务中断。受害目标数量庞大，攻击持续时间中位数下降至240秒。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0029"
+    ],
+    "references": [
+      {
+        "title": "Millions of targets under attack: a macroscopic characterization of the DoS ecosystem",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3131365.3131383"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "C1773": {
+    "title": "F5 BIG-IP Edge Device Misconfiguration Leads to Enterprise Breach",
+    "keywords": [
+      "F5 BIG-IP",
+      "edge device misconfiguration",
+      "initial access",
+      "Confluence",
+      "credential theft",
+      "Kerberos relay",
+      "lateral movement",
+      "multi-stage attack",
+      "Microsoft security"
+    ],
+    "summary": "Microsoft security researchers disclosed a multi-stage attack where threat actors exploited a security flaw in an internet-exposed F5 BIG-IP edge device to gain initial access, then moved laterally to internal Confluence servers to steal credentials and attempted Kerberos relay attacks to expand their foothold.",
+    "references": [
+      {
+        "title": "From edge appliance to enterprise compromise: Multi-stage Linux ..."
+      }
+    ]
+  }
+}

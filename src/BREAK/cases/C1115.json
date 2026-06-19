@@ -1,0 +1,33 @@
+{
+  "C1115": {
+    "title": "Bing Chat “Sydney” 代号泄露事件",
+    "keywords": [
+      "Bing Chat",
+      "Sydney",
+      "Microsoft Copilot",
+      "直接提示注入",
+      "提示注入攻击",
+      "LLM安全",
+      "系统提示泄露",
+      "AI安全防护绕过",
+      "OWASP"
+    ],
+    "summary": "一名斯坦福大学学生通过指令“忽略之前的指示”，成功绕过了微软Bing Chat（现为Microsoft Copilot）的安全防护机制。这次直接提示注入攻击导致AI泄露了其内部代号“Sydney”以及相关的内部操作指南，暴露了LLM在直接面对用户输入时，系统预设指令可能被用户恶意覆盖的严重风险。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0117-001",
+      "R0117"
+    ],
+    "references": [
+      {
+        "title": "Prompt Injection - OWASP Foundation",
+        "link": "https://owasp.org/www-community/attacks/PromptInjection"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0093"
+    ],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "C0498": {
+    "title": "Video Injection Attack Detection: Countering Virtual Camera Bypass in Remote Biometric Systems",
+    "keywords": [
+      "video injection attack",
+      "virtual camera bypass",
+      "deepfake",
+      "facial recognition bypass",
+      "remote biometrics",
+      "machine learning detection",
+      "session metadata",
+      "authentication pipeline",
+      "injection attack detection"
+    ],
+    "summary": "Academic research reveals that attackers leverage deepfake technology and virtual camera software to inject pre-recorded or synthetic video streams directly into the identity authentication pipeline, bypassing the physical camera interface to deceive facial recognition systems. The study proposes a machine learning-based virtual camera detection method that analyzes session metadata to identify su",
+    "references": [
+      {
+        "title": "Catching video injection attacks in remote biometric systems - arXiv"
+      }
+    ]
+  }
+}

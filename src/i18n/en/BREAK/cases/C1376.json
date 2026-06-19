@@ -1,0 +1,20 @@
+{
+  "C1376": {
+    "title": "BitFloor Exchange Loses 24,000 BTC Due to Unencrypted Wallet Key Backup",
+    "keywords": [
+      "BitFloor hack",
+      "Bitcoin theft",
+      "private key leak",
+      "wallet key backup",
+      "unencrypted backup",
+      "exchange security",
+      "Roman Shtylman"
+    ],
+    "summary": "In May 2012, hackers attacked the BitFloor exchange and stole 24,000 bitcoins. The root cause was an unencrypted backup of wallet keys, which allowed the attackers to easily obtain the keys and steal the massive crypto assets, ultimately leading to the exchange's closure.",
+    "references": [
+      {
+        "title": "SAFEIS Security Guide: Review of the Most Costly Crypto Thefts in History and Six Anti-Theft Strategies..."
+      }
+    ]
+  }
+}

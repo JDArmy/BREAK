@@ -1,0 +1,30 @@
+{
+  "C1055": {
+    "title": "未授权访问智能手机漏洞与归因研究",
+    "keywords": [
+      "未授权访问",
+      "智能手机安全",
+      "物理入侵",
+      "欺骗攻击",
+      "辅助设备攻击",
+      "漏洞归因",
+      "用户隐私",
+      "移动安全",
+      "ACM研究"
+    ],
+    "summary": "该研究分析了未经授权访问个人设备的情况，包括通过欺骗手段或利用辅助设备进行的未授权物理访问，揭示了此类攻击的常见途径和影响。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0112-002"
+    ],
+    "references": [
+      {
+        "title": "Vulnerability & blame: Making sense of unauthorized access to smartphones",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3290605.3300819"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C1749": {
+    "title": "Detecting and Defending Against Data Poisoning Attacks on AI Models",
+    "keywords": [
+      "data poisoning",
+      "AI model security",
+      "adversarial training",
+      "statistical anomaly detection",
+      "CIFAR-10",
+      "fraud detection",
+      "training data poisoning",
+      "model robustness"
+    ],
+    "summary": "Experimental results show that data poisoning significantly degrades model performance, with classification accuracy dropping by up to 27% in image recognition tasks and 22% in fraud detection models. The proposed defense mechanisms, including statistical anomaly detection and adversarial training, successfully mitigated the poisoning impact.",
+    "references": [
+      {
+        "title": "Detecting and Preventing Data Poisoning Attacks on AI Models"
+      }
+    ]
+  }
+}

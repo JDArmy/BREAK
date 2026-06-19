@@ -1,0 +1,31 @@
+{
+  "C1587": {
+    "title": "NIST移动威胁目录：SIM卡物理交换威胁",
+    "keywords": [
+      "NIST",
+      "移动威胁目录",
+      "SIM卡物理交换",
+      "eSIM",
+      "iSIM",
+      "SIM劫持",
+      "物理攻击",
+      "移动安全"
+    ],
+    "summary": "NIST移动威胁目录将物理交换SIM卡列为一种威胁，攻击者通过将用户SIM卡替换为恶意SIM卡来运行恶意程序。作为对策，建议使用集成SIM（eSIM）的设备，因为eSIM不易被物理替换，从而增加攻击复杂度。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0207"
+    ],
+    "references": [
+      {
+        "title": "PHY-6 · Mobile Threat Catalogue - NIST",
+        "link": "https://pages.nist.gov/mobile-threat-catalogue/physical-threats/PHY-6.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0062"
+    ],
+    "relatedThreatActors": []
+  }
+}

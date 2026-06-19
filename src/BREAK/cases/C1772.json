@@ -1,0 +1,31 @@
+{
+  "C1772": {
+    "title": "Capital One数据泄露事件中的WAF配置错误",
+    "keywords": [
+      "Capital One",
+      "数据泄露",
+      "WAF配置错误",
+      "ModSecurity",
+      "SSRF",
+      "AWS S3",
+      "反向代理",
+      "防火墙绕过",
+      "云安全"
+    ],
+    "summary": "Capital One数据泄露事件中，攻击者利用配置错误的ModSecurity WAF反向代理，结合服务器端请求伪造漏洞，绕过防火墙访问了存储在AWS S3存储桶中的敏感数据，导致大规模数据泄露。该事件凸显了WAF错误配置如何成为攻击链的关键一环。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0250"
+    ],
+    "references": [
+      {
+        "title": "A Systematic Analysis of the Capital One Data Breach",
+        "link": "https://dl.acm.org/doi/full/10.1145/3546068"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2019-07",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "C1363": {
+    "title": "bZx协议二次闪电贷攻击事件",
+    "keywords": [
+      "bZx",
+      "闪电贷",
+      "价格操纵",
+      "预言机攻击",
+      "DeFi",
+      "ETH",
+      "2020",
+      "慢雾"
+    ],
+    "summary": "2020年2月18日，DeFi协议bZx再次遭受闪电贷攻击，攻击者通过操纵预言机价格获利约2388个ETH，价值约64.4万美元。该事件是典型的利用闪电贷进行价格操纵的攻击案例，给协议造成重大损失。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0160"
+    ],
+    "references": [
+      {
+        "title": "慢雾:复盘2020 DeFi、交易所和公链领域安全与隐私大事件|区块链|黑客...",
+        "link": "https://www.163.com/dy/article/G057DI610514832I.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2020-02",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0077"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

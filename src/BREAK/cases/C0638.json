@@ -1,0 +1,31 @@
+{
+  "C0638": {
+    "title": "国企采购拆单规避招标案",
+    "keywords": [
+      "国企采购",
+      "拆单规避招标",
+      "化整为零",
+      "审计",
+      "公开招标限额",
+      "办公耗材",
+      "自行采购",
+      "电子商城",
+      "采购价高于市场价"
+    ],
+    "summary": "某省审计机关对B单位审计发现，该单位将年度预算280万元的办公耗材采购，拆分为多批次自行采购，单次金额均控制在招标限额以下，累计实际采购金额达276万元，且采购价高于电子商城同类型产品价格，被认定为以化整为零方式规避公开招标。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0064"
+    ],
+    "references": [
+      {
+        "title": "国企采购惊现\"拆单套利\"!审计组一招破局",
+        "link": "https://mp.weixin.qq.com/s?__biz=MzA3ODgwMzczMg==&mid=2650590288&idx=1&sn=f2782a269623aecfaa1e7abb4735d3d7&chksm=869ac6f50a53448bc566fbc22d3c2d2336ae6c34e38ece545057b7fa1dac5b8d6f6b20285132&scene=27"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-03",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

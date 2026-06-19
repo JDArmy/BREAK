@@ -1,0 +1,35 @@
+{
+  "C0164": {
+    "title": "首例腾讯《三角洲行动》游戏外挂案件告破",
+    "keywords": [
+      "三角洲行动",
+      "游戏外挂",
+      "腾讯",
+      "谢某",
+      "iOS外挂",
+      "透视自瞄",
+      "非法获利",
+      "源代码篡改",
+      "网络销售"
+    ],
+    "summary": "2024年，腾讯《三角洲行动》首例外挂案告破。犯罪嫌疑人谢某篡改游戏源代码，制作基于iOS系统的外挂程序，具有透视、自瞄功能，通过网络销售非法获利近6万元。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0012-002"
+    ],
+    "references": [
+      {
+        "title": "首例腾讯《三角洲行动》游戏外挂案件告破,超 1300 个使用该类技术...",
+        "link": "https://k.sina.cn/article_1747383115_6826f34b02001nof2.html?from=news"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-10",
+    "relatedAttackTools": [
+      "AT0049"
+    ],
+    "relatedThreatActors": [
+      "TA0012"
+    ]
+  }
+}

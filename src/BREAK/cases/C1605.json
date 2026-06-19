@@ -1,0 +1,35 @@
+{
+  "C1605": {
+    "title": "CVE-2024-48989：Profinet协议最新安全漏洞",
+    "keywords": [
+      "CVE-2024-48989",
+      "Profinet",
+      "工业控制系统",
+      "ICS安全",
+      "协议漏洞",
+      "未授权操作",
+      "NVD",
+      "西门子",
+      "工控协议"
+    ],
+    "summary": "该漏洞为2024年公开的Profinet相关安全缺陷，可能允许攻击者利用协议弱点对工业控制系统实施未授权操作。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0210"
+    ],
+    "references": [
+      {
+        "title": "Nvd - Cve-2024-48989",
+        "link": "https://nvd.nist.gov/vuln/detail/CVE-2024-48989"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024",
+    "relatedAttackTools": [
+      "AT0083"
+    ],
+    "relatedThreatActors": [
+      "TA0049"
+    ]
+  }
+}

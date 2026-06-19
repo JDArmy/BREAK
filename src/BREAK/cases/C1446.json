@@ -1,0 +1,28 @@
+{
+  "C1446": {
+    "title": "什么是重放攻击？ - Exodus 知识库",
+    "keywords": [
+      "重放攻击",
+      "区块链分叉",
+      "加密货币",
+      "交易重放",
+      "双链兼容",
+      "Exodus",
+      "资产安全"
+    ],
+    "summary": "该资料明确指出，当两种分叉的加密货币允许交易在两条链上都有效时，就可能发生重放攻击。这与区块链分叉场景下的重放攻击定义完全吻合，即攻击者利用分叉后两条链的兼容性，将一条链上的合法交易在另一条链上重放，导致资产被重复转移。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0175"
+    ],
+    "references": [
+      {
+        "title": "What is a replay attack? - Exodus Knowledge Base",
+        "link": "https://support.exodus.com/support/en/articles/8598706-what-is-a-replay-attack"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "C1652": {
+    "title": "AvatarHunter: De-anonymization Attack in the Metaverse Based on User Motion Characteristics",
+    "keywords": [
+      "AvatarHunter",
+      "de-anonymization attack",
+      "metaverse",
+      "virtual reality",
+      "motion characteristics",
+      "behavioral patterns",
+      "user identity linkage",
+      "privacy leakage",
+      "VR security"
+    ],
+    "summary": "Researchers propose AvatarHunter, a non-intrusive and user-imperceptible de-anonymization attack that exploits inherent motion characteristics in virtual reality. By analyzing behavioral patterns, it identifies the real user identity behind a virtual avatar, demonstrating the feasibility of breaking anonymity and linking virtual and real-world identities in the metaverse.",
+    "references": [
+      {
+        "title": "De-Anonymizing Avatars in Virtual Reality - ACM Digital Library"
+      }
+    ]
+  }
+}

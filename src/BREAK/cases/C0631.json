@@ -1,0 +1,30 @@
+{
+  "C0631": {
+    "title": "天猫整治重复铺货行为",
+    "keywords": [
+      "天猫",
+      "重复铺货",
+      "电商平台规则",
+      "商品下架",
+      "品牌授权",
+      "店铺管控",
+      "同款商品",
+      "违规公示"
+    ],
+    "summary": "天猫要求店铺中同时出售同款商品两件及以上的商家，需保留发布时间最靠前的商品，删除其余同款。针对开设多家店铺且出售同样商品的情况，商家需取消重复店铺的品牌授权并删除商品。违规者将面临公示警告、商品下架、经营权限管控等处理。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0063"
+    ],
+    "references": [
+      {
+        "title": "国家“整治”电商前,天猫率先动手了_腾讯新闻",
+        "link": "https://new.qq.com/rain/a/20240724A0346E00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-07",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

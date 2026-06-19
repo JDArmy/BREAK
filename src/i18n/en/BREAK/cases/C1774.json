@@ -1,0 +1,20 @@
+{
+  "C1774": {
+    "title": "Bypassing Cloudflare WAF via Request Body Size Limits",
+    "keywords": [
+      "Cloudflare",
+      "WAF bypass",
+      "request body size limit",
+      "HTTP request smuggling",
+      "edge function",
+      "configuration abuse",
+      "payload hiding"
+    ],
+    "summary": "Security researchers found that Cloudflare's WAF only inspects the first 8 KB (free plan) or 128 KB (enterprise plan) of an HTTP request body. Attackers can exploit this behavior by sending oversized requests that hide malicious payloads in the uninspected portion, effectively bypassing WAF detection.",
+    "references": [
+      {
+        "title": "GitHub - abund4nt/bypass-waf: Modern techniques to bypass the most ..."
+      }
+    ]
+  }
+}

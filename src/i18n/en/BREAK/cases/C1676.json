@@ -1,0 +1,21 @@
+{
+  "C1676": {
+    "title": "Xygeni GitHub Action Tag Poisoning Vulnerability Leads to CI/CD Credential Leak",
+    "keywords": [
+      "GitHub Actions tag poisoning",
+      "CI/CD credential leak",
+      "mutable tag attack",
+      "CVE-2026-31976",
+      "Xygeni action vulnerability",
+      "supply chain attack",
+      "DevSecOps pipeline compromise",
+      "GitHub App token theft"
+    ],
+    "summary": "On March 3, 2026, attackers exploited leaked GitHub App credentials to conduct a tag poisoning attack against Xygeni's official xygeni-action GitHub Action. The attackers redirected the mutable v5 tag to a malicious commit from an unmerged pull request, causing any workflow referencing @v5 to pull and execute malicious code. The backdoor registered a beacon in the CI runtime environment, executed ",
+    "references": [
+      {
+        "title": "Variable Tag Trap: Xygeni GitHub Action High-Risk Vulnerability Endangers CI/CD Pipelines - Security..."
+      }
+    ]
+  }
+}

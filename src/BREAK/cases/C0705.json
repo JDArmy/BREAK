@@ -1,0 +1,33 @@
+{
+  "C0705": {
+    "title": "韩国文化体育观光部请求警方调查BTS演唱会门票黄牛",
+    "keywords": [
+      "BTS",
+      "演唱会",
+      "黄牛票",
+      "自动化倒卖",
+      "韩国文化体育观光部",
+      "二手交易平台",
+      "门票",
+      "身份验证"
+    ],
+    "summary": "韩国文化体育观光部在监控主要二手交易平台后，发现与BTS演唱会相关的黄牛票帖子共1868条，其中4起案件涉及105张疑似以高价转售的同一场次门票。该部已向警方举报这些涉嫌利用自动化手段或批量购票进行倒卖的行为，并强调由于严格的身份验证政策，购买黄牛票实际无法入场，呼吁观众通过官方渠道购票。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0070"
+    ],
+    "references": [
+      {
+        "title": "Police Investigation Into BTS Concert Ticket Scalping Requested",
+        "link": "https://www.koreaboo.com/news/police-investigation-bts-concert-ticket-scalping-requested/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0045"
+    ],
+    "relatedThreatActors": [
+      "TA0002"
+    ]
+  }
+}

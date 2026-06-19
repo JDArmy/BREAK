@@ -1,0 +1,21 @@
+{
+  "C1780": {
+    "title": "Wireless Telematics Threats: Malicious Apps Exploit Interfaces to Attack Connected Vehicles",
+    "keywords": [
+      "connected vehicle telematics",
+      "in-vehicle interface vulnerabilities",
+      "remote vehicle attack",
+      "unauthorized vehicle control",
+      "vehicle data theft",
+      "malicious app vehicle exploit",
+      "automotive API abuse",
+      "smartphone-based vehicle intrusion"
+    ],
+    "summary": "Research indicates that wireless telematics systems in intelligent connected vehicles contain multiple interface vulnerabilities. Malicious applications or smart connected devices can exploit these interfaces to launch remote attacks, even abusing vehicle interfaces through a user's smartphone to achieve unauthorized control and data theft.",
+    "references": [
+      {
+        "title": "Wireless telematics systems in emerging intelligent and connected vehicles: Threats and solutions"
+      }
+    ]
+  }
+}

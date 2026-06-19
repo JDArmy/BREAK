@@ -136,6 +136,39 @@ BREAK 数据结构以 `src/validation/breakSchema.ts` 和 `npm run validate:data
 
 **英文翻译**：`src/i18n/en/BREAK/terms/{ID}.json`（仅包含 title, aliases, keywords, definition, description, usageExample, references[].title）
 
+### Case（典型案例）
+
+**文件路径**：`src/BREAK/cases/{ID}.json`  
+**ID格式**：`C` + 4位数字（如 `C0001`），无子案例
+
+```json
+{
+  "C0001": {
+    "title": "案例标题",
+    "keywords": ["关键词1", "Keyword1"],
+    "summary": "案例摘要（80-150字，事实性描述）",
+    "description": "可选的详细背景",
+    "category": "criminal_verdict",
+    "incidentTime": "2024-06",
+    "relatedRisks": ["R0001"],
+    "relatedAttackTools": ["AT0001"],
+    "relatedThreatActors": ["TA0001"],
+    "references": [
+      {"link": "https://...", "title": "来源标题"}
+    ],
+    "updated": "2026-06-18"
+  }
+}
+```
+
+**英文翻译**：`src/i18n/en/BREAK/cases/{ID}.json`（仅包含 title, keywords, summary, description, references[].title）
+
+**category 枚举（key，多语言映射）**：`criminal_verdict`、`administrative_enforcement`、`security_incident`、`vulnerability_advisory`、`academic_research`、`news_report`。category 存 key 而非中文值，中英文通过 `caseCategoryOptions.*` locale 映射展示，英文翻译文件不维护 category 字段。
+
+**关系约定**：Case 与 Risk/AttackTool/ThreatActor 是多对多关系，**仅在 Case 侧维护**：`relatedRisks`（至少 1 个，必填）、`relatedAttackTools`/`relatedThreatActors`（可选，案例明确涉及才关联）。Risk/AttackTool/ThreatActor 实体不维护反向字段，详情页的"相关案例"通过 `useCasesByRisk` 等倒排索引反查。Case 不纳入关系图谱节点。
+
+**懒加载**：Case 数据量大（1797 条），不在 `BREAK` 主对象中 eager 加载，由 `src/composables/useCases.ts` 异步管理（`loadCases` + 中英文合并）。首页不加载案例数据；访问 `/cases`、搜索、相关案例反查时才触发加载。CasesView 及相关案例 section 直接读 `useCases` 的响应式数据，不走 `$t('BREAK.cases...')`。
+
 ### 字段说明
 
 **通用字段与必填差异**：
@@ -203,12 +236,16 @@ node scripts/validate/metrics.mjs
 - `AvoidancesView.vue` - 规避手段列表详情页
 - `AttackToolsView.vue` - 攻击工具列表详情页
 - `ThreatActorsView.vue` - 威胁行为者列表详情页
+- `TermsView.vue` - 行业术语列表详情页
+- `CasesView.vue` - 典型案例列表详情页
 
 **路由：**
 - `/risks` → 风险列表页
 - `/avoidances` → 规避手段列表页
 - `/attack-tools` → 攻击工具列表页
 - `/threat-actors` → 威胁行为者列表页
+- `/terms` → 行业术语列表页
+- `/cases` → 典型案例列表页
 
 **特点：**
 - 左右分栏布局（左侧列表，右侧详情）

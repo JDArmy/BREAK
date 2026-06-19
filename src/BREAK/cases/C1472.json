@@ -1,0 +1,35 @@
+{
+  "C1472": {
+    "title": "V2X通信安全面临假消息、轨迹追踪与重放攻击三大威胁",
+    "keywords": [
+      "V2X通信安全",
+      "假消息攻击",
+      "轨迹追踪",
+      "重放攻击",
+      "BSM消息伪造",
+      "GPS隐私泄露",
+      "车联网安全风险",
+      "V2X证书撤销"
+    ],
+    "summary": "车联网V2X系统因其开放广播特性面临多重安全威胁：攻击者可伪造虚假BSM消息（如谎称救护车逆行或前方施工）引发周围车辆无故急刹甚至连环追尾；通过固定车辆ID结合GPS位置信息长期监听可绘制车主完整出行轨迹，造成隐私泄露；录制合法签名消息（如“绿灯”信号）在错误时间重放，可误导车辆闯红灯。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0180"
+    ],
+    "references": [
+      {
+        "title": "现代智能汽车中的无线技术37——V2X(9)_v2x 证书撤销-CSDN博客",
+        "link": "https://blog.csdn.net/Godspeed_zwh/article/details/157094047"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0024",
+      "AT0097"
+    ],
+    "relatedThreatActors": [
+      "TA0049",
+      "TA0061"
+    ]
+  }
+}

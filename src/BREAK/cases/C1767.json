@@ -1,0 +1,36 @@
+{
+  "C1767": {
+    "title": "大规模缓存投毒漏洞挖掘",
+    "keywords": [
+      "缓存投毒",
+      "缓存键混淆",
+      "头部污染",
+      "Apache Traffic Server",
+      "CVE-2021-27577",
+      "X-Forwarded-Scheme",
+      "Cloudflare",
+      "Fastly",
+      "CDN",
+      "拒绝服务"
+    ],
+    "summary": "2022年2月，安全研究员Youstin利用缓存键混淆、头部污染等技术，在多个漏洞赏金项目中发现了70多个缓存投毒漏洞。攻击涉及Apache Traffic Server对URL片段的错误处理（CVE-2021-27577）、利用X-Forwarded-Scheme头导致的重定向循环，以及利用Cloudflare和Fastly的配置缺陷进行缓存投毒，导致拒绝服务或XSS。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0249"
+    ],
+    "references": [
+      {
+        "title": "大规模缓存投毒总结-先知社区",
+        "link": "https://xz.aliyun.com/news/10296"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-02",
+    "relatedAttackTools": [
+      "AT0096"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

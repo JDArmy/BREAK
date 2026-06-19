@@ -1,0 +1,35 @@
+{
+  "C0443": {
+    "title": "枚举攻击定义与支付卡破解机制",
+    "keywords": [
+      "枚举攻击",
+      "支付卡破解",
+      "卡测试",
+      "CVV暴力破解",
+      "支付网关",
+      "自动化脚本",
+      "欺诈交易",
+      "暗网出售"
+    ],
+    "summary": "枚举攻击（又称卡测试或卡破解攻击）是欺诈者使用自动化脚本或机器人，对商家支付网关提交大量小额交易，通过系统性地更改卡号、有效期或CVV等组合，循环测试数千种组合以识别有效支付卡详情，用于后续大额欺诈购买或暗网出售。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0041"
+    ],
+    "references": [
+      {
+        "title": "Enumeration Attack: Security Dictionary, Terms & Definitions - Greip ...",
+        "link": "https://greip.io/blog/dictionary/Enumeration-Attack-369"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0023",
+      "AT0090",
+      "AT0010"
+    ],
+    "relatedThreatActors": [
+      "TA0055"
+    ]
+  }
+}

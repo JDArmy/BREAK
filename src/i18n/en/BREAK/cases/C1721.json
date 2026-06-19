@@ -1,0 +1,22 @@
+{
+  "C1721": {
+    "title": "The Use of Tokenization, Encryption, and Masking in Database Systems for Data Security",
+    "keywords": [
+      "tokenization",
+      "encryption",
+      "data masking",
+      "database security",
+      "payment card data",
+      "PCI DSS",
+      "misconfiguration",
+      "data breach",
+      "sensitive data protection"
+    ],
+    "summary": "This research paper examines the application of tokenization, encryption, and masking techniques in database systems to protect sensitive data such as payment card information. It highlights that misconfigurations in these security controls, such as improper tokenization setup, can still lead to data breach risks.",
+    "references": [
+      {
+        "title": "The Use of Tokenization, Encryption, and Masking in Database Systems for Data Security"
+      }
+    ]
+  }
+}

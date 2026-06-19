@@ -1,0 +1,31 @@
+{
+  "C1668": {
+    "title": "Zendesk触发器上的Webhook伪造",
+    "keywords": [
+      "n8n",
+      "Zendesk",
+      "Webhook伪造",
+      "HMAC-SHA256",
+      "未签名请求",
+      "事件重放",
+      "自动化工作流",
+      "GHSA-38c7-23hj-2wgq"
+    ],
+    "summary": "n8n平台Zendesk触发器节点存在Webhook伪造漏洞。攻击者知晓Webhook URL后，可发送未签名的POST请求，以任意数据触发工作流。该节点未验证Zendesk附加的HMAC-SHA256签名，允许任何一方注入伪造的Zendesk事件载荷，触发自动化流程中的敏感操作。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0225"
+    ],
+    "references": [
+      {
+        "title": "Webhook Forgery on Zendesk Trigger · Advisory · n8n-io/n8n · GitHub",
+        "link": "https://github.com/n8n-io/n8n/security/advisories/GHSA-38c7-23hj-2wgq"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0086"
+    ],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C1547": {
+    "title": "Academic Research Reveals NFT Royalty Bypass Mechanism",
+    "keywords": [
+      "NFT royalty bypass",
+      "OTC trading",
+      "smart contract vulnerability",
+      "ACM CCS 2022",
+      "NFT marketplace protocol",
+      "creator royalties",
+      "off-market transaction",
+      "royalty circumvention"
+    ],
+    "summary": "An ACM CCS 2022 paper titled 'Understanding security issues in the NFT ecosystem' reveals that sellers can completely bypass NFT marketplace protocols through over-the-counter (OTC) deals, avoiding royalty payments to creators. Sellers list NFTs and then privately negotiate transactions with buyers, completing transfers without using marketplace contracts, thereby circumventing built-in royalty fe",
+    "references": [
+      {
+        "title": "Understanding security issues in the NFT ecosystem"
+      }
+    ]
+  }
+}

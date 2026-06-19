@@ -1,0 +1,35 @@
+{
+  "C1394": {
+    "title": "Mirai僵尸网络2016：利用IoT设备默认凭据",
+    "keywords": [
+      "Mirai",
+      "僵尸网络",
+      "IoT设备",
+      "默认凭据",
+      "DDoS攻击",
+      "暴力破解",
+      "Mirai Botnet",
+      "物联网安全"
+    ],
+    "summary": "2016年Mirai僵尸网络利用IoT设备的默认凭据进行大规模扫描和暴力破解，感染数十万台设备并组建僵尸网络，发动了史上最大规模的DDoS攻击，导致美国东海岸大面积断网。该事件凸显了IoT设备默认凭据未修改带来的严重安全威胁。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0166"
+    ],
+    "references": [
+      {
+        "title": "Mirai Botnet 2016: Exploiting Default Credentials in IoT Devices",
+        "link": "https://aviatrix.ai/threat-research-center/mirai-botnet-2016-default-credentials-exploitation/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2016",
+    "relatedAttackTools": [
+      "AT0081",
+      "AT0082"
+    ],
+    "relatedThreatActors": [
+      "TA0048"
+    ]
+  }
+}

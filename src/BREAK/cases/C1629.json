@@ -1,0 +1,34 @@
+{
+  "C1629": {
+    "title": "IEEE学术研究：元宇宙平台的社会工程攻击影响",
+    "keywords": [
+      "元宇宙",
+      "社会工程攻击",
+      "沉浸式虚拟环境",
+      "Kali Linux",
+      "认证攻击",
+      "人为漏洞",
+      "社交工程",
+      "IEEE",
+      "网络安全"
+    ],
+    "summary": "2024年IEEE国际会议论文探讨了元宇宙平台面临的社会工程攻击。研究指出，沉浸式虚拟环境中的漏洞易被利用，攻击者通过社交工程、操纵和认证攻击对用户造成心理和情感影响。论文在虚拟环境中使用Kali Linux工具实施了社会工程攻击，以识别平台的人为漏洞和安全缺陷，证实了元宇宙中社交工程威胁的现实性。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0215"
+    ],
+    "references": [
+      {
+        "title": "The Impact of Social Engineering Attacks on the Metaverse Platform",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10742993"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-08",
+    "relatedAttackTools": [
+      "AT0048",
+      "AT0054"
+    ],
+    "relatedThreatActors": []
+  }
+}

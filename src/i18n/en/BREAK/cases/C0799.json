@@ -1,0 +1,20 @@
+{
+  "C0799": {
+    "title": "North Korea Uses Fake Interviews to Plant Malicious NPM Packages Targeting Cloud-Native Apps",
+    "keywords": [
+      "North Korea fake interviews",
+      "malicious NPM packages",
+      "BeaverTail malware",
+      "InvisibleFerret",
+      "cloud-native application attacks",
+      "developer credential theft",
+      "supply chain attack"
+    ],
+    "summary": "In mid-2025, North Korean attackers used fake job interviews to trick developers into downloading 67 malicious NPM packages, which were downloaded over 17,000 times. The packages implanted malware such as BeaverTail, compromising developer environments and stealing credentials.",
+    "references": [
+      {
+        "title": "Supply Chain Attacks in Cloud Native Web Applications"
+      }
+    ]
+  }
+}

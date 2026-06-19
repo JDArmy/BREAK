@@ -1,0 +1,34 @@
+{
+  "C0886": {
+    "title": "学习通1.7亿条用户数据疑被泄露",
+    "keywords": [
+      "超星学习通",
+      "数据泄露",
+      "用户隐私",
+      "个人信息",
+      "数据库",
+      "暗网售卖",
+      "大学生学习软件",
+      "公安机关"
+    ],
+    "summary": "2022年6月，大学生学习软件‘超星学习通’的数据库信息被公开售卖，超1.7亿条信息疑遭泄露。学习通回应称未存储明文密码，但鉴于事情重大已向公安机关报案，公安机关介入调查。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0089"
+    ],
+    "references": [
+      {
+        "title": "2022年上半年全国数据安全及个人信息泄露大事记",
+        "link": "https://dy.163.com/article/HBHEQ1D10531NODR.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-06",
+    "relatedAttackTools": [
+      "AT0010"
+    ],
+    "relatedThreatActors": [
+      "TA0005"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C0408": {
+    "title": "MFA Fatigue Attacks in Cloud Environments",
+    "keywords": [
+      "MFA fatigue",
+      "MFA bombing",
+      "push notification spam",
+      "credential compromise",
+      "social engineering",
+      "cloud security",
+      "multi-factor authentication bypass",
+      "user manipulation"
+    ],
+    "summary": "A study on multi-factor authentication security examines how attackers executed MFA fatigue attacks by flooding users with repeated authentication requests after obtaining valid credentials. The findings show that while MFA is effective, it can be circumvented through user manipulation, underscoring the human element as a critical vulnerability.",
+    "references": [
+      {
+        "title": "Study and Enhancement of MFA Security Through Predictive Phishing Detection in Cloud Environments"
+      }
+    ]
+  }
+}

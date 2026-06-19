@@ -1,0 +1,20 @@
+{
+  "C1375": {
+    "title": "Mt. Gox Exchange Private Key Leak Leads to Theft of 850,000 Bitcoin",
+    "keywords": [
+      "Mt. Gox",
+      "private key leak",
+      "Bitcoin theft",
+      "cryptocurrency exchange",
+      "cold wallet",
+      "hot wallet",
+      "blockchain forensics"
+    ],
+    "summary": "Between 2011 and 2014, Mt. Gox exchange suffered a theft of over 850,000 Bitcoin due to leaked private keys and unaudited vulnerabilities. The exchange repeatedly reused Bitcoin addresses with compromised keys, escalating the loss into the largest cryptocurrency theft in history.",
+    "references": [
+      {
+        "title": "SAFEIS Security Guide: Review of the Most Costly Crypto Thefts in History and Six Anti-Theft Strategies..."
+      }
+    ]
+  }
+}

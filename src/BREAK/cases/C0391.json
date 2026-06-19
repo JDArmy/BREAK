@@ -1,0 +1,33 @@
+{
+  "C0391": {
+    "title": "“僵尸店铺”里找“生财之道”",
+    "keywords": [
+      "僵尸店铺",
+      "天猫",
+      "诈骗",
+      "保证金",
+      "延迟发货",
+      "平台规则漏洞",
+      "投诉索赔",
+      "小林",
+      "台州"
+    ],
+    "summary": "2025年，一名年轻男子小林利用天猫平台规则漏洞，筛选出无人打理、不会发货的“僵尸店铺”大量下单，再以延迟发货或缺货为由向平台投诉索赔，套取店铺保证金。通过这种方式，全国100余家天猫店铺的保证金被掏空，累计损失超100万元，小林个人获利约70万元。最终，小林因诈骗罪被判处10年有期徒刑。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0033"
+    ],
+    "references": [
+      {
+        "title": "“僵尸店铺”里找“生财之道”",
+        "link": "http://paper.taizhou.com.cn/taizhou/tzrb/wap/content/202508/18/content_234898.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-08",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0010"
+    ]
+  }
+}

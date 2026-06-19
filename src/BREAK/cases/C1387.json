@@ -1,0 +1,34 @@
+{
+  "C1387": {
+    "title": "Mirai僵尸网络攻击DNS服务商Dyn导致大规模断网",
+    "keywords": [
+      "Mirai",
+      "僵尸网络",
+      "DDoS攻击",
+      "Dyn",
+      "DNS服务商",
+      "物联网设备",
+      "大规模断网",
+      "IoT僵尸网络"
+    ],
+    "summary": "2016年10月，Mirai僵尸网络对DNS服务商Dyn发起大规模DDoS攻击，导致美国东海岸大部分互联网瘫痪，包括Twitter、Netflix、Reddit等主要网站无法访问。攻击利用数十万台受感染的物联网设备，造成重大互联网基础设施中断。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0165"
+    ],
+    "references": [
+      {
+        "title": "Inside the infamous Mirai IoT Botnet: A Retrospective Analysis",
+        "link": "https://blog.cloudflare.com/inside-mirai-the-infamous-iot-botnet-a-retrospective-analysis/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2016-10",
+    "relatedAttackTools": [
+      "AT0082"
+    ],
+    "relatedThreatActors": [
+      "TA0048"
+    ]
+  }
+}

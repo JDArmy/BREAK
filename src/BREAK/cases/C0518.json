@@ -1,0 +1,33 @@
+{
+  "C0518": {
+    "title": "实战Frida逆向分析：手把手教你破解Android应用的授权验证",
+    "keywords": [
+      "Frida",
+      "Android逆向",
+      "动态Hook",
+      "Jadx-GUI",
+      "授权验证绕过",
+      "LicenseManager",
+      "本地验证破解",
+      "应用安全"
+    ],
+    "summary": "文章以一款名为“PremiumTool”的Android应用为例，演示了使用Frida动态Hook技术定位并绕过其本地授权验证逻辑。通过Jadx-GUI静态分析发现LicenseManager类中的本地字符串对比验证，攻击者可Hook相关方法使其永远返回true，从而破解专业版功能限制。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0051"
+    ],
+    "references": [
+      {
+        "title": "实战Frida逆向分析：手把手教你破解Android应用的授权验证（附案例代码...",
+        "link": "https://blog.csdn.net/weixin_29174141/article/details/158056990"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-02",
+    "relatedAttackTools": [
+      "AT0028",
+      "AT0015"
+    ],
+    "relatedThreatActors": []
+  }
+}

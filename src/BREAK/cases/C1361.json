@@ -1,0 +1,34 @@
+{
+  "C1361": {
+    "title": "xTokenMarket 闪电贷攻击",
+    "keywords": [
+      "xTokenMarket",
+      "闪电贷攻击",
+      "xSNX",
+      "合约漏洞",
+      "DeFi",
+      "闪电贷",
+      "2021"
+    ],
+    "summary": "2021年8月29日，xTokenMarket遭闪电贷攻击，其xSNX合约漏洞被利用。攻击者通过闪电贷借入资产，利用合约逻辑漏洞在单笔交易内完成攻击获利。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0160"
+    ],
+    "references": [
+      {
+        "title": "...8月发生较典型安全事件超41起,黑客究竟还有多少攻击套路? - 知...",
+        "link": "https://zhuanlan.zhihu.com/p/405498268"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-08",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0077"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

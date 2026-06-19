@@ -1,0 +1,22 @@
+{
+  "C1398": {
+    "title": "Mirai Botnet Forensic Analysis",
+    "keywords": [
+      "Mirai",
+      "botnet",
+      "IoT",
+      "default credentials",
+      "brute force",
+      "port 23",
+      "Telnet",
+      "DDoS",
+      "malware"
+    ],
+    "summary": "Forensic examination of the Mirai botnet reveals that infected IoT devices were discovered and forcibly enrolled through scanning of port 23 or brute-force attacks using default credentials, highlighting default credentials as a critical factor in Mirai's botnet propagation.",
+    "references": [
+      {
+        "title": "Mirai Botnet Forensic Analysis - Cyber"
+      }
+    ]
+  }
+}

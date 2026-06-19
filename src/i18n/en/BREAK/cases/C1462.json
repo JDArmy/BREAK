@@ -1,0 +1,22 @@
+{
+  "C1462": {
+    "title": "Cybersecurity Explained (Part 2): Defending Against Side-Channel Attacks",
+    "keywords": [
+      "side-channel attack",
+      "power analysis",
+      "encryption key extraction",
+      "medical IoT security",
+      "secure boot",
+      "network segmentation",
+      "IEC 62443",
+      "attack surface minimization",
+      "IoT device hardening"
+    ],
+    "summary": "This blog post examines IoT device security risks, highlighting side-channel attacks as an attack vector where adversaries can extract encryption keys through power analysis, with specific mention of threats to medical IoT devices. It also covers mitigations such as secure boot, attack surface minimization, and network segmentation, referencing industry standards like IEC 62443.",
+    "references": [
+      {
+        "title": "Cybersecurity Explained - Part 2: Side-Channel Attack Prevention - CSDN Blog"
+      }
+    ]
+  }
+}

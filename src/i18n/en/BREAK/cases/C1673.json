@@ -1,0 +1,21 @@
+{
+  "C1673": {
+    "title": "Credential Leakage via API Misuse in CI/CD Pipelines",
+    "keywords": [
+      "CI/CD pipeline",
+      "API misuse",
+      "credential leak",
+      "YAML misconfiguration",
+      "supply chain attack",
+      "malicious code injection",
+      "pipeline security",
+      "secrets exposure"
+    ],
+    "summary": "A threat-oriented study reveals that credential leaks in CI/CD pipelines stem from API misuse and YAML misconfigurations. Attackers inject malicious code through supply chain attacks and exploit the exposed credentials for lateral penetration.",
+    "references": [
+      {
+        "title": "A Threat-Oriented Study of API Security Challenges in CI/CD Pipelines"
+      }
+    ]
+  }
+}

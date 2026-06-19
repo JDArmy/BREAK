@@ -1,0 +1,30 @@
+{
+  "C0303": {
+    "title": "基于数据包的Challenge Collapsar攻击流量检测研究",
+    "keywords": [
+      "Challenge Collapsar",
+      "CC攻击",
+      "流量检测",
+      "HTTP请求",
+      "拒绝服务攻击",
+      "数据包分析",
+      "检测模型",
+      "F1值",
+      "准确率"
+    ],
+    "summary": "该研究针对CC攻击流量检测提出新方法，CC攻击通过频繁向目标服务器发送伪造HTTP请求实施拒绝服务。实验结果表明该模型检测准确率达到98.55%，F1值达98.59%，比之前方法提高3%。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0029-003"
+    ],
+    "references": [
+      {
+        "title": "Challenge Collapsar (CC) Attack Traffic Detection Based on Packet ...",
+        "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7304042/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

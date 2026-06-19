@@ -1,0 +1,21 @@
+{
+  "C1534": {
+    "title": "Quantum Computing Attack Risk Analysis for Cryptocurrency Exchange Blockchain Systems",
+    "keywords": [
+      "post-quantum cryptography",
+      "blockchain quantum attack",
+      "elliptic curve cryptography",
+      "ECDSA forgery",
+      "quantum computing threat",
+      "cryptocurrency exchange security",
+      "PQC blockchain",
+      "digital signature quantum resistance"
+    ],
+    "summary": "A study published on January 23, 2024, indicates that current cryptocurrency exchange blockchain systems primarily use Elliptic Curve Cryptography (ECC) to generate wallet key pairs and the Elliptic Curve Digital Signature Algorithm (ECDSA) to create transaction signatures. As quantum computing technology matures, quantum computers may forge signatures produced by ECDSA, exposing blockchain system",
+    "references": [
+      {
+        "title": "The Security Performance Analysis of Blockchain System Based on Post-Quantum Cryptography--A Case Study of Cryptocurrency Exchanges"
+      }
+    ]
+  }
+}

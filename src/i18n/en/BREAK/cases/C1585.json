@@ -1,0 +1,21 @@
+{
+  "C1585": {
+    "title": "Remote Provisioning Risks in eSIM/iSIM and SIM Swap Attacks",
+    "keywords": [
+      "eSIM remote provisioning",
+      "iSIM security",
+      "SIM swap attack",
+      "mobile service hijacking",
+      "identity theft",
+      "USENIX Security",
+      "third-party network routing",
+      "travel eSIM privacy"
+    ],
+    "summary": "An empirical study reveals how eSIM technology introduces new privacy and security risks through remote provisioning. The research finds that travel eSIMs often route user data through third-party networks, and opaque provisioning processes may allow attackers to exploit remote management features for SIM hijacking, leading to mobile service takeover and identity theft.",
+    "references": [
+      {
+        "title": "{eSIMplicity} or {eSIMplification}? Privacy and Security Risks in the {eSIM} Ecosystem"
+      }
+    ]
+  }
+}

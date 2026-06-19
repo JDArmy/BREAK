@@ -1,0 +1,33 @@
+{
+  "C1574": {
+    "title": "针对AI物联网恶意软件检测系统的对抗攻击案例研究",
+    "keywords": [
+      "对抗攻击",
+      "AI恶意软件检测",
+      "物联网安全",
+      "对抗样本",
+      "AIoT",
+      "恶意软件规避",
+      "IEEE",
+      "消费电子产品"
+    ],
+    "summary": "该研究评估了基于AI的物联网恶意软件检测系统在面对对抗攻击时的脆弱性。攻击者通过对抗样本成功规避了AI检测，使恶意软件得以在物联网消费电子产品中潜伏，可能造成重大损害。这直接展示了对抗攻击对AIoT系统决策的威胁。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0205"
+    ],
+    "references": [
+      {
+        "title": "An Adversarial Attack on Artificial Intelligence Malware Detection in ...",
+        "link": "https://ieeexplore.ieee.org/document/10720903/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0093"
+    ],
+    "relatedThreatActors": [
+      "TA0058"
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "C0430": {
+    "title": "公安部部署打击负面舆情敲诈等涉网黑恶犯罪",
+    "keywords": [
+      "公安部",
+      "负面舆情敲诈",
+      "涉网黑恶犯罪",
+      "网络水军",
+      "软暴力催收",
+      "恶意索赔",
+      "网络套路贷",
+      "裸聊敲诈",
+      "电视电话推进会"
+    ],
+    "summary": "2023年2月，公安部召开电视电话推进会，要求以裸聊敲诈、网络套路贷、软暴力催收、恶意索赔、负面舆情敲诈、网络水军滋事等犯罪为重点，依法严厉打击涉网黑恶犯罪，坚决遏制此类案件多发高发势头。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0039"
+    ],
+    "references": [
+      {
+        "title": "裸聊敲诈、软暴力催收…公安部重拳出击!_手机新浪网",
+        "link": "https://news.sina.cn/gn/2023-02-18/detail-imyfzpwp9224156.d.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-02",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0019"
+    ]
+  }
+}

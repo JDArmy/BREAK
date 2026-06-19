@@ -1,0 +1,32 @@
+{
+  "C0426": {
+    "title": "二维码钓鱼攻击研究：利用二维码进行网络钓鱼的实战研究",
+    "keywords": [
+      "二维码钓鱼",
+      "QR code phishing",
+      "网络钓鱼",
+      "登录扫码欺诈",
+      "arXiv",
+      "真实世界研究",
+      "社会工程学",
+      "攻击向量",
+      "钓鱼测试"
+    ],
+    "summary": "研究人员在一个研究园区内进行了真实的二维码钓鱼活动，测试了两种不同版本的二维码。研究旨在探索利用二维码进行网络钓鱼是否是一种成功的攻击向量。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0038"
+    ],
+    "references": [
+      {
+        "title": "Hooked: A Real-World Study on QR Code Phishing - arXiv.org",
+        "link": "https://arxiv.org/html/2407.16230v1"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0067"
+    ],
+    "relatedThreatActors": []
+  }
+}

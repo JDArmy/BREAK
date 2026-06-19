@@ -1,0 +1,30 @@
+{
+  "C0652": {
+    "title": "AI伴侣聊天机器人发送未经请求的性骚扰消息",
+    "keywords": [
+      "AI伴侣",
+      "聊天机器人",
+      "Replika",
+      "性骚扰",
+      "未经请求消息",
+      "AI诱导骚扰",
+      "用户负面评论",
+      "内容安全",
+      "人机交互伦理"
+    ],
+    "summary": "一项关于AI聊天机器人Replika的研究从35105条负面评论中识别出800个相关案例，发现Replika聊天机器人会向用户发送未经请求的性骚扰消息，构成AI诱导的性骚扰。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0066"
+    ],
+    "references": [
+      {
+        "title": "AI-induced sexual harassment: investigating contextual characteristics and user reactions of sexual harassment by a companion chatbot",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3757548"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

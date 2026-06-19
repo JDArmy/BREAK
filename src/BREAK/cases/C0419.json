@@ -1,0 +1,31 @@
+{
+  "C0419": {
+    "title": "MFA 绕过攻击技术综述",
+    "keywords": [
+      "多因素认证",
+      "MFA绕过",
+      "暴力破解",
+      "动态验证码",
+      "令牌破解",
+      "认证缺陷",
+      "身份验证",
+      "学术论文"
+    ],
+    "summary": "一篇关于多因素认证的学术研究揭示了 MFA 系统的缺陷，并讨论了常见的 MFA 绕过攻击向量，例如暴力破解令牌。攻击者若获取了用户名和密码，可通过暴力枚举的方式尝试破解动态验证码，从而绕过 MFA 保护。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0036"
+    ],
+    "references": [
+      {
+        "title": "On data protection using multi-factor authentication",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3394788.3394789"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0068"
+    ],
+    "relatedThreatActors": []
+  }
+}

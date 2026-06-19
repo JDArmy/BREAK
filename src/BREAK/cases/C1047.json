@@ -1,0 +1,31 @@
+{
+  "C1047": {
+    "title": "BYOD的隐性成本：个人设备如何威胁企业安全",
+    "keywords": [
+      "BYOD",
+      "自带设备办公",
+      "数据泄露",
+      "LastPass",
+      "CyberUnit",
+      "企业安全",
+      "运营中断",
+      "监管罚款",
+      "财务损失",
+      "个人设备"
+    ],
+    "summary": "CyberUnit分析指出，BYOD的隐性成本体现在客户数据泄露、运营中断、监管罚款和直接财务损失上。文章以LastPass事件为例，说明BYOD带来的便利伴随着真实的安全风险，初始泄露后可能持续数年造成财务损失。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0112-001"
+    ],
+    "references": [
+      {
+        "title": "The Hidden Cost of BYOD: Why Personal Devices Are Putting Your Business ...",
+        "link": "https://cyberunit.com/insights/byod-risks-why-personal-devices-threaten-business-security/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

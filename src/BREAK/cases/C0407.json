@@ -1,0 +1,35 @@
+{
+  "C0407": {
+    "title": "Uber 与 Cisco 因推送轰炸导致数据泄露",
+    "keywords": [
+      "Push bombing",
+      "MFA fatigue",
+      "多因素认证",
+      "Uber",
+      "Cisco",
+      "Scattered Spider",
+      "勒索软件",
+      "身份验证绕过",
+      "社会工程攻击",
+      "网络安全事件"
+    ],
+    "summary": "推送轰炸（又称 MFA 疲劳攻击）已在 Uber 和 Cisco 的重大泄露事件中被利用。包括勒索软件组织 Scattered Spider 在内的攻击者利用该技术绕过多重身份验证，通过反复向用户发送大量推送通知，迫使其最终批准一次请求，从而获得未授权访问。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0036-001"
+    ],
+    "references": [
+      {
+        "title": "What Is Push Bombing? And How Beyond Identity Makes It Impossible",
+        "link": "https://www.beyondidentity.com/resource/what-is-push-bombing-and-how-beyond-identity-makes-it-impossible"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0094"
+    ],
+    "relatedThreatActors": [
+      "TA0059"
+    ]
+  }
+}

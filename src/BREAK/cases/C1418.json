@@ -1,0 +1,36 @@
+{
+  "C1418": {
+    "title": "2022年DeFi协议因预言机操纵攻击损失4.03亿美元",
+    "keywords": [
+      "DeFi",
+      "预言机操纵",
+      "Chainalysis",
+      "智能合约",
+      "价格操纵",
+      "去中心化交易所",
+      "借贷协议",
+      "2022年",
+      "4.03亿美元"
+    ],
+    "summary": "据Chainalysis估算，2022年DeFi协议在41起独立的预言机操纵攻击中损失了4.032亿美元。这些攻击通过操纵外部数据源，使智能合约引用错误价格，导致借贷协议、去中心化交易所等遭受重大损失。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0169"
+    ],
+    "references": [
+      {
+        "title": "Oracle Manipulation Attacks Rising: A Unique Concern for DeFi",
+        "link": "https://www.chainalysis.com/blog/oracle-manipulation-attacks-rising/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0077"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

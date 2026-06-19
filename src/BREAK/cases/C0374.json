@@ -1,0 +1,30 @@
+{
+  "C0374": {
+    "title": "OTP暴力破解攻击载荷列表",
+    "keywords": [
+      "OTP暴力破解",
+      "字典文件",
+      "数字验证码",
+      "GitHub",
+      "速率限制",
+      "暴力破解载荷",
+      "安全研究"
+    ],
+    "summary": "安全研究人员在GitHub上公开了用于暴力破解OTP的专用字典文件，包含4位、5位和6位数字验证码的所有可能组合。这些载荷可用于对缺乏速率限制的应用程序进行暴力破解测试或攻击。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0032-004"
+    ],
+    "references": [
+      {
+        "title": "GitHub - iamtutu/OTP_bruteforce_payloads: 4, 5, and 6 OTP for ...",
+        "link": "https://github.com/iamtutu/OTP_bruteforce_payloads"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0068"
+    ],
+    "relatedThreatActors": []
+  }
+}

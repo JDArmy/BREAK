@@ -1,0 +1,34 @@
+{
+  "C1608": {
+    "title": "Profinet协议漏洞分析及攻击研究",
+    "keywords": [
+      "Profinet IO",
+      "工业控制协议",
+      "协议漏洞分析",
+      "ICS安全",
+      "工控系统攻击",
+      "协议安全缺陷",
+      "工业以太网",
+      "漏洞利用",
+      "SCADA安全"
+    ],
+    "summary": "一篇学术论文描述了针对Profinet IO协议的漏洞分析结果，并展示了基于这些漏洞可能发起的多种攻击。研究聚焦于协议本身的安全缺陷及其利用方式。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0210"
+    ],
+    "references": [
+      {
+        "title": "Towards the protection of industrial control systems",
+        "link": "https://dl.acm.org/doi/10.1007/978-3-642-39235-1_10"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0083"
+    ],
+    "relatedThreatActors": [
+      "TA0049"
+    ]
+  }
+}

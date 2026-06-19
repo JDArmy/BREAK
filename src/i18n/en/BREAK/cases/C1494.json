@@ -1,0 +1,21 @@
+{
+  "C1494": {
+    "title": "Stake-bleeding attacks on proof-of-stake blockchains",
+    "keywords": [
+      "stake-bleeding attack",
+      "proof-of-stake blockchain",
+      "posterior corruption",
+      "long-range attack",
+      "costless simulation",
+      "historical private key",
+      "fork attack",
+      "chain integrity"
+    ],
+    "summary": "This study examines stake-bleeding attacks in proof-of-stake blockchains, including posterior corruption and long-range attacks. Adversaries can fork from early blocks using historical private keys to build an alternative chain; due to costless simulation, the attack cost is extremely low, threatening the historical integrity of the main chain.",
+    "references": [
+      {
+        "title": "Eclipse-Based Stake-Bleeding Attacks in PoS Blockchain Systems"
+      }
+    ]
+  }
+}

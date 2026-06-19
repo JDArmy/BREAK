@@ -1,0 +1,21 @@
+{
+  "C1764": {
+    "title": "APK Repackaging Detection: Ad SDK Injection and Data Collection Module Implantation",
+    "keywords": [
+      "APK repackaging",
+      "ad SDK injection",
+      "data collection module",
+      "privacy theft",
+      "IMEI harvesting",
+      "MAC address",
+      "mobile app repackaging",
+      "Android security"
+    ],
+    "summary": "Attackers repackage apps by injecting ad network SDK code into Activities or Services, causing pop-up ads or persistent background displays. They also implant data collection modules to harvest device IMEI, MAC address, location coordinates, and contact lists, periodically uploading the information to remote servers.",
+    "references": [
+      {
+        "title": "Android APK Repackaging Detection and Channel Distribution Security: Signature Verification, SDK Injection Identification, and Automated..."
+      }
+    ]
+  }
+}

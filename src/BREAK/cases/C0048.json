@@ -1,0 +1,36 @@
+{
+  "C0048": {
+    "title": "网络水军产业链运作内情：出售粉丝、评论分档",
+    "keywords": [
+      "网络水军",
+      "虚假流量",
+      "刷粉",
+      "刷赞",
+      "刷浏览量",
+      "公众号",
+      "广告主",
+      "产业链",
+      "作弊"
+    ],
+    "summary": "据调查，网络水军产业链中，除了刷粉丝，还需刷点赞和浏览量以维持虚假热度。公众号公开浏览量后，必须刷浏览量来配合刷粉和刷赞，形成一条完整的虚假互动链条，以欺骗广告主投放。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0005-001"
+    ],
+    "references": [
+      {
+        "title": "揭网络水军产业链运作内情:出售粉丝 评论也分档",
+        "link": "https://www.ztnews.net/article/show-101411.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2018-01",
+    "relatedAttackTools": [
+      "AT0046",
+      "AT0091"
+    ],
+    "relatedThreatActors": [
+      "TA0019"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C1318": {
+    "title": "Fileless Attack Analysis in Incident Response",
+    "keywords": [
+      "fileless attack",
+      "cryptomining",
+      "PowerShell",
+      "SMB",
+      "lateral movement",
+      "in-memory execution",
+      "port scanning",
+      "incident response"
+    ],
+    "summary": "In September 2019, an internal network server was hit by a fileless cryptomining attack. The attacker leveraged SMB anonymous login and password brute-forcing to deliver the malware, executing mining code in memory via PowerShell without dropping files to disk, causing 100% CPU usage. The attack also used scheduled tasks to download malicious files and involved port scanning and lateral movement.",
+    "references": [
+      {
+        "title": "Emergency Response Series: Analysis of Fileless Attacks - FreeBuf Cybersecurity Industry Portal"
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C1617": {
+    "title": "A Physics-Aware V2X Intrusion Detection System for Truck Platooning",
+    "keywords": [
+      "truck platooning",
+      "V2X",
+      "intrusion detection",
+      "false data injection",
+      "physics-aware",
+      "V2V communication",
+      "V2I communication",
+      "connected vehicle security"
+    ],
+    "summary": "An open-source project implementing a physics-aware intrusion detection system for connected longitudinal truck platoons, leveraging V2V and V2I communications to detect false data injection attacks. The system identifies malicious information injected by attackers by analyzing the consistency between vehicle physical motion states and communication data, preventing interference with platooning de",
+    "references": [
+      {
+        "title": "GitHub - chloekentebe/physics-aware-platoon-ids"
+      }
+    ]
+  }
+}

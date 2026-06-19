@@ -1,0 +1,21 @@
+{
+  "C1354": {
+    "title": "BEC Token Integer Overflow Attack Incident",
+    "keywords": [
+      "BEC",
+      "BeautyChain",
+      "integer overflow",
+      "smart contract",
+      "batchTransfer",
+      "token dump",
+      "Ethereum vulnerability",
+      "2018"
+    ],
+    "summary": "On April 22, 2018, an attacker exploited an integer overflow vulnerability in the batchTransfer function of the BEC smart contract. By passing extremely large values, a multiplication operation overflowed, causing the amount variable to become zero and bypassing balance checks. The attacker generated massive amounts of BEC tokens out of thin air and dumped them on the market, driving the token's v",
+    "references": [
+      {
+        "title": "Solidity Smart Contract Basic Vulnerability: Integer Overflow - Security KER"
+      }
+    ]
+  }
+}

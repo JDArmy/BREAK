@@ -1,0 +1,36 @@
+{
+  "C1378": {
+    "title": "无人机IoT安全隐患：DoS攻击与僵尸网络威胁",
+    "keywords": [
+      "无人机",
+      "IoT安全",
+      "DoS攻击",
+      "僵尸网络",
+      "分布式拒绝服务",
+      "智能设备劫持",
+      "ANRA Technologies",
+      "Amit Ganjoo",
+      "物联网漏洞"
+    ],
+    "summary": "2019年，物联网安全专家Amit Ganjoo指出，随着廉价不可靠的无人机设备进入市场，这些设备成为薄弱环节，易被黑客利用发起阻断服务（DoS）攻击。无人机可能被纳入僵尸网络驱动的分布式DoS攻击，导致设备失控，威胁交通和用户安全。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0163"
+    ],
+    "references": [
+      {
+        "title": "...激烈?问题源头在哪?引发的IoT安全隐患谁来解决 - OFweek物联网",
+        "link": "https://iot.ofweek.com/2019-03/ART-132216-8500-30308554.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2019-03",
+    "relatedAttackTools": [
+      "AT0081",
+      "AT0082"
+    ],
+    "relatedThreatActors": [
+      "TA0048"
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "C1388": {
+    "title": "Mirai变种僵尸网络大规模传播事件",
+    "keywords": [
+      "Mirai变种",
+      "僵尸网络",
+      "DDoS攻击",
+      "CNCERT",
+      "奇安信",
+      "IoT安全",
+      "肉鸡",
+      "mips",
+      "arm",
+      "x86"
+    ],
+    "summary": "2022年，CNCERT和奇安信监测发现一个新的Mirai变种僵尸网络快速传播，每日上线境内肉鸡数（以IP计算）最多超过2万，每日针对多个目标发起DDoS攻击。该变种针对mips、arm、x86等多种CPU架构，给网络空间带来较大威胁。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0165"
+    ],
+    "references": [
+      {
+        "title": "关于Mirai变种僵尸网络大规模传播的风险提示",
+        "link": "https://xxb.gdufe.edu.cn/2022/0531/c4972a160265/page.htm"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-05",
+    "relatedAttackTools": [
+      "AT0082"
+    ],
+    "relatedThreatActors": [
+      "TA0048"
+    ]
+  }
+}

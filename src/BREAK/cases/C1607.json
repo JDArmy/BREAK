@@ -1,0 +1,29 @@
+{
+  "C1607": {
+    "title": "Siemens PROFINET-IO Stack漏洞通报",
+    "keywords": [
+      "Siemens",
+      "PROFINET-IO Stack",
+      "CVE-2019-13946",
+      "ICS advisory",
+      "CISA",
+      "工业协议",
+      "漏洞利用",
+      "网络访问保护"
+    ],
+    "summary": "CISA发布ICS公告，指出Siemens PROFINET-IO Stack存在安全漏洞（CVE-2019-13946）。攻击者可利用该漏洞进行攻击，Siemens强烈建议用户保护网络访问。该漏洞涉及工业协议Profinet的安全问题。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0210"
+    ],
+    "references": [
+      {
+        "title": "Siemens PROFINET-IO Stack (Update H) - CISA",
+        "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-20-042-04"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

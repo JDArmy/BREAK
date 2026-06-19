@@ -1,0 +1,37 @@
+{
+  "C1675": {
+    "title": "LiteLLM PyPI 供应链投毒窃取云服务与 CI/CD 凭证",
+    "keywords": [
+      "LiteLLM",
+      "PyPI",
+      "供应链投毒",
+      "恶意版本",
+      "凭证窃取",
+      "CI/CD",
+      "云凭证",
+      "GitHub Actions",
+      "Python"
+    ],
+    "summary": "PyPI 官方仓库发现 LiteLLM 的两个恶意版本（1.82.7 和 1.82.8），嵌入多阶段载荷，专门窃取开发者环境中的 CI/CD 密钥、云凭证（AWS/GCP/Azure）、Kubernetes 配置和 Docker 凭证。攻击者入侵发布凭证后将窃密代码注入官方版本和 CI/CD 流水线使用的 GitHub Actions，日均约三百万次下载量导致大规模暴露风险。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0226"
+    ],
+    "references": [
+      {
+        "title": "PyPI 警告开发者:LiteLLM 恶意软件窃取云服务与 CI/CD 凭证事件...",
+        "link": "https://www.freebuf.com/articles/database/474939.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-03",
+    "relatedAttackTools": [
+      "AT0064",
+      "AT0087",
+      "AT0088"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

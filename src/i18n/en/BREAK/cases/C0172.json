@@ -1,0 +1,22 @@
+{
+  "C0172": {
+    "title": "Measuring and disrupting anti-adblockers using differential execution analysis",
+    "keywords": [
+      "anti-adblocker",
+      "differential execution analysis",
+      "ad blocking",
+      "JavaScript rewriting",
+      "API hooking",
+      "web measurement",
+      "Alexa top sites",
+      "Zhu Shitong",
+      "NSF"
+    ],
+    "summary": "This study employs differential execution analysis to automatically detect anti-adblocker mechanisms, finding that 30.5% of Alexa top 10,000 websites deploy such measures, with over 90% showing no visible warning. It also develops JavaScript rewriting and API hooking schemes to help ad blockers evade anti-adblock detection.",
+    "references": [
+      {
+        "title": "Measuring and Disrupting Anti-Adblockers Using Differential Execution Analysis"
+      }
+    ]
+  }
+}

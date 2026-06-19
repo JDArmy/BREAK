@@ -1,0 +1,33 @@
+{
+  "C0408": {
+    "title": "云环境中的MFA疲劳攻击",
+    "keywords": [
+      "MFA fatigue",
+      "MFA bombing",
+      "push notification spam",
+      "credential compromise",
+      "social engineering",
+      "cloud security",
+      "multi-factor authentication bypass",
+      "user manipulation"
+    ],
+    "summary": "一项关于MFA安全的研究详细描述了攻击者如何通过获取凭证后，向用户大量发送认证请求来实施MFA疲劳攻击。该攻击表明，尽管MFA有效，但可通过操纵用户绕过，凸显了人为因素是一个关键漏洞。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0036-001"
+    ],
+    "references": [
+      {
+        "title": "Study and Enhancement of MFA Security Through Predictive Phishing Detection in Cloud Environments",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11474393/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0094"
+    ],
+    "relatedThreatActors": [
+      "TA0059"
+    ]
+  }
+}

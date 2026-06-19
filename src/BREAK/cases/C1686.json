@@ -1,0 +1,36 @@
+{
+  "C1686": {
+    "title": "自复制蠕虫感染180余个npm包以窃取凭证",
+    "keywords": [
+      "npm",
+      "supply chain attack",
+      "self-replicating worm",
+      "credential theft",
+      "cloud tokens",
+      "dependency confusion",
+      "package typosquatting",
+      "CI/CD",
+      "ReversingLabs",
+      "rxnt-authentication"
+    ],
+    "summary": "ReversingLabs发现一起npm供应链攻击事件，涉及超过180个npm包被植入自复制蠕虫，用于窃取云令牌凭证。攻击起点是名为rxnt-authentication的恶意包，于2025年9月14日在npm上发布，通过依赖混淆和包投毒方式感染CI/CD环境并横向传播。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0228"
+    ],
+    "references": [
+      {
+        "title": "Self-Replicating Worm Hits 180+ npm Packages to Steal Credentials in ...",
+        "link": "https://thehackernews.com/2025/09/40-npm-packages-compromised-in-supply.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-09",
+    "relatedAttackTools": [
+      "AT0087"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

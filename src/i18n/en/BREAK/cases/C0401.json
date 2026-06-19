@@ -1,0 +1,23 @@
+{
+  "C0401": {
+    "title": "Tycoon 2FA Phishing Kit Targets Health Tech Firm, Causing $1.4M Loss",
+    "keywords": [
+      "Tycoon 2FA",
+      "phishing kit",
+      "adversary-in-the-middle",
+      "session cookie hijacking",
+      "MFA bypass",
+      "Microsoft 365",
+      "health tech",
+      "business email compromise",
+      "reverse proxy",
+      "Any.run"
+    ],
+    "summary": "In October 2025, a CFO at a Boston-based health tech company clicked a phishing email attachment disguised as a meeting invitation. They entered credentials and MFA code on a fake Microsoft 365 login page. Attackers used the Tycoon 2FA kit's adversary-in-the-middle reverse proxy to intercept session cookies in real time, then sent emails as the CEO to change payment account details, stealing $1.4 ",
+    "references": [
+      {
+        "title": "Is MFA Obsolete? Tycoon 2FA Phishing Kit Unleashes Session Hijacking Storm, Over 60,000 Affected Globally..."
+      }
+    ]
+  }
+}

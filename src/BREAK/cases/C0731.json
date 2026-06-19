@@ -1,0 +1,32 @@
+{
+  "C0731": {
+    "title": "三星电子引入ChatGPT致芯片机密泄露",
+    "keywords": [
+      "三星电子",
+      "ChatGPT",
+      "芯片机密泄露",
+      "数据泄露",
+      "生成式AI",
+      "商业秘密",
+      "训练数据",
+      "敏感信息",
+      "员工泄密"
+    ],
+    "summary": "三星电子引入ChatGPT不到20天即爆出芯片机密泄露事件。员工在使用过程中将敏感数据输入模型，导致公司核心商业秘密被生成式AI系统吸收并可能外泄，凸显了生成式AI在自动收集用户信息作为训练数据时带来的严重数据泄露风险。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0071"
+    ],
+    "references": [
+      {
+        "title": "国家治理 | 以法治化解生成式人工智能风险_腾讯新闻",
+        "link": "https://new.qq.com/rain/a/20230824A06SGX00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0021"
+    ]
+  }
+}

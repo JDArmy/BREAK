@@ -1,0 +1,21 @@
+{
+  "C1680": {
+    "title": "IronWorm and New Miasma Worm Variant Hit npm in Supply Chain Attacks",
+    "keywords": [
+      "npm supply chain attack",
+      "IronWorm malware",
+      "Miasma worm variant",
+      "malicious npm packages",
+      "Rust infostealer",
+      "build poisoning",
+      "backdoored artifacts",
+      "self-propagating worm"
+    ],
+    "summary": "In June 2026, the npm ecosystem faced multiple supply chain attacks where threat actors distributed malicious and poisoned versions of over 50 legitimate npm packages. These packages delivered Rust-based infostealers and self-propagating worms, causing projects using them to produce backdoored build artifacts.",
+    "references": [
+      {
+        "title": "IronWorm and New Miasma Worm Variant Hit npm in Supply Chain Attacks"
+      }
+    ]
+  }
+}

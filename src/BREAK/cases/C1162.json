@@ -1,0 +1,30 @@
+{
+  "C1162": {
+    "title": "TikTok因非法数据传输被罚5.3亿欧元",
+    "keywords": [
+      "TikTok",
+      "GDPR",
+      "数据跨境传输",
+      "爱尔兰数据保护委员会",
+      "罚款",
+      "欧洲经济区",
+      "跨境电商",
+      "合规风险"
+    ],
+    "summary": "2025年5月，爱尔兰数据保护委员会裁定TikTok非法将欧洲经济区用户数据传输至中国，违反GDPR，处以5.3亿欧元罚款。该案凸显了跨境电商平台在数据跨境传输中的合规风险。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0125"
+    ],
+    "references": [
+      {
+        "title": "TikTok's €530 Million GDPR Fine: Unpacking Unlawful Data ...",
+        "link": "https://www.linkedin.com/pulse/tiktoks-530-million-gdpr-fine-unpacking-unlawful-data-ilia-dubovtsev-dx84e"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-05",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "C1568": {
+    "title": "SecureSign Research Reveals DApp Frontend Code Injection Attacks",
+    "keywords": [
+      "DApp frontend hijacking",
+      "code injection attack",
+      "mobile Web3 security",
+      "DNS hijacking",
+      "certificate authority compromise",
+      "transaction address replacement",
+      "SecureSign",
+      "EIP-6963",
+      "sandbox protection"
+    ],
+    "summary": "A study on mobile Web3 security reveals that attackers can compromise decentralized application frontends by injecting malicious code. Leveraging DNS hijacking or compromised certificate authorities, adversaries can tamper with the DApp interface to replace transaction addresses or execute unauthorized actions without user awareness, directly threatening asset safety.",
+    "references": [
+      {
+        "title": "SecureSign: Bridging Security and UX in Mobile Web3 through Emulated EIP-6963 Sandboxing"
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "C1505": {
+    "title": "Anomaly Detection for Sensor Manipulation in Matter Protocol IoT Devices",
+    "keywords": [
+      "Matter protocol",
+      "IoT devices",
+      "sensor spoofing",
+      "data injection attacks",
+      "anomaly detection",
+      "sensor manipulation",
+      "faulty sensor data"
+    ],
+    "summary": "This study examines security issues related to sensor spoofing and data injection attacks in Matter protocol IoT devices. Attackers can manipulate sensor inputs to cause erroneous device behavior. Such sensor manipulation attacks represent a serious concern in anomaly detection, where faulty sensor data may trigger unintended device actions.",
+    "references": [
+      {
+        "title": "Anomaly Detection for Sensor Manipulation in Matter Enabled-IoT Devices ..."
+      }
+    ]
+  }
+}

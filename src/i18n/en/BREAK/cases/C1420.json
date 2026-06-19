@@ -1,0 +1,22 @@
+{
+  "C1420": {
+    "title": "Re-measurement of Sandwich Attacks and Arbitrage Reordering in the Ethereum MEV Ecosystem",
+    "keywords": [
+      "MEV",
+      "Ethereum",
+      "sandwich attack",
+      "arbitrage trade",
+      "maximal extractable value",
+      "private transaction architecture",
+      "back-running",
+      "miner extractable value",
+      "The Merge"
+    ],
+    "summary": "An academic study released in May 2024 re-measures the Ethereum MEV ecosystem, identifying arbitrage trades and sandwich attacks as the two primary MEV activities. It finds that approximately $675 million in MEV value was extracted prior to Ethereum's September 2022 Merge. The research designs a profit-identification algorithm and analyzes the influence of private transaction architectures on MEV ",
+    "references": [
+      {
+        "title": "Remeasuring the Arbitrage and Sandwich Attacks of Maximal Extractable Value in Ethereum"
+      }
+    ]
+  }
+}

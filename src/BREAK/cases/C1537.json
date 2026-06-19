@@ -1,0 +1,32 @@
+{
+  "C1537": {
+    "title": "量子威胁映射：密码学工程清单揭示公钥密码学面临存在性威胁",
+    "keywords": [
+      "量子计算",
+      "Shor算法",
+      "Grover算法",
+      "公钥密码学",
+      "密码学工程",
+      "后量子密码学",
+      "区块链安全",
+      "整数分解",
+      "椭圆曲线离散对数",
+      "量子威胁"
+    ],
+    "summary": "2025年9月发布的预印本研究指出，大规模量子计算机的出现，由Shor算法和Grover算法驱动，对现代公钥密码学构成存在性威胁。这种脆弱性源于量子计算机能够高效解决整数分解和椭圆曲线离散对数等困难数学问题，这些问题是当前区块链和加密货币系统安全的基础。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0196"
+    ],
+    "references": [
+      {
+        "title": "Mapping Quantum Threats: An Engineering Inventory of Cryptographic ...",
+        "link": "https://arxiv.org/pdf/2509.24623v1"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-09",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

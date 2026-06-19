@@ -1,0 +1,21 @@
+{
+  "C1350": {
+    "title": "Personal Laptop Infected by Monero Mining Trojan Leading to Long-Term CPU Resource Theft",
+    "keywords": [
+      "Monero mining trojan",
+      "Nanopool",
+      "AddInProcess.exe injection",
+      "cryptojacking",
+      "password stealer",
+      "Malwarebytes detection",
+      "CPU hijacking",
+      "process masquerading"
+    ],
+    "summary": "A cybersecurity student discovered abnormal CPU usage reaching 48% on a Windows laptop. Investigation revealed that attackers exploited the legitimate Microsoft AddInProcess.exe process to inject a Monero miner, connecting to the Nanopool mining pool for cryptocurrency mining. The malware achieved persistence by masquerading as a system process, and a total of 1997 malicious files were detected, i",
+    "references": [
+      {
+        "title": "gagandeep-codes/cryptojacking-incident-response - GitHub"
+      }
+    ]
+  }
+}

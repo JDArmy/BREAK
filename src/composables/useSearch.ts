@@ -3,6 +3,7 @@ import { useI18n } from "vue-i18n";
 import Fuse from "fuse.js";
 import type { FuseResultMatch } from "fuse.js";
 import BREAK from "@/BREAK";
+import { useCases } from "@/composables/useCases";
 import { getMessageStringArray, getNestedMessageValue } from "@/utils/i18nMessage";
 
 /**
@@ -20,7 +21,7 @@ import { getMessageStringArray, getNestedMessageValue } from "@/utils/i18nMessag
  */
 
 /** 实体类型 */
-export type EntityType = "risk" | "avoidance" | "attackTool" | "threatActor" | "term";
+export type EntityType = "risk" | "avoidance" | "attackTool" | "threatActor" | "term" | "case";
 
 /** 搜索结果条目 */
 export interface SearchResult {
@@ -46,6 +47,7 @@ interface IndexableItem {
   influence?: string;
   limitation?: string;
   usageExample?: string;
+  summary?: string;
 }
 
 /** 各类型的 Fuse 索引配置 */
@@ -111,10 +113,21 @@ const FUSE_CONFIGS: Record<
     i18nPath: "BREAK.terms",
     idKey: "tKey",
   },
+  case: {
+    keys: [
+      { name: "id", weight: 2.2 },
+      { name: "title", weight: 2 },
+      { name: "keywords", weight: 1.6 },
+      { name: "summary", weight: 1.2 },
+      { name: "category", weight: 0.6 },
+    ],
+    i18nPath: "BREAK.cases",
+    idKey: "cKey",
+  },
 };
 
-/** 各类型对应的 BREAK 数据 key */
-const BREAK_KEYS: Record<EntityType, keyof typeof BREAK> = {
+/** 各类型对应的 BREAK 数据 key（case 除外，case 懒加载由 useCases 提供） */
+const BREAK_KEYS: Record<Exclude<EntityType, "case">, keyof typeof BREAK> = {
   risk: "risks",
   avoidance: "avoidances",
   attackTool: "attackTools",
@@ -122,13 +135,31 @@ const BREAK_KEYS: Record<EntityType, keyof typeof BREAK> = {
   term: "terms",
 };
 
-/** 从 i18n messages 构建可索引的实体列表 */
+/** 从 i18n messages 构建可索引的实体列表（case 类型走 casesData 直接构建） */
 function buildIndexableItems(
   type: EntityType,
-  localeMessages: Record<string, unknown>
+  localeMessages: Record<string, unknown>,
+  casesData?: Record<string, { title?: string; keywords?: string[]; summary?: string; category?: string }>
 ): IndexableItem[] {
   const config = FUSE_CONFIGS[type];
-  const breakCategory = BREAK[BREAK_KEYS[type]] as Record<string, unknown>;
+
+  // case 懒加载：从 useCases 提供的合并数据直接构建（不走 i18n BREAK.cases）
+  if (type === "case") {
+    if (!casesData) return [];
+    const items: IndexableItem[] = [];
+    for (const [id, c] of Object.entries(casesData)) {
+      items.push({
+        id,
+        title: c.title || "",
+        keywords: c.keywords || [],
+        summary: c.summary,
+        category: c.category,
+      });
+    }
+    return items;
+  }
+
+  const breakCategory = BREAK[BREAK_KEYS[type as Exclude<EntityType, "case">]] as Record<string, unknown>;
   const i18nCategory = getNestedMessageValue(localeMessages, config.i18nPath) as
     | Record<string, Record<string, unknown>>
     | undefined;
@@ -157,6 +188,7 @@ function buildIndexableItems(
       ),
       category: (i18nEntity.category as string) || undefined,
       usageExample: (i18nEntity.usageExample as string) || undefined,
+      summary: (i18nEntity.summary as string) || undefined,
     });
   }
   return items;
@@ -193,6 +225,7 @@ export function extractSnippetForSearch(
       "influence",
       "limitation",
       "usageExample",
+      "summary",
     ] as const;
     for (const fieldName of searchableFields) {
       const fieldValue = item[fieldName];
@@ -236,6 +269,7 @@ export function extractSnippetForSearch(
 
 export function useSearch() {
   const { locale, messages } = useI18n();
+  const { cases } = useCases();
 
   // 惰性构建的 Fuse 实例缓存
   const fuseInstances = ref<Record<EntityType, Fuse<IndexableItem>> | null>(
@@ -252,7 +286,11 @@ export function useSearch() {
 
     for (const type of Object.keys(FUSE_CONFIGS) as EntityType[]) {
       const config = FUSE_CONFIGS[type];
-      const items = buildIndexableItems(type, localeMessages);
+      const items = buildIndexableItems(
+        type,
+        localeMessages,
+        type === "case" ? cases.value : undefined
+      );
 
       instances[type] = new Fuse(items, {
         keys: config.keys,
@@ -280,6 +318,7 @@ export function useSearch() {
       attackTool: [],
       threatActor: [],
       term: [],
+      case: [],
     };
 
     if (!query.trim() || !fuseInstances.value) return results;
@@ -303,6 +342,11 @@ export function useSearch() {
   watch(locale, () => {
     fuseInstances.value = null;
   });
+
+  // cases 懒加载完成或 locale 切换合并后重建索引（含 case 索引）
+  watch(cases, () => {
+    fuseInstances.value = null;
+  }, { deep: false });
 
   return { search };
 }

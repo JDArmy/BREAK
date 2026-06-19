@@ -1,0 +1,36 @@
+{
+  "C1177": {
+    "title": "Instagram 2026年数据抓取事件：1700万账户信息因API滥用泄露",
+    "keywords": [
+      "Instagram",
+      "data scraping",
+      "API abuse",
+      "data leak",
+      "account scraping",
+      "2026",
+      "17 million accounts",
+      "API security"
+    ],
+    "summary": "Instagram面临一起1700万账户信息泄露事件，由数据抓取和API滥用导致。攻击者通过滥用API接口进行大规模数据抓取，获取用户账户信息，凸显了API安全防护的不足。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0126"
+    ],
+    "references": [
+      {
+        "title": "Instagram 2026 - 17 Million Accounts Scraped in Data Leak",
+        "link": "https://aviatrix.ai/threat-research-center/instagram-2026-data-scraping-exposes-17-million-accounts/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026",
+    "relatedAttackTools": [
+      "AT0005",
+      "AT0061"
+    ],
+    "relatedThreatActors": [
+      "TA0013",
+      "TA0051"
+    ]
+  }
+}

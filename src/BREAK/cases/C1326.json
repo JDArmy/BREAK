@@ -1,0 +1,32 @@
+{
+  "C1326": {
+    "title": "澳大利亚关键基础设施行业影子AI实证研究",
+    "keywords": [
+      "影子AI",
+      "关键基础设施",
+      "澳大利亚",
+      "通信行业",
+      "能源行业",
+      "水务部门",
+      "治理规避",
+      "边界绕过",
+      "数据保护",
+      "合规风险"
+    ],
+    "summary": "研究人员对澳大利亚27家关键基础设施机构（涵盖通信、能源、水务部门）进行访谈，发现影子AI绕过既有保障和监督机制，通过边界绕过、未评估能力扩展和治理规避三种机制放大数据保护、决策可靠性和合规风险，威胁基本服务交付。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0153"
+    ],
+    "references": [
+      {
+        "title": "From Frontier to Shadow AI: A Simmering Threat to Assurance and Security in Critical Infrastructure",
+        "link": "https://arxiv.org/abs/2606.00088"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-05",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

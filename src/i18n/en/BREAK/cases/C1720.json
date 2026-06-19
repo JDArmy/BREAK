@@ -1,0 +1,23 @@
+{
+  "C1720": {
+    "title": "Secure NFC Communication in Mobile Payments: Evaluating Privacy and Authentication in Tap-to-Pay Systems",
+    "keywords": [
+      "NFC mobile payment",
+      "tap-to-pay",
+      "tokenization",
+      "cloud token sync",
+      "Trusted Service Manager",
+      "TSM",
+      "API misconfiguration",
+      "payment tokenization",
+      "privacy authentication",
+      "contactless payment"
+    ],
+    "summary": "This case study analyzes common use cases in NFC mobile payments, specifically tap-to-pay systems. It identifies that cloud token synchronization, Trusted Service Manager (TSM) leaks, or misconfigured APIs can lead to payment tokenization misconfigurations, introducing security risks.",
+    "references": [
+      {
+        "title": "Secure NFC Communication in Mobile Payments: Evaluating Privacy and Authentication in Tap-to-Pay Systems"
+      }
+    ]
+  }
+}

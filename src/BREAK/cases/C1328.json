@@ -1,0 +1,33 @@
+{
+  "C1328": {
+    "title": "企业员工普遍私用ChatGPT处理工作引发影子AI经济",
+    "keywords": [
+      "影子AI",
+      "ChatGPT",
+      "企业数据安全",
+      "非授权AI工具",
+      "影子IT",
+      "大语言模型",
+      "微软Copilot",
+      "员工行为"
+    ],
+    "summary": "MIT报告显示，虽然40%的公司订阅了官方大语言模型服务，但90%的员工仍选择使用ChatGPT等个人AI工具处理日常工作。员工因企业自研AI系统僵化、学习能力差，转而私下使用消费级AI工具，形成蓬勃发展的“影子AI经济”，企业IT部门对此多不知情。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0153"
+    ],
+    "references": [
+      {
+        "title": "企业级AI冰火两重天?报告:重视“影子AI经济”",
+        "link": "https://new.qq.com/rain/a/20250828A081S000"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-08",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0021",
+      "TA0041"
+    ]
+  }
+}

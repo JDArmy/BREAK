@@ -1,0 +1,21 @@
+{
+  "C0195": {
+    "title": "Python-based Weibo bulk following and mutual following",
+    "keywords": [
+      "Weibo automation",
+      "Python scripting",
+      "bulk following",
+      "mutual following",
+      "social media growth",
+      "CSDN",
+      "web crawling",
+      "account automation"
+    ],
+    "summary": "This CSDN blog post describes a method for bulk following on Weibo using Python scripts. The approach involves logging into a Weibo account, joining mutual-follow groups to collect large numbers of user IDs, and then programmatically executing bulk follow actions to rapidly grow followers through reciprocal following.",
+    "references": [
+      {
+        "title": "Python for Batch Following on Weibo, Mutual Following_csdn Mutual Following Group-CSDN Blog"
+      }
+    ]
+  }
+}

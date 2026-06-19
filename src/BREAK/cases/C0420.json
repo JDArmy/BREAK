@@ -1,0 +1,35 @@
+{
+  "C0420": {
+    "title": "贩卖抢票工具 违法！嫌疑人落网！",
+    "keywords": [
+      "抢票外挂",
+      "非法抢票工具",
+      "苗某",
+      "太原警方",
+      "短视频平台",
+      "口令码篡改",
+      "黄牛",
+      "售票系统安全",
+      "第三方账号聚合"
+    ],
+    "summary": "2024年10月，太原警方破获一起非法抢票工具案。嫌疑人苗某通过短视频平台，以268元至888元不等的价格售卖可篡改购票平台“口令码”的抢票外挂程序，为“用户”提供在官方售票渠道先行抢票等服务，涉及大量歌迷和黄牛，苗某非法获利5万余元。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0037"
+    ],
+    "references": [
+      {
+        "title": "贩卖抢票工具 违法!嫌疑人落网!",
+        "link": "https://mp.weixin.qq.com/s?__biz=MzAwNzg1OTI4Mw==&mid=2676817869&idx=2&sn=fc3193716827d44022b63b50912959f8&chksm=80d202c18d5547befba3507e0ae878277af68d8fa58c83ce9ca6e19799fdf130f95ffbcd1711&scene=27"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-10",
+    "relatedAttackTools": [
+      "AT0045"
+    ],
+    "relatedThreatActors": [
+      "TA0002"
+    ]
+  }
+}

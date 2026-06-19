@@ -1,0 +1,31 @@
+{
+  "C0296": {
+    "title": "Rampart防御系统应对Web应用CPU耗尽攻击",
+    "keywords": [
+      "Rampart",
+      "Web应用安全",
+      "CPU耗尽攻击",
+      "拒绝服务攻击",
+      "USENIX Security",
+      "WordPress",
+      "Drupal",
+      "计算密集型请求",
+      "DoS防御"
+    ],
+    "summary": "USENIX安全会议发表的研究《Rampart: Protecting Web Applications from CPU-Exhaustion DoS Attacks》指出，攻击者通过发送计算密集型请求，可大量消耗Web服务器（如WordPress和Drupal）的CPU资源，造成拒绝服务。该研究旨在防御此类CPU资源耗尽攻击。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0029-002"
+    ],
+    "references": [
+      {
+        "title": "Rampart: Protecting Web Applications from CPU-Exhaustion ... - USENIX",
+        "link": "https://www.usenix.org/conference/usenixsecurity18/presentation/meng"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2018",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

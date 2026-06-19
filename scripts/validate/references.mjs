@@ -11,7 +11,7 @@ import {
   writeJson,
 } from '../search/common.mjs';
 
-const entityTypes = ['risks', 'avoidances', 'attack-tools', 'threat-actors'];
+const entityTypes = ['risks', 'avoidances', 'attack-tools', 'threat-actors', 'cases'];
 const lowQualityDomains = [
   'baike.baidu.com',
   'baijiahao.baidu.com',

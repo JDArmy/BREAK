@@ -1,0 +1,33 @@
+{
+  "C0115": {
+    "title": "移动广告中的展示欺诈",
+    "keywords": [
+      "展示欺诈",
+      "移动广告",
+      "像素填充",
+      "广告堆叠",
+      "弹窗",
+      "广告主",
+      "AppsFlyer",
+      "虚假展示"
+    ],
+    "summary": "移动广告中存在展示欺诈，犯罪分子制造广告已被观看的假象，即使实际上并未被真实用户看到。常见的展示欺诈手段包括像素填充、广告堆叠和弹窗等，欺诈者通过虚增展示次数向广告主收取更多费用。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0008-004"
+    ],
+    "references": [
+      {
+        "title": "What is impression fraud? | AppsFlyer mobile glossary",
+        "link": "https://www.appsflyer.com/glossary/impression-fraud/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0091"
+    ],
+    "relatedThreatActors": [
+      "TA0056"
+    ]
+  }
+}

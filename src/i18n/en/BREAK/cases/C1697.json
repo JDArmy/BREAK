@@ -1,0 +1,21 @@
+{
+  "C1697": {
+    "title": "Two Trillion Files Exposed Globally Due to Cloud Storage Bucket Misconfigurations",
+    "keywords": [
+      "cloud storage bucket misconfiguration",
+      "AWS S3 public access",
+      "data exposure",
+      "open bucket",
+      "access control policy",
+      "credential leak",
+      "source code exposure",
+      "cloud misconfiguration"
+    ],
+    "summary": "In March 2026, researchers discovered that misconfigured storage buckets across multiple major cloud providers left approximately two trillion files publicly accessible. The exposure involved 660,000 unprotected buckets on seven major cloud platforms, leaking confidential documents, login credentials, and source code.",
+    "references": [
+      {
+        "title": "Massive Cloud Storage Data Leak: 200 Billion Files Exposed on the Public Internet - Financial Headlines..."
+      }
+    ]
+  }
+}

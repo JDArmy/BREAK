@@ -1,0 +1,22 @@
+{
+  "C1454": {
+    "title": "Parity Wallet Multisig Library Bug Leads to Massive Permanent ETH Freeze",
+    "keywords": [
+      "Parity wallet",
+      "multisig contract",
+      "selfdestruct function",
+      "ETH frozen",
+      "smart contract vulnerability",
+      "non-upgradeable contract",
+      "Ethereum",
+      "contract design flaw",
+      "2017"
+    ],
+    "summary": "In November 2017, a self-destruct function vulnerability in the multisig contract library used by Parity Wallet was accidentally triggered, causing approximately 510,000 ETH (worth around $150 million at the time) to be permanently locked in the contract. With no upgrade mechanism designed into the contract, the flaw could not be fixed and the funds became irretrievable, making it a classic disast",
+    "references": [
+      {
+        "title": "Vulnerability Risks and Solutions for Blockchain Smart Contracts - Zhihu"
+      }
+    ]
+  }
+}

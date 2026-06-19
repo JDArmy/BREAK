@@ -1,0 +1,38 @@
+{
+  "C1334": {
+    "title": "ClickFix攻击活动通过虚假AI工具安装包传播MacSync信息窃取木马",
+    "keywords": [
+      "ClickFix",
+      "MacSync",
+      "信息窃取木马",
+      "macOS",
+      "虚假AI工具",
+      "恶意命令执行",
+      "社会工程学",
+      "Sophos",
+      "浏览器凭据窃取",
+      "跨平台攻击"
+    ],
+    "summary": "2026年3月，研究人员发现三种不同的ClickFix攻击活动，利用虚假AI工具安装包作为诱饵，传播MacSync信息窃取木马。攻击者诱导macOS用户复制并执行恶意命令，完全依赖用户交互而非漏洞利用。MacSync木马专门窃取macOS系统中的敏感信息，包括浏览器凭据、会话数据等，体现了ClickFix攻击跨平台扩展的趋势。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0154"
+    ],
+    "references": [
+      {
+        "title": "ClickFix攻击活动通过虚假AI工具安装包传播MacSync信息窃取木马|新...",
+        "link": "https://www.163.com/dy/article/KO8M8TRO0553BU5H.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-03",
+    "relatedAttackTools": [
+      "AT0064",
+      "AT0075"
+    ],
+    "relatedThreatActors": [
+      "TA0012",
+      "TA0018"
+    ]
+  }
+}

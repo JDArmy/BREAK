@@ -1,0 +1,35 @@
+{
+  "C1701": {
+    "title": "云安全CTF：过度授权IAM挑战",
+    "keywords": [
+      "AWS",
+      "IAM",
+      "EC2",
+      "S3",
+      "权限提升",
+      "错误配置",
+      "CTF",
+      "云安全",
+      "过度授权"
+    ],
+    "summary": "该CTF挑战模拟了低权限IAM用户利用EC2角色错误配置权限进行权限提升，从受限制的S3存储桶获取flag，展示了IAM权限配置不当导致的攻击路径。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0231"
+    ],
+    "references": [
+      {
+        "title": "cloud-security-ctf/challenges/02-overprivileged-iam/writeup at Backup ...",
+        "link": "https://github.com/master-coder1998/cloud-security-ctf/tree/main/challenges/02-overprivileged-iam/writeup"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0088",
+      "AT0085"
+    ],
+    "relatedThreatActors": [
+      "TA0053"
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "C1183": {
+    "title": "微软紧急关闭近百个被投毒的开源代码库",
+    "keywords": [
+      "微软",
+      "GitHub",
+      "供应链投毒",
+      "TeamPCP",
+      "Durable Task",
+      "Azure Functions",
+      "Claude Code",
+      "Gemini CLI",
+      "凭证窃取",
+      "恶意代码库"
+    ],
+    "summary": "微软关闭GitHub上73个自家代码库，包括Azure Functions、Durable Task及AI示例应用。黑客组织TeamPCP入侵Durable Task代码库并植入恶意配置，当用户在Claude Code、Gemini CLI等AI编码工具中打开时，窃取用户凭证。此前TeamPCP已发布3个恶意版本，影响数百家组织。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0127"
+    ],
+    "references": [
+      {
+        "title": "微软紧急关闭近百个开源代码库:AI类项目遭投毒,窃取用户敏感数据",
+        "link": "https://m.163.com/dy/article/KV4EFECK05568W0A.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-06",
+    "relatedAttackTools": [
+      "AT0087",
+      "AT0093",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0052",
+      "TA0058"
+    ]
+  }
+}

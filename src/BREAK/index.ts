@@ -6,6 +6,7 @@ import businessScenes from "./business-scenes";
 import attackTools from "./attack-tools";
 import threatActors from "./threat-actors";
 import terms from "./terms";
+// cases 数据量大，懒加载，不并入 BREAK 主对象（由 useCases composable 异步管理）
 
 const BREAK = {
   ...basicInfo, //BREAK框架基础信息

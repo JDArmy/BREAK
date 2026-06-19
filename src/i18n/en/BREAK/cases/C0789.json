@@ -1,0 +1,21 @@
+{
+  "C0789": {
+    "title": "Chinese High-Tech Firm Hit by Suspected U.S. Intelligence Cyberattack Targeting Trade Secrets",
+    "keywords": [
+      "U.S. intelligence agency",
+      "Microsoft Exchange vulnerability",
+      "backdoor implant",
+      "email server compromise",
+      "trade secret theft",
+      "smart energy enterprise",
+      "supply chain attack",
+      "lateral movement"
+    ],
+    "summary": "Starting in May 2023, a major Chinese smart energy and digital information enterprise was subjected to a cyberattack suspected to be carried out by a U.S. intelligence agency. The attackers exploited a Microsoft Exchange vulnerability to breach the company's email server, implant a backdoor, and continuously exfiltrate email data. Using the compromised server as a pivot point, they then took contr",
+    "references": [
+      {
+        "title": "Weekly Data Security Watch | State Council Passes Regulations on Public Security Video Image Information Systems | ..."
+      }
+    ]
+  }
+}

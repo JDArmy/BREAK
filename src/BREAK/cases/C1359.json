@@ -1,0 +1,37 @@
+{
+  "C1359": {
+    "title": "Venus Protocol 第7次闪电贷攻击",
+    "keywords": [
+      "Venus Protocol",
+      "闪电贷攻击",
+      "BNB Chain",
+      "THE代币",
+      "价格操纵",
+      "抵押品漏洞",
+      "DeFi安全",
+      "BTC",
+      "CAKE",
+      "BNB"
+    ],
+    "summary": "2026年3月15日，Venus Protocol在BNB Chain上遭受第7次攻击，损失约370万美元。攻击者利用闪电贷借入大量资金，操纵低流动性代币THE的价格，在抵押不足的头寸被清算前借走BTC、CAKE、BNB等蓝筹资产。核心问题在于协议接受了低流动性代币作为抵押品，使其价格容易被单笔交易操纵。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0160"
+    ],
+    "references": [
+      {
+        "title": "# 2026年DeFi真实攻击链上溯源:四起闪电贷攻击的完整还原-CSDN博客",
+        "link": "https://blog.csdn.net/2503_92390076/article/details/161947470"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-03",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0077"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

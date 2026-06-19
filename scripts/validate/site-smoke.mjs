@@ -47,6 +47,7 @@ const routes = [
   { path: '/#/attack-tools', text: /AT0001|电话黑卡|SIM/i },
   { path: '/#/threat-actors', text: /TA0001|羊毛党|Threat/i },
   { path: '/#/terms', text: /T0001|账号|Account/i },
+  { path: '/#/cases', text: /C0001|案例|Case/i },
   { path: '/#/relation/risk/R0001?view=sankey', text: /R0001|攻击路径|Attack Path|关系网络|Network/i },
 ];
 

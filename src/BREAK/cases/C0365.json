@@ -1,0 +1,33 @@
+{
+  "C0365": {
+    "title": "SSH服务器暴力破解攻击分析",
+    "keywords": [
+      "SSH暴力破解",
+      "认证日志分析",
+      "凭证猜测",
+      "自动化攻击工具",
+      "入侵检测",
+      "服务器安全",
+      "Brute-force attack"
+    ],
+    "summary": "一项针对SSH服务器的认证日志分析研究显示，大量连续的失败登录尝试是SSH暴力破解攻击的典型指标。攻击者通过自动化工具对SSH服务进行凭证猜测，尝试不同的用户名和密码组合，以获取服务器访问权限。该研究通过案例分析了攻击模式和检测方法。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0032-003"
+    ],
+    "references": [
+      {
+        "title": "Who is trying to compromise your SSH server? An analysis of authentication logs and detection of bruteforce attacks",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3427477.3429772"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0023",
+      "AT0068"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

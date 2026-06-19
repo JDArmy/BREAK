@@ -1,0 +1,32 @@
+{
+  "C1414": {
+    "title": "Polymarket UMA 预言机操纵事件",
+    "keywords": [
+      "Polymarket",
+      "UMA",
+      "预言机操纵",
+      "预测市场",
+      "代币投票",
+      "治理攻击",
+      "巨鲸",
+      "争端解决"
+    ],
+    "summary": "2025年3月，在Polymarket关于“乌克兰是否会在4月前同意特朗普矿产协议”的预测市场中，一名持有大量UMA代币的巨鲸，在结果争议期通过其投票权强行将错误结果判定为真，导致一个原本应归零的市场被操纵为100%胜率。该事件暴露了基于代币投票的预言机治理机制存在被操纵的风险。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0169"
+    ],
+    "references": [
+      {
+        "title": "当魔幻现实主义成为常态,盘点2025 Web3行业十大“离谱”事件_腾讯...",
+        "link": "https://view.inews.qq.com/a/20251226A06GXA00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-03",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C1575": {
+    "title": "Model Poisoning Attacks Against Neural Network Interpreters in IoT",
+    "keywords": [
+      "model poisoning attack",
+      "neural network interpreter",
+      "IoT security",
+      "AIoT",
+      "adversarial examples",
+      "model behavior manipulation",
+      "industrial automation",
+      "resource-constrained systems"
+    ],
+    "summary": "This study presents the first model poisoning attack targeting neural network interpreters, capable of manipulating model behavior without requiring auxiliary datasets. The attacker alters AI model decisions through poisoning, posing severe threats to resource-constrained IoT systems and potentially causing misjudgments in critical applications such as industrial automation.",
+    "references": [
+      {
+        "title": "Model Poisoning Attack Against Neural Network Interpreters in IoT ..."
+      }
+    ]
+  }
+}

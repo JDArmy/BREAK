@@ -1,0 +1,37 @@
+{
+  "C0319": {
+    "title": "腾讯提醒用户不要批量恶意注册微信账号",
+    "keywords": [
+      "微信",
+      "批量注册",
+      "恶意注册",
+      "黑产",
+      "猫池",
+      "群控",
+      "接码平台",
+      "腾讯"
+    ],
+    "summary": "2018年12月，腾讯公司发布提醒，指出黑产人员通过卡商和接码平台获取手机号和验证码，利用猫池、群控等技术手段批量恶意注册微信账号，此类行为可能面临法律制裁。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0030-001"
+    ],
+    "references": [
+      {
+        "title": "腾讯提醒用户不要批量恶意注册微信账号:可能面临法律制裁_10%公司...",
+        "link": "https://www.thepaper.cn/newsDetail_forward_2706550"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2018-12",
+    "relatedAttackTools": [
+      "AT0004",
+      "AT0009",
+      "AT0006"
+    ],
+    "relatedThreatActors": [
+      "TA0003",
+      "TA0017"
+    ]
+  }
+}

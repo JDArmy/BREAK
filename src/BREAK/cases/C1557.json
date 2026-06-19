@@ -1,0 +1,31 @@
+{
+  "C1557": {
+    "title": "智能钱包的委托密钥：通过ERC-4337与Kernel钱包实现Apple Watch安全交易执行",
+    "keywords": [
+      "ERC-4337",
+      "Kernel Wallet",
+      "Apple Watch",
+      "智能钱包",
+      "委托密钥",
+      "生物识别",
+      "UserOperation",
+      "Bundler",
+      "交易安全",
+      "账户抽象"
+    ],
+    "summary": "该研究探讨了通过ERC-4337和Kernel Wallet从Apple Watch执行交易的安全性。文中指出，服务器提交ERC-4337 UserOperations到Bundler时，若缺乏对每笔交易的生物识别验证，攻击者可能获得智能手表访问权限并提交恶意UserOperation。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0201"
+    ],
+    "references": [
+      {
+        "title": "Delegated Keys for Smart Wallets: Enabling Secure Transaction Execution from Apple Watch via ERC-4337 & Kernel Wallet",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3748522.3779999"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

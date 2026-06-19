@@ -39,6 +39,12 @@ const categories = [
     fields: ["title", "description"],
     checkBusinessSceneNestedTitles: true,
   },
+  {
+    name: "Cases",
+    zhDir: "src/BREAK/cases",
+    enDir: "src/i18n/en/BREAK/cases",
+    fields: ["title", "summary", "description", "keywords"],
+  },
 ];
 
 const replaceArrayTranslationKeys = new Set(["keywords", "aliases"]);

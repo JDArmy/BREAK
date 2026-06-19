@@ -1,0 +1,35 @@
+{
+  "C0207": {
+    "title": "网信办发布App管理规定严禁刷榜刷量控评",
+    "keywords": [
+      "网信办",
+      "移动互联网应用程序信息服务管理规定",
+      "刷榜",
+      "刷量",
+      "控评",
+      "虚假流量",
+      "数据造假",
+      "App市场秩序",
+      "2022年"
+    ],
+    "summary": "2022年6月，国家网信办发布新修订的《移动互联网应用程序信息服务管理规定》，明确要求应用程序提供者不得通过机器或人工方式刷榜、刷量、控评，营造虚假流量。该规定旨在规范App市场秩序，打击数据造假行为。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0016"
+    ],
+    "references": [
+      {
+        "title": "15楼财经|网信办发布App管理规定:不得刷榜、刷量、控评及诱导下载|违 ...",
+        "link": "https://www.163.com/dy/article/H9RNRLQ40514R9KQ.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-06",
+    "relatedAttackTools": [
+      "AT0046"
+    ],
+    "relatedThreatActors": [
+      "TA0019"
+    ]
+  }
+}

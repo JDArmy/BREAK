@@ -1,0 +1,35 @@
+{
+  "C1424": {
+    "title": "比特币黄金(BTG)遭51%攻击损失1860万元",
+    "keywords": [
+      "比特币黄金",
+      "BTG",
+      "51%攻击",
+      "双花攻击",
+      "算力优势",
+      "区块链安全",
+      "小算力网络",
+      "加密货币",
+      "黑客攻击"
+    ],
+    "summary": "2018年5月，比特币黄金（BTG）遭受黑客51%攻击，网络出现双花情况，损失超过388201个BTG，价值1860万元。攻击者利用算力优势实施了双重支付攻击，凸显了小算力区块链网络面临的安全风险。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0171"
+    ],
+    "references": [
+      {
+        "title": "区块链入门4:51%攻击和双花是什么?",
+        "link": "https://www.jiemian.com/article/2177527.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2018-05",
+    "relatedAttackTools": [
+      "AT0078"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

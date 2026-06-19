@@ -1,0 +1,30 @@
+{
+  "C0721": {
+    "title": "LinkQ知识图谱缓解LLM幻觉案例研究",
+    "keywords": [
+      "LinkQ",
+      "知识图谱",
+      "LLM幻觉",
+      "GPT-4",
+      "KGQA",
+      "幻觉缓解",
+      "知识图谱查询",
+      "AI幻觉"
+    ],
+    "summary": "研究论文介绍了LinkQ系统，通过强制LLM查询知识图谱获取真实数据来对抗幻觉。定量评估显示，系统在KGQA数据集上优于GPT-4，但在某些问题类别上仍存在困难，表明LLM在缺乏真实数据支撑时会产生幻觉。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0071-004"
+    ],
+    "references": [
+      {
+        "title": "Mitigating LLM Hallucinations with Knowledge Graphs: A Case Study",
+        "link": "https://arxiv.org/abs/2504.12422"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-04",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

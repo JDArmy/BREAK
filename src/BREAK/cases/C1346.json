@@ -1,0 +1,30 @@
+{
+  "C1346": {
+    "title": "Cloudflare部署后量子混合密钥协议以防御“先收集后解密”攻击",
+    "keywords": [
+      "Cloudflare",
+      "后量子密码",
+      "混合密钥协议",
+      "X25519MLKEM768",
+      "ML-KEM",
+      "先收集后解密攻击",
+      "抗量子加密",
+      "PQC",
+      "TLS"
+    ],
+    "summary": "Cloudflare自2017年开始研究后量子密码，并已部署X25519MLKEM768等后量子混合密钥协议。此举旨在防御“先收集后解密”攻击，即攻击者现在收集加密数据，等待未来量子计算机成熟后解密。Cloudflare计划到2029年在其整个产品套件中实现完全后量子安全。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0156"
+    ],
+    "references": [
+      {
+        "title": "Post-quantum cryptography (PQC) - SSL/TLS - Cloudflare Docs",
+        "link": "https://developers.cloudflare.com/ssl/post-quantum-cryptography/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

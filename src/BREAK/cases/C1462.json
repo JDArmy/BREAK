@@ -1,0 +1,31 @@
+{
+  "C1462": {
+    "title": "网络安全详解——下_防侧信道攻击",
+    "keywords": [
+      "侧信道攻击",
+      "功耗分析",
+      "加密密钥提取",
+      "医疗IoT安全",
+      "安全启动",
+      "网络分段",
+      "IEC 62443",
+      "攻击面最小化",
+      "IoT设备安全"
+    ],
+    "summary": "该博客文章在分析IoT设备安全风险时，将侧信道攻击列为攻击向量示例，指出攻击者可通过功耗分析提取加密密钥，特别提及针对医疗IoT设备的威胁。文章同时介绍了安全启动、最小化攻击面、网络分段等缓解措施，并引用了IEC 62443等行业安全标准。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0178"
+    ],
+    "references": [
+      {
+        "title": "网络安全详解——下_防侧信道攻击-CSDN博客",
+        "link": "https://blog.csdn.net/weixin_43484713/article/details/147528770"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-04",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

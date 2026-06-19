@@ -1,0 +1,32 @@
+{
+  "C0507": {
+    "title": "Waydroid模拟器检测绕过功能请求",
+    "keywords": [
+      "Waydroid",
+      "模拟器检测绕过",
+      "Android模拟器",
+      "虚拟设备识别",
+      "设备指纹",
+      "反检测",
+      "GitHub Issue"
+    ],
+    "summary": "2021年，用户在GitHub上向Waydroid项目提出功能请求，探讨如何让Android模拟器在设备特征上无法与普通日常设备区分开来，即实现模拟器检测绕过。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0050-001"
+    ],
+    "references": [
+      {
+        "title": "FEATURE: bypass emulator detection · Issue #198 - GitHub",
+        "link": "https://github.com/casualsnek/waydroid_script/issues/198"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-01",
+    "relatedAttackTools": [
+      "AT0002",
+      "AT0048"
+    ],
+    "relatedThreatActors": []
+  }
+}

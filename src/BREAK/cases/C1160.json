@@ -1,0 +1,32 @@
+{
+  "C1160": {
+    "title": "Amazon 因违反 GDPR 被罚 7.46 亿欧元",
+    "keywords": [
+      "Amazon",
+      "GDPR",
+      "CNPD",
+      "Cookies",
+      "广告画像",
+      "数据主体权利",
+      "跨境电商",
+      "卢森堡",
+      "数据处理合法性",
+      "透明度"
+    ],
+    "summary": "卢森堡数据保护机构 CNPD 对 Amazon 开出 7.46 亿欧元罚单，因其在未经用户有效同意的情况下，通过 Cookies 收集个人数据用于广告画像，违反了 GDPR 关于数据处理合法性、透明度及数据主体权利的多项规定。该案涉及数亿欧洲用户的广告画像数据，凸显了跨境电商平台在数据收集和处理上面临的严格合规要求。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0125"
+    ],
+    "references": [
+      {
+        "title": "Unprecedented €746,000,000 Amazon fine for GDPR breaches confirmed by ...",
+        "link": "https://rjgaito.com/fines-and-penalties-imposed-on-amazon/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-04",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

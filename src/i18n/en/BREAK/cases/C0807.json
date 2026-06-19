@@ -1,0 +1,21 @@
+{
+  "C0807": {
+    "title": "175 Malicious npm Packages Leverage CDN to Conceal Phishing Attacks",
+    "keywords": [
+      "npm",
+      "malicious packages",
+      "CDN",
+      "phishing",
+      "supply chain",
+      "open source poisoning",
+      "package registry",
+      "malware"
+    ],
+    "summary": "In November 2025, attackers published at least 175 malicious packages on the npm public registry, accumulating over 26,000 downloads. These packages used CDN infrastructure to hide malicious behavior and carried out targeted phishing campaigns, posing a serious threat to downstream users.",
+    "references": [
+      {
+        "title": "175 Malicious npm Packages Hide Behind CDN: 26,000 Downloads Conceal an Elaborate Phishing Attack..."
+      }
+    ]
+  }
+}

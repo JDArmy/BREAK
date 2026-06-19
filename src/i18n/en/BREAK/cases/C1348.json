@@ -1,0 +1,22 @@
+{
+  "C1348": {
+    "title": "On-Device AI Inference Faces Adversarial Attack Threats",
+    "keywords": [
+      "on-device AI",
+      "inference security",
+      "adversarial attacks",
+      "pre-trained models",
+      "mobile platforms",
+      "privacy threats",
+      "defense mechanisms",
+      "black-box vulnerability",
+      "systematic review"
+    ],
+    "summary": "A systematic review on on-device AI inference security highlights that the widespread deployment of pre-trained models on mobile platforms has intensified security and privacy threats. In particular, adversarial attacks lack effective defenses, exposing how on-device AI models are susceptible to manipulation during decision-making and how their internal vulnerabilities remain difficult to explain ",
+    "references": [
+      {
+        "title": "Protecting On-Device AI Inference: A Systematic Review of Attacks and ..."
+      }
+    ]
+  }
+}

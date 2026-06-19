@@ -1,0 +1,35 @@
+{
+  "C0793": {
+    "title": "Arduino Nano固件后门概念验证项目展示硬件供应链攻击",
+    "keywords": [
+      "supply_backdoor",
+      "Arduino Nano",
+      "固件后门",
+      "概念验证",
+      "供应链攻击",
+      "嵌入式设备",
+      "IoT安全",
+      "硬件后门",
+      "PoC"
+    ],
+    "summary": "GitHub上的开源项目‘supply_backdoor’使用Arduino Nano开发板模拟了一个固件级后门的概念验证。该项目旨在演示嵌入式设备的供应链攻击如何被用于在固件层面植入隐藏后门，攻击者可借此实现对设备的长期潜伏和远程控制，是IoT硬件供应链攻击的典型技术演示。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0081-002",
+      "R0206"
+    ],
+    "references": [
+      {
+        "title": "GitHub - socalit/supply_backdoor: A proof-of-concept (PoC) firmware ...",
+        "link": "https://github.com/socalit/supply_backdoor"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0081"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

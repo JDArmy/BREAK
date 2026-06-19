@@ -1,0 +1,35 @@
+{
+  "C0498": {
+    "title": "视频注入攻击检测：应对远程生物识别系统中的虚拟摄像头绕过",
+    "keywords": [
+      "视频注入攻击",
+      "虚拟摄像头绕过",
+      "深度伪造",
+      "人脸识别绕过",
+      "远程生物识别",
+      "机器学习检测",
+      "会话元数据",
+      "身份认证管道",
+      "注入攻击检测"
+    ],
+    "summary": "学术研究指出，攻击者利用深度伪造技术和虚拟摄像头软件，将预录制或合成的视频流直接注入身份认证管道，绕过物理摄像头接口，从而欺骗人脸识别系统。该研究提出了一种基于机器学习的虚拟摄像头检测方法，通过分析会话元数据来识别此类注入攻击。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0048"
+    ],
+    "references": [
+      {
+        "title": "Catching video injection attacks in remote biometric systems - arXiv",
+        "link": "https://arxiv.org/html/2512.10653v1"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0056",
+      "AT0058"
+    ],
+    "relatedThreatActors": [
+      "TA0031"
+    ]
+  }
+}

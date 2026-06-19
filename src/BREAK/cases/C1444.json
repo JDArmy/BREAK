@@ -1,0 +1,29 @@
+{
+  "C1444": {
+    "title": "Ethereum Classic 硬分叉重放攻击与 EIP-155 防护",
+    "keywords": [
+      "重放攻击",
+      "Ethereum Classic",
+      "EIP-155",
+      "chainId",
+      "硬分叉",
+      "交易签名",
+      "跨链",
+      "区块链安全"
+    ],
+    "summary": "在 Ethereum 与 Ethereum Classic 硬分叉后，由于交易签名未包含链ID，攻击者可将一条链上的合法交易复制到另一条链上重复执行，导致资产被双重转移。EIP-155 提案引入 chainId 字段，要求交易签名包含链标识，从而在协议层面防止此类跨链重放攻击。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0175"
+    ],
+    "references": [
+      {
+        "title": "What are Replay Attacks? A dive into replay attacks on ... - QuickNode",
+        "link": "https://www.quicknode.com/guides/ethereum-development/smart-contracts/what-are-replay-attacks-on-ethereum"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

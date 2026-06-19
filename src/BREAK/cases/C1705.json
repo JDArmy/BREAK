@@ -1,0 +1,32 @@
+{
+  "C1705": {
+    "title": "应用同意授权调查 | Microsoft Learn",
+    "keywords": [
+      "Microsoft",
+      "应用同意授权",
+      "OAuth 攻击",
+      "SaaS 安全",
+      "事件响应",
+      "恶意应用",
+      "权限滥用",
+      "Microsoft Learn",
+      "安全运营"
+    ],
+    "summary": "微软官方文档指导如何识别和调查应用同意授权攻击，保护数据并最小化风险。该文档针对攻击者通过欺骗用户授予恶意应用高权限访问组织数据的场景，提供调查和缓解措施。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0232"
+    ],
+    "references": [
+      {
+        "title": "App consent grant investigation | Microsoft Learn",
+        "link": "https://learn.microsoft.com/en-us/security/operations/incident-response-playbook-app-consent"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0089"
+    ],
+    "relatedThreatActors": []
+  }
+}

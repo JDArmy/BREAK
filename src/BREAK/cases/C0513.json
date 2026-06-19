@@ -1,0 +1,32 @@
+{
+  "C0513": {
+    "title": "Android逆向-抓包分析(工具大全)",
+    "keywords": [
+      "Android逆向",
+      "抓包分析",
+      "加密算法",
+      "模拟登录",
+      "HTTP请求",
+      "逆向工程",
+      "移动安全",
+      "数据包捕获"
+    ],
+    "summary": "在某款APP逆向过程中，开发者通过抓包工具捕获登录请求数据包，发现其中包含加密的用户名和密码字段。通过分析加密算法，最终成功解密并模拟登录。抓包帮助定位加密或混淆代码中的关键部分，为逆向提供线索。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0051-002"
+    ],
+    "references": [
+      {
+        "title": "Android逆向-抓包分析(工具大全) - 知乎",
+        "link": "https://zhuanlan.zhihu.com/p/1895219407489310933"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-04",
+    "relatedAttackTools": [
+      "AT0014"
+    ],
+    "relatedThreatActors": []
+  }
+}

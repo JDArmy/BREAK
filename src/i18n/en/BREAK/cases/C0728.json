@@ -1,0 +1,22 @@
+{
+  "C0728": {
+    "title": "Poisoning and Backdoor Attacks in Federated Learning: A Technical Overview",
+    "keywords": [
+      "federated learning",
+      "poisoning attack",
+      "backdoor attack",
+      "data poisoning",
+      "model poisoning",
+      "malicious client",
+      "global model contamination",
+      "trigger injection",
+      "FL security"
+    ],
+    "summary": "This technical article surveys various poisoning attack vectors in federated learning. Malicious clients can disrupt the global model by manipulating local training data (data poisoning), or embed triggers into training samples and upload backdoored local models so that the aggregated global model inherits the backdoor (backdoor attack). Attackers may also directly tamper with local model updates ",
+    "references": [
+      {
+        "title": "Poisoning/Backdoor Attacks - Model Poisoning Attacks - CSDN Blog"
+      }
+    ]
+  }
+}

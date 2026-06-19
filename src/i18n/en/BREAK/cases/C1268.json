@@ -1,0 +1,23 @@
+{
+  "C1268": {
+    "title": "Microsoft 365 OAuth Token Theft Attack Wave",
+    "keywords": [
+      "OAuth device authorization flow",
+      "token theft",
+      "Microsoft Entra ID",
+      "malicious OAuth application",
+      "phishing",
+      "MFA bypass",
+      "persistent access",
+      "Microsoft 365",
+      "APT29",
+      "refresh token hijacking"
+    ],
+    "summary": "Attackers exploit the OAuth device authorization flow to register malicious OAuth applications in Microsoft Entra ID, using phishing to trick users into completing authorization and hijacking access and refresh tokens, achieving persistent control over Microsoft 365 accounts that bypasses MFA to access email, files, and other core data long-term.",
+    "references": [
+      {
+        "title": "Alert! OAuth Token Hijacking Goes Mainstream: Persistent Microsoft 365 Attack Wave with Pervasive Control"
+      }
+    ]
+  }
+}

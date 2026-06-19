@@ -1,0 +1,21 @@
+{
+  "C1399": {
+    "title": "Case Study: Lessons Learned from Major IoT Botnet Attacks",
+    "keywords": [
+      "Mirai",
+      "Reaper",
+      "IoT botnet",
+      "default credentials",
+      "botnet attack",
+      "device security",
+      "IoT security",
+      "credential management"
+    ],
+    "summary": "Analysis of major IoT botnet attacks such as Mirai and Reaper highlights that changing default device credentials is a critical lesson. Many users overlook this simple measure, leaving devices vulnerable. Manufacturers also bear responsibility for implementing stronger security measures.",
+    "references": [
+      {
+        "title": "Case Study: Lessons Learned from Major IoT Botnet Attacks"
+      }
+    ]
+  }
+}

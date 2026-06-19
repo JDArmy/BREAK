@@ -1,0 +1,33 @@
+{
+  "C1795": {
+    "title": "余某盗取客户个人信息遭处罚案",
+    "keywords": [
+      "余某",
+      "盗取客户信息",
+      "个人信息泄露",
+      "客服工单",
+      "内部人员",
+      "行政处罚",
+      "诚信建设",
+      "收货地址",
+      "电话号码"
+    ],
+    "summary": "据余某供述，其盗取的信息主要涉及客户的姓名、电话号码、收货地址、购买的东西与价格等，后台能显示的客户个人信息几乎全部被泄露。该案作为诚信建设典型案例被通报，揭示了客服或后台系统中客户隐私数据被内部人员非法获取并外泄的风险。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0255"
+    ],
+    "references": [
+      {
+        "title": "信用广州网-【诚信建设万里行】泄露客户信息遭处罚,个人信息保护...",
+        "link": "https://credit.gz.gov.cn/csjswlxn/gzdt/content/post_8681161.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-11",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0024"
+    ]
+  }
+}

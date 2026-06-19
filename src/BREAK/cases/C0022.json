@@ -1,0 +1,35 @@
+{
+  "C0022": {
+    "title": "拍卖欺诈检测：人还是机器人？",
+    "keywords": [
+      "拍卖欺诈检测",
+      "机器学习",
+      "机器人出价",
+      "在线拍卖",
+      "自动出价软件",
+      "拍卖狙击",
+      "异常检测",
+      "竞拍公平性"
+    ],
+    "summary": "该项目旨在通过机器学习识别在线拍卖中的机器人出价。人类竞拍者因无法与软件控制的对手竞争而流失，平台需清除自动化出价以恢复公平。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0003-002"
+    ],
+    "references": [
+      {
+        "title": "GitHub - gabriellewald/auction-fraud-detection: Predicting fraud ...",
+        "link": "https://github.com/gabriellewald/auction-fraud-detection"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0023",
+      "AT0045"
+    ],
+    "relatedThreatActors": [
+      "TA0001",
+      "TA0002"
+    ]
+  }
+}

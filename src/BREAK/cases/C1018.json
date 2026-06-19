@@ -1,0 +1,32 @@
+{
+  "C1018": {
+    "title": "英国电子公司Volex系统遭未授权访问",
+    "keywords": [
+      "Volex",
+      "英国电子公司",
+      "未授权访问",
+      "网络攻击",
+      "IT系统",
+      "数据泄露",
+      "股价下跌",
+      "系统入侵"
+    ],
+    "summary": "英国电子电气公司Volex遭到网络攻击，调查显示是由于公司位于全球的多个IT系统和数据遭到未经授权访问导致的。该事件导致公司运营受到影响，股价下跌约4%。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0109"
+    ],
+    "references": [
+      {
+        "title": "...服务器|路由器|物联网|网络攻击|远程访问|分布式数据库_网易订阅",
+        "link": "https://www.163.com/dy/article/IIK6NRNO055642HH.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-10",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

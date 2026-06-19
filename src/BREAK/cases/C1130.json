@@ -1,0 +1,34 @@
+{
+  "C1130": {
+    "title": "四川泸州AI拟声绑架诈骗案",
+    "keywords": [
+      "AI拟声",
+      "绑架诈骗",
+      "语音克隆",
+      "陈女士",
+      "四川泸州",
+      "AI语音合成",
+      "电信诈骗",
+      "声音伪造"
+    ],
+    "summary": "2024年1月，四川泸州陈女士接到陌生电话，听到“女儿”的求救声，称被绑架需准备80万赎金。陈女士报案后经民警核实，其女儿平安无事。诈骗分子利用AI合成方式模拟其女儿声音实施诈骗，属于典型的AI拟声诈骗手法。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0120"
+    ],
+    "references": [
+      {
+        "title": "央视曝光声音合成、换脸技术等,这些套路你能防得住嘛?|骗子|诈骗案...",
+        "link": "https://www.163.com/dy/article/J2S6JEKQ0534HZTY.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-01",
+    "relatedAttackTools": [
+      "AT0059"
+    ],
+    "relatedThreatActors": [
+      "TA0031"
+    ]
+  }
+}

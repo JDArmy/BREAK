@@ -1,0 +1,31 @@
+{
+  "C1241": {
+    "title": "FBI报告合成身份欺诈为美国增长最快的金融犯罪",
+    "keywords": [
+      "FBI",
+      "合成身份欺诈",
+      "金融犯罪",
+      "美国银行",
+      "金融机构",
+      "欺诈损失",
+      "身份盗窃",
+      "洗钱",
+      "ACAMS"
+    ],
+    "summary": "2020年1月，美国联邦调查局报告称合成身份欺诈是美国增长最快的金融犯罪。同年，银行和金融机构因此损失高达200亿美元。犯罪分子通过结合真实和虚假的个人身份信息创建全新身份，用于开设虚假账户、进行欺诈性购买或洗钱等非法活动。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0136"
+    ],
+    "references": [
+      {
+        "title": "The Nature of Synthetic Identity Fraud - ACAMS",
+        "link": "https://www.acams.org/en/opinion/the-nature-of-synthetic-identity-fraud"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2020-01",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

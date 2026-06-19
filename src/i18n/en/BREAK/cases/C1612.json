@@ -1,0 +1,23 @@
+{
+  "C1612": {
+    "title": "V2X Application Spoofing Platform (VASP) Framework Released",
+    "keywords": [
+      "VASP",
+      "V2X spoofing",
+      "VEINS",
+      "OMNeT++",
+      "SUMO",
+      "misinformation injection",
+      "automotive cybersecurity",
+      "V2V simulation",
+      "V2I simulation",
+      "connected vehicle testing"
+    ],
+    "summary": "Researchers have publicly released VASP, a framework designed to simulate attacks against V2X networks. Built on the VEINS simulation environment, it can emulate spoofing and misinformation injection attacks in vehicle-to-vehicle (V2V) and vehicle-to-infrastructure (V2I) communications, aiming to provide a testing tool for automotive cybersecurity research.",
+    "references": [
+      {
+        "title": "GitHub - quic/vasp: VASP is a Framework to Simulate Attacks on V2X"
+      }
+    ]
+  }
+}

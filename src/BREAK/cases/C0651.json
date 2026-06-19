@@ -1,0 +1,36 @@
+{
+  "C0651": {
+    "title": "自动化应用被用于亲密伴侣监控与骚扰",
+    "keywords": [
+      "自动化应用",
+      "亲密伴侣暴力",
+      "iOS Shortcuts",
+      "Android Tasker",
+      "IFTTT",
+      "监控骚扰",
+      "USENIX Security",
+      "技术滥用",
+      "站内消息骚扰"
+    ],
+    "summary": "USENIX Security 2025论文研究揭示，iOS Shortcuts、Android Tasker等自动化应用可被施暴者利用来监控、冒充、过载骚扰及控制受害者。研究者在公开的Shortcuts配方中发现1014个可被用于监视和骚扰他人的配方。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0066"
+    ],
+    "references": [
+      {
+        "title": "Abusability of automation apps in intimate partner violence",
+        "link": "https://www.usenix.org/conference/usenixsecurity25/presentation/zhang-shirley"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0023",
+      "AT0044",
+      "AT0061"
+    ],
+    "relatedThreatActors": [
+      "TA0041"
+    ]
+  }
+}

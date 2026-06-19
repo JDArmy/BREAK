@@ -1,0 +1,31 @@
+{
+  "C1430": {
+    "title": "Gavin Wood阐述Web3空投中的女巫攻击防御难题",
+    "keywords": [
+      "Gavin Wood",
+      "Polkadot",
+      "Web3",
+      "空投",
+      "女巫攻击",
+      "Sybil Attack",
+      "虚假身份",
+      "公平分配",
+      "区块链安全"
+    ],
+    "summary": "Polkadot创始人Gavin Wood在2024年演讲中指出，区块链空投因缺乏有效防女巫攻击机制，导致资本支出效率极低。攻击者可通过创建大量虚假身份获取空投，使分配曲线严重失衡，多数真实用户几乎得不到激励。他强调Web3系统需区分设备是否由人类操作，以解决公平分配问题。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0172"
+    ],
+    "references": [
+      {
+        "title": "Gavin Wood:如何防止女巫攻击进行有效空投?_腾讯新闻",
+        "link": "https://new.qq.com/rain/a/20240830A07ZS200"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-08",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

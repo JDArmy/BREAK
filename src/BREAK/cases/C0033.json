@@ -1,0 +1,35 @@
+{
+  "C0033": {
+    "title": "江苏南通编写秒杀抢购软件案",
+    "keywords": [
+      "秒杀抢购软件",
+      "HiRoot",
+      "淘宝网",
+      "侵入计算机信息系统",
+      "非法控制",
+      "提供工具罪",
+      "南通市中级人民法院",
+      "恶意抢购",
+      "秒杀器"
+    ],
+    "summary": "2016年至2018年10月，王某为牟利编写具有在淘宝网抢购商品功能的“HiRoot”软件，并通过QQ销售。南通市中级人民法院二审维持原判，王某等6名被告人均因提供侵入、非法控制计算机信息系统程序、工具罪获刑，非法获利约57万元。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0003"
+    ],
+    "references": [
+      {
+        "title": "编写“秒杀”抢购软件非法获利57万 多名涉案人员均获刑",
+        "link": "https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=3690675185926885610"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-11",
+    "relatedAttackTools": [
+      "AT0045"
+    ],
+    "relatedThreatActors": [
+      "TA0012"
+    ]
+  }
+}

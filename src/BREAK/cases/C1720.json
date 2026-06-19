@@ -1,0 +1,31 @@
+{
+  "C1720": {
+    "title": "移动支付中的安全NFC通信：评估触碰支付系统的隐私与认证",
+    "keywords": [
+      "NFC",
+      "移动支付",
+      "触碰支付",
+      "令牌化",
+      "云令牌同步",
+      "可信服务管理器",
+      "TSM",
+      "API配置错误",
+      "支付安全",
+      "隐私认证"
+    ],
+    "summary": "该案例研究分析了近场通信（NFC）移动支付中的常见用例，即“触碰支付”系统。研究指出，云令牌同步、可信服务管理器（TSM）泄露或配置错误的API等均可能导致支付令牌化配置错误，从而引发安全风险。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0236"
+    ],
+    "references": [
+      {
+        "title": "Secure NFC Communication in Mobile Payments: Evaluating Privacy and Authentication in Tap-to-Pay Systems",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11431283/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

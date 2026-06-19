@@ -1,0 +1,30 @@
+{
+  "C0175": {
+    "title": "广告屏蔽：一项关于性能、隐私与对抗措施的研究",
+    "keywords": [
+      "广告屏蔽",
+      "ad-blocking",
+      "隐私保护",
+      "网页性能",
+      "反制措施",
+      "counter-measures",
+      "广告检测",
+      "ACM"
+    ],
+    "summary": "该研究分析了广告屏蔽对性能和隐私的影响，识别了网站和广告屏蔽器之间的对抗案例，并提出了检测广告的方法，帮助广告屏蔽器应对广告投放方的规避策略。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0013"
+    ],
+    "references": [
+      {
+        "title": "Ad-blocking: A study on performance, privacy and counter-measures",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3091478.3091514"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2017-01",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

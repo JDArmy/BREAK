@@ -1,0 +1,31 @@
+{
+  "C1356": {
+    "title": "重入漏洞检测工具实证研究：99.8%为误报",
+    "keywords": [
+      "重入漏洞",
+      "智能合约",
+      "误报率",
+      "以太坊",
+      "Mythril",
+      "Sailfish",
+      "漏洞检测工具",
+      "实证研究",
+      "ICSE 2023"
+    ],
+    "summary": "2023年IEEE/ACM国际软件工程会议论文对230,548个已验证智能合约进行重入漏洞检测实证研究，发现现有工具检测出的重入漏洞合约中超过99.8%为误报，且工具未能发现过去两年真实重入攻击案例中的漏洞。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0159"
+    ],
+    "references": [
+      {
+        "title": "Turn the rudder: A beacon of reentrancy detection for smart contracts on ethereum",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10172623/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

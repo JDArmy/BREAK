@@ -1,0 +1,38 @@
+{
+  "C1330": {
+    "title": "Keep Aware客户遭遇ClickFix攻击植入NetSupportManager远控后门",
+    "keywords": [
+      "ClickFix",
+      "NetSupportManager",
+      "PowerShell",
+      "剪贴板劫持",
+      "远程访问木马",
+      "社会工程学",
+      "Keep Aware",
+      "CAPTCHA伪造",
+      "Windows运行对话框",
+      "持久化远控"
+    ],
+    "summary": "一家Keep Aware客户在浏览搜索结果时点击被入侵网站，页面弹出伪造CAPTCHA验证框。用户点击后，JavaScript将恶意PowerShell命令写入剪贴板，并诱导用户粘贴到Windows运行对话框执行。该命令旨在下载并植入NetSupportManager远程访问木马，实现持久化远程控制。Keep Aware防护系统在剪贴板层面识别并阻止了该可疑命令，避免了设备被控。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0154"
+    ],
+    "references": [
+      {
+        "title": "直击真实 ClickFix 攻击现场:一场社会工程学黑客攻击的全过程",
+        "link": "https://www.anquanke.com/post/id/310802"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-08",
+    "relatedAttackTools": [
+      "AT0075",
+      "AT0013",
+      "AT0065"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

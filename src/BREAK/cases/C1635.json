@@ -1,0 +1,39 @@
+{
+  "C1635": {
+    "title": "芝加哥大学研究揭示Meta Quest头显重大安全漏洞",
+    "keywords": [
+      "Meta Quest",
+      "头显安全漏洞",
+      "开发者模式",
+      "恶意软件植入",
+      "屏幕克隆",
+      "中间人攻击",
+      "芝加哥大学",
+      "XR设备固件",
+      "WiFi网络攻击",
+      "转账篡改"
+    ],
+    "summary": "芝加哥大学研究人员发现Meta Quest头显存在重大安全漏洞，攻击者在同一WiFi网络下，可利用开发者模式植入恶意软件，克隆用户主屏幕，窃取信息并篡改用户间的交互，例如在用户不知情的情况下修改转账金额。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0217"
+    ],
+    "references": [
+      {
+        "title": "...Pro版iPhone,售价57000起;Quest头显存在重大安全漏洞,可视内容...",
+        "link": "https://new.qq.com/rain/a/20240314A01VTX00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-03",
+    "relatedAttackTools": [
+      "AT0084",
+      "AT0072",
+      "AT0054"
+    ],
+    "relatedThreatActors": [
+      "TA0050",
+      "TA0018"
+    ]
+  }
+}

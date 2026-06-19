@@ -1,0 +1,21 @@
+{
+  "C1589": {
+    "title": "Security Analysis of Consumer Remote SIM Provisioning Protocols",
+    "keywords": [
+      "eSIM",
+      "iSIM",
+      "remote SIM provisioning",
+      "SIM swapping",
+      "identity theft",
+      "consumer provisioning protocol",
+      "protocol vulnerability",
+      "mobile security"
+    ],
+    "summary": "This study analyzes the security of consumer remote SIM provisioning protocols, revealing that attackers could exploit protocol vulnerabilities to install rogue profiles or hijack phone numbers. It highlights how the remote provisioning process may be abused for SIM swapping attacks, leading to identity theft.",
+    "references": [
+      {
+        "title": "Security analysis of the consumer remote sim provisioning protocol"
+      }
+    ]
+  }
+}

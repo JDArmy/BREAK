@@ -1,0 +1,21 @@
+{
+  "C1560": {
+    "title": "Deanonymization of Litecoin through transaction-linkage attacks",
+    "keywords": [
+      "Litecoin",
+      "deanonymization",
+      "transaction-linkage attacks",
+      "blockchain privacy",
+      "on-chain data",
+      "identity tracing",
+      "cryptocurrency anonymity",
+      "transaction graph analysis"
+    ],
+    "summary": "This study collects digital information and locates target transactions on the Litecoin blockchain, then executes transaction-linkage attacks to correlate purchase records with on-chain transactions, thereby deanonymizing Litecoin users. It demonstrates how publicly available on-chain transaction data can be exploited for identity tracing.",
+    "references": [
+      {
+        "title": "Deanonymization of litecoin through transaction-linkage attacks"
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "C1335": {
+    "title": "ClickFix-Based Booking.com Phishing Campaign Targets Global Hospitality Professionals",
+    "keywords": [
+      "ClickFix",
+      "phishing",
+      "Booking.com",
+      "spoofed email",
+      "hospitality professionals",
+      "credential theft",
+      "session token",
+      "social engineering",
+      "email security bypass",
+      "hotel booking fraud"
+    ],
+    "summary": "In November 2025, a phishing campaign leveraging the ClickFix technique targeted hospitality professionals worldwide by sending spoofed emails impersonating Booking.com. The emails used an interactive ClickFix lure to trick recipients into copying and executing malicious commands, bypassing traditional email security detection. The attack aimed to steal account credentials and session tokens in or",
+    "references": [
+      {
+        "title": "Analysis and Defense of Booking.com Phishing Attacks Based on ClickFix Mechanism | Trojan | Clipboard |..."
+      }
+    ]
+  }
+}

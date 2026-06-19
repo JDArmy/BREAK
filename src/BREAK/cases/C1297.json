@@ -1,0 +1,31 @@
+{
+  "C1297": {
+    "title": "MCP安全风险：混淆代理问题与数据外泄",
+    "keywords": [
+      "MCP",
+      "OWASP",
+      "混淆代理问题",
+      "提示注入",
+      "数据外泄",
+      "AI智能体",
+      "工具调用",
+      "安全备忘单"
+    ],
+    "summary": "OWASP MCP安全备忘单指出，MCP服务器存在混淆代理问题，即MCP服务器以其自身（通常较宽泛的）权限执行操作，而非请求用户的权限。攻击者利用提示注入，将敏感数据编码到看似正常的工具调用中（如搜索查询、邮件主题），通过合法通道实现数据外泄。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0148"
+    ],
+    "references": [
+      {
+        "title": "MCP Security - OWASP Cheat Sheet Series",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/MCP_Security_Cheat_Sheet.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0093"
+    ],
+    "relatedThreatActors": []
+  }
+}

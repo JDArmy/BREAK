@@ -1,0 +1,35 @@
+{
+  "C1421": {
+    "title": "以太坊三明治攻击检测研究：2024年初检测到超56万次攻击",
+    "keywords": [
+      "以太坊",
+      "三明治攻击",
+      "MEV",
+      "矿工可提取价值",
+      "区块链安全",
+      "DeFi攻击",
+      "交易排序",
+      "检测模型"
+    ],
+    "summary": "一项发表于2024年的研究，通过部署检测模型对以太坊2024年1月至5月的数据进行分析，发现了超过56.3万次三明治攻击，其中包括2.4万次多重攻击案例，揭示了攻击的普遍性。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0170"
+    ],
+    "references": [
+      {
+        "title": "Towards Detecting Sandwich Attacks in Ethereum Using a Dual ...",
+        "link": "https://dl.acm.org/doi/10.1145/3787205"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-05",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0077"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

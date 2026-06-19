@@ -1,0 +1,29 @@
+{
+  "C1355": {
+    "title": "2021年区块链安全生态报告：80%DAPP安全事故缘于智能合约漏洞",
+    "keywords": [
+      "智能合约漏洞",
+      "DAPP安全",
+      "区块链安全",
+      "Fairyproof",
+      "加密资产损失",
+      "2021安全报告",
+      "DeFi安全事件"
+    ],
+    "summary": "Fairyproof研究团队发布的2021年区块链安全生态报告指出，全年公开报道的189起安全事故中，DAPP类安全事故占比超95%，其中80%的DAPP安全事故直接源于智能合约漏洞，造成至少76亿美元加密资产损失。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0159"
+    ],
+    "references": [
+      {
+        "title": "2021年区块链安全生态报告:80%DAPP安全事故缘于智能合约漏洞_腾讯...",
+        "link": "https://new.qq.com/omn/20220209/20220209A0620600.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

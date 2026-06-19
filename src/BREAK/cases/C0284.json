@@ -1,0 +1,31 @@
+{
+  "C0284": {
+    "title": "美征信巨头Equifax因大规模数据泄露被罚7亿美元",
+    "keywords": [
+      "Equifax",
+      "数据泄露",
+      "征信机构",
+      "FTC",
+      "和解",
+      "社保号码",
+      "消费者信息",
+      "大规模泄露"
+    ],
+    "summary": "2017年，美国征信机构Equifax发生大规模数据泄露事件，大约1.43亿位消费者的社保号码和其他个人信息被泄露。2019年7月，Equifax同意支付约7亿美元与美国联邦贸易委员会达成和解。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0028",
+      "R0078"
+    ],
+    "references": [
+      {
+        "title": "美征信巨头Equifax因大规模数据泄露被罚7亿美元_手机新浪网",
+        "link": "https://finance.sina.cn/2019-07-23/detail-ihytcerm5535103.d.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2019-07",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "C0234": {
+    "title": "共享视频会员账号被判赔200万",
+    "keywords": [
+      "优酷",
+      "共享会员",
+      "不正当竞争",
+      "VIP账号",
+      "视频平台",
+      "判赔200万",
+      "APP",
+      "诚实信用原则"
+    ],
+    "summary": "某公司通过购买优酷VIP会员账号，在其APP中向用户有偿提供视频播放服务，声称是“共享会员”创新模式。法院认定该行为违反诚实信用原则，损害了优酷公司合法权益，构成不正当竞争，终审判决该公司赔偿优酷公司约200万元。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0019"
+    ],
+    "references": [
+      {
+        "title": "判了!这样共享视频会员账号,被罚200万",
+        "link": "https://m.thepaper.cn/newsDetail_forward_12268363"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-04",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0036"
+    ]
+  }
+}

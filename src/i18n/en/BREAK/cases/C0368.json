@@ -1,0 +1,22 @@
+{
+  "C0368": {
+    "title": "Cracking User Passwords with Hashcat in HTB Perfection Machine",
+    "keywords": [
+      "hashcat",
+      "sha256",
+      "password cracking",
+      "ssti injection",
+      "sqlite",
+      "dictionary attack",
+      "mask attack",
+      "htb perfection",
+      "credential recovery"
+    ],
+    "summary": "During the penetration test of the HTB Perfection machine, after gaining shell access as user susan via SSTI injection, an SQLite database file was discovered in the user's home directory. The password hash was identified as SHA256. Based on the password format rules leaked in emails (firstname_firstnameReversed_randomDigits), Hashcat was used with a dictionary and mask attack to successfully reco",
+    "references": [
+      {
+        "title": "HTB Perfection write-up: Ruby-based SSTI injection, use of password cracking tool hashcat"
+      }
+    ]
+  }
+}

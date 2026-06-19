@@ -1,0 +1,35 @@
+{
+  "C1526": {
+    "title": "钓鱼团伙用Telegram机器人“接单”：欧洲凭证窃取进入“实时客服”模式",
+    "keywords": [
+      "Telegram Bot",
+      "钓鱼攻击",
+      "凭证窃取",
+      "自动化钓鱼",
+      "SaaS平台",
+      "Bot API",
+      "会话接管",
+      "欧洲",
+      "网络犯罪"
+    ],
+    "summary": "网络安全媒体SC World于2025年12月发布简报，揭示一种以Telegram Bot为指挥中枢的新型钓鱼模式正在欧洲快速蔓延。攻击者利用Telegram开放的Bot API，将钓鱼活动模块化、自动化，实现从模板分发、数据回传到会话接管的全流程自动化，宛如一个地下“钓鱼SaaS平台”。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0195"
+    ],
+    "references": [
+      {
+        "title": "钓鱼团伙用Telegram机器人“接单”：欧洲凭证窃取进入“实时客服...",
+        "link": "https://news.sohu.com/a/976968778_120780361"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-12",
+    "relatedAttackTools": [
+      "AT0071"
+    ],
+    "relatedThreatActors": [
+      "TA0017"
+    ]
+  }
+}

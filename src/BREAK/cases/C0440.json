@@ -1,0 +1,35 @@
+{
+  "C0440": {
+    "title": "AI代理参与的新型撞卡攻击行为分析",
+    "keywords": [
+      "AI代理",
+      "撞卡攻击",
+      "信用卡欺诈",
+      "自动化攻击",
+      "HUMAN Security",
+      "欺诈检测",
+      "AI智能体",
+      "支付安全"
+    ],
+    "summary": "安全研究机构观察到，随着AI代理流量激增，出现了利用AI进行撞卡攻击的早期欺诈模式。攻击者可能利用AI智能体模拟人类行为，对盗取的信用卡信息进行自动化验证和测试，以绕过传统基于规则的安全检测机制，标志着撞卡攻击手法的演进。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0040"
+    ],
+    "references": [
+      {
+        "title": "AI Agents and Fraud: Early Evidence of Carding Behavior in the Wild",
+        "link": "https://www.humansecurity.com/learn/blog/ai-agents-carding-attack-breakdown/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0057",
+      "AT0090"
+    ],
+    "relatedThreatActors": [
+      "TA0031",
+      "TA0055"
+    ]
+  }
+}

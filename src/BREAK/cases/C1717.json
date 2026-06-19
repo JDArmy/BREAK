@@ -1,0 +1,31 @@
+{
+  "C1717": {
+    "title": "Chargebacks911被FTC起诉",
+    "keywords": [
+      "Chargebacks911",
+      "FTC",
+      "Federal Trade Commission",
+      "拒付",
+      "退款滥用",
+      "信用卡拒付",
+      "消费者权益",
+      "佛罗里达州",
+      "chargeback"
+    ],
+    "summary": "美国联邦贸易委员会（FTC）与佛罗里达州联合起诉Chargebacks911公司，指控其不公平地阻挠消费者通过信用卡拒付流程对交易提出争议。该案涉及拒付流程被滥用以损害消费者权益。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0235"
+    ],
+    "references": [
+      {
+        "title": "Chargebacks 911 - Federal Trade Commission",
+        "link": "https://www.ftc.gov/legal-library/browse/cases-proceedings/2023009-chargebacks-911"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C1729": {
+    "title": "Ghost Click: Hijacking Human Clicks for Ad Fraud via Script Injection",
+    "keywords": [
+      "ghost click",
+      "ad fraud",
+      "click hijacking",
+      "server-side script injection",
+      "123.php",
+      "ad attribution",
+      "fake clicks",
+      "click fraud"
+    ],
+    "summary": "This study exposes an ad fraud technique called Ghost Click. Attackers inject a server-side script (e.g., 123.php) into web pages visited by victims. Whenever a user performs a normal click, the script triggers a fraudulent ad click in the background, effectively hijacking genuine user interactions to steal ad attribution revenue.",
+    "references": [
+      {
+        "title": "Dissecting ghost clicks: Ad fraud via misdirected human clicks"
+      }
+    ]
+  }
+}

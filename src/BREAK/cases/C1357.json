@@ -1,0 +1,35 @@
+{
+  "C1357": {
+    "title": "Earning Farm重入攻击事件",
+    "keywords": [
+      "Earning Farm",
+      "重入攻击",
+      "智能合约漏洞",
+      "DeFi安全",
+      "资产损失",
+      "Web3生态",
+      "重入漏洞",
+      "合约状态更新"
+    ],
+    "summary": "2023年8月9日，DeFi项目Earning Farm遭到重入攻击，攻击者利用智能合约中的重入漏洞，在合约状态更新前重复调用函数，导致约53万美元的资产损失。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0159"
+    ],
+    "references": [
+      {
+        "title": "损失金额较上月下降90%，8月Web3生态攻击事件速览_腾讯新闻",
+        "link": "https://new.qq.com/rain/a/20230831A08BO700"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-08",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0077"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C0312": {
+    "title": "An Empirical Study of Slow HTTP DoS Attack Vulnerabilities on Web Servers",
+    "keywords": [
+      "Slow HTTP DoS",
+      "denial-of-service attack",
+      "HTTP server vulnerability",
+      "traffic ratio detection",
+      "connection resource exhaustion",
+      "HTTP protocol flaw",
+      "empirical study",
+      "attack detection method"
+    ],
+    "summary": "An empirical study examined internet-facing HTTP servers for Slow HTTP DoS vulnerabilities and found that some servers are susceptible to such attacks. By sending HTTP requests at an extremely slow rate, attackers exhaust server connection resources, preventing legitimate users from accessing services. The study proposes a detection method based on traffic ratio characteristics.",
+    "references": [
+      {
+        "title": "How secure are web servers? An empirical study of slow HTTP DoS attacks and detection"
+      }
+    ]
+  }
+}

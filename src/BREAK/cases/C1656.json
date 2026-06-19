@@ -1,0 +1,36 @@
+{
+  "C1656": {
+    "title": "医院APP GraphQL接口未授权访问致百万级敏感数据泄露",
+    "keywords": [
+      "GraphQL",
+      "API未授权访问",
+      "敏感数据泄露",
+      "医疗APP",
+      "自省功能",
+      "影子API",
+      "腾讯安全",
+      "患者信息",
+      "数据修改API",
+      "越权访问"
+    ],
+    "summary": "腾讯安全专家在2023年4月对某医院进行风险排查时，发现其APP存在GraphQL接口，可通过自省功能获取所有API。测试发现大量无需鉴权即可访问的API，能直接获取病患身份、就诊信息等百万级敏感数据，甚至存在未鉴权的数据修改API，可任意登录他人账号、修改信息。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0222"
+    ],
+    "references": [
+      {
+        "title": "一个由“API未授权漏洞”引发的百万级敏感数据泄露_腾讯新闻",
+        "link": "https://new.qq.com/rain/a/20230517A084AU00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-04",
+    "relatedAttackTools": [
+      "AT0085"
+    ],
+    "relatedThreatActors": [
+      "TA0051"
+    ]
+  }
+}

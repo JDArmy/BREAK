@@ -1,0 +1,33 @@
+{
+  "C1187": {
+    "title": "CVE-2019-5736 runc容器逃逸漏洞",
+    "keywords": [
+      "CVE-2019-5736",
+      "runc",
+      "容器逃逸",
+      "Docker",
+      "proc self exe",
+      "沙箱",
+      "gVisor",
+      "云原生安全",
+      "二进制覆盖"
+    ],
+    "summary": "CVE-2019-5736是影响最大的容器逃逸漏洞之一，存在于runc运行时。恶意容器可通过/proc/self/exe获取宿主机runc路径并覆盖该二进制文件，实现宿主机任意代码执行。修复需更新runc至1.0-rc6+版本或采用gVisor等沙箱运行时。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0128"
+    ],
+    "references": [
+      {
+        "title": "容器安全最佳实践: 防范容器逃逸与攻击 - 简书",
+        "link": "https://www.jianshu.com/p/d4049f51464e"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2019",
+    "relatedAttackTools": [
+      "AT0054"
+    ],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "C0244": {
+    "title": "机器学习在主流邮件服务商垃圾邮件过滤中的应用综述",
+    "keywords": [
+      "机器学习",
+      "垃圾邮件过滤",
+      "Gmail",
+      "Yahoo",
+      "Outlook",
+      "内容分析",
+      "恶意链接",
+      "欺诈信息"
+    ],
+    "summary": "该研究综述了机器学习技术在Gmail、Yahoo和Outlook等主流互联网服务提供商（ISP）的垃圾邮件过滤系统中的应用。研究分析了这些邮件服务商如何利用内容分析和机器学习算法识别并过滤垃圾邮件，包括恶意链接、虚假广告和欺诈信息等，以保护用户免受垃圾内容的侵扰。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0021"
+    ],
+    "references": [
+      {
+        "title": "Machine learning for email spam filtering: review ... - ScienceDirect",
+        "link": "https://www.sciencedirect.com/science/article/pii/S2405844018353404"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

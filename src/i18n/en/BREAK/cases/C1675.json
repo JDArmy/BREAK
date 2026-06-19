@@ -1,0 +1,22 @@
+{
+  "C1675": {
+    "title": "LiteLLM PyPI Supply Chain Poisoning Targets Cloud and CI/CD Credentials",
+    "keywords": [
+      "LiteLLM",
+      "PyPI",
+      "supply chain poisoning",
+      "malicious package",
+      "credential theft",
+      "CI/CD",
+      "cloud credentials",
+      "GitHub Actions",
+      "Python"
+    ],
+    "summary": "Two malicious versions of LiteLLM (1.82.7 and 1.82.8) were discovered on the PyPI official repository, embedding multi-stage payloads designed to steal CI/CD keys, cloud credentials (AWS, GCP, Azure), Kubernetes configurations, and Docker credentials from developer environments. Attackers compromised publishing credentials to inject the credential-stealing code into official releases and GitHub Ac",
+    "references": [
+      {
+        "title": "PyPI Warns Developers: LiteLLM Malware Steals Cloud Service and CI/CD Credentials Incident..."
+      }
+    ]
+  }
+}

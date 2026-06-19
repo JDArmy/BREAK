@@ -1,0 +1,38 @@
+{
+  "C0703": {
+    "title": "黄牛机器人如何利用漏洞API扰乱在线零售销售",
+    "keywords": [
+      "Scalping Bots",
+      "API漏洞",
+      "自动化抢购",
+      "在线零售",
+      "Imperva",
+      "机器人攻击",
+      "黄牛软件",
+      "库存囤积",
+      "API滥用"
+    ],
+    "summary": "一家北美在线零售商遭遇长达一个月的机器人攻击。黄牛机器人利用其公开API的漏洞，绕过正常流程，自动化抢购和囤积高需求商品，导致服务器成本飙升，合法顾客无法购买商品。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0070"
+    ],
+    "references": [
+      {
+        "title": "How Scalping Bots Exploited a Vulnerable API to Disrupt Online ...",
+        "link": "https://www.imperva.com/blog/how-scalping-bots-exploited-a-vulnerable-api-to-disrupt-online-retail-sales/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-02",
+    "relatedAttackTools": [
+      "AT0061",
+      "AT0023",
+      "AT0005"
+    ],
+    "relatedThreatActors": [
+      "TA0002",
+      "TA0051"
+    ]
+  }
+}

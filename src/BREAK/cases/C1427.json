@@ -1,0 +1,32 @@
+{
+  "C1427": {
+    "title": "P2P僵尸网络Strom中的女巫攻击应用",
+    "keywords": [
+      "P2P僵尸网络",
+      "Strom",
+      "女巫攻击",
+      "Sybil攻击",
+      "Sybil节点",
+      "Kademlia",
+      "Overnet协议",
+      "C&C通信",
+      "索引污染",
+      "活动监视"
+    ],
+    "summary": "在P2P僵尸网络Strom中，防御者通过部署Sybil节点来对抗僵尸网络。攻击者利用单个恶意实体伪造多个Sybil节点，使其出现在正常节点的查询路径中，从而干扰或阻断僵尸网络的C&C通信，实施索引污染、活动监视等打击策略。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0172"
+    ],
+    "references": [
+      {
+        "title": "什么是女巫攻击-腾讯云开发者社区-腾讯云",
+        "link": "https://cloud.tencent.com/developer/article/1656893"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2008",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

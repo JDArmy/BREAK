@@ -1,0 +1,35 @@
+{
+  "C0016": {
+    "title": "拍卖过程中的狙击攻击允许攻击者……",
+    "keywords": [
+      "狙击攻击",
+      "拍卖漏洞",
+      "cancelBid",
+      "抢先出价",
+      "NextGen",
+      "智能合约",
+      "竞拍操纵",
+      "自动化攻击",
+      "Code4rena"
+    ],
+    "summary": "攻击者利用拍卖过程中的狙击攻击，在每次出价后调用cancelBid()取消之前的出价，从而以极低的成本获取任何代币。该漏洞允许攻击者通过不公平的自动化手段在拍卖中抢先出价并操纵结果。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0003-001"
+    ],
+    "references": [
+      {
+        "title": "Sniping Attack During the Auction Process Allows Attackers to ... - GitHub",
+        "link": "https://github.com/code-423n4/2023-10-nextgen-findings/issues/1254"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0023",
+      "AT0077"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

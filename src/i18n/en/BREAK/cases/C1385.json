@@ -1,0 +1,23 @@
+{
+  "C1385": {
+    "title": "V380 IP Camera Hardcoded Backdoor Vulnerability (CVE-2025-7503)",
+    "keywords": [
+      "V380",
+      "IP camera",
+      "hardcoded backdoor",
+      "CVE-2025-7503",
+      "firmware backdoor",
+      "unauthorized access",
+      "surveillance data theft",
+      "IoT device",
+      "hardcoded credentials",
+      "network service configuration"
+    ],
+    "summary": "A security researcher discovered a hardcoded network service configuration in the firmware of a V380 IP camera, which acts as a hidden backdoor. This allows attackers to gain unauthorized access, steal surveillance footage, or take control of the device. The vulnerability stems from hardcoded credentials embedded during firmware development, representing a classic firmware backdoor.",
+    "references": [
+      {
+        "title": "The Dangers of Hardcoding – Examining Hidden Backdoors in IoT Devices Through CVE-2025-7503 - Zhihu"
+      }
+    ]
+  }
+}

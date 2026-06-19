@@ -1,0 +1,22 @@
+{
+  "C1608": {
+    "title": "Vulnerability Analysis and Attack Research on the Profinet IO Protocol",
+    "keywords": [
+      "Profinet IO",
+      "industrial control protocol",
+      "protocol vulnerability analysis",
+      "ICS security",
+      "industrial control system attack",
+      "protocol security flaws",
+      "industrial ethernet",
+      "vulnerability exploitation",
+      "SCADA security"
+    ],
+    "summary": "An academic paper presents a vulnerability analysis of the Profinet IO protocol and demonstrates multiple attacks that can be launched based on these weaknesses. The research focuses on the security flaws inherent in the protocol itself and their exploitation methods.",
+    "references": [
+      {
+        "title": "Towards the Protection of Industrial Control Systems"
+      }
+    ]
+  }
+}

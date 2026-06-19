@@ -1,0 +1,34 @@
+{
+  "C1512": {
+    "title": "XR安全警告的混合方法调查——经验教训",
+    "keywords": [
+      "XR安全警告",
+      "沉浸式环境",
+      "头显安全提示",
+      "拒绝服务攻击",
+      "DoS警报",
+      "用户体验研究",
+      "AR/VR安全",
+      "人机交互",
+      "网络安全感知"
+    ],
+    "summary": "一项研究调查了用户在沉浸式XR环境中对头显内安全警告的感知和响应。研究发现，在拒绝服务（DoS）攻击期间触发的警报对用户的有效性至关重要，旨在防止网络攻击损害用户表现和健康。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0191"
+    ],
+    "references": [
+      {
+        "title": "A Mixed-Methods Investigation of XR Security Warnings—Lessons Learned",
+        "link": "https://ieeexplore.ieee.org/document/11339289"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0084"
+    ],
+    "relatedThreatActors": [
+      "TA0050"
+    ]
+  }
+}

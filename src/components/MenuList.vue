@@ -69,6 +69,7 @@ const knowledgeRoutes: Record<string, string> = {
   attackTools: "/attack-tools",
   threatActors: "/threat-actors",
   terms: "/terms",
+  cases: "/cases",
 };
 
 const handleKnowledgeCommand = (command: string) => {
@@ -138,7 +139,7 @@ onUnmounted(() => {
 });
 
 const isKnowledgeActive = (fullPath: string) =>
-  ["/risks", "/avoidances", "/attack-tools", "/threat-actors", "/terms"].includes(
+  ["/risks", "/avoidances", "/attack-tools", "/threat-actors", "/terms", "/cases"].includes(
     getActiveIndex(fullPath)
   );
 
@@ -149,6 +150,7 @@ const getActiveKnowledge = (fullPath: string) => {
   if (path === "/attack-tools") return "attackTools";
   if (path === "/threat-actors") return "threatActors";
   if (path === "/terms") return "terms";
+  if (path === "/cases") return "cases";
   return "";
 };
 
@@ -228,6 +230,9 @@ const getActiveIndex = (fullPath: string) => {
         </div>
         <div class="mobile-nav-item" :class="{ active: getActiveIndex(route.fullPath) === '/terms' }" @click="handleMobileNav('/terms')">
           <span>{{ $t("terms") }}</span>
+        </div>
+        <div class="mobile-nav-item" :class="{ active: getActiveIndex(route.fullPath) === '/cases' }" @click="handleMobileNav('/cases')">
+          <span>{{ $t("cases") }}</span>
         </div>
       </div>
 
@@ -347,6 +352,7 @@ const getActiveIndex = (fullPath: string) => {
           <el-dropdown-item command="attackTools" :class="{ 'is-active': getActiveKnowledge($route.fullPath) === 'attackTools' }">{{ $t("attackTools") }}</el-dropdown-item>
           <el-dropdown-item command="threatActors" :class="{ 'is-active': getActiveKnowledge($route.fullPath) === 'threatActors' }">{{ $t("threatActors") }}</el-dropdown-item>
           <el-dropdown-item command="terms" :class="{ 'is-active': getActiveKnowledge($route.fullPath) === 'terms' }">{{ $t("terms") }}</el-dropdown-item>
+          <el-dropdown-item command="cases" :class="{ 'is-active': getActiveKnowledge($route.fullPath) === 'cases' }">{{ $t("cases") }}</el-dropdown-item>
         </el-dropdown-menu>
       </template>
     </el-dropdown>

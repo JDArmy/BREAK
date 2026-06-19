@@ -1,0 +1,36 @@
+{
+  "C1496": {
+    "title": "弥合权益证明安全缺口：一种基于签名的长程攻击恶意验证者防御方案",
+    "keywords": [
+      "Proof-of-Stake",
+      "长程攻击",
+      "无成本模拟",
+      "恶意验证者",
+      "签名防御",
+      "区块链分叉",
+      "历史私钥",
+      "交易历史重写",
+      "PoS安全",
+      "共识机制"
+    ],
+    "summary": "该研究针对PoS区块链中的长程攻击提出基于签名的防御方案。攻击场景包括恶意验证者利用历史私钥从早期区块分叉，构造替代链以重写交易历史，利用无成本模拟特性威胁网络一致性。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0187"
+    ],
+    "references": [
+      {
+        "title": "Closing the Proof-of-Stake Security Gap: A Signature-Based Defense Against Malicious Validators in Long-Range Attacks",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11494077/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024",
+    "relatedAttackTools": [
+      "AT0078"
+    ],
+    "relatedThreatActors": [
+      "TA0046"
+    ]
+  }
+}

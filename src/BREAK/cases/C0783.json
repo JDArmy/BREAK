@@ -1,0 +1,34 @@
+{
+  "C0783": {
+    "title": "MCP协议工具投毒攻击窃取WhatsApp数据",
+    "keywords": [
+      "MCP协议",
+      "工具投毒",
+      "WhatsApp数据窃取",
+      "Cursor",
+      "Invariant Labs",
+      "AI模型指令注入",
+      "软件供应链攻击",
+      "MCP客户端安全"
+    ],
+    "summary": "2025年4月，安全公司Invariant Labs披露了MCP协议的工具投毒攻击风险。攻击者在恶意MCP服务的代码注释中嵌入隐藏指令，当用户使用Cursor等MCP客户端调用WhatsApp工具时，AI模型会遵从这些指令，将用户的WhatsApp历史聊天记录发送给攻击者指定的号码。该攻击利用了用户安装的恶意MCP组件，无需利用WhatsApp自身漏洞。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0081-001"
+    ],
+    "references": [
+      {
+        "title": "AI Agent破局:MCP与A2A定义安全新边界_腾讯新闻",
+        "link": "https://news.qq.com/rain/a/20250411A082ME00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-04",
+    "relatedAttackTools": [
+      "AT0093"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

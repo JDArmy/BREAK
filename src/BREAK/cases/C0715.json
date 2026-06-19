@@ -1,0 +1,34 @@
+{
+  "C0715": {
+    "title": "纽约时报起诉OpenAI：指控AI训练爬取文章侵犯著作权",
+    "keywords": [
+      "纽约时报",
+      "OpenAI",
+      "ChatGPT",
+      "GPT模型训练",
+      "著作权侵权",
+      "生成式AI",
+      "训练数据爬取",
+      "AIGC合规",
+      "版权风险"
+    ],
+    "summary": "在AI企业出海合规讨论中，律师援引典型案例：纽约时报起诉OpenAI，指控其在训练GPT模型时爬取了《纽约时报》上百万篇文章，侵犯了著作权。此案揭示了生成式AI训练数据主要源于互联网数据库，其中不乏原创作品，存在侵犯知识产权的高危风险。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0071-002",
+      "R0071",
+      "R0242"
+    ],
+    "references": [
+      {
+        "title": "36氪出海·AI|想成为下一个Manus,先把这些出海合规问题处理好...",
+        "link": "https://news.qq.com/rain/a/20260106A06NY600"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0005"
+    ],
+    "relatedThreatActors": []
+  }
+}

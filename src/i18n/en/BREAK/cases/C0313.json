@@ -1,0 +1,20 @@
+{
+  "C0313": {
+    "title": "Macroscopic Characterization of Large-Scale DoS Ecosystems",
+    "keywords": [
+      "reflection amplification DoS",
+      "DNS amplification",
+      "botnet traffic attacks",
+      "internet-scale measurement",
+      "open DNS resolvers",
+      "network bandwidth exhaustion",
+      "DDoS ecosystem analysis"
+    ],
+    "summary": "This study reveals over 20 million reflection amplification DoS attacks through macroscopic internet monitoring. Attacks exploit open services such as DNS to amplify small requests into massive traffic, exhausting target network bandwidth and causing service disruptions. The victim population is vast, with median attack duration dropping to 240 seconds.",
+    "references": [
+      {
+        "title": "Millions of targets under attack: a macroscopic characterization of the DoS ecosystem"
+      }
+    ]
+  }
+}

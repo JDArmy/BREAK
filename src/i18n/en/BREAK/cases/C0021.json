@@ -1,0 +1,21 @@
+{
+  "C0021": {
+    "title": "OAT-013 Sniping",
+    "keywords": [
+      "OAT-013",
+      "Sniping",
+      "auction sniping",
+      "last-second bidding",
+      "bid sniping",
+      "automated threats",
+      "OWASP",
+      "web application security"
+    ],
+    "summary": "OWASP Automated Threat Project defines \"Sniping\" as placing bids or offers on goods or services at the last moment, leaving other users insufficient time to react. It is a typical automated threat.",
+    "references": [
+      {
+        "title": "OAT-013 Sniping - OWASP Foundation"
+      }
+    ]
+  }
+}

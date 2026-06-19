@@ -1,0 +1,40 @@
+{
+  "C0404": {
+    "title": "Cookie窃取到商业电子邮件诈骗：攻击者利用AiTM钓鱼网站作为入口",
+    "keywords": [
+      "AiTM",
+      "中间人攻击",
+      "Cookie窃取",
+      "商业电子邮件诈骗",
+      "BEC",
+      "多因素认证绕过",
+      "MFA",
+      "Microsoft安全团队",
+      "金融欺诈",
+      "会话劫持"
+    ],
+    "summary": "微软安全团队发现，攻击者通过中间人（AiTM）钓鱼网站窃取用户会话Cookie，即使目标组织已启用多因素认证（MFA），攻击者仍可利用包含MFA声明的Cookie，绕过认证直接访问用户账户。随后，攻击者访问了与财务相关的邮件和文件附件，为进一步的金融欺诈做准备。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0035"
+    ],
+    "references": [
+      {
+        "title": "From cookie theft to BEC: Attackers use AiTM phishing sites as entry ...",
+        "link": "https://www.microsoft.com/en-us/security/blog/2022/07/12/from-cookie-theft-to-bec-attackers-use-aitm-phishing-sites-as-entry-point-to-further-financial-fraud/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-07",
+    "relatedAttackTools": [
+      "AT0072",
+      "AT0030",
+      "AT0063",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0059"
+    ]
+  }
+}

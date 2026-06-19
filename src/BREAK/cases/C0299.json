@@ -1,0 +1,29 @@
+{
+  "C0299": {
+    "title": "针对带宽耗尽DDoS攻击的对抗研究",
+    "keywords": [
+      "带宽耗尽",
+      "DDoS攻击",
+      "对抗防御",
+      "网络洪泛",
+      "资源耗尽",
+      "IEEE",
+      "拒绝服务攻击",
+      "流量清洗"
+    ],
+    "summary": "该研究探讨了基于对抗方法的带宽耗尽型DDoS攻击防御。带宽耗尽攻击通过向受害者网络洪泛大量非期望流量，耗尽网络带宽资源，阻止合法流量到达目标系统。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0029-002"
+    ],
+    "references": [
+      {
+        "title": "Research on counter bandwidth depletion DDoS attacks based on ...",
+        "link": "https://ieeexplore.ieee.org/iel5/4344133/4344625/04344661.pdf"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

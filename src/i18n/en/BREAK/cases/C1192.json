@@ -1,0 +1,21 @@
+{
+  "C1192": {
+    "title": "Misconfigured Kubernetes Cluster Networking and Lateral Movement Risks",
+    "keywords": [
+      "Kubernetes",
+      "cluster networking",
+      "network misconfigurations",
+      "lateral movement",
+      "cloud native security",
+      "network policies",
+      "service exposure",
+      "penetration testing"
+    ],
+    "summary": "A study of 287 open source applications identified 634 network misconfigurations in Kubernetes clusters that could be exploited for lateral movement attacks. The misconfigurations involve service exposure and missing network policies, enabling attackers to pivot within the cluster.",
+    "references": [
+      {
+        "title": "Defending Kubernetes Clusters Against Network Misconfigurations"
+      }
+    ]
+  }
+}

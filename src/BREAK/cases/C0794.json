@@ -1,0 +1,40 @@
+{
+  "C0794": {
+    "title": "Salesloft Drift 数据泄露事件：OAuth令牌滥用导致700+企业遭殃",
+    "keywords": [
+      "Salesloft",
+      "Drift",
+      "OAuth令牌滥用",
+      "供应链攻击",
+      "UNC6395",
+      "Salesforce数据泄露",
+      "GitHub账户入侵",
+      "Cloudflare",
+      "AWS密钥泄露",
+      "SaaS安全"
+    ],
+    "summary": "2025年8月，威胁组织UNC6395利用Salesloft的GitHub账户入侵，窃取Drift平台客户技术集成的OAuth令牌，进而访问包括Cloudflare、Palo Alto Networks等700多家企业的Salesforce数据。攻击者通过窃取的高权限OAuth令牌，绕过传统安全控制，系统性地收集AWS访问密钥、API令牌等高价值凭证，展示了第三方SaaS应用授权滥用的严重后果。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0081-003",
+      "R0232"
+    ],
+    "references": [
+      {
+        "title": "SaaS史上最严重供应链攻击:Salesloft Drift数据泄露事件深度剖析",
+        "link": "https://new.qq.com/rain/a/20250912A060OP00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-08",
+    "relatedAttackTools": [
+      "AT0089",
+      "AT0087",
+      "AT0088"
+    ],
+    "relatedThreatActors": [
+      "TA0054",
+      "TA0052"
+    ]
+  }
+}

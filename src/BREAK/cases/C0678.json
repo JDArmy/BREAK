@@ -1,0 +1,35 @@
+{
+  "C0678": {
+    "title": "多云转阴，或有网络攻击：云平台上的悬空资源滥用",
+    "keywords": [
+      "悬空资源滥用",
+      "云平台安全",
+      "DNS接管",
+      "云存储桶",
+      "IP地址劫持",
+      "网络钓鱼",
+      "恶意内容托管",
+      "云安全态势管理",
+      "dangling resources",
+      "cloud cyberattacks"
+    ],
+    "summary": "一项针对12个云平台的纵向研究发现了20,904例被滥用的悬空记录案例。攻击者通过接管云平台上已释放但未清理的悬空资源（如存储桶、IP地址、DNS记录），进行恶意内容托管、钓鱼攻击或数据窃取等滥用行为。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0069-002"
+    ],
+    "references": [
+      {
+        "title": "Cloudy with a chance of cyberattacks: dangling resources abuse on cloud platforms",
+        "link": "https://www.usenix.org/conference/nsdi24/presentation/friess"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0088"
+    ],
+    "relatedThreatActors": [
+      "TA0053"
+    ]
+  }
+}

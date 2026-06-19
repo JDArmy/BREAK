@@ -1,0 +1,20 @@
+{
+  "C1541": {
+    "title": "Resolv Protocol Hack",
+    "keywords": [
+      "Resolv",
+      "USR minting vulnerability",
+      "oracle manipulation",
+      "unauthorized token minting",
+      "DeFi exploit",
+      "USDC",
+      "protocol economic balance"
+    ],
+    "summary": "An attacker exploited a critical flaw in the USR minting function of the Resolv protocol, manipulating the oracle with only about $100,000 USDC to mint unauthorized tokens and disrupt the protocol's economic balance.",
+    "references": [
+      {
+        "title": "In-Depth Research Report on the Resolv Protocol Hacking Incident: Who Pays the Final Bill? - Tencent News"
+      }
+    ]
+  }
+}

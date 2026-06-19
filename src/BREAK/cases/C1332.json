@@ -1,0 +1,39 @@
+{
+  "C1332": {
+    "title": "微软披露ClickFix攻击活动利用Windows终端传播Lumma Stealer窃取浏览器凭据",
+    "keywords": [
+      "ClickFix",
+      "Lumma Stealer",
+      "Windows Terminal",
+      "PowerShell",
+      "信息窃取木马",
+      "浏览器凭据窃取",
+      "Microsoft",
+      "社会工程攻击",
+      "恶意命令执行",
+      "会话令牌"
+    ],
+    "summary": "微软于2026年3月披露一起ClickFix攻击活动，攻击者滥用Windows终端诱导用户执行恶意命令。该活动通过伪造系统错误或验证提示，引导用户复制并执行PowerShell命令，最终部署Lumma Stealer信息窃取木马。该木马专门窃取浏览器中存储的密码、Cookie和会话令牌等敏感凭据，导致用户账户和身份信息泄露。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0154"
+    ],
+    "references": [
+      {
+        "title": "Microsoft Reveals ClickFix Campaign Using Windows Terminal to …",
+        "link": "https://thehackernews.com/2026/03/microsoft-reveals-clickfix-campaign.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-03",
+    "relatedAttackTools": [
+      "AT0013",
+      "AT0064",
+      "AT0075"
+    ],
+    "relatedThreatActors": [
+      "TA0012",
+      "TA0018"
+    ]
+  }
+}

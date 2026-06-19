@@ -1,0 +1,32 @@
+{
+  "C1544": {
+    "title": "NFT版税机制缺陷导致场外交易绕过",
+    "keywords": [
+      "NFT版税",
+      "场外交易",
+      "OTC",
+      "P2P交易",
+      "智能合约",
+      "创作者经济",
+      "OpenSea",
+      "Magic Eden",
+      "SudoSwap",
+      "二次销售"
+    ],
+    "summary": "NFT版税并非在智能合约层面强制执行，而是由市场作为社会规范执行。由于智能合约的转移机制无法计算版税，且用户可在自己钱包间转移NFT，导致通过场外交易（OTC）或点对点（P2P）交易可完全绕过创作者版税支付，使创作者无法获得二次销售收益。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0199"
+    ],
+    "references": [
+      {
+        "title": "NFT版税纷争的背后：18亿美元的“蛋糕”该怎么分？_腾讯新闻",
+        "link": "https://new.qq.com/rain/a/20221024A05NR100"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-10",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

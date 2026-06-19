@@ -1,0 +1,30 @@
+{
+  "C0817": {
+    "title": "删库遭 GitHub 封号!开发者欲夺回发行权:“我只是犯了个编程错误...”",
+    "keywords": [
+      "Marak Squires",
+      "faker.js",
+      "colors.js",
+      "GitHub封号",
+      "恶意死循环",
+      "删库",
+      "开源项目破坏",
+      "供应链安全"
+    ],
+    "summary": "2022年1月，知名开源库faker.js和colors.js的作者Marak Squires因不满商业公司无偿使用其项目，故意在代码中注入恶意死循环并删库，导致数千个项目受影响。GitHub随后封禁其账号，社区接管了项目维护。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0082"
+    ],
+    "references": [
+      {
+        "title": "删库遭 GitHub 封号!开发者欲夺回发行权:“我只是犯了个编程错误...",
+        "link": "https://new.qq.com/omn/20220126/20220126A04TFE00.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-01",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

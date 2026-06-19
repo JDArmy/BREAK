@@ -1,0 +1,21 @@
+{
+  "C1185": {
+    "title": "Apifox Desktop Client Hit by Supply Chain Poisoning Attack",
+    "keywords": [
+      "Apifox supply chain attack",
+      "CDN hijacking",
+      "dynamic script backdoor",
+      "SSH key exfiltration",
+      "Git credential theft",
+      "desktop client compromise",
+      "API debugging tool malware",
+      "software supply chain compromise"
+    ],
+    "summary": "Between March 4 and March 22, 2026, the cross-platform desktop client of the API debugging tool Apifox was targeted in a supply chain poisoning attack. Attackers tampered with a dynamic script file on Apifox's official CDN to implant a covert backdoor. Affected clients below version 2.8.19 were at risk of having sensitive information such as SSH keys and Git credentials exfiltrated, posing a high ",
+    "references": [
+      {
+        "title": "[University-Wide Urgent Cybersecurity Alert] Beware of Document Theft, Trojan Poisoning, and Supply Chain Attacks"
+      }
+    ]
+  }
+}

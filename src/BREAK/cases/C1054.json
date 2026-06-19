@@ -1,0 +1,28 @@
+{
+  "C1054": {
+    "title": "个人数字设备物理安全防护指南",
+    "keywords": [
+      "CISA",
+      "物理安全",
+      "数字设备",
+      "未授权物理访问",
+      "硬盘克隆",
+      "信息泄露",
+      "设备安全防护"
+    ],
+    "summary": "美国网络安全和基础设施安全局（CISA）指出，攻击者一旦获得计算机或设备的物理访问权限，可以轻易复制文件、数据，甚至克隆整个硬盘，导致信息泄露。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0112-002"
+    ],
+    "references": [
+      {
+        "title": "Protect the Physical Security of Your Digital Devices - CISA",
+        "link": "https://www.cisa.gov/resources-tools/training/protect-physical-security-your-digital-devices"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

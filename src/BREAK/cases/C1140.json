@@ -1,0 +1,29 @@
+{
+  "C1140": {
+    "title": "NFT Rug Pulls 欺诈行为分析",
+    "keywords": [
+      "NFT",
+      "Rug Pull",
+      "加密货币犯罪",
+      "欺诈行为分析",
+      "区块链安全",
+      "数字藏品",
+      "投资者保护",
+      "链上诈骗"
+    ],
+    "summary": "学术研究揭示，重复性的“拉地毯”骗局（Rug Pulls）是NFT相关加密货币犯罪增长的重要原因。项目方在通过虚假宣传吸引投资者资金后，放弃项目并卷款跑路，导致投资者血本无归。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0122"
+    ],
+    "references": [
+      {
+        "title": "An In-depth Behavioral Analysis of Fraudulent NFT Creators",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3623376"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

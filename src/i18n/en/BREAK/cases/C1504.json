@@ -1,0 +1,20 @@
+{
+  "C1504": {
+    "title": "Synthesizing Sensor Spoofing Attacks via Program Analysis",
+    "keywords": [
+      "sensor spoofing",
+      "program analysis",
+      "signal injection",
+      "wireless sensor spoofing",
+      "sensor reading trajectories",
+      "physical system security",
+      "spoofing attack synthesis"
+    ],
+    "summary": "Researchers propose a method that uses a program analysis framework to generate sensor spoofing attacks. Analysts can produce sensor reading trajectories that drive a system into unsafe states. As a case study, the system generates forged wireless signals to spoof wireless sensors, demonstrating the feasibility of signal injection attacks.",
+    "references": [
+      {
+        "title": "Using program analysis to synthesize sensor spoofing attacks"
+      }
+    ]
+  }
+}

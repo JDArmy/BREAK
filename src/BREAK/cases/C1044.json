@@ -1,0 +1,32 @@
+{
+  "C1044": {
+    "title": "BYOD安全挑战、解决方案及政策最佳实践综述",
+    "keywords": [
+      "BYOD",
+      "自带设备办公",
+      "安全策略",
+      "移动设备管理",
+      "数据泄露",
+      "访问控制",
+      "IEEE",
+      "企业安全",
+      "安全挑战",
+      "政策最佳实践"
+    ],
+    "summary": "该研究综述了BYOD环境中的安全挑战，指出员工使用个人设备访问组织网络和资源带来了安全风险。研究强调，组织需要制定有效的安全政策和技术控制来管理这些风险，并提出了一个综合安全政策模型。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0112-001"
+    ],
+    "references": [
+      {
+        "title": "A review of BYOD security challenges, solutions and policy best practices",
+        "link": "https://ieeexplore.ieee.org/abstract/document/8441967/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2018-04",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

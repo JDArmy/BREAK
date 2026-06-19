@@ -1,0 +1,22 @@
+{
+  "C1685": {
+    "title": "PackAttack Chronicles Package Manager Attacks from 2017 to 2023",
+    "keywords": [
+      "PackAttack",
+      "package manager attacks",
+      "typosquatting",
+      "dependency confusion",
+      "PyPI",
+      "npm",
+      "RubyGems",
+      "PowerShell Gallery",
+      "malicious package injection"
+    ],
+    "summary": "The Karneades/PackAttack project documents package manager attacks occurring between 2017 and 2023 on platforms including PyPI, npm, RubyGems, and PowerShell Gallery, covering typosquatting and dependency confusion incidents.",
+    "references": [
+      {
+        "title": "ecosyste-ms/typosquatting-dataset - GitHub"
+      }
+    ]
+  }
+}

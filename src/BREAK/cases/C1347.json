@@ -1,0 +1,30 @@
+{
+  "C1347": {
+    "title": "Perplexity AI推出Comet AI浏览器挑战谷歌Chrome市场地位",
+    "keywords": [
+      "Perplexity AI",
+      "Comet AI浏览器",
+      "AI搜索引擎",
+      "浏览器黑箱",
+      "不可解释风险",
+      "AI决策逻辑",
+      "Chrome竞争",
+      "Aravind Srinivas"
+    ],
+    "summary": "AI搜索公司Perplexity AI在2025年推出Comet AI浏览器，该浏览器集成AI搜索引擎，能直接生成带引用的精准答案，正挑战传统浏览器市场。尽管其功能强大，但此类AI原生浏览器在自动生成答案、执行操作时的内部决策逻辑对用户而言仍是不透明的‘黑箱’，用户无法完全知悉和控制AI如何筛选信息、为何给出特定回答，存在潜在的不可解释风险。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0157"
+    ],
+    "references": [
+      {
+        "title": "AI创投周报|阿里开源Qwen3-Coder登顶编程Agent,AI搜索公司...",
+        "link": "https://new.qq.com/rain/a/20250726A073TH00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-07",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

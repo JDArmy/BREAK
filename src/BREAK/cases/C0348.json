@@ -1,0 +1,29 @@
+{
+  "C0348": {
+    "title": "IoT 管理平台子账号安全漏洞研究",
+    "keywords": [
+      "IoT管理平台",
+      "子账号安全",
+      "访问控制漏洞",
+      "权限提升",
+      "物联网安全",
+      "子账号滥用",
+      "安全研究",
+      "ACM"
+    ],
+    "summary": "学术研究发现，在 42 个 IoT 管理平台中有 9 个存在安全漏洞，攻击者可利用子账号功能发起攻击。攻击者只需向受害者发送子账号邀请，即可获得该子账号的访问权限，进而实施恶意操作，暴露了物联网平台对子账号管控不严的问题。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0031"
+    ],
+    "references": [
+      {
+        "title": "All your IoT devices are belong to us: Security weaknesses in IoT management platforms",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3577923.3583636"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

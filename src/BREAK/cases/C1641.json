@@ -1,0 +1,36 @@
+{
+  "C1641": {
+    "title": "PrivateXR：通过XAI引导的差分隐私防御扩展现实中的隐私攻击",
+    "keywords": [
+      "XR隐私",
+      "眼动追踪",
+      "成员推断攻击",
+      "重识别攻击",
+      "可解释AI",
+      "差分隐私",
+      "HTC VIVE Pro",
+      "PrivateXR",
+      "空间计算",
+      "隐私泄露"
+    ],
+    "summary": "该研究指出，XR系统中使用的眼动追踪等敏感数据面临成员推断攻击和重识别攻击，攻击者可利用这些数据推断和泄露个人信息。研究提出了结合可解释AI和差分隐私的防御框架，并在HTC VIVE Pro头显上部署验证。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0218"
+    ],
+    "references": [
+      {
+        "title": "PrivateXR: Defending Privacy Attacks in Extended Reality Through ...",
+        "link": "https://arxiv.org/abs/2512.16851v1"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-12",
+    "relatedAttackTools": [
+      "AT0084"
+    ],
+    "relatedThreatActors": [
+      "TA0050"
+    ]
+  }
+}

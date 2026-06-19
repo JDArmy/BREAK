@@ -1,0 +1,32 @@
+{
+  "C0771": {
+    "title": "物联网设备国密算法合规性误读案例",
+    "keywords": [
+      "物联网设备",
+      "国密算法",
+      "SM4-CBC",
+      "SM3-HMAC",
+      "SM2证书",
+      "固件签名",
+      "GM/T 0015-2012",
+      "GB/T 39786-2021",
+      "合规性",
+      "密钥派生"
+    ],
+    "summary": "部分物联网厂商将SM4-CBC简单移植至MCU后宣称“支持国密”，但忽略密钥派生未使用SM3-HMAC、设备唯一标识未绑定SM2证书、固件签名未遵循GM/T 0015-2012规范等关键要求。此类实现虽“可用”，但不满足《GB/T 39786-2021》中关于密钥来源可信、运算环境隔离、审计日志可溯的完整性判定，面临法规遵从性风险。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0079"
+    ],
+    "references": [
+      {
+        "title": "国密算法“能跑”不等于“合规”！C语言实现中SM4 ECB模式硬编码IV、SM2...",
+        "link": "https://blog.csdn.net/LiteProceed/article/details/158719623"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-03",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "C1618": {
+    "title": "缓解边缘计算中的恶意节点攻击",
+    "keywords": [
+      "边缘计算",
+      "恶意节点攻击",
+      "安全认证协议",
+      "软件定义网络",
+      "无线虚拟化",
+      "雾节点",
+      "Rogue Fog Nodes",
+      "入侵检测",
+      "云服务提供商"
+    ],
+    "summary": "该研究提出了一种针对边缘计算中恶意节点攻击的安全认证协议。攻击者通过入侵并伪装成合法的边缘节点（Rogue Fog Nodes），可窃取数据或破坏服务。该方案利用软件定义网络和无线虚拟化技术，使云服务提供商能对边缘节点进行独占控制，从而检测并缓解此类节点入侵攻击。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0213"
+    ],
+    "references": [
+      {
+        "title": "Mitigating Rogue Node Attacks in Edge Computing - IEEE Xplore",
+        "link": "https://ieeexplore.ieee.org/document/8988518"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

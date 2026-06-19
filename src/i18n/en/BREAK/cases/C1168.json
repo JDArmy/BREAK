@@ -1,0 +1,22 @@
+{
+  "C1168": {
+    "title": "Detecting API Enumeration Attacks and Monitoring BOLA/IDOR Exploitation",
+    "keywords": [
+      "API enumeration",
+      "BOLA",
+      "IDOR",
+      "OWASP API Security Top 10",
+      "object identifier manipulation",
+      "unauthorized access",
+      "SIEM",
+      "anomaly detection",
+      "authorization failure"
+    ],
+    "summary": "This document describes how API enumeration attacks involve adversaries systematically probing API endpoints using sequential or predictable identifiers to discover and access unauthorized resources. Attackers often manipulate object identifiers such as user IDs or order numbers to bypass authorization and access others' data, corresponding to the BOLA vulnerability in the OWASP API Security Top 1",
+    "references": [
+      {
+        "title": "Detecting API Enumeration Attacks - GitHub"
+      }
+    ]
+  }
+}

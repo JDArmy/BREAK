@@ -1,0 +1,22 @@
+{
+  "C0792": {
+    "title": "Keenadu Firmware Backdoor Infects Android Tablets via Signed OTA Updates",
+    "keywords": [
+      "Keenadu",
+      "firmware backdoor",
+      "Android tablets",
+      "signed OTA updates",
+      "supply chain attack",
+      "ad fraud",
+      "data exfiltration",
+      "remote access trojan",
+      "The Hacker News"
+    ],
+    "summary": "A Keenadu firmware backdoor infected Android tablets through signed over-the-air updates, enabling attackers to leverage a supply chain compromise to implant a backdoor at the firmware level for remote control, ad fraud, and data theft, impacting 13,715 devices.",
+    "references": [
+      {
+        "title": "Keenadu Firmware Backdoor Infects Android Tablets via Signed OTA Updates"
+      }
+    ]
+  }
+}

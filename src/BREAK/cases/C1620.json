@@ -1,0 +1,36 @@
+{
+  "C1620": {
+    "title": "杭州互联网法院审理AI换脸APP侵害肖像权案",
+    "keywords": [
+      "AI换脸",
+      "深度合成",
+      "肖像权",
+      "杭州互联网法院",
+      "伪造视频",
+      "APP侵权",
+      "数字虚拟人",
+      "楼某某"
+    ],
+    "summary": "2022年底，杭州互联网法院审理一起案件：被告上海某公司运营的“AI换脸”APP，未经原告楼某某同意，利用深度合成技术将其肖像制作成伪造视频。法院认定该行为侵害了原告肖像权，判决APP开发者赔礼道歉并赔偿损失共计5000元。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0214"
+    ],
+    "references": [
+      {
+        "title": "被社交平台AI美女骗了?深度合成技术要这样治理_腾讯新闻",
+        "link": "https://new.qq.com/omn/20230323/20230323A08V1F00.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-12",
+    "relatedAttackTools": [
+      "AT0056",
+      "AT0058"
+    ],
+    "relatedThreatActors": [
+      "TA0036",
+      "TA0041"
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "C1765": {
+    "title": "学术研究揭示Android应用重打包攻击的普遍性",
+    "keywords": [
+      "Android",
+      "重打包攻击",
+      "第三方应用市场",
+      "恶意负载",
+      "移动安全",
+      "应用欺诈",
+      "后门植入",
+      "智能手机安全"
+    ],
+    "summary": "研究人员对六款主流Android第三方应用市场进行系统性研究，发现一种常见的“在野”重打包行为：攻击者从官方Android市场获取合法应用，对其进行重打包后分发到第三方市场。研究发现部分重打包应用中被植入了后门或恶意负载，对智能手机应用生态系统构成严重威胁。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0248"
+    ],
+    "references": [
+      {
+        "title": "Detecting repackaged smartphone applications in third-party android ...",
+        "link": "https://dl.acm.org/doi/10.1145/2133601.2133640"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0095"
+    ],
+    "relatedThreatActors": [
+      "TA0060"
+    ]
+  }
+}

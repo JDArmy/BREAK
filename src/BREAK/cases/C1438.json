@@ -1,0 +1,36 @@
+{
+  "C1438": {
+    "title": "MEV检测工具揭示利用高Gas费进行抢先交易与三明治攻击",
+    "keywords": [
+      "MEV",
+      "抢先交易",
+      "三明治攻击",
+      "Gas费操纵",
+      "以太坊",
+      "内存池",
+      "Ethers.js",
+      "Alchemy",
+      "交易排序",
+      "MEV机器人"
+    ],
+    "summary": "开源项目MEV Detection Tool通过实时扫描以太坊内存池，检测利用高Gas费进行抢先交易（Front-running）和三明治攻击（Sandwich Attacks）的MEV机器人。该工具基于Ethers.js、WebSockets和Alchemy构建，帮助识别攻击者通过设置极高Gas费来操纵交易顺序，从普通用户交易中提取价值的行为。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0173"
+    ],
+    "references": [
+      {
+        "title": "weezyjs/MEV--Detection-Tool - GitHub",
+        "link": "https://github.com/weezyjs/MEV--Detection-Tool"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0077"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

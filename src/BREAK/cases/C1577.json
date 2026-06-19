@@ -1,0 +1,34 @@
+{
+  "C1577": {
+    "title": "物联网可穿戴设备中自适应鲁棒的数据投毒检测与净化",
+    "keywords": [
+      "数据投毒攻击",
+      "投毒检测",
+      "可穿戴设备",
+      "物联网安全",
+      "活动识别",
+      "机器学习",
+      "AIoT安全",
+      "自适应鲁棒",
+      "arXiv"
+    ],
+    "summary": "该研究指出，随着物联网生态系统中可穿戴传感设备的广泛集成，基于机器学习的活动识别技术越来越容易受到数据投毒攻击。攻击者可通过投毒训练数据来影响AI模型的行为和决策。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0205"
+    ],
+    "references": [
+      {
+        "title": "[2511.02894] Adaptive and Robust Data Poisoning Detection and ...",
+        "link": "https://arxiv.org/abs/2511.02894"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0093"
+    ],
+    "relatedThreatActors": [
+      "TA0058"
+    ]
+  }
+}

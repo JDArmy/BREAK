@@ -1,0 +1,31 @@
+{
+  "C1696": {
+    "title": "微软Azure Blob存储配置错误导致全球客户数据泄露",
+    "keywords": [
+      "微软",
+      "Azure Blob Storage",
+      "配置错误",
+      "数据泄露",
+      "SOCRadar",
+      "云存储桶公开暴露",
+      "敏感数据",
+      "2.4TB",
+      "全球客户"
+    ],
+    "summary": "2022年9月，安全公司SOCRadar发现微软维护的Azure Blob存储桶因配置错误被公开访问，暴露了2.4TB敏感数据，涉及111个国家/地区的6.5万个实体，包含邮件、合同、发票等文件。微软承认该配置错误并已修复端点。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0230"
+    ],
+    "references": [
+      {
+        "title": "可能是最严重的云存储数据外泄事故之一:微软承认服务器错误配置...",
+        "link": "https://cloud.tencent.com/developer/article/2249556"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-09",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

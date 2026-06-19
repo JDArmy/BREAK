@@ -1,0 +1,19 @@
+{
+  "C1374": {
+    "title": "Hyperliquid Wallet Private Key Leak Leads to $21 Million Theft",
+    "keywords": [
+      "Hyperliquid",
+      "wallet private key leak",
+      "$21 million stolen",
+      "crypto exchange",
+      "asset transfer",
+      "access credentials"
+    ],
+    "summary": "The Hyperliquid platform suffered a wallet attack resulting in a $21 million loss. Unlike smart contract exploits or exchange breaches, this incident stemmed directly from a private key leak, where the attacker gained direct access to wallet login credentials and transferred the assets.",
+    "references": [
+      {
+        "title": "$21 Million Vanishes After Hyperliquid Wallet Hack"
+      }
+    ]
+  }
+}

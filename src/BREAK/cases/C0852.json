@@ -1,0 +1,30 @@
+{
+  "C0852": {
+    "title": "亚信安全解读勒索即服务RaaS兴起",
+    "keywords": [
+      "勒索即服务",
+      "RaaS",
+      "亚信安全",
+      "勒索攻击",
+      "产业化",
+      "模块化",
+      "攻击隐蔽性",
+      "网络安全"
+    ],
+    "summary": "2022年9月，亚信安全在发布会上指出，勒索即服务（RaaS）的兴起使勒索攻击从传统小型团伙单兵作战，转变为模块化、产业化、专业化的大型团伙作战，攻击覆盖面更广，危害程度显著增加。RaaS模式进一步增强了攻击的隐蔽性，勒索行为日益专业化。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0085-001"
+    ],
+    "references": [
+      {
+        "title": "无惧勒索攻击风暴 详解亚信安全“方舟”计划_腾讯新闻",
+        "link": "https://new.qq.com/omn/20220921/20220921A06NQ500.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-09",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

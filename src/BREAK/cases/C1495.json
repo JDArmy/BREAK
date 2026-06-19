@@ -1,0 +1,31 @@
+{
+  "C1495": {
+    "title": "PoS区块链系统中基于日蚀攻击的权益流失攻击",
+    "keywords": [
+      "Eclipse attack",
+      "stake-bleeding",
+      "PoS blockchain",
+      "long-range attack",
+      "costless simulation",
+      "network isolation",
+      "fork chain",
+      "private key compromise",
+      "blockchain security"
+    ],
+    "summary": "该研究提出基于日蚀攻击的权益流失攻击，涉及长程攻击类型及防御措施。攻击者可结合网络隔离与历史私钥，从早期区块分叉构造替代链，利用PoS无成本模拟特性覆盖主链历史。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0187"
+    ],
+    "references": [
+      {
+        "title": "Eclipse-based stake-bleeding attacks in PoS blockchain systems",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3327960.3332391"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2019",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

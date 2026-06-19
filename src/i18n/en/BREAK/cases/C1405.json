@@ -1,0 +1,21 @@
+{
+  "C1405": {
+    "title": "Tornado Cash Governance Attack via Contract Metamorphism",
+    "keywords": [
+      "Tornado Cash",
+      "DAO governance attack",
+      "contract metamorphism",
+      "governance takeover",
+      "protocol takeover",
+      "smart contract security",
+      "voting vulnerability",
+      "Beanstalk"
+    ],
+    "summary": "A Smart Contract Hacking guide highlights the Tornado Cash governance attack as a classic case, where the attacker used contract metamorphism to take over the protocol, demonstrating an attack pattern where controlling protocol governance enables fund theft.",
+    "references": [
+      {
+        "title": "DAO Governance Attacks: Beanstalk, Tornado Cash & Voting Exploits (2026)"
+      }
+    ]
+  }
+}

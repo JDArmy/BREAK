@@ -1,0 +1,36 @@
+{
+  "C0294": {
+    "title": "Osmosis链流动性池耗尽漏洞事件",
+    "keywords": [
+      "Osmosis",
+      "Cosmos",
+      "流动性池",
+      "漏洞",
+      "去中心化交易所",
+      "DEX",
+      "智能合约漏洞",
+      "资金耗尽"
+    ],
+    "summary": "Cosmos生态去中心化交易所Osmosis被发现存在严重漏洞，允许任何人向任何池添加流动性，并在移除时获得额外50%的回报，可能导致所有流动资金池被耗尽。官方随后确认漏洞存在，并估算损失规模约500万美元，链上活动被紧急暂停以修复错误。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0029-002",
+      "R0198"
+    ],
+    "references": [
+      {
+        "title": "PA日报|阿里云推出NFT解决方案;PayPal支持第三方钱包地址_腾讯新闻",
+        "link": "https://new.qq.com/rain/a/20220608A0C9ED00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-06",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0077"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

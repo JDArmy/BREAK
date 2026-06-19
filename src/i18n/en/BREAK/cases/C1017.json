@@ -1,0 +1,20 @@
+{
+  "C1017": {
+    "title": "Critical Unauthorized Access Vulnerability in Ollama Open-Source Tool",
+    "keywords": [
+      "Ollama unauthorized access",
+      "port 11434",
+      "LLM private deployment",
+      "model theft",
+      "compute resource theft",
+      "missing authentication",
+      "data leakage"
+    ],
+    "summary": "The default configuration of Ollama, a tool for private deployment of large models, contains an unauthorized access vulnerability. Its service is exposed on port 11434 by default without any authentication mechanism, allowing unauthorized users to freely access models, invoke model services via specific interfaces, retrieve model information, and even delete model files or steal data, posing risks",
+    "references": [
+      {
+        "title": "Notice on High-Risk Unauthorized Access Vulnerability in Overseas Open-Source Tool Ollama"
+      }
+    ]
+  }
+}

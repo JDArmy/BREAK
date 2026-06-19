@@ -1,0 +1,21 @@
+{
+  "C0495": {
+    "title": "Bank of Communications depositor loses ¥400,000 after face recognition bypassed",
+    "keywords": [
+      "face recognition bypass",
+      "liveness detection bypass",
+      "Bank of Communications app",
+      "Trojan virus SMS interception",
+      "fake facial video attack",
+      "bank transfer limit increase",
+      "account takeover fraud",
+      "mobile banking security"
+    ],
+    "summary": "In 2021, fraudsters used a Trojan virus to intercept SMS messages and leveraged fake facial videos to bypass the Bank of Communications app's liveness detection. They succeeded in passing face recognition verification six times, resetting the password and raising the transfer limit, ultimately stealing over ¥400,000 from depositor Chu Feng. The IP address indicated the operations originated from T",
+    "references": [
+      {
+        "title": "'Face scan' causes trouble, Bank of Communications user loses 400,000 in deposits"
+      }
+    ]
+  }
+}

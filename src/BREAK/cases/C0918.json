@@ -1,0 +1,33 @@
+{
+  "C0918": {
+    "title": "美国破获2亿美元国际信用卡诈骗案，18人被起诉",
+    "keywords": [
+      "信用卡诈骗",
+      "FBI",
+      "伪造信用卡",
+      "身份盗用",
+      "国际犯罪团伙",
+      "新泽西州",
+      "虚假身份",
+      "2亿美元诈骗案"
+    ],
+    "summary": "2013年，美国联邦调查局（FBI）在新泽西州等地逮捕了13名涉嫌参与国际信用卡诈骗的嫌疑人。该团伙被指控创建数千个虚假身份，利用伪造的信用卡进行大规模欺诈活动，涉案金额至少2亿美元。此案涉及伪造信用卡、身份盗用等多种欺诈手段，是当时美国历史上最大的信用卡诈骗案之一。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0094"
+    ],
+    "references": [
+      {
+        "title": "Eighteen People Charged in International $200 Million Credit Card ...",
+        "link": "https://archives.fbi.gov/archives/newark/press-releases/2013/eighteen-people-charged-in-international-200-million-credit-card-fraud-scam"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2013",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0017"
+    ]
+  }
+}

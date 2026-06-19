@@ -1,0 +1,32 @@
+{
+  "C1240": {
+    "title": "LexisNexis揭示两类合成身份制造方法",
+    "keywords": [
+      "合成身份欺诈",
+      "操纵型合成身份",
+      "制造型合成身份",
+      "SSN随机发放",
+      "LexisNexis Risk Solutions",
+      "身份验证",
+      "欺诈检测",
+      "Social Security Administration",
+      "无效SSN",
+      "金融犯罪"
+    ],
+    "summary": "LexisNexis Risk Solutions分析指出，合成身份欺诈分为两类：操纵型合成身份基于真实身份进行有限改动以隐藏不良历史；制造型合成身份则从多个身份中拼凑有效数据，或使用与SSA随机发放号码相同范围的无效SSN创建全新身份，后者极难被现有技术检测。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0136"
+    ],
+    "references": [
+      {
+        "title": "Synthetic Identity Fraud - LexisNexis Risk Solutions",
+        "link": "https://risk.lexisnexis.com/insights-resources/article/synthetic-identity-fraud"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2011-07",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

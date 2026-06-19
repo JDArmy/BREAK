@@ -1,0 +1,35 @@
+{
+  "C1615": {
+    "title": "协议合规的V2X拒绝服务攻击真实世界评估",
+    "keywords": [
+      "C-V2X",
+      "前向碰撞预警",
+      "FCW",
+      "协议合规拒绝服务攻击",
+      "UDP洪泛",
+      "基本安全消息",
+      "信道拥塞",
+      "车联网安全",
+      "V2X攻击",
+      "驾驶决策干扰"
+    ],
+    "summary": "一篇论文展示了针对C-V2X前向碰撞预警系统的协议合规拒绝服务攻击的真实案例研究。攻击者通过在传输层和应用层分别发送高频UDP数据包和超大基本安全消息，造成通信信道拥塞，使车辆无法正常接收和处理安全相关信息，从而干扰驾驶决策。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0212"
+    ],
+    "references": [
+      {
+        "title": "Real-World Evaluation of Protocol-Compliant Denial-of-Service Attacks ...",
+        "link": "https://arxiv.org/pdf/2508.02805"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0083"
+    ],
+    "relatedThreatActors": [
+      "TA0049"
+    ]
+  }
+}

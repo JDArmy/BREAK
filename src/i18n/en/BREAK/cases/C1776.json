@@ -1,0 +1,21 @@
+{
+  "C1776": {
+    "title": "Security Threat Analysis of OTA Updates for Intelligent Connected Vehicles",
+    "keywords": [
+      "OTA update security",
+      "ECU firmware tampering",
+      "signature verification bypass",
+      "malicious firmware injection",
+      "connected vehicle cybersecurity",
+      "man-in-the-middle attack",
+      "firmware over-the-air threats",
+      "automotive ECU integrity"
+    ],
+    "summary": "The article highlights that attackers can launch attacks on OTA update links of intelligent connected vehicles through hijacking, tampering, or replacement. During the verification process based on signature algorithms, attackers can replace or tamper with the target ECU update package after the vehicle's main controller completes full-package verification and unpacking, achieving malicious update",
+    "references": [
+      {
+        "title": "A Discussion on OTA Upgrade Security for Intelligent Connected Vehicles"
+      }
+    ]
+  }
+}

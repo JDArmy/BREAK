@@ -1,0 +1,21 @@
+{
+  "C1579": {
+    "title": "Data Poisoning Attacks on Wearable Devices in IoT: Detection Research",
+    "keywords": [
+      "IoT",
+      "wearable devices",
+      "data poisoning attacks",
+      "human activity recognition",
+      "machine learning",
+      "AIoT fusion attacks",
+      "training data contamination",
+      "model security"
+    ],
+    "summary": "This research highlights that machine learning models used for human activity recognition in IoT ecosystems such as smart homes and healthcare are vulnerable to data poisoning attacks. Attackers can manipulate model decisions and affect system functionality by contaminating training data.",
+    "references": [
+      {
+        "title": "Adaptive and Robust Data Poisoning Detection and Sanitization in ..."
+      }
+    ]
+  }
+}

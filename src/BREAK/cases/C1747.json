@@ -1,0 +1,29 @@
+{
+  "C1747": {
+    "title": "OWASP LLM03: 训练数据投毒风险定义",
+    "keywords": [
+      "OWASP",
+      "GenAI",
+      "LLM",
+      "训练数据投毒",
+      "完整性攻击",
+      "AI安全",
+      "数据污染",
+      "模型行为"
+    ],
+    "summary": "OWASP GenAI安全项目将训练数据投毒定义为一种完整性攻击。攻击者通过篡改训练数据，影响模型输出正确预测的能力。这直接对应了风险定义中攻击者污染训练集，从而影响模型行为的描述。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0243"
+    ],
+    "references": [
+      {
+        "title": "LLM03: Training Data Poisoning - OWASP Gen AI Security Project",
+        "link": "https://genai.owasp.org/llmrisk2023-24/llm03-training-data-poisoning/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

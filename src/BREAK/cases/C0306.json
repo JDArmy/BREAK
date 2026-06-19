@@ -1,0 +1,33 @@
+{
+  "C0306": {
+    "title": "利用支付宝DDoS攻击被判刑",
+    "keywords": [
+      "DDoS攻击",
+      "支付宝",
+      "蚂蚁金融",
+      "云堤",
+      "流量清洗",
+      "刑事判决",
+      "黑客",
+      "分布式拒绝服务",
+      "IDC"
+    ],
+    "summary": "一名黑客因对支付宝发起DDoS攻击而被判刑。攻击产生了巨大的攻击流量，超出了IDC内部防护能力，导致蚂蚁金融公司不得不调用云堤海外黑洞服务进行流量清洗。该事件展示了DDoS攻击对金融服务的现实威胁。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0029-004"
+    ],
+    "references": [
+      {
+        "title": "他用DDoS攻击支付宝被判刑",
+        "link": "https://www.163.com/dy/article/GJDF9N730519830Q.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-09",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

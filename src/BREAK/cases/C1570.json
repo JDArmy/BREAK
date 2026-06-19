@@ -1,0 +1,36 @@
+{
+  "C1570": {
+    "title": "Flash Boys 2.0：去中心化交易所中的抢先交易、矿工可提取价值与共识不稳定",
+    "keywords": [
+      "去中心化交易所",
+      "DEX",
+      "抢先交易",
+      "套利机器人",
+      "矿工可提取价值",
+      "交易排序",
+      "以太坊",
+      "智能合约",
+      "Gas费操纵",
+      "抢跑"
+    ],
+    "summary": "该研究记录并量化了区块链系统中，特别是去中心化交易所（DEX）中，套利机器人广泛且日益增长的部署情况。这些机器人通过抢先交易（Frontrunning）等方式，利用交易排序权获取利益。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0204"
+    ],
+    "references": [
+      {
+        "title": "Flash Boys 2.0: Frontrunning in Decentralized Exchanges, Miner ...",
+        "link": "https://ieeexplore.ieee.org/document/9152675"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0077"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

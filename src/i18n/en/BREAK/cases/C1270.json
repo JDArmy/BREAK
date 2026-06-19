@@ -1,0 +1,20 @@
+{
+  "C1270": {
+    "title": "SSO Identity Account Inconsistency Vulnerability Leading to Account Takeover",
+    "keywords": [
+      "SSO account takeover",
+      "email recycling attack",
+      "OAuth identity binding flaw",
+      "Google SSO vulnerability",
+      "email address reuse exploit",
+      "single sign-on authentication bypass",
+      "account takeover via recycled email"
+    ],
+    "summary": "Research reveals that SSO systems heavily rely on email address binding for identity, but overlook the flaw that email addresses can be recycled. Attackers can obtain recycled email addresses and exploit the SSO authentication flow to take over previously associated online accounts without needing passwords, affecting 80% of tested popular websites.",
+    "references": [
+      {
+        "title": "Identity Account Inconsistency Vulnerability in Single Sign-On (SSO) - Tencent Cloud Developer Community"
+      }
+    ]
+  }
+}

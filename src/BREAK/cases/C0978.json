@@ -1,0 +1,32 @@
+{
+  "C0978": {
+    "title": "Newbee战队DOTA2假赛事件",
+    "keywords": [
+      "Newbee",
+      "DOTA2",
+      "假赛",
+      "终身禁赛",
+      "SL-l基辅Major",
+      "电子竞技",
+      "送人头",
+      "Valve",
+      "IMBATV",
+      "赛事违规"
+    ],
+    "summary": "2020年2月，中国DOTA2战队Newbee在SL-l基辅Major预选赛中涉嫌故意送人头、打假赛。比赛中Newbee在经济领先时输掉第一局，第二局营造大比分落后假象后翻盘，第三局获胜。因比赛过程异常，被玩家质疑为获取场外赌注而故意送分，最终战队及6名队员被终身禁赛。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0101"
+    ],
+    "references": [
+      {
+        "title": "打假赛后果多严重?被判刑出狱后开车为生,开直播被网友骂到下跪...",
+        "link": "https://view.inews.qq.com/a/20210512A0EOMQ00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2020-02",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

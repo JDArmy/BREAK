@@ -1,0 +1,34 @@
+{
+  "C1434": {
+    "title": "跨链三明治攻击利用Gas费操纵交易顺序",
+    "keywords": [
+      "跨链三明治攻击",
+      "Gas费操纵",
+      "交易排序",
+      "MEV",
+      "DeFi",
+      "抢先交易",
+      "套利",
+      "价格操纵",
+      "区块链安全"
+    ],
+    "summary": "学术研究揭示了一种跨链三明治攻击，攻击者通过操纵Gas费用来调整交易排序，在受害者交易前抬高资产价格，并在交易后立即反向操作，从而套利。这直接体现了利用Gas费机制进行抢先交易和优先级操纵的攻击手法。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0173"
+    ],
+    "references": [
+      {
+        "title": "Unveiling Cross-Chain Sandwich Attacks in DeFi - arXiv",
+        "link": "https://arxiv.org/html/2511.15245v1"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0077"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C0873": {
+    "title": "Microsoft Exposes Cryptojacking Campaign Exploiting GPU Mining",
+    "keywords": [
+      "cryptojacking",
+      "GPU mining",
+      "process hollowing",
+      "poisoned search results",
+      "Microsoft",
+      "Windows",
+      "ScreenConnect",
+      "malware injection"
+    ],
+    "summary": "Microsoft's security team uncovered a cryptojacking campaign where attackers distributed malware through poisoned search results, used process hollowing to inject malicious code into Windows system processes, and ultimately deployed GPU mining clients on compromised servers for cryptocurrency mining.",
+    "references": [
+      {
+        "title": "From poisoned search results to GPU mining: A cryptojacking campaign..."
+      }
+    ]
+  }
+}

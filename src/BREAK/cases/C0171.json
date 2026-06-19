@@ -1,0 +1,32 @@
+{
+  "C0171": {
+    "title": "使用AdGuard浏览器插件拦截网页元素",
+    "keywords": [
+      "AdGuard",
+      "浏览器插件",
+      "广告拦截",
+      "网页元素屏蔽",
+      "CSDN",
+      "掘金",
+      "弹窗拦截",
+      "内容过滤"
+    ],
+    "summary": "2024年12月，一篇教程详细介绍了如何使用AdGuard浏览器插件拦截网页元素，包括广告和不想看到的内容。案例中展示了去除CSDN选中文本时弹出的搜索框、掘金的收藏提示和登录弹窗等具体操作，体现了广告屏蔽插件的实际应用。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0013"
+    ],
+    "references": [
+      {
+        "title": "使用AdGuard浏览器插件来拦截网页元素(去广告)_adguard插件-CSDN博 ...",
+        "link": "https://blog.csdn.net/qq_43535992/article/details/144258438"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-12",
+    "relatedAttackTools": [
+      "AT0032"
+    ],
+    "relatedThreatActors": []
+  }
+}

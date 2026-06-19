@@ -1,0 +1,36 @@
+{
+  "C0226": {
+    "title": "美国政府网站遭SEO污染攻击",
+    "keywords": [
+      "美国政府网站",
+      "SEO污染",
+      "PDF恶意文件",
+      "域名重定向",
+      "色情广告",
+      "搜索引擎索引",
+      "Granicus",
+      "文件上传漏洞",
+      "gov域名"
+    ],
+    "summary": "2025年12月，美国多州及地方政府的.gov域名遭遇大规模SEO污染攻击。攻击者利用政府网站公开的文件上传功能，上传含恶意链接的PDF文件。这些文件被搜索引擎索引后，用户点击官方域名链接会被重定向至色情广告等不良页面，涉及38个.gov域名和18个州。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0018"
+    ],
+    "references": [
+      {
+        "title": "美国政府网站遭SEO污染攻击：官方域名被篡改为色情内容入口",
+        "link": "https://www.securitylab.ru/news/567187.php"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-12",
+    "relatedAttackTools": [
+      "AT0054",
+      "AT0063"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

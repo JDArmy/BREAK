@@ -1,0 +1,34 @@
+{
+  "C1738": {
+    "title": "FTC对The Bountiful Company的“评论劫持”案发布最终命令",
+    "keywords": [
+      "FTC",
+      "The Bountiful Company",
+      "评论劫持",
+      "最终命令",
+      "亚马逊",
+      "虚假评论",
+      "联盟营销",
+      "误导消费者",
+      "执法行动",
+      "电子商务"
+    ],
+    "summary": "美国联邦贸易委员会（FTC）批准了对The Bountiful Company的最终命令，这是其首次针对“评论劫持”行为采取执法行动。该公司被指控窃取或挪用其他产品的评论，以误导消费者并提升自身产品的销售转化，这是一种通过欺诈手段骗取联盟营销佣金的典型方式。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0239"
+    ],
+    "references": [
+      {
+        "title": "FTC Approves Final Order against The Bountiful Company in First Case ...",
+        "link": "https://www.ftc.gov/news-events/news/press-releases/2023/04/ftc-approves-final-order-against-bountiful-company-first-case-alleging-hijacking-online-product"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-04",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0009"
+    ]
+  }
+}

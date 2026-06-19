@@ -1,0 +1,21 @@
+{
+  "C0324": {
+    "title": "Microsoft Warns: OAuth Redirect Abuse Leads to Phishing and Malware Distribution",
+    "keywords": [
+      "OAuth redirect abuse",
+      "phishing attack",
+      "malware distribution",
+      "Microsoft",
+      "authorization flow",
+      "third-party app",
+      "SaaS security",
+      "authentication bypass"
+    ],
+    "summary": "Microsoft observed phishing attacks exploiting OAuth redirect abuse. Attackers send phishing links to victims, which trigger an OAuth authorization flow upon clicking, tricking users into granting permissions to malicious applications. This method can be used for data theft or malware distribution, exploiting user trust in third-party logins to bypass existing security verifications.",
+    "references": [
+      {
+        "title": "OAuth redirection abuse enables phishing and malware delivery"
+      }
+    ]
+  }
+}

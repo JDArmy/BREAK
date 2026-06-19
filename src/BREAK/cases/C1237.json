@@ -1,0 +1,30 @@
+{
+  "C1237": {
+    "title": "联邦储备系统合成身份欺诈焦点小组定义",
+    "keywords": [
+      "合成身份欺诈",
+      "联邦储备系统",
+      "FedPayments Improvement",
+      "欺诈定义",
+      "焦点小组",
+      "身份验证要素",
+      "支付安全",
+      "行业标准"
+    ],
+    "summary": "2020年秋至2021年初，美国联邦储备系统召集12名欺诈专家组成焦点小组，制定行业推荐的合成身份欺诈定义。该定义明确合成身份欺诈是利用个人身份信息组合虚构个人或实体以谋取私利，并列出主要和补充身份要素，旨在提升行业对此类欺诈的认知、检测和缓解能力。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0136"
+    ],
+    "references": [
+      {
+        "title": "Synthetic Identity Fraud Defined | FedPayments Improvement",
+        "link": "https://fedpaymentsimprovement.org/strategic-initiatives/payments-security/synthetic-identity-payments-fraud/synthetic-identity-fraud-defined/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-01",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

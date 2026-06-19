@@ -1,0 +1,21 @@
+{
+  "C0410": {
+    "title": "Attackers Combine Fake IT Support Calls with MFA Fatigue Attacks",
+    "keywords": [
+      "MFA fatigue attack",
+      "push bombing",
+      "multi-factor authentication",
+      "fake IT support",
+      "social engineering",
+      "credential theft",
+      "push notification spam",
+      "MFA push bombing"
+    ],
+    "summary": "Attackers repeatedly send MFA push requests to create pressure, then follow up with phone calls or messages impersonating IT support, claiming users need to approve the request to stop the notifications. They exploit users' trust in technical support and their urgency to resolve the issue, tricking them into completing authentication approval.",
+    "references": [
+      {
+        "title": "What is Push Bombing (MFA Fatigue)? - Doppel"
+      }
+    ]
+  }
+}

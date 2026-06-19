@@ -1,0 +1,20 @@
+{
+  "C0348": {
+    "title": "Sub-Account Security Vulnerabilities in IoT Management Platforms",
+    "keywords": [
+      "IoT management platform",
+      "sub-account security",
+      "access control vulnerability",
+      "privilege escalation",
+      "IoT security",
+      "sub-account abuse",
+      "ACM"
+    ],
+    "summary": "An academic study identified security flaws in 9 out of 42 IoT management platforms, where attackers can exploit sub-account functionality by sending an invitation to a victim and gaining access to that sub-account, enabling malicious operations and highlighting insufficient sub-account access controls in IoT platforms.",
+    "references": [
+      {
+        "title": "All your IoT devices are belong to us: Security weaknesses in IoT management platforms"
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "C1519": {
+    "title": "火狐浏览器插件商店出现40余个假冒加密钱包扩展程序",
+    "keywords": [
+      "火狐浏览器",
+      "Firefox",
+      "插件商店",
+      "假冒加密钱包",
+      "MetaMask",
+      "Coinbase Wallet",
+      "助记词窃取",
+      "恶意扩展程序",
+      "供应链攻击",
+      "Koi"
+    ],
+    "summary": "安全公司Koi发现火狐浏览器官方插件商店出现40余个假冒加密钱包扩展程序，仿冒对象包括MetaMask、Coinbase Wallet等主流钱包。这些恶意插件通过植入事件监听代码窃取超过30个字符的输入内容（主要针对助记词），并将数据回传至攻击者服务器。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0193"
+    ],
+    "references": [
+      {
+        "title": "PA日报 | Vitalik:若空打去中心化口号以太坊将面临风险;硅谷富豪...",
+        "link": "https://view.inews.qq.com/a/20250703A07Y4O00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-07",
+    "relatedAttackTools": [
+      "AT0032",
+      "AT0064",
+      "AT0065"
+    ],
+    "relatedThreatActors": [
+      "TA0012",
+      "TA0052",
+      "TA0060"
+    ]
+  }
+}

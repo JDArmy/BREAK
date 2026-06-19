@@ -1,0 +1,34 @@
+{
+  "C1501": {
+    "title": "半自私挖矿攻击在未被检测情况下的可行性研究",
+    "keywords": [
+      "半自私挖矿",
+      "自私挖矿",
+      "区块奖励",
+      "矿池",
+      "算力",
+      "分叉检测",
+      "挖矿攻击",
+      "区块链安全",
+      "博弈论"
+    ],
+    "summary": "研究探讨了半自私挖矿攻击的可行性，矿池通过赞助自私挖矿攻击来获取超额收益。当诚实矿工检测到异常分叉行为时可能会退出挖矿，而攻击者则利用这种策略在未被检测的情况下持续获得超出其算力比例的区块奖励。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0188"
+    ],
+    "references": [
+      {
+        "title": "Is semi‐selfish mining available without being detected?",
+        "link": "https://onlinelibrary.wiley.com/doi/abs/10.1002/int.22656"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0078"
+    ],
+    "relatedThreatActors": [
+      "TA0046"
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "C1644": {
+    "title": "Meta-Guardian：一款缓解沉浸式技术中用户心理图谱数据泄露风险的设备端应用",
+    "keywords": [
+      "沉浸式技术",
+      "心理图谱",
+      "数据泄露",
+      "眼动追踪",
+      "面部追踪",
+      "设备端应用",
+      "隐私保护",
+      "Meta XR SDK",
+      "空间计算"
+    ],
+    "summary": "该研究评估了沉浸式技术中面部和眼动追踪数据流的泄露风险，指出个人生理数据可能被泄露到万物互联网络。研究开发了设备端应用来缓解心理图谱数据泄露。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0218"
+    ],
+    "references": [
+      {
+        "title": "Meta-Guardian: An Early Evaluation of an On-device Application to Mitigate Psychography Data Leakage in Immersive Technologies",
+        "link": "https://arxiv.org/abs/2510.15989"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

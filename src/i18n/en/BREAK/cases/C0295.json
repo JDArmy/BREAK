@@ -1,0 +1,21 @@
+{
+  "C0295": {
+    "title": "Domain Hit by DDoS and CC Attacks Leading to Resource Exhaustion",
+    "keywords": [
+      "DDoS attack",
+      "CC attack",
+      "domain security",
+      "server resource exhaustion",
+      "bandwidth saturation",
+      "Tencent Cloud",
+      "traffic scrubbing",
+      "protection guide"
+    ],
+    "summary": "A Tencent Cloud developer community article describes how a domain's business faced DDoS and CC attacks. The DDoS attack used a 'human wave' tactic to saturate server bandwidth, while the CC attack consumed server CPU and connection resources with a flood of seemingly legitimate requests, ultimately causing resource exhaustion and service paralysis. The article provides a full-process protection g",
+    "references": [
+      {
+        "title": "Domain Name Stolen or Attacked? A Complete Protection Guide from Discovery to Resolution..."
+      }
+    ]
+  }
+}

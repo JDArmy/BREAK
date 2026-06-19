@@ -1,0 +1,21 @@
+{
+  "C1658": {
+    "title": "vAPI Lab API1 Object-Level Authorization Bypass Example",
+    "keywords": [
+      "vAPI",
+      "API authorization bypass",
+      "object-level authorization",
+      "IDOR",
+      "Authorization-Token",
+      "user enumeration",
+      "vulnerability lab",
+      "FreeBuf"
+    ],
+    "summary": "The API1 endpoint in the vAPI vulnerability lab suffers from an object-level authorization flaw. When fetching user information, the endpoint only validates the presence of a valid Authorization-Token but does not verify whether the token's owner matches the requested user ID. An attacker with any valid token can enumerate user IDs to access other users' sensitive data and potentially modify their",
+    "references": [
+      {
+        "title": "vAPI - API Vulnerability Range Guide - FreeBuf Cybersecurity Industry Portal"
+      }
+    ]
+  }
+}

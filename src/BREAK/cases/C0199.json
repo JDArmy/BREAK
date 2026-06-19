@@ -1,0 +1,36 @@
+{
+  "C0199": {
+    "title": "吞炎网络为火一网络游戏刷榜被清榜引发合同纠纷",
+    "keywords": [
+      "刷榜",
+      "AppStore清榜",
+      "合同无效",
+      "公序良俗",
+      "吞炎网络",
+      "火一网络",
+      "趣掼蛋",
+      "靠谱试玩",
+      "刷量推广",
+      "游戏推广"
+    ],
+    "summary": "吞炎（上海）网络公司为火一网络的《趣掼蛋》游戏提供刷榜推广服务，利用“靠谱试玩”软件进行下载冲榜，被苹果AppStore发现后清榜。双方因未支付费用产生纠纷并互诉，法院认定该刷榜合同违背公序良俗而无效，双方诉请均不被支持。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0016"
+    ],
+    "references": [
+      {
+        "title": "合同签完,我的游戏被AppStore清榜了,能从刷榜公司要回来钱吗...",
+        "link": "https://new.qq.com/rain/a/20240128A05CYZ00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-01",
+    "relatedAttackTools": [
+      "AT0046"
+    ],
+    "relatedThreatActors": [
+      "TA0009"
+    ]
+  }
+}

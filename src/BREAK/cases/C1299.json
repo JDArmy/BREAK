@@ -1,0 +1,36 @@
+{
+  "C1299": {
+    "title": "API密钥泄露致企业员工信息被窃取",
+    "keywords": [
+      "API密钥泄露",
+      "Base64编码",
+      "HR系统",
+      "员工信息窃取",
+      "失效身份认证",
+      "main.js",
+      "Ace Candelario",
+      "子域名收集"
+    ],
+    "summary": "2020年2月，漏洞赏金猎人Ace Candelario在对目标企业进行子域名收集时，发现某域名主页面的main.js文件中包含未混淆的Base64编码API密钥。通过该密钥连接HR系统API接入点，攻击者可获取、查看、删除和更新所有员工信息。该漏洞被评定为失效的用户身份认证类型。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0149"
+    ],
+    "references": [
+      {
+        "title": "API安全技术与实战_3.3 API KEY泄露漏洞在线阅读-QQ阅读",
+        "link": "https://book.qq.com/book-read/39130693/21"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2020-02",
+    "relatedAttackTools": [
+      "AT0085",
+      "AT0088"
+    ],
+    "relatedThreatActors": [
+      "TA0018",
+      "TA0051"
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "C1561": {
+    "title": "时间揭示一切：零交易费用下对区块链RPC用户的去匿名化",
+    "keywords": [
+      "区块链",
+      "RPC",
+      "去匿名化",
+      "隐私泄露",
+      "零交易费用",
+      "链上数据",
+      "用户隐私",
+      "攻击方法"
+    ],
+    "summary": "该研究提出了一种零交易费用的去匿名化攻击方法，通过数学建模和大规模测量，能够对区块链RPC用户进行去匿名化，揭示了链上用户隐私泄露的风险。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0202"
+    ],
+    "references": [
+      {
+        "title": "Time Tells All: Deanonymization of Blockchain RPC Users with Zero ...",
+        "link": "https://dl.acm.org/doi/10.1145/3719027.3765082"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0080"
+    ],
+    "relatedThreatActors": []
+  }
+}

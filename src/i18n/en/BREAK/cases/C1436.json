@@ -1,0 +1,21 @@
+{
+  "C1436": {
+    "title": "Manta Network DDoS Attack Causes Gas Fee Spike",
+    "keywords": [
+      "Manta Network",
+      "DDoS attack",
+      "gas fee spike",
+      "RPC node congestion",
+      "gas fee compensation",
+      "0.001 ETH",
+      "gas fee manipulation",
+      "January 2024"
+    ],
+    "summary": "In January 2024, Manta Network suffered an unauthorized DDoS attack that severely congested its RPC nodes. The attack caused a backlog of pending transactions, triggering a gas fee bidding war and forcing users to pay significantly higher-than-normal gas fees. Manta Network later announced it would refund users the portion of gas fees exceeding 0.001 ETH paid during the attack to compensate for lo",
+    "references": [
+      {
+        "title": "Manta Network: Will Compensate Users Who Spent Above 0.001 ETH in Gas Fees During DDoS Attack on the Network"
+      }
+    ]
+  }
+}

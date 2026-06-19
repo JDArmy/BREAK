@@ -1,0 +1,35 @@
+{
+  "C1521": {
+    "title": "Inferno Drainer利用EIP-7702升级特性实施新型钓鱼攻击",
+    "keywords": [
+      "Inferno Drainer",
+      "EIP-7702",
+      "以太坊",
+      "钓鱼攻击",
+      "MetaMask",
+      "恶意授权",
+      "EOA",
+      "智能合约",
+      "资产转移"
+    ],
+    "summary": "2025年5月24日，钓鱼组织Inferno Drainer利用以太坊EIP-7702升级特性实施新型攻击，造成单笔约15万美元损失。EIP-7702允许外部拥有账户（EOA）临时具备智能合约功能，攻击者利用已授权的MetaMask诱导用户签署恶意授权，从而转移资产。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0194"
+    ],
+    "references": [
+      {
+        "title": "【安全月报】| 5月份因黑客攻击、诈骗等导致损失约1.82亿美元...",
+        "link": "https://www.freebuf.com/articles/web/433364.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-05",
+    "relatedAttackTools": [
+      "AT0079"
+    ],
+    "relatedThreatActors": [
+      "TA0047"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "C1794": {
+    "title": "内江警方破获订单解密侵犯公民个人信息案",
+    "keywords": [
+      "订单解密",
+      "侵犯公民个人信息",
+      "电商平台",
+      "数据泄露",
+      "内江警方",
+      "用户订单信息",
+      "非法获取",
+      "贩卖数据"
+    ],
+    "summary": "内江市公安局市中区分局破获一起特大侵犯公民个人信息案，犯罪团伙以订单解密方式非法获取、贩卖电商平台用户数据。警方抓获6名犯罪嫌疑人，查获被泄露订单信息超200万条，涉案金额800余万元。该案涉及通过非法手段获取电商平台客户订单信息并外泄。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0255"
+    ],
+    "references": [
+      {
+        "title": "cdgaj.chengdu.gov.cn/cdsgaj/jfts/2026-03/27/content_a7ecc16b...",
+        "link": "https://cdgaj.chengdu.gov.cn/cdsgaj/jfts/2026-03/27/content_a7ecc16ba36849859a7d235ba1515735.shtml"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0015"
+    ]
+  }
+}

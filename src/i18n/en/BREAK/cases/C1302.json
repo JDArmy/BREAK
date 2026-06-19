@@ -1,0 +1,22 @@
+{
+  "C1302": {
+    "title": "Trivy Security Scanner GitHub Actions Compromised, 75 Tags Hijacked",
+    "keywords": [
+      "Trivy",
+      "GitHub Actions",
+      "supply chain attack",
+      "CI/CD secrets leak",
+      "tag hijacking",
+      "token theft",
+      "security scanner",
+      "non-human identity",
+      "API key abuse"
+    ],
+    "summary": "An attacker force-pushed 75 tags via GitHub Actions, exposing the Trivy project's CI/CD secrets. The leaked tokens could be exploited to steal data and establish persistent access in developer systems, constituting a typical supply chain attack.",
+    "references": [
+      {
+        "title": "Trivy Security Scanner GitHub Actions Breached, 75 Tags Hijacked to ..."
+      }
+    ]
+  }
+}

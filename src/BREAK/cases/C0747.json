@@ -1,0 +1,30 @@
+{
+  "C0747": {
+    "title": "笔记本电脑盗窃：开放组织中安全机制有效性的案例研究",
+    "keywords": [
+      "笔记本电脑盗窃",
+      "开放组织",
+      "物理安全机制",
+      "数字安全",
+      "大学安全",
+      "医院安全",
+      "设备丢失预防",
+      "访问控制",
+      "安全机制有效性"
+    ],
+    "summary": "一项针对两所大学笔记本电脑盗窃案的研究，分析了开放组织中物理、社会和数字安全机制对防范笔记本盗窃的有效性。研究指出医院和大学等开放场所是笔记本盗窃的易发目标，因为每天有大量人员进出。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0073"
+    ],
+    "references": [
+      {
+        "title": "Laptop theft: a case study on the effectiveness of security mechanisms in open organizations",
+        "link": "https://dl.acm.org/doi/abs/10.1145/1866307.1866391"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

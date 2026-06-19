@@ -1,0 +1,21 @@
+{
+  "C1433": {
+    "title": "Solana Network Outage Caused by Spam Transaction Attack",
+    "keywords": [
+      "Solana",
+      "spam transaction attack",
+      "network outage",
+      "gas fee manipulation",
+      "network congestion",
+      "validator voting",
+      "block finalization",
+      "low-value transactions"
+    ],
+    "summary": "In September 2024, the Solana network experienced a spam transaction attack that flooded validators' voting mechanism with excessive traffic, preventing block finalization and causing an outage of approximately 4.5 hours. Attackers sent massive volumes of low-value transactions to create network congestion, delaying or failing ordinary user transactions in a typical gas fee manipulation and conges",
+    "references": [
+      {
+        "title": "From AWS Outage to $19.3 Billion Liquidation Storm, the 'Invisible Bombs' of Crypto Infrastructure"
+      }
+    ]
+  }
+}

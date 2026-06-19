@@ -1,0 +1,34 @@
+{
+  "C1757": {
+    "title": "Uber MFA疲劳攻击事件",
+    "keywords": [
+      "Uber",
+      "MFA疲劳攻击",
+      "多因素认证",
+      "推送轰炸",
+      "未成年人黑客",
+      "内部系统入侵",
+      "数据泄露",
+      "社会工程学"
+    ],
+    "summary": "2022年9月，一名17岁的黑客对Uber发动了MFA疲劳攻击。攻击者反复登录，向员工手机发送大量MFA推送请求，诱导受害者误点“批准”。最终员工不堪其扰，点击了确认，导致MFA防护失效，黑客成功入侵Uber内部系统，窃取了约5700万客户和司机的个人信息。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0246"
+    ],
+    "references": [
+      {
+        "title": "云钓鱼:新伎俩和“皇冠上的宝石”-腾讯云开发者社区-腾讯云",
+        "link": "https://cloud.tencent.com/developer/article/2224021"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-09",
+    "relatedAttackTools": [
+      "AT0094"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

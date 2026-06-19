@@ -99,6 +99,27 @@ export const businessSceneSchema = z.object({
   updated: z.string().optional(),
 });
 
+export const caseSchema = z.object({
+  title: nonEmptyString,
+  keywords: keywordArray,
+  summary: nonEmptyString,
+  description: z.string().optional(),
+  category: z.enum([
+    "criminal_verdict",
+    "administrative_enforcement",
+    "security_incident",
+    "vulnerability_advisory",
+    "academic_research",
+    "news_report",
+  ]),
+  incidentTime: z.string().optional(),
+  relatedRisks: idArray.min(1, "relatedRisks 不能为空"),
+  relatedAttackTools: idArray.default([]),
+  relatedThreatActors: idArray.default([]),
+  references: z.array(referenceSchema).default([]),
+  updated: z.string().optional(),
+});
+
 export const entitySchemas = {
   risks: riskSchema,
   avoidances: avoidanceSchema,
@@ -106,6 +127,7 @@ export const entitySchemas = {
   threatActors: threatActorSchema,
   terms: termSchema,
   businessScenes: businessSceneSchema,
+  cases: caseSchema,
 } as const;
 
 export type EntitySchemaKey = keyof typeof entitySchemas;

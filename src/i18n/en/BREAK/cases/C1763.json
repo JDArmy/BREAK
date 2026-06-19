@@ -1,0 +1,21 @@
+{
+  "C1763": {
+    "title": "Typical Scenarios of Repackaging Attacks: Injecting Ad SDKs and Swapping Payment Recipients",
+    "keywords": [
+      "app repackaging",
+      "injecting ad SDK",
+      "payment parameter tampering",
+      "mobile app repackaging fraud",
+      "malicious code injection",
+      "third-party app distribution",
+      "payment interface manipulation",
+      "app security"
+    ],
+    "summary": "After obtaining an app's installation package, attackers repackage it with malicious code. Common scenarios include inserting ad SDKs into the app and redistributing it through third-party channels to generate ad revenue, and modifying payment interface parameters to replace the recipient's account with the attacker's, resulting in user fund theft.",
+    "references": [
+      {
+        "title": "Is Your App Client Really Secure? Full Analysis of Decompilation, Repackaging, and Debugging Attacks"
+      }
+    ]
+  }
+}

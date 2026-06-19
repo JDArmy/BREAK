@@ -1,0 +1,21 @@
+{
+  "C1015": {
+    "title": "Vertical Privilege Escalation Vulnerability in Enterprise Order Query Module",
+    "keywords": [
+      "vertical privilege escalation",
+      "order query",
+      "IDOR",
+      "unauthorized access",
+      "user privacy leak",
+      "interface security",
+      "parameter tampering",
+      "SRC vulnerability"
+    ],
+    "summary": "The order query interface in an enterprise user center lacked identity verification on request parameters. After logging in as a regular user, an attacker could modify the order ID parameter to view order details of any user across the site without authorization, leading to the leakage of private information such as phone numbers and shipping addresses.",
+    "references": [
+      {
+        "title": "SRC Daily Vulnerability Replication Study Series (Part 2): Vertical Privilege Escalation Vulnerability + Vulnerability Report Template"
+      }
+    ]
+  }
+}

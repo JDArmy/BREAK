@@ -1,0 +1,30 @@
+{
+  "C1429": {
+    "title": "利用RSSI和区块链检测车载雾计算网络中的女巫攻击",
+    "keywords": [
+      "女巫攻击",
+      "Sybil Attack",
+      "车载雾计算",
+      "vehicular fog networks",
+      "RSSI",
+      "区块链",
+      "blockchain",
+      "虚假身份检测",
+      "VANET安全"
+    ],
+    "summary": "在车载雾计算网络中，研究者提出了一种基于区块链的机制来检测女巫攻击。通过使用RSSI（接收信号强度指示）技术，可以检测简单的女巫攻击案例，并利用区块链进行验证，以防止攻击者伪造多个虚假车辆身份。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0172"
+    ],
+    "references": [
+      {
+        "title": "Detecting Sybil attacks in vehicular fog networks using RSSI and Blockchain",
+        "link": "https://ieeexplore.ieee.org/abstract/document/9925616/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

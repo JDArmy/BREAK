@@ -1,0 +1,23 @@
+{
+  "C1332": {
+    "title": "Microsoft Discloses ClickFix Attack Campaign Abusing Windows Terminal to Deploy Lumma Stealer for Browser Credential Theft",
+    "keywords": [
+      "ClickFix",
+      "Lumma Stealer",
+      "Windows Terminal",
+      "PowerShell",
+      "information stealer",
+      "browser credential theft",
+      "Microsoft",
+      "social engineering",
+      "malicious command execution",
+      "session tokens"
+    ],
+    "summary": "In March 2026, Microsoft disclosed a ClickFix attack campaign where attackers abused Windows Terminal to trick users into executing malicious commands. The campaign used fake system errors or verification prompts to instruct users to copy and run PowerShell commands, ultimately deploying the Lumma Stealer information-stealing trojan. The malware specifically targets stored browser passwords, cooki",
+    "references": [
+      {
+        "title": "Microsoft Reveals ClickFix Campaign Using Windows Terminal to …"
+      }
+    ]
+  }
+}

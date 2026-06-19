@@ -1,0 +1,30 @@
+{
+  "C1340": {
+    "title": "NIST第四轮候选后量子算法SIKE被破解",
+    "keywords": [
+      "后量子密码",
+      "SIKE",
+      "NIST",
+      "超奇异同源",
+      "密钥封装机制",
+      "密码分析",
+      "侧信道攻击",
+      "抗量子加密"
+    ],
+    "summary": "2022年8月，比利时鲁汶大学研究人员发表论文，利用单核处理器在62分钟内成功破解了NIST后量子密码标准化第四轮候选算法SIKEp434。更高安全级别的SIKEp503、p610和p751也分别在数小时内被破解。该攻击通过恢复密钥有效攻破了基于超奇异同源的密钥封装机制，导致该算法可能被排除出标准化进程。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0156"
+    ],
+    "references": [
+      {
+        "title": "后量子密码真的安全吗?NIST第四轮候选算法SIKE已被破解_腾讯新闻",
+        "link": "https://new.qq.com/rain/a/20220802A08GZP00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-08",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

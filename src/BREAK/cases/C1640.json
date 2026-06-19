@@ -1,0 +1,34 @@
+{
+  "C1640": {
+    "title": "VR系统沉浸式劫持攻击研究",
+    "keywords": [
+      "VR头显",
+      "沉浸式劫持",
+      "Inception攻击",
+      "虚拟现实",
+      "固件漏洞",
+      "XR设备",
+      "数据窃取",
+      "恶意代码植入"
+    ],
+    "summary": "该研究提出了一种名为“Inception攻击”的沉浸式劫持方法，攻击者可利用VR头显的漏洞，在用户完全不知情的情况下，劫持并操控其沉浸式虚拟环境，从而窃取数据或植入恶意代码。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0217"
+    ],
+    "references": [
+      {
+        "title": "Inception Attacks: Immersive Hijacking in Virtual Reality Systems",
+        "link": "https://arxiv.org/html/2403.05721v1"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0084",
+      "AT0054"
+    ],
+    "relatedThreatActors": [
+      "TA0050"
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "C1354": {
+    "title": "BEC代币整数溢出攻击事件",
+    "keywords": [
+      "BEC",
+      "BeautyChain",
+      "整数溢出",
+      "智能合约",
+      "batchTransfer",
+      "代币归零",
+      "以太坊漏洞",
+      "2018"
+    ],
+    "summary": "2018年4月22日，黑客利用BEC智能合约中batchTransfer函数的整数溢出漏洞，通过传入极大数值导致乘法运算溢出，amount变量变为0，绕过了余额检查。攻击者凭空生成巨额BEC代币并在市场上抛售，导致BEC代币价值归零。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0159"
+    ],
+    "references": [
+      {
+        "title": "solidity智能合约基础漏洞——整数溢出漏洞-安全KER - 安全资讯平台",
+        "link": "https://www.anquanke.com/post/id/268535"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2018-04",
+    "relatedAttackTools": [
+      "AT0076"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

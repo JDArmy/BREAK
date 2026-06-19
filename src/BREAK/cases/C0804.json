@@ -1,0 +1,37 @@
+{
+  "C0804": {
+    "title": "200多个恶意npm包针对Azure开发者的大规模typosquatting攻击",
+    "keywords": [
+      "npm",
+      "typosquatting",
+      "Azure",
+      "恶意包",
+      "供应链攻击",
+      "JFrog",
+      "数据泄露",
+      "开源组件投毒",
+      "DNS泄露",
+      "包管理器安全"
+    ],
+    "summary": "2022年3月，JFrog安全研究团队发现200多个恶意npm包，针对@azure作用域内的包进行typosquatting攻击。攻击者创建与合法Azure包名称相似但删除作用域名的恶意包，利用开发者拼写错误进行投毒。恶意代码自动运行后窃取用户目录、IP地址、DNS服务器等个人信息，并通过HTTPS和DNS泄露数据。npm维护者迅速删除了这些恶意包。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0081-005"
+    ],
+    "references": [
+      {
+        "title": "200 多个 npm 包被攻击,Azure 开发者请注意!_腾讯新闻",
+        "link": "https://new.qq.com/rain/a/20220325A0A4PU00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-03",
+    "relatedAttackTools": [
+      "AT0064",
+      "AT0087"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

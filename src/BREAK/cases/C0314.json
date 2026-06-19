@@ -1,0 +1,30 @@
+{
+  "C0314": {
+    "title": "基于多层感知器的DNS DDoS放大攻击检测",
+    "keywords": [
+      "DNS放大攻击",
+      "DDoS检测",
+      "多层感知器",
+      "MLP分类器",
+      "拒绝服务",
+      "ADAM优化",
+      "SGD优化",
+      "DNS解析器",
+      "网络流量分析"
+    ],
+    "summary": "针对DNS放大攻击这一特定DDoS类型，研究者利用多层感知器（MLP）分类器对网络流量数据进行分析，以检测DNS放大攻击。攻击者利用DNS解析器将小查询放大为大流量，淹没受害者网络，导致服务拒绝。研究采用ADAM、SGD等优化技术提升检测效果。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0029"
+    ],
+    "references": [
+      {
+        "title": "DNS DDoS Amplification Attack Detection Using Multi-Layer Perceptron ...",
+        "link": "https://ieeexplore.ieee.org/document/10730978"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

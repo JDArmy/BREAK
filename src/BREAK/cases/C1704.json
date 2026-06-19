@@ -1,0 +1,31 @@
+{
+  "C1704": {
+    "title": "同意钓鱼攻击 - 浏览器身份攻击矩阵",
+    "keywords": [
+      "Consent phishing",
+      "OAuth授权滥用",
+      "浏览器身份攻击",
+      "SaaS安全",
+      "钓鱼链接",
+      "GitHub安全项目",
+      "身份矩阵",
+      "第三方应用授权"
+    ],
+    "summary": "GitHub安全项目描述了同意钓鱼攻击技术：攻击者发送钓鱼链接，请求目标授予访问敏感数据或执行关键操作的权限。该技术被收录于浏览器身份攻击矩阵中，是滥用OAuth授权机制的典型手法。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0232"
+    ],
+    "references": [
+      {
+        "title": "Consent phishing - browser-identity-attacks-matrix - GitHub",
+        "link": "https://github.com/pushsecurity/saas-attacks/blob/main/techniques/consent_phishing/description.md"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0089"
+    ],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "C1370": {
+    "title": "跨链桥攻击历史损失超20亿美元",
+    "keywords": [
+      "跨链桥攻击",
+      "Poly Network",
+      "Multichain",
+      "资金损失",
+      "Layer2桥接风险",
+      "区块链安全",
+      "加密货币盗窃",
+      "DeFi漏洞"
+    ],
+    "summary": "据PANews统计，跨链桥安全事件频发，历史上涉及资金超过20亿美元。2022年是跨链桥被盗最频繁的年份，近期Poly Network和Multichain等知名跨链桥再次发生被盗或资金异常转移事件，且资金找回或赔付的概率下降。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0161",
+      "R0200"
+    ],
+    "references": [
+      {
+        "title": "PA图说|一图速览大型跨链桥攻击及处理情况",
+        "link": "https://new.qq.com/rain/a/20230707A03ZJS00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-07",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0077",
+      "AT0078",
+      "AT0079"
+    ],
+    "relatedThreatActors": [
+      "TA0045",
+      "TA0046",
+      "TA0047"
+    ]
+  }
+}

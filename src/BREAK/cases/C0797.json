@@ -1,0 +1,35 @@
+{
+  "C0797": {
+    "title": "微软调查通过第三方供应商管理关系实施的隐蔽入侵",
+    "keywords": [
+      "微软",
+      "第三方供应商",
+      "供应链攻击",
+      "横向移动",
+      "持久化",
+      "远程访问",
+      "身份基础设施",
+      "隐蔽入侵",
+      "Microsoft",
+      "云服务"
+    ],
+    "summary": "微软安全团队发布案例研究，披露一起利用第三方供应商管理关系、身份基础设施和运维工具实施的隐蔽入侵。攻击者通过受信任的第三方系统横向移动，长期维持对企业环境的访问权限，难以被常规检测手段发现。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0081-003",
+      "R0254"
+    ],
+    "references": [
+      {
+        "title": "Undermining the trust boundary: Investigating a stealthy intrusion ...",
+        "link": "https://www.microsoft.com/en-us/security/blog/2026/05/12/undermining-the-trust-boundary-investigating-a-stealthy-intrusion-through-third-party-compromise/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-05",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0023"
+    ]
+  }
+}

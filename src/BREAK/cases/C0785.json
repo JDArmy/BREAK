@@ -1,0 +1,36 @@
+{
+  "C0785": {
+    "title": "Trivy供应链攻击：CI/CD流水线凭证窃取",
+    "keywords": [
+      "Trivy",
+      "供应链攻击",
+      "CI/CD",
+      "凭证窃取",
+      "恶意软件",
+      "微软安全博客",
+      "软件供应链",
+      "检测防御",
+      "分发渠道"
+    ],
+    "summary": "威胁行为者滥用受信任的Trivy分发渠道，向全球CI/CD管道注入凭证窃取恶意软件。该分析详细阐述了此次Trivy供应链入侵事件中的攻击者技术、入侵手法，并为安全团队提供了检测和防御类似攻击的具体步骤。事件凸显了软件开发工具在供应链中成为攻击跳板的严重风险。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0081-001",
+      "R0226"
+    ],
+    "references": [
+      {
+        "title": "Guidance for detecting, investigating, and defending against the Trivy ...",
+        "link": "https://www.microsoft.com/en-us/security/blog/2026/03/24/detecting-investigating-defending-against-trivy-supply-chain-compromise/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-03",
+    "relatedAttackTools": [
+      "AT0087"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

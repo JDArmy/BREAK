@@ -1,0 +1,21 @@
+{
+  "C1312": {
+    "title": "Tycoon 2FA AiTM Phishing Kit Operates at Scale",
+    "keywords": [
+      "Tycoon 2FA",
+      "AiTM phishing kit",
+      "Storm-1747",
+      "MFA bypass",
+      "adversary-in-the-middle",
+      "credential interception",
+      "session cookie replay",
+      "Darktrace"
+    ],
+    "summary": "The Tycoon 2FA phishing kit, developed, supported, and promoted by the Storm-1747 group tracked by Microsoft Threat Intelligence, provides adversary-in-the-middle (AiTM) capabilities, enabling less skilled attackers to bypass MFA and significantly lowering the barrier to account compromise. Distributed through a phishing-as-a-service model, the kit intercepts credentials and MFA tokens, stealing s",
+    "references": [
+      {
+        "title": "MFA Under Attack: AiTM Phishing Kits Abusing Legitimate Services"
+      }
+    ]
+  }
+}

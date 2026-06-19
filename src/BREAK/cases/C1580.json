@@ -1,0 +1,34 @@
+{
+  "C1580": {
+    "title": "联邦学习中的投毒攻击检测研究",
+    "keywords": [
+      "联邦学习",
+      "投毒攻击",
+      "物联网",
+      "IoT",
+      "AIoT",
+      "模型完整性",
+      "激活值操纵",
+      "资源受限设备",
+      "入侵检测"
+    ],
+    "summary": "该研究探讨了在资源受限的物联网设备上进行联邦学习时，恶意客户端通过操纵激活值进行的投毒攻击。这种攻击会破坏模型完整性，影响智能家居和入侵检测等AIoT应用。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0205"
+    ],
+    "references": [
+      {
+        "title": "Detecting Poisoning Attacks in Quantized Federated Learning for IoT: A ...",
+        "link": "https://ieeexplore.ieee.org/document/11141447"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0093"
+    ],
+    "relatedThreatActors": [
+      "TA0058"
+    ]
+  }
+}

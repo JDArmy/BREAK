@@ -1,0 +1,35 @@
+{
+  "C1703": {
+    "title": "OAuth 同意钓鱼攻击的原理解析与防范",
+    "keywords": [
+      "OAuth consent phishing",
+      "Microsoft Entra",
+      "钓鱼攻击",
+      "恶意第三方应用",
+      "授权滥用",
+      "SaaS安全",
+      "数据访问权限",
+      "身份认证绕过"
+    ],
+    "summary": "微软技术社区文章详细解释了OAuth同意钓鱼攻击的工作原理：攻击者通过钓鱼链接诱骗用户授予恶意第三方应用高权限，从而读取邮件、文件等敏感数据。该攻击利用OAuth授权机制，绕过传统密码防护，直接获取数据访问权限。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0232"
+    ],
+    "references": [
+      {
+        "title": "OAuth consent phishing explained and prevented",
+        "link": "https://techcommunity.microsoft.com/blog/microsoft-entra-blog/oauth-consent-phishing-explained-and-prevented/4423357"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0089",
+      "AT0063"
+    ],
+    "relatedThreatActors": [
+      "TA0054",
+      "TA0059"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C0402": {
+    "title": "Slack Flaw Allowed Attackers to Force User Redirects and Steal Session Cookies",
+    "keywords": [
+      "Slack",
+      "session redirect",
+      "cookie theft",
+      "session hijacking",
+      "bug bounty",
+      "web vulnerability",
+      "OAuth",
+      "login credential theft"
+    ],
+    "summary": "In 2019, a researcher on a bug bounty platform discovered a vulnerability in Slack that allowed attackers to forcibly redirect users to a rogue session, enabling theft of their session cookies. The flaw granted access to any data shared within Slack and posed a serious threat to numerous organizations. Slack patched the issue within 24 hours.",
+    "references": [
+      {
+        "title": "Session Hijacking and Session Hijacking Attacks"
+      }
+    ]
+  }
+}

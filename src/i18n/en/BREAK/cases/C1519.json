@@ -1,0 +1,23 @@
+{
+  "C1519": {
+    "title": "Over 40 Fake Crypto Wallet Extensions Found on Firefox Add-on Store",
+    "keywords": [
+      "Firefox add-on store",
+      "fake crypto wallet extensions",
+      "MetaMask impersonation",
+      "Coinbase Wallet spoofing",
+      "seed phrase theft",
+      "malicious browser extension",
+      "supply chain attack",
+      "Koi security",
+      "event listener injection",
+      "cryptocurrency wallet scam"
+    ],
+    "summary": "Security firm Koi discovered more than 40 counterfeit cryptocurrency wallet extensions on the official Firefox add-on store, impersonating popular wallets such as MetaMask and Coinbase Wallet. These malicious extensions injected event listeners to steal input content exceeding 30 characters, primarily targeting seed phrases, and exfiltrated the data to attacker-controlled servers.",
+    "references": [
+      {
+        "title": "PA Daily | Vitalik: If empty decentralization slogans are shouted, Ethereum will face risks; Silicon Valley tycoon..."
+      }
+    ]
+  }
+}

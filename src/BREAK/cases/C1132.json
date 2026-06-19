@@ -1,0 +1,33 @@
+{
+  "C1132": {
+    "title": "迪拜AI语音克隆重大抢劫案",
+    "keywords": [
+      "AI语音克隆",
+      "语音合成",
+      "深度伪造音频",
+      "迪拜",
+      "抢劫案",
+      "电信诈骗",
+      "社会工程攻击",
+      "网络犯罪"
+    ],
+    "summary": "据迪拜调查人员声称，AI语音克隆被用于发生在该国的一起重大抢劫案，并告诫公众提防网络犯罪分子利用该技术实施诈骗。此案表明AI语音克隆技术已被用于严重刑事犯罪，攻击者利用合成语音实施抢劫。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0120"
+    ],
+    "references": [
+      {
+        "title": "小心! AI 语音诈骗了 2.25 亿元。。。-腾讯云开发者社区-腾讯云",
+        "link": "https://cloud.tencent.com/developer/article/1959073"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0059"
+    ],
+    "relatedThreatActors": [
+      "TA0031"
+    ]
+  }
+}

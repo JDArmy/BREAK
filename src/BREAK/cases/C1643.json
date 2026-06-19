@@ -1,0 +1,29 @@
+{
+  "C1643": {
+    "title": "沉浸式技术领域防止生物特征数据泄露的框架",
+    "keywords": [
+      "沉浸式技术",
+      "生物特征数据",
+      "隐私泄露",
+      "数据泄露防护",
+      "空间计算",
+      "隐私保护框架",
+      "生物识别安全",
+      "AR/VR安全"
+    ],
+    "summary": "该研究针对沉浸式技术领域中敏感生物特征数据泄露问题，开发了一个技术框架来防止隐私泄露。研究使用六个数据集进行性能评估，证明该方案可有效缓解沉浸式技术中的生物特征数据隐私泄露。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0218"
+    ],
+    "references": [
+      {
+        "title": "A Framework to Prevent Biometric Data Leakage in the Immersive ...",
+        "link": "https://arxiv.org/html/2505.04123v1"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

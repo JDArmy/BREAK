@@ -1,0 +1,33 @@
+{
+  "C1396": {
+    "title": "Silex 僵尸网络利用默认凭据攻击破坏 IoT 设备",
+    "keywords": [
+      "Silex",
+      "botnet",
+      "IoT",
+      "default credentials",
+      "bricking",
+      "malware",
+      "DDoS",
+      "embedded devices"
+    ],
+    "summary": "Silex僵尸网络利用IoT设备的默认凭据进行攻击，永久性破坏或“变砖”了大量IoT设备。该攻击最初只是一个玩笑，但造成了实际的大规模破坏，凸显了默认凭据问题的严重性。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0166"
+    ],
+    "references": [
+      {
+        "title": "OWASP IoT Top 10 Series: Weak or Hardcoded Password Policy ...",
+        "link": "https://blog.securelayer7.net/owasp-iot-top-10-series-weak-or-hardcoded-password-policy-owasp/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0082"
+    ],
+    "relatedThreatActors": [
+      "TA0048"
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "C1623": {
+    "title": "AI克隆声音生成虚假歌曲冒充艺人事件",
+    "keywords": [
+      "AI克隆声音",
+      "深度伪造",
+      "虚假歌曲",
+      "流媒体平台",
+      "艺人冒充",
+      "AI生成内容检测",
+      "声音克隆侵权",
+      "数字虚拟人"
+    ],
+    "summary": "2026年，有攻击者利用AI克隆了一位女性艺人的声音，生成翻唱歌曲并以她的名义上传到各大流媒体平台。AI检测工具判定该歌曲很可能是AI生成。当事人对此感到震惊和沮丧，称“那是一台电脑在模仿我的声音”。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0214"
+    ],
+    "references": [
+      {
+        "title": "妹子被AI克隆声音发假歌,刚想维权,结果反被AI打成侵权?_腾讯新闻",
+        "link": "https://view.inews.qq.com/a/20260408A007LA00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-04",
+    "relatedAttackTools": [
+      "AT0059",
+      "AT0056"
+    ],
+    "relatedThreatActors": [
+      "TA0031",
+      "TA0041"
+    ]
+  }
+}

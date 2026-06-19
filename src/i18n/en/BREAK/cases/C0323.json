@@ -1,0 +1,22 @@
+{
+  "C0323": {
+    "title": "Microsoft Exposes Threat Actors Abusing OAuth Applications for Automated Financial Attacks",
+    "keywords": [
+      "OAuth abuse",
+      "Microsoft 365",
+      "financial attacks",
+      "credential theft",
+      "lateral movement",
+      "cloud security",
+      "third-party app authorization",
+      "threat actors",
+      "automated attacks"
+    ],
+    "summary": "Microsoft's security team disclosed in December 2023 that threat groups are abusing OAuth applications as automation tools to conduct financially motivated attacks. Attackers exploit the OAuth authorization mechanism to create or compromise high-privilege third-party apps, gaining persistent access to enterprise cloud services such as Microsoft 365 through legitimate authentication flows, then per",
+    "references": [
+      {
+        "title": "Threat actors misuse OAuth applications to automate financially driven ..."
+      }
+    ]
+  }
+}

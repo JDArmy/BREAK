@@ -1,0 +1,28 @@
+{
+  "C0869": {
+    "title": "FBI不支持支付勒索赎金",
+    "keywords": [
+      "FBI",
+      "ransomware",
+      "ransom payment",
+      "ransomware attack",
+      "data recovery",
+      "cyber extortion",
+      "victim guidance"
+    ],
+    "summary": "FBI明确表示不支持向勒索软件攻击者支付赎金，并指出支付赎金并不能保证受害者或其组织能够取回任何数据。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0085"
+    ],
+    "references": [
+      {
+        "title": "Ransomware - FBI",
+        "link": "https://www.fbi.gov/how-we-can-help-you/scams-and-safety/common-frauds-and-scams/ransomware"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

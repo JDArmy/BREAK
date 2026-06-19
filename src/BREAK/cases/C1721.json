@@ -1,0 +1,30 @@
+{
+  "C1721": {
+    "title": "数据库系统中令牌化、加密与掩码技术在数据安全中的应用",
+    "keywords": [
+      "tokenization",
+      "encryption",
+      "data masking",
+      "database security",
+      "payment card data",
+      "PCI DSS",
+      "misconfiguration",
+      "data breach",
+      "sensitive data protection"
+    ],
+    "summary": "该研究论文讨论了数据库系统中令牌化、加密和掩码技术的使用，以保护支付卡信息等敏感数据。论文特别指出，如果这些安全控制措施配置不当，例如令牌化配置错误，仍可能导致数据泄露风险。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0236"
+    ],
+    "references": [
+      {
+        "title": "The Use of Tokenization, Encryption, and Masking in Database Systems for Data Security",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11291375/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

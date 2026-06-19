@@ -1,0 +1,20 @@
+{
+  "C1384": {
+    "title": "Firmware Backdoor Implantation in the Lebanon Pager Explosion Incident",
+    "keywords": [
+      "pager explosion",
+      "firmware backdoor",
+      "supply chain attack",
+      "remote detonation",
+      "Hezbollah",
+      "hardware tampering",
+      "physical destruction"
+    ],
+    "summary": "A mass explosion of pagers used by Hezbollah in Lebanon resulted in dozens of deaths and thousands of injuries. Security analysts believe attackers likely gained physical access to the devices during production or the supply chain, implanted explosives, and tampered with the firmware to install a backdoor, triggering the detonation via remote signal. This incident demonstrates how firmware tamperi",
+    "references": [
+      {
+        "title": "Lebanon Pager Explosions: A Wake-Up Call on Cyber Attacks Crossing into the Physical World - Sohu"
+      }
+    ]
+  }
+}

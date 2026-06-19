@@ -1,0 +1,34 @@
+{
+  "C1770": {
+    "title": "Log4j漏洞利用中的WAF规避与数据外泄模式",
+    "keywords": [
+      "Log4j",
+      "CVE-2021-44228",
+      "WAF规避",
+      "Log4j Lookups",
+      "数据外泄",
+      "环境变量",
+      "Cloudflare",
+      "漏洞利用"
+    ],
+    "summary": "Cloudflare观察到攻击者在Log4j CVE-2021-44228漏洞公开后，迅速从使用简单攻击字符串转向利用Log4j Lookups语言功能（如${lower}、${env}）进行WAF规避，以绕过基于简单字符串匹配的防护规则，并尝试通过${env}等查找功能从目标进程环境变量中外泄包括密码在内的敏感数据。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0250"
+    ],
+    "references": [
+      {
+        "title": "Exploitation of Log4j CVE-2021-44228 before public disclosure and ...",
+        "link": "https://blog.cloudflare.com/exploitation-of-cve-2021-44228-before-public-disclosure-and-evolution-of-waf-evasion-patterns/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-12",
+    "relatedAttackTools": [
+      "AT0054"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

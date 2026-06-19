@@ -1,0 +1,22 @@
+{
+  "C1690": {
+    "title": "Clinejection Supply Chain Attack",
+    "keywords": [
+      "Clinejection",
+      "Cline npm package",
+      "OpenClaw agent",
+      "postinstall script injection",
+      "npm supply chain attack",
+      "SBOM missing",
+      "AI coding tool compromise",
+      "recursive supply chain risk",
+      "malicious package poisoning"
+    ],
+    "summary": "In February 2026, attackers poisoned the npm package of the AI coding tool Cline, silently installing the OpenClaw agent via a postinstall script. Due to the lack of an SBOM, developers could not quickly detect the implanted extra component, resulting in approximately 4,000 high-value development endpoints being persistently compromised, exposing the recursive supply chain risks caused by missing ",
+    "references": [
+      {
+        "title": "OpenClaw: The Hidden Dangers Behind the Craze - Tencent News"
+      }
+    ]
+  }
+}

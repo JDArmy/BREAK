@@ -1,0 +1,36 @@
+{
+  "C1690": {
+    "title": "Clinejection 供应链攻击事件",
+    "keywords": [
+      "Cline",
+      "OpenClaw",
+      "npm",
+      "供应链攻击",
+      "postinstall脚本",
+      "SBOM缺失",
+      "AI编程工具",
+      "递归供应链风险",
+      "恶意包污染"
+    ],
+    "summary": "2026年2月，攻击者污染了AI编程工具Cline的npm包，通过postinstall脚本静默安装OpenClaw智能体。由于缺乏SBOM，开发者无法快速发现被植入的额外组件，导致约4000台高价值开发终端被长期控制，揭示了AI工具链中SBOM缺失带来的递归供应链风险。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0229"
+    ],
+    "references": [
+      {
+        "title": "OpenClaw:疯狂背后的隐患_腾讯新闻",
+        "link": "https://news.qq.com/rain/a/20260310A01SYE00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-02",
+    "relatedAttackTools": [
+      "AT0057",
+      "AT0074"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "C0586": {
+    "title": "新商家高频违规类型：类目乱挂",
+    "keywords": [
+      "类目乱挂",
+      "品类乱挂",
+      "品牌乱挂",
+      "新商家",
+      "违规类型",
+      "电商平台",
+      "商品发布",
+      "不正当曝光"
+    ],
+    "summary": "针对新商家的违规提醒中指出，类目乱挂是高频违规类型之一。商家将商品发布到与实际情况不符的类目下，以获取不正当的曝光优势，是平台重点打击的行为，商家应避免踩坑。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0057"
+    ],
+    "references": [
+      {
+        "title": "新商家高频违规类型,你中招几条|小提成长记",
+        "link": "https://mp.weixin.qq.com/s?__biz=MzAwOTEwMjQ3NQ==&mid=2650577774&idx=1&sn=ccd2fe0b62c58b9682e6af550e6ff41f&chksm=836c8e8ab41b079c9a01445a7747b424bddde58433a973b1fbeea68bee8b3fce06ba9da9ea14&scene=27"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-04",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0009"
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "C0311": {
+    "title": "Slow HTTP/2 DoS攻击的实时检测研究",
+    "keywords": [
+      "Slow HTTP/2 DoS",
+      "拒绝服务攻击",
+      "事件序列分析",
+      "实时检测",
+      "HTTP/2协议",
+      "Web服务器安全",
+      "流量分析",
+      "漏洞实证"
+    ],
+    "summary": "研究人员对互联网上的Web服务器进行了Slow HTTP/2 DoS攻击的实证研究，发现多个服务器存在此类漏洞。攻击者利用HTTP/2协议特性，通过缓慢发送请求消耗服务器资源，导致服务拒绝。研究提出了基于事件序列分析的实时检测方案。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0029"
+    ],
+    "references": [
+      {
+        "title": "Delays Have Dangerous Ends: Slow HTTP/2 DoS Attacks Into the Wild and Their Real-Time Detection Using Event Sequence Analysis",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10124271/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

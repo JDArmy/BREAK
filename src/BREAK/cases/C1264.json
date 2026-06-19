@@ -1,0 +1,34 @@
+{
+  "C1264": {
+    "title": "HTTPS中间人攻击防范：证书伪造与SSL剥离攻击原理",
+    "keywords": [
+      "HTTPS",
+      "中间人攻击",
+      "SSLStrip",
+      "证书伪造",
+      "SSL剥离",
+      "数字证书",
+      "加密通信",
+      "腾讯云"
+    ],
+    "summary": "腾讯云开发者社区文章详细解释了HTTPS中间人攻击过程，攻击者像邮递员一样介入客户端与服务端通信，替换公钥和数字证书，拦截并篡改加密通信内容。同时介绍了SSLStrip攻击手法，中间人阻止客户端与服务器建立HTTPS连接，强制使用HTTP明文连接，而自己与服务器保持正常HTTPS连接，实现通信窃听与篡改。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0142"
+    ],
+    "references": [
+      {
+        "title": "HTTPS 中间人攻击及其防范 - 腾讯云开发者社区-腾讯云",
+        "link": "https://cloud.tencent.com/developer/news/151488"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2018-03",
+    "relatedAttackTools": [
+      "AT0072",
+      "AT0014",
+      "AT0035"
+    ],
+    "relatedThreatActors": []
+  }
+}

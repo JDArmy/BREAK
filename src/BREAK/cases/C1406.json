@@ -1,0 +1,34 @@
+{
+  "C1406": {
+    "title": "Frosties NFT Rug Pull 诈骗案",
+    "keywords": [
+      "Frosties",
+      "NFT Rug Pull",
+      "Ethan Nguyen",
+      "Andre Llacuna",
+      "电信欺诈",
+      "洗钱",
+      "美国司法部",
+      "数字藏品诈骗",
+      "项目方跑路",
+      "加密货币"
+    ],
+    "summary": "2022年1月，Ethan Nguyen和Andre Llacuna发行名为“Frosties”的NFT系列，共8888个，向投资者承诺各种福利。在售出后，项目方立即关闭网站并转移资金，卷走约110万美元，构成典型的NFT Rug Pull。两人随后被美国司法部指控共谋电信欺诈和洗钱。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0168"
+    ],
+    "references": [
+      {
+        "title": "Arrests for NFT \"Rug Pull\" Highlight Legal Risks for Creators",
+        "link": "https://ipandmedialaw.fkks.com/post/102hlli/arrests-for-nft-rug-pull-highlight-legal-risks-for-creators"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-01",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0039"
+    ]
+  }
+}

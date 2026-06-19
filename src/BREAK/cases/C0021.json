@@ -1,0 +1,29 @@
+{
+  "C0021": {
+    "title": "OAT-013 狙击",
+    "keywords": [
+      "OWASP",
+      "OAT-013",
+      "Sniping",
+      "拍卖狙击",
+      "自动化威胁",
+      "Web应用安全",
+      "出价狙击",
+      "最后时刻出价"
+    ],
+    "summary": "OWASP自动化威胁项目将“Sniping”定义为在最后时刻对商品或服务进行出价或报价，使其他用户来不及反应，是典型的自动化威胁之一。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0003-002"
+    ],
+    "references": [
+      {
+        "title": "OAT-013 Sniping - OWASP Foundation",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-013_Sniping"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

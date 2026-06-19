@@ -1,0 +1,31 @@
+{
+  "C0030": {
+    "title": "基于移动互联网流量数据的黄牛异常检测方法",
+    "keywords": [
+      "黄牛行为",
+      "异常检测",
+      "SADM",
+      "移动互联网流量数据",
+      "在线零售",
+      "流量分析",
+      "欺诈检测",
+      "Scalping Anomaly Detection"
+    ],
+    "summary": "该研究提出了一种名为SADM的黄牛异常检测方法，用于检测在线零售中的黄牛行为。文章指出，黄牛行为对于在线零售商而言是重要且必须解决的问题，它通过不正当手段抢占商品资源。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0003-004"
+    ],
+    "references": [
+      {
+        "title": "Scalping Anomaly Detection Based on Mobile Internet Traffic Data",
+        "link": "https://dl.acm.org/doi/10.1145/3291842.3291905"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0002"
+    ]
+  }
+}

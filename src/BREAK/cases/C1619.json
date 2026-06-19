@@ -1,0 +1,30 @@
+{
+  "C1619": {
+    "title": "物联网网络中受损节点检测以缓解投毒攻击",
+    "keywords": [
+      "物联网安全",
+      "投毒攻击",
+      "节点入侵检测",
+      "NoComP框架",
+      "神经网络",
+      "数据完整性",
+      "边缘计算安全",
+      "恶意数据注入",
+      "IoT网络"
+    ],
+    "summary": "该研究提出了一个名为NoComP的框架，用于检测物联网网络中被入侵的节点。攻击者通过入侵并控制物联网节点，注入恶意数据（投毒攻击），从而污染整个数据集。该框架利用神经网络算法检测并移除这些被入侵的节点，以保障数据完整性。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0213"
+    ],
+    "references": [
+      {
+        "title": "Vuseghesa/Detection_Compromise_Nodes - GitHub",
+        "link": "https://github.com/Vuseghesa/Detection_Compromise_Nodes"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

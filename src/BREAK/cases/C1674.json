@@ -1,0 +1,33 @@
+{
+  "C1674": {
+    "title": "CI/CD安全综述：利用泄露凭证进行攻击",
+    "keywords": [
+      "CI/CD安全",
+      "凭证泄露",
+      "缓存投毒",
+      "供应链攻击",
+      "流水线安全",
+      "SoK综述",
+      "恶意依赖",
+      "DevSecOps"
+    ],
+    "summary": "一篇系统化文献综述指出，近期攻击者利用从CI/CD流水线中泄露的凭证，替换缓存对象为恶意内容。由于下游依赖通常信任这些流水线，导致严重安全后果。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0226"
+    ],
+    "references": [
+      {
+        "title": "SoK: Understanding CI/CD Security: A Comprehensive Review of Architecture, Attacks, and Defenses",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11226761/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0087"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

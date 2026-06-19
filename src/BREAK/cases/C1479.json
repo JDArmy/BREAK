@@ -1,0 +1,37 @@
+{
+  "C1479": {
+    "title": "警惕元宇宙身份盗窃 | CybersecAsia",
+    "keywords": [
+      "元宇宙",
+      "身份盗用",
+      "深度伪造",
+      "VR设备",
+      "生物特征数据",
+      "社交工程",
+      "虚拟现实",
+      "Jumio",
+      "Philipp Pointner",
+      "CybersecAsia"
+    ],
+    "summary": "安全专家指出，元宇宙中用户通过VR设备生成大量生物特征数据，攻击者可窃取这些数据创建深度伪造身份，冒充好友诱骗受害者进入恶意虚拟房间，实施欺诈或资产窃取。由于数据复杂，此类身份盗用行为可能长期不被发现。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0184"
+    ],
+    "references": [
+      {
+        "title": "Watch out for metaverse identity theft | CybersecAsia",
+        "link": "https://cybersecasia.net/features/if-social-engineering-is-a-tough-problem-watch-out-for-metaverse-identity-theft/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-07",
+    "relatedAttackTools": [
+      "AT0056",
+      "AT0084"
+    ],
+    "relatedThreatActors": [
+      "TA0050"
+    ]
+  }
+}

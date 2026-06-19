@@ -1,0 +1,33 @@
+{
+  "C1755": {
+    "title": "系统提示提取攻击研究框架SPE-LLM",
+    "keywords": [
+      "系统提示提取",
+      "SPE-LLM",
+      "大语言模型",
+      "对抗性攻击",
+      "提示注入",
+      "隐私泄露",
+      "模型安全",
+      "防御框架"
+    ],
+    "summary": "研究论文指出，LLM的系统提示包含私有配置、用户角色和操作指令，已成为新兴攻击目标。近期研究表明，通过精心设计的查询可成功提取LLM的系统提示，引发重大隐私和安全担忧。该论文提出首个综合框架SPE-LLM，用于系统评估系统提示提取攻击与防御，并设计了新型对抗性查询以有效提取SOTA LLM的系统提示。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0245"
+    ],
+    "references": [
+      {
+        "title": "System Prompt Extraction Attacks and Defenses in Large Language ...",
+        "link": "https://arxiv.org/html/2505.23817v1"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0093"
+    ],
+    "relatedThreatActors": [
+      "TA0058"
+    ]
+  }
+}

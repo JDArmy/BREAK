@@ -1,0 +1,29 @@
+{
+  "C1571": {
+    "title": "MEV的代价：迈向MEV的博弈论分析",
+    "keywords": [
+      "MEV",
+      "博弈论",
+      "矿工",
+      "Gas价格操纵",
+      "抢跑",
+      "区块链",
+      "交易排序",
+      "以太坊"
+    ],
+    "summary": "该研究从博弈论角度探讨MEV，提及矿工通过操纵Gas价格（gas price）来获取MEV收益，并分析了在Gas效率对称的情况下，MEV的提取方式。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0204"
+    ],
+    "references": [
+      {
+        "title": "Price of mev: towards a game theoretical approach to mev",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3560832.3563433"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C1563": {
+    "title": "MEV-Shield: A Defensive Tool Designed to Detect and Prevent MEV Attacks",
+    "keywords": [
+      "MEV protection",
+      "sandwich attack prevention",
+      "DeFi defense tool",
+      "transaction data privacy",
+      "on-chain data leakage",
+      "MEV-Shield",
+      "public transaction data exploitation",
+      "attack simulation"
+    ],
+    "summary": "MEV-Shield is a defensive tool that protects DeFi users from sandwich attacks and MEV extraction by simulating attacks and optimizing strategies, confirming from the defensive side the prevalence of exploiting public transaction data for attacks.",
+    "references": [
+      {
+        "title": "GitHub - CodeMongerrr/MEV-Shield: A defensive tool designed to detect ..."
+      }
+    ]
+  }
+}

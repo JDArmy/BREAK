@@ -1,0 +1,23 @@
+{
+  "C0305": {
+    "title": "FBI Dismantles IoT Botnets Behind Massive DDoS Attacks",
+    "keywords": [
+      "FBI",
+      "IoT botnet",
+      "DDoS attack",
+      "Aisuru",
+      "Kimwolf",
+      "JackSkid",
+      "Mossad",
+      "distributed denial-of-service",
+      "botnet takedown",
+      "KrebsOnSecurity"
+    ],
+    "summary": "U.S. federal law enforcement dismantled four IoT botnets—Aisuru, Kimwolf, JackSkid, and Mossad—responsible for a series of record-breaking distributed denial-of-service (DDoS) attacks. The attacks leveraged a large number of compromised IoT devices to generate massive traffic floods aimed at paralyzing target services.",
+    "references": [
+      {
+        "title": "Feds Disrupt IoT Botnets Behind Huge DDoS Attacks"
+      }
+    ]
+  }
+}

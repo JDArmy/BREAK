@@ -1,0 +1,38 @@
+{
+  "C1110": {
+    "title": "欧洲刑警组织警告：AI实时深伪技术助长有组织犯罪",
+    "keywords": [
+      "欧洲刑警组织",
+      "AI深度伪造",
+      "实时深伪技术",
+      "语音克隆",
+      "有组织犯罪",
+      "网络诈骗",
+      "身份盗窃",
+      "深度伪造视频"
+    ],
+    "summary": "2025年3月，欧洲刑警组织发布报告警告，AI技术正在助长有组织犯罪。犯罪分子利用语音克隆和实时深度伪造视频进行诈骗、敲诈和身份盗窃，导致网络诈骗和黑客攻击等犯罪行为威胁加剧。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0116"
+    ],
+    "references": [
+      {
+        "title": "...实时深伪视频等AI技术正助长有组织犯罪",
+        "link": "https://www.163.com/dy/article/JR4MRGJG0511B8LM.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-03",
+    "relatedAttackTools": [
+      "AT0056",
+      "AT0059",
+      "AT0058"
+    ],
+    "relatedThreatActors": [
+      "TA0031",
+      "TA0033",
+      "TA0041"
+    ]
+  }
+}

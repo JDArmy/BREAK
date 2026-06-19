@@ -1,0 +1,21 @@
+{
+  "C1601": {
+    "title": "DNS-Based Detection of IoT Botnet C2 Communication",
+    "keywords": [
+      "IoT botnet",
+      "DNS tunneling",
+      "C2 communication detection",
+      "command and control",
+      "IoT security",
+      "botnet detection",
+      "DNS query analysis",
+      "malware communication"
+    ],
+    "summary": "An IEEE paper examines how botnets in IoT environments use DNS services to establish communication with C2 servers. Attackers remotely control infected devices through C2 channels to execute malicious operations, including triggering specific actions and receiving status updates, enabling unauthorized device manipulation.",
+    "references": [
+      {
+        "title": "IoT Botnet Detection with Drift-Aligned Learning and DNS-Based C2"
+      }
+    ]
+  }
+}

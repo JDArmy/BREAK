@@ -1,0 +1,34 @@
+{
+  "C1582": {
+    "title": "Cloudflare分析：微芯片与IoT设备成为供应链攻击新载体",
+    "keywords": [
+      "Cloudflare",
+      "供应链攻击",
+      "微芯片",
+      "IoT设备",
+      "固件植入",
+      "硬件安全",
+      "物联网",
+      "恶意代码"
+    ],
+    "summary": "Cloudflare在2022年3月的分析文章中指出，虽然软件供应链攻击最为普遍，但攻击形式已多样化。攻击者可针对微芯片、笔记本电脑、物联网（IoT）设备和操作技术（OT）等硬件进行破坏，甚至在固件层面植入恶意代码。这揭示了硬件供应链攻击的广泛潜在目标，从芯片到成品设备均面临被篡改的风险。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0206"
+    ],
+    "references": [
+      {
+        "title": "theNET | 抵御软件供应链攻击 | Cloudflare",
+        "link": "https://www.cloudflare.com/zh-cn/the-net/supply-chain-attacks/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-03",
+    "relatedAttackTools": [
+      "AT0081"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

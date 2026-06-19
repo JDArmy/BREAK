@@ -1,0 +1,36 @@
+{
+  "C1185": {
+    "title": "Apifox桌面客户端遭遇供应链投毒攻击",
+    "keywords": [
+      "Apifox",
+      "供应链投毒",
+      "CDN劫持",
+      "动态脚本后门",
+      "SSH密钥窃取",
+      "Git凭证泄露",
+      "桌面客户端",
+      "API调试工具",
+      "软件供应链攻击"
+    ],
+    "summary": "2026年3月4日至3月22日，API接口调试工具Apifox的全平台桌面客户端遭遇供应链投毒攻击。攻击者篡改Apifox官方CDN动态脚本文件植入隐蔽后门，受影响的2.8.19版本以下客户端可被窃取SSH密钥、Git凭证等敏感信息，存在数据泄露和终端被非法控制的高危风险。Web版和私有化部署版不受影响。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0127"
+    ],
+    "references": [
+      {
+        "title": "【全校网络安全紧急预警】警惕文档窃密、木马投毒与供应链攻击",
+        "link": "https://www.gwng.edu.cn/wlzx/2026/0427/c800a106737/page.htm"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-03",
+    "relatedAttackTools": [
+      "AT0096",
+      "AT0087"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

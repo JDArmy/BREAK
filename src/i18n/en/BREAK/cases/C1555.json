@@ -1,0 +1,21 @@
+{
+  "C1555": {
+    "title": "A Survey of Cross-Chain Bridge Attack Surfaces and Defenses",
+    "keywords": [
+      "cross-chain bridge",
+      "attack surface",
+      "defense mechanisms",
+      "attack taxonomy",
+      "insurance mechanism",
+      "blockchain security",
+      "Layer 2",
+      "cross-chain protocol"
+    ],
+    "summary": "This study investigates 35 cross-chain bridge attack incidents, establishes an attack taxonomy, and explores the creation of insurance mechanisms to compensate users for attack-related losses. The review systematically maps the attack vectors targeting cross-chain bridges.",
+    "references": [
+      {
+        "title": "Security of cross-chain bridges: Attack surfaces, defenses, and open problems"
+      }
+    ]
+  }
+}

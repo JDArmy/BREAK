@@ -1,0 +1,30 @@
+{
+  "C1702": {
+    "title": "全球管理员权限被入侵事件",
+    "keywords": [
+      "Global Administrator",
+      "权限入侵",
+      "云IAM",
+      "过度授权",
+      "Microsoft 365",
+      "租户安全",
+      "高权限账号",
+      "身份安全",
+      "合规性"
+    ],
+    "summary": "该安全事件涉及全局管理员访问权限被入侵，影响身份、安全和合规性，需要立即验证租户安全状态，体现了高权限账号被盗后的严重后果。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0231"
+    ],
+    "references": [
+      {
+        "title": "Security Incident – Global Administrator Access Compromised ...",
+        "link": "https://learn.microsoft.com/en-us/answers/questions/5858419/security-incident-global-administrator-access-comp"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

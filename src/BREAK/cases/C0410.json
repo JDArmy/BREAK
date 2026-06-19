@@ -1,0 +1,33 @@
+{
+  "C0410": {
+    "title": "攻击者结合假IT支持电话实施MFA疲劳攻击",
+    "keywords": [
+      "MFA疲劳攻击",
+      "推送轰炸",
+      "多因素认证",
+      "假IT支持",
+      "社会工程学",
+      "凭证盗窃",
+      "Push Bombing",
+      "MFA Fatigue"
+    ],
+    "summary": "攻击者通过反复发送MFA推送请求制造压力，并配合假冒IT支持的电话或消息，声称需要用户批准请求以停止通知，利用用户对技术支持的信任和急于解决问题的心理，诱导其完成认证批准。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0036-001"
+    ],
+    "references": [
+      {
+        "title": "What is Push Bombing (MFA Fatigue)? - Doppel",
+        "link": "https://www.doppel.com/doppel-pedia/what-push-bombing-mfa-fatigue"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0094"
+    ],
+    "relatedThreatActors": [
+      "TA0015"
+    ]
+  }
+}

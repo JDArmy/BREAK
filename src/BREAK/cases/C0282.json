@@ -1,0 +1,36 @@
+{
+  "C0282": {
+    "title": "利用物联网协议进行恶意数据窃取活动",
+    "keywords": [
+      "MQTT协议",
+      "物联网安全",
+      "数据渗出",
+      "隧道攻击",
+      "机器学习检测",
+      "恶意数据窃取",
+      "IoT协议利用",
+      "防火墙绕过"
+    ],
+    "summary": "该研究提出了一种利用MQTT协议实现隧道攻击以窃取数据的方法。由于MQTT协议在物联网中广泛使用且常被防火墙允许通过，攻击者可利用其封装并渗出敏感信息。研究验证了该攻击的有效性，并提出了基于机器学习的检测方法，检测准确率超过95%。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0028"
+    ],
+    "references": [
+      {
+        "title": "Exploiting Internet of Things protocols for malicious data exfiltration activities",
+        "link": "https://ieeexplore.ieee.org/abstract/document/9493887/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-07",
+    "relatedAttackTools": [
+      "AT0081",
+      "AT0083",
+      "AT0092"
+    ],
+    "relatedThreatActors": [
+      "TA0049"
+    ]
+  }
+}

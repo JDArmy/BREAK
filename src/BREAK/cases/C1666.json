@@ -1,0 +1,31 @@
+{
+  "C1666": {
+    "title": "我们是否应信任 `X-GitHub-Delivery` 请求头来防范重放攻击？",
+    "keywords": [
+      "X-GitHub-Delivery",
+      "Webhook",
+      "重放攻击",
+      "Replay Attack",
+      "GitHub",
+      "请求头",
+      "安全验证",
+      "事件重放"
+    ],
+    "summary": "GitHub社区讨论中，开发者探讨了仅依赖X-GitHub-Delivery请求头来防止Webhook重放攻击的可靠性。该请求头为每个事件提供唯一ID，用于追踪，但若仅依赖此ID而不实施其他验证机制，攻击者可能通过重放捕获到的有效Webhook请求来触发重复操作。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0225"
+    ],
+    "references": [
+      {
+        "title": "Should we Trust `X-GitHub-Delivery` for Replay Attack Prevention",
+        "link": "https://github.com/orgs/community/discussions/136297"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0086"
+    ],
+    "relatedThreatActors": []
+  }
+}

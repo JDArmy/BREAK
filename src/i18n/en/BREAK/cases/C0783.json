@@ -1,0 +1,20 @@
+{
+  "C0783": {
+    "title": "MCP Protocol Tool Poisoning Attack Steals WhatsApp Data",
+    "keywords": [
+      "MCP protocol tool poisoning",
+      "WhatsApp data exfiltration",
+      "Cursor MCP client",
+      "Invariant Labs",
+      "AI model instruction injection",
+      "software supply chain attack",
+      "MCP client security"
+    ],
+    "summary": "In April 2025, security firm Invariant Labs disclosed a tool poisoning attack risk in the MCP protocol. Attackers embedded hidden instructions in code comments of malicious MCP services. When users invoked WhatsApp tools through MCP clients like Cursor, the AI model followed these instructions and sent the user's WhatsApp chat history to an attacker-controlled number. The attack exploited maliciou",
+    "references": [
+      {
+        "title": "AI Agent Breakthrough: MCP and A2A Define New Security Boundaries - Tencent News"
+      }
+    ]
+  }
+}

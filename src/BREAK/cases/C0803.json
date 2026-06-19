@@ -1,0 +1,42 @@
+{
+  "C0803": {
+    "title": "恶意npm包窃取加密货币密钥和API令牌（SANDWORM_MODE攻击活动）",
+    "keywords": [
+      "SANDWORM_MODE",
+      "npm恶意包",
+      "供应链攻击",
+      "typosquatting",
+      "加密货币密钥窃取",
+      "API令牌窃取",
+      "McpInject",
+      "MCP服务器注入",
+      "AI编程助手攻击",
+      "GitHub身份滥用"
+    ],
+    "summary": "2026年2月，安全研究人员披露了名为SANDWORM_MODE的供应链蠕虫攻击活动，利用至少19个恶意npm包实施凭据收集和加密货币密钥窃取。这些包通过typosquatting方式发布，具备窃取系统信息、访问令牌、API密钥的能力，并能通过滥用被盗的npm和GitHub身份自动传播。恶意包还包含针对AI编程助手的MCP服务器注入模块，收集大语言模型API密钥。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0081-005"
+    ],
+    "references": [
+      {
+        "title": "恶意npm包窃取加密货币密钥和API令牌_腾讯新闻",
+        "link": "https://view.inews.qq.com/a/20260224A03ZQU00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-02",
+    "relatedAttackTools": [
+      "AT0064",
+      "AT0065",
+      "AT0093",
+      "AT0057",
+      "AT0087"
+    ],
+    "relatedThreatActors": [
+      "TA0052",
+      "TA0012",
+      "TA0018"
+    ]
+  }
+}

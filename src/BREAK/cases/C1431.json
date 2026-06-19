@@ -1,0 +1,34 @@
+{
+  "C1431": {
+    "title": "女巫攻击威胁区块链共识机制与51%攻击风险",
+    "keywords": [
+      "女巫攻击",
+      "Sybil Attack",
+      "区块链",
+      "共识机制",
+      "51%攻击",
+      "双重支付",
+      "哈希率",
+      "虚假身份",
+      "节点"
+    ],
+    "summary": "在区块链网络中，女巫攻击指单一节点通过控制多个身份标识，削弱冗余备份作用。若攻击者创建足够多的虚假身份，能以多数票否决真实节点，拒绝接收或传输区块。在更大规模攻击中，当攻击者控制大部分算力或哈希率时，可发起覆盖51%的系统攻击，逆转交易并导致双重支付问题。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0172"
+    ],
+    "references": [
+      {
+        "title": "女巫攻击(Sybil Attack)-腾讯云开发者社区-腾讯云",
+        "link": "https://cloud.tencent.com/developer/article/2137256"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0078"
+    ],
+    "relatedThreatActors": [
+      "TA0046"
+    ]
+  }
+}

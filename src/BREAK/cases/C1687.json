@@ -1,0 +1,32 @@
+{
+  "C1687": {
+    "title": "影响 npm 生态系统的广泛供应链入侵事件",
+    "keywords": [
+      "npm",
+      "supply chain attack",
+      "dependency confusion",
+      "package hijacking",
+      "typosquatting",
+      "malicious package",
+      "CISA",
+      "software supply chain"
+    ],
+    "summary": "CISA发布警报，通报一起影响npm生态系统的广泛软件供应链攻击事件。该事件涉及恶意行为者通过依赖混淆、包劫持和拼写错误攻击等多种手段，向npm公共仓库上传恶意包，导致大量开发者和构建系统在不知情的情况下下载并执行恶意代码，构成严重供应链安全威胁。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0228"
+    ],
+    "references": [
+      {
+        "title": "Widespread Supply Chain Compromise Impacting npm Ecosystem",
+        "link": "https://www.cisa.gov/news-events/alerts/2025/09/23/widespread-supply-chain-compromise-impacting-npm-ecosystem"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-09",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

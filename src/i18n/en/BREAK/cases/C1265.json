@@ -1,0 +1,22 @@
+{
+  "C1265": {
+    "title": "Man-in-the-Middle Attack Types Explained: Wi-Fi Spoofing, HTTPS Spoofing, SSL Hijacking, and DNS Spoofing",
+    "keywords": [
+      "man-in-the-middle attack",
+      "Wi-Fi spoofing",
+      "HTTPS spoofing",
+      "SSL hijacking",
+      "DNS spoofing",
+      "email hijacking",
+      "ARP spoofing",
+      "traffic interception",
+      "rogue access point"
+    ],
+    "summary": "A CSDN article outlines five common man-in-the-middle attack types: Wi-Fi spoofing creates a rogue access point with the same SSID to hijack user traffic; HTTPS spoofing tricks the browser into visiting a fake trusted site; SSL hijacking intercepts the HTTP-to-HTTPS redirect to inject malicious links; DNS spoofing forces the browser to visit a forged address under attacker control; and email hijac",
+    "references": [
+      {
+        "title": "Understanding Man-in-the-Middle Attacks: Types, Cases, and Full Protection Guide"
+      }
+    ]
+  }
+}

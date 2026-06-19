@@ -1,0 +1,36 @@
+{
+  "C0924": {
+    "title": "全国多地警方破获冒充互联网公司招聘诈骗案",
+    "keywords": [
+      "冒充招聘",
+      "刷单诈骗",
+      "抖音",
+      "饿了么",
+      "美团",
+      "虚假招聘广告",
+      "点赞员",
+      "下单员",
+      "APP垫付",
+      "求职诈骗"
+    ],
+    "summary": "2022年5月，多地警方通报破获冒充抖音、饿了么、美团等互联网公司的招聘诈骗案。诈骗团伙通过微信群、QQ群发布虚假招聘广告，以“招聘点赞员、下单员”为名，实为刷单诈骗引流，诱骗求职者下载APP并垫付资金刷单，最终骗取钱财。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0095"
+    ],
+    "references": [
+      {
+        "title": "全国多地警方破获不法分子冒充互联网公司招聘诈骗案",
+        "link": "https://www.xiancn.com/content/2022-05/18/content_6556533.htm"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-05",
+    "relatedAttackTools": [
+      "AT0066"
+    ],
+    "relatedThreatActors": [
+      "TA0015"
+    ]
+  }
+}

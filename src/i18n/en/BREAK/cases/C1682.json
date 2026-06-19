@@ -1,0 +1,23 @@
+{
+  "C1682": {
+    "title": "AUR atomic-lockfile Supply Chain Attack",
+    "keywords": [
+      "Arch User Repository",
+      "AUR",
+      "atomic-lockfile",
+      "supply chain attack",
+      "PKGBUILD poisoning",
+      "eBPF rootkit",
+      "infostealer",
+      "build artifact poisoning",
+      "malicious install script",
+      "Arch Linux"
+    ],
+    "summary": "In June 2026, the Arch User Repository (AUR) suffered a supply chain attack via atomic-lockfile, where an attacker injected malicious installation scripts into PKGBUILD files, poisoning over 1,600 packages to distribute an infostealer and an eBPF rootkit.",
+    "references": [
+      {
+        "title": "GitHub - lenucksi/aur-malware-check: Detection tools for the June 2026 ..."
+      }
+    ]
+  }
+}

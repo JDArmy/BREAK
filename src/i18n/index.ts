@@ -10,7 +10,7 @@ import cn from "./zh-CN/index.json";
  */
 const replaceArrayTranslationKeys = new Set(["keywords", "aliases"]);
 
-function mergeWithStructure(
+export function mergeWithStructure(
   structure: unknown,
   translations: unknown,
   key?: string

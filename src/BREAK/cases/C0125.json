@@ -1,0 +1,35 @@
+{
+  "C0125": {
+    "title": "AlfScan-X检测广告归因洗钱欺诈",
+    "keywords": [
+      "广告归因洗钱欺诈",
+      "ALF",
+      "移动广告欺诈",
+      "合谋欺诈",
+      "AlfScan-X",
+      "广告欺诈检测",
+      "归因洗钱",
+      "移动应用",
+      "欺诈集群"
+    ],
+    "summary": "研究团队识别出一种新型合谋移动广告欺诈——广告归因洗钱欺诈（ALF），涉及多款应用合谋隐藏广告真实展示来源，让低质量应用窃取合法应用的信誉。开发的AlfScan-X工具在200个应用的真实数据集上达到92%的精确率和召回率，在真实环境中识别出4515个独特欺诈应用和1483个欺诈集群。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0008"
+    ],
+    "references": [
+      {
+        "title": "Collaborative ad fraud detection in ad networks",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10938010/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-03",
+    "relatedAttackTools": [
+      "AT0091"
+    ],
+    "relatedThreatActors": [
+      "TA0056"
+    ]
+  }
+}

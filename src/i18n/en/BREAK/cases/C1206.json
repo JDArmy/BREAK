@@ -1,0 +1,21 @@
+{
+  "C1206": {
+    "title": "Scanning QR Code Login: How Fake QR Codes Steal Accounts via CSDN Blog",
+    "keywords": [
+      "QR code phishing",
+      "fake login QR code",
+      "QQ account takeover",
+      "CSRF attack",
+      "QR code security",
+      "social engineering attack",
+      "login token theft",
+      "polling attack"
+    ],
+    "summary": "This report describes an attack technique where fake login QR codes are used to steal user accounts. Attackers display a counterfeit QQ login QR code on a website, tricking victims into scanning and confirming the login. The attacker then polls the QQ server login interface to obtain the victim's login token, thereby hijacking the account. This method exploits the fact that QR code content is invi",
+    "references": [
+      {
+        "title": "Scan QR Code to Log In - CSDN Blog"
+      }
+    ]
+  }
+}

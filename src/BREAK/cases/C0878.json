@@ -1,0 +1,34 @@
+{
+  "C0878": {
+    "title": "修改用户ID实现水平越权篡改他人账户密码",
+    "keywords": [
+      "水平越权",
+      "用户ID篡改",
+      "密码修改",
+      "参数篡改",
+      "权限校验缺失",
+      "业务篡改",
+      "Web安全",
+      "账户劫持"
+    ],
+    "summary": "在密码修改功能中，攻击者拦截Bob发起的修改密码请求数据包，将其中代表用户身份的UserID参数从Bob的ID（如2）修改为Alice的ID（如1）。由于后端未校验请求者与操作对象的归属关系，系统直接修改了Alice的账户密码，实现了跨账户的数据篡改。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0087"
+    ],
+    "references": [
+      {
+        "title": "浅谈逻辑漏洞:越权漏洞、密码找回漏洞、支付逻辑漏洞、指定账户恶意攻击...",
+        "link": "https://blog.csdn.net/weixin_44604541/article/details/115796770"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-04",
+    "relatedAttackTools": [
+      "AT0035"
+    ],
+    "relatedThreatActors": [
+      "TA0010"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "C1785": {
+    "title": "Ethereum-Based DID/VC Platform for Detecting Synthetic Identity Fraud in Tax Scenarios",
+    "keywords": [
+      "DID",
+      "verifiable credentials",
+      "zero-knowledge proofs",
+      "Ethereum",
+      "synthetic identity fraud",
+      "Sybil attack",
+      "tax fraud detection",
+      "blockchain identity management",
+      "IEEE"
+    ],
+    "summary": "A 2025 IEEE paper presents an Ethereum-based decentralized identity management platform that uses DIDs, verifiable credentials, and zero-knowledge proofs to detect synthetic identity fraud in a simulated U.S. tax filing scenario. Tested on 10,000 synthetic identities, it achieves a 95% fraud detection rate, a 25% improvement over centralized systems, and effectively resists Sybil attacks, validati",
+    "references": [
+      {
+        "title": "Decentralized Blockchain-Based Digital Identity Management for Fraud Prevention in the US"
+      }
+    ]
+  }
+}

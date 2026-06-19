@@ -1,0 +1,30 @@
+{
+  "C1045": {
+    "title": "物联网驱动的BYOD环境中的安全挑战与网络取证生态系统",
+    "keywords": [
+      "BYOD",
+      "物联网",
+      "网络安全",
+      "网络取证",
+      "远程办公",
+      "数据泄露",
+      "自带设备办公",
+      "安全威胁"
+    ],
+    "summary": "该研究指出，新冠疫情导致居家办公模式普及，大量员工使用BYOD设备工作，引发了重大网络安全威胁。BYOD设备成为网络攻击的入口，导致业务中断和数据泄露风险显著增加。研究提出构建网络取证生态系统以应对BYOD环境中的恶意活动。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0112-001"
+    ],
+    "references": [
+      {
+        "title": "Security challenges and cyber forensic ecosystem in IOT driven BYOD environment",
+        "link": "https://ieeexplore.ieee.org/abstract/document/9199866/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2020-09",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "C1594": {
+    "title": "医疗物联网设备大规模攻击可导致灾难性后果",
+    "keywords": [
+      "医疗物联网安全",
+      "医疗设备攻击",
+      "输液泵安全",
+      "监护仪可用性",
+      "患者安全",
+      "IoT安全",
+      "设备完整性",
+      "拒绝服务攻击"
+    ],
+    "summary": "研究指出，对医疗设备的大规模攻击可能针对设备可用性或完整性。攻击者若成功破坏医疗设备的可用性，例如导致监护仪或输液泵停止工作，可能造成灾难性结果，直接威胁患者生命。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0208"
+    ],
+    "references": [
+      {
+        "title": "Medical device security in the IoT age",
+        "link": "https://ieeexplore.ieee.org/abstract/document/8796531/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0081",
+      "AT0082"
+    ],
+    "relatedThreatActors": [
+      "TA0048"
+    ]
+  }
+}

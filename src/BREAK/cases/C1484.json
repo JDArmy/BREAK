@@ -1,0 +1,34 @@
+{
+  "C1484": {
+    "title": "Harmony Horizon跨链桥被盗事件",
+    "keywords": [
+      "Harmony",
+      "Horizon跨链桥",
+      "私钥泄露",
+      "加密货币盗窃",
+      "跨链桥攻击",
+      "区块链安全",
+      "资产补偿"
+    ],
+    "summary": "2022年6月，Harmony区块链的Horizon跨链桥遭黑客攻击，价值约1亿美元的多种加密资产被盗。攻击者利用私钥漏洞控制跨链桥，转移大量代币。事后Harmony发布补偿提案，计划增发代币进行赔偿。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0185"
+    ],
+    "references": [
+      {
+        "title": "PA日报|蚂蚁矿池支持ETC生态;Harmony发布Horizon被盗事件补偿提案...",
+        "link": "https://new.qq.com/omn/20220727/20220727A0BFVD00.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-06",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0077"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

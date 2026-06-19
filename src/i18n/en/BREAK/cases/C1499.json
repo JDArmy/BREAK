@@ -1,0 +1,23 @@
+{
+  "C1499": {
+    "title": "Selfish Mining-Based Denial-of-Service Attack Against Bitcoin Systems (SDoS)",
+    "keywords": [
+      "Bitcoin",
+      "selfish mining",
+      "denial-of-service attack",
+      "SDoS",
+      "hash power attack",
+      "mining strategy",
+      "blockchain",
+      "competitive greedy SDoS",
+      "trajectory greedy SDoS",
+      "hybrid greedy SDoS"
+    ],
+    "summary": "This study introduces a selfish mining-based denial-of-service attack (SDoS) and further designs three more aggressive variants: competitive greedy SDoS, trajectory greedy SDoS, and hybrid greedy SDoS. Experiments show that an attacker with 14% of the total network hash power can increase profitability (compared to 25% for classic selfish mining and 19.6% for SDoS), while possessing 15% hash power",
+    "references": [
+      {
+        "title": "Statistical Detection of Selfish Mining in Proof-of-Work ..."
+      }
+    ]
+  }
+}

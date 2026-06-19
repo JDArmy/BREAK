@@ -1,0 +1,20 @@
+{
+  "C1189": {
+    "title": "Tesla Kubernetes Cluster Breached to Deploy Cryptominer",
+    "keywords": [
+      "Tesla Kubernetes breach",
+      "K8s cryptominer deployment",
+      "Kubernetes console misconfiguration",
+      "cloud-native security incident",
+      "compute resource abuse",
+      "K8s cluster intrusion",
+      "cryptojacking Kubernetes"
+    ],
+    "summary": "In 2018, Tesla's Kubernetes cluster was breached, and attackers exploited misconfigurations to deploy a cryptominer. The incident exposed how K8s console security misconfigurations can lead to compute resource abuse, becoming an early landmark case in cloud-native security.",
+    "references": [
+      {
+        "title": "Security Risks and Responses in Cloud-Native Technology Adoption - Security Insider | Decision-Makers' Cybersecurity..."
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "C0108": {
+    "title": "Fraudlogix解析安装欺诈手法",
+    "keywords": [
+      "Fraudlogix",
+      "install fraud",
+      "click injection",
+      "SDK spoofing",
+      "device farms",
+      "fake installs",
+      "mobile ad fraud",
+      "app install fraud"
+    ],
+    "summary": "Fraudlogix指出，移动应用安装欺诈通过虚假安装、点击注入、SDK欺骗和设备农场等手段窃取广告预算。欺诈者利用这些技术模拟大量虚假安装，污染下游留存率、应用内收入等指标，使广告主无法准确衡量真实获客渠道的效果。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0008-003"
+    ],
+    "references": [
+      {
+        "title": "Install Fraud: Click Injection, SDK Spoofing & Fake Installs | Fraudlogix",
+        "link": "https://wiki.fraudlogix.com/glossary/what-is-install-fraud/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0091"
+    ],
+    "relatedThreatActors": [
+      "TA0056"
+    ]
+  }
+}

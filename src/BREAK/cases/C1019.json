@@ -1,0 +1,29 @@
+{
+  "C1019": {
+    "title": "富士通ProjectWEB平台遭未授权访问致数据泄露",
+    "keywords": [
+      "富士通",
+      "ProjectWEB",
+      "未授权访问",
+      "数据泄露",
+      "访问控制失效",
+      "客户数据",
+      "2021"
+    ],
+    "summary": "富士通公司表示，攻击者成功对其ProjectWEB平台展开未授权访问，并借此窃取到部分客户数据。该事件是一起典型的因访问控制失效导致的数据泄露安全事件。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0109"
+    ],
+    "references": [
+      {
+        "title": "2021全球多行业重大数据泄露事件盘点|黑客|网络攻击_网易订阅",
+        "link": "https://dy.163.com/article/GQG818ER0552NPC3.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-12",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

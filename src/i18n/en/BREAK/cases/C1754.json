@@ -1,0 +1,21 @@
+{
+  "C1754": {
+    "title": "LLM02:2023 Data Leakage Risk Definition and Example Scenarios",
+    "keywords": [
+      "OWASP",
+      "LLM",
+      "data leakage",
+      "sensitive information",
+      "prompt injection",
+      "output filtering",
+      "training data",
+      "LLM security"
+    ],
+    "summary": "OWASP defines data leakage in the LLM Application Top 10 as a vulnerability where large language models inadvertently expose sensitive information, proprietary algorithms, or other confidential details through their responses. Example scenarios include users unintentionally asking questions that may reveal sensitive data, with the LLM directly outputting confidential information due to a lack of o",
+    "references": [
+      {
+        "title": "LLM02:2023 - Data Leakage - OWASP Foundation"
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "C1487": {
+    "title": "比特币轻客户端日食攻击检测方案（期刊版）",
+    "keywords": [
+      "比特币",
+      "轻客户端",
+      "日食攻击",
+      "Eclipse Attack",
+      "区块链安全",
+      "时间戳检测",
+      "gossip协议",
+      "网络流量分析",
+      "PoW区块链"
+    ],
+    "summary": "比特币等区块链系统的客户端若未连接到至少一个诚实节点，可能被说服接受恶意分叉的区块链视图，即遭受日食攻击。攻击者控制客户端所有连接，使其无法区分真实区块链与攻击者提供的视图。研究提出两种检测方案：基于可疑区块时间戳的检测和利用客户端互联网活动进行 gossip 的检测，并通过真实网络流量分析和实际部署验证了方案的有效性。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0186"
+    ],
+    "references": [
+      {
+        "title": "Decentralized and lightweight approach to detect eclipse attacks on proof of work blockchains",
+        "link": "https://ieeexplore.ieee.org/abstract/document/9390354/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-03",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

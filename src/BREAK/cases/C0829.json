@@ -1,0 +1,30 @@
+{
+  "C0829": {
+    "title": "Ubiquity与Peebles Media Group的BEC诈骗案例",
+    "keywords": [
+      "BEC诈骗",
+      "商业电子邮件诈骗",
+      "Ubiquity",
+      "Peebles Media Group",
+      "社交工程",
+      "网络心理学",
+      "伪造邮件",
+      "欺诈性转账"
+    ],
+    "summary": "学术论文分析了Ubiquity和Peebles Media Group两家公司遭受的商业电子邮件诈骗（BEC）事件。攻击者利用社交工程手段，通过伪造企业电子邮件，操纵员工信任并执行欺诈性转账或泄露敏感信息，展示了BEC威胁对不同规模企业的普遍性。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0083-002"
+    ],
+    "references": [
+      {
+        "title": "Business email compromise (BEC) and cyberpsychology",
+        "link": "https://arxiv.org/abs/2007.02415"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2020-07",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "C0794": {
+    "title": "Salesloft Drift Data Breach: OAuth Token Abuse Impacts 700+ Enterprises",
+    "keywords": [
+      "Salesloft",
+      "Drift",
+      "OAuth token abuse",
+      "supply chain attack",
+      "UNC6395",
+      "Salesforce data breach",
+      "GitHub account compromise",
+      "Cloudflare",
+      "AWS key leak",
+      "SaaS security"
+    ],
+    "summary": "In August 2025, threat group UNC6395 breached Salesloft's GitHub account and stole OAuth tokens for customer integrations on the Drift platform, gaining access to Salesforce data of over 700 enterprises including Cloudflare and Palo Alto Networks. The attackers leveraged high-privilege OAuth tokens to bypass traditional security controls and systematically harvest high-value credentials such as AW",
+    "references": [
+      {
+        "title": "Most Severe SaaS Supply Chain Attack in History: In-Depth Analysis of Salesloft Drift Data Breach"
+      }
+    ]
+  }
+}

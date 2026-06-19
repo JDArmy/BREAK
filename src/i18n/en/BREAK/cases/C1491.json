@@ -1,0 +1,21 @@
+{
+  "C1491": {
+    "title": "Eclipse Attacks on the Bitcoin P2P Network",
+    "keywords": [
+      "Bitcoin P2P",
+      "eclipse attack",
+      "node isolation",
+      "IP address monopolization",
+      "double-spending",
+      "transaction hiding",
+      "blockchain view manipulation",
+      "peer-to-peer network"
+    ],
+    "summary": "This research formalizes eclipse attacks against the Bitcoin peer-to-peer network. An adversary controlling a sufficient pool of IP addresses can monopolize all connections of a target node, isolating it from the rest of the network. The eclipsed node receives information solely from the attacker, who can feed it a fabricated view of the blockchain to enable transaction hiding or double-spending.",
+    "references": [
+      {
+        "title": "A Survey on Long-Range Attacks for Proof of Stake Protocols"
+      }
+    ]
+  }
+}

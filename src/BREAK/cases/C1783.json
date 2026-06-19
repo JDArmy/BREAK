@@ -1,0 +1,32 @@
+{
+  "C1783": {
+    "title": "Humanity Protocol 遭朝鲜国家级黑客攻击致身份基础设施受损",
+    "keywords": [
+      "Humanity Protocol",
+      "去中心化身份",
+      "朝鲜黑客",
+      "Lazarus Group",
+      "掌纹生物特征",
+      "身份伪造",
+      "Quantstamp",
+      "链上身份",
+      "3600万美元",
+      "基础设施攻击"
+    ],
+    "summary": "2026年6月，去中心化身份协议Humanity Protocol遭疑似朝鲜国家级黑客组织攻击，损失约3600万美元。攻击目标不仅是资金，更涉及用户掌纹生物特征数据与链上身份绑定的基础设施。安全机构Quantstamp指出，攻击者可能意图篡改或伪造身份验证记录，潜在危害远超资金损失，直接动摇了“去中心化身份更安全”的假设。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0253"
+    ],
+    "references": [
+      {
+        "title": "突发!Humanity Protocol被盗3600万,幕后黑手竟是朝鲜国家级黑客...",
+        "link": "https://news.qq.com/rain/a/20260615A02ONO00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-06",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

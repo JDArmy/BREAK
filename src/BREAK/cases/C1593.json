@@ -1,0 +1,34 @@
+{
+  "C1593": {
+    "title": "对抗样本攻击可误导COVID-19医疗物联网诊断模型",
+    "keywords": [
+      "对抗样本攻击",
+      "COVID-19诊断",
+      "医疗物联网",
+      "深度学习模型",
+      "CT扫描",
+      "X射线图像",
+      "错误分类",
+      "IEEE Internet of Things Journal"
+    ],
+    "summary": "研究人员测试发现，用于COVID-19诊断的深度学习模型易受对抗样本攻击。攻击者通过添加精心制作的扰动，可使基于CT扫描或X射线图像的医疗物联网诊断系统错误分类，例如将戴口罩者误判为未戴口罩，导致错误诊断结果。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0208"
+    ],
+    "references": [
+      {
+        "title": "Adversarial examples—Security threats to COVID-19 deep learning systems in medical IoT devices",
+        "link": "https://ieeexplore.ieee.org/abstract/document/9154468/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2020-08",
+    "relatedAttackTools": [
+      "AT0093"
+    ],
+    "relatedThreatActors": [
+      "TA0058"
+    ]
+  }
+}

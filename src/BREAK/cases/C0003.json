@@ -1,0 +1,30 @@
+{
+  "C0003": {
+    "title": "洗脚店重放攻击类比：重复发送有效请求欺骗系统",
+    "keywords": [
+      "重放攻击",
+      "请求重放",
+      "协议安全",
+      "身份认证",
+      "报文截获",
+      "签名验证",
+      "洗脚店类比",
+      "博客园"
+    ],
+    "summary": "以洗脚店办卡消费为例，用户说出卡号要求服务，对话被旁人听到后，旁人重复相同的请求（卡号和签名）也能获得服务。这形象说明了重放攻击的本质：攻击者无需理解或篡改报文内容，只需将截获的有效数据原样重复发送，即可欺骗目标系统。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0001-001"
+    ],
+    "references": [
+      {
+        "title": "面试官:啥是请求重放呀? - why技术 - 博客园",
+        "link": "https://www.cnblogs.com/thisiswhy/p/14780445.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-05",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C0781": {
+    "title": "GitHub Employee Device Compromise Leads to Code Repository Data Leak",
+    "keywords": [
+      "GitHub breach",
+      "code repository leak",
+      "employee device compromise",
+      "malicious payload",
+      "dropper malware",
+      "second-stage payload",
+      "guardrails-ai",
+      "data exfiltration"
+    ],
+    "summary": "In May 2026, GitHub suffered a breach where attackers compromised an employee device to gain internal access, resulting in the leak of data from 3,800 code repositories. The malicious payload implanted was a dropper configured to fetch a second-stage payload from an external server, assessed as a malware variant linked to the previous guardrails-ai package compromise.",
+    "references": [
+      {
+        "title": "GitHub Breached — Employee Device Hack Led to Exfiltration of 3,800 ..."
+      }
+    ]
+  }
+}

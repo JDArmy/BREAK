@@ -1,0 +1,32 @@
+{
+  "C0243": {
+    "title": "FTC起诉Experian违反CAN-SPAM法案",
+    "keywords": [
+      "FTC",
+      "Experian",
+      "CAN-SPAM Act",
+      "商业广告邮件",
+      "民事罚款",
+      "消费者保护",
+      "垃圾邮件",
+      "未经授权",
+      "电子邮件营销",
+      "美国联邦贸易委员会"
+    ],
+    "summary": "美国联邦贸易委员会（FTC）对Experian Consumer Services提起诉讼，指控其违反CAN-SPAM法案，发送未经用户同意的商业广告邮件。Experian最终同意支付65万美元民事罚款，并承诺遵守CAN-SPAM法案规定，停止向用户发送未经授权的广告邮件。该案明确了企业不得滥用电子邮件渠道进行垃圾营销的法律底线。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0021"
+    ],
+    "references": [
+      {
+        "title": "FTC lawsuit reminds businesses: CAN-SPAM means CAN'T spam",
+        "link": "https://consumer.ftc.gov/consumer-alerts/2023/08/ftc-lawsuit-reminds-businesses-can-spam-means-cant-spam"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-08",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

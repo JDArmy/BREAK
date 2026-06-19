@@ -1,0 +1,21 @@
+{
+  "C0919": {
+    "title": "Hebei Mobile Device Card Payment Fraud Case",
+    "keywords": [
+      "mobile device card fraud",
+      "payment fraud",
+      "phishing SMS",
+      "CVV2 theft",
+      "SMS verification code interception",
+      "contactless payment exploit",
+      "card binding attack",
+      "PIN-free transaction abuse"
+    ],
+    "summary": "In October 2021, a mobile device card payment fraud occurred in Hebei. Criminals impersonated a bank and sent phishing SMS messages containing malicious links to cardholders, claiming overdue credit card issues. They tricked victims into clicking the links and providing their card numbers, expiration dates, CVV2 codes, and SMS verification codes. The stolen information was then used to bind and ac",
+    "references": [
+      {
+        "title": "Trends in credit card fraud risk evolution and prevention recommendations - Security Insider"
+      }
+    ]
+  }
+}

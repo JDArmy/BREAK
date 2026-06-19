@@ -1,0 +1,34 @@
+{
+  "C1380": {
+    "title": "Mirai僵尸网络利用IoT设备发起大规模DDoS攻击",
+    "keywords": [
+      "Mirai",
+      "僵尸网络",
+      "物联网设备",
+      "DDoS攻击",
+      "弱密码",
+      "IoT安全",
+      "恶意软件",
+      "设备劫持"
+    ],
+    "summary": "Mirai僵尸网络通过扫描并感染存在弱密码漏洞的物联网设备，将其纳入僵尸网络，曾发起史上最大规模的DDoS攻击。其创建者被捕后，攻击活动才得以停止。该事件暴露了IoT设备因弱密码等安全问题被劫持用于网络攻击的巨大风险。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0163"
+    ],
+    "references": [
+      {
+        "title": "Consumer, commercial, and industrial iot (in) security: Attack taxonomy and case studies",
+        "link": "https://ieeexplore.ieee.org/abstract/document/9430606/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0082",
+      "AT0081"
+    ],
+    "relatedThreatActors": [
+      "TA0048"
+    ]
+  }
+}

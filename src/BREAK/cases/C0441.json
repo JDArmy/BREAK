@@ -1,0 +1,35 @@
+{
+  "C0441": {
+    "title": "全球信用卡欺诈损失持续攀升",
+    "keywords": [
+      "信用卡破解",
+      "card cracking",
+      "暗网",
+      "CVV枚举",
+      "支付卡欺诈",
+      "自动化攻击",
+      "Fingerprint",
+      "欺诈损失"
+    ],
+    "summary": "信用卡破解（card cracking）欺诈导致全球损失从2014年的约180亿美元上升至2022年的超过320亿美元。欺诈者通过购买暗网泄露的卡号列表，利用自动化工具对有效期和CVV安全码进行枚举测试，以获取有效支付卡信息。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0041"
+    ],
+    "references": [
+      {
+        "title": "Tutorial: Credit card cracking explained — and how to prevent it",
+        "link": "https://fingerprint.com/blog/card-cracking-explained-tutorial/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022",
+    "relatedAttackTools": [
+      "AT0010",
+      "AT0090"
+    ],
+    "relatedThreatActors": [
+      "TA0055"
+    ]
+  }
+}

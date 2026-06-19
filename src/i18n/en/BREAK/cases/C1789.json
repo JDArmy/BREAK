@@ -1,0 +1,23 @@
+{
+  "C1789": {
+    "title": "XZ Backdoor Hacker Infiltration Timeline: A Watershed Moment for Open Source Software Supply Chain Security",
+    "keywords": [
+      "xz backdoor",
+      "supply chain attack",
+      "liblzma",
+      "SSH backdoor",
+      "Jia Tan",
+      "open source poisoning",
+      "Linux distribution",
+      "remote code execution",
+      "maintainer infiltration",
+      "CVE-2024-3094"
+    ],
+    "summary": "The attacker Jia Tan infiltrated the xz compression library project over two and a half years, gaining maintainer privileges and implanting a backdoor in the core component liblzma. This backdoor allowed the attacker to send hidden commands via SSH, enabling unauthorized remote code execution and full control of the target system. The vulnerability was discovered just before it could be distribute",
+    "references": [
+      {
+        "title": "xz Backdoor Hacker Timeline, A Watershed Moment for Open Source Software Supply Chain Security | Notes"
+      }
+    ]
+  }
+}

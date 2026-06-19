@@ -1,0 +1,32 @@
+{
+  "C0428": {
+    "title": "B站主播毁号事件",
+    "keywords": [
+      "B站",
+      "主播",
+      "清雨",
+      "毁号",
+      "扫码登录",
+      "账号安全",
+      "虚拟财产",
+      "直播"
+    ],
+    "summary": "2026年3月，B站主播“清雨”因粉丝扫码登录其账号时，舰长身份过期，将粉丝账号上的所有珍稀道具全部销毁。此事件展示了通过扫码登录机制，他人获得账户访问权限后可能造成的破坏。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0038"
+    ],
+    "references": [
+      {
+        "title": "B站主播这次的瓜,把全体网友都惹怒了_腾讯新闻",
+        "link": "https://news.qq.com/rain/a/20260306A08NLR00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-03",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0010"
+    ]
+  }
+}

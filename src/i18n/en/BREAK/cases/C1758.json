@@ -1,0 +1,22 @@
+{
+  "C1758": {
+    "title": "MFA Fatigue Attacks Become a New Hacker Tactic",
+    "keywords": [
+      "MFA fatigue attack",
+      "push bombing",
+      "Lapsus$",
+      "Yanluowang",
+      "multi-factor authentication bypass",
+      "credential stuffing",
+      "social engineering",
+      "Microsoft breach",
+      "Cisco breach"
+    ],
+    "summary": "In September 2022, security reports highlighted the growing prevalence of MFA fatigue attacks among threat actors. Attackers run scripts using stolen credentials to repeatedly log in, sending an endless stream of MFA push requests to the target's phone. This creates a sense of \"fatigue,\" ultimately pressuring the victim into clicking \"approve\" or making a mistake, thereby bypassing multi-factor au",
+    "references": [
+      {
+        "title": "MFA Fatigue Attacks: A New Strategy Favored by Hackers"
+      }
+    ]
+  }
+}

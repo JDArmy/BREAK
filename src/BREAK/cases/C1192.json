@@ -1,0 +1,29 @@
+{
+  "C1192": {
+    "title": "Kubernetes集群网络配置错误导致横向移动风险研究",
+    "keywords": [
+      "Kubernetes",
+      "集群安全",
+      "网络配置错误",
+      "横向移动",
+      "云原生安全",
+      "网络策略",
+      "服务暴露",
+      "渗透测试"
+    ],
+    "summary": "一项针对287个开源应用的研究发现，Kubernetes集群中存在634个网络配置错误，可被用于横向移动攻击。这些配置错误涉及服务暴露、网络策略缺失等，使攻击者能在集群内部进行渗透。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0128"
+    ],
+    "references": [
+      {
+        "title": "Defending Kubernetes Clusters Against Network Misconfigurations",
+        "link": "https://arxiv.org/html/2506.21134v1"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

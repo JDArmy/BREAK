@@ -1,0 +1,39 @@
+{
+  "C1408": {
+    "title": "2024年Rug Pull骗局造成约8540万美元损失",
+    "keywords": [
+      "Rug Pull",
+      "加密货币",
+      "Certik",
+      "蜜罐合约",
+      "代币欺诈",
+      "DeFi安全",
+      "跑路骗局",
+      "链上分析",
+      "2024年"
+    ],
+    "summary": "根据Certik数据，2024年全年Rug Pull骗局在加密货币领域造成约8540万美元的财务损失。项目方通过部署蜜罐合约吸引投资，限制代币销售后抽干资金，使投资者手中的代币变得一文不值，凸显了此类欺诈的持续威胁。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0168"
+    ],
+    "references": [
+      {
+        "title": "Unveiling Rug Pull Schemes in Crypto Token via Code-and ... - arXiv",
+        "link": "https://arxiv.org/html/2506.18398v1"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0077",
+      "AT0079"
+    ],
+    "relatedThreatActors": [
+      "TA0039",
+      "TA0045",
+      "TA0047"
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "C1688": {
+    "title": "36个恶意npm包利用Redis和PostgreSQL部署后门",
+    "keywords": [
+      "npm",
+      "恶意包",
+      "依赖混淆",
+      "Strapi",
+      "postinstall脚本",
+      "Redis",
+      "PostgreSQL",
+      "后门",
+      "供应链攻击",
+      "数据窃取"
+    ],
+    "summary": "安全研究人员发现36个伪装成Strapi插件的恶意npm包，利用postinstall脚本在安装后立即执行恶意代码。这些包通过依赖混淆技术，针对Redis和PostgreSQL数据库服务进行攻击，实现持久化访问和数据窃取，展示了攻击者如何利用包管理器的自动化脚本机制投递恶意载荷。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0228"
+    ],
+    "references": [
+      {
+        "title": "36 Malicious npm Packages Exploited Redis, PostgreSQL to Deploy ...",
+        "link": "https://thehackernews.com/2026/04/36-malicious-npm-packages-exploited.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-04",
+    "relatedAttackTools": [
+      "AT0023",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

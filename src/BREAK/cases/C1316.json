@@ -1,0 +1,37 @@
+{
+  "C1316": {
+    "title": "新加坡IT服务公司遭AiTM钓鱼攻击导致MFA被绕过",
+    "keywords": [
+      "AiTM",
+      "钓鱼攻击",
+      "MFA绕过",
+      "会话令牌窃取",
+      "中间人攻击",
+      "Blackpanda",
+      "应急响应",
+      "IT服务公司",
+      "新加坡",
+      "凭证窃取"
+    ],
+    "summary": "Blackpanda应急响应团队处理了一起针对新加坡某IT服务公司的AiTM钓鱼攻击事件。攻击者通过实时中间人钓鱼页面，成功窃取了用户凭证和一次性密码（OTP），导致MFA保护被绕过。攻击者利用窃取的会话令牌接管了账户。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0151"
+    ],
+    "references": [
+      {
+        "title": "MFA Bypass Attack at Singapore IT Services Firm — Blackpanda IR ...",
+        "link": "https://www.blackpanda.com/case-studies/singapore-it-services-firm-bec-aitm-2025"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025",
+    "relatedAttackTools": [
+      "AT0072",
+      "AT0063"
+    ],
+    "relatedThreatActors": [
+      "TA0059"
+    ]
+  }
+}

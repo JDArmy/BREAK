@@ -1,0 +1,23 @@
+{
+  "C0772": {
+    "title": "Hybrid SM2/SM3/SM4 Encryption Framework for Instant Messaging Compliance",
+    "keywords": [
+      "SM2",
+      "SM3",
+      "SM4",
+      "instant messaging",
+      "hybrid encryption",
+      "Chinese cryptographic algorithms",
+      "commercial cryptography",
+      "data integrity",
+      "key exchange",
+      "cryptographic compliance"
+    ],
+    "summary": "A study proposes a hybrid cryptographic framework applying SM2 for key exchange and authentication, SM4 for message encryption, and SM3 for integrity verification to address security threats in instant messaging systems. The framework aims to meet the requirements of China's Cryptography Law for commercial cryptographic applications, ensuring data confidentiality, integrity, and availability.",
+    "references": [
+      {
+        "title": "Enhancing Security in Instant Messaging Systems with a Hybrid SM2 Encryption Approach"
+      }
+    ]
+  }
+}

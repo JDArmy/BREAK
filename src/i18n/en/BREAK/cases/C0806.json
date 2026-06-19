@@ -1,0 +1,21 @@
+{
+  "C0806": {
+    "title": "Malicious npm Packages with Thousands of Downloads Impersonate typescript-eslint and @types/node",
+    "keywords": [
+      "npm typosquatting",
+      "typescript-eslint",
+      "@types/node",
+      "supply chain attack",
+      "malicious npm packages",
+      "open source component poisoning",
+      "@typescript_eslinter/eslint",
+      "types-node"
+    ],
+    "summary": "In December 2024, security researchers discovered typosquatting npm packages impersonating legitimate ones like typescript-eslint and @types/node, accumulating thousands of downloads. The fake packages, named @typescript_eslinter/eslint and types-node, were used to download trojans and fetch second-stage payloads, posing a severe supply chain threat to downstream users.",
+    "references": [
+      {
+        "title": "Thousands Download Malicious npm Libraries Impersonating Legitimate Tools"
+      }
+    ]
+  }
+}

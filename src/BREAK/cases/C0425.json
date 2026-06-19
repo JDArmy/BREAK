@@ -1,0 +1,30 @@
+{
+  "C0425": {
+    "title": "OWASP/QRLJacking：二维码登录劫持攻击框架",
+    "keywords": [
+      "QRLJacking",
+      "二维码登录劫持",
+      "扫码登录",
+      "会话劫持",
+      "社会工程学",
+      "OWASP",
+      "GitHub"
+    ],
+    "summary": "QRLJacking是一种简单但危害巨大的社会工程学攻击，受害者扫描攻击者的二维码后，导致会话被劫持。该攻击影响所有依赖“扫码登录”功能作为安全登录方式的应用。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0038"
+    ],
+    "references": [
+      {
+        "title": "GitHub - OWASP/QRLJacking: QRLJacking or Quick Response Code Login ...",
+        "link": "https://github.com/OWASP/QRLJacking"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0067"
+    ],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "C1330": {
+    "title": "Keep Aware Customer Targeted by ClickFix Attack Delivering NetSupportManager RAT",
+    "keywords": [
+      "ClickFix",
+      "NetSupportManager",
+      "PowerShell",
+      "clipboard hijacking",
+      "remote access trojan",
+      "social engineering",
+      "Keep Aware",
+      "CAPTCHA forgery",
+      "Windows Run dialog",
+      "persistent remote control"
+    ],
+    "summary": "A Keep Aware customer encountered a compromised website while browsing search results, where a fake CAPTCHA prompt appeared. Upon clicking, JavaScript copied a malicious PowerShell command to the clipboard and tricked the user into pasting and executing it via the Windows Run dialog. The command was designed to download and install the NetSupportManager remote access trojan for persistent remote c",
+    "references": [
+      {
+        "title": "On the Scene of a Real ClickFix Attack: The Full Process of a Social Engineering Hack"
+      }
+    ]
+  }
+}

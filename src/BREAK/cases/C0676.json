@@ -1,0 +1,32 @@
+{
+  "C0676": {
+    "title": "Azure Blob Storage成为威胁行为者的高价值攻击目标",
+    "keywords": [
+      "Azure Blob Storage",
+      "云存储安全",
+      "攻击链",
+      "错误配置",
+      "凭据泄露",
+      "云策略",
+      "威胁行为者",
+      "微软安全"
+    ],
+    "summary": "微软安全博客分析指出，Azure Blob Storage因其在存储和管理海量非结构化数据中的关键角色，成为威胁行为者的高价值目标。攻击者通过复杂的攻击链，利用错误配置、泄露的凭据和不断演进的云策略，对Azure Blob Storage进行针对性入侵和滥用。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0069-002"
+    ],
+    "references": [
+      {
+        "title": "Inside the attack chain: Threat activity targeting Azure Blob Storage ...",
+        "link": "https://www.microsoft.com/en-us/security/blog/2025/10/20/inside-the-attack-chain-threat-activity-targeting-azure-blob-storage/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-10",
+    "relatedAttackTools": [
+      "AT0088"
+    ],
+    "relatedThreatActors": []
+  }
+}

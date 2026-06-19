@@ -1,0 +1,21 @@
+{
+  "C1451": {
+    "title": "Solidity Smart Contract Timestamp Manipulation Vulnerability and Fix",
+    "keywords": [
+      "Solidity",
+      "smart contract",
+      "timestamp manipulation",
+      "block.timestamp",
+      "lottery contract",
+      "miner manipulation",
+      "randomness source",
+      "Ethereum"
+    ],
+    "summary": "A lottery contract nearly lost $50,000 due to using block.timestamp to control the drawing logic. A malicious miner could manipulate the block timestamp within a roughly 900-second window to select themselves as the winner. The article provides secure alternatives, such as using a longer time window and a more secure randomness source.",
+    "references": [
+      {
+        "title": "Fix Smart Contract Timestamp Attacks in 20 Minutes (Before You Lose Money)"
+      }
+    ]
+  }
+}

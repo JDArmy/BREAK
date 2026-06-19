@@ -1,0 +1,30 @@
+{
+  "C1219": {
+    "title": "联邦学习本地模型投毒攻击拜占庭鲁棒系统",
+    "keywords": [
+      "联邦学习",
+      "本地模型投毒攻击",
+      "拜占庭鲁棒",
+      "防御机制",
+      "隐私计算",
+      "USENIX Security",
+      "机器学习安全",
+      "对抗攻击"
+    ],
+    "summary": "该研究针对拜占庭鲁棒的联邦学习系统提出了本地模型投毒攻击方法。实验证明，攻击能够成功攻破四种最新的拜占庭鲁棒联邦学习防御机制，表明即使部署了防御措施，联邦学习系统仍面临严重的投毒攻击威胁。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0133"
+    ],
+    "references": [
+      {
+        "title": "Local model poisoning attacks to {Byzantine-Robust} federated learning",
+        "link": "https://www.usenix.org/conference/usenixsecurity20/presentation/fang"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2020",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

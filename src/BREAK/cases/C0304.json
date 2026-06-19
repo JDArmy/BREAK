@@ -1,0 +1,37 @@
+{
+  "C0304": {
+    "title": "911紧急服务DDoS攻击分析",
+    "keywords": [
+      "911紧急服务",
+      "DDoS攻击",
+      "手机僵尸网络",
+      "基带固件rootkit",
+      "公共安全应答点",
+      "紧急呼叫系统",
+      "匿名攻击",
+      "服务瘫痪",
+      "北卡罗来纳州"
+    ],
+    "summary": "研究人员展示了攻击者如何利用手机僵尸网络对911紧急服务发起匿名DDoS攻击。通过根植于基带固件的rootkit，攻击者可随机化手机标识符，反复拨打紧急电话，导致紧急呼叫中心无法处理合法呼叫。模拟显示，仅需不到6000个僵尸设备或10万美元硬件，即可使整个州（如北卡罗来纳州）的紧急服务瘫痪数天。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0029-004"
+    ],
+    "references": [
+      {
+        "title": "9-1-1 DDoS: attacks, analysis and mitigation",
+        "link": "https://ieeexplore.ieee.org/abstract/document/7961982/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2017-04",
+    "relatedAttackTools": [
+      "AT0011",
+      "AT0018",
+      "AT0082"
+    ],
+    "relatedThreatActors": [
+      "TA0048"
+    ]
+  }
+}

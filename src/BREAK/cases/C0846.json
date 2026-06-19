@@ -1,0 +1,41 @@
+{
+  "C0846": {
+    "title": "恶意AI工具FraudGPT在暗网流通，可自动生成钓鱼邮件和恶意软件",
+    "keywords": [
+      "FraudGPT",
+      "恶意AI工具",
+      "暗网",
+      "钓鱼邮件",
+      "恶意软件",
+      "GPT-3",
+      "漏洞检测",
+      "网络钓鱼",
+      "AI增强攻击"
+    ],
+    "summary": "2023年8月，一款名为FraudGPT的恶意AI工具在暗网流通。该工具基于GPT-3模型，可自动生成极具说服力的网络钓鱼电子邮件、短信或网站，诱骗用户泄露敏感信息。它还能创建无法检测的恶意软件、检测网站漏洞，并以每月200美元的价格出售，已确认超过3000条订阅信息。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0084-001"
+    ],
+    "references": [
+      {
+        "title": "一波未平一波又起?AI大模型再出邪恶攻击工具_腾讯新闻",
+        "link": "https://new.qq.com/rain/a/20230809A031EN00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-08",
+    "relatedAttackTools": [
+      "AT0057",
+      "AT0063",
+      "AT0013",
+      "AT0054"
+    ],
+    "relatedThreatActors": [
+      "TA0012",
+      "TA0018",
+      "TA0031",
+      "TA0041"
+    ]
+  }
+}

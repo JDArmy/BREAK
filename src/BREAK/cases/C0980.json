@@ -1,0 +1,34 @@
+{
+  "C0980": {
+    "title": "和平精英坐挂车被封号话题",
+    "keywords": [
+      "和平精英",
+      "坐挂车",
+      "封号",
+      "外挂",
+      "组队作弊",
+      "游戏安全",
+      "抖音",
+      "处罚"
+    ],
+    "summary": "抖音平台“坐挂车被封号”话题下，有玩家发布视频称“再也不做挂车了，已老实”，反映《和平精英》等游戏中玩家因与开挂者组队（坐挂车）快速获益而被官方封号处罚的案例。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0102"
+    ],
+    "references": [
+      {
+        "title": "坐挂车被封号 - 抖音",
+        "link": "https://m.douyin.com/share/challenge/1701637565733888"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-07",
+    "relatedAttackTools": [
+      "AT0049"
+    ],
+    "relatedThreatActors": [
+      "TA0028"
+    ]
+  }
+}

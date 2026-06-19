@@ -1,0 +1,23 @@
+{
+  "C1540": {
+    "title": "LAPSUS$ Group Breaches Microsoft and Other Giants Using Session Token Replay Attacks",
+    "keywords": [
+      "LAPSUS$",
+      "session token replay",
+      "MFA bypass",
+      "Azure DevOps",
+      "NVIDIA",
+      "Samsung",
+      "Microsoft",
+      "social engineering attack",
+      "dark web",
+      "data exfiltration"
+    ],
+    "summary": "The LAPSUS$ hacking group breached Microsoft in March 2022 by leveraging compromised session tokens obtained from a public code repository, combining them with session token replay techniques to bypass multi-factor authentication (MFA) and exfiltrate 37GB of data from Azure DevOps servers. The group also purchased passwords and session tokens on the dark web to target over a dozen enterprises incl",
+    "references": [
+      {
+        "title": "16-Year-Old 'Genius Hacker' Repeatedly Breaches Samsung, Microsoft, Nvidia, and Other Giants - Tencent News"
+      }
+    ]
+  }
+}

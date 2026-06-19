@@ -1,0 +1,35 @@
+{
+  "C1298": {
+    "title": "数千个Google云API密钥泄露可被滥用访问Gemini服务",
+    "keywords": [
+      "Google Cloud",
+      "API密钥泄露",
+      "Gemini",
+      "客户端JavaScript",
+      "AIza前缀",
+      "Truffle Security",
+      "计费密钥",
+      "非人类身份",
+      "云安全"
+    ],
+    "summary": "Truffle Security公司发现近3000个以“AIza”前缀标识的Google API密钥被嵌入在客户端JavaScript代码中。当用户在Google云项目启用Gemini API时，这些原本仅用于计费的密钥会在无警告的情况下自动获得对Gemini端点的访问权限，攻击者可抓取这些密钥访问上传文件、缓存数据并产生巨额费用。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0149"
+    ],
+    "references": [
+      {
+        "title": "数千个Google云API密钥泄露,可被滥用访问Gemini服务|谷歌|调用|知名...",
+        "link": "https://www.163.com/dy/article/KN23TEBE05118UGF.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-03",
+    "relatedAttackTools": [
+      "AT0088"
+    ],
+    "relatedThreatActors": [
+      "TA0051"
+    ]
+  }
+}

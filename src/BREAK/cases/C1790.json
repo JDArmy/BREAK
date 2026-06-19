@@ -1,0 +1,31 @@
+{
+  "C1790": {
+    "title": "CISA 警告勒索软件团伙利用未修补的 SimpleHelp 远程监控工具入侵",
+    "keywords": [
+      "CISA",
+      "SimpleHelp",
+      "勒索软件",
+      "远程监控与管理",
+      "RMM",
+      "未修补漏洞",
+      "供应商远程访问",
+      "网络安全公告",
+      "AA25-163A"
+    ],
+    "summary": "美国网络安全与基础设施安全局（CISA）发布安全公告，确认勒索软件攻击者正积极利用未修补的 SimpleHelp 远程监控与管理软件漏洞入侵目标网络。CISA 敦促软件供应商、下游客户及终端用户立即采取缓解措施。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0254"
+    ],
+    "references": [
+      {
+        "title": "Ransomware Actors Exploit Unpatched SimpleHelp Remote Monitoring and Management Software",
+        "link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-163a"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "C1119": {
+    "title": "CrowdStrike分析间接提示注入攻击的隐蔽风险",
+    "keywords": [
+      "间接提示注入",
+      "CrowdStrike",
+      "Pangea",
+      "对抗性提示",
+      "GenAI安全",
+      "隐藏风险",
+      "提示注入技术",
+      "AI系统攻击"
+    ],
+    "summary": "CrowdStrike通过收购Pangea，分析了超过30万个对抗性提示，并跟踪了150多种提示注入技术。文章指出间接提示注入是将恶意信息插入到GenAI系统访问的数据源中，攻击者可能在电子邮件签名、文档元数据、网页内容、图像文件或数据库记录中隐藏对抗性指令。这些注入可被定向部署到特定公司员工可能访问的网页上，或广泛隐藏在行业研究报告中，以同时触及多个AI系统和目标。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0117-002"
+    ],
+    "references": [
+      {
+        "title": "Indirect Prompt Injection Attacks: Hidden AI Risks - CrowdStrike",
+        "link": "https://www.crowdstrike.com/en-us/blog/indirect-prompt-injection-attacks-hidden-ai-risks/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-12",
+    "relatedAttackTools": [
+      "AT0093"
+    ],
+    "relatedThreatActors": []
+  }
+}

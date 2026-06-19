@@ -1,0 +1,35 @@
+{
+  "C1366": {
+    "title": "Horizon跨链桥攻击事件",
+    "keywords": [
+      "Horizon跨链桥",
+      "Harmony",
+      "跨链桥攻击",
+      "验证机制突破",
+      "资产窃取",
+      "区块链安全",
+      "DeFi攻击",
+      "2022年6月"
+    ],
+    "summary": "2022年6月24日，Harmony团队发布推特称其Horizon跨链桥遭到攻击，损失金额约1亿美元。该事件涉及跨链桥验证机制被突破，导致锁定资产被大规模窃取。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0161"
+    ],
+    "references": [
+      {
+        "title": "近一亿美元失窃,Horizon跨链桥被攻击事件分析 - 知乎",
+        "link": "https://zhuanlan.zhihu.com/p/535062220"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-06",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0077"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

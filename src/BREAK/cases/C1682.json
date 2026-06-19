@@ -1,0 +1,38 @@
+{
+  "C1682": {
+    "title": "AUR atomic-lockfile供应链攻击事件",
+    "keywords": [
+      "Arch User Repository",
+      "AUR",
+      "atomic-lockfile",
+      "供应链攻击",
+      "PKGBUILD投毒",
+      "eBPF rootkit",
+      "窃密器",
+      "构建产物投毒",
+      "恶意安装脚本",
+      "Arch Linux"
+    ],
+    "summary": "2026年6月，Arch用户仓库(AUR)遭遇atomic-lockfile供应链攻击，攻击者向PKGBUILD文件注入恶意安装脚本，1600余个包被投毒，分发窃密器和eBPF rootkit。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0227"
+    ],
+    "references": [
+      {
+        "title": "GitHub - lenucksi/aur-malware-check: Detection tools for the June 2026 ...",
+        "link": "https://github.com/lenucksi/aur-malware-check"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-06",
+    "relatedAttackTools": [
+      "AT0064",
+      "AT0065",
+      "AT0087"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

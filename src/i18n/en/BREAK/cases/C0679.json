@@ -1,0 +1,21 @@
+{
+  "C0679": {
+    "title": "Guangdong Tech Co. Webpage Defacement Case",
+    "keywords": [
+      "arbitrary file upload vulnerability",
+      "webpage defacement",
+      "ransomware attack",
+      "remote access trojan",
+      "office collaboration platform",
+      "login page defacement",
+      "unpatched vulnerability",
+      "Guangdong"
+    ],
+    "summary": "During routine work, the cyberspace administration discovered that the login page of an office collaboration platform belonging to a Guangdong technology company had been defaced with illegal content. Investigation revealed an arbitrary file upload vulnerability in the system. After an initial ransomware attack, the company only reinstalled the operating system without fixing the underlying vulner",
+    "references": [
+      {
+        "title": "Cyberspace Administration of China releases recent law enforcement actions on cybersecurity, data security, and personal information protection..."
+      }
+    ]
+  }
+}

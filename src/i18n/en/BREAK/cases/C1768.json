@@ -1,0 +1,21 @@
+{
+  "C1768": {
+    "title": "CDN Poisoning in the Apifox Supply Chain Attack",
+    "keywords": [
+      "Apifox",
+      "supply chain attack",
+      "CDN poisoning",
+      "Electron",
+      "JavaScript injection",
+      "SSH key theft",
+      "Git credentials",
+      "CDN cache poisoning"
+    ],
+    "summary": "In March 2026, the API tool Apifox was hit by a supply chain attack. Attackers compromised its CDN at cdn.apifox.com and injected malicious code into hosted JavaScript files. Because the Apifox client is built on the Electron framework with insecure configurations, it loaded the poisoned scripts, enabling arbitrary command execution and the theft of high-value assets such as users' SSH keys and Gi",
+    "references": [
+      {
+        "title": "From Indiscriminate Attacks to APT Targeted Attacks: Complete Analysis of the Apifox Supply Chain Poisoning Attack Chain"
+      }
+    ]
+  }
+}

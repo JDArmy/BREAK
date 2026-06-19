@@ -1,0 +1,33 @@
+{
+  "C0549": {
+    "title": "北京一女子恶意调包退货被刑拘",
+    "keywords": [
+      "恶意调包退货",
+      "0元购",
+      "电商平台",
+      "诈骗",
+      "刑事拘留",
+      "退货造假",
+      "北京",
+      "调包骗款",
+      "新型犯罪"
+    ],
+    "summary": "北京一名女子利用电商平台漏洞，通过恶意调包退货的方式实施“0元购”，涉及近百单商品，最终被警方刑事拘留。该案揭示了买家以调包方式骗取退款的新型犯罪手法。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0054-002"
+    ],
+    "references": [
+      {
+        "title": "地方新闻精选|海南女孩遭霸凌事件校长被免职 湖南明确5种行为构成...",
+        "link": "https://view.inews.qq.com/k/20230324A07VA900?web_channel=wap&openApp=false"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-05",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0010"
+    ]
+  }
+}

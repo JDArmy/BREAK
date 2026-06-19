@@ -14,7 +14,8 @@ const entityTypes = [
   { dir: 'risks', name: 'Risk' },
   { dir: 'avoidances', name: 'Avoidance' },
   { dir: 'attack-tools', name: 'AttackTool' },
-  { dir: 'threat-actors', name: 'ThreatActor' }
+  { dir: 'threat-actors', name: 'ThreatActor' },
+  { dir: 'cases', name: 'Case' }
 ];
 
 let totalCount = 0;

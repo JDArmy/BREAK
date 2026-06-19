@@ -1,0 +1,21 @@
+{
+  "C1662": {
+    "title": "Capital One Data Breach: AWS Misconfiguration and IDOR Vulnerability",
+    "keywords": [
+      "Capital One breach",
+      "AWS misconfiguration",
+      "IDOR vulnerability",
+      "insecure direct object reference",
+      "API object-level authorization bypass",
+      "cloud data exposure",
+      "PII leak",
+      "credit card application data"
+    ],
+    "summary": "In 2019, an attacker exploited an AWS misconfiguration and an IDOR (Insecure Direct Object Reference) vulnerability to access data of over 100 million Capital One customers, including credit card applications, bank account details, and personally identifiable information. The incident, one of the largest data breaches in U.S. history, resulted in Capital One paying over $80 million in fines.",
+    "references": [
+      {
+        "title": "012_Web Security Attack and Defense Practice: In-Depth Analysis and Protection of IDOR Insecure Direct Object Reference Vulnerability..."
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "C0961": {
+    "title": "FBI 发布关于规避住宅代理网络风险的警报",
+    "keywords": [
+      "FBI",
+      "住宅代理",
+      "IP黑名单绕过",
+      "流量路由",
+      "受感染设备",
+      "执法追踪",
+      "网络犯罪",
+      "警报"
+    ],
+    "summary": "美国联邦调查局（FBI）发布警报，指出犯罪分子利用住宅代理网络隐藏其真实 IP 地址，使得与犯罪活动关联的 IP 无法被追溯到攻击者本人。住宅代理通过将流量路由到受感染的住宅设备，帮助攻击者规避 IP 黑名单检测和执法追踪。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0099"
+    ],
+    "references": [
+      {
+        "title": "Evading Residential Proxy Networks: Protecting Your Devices ... - FBI",
+        "link": "https://www.fbi.gov/investigate/cyber/alerts/2026/evading-residential-proxy-networks-protecting-your-devices-from-becoming-a-tool-for-criminals"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

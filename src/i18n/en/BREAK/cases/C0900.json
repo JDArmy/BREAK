@@ -1,0 +1,21 @@
+{
+  "C0900": {
+    "title": "23andMe Data Breach: Account Takeover via Brute Force and Credential Stuffing",
+    "keywords": [
+      "23andMe",
+      "data breach",
+      "brute force",
+      "credential stuffing",
+      "account takeover",
+      "genetic data",
+      "health data",
+      "automated attack"
+    ],
+    "summary": "The 23andMe data breach involved attackers using relatively simple yet effective brute force and credential stuffing techniques to systematically attempt logins at scale, successfully accessing and exfiltrating a large volume of user genetic and health data.",
+    "references": [
+      {
+        "title": "The 23andMe Data Breach: Analyzing Credential Stuffing Attacks..."
+      }
+    ]
+  }
+}

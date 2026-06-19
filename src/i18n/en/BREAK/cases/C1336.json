@@ -1,0 +1,22 @@
+{
+  "C1336": {
+    "title": "CAPTCHAgeddon Campaign Uses Fake CAPTCHA Pages to Deliver Malware",
+    "keywords": [
+      "CAPTCHAgeddon",
+      "ClickFix",
+      "fake CAPTCHA",
+      "malware delivery",
+      "PowerShell",
+      "browser-based attack",
+      "information theft",
+      "remote access trojan",
+      "social engineering"
+    ],
+    "summary": "A sophisticated malware campaign dubbed CAPTCHAgeddon leverages fake CAPTCHA verification pages to trick users into executing malicious PowerShell commands. Considered a next-generation variant of traditional fake browser update scams, this browser-based attack technique deceives users into manually running malicious code, leading to information theft or remote control.",
+    "references": [
+      {
+        "title": "CAPTCHAgeddon - New ClickFix Attack Leverages Fake Captcha to Deliver ..."
+      }
+    ]
+  }
+}

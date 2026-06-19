@@ -1,0 +1,21 @@
+{
+  "C1263": {
+    "title": "SSLStrip Attack: Man-in-the-Middle Downgrade from HTTPS to HTTP",
+    "keywords": [
+      "SSLStrip",
+      "HTTPS downgrade",
+      "man-in-the-middle",
+      "HSTS",
+      "plaintext interception",
+      "TLS",
+      "credential theft",
+      "network security"
+    ],
+    "summary": "SSLStrip is a classic man-in-the-middle attack that exploits the transition phase from HTTP to HTTPS. The attacker prevents the client from establishing an HTTPS connection with the server, forcibly maintaining an insecure HTTP connection. The attacker establishes an HTTP connection with the client while maintaining a normal HTTPS connection with the server, intercepting and reading all plaintext ",
+    "references": [
+      {
+        "title": "GitHub - Meirzv/TLS_MITM-Attack: SSL Strip Attack"
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "C1569": {
+    "title": "重新衡量以太坊中最大可提取价值的套利与夹层攻击",
+    "keywords": [
+      "最大可提取价值",
+      "MEV",
+      "以太坊",
+      "套利攻击",
+      "夹层攻击",
+      "区块链安全",
+      "交易排序",
+      "Gas费操纵",
+      "去中心化金融"
+    ],
+    "summary": "该学术研究指出，在以太坊区块链上，通过策略性地在区块内包含、排除或重新排序交易，区块生产者可以提取额外价值，即最大可提取价值（MEV）。截至2022年9月，以太坊上的MEV提取金额约为6.75亿美元。套利和夹层攻击是两种主流的MEV提取方式，占据了MEV活动的99%以上。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0204"
+    ],
+    "references": [
+      {
+        "title": "Remeasuring the Arbitrage and Sandwich Attacks of Maximal Extractable Value in Ethereum",
+        "link": "https://arxiv.org/html/2405.17944v2"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-05",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

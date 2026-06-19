@@ -1,0 +1,21 @@
+{
+  "C1493": {
+    "title": "Pikachu: Securing PoS Blockchains from Long-Range Attacks by Checkpointing into Bitcoin PoW using Taproot",
+    "keywords": [
+      "PoS",
+      "long-range attacks",
+      "checkpointing",
+      "Bitcoin",
+      "Taproot",
+      "PoW",
+      "blockchain security",
+      "Pikachu"
+    ],
+    "summary": "This research highlights that PoS blockchains are vulnerable to long-range attacks, where adversaries can corrupt early participants to rewrite the chain's entire history. It proposes embedding PoS chain checkpoints into the Bitcoin PoW chain to prevent such attacks, stopping attackers from using costless simulation to construct alternative chains.",
+    "references": [
+      {
+        "title": "Stake-Bleeding Attacks on Proof-of-Stake Blockchains"
+      }
+    ]
+  }
+}

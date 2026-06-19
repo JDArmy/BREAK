@@ -1,0 +1,21 @@
+{
+  "C1183": {
+    "title": "Microsoft Urgently Removes Nearly 100 Poisoned Open-Source Repositories",
+    "keywords": [
+      "GitHub repository poisoning",
+      "TeamPCP",
+      "Durable Task malware",
+      "Azure Functions breach",
+      "Claude Code credential theft",
+      "Gemini CLI attack",
+      "supply chain compromise",
+      "malicious open-source repo"
+    ],
+    "summary": "Microsoft removed 73 of its own repositories from GitHub, including Azure Functions, Durable Task, and AI sample applications. The hacker group TeamPCP breached the Durable Task repository and injected malicious configurations that steal user credentials when opened in AI coding tools such as Claude Code and Gemini CLI. TeamPCP had previously published three malicious versions, impacting hundreds ",
+    "references": [
+      {
+        "title": "Microsoft Urgently Shuts Down Nearly 100 Open-Source Repos: AI Projects Poisoned, User Sensitive Data Stolen"
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C0409": {
+    "title": "Uber MFA Fatigue Attack Incident",
+    "keywords": [
+      "Uber",
+      "MFA fatigue attack",
+      "multi-factor authentication",
+      "social engineering",
+      "credential theft",
+      "WhatsApp phishing",
+      "internal server breach",
+      "authentication bypass"
+    ],
+    "summary": "In September 2022, an 18-year-old hacker obtained an Uber employee's credentials and bombarded the employee with MFA push notifications for over an hour. The attacker then contacted the employee on WhatsApp, posing as a member of Uber's IT team, and claimed that approving the request was necessary to stop the notifications. Due to fatigue and manipulation, the employee eventually approved the requ",
+    "references": [
+      {
+        "title": "Dealing with MFA Fatigue: Protecting Your Cybersecurity_Hackers_Usernames_Authentication - Sohu"
+      }
+    ]
+  }
+}

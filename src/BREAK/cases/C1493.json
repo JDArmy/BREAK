@@ -1,0 +1,30 @@
+{
+  "C1493": {
+    "title": "Pikachu：通过使用Taproot将检查点嵌入比特币PoW来保护PoS区块链免受长程攻击",
+    "keywords": [
+      "PoS",
+      "长程攻击",
+      "检查点",
+      "比特币",
+      "Taproot",
+      "PoW",
+      "区块链安全",
+      "Pikachu"
+    ],
+    "summary": "该研究指出PoS区块链易受长程攻击，攻击者可腐蚀早期参与者以重写链的完整历史。文章提出通过将PoS链的检查点嵌入比特币PoW链来防御此类攻击，防止攻击者利用无成本模拟构造替代链。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0187"
+    ],
+    "references": [
+      {
+        "title": "[PDF] Pikachu: Securing PoS Blockchains from Long-Range Attacks by ...",
+        "link": "https://arxiv.org/pdf/2208.05408"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-08",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

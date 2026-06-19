@@ -1,0 +1,35 @@
+{
+  "C1489": {
+    "title": "TEE内部检测日食攻击方案",
+    "keywords": [
+      "日食攻击",
+      "Eclipse Attack",
+      "TEE",
+      "Enclave",
+      "区块链",
+      "工作量证明",
+      "难度参数",
+      "以太坊",
+      "攻击检测"
+    ],
+    "summary": "依赖区块链保证完整性和可用性的 Enclave 应用容易遭受日食攻击。该研究提出了一种即使在攻击者控制所有网络连接时也能可靠检测扩展日食攻击的方法。通过监控工作量证明协议中的难度参数变化，算法可检测新区块被抑制以及攻击者试图通过降低难度将 Enclave 客户端强制拉到恶意分叉上的攻击行为。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0186"
+    ],
+    "references": [
+      {
+        "title": "Total eclipse of the enclave: detecting eclipse attacks from inside tees",
+        "link": "https://ieeexplore.ieee.org/abstract/document/9461081/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-05",
+    "relatedAttackTools": [
+      "AT0078"
+    ],
+    "relatedThreatActors": [
+      "TA0046"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C1573": {
+    "title": "First-price sealed-bid auction for ethereum gas auction under flashbots",
+    "keywords": [
+      "Ethereum",
+      "Flashbots",
+      "gas auction",
+      "MEV",
+      "miner",
+      "gas fee manipulation",
+      "sealed-bid auction",
+      "front-running"
+    ],
+    "summary": "This study examines the Ethereum gas auction mechanism under Flashbots, highlighting how miners manipulate gas fees for profit and how MEV leads to blind gas fee bidding.",
+    "references": [
+      {
+        "title": "First-price sealed-bid auction for ethereum gas auction under flashbots"
+      }
+    ]
+  }
+}

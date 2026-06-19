@@ -1,0 +1,21 @@
+{
+  "C1444": {
+    "title": "Ethereum Classic Hard Fork Replay Attack and EIP-155 Protection",
+    "keywords": [
+      "replay attack",
+      "Ethereum Classic",
+      "EIP-155",
+      "chainId",
+      "hard fork",
+      "transaction signature",
+      "cross-chain",
+      "blockchain security"
+    ],
+    "summary": "After the Ethereum and Ethereum Classic hard fork, attackers could replay legitimate transactions from one chain onto the other because transaction signatures did not include a chain identifier, leading to double transfers of assets. The EIP-155 proposal introduced the chainId field, requiring transaction signatures to include a chain identifier, thereby preventing such cross-chain replay attacks ",
+    "references": [
+      {
+        "title": "What are Replay Attacks? A dive into replay attacks on ... - QuickNode"
+      }
+    ]
+  }
+}

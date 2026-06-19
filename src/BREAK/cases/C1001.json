@@ -1,0 +1,34 @@
+{
+  "C1001": {
+    "title": "CF排位赛演员送分及老板刷分的打击公告",
+    "keywords": [
+      "穿越火线",
+      "CF",
+      "排位赛",
+      "演员送分",
+      "老板刷分",
+      "游戏公平机制",
+      "禁赛处罚",
+      "安全团队",
+      "违规玩家"
+    ],
+    "summary": "2022年3月11日，穿越火线官方发布公告，针对排位赛中存在的恶意演员、带老板刷分等严重影响玩家体验和破坏排位公平机制的行为进行排查与处罚。经安全团队核实，对违规玩家处以清除排位分起步、排位赛梯度升级，最高禁赛时长达180天的处罚，并公示了处罚名单。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0107"
+    ],
+    "references": [
+      {
+        "title": "火线报道:关于CF排位赛演员送分及老板刷分的打击公告 --穿越火线官方网...",
+        "link": "https://cf.qq.com/webplat/info/news_version3/125/860/861/m640/202203/911291.shtml"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-03",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0027",
+      "TA0028"
+    ]
+  }
+}

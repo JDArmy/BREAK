@@ -1,0 +1,37 @@
+{
+  "C0851": {
+    "title": "Microsoft披露针对全球多组织的大规模凭证窃取钓鱼活动",
+    "keywords": [
+      "凭证窃取",
+      "钓鱼活动",
+      "行为准则诱饵",
+      "多阶段攻击链",
+      "AITM令牌泄露",
+      "Microsoft Defender",
+      "合法邮件服务",
+      "身份验证令牌",
+      "全球组织",
+      "钓鱼攻击"
+    ],
+    "summary": "Microsoft Defender Research观察到一场大规模凭证窃取活动，攻击者利用“行为准则”主题的诱饵和多步骤攻击链，通过合法电子邮件服务分发来自攻击者控制域名的完全认证邮件，针对26个国家超过13,000个组织的35,000多名用户，窃取身份验证令牌。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0084"
+    ],
+    "references": [
+      {
+        "title": "Breaking the code: Multi-stage 'code of conduct' phishing campaign ...",
+        "link": "https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-05",
+    "relatedAttackTools": [
+      "AT0063",
+      "AT0072"
+    ],
+    "relatedThreatActors": [
+      "TA0017"
+    ]
+  }
+}

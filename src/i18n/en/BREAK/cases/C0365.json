@@ -1,0 +1,20 @@
+{
+  "C0365": {
+    "title": "Analysis of Brute-Force Attacks Against SSH Servers",
+    "keywords": [
+      "SSH brute-force",
+      "authentication log analysis",
+      "credential guessing",
+      "automated attack tools",
+      "intrusion detection",
+      "server security",
+      "brute-force attack"
+    ],
+    "summary": "A study of authentication logs from SSH servers reveals that a high volume of consecutive failed login attempts serves as a typical indicator of brute-force attacks. Attackers employ automated tools to guess credentials by trying various username and password combinations in an attempt to gain server access. This research analyzes attack patterns and detection methods through case studies.",
+    "references": [
+      {
+        "title": "Who is trying to compromise your SSH server? An analysis of authentication logs and detection of bruteforce attacks"
+      }
+    ]
+  }
+}

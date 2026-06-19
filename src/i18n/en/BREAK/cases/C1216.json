@@ -1,0 +1,21 @@
+{
+  "C1216": {
+    "title": "Privacy Inference Attacks Threaten Federated Learning Training Data Security",
+    "keywords": [
+      "privacy inference attack",
+      "federated learning",
+      "gradient inversion",
+      "attribute inference attack",
+      "training data leakage",
+      "privacy-preserving computation",
+      "model inversion attack",
+      "data privacy protection"
+    ],
+    "summary": "In federated learning, attackers can reconstruct original training data or infer sensitive attributes of participants from shared gradient information through model inversion or attribute inference attacks. This exploits information leakage during privacy-preserving computation, undermining data privacy protection goals.",
+    "references": [
+      {
+        "title": "A Survey of Privacy Inference Attacks and Defenses in Centralized and Federated Learning"
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "C1483": {
+    "title": "周杰伦NFT被盗事件",
+    "keywords": [
+      "周杰伦",
+      "无聊猿",
+      "BAYC",
+      "NFT被盗",
+      "钓鱼攻击",
+      "虚拟资产盗窃",
+      "钱包授权",
+      "以太坊",
+      "OpenSea"
+    ],
+    "summary": "2022年4月，歌手周杰伦持有的“无聊猿游艇俱乐部”（BAYC）NFT被钓鱼网站窃取，该NFT价值超320万元人民币。攻击者通过诱导授权获取钱包权限，快速转移资产，凸显NFT等虚拟资产的安全风险。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0185"
+    ],
+    "references": [
+      {
+        "title": "加密资产相关案件不断增加,但财产认定依旧困难_腾讯新闻",
+        "link": "https://new.qq.com/omn/20220421/20220421A07QFG00.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-04",
+    "relatedAttackTools": [
+      "AT0079"
+    ],
+    "relatedThreatActors": [
+      "TA0047"
+    ]
+  }
+}

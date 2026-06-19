@@ -1,0 +1,23 @@
+{
+  "C1334": {
+    "title": "ClickFix Campaigns Distribute MacSync Infostealer via Fake AI Tool Installers",
+    "keywords": [
+      "ClickFix",
+      "MacSync",
+      "infostealer",
+      "macOS trojan",
+      "fake AI installer",
+      "malicious command execution",
+      "social engineering",
+      "Sophos",
+      "browser credential theft",
+      "cross-platform attack"
+    ],
+    "summary": "In March 2026, researchers identified three distinct ClickFix attack campaigns using fake AI tool installers as lures to deliver the MacSync information-stealing trojan. The attacks rely entirely on user interaction, tricking macOS users into copying and executing malicious commands rather than exploiting vulnerabilities. MacSync is purpose-built to harvest sensitive data from macOS systems, inclu",
+    "references": [
+      {
+        "title": "ClickFix Attack Campaign Spreads MacSync Info-Stealing Trojan via Fake AI Tool Installers | New..."
+      }
+    ]
+  }
+}

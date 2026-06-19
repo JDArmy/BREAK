@@ -1,0 +1,35 @@
+{
+  "C0496": {
+    "title": "交行储户李红被假人脸盗刷近43万元",
+    "keywords": [
+      "人脸识别绕过",
+      "交通银行",
+      "屏幕共享",
+      "恶意App",
+      "假人脸视频",
+      "盗刷",
+      "李红",
+      "北京市丰台区人民法院"
+    ],
+    "summary": "北京市丰台区人民法院受理的案件中，原告李红被诈骗分子诱导下载恶意App并开启屏幕共享，获取其人脸视频及银行卡信息。诈骗分子利用假人脸视频攻破交通银行App的6次人脸识别验证，盗走账户内近43万元资金。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0048"
+    ],
+    "references": [
+      {
+        "title": "银行真假人脸不分 储户资金被盗案件频发",
+        "link": "https://new.qq.com/omn/20220803/20220803A07NNK00.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2022-08",
+    "relatedAttackTools": [
+      "AT0056",
+      "AT0066"
+    ],
+    "relatedThreatActors": [
+      "TA0031"
+    ]
+  }
+}

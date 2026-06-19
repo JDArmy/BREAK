@@ -1,0 +1,39 @@
+{
+  "C0067": {
+    "title": "深圳查处一批滥用AI账号，涉及夸大宣传和营销",
+    "keywords": [
+      "深圳网信办",
+      "AI账号",
+      "伪科普",
+      "健康养生",
+      "夸大宣传",
+      "虚假营销",
+      "滥用人工智能",
+      "网络生态治理",
+      "侃侃养生",
+      "行政查处"
+    ],
+    "summary": "深圳网信部门通报查处一批滥用AI的账号，其中部分账号散布健康养生领域的“伪科普”内容，违规进行夸大宣传和营销，误导公众。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0006"
+    ],
+    "references": [
+      {
+        "title": "深圳最新通报: 一批滥用AI账号被查处",
+        "link": "https://news.qq.com/rain/a/20260104A07L7Q00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-01",
+    "relatedAttackTools": [
+      "AT0053",
+      "AT0056",
+      "AT0058",
+      "AT0093"
+    ],
+    "relatedThreatActors": [
+      "TA0041"
+    ]
+  }
+}

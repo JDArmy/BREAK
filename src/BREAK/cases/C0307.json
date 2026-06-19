@@ -1,0 +1,31 @@
+{
+  "C0307": {
+    "title": "Operation PowerOFF 查封53个DDoS域名并逮捕4人",
+    "keywords": [
+      "Operation PowerOFF",
+      "DDoS出租服务",
+      "域名查封",
+      "国际执法行动",
+      "分布式拒绝服务攻击",
+      "网络犯罪",
+      "DDoS基础设施",
+      "booter服务"
+    ],
+    "summary": "国际执法行动“Operation PowerOFF”查封了53个与商业化分布式拒绝服务（DDoS）攻击相关的域名，并逮捕了4名嫌疑人。这些DDoS出租服务被超过75,000名网络犯罪分子使用。行动中断了对这些服务的访问，并摧毁了其背后的技术基础设施。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0029-004",
+      "R0029"
+    ],
+    "references": [
+      {
+        "title": "Operation PowerOFF Seizes 53 DDoS Domains, Exposes 3 Million Criminal ...",
+        "link": "https://thehackernews.com/2026/04/operation-poweroff-seizes-53-ddos.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-04",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

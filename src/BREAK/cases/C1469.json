@@ -1,0 +1,35 @@
+{
+  "C1469": {
+    "title": "德国钢铁厂遭受网络攻击",
+    "keywords": [
+      "德国钢铁厂",
+      "网络攻击",
+      "高级持续性威胁",
+      "鱼叉式钓鱼邮件",
+      "工控系统",
+      "高炉控制",
+      "物理损坏",
+      "工业物联网安全",
+      "生产网络渗透"
+    ],
+    "summary": "德国一家钢铁厂遭受高级持续性威胁攻击，攻击者通过鱼叉式钓鱼邮件渗透办公网络，进而入侵生产网络。攻击者获得了高炉控制系统的访问权限，导致设备无法正常关闭，造成重大物理损坏。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0179"
+    ],
+    "references": [
+      {
+        "title": "A multi-layer industrial-IoT attack taxonomy: Layers, dimensions, techniques and application",
+        "link": "https://ieeexplore.ieee.org/abstract/document/9343166/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2014",
+    "relatedAttackTools": [
+      "AT0063"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

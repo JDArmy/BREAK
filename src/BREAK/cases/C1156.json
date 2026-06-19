@@ -1,0 +1,31 @@
+{
+  "C1156": {
+    "title": "新氧医美APP青少年模式存在漏洞",
+    "keywords": [
+      "新氧医美",
+      "青少年模式",
+      "应用漏洞",
+      "卸载重装绕过",
+      "游客模式",
+      "未成年人保护",
+      "APP合规",
+      "颜值经济",
+      "强制登陆"
+    ],
+    "summary": "新氧APP的青少年模式存在漏洞，用户只需卸载重装即可绕过限制，且APP无强制登陆提醒，游客身份可无限制浏览。此前央媒已报道相关问题，但9个月后漏洞依然存在。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0124"
+    ],
+    "references": [
+      {
+        "title": "劣迹艺人做代言,青少年模式形同虚设……新氧医美用“颜值”颠倒...",
+        "link": "https://new.qq.com/omn/20211011/20211011A06L5300.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2021-10",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

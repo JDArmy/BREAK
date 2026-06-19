@@ -1,0 +1,31 @@
+{
+  "C1063": {
+    "title": "益阳移动助力公安机关快速破获VOIP诈骗案",
+    "keywords": [
+      "VOIP设备",
+      "电信网络诈骗",
+      "益阳移动",
+      "未授权设备接入",
+      "公安机关",
+      "诈骗窝点",
+      "境外诈骗"
+    ],
+    "summary": "2025年12月，益阳移动协助公安机关成功捣毁2处利用VOIP设备实施电信网络诈骗的窝点，抓获涉案嫌疑人并查获VOIP设备2套。嫌疑人将VOIP设备非法接入网络，为境外诈骗提供通讯支持。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0112-003"
+    ],
+    "references": [
+      {
+        "title": "益阳移动助力公安机关快速破获VOIP诈骗案-益阳新闻网",
+        "link": "https://www.yyrb.cn/minshe/20251230/f2e12f3e231ab8f26fe5215c3d495e78.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-12",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0015"
+    ]
+  }
+}

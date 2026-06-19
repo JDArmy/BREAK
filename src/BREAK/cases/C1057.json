@@ -1,0 +1,33 @@
+{
+  "C1057": {
+    "title": "中国联通协助警方阻断非法接入通信设备违法风险",
+    "keywords": [
+      "VOIP设备",
+      "非法接入",
+      "语音外线",
+      "诈骗通道",
+      "中国联通",
+      "临沂",
+      "反诈预警",
+      "线缆搭接",
+      "运营商固话"
+    ],
+    "summary": "2026年5月21日，中国联通临沂分公司接反诈预警，在临沂沂河新区某写字楼内发现一男子私自搭接9条线缆，将两台VOIP设备非法接入联通语音外线，搭建诈骗通道。工程师现场断电关停设备，警方20分钟内控制嫌疑人并拆除设备。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0112-003"
+    ],
+    "references": [
+      {
+        "title": "中国联通高效协助警方阻断非法接入通信设备违法风险|固话|运营商|电 ...",
+        "link": "https://www.163.com/dy/article/KUBVAQJ90530WJIN.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-05",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0015"
+    ]
+  }
+}

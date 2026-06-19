@@ -1,0 +1,36 @@
+{
+  "C1333": {
+    "title": "大规模ClickFix钓鱼攻击针对酒店系统传播PureRAT远控木马",
+    "keywords": [
+      "ClickFix",
+      "PureRAT",
+      "酒店系统",
+      "钓鱼攻击",
+      "远控木马",
+      "Push Security",
+      "恶意命令执行",
+      "远程访问木马"
+    ],
+    "summary": "2025年11月，Push Security披露了一起大规模ClickFix钓鱼攻击活动，攻击者针对酒店系统发起攻击。该活动在伪造的验证页面中嵌入视频、倒计时和'最近一小时验证用户数'计数器等元素，增强欺骗真实性。攻击者诱导用户复制并执行恶意命令，最终传播PureRAT远程访问木马，实现对酒店系统的远程控制和数据窃取。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0154"
+    ],
+    "references": [
+      {
+        "title": "Large-Scale ClickFix Phishing Attacks Target Hotel Systems with PureRAT ...",
+        "link": "https://thehackernews.com/2025/11/large-scale-clickfix-phishing-attacks.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-11",
+    "relatedAttackTools": [
+      "AT0075",
+      "AT0013"
+    ],
+    "relatedThreatActors": [
+      "TA0012",
+      "TA0018"
+    ]
+  }
+}

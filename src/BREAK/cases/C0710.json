@@ -1,0 +1,31 @@
+{
+  "C0710": {
+    "title": "字节跳动旗下“剪映”“猫箱”“即梦AI”被查处",
+    "keywords": [
+      "剪映",
+      "猫箱",
+      "即梦AI",
+      "字节跳动",
+      "AIGC",
+      "内容标识",
+      "生成式AI",
+      "合规",
+      "行政处罚"
+    ],
+    "summary": "2026年4月，字节跳动旗下剪映、猫箱、即梦AI三平台因AI生成合成内容标识的系统性合规缺失被查处。监管部门依据相关法规，对生成式AI服务未履行内容标识义务进行执法，表明监管对AI生成内容标识合规的硬约束。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0071-002"
+    ],
+    "references": [
+      {
+        "title": "第一罚:从“剪映”“猫箱”“即梦AI”被查处看生成式AI合规的“硬约束”",
+        "link": "https://zhuanlan.zhihu.com/p/2032896946088751611"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-04",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

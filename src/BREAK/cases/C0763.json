@@ -1,0 +1,32 @@
+{
+  "C0763": {
+    "title": "《Project GT》合作方泄露商业计划书致虚假众筹事件",
+    "keywords": [
+      "游戏行业",
+      "商业计划书泄露",
+      "虚假众筹",
+      "KickStarter",
+      "虹吸工作室",
+      "代号GT",
+      "合作方数据泄露",
+      "知识产权侵权"
+    ],
+    "summary": "游戏《代号：GT》开发商虹吸工作室指控，外部组织利用合作方泄露的早期业内交流BP素材，在KickStarter发起虚假众筹，冒充官方进行诈骗。泄露内容包含角色设计、实机截图等未公开研发资料，导致开发商需紧急澄清并申诉维权。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0078-001"
+    ],
+    "references": [
+      {
+        "title": "律师评二游假冒众筹事件；高管盗代码牟利，被罚340万元 | 一周说...",
+        "link": "https://new.qq.com/rain/a/20260615A04LQ900"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-06",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0036"
+    ]
+  }
+}

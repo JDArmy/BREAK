@@ -1,0 +1,22 @@
+{
+  "C0440": {
+    "title": "Analysis of Emerging Credential Stuffing Attacks Involving AI Agents",
+    "keywords": [
+      "AI agents",
+      "credential stuffing",
+      "credit card fraud",
+      "automated attacks",
+      "HUMAN Security",
+      "fraud detection",
+      "AI agent simulation",
+      "payment security",
+      "behavioral bypass"
+    ],
+    "summary": "Security researchers have observed early fraud patterns leveraging AI agents for credential stuffing as AI-driven traffic surges. Attackers may use AI agents to simulate human behavior, automating the validation and testing of stolen credit card information to bypass traditional rule-based detection mechanisms, marking an evolution in credential stuffing techniques.",
+    "references": [
+      {
+        "title": "AI Agents and Fraud: Early Evidence of Carding Behavior in the Wild"
+      }
+    ]
+  }
+}

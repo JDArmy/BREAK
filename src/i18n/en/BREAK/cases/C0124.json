@@ -1,0 +1,19 @@
+{
+  "C0124": {
+    "title": "DECAF: Detecting Mobile In-App Ad Fraud",
+    "keywords": [
+      "DECAF ad fraud detection",
+      "mobile ad display fraud",
+      "in-app ad placement rules",
+      "automated app navigation",
+      "visual element scanning",
+      "Microsoft Research ad fraud"
+    ],
+    "summary": "A research team designed the DECAF system to automatically detect ad display fraud in mobile apps. By automating app navigation and scanning visual elements, it checks whether ads violate scalable placement and display rules. DECAF has been applied to 1,150 tablet apps and 50,000 phone apps, and was used by Microsoft's ad fraud team to uncover numerous instances of ad fraud.",
+    "references": [
+      {
+        "title": "{DECAF}: Detecting and characterizing ad fraud in mobile apps"
+      }
+    ]
+  }
+}

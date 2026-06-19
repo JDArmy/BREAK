@@ -1,0 +1,34 @@
+{
+  "C0519": {
+    "title": "Claude Code源码泄露事件：社区逆向工程技术深度解析",
+    "keywords": [
+      "Claude Code",
+      "Anthropic",
+      "逆向工程",
+      "源码泄露",
+      "Source Map",
+      "DMCA",
+      "版权侵权",
+      "反编译"
+    ],
+    "summary": "文章提及社区通过逆向工程技术对Anthropic的Claude Code产品进行反编译，还原出模块化清晰的源码结构。尽管是反编译产物，但代码展现出良好的模块化，各功能模块边界清晰、类型定义与实现分离。文章同时指出，多数司法管辖区将Source Map逆向视为版权侵权，Anthropic可随时发起DMCA下架。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0051"
+    ],
+    "references": [
+      {
+        "title": "Claude Code 源码泄露事件：社区逆向工程技术深度解析 - 知乎",
+        "link": "https://zhuanlan.zhihu.com/p/2022588541079666779"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-04",
+    "relatedAttackTools": [
+      "AT0028"
+    ],
+    "relatedThreatActors": [
+      "TA0036"
+    ]
+  }
+}

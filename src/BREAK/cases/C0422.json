@@ -1,0 +1,30 @@
+{
+  "C0422": {
+    "title": "浙江泰隆银行聚合收款APP“泰惠收”被通报违规收集个人信息",
+    "keywords": [
+      "泰惠收",
+      "浙江泰隆商业银行",
+      "违规收集个人信息",
+      "工信部通报",
+      "APP侵害用户权益",
+      "聚合收款",
+      "过度索取权限",
+      "应用下架"
+    ],
+    "summary": "2023年11月30日，工信部通报22款侵害用户权益的APP，浙江泰隆商业银行的聚合收款APP“泰惠收”因违规收集个人信息、强制频繁过度索取权限被点名。该APP为商户提供聚合收款服务，整合多种收款方式。泰隆银行回应称未在三星应用商店发布官方版本，正紧急排查并下架。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0037"
+    ],
+    "references": [
+      {
+        "title": "APP涉嫌违规收集个人信息被通报 浙江泰隆银行:非官方版本,正紧急...",
+        "link": "https://new.qq.com/rain/a/20231201A0AX1400"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-11",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

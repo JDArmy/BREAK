@@ -1,0 +1,21 @@
+{
+  "C1459": {
+    "title": "Electromagnetic Side-Channel Analysis of IoT Cameras",
+    "keywords": [
+      "electromagnetic side-channel",
+      "IoT camera",
+      "Axis M3045-V",
+      "electromagnetic radiation leakage",
+      "side-channel attack",
+      "IoT security",
+      "information extraction",
+      "hardware security"
+    ],
+    "summary": "This study conducts an electromagnetic side-channel attack on the widely deployed IoT camera Axis M3045-V. By analyzing the device's electromagnetic radiation leakage, internal information was successfully extracted. This case demonstrates the real-world threat posed by electromagnetic analysis to IoT devices.",
+    "references": [
+      {
+        "title": "Architectural vulnerabilities of IoT devices in the context of side ..."
+      }
+    ]
+  }
+}

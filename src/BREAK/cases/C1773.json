@@ -1,0 +1,36 @@
+{
+  "C1773": {
+    "title": "F5 BIG-IP边缘设备配置缺陷引发企业入侵",
+    "keywords": [
+      "F5 BIG-IP",
+      "边缘设备",
+      "配置缺陷",
+      "初始访问",
+      "Confluence",
+      "凭证窃取",
+      "Kerberos中继",
+      "横向移动",
+      "多阶段攻击",
+      "微软安全"
+    ],
+    "summary": "微软安全团队披露了一起多阶段攻击事件，攻击者首先利用暴露在互联网上的F5 BIG-IP边缘设备的安全缺陷获得初始访问权限，随后横向移动至内部Confluence服务器窃取凭证，并尝试进行Kerberos中继攻击以扩大战果。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0250"
+    ],
+    "references": [
+      {
+        "title": "From edge appliance to enterprise compromise: Multi-stage Linux ...",
+        "link": "https://www.microsoft.com/en-us/security/blog/2026/05/22/from-edge-appliance-to-enterprise-compromise-multi-stage-linux-intrusion-via-f5-and-confluence/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-05",
+    "relatedAttackTools": [
+      "AT0096"
+    ],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "C1766": {
+    "title": "Study Highlights Challenges for Android Anti-Repackaging Techniques",
+    "keywords": [
+      "Android repackaging",
+      "anti-repackaging",
+      "app repackaging",
+      "mobile app tampering",
+      "malware redistribution",
+      "code protection bypass",
+      "attacker advantage",
+      "arXiv"
+    ],
+    "summary": "A research paper notes that app repackaging refers to modifying existing mobile applications and redistributing them to trick users into installing malicious versions. Despite the existence of anti-repackaging protections, the large volume of repackaged apps in the Android ecosystem indicates that attackers can detect and bypass these defenses, giving them the upper hand.",
+    "references": [
+      {
+        "title": "You Shall Not Repackage! Demystifying Anti-Repackaging on Android"
+      }
+    ]
+  }
+}

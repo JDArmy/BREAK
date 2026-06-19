@@ -1,0 +1,30 @@
+{
+  "C1143": {
+    "title": "NFT洗售交易的大规模实证研究",
+    "keywords": [
+      "NFT",
+      "洗售交易",
+      "wash trading",
+      "欺诈",
+      "区块链",
+      "交易量操纵",
+      "价格操纵",
+      "数字资产",
+      "实证研究"
+    ],
+    "summary": "通过对超过270万个NFT销售事件的分析，该研究识别出三种类型的NFT洗售交易，并提出了相应的启发式算法。洗售交易人为抬高价格和交易量，是NFT市场中的一种欺诈行为。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0122"
+    ],
+    "references": [
+      {
+        "title": "The dark side of NFTs: A large-scale empirical study of wash trading",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3671016.3674808"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

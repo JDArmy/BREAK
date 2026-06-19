@@ -1,0 +1,36 @@
+{
+  "C0301": {
+    "title": "HTTP洪水攻击缓解：基于元数据分析的检测方法",
+    "keywords": [
+      "HTTP GET洪水攻击",
+      "元数据分析",
+      "僵尸网络",
+      "CC攻击",
+      "IEEE",
+      "应用层DDoS",
+      "请求频率异常",
+      "实时大数据分析",
+      "攻击缓解"
+    ],
+    "summary": "2015年IEEE国际会议论文提出一种基于元数据监控的HTTP GET洪水攻击防御方法。攻击者通过僵尸网络发送大量合法HTTP GET请求耗尽服务器资源。该方法通过实时大数据分析识别请求频率异常的IP地址，在9Gbps攻击流量下仍能保障正常服务。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0029-003"
+    ],
+    "references": [
+      {
+        "title": "Mitigating HTTP flooding attacks with meta-data analysis",
+        "link": "https://ieeexplore.ieee.org/abstract/document/7336365/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2015-08",
+    "relatedAttackTools": [
+      "AT0022",
+      "AT0023"
+    ],
+    "relatedThreatActors": [
+      "TA0013"
+    ]
+  }
+}

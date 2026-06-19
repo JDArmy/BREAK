@@ -1,0 +1,22 @@
+{
+  "C1693": {
+    "title": "SBOM generation tool differences cause high variability in vulnerability detection counts",
+    "keywords": [
+      "SBOM",
+      "Syft",
+      "Trivy",
+      "vulnerability detection",
+      "Docker images",
+      "software supply chain",
+      "SBOM generation tools",
+      "empirical study",
+      "vulnerability visibility"
+    ],
+    "summary": "An empirical study of 2,313 Docker images finds that SBOMs produced by different generation tools such as Syft and Trivy, and in different formats, yield highly variable vulnerability counts, revealing that the method of SBOM generation directly affects vulnerability visibility.",
+    "references": [
+      {
+        "title": "Impacts of Software Bill of Materials (SBOM) Generation on ..."
+      }
+    ]
+  }
+}

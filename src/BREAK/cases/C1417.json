@@ -1,0 +1,36 @@
+{
+  "C1417": {
+    "title": "Deus Finance 预言机操纵攻击损失超300万美元",
+    "keywords": [
+      "Deus Finance",
+      "预言机操纵",
+      "价格操纵攻击",
+      "DeFi安全",
+      "多交易操纵",
+      "错误清算",
+      "套利攻击",
+      "智能合约漏洞",
+      "Pomabuster",
+      "IEEE论文"
+    ],
+    "summary": "Deus Finance遭遇预言机操纵攻击，攻击者通过大额交易操纵预言机数据，导致协议发生一系列错误清算。攻击者随后利用价格差异进行套利交易，从中获利超过300万美元。该事件被IEEE论文引用为典型的多交易预言机操纵攻击案例。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0169"
+    ],
+    "references": [
+      {
+        "title": "Pomabuster: Detecting price oracle manipulation attacks in decentralized finance",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10646773/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0076",
+      "AT0077"
+    ],
+    "relatedThreatActors": [
+      "TA0045"
+    ]
+  }
+}

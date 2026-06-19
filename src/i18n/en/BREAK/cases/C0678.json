@@ -1,0 +1,22 @@
+{
+  "C0678": {
+    "title": "Cloudy with a chance of cyberattacks: dangling resources abuse on cloud platforms",
+    "keywords": [
+      "dangling resources",
+      "cloud platform security",
+      "DNS takeover",
+      "cloud storage bucket",
+      "IP address hijacking",
+      "phishing",
+      "malicious content hosting",
+      "cloud security posture management",
+      "cloud cyberattacks"
+    ],
+    "summary": "A longitudinal study across 12 cloud platforms identified 20,904 cases of abused dangling records. Attackers exploit released but uncleaned dangling resources such as storage buckets, IP addresses, and DNS records to host malicious content, conduct phishing, or steal data.",
+    "references": [
+      {
+        "title": "Cloudy with a chance of cyberattacks: dangling resources abuse on cloud platforms"
+      }
+    ]
+  }
+}

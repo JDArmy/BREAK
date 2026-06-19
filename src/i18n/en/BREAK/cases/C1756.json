@@ -1,0 +1,22 @@
+{
+  "C1756": {
+    "title": "LLM02:2025 Sensitive Information Disclosure Risk",
+    "keywords": [
+      "OWASP",
+      "GenAI",
+      "LLM02",
+      "sensitive information disclosure",
+      "model output",
+      "inversion attack",
+      "training data",
+      "insecure output handling",
+      "risk list"
+    ],
+    "summary": "The OWASP GenAI risk list highlights that improperly configured model outputs may leak proprietary algorithms or data. Leaking training data can expose models to inversion attacks, where attackers infer sensitive information from model outputs. This risk underscores how insecure output handling can lead to sensitive information disclosure.",
+    "references": [
+      {
+        "title": "LLM02:2025 Sensitive Information Disclosure"
+      }
+    ]
+  }
+}

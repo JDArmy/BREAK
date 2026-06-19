@@ -1,0 +1,22 @@
+{
+  "C1520": {
+    "title": "PhantomRaven Malware Steals GitHub Tokens via 126 Malicious npm Packages",
+    "keywords": [
+      "PhantomRaven",
+      "npm",
+      "GitHub token theft",
+      "malicious packages",
+      "supply chain attack",
+      "open source packages",
+      "remote dependencies",
+      "package registry",
+      "developer credentials"
+    ],
+    "summary": "Researchers uncovered a malware campaign dubbed PhantomRaven that distributes 126 malicious npm packages designed to steal GitHub tokens through remote dependencies, posing a serious threat to developers and projects relying on these open-source packages.",
+    "references": [
+      {
+        "title": "PhantomRaven Malware Found in 126 npm Packages Stealing GitHub Tokens ..."
+      }
+    ]
+  }
+}

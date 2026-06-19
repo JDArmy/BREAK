@@ -1,0 +1,37 @@
+{
+  "C1313": {
+    "title": "VoidProxy钓鱼即服务平台实现MFA绕过",
+    "keywords": [
+      "VoidProxy",
+      "钓鱼即服务",
+      "PhaaS",
+      "MFA绕过",
+      "会话中继",
+      "AI代理",
+      "身份提供者",
+      "Google",
+      "Microsoft",
+      "凭证窃取"
+    ],
+    "summary": "2024年在暗网首次出现并于2025年持续活跃的VoidProxy平台，是一种钓鱼即服务（PhaaS），具备实时会话中继能力。它通过AI驱动的代理架构克隆合法登录页面，中继用户认证会话，捕获会话令牌与Cookie，成功绕过基于短信、TOTP及推送通知的MFA机制，对Google和Microsoft身份提供者构成严重威胁。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0151"
+    ],
+    "references": [
+      {
+        "title": "VoidProxy攻击范式下的多因素认证绕过机制分析与防御策略研究",
+        "link": "https://dy.163.com/article/KD91U3C40556CG2E.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-11",
+    "relatedAttackTools": [
+      "AT0071",
+      "AT0072",
+      "AT0074",
+      "AT0094"
+    ],
+    "relatedThreatActors": []
+  }
+}

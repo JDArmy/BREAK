@@ -1,0 +1,31 @@
+{
+  "C1179": {
+    "title": "Google Cloud 基于机器学习的 API 滥用检测",
+    "keywords": [
+      "Google Cloud",
+      "API滥用检测",
+      "机器学习",
+      "API安全",
+      "业务逻辑攻击",
+      "数据抓取",
+      "Apigee",
+      "异常行为检测",
+      "云安全"
+    ],
+    "summary": "Google Cloud发布基于机器学习的API滥用检测功能，应对日益增长的API滥用事件。报告指出50%的企业在过去12个月中经历过API安全事件，其中77%因此推迟了新服务或应用的推出。API滥用导致业务逻辑攻击、数据抓取和异常行为难以检测。",
+    "category": "news_report",
+    "relatedRisks": [
+      "R0126"
+    ],
+    "references": [
+      {
+        "title": "Announcing API abuse detection powered by machine learning",
+        "link": "https://cloud.google.com/blog/products/identity-security/rsa-announcing-api-abuse-detection-machine-learning"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-04",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

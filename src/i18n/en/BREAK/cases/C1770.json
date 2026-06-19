@@ -1,0 +1,21 @@
+{
+  "C1770": {
+    "title": "Log4j Exploit WAF Evasion and Data Exfiltration Patterns",
+    "keywords": [
+      "Log4j",
+      "CVE-2021-44228",
+      "WAF evasion",
+      "Log4j Lookups",
+      "data exfiltration",
+      "environment variables",
+      "Cloudflare",
+      "exploit"
+    ],
+    "summary": "Cloudflare observed that after the Log4j CVE-2021-44228 vulnerability was disclosed, attackers quickly shifted from using simple attack strings to leveraging Log4j Lookups language features (such as ${lower}, ${env}) for WAF evasion, bypassing protection rules based on simple string matching, and attempting to exfiltrate sensitive data including passwords from target process environment variables ",
+    "references": [
+      {
+        "title": "Exploitation of Log4j CVE-2021-44228 Before Public Disclosure and ..."
+      }
+    ]
+  }
+}

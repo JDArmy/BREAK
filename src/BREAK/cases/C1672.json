@@ -1,0 +1,32 @@
+{
+  "C1672": {
+    "title": "开源软件CI/CD流水线凭证泄露研究",
+    "keywords": [
+      "CI/CD pipeline",
+      "credential leakage",
+      "open-source software",
+      "security threats",
+      "DevOps security",
+      "凭证泄露",
+      "流水线安全",
+      "开源项目"
+    ],
+    "summary": "一项研究发现，大量开源软件项目在CI/CD流水线中泄露了凭证。研究通过真实攻击案例，展示了泄露的凭证如何被利用，揭示了CI/CD流水线中凭证管理的普遍风险。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0226"
+    ],
+    "references": [
+      {
+        "title": "Ambush from all sides: Understanding security threats in open-source software CI/CD pipelines",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10061526/"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0087",
+      "AT0088"
+    ],
+    "relatedThreatActors": []
+  }
+}

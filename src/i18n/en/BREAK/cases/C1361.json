@@ -1,0 +1,19 @@
+{
+  "C1361": {
+    "title": "xTokenMarket Flash Loan Attack",
+    "keywords": [
+      "xTokenMarket",
+      "flash loan attack",
+      "xSNX",
+      "contract vulnerability",
+      "DeFi",
+      "2021"
+    ],
+    "summary": "On August 29, 2021, xTokenMarket suffered a flash loan attack exploiting a vulnerability in its xSNX contract. The attacker borrowed assets via a flash loan and leveraged the contract logic flaw to profit within a single transaction.",
+    "references": [
+      {
+        "title": "...Over 41 Typical Security Incidents in August: How Many Attack Tactics Do Hackers Still Have? - Zhi..."
+      }
+    ]
+  }
+}

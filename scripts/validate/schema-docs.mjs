@@ -61,6 +61,15 @@ const entityDocs = [
     schemaName: 'businessScene',
     purpose: '业务场景条目，组织风险维度、风险场景和场景下的风险引用。',
   },
+  {
+    key: 'cases',
+    title: 'Case',
+    dir: 'src/BREAK/cases',
+    filePattern: 'C0001.json',
+    idPattern: 'C0001',
+    schemaName: 'case',
+    purpose: '典型案例条目，描述与风险相关的真实案例/事件/判例/通报/研究。',
+  },
 ];
 
 const fieldDescriptions = {
@@ -81,6 +90,8 @@ const fieldDescriptions = {
   useAttackTools: '行为者会使用的攻击工具 ID 列表。',
   aliases: '别名列表。',
   usageExample: '使用示例。',
+  summary: '案例摘要，80-150 字事实性描述。',
+  incidentTime: '案例发生时间，YYYY 或 YYYY-MM。',
   relatedRisks: '相关风险 ID 列表。',
   relatedAvoidances: '相关规避手段 ID 列表。',
   relatedAttackTools: '相关攻击工具 ID 列表。',
@@ -107,6 +118,7 @@ const relationTargets = {
 
 const enumValues = {
   complexity: ['初级', '中级', '高级'],
+  category: ['criminal_verdict', 'administrative_enforcement', 'security_incident', 'vulnerability_advisory', 'academic_research', 'news_report'],
 };
 
 function loadSchemaSource() {

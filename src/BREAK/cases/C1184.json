@@ -1,0 +1,36 @@
+{
+  "C1184": {
+    "title": "国家网络安全通报中心通报多起供应链投毒事件",
+    "keywords": [
+      "供应链投毒",
+      "Apifox",
+      "LiteLLM",
+      "Axios",
+      "开源软件",
+      "恶意代码",
+      "凭据窃取",
+      "远程代码执行",
+      "国家网络安全通报中心"
+    ],
+    "summary": "2026年4月，国家网络安全通报中心监测发现多起供应链投毒攻击事件，攻击目标包括API研发工具Apifox、Python开发库LiteLLM及JavaScript HTTP库Axios。攻击者通过污染开源软件仓库和商用工具，在Axios等广泛依赖的组件中植入恶意代码，导致凭据窃取、远程代码执行和敏感数据泄露等严重危害，风险通过依赖链向大量AI应用及终端用户蔓延。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0127"
+    ],
+    "references": [
+      {
+        "title": "国家网络安全通报中心:近期集中爆发多起供应链投毒攻击事件 涉及...",
+        "link": "https://new.qq.com/rain/a/20260410A038DP00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2026-04",
+    "relatedAttackTools": [
+      "AT0087",
+      "AT0093"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "C0864": {
+    "title": "工银金融服务公司遭勒索软件攻击",
+    "keywords": [
+      "工银金融服务",
+      "ICBCFS",
+      "勒索软件攻击",
+      "中国工商银行",
+      "美国国债交易",
+      "系统中断",
+      "勒索病毒",
+      "金融安全"
+    ],
+    "summary": "2023年11月8日，中国工商银行在美全资子公司工银金融服务公司（ICBCFS）遭勒索软件攻击，导致部分系统中断。攻击发生后，ICBCFS立即隔离受影响系统，并向执法部门报告。该事件导致部分美国国债交易结算受影响，但工行及其他附属机构系统未受影响。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0085"
+    ],
+    "references": [
+      {
+        "title": "揭秘“攻击”工行在美全资子公司的“勒索病毒”！业内：就像自己的抽屉被别人上了锁！",
+        "link": "https://new.qq.com/rain/a/20231116A0A3ZC00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2023-11",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

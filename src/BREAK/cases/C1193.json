@@ -1,0 +1,30 @@
+{
+  "C1193": {
+    "title": "顺义检察院办理申某某提供短信轰炸程序案",
+    "keywords": [
+      "短信轰炸",
+      "短信轰炸机器人",
+      "提供侵入计算机信息系统程序罪",
+      "顺义检察院",
+      "境外通讯软件",
+      "非法获利",
+      "群组付费使用",
+      "网络黑产"
+    ],
+    "summary": "2023年6月，申某某在境外通讯软件租用短信轰炸程序，对接自建机器人组建“短信轰炸机器人”，放置于通讯群组供人付费使用。群内用户充值后发送指令，机器人自动执行轰炸。一年内群成员达8万余人，提供轰炸次数40万余次，非法获利20余万元。申某某因提供侵入、非法控制计算机信息系统程序、工具罪被判处有期徒刑三年二个月。",
+    "category": "criminal_verdict",
+    "relatedRisks": [
+      "R0129"
+    ],
+    "references": [
+      {
+        "title": "【说案】“短信轰炸”“按键伤人”,司法利刃“斩断”技术加持下的...",
+        "link": "https://mp.weixin.qq.com/s?__biz=MzIxNTAzODg3OA==&mid=2651228803&idx=1&sn=71cad1e585f04d147e288ac25e93a3f7&chksm=8d9aa4e8f29da5503bd31542e0298049dc31ba45f7dd9e92f52d76debc2b9d7f8c66fdfe6d1b&scene=27"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-03",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

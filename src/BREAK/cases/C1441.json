@@ -1,0 +1,34 @@
+{
+  "C1441": {
+    "title": "币安员工利用内幕信息进行抢跑交易谋取私利",
+    "keywords": [
+      "币安",
+      "内幕交易",
+      "抢跑交易",
+      "BNB Chain",
+      "Binance Wallet",
+      "链上隐私",
+      "员工违规",
+      "代币上线",
+      "信息不对称",
+      "加密货币交易所"
+    ],
+    "summary": "币安内部审计团队接获举报，调查确认一名员工利用其在BNB Chain业务拓展岗位获取的内幕信息，在调任至Binance Wallet团队后，通过提前知晓即将上线的代币信息等方式进行“抢跑交易”谋取不当利益。该员工已被停职，并将面临法律追责。此事件揭示了中心化交易所内部人员利用链上信息不对称进行交易，导致用户隐私与资产安全受损的风险。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0174"
+    ],
+    "references": [
+      {
+        "title": "PA日报 | BlackRock将在欧洲推出比特币ETP;Movement将回购3800万...",
+        "link": "https://news.qq.com/rain/a/20250325A08E4B00"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2025-03",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0024"
+    ]
+  }
+}

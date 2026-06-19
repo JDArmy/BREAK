@@ -1,0 +1,21 @@
+{
+  "C1363": {
+    "title": "bZx Protocol Second Flash Loan Attack",
+    "keywords": [
+      "bZx",
+      "flash loan",
+      "price manipulation",
+      "oracle attack",
+      "DeFi",
+      "ETH",
+      "2020",
+      "SlowMist"
+    ],
+    "summary": "On February 18, 2020, the DeFi protocol bZx was exploited again in a flash loan attack. The attacker manipulated oracle prices to profit approximately 2,388 ETH, worth around $644,000 at the time. This incident is a classic example of price manipulation via flash loans, causing significant losses to the protocol.",
+    "references": [
+      {
+        "title": "SlowMist: Reviewing 2020 DeFi, Exchange, and Public Chain Security and Privacy Incidents | Blockchain | Hacker..."
+      }
+    ]
+  }
+}

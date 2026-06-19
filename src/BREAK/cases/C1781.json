@@ -1,0 +1,31 @@
+{
+  "C1781": {
+    "title": "FTC 警告：联网汽车非法收集与使用消费者敏感数据",
+    "keywords": [
+      "FTC",
+      "联网汽车",
+      "消费者数据",
+      "敏感数据",
+      "生物特征",
+      "驾驶行为",
+      "隐私风险",
+      "数据收集",
+      "非法使用"
+    ],
+    "summary": "美国联邦贸易委员会（FTC）指出，随着汽车日益联网，车辆可收集大量敏感数据，包括生物特征和驾驶行为等。部分厂商存在未经合法授权收集和使用这些数据的情况，凸显了车载数据接口被滥用的隐私风险。",
+    "category": "administrative_enforcement",
+    "relatedRisks": [
+      "R0252"
+    ],
+    "references": [
+      {
+        "title": "Cars & Consumer Data: On Unlawful Collection & Use",
+        "link": "https://www.ftc.gov/policy/advocacy-research/tech-at-ftc/2024/05/cars-consumer-data-unlawful-collection-use"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-05",
+    "relatedAttackTools": [],
+    "relatedThreatActors": []
+  }
+}

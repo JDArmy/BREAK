@@ -1,0 +1,32 @@
+{
+  "C0285": {
+    "title": "宏碁公司遭黑客攻击导致160GB敏感信息大规模泄露",
+    "keywords": [
+      "宏碁",
+      "Acer",
+      "Kernelware",
+      "数据泄露",
+      "黑客攻击",
+      "敏感信息",
+      "160GB",
+      "内部数据"
+    ],
+    "summary": "2023年2月中旬，总部位于中国台湾的科技企业宏碁公司遭黑客攻击，化名“Kernelware”的黑客声称窃取了总计160GB的大量敏感信息，包括655个目录和2869个文件。被盗数据涉及公司内部及用户敏感资料，通过非法途径从内部系统外流至外部。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0028"
+    ],
+    "references": [
+      {
+        "title": "2023年数据泄露事件盘点 | 安永信息",
+        "link": "https://www.anyong.net/industrynews/1351.html"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024-06",
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0018"
+    ]
+  }
+}

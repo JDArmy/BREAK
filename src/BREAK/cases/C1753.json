@@ -1,0 +1,33 @@
+{
+  "C1753": {
+    "title": "RAG数据加载器攻击导致未授权数据访问",
+    "keywords": [
+      "RAG",
+      "数据加载器",
+      "未授权数据访问",
+      "恶意文档导入",
+      "越权召回",
+      "管道安全",
+      "大语言模型安全",
+      "数据注入攻击"
+    ],
+    "summary": "RAG管道中的数据加载器存在安全漏洞，攻击者可利用该漏洞导入恶意文档，导致未授权数据访问和有害内容生成。任何导入文档的客户端都可能触发此漏洞，使系统返回无权访问的敏感信息。",
+    "category": "vulnerability_advisory",
+    "relatedRisks": [
+      "R0244"
+    ],
+    "references": [
+      {
+        "title": "The Hidden Threat in Plain Text: Attacking RAG Data Loaders",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3733799.3762976"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0093"
+    ],
+    "relatedThreatActors": [
+      "TA0058"
+    ]
+  }
+}

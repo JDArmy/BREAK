@@ -17,6 +17,7 @@ const expectedCounts = {
   terms: countRecords('src/BREAK/terms'),
   businessScenes: countRecords('src/BREAK/business-scenes'),
   avoidanceCategories: countRecords('src/BREAK/avoidance-categories'),
+  cases: countRecords('src/BREAK/cases'),
 };
 
 function countRecords(relativeDir) {
@@ -108,5 +109,5 @@ if (issues.length > 0) {
 
 console.log('\n✅ 静态数据导出校验通过');
 console.log(
-  `entities=${expectedCounts.risks.total}/${expectedCounts.avoidances.total}/${expectedCounts.attackTools.total}/${expectedCounts.threatActors.total}/${expectedCounts.terms.total}/${expectedCounts.businessScenes.total}/${expectedCounts.avoidanceCategories.total}`
+  `entities=${expectedCounts.risks.total}/${expectedCounts.avoidances.total}/${expectedCounts.attackTools.total}/${expectedCounts.threatActors.total}/${expectedCounts.terms.total}/${expectedCounts.businessScenes.total}/${expectedCounts.avoidanceCategories.total}/${expectedCounts.cases.total}`
 );

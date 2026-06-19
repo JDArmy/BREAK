@@ -1,0 +1,21 @@
+{
+  "C1674": {
+    "title": "CI/CD Security Review: Exploiting Leaked Credentials for Attacks",
+    "keywords": [
+      "CI/CD security",
+      "credential leak",
+      "cache poisoning",
+      "supply chain attack",
+      "pipeline security",
+      "SoK review",
+      "malicious dependency",
+      "DevSecOps"
+    ],
+    "summary": "A systematic literature review reveals that attackers have recently exploited credentials leaked from CI/CD pipelines to replace cached objects with malicious content. Since downstream dependencies typically trust these pipelines, this leads to severe security consequences.",
+    "references": [
+      {
+        "title": "SoK: Understanding CI/CD Security: A Comprehensive Review of Architecture, Attacks, and Defenses"
+      }
+    ]
+  }
+}

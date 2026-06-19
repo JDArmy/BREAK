@@ -1,0 +1,34 @@
+{
+  "C0709": {
+    "title": "研究揭示可从大语言模型中提取训练数据的攻击方法",
+    "keywords": [
+      "训练数据提取攻击",
+      "大语言模型",
+      "GPT-2",
+      "隐私泄露",
+      "个人可识别信息",
+      "模型记忆",
+      "数据恢复",
+      "USENIX Security",
+      "AIGC隐私"
+    ],
+    "summary": "USENIX Security 2021发表的研究论文证明，在特定设置下，攻击者可以执行训练数据提取攻击，通过查询GPT-2等大语言模型来恢复其训练数据中的个人可识别信息（如姓名、邮箱、电话号码）。实验表明，即使模型经过训练，仍可能记忆并泄露部分原始训练样本。",
+    "category": "academic_research",
+    "relatedRisks": [
+      "R0071-001"
+    ],
+    "references": [
+      {
+        "title": "Extracting Training Data from Large Language Models - USENIX",
+        "link": "https://www.usenix.org/conference/usenixsecurity21/presentation/carlini-extracting"
+      }
+    ],
+    "updated": "2026-06-18",
+    "relatedAttackTools": [
+      "AT0093"
+    ],
+    "relatedThreatActors": [
+      "TA0058"
+    ]
+  }
+}

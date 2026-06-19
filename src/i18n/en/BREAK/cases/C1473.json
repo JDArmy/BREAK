@@ -1,0 +1,22 @@
+{
+  "C1473": {
+    "title": "Gigabyte Motherboard Firmware Backdoor Exploitable via Man-in-the-Middle Attack",
+    "keywords": [
+      "Gigabyte",
+      "motherboard firmware",
+      "backdoor",
+      "man-in-the-middle",
+      "HTTP plaintext",
+      "firmware update hijacking",
+      "OTA update",
+      "supply chain compromise",
+      "UEFI implant"
+    ],
+    "summary": "A backdoor was discovered in the firmware update process of 271 Gigabyte motherboard models. Update files are transmitted over unencrypted HTTP, allowing attackers to perform man-in-the-middle attacks to hijack the update channel, replace the firmware, and cause the motherboard to download and install malicious firmware for persistent device compromise.",
+    "references": [
+      {
+        "title": "Backdoor Found in Gigabyte Motherboard Firmware, Vulnerable to Man-in-the-Middle Attacks, Affecting 271 Models"
+      }
+    ]
+  }
+}

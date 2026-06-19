@@ -1,0 +1,21 @@
+{
+  "C1755": {
+    "title": "System Prompt Extraction Attack Research Framework SPE-LLM",
+    "keywords": [
+      "system prompt extraction",
+      "SPE-LLM",
+      "large language model",
+      "adversarial query",
+      "prompt injection",
+      "privacy leakage",
+      "model security",
+      "defense framework"
+    ],
+    "summary": "A research paper highlights that system prompts of LLMs, containing private configurations, user roles, and operational instructions, have become an emerging attack target. Recent studies show that carefully crafted queries can successfully extract system prompts from LLMs, raising significant privacy and security concerns. The paper proposes SPE-LLM, the first comprehensive framework for systemat",
+    "references": [
+      {
+        "title": "System Prompt Extraction Attacks and Defenses in Large Language ..."
+      }
+    ]
+  }
+}

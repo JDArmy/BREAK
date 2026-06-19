@@ -1,0 +1,35 @@
+{
+  "C0809": {
+    "title": "XZ Utils攻击事件（2024年）",
+    "keywords": [
+      "XZ Utils",
+      "供应链攻击",
+      "后门植入",
+      "liblzma",
+      "sshd认证绕过",
+      "开源软件投毒",
+      "Linux发行版",
+      "上游投毒攻击"
+    ],
+    "summary": "攻击者在广泛使用的开源压缩工具XZ Utils的5.6.0和5.6.1版本中植入恶意后门代码，修改liblzma特定函数，绕过sshd认证，实现未授权访问。该事件影响Fedora、openSUSE、Debian测试版和Arch Linux等多个主流Linux发行版，是一起严重的开源软件上游投毒攻击。",
+    "category": "security_incident",
+    "relatedRisks": [
+      "R0081"
+    ],
+    "references": [
+      {
+        "title": "打造供应链安全壁垒:企业有效防范攻击的策略指南_防护_软件_Utils",
+        "link": "https://m.sohu.com/a/828745593_121123671/?pvid=000115_3w_a"
+      }
+    ],
+    "updated": "2026-06-18",
+    "incidentTime": "2024",
+    "relatedAttackTools": [
+      "AT0054",
+      "AT0087"
+    ],
+    "relatedThreatActors": [
+      "TA0052"
+    ]
+  }
+}
