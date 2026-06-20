@@ -137,6 +137,26 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 
 工作量：4-5 天。
 
+#### A6. 前端可消费质量报告 JSON
+
+> 现状：`public/data/` 仅有 break-data.json / break-manifest.json；审计脚本（metrics/relations/references/maintenance）的 JSON 输出在 `research/search-reports/`，仅供人读，前端零 import。metrics-baseline.json 有 weakRelations/sceneIssues 但缺 missingCoverage/i18nIssues；maintenance-summary.json 是任务列表形态，非四分类稳定契约。是 B6 质量治理视图的前置依赖。
+
+目标：将审计关键问题转为稳定 JSON，供关系页高亮和列表消费。
+
+方案：
+- 新增脚本生成 `public/data/quality-report.json`（或纳入 export:data），结构：`{ weakRelations, missingCoverage, sceneIssues, i18nIssues, generatedAt }`。
+- 前端只消费报告结果，不在运行时重新执行重型审计逻辑。
+- 报告生成纳入 build 链（export:data 阶段），CI 部署时刷新。
+
+落点：`scripts/validate/`（新增质量报告生成脚本或扩展 metrics.mjs/maintenance.mjs）、`public/data/quality-report.json`、`src/views/relation/`（消费方）。
+
+验收：
+- `public/data/quality-report.json` 含四分类稳定结构。
+- 前端可 import 并用于节点/边标记和列表。
+- 报告随数据变化自动刷新（build 链或 CI）。
+
+工作量：2-3 天。
+
 ---
 
 ### Phase B（P1）：知识模型完善 + 工程债清理
@@ -251,6 +271,51 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 
 工作量：2 天。
 
+#### B6. 质量治理前端视图（含节点质量提示）
+
+> 现状：无质量治理组件、无质量问题状态、无"仅看 X"筛选、无从列表定位图谱节点。节点级有零散覆盖缺口提示（RelationNodeCoverageBlock），但非列表视图 + 图谱定位。节点详情缺"缺引用"维度，"弱关系"未节点级化，不消费审计报告（仅运行时按关系推导）。依赖 A6 质量报告 JSON。
+
+目标：让维护者在可视化页面直接看到数据质量问题，定位到图谱节点/关系；节点详情显示完整质量提示。
+
+方案：
+- 新增质量治理列表组件（如 RelationQualityPanel），展示弱关系、缺覆盖、场景异常、i18n 异常。
+- 前端加载质量报告 JSON（A6）后，在图谱中标记相关节点和边。
+- 增加"仅看待复核关系""仅看缺覆盖风险""仅看场景异常""仅看 i18n 异常"筛选。
+- 支持从问题列表点击定位到图谱节点/关系边/分析解读详情。
+- 节点详情补全质量提示：补充"缺引用"维度（references 质量从审计报告读取），"弱关系"作为节点级提示，统一质量标记体系。
+- 质量标记体系（统一稳定 key）：missingRelation / weakRelation / missingAvoidance / sceneIssue / i18nIssue。
+
+落点：`src/components/relation/`（新增 RelationQualityPanel / RelationIssueList）、`src/views/relation/relationViewState.ts`、`src/views/relation/useRelationViewModel.ts`、`src/components/relation/RelationFilterPanels.vue`、`src/components/relation/RelationNodeDetailDrawer.vue` / `RelationNodeAnalysisBlock.vue`、`src/views/relation/relationGraphInsights.ts`、`src/views/relation/relationQualityFlags.ts`（新增）。
+
+验收：
+- 审计报告可被前端消费（依赖 A6）。
+- 质量问题可从列表定位到图谱节点。
+- 五种质量标记作为统一 key 在节点/边展示。
+- 节点详情显示"弱关系/缺引用/缺关联/待复核"四类完整提示，来源含审计报告。
+
+工作量：4-5 天。
+
+#### B7. 任务型分析视角切换
+
+> 现状：RelationSelectorBar 只有关系类型下拉和实体 key 下拉，无视角切换；viewModel/state 无 perspective 概念；src 内 0 处视角切换代码（grep "perspective|视角" 仅命中内容数据文案）。
+
+目标：从单一实体中心图，升级为面向任务的分析视角。
+
+方案：
+- 在 RelationSelectorBar 增加视角切换控件。
+- 每个视角定义默认节点类型、默认关系类型、默认布局和解释模板。视角：风险视角（Risk/AttackTool/ThreatActor/Avoidance）、攻击者视角（ThreatActor/use-build 工具/造成风险）、防御视角（Avoidance/Risk/AttackTool/覆盖缺口）、薄弱关系视角（weak relation/missing coverage/review flags）。
+- 将质量报告（A6）和 audit:metrics/relations 关键结果转成前端可消费数据。
+- 对薄弱关系视角提供列表 + 图谱高亮。
+
+落点：`src/components/relation/RelationSelectorBar.vue`、`src/components/relation/RelationFilterPanels.vue`、`src/views/relation/useRelationViewModel.ts`、`src/views/relation/relationViewState.ts`、`public/data/quality-report.json`（A6 产物）。
+
+验收：
+- 用户可选择至少 3 个分析视角：风险、攻击路径、防御覆盖。
+- 不同视角有不同默认筛选和说明。
+- 视角切换不破坏现有 URL 路由和实体跳转。
+
+工作量：3-4 天。
+
 ---
 
 ### Phase C（P2）：可视化算法升级 + 标准化
@@ -341,6 +406,28 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 
 工作量：5-7 天。
 
+#### C5. 业务场景图谱（可选）
+
+> 现状：首页已有业务场景矩阵（场景→风险维度→风险场景→风险）+ `/business-scene/:bsKey` 路由，从业务场景看风险已能做。本项为"从 BusinessScene/RiskScene 进入解释型关系图谱"，价值有限，列为可选探索。
+
+目标：支持从业务场景进入解释型关系图谱（非必做，首页矩阵已覆盖核心需求）。
+
+方案：
+- 新增 `relationBusinessSceneGraph.ts` 生成业务场景图谱数据。
+- 新增 `/relation/business-scene/:bsKey` 路由，首页矩阵可进入。
+- 展示 BusinessScene → RiskDimension → RiskScene → Risk → AttackTool/Avoidance。
+- 补充 `relationBusinessSceneGraph.test.ts`。
+- 约束：不在 Risk 实体维护 relatedBusinessScenes，中文业务场景为结构权威。
+
+落点：`src/views/relation/relationBusinessSceneGraph.ts`（新增）、`src/views/relation/relationGraphBuilder.ts`、`src/views/relation/relationTypes.ts`、`src/router/index.ts`、`src/views/HomeView.vue`。
+
+验收：
+- 用户能从业务场景进入对应风险图谱。
+- 业务场景视图能解释该场景主要风险暴露面。
+- `relationBusinessSceneGraph.test.ts` 通过。
+
+工作量：4-5 天。
+
 ---
 
 ## 3. 优先级矩阵
@@ -352,17 +439,21 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 | A3 后期风险补强 | P0 | 3-4d | 高 | 无 |
 | A4 案例多源化 | P0 | 5-7d | 中高 | 无 |
 | A5 自动化回归网 | P0 | 4-5d | 高（防回归） | 无 |
+| A6 质量报告 JSON | P0 | 2-3d | 高（B6 前置） | 无 |
 | B1 风险间关联 | P1 | 3-4d | 中 | A5（回归网） |
 | B2 Avoidance 枚举化 | P1 | 3-4d | 中 | 无 |
 | B3 i18n-sync 字段级 | P1 | 2-3d | 中 | 无 |
 | B4 关系页工程债 | P1 | 4-5d | 中高 | A5 |
 | B5 CI 优化 | P1 | 2d | 中 | 无 |
+| B6 质量治理前端视图 | P1 | 4-5d | 高（治理闭环） | A6 |
+| B7 任务型分析视角 | P1 | 3-4d | 中高 | A6 |
 | C1 图算法路径发现 | P2 | 5-7d | 高（上台阶） | B4 |
 | C2 力导向布局 | P2 | 4-5d | 中高 | A5 |
 | C3 动态解释生成 | P2 | 4-5d | 中高 | B4 |
 | C4 STIX 标准化 | P2 | 5-7d | 中（互操作） | 无 |
+| C5 业务场景图谱 | P2 | 4-5d | 低（可选） | 无 |
 
-**总工作量估算**：Phase A 约 16-22 天，Phase B 约 14-18 天，Phase C 约 18-24 天，合计约 48-64 天（可并行压缩）。
+**总工作量估算**：Phase A 约 18-25 天，Phase B 约 21-26 天，Phase C 约 22-29 天，合计约 61-80 天（可并行压缩）。
 
 ## 4. 验收标准（整体）
 
@@ -377,6 +468,9 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 | CI e2e 回归 | 无 | site-smoke + relation-stability |
 | .vue 单测 | 0 | ≥ 5 组件 |
 | 覆盖率 include | 9 文件 | composables + relation |
+| 质量报告 JSON | 无 | 四分类稳定 JSON |
+| 质量治理视图 | 无 | 列表 + 定位 + 五种标记 |
+| 任务型视角 | 0 个 | ≥ 3 个视角 |
 | 风险间关联 | 无 | ≥ 20 条 |
 | Avoidance category | 自由字符串 | 枚举强约束 |
 | i18n-sync | ID 级 | 字段级 + 无结构字段 |
@@ -385,6 +479,7 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 | 布局 | 固定坐标 | + 力导向 |
 | 解释 | 模板套话 | 实体语义动态 |
 | STIX 导出 | 无 | 合法 STIX 2.1 |
+| 业务场景图谱 | 无（首页矩阵已有） | 可选：从场景进关系图 |
 
 工程验收（不可回退）：type-check / validate:data / 125+ 测试 / build 通过；类型安全不降级（零 any）；构建门禁不削弱。
 
@@ -407,7 +502,8 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 4. **每项独立 PR**：便于 review 和回滚，husky pre-commit + CI 门禁保障。
 5. **内容治理（A2/A3/A4）可借 LLM**：项目已有 DeepSeek 接口（`scripts/import/generate-term-en-glossary.mjs` 模式），用于生成 influence/关键词草稿，人工复核后落盘。
 
-## 7. 与既有规划的关系
+## 7. 规划整合说明
 
-- `VISUAL_ANALYSIS_EXPLAINABILITY_PLAN.md`：关系页专项未完成项（质量报告 JSON / 质量治理视图 / 任务型视角）。本计划 Phase B 的 B4（关系页工程债）与其有交集，但本计划聚焦工程债清理，质量治理/视角切换仍在专项规划。两者互补：本计划是框架整体升级，专项是关系页功能深化。
-- 本计划完成后，BREAK 从"先进且工程成熟"走向"完善"，评估分目标 4.3 → 4.7+。
+原 `VISUAL_ANALYSIS_EXPLAINABILITY_PLAN.md`（关系页专项未完成项：质量报告 JSON / 质量治理视图 / 任务型视角 / 业务场景图谱）已整合进本计划，分别对应 A6 / B6 / B7 / C5，该独立文件已删除并移除 git 跟踪。本计划现为 BREAK 框架唯一的升级规划，统一管理内容质量、回归网、知识模型、工程债、可视化算法、标准化各维度。
+
+本计划完成后，BREAK 从"先进且工程成熟"走向"完善"，评估分目标 4.3 → 4.7+。

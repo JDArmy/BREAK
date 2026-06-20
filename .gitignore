@@ -48,7 +48,6 @@ scripts/search/*
 !scripts/validate/*.mjs
 .claude/
 plans/
-VISUAL_ANALYSIS_EXPLAINABILITY_PLAN.md
 
 # 一次性链接可达性扫描报告（403/连接失败记录），属于临时产物，不纳入版本库
 reference-validation-report.json
