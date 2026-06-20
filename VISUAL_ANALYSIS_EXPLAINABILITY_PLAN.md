@@ -1,337 +1,121 @@
-# BREAK 可视化分析解释能力工作规划
+# BREAK 可视化分析解释能力工作规划（未完成待办）
 
-> 文档版本：1.0  
-> 制定日期：2026-06-17  
-> 适用范围：关系图谱、攻击路径、节点详情、关系解释、分析视角、质量治理视图  
-> 当前阶段：P1/P2/P3 解释能力、攻击路径、节点摘要、防御覆盖和业务场景影响已落地，下一阶段推进质量治理与任务型分析视角
+> 文档版本：2.0（精简为仅未完成项）
+> 核查时间：2026-06-20，对应代码版本 2.21.0
+> 适用范围：质量治理、任务型分析视角、业务场景图谱、性能治理、截图基线
+> 已落地能力不在此列：边关系解释、攻击路径逐段解释、节点分析摘要、防御覆盖分析、业务场景影响摘要、抽屉子组件拆分、英文 i18n 质量校验均已实现并测试覆盖
 
-## 0. 当前实施状态
+## 0. 核查结论
 
-> 状态更新时间：2026-06-17
-> 对应提交：`4a78b4d5 Improve relation analysis i18n explainability`
+经逐项代码核查（非文档自评），以下能力在当前代码版本中**尚未实现或仅部分实现**，列为后续待办。已完成项（边解释 `relationExplanation.ts`、攻击路径解释 `relationAttackPath.ts`、防御覆盖 `relationCoverageAnalysis.ts`、业务场景影响 `relationBusinessSceneImpact.ts`、节点洞察 `relationGraphInsights.ts` 及对应测试）不再纳入本规划。
 
-### 0.1 阶段状态
-
-| 阶段 | 状态 | 当前结论 |
-|------|------|----------|
-| Phase 0：基线确认 | 部分完成 | 已完成关系页数据链路梳理、问题识别和主要验收样本的测试覆盖；仍缺独立截图基线文档 |
-| Phase 1：关系解释核心 | 完成 | 已新增 `relationExplanation.ts`，关系摘要具备来源字段、证据级别、解释、影响提示和质量标记；tooltip、节点关系列表、CSV 复制均能消费解释对象 |
-| Phase 2：攻击路径解释 | 完成 | Sankey 路径已保留解释对象，抽屉内支持路径组合筛选、逐段来源字段、攻击意图、防御意义和缺规避提示 |
-| Phase 3：节点摘要、防御覆盖与业务影响 | 完成 | 已新增“为什么重要”、节点防御覆盖和业务场景影响摘要；抽屉洞察已拆分为独立子组件，并已补充覆盖、业务场景影响相关测试 |
-| Phase 4：分析视角与质量治理 | 部分开始 | 已补强英文 i18n 质量治理校验，能拦截英文 reference 中文残留；尚未增加任务型视角切换，也未将审计报告接入前端治理视图 |
-| Phase 5：业务场景图谱 | 未开始 | 尚未实现 BusinessScene / RiskScene 出发的解释型关系图谱 |
-
-### 0.2 已落地能力
-
-- 关系解释派生结构：已支持 `sourceFields`、`evidenceLevel`、`explanation`、`impactHint`、`qualityFlags`。
-- 节点抽屉关系列表：已支持方向、关系类型、直接性筛选，筛选项会随组合动态收窄。
-- 攻击路径解释：已支持 ThreatActor / AttackTool / Risk / Avoidance 组合筛选和路径详情摘要。
-- 攻击路径逐段解释：已展示来源字段、攻击意图、防御意义、推荐处置和缺规避质量提示。
-- 节点分析摘要：已按实体类型展示“为什么重要”、关联类型分布和高/低覆盖提示。
-- 防御覆盖摘要：已新增 `relationCoverageAnalysis.ts`，Risk / Avoidance / AttackTool / ThreatActor 可展示覆盖范围、候选规避、风险/工具/攻击者覆盖指标。
-- 业务场景影响摘要：已新增 `relationBusinessSceneImpact.ts` 和 `RelationNodeBusinessSceneImpactBlock.vue`，可从 Risk / Avoidance / AttackTool / ThreatActor / Term 推导命中的业务场景、风险场景和风险清单；映射关系只读取 `src/BREAK/business-scenes`，不写回 Risk 实体。
-- 组件结构治理：`RelationNodeDrawerInsights.vue` 已拆分为根节点关系、为什么重要、防御覆盖、攻击路径四个子组件，共享类型与样式独立维护。
-- 抽屉复用：关系网络和 Sankey 节点详情已收敛到同一个 `RelationNodeDetailDrawer`。
-- 交互质量：已处理路径筛选下拉、无效筛选项、tooltip 延时与层级、ID/标题展示、重复分隔线、重复上下文预览等问题。
-- 中英文文案：本轮新增关系解释和攻击路径解释文案已同步维护。
-- 英文内容治理：`english-i18n-quality.mjs` 已覆盖 reference title 缺失和中文残留校验，英文界面 reference 不再回退显示中文标题。
-- 测试覆盖：`relationAttackPath`、`relationCoverageAnalysis`、`relationBusinessSceneImpact`、`relationExplanation`、`relationGraphInsights`、`relationNetworkLayout` 相关测试已通过。
-
-### 0.3 尚未完成能力
-
-- 质量治理前端视图，包括弱关系、缺覆盖、场景异常、待复核关系的列表和图谱定位。
-- 任务型分析视角切换，包括风险视角、攻击者视角、防御视角和薄弱关系视角。
-- BusinessScene / RiskScene 出发的业务场景图谱。
-- 前端可消费的维护报告 JSON，当前仅有 i18n 质量校验脚本，尚未生成可被关系页消费的统一质量报告。
-- `relationBusinessSceneGraph.test.ts`。
-
-### 0.4 下一阶段优先级
-
-| 优先级 | 工作项 | 目标 |
-|--------|--------|------|
-| P0 | 前端可消费质量报告 | 将 `audit:relations`、`audit:metrics`、`audit:maintenance` 的关键问题转为 JSON，供关系页高亮和列表使用 |
-| P1 | 任务型分析视角 | 增加风险视角、攻击者视角、防御视角、薄弱关系视角的默认筛选和说明 |
-| P1 | 业务场景图谱 | 支持从 BusinessScene / RiskScene 进入解释型关系图谱 |
-| P2 | 截图基线与交互回归 | 固化抽屉、tooltip、筛选、移动端布局的 Playwright 截图基线 |
+| # | 规划项 | 状态 | 关键缺口 |
+|---|--------|------|----------|
+| 1 | 质量治理前端视图 | ❌ 未实现 | 无质量列表组件、无"仅看 X"筛选、无从列表定位图谱节点、无五种稳定质量标记体系 |
+| 2 | 任务型分析视角切换 | ❌ 未实现 | RelationSelectorBar 无视角控件、viewModel/state 无 perspective 概念、src 内 0 处视角切换代码 |
+| 3 | 业务场景图谱 | ❌ 未实现 | 无 `relationBusinessSceneGraph.ts` 及测试、builder 无 businessScene 分支、无 `/relation/business-scene/:key` 路由、首页矩阵不进关系页 |
+| 4 | 前端可消费质量报告 JSON | ❌ 未实现 | `public/data` 无质量 JSON；审计 JSON 在 `research/search-reports` 不被前端 import；schema 缺 missingCoverage/i18nIssues |
+| 5 | 节点详情质量提示补全 | ⚠️ 部分 | 缺"缺引用"维度、"弱关系"未节点级化、不消费审计报告（仅运行时推导） |
+| 6 | 关系页首屏性能专项 | ⚠️ 部分 | 英文 BREAK 整包懒加载但内部 eager 不分片；无独立关系页截图/性能基线文档 |
+| 7 | 截图基线与交互回归 | ⚠️ 部分 | 缺独立截图基线文档，抽屉/tooltip/筛选/三栏/移动端布局未固化 Playwright 截图基线 |
 
 ## 1. 背景与目标
 
-BREAK 当前已经具备关系图谱和攻击路径可视化能力，用户可以从 Risk、Avoidance、AttackTool、ThreatActor、Term 等实体进入关系页，查看网络图和 Sankey 攻击路径。这说明项目已经完成了“关系可见”的第一阶段。
+BREAK 关系页已完成"关系可见 + 关系可解释"阶段：网络图、Sankey 攻击路径、边关系解释、路径逐段解释、节点分析摘要、防御覆盖、业务场景影响均已落地。
 
-当前主要短板不在图形渲染本身，而在解释能力：用户能看到“谁和谁有关”，但还不能高效判断“为什么有关”“关系强弱如何”“这条攻击路径为什么成立”“应该优先处理哪里”“哪些关系需要继续治理”。因此，本专项的目标是把可视化分析从展示型图谱升级为解释型分析工具。
+下一阶段目标是把可视化分析从"解释型"升级为"可治理、可定位、可分视角"：
 
-最终目标：
+- 质量治理闭环：审计脚本发现的问题能直接在前端定位到节点和关系。
+- 任务型视角：从单一实体中心图升级为面向任务的分析视角（风险/攻击者/防御/薄弱关系）。
+- 业务场景图谱：从 BusinessScene / RiskScene 出发的解释型关系图谱。
+- 性能可控：关系页首屏和语言切换不因英文 BREAK 全量翻译加载而明显变慢。
 
-- 关系图谱不仅展示实体关联，还能解释关系来源、关系语义、关系价值和风险影响。
-- 攻击路径不仅展示 ThreatActor -> AttackTool -> Risk -> Avoidance 链路，还能解释每一步的攻击意图、成立依据、可观测信号和阻断点。
-- 节点详情不仅展示实体信息，还能提供上下游摘要、业务场景影响和防御优先级。
-- 系统能围绕风险、攻击者、业务场景、防御覆盖、薄弱关系提供稳定的分析视角。
-- 可视化能力与数据质量治理闭环联动，帮助维护者发现弱关系、缺证据关系和路径覆盖缺口。
+## 2. 设计原则（沿用）
 
-## 2. 当前基础
+1. 解释优先于堆图表：每个新视图必须回答一个具体分析问题。
+2. 数据可追溯：所有解释必须能回到现有 JSON 字段、实体关系、审计脚本结果或明确推导规则。
+3. 不伪造置信度：使用 direct / indirect / inferred / review 离散标签，不用精确分数。
+4. 先复用现有数据模型：优先基于现有字段推导，不急于扩展 Schema。
+5. 分析结果可测试：路径生成、关系解释、覆盖判断沉淀为纯函数并配套单测。
+6. 中英文同步：所有新增 UI 文案、解释模板同步维护 i18n。
 
-### 2.1 已具备能力
+## 3. 未完成功能规划
 
-| 能力 | 当前状态 |
-|------|----------|
-| 关系图谱 | 已使用 ECharts Graph 展示实体关系，支持节点类型、关系类型、布局切换、筛选、缩放、全屏、PNG 下载 |
-| 攻击路径 | 已使用 ECharts Sankey 展示 ThreatActor -> AttackTool -> Risk -> Avoidance 链路 |
-| 节点详情 | 已有节点详情抽屉，能展示节点基础信息、关系统计、根节点路径和攻击路径角色说明 |
-| 关系来源 | 网络图中已能展示部分关系来源字段，如 `AttackTool.directCauseRisks`、`ThreatActor.useAttackTools` |
-| 工程结构 | 关系页已拆分为 builder、insight、controller、state、effect、component 等模块 |
-| 测试基础 | 已有 `relationGraphBuilder`、`relationAttackPath`、`relationGraphInsights`、`relationNetworkLayout` 等单元测试 |
-| 数据审计 | `audit:relations`、`audit:metrics`、`audit:maintenance` 已能输出关系和维护质量报告 |
+### 3.1 P0：前端可消费质量报告 JSON
 
-### 2.2 主要缺口
+> 当前状态：❌ 未实现。`public/data/` 仅有 break-data.json / break-manifest.json；审计脚本（metrics/relations/references/maintenance）的 JSON 输出在 `research/search-reports/`，仅供人读，前端零 import。metrics-baseline.json 有 weakRelations/sceneIssues 但缺 missingCoverage/i18nIssues；maintenance-summary.json 是任务列表形态，非四分类稳定契约。
 
-| 缺口 | 影响 |
-|------|------|
-| 边关系解释不足 | 用户看到连线，但不能快速判断关系语义、强度、来源和可信度 |
-| 攻击路径解释不足 | Sankey 可展示路径，但不能完整说明路径成立依据、攻击意图和防御点 |
-| 节点分析摘要不足 | 节点详情偏信息展示，缺少“为什么重要”和“应优先关注什么” |
-| 分析视角不足 | 目前主要按当前实体展开，缺少风险视角、攻击者视角、业务场景视角、防御视角和薄弱关系视角 |
-| 质量治理联动不足 | 审计脚本有报告，但可视化页面还没有把弱关系、缺证据关系、覆盖缺口明确暴露出来 |
-| 路径选择能力不足 | 复杂实体下 Sankey 路径较多，用户难以锁定单条路径进行解释 |
-
-## 3. 设计原则
-
-1. 解释优先于堆图表  
-   不新增没有明确分析问题的图表。每个新视图必须回答一个具体问题。
-
-2. 数据可追溯  
-   所有解释必须能回到现有 JSON 字段、实体关系、审计脚本结果或明确的推导规则。
-
-3. 不伪造置信度  
-   当前数据没有结构化证据强度字段时，不应假装有精确置信度。可以先使用“直接关系 / 间接关系 / 推导关系 / 待复核关系”等离散标签。
-
-4. 先复用现有数据模型  
-   优先基于现有 Risk、Avoidance、AttackTool、ThreatActor、BusinessScene 和关系字段构建解释，不急于扩展复杂 Schema。
-
-5. 分析结果可测试  
-   路径生成、关系解释、节点摘要、覆盖判断应尽量沉淀为纯函数，并配套单元测试。
-
-6. 中文和英文同步设计  
-   所有新增 UI 文案、解释模板和关系类型文案必须同步维护中英文 i18n。
-
-## 4. 目标用户与使用场景
-
-### 4.1 目标用户
-
-| 用户 | 诉求 |
-|------|------|
-| 安全分析人员 | 快速理解某个风险的攻击链、相关工具、攻击者和规避手段 |
-| 业务风险负责人 | 从业务场景理解主要风险暴露面和优先处置项 |
-| 数据维护者 | 发现弱关系、缺证据关系、覆盖不足和异常路径 |
-| 项目评审者 | 判断 BREAK 框架是否具备体系化、可解释和可审计能力 |
-| 外部使用方 | 通过图谱理解 BREAK 数据集的结构和分析价值 |
-
-### 4.2 核心分析问题
-
-关系图谱和攻击路径应优先回答这些问题：
-
-| 问题 | 对应能力 |
-|------|----------|
-| 这个实体为什么重要？ | 节点解释、上下游摘要、中心性提示 |
-| 这两个实体为什么有关？ | 边关系解释、来源字段、关系类型说明 |
-| 这条攻击路径为什么成立？ | 路径详情、逐段依据、路径角色说明 |
-| 哪一步最适合检测或阻断？ | 防御覆盖解释、阻断点标记 |
-| 这个风险覆盖了哪些业务场景？ | 业务场景视角、风险场景关联 |
-| 哪些关系质量较弱？ | 薄弱关系视角、审计报告联动 |
-| 哪些风险缺少有效规避？ | 防御视角、覆盖缺口提示 |
-
-## 5. 信息架构规划
-
-### 5.1 关系页一级结构
-
-建议将关系页逐步收敛为 4 个分析入口：
-
-| 入口 | 目标 | 当前基础 | 后续改造 |
-|------|------|----------|----------|
-| 关系网络 | 看实体之间的整体关系 | 已有 Graph | 增强边解释、节点摘要、弱关系标记 |
-| 攻击路径 | 看攻击者到规避措施的链路 | 已有 Sankey | 增强路径筛选、单条路径详情、逐段依据 |
-| 防御覆盖 | 看风险和规避措施的覆盖关系 | 部分由关系网络推导 | 新增覆盖摘要和缺口提示 |
-| 质量治理 | 看弱关系、缺证据关系、覆盖异常 | 审计脚本已有报告 | 将报告结果转为可交互列表或图谱高亮 |
-
-### 5.2 节点详情抽屉结构
-
-节点详情建议固定为以下信息区块：
-
-| 区块 | 内容 |
-|------|------|
-| 基础信息 | ID、类型、标题、定义摘要、跳转入口 |
-| 为什么重要 | 关联数量、涉及业务场景、关键上下游、是否处于攻击路径中间层 |
-| 直接关系 | 入向/出向直接关系，带关系类型和来源字段 |
-| 路径角色 | 当前节点在攻击路径中的角色，如攻击者、工具、风险、规避 |
-| 相关路径 | 与当前节点相关的高价值路径摘要 |
-| 防御/风险提示 | 对 Risk 显示规避覆盖，对 Avoidance 显示覆盖风险，对 AttackTool 显示造成风险 |
-| 数据质量提示 | 弱关系、缺引用、缺关联、待复核关系 |
-
-### 5.3 边详情结构
-
-每条边都应具备可解释信息：
-
-| 字段 | 说明 |
-|------|------|
-| `relationType` | 关系类型，如直接导致、间接关联、使用工具、制作工具、规避风险 |
-| `sourceFields` | 来源字段，如 `AttackTool.directCauseRisks` |
-| `direction` | 关系方向，说明 from/to 的语义 |
-| `explanation` | 面向用户的自然语言解释 |
-| `evidenceLevel` | 初期可用 direct / indirect / inferred / review 四档 |
-| `qualityFlags` | 是否缺少反向关系、是否缺少引用、是否来自弱覆盖项 |
-| `impactHint` | 对分析和处置的意义 |
-
-## 6. 数据与推导模型
-
-### 6.1 不新增实体字段的第一阶段
-
-第一阶段不强制修改实体 JSON Schema，优先通过现有字段推导解释：
-
-| 来源字段 | 可推导解释 |
-|----------|------------|
-| `Risk.avoidances` | 风险可被哪些规避措施覆盖 |
-| `Risk.attackTools` 或相关工具字段 | 风险可能由哪些攻击工具造成 |
-| `AttackTool.directCauseRisks` | 工具直接导致哪些风险 |
-| `AttackTool.indirectCauseRisks` | 工具间接关联哪些风险 |
-| `AttackTool.avoidances` | 工具可被哪些规避措施限制 |
-| `ThreatActor.useAttackTools` | 攻击者使用哪些攻击工具 |
-| `ThreatActor.buildAttackTools` | 攻击者制作或维护哪些攻击工具 |
-| `BusinessScene.riskDimensions[].riskScenes[].risks` | 风险属于哪些业务场景和风险场景 |
-
-### 6.2 派生分析对象
-
-建议在关系模块中引入派生对象，不直接污染实体数据：
-
-```ts
-interface RelationExplanation {
-  relationKey: string;
-  fromId: string;
-  toId: string;
-  relationType: string;
-  sourceFields: string[];
-  evidenceLevel: "direct" | "indirect" | "inferred" | "review";
-  explanation: string;
-  impactHint: string;
-  qualityFlags: string[];
-}
-
-interface AttackPathExplanation {
-  pathKey: string;
-  threatActorId?: string;
-  attackToolId?: string;
-  riskId?: string;
-  avoidanceId?: string;
-  steps: AttackPathStepExplanation[];
-  summary: string;
-  defensiveFocus: string[];
-  qualityFlags: string[];
-}
-
-interface AttackPathStepExplanation {
-  fromId: string;
-  toId: string;
-  relationType: string;
-  sourceFields: string[];
-  attackIntent: string;
-  defensiveMeaning: string;
-}
-```
-
-### 6.3 关系解释分层
-
-| 层级 | 说明 | 示例 |
-|------|------|------|
-| 直接关系 | 两个实体由明确字段直接连接 | `AttackTool.directCauseRisks` |
-| 间接关系 | 通过中间实体形成关联 | ThreatActor -> AttackTool -> Risk |
-| 路径关系 | 多段关系形成攻击链 | ThreatActor -> AttackTool -> Risk -> Avoidance |
-| 质量关系 | 审计脚本发现的弱关系或异常关系 | 单向引用、缺少覆盖、关系过少 |
-
-## 7. 功能规划
-
-### 7.1 P1：边关系解释
-
-目标：用户点击或悬停任意关系边时，可以理解这条边为什么存在。
+目标：将 `audit:relations`、`audit:metrics`、`audit:maintenance` 的关键问题转为稳定 JSON，供关系页高亮和列表消费。
 
 工作内容：
 
-- 在 `Line` 或图谱 link 派生数据中补充 `sourceFields`、`evidenceLevel`、`qualityFlags`。
-- 完善 `getRelationSourceFields`，确保所有主要关系类型都有来源字段。
-- 为主要关系类型提供自然语言解释模板。
-- 在 tooltip、节点详情关系列表、复制 CSV 中显示关系来源和解释摘要。
-- 对直接关系、间接关系、路径关系使用不同视觉标记。
+- 新增脚本生成 `public/data/quality-report.json`（或纳入 export:data），结构：
+  ```json
+  {
+    "weakRelations": [],
+    "missingCoverage": [],
+    "sceneIssues": [],
+    "i18nIssues": [],
+    "generatedAt": "2026-06-20"
+  }
+  ```
+- 前端只消费报告结果，不在运行时重新执行重型审计逻辑。
+- 报告生成纳入 build 链（export:data 阶段），CI 部署时刷新。
 
 落点：
 
-- `src/views/relation/relationTypes.ts`
-- `src/views/relation/relationGraphBuilder*.ts`
-- `src/views/relation/relationGraphRelationSummary.ts`
-- `src/components/relation/RelationNodeDrawerRelations.vue`
-- `src/views/relation/relationNodeClipboard.ts`
-- `src/i18n/*`
+- `scripts/validate/`（新增质量报告生成脚本或扩展 metrics.mjs/maintenance.mjs 输出前端契约 JSON）
+- `public/data/quality-report.json`（生成产物）
+- `src/views/relation/`（消费方）
 
 验收标准：
 
-- 每条主要关系边都能显示关系类型、来源字段和解释文案。
-- 用户可以区分直接关系、间接关系和推导关系。
-- 单元测试覆盖 Risk、AttackTool、ThreatActor、Avoidance 四类核心关系。
+- `public/data/quality-report.json` 含四分类稳定结构。
+- 前端可 import 并用于节点/边标记和列表。
+- 报告随数据变化自动刷新（build 链或 CI）。
 
-### 7.2 P1：攻击路径详情与逐段解释
+### 3.2 P1：质量治理前端视图
 
-目标：用户能选择一条路径，并看到完整链路解释。
+> 当前状态：❌ 未实现。无质量治理组件、无质量问题状态、无"仅看 X"筛选、无从列表定位图谱节点。节点级有零散覆盖缺口提示（RelationNodeCoverageBlock），但非计划要求的列表视图 + 图谱定位。
+
+目标：让维护者在可视化页面直接看到数据质量问题，并定位到图谱节点/关系。
 
 工作内容：
 
-- 在 Sankey 数据生成时保留完整路径对象，而不只是 nodes/links。
-- 支持点击 Sankey link 或节点组合后定位相关路径。
-- 新增路径详情面板，展示 ThreatActor -> AttackTool -> Risk -> Avoidance。
-- 每一段展示来源字段、攻击意图、防御意义。
-- 支持“仅显示包含当前节点的路径”“仅显示完整四段路径”“仅显示缺规避路径”。
+- 新增质量治理列表组件（如 RelationQualityPanel），展示弱关系、缺覆盖、场景异常、i18n 异常。
+- 前端加载质量报告 JSON（依赖 3.1）后，在图谱中标记相关节点和边。
+- 增加"仅看待复核关系""仅看缺覆盖风险""仅看场景异常""仅看 i18n 异常"筛选。
+- 节点详情中显示质量提示和建议动作。
+- 支持从问题列表点击定位到图谱节点/关系边/分析解读详情。
+
+质量标记体系（统一稳定 key）：
+
+| 标记 | 含义 |
+|------|------|
+| `missingRelation` | 缺少关键关系 |
+| `weakRelation` | 关系覆盖不足或仅有弱推导 |
+| `missingAvoidance` | 风险缺少规避覆盖 |
+| `sceneIssue` | 业务场景或风险场景分类异常 |
+| `i18nIssue` | 中英文结构或文案同步异常 |
 
 落点：
 
-- `src/views/relation/relationAttackPath.ts`
-- `src/views/relation/relationSankeyChartController.ts`
-- `src/components/relation/RelationSankeyPane.vue`
-- `src/components/relation/RelationNodeDrawerInsights.vue`
-- `src/views/relation/__tests__/relationAttackPath.test.ts`
-- `src/i18n/*`
+- `src/components/relation/`（新增 RelationQualityPanel / RelationIssueList）
+- `src/views/relation/relationViewState.ts`（质量问题状态）
+- `src/views/relation/useRelationViewModel.ts`（质量筛选逻辑）
+- `src/components/relation/RelationFilterPanels.vue`（"仅看 X"筛选）
+- `src/components/relation/RelationNodeDetailDrawer.vue`（节点质量提示）
 
 验收标准：
 
-- 至少支持从 ThreatActor、AttackTool、Risk 三种入口查看路径详情。
-- 复杂实体下可以选择并解释单条路径。
-- 路径详情能列出每段关系的来源字段。
-- 对缺少 Avoidance 的路径显示覆盖缺口。
+- 审计报告可被前端消费（依赖 3.1）。
+- 质量问题可从列表定位到图谱节点。
+- 质量标记不影响普通浏览体验。
+- 五种质量标记作为统一 key 在节点/边展示。
 
-### 7.3 P1：节点分析摘要
+### 3.3 P1：任务型分析视角切换
 
-目标：节点详情从“信息列表”升级为“分析摘要”。
-
-工作内容：
-
-- 为每类节点生成固定摘要：
-  - Risk：涉及业务场景、相关工具、相关攻击者、规避覆盖情况。
-  - AttackTool：直接/间接造成风险、相关攻击者、可被哪些规避限制。
-  - ThreatActor：使用/制作工具、影响风险范围、路径覆盖情况。
-  - Avoidance：覆盖风险、覆盖工具、覆盖缺口。
-  - Term：关联实体和术语上下文。
-- 给高关联节点增加“关键节点”提示。
-- 给低覆盖节点增加“待补充关系”提示。
-- 将摘要逻辑放入可测试的 insight 模块。
-
-落点：
-
-- `src/views/relation/relationGraphInsights.ts`
-- `src/views/relation/relationGraphRootAnalysis.ts`
-- `src/components/relation/RelationNodeDrawerInsights.vue`
-- `src/views/relation/__tests__/relationGraphInsights.test.ts`
-
-验收标准：
-
-- 任意核心实体节点点开后，能看到一句可读的“为什么重要”摘要。
-- 摘要不依赖硬编码具体 ID，而由关系数据推导。
-- 高关联、低覆盖、路径中间层等提示有测试覆盖。
-
-### 7.4 P2：分析视角切换
+> 当前状态：❌ 未实现。RelationSelectorBar 只有关系类型下拉和实体 key 下拉，无视角切换；viewModel/state 无 perspective 概念；src 内 0 处视角切换代码（grep "perspective|视角" 仅命中内容数据文案）。
 
 目标：从单一实体中心图，升级为面向任务的分析视角。
 
@@ -347,9 +131,9 @@ interface AttackPathStepExplanation {
 
 工作内容：
 
-- 在关系页增加视角切换控件。
+- 在 RelationSelectorBar 增加视角切换控件。
 - 每个视角定义默认节点类型、默认关系类型、默认布局和解释模板。
-- 将 `audit:metrics` 和 `audit:relations` 中的关键结果转成前端可消费数据。
+- 将质量报告（3.1）和 audit:metrics/relations 关键结果转成前端可消费数据。
 - 对薄弱关系视角提供列表 + 图谱高亮。
 
 落点：
@@ -359,7 +143,7 @@ interface AttackPathStepExplanation {
 - `src/views/relation/useRelationViewModel.ts`
 - `src/views/relation/relationViewState.ts`
 - `scripts/validate/metrics.mjs`
-- `public/data/*` 或构建时生成的派生报告
+- `public/data/quality-report.json`（3.1 产物）
 
 验收标准：
 
@@ -367,373 +151,207 @@ interface AttackPathStepExplanation {
 - 不同视角有不同默认筛选和说明。
 - 视角切换不破坏现有 URL 路由和实体跳转。
 
-### 7.5 P2：防御覆盖分析
+### 3.4 P1：业务场景图谱
 
-目标：帮助用户判断风险是否有足够规避措施覆盖。
-
-工作内容：
-
-- 对 Risk 计算直接规避覆盖、工具规避覆盖、路径末端规避覆盖。
-- 对 Avoidance 计算覆盖风险数、覆盖工具数、覆盖场景数。
-- 对 AttackTool 显示可用规避措施及其覆盖范围。
-- 对缺少规避措施或只有间接规避的风险给出提示。
-- 当前已完成节点级防御覆盖摘要和业务场景影响摘要，下一步应补质量治理联动。
-
-覆盖类型建议：
-
-| 类型 | 说明 |
-|------|------|
-| 直接覆盖 | Risk 显式关联 Avoidance |
-| 工具覆盖 | AttackTool 关联 Avoidance，间接缓解相关 Risk |
-| 路径覆盖 | 攻击路径末端存在 Avoidance |
-| 缺口 | Risk 或路径没有可用 Avoidance |
-
-验收标准：
-
-- Risk 节点可显示覆盖状态。
-- Avoidance 节点可显示覆盖范围。
-- 攻击路径详情中可标记阻断点。
-- 覆盖缺口可进入维护报告。
-
-### 7.6 P2：质量治理联动
-
-目标：让维护者在可视化页面直接看到数据质量问题。
-
-工作内容：
-
-- 将 `audit:metrics` 的维护任务、弱关系、场景问题输出为稳定 JSON。
-- 前端加载质量报告后，在图谱中标记相关节点和边。
-- 增加“仅看待复核关系”“仅看缺覆盖风险”“仅看场景异常”的筛选。
-- 节点详情中显示质量提示和建议动作。
-
-质量标记：
-
-| 标记 | 含义 |
-|------|------|
-| `missingRelation` | 缺少关键关系 |
-| `weakRelation` | 关系覆盖不足或仅有弱推导 |
-| `missingAvoidance` | 风险缺少规避覆盖 |
-| `sceneIssue` | 业务场景或风险场景分类异常 |
-| `i18nIssue` | 中英文结构或文案同步异常 |
-
-验收标准：
-
-- 审计报告可被前端消费。
-- 质量问题可以从列表定位到图谱节点。
-- 质量标记不影响普通浏览体验。
-
-### 7.7 P3：业务场景图谱
+> 当前状态：❌ 未实现。无 `relationBusinessSceneGraph.ts` 及测试；relationGraphBuilder 仅处理 risk/avoidance/attackTool/threatActor/term 五类，无 businessScene 分支；路由无 `/relation/business-scene/:key`；首页业务场景矩阵不链接到关系页。业务场景影响是反向实现的（从实体推导命中场景），非"从场景出发的图谱"。
 
 目标：把 BusinessScene 和 RiskScene 纳入解释型可视化，而不是只在首页矩阵展示。
 
 工作内容：
 
+- 新增 `relationBusinessSceneGraph.ts` 生成业务场景图谱数据。
 - 新增从 BusinessScene / RiskScene 出发的关系视图。
 - 展示 BusinessScene -> RiskDimension -> RiskScene -> Risk -> AttackTool / Avoidance。
 - 支持按业务场景查看风险密度、规避覆盖、攻击工具集中度。
+- 新增路由 `/relation/business-scene/:bsKey`，首页矩阵可进入。
+- 补充 `relationBusinessSceneGraph.test.ts`。
 - 保持中文业务场景为结构权威，英文文件只维护翻译。
+
+落点：
+
+- `src/views/relation/relationBusinessSceneGraph.ts`（新增）
+- `src/views/relation/relationGraphBuilder.ts`（增加 businessScene 分支）
+- `src/views/relation/relationTypes.ts`（RelationType 增加 businessScene）
+- `src/router/index.ts`（新增路由）
+- `src/views/HomeView.vue`（矩阵入口链接）
+- `src/views/relation/__tests__/relationBusinessSceneGraph.test.ts`（新增）
 
 验收标准：
 
 - 用户能从业务场景进入对应风险图谱。
 - 业务场景视图能解释该场景主要风险暴露面。
 - 不在 Risk 实体中重新维护 `relatedBusinessScenes`。
+- `relationBusinessSceneGraph.test.ts` 通过。
 
-## 8. 实施阶段
+### 3.5 P2：节点详情质量提示补全
 
-### Phase 0：基线确认，1-2 天（部分完成）
+> 当前状态：⚠️ 部分实现。relationGraphInsights.ts 已有 notices（highConnectivity/lowConnectivity/missingAvoidance/missingRiskLink/rootPath），边级有 qualityFlags（缺来源/待复核）。但缺"缺引用"维度，"弱关系"未节点级化，且不消费审计报告（仅运行时按关系推导）。
 
-任务：
+目标：节点详情抽屉显示完整的质量提示集合。
 
-- 复核当前关系图谱和 Sankey 的数据生成链路。
-- 列出所有关系类型、来源字段和当前解释覆盖情况。
-- 选定 8-10 个代表实体作为验收样本。
-- 建立当前截图和交互基线。
+工作内容：
 
-建议样本：
+- 补充"缺引用"维度（references 质量从审计报告读取，进节点详情）。
+- "弱关系"作为节点级提示（当前仅边级 qualityFlags）。
+- 节点质量提示消费质量报告 JSON（3.1），而非仅运行时推导。
+- 统一质量提示与 3.2 的质量标记体系。
 
-- 高关联 Risk 2 个
-- 低覆盖 Risk 2 个
-- 高关联 AttackTool 2 个
-- ThreatActor 2 个
-- Avoidance 2 个
-- 业务场景 1-2 个
+落点：
 
-交付物：
+- `src/views/relation/relationGraphInsights.ts`
+- `src/components/relation/RelationNodeAnalysisBlock.vue`
+- `src/components/relation/RelationNodeDetailContent.vue`
 
-- 关系类型清单
-- 来源字段覆盖清单
-- 验收样本清单
-- 当前问题截图或记录
+验收标准：
 
-### Phase 1：关系解释核心，3-5 天（完成）
+- 节点详情显示"弱关系/缺引用/缺关联/待复核"四类完整提示。
+- 提示来源包含审计报告（不只运行时推导）。
 
-任务：
+### 3.6 P2：关系页首屏性能专项
 
-- 完成 RelationExplanation 派生结构。
-- 完成主要关系类型解释模板。
-- 改造 tooltip、节点详情关系列表和 CSV 复制。
-- 补充关系解释单元测试。
+> 当前状态：⚠️ 部分实现。英文 BREAK 整包动态 import 懒加载（i18n/index.ts ensureEnLocaleMessages），但 en/BREAK/index.ts 内部用 `import.meta.glob({ eager: true })`，即整包懒加载但内部不分片；cases(1799)/terms(602) 目录大，该 chunk 较重。有性能基线脚本（site-performance/lighthouse-baseline/relation-stability/bundle-budget），但无独立关系页性能基线文档。
 
-交付物：
+目标：降低关系页首次进入和语言切换时的等待时间。
 
-- 边关系解释能力
-- 关系来源字段完整显示
-- 单元测试通过
-- 当前已落地：`relationExplanation.ts`、关系 tooltip、节点关系列表、CSV 解释字段、`relationExplanation.test.ts`
+工作内容：
 
-### Phase 2：攻击路径解释，5-8 天（完成）
+- 评估英文 BREAK 翻译数据按实体/按关系图可见节点加载（替代整包 eager glob）。
+- 评估预生成聚合语言包，减少大量 JSON 模块导入。
+- 给关系页首屏建立性能基线：首次加载、网络图出图、语言切换重绘。
+- 对高关联实体建立布局和渲染耗时样本。
+- 形成独立关系页性能基线文档。
 
-任务：
+验收标准：
 
-- 在 Sankey 生成逻辑中保留路径对象。
-- 增加路径筛选和路径详情。
-- 增加逐段攻击意图和防御意义解释。
-- 标记缺少规避措施的路径。
-- 补充攻击路径测试。
+- 明确当前瓶颈归因和可量化指标。
+- 至少形成一种可落地的翻译数据加载策略。
+- 性能优化不破坏中英文动态切换和知识库详情展示。
 
-交付物：
+### 3.7 P2：截图基线与交互回归
 
-- 可选择单条攻击路径
-- 可解释路径成立依据
-- 可定位阻断点和覆盖缺口
-- 当前已落地：抽屉路径组合筛选、动态下拉选项、逐段攻击意图/防御意义、缺规避提示、`relationAttackPath.test.ts`
+> 当前状态：⚠️ 部分实现。缺独立截图基线文档；抽屉、tooltip、筛选、三栏分析解读、移动端布局未固化 Playwright 截图基线。
 
-### Phase 3：节点摘要、防御覆盖与业务影响，4-6 天（完成）
+目标：固化关键交互的视觉基线，防止回归。
 
-任务：
+工作内容：
 
-- 为 Risk、AttackTool、ThreatActor、Avoidance 生成分析摘要。
-- 增加防御覆盖状态。
-- 将覆盖缺口纳入节点详情。
-- 增加业务场景影响摘要，展示实体命中的业务场景、风险场景和风险清单。
-- 补充 insight 测试。
+- 建立当前截图和交互基线，覆盖关系网络、攻击路径、分析解读三栏、知识库详情、移动端提示、暗色主题。
+- 固化高关联实体、低覆盖实体、空关系或低关系实体样本。
+- Playwright 截图基线脚本或人工验收清单。
 
-交付物：
+落点：
 
-- 节点详情具备“为什么重要”说明
-- 风险和规避的覆盖关系清晰可见
-- 覆盖缺口可被维护者识别
-- 业务场景影响能解释实体关联到哪些业务场景和风险场景
-- 当前已落地：`relationGraphInsights.ts` 节点摘要、`relationCoverageAnalysis.ts` 覆盖摘要、`relationBusinessSceneImpact.ts` 业务场景影响摘要、抽屉洞察组件拆分、`relationCoverageAnalysis.test.ts`、`relationBusinessSceneImpact.test.ts`
+- `scripts/validate/`（截图基线脚本）
+- 验收样本清单文档
 
-### Phase 4：分析视角与质量治理，6-10 天（部分开始）
+验收标准：
+
+- 关键页面有截图基线。
+- 回归时可对比发现视觉变化。
+
+## 4. 实施阶段（仅未完成）
+
+### Phase 4：分析视角与质量治理（部分开始，核心未完成）
 
 任务：
 
-- 增加风险视角、攻击者视角、防御视角。
-- 接入维护报告 JSON。
+- 增加风险视角、攻击者视角、防御视角、薄弱关系视角（3.3）。
+- 接入维护报告 JSON（3.1）并驱动质量治理视图（3.2）。
 - 增加薄弱关系和覆盖缺口筛选。
 - 图谱中标记质量问题。
-- 持续扩展 i18n 和关系质量校验，使数据问题能在进入前端前被拦截。
+- 将质量治理列表与中部/右侧 pane 的筛选、定位和详情组件打通。
+- 补全节点详情质量提示（3.5）。
 
 交付物：
 
-- 关系页支持任务型视角切换
-- 审计报告能驱动可视化治理
-- 维护者可以从问题列表定位到实体和关系
-- 当前已落地：英文 i18n 质量校验已覆盖 reference title 缺失和中文残留；尚未输出统一维护报告 JSON，也未接入关系页质量视图
+- 关系页支持任务型视角切换，或在"分析解读"中提供等价的任务型过滤入口。
+- 审计报告能驱动可视化治理：问题列表、节点定位、关系定位、详情解释。
+- 维护者可从问题列表定位到实体和关系。
 
-### Phase 5：业务场景图谱，5-8 天（未开始）
+### Phase 5：业务场景图谱（未开始）
 
 任务：
 
-- 增加业务场景入口。
-- 构建 BusinessScene -> RiskScene -> Risk 的图谱数据。
+- 增加业务场景入口和路由。
+- 构建 BusinessScene -> RiskScene -> Risk 的图谱数据（3.4）。
 - 展示场景内风险、工具、规避覆盖摘要。
 - 与首页业务场景矩阵保持一致。
 
 交付物：
 
-- 业务场景可进入解释型图谱
-- 风险场景与风险实体关系清晰
-- 中英文业务场景结构规则不被破坏
+- 业务场景可进入解释型图谱。
+- 风险场景与风险实体关系清晰。
+- 中英文业务场景结构规则不被破坏。
+- `relationBusinessSceneGraph.test.ts` 通过。
 
-## 9. 验收标准
+### Phase 6：关系页性能专项（未开始）
 
-### 9.1 功能验收
+任务：
 
-| 项目 | 标准 |
-|------|------|
-| 边解释 | 任意主要关系边可显示关系类型、来源字段、解释文案 |
-| 路径解释 | 任意完整攻击路径可展示逐段说明和来源字段 |
-| 节点摘要 | 核心实体节点有可读的分析摘要 |
-| 防御覆盖 | Risk 和 Avoidance 能显示覆盖关系和缺口 |
-| 视角切换 | 至少支持风险、攻击路径、防御覆盖 3 个视角 |
-| 质量治理 | 弱关系或缺覆盖问题能在可视化中定位 |
-| i18n | 新增文案中英文同步，英文文件不混入中文 |
+- 建立首屏加载和语言切换性能基线（3.6）。
+- 评估英文 BREAK 翻译数据按需加载或预聚合。
+- 高关联实体下验证网络图和分析解读渲染耗时。
 
-### 9.2 工程验收
+交付物：
 
-| 项目 | 标准 |
-|------|------|
-| 类型检查 | `npm run type-check` 通过 |
-| 数据校验 | `npm run validate:data` 通过 |
-| 单元测试 | 关系图谱、攻击路径、insight 相关测试通过 |
-| 构建 | `npm run build` 通过 |
-| 性能 | 不引入明显超预算 bundle；关系页交互不卡顿 |
-| 可维护性 | 解释逻辑沉淀为纯函数或 composable，不堆在 Vue 模板中 |
+- 性能基线记录。
+- 翻译数据加载策略结论。
+- 可落地的首屏优化任务拆分。
 
-### 9.3 内容验收
+## 5. 验收标准（仅未达成项）
 
-| 项目 | 标准 |
-|------|------|
-| 解释准确性 | 所有解释能回到明确字段或推导规则 |
-| 不过度推断 | 不把弱关系描述成确定事实 |
-| 业务场景一致性 | 风险场景分类以 `src/BREAK/business-scenes/*.json` 为权威 |
-| 英文同步 | `src/i18n/en/BREAK/business-scenes/*.json` 只维护翻译，不维护结构性风险清单 |
+| 项目 | 标准 | 当前 |
+|------|------|------|
+| 视角切换 | 至少支持风险、攻击路径、防御覆盖 3 个视角 | ❌ 0 个 |
+| 质量治理 | 弱关系或缺覆盖问题能在可视化中定位 | ❌ 未实现 |
+| 质量报告 | 前端可消费四分类稳定 JSON | ❌ 未实现 |
+| 业务场景图谱 | 从业务场景进入解释型图谱 | ❌ 未实现 |
+| 节点质量提示 | 含缺引用维度、消费审计报告 | ⚠️ 缺缺引用、不消费报告 |
+| 性能基线 | 关系页首屏/语言切换可量化、有加载策略 | ⚠️ 无独立基线文档 |
+| 截图基线 | 关键交互视觉基线固化 | ⚠️ 缺 |
 
-## 10. 推荐源码改造边界
+工程验收（沿用）：type-check / validate:data / 单元测试 / build 通过；解释逻辑沉淀为纯函数或 composable，不堆在 Vue 模板中。
 
-### 10.1 建议新增模块
+## 6. 近期执行清单
 
-| 模块 | 责任 |
-|------|------|
-| `relationExplanation.ts` | 生成边关系解释 |
-| `relationAttackPathExplanation.ts` | 生成攻击路径解释 |
-| `relationCoverageAnalysis.ts` | 生成风险和规避覆盖分析 |
-| `relationQualityFlags.ts` | 消费审计结果并生成质量标记 |
-| `relationBusinessSceneGraph.ts` | 生成业务场景图谱数据 |
+1. [ ] 新增脚本生成 `public/data/quality-report.json`（weakRelations/missingCoverage/sceneIssues/i18nIssues 四分类），纳入 build 链（3.1）。
+2. [ ] 新增质量治理列表组件，展示四类问题并支持"仅看 X"筛选（3.2）。
+3. [ ] 支持从质量治理列表定位到关系网络节点、关系边和分析解读详情（3.2）。
+4. [ ] 为任务型视角定义默认筛选：风险、攻击者、防御、薄弱关系视角（3.3）。
+5. [ ] 设计 BusinessScene / RiskScene 出发的业务场景图谱数据结构，新增 `relationBusinessSceneGraph.ts`（3.4）。
+6. [ ] 补充 `relationBusinessSceneGraph.test.ts`（3.4）。
+7. [ ] 新增 `/relation/business-scene/:bsKey` 路由，首页矩阵可进入（3.4）。
+8. [ ] 节点详情补全"缺引用"维度并消费质量报告（3.5）。
+9. [ ] 建立关系页首屏性能基线，记录英文 BREAK 全量 JSON 加载与合并耗时（3.6）。
+10. [ ] 评估英文翻译数据按实体/按可见节点加载，或预生成聚合语言包（3.6）。
+11. [ ] 建立关系页截图基线，覆盖关系网络、攻击路径、分析解读三栏、暗色主题、移动端（3.7）。
 
-### 10.2 建议避免的做法
+## 7. 建议新增模块（仅未完成）
 
-| 做法 | 原因 |
-|------|------|
-| 在 Vue 模板里直接写复杂推导 | 难测试、难复用、难维护 |
-| 为了解释能力大量新增实体字段 | 容易扩大数据维护成本，应先用派生逻辑验证 |
-| 用脚本直接改实体关系 | 关系和关键词应由脚本提出建议，再由 AI 或人工判断后修改 |
-| 在 Risk 实体里维护业务场景反向字段 | 业务场景分类权威应保持在 `business-scenes` 中 |
-| 用精确分数伪装关系置信度 | 当前证据模型不足，先用离散状态更稳 |
+| 模块 | 责任 | 状态 |
+|------|------|------|
+| `relationQualityFlags.ts` | 消费审计结果并生成质量标记 | ❌ 待新增 |
+| `relationBusinessSceneGraph.ts` | 生成业务场景图谱数据 | ❌ 待新增 |
 
-## 11. 测试计划
+已存在不再列入：`relationExplanation.ts`、`relationAttackPath.ts`、`relationCoverageAnalysis.ts`、`relationBusinessSceneImpact.ts`、`relationGraphInsights.ts`。
 
-### 11.1 单元测试
-
-| 测试文件 | 覆盖内容 |
-|----------|----------|
-| `relationExplanation.test.ts` | 边关系解释、来源字段、直接/间接/推导分类 |
-| `relationAttackPath.test.ts` | 路径生成、路径筛选、逐段来源字段 |
-| `relationCoverageAnalysis.test.ts` | Risk/Avoidance 覆盖状态、缺口判断 |
-| `relationBusinessSceneImpact.test.ts` | 节点到业务场景、风险场景、风险清单的影响推导 |
-| `relationGraphInsights.test.ts` | 节点摘要、关键节点、低覆盖提示 |
-| `relationBusinessSceneGraph.test.ts` | 业务场景到风险场景、风险实体的图谱生成 |
-
-### 11.2 交互测试
-
-至少覆盖：
-
-- 从 Risk 进入关系页，查看边解释和防御覆盖。
-- 从 AttackTool 进入关系页，查看直接/间接造成风险。
-- 从 ThreatActor 进入攻击路径，筛选一条路径并查看逐段解释。
-- 从 Avoidance 进入关系页，查看覆盖风险和覆盖工具。
-- 从业务场景进入场景图谱，查看场景风险暴露面。
-
-### 11.3 视觉和性能检查
-
-至少检查：
-
-- 桌面宽屏
-- 桌面窄屏
-- 移动端
-- 暗色主题
-- 高关联实体
-- 空关系或低关系实体
-
-## 12. 数据治理联动
-
-### 12.1 与现有脚本关系
-
-| 脚本 | 用途 |
-|------|------|
-| `npm run audit:relations` | 关系覆盖审计 |
-| `npm run audit:metrics` | 内容规模、弱关系、场景问题、维护任务 |
-| `npm run audit:maintenance` | 统一维护汇总 |
-| `npm run validate:data` | 数据结构和中英文同步基础校验 |
-
-### 12.2 建议新增输出
-
-将维护报告拆出前端可消费 JSON：
-
-```json
-{
-  "weakRelations": [],
-  "missingCoverage": [],
-  "sceneIssues": [],
-  "i18nIssues": [],
-  "generatedAt": "2026-06-17"
-}
-```
-
-前端只消费报告结果，不在运行时重新执行重型审计逻辑。
-
-## 13. 风险与约束
+## 8. 风险与约束（未变）
 
 | 风险 | 说明 | 应对 |
 |------|------|------|
-| 解释过度推断 | 数据字段不足时容易写出看似确定的结论 | 明确区分 direct、indirect、inferred、review |
-| UI 信息过载 | 详情抽屉加入太多解释会变难读 | 使用摘要优先、详情折叠、分组展示 |
-| 性能下降 | 高关联图谱增加解释数据可能变慢 | 解释按需计算、缓存派生结果、避免深层响应式大对象 |
-| 中英文不同步 | 新增大量说明文案容易漏翻译 | 每个功能 PR 强制校验 i18n key |
+| 解释过度推断 | 数据字段不足时易写看似确定的结论 | 明确区分 direct/indirect/inferred/review |
+| UI 信息过载 | 质量治理加入太多列表会变难读 | 摘要优先、详情折叠、分组展示 |
+| 性能下降 | 质量报告 + 视角切换增加计算 | 按需计算、缓存派生结果、避免深层响应式大对象 |
+| 中英文不同步 | 新增说明文案易漏翻译 | 每个功能 PR 强制校验 i18n key |
 | 维护报告耦合过重 | 前端直接依赖 Markdown 报告不稳定 | 输出稳定 JSON，Markdown 只给人读 |
-| 数据模型膨胀 | 为视觉效果新增太多字段 | 先用派生对象验证，再决定是否进入 Schema |
+| 关系页首屏加载慢 | 英文 BREAK 翻译整包加载与中文结构合并 | 短期预加载拆包；中期按实体加载或预生成聚合语言包 |
 
-## 14. 优先级建议
+## 9. 优先级建议
 
-第一优先级：
+第一优先级（P0）：前端可消费质量报告 JSON（3.1）——是 3.2/3.5 的前置依赖。
 
-- 边关系解释
-- 攻击路径详情
-- 攻击路径逐段来源字段
-- 节点“为什么重要”摘要
+第二优先级（P1）：质量治理前端视图（3.2）、任务型分析视角（3.3）、业务场景图谱（3.4）。
 
-第二优先级：
+第三优先级（P2）：节点质量提示补全（3.5）、关系页性能专项（3.6）、截图基线（3.7）。
 
-- 防御覆盖分析
-- 路径筛选
-- 质量治理标记
-- 关系解释单元测试扩充
-
-第三优先级：
-
-- 多分析视角
-- 业务场景图谱
-- 维护报告前端消费
-- 高关联实体性能基线
-
-暂不建议优先做：
-
-- 新增大量统计图表
-- 重做 ECharts 之外的新图谱引擎
-- 复杂图算法或自动评分模型
-- 需要大量人工标注的新 Schema 字段
-
-## 15. 近期执行清单
-
-建议从下面 10 个任务开始：
-
-1. [部分完成] 梳理所有关系类型和来源字段，生成关系解释覆盖清单。
-
-   当前关系解释已覆盖主要来源字段，但尚未形成独立覆盖清单文档。
-2. [已完成] 新增 `relationExplanation.ts`，统一生成边解释。
-3. [已完成] 改造节点详情关系列表，显示来源字段和解释。
-4. [已完成] 改造 Sankey 数据结构，保留完整路径对象。
-5. [已完成] 新增路径详情面板，展示逐段解释。
-6. [部分完成] 为 Risk 节点生成规避覆盖摘要。
-
-   已形成 `relationCoverageAnalysis.ts` 独立覆盖分析模块，并进入节点详情；剩余缺口是把覆盖缺口接入统一质量治理报告。
-7. [部分完成] 为 AttackTool 节点生成直接/间接风险摘要。
-
-   关系解释、攻击路径和节点分析摘要内已体现工具到风险关系；剩余缺口是任务型攻击工具视角和质量治理高亮。
-8. [部分完成] 为 ThreatActor 节点生成使用/制作工具摘要。
-
-   攻击路径和节点分析摘要内已体现威胁行为者到工具关系；剩余缺口是任务型攻击者视角和质量治理高亮。
-9. [未开始] 将弱关系和缺覆盖问题整理为前端可消费 JSON。
-10. [已完成] 补齐 relation explanation、attack path explanation、coverage analysis、business scene impact 单元测试。
-
-    已覆盖 relation explanation、attack path、coverage analysis、business scene impact 和 graph insights；业务场景图谱测试仍随 Phase 5 实现。
-
-## 16. 结论
-
-BREAK 的可视化分析下一阶段不应以“图更大、布局更多”为核心，而应以“解释更深、路径更清楚、关系更可审计”为核心。
-
-本规划建议先完成边关系解释和攻击路径解释，再补节点摘要、防御覆盖、质量治理和业务场景图谱。这样可以在不大幅扩张数据模型的前提下，把当前已有的关系网络和攻击路径能力升级为真正的分析能力。
+暂不建议：新增大量统计图表、重做 ECharts 之外的新图谱引擎、复杂图算法或自动评分模型、需要大量人工标注的新 Schema 字段。
