@@ -33,6 +33,7 @@ declare module 'vue' {
     ElTabPane: typeof import('element-plus/es')['ElTabPane']
     ElTabs: typeof import('element-plus/es')['ElTabs']
     ElTooltip: typeof import('element-plus/es')['ElTooltip']
+    EntityLinkSection: typeof import('./src/components/EntityLinkSection.vue')['default']
     GithubPane: typeof import('./src/components/GithubPane.vue')['default']
     IconFork: typeof import('./src/components/icons/iconFork.vue')['default']
     IconGithub: typeof import('./src/components/icons/iconGithub.vue')['default']

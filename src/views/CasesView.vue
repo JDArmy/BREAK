@@ -3,12 +3,11 @@ import { computed, ref, watch } from "vue";
 import { useRoute } from "vue-router";
 import { useI18n } from "vue-i18n";
 import KnowledgeSplitView from "@/components/KnowledgeSplitView.vue";
-import { useBreakpoints } from "@/composables/useBreakpoints";
+import EntityLinkSection from "@/components/EntityLinkSection.vue";
 import { useCases } from "@/composables/useCases";
 
 const route = useRoute();
 const { t } = useI18n();
-const { isMobile } = useBreakpoints();
 const { cases, ensureCases } = useCases();
 
 void ensureCases();
@@ -164,45 +163,30 @@ watch(selectedCategory, () => {
           </span>
         </div>
       </section>
-      <section v-if="selectedCase.relatedRisks.length" class="detail-section" data-detail-anchor="risks">
-        <h3>{{ $t("risks") }}</h3>
-        <div class="entity-links">
-          <router-link
-            v-for="rKey in selectedCase.relatedRisks"
-            :key="rKey"
-            :to="isMobile ? { name: 'risksDetail', params: { rKey } } : { name: 'risks', hash: `#${rKey}` }"
-            class="entity-link"
-          >
-            {{ rKey }}: {{ $t(`BREAK.risks.${rKey}.title`) }}
-          </router-link>
-        </div>
-      </section>
-      <section v-if="selectedCase.relatedAttackTools.length" class="detail-section" data-detail-anchor="attack-tools">
-        <h3>{{ $t("attackTools") }}</h3>
-        <div class="entity-links">
-          <router-link
-            v-for="atKey in selectedCase.relatedAttackTools"
-            :key="atKey"
-            :to="isMobile ? { name: 'attackToolsDetail', params: { atKey } } : { name: 'attackTools', hash: `#${atKey}` }"
-            class="entity-link"
-          >
-            {{ atKey }}: {{ $t(`BREAK.attackTools.${atKey}.title`) }}
-          </router-link>
-        </div>
-      </section>
-      <section v-if="selectedCase.relatedThreatActors.length" class="detail-section" data-detail-anchor="threat-actors">
-        <h3>{{ $t("threatActors") }}</h3>
-        <div class="entity-links">
-          <router-link
-            v-for="taKey in selectedCase.relatedThreatActors"
-            :key="taKey"
-            :to="isMobile ? { name: 'threatActorsDetail', params: { taKey } } : { name: 'threatActors', hash: `#${taKey}` }"
-            class="entity-link"
-          >
-            {{ taKey }}: {{ $t(`BREAK.threatActors.${taKey}.title`) }}
-          </router-link>
-        </div>
-      </section>
+      <EntityLinkSection
+        :keys="selectedCase.relatedRisks"
+        title="risks"
+        route-name="risks"
+        detail-route-name="risksDetail"
+        param-key="rKey"
+        anchor="risks"
+      />
+      <EntityLinkSection
+        :keys="selectedCase.relatedAttackTools"
+        title="attackTools"
+        route-name="attackTools"
+        detail-route-name="attackToolsDetail"
+        param-key="atKey"
+        anchor="attack-tools"
+      />
+      <EntityLinkSection
+        :keys="selectedCase.relatedThreatActors"
+        title="threatActors"
+        route-name="threatActors"
+        detail-route-name="threatActorsDetail"
+        param-key="taKey"
+        anchor="threat-actors"
+      />
       <section v-if="selectedCase.references?.length" class="detail-section" data-detail-anchor="references">
         <h3>{{ $t("references") }}</h3>
         <div class="entity-links">

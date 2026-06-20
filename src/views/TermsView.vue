@@ -5,12 +5,11 @@ import { useI18n } from "vue-i18n";
 import BREAK from "@/BREAK";
 import KnowledgeSplitView from "@/components/KnowledgeSplitView.vue";
 import ReferenceList from "@/components/ReferenceList.vue";
+import EntityLinkSection from "@/components/EntityLinkSection.vue";
 import { getMessageStringArray, getNestedMessageValue } from "@/utils/i18nMessage";
-import { useBreakpoints } from "@/composables/useBreakpoints";
 
 const route = useRoute();
 const { locale, messages } = useI18n();
-const { isMobile } = useBreakpoints();
 
 const termKeys = Object.keys(BREAK.terms);
 
@@ -126,71 +125,47 @@ const selectedTermAliases = computed(() => getTermStringArray(selectedTermKey.va
         <h3>{{ $t("usageExample") }}</h3>
         <p>{{ $t(`BREAK.terms.${selectedTermKey}.usageExample`) }}</p>
       </section>
-      <section v-if="selectedTerm.relatedThreatActors.length" class="detail-section" data-detail-anchor="threat-actors">
-        <h3>{{ $t("threatActors") }}</h3>
-        <div class="entity-links">
-          <router-link
-            v-for="taKey in selectedTerm.relatedThreatActors"
-            :key="taKey"
-            :to="isMobile ? { name: 'threatActorsDetail', params: { taKey } } : { name: 'threatActors', hash: `#${taKey}` }"
-            class="entity-link"
-          >
-            {{ taKey }}: {{ $t(`BREAK.threatActors.${taKey}.title`) }}
-          </router-link>
-        </div>
-      </section>
-      <section v-if="selectedTerm.relatedAttackTools.length" class="detail-section" data-detail-anchor="attack-tools">
-        <h3>{{ $t("attackTools") }}</h3>
-        <div class="entity-links">
-          <router-link
-            v-for="atKey in selectedTerm.relatedAttackTools"
-            :key="atKey"
-            :to="isMobile ? { name: 'attackToolsDetail', params: { atKey } } : { name: 'attackTools', hash: `#${atKey}` }"
-            class="entity-link"
-          >
-            {{ atKey }}: {{ $t(`BREAK.attackTools.${atKey}.title`) }}
-          </router-link>
-        </div>
-      </section>
-      <section v-if="selectedTerm.relatedRisks.length" class="detail-section" data-detail-anchor="risks">
-        <h3>{{ $t("risks") }}</h3>
-        <div class="entity-links">
-          <router-link
-            v-for="rKey in selectedTerm.relatedRisks"
-            :key="rKey"
-            :to="isMobile ? { name: 'risksDetail', params: { rKey } } : { name: 'risks', hash: `#${rKey}` }"
-            class="entity-link"
-          >
-            {{ rKey }}: {{ $t(`BREAK.risks.${rKey}.title`) }}
-          </router-link>
-        </div>
-      </section>
-      <section v-if="selectedTerm.relatedAvoidances.length" class="detail-section" data-detail-anchor="avoidances">
-        <h3>{{ $t("riskAvoidances") }}</h3>
-        <div class="entity-links">
-          <router-link
-            v-for="aKey in selectedTerm.relatedAvoidances"
-            :key="aKey"
-            :to="isMobile ? { name: 'avoidancesDetail', params: { aKey } } : { name: 'avoidances', hash: `#${aKey}` }"
-            class="entity-link"
-          >
-            {{ aKey }}: {{ $t(`BREAK.avoidances.${aKey}.title`) }}
-          </router-link>
-        </div>
-      </section>
-      <section v-if="selectedTerm.relatedBusinessScenes.length" class="detail-section" data-detail-anchor="business-scenes">
-        <h3>{{ $t("businessScenes") }}</h3>
-        <div class="entity-links">
-          <router-link
-            v-for="bsKey in selectedTerm.relatedBusinessScenes"
-            :key="bsKey"
-            :to="{ name: 'businessScene', params: { bsKey }, hash: `#${bsKey}` }"
-            class="entity-link"
-          >
-            {{ bsKey }}: {{ $t(`BREAK.businessScenes.${bsKey}.title`) }}
-          </router-link>
-        </div>
-      </section>
+      <EntityLinkSection
+        :keys="selectedTerm.relatedThreatActors"
+        title="threatActors"
+        route-name="threatActors"
+        detail-route-name="threatActorsDetail"
+        param-key="taKey"
+        anchor="threat-actors"
+      />
+      <EntityLinkSection
+        :keys="selectedTerm.relatedAttackTools"
+        title="attackTools"
+        route-name="attackTools"
+        detail-route-name="attackToolsDetail"
+        param-key="atKey"
+        anchor="attack-tools"
+      />
+      <EntityLinkSection
+        :keys="selectedTerm.relatedRisks"
+        title="risks"
+        route-name="risks"
+        detail-route-name="risksDetail"
+        param-key="rKey"
+        anchor="risks"
+      />
+      <EntityLinkSection
+        :keys="selectedTerm.relatedAvoidances"
+        title="riskAvoidances"
+        route-name="avoidances"
+        detail-route-name="avoidancesDetail"
+        param-key="aKey"
+        anchor="avoidances"
+      />
+      <EntityLinkSection
+        :keys="selectedTerm.relatedBusinessScenes"
+        title="businessScenes"
+        route-name="businessScene"
+        detail-route-name="businessScene"
+        param-key="bsKey"
+        anchor="business-scenes"
+        i18n-entity-type="businessScenes"
+      />
       <section v-if="selectedTerm.references?.length" class="detail-section" data-detail-anchor="references">
         <h3>{{ $t("references") }}</h3>
         <ReferenceList type="terms" :entity-key="selectedTermKey" />

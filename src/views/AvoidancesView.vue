@@ -1,17 +1,17 @@
 <script lang="ts" setup>
 import { computed, ref, watch } from "vue";
-import { useRoute, useRouter } from "vue-router";
+import { useRoute } from "vue-router";
 import { useI18n } from "vue-i18n";
 import BREAK from "@/BREAK";
 import KnowledgeSplitView from "@/components/KnowledgeSplitView.vue";
 import ReferenceList from "@/components/ReferenceList.vue";
+import EntityLinkSection from "@/components/EntityLinkSection.vue";
 import { getMessageStringArray } from "@/utils/i18nMessage";
-import { useBreakpoints } from "@/composables/useBreakpoints";
+import { useRelatedEntities } from "@/composables/useRelatedEntities";
+import { useRelationGraph } from "@/composables/useRelationGraph";
 
 const route = useRoute();
-const router = useRouter();
 const { t, locale, messages } = useI18n();
-const { isMobile } = useBreakpoints();
 
 const avoidanceKeys = Object.keys(BREAK.avoidances);
 // 优先从路由参数获取，否则从 hash 获取，最后使用默认值
@@ -35,9 +35,8 @@ watch(
 watch(
   () => route.params.aKey,
   (key) => {
-    if (key && BREAK.avoidances[key as string]) selectedAvoidanceKey.value = key as string;
-  },
-  { immediate: true }
+    if (key && typeof key === "string" && BREAK.avoidances[key]) selectedAvoidanceKey.value = key;
+  }
 );
 
 const avoidanceItems = computed(() =>
@@ -75,6 +74,8 @@ const avoidanceItems = computed(() =>
     })
 );
 
+const selectedAvoidance = computed(() => BREAK.avoidances[selectedAvoidanceKey.value]);
+
 watch(selectedCategory, () => {
   if (
     selectedCategory.value &&
@@ -84,40 +85,25 @@ watch(selectedCategory, () => {
   }
 });
 
-
-const selectedAvoidance = computed(() => BREAK.avoidances[selectedAvoidanceKey.value]);
 const localeMessages = computed(() => messages.value[locale.value] as Record<string, unknown>);
 
-const relatedRiskKeys = computed(() =>
-  Object.keys(BREAK.risks).filter((rKey) =>
-    BREAK.risks[rKey].avoidances.includes(selectedAvoidanceKey.value)
-  )
+// 反查：引用该规避手段的风险、攻击工具，以及关联该规避手段的术语
+const relatedRiskKeys = useRelatedEntities(BREAK.risks, "avoidances", selectedAvoidanceKey);
+const relatedAttackToolKeys = useRelatedEntities(
+  BREAK.attackTools,
+  "avoidances",
+  selectedAvoidanceKey,
 );
+const relatedTermKeys = useRelatedEntities(BREAK.terms, "relatedAvoidances", selectedAvoidanceKey);
 
-const relatedAttackToolKeys = computed(() =>
-  Object.keys(BREAK.attackTools).filter((atKey) =>
-    BREAK.attackTools[atKey].avoidances.includes(selectedAvoidanceKey.value)
-  )
-);
-
-const relatedTermKeys = computed(() =>
-  Object.keys(BREAK.terms).filter((tKey) =>
-    BREAK.terms[tKey].relatedAvoidances.includes(selectedAvoidanceKey.value)
-  )
-);
-
-const openRelationGraph = (aKey: string) => {
-  router.push({
-    name: "relation",
-    params: { type: "avoidance", key: aKey },
-  });
-};
+const { openRelationGraph } = useRelationGraph("avoidance");
 </script>
 
 <template>
   <KnowledgeSplitView
     :title="$t('menu.avoidances')"
     route-name="avoidances"
+    detail-route-name="avoidancesDetail"
     :items="avoidanceItems"
     :selected-key="selectedAvoidanceKey"
     :search-placeholder="$t('search.avoidancePlaceholder')"
@@ -180,45 +166,30 @@ const openRelationGraph = (aKey: string) => {
           {{ $t(`BREAK.avoidanceCategories.${selectedAvoidance.category}.title`) }}
         </p>
       </section>
-      <section v-if="relatedRiskKeys.length" class="detail-section" data-detail-anchor="risks">
-        <h3>{{ $t("risks") }}</h3>
-        <div class="entity-links">
-          <router-link
-            v-for="rKey in relatedRiskKeys"
-            :key="rKey"
-            :to="isMobile ? { name: 'risksDetail', params: { rKey } } : { name: 'risks', hash: `#${rKey}` }"
-            class="entity-link"
-          >
-            {{ rKey }}: {{ $t(`BREAK.risks.${rKey}.title`) }}
-          </router-link>
-        </div>
-      </section>
-      <section v-if="relatedAttackToolKeys.length" class="detail-section" data-detail-anchor="attack-tools">
-        <h3>{{ $t("attackTools") }}</h3>
-        <div class="entity-links">
-          <router-link
-            v-for="atKey in relatedAttackToolKeys"
-            :key="atKey"
-            :to="isMobile ? { name: 'attackToolsDetail', params: { atKey } } : { name: 'attackTools', hash: `#${atKey}` }"
-            class="entity-link"
-          >
-            {{ atKey }}: {{ $t(`BREAK.attackTools.${atKey}.title`) }}
-          </router-link>
-        </div>
-      </section>
-      <section v-if="relatedTermKeys.length" class="detail-section" data-detail-anchor="terms">
-        <h3>{{ $t("terms") }}</h3>
-        <div class="entity-links">
-          <router-link
-            v-for="tKey in relatedTermKeys"
-            :key="tKey"
-            :to="isMobile ? { name: 'termsDetail', params: { tKey } } : { name: 'terms', hash: `#${tKey}` }"
-            class="entity-link"
-          >
-            {{ tKey }}: {{ $t(`BREAK.terms.${tKey}.title`) }}
-          </router-link>
-        </div>
-      </section>
+      <EntityLinkSection
+        :keys="relatedRiskKeys"
+        title="risks"
+        route-name="risks"
+        detail-route-name="risksDetail"
+        param-key="rKey"
+        anchor="risks"
+      />
+      <EntityLinkSection
+        :keys="relatedAttackToolKeys"
+        title="attackTools"
+        route-name="attackTools"
+        detail-route-name="attackToolsDetail"
+        param-key="atKey"
+        anchor="attack-tools"
+      />
+      <EntityLinkSection
+        :keys="relatedTermKeys"
+        title="terms"
+        route-name="terms"
+        detail-route-name="termsDetail"
+        param-key="tKey"
+        anchor="terms"
+      />
       <section v-if="selectedAvoidance.references?.length" class="detail-section" data-detail-anchor="references">
         <h3>{{ $t("references") }}</h3>
         <ReferenceList type="avoidances" :entity-key="selectedAvoidanceKey" />

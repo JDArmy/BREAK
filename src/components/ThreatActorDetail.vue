@@ -88,7 +88,7 @@ const termKey = ref("");
       </div>
     </div>
     <div class="desc" v-if="BREAK.threatActors[taKey as keyof typeof BREAK.threatActors].references?.length > 0">
-      <strong>{{ $t("riskReference") }}:&nbsp;</strong>
+      <strong>{{ $t("references") }}:&nbsp;</strong>
       <ReferenceList type="threatActors" :entityKey="taKey" />
     </div>
     <div class="desc">
