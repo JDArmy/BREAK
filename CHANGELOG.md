@@ -1,5 +1,10 @@
 # Change log
 
+## 2.21.1
+
+- 修复首页业务场景风险列表的 i18n key not found 警告：HomeView 风险表格 aria-label 直接用 $t(`BREAK.risks.${rKey}.title`)，首页轻量数据入口首屏未注入全部 risks title，中英文环境批量报 "[intlify] Not found 'BREAK.risks.R0003.title'" 等警告（英文环境约 3904 条）；aria-label 改用既有 getRiskTitle，并将 getLocalizedText 英文分支改为先用 te 检查 key 是否存在、不存在则用中文兜底，彻底消除中英文环境的 not found 警告
+- 移动端子风险显示切换按钮组填满整行：HomeView 的 subrisk-toggle（显示/隐藏所有子风险）在移动端虽有 width:100%+flex，但 el-radio-button 的 inner 未撑满 label，两个按钮收缩在左侧未填满整行；移动端给 el-radio-button 加 display:flex、inner 加 width:100%，使两个按钮平分整行宽度
+
 ## 2.21.0
 
 - 抽取知识库详情页横向共享小件，消除 5 抽屉 + 6 View 的重复代码（约 2400 行涉及）：

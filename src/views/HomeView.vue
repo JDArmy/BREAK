@@ -18,7 +18,7 @@ const TermDetail = defineAsyncComponent(() => import("@/components/TermDetail.vu
 
 const router = useRouter();
 const route = useRoute();
-const { locale, t } = useI18n();
+const { locale, t, te } = useI18n();
 const defaultBusinessSceneKey = "BS00";
 
 const { isMobile } = useBreakpoints();
@@ -89,8 +89,13 @@ const clamp = (value: number, min: number, max: number) =>
 
 const isChineseLocale = computed(() => locale.value === "cn");
 
-const getLocalizedText = (path: string, cnText: string) =>
-  isChineseLocale.value ? cnText : String(t(path));
+const getLocalizedText = (path: string, cnText: string) => {
+  // 中文环境直接用中文文本，不触发 i18n 查找；
+  // 英文环境先用 te 检查 key 是否存在，存在才 t(path)，否则用中文兜底——
+  // 避免首页轻量数据入口首屏未注入实体 title 时批量报 "[intlify] Not found" 警告
+  if (isChineseLocale.value) return cnText;
+  return te(path) ? String(t(path)) : cnText;
+};
 
 const getBusinessSceneTitle = (bsKey: string) =>
   getLocalizedText(
@@ -546,7 +551,7 @@ const termDetailClose = () => {
               <table
                 class="risk-with-sub"
                 style="width: 100%; border-spacing: 0px"
-                :aria-label="$t(`BREAK.risks.${rKey}.title`)"
+                :aria-label="getRiskTitle(rKey)"
                 v-if="subRisks[rKey]"
               >
                 <tbody>
@@ -1003,6 +1008,11 @@ const termDetailClose = () => {
 
   .subrisk-toggle :deep(.el-radio-button) {
     flex: 1;
+    display: flex;
+  }
+
+  .subrisk-toggle :deep(.el-radio-button__inner) {
+    width: 100%;
   }
 
   .stats {
