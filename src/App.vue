@@ -78,7 +78,6 @@ import iconGithub from "@/components/icons/iconGithub.vue";
 
 .mobile-desktop-hint {
   display: none;
-  margin-bottom: 4px;
   color: var(--break-text-muted);
   font-size: 12px;
   line-height: 1.4;
@@ -91,6 +90,15 @@ import iconGithub from "@/components/icons/iconGithub.vue";
 
   .mobile-desktop-hint {
     display: block;
+  }
+
+  /* 移动端 footer 收敛为一行，节约空间 */
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
   }
 }
 </style>
