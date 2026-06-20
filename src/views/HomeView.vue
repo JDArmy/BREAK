@@ -968,6 +968,10 @@ const termDetailClose = () => {
 
 /* 移动端适配 */
 @media (max-width: 767px) {
+  .home-title {
+    font-size: 1.05rem;
+  }
+
   .scene-controls {
     flex-direction: column;
     align-items: stretch;

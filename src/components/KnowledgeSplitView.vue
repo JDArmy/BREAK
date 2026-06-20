@@ -83,6 +83,7 @@ const getParamKey = () => {
   if (props.routeName === "attackTools") return "atKey";
   if (props.routeName === "threatActors") return "taKey";
   if (props.routeName === "terms") return "tKey";
+  if (props.routeName === "cases") return "cKey";
   return "key";
 };
 

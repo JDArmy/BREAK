@@ -1,17 +1,18 @@
 <script lang="ts" setup>
 import { computed, ref, watch } from "vue";
-import { useRoute, useRouter } from "vue-router";
+import { useRoute } from "vue-router";
 import { useI18n } from "vue-i18n";
 import BREAK from "@/BREAK";
 import KnowledgeSplitView from "@/components/KnowledgeSplitView.vue";
 import ReferenceList from "@/components/ReferenceList.vue";
+import EntityLinkSection from "@/components/EntityLinkSection.vue";
 import { getMessageStringArray } from "@/utils/i18nMessage";
 import { useBreakpoints } from "@/composables/useBreakpoints";
-import { useCasesByRisk } from "@/composables/useCasesByRisk";
-import { useLazyCasesSection } from "@/composables/useLazyCasesSection";
+import { useRelatedCases } from "@/composables/useRelatedCases";
+import { useRelatedEntities } from "@/composables/useRelatedEntities";
+import { useRelationGraph } from "@/composables/useRelationGraph";
 
 const route = useRoute();
-const router = useRouter();
 const { t, locale, messages } = useI18n();
 const { isMobile } = useBreakpoints();
 
@@ -72,35 +73,25 @@ const attackToolItems = computed(() =>
 const selectedAttackTool = computed(() => BREAK.attackTools[selectedAttackToolKey.value]);
 const localeMessages = computed(() => messages.value[locale.value] as Record<string, unknown>);
 
-const { getCasesByAttackTool, ensureCases, cases, loaded } = useCasesByRisk();
-const relatedCases = computed(() => getCasesByAttackTool(selectedAttackToolKey.value));
-// 相关案例滚动懒加载：进入可视区才拉取案例数据，避免详情页首屏加载 3MB 案例数据
-const { sectionRef: casesSectionRef } = useLazyCasesSection(() => ensureCases());
-
-const builderThreatActorKeys = computed(() =>
-  Object.keys(BREAK.threatActors).filter((taKey) =>
-    BREAK.threatActors[taKey].buildAttackTools.includes(selectedAttackToolKey.value)
-  )
+const { relatedCases, ensureCases, cases, loaded, sectionRef: casesSectionRef } = useRelatedCases(
+  "attackTool",
+  selectedAttackToolKey,
 );
 
-const userThreatActorKeys = computed(() =>
-  Object.keys(BREAK.threatActors).filter((taKey) =>
-    BREAK.threatActors[taKey].useAttackTools.includes(selectedAttackToolKey.value)
-  )
+// 反查：自建/使用该工具的威胁行为者，以及关联该工具的术语
+const builderThreatActorKeys = useRelatedEntities(
+  BREAK.threatActors,
+  "buildAttackTools",
+  selectedAttackToolKey,
 );
-
-const relatedTermKeys = computed(() =>
-  Object.keys(BREAK.terms).filter((tKey) =>
-    BREAK.terms[tKey].relatedAttackTools.includes(selectedAttackToolKey.value)
-  )
+const userThreatActorKeys = useRelatedEntities(
+  BREAK.threatActors,
+  "useAttackTools",
+  selectedAttackToolKey,
 );
+const relatedTermKeys = useRelatedEntities(BREAK.terms, "relatedAttackTools", selectedAttackToolKey);
 
-const openRelationGraph = (atKey: string) => {
-  router.push({
-    name: "relation",
-    params: { type: "attack-tool", key: atKey },
-  });
-};
+const { openRelationGraph } = useRelationGraph("attack-tool");
 </script>
 
 <template>
@@ -136,84 +127,54 @@ const openRelationGraph = (atKey: string) => {
           </span>
         </div>
       </section>
-      <section v-if="selectedAttackTool.directCauseRisks.length" class="detail-section" data-detail-anchor="risks">
-        <h3>{{ $t("relationLine.directCauseRisk") }}</h3>
-        <div class="entity-links">
-          <router-link
-            v-for="rKey in selectedAttackTool.directCauseRisks"
-            :key="rKey"
-            :to="isMobile ? { name: 'risksDetail', params: { rKey } } : { name: 'risks', hash: `#${rKey}` }"
-            class="entity-link"
-          >
-            {{ rKey }}: {{ $t(`BREAK.risks.${rKey}.title`) }}
-          </router-link>
-        </div>
-      </section>
-      <section v-if="selectedAttackTool.indirectSupportRisks.length" class="detail-section" data-detail-anchor="risks">
-        <h3>{{ $t("relationLine.indirectSupportRisk") }}</h3>
-        <div class="entity-links">
-          <router-link
-            v-for="rKey in selectedAttackTool.indirectSupportRisks"
-            :key="rKey"
-            :to="isMobile ? { name: 'risksDetail', params: { rKey } } : { name: 'risks', hash: `#${rKey}` }"
-            class="entity-link"
-          >
-            {{ rKey }}: {{ $t(`BREAK.risks.${rKey}.title`) }}
-          </router-link>
-        </div>
-      </section>
-      <section v-if="selectedAttackTool.avoidances.length" class="detail-section" data-detail-anchor="avoidances">
-        <h3>{{ $t("avoidance") }}</h3>
-        <div class="entity-links">
-          <router-link
-            v-for="aKey in selectedAttackTool.avoidances"
-            :key="aKey"
-            :to="isMobile ? { name: 'avoidancesDetail', params: { aKey } } : { name: 'avoidances', hash: `#${aKey}` }"
-            class="entity-link"
-          >
-            {{ aKey }}: {{ $t(`BREAK.avoidances.${aKey}.title`) }}
-          </router-link>
-        </div>
-      </section>
-      <section v-if="builderThreatActorKeys.length" class="detail-section" data-detail-anchor="threat-actors">
-        <h3>{{ $t("buildAttackTools") }}</h3>
-        <div class="entity-links">
-          <router-link
-            v-for="taKey in builderThreatActorKeys"
-            :key="taKey"
-            :to="isMobile ? { name: 'threatActorsDetail', params: { taKey } } : { name: 'threatActors', hash: `#${taKey}` }"
-            class="entity-link"
-          >
-            {{ taKey }}: {{ $t(`BREAK.threatActors.${taKey}.title`) }}
-          </router-link>
-        </div>
-      </section>
-      <section v-if="userThreatActorKeys.length" class="detail-section" data-detail-anchor="threat-actors">
-        <h3>{{ $t("useAttackTools") }}</h3>
-        <div class="entity-links">
-          <router-link
-            v-for="taKey in userThreatActorKeys"
-            :key="taKey"
-            :to="isMobile ? { name: 'threatActorsDetail', params: { taKey } } : { name: 'threatActors', hash: `#${taKey}` }"
-            class="entity-link"
-          >
-            {{ taKey }}: {{ $t(`BREAK.threatActors.${taKey}.title`) }}
-          </router-link>
-        </div>
-      </section>
-      <section v-if="relatedTermKeys.length" class="detail-section" data-detail-anchor="terms">
-        <h3>{{ $t("terms") }}</h3>
-        <div class="entity-links">
-          <router-link
-            v-for="tKey in relatedTermKeys"
-            :key="tKey"
-            :to="isMobile ? { name: 'termsDetail', params: { tKey } } : { name: 'terms', hash: `#${tKey}` }"
-            class="entity-link"
-          >
-            {{ tKey }}: {{ $t(`BREAK.terms.${tKey}.title`) }}
-          </router-link>
-        </div>
-      </section>
+      <EntityLinkSection
+        :keys="selectedAttackTool.directCauseRisks"
+        title="relationLine.directCauseRisk"
+        route-name="risks"
+        detail-route-name="risksDetail"
+        param-key="rKey"
+        anchor="risks"
+      />
+      <EntityLinkSection
+        :keys="selectedAttackTool.indirectSupportRisks"
+        title="relationLine.indirectSupportRisk"
+        route-name="risks"
+        detail-route-name="risksDetail"
+        param-key="rKey"
+        anchor="risks"
+      />
+      <EntityLinkSection
+        :keys="selectedAttackTool.avoidances"
+        title="avoidance"
+        route-name="avoidances"
+        detail-route-name="avoidancesDetail"
+        param-key="aKey"
+        anchor="avoidances"
+      />
+      <EntityLinkSection
+        :keys="builderThreatActorKeys"
+        title="buildAttackTools"
+        route-name="threatActors"
+        detail-route-name="threatActorsDetail"
+        param-key="taKey"
+        anchor="threat-actors"
+      />
+      <EntityLinkSection
+        :keys="userThreatActorKeys"
+        title="useAttackTools"
+        route-name="threatActors"
+        detail-route-name="threatActorsDetail"
+        param-key="taKey"
+        anchor="threat-actors"
+      />
+      <EntityLinkSection
+        :keys="relatedTermKeys"
+        title="terms"
+        route-name="terms"
+        detail-route-name="termsDetail"
+        param-key="tKey"
+        anchor="terms"
+      />
       <section
         v-if="!loaded || relatedCases.length"
         ref="casesSectionRef"
