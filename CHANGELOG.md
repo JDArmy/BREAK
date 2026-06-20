@@ -1,5 +1,21 @@
 # Change log
 
+## 2.21.0
+
+- 抽取知识库详情页横向共享小件，消除 5 抽屉 + 6 View 的重复代码（约 2400 行涉及）：
+  - 新增 EntityLinkSection 组件：相关实体链接 section 模板重复 20+ 次，抽出后封装 PC/移动端 router-link 三目、i18n 标题、data-detail-anchor；6 个 View 共用
+  - 新增 useRelatedEntities 反查工厂：遍历 BREAK 表 filter 含 targetKey 的条目，支持单字段/多字段 OR，返回 ComputedRef；消除 10+ 个反查 computed
+  - 新增 useRelatedCases 懒加载封装：RisksView/AttackToolsView/ThreatActorsView 逐字重复的相关案例 3 行样板收敛
+  - 新增 useRelationGraph：4 个 View 逐字重复的 openRelationGraph 收敛
+  - 新增 useRelatedEntities/useRelatedCases 单测（11 个用例）
+- 顺带修复 5 个不一致 bug：
+  - AvoidancesView 漏传 detail-route-name，移动端点列表项不跳独立详情路由
+  - RisksView/AvoidancesView 的 route.params watch 缺 typeof 守卫，与其他 3 View 不一致
+  - 5 个 BREAK View 的 route.params watch immediate 不一致，统一去掉（getInitialKey 已覆盖初始场景）
+  - ThreatActorDetail references 标签误用 riskReference i18n key，改为 references
+  - KnowledgeSplitView.getParamKey cases 分支返回 "key" 应为 "cKey"，移动端 cases 点列表项路由 param 名错误
+- 不做 monolithic useEntityDetail / detail layout 组件（各实体字段组合差异大，横向小件优于纵向大 composable）
+
 ## 2.20.7
 
 - 移动端首页标题缩小字体确保一行显示：home-title 在移动端由 1.5rem 缩至 1.05rem，避免"业务风险枚举与规避知识 v2.20.x"换行
