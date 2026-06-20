@@ -38,6 +38,7 @@ const attackTools = loadAllJson(join(ROOT, "attack-tools"));
 const threatActors = loadAllJson(join(ROOT, "threat-actors"));
 const terms = loadAllJson(join(ROOT, "terms"));
 const businessScenes = loadAllJson(join(ROOT, "business-scenes"));
+const cases = loadAllJson(join(ROOT, "cases"));
 
 const enRisks = loadAllJson(join(I18N_EN_ROOT, "risks"));
 const enAvoidances = loadAllJson(join(I18N_EN_ROOT, "avoidances"));
@@ -52,6 +53,7 @@ const attackToolIds = Object.keys(attackTools);
 const threatActorIds = Object.keys(threatActors);
 const termIds = Object.keys(terms);
 const businessSceneIds = Object.keys(businessScenes);
+const caseIds = Object.keys(cases);
 
 const countSubEntities = (ids: string[]) => ids.filter((id) => id.includes("-")).length;
 
@@ -65,6 +67,7 @@ describe("数据完整性", () => {
       threatActors: threatActorIds.length,
       subThreatActors: countSubEntities(threatActorIds),
       terms: termIds.length,
+      cases: caseIds.length,
     });
   });
 

@@ -1,0 +1,11 @@
+# pre-commit: 刷新首页实体计数（src/BREAK/home.ts），若有变化则纳入本次提交
+# 防止首页统计数字与实际数据脱节；失败则阻断提交
+output=$(node scripts/validate/generate-home-counts.mjs 2>&1)
+status=$?
+if [ $status -ne 0 ]; then
+  echo "❌ generate-home-counts 失败，提交中止："
+  echo "$output"
+  exit $status
+fi
+# home.ts 若被刷新则加入本次提交
+git diff --quiet -- src/BREAK/home.ts || git add src/BREAK/home.ts

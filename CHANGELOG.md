@@ -1,5 +1,15 @@
 # Change log
 
+## 2.20.5
+
+- 首页统计区新增典型案例卡片：此前首页统计卡片只有风险/规避手段/攻击工具/威胁行为者/行业术语 5 项，缺少案例（1797）；新增案例卡片链接到 /cases
+- 首页实体计数改为脚本生成，消除硬编码：新增 scripts/validate/generate-home-counts.mjs 扫描 src/BREAK 各实体目录生成 src/BREAK/home.ts 的 entityCounts（含 cases），配套 validate:home-counts 校验门禁（build 链 + CI + docs-consistency 五处联动）；此前 entityCounts 为硬编码，数据变化时易遗忘导致首页数字与实际不符
+- 新增 husky pre-commit hook：每次提交前自动刷新 home.ts 计数并纳入提交，彻底防止计数过时；package.json 新增 prepare 脚本，协作者 npm ci 后自动安装 hook
+- references 链接质量治理：85 条 http 链接逐条验证 https 可达性，50 条确认可达的升级为 https（35 条 https 不可达保留 http，避免引入死链）
+- 修复 C0363/C1233 两条失效/可疑 reference：C0363 原含中文路径的 huc.me 链接已 404，替换为腾讯新闻同题报道；C1233 原 ipforefront.com 链接连接拒绝，替换为财新网同事件报道；中英文 title 同步更新
+- threathunter 综述报告共用优化：1 篇《2024年上半年互联网黑灰产研究报告》被 149 个 term 共用作 reference（其中 145 个已有更精准的专属源，综述属冗余），移除 148 处冗余引用，仅保留 T0440（黑灰产，综述是其合适参考）
+- 澄清：调研中发现的"知乎电话占位符 URL"经字符码核实为显示环境对数字 ID 的脱敏渲染，文件内实际是正常知乎数字 ID 链接，非脏数据，无需处理
+
 ## 2.20.4
 
 - HomeView 的 subRisks/hideSubRisks 由 ref(Object()) 反模式改为 ref<Record<string, ...>>({})，消除动态键访问的脆弱写法

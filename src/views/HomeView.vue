@@ -54,6 +54,7 @@ const subAttackToolsCount = computed(() => BREAK.entityCounts.subAttackTools);
 const totalThreatActors = computed(() => BREAK.entityCounts.threatActors);
 const subThreatActorsCount = computed(() => BREAK.entityCounts.subThreatActors);
 const totalTerms = computed(() => BREAK.entityCounts.terms);
+const totalCases = computed(() => BREAK.entityCounts.cases);
 
 //分业务场景查看风险
 interface SceneBREAK {
@@ -442,6 +443,11 @@ const termDetailClose = () => {
         <router-link to="/terms" class="stat-card">
           <div class="stat-label">{{ $t("stats.terms") }}</div>
           <div class="stat-number">{{ totalTerms }}</div>
+          <div class="stat-sub">&nbsp;</div>
+        </router-link>
+        <router-link to="/cases" class="stat-card">
+          <div class="stat-label">{{ $t("stats.cases") }}</div>
+          <div class="stat-number">{{ totalCases }}</div>
           <div class="stat-sub">&nbsp;</div>
         </router-link>
       </div>

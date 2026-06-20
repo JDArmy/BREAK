@@ -75,6 +75,7 @@ const buildGateScripts = [
   'test',
   'test:coverage',
   'validate:schema-docs',
+  'validate:home-counts',
   'export:data',
   'export:data-package',
   'build-only',

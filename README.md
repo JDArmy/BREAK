@@ -88,10 +88,11 @@ npm run type-check
 ```
 
 `npm run validate:data` runs JSON Schema validation, i18n key synchronization, relationship coverage auditing, and generated schema documentation checks.
-`npm run build` runs `lint`, `type-check`, `validate:data`, `test`, `test:coverage`, `validate:schema-docs`, `export:data`, `build-only`, `export:data-package`, `audit:bundle:check`, `validate:data-export`, and `validate:data-package`.
+`npm run build` runs `lint`, `type-check`, `validate:data`, `test`, `test:coverage`, `validate:schema-docs`, `validate:home-counts`, `export:data`, `build-only`, `export:data-package`, `audit:bundle:check`, `validate:data-export`, and `validate:data-package`.
 `npm run test:coverage` enforces the core logic coverage baseline for relation analysis, Sankey attack paths, root/path insights, search, safe i18n, and BREAK data utilities.
 `npm run validate:schema-docs` checks [DATA_SCHEMA.md](./DATA_SCHEMA.md) against `src/validation/breakSchema.ts`.
 `npm run schema:docs:write` regenerates [DATA_SCHEMA.md](./DATA_SCHEMA.md) after schema changes.
+`npm run validate:home-counts` checks that the entity counts in `src/BREAK/home.ts` match the actual data; `npm run generate:home-counts` regenerates them (also run automatically via a pre-commit hook).
 `npm run export:data` writes the static data bundle to `public/data/break-data.json` and `public/data/break-manifest.json`.
 `npm run export:data-package` writes an npm package evaluation artifact to `dist/break-data-package`.
 `npm run validate:data-export` checks the public data bundle, manifest hash, entity counts, version, and copied GitHub Pages artifacts.

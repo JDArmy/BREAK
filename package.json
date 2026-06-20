@@ -1,6 +1,6 @@
 {
   "name": "break",
-  "version": "2.20.4",
+  "version": "2.20.5",
   "private": true,
   "type": "module",
   "engines": {
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "npm run lint && npm run type-check && npm run validate:data && npm run test && npm run test:coverage && npm run validate:schema-docs && npm run export:data && npm run build-only && npm run export:data-package && npm run audit:bundle:check && npm run validate:data-export && npm run validate:data-package",
+    "build": "npm run lint && npm run type-check && npm run validate:data && npm run test && npm run test:coverage && npm run validate:schema-docs && npm run validate:home-counts && npm run export:data && npm run build-only && npm run export:data-package && npm run audit:bundle:check && npm run validate:data-export && npm run validate:data-package",
     "preview": "vite preview",
     "build-only": "vite build",
     "analyze": "ANALYZE=1 vite build",
@@ -20,6 +20,8 @@
     "validate:data-package": "node scripts/validate/data-package.mjs",
     "validate:schema-docs": "node scripts/validate/schema-docs.mjs",
     "schema:docs:write": "node scripts/validate/schema-docs.mjs --write",
+    "validate:home-counts": "node scripts/validate/generate-home-counts.mjs --check",
+    "generate:home-counts": "node scripts/validate/generate-home-counts.mjs",
     "export:data": "node scripts/validate/export-static-data.mjs",
     "export:data-package": "node scripts/validate/export-data-package.mjs",
     "test:smoke": "node scripts/validate/site-smoke.mjs",
@@ -39,7 +41,8 @@
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "test:watch": "vitest",
-    "import:cases": "node scripts/research/import-cases.mjs"
+    "import:cases": "node scripts/research/import-cases.mjs",
+    "prepare": "husky"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
@@ -64,6 +67,7 @@
     "eslint": "^9.0.0",
     "eslint-plugin-vue": "^10.0.0",
     "happy-dom": "^20.10.2",
+    "husky": "^9.1.7",
     "lighthouse": "^12.6.1",
     "playwright": "^1.61.0",
     "prettier": "^3.5.0",

@@ -88,10 +88,11 @@ npm run type-check
 ```
 
 `npm run validate:data` 会执行 JSON Schema 校验、i18n key 同步检查、关系覆盖审计和生成式 Schema 文档同步检查。
-`npm run build` 会执行 `lint`、`type-check`、`validate:data`、`test`、`test:coverage`、`validate:schema-docs`、`export:data`、`build-only`、`export:data-package`、`audit:bundle:check`、`validate:data-export` 和 `validate:data-package`。
+`npm run build` 会执行 `lint`、`type-check`、`validate:data`、`test`、`test:coverage`、`validate:schema-docs`、`validate:home-counts`、`export:data`、`build-only`、`export:data-package`、`audit:bundle:check`、`validate:data-export` 和 `validate:data-package`。
 `npm run test:coverage` 会对关系分析、Sankey 攻击路径、根节点路径洞察、搜索、安全 i18n 和 BREAK 数据工具执行核心逻辑覆盖率门禁。
 `npm run validate:schema-docs` 会检查 [DATA_SCHEMA.md](./DATA_SCHEMA.md) 是否与 `src/validation/breakSchema.ts` 同步。
 `npm run schema:docs:write` 会在 Schema 变更后重新生成 [DATA_SCHEMA.md](./DATA_SCHEMA.md)。
+`npm run validate:home-counts` 会检查 `src/BREAK/home.ts` 的实体计数是否与实际数据一致；`npm run generate:home-counts` 重新生成计数（也通过 pre-commit hook 自动执行）。
 `npm run export:data` 会生成 `public/data/break-data.json` 和 `public/data/break-manifest.json` 静态数据包。
 `npm run export:data-package` 会生成 `dist/break-data-package` npm 数据包评估产物。
 `npm run validate:data-export` 会检查公共数据包、manifest hash、实体计数、版本号和 GitHub Pages 产物同步状态。
