@@ -18,7 +18,6 @@
       }
     ],
     "description": "On-chain privacy exposure comes from public visibility of transactions, addresses, balances, and contract interactions. Attackers can combine address clustering, transaction graphs, MEV monitoring, and off-chain data to infer asset holdings, behavior, and identity links.\n\nThe leak may not involve a breach; it is a byproduct of transparent ledgers and analytics. High-value users and institutions need address isolation, privacy-preserving protocols, and minimal off-chain disclosure.",
-    "complexity": "Intermediate",
     "influence": "On-chain privacy exposure can reveal asset holdings, trading habits, and identity links, enabling targeted phishing, extortion, or surveillance."
   }
 }

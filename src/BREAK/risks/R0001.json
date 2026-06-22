@@ -3,7 +3,7 @@
     "title": "流程自动化",
     "definition": "包括不限于自动化注册、登录、购物、领劵、抽奖、做任务等，通过应用程序的非预期操作加速或定时完成特定流程。",
     "description": "有两种主流的方式来实施流程自动化：一种是通过逆向分析业务流程及数据传输协议，编写自动化脚本来发送请求；另一种是操纵业务访问终端（譬如浏览器、应用APP等），重复播放提前录制的流程动作。",
-    "complexity": "高级",
+    "complexity": "advanced",
     "influence": "套取平台营销活动利益，占用正常用户活动资源。",
     "avoidances": [
       "A0001",
@@ -70,7 +70,7 @@
     "title": "协议级自动化",
     "definition": "指通过程序自动发送网络协议请求",
     "description": "通过逆向分析业务流程及数据传输协议，编写自动化脚本来发送请求。",
-    "complexity": "高级",
+    "complexity": "advanced",
     "influence": "套取平台营销活动利益，占用正常用户活动资源。",
     "avoidances": [
       "A0001",
@@ -114,7 +114,7 @@
     "title": "自动化模拟器",
     "definition": "指通过模拟器程序模拟正常用户行为自动发送网络协议请求",
     "description": "通过操纵业务访问终端（譬如浏览器、应用APP等），重复播放提前录制的流程动作。",
-    "complexity": "高级",
+    "complexity": "advanced",
     "influence": "套取平台营销活动利益，占用正常用户活动资源。",
     "avoidances": [
       "A0001",

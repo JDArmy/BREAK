@@ -15,7 +15,6 @@
       }
     ],
     "description": "Collaborative document link exposure comes from cloud drives, online documents, messaging files, or knowledge bases configured with public links, long validity, or forwarding permissions. Once a link leaks, outsiders may access content without an account.\n\nCollaboration tools make sharing easy but hide permission boundaries. Organizations need sensitive document detection, public sharing restrictions, expiration controls, and access anomaly monitoring.",
-    "complexity": "Beginner",
     "influence": "Long-lived public document links can expose customer data, project plans, credential screenshots, and internal procedures."
   }
 }

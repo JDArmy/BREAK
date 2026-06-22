@@ -2,7 +2,7 @@
   "R0217": {
     "title": "XR设备固件攻击",
     "definition": "攻击者利用VR/AR头显、手柄等XR设备的固件漏洞，实现设备控制、数据窃取或植入恶意代码。",
-    "complexity": "高级",
+    "complexity": "advanced",
     "influence": "XR设备权限高，可获取敏感传感器数据",
     "limitation": "需要设备漏洞和物理接近",
     "avoidances": [

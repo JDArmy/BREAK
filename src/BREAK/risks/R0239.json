@@ -3,7 +3,7 @@
     "title": "联盟营销佣金欺诈",
     "definition": "渠道通过Cookie stuffing、虚假流量或劫持落地页骗取佣金。",
     "description": "联盟营销佣金欺诈通过 Cookie stuffing、虚假流量、落地页劫持、优惠券插件或最后点击劫持，把并非由渠道带来的订单归因给作弊方。\n\n该风险会让品牌方为自然订单或其他渠道成果重复支付佣金。治理需要校验真实引流路径、点击质量、转化时间窗和渠道间归因冲突。",
-    "complexity": "中级",
+    "complexity": "intermediate",
     "influence": "佣金欺诈会造成渠道费用虚增、归因报表失真，并挤压真实合作伙伴的收益空间。",
     "avoidances": [
       "A0210",

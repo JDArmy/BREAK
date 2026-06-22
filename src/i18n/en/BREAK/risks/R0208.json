@@ -18,7 +18,6 @@
       }
     ],
     "description": "Medical IoT risk affects connected monitors, infusion pumps, imaging systems, wearables, and implantable devices. Attackers can exploit weak passwords, old firmware, flat networks, or supply chain weaknesses to alter data or device behavior.\n\nThe impact can go beyond privacy and downtime into clinical decisions and patient safety. Medical environments must manage device availability, clinical workflow, and update capability together.",
-    "complexity": "Advanced",
     "influence": "Medical IoT compromise can disrupt clinical workflows, expose health data, and in severe cases affect patient safety."
   }
 }

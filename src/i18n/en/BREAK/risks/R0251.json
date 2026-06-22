@@ -15,7 +15,6 @@
       }
     ],
     "description": "Automotive OTA update hijacking targets firmware, configuration, or application update flows. Attackers may tamper with update packages, replay old versions, hijack download channels, or abuse signing workflows so vehicles install malicious or vulnerable software.\n\nVehicle updates affect safety functions and compliance fixes. Automakers need end-to-end signature verification, anti-rollback, staged release monitoring, and abnormal update blocking.",
-    "complexity": "Advanced",
     "influence": "Hijacked OTA updates can install malicious firmware, block security patches, or roll vehicles back to vulnerable versions."
   }
 }

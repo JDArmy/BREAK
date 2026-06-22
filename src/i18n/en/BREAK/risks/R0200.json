@@ -18,7 +18,6 @@
       }
     ],
     "description": "Layer 2 bridging risk sits in asset locking, message validation, exit proofs, and relayer workflows between the base chain and rollups, sidechains, or app chains. A validation flaw or privileged key abuse can lock funds or release assets incorrectly.\n\nBridges often hold large liquidity and depend on complex on-chain and off-chain coordination. Security review must cover contracts, proof systems, operational keys, delay windows, and emergency exits.",
-    "complexity": "Advanced",
     "influence": "Bridge failures can lock or incorrectly release cross-layer assets, creating large liquidity losses and user confidence damage."
   }
 }

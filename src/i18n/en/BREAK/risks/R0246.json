@@ -15,7 +15,6 @@
       }
     ],
     "description": "MFA fatigue attacks repeatedly trigger login prompts until a user approves one under fatigue, confusion, or social pressure. Attackers usually already know the password and only need the second factor.\n\nPush approval without transaction meaning is easy to misclick. Number matching, location prompts, rate limits, and high-risk login blocking reduce success.",
-    "complexity": "Beginner",
     "influence": "MFA fatigue can defeat enabled multi-factor authentication and give attackers an authenticated enterprise session."
   }
 }

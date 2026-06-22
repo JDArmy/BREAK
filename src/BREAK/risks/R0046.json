@@ -3,7 +3,7 @@
     "title": "未成年人识别绕过",
     "definition": "通过身份伪造实现未成年人识别欺骗。",
     "description": "通过使用正常或伪造的成人身份，绕过未成年人识别机制，包括使用成年人身份证，人脸，指纹等隐私数据。",
-    "complexity": "中级",
+    "complexity": "intermediate",
     "influence": "未成年人识别机制失效。",
     "avoidances": [
       "A0010",

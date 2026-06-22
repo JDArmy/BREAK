@@ -1,6 +1,6 @@
 # BREAK Data Schema
 
-> Generated from `src/validation/breakSchema.ts` for package version `2.21.20`.
+> Generated from `src/validation/breakSchema.ts` for package version `2.21.21`.
 > Last schema doc review: 2026-06-17. Run `npm run schema:docs:write` after schema changes.
 
 This document describes the committed JSON data model used by the BREAK knowledge base. The source of truth is the Zod schema in `src/validation/breakSchema.ts`; `npm run validate:schema-docs` checks this document against that source.
@@ -46,7 +46,7 @@ Parent and child records live in the parent JSON file. For example, `R0001-001` 
 | `keywords` | string | required | 搜索关键词；必须非空，且不能重复。 |
 | `definition` | string | required | 简短定义。 |
 | `description` | string | required | 详细说明。 |
-| `complexity` | "初级" \| "中级" \| "高级" | required | 复杂度或实施难度。 |
+| `complexity` | string | required | 复杂度或实施难度 key。 |
 | `influence` | string | required | 业务影响。 |
 | `avoidances` | string | required | 关联规避手段 ID 列表。 Target: Avoidance. |
 | `relatedRisks` | RiskRelation[] | optional, defaults to empty array | 相关风险 ID 列表；Risk 中为风险间关联对象列表。 Target: Risk. |
@@ -65,7 +65,7 @@ Parent and child records live in the parent JSON file. For example, `R0001-001` 
 | `effectiveness` | "high" \| "medium" \| "low" | optional | 规避手段有效性分级，用于防御覆盖排序。 |
 | `definition` | string | required | 简短定义。 |
 | `description` | string | required | 详细说明。 |
-| `complexity` | string | optional | 复杂度或实施难度。 |
+| `complexity` | string | optional | 复杂度或实施难度 key。 |
 | `limitation` | string | optional | 控制措施局限性。 |
 | `references` | Reference[] | optional, defaults to empty array | 参考资料列表。 |
 | `updated` | string | optional | 最近更新日期，建议使用 YYYY-MM-DD。 |

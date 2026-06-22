@@ -15,7 +15,6 @@
       }
     ],
     "description": "Cloud IAM over-permissioning means users, roles, service accounts, or temporary credentials hold more privileges than the business requires. If any credential is stolen, attackers can use broad permissions for lateral movement, privilege escalation, or sensitive data access.\n\nCloud permissions are granular and complex, and exceptions accumulate over time. Governance should shrink permissions based on actual use and monitor high-risk API calls.",
-    "complexity": "Intermediate",
     "influence": "Excessive permissions amplify any credential compromise, enabling resource deletion, data export, or cloud cost abuse."
   }
 }

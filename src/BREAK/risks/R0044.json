@@ -3,7 +3,7 @@
     "title": "转账欺诈",
     "definition": "利用高仿账号欺骗他人转账，或伪造转账记录。",
     "description": "通常包括欺骗收款者和欺骗付款者两种场景。欺骗收款者一般通过伪造交易记录，利用不可信第三方做担保等。欺骗付款者一般通过高仿收款者账号，诱导支付。",
-    "complexity": "高级",
+    "complexity": "advanced",
     "influence": "收款者或付款者财产损失。",
     "avoidances": [
       "A0007",

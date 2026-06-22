@@ -15,7 +15,6 @@
       }
     ],
     "description": "RAG unauthorized retrieval happens when retrieval-augmented systems do not apply user permissions, tenant boundaries, or document classification during retrieval. A user query may retrieve inaccessible snippets that the model then summarizes.\n\nVector similarity is not access control. RAG systems need permission checks at indexing, retrieval, reranking, and generation stages, plus audit of sensitive outputs.",
-    "complexity": "Advanced",
     "influence": "Unauthorized RAG retrieval can disclose internal documents, customer data, or cross-tenant knowledge through model answers."
   }
 }

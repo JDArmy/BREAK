@@ -10,6 +10,7 @@ const keywordArray = z
   });
 const avoidanceCategorySchema = z.enum(["AC01", "AC02", "AC03", "AC04"]);
 const avoidanceEffectivenessSchema = z.enum(["high", "medium", "low"]);
+const riskComplexitySchema = z.enum(["basic", "intermediate", "advanced"]);
 const riskRelationSchema = z.object({
   key: nonEmptyString,
   relation: z.enum(["prerequisite", "co-occurrence", "escalation", "variant"]),
@@ -26,7 +27,7 @@ export const riskSchema = z.object({
   keywords: keywordArray,
   definition: nonEmptyString,
   description: nonEmptyString,
-  complexity: z.enum(["初级", "中级", "高级"]),
+  complexity: riskComplexitySchema,
   influence: nonEmptyString,
   avoidances: idArray,
   relatedRisks: z.array(riskRelationSchema).default([]),

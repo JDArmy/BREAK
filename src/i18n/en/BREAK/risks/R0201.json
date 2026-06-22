@@ -18,7 +18,6 @@
       }
     ],
     "description": "Account abstraction wallets move signature validation, gas sponsorship, batch execution, and permission logic into smart contracts. This introduces UserOperation, Bundler, Paymaster, and aggregation components, each with new failure modes.\n\nThe architecture improves usability but expands the attack surface. Designers must reason about permission models, replay protection, simulation differences, and the trust boundary of third-party sponsorship services.",
-    "complexity": "Advanced",
     "influence": "Account abstraction flaws can enable unauthorized execution, fee sponsorship abuse, or wallet policy bypass in new smart wallet designs."
   }
 }

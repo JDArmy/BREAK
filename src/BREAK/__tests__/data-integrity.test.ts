@@ -245,8 +245,8 @@ describe("数据完整性", () => {
   });
 
   describe("枚举值合法性", () => {
-    it("Risk complexity 值属于 {'初级', '中级', '高级'}", () => {
-      const valid = new Set(["初级", "中级", "高级"]);
+    it("Risk complexity 值属于 {'basic', 'intermediate', 'advanced'}", () => {
+      const valid = new Set(["basic", "intermediate", "advanced"]);
       const invalid: string[] = [];
       for (const [id, entity] of Object.entries(risks)) {
         if (entity.complexity && !valid.has(entity.complexity as string)) {

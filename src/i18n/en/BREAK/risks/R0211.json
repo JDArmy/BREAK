@@ -18,7 +18,6 @@
       }
     ],
     "description": "Smart home privacy eavesdropping occurs when cameras, doorbells, speakers, TVs, or hubs are accessed or controlled without authorization. Attackers can capture audio, video, routines, and household details.\n\nHome devices often ship with weak defaults, cloud account weaknesses, or long patch gaps. Vendors need secure defaults, cloud access control, anomaly alerts, and firmware update support.",
-    "complexity": "Intermediate",
     "influence": "Compromised smart home devices can expose private audio, video, routines, and household information to attackers."
   }
 }

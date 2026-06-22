@@ -15,7 +15,6 @@
       }
     ],
     "description": "Customer success and support ticket data exposure comes from CRM, support systems, ticketing platforms, and collaboration tools that contain chats, screenshots, secrets, account data, and business context. Data can be accessed or exported beyond authorization.\n\nSupport teams need broad visibility to solve issues, but excessive permissions and outsourced collaboration increase leakage. Controls need field masking, tiered access, export control, and sensitive ticket auditing.",
-    "complexity": "Intermediate",
     "influence": "Support ticket exposure can leak customer privacy, business screenshots, secrets, and incident details, damaging trust and compliance."
   }
 }

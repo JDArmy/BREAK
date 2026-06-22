@@ -15,7 +15,6 @@
       }
     ],
     "description": "SBOM absence prevents organizations from knowing which open source components, versions, and transitive dependencies exist in products, images, and supplier deliverables. When a new vulnerability is disclosed, teams cannot quickly determine exposure.\n\nIn multi-product and supplier-heavy environments, component invisibility slows response and weakens customer assurance, compliance evidence, and patch prioritization.",
-    "complexity": "Intermediate",
     "influence": "Without a component inventory, vulnerability impact analysis and patch response are delayed, leaving high-risk dependencies in production."
   }
 }

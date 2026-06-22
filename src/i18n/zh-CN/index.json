@@ -16,6 +16,11 @@
   "riskDefinition": "风险定义",
   "riskDescription": "风险描述",
   "riskComplexity": "风险复杂度",
+  "riskComplexityLevel": {
+    "basic": "初级",
+    "intermediate": "中级",
+    "advanced": "高级"
+  },
   "riskInfluence": "风险影响",
   "riskRelatedRisks": "相关风险",
   "riskRelationType": {

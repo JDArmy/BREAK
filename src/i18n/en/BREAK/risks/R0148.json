@@ -3,7 +3,6 @@
     "title": "AI Agent Tool Misuse / Excessive Autonomy Risk",
     "definition": "The risk that AI agents integrated with external tools, plugins, MCP servers, or business APIs execute unintended business operations under malicious instructions, incorrect goals, or excessive permissions.",
     "description": "AI agents no longer only generate text; they can call search, browsers, code execution, databases, ticketing, payment, marketing, customer service, office automation, and other tools to perform real actions. Attackers can manipulate agents through direct or indirect prompt injection, malicious web pages or documents, forged tool descriptions, polluted MCP context, and unauthorized tool invocation to delete or leak data, initiate transactions, change configurations, send messages, download malicious content, or orchestrate attack chains. The defining feature is that tool permissions, external data, and model reasoning jointly determine execution results, making traditional input filtering insufficient on its own.",
-    "complexity": "Advanced",
     "influence": "Can cause sensitive data leakage, unauthorized business operations, amplified automated attacks, indirect manipulation of internal systems, audit difficulties, and compliance risk.",
     "references": [
       {

@@ -19,7 +19,6 @@
       }
     ],
     "description": "Gas fee manipulation and frontrunning exploit transaction ordering, fee bidding, and block construction. Attackers insert transactions before or after user actions for arbitrage or disruption, including sandwich attacks, liquidation sniping, NFT mint frontrunning, and malicious fee escalation.\n\nThe risk increases user slippage, trading cost, and perceived unfairness. DeFi protocols need private order flow, slippage controls, batch auctions, and MEV mitigation patterns.",
-    "complexity": "Advanced",
     "influence": "Frontrunning and gas manipulation increase slippage and trading costs, distort DeFi markets, and weaken confidence in transaction fairness."
   }
 }

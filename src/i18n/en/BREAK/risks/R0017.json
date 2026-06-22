@@ -3,7 +3,6 @@
     "title": "Fake Transactions",
     "definition": "Obtaining benefits through invalid transactions.",
     "description": "Merchants complete large numbers of fake transactions to obtain platform merchant discounts/rebates, or to inflate product positive review counts at low cost. Methods generally include 'order A, ship B' schemes or directly shipping empty packages.",
-    "complexity": "Intermediate",
     "influence": "Exploits platform merchant discounts/rebates. Enables unfair competition through inflated positive ratings.",
     "references": [
       {
@@ -24,7 +23,6 @@
     "title": "Order Brushing",
     "definition": "Merchants completing bulk low-cost or fake orders to inflate transaction volume or improve ratings.",
     "description": "Merchants complete large numbers of low-cost transactions to obtain platform merchant discounts/rebates, or to inflate product positive review counts at low cost. Methods generally include hiring buyers or maliciously listing low-value items to complete bulk transactions.",
-    "complexity": "Intermediate",
     "influence": "Undermines fair competition principles on the platform; in some cases exploits platform merchant discounts/rebates.",
     "references": [
       {
@@ -45,7 +43,6 @@
     "title": "Subsidy Fraud",
     "definition": "Defrauding platform or government subsidies, rewards, or promotional funds through fabricated transactions, forged data, or other fraudulent means.",
     "description": "Exploiting loopholes in platform subsidy policies to claim subsidy funds that should not be obtained, through methods such as fake transactions, order brushing, or fabricating user activity. Common tactics include: hiring brushers to create fake transaction records; using multiple accounts to repeatedly claim subsidies; running ghost rides or fake orders on ride-hailing or food delivery platforms to defraud subsidies; e-commerce sellers buying from themselves to exploit platform merchant discounts and rebates.",
-    "complexity": "Intermediate",
     "influence": "Causes financial losses to platforms and governments, undermines fair competition, and distorts market resource allocation.",
     "references": [
       {

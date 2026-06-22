@@ -16,6 +16,11 @@
   "riskDefinition": "Definition",
   "riskDescription": "Description",
   "riskComplexity": "Complexity",
+  "riskComplexityLevel": {
+    "basic": "Basic",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced"
+  },
   "riskInfluence": "Influence",
   "riskRelatedRisks": "Related Risks",
   "riskRelationType": {

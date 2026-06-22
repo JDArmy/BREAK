@@ -3,7 +3,7 @@
     "title": "积分盗刷",
     "definition": "盗用被盗支付卡或其他用户账号中的非资金类权益。",
     "description": "通过被盗的支付卡或账号的登陆凭证和支付信息，盗用或盗取其中的非资金类权益。其中登陆凭证来源自撞卡攻击（R0040），支付信息来源自支付卡破解（R0041）。",
-    "complexity": "高级",
+    "complexity": "advanced",
     "influence": "支付卡或账号中的非资金类权益被盗用或盗取。",
     "avoidances": [
       "A0007",
@@ -39,7 +39,7 @@
     "title": "积分兑换倒卖",
     "definition": "积分兑换倒卖是一种利用他人积分进行非法获利的行为。",
     "description": "不法分子通过各种手段获取他人的积分，然后利用这些积分进行兑换，再将兑换的礼品或服务进行倒卖，从中获利。",
-    "complexity": "中级",
+    "complexity": "intermediate",
     "influence": "扰乱市场秩序、侵害消费者权益等",
     "avoidances": [
       "A0007",

@@ -18,7 +18,6 @@
       }
     ],
     "description": "Cross-virtual-physical identity correlation attacks infer real identities or other platform accounts from virtual behavior, social graphs, device features, and transaction records. Attackers can then perform targeted scams, harassment, or extortion.\n\nThe risk comes from stitching together multiple low-sensitivity signals. Platforms should reduce identifier reuse and restrict exportable behavioral data.",
-    "complexity": "Advanced",
     "influence": "Identity correlation can deanonymize users across virtual and real contexts, enabling targeted scams, harassment, or extortion."
   }
 }

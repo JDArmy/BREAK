@@ -19,7 +19,6 @@
       }
     ],
     "description": "Unauthorized outbound connection and C2 control are typical signs of compromised devices. Infected devices connect to attacker infrastructure and receive commands for scanning, proxying, DDoS, data theft, or lateral movement.\n\nIoT devices often sit at the network edge with limited logging and operations support, making them durable footholds. Enterprises need outbound baselines, domain and IP reputation checks, and device isolation.",
-    "complexity": "Intermediate",
     "influence": "C2-controlled IoT devices can become botnet nodes, proxies, or internal footholds for data theft and lateral movement."
   }
 }

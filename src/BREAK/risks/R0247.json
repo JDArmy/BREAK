@@ -3,7 +3,7 @@
     "title": "会话令牌重放",
     "definition": "攻击者窃取Cookie、Token或会话凭据后在其他设备重放登录。",
     "description": "会话令牌重放指攻击者窃取 Cookie、访问 Token 或刷新 Token 后，在其他设备或环境中复用该凭证登录。令牌可能来自恶意软件、代理日志、XSS、钓鱼或终端失陷。\n\n如果服务端没有绑定设备、位置、风险状态或令牌轮换机制，攻击者无需密码和 MFA 即可维持访问。防护需要令牌保护、异常会话检测和快速吊销能力。",
-    "complexity": "中级",
+    "complexity": "intermediate",
     "influence": "被重放的会话令牌可绕过密码和 MFA，造成账号接管、数据导出和持久化访问。",
     "avoidances": [
       "A0218",

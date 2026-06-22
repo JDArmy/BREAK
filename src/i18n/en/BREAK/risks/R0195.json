@@ -18,7 +18,6 @@
       }
     ],
     "description": "Telegram Bot phishing exploits Web3 communities, airdrop campaigns, and support channels. Attackers impersonate official bots, moderators, or verification tools to lure users into phishing links, wallet connections, or seed phrase disclosure.\n\nFast-moving Telegram groups and easy identity spoofing make the attack effective, especially when combined with fake announcements, private messages, and urgent reward claims.",
-    "complexity": "Intermediate",
     "influence": "Telegram impersonation can lead users to expose seed phrases or connect wallets to phishing sites, enabling immediate wallet takeover and community trust damage."
   }
 }

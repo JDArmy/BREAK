@@ -119,7 +119,7 @@ const openRelationGraph = (rKey: string) => {
     </div>
     <div class="desc">
       <strong>{{ $t("riskComplexity") }}:&nbsp;</strong>
-      {{ $t(`BREAK.risks.${rKey}.complexity`) }}
+      {{ $t(`riskComplexityLevel.${risks[rKey as keyof typeof risks].complexity}`) }}
     </div>
     <div class="desc">
       <strong>{{ $t("riskInfluence") }}:&nbsp;</strong>

@@ -77,7 +77,7 @@ const fieldDescriptions = {
   keywords: '搜索关键词；必须非空，且不能重复。',
   definition: '简短定义。',
   description: '详细说明。',
-  complexity: '复杂度或实施难度。',
+  complexity: '复杂度或实施难度 key。',
   influence: '业务影响。',
   avoidances: '关联规避手段 ID 列表。',
   relatedRisks: '相关风险 ID 列表；Risk 中为风险间关联对象列表。',
@@ -118,7 +118,7 @@ const relationTargets = {
 };
 
 const enumValues = {
-  complexity: ['初级', '中级', '高级'],
+  complexity: ['basic', 'intermediate', 'advanced'],
   avoidanceCategorySchema: ['AC01', 'AC02', 'AC03', 'AC04'],
   avoidanceEffectivenessSchema: ['high', 'medium', 'low'],
   category: ['criminal_verdict', 'administrative_enforcement', 'security_incident', 'vulnerability_advisory', 'academic_research', 'news_report'],

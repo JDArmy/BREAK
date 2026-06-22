@@ -24,7 +24,7 @@ const riskItems = computed(() =>
     const title = t(`BREAK.risks.${rKey}.title`);
     const definition = t(`BREAK.risks.${rKey}.definition`);
     const description = t(`BREAK.risks.${rKey}.description`);
-    const complexity = t(`BREAK.risks.${rKey}.complexity`);
+    const complexity = t(`riskComplexityLevel.${BREAK.risks[rKey].complexity}`);
     const influence = t(`BREAK.risks.${rKey}.influence`);
     const localeMessages = messages.value[locale.value] as Record<string, unknown>;
     const keywords = getMessageStringArray(localeMessages, `BREAK.risks.${rKey}.keywords`);
@@ -113,7 +113,7 @@ const { openRelationGraph } = useRelationGraph("risk");
       <section class="detail-grid risk-meta-grid">
         <div class="risk-meta-card risk-meta-card--compact">
           <h3>{{ $t("riskComplexity") }}</h3>
-          <p class="risk-complexity-value">{{ $t(`BREAK.risks.${selectedRiskKey}.complexity`) }}</p>
+          <p class="risk-complexity-value">{{ $t(`riskComplexityLevel.${selectedRisk.complexity}`) }}</p>
         </div>
         <div class="risk-meta-card risk-meta-card--impact">
           <h3>{{ $t("riskInfluence") }}</h3>

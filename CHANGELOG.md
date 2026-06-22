@@ -1,5 +1,9 @@
 # Change log
 
+## 2.21.21
+
+- 将 Risk complexity 从中英文展示文案迁移为 `basic` / `intermediate` / `advanced` 结构 key，并通过 i18n 映射展示
+
 ## 2.21.20
 
 - 补齐风险间关联模型：新增 `Risk.relatedRisks` 结构、关系类型校验和关系图展示

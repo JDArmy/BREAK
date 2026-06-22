@@ -15,7 +15,6 @@
       }
     ],
     "description": "CI/CD pipeline credential exposure often comes from build logs, environment variables, runner configuration, script output, caches, or third-party plugins. Leaked cloud keys, repository tokens, and deployment credentials can give attackers direct access to production resources.\n\nPipelines connect code, artifacts, environments, and privileges, making them a major supply chain entry point. Credentials need least privilege, short lifetime, runner isolation, and sensitive output auditing.",
-    "complexity": "Advanced",
     "influence": "Pipeline credential exposure can let attackers enter repositories, artifact stores, cloud resources, or production systems without normal approvals."
   }
 }

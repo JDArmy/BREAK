@@ -18,7 +18,6 @@
       }
     ],
     "description": "Industrial protocol exploitation targets weaknesses in protocols such as Modbus, OPC UA, Profinet, and BACnet, including missing authentication, plaintext traffic, command injection, or implementation bugs. Attackers can read production data, change control parameters, or disrupt equipment.\n\nMany industrial protocols were designed for trusted networks. Once exposed through remote operations or IoT platforms, risk increases sharply. Segmentation, protocol gateways, command allowlists, and anomaly detection are central defenses.",
-    "complexity": "Advanced",
     "influence": "Industrial protocol exploitation can alter control parameters, interrupt production, and create safety and availability incidents."
   }
 }
