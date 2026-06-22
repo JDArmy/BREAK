@@ -1,5 +1,9 @@
 # Change log
 
+## 2.21.2
+
+- 停止跟踪本地协作说明文件 AGENTS.md：从 Git 索引移除并加入 .gitignore，保留本地文件供代理工具读取，避免个人/环境相关协作规则进入仓库
+
 ## 2.21.1
 
 - 修复首页业务场景风险列表的 i18n key not found 警告：HomeView 风险表格 aria-label 直接用 $t(`BREAK.risks.${rKey}.title`)，首页轻量数据入口首屏未注入全部 risks title，中英文环境批量报 "[intlify] Not found 'BREAK.risks.R0003.title'" 等警告（英文环境约 3904 条）；aria-label 改用既有 getRiskTitle，并将 getLocalizedText 英文分支改为先用 te 检查 key 是否存在、不存在则用中文兜底，彻底消除中英文环境的 not found 警告
