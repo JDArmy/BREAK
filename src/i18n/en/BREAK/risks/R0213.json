@@ -3,7 +3,11 @@
     "title": "Edge Computing Node Attack",
     "definition": "Attackers compromise IoT edge computing nodes to steal locally processed sensitive data or tamper with AI inference results.",
     "keywords": [
-      "Edge Computing Node Attack"
+      "edge computing node attack",
+      "edge node compromise",
+      "MEC security",
+      "edge AI tampering",
+      "edge gateway attack"
     ],
     "references": [
       {
@@ -13,8 +17,8 @@
         "title": "NIST Cybersecurity for IoT Program"
       }
     ],
-    "description": "Attackers compromise IoT edge computing nodes to steal locally processed sensitive data or tamper with AI inference results.",
+    "description": "Edge computing node attacks target local compute resources deployed in stores, factories, base stations, vehicles, or campuses. Attackers can use physical access, weak operations accounts, container flaws, or exposed services to steal data or alter inference results.\n\nEdge nodes are distributed and often lack data center-grade controls. Design needs trusted boot, remote attestation, least privilege, and auditable behavior during disconnected operation.",
     "complexity": "Advanced",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Compromised edge nodes can leak local sensitive data, alter AI inference, and become distributed footholds outside central data centers."
   }
 }

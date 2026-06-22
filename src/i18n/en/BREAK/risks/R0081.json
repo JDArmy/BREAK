@@ -2,7 +2,7 @@
   "R0081": {
     "title": "Supply Chain Risk",
     "definition": "Supply chain risk refers to the possibility that products such as software, hardware, and cloud services are exposed to security threats during development, delivery, deployment, and maintenance due to potential threats in supply chain components or links.",
-    "description": "Supply chain risk refers to the possibility that products such as software, hardware, and cloud services are exposed to security threats during development, delivery, deployment, and maintenance due to potential threats in supply chain components or links.",
+    "description": "Supply chain risk spans the development, delivery, deployment, and maintenance of software, hardware, cloud services, and outsourced operations. Attackers may abuse upstream components, build environments, vendor accounts, or delivery processes to introduce malicious code, backdoor settings, or vulnerable components.\n\nThis risk rarely stays within a single system. It can propagate through dependency chains and downstream customers, so organizations need supplier governance, component provenance, build integrity, release signing, runtime monitoring, and emergency replacement plans.",
     "complexity": "Intermediate",
     "influence": "Harms include potential business disruption, sensitive information exposure, and system vulnerability exposure, significantly impacting the organization's trust and reliability.",
     "references": [
@@ -11,12 +11,12 @@
       }
     ],
     "keywords": [
-      "Supply Chain Risk",
+      "supply chain risk",
       "supply chain attack",
-      "supply chain compromise",
       "third-party risk",
-      "supplier compromise",
-      "upstream compromise"
+      "software supply chain",
+      "vendor compromise",
+      "upstream poisoning"
     ]
   },
   "R0081-001": {

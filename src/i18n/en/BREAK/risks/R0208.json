@@ -1,14 +1,13 @@
 {
   "R0208": {
-    "title": "Medical IoT Specific Risk",
+    "title": "Medical IoT Risk",
     "definition": "Attacks on medical IoT devices (pacemakers, insulin pumps, monitors, etc.) may directly threaten patient life safety.",
     "keywords": [
-      "Medical IoT Specific Risk",
-      "medical IoT security",
-      "connected medical device",
-      "patient data exposure",
-      "device availability risk",
-      "clinical workflow disruption"
+      "Medical IoT Risk",
+      "medical device security",
+      "connected medical device attack",
+      "insulin pump attack",
+      "pacemaker security"
     ],
     "references": [
       {
@@ -18,8 +17,8 @@
         "title": "FDA Medical Device Cybersecurity"
       }
     ],
-    "description": "Attacks on medical IoT devices (pacemakers, insulin pumps, monitors, etc.) may directly threaten patient life safety.",
+    "description": "Medical IoT risk affects connected monitors, infusion pumps, imaging systems, wearables, and implantable devices. Attackers can exploit weak passwords, old firmware, flat networks, or supply chain weaknesses to alter data or device behavior.\n\nThe impact can go beyond privacy and downtime into clinical decisions and patient safety. Medical environments must manage device availability, clinical workflow, and update capability together.",
     "complexity": "Advanced",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Medical IoT compromise can disrupt clinical workflows, expose health data, and in severe cases affect patient safety."
   }
 }

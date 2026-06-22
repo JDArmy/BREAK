@@ -3,20 +3,19 @@
     "title": "Dependency Confusion and Malicious Package Poisoning",
     "definition": "Attackers publish same-name or look-alike packages that cause build systems to download malicious components.",
     "keywords": [
-      "Dependency Confusion and Malicious Package Poisoning",
       "dependency confusion",
       "malicious package",
-      "package typosquatting",
-      "private package namespace",
-      "supply-chain attack"
+      "package name squatting",
+      "open source package poisoning",
+      "internal package confusion"
     ],
     "references": [
       {
         "title": "Software Bill of Materials - CISA"
       }
     ],
-    "description": "Attackers publish same-name or look-alike packages that cause build systems to download malicious components.",
+    "description": "Dependency confusion and malicious package poisoning exploit package manager resolution rules, leaked internal package names, or lookalike names to make build systems install attacker-controlled components. Malicious packages can steal secrets during install or runtime.\n\nThe risk is common when public and private registries are mixed or dependency review is weak. Organizations need source priority controls, lockfiles, package provenance checks, and install anomaly monitoring.",
     "complexity": "Advanced",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Malicious dependencies can steal tokens, tamper with code, or implant backdoors during build, affecting multiple projects and releases."
   }
 }

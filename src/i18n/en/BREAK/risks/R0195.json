@@ -3,7 +3,11 @@
     "title": "Telegram Bot Phishing",
     "definition": "As Web3 communities primarily use Telegram, attackers create fake official bots or hijack community groups to trick users into connecting wallets or revealing seed phrases.",
     "keywords": [
-      "Telegram Bot Phishing"
+      "Telegram bot phishing",
+      "fake Telegram bot",
+      "Web3 community phishing",
+      "seed phrase phishing",
+      "wallet connection phishing"
     ],
     "references": [
       {
@@ -13,8 +17,8 @@
         "title": "Telegram FAQ"
       }
     ],
-    "description": "As Web3 communities primarily use Telegram, attackers create fake official bots or hijack community groups to trick users into connecting wallets or revealing seed phrases.",
+    "description": "Telegram Bot phishing exploits Web3 communities, airdrop campaigns, and support channels. Attackers impersonate official bots, moderators, or verification tools to lure users into phishing links, wallet connections, or seed phrase disclosure.\n\nFast-moving Telegram groups and easy identity spoofing make the attack effective, especially when combined with fake announcements, private messages, and urgent reward claims.",
     "complexity": "Intermediate",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Telegram impersonation can lead users to expose seed phrases or connect wallets to phishing sites, enabling immediate wallet takeover and community trust damage."
   }
 }

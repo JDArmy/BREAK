@@ -3,20 +3,19 @@
     "title": "MFA Fatigue Attack",
     "definition": "Attackers repeatedly trigger MFA prompts to induce users to approve a login by mistake.",
     "keywords": [
-      "MFA Fatigue Attack",
-      "MFA fatigue",
+      "MFA fatigue attack",
+      "MFA bombing",
       "push bombing",
-      "number matching",
-      "account takeover",
-      "social engineering"
+      "multi-factor fatigue",
+      "login approval abuse"
     ],
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
     ],
-    "description": "Attackers repeatedly trigger MFA prompts to induce users to approve a login by mistake.",
+    "description": "MFA fatigue attacks repeatedly trigger login prompts until a user approves one under fatigue, confusion, or social pressure. Attackers usually already know the password and only need the second factor.\n\nPush approval without transaction meaning is easy to misclick. Number matching, location prompts, rate limits, and high-risk login blocking reduce success.",
     "complexity": "Beginner",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "MFA fatigue can defeat enabled multi-factor authentication and give attackers an authenticated enterprise session."
   }
 }

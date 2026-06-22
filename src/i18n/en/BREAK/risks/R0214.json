@@ -1,9 +1,13 @@
 {
   "R0214": {
-    "title": "Digital Avatar Deepfake",
+    "title": "Digital Human Deepfake",
     "definition": "Attackers use AI technology to clone others' appearance and voice to create digital avatars for fraud, impersonation or personality rights infringement.",
     "keywords": [
-      "Digital Avatar Deepfake"
+      "digital human deepfake",
+      "virtual human impersonation",
+      "AI face swap scam",
+      "voice cloning scam",
+      "deepfake identity fraud"
     ],
     "references": [
       {
@@ -13,8 +17,8 @@
         "title": "Coalition for Content Provenance and Authenticity (C2PA)"
       }
     ],
-    "description": "Attackers use AI technology to clone others' appearance and voice to create digital avatars for fraud, impersonation or personality rights infringement.",
+    "description": "Digital human deepfakes use generative AI to clone appearance, voice, facial expression, and speaking style for impersonation. Attackers may pose as support agents, streamers, executives, or relatives to commit fraud or manipulate opinion.\n\nReal-time generation lowers the cost of convincing impersonation. Businesses need liveness checks, provenance signals, identity verification, and behavior-based anomaly detection.",
     "complexity": "Intermediate",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Deepfaked digital humans can impersonate trusted people or brands, increasing fraud success and reputational harm."
   }
 }

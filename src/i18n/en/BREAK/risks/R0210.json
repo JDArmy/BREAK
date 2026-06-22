@@ -1,9 +1,13 @@
 {
   "R0210": {
-    "title": "Industrial Protocol Vulnerability Exploitation",
+    "title": "Industrial Protocol Exploitation",
     "definition": "Attackers exploit security vulnerabilities in industrial IoT protocols like Modbus, OPC-UA, Profinet to achieve unauthorized access and device control.",
     "keywords": [
-      "Industrial Protocol Vulnerability Exploitation"
+      "industrial protocol exploitation",
+      "Modbus vulnerability",
+      "OPC UA security",
+      "Profinet security",
+      "ICS protocol attack"
     ],
     "references": [
       {
@@ -13,8 +17,8 @@
         "title": "ENISA IoT Security Good Practices"
       }
     ],
-    "description": "Attackers exploit security vulnerabilities in industrial IoT protocols like Modbus, OPC-UA, Profinet to achieve unauthorized access and device control.",
+    "description": "Industrial protocol exploitation targets weaknesses in protocols such as Modbus, OPC UA, Profinet, and BACnet, including missing authentication, plaintext traffic, command injection, or implementation bugs. Attackers can read production data, change control parameters, or disrupt equipment.\n\nMany industrial protocols were designed for trusted networks. Once exposed through remote operations or IoT platforms, risk increases sharply. Segmentation, protocol gateways, command allowlists, and anomaly detection are central defenses.",
     "complexity": "Advanced",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Industrial protocol exploitation can alter control parameters, interrupt production, and create safety and availability incidents."
   }
 }

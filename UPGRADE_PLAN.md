@@ -1,7 +1,7 @@
 # BREAK 框架升级计划
 
-> 文档版本：1.0
-> 制定日期：2026-06-20，基于 v2.21.1 全面评估
+> 文档版本：1.1
+> 制定日期：2026-06-20，修订日期：2026-06-22，基于 v2.21.5 现状校准
 > 关联文档：`VISUAL_ANALYSIS_EXPLAINABILITY_PLAN.md`（关系页专项，本计划引用其 P0/P1 项）
 > 评估结论：先进性 4.5/5，完善性 4.3/5——先进且工程成熟，但距「完善」差内容质量一致性、自动化回归、可视化算法三步
 
@@ -14,7 +14,7 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 2. **自动化回归网缺失**：5 个 Playwright/Lighthouse 脚本全不在 CI、47 个 .vue 零单测、relation-stability 像素断言脚本未被利用、覆盖率 include 收窄到 9 文件。
 3. **可视化算法层偏弱**：无图算法路径发现、无力导向布局、解释文本是模板套话。
 
-次要短板：风险间无关联、Avoidance category 非枚举、i18n-sync 字段级校验弱、relationAttackPath 1155 行过大、CI 步骤重复、useSearch 潜在 bug。
+次要短板：风险间无关联、Avoidance category 非枚举、i18n-sync 虽已进入 strict 链路但仍缺字段级校验、relationAttackPath 1155 行过大、CI 步骤重复、useSearch 潜在 bug。
 
 ## 1. 升级原则
 
@@ -26,23 +26,66 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 
 ## 2. 分阶段计划
 
+### Phase 0（P0 前置）：规划校准 + 脚本规范修复
+
+> 目标：先消除规划与当前仓库状态之间的偏差，避免后续 Phase A/B 按过期假设执行。
+
+#### 0.1 当前基线复核
+
+> 现状：计划初版基于 v2.21.1，当前仓库版本为 v2.21.5；`link-check.yml` 已存在；`validate:data` 已包含 `i18n-sync.mjs --strict` 和英文质量校验；但对应能力仍未达到计划目标。
+
+目标：形成可追踪的执行基线。
+
+方案：
+- 重新记录当前版本、测试数量、实体数量、引用数量、质量指标和 CI workflow 状态。
+- 把“新增”类任务改成“增强/接入/去重/结构化输出”类任务，避免重复建设。
+- 对 A1/A5/B3/B5 的现状描述按当前仓库状态校准。
+
+落点：`UPGRADE_PLAN.md`、必要时补充 `research/search-reports/` 下的基线报告。
+
+验收：
+- 计划中的现状描述与 v2.21.5 仓库一致。
+- 每个后续任务都能映射到明确文件、脚本或 workflow。
+
+工作量：0.5 天。
+
+#### 0.2 Keywords 脚本规范修复
+
+> 现状：项目规则要求 `fix:keywords` 作为兼容别名，行为必须等同 `audit:keywords`，不能带 `--write`；当前 `package.json` 仍配置为 `node scripts/validate/keywords.mjs --write`。
+
+目标：修复脚本语义，避免误触发关键词批量写入。
+
+方案：
+- 将 `package.json` 中 `fix:keywords` 改为与 `audit:keywords` 完全一致。
+- 确认 `keywords.mjs` 不再通过兼容别名产生写入行为。
+
+落点：`package.json`。
+
+验收：
+- `npm run fix:keywords` 与 `npm run audit:keywords` 行为一致，只审计不写入。
+- `npm run validate:data` 通过。
+
+工作量：0.5 天。
+
+---
+
 ### Phase A（P0）：内容质量治理 + 自动化回归网
 
 > 目标：消除内容质量断层，建立自动化回归保障。这是"完善性"最直接的提升。
 
-#### A1. 引用 URL 可达性检测接入流水线
+#### A1. 引用 URL 可达性检测增强
 
-> 现状：`references.mjs` 只校验 URL 协议合法，不做存活检测；`check-403-with-browser.mjs`/`retry-connection-failed.mjs` 存在但未接入任何 npm script。导致 OWASP OAT-009 缺 .html 后缀、github search 占位引用、域名拼错等问题长期潜伏。1066 条引用，5 类实体 100% 覆盖。
+> 现状：`references.mjs` 已能做引用形态、重复链接、低质量域名和部分 i18n 参考资料检查，但不做 URL 存活检测；`link-check.yml` 已存在，每周执行 `references.mjs`，但没有真正的可达性检测、坏链明细结构化输出和 Issue 去重；`check-403-with-browser.mjs` 仍依赖根目录 `reference-validation-report.json`，不是可批量复用的流水线脚本。导致 OWASP OAT-009 缺 .html 后缀、github search 占位引用、域名拼错等问题仍可能长期潜伏。
 
 目标：引用可达性可批量检测、可周期性审计、坏链可追踪。
 
 方案：
-- 将 `check-403-with-browser.mjs` 改造为批量可达性检测脚本，输出 `research/search-reports/reference-health.json`（每条 link 的 status/issue）。
+- 新增或改造批量可达性检测脚本，输出 `research/search-reports/reference-health.json`（每条 link 的 status/issue）。
 - 新增 `audit:references-health` 脚本（不阻断 build，定期跑）。
-- 接入 `link-check.yml`（每周 cron），失败建 Issue（含坏链明细 + 去重）。
+- 增强现有 `link-check.yml`：调用可达性检测脚本，失败建 Issue（含坏链明细 + 去重）。
 - 修复已发现的瑕疵：A0001 的 OAT-009 链接补 .html、A0001-001 的 github search 占位引用替换为真实源、T0500 Trezor 域名核实。
 
-落点：`scripts/validate/references-health.mjs`（改造）、`.github/workflows/link-check.yml`、受影响实体 JSON。
+落点：`scripts/validate/references-health.mjs`（新增或改造）、`.github/workflows/link-check.yml`、受影响实体 JSON。
 
 验收：
 - `audit:references-health` 可批量检测 1066 条引用并输出报告。
@@ -207,13 +250,13 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 
 #### B3. i18n-sync 字段级校验 + 英文结构字段清理
 
-> 现状：i18n-sync 只比对实体 ID 集合，不校验字段级对应；terms 英文文件普遍携带 relatedRisks/updated 等结构字段（违反"英文仅含翻译文本"约定）却判同步通过。mergeWithStructure 双份实现（TS + JS）有漂移风险。
+> 现状：`validate:data` 已执行 `i18n-sync.mjs --strict`，但 strict 目前只比对实体 ID 集合，不校验字段级对应；terms 英文文件可能携带 relatedRisks/updated 等结构字段（违反"英文仅含翻译文本"约定）却仍可判同步通过。mergeWithStructure 双份实现（TS + JS）有漂移风险。
 
 目标：i18n-sync 字段级严格校验，英文文件干净。
 
 方案：
-- i18n-sync.mjs 增强：除 ID 集合外，校验英文文件不携带结构字段（ID 数组/link/updated/关系字段），只含可翻译文本。
-- 批量清理 terms 英文文件的多余结构字段（脚本 + 人工复核）。
+- 增强 `i18n-sync.mjs --strict`：除 ID 集合外，校验英文文件不携带结构字段（ID 数组/link/updated/关系字段），只含可翻译文本。
+- 先审计所有英文 i18n 文件，确认多余结构字段范围，再批量清理（脚本 + 人工复核）。
 - mergeWithStructure 统一为单一实现（JS 版 import TS 版，或抽公共）。
 - CLAUDE.md 的"key 结构必须完全对应"约定与脚本一致。
 
@@ -221,7 +264,7 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 
 验收：
 - i18n-sync --strict 校验英文无结构字段。
-- terms 英文文件清理完成。
+- 英文 i18n 文件多余结构字段清理完成。
 - mergeWithStructure 单一实现。
 
 工作量：2-3 天。
@@ -252,14 +295,14 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 
 #### B5. CI 优化
 
-> 现状：ci.yml 与 deploy.yml 13 步完全重复（PR 一遍 + main push 一遍）；CI 全串行单 job；link-check Issue 不去重；无 concurrency 取消旧 PR run。
+> 现状：ci.yml 与 deploy.yml 13 步完全重复（PR 一遍 + main push 一遍）；CI 全串行单 job；link-check workflow 已存在但 Issue 不去重、body 不含坏链明细；PR CI 无 concurrency 取消旧 run。
 
 目标：CI 提效，去重复。
 
 方案：
 - ci.yml 加 `concurrency` 取消旧 PR run。
 - lint/type-check/test 与 build 拆并行 job（无依赖部分）。
-- deploy.yml 复用 ci.yml 的校验 job（needs），避免重复。
+- deploy.yml 与 ci.yml 抽取可复用 workflow 或复用统一校验 job，避免重复维护同一组命令。
 - link-check Issue 去重 + body 含坏链明细。
 
 落点：`.github/workflows/ci.yml`、`.github/workflows/deploy.yml`、`.github/workflows/link-check.yml`。
@@ -434,11 +477,13 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 
 | 项 | 优先级 | 工作量 | 收益 | 依赖 |
 |---|---|---|---|---|
-| A1 引用可达性检测 | P0 | 2-3d | 高（最易补） | 无 |
+| 0.1 当前基线复核 | P0 前置 | 0.5d | 高（防偏航） | 无 |
+| 0.2 Keywords 脚本规范修复 | P0 前置 | 0.5d | 高（防误写） | 无 |
+| A1 引用可达性检测增强 | P0 | 2-3d | 高（最易补） | Phase 0 |
 | A2 influence 去模板化 | P0 | 2-3d | 高 | 无 |
 | A3 后期风险补强 | P0 | 3-4d | 高 | 无 |
 | A4 案例多源化 | P0 | 5-7d | 中高 | 无 |
-| A5 自动化回归网 | P0 | 4-5d | 高（防回归） | 无 |
+| A5 自动化回归网 | P0 | 4-5d | 高（防回归） | Phase 0 |
 | A6 质量报告 JSON | P0 | 2-3d | 高（B6 前置） | 无 |
 | B1 风险间关联 | P1 | 3-4d | 中 | A5（回归网） |
 | B2 Avoidance 枚举化 | P1 | 3-4d | 中 | 无 |
@@ -453,7 +498,7 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 | C4 STIX 标准化 | P2 | 5-7d | 中（互操作） | 无 |
 | C5 业务场景图谱 | P2 | 4-5d | 低（可选） | 无 |
 
-**总工作量估算**：Phase A 约 18-25 天，Phase B 约 21-26 天，Phase C 约 22-29 天，合计约 61-80 天（可并行压缩）。
+**总工作量估算**：Phase 0 约 1 天，Phase A 约 18-25 天，Phase B 约 21-26 天，Phase C 约 22-29 天，合计约 62-81 天（可并行压缩）。
 
 ## 4. 验收标准（整体）
 
@@ -461,7 +506,9 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 
 | 维度 | 当前 | 目标 |
 |---|---|---|
-| 引用可达性 | 无检测 | 周期审计 + 坏链追踪 |
+| 规划基线 | 基于 v2.21.1 初评，部分描述滞后 | 基于 v2.21.5 校准并可复核 |
+| Keywords 脚本 | `fix:keywords` 仍可能写入 | 与 `audit:keywords` 等价，只审计 |
+| 引用可达性 | 有形态审计和 link-check workflow，但无存活检测 | 周期审计 + 坏链追踪 |
 | influence 模板化 | 34 条复用 | ≤ 2 条 |
 | 后期风险关键词 | avg 4.3 | ≥ 5 |
 | 案例多源率 | 0% | ≥ 30%（高价值） |
@@ -473,7 +520,7 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 | 任务型视角 | 0 个 | ≥ 3 个视角 |
 | 风险间关联 | 无 | ≥ 20 条 |
 | Avoidance category | 自由字符串 | 枚举强约束 |
-| i18n-sync | ID 级 | 字段级 + 无结构字段 |
+| i18n-sync | strict 已接入但仍为 ID 级 | 字段级 + 无结构字段 |
 | relationAttackPath | 1155 行 | ≤ 400 行/文件 |
 | 路径发现 | 预定义四元组 | 图算法任意路径 |
 | 布局 | 固定坐标 | + 力导向 |
@@ -492,15 +539,17 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 | Schema 扩展破坏既有数据 | B1/B2 改 schema | 可选字段优先；校验脚本同步；渐进迁移 |
 | 可视化算法性能 | C1/C2 图算法/力导向对大规模图耗时 | 限定跳数/节点数；性能基线；按需计算 |
 | 标准化映射损失语义 | C4 STIX 映射可能不完整 | custom 对象保留 BREAK 特有字段；不强制全量映射 |
-| 升级周期长 | 48-64 天工作量 | 分阶段独立交付；每阶段可单独验证；不阻塞线上 |
+| 升级周期长 | 62-81 天工作量 | 分阶段独立交付；每阶段可单独验证；不阻塞线上 |
 
 ## 6. 执行建议
 
-1. **Phase A 立即启动**：A1-A5 互不依赖，可并行。A1（引用检测）+ A5（回归网）优先，因为它们为后续所有改动提供质量保障。
-2. **Phase B 在 A5 回归网就绪后启动**：B1/B4 改关系页，需回归网保障。
-3. **Phase C 按价值排序**：C1（路径发现）价值最高，C2（力导向）次之，C3（动态解释）依赖 B4，C4（STIX）互操作价值取决于是否有外部消费方。
-4. **每项独立 PR**：便于 review 和回滚，husky pre-commit + CI 门禁保障。
-5. **内容治理（A2/A3/A4）可借 LLM**：项目已有 DeepSeek 接口（`scripts/import/generate-term-en-glossary.mjs` 模式），用于生成 influence/关键词草稿，人工复核后落盘。
+1. **先执行 Phase 0**：修正 `fix:keywords`，确认 v2.21.5 的真实基线，再进入 Phase A。
+2. **Phase A 优先 A1 + A5 + A6**：A1（引用检测增强）和 A5（回归网）为后续改动提供保障，A6 是 B6/B7 的前置数据契约。
+3. **内容治理并行推进**：A2/A3/A4 互不依赖，可按批次并行；涉及 `src/BREAK/` 数据时必须同步英文 i18n 并跑 `audit:keywords` / `validate:data`。
+4. **Phase B 在 A5 回归网就绪后启动**：B1/B4 改关系页，需回归网保障；B3/B5 可较早独立推进。
+5. **Phase C 按价值排序**：C1（路径发现）价值最高，C2（力导向）次之，C3（动态解释）依赖 B4，C4（STIX）互操作价值取决于是否有外部消费方。
+6. **每项独立 PR**：便于 review 和回滚，husky pre-commit + CI 门禁保障。
+7. **内容治理（A2/A3/A4）可借 LLM**：项目已有 DeepSeek 接口（`scripts/import/generate-term-en-glossary.mjs` 模式），用于生成 influence/关键词草稿，人工复核后落盘。
 
 ## 7. 规划整合说明
 

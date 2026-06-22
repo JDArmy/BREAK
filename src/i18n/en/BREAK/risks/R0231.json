@@ -1,22 +1,21 @@
 {
   "R0231": {
-    "title": "Excessive Cloud IAM Privileges",
+    "title": "Cloud IAM Over-Permissioning",
     "definition": "Cloud users, roles, or service accounts hold permissions beyond business need, expanding blast radius after compromise.",
     "keywords": [
-      "Excessive Cloud IAM Privileges",
-      "cloud IAM",
-      "over-privileged role",
-      "service account permissions",
-      "cross-account trust",
-      "least privilege"
+      "cloud IAM over-permissioning",
+      "IAM privilege sprawl",
+      "least privilege gap",
+      "service account overprivilege",
+      "cloud role abuse"
     ],
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
     ],
-    "description": "Cloud users, roles, or service accounts hold permissions beyond business need, expanding blast radius after compromise.",
+    "description": "Cloud IAM over-permissioning means users, roles, service accounts, or temporary credentials hold more privileges than the business requires. If any credential is stolen, attackers can use broad permissions for lateral movement, privilege escalation, or sensitive data access.\n\nCloud permissions are granular and complex, and exceptions accumulate over time. Governance should shrink permissions based on actual use and monitor high-risk API calls.",
     "complexity": "Intermediate",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Excessive permissions amplify any credential compromise, enabling resource deletion, data export, or cloud cost abuse."
   }
 }

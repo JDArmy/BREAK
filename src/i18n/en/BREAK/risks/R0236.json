@@ -3,20 +3,19 @@
     "title": "Payment Tokenization Misconfiguration",
     "definition": "Payment tokens, card substitutes, or binding relationships are misconfigured, causing unauthorized charges or data exposure.",
     "keywords": [
-      "Payment Tokenization Misconfiguration",
-      "payment tokenization",
-      "token binding error",
-      "card token abuse",
+      "payment tokenization misconfiguration",
+      "payment token risk",
+      "card token misuse",
       "unauthorized charge",
-      "PCI risk"
+      "token binding error"
     ],
     "references": [
       {
         "title": "PCI Data Security Standard"
       }
     ],
-    "description": "Payment tokens, card substitutes, or binding relationships are misconfigured, causing unauthorized charges or data exposure.",
+    "description": "Payment tokenization misconfiguration occurs when card substitutes, payment tokens, binding relationships, or merchant domain isolation are configured incorrectly. Attackers may reuse, enumerate, or use tokens across contexts to make unauthorized charges.\n\nTokenization reduces exposure of raw card numbers, but does not replace authorization boundaries. Payment systems must validate token scope, device binding, merchant binding, transaction context, and lifecycle.",
     "complexity": "Advanced",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Token boundary errors can enable unauthorized charges, incorrect binding relationships, and exposure of sensitive payment data."
   }
 }

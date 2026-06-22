@@ -3,7 +3,12 @@
     "title": "AIoT Convergence Attack",
     "definition": "Attackers compromise IoT device AI decision systems through model poisoning, adversarial examples and other means, causing misjudgment or malicious behavior.",
     "keywords": [
-      "AIoT Convergence Attack"
+      "AIoT attack",
+      "AIoT security",
+      "IoT AI attack",
+      "adversarial example",
+      "model poisoning",
+      "smart device misclassification"
     ],
     "references": [
       {
@@ -13,8 +18,8 @@
         "title": "SP 800-183, Networks of 'Things' | CSRC"
       }
     ],
-    "description": "Attackers compromise IoT device AI decision systems through model poisoning, adversarial examples and other means, causing misjudgment or malicious behavior.",
+    "description": "AIoT convergence attacks target IoT devices that use AI for perception, inference, or automated control. Attackers may use adversarial inputs, sensor spoofing, model poisoning, or firmware tampering to influence decisions and actions.\n\nWhen AIoT is used in access control, traffic, healthcare, industrial, or home automation, data-layer attacks can produce physical consequences. Protection must combine model robustness, device identity, trusted data, and execution safety.",
     "complexity": "Advanced",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "AIoT manipulation can turn model or sensor attacks into unsafe physical actions in homes, factories, healthcare, or transport systems."
   }
 }

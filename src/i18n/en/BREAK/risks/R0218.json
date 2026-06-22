@@ -1,9 +1,13 @@
 {
   "R0218": {
-    "title": "Spatial Computing Privacy Leakage",
+    "title": "Spatial Computing Privacy Exposure",
     "definition": "Biometric and environmental data such as eye tracking, gestures, spatial positioning collected by XR devices are accessed without authorization, leaking user privacy.",
     "keywords": [
-      "Spatial Computing Privacy Leakage"
+      "spatial computing privacy",
+      "XR privacy exposure",
+      "eye-tracking data leakage",
+      "gesture data leakage",
+      "spatial map exposure"
     ],
     "references": [
       {
@@ -13,8 +17,8 @@
         "title": "XR Safety Initiative Framework"
       }
     ],
-    "description": "Biometric and environmental data such as eye tracking, gestures, spatial positioning collected by XR devices are accessed without authorization, leaking user privacy.",
+    "description": "Spatial computing privacy exposure comes from continuous collection of eye tracking, gestures, pose, room structure, and surrounding objects. Even without traditional identifiers, these signals can reveal health, living environment, and behavior patterns.\n\nIf apps, SDKs, or cloud services over-collect spatial data, they create highly sensitive profiles. Platforms should limit granularity, purpose, retention, and provide local processing where possible.",
     "complexity": "Intermediate",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Spatial data leakage can reveal biometric behavior, room layouts, and daily routines, creating highly sensitive privacy exposure."
   }
 }

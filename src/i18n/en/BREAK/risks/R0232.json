@@ -3,20 +3,19 @@
     "title": "SaaS Third-Party App Authorization Abuse",
     "definition": "Employees grant high-privilege SaaS applications access to mail, drive, or customer data.",
     "keywords": [
-      "SaaS Third-Party App Authorization Abuse",
-      "SaaS OAuth abuse",
-      "third-party app grant",
-      "admin consent",
-      "mail data access",
-      "drive data export"
+      "SaaS app authorization abuse",
+      "OAuth authorization risk",
+      "third-party app access",
+      "mailbox access abuse",
+      "enterprise SaaS integration risk"
     ],
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
     ],
-    "description": "Employees grant high-privilege SaaS applications access to mail, drive, or customer data.",
+    "description": "SaaS third-party app authorization abuse occurs when employees or admins grant external apps access to mail, drives, calendars, CRM, or customer data, and the app exceeds expectations or is compromised.\n\nOAuth consent is often perceived as login, but may grant long-lived read or action permissions. Enterprises need app review, high-risk scope restrictions, and periodic cleanup of unused grants.",
     "complexity": "Intermediate",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Abused SaaS authorization can continuously read mail, drive, and customer data while bypassing many endpoint and network controls."
   }
 }

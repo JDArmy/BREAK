@@ -1,22 +1,21 @@
 {
   "R0239": {
-    "title": "Affiliate Commission Fraud",
+    "title": "Affiliate Marketing Commission Fraud",
     "definition": "Channels use cookie stuffing, fake traffic, or landing-page hijacking to obtain commissions improperly.",
     "keywords": [
-      "Affiliate Commission Fraud",
-      "affiliate fraud",
+      "affiliate commission fraud",
       "cookie stuffing",
       "landing page hijacking",
-      "fake traffic",
-      "commission abuse"
+      "CPS fraud",
+      "affiliate attribution fraud"
     ],
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
     ],
-    "description": "Channels use cookie stuffing, fake traffic, or landing-page hijacking to obtain commissions improperly.",
+    "description": "Affiliate marketing commission fraud uses cookie stuffing, fake traffic, landing page hijacking, coupon plugins, or last-click hijacking to attribute orders to a cheating partner.\n\nBrands then pay commission for organic orders or other channels results. Controls need real referral path validation, click quality checks, conversion windows, and attribution conflict analysis.",
     "complexity": "Intermediate",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Commission fraud inflates partner spend, corrupts attribution reports, and reduces returns for legitimate partners."
   }
 }

@@ -3,20 +3,19 @@
     "title": "Missing Privacy Impact Assessment",
     "definition": "New businesses or models go live without assessing personal-information processing risks and compliance obligations.",
     "keywords": [
-      "Missing Privacy Impact Assessment",
       "privacy impact assessment",
       "PIA",
       "DPIA",
-      "personal data processing",
-      "privacy compliance"
+      "personal information protection assessment",
+      "privacy compliance review"
     ],
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
     ],
-    "description": "New businesses or models go live without assessing personal-information processing risks and compliance obligations.",
+    "description": "Missing privacy impact assessment means a new business, system, algorithm, or data partnership launches without structured review of personal data purpose, necessity, risk, and mitigation. High-risk processing can enter production without sufficient safeguards.\n\nThe gap causes teams to overlook obligations in collection, sharing, cross-border transfer, automated decision-making, and model training. Privacy assessment should be embedded in procurement, development, and launch processes.",
     "complexity": "Beginner",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Skipping privacy assessment leaves high-risk data processing without necessity and legality review, increasing remediation and penalty risk."
   }
 }

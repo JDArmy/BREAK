@@ -1,9 +1,13 @@
 {
   "R0221": {
-    "title": "Cross Virtual-Real Identity Correlation Attack",
+    "title": "Cross-Virtual-Physical Identity Correlation Attack",
     "definition": "Attackers analyze users' behavior patterns and social relationships in the metaverse to reverse-track their real identity for targeted attacks or blackmail.",
     "keywords": [
-      "Cross Virtual-Real Identity Correlation Attack"
+      "identity correlation attack",
+      "metaverse identity correlation",
+      "virtual identity deanonymization",
+      "behavioral profiling",
+      "real-world identity tracing"
     ],
     "references": [
       {
@@ -13,8 +17,8 @@
         "title": "W3C Decentralized Identifiers (DIDs)"
       }
     ],
-    "description": "Attackers analyze users' behavior patterns and social relationships in the metaverse to reverse-track their real identity for targeted attacks or blackmail.",
+    "description": "Cross-virtual-physical identity correlation attacks infer real identities or other platform accounts from virtual behavior, social graphs, device features, and transaction records. Attackers can then perform targeted scams, harassment, or extortion.\n\nThe risk comes from stitching together multiple low-sensitivity signals. Platforms should reduce identifier reuse and restrict exportable behavioral data.",
     "complexity": "Advanced",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Identity correlation can deanonymize users across virtual and real contexts, enabling targeted scams, harassment, or extortion."
   }
 }

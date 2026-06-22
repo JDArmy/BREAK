@@ -3,20 +3,19 @@
     "title": "CDN Cache Poisoning",
     "definition": "Attackers poison cached content through cache-key confusion, header pollution, or edge-rule defects.",
     "keywords": [
-      "CDN Cache Poisoning",
+      "CDN cache poisoning",
       "cache poisoning",
-      "CDN cache key",
-      "header pollution",
-      "edge cache abuse",
-      "web cache deception"
+      "cache key confusion",
+      "edge cache pollution",
+      "HTTP header poisoning"
     ],
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
     ],
-    "description": "Attackers poison cached content through cache-key confusion, header pollution, or edge-rule defects.",
+    "description": "CDN cache poisoning abuses cache key design, request header handling, parameter normalization, or edge rule flaws so an attacker-crafted response is cached as legitimate content. Later users receive the poisoned content.\n\nThe risk can affect static pages, API responses, and redirects, amplifying one request across many users. Defenses need clear cache keys, isolation of user-specific responses, and abnormal cache hit monitoring.",
     "complexity": "Advanced",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Poisoned CDN cache can distribute malicious pages, incorrect data, or phishing redirects to many users."
   }
 }

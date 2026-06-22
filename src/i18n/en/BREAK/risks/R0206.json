@@ -3,7 +3,11 @@
     "title": "IoT Hardware Supply Chain Attack",
     "definition": "Attackers implant backdoors in IoT device chips, firmware, communication modules and other hardware supply chain components for long-term persistence and remote control.",
     "keywords": [
-      "IoT Hardware Supply Chain Attack"
+      "IoT hardware supply chain attack",
+      "firmware backdoor",
+      "chip backdoor",
+      "hardware implant",
+      "communication module poisoning"
     ],
     "references": [
       {
@@ -13,8 +17,8 @@
         "title": "Hardware Security | CSRC"
       }
     ],
-    "description": "Attackers implant backdoors in IoT device chips, firmware, communication modules and other hardware supply chain components for long-term persistence and remote control.",
+    "description": "IoT hardware supply chain attacks occur across chips, modules, sensors, firmware, manufacturing, and logistics. Attackers may implant backdoors, replace components, or alter default settings so deployed devices remain controllable.\n\nIoT fleets are large, long-lived, and hard to patch in the field. Supplier verification, firmware signing, hardware sampling, and runtime anomaly monitoring are essential.",
     "complexity": "Advanced",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Hardware supply chain compromise can place persistent backdoors into large IoT fleets that are expensive to detect, patch, or recall."
   }
 }

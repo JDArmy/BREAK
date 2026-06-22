@@ -3,7 +3,11 @@
     "title": "DApp Frontend Hijacking",
     "definition": "Attackers hijack IPFS gateways or poison DNS to tamper with DApp frontend code, replacing payment addresses or injecting malicious interactions without user awareness.",
     "keywords": [
-      "DApp Frontend Hijacking"
+      "DApp frontend hijacking",
+      "DApp DNS hijacking",
+      "IPFS gateway hijacking",
+      "frontend supply chain attack",
+      "wallet interaction tampering"
     ],
     "references": [
       {
@@ -13,8 +17,8 @@
         "title": "IPFS Content Addressing and Security"
       }
     ],
-    "description": "Attackers hijack IPFS gateways or poison DNS to tamper with DApp frontend code, replacing payment addresses or injecting malicious interactions without user awareness.",
+    "description": "DApp frontend hijacking targets the user access layer rather than the on-chain contract. Attackers may abuse DNS, IPFS gateways, CDN configuration, or frontend dependencies to alter displayed content and wallet interaction parameters.\n\nUsers see a familiar interface while signing requests or recipient addresses may be replaced. Projects need release integrity, domain hardening, resource verification, and independent transaction previews.",
     "complexity": "Intermediate",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Frontend hijacking can make users sign malicious transactions on a familiar DApp interface, sending funds or approvals to attackers."
   }
 }

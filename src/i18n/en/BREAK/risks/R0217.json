@@ -3,7 +3,11 @@
     "title": "XR Device Firmware Attack",
     "definition": "Attackers exploit firmware vulnerabilities in VR/AR headsets, controllers and other XR devices to achieve device control, data theft or malicious code implantation.",
     "keywords": [
-      "XR Device Firmware Attack"
+      "XR firmware attack",
+      "VR headset firmware vulnerability",
+      "AR device attack",
+      "XR controller hijacking",
+      "sensor data theft"
     ],
     "references": [
       {
@@ -13,8 +17,8 @@
         "title": "NIST Mobile Device Security"
       }
     ],
-    "description": "Attackers exploit firmware vulnerabilities in VR/AR headsets, controllers and other XR devices to achieve device control, data theft or malicious code implantation.",
+    "description": "XR device firmware attacks target headsets, controllers, base stations, and sensor firmware. Attackers may exploit update mechanisms, driver flaws, or debug interfaces to control devices and steal visual, motion, or spatial data.\n\nXR devices hold high privileges and collect sensitive body and environment signals. Vendors need firmware signing, permission isolation, vulnerability response, and peripheral trust controls.",
     "complexity": "Advanced",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "XR firmware compromise can expose camera, motion, spatial, and sensor data while giving attackers control of high-privilege devices."
   }
 }

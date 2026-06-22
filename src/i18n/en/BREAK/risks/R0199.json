@@ -3,7 +3,11 @@
     "title": "NFT Royalty Bypass",
     "definition": "Attackers bypass NFT marketplace royalty mechanisms through off-market trades or custom contracts, depriving creators of secondary sales revenue.",
     "keywords": [
-      "NFT Royalty Bypass"
+      "NFT royalty bypass",
+      "royalty evasion",
+      "off-market NFT trade",
+      "custom contract sale",
+      "creator royalty"
     ],
     "references": [
       {
@@ -13,8 +17,8 @@
         "title": "EIP-2981: NFT Royalty Standard"
       }
     ],
-    "description": "Attackers bypass NFT marketplace royalty mechanisms through off-market trades or custom contracts, depriving creators of secondary sales revenue.",
+    "description": "NFT royalty bypass occurs when traders use off-market transfers, custom contracts, aggregators, or marketplaces that do not enforce royalty rules. The creator may define a royalty policy, but enforcement depends on contracts and marketplace behavior.\n\nThis weakens creator revenue and creates inconsistent rules across markets. Projects need to distinguish between on-chain enforceability, marketplace commitments, and community governance.",
     "complexity": "Intermediate",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Royalty bypass reduces creator revenue, fragments marketplace rules, and weakens the economic model for NFT projects."
   }
 }

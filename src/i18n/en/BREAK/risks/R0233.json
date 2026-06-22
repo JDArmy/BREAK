@@ -1,22 +1,21 @@
 {
   "R0233": {
-    "title": "Collaboration Document Link Leakage",
+    "title": "Collaborative Document Link Exposure",
     "definition": "Cloud drives, documents, IM files, or knowledge bases remain exposed for long periods through shared external links.",
     "keywords": [
-      "Collaboration Document Link Leakage",
-      "shared document link",
-      "external sharing",
-      "cloud drive exposure",
-      "knowledge base leakage",
-      "collaboration data"
+      "document link exposure",
+      "cloud drive sharing leak",
+      "public share link",
+      "knowledge base link exposure",
+      "collaboration file leak"
     ],
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
     ],
-    "description": "Cloud drives, documents, IM files, or knowledge bases remain exposed for long periods through shared external links.",
+    "description": "Collaborative document link exposure comes from cloud drives, online documents, messaging files, or knowledge bases configured with public links, long validity, or forwarding permissions. Once a link leaks, outsiders may access content without an account.\n\nCollaboration tools make sharing easy but hide permission boundaries. Organizations need sensitive document detection, public sharing restrictions, expiration controls, and access anomaly monitoring.",
     "complexity": "Beginner",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Long-lived public document links can expose customer data, project plans, credential screenshots, and internal procedures."
   }
 }

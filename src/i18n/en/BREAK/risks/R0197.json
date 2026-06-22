@@ -1,9 +1,13 @@
 {
   "R0197": {
-    "title": "Multi-Sig Wallet Social Engineering Attack",
+    "title": "Multi-Signature Wallet Social Engineering",
     "definition": "Attackers use social engineering (fake urgent proposals, impersonating team members) to trick multi-signature wallet signers into quickly approving malicious transactions.",
     "keywords": [
-      "Multi-Sig Wallet Social Engineering Attack"
+      "multi-signature wallet social engineering",
+      "multisig phishing",
+      "DAO treasury attack",
+      "malicious proposal signing",
+      "emergency proposal scam"
     ],
     "references": [
       {
@@ -13,8 +17,8 @@
         "title": "Multisig Best Practices to Maximize Transaction Security - Polygon"
       }
     ],
-    "description": "Attackers use social engineering (fake urgent proposals, impersonating team members) to trick multi-signature wallet signers into quickly approving malicious transactions.",
+    "description": "Multi-signature wallet social engineering targets DAO, foundation, and institutional treasury approval flows. Attackers forge urgent proposals, impersonate team members, create pressure, or send misleading transaction summaries to make multiple signers approve malicious transactions.\n\nMultisig reduces single-key failure but does not prevent coordinated mistaken approvals. Governance needs transaction simulation, timelocks, permission tiers, and independent review.",
     "complexity": "Intermediate",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Socially engineered multisig approvals can drain DAO or institutional treasuries despite formal multi-party controls."
   }
 }

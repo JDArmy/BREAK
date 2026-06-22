@@ -1,9 +1,13 @@
 {
   "R0202": {
-    "title": "On-Chain Data Privacy Leakage",
+    "title": "On-Chain Data Privacy Exposure",
     "definition": "Blockchain transaction transparency allows tracking of user behavior, asset holdings and identity through MEV bot monitoring, address clustering analysis and other means.",
     "keywords": [
-      "On-Chain Data Privacy Leakage"
+      "on-chain privacy exposure",
+      "address clustering",
+      "blockchain analytics",
+      "MEV monitoring",
+      "transaction tracing"
     ],
     "references": [
       {
@@ -13,8 +17,8 @@
         "title": "Chainalysis: The Blockchain Data Platform"
       }
     ],
-    "description": "Blockchain transaction transparency allows tracking of user behavior, asset holdings and identity through MEV bot monitoring, address clustering analysis and other means.",
+    "description": "On-chain privacy exposure comes from public visibility of transactions, addresses, balances, and contract interactions. Attackers can combine address clustering, transaction graphs, MEV monitoring, and off-chain data to infer asset holdings, behavior, and identity links.\n\nThe leak may not involve a breach; it is a byproduct of transparent ledgers and analytics. High-value users and institutions need address isolation, privacy-preserving protocols, and minimal off-chain disclosure.",
     "complexity": "Intermediate",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "On-chain privacy exposure can reveal asset holdings, trading habits, and identity links, enabling targeted phishing, extortion, or surveillance."
   }
 }

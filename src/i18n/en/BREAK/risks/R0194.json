@@ -1,9 +1,15 @@
 {
   "R0194": {
-    "title": "EIP/Protocol Phishing Attack",
+    "title": "EIP and Protocol Phishing Attack",
     "definition": "Attackers exploit vulnerabilities in Ethereum Improvement Proposals (EIP) or other blockchain protocol features to craft phishing transactions that trick users into signing malicious authorizations.",
     "keywords": [
-      "EIP/Protocol Phishing Attack"
+      "EIP and Protocol Phishing Attack",
+      "protocol phishing",
+      "EIP phishing",
+      "signature phishing",
+      "permit phishing",
+      "EIP-712 phishing",
+      "malicious approval"
     ],
     "references": [
       {
@@ -13,8 +19,8 @@
         "title": "Ethereum Improvement Proposals"
       }
     ],
-    "description": "Attackers exploit vulnerabilities in Ethereum Improvement Proposals (EIP) or other blockchain protocol features to craft phishing transactions that trick users into signing malicious authorizations.",
+    "description": "EIP and protocol phishing abuses user confusion around new protocol features, signature formats, or wallet prompts. Attackers craft apparently legitimate approvals, permits, delegations, or contract interactions that grant token transfer or execution rights after the user signs.\n\nThe core risk is semantic opacity: structured signing data can hide real consequences from ordinary users. Wallets, DApps, and risk engines need to translate protocol actions into understandable warnings.",
     "complexity": "Advanced",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Opaque protocol signing can trick users into granting transfer or execution rights, causing direct asset loss while appearing as a normal wallet action."
   }
 }

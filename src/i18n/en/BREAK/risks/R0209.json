@@ -1,14 +1,14 @@
 {
   "R0209": {
-    "title": "Illegal Outbound and C2 Control",
+    "title": "Unauthorized Outbound Connection and C2 Control",
     "definition": "IoT devices infected with trojans actively connect to C2 servers to receive remote commands, becoming part of botnets.",
     "keywords": [
-      "Illegal Outbound and C2 Control",
-      "C2 traffic",
+      "Unauthorized Outbound Connection and C2 Control",
       "unauthorized outbound connection",
-      "command and control",
-      "egress control bypass",
-      "beaconing detection"
+      "C2 control",
+      "IoT botnet",
+      "device malware",
+      "command and control server"
     ],
     "references": [
       {
@@ -18,8 +18,8 @@
         "title": "Securing the Internet of Things (IoT) - CISA"
       }
     ],
-    "description": "IoT devices infected with trojans actively connect to C2 servers to receive remote commands, becoming part of botnets.",
+    "description": "Unauthorized outbound connection and C2 control are typical signs of compromised devices. Infected devices connect to attacker infrastructure and receive commands for scanning, proxying, DDoS, data theft, or lateral movement.\n\nIoT devices often sit at the network edge with limited logging and operations support, making them durable footholds. Enterprises need outbound baselines, domain and IP reputation checks, and device isolation.",
     "complexity": "Intermediate",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "C2-controlled IoT devices can become botnet nodes, proxies, or internal footholds for data theft and lateral movement."
   }
 }

@@ -3,20 +3,19 @@
     "title": "Mobile App Repackaging Fraud",
     "definition": "Attackers repackage apps to implant ads, phishing pages, or risk-control bypass logic.",
     "keywords": [
-      "Mobile App Repackaging Fraud",
       "mobile app repackaging",
-      "APK tampering",
-      "fake app",
-      "runtime bypass",
-      "mobile fraud"
+      "Android repackaging",
+      "malicious SDK injection",
+      "pirated app fraud",
+      "mobile phishing app"
     ],
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
     ],
-    "description": "Attackers repackage apps to implant ads, phishing pages, or risk-control bypass logic.",
+    "description": "Mobile app repackaging fraud decompiles a legitimate app, inserts ads, phishing pages, malicious SDKs, or risk-control bypass logic, and redistributes it through unofficial channels. Users believe they installed the real app.\n\nRepackaged apps can steal accounts, hijack payments, fake device context, or consume ad budgets. Vendors need app hardening, signature checks, channel monitoring, and runtime integrity detection.",
     "complexity": "Intermediate",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Repackaged apps impersonate the brand, steal accounts and payment data, and bypass mobile risk controls."
   }
 }

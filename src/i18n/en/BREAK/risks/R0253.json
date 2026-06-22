@@ -3,20 +3,19 @@
     "title": "Decentralized Identity Credential Forgery",
     "definition": "Attackers forge DIDs or verifiable credentials to impersonate users, organizations, or qualifications.",
     "keywords": [
-      "Decentralized Identity Credential Forgery",
-      "DID forgery",
-      "verifiable credential fraud",
-      "VC issuer validation",
-      "credential revocation",
-      "decentralized identity"
+      "DID credential forgery",
+      "verifiable credential forgery",
+      "VC forgery",
+      "decentralized identity attack",
+      "identity claim impersonation"
     ],
     "references": [
       {
         "title": "W3C Decentralized Identifiers (DIDs) v1.0"
       }
     ],
-    "description": "Attackers forge DIDs or verifiable credentials to impersonate users, organizations, or qualifications.",
+    "description": "Decentralized identity credential forgery targets DID, verifiable credentials, and issuance or verification flows. Attackers may impersonate issuers, tamper with claims, reuse revoked credentials, or trick verifiers into accepting untrusted proofs.\n\nWhen credentials gate access to finance, education, enterprise, or platform rights, forgery breaks the trust chain. Systems must verify signatures, status, revocation lists, issuer authority, and context constraints.",
     "complexity": "Intermediate",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Forged DID or verifiable credentials let attackers impersonate users, institutions, or qualifications to gain unauthorized rights."
   }
 }

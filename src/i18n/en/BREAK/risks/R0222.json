@@ -3,20 +3,19 @@
     "title": "Shadow API Exposure Risk",
     "definition": "Undocumented or deprecated APIs remain reachable, allowing sensitive capabilities to bypass formal governance.",
     "keywords": [
-      "Shadow API Exposure Risk",
       "shadow API",
       "undocumented API",
       "deprecated endpoint",
       "API inventory gap",
-      "API governance"
+      "API governance blind spot"
     ],
     "references": [
       {
         "title": "OWASP API Security Top 10 2023"
       }
     ],
-    "description": "Undocumented or deprecated APIs remain reachable, allowing sensitive capabilities to bypass formal governance.",
+    "description": "Shadow API exposure means undocumented, deprecated, or test endpoints remain reachable from internal or external networks. These endpoints are often outside unified authentication, rate limiting, audit, and change management.\n\nAttackers can discover them through frontend resources, path enumeration, or mobile traffic analysis, then bypass formal API gateways and security policies.",
     "complexity": "Intermediate",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Undocumented endpoints can bypass authentication, rate limits, and audit controls, exposing sensitive data and weakening API governance."
   }
 }

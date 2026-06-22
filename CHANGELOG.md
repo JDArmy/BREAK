@@ -1,5 +1,14 @@
 # Change log
 
+## 2.21.6
+
+- 治理风险内容质量断层：补强 R0081、R0193-R0255 的中文 description、keywords、influence，并同步英文翻译字段，消除风险实体中 definition 与 description 完全相同、单关键词和通用模板 influence 问题
+- 补齐 R0160-R0192 英文风险关键词，避免英文检索侧仍存在单关键词条目
+- 新增内容质量审计脚本 `audit:content-quality`，输出风险 def==desc、单关键词、模板 influence 和案例单源率指标到 `research/search-reports/content-quality.*`
+- 新增引用 URL 可达性审计脚本 `audit:references-health`，批量检查引用链接状态并输出 `reference-health.*` 报告
+- 修正 `fix:keywords` 兼容脚本行为，使其与 `audit:keywords` 等价，仅审计不写入
+- 修订 `UPGRADE_PLAN.md`：基于 v2.21.5 现状校准升级计划，增加 Phase 0 前置校准和脚本规范修复
+
 ## 2.21.5
 
 - 优化关系覆盖审计报告的待复核输出：无待复核项时显示通过状态，避免空清单造成误判；控制台同步输出 `待复核项: 0`

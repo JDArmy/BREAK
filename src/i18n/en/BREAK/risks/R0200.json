@@ -1,14 +1,13 @@
 {
   "R0200": {
-    "title": "Layer2 Bridge Risk",
+    "title": "Layer 2 Bridging Risk",
     "definition": "Asset bridges between Layer2 scaling solutions (Rollup, sidechains) and mainchain have security vulnerabilities that may result in funds being locked or stolen.",
     "keywords": [
-      "Layer2 Bridge Risk",
-      "L2 bridge security",
-      "cross-chain message risk",
-      "bridge liquidity risk",
-      "rollup withdrawal risk",
-      "bridge validator compromise"
+      "Layer 2 bridge risk",
+      "cross-chain bridge risk",
+      "Rollup bridge",
+      "sidechain bridge",
+      "asset bridge vulnerability"
     ],
     "references": [
       {
@@ -18,8 +17,8 @@
         "title": "Blockchain Cross-Chain Bridge Security: Challenges, Solutions, and ..."
       }
     ],
-    "description": "Asset bridges between Layer2 scaling solutions (Rollup, sidechains) and mainchain have security vulnerabilities that may result in funds being locked or stolen.",
+    "description": "Layer 2 bridging risk sits in asset locking, message validation, exit proofs, and relayer workflows between the base chain and rollups, sidechains, or app chains. A validation flaw or privileged key abuse can lock funds or release assets incorrectly.\n\nBridges often hold large liquidity and depend on complex on-chain and off-chain coordination. Security review must cover contracts, proof systems, operational keys, delay windows, and emergency exits.",
     "complexity": "Advanced",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Bridge failures can lock or incorrectly release cross-layer assets, creating large liquidity losses and user confidence damage."
   }
 }

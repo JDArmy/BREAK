@@ -3,20 +3,19 @@
     "title": "Webhook Forgery and Event Replay",
     "definition": "Attackers forge or replay webhook events to trigger false payments, shipments, authorizations, or status changes.",
     "keywords": [
-      "Webhook Forgery and Event Replay",
-      "webhook replay",
-      "event forgery",
-      "signature verification",
-      "idempotency",
-      "timestamp window"
+      "webhook forgery",
+      "event replay",
+      "callback signature bypass",
+      "payment callback spoofing",
+      "asynchronous event security"
     ],
     "references": [
       {
         "title": "OWASP API Security Top 10 2023"
       }
     ],
-    "description": "Attackers forge or replay webhook events to trigger false payments, shipments, authorizations, or status changes.",
+    "description": "Webhook forgery and event replay occur when receivers fail to validate signatures, timestamps, event IDs, or idempotency state. Attackers can create or repeat events that trigger shipment, recharge, authorization, or state changes.\n\nAsynchronous events connect payments, orders, SaaS integrations, and automation flows. A broken trust boundary can turn forged external messages into internal business actions.",
     "complexity": "Intermediate",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Forged or replayed callbacks can trigger false payment confirmation, wrong shipment, authorization changes, and accounting inconsistency."
   }
 }

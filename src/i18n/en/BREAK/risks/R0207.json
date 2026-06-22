@@ -1,9 +1,14 @@
 {
   "R0207": {
-    "title": "eSIM/iSIM Hijacking",
+    "title": "eSIM and iSIM Hijacking",
     "definition": "Remote provisioning capabilities of embedded SIM (eSIM) and integrated SIM (iSIM) are exploited by attackers for SIM hijacking and identity theft.",
     "keywords": [
-      "eSIM/iSIM Hijacking"
+      "eSIM and iSIM Hijacking",
+      "eSIM hijacking",
+      "iSIM hijacking",
+      "remote SIM provisioning abuse",
+      "mobile identity takeover",
+      "device authentication hijacking"
     ],
     "references": [
       {
@@ -13,8 +18,8 @@
         "title": "Privacy and data protection in mobile applications - ENISA"
       }
     ],
-    "description": "Remote provisioning capabilities of embedded SIM (eSIM) and integrated SIM (iSIM) are exploited by attackers for SIM hijacking and identity theft.",
+    "description": "eSIM and iSIM hijacking abuses remote provisioning, carrier workflows, device binding, or identity verification weaknesses to move or control a mobile network identity. Attackers can intercept SMS, take over recovery flows, or impersonate devices.\n\nAs eSIM and iSIM expand into phones, vehicles, and IoT devices, SIM identity affects payments, authentication, and device management. Defense needs both carrier-side verification and business-side risk controls.",
     "complexity": "Advanced",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "eSIM or iSIM takeover can compromise mobile identity, intercept recovery channels, and support account takeover or device impersonation."
   }
 }

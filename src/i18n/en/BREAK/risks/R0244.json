@@ -1,22 +1,21 @@
 {
   "R0244": {
-    "title": "Unauthorized RAG Retrieval",
+    "title": "RAG Unauthorized Retrieval",
     "definition": "Retrieval-augmented systems return document fragments or sensitive knowledge that the user is not authorized to access.",
     "keywords": [
-      "Unauthorized RAG Retrieval",
+      "RAG unauthorized retrieval",
       "RAG permission bypass",
-      "unauthorized retrieval",
-      "vector database access",
-      "knowledge base isolation",
-      "tenant data leakage"
+      "knowledge base leakage",
+      "vector database permissions",
+      "sensitive document retrieval"
     ],
     "references": [
       {
         "title": "OWASP Top 10 for Large Language Model Applications"
       }
     ],
-    "description": "Retrieval-augmented systems return document fragments or sensitive knowledge that the user is not authorized to access.",
+    "description": "RAG unauthorized retrieval happens when retrieval-augmented systems do not apply user permissions, tenant boundaries, or document classification during retrieval. A user query may retrieve inaccessible snippets that the model then summarizes.\n\nVector similarity is not access control. RAG systems need permission checks at indexing, retrieval, reranking, and generation stages, plus audit of sensitive outputs.",
     "complexity": "Advanced",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Unauthorized RAG retrieval can disclose internal documents, customer data, or cross-tenant knowledge through model answers."
   }
 }

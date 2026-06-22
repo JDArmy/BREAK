@@ -3,12 +3,11 @@
     "title": "Build Artifact Poisoning Risk",
     "definition": "Attackers tamper with build artifacts, container images, or release packages to introduce backdoors into production.",
     "keywords": [
-      "Build Artifact Poisoning Risk",
-      "artifact poisoning",
-      "container image tampering",
-      "release package backdoor",
-      "build provenance",
-      "software supply chain"
+      "build artifact poisoning",
+      "container image poisoning",
+      "release package tampering",
+      "artifact repository compromise",
+      "software supply chain poisoning"
     ],
     "references": [
       {
@@ -18,8 +17,8 @@
         "title": "Software Bill of Materials - CISA"
       }
     ],
-    "description": "Attackers tamper with build artifacts, container images, or release packages to introduce backdoors into production.",
+    "description": "Build artifact poisoning means attackers alter images, installers, frontend assets, SDKs, or release packages so normal delivery installs a backdoor into production or customer environments. The attack can occur on builders, artifact repositories, signing workflows, or distribution channels.\n\nArtifacts are trusted by downstream systems, so impact scales with installation and deployment privilege. Controls include artifact signing, reproducible builds, repository permissions, and pre-release integrity checks.",
     "complexity": "Advanced",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Poisoned artifacts can deploy backdoors into production or customer environments, causing bulk compromise and supply chain trust damage."
   }
 }

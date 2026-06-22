@@ -3,7 +3,11 @@
     "title": "Metaverse Content Moderation Challenge",
     "definition": "3D virtual content and real-time voice interactions are difficult to moderate automatically, increasing risk of spreading violating content (pornography, violence, fraud, etc.).",
     "keywords": [
-      "Metaverse Content Moderation Challenge"
+      "metaverse content moderation",
+      "3D content moderation",
+      "virtual space governance",
+      "real-time voice moderation",
+      "immersive content safety"
     ],
     "references": [
       {
@@ -13,8 +17,8 @@
         "title": "Meta VR Safety Guidelines"
       }
     ],
-    "description": "3D virtual content and real-time voice interactions are difficult to moderate automatically, increasing risk of spreading violating content (pornography, violence, fraud, etc.).",
+    "description": "Metaverse content moderation is difficult because 3D scenes, live voice, gestures, virtual props, and multi-user interactions combine in real time. Harmful content may only appear from a certain viewpoint or during a specific interaction.\n\nTraditional moderation models do not fully understand spatial semantics and live context. Platforms need reporting, behavior detection, voice analysis, scene sampling, and tiered governance.",
     "complexity": "Intermediate",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Weak metaverse moderation can allow harmful 3D, voice, or interactive content to spread, increasing user safety and compliance risk."
   }
 }

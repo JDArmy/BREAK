@@ -3,20 +3,19 @@
     "title": "Sensitive Information Leakage in Model Output",
     "definition": "Models disclose training data, system prompts, or internal materials in conversations, summaries, or generated code.",
     "keywords": [
-      "Sensitive Information Leakage in Model Output",
-      "model output leakage",
-      "prompt disclosure",
-      "training data extraction",
-      "sensitive data exposure",
-      "AI privacy"
+      "model output data leakage",
+      "prompt leakage",
+      "training data leakage",
+      "LLM sensitive information leak",
+      "internal document exposure"
     ],
     "references": [
       {
         "title": "OWASP Top 10 for Large Language Model Applications"
       }
     ],
-    "description": "Models disclose training data, system prompts, or internal materials in conversations, summaries, or generated code.",
+    "description": "Sensitive information leakage in model output occurs when a model reveals training data, system prompts, internal documents, secret fragments, or customer information during chat, summarization, code generation, or tool use. It can be triggered by prompt manipulation, context pollution, or permission mistakes.\n\nThe risk grows when models connect to enterprise knowledge bases and business systems. Controls need input and output review, context minimization, permission binding, and sensitive data detection.",
     "complexity": "Intermediate",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Model output leakage can expose prompts, internal documents, customer data, or secrets through AI applications."
   }
 }

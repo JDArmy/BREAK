@@ -1,22 +1,21 @@
 {
   "R0224": {
-    "title": "API Bulk-Call Resource Exhaustion",
+    "title": "API Bulk Call Resource Exhaustion",
     "definition": "Attackers call costly APIs at scale to consume quotas, inventory, compute capacity, or third-party service spend.",
     "keywords": [
-      "API Bulk-Call Resource Exhaustion",
+      "API resource exhaustion",
       "bulk API calls",
-      "resource exhaustion",
-      "API quota abuse",
-      "high-cost endpoint",
-      "rate limiting"
+      "API abuse",
+      "quota exhaustion",
+      "high-cost endpoint abuse"
     ],
     "references": [
       {
         "title": "OWASP API Security Top 10 2023"
       }
     ],
-    "description": "Attackers call costly APIs at scale to consume quotas, inventory, compute capacity, or third-party service spend.",
+    "description": "API bulk call resource exhaustion occurs when attackers repeatedly call expensive endpoints to consume inventory, SMS quota, compute, coupons, or third-party service budget. The attack abuses legitimate business functions rather than breaking authentication.\n\nWithout limits by user, device, IP, business object, and cost dimension, abusive traffic blends with normal requests and causes degraded service, cost spikes, and poor user experience.",
     "complexity": "Intermediate",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "High-cost API abuse can increase cloud and third-party service costs, exhaust legitimate user quotas, and degrade service availability."
   }
 }

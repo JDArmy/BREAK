@@ -3,20 +3,19 @@
     "title": "Public Cloud Storage Bucket Exposure",
     "definition": "Object storage buckets or snapshots are misconfigured for public access, causing data leakage.",
     "keywords": [
-      "Public Cloud Storage Bucket Exposure",
-      "public storage bucket",
+      "public cloud storage bucket",
       "object storage exposure",
-      "cloud snapshot leak",
-      "misconfigured bucket",
-      "data leakage"
+      "S3 bucket leak",
+      "cloud snapshot exposure",
+      "storage permission misconfiguration"
     ],
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
     ],
-    "description": "Object storage buckets or snapshots are misconfigured for public access, causing data leakage.",
+    "description": "Public cloud storage bucket exposure usually comes from object storage, backup snapshots, log buckets, or static asset buckets configured for public access. Once sensitive files are public, search engines, scanners, or attackers can download them directly.\n\nThis risk requires little technical sophistication but can cause large data breaches. Organizations need continuous public asset inventory, clear separation of static content from sensitive data, and alerting on public policies.",
     "complexity": "Beginner",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Public buckets can directly leak customer data, logs, backups, and key files, leading to regulatory and trust impact."
   }
 }

@@ -3,7 +3,11 @@
     "title": "Quantum Computing Threat",
     "definition": "Quantum computers may break the Elliptic Curve Cryptography (ECC) used by blockchains before 2028, threatening private key security and transaction integrity.",
     "keywords": [
-      "Quantum Computing Threat"
+      "quantum computing threat",
+      "post-quantum cryptography",
+      "ECC breaking",
+      "blockchain quantum risk",
+      "quantum-resistant migration"
     ],
     "references": [
       {
@@ -13,8 +17,8 @@
         "title": "Ethereum Quantum Resistance Roadmap"
       }
     ],
-    "description": "Quantum computers may break the Elliptic Curve Cryptography (ECC) used by blockchains before 2028, threatening private key security and transaction integrity.",
+    "description": "Quantum computing threat means that sufficiently mature quantum capability could weaken the elliptic curve cryptography assumptions used by blockchains, wallets, and identity systems. Long-lived public keys, signature algorithms, and key management processes become migration pressure points.\n\nLarge-scale practical quantum computing remains uncertain, but high-value assets and long-lived credentials should plan for post-quantum migration, address rotation, signature upgrades, and ecosystem compatibility testing.",
     "complexity": "Advanced",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Quantum advances could undermine long-lived blockchain keys and signatures, forcing costly ecosystem migration and threatening high-value assets."
   }
 }

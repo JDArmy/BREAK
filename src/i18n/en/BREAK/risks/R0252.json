@@ -1,22 +1,21 @@
 {
   "R0252": {
-    "title": "Connected-Vehicle Data Interface Abuse",
+    "title": "Vehicle Data Interface Abuse",
     "definition": "Connected-vehicle APIs, diagnostic interfaces, or third-party in-vehicle apps are abused to read location and driving data.",
     "keywords": [
-      "Connected-Vehicle Data Interface Abuse",
-      "connected-vehicle API",
-      "diagnostic interface abuse",
-      "vehicle location data",
-      "in-vehicle app risk",
-      "driving data exposure"
+      "vehicle data interface abuse",
+      "connected vehicle API abuse",
+      "vehicle diagnostic interface abuse",
+      "driving data exposure",
+      "location data misuse"
     ],
     "references": [
       {
         "title": "ISO/SAE 21434 Road vehicles Cybersecurity"
       }
     ],
-    "description": "Connected-vehicle APIs, diagnostic interfaces, or third-party in-vehicle apps are abused to read location and driving data.",
+    "description": "Vehicle data interface abuse occurs when connected vehicle APIs, diagnostic interfaces, in-vehicle apps, or third-party services over-read location, route, driving behavior, or vehicle status. Attackers or partners may use the data beyond authorization.\n\nVehicle data is strongly tied to identity and behavior. Leakage can enable tracking, profiling, insurance discrimination, or preparation for theft. Defenses need granular consent, purpose limitation, and access auditing.",
     "complexity": "Intermediate",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Vehicle interface abuse can expose location, driving behavior, and vehicle state, creating privacy, safety, and compliance risk."
   }
 }

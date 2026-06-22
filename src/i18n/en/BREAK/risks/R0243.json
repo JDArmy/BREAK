@@ -3,20 +3,20 @@
     "title": "Training Data Poisoning Risk",
     "definition": "Attackers contaminate training sets, feedback data, or labeling results to influence model behavior.",
     "keywords": [
-      "Training Data Poisoning Risk",
       "training data poisoning",
-      "poisoned labels",
-      "feedback poisoning",
-      "model behavior manipulation",
-      "AI security"
+      "data poisoning",
+      "model poisoning",
+      "label poisoning",
+      "feedback data contamination",
+      "AI supply chain attack"
     ],
     "references": [
       {
         "title": "NIST AI Risk Management Framework"
       }
     ],
-    "description": "Attackers contaminate training sets, feedback data, or labeling results to influence model behavior.",
+    "description": "Training data poisoning occurs when attackers inject malicious samples into training sets, labels, feedback data, or knowledge bases so the model behaves incorrectly under specific triggers. Sources include public datasets, user feedback, and supplier data.\n\nThe attack may not show in normal accuracy tests but can trigger bias, safety bypass, or wrong decisions in target scenarios. Defense requires provenance, anomaly detection, and before-after model evaluation.",
     "complexity": "Advanced",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Poisoned training data can make models produce attacker-desired errors or unsafe behavior in critical business scenarios."
   }
 }

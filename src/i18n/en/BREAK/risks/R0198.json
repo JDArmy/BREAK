@@ -1,9 +1,14 @@
 {
   "R0198": {
-    "title": "Token Inflation/Deflation Vulnerability",
+    "title": "Token Minting and Deflation Bug",
     "definition": "Token economic model vulnerabilities in smart contracts allow unauthorized minting (inflation) or burning (deflation) of tokens, disrupting economic balance.",
     "keywords": [
-      "Token Inflation/Deflation Vulnerability"
+      "Token Minting and Deflation Bug",
+      "token minting bug",
+      "token deflation bug",
+      "unauthorized minting",
+      "tokenomics vulnerability",
+      "smart contract mint bug"
     ],
     "references": [
       {
@@ -13,8 +18,8 @@
         "title": "Building Secure Smart Contracts"
       }
     ],
-    "description": "Token economic model vulnerabilities in smart contracts allow unauthorized minting (inflation) or burning (deflation) of tokens, disrupting economic balance.",
+    "description": "Token minting and deflation bugs arise from smart contract permission errors, arithmetic flaws, hook logic, or upgrade mistakes. Attackers may mint tokens without authorization, destroy supply abnormally, or corrupt balance accounting.\n\nThese bugs directly undermine scarcity and market expectations, leading to price collapse, liquidity loss, and governance distortion. Token economics, permissions, and edge states need dedicated review before launch.",
     "complexity": "Advanced",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Unauthorized minting or supply manipulation can collapse token value, drain liquidity, and invalidate governance or incentive assumptions."
   }
 }

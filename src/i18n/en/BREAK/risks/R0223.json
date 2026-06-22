@@ -3,20 +3,19 @@
     "title": "API Object-Level Authorization Risk",
     "definition": "The API checks only the login state but not object ownership, allowing attackers to enumerate and access other users' resources.",
     "keywords": [
-      "API Object-Level Authorization Risk",
-      "object-level authorization",
       "BOLA",
       "IDOR",
-      "resource ownership check",
-      "API access control"
+      "object-level authorization",
+      "horizontal privilege escalation",
+      "object ownership check"
     ],
     "references": [
       {
         "title": "OWASP API Security Top 10 2023"
       }
     ],
-    "description": "The API checks only the login state but not object ownership, allowing attackers to enumerate and access other users' resources.",
+    "description": "API object-level authorization risk occurs when an endpoint verifies login state but not whether the requested object belongs to the user or tenant. Attackers can modify order IDs, user IDs, file IDs, or similar parameters to access other users resources.\n\nThe issue is common in mobile, open platform, and microservice APIs, and automation can quickly expand the exposure. Server-side object authorization and tenant isolation are required.",
     "complexity": "Beginner",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Missing object ownership checks can expose user profiles, orders, files, or financial records at scale and create privacy and compliance impact."
   }
 }

@@ -3,11 +3,10 @@
     "title": "Merchant Cash-Out and Fake Transaction Fraud",
     "definition": "Merchants use fake orders, circular transactions, or abnormal refunds to cash out and transfer funds.",
     "keywords": [
-      "Merchant Cash-Out and Fake Transaction Fraud",
-      "merchant cash-out",
+      "merchant cash-out fraud",
       "fake transaction",
       "circular transaction",
-      "abnormal refund",
+      "refund cash-out",
       "payment fraud"
     ],
     "references": [
@@ -15,8 +14,8 @@
         "title": "PCI Data Security Standard"
       }
     ],
-    "description": "Merchants use fake orders, circular transactions, or abnormal refunds to cash out and transfer funds.",
+    "description": "Merchant cash-out and fake transaction fraud uses fake orders, circular transactions, linked accounts, or abnormal refunds to convert payment rails and platform subsidies into cash. Attackers may coordinate as merchants and buyers.\n\nThe fraud pollutes transaction data, increases payment channel risk, and may trigger anti-money-laundering obligations. Risk control needs to link merchants, buyers, devices, funds, and fulfillment evidence.",
     "complexity": "Intermediate",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Fake transactions cause subsidy and fee losses, increase payment channel risk, and may support cash-out or money laundering."
   }
 }

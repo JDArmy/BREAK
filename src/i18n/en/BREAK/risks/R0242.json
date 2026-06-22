@@ -1,22 +1,21 @@
 {
   "R0242": {
-    "title": "Training Data Copyright and Authorization Risk",
+    "title": "Training Data Copyright and Licensing Risk",
     "definition": "AI training data has unclear provenance, authorization, or copyright status, creating compliance and commercial disputes.",
     "keywords": [
-      "Training Data Copyright and Authorization Risk",
-      "training data authorization",
-      "copyright risk",
-      "AI data provenance",
-      "dataset licensing",
-      "model compliance"
+      "training data copyright",
+      "data licensing risk",
+      "AI training corpus compliance",
+      "copyrighted training data",
+      "unclear data provenance"
     ],
     "references": [
       {
         "title": "NIST AI Risk Management Framework"
       }
     ],
-    "description": "AI training data has unclear provenance, authorization, or copyright status, creating compliance and commercial disputes.",
+    "description": "Training data copyright and licensing risk comes from unclear corpus provenance, insufficient authorization, unknown copyright status, or license terms that conflict with commercial model use. Model output may also reproduce protected content.\n\nThe risk affects commercialization, customer delivery, and cross-border deployment. Teams need records of data source, license conditions, cleaning steps, and deletion request handling.",
     "complexity": "Intermediate",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Unclear training data authorization can cause copyright disputes, model takedown, customer claims, and commercialization limits."
   }
 }

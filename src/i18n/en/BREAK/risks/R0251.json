@@ -3,20 +3,19 @@
     "title": "Automotive OTA Update Hijacking",
     "definition": "Attackers tamper with or replay vehicle OTA packages to implant malicious firmware or block fixes.",
     "keywords": [
-      "Automotive OTA Update Hijacking",
-      "OTA hijacking",
-      "firmware tampering",
-      "vehicle update security",
-      "rollback attack",
-      "automotive cybersecurity"
+      "automotive OTA hijacking",
+      "OTA update hijacking",
+      "vehicle firmware tampering",
+      "OTA package replay",
+      "vehicle software supply chain"
     ],
     "references": [
       {
         "title": "ISO/SAE 21434 Road vehicles Cybersecurity"
       }
     ],
-    "description": "Attackers tamper with or replay vehicle OTA packages to implant malicious firmware or block fixes.",
+    "description": "Automotive OTA update hijacking targets firmware, configuration, or application update flows. Attackers may tamper with update packages, replay old versions, hijack download channels, or abuse signing workflows so vehicles install malicious or vulnerable software.\n\nVehicle updates affect safety functions and compliance fixes. Automakers need end-to-end signature verification, anti-rollback, staged release monitoring, and abnormal update blocking.",
     "complexity": "Advanced",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Hijacked OTA updates can install malicious firmware, block security patches, or roll vehicles back to vulnerable versions."
   }
 }

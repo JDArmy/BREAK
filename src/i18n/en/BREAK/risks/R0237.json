@@ -3,20 +3,19 @@
     "title": "Ad Click Injection",
     "definition": "Attackers inject fake clicks before installation or conversion to steal attribution revenue.",
     "keywords": [
-      "Ad Click Injection",
       "click injection",
-      "mobile attribution fraud",
-      "fake click",
-      "install attribution",
-      "ad fraud"
+      "mobile ad fraud",
+      "attribution hijacking",
+      "install attribution fraud",
+      "ad click fraud"
     ],
     "references": [
       {
         "title": "NIST Cybersecurity Framework 2.0"
       }
     ],
-    "description": "Attackers inject fake clicks before installation or conversion to steal attribution revenue.",
+    "description": "Ad click injection forges click events shortly before an install, open, or conversion to steal attribution from organic traffic or other channels. Attackers often use malicious SDKs, background services, or device permissions to fabricate clicks.\n\nThe risk distorts campaign measurement and makes advertisers pay for hijacked conversions. Anti-fraud analysis should examine click-to-conversion time, device behavior, SDK source, and channel distribution.",
     "complexity": "Intermediate",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Click injection steals real conversion attribution, wastes ad budget, and distorts channel evaluation and bidding strategy."
   }
 }

@@ -3,12 +3,11 @@
     "title": "Account Abstraction Wallet Risk",
     "definition": "Account abstraction standards like ERC-4337 introduce new attack surfaces including UserOperation validation bypass, Paymaster abuse, and malicious aggregators.",
     "keywords": [
-      "Account Abstraction Wallet Risk",
-      "account abstraction wallet",
+      "account abstraction wallet risk",
       "ERC-4337 risk",
-      "paymaster abuse",
-      "bundler risk",
-      "smart wallet authorization"
+      "UserOperation bypass",
+      "Paymaster abuse",
+      "smart contract wallet risk"
     ],
     "references": [
       {
@@ -18,8 +17,8 @@
         "title": "Account Abstraction Security Considerations"
       }
     ],
-    "description": "Account abstraction standards like ERC-4337 introduce new attack surfaces including UserOperation validation bypass, Paymaster abuse, and malicious aggregators.",
+    "description": "Account abstraction wallets move signature validation, gas sponsorship, batch execution, and permission logic into smart contracts. This introduces UserOperation, Bundler, Paymaster, and aggregation components, each with new failure modes.\n\nThe architecture improves usability but expands the attack surface. Designers must reason about permission models, replay protection, simulation differences, and the trust boundary of third-party sponsorship services.",
     "complexity": "Advanced",
-    "influence": "May cause business abuse, data exposure, financial loss, compliance impact, or supply-chain propagation."
+    "influence": "Account abstraction flaws can enable unauthorized execution, fee sponsorship abuse, or wallet policy bypass in new smart wallet designs."
   }
 }
