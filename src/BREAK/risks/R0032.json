@@ -32,6 +32,18 @@
       "账户被盗",
       "凭证被盗",
       "钓鱼盗号"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0035-001",
+        "relation": "co-occurrence",
+        "note": "账号盗取常伴随登录凭据盗用或会话劫持。"
+      },
+      {
+        "key": "R0084",
+        "relation": "prerequisite",
+        "note": "钓鱼攻击常作为账号盗取的前置手法。"
+      }
     ]
   },
   "R0032-001": {
@@ -71,6 +83,18 @@
       "账号撞库",
       "credential stuffing",
       "泄露密码碰撞"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0088",
+        "relation": "prerequisite",
+        "note": "凭证填充依赖自动化登录能力。"
+      },
+      {
+        "key": "R0090",
+        "relation": "co-occurrence",
+        "note": "撞库前后常伴随批量扫号。"
+      }
     ]
   },
   "R0032-002": {

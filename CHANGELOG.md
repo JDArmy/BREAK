@@ -1,5 +1,12 @@
 # Change log
 
+## 2.21.20
+
+- 补齐风险间关联模型：新增 `Risk.relatedRisks` 结构、关系类型校验和关系图展示
+- 强化规避手段模型：强约束 Avoidance category 枚举，并新增 effectiveness 有效性分级
+- 优化风险详情页展示：新增相关风险行内卡片，调整复杂度/影响信息块，并在规避手段详情展示有效性
+- 更新数据 schema 文档和升级计划，移除已完成的知识模型结构短板项
+
 ## 2.21.19
 
 - 修复 Deploy workflow 的浏览器审计变更检测：`github.event.before` 不存在时回退到 `HEAD^`，仍不可用则保守运行审计，避免 `fatal: bad object` 中断发布

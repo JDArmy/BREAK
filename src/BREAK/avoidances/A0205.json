@@ -13,6 +13,7 @@
       "SaaS应用权限审计"
     ],
     "updated": "2026-06-17",
-    "definition": "盘点SaaS管理员、OAuth授权、外部共享和第三方应用，识别高危授权。"
+    "definition": "盘点SaaS管理员、OAuth授权、外部共享和第三方应用，识别高危授权。",
+    "effectiveness": "high"
   }
 }

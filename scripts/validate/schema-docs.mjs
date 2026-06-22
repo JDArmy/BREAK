@@ -80,7 +80,9 @@ const fieldDescriptions = {
   complexity: '复杂度或实施难度。',
   influence: '业务影响。',
   avoidances: '关联规避手段 ID 列表。',
-  category: '分类 ID 或分类名称。',
+  relatedRisks: '相关风险 ID 列表；Risk 中为风险间关联对象列表。',
+  category: '分类 ID。',
+  effectiveness: '规避手段有效性分级，用于防御覆盖排序。',
   limitation: '控制措施局限性。',
   references: '参考资料列表。',
   updated: '最近更新日期，建议使用 YYYY-MM-DD。',
@@ -92,7 +94,6 @@ const fieldDescriptions = {
   usageExample: '使用示例。',
   summary: '案例摘要，80-150 字事实性描述。',
   incidentTime: '案例发生时间，YYYY 或 YYYY-MM。',
-  relatedRisks: '相关风险 ID 列表。',
   relatedAvoidances: '相关规避手段 ID 列表。',
   relatedAttackTools: '相关攻击工具 ID 列表。',
   relatedThreatActors: '相关威胁行为者 ID 列表。',
@@ -118,6 +119,8 @@ const relationTargets = {
 
 const enumValues = {
   complexity: ['初级', '中级', '高级'],
+  avoidanceCategorySchema: ['AC01', 'AC02', 'AC03', 'AC04'],
+  avoidanceEffectivenessSchema: ['high', 'medium', 'low'],
   category: ['criminal_verdict', 'administrative_enforcement', 'security_incident', 'vulnerability_advisory', 'academic_research', 'news_report'],
 };
 
@@ -152,6 +155,13 @@ function countRecords(relativeDir) {
 }
 
 function typeFor({ name, expression }) {
+  if (expression.includes('riskRelationSchema')) return 'RiskRelation[]';
+  if (expression.includes('avoidanceCategorySchema')) {
+    return enumValues.avoidanceCategorySchema.map((item) => `"${item}"`).join(' | ');
+  }
+  if (expression.includes('avoidanceEffectivenessSchema')) {
+    return enumValues.avoidanceEffectivenessSchema.map((item) => `"${item}"`).join(' | ');
+  }
   if (expression.includes('z.enum')) {
     return enumValues[name]?.map((item) => `"${item}"`).join(' | ') || 'enum';
   }

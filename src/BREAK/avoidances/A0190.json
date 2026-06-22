@@ -13,6 +13,7 @@
       "XR设备可信启动"
     ],
     "updated": "2026-06-16",
-    "definition": "XR设备实施固件签名验证和安全启动，防止恶意固件。"
+    "definition": "XR设备实施固件签名验证和安全启动，防止恶意固件。",
+    "effectiveness": "high"
   }
 }

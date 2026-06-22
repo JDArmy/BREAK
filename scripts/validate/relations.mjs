@@ -77,6 +77,9 @@ function collectRelationAudit() {
   const issues = [];
 
   const riskAvoidanceRefs = unique(risks.flatMap(({ entity }) => entity.avoidances || []));
+  const riskRelatedRiskRefs = unique(
+    risks.flatMap(({ entity }) => (entity.relatedRisks || []).map((relation) => relation.key)),
+  );
   const attackToolRiskRefs = unique(
     attackTools.flatMap(({ entity }) => [
       ...(entity.directCauseRisks || []),
@@ -108,6 +111,26 @@ function collectRelationAudit() {
       addIssue(issues, 'error', 'invalid_risk_avoidance_ref', `Risk 引用了不存在的 Avoidance: ${ref}`, { ref });
     }
   }
+  for (const { key, entity } of risks) {
+    const seen = new Set();
+    for (const [index, relation] of (entity.relatedRisks || []).entries()) {
+      if (!relation?.key || !riskIds.has(relation.key)) {
+        addIssue(issues, 'error', 'invalid_risk_related_risk_ref', `Risk.relatedRisks 引用了不存在的 Risk: ${relation?.key}`, { key, index, ref: relation?.key });
+      }
+      if (relation?.key === key) {
+        addIssue(issues, 'error', 'self_risk_relation', `Risk.relatedRisks 不能引用自身: ${key}`, { key, index });
+      }
+      const relationType = relation?.relation;
+      if (!['prerequisite', 'co-occurrence', 'escalation', 'variant'].includes(relationType)) {
+        addIssue(issues, 'error', 'invalid_risk_relation_type', `Risk.relatedRisks 关系类型非法: ${relationType}`, { key, index, relationType });
+      }
+      const fingerprint = `${relation?.key}:${relationType}`;
+      if (seen.has(fingerprint)) {
+        addIssue(issues, 'review', 'duplicate_risk_relation', `Risk.relatedRisks 存在重复关系: ${fingerprint}`, { key, index });
+      }
+      seen.add(fingerprint);
+    }
+  }
   for (const ref of attackToolRiskRefs) {
     if (!riskIds.has(ref)) {
       addIssue(issues, 'error', 'invalid_attack_tool_risk_ref', `AttackTool 引用了不存在的 Risk: ${ref}`, { ref });
@@ -135,7 +158,7 @@ function collectRelationAudit() {
   }
 
   const referencedAvoidances = new Set([...riskAvoidanceRefs, ...attackToolAvoidanceRefs]);
-  const referencedRisks = new Set([...attackToolRiskRefs, ...threatActorRiskRefs, ...sceneRiskRefs]);
+  const referencedRisks = new Set([...attackToolRiskRefs, ...threatActorRiskRefs, ...sceneRiskRefs, ...riskRelatedRiskRefs]);
   const referencedAttackTools = new Set(threatActorAttackToolRefs);
 
   const unreferencedAvoidances = avoidances
@@ -160,6 +183,7 @@ function collectRelationAudit() {
 
   const summaries = [
     { name: 'Risk.avoidances', ...coverage(risks, 'avoidances') },
+    { name: 'Risk.relatedRisks', observationOnly: true, ...coverage(risks, 'relatedRisks') },
     { name: 'AttackTool.directCauseRisks', ...coverage(attackTools, 'directCauseRisks') },
     { name: 'AttackTool.indirectSupportRisks', ...coverage(attackTools, 'indirectSupportRisks') },
     { name: 'AttackTool.avoidances', ...coverage(attackTools, 'avoidances') },

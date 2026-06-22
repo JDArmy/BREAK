@@ -24,6 +24,18 @@
       "预言机攻击",
       "无抵押借贷",
       "flash loan attack"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0169",
+        "relation": "co-occurrence",
+        "note": "闪电贷攻击常与预言机操纵组合。"
+      },
+      {
+        "key": "R0170",
+        "relation": "co-occurrence",
+        "note": "闪电贷攻击可能与MEV抢跑链路共同出现。"
+      }
     ]
   }
 }

@@ -79,6 +79,7 @@ const { sceneIds, riskRefs: businessSceneRiskRefs } = collectBusinessSceneIdsAnd
 
 const avoidanceCategories = readJson(join(root, "avoidance-categories", "avoidanceCategories.json"));
 const avoidanceCategoryIds = new Set(Object.keys(avoidanceCategories));
+const riskRelationTypes = new Set(["prerequisite", "co-occurrence", "escalation", "variant"]);
 
 const issues = [];
 
@@ -98,6 +99,31 @@ for (const record of risks) {
     addIssue(issues, record.file, record.id, "avoidances 不能为空");
   }
   checkRefs(issues, record, "avoidances", avoidanceIds, "Avoidance");
+
+  const relatedRisks = record.entity.relatedRisks || [];
+  if (!Array.isArray(relatedRisks)) {
+    addIssue(issues, record.file, record.id, "relatedRisks 必须是数组");
+  } else {
+    const seen = new Set();
+    for (const [index, relation] of relatedRisks.entries()) {
+      const ref = relation?.key;
+      const relationType = relation?.relation;
+      if (!ref || !riskIds.has(ref)) {
+        addIssue(issues, record.file, record.id, `relatedRisks[${index}].key 引用了不存在的 Risk: ${ref}`);
+      }
+      if (ref === record.id) {
+        addIssue(issues, record.file, record.id, `relatedRisks[${index}].key 不能引用自身`);
+      }
+      if (!riskRelationTypes.has(relationType)) {
+        addIssue(issues, record.file, record.id, `relatedRisks[${index}].relation 非法: ${relationType}`);
+      }
+      const fingerprint = `${ref}:${relationType}`;
+      if (seen.has(fingerprint)) {
+        addIssue(issues, record.file, record.id, `relatedRisks 存在重复关系: ${fingerprint}`);
+      }
+      seen.add(fingerprint);
+    }
+  }
 }
 
 for (const record of attackTools) {

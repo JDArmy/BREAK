@@ -58,6 +58,7 @@ watch(
 
 const selectedRisk = computed(() => BREAK.risks[selectedRiskKey.value]);
 const localeMessages = computed(() => messages.value[locale.value] as Record<string, unknown>);
+const relatedRiskRelations = computed(() => selectedRisk.value?.relatedRisks ?? []);
 
 const { relatedCases, ensureCases, cases, loaded, sectionRef: casesSectionRef } = useRelatedCases(
   "risk",
@@ -90,7 +91,7 @@ const { openRelationGraph } = useRelationGraph("risk");
     :search-placeholder="$t('search.riskPlaceholder')"
     @select="selectedRiskKey = $event"
   >
-    <article v-if="selectedRisk" class="detail-panel">
+    <article v-if="selectedRisk" class="detail-panel risk-detail-panel">
       <div class="detail-heading">
         <div>
           <div class="detail-id">{{ selectedRiskKey }}</div>
@@ -109,12 +110,12 @@ const { openRelationGraph } = useRelationGraph("risk");
         <h3>{{ $t("riskDescription") }}</h3>
         <p>{{ $t(`BREAK.risks.${selectedRiskKey}.description`) }}</p>
       </section>
-      <section class="detail-grid">
-        <div>
+      <section class="detail-grid risk-meta-grid">
+        <div class="risk-meta-card risk-meta-card--compact">
           <h3>{{ $t("riskComplexity") }}</h3>
-          <p>{{ $t(`BREAK.risks.${selectedRiskKey}.complexity`) }}</p>
+          <p class="risk-complexity-value">{{ $t(`BREAK.risks.${selectedRiskKey}.complexity`) }}</p>
         </div>
-        <div>
+        <div class="risk-meta-card risk-meta-card--impact">
           <h3>{{ $t("riskInfluence") }}</h3>
           <p>{{ $t(`BREAK.risks.${selectedRiskKey}.influence`) }}</p>
         </div>
@@ -125,6 +126,23 @@ const { openRelationGraph } = useRelationGraph("risk");
           <span v-for="keyword in getMessageStringArray(localeMessages, `BREAK.risks.${selectedRiskKey}.keywords`)" :key="keyword" class="keyword-tag">
             {{ keyword }}
           </span>
+        </div>
+      </section>
+      <section v-if="relatedRiskRelations.length" class="detail-section">
+        <h3>{{ $t("riskRelatedRisks") }}</h3>
+        <div class="risk-relation-list">
+          <router-link
+            v-for="relation in relatedRiskRelations"
+            :key="`${relation.key}-${relation.relation}`"
+            class="risk-relation-item"
+            :to="{ name: 'risks', hash: `#${relation.key}` }"
+          >
+            <span class="risk-relation-type">{{ $t(`riskRelationType.${relation.relation}`) }}</span>
+            <span class="risk-relation-title">
+              {{ relation.key }}: {{ $t(`BREAK.risks.${relation.key}.title`) }}
+            </span>
+            <span v-if="relation.note" class="risk-relation-note">{{ relation.note }}</span>
+          </router-link>
         </div>
       </section>
       <EntityLinkSection
@@ -214,5 +232,135 @@ const { openRelationGraph } = useRelationGraph("risk");
 .text-muted {
   color: var(--break-text-muted);
   font-size: 0.9em;
+}
+
+.risk-detail-panel {
+  max-width: 1380px;
+}
+
+.risk-meta-grid {
+  grid-template-columns: minmax(150px, 220px) minmax(0, 1fr);
+  gap: 10px;
+  align-items: stretch;
+}
+
+.risk-meta-grid > .risk-meta-card {
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: transparent;
+}
+
+.risk-meta-card h3 {
+  margin-bottom: 6px;
+}
+
+.risk-meta-card p {
+  line-height: 1.65;
+}
+
+.risk-meta-card--compact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.risk-complexity-value {
+  width: fit-content;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--break-bg-secondary);
+  border: 1px solid var(--break-border);
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+.risk-meta-card--impact {
+  border-left: 3px solid var(--break-border);
+}
+
+.risk-relation-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.risk-relation-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-areas:
+    "type title"
+    "type note";
+  column-gap: 8px;
+  row-gap: 2px;
+  align-items: center;
+  min-width: 0;
+  min-height: 62px;
+  padding: 8px 10px;
+  color: inherit;
+  text-decoration: none;
+  background: var(--break-bg-secondary);
+  border: 1px solid var(--break-border);
+  border-radius: 6px;
+}
+
+.risk-relation-item:hover {
+  color: var(--break-primary);
+  border-color: var(--break-primary);
+}
+
+.risk-relation-type {
+  grid-area: type;
+  flex: 0 0 auto;
+  min-width: 44px;
+  padding: 1px 6px;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--break-primary);
+  border: 1px solid var(--break-primary);
+  border-radius: 4px;
+}
+
+.risk-relation-title {
+  grid-area: title;
+  min-width: 0;
+  overflow: hidden;
+  font-weight: 600;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.risk-relation-note {
+  grid-area: note;
+  min-width: 0;
+  overflow: hidden;
+  color: var(--break-text-muted);
+  font-size: 0.84em;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 720px) {
+  .risk-meta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .risk-relation-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 1180px) {
+  .risk-relation-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1181px) and (max-width: 1599px) {
+  .risk-relation-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 </style>

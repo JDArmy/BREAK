@@ -24,6 +24,18 @@
       "构建日志泄密",
       "部署密钥泄露"
     ],
-    "updated": "2026-06-22"
+    "updated": "2026-06-22",
+    "relatedRisks": [
+      {
+        "key": "R0227",
+        "relation": "escalation",
+        "note": "流水线凭证泄露可进一步导致构建产物投毒。"
+      },
+      {
+        "key": "R0228",
+        "relation": "co-occurrence",
+        "note": "CI/CD凭证泄露常与依赖或包投毒共同构成供应链攻击面。"
+      }
+    ]
   }
 }

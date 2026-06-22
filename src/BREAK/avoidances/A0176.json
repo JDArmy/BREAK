@@ -13,6 +13,7 @@
       "DApp前端完整性验证"
     ],
     "updated": "2026-06-16",
-    "definition": "通过子资源完整性(SRI)、IPFS哈希验证等确保前端未被篡改。"
+    "definition": "通过子资源完整性(SRI)、IPFS哈希验证等确保前端未被篡改。",
+    "effectiveness": "high"
   }
 }

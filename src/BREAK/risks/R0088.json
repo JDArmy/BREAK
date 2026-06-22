@@ -42,6 +42,23 @@
       "批量登录",
       "脚本登录",
       "自动化认证攻击"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0032-001",
+        "relation": "escalation",
+        "note": "自动化登录可升级为凭证填充攻击。"
+      },
+      {
+        "key": "R0032-003",
+        "relation": "escalation",
+        "note": "自动化登录可升级为凭证爆破。"
+      },
+      {
+        "key": "R0034",
+        "relation": "co-occurrence",
+        "note": "自动化登录常用于自动化养号。"
+      }
     ]
   }
 }

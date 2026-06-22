@@ -8,6 +8,13 @@ const keywordArray = z
   .refine((items) => new Set(items).size === items.length, {
     message: "keywords 不能重复",
   });
+const avoidanceCategorySchema = z.enum(["AC01", "AC02", "AC03", "AC04"]);
+const avoidanceEffectivenessSchema = z.enum(["high", "medium", "low"]);
+const riskRelationSchema = z.object({
+  key: nonEmptyString,
+  relation: z.enum(["prerequisite", "co-occurrence", "escalation", "variant"]),
+  note: nonEmptyString.optional(),
+});
 
 export const referenceSchema = z.object({
   title: nonEmptyString,
@@ -22,6 +29,7 @@ export const riskSchema = z.object({
   complexity: z.enum(["初级", "中级", "高级"]),
   influence: nonEmptyString,
   avoidances: idArray,
+  relatedRisks: z.array(riskRelationSchema).default([]),
   references: z.array(referenceSchema).default([]),
   updated: z.string().optional(),
 });
@@ -29,7 +37,8 @@ export const riskSchema = z.object({
 export const avoidanceSchema = z.object({
   title: nonEmptyString,
   keywords: keywordArray,
-  category: nonEmptyString,
+  category: avoidanceCategorySchema,
+  effectiveness: avoidanceEffectivenessSchema.optional(),
   definition: nonEmptyString,
   description: nonEmptyString,
   complexity: nonEmptyString.optional(),

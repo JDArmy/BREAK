@@ -39,6 +39,18 @@
       "API爬取",
       "盗爬",
       "scraping"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0126",
+        "relation": "variant",
+        "note": "API滥用是接口化场景中的爬取与滥用变体。"
+      },
+      {
+        "key": "R0028",
+        "relation": "escalation",
+        "note": "大规模爬取可能升级为数据渗出风险。"
+      }
     ]
   }
 }

@@ -19,6 +19,11 @@ interface CreateRelationCoverageAnalysisOptions {
 }
 
 const unique = (values: string[]) => [...new Set(values)];
+const effectivenessRank = {
+  high: 0,
+  medium: 1,
+  low: 2,
+} as const;
 
 export const createRelationCoverageAnalysis = ({
   t,
@@ -39,6 +44,41 @@ export const createRelationCoverageAnalysis = ({
     meta,
     sourceFields,
   });
+
+  const getAvoidanceEffectiveness = (avoidanceKey: string) =>
+    BREAK.avoidances[avoidanceKey as keyof typeof BREAK.avoidances]?.effectiveness;
+
+  const getAvoidanceEffectivenessMeta = (avoidanceKey: string) => {
+    const effectiveness = getAvoidanceEffectiveness(avoidanceKey);
+    return effectiveness ? t(`relationView.avoidanceEffectiveness.${effectiveness}`) : "";
+  };
+
+  const sortAvoidanceItems = <T extends { id: string; type: Exclude<RelationType, RelationType.all> }>(
+    items: T[]
+  ) =>
+    [...items].sort((left, right) => {
+      if (left.type !== RelationType.avoidance || right.type !== RelationType.avoidance) return 0;
+      const leftEffectiveness = getAvoidanceEffectiveness(left.id);
+      const rightEffectiveness = getAvoidanceEffectiveness(right.id);
+      const leftRank = leftEffectiveness ? effectivenessRank[leftEffectiveness] : 99;
+      const rightRank = rightEffectiveness ? effectivenessRank[rightEffectiveness] : 99;
+      if (leftRank !== rightRank) return leftRank - rightRank;
+      return left.id.localeCompare(right.id);
+    });
+
+  const buildAvoidanceNodeItem = (
+    id: string,
+    sourceFields: string[],
+    meta: string
+  ) => {
+    const effectivenessMeta = getAvoidanceEffectivenessMeta(id);
+    return buildNodeItem(
+      RelationType.avoidance,
+      id,
+      sourceFields,
+      effectivenessMeta ? `${meta} · ${effectivenessMeta}` : meta
+    );
+  };
 
   const buildSection = (
     title: string,
@@ -102,8 +142,7 @@ export const createRelationCoverageAnalysis = ({
     const directItems = directAvoidances
       .filter((avoidanceKey) => avoidanceKey in BREAK.avoidances)
       .map((avoidanceKey) =>
-        buildNodeItem(
-          RelationType.avoidance,
+        buildAvoidanceNodeItem(
           avoidanceKey,
           ["Risk.avoidances"],
           t("relationView.nodeCoverageMetaDirect")
@@ -113,8 +152,7 @@ export const createRelationCoverageAnalysis = ({
     const toolItems = attackToolAvoidances
       .filter((avoidanceKey) => avoidanceKey in BREAK.avoidances && !directAvoidances.includes(avoidanceKey))
       .map((avoidanceKey) =>
-        buildNodeItem(
-          RelationType.avoidance,
+        buildAvoidanceNodeItem(
           avoidanceKey,
           ["AttackTool.avoidances"],
           t("relationView.nodeCoverageMetaTool")
@@ -124,15 +162,14 @@ export const createRelationCoverageAnalysis = ({
     const overlapItems = attackToolAvoidances
       .filter((avoidanceKey) => directAvoidances.includes(avoidanceKey))
       .map((avoidanceKey) =>
-        buildNodeItem(
-          RelationType.avoidance,
+        buildAvoidanceNodeItem(
           avoidanceKey,
           ["Risk.avoidances", "AttackTool.avoidances"],
           t("relationView.nodeCoverageMetaBoth")
         )
       );
 
-    const items = [...overlapItems, ...directItems, ...toolItems];
+    const items = sortAvoidanceItems([...overlapItems, ...directItems, ...toolItems]);
     const severity =
       items.length === 0
         ? "danger"
@@ -243,8 +280,10 @@ export const createRelationCoverageAnalysis = ({
             t("relationView.nodeCoverageMetaRisk")
           )
         ),
-        ...avoidances.map((avoidanceKey) =>
-          buildNodeItem(RelationType.avoidance, avoidanceKey, ["AttackTool.avoidances"], t("relationView.nodeCoverageMetaTool"))
+        ...sortAvoidanceItems(
+          avoidances.map((avoidanceKey) =>
+            buildAvoidanceNodeItem(avoidanceKey, ["AttackTool.avoidances"], t("relationView.nodeCoverageMetaTool"))
+          )
         ),
       ],
       notice: risks.length === 0 ? t("relationView.nodeCoverageNotice.attackTool") : undefined,

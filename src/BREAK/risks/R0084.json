@@ -33,6 +33,18 @@
       "钓鱼链接",
       "凭证钓鱼",
       "鱼叉式钓鱼"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0032",
+        "relation": "escalation",
+        "note": "钓鱼成功后通常升级为账号盗取。"
+      },
+      {
+        "key": "R0144",
+        "relation": "co-occurrence",
+        "note": "域名或品牌仿冒常用于提升钓鱼可信度。"
+      }
     ]
   },
   "R0084-001": {

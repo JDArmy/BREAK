@@ -75,6 +75,7 @@ const avoidanceItems = computed(() =>
 );
 
 const selectedAvoidance = computed(() => BREAK.avoidances[selectedAvoidanceKey.value]);
+const selectedAvoidanceEffectiveness = computed(() => selectedAvoidance.value?.effectiveness);
 
 watch(selectedCategory, () => {
   if (
@@ -165,6 +166,10 @@ const { openRelationGraph } = useRelationGraph("avoidance");
           {{ selectedAvoidance.category }}:
           {{ $t(`BREAK.avoidanceCategories.${selectedAvoidance.category}.title`) }}
         </p>
+      </section>
+      <section v-if="selectedAvoidanceEffectiveness" class="detail-section">
+        <h3>{{ $t("avoidanceEffectiveness") }}</h3>
+        <p>{{ $t(`relationView.avoidanceEffectiveness.${selectedAvoidanceEffectiveness}`) }}</p>
       </section>
       <EntityLinkSection
         :keys="relatedRiskKeys"

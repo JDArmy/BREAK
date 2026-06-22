@@ -20,7 +20,8 @@
       "运行环境检测",
       "客户端环境检测",
       "设备风险检测"
-    ]
+    ],
+    "effectiveness": "medium"
   },
   "A0010-001": {
     "title": "模拟器检测",
@@ -43,7 +44,8 @@
       "Genymotion检测",
       "真机校验",
       "模拟环境检测"
-    ]
+    ],
+    "effectiveness": "medium"
   },
   "A0010-002": {
     "title": "云手机检测",
@@ -66,7 +68,8 @@
       "远程手机检测",
       "群控云手机",
       "云设备检测"
-    ]
+    ],
+    "effectiveness": "medium"
   },
   "A0010-003": {
     "title": "ROOT/越狱检测",
@@ -89,7 +92,8 @@
       "jailbreak检测",
       "su检测",
       "设备提权检测"
-    ]
+    ],
+    "effectiveness": "medium"
   },
   "A0010-004": {
     "title": "外挂检测",
@@ -112,7 +116,8 @@
       "作弊工具检测",
       "DLL注入检测",
       "DMA外挂检测"
-    ]
+    ],
+    "effectiveness": "medium"
   },
   "A0010-005": {
     "title": "多开检测",
@@ -135,7 +140,8 @@
       "多开器检测",
       "进程互斥检测",
       "克隆应用检测"
-    ]
+    ],
+    "effectiveness": "medium"
   },
   "A0010-006": {
     "title": "调试器检测",
@@ -158,7 +164,8 @@
       "Debugger检测",
       "BeingDebugged检测",
       "动态调试检测"
-    ]
+    ],
+    "effectiveness": "medium"
   },
   "A0010-007": {
     "title": "虚拟机检测",
@@ -181,7 +188,8 @@
       "VirtualBox检测",
       "VMware检测",
       "宿主机识别"
-    ]
+    ],
+    "effectiveness": "medium"
   },
   "A0010-008": {
     "title": "无头浏览器检测",
@@ -204,7 +212,8 @@
       "Selenium检测",
       "自动化浏览器检测",
       "浏览器无头检测"
-    ]
+    ],
+    "effectiveness": "medium"
   },
   "A0010-009": {
     "title": "HOOK检测",
@@ -226,6 +235,7 @@
       "注入框架检测",
       "API Hook检测",
       "反Hook"
-    ]
+    ],
+    "effectiveness": "medium"
   }
 }

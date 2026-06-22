@@ -3,6 +3,17 @@ export interface Reference {
   title: string;
 }
 
+export type RiskRelationType = "prerequisite" | "co-occurrence" | "escalation" | "variant";
+
+export interface RiskRelation {
+  key: string;
+  relation: RiskRelationType;
+  note?: string;
+}
+
+export type AvoidanceCategory = "AC01" | "AC02" | "AC03" | "AC04";
+export type AvoidanceEffectiveness = "high" | "medium" | "low";
+
 export interface Risk {
   title: string;
   keywords: string[];
@@ -11,6 +22,7 @@ export interface Risk {
   complexity: string;
   influence: string;
   avoidances: string[];
+  relatedRisks: RiskRelation[];
   references: Reference[];
   updated?: string;
 }
@@ -18,7 +30,8 @@ export interface Risk {
 export interface Avoidance {
   title: string;
   keywords: string[];
-  category: string;
+  category: AvoidanceCategory;
+  effectiveness?: AvoidanceEffectiveness;
   definition: string;
   description: string;
   complexity?: string;

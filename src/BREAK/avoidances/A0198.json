@@ -14,6 +14,7 @@
       "API输入校验契约测试"
     ],
     "updated": "2026-06-17",
-    "definition": "基于OpenAPI契约、类型约束和负载测试校验输入，减少注入和参数污染。"
+    "definition": "基于OpenAPI契约、类型约束和负载测试校验输入，减少注入和参数污染。",
+    "effectiveness": "high"
   }
 }

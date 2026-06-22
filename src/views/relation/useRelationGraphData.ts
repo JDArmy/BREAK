@@ -42,6 +42,10 @@ interface UseRelationGraphDataOptions {
       | "avoidanceMeans"
       | "directCauseRisk"
       | "indirectSupportRisk"
+      | "riskPrerequisite"
+      | "riskCoOccurrence"
+      | "riskEscalation"
+      | "riskVariant"
       | "buildAttackTool"
       | "useAttackTool"
       | "causeRisk"
@@ -98,6 +102,30 @@ export const useRelationGraphData = ({
           "AttackTool.indirectSupportRisks",
           "ThreatActor.indirectSupportRisks",
         ],
+      },
+      {
+        key: "relationLine.riskPrerequisite",
+        color: getRelationLineColor("riskPrerequisite"),
+        label: t("relationLine.riskPrerequisite"),
+        fields: ["Risk.relatedRisks"],
+      },
+      {
+        key: "relationLine.riskCoOccurrence",
+        color: getRelationLineColor("riskCoOccurrence"),
+        label: t("relationLine.riskCoOccurrence"),
+        fields: ["Risk.relatedRisks"],
+      },
+      {
+        key: "relationLine.riskEscalation",
+        color: getRelationLineColor("riskEscalation"),
+        label: t("relationLine.riskEscalation"),
+        fields: ["Risk.relatedRisks"],
+      },
+      {
+        key: "relationLine.riskVariant",
+        color: getRelationLineColor("riskVariant"),
+        label: t("relationLine.riskVariant"),
+        fields: ["Risk.relatedRisks"],
       },
       {
         key: "relationLine.buildAttackTool",

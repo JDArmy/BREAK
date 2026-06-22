@@ -30,6 +30,18 @@
       "机器过验证",
       "行为验证码绕过",
       "人机验证绕过"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0050",
+        "relation": "co-occurrence",
+        "note": "人机识别绕过常与设备指纹绕过组合使用。"
+      },
+      {
+        "key": "R0001",
+        "relation": "prerequisite",
+        "note": "流程自动化通常需要绕过人机识别。"
+      }
     ]
   }
 }

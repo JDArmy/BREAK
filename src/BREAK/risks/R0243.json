@@ -24,6 +24,18 @@
       "反馈数据污染",
       "AI供应链攻击"
     ],
-    "updated": "2026-06-22"
+    "updated": "2026-06-22",
+    "relatedRisks": [
+      {
+        "key": "R0071-005",
+        "relation": "variant",
+        "note": "训练数据投毒是AI模型投毒风险的数据层变体。"
+      },
+      {
+        "key": "R0117-002",
+        "relation": "co-occurrence",
+        "note": "间接提示注入和数据投毒都可能污染模型上下文。"
+      }
+    ]
   }
 }

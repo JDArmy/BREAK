@@ -24,6 +24,18 @@
       "设备控制",
       "智能家居安全",
       "IoT hijacking"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0165",
+        "relation": "escalation",
+        "note": "智能设备劫持可升级为IoT僵尸网络。"
+      },
+      {
+        "key": "R0209",
+        "relation": "escalation",
+        "note": "设备劫持后可能形成非法外联和C2控制。"
+      }
     ]
   }
 }

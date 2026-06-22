@@ -57,6 +57,8 @@ const relatedTerms = computed(() => {
   );
 });
 
+const relatedRiskRelations = computed(() => risks[props.rKey as keyof typeof risks]?.relatedRisks ?? []);
+
 const termDrawer = ref(false);
 const termKey = ref("");
 
@@ -134,6 +136,20 @@ const openRelationGraph = (rKey: string) => {
         >
           {{ aKey }}: {{ $t(`BREAK.avoidances.${aKey}.title`) }}
         </button>
+      </div>
+    </div>
+    <div class="desc" v-if="relatedRiskRelations.length > 0">
+      <strong>{{ $t("riskRelatedRisks") }}:&nbsp;</strong>
+      <div class="entity-links">
+        <router-link
+          v-for="relation in relatedRiskRelations"
+          :key="`${relation.key}-${relation.relation}`"
+          class="entity-link"
+          :to="{ name: 'risks', hash: `#${relation.key}` }"
+        >
+          {{ $t(`riskRelationType.${relation.relation}`) }} ·
+          {{ relation.key }}: {{ $t(`BREAK.risks.${relation.key}.title`) }}
+        </router-link>
       </div>
     </div>
     <div class="desc" v-if="relatedTerms.length > 0">

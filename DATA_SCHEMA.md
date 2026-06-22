@@ -1,6 +1,6 @@
 # BREAK Data Schema
 
-> Generated from `src/validation/breakSchema.ts` for package version `2.21.19`.
+> Generated from `src/validation/breakSchema.ts` for package version `2.21.20`.
 > Last schema doc review: 2026-06-17. Run `npm run schema:docs:write` after schema changes.
 
 This document describes the committed JSON data model used by the BREAK knowledge base. The source of truth is the Zod schema in `src/validation/breakSchema.ts`; `npm run validate:schema-docs` checks this document against that source.
@@ -49,6 +49,7 @@ Parent and child records live in the parent JSON file. For example, `R0001-001` 
 | `complexity` | "初级" \| "中级" \| "高级" | required | 复杂度或实施难度。 |
 | `influence` | string | required | 业务影响。 |
 | `avoidances` | string | required | 关联规避手段 ID 列表。 Target: Avoidance. |
+| `relatedRisks` | RiskRelation[] | optional, defaults to empty array | 相关风险 ID 列表；Risk 中为风险间关联对象列表。 Target: Risk. |
 | `references` | Reference[] | optional, defaults to empty array | 参考资料列表。 |
 | `updated` | string | optional | 最近更新日期，建议使用 YYYY-MM-DD。 |
 
@@ -60,7 +61,8 @@ Parent and child records live in the parent JSON file. For example, `R0001-001` 
 |-------|------|-------------|-------------|
 | `title` | string | required | 展示标题。 |
 | `keywords` | string | required | 搜索关键词；必须非空，且不能重复。 |
-| `category` | string | required | 分类 ID 或分类名称。 |
+| `category` | "AC01" \| "AC02" \| "AC03" \| "AC04" | required | 分类 ID。 |
+| `effectiveness` | "high" \| "medium" \| "low" | optional | 规避手段有效性分级，用于防御覆盖排序。 |
 | `definition` | string | required | 简短定义。 |
 | `description` | string | required | 详细说明。 |
 | `complexity` | string | optional | 复杂度或实施难度。 |
@@ -108,11 +110,11 @@ Parent and child records live in the parent JSON file. For example, `R0001-001` 
 | `title` | string | required | 展示标题。 |
 | `keywords` | string | required | 搜索关键词；必须非空，且不能重复。 |
 | `aliases` | string[] | optional, defaults to empty array | 别名列表。 |
-| `category` | string | required | 分类 ID 或分类名称。 |
+| `category` | string | required | 分类 ID。 |
 | `definition` | string | required | 简短定义。 |
 | `description` | string | required | 详细说明。 |
 | `usageExample` | string | optional | 使用示例。 |
-| `relatedRisks` | string | required | 相关风险 ID 列表。 Target: Risk. |
+| `relatedRisks` | string | required | 相关风险 ID 列表；Risk 中为风险间关联对象列表。 Target: Risk. |
 | `relatedAvoidances` | string | required | 相关规避手段 ID 列表。 Target: Avoidance. |
 | `relatedAttackTools` | string | required | 相关攻击工具 ID 列表。 Target: AttackTool. |
 | `relatedThreatActors` | string | required | 相关威胁行为者 ID 列表。 Target: ThreatActor. |
@@ -143,9 +145,9 @@ Parent and child records live in the parent JSON file. For example, `R0001-001` 
 | `keywords` | string | required | 搜索关键词；必须非空，且不能重复。 |
 | `summary` | string | required | 案例摘要，80-150 字事实性描述。 |
 | `description` | string | optional | 详细说明。 |
-| `category` | "criminal_verdict" \| "administrative_enforcement" \| "security_incident" \| "vulnerability_advisory" \| "academic_research" \| "news_report" | required | 分类 ID 或分类名称。 |
+| `category` | "criminal_verdict" \| "administrative_enforcement" \| "security_incident" \| "vulnerability_advisory" \| "academic_research" \| "news_report" | required | 分类 ID。 |
 | `incidentTime` | string | optional | 案例发生时间，YYYY 或 YYYY-MM。 |
-| `relatedRisks` | string | required | 相关风险 ID 列表。 Target: Risk. |
+| `relatedRisks` | string | required | 相关风险 ID 列表；Risk 中为风险间关联对象列表。 Target: Risk. |
 | `relatedAttackTools` | string | optional, defaults to empty array | 相关攻击工具 ID 列表。 Target: AttackTool. |
 | `relatedThreatActors` | string | optional, defaults to empty array | 相关威胁行为者 ID 列表。 Target: ThreatActor. |
 | `references` | Reference[] | optional, defaults to empty array | 参考资料列表。 |

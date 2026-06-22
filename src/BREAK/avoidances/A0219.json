@@ -14,6 +14,7 @@
       "Webhook签名验证重放保护"
     ],
     "updated": "2026-06-17",
-    "definition": "对Webhook事件做签名校验、时间戳窗口、幂等处理和事件来源验证。"
+    "definition": "对Webhook事件做签名校验、时间戳窗口、幂等处理和事件来源验证。",
+    "effectiveness": "high"
   }
 }

@@ -26,16 +26,29 @@ export interface BreakBaseEntity {
   updated?: string;
 }
 
+export type BreakRiskRelationType = 'prerequisite' | 'co-occurrence' | 'escalation' | 'variant';
+
+export interface BreakRiskRelation {
+  key: string;
+  relation: BreakRiskRelationType;
+  note?: string;
+}
+
 export interface BreakRisk extends BreakBaseEntity {
   complexity: string;
   influence: string;
   avoidances: string[];
+  relatedRisks: BreakRiskRelation[];
   businessScenes: string[];
 }
 
+export type BreakAvoidanceCategoryId = 'AC01' | 'AC02' | 'AC03' | 'AC04';
+export type BreakAvoidanceEffectiveness = 'high' | 'medium' | 'low';
+
 export interface BreakAvoidance extends BreakBaseEntity {
   limitation?: string;
-  category: string;
+  category: BreakAvoidanceCategoryId;
+  effectiveness?: BreakAvoidanceEffectiveness;
 }
 
 export interface BreakAttackTool extends BreakBaseEntity {

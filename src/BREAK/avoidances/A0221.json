@@ -14,6 +14,7 @@
       "边缘CDN规则变更审计"
     ],
     "updated": "2026-06-17",
-    "definition": "审计CDN、WAF、边缘函数和缓存规则变更，防止边缘配置被滥用。"
+    "definition": "审计CDN、WAF、边缘函数和缓存规则变更，防止边缘配置被滥用。",
+    "effectiveness": "high"
   }
 }

@@ -27,6 +27,8 @@ const relatedTerms = computed(() => {
   );
 });
 
+const selectedAvoidance = computed(() => BREAK.avoidances[props.aKey as keyof typeof BREAK.avoidances]);
+
 const termDrawer = ref(false);
 const termKey = ref("");
 </script>
@@ -81,6 +83,10 @@ const termKey = ref("");
     <div class="desc" v-if="$t(`BREAK.avoidances.${aKey}.limitation`)">
       <strong>{{ $t("limitation") }}:&nbsp;</strong>
       {{ $t(`BREAK.avoidances.${aKey}.limitation`) }}
+    </div>
+    <div class="desc" v-if="selectedAvoidance?.effectiveness">
+      <strong>{{ $t("avoidanceEffectiveness") }}:&nbsp;</strong>
+      {{ $t(`relationView.avoidanceEffectiveness.${selectedAvoidance.effectiveness}`) }}
     </div>
     <div class="desc" v-if="relatedTerms.length > 0">
       <strong>{{ $t("terms") }}:&nbsp;</strong>

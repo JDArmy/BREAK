@@ -26,6 +26,18 @@
       "Hook绕过",
       "设备环境伪装",
       "群控设备"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0050-001",
+        "relation": "variant",
+        "note": "虚拟设备识别绕过是设备识别绕过的细分变体。"
+      },
+      {
+        "key": "R0088",
+        "relation": "co-occurrence",
+        "note": "自动化登录常配套设备环境伪装。"
+      }
     ]
   },
   "R0050-001": {

@@ -24,6 +24,18 @@
       "多链攻击",
       "资产桥接",
       "cross-chain bridge attack"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0200",
+        "relation": "variant",
+        "note": "Layer2桥接风险是跨链桥攻击在二层场景中的变体。"
+      },
+      {
+        "key": "R0175",
+        "relation": "co-occurrence",
+        "note": "跨链桥场景需要同时关注交易重放。"
+      }
     ]
   }
 }

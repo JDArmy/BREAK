@@ -31,6 +31,23 @@
       "接口盗刷",
       "接口攻击",
       "业务接口滥用"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0222",
+        "relation": "prerequisite",
+        "note": "影子API暴露会扩大API滥用面。"
+      },
+      {
+        "key": "R0223",
+        "relation": "variant",
+        "note": "对象级越权属于API滥用的典型业务逻辑变体。"
+      },
+      {
+        "key": "R0224",
+        "relation": "variant",
+        "note": "批量调用资源耗尽属于API滥用的高成本接口变体。"
+      }
     ]
   },
   "R0126-001": {

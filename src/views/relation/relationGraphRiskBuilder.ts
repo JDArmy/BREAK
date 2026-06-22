@@ -7,6 +7,13 @@ import {
 } from "@/views/relation/relationGraphBuilderShared";
 import { addRelatedTerms } from "@/views/relation/relationGraphTermBuilder";
 
+const riskRelationLineKeyMap = {
+  prerequisite: "relationLine.riskPrerequisite",
+  "co-occurrence": "relationLine.riskCoOccurrence",
+  escalation: "relationLine.riskEscalation",
+  variant: "relationLine.riskVariant",
+} as const;
+
 export const createRiskRelationBuilder = (context: RelationGraphBuilderContext) => {
   const addAvoidance = (riskKey: string) => {
     const avoidanceKeys = BREAK.risks[riskKey as keyof typeof BREAK.risks].avoidances;
@@ -108,6 +115,16 @@ export const createRiskRelationBuilder = (context: RelationGraphBuilderContext) 
     });
   };
 
+  const addRelatedRisk = (riskKey: string) => {
+    const relatedRisks =
+      BREAK.risks[riskKey as keyof typeof BREAK.risks].relatedRisks ?? [];
+    relatedRisks.forEach(({ key, relation }) => {
+      if (!(key in BREAK.risks)) return;
+      addRelationNode(context, RelationType.risk, key);
+      addRelationLine(context, riskKey, riskRelationLineKeyMap[relation], key);
+    });
+  };
+
   const addTerm = (riskKey: string) => {
     addRelatedTerms(context, RelationType.risk, riskKey);
   };
@@ -116,6 +133,7 @@ export const createRiskRelationBuilder = (context: RelationGraphBuilderContext) 
     addAttackTool,
     addAvoidance,
     addAvoidanceAttackToolRelation,
+    addRelatedRisk,
     addSubrisk,
     addTerm,
     addThreatActor,

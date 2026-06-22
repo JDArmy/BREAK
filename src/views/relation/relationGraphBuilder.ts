@@ -175,6 +175,7 @@ export const createRelationGraphBuilder = ({
         riskBuilder.addAvoidanceAttackToolRelation(currentNodeId);
         riskBuilder.addThreatActor(currentNodeId);
         riskBuilder.addThreatActorAttackToolRelation(currentNodeId);
+        riskBuilder.addRelatedRisk(currentNodeId);
         riskBuilder.addSubrisk(currentNodeId);
         riskBuilder.addTerm(currentNodeId);
       }
