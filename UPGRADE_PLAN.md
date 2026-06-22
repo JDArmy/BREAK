@@ -1,8 +1,8 @@
 # BREAK 框架升级计划
 
-> 文档版本：1.4
-> 制定日期：2026-06-20，修订日期：2026-06-22，基于 v2.21.11 现状校准
-> 关联文档：`VISUAL_ANALYSIS_EXPLAINABILITY_PLAN.md`（关系页专项，本计划引用其 P0/P1 项）
+> 文档版本：1.5
+> 制定日期：2026-06-20，修订日期：2026-06-22，基于 v2.21.16 现状校准
+> 关联文档：无（原 `VISUAL_ANALYSIS_EXPLAINABILITY_PLAN.md` 已整合进本计划）
 > 评估结论：先进性 4.5/5，完善性 4.5/5——先进且工程成熟；风险内容质量首轮断层已清零，距「完善」主要差案例来源质量分级、引用待复核闭环、回归门禁强约束、可视化算法深化
 
 ## 0. 评估结论回顾
@@ -11,10 +11,10 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 
 三大短板（拉低完善性）：
 1. **内容质量治理进入第二阶段**：风险侧首轮质量断层已清零（def==desc 0、单关键词 0、generic influence 0），引用健康审计已建立且 broken=0；剩余主要是高价值案例缺少 primary source 分级标记、152 条反爬/权限类 review、150 条 timeout、66 条 connection_error 需要分批复核。单源率（1784/1797，99.28%）作为观察指标保留，不再作为全量治理 KPI。
-2. **自动化回归网已建立但仍需收紧**：5 个 Playwright/Lighthouse 脚本已接入 CI/Deploy，关键 .vue 组件已破零，当前 20 个测试文件 / 141 条测试；relation-stability 已进入 PR 浏览器回归，覆盖率 include 已扩展到 composables + relation；剩余问题是浏览器回归仍以 `continue-on-error` / 条件运行为主，需观察稳定后转 hard fail，并继续扩大组件/控制器测试覆盖。
+2. **自动化回归网已建立但仍需收紧**：5 个 Playwright/Lighthouse 脚本已接入 CI/Deploy，关键 .vue 组件已破零，当前 20 个测试文件 / 147 条测试；relation-stability 已进入 PR 浏览器回归，覆盖率 include 已扩展到 composables + relation；质量报告 JSON 已进入静态数据导出和校验链路。剩余问题是浏览器回归仍以 `continue-on-error` / 条件运行为主，需观察稳定后转 hard fail，并继续扩大组件/控制器测试覆盖。
 3. **可视化算法已完成第一阶段但仍需深化**：已补 BFS 路径发现、ECharts force + 度数感知初始布局、实体语义关系解释；剩余短板是完整路径发现交互、大图性能/截图基线、攻击路径步骤级 method/action 解释。
 
-次要短板：风险间无关联、Avoidance category 非枚举、i18n-sync 虽已进入 strict 链路但仍缺字段级校验、relationAttackPath 1155 行过大、CI 仍可继续优化、useSearch 潜在 bug。
+次要短板：风险间无关联、Avoidance category 非枚举、i18n-sync 虽已进入 strict 链路但仍缺字段级校验、relationAttackPath 1155 行过大、CI 仍可继续优化、质量报告审计规则仍可扩展、useSearch 潜在 bug。
 
 ## 1. 升级原则
 
@@ -33,19 +33,19 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 
 #### 0.1 当前基线复核
 
-> v2.21.11 现状：计划已从 v2.21.1 初评校准到当前仓库；`validate:data` 已包含 `i18n-sync.mjs --strict` 和英文质量校验；A1 引用可达性检测与首轮 broken 清理已完成，A2/A3 风险内容质量治理已完成，A5 自动化回归网第一阶段、C1/C2/C3 可视化算法第一阶段已完成；A4 已从“全量多源率”调整为“来源质量分级 + 高价值案例 primary source 补强”，A6/B3/B5 仍需继续推进。
+> v2.21.17 现状：计划已从 v2.21.1 初评校准到当前仓库；`validate:data` 已包含 `i18n-sync.mjs --strict` 和英文质量校验；A1 引用可达性检测与首轮 broken 清理已完成，A2/A3 风险内容质量治理已完成，A5 自动化回归网第一阶段、A6 质量报告 JSON 第一阶段、C1/C2/C3 可视化算法第一阶段已完成；A4 已从“全量多源率”调整为“来源质量分级 + 高价值案例 primary source 补强”，B3/B5 仍需继续推进，B6 调整为审计链路能力而非公开前端视图。
 
 目标：形成可追踪的执行基线。
 
 方案：
 - 重新记录当前版本、测试数量、实体数量、引用数量、质量指标和 CI workflow 状态。
 - 把“新增”类任务改成“增强/接入/去重/结构化输出”类任务，避免重复建设。
-- 对 A1/A5/B3/B5 的现状描述按当前仓库状态校准（A5 已完成第一阶段）。
+- 对 A1/A5/A6/B3/B5 的现状描述按当前仓库状态校准（A5/A6 已完成第一阶段，B6 前端视图暂不进入公开页面）。
 
 落点：`UPGRADE_PLAN.md`、`research/search-reports/phase-0-baseline.md`。
 
 验收：
-- ✅ 计划中的现状描述与 v2.21.11 仓库一致。
+- ✅ 计划中的现状描述与 v2.21.17 仓库一致。
 - ✅ 每个后续任务都能映射到明确文件、脚本或 workflow。
 
 工作量：0.5 天。
@@ -169,7 +169,7 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 
 #### A5. 自动化回归网建立（已完成第一阶段）
 
-> v2.21.11 现状：5 个 Playwright/Lighthouse 脚本已接入自动化链路；PR CI 新增 `browser-regression` job，运行 `test:smoke`、`test:performance`、`test:relation-stability`；Deploy 接入 `test:lighthouse` 与 `audit:lighthouse-sankey`，并按相关前端/关系页/构建脚本变更条件运行。`.vue` 单测已破零，新增 6 个关键组件测试，当前 20 个测试文件 / 141 条测试。`vitest.config.ts` 覆盖率 include 已扩展到 `src/composables/**/*.ts`、`src/views/relation/**/*.ts` 和关键 `.vue` 组件，当前扩大范围后的基线约为 lines 45.43%、statements 44.24%、functions 43.96%、branches 43.18%。`audit:lighthouse-sankey` 曾在 CI 输出报告后卡住，已通过显式退出修复。
+> v2.21.16 现状：5 个 Playwright/Lighthouse 脚本已接入自动化链路；PR CI 新增 `browser-regression` job，运行 `test:smoke`、`test:performance`、`test:relation-stability`；Deploy 接入 `test:lighthouse` 与 `audit:lighthouse-sankey`，并按相关前端/关系页/构建脚本变更条件运行。`.vue` 单测已破零，新增 6 个关键组件测试，当前 20 个测试文件 / 147 条测试。`vitest.config.ts` 覆盖率 include 已扩展到 `src/composables/**/*.ts`、`src/views/relation/**/*.ts` 和关键 `.vue` 组件，当前扩大范围后的基线约为 lines 46.70%、statements 45.32%、functions 44.58%、branches 43.39%。`audit:lighthouse-sankey` 曾在 CI 输出报告后卡住，已通过显式退出修复。
 
 目标：建立分层回归网，防 UI/性能/关系图谱回归。
 
@@ -196,31 +196,31 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 
 工作量：第一阶段已完成；浏览器回归 hard fail、补测和 link-check 去重预计 2-3 天。
 
-#### A6. 前端可消费质量报告 JSON（已完成第一阶段）
+#### A6. 质量报告 JSON（已完成第一阶段）
 
-> v2.21.16 现状：已新增 `scripts/validate/quality-report.mjs` 和 `npm run audit:quality-report`，`npm run export:data` 会生成 `public/data/quality-report.json` 并在 manifest 中记录 hash/bytes；`validate:data-export` 和 npm 数据包评估产物已纳入该文件校验。报告结构稳定为 `weakRelations`、`missingCoverage`、`sceneIssues`、`i18nIssues`、`generatedAt`、`summary`，当前基线四类问题均为 0。前端已新增 `relationQualityReport.ts` 类型与加载入口，B6 可直接消费。
+> v2.21.17 现状：已新增 `scripts/validate/quality-report.mjs` 和 `npm run audit:quality-report`，`audit:quality-report` 直接生成 `public/data/quality-report.json` 与 `research/search-reports/quality-report.json`；`npm run export:data` 也会同步生成该报告并在 manifest 中记录 hash/bytes；`validate:data-export` 和 npm 数据包评估产物已纳入该文件校验。报告结构稳定为 `weakRelations`、`missingCoverage`、`sceneIssues`、`i18nIssues`、`generatedAt`、`summary`，当前基线四类问题均为 0。质量治理保留在审计链路中，不接入公开关系页 UI。
 
-目标：将审计关键问题转为稳定 JSON，供关系页高亮和列表消费。
+目标：将审计关键问题转为稳定 JSON，供维护者审计、CI/构建校验和内部数据治理使用。
 
 已完成：
 - 新增脚本生成 `public/data/quality-report.json` 和 `research/search-reports/quality-report.json`，结构包含 `weakRelations`、`missingCoverage`、`sceneIssues`、`i18nIssues`、`generatedAt`、`summary`。
-- 前端新增 `RelationQualityReport` 类型和 `loadRelationQualityReport()`，后续质量治理视图只消费静态报告结果，不在运行时重新执行重型审计逻辑。
+- `audit:quality-report` 直接运行质量报告脚本，语义上与通用 `export:data` 解耦。
 - 报告生成纳入 `export:data`，并由 `validate:data-export` 校验 public/dist 同步、manifest hash、bytes 和四类数组契约。
 - npm 数据包评估产物同步包含 `data/quality-report.json`、运行时导出和类型声明，避免 manifest 指向不存在的文件。
 
 剩余工作：
-- B6 中接入关系页质量治理列表、节点/边高亮和点击定位。
-- 若 A1 引用健康报告后续也要进入前端，需要扩展质量报告的 `references`/`missingReference` 维度。
+- 按治理需要扩展质量报告规则，例如案例来源等级、引用健康、字段级 i18n 异常等。
+- 需要对外展示的数据质量状态时，应先设计内部管理页或受控入口，不直接进入公开关系页。
 
-落点：`scripts/validate/`（新增质量报告生成脚本或扩展 metrics.mjs/maintenance.mjs）、`public/data/quality-report.json`、`src/views/relation/`（消费方）。
+落点：`scripts/validate/quality-report.mjs`、`public/data/quality-report.json`、`research/search-reports/quality-report.json`、`dist/break-data-package/data/quality-report.json`。
 
 验收：
 - ✅ `public/data/quality-report.json` 含四分类稳定结构。
-- ✅ 前端已有类型和加载入口，可用于节点/边标记和列表。
+- ✅ `audit:quality-report` 可直接生成审计报告。
 - ✅ 报告随数据变化自动刷新（`export:data` / build 链）。
-- ⏳ 关系页质量治理 UI 待 B6 完成。
+- ✅ 公开关系页不暴露内部质量治理入口。
 
-工作量：第一阶段已完成；B6 前端消费预计 4-5 天。
+工作量：第一阶段已完成；后续规则扩展按治理需求分批推进。
 
 ---
 
@@ -336,29 +336,30 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 
 工作量：2 天。
 
-#### B6. 质量治理前端视图（含节点质量提示）
+#### B6. 质量治理审计闭环（已调整为审计链路）
 
-> 现状：无质量治理组件、无质量问题状态、无"仅看 X"筛选、无从列表定位图谱节点。节点级有零散覆盖缺口提示（RelationNodeCoverageBlock），但非列表视图 + 图谱定位。节点详情缺"缺引用"维度，"弱关系"未节点级化，不消费审计报告（仅运行时按关系推导）。依赖 A6 质量报告 JSON。
+> v2.21.17 现状：质量治理不再作为公开关系页 tab 展示，避免对外页面暴露内部数据维护入口。治理结果通过 `audit:quality-report`、`public/data/quality-report.json` 和 `research/search-reports/quality-report.json` 维护，当前四类问题基线均为 0。
 
-目标：让维护者在可视化页面直接看到数据质量问题，定位到图谱节点/关系；节点详情显示完整质量提示。
+目标：让维护者通过审计脚本和稳定报告追踪数据质量问题；公开关系页只保留用户需要的关系网络、攻击路径和分析解读。
 
-方案：
-- 新增质量治理列表组件（如 RelationQualityPanel），展示弱关系、缺覆盖、场景异常、i18n 异常。
-- 前端加载质量报告 JSON（A6）后，在图谱中标记相关节点和边。
-- 增加"仅看待复核关系""仅看缺覆盖风险""仅看场景异常""仅看 i18n 异常"筛选。
-- 支持从问题列表点击定位到图谱节点/关系边/分析解读详情。
-- 节点详情补全质量提示：补充"缺引用"维度（references 质量从审计报告读取），"弱关系"作为节点级提示，统一质量标记体系。
-- 质量标记体系（统一稳定 key）：missingRelation / weakRelation / missingAvoidance / sceneIssue / i18nIssue。
+已完成：
+- `audit:quality-report` 直接运行质量报告生成脚本。
+- `export:data`、manifest、GitHub Pages 导出校验和 npm 数据包评估产物均包含 `quality-report.json`。
+- 移除关系页“质量治理”前端视图、组件、运行时加载逻辑和对应 UI 文案。
 
-落点：`src/components/relation/`（新增 RelationQualityPanel / RelationIssueList）、`src/views/relation/relationViewState.ts`、`src/views/relation/useRelationViewModel.ts`、`src/components/relation/RelationFilterPanels.vue`、`src/components/relation/RelationNodeDetailDrawer.vue` / `RelationNodeAnalysisBlock.vue`、`src/views/relation/relationGraphInsights.ts`、`src/views/relation/relationQualityFlags.ts`（新增）。
+剩余工作：
+- 视治理需要扩展报告维度：引用健康、案例来源等级、字段级 i18n、弱来源等。
+- 如需可视化维护入口，应单独设计内部管理页或受控入口，不放入公开关系页。
+
+落点：`scripts/validate/quality-report.mjs`、`scripts/validate/static-data-export.mjs`、`scripts/validate/data-package.mjs`、`research/search-reports/quality-report.json`。
 
 验收：
-- 审计报告可被前端消费（依赖 A6）。
-- 质量问题可从列表定位到图谱节点。
-- 五种质量标记作为统一 key 在节点/边展示。
-- 节点详情显示"弱关系/缺引用/缺关联/待复核"四类完整提示，来源含审计报告。
+- ✅ 审计报告可由 `audit:quality-report` 单独生成。
+- ✅ 构建链路持续校验 `quality-report.json` 结构、hash 和数据包同步。
+- ✅ 公开关系页不展示内部质量治理入口。
+- ⏳ 质量报告规则按内容治理需要持续扩展。
 
-工作量：4-5 天。
+工作量：第一阶段已完成；图谱标记和节点详情质量块预计 2-3 天。
 
 #### B7. 任务型分析视角切换
 
@@ -517,7 +518,7 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 | A1 引用可达性检测增强 | P0 | 已完成第一阶段，剩余 2-4d | 高（最易补） | Phase 0 |
 | A2 influence 去模板化 | P0 | 已完成 | 高 | 无 |
 | A3 后期风险补强 | P0 | 已完成 | 高 | 无 |
-| A4 案例来源质量分级 | P0 | 已完成方向调整，剩余 4-6d | 中高 | A1/A6 |
+| A4 案例来源质量分级 | P0 | 已完成方向调整，剩余 4-6d | 中高 | A1 |
 | A5 自动化回归网 | P0 | 已完成第一阶段 | 高（防回归） | Phase 0 |
 | A6 质量报告 JSON | P0 | 已完成第一阶段 | 高（B6 前置） | 无 |
 | B1 风险间关联 | P1 | 3-4d | 中 | A5 已就绪 |
@@ -525,15 +526,15 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 | B3 i18n-sync 字段级 | P1 | 2-3d | 中 | 无 |
 | B4 关系页工程债 | P1 | 4-5d | 中高 | A5 已就绪 |
 | B5 CI 优化 | P1 | 2d | 中 | 无 |
-| B6 质量治理前端视图 | P1 | 4-5d | 高（治理闭环） | A6 |
-| B7 任务型分析视角 | P1 | 3-4d | 中高 | A6 |
+| B6 质量治理审计闭环 | P1 | 已调整为审计链路，规则持续扩展 | 高（治理闭环） | A6 已就绪 |
+| B7 任务型分析视角 | P1 | 3-4d | 中高 | A6 已就绪 |
 | C1 图算法路径发现 | P2 | 已完成第一阶段，剩余 2-3d | 高（上台阶） | B4 |
 | C2 力导向布局 | P2 | 已完成第一阶段，剩余 1-2d | 中高 | A5 已就绪 |
 | C3 动态解释生成 | P2 | 已完成第一阶段，剩余 2-3d | 中高 | B4 |
 | C4 STIX 标准化 | P2 | 5-7d | 中（互操作） | 无 |
 | C5 业务场景图谱 | P2 | 4-5d | 低（可选） | 无 |
 
-**剩余工作量估算**：Phase 0 已完成，Phase A 剩余约 10-16 天，Phase B 约 21-26 天，Phase C 剩余约 12-17 天，合计约 43-59 天（可并行压缩；A1/A5 与 C1/C2/C3 第一阶段已完成，A2/A3 已完成，A4 已完成方向调整）。
+**剩余工作量估算**：Phase 0 已完成，Phase A 剩余约 8-13 天，Phase B 约 17-21 天，Phase C 剩余约 12-17 天，合计约 37-51 天（可并行压缩；A1/A5/A6 与 C1/C2/C3 第一阶段已完成，A2/A3 已完成，A4 已完成方向调整，B6 调整为审计链路持续扩展）。
 
 ## 4. 验收标准（整体）
 
@@ -541,7 +542,7 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 
 | 维度 | 当前 | 目标 |
 |---|---|---|
-| 规划基线 | 基于 v2.21.11 校准，A1/A5 与 C1/C2/C3 第一阶段已回写状态，A2/A3 已完成 | 持续随版本更新校准 |
+| 规划基线 | 基于 v2.21.16 校准，A1/A5/A6 与 C1/C2/C3 第一阶段已回写状态，A2/A3 已完成 | 持续随版本更新校准 |
 | Keywords 脚本 | 已与 `audit:keywords` 等价，只审计 | 保持不写入 |
 | 引用可达性 | `audit:references-health` 已建立，broken=0；review/timeout/connection_error 待复核 | 周期审计 + 坏链追踪 + 分域名复核策略 |
 | influence 模板化 | 0 条 | 保持 ≤ 2 条 |
@@ -549,10 +550,10 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 | 案例来源质量 | 13 个案例完成多源化，整体单源率 99.28%；尚无来源等级 | 高价值案例 primary 覆盖率可统计，secondary_only/weak_source 可追踪 |
 | CI e2e 回归 | PR 已运行 site-smoke/site-performance/relation-stability（非阻断） | 稳定后逐步 hard fail |
 | Lighthouse 回归 | Deploy 条件运行 lighthouse-baseline/lighthouse-sankey | 保持条件运行，关键回归 hard fail |
-| .vue 单测 | 6 个关键组件，20 文件 / 141 测试 | 继续覆盖 RelationView/HomeView/控制器 |
+| .vue 单测 | 6 个关键组件，20 文件 / 147 测试 | 继续覆盖 RelationView/HomeView/控制器 |
 | 覆盖率 include | composables + relation + 关键 .vue，初始阈值 40% | 阈值随测试增长逐步收紧 |
-| 质量报告 JSON | 无 | 四分类稳定 JSON |
-| 质量治理视图 | 无 | 列表 + 定位 + 五种标记 |
+| 质量报告 JSON | 已有四分类稳定 JSON，进入 `audit:quality-report`、`export:data`、manifest、data-export 和 npm 数据包校验 | 作为审计报告和内部数据治理输入持续扩展 |
+| 质量治理视图 | 不进入公开关系页 | 如确需可视化维护入口，单独设计内部管理页或受控入口 |
 | 任务型视角 | 0 个 | ≥ 3 个视角 |
 | 风险间关联 | 无 | ≥ 20 条 |
 | Avoidance category | 自由字符串 | 枚举强约束 |
@@ -564,7 +565,7 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 | STIX 导出 | 无 | 合法 STIX 2.1 |
 | 业务场景图谱 | 无（首页矩阵已有） | 可选：从场景进关系图 |
 
-工程验收（不可回退）：type-check / validate:data / 141+ 测试 / build 通过；类型安全不降级（零 any）；构建门禁不削弱。
+工程验收（不可回退）：type-check / validate:data / 147+ 测试 / build 通过；类型安全不降级（零 any）；构建门禁不削弱。
 
 ## 5. 风险与约束
 
@@ -576,20 +577,20 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 | Schema 扩展破坏既有数据 | B1/B2 改 schema | 可选字段优先；校验脚本同步；渐进迁移 |
 | 可视化算法性能 | C1/C2 图算法/力导向对大规模图耗时 | 限定跳数/节点数；性能基线；按需计算 |
 | 标准化映射损失语义 | C4 STIX 映射可能不完整 | custom 对象保留 BREAK 特有字段；不强制全量映射 |
-| 升级周期长 | 44-60 天剩余工作量 | 分阶段独立交付；每阶段可单独验证；不阻塞线上 |
+| 升级周期长 | 39-54 天剩余工作量 | 分阶段独立交付；每阶段可单独验证；不阻塞线上 |
 
 ## 6. 执行建议
 
-1. **Phase 0 已完成主要校准**：`fix:keywords` 已修正，v2.21.11 基线已回写；后续每个阶段完成后继续更新本计划。
-2. **Phase A 下一步优先 A6 + A4 来源质量分级，A1 做待复核闭环**：A1/A5 第一阶段已完成，A2/A3 已完成；A6（质量报告 JSON）为 B6 前置，A4 不再追求全量多源率，而是建立 source quality 规则和高价值案例 primary 覆盖；A1 后续重点是 link-check Issue 去重和 review/timeout/connection_error 分批复核。
+1. **Phase 0 已完成主要校准**：`fix:keywords` 已修正，v2.21.17 基线已回写；后续每个阶段完成后继续更新本计划。
+2. **Phase A 下一步优先 A4 来源质量治理，A1 做待复核闭环**：A1/A5/A6 第一阶段已完成，A2/A3 已完成；A4 不再追求全量多源率，而是基于 `audit:case-source-quality` 做高价值案例 primary 覆盖补强；A1 后续重点是 link-check Issue 去重和 review/timeout/connection_error 分批复核。
 3. **内容治理并行推进**：A4 可按案例类别和来源等级分批并行；涉及 `src/BREAK/` 数据时必须同步英文 i18n 并跑 `audit:keywords` / `validate:data`。
-4. **Phase B 可在现有 A5 回归网保护下启动**：B1/B4 改关系页已有 smoke/performance/relation-stability/组件单测基础保障；B3/B5 可较早独立推进。
+4. **Phase B 可在现有 A5 回归网和 A6 质量报告基础上继续推进**：B6 已调整为审计链路持续扩展，不在公开关系页展示内部治理入口；B1/B4 改关系页已有 smoke/performance/relation-stability/组件单测基础保障；B3/B5 可较早独立推进。
 5. **Phase C 按价值排序**：C1（路径发现）价值最高，C2（力导向）次之，C3（动态解释）依赖 B4，C4（STIX）互操作价值取决于是否有外部消费方。
 6. **每项独立 PR**：便于 review 和回滚，husky pre-commit + CI 门禁保障。
 7. **内容治理可借 LLM/搜索但必须人工复核**：A2/A3 已完成；A4 只用 LLM/搜索生成候选来源和英文标题，不自动认定来源等级，primary/secondary/weak 必须按页面事实人工确认。
 
 ## 7. 规划整合说明
 
-原 `VISUAL_ANALYSIS_EXPLAINABILITY_PLAN.md`（关系页专项未完成项：质量报告 JSON / 质量治理视图 / 任务型视角 / 业务场景图谱）已整合进本计划，分别对应 A6 / B6 / B7 / C5，该独立文件已删除并移除 git 跟踪。本计划现为 BREAK 框架唯一的升级规划，统一管理内容质量、回归网、知识模型、工程债、可视化算法、标准化各维度。
+原 `VISUAL_ANALYSIS_EXPLAINABILITY_PLAN.md`（关系页专项未完成项：质量报告 JSON / 质量治理视图 / 任务型视角 / 业务场景图谱）已整合进本计划，分别对应 A6 / B6 / B7 / C5；其中 B6 已调整为审计链路能力，不再作为公开关系页视图。该独立文件已删除并移除 git 跟踪。本计划现为 BREAK 框架唯一的升级规划，统一管理内容质量、回归网、知识模型、工程债、可视化算法、标准化各维度。
 
 本计划完成后，BREAK 从"先进且工程成熟"走向"完善"，评估分目标 4.3 → 4.7+。

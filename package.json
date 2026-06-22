@@ -1,6 +1,6 @@
 {
   "name": "break",
-  "version": "2.21.16",
+  "version": "2.21.17",
   "private": true,
   "type": "module",
   "engines": {
@@ -36,7 +36,7 @@
     "audit:references-health": "node scripts/validate/references-health.mjs",
     "audit:content-quality": "node scripts/validate/content-quality.mjs",
     "audit:case-source-quality": "node scripts/validate/case-source-quality.mjs",
-    "audit:quality-report": "npm run export:data",
+    "audit:quality-report": "node scripts/validate/quality-report.mjs",
     "audit:metrics": "node scripts/validate/metrics.mjs",
     "audit:bundle": "node scripts/validate/bundle-budget.mjs",
     "audit:lighthouse-sankey": "node scripts/validate/lighthouse-sankey-trace.mjs",

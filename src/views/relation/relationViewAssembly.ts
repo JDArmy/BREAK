@@ -7,12 +7,12 @@ import { setupRelationViewEffects } from "@/views/relation/relationViewEffects";
 import { createRelationViewState } from "@/views/relation/relationViewState";
 import { useRelationGraphData } from "@/views/relation/useRelationGraphData";
 import { useRelationNodeActions } from "@/views/relation/useRelationNodeActions";
-import type {
-  createRelationTypeMapping,
-  GraphLink,
-  graphColors,
-  relationLineColors,
-  SankeyNode,
+import {
+  type createRelationTypeMapping,
+  type GraphLink,
+  type graphColors,
+  type relationLineColors,
+  type SankeyNode,
 } from "@/views/relation/relationTypes";
 import type { RouteLocationNormalizedLoaded, Router } from "vue-router";
 import type { DropdownInstance } from "element-plus";

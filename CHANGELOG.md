@@ -1,10 +1,16 @@
 # Change log
 
+## 2.21.17
+
+- 保留质量治理在审计链路中执行：`audit:quality-report` 直接生成 `public/data/quality-report.json` 和 `research/search-reports/quality-report.json`
+- 移除关系页“质量治理”前端视图，避免对外页面暴露内部数据维护入口
+- 清理质量治理面板组件、前端加载逻辑和对应 i18n 文案
+
 ## 2.21.16
 
 - 新增前端可消费质量报告导出：`export:data` 同步生成 `public/data/quality-report.json`，包含弱关系、缺覆盖、业务场景异常和 i18n 异常四类稳定结构
-- 将质量报告纳入静态数据 manifest、GitHub Pages 导出校验和 npm 数据包评估产物，并补充关系页加载类型入口
-- 回写 `UPGRADE_PLAN.md` 的 A6 状态：质量报告 JSON 第一阶段已完成，后续由 B6 接入质量治理前端视图
+- 将质量报告纳入静态数据 manifest、GitHub Pages 导出校验和 npm 数据包评估产物
+- 回写 `UPGRADE_PLAN.md` 的 A6 状态：质量报告 JSON 第一阶段已完成，后续作为审计报告和内部数据治理输入
 
 ## 2.21.15
 
