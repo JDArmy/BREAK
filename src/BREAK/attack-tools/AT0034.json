@@ -4,8 +4,8 @@
     "description": "风险IP是指在网络安全领域中，被认为是不安全的IP地址。风险IP可能是恶意IP，也可能是被恶意利用的IP，也可能是被误判的IP。风险IP的风险等级分为高、中、低三个等级，其中高风险IP是指被认为是恶意IP的IP地址，中风险IP是指被认为是被恶意利用的IP地址，低风险IP是指被误判的IP地址。",
     "references": [
       {
-        "title": "IP风险画像技术原理介绍",
-        "link": "https://www.163.com/dy/article/HT4OLRVB0553MFFW.html"
+        "title": "Microsoft Defender TI 信誉评分",
+        "link": "https://learn.microsoft.com/en-us/defender/threat-intelligence/reputation-scoring"
       }
     ],
     "avoidances": [

@@ -13,7 +13,7 @@
     "summary": "In December 2022, an infinite minting vulnerability was discovered in the aBNBc token contract of the DeFi protocol Ankr. The security team PeckShield noted that the attacker exploited a specific function flaw to mint unlimited aBNBc tokens, causing the token price to nearly zero, and the attacker profited approximately $15 million through arbitrage.",
     "references": [
       {
-        "title": "Ankr Exploit Analysis"
+        "title": "Ankr: The aBNBc Token Report"
       }
     ]
   }
