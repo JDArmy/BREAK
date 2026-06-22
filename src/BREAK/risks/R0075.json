@@ -33,6 +33,38 @@
       "CII合规",
       "关基安全保护",
       "关基认定"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0078",
+        "relation": "co-occurrence",
+        "note": "关保合规风险与数据泄露在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0076",
+        "relation": "co-occurrence",
+        "note": "关保合规风险与等保合规风险共享规避手段“漏洞修复”。"
+      },
+      {
+        "key": "R0078-001",
+        "relation": "co-occurrence",
+        "note": "关保合规风险与合作方数据泄露共享规避手段“数据泄露保护”。"
+      },
+      {
+        "key": "R0079",
+        "relation": "co-occurrence",
+        "note": "关保合规风险与国密合规风险共享规避手段“漏洞修复”。"
+      },
+      {
+        "key": "R0081",
+        "relation": "co-occurrence",
+        "note": "关保合规风险与供应链风险共享规避手段“漏洞修复”。"
+      },
+      {
+        "key": "R0081-001",
+        "relation": "co-occurrence",
+        "note": "关保合规风险与软件供应链风险共享规避手段“漏洞修复”。"
+      }
     ]
   }
 }

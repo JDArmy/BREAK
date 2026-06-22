@@ -34,19 +34,34 @@
     ],
     "relatedRisks": [
       {
-        "key": "R0222",
-        "relation": "prerequisite",
-        "note": "影子API暴露会扩大API滥用面。"
+        "key": "R0126-001",
+        "relation": "variant",
+        "note": "API枚举攻击是API滥用风险的细分变体。"
       },
       {
-        "key": "R0223",
+        "key": "R0126-002",
         "relation": "variant",
-        "note": "对象级越权属于API滥用的典型业务逻辑变体。"
+        "note": "API速率限制绕过是API滥用风险的细分变体。"
       },
       {
-        "key": "R0224",
+        "key": "R0126-003",
         "relation": "variant",
-        "note": "批量调用资源耗尽属于API滥用的高成本接口变体。"
+        "note": "API业务逻辑滥用是API滥用风险的细分变体。"
+      },
+      {
+        "key": "R0078",
+        "relation": "co-occurrence",
+        "note": "API滥用风险与数据泄露在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0027",
+        "relation": "co-occurrence",
+        "note": "API滥用风险与爬虫风险均可由攻击工具“API自动化滥用工具”直接造成。"
+      },
+      {
+        "key": "R0029",
+        "relation": "co-occurrence",
+        "note": "API滥用风险与拒绝服务风险均可由攻击工具“API自动化滥用工具”直接造成。"
       }
     ]
   },
@@ -76,6 +91,38 @@
       "API探测",
       "路径爆破",
       "Swagger泄露"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0126",
+        "relation": "variant",
+        "note": "API滥用风险是API枚举攻击的上层风险。"
+      },
+      {
+        "key": "R0126-002",
+        "relation": "variant",
+        "note": "API枚举攻击与API速率限制绕过同属API滥用风险下的细分变体。"
+      },
+      {
+        "key": "R0126-003",
+        "relation": "variant",
+        "note": "API枚举攻击与API业务逻辑滥用同属API滥用风险下的细分变体。"
+      },
+      {
+        "key": "R0027",
+        "relation": "co-occurrence",
+        "note": "API枚举攻击与爬虫风险均可由攻击工具“API自动化滥用工具”直接造成。"
+      },
+      {
+        "key": "R0029",
+        "relation": "co-occurrence",
+        "note": "API枚举攻击与拒绝服务风险均可由攻击工具“API自动化滥用工具”直接造成。"
+      },
+      {
+        "key": "R0129",
+        "relation": "co-occurrence",
+        "note": "API枚举攻击与短信轰炸即服务共享规避手段“API安全网关”。"
+      }
     ]
   },
   "R0126-002": {
@@ -104,6 +151,38 @@
       "刷接口",
       "频控绕过",
       "限频绕过"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0126",
+        "relation": "variant",
+        "note": "API滥用风险是API速率限制绕过的上层风险。"
+      },
+      {
+        "key": "R0126-003",
+        "relation": "variant",
+        "note": "API速率限制绕过与API业务逻辑滥用同属API滥用风险下的细分变体。"
+      },
+      {
+        "key": "R0126-001",
+        "relation": "variant",
+        "note": "API速率限制绕过与API枚举攻击同属API滥用风险下的细分变体。"
+      },
+      {
+        "key": "R0027",
+        "relation": "co-occurrence",
+        "note": "API速率限制绕过与爬虫风险均可由攻击工具“API自动化滥用工具”直接造成。"
+      },
+      {
+        "key": "R0029",
+        "relation": "co-occurrence",
+        "note": "API速率限制绕过与拒绝服务风险均可由攻击工具“API自动化滥用工具”直接造成。"
+      },
+      {
+        "key": "R0129",
+        "relation": "co-occurrence",
+        "note": "API速率限制绕过与短信轰炸即服务共享规避手段“API安全网关”。"
+      }
     ]
   },
   "R0126-003": {
@@ -132,6 +211,38 @@
       "业务接口绕过",
       "敏感业务流滥用",
       "参数篡改下单"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0126",
+        "relation": "variant",
+        "note": "API滥用风险是API业务逻辑滥用的上层风险。"
+      },
+      {
+        "key": "R0126-001",
+        "relation": "variant",
+        "note": "API业务逻辑滥用与API枚举攻击同属API滥用风险下的细分变体。"
+      },
+      {
+        "key": "R0126-002",
+        "relation": "variant",
+        "note": "API业务逻辑滥用与API速率限制绕过同属API滥用风险下的细分变体。"
+      },
+      {
+        "key": "R0027",
+        "relation": "co-occurrence",
+        "note": "API业务逻辑滥用与爬虫风险均可由攻击工具“API自动化滥用工具”直接造成。"
+      },
+      {
+        "key": "R0029",
+        "relation": "co-occurrence",
+        "note": "API业务逻辑滥用与拒绝服务风险均可由攻击工具“API自动化滥用工具”直接造成。"
+      },
+      {
+        "key": "R0127",
+        "relation": "co-occurrence",
+        "note": "API业务逻辑滥用与供应链投毒风险共享规避手段“防篡改机制”。"
+      }
     ]
   }
 }

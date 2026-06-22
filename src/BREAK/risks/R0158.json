@@ -34,6 +34,38 @@
       "CPU盗用",
       "AI算力盗刷",
       "云账号盗刷"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0086",
+        "relation": "co-occurrence",
+        "note": "算力盗用风险与服务器挖矿在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0197",
+        "relation": "co-occurrence",
+        "note": "算力盗用风险与多签钱包社会工程攻击共享规避手段“特权访问管理”。"
+      },
+      {
+        "key": "R0205",
+        "relation": "co-occurrence",
+        "note": "算力盗用风险与AIoT融合攻击共享规避手段“端点检测与响应”。"
+      },
+      {
+        "key": "R0213",
+        "relation": "co-occurrence",
+        "note": "算力盗用风险与边缘计算节点攻击共享规避手段“零信任架构”。"
+      },
+      {
+        "key": "R0231",
+        "relation": "co-occurrence",
+        "note": "算力盗用风险与云IAM过度授权共享规避手段“零信任架构”。"
+      },
+      {
+        "key": "R0254",
+        "relation": "co-occurrence",
+        "note": "算力盗用风险与供应商远程访问滥用共享规避手段“零信任架构”。"
+      }
     ]
   }
 }

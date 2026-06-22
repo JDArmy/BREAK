@@ -36,6 +36,38 @@
       "私接AI",
       "敏感数据喂给AI",
       "第三方大模型滥用"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0071",
+        "relation": "co-occurrence",
+        "note": "影子AI风险与生成式AI风险在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0078",
+        "relation": "co-occurrence",
+        "note": "影子AI风险与数据泄露在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0155",
+        "relation": "co-occurrence",
+        "note": "影子AI风险与跨境数据走私风险共享规避手段“数据脱敏（脱密）”。"
+      },
+      {
+        "key": "R0157",
+        "relation": "co-occurrence",
+        "note": "影子AI风险与AI浏览器/手机黑箱风险共享规避手段“影子AI检测与治理”。"
+      },
+      {
+        "key": "R0158",
+        "relation": "co-occurrence",
+        "note": "影子AI风险与算力盗用风险共享规避手段“零信任架构”。"
+      },
+      {
+        "key": "R0213",
+        "relation": "co-occurrence",
+        "note": "影子AI风险与边缘计算节点攻击共享规避手段“零信任架构”。"
+      }
     ]
   }
 }

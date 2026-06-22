@@ -32,6 +32,38 @@
       "养号脚本",
       "降风险养号",
       "暖号"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0088",
+        "relation": "co-occurrence",
+        "note": "自动化养号与自动化登录风险在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0030-001",
+        "relation": "co-occurrence",
+        "note": "自动化养号与批量注册在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0050",
+        "relation": "co-occurrence",
+        "note": "自动化养号与风险设备识别绕过均可由攻击工具“Root/越狱工具”直接造成。"
+      },
+      {
+        "key": "R0051-002",
+        "relation": "co-occurrence",
+        "note": "自动化养号与HTTP请求分析均可由攻击工具“发包/改包工具”直接造成。"
+      },
+      {
+        "key": "R0001",
+        "relation": "co-occurrence",
+        "note": "自动化养号与流程自动化均可由攻击工具“Root/越狱工具”直接造成。"
+      },
+      {
+        "key": "R0001-001",
+        "relation": "co-occurrence",
+        "note": "自动化养号与协议级自动化均可由攻击工具“发包/改包工具”直接造成。"
+      }
     ]
   }
 }

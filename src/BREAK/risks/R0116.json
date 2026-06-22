@@ -34,6 +34,38 @@
       "AI伪造",
       "深伪",
       "合成音视频"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0116-001",
+        "relation": "variant",
+        "note": "AI换脸欺诈是AI深度伪造风险的细分变体。"
+      },
+      {
+        "key": "R0116-002",
+        "relation": "variant",
+        "note": "AI合成视频欺诈是AI深度伪造风险的细分变体。"
+      },
+      {
+        "key": "R0032",
+        "relation": "co-occurrence",
+        "note": "AI深度伪造风险与账号盗取在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0119",
+        "relation": "co-occurrence",
+        "note": "AI深度伪造风险与AI生成虚假评论均可由攻击工具“数字人生成工具”直接造成。"
+      },
+      {
+        "key": "R0120",
+        "relation": "co-occurrence",
+        "note": "AI深度伪造风险与AI语音克隆欺诈均可由攻击工具“AI深度伪造工具”直接造成。"
+      },
+      {
+        "key": "R0130",
+        "relation": "co-occurrence",
+        "note": "AI深度伪造风险与数字人直播欺诈均可由攻击工具“数字人生成工具”直接造成。"
+      }
     ]
   },
   "R0116-001": {
@@ -63,6 +95,38 @@
       "视频换脸",
       "实时换脸",
       "刷脸冒充"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0116",
+        "relation": "variant",
+        "note": "AI深度伪造风险是AI换脸欺诈的上层风险。"
+      },
+      {
+        "key": "R0116-002",
+        "relation": "variant",
+        "note": "AI换脸欺诈与AI合成视频欺诈同属AI深度伪造风险下的细分变体。"
+      },
+      {
+        "key": "R0120",
+        "relation": "co-occurrence",
+        "note": "AI换脸欺诈与AI语音克隆欺诈均可由攻击工具“AI深度伪造工具”直接造成。"
+      },
+      {
+        "key": "R0048",
+        "relation": "co-occurrence",
+        "note": "AI换脸欺诈与人脸识别绕过均可由攻击工具“AI深度伪造工具”直接造成。"
+      },
+      {
+        "key": "R0084",
+        "relation": "co-occurrence",
+        "note": "AI换脸欺诈与钓鱼攻击均可由攻击工具“AI深度伪造工具”直接造成。"
+      },
+      {
+        "key": "R0092",
+        "relation": "co-occurrence",
+        "note": "AI换脸欺诈与现实身份盗用均可由攻击工具“AI深度伪造工具”直接造成。"
+      }
     ]
   },
   "R0116-002": {
@@ -93,6 +157,38 @@
       "伪造视频",
       "数字人伪造视频",
       "名人代言伪造"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0116",
+        "relation": "variant",
+        "note": "AI深度伪造风险是AI合成视频欺诈的上层风险。"
+      },
+      {
+        "key": "R0116-001",
+        "relation": "variant",
+        "note": "AI合成视频欺诈与AI换脸欺诈同属AI深度伪造风险下的细分变体。"
+      },
+      {
+        "key": "R0006",
+        "relation": "co-occurrence",
+        "note": "AI合成视频欺诈与虚假宣传在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0120",
+        "relation": "co-occurrence",
+        "note": "AI合成视频欺诈与AI语音克隆欺诈均可由攻击工具“AI深度伪造工具”直接造成。"
+      },
+      {
+        "key": "R0048",
+        "relation": "co-occurrence",
+        "note": "AI合成视频欺诈与人脸识别绕过均可由攻击工具“AI深度伪造工具”直接造成。"
+      },
+      {
+        "key": "R0084",
+        "relation": "co-occurrence",
+        "note": "AI合成视频欺诈与钓鱼攻击均可由攻击工具“AI深度伪造工具”直接造成。"
+      }
     ]
   }
 }

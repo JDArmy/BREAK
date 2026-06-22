@@ -41,6 +41,38 @@
       "Scalping",
       "自动化转卖",
       "机器倒卖"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0070-001",
+        "relation": "variant",
+        "note": "低买高卖是自动化倒卖的细分变体。"
+      },
+      {
+        "key": "R0070-002",
+        "relation": "variant",
+        "note": "无货源店铺是自动化倒卖的细分变体。"
+      },
+      {
+        "key": "R0070-003",
+        "relation": "variant",
+        "note": "店群是自动化倒卖的细分变体。"
+      },
+      {
+        "key": "R0083",
+        "relation": "co-occurrence",
+        "note": "自动化倒卖与员工安全意识不足共享规避手段“单设备登录”。"
+      },
+      {
+        "key": "R0083-001",
+        "relation": "co-occurrence",
+        "note": "自动化倒卖与员工账号被盗共享规避手段“单设备登录”。"
+      },
+      {
+        "key": "R0088",
+        "relation": "co-occurrence",
+        "note": "自动化倒卖与自动化登录风险共享规避手段“功能随机化”。"
+      }
     ]
   },
   "R0070-001": {
@@ -83,6 +115,38 @@
       "加价转卖",
       "高价转卖",
       "倒卖赚差价"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0070",
+        "relation": "variant",
+        "note": "自动化倒卖是低买高卖的上层风险。"
+      },
+      {
+        "key": "R0070-002",
+        "relation": "variant",
+        "note": "低买高卖与无货源店铺同属自动化倒卖下的细分变体。"
+      },
+      {
+        "key": "R0070-003",
+        "relation": "variant",
+        "note": "低买高卖与店群同属自动化倒卖下的细分变体。"
+      },
+      {
+        "key": "R0083",
+        "relation": "co-occurrence",
+        "note": "低买高卖与员工安全意识不足共享规避手段“单设备登录”。"
+      },
+      {
+        "key": "R0083-001",
+        "relation": "co-occurrence",
+        "note": "低买高卖与员工账号被盗共享规避手段“单设备登录”。"
+      },
+      {
+        "key": "R0088",
+        "relation": "co-occurrence",
+        "note": "低买高卖与自动化登录风险共享规避手段“功能随机化”。"
+      }
     ]
   },
   "R0070-002": {
@@ -126,6 +190,38 @@
       "dropshipping",
       "跨平台代发",
       "搬运店铺"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0070",
+        "relation": "variant",
+        "note": "自动化倒卖是无货源店铺的上层风险。"
+      },
+      {
+        "key": "R0070-003",
+        "relation": "variant",
+        "note": "无货源店铺与店群同属自动化倒卖下的细分变体。"
+      },
+      {
+        "key": "R0070-001",
+        "relation": "variant",
+        "note": "无货源店铺与低买高卖同属自动化倒卖下的细分变体。"
+      },
+      {
+        "key": "R0083",
+        "relation": "co-occurrence",
+        "note": "无货源店铺与员工安全意识不足共享规避手段“单设备登录”。"
+      },
+      {
+        "key": "R0083-001",
+        "relation": "co-occurrence",
+        "note": "无货源店铺与员工账号被盗共享规避手段“单设备登录”。"
+      },
+      {
+        "key": "R0088",
+        "relation": "co-occurrence",
+        "note": "无货源店铺与自动化登录风险共享规避手段“功能随机化”。"
+      }
     ]
   },
   "R0070-003": {
@@ -170,6 +266,38 @@
       "店铺矩阵",
       "批量铺货",
       "多店铺货"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0070",
+        "relation": "variant",
+        "note": "自动化倒卖是店群的上层风险。"
+      },
+      {
+        "key": "R0070-001",
+        "relation": "variant",
+        "note": "店群与低买高卖同属自动化倒卖下的细分变体。"
+      },
+      {
+        "key": "R0070-002",
+        "relation": "variant",
+        "note": "店群与无货源店铺同属自动化倒卖下的细分变体。"
+      },
+      {
+        "key": "R0083",
+        "relation": "co-occurrence",
+        "note": "店群与员工安全意识不足共享规避手段“单设备登录”。"
+      },
+      {
+        "key": "R0083-001",
+        "relation": "co-occurrence",
+        "note": "店群与员工账号被盗共享规避手段“单设备登录”。"
+      },
+      {
+        "key": "R0088",
+        "relation": "co-occurrence",
+        "note": "店群与自动化登录风险共享规避手段“功能随机化”。"
+      }
     ]
   }
 }

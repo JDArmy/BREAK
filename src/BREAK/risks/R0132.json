@@ -32,6 +32,38 @@
       "换卡攻击",
       "手机号劫持",
       "SIM换卡诈骗"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0078",
+        "relation": "co-occurrence",
+        "note": "SIM卡交换攻击与数据泄露在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0032",
+        "relation": "co-occurrence",
+        "note": "SIM卡交换攻击与账号盗取均可由攻击工具“SIM卡交换工具包”直接造成。"
+      },
+      {
+        "key": "R0036",
+        "relation": "co-occurrence",
+        "note": "SIM卡交换攻击与多因素(MFA)绕过均可由攻击工具“SIM卡交换工具包”直接造成。"
+      },
+      {
+        "key": "R0044",
+        "relation": "co-occurrence",
+        "note": "SIM卡交换攻击与转账欺诈均可由攻击工具“SIM卡交换工具包”直接造成。"
+      },
+      {
+        "key": "R0045",
+        "relation": "co-occurrence",
+        "note": "SIM卡交换攻击与积分盗刷均可由攻击工具“SIM卡交换工具包”直接造成。"
+      },
+      {
+        "key": "R0092",
+        "relation": "co-occurrence",
+        "note": "SIM卡交换攻击与现实身份盗用均可由攻击工具“SIM卡交换工具包”直接造成。"
+      }
     ]
   }
 }

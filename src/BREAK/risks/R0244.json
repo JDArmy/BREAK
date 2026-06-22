@@ -24,6 +24,38 @@
       "向量库权限",
       "敏感文档召回"
     ],
-    "updated": "2026-06-22"
+    "updated": "2026-06-22",
+    "relatedRisks": [
+      {
+        "key": "R0245",
+        "relation": "co-occurrence",
+        "note": "RAG越权召回与模型输出泄露敏感信息均可由攻击工具“AI数据投毒与提示注入工具”直接造成。"
+      },
+      {
+        "key": "R0243",
+        "relation": "co-occurrence",
+        "note": "RAG越权召回与训练数据投毒风险均可由攻击工具“AI数据投毒与提示注入工具”直接造成。"
+      },
+      {
+        "key": "R0242",
+        "relation": "co-occurrence",
+        "note": "RAG越权召回与训练数据版权与授权风险均可由威胁行为者“AI数据投毒者”直接造成。"
+      },
+      {
+        "key": "R0255",
+        "relation": "co-occurrence",
+        "note": "RAG越权召回与客户成功与客服工单数据泄露共享规避手段“企业协作数据防泄漏”。"
+      },
+      {
+        "key": "R0232",
+        "relation": "co-occurrence",
+        "note": "RAG越权召回与SaaS第三方应用授权滥用共享规避手段“企业协作数据防泄漏”。"
+      },
+      {
+        "key": "R0233",
+        "relation": "co-occurrence",
+        "note": "RAG越权召回与协作文档外链泄露共享规避手段“企业协作数据防泄漏”。"
+      }
+    ]
   }
 }

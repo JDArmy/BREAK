@@ -26,6 +26,38 @@
       "隐私外泄",
       "敏感信息泄露",
       "用户数据泄露"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0090",
+        "relation": "co-occurrence",
+        "note": "用户隐私泄露与批量扫号在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0163",
+        "relation": "co-occurrence",
+        "note": "用户隐私泄露与智能设备劫持在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0078",
+        "relation": "co-occurrence",
+        "note": "用户隐私泄露与数据泄露在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0092",
+        "relation": "co-occurrence",
+        "note": "用户隐私泄露与现实身份盗用均可由攻击工具“拦截卡”直接造成。"
+      },
+      {
+        "key": "R0098",
+        "relation": "co-occurrence",
+        "note": "用户隐私泄露与虚假身份认证均可由攻击工具“拦截卡”直接造成。"
+      },
+      {
+        "key": "R0005-001",
+        "relation": "co-occurrence",
+        "note": "用户隐私泄露与批量小号作弊均可由攻击工具“拦截卡”直接造成。"
+      }
     ]
   }
 }

@@ -28,6 +28,38 @@
       "制品仓库污染",
       "软件供应链投毒"
     ],
-    "updated": "2026-06-22"
+    "updated": "2026-06-22",
+    "relatedRisks": [
+      {
+        "key": "R0078",
+        "relation": "co-occurrence",
+        "note": "构建产物投毒风险与数据泄露在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0228",
+        "relation": "co-occurrence",
+        "note": "构建产物投毒风险与依赖混淆与恶意包投毒均可由攻击工具“CI/CD凭证扫描与投毒工具”直接造成。"
+      },
+      {
+        "key": "R0226",
+        "relation": "co-occurrence",
+        "note": "构建产物投毒风险与CI/CD流水线凭证泄露均可由攻击工具“CI/CD凭证扫描与投毒工具”直接造成。"
+      },
+      {
+        "key": "R0229",
+        "relation": "co-occurrence",
+        "note": "构建产物投毒风险与SBOM缺失导致漏洞影响不可见均可由威胁行为者“供应链投毒者”直接造成。"
+      },
+      {
+        "key": "R0254",
+        "relation": "co-occurrence",
+        "note": "构建产物投毒风险与供应商远程访问滥用同属“供应链安全”风险场景。"
+      },
+      {
+        "key": "R0081",
+        "relation": "co-occurrence",
+        "note": "构建产物投毒风险与供应链风险同属“供应链安全”风险场景。"
+      }
+    ]
   }
 }

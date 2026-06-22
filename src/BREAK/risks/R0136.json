@@ -31,6 +31,38 @@
       "Synthetic Identity Fraud",
       "身份拼凑",
       "假身份养号"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0078",
+        "relation": "co-occurrence",
+        "note": "合成身份欺诈与数据泄露在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0139",
+        "relation": "co-occurrence",
+        "note": "合成身份欺诈与友好欺诈均可由威胁行为者“虚假理赔团伙”直接造成。"
+      },
+      {
+        "key": "R0028",
+        "relation": "co-occurrence",
+        "note": "合成身份欺诈与数据渗出风险均可由威胁行为者“数据掮客”直接造成。"
+      },
+      {
+        "key": "R0054",
+        "relation": "co-occurrence",
+        "note": "合成身份欺诈与恶意退货均可由威胁行为者“虚假理赔团伙”直接造成。"
+      },
+      {
+        "key": "R0056",
+        "relation": "co-occurrence",
+        "note": "合成身份欺诈与虚假评价均可由威胁行为者“虚假理赔团伙”直接造成。"
+      },
+      {
+        "key": "R0059",
+        "relation": "co-occurrence",
+        "note": "合成身份欺诈与商业秘密泄露均可由威胁行为者“数据掮客”直接造成。"
+      }
     ]
   }
 }

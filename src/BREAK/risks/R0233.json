@@ -24,6 +24,38 @@
       "知识库外链",
       "IM文件泄露"
     ],
-    "updated": "2026-06-22"
+    "updated": "2026-06-22",
+    "relatedRisks": [
+      {
+        "key": "R0232",
+        "relation": "co-occurrence",
+        "note": "协作文档外链泄露与SaaS第三方应用授权滥用均可由攻击工具“SaaS OAuth滥用工具”直接造成。"
+      },
+      {
+        "key": "R0255",
+        "relation": "co-occurrence",
+        "note": "协作文档外链泄露与客户成功与客服工单数据泄露均可由威胁行为者“SaaS数据窃取者”直接造成。"
+      },
+      {
+        "key": "R0236",
+        "relation": "co-occurrence",
+        "note": "协作文档外链泄露与支付令牌化配置错误共享规避手段“数据泄露保护”。"
+      },
+      {
+        "key": "R0244",
+        "relation": "co-occurrence",
+        "note": "协作文档外链泄露与RAG越权召回共享规避手段“企业协作数据防泄漏”。"
+      },
+      {
+        "key": "R0245",
+        "relation": "co-occurrence",
+        "note": "协作文档外链泄露与模型输出泄露敏感信息共享规避手段“数据脱敏（脱密）”。"
+      },
+      {
+        "key": "R0020",
+        "relation": "co-occurrence",
+        "note": "协作文档外链泄露与内容合规风险共享规避手段“数据脱敏（脱密）”。"
+      }
+    ]
   }
 }

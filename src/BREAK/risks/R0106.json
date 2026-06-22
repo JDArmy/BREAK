@@ -28,6 +28,38 @@
       "代肝",
       "刷段位",
       "代练工作室"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0108",
+        "relation": "co-occurrence",
+        "note": "游戏代练与游戏打金均可由威胁行为者“游戏代练员”直接造成。"
+      },
+      {
+        "key": "R0114",
+        "relation": "co-occurrence",
+        "note": "游戏代练与游戏仓库号均可由威胁行为者“游戏代练员”直接造成。"
+      },
+      {
+        "key": "R0001",
+        "relation": "co-occurrence",
+        "note": "游戏代练与流程自动化均可由威胁行为者“游戏代练员”直接造成。"
+      },
+      {
+        "key": "R0111-001",
+        "relation": "co-occurrence",
+        "note": "游戏代练与员工账号共享共享规避手段“设备标记”。"
+      },
+      {
+        "key": "R0002",
+        "relation": "co-occurrence",
+        "note": "游戏代练与优惠劵枚举共享规避手段“设备标记”。"
+      },
+      {
+        "key": "R0003",
+        "relation": "co-occurrence",
+        "note": "游戏代练与恶意抢购共享规避手段“设备标记”。"
+      }
     ]
   }
 }

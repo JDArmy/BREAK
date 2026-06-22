@@ -28,6 +28,38 @@
       "吃拿卡要",
       "商业贿赂",
       "监守自盗"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0072-001",
+        "relation": "variant",
+        "note": "内外勾结(内鬼)是员工贪腐的细分变体。"
+      },
+      {
+        "key": "R0082",
+        "relation": "co-occurrence",
+        "note": "员工贪腐与员工恶意破坏共享规避手段“员工处罚”。"
+      },
+      {
+        "key": "R0111",
+        "relation": "co-occurrence",
+        "note": "员工贪腐与员工违规操作共享规避手段“员工处罚”。"
+      },
+      {
+        "key": "R0111-001",
+        "relation": "co-occurrence",
+        "note": "员工贪腐与员工账号共享共享规避手段“员工处罚”。"
+      },
+      {
+        "key": "R0111-002",
+        "relation": "co-occurrence",
+        "note": "员工贪腐与员工业务级后门共享规避手段“员工处罚”。"
+      },
+      {
+        "key": "R0112-001",
+        "relation": "co-occurrence",
+        "note": "员工贪腐与自带设备办公风险共享规避手段“员工处罚”。"
+      }
     ]
   },
   "R0072-001": {
@@ -58,6 +90,38 @@
       "里应外合",
       "监守自盗",
       "串通作案"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0072",
+        "relation": "variant",
+        "note": "员工贪腐是内外勾结(内鬼)的上层风险。"
+      },
+      {
+        "key": "R0082",
+        "relation": "co-occurrence",
+        "note": "内外勾结(内鬼)与员工恶意破坏共享规避手段“员工处罚”。"
+      },
+      {
+        "key": "R0111",
+        "relation": "co-occurrence",
+        "note": "内外勾结(内鬼)与员工违规操作共享规避手段“员工处罚”。"
+      },
+      {
+        "key": "R0111-001",
+        "relation": "co-occurrence",
+        "note": "内外勾结(内鬼)与员工账号共享共享规避手段“员工处罚”。"
+      },
+      {
+        "key": "R0111-002",
+        "relation": "co-occurrence",
+        "note": "内外勾结(内鬼)与员工业务级后门共享规避手段“员工处罚”。"
+      },
+      {
+        "key": "R0112-001",
+        "relation": "co-occurrence",
+        "note": "内外勾结(内鬼)与自带设备办公风险共享规避手段“员工处罚”。"
+      }
     ]
   }
 }

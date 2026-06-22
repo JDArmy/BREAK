@@ -23,6 +23,38 @@
       "对象归属校验",
       "水平越权"
     ],
-    "updated": "2026-06-22"
+    "updated": "2026-06-22",
+    "relatedRisks": [
+      {
+        "key": "R0224",
+        "relation": "co-occurrence",
+        "note": "API对象级越权风险与API批量调用资源耗尽均可由攻击工具“API枚举与越权测试工具”直接造成。"
+      },
+      {
+        "key": "R0247",
+        "relation": "co-occurrence",
+        "note": "API对象级越权风险与会话令牌重放均可由攻击工具“API枚举与越权测试工具”直接造成。"
+      },
+      {
+        "key": "R0222",
+        "relation": "co-occurrence",
+        "note": "API对象级越权风险与影子API暴露风险均可由攻击工具“API枚举与越权测试工具”直接造成。"
+      },
+      {
+        "key": "R0225",
+        "relation": "co-occurrence",
+        "note": "API对象级越权风险与Webhook伪造与事件重放均可由威胁行为者“API滥用者”直接造成。"
+      },
+      {
+        "key": "R0236",
+        "relation": "co-occurrence",
+        "note": "API对象级越权风险与支付令牌化配置错误共享规避手段“API强授权与对象级访问控制”。"
+      },
+      {
+        "key": "R0252",
+        "relation": "co-occurrence",
+        "note": "API对象级越权风险与车载数据接口滥用共享规避手段“API强授权与对象级访问控制”。"
+      }
+    ]
   }
 }

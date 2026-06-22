@@ -24,6 +24,38 @@
       "提案恶意",
       "闪电贷投票",
       "governance attack"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0168",
+        "relation": "co-occurrence",
+        "note": "DAO治理攻击与Rug Pull（项目方跑路）均可由攻击工具“DeFi攻击脚本”直接造成。"
+      },
+      {
+        "key": "R0169",
+        "relation": "co-occurrence",
+        "note": "DAO治理攻击与预言机操纵均可由攻击工具“DeFi攻击脚本”直接造成。"
+      },
+      {
+        "key": "R0170",
+        "relation": "co-occurrence",
+        "note": "DAO治理攻击与MEV攻击（矿工可提取价值）均可由攻击工具“DeFi攻击脚本”直接造成。"
+      },
+      {
+        "key": "R0173",
+        "relation": "co-occurrence",
+        "note": "DAO治理攻击与Gas费操纵均可由攻击工具“DeFi攻击脚本”直接造成。"
+      },
+      {
+        "key": "R0160",
+        "relation": "co-occurrence",
+        "note": "DAO治理攻击与闪电贷攻击均可由攻击工具“DeFi攻击脚本”直接造成。"
+      },
+      {
+        "key": "R0175",
+        "relation": "co-occurrence",
+        "note": "DAO治理攻击与区块链重放攻击均可由威胁行为者“DeFi协议攻击者”直接造成。"
+      }
     ]
   }
 }

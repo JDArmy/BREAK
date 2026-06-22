@@ -29,6 +29,38 @@
       "算法歧视",
       "算法透明性",
       "可解释性不足"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0133",
+        "relation": "co-occurrence",
+        "note": "算法合规风险与隐私计算滥用风险共享规避手段“算法审计机制”。"
+      },
+      {
+        "key": "R0134",
+        "relation": "co-occurrence",
+        "note": "算法合规风险与大数据杀熟风险共享规避手段“算法审计机制”。"
+      },
+      {
+        "key": "R0157",
+        "relation": "co-occurrence",
+        "note": "算法合规风险与AI浏览器/手机黑箱风险共享规避手段“算法审计机制”。"
+      },
+      {
+        "key": "R0243",
+        "relation": "co-occurrence",
+        "note": "算法合规风险与训练数据投毒风险共享规避手段“算法审计机制”。"
+      },
+      {
+        "key": "R0124",
+        "relation": "co-occurrence",
+        "note": "算法合规风险与未成年人保护合规风险同属“算法、定价与平台治理”风险场景。"
+      },
+      {
+        "key": "R0125",
+        "relation": "co-occurrence",
+        "note": "算法合规风险与跨境电商合规风险同属“合规与治理风险”风险场景。"
+      }
     ]
   }
 }

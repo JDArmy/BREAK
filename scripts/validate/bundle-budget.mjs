@@ -11,11 +11,21 @@ const checkOnly = process.argv.includes('--check-only');
 
 const budgets = {
   maxJsChunkBytes: 500 * 1024,
+  maxDataChunkBytes: 900 * 1024,
   echartsBytes: 500 * 1024,
   zrenderBytes: 220 * 1024,
   elementPlusBytes: 420 * 1024,
   entryBytes: 180 * 1024,
 };
+
+function isDataChunk(asset) {
+  return (
+    asset.type === 'js' &&
+    (asset.file.startsWith('BREAK-') ||
+      asset.file.startsWith('i18n-en-') ||
+      asset.file.startsWith('useCases-'))
+  );
+}
 
 function formatKb(bytes) {
   return Number((bytes / 1024).toFixed(2));
@@ -59,20 +69,33 @@ function addIssue(issues, type, message, asset, budgetBytes) {
 function buildReport() {
   const assets = listAssets();
   const jsAssets = assets.filter((asset) => asset.type === 'js');
+  const appJsAssets = jsAssets.filter((asset) => !isDataChunk(asset));
+  const dataJsAssets = jsAssets.filter(isDataChunk);
   const largestJs = jsAssets[0];
+  const largestAppJs = appJsAssets[0];
+  const largestDataJs = dataJsAssets[0];
   const echarts = findAsset(assets, 'echarts-');
   const zrender = findAsset(assets, 'zrender-');
   const elementPlus = findAsset(assets, 'element-plus-');
   const entry = findAsset(assets, 'index-');
   const issues = [];
 
-  if (largestJs && largestJs.bytes > budgets.maxJsChunkBytes) {
+  if (largestAppJs && largestAppJs.bytes > budgets.maxJsChunkBytes) {
     addIssue(
       issues,
       'max_js_chunk_exceeded',
-      `最大 JS chunk 超过 ${formatKb(budgets.maxJsChunkBytes)} kB`,
-      largestJs,
+      `最大应用 JS chunk 超过 ${formatKb(budgets.maxJsChunkBytes)} kB`,
+      largestAppJs,
       budgets.maxJsChunkBytes,
+    );
+  }
+  if (largestDataJs && largestDataJs.bytes > budgets.maxDataChunkBytes) {
+    addIssue(
+      issues,
+      'max_data_chunk_exceeded',
+      `最大数据 JS chunk 超过 ${formatKb(budgets.maxDataChunkBytes)} kB`,
+      largestDataJs,
+      budgets.maxDataChunkBytes,
     );
   }
   if (echarts && echarts.bytes > budgets.echartsBytes) {
@@ -95,6 +118,8 @@ function buildReport() {
       assetCount: assets.length,
       jsCount: jsAssets.length,
       largestJs,
+      largestAppJs,
+      largestDataJs,
       echarts,
       zrender,
       elementPlus,
@@ -150,6 +175,8 @@ if (!checkOnly) {
 console.log('\n=== BREAK Bundle 预算报告 ===\n');
 console.log(`assets=${report.summary.assetCount}, js=${report.summary.jsCount}`);
 console.log(`largestJs=${report.summary.largestJs?.file || 'n/a'} ${report.summary.largestJs?.kb || 0}kB`);
+console.log(`largestAppJs=${report.summary.largestAppJs?.file || 'n/a'} ${report.summary.largestAppJs?.kb || 0}kB`);
+console.log(`largestDataJs=${report.summary.largestDataJs?.file || 'n/a'} ${report.summary.largestDataJs?.kb || 0}kB`);
 console.log(`issues=${report.issues.length}`);
 if (checkOnly) {
   console.log('\ncheckOnly=true，未刷新报告文件');

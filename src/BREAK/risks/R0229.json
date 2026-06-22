@@ -23,6 +23,38 @@
       "供应链可见性",
       "依赖资产盘点"
     ],
-    "updated": "2026-06-22"
+    "updated": "2026-06-22",
+    "relatedRisks": [
+      {
+        "key": "R0226",
+        "relation": "co-occurrence",
+        "note": "SBOM缺失导致漏洞影响不可见与CI/CD流水线凭证泄露均可由威胁行为者“供应链投毒者”直接造成。"
+      },
+      {
+        "key": "R0227",
+        "relation": "co-occurrence",
+        "note": "SBOM缺失导致漏洞影响不可见与构建产物投毒风险均可由威胁行为者“供应链投毒者”直接造成。"
+      },
+      {
+        "key": "R0228",
+        "relation": "co-occurrence",
+        "note": "SBOM缺失导致漏洞影响不可见与依赖混淆与恶意包投毒均可由威胁行为者“供应链投毒者”直接造成。"
+      },
+      {
+        "key": "R0071-005",
+        "relation": "co-occurrence",
+        "note": "SBOM缺失导致漏洞影响不可见与AI模型投毒风险共享规避手段“供应链安全审计”。"
+      },
+      {
+        "key": "R0081",
+        "relation": "co-occurrence",
+        "note": "SBOM缺失导致漏洞影响不可见与供应链风险共享规避手段“供应链安全审计”。"
+      },
+      {
+        "key": "R0081-005",
+        "relation": "co-occurrence",
+        "note": "SBOM缺失导致漏洞影响不可见与开源组件投毒风险共享规避手段“供应链安全审计”。"
+      }
+    ]
   }
 }

@@ -27,6 +27,38 @@
       "小号观战",
       "透视报点",
       "观战报点"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0012",
+        "relation": "co-occurrence",
+        "note": "观战透视与外挂在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0104",
+        "relation": "co-occurrence",
+        "note": "观战透视与护航作弊均可由攻击工具“游戏外挂”直接造成。"
+      },
+      {
+        "key": "R0108",
+        "relation": "co-occurrence",
+        "note": "观战透视与游戏打金均可由攻击工具“游戏外挂”直接造成。"
+      },
+      {
+        "key": "R0001-002",
+        "relation": "co-occurrence",
+        "note": "观战透视与自动化模拟器均可由攻击工具“游戏外挂”直接造成。"
+      },
+      {
+        "key": "R0012-002",
+        "relation": "co-occurrence",
+        "note": "观战透视与游戏外挂均可由攻击工具“游戏外挂”直接造成。"
+      },
+      {
+        "key": "R0100",
+        "relation": "co-occurrence",
+        "note": "观战透视与挂机均可由攻击工具“游戏外挂”直接造成。"
+      }
     ]
   }
 }

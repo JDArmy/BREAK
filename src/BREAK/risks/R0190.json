@@ -27,6 +27,38 @@
       "植入式设备",
       "健康隐私",
       "medical device security"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0210",
+        "relation": "co-occurrence",
+        "note": "医疗物联网(IoMT)安全风险与工业协议漏洞利用均可由攻击工具“工业与车联网协议利用工具”直接造成。"
+      },
+      {
+        "key": "R0178",
+        "relation": "co-occurrence",
+        "note": "医疗物联网(IoMT)安全风险与IoT侧信道攻击均可由攻击工具“工业与车联网协议利用工具”直接造成。"
+      },
+      {
+        "key": "R0179",
+        "relation": "co-occurrence",
+        "note": "医疗物联网(IoMT)安全风险与工业物联网(IIoT)安全风险均可由攻击工具“工业与车联网协议利用工具”直接造成。"
+      },
+      {
+        "key": "R0180",
+        "relation": "co-occurrence",
+        "note": "医疗物联网(IoMT)安全风险与车联网(V2X)安全风险均可由攻击工具“工业与车联网协议利用工具”直接造成。"
+      },
+      {
+        "key": "R0189",
+        "relation": "co-occurrence",
+        "note": "医疗物联网(IoMT)安全风险与传感器欺骗攻击均可由攻击工具“工业与车联网协议利用工具”直接造成。"
+      },
+      {
+        "key": "R0191",
+        "relation": "co-occurrence",
+        "note": "医疗物联网(IoMT)安全风险与AR/VR设备安全风险共享规避手段“IoT设备网络隔离与访问控制”。"
+      }
     ]
   }
 }

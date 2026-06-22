@@ -30,6 +30,38 @@
       "价格歧视",
       "老用户贵",
       "千人千价"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0157",
+        "relation": "co-occurrence",
+        "note": "大数据杀熟风险与AI浏览器/手机黑箱风险共享规避手段“算法审计机制”。"
+      },
+      {
+        "key": "R0243",
+        "relation": "co-occurrence",
+        "note": "大数据杀熟风险与训练数据投毒风险共享规避手段“算法审计机制”。"
+      },
+      {
+        "key": "R0123",
+        "relation": "co-occurrence",
+        "note": "大数据杀熟风险与算法合规风险共享规避手段“算法审计机制”。"
+      },
+      {
+        "key": "R0133",
+        "relation": "co-occurrence",
+        "note": "大数据杀熟风险与隐私计算滥用风险共享规避手段“算法审计机制”。"
+      },
+      {
+        "key": "R0135",
+        "relation": "co-occurrence",
+        "note": "大数据杀熟风险与平台垄断滥用风险同属“算法、定价与平台治理”风险场景。"
+      },
+      {
+        "key": "R0140",
+        "relation": "co-occurrence",
+        "note": "大数据杀熟风险与会员/订阅滥用同属“票务、库存与预约资源滥用”风险场景。"
+      }
     ]
   }
 }

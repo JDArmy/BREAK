@@ -25,6 +25,38 @@
       "撤资退出骗局",
       "流动性撤出",
       "exit scam"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0006",
+        "relation": "co-occurrence",
+        "note": "Rug Pull（项目方跑路）与虚假宣传在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0169",
+        "relation": "co-occurrence",
+        "note": "Rug Pull（项目方跑路）与预言机操纵均可由攻击工具“DeFi攻击脚本”直接造成。"
+      },
+      {
+        "key": "R0170",
+        "relation": "co-occurrence",
+        "note": "Rug Pull（项目方跑路）与MEV攻击（矿工可提取价值）均可由攻击工具“DeFi攻击脚本”直接造成。"
+      },
+      {
+        "key": "R0173",
+        "relation": "co-occurrence",
+        "note": "Rug Pull（项目方跑路）与Gas费操纵均可由攻击工具“DeFi攻击脚本”直接造成。"
+      },
+      {
+        "key": "R0160",
+        "relation": "co-occurrence",
+        "note": "Rug Pull（项目方跑路）与闪电贷攻击均可由攻击工具“DeFi攻击脚本”直接造成。"
+      },
+      {
+        "key": "R0167",
+        "relation": "co-occurrence",
+        "note": "Rug Pull（项目方跑路）与DAO治理攻击均可由攻击工具“DeFi攻击脚本”直接造成。"
+      }
     ]
   }
 }

@@ -28,6 +28,38 @@
       "品牌乱挂",
       "挂错类目",
       "蹭品牌"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0006",
+        "relation": "co-occurrence",
+        "note": "品类/品牌乱挂与虚假宣传在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0058",
+        "relation": "co-occurrence",
+        "note": "品类/品牌乱挂与价格欺诈共享规避手段“店铺处罚”。"
+      },
+      {
+        "key": "R0063",
+        "relation": "co-occurrence",
+        "note": "品类/品牌乱挂与重复铺货共享规避手段“店铺处罚”。"
+      },
+      {
+        "key": "R0078-001",
+        "relation": "co-occurrence",
+        "note": "品类/品牌乱挂与合作方数据泄露共享规避手段“信用等级限制”。"
+      },
+      {
+        "key": "R0115",
+        "relation": "co-occurrence",
+        "note": "品类/品牌乱挂与恶意广告投放共享规避手段“店铺处罚”。"
+      },
+      {
+        "key": "R0124",
+        "relation": "co-occurrence",
+        "note": "品类/品牌乱挂与未成年人保护合规风险共享规避手段“信用等级限制”。"
+      }
     ]
   }
 }

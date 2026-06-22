@@ -29,6 +29,38 @@
       "假物流",
       "单号作假",
       "空包裹"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0006",
+        "relation": "co-occurrence",
+        "note": "虚假发货与虚假宣传在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0026",
+        "relation": "co-occurrence",
+        "note": "虚假发货与违规违法商品共享规避手段“保证金机制”。"
+      },
+      {
+        "key": "R0033-001",
+        "relation": "co-occurrence",
+        "note": "虚假发货与失联跑路共享规避手段“保证金机制”。"
+      },
+      {
+        "key": "R0042",
+        "relation": "co-occurrence",
+        "note": "虚假发货与虚假库存共享规避手段“保证金机制”。"
+      },
+      {
+        "key": "R0052",
+        "relation": "co-occurrence",
+        "note": "虚假发货与低价高邮共享规避手段“店铺处罚”。"
+      },
+      {
+        "key": "R0053",
+        "relation": "co-occurrence",
+        "note": "虚假发货与恶意骚扰用户共享规避手段“店铺处罚”。"
+      }
     ]
   }
 }

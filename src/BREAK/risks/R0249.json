@@ -24,6 +24,38 @@
       "边缘缓存污染",
       "HTTP头污染"
     ],
-    "updated": "2026-06-22"
+    "updated": "2026-06-22",
+    "relatedRisks": [
+      {
+        "key": "R0250",
+        "relation": "co-occurrence",
+        "note": "CDN缓存投毒与边缘函数配置滥用均可由攻击工具“CDN与边缘配置攻击工具”直接造成。"
+      },
+      {
+        "key": "R0082",
+        "relation": "co-occurrence",
+        "note": "CDN缓存投毒与员工恶意破坏共享规避手段“服务器防篡改”。"
+      },
+      {
+        "key": "R0085",
+        "relation": "co-occurrence",
+        "note": "CDN缓存投毒与勒索攻击共享规避手段“服务器防篡改”。"
+      },
+      {
+        "key": "R0085-001",
+        "relation": "co-occurrence",
+        "note": "CDN缓存投毒与勒索即服务(RaaS)共享规避手段“服务器防篡改”。"
+      },
+      {
+        "key": "R0085-002",
+        "relation": "co-occurrence",
+        "note": "CDN缓存投毒与双重/三重勒索共享规避手段“服务器防篡改”。"
+      },
+      {
+        "key": "R0087",
+        "relation": "co-occurrence",
+        "note": "CDN缓存投毒与业务篡改风险共享规避手段“服务器防篡改”。"
+      }
+    ]
   }
 }

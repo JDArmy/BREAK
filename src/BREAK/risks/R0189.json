@@ -26,6 +26,38 @@
       "物理欺骗",
       "信号注入",
       "sensor spoofing"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0190",
+        "relation": "co-occurrence",
+        "note": "传感器欺骗攻击与医疗物联网(IoMT)安全风险均可由攻击工具“工业与车联网协议利用工具”直接造成。"
+      },
+      {
+        "key": "R0210",
+        "relation": "co-occurrence",
+        "note": "传感器欺骗攻击与工业协议漏洞利用均可由攻击工具“工业与车联网协议利用工具”直接造成。"
+      },
+      {
+        "key": "R0178",
+        "relation": "co-occurrence",
+        "note": "传感器欺骗攻击与IoT侧信道攻击均可由攻击工具“工业与车联网协议利用工具”直接造成。"
+      },
+      {
+        "key": "R0179",
+        "relation": "co-occurrence",
+        "note": "传感器欺骗攻击与工业物联网(IIoT)安全风险均可由攻击工具“工业与车联网协议利用工具”直接造成。"
+      },
+      {
+        "key": "R0180",
+        "relation": "co-occurrence",
+        "note": "传感器欺骗攻击与车联网(V2X)安全风险均可由攻击工具“工业与车联网协议利用工具”直接造成。"
+      },
+      {
+        "key": "R0163",
+        "relation": "co-occurrence",
+        "note": "传感器欺骗攻击与智能设备劫持均可由威胁行为者“IoT僵尸网络运营者”直接造成。"
+      }
     ]
   }
 }

@@ -27,6 +27,38 @@
       "私信引流",
       "引流广告",
       "留联系方式引流"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0053",
+        "relation": "co-occurrence",
+        "note": "恶意引流与恶意骚扰用户均可由攻击工具“猫池卡”直接造成。"
+      },
+      {
+        "key": "R0056",
+        "relation": "co-occurrence",
+        "note": "恶意引流与虚假评价均可由攻击工具“发贴机”直接造成。"
+      },
+      {
+        "key": "R0066",
+        "relation": "co-occurrence",
+        "note": "恶意引流与站内消息骚扰均可由攻击工具“AI诈骗聊天机器人”直接造成。"
+      },
+      {
+        "key": "R0084",
+        "relation": "co-occurrence",
+        "note": "恶意引流与钓鱼攻击均可由攻击工具“猫池卡”直接造成。"
+      },
+      {
+        "key": "R0095",
+        "relation": "co-occurrence",
+        "note": "恶意引流与平台诈骗风险均可由攻击工具“AI诈骗聊天机器人”直接造成。"
+      },
+      {
+        "key": "R0110",
+        "relation": "co-occurrence",
+        "note": "恶意引流与平台色情风险均可由攻击工具“猫池卡”直接造成。"
+      }
     ]
   }
 }

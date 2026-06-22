@@ -24,6 +24,38 @@
       "买好评",
       "刷单炒信",
       "虚假好评"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0071",
+        "relation": "co-occurrence",
+        "note": "虚假评价与生成式AI风险均可由攻击工具“AI黑应用”直接造成。"
+      },
+      {
+        "key": "R0084",
+        "relation": "co-occurrence",
+        "note": "虚假评价与钓鱼攻击均可由攻击工具“AI黑应用”直接造成。"
+      },
+      {
+        "key": "R0110",
+        "relation": "co-occurrence",
+        "note": "虚假评价与平台色情风险均可由攻击工具“发贴机”直接造成。"
+      },
+      {
+        "key": "R0116",
+        "relation": "co-occurrence",
+        "note": "虚假评价与AI深度伪造风险均可由攻击工具“AI黑应用”直接造成。"
+      },
+      {
+        "key": "R0001",
+        "relation": "co-occurrence",
+        "note": "虚假评价与流程自动化均可由攻击工具“刷榜工具”直接造成。"
+      },
+      {
+        "key": "R0001-002",
+        "relation": "co-occurrence",
+        "note": "虚假评价与自动化模拟器均可由攻击工具“刷榜工具”直接造成。"
+      }
     ]
   }
 }

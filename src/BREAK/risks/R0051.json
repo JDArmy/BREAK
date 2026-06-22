@@ -30,6 +30,38 @@
       "APP逆向",
       "小程序逆向",
       "逆向破解"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0051-001",
+        "relation": "variant",
+        "note": "应用被抓包是应用被逆向的细分变体。"
+      },
+      {
+        "key": "R0051-002",
+        "relation": "variant",
+        "note": "HTTP请求分析是应用被逆向的细分变体。"
+      },
+      {
+        "key": "R0001-001",
+        "relation": "co-occurrence",
+        "note": "应用被逆向与协议级自动化均可由攻击工具“调试工具”直接造成。"
+      },
+      {
+        "key": "R0080",
+        "relation": "co-occurrence",
+        "note": "应用被逆向与设备中马均可由威胁行为者“恶意软件开发者”直接造成。"
+      },
+      {
+        "key": "R0085",
+        "relation": "co-occurrence",
+        "note": "应用被逆向与勒索攻击均可由威胁行为者“恶意软件开发者”直接造成。"
+      },
+      {
+        "key": "R0149",
+        "relation": "co-occurrence",
+        "note": "应用被逆向与非人类身份与API密钥滥用风险均可由威胁行为者“恶意软件开发者”直接造成。"
+      }
     ]
   },
   "R0051-001": {
@@ -60,6 +92,38 @@
       "中间人抓包",
       "MITM抓包",
       "请求重放"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0051",
+        "relation": "variant",
+        "note": "应用被逆向是应用被抓包的上层风险。"
+      },
+      {
+        "key": "R0051-002",
+        "relation": "variant",
+        "note": "应用被抓包与HTTP请求分析同属应用被逆向下的细分变体。"
+      },
+      {
+        "key": "R0001",
+        "relation": "co-occurrence",
+        "note": "应用被抓包与流程自动化在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0001-001",
+        "relation": "co-occurrence",
+        "note": "应用被抓包与协议级自动化均可由攻击工具“抓包工具”直接造成。"
+      },
+      {
+        "key": "R0003-002",
+        "relation": "co-occurrence",
+        "note": "应用被抓包与拍卖狙击均可由攻击工具“抓包工具”直接造成。"
+      },
+      {
+        "key": "R0027",
+        "relation": "co-occurrence",
+        "note": "应用被抓包与爬虫风险均可由攻击工具“抓包工具”直接造成。"
+      }
     ]
   },
   "R0051-002": {
@@ -90,6 +154,38 @@
       "协议分析",
       "接口逆向",
       "请求重放"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0051",
+        "relation": "variant",
+        "note": "应用被逆向是HTTP请求分析的上层风险。"
+      },
+      {
+        "key": "R0051-001",
+        "relation": "variant",
+        "note": "HTTP请求分析与应用被抓包同属应用被逆向下的细分变体。"
+      },
+      {
+        "key": "R0001",
+        "relation": "co-occurrence",
+        "note": "HTTP请求分析与流程自动化均可由攻击工具“抓包工具”直接造成。"
+      },
+      {
+        "key": "R0001-001",
+        "relation": "co-occurrence",
+        "note": "HTTP请求分析与协议级自动化均可由攻击工具“抓包工具”直接造成。"
+      },
+      {
+        "key": "R0002",
+        "relation": "co-occurrence",
+        "note": "HTTP请求分析与优惠劵枚举均可由攻击工具“发包/改包工具”直接造成。"
+      },
+      {
+        "key": "R0003-001",
+        "relation": "co-occurrence",
+        "note": "HTTP请求分析与秒拍出价均可由攻击工具“发包/改包工具”直接造成。"
+      }
     ]
   }
 }

@@ -33,6 +33,38 @@
       "RSA失效",
       "ECC失效",
       "量子安全迁移"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0078",
+        "relation": "co-occurrence",
+        "note": "抗量子加密风险与数据泄露在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0182",
+        "relation": "co-occurrence",
+        "note": "抗量子加密风险与IoT数据篡改攻击共享规避手段“流量加密”。"
+      },
+      {
+        "key": "R0196",
+        "relation": "co-occurrence",
+        "note": "抗量子加密风险与量子计算威胁共享规避手段“量子安全加密迁移”。"
+      },
+      {
+        "key": "R0001",
+        "relation": "co-occurrence",
+        "note": "抗量子加密风险与流程自动化共享规避手段“流量加密”。"
+      },
+      {
+        "key": "R0001-001",
+        "relation": "co-occurrence",
+        "note": "抗量子加密风险与协议级自动化共享规避手段“流量加密”。"
+      },
+      {
+        "key": "R0016",
+        "relation": "co-occurrence",
+        "note": "抗量子加密风险与刷量刷榜共享规避手段“流量加密”。"
+      }
     ]
   }
 }

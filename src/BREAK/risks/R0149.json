@@ -31,6 +31,38 @@
       "API密钥泄露",
       "机器身份安全",
       "CI/CD令牌泄露"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0078",
+        "relation": "co-occurrence",
+        "note": "非人类身份与API密钥滥用风险与数据泄露在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0032",
+        "relation": "co-occurrence",
+        "note": "非人类身份与API密钥滥用风险与账号盗取均可由攻击工具“信息窃取器”直接造成。"
+      },
+      {
+        "key": "R0036",
+        "relation": "co-occurrence",
+        "note": "非人类身份与API密钥滥用风险与多因素(MFA)绕过均可由攻击工具“信息窃取器”直接造成。"
+      },
+      {
+        "key": "R0143",
+        "relation": "co-occurrence",
+        "note": "非人类身份与API密钥滥用风险与OAuth/SSO授权滥用均可由攻击工具“信息窃取器”直接造成。"
+      },
+      {
+        "key": "R0148",
+        "relation": "co-occurrence",
+        "note": "非人类身份与API密钥滥用风险与AI智能体工具滥用/过度自主风险均可由攻击工具“AI Agent劫持工具”直接造成。"
+      },
+      {
+        "key": "R0012",
+        "relation": "co-occurrence",
+        "note": "非人类身份与API密钥滥用风险与外挂均可由威胁行为者“恶意软件开发者”直接造成。"
+      }
     ]
   }
 }

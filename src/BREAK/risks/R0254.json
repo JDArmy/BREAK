@@ -24,6 +24,38 @@
       "远程工具滥用",
       "外包访问风险"
     ],
-    "updated": "2026-06-22"
+    "updated": "2026-06-22",
+    "relatedRisks": [
+      {
+        "key": "R0230",
+        "relation": "co-occurrence",
+        "note": "供应商远程访问滥用与云存储桶公开暴露均可由威胁行为者“云资源滥用者”直接造成。"
+      },
+      {
+        "key": "R0231",
+        "relation": "co-occurrence",
+        "note": "供应商远程访问滥用与云IAM过度授权均可由威胁行为者“云资源滥用者”直接造成。"
+      },
+      {
+        "key": "R0128",
+        "relation": "co-occurrence",
+        "note": "供应商远程访问滥用与云原生安全风险共享规避手段“零信任架构”。"
+      },
+      {
+        "key": "R0148",
+        "relation": "co-occurrence",
+        "note": "供应商远程访问滥用与AI智能体工具滥用/过度自主风险共享规避手段“零信任架构”。"
+      },
+      {
+        "key": "R0149",
+        "relation": "co-occurrence",
+        "note": "供应商远程访问滥用与非人类身份与API密钥滥用风险共享规避手段“零信任架构”。"
+      },
+      {
+        "key": "R0152",
+        "relation": "co-occurrence",
+        "note": "供应商远程访问滥用与无恶意软件攻击风险共享规避手段“零信任架构”。"
+      }
+    ]
   }
 }

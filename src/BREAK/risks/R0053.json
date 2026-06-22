@@ -26,6 +26,38 @@
       "强迫改差评",
       "恶意寄件",
       "货到付款骚扰"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0006",
+        "relation": "co-occurrence",
+        "note": "恶意骚扰用户与虚假宣传在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0066",
+        "relation": "co-occurrence",
+        "note": "恶意骚扰用户与站内消息骚扰均可由攻击工具“AI诈骗聊天机器人”直接造成。"
+      },
+      {
+        "key": "R0084",
+        "relation": "co-occurrence",
+        "note": "恶意骚扰用户与钓鱼攻击均可由攻击工具“猫池卡”直接造成。"
+      },
+      {
+        "key": "R0095",
+        "relation": "co-occurrence",
+        "note": "恶意骚扰用户与平台诈骗风险均可由攻击工具“AI诈骗聊天机器人”直接造成。"
+      },
+      {
+        "key": "R0110",
+        "relation": "co-occurrence",
+        "note": "恶意骚扰用户与平台色情风险均可由攻击工具“猫池卡”直接造成。"
+      },
+      {
+        "key": "R0024",
+        "relation": "co-occurrence",
+        "note": "恶意骚扰用户与恶意引流均可由攻击工具“猫池卡”直接造成。"
+      }
     ]
   }
 }

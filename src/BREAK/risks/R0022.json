@@ -28,6 +28,38 @@
       "商标侵权",
       "未授权转载",
       "侵权素材"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0145",
+        "relation": "co-occurrence",
+        "note": "内容侵权与内容农场风险均可由威胁行为者“盗版/侵权团伙”直接造成。"
+      },
+      {
+        "key": "R0024",
+        "relation": "co-occurrence",
+        "note": "内容侵权与恶意引流均受攻击工具“数字人生成工具”间接支持。"
+      },
+      {
+        "key": "R0071-004",
+        "relation": "co-occurrence",
+        "note": "内容侵权与AI幻觉风险均受攻击工具“数字人生成工具”间接支持。"
+      },
+      {
+        "key": "R0097",
+        "relation": "co-occurrence",
+        "note": "内容侵权与借助平台赌博均受攻击工具“数字人生成工具”间接支持。"
+      },
+      {
+        "key": "R0110",
+        "relation": "co-occurrence",
+        "note": "内容侵权与平台色情风险均受攻击工具“数字人生成工具”间接支持。"
+      },
+      {
+        "key": "R0115",
+        "relation": "co-occurrence",
+        "note": "内容侵权与恶意广告投放均受攻击工具“数字人生成工具”间接支持。"
+      }
     ]
   }
 }

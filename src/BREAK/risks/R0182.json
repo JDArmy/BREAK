@@ -27,6 +27,38 @@
       "IoT数据攻击",
       "控制指令篡改",
       "data tampering"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0142",
+        "relation": "co-occurrence",
+        "note": "IoT数据篡改攻击与中间人攻击在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0165",
+        "relation": "co-occurrence",
+        "note": "IoT数据篡改攻击与IoT僵尸网络均可由攻击工具“IoT僵尸网络与C2工具”直接造成。"
+      },
+      {
+        "key": "R0189",
+        "relation": "co-occurrence",
+        "note": "IoT数据篡改攻击与传感器欺骗攻击均可由威胁行为者“IoT僵尸网络运营者”直接造成。"
+      },
+      {
+        "key": "R0163",
+        "relation": "co-occurrence",
+        "note": "IoT数据篡改攻击与智能设备劫持均可由威胁行为者“IoT僵尸网络运营者”直接造成。"
+      },
+      {
+        "key": "R0164",
+        "relation": "co-occurrence",
+        "note": "IoT数据篡改攻击与固件篡改与后门均可由威胁行为者“IoT僵尸网络运营者”直接造成。"
+      },
+      {
+        "key": "R0166",
+        "relation": "co-occurrence",
+        "note": "IoT数据篡改攻击与IoT设备默认凭据风险均可由威胁行为者“IoT僵尸网络运营者”直接造成。"
+      }
     ]
   }
 }

@@ -23,6 +23,38 @@
       "包名抢注",
       "开源包投毒"
     ],
-    "updated": "2026-06-22"
+    "updated": "2026-06-22",
+    "relatedRisks": [
+      {
+        "key": "R0226",
+        "relation": "co-occurrence",
+        "note": "依赖混淆与恶意包投毒与CI/CD流水线凭证泄露均可由攻击工具“CI/CD凭证扫描与投毒工具”直接造成。"
+      },
+      {
+        "key": "R0227",
+        "relation": "co-occurrence",
+        "note": "依赖混淆与恶意包投毒与构建产物投毒风险均可由攻击工具“CI/CD凭证扫描与投毒工具”直接造成。"
+      },
+      {
+        "key": "R0229",
+        "relation": "co-occurrence",
+        "note": "依赖混淆与恶意包投毒与SBOM缺失导致漏洞影响不可见均可由威胁行为者“供应链投毒者”直接造成。"
+      },
+      {
+        "key": "R0254",
+        "relation": "co-occurrence",
+        "note": "依赖混淆与恶意包投毒与供应商远程访问滥用同属“供应链安全”风险场景。"
+      },
+      {
+        "key": "R0081",
+        "relation": "co-occurrence",
+        "note": "依赖混淆与恶意包投毒与供应链风险同属“供应链安全”风险场景。"
+      },
+      {
+        "key": "R0081-001",
+        "relation": "co-occurrence",
+        "note": "依赖混淆与恶意包投毒与软件供应链风险同属“供应链安全”风险场景。"
+      }
+    ]
   }
 }

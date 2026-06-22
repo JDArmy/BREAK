@@ -28,6 +28,38 @@
       "伪卡欺诈",
       "盗卡消费",
       "CVV盗刷"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0092",
+        "relation": "co-occurrence",
+        "note": "信用卡欺诈与现实身份盗用在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0096",
+        "relation": "co-occurrence",
+        "note": "信用卡欺诈与平台网贷欺诈均可由攻击工具“洗钱银行卡”直接造成。"
+      },
+      {
+        "key": "R0060",
+        "relation": "co-occurrence",
+        "note": "信用卡欺诈与洗钱风险均可由攻击工具“洗钱银行卡”直接造成。"
+      },
+      {
+        "key": "R0095",
+        "relation": "co-occurrence",
+        "note": "信用卡欺诈与平台诈骗风险均可由威胁行为者“电诈团伙”直接造成。"
+      },
+      {
+        "key": "R0115",
+        "relation": "co-occurrence",
+        "note": "信用卡欺诈与恶意广告投放均可由威胁行为者“电诈团伙”直接造成。"
+      },
+      {
+        "key": "R0131",
+        "relation": "co-occurrence",
+        "note": "信用卡欺诈与二维码钓鱼风险均可由威胁行为者“电诈团伙”直接造成。"
+      }
     ]
   }
 }

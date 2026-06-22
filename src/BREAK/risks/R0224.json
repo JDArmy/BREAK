@@ -23,6 +23,38 @@
       "额度消耗",
       "高成本接口刷量"
     ],
-    "updated": "2026-06-22"
+    "updated": "2026-06-22",
+    "relatedRisks": [
+      {
+        "key": "R0247",
+        "relation": "co-occurrence",
+        "note": "API批量调用资源耗尽与会话令牌重放均可由攻击工具“API枚举与越权测试工具”直接造成。"
+      },
+      {
+        "key": "R0222",
+        "relation": "co-occurrence",
+        "note": "API批量调用资源耗尽与影子API暴露风险均可由攻击工具“API枚举与越权测试工具”直接造成。"
+      },
+      {
+        "key": "R0223",
+        "relation": "co-occurrence",
+        "note": "API批量调用资源耗尽与API对象级越权风险均可由攻击工具“API枚举与越权测试工具”直接造成。"
+      },
+      {
+        "key": "R0225",
+        "relation": "co-occurrence",
+        "note": "API批量调用资源耗尽与Webhook伪造与事件重放均可由威胁行为者“API滥用者”直接造成。"
+      },
+      {
+        "key": "R0230",
+        "relation": "co-occurrence",
+        "note": "API批量调用资源耗尽与云存储桶公开暴露同属“API、云原生与非人类身份安全”风险场景。"
+      },
+      {
+        "key": "R0231",
+        "relation": "co-occurrence",
+        "note": "API批量调用资源耗尽与云IAM过度授权同属“API、云原生与非人类身份安全”风险场景。"
+      }
+    ]
   }
 }

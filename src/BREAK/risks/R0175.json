@@ -25,6 +25,38 @@
       "分叉攻击",
       "签名复用",
       "replay attack"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0194",
+        "relation": "co-occurrence",
+        "note": "区块链重放攻击与EIP/协议钓鱼攻击均可由攻击工具“钱包钓鱼与授权盗币工具”直接造成。"
+      },
+      {
+        "key": "R0195",
+        "relation": "co-occurrence",
+        "note": "区块链重放攻击与Telegram Bot钓鱼均可由攻击工具“钱包钓鱼与授权盗币工具”直接造成。"
+      },
+      {
+        "key": "R0197",
+        "relation": "co-occurrence",
+        "note": "区块链重放攻击与多签钱包社会工程攻击均可由攻击工具“钱包钓鱼与授权盗币工具”直接造成。"
+      },
+      {
+        "key": "R0201",
+        "relation": "co-occurrence",
+        "note": "区块链重放攻击与账户抽象钱包风险均可由攻击工具“钱包钓鱼与授权盗币工具”直接造成。"
+      },
+      {
+        "key": "R0162",
+        "relation": "co-occurrence",
+        "note": "区块链重放攻击与私钥泄露与管理风险均可由攻击工具“钱包钓鱼与授权盗币工具”直接造成。"
+      },
+      {
+        "key": "R0176",
+        "relation": "co-occurrence",
+        "note": "区块链重放攻击与时间戳依赖攻击均可由威胁行为者“DeFi协议攻击者”直接造成。"
+      }
     ]
   }
 }

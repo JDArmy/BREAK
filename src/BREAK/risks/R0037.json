@@ -37,6 +37,38 @@
       "账号托管",
       "搬家工具",
       "抢票工具"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0088",
+        "relation": "co-occurrence",
+        "note": "第三方账号聚合与自动化登录风险在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0047",
+        "relation": "co-occurrence",
+        "note": "第三方账号聚合与人机识别绕过共享规避手段“流量加密”。"
+      },
+      {
+        "key": "R0048",
+        "relation": "co-occurrence",
+        "note": "第三方账号聚合与人脸识别绕过共享规避手段“流量加密”。"
+      },
+      {
+        "key": "R0051",
+        "relation": "co-occurrence",
+        "note": "第三方账号聚合与应用被逆向共享规避手段“流量加密”。"
+      },
+      {
+        "key": "R0051-001",
+        "relation": "co-occurrence",
+        "note": "第三方账号聚合与应用被抓包共享规避手段“流量加密”。"
+      },
+      {
+        "key": "R0051-002",
+        "relation": "co-occurrence",
+        "note": "第三方账号聚合与HTTP请求分析共享规避手段“流量加密”。"
+      }
     ]
   }
 }

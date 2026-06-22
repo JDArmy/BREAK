@@ -28,6 +28,38 @@
       "CAN总线",
       "自动驾驶安全",
       "connected vehicle"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0189",
+        "relation": "co-occurrence",
+        "note": "车联网(V2X)安全风险与传感器欺骗攻击均可由攻击工具“工业与车联网协议利用工具”直接造成。"
+      },
+      {
+        "key": "R0190",
+        "relation": "co-occurrence",
+        "note": "车联网(V2X)安全风险与医疗物联网(IoMT)安全风险均可由攻击工具“工业与车联网协议利用工具”直接造成。"
+      },
+      {
+        "key": "R0210",
+        "relation": "co-occurrence",
+        "note": "车联网(V2X)安全风险与工业协议漏洞利用均可由攻击工具“工业与车联网协议利用工具”直接造成。"
+      },
+      {
+        "key": "R0178",
+        "relation": "co-occurrence",
+        "note": "车联网(V2X)安全风险与IoT侧信道攻击均可由攻击工具“工业与车联网协议利用工具”直接造成。"
+      },
+      {
+        "key": "R0179",
+        "relation": "co-occurrence",
+        "note": "车联网(V2X)安全风险与工业物联网(IIoT)安全风险均可由攻击工具“工业与车联网协议利用工具”直接造成。"
+      },
+      {
+        "key": "R0181",
+        "relation": "co-occurrence",
+        "note": "车联网(V2X)安全风险与OTA更新劫持共享规避手段“固件OTA更新签名验证”。"
+      }
     ]
   }
 }

@@ -41,6 +41,38 @@
       "机密文件外传",
       "合同盗取",
       "客户资料盗取"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0073",
+        "relation": "co-occurrence",
+        "note": "文件或文档盗窃与设备丢失在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0080",
+        "relation": "co-occurrence",
+        "note": "文件或文档盗窃与设备中马均可由攻击工具“木马病毒”直接造成。"
+      },
+      {
+        "key": "R0083-001",
+        "relation": "co-occurrence",
+        "note": "文件或文档盗窃与员工账号被盗均可由攻击工具“木马病毒”直接造成。"
+      },
+      {
+        "key": "R0109",
+        "relation": "co-occurrence",
+        "note": "文件或文档盗窃与越权/未授权访问均可由攻击工具“KON-Boot”直接造成。"
+      },
+      {
+        "key": "R0112",
+        "relation": "co-occurrence",
+        "note": "文件或文档盗窃与办公环境风险均可由攻击工具“木马病毒”直接造成。"
+      },
+      {
+        "key": "R0112-001",
+        "relation": "co-occurrence",
+        "note": "文件或文档盗窃与自带设备办公风险均可由攻击工具“木马病毒”直接造成。"
+      }
     ]
   }
 }

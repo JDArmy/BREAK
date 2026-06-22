@@ -23,6 +23,38 @@
       "吃分演员",
       "操纵对局",
       "控分"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0108",
+        "relation": "co-occurrence",
+        "note": "游戏演员行为与游戏打金同属“游戏与虚拟权益风险”风险场景。"
+      },
+      {
+        "key": "R0113",
+        "relation": "co-occurrence",
+        "note": "游戏演员行为与恶意拉人头同属“游戏与虚拟权益风险”风险场景。"
+      },
+      {
+        "key": "R0114",
+        "relation": "co-occurrence",
+        "note": "游戏演员行为与游戏仓库号同属“游戏与虚拟权益风险”风险场景。"
+      },
+      {
+        "key": "R0185",
+        "relation": "co-occurrence",
+        "note": "游戏演员行为与虚拟世界资产盗窃同属“游戏与虚拟权益风险”风险场景。"
+      },
+      {
+        "key": "R0011-001",
+        "relation": "co-occurrence",
+        "note": "游戏演员行为与游戏账号倒卖同属“游戏与虚拟权益风险”风险场景。"
+      },
+      {
+        "key": "R0012",
+        "relation": "co-occurrence",
+        "note": "游戏演员行为与外挂同属“游戏与虚拟权益风险”风险场景。"
+      }
     ]
   }
 }

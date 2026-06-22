@@ -36,17 +36,32 @@
       {
         "key": "R0117-001",
         "relation": "variant",
-        "note": "直接提示注入是提示注入的交互式变体。"
+        "note": "直接提示注入是LLM提示注入风险的细分变体。"
       },
       {
         "key": "R0117-002",
         "relation": "variant",
-        "note": "间接提示注入是经外部内容触发的变体。"
+        "note": "间接提示注入是LLM提示注入风险的细分变体。"
       },
       {
-        "key": "R0244",
+        "key": "R0078",
         "relation": "co-occurrence",
-        "note": "RAG越权召回常与间接提示注入共同出现。"
+        "note": "LLM提示注入风险与数据泄露在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0118",
+        "relation": "co-occurrence",
+        "note": "LLM提示注入风险与AI自动化攻击升级均可由攻击工具“LLM自动化攻击工具”直接造成。"
+      },
+      {
+        "key": "R0148",
+        "relation": "co-occurrence",
+        "note": "LLM提示注入风险与AI智能体工具滥用/过度自主风险均可由攻击工具“LLM自动化攻击工具”直接造成。"
+      },
+      {
+        "key": "R0084",
+        "relation": "co-occurrence",
+        "note": "LLM提示注入风险与钓鱼攻击均可由攻击工具“LLM自动化攻击工具”直接造成。"
       }
     ]
   },
@@ -75,6 +90,38 @@
       "忽略之前的指令",
       "角色扮演越狱",
       "提示词覆盖"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0117",
+        "relation": "variant",
+        "note": "LLM提示注入风险是直接提示注入的上层风险。"
+      },
+      {
+        "key": "R0117-002",
+        "relation": "variant",
+        "note": "直接提示注入与间接提示注入同属LLM提示注入风险下的细分变体。"
+      },
+      {
+        "key": "R0118",
+        "relation": "co-occurrence",
+        "note": "直接提示注入与AI自动化攻击升级均可由攻击工具“LLM自动化攻击工具”直接造成。"
+      },
+      {
+        "key": "R0148",
+        "relation": "co-occurrence",
+        "note": "直接提示注入与AI智能体工具滥用/过度自主风险均可由攻击工具“LLM自动化攻击工具”直接造成。"
+      },
+      {
+        "key": "R0084",
+        "relation": "co-occurrence",
+        "note": "直接提示注入与钓鱼攻击均可由攻击工具“LLM自动化攻击工具”直接造成。"
+      },
+      {
+        "key": "R0084-001",
+        "relation": "co-occurrence",
+        "note": "直接提示注入与AI增强钓鱼攻击均可由威胁行为者“AI工具滥用者”直接造成。"
+      }
     ]
   },
   "R0117-002": {
@@ -104,6 +151,38 @@
       "文档投毒",
       "网页提示注入",
       "知识库投毒"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0117",
+        "relation": "variant",
+        "note": "LLM提示注入风险是间接提示注入的上层风险。"
+      },
+      {
+        "key": "R0117-001",
+        "relation": "variant",
+        "note": "间接提示注入与直接提示注入同属LLM提示注入风险下的细分变体。"
+      },
+      {
+        "key": "R0148",
+        "relation": "co-occurrence",
+        "note": "间接提示注入与AI智能体工具滥用/过度自主风险在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0078",
+        "relation": "co-occurrence",
+        "note": "间接提示注入与数据泄露在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0118",
+        "relation": "co-occurrence",
+        "note": "间接提示注入与AI自动化攻击升级均可由攻击工具“LLM自动化攻击工具”直接造成。"
+      },
+      {
+        "key": "R0084",
+        "relation": "co-occurrence",
+        "note": "间接提示注入与钓鱼攻击均可由攻击工具“LLM自动化攻击工具”直接造成。"
+      }
     ]
   }
 }

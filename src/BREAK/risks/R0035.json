@@ -34,6 +34,38 @@
       "免密登录",
       "会话复用",
       "登录态复用"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0035-001",
+        "relation": "variant",
+        "note": "登录凭据盗用是登录凭据复用的细分变体。"
+      },
+      {
+        "key": "R0105",
+        "relation": "co-occurrence",
+        "note": "登录凭据复用与租号借号均可由攻击工具“CK(Cookies)登录工具”直接造成。"
+      },
+      {
+        "key": "R0003",
+        "relation": "co-occurrence",
+        "note": "登录凭据复用与恶意抢购均可由攻击工具“CK(Cookies)登录工具”直接造成。"
+      },
+      {
+        "key": "R0003-001",
+        "relation": "co-occurrence",
+        "note": "登录凭据复用与秒拍出价均可由攻击工具“CK(Cookies)登录工具”直接造成。"
+      },
+      {
+        "key": "R0003-002",
+        "relation": "co-occurrence",
+        "note": "登录凭据复用与拍卖狙击均可由攻击工具“CK(Cookies)登录工具”直接造成。"
+      },
+      {
+        "key": "R0003-003",
+        "relation": "co-occurrence",
+        "note": "登录凭据复用与刷子风险均可由攻击工具“CK(Cookies)登录工具”直接造成。"
+      }
     ]
   },
   "R0035-001": {
@@ -74,6 +106,38 @@
       "Session hijacking",
       "登录态盗用",
       "Token盗用"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0035",
+        "relation": "variant",
+        "note": "登录凭据复用是登录凭据盗用的上层风险。"
+      },
+      {
+        "key": "R0105",
+        "relation": "co-occurrence",
+        "note": "登录凭据盗用与租号借号均可由攻击工具“CK(Cookies)登录工具”直接造成。"
+      },
+      {
+        "key": "R0003",
+        "relation": "co-occurrence",
+        "note": "登录凭据盗用与恶意抢购均可由攻击工具“CK(Cookies)登录工具”直接造成。"
+      },
+      {
+        "key": "R0003-001",
+        "relation": "co-occurrence",
+        "note": "登录凭据盗用与秒拍出价均可由攻击工具“CK(Cookies)登录工具”直接造成。"
+      },
+      {
+        "key": "R0003-002",
+        "relation": "co-occurrence",
+        "note": "登录凭据盗用与拍卖狙击均可由攻击工具“CK(Cookies)登录工具”直接造成。"
+      },
+      {
+        "key": "R0003-003",
+        "relation": "co-occurrence",
+        "note": "登录凭据盗用与刷子风险均可由攻击工具“CK(Cookies)登录工具”直接造成。"
+      }
     ]
   }
 }

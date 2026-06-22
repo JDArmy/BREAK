@@ -31,6 +31,38 @@
       "未成年充值",
       "未成年人内容保护",
       "适龄分级"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0026",
+        "relation": "co-occurrence",
+        "note": "未成年人保护合规风险与违规违法商品共享规避手段“信用等级限制”。"
+      },
+      {
+        "key": "R0042",
+        "relation": "co-occurrence",
+        "note": "未成年人保护合规风险与虚假库存共享规避手段“信用等级限制”。"
+      },
+      {
+        "key": "R0052",
+        "relation": "co-occurrence",
+        "note": "未成年人保护合规风险与低价高邮共享规避手段“信用等级限制”。"
+      },
+      {
+        "key": "R0053",
+        "relation": "co-occurrence",
+        "note": "未成年人保护合规风险与恶意骚扰用户共享规避手段“信用等级限制”。"
+      },
+      {
+        "key": "R0057",
+        "relation": "co-occurrence",
+        "note": "未成年人保护合规风险与品类/品牌乱挂共享规避手段“信用等级限制”。"
+      },
+      {
+        "key": "R0058",
+        "relation": "co-occurrence",
+        "note": "未成年人保护合规风险与价格欺诈共享规避手段“信用等级限制”。"
+      }
     ]
   }
 }

@@ -29,6 +29,38 @@
       "注入人脸视频",
       "人脸伪造",
       "生物识别绕过"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0084",
+        "relation": "co-occurrence",
+        "note": "人脸识别绕过与钓鱼攻击均可由攻击工具“AI深度伪造工具”直接造成。"
+      },
+      {
+        "key": "R0092",
+        "relation": "co-occurrence",
+        "note": "人脸识别绕过与现实身份盗用均可由攻击工具“AI深度伪造工具”直接造成。"
+      },
+      {
+        "key": "R0095",
+        "relation": "co-occurrence",
+        "note": "人脸识别绕过与平台诈骗风险均可由攻击工具“AI视频伪造”直接造成。"
+      },
+      {
+        "key": "R0116",
+        "relation": "co-occurrence",
+        "note": "人脸识别绕过与AI深度伪造风险均可由攻击工具“AI视频伪造”直接造成。"
+      },
+      {
+        "key": "R0116-001",
+        "relation": "co-occurrence",
+        "note": "人脸识别绕过与AI换脸欺诈均可由攻击工具“AI深度伪造工具”直接造成。"
+      },
+      {
+        "key": "R0116-002",
+        "relation": "co-occurrence",
+        "note": "人脸识别绕过与AI合成视频欺诈均可由攻击工具“AI深度伪造工具”直接造成。"
+      }
     ]
   }
 }

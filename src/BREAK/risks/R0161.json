@@ -27,14 +27,34 @@
     ],
     "relatedRisks": [
       {
-        "key": "R0200",
-        "relation": "variant",
-        "note": "Layer2桥接风险是跨链桥攻击在二层场景中的变体。"
+        "key": "R0169",
+        "relation": "co-occurrence",
+        "note": "跨链桥攻击与预言机操纵在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0167",
+        "relation": "co-occurrence",
+        "note": "跨链桥攻击与DAO治理攻击均可由威胁行为者“DeFi协议攻击者”直接造成。"
+      },
+      {
+        "key": "R0170",
+        "relation": "co-occurrence",
+        "note": "跨链桥攻击与MEV攻击（矿工可提取价值）均可由威胁行为者“DeFi协议攻击者”直接造成。"
+      },
+      {
+        "key": "R0173",
+        "relation": "co-occurrence",
+        "note": "跨链桥攻击与Gas费操纵均可由威胁行为者“DeFi协议攻击者”直接造成。"
       },
       {
         "key": "R0175",
         "relation": "co-occurrence",
-        "note": "跨链桥场景需要同时关注交易重放。"
+        "note": "跨链桥攻击与区块链重放攻击均可由威胁行为者“DeFi协议攻击者”直接造成。"
+      },
+      {
+        "key": "R0176",
+        "relation": "co-occurrence",
+        "note": "跨链桥攻击与时间戳依赖攻击均可由威胁行为者“DeFi协议攻击者”直接造成。"
       }
     ]
   }

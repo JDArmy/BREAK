@@ -30,6 +30,38 @@
       "卡安全码爆破",
       "card cracking",
       "有效期枚举"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0043",
+        "relation": "co-occurrence",
+        "note": "支付卡破解与黑卡支付在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0043-001",
+        "relation": "co-occurrence",
+        "note": "支付卡破解与盗卡盗刷在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0045",
+        "relation": "co-occurrence",
+        "note": "支付卡破解与积分盗刷在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0040",
+        "relation": "co-occurrence",
+        "note": "支付卡破解与撞卡攻击在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0073",
+        "relation": "co-occurrence",
+        "note": "支付卡破解与设备丢失共享规避手段“强制改密”。"
+      },
+      {
+        "key": "R0083",
+        "relation": "co-occurrence",
+        "note": "支付卡破解与员工安全意识不足共享规避手段“强制改密”。"
+      }
     ]
   }
 }

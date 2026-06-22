@@ -27,6 +27,38 @@
       "导流拉人",
       "跨游导流",
       "公会拉人"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0114",
+        "relation": "co-occurrence",
+        "note": "恶意拉人头与游戏仓库号共享规避手段“账号封禁”。"
+      },
+      {
+        "key": "R0115",
+        "relation": "co-occurrence",
+        "note": "恶意拉人头与恶意广告投放共享规避手段“账号封禁”。"
+      },
+      {
+        "key": "R0001",
+        "relation": "co-occurrence",
+        "note": "恶意拉人头与流程自动化共享规避手段“账号封禁”。"
+      },
+      {
+        "key": "R0001-002",
+        "relation": "co-occurrence",
+        "note": "恶意拉人头与自动化模拟器共享规避手段“账号封禁”。"
+      },
+      {
+        "key": "R0005-001",
+        "relation": "co-occurrence",
+        "note": "恶意拉人头与批量小号作弊共享规避手段“账号封禁”。"
+      },
+      {
+        "key": "R0110",
+        "relation": "co-occurrence",
+        "note": "恶意拉人头与平台色情风险共享规避手段“账号封禁”。"
+      }
     ]
   }
 }

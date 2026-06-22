@@ -31,6 +31,38 @@
       "水帖",
       "广告垃圾",
       "灌水内容"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0023",
+        "relation": "co-occurrence",
+        "note": "垃圾内容与内容盗用均可由攻击工具“AI黑应用”直接造成。"
+      },
+      {
+        "key": "R0024",
+        "relation": "co-occurrence",
+        "note": "垃圾内容与恶意引流均可由攻击工具“发贴机”直接造成。"
+      },
+      {
+        "key": "R0056",
+        "relation": "co-occurrence",
+        "note": "垃圾内容与虚假评价均可由攻击工具“发贴机”直接造成。"
+      },
+      {
+        "key": "R0071",
+        "relation": "co-occurrence",
+        "note": "垃圾内容与生成式AI风险均可由攻击工具“AI黑应用”直接造成。"
+      },
+      {
+        "key": "R0084",
+        "relation": "co-occurrence",
+        "note": "垃圾内容与钓鱼攻击均可由攻击工具“AI黑应用”直接造成。"
+      },
+      {
+        "key": "R0110",
+        "relation": "co-occurrence",
+        "note": "垃圾内容与平台色情风险均可由攻击工具“发贴机”直接造成。"
+      }
     ]
   }
 }

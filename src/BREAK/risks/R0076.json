@@ -26,6 +26,38 @@
       "三级等保",
       "等保测评",
       "等保整改"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0078",
+        "relation": "co-occurrence",
+        "note": "等保合规风险与数据泄露在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0079",
+        "relation": "co-occurrence",
+        "note": "等保合规风险与国密合规风险共享规避手段“漏洞修复”。"
+      },
+      {
+        "key": "R0081",
+        "relation": "co-occurrence",
+        "note": "等保合规风险与供应链风险共享规避手段“漏洞修复”。"
+      },
+      {
+        "key": "R0081-001",
+        "relation": "co-occurrence",
+        "note": "等保合规风险与软件供应链风险共享规避手段“漏洞修复”。"
+      },
+      {
+        "key": "R0081-002",
+        "relation": "co-occurrence",
+        "note": "等保合规风险与硬件供应链风险共享规避手段“漏洞修复”。"
+      },
+      {
+        "key": "R0081-003",
+        "relation": "co-occurrence",
+        "note": "等保合规风险与云服务供应链风险共享规避手段“漏洞修复”。"
+      }
     ]
   }
 }

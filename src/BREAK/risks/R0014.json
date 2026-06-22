@@ -25,6 +25,38 @@
       "下单不付款",
       "恶意锁单",
       "库存探测"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0015",
+        "relation": "co-occurrence",
+        "note": "恶意占库存与恶意差评同属“客户与资源滥用”风险场景。"
+      },
+      {
+        "key": "R0018",
+        "relation": "co-occurrence",
+        "note": "恶意占库存与干扰搜索结果同属“预约、票务与库存资源滥用”风险场景。"
+      },
+      {
+        "key": "R0034",
+        "relation": "co-occurrence",
+        "note": "恶意占库存与自动化养号同属“票务、预约与运力资源滥用”风险场景。"
+      },
+      {
+        "key": "R0049",
+        "relation": "co-occurrence",
+        "note": "恶意占库存与代登录、代下单同属“预约、票务与库存资源滥用”风险场景。"
+      },
+      {
+        "key": "R0055",
+        "relation": "co-occurrence",
+        "note": "恶意占库存与低价购风险同属“客户与资源滥用”风险场景。"
+      },
+      {
+        "key": "R0055-001",
+        "relation": "co-occurrence",
+        "note": "恶意占库存与卡券限制突破同属“客户与资源滥用”风险场景。"
+      }
     ]
   }
 }

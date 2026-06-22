@@ -27,14 +27,34 @@
     "updated": "2026-06-22",
     "relatedRisks": [
       {
-        "key": "R0071-005",
-        "relation": "variant",
-        "note": "训练数据投毒是AI模型投毒风险的数据层变体。"
+        "key": "R0244",
+        "relation": "co-occurrence",
+        "note": "训练数据投毒风险与RAG越权召回均可由攻击工具“AI数据投毒与提示注入工具”直接造成。"
       },
       {
-        "key": "R0117-002",
+        "key": "R0245",
         "relation": "co-occurrence",
-        "note": "间接提示注入和数据投毒都可能污染模型上下文。"
+        "note": "训练数据投毒风险与模型输出泄露敏感信息均可由攻击工具“AI数据投毒与提示注入工具”直接造成。"
+      },
+      {
+        "key": "R0242",
+        "relation": "co-occurrence",
+        "note": "训练数据投毒风险与训练数据版权与授权风险均可由威胁行为者“AI数据投毒者”直接造成。"
+      },
+      {
+        "key": "R0123",
+        "relation": "co-occurrence",
+        "note": "训练数据投毒风险与算法合规风险共享规避手段“算法审计机制”。"
+      },
+      {
+        "key": "R0133",
+        "relation": "co-occurrence",
+        "note": "训练数据投毒风险与隐私计算滥用风险共享规避手段“算法审计机制”。"
+      },
+      {
+        "key": "R0134",
+        "relation": "co-occurrence",
+        "note": "训练数据投毒风险与大数据杀熟风险共享规避手段“算法审计机制”。"
       }
     ]
   }

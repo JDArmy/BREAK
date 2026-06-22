@@ -28,6 +28,38 @@
       "二维码收款滥用",
       "代收代付滥用",
       "支付接口滥用"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0060",
+        "relation": "co-occurrence",
+        "note": "支付渠道滥用与洗钱风险在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0097",
+        "relation": "co-occurrence",
+        "note": "支付渠道滥用与借助平台赌博均可由攻击工具“跑分平台”直接造成。"
+      },
+      {
+        "key": "R0110",
+        "relation": "co-occurrence",
+        "note": "支付渠道滥用与平台色情风险均可由攻击工具“跑分平台”直接造成。"
+      },
+      {
+        "key": "R0044",
+        "relation": "co-occurrence",
+        "note": "支付渠道滥用与转账欺诈均可由攻击工具“洗钱对公账户”直接造成。"
+      },
+      {
+        "key": "R0062",
+        "relation": "co-occurrence",
+        "note": "支付渠道滥用与非法套现均可由攻击工具“跑分平台”直接造成。"
+      },
+      {
+        "key": "R0094",
+        "relation": "co-occurrence",
+        "note": "支付渠道滥用与信用卡欺诈均可由威胁行为者“卡商（银行卡）”直接造成。"
+      }
     ]
   }
 }

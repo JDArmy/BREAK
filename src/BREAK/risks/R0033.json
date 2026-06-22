@@ -24,6 +24,38 @@
       "僵尸商家",
       "无货店铺",
       "长期不经营店铺"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0033-001",
+        "relation": "variant",
+        "note": "失联跑路是僵尸店铺的细分变体。"
+      },
+      {
+        "key": "R0042",
+        "relation": "co-occurrence",
+        "note": "僵尸店铺与虚假库存同属“票代、代理商与供应商风险”风险场景。"
+      },
+      {
+        "key": "R0053",
+        "relation": "co-occurrence",
+        "note": "僵尸店铺与恶意骚扰用户同属“票代、代理商与供应商风险”风险场景。"
+      },
+      {
+        "key": "R0056",
+        "relation": "co-occurrence",
+        "note": "僵尸店铺与虚假评价同属“主播、商家与带货履约风险”风险场景。"
+      },
+      {
+        "key": "R0057",
+        "relation": "co-occurrence",
+        "note": "僵尸店铺与品类/品牌乱挂同属“主播、商家与带货履约风险”风险场景。"
+      },
+      {
+        "key": "R0058",
+        "relation": "co-occurrence",
+        "note": "僵尸店铺与价格欺诈同属“票代、代理商与供应商风险”风险场景。"
+      }
     ]
   },
   "R0033-001": {
@@ -51,6 +83,38 @@
       "卷款跑路",
       "关店跑路",
       "售后失联"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0033",
+        "relation": "variant",
+        "note": "僵尸店铺是失联跑路的上层风险。"
+      },
+      {
+        "key": "R0042",
+        "relation": "co-occurrence",
+        "note": "失联跑路与虚假库存共享规避手段“保证金机制”。"
+      },
+      {
+        "key": "R0058",
+        "relation": "co-occurrence",
+        "note": "失联跑路与价格欺诈共享规避手段“保证金机制”。"
+      },
+      {
+        "key": "R0115",
+        "relation": "co-occurrence",
+        "note": "失联跑路与恶意广告投放共享规避手段“保证金机制”。"
+      },
+      {
+        "key": "R0003-002",
+        "relation": "co-occurrence",
+        "note": "失联跑路与拍卖狙击共享规避手段“保证金机制”。"
+      },
+      {
+        "key": "R0004",
+        "relation": "co-occurrence",
+        "note": "失联跑路与虚假发货共享规避手段“保证金机制”。"
+      }
     ]
   }
 }

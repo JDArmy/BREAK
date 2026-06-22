@@ -32,6 +32,38 @@
       "中奖诈骗",
       "招聘诈骗",
       "假客服诈骗"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0116",
+        "relation": "co-occurrence",
+        "note": "平台诈骗风险与AI深度伪造风险均可由攻击工具“AI视频伪造”直接造成。"
+      },
+      {
+        "key": "R0120",
+        "relation": "co-occurrence",
+        "note": "平台诈骗风险与AI语音克隆欺诈均可由攻击工具“虚假来电伪装工具”直接造成。"
+      },
+      {
+        "key": "R0024",
+        "relation": "co-occurrence",
+        "note": "平台诈骗风险与恶意引流均可由攻击工具“AI诈骗聊天机器人”直接造成。"
+      },
+      {
+        "key": "R0048",
+        "relation": "co-occurrence",
+        "note": "平台诈骗风险与人脸识别绕过均可由攻击工具“AI视频伪造”直接造成。"
+      },
+      {
+        "key": "R0053",
+        "relation": "co-occurrence",
+        "note": "平台诈骗风险与恶意骚扰用户均可由攻击工具“AI诈骗聊天机器人”直接造成。"
+      },
+      {
+        "key": "R0066",
+        "relation": "co-occurrence",
+        "note": "平台诈骗风险与站内消息骚扰均可由攻击工具“AI诈骗聊天机器人”直接造成。"
+      }
     ]
   }
 }

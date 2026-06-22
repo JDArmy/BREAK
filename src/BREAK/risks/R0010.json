@@ -25,6 +25,38 @@
       "低价充值",
       "非官方充值",
       "代充值"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0011-001",
+        "relation": "co-occurrence",
+        "note": "团伙代充与游戏账号倒卖均可由威胁行为者“打金工作室”直接造成。"
+      },
+      {
+        "key": "R0108",
+        "relation": "co-occurrence",
+        "note": "团伙代充与游戏打金均可由威胁行为者“打金工作室”直接造成。"
+      },
+      {
+        "key": "R0114",
+        "relation": "co-occurrence",
+        "note": "团伙代充与游戏仓库号均可由威胁行为者“打金工作室”直接造成。"
+      },
+      {
+        "key": "R0001",
+        "relation": "co-occurrence",
+        "note": "团伙代充与流程自动化均可由威胁行为者“打金工作室”直接造成。"
+      },
+      {
+        "key": "R0011",
+        "relation": "co-occurrence",
+        "note": "团伙代充与账号倒卖均受攻击工具“租号平台”间接支持。"
+      },
+      {
+        "key": "R0019",
+        "relation": "co-occurrence",
+        "note": "团伙代充与违规共享账号均受攻击工具“租号平台”间接支持。"
+      }
     ]
   }
 }

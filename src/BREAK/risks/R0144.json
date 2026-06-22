@@ -29,6 +29,38 @@
       "相似域名",
       "山寨官网",
       "域名抢注"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0084",
+        "relation": "co-occurrence",
+        "note": "域名/品牌仿冒与钓鱼攻击在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0032",
+        "relation": "co-occurrence",
+        "note": "域名/品牌仿冒与账号盗取均可由攻击工具“钓鱼工具包”直接造成。"
+      },
+      {
+        "key": "R0036",
+        "relation": "co-occurrence",
+        "note": "域名/品牌仿冒与多因素(MFA)绕过均可由攻击工具“钓鱼工具包”直接造成。"
+      },
+      {
+        "key": "R0098",
+        "relation": "co-occurrence",
+        "note": "域名/品牌仿冒与虚假身份认证均可由攻击工具“钓鱼工具包”直接造成。"
+      },
+      {
+        "key": "R0131",
+        "relation": "co-occurrence",
+        "note": "域名/品牌仿冒与二维码钓鱼风险均可由攻击工具“恶意二维码生成器”直接造成。"
+      },
+      {
+        "key": "R0142",
+        "relation": "co-occurrence",
+        "note": "域名/品牌仿冒与中间人攻击均可由攻击工具“虚假APP”直接造成。"
+      }
     ]
   }
 }

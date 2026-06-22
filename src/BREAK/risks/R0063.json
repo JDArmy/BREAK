@@ -25,6 +25,38 @@
       "商品重复刊登",
       "同品多链接",
       "重复商品"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0115",
+        "relation": "co-occurrence",
+        "note": "重复铺货与恶意广告投放共享规避手段“店铺处罚”。"
+      },
+      {
+        "key": "R0004",
+        "relation": "co-occurrence",
+        "note": "重复铺货与虚假发货共享规避手段“店铺处罚”。"
+      },
+      {
+        "key": "R0026",
+        "relation": "co-occurrence",
+        "note": "重复铺货与违规违法商品共享规避手段“店铺处罚”。"
+      },
+      {
+        "key": "R0042",
+        "relation": "co-occurrence",
+        "note": "重复铺货与虚假库存共享规避手段“店铺处罚”。"
+      },
+      {
+        "key": "R0052",
+        "relation": "co-occurrence",
+        "note": "重复铺货与低价高邮共享规避手段“店铺处罚”。"
+      },
+      {
+        "key": "R0053",
+        "relation": "co-occurrence",
+        "note": "重复铺货与恶意骚扰用户共享规避手段“店铺处罚”。"
+      }
     ]
   }
 }

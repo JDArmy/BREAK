@@ -42,14 +42,34 @@
     ],
     "relatedRisks": [
       {
-        "key": "R0126",
-        "relation": "variant",
-        "note": "API滥用是接口化场景中的爬取与滥用变体。"
+        "key": "R0029",
+        "relation": "co-occurrence",
+        "note": "爬虫风险与拒绝服务风险均可由攻击工具“API自动化滥用工具”直接造成。"
       },
       {
-        "key": "R0028",
-        "relation": "escalation",
-        "note": "大规模爬取可能升级为数据渗出风险。"
+        "key": "R0032-001",
+        "relation": "co-occurrence",
+        "note": "爬虫风险与撞库(凭证填充)均可由攻击工具“发包/改包工具”直接造成。"
+      },
+      {
+        "key": "R0032-002",
+        "relation": "co-occurrence",
+        "note": "爬虫风险与密码喷射均可由攻击工具“发包/改包工具”直接造成。"
+      },
+      {
+        "key": "R0032-003",
+        "relation": "co-occurrence",
+        "note": "爬虫风险与凭证爆破均可由攻击工具“抓包工具”直接造成。"
+      },
+      {
+        "key": "R0034",
+        "relation": "co-occurrence",
+        "note": "爬虫风险与自动化养号均可由攻击工具“发包/改包工具”直接造成。"
+      },
+      {
+        "key": "R0051-001",
+        "relation": "co-occurrence",
+        "note": "爬虫风险与应用被抓包均可由攻击工具“抓包工具”直接造成。"
       }
     ]
   }

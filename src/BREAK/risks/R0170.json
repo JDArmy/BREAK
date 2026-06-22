@@ -26,6 +26,38 @@
       "交易重排",
       "front-running",
       "sandwich attack"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0173",
+        "relation": "co-occurrence",
+        "note": "MEV攻击（矿工可提取价值）与Gas费操纵均可由攻击工具“DeFi攻击脚本”直接造成。"
+      },
+      {
+        "key": "R0160",
+        "relation": "co-occurrence",
+        "note": "MEV攻击（矿工可提取价值）与闪电贷攻击均可由攻击工具“DeFi攻击脚本”直接造成。"
+      },
+      {
+        "key": "R0167",
+        "relation": "co-occurrence",
+        "note": "MEV攻击（矿工可提取价值）与DAO治理攻击均可由攻击工具“DeFi攻击脚本”直接造成。"
+      },
+      {
+        "key": "R0168",
+        "relation": "co-occurrence",
+        "note": "MEV攻击（矿工可提取价值）与Rug Pull（项目方跑路）均可由攻击工具“DeFi攻击脚本”直接造成。"
+      },
+      {
+        "key": "R0169",
+        "relation": "co-occurrence",
+        "note": "MEV攻击（矿工可提取价值）与预言机操纵均可由攻击工具“DeFi攻击脚本”直接造成。"
+      },
+      {
+        "key": "R0175",
+        "relation": "co-occurrence",
+        "note": "MEV攻击（矿工可提取价值）与区块链重放攻击均可由威胁行为者“DeFi协议攻击者”直接造成。"
+      }
     ]
   }
 }

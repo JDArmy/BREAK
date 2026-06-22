@@ -24,6 +24,38 @@
       "老板号",
       "带躺",
       "挂车老板"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0012",
+        "relation": "co-occurrence",
+        "note": "带老板与外挂在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0103",
+        "relation": "co-occurrence",
+        "note": "带老板与观战透视均可由攻击工具“游戏外挂”直接造成。"
+      },
+      {
+        "key": "R0104",
+        "relation": "co-occurrence",
+        "note": "带老板与护航作弊均可由攻击工具“游戏外挂”直接造成。"
+      },
+      {
+        "key": "R0108",
+        "relation": "co-occurrence",
+        "note": "带老板与游戏打金均可由攻击工具“游戏外挂”直接造成。"
+      },
+      {
+        "key": "R0001-002",
+        "relation": "co-occurrence",
+        "note": "带老板与自动化模拟器均可由攻击工具“游戏外挂”直接造成。"
+      },
+      {
+        "key": "R0012-002",
+        "relation": "co-occurrence",
+        "note": "带老板与游戏外挂均可由攻击工具“游戏外挂”直接造成。"
+      }
     ]
   }
 }

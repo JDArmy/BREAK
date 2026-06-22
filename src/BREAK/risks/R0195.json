@@ -28,6 +28,38 @@
       "钱包连接钓鱼"
     ],
     "updated": "2026-06-22",
-    "description": "Telegram Bot 钓鱼主要利用 Web3 项目社群、空投活动和客服支持场景。攻击者仿冒官方机器人、管理员或验证工具，诱导用户点击钓鱼链接、连接钱包或输入助记词。\n\n由于 Telegram 社群沟通节奏快、账号身份容易伪装，攻击往往与假公告、私聊引导和紧急领取奖励结合，导致用户在低警觉状态下暴露钱包控制权。"
+    "description": "Telegram Bot 钓鱼主要利用 Web3 项目社群、空投活动和客服支持场景。攻击者仿冒官方机器人、管理员或验证工具，诱导用户点击钓鱼链接、连接钱包或输入助记词。\n\n由于 Telegram 社群沟通节奏快、账号身份容易伪装，攻击往往与假公告、私聊引导和紧急领取奖励结合，导致用户在低警觉状态下暴露钱包控制权。",
+    "relatedRisks": [
+      {
+        "key": "R0197",
+        "relation": "co-occurrence",
+        "note": "Telegram Bot钓鱼与多签钱包社会工程攻击均可由攻击工具“钱包钓鱼与授权盗币工具”直接造成。"
+      },
+      {
+        "key": "R0201",
+        "relation": "co-occurrence",
+        "note": "Telegram Bot钓鱼与账户抽象钱包风险均可由攻击工具“钱包钓鱼与授权盗币工具”直接造成。"
+      },
+      {
+        "key": "R0162",
+        "relation": "co-occurrence",
+        "note": "Telegram Bot钓鱼与私钥泄露与管理风险均可由攻击工具“钱包钓鱼与授权盗币工具”直接造成。"
+      },
+      {
+        "key": "R0175",
+        "relation": "co-occurrence",
+        "note": "Telegram Bot钓鱼与区块链重放攻击均可由攻击工具“钱包钓鱼与授权盗币工具”直接造成。"
+      },
+      {
+        "key": "R0194",
+        "relation": "co-occurrence",
+        "note": "Telegram Bot钓鱼与EIP/协议钓鱼攻击均可由攻击工具“钱包钓鱼与授权盗币工具”直接造成。"
+      },
+      {
+        "key": "R0203",
+        "relation": "co-occurrence",
+        "note": "Telegram Bot钓鱼与DApp前端劫持均受威胁行为者“钱包盗币团伙”间接支持。"
+      }
+    ]
   }
 }

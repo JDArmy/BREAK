@@ -32,6 +32,38 @@
       "手机丢失",
       "介质遗失",
       "资产遗失"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0078",
+        "relation": "co-occurrence",
+        "note": "设备丢失与数据泄露在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0112",
+        "relation": "co-occurrence",
+        "note": "设备丢失与办公环境风险在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0065",
+        "relation": "co-occurrence",
+        "note": "设备丢失与员工失误风险在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0067",
+        "relation": "co-occurrence",
+        "note": "设备丢失与文件或文档盗窃在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0075",
+        "relation": "co-occurrence",
+        "note": "设备丢失与关保合规风险共享规避手段“数据泄露保护”。"
+      },
+      {
+        "key": "R0078-001",
+        "relation": "co-occurrence",
+        "note": "设备丢失与合作方数据泄露共享规避手段“数据泄露保护”。"
+      }
     ]
   }
 }

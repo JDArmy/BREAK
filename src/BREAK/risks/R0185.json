@@ -30,6 +30,38 @@
       "虚拟货币盗窃",
       "数字财产",
       "virtual asset theft"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0159",
+        "relation": "co-occurrence",
+        "note": "虚拟世界资产盗窃与智能合约漏洞在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0191",
+        "relation": "co-occurrence",
+        "note": "虚拟世界资产盗窃与AR/VR设备安全风险均可由攻击工具“元宇宙与XR攻击工具”直接造成。"
+      },
+      {
+        "key": "R0192",
+        "relation": "co-occurrence",
+        "note": "虚拟世界资产盗窃与虚拟世界骚扰与暴力均可由攻击工具“元宇宙与XR攻击工具”直接造成。"
+      },
+      {
+        "key": "R0183",
+        "relation": "co-occurrence",
+        "note": "虚拟世界资产盗窃与虚拟土地/资产欺诈均可由攻击工具“元宇宙与XR攻击工具”直接造成。"
+      },
+      {
+        "key": "R0184",
+        "relation": "co-occurrence",
+        "note": "虚拟世界资产盗窃与元宇宙身份盗用均可由攻击工具“元宇宙与XR攻击工具”直接造成。"
+      },
+      {
+        "key": "R0162",
+        "relation": "co-occurrence",
+        "note": "虚拟世界资产盗窃与私钥泄露与管理风险均可由威胁行为者“钱包盗币团伙”直接造成。"
+      }
     ]
   }
 }

@@ -28,13 +28,33 @@
     "relatedRisks": [
       {
         "key": "R0227",
-        "relation": "escalation",
-        "note": "流水线凭证泄露可进一步导致构建产物投毒。"
+        "relation": "co-occurrence",
+        "note": "CI/CD流水线凭证泄露与构建产物投毒风险均可由攻击工具“CI/CD凭证扫描与投毒工具”直接造成。"
       },
       {
         "key": "R0228",
         "relation": "co-occurrence",
-        "note": "CI/CD凭证泄露常与依赖或包投毒共同构成供应链攻击面。"
+        "note": "CI/CD流水线凭证泄露与依赖混淆与恶意包投毒均可由攻击工具“CI/CD凭证扫描与投毒工具”直接造成。"
+      },
+      {
+        "key": "R0229",
+        "relation": "co-occurrence",
+        "note": "CI/CD流水线凭证泄露与SBOM缺失导致漏洞影响不可见均可由威胁行为者“供应链投毒者”直接造成。"
+      },
+      {
+        "key": "R0254",
+        "relation": "co-occurrence",
+        "note": "CI/CD流水线凭证泄露与供应商远程访问滥用同属“供应链安全”风险场景。"
+      },
+      {
+        "key": "R0081",
+        "relation": "co-occurrence",
+        "note": "CI/CD流水线凭证泄露与供应链风险同属“供应链安全”风险场景。"
+      },
+      {
+        "key": "R0081-001",
+        "relation": "co-occurrence",
+        "note": "CI/CD流水线凭证泄露与软件供应链风险同属“供应链安全”风险场景。"
       }
     ]
   }

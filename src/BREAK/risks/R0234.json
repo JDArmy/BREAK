@@ -24,6 +24,38 @@
       "异常退款套现",
       "支付欺诈"
     ],
-    "updated": "2026-06-22"
+    "updated": "2026-06-22",
+    "relatedRisks": [
+      {
+        "key": "R0017",
+        "relation": "co-occurrence",
+        "note": "商户套现与虚假交易与虚假交易在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0235",
+        "relation": "co-occurrence",
+        "note": "商户套现与虚假交易与拒付与退款滥用均可由攻击工具“支付欺诈自动化工具”直接造成。"
+      },
+      {
+        "key": "R0236",
+        "relation": "co-occurrence",
+        "note": "商户套现与虚假交易与支付令牌化配置错误均可由攻击工具“支付欺诈自动化工具”直接造成。"
+      },
+      {
+        "key": "R0137",
+        "relation": "co-occurrence",
+        "note": "商户套现与虚假交易与先买后付(BNPL)欺诈共享规避手段“交易风险监控”。"
+      },
+      {
+        "key": "R0138",
+        "relation": "co-occurrence",
+        "note": "商户套现与虚假交易与礼品卡/充值卡欺诈共享规避手段“交易风险监控”。"
+      },
+      {
+        "key": "R0139",
+        "relation": "co-occurrence",
+        "note": "商户套现与虚假交易与友好欺诈共享规避手段“交易风险监控”。"
+      }
+    ]
   }
 }

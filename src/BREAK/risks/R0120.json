@@ -31,6 +31,38 @@
       "声纹冒充",
       "声音合成诈骗",
       "声纹绕过"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0044",
+        "relation": "co-occurrence",
+        "note": "AI语音克隆欺诈与转账欺诈均可由攻击工具“AI语音克隆工具”直接造成。"
+      },
+      {
+        "key": "R0048",
+        "relation": "co-occurrence",
+        "note": "AI语音克隆欺诈与人脸识别绕过均可由攻击工具“AI深度伪造工具”直接造成。"
+      },
+      {
+        "key": "R0084",
+        "relation": "co-occurrence",
+        "note": "AI语音克隆欺诈与钓鱼攻击均可由攻击工具“AI深度伪造工具”直接造成。"
+      },
+      {
+        "key": "R0092",
+        "relation": "co-occurrence",
+        "note": "AI语音克隆欺诈与现实身份盗用均可由攻击工具“AI深度伪造工具”直接造成。"
+      },
+      {
+        "key": "R0095",
+        "relation": "co-occurrence",
+        "note": "AI语音克隆欺诈与平台诈骗风险均可由攻击工具“虚假来电伪装工具”直接造成。"
+      },
+      {
+        "key": "R0116",
+        "relation": "co-occurrence",
+        "note": "AI语音克隆欺诈与AI深度伪造风险均可由攻击工具“AI深度伪造工具”直接造成。"
+      }
     ]
   }
 }

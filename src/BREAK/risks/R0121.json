@@ -32,6 +32,38 @@
       "跨链洗钱",
       "链上洗钱",
       "洗币"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0060",
+        "relation": "co-occurrence",
+        "note": "虚拟货币洗钱风险与洗钱风险在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0122",
+        "relation": "co-occurrence",
+        "note": "虚拟货币洗钱风险与NFT欺诈风险均可由威胁行为者“加密货币诈骗团伙”直接造成。"
+      },
+      {
+        "key": "R0132",
+        "relation": "co-occurrence",
+        "note": "虚拟货币洗钱风险与SIM卡交换攻击均可由威胁行为者“跨境黑产组织”直接造成。"
+      },
+      {
+        "key": "R0150",
+        "relation": "co-occurrence",
+        "note": "虚拟货币洗钱风险与杀猪盘/投资诈骗风险均可由威胁行为者“加密货币诈骗团伙”直接造成。"
+      },
+      {
+        "key": "R0168",
+        "relation": "co-occurrence",
+        "note": "虚拟货币洗钱风险与Rug Pull（项目方跑路）均可由威胁行为者“加密货币诈骗团伙”直接造成。"
+      },
+      {
+        "key": "R0043",
+        "relation": "co-occurrence",
+        "note": "虚拟货币洗钱风险与黑卡支付均可由威胁行为者“跨境黑产组织”直接造成。"
+      }
     ]
   }
 }

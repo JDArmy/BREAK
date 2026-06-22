@@ -27,6 +27,38 @@
       "木马盗号",
       "账号洗白",
       "盗装备"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0093",
+        "relation": "co-occurrence",
+        "note": "游戏洗号风险与支付渠道滥用同属“充值、虚拟币与资金通道风险”风险场景。"
+      },
+      {
+        "key": "R0094",
+        "relation": "co-occurrence",
+        "note": "游戏洗号风险与信用卡欺诈同属“充值、虚拟币与资金通道风险”风险场景。"
+      },
+      {
+        "key": "R0095",
+        "relation": "co-occurrence",
+        "note": "游戏洗号风险与平台诈骗风险同属“充值、虚拟币与资金通道风险”风险场景。"
+      },
+      {
+        "key": "R0100",
+        "relation": "co-occurrence",
+        "note": "游戏洗号风险与挂机同属“游戏与虚拟权益风险”风险场景。"
+      },
+      {
+        "key": "R0101",
+        "relation": "co-occurrence",
+        "note": "游戏洗号风险与送人头同属“游戏与虚拟权益风险”风险场景。"
+      },
+      {
+        "key": "R0102",
+        "relation": "co-occurrence",
+        "note": "游戏洗号风险与带老板同属“游戏与虚拟权益风险”风险场景。"
+      }
     ]
   }
 }

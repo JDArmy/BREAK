@@ -24,6 +24,38 @@
       "边缘鉴权绕过",
       "流量劫持"
     ],
-    "updated": "2026-06-22"
+    "updated": "2026-06-22",
+    "relatedRisks": [
+      {
+        "key": "R0249",
+        "relation": "co-occurrence",
+        "note": "边缘函数配置滥用与CDN缓存投毒均可由攻击工具“CDN与边缘配置攻击工具”直接造成。"
+      },
+      {
+        "key": "R0230",
+        "relation": "co-occurrence",
+        "note": "边缘函数配置滥用与云存储桶公开暴露共享规避手段“云配置基线与漂移检测”。"
+      },
+      {
+        "key": "R0126",
+        "relation": "co-occurrence",
+        "note": "边缘函数配置滥用与API滥用风险同属“API、云原生与非人类身份安全”风险场景。"
+      },
+      {
+        "key": "R0126-001",
+        "relation": "co-occurrence",
+        "note": "边缘函数配置滥用与API枚举攻击同属“API、云原生与非人类身份安全”风险场景。"
+      },
+      {
+        "key": "R0126-002",
+        "relation": "co-occurrence",
+        "note": "边缘函数配置滥用与API速率限制绕过同属“API、云原生与非人类身份安全”风险场景。"
+      },
+      {
+        "key": "R0126-003",
+        "relation": "co-occurrence",
+        "note": "边缘函数配置滥用与API业务逻辑滥用同属“API、云原生与非人类身份安全”风险场景。"
+      }
+    ]
   }
 }

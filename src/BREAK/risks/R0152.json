@@ -32,6 +32,38 @@
       "系统自带工具滥用",
       "合法工具滥用",
       "凭据攻击"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0078",
+        "relation": "co-occurrence",
+        "note": "无恶意软件攻击风险与数据泄露在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0153",
+        "relation": "co-occurrence",
+        "note": "无恶意软件攻击风险与影子AI风险共享规避手段“零信任架构”。"
+      },
+      {
+        "key": "R0154",
+        "relation": "co-occurrence",
+        "note": "无恶意软件攻击风险与ClickFix欺骗风险共享规避手段“端点检测与响应”。"
+      },
+      {
+        "key": "R0155",
+        "relation": "co-occurrence",
+        "note": "无恶意软件攻击风险与跨境数据走私风险共享规避手段“零信任架构”。"
+      },
+      {
+        "key": "R0158",
+        "relation": "co-occurrence",
+        "note": "无恶意软件攻击风险与算力盗用风险共享规避手段“零信任架构”。"
+      },
+      {
+        "key": "R0197",
+        "relation": "co-occurrence",
+        "note": "无恶意软件攻击风险与多签钱包社会工程攻击共享规避手段“特权访问管理”。"
+      }
     ]
   }
 }

@@ -35,6 +35,38 @@
       "境外数据外传",
       "数据渗出出境",
       "隐蔽外发"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0077",
+        "relation": "co-occurrence",
+        "note": "跨境数据走私风险与数据出境合规风险在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0158",
+        "relation": "co-occurrence",
+        "note": "跨境数据走私风险与算力盗用风险共享规避手段“零信任架构”。"
+      },
+      {
+        "key": "R0213",
+        "relation": "co-occurrence",
+        "note": "跨境数据走私风险与边缘计算节点攻击共享规避手段“零信任架构”。"
+      },
+      {
+        "key": "R0218",
+        "relation": "co-occurrence",
+        "note": "跨境数据走私风险与空间计算隐私泄露共享规避手段“数据分类分级”。"
+      },
+      {
+        "key": "R0230",
+        "relation": "co-occurrence",
+        "note": "跨境数据走私风险与云存储桶公开暴露共享规避手段“数据分类分级”。"
+      },
+      {
+        "key": "R0231",
+        "relation": "co-occurrence",
+        "note": "跨境数据走私风险与云IAM过度授权共享规避手段“零信任架构”。"
+      }
     ]
   }
 }

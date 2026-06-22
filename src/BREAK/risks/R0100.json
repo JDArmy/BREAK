@@ -28,6 +28,38 @@
       "自动打怪",
       "按键精灵挂机",
       "Bot挂机"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0102",
+        "relation": "co-occurrence",
+        "note": "挂机与带老板均可由攻击工具“游戏外挂”直接造成。"
+      },
+      {
+        "key": "R0103",
+        "relation": "co-occurrence",
+        "note": "挂机与观战透视均可由攻击工具“游戏外挂”直接造成。"
+      },
+      {
+        "key": "R0104",
+        "relation": "co-occurrence",
+        "note": "挂机与护航作弊均可由攻击工具“游戏外挂”直接造成。"
+      },
+      {
+        "key": "R0108",
+        "relation": "co-occurrence",
+        "note": "挂机与游戏打金均可由攻击工具“脱机挂”直接造成。"
+      },
+      {
+        "key": "R0001",
+        "relation": "co-occurrence",
+        "note": "挂机与流程自动化均可由攻击工具“脱机挂”直接造成。"
+      },
+      {
+        "key": "R0001-002",
+        "relation": "co-occurrence",
+        "note": "挂机与自动化模拟器均可由攻击工具“游戏外挂”直接造成。"
+      }
     ]
   }
 }

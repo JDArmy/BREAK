@@ -27,6 +27,38 @@
       "沉浸式攻击",
       "XR设备",
       "VR privacy"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0192",
+        "relation": "co-occurrence",
+        "note": "AR/VR设备安全风险与虚拟世界骚扰与暴力均可由攻击工具“元宇宙与XR攻击工具”直接造成。"
+      },
+      {
+        "key": "R0183",
+        "relation": "co-occurrence",
+        "note": "AR/VR设备安全风险与虚拟土地/资产欺诈均可由攻击工具“元宇宙与XR攻击工具”直接造成。"
+      },
+      {
+        "key": "R0184",
+        "relation": "co-occurrence",
+        "note": "AR/VR设备安全风险与元宇宙身份盗用均可由攻击工具“元宇宙与XR攻击工具”直接造成。"
+      },
+      {
+        "key": "R0185",
+        "relation": "co-occurrence",
+        "note": "AR/VR设备安全风险与虚拟世界资产盗窃均可由攻击工具“元宇宙与XR攻击工具”直接造成。"
+      },
+      {
+        "key": "R0205",
+        "relation": "co-occurrence",
+        "note": "AR/VR设备安全风险与AIoT融合攻击共享规避手段“IoT设备网络隔离与访问控制”。"
+      },
+      {
+        "key": "R0208",
+        "relation": "co-occurrence",
+        "note": "AR/VR设备安全风险与医疗物联网专项风险共享规避手段“IoT设备网络隔离与访问控制”。"
+      }
     ]
   }
 }

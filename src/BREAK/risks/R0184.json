@@ -26,6 +26,38 @@
       "头像冒充",
       "身份欺诈",
       "identity theft"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0185",
+        "relation": "co-occurrence",
+        "note": "元宇宙身份盗用与虚拟世界资产盗窃均可由攻击工具“元宇宙与XR攻击工具”直接造成。"
+      },
+      {
+        "key": "R0191",
+        "relation": "co-occurrence",
+        "note": "元宇宙身份盗用与AR/VR设备安全风险均可由攻击工具“元宇宙与XR攻击工具”直接造成。"
+      },
+      {
+        "key": "R0192",
+        "relation": "co-occurrence",
+        "note": "元宇宙身份盗用与虚拟世界骚扰与暴力均可由攻击工具“元宇宙与XR攻击工具”直接造成。"
+      },
+      {
+        "key": "R0183",
+        "relation": "co-occurrence",
+        "note": "元宇宙身份盗用与虚拟土地/资产欺诈均可由攻击工具“元宇宙与XR攻击工具”直接造成。"
+      },
+      {
+        "key": "R0215",
+        "relation": "co-occurrence",
+        "note": "元宇宙身份盗用与元宇宙社交工程攻击共享规避手段“元宇宙身份联邦认证”。"
+      },
+      {
+        "key": "R0221",
+        "relation": "co-occurrence",
+        "note": "元宇宙身份盗用与跨虚实身份关联攻击共享规避手段“链上身份去中心化验证”。"
+      }
     ]
   }
 }

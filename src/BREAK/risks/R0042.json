@@ -26,6 +26,38 @@
       "无货有售",
       "库存欺诈",
       "库存虚报"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0052",
+        "relation": "co-occurrence",
+        "note": "虚假库存与低价高邮共享规避手段“店铺处罚”。"
+      },
+      {
+        "key": "R0053",
+        "relation": "co-occurrence",
+        "note": "虚假库存与恶意骚扰用户共享规避手段“店铺处罚”。"
+      },
+      {
+        "key": "R0057",
+        "relation": "co-occurrence",
+        "note": "虚假库存与品类/品牌乱挂共享规避手段“店铺处罚”。"
+      },
+      {
+        "key": "R0058",
+        "relation": "co-occurrence",
+        "note": "虚假库存与价格欺诈共享规避手段“保证金机制”。"
+      },
+      {
+        "key": "R0063",
+        "relation": "co-occurrence",
+        "note": "虚假库存与重复铺货共享规避手段“店铺处罚”。"
+      },
+      {
+        "key": "R0078-001",
+        "relation": "co-occurrence",
+        "note": "虚假库存与合作方数据泄露共享规避手段“信用等级限制”。"
+      }
     ]
   }
 }

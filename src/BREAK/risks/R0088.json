@@ -45,19 +45,34 @@
     ],
     "relatedRisks": [
       {
-        "key": "R0032-001",
-        "relation": "escalation",
-        "note": "自动化登录可升级为凭证填充攻击。"
-      },
-      {
-        "key": "R0032-003",
-        "relation": "escalation",
-        "note": "自动化登录可升级为凭证爆破。"
-      },
-      {
         "key": "R0034",
         "relation": "co-occurrence",
-        "note": "自动化登录常用于自动化养号。"
+        "note": "自动化登录风险与自动化养号在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0037",
+        "relation": "co-occurrence",
+        "note": "自动化登录风险与第三方账号聚合在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0105",
+        "relation": "co-occurrence",
+        "note": "自动化登录风险与租号借号共享规避手段“单设备登录”。"
+      },
+      {
+        "key": "R0111-001",
+        "relation": "co-occurrence",
+        "note": "自动化登录风险与员工账号共享共享规避手段“单设备登录”。"
+      },
+      {
+        "key": "R0112-001",
+        "relation": "co-occurrence",
+        "note": "自动化登录风险与自带设备办公风险共享规避手段“单设备登录”。"
+      },
+      {
+        "key": "R0132",
+        "relation": "co-occurrence",
+        "note": "自动化登录风险与SIM卡交换攻击共享规避手段“凭据复用识别”。"
       }
     ]
   }

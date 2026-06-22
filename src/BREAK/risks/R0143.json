@@ -31,6 +31,38 @@
       "授权码劫持",
       "令牌劫持",
       "第三方登录漏洞"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0078",
+        "relation": "co-occurrence",
+        "note": "OAuth/SSO授权滥用与数据泄露在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0149",
+        "relation": "co-occurrence",
+        "note": "OAuth/SSO授权滥用与非人类身份与API密钥滥用风险均可由攻击工具“信息窃取器”直接造成。"
+      },
+      {
+        "key": "R0032",
+        "relation": "co-occurrence",
+        "note": "OAuth/SSO授权滥用与账号盗取均可由攻击工具“信息窃取器”直接造成。"
+      },
+      {
+        "key": "R0036",
+        "relation": "co-occurrence",
+        "note": "OAuth/SSO授权滥用与多因素(MFA)绕过均可由攻击工具“信息窃取器”直接造成。"
+      },
+      {
+        "key": "R0084",
+        "relation": "co-occurrence",
+        "note": "OAuth/SSO授权滥用与钓鱼攻击均可由攻击工具“钓鱼即服务(PhaaS)平台”直接造成。"
+      },
+      {
+        "key": "R0084-001",
+        "relation": "co-occurrence",
+        "note": "OAuth/SSO授权滥用与AI增强钓鱼攻击均可由攻击工具“钓鱼即服务(PhaaS)平台”直接造成。"
+      }
     ]
   }
 }

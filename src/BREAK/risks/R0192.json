@@ -28,6 +28,38 @@
       "心理创伤",
       "未成年人保护",
       "virtual harassment"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0183",
+        "relation": "co-occurrence",
+        "note": "虚拟世界骚扰与暴力与虚拟土地/资产欺诈均可由攻击工具“元宇宙与XR攻击工具”直接造成。"
+      },
+      {
+        "key": "R0184",
+        "relation": "co-occurrence",
+        "note": "虚拟世界骚扰与暴力与元宇宙身份盗用均可由攻击工具“元宇宙与XR攻击工具”直接造成。"
+      },
+      {
+        "key": "R0185",
+        "relation": "co-occurrence",
+        "note": "虚拟世界骚扰与暴力与虚拟世界资产盗窃均可由攻击工具“元宇宙与XR攻击工具”直接造成。"
+      },
+      {
+        "key": "R0191",
+        "relation": "co-occurrence",
+        "note": "虚拟世界骚扰与暴力与AR/VR设备安全风险均可由攻击工具“元宇宙与XR攻击工具”直接造成。"
+      },
+      {
+        "key": "R0219",
+        "relation": "co-occurrence",
+        "note": "虚拟世界骚扰与暴力与元宇宙内容审核挑战共享规避手段“3D内容AI审核”。"
+      },
+      {
+        "key": "R0067",
+        "relation": "co-occurrence",
+        "note": "虚拟世界骚扰与暴力与文件或文档盗窃共享规避手段“自动恶意文档识别”。"
+      }
     ]
   }
 }

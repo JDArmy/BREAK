@@ -30,6 +30,38 @@
       "流量劫持",
       "SSL剥离",
       "通信篡改"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0151",
+        "relation": "co-occurrence",
+        "note": "中间人攻击与MFA绕过风险在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0181",
+        "relation": "co-occurrence",
+        "note": "中间人攻击与OTA更新劫持在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0182",
+        "relation": "co-occurrence",
+        "note": "中间人攻击与IoT数据篡改攻击在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0112-006",
+        "relation": "co-occurrence",
+        "note": "中间人攻击与无线网络风险在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0144",
+        "relation": "co-occurrence",
+        "note": "中间人攻击与域名/品牌仿冒均可由攻击工具“虚假APP”直接造成。"
+      },
+      {
+        "key": "R0032",
+        "relation": "co-occurrence",
+        "note": "中间人攻击与账号盗取均可由攻击工具“虚假APP”直接造成。"
+      }
     ]
   }
 }

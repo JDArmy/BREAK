@@ -24,6 +24,38 @@
       "云快照泄露",
       "存储权限错误"
     ],
-    "updated": "2026-06-22"
+    "updated": "2026-06-22",
+    "relatedRisks": [
+      {
+        "key": "R0078",
+        "relation": "co-occurrence",
+        "note": "云存储桶公开暴露与数据泄露在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0231",
+        "relation": "co-occurrence",
+        "note": "云存储桶公开暴露与云IAM过度授权均可由攻击工具“云配置扫描与密钥利用工具”直接造成。"
+      },
+      {
+        "key": "R0254",
+        "relation": "co-occurrence",
+        "note": "云存储桶公开暴露与供应商远程访问滥用均可由威胁行为者“云资源滥用者”直接造成。"
+      },
+      {
+        "key": "R0233",
+        "relation": "co-occurrence",
+        "note": "云存储桶公开暴露与协作文档外链泄露共享规避手段“数据泄露保护”。"
+      },
+      {
+        "key": "R0236",
+        "relation": "co-occurrence",
+        "note": "云存储桶公开暴露与支付令牌化配置错误共享规避手段“数据泄露保护”。"
+      },
+      {
+        "key": "R0240",
+        "relation": "co-occurrence",
+        "note": "云存储桶公开暴露与数据共享越权使用共享规避手段“数据分类分级”。"
+      }
+    ]
   }
 }

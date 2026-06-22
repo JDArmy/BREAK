@@ -34,6 +34,38 @@
       "SM3",
       "SM4",
       "国密改造"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0081",
+        "relation": "co-occurrence",
+        "note": "国密合规风险与供应链风险共享规避手段“漏洞修复”。"
+      },
+      {
+        "key": "R0081-001",
+        "relation": "co-occurrence",
+        "note": "国密合规风险与软件供应链风险共享规避手段“漏洞修复”。"
+      },
+      {
+        "key": "R0081-002",
+        "relation": "co-occurrence",
+        "note": "国密合规风险与硬件供应链风险共享规避手段“漏洞修复”。"
+      },
+      {
+        "key": "R0081-003",
+        "relation": "co-occurrence",
+        "note": "国密合规风险与云服务供应链风险共享规避手段“漏洞修复”。"
+      },
+      {
+        "key": "R0081-004",
+        "relation": "co-occurrence",
+        "note": "国密合规风险与外包人员风险共享规避手段“漏洞修复”。"
+      },
+      {
+        "key": "R0085",
+        "relation": "co-occurrence",
+        "note": "国密合规风险与勒索攻击共享规避手段“漏洞修复”。"
+      }
     ]
   }
 }

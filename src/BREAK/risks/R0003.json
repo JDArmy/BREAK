@@ -51,6 +51,38 @@
       "黄牛抢购",
       "抢购机器人",
       "秒杀器"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0003-001",
+        "relation": "variant",
+        "note": "秒拍出价是恶意抢购的细分变体。"
+      },
+      {
+        "key": "R0003-002",
+        "relation": "variant",
+        "note": "拍卖狙击是恶意抢购的细分变体。"
+      },
+      {
+        "key": "R0003-003",
+        "relation": "variant",
+        "note": "刷子风险是恶意抢购的细分变体。"
+      },
+      {
+        "key": "R0003-004",
+        "relation": "variant",
+        "note": "不正当抢占是恶意抢购的细分变体。"
+      },
+      {
+        "key": "R0005",
+        "relation": "co-occurrence",
+        "note": "恶意抢购与营销活动作弊均可由攻击工具“CK(Cookies)登录工具”直接造成。"
+      },
+      {
+        "key": "R0005-001",
+        "relation": "co-occurrence",
+        "note": "恶意抢购与批量小号作弊均可由攻击工具“CK(Cookies)登录工具”直接造成。"
+      }
     ]
   },
   "R0003-001": {
@@ -109,6 +141,38 @@
       "抢先出价",
       "首拍脚本",
       "第一口价"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0003",
+        "relation": "variant",
+        "note": "恶意抢购是秒拍出价的上层风险。"
+      },
+      {
+        "key": "R0003-002",
+        "relation": "variant",
+        "note": "秒拍出价与拍卖狙击同属恶意抢购下的细分变体。"
+      },
+      {
+        "key": "R0003-003",
+        "relation": "variant",
+        "note": "秒拍出价与刷子风险同属恶意抢购下的细分变体。"
+      },
+      {
+        "key": "R0003-004",
+        "relation": "variant",
+        "note": "秒拍出价与不正当抢占同属恶意抢购下的细分变体。"
+      },
+      {
+        "key": "R0005",
+        "relation": "co-occurrence",
+        "note": "秒拍出价与营销活动作弊均可由攻击工具“CK(Cookies)登录工具”直接造成。"
+      },
+      {
+        "key": "R0005-001",
+        "relation": "co-occurrence",
+        "note": "秒拍出价与批量小号作弊均可由攻击工具“电话黑卡”直接造成。"
+      }
     ]
   },
   "R0003-002": {
@@ -163,6 +227,38 @@
       "最后一秒出价",
       "临门出价",
       "auction sniping"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0003",
+        "relation": "variant",
+        "note": "恶意抢购是拍卖狙击的上层风险。"
+      },
+      {
+        "key": "R0003-003",
+        "relation": "variant",
+        "note": "拍卖狙击与刷子风险同属恶意抢购下的细分变体。"
+      },
+      {
+        "key": "R0003-004",
+        "relation": "variant",
+        "note": "拍卖狙击与不正当抢占同属恶意抢购下的细分变体。"
+      },
+      {
+        "key": "R0003-001",
+        "relation": "variant",
+        "note": "拍卖狙击与秒拍出价同属恶意抢购下的细分变体。"
+      },
+      {
+        "key": "R0001",
+        "relation": "co-occurrence",
+        "note": "拍卖狙击与流程自动化在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0005",
+        "relation": "co-occurrence",
+        "note": "拍卖狙击与营销活动作弊均可由攻击工具“CK(Cookies)登录工具”直接造成。"
+      }
     ]
   },
   "R0003-003": {
@@ -224,6 +320,38 @@
       "资源刷子",
       "黄牛脚本",
       "机器抢单"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0003",
+        "relation": "variant",
+        "note": "恶意抢购是刷子风险的上层风险。"
+      },
+      {
+        "key": "R0003-004",
+        "relation": "variant",
+        "note": "刷子风险与不正当抢占同属恶意抢购下的细分变体。"
+      },
+      {
+        "key": "R0003-001",
+        "relation": "variant",
+        "note": "刷子风险与秒拍出价同属恶意抢购下的细分变体。"
+      },
+      {
+        "key": "R0003-002",
+        "relation": "variant",
+        "note": "刷子风险与拍卖狙击同属恶意抢购下的细分变体。"
+      },
+      {
+        "key": "R0005",
+        "relation": "co-occurrence",
+        "note": "刷子风险与营销活动作弊均可由攻击工具“CK(Cookies)登录工具”直接造成。"
+      },
+      {
+        "key": "R0005-001",
+        "relation": "co-occurrence",
+        "note": "刷子风险与批量小号作弊均可由攻击工具“电话黑卡”直接造成。"
+      }
     ]
   },
   "R0003-004": {
@@ -285,6 +413,38 @@
       "名额抢占",
       "预约霸占",
       "号源占用"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0003",
+        "relation": "variant",
+        "note": "恶意抢购是不正当抢占的上层风险。"
+      },
+      {
+        "key": "R0003-001",
+        "relation": "variant",
+        "note": "不正当抢占与秒拍出价同属恶意抢购下的细分变体。"
+      },
+      {
+        "key": "R0003-002",
+        "relation": "variant",
+        "note": "不正当抢占与拍卖狙击同属恶意抢购下的细分变体。"
+      },
+      {
+        "key": "R0003-003",
+        "relation": "variant",
+        "note": "不正当抢占与刷子风险同属恶意抢购下的细分变体。"
+      },
+      {
+        "key": "R0005",
+        "relation": "co-occurrence",
+        "note": "不正当抢占与营销活动作弊均可由攻击工具“CK(Cookies)登录工具”直接造成。"
+      },
+      {
+        "key": "R0005-001",
+        "relation": "co-occurrence",
+        "note": "不正当抢占与批量小号作弊均可由攻击工具“电话黑卡”直接造成。"
+      }
     ]
   }
 }

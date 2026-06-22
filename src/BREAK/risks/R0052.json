@@ -25,6 +25,38 @@
       "高额邮费",
       "商品低价运费高",
       "运费补差"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0053",
+        "relation": "co-occurrence",
+        "note": "低价高邮与恶意骚扰用户共享规避手段“店铺处罚”。"
+      },
+      {
+        "key": "R0057",
+        "relation": "co-occurrence",
+        "note": "低价高邮与品类/品牌乱挂共享规避手段“店铺处罚”。"
+      },
+      {
+        "key": "R0058",
+        "relation": "co-occurrence",
+        "note": "低价高邮与价格欺诈共享规避手段“店铺处罚”。"
+      },
+      {
+        "key": "R0063",
+        "relation": "co-occurrence",
+        "note": "低价高邮与重复铺货共享规避手段“店铺处罚”。"
+      },
+      {
+        "key": "R0078-001",
+        "relation": "co-occurrence",
+        "note": "低价高邮与合作方数据泄露共享规避手段“信用等级限制”。"
+      },
+      {
+        "key": "R0115",
+        "relation": "co-occurrence",
+        "note": "低价高邮与恶意广告投放共享规避手段“店铺处罚”。"
+      }
     ]
   }
 }

@@ -32,6 +32,38 @@
       "MFA疲劳攻击",
       "会话Cookie窃取",
       "SIM卡交换"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0246",
+        "relation": "co-occurrence",
+        "note": "MFA绕过风险与MFA疲劳攻击在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0142",
+        "relation": "co-occurrence",
+        "note": "MFA绕过风险与中间人攻击在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0032",
+        "relation": "co-occurrence",
+        "note": "MFA绕过风险与账号盗取均可由攻击工具“AiTM中间人攻击工具”直接造成。"
+      },
+      {
+        "key": "R0152",
+        "relation": "co-occurrence",
+        "note": "MFA绕过风险与无恶意软件攻击风险共享规避手段“端点检测与响应”。"
+      },
+      {
+        "key": "R0154",
+        "relation": "co-occurrence",
+        "note": "MFA绕过风险与ClickFix欺骗风险共享规避手段“端点检测与响应”。"
+      },
+      {
+        "key": "R0158",
+        "relation": "co-occurrence",
+        "note": "MFA绕过风险与算力盗用风险共享规避手段“端点检测与响应”。"
+      }
     ]
   }
 }

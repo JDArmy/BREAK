@@ -32,6 +32,38 @@
       "VAT合规",
       "海外商品合规",
       "DSA合规"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0153",
+        "relation": "co-occurrence",
+        "note": "跨境电商合规风险与影子AI风险共享规避手段“数据脱敏（脱密）”。"
+      },
+      {
+        "key": "R0155",
+        "relation": "co-occurrence",
+        "note": "跨境电商合规风险与跨境数据走私风险共享规避手段“数据脱敏（脱密）”。"
+      },
+      {
+        "key": "R0233",
+        "relation": "co-occurrence",
+        "note": "跨境电商合规风险与协作文档外链泄露共享规避手段“数据脱敏（脱密）”。"
+      },
+      {
+        "key": "R0245",
+        "relation": "co-occurrence",
+        "note": "跨境电商合规风险与模型输出泄露敏感信息共享规避手段“数据脱敏（脱密）”。"
+      },
+      {
+        "key": "R0020",
+        "relation": "co-occurrence",
+        "note": "跨境电商合规风险与内容合规风险共享规避手段“数据脱敏（脱密）”。"
+      },
+      {
+        "key": "R0028",
+        "relation": "co-occurrence",
+        "note": "跨境电商合规风险与数据渗出风险共享规避手段“数据脱敏（脱密）”。"
+      }
     ]
   }
 }

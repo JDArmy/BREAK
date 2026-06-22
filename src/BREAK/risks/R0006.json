@@ -28,6 +28,38 @@
       "夸大功效",
       "虚构评价",
       "假销量宣传"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0053",
+        "relation": "co-occurrence",
+        "note": "虚假宣传与恶意骚扰用户在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0057",
+        "relation": "co-occurrence",
+        "note": "虚假宣传与品类/品牌乱挂在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0115",
+        "relation": "co-occurrence",
+        "note": "虚假宣传与恶意广告投放在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0116-002",
+        "relation": "co-occurrence",
+        "note": "虚假宣传与AI合成视频欺诈在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0122",
+        "relation": "co-occurrence",
+        "note": "虚假宣传与NFT欺诈风险在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0130",
+        "relation": "co-occurrence",
+        "note": "虚假宣传与数字人直播欺诈在定义或描述中互相指向。"
+      }
     ]
   }
 }

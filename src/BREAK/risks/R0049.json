@@ -33,6 +33,38 @@
       "代客下单",
       "异地代登录",
       "下单工作室"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0060",
+        "relation": "co-occurrence",
+        "note": "代登录、代下单与洗钱风险均受攻击工具“四件套”间接支持。"
+      },
+      {
+        "key": "R0062",
+        "relation": "co-occurrence",
+        "note": "代登录、代下单与非法套现均受攻击工具“四件套”间接支持。"
+      },
+      {
+        "key": "R0092",
+        "relation": "co-occurrence",
+        "note": "代登录、代下单与现实身份盗用均受攻击工具“四件套”间接支持。"
+      },
+      {
+        "key": "R0098",
+        "relation": "co-occurrence",
+        "note": "代登录、代下单与虚假身份认证均受攻击工具“四件套”间接支持。"
+      },
+      {
+        "key": "R0010",
+        "relation": "co-occurrence",
+        "note": "代登录、代下单与团伙代充均受攻击工具“四件套”间接支持。"
+      },
+      {
+        "key": "R0043",
+        "relation": "co-occurrence",
+        "note": "代登录、代下单与黑卡支付均受攻击工具“四件套”间接支持。"
+      }
     ]
   }
 }

@@ -24,6 +24,38 @@
       "敏感数据泄露",
       "数据库泄露",
       "Data breach"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0078-001",
+        "relation": "variant",
+        "note": "合作方数据泄露是数据泄露的细分变体。"
+      },
+      {
+        "key": "R0081-001",
+        "relation": "co-occurrence",
+        "note": "数据泄露与软件供应链风险在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0081-002",
+        "relation": "co-occurrence",
+        "note": "数据泄露与硬件供应链风险在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0081-003",
+        "relation": "co-occurrence",
+        "note": "数据泄露与云服务供应链风险在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0081-004",
+        "relation": "co-occurrence",
+        "note": "数据泄露与外包人员风险在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0081-005",
+        "relation": "co-occurrence",
+        "note": "数据泄露与开源组件投毒风险在定义或描述中互相指向。"
+      }
     ]
   },
   "R0078-001": {
@@ -54,6 +86,38 @@
       "合作伙伴数据泄露",
       "外包数据泄露",
       "合作方泄密"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0078",
+        "relation": "variant",
+        "note": "数据泄露是合作方数据泄露的上层风险。"
+      },
+      {
+        "key": "R0085-002",
+        "relation": "co-occurrence",
+        "note": "合作方数据泄露与双重/三重勒索共享规避手段“数据脱敏（脱密）”。"
+      },
+      {
+        "key": "R0089",
+        "relation": "co-occurrence",
+        "note": "合作方数据泄露与用户隐私泄露共享规避手段“数据脱敏（脱密）”。"
+      },
+      {
+        "key": "R0111",
+        "relation": "co-occurrence",
+        "note": "合作方数据泄露与员工违规操作共享规避手段“数据泄露保护”。"
+      },
+      {
+        "key": "R0112-001",
+        "relation": "co-occurrence",
+        "note": "合作方数据泄露与自带设备办公风险共享规避手段“数据泄露保护”。"
+      },
+      {
+        "key": "R0124",
+        "relation": "co-occurrence",
+        "note": "合作方数据泄露与未成年人保护合规风险共享规避手段“信用等级限制”。"
+      }
     ]
   }
 }

@@ -34,6 +34,38 @@
       "PowerShell诱导执行",
       "假验证提示",
       "社工修复指引"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0084",
+        "relation": "co-occurrence",
+        "note": "ClickFix欺骗风险与钓鱼攻击在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0028",
+        "relation": "co-occurrence",
+        "note": "ClickFix欺骗风险与数据渗出风险均可由攻击工具“ClickFix欺骗工具”直接造成。"
+      },
+      {
+        "key": "R0084-001",
+        "relation": "co-occurrence",
+        "note": "ClickFix欺骗风险与AI增强钓鱼攻击均可由威胁行为者“电诈技术员”直接造成。"
+      },
+      {
+        "key": "R0150",
+        "relation": "co-occurrence",
+        "note": "ClickFix欺骗风险与杀猪盘/投资诈骗风险均可由威胁行为者“电诈技术员”直接造成。"
+      },
+      {
+        "key": "R0158",
+        "relation": "co-occurrence",
+        "note": "ClickFix欺骗风险与算力盗用风险共享规避手段“端点检测与响应”。"
+      },
+      {
+        "key": "R0205",
+        "relation": "co-occurrence",
+        "note": "ClickFix欺骗风险与AIoT融合攻击共享规避手段“端点检测与响应”。"
+      }
     ]
   }
 }

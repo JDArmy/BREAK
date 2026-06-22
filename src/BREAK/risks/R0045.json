@@ -33,6 +33,38 @@
       "会员积分被盗",
       "积分盗用",
       "里程积分盗刷"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0045-001",
+        "relation": "variant",
+        "note": "积分兑换倒卖是积分盗刷的细分变体。"
+      },
+      {
+        "key": "R0040",
+        "relation": "co-occurrence",
+        "note": "积分盗刷与撞卡攻击在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0041",
+        "relation": "co-occurrence",
+        "note": "积分盗刷与支付卡破解在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0092",
+        "relation": "co-occurrence",
+        "note": "积分盗刷与现实身份盗用均可由攻击工具“SIM卡交换工具包”直接造成。"
+      },
+      {
+        "key": "R0132",
+        "relation": "co-occurrence",
+        "note": "积分盗刷与SIM卡交换攻击均可由攻击工具“SIM卡交换工具包”直接造成。"
+      },
+      {
+        "key": "R0032",
+        "relation": "co-occurrence",
+        "note": "积分盗刷与账号盗取均可由攻击工具“SIM卡交换工具包”直接造成。"
+      }
     ]
   },
   "R0045-001": {
@@ -67,6 +99,38 @@
       "积分换礼倒卖",
       "积分转卖",
       "兑换礼品倒卖"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0045",
+        "relation": "variant",
+        "note": "积分盗刷是积分兑换倒卖的上层风险。"
+      },
+      {
+        "key": "R0046",
+        "relation": "co-occurrence",
+        "note": "积分兑换倒卖与未成年人识别绕过均可由攻击工具“四件套”直接造成。"
+      },
+      {
+        "key": "R0002",
+        "relation": "co-occurrence",
+        "note": "积分兑换倒卖与优惠劵枚举均可由攻击工具“四件套”直接造成。"
+      },
+      {
+        "key": "R0005-001",
+        "relation": "co-occurrence",
+        "note": "积分兑换倒卖与批量小号作弊均可由攻击工具“四件套”直接造成。"
+      },
+      {
+        "key": "R0011-002",
+        "relation": "co-occurrence",
+        "note": "积分兑换倒卖与账号权益倒卖均可由攻击工具“四件套”直接造成。"
+      },
+      {
+        "key": "R0060",
+        "relation": "co-occurrence",
+        "note": "积分兑换倒卖与洗钱风险同属“支付、资金与金融欺诈”风险场景。"
+      }
     ]
   }
 }

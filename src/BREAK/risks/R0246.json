@@ -24,6 +24,23 @@
       "MFA推送滥用",
       "登录批准诱导"
     ],
-    "updated": "2026-06-22"
+    "updated": "2026-06-22",
+    "relatedRisks": [
+      {
+        "key": "R0036-001",
+        "relation": "co-occurrence",
+        "note": "MFA疲劳攻击与多因素疲劳攻击在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0151",
+        "relation": "co-occurrence",
+        "note": "MFA疲劳攻击与MFA绕过风险在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0247",
+        "relation": "co-occurrence",
+        "note": "MFA疲劳攻击与会话令牌重放均可由攻击工具“MFA轰炸与会话劫持工具”直接造成。"
+      }
+    ]
   }
 }

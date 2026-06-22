@@ -32,6 +32,38 @@
       "AI生成内容风险",
       "生成式人工智能风险",
       "LLM风险"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0071-001",
+        "relation": "variant",
+        "note": "AIGC隐私泄露是生成式AI风险的细分变体。"
+      },
+      {
+        "key": "R0071-002",
+        "relation": "variant",
+        "note": "AIGC合规风险是生成式AI风险的细分变体。"
+      },
+      {
+        "key": "R0071-003",
+        "relation": "variant",
+        "note": "AI生成劣质内容是生成式AI风险的细分变体。"
+      },
+      {
+        "key": "R0071-004",
+        "relation": "variant",
+        "note": "AI幻觉风险是生成式AI风险的细分变体。"
+      },
+      {
+        "key": "R0071-005",
+        "relation": "variant",
+        "note": "AI模型投毒风险是生成式AI风险的细分变体。"
+      },
+      {
+        "key": "R0153",
+        "relation": "co-occurrence",
+        "note": "生成式AI风险与影子AI风险在定义或描述中互相指向。"
+      }
     ]
   },
   "R0071-001": {
@@ -60,6 +92,38 @@
       "模型泄露敏感信息",
       "训练数据泄露",
       "Prompt泄密"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0071",
+        "relation": "variant",
+        "note": "生成式AI风险是AIGC隐私泄露的上层风险。"
+      },
+      {
+        "key": "R0071-002",
+        "relation": "variant",
+        "note": "AIGC隐私泄露与AIGC合规风险同属生成式AI风险下的细分变体。"
+      },
+      {
+        "key": "R0071-003",
+        "relation": "variant",
+        "note": "AIGC隐私泄露与AI生成劣质内容同属生成式AI风险下的细分变体。"
+      },
+      {
+        "key": "R0071-004",
+        "relation": "variant",
+        "note": "AIGC隐私泄露与AI幻觉风险同属生成式AI风险下的细分变体。"
+      },
+      {
+        "key": "R0071-005",
+        "relation": "variant",
+        "note": "AIGC隐私泄露与AI模型投毒风险同属生成式AI风险下的细分变体。"
+      },
+      {
+        "key": "R0074",
+        "relation": "co-occurrence",
+        "note": "AIGC隐私泄露与隐私合规风险共享规避手段“数据脱敏（脱密）”。"
+      }
     ]
   },
   "R0071-002": {
@@ -91,6 +155,38 @@
       "生成内容合规",
       "AI内容合规",
       "内容标识合规"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0071",
+        "relation": "variant",
+        "note": "生成式AI风险是AIGC合规风险的上层风险。"
+      },
+      {
+        "key": "R0071-003",
+        "relation": "variant",
+        "note": "AIGC合规风险与AI生成劣质内容同属生成式AI风险下的细分变体。"
+      },
+      {
+        "key": "R0071-004",
+        "relation": "variant",
+        "note": "AIGC合规风险与AI幻觉风险同属生成式AI风险下的细分变体。"
+      },
+      {
+        "key": "R0071-005",
+        "relation": "variant",
+        "note": "AIGC合规风险与AI模型投毒风险同属生成式AI风险下的细分变体。"
+      },
+      {
+        "key": "R0071-001",
+        "relation": "variant",
+        "note": "AIGC合规风险与AIGC隐私泄露同属生成式AI风险下的细分变体。"
+      },
+      {
+        "key": "R0020",
+        "relation": "co-occurrence",
+        "note": "AIGC合规风险与内容合规风险在定义或描述中互相指向。"
+      }
     ]
   },
   "R0071-003": {
@@ -121,6 +217,38 @@
       "低质AIGC",
       "AI垃圾内容",
       "内容农场"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0071",
+        "relation": "variant",
+        "note": "生成式AI风险是AI生成劣质内容的上层风险。"
+      },
+      {
+        "key": "R0071-004",
+        "relation": "variant",
+        "note": "AI生成劣质内容与AI幻觉风险同属生成式AI风险下的细分变体。"
+      },
+      {
+        "key": "R0071-005",
+        "relation": "variant",
+        "note": "AI生成劣质内容与AI模型投毒风险同属生成式AI风险下的细分变体。"
+      },
+      {
+        "key": "R0071-001",
+        "relation": "variant",
+        "note": "AI生成劣质内容与AIGC隐私泄露同属生成式AI风险下的细分变体。"
+      },
+      {
+        "key": "R0071-002",
+        "relation": "variant",
+        "note": "AI生成劣质内容与AIGC合规风险同属生成式AI风险下的细分变体。"
+      },
+      {
+        "key": "R0116",
+        "relation": "co-occurrence",
+        "note": "AI生成劣质内容与AI深度伪造风险均可由攻击工具“数字人生成工具”直接造成。"
+      }
     ]
   },
   "R0071-004": {
@@ -150,6 +278,38 @@
       "编造事实",
       "虚假引用",
       "模型胡说"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0071",
+        "relation": "variant",
+        "note": "生成式AI风险是AI幻觉风险的上层风险。"
+      },
+      {
+        "key": "R0071-005",
+        "relation": "variant",
+        "note": "AI幻觉风险与AI模型投毒风险同属生成式AI风险下的细分变体。"
+      },
+      {
+        "key": "R0071-001",
+        "relation": "variant",
+        "note": "AI幻觉风险与AIGC隐私泄露同属生成式AI风险下的细分变体。"
+      },
+      {
+        "key": "R0071-002",
+        "relation": "variant",
+        "note": "AI幻觉风险与AIGC合规风险同属生成式AI风险下的细分变体。"
+      },
+      {
+        "key": "R0071-003",
+        "relation": "variant",
+        "note": "AI幻觉风险与AI生成劣质内容同属生成式AI风险下的细分变体。"
+      },
+      {
+        "key": "R0084",
+        "relation": "co-occurrence",
+        "note": "AI幻觉风险与钓鱼攻击共享规避手段“AI内容检测”。"
+      }
     ]
   },
   "R0071-005": {
@@ -179,6 +339,38 @@
       "训练数据污染",
       "模型后门",
       "联邦学习投毒"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0071",
+        "relation": "variant",
+        "note": "生成式AI风险是AI模型投毒风险的上层风险。"
+      },
+      {
+        "key": "R0071-001",
+        "relation": "variant",
+        "note": "AI模型投毒风险与AIGC隐私泄露同属生成式AI风险下的细分变体。"
+      },
+      {
+        "key": "R0071-002",
+        "relation": "variant",
+        "note": "AI模型投毒风险与AIGC合规风险同属生成式AI风险下的细分变体。"
+      },
+      {
+        "key": "R0071-003",
+        "relation": "variant",
+        "note": "AI模型投毒风险与AI生成劣质内容同属生成式AI风险下的细分变体。"
+      },
+      {
+        "key": "R0071-004",
+        "relation": "variant",
+        "note": "AI模型投毒风险与AI幻觉风险同属生成式AI风险下的细分变体。"
+      },
+      {
+        "key": "R0081",
+        "relation": "co-occurrence",
+        "note": "AI模型投毒风险与供应链风险共享规避手段“供应链安全审计”。"
+      }
     ]
   }
 }

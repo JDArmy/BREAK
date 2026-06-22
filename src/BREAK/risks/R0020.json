@@ -27,6 +27,38 @@
       "非法内容",
       "UGC合规",
       "内容审核风险"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0071-002",
+        "relation": "co-occurrence",
+        "note": "内容合规风险与AIGC合规风险在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0028",
+        "relation": "co-occurrence",
+        "note": "内容合规风险与数据渗出风险共享规避手段“数据脱敏（脱密）”。"
+      },
+      {
+        "key": "R0051-001",
+        "relation": "co-occurrence",
+        "note": "内容合规风险与应用被抓包共享规避手段“数据脱敏（脱密）”。"
+      },
+      {
+        "key": "R0071",
+        "relation": "co-occurrence",
+        "note": "内容合规风险与生成式AI风险共享规避手段“数据脱敏（脱密）”。"
+      },
+      {
+        "key": "R0071-001",
+        "relation": "co-occurrence",
+        "note": "内容合规风险与AIGC隐私泄露共享规避手段“数据脱敏（脱密）”。"
+      },
+      {
+        "key": "R0074",
+        "relation": "co-occurrence",
+        "note": "内容合规风险与隐私合规风险共享规避手段“数据脱敏（脱密）”。"
+      }
     ]
   }
 }

@@ -34,6 +34,38 @@
       "虚假投资平台",
       "恋爱投资诈骗",
       "加密货币投资诈骗"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0044",
+        "relation": "co-occurrence",
+        "note": "杀猪盘/投资诈骗风险与转账欺诈均可由攻击工具“欺诈即服务(FaaS)平台”直接造成。"
+      },
+      {
+        "key": "R0098",
+        "relation": "co-occurrence",
+        "note": "杀猪盘/投资诈骗风险与虚假身份认证均可由攻击工具“欺诈即服务(FaaS)平台”直接造成。"
+      },
+      {
+        "key": "R0154",
+        "relation": "co-occurrence",
+        "note": "杀猪盘/投资诈骗风险与ClickFix欺骗风险均可由威胁行为者“电诈技术员”直接造成。"
+      },
+      {
+        "key": "R0168",
+        "relation": "co-occurrence",
+        "note": "杀猪盘/投资诈骗风险与Rug Pull（项目方跑路）均可由威胁行为者“加密货币诈骗团伙”直接造成。"
+      },
+      {
+        "key": "R0038",
+        "relation": "co-occurrence",
+        "note": "杀猪盘/投资诈骗风险与登录扫码欺诈均可由威胁行为者“电诈团伙”直接造成。"
+      },
+      {
+        "key": "R0060",
+        "relation": "co-occurrence",
+        "note": "杀猪盘/投资诈骗风险与洗钱风险均可由威胁行为者“电诈团伙”直接造成。"
+      }
     ]
   }
 }

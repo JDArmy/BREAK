@@ -1,5 +1,11 @@
 # Change log
 
+## 2.21.22
+
+- 全量扩展 `Risk.relatedRisks` 覆盖：350 个风险均补充相关风险关系，每个风险最多 6 条
+- 保留关系说明文本，优先保证知识关系完整性，不再为 bundle 预算裁剪事实关系
+- 拆分 bundle 预算审计：应用 JS chunk 与 BREAK/i18n 数据 chunk 分别计入预算
+
 ## 2.21.21
 
 - 将 Risk complexity 从中英文展示文案迁移为 `basic` / `intermediate` / `advanced` 结构 key，并通过 i18n 映射展示

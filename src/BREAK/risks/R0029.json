@@ -34,6 +34,38 @@
       "请求洪泛",
       "服务打挂",
       "服务不可用"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0029-001",
+        "relation": "variant",
+        "note": "短信恶意消耗是拒绝服务风险的细分变体。"
+      },
+      {
+        "key": "R0029-002",
+        "relation": "variant",
+        "note": "资源耗尽风险是拒绝服务风险的细分变体。"
+      },
+      {
+        "key": "R0029-003",
+        "relation": "variant",
+        "note": "CC攻击是拒绝服务风险的细分变体。"
+      },
+      {
+        "key": "R0029-004",
+        "relation": "variant",
+        "note": "分布式拒绝服务是拒绝服务风险的细分变体。"
+      },
+      {
+        "key": "R0126",
+        "relation": "co-occurrence",
+        "note": "拒绝服务风险与API滥用风险均可由攻击工具“API自动化滥用工具”直接造成。"
+      },
+      {
+        "key": "R0126-001",
+        "relation": "co-occurrence",
+        "note": "拒绝服务风险与API枚举攻击均可由攻击工具“API自动化滥用工具”直接造成。"
+      }
     ]
   },
   "R0029-001": {
@@ -67,6 +99,38 @@
       "短信炸弹",
       "短信资源消耗",
       "骚扰验证码"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0029",
+        "relation": "variant",
+        "note": "拒绝服务风险是短信恶意消耗的上层风险。"
+      },
+      {
+        "key": "R0029-002",
+        "relation": "variant",
+        "note": "短信恶意消耗与资源耗尽风险同属拒绝服务风险下的细分变体。"
+      },
+      {
+        "key": "R0029-003",
+        "relation": "variant",
+        "note": "短信恶意消耗与CC攻击同属拒绝服务风险下的细分变体。"
+      },
+      {
+        "key": "R0029-004",
+        "relation": "variant",
+        "note": "短信恶意消耗与分布式拒绝服务同属拒绝服务风险下的细分变体。"
+      },
+      {
+        "key": "R0085",
+        "relation": "co-occurrence",
+        "note": "短信恶意消耗与勒索攻击同属“接口与自动化攻击”风险场景。"
+      },
+      {
+        "key": "R0085-001",
+        "relation": "co-occurrence",
+        "note": "短信恶意消耗与勒索即服务(RaaS)同属“接口与自动化攻击”风险场景。"
+      }
     ]
   },
   "R0029-002": {
@@ -111,6 +175,38 @@
       "带宽耗尽",
       "CPU打满",
       "连接耗尽"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0029",
+        "relation": "variant",
+        "note": "拒绝服务风险是资源耗尽风险的上层风险。"
+      },
+      {
+        "key": "R0029-003",
+        "relation": "variant",
+        "note": "资源耗尽风险与CC攻击同属拒绝服务风险下的细分变体。"
+      },
+      {
+        "key": "R0029-004",
+        "relation": "variant",
+        "note": "资源耗尽风险与分布式拒绝服务同属拒绝服务风险下的细分变体。"
+      },
+      {
+        "key": "R0029-001",
+        "relation": "variant",
+        "note": "资源耗尽风险与短信恶意消耗同属拒绝服务风险下的细分变体。"
+      },
+      {
+        "key": "R0075",
+        "relation": "co-occurrence",
+        "note": "资源耗尽风险与关保合规风险共享规避手段“提升服务可用性”。"
+      },
+      {
+        "key": "R0099",
+        "relation": "co-occurrence",
+        "note": "资源耗尽风险与黑IP识别绕过共享规避手段“IP情报”。"
+      }
     ]
   },
   "R0029-003": {
@@ -143,6 +239,38 @@
       "应用层洪泛",
       "CC流量",
       "业务洪泛"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0029",
+        "relation": "variant",
+        "note": "拒绝服务风险是CC攻击的上层风险。"
+      },
+      {
+        "key": "R0029-004",
+        "relation": "variant",
+        "note": "CC攻击与分布式拒绝服务同属拒绝服务风险下的细分变体。"
+      },
+      {
+        "key": "R0029-001",
+        "relation": "variant",
+        "note": "CC攻击与短信恶意消耗同属拒绝服务风险下的细分变体。"
+      },
+      {
+        "key": "R0029-002",
+        "relation": "variant",
+        "note": "CC攻击与资源耗尽风险同属拒绝服务风险下的细分变体。"
+      },
+      {
+        "key": "R0075",
+        "relation": "co-occurrence",
+        "note": "CC攻击与关保合规风险共享规避手段“提升服务可用性”。"
+      },
+      {
+        "key": "R0118",
+        "relation": "co-occurrence",
+        "note": "CC攻击与AI自动化攻击升级共享规避手段“提升服务可用性”。"
+      }
     ]
   },
   "R0029-004": {
@@ -177,6 +305,38 @@
       "流量攻击",
       "UDP洪泛",
       "SYN洪泛"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0029",
+        "relation": "variant",
+        "note": "拒绝服务风险是分布式拒绝服务的上层风险。"
+      },
+      {
+        "key": "R0029-001",
+        "relation": "variant",
+        "note": "分布式拒绝服务与短信恶意消耗同属拒绝服务风险下的细分变体。"
+      },
+      {
+        "key": "R0029-002",
+        "relation": "variant",
+        "note": "分布式拒绝服务与资源耗尽风险同属拒绝服务风险下的细分变体。"
+      },
+      {
+        "key": "R0029-003",
+        "relation": "variant",
+        "note": "分布式拒绝服务与CC攻击同属拒绝服务风险下的细分变体。"
+      },
+      {
+        "key": "R0075",
+        "relation": "co-occurrence",
+        "note": "分布式拒绝服务与关保合规风险共享规避手段“提升服务可用性”。"
+      },
+      {
+        "key": "R0099",
+        "relation": "co-occurrence",
+        "note": "分布式拒绝服务与黑IP识别绕过共享规避手段“IP情报”。"
+      }
     ]
   }
 }

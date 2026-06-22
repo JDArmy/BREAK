@@ -29,6 +29,38 @@
       "虚假好评",
       "评论农场",
       "AIGC刷评论"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0130",
+        "relation": "co-occurrence",
+        "note": "AI生成虚假评论与数字人直播欺诈均可由攻击工具“数字人生成工具”直接造成。"
+      },
+      {
+        "key": "R0006",
+        "relation": "co-occurrence",
+        "note": "AI生成虚假评论与虚假宣传均可由攻击工具“数字人生成工具”直接造成。"
+      },
+      {
+        "key": "R0071-003",
+        "relation": "co-occurrence",
+        "note": "AI生成虚假评论与AI生成劣质内容均可由攻击工具“数字人生成工具”直接造成。"
+      },
+      {
+        "key": "R0116",
+        "relation": "co-occurrence",
+        "note": "AI生成虚假评论与AI深度伪造风险均可由攻击工具“数字人生成工具”直接造成。"
+      },
+      {
+        "key": "R0120",
+        "relation": "co-occurrence",
+        "note": "AI生成虚假评论与AI语音克隆欺诈均可由威胁行为者“AI欺诈团伙”直接造成。"
+      },
+      {
+        "key": "R0148",
+        "relation": "co-occurrence",
+        "note": "AI生成虚假评论与AI智能体工具滥用/过度自主风险均可由威胁行为者“AI欺诈团伙”直接造成。"
+      }
     ]
   }
 }

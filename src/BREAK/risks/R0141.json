@@ -26,6 +26,38 @@
       "改定位",
       "VPN改区",
       "位置欺诈"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0050",
+        "relation": "co-occurrence",
+        "note": "地理位置欺诈与风险设备识别绕过均可由攻击工具“GPS伪造工具”直接造成。"
+      },
+      {
+        "key": "R0145",
+        "relation": "co-occurrence",
+        "note": "地理位置欺诈与内容农场风险共享规避手段“行为生物特征识别”。"
+      },
+      {
+        "key": "R0146",
+        "relation": "co-occurrence",
+        "note": "地理位置欺诈与消费贷骗贷（真实补缴）共享规避手段“交易风险监控”。"
+      },
+      {
+        "key": "R0150",
+        "relation": "co-occurrence",
+        "note": "地理位置欺诈与杀猪盘/投资诈骗风险共享规避手段“交易风险监控”。"
+      },
+      {
+        "key": "R0196",
+        "relation": "co-occurrence",
+        "note": "地理位置欺诈与量子计算威胁共享规避手段“交易风险监控”。"
+      },
+      {
+        "key": "R0199",
+        "relation": "co-occurrence",
+        "note": "地理位置欺诈与NFT版税绕过共享规避手段“交易风险监控”。"
+      }
     ]
   }
 }

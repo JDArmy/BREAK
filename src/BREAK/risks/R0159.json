@@ -32,6 +32,38 @@
       "区块链安全",
       "reentrancy",
       "smart contract vulnerability"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0185",
+        "relation": "co-occurrence",
+        "note": "智能合约漏洞与虚拟世界资产盗窃在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0176",
+        "relation": "co-occurrence",
+        "note": "智能合约漏洞与时间戳依赖攻击均可由攻击工具“智能合约漏洞利用框架”直接造成。"
+      },
+      {
+        "key": "R0177",
+        "relation": "co-occurrence",
+        "note": "智能合约漏洞与不可升级合约设计缺陷均可由攻击工具“智能合约漏洞利用框架”直接造成。"
+      },
+      {
+        "key": "R0160",
+        "relation": "co-occurrence",
+        "note": "智能合约漏洞与闪电贷攻击均可由威胁行为者“DeFi协议攻击者”直接造成。"
+      },
+      {
+        "key": "R0161",
+        "relation": "co-occurrence",
+        "note": "智能合约漏洞与跨链桥攻击均可由威胁行为者“DeFi协议攻击者”直接造成。"
+      },
+      {
+        "key": "R0167",
+        "relation": "co-occurrence",
+        "note": "智能合约漏洞与DAO治理攻击均可由威胁行为者“DeFi协议攻击者”直接造成。"
+      }
     ]
   }
 }

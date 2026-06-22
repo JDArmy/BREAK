@@ -31,6 +31,38 @@
       "包投毒",
       "开源投毒",
       "恶意依赖包"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0078",
+        "relation": "co-occurrence",
+        "note": "供应链投毒风险与数据泄露在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0147",
+        "relation": "co-occurrence",
+        "note": "供应链投毒风险与支付机构监管合规风险共享规避手段“供应链安全审计”。"
+      },
+      {
+        "key": "R0182",
+        "relation": "co-occurrence",
+        "note": "供应链投毒风险与IoT数据篡改攻击共享规避手段“防篡改机制”。"
+      },
+      {
+        "key": "R0189",
+        "relation": "co-occurrence",
+        "note": "供应链投毒风险与传感器欺骗攻击共享规避手段“防篡改机制”。"
+      },
+      {
+        "key": "R0193",
+        "relation": "co-occurrence",
+        "note": "供应链投毒风险与区块链供应链攻击共享规避手段“供应链安全审计”。"
+      },
+      {
+        "key": "R0203",
+        "relation": "co-occurrence",
+        "note": "供应链投毒风险与DApp前端劫持共享规避手段“供应链安全审计”。"
+      }
     ]
   }
 }

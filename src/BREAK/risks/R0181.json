@@ -25,6 +25,38 @@
       "更新通道劫持",
       "恶意固件推送",
       "OTA hijacking"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0142",
+        "relation": "co-occurrence",
+        "note": "OTA更新劫持与中间人攻击在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0164",
+        "relation": "co-occurrence",
+        "note": "OTA更新劫持与固件篡改与后门在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0163",
+        "relation": "co-occurrence",
+        "note": "OTA更新劫持与智能设备劫持均可由攻击工具“IoT固件与设备利用工具”直接造成。"
+      },
+      {
+        "key": "R0166",
+        "relation": "co-occurrence",
+        "note": "OTA更新劫持与IoT设备默认凭据风险均可由攻击工具“IoT固件与设备利用工具”直接造成。"
+      },
+      {
+        "key": "R0182",
+        "relation": "co-occurrence",
+        "note": "OTA更新劫持与IoT数据篡改攻击均可由威胁行为者“IoT僵尸网络运营者”直接造成。"
+      },
+      {
+        "key": "R0189",
+        "relation": "co-occurrence",
+        "note": "OTA更新劫持与传感器欺骗攻击均可由威胁行为者“IoT僵尸网络运营者”直接造成。"
+      }
     ]
   }
 }

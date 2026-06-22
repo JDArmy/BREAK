@@ -24,6 +24,38 @@
       "薅羊毛",
       "异常低价",
       "Bug价"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0055-001",
+        "relation": "variant",
+        "note": "卡券限制突破是低价购风险的细分变体。"
+      },
+      {
+        "key": "R0064",
+        "relation": "co-occurrence",
+        "note": "低价购风险与拆单套利同属“客户与资源滥用”风险场景。"
+      },
+      {
+        "key": "R0068",
+        "relation": "co-occurrence",
+        "note": "低价购风险与售后权益滥用同属“客户与资源滥用”风险场景。"
+      },
+      {
+        "key": "R0068-001",
+        "relation": "co-occurrence",
+        "note": "低价购风险与恶意客诉同属“客户与资源滥用”风险场景。"
+      },
+      {
+        "key": "R0068-002",
+        "relation": "co-occurrence",
+        "note": "低价购风险与恶意索赔同属“客户与资源滥用”风险场景。"
+      },
+      {
+        "key": "R0139",
+        "relation": "co-occurrence",
+        "note": "低价购风险与友好欺诈同属“客户与资源滥用”风险场景。"
+      }
     ]
   },
   "R0055-001": {
@@ -57,6 +89,38 @@
       "越权用券",
       "券规则绕过",
       "叠券绕过"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0055",
+        "relation": "variant",
+        "note": "低价购风险是卡券限制突破的上层风险。"
+      },
+      {
+        "key": "R0064",
+        "relation": "co-occurrence",
+        "note": "卡券限制突破与拆单套利同属“客户与资源滥用”风险场景。"
+      },
+      {
+        "key": "R0068",
+        "relation": "co-occurrence",
+        "note": "卡券限制突破与售后权益滥用同属“客户与资源滥用”风险场景。"
+      },
+      {
+        "key": "R0068-001",
+        "relation": "co-occurrence",
+        "note": "卡券限制突破与恶意客诉同属“客户与资源滥用”风险场景。"
+      },
+      {
+        "key": "R0068-002",
+        "relation": "co-occurrence",
+        "note": "卡券限制突破与恶意索赔同属“客户与资源滥用”风险场景。"
+      },
+      {
+        "key": "R0139",
+        "relation": "co-occurrence",
+        "note": "卡券限制突破与友好欺诈同属“客户与资源滥用”风险场景。"
+      }
     ]
   }
 }

@@ -23,6 +23,38 @@
       "支付回调伪造",
       "异步事件安全"
     ],
-    "updated": "2026-06-22"
+    "updated": "2026-06-22",
+    "relatedRisks": [
+      {
+        "key": "R0247",
+        "relation": "co-occurrence",
+        "note": "Webhook伪造与事件重放与会话令牌重放均可由威胁行为者“API滥用者”直接造成。"
+      },
+      {
+        "key": "R0222",
+        "relation": "co-occurrence",
+        "note": "Webhook伪造与事件重放与影子API暴露风险均可由威胁行为者“API滥用者”直接造成。"
+      },
+      {
+        "key": "R0223",
+        "relation": "co-occurrence",
+        "note": "Webhook伪造与事件重放与API对象级越权风险均可由威胁行为者“API滥用者”直接造成。"
+      },
+      {
+        "key": "R0224",
+        "relation": "co-occurrence",
+        "note": "Webhook伪造与事件重放与API批量调用资源耗尽均可由威胁行为者“API滥用者”直接造成。"
+      },
+      {
+        "key": "R0249",
+        "relation": "co-occurrence",
+        "note": "Webhook伪造与事件重放与CDN缓存投毒共享规避手段“API输入校验与契约测试”。"
+      },
+      {
+        "key": "R0230",
+        "relation": "co-occurrence",
+        "note": "Webhook伪造与事件重放与云存储桶公开暴露同属“API、云原生与非人类身份安全”风险场景。"
+      }
+    ]
   }
 }

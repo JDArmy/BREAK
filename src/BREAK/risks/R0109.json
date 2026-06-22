@@ -32,6 +32,38 @@
       "垂直越权",
       "权限绕过",
       "非法访问"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0078",
+        "relation": "co-occurrence",
+        "note": "越权/未授权访问与数据泄露在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0112",
+        "relation": "co-occurrence",
+        "note": "越权/未授权访问与办公环境风险均可由攻击工具“KON-Boot”直接造成。"
+      },
+      {
+        "key": "R0112-003",
+        "relation": "co-occurrence",
+        "note": "越权/未授权访问与未授权设备接入均可由攻击工具“KON-Boot”直接造成。"
+      },
+      {
+        "key": "R0028",
+        "relation": "co-occurrence",
+        "note": "越权/未授权访问与数据渗出风险均可由攻击工具“系统/应用漏洞利用工具”直接造成。"
+      },
+      {
+        "key": "R0067",
+        "relation": "co-occurrence",
+        "note": "越权/未授权访问与文件或文档盗窃均可由攻击工具“KON-Boot”直接造成。"
+      },
+      {
+        "key": "R0083-001",
+        "relation": "co-occurrence",
+        "note": "越权/未授权访问与员工账号被盗均可由攻击工具“KON-Boot”直接造成。"
+      }
     ]
   }
 }

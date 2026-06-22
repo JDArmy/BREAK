@@ -38,6 +38,38 @@
       "批量探号",
       "扫号器",
       "撞库扫号"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0089",
+        "relation": "co-occurrence",
+        "note": "批量扫号与用户隐私泄露在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0032",
+        "relation": "co-occurrence",
+        "note": "批量扫号与账号盗取均可由威胁行为者“料商”直接造成。"
+      },
+      {
+        "key": "R0032-001",
+        "relation": "co-occurrence",
+        "note": "批量扫号与撞库(凭证填充)均可由威胁行为者“料商”直接造成。"
+      },
+      {
+        "key": "R0032-002",
+        "relation": "co-occurrence",
+        "note": "批量扫号与密码喷射均可由威胁行为者“料商”直接造成。"
+      },
+      {
+        "key": "R0032-003",
+        "relation": "co-occurrence",
+        "note": "批量扫号与凭证爆破均可由威胁行为者“料商”直接造成。"
+      },
+      {
+        "key": "R0032-004",
+        "relation": "co-occurrence",
+        "note": "批量扫号与验证码暴破均可由威胁行为者“料商”直接造成。"
+      }
     ]
   }
 }

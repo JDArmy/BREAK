@@ -25,6 +25,38 @@
       "反洗钱报送",
       "穿透式监管",
       "监管数据报送"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0149",
+        "relation": "co-occurrence",
+        "note": "支付机构监管合规风险与非人类身份与API密钥滥用风险共享规避手段“数据分类分级”。"
+      },
+      {
+        "key": "R0153",
+        "relation": "co-occurrence",
+        "note": "支付机构监管合规风险与影子AI风险共享规避手段“数据分类分级”。"
+      },
+      {
+        "key": "R0155",
+        "relation": "co-occurrence",
+        "note": "支付机构监管合规风险与跨境数据走私风险共享规避手段“数据分类分级”。"
+      },
+      {
+        "key": "R0193",
+        "relation": "co-occurrence",
+        "note": "支付机构监管合规风险与区块链供应链攻击共享规避手段“供应链安全审计”。"
+      },
+      {
+        "key": "R0203",
+        "relation": "co-occurrence",
+        "note": "支付机构监管合规风险与DApp前端劫持共享规避手段“供应链安全审计”。"
+      },
+      {
+        "key": "R0218",
+        "relation": "co-occurrence",
+        "note": "支付机构监管合规风险与空间计算隐私泄露共享规避手段“数据分类分级”。"
+      }
     ]
   }
 }

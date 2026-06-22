@@ -34,6 +34,38 @@
       "打金仓库号",
       "资源中转号",
       "物资仓库号"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0012",
+        "relation": "co-occurrence",
+        "note": "游戏仓库号与外挂在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0017",
+        "relation": "co-occurrence",
+        "note": "游戏仓库号与虚假交易在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0001",
+        "relation": "co-occurrence",
+        "note": "游戏仓库号与流程自动化均可由威胁行为者“打金工作室”直接造成。"
+      },
+      {
+        "key": "R0010",
+        "relation": "co-occurrence",
+        "note": "游戏仓库号与团伙代充均可由威胁行为者“打金工作室”直接造成。"
+      },
+      {
+        "key": "R0011-001",
+        "relation": "co-occurrence",
+        "note": "游戏仓库号与游戏账号倒卖均可由威胁行为者“打金工作室”直接造成。"
+      },
+      {
+        "key": "R0106",
+        "relation": "co-occurrence",
+        "note": "游戏仓库号与游戏代练均可由威胁行为者“游戏代练员”直接造成。"
+      }
     ]
   }
 }

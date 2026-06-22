@@ -36,14 +36,34 @@
     ],
     "relatedRisks": [
       {
-        "key": "R0032",
-        "relation": "escalation",
-        "note": "钓鱼成功后通常升级为账号盗取。"
+        "key": "R0084-001",
+        "relation": "variant",
+        "note": "AI增强钓鱼攻击是钓鱼攻击的细分变体。"
+      },
+      {
+        "key": "R0112-006",
+        "relation": "co-occurrence",
+        "note": "钓鱼攻击与无线网络风险在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0122",
+        "relation": "co-occurrence",
+        "note": "钓鱼攻击与NFT欺诈风险在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0131",
+        "relation": "co-occurrence",
+        "note": "钓鱼攻击与二维码钓鱼风险在定义或描述中互相指向。"
       },
       {
         "key": "R0144",
         "relation": "co-occurrence",
-        "note": "域名或品牌仿冒常用于提升钓鱼可信度。"
+        "note": "钓鱼攻击与域名/品牌仿冒在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0154",
+        "relation": "co-occurrence",
+        "note": "钓鱼攻击与ClickFix欺骗风险在定义或描述中互相指向。"
       }
     ]
   },
@@ -75,6 +95,38 @@
       "语音钓鱼",
       "视频钓鱼",
       "个性化钓鱼"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0084",
+        "relation": "variant",
+        "note": "钓鱼攻击是AI增强钓鱼攻击的上层风险。"
+      },
+      {
+        "key": "R0143",
+        "relation": "co-occurrence",
+        "note": "AI增强钓鱼攻击与OAuth/SSO授权滥用均可由攻击工具“钓鱼即服务(PhaaS)平台”直接造成。"
+      },
+      {
+        "key": "R0032",
+        "relation": "co-occurrence",
+        "note": "AI增强钓鱼攻击与账号盗取均可由攻击工具“钓鱼即服务(PhaaS)平台”直接造成。"
+      },
+      {
+        "key": "R0116",
+        "relation": "co-occurrence",
+        "note": "AI增强钓鱼攻击与AI深度伪造风险均可由威胁行为者“AI工具滥用者”直接造成。"
+      },
+      {
+        "key": "R0117",
+        "relation": "co-occurrence",
+        "note": "AI增强钓鱼攻击与LLM提示注入风险均可由威胁行为者“AI工具滥用者”直接造成。"
+      },
+      {
+        "key": "R0117-001",
+        "relation": "co-occurrence",
+        "note": "AI增强钓鱼攻击与直接提示注入均可由威胁行为者“AI工具滥用者”直接造成。"
+      }
     ]
   }
 }

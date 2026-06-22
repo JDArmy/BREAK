@@ -27,6 +27,38 @@
       "轰炸平台",
       "短信炸弹",
       "验证码轰炸"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0155",
+        "relation": "co-occurrence",
+        "note": "短信轰炸即服务与跨境数据走私风险共享规避手段“API安全网关”。"
+      },
+      {
+        "key": "R0003-001",
+        "relation": "co-occurrence",
+        "note": "短信轰炸即服务与秒拍出价共享规避手段“手机号情报”。"
+      },
+      {
+        "key": "R0003-002",
+        "relation": "co-occurrence",
+        "note": "短信轰炸即服务与拍卖狙击共享规避手段“手机号情报”。"
+      },
+      {
+        "key": "R0003-003",
+        "relation": "co-occurrence",
+        "note": "短信轰炸即服务与刷子风险共享规避手段“手机号情报”。"
+      },
+      {
+        "key": "R0003-004",
+        "relation": "co-occurrence",
+        "note": "短信轰炸即服务与不正当抢占共享规避手段“手机号情报”。"
+      },
+      {
+        "key": "R0005-001",
+        "relation": "co-occurrence",
+        "note": "短信轰炸即服务与批量小号作弊共享规避手段“手机号情报”。"
+      }
     ]
   }
 }

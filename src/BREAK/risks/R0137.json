@@ -31,6 +31,38 @@
       "花呗白条套现",
       "分期骗货",
       "免息分期欺诈"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0017",
+        "relation": "co-occurrence",
+        "note": "先买后付(BNPL)欺诈与虚假交易在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0138",
+        "relation": "co-occurrence",
+        "note": "先买后付(BNPL)欺诈与礼品卡/充值卡欺诈共享规避手段“图计算/关联分析”。"
+      },
+      {
+        "key": "R0139",
+        "relation": "co-occurrence",
+        "note": "先买后付(BNPL)欺诈与友好欺诈共享规避手段“图计算/关联分析”。"
+      },
+      {
+        "key": "R0140",
+        "relation": "co-occurrence",
+        "note": "先买后付(BNPL)欺诈与会员/订阅滥用共享规避手段“交易风险监控”。"
+      },
+      {
+        "key": "R0141",
+        "relation": "co-occurrence",
+        "note": "先买后付(BNPL)欺诈与地理位置欺诈共享规避手段“交易风险监控”。"
+      },
+      {
+        "key": "R0145",
+        "relation": "co-occurrence",
+        "note": "先买后付(BNPL)欺诈与内容农场风险共享规避手段“图计算/关联分析”。"
+      }
     ]
   }
 }

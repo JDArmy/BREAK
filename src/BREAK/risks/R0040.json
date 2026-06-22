@@ -31,6 +31,38 @@
       "卡号验证",
       "支付卡撞库",
       "卡段测试"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0041",
+        "relation": "co-occurrence",
+        "note": "撞卡攻击与支付卡破解在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0043",
+        "relation": "co-occurrence",
+        "note": "撞卡攻击与黑卡支付在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0043-001",
+        "relation": "co-occurrence",
+        "note": "撞卡攻击与盗卡盗刷在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0045",
+        "relation": "co-occurrence",
+        "note": "撞卡攻击与积分盗刷在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0089",
+        "relation": "co-occurrence",
+        "note": "撞卡攻击与用户隐私泄露均可由威胁行为者“料商”直接造成。"
+      },
+      {
+        "key": "R0090",
+        "relation": "co-occurrence",
+        "note": "撞卡攻击与批量扫号均可由威胁行为者“料商”直接造成。"
+      }
     ]
   }
 }

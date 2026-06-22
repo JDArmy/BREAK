@@ -35,6 +35,38 @@
       "错发邮件",
       "误删数据",
       "操作失误"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0073",
+        "relation": "co-occurrence",
+        "note": "员工失误风险与设备丢失在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0078",
+        "relation": "co-occurrence",
+        "note": "员工失误风险与数据泄露在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0067",
+        "relation": "co-occurrence",
+        "note": "员工失误风险与文件或文档盗窃共享规避手段“数据库审计”。"
+      },
+      {
+        "key": "R0072",
+        "relation": "co-occurrence",
+        "note": "员工失误风险与员工贪腐共享规避手段“员工处罚”。"
+      },
+      {
+        "key": "R0072-001",
+        "relation": "co-occurrence",
+        "note": "员工失误风险与内外勾结(内鬼)共享规避手段“员工处罚”。"
+      },
+      {
+        "key": "R0075",
+        "relation": "co-occurrence",
+        "note": "员工失误风险与关保合规风险共享规避手段“数据泄露保护”。"
+      }
     ]
   }
 }

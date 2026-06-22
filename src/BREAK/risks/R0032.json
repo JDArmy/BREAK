@@ -35,14 +35,34 @@
     ],
     "relatedRisks": [
       {
-        "key": "R0035-001",
-        "relation": "co-occurrence",
-        "note": "账号盗取常伴随登录凭据盗用或会话劫持。"
+        "key": "R0032-001",
+        "relation": "variant",
+        "note": "撞库(凭证填充)是账号盗取的细分变体。"
       },
       {
-        "key": "R0084",
-        "relation": "prerequisite",
-        "note": "钓鱼攻击常作为账号盗取的前置手法。"
+        "key": "R0032-002",
+        "relation": "variant",
+        "note": "密码喷射是账号盗取的细分变体。"
+      },
+      {
+        "key": "R0032-003",
+        "relation": "variant",
+        "note": "凭证爆破是账号盗取的细分变体。"
+      },
+      {
+        "key": "R0032-004",
+        "relation": "variant",
+        "note": "验证码暴破是账号盗取的细分变体。"
+      },
+      {
+        "key": "R0116",
+        "relation": "co-occurrence",
+        "note": "账号盗取与AI深度伪造风险在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0035",
+        "relation": "co-occurrence",
+        "note": "账号盗取与登录凭据复用均可由攻击工具“CK(Cookies)登录工具”直接造成。"
       }
     ]
   },
@@ -86,14 +106,34 @@
     ],
     "relatedRisks": [
       {
-        "key": "R0088",
-        "relation": "prerequisite",
-        "note": "凭证填充依赖自动化登录能力。"
+        "key": "R0032",
+        "relation": "variant",
+        "note": "账号盗取是撞库(凭证填充)的上层风险。"
       },
       {
-        "key": "R0090",
+        "key": "R0032-002",
+        "relation": "variant",
+        "note": "撞库(凭证填充)与密码喷射同属账号盗取下的细分变体。"
+      },
+      {
+        "key": "R0032-003",
+        "relation": "variant",
+        "note": "撞库(凭证填充)与凭证爆破同属账号盗取下的细分变体。"
+      },
+      {
+        "key": "R0032-004",
+        "relation": "variant",
+        "note": "撞库(凭证填充)与验证码暴破同属账号盗取下的细分变体。"
+      },
+      {
+        "key": "R0034",
         "relation": "co-occurrence",
-        "note": "撞库前后常伴随批量扫号。"
+        "note": "撞库(凭证填充)与自动化养号均可由攻击工具“发包/改包工具”直接造成。"
+      },
+      {
+        "key": "R0051-002",
+        "relation": "co-occurrence",
+        "note": "撞库(凭证填充)与HTTP请求分析均可由攻击工具“发包/改包工具”直接造成。"
       }
     ]
   },
@@ -132,6 +172,38 @@
       "弱口令喷射",
       "password spraying",
       "批量弱密码尝试"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0032",
+        "relation": "variant",
+        "note": "账号盗取是密码喷射的上层风险。"
+      },
+      {
+        "key": "R0032-003",
+        "relation": "variant",
+        "note": "密码喷射与凭证爆破同属账号盗取下的细分变体。"
+      },
+      {
+        "key": "R0032-004",
+        "relation": "variant",
+        "note": "密码喷射与验证码暴破同属账号盗取下的细分变体。"
+      },
+      {
+        "key": "R0032-001",
+        "relation": "variant",
+        "note": "密码喷射与撞库(凭证填充)同属账号盗取下的细分变体。"
+      },
+      {
+        "key": "R0034",
+        "relation": "co-occurrence",
+        "note": "密码喷射与自动化养号均可由攻击工具“发包/改包工具”直接造成。"
+      },
+      {
+        "key": "R0051-002",
+        "relation": "co-occurrence",
+        "note": "密码喷射与HTTP请求分析均可由攻击工具“发包/改包工具”直接造成。"
+      }
     ]
   },
   "R0032-003": {
@@ -170,6 +242,38 @@
       "暴力破解账号",
       "字典爆破",
       "brute force登录"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0032",
+        "relation": "variant",
+        "note": "账号盗取是凭证爆破的上层风险。"
+      },
+      {
+        "key": "R0032-004",
+        "relation": "variant",
+        "note": "凭证爆破与验证码暴破同属账号盗取下的细分变体。"
+      },
+      {
+        "key": "R0032-001",
+        "relation": "variant",
+        "note": "凭证爆破与撞库(凭证填充)同属账号盗取下的细分变体。"
+      },
+      {
+        "key": "R0032-002",
+        "relation": "variant",
+        "note": "凭证爆破与密码喷射同属账号盗取下的细分变体。"
+      },
+      {
+        "key": "R0034",
+        "relation": "co-occurrence",
+        "note": "凭证爆破与自动化养号均可由攻击工具“发包/改包工具”直接造成。"
+      },
+      {
+        "key": "R0036",
+        "relation": "co-occurrence",
+        "note": "凭证爆破与多因素(MFA)绕过均可由攻击工具“密码字典/彩虹表”直接造成。"
+      }
     ]
   },
   "R0032-004": {
@@ -206,6 +310,38 @@
       "短信码爆破",
       "OTP爆破",
       "验证码穷举"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0032",
+        "relation": "variant",
+        "note": "账号盗取是验证码暴破的上层风险。"
+      },
+      {
+        "key": "R0032-001",
+        "relation": "variant",
+        "note": "验证码暴破与撞库(凭证填充)同属账号盗取下的细分变体。"
+      },
+      {
+        "key": "R0032-002",
+        "relation": "variant",
+        "note": "验证码暴破与密码喷射同属账号盗取下的细分变体。"
+      },
+      {
+        "key": "R0032-003",
+        "relation": "variant",
+        "note": "验证码暴破与凭证爆破同属账号盗取下的细分变体。"
+      },
+      {
+        "key": "R0083-001",
+        "relation": "co-occurrence",
+        "note": "验证码暴破与员工账号被盗均可由攻击工具“撞库工具”直接造成。"
+      },
+      {
+        "key": "R0040",
+        "relation": "co-occurrence",
+        "note": "验证码暴破与撞卡攻击均可由威胁行为者“料商”直接造成。"
+      }
     ]
   }
 }

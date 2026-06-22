@@ -26,6 +26,38 @@
       "虚假成单",
       "自买自卖",
       "交易造假"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0017-001",
+        "relation": "variant",
+        "note": "刷单是虚假交易的细分变体。"
+      },
+      {
+        "key": "R0017-002",
+        "relation": "variant",
+        "note": "骗取补贴是虚假交易的细分变体。"
+      },
+      {
+        "key": "R0092",
+        "relation": "co-occurrence",
+        "note": "虚假交易与现实身份盗用在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0114",
+        "relation": "co-occurrence",
+        "note": "虚假交易与游戏仓库号在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0122",
+        "relation": "co-occurrence",
+        "note": "虚假交易与NFT欺诈风险在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0137",
+        "relation": "co-occurrence",
+        "note": "虚假交易与先买后付(BNPL)欺诈在定义或描述中互相指向。"
+      }
     ]
   },
   "R0017-001": {
@@ -54,6 +86,38 @@
       "假成交",
       "订单刷量",
       "买手刷单"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0017",
+        "relation": "variant",
+        "note": "虚假交易是刷单的上层风险。"
+      },
+      {
+        "key": "R0017-002",
+        "relation": "variant",
+        "note": "刷单与骗取补贴同属虚假交易下的细分变体。"
+      },
+      {
+        "key": "R0043",
+        "relation": "co-occurrence",
+        "note": "刷单与黑卡支付在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0056",
+        "relation": "co-occurrence",
+        "note": "刷单与虚假评价均可由攻击工具“刷榜工具”直接造成。"
+      },
+      {
+        "key": "R0001",
+        "relation": "co-occurrence",
+        "note": "刷单与流程自动化均可由攻击工具“刷榜工具”直接造成。"
+      },
+      {
+        "key": "R0001-002",
+        "relation": "co-occurrence",
+        "note": "刷单与自动化模拟器均可由攻击工具“刷榜工具”直接造成。"
+      }
     ]
   },
   "R0017-002": {
@@ -85,6 +149,38 @@
       "补贴欺诈",
       "虚假补贴单",
       "平台补贴作弊"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0017",
+        "relation": "variant",
+        "note": "虚假交易是骗取补贴的上层风险。"
+      },
+      {
+        "key": "R0017-001",
+        "relation": "variant",
+        "note": "骗取补贴与刷单同属虚假交易下的细分变体。"
+      },
+      {
+        "key": "R0026",
+        "relation": "co-occurrence",
+        "note": "骗取补贴与违规违法商品同属“主播、商家与带货履约风险”风险场景。"
+      },
+      {
+        "key": "R0033",
+        "relation": "co-occurrence",
+        "note": "骗取补贴与僵尸店铺同属“票代、代理商与供应商风险”风险场景。"
+      },
+      {
+        "key": "R0033-001",
+        "relation": "co-occurrence",
+        "note": "骗取补贴与失联跑路同属“票代、代理商与供应商风险”风险场景。"
+      },
+      {
+        "key": "R0042",
+        "relation": "co-occurrence",
+        "note": "骗取补贴与虚假库存同属“票代、代理商与供应商风险”风险场景。"
+      }
     ]
   }
 }

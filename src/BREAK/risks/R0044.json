@@ -28,6 +28,38 @@
       "高仿收款号",
       "转账骗局",
       "冒充收款方"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0045",
+        "relation": "co-occurrence",
+        "note": "转账欺诈与积分盗刷均可由攻击工具“SIM卡交换工具包”直接造成。"
+      },
+      {
+        "key": "R0060",
+        "relation": "co-occurrence",
+        "note": "转账欺诈与洗钱风险均可由攻击工具“洗钱对公账户”直接造成。"
+      },
+      {
+        "key": "R0062",
+        "relation": "co-occurrence",
+        "note": "转账欺诈与非法套现均可由攻击工具“洗钱对公账户”直接造成。"
+      },
+      {
+        "key": "R0084",
+        "relation": "co-occurrence",
+        "note": "转账欺诈与钓鱼攻击均可由攻击工具“AI语音克隆工具”直接造成。"
+      },
+      {
+        "key": "R0092",
+        "relation": "co-occurrence",
+        "note": "转账欺诈与现实身份盗用均可由攻击工具“AI语音克隆工具”直接造成。"
+      },
+      {
+        "key": "R0093",
+        "relation": "co-occurrence",
+        "note": "转账欺诈与支付渠道滥用均可由攻击工具“洗钱对公账户”直接造成。"
+      }
     ]
   }
 }

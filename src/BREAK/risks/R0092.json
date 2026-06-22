@@ -30,6 +30,38 @@
       "身份证盗用",
       "身份冒用开户",
       "真人信息冒用"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0094",
+        "relation": "co-occurrence",
+        "note": "现实身份盗用与信用卡欺诈在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0017",
+        "relation": "co-occurrence",
+        "note": "现实身份盗用与虚假交易在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0098",
+        "relation": "co-occurrence",
+        "note": "现实身份盗用与虚假身份认证均可由攻击工具“拦截卡”直接造成。"
+      },
+      {
+        "key": "R0116",
+        "relation": "co-occurrence",
+        "note": "现实身份盗用与AI深度伪造风险均可由攻击工具“AI深度伪造工具”直接造成。"
+      },
+      {
+        "key": "R0116-001",
+        "relation": "co-occurrence",
+        "note": "现实身份盗用与AI换脸欺诈均可由攻击工具“AI深度伪造工具”直接造成。"
+      },
+      {
+        "key": "R0116-002",
+        "relation": "co-occurrence",
+        "note": "现实身份盗用与AI合成视频欺诈均可由攻击工具“AI深度伪造工具”直接造成。"
+      }
     ]
   }
 }

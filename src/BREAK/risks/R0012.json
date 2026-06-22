@@ -29,6 +29,38 @@
       "修改器",
       "cheat",
       "游戏辅助"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0012-001",
+        "relation": "variant",
+        "note": "抢红包外挂是外挂的细分变体。"
+      },
+      {
+        "key": "R0012-002",
+        "relation": "variant",
+        "note": "游戏外挂是外挂的细分变体。"
+      },
+      {
+        "key": "R0102",
+        "relation": "co-occurrence",
+        "note": "外挂与带老板在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0103",
+        "relation": "co-occurrence",
+        "note": "外挂与观战透视在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0114",
+        "relation": "co-occurrence",
+        "note": "外挂与游戏仓库号在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0007",
+        "relation": "co-occurrence",
+        "note": "外挂与违规插件推广在定义或描述中互相指向。"
+      }
     ]
   },
   "R0012-001": {
@@ -59,6 +91,38 @@
       "红包挂",
       "红包插件",
       "红包秒抢"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0012",
+        "relation": "variant",
+        "note": "外挂是抢红包外挂的上层风险。"
+      },
+      {
+        "key": "R0012-002",
+        "relation": "variant",
+        "note": "抢红包外挂与游戏外挂同属外挂下的细分变体。"
+      },
+      {
+        "key": "R0001",
+        "relation": "co-occurrence",
+        "note": "抢红包外挂与流程自动化均可由攻击工具“模拟点击工具”直接造成。"
+      },
+      {
+        "key": "R0001-002",
+        "relation": "co-occurrence",
+        "note": "抢红包外挂与自动化模拟器均可由攻击工具“模拟点击工具”直接造成。"
+      },
+      {
+        "key": "R0003-002",
+        "relation": "co-occurrence",
+        "note": "抢红包外挂与拍卖狙击均可由攻击工具“模拟点击工具”直接造成。"
+      },
+      {
+        "key": "R0008-002",
+        "relation": "co-occurrence",
+        "note": "抢红包外挂与虚假点击均可由攻击工具“模拟点击工具”直接造成。"
+      }
     ]
   },
   "R0012-002": {
@@ -89,6 +153,38 @@
       "作弊外挂",
       "透视自瞄",
       "游戏修改器"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0012",
+        "relation": "variant",
+        "note": "外挂是游戏外挂的上层风险。"
+      },
+      {
+        "key": "R0012-001",
+        "relation": "variant",
+        "note": "游戏外挂与抢红包外挂同属外挂下的细分变体。"
+      },
+      {
+        "key": "R0015",
+        "relation": "co-occurrence",
+        "note": "游戏外挂与恶意差评均可由攻击工具“AI黑应用”直接造成。"
+      },
+      {
+        "key": "R0021",
+        "relation": "co-occurrence",
+        "note": "游戏外挂与垃圾内容均可由攻击工具“AI黑应用”直接造成。"
+      },
+      {
+        "key": "R0023",
+        "relation": "co-occurrence",
+        "note": "游戏外挂与内容盗用均可由攻击工具“AI黑应用”直接造成。"
+      },
+      {
+        "key": "R0056",
+        "relation": "co-occurrence",
+        "note": "游戏外挂与虚假评价均可由攻击工具“AI黑应用”直接造成。"
+      }
     ]
   }
 }

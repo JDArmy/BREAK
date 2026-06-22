@@ -31,6 +31,38 @@
       "stolen card payment",
       "黑卡交易",
       "冒用卡支付"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0043-001",
+        "relation": "variant",
+        "note": "盗卡盗刷是黑卡支付的细分变体。"
+      },
+      {
+        "key": "R0017-001",
+        "relation": "co-occurrence",
+        "note": "黑卡支付与刷单在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0040",
+        "relation": "co-occurrence",
+        "note": "黑卡支付与撞卡攻击在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0041",
+        "relation": "co-occurrence",
+        "note": "黑卡支付与支付卡破解在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0044",
+        "relation": "co-occurrence",
+        "note": "黑卡支付与转账欺诈均可由威胁行为者“跨境黑产组织”直接造成。"
+      },
+      {
+        "key": "R0060",
+        "relation": "co-occurrence",
+        "note": "黑卡支付与洗钱风险均可由威胁行为者“跨境黑产组织”直接造成。"
+      }
     ]
   },
   "R0043-001": {
@@ -63,6 +95,38 @@
       "卡被盗刷",
       "盗刷支付",
       "卡盗刷交易"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0043",
+        "relation": "variant",
+        "note": "黑卡支付是盗卡盗刷的上层风险。"
+      },
+      {
+        "key": "R0040",
+        "relation": "co-occurrence",
+        "note": "盗卡盗刷与撞卡攻击在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0041",
+        "relation": "co-occurrence",
+        "note": "盗卡盗刷与支付卡破解在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0045",
+        "relation": "co-occurrence",
+        "note": "盗卡盗刷与积分盗刷共享规避手段“强制改密”。"
+      },
+      {
+        "key": "R0073",
+        "relation": "co-occurrence",
+        "note": "盗卡盗刷与设备丢失共享规避手段“强制改密”。"
+      },
+      {
+        "key": "R0083",
+        "relation": "co-occurrence",
+        "note": "盗卡盗刷与员工安全意识不足共享规避手段“强制改密”。"
+      }
     ]
   }
 }

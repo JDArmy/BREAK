@@ -26,6 +26,38 @@
       "P2P攻击",
       "连接垄断",
       "eclipse attack"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0187",
+        "relation": "co-occurrence",
+        "note": "日食攻击（Eclipse Attack）与长程攻击/无成本模拟均可由攻击工具“区块链节点与共识攻击工具”直接造成。"
+      },
+      {
+        "key": "R0188",
+        "relation": "co-occurrence",
+        "note": "日食攻击（Eclipse Attack）与自私挖矿（Selfish Mining）均可由攻击工具“区块链节点与共识攻击工具”直接造成。"
+      },
+      {
+        "key": "R0171",
+        "relation": "co-occurrence",
+        "note": "日食攻击（Eclipse Attack）与51%攻击（双花攻击）均可由攻击工具“区块链节点与共识攻击工具”直接造成。"
+      },
+      {
+        "key": "R0172",
+        "relation": "co-occurrence",
+        "note": "日食攻击（Eclipse Attack）与女巫攻击（Sybil Attack）均可由攻击工具“区块链节点与共识攻击工具”直接造成。"
+      },
+      {
+        "key": "R0175",
+        "relation": "co-occurrence",
+        "note": "日食攻击（Eclipse Attack）与区块链重放攻击均可由威胁行为者“恶意区块链节点运营者”直接造成。"
+      },
+      {
+        "key": "R0185",
+        "relation": "co-occurrence",
+        "note": "日食攻击（Eclipse Attack）与虚拟世界资产盗窃共享规避手段“链上声誉与信用体系”。"
+      }
     ]
   }
 }

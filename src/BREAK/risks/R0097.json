@@ -31,6 +31,38 @@
       "群聊赌博",
       "博彩引流",
       "赌盘"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0110",
+        "relation": "co-occurrence",
+        "note": "借助平台赌博与平台色情风险均可由攻击工具“跑分平台”直接造成。"
+      },
+      {
+        "key": "R0060",
+        "relation": "co-occurrence",
+        "note": "借助平台赌博与洗钱风险均可由攻击工具“跑分平台”直接造成。"
+      },
+      {
+        "key": "R0062",
+        "relation": "co-occurrence",
+        "note": "借助平台赌博与非法套现均可由攻击工具“跑分平台”直接造成。"
+      },
+      {
+        "key": "R0093",
+        "relation": "co-occurrence",
+        "note": "借助平台赌博与支付渠道滥用均可由攻击工具“跑分平台”直接造成。"
+      },
+      {
+        "key": "R0115",
+        "relation": "co-occurrence",
+        "note": "借助平台赌博与恶意广告投放共享规避手段“人工内容审核”。"
+      },
+      {
+        "key": "R0116-002",
+        "relation": "co-occurrence",
+        "note": "借助平台赌博与AI合成视频欺诈共享规避手段“人工内容审核”。"
+      }
     ]
   }
 }

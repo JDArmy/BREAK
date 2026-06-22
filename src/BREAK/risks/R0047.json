@@ -33,14 +33,34 @@
     ],
     "relatedRisks": [
       {
-        "key": "R0050",
+        "key": "R0001",
         "relation": "co-occurrence",
-        "note": "人机识别绕过常与设备指纹绕过组合使用。"
+        "note": "人机识别绕过与流程自动化均可由威胁行为者“打码员”直接造成。"
       },
       {
-        "key": "R0001",
-        "relation": "prerequisite",
-        "note": "流程自动化通常需要绕过人机识别。"
+        "key": "R0003-003",
+        "relation": "co-occurrence",
+        "note": "人机识别绕过与刷子风险均可由威胁行为者“打码员”直接造成。"
+      },
+      {
+        "key": "R0048",
+        "relation": "co-occurrence",
+        "note": "人机识别绕过与人脸识别绕过共享规避手段“流量加密”。"
+      },
+      {
+        "key": "R0051",
+        "relation": "co-occurrence",
+        "note": "人机识别绕过与应用被逆向共享规避手段“流量加密”。"
+      },
+      {
+        "key": "R0051-001",
+        "relation": "co-occurrence",
+        "note": "人机识别绕过与应用被抓包共享规避手段“流量加密”。"
+      },
+      {
+        "key": "R0051-002",
+        "relation": "co-occurrence",
+        "note": "人机识别绕过与HTTP请求分析共享规避手段“流量加密”。"
       }
     ]
   }

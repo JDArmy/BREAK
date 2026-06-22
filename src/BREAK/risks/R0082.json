@@ -35,6 +35,38 @@
       "蓄意破坏系统",
       "删库跑路",
       "故意破坏"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0112",
+        "relation": "co-occurrence",
+        "note": "员工恶意破坏与办公环境风险均可由攻击工具“USB Killer”直接造成。"
+      },
+      {
+        "key": "R0112-003",
+        "relation": "co-occurrence",
+        "note": "员工恶意破坏与未授权设备接入均可由攻击工具“USB Killer”直接造成。"
+      },
+      {
+        "key": "R0112-004",
+        "relation": "co-occurrence",
+        "note": "员工恶意破坏与物理损害与破坏均可由攻击工具“USB Killer”直接造成。"
+      },
+      {
+        "key": "R0085",
+        "relation": "co-occurrence",
+        "note": "员工恶意破坏与勒索攻击共享规避手段“灾难恢复”。"
+      },
+      {
+        "key": "R0085-001",
+        "relation": "co-occurrence",
+        "note": "员工恶意破坏与勒索即服务(RaaS)共享规避手段“灾难恢复”。"
+      },
+      {
+        "key": "R0085-002",
+        "relation": "co-occurrence",
+        "note": "员工恶意破坏与双重/三重勒索共享规避手段“服务器防篡改”。"
+      }
     ]
   }
 }

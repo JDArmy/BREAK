@@ -30,6 +30,38 @@
       "榜单作弊",
       "流量刷量",
       "人气造假"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0016-001",
+        "relation": "variant",
+        "note": "挂人气是刷量刷榜的细分变体。"
+      },
+      {
+        "key": "R0016-002",
+        "relation": "variant",
+        "note": "批量关注是刷量刷榜的细分变体。"
+      },
+      {
+        "key": "R0017-001",
+        "relation": "co-occurrence",
+        "note": "刷量刷榜与刷单均可由攻击工具“刷榜工具”直接造成。"
+      },
+      {
+        "key": "R0030",
+        "relation": "co-occurrence",
+        "note": "刷量刷榜与虚假注册均可由攻击工具“接码平台”直接造成。"
+      },
+      {
+        "key": "R0030-001",
+        "relation": "co-occurrence",
+        "note": "刷量刷榜与批量注册均可由攻击工具“接码平台”直接造成。"
+      },
+      {
+        "key": "R0030-004",
+        "relation": "co-occurrence",
+        "note": "刷量刷榜与空号注册均可由攻击工具“接码平台”直接造成。"
+      }
     ]
   },
   "R0016-001": {
@@ -70,6 +102,38 @@
       "直播挂人气",
       "在线人数造假",
       "直播间假人"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0016",
+        "relation": "variant",
+        "note": "刷量刷榜是挂人气的上层风险。"
+      },
+      {
+        "key": "R0016-002",
+        "relation": "variant",
+        "note": "挂人气与批量关注同属刷量刷榜下的细分变体。"
+      },
+      {
+        "key": "R0100",
+        "relation": "co-occurrence",
+        "note": "挂人气与挂机共享规避手段“外挂检测”。"
+      },
+      {
+        "key": "R0103",
+        "relation": "co-occurrence",
+        "note": "挂人气与观战透视共享规避手段“外挂检测”。"
+      },
+      {
+        "key": "R0104",
+        "relation": "co-occurrence",
+        "note": "挂人气与护航作弊共享规避手段“外挂检测”。"
+      },
+      {
+        "key": "R0001",
+        "relation": "co-occurrence",
+        "note": "挂人气与流程自动化共享规避手段“图文式人机验证”。"
+      }
     ]
   },
   "R0016-002": {
@@ -105,6 +169,38 @@
       "批量加粉",
       "批量关注脚本",
       "关注刷量"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0016",
+        "relation": "variant",
+        "note": "刷量刷榜是批量关注的上层风险。"
+      },
+      {
+        "key": "R0016-001",
+        "relation": "variant",
+        "note": "批量关注与挂人气同属刷量刷榜下的细分变体。"
+      },
+      {
+        "key": "R0036-001",
+        "relation": "co-occurrence",
+        "note": "批量关注与多因素疲劳攻击共享规避手段“设备画像”。"
+      },
+      {
+        "key": "R0112-001",
+        "relation": "co-occurrence",
+        "note": "批量关注与自带设备办公风险共享规避手段“设备画像”。"
+      },
+      {
+        "key": "R0001",
+        "relation": "co-occurrence",
+        "note": "批量关注与流程自动化共享规避手段“设备画像”。"
+      },
+      {
+        "key": "R0001-002",
+        "relation": "co-occurrence",
+        "note": "批量关注与自动化模拟器共享规避手段“设备画像”。"
+      }
     ]
   }
 }

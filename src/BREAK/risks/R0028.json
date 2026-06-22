@@ -28,6 +28,38 @@
       "敏感数据泄漏",
       "隐私泄露",
       "数据导出滥用"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0078",
+        "relation": "co-occurrence",
+        "note": "数据渗出风险与数据泄露在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0084",
+        "relation": "co-occurrence",
+        "note": "数据渗出风险与钓鱼攻击均可由攻击工具“ClickFix欺骗工具”直接造成。"
+      },
+      {
+        "key": "R0085",
+        "relation": "co-occurrence",
+        "note": "数据渗出风险与勒索攻击均可由攻击工具“系统/应用漏洞利用工具”直接造成。"
+      },
+      {
+        "key": "R0086",
+        "relation": "co-occurrence",
+        "note": "数据渗出风险与服务器挖矿均可由攻击工具“系统/应用漏洞利用工具”直接造成。"
+      },
+      {
+        "key": "R0087",
+        "relation": "co-occurrence",
+        "note": "数据渗出风险与业务篡改风险均可由攻击工具“系统/应用漏洞利用工具”直接造成。"
+      },
+      {
+        "key": "R0109",
+        "relation": "co-occurrence",
+        "note": "数据渗出风险与越权/未授权访问均可由攻击工具“系统/应用漏洞利用工具”直接造成。"
+      }
     ]
   }
 }

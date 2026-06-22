@@ -33,6 +33,38 @@
       "违规上架",
       "引流商品",
       "恶意商品"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0059",
+        "relation": "co-occurrence",
+        "note": "违规违法商品与商业秘密泄露均可由攻击工具“暗网”直接造成。"
+      },
+      {
+        "key": "R0060",
+        "relation": "co-occurrence",
+        "note": "违规违法商品与洗钱风险均可由攻击工具“暗网”直接造成。"
+      },
+      {
+        "key": "R0078",
+        "relation": "co-occurrence",
+        "note": "违规违法商品与数据泄露均可由攻击工具“暗网”直接造成。"
+      },
+      {
+        "key": "R0033-001",
+        "relation": "co-occurrence",
+        "note": "违规违法商品与失联跑路共享规避手段“保证金机制”。"
+      },
+      {
+        "key": "R0042",
+        "relation": "co-occurrence",
+        "note": "违规违法商品与虚假库存共享规避手段“保证金机制”。"
+      },
+      {
+        "key": "R0052",
+        "relation": "co-occurrence",
+        "note": "违规违法商品与低价高邮共享规避手段“店铺处罚”。"
+      }
     ]
   }
 }

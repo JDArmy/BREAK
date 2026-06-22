@@ -30,6 +30,38 @@
       "隐私计算安全",
       "模型反推",
       "联邦学习投毒"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0134",
+        "relation": "co-occurrence",
+        "note": "隐私计算滥用风险与大数据杀熟风险共享规避手段“算法审计机制”。"
+      },
+      {
+        "key": "R0157",
+        "relation": "co-occurrence",
+        "note": "隐私计算滥用风险与AI浏览器/手机黑箱风险共享规避手段“算法审计机制”。"
+      },
+      {
+        "key": "R0218",
+        "relation": "co-occurrence",
+        "note": "隐私计算滥用风险与空间计算隐私泄露共享规避手段“隐私增强技术”。"
+      },
+      {
+        "key": "R0221",
+        "relation": "co-occurrence",
+        "note": "隐私计算滥用风险与跨虚实身份关联攻击共享规避手段“隐私增强技术”。"
+      },
+      {
+        "key": "R0243",
+        "relation": "co-occurrence",
+        "note": "隐私计算滥用风险与训练数据投毒风险共享规避手段“算法审计机制”。"
+      },
+      {
+        "key": "R0123",
+        "relation": "co-occurrence",
+        "note": "隐私计算滥用风险与算法合规风险共享规避手段“算法审计机制”。"
+      }
     ]
   }
 }

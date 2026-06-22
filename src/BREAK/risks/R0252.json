@@ -24,6 +24,38 @@
       "位置数据滥用",
       "车载应用越权"
     ],
-    "updated": "2026-06-22"
+    "updated": "2026-06-22",
+    "relatedRisks": [
+      {
+        "key": "R0251",
+        "relation": "co-occurrence",
+        "note": "车载数据接口滥用与汽车OTA更新劫持均可由攻击工具“车联网OTA与接口测试工具”直接造成。"
+      },
+      {
+        "key": "R0147",
+        "relation": "co-occurrence",
+        "note": "车载数据接口滥用与支付机构监管合规风险共享规避手段“数据分类分级”。"
+      },
+      {
+        "key": "R0149",
+        "relation": "co-occurrence",
+        "note": "车载数据接口滥用与非人类身份与API密钥滥用风险共享规避手段“数据分类分级”。"
+      },
+      {
+        "key": "R0153",
+        "relation": "co-occurrence",
+        "note": "车载数据接口滥用与影子AI风险共享规避手段“数据分类分级”。"
+      },
+      {
+        "key": "R0155",
+        "relation": "co-occurrence",
+        "note": "车载数据接口滥用与跨境数据走私风险共享规避手段“数据分类分级”。"
+      },
+      {
+        "key": "R0180",
+        "relation": "co-occurrence",
+        "note": "车载数据接口滥用与车联网(V2X)安全风险共享规避手段“车联网PKI认证体系”。"
+      }
+    ]
   }
 }

@@ -24,6 +24,38 @@
       "预言机攻击",
       "价格预言机",
       "oracle manipulation"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0161",
+        "relation": "co-occurrence",
+        "note": "预言机操纵与跨链桥攻击在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0170",
+        "relation": "co-occurrence",
+        "note": "预言机操纵与MEV攻击（矿工可提取价值）均可由攻击工具“DeFi攻击脚本”直接造成。"
+      },
+      {
+        "key": "R0173",
+        "relation": "co-occurrence",
+        "note": "预言机操纵与Gas费操纵均可由攻击工具“DeFi攻击脚本”直接造成。"
+      },
+      {
+        "key": "R0160",
+        "relation": "co-occurrence",
+        "note": "预言机操纵与闪电贷攻击均可由攻击工具“DeFi攻击脚本”直接造成。"
+      },
+      {
+        "key": "R0167",
+        "relation": "co-occurrence",
+        "note": "预言机操纵与DAO治理攻击均可由攻击工具“DeFi攻击脚本”直接造成。"
+      },
+      {
+        "key": "R0168",
+        "relation": "co-occurrence",
+        "note": "预言机操纵与Rug Pull（项目方跑路）均可由攻击工具“DeFi攻击脚本”直接造成。"
+      }
     ]
   }
 }

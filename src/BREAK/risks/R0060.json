@@ -27,6 +27,38 @@
       "虚拟发货洗钱",
       "资金转移",
       "非法资金转移"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0093",
+        "relation": "co-occurrence",
+        "note": "洗钱风险与支付渠道滥用在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0121",
+        "relation": "co-occurrence",
+        "note": "洗钱风险与虚拟货币洗钱风险在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0062",
+        "relation": "co-occurrence",
+        "note": "洗钱风险与非法套现均可由攻击工具“跑分平台”直接造成。"
+      },
+      {
+        "key": "R0078",
+        "relation": "co-occurrence",
+        "note": "洗钱风险与数据泄露均可由攻击工具“暗网”直接造成。"
+      },
+      {
+        "key": "R0094",
+        "relation": "co-occurrence",
+        "note": "洗钱风险与信用卡欺诈均可由攻击工具“洗钱银行卡”直接造成。"
+      },
+      {
+        "key": "R0096",
+        "relation": "co-occurrence",
+        "note": "洗钱风险与平台网贷欺诈均可由攻击工具“洗钱银行卡”直接造成。"
+      }
     ]
   }
 }

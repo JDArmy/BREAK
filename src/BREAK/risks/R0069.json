@@ -25,6 +25,38 @@
       "非法文件托管",
       "上传存储滥用",
       "违规内容上传"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0069-001",
+        "relation": "variant",
+        "note": "图床滥用是上传滥用的细分变体。"
+      },
+      {
+        "key": "R0069-002",
+        "relation": "variant",
+        "note": "云存储滥用是上传滥用的细分变体。"
+      },
+      {
+        "key": "R0071",
+        "relation": "co-occurrence",
+        "note": "上传滥用与生成式AI风险同属“内容与社区治理”风险场景。"
+      },
+      {
+        "key": "R0071-001",
+        "relation": "co-occurrence",
+        "note": "上传滥用与AIGC隐私泄露同属“内容与社区治理”风险场景。"
+      },
+      {
+        "key": "R0071-002",
+        "relation": "co-occurrence",
+        "note": "上传滥用与AIGC合规风险同属“内容与社区治理”风险场景。"
+      },
+      {
+        "key": "R0071-003",
+        "relation": "co-occurrence",
+        "note": "上传滥用与AI生成劣质内容同属“内容与社区治理”风险场景。"
+      }
     ]
   },
   "R0069-001": {
@@ -54,6 +86,38 @@
       "以图存视频",
       "图床存视频",
       "图片托管滥用"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0069",
+        "relation": "variant",
+        "note": "上传滥用是图床滥用的上层风险。"
+      },
+      {
+        "key": "R0069-002",
+        "relation": "variant",
+        "note": "图床滥用与云存储滥用同属上传滥用下的细分变体。"
+      },
+      {
+        "key": "R0071",
+        "relation": "co-occurrence",
+        "note": "图床滥用与生成式AI风险同属“内容与社区治理”风险场景。"
+      },
+      {
+        "key": "R0071-001",
+        "relation": "co-occurrence",
+        "note": "图床滥用与AIGC隐私泄露同属“内容与社区治理”风险场景。"
+      },
+      {
+        "key": "R0071-002",
+        "relation": "co-occurrence",
+        "note": "图床滥用与AIGC合规风险同属“内容与社区治理”风险场景。"
+      },
+      {
+        "key": "R0071-003",
+        "relation": "co-occurrence",
+        "note": "图床滥用与AI生成劣质内容同属“内容与社区治理”风险场景。"
+      }
     ]
   },
   "R0069-002": {
@@ -84,6 +148,38 @@
       "网盘滥用",
       "存储桶滥用",
       "云存储外链"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0069",
+        "relation": "variant",
+        "note": "上传滥用是云存储滥用的上层风险。"
+      },
+      {
+        "key": "R0069-001",
+        "relation": "variant",
+        "note": "云存储滥用与图床滥用同属上传滥用下的细分变体。"
+      },
+      {
+        "key": "R0071",
+        "relation": "co-occurrence",
+        "note": "云存储滥用与生成式AI风险同属“内容与社区治理”风险场景。"
+      },
+      {
+        "key": "R0071-001",
+        "relation": "co-occurrence",
+        "note": "云存储滥用与AIGC隐私泄露同属“内容与社区治理”风险场景。"
+      },
+      {
+        "key": "R0071-002",
+        "relation": "co-occurrence",
+        "note": "云存储滥用与AIGC合规风险同属“内容与社区治理”风险场景。"
+      },
+      {
+        "key": "R0071-003",
+        "relation": "co-occurrence",
+        "note": "云存储滥用与AI生成劣质内容同属“内容与社区治理”风险场景。"
+      }
     ]
   }
 }

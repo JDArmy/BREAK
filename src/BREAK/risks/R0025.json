@@ -11,6 +11,23 @@
       "A0020",
       "A0021"
     ],
+    "relatedRisks": [
+      {
+        "key": "R0111",
+        "relation": "co-occurrence",
+        "note": "恶意挖墙脚常伴随员工违规私联客户或主播。"
+      },
+      {
+        "key": "R0067",
+        "relation": "co-occurrence",
+        "note": "客户、主播等资源信息外流可能与文件或文档盗窃并发。"
+      },
+      {
+        "key": "R0255",
+        "relation": "co-occurrence",
+        "note": "挖客户行为可能利用客服、CRM或工单中的客户联系信息。"
+      }
+    ],
     "references": [
       {
         "title": "广告推广型网络黑灰产犯罪的治理路径|犯罪行为|犯罪活动_网易订阅",

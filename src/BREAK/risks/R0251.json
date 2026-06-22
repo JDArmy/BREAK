@@ -24,6 +24,38 @@
       "车辆软件供应链",
       "车端更新安全"
     ],
-    "updated": "2026-06-22"
+    "updated": "2026-06-22",
+    "relatedRisks": [
+      {
+        "key": "R0252",
+        "relation": "co-occurrence",
+        "note": "汽车OTA更新劫持与车载数据接口滥用均可由攻击工具“车联网OTA与接口测试工具”直接造成。"
+      },
+      {
+        "key": "R0180",
+        "relation": "co-occurrence",
+        "note": "汽车OTA更新劫持与车联网(V2X)安全风险共享规避手段“固件OTA更新签名验证”。"
+      },
+      {
+        "key": "R0181",
+        "relation": "co-occurrence",
+        "note": "汽车OTA更新劫持与OTA更新劫持共享规避手段“固件OTA更新签名验证”。"
+      },
+      {
+        "key": "R0190",
+        "relation": "co-occurrence",
+        "note": "汽车OTA更新劫持与医疗物联网(IoMT)安全风险共享规避手段“固件OTA更新签名验证”。"
+      },
+      {
+        "key": "R0109",
+        "relation": "co-occurrence",
+        "note": "汽车OTA更新劫持与越权/未授权访问同属“IoT设备固件、身份与连接安全”风险场景。"
+      },
+      {
+        "key": "R0142",
+        "relation": "co-occurrence",
+        "note": "汽车OTA更新劫持与中间人攻击同属“IoT设备固件、身份与连接安全”风险场景。"
+      }
+    ]
   }
 }

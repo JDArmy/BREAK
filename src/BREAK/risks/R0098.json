@@ -27,6 +27,38 @@
       "冒名认证",
       "人证不符",
       "虚假实名认证"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0142",
+        "relation": "co-occurrence",
+        "note": "虚假身份认证与中间人攻击均可由攻击工具“虚假APP”直接造成。"
+      },
+      {
+        "key": "R0144",
+        "relation": "co-occurrence",
+        "note": "虚假身份认证与域名/品牌仿冒均可由攻击工具“钓鱼工具包”直接造成。"
+      },
+      {
+        "key": "R0150",
+        "relation": "co-occurrence",
+        "note": "虚假身份认证与杀猪盘/投资诈骗风险均可由攻击工具“欺诈即服务(FaaS)平台”直接造成。"
+      },
+      {
+        "key": "R0005-001",
+        "relation": "co-occurrence",
+        "note": "虚假身份认证与批量小号作弊均可由攻击工具“拦截卡”直接造成。"
+      },
+      {
+        "key": "R0030",
+        "relation": "co-occurrence",
+        "note": "虚假身份认证与虚假注册均可由攻击工具“拦截卡”直接造成。"
+      },
+      {
+        "key": "R0030-001",
+        "relation": "co-occurrence",
+        "note": "虚假身份认证与批量注册均可由攻击工具“拦截卡”直接造成。"
+      }
     ]
   }
 }

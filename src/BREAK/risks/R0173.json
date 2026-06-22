@@ -25,6 +25,38 @@
       "Gas拍卖",
       "优先级操纵",
       "gas manipulation"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0160",
+        "relation": "co-occurrence",
+        "note": "Gas费操纵与闪电贷攻击均可由攻击工具“DeFi攻击脚本”直接造成。"
+      },
+      {
+        "key": "R0167",
+        "relation": "co-occurrence",
+        "note": "Gas费操纵与DAO治理攻击均可由攻击工具“DeFi攻击脚本”直接造成。"
+      },
+      {
+        "key": "R0168",
+        "relation": "co-occurrence",
+        "note": "Gas费操纵与Rug Pull（项目方跑路）均可由攻击工具“DeFi攻击脚本”直接造成。"
+      },
+      {
+        "key": "R0169",
+        "relation": "co-occurrence",
+        "note": "Gas费操纵与预言机操纵均可由攻击工具“DeFi攻击脚本”直接造成。"
+      },
+      {
+        "key": "R0170",
+        "relation": "co-occurrence",
+        "note": "Gas费操纵与MEV攻击（矿工可提取价值）均可由攻击工具“DeFi攻击脚本”直接造成。"
+      },
+      {
+        "key": "R0175",
+        "relation": "co-occurrence",
+        "note": "Gas费操纵与区块链重放攻击均可由威胁行为者“DeFi协议攻击者”直接造成。"
+      }
     ]
   }
 }

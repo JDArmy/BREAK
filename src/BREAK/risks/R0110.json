@@ -30,6 +30,38 @@
       "成人视频",
       "软色情",
       "招嫖引流"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0116",
+        "relation": "co-occurrence",
+        "note": "平台色情风险与AI深度伪造风险均可由攻击工具“AI黑应用”直接造成。"
+      },
+      {
+        "key": "R0001-002",
+        "relation": "co-occurrence",
+        "note": "平台色情风险与自动化模拟器均可由攻击工具“发贴机”直接造成。"
+      },
+      {
+        "key": "R0006",
+        "relation": "co-occurrence",
+        "note": "平台色情风险与虚假宣传均可由攻击工具“AI黑应用”直接造成。"
+      },
+      {
+        "key": "R0012-002",
+        "relation": "co-occurrence",
+        "note": "平台色情风险与游戏外挂均可由攻击工具“AI黑应用”直接造成。"
+      },
+      {
+        "key": "R0015",
+        "relation": "co-occurrence",
+        "note": "平台色情风险与恶意差评均可由攻击工具“发贴机”直接造成。"
+      },
+      {
+        "key": "R0021",
+        "relation": "co-occurrence",
+        "note": "平台色情风险与垃圾内容均可由攻击工具“发贴机”直接造成。"
+      }
     ]
   }
 }

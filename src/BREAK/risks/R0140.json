@@ -26,6 +26,38 @@
       "会员共享",
       "合租会员",
       "反复试用"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0030-001",
+        "relation": "co-occurrence",
+        "note": "会员/订阅滥用与批量注册在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0141",
+        "relation": "co-occurrence",
+        "note": "会员/订阅滥用与地理位置欺诈共享规避手段“交易风险监控”。"
+      },
+      {
+        "key": "R0145",
+        "relation": "co-occurrence",
+        "note": "会员/订阅滥用与内容农场风险共享规避手段“行为生物特征识别”。"
+      },
+      {
+        "key": "R0146",
+        "relation": "co-occurrence",
+        "note": "会员/订阅滥用与消费贷骗贷（真实补缴）共享规避手段“交易风险监控”。"
+      },
+      {
+        "key": "R0150",
+        "relation": "co-occurrence",
+        "note": "会员/订阅滥用与杀猪盘/投资诈骗风险共享规避手段“交易风险监控”。"
+      },
+      {
+        "key": "R0196",
+        "relation": "co-occurrence",
+        "note": "会员/订阅滥用与量子计算威胁共享规避手段“交易风险监控”。"
+      }
     ]
   }
 }

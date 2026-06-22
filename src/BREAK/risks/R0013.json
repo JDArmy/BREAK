@@ -25,6 +25,38 @@
       "跳过广告",
       "广告拦截",
       "屏蔽贴片广告"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0032",
+        "relation": "co-occurrence",
+        "note": "广告屏蔽与账号盗取均可由攻击工具“浏览器插件”直接造成。"
+      },
+      {
+        "key": "R0067",
+        "relation": "co-occurrence",
+        "note": "广告屏蔽与文件或文档盗窃均可由攻击工具“劫持插件”直接造成。"
+      },
+      {
+        "key": "R0083-001",
+        "relation": "co-occurrence",
+        "note": "广告屏蔽与员工账号被盗均可由攻击工具“劫持插件”直接造成。"
+      },
+      {
+        "key": "R0003-001",
+        "relation": "co-occurrence",
+        "note": "广告屏蔽与秒拍出价均可由攻击工具“浏览器插件”直接造成。"
+      },
+      {
+        "key": "R0003-002",
+        "relation": "co-occurrence",
+        "note": "广告屏蔽与拍卖狙击均可由攻击工具“浏览器插件”直接造成。"
+      },
+      {
+        "key": "R0007",
+        "relation": "co-occurrence",
+        "note": "广告屏蔽与违规插件推广均可由攻击工具“浏览器插件”直接造成。"
+      }
     ]
   }
 }
