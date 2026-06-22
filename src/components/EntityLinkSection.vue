@@ -41,6 +41,8 @@ const useDetailRoute = computed(
 const to = (k: string) =>
   useDetailRoute.value
     ? { name: props.detailRouteName, params: { [props.paramKey]: k } }
+    : props.detailRouteName === props.routeName
+      ? { name: props.routeName, params: { [props.paramKey]: k }, hash: `#${k}` }
     : { name: props.routeName, hash: `#${k}` };
 </script>
 

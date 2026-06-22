@@ -195,6 +195,19 @@ function readGitVersion(ref) {
   }
 }
 
+function resolvePreviousVersionRef() {
+  if (process.env.BREAK_PREVIOUS_VERSION_REF) {
+    return process.env.BREAK_PREVIOUS_VERSION_REF;
+  }
+  if (process.env.GITHUB_BASE_REF) {
+    return `origin/${process.env.GITHUB_BASE_REF}`;
+  }
+  if (process.env.GITHUB_EVENT_NAME === 'push' && process.env.GITHUB_EVENT_BEFORE) {
+    return process.env.GITHUB_EVENT_BEFORE;
+  }
+  return 'HEAD';
+}
+
 /**
  * 判断当前是否为次版本(minor)变化，用于决定是否运行重型浏览器测试
  * (test:relation-stability / test:lighthouse)。
@@ -211,14 +224,15 @@ function readGitVersion(ref) {
  */
 export function shouldRunOnMinorBump() {
   const current = readJson(path.join(projectRoot, 'package.json')).version;
-  const previous = readGitVersion('HEAD');
+  const previousRef = resolvePreviousVersionRef();
+  const previous = readGitVersion(previousRef);
   const curSeg = minorSegment(current);
   const prevSeg = minorSegment(previous);
   if (!curSeg || !prevSeg) {
-    return { shouldRun: true, current, previous, reason: '无法读取对比版本，默认运行' };
+    return { shouldRun: true, current, previous, reason: `无法读取对比版本(${previousRef})，默认运行` };
   }
   if (curSeg === prevSeg) {
-    return { shouldRun: false, current, previous, reason: `非次版本变化 (${previous} → ${current})` };
+    return { shouldRun: false, current, previous, reason: `非次版本变化 (${previousRef}: ${previous} → ${current})` };
   }
-  return { shouldRun: true, current, previous, reason: `次版本变化 (${previous} → ${current})` };
+  return { shouldRun: true, current, previous, reason: `次版本变化 (${previousRef}: ${previous} → ${current})` };
 }

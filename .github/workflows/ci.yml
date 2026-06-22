@@ -4,11 +4,17 @@ on:
   pull_request:
     branches: [main]
 
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
-  check:
+  verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v5
         with:
           node-version: 24
@@ -22,8 +28,42 @@ jobs:
       - run: npm run validate:schema-docs
       - run: npm run validate:home-counts
       - run: npm run export:data
-      - run: npm run build-only
       - run: npm run export:data-package
-      - run: npm run audit:bundle:check
       - run: npm run validate:data-export
       - run: npm run validate:data-package
+
+  build:
+    runs-on: ubuntu-latest
+    needs: verify
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run export:data
+      - run: npm run build-only
+      - run: npm run audit:bundle:check
+
+  browser-regression:
+    runs-on: ubuntu-latest
+    needs: build
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run export:data
+      - run: npm run build-only
+      - run: npm run test:smoke
+      - run: npm run test:performance
+      - run: npm run test:relation-stability
