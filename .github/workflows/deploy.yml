@@ -40,9 +40,18 @@ jobs:
           fi
 
           base="${{ github.event.before }}"
-          if [[ -z "$base" || "$base" =~ ^0+$ ]]; then
-            base="$(git rev-parse HEAD^)"
+          if [[ -z "$base" || "$base" =~ ^0+$ ]] || ! git cat-file -e "$base^{commit}" 2>/dev/null; then
+            echo "base commit unavailable: ${base:-empty}; fallback to HEAD^"
+            base="$(git rev-parse HEAD^ 2>/dev/null || true)"
           fi
+
+          if [[ -z "$base" ]] || ! git cat-file -e "$base^{commit}" 2>/dev/null; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "changed=base commit unavailable; run browser audits defensively" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "detecting browser audit changes from $base to $GITHUB_SHA"
 
           changed="$(
             git diff --name-only "$base" "$GITHUB_SHA" -- \

@@ -1,5 +1,9 @@
 # Change log
 
+## 2.21.19
+
+- 修复 Deploy workflow 的浏览器审计变更检测：`github.event.before` 不存在时回退到 `HEAD^`，仍不可用则保守运行审计，避免 `fatal: bad object` 中断发布
+
 ## 2.21.18
 
 - 补充 `EntityLinkSection` 单元测试中的 `ElTooltip` stub，消除 coverage 阶段的组件解析警告
