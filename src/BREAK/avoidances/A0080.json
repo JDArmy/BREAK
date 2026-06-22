@@ -24,6 +24,38 @@
       "数据定级",
       "分级管控"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0068",
+        "relation": "complement",
+        "note": "共同覆盖 3 个风险。"
+      },
+      {
+        "key": "A0035",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0050",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0019",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0050-002",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0054",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
   }
 }

@@ -24,6 +24,38 @@
       "横向移动阻断",
       "子网访问控制"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0017",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0041",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0052",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0054",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0055",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0007",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
   }
 }

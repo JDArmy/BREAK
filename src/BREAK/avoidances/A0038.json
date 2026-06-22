@@ -21,7 +21,39 @@
       "匿名代理识别",
       "代理流量识别"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0010",
+        "relation": "complement",
+        "note": "共同覆盖 18 个风险，共同限制 7 个攻击工具。"
+      },
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 17 个风险，共同限制 7 个攻击工具。"
+      },
+      {
+        "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 15 个风险，共同限制 7 个攻击工具。"
+      },
+      {
+        "key": "A0001-004",
+        "relation": "complement",
+        "note": "共同覆盖 15 个风险，共同限制 7 个攻击工具。"
+      },
+      {
+        "key": "A0016",
+        "relation": "complement",
+        "note": "共同覆盖 16 个风险，共同限制 6 个攻击工具。"
+      },
+      {
+        "key": "A0021",
+        "relation": "complement",
+        "note": "共同覆盖 14 个风险，共同限制 7 个攻击工具。"
+      }
+    ]
   },
   "A0038-001": {
     "title": "网页访问代理识别",
@@ -45,7 +77,39 @@
       "Selenium访问识别",
       "脚本访问识别"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0038",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 7 个风险。"
+      },
+      {
+        "key": "A0001-004",
+        "relation": "complement",
+        "note": "共同覆盖 7 个风险。"
+      },
+      {
+        "key": "A0010",
+        "relation": "complement",
+        "note": "共同覆盖 7 个风险。"
+      },
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 7 个风险。"
+      },
+      {
+        "key": "A0016-001",
+        "relation": "complement",
+        "note": "共同覆盖 7 个风险。"
+      }
+    ]
   },
   "A0038-002": {
     "title": "网络代理识别",
@@ -69,6 +133,38 @@
       "匿名代理IP",
       "隧道代理识别"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0016-001",
+        "relation": "complement",
+        "note": "共同覆盖 8 个风险，共同限制 2 个攻击工具。"
+      },
+      {
+        "key": "A0029-002",
+        "relation": "complement",
+        "note": "共同覆盖 7 个风险，共同限制 2 个攻击工具。"
+      },
+      {
+        "key": "A0038",
+        "relation": "complement",
+        "note": "共同覆盖 7 个风险，共同限制 2 个攻击工具。"
+      },
+      {
+        "key": "A0021",
+        "relation": "complement",
+        "note": "共同覆盖 8 个风险。"
+      },
+      {
+        "key": "A0038",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 7 个风险。"
+      }
+    ]
   }
 }

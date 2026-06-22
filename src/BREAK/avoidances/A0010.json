@@ -21,7 +21,39 @@
       "客户端环境检测",
       "设备风险检测"
     ],
-    "effectiveness": "medium"
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 68 个风险，共同限制 13 个攻击工具。"
+      },
+      {
+        "key": "A0021",
+        "relation": "complement",
+        "note": "共同覆盖 51 个风险，共同限制 22 个攻击工具。"
+      },
+      {
+        "key": "A0016",
+        "relation": "complement",
+        "note": "共同覆盖 50 个风险，共同限制 9 个攻击工具。"
+      },
+      {
+        "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 32 个风险，共同限制 15 个攻击工具。"
+      },
+      {
+        "key": "A0004",
+        "relation": "complement",
+        "note": "共同覆盖 36 个风险，共同限制 9 个攻击工具。"
+      },
+      {
+        "key": "A0059",
+        "relation": "complement",
+        "note": "共同覆盖 27 个风险，共同限制 14 个攻击工具。"
+      }
+    ]
   },
   "A0010-001": {
     "title": "模拟器检测",
@@ -45,7 +77,39 @@
       "真机校验",
       "模拟环境检测"
     ],
-    "effectiveness": "medium"
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0010",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0010-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0010-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0010-004",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0010-005",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0010-006",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      }
+    ]
   },
   "A0010-002": {
     "title": "云手机检测",
@@ -69,7 +133,39 @@
       "群控云手机",
       "云设备检测"
     ],
-    "effectiveness": "medium"
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0010",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0010-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0010-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0010-004",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0010-005",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0010-006",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      }
+    ]
   },
   "A0010-003": {
     "title": "ROOT/越狱检测",
@@ -93,7 +189,39 @@
       "su检测",
       "设备提权检测"
     ],
-    "effectiveness": "medium"
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0010",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0010-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0010-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0010-004",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0010-005",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0010-006",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      }
+    ]
   },
   "A0010-004": {
     "title": "外挂检测",
@@ -117,7 +245,39 @@
       "DLL注入检测",
       "DMA外挂检测"
     ],
-    "effectiveness": "medium"
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0010",
+        "relation": "complement",
+        "note": "共同覆盖 11 个风险，共同限制 5 个攻击工具。"
+      },
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 12 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0020",
+        "relation": "complement",
+        "note": "共同覆盖 10 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0029-001",
+        "relation": "complement",
+        "note": "共同覆盖 7 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0010",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0013",
+        "relation": "complement",
+        "note": "共同覆盖 5 个风险，共同限制 2 个攻击工具。"
+      }
+    ]
   },
   "A0010-005": {
     "title": "多开检测",
@@ -141,7 +301,39 @@
       "进程互斥检测",
       "克隆应用检测"
     ],
-    "effectiveness": "medium"
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0010",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0010-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0010-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0010-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0010-004",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0010-006",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      }
+    ]
   },
   "A0010-006": {
     "title": "调试器检测",
@@ -165,7 +357,39 @@
       "BeingDebugged检测",
       "动态调试检测"
     ],
-    "effectiveness": "medium"
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0010",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0010-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0010-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0010-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0010-004",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0010-005",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      }
+    ]
   },
   "A0010-007": {
     "title": "虚拟机检测",
@@ -189,7 +413,39 @@
       "VMware检测",
       "宿主机识别"
     ],
-    "effectiveness": "medium"
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0010",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0010-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0010-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0010-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0010-004",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0010-005",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      }
+    ]
   },
   "A0010-008": {
     "title": "无头浏览器检测",
@@ -213,7 +469,39 @@
       "自动化浏览器检测",
       "浏览器无头检测"
     ],
-    "effectiveness": "medium"
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0010",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0010-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0010-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0010-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0010-004",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0010-005",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      }
+    ]
   },
   "A0010-009": {
     "title": "HOOK检测",
@@ -236,6 +524,38 @@
       "API Hook检测",
       "反Hook"
     ],
-    "effectiveness": "medium"
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0010",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0010-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0010-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0010-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0010-004",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0010-005",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      }
+    ]
   }
 }

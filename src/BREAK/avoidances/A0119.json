@@ -20,6 +20,18 @@
       "timelock",
       "闪电贷防护"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0120",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0121",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
   }
 }

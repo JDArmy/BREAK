@@ -16,6 +16,11 @@ const riskRelationSchema = z.object({
   relation: z.enum(["prerequisite", "co-occurrence", "escalation", "variant"]),
   note: nonEmptyString.optional(),
 });
+const avoidanceRelationSchema = z.object({
+  key: nonEmptyString,
+  relation: z.enum(["prerequisite", "complement", "alternative", "mitigates-gap"]),
+  note: nonEmptyString.optional(),
+});
 
 export const referenceSchema = z.object({
   title: nonEmptyString,
@@ -44,6 +49,7 @@ export const avoidanceSchema = z.object({
   description: nonEmptyString,
   complexity: nonEmptyString.optional(),
   limitation: z.string().optional(),
+  relatedAvoidances: z.array(avoidanceRelationSchema).default([]),
   references: z.array(referenceSchema).default([]),
   updated: z.string().optional(),
 });

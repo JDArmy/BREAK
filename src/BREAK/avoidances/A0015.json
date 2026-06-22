@@ -21,6 +21,38 @@
       "反欺诈策略",
       "策略模型"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0010",
+        "relation": "complement",
+        "note": "共同覆盖 68 个风险，共同限制 13 个攻击工具。"
+      },
+      {
+        "key": "A0016",
+        "relation": "complement",
+        "note": "共同覆盖 69 个风险，共同限制 10 个攻击工具。"
+      },
+      {
+        "key": "A0021",
+        "relation": "complement",
+        "note": "共同覆盖 54 个风险，共同限制 10 个攻击工具。"
+      },
+      {
+        "key": "A0020",
+        "relation": "complement",
+        "note": "共同覆盖 53 个风险，共同限制 5 个攻击工具。"
+      },
+      {
+        "key": "A0004",
+        "relation": "complement",
+        "note": "共同覆盖 39 个风险，共同限制 11 个攻击工具。"
+      },
+      {
+        "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 33 个风险，共同限制 11 个攻击工具。"
+      }
+    ]
   }
 }

@@ -20,6 +20,18 @@
       "时序攻击",
       "硬件安全"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0144",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0145",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
   }
 }

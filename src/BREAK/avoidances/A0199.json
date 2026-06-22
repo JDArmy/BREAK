@@ -14,6 +14,18 @@
     ],
     "updated": "2026-06-17",
     "definition": "限制流水线令牌、Runner、制品库和部署凭证权限，降低构建链路被滥用风险。",
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0200",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0201",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
+      }
+    ]
   }
 }

@@ -14,6 +14,18 @@
     ],
     "updated": "2026-06-17",
     "definition": "验证DID、VC签发方、撤销状态和展示策略，降低身份凭证伪造风险。",
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0155",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0188",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
   }
 }

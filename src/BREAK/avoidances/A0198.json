@@ -15,6 +15,28 @@
     ],
     "updated": "2026-06-17",
     "definition": "基于OpenAPI契约、类型约束和负载测试校验输入，减少注入和参数污染。",
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0219",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0221",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0204",
+        "relation": "complement",
+        "note": "共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0014-002",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
   }
 }

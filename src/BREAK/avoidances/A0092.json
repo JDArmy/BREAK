@@ -28,6 +28,38 @@
       "移动恶意应用检测",
       "移动设备风险防护"
     ],
-    "effectiveness": "medium"
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0078",
+        "relation": "complement",
+        "note": "条目正文明确提及该规避手段。"
+      },
+      {
+        "key": "A0051",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0059",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0108",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0190",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0191",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
   }
 }

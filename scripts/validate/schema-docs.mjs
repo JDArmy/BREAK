@@ -94,7 +94,7 @@ const fieldDescriptions = {
   usageExample: '使用示例。',
   summary: '案例摘要，80-150 字事实性描述。',
   incidentTime: '案例发生时间，YYYY 或 YYYY-MM。',
-  relatedAvoidances: '相关规避手段 ID 列表。',
+  relatedAvoidances: '相关规避手段列表；Avoidance 中为规避手段间关联对象列表。',
   relatedAttackTools: '相关攻击工具 ID 列表。',
   relatedThreatActors: '相关威胁行为者 ID 列表。',
   relatedBusinessScenes: '相关业务场景 ID 列表。',
@@ -156,6 +156,7 @@ function countRecords(relativeDir) {
 
 function typeFor({ name, expression }) {
   if (expression.includes('riskRelationSchema')) return 'RiskRelation[]';
+  if (expression.includes('avoidanceRelationSchema')) return 'AvoidanceRelation[]';
   if (expression.includes('avoidanceCategorySchema')) {
     return enumValues.avoidanceCategorySchema.map((item) => `"${item}"`).join(' | ');
   }
@@ -261,6 +262,8 @@ function generateMarkdown() {
     '| Field | Direction | Meaning |',
     '|-------|-----------|---------|',
     '| `Risk.avoidances` | Risk -> Avoidance | Direct mitigations for the risk. |',
+    '| `Risk.relatedRisks` | Risk -> Risk | Semantic relations between risks, including prerequisites, co-occurrence, escalation, and variants. |',
+    '| `Avoidance.relatedAvoidances` | Avoidance -> Avoidance | Semantic relations between mitigation controls, including prerequisites, complements, alternatives, and controls that mitigate known gaps. |',
     '| `AttackTool.directCauseRisks` | AttackTool -> Risk | Risks directly caused by the tool. |',
     '| `AttackTool.indirectSupportRisks` | AttackTool -> Risk | Risks indirectly supported by the tool. |',
     '| `AttackTool.avoidances` | AttackTool -> Avoidance | Controls that mitigate the tool. |',

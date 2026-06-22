@@ -21,7 +21,39 @@
       "容量保障",
       "抗压能力"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0004",
+        "relation": "complement",
+        "note": "共同覆盖 7 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0008-001",
+        "relation": "complement",
+        "note": "该细分手段可作为主控制的具体落地方式。"
+      },
+      {
+        "key": "A0008-002",
+        "relation": "complement",
+        "note": "该细分手段可作为主控制的具体落地方式。"
+      },
+      {
+        "key": "A0008-003",
+        "relation": "complement",
+        "note": "该细分手段可作为主控制的具体落地方式。"
+      },
+      {
+        "key": "A0008-004",
+        "relation": "complement",
+        "note": "该细分手段可作为主控制的具体落地方式。"
+      },
+      {
+        "key": "A0008-005",
+        "relation": "complement",
+        "note": "该细分手段可作为主控制的具体落地方式。"
+      }
+    ]
   },
   "A0008-001": {
     "title": "增加计算资源",
@@ -45,7 +77,39 @@
       "增加实例",
       "算力扩容"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0008",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0008-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0008-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0008-004",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0008-005",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
   },
   "A0008-002": {
     "title": "DDoS防护",
@@ -69,7 +133,39 @@
       "拒绝服务攻击防护",
       "CC防护"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0008",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0008-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0008-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0008-004",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0008-005",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
   },
   "A0008-003": {
     "title": "前置CDN",
@@ -93,7 +189,39 @@
       "静态资源加速",
       "边缘节点"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0008",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0008-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0008-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0008-004",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0008-005",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
   },
   "A0008-004": {
     "title": "业务系统优化",
@@ -117,7 +245,39 @@
       "业务流程优化",
       "并发优化"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0008",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0008-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0008-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0008-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0008-005",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
   },
   "A0008-005": {
     "title": "增加业务资源",
@@ -141,6 +301,38 @@
       "扩充资源池",
       "资源供给提升"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0008",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0008-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0008-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0008-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0008-004",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      }
+    ]
   }
 }

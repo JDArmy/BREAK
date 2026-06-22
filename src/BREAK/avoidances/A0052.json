@@ -20,6 +20,38 @@
       "内控审查",
       "合规审查"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0051",
+        "relation": "complement",
+        "note": "共同覆盖 11 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0017-001",
+        "relation": "complement",
+        "note": "共同覆盖 8 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0054",
+        "relation": "complement",
+        "note": "共同覆盖 9 个风险。"
+      },
+      {
+        "key": "A0062",
+        "relation": "complement",
+        "note": "共同覆盖 7 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0041",
+        "relation": "complement",
+        "note": "共同覆盖 6 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0020-002",
+        "relation": "complement",
+        "note": "共同覆盖 7 个风险。"
+      }
+    ]
   }
 }

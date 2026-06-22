@@ -22,6 +22,38 @@
       "HMAC签名",
       "参数签名"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0010",
+        "relation": "complement",
+        "note": "共同覆盖 38 个风险，共同限制 4 个攻击工具。"
+      },
+      {
+        "key": "A0004",
+        "relation": "complement",
+        "note": "共同覆盖 36 个风险，共同限制 5 个攻击工具。"
+      },
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 36 个风险，共同限制 5 个攻击工具。"
+      },
+      {
+        "key": "A0005",
+        "relation": "complement",
+        "note": "共同覆盖 30 个风险，共同限制 3 个攻击工具。"
+      },
+      {
+        "key": "A0021",
+        "relation": "complement",
+        "note": "共同覆盖 30 个风险，共同限制 3 个攻击工具。"
+      },
+      {
+        "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 28 个风险，共同限制 4 个攻击工具。"
+      }
+    ]
   }
 }

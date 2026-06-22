@@ -76,6 +76,7 @@ const avoidanceItems = computed(() =>
 
 const selectedAvoidance = computed(() => BREAK.avoidances[selectedAvoidanceKey.value]);
 const selectedAvoidanceEffectiveness = computed(() => selectedAvoidance.value?.effectiveness);
+const relatedAvoidanceRelations = computed(() => selectedAvoidance.value?.relatedAvoidances ?? []);
 
 watch(selectedCategory, () => {
   if (
@@ -171,6 +172,23 @@ const { openRelationGraph } = useRelationGraph("avoidance");
         <h3>{{ $t("avoidanceEffectiveness") }}</h3>
         <p>{{ $t(`relationView.avoidanceEffectiveness.${selectedAvoidanceEffectiveness}`) }}</p>
       </section>
+      <section v-if="relatedAvoidanceRelations.length" class="detail-section">
+        <h3>{{ $t("avoidanceRelatedAvoidances") }}</h3>
+        <div class="avoidance-relation-list">
+          <router-link
+            v-for="relation in relatedAvoidanceRelations"
+            :key="`${relation.key}-${relation.relation}`"
+            class="avoidance-relation-item"
+            :to="{ name: 'avoidances', hash: `#${relation.key}` }"
+          >
+            <span class="avoidance-relation-type">{{ $t(`avoidanceRelationType.${relation.relation}`) }}</span>
+            <span class="avoidance-relation-title">
+              {{ relation.key }}: {{ $t(`BREAK.avoidances.${relation.key}.title`) }}
+            </span>
+            <span v-if="relation.note" class="avoidance-relation-note">{{ relation.note }}</span>
+          </router-link>
+        </div>
+      </section>
       <EntityLinkSection
         :keys="relatedRiskKeys"
         title="risks"
@@ -231,5 +249,87 @@ const { openRelationGraph } = useRelationGraph("avoidance");
 .text-muted {
   color: var(--break-text-muted);
   font-size: 0.9em;
+}
+
+.avoidance-relation-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.avoidance-relation-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-areas:
+    "type title"
+    "type note";
+  column-gap: 8px;
+  row-gap: 2px;
+  align-items: center;
+  min-width: 0;
+  min-height: 62px;
+  padding: 8px 10px;
+  color: inherit;
+  text-decoration: none;
+  background: var(--break-bg-secondary);
+  border: 1px solid var(--break-border);
+  border-radius: 6px;
+}
+
+.avoidance-relation-item:hover {
+  color: var(--break-primary);
+  border-color: var(--break-primary);
+}
+
+.avoidance-relation-type {
+  grid-area: type;
+  flex: 0 0 auto;
+  min-width: 44px;
+  padding: 1px 6px;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--break-primary);
+  border: 1px solid var(--break-primary);
+  border-radius: 4px;
+}
+
+.avoidance-relation-title {
+  grid-area: title;
+  min-width: 0;
+  overflow: hidden;
+  font-weight: 600;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.avoidance-relation-note {
+  grid-area: note;
+  min-width: 0;
+  overflow: hidden;
+  color: var(--break-text-muted);
+  font-size: 0.84em;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 720px) {
+  .avoidance-relation-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 1180px) {
+  .avoidance-relation-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1181px) and (max-width: 1599px) {
+  .avoidance-relation-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 </style>

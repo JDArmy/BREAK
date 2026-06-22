@@ -25,7 +25,39 @@
       "二次验证",
       "二步验证"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0010",
+        "relation": "complement",
+        "note": "共同覆盖 25 个风险，共同限制 5 个攻击工具。"
+      },
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 27 个风险，共同限制 2 个攻击工具。"
+      },
+      {
+        "key": "A0021",
+        "relation": "complement",
+        "note": "共同覆盖 20 个风险，共同限制 2 个攻击工具。"
+      },
+      {
+        "key": "A0023",
+        "relation": "complement",
+        "note": "共同覆盖 16 个风险，共同限制 5 个攻击工具。"
+      },
+      {
+        "key": "A0016",
+        "relation": "complement",
+        "note": "共同覆盖 17 个风险，共同限制 4 个攻击工具。"
+      },
+      {
+        "key": "A0024",
+        "relation": "complement",
+        "note": "共同覆盖 15 个风险，共同限制 3 个攻击工具。"
+      }
+    ]
   },
   "A0007-001": {
     "title": "短信验证",
@@ -49,7 +81,39 @@
       "短信二次验证",
       "短信校验"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0007",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0007-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0007-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0007-004",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0007-005",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0024",
+        "relation": "complement",
+        "note": "共同覆盖 3 个风险。"
+      }
+    ]
   },
   "A0007-002": {
     "title": "邮箱验证",
@@ -73,7 +137,39 @@
       "邮件二次验证",
       "邮箱校验"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0007",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0007-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0007-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0007-004",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0007-005",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0002",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
   },
   "A0007-003": {
     "title": "一次性密码",
@@ -98,7 +194,39 @@
       "Authenticator",
       "谷歌验证器"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0007",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0007-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0007-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0007-004",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0007-005",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0002",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
   },
   "A0007-004": {
     "title": "电话语音验证",
@@ -122,7 +250,39 @@
       "电话回呼验证",
       "语音验证码"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0007",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0007-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0007-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0007-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0007-005",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
   },
   "A0007-005": {
     "title": "通行密钥/防钓鱼认证",
@@ -151,6 +311,38 @@
       "WebAuthn",
       "无密码登录"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0007",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0007-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0007-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0007-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0007-004",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0026",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 3 个攻击工具。"
+      }
+    ]
   }
 }

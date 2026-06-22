@@ -21,6 +21,38 @@
       "信任链",
       "启动验证"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0111",
+        "relation": "complement",
+        "note": "共同覆盖 3 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0112",
+        "relation": "complement",
+        "note": "共同覆盖 3 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0107",
+        "relation": "complement",
+        "note": "共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0108",
+        "relation": "complement",
+        "note": "共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0109",
+        "relation": "complement",
+        "note": "共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0116",
+        "relation": "complement",
+        "note": "共同限制 1 个攻击工具。"
+      }
+    ]
   }
 }

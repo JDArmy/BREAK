@@ -18,6 +18,28 @@
       "可升级合约",
       "紧急暂停"
     ],
-    "effectiveness": "medium"
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0140",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0141",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0142",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0160",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
   }
 }

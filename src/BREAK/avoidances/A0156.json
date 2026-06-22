@@ -20,6 +20,38 @@
       "SBT",
       "Sybil防护"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0131",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0132",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0133",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0095",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0104",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0105",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
   }
 }

@@ -21,7 +21,39 @@
       "壳保护",
       "安全加固"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0010",
+        "relation": "complement",
+        "note": "共同覆盖 21 个风险，共同限制 4 个攻击工具。"
+      },
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 19 个风险。"
+      },
+      {
+        "key": "A0016",
+        "relation": "complement",
+        "note": "共同覆盖 15 个风险。"
+      },
+      {
+        "key": "A0002",
+        "relation": "complement",
+        "note": "共同覆盖 10 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0021",
+        "relation": "complement",
+        "note": "共同覆盖 10 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0014",
+        "relation": "complement",
+        "note": "共同覆盖 6 个风险，共同限制 4 个攻击工具。"
+      }
+    ]
   },
   "A0013-001": {
     "title": "Android应用加固",
@@ -45,7 +77,39 @@
       "反编译保护",
       "APK壳"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0013",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0013-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0013-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0013-004",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0013",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
   },
   "A0013-002": {
     "title": "iOS应用加固",
@@ -69,7 +133,39 @@
       "字符串加密",
       "越狱对抗"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0013",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0013-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0013-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0013-004",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0002",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0013",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
   },
   "A0013-003": {
     "title": "H5小程序加固",
@@ -93,7 +189,39 @@
       "域名绑定保护",
       "脚本加密"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0013",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0013-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0013-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0013-004",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0002",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0013",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
   },
   "A0013-004": {
     "title": "桌面应用加固",
@@ -117,6 +245,38 @@
       "二进制加固",
       "符号混淆"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0013",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0013-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0013-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0013-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0002",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0013",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
   }
 }

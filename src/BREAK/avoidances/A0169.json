@@ -14,6 +14,38 @@
     ],
     "updated": "2026-06-16",
     "definition": "使用Telegram官方认证徽章识别真实机器人和社群，避免钓鱼。",
-    "effectiveness": "medium"
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0104",
+        "relation": "complement",
+        "note": "共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0105",
+        "relation": "complement",
+        "note": "共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0106",
+        "relation": "complement",
+        "note": "共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0168",
+        "relation": "complement",
+        "note": "共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0170",
+        "relation": "complement",
+        "note": "共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0176",
+        "relation": "complement",
+        "note": "共同限制 1 个攻击工具。"
+      }
+    ]
   }
 }

@@ -21,6 +21,38 @@
       "时间窗限制",
       "冷却期"
     ],
-    "effectiveness": "medium"
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0004",
+        "relation": "complement",
+        "note": "共同覆盖 24 个风险，共同限制 6 个攻击工具。"
+      },
+      {
+        "key": "A0010",
+        "relation": "complement",
+        "note": "共同覆盖 22 个风险，共同限制 6 个攻击工具。"
+      },
+      {
+        "key": "A0005",
+        "relation": "complement",
+        "note": "共同覆盖 21 个风险，共同限制 6 个攻击工具。"
+      },
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 21 个风险，共同限制 6 个攻击工具。"
+      },
+      {
+        "key": "A0021",
+        "relation": "complement",
+        "note": "共同覆盖 19 个风险，共同限制 6 个攻击工具。"
+      },
+      {
+        "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 18 个风险，共同限制 6 个攻击工具。"
+      }
+    ]
   }
 }

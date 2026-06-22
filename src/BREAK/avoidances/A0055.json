@@ -28,6 +28,38 @@
       "漏洞排查",
       "脆弱性识别"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0056",
+        "relation": "complement",
+        "note": "共同覆盖 15 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0054",
+        "relation": "complement",
+        "note": "共同覆盖 10 个风险。"
+      },
+      {
+        "key": "A0017",
+        "relation": "complement",
+        "note": "共同覆盖 5 个风险。"
+      },
+      {
+        "key": "A0028",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      },
+      {
+        "key": "A0058",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      },
+      {
+        "key": "A0013",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险，共同限制 1 个攻击工具。"
+      }
+    ]
   }
 }

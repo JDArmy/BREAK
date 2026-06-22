@@ -21,7 +21,39 @@
       "内容安全",
       "内容审核"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0020",
+        "relation": "complement",
+        "note": "共同覆盖 14 个风险，共同限制 2 个攻击工具。"
+      },
+      {
+        "key": "A0048",
+        "relation": "complement",
+        "note": "共同覆盖 14 个风险，共同限制 2 个攻击工具。"
+      },
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 15 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0043",
+        "relation": "complement",
+        "note": "共同覆盖 9 个风险。"
+      },
+      {
+        "key": "A0044",
+        "relation": "complement",
+        "note": "共同覆盖 8 个风险。"
+      },
+      {
+        "key": "A0024",
+        "relation": "complement",
+        "note": "共同覆盖 5 个风险，共同限制 2 个攻击工具。"
+      }
+    ]
   },
   "A0006-001": {
     "title": "人工内容审核",
@@ -45,7 +77,39 @@
       "人工风控",
       "审核员"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0006",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0006-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006-004",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006-005",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006-006",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      }
+    ]
   },
   "A0006-002": {
     "title": "自动恶意图片识别",
@@ -73,7 +137,39 @@
       "暴恐识别",
       "图像内容审核"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0006",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0006-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006-004",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006-005",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006-006",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      }
+    ]
   },
   "A0006-003": {
     "title": "自动恶意音频识别",
@@ -97,7 +193,39 @@
       "恶意语音识别",
       "语音内容审核"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0006",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0006-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006-004",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006-005",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006-006",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      }
+    ]
   },
   "A0006-004": {
     "title": "自动恶意视频识别",
@@ -121,7 +249,39 @@
       "涉黄视频识别",
       "深度伪造视频检测"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0006",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0006-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006-005",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006-006",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      }
+    ]
   },
   "A0006-005": {
     "title": "自动恶意链接识别",
@@ -149,7 +309,39 @@
       "短链风控",
       "域名黑名单"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0006",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0006-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006-004",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006-006",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      }
+    ]
   },
   "A0006-006": {
     "title": "自动恶意文档识别",
@@ -173,7 +365,39 @@
       "宏病毒识别",
       "文档风控"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0006",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0006-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006-004",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006-005",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      }
+    ]
   },
   "A0006-007": {
     "title": "自动恶意文本识别",
@@ -197,7 +421,39 @@
       "语义审核",
       "违规文本检测"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0006",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0006-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006-004",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006-005",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      }
+    ]
   },
   "A0006-008": {
     "title": "自动AI生成内容识别",
@@ -221,6 +477,38 @@
       "合成内容识别",
       "机器生成内容检测"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0006",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0006-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006-004",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0006-005",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      }
+    ]
   }
 }

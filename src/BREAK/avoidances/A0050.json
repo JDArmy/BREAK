@@ -25,7 +25,39 @@
       "敏感数据外发防护",
       "数据外泄防护"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0050-001",
+        "relation": "complement",
+        "note": "该细分手段可作为主控制的具体落地方式。"
+      },
+      {
+        "key": "A0050-002",
+        "relation": "complement",
+        "note": "该细分手段可作为主控制的具体落地方式。"
+      },
+      {
+        "key": "A0050-003",
+        "relation": "complement",
+        "note": "该细分手段可作为主控制的具体落地方式。"
+      },
+      {
+        "key": "A0051",
+        "relation": "complement",
+        "note": "共同覆盖 6 个风险。"
+      },
+      {
+        "key": "A0054",
+        "relation": "complement",
+        "note": "共同覆盖 6 个风险。"
+      },
+      {
+        "key": "A0020-002",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      }
+    ]
   },
   "A0050-001": {
     "title": "数据存储加密",
@@ -49,7 +81,39 @@
       "存储介质加密",
       "数据静态加密"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0050",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0050-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0050-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0017-001",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0025",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0025-004",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      }
+    ]
   },
   "A0050-002": {
     "title": "数据库审计",
@@ -72,7 +136,39 @@
       "数据库日志审计",
       "敏感数据审计"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0050",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0050-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0050-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0054",
+        "relation": "complement",
+        "note": "共同覆盖 3 个风险。"
+      },
+      {
+        "key": "A0051",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0057",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      }
+    ]
   },
   "A0050-003": {
     "title": "数据擦除",
@@ -95,6 +191,38 @@
       "不可恢复删除",
       "存储介质清理"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0050",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0050-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0050-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0017-001",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0025",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0025-004",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      }
+    ]
   }
 }

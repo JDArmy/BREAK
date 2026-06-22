@@ -15,6 +15,18 @@
     ],
     "updated": "2026-06-17",
     "definition": "检测重打包、Hook、调试、模拟环境和运行时篡改，保护客户端业务逻辑。",
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0013",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0055",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
+      }
+    ]
   }
 }

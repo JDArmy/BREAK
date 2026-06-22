@@ -21,7 +21,39 @@
       "账户安全监控",
       "认证日志审计"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0010",
+        "relation": "complement",
+        "note": "共同覆盖 20 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 18 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0021",
+        "relation": "complement",
+        "note": "共同覆盖 16 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0007",
+        "relation": "complement",
+        "note": "共同覆盖 14 个风险。"
+      },
+      {
+        "key": "A0017",
+        "relation": "complement",
+        "note": "共同覆盖 13 个风险。"
+      },
+      {
+        "key": "A0059",
+        "relation": "complement",
+        "note": "共同覆盖 10 个风险，共同限制 2 个攻击工具。"
+      }
+    ]
   },
   "A0019-002": {
     "title": "邀请码机制",
@@ -45,7 +77,39 @@
       "内测码",
       "邀请制"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0019",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0019-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0002",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0004",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0005",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0007",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
   },
   "A0019-003": {
     "title": "好友辅助认证",
@@ -69,6 +133,38 @@
       "微信好友辅助",
       "社交关系校验"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0019",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0019-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0016-003",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0024",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0029",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
   }
 }

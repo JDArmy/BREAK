@@ -21,7 +21,39 @@
       "操作鉴权",
       "二次确认认证"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 11 个风险，共同限制 4 个攻击工具。"
+      },
+      {
+        "key": "A0019",
+        "relation": "complement",
+        "note": "共同覆盖 13 个风险。"
+      },
+      {
+        "key": "A0044",
+        "relation": "complement",
+        "note": "共同覆盖 8 个风险，共同限制 3 个攻击工具。"
+      },
+      {
+        "key": "A0010",
+        "relation": "complement",
+        "note": "共同覆盖 11 个风险。"
+      },
+      {
+        "key": "A0021",
+        "relation": "complement",
+        "note": "共同覆盖 10 个风险。"
+      },
+      {
+        "key": "A0059",
+        "relation": "complement",
+        "note": "共同覆盖 8 个风险，共同限制 1 个攻击工具。"
+      }
+    ]
   },
   "A0017-001": {
     "title": "门禁",
@@ -45,6 +77,38 @@
       "密码门禁",
       "生物门禁"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0051",
+        "relation": "complement",
+        "note": "共同覆盖 11 个风险，共同限制 2 个攻击工具。"
+      },
+      {
+        "key": "A0062",
+        "relation": "complement",
+        "note": "共同覆盖 9 个风险，共同限制 2 个攻击工具。"
+      },
+      {
+        "key": "A0052",
+        "relation": "complement",
+        "note": "共同覆盖 8 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0017",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0041",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险，共同限制 2 个攻击工具。"
+      },
+      {
+        "key": "A0044",
+        "relation": "complement",
+        "note": "共同覆盖 5 个风险，共同限制 1 个攻击工具。"
+      }
+    ]
   }
 }

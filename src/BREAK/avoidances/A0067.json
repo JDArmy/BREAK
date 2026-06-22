@@ -24,6 +24,38 @@
       "API请求校验",
       "API流量防护"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0004",
+        "relation": "complement",
+        "note": "共同覆盖 5 个风险，共同限制 2 个攻击工具。"
+      },
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 3 个风险，共同限制 2 个攻击工具。"
+      },
+      {
+        "key": "A0008",
+        "relation": "complement",
+        "note": "共同覆盖 3 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0002",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0017",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险，共同限制 1 个攻击工具。"
+      }
+    ]
   }
 }

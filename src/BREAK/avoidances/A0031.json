@@ -21,6 +21,38 @@
       "虚假响应",
       "脏数据回灌"
     ],
-    "effectiveness": "medium"
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0002",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 3 个攻击工具。"
+      },
+      {
+        "key": "A0032",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 3 个攻击工具。"
+      },
+      {
+        "key": "A0022",
+        "relation": "complement",
+        "note": "共同限制 3 个攻击工具。"
+      },
+      {
+        "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 2 个攻击工具。"
+      },
+      {
+        "key": "A0004",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 2 个攻击工具。"
+      },
+      {
+        "key": "A0010",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 2 个攻击工具。"
+      }
+    ]
   }
 }

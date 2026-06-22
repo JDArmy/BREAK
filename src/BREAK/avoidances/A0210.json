@@ -15,6 +15,28 @@
     ],
     "updated": "2026-06-17",
     "definition": "对联盟渠道、推广素材、落地页、转化设备和佣金行为建立质量评分。",
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0209",
+        "relation": "complement",
+        "note": "共同覆盖 3 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0021",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0016",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0037",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
   }
 }

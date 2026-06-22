@@ -4,14 +4,21 @@ interface Avoidance {
   title: string;
   keywords: string[];
   category: string;
+  effectiveness?: "high" | "medium" | "low";
   definition: string;
   description: string;
-  limitation: string;
+  complexity?: string;
+  limitation?: string;
+  relatedAvoidances?: {
+    key: string;
+    relation: "prerequisite" | "complement" | "alternative" | "mitigates-gap";
+    note?: string;
+  }[];
   references: {
     title: string;
-    description: string;
     link: string;
   }[];
+  updated?: string;
 }
 
 interface Avoidances {

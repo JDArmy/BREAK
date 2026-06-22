@@ -25,7 +25,39 @@
       "掩码展示",
       "去标识化"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0035-001",
+        "relation": "complement",
+        "note": "该细分手段可作为主控制的具体落地方式。"
+      },
+      {
+        "key": "A0035-002",
+        "relation": "complement",
+        "note": "该细分手段可作为主控制的具体落地方式。"
+      },
+      {
+        "key": "A0035-003",
+        "relation": "complement",
+        "note": "该细分手段可作为主控制的具体落地方式。"
+      },
+      {
+        "key": "A0050",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      },
+      {
+        "key": "A0054",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      },
+      {
+        "key": "A0016",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险，共同限制 1 个攻击工具。"
+      }
+    ]
   },
   "A0035-001": {
     "title": "敏感数据去除",
@@ -49,7 +81,39 @@
       "数据清洗去敏",
       "字段裁剪"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0035",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0035-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0035-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0035",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      },
+      {
+        "key": "A0006",
+        "relation": "complement",
+        "note": "共同覆盖 3 个风险。"
+      },
+      {
+        "key": "A0045",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      }
+    ]
   },
   "A0035-002": {
     "title": "用户信息令牌化",
@@ -73,7 +137,34 @@
       "假名化",
       "Token替代"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0035",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0035-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0035-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0020-001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0046",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
   },
   "A0035-003": {
     "title": "虚拟手机号",
@@ -97,6 +188,33 @@
       "AXB",
       "匿名号"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0035",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0035-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0035-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0020-001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0046",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
   }
 }

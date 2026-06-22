@@ -24,6 +24,38 @@
       "AI图片检测",
       "机器生成内容识别"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0006",
+        "relation": "complement",
+        "note": "共同覆盖 5 个风险，共同限制 2 个攻击工具。"
+      },
+      {
+        "key": "A0048",
+        "relation": "complement",
+        "note": "共同覆盖 5 个风险，共同限制 2 个攻击工具。"
+      },
+      {
+        "key": "A0066",
+        "relation": "complement",
+        "note": "共同覆盖 5 个风险，共同限制 2 个攻击工具。"
+      },
+      {
+        "key": "A0088",
+        "relation": "complement",
+        "note": "目标条目正文明确提及当前规避手段。"
+      },
+      {
+        "key": "A0065",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0020",
+        "relation": "complement",
+        "note": "共同覆盖 3 个风险，共同限制 1 个攻击工具。"
+      }
+    ]
   }
 }

@@ -21,6 +21,38 @@
       "硬件密钥",
       "双因素认证"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0108",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险，共同限制 2 个攻击工具。"
+      },
+      {
+        "key": "A0116",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0117",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0181",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0185",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0014",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      }
+    ]
   }
 }

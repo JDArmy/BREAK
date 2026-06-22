@@ -21,7 +21,39 @@
       "登录鉴权",
       "账户认证"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 24 个风险，共同限制 2 个攻击工具。"
+      },
+      {
+        "key": "A0010",
+        "relation": "complement",
+        "note": "共同覆盖 21 个风险，共同限制 2 个攻击工具。"
+      },
+      {
+        "key": "A0024",
+        "relation": "complement",
+        "note": "共同覆盖 17 个风险，共同限制 3 个攻击工具。"
+      },
+      {
+        "key": "A0004",
+        "relation": "complement",
+        "note": "共同覆盖 18 个风险，共同限制 2 个攻击工具。"
+      },
+      {
+        "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 17 个风险，共同限制 2 个攻击工具。"
+      },
+      {
+        "key": "A0005",
+        "relation": "complement",
+        "note": "共同覆盖 17 个风险，共同限制 2 个攻击工具。"
+      }
+    ]
   },
   "A0018-001": {
     "title": "零知识证明",
@@ -45,6 +77,38 @@
       "可验证凭证",
       "隐私证明"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0018",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0007",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0011",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0012",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0019",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0021",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
   }
 }

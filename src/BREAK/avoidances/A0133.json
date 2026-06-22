@@ -20,6 +20,23 @@
       "NiceHash",
       "社区预警"
     ],
-    "effectiveness": "medium"
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0131",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0132",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0156",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
+      }
+    ]
   }
 }

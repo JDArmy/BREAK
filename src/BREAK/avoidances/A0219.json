@@ -15,6 +15,13 @@
     ],
     "updated": "2026-06-17",
     "definition": "对Webhook事件做签名校验、时间戳窗口、幂等处理和事件来源验证。",
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0198",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
+      }
+    ]
   }
 }

@@ -14,6 +14,13 @@
     ],
     "updated": "2026-06-16",
     "definition": "通过智能合约在协议层面强制执行NFT版税，无法绕过。",
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0077",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
   }
 }

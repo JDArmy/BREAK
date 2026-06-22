@@ -21,7 +21,39 @@
       "黑名单情报",
       "威胁数据"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 69 个风险，共同限制 10 个攻击工具。"
+      },
+      {
+        "key": "A0010",
+        "relation": "complement",
+        "note": "共同覆盖 50 个风险，共同限制 9 个攻击工具。"
+      },
+      {
+        "key": "A0021",
+        "relation": "complement",
+        "note": "共同覆盖 42 个风险，共同限制 7 个攻击工具。"
+      },
+      {
+        "key": "A0004",
+        "relation": "complement",
+        "note": "共同覆盖 33 个风险，共同限制 6 个攻击工具。"
+      },
+      {
+        "key": "A0005",
+        "relation": "complement",
+        "note": "共同覆盖 29 个风险，共同限制 6 个攻击工具。"
+      },
+      {
+        "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 26 个风险，共同限制 7 个攻击工具。"
+      }
+    ]
   },
   "A0016-001": {
     "title": "IP情报",
@@ -45,7 +77,39 @@
       "代理IP情报",
       "恶意IP"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0029-002",
+        "relation": "complement",
+        "note": "共同覆盖 9 个风险，共同限制 3 个攻击工具。"
+      },
+      {
+        "key": "A0038",
+        "relation": "complement",
+        "note": "共同覆盖 10 个风险，共同限制 2 个攻击工具。"
+      },
+      {
+        "key": "A0010",
+        "relation": "complement",
+        "note": "共同覆盖 11 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 10 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0021",
+        "relation": "complement",
+        "note": "共同覆盖 10 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 11 个风险。"
+      }
+    ]
   },
   "A0016-002": {
     "title": "域名&链接威胁情报",
@@ -69,7 +133,39 @@
       "链接黑名单",
       "URL信誉"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0016",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0016-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0016-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0016-004",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0016-005",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0016",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 2 个攻击工具。"
+      }
+    ]
   },
   "A0016-003": {
     "title": "手机号情报",
@@ -93,7 +189,39 @@
       "号码画像",
       "恶意号码"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0024",
+        "relation": "complement",
+        "note": "共同覆盖 11 个风险，共同限制 5 个攻击工具。"
+      },
+      {
+        "key": "A0044",
+        "relation": "complement",
+        "note": "共同覆盖 6 个风险，共同限制 3 个攻击工具。"
+      },
+      {
+        "key": "A0023-001",
+        "relation": "complement",
+        "note": "共同覆盖 8 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0016",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0029-001",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险，共同限制 3 个攻击工具。"
+      },
+      {
+        "key": "A0016-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      }
+    ]
   },
   "A0016-004": {
     "title": "IOC妥协指标情报",
@@ -117,7 +245,39 @@
       "威胁指纹",
       "Indicators of Compromise"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0016",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0016-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0016-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0016-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0016-005",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0028",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      }
+    ]
   },
   "A0016-005": {
     "title": "风险地址情报",
@@ -141,6 +301,38 @@
       "黑灰产地址",
       "地址风险标签"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0016",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0016-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0016-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0016-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0016-004",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
+      }
+    ]
   }
 }

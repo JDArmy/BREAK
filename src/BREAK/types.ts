@@ -13,6 +13,17 @@ export interface RiskRelation {
 
 export type AvoidanceCategory = "AC01" | "AC02" | "AC03" | "AC04";
 export type AvoidanceEffectiveness = "high" | "medium" | "low";
+export type AvoidanceRelationType =
+  | "prerequisite"
+  | "complement"
+  | "alternative"
+  | "mitigates-gap";
+
+export interface AvoidanceRelation {
+  key: string;
+  relation: AvoidanceRelationType;
+  note?: string;
+}
 
 export interface Risk {
   title: string;
@@ -36,6 +47,7 @@ export interface Avoidance {
   description: string;
   complexity?: string;
   limitation?: string;
+  relatedAvoidances: AvoidanceRelation[];
   references: Reference[];
   updated?: string;
 }

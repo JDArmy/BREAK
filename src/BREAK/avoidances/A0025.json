@@ -25,7 +25,39 @@
       "公钥证书",
       "CA证书"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0025-001",
+        "relation": "complement",
+        "note": "该细分手段可作为主控制的具体落地方式。"
+      },
+      {
+        "key": "A0025-002",
+        "relation": "complement",
+        "note": "该细分手段可作为主控制的具体落地方式。"
+      },
+      {
+        "key": "A0025-003",
+        "relation": "complement",
+        "note": "该细分手段可作为主控制的具体落地方式。"
+      },
+      {
+        "key": "A0025-004",
+        "relation": "complement",
+        "note": "该细分手段可作为主控制的具体落地方式。"
+      },
+      {
+        "key": "A0017-001",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0050-001",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      }
+    ]
   },
   "A0025-001": {
     "title": "邮件数字证书",
@@ -49,7 +81,39 @@
       "邮件证书",
       "邮箱证书"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0025",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0025-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0025-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0025-004",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0007",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0011",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
   },
   "A0025-002": {
     "title": "HTTPS数字证书",
@@ -73,7 +137,39 @@
       "服务器证书",
       "CA签发证书"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0025",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0025-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0025-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0025-004",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0001",
+        "relation": "complement",
+        "note": "共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0002",
+        "relation": "complement",
+        "note": "共同限制 1 个攻击工具。"
+      }
+    ]
   },
   "A0025-003": {
     "title": "文件电子印章",
@@ -97,7 +193,39 @@
       "合同签章",
       "文档签章"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0025",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0025-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0025-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0025-004",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0044",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0049",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      }
+    ]
   },
   "A0025-004": {
     "title": "USB Key数字证书",
@@ -121,6 +249,38 @@
       "U盾",
       "USB令牌"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0025",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0025-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0025-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0025-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0051",
+        "relation": "complement",
+        "note": "共同覆盖 6 个风险。"
+      },
+      {
+        "key": "A0059",
+        "relation": "complement",
+        "note": "共同覆盖 5 个风险。"
+      }
+    ]
   }
 }

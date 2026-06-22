@@ -14,6 +14,18 @@
     ],
     "updated": "2026-06-17",
     "definition": "盘点SaaS管理员、OAuth授权、外部共享和第三方应用，识别高危授权。",
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0090",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0206",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
+      }
+    ]
   }
 }

@@ -46,6 +46,10 @@ interface UseRelationGraphDataOptions {
       | "riskCoOccurrence"
       | "riskEscalation"
       | "riskVariant"
+      | "avoidancePrerequisite"
+      | "avoidanceComplement"
+      | "avoidanceAlternative"
+      | "avoidanceMitigatesGap"
       | "buildAttackTool"
       | "useAttackTool"
       | "causeRisk"
@@ -126,6 +130,30 @@ export const useRelationGraphData = ({
         color: getRelationLineColor("riskVariant"),
         label: t("relationLine.riskVariant"),
         fields: ["Risk.relatedRisks"],
+      },
+      {
+        key: "relationLine.avoidancePrerequisite",
+        color: getRelationLineColor("avoidancePrerequisite"),
+        label: t("relationLine.avoidancePrerequisite"),
+        fields: ["Avoidance.relatedAvoidances"],
+      },
+      {
+        key: "relationLine.avoidanceComplement",
+        color: getRelationLineColor("avoidanceComplement"),
+        label: t("relationLine.avoidanceComplement"),
+        fields: ["Avoidance.relatedAvoidances"],
+      },
+      {
+        key: "relationLine.avoidanceAlternative",
+        color: getRelationLineColor("avoidanceAlternative"),
+        label: t("relationLine.avoidanceAlternative"),
+        fields: ["Avoidance.relatedAvoidances"],
+      },
+      {
+        key: "relationLine.avoidanceMitigatesGap",
+        color: getRelationLineColor("avoidanceMitigatesGap"),
+        label: t("relationLine.avoidanceMitigatesGap"),
+        fields: ["Avoidance.relatedAvoidances"],
       },
       {
         key: "relationLine.buildAttackTool",

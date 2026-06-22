@@ -21,7 +21,39 @@
       "哈希校验",
       "篡改检测"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0013",
+        "relation": "complement",
+        "note": "共同覆盖 6 个风险，共同限制 4 个攻击工具。"
+      },
+      {
+        "key": "A0010",
+        "relation": "complement",
+        "note": "共同覆盖 5 个风险，共同限制 3 个攻击工具。"
+      },
+      {
+        "key": "A0010-004",
+        "relation": "complement",
+        "note": "共同覆盖 5 个风险，共同限制 2 个攻击工具。"
+      },
+      {
+        "key": "A0014-001",
+        "relation": "complement",
+        "note": "该细分手段可作为主控制的具体落地方式。"
+      },
+      {
+        "key": "A0014-002",
+        "relation": "complement",
+        "note": "该细分手段可作为主控制的具体落地方式。"
+      },
+      {
+        "key": "A0029-001",
+        "relation": "complement",
+        "note": "共同覆盖 5 个风险，共同限制 1 个攻击工具。"
+      }
+    ]
   },
   "A0014-001": {
     "title": "终端防篡改",
@@ -45,7 +77,39 @@
       "运行时防篡改",
       "终端完整性保护"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0014",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0014-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0002",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0013",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0013-002",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0013-003",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
   },
   "A0014-002": {
     "title": "服务器防篡改",
@@ -69,6 +133,38 @@
       "服务器完整性校验",
       "基线监控"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0014",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0014-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0017",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      },
+      {
+        "key": "A0044",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      },
+      {
+        "key": "A0058",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      },
+      {
+        "key": "A0016",
+        "relation": "complement",
+        "note": "共同覆盖 3 个风险。"
+      }
+    ]
   }
 }

@@ -14,6 +14,18 @@
     ],
     "updated": "2026-06-17",
     "definition": "对模型输出进行有害内容、隐私泄露、幻觉、偏见和越权建议评估。",
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0035",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0215",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
   }
 }

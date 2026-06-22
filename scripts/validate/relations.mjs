@@ -80,6 +80,9 @@ function collectRelationAudit() {
   const riskRelatedRiskRefs = unique(
     risks.flatMap(({ entity }) => (entity.relatedRisks || []).map((relation) => relation.key)),
   );
+  const avoidanceRelatedAvoidanceRefs = unique(
+    avoidances.flatMap(({ entity }) => (entity.relatedAvoidances || []).map((relation) => relation.key)),
+  );
   const attackToolRiskRefs = unique(
     attackTools.flatMap(({ entity }) => [
       ...(entity.directCauseRisks || []),
@@ -127,6 +130,26 @@ function collectRelationAudit() {
       const fingerprint = `${relation?.key}:${relationType}`;
       if (seen.has(fingerprint)) {
         addIssue(issues, 'review', 'duplicate_risk_relation', `Risk.relatedRisks 存在重复关系: ${fingerprint}`, { key, index });
+      }
+      seen.add(fingerprint);
+    }
+  }
+  for (const { key, entity } of avoidances) {
+    const seen = new Set();
+    for (const [index, relation] of (entity.relatedAvoidances || []).entries()) {
+      if (!relation?.key || !avoidanceIds.has(relation.key)) {
+        addIssue(issues, 'error', 'invalid_avoidance_related_avoidance_ref', `Avoidance.relatedAvoidances 引用了不存在的 Avoidance: ${relation?.key}`, { key, index, ref: relation?.key });
+      }
+      if (relation?.key === key) {
+        addIssue(issues, 'error', 'self_avoidance_relation', `Avoidance.relatedAvoidances 不能引用自身: ${key}`, { key, index });
+      }
+      const relationType = relation?.relation;
+      if (!['prerequisite', 'complement', 'alternative', 'mitigates-gap'].includes(relationType)) {
+        addIssue(issues, 'error', 'invalid_avoidance_relation_type', `Avoidance.relatedAvoidances 关系类型非法: ${relationType}`, { key, index, relationType });
+      }
+      const fingerprint = `${relation?.key}:${relationType}`;
+      if (seen.has(fingerprint)) {
+        addIssue(issues, 'review', 'duplicate_avoidance_relation', `Avoidance.relatedAvoidances 存在重复关系: ${fingerprint}`, { key, index });
       }
       seen.add(fingerprint);
     }
@@ -184,6 +207,7 @@ function collectRelationAudit() {
   const summaries = [
     { name: 'Risk.avoidances', ...coverage(risks, 'avoidances') },
     { name: 'Risk.relatedRisks', observationOnly: true, ...coverage(risks, 'relatedRisks') },
+    { name: 'Avoidance.relatedAvoidances', observationOnly: true, ...coverage(avoidances, 'relatedAvoidances') },
     { name: 'AttackTool.directCauseRisks', ...coverage(attackTools, 'directCauseRisks') },
     { name: 'AttackTool.indirectSupportRisks', ...coverage(attackTools, 'indirectSupportRisks') },
     { name: 'AttackTool.avoidances', ...coverage(attackTools, 'avoidances') },

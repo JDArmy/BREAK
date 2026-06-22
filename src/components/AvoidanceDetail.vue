@@ -28,6 +28,7 @@ const relatedTerms = computed(() => {
 });
 
 const selectedAvoidance = computed(() => BREAK.avoidances[props.aKey as keyof typeof BREAK.avoidances]);
+const relatedAvoidances = computed(() => selectedAvoidance.value?.relatedAvoidances ?? []);
 
 const termDrawer = ref(false);
 const termKey = ref("");
@@ -87,6 +88,20 @@ const termKey = ref("");
     <div class="desc" v-if="selectedAvoidance?.effectiveness">
       <strong>{{ $t("avoidanceEffectiveness") }}:&nbsp;</strong>
       {{ $t(`relationView.avoidanceEffectiveness.${selectedAvoidance.effectiveness}`) }}
+    </div>
+    <div class="desc" v-if="relatedAvoidances.length > 0">
+      <strong>{{ $t("avoidanceRelatedAvoidances") }}:&nbsp;</strong>
+      <div class="entity-links">
+        <router-link
+          v-for="relation in relatedAvoidances"
+          :key="`${relation.key}-${relation.relation}`"
+          class="entity-link"
+          :to="{ name: 'avoidances', hash: `#${relation.key}` }"
+        >
+          {{ $t(`avoidanceRelationType.${relation.relation}`) }} ·
+          {{ relation.key }}: {{ $t(`BREAK.avoidances.${relation.key}.title`) }}
+        </router-link>
+      </div>
     </div>
     <div class="desc" v-if="relatedTerms.length > 0">
       <strong>{{ $t("terms") }}:&nbsp;</strong>

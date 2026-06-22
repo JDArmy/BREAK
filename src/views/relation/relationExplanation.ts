@@ -22,6 +22,10 @@ type RelationLineKey =
   | "riskCoOccurrence"
   | "riskEscalation"
   | "riskVariant"
+  | "avoidancePrerequisite"
+  | "avoidanceComplement"
+  | "avoidanceAlternative"
+  | "avoidanceMitigatesGap"
   | "buildAttackTool"
   | "useAttackTool"
   | "causeRisk"
@@ -109,6 +113,38 @@ export const createRelationExplanationHelpers = ({
       impactKey: "relationView.relationImpact.riskRelation",
       evidenceLevel: "direct",
       sourceFields: ["Risk.relatedRisks"],
+    },
+    {
+      key: "avoidancePrerequisite",
+      relationKey: "relationLine.avoidancePrerequisite",
+      explanationKey: "relationView.relationExplanation.avoidancePrerequisite",
+      impactKey: "relationView.relationImpact.avoidanceRelation",
+      evidenceLevel: "direct",
+      sourceFields: ["Avoidance.relatedAvoidances"],
+    },
+    {
+      key: "avoidanceComplement",
+      relationKey: "relationLine.avoidanceComplement",
+      explanationKey: "relationView.relationExplanation.avoidanceComplement",
+      impactKey: "relationView.relationImpact.avoidanceRelation",
+      evidenceLevel: "direct",
+      sourceFields: ["Avoidance.relatedAvoidances"],
+    },
+    {
+      key: "avoidanceAlternative",
+      relationKey: "relationLine.avoidanceAlternative",
+      explanationKey: "relationView.relationExplanation.avoidanceAlternative",
+      impactKey: "relationView.relationImpact.avoidanceRelation",
+      evidenceLevel: "direct",
+      sourceFields: ["Avoidance.relatedAvoidances"],
+    },
+    {
+      key: "avoidanceMitigatesGap",
+      relationKey: "relationLine.avoidanceMitigatesGap",
+      explanationKey: "relationView.relationExplanation.avoidanceMitigatesGap",
+      impactKey: "relationView.relationImpact.avoidanceRelation",
+      evidenceLevel: "direct",
+      sourceFields: ["Avoidance.relatedAvoidances"],
     },
     {
       key: "buildAttackTool",
@@ -253,6 +289,14 @@ export const createRelationExplanationHelpers = ({
     ) {
       fields.add("Risk.relatedRisks");
     }
+    if (
+      getRelationLineKey(line) === "relationLine.avoidancePrerequisite" ||
+      getRelationLineKey(line) === "relationLine.avoidanceComplement" ||
+      getRelationLineKey(line) === "relationLine.avoidanceAlternative" ||
+      getRelationLineKey(line) === "relationLine.avoidanceMitigatesGap"
+    ) {
+      fields.add("Avoidance.relatedAvoidances");
+    }
     if (getRelationLineKey(line) === "relationLine.buildAttackTool")
       fields.add("ThreatActor.buildAttackTools");
     if (getRelationLineKey(line) === "relationLine.useAttackTool")
@@ -299,7 +343,11 @@ export const createRelationExplanationHelpers = ({
       getRelationLineKey(line) === "relationLine.riskPrerequisite" ||
       getRelationLineKey(line) === "relationLine.riskCoOccurrence" ||
       getRelationLineKey(line) === "relationLine.riskEscalation" ||
-      getRelationLineKey(line) === "relationLine.riskVariant"
+      getRelationLineKey(line) === "relationLine.riskVariant" ||
+      getRelationLineKey(line) === "relationLine.avoidancePrerequisite" ||
+      getRelationLineKey(line) === "relationLine.avoidanceComplement" ||
+      getRelationLineKey(line) === "relationLine.avoidanceAlternative" ||
+      getRelationLineKey(line) === "relationLine.avoidanceMitigatesGap"
     ) {
       return "direct";
     }
@@ -343,10 +391,18 @@ export const createRelationExplanationHelpers = ({
       lineText === "relationLine.riskCoOccurrence" ||
       lineText === "relationLine.riskEscalation" ||
       lineText === "relationLine.riskVariant" ||
+      lineText === "relationLine.avoidancePrerequisite" ||
+      lineText === "relationLine.avoidanceComplement" ||
+      lineText === "relationLine.avoidanceAlternative" ||
+      lineText === "relationLine.avoidanceMitigatesGap" ||
       lineText === t("relationLine.riskPrerequisite") ||
       lineText === t("relationLine.riskCoOccurrence") ||
       lineText === t("relationLine.riskEscalation") ||
-      lineText === t("relationLine.riskVariant")
+      lineText === t("relationLine.riskVariant") ||
+      lineText === t("relationLine.avoidancePrerequisite") ||
+      lineText === t("relationLine.avoidanceComplement") ||
+      lineText === t("relationLine.avoidanceAlternative") ||
+      lineText === t("relationLine.avoidanceMitigatesGap")
     )
       return 3;
     if (
@@ -369,6 +425,10 @@ export const createRelationExplanationHelpers = ({
       "relationLine.riskCoOccurrence",
       "relationLine.riskEscalation",
       "relationLine.riskVariant",
+      "relationLine.avoidancePrerequisite",
+      "relationLine.avoidanceComplement",
+      "relationLine.avoidanceAlternative",
+      "relationLine.avoidanceMitigatesGap",
       "relationLine.buildAttackTool",
       "relationLine.useAttackTool",
       t("relationLine.directCauseRisk"),
@@ -376,6 +436,10 @@ export const createRelationExplanationHelpers = ({
       t("relationLine.riskCoOccurrence"),
       t("relationLine.riskEscalation"),
       t("relationLine.riskVariant"),
+      t("relationLine.avoidancePrerequisite"),
+      t("relationLine.avoidanceComplement"),
+      t("relationLine.avoidanceAlternative"),
+      t("relationLine.avoidanceMitigatesGap"),
       t("relationLine.buildAttackTool"),
       t("relationLine.useAttackTool"),
     ].includes(lineText);
@@ -413,6 +477,14 @@ export const createRelationExplanationHelpers = ({
       return t(`${prefix}.riskEscalation`);
     if (getRelationLineKey(line) === "relationLine.riskVariant")
       return t(`${prefix}.riskVariant`);
+    if (getRelationLineKey(line) === "relationLine.avoidancePrerequisite")
+      return t(`${prefix}.avoidancePrerequisite`);
+    if (getRelationLineKey(line) === "relationLine.avoidanceComplement")
+      return t(`${prefix}.avoidanceComplement`);
+    if (getRelationLineKey(line) === "relationLine.avoidanceAlternative")
+      return t(`${prefix}.avoidanceAlternative`);
+    if (getRelationLineKey(line) === "relationLine.avoidanceMitigatesGap")
+      return t(`${prefix}.avoidanceMitigatesGap`);
     if (getRelationLineKey(line) === "relationLine.buildAttackTool")
       return t(`${prefix}.buildAttackTool`);
     if (getRelationLineKey(line) === "relationLine.useAttackTool")
@@ -475,6 +547,14 @@ export const createRelationExplanationHelpers = ({
       return t(`${prefix}.riskEscalation`, params);
     if (getRelationLineKey(line) === "relationLine.riskVariant")
       return t(`${prefix}.riskVariant`, params);
+    if (getRelationLineKey(line) === "relationLine.avoidancePrerequisite")
+      return t(`${prefix}.avoidancePrerequisite`, params);
+    if (getRelationLineKey(line) === "relationLine.avoidanceComplement")
+      return t(`${prefix}.avoidanceComplement`, params);
+    if (getRelationLineKey(line) === "relationLine.avoidanceAlternative")
+      return t(`${prefix}.avoidanceAlternative`, params);
+    if (getRelationLineKey(line) === "relationLine.avoidanceMitigatesGap")
+      return t(`${prefix}.avoidanceMitigatesGap`, params);
     if (getRelationLineKey(line) === "relationLine.buildAttackTool")
       return t(`${prefix}.buildAttackTool`, params);
     if (getRelationLineKey(line) === "relationLine.useAttackTool")
@@ -512,6 +592,14 @@ export const createRelationExplanationHelpers = ({
       getRelationLineKey(line) === "relationLine.riskVariant"
     ) {
       return t(`${prefix}.riskRelation`);
+    }
+    if (
+      getRelationLineKey(line) === "relationLine.avoidancePrerequisite" ||
+      getRelationLineKey(line) === "relationLine.avoidanceComplement" ||
+      getRelationLineKey(line) === "relationLine.avoidanceAlternative" ||
+      getRelationLineKey(line) === "relationLine.avoidanceMitigatesGap"
+    ) {
+      return t(`${prefix}.avoidanceRelation`);
     }
     if (
       getRelationLineKey(line) === "relationLine.buildAttackTool" ||

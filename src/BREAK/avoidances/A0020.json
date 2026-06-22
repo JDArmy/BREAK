@@ -21,7 +21,39 @@
       "处罚策略",
       "身份处罚"
     ],
-    "effectiveness": "medium"
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 53 个风险，共同限制 5 个攻击工具。"
+      },
+      {
+        "key": "A0010",
+        "relation": "complement",
+        "note": "共同覆盖 23 个风险，共同限制 4 个攻击工具。"
+      },
+      {
+        "key": "A0016",
+        "relation": "complement",
+        "note": "共同覆盖 26 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0059",
+        "relation": "complement",
+        "note": "共同覆盖 15 个风险，共同限制 5 个攻击工具。"
+      },
+      {
+        "key": "A0021",
+        "relation": "complement",
+        "note": "共同覆盖 17 个风险，共同限制 3 个攻击工具。"
+      },
+      {
+        "key": "A0024",
+        "relation": "complement",
+        "note": "共同覆盖 15 个风险，共同限制 3 个攻击工具。"
+      }
+    ]
   },
   "A0020-001": {
     "title": "店铺处罚",
@@ -45,7 +77,39 @@
       "店铺封禁",
       "店铺降权"
     ],
-    "effectiveness": "medium"
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0020",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 7 个风险。"
+      },
+      {
+        "key": "A0043",
+        "relation": "complement",
+        "note": "共同覆盖 7 个风险。"
+      },
+      {
+        "key": "A0020-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0020-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0046",
+        "relation": "complement",
+        "note": "共同覆盖 6 个风险。"
+      }
+    ]
   },
   "A0020-002": {
     "title": "员工处罚",
@@ -69,7 +133,39 @@
       "降职处分",
       "纪律处分"
     ],
-    "effectiveness": "medium"
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0051",
+        "relation": "complement",
+        "note": "共同覆盖 10 个风险。"
+      },
+      {
+        "key": "A0020",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0052",
+        "relation": "complement",
+        "note": "共同覆盖 7 个风险。"
+      },
+      {
+        "key": "A0020-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0020-003",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0019",
+        "relation": "complement",
+        "note": "共同覆盖 6 个风险。"
+      }
+    ]
   },
   "A0020-003": {
     "title": "账号封禁",
@@ -93,6 +189,38 @@
       "拉黑账号",
       "账号禁用"
     ],
-    "effectiveness": "medium"
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0020",
+        "relation": "prerequisite",
+        "note": "同一主规避体系下的基础控制。"
+      },
+      {
+        "key": "A0020-001",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0020-002",
+        "relation": "alternative",
+        "note": "同一主规避体系下的可替代细分手段。"
+      },
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 6 个风险。"
+      },
+      {
+        "key": "A0010",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      },
+      {
+        "key": "A0020",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      }
+    ]
   }
 }

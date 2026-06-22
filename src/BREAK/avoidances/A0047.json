@@ -20,6 +20,38 @@
       "违约扣罚",
       "保证金约束"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0043",
+        "relation": "complement",
+        "note": "共同覆盖 7 个风险。"
+      },
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 5 个风险。"
+      },
+      {
+        "key": "A0020-001",
+        "relation": "complement",
+        "note": "共同覆盖 5 个风险。"
+      },
+      {
+        "key": "A0044",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      },
+      {
+        "key": "A0048",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      },
+      {
+        "key": "A0046",
+        "relation": "complement",
+        "note": "共同覆盖 3 个风险。"
+      }
+    ]
   }
 }

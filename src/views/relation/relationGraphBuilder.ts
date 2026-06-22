@@ -182,11 +182,14 @@ export const createRelationGraphBuilder = ({
     } else if (currentNodeType === RelationType.avoidance) {
       if (reqType == RelationType.risk) {
         avoidanceBuilder.addRisk(currentNodeId);
+      } else if (reqType == RelationType.avoidance) {
+        avoidanceBuilder.addRelatedAvoidance(currentNodeId);
       } else if (reqType == RelationType.term) {
         avoidanceBuilder.addTerm(currentNodeId);
       }
       if (reqType == RelationType.all) {
         avoidanceBuilder.addRisk(currentNodeId);
+        avoidanceBuilder.addRelatedAvoidance(currentNodeId);
         avoidanceBuilder.addSubavoidance(currentNodeId);
         avoidanceBuilder.addTerm(currentNodeId);
       }

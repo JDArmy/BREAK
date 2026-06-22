@@ -14,6 +14,13 @@
     ],
     "updated": "2026-06-16",
     "definition": "审计智能合约的铸造/销毁权限和供应量控制逻辑。",
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0056",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
   }
 }

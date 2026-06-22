@@ -44,11 +44,19 @@ export interface BreakRisk extends BreakBaseEntity {
 
 export type BreakAvoidanceCategoryId = 'AC01' | 'AC02' | 'AC03' | 'AC04';
 export type BreakAvoidanceEffectiveness = 'high' | 'medium' | 'low';
+export type BreakAvoidanceRelationType = 'prerequisite' | 'complement' | 'alternative' | 'mitigates-gap';
+
+export interface BreakAvoidanceRelation {
+  key: string;
+  relation: BreakAvoidanceRelationType;
+  note?: string;
+}
 
 export interface BreakAvoidance extends BreakBaseEntity {
   limitation?: string;
   category: BreakAvoidanceCategoryId;
   effectiveness?: BreakAvoidanceEffectiveness;
+  relatedAvoidances: BreakAvoidanceRelation[];
 }
 
 export interface BreakAttackTool extends BreakBaseEntity {

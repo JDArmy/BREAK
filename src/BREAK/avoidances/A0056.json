@@ -20,6 +20,38 @@
       "漏洞处置",
       "漏洞闭环"
     ],
-    "effectiveness": "medium"
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0055",
+        "relation": "complement",
+        "note": "共同覆盖 15 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0054",
+        "relation": "complement",
+        "note": "共同覆盖 8 个风险。"
+      },
+      {
+        "key": "A0017",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      },
+      {
+        "key": "A0028",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      },
+      {
+        "key": "A0044",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      },
+      {
+        "key": "A0058",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      }
+    ]
   }
 }

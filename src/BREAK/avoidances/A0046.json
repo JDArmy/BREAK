@@ -20,6 +20,38 @@
       "分级管控",
       "信用风险分级"
     ],
-    "effectiveness": "medium"
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0020-001",
+        "relation": "complement",
+        "note": "共同覆盖 6 个风险。"
+      },
+      {
+        "key": "A0043",
+        "relation": "complement",
+        "note": "共同覆盖 6 个风险。"
+      },
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 5 个风险。"
+      },
+      {
+        "key": "A0047",
+        "relation": "complement",
+        "note": "共同覆盖 3 个风险。"
+      },
+      {
+        "key": "A0048",
+        "relation": "complement",
+        "note": "共同覆盖 3 个风险。"
+      },
+      {
+        "key": "A0054",
+        "relation": "complement",
+        "note": "共同覆盖 3 个风险。"
+      }
+    ]
   }
 }

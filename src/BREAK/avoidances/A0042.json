@@ -21,7 +21,39 @@
       "页面随机化",
       "业务随机化"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 12 个风险，共同限制 3 个攻击工具。"
+      },
+      {
+        "key": "A0001-004",
+        "relation": "complement",
+        "note": "共同覆盖 12 个风险，共同限制 3 个攻击工具。"
+      },
+      {
+        "key": "A0010",
+        "relation": "complement",
+        "note": "共同覆盖 12 个风险，共同限制 3 个攻击工具。"
+      },
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 12 个风险，共同限制 3 个攻击工具。"
+      },
+      {
+        "key": "A0021",
+        "relation": "complement",
+        "note": "共同覆盖 12 个风险，共同限制 3 个攻击工具。"
+      },
+      {
+        "key": "A0016",
+        "relation": "complement",
+        "note": "共同覆盖 11 个风险，共同限制 2 个攻击工具。"
+      }
+    ]
   },
   "A0042-001": {
     "title": "随机化DOM",
@@ -45,7 +77,39 @@
       "XPath干扰",
       "选择器干扰"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 7 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0001-004",
+        "relation": "complement",
+        "note": "共同覆盖 7 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0010",
+        "relation": "complement",
+        "note": "共同覆盖 7 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 7 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0021",
+        "relation": "complement",
+        "note": "共同覆盖 7 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0042",
+        "relation": "complement",
+        "note": "共同覆盖 7 个风险，共同限制 1 个攻击工具。"
+      }
+    ]
   },
   "A0042-002": {
     "title": "随机事件流程",
@@ -69,6 +133,38 @@
       "业务事件随机化",
       "反脚本流程干扰"
     ],
-    "effectiveness": "high"
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 7 个风险，共同限制 2 个攻击工具。"
+      },
+      {
+        "key": "A0001-004",
+        "relation": "complement",
+        "note": "共同覆盖 7 个风险，共同限制 2 个攻击工具。"
+      },
+      {
+        "key": "A0010",
+        "relation": "complement",
+        "note": "共同覆盖 7 个风险，共同限制 2 个攻击工具。"
+      },
+      {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同覆盖 7 个风险，共同限制 2 个攻击工具。"
+      },
+      {
+        "key": "A0021",
+        "relation": "complement",
+        "note": "共同覆盖 7 个风险，共同限制 2 个攻击工具。"
+      },
+      {
+        "key": "A0042",
+        "relation": "complement",
+        "note": "共同覆盖 7 个风险，共同限制 2 个攻击工具。"
+      }
+    ]
   }
 }

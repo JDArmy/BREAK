@@ -7,6 +7,13 @@ import {
 } from "@/views/relation/relationGraphBuilderShared";
 import { addRelatedTerms } from "@/views/relation/relationGraphTermBuilder";
 
+const avoidanceRelationLineKeyMap = {
+  prerequisite: "relationLine.avoidancePrerequisite",
+  complement: "relationLine.avoidanceComplement",
+  alternative: "relationLine.avoidanceAlternative",
+  "mitigates-gap": "relationLine.avoidanceMitigatesGap",
+} as const;
+
 export const createAvoidanceRelationBuilder = (context: RelationGraphBuilderContext) => {
   const addRisk = (avoidanceKey: string) => {
     const riskKeys = Object.keys(BREAK.risks).filter((riskKey) =>
@@ -31,11 +38,22 @@ export const createAvoidanceRelationBuilder = (context: RelationGraphBuilderCont
     });
   };
 
+  const addRelatedAvoidance = (avoidanceKey: string) => {
+    const relatedAvoidances =
+      BREAK.avoidances[avoidanceKey as keyof typeof BREAK.avoidances].relatedAvoidances ?? [];
+    relatedAvoidances.forEach(({ key, relation }) => {
+      if (!(key in BREAK.avoidances)) return;
+      addRelationNode(context, RelationType.avoidance, key);
+      addRelationLine(context, avoidanceKey, avoidanceRelationLineKeyMap[relation], key);
+    });
+  };
+
   const addTerm = (avoidanceKey: string) => {
     addRelatedTerms(context, RelationType.avoidance, avoidanceKey);
   };
 
   return {
+    addRelatedAvoidance,
     addRisk,
     addSubavoidance,
     addTerm,
