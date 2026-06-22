@@ -152,6 +152,7 @@ describe("relationGraphInsights", () => {
         notices: ["relationView.nodeAnalysisNotice.rootPath"],
       })
     );
+    expect(insights.selectedNodeDiscoveredPaths.value).toHaveLength(1);
     expect(insights.selectedNetworkRelationCounts.value).toEqual({
       incoming: 1,
       outgoing: 2,
@@ -210,6 +211,10 @@ describe("relationGraphInsights", () => {
         priority: 1,
       },
     ]);
+    expect(insights.selectedNodeDiscoveredPaths.value.length).toBeGreaterThan(1);
+    expect(insights.selectedNodeAnalysisSummary.value?.notices).toContain(
+      "relationView.nodeAnalysisNotice.discoveredPath"
+    );
   });
 
   it("falls back to the root node when the selected node is unavailable", () => {

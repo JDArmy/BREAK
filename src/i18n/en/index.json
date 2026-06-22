@@ -187,7 +187,8 @@
       "lowConnectivity": "This node has few relations and is currently more useful for local inspection.",
       "missingAvoidance": "This risk has no explicit avoidance coverage yet and needs follow-up.",
       "missingRiskLink": "This attack tool has no explicit risk link yet and should be reviewed.",
-      "rootPath": "This node can return to the root through a {count}-hop path."
+      "rootPath": "This node can return to the root through a {count}-hop path.",
+      "discoveredPath": "Path discovery found {count} reachable paths; the shortest is {hops} hops."
     },
     "businessSceneImpactBlockTitle": "Business Scene Impact",
     "businessSceneImpactTitle": "Business scenes linked to \"{title}\"",
@@ -365,6 +366,20 @@
       "subEntity": "This relation comes from the main/sub entity ID hierarchy.",
       "attackToolMaker": "This relation comes from the threat actor's built-tool field.",
       "review": "This relation lacks a classified explanation and should be reviewed."
+    },
+    "semanticExplanation": {
+      "riskAvoidance": "Risk \"{fromTitle}\" lists avoidance \"{toTitle}\" as a direct mitigation or coverage option.",
+      "toolAvoidance": "Attack tool \"{fromTitle}\" connects to avoidance \"{toTitle}\", meaning the measure can limit or counter the tool.",
+      "avoidance": "\"{fromTitle}\" connects to avoidance \"{toTitle}\" with defensive or mitigation meaning.",
+      "directCauseRisk": "\"{fromTitle}\" is recorded as directly causing risk \"{toTitle}\".",
+      "indirectSupportRisk": "\"{fromTitle}\" is recorded as indirectly supporting or driving risk \"{toTitle}\".",
+      "buildAttackTool": "Threat actor \"{fromTitle}\" has the capability to build or maintain attack tool \"{toTitle}\".",
+      "useAttackTool": "Threat actor \"{fromTitle}\" uses attack tool \"{toTitle}\" in related activity.",
+      "causeRisk": "\"{fromTitle}\" reaches \"{toTitle}\" through risk-causation fields; use the source fields to distinguish direct and indirect links.",
+      "relatedTerm": "Term \"{fromTitle}\" lists \"{toTitle}\" as related knowledge for semantic context.",
+      "subEntity": "\"{toTitle}\" is a child entry under \"{fromTitle}\", derived from the entity ID hierarchy.",
+      "attackToolMaker": "Attack tool \"{fromTitle}\" can be traced back to builder \"{toTitle}\".",
+      "review": "The relation \"{relation}\" between \"{fromTitle}\" and \"{toTitle}\" is not classified yet and needs review."
     },
     "relationImpact": {
       "avoidance": "Use this to judge mitigation coverage for a risk or tool.",

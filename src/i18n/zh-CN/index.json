@@ -187,7 +187,8 @@
       "lowConnectivity": "该节点关联较少，当前更偏局部观察。",
       "missingAvoidance": "当前风险尚未看到明确规避覆盖，需要继续补齐。",
       "missingRiskLink": "当前攻击工具暂未看到明确风险链路，需要继续复核。",
-      "rootPath": "当前节点可通过 {count} 跳路径回到根节点。"
+      "rootPath": "当前节点可通过 {count} 跳路径回到根节点。",
+      "discoveredPath": "路径发现已识别 {count} 条可达路径，最短为 {hops} 跳。"
     },
     "businessSceneImpactBlockTitle": "业务场景影响",
     "businessSceneImpactTitle": "「{title}」关联的业务场景",
@@ -365,6 +366,20 @@
       "subEntity": "该关系来自主条目与子条目的 ID 层级。",
       "attackToolMaker": "该关系来自威胁行为者制作攻击工具字段。",
       "review": "该关系缺少可归类说明，需要人工复核。"
+    },
+    "semanticExplanation": {
+      "riskAvoidance": "风险「{fromTitle}」将规避手段「{toTitle}」列为直接缓解或覆盖选项。",
+      "toolAvoidance": "攻击工具「{fromTitle}」与规避手段「{toTitle}」相连，表示该手段可限制或应对该工具。",
+      "avoidance": "「{fromTitle}」与规避手段「{toTitle}」存在防御或缓解语义。",
+      "directCauseRisk": "「{fromTitle}」被记录为会直接造成风险「{toTitle}」。",
+      "indirectSupportRisk": "「{fromTitle}」被记录为会间接支撑或推动风险「{toTitle}」。",
+      "buildAttackTool": "威胁行为者「{fromTitle}」具备建设或维护攻击工具「{toTitle}」的能力。",
+      "useAttackTool": "威胁行为者「{fromTitle}」会使用攻击工具「{toTitle}」开展相关活动。",
+      "causeRisk": "「{fromTitle}」通过风险因果字段关联到「{toTitle}」，需要结合来源字段区分直接与间接。",
+      "relatedTerm": "术语「{fromTitle}」把「{toTitle}」作为相关知识对象，用于补充语义上下文。",
+      "subEntity": "「{toTitle}」是「{fromTitle}」下的细分条目，关系来自实体 ID 层级。",
+      "attackToolMaker": "攻击工具「{fromTitle}」可追溯到建设者「{toTitle}」。",
+      "review": "「{fromTitle}」与「{toTitle}」之间的关系「{relation}」尚未归类，需要复核。"
     },
     "relationImpact": {
       "avoidance": "可用于判断风险或工具已有的缓解覆盖。",

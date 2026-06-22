@@ -200,6 +200,13 @@ describe("relationNetworkLayout", () => {
       visibleData.links.find((link) => link.text === "关联术语")?.lineStyle
         .opacity
     ).toBe(0.42);
+
+    const toolNode = visibleData.nodes.find((node) => node.id === "TOOL");
+    expect(toolNode).toEqual(
+      expect.objectContaining({
+        fixed: false,
+      })
+    );
   });
 
   it("converts rendered graph nodes back to context-menu nodes", () => {
@@ -235,5 +242,21 @@ describe("relationNetworkLayout", () => {
     expect(laneData.links).toHaveLength(4);
     expect(radialData.links).toHaveLength(4);
     expect(hierarchicalData.links).toHaveLength(4);
+  });
+
+  it("gives force layout distinct degree-aware initial coordinates", () => {
+    const forceData = createHelpers({ layout: "force" }).getVisibleNetworkData();
+    const radialData = createHelpers({ layout: "radial" }).getVisibleNetworkData();
+    const forceTool = forceData.nodes.find((node) => node.id === "TOOL");
+    const radialTool = radialData.nodes.find((node) => node.id === "TOOL");
+    const forceAvoidance = forceData.nodes.find((node) => node.id === "AVOID");
+
+    expect(forceTool).toBeDefined();
+    expect(radialTool).toBeDefined();
+    expect(forceTool?.x).not.toBe(radialTool?.x);
+    expect(forceTool?.y).not.toBe(radialTool?.y);
+    expect(Math.hypot(forceTool?.x ?? 0, forceTool?.y ?? 0)).toBeLessThan(
+      Math.hypot(forceAvoidance?.x ?? 0, forceAvoidance?.y ?? 0)
+    );
   });
 });

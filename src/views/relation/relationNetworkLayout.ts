@@ -469,6 +469,108 @@ export const createNetworkDataHelpers = ({
     );
   };
 
+  const getNodeDegree = (nodeId: string) =>
+    lines.reduce(
+      (count, line) =>
+        count + (line.from === nodeId || line.to === nodeId ? 1 : 0),
+      0
+    );
+
+  const placeForceGroupNodes = (
+    graphNodes: GraphNode[],
+    group: Node[],
+    options: {
+      startAngle: number;
+      endAngle: number;
+      radius: number;
+    },
+    styleContext: NetworkGraphStyleContext
+  ) => {
+    if (group.length === 0) return;
+
+    const angleSpan = options.endAngle - options.startAngle;
+    const sortedGroup = group.slice().sort((first, second) => {
+      const degreeDiff = getNodeDegree(second.id) - getNodeDegree(first.id);
+      return degreeDiff || first.id.localeCompare(second.id);
+    });
+
+    sortedGroup.forEach((node, index) => {
+      const degree = getNodeDegree(node.id);
+      const angle =
+        options.startAngle +
+        (angleSpan * (index + 0.5)) / Math.max(1, sortedGroup.length);
+      const degreePull = Math.min(180, degree * 30);
+      const alternatingSpread = index % 2 === 0 ? -36 : 36;
+      const radius = Math.max(210, options.radius - degreePull) + alternatingSpread;
+
+      graphNodes.push(
+        createGraphNode(
+          node,
+          Math.cos(angle) * radius,
+          Math.sin(angle) * radius,
+          styleContext
+        )
+      );
+    });
+  };
+
+  const applyForceNetworkLayout = (
+    graphNodes: GraphNode[],
+    groupedNodes: Record<Exclude<RelationType, RelationType.all>, Node[]>,
+    styleContext: NetworkGraphStyleContext
+  ) => {
+    placeForceGroupNodes(
+      graphNodes,
+      groupedNodes[RelationType.threatActor],
+      {
+        startAngle: -Math.PI * 0.9,
+        endAngle: -Math.PI * 0.52,
+        radius: 520,
+      },
+      styleContext
+    );
+    placeForceGroupNodes(
+      graphNodes,
+      groupedNodes[RelationType.attackTool],
+      {
+        startAngle: -Math.PI * 0.48,
+        endAngle: -Math.PI * 0.1,
+        radius: 360,
+      },
+      styleContext
+    );
+    placeForceGroupNodes(
+      graphNodes,
+      groupedNodes[RelationType.risk],
+      {
+        startAngle: Math.PI * 0.02,
+        endAngle: Math.PI * 0.42,
+        radius: 300,
+      },
+      styleContext
+    );
+    placeForceGroupNodes(
+      graphNodes,
+      groupedNodes[RelationType.avoidance],
+      {
+        startAngle: Math.PI * 0.5,
+        endAngle: Math.PI * 0.88,
+        radius: 430,
+      },
+      styleContext
+    );
+    placeForceGroupNodes(
+      graphNodes,
+      groupedNodes[RelationType.term],
+      {
+        startAngle: Math.PI * 1.02,
+        endAngle: Math.PI * 1.4,
+        radius: 560,
+      },
+      styleContext
+    );
+  };
+
   const applyHierarchicalNetworkLayout = (
     graphNodes: GraphNode[],
     groupedNodes: Record<Exclude<RelationType, RelationType.all>, Node[]>,
@@ -526,7 +628,7 @@ export const createNetworkDataHelpers = ({
         applyHierarchicalNetworkLayout(graphNodes, groupedNodes, styleContext);
         break;
       case "force":
-        applyRadialNetworkLayout(graphNodes, groupedNodes, styleContext);
+        applyForceNetworkLayout(graphNodes, groupedNodes, styleContext);
         break;
       case "horizontal":
       default:

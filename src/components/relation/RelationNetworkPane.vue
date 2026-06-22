@@ -124,7 +124,12 @@ const setNetworkScrollerRef = (
           {{ t("relationView.evidence") }}:
           {{ selectedRelationDetail.evidenceLabel }}
         </div>
-        <p>{{ selectedRelationDetail.explanation.explanation }}</p>
+        <p>
+          {{
+            selectedRelationDetail.explanation.semanticExplanation ||
+            selectedRelationDetail.explanation.explanation
+          }}
+        </p>
         <p>{{ selectedRelationDetail.explanation.impactHint }}</p>
         <div
           v-if="selectedRelationDetail.sourceFields.length"

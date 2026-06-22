@@ -41,6 +41,8 @@ export const createRelationExplanationHelpers = ({
   t,
   nodes,
 }: CreateRelationExplanationHelpersOptions) => {
+  const nodeById = new Map(nodes.map((node) => [node.id, node]));
+
   const relationExplanationCoverage: RelationExplanationCoverageItem[] = [
     {
       key: "avoidanceMeans",
@@ -161,9 +163,19 @@ export const createRelationExplanationHelpers = ({
     sourceType?: string,
     targetType?: string
   ) => ({
-    fromType: sourceType ?? nodes.find((node) => node.id === line.from)?.type,
-    toType: targetType ?? nodes.find((node) => node.id === line.to)?.type,
+    fromType: sourceType ?? nodeById.get(line.from)?.type,
+    toType: targetType ?? nodeById.get(line.to)?.type,
   });
+
+  const getNodeDisplayTitle = (id: string) => {
+    const text = nodeById.get(id)?.text ?? id;
+    const lines = text
+      .replace(/<br\s*\/?>/gi, "\n")
+      .split("\n")
+      .map((item) => item.trim())
+      .filter(Boolean);
+    return lines.length > 1 ? lines.slice(1).join(" ") : (lines[0] ?? id);
+  };
 
   const getRelationSourceFields = (
     line: Line,
@@ -347,6 +359,60 @@ export const createRelationExplanationHelpers = ({
     return t(`${prefix}.review`);
   };
 
+  const getSemanticRelationExplanation = (
+    line: Line,
+    sourceType?: string,
+    targetType?: string
+  ) => {
+    const { fromType, toType } = getLineEndpointTypes(
+      line,
+      sourceType,
+      targetType
+    );
+    const params = {
+      fromId: line.from,
+      fromTitle: getNodeDisplayTitle(line.from),
+      toId: line.to,
+      toTitle: getNodeDisplayTitle(line.to),
+      relation: line.text,
+    };
+    const prefix = "relationView.semanticExplanation";
+
+    if (getRelationLineKey(line) === "relationLine.avoidanceMeans") {
+      if (fromType === RelationType.risk)
+        return t(`${prefix}.riskAvoidance`, params);
+      if (
+        fromType === RelationType.attackTool ||
+        toType === RelationType.attackTool
+      )
+        return t(`${prefix}.toolAvoidance`, params);
+      return t(`${prefix}.avoidance`, params);
+    }
+    if (getRelationLineKey(line) === "relationLine.directCauseRisk")
+      return t(`${prefix}.directCauseRisk`, params);
+    if (getRelationLineKey(line) === "relationLine.indirectSupportRisk")
+      return t(`${prefix}.indirectSupportRisk`, params);
+    if (getRelationLineKey(line) === "relationLine.buildAttackTool")
+      return t(`${prefix}.buildAttackTool`, params);
+    if (getRelationLineKey(line) === "relationLine.useAttackTool")
+      return t(`${prefix}.useAttackTool`, params);
+    if (getRelationLineKey(line) === "relationLine.causeRisk")
+      return t(`${prefix}.causeRisk`, params);
+    if (getRelationLineKey(line) === "relationLine.relatedTerm")
+      return t(`${prefix}.relatedTerm`, params);
+    if (
+      getRelationLineKey(line) === "relationLine.subRisk" ||
+      getRelationLineKey(line) === "relationLine.subAvoidance" ||
+      getRelationLineKey(line) === "relationLine.subAttackTool" ||
+      getRelationLineKey(line) === "relationLine.subThreatActor"
+    ) {
+      return t(`${prefix}.subEntity`, params);
+    }
+    if (getRelationLineKey(line) === "relationLine.attackToolMaker")
+      return t(`${prefix}.attackToolMaker`, params);
+    return t(`${prefix}.review`, params);
+  };
+
   const getRelationImpactHint = (line: Line) => {
     const prefix = "relationView.relationImpact";
 
@@ -401,6 +467,11 @@ export const createRelationExplanationHelpers = ({
       sourceFields,
       evidenceLevel,
       explanation: getRelationExplanationText(line, sourceType, targetType),
+      semanticExplanation: getSemanticRelationExplanation(
+        line,
+        sourceType,
+        targetType
+      ),
       impactHint: getRelationImpactHint(line),
       qualityFlags,
     };

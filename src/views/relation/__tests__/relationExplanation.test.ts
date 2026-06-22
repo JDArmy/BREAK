@@ -3,10 +3,25 @@ import { createRelationExplanationHelpers } from "../relationExplanation";
 import { RelationType, type Line, type Node } from "../relationTypes";
 
 describe("relationExplanation", () => {
-  const t = (key: string) => key;
+  const t = (key: string, params?: Record<string, unknown>) =>
+    params
+      ? `${key}:${Object.values(params)
+          .map((value) => String(value))
+          .join("|")}`
+      : key;
   const nodes: Node[] = [
-    { id: "AT0001", type: RelationType.attackTool, text: "tool", color: "" },
-    { id: "R0001", type: RelationType.risk, text: "risk", color: "" },
+    {
+      id: "AT0001",
+      type: RelationType.attackTool,
+      text: "AT0001<br/>电话黑卡",
+      color: "",
+    },
+    {
+      id: "R0001",
+      type: RelationType.risk,
+      text: "R0001<br/>流程自动化",
+      color: "",
+    },
     { id: "A0001", type: RelationType.avoidance, text: "avoidance", color: "" },
     { id: "TA0001", type: RelationType.threatActor, text: "actor", color: "" },
   ];
@@ -23,6 +38,8 @@ describe("relationExplanation", () => {
       expect.objectContaining({
         evidenceLevel: "direct",
         explanation: "relationView.relationExplanation.directCauseRisk",
+        semanticExplanation:
+          "relationView.semanticExplanation.directCauseRisk:AT0001|电话黑卡|R0001|流程自动化|relationLine.directCauseRisk",
         impactHint: "relationView.relationImpact.directCauseRisk",
         sourceFields: ["AttackTool.directCauseRisks"],
         qualityFlags: [],

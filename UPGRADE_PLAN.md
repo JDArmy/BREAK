@@ -1,9 +1,9 @@
 # BREAK 框架升级计划
 
-> 文档版本：1.1
-> 制定日期：2026-06-20，修订日期：2026-06-22，基于 v2.21.5 现状校准
+> 文档版本：1.2
+> 制定日期：2026-06-20，修订日期：2026-06-22，基于 v2.21.8 现状校准
 > 关联文档：`VISUAL_ANALYSIS_EXPLAINABILITY_PLAN.md`（关系页专项，本计划引用其 P0/P1 项）
-> 评估结论：先进性 4.5/5，完善性 4.3/5——先进且工程成熟，但距「完善」差内容质量一致性、自动化回归、可视化算法三步
+> 评估结论：先进性 4.5/5，完善性 4.4/5——先进且工程成熟；自动化回归网已补齐第一层，距「完善」主要差内容质量一致性、回归门禁强约束、可视化算法三步
 
 ## 0. 评估结论回顾
 
@@ -11,10 +11,10 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 
 三大短板（拉低完善性）：
 1. **内容质量断层**：influence 模板化（34 条复用同句）、后期风险下滑（R0196 def==desc、关键词 6.8→4.3）、案例 100% 单源、引用无 URL 可达性检测。
-2. **自动化回归网缺失**：5 个 Playwright/Lighthouse 脚本全不在 CI、47 个 .vue 零单测、relation-stability 像素断言脚本未被利用、覆盖率 include 收窄到 9 文件。
-3. **可视化算法层偏弱**：无图算法路径发现、无力导向布局、解释文本是模板套话。
+2. **自动化回归网已建立但仍需收紧**：5 个 Playwright/Lighthouse 脚本已接入 CI/Deploy，关键 .vue 组件已破零并有 137 个测试，relation-stability 已进入 PR 浏览器回归，覆盖率 include 已扩展到 composables + relation；剩余问题是浏览器回归仍以 `continue-on-error` / 条件运行为主，需观察稳定后转 hard fail，并继续扩大组件/控制器测试覆盖。
+3. **可视化算法已完成第一阶段但仍需深化**：已补 BFS 路径发现、ECharts force + 度数感知初始布局、实体语义关系解释；剩余短板是完整路径发现交互、大图性能/截图基线、攻击路径步骤级 method/action 解释。
 
-次要短板：风险间无关联、Avoidance category 非枚举、i18n-sync 虽已进入 strict 链路但仍缺字段级校验、relationAttackPath 1155 行过大、CI 步骤重复、useSearch 潜在 bug。
+次要短板：风险间无关联、Avoidance category 非枚举、i18n-sync 虽已进入 strict 链路但仍缺字段级校验、relationAttackPath 1155 行过大、CI 仍可继续优化、useSearch 潜在 bug。
 
 ## 1. 升级原则
 
@@ -26,44 +26,45 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 
 ## 2. 分阶段计划
 
-### Phase 0（P0 前置）：规划校准 + 脚本规范修复
+### Phase 0（P0 前置）：规划校准 + 脚本规范修复（已完成）
 
-> 目标：先消除规划与当前仓库状态之间的偏差，避免后续 Phase A/B 按过期假设执行。
+> 目标：先消除规划与当前仓库状态之间的偏差，避免后续 Phase A/B 按过期假设执行。  
+> 状态：已完成，详见 `research/search-reports/phase-0-baseline.md`。
 
 #### 0.1 当前基线复核
 
-> 现状：计划初版基于 v2.21.1，当前仓库版本为 v2.21.5；`link-check.yml` 已存在；`validate:data` 已包含 `i18n-sync.mjs --strict` 和英文质量校验；但对应能力仍未达到计划目标。
+> v2.21.8 现状：计划已从 v2.21.1 初评校准到当前仓库；`link-check.yml` 已存在；`validate:data` 已包含 `i18n-sync.mjs --strict` 和英文质量校验；A5 自动化回归网第一阶段已完成，但 A1/A6/B3/B5 仍需继续推进。
 
 目标：形成可追踪的执行基线。
 
 方案：
 - 重新记录当前版本、测试数量、实体数量、引用数量、质量指标和 CI workflow 状态。
 - 把“新增”类任务改成“增强/接入/去重/结构化输出”类任务，避免重复建设。
-- 对 A1/A5/B3/B5 的现状描述按当前仓库状态校准。
+- 对 A1/A5/B3/B5 的现状描述按当前仓库状态校准（A5 已完成第一阶段）。
 
-落点：`UPGRADE_PLAN.md`、必要时补充 `research/search-reports/` 下的基线报告。
+落点：`UPGRADE_PLAN.md`、`research/search-reports/phase-0-baseline.md`。
 
 验收：
-- 计划中的现状描述与 v2.21.5 仓库一致。
-- 每个后续任务都能映射到明确文件、脚本或 workflow。
+- ✅ 计划中的现状描述与 v2.21.8 仓库一致。
+- ✅ 每个后续任务都能映射到明确文件、脚本或 workflow。
 
 工作量：0.5 天。
 
-#### 0.2 Keywords 脚本规范修复
+#### 0.2 Keywords 脚本规范修复（已完成）
 
-> 现状：项目规则要求 `fix:keywords` 作为兼容别名，行为必须等同 `audit:keywords`，不能带 `--write`；当前 `package.json` 仍配置为 `node scripts/validate/keywords.mjs --write`。
+> v2.21.8 现状：`fix:keywords` 已改为 `node scripts/validate/keywords.mjs`，与 `audit:keywords` 等价，只审计不写入。
 
 目标：修复脚本语义，避免误触发关键词批量写入。
 
-方案：
-- 将 `package.json` 中 `fix:keywords` 改为与 `audit:keywords` 完全一致。
-- 确认 `keywords.mjs` 不再通过兼容别名产生写入行为。
+已完成：
+- `package.json` 中 `fix:keywords` 已与 `audit:keywords` 完全一致。
+- `keywords.mjs` 不再通过兼容别名产生写入行为。
 
 落点：`package.json`。
 
 验收：
-- `npm run fix:keywords` 与 `npm run audit:keywords` 行为一致，只审计不写入。
-- `npm run validate:data` 通过。
+- ✅ `npm run fix:keywords` 与 `npm run audit:keywords` 行为一致，只审计不写入。
+- ✅ `npm run validate:data` 通过。
 
 工作量：0.5 天。
 
@@ -157,28 +158,34 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 
 工作量：5-7 天（分批，可并行）。
 
-#### A5. 自动化回归网建立
+#### A5. 自动化回归网建立（已完成第一阶段）
 
-> 现状：5 个 Playwright/Lighthouse 脚本（site-smoke/site-performance/lighthouse-baseline/lighthouse-sankey/relation-stability）全不在 CI；47 个 .vue 零单测；relation-stability（6 布局×3 fixture 像素断言）本为防关系图谱回归却未利用，恰逢近期高频修移动端关系网络/桑基图回归。覆盖率 include 收窄到 9 文件。
+> v2.21.8 现状：5 个 Playwright/Lighthouse 脚本已接入自动化链路；PR CI 新增 `browser-regression` job，运行 `test:smoke`、`test:performance`、`test:relation-stability`；Deploy 接入 `test:lighthouse` 与 `audit:lighthouse-sankey`，并按相关前端/关系页/构建脚本变更条件运行。`.vue` 单测已破零，新增 6 个关键组件测试，当前 19 个测试文件 / 137 个测试。`vitest.config.ts` 覆盖率 include 已扩展到 `src/composables/**/*.ts`、`src/views/relation/**/*.ts` 和关键 `.vue` 组件，当前扩大范围后的基线约为 lines 44.18%、statements 42.95%、functions 42.85%、branches 41.52%。`audit:lighthouse-sankey` 曾在 CI 输出报告后卡住，已通过显式退出修复。
 
 目标：建立分层回归网，防 UI/性能/关系图谱回归。
 
-方案：
-- **CI 接入轻量 e2e**：将 `site-smoke`（路由可达性）+ `relation-stability`（关系图谱像素断言）以 `continue-on-error` 纳入 ci.yml（PR 时跑，失败不阻断但告警），逐步转 hard fail。
-- **Lighthouse 性能基线**：`lighthouse-baseline` 在次版本变化时跑（已有 shouldRunOnMinorBump 逻辑），纳入 deploy.yml。
-- **.vue 关键组件单测**：引入 `@vue/test-utils`，优先测 RelationView/RelationNodeDetailDrawer/KnowledgeSplitView/HomeView 的核心交互（非全量，先覆盖关系页 + 列表选中逻辑）。
-- **覆盖率 include 扩展**：vitest.config include 从 9 文件扩展到 `src/composables/**/*.ts` + `src/views/relation/**/*.ts`，thresholds 逐步收紧。
-- **link-check Issue 去重**：失败建 Issue 前查已存在同标题 Issue。
+已完成：
+- **CI 接入轻量 e2e**：`site-smoke`、`site-performance`、`relation-stability` 已进入 PR `browser-regression` job，当前 `continue-on-error`。
+- **Lighthouse 性能基线**：`lighthouse-baseline`、`lighthouse-sankey` 已进入 Deploy，按相关代码变更条件运行；手动 `workflow_dispatch` 强制运行。
+- **.vue 关键组件单测**：已引入 `@vue/test-utils`，覆盖 `KnowledgeSplitView`、`EntityLinkSection`、`RiskDetail`、`AvoidanceDetail`、`RelationSelectorBar`、`RelationNodeDetailDrawer`。
+- **覆盖率 include 扩展**：已扩展到 composables、relation 模块和关键 `.vue` 组件，并建立 40% 初始阈值。
+- **浏览器审计稳定性**：修复 `lighthouse-sankey-trace.mjs` 输出报告后 CI 卡住的问题。
+
+剩余工作：
+- 浏览器回归稳定观察 1-2 个版本后，将 `site-smoke` 优先转 hard fail；`relation-stability` 和 Lighthouse 继续按稳定性逐步收紧。
+- 继续补 `RelationView`、`HomeView`、关系图控制器和视图模型测试，逐步提高覆盖率阈值。
+- **link-check Issue 去重**：失败建 Issue 前查已存在同标题 Issue（与 A1 引用可达性增强一起做）。
 
 落点：`.github/workflows/ci.yml`、`.github/workflows/deploy.yml`、`vitest.config.ts`、`package.json`（加 @vue/test-utils）、新增 `src/views/relation/__tests__/` 组件测试。
 
 验收：
-- site-smoke + relation-stability 在 CI 运行（continue-on-error）。
-- 至少 5 个 .vue 组件有单测。
-- 覆盖率 include 扩展且阈值达标。
-- link-check Issue 去重。
+- ✅ site-smoke + site-performance + relation-stability 在 PR CI 运行（continue-on-error）。
+- ✅ lighthouse-baseline + lighthouse-sankey 在 Deploy 条件运行，手动触发强制运行。
+- ✅ 至少 5 个 .vue 组件有单测（当前 6 个关键组件）。
+- ✅ 覆盖率 include 已扩展且初始阈值达标。
+- ⏳ link-check Issue 去重待 A1 一并完成。
 
-工作量：4-5 天。
+工作量：第一阶段已完成；浏览器回归 hard fail、补测和 link-check 去重预计 2-3 天。
 
 #### A6. 前端可消费质量报告 JSON
 
@@ -365,68 +372,81 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 
 > 目标：从"解释型"走向"推理型"，对标 BloodHound/ATT&CK。工程量最大，在 Phase A/B 基础上推进。
 
-#### C1. 图算法路径发现
+#### C1. 图算法路径发现（已完成第一阶段）
 
-> 现状：攻击路径是预定义 TA→AT→Risk→Avoidance 四元组枚举，非最短路径/可达性算法。BloodHound 有图算法路径发现。
+> v2.21.9 现状：已新增通用 `findRelationPaths` BFS 路径发现模块，支持任意起止节点、限定跳数、最大路径数、方向图/无向图和关系优先级排序；节点分析层已接入可达路径摘要。预定义 TA→AT→Risk→Avoidance 攻击路径仍保留，用于标准四元组解释。
 
 目标：支持任意两节点间的路径发现与可达性分析。
 
-方案：
-- 评估引入图算法库（如 graphlib/js-graph-algorithms）或自实现 BFS/DFS。
-- 新增"路径发现"模式：选中两节点，展示所有可行路径（限定跳数防爆炸）。
-- 与现有预定义攻击路径并存（预定义用于标准四元组，算法用于任意探索）。
-- 路径排序（最短/最危险/最易达成）。
+已完成：
+- 自实现 BFS 路径发现，限定 `maxDepth` / `maxPaths` 防止路径爆炸。
+- 支持无向可达性和方向图路径发现。
+- 支持按关系优先级稳定排序。
+- 与现有预定义攻击路径并存，节点分析可消费算法发现的多路径摘要。
 
-落点：`src/views/relation/`（新增路径算法模块）、`src/components/relation/RelationPathExplorer.vue`（新增）。
+剩余工作：
+- 新增显式"路径发现"交互面板，支持用户选择任意起止节点并切换排序策略。
+- 在 UI 中展示完整多路径列表，而不是只在节点分析中提示摘要。
+
+落点：`src/views/relation/relationPathDiscovery.ts`、`src/views/relation/relationGraphInsights.ts`，后续可新增 `src/components/relation/RelationPathExplorer.vue`。
 
 验收：
-- 任意两节点可发现路径（限定跳数）。
-- 路径排序可用。
-- 不破坏现有预定义攻击路径。
+- ✅ 任意两节点可发现路径（限定跳数）。
+- ✅ 路径排序可用。
+- ✅ 不破坏现有预定义攻击路径。
+- ⏳ 完整路径发现交互面板待后续迭代。
 
-工作量：5-7 天。
+工作量：第一阶段已完成；交互面板预计 2-3 天。
 
-#### C2. 力导向布局
+#### C2. 力导向布局（已完成第一阶段）
 
-> 现状：5 种布局全是固定坐标网格/扇形（horizontal/lanes/split/radial/hierarchical），force 布局名不副实（实为 radial）。超大规模图可读性靠人工调参。BloodHound 有力导向。
+> v2.21.9 现状：ECharts graph 已使用 `layout: "force"`；数据层不再复用 radial 初始坐标，改为按实体类型分区、关系度数拉近中心的 force 初始布局。horizontal/lanes/split/radial/hierarchical 仍作为固定布局保留。
 
 目标：真正的力导向布局，大规模图自适应。
 
-方案：
-- 引入 d3-force 或 ECharts graph force 布局（ECharts 原生支持 force，当前未真用）。
-- 新增 force 布局选项（与现有 5 种并存）。
-- 大规模图（节点 > 50）默认 force，小图保持网格。
-- 性能基线：高关联实体 force 布局渲染耗时。
+已完成：
+- 继续使用 ECharts 原生 graph force，避免额外引入 d3-force 依赖。
+- `relationNetworkLayout.ts` 新增 force 专用初始布局，不再调用 radial。
+- 高连接节点在初始状态更靠近中心，低连接节点按类型分区外展。
+- 单测锁定 force 与 radial 坐标不同、未拖拽节点在 force 中保持可移动。
+
+剩余工作：
+- 大规模图默认策略与性能预算仍需通过 relation-stability / performance 基线继续校准。
+- 补充截图对比和大图可读性指标。
 
 落点：`src/views/relation/relationNetworkLayout.ts`、`src/views/relation/relationNetworkChartController.ts`。
 
 验收：
-- force 布局为真力导向（d3-force 或 ECharts force）。
-- 大规模图可读性提升（有截图对比）。
-- 性能在预算内。
+- ✅ force 布局为真力导向（ECharts force）。
+- ✅ force 初始布局不再复用 radial，并有单测覆盖。
+- ⏳ 大规模图截图对比和性能预算待后续回归基线补充。
 
-工作量：4-5 天。
+工作量：第一阶段已完成；性能基线与截图对比预计 1-2 天。
 
-#### C3. 动态解释生成
+#### C3. 动态解释生成（已完成第一阶段）
 
-> 现状：attackIntent/defensiveMeaning 是固定 4 段 i18n 模板套话，缺乏基于具体实体语义的动态生成（不会说"AT0001 通过批量注册小号造成 R0005"）。
+> v2.21.9 现状：关系解释新增 `semanticExplanation`，会把关系两端实体标题、ID 和关系类型注入说明，图 tooltip 与关系详情优先展示语义解释；原 `explanation` 模板保留用于抽象关系说明。
 
 目标：解释文本结合具体实体语义，非纯模板。
 
-方案：
-- 解释模板增加实体变量插值（如"{{tool}} 通过 {{method}} 造成 {{risk}}"）。
-- method 从 AttackTool 描述/关键词推导（如 AT0001 的"批量注册小号"）。
-- 保留 i18n 模板骨架，填充实体语义。
-- 可选：LLM 辅助生成自然语言解释（项目已有 DeepSeek 接口），人工复核。
+已完成：
+- 关系解释模板增加实体变量插值，输出如"攻击工具 A 被记录为会直接造成风险 B"。
+- 中英文 i18n 同步补齐 `semanticExplanation`。
+- tooltip 与关系详情优先展示实体语义说明，保留原模板说明作兼容字段。
+
+剩余工作：
+- 从 AttackTool/Risk 描述与关键词中抽取 method/action，进一步生成"通过某手法造成某风险"级别解释。
+- 攻击路径 `attackIntent` / `defensiveMeaning` 仍可继续升级为实体语义驱动。
 
 落点：`src/views/relation/relationAttackPath.ts`、`src/views/relation/relationExplanation.ts`、`src/i18n/`。
 
 验收：
-- 攻击路径解释含具体实体语义（非纯模板）。
-- 中英文同步。
-- 解释准确性可回到实体字段。
+- ✅ 单条关系解释含具体实体语义（非纯模板）。
+- ✅ 中英文同步。
+- ✅ 解释准确性可回到实体 ID、标题和来源字段。
+- ⏳ 攻击路径步骤级 method/action 抽取待后续迭代。
 
-工作量：4-5 天。
+工作量：第一阶段已完成；method/action 抽取和攻击路径解释升级预计 2-3 天。
 
 #### C4. 标准化与互操作（STIX/版本化）
 
@@ -483,22 +503,22 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 | A2 influence 去模板化 | P0 | 2-3d | 高 | 无 |
 | A3 后期风险补强 | P0 | 3-4d | 高 | 无 |
 | A4 案例多源化 | P0 | 5-7d | 中高 | 无 |
-| A5 自动化回归网 | P0 | 4-5d | 高（防回归） | Phase 0 |
+| A5 自动化回归网 | P0 | 已完成第一阶段 | 高（防回归） | Phase 0 |
 | A6 质量报告 JSON | P0 | 2-3d | 高（B6 前置） | 无 |
-| B1 风险间关联 | P1 | 3-4d | 中 | A5（回归网） |
+| B1 风险间关联 | P1 | 3-4d | 中 | A5 已就绪 |
 | B2 Avoidance 枚举化 | P1 | 3-4d | 中 | 无 |
 | B3 i18n-sync 字段级 | P1 | 2-3d | 中 | 无 |
-| B4 关系页工程债 | P1 | 4-5d | 中高 | A5 |
+| B4 关系页工程债 | P1 | 4-5d | 中高 | A5 已就绪 |
 | B5 CI 优化 | P1 | 2d | 中 | 无 |
 | B6 质量治理前端视图 | P1 | 4-5d | 高（治理闭环） | A6 |
 | B7 任务型分析视角 | P1 | 3-4d | 中高 | A6 |
-| C1 图算法路径发现 | P2 | 5-7d | 高（上台阶） | B4 |
-| C2 力导向布局 | P2 | 4-5d | 中高 | A5 |
-| C3 动态解释生成 | P2 | 4-5d | 中高 | B4 |
+| C1 图算法路径发现 | P2 | 已完成第一阶段，剩余 2-3d | 高（上台阶） | B4 |
+| C2 力导向布局 | P2 | 已完成第一阶段，剩余 1-2d | 中高 | A5 已就绪 |
+| C3 动态解释生成 | P2 | 已完成第一阶段，剩余 2-3d | 中高 | B4 |
 | C4 STIX 标准化 | P2 | 5-7d | 中（互操作） | 无 |
 | C5 业务场景图谱 | P2 | 4-5d | 低（可选） | 无 |
 
-**总工作量估算**：Phase 0 约 1 天，Phase A 约 18-25 天，Phase B 约 21-26 天，Phase C 约 22-29 天，合计约 62-81 天（可并行压缩）。
+**剩余工作量估算**：Phase 0 约 1 天，Phase A 剩余约 14-20 天，Phase B 约 21-26 天，Phase C 剩余约 12-17 天，合计约 48-64 天（可并行压缩；A5 与 C1/C2/C3 第一阶段已完成）。
 
 ## 4. 验收标准（整体）
 
@@ -506,15 +526,16 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 
 | 维度 | 当前 | 目标 |
 |---|---|---|
-| 规划基线 | 基于 v2.21.1 初评，部分描述滞后 | 基于 v2.21.5 校准并可复核 |
-| Keywords 脚本 | `fix:keywords` 仍可能写入 | 与 `audit:keywords` 等价，只审计 |
+| 规划基线 | 基于 v2.21.8 校准，A5 已回写状态 | 持续随版本更新校准 |
+| Keywords 脚本 | 已与 `audit:keywords` 等价，只审计 | 保持不写入 |
 | 引用可达性 | 有形态审计和 link-check workflow，但无存活检测 | 周期审计 + 坏链追踪 |
 | influence 模板化 | 34 条复用 | ≤ 2 条 |
 | 后期风险关键词 | avg 4.3 | ≥ 5 |
 | 案例多源率 | 0% | ≥ 30%（高价值） |
-| CI e2e 回归 | 无 | site-smoke + relation-stability |
-| .vue 单测 | 0 | ≥ 5 组件 |
-| 覆盖率 include | 9 文件 | composables + relation |
+| CI e2e 回归 | PR 已运行 site-smoke/site-performance/relation-stability（非阻断） | 稳定后逐步 hard fail |
+| Lighthouse 回归 | Deploy 条件运行 lighthouse-baseline/lighthouse-sankey | 保持条件运行，关键回归 hard fail |
+| .vue 单测 | 6 个关键组件，19 文件 / 137 测试 | 继续覆盖 RelationView/HomeView/控制器 |
+| 覆盖率 include | composables + relation + 关键 .vue，初始阈值 40% | 阈值随测试增长逐步收紧 |
 | 质量报告 JSON | 无 | 四分类稳定 JSON |
 | 质量治理视图 | 无 | 列表 + 定位 + 五种标记 |
 | 任务型视角 | 0 个 | ≥ 3 个视角 |
@@ -522,9 +543,9 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 | Avoidance category | 自由字符串 | 枚举强约束 |
 | i18n-sync | strict 已接入但仍为 ID 级 | 字段级 + 无结构字段 |
 | relationAttackPath | 1155 行 | ≤ 400 行/文件 |
-| 路径发现 | 预定义四元组 | 图算法任意路径 |
-| 布局 | 固定坐标 | + 力导向 |
-| 解释 | 模板套话 | 实体语义动态 |
+| 路径发现 | 已有 BFS 可达路径摘要 | 完整任意节点路径发现面板 |
+| 布局 | ECharts force + 度数感知初始布局 | 大图默认策略 + 性能/截图基线 |
+| 解释 | 单条关系已支持实体语义说明 | 攻击路径步骤级 method/action 解释 |
 | STIX 导出 | 无 | 合法 STIX 2.1 |
 | 业务场景图谱 | 无（首页矩阵已有） | 可选：从场景进关系图 |
 
@@ -535,7 +556,7 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 | 风险 | 说明 | 应对 |
 |---|---|---|
 | 内容治理工作量大 | A2/A3/A4 涉及大量逐条人工编辑 | LLM 辅助草稿 + 人工复核；分批；按优先级 |
-| 回归网引入 CI 不稳定 | e2e/像素断言易抖动 | 先 continue-on-error，稳定后转 hard fail；fixture 固定 |
+| 回归网引入 CI 不稳定 | e2e/像素断言和 Lighthouse 易抖动；桑基审计曾出现输出后进程不退出 | 已先 continue-on-error / 条件运行；`lighthouse-sankey` 已显式退出；稳定后转 hard fail；fixture 固定 |
 | Schema 扩展破坏既有数据 | B1/B2 改 schema | 可选字段优先；校验脚本同步；渐进迁移 |
 | 可视化算法性能 | C1/C2 图算法/力导向对大规模图耗时 | 限定跳数/节点数；性能基线；按需计算 |
 | 标准化映射损失语义 | C4 STIX 映射可能不完整 | custom 对象保留 BREAK 特有字段；不强制全量映射 |
@@ -543,10 +564,10 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 
 ## 6. 执行建议
 
-1. **先执行 Phase 0**：修正 `fix:keywords`，确认 v2.21.5 的真实基线，再进入 Phase A。
-2. **Phase A 优先 A1 + A5 + A6**：A1（引用检测增强）和 A5（回归网）为后续改动提供保障，A6 是 B6/B7 的前置数据契约。
+1. **Phase 0 已完成主要校准**：`fix:keywords` 已修正，v2.21.8 基线已回写；后续每个阶段完成后继续更新本计划。
+2. **Phase A 优先 A1 + A6，A5 持续收紧**：A5 第一阶段已完成；A1（引用检测增强）和 A6（质量报告 JSON）为后续改动提供保障，A5 后续重点是把稳定脚本逐步转 hard fail。
 3. **内容治理并行推进**：A2/A3/A4 互不依赖，可按批次并行；涉及 `src/BREAK/` 数据时必须同步英文 i18n 并跑 `audit:keywords` / `validate:data`。
-4. **Phase B 在 A5 回归网就绪后启动**：B1/B4 改关系页，需回归网保障；B3/B5 可较早独立推进。
+4. **Phase B 可在现有 A5 回归网保护下启动**：B1/B4 改关系页已有 smoke/performance/relation-stability/组件单测基础保障；B3/B5 可较早独立推进。
 5. **Phase C 按价值排序**：C1（路径发现）价值最高，C2（力导向）次之，C3（动态解释）依赖 B4，C4（STIX）互操作价值取决于是否有外部消费方。
 6. **每项独立 PR**：便于 review 和回滚，husky pre-commit + CI 门禁保障。
 7. **内容治理（A2/A3/A4）可借 LLM**：项目已有 DeepSeek 接口（`scripts/import/generate-term-en-glossary.mjs` 模式），用于生成 influence/关键词草稿，人工复核后落盘。

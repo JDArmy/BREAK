@@ -1,6 +1,7 @@
 import { computed, type Ref } from "vue";
 import { createRelationGraphRelationSummary } from "@/views/relation/relationGraphRelationSummary";
 import { createRelationGraphRootAnalysis } from "@/views/relation/relationGraphRootAnalysis";
+import { findRelationPaths } from "@/views/relation/relationPathDiscovery";
 import {
   RelationType,
   isRelationEntityType,
@@ -94,6 +95,20 @@ export const createRelationGraphInsights = ({
     buildNodeSummary,
     buildRelationSummary,
     getRelationPriority,
+  });
+
+  const selectedNodeDiscoveredPaths = computed(() => {
+    const node = selectedNetworkNode.value;
+    if (!node || node.id === relKey.value) return [];
+
+    return findRelationPaths({
+      lines,
+      startId: relKey.value,
+      endId: node.id,
+      maxDepth: 5,
+      maxPaths: 5,
+      getRelationPriority: (lineKey) => getRelationPriority(lineKey),
+    });
   });
 
   const selectedNodeAnalysisSummary = computed<NodeAnalysisSummary | null>(
@@ -196,6 +211,14 @@ export const createRelationGraphInsights = ({
           })
         );
       }
+      if (selectedNodeDiscoveredPaths.value.length > 1) {
+        notices.push(
+          t("relationView.nodeAnalysisNotice.discoveredPath", {
+            count: selectedNodeDiscoveredPaths.value.length,
+            hops: selectedNodeDiscoveredPaths.value[0]?.hopCount ?? 0,
+          })
+        );
+      }
 
       return {
         summary: t(summaryKey, params),
@@ -215,6 +238,7 @@ export const createRelationGraphInsights = ({
     selectedNetworkRelationCounts,
     selectedNetworkRelations,
     selectedNodeAnalysisSummary,
+    selectedNodeDiscoveredPaths,
     selectedNodePathRelationKeys,
     selectedNodeRootPath,
     selectedNodeRootPreview,

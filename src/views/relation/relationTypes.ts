@@ -46,6 +46,7 @@ export interface RelationExplanation {
   sourceFields: string[];
   evidenceLevel: RelationEvidenceLevel;
   explanation: string;
+  semanticExplanation?: string;
   impactHint: string;
   qualityFlags: string[];
 }

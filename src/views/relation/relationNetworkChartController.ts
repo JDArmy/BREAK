@@ -183,7 +183,7 @@ export const createNetworkChartController = ({
         return;
       }
       if (params.dataType === "edge") {
-        interactionsBridge.openRelationDetail(params.data as GraphLink);
+        return;
       }
     });
     networkChart.on("dblclick", (params) => {
@@ -313,6 +313,7 @@ export const createNetworkChartController = ({
         animationDurationUpdate: 300,
         tooltip: {
           trigger: "item",
+          triggerOn: "mousemove",
           enterable: false,
           showDelay: 500,
           extraCssText: "z-index: 650 !important;",
@@ -359,7 +360,7 @@ export const createNetworkChartController = ({
                 `<span style="${tooltip.chip}">${escapeTooltipHtml(link.targetDisplay)}</span>`,
                 `</div>`,
                 `<div style="${tooltip.evidence}">${escapeTooltipHtml(t("relationView.evidence"))}: ${escapeTooltipHtml(link.evidenceLabel)}</div>`,
-                `<div style="${tooltip.text}">${escapeTooltipHtml(link.explanation.explanation)}</div>`,
+                `<div style="${tooltip.text}">${escapeTooltipHtml(link.explanation.semanticExplanation ?? link.explanation.explanation)}</div>`,
                 fields,
                 flags,
                 `</div>`,
