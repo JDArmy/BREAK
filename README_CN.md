@@ -93,11 +93,12 @@ npm run type-check
 `npm run validate:schema-docs` 会检查 [DATA_SCHEMA.md](./DATA_SCHEMA.md) 是否与 `src/validation/breakSchema.ts` 同步。
 `npm run schema:docs:write` 会在 Schema 变更后重新生成 [DATA_SCHEMA.md](./DATA_SCHEMA.md)。
 `npm run validate:home-counts` 会检查 `src/BREAK/home.ts` 的实体计数是否与实际数据一致；`npm run generate:home-counts` 重新生成计数（也通过 pre-commit hook 自动执行）。
-`npm run export:data` 会生成 `public/data/break-data.json` 和 `public/data/break-manifest.json` 静态数据包。
+`npm run export:data` 会生成 `public/data/break-data.json`、`public/data/break-manifest.json` 和 `public/data/quality-report.json` 静态数据包。
 `npm run export:data-package` 会生成 `dist/break-data-package` npm 数据包评估产物。
 `npm run validate:data-export` 会检查公共数据包、manifest hash、实体计数、版本号和 GitHub Pages 产物同步状态。
 `npm run validate:data-package` 会检查 npm 包边界、运行时入口、类型声明、README、manifest hash 和版本一致性。
 `npm run test:smoke`、`npm run test:performance`、`npm run test:relation-stability` 和 `npm run test:lighthouse` 会使用 Playwright/Chromium 验证生成后的静态站点。这 4 个仅在本地开发环境运行（不进 CI/Deploy），按需手动执行。
+`npm run audit:quality-report` 会重新生成前端可消费的质量报告 JSON。
 `npm run audit:metrics` 会生成内容可信度、关系覆盖、分类分布和业务场景覆盖基线报告。
 `npm run audit:bundle` 会基于 `dist/assets` 检查构建产物是否超过 bundle 预算。
 `npm run audit:maintenance` 会刷新审计报告并生成统一维护汇总。
@@ -106,11 +107,12 @@ npm run type-check
 
 - Manifest：<https://break.jd.army/data/break-manifest.json>
 - 数据包：<https://break.jd.army/data/break-data.json>
+- 质量报告：<https://break.jd.army/data/quality-report.json>
 
-静态数据包提供当前中文 BREAK 数据，并包含版本、生成信息、实体计数、字节数和 SHA-256 校验值，便于外部工具直接消费。
+静态数据包提供当前中文 BREAK 数据，并包含版本、生成信息、实体计数、字节数、SHA-256 校验值和质量报告，便于外部工具直接消费。
 
 ### npm 数据包评估
 
-`npm run export:data-package` 会生成 `dist/break-data-package`，用于评估未来发布 `@jdarmy/break-data` 或等价 npm 包。该产物只包含数据，不包含 Vue 应用、ECharts 运行时和浏览器 UI 代码，文件边界为 `data/break-data.json`、`data/break-manifest.json`、`index.js`、`index.d.ts` 和独立 README。
+`npm run export:data-package` 会生成 `dist/break-data-package`，用于评估未来发布 `@jdarmy/break-data` 或等价 npm 包。该产物只包含数据，不包含 Vue 应用、ECharts 运行时和浏览器 UI 代码，文件边界为 `data/break-data.json`、`data/break-manifest.json`、`data/quality-report.json`、`index.js`、`index.d.ts` 和独立 README。
 
 包版本跟随 BREAK 应用版本。生成的 manifest 与 GitHub Pages 静态数据包保持相同 SHA-256 校验值和实体计数，外部使用方可以在不改变权威数据源的前提下评估 npm 消费方式。

@@ -93,11 +93,12 @@ npm run type-check
 `npm run validate:schema-docs` checks [DATA_SCHEMA.md](./DATA_SCHEMA.md) against `src/validation/breakSchema.ts`.
 `npm run schema:docs:write` regenerates [DATA_SCHEMA.md](./DATA_SCHEMA.md) after schema changes.
 `npm run validate:home-counts` checks that the entity counts in `src/BREAK/home.ts` match the actual data; `npm run generate:home-counts` regenerates them (also run automatically via a pre-commit hook).
-`npm run export:data` writes the static data bundle to `public/data/break-data.json` and `public/data/break-manifest.json`.
+`npm run export:data` writes the static data bundle to `public/data/break-data.json`, `public/data/break-manifest.json`, and `public/data/quality-report.json`.
 `npm run export:data-package` writes an npm package evaluation artifact to `dist/break-data-package`.
 `npm run validate:data-export` checks the public data bundle, manifest hash, entity counts, version, and copied GitHub Pages artifacts.
 `npm run validate:data-package` checks the npm package boundary, runtime entry, type declarations, README, manifest hash, and version alignment.
 `npm run test:smoke`, `npm run test:performance`, `npm run test:relation-stability`, and `npm run test:lighthouse` validate the generated static site with Playwright/Chromium. These run only in the local dev environment (not in CI/Deploy) — run them manually as needed.
+`npm run audit:quality-report` regenerates the frontend-consumable quality report JSON.
 `npm run audit:metrics` generates the content trust, relation coverage, category distribution, and business scene coverage baseline.
 `npm run audit:bundle` checks the generated `dist/assets` bundle against the current performance budget.
 `npm run audit:maintenance` refreshes the audit reports and writes a unified maintenance summary.
@@ -106,11 +107,12 @@ npm run type-check
 
 - Manifest: <https://break.jd.army/data/break-manifest.json>
 - Data bundle: <https://break.jd.army/data/break-data.json>
+- Quality report: <https://break.jd.army/data/quality-report.json>
 
-The static bundle exposes the current Chinese BREAK data with version, generation metadata, counts, byte size, and SHA-256 checksum for downstream tools.
+The static bundle exposes the current Chinese BREAK data with version, generation metadata, counts, byte size, SHA-256 checksum, and quality report for downstream tools.
 
 ### npm Data Package Evaluation
 
-`npm run export:data-package` creates `dist/break-data-package` as an evaluation artifact for a future `@jdarmy/break-data` package. The artifact is data-only: it excludes the Vue app, ECharts runtime, and browser UI code, and includes `data/break-data.json`, `data/break-manifest.json`, `index.js`, `index.d.ts`, and its own README.
+`npm run export:data-package` creates `dist/break-data-package` as an evaluation artifact for a future `@jdarmy/break-data` package. The artifact is data-only: it excludes the Vue app, ECharts runtime, and browser UI code, and includes `data/break-data.json`, `data/break-manifest.json`, `data/quality-report.json`, `index.js`, `index.d.ts`, and its own README.
 
 The package version mirrors the BREAK application version. The generated manifest keeps the same SHA-256 checksum and entity counts as the GitHub Pages static data bundle, so downstream users can evaluate npm consumption without changing the canonical data source.

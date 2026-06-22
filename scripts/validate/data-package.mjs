@@ -8,11 +8,13 @@ const packageDir = path.join(projectRoot, 'dist/break-data-package');
 const packagePackagePath = path.join(packageDir, 'package.json');
 const packageDataPath = path.join(packageDir, 'data/break-data.json');
 const packageManifestPath = path.join(packageDir, 'data/break-manifest.json');
+const packageQualityReportPath = path.join(packageDir, 'data/quality-report.json');
 const packageRuntimePath = path.join(packageDir, 'index.js');
 const packageTypesPath = path.join(packageDir, 'index.d.ts');
 const packageReadmePath = path.join(packageDir, 'README.md');
 const publicDataPath = path.join(projectRoot, 'public/data/break-data.json');
 const publicManifestPath = path.join(projectRoot, 'public/data/break-manifest.json');
+const publicQualityReportPath = path.join(projectRoot, 'public/data/quality-report.json');
 
 function readText(filePath, issues) {
   if (!fs.existsSync(filePath)) {
@@ -38,8 +40,10 @@ const issues = [];
 const packageMeta = fs.existsSync(packagePackagePath) ? readJson(packagePackagePath) : null;
 const packageDataText = readText(packageDataPath, issues);
 const packageManifestText = readText(packageManifestPath, issues);
+const packageQualityReportText = readText(packageQualityReportPath, issues);
 const publicDataText = readText(publicDataPath, issues);
 const publicManifestText = readText(publicManifestPath, issues);
+const publicQualityReportText = readText(publicQualityReportPath, issues);
 const runtimeText = readText(packageRuntimePath, issues);
 const typeText = readText(packageTypesPath, issues);
 const readmeText = readText(packageReadmePath, issues);
@@ -54,7 +58,14 @@ if (!packageMeta) {
   expectEqual(issues, 'package main', packageMeta.main, './index.js');
   expectEqual(issues, 'package types', packageMeta.types, './index.d.ts');
   expectEqual(issues, 'package sideEffects', packageMeta.sideEffects, false);
-  for (const file of ['data/break-data.json', 'data/break-manifest.json', 'index.js', 'index.d.ts', 'README.md']) {
+  for (const file of [
+    'data/break-data.json',
+    'data/break-manifest.json',
+    'data/quality-report.json',
+    'index.js',
+    'index.d.ts',
+    'README.md',
+  ]) {
     if (!packageMeta.files?.includes(file)) {
       issues.push(`package files 缺少 ${file}`);
     }
@@ -69,11 +80,21 @@ if (packageDataText && publicDataText) {
 if (packageManifestText && publicManifestText) {
   expectEqual(issues, 'package manifest 与 public manifest 不一致', packageManifestText, publicManifestText);
 }
+if (packageQualityReportText && publicQualityReportText) {
+  expectEqual(
+    issues,
+    'package quality-report 与 public quality-report 不一致',
+    packageQualityReportText,
+    publicQualityReportText,
+  );
+}
 
-if (packageDataText && packageManifestText) {
+if (packageDataText && packageManifestText && packageQualityReportText) {
   const manifest = JSON.parse(packageManifestText);
   const sha256 = crypto.createHash('sha256').update(packageDataText).digest('hex');
+  const qualityReportSha256 = crypto.createHash('sha256').update(packageQualityReportText).digest('hex');
   expectEqual(issues, 'manifest data sha256', manifest.files?.data?.sha256, sha256);
+  expectEqual(issues, 'manifest qualityReport sha256', manifest.files?.qualityReport?.sha256, qualityReportSha256);
   expectEqual(issues, 'manifest packageVersion', manifest.packageVersion, packageJson.version);
 }
 
@@ -86,11 +107,13 @@ for (const expectedType of [
   'BreakThreatActor',
   'BreakTerm',
   'BreakCase',
+  'BreakQualityReport',
+  'BreakQualityIssue',
 ]) {
   expectIncludes(issues, 'index.d.ts', typeText, expectedType);
 }
 
-for (const expectedText of ['breakData', 'breakManifest', "with { type: 'json' }"]) {
+for (const expectedText of ['breakData', 'breakManifest', 'breakQualityReport', "with { type: 'json' }"]) {
   expectIncludes(issues, 'index.js', runtimeText, expectedText);
 }
 

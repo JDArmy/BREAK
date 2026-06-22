@@ -6,8 +6,10 @@ import { projectRoot, readJson } from '../search/common.mjs';
 const packageJson = readJson(path.join(projectRoot, 'package.json'));
 const publicDataPath = path.join(projectRoot, 'public/data/break-data.json');
 const publicManifestPath = path.join(projectRoot, 'public/data/break-manifest.json');
+const publicQualityReportPath = path.join(projectRoot, 'public/data/quality-report.json');
 const docsDataPath = path.join(projectRoot, 'dist/data/break-data.json');
 const docsManifestPath = path.join(projectRoot, 'dist/data/break-manifest.json');
+const docsQualityReportPath = path.join(projectRoot, 'dist/data/quality-report.json');
 
 const expectedCounts = {
   risks: countRecords('src/BREAK/risks'),
@@ -57,8 +59,10 @@ function expectDeepEqual(issues, label, actual, expected) {
 const issues = [];
 const publicDataText = readText(publicDataPath, issues);
 const publicManifestText = readText(publicManifestPath, issues);
+const publicQualityReportText = readText(publicQualityReportPath, issues);
 const docsDataText = readText(docsDataPath, issues);
 const docsManifestText = readText(docsManifestPath, issues);
+const docsQualityReportText = readText(docsQualityReportPath, issues);
 
 if (publicDataText && docsDataText) {
   expectEqual(issues, 'dist data 与 public data 不一致', docsDataText, publicDataText);
@@ -66,9 +70,13 @@ if (publicDataText && docsDataText) {
 if (publicManifestText && docsManifestText) {
   expectEqual(issues, 'dist manifest 与 public manifest 不一致', docsManifestText, publicManifestText);
 }
+if (publicQualityReportText && docsQualityReportText) {
+  expectEqual(issues, 'dist quality-report 与 public quality-report 不一致', docsQualityReportText, publicQualityReportText);
+}
 
 let data;
 let manifest;
+let qualityReport;
 try {
   data = JSON.parse(publicDataText);
 } catch (error) {
@@ -78,6 +86,11 @@ try {
   manifest = JSON.parse(publicManifestText);
 } catch (error) {
   issues.push(`public/data/break-manifest.json 解析失败: ${error.message}`);
+}
+try {
+  qualityReport = JSON.parse(publicQualityReportText);
+} catch (error) {
+  issues.push(`public/data/quality-report.json 解析失败: ${error.message}`);
 }
 
 if (data && manifest) {
@@ -97,6 +110,31 @@ if (data && manifest) {
   expectEqual(issues, 'manifest data sha256', manifest.files?.data?.sha256, dataSha256);
   expectEqual(issues, 'manifest data bytes', manifest.files?.data?.bytes, Buffer.byteLength(publicDataText));
   expectEqual(issues, 'manifest data path', manifest.files?.data?.path, 'data/break-data.json');
+}
+
+if (manifest && qualityReport) {
+  expectEqual(issues, 'qualityReport.schemaVersion', qualityReport.schemaVersion, 1);
+  expectEqual(issues, 'qualityReport.generatedAt', qualityReport.generatedAt, manifest.generatedAt);
+  for (const key of ['weakRelations', 'missingCoverage', 'sceneIssues', 'i18nIssues']) {
+    if (!Array.isArray(qualityReport[key])) {
+      issues.push(`qualityReport.${key} 必须是数组`);
+    }
+    expectEqual(
+      issues,
+      `qualityReport.summary.${key}.total`,
+      qualityReport.summary?.[key]?.total,
+      Array.isArray(qualityReport[key]) ? qualityReport[key].length : undefined,
+    );
+  }
+  const qualityReportSha256 = crypto.createHash('sha256').update(publicQualityReportText).digest('hex');
+  expectEqual(issues, 'manifest qualityReport sha256', manifest.files?.qualityReport?.sha256, qualityReportSha256);
+  expectEqual(
+    issues,
+    'manifest qualityReport bytes',
+    manifest.files?.qualityReport?.bytes,
+    Buffer.byteLength(publicQualityReportText),
+  );
+  expectEqual(issues, 'manifest qualityReport path', manifest.files?.qualityReport?.path, 'data/quality-report.json');
 }
 
 if (issues.length > 0) {

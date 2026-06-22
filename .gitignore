@@ -17,6 +17,7 @@ coverage
 # 静态数据导出产物，由 npm run export:data 生成，不纳入版本库
 public/data/break-data.json
 public/data/break-manifest.json
+public/data/quality-report.json
 
 /cypress/videos/
 /cypress/screenshots/

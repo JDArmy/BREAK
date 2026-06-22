@@ -196,25 +196,31 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 
 工作量：第一阶段已完成；浏览器回归 hard fail、补测和 link-check 去重预计 2-3 天。
 
-#### A6. 前端可消费质量报告 JSON
+#### A6. 前端可消费质量报告 JSON（已完成第一阶段）
 
-> 现状：`public/data/` 仅有 break-data.json / break-manifest.json；审计脚本（metrics/relations/references/maintenance）的 JSON 输出在 `research/search-reports/`，仅供人读，前端零 import。metrics-baseline.json 有 weakRelations/sceneIssues 但缺 missingCoverage/i18nIssues；maintenance-summary.json 是任务列表形态，非四分类稳定契约。是 B6 质量治理视图的前置依赖。
+> v2.21.16 现状：已新增 `scripts/validate/quality-report.mjs` 和 `npm run audit:quality-report`，`npm run export:data` 会生成 `public/data/quality-report.json` 并在 manifest 中记录 hash/bytes；`validate:data-export` 和 npm 数据包评估产物已纳入该文件校验。报告结构稳定为 `weakRelations`、`missingCoverage`、`sceneIssues`、`i18nIssues`、`generatedAt`、`summary`，当前基线四类问题均为 0。前端已新增 `relationQualityReport.ts` 类型与加载入口，B6 可直接消费。
 
 目标：将审计关键问题转为稳定 JSON，供关系页高亮和列表消费。
 
-方案：
-- 新增脚本生成 `public/data/quality-report.json`（或纳入 export:data），结构：`{ weakRelations, missingCoverage, sceneIssues, i18nIssues, generatedAt }`。
-- 前端只消费报告结果，不在运行时重新执行重型审计逻辑。
-- 报告生成纳入 build 链（export:data 阶段），CI 部署时刷新。
+已完成：
+- 新增脚本生成 `public/data/quality-report.json` 和 `research/search-reports/quality-report.json`，结构包含 `weakRelations`、`missingCoverage`、`sceneIssues`、`i18nIssues`、`generatedAt`、`summary`。
+- 前端新增 `RelationQualityReport` 类型和 `loadRelationQualityReport()`，后续质量治理视图只消费静态报告结果，不在运行时重新执行重型审计逻辑。
+- 报告生成纳入 `export:data`，并由 `validate:data-export` 校验 public/dist 同步、manifest hash、bytes 和四类数组契约。
+- npm 数据包评估产物同步包含 `data/quality-report.json`、运行时导出和类型声明，避免 manifest 指向不存在的文件。
+
+剩余工作：
+- B6 中接入关系页质量治理列表、节点/边高亮和点击定位。
+- 若 A1 引用健康报告后续也要进入前端，需要扩展质量报告的 `references`/`missingReference` 维度。
 
 落点：`scripts/validate/`（新增质量报告生成脚本或扩展 metrics.mjs/maintenance.mjs）、`public/data/quality-report.json`、`src/views/relation/`（消费方）。
 
 验收：
-- `public/data/quality-report.json` 含四分类稳定结构。
-- 前端可 import 并用于节点/边标记和列表。
-- 报告随数据变化自动刷新（build 链或 CI）。
+- ✅ `public/data/quality-report.json` 含四分类稳定结构。
+- ✅ 前端已有类型和加载入口，可用于节点/边标记和列表。
+- ✅ 报告随数据变化自动刷新（`export:data` / build 链）。
+- ⏳ 关系页质量治理 UI 待 B6 完成。
 
-工作量：2-3 天。
+工作量：第一阶段已完成；B6 前端消费预计 4-5 天。
 
 ---
 
@@ -513,7 +519,7 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 | A3 后期风险补强 | P0 | 已完成 | 高 | 无 |
 | A4 案例来源质量分级 | P0 | 已完成方向调整，剩余 4-6d | 中高 | A1/A6 |
 | A5 自动化回归网 | P0 | 已完成第一阶段 | 高（防回归） | Phase 0 |
-| A6 质量报告 JSON | P0 | 2-3d | 高（B6 前置） | 无 |
+| A6 质量报告 JSON | P0 | 已完成第一阶段 | 高（B6 前置） | 无 |
 | B1 风险间关联 | P1 | 3-4d | 中 | A5 已就绪 |
 | B2 Avoidance 枚举化 | P1 | 3-4d | 中 | 无 |
 | B3 i18n-sync 字段级 | P1 | 2-3d | 中 | 无 |

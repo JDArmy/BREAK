@@ -5,11 +5,13 @@ import { ensureDir, projectRoot, readJson, writeJson } from '../search/common.mj
 const packageJson = readJson(path.join(projectRoot, 'package.json'));
 const publicDataPath = path.join(projectRoot, 'public/data/break-data.json');
 const publicManifestPath = path.join(projectRoot, 'public/data/break-manifest.json');
+const publicQualityReportPath = path.join(projectRoot, 'public/data/quality-report.json');
 const packageDir = path.join(projectRoot, 'dist/break-data-package');
 const dataPackageName = '@jdarmy/break-data';
 
 const data = readJson(publicDataPath);
 const manifest = readJson(publicManifestPath);
+const qualityReport = readJson(publicQualityReportPath);
 
 const typeDefinitions = `export interface BreakReference {
   title: string;
@@ -116,12 +118,55 @@ export interface BreakDataManifest {
       bytes: number;
       sha256: string;
     };
+    qualityReport: {
+      path: 'data/quality-report.json';
+      bytes: number;
+      sha256: string;
+    };
   };
   counts: Record<keyof BreakDataCollections, BreakEntityCount>;
 }
 
+export type BreakQualitySeverity = 'error' | 'review' | 'info';
+
+export interface BreakQualityIssue {
+  id: string;
+  type: string;
+  severity: BreakQualitySeverity;
+  entityType: string;
+  key: string;
+  title: string;
+  message: string;
+  count?: number;
+  field?: string;
+  relation?: string;
+  ref?: string;
+}
+
+export interface BreakQualitySummary {
+  total: number;
+  bySeverity: Record<string, number>;
+  byType: Record<string, number>;
+}
+
+export interface BreakQualityReport {
+  schemaVersion: 1;
+  generatedAt: string;
+  weakRelations: BreakQualityIssue[];
+  missingCoverage: BreakQualityIssue[];
+  sceneIssues: BreakQualityIssue[];
+  i18nIssues: BreakQualityIssue[];
+  summary: {
+    weakRelations: BreakQualitySummary;
+    missingCoverage: BreakQualitySummary;
+    sceneIssues: BreakQualitySummary;
+    i18nIssues: BreakQualitySummary;
+  };
+}
+
 export const breakData: BreakDataBundle;
 export const breakManifest: BreakDataManifest;
+export const breakQualityReport: BreakQualityReport;
 export default breakData;
 `;
 
@@ -137,6 +182,7 @@ Static BREAK data bundle for consumers that need the knowledge base without the 
 - Files:
   - \`data/break-data.json\`
   - \`data/break-manifest.json\`
+  - \`data/quality-report.json\`
   - \`index.js\`
   - \`index.d.ts\`
 
@@ -151,18 +197,20 @@ Static BREAK data bundle for consumers that need the knowledge base without the 
 
 \`\`\`ts
 import type { BreakDataBundle } from '${dataPackageName}';
-import { breakData, breakManifest } from '${dataPackageName}';
+import { breakData, breakManifest, breakQualityReport } from '${dataPackageName}';
 
 const bundle = breakData as BreakDataBundle;
 console.log(Object.keys(bundle.data.risks).length);
 console.log(breakManifest.files.data.sha256);
+console.log(breakQualityReport.summary.weakRelations.total);
 \`\`\`
 `;
 
 const runtimeEntry = `import breakData from './data/break-data.json' with { type: 'json' };
 import breakManifest from './data/break-manifest.json' with { type: 'json' };
+import breakQualityReport from './data/quality-report.json' with { type: 'json' };
 
-export { breakData, breakManifest };
+export { breakData, breakManifest, breakQualityReport };
 export default breakData;
 `;
 
@@ -178,6 +226,7 @@ const packageBoundary = {
   files: [
     'data/break-data.json',
     'data/break-manifest.json',
+    'data/quality-report.json',
     'index.js',
     'index.d.ts',
     'README.md',
@@ -189,6 +238,7 @@ const packageBoundary = {
     },
     './data/break-data.json': './data/break-data.json',
     './data/break-manifest.json': './data/break-manifest.json',
+    './data/quality-report.json': './data/quality-report.json',
     './package.json': './package.json',
   },
   types: './index.d.ts',
@@ -199,6 +249,7 @@ ensureDir(path.join(packageDir, 'data'));
 writeJson(path.join(packageDir, 'package.json'), packageBoundary);
 writeJson(path.join(packageDir, 'data/break-data.json'), data);
 writeJson(path.join(packageDir, 'data/break-manifest.json'), manifest);
+writeJson(path.join(packageDir, 'data/quality-report.json'), qualityReport);
 fs.writeFileSync(path.join(packageDir, 'index.js'), runtimeEntry);
 fs.writeFileSync(path.join(packageDir, 'index.d.ts'), typeDefinitions);
 fs.writeFileSync(path.join(packageDir, 'README.md'), readme);

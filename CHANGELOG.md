@@ -1,5 +1,11 @@
 # Change log
 
+## 2.21.16
+
+- 新增前端可消费质量报告导出：`export:data` 同步生成 `public/data/quality-report.json`，包含弱关系、缺覆盖、业务场景异常和 i18n 异常四类稳定结构
+- 将质量报告纳入静态数据 manifest、GitHub Pages 导出校验和 npm 数据包评估产物，并补充关系页加载类型入口
+- 回写 `UPGRADE_PLAN.md` 的 A6 状态：质量报告 JSON 第一阶段已完成，后续由 B6 接入质量治理前端视图
+
 ## 2.21.15
 
 - 知识库 PC 端侧栏支持拖拽调整宽度，拖到极值自动收起、从收起态拖出恢复，宽度通过 localStorage 持久化

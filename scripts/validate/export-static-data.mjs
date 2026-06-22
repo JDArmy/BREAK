@@ -3,10 +3,12 @@ import { execFileSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 import { ensureDir, projectRoot, readJson, writeJson } from '../search/common.mjs';
+import { writeQualityReport } from './quality-report.mjs';
 
 const outputDir = path.join(projectRoot, 'public/data');
 const dataPath = path.join(outputDir, 'break-data.json');
 const manifestPath = path.join(outputDir, 'break-manifest.json');
+const qualityReportPath = path.join(outputDir, 'quality-report.json');
 const packageJson = readJson(path.join(projectRoot, 'package.json'));
 
 const exportConfigs = [
@@ -94,6 +96,9 @@ const counts = Object.fromEntries(
 
 const dataJson = `${JSON.stringify(data, null, 2)}\n`;
 const sha256 = crypto.createHash('sha256').update(dataJson).digest('hex');
+const qualityReport = writeQualityReport({ generatedAt });
+const qualityReportJson = fs.readFileSync(qualityReportPath, 'utf8');
+const qualityReportSha256 = crypto.createHash('sha256').update(qualityReportJson).digest('hex');
 const manifest = {
   schemaVersion: 1,
   packageVersion: packageJson.version,
@@ -104,6 +109,11 @@ const manifest = {
       path: 'data/break-data.json',
       bytes: Buffer.byteLength(dataJson),
       sha256,
+    },
+    qualityReport: {
+      path: 'data/quality-report.json',
+      bytes: Buffer.byteLength(qualityReportJson),
+      sha256: qualityReportSha256,
     },
   },
   counts,
@@ -116,6 +126,10 @@ writeJson(manifestPath, manifest);
 console.log('\n✅ 静态数据导出完成');
 console.log(`data=${path.relative(projectRoot, dataPath)}`);
 console.log(`manifest=${path.relative(projectRoot, manifestPath)}`);
+console.log(`qualityReport=${path.relative(projectRoot, qualityReportPath)}`);
 console.log(
   `entities=${counts.risks.total}/${counts.avoidances.total}/${counts.attackTools.total}/${counts.threatActors.total}/${counts.terms.total}/${counts.businessScenes.total}/${counts.avoidanceCategories.total}/${counts.cases.total}`
+);
+console.log(
+  `quality=${qualityReport.weakRelations.length}/${qualityReport.missingCoverage.length}/${qualityReport.sceneIssues.length}/${qualityReport.i18nIssues.length}`
 );
