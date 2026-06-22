@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, nextTick, ref, watch } from "vue";
+import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { useBreakpoints } from "@/composables/useBreakpoints";
 import { ArrowLeft } from "@element-plus/icons-vue";
@@ -39,6 +39,96 @@ const mobileListScrollTop = ref(0);
 
 // 移动端两态：list / detail
 const mobileView = ref<"list" | "detail">("list");
+
+// PC 端侧栏拖拽调宽：拖到极值收起（宽度=0），从收起态拖出恢复，宽度持久化到 localStorage。
+// sidebar 收起时宽度塌成 0 但元素始终在 DOM（不 display:none），分隔条始终可命中，
+// 单一 splitter 交互同时覆盖收起与展开。
+const SIDEBAR_WIDTH_KEY = "break-knowledge-sidebar-width";
+const DEFAULT_SIDEBAR_WIDTH = 320;
+const MIN_EXPANDED_WIDTH = 240;
+const COLLAPSE_THRESHOLD = 180;
+const COLLAPSED_WIDTH = 0;
+const SIDEBAR_HARD_MAX = 560;
+
+const maxSidebarWidth = () => {
+  if (typeof window === "undefined") return SIDEBAR_HARD_MAX;
+  return Math.min(SIDEBAR_HARD_MAX, Math.floor(window.innerWidth * 0.6));
+};
+
+const clampSidebarWidth = (px: number) => {
+  const max = maxSidebarWidth();
+  if (px <= COLLAPSED_WIDTH) return COLLAPSED_WIDTH;
+  if (px >= max) return max;
+  return Math.round(px);
+};
+
+const readStoredSidebarWidth = () => {
+  if (typeof localStorage === "undefined") return DEFAULT_SIDEBAR_WIDTH;
+  const raw = localStorage.getItem(SIDEBAR_WIDTH_KEY);
+  if (raw == null) return DEFAULT_SIDEBAR_WIDTH;
+  const num = Number(raw);
+  if (!Number.isFinite(num) || num < COLLAPSED_WIDTH) return DEFAULT_SIDEBAR_WIDTH;
+  return clampSidebarWidth(num);
+};
+
+const persistSidebarWidth = () => {
+  if (typeof localStorage === "undefined") return;
+  localStorage.setItem(SIDEBAR_WIDTH_KEY, String(sidebarWidth.value));
+};
+
+const sidebarWidth = ref(readStoredSidebarWidth());
+const isCollapsed = computed(() => sidebarWidth.value === COLLAPSED_WIDTH);
+const dragging = ref(false);
+const splitterRef = ref<HTMLElement>();
+let dragStartX = 0;
+let dragStartWidth = 0;
+let resizeTimer: ReturnType<typeof setTimeout> | undefined;
+
+const onSplitterPointerMove = (e: PointerEvent) => {
+  if (!dragging.value) return;
+  const delta = e.clientX - dragStartX;
+  sidebarWidth.value = clampSidebarWidth(dragStartWidth + delta);
+};
+
+const endDrag = () => {
+  if (!dragging.value) return;
+  dragging.value = false;
+  window.removeEventListener("pointermove", onSplitterPointerMove);
+  window.removeEventListener("pointerup", onSplitterPointerUp);
+  document.body.style.userSelect = "";
+  document.body.style.cursor = "";
+};
+
+const onSplitterPointerUp = () => {
+  // 松手吸附：小于阈值收起，否则吸附到最小展开宽度
+  sidebarWidth.value =
+    sidebarWidth.value < COLLAPSE_THRESHOLD
+      ? COLLAPSED_WIDTH
+      : clampSidebarWidth(Math.max(MIN_EXPANDED_WIDTH, sidebarWidth.value));
+  persistSidebarWidth();
+  endDrag();
+};
+
+const onSplitterPointerDown = (e: PointerEvent) => {
+  if (isMobile.value) return;
+  e.preventDefault();
+  dragging.value = true;
+  dragStartX = e.clientX;
+  dragStartWidth = sidebarWidth.value;
+  document.body.style.userSelect = "none";
+  document.body.style.cursor = "col-resize";
+  window.addEventListener("pointermove", onSplitterPointerMove);
+  window.addEventListener("pointerup", onSplitterPointerUp);
+};
+
+const onWindowResize = () => {
+  if (resizeTimer) clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    if (sidebarWidth.value !== COLLAPSED_WIDTH && sidebarWidth.value > maxSidebarWidth()) {
+      sidebarWidth.value = clampSidebarWidth(sidebarWidth.value);
+    }
+  }, 200);
+};
 
 const selectedItem = computed(() =>
   props.items.find((item) => item.id === props.selectedKey)
@@ -246,13 +336,29 @@ watch(isMobile, (mobile) => {
   } else if (route.hash && selectedItem.value) {
     mobileView.value = "detail";
   }
+  // 切到移动端时清理 PC 拖拽态，避免遗留 window 监听与 body 样式
+  if (mobile) endDrag();
+});
+
+onMounted(() => {
+  window.addEventListener("resize", onWindowResize);
+});
+
+onBeforeUnmount(() => {
+  if (resizeTimer) clearTimeout(resizeTimer);
+  window.removeEventListener("resize", onWindowResize);
+  endDrag();
 });
 </script>
 
 <template>
   <!-- 桌面端：双栏布局 -->
-  <section v-if="!isMobile" class="knowledge-page">
-    <aside class="knowledge-sidebar">
+  <section
+    v-if="!isMobile"
+    class="knowledge-page"
+    :class="{ 'is-dragging': dragging, 'is-collapsed': isCollapsed }"
+  >
+    <aside class="knowledge-sidebar" :style="{ width: sidebarWidth + 'px' }">
       <div class="knowledge-header">
         <h3 class="knowledge-title">{{ title }}</h3>
         <slot name="filters" />
@@ -288,6 +394,16 @@ watch(isMobile, (mobile) => {
         </div>
       </div>
     </aside>
+
+    <div
+      ref="splitterRef"
+      class="knowledge-splitter"
+      role="separator"
+      aria-orientation="vertical"
+      :aria-label="isCollapsed ? $t('knowledgeSidebarCollapsed') : $t('knowledgeSplitter')"
+      :title="isCollapsed ? $t('knowledgeSidebarCollapsed') : $t('knowledgeSplitter')"
+      @pointerdown="onSplitterPointerDown"
+    />
 
     <main ref="detailRef" class="knowledge-detail">
       <template v-if="selectedItem">
@@ -361,11 +477,15 @@ watch(isMobile, (mobile) => {
 
 <style scoped>
 .knowledge-page {
-  display: grid;
-  grid-template-columns: minmax(280px, 30%) 1fr;
-  gap: 18px;
+  display: flex;
+  gap: 0;
   height: calc(100dvh - 150px);
   min-height: 520px;
+}
+
+.knowledge-page.is-dragging {
+  cursor: col-resize;
+  user-select: none;
 }
 
 .knowledge-sidebar,
@@ -378,8 +498,52 @@ watch(isMobile, (mobile) => {
 }
 
 .knowledge-sidebar {
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  transition: width 0.15s ease;
+}
+
+.knowledge-page.is-dragging .knowledge-sidebar {
+  transition: none;
+}
+
+/* 收起态：宽度=0，隐藏边框与阴影，避免残留视觉边 */
+.knowledge-page.is-collapsed .knowledge-sidebar {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.knowledge-splitter {
+  flex: 0 0 8px;
+  position: relative;
+  cursor: col-resize;
+  z-index: 1;
+}
+
+.knowledge-splitter::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  transform: translateX(-50%);
+  background: var(--break-border);
+  transition: background 0.15s ease, width 0.15s ease;
+}
+
+.knowledge-splitter:hover::before,
+.knowledge-page.is-dragging .knowledge-splitter::before,
+.knowledge-page.is-collapsed .knowledge-splitter::before {
+  background: var(--break-link);
+  width: 2px;
+}
+
+.knowledge-detail {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .knowledge-header {

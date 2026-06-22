@@ -1,7 +1,29 @@
 import { mount } from "@vue/test-utils";
-import { describe, expect, it, vi, beforeEach } from "vitest";
+import { describe, expect, it, vi, beforeEach, afterEach } from "vitest";
 import { nextTick } from "vue";
 import KnowledgeSplitView from "@/components/KnowledgeSplitView.vue";
+
+// happy-dom 在 Node 26 下未稳定注入 localStorage，统一用内存实现打桩
+const createMemoryLocalStorage = () => {
+  const store = new Map<string, string>();
+  return {
+    getItem: (key: string) => (store.has(key) ? store.get(key)! : null),
+    setItem: (key: string, value: string) => {
+      store.set(key, String(value));
+    },
+    removeItem: (key: string) => {
+      store.delete(key);
+    },
+    clear: () => {
+      store.clear();
+    },
+    key: (index: number) => Array.from(store.keys())[index] ?? null,
+    get length() {
+      return store.size;
+    },
+  };
+};
+
 
 const mocks = vi.hoisted(() => {
   const isMobile = { value: false, __v_isRef: true };
@@ -77,6 +99,8 @@ const mountView = (selectedKey = "R0001") =>
   });
 
 describe("KnowledgeSplitView", () => {
+  let originalLocalStorage: Storage | undefined;
+
   beforeEach(() => {
     mocks.isMobile.value = false;
     mocks.route.hash = "";
@@ -85,6 +109,26 @@ describe("KnowledgeSplitView", () => {
     mocks.route.name = "risks";
     mocks.router.push.mockClear();
     mocks.router.replace.mockClear();
+    // happy-dom 在 Node 26 下未注入 localStorage，直接挂到 window 供组件读写，
+    // 不走 vi.stubGlobal 以免影响 happy-dom 的 rAF/布局调度时序
+    originalLocalStorage = window.localStorage;
+    Object.defineProperty(window, "localStorage", {
+      value: createMemoryLocalStorage(),
+      configurable: true,
+      writable: true,
+    });
+  });
+
+  afterEach(() => {
+    if (originalLocalStorage === undefined) {
+      delete (window as Partial<Window>).localStorage;
+    } else {
+      Object.defineProperty(window, "localStorage", {
+        value: originalLocalStorage,
+        configurable: true,
+        writable: true,
+      });
+    }
   });
 
   it("按查询词过滤列表并保留详情插槽", async () => {
@@ -133,5 +177,73 @@ describe("KnowledgeSplitView", () => {
       name: "riskDetail",
       params: { rKey: "R0002" },
     });
+  });
+
+  // happy-dom 可能未实现 setPointerCapture，统一打桩避免报错
+  const ensurePointerCapture = () => {
+    if (!HTMLElement.prototype.setPointerCapture) {
+      HTMLElement.prototype.setPointerCapture = () => {};
+      HTMLElement.prototype.releasePointerCapture = () => {};
+    }
+  };
+
+  // 模拟拖拽分隔条：pointerdown（组件内元素）→ window pointermove → window pointerup
+  const dragSplitter = async (wrapper: ReturnType<typeof mountView>, fromX: number, toX: number) => {
+    ensurePointerCapture();
+    await wrapper.find(".knowledge-splitter").trigger("pointerdown", { clientX: fromX, pointerId: 1 });
+    window.dispatchEvent(new PointerEvent("pointermove", { clientX: toX }));
+    window.dispatchEvent(new PointerEvent("pointerup", { clientX: toX }));
+    await nextTick();
+  };
+
+  it("默认渲染分隔条且侧栏带 inline 宽度", () => {
+    const wrapper = mountView();
+    const sidebar = wrapper.find<HTMLElement>(".knowledge-sidebar").element;
+
+    expect(wrapper.find(".knowledge-splitter").exists()).toBe(true);
+    expect(sidebar.style.width).not.toBe("");
+    expect(sidebar.style.width).toMatch(/px$/);
+  });
+
+  it("拖拽增宽后持久化宽度到 localStorage", async () => {
+    const wrapper = mountView();
+
+    await dragSplitter(wrapper, 320, 400);
+
+    const stored = localStorage.getItem("break-knowledge-sidebar-width");
+    expect(stored).not.toBeNull();
+    expect(Number(stored)).toBeGreaterThanOrEqual(240);
+    // 侧栏实际宽度与持久化值一致
+    const sidebar = wrapper.find<HTMLElement>(".knowledge-sidebar").element;
+    expect(Number(sidebar.style.width.replace("px", ""))).toBe(Number(stored));
+  });
+
+  it("拖到极值松手后侧栏收起且详情区仍渲染", async () => {
+    const wrapper = mountView();
+
+    // 从 320 拖到 100（< 收起阈值 180），松手吸附为 0
+    await dragSplitter(wrapper, 320, 100);
+
+    const sidebar = wrapper.find<HTMLElement>(".knowledge-sidebar").element;
+    expect(sidebar.style.width).toBe("0px");
+    expect(wrapper.find(".knowledge-page").classes()).toContain("is-collapsed");
+    // 收起态下详情区与插槽内容仍在 DOM
+    expect(wrapper.find(".knowledge-detail").exists()).toBe(true);
+    expect(wrapper.text()).toContain("详情 R0001");
+    expect(localStorage.getItem("break-knowledge-sidebar-width")).toBe("0");
+  });
+
+  it("从收起态拖出可恢复展开", async () => {
+    localStorage.setItem("break-knowledge-sidebar-width", "0");
+    const wrapper = mountView();
+    expect(wrapper.find<HTMLElement>(".knowledge-sidebar").element.style.width).toBe("0px");
+
+    // 从 0 拖到 300（> 最小展开宽度 240），松手吸附展开
+    await dragSplitter(wrapper, 0, 300);
+
+    const sidebar = wrapper.find<HTMLElement>(".knowledge-sidebar").element;
+    expect(sidebar.style.width).not.toBe("0px");
+    expect(Number(sidebar.style.width.replace("px", ""))).toBeGreaterThanOrEqual(240);
+    expect(wrapper.find(".knowledge-page").classes()).not.toContain("is-collapsed");
   });
 });
