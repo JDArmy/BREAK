@@ -84,10 +84,25 @@ async function waitForChrome(port, timeoutMs = 15000) {
 async function waitForExit(child, timeoutMs = 5000) {
   if (child.exitCode !== null || child.signalCode !== null) return;
 
-  await Promise.race([
-    once(child, 'exit'),
-    new Promise((resolve) => setTimeout(resolve, timeoutMs)),
+  const result = await Promise.race([
+    once(child, 'exit').then(() => true),
+    new Promise((resolve) => setTimeout(() => resolve(false), timeoutMs)),
   ]);
+  return result === true;
+}
+
+async function terminateChild(child, label) {
+  if (!child || child.exitCode !== null || child.signalCode !== null) return;
+
+  child.kill('SIGTERM');
+  const exited = await waitForExit(child, 5000);
+  if (exited) return;
+
+  child.kill('SIGKILL');
+  const killed = await waitForExit(child, 3000);
+  if (!killed) {
+    console.warn(`Warning: failed to terminate ${label}`);
+  }
 }
 
 function removeTempDir(dir) {
@@ -137,8 +152,7 @@ async function launchChrome() {
   return {
     port,
     close: async () => {
-      chrome.kill('SIGTERM');
-      await waitForExit(chrome);
+      await terminateChild(chrome, 'Chromium');
       removeTempDir(userDataDir);
     },
   };
@@ -551,5 +565,5 @@ try {
   process.exitCode = 1;
 } finally {
   await chrome?.close();
-  preview.kill('SIGTERM');
+  await terminateChild(preview, 'preview server');
 }
