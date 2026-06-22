@@ -1,5 +1,9 @@
 # Change log
 
+## 2.21.5
+
+- 优化关系覆盖审计报告的待复核输出：无待复核项时显示通过状态，避免空清单造成误判；控制台同步输出 `待复核项: 0`
+
 ## 2.21.4
 
 - 项目运行时基线提升到 Node 24：同步更新 package.json/package-lock.json 的 engines、GitHub Actions 的 setup-node 版本以及 .nvmrc，修复 vue-i18n 11.4.5 / @intlify 依赖要求 Node >=22 时在 Node 20.19.0 下 npm ci 出现 EBADENGINE 警告的问题

@@ -192,6 +192,12 @@ function collectRelationAudit() {
 }
 
 function renderMarkdown(report) {
+  const reviewCounts = {
+    unreferencedAvoidances: report.review.unreferencedAvoidances.length,
+    unreferencedMainRisks: report.review.unreferencedMainRisks.length,
+    attackToolsWithoutThreatActors: report.review.attackToolsWithoutThreatActors.length,
+  };
+  const hasReviewItems = Object.values(reviewCounts).some((count) => count > 0);
   const lines = [
     '# BREAK 关系覆盖审计报告',
     '',
@@ -207,10 +213,14 @@ function renderMarkdown(report) {
     lines.push(`| ${item.name} | ${item.total} | ${item.covered} | ${item.empty} | ${item.rate}% |`);
   }
 
-  lines.push('', '## 待复核清单', '');
-  lines.push(`- 未被 Risk/AttackTool 引用的 Avoidance: ${report.review.unreferencedAvoidances.length}`);
-  lines.push(`- 未被场景/工具/行为者引用的主 Risk: ${report.review.unreferencedMainRisks.length}`);
-  lines.push(`- 未被 ThreatActor 引用的 AttackTool: ${report.review.attackToolsWithoutThreatActors.length}`);
+  lines.push('', hasReviewItems ? '## 待复核清单' : '## 待复核清单（已通过）', '');
+  if (hasReviewItems) {
+    lines.push(`- 未被 Risk/AttackTool 引用的 Avoidance: ${reviewCounts.unreferencedAvoidances}`);
+    lines.push(`- 未被场景/工具/行为者引用的主 Risk: ${reviewCounts.unreferencedMainRisks}`);
+    lines.push(`- 未被 ThreatActor 引用的 AttackTool: ${reviewCounts.attackToolsWithoutThreatActors}`);
+  } else {
+    lines.push('✅ 未发现需要复核的关系覆盖项。');
+  }
 
   const severities = ['error', 'review', 'info'];
   lines.push('', '## 问题汇总', '');
@@ -244,10 +254,20 @@ console.log('\n=== BREAK 关系覆盖审计报告 ===\n');
 for (const item of report.summaries) {
   console.log(`${item.name}: ${item.covered}/${item.total} (${item.rate}%)`);
 }
-console.log('\n## 待复核');
-console.log(`unreferencedAvoidances=${report.review.unreferencedAvoidances.length}`);
-console.log(`unreferencedMainRisks=${report.review.unreferencedMainRisks.length}`);
-console.log(`attackToolsWithoutThreatActors=${report.review.attackToolsWithoutThreatActors.length}`);
+const reviewCounts = {
+  unreferencedAvoidances: report.review.unreferencedAvoidances.length,
+  unreferencedMainRisks: report.review.unreferencedMainRisks.length,
+  attackToolsWithoutThreatActors: report.review.attackToolsWithoutThreatActors.length,
+};
+const hasReviewItems = Object.values(reviewCounts).some((count) => count > 0);
+if (hasReviewItems) {
+  console.log('\n## 待复核');
+  console.log(`unreferencedAvoidances=${reviewCounts.unreferencedAvoidances}`);
+  console.log(`unreferencedMainRisks=${reviewCounts.unreferencedMainRisks}`);
+  console.log(`attackToolsWithoutThreatActors=${reviewCounts.attackToolsWithoutThreatActors}`);
+} else {
+  console.log('\n✅ 待复核项: 0');
+}
 console.log(`\n报告已保存到: ${reportMdPath}`);
 
 if (process.argv.includes('--strict') && report.issues.some((issue) => issue.severity === 'error')) {
