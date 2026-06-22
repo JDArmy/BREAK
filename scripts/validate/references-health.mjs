@@ -37,7 +37,7 @@ function collectReferences() {
 
 function classifyStatus(status) {
   if (status >= 200 && status < 400) return 'ok';
-  if ([401, 403, 405, 429].includes(status)) return 'review';
+  if ([401, 403, 405, 412, 429, 521].includes(status)) return 'review';
   if (status >= 400) return 'broken';
   return 'unknown';
 }

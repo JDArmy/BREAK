@@ -102,7 +102,7 @@
     "limitation": "Whitelist-based domain auditing is ineffective against open redirect vulnerabilities and resource abuse (R0069). Blacklist-based auditing has the problem that domains or links can easily be changed. Therefore, in many cases neither approach works well.",
     "references": [
       {
-        "title": "Phishing Guidance - CISA"
+        "title": "CISA Avoiding Social Engineering and Phishing Attacks"
       },
       {
         "title": "An effective detection approach for phishing websites using URL and HTML features"

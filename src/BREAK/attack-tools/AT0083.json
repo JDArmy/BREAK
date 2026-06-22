@@ -26,16 +26,16 @@
     ],
     "references": [
       {
-        "title": "Modbus Penetration Testing Framework",
-        "link": "https://github.com/theralfbrown/smod"
+        "title": "Nmap NSE modbus-discover 脚本",
+        "link": "https://nmap.org/nsedoc/scripts/modbus-discover.html"
       },
       {
         "title": "CANard CAN bus toolkit",
         "link": "https://github.com/ericevenchick/canard"
       },
       {
-        "title": "OWASP Medical Device Security",
-        "link": "https://owasp.org/www-project-medical-device-security/"
+        "title": "OWASP Internet of Things 项目",
+        "link": "https://owasp.org/www-project-internet-of-things/"
       }
     ],
     "keywords": [

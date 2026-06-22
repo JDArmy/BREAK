@@ -14,7 +14,7 @@
         "title": "XR device privacy protection technologies"
       },
       {
-        "title": "XR Safety Initiative Framework"
+        "title": "XRSI Privacy and Safety Framework"
       }
     ],
     "description": "Spatial computing privacy exposure comes from continuous collection of eye tracking, gestures, pose, room structure, and surrounding objects. Even without traditional identifiers, these signals can reveal health, living environment, and behavior patterns.\n\nIf apps, SDKs, or cloud services over-collect spatial data, they create highly sensitive profiles. Platforms should limit granularity, purpose, retention, and provide local processing where possible.",

@@ -126,8 +126,8 @@
     "limitation": "基于白名单的域名审计在面临任意链接跳转、资源滥用（R0069）时是无效的；基于黑名单的审计又存在可以轻易更换域名或链接的问题。所以很多情况下不能起到很好的效果。",
     "references": [
       {
-        "title": "Phishing Guidance - CISA",
-        "link": "https://www.cisa.gov/topics/cyber-threats-and-advisories/types-cyber-threats/phishing"
+        "title": "CISA 避免社工和钓鱼攻击指南",
+        "link": "https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks"
       },
       {
         "title": "An effective detection approach for phishing websites using URL and HTML features",
