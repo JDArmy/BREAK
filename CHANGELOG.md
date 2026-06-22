@@ -1,5 +1,9 @@
 # Change log
 
+## 2.21.4
+
+- 项目运行时基线提升到 Node 24：同步更新 package.json/package-lock.json 的 engines、GitHub Actions 的 setup-node 版本以及 .nvmrc，修复 vue-i18n 11.4.5 / @intlify 依赖要求 Node >=22 时在 Node 20.19.0 下 npm ci 出现 EBADENGINE 警告的问题
+
 ## 2.21.3
 
 - 修复关系图/桑基图目标节点详情抽屉的节点详情块显示控制：抽屉显式显示"作为根节点打开"、与根节点关系、防御覆盖、攻击路径分析，分析解读右侧详情显式隐藏这些操作/块，避免可选 prop 透传导致入口行为不一致
