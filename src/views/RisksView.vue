@@ -7,14 +7,12 @@ import KnowledgeSplitView from "@/components/KnowledgeSplitView.vue";
 import ReferenceList from "@/components/ReferenceList.vue";
 import EntityLinkSection from "@/components/EntityLinkSection.vue";
 import { getMessageStringArray } from "@/utils/i18nMessage";
-import { useBreakpoints } from "@/composables/useBreakpoints";
 import { useRelatedCases } from "@/composables/useRelatedCases";
 import { useRelatedEntities } from "@/composables/useRelatedEntities";
 import { useRelationGraph } from "@/composables/useRelationGraph";
 
 const route = useRoute();
 const { t, locale, messages } = useI18n();
-const { isMobile } = useBreakpoints();
 
 const risks = Object.keys(BREAK.risks);
 const selectedRiskKey = ref(
@@ -162,7 +160,7 @@ const { openRelationGraph } = useRelationGraph("risk");
         anchor="terms"
       />
       <section
-        v-if="!loaded || relatedCases.length"
+        v-if="!loaded"
         ref="casesSectionRef"
         class="detail-section"
         data-detail-anchor="cases"
@@ -173,17 +171,17 @@ const { openRelationGraph } = useRelationGraph("risk");
           <!-- 兜底：自动加载意外未触发时，可手动加载 -->
           <button class="entity-link" @click="ensureCases()">{{ $t("loadRelatedCases") }}</button>
         </div>
-        <div v-else class="entity-links">
-          <router-link
-            v-for="cKey in relatedCases"
-            :key="cKey"
-            :to="isMobile ? { name: 'casesDetail', params: { cKey } } : { name: 'cases', hash: `#${cKey}` }"
-            class="entity-link"
-          >
-            {{ cKey }}: {{ cases[cKey]?.title }}
-          </router-link>
-        </div>
       </section>
+      <EntityLinkSection
+        v-else
+        :keys="relatedCases"
+        title="relatedCases"
+        route-name="cases"
+        detail-route-name="casesDetail"
+        param-key="cKey"
+        anchor="cases"
+        :entity-records="cases"
+      />
       <section v-if="selectedRisk.references?.length" class="detail-section" data-detail-anchor="references">
         <h3>{{ $t("riskReference") }}</h3>
         <ReferenceList type="risks" :entity-key="selectedRiskKey" />

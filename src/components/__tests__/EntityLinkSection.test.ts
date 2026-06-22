@@ -34,6 +34,10 @@ describe("EntityLinkSection", () => {
       name: "risks",
       hash: "#R0001",
     });
+    expect(wrapper.find("table").exists()).toBe(true);
+    expect(wrapper.text()).toContain("R0001");
+    expect(wrapper.text()).toContain("BREAK.risks.R0001.title");
+    expect(wrapper.text()).toContain("BREAK.risks.R0001.definition");
   });
 
   it("无独立详情路由的业务场景链接保留必需路由参数", () => {
@@ -61,5 +65,36 @@ describe("EntityLinkSection", () => {
       params: { bsKey: "BS01" },
       hash: "#BS01",
     });
+    expect(wrapper.text()).toContain("BREAK.businessScenes.BS01.description");
+  });
+
+  it("懒加载实体可传入记录数据避免读取不存在的 i18n 路径", () => {
+    const wrapper = mount(EntityLinkSection, {
+      props: {
+        keys: ["C0001"],
+        title: "relatedCases",
+        routeName: "cases",
+        detailRouteName: "casesDetail",
+        paramKey: "cKey",
+        entityRecords: {
+          C0001: {
+            title: "案例标题",
+            summary: "案例简介",
+          },
+        },
+      },
+      global: {
+        mocks: {
+          $t: (key: string) => key,
+        },
+        stubs: {
+          RouterLink: RouterLinkStub,
+        },
+      },
+    });
+
+    expect(wrapper.text()).toContain("案例标题");
+    expect(wrapper.text()).toContain("案例简介");
+    expect(wrapper.text()).not.toContain("BREAK.cases.C0001.title");
   });
 });

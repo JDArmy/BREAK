@@ -1,17 +1,17 @@
 # BREAK 框架升级计划
 
-> 文档版本：1.2
-> 制定日期：2026-06-20，修订日期：2026-06-22，基于 v2.21.8 现状校准
+> 文档版本：1.4
+> 制定日期：2026-06-20，修订日期：2026-06-22，基于 v2.21.11 现状校准
 > 关联文档：`VISUAL_ANALYSIS_EXPLAINABILITY_PLAN.md`（关系页专项，本计划引用其 P0/P1 项）
-> 评估结论：先进性 4.5/5，完善性 4.4/5——先进且工程成熟；自动化回归网已补齐第一层，距「完善」主要差内容质量一致性、回归门禁强约束、可视化算法三步
+> 评估结论：先进性 4.5/5，完善性 4.5/5——先进且工程成熟；风险内容质量首轮断层已清零，距「完善」主要差案例来源质量分级、引用待复核闭环、回归门禁强约束、可视化算法深化
 
 ## 0. 评估结论回顾
 
 BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一线水平的知识框架。核心优势：知识模型四维分层闭环、关系可视化解释层（证据可追溯 + 防御覆盖缺口）业界独特、类型安全优秀、构建门禁完备。
 
 三大短板（拉低完善性）：
-1. **内容质量断层**：influence 模板化（34 条复用同句）、后期风险下滑（R0196 def==desc、关键词 6.8→4.3）、案例 100% 单源、引用无 URL 可达性检测。
-2. **自动化回归网已建立但仍需收紧**：5 个 Playwright/Lighthouse 脚本已接入 CI/Deploy，关键 .vue 组件已破零并有 137 个测试，relation-stability 已进入 PR 浏览器回归，覆盖率 include 已扩展到 composables + relation；剩余问题是浏览器回归仍以 `continue-on-error` / 条件运行为主，需观察稳定后转 hard fail，并继续扩大组件/控制器测试覆盖。
+1. **内容质量治理进入第二阶段**：风险侧首轮质量断层已清零（def==desc 0、单关键词 0、generic influence 0），引用健康审计已建立且 broken=0；剩余主要是高价值案例缺少 primary source 分级标记、152 条反爬/权限类 review、150 条 timeout、66 条 connection_error 需要分批复核。单源率（1784/1797，99.28%）作为观察指标保留，不再作为全量治理 KPI。
+2. **自动化回归网已建立但仍需收紧**：5 个 Playwright/Lighthouse 脚本已接入 CI/Deploy，关键 .vue 组件已破零，当前 20 个测试文件 / 141 条测试；relation-stability 已进入 PR 浏览器回归，覆盖率 include 已扩展到 composables + relation；剩余问题是浏览器回归仍以 `continue-on-error` / 条件运行为主，需观察稳定后转 hard fail，并继续扩大组件/控制器测试覆盖。
 3. **可视化算法已完成第一阶段但仍需深化**：已补 BFS 路径发现、ECharts force + 度数感知初始布局、实体语义关系解释；剩余短板是完整路径发现交互、大图性能/截图基线、攻击路径步骤级 method/action 解释。
 
 次要短板：风险间无关联、Avoidance category 非枚举、i18n-sync 虽已进入 strict 链路但仍缺字段级校验、relationAttackPath 1155 行过大、CI 仍可继续优化、useSearch 潜在 bug。
@@ -33,7 +33,7 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 
 #### 0.1 当前基线复核
 
-> v2.21.8 现状：计划已从 v2.21.1 初评校准到当前仓库；`link-check.yml` 已存在；`validate:data` 已包含 `i18n-sync.mjs --strict` 和英文质量校验；A5 自动化回归网第一阶段已完成，但 A1/A6/B3/B5 仍需继续推进。
+> v2.21.11 现状：计划已从 v2.21.1 初评校准到当前仓库；`validate:data` 已包含 `i18n-sync.mjs --strict` 和英文质量校验；A1 引用可达性检测与首轮 broken 清理已完成，A2/A3 风险内容质量治理已完成，A5 自动化回归网第一阶段、C1/C2/C3 可视化算法第一阶段已完成；A4 已从“全量多源率”调整为“来源质量分级 + 高价值案例 primary source 补强”，A6/B3/B5 仍需继续推进。
 
 目标：形成可追踪的执行基线。
 
@@ -45,14 +45,14 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 落点：`UPGRADE_PLAN.md`、`research/search-reports/phase-0-baseline.md`。
 
 验收：
-- ✅ 计划中的现状描述与 v2.21.8 仓库一致。
+- ✅ 计划中的现状描述与 v2.21.11 仓库一致。
 - ✅ 每个后续任务都能映射到明确文件、脚本或 workflow。
 
 工作量：0.5 天。
 
 #### 0.2 Keywords 脚本规范修复（已完成）
 
-> v2.21.8 现状：`fix:keywords` 已改为 `node scripts/validate/keywords.mjs`，与 `audit:keywords` 等价，只审计不写入。
+> v2.21.11 现状：`fix:keywords` 已改为 `node scripts/validate/keywords.mjs`，与 `audit:keywords` 等价，只审计不写入。
 
 目标：修复脚本语义，避免误触发关键词批量写入。
 
@@ -74,93 +74,101 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 
 > 目标：消除内容质量断层，建立自动化回归保障。这是"完善性"最直接的提升。
 
-#### A1. 引用 URL 可达性检测增强
+#### A1. 引用 URL 可达性检测增强（已完成第一阶段）
 
-> 现状：`references.mjs` 已能做引用形态、重复链接、低质量域名和部分 i18n 参考资料检查，但不做 URL 存活检测；`link-check.yml` 已存在，每周执行 `references.mjs`，但没有真正的可达性检测、坏链明细结构化输出和 Issue 去重；`check-403-with-browser.mjs` 仍依赖根目录 `reference-validation-report.json`，不是可批量复用的流水线脚本。导致 OWASP OAT-009 缺 .html 后缀、github search 占位引用、域名拼错等问题仍可能长期潜伏。
+> v2.21.11 现状：已新增 `audit:references-health`，全量检测 2517 个唯一引用链接并输出 `research/search-reports/reference-health.json/.md`；审计脚本区分 ok/review/broken/timeout/connection_error，已将 403/412/429/521 等防护或权限类状态归为 review，避免反爬误判为 broken；首轮 broken 已清理至 0。当前剩余待治理：review 152、timeout 150、connection_error 66，其中大量为反爬、微信、学术库、站点防护或偶发网络问题，需分域名/分类型复核。
 
 目标：引用可达性可批量检测、可周期性审计、坏链可追踪。
 
-方案：
-- 新增或改造批量可达性检测脚本，输出 `research/search-reports/reference-health.json`（每条 link 的 status/issue）。
-- 新增 `audit:references-health` 脚本（不阻断 build，定期跑）。
-- 增强现有 `link-check.yml`：调用可达性检测脚本，失败建 Issue（含坏链明细 + 去重）。
-- 修复已发现的瑕疵：A0001 的 OAT-009 链接补 .html、A0001-001 的 github search 占位引用替换为真实源、T0500 Trezor 域名核实。
+已完成：
+- 新增 `scripts/validate/references-health.mjs` 和 `npm run audit:references-health`，输出结构化 JSON 与 Markdown 报告。
+- 使用 fetch + Playwright/Chrome 对 412/521 等疑似反爬状态做抽样复核，明确其进入 review 而非 broken。
+- 修复首批真实 404 引用：AT0083、TA0049、AT0084、TA0050、R0211、R0217、R0218、A0006-005。
+- 清理剩余真实 broken 引用：C1423、C0412、C1389、C1145、C0693、C1131、C1542、AT0034、TA0045、A0043、AT0039-001、A0048、A0046、R0064。
+- 全量复扫确认 `broken: 0`。
+
+剩余工作：
+- 增强 `link-check.yml`：调用可达性检测脚本，失败建 Issue（含坏链明细 + 去重）。
+- 对 review/timeout/connection_error 按域名批次治理：优先官方源和高价值案例，反爬类用 Playwright/Chrome 复核后标注或替换。
+- 对 `mps.gov.cn`、`mp.weixin.qq.com`、ACM、OWASP cheatsheet 等慢站点建立域名级策略，减少重复噪声。
 
 落点：`scripts/validate/references-health.mjs`（新增或改造）、`.github/workflows/link-check.yml`、受影响实体 JSON。
 
 验收：
-- `audit:references-health` 可批量检测 1066 条引用并输出报告。
-- link-check Issue 含坏链明细且去重。
-- 已知 3 处引用瑕疵修复。
+- ✅ `audit:references-health` 可批量检测 2517 个唯一引用链接并输出报告。
+- ✅ 首轮真实 broken 清理至 0。
+- ⏳ link-check Issue 含坏链明细且去重。
+- ⏳ review/timeout/connection_error 分批复核策略落地。
 
-工作量：2-3 天。
+工作量：第一阶段已完成；link-check 去重与待复核链接治理预计 2-4 天。
 
-#### A2. influence 字段去模板化
+#### A2. influence 字段去模板化（已完成）
 
-> 现状：350 风险中 34 条复用同一句"可能造成业务滥用、数据泄露、资金损失、合规处罚或供应链扩散风险。"（近 10%），降低字段区分度。
+> v2.21.11 现状：风险 influence 模板化已清零，`audit:content-quality` 显示 `zhGenericInfluence: 0`、`enGenericInfluence: 0`。
 
 目标：每条 Risk 的 influence 反映其具体影响，无批量复制。
 
-方案：
-- 批量识别复用 influence 的风险（脚本扫描重复 influence 文本）。
-- 逐条改写为针对该风险的具体影响（如 R0001 流程自动化→"套取平台营销活动利益，占用正常用户活动资源"已是具体的，保留；模板化的 34 条逐条重写）。
-- 可选：用 LLM（项目已有 DeepSeek 接口）基于 risk title/description 生成 influence 草稿，人工复核。
-- 同步英文 i18n。
+已完成：
+- 批量识别并修复模板化 influence。
+- 同步英文 i18n influence。
+- 新增 `audit:content-quality`，持续输出 generic influence 指标。
 
 落点：`src/BREAK/risks/*.json`、`src/i18n/en/BREAK/risks/*.json`。
 
 验收：
-- 重复 influence 文本复用数 ≤ 2（仅语义确实相同者）。
-- validate:data 通过。
+- ✅ 重复/通用 influence 风险数为 0。
+- ✅ validate:data 通过。
 
-工作量：2-3 天（34 条逐条重写 + 复核）。
+工作量：已完成；后续通过 `audit:content-quality` 防回归。
 
-#### A3. 后期风险内容质量补强
+#### A3. 后期风险内容质量补强（已完成）
 
-> 现状：R0196「量子计算威胁」definition 与 description 完全相同（复制粘贴）、仅 1 个关键词；R0196+ 区间存在约 20+ 条单关键词风险，关键词丰富度从早期 avg 6.8 降至 4.3。
+> v2.21.11 现状：风险 definition==description 和单关键词问题已清零，`audit:content-quality` 显示 `zhDefinitionEqualsDescription: 0`、`zhSingleKeyword: 0`、`enDefinitionEqualsDescription: 0`、`enSingleKeyword: 0`。
 
 目标：后期风险内容深度与早期一致。
 
-方案：
-- 脚本扫描所有 def==desc 的风险、单关键词风险，输出清单。
-- 逐条修复：区分 definition（一句话定义）与 description（详细描述），补充关键词（按 CLAUDE.md 关键词取舍原则：标题本身 + 常见搜法 + 别名 + 黑话 + 缩写 + 上下游称呼）。
-- 关键词批量处理按 `keyword-batches.mjs` 分批，子代理只改 keywords 字段。
+已完成：
+- 新增内容质量审计脚本，持续扫描 risk def==desc、单关键词、generic influence 和案例单源率。
+- 修复 R0193-R0255 等后期风险 description、keywords、influence。
+- 补齐 R0160-R0192 英文风险关键词。
 - 同步英文 i18n。
 
 落点：`src/BREAK/risks/R0196*.json` 及其它低质量风险、`src/i18n/en/BREAK/risks/`。
 
 验收：
-- 0 条 def==desc 的风险。
-- 单关键词风险数 ≤ 5（语义确实单一的）。
-- 后期风险 avg 关键词 ≥ 5。
-- audit:keywords + validate:data 通过。
+- ✅ 0 条 def==desc 风险。
+- ✅ 0 条单关键词风险。
+- ✅ audit:keywords + validate:data 通过。
 
-工作量：3-4 天。
+工作量：已完成；后续通过 `audit:content-quality` 防回归。
 
-#### A4. 案例多源化与判决类原文补全
+#### A4. 案例来源质量分级与 primary source 补强（已完成方向调整）
 
-> 现状：1797 案例 100% 单源（每例仅 1 条引用，无法交叉验证）；599 条刑事判决案例仅 13 条引裁判文书网原文（2%），名实有偏差。
+> v2.21.11 现状：案例多源化已完成两批小规模治理，为 C0010、C0012、C0014、C0032、C0046、C0090、C0106、C0139、C0162、C0168、C0201、C0210、C0275 补充多源。进一步复盘后，将 A4 从“提高全量多源率”调整为“来源质量分级 + 高价值案例 primary source 补强”：外部链接长期都会失效，单纯追求多源率会变成无止境维护。`singleSourceCases: 1784`、`singleSourceCaseRate: 99.28%` 继续作为观察指标，但不作为全量 KPI。
 
-目标：高价值案例多源佐证，判决类优先补裁判文书网原文。
+目标：高价值案例具备可信 primary source 或明确的来源质量标记；普通长尾案例不强制补多源。
 
 方案：
-- 分批为高价值案例（criminal_verdict/security_incident 类）补第 2-3 条引用（新闻报道 + 官方通报/判决文书交叉佐证）。
-- 判决类案例优先补 wenshu.court.gov.cn 或 court.gov.cn 原文链接（用 Scrapingdog 搜索 + 人工核实）。
-- 不强求全部多源（1797 条工作量过大），按类别优先级：判决类 > 安全事件 > 漏洞通报。
-- 同步英文 title。
+- 为 references 增加或外部维护来源质量分级（不急于改 schema，可先在审计报告中派生）：`primary`（法院/公安/检察院/监管/厂商公告/论文/CVE/NVD/GitHub 原始仓库）、`secondary`（可信媒体/安全厂商分析）、`mirror`（转载/备份）、`weak`（低可信或易失来源）。
+- 高价值案例优先补 primary source：`criminal_verdict` 优先法院/检察院/公安/裁判文书；`security_incident` 优先厂商公告、链上分析、官方通报；`vulnerability_advisory` 优先 CVE/NVD/厂商安全公告/论文。
+- 普通长尾案例保持单源可接受；若只有 secondary/weak 来源，标记为 `secondary_only` 或 `weak_source`，进入待复核队列，而不是强制补第 2-3 条引用。
+- 引用健康审计只做发现和分级，不追求永久 `broken=0`；坏链修复优先级由案例价值和来源等级决定。
+- 同步英文 title；若后续 schema 增加 `references[].sourceType`，英文 i18n 不维护结构字段。
 
 落点：`src/BREAK/cases/*.json`、`src/i18n/en/BREAK/cases/*.json`。
 
 验收：
-- criminal_verdict 类案例引裁判文书网/法院原文比例 ≥ 20%。
-- 高价值案例多源率（≥2 引用）≥ 30%。
-- validate:data + i18n-sync 通过。
+- ✅ 首批 13 个案例完成多源化并同步英文 title。
+- ⏳ 来源质量分级规则落地到审计报告或 schema。
+- ⏳ 高价值案例中 `primary` 覆盖率可统计，且核心案例优先补 primary source。
+- ⏳ `secondary_only` / `weak_source` 案例可被质量报告或待复核清单追踪。
+- ✅ validate:data + i18n-sync 通过。
 
-工作量：5-7 天（分批，可并行）。
+工作量：首批已完成；来源分级脚本与高价值案例 primary source 补强预计 4-6 天（分批，可并行）。
 
 #### A5. 自动化回归网建立（已完成第一阶段）
 
-> v2.21.8 现状：5 个 Playwright/Lighthouse 脚本已接入自动化链路；PR CI 新增 `browser-regression` job，运行 `test:smoke`、`test:performance`、`test:relation-stability`；Deploy 接入 `test:lighthouse` 与 `audit:lighthouse-sankey`，并按相关前端/关系页/构建脚本变更条件运行。`.vue` 单测已破零，新增 6 个关键组件测试，当前 19 个测试文件 / 137 个测试。`vitest.config.ts` 覆盖率 include 已扩展到 `src/composables/**/*.ts`、`src/views/relation/**/*.ts` 和关键 `.vue` 组件，当前扩大范围后的基线约为 lines 44.18%、statements 42.95%、functions 42.85%、branches 41.52%。`audit:lighthouse-sankey` 曾在 CI 输出报告后卡住，已通过显式退出修复。
+> v2.21.11 现状：5 个 Playwright/Lighthouse 脚本已接入自动化链路；PR CI 新增 `browser-regression` job，运行 `test:smoke`、`test:performance`、`test:relation-stability`；Deploy 接入 `test:lighthouse` 与 `audit:lighthouse-sankey`，并按相关前端/关系页/构建脚本变更条件运行。`.vue` 单测已破零，新增 6 个关键组件测试，当前 20 个测试文件 / 141 条测试。`vitest.config.ts` 覆盖率 include 已扩展到 `src/composables/**/*.ts`、`src/views/relation/**/*.ts` 和关键 `.vue` 组件，当前扩大范围后的基线约为 lines 45.43%、statements 44.24%、functions 43.96%、branches 43.18%。`audit:lighthouse-sankey` 曾在 CI 输出报告后卡住，已通过显式退出修复。
 
 目标：建立分层回归网，防 UI/性能/关系图谱回归。
 
@@ -374,7 +382,7 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 
 #### C1. 图算法路径发现（已完成第一阶段）
 
-> v2.21.9 现状：已新增通用 `findRelationPaths` BFS 路径发现模块，支持任意起止节点、限定跳数、最大路径数、方向图/无向图和关系优先级排序；节点分析层已接入可达路径摘要。预定义 TA→AT→Risk→Avoidance 攻击路径仍保留，用于标准四元组解释。
+> v2.21.11 现状：已新增通用 `findRelationPaths` BFS 路径发现模块，支持任意起止节点、限定跳数、最大路径数、方向图/无向图和关系优先级排序；节点分析层已接入可达路径摘要。预定义 TA→AT→Risk→Avoidance 攻击路径仍保留，用于标准四元组解释。
 
 目标：支持任意两节点间的路径发现与可达性分析。
 
@@ -400,7 +408,7 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 
 #### C2. 力导向布局（已完成第一阶段）
 
-> v2.21.9 现状：ECharts graph 已使用 `layout: "force"`；数据层不再复用 radial 初始坐标，改为按实体类型分区、关系度数拉近中心的 force 初始布局。horizontal/lanes/split/radial/hierarchical 仍作为固定布局保留。
+> v2.21.11 现状：ECharts graph 已使用 `layout: "force"`；数据层不再复用 radial 初始坐标，改为按实体类型分区、关系度数拉近中心的 force 初始布局。horizontal/lanes/split/radial/hierarchical 仍作为固定布局保留。
 
 目标：真正的力导向布局，大规模图自适应。
 
@@ -425,14 +433,14 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 
 #### C3. 动态解释生成（已完成第一阶段）
 
-> v2.21.9 现状：关系解释新增 `semanticExplanation`，会把关系两端实体标题、ID 和关系类型注入说明，图 tooltip 与关系详情优先展示语义解释；原 `explanation` 模板保留用于抽象关系说明。
+> v2.21.11 现状：关系解释新增 `semanticExplanation`，会把关系两端实体标题、ID 和关系类型注入说明；连线信息已合并到 hover tooltip，点击连线不再打开重复的右下角详情面板。原 `explanation` 模板保留用于抽象关系说明。
 
 目标：解释文本结合具体实体语义，非纯模板。
 
 已完成：
 - 关系解释模板增加实体变量插值，输出如"攻击工具 A 被记录为会直接造成风险 B"。
 - 中英文 i18n 同步补齐 `semanticExplanation`。
-- tooltip 与关系详情优先展示实体语义说明，保留原模板说明作兼容字段。
+- hover tooltip 优先展示实体语义说明，点击连线不再打开重复的右下角详情面板；原模板说明保留作兼容字段。
 
 剩余工作：
 - 从 AttackTool/Risk 描述与关键词中抽取 method/action，进一步生成"通过某手法造成某风险"级别解释。
@@ -499,10 +507,10 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 |---|---|---|---|---|
 | 0.1 当前基线复核 | P0 前置 | 0.5d | 高（防偏航） | 无 |
 | 0.2 Keywords 脚本规范修复 | P0 前置 | 0.5d | 高（防误写） | 无 |
-| A1 引用可达性检测增强 | P0 | 2-3d | 高（最易补） | Phase 0 |
-| A2 influence 去模板化 | P0 | 2-3d | 高 | 无 |
-| A3 后期风险补强 | P0 | 3-4d | 高 | 无 |
-| A4 案例多源化 | P0 | 5-7d | 中高 | 无 |
+| A1 引用可达性检测增强 | P0 | 已完成第一阶段，剩余 2-4d | 高（最易补） | Phase 0 |
+| A2 influence 去模板化 | P0 | 已完成 | 高 | 无 |
+| A3 后期风险补强 | P0 | 已完成 | 高 | 无 |
+| A4 案例来源质量分级 | P0 | 已完成方向调整，剩余 4-6d | 中高 | A1/A6 |
 | A5 自动化回归网 | P0 | 已完成第一阶段 | 高（防回归） | Phase 0 |
 | A6 质量报告 JSON | P0 | 2-3d | 高（B6 前置） | 无 |
 | B1 风险间关联 | P1 | 3-4d | 中 | A5 已就绪 |
@@ -518,7 +526,7 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 | C4 STIX 标准化 | P2 | 5-7d | 中（互操作） | 无 |
 | C5 业务场景图谱 | P2 | 4-5d | 低（可选） | 无 |
 
-**剩余工作量估算**：Phase 0 约 1 天，Phase A 剩余约 14-20 天，Phase B 约 21-26 天，Phase C 剩余约 12-17 天，合计约 48-64 天（可并行压缩；A5 与 C1/C2/C3 第一阶段已完成）。
+**剩余工作量估算**：Phase 0 已完成，Phase A 剩余约 10-16 天，Phase B 约 21-26 天，Phase C 剩余约 12-17 天，合计约 43-59 天（可并行压缩；A1/A5 与 C1/C2/C3 第一阶段已完成，A2/A3 已完成，A4 已完成方向调整）。
 
 ## 4. 验收标准（整体）
 
@@ -526,15 +534,15 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 
 | 维度 | 当前 | 目标 |
 |---|---|---|
-| 规划基线 | 基于 v2.21.8 校准，A5 已回写状态 | 持续随版本更新校准 |
+| 规划基线 | 基于 v2.21.11 校准，A1/A5 与 C1/C2/C3 第一阶段已回写状态，A2/A3 已完成 | 持续随版本更新校准 |
 | Keywords 脚本 | 已与 `audit:keywords` 等价，只审计 | 保持不写入 |
-| 引用可达性 | 有形态审计和 link-check workflow，但无存活检测 | 周期审计 + 坏链追踪 |
-| influence 模板化 | 34 条复用 | ≤ 2 条 |
-| 后期风险关键词 | avg 4.3 | ≥ 5 |
-| 案例多源率 | 0% | ≥ 30%（高价值） |
+| 引用可达性 | `audit:references-health` 已建立，broken=0；review/timeout/connection_error 待复核 | 周期审计 + 坏链追踪 + 分域名复核策略 |
+| influence 模板化 | 0 条 | 保持 ≤ 2 条 |
+| 后期风险关键词 | 单关键词 0 条 | 保持单关键词 ≤ 5，后期 avg ≥ 5 |
+| 案例来源质量 | 13 个案例完成多源化，整体单源率 99.28%；尚无来源等级 | 高价值案例 primary 覆盖率可统计，secondary_only/weak_source 可追踪 |
 | CI e2e 回归 | PR 已运行 site-smoke/site-performance/relation-stability（非阻断） | 稳定后逐步 hard fail |
 | Lighthouse 回归 | Deploy 条件运行 lighthouse-baseline/lighthouse-sankey | 保持条件运行，关键回归 hard fail |
-| .vue 单测 | 6 个关键组件，19 文件 / 137 测试 | 继续覆盖 RelationView/HomeView/控制器 |
+| .vue 单测 | 6 个关键组件，20 文件 / 141 测试 | 继续覆盖 RelationView/HomeView/控制器 |
 | 覆盖率 include | composables + relation + 关键 .vue，初始阈值 40% | 阈值随测试增长逐步收紧 |
 | 质量报告 JSON | 无 | 四分类稳定 JSON |
 | 质量治理视图 | 无 | 列表 + 定位 + 五种标记 |
@@ -549,28 +557,29 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 | STIX 导出 | 无 | 合法 STIX 2.1 |
 | 业务场景图谱 | 无（首页矩阵已有） | 可选：从场景进关系图 |
 
-工程验收（不可回退）：type-check / validate:data / 125+ 测试 / build 通过；类型安全不降级（零 any）；构建门禁不削弱。
+工程验收（不可回退）：type-check / validate:data / 141+ 测试 / build 通过；类型安全不降级（零 any）；构建门禁不削弱。
 
 ## 5. 风险与约束
 
 | 风险 | 说明 | 应对 |
 |---|---|---|
-| 内容治理工作量大 | A2/A3/A4 涉及大量逐条人工编辑 | LLM 辅助草稿 + 人工复核；分批；按优先级 |
+| 内容治理工作量大 | A4 高价值案例仍需逐条核实 primary source | LLM/搜索辅助候选，人工复核；不追求全量多源，按来源等级和案例价值排序 |
+| 外部链接长期失效 | 追求所有链接永久可访问会变成无止境维护 | 接受链接会坏；引用审计做发现和分级，优先维护 primary/high-value 来源 |
 | 回归网引入 CI 不稳定 | e2e/像素断言和 Lighthouse 易抖动；桑基审计曾出现输出后进程不退出 | 已先 continue-on-error / 条件运行；`lighthouse-sankey` 已显式退出；稳定后转 hard fail；fixture 固定 |
 | Schema 扩展破坏既有数据 | B1/B2 改 schema | 可选字段优先；校验脚本同步；渐进迁移 |
 | 可视化算法性能 | C1/C2 图算法/力导向对大规模图耗时 | 限定跳数/节点数；性能基线；按需计算 |
 | 标准化映射损失语义 | C4 STIX 映射可能不完整 | custom 对象保留 BREAK 特有字段；不强制全量映射 |
-| 升级周期长 | 62-81 天工作量 | 分阶段独立交付；每阶段可单独验证；不阻塞线上 |
+| 升级周期长 | 44-60 天剩余工作量 | 分阶段独立交付；每阶段可单独验证；不阻塞线上 |
 
 ## 6. 执行建议
 
-1. **Phase 0 已完成主要校准**：`fix:keywords` 已修正，v2.21.8 基线已回写；后续每个阶段完成后继续更新本计划。
-2. **Phase A 优先 A1 + A6，A5 持续收紧**：A5 第一阶段已完成；A1（引用检测增强）和 A6（质量报告 JSON）为后续改动提供保障，A5 后续重点是把稳定脚本逐步转 hard fail。
-3. **内容治理并行推进**：A2/A3/A4 互不依赖，可按批次并行；涉及 `src/BREAK/` 数据时必须同步英文 i18n 并跑 `audit:keywords` / `validate:data`。
+1. **Phase 0 已完成主要校准**：`fix:keywords` 已修正，v2.21.11 基线已回写；后续每个阶段完成后继续更新本计划。
+2. **Phase A 下一步优先 A6 + A4 来源质量分级，A1 做待复核闭环**：A1/A5 第一阶段已完成，A2/A3 已完成；A6（质量报告 JSON）为 B6 前置，A4 不再追求全量多源率，而是建立 source quality 规则和高价值案例 primary 覆盖；A1 后续重点是 link-check Issue 去重和 review/timeout/connection_error 分批复核。
+3. **内容治理并行推进**：A4 可按案例类别和来源等级分批并行；涉及 `src/BREAK/` 数据时必须同步英文 i18n 并跑 `audit:keywords` / `validate:data`。
 4. **Phase B 可在现有 A5 回归网保护下启动**：B1/B4 改关系页已有 smoke/performance/relation-stability/组件单测基础保障；B3/B5 可较早独立推进。
 5. **Phase C 按价值排序**：C1（路径发现）价值最高，C2（力导向）次之，C3（动态解释）依赖 B4，C4（STIX）互操作价值取决于是否有外部消费方。
 6. **每项独立 PR**：便于 review 和回滚，husky pre-commit + CI 门禁保障。
-7. **内容治理（A2/A3/A4）可借 LLM**：项目已有 DeepSeek 接口（`scripts/import/generate-term-en-glossary.mjs` 模式），用于生成 influence/关键词草稿，人工复核后落盘。
+7. **内容治理可借 LLM/搜索但必须人工复核**：A2/A3 已完成；A4 只用 LLM/搜索生成候选来源和英文标题，不自动认定来源等级，primary/secondary/weak 必须按页面事实人工确认。
 
 ## 7. 规划整合说明
 

@@ -124,6 +124,99 @@
   background: var(--break-highlight-bg);
 }
 
+.entity-reference-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--break-border);
+  border-radius: 8px;
+  background: var(--break-bg-secondary);
+}
+
+.entity-reference-table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.entity-reference-id-col {
+  width: 110px;
+}
+
+.entity-reference-title-col {
+  width: 20%;
+}
+
+.entity-reference-intro-col {
+  width: auto;
+}
+
+.entity-reference-table th,
+.entity-reference-table td {
+  padding: 9px 11px;
+  border-bottom: 1px solid var(--break-border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.entity-reference-table th {
+  color: var(--break-text-secondary);
+  background: var(--break-bg-tertiary, var(--break-bg-primary));
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.entity-reference-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.entity-reference-id {
+  white-space: nowrap;
+  font-family: var(--break-font-mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);
+}
+
+.entity-reference-intro {
+  max-width: 460px;
+  color: var(--break-text-secondary);
+}
+
+.entity-reference-intro-text {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.entity-reference-link {
+  color: var(--break-link);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.entity-reference-link:hover,
+.entity-reference-link:active {
+  color: var(--break-link-hover);
+  text-decoration: underline;
+}
+
+.entity-reference-intro-tooltip.el-popper.is-break-theme {
+  max-width: min(520px, 72vw);
+  border: 1px solid var(--break-tooltip-border) !important;
+  background: var(--break-tooltip-bg) !important;
+  color: var(--break-tooltip-text) !important;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+  box-shadow: 0 12px 32px color-mix(in srgb, var(--break-bg-primary) 48%, transparent);
+}
+
+.entity-reference-intro-tooltip.el-popper.is-break-theme .el-popper__arrow::before {
+  border-color: var(--break-tooltip-border) !important;
+  background: var(--break-tooltip-bg) !important;
+}
+
 /* ===== 移动端全局响应式 ===== */
 @media (max-width: 767px) {
   .detail-heading {
@@ -142,6 +235,11 @@
 
   .entity-link {
     min-height: 32px;
+  }
+
+  .entity-reference-table {
+    min-width: 520px;
+    font-size: 0.78rem;
   }
 
   /* 通用弹窗响应式 */

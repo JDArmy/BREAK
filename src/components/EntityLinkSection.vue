@@ -2,8 +2,15 @@
 import { computed } from "vue";
 import { useBreakpoints } from "@/composables/useBreakpoints";
 
+interface EntityReferenceRecord {
+  title?: string;
+  definition?: string;
+  description?: string;
+  summary?: string;
+}
+
 /**
- * 相关实体链接 section：渲染"标题 + 一组 router-link"。
+ * 相关实体链接 section：渲染"标题 + ID/标题/简介表格"。
  *
  * 列表详情页（RisksView 等）的"相关风险/攻击工具/威胁行为者/术语/业务场景"section
  * 模板重复 20+ 次，结构同构（v-if keys.length + h3 + entity-links + router-link 三目），
@@ -27,6 +34,8 @@ const props = defineProps<{
   anchor?: string;
   /** i18n 路径段，默认等于 routeName；businessScenes 显式传 "businessScenes" */
   i18nEntityType?: string;
+  /** 懒加载实体可直接传记录数据，例如 cases 不在 BREAK.cases i18n 树中 */
+  entityRecords?: Record<string, EntityReferenceRecord | undefined>;
 }>();
 
 const { isMobile } = useBreakpoints();
@@ -38,26 +47,96 @@ const useDetailRoute = computed(
   () => isMobile.value && props.detailRouteName && props.detailRouteName !== props.routeName,
 );
 
+const summaryFieldByEntityType: Record<string, string> = {
+  risks: "definition",
+  avoidances: "definition",
+  attackTools: "description",
+  threatActors: "description",
+  terms: "definition",
+  businessScenes: "description",
+  cases: "summary",
+};
+
+const summaryField = computed(
+  () => summaryFieldByEntityType[entityType.value] ?? "description",
+);
+
 const to = (k: string) =>
   useDetailRoute.value
     ? { name: props.detailRouteName, params: { [props.paramKey]: k } }
     : props.detailRouteName === props.routeName
       ? { name: props.routeName, params: { [props.paramKey]: k }, hash: `#${k}` }
     : { name: props.routeName, hash: `#${k}` };
+
+const titlePath = (k: string) => `BREAK.${entityType.value}.${k}.title`;
+const summaryPath = (k: string) =>
+  `BREAK.${entityType.value}.${k}.${summaryField.value}`;
+
+const getRecordTitle = (key: string) => props.entityRecords?.[key]?.title;
+const getRecordSummary = (key: string) => {
+  const record = props.entityRecords?.[key];
+  if (!record) return undefined;
+  return (
+    record[summaryField.value as keyof EntityReferenceRecord] ??
+    record.summary ??
+    record.definition ??
+    record.description
+  );
+};
+
+const rows = computed(() =>
+  props.keys.map((key) => ({
+    key,
+    to: to(key),
+  })),
+);
 </script>
 
 <template>
   <section v-if="keys.length" class="detail-section" :data-detail-anchor="anchor">
     <h3>{{ $t(title) }}</h3>
-    <div class="entity-links">
-      <router-link
-        v-for="k in keys"
-        :key="k"
-        :to="to(k)"
-        class="entity-link"
-      >
-        {{ k }}: {{ $t(`BREAK.${entityType}.${k}.title`) }}
-      </router-link>
+    <div class="entity-reference-table-wrap">
+      <table class="entity-reference-table">
+        <colgroup>
+          <col class="entity-reference-id-col" />
+          <col class="entity-reference-title-col" />
+          <col class="entity-reference-intro-col" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th>{{ $t("ID") }}</th>
+            <th>{{ $t("title") }}</th>
+            <th>{{ $t("entityIntro") }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="row in rows" :key="row.key">
+            <td class="entity-reference-id">
+              <router-link :to="row.to" class="entity-reference-link">
+                {{ row.key }}
+              </router-link>
+            </td>
+            <td class="entity-reference-title">
+              <router-link :to="row.to" class="entity-reference-link">
+                {{ getRecordTitle(row.key) ?? $t(titlePath(row.key)) }}
+              </router-link>
+            </td>
+            <td class="entity-reference-intro">
+              <el-tooltip
+                :content="getRecordSummary(row.key) ?? $t(summaryPath(row.key))"
+                effect="break-theme"
+                :show-after="1000"
+                placement="top"
+                popper-class="entity-reference-intro-tooltip"
+              >
+                <span class="entity-reference-intro-text">
+                  {{ getRecordSummary(row.key) ?? $t(summaryPath(row.key)) }}
+                </span>
+              </el-tooltip>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </section>
 </template>
