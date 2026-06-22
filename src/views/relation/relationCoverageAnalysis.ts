@@ -81,16 +81,15 @@ export const createRelationCoverageAnalysis = ({
       ),
     ]).filter((avoidanceKey) => avoidanceKey in BREAK.avoidances);
 
-  const riskCoverage = computed<NodeCoverageSummary | null>(() => {
-    if (relType.value !== RelationType.risk) return null;
-    const risk = BREAK.risks[relKey.value as keyof typeof BREAK.risks];
+  const buildRiskCoverage = (riskKey: string): NodeCoverageSummary | null => {
+    const risk = BREAK.risks[riskKey as keyof typeof BREAK.risks];
     if (!risk) return null;
 
     const directAvoidances = unique(risk.avoidances);
     const attackToolKeys = Object.entries(BREAK.attackTools)
       .filter(([, attackTool]) =>
-        attackTool.directCauseRisks.includes(relKey.value) ||
-        attackTool.indirectSupportRisks.includes(relKey.value)
+        attackTool.directCauseRisks.includes(riskKey) ||
+        attackTool.indirectSupportRisks.includes(riskKey)
       )
       .map(([attackToolKey]) => attackToolKey);
 
@@ -142,7 +141,7 @@ export const createRelationCoverageAnalysis = ({
           : "normal";
 
     return {
-      title: t("relationView.nodeCoverageTitle.risk", { title: getNodeTitle(RelationType.risk, relKey.value) }),
+      title: t("relationView.nodeCoverageTitle.risk", { title: getNodeTitle(RelationType.risk, riskKey) }),
       summary: t("relationView.nodeCoverageSummary.risk", {
         direct: directItems.length,
         tool: toolItems.length,
@@ -158,18 +157,17 @@ export const createRelationCoverageAnalysis = ({
       items,
       notice: items.length === 0 ? t("relationView.nodeCoverageNotice.risk") : undefined,
     };
-  });
+  };
 
-  const avoidanceCoverage = computed<NodeCoverageSummary | null>(() => {
-    if (relType.value !== RelationType.avoidance) return null;
-    const avoidance = BREAK.avoidances[relKey.value as keyof typeof BREAK.avoidances];
+  const buildAvoidanceCoverage = (avoidanceKey: string): NodeCoverageSummary | null => {
+    const avoidance = BREAK.avoidances[avoidanceKey as keyof typeof BREAK.avoidances];
     if (!avoidance) return null;
 
     const riskKeys = Object.entries(BREAK.risks)
-      .filter(([, risk]) => risk.avoidances.includes(relKey.value))
+      .filter(([, risk]) => risk.avoidances.includes(avoidanceKey))
       .map(([riskKey]) => riskKey);
     const attackToolKeys = Object.entries(BREAK.attackTools)
-      .filter(([, attackTool]) => attackTool.avoidances.includes(relKey.value))
+      .filter(([, attackTool]) => attackTool.avoidances.includes(avoidanceKey))
       .map(([attackToolKey]) => attackToolKey);
     const threatActorKeys = Object.entries(BREAK.threatActors)
       .filter(([, threatActor]) =>
@@ -197,7 +195,7 @@ export const createRelationCoverageAnalysis = ({
     ];
 
     return {
-      title: t("relationView.nodeCoverageTitle.avoidance", { title: getNodeTitle(RelationType.avoidance, relKey.value) }),
+      title: t("relationView.nodeCoverageTitle.avoidance", { title: getNodeTitle(RelationType.avoidance, avoidanceKey) }),
       summary: t("relationView.nodeCoverageSummary.avoidance", {
         risks: riskKeys.length,
         tools: attackToolKeys.length,
@@ -212,11 +210,10 @@ export const createRelationCoverageAnalysis = ({
       items,
       notice: items.length === 0 ? t("relationView.nodeCoverageNotice.avoidance") : undefined,
     };
-  });
+  };
 
-  const attackToolCoverage = computed<NodeCoverageSummary | null>(() => {
-    if (relType.value !== RelationType.attackTool) return null;
-    const attackTool = BREAK.attackTools[relKey.value as keyof typeof BREAK.attackTools];
+  const buildAttackToolCoverage = (attackToolKey: string): NodeCoverageSummary | null => {
+    const attackTool = BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools];
     if (!attackTool) return null;
 
     const risks = unique([...attackTool.directCauseRisks, ...attackTool.indirectSupportRisks]).filter(
@@ -226,7 +223,7 @@ export const createRelationCoverageAnalysis = ({
 
     return {
       title: t("relationView.nodeCoverageTitle.attackTool", {
-        title: getNodeTitle(RelationType.attackTool, relKey.value),
+        title: getNodeTitle(RelationType.attackTool, attackToolKey),
       }),
       summary: t("relationView.nodeCoverageSummary.attackTool", {
         risks: risks.length,
@@ -252,11 +249,10 @@ export const createRelationCoverageAnalysis = ({
       ],
       notice: risks.length === 0 ? t("relationView.nodeCoverageNotice.attackTool") : undefined,
     };
-  });
+  };
 
-  const threatActorCoverage = computed<NodeCoverageSummary | null>(() => {
-    if (relType.value !== RelationType.threatActor) return null;
-    const threatActor = BREAK.threatActors[relKey.value as keyof typeof BREAK.threatActors];
+  const buildThreatActorCoverage = (threatActorKey: string): NodeCoverageSummary | null => {
+    const threatActor = BREAK.threatActors[threatActorKey as keyof typeof BREAK.threatActors];
     if (!threatActor) return null;
 
     const toolKeys = unique([...threatActor.buildAttackTools, ...threatActor.useAttackTools]).filter(
@@ -268,7 +264,7 @@ export const createRelationCoverageAnalysis = ({
 
     return {
       title: t("relationView.nodeCoverageTitle.threatActor", {
-        title: getNodeTitle(RelationType.threatActor, relKey.value),
+        title: getNodeTitle(RelationType.threatActor, threatActorKey),
       }),
       summary: t("relationView.nodeCoverageSummary.threatActor", {
         tools: toolKeys.length,
@@ -294,15 +290,15 @@ export const createRelationCoverageAnalysis = ({
       ],
       notice: toolKeys.length === 0 && riskKeys.length === 0 ? t("relationView.nodeCoverageNotice.threatActor") : undefined,
     };
-  });
+  };
 
   const selectedNodeCoverageSummary = computed<NodeCoverageSummary | null>(() => {
     const node = selectedNetworkNode.value;
     if (!node) return null;
-    if (node.type === RelationType.risk) return riskCoverage.value;
-    if (node.type === RelationType.avoidance) return avoidanceCoverage.value;
-    if (node.type === RelationType.attackTool) return attackToolCoverage.value;
-    if (node.type === RelationType.threatActor) return threatActorCoverage.value;
+    if (node.type === RelationType.risk) return buildRiskCoverage(node.id);
+    if (node.type === RelationType.avoidance) return buildAvoidanceCoverage(node.id);
+    if (node.type === RelationType.attackTool) return buildAttackToolCoverage(node.id);
+    if (node.type === RelationType.threatActor) return buildThreatActorCoverage(node.id);
     return null;
   });
 

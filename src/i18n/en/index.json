@@ -203,6 +203,9 @@
     "businessSceneImpactRiskCount": "{count} risks",
     "hiddenBusinessSceneImpactCount": "{count} more business scenes are hidden.",
     "nodeCoverageBlockTitle": "Defensive Coverage",
+    "nodeCoverageEmptyTitle": "No computable defensive coverage",
+    "nodeCoverageEmptySummary": "The current node type is not covered by defensive-coverage calculation yet.",
+    "nodeCoverageEmptyNotice": "Defensive coverage currently supports risks, avoidances, attack tools, and threat actors; auxiliary nodes such as terms only show relations and basic analysis.",
     "nodeCoverageTitle": {
       "risk": "Avoidance coverage for risk \"{title}\"",
       "avoidance": "Coverage scope for avoidance \"{title}\"",

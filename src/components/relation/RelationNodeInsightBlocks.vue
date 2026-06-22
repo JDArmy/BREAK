@@ -34,6 +34,7 @@ defineProps<{
   selectedNodeBusinessSceneImpactSummary: NodeBusinessSceneImpactSummary | null;
   selectedNodeCoverageSummary: NodeCoverageSummary | null;
   showRootRelationBlock?: boolean;
+  showCoverageBlock?: boolean;
   showAttackPathBlock?: boolean;
   relKey: string;
   isPathNodeCurrentSelection: (nodeId: string) => boolean;
@@ -67,7 +68,10 @@ const emit = defineEmits<{
   <RelationNodeBusinessSceneImpactBlock
     :summary="selectedNodeBusinessSceneImpactSummary"
   />
-  <RelationNodeCoverageBlock :summary="selectedNodeCoverageSummary" />
+  <RelationNodeCoverageBlock
+    v-if="showCoverageBlock !== false"
+    :summary="selectedNodeCoverageSummary"
+  />
   <RelationNodeAttackPathBlock
     v-if="showAttackPathBlock !== false"
     :selected-node-attack-path-summary="selectedNodeAttackPathSummary"

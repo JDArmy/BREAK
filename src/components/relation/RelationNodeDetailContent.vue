@@ -37,7 +37,7 @@ interface RelationSummary {
   qualityFlags: string[];
 }
 
-defineProps<{
+withDefaults(defineProps<{
   selectedNetworkNode: DetailNode;
   selectedNetworkNodeTitle: string;
   selectedNetworkRelationCounts: {
@@ -65,8 +65,14 @@ defineProps<{
   drawerCopyFeedbackType: "success" | "error";
   showOpenAsRootAction?: boolean;
   showRootRelationBlock?: boolean;
+  showCoverageBlock?: boolean;
   showAttackPathBlock?: boolean;
-}>();
+}>(), {
+  showOpenAsRootAction: true,
+  showRootRelationBlock: true,
+  showCoverageBlock: true,
+  showAttackPathBlock: true,
+});
 
 const emit = defineEmits<{
   "copy-csv": [];
@@ -124,6 +130,7 @@ const filterRelationsByDirection = (direction: "incoming" | "outgoing") => {
     "
     :selected-node-coverage-summary="selectedNodeCoverageSummary"
     :show-root-relation-block="showRootRelationBlock"
+    :show-coverage-block="showCoverageBlock"
     :show-attack-path-block="showAttackPathBlock"
     :rel-key="relKey"
     :is-path-node-current-selection="isPathNodeCurrentSelection"

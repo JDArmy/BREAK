@@ -45,9 +45,10 @@ const openCoverageEntityDetail = (item: { type: string; id: string }) => {
 </script>
 
 <template>
-  <div v-if="summary" class="node-explain-block">
+  <div class="node-explain-block">
     <h3>{{ t("relationView.nodeCoverageBlockTitle") }}</h3>
     <div
+      v-if="summary"
       :class="[
         'node-insight-panel',
         'node-coverage-panel',
@@ -106,6 +107,15 @@ const openCoverageEntityDetail = (item: { type: string; id: string }) => {
               })
         }}
       </button>
+    </div>
+    <div v-else class="node-insight-panel node-coverage-panel node-coverage-panel-warning">
+      <div class="node-coverage-header">
+        <strong>{{ t("relationView.nodeCoverageEmptyTitle") }}</strong>
+        <span>{{ t("relationView.nodeCoverageEmptySummary") }}</span>
+      </div>
+      <div class="node-analysis-notice">
+        {{ t("relationView.nodeCoverageEmptyNotice") }}
+      </div>
     </div>
   </div>
 </template>

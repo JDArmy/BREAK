@@ -69,6 +69,23 @@ describe("relationCoverageAnalysis", () => {
     );
   });
 
+  it("tracks the selected drawer node instead of the relation root", () => {
+    const analysis = createRelationCoverageAnalysis({
+      t,
+      relType: ref(RelationType.risk),
+      relKey: ref("R0005-001"),
+      selectedNetworkNode: computed(() => node("AT0001", RelationType.attackTool)),
+      getNodeTitle,
+    });
+
+    expect(analysis.selectedNodeCoverageSummary.value).toEqual(
+      expect.objectContaining({
+        title: expect.stringContaining("attack-tool:AT0001"),
+        summary: expect.stringContaining("relationView.nodeCoverageSummary.attackTool"),
+      })
+    );
+  });
+
   it("summarizes threat-actor coverage by tools and risks", () => {
     const analysis = createRelationCoverageAnalysis({
       t,

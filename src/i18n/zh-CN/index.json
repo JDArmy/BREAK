@@ -203,6 +203,9 @@
     "businessSceneImpactRiskCount": "{count} 个风险",
     "hiddenBusinessSceneImpactCount": "还有 {count} 个业务场景未显示。",
     "nodeCoverageBlockTitle": "防御覆盖",
+    "nodeCoverageEmptyTitle": "暂无可计算的防御覆盖",
+    "nodeCoverageEmptySummary": "当前节点类型暂未纳入防御覆盖计算。",
+    "nodeCoverageEmptyNotice": "防御覆盖目前支持风险、规避手段、攻击工具和威胁行为者；术语等辅助节点仅展示关系和基础分析。",
     "nodeCoverageTitle": {
       "risk": "风险「{title}」的规避覆盖",
       "avoidance": "规避手段「{title}」的覆盖范围",

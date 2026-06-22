@@ -466,6 +466,7 @@ watch(
                   "
                   :selected-node-coverage-summary="selectedNodeCoverageSummary"
                   :show-root-relation-block="false"
+                  :show-coverage-block="false"
                   :show-attack-path-block="false"
                   :selected-network-relations="selectedNetworkRelations"
                   :rel-key="relKey"
