@@ -142,29 +142,30 @@ BREAK 是业务风险对抗领域具备明显先进性、工程化达开源一�
 
 工作量：已完成；后续通过 `audit:content-quality` 防回归。
 
-#### A4. 案例来源质量分级与 primary source 补强（已完成方向调整）
+#### A4. 案例来源质量分级与 primary source 补强（已完成第一阶段）
 
-> v2.21.11 现状：案例多源化已完成两批小规模治理，为 C0010、C0012、C0014、C0032、C0046、C0090、C0106、C0139、C0162、C0168、C0201、C0210、C0275 补充多源。进一步复盘后，将 A4 从“提高全量多源率”调整为“来源质量分级 + 高价值案例 primary source 补强”：外部链接长期都会失效，单纯追求多源率会变成无止境维护。`singleSourceCases: 1784`、`singleSourceCaseRate: 99.28%` 继续作为观察指标，但不作为全量 KPI。
+> v2.21.13 现状：案例多源化已完成两批小规模治理，为 C0010、C0012、C0014、C0032、C0046、C0090、C0106、C0139、C0162、C0168、C0201、C0210、C0275 补充多源。进一步复盘后，将 A4 从“提高全量多源率”调整为“来源质量分级 + 高价值案例 primary source 补强”：外部链接长期都会失效，单纯追求多源率会变成无止境维护。`singleSourceCases: 1784`、`singleSourceCaseRate: 99.28%` 继续作为观察指标，但不作为全量 KPI。第一阶段已新增 `audit:case-source-quality`，可按来源等级统计高价值案例 primary 覆盖率和待复核清单；当前审计基线为 `caseCount: 1797`、`highValueCaseCount: 1079`、`primaryCoveredCases: 487`、`highValuePrimaryCoveredCases: 202`、`highValuePrimaryCoverageRate: 18.72%`。
 
 目标：高价值案例具备可信 primary source 或明确的来源质量标记；普通长尾案例不强制补多源。
 
 方案：
-- 为 references 增加或外部维护来源质量分级（不急于改 schema，可先在审计报告中派生）：`primary`（法院/公安/检察院/监管/厂商公告/论文/CVE/NVD/GitHub 原始仓库）、`secondary`（可信媒体/安全厂商分析）、`mirror`（转载/备份）、`weak`（低可信或易失来源）。
+- 为 references 增加或外部维护来源质量分级（第一阶段已在审计报告中派生）：`primary`（法院/公安/检察院/监管/厂商公告/论文/CVE/NVD/GitHub 原始仓库）、`secondary`（可信媒体/安全厂商分析）、`mirror`（转载/备份）、`weak`（低可信或易失来源）、`unknown`（规则无法可靠判定，需人工复核或扩充域名规则）。
 - 高价值案例优先补 primary source：`criminal_verdict` 优先法院/检察院/公安/裁判文书；`security_incident` 优先厂商公告、链上分析、官方通报；`vulnerability_advisory` 优先 CVE/NVD/厂商安全公告/论文。
 - 普通长尾案例保持单源可接受；若只有 secondary/weak 来源，标记为 `secondary_only` 或 `weak_source`，进入待复核队列，而不是强制补第 2-3 条引用。
 - 引用健康审计只做发现和分级，不追求永久 `broken=0`；坏链修复优先级由案例价值和来源等级决定。
 - 同步英文 title；若后续 schema 增加 `references[].sourceType`，英文 i18n 不维护结构字段。
 
-落点：`src/BREAK/cases/*.json`、`src/i18n/en/BREAK/cases/*.json`。
+落点：`scripts/validate/case-source-quality.mjs`、`research/search-reports/case-source-quality.*`、后续高价值补源涉及的 `src/BREAK/cases/*.json` 与 `src/i18n/en/BREAK/cases/*.json`。
 
 验收：
 - ✅ 首批 13 个案例完成多源化并同步英文 title。
-- ⏳ 来源质量分级规则落地到审计报告或 schema。
-- ⏳ 高价值案例中 `primary` 覆盖率可统计，且核心案例优先补 primary source。
-- ⏳ `secondary_only` / `weak_source` 案例可被质量报告或待复核清单追踪。
+- ✅ 来源质量分级规则已落地到审计报告，schema 暂不扩展。
+- ✅ 高价值案例中 `primary` 覆盖率可统计。
+- ✅ `secondary_only` / `weak_source` / `unknown_only` 案例可被质量报告或待复核清单追踪。
+- ⏳ 核心高价值案例按审计清单分批补 primary source。
 - ✅ validate:data + i18n-sync 通过。
 
-工作量：首批已完成；来源分级脚本与高价值案例 primary source 补强预计 4-6 天（分批，可并行）。
+工作量：来源分级脚本已完成；高价值案例 primary source 补强预计 4-6 天（分批，可并行）。
 
 #### A5. 自动化回归网建立（已完成第一阶段）
 

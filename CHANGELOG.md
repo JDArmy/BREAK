@@ -1,5 +1,10 @@
 # Change log
 
+## 2.21.13
+
+- 新增案例来源质量审计脚本 `audit:case-source-quality`，按 `primary`、`secondary`、`mirror`、`weak`、`unknown` 派生来源等级，并输出高价值案例 primary 覆盖率、secondary-only、weak-source 和 unknown-only 待复核清单
+- 回写 `UPGRADE_PLAN.md` 的 A4 状态：来源质量分级审计第一阶段已落地，单源率继续仅作为观察指标
+
 ## 2.21.12
 
 - 知识库相关实体改为表格展示，统一显示 ID、标题和简介；相关案例改用懒加载案例数据渲染标题与摘要
