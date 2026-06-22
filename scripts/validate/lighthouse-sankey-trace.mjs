@@ -567,3 +567,6 @@ try {
   await chrome?.close();
   await terminateChild(preview, 'preview server');
 }
+
+// Lighthouse/Chromium 在 CI 中可能残留未释放句柄；本脚本是独立审计命令，清理后显式退出。
+process.exit(process.exitCode ?? 0);
