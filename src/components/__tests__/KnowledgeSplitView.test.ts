@@ -32,6 +32,11 @@ vi.mock("vue-router", () => ({
   useRouter: () => mocks.router,
 }));
 
+vi.stubGlobal("requestAnimationFrame", (callback: FrameRequestCallback) => {
+  callback(0);
+  return 0;
+});
+
 const items = [
   { id: "R0001", title: "流程自动化", subtitle: "自动化请求", searchText: "automation" },
   { id: "R0002", title: "账号盗用", subtitle: "Account takeover", searchText: "ato" },
@@ -102,6 +107,18 @@ describe("KnowledgeSplitView", () => {
       name: "risks",
       hash: "#R0002",
     });
+  });
+
+  it("切换选中项时重置详情滚动位置", async () => {
+    const wrapper = mountView();
+    const detail = wrapper.find<HTMLElement>(".knowledge-detail").element;
+    detail.scrollTop = 240;
+
+    await wrapper.setProps({ selectedKey: "R0002" });
+    await nextTick();
+    await nextTick();
+
+    expect(detail.scrollTop).toBe(0);
   });
 
   it("移动端点击列表项时进入详情路由", async () => {

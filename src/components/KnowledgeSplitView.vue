@@ -128,6 +128,18 @@ const scrollDetailAnchorIntoView = () => {
   });
 };
 
+const resetDetailScroll = () => {
+  if (typeof route.query.detailAnchor === "string" && route.query.detailAnchor)
+    return;
+
+  nextTick(() => {
+    requestAnimationFrame(() => {
+      if (!detailRef.value) return;
+      detailRef.value.scrollTop = 0;
+    });
+  });
+};
+
 const backToList = () => {
   if (isMobile.value && props.detailRouteName) {
     router.push({ name: props.routeName });
@@ -147,6 +159,7 @@ watch(
   () => props.selectedKey,
   (key) => {
     if (!key) return;
+    resetDetailScroll();
     if (isMobile.value) return;
     nextTick(() => {
       desktopListRef.value

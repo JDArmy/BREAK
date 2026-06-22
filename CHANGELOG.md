@@ -1,5 +1,10 @@
 # Change log
 
+## 2.21.14
+
+- 修复知识库分栏详情切换时保留上一条滚动位置的问题：切换选中项后自动回到详情顶部，并保留 `detailAnchor` 锚点跳转场景
+- 补充 `KnowledgeSplitView` 滚动重置回归测试
+
 ## 2.21.13
 
 - 新增案例来源质量审计脚本 `audit:case-source-quality`，按 `primary`、`secondary`、`mirror`、`weak`、`unknown` 派生来源等级，并输出高价值案例 primary 覆盖率、secondary-only、weak-source 和 unknown-only 待复核清单
