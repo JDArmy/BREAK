@@ -6,6 +6,18 @@ const mocks = vi.hoisted(() => ({
   isMobile: { value: false, __v_isRef: true },
 }));
 
+const globalConfig = {
+  mocks: {
+    $t: (key: string) => key,
+  },
+  stubs: {
+    RouterLink: RouterLinkStub,
+    ElTooltip: {
+      template: "<span><slot /></span>",
+    },
+  },
+};
+
 vi.mock("@/composables/useBreakpoints", () => ({
   useBreakpoints: () => ({ isMobile: mocks.isMobile }),
 }));
@@ -20,14 +32,7 @@ describe("EntityLinkSection", () => {
         detailRouteName: "risksDetail",
         paramKey: "rKey",
       },
-      global: {
-        mocks: {
-          $t: (key: string) => key,
-        },
-        stubs: {
-          RouterLink: RouterLinkStub,
-        },
-      },
+      global: globalConfig,
     });
 
     expect(wrapper.findComponent(RouterLinkStub).props("to")).toEqual({
@@ -50,14 +55,7 @@ describe("EntityLinkSection", () => {
         paramKey: "bsKey",
         i18nEntityType: "businessScenes",
       },
-      global: {
-        mocks: {
-          $t: (key: string) => key,
-        },
-        stubs: {
-          RouterLink: RouterLinkStub,
-        },
-      },
+      global: globalConfig,
     });
 
     expect(wrapper.findComponent(RouterLinkStub).props("to")).toEqual({
@@ -83,14 +81,7 @@ describe("EntityLinkSection", () => {
           },
         },
       },
-      global: {
-        mocks: {
-          $t: (key: string) => key,
-        },
-        stubs: {
-          RouterLink: RouterLinkStub,
-        },
-      },
+      global: globalConfig,
     });
 
     expect(wrapper.text()).toContain("案例标题");

@@ -1,5 +1,9 @@
 # Change log
 
+## 2.21.18
+
+- 补充 `EntityLinkSection` 单元测试中的 `ElTooltip` stub，消除 coverage 阶段的组件解析警告
+
 ## 2.21.17
 
 - 保留质量治理在审计链路中执行：`audit:quality-report` 直接生成 `public/data/quality-report.json` 和 `research/search-reports/quality-report.json`
