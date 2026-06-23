@@ -83,6 +83,7 @@ const primaryDomainSuffixes = [
   'cyfrin.io',
   'qianxin.com',
   'forcepoint.com',
+  'flare.io',
 ];
 
 const secondaryDomainSuffixes = [
