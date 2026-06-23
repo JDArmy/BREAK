@@ -1,5 +1,11 @@
 # Change log
 
+## 2.23.32
+
+- 集中补强下一批安全事件、漏洞与链上案例 primary source，为 `C0807`、`C0872`、`C1018`、`C1019`、`C1135`、`C1183`、`C1184`、`C1294`、`C1316`、`C1334`、`C1357`、`C1463`、`C1470`、`C1539`、`C1541`、`C1551`、`C1696`、`C1757` 追加或识别 Socket、c/side、Volex、Fujitsu、BlockSec、StepSecurity、Wiz、Invariant Labs、Blackpanda、Microsoft、SolidityScan、Forescout、NHTSA、Chainalysis、SlowMist、Uber 等官方或原始研究来源，并同步英文引用标题
+- 扩充案例来源质量审计的 primary 识别，纳入 Volex、Fujitsu、NHTSA、Forescout、c/side、Bitdefender、BlockSec、SolidityScan、Socket、Wiz、Blackpanda、Chainalysis、CertiK、SlowMist、PeckShield，并对白名单方式识别 SlowMist Medium 原始链上分析
+- 高价值案例 primary 覆盖提升到 400，primary 覆盖率提升到 40.07%，高价值 primary 覆盖率提升到 37.07%
+
 ## 2.23.31
 
 - 继续集中补强国外安全事件与链上事件 primary source，为 `C1358`、`C1360`、`C1363`、`C1365`、`C1507`、`C1518`、`C1553`、`C1679`、`C1680`、`C1686` 补充或识别 Halborn、PeckShield、Kudelski Security、Unit 42、Lightning AI、Elliptic、Endor Labs、StepSecurity 等原始研究、官方说明或链上分析来源，并同步英文引用标题

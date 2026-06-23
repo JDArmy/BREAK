@@ -119,6 +119,21 @@ const primaryDomainSuffixes = [
   'stepsecurity.io',
   'kudelskisecurity.com',
   'halborn.com',
+  'volex.com',
+  'fujitsu.com',
+  'static.nhtsa.gov',
+  'forescout.com',
+  'cside.com',
+  'bitdefender.com',
+  'blocksec.com',
+  'solidityscan.com',
+  'socket.dev',
+  'wiz.io',
+  'blackpanda.com',
+  'chainalysis.com',
+  'certik.com',
+  'slowmist.com',
+  'peckshield.com',
   'autoriteitpersoonsgegevens.nl',
   'dataprotection.ie',
   'capitalone.com',
@@ -161,10 +176,6 @@ const secondaryDomainSuffixes = [
   'sohu.com',
   '36kr.com',
   'coindesk.com',
-  'chainalysis.com',
-  'certik.com',
-  'slowmist.com',
-  'peckshield.com',
   'thehackernews.com',
   'krebsonsecurity.com',
   'bleepingcomputer.com',
@@ -189,6 +200,7 @@ const primaryReferenceLinks = new Set([
   'https://medium.com/paritytech/a-postmortem-on-the-parity-multi-sig-library-self-destruct-63daca3a4cf7', // Parity 官方事后分析
   'https://peckshield.medium.com/value-defi-incident-root-cause-analysis-fbab71faf373', // PeckShield 原始链上分析
   'https://peckshield.medium.com/bzx-hack-ii-full-disclosure-with-detailed-profit-analysis-8126eecc1360', // PeckShield 原始链上分析
+  'https://slowmist.medium.com/the-root-cause-of-poly-network-being-hacked-ec2ee1b0c68f', // SlowMist 原始链上分析
 ]);
 const primaryWechatBizIds = [
   'MjM5MjMyNTA0MQ==', // 公安部网安局
