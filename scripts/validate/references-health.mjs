@@ -151,9 +151,11 @@ function classifyDomainStrategy(domain, issues, statuses) {
 
   if (isSocialOrMirror || issues.connection_error) {
     return {
-      action: 'replace_or_add_primary',
-      priority: isSocialOrMirror ? 'P1' : 'P2',
-      note: isSocialOrMirror
+      action: isOfficial || isAcademic ? 'browser_review_preserve' : 'replace_or_add_primary',
+      priority: isSocialOrMirror || isOfficial || isAcademic ? 'P1' : 'P2',
+      note: isOfficial || isAcademic
+        ? '权威/学术来源连接错误，优先用浏览器和忽略 HTTPS 证书错误复核；浏览器可访问时保留并记录脚本环境差异。'
+        : isSocialOrMirror
         ? '社交/转载入口稳定性较弱，优先替换或补充官方、法院、厂商、论文等 primary source。'
         : '连接错误需复测；如长期失败，替换为更稳定来源。',
     };

@@ -9,6 +9,7 @@ const outputJsonPath = path.join(reportDir, 'reference-browser-check.json');
 const outputMarkdownPath = path.join(reportDir, 'reference-browser-check.md');
 const limit = Number(process.argv.find((arg) => arg.startsWith('--limit='))?.slice('--limit='.length) || 0);
 const issueFilter = process.argv.find((arg) => arg.startsWith('--issue='))?.slice('--issue='.length) || '';
+const ignoreHTTPSErrors = process.argv.includes('--ignore-https-errors');
 
 function loadIssueItems() {
   if (!fs.existsSync(inputPath)) {
@@ -22,7 +23,8 @@ function loadIssueItems() {
   return limit > 0 ? items.slice(0, limit) : items;
 }
 
-async function checkUrl(page, url) {
+async function checkUrl(context, url) {
+  const page = await context.newPage();
   const result = {
     url,
     browserOk: false,
@@ -50,6 +52,7 @@ async function checkUrl(page, url) {
     }
   }
 
+  await page.close().catch(() => {});
   return result;
 }
 
@@ -59,6 +62,7 @@ function renderMarkdown(report) {
     '',
     `生成时间: ${report.generatedAt}`,
     `输入报告: ${report.input}`,
+    `忽略 HTTPS 证书错误: ${report.ignoreHTTPSErrors ? '是' : '否'}`,
     '',
     '## 汇总',
     '',
@@ -88,16 +92,16 @@ console.log(`准备使用 Chromium 复核 ${items.length} 个链接`);
 
 const browser = await chromium.launch({ headless: true });
 const context = await browser.newContext({
+  ignoreHTTPSErrors,
   userAgent:
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
 });
-const page = await context.newPage();
-page.setDefaultNavigationTimeout(30000);
+context.setDefaultNavigationTimeout(30000);
 
 const results = [];
 for (const [index, item] of items.entries()) {
   console.log(`[${index + 1}/${items.length}] ${item.link}`);
-  const browserResult = await checkUrl(page, item.link);
+  const browserResult = await checkUrl(context, item.link);
   results.push({
     ...item,
     ...browserResult,
@@ -109,6 +113,7 @@ await browser.close();
 const report = {
   generatedAt: new Date().toISOString(),
   input: path.relative(projectRoot, inputPath),
+  ignoreHTTPSErrors,
   summary: {
     total: results.length,
     browserOk: results.filter((item) => item.browserOk).length,

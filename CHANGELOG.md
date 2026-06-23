@@ -1,5 +1,12 @@
 # Change log
 
+## 2.23.9
+
+- 浏览器复核工具新增 `--ignore-https-errors`，并记录复核报告是否忽略 HTTPS 证书错误
+- 对 `justice.gov`、`moj.gov.cn` connection_error 进行 Chromium 复核，确认 7 条链接在浏览器忽略证书错误后均可访问
+- 引用健康策略新增 `browser_review_preserve`，将官方/学术域名连接错误优先归入浏览器复核保留流程，而不是直接替换来源
+- 域名治理计划同步生成浏览器复核命令，支持 connection_error 场景的可重复验证
+
 ## 2.23.8
 
 - 修正 `references-health` 筛选复测报告统计，保留筛选范围内恢复为 ok 的链接，避免复测摘要只显示剩余问题项
