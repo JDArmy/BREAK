@@ -21,6 +21,7 @@ import argparse
 import json
 import os
 import re
+import subprocess
 import sys
 import unicodedata
 
@@ -113,6 +114,50 @@ def resolve_data_dir(script_path):
     return None
 
 
+def resolve_project_root(script_path):
+    """推算项目根目录（仅在项目内有效）"""
+    root = os.path.abspath(os.path.join(os.path.dirname(script_path), '..', '..'))
+    if os.path.isfile(os.path.join(root, 'package.json')):
+        return root
+    return None
+
+
+def ensure_data_file(data_dir, filename, script_path):
+    """
+    确保数据文件存在。如果不存在且在项目中，自动调用 Node 脚本生成。
+    返回 True 表示文件已就绪，False 表示无法生成。
+    """
+    filepath = os.path.join(data_dir, filename)
+    if os.path.exists(filepath):
+        return True
+
+    project_root = resolve_project_root(script_path)
+    if not project_root:
+        return False  # 不在项目中（分发包场景），无法生成
+
+    if filename == 'break-data.json':
+        cmd = ['node', os.path.join(project_root, 'scripts', 'validate', 'export-static-data.mjs')]
+    elif filename == 'break-data-en.json':
+        # 英文包依赖中文包，先确保中文包存在
+        ensure_data_file(data_dir, 'break-data.json', script_path)
+        cmd = ['node', os.path.join(project_root, 'scripts', 'skill', 'export_en_data.mjs')]
+    else:
+        return False
+
+    print(f'⏳ 数据文件不存在，正在生成 {filename} ...', file=sys.stderr)
+    try:
+        subprocess.run(cmd, cwd=project_root, check=True,
+                       stdout=subprocess.DEVNULL, stderr=subprocess.PIPE)
+    except FileNotFoundError:
+        print(f'❌ 未找到 node，无法自动生成数据文件', file=sys.stderr)
+        return False
+    except subprocess.CalledProcessError as e:
+        print(f'❌ 生成数据文件失败: {e.stderr.decode("utf-8", errors="replace")}', file=sys.stderr)
+        return False
+
+    return os.path.exists(filepath)
+
+
 def detect_id_type(query):
     """检测查询是否为实体 ID 格式，返回 (entity_type, normalized_id) 或 None"""
     q = query.strip()
@@ -143,13 +188,22 @@ class BreakSearchEngine:
     def _load_data(self):
         filename = 'break-data.json' if self.lang == 'zh' else 'break-data-en.json'
         filepath = os.path.join(self.data_dir, filename)
+        script_path = os.path.abspath(__file__)
+
+        # 数据文件不存在时尝试自动生成
+        if not os.path.exists(filepath):
+            ensure_data_file(self.data_dir, filename, script_path)
+
         if not os.path.exists(filepath):
             # 英文文件不存在时回退到中文
             if self.lang == 'en':
-                filepath = os.path.join(self.data_dir, 'break-data.json')
-                if os.path.exists(filepath):
+                zh_file = os.path.join(self.data_dir, 'break-data.json')
+                if not os.path.exists(zh_file):
+                    ensure_data_file(self.data_dir, 'break-data.json', script_path)
+                if os.path.exists(zh_file):
                     print(f'⚠️ 英文数据文件不存在，回退到中文数据', file=sys.stderr)
                     self.lang = 'zh'
+                    filepath = zh_file
                 else:
                     print(f'❌ 数据文件不存在: {filepath}', file=sys.stderr)
                     sys.exit(1)
