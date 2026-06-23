@@ -58,6 +58,15 @@ const primaryDomainSuffixes = [
   'springeropen.com',
   'github.com',
   'gitlab.com',
+  'owasp.org',
+  'cloudflare.com',
+  'geetest.com',
+  'amazonaws.cn',
+  'appsflyer.com',
+  'fraudlogix.com',
+  'adguard.com',
+  'chromewebstore.google.com',
+  'peerj.com',
 ];
 
 const secondaryDomainSuffixes = [

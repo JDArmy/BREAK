@@ -1,5 +1,11 @@
 # Change log
 
+## 2.23.11
+
+- 扩充案例来源质量分类规则，将 OWASP、Cloudflare、GEETEST、AWS 中国、AppsFlyer、Fraudlogix、AdGuard、Chrome Web Store、PeerJ 等英文原始/学术/厂商来源纳入 primary 识别
+- 为 `C0039`、`C0043`、`C0046` 补充检察院或法院来源，并同步英文引用标题
+- 案例 primary 覆盖从 507 提升到 512，unknown only 从 545 降到 540；高价值 primary 覆盖保持 210，后续继续补法院、检察院、公安、监管等来源
+
 ## 2.23.10
 
 - 复核 `mps.gov.cn` 521 引用，确认浏览器复核仍为 521 后，优先替换为新华社、中国政府网、央视网、中国警察网、使领馆、光明网、解放日报等可访问来源
