@@ -16,35 +16,6 @@
     "category": "Marketing Fraud",
     "definition": "The practice of obtaining SMS verification codes via specialized platforms to register accounts in bulk or bypass identity verification.",
     "description": "SMS code reception is a core component of bulk account creation. SIM card suppliers use devices like modem pools to control numerous black-market SIM cards, and code-receiving platforms automatically forward verification codes to participants. These verified accounts are then used to exploit new-user promotions, participate in prize draws, or conduct fake transactions, severely undermining platform marketing rules. This activity is directly linked to the infringement of personal information and the broader cybercrime supply chain.",
-    "relatedRisks": [
-      "R0030",
-      "R0030-001",
-      "R0030-005",
-      "R0005"
-    ],
-    "relatedAvoidances": [
-      "A0007-001",
-      "A0015",
-      "A0059",
-      "A0061",
-      "A0044",
-      "A0007",
-      "A0016-003",
-      "A0024",
-      "A0021"
-    ],
-    "relatedAttackTools": [
-      "AT0006",
-      "AT0001-002",
-      "AT0004"
-    ],
-    "relatedThreatActors": [
-      "TA0003",
-      "TA0004"
-    ],
-    "relatedBusinessScenes": [
-      "BS02"
-    ],
     "references": [
       {
         "title": "2024 H1 Overseas E-commerce Platform Risk Research Report"
@@ -52,7 +23,6 @@
       {
         "title": "Black Market Big Data: E-commerce Scalper Industry Chain Analysis Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

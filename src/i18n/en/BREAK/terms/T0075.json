@@ -16,32 +16,6 @@
     "category": "Data Leakage",
     "definition": "In the context of the underground industry, broadly refers to various types of sensitive data illegally obtained and used for profit.",
     "description": "This data encompasses personal information, corporate secrets, login credentials, and more, serving as the foundational resource for online fraud, unauthorized transactions, and marketing scams. Within the underground supply chain, this data is often resold multiple times, processed from raw data into refined, high-value data, and ultimately used by downstream criminal groups for monetization.",
-    "relatedRisks": [
-      "R0078",
-      "R0089"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0012"
-    ],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0020",
-      "TA0040"
-    ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01",
-      "BS02",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -49,7 +23,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

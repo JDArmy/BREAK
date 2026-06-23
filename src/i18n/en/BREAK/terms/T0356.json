@@ -16,27 +16,6 @@
     "category": "Gambling",
     "definition": "A person at the gambling table responsible for recording each gambler's bet amounts and win/loss results.",
     "description": "The bet recorder closely monitors chip movements on the table, reporting each gambler's wager amount and outcome in real-time to ensure the house's commission is accurate. This role requires sharp eyes and quick hands to prevent gamblers from cheating, serving as the first line of defense against fraud.",
-    "relatedRisks": [
-      "R0097",
-      "R0060"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0016",
-      "A0044",
-      "A0061",
-      "A0051",
-      "A0006-005"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0016",
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS06",
-      "BS01"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review"
@@ -44,7 +23,6 @@
       {
         "title": "Black Market Big Data: 2025 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

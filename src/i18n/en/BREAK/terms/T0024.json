@@ -16,33 +16,10 @@
     "definition": "A scheme in which fraud rings exploit platform rule loopholes to convert vouchers or red packets into cash at near-zero cost.",
     "description": "Through fictitious transactions, self-dealing, or collusion with merchants, fraud rings turn platform-issued coupons and shopping subsidies into real money. The operation requires no actual logistics or relies solely on empty-package shipping services, directly draining platform marketing funds and causing substantial financial losses to the platform.",
     "usageExample": "There’s a loophole in this campaign—grab the vouchers and cash them out through a designated channel with almost no loss, turning a 100-yuan voucher into 95 in hand.",
-    "relatedRisks": [
-      "R0017",
-      "R0017-002",
-      "R0055",
-      "R0003",
-      "R0005",
-      "R0070"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0059",
-      "A0061",
-      "A0044"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0001",
-      "TA0002"
-    ],
-    "relatedBusinessScenes": [
-      "BS02"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: E-commerce Scalper Industry Chain Analysis Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

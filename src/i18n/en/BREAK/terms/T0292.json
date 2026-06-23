@@ -17,37 +17,6 @@
     "definition": "The illegal act of conducting unauthorized transactions or cash withdrawals using stolen payment information.",
     "description": "Criminal actors use phishing sites, fake base stations, or malware to obtain others' bank card or credit card details, then clone cards or link them to payment accounts for fraudulent purchases. Stolen funds are often used to buy virtual goods, prepaid cards, or are funneled into money muling platforms for rapid liquidation or laundering. This activity directly violates personal financial security and is a common method for acquiring illicit proceeds in telecom and financial fraud.",
     "usageExample": "Small-amount payment QR codes accepting stolen carding data",
-    "relatedRisks": [
-      "R0060",
-      "R0093"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044",
-      "A0006-005",
-      "A0016-002",
-      "A0051",
-      "A0037",
-      "A0050",
-      "A0035",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0026",
-      "AT0039",
-      "AT0040"
-    ],
-    "relatedThreatActors": [
-      "TA0006-003",
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS01"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -55,7 +24,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

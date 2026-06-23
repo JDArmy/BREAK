@@ -16,32 +16,6 @@
     "category": "Data Leakage",
     "definition": "Leftover data from a one-time illegal lookup that was not directly used and can be resold.",
     "description": "In illicit data trading, leftovers refer to surplus personal information from a single query, such as extra ID numbers or addresses. This data is not discarded but is repackaged by intermediaries and fed into social engineering databases or sold at low prices to downstream criminals. The circulation of leftovers broadens the scope of data breaches, exposing more victims to harassment and fraud risks.",
-    "relatedRisks": [
-      "R0092",
-      "R0078",
-      "R0089",
-      "R0109"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0012",
-      "AT0064"
-    ],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040",
-      "TA0018"
-    ],
-    "relatedBusinessScenes": [
-      "BS00"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -49,7 +23,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

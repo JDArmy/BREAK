@@ -15,38 +15,10 @@
     "definition": "A deceptive scheme that uses fake rewards as bait to trick participants into losing their own money.",
     "description": "Fraudsters often post fabricated 'money-making' tutorials or promotional links in social groups and forums, enticing victims to invest their own principal or pay a commission first. Victims believe they will receive high returns, but their money is stolen by the fraudsters, a practice commonly known as 'reverse scalping.' This tactic exploits information asymmetry and greed, serving as a funnel for attracting and defrauding victims within the marketing fraud chain.",
     "usageExample": "Someone posted a 'deposit 50, get 100 back' link in the group, but I was blocked right after sending the money—a classic dynamite fishing scam.",
-    "relatedRisks": [
-      "R0009",
-      "R0055",
-      "R0064"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061",
-      "A0006-005",
-      "A0016-002",
-      "A0051",
-      "A0037",
-      "A0016",
-      "A0044"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0001",
-      "TA0001-001"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

@@ -16,34 +16,6 @@
     "category": "Data Leakage",
     "definition": "Non-public groups used by underground actors for trading or communication, accessible only by invitation or vetting.",
     "description": "These groups serve as the core venues for illegal data trading and technical exchanges within the black market, using strict access controls to evade platform risk management and law enforcement monitoring. Members are typically repeat customers or vetted newcomers, and the traded goods include citizens' personal information, complete sets of bank card details, and other contraband.",
-    "relatedRisks": [
-      "R0078"
-    ],
-    "relatedAvoidances": [
-      "A0019-002",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0006-005",
-      "A0016-002",
-      "A0051",
-      "A0037",
-      "A0049",
-      "A0024",
-      "A0054"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040"
-    ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -51,7 +23,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

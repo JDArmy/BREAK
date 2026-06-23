@@ -17,31 +17,6 @@
     "definition": "A provider who supplies only identity information without a physical bank card.",
     "description": "A 'cardless provider' typically only offers ID photos, selfies holding an ID, and similar materials for online identity verification, helping underground operations bypass platform registration requirements. They do not provide a physical bank card, but the virtual accounts registered with their information can still be used to receive and transfer funds. This model lowers the perceived risk for the provider, making them easier to recruit.",
     "usageExample": "Who needs a cardless provider? Has a bank account with a 5,000 yuan non-counter limit.",
-    "relatedRisks": [
-      "R0060",
-      "R0093"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0014",
-      "TA0015",
-      "TA0006-003"
-    ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -49,7 +24,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

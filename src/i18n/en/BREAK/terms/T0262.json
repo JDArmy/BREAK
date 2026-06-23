@@ -17,46 +17,10 @@
     "definition": "Automated engagement farming refers to the use of automated scripts or physical devices to simulate human operations for the bulk creation of fake data metrics.",
     "description": "Through device farms, cloud phones, or custom software, operators perform bulk liking, viewing, or ordering actions on a specified target. Automated engagement farming can rapidly fabricate popularity and is used for e-commerce brushing, live stream view inflation, or app store rating manipulation. This behavior severely compromises platform data integrity and misleads consumer decisions, constituting a typical form of fraudulent marketing.",
     "usageExample": "Source: Large supply of US-region automated farming accounts with 1k followers, in stock.",
-    "relatedRisks": [
-      "R0017",
-      "R0017-001",
-      "R0005"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061",
-      "A0010",
-      "A0010-002",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0044",
-      "AT0009",
-      "AT0016"
-    ],
-    "relatedThreatActors": [
-      "TA0009",
-      "TA0006",
-      "TA0007"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS06",
-      "BS05",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

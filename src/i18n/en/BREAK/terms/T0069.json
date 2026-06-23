@@ -16,26 +16,6 @@
     "category": "Data Leakage",
     "definition": "Subsidy data refers to personal information related to recipients of government poverty alleviation programs, traded in illicit data markets.",
     "description": "This data typically contains detailed identity, address, and subsidy information of low-income individuals, illegally obtained and resold by underground actors. Downstream buyers exploit this data to carry out targeted scams against vulnerable groups with weak awareness, such as impersonating poverty alleviation offices to issue fake subsidies. Due to the high authenticity of the data, such scams have a high success rate and cause severe social harm.",
-    "relatedRisks": [
-      "R0078",
-      "R0089"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040"
-    ],
-    "relatedBusinessScenes": [
-      "BS00"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -43,7 +23,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

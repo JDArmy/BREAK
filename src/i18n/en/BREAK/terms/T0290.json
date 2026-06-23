@@ -17,38 +17,6 @@
     "definition": "Illicit funds that have undergone an initial round of laundering and are being circulated again.",
     "description": "Criminal networks subject first-hand proceeds from fraud or gambling to initial cleansing through multiple transfers, coin mixing, or sham transactions, turning them into second-stage funds. These funds are detached from their original source accounts, making them harder to trace, and are often funneled into downstream money muling, cryptocurrency purchases, or transfers to white merchant accounts. Second-stage funds represent a critical intermediary link in the laundering chain, significantly complicating tracking efforts.",
     "usageExample": "Looking for runners to cooperate on second-stage fund schemes.",
-    "relatedRisks": [
-      "R0060",
-      "R0093",
-      "R0095"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0052",
-      "A0049",
-      "A0061"
-    ],
-    "relatedAttackTools": [
-      "AT0026",
-      "AT0039",
-      "AT0040"
-    ],
-    "relatedThreatActors": [
-      "TA0006-003",
-      "TA0014",
-      "TA0015"
-    ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS15",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -56,7 +24,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

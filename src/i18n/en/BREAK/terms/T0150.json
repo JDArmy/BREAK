@@ -16,53 +16,10 @@
     "definition": "A technical method used by fraudsters to breach a platform's risk-control system.",
     "description": "Bypassing security is a core part of fraud operations. Attackers use scripts, device-fingerprint spoofing tools, and proxy IPs to circumvent a platform's device fingerprinting, behavioral analysis, and other risk-control rules. A successful bypass allows fraudsters to mass-register accounts, claim promotional rewards, or conduct credential-stuffing attacks, paving the way for downstream scams and traffic manipulation.",
     "usageExample": "The new system's risk control is too tight, and our old scripts are useless. The tech team is working on a new bypass solution.",
-    "relatedRisks": [
-      "R0030-001",
-      "R0032-001",
-      "R0095",
-      "R0032"
-    ],
-    "relatedAvoidances": [
-      "A0021",
-      "A0006-005",
-      "A0016",
-      "A0051",
-      "A0024",
-      "A0044",
-      "A0010",
-      "A0010-002",
-      "A0059",
-      "A0038",
-      "A0060",
-      "A0016-001",
-      "A0004",
-      "A0015",
-      "A0061",
-      "A0050",
-      "A0035",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0007",
-      "AT0003",
-      "AT0042",
-      "AT0064"
-    ],
-    "relatedThreatActors": [
-      "TA0015",
-      "TA0043"
-    ],
-    "relatedBusinessScenes": [
-      "BS04",
-      "BS02",
-      "BS01"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

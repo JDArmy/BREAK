@@ -15,47 +15,10 @@
     "definition": "In fraud rings, the act of seizing an active window to exploit an arbitrage or compensation loophole before it is patched.",
     "description": "These opportunities are extremely short-lived, often lasting only hours to days before platform risk controls block them. “Getting on board” emphasizes racing against the closure window. Organizers post real-time status updates in chat groups, urging members to complete fraudulent orders or false claims using designated accounts and methods. Once the window closes, the same loophole may be permanently invalid, and participants must wait for the next exploit to surface.",
     "usageExample": "This shipping insurance loophole is still open for boarding. DM me now for the link if you want in.",
-    "relatedRisks": [
-      "R0068",
-      "R0068-002",
-      "R0017",
-      "R0017-001",
-      "R0005"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061",
-      "A0006-005",
-      "A0016-002",
-      "A0051",
-      "A0037",
-      "A0043",
-      "A0044",
-      "A0027"
-    ],
-    "relatedAttackTools": [
-      "AT0044",
-      "AT0009",
-      "AT0016"
-    ],
-    "relatedThreatActors": [
-      "TA0034",
-      "TA0009",
-      "TA0006",
-      "TA0007"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

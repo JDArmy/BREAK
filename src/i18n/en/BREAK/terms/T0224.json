@@ -16,35 +16,10 @@
     "category": "Business Fraud",
     "definition": "A switch fraudster is a black-market operator who exploits platform return policies by returning counterfeit goods for genuine products to defraud merchants.",
     "description": "The operator purchases high-value genuine items, then returns counterfeit goods or empty packages, exploiting the time gap between courier acceptance and platform refunds. Switch fraudsters typically target luxury goods, electronics, and other high-value items, and may collude with couriers for fake delivery confirmations. This practice directly causes merchants to lose both goods and payment, driving up platform operating costs.",
-    "relatedRisks": [
-      "R0054-002",
-      "R0017",
-      "R0005"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061",
-      "A0043",
-      "A0044",
-      "A0027"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0009",
-      "TA0007"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

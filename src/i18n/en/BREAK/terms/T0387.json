@@ -15,27 +15,6 @@
     "definition": "A full-package fraudulent service provided by black market operators, covering everything from document fabrication and data creation to bank relationship management and loan application.",
     "description": "In credit fraud, 'one-stop service' means the black market intermediary handles all stages of the scam. They forge employment certificates and bank statements for unqualified clients, and may even bribe insiders at financial institutions to ensure loan approval. This all-inclusive service is extremely expensive and high-risk, often resulting in significant bad debt for financial institutions.",
     "usageExample": "Recruiting pure white, white accounts, and real estate credit one-stop service nationwide, total graduation amount starting from 5 million.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: Desperados in Financial Fraud"
@@ -46,7 +25,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

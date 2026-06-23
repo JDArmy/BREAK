@@ -17,32 +17,6 @@
     "definition": "Virtual stored-value cards, such as online E-cards and supermarket gift cards, which criminals purchase with illicit funds and then cash out by redeeming or reselling the card details, serving as a virtual liquidation channel for money laundering.",
     "description": "E-cards exist as a card number and password without requiring physical delivery. Criminals buy them in bulk with illicit funds and then clean the money by reselling the card details or redeeming them to purchase physical goods for resale. Because the purchase and redemption actions can be separated across different accounts and IP addresses, this method inherently provides a fund isolation effect. Commonly found on e-commerce and lifestyle service platforms, these cards have small individual values but can be processed in bulk, making them suitable for high-frequency, small-sum money laundering.",
     "usageExample": "Supplying, multiple channels for e-card details.",
-    "relatedRisks": [
-      "R0060",
-      "R0093"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044",
-      "A0038",
-      "A0060",
-      "A0016-001",
-      "A0004"
-    ],
-    "relatedAttackTools": [
-      "AT0039",
-      "AT0040"
-    ],
-    "relatedThreatActors": [
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS02"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -50,7 +24,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

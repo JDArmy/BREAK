@@ -16,29 +16,6 @@
     "category": "Money Laundering",
     "definition": "A legitimate merchant unknowingly exploited as a laundering channel by criminal networks.",
     "description": "After obtaining funds through carding or fraud, criminals purchase high-value goods or services from white merchants, then resell them to cash out. The merchant becomes an unwitting link in the laundering chain, and their accounts may be frozen due to abnormal transactions. This tactic is common on e-commerce platforms, using genuine transactions to obscure the money trail and exposing the merchant to compliance risks.",
-    "relatedRisks": [
-      "R0062",
-      "R0060",
-      "R0093"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [
-      "AT0039",
-      "AT0040"
-    ],
-    "relatedThreatActors": [
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS02"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -46,7 +23,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

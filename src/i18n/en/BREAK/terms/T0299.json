@@ -17,33 +17,6 @@
     "definition": "An intermediary who specializes in providing payment QR codes for underground money laundering.",
     "description": "QR code suppliers accumulate personal, merchant, and aggregated payment codes through registration, rental, or purchase, then provide them to money laundering platforms or fraud rings for receiving payments. They take a commission based on transaction volume, dispersing illicit funds into different accounts to evade risk controls. Their existence significantly lowers the technical barrier to money laundering, making fund trails more obscure.",
     "usageExample": "Small-amount collection, looking for runner crews and QR code suppliers, rate 12%",
-    "relatedRisks": [
-      "R0060",
-      "R0093"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044",
-      "A0006-005",
-      "A0016-002",
-      "A0051",
-      "A0037"
-    ],
-    "relatedAttackTools": [
-      "AT0026",
-      "AT0039",
-      "AT0040"
-    ],
-    "relatedThreatActors": [
-      "TA0006-003",
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS01"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -51,7 +24,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

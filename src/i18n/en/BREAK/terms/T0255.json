@@ -16,41 +16,10 @@
     "category": "Business Fraud",
     "definition": "The first account or entry point in a traffic diversion chain that initiates the flow of users.",
     "description": "A 'vehicle head' account typically has high authority and strong activity metrics, acting as the engine of the entire diversion array. It attracts initial traffic by posting viral content or occupying high-traffic spots, then progressively guides users to subsequent monetization accounts or scam groups. If a vehicle head account is banned, the entire diversion chain collapses, so fraud rings invest significant resources in maintaining them.",
-    "relatedRisks": [
-      "R0017",
-      "R0017-001",
-      "R0005"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061",
-      "A0006-005",
-      "A0016-002",
-      "A0051",
-      "A0037"
-    ],
-    "relatedAttackTools": [
-      "AT0044",
-      "AT0009",
-      "AT0016"
-    ],
-    "relatedThreatActors": [
-      "TA0009",
-      "TA0006",
-      "TA0007"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

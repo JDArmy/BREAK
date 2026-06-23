@@ -15,32 +15,6 @@
     "category": "Data Leakage",
     "definition": "In illicit data trading, refers to personal or organizational data that has expired and can no longer be exploited, regarded as worthless inventory within the black market.",
     "description": "Dead material loses its utility due to age, information changes, or upgraded platform risk controls, such as deactivated phone numbers, frozen bank cards, or invalid login credentials. This data finds no buyers on the market and is sometimes mixed into data packs to deceive inexperienced downstream purchasers. Once identified as dead material, it is typically discarded and cannot be used in subsequent fraud or marketing operations.",
-    "relatedRisks": [
-      "R0078",
-      "R0089"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0007",
-      "A0016-003",
-      "A0024",
-      "A0021",
-      "A0049",
-      "A0054"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040"
-    ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -48,7 +22,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

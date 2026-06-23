@@ -17,57 +17,10 @@
     "definition": "Proxy account farming is a service provided by black-market operators to keep accounts online in bulk and automatically execute tasks.",
     "description": "Operators use scripts or centralized control systems to maintain account activity on behalf of clients, automatically completing tasks such as check-ins, browsing, and liking to earn platform rewards or nurture accounts. This service is widely used in click-farm studios, where large numbers of accounts are operated to exploit platform incentives. Long-term proxy farming distorts platform ecosystem data and encroaches on legitimate user benefits.",
     "usageExample": "Proxy farming available, stable monthly income, just sit back and cash out.",
-    "relatedRisks": [
-      "R0100",
-      "R0001",
-      "R0037",
-      "R0009",
-      "R0055",
-      "R0064",
-      "R0017",
-      "R0017-001",
-      "R0005",
-      "R0034"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061",
-      "A0010",
-      "A0010-002",
-      "A0038",
-      "A0016-001",
-      "A0004",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0044",
-      "AT0009",
-      "AT0016"
-    ],
-    "relatedThreatActors": [
-      "TA0001",
-      "TA0001-001",
-      "TA0009",
-      "TA0006",
-      "TA0007"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS06",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

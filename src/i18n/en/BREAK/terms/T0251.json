@@ -16,46 +16,10 @@
     "category": "Business Fraud",
     "definition": "A cluster of accounts controlled by fraud rings to participate in organized, large-scale campaigns at specific times to exploit rewards.",
     "description": "These accounts are typically managed through centralized control systems. When a platform launches a high-value reward campaign or lottery, they swarm in to capture the prizes. They have a clear division of labor: some accounts participate in the event, while others receive and transfer the illicit gains. The sudden appearance of these account clusters can instantly deplete a campaign's budget, preventing real users from receiving rewards and severely skewing platform operational data.",
-    "relatedRisks": [
-      "R0005",
-      "R0009",
-      "R0017",
-      "R0017-001"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061",
-      "A0010",
-      "A0010-002",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0009",
-      "AT0044",
-      "AT0016"
-    ],
-    "relatedThreatActors": [
-      "TA0001",
-      "TA0009",
-      "TA0006",
-      "TA0007"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

@@ -16,54 +16,10 @@
     "category": "Business Fraud",
     "definition": "Running multiple accounts simultaneously on a single device using virtual machines or multi-instance tools for bulk fake engagement or account farming.",
     "description": "Black and gray market actors bypass 'one device, one account' controls by using device multi-opening technology to mass-manipulate accounts for fake orders, likes, or promo abuse. Operators deploy virtual environments or device-spoofing software to simulate independent device fingerprints, making multiple accounts appear to belong to different users. This behavior easily triggers platform association bans, but short-term survival is possible through IP proxies and parameter randomization, and it is commonly used in large-scale business fraud.",
-    "relatedRisks": [
-      "R0009",
-      "R0055",
-      "R0064",
-      "R0017",
-      "R0017-001",
-      "R0005",
-      "R0030",
-      "R0030-001",
-      "R0032"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061",
-      "A0010",
-      "A0010-002",
-      "A0038",
-      "A0016-001",
-      "A0004"
-    ],
-    "relatedAttackTools": [
-      "AT0009",
-      "AT0017",
-      "AT0007",
-      "AT0044",
-      "AT0016",
-      "AT0003",
-      "AT0021"
-    ],
-    "relatedThreatActors": [
-      "TA0001",
-      "TA0001-001",
-      "TA0009",
-      "TA0006",
-      "TA0007"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

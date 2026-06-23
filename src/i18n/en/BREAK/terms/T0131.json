@@ -17,35 +17,10 @@
     "definition": "Horses specifically refer to elderly patients who frequent hospitals and are easily deceived, seen as high-quality targets by fraud rings.",
     "description": "These victims have lost confidence after repeated hospital visits and poor treatment outcomes for chronic illnesses, making them highly receptive to promises of “miracle cures” or “ancestral remedies.” Scammers exploit this psychological vulnerability with precision. Rings often obtain medical records through illicit channels, then pose as fake specialists for follow-up calls or door-to-door sales, using “horse feed” scripts to repeatedly brainwash the victims and ultimately sell overpriced fake drugs or supplements. Because elderly victims have low medical literacy and weak awareness of their rights, such scams tend to be highly covert and have high recurrence rates.",
     "usageExample": "Last month they pulled a batch of long-term patients from the hospital registration system—all premium horses. After two weeks on horse feed, that batch of fake meds brought in over eight hundred thousand.",
-    "relatedRisks": [
-      "R0060",
-      "R0095"
-    ],
-    "relatedAvoidances": [
-      "A0006-005",
-      "A0016",
-      "A0051",
-      "A0024",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0014",
-      "TA0015"
-    ],
-    "relatedBusinessScenes": [
-      "BS04",
-      "BS01"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

@@ -15,26 +15,10 @@
     "category": "Marketing Fraud",
     "definition": "A verification mechanism deployed in e-commerce scenarios to prevent automated scripts from snapping up purchases.",
     "description": "During flash sales or the release of popular items, fraud rings often deploy automated scripts to conduct bulk purchasing, disrupting normal transaction order. Platforms implement a \"small shield\" as a security checkpoint, requiring users to complete specific verifications to prove they are human operators, thereby blocking automated requests from bots. This mechanism serves as a critical line of defense against marketing fraud and protects the interests of legitimate users.",
-    "relatedRisks": [
-      "R0005"
-    ],
-    "relatedAvoidances": [
-      "A0001",
-      "A0015",
-      "A0059",
-      "A0061",
-      "A0044"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS02"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: E-commerce Scalper Industry Chain Analysis Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

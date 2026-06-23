@@ -17,25 +17,6 @@
     "definition": "Grocery card refers to a bank card used by fraud rings for daily small-amount cash-outs or money laundering activities.",
     "description": "Fraud rings use these cards to conduct low-value, high-frequency sham transactions at merchants, simulating everyday spending like grocery shopping to evade risk controls. These cards are often sourced illegally and are used to clean illicit funds from scams or gambling by breaking them into small amounts. Once the card is flagged by risk controls, any remaining funds are rapidly transferred out.",
     "usageExample": "He uses a batch of grocery cards to make dozens of small transactions at convenience stores every day, cleaning money from telecom fraud a few dozen bucks at a time.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044",
-      "A0024",
-      "A0016",
-      "A0061"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -43,7 +24,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

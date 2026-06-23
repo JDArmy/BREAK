@@ -15,33 +15,10 @@
     "category": "Telecom Fraud",
     "definition": "Underground jargon used by fraud rings to mark a potential or successfully hooked victim as a target for ongoing exploitation.",
     "description": "The gang uses this tagging system to categorize and manage victims, allowing them to assign different operators for follow-up and deeper fraud attempts. This assembly-line management enables the gang to efficiently track the progress of a scam and ensure no exploitable target is overlooked. Once marked, the victim faces a continuous and customized series of deceptive attacks.",
-    "relatedRisks": [
-      "R0095",
-      "R0150"
-    ],
-    "relatedAvoidances": [
-      "A0006-005",
-      "A0016",
-      "A0051",
-      "A0024",
-      "A0044"
-    ],
-    "relatedAttackTools": [
-      "AT0053-001"
-    ],
-    "relatedThreatActors": [
-      "TA0015",
-      "TA0008",
-      "TA0042"
-    ],
-    "relatedBusinessScenes": [
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

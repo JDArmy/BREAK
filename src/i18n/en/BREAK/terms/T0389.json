@@ -15,24 +15,6 @@
     "definition": "A loan application model requiring an ID card, driver's license, and bank card, adding one more layer of identity verification than the 'One ID, One Card' model.",
     "description": "This is a common requirement in car loan fraud, where brokers forge a complete set of documents, including a driver's license, to meet the criteria. By increasing the number of documents, they create a false appearance of compliance to gain the financial institution's trust and secure a higher loan amount.",
     "usageExample": "Two IDs one card, credit record, settle at 5.7; One ID one card, credit record, settle at 5.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044",
-      "A0024",
-      "A0016"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -40,7 +22,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

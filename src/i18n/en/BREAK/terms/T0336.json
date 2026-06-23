@@ -17,29 +17,6 @@
     "definition": "Micro-collection is a money laundering tactic where criminals use other people's accounts to receive multiple small-value illicit payments to evade risk controls.",
     "description": "To avoid bank and payment platform monitoring of large or frequent transactions, criminals split a large illicit sum into countless small payments, dispersing them across numerous collection accounts. The holders of these accounts receive the funds and then consolidate and transfer them to the upstream handler. This 'break it down' strategy is common in the initial task-acceptance phase of layering platforms, effectively reducing the risk of single-transaction interception and serving as a front-end dispersal measure in the laundering chain.",
     "usageExample": "Layering, micro-collection, large supply of QR codes needed.",
-    "relatedRisks": [
-      "R0060",
-      "R0093"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [
-      "AT0026",
-      "AT0039",
-      "AT0040"
-    ],
-    "relatedThreatActors": [
-      "TA0006-003",
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS01"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -47,7 +24,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

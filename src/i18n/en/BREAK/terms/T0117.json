@@ -16,37 +16,10 @@
     "category": "Telecom Fraud",
     "definition": "An internal term for men who fall into scams while seeking pornographic content.",
     "description": "Fraudsters plant trojans or fake payment links in pornographic content on adult sites or social platforms to lure users. Because victims are often too embarrassed to report the crime, they are easily coerced into paying large sums of hush money in subsequent sextortion scams after a small initial charge or contact list theft. This type of scam exploits human weakness and is extremely high-risk.",
-    "relatedRisks": [
-      "R0095",
-      "R0150",
-      "R0060"
-    ],
-    "relatedAvoidances": [
-      "A0006-005",
-      "A0016",
-      "A0051",
-      "A0024",
-      "A0044",
-      "A0016-002",
-      "A0037"
-    ],
-    "relatedAttackTools": [
-      "AT0053-001"
-    ],
-    "relatedThreatActors": [
-      "TA0015",
-      "TA0008",
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS04",
-      "BS01"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

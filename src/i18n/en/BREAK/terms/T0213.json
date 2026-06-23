@@ -17,31 +17,6 @@
     "definition": "Refers to user order data leaked from phone rental platforms, including phone models, rental periods, repayment records, and personal identity information.",
     "description": "Black-market actors obtain this data by infiltrating rental platform backends or bribing insiders. Buyers use this information for targeted marketing to rental users or to impersonate platform customer service for scams. This data can also be used for malicious debt collection or to screen users with financial needs for secondary fraud.",
     "usageExample": "'Need phone rental material, next-day real-time device data, can test, contact me'",
-    "relatedRisks": [
-      "R0078",
-      "R0089"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049",
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040"
-    ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -49,7 +24,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

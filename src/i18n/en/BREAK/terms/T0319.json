@@ -16,30 +16,6 @@
     "definition": "A money-laundering method in which the payee uses a device to actively scan the payer’s payment code to collect funds, commonly seen in offline or POS scenarios.",
     "description": "Reverse scanning puts the initiative in the payee’s hands—the payer merely displays their payment code and the money is deducted. In fraud rings, this is often used for offline laundering or “mobile phone vehicle” operations, such as using a POS terminal to reverse-scan a victim’s payment code or sending a “runner” with a device to scan a gambler’s code. The fund flow is more covert and less likely to be noticed by the payer. This method requires hardware and scenario coordination but effectively circumvents online risk controls, making it a key offline money-muling technique.",
     "usageExample": "Looking for a reverse-scan vehicle, mobile phone/gold reverse-scan vehicle, major supermarket reverse-scan vehicle!!!",
-    "relatedRisks": [
-      "R0060",
-      "R0093"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044",
-      "A0061"
-    ],
-    "relatedAttackTools": [
-      "AT0026",
-      "AT0039",
-      "AT0040"
-    ],
-    "relatedThreatActors": [
-      "TA0006-003",
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS01"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -47,7 +23,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

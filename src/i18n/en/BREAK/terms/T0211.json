@@ -17,28 +17,6 @@
     "definition": "Refers to personal information related to recipients of poverty alleviation subsidies, illegally obtained by black-market actors for targeted scams or money laundering.",
     "description": "Black-market actors steal the identities, contact details, and subsidy specifics of aid recipients through insider moles or system vulnerabilities. This data is resold to fraud rings, who impersonate government officials and defraud victims under the pretense of distributing subsidies. Due to the precision of the information, victims are often highly convinced, leading to the theft of funds intended for poverty relief.",
     "usageExample": "'Bosses needing pyramid scheme material, poverty alleviation material, or courier material, contact me! Suit-and-tie big shots, V-push, telemarketing, data, SDK real-time daily active high-quality data!'",
-    "relatedRisks": [
-      "R0078",
-      "R0089"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049",
-      "A0024",
-      "A0054"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040"
-    ],
-    "relatedBusinessScenes": [
-      "BS00"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -46,7 +24,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

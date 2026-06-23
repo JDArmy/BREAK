@@ -15,27 +15,6 @@
     "category": "Credit Fraud",
     "definition": "Car financing fraud refers to the act of using falsified documents to fraudulently obtain an auto loan and then cashing out the vehicle.",
     "description": "Fraud rings recruit credit mules with clean records and fabricate their employment and income proofs. They use these fake profiles to secure a loan from a financial institution under the pretense of buying a car. Once the vehicle is acquired, it is not used but is immediately pawned or sold for cash. The loan is then abandoned, resulting in a bad debt for the auto loan.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -43,7 +22,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

@@ -15,27 +15,6 @@
     "category": "Credit Fraud",
     "definition": "Loan harvesting refers to the fraudulent practice of applying for small online loans in bulk using fabricated credentials with no intention of repayment.",
     "description": "Fraudsters use synthetic or stolen identities, forged income proofs, and fake employment records to apply for loans across multiple platforms simultaneously. Once the funds are disbursed, they immediately sever contact and default, leaving financial institutions with bad debt. This tactic often targets small, fast-approval cash loan products with weak risk controls and is a classic form of loan fraud.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -43,7 +22,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

@@ -17,36 +17,6 @@
     "definition": "User information data from China's three major telecom operators: China Mobile, China Telecom, and China Unicom.",
     "description": "In illegal data trading, 'Three Networks' data covers subscriber information across all three major carriers, allowing fraudsters to conduct batch queries or correlation analysis. This data is frequently used to filter targets, send scam messages, or carry out precision marketing harassment. Leaked three-network information provides a vast pool of potential victims for telecom fraud and marketing scams.",
     "usageExample": "Bulk queries for phone numbers registered under the three networks, rock-bottom prices.",
-    "relatedRisks": [
-      "R0078",
-      "R0089",
-      "R0092",
-      "R0109"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0007",
-      "A0016-003",
-      "A0024",
-      "A0021",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0012",
-      "AT0064"
-    ],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040",
-      "TA0018"
-    ],
-    "relatedBusinessScenes": [
-      "BS00"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -54,7 +24,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

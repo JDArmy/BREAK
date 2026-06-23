@@ -1,6 +1,6 @@
 # BREAK Data Schema
 
-> Generated from `src/validation/breakSchema.ts` for package version `2.21.27`.
+> Generated from `src/validation/breakSchema.ts` for package version `2.21.28`.
 > Last schema doc review: 2026-06-17. Run `npm run schema:docs:write` after schema changes.
 
 This document describes the committed JSON data model used by the BREAK knowledge base. The source of truth is the Zod schema in `src/validation/breakSchema.ts`; `npm run validate:schema-docs` checks this document against that source.
@@ -176,4 +176,22 @@ Parent and child records live in the parent JSON file. For example, `R0001-001` 
 | `BusinessScene.riskScenes.*.risks` | BusinessScene -> Risk | Risks grouped under a scene-specific risk scene. |
 
 Relationship integrity is enforced by `npm run validate:data` through schema validation, i18n synchronization, keyword audit, entity relation checks, relationship coverage audit, business scene audit, reference coverage, and documentation consistency checks.
+
+## English i18n Boundary
+
+Chinese files under `src/BREAK/` are the only source of structure and relationships. English files under `src/i18n/en/BREAK/` must only contain translatable display fields. `npm run validate:data` runs `scripts/validate/i18n-sync.mjs --strict`, which checks both entity key synchronization and field-level structure pollution.
+
+Allowed English translation fields are:
+
+| Entity | Allowed English fields |
+| --- | --- |
+| Risk | `title`, `keywords`, `definition`, `description`, `complexity`, `influence`, `references[].title` |
+| Avoidance | `title`, `keywords`, `definition`, `description`, `complexity`, `limitation`, `references[].title` |
+| AttackTool | `title`, `keywords`, `description`, `references[].title` |
+| ThreatActor | `title`, `keywords`, `description`, `references[].title` |
+| Term | `title`, `keywords`, `aliases`, `category`, `definition`, `description`, `usageExample`, `references[].title` |
+| BusinessScene | `title`, `description`, `riskDimensions[*].title`, `riskScenes[*].title` |
+| Case | `title`, `keywords`, `summary`, `description`, `references[].title` |
+
+English files must not contain relationship fields, ID arrays, `updated`, `references[].link`, or BusinessScene structural arrays such as `riskDimensions[*].riskScenes` and `riskScenes[*].risks`.
 

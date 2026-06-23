@@ -1,6 +1,6 @@
 {
   "name": "break",
-  "version": "2.21.27",
+  "version": "2.21.28",
   "private": true,
   "type": "module",
   "engines": {
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "npm run lint && npm run type-check && npm run validate:data && npm run test && npm run test:coverage && npm run validate:schema-docs && npm run validate:home-counts && npm run export:data && npm run build-only && npm run export:data-package && npm run audit:bundle:check && npm run validate:data-export && npm run validate:data-package",
+    "build": "npm run lint && npm run type-check && npm run validate:data && npm run test && npm run test:coverage && npm run validate:schema-docs && npm run validate:home-counts && npm run export:data && npm run export:data-en && npm run build-only && npm run export:data-package && npm run audit:bundle:check && npm run validate:data-export && npm run validate:data-package",
     "preview": "vite preview",
     "build-only": "vite build",
     "analyze": "ANALYZE=1 vite build",
@@ -23,6 +23,7 @@
     "validate:home-counts": "node scripts/validate/generate-home-counts.mjs --check",
     "generate:home-counts": "node scripts/validate/generate-home-counts.mjs",
     "export:data": "node scripts/validate/export-static-data.mjs",
+    "export:data-en": "node scripts/skill/export_en_data.mjs",
     "export:data-package": "node scripts/validate/export-data-package.mjs",
     "test:smoke": "node scripts/validate/site-smoke.mjs",
     "test:performance": "node scripts/validate/site-performance.mjs",

@@ -17,37 +17,10 @@
     "definition": "A form of marketing fraud involving the creation of fictitious orders to falsify sales volume, evade platform penalties, or fraudulently obtain subsidies.",
     "description": "Merchants or click-farm rings organize large numbers of fake accounts to place orders, creating a false impression of product popularity to boost search rankings. This activity is particularly rampant during major e-commerce promotions, used to siphon off platform-issued coupons and promotional commissions. This behavior severely undermines market fairness and harms the interests of genuine consumers.",
     "usageExample": "'Merchants needing review and order padding, please find me, first-hand brand'",
-    "relatedRisks": [
-      "R0017-001",
-      "R0017",
-      "R0005"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061"
-    ],
-    "relatedAttackTools": [
-      "AT0044",
-      "AT0009",
-      "AT0016"
-    ],
-    "relatedThreatActors": [
-      "TA0009",
-      "TA0006",
-      "TA0007"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

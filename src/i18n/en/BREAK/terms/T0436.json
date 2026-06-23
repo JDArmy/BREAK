@@ -16,34 +16,6 @@
     "definition": "A service in which a debt-relief agency promises to handle debt collection calls and negotiate debt reduction on behalf of the debtor.",
     "description": "Under the guise of debt management, agencies take over collection calls for debtors and claim they can negotiate debt forgiveness, while in reality charging high management fees. Their operations often involve forging documents, filing malicious complaints, and other illegal tactics, leading to misuse of personal information, worsening debt problems, and missed repayment opportunities due to false promises.",
     "usageExample": "Debt management service, no need to check your account, just 150 a month.",
-    "relatedRisks": [
-      "R0096",
-      "R0096-001"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044",
-      "A0038",
-      "A0060",
-      "A0016-001",
-      "A0004",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0029"
-    ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -51,7 +23,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

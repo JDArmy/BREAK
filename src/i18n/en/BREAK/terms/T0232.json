@@ -15,38 +15,10 @@
     "category": "Business Fraud",
     "definition": "The critical step in a fake order scheme where the click-farm worker physically receives the goods, confirms delivery, and posts a positive review.",
     "description": "In the e-commerce fake order chain, 'harvesting' marks the completion of a task: the worker receives an empty package or small gift, then confirms receipt and gives a five-star rating according to a script. The organizer uses this step to verify task completion before refunding the principal and paying the commission. This directly fabricates a closed transaction loop, deceiving the platform's credit system. Mass 'harvesting' can quickly build fake reputation, but it is susceptible to detection by logistics and review analysis models.",
-    "relatedRisks": [
-      "R0056",
-      "R0017",
-      "R0017-001",
-      "R0005"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061"
-    ],
-    "relatedAttackTools": [
-      "AT0044",
-      "AT0009",
-      "AT0016"
-    ],
-    "relatedThreatActors": [
-      "TA0009",
-      "TA0006",
-      "TA0007"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

@@ -15,26 +15,6 @@
     "category": "Data Leakage",
     "definition": "The illicit use of automated tools to test batches of credentials and filter out valid accounts.",
     "description": "Using previously leaked username-password combinations, fraudsters run scripts to attempt mass logins across multiple platforms, identifying usable accounts. These validated accounts can then be used to steal virtual assets, post illicit content, or serve as raw material for subsequent targeted scams. This practice severely threatens personal account and financial security.",
-    "relatedRisks": [
-      "R0032-001",
-      "R0088",
-      "R0090"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0042"
-    ],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS00"
-    ],
     "references": [
       {
         "title": "API Account Enumeration Has Become a Major Threat to Account Security"
@@ -45,7 +25,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

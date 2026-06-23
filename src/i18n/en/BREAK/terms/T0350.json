@@ -15,22 +15,6 @@
     "category": "Gambling",
     "definition": "A deceptive practice where gambling organizers fabricate a bustling scene to attract real bettors.",
     "description": "When launching a new casino or game, organizers plant fake players to create an illusion of popularity, enticing onlookers to join. Online platforms may manipulate backend algorithms to let new users win initially before they start losing, trapping them in a cycle of gambling.",
-    "relatedRisks": [
-      "R0097"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0016",
-      "A0044",
-      "A0061"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0016"
-    ],
-    "relatedBusinessScenes": [
-      "BS06"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review"
@@ -38,7 +22,6 @@
       {
         "title": "Black Market Big Data: 2025 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

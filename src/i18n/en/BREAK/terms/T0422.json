@@ -17,22 +17,6 @@
     "definition": "The practice of equipping a debt mule with a shell company to fraudulently obtain loans from financial institutions.",
     "description": "In debt mule fraud, syndicates transfer a pre-registered or purchased shell company to the mule, making them the nominal business owner. They then 'equip' the company by generating fake transaction flows and contracts, packaging the shell as an operational entity to apply for business loans. After the loan is disbursed, the mule is left with the debt while the syndicate splits the funds.",
     "usageExample": "Bank connections nationwide, guaranteed approval of 3 to 5 million, strong communication, real shell company setup, inquiries welcome.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -40,7 +24,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

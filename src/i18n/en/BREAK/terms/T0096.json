@@ -15,32 +15,6 @@
     "category": "Data Leakage",
     "definition": "A technique used in social engineering databases to precisely locate a target's data by filtering results with auxiliary fields when only vague information like a name is known.",
     "description": "Demon hunting is a common query technique in social engineering databases. When an attacker only knows a target's name, they cross-reference the returned results with auxiliary information like birthdate, region, and gender. This method allows them to precisely filter a specific target's complete dossier from a massive pool of homonymous data. This technique is a critical step in executing precision scams and doxing.",
-    "relatedRisks": [
-      "R0092",
-      "R0078",
-      "R0089",
-      "R0109"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0012",
-      "AT0064"
-    ],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040",
-      "TA0018"
-    ],
-    "relatedBusinessScenes": [
-      "BS00"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -48,7 +22,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

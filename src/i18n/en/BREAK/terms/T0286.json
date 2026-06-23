@@ -17,38 +17,6 @@
     "definition": "Mixed material refers to illicit funds obtained through composite fraud schemes such as e-commerce refund scams, fake investment platforms, and credit card cash-out operations.",
     "description": "Mixed material is the underground umbrella term for proceeds from multi-scenario hybrid fraud. These funds come from diverse sources, including e-commerce refund fraud, fake investment platforms, loan fee scams, and credit card cash-outs. Because of the complex origin of the funds, tracing and identification are more difficult, which underground actors exploit for money laundering. Mixed material typically requires coordination among multiple money-running crews, resulting in long fund transfer chains and involving a vast number of personal information records and accounts.",
     "usageExample": "Crews short on cards contact me, I have mixed material, can supply cards, long-term supply until you’re satisfied, let’s talk rates.",
-    "relatedRisks": [
-      "R0062-001",
-      "R0060",
-      "R0093",
-      "R0095"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0052",
-      "A0049",
-      "A0046",
-      "A0057"
-    ],
-    "relatedAttackTools": [
-      "AT0026"
-    ],
-    "relatedThreatActors": [
-      "TA0006-003",
-      "TA0014",
-      "TA0015"
-    ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS02",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -56,7 +24,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

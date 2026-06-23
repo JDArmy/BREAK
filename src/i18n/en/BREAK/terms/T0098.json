@@ -15,34 +15,6 @@
     "category": "Data Leakage",
     "definition": "The act of forcibly logging into user accounts using technical means to steal internal sensitive information.",
     "description": "Attackers exploit vulnerabilities or use credential-stuffing techniques to breach platform defenses and forcibly access user account backends, stealing order details, addresses, and other private data. This high-value information is then packaged and sold to downstream fraud or marketing groups. In data-trading advertisements, the term “forced login” is often used to indicate the data’s source and freshness.",
-    "relatedRisks": [
-      "R0032-001",
-      "R0092",
-      "R0078",
-      "R0089",
-      "R0109"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0042",
-      "AT0012",
-      "AT0064"
-    ],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040",
-      "TA0018"
-    ],
-    "relatedBusinessScenes": [
-      "BS00"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -50,7 +22,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

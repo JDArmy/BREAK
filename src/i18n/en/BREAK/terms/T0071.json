@@ -16,29 +16,6 @@
     "category": "Data Leakage",
     "definition": "Investor data refers to personal information specifically tailored for targeting stock investors, traded in illicit data markets.",
     "description": "This data precisely targets high-net-worth or active retail investors and contains sensitive information such as investment preferences and portfolio holdings. Fraud rings use this data to carry out stock recommendation scams, pump-and-dump schemes, and other illegal activities, with single fraud amounts often being substantial. Due to its high conversion rate and strong monetization potential, investor data is a high-value commodity in darknet trading.",
-    "relatedRisks": [
-      "R0078",
-      "R0089"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040"
-    ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01",
-      "BS02",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -46,7 +23,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

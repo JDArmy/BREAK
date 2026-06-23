@@ -17,33 +17,6 @@
     "definition": "QR-to-Crypto is a laundering technique where criminals use payment QR codes to receive fiat currency and then return the funds in the form of USDT.",
     "description": "This method combines the convenience of QR code payments with the anonymity of cryptocurrency. Criminals use a large collection of personal payment QR codes to receive illicit funds; once the money enters the account, they purchase USDT to return to the upstream handler. This model splits the fund trail into 'fiat in, crypto out,' making tracking extremely difficult once it enters the virtual currency stage, and is commonly used for rapid profit distribution in telecom fraud.",
     "usageExample": "Boss, can you do small amounts, 50-1000, QR-to-Crypto?",
-    "relatedRisks": [
-      "R0121",
-      "R0060"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044",
-      "A0006-005",
-      "A0016-002",
-      "A0051",
-      "A0037"
-    ],
-    "relatedAttackTools": [
-      "AT0006",
-      "AT0060",
-      "AT0039"
-    ],
-    "relatedThreatActors": [
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS15"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -51,7 +24,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

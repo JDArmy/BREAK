@@ -16,22 +16,6 @@
     "definition": "A derogatory term used by debtors to refer to third-party debt collectors.",
     "description": "In the context of loan fraud and debt collection, debtors use this term for collection agencies or individuals who employ threats, intimidation, harassment, and other high-pressure tactics. These collectors disregard the debtor's actual situation, using frequent phone bombardment, verbal abuse, and contact list exposure to force repayment, often provoking intense confrontation.",
     "usageExample": "The caller immediately asked when I would settle my debt on xx platform. I was confused, then asked if they had the wrong number. Only later did they say they weren't a debt collector thug but a specialist handling interest, and asked if I needed help.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -39,7 +23,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

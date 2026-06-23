@@ -16,38 +16,10 @@
     "category": "Telecom Fraud",
     "definition": "An internal term used by fraud rings for groups primarily targeting school students.",
     "description": "Exploiting students' lack of social experience and desire to earn money through part-time work, fraudsters post fake job ads like 'high pay, daily settlement' or 'cashback for reviews.' Once contacted, victims are asked to pay 'training fees' or 'security deposits,' ultimately receiving no payment and losing their principal. This demographic is a prime target for task-based scams.",
-    "relatedRisks": [
-      "R0017-001",
-      "R0095",
-      "R0150"
-    ],
-    "relatedAvoidances": [
-      "A0006-005",
-      "A0016",
-      "A0051",
-      "A0024",
-      "A0044",
-      "A0015",
-      "A0059",
-      "A0021",
-      "A0061"
-    ],
-    "relatedAttackTools": [
-      "AT0053-001"
-    ],
-    "relatedThreatActors": [
-      "TA0015",
-      "TA0008"
-    ],
-    "relatedBusinessScenes": [
-      "BS04",
-      "BS02"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

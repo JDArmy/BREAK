@@ -15,24 +15,6 @@
     "category": "Credit Fraud",
     "definition": "The service fee percentage charged by fraud syndicates to clients based on the risk level of the operation.",
     "description": "In credit fraud, money muling, and other underground activities, intermediaries or operators charge different fee percentages based on the risk level of the business. The more covert the operation channel, the larger the amount involved, and the higher the probability of being blocked by risk controls, the higher the fee percentage. For example, the fee for large-scale debt assumption using a fake business is far higher than for ordinary personal consumer loan packaging. The fee percentage is a core metric for fraud syndicates to measure risk and return; a high percentage often implies a higher fraud success rate or more severe legal consequences.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044",
-      "A0024",
-      "A0016"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -40,7 +22,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

@@ -17,35 +17,6 @@
     "definition": "A scheme where illicit actors use malicious complaints or forged documents to coerce financial institutions into refunding various legally charged fees.",
     "description": "Posing as 'agent advocates,' fraud rings instigate clients or directly act on their behalf to file mass complaints with regulatory bodies. They exploit the financial institution's desire to avoid trouble, demanding refunds of interest, service fees, or even principal, and then take a large commission. Such malicious complaints not only disrupt the financial order but also crowd out legitimate complaint channels for ordinary consumers.",
     "usageExample": "A broker helped him get all the interest from his online loan refunded and took a 30% cut. He was then told to refer everyone in his contact list for the same fee refund scam.",
-    "relatedRisks": [
-      "R0068-001",
-      "R0096",
-      "R0096-001"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044",
-      "A0038",
-      "A0060",
-      "A0016-001",
-      "A0004",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0029"
-    ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "Credit Fraud: Exposing the Underground Industry Behind Illegal Proxy Rights-Protection Schemes"
@@ -56,7 +27,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

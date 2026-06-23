@@ -17,30 +17,6 @@
     "definition": "A technical method that intercepts a user's digital yuan top-up request and redirects it to a device controlled by the criminal, allowing them to funnel fraudulent funds directly into their own wallet.",
     "description": "A digital gateway hijacks a legitimate user's digital yuan top-up process through technical means. The top-up operation, which should be executed on the user's own device, is redirected to a device held by the criminal. Consequently, the victim's funds are deposited directly into the criminal's digital wallet, bypassing the user's own wallet binding and risk verification. This technique achieves fund diversion through device switching, with single transactions typically ranging from 300 to 20,000 yuan. It can operate automatically around the clock with a high degree of stealth.",
     "usageExample": "Digital RMB gateway, single transaction 300-20,000, online 24/7 without interruption.",
-    "relatedRisks": [
-      "R0060",
-      "R0093",
-      "R0094"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [
-      "AT0026",
-      "AT0039",
-      "AT0040"
-    ],
-    "relatedThreatActors": [
-      "TA0014",
-      "TA0006-003"
-    ],
-    "relatedBusinessScenes": [
-      "BS01"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -48,7 +24,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

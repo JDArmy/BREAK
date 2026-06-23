@@ -16,35 +16,6 @@
     "definition": "A payment link or QR code used in money laundering that can be preset with a fixed amount, enabling precise collection of specific denominations of illicit funds.",
     "description": "Preset codes are often tied to virtual goods payment scenarios, such as QQ coins or top-up vouchers. Fraud rings lock the top-up amount to a specific tier so that the payer can only pay the preset sum. This avoids reconciliation hassles from overpayment or underpayment while disguising dirty money as legitimate virtual consumption. Money-muling crews purchase these codes in bulk and pair them with automated card-issuing platforms to achieve “pay-and-ship,” completing both money laundering and asset conversion.",
     "usageExample": "Recruiting: preset codes, aggregated codes, personal codes, DiDi cash.",
-    "relatedRisks": [
-      "R0060",
-      "R0093",
-      "R0094"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044",
-      "A0006-005",
-      "A0016-002",
-      "A0051",
-      "A0037"
-    ],
-    "relatedAttackTools": [
-      "AT0027",
-      "AT0026",
-      "AT0039",
-      "AT0040"
-    ],
-    "relatedThreatActors": [
-      "TA0006-003",
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS01"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -52,7 +23,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

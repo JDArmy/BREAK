@@ -17,36 +17,6 @@
     "definition": "An illicit channel that provides extremely fast data queries, delivering feedback within minutes.",
     "description": "The express line is a high-efficiency data acquisition method in the upstream underground market, often relying on compromised government systems or automated interfaces to rapidly return target information. It is used for urgent lookup needs, such as real-time location tracking or instant identity verification. The existence of express lines indicates that criminal networks have penetrated high-speed information networks, greatly enhancing criminal efficiency.",
     "usageExample": "\"Bank transaction records, any bank, stable, express line departing this Sunday evening, results back by Tuesday or Wednesday.\"",
-    "relatedRisks": [
-      "R0092",
-      "R0078",
-      "R0089",
-      "R0109"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049",
-      "A0024",
-      "A0054"
-    ],
-    "relatedAttackTools": [
-      "AT0012",
-      "AT0064"
-    ],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040",
-      "TA0018"
-    ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -54,7 +24,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

@@ -16,22 +16,6 @@
     "definition": "A sequential fraud model combining mortgage, credit, and business loans to maximize extraction from a single debt mule.",
     "description": "This is a fixed operational process for multi-round loan fraud against a single mule. The syndicate first uses the mule to apply for a mortgage, then leverages the property for consumer credit or renovation loans, and finally packages the mule as a business owner for a corporate loan. This layered approach maximizes the mule's credit value in the shortest possible time.",
     "usageExample": "Mortgage, credit, business, car loans. Looking for credit invisibles with total liabilities under 50,000. Upfront costs covered.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -39,7 +23,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

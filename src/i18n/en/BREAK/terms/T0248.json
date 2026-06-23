@@ -16,46 +16,10 @@
     "definition": "The gray-market practice of users reselling virtual gifts obtained on live-streaming platforms to a third party for cash.",
     "description": "After winning a high-value gift in a lottery or event, a user, instead of using it directly, sells it through an off-platform transaction to a gift-recycling underground group. The group then uses these gifts for money laundering through tipping or to complete high-value tasks, forming a complete chain for cashing out virtual assets. This behavior bypasses the platform's official exchange channels, leading to capital outflow.",
     "usageExample": "I won a sports car gift but had no use for it, so I just backflowed it to a supermarket for 300 yuan.",
-    "relatedRisks": [
-      "R0034",
-      "R0005",
-      "R0094",
-      "R0138",
-      "R0121"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061",
-      "A0024",
-      "A0016",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [
-      "AT0016",
-      "AT0009",
-      "AT0067",
-      "AT0039"
-    ],
-    "relatedThreatActors": [
-      "TA0006",
-      "TA0039",
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS05",
-      "BS06",
-      "BS15"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

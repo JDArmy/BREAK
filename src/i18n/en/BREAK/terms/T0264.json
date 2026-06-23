@@ -17,44 +17,10 @@
     "definition": "Bot comments are fake, repetitive, and content-free comments posted in bulk by programs or click farms.",
     "description": "This type of comment is often used to drown out negative feedback from real users or to create a false impression of popularity for a product or content. Operators use a large number of accounts to post pre-scripted messages, interfering with platform content ranking and user judgment. Bot comments are a common tool for engagement manipulation and review bombing, used to mislead consumers and conceal product or service quality issues.",
     "usageExample": "Off-platform promotion, guaranteed 20-50 orders. Influencer videos, upload included, brand change, link refreshing, bot comments.",
-    "relatedRisks": [
-      "R0017",
-      "R0017-001",
-      "R0005"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061",
-      "A0006-005",
-      "A0016-002",
-      "A0051",
-      "A0037",
-      "A0016",
-      "A0044"
-    ],
-    "relatedAttackTools": [
-      "AT0044",
-      "AT0009",
-      "AT0016"
-    ],
-    "relatedThreatActors": [
-      "TA0019",
-      "TA0009",
-      "TA0006",
-      "TA0007"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

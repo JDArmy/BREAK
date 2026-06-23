@@ -17,31 +17,6 @@
     "definition": "Black USDT refers to USDT originating from illegal operations such as fraud and coin theft, already flagged as high-risk.",
     "description": "Black USDT is the underground term for USDT obtained through illegal activities, typically involving fraud, Ponzi schemes, hacking, and coin theft. Exchanges and on-chain analytics tools flag these addresses, and any receiving account that transacts with them risks account freezing and fund seizure. Underground actors attempt to clean black USDT through mixers, cross-chain bridges, and other methods, but the success rate is inconsistent, and participants face potential legal liability at any time.",
     "usageExample": "Black USDT for sale: can be deposited to exchanges, used for platform contracts, or converted to RMB.",
-    "relatedRisks": [
-      "R0121",
-      "R0060",
-      "R0095"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [
-      "AT0060",
-      "AT0039"
-    ],
-    "relatedThreatActors": [
-      "TA0014",
-      "TA0015"
-    ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS15",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -49,7 +24,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

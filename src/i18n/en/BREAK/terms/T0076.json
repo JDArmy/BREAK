@@ -16,26 +16,6 @@
     "category": "Data Leakage",
     "definition": "In illicit data trading, refers to personal or corporate information with low market demand that is difficult to monetize.",
     "description": "This data may be of little interest to underground practitioners due to the target group's weak purchasing power, outdated information, or narrow application scenarios. Such data is often sold off cheaply in bulk or bundled with other high-value data, used to fill databases or for low-cost, wide-net scams.",
-    "relatedRisks": [
-      "R0078",
-      "R0089"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040"
-    ],
-    "relatedBusinessScenes": [
-      "BS00"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -43,7 +23,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

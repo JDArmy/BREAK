@@ -16,42 +16,10 @@
     "definition": "The use of scripts or programs to automatically idle in live-streaming rooms and participate in lotteries to collect virtual rewards in bulk.",
     "description": "Fraud rings use emulators or multi-instance software to have hundreds or thousands of accounts enter live-streaming rooms simultaneously and idle, automatically triggering the lottery logic. This method requires no human intervention and allows for the low-cost acquisition of large quantities of gifts or platform benefits, serving as a core tactic in the matrix operation of bot accounts.",
     "usageExample": "That streamer's room looks like it has high viewership, but it's actually full of protocol accounts idling for lottery prizes, with very few real people.",
-    "relatedRisks": [
-      "R0017",
-      "R0017-001",
-      "R0005",
-      "R0034"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061",
-      "A0010",
-      "A0010-002"
-    ],
-    "relatedAttackTools": [
-      "AT0044",
-      "AT0009",
-      "AT0016"
-    ],
-    "relatedThreatActors": [
-      "TA0009",
-      "TA0006",
-      "TA0007"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS05",
-      "BS04",
-      "BS06"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

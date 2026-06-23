@@ -14,22 +14,6 @@
     "definition": "A fraudulent auto loan obtained by exploiting the identity of individuals with intellectual disabilities or those incapable of managing their own affairs.",
     "description": "Criminal organizations recruit vulnerable people lacking sound judgment, take out car loans in their names, then immediately resell the vehicles for profit, shifting all risk onto financial institutions. The barrier to entry is extremely low; with minimal packaging, the fraudsters can bypass risk controls, leading to a high incidence of bad debt.",
     "usageExample": "Disability-exploitation car loans, available for any household registration with a credit record. Three to five days to completion, guaranteed to pass three rounds of risk control, handled end-to-end by us.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -37,7 +21,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

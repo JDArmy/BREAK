@@ -16,34 +16,6 @@
     "definition": "A black-market debt relief service in which illicit agencies negotiate adjusted repayment plans with lenders on behalf of overdue borrowers.",
     "description": "Illicit debt-relief agencies exploit borrowers' financial distress by filing proxy complaints or conducting sham negotiations with banks and online lending platforms to restructure installment repayment plans. These operations often involve forging supporting documents and exerting pressure through malicious complaints. Borrowers risk having their personal data resold and may face legal liability due to falsified materials.",
     "usageExample": "Debt optimization, credit report dispute appeals, capital services, credit card personalized installment plans up to 60 months.",
-    "relatedRisks": [
-      "R0096",
-      "R0096-001"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044",
-      "A0038",
-      "A0060",
-      "A0016-001",
-      "A0004",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0029"
-    ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -51,7 +23,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

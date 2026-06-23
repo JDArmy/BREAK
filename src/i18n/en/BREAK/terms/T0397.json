@@ -17,22 +17,6 @@
     "definition": "A business model where a bank directly assumes the loan risk and bad debt losses and manages the recovery of non-performing asset portfolios; underground brokers often fabricate such a credit endorsement to deceive victims.",
     "description": "Underground brokers falsely claim to have a \"direct bank backing\" channel, capable of handling internal bad debt digestion or non-performing asset portfolio disposal, using this as a fabricated official endorsement to attract clients. In reality, banks rarely outsource non-performing assets directly to external individuals. The intermediary merely uses this title to gain trust, while secretly operating illegal businesses like debt loading or loan packaging. Once hooked, clients are often tricked into signing fraudulent agreements and ultimately face legal recourse.",
     "usageExample": "Local direct backing, get 3 million+ in hand, done in about ten days, clean credit, one or two inquiries are fine. The asset package window is closing soon, hurry up and send people, do a couple of deals and take a break.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -40,7 +24,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

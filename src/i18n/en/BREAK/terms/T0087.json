@@ -15,30 +15,6 @@
     "category": "Data Leakage",
     "definition": "Refers to personal or organizational data obtained directly from the breach source without any intermediary resale, commanding a premium in black-market trading due to its high integrity.",
     "description": "First-hand material avoids the contamination and adulteration caused by multiple resales and typically comes directly from data sources such as insiders, system vulnerabilities, or real-time phishing results. Black-market actors prioritize using first-hand material for high-value fraud or precision marketing because its completeness and strong correlations yield much higher conversion rates than second-hand material. Sellers often advertise “first-hand supply” to attract buyers, though actual transactions may include dead or duplicate data to inflate volumes.",
-    "relatedRisks": [
-      "R0078",
-      "R0089"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0006-005",
-      "A0016-002",
-      "A0051",
-      "A0037",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040"
-    ],
-    "relatedBusinessScenes": [
-      "BS00"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -46,7 +22,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

@@ -16,34 +16,6 @@
     "definition": "A payment QR code used in money laundering that can bypass single-transaction or daily limits imposed by payment platforms, specifically designed to circumvent risk controls for high-density transfers.",
     "description": "Platforms typically set limits on payment codes; limit-breaking codes are “over-limit” codes created by fraud rings through technical manipulation or account nurturing, capable of receiving funds far exceeding normal thresholds in a short time. Money-muling crews use them to handle the splitting of large illicit sums, breaking a single large amount into multiple rapid entries to reduce the chance of interception. Long-term use accelerates account freezes or bans, but these codes are virtually indispensable in time-sensitive laundering scenarios.",
     "usageExample": "5,000–50,000 limit-breaking codes continuously operating.",
-    "relatedRisks": [
-      "R0060",
-      "R0093",
-      "R0094"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044",
-      "A0006-005",
-      "A0016-002",
-      "A0051",
-      "A0037"
-    ],
-    "relatedAttackTools": [
-      "AT0026",
-      "AT0039",
-      "AT0040"
-    ],
-    "relatedThreatActors": [
-      "TA0006-003",
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS01"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -51,7 +23,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

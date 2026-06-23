@@ -17,22 +17,6 @@
     "definition": "An applicant with poor credit knowingly attempts to apply for a loan or credit card from a strict lender, hoping for a system loophole.",
     "description": "Applicants who are aware of their bad credit history, including defaults or excessive inquiries, still submit applications to banks with stringent approval processes, hoping the risk control system will fail. Fraud rings often organize mass 'probing' attempts to identify weak points in a bank's defenses. A single success can trigger a wave of fraudulent applications.",
     "usageExample": "My credit is a bit rough. I tried my luck with two banks last month and got rejected instantly. Guess I need to clean up my credit first.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -40,7 +24,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

@@ -17,39 +17,10 @@
     "definition": "A fixed commission paid to participants upon completing marketing fraud tasks assigned by black-market operators.",
     "description": "In organized marketing fraud schemes such as coupon exploitation and proxy purchasing, operators offer a predetermined fixed return to incentivize participants. The payout amount is clearly stated in the task instructions, and participants receive the fixed return after completing required actions like placing orders, receiving goods, or filing compensation claims. This model is commonly used in proxy purchasing and claims groups to quickly settle costs and profits, enabling fraud rings to extract platform subsidies at scale.",
     "usageExample": "When a group task says 'fixed return 184,' it means that regardless of how much you actually pay upfront, you will get 184 back after completing the order according to the scheme.",
-    "relatedRisks": [
-      "R0003",
-      "R0005",
-      "R0070",
-      "R0009",
-      "R0055",
-      "R0064",
-      "R0068",
-      "R0068-002"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0059",
-      "A0061",
-      "A0044",
-      "A0043",
-      "A0027"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0002",
-      "TA0001",
-      "TA0001-001",
-      "TA0034"
-    ],
-    "relatedBusinessScenes": [
-      "BS02"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: E-commerce Scalper Industry Chain Analysis Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

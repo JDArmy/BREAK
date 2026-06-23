@@ -16,38 +16,10 @@
     "definition": "A term used internally by fraud rings to describe the tactic of building trust through deep emotional conversations in order to carry out a scam.",
     "description": "This is the core operational stage of “pig-butchering” scams. Operators pose as high-value romantic partners—such as wealthy, attractive singles—and use carefully scripted dialogues to engage targets in prolonged emotional exchanges. After establishing a romantic relationship through “intensive chatting,” they lure victims into fake investment platforms, gambling sites, or overpriced goods by claiming to have inside information or system loopholes. The entire process emphasizes emotional groundwork to maximize the amount stolen.",
     "usageExample": "His intensive chatting skills are impressive; he nurtured an account for a month and got that woman to mortgage her house.",
-    "relatedRisks": [
-      "R0150"
-    ],
-    "relatedAvoidances": [
-      "A0006-005",
-      "A0016",
-      "A0051",
-      "A0024",
-      "A0044",
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0061"
-    ],
-    "relatedAttackTools": [
-      "AT0053-001",
-      "AT0070"
-    ],
-    "relatedThreatActors": [
-      "TA0015",
-      "TA0008",
-      "TA0042"
-    ],
-    "relatedBusinessScenes": [
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

@@ -16,34 +16,6 @@
     "category": "Money Laundering",
     "definition": "Layering is a money laundering activity where individuals or groups use their own accounts to receive and forward illicit funds on behalf of criminal enterprises, taking a commission in the process.",
     "description": "Participants in layering, often referred to as 'money mules' or 'card mules,' provide their bank cards, payment QR codes, or third-party payment accounts to upstream criminals to receive proceeds from telecom fraud, online gambling, and other crimes. They then split and transfer the funds to other designated accounts as instructed, facilitating rapid dispersal. This act directly constitutes aiding and abetting criminal activity, exposing participants to frozen accounts and criminal liability.",
-    "relatedRisks": [
-      "R0060",
-      "R0093"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044",
-      "A0006-005",
-      "A0016-002",
-      "A0051",
-      "A0037",
-      "A0061"
-    ],
-    "relatedAttackTools": [
-      "AT0026",
-      "AT0039",
-      "AT0040"
-    ],
-    "relatedThreatActors": [
-      "TA0006-003",
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS01"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -51,7 +23,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

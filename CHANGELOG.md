@@ -1,5 +1,12 @@
 # Change log
 
+## 2.21.28
+
+- 增强 `i18n-sync --strict`，校验英文 i18n 不包含结构字段、关系字段、ID 数组、`updated` 和引用链接等结构数据
+- 清理英文 i18n 中误写的结构字段，保留中文 `src/BREAK/` 作为唯一结构和关系数据源
+- 将英文数据导出纳入 `npm run build`，确保英文合并产物随构建校验
+- 更新 `DATA_SCHEMA.md` 和升级计划，明确英文翻译字段白名单与校验边界
+
 ## 2.21.27
 
 - 新增 `ThreatActor.relatedThreatActors` 威胁行为者横向关系，按共同风险和共同攻击工具连接派生 top6

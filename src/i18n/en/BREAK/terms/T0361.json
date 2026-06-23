@@ -16,32 +16,6 @@
     "category": "Gambling",
     "definition": "In the gambling black market, a 'basket carrier' is a middleman who uses their network to facilitate the transfer of illicit funds and resolve external troubles for casinos or gambling syndicates.",
     "description": "This role typically does not involve direct gambling. Instead, the carrier leverages their 'background' to provide cover for the flow of gambling funds, moving cash, layered settlement money, or cryptocurrency from the bettor's side to the house's side, thereby evading risk controls and law enforcement. They are often connected to local power structures or insiders, acting as a dual insurance for both the money channel and relationship coordination. If the chain is compromised, the basket carrier becomes the key breakthrough point for cutting off the funds.",
-    "relatedRisks": [
-      "R0060",
-      "R0093",
-      "R0097"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0016",
-      "A0044",
-      "A0061",
-      "A0024",
-      "A0054"
-    ],
-    "relatedAttackTools": [
-      "AT0026"
-    ],
-    "relatedThreatActors": [
-      "TA0006-003",
-      "TA0014",
-      "TA0016"
-    ],
-    "relatedBusinessScenes": [
-      "BS06",
-      "BS15",
-      "BS01"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review"
@@ -49,7 +23,6 @@
       {
         "title": "Black Market Big Data: 2025 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

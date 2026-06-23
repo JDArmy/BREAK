@@ -17,27 +17,6 @@
     "definition": "A car financing arrangement where the vehicle is purchased through an installment loan but is not physically mortgaged to the lender, and the full set of ownership documents, including the motor vehicle registration certificate, is handed over to the buyer.",
     "description": "In auto loan fraud schemes, intermediaries exploit a client's credit profile to secure installment financing for a car. After the loan is disbursed, they deliberately skip the vehicle mortgage registration, leaving the car in a \"mortgage-free\" state. Once the buyer receives the green book and invoice, the vehicle can be freely disposed of, while the intermediary collects daily commissions. This tactic bypasses the lender's risk control loop and is frequently used for obtaining multiple loans on a single vehicle or for quick resale to cash out.",
     "usageExample": "Big credit lines or poor credit, based on client profile, mortgage or mortgage-free cars, remote system processing, settled every three days.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "【Credit Fraud】Unveiling the \"Mortgage-Free Car\" Fraud Tactic in the Auto Loan Fraud Chain"
@@ -48,7 +27,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

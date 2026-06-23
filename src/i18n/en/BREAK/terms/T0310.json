@@ -17,38 +17,6 @@
     "definition": "An aggregated QR code is a collection QR code that consolidates multiple payment methods, exploited by underground actors to obscure fund flows and increase tracing difficulty.",
     "description": "An aggregated code combines WeChat Pay, Alipay, UnionPay, and other payment options into a single QR code for user convenience. Criminals exploit this feature to have victims pay through different channels after scanning, thereby confusing the source and destination of funds. In laundering scenarios, aggregated codes are often used to collect small, multi-transaction illicit funds such as group-buying material to evade single-channel risk controls.",
     "usageExample": "Recruiting aggregated codes for small group-buying material, 28 points, single transaction 90–110, daily volume 1500–2000.",
-    "relatedRisks": [
-      "R0060",
-      "R0093",
-      "R0094"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044",
-      "A0006-005",
-      "A0016-002",
-      "A0051",
-      "A0037",
-      "A0050",
-      "A0035",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0026",
-      "AT0039",
-      "AT0040"
-    ],
-    "relatedThreatActors": [
-      "TA0014",
-      "TA0006-003"
-    ],
-    "relatedBusinessScenes": [
-      "BS01"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -56,7 +24,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

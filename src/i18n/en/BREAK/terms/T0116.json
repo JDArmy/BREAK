@@ -16,47 +16,10 @@
     "category": "Telecom Fraud",
     "definition": "A scam tactic that uses fake loans or investment schemes as bait to defraud victims who proactively reach out.",
     "description": "The fraud ring's 'angler' first posts fake loan or investment information via SMS or web ads, waiting for victims desperate for money or greedy for high returns to make contact. Once a victim 'takes the bait,' the 'fish cutter' who runs the operation sets up a series of traps, demanding repeated transfers under the guise of handling fees, security deposits, or unfreezing charges. This is the standard operating procedure for loan-based scams.",
-    "relatedRisks": [
-      "R0150",
-      "R0095",
-      "R0084",
-      "R0131"
-    ],
-    "relatedAvoidances": [
-      "A0006-005",
-      "A0016",
-      "A0051",
-      "A0024",
-      "A0044",
-      "A0007",
-      "A0016-003",
-      "A0021",
-      "A0016-002",
-      "A0037",
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054"
-    ],
-    "relatedAttackTools": [
-      "AT0053-001",
-      "AT0063",
-      "AT0071"
-    ],
-    "relatedThreatActors": [
-      "TA0015",
-      "TA0008",
-      "TA0043"
-    ],
-    "relatedBusinessScenes": [
-      "BS04",
-      "BS01"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

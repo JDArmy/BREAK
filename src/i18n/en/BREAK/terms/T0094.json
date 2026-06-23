@@ -15,30 +15,6 @@
     "category": "Data Leakage",
     "definition": "An individual or organization in the underground supply chain that purchases and uses leaked data for illegal activities.",
     "description": "The data buyer is the end consumer or secondary distributor in underground data trading. They purchase various types of data from material suppliers or data shops and convert it into actual criminal profit. Common downstream activities include financial fraud, bank card theft, social engineering attacks, or reselling the data. They are the direct executors of the harm caused by leaked data, turning the risk of information misuse into reality.",
-    "relatedRisks": [
-      "R0078",
-      "R0089"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049",
-      "A0024",
-      "A0054"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040"
-    ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -46,7 +22,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

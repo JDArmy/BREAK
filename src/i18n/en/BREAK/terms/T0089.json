@@ -15,38 +15,6 @@
     "category": "Data Leakage",
     "definition": "A service in which underground criminal groups illegally retrieve a target's complete personal dossier using a single piece of information, such as a phone number.",
     "description": "File retrieval is a core service in underground data trading. Criminals leverage insider access, system vulnerabilities, or previously breached databases to provide clients with detailed personal records. The service covers highly sensitive data, including identity information, bank card numbers, asset holdings, and hotel stay records. Typically charged per query, this service is a critical source of intelligence for downstream crimes such as fraud, extortion, and precision marketing.",
-    "relatedRisks": [
-      "R0092",
-      "R0078",
-      "R0089",
-      "R0109"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0007",
-      "A0016-003",
-      "A0024",
-      "A0021",
-      "A0049",
-      "A0054"
-    ],
-    "relatedAttackTools": [
-      "AT0012",
-      "AT0064"
-    ],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040",
-      "TA0018"
-    ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -54,7 +22,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

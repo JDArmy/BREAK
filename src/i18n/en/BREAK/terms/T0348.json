@@ -15,25 +15,6 @@
     "category": "Gambling",
     "definition": "Various commission calculation methods in gambling that describe the percentage the house takes from bets.",
     "description": "These terms define the house edge: 'Ban Dian' refers to a 5% commission, 'Shang Yi Jiu' to 10%, and 'Ban Yi Jiu' typically around 7.5%. Operators adjust these rates flexibly based on the game type or player status, with regulars sometimes receiving lower rates. This is a core mechanism for controlling profitability and attracting bettors.",
-    "relatedRisks": [
-      "R0097",
-      "R0060"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0016",
-      "A0044",
-      "A0061"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0016",
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS06",
-      "BS01"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review"
@@ -41,7 +22,6 @@
       {
         "title": "Black Market Big Data: 2025 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

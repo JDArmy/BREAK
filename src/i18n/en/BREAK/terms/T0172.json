@@ -17,29 +17,6 @@
     "definition": "A code name used in underground circles for an insider within a bank, implying they can provide authentic and reliable financial data.",
     "description": "'Counter' typically refers to a bribed or exploited bank employee who abuses their access to illegally query sensitive information such as customer accounts and transaction records. Underground actors use this term to tout the authority and timeliness of the data source to attract buyers. Such insider behavior directly undermines the credibility of financial institutions and is a critical link in financial fraud and money laundering.",
     "usageExample": "\"Counter, full range, results back on Sunday, prices are extremely low, hit me up for orders.\"",
-    "relatedRisks": [
-      "R0078"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049",
-      "A0024",
-      "A0054"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040"
-    ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -47,7 +24,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

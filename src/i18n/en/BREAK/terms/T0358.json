@@ -16,22 +16,6 @@
     "category": "Gambling",
     "definition": "A rebate or commission the casino gives to gamblers based on their wagering amount.",
     "description": "To retain high-rollers, casinos return a percentage of the total betting turnover as cash or chips. This rebate is usually settled daily; the more a gambler wagers, the higher the kickback, incentivizing them to keep betting. This mechanism creates an illusion of recovering losses, while in reality, it further amplifies the gambler's overall losses.",
-    "relatedRisks": [
-      "R0097"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0016",
-      "A0044",
-      "A0061"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0016"
-    ],
-    "relatedBusinessScenes": [
-      "BS06"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review"
@@ -39,7 +23,6 @@
       {
         "title": "Black Market Big Data: 2025 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

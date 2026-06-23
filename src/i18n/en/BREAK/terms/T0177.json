@@ -17,30 +17,6 @@
     "definition": "The practice of scraping personal data in bulk from fraudulent investment apps by black market actors.",
     "description": "Black market groups perform targeted data extraction on fake investment and financial scam apps to harvest victim identity information. These victims typically have active bank accounts, and the data, once cleaned and organized, is resold to downstream groups for money laundering activities such as fraudulent card cashing.",
     "usageExample": "\"Large batches of pyramid scheme and poverty relief leads available, scraped from investment scam apps. Serious buyers only! Scammers stay away!\"",
-    "relatedRisks": [
-      "R0027",
-      "R0078",
-      "R0089"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049",
-      "A0024",
-      "A0054"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040"
-    ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -48,7 +24,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

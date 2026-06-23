@@ -17,33 +17,6 @@
     "definition": "A corporate bank account opened in the name of a business, used by criminal actors to receive and circulate large volumes of illicit funds, acting as a high-capacity channel in money muling systems.",
     "description": "Compared to personal accounts, corporate accounts have higher single-transaction and daily cumulative transfer limits. A business background can also be used to fabricate trade flows to disguise the nature of the funds. Criminals acquire these accounts by purchasing shell companies or using fraudulently registered entities. After transferring large sums from fraud or gambling into the account, the money is split and moved out under the guise of payments for goods or services. Due to their large capacity and apparent compliance, they are often used as key nodes for laundering large sums, and any case involvement typically triggers a system-wide risk control upgrade for corporate accounts.",
     "usageExample": "Buying all banks' corporate accounts nationwide, even unused junk accounts, as long as the bank acceptance draft service is activated. Turn them into cash!!!",
-    "relatedRisks": [
-      "R0060",
-      "R0093",
-      "R0121"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044",
-      "A0061"
-    ],
-    "relatedAttackTools": [
-      "AT0026",
-      "AT0039",
-      "AT0040",
-      "AT0060"
-    ],
-    "relatedThreatActors": [
-      "TA0006-003",
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS15"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -51,7 +24,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

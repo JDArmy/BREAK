@@ -16,22 +16,6 @@
     "category": "Credit Fraud",
     "definition": "Slow-cooked enterprise refers to a scheme where fraud rings acquire and long-term package shell companies to defraud banks of large tax-invoice loans.",
     "description": "Fraud rings formally transfer the legal representative role of a shell company to a debt mule and wait out the bank's required 3-6 month change-of-ownership period. During this time, they fabricate business transaction records, invoicing, and tax payments to portray the company as a normally operating, high-quality client. This is done to bypass risk models and secure high-limit business loans, after which they default on the debt.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: Desperados in Financial Fraud"
@@ -42,7 +26,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

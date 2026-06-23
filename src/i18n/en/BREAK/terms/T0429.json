@@ -16,22 +16,6 @@
     "definition": "The portion of interest deducted upfront from the principal when a predatory loan is disbursed.",
     "description": "In illegal lending or underground banking operations, the lender does not disburse the full principal amount but directly deducts a large sum as interest, so the borrower actually receives far less than the contract amount. This practice conceals the true interest rate and traps the borrower in a debt cycle from the start. Upfront interest deductions are common in short-term cash loans and trap loans, serving as a means for fraud syndicates to quickly extract funds from borrowers, and often lead to violent debt collection and serial fraud.",
     "usageExample": "For this loan, a total of over 600 was deducted as upfront interest. The service fee was over a hundred. This was my last drawdown, and it’s been overdue for nearly ten years.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -39,7 +23,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

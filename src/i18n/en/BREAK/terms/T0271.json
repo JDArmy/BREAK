@@ -17,37 +17,10 @@
     "definition": "Cannon fodder account refers to a disposable account used to probe a platform's risk control rules or carry out high-risk operations.",
     "description": "These accounts serve as suicide squads for black-hat actors, performing sensitive actions like bulk following, mass messaging, or posting prohibited content. Once the account triggers a ban, the operator immediately activates a new cannon fodder account to continue the campaign, thereby protecting high-value main accounts from being implicated.",
     "usageExample": "Let's not leave a direct negative review. Get a cannon fodder account and use it to find some scam reviewers for him.",
-    "relatedRisks": [
-      "R0017",
-      "R0017-001",
-      "R0005"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061"
-    ],
-    "relatedAttackTools": [
-      "AT0044",
-      "AT0009",
-      "AT0016"
-    ],
-    "relatedThreatActors": [
-      "TA0009",
-      "TA0006",
-      "TA0007"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

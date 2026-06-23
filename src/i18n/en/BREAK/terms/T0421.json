@@ -17,22 +17,6 @@
     "definition": "A scheme where a large sum of money is temporarily deposited into an account to create a false impression of financial strength for loan fraud.",
     "description": "When applying for large loans, fraudsters bring in external funds to temporarily deposit a large sum into the borrower's account to demonstrate financial capability to the bank. Once the loan is approved and disbursed, these funds are quickly transferred out. This causes financial institutions to issue loans based on a false credit profile, leading to significant bad debt risk.",
     "usageExample": "Capital display and account padding services for projects, corporate capital increase and verification, pass-through transactions.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -40,7 +24,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

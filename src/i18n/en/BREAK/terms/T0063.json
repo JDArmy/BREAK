@@ -17,27 +17,6 @@
     "definition": "Describes a personal credit profile that has become extremely chaotic and poor due to frequent applications for online loans, as reflected in big data credit checks.",
     "description": "These users typically apply for loans on multiple platforms in a short period, leaving a trail of numerous credit inquiries and debt records. Fraud brokers view these 'credit-messed' users as potential clients, selling them services like 'big data cleanup' or 'forced loan approval.' In reality, this chaotic data state is very difficult to fix, and users often fall into a vicious cycle of taking out new loans to pay old ones.",
     "usageExample": "His credit is completely messed up now, so all legitimate platforms reject him. He can only go to shady brokers for a long shot, which just makes his credit worse until he's totally blacklisted.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -45,7 +24,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

@@ -17,27 +17,6 @@
     "definition": "The referring broker accompanies the client throughout the entire loan application process to supervise the operation and ensure a fair commission split.",
     "description": "In low-trust partnerships, the broker who provided the client will stay with them on-site to prevent being cut out of the deal. The supervising broker monitors the entire packaging, application, and disbursement process to guarantee they receive the agreed-upon percentage of the payout. This is common in cross-regional operations or between first-time collaborators.",
     "usageExample": "Full escort service. Five thousand upfront when you see the client, fifty thousand if the loan fails. A one-thousand good-faith deposit is required after sending the client's documents.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -45,7 +24,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

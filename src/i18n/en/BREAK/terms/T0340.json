@@ -17,36 +17,6 @@
     "definition": "In money laundering operations, quick-kill refers to a rapid attack method that completes fraud scripting and fund transfers within an extremely short window to evade victim detection and risk-control interception.",
     "description": "Criminal syndicates exploit real-time online loan application data or victim information to complete fraudulent calls, induce transfers, and split funds across multiple accounts within minutes. This model requires tight coordination between phone operators and money mules, and is typically executed late at night or during periods of weak platform risk controls. Once a quick-kill succeeds, the funds immediately enter the laundering pipeline. Victims often only realize something is wrong after the money has already been offloaded, making recovery extremely difficult.",
     "usageExample": "Selling real-time online loan application data, suitable for quick-kill/money muling. Looking for first-hand betting sites. Brokers stay away.",
-    "relatedRisks": [
-      "R0060",
-      "R0093"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0052",
-      "A0049",
-      "A0051",
-      "A0006-005",
-      "A0061"
-    ],
-    "relatedAttackTools": [
-      "AT0026",
-      "AT0039",
-      "AT0040"
-    ],
-    "relatedThreatActors": [
-      "TA0006-003",
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS01"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -54,7 +24,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

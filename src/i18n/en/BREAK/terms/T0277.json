@@ -15,54 +15,10 @@
     "category": "Business Fraud",
     "definition": "Metric inflation refers to the act of using fake accounts or automated scripts to fabricate false data metrics in bulk.",
     "description": "Fraud rings obtain large numbers of virtual numbers through SIM card vendor platforms and use botnet control software to generate likes, views, or comments for designated videos, live streams, or products. The goal is to deceive the platform's recommendation algorithm, create a false impression of popularity, and induce real users to follow trends or make purchases. This severely damages the platform's ecosystem and is often tied to fake review scams and counterfeit goods promotion.",
-    "relatedRisks": [
-      "R0016",
-      "R0189",
-      "R0030",
-      "R0030-001",
-      "R0017",
-      "R0017-001",
-      "R0005"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061",
-      "A0007",
-      "A0016-003",
-      "A0024",
-      "A0010",
-      "A0010-002",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0006",
-      "AT0044",
-      "AT0009",
-      "AT0016"
-    ],
-    "relatedThreatActors": [
-      "TA0003",
-      "TA0009",
-      "TA0006",
-      "TA0007"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS05",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

@@ -17,32 +17,6 @@
     "definition": "The process of cross-referencing illegally obtained personal data against existing databases to deduplicate and filter out fresh, usable records.",
     "description": "Operators maintain a massive historical database; newly acquired data must first be 'run through the database' to weed out expired, duplicate, or repeatedly resold records. Data that has been cleaned is referred to as 'fresh stock' and commands a higher price on the market, destined for use in precision scams or targeted marketing.",
     "usageExample": "\"New batch of material just in, already run through the database, all pure first-hand and unused. Anyone interested, step up.\"",
-    "relatedRisks": [
-      "R0078",
-      "R0089",
-      "R0092",
-      "R0109"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0012",
-      "AT0064"
-    ],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040",
-      "TA0018"
-    ],
-    "relatedBusinessScenes": [
-      "BS00"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -50,7 +24,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

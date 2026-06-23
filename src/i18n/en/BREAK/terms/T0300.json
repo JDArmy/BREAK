@@ -17,29 +17,6 @@
     "definition": "A fraud operator who uses scripted dialogues to manipulate victims into transferring money.",
     "description": "Keyboard operators typically impersonate specific identities, contacting targets through social platforms or dating apps. They follow a preset script to build trust or emotional relationships, ultimately guiding the victim to deposit funds on a fake platform or make a direct transfer. They are the link in the fraud chain that directly faces the victim, and the sophistication of their scripts directly impacts the success rate of the scam.",
     "usageExample": "Long-term cooperation with keyboard operators 👍 Top commission rate ⭐",
-    "relatedRisks": [
-      "R0060",
-      "R0093"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044",
-      "A0051",
-      "A0006-005"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0014",
-      "TA0015",
-      "TA0006-003"
-    ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -47,7 +24,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

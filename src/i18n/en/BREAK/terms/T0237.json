@@ -16,36 +16,10 @@
     "definition": "A guide that teaches how to maliciously report an account with no obvious violations and get it banned by exploiting loopholes in platform policies.",
     "description": "These tutorials typically break down weaknesses in moderation systems, such as triggering automatic penalties through mass complaints or fabricating violation screenshots. Users do not need advanced technical skills; by following the steps they can get a competitor’s shop, livestream, or channel taken down. Such guides circulate in underground groups via cloud links or documents and are a common tool for malicious competition and extortion.",
     "usageExample": "Want a free wwg tutorial for XX platform?",
-    "relatedRisks": [
-      "R0068",
-      "R0068-002"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061",
-      "A0006-005",
-      "A0016-002",
-      "A0051",
-      "A0037"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0022",
-      "TA0034"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS05",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

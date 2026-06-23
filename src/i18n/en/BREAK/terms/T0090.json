@@ -15,36 +15,6 @@
     "category": "Data Leakage",
     "definition": "An operation in which criminals restore full phone numbers from partially masked information on privacy-enhanced express delivery waybills.",
     "description": "Decryption services primarily serve telecom fraud rings and underground marketing operations, forming a critical link in the express information leakage chain. Operators illegally obtain waybill numbers and their corresponding virtual or masked phone numbers, then restore the full number using internal system access or cracking tools. Once obtained, the complete phone numbers are used for precision scams, advertising, or resale, directly violating user privacy.",
-    "relatedRisks": [
-      "R0092",
-      "R0078",
-      "R0089",
-      "R0109"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0007",
-      "A0016-003",
-      "A0024",
-      "A0021",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0012",
-      "AT0064"
-    ],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040",
-      "TA0018"
-    ],
-    "relatedBusinessScenes": [
-      "BS00"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -52,7 +22,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

@@ -17,34 +17,6 @@
     "definition": "Black and white funds refer to the underground classification of illicit money and ostensibly legitimate money.",
     "description": "Underground actors categorize money laundering funds into black funds and white funds. Black funds originate directly from criminal activities such as fraud and gambling, while white funds are those that have been layered through multiple cleaning stages to appear legitimate on the surface. Money laundering crews arrange different processing workflows based on the source of funds, with black funds requiring more intermediate steps to be converted into white funds. This classification helps underground actors assess the difficulty and cost of laundering and determines the commission rate charged by money-running teams.",
     "usageExample": "Team long-term accepts all black and white funds. Cards accepted, return in USDT, large volumes of USDT available long-term.",
-    "relatedRisks": [
-      "R0060",
-      "R0093",
-      "R0095",
-      "R0094"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044",
-      "A0061"
-    ],
-    "relatedAttackTools": [
-      "AT0026",
-      "AT0039",
-      "AT0040"
-    ],
-    "relatedThreatActors": [
-      "TA0006-003",
-      "TA0014",
-      "TA0015"
-    ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -52,7 +24,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

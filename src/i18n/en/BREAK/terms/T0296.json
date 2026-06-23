@@ -15,28 +15,6 @@
     "category": "Money Laundering",
     "definition": "A merchant account whose operator knowingly and actively colludes with criminal networks for money laundering.",
     "description": "Criminal groups control merchant accounts through rental, purchase, or profit-sharing arrangements to receive proceeds from fraud or gambling. Black merchants typically provide payment interfaces or collection QR codes, disguising illicit funds as legitimate business revenue, then completing the laundering process through withdrawals or transfers. This collaboration is a critical node in the laundering chain, characterized by a high degree of organization and posing significant challenges for law enforcement.",
-    "relatedRisks": [
-      "R0060",
-      "R0093"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044",
-      "A0061"
-    ],
-    "relatedAttackTools": [
-      "AT0039",
-      "AT0040"
-    ],
-    "relatedThreatActors": [
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS01"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2025 Internet Underground Economy Trend Annual Review"
@@ -47,7 +25,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

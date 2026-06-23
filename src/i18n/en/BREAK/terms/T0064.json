@@ -17,34 +17,6 @@
     "definition": "An illicit agency service that fraudulently profits under the guise of debt optimization, using methods like document forgery and malicious complaints.",
     "description": "Under the pretext of 'legal aid,' fraud rings offer agency services for debt relief, such as stopping interest accrual or negotiating installment plans. They pressure financial institutions by forging documents like poverty certificates or hospital records, and even instigate clients to default maliciously. This operation not only defrauds clients of high service fees but also exposes financial institutions to compliance risks, undermining the normal credit order.",
     "usageExample": "He paid a broker ten thousand for debt optimization, which just meant the broker forged fake hardship documents to negotiate with the bank. In the end, the bank called the police, and all his accounts were frozen.",
-    "relatedRisks": [
-      "R0096-001",
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044",
-      "A0038",
-      "A0060",
-      "A0016-001",
-      "A0004",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0029"
-    ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "Credit Fraud: Exposing the Underground Industry Behind Illegal Proxy Rights-Protection Schemes"
@@ -55,7 +27,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

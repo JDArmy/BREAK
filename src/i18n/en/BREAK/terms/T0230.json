@@ -17,40 +17,10 @@
     "definition": "Using technical means to bypass restrictions set by a platform or system, such as withdrawal limits, tier caps, or bans.",
     "description": "In marketing fraud, black and gray market actors exploit vulnerabilities or use custom tools to break through platform risk controls for greater profit. Examples include cracking withdrawal frequency limits, bypassing transaction caps, or lifting device bans, often combined with device spoofing and IP proxies. Operators may reverse-engineer app logic or purchase restriction-breaking services; while successful, this can sustain illicit cash flows, but once detected, the associated accounts and fund chains face retroactive crackdowns.",
     "usageExample": "Overseas card restriction bypass, stable payouts, ignores risk controls.",
-    "relatedRisks": [
-      "R0030",
-      "R0030-001",
-      "R0032"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061",
-      "A0010",
-      "A0010-002",
-      "A0038",
-      "A0016-001",
-      "A0004"
-    ],
-    "relatedAttackTools": [
-      "AT0003",
-      "AT0007",
-      "AT0021"
-    ],
-    "relatedThreatActors": [
-      "TA0007"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

@@ -16,32 +16,6 @@
     "category": "Money Laundering",
     "definition": "Card receiving is the act of directly using a bank card to receive and process illicit funds.",
     "description": "Card receiving is the most basic and direct form of layering. The operator provides their own bank card as a primary or secondary collection account, receiving funds from fraud or gambling operations, then transfers the money out through ATM withdrawals, over-the-counter cash-outs, or online transfers. Due to increasingly strict bank risk controls, such accounts are highly susceptible to rapid freezing, forcing criminal networks to constantly recruit new 'card mules' to supply fresh bank cards and maintain the funding chain.",
-    "relatedRisks": [
-      "R0060",
-      "R0093",
-      "R0094"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044",
-      "A0061"
-    ],
-    "relatedAttackTools": [
-      "AT0026",
-      "AT0039",
-      "AT0040"
-    ],
-    "relatedThreatActors": [
-      "TA0005-001",
-      "TA0006-003",
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS01"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -49,7 +23,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

@@ -16,36 +16,6 @@
     "category": "Data Leakage",
     "definition": "An illegal data lookup service that provides the real name associated with a phone number.",
     "description": "In underground data markets, 'Dian Bai' is a type of lookup service where buyers submit a target's phone number, and sellers use internal access or leaked databases to return the corresponding real name. This service is commonly used in telecom fraud for identity verification or precision marketing scams, enabling criminals to quickly identify targets for further fraud or data resale.",
-    "relatedRisks": [
-      "R0092",
-      "R0078",
-      "R0089",
-      "R0109"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0007",
-      "A0016-003",
-      "A0024",
-      "A0021",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0012",
-      "AT0064"
-    ],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040",
-      "TA0018"
-    ],
-    "relatedBusinessScenes": [
-      "BS00"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -53,7 +23,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

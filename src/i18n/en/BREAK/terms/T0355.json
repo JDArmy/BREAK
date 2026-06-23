@@ -16,29 +16,6 @@
     "category": "Gambling",
     "definition": "The process where casino staff count and settle the house's commission.",
     "description": "After each gambling session, the dealer or cashier gathers the house's cut from the tables, counts the cash or chips on the spot, verifies the accounts, and seals them for storage. Counting the house's commission is a critical internal control action that directly reflects the table's daily commission revenue and prevents staff from embezzling funds or causing discrepancies.",
-    "relatedRisks": [
-      "R0097",
-      "R0060"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0016",
-      "A0044",
-      "A0061",
-      "A0050",
-      "A0035",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0016",
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS06",
-      "BS01"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review"
@@ -46,7 +23,6 @@
       {
         "title": "Black Market Big Data: 2025 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

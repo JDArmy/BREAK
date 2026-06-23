@@ -17,38 +17,6 @@
     "definition": "A merchant QR code is a collection QR code opened under a business identity, offering higher transaction limits and greater stability, serving as a key channel for cleaning illicit funds.",
     "description": "Compared to personal codes, merchant codes have higher collection limits and more stable channels, capable of handling larger cash flows. Criminal rings register shell businesses or acquire existing merchants' codes to use as core collection tools. Due to high transaction volumes, these channels can trigger large-scale financial risks once used for money laundering and are a primary target for risk monitoring.",
     "usageExample": "Recruiting drivers, card runners, aggregated codes, merchant codes—all smooth channels come connect.",
-    "relatedRisks": [
-      "R0060",
-      "R0095",
-      "R0093",
-      "R0094"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044",
-      "A0006-005",
-      "A0016-002",
-      "A0051",
-      "A0037"
-    ],
-    "relatedAttackTools": [
-      "AT0026",
-      "AT0039",
-      "AT0040"
-    ],
-    "relatedThreatActors": [
-      "TA0014",
-      "TA0015",
-      "TA0006-003"
-    ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS02",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -56,7 +24,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

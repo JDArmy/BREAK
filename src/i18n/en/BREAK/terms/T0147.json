@@ -16,53 +16,10 @@
     "definition": "An unauthorized payment method that bypasses the need for a physical card, requiring only account details and a verification code.",
     "description": "Once a cardholder's number, name, ID, phone number, and SMS verification code are compromised, fraudsters can initiate a card-not-present transaction, circumventing the physical card and its PIN. This technique is common in the fund-draining phase following information theft via phishing sites or trojans. The transfer is swift, and victims often only realize something is wrong upon receiving a debit notification.",
     "usageExample": "He clicked a link and filled in his details, and then a card-not-present fraud happened. The money was drained in three transactions; he only knew when the bank's text alerts came through.",
-    "relatedRisks": [
-      "R0095",
-      "R0150",
-      "R0084",
-      "R0131",
-      "R0044",
-      "R0032",
-      "R0060"
-    ],
-    "relatedAvoidances": [
-      "A0007-001",
-      "A0006-005",
-      "A0016",
-      "A0051",
-      "A0024",
-      "A0044",
-      "A0007",
-      "A0016-003",
-      "A0021",
-      "A0016-002",
-      "A0037",
-      "A0054"
-    ],
-    "relatedAttackTools": [
-      "AT0053-001",
-      "AT0063",
-      "AT0071",
-      "AT0064",
-      "AT0066",
-      "AT0067",
-      "AT0053-002"
-    ],
-    "relatedThreatActors": [
-      "TA0015",
-      "TA0008",
-      "TA0043",
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS04",
-      "BS01"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

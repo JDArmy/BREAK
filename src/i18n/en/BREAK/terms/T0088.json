@@ -15,26 +15,6 @@
     "category": "Data Leakage",
     "definition": "In illicit data trading, refers to sensitive customer information illegally obtained from stock investment platforms or advisory firms, known in the black market as “stock advisory material.”",
     "description": "This data covers personal identities, transaction records, portfolio preferences, and contact details, often leaked by internal employees or obtained through system intrusions. Black-market actors resell stock advisory material to investment scam rings, illegal margin-trading platforms, or precision marketing agencies, who use it for fraudulent investment inducement, fake stock recommendations, or charging exorbitant service fees. Victims are easily misled into believing the scammers are legitimate advisors due to the precise matching of their personal investment profiles, ultimately resulting in financial loss.",
-    "relatedRisks": [
-      "R0078",
-      "R0089"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040"
-    ],
-    "relatedBusinessScenes": [
-      "BS00"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -42,7 +22,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

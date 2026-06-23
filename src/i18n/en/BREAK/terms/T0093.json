@@ -15,29 +15,6 @@
     "category": "Data Leakage",
     "definition": "A primary individual or organization in the underground supply chain that controls and sells first-hand leaked data in bulk.",
     "description": "The material supplier is the direct controller of the data breach source. They obtain fresh data through insider moles, hacking attacks, or vulnerability exploitation, then categorize and organize it. As the upstream source in underground trading, they wholesale data at high prices to downstream buyers, acting as the original supplier for various crimes like fraud and identity theft. They typically only handle the data supply and avoid direct involvement in end-user crimes to minimize their own risk.",
-    "relatedRisks": [
-      "R0072-001",
-      "R0111",
-      "R0078",
-      "R0089"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0024",
-      "TA0005",
-      "TA0040"
-    ],
-    "relatedBusinessScenes": [
-      "BS00"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -45,7 +22,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

@@ -17,31 +17,6 @@
     "definition": "In money laundering operations, offloading refers to the final-stage cash-out act of withdrawing, converting, or spending illicit funds from accounts that have already received them.",
     "description": "After fraudulent funds have been moved through multiple account layers, the final offloading stage is responsible for extracting the money completely. This is typically carried out by cash mules who withdraw cash at ATMs, purchase precious metals, or transfer funds into other controlled accounts. The operation demands speed and stealth, often with account monitors tracking account status in real time to prevent freezes. A successful offload closes the money-laundering loop, returning the funds to the criminal syndicate, and represents a critical node for disrupting money laundering.",
     "usageExample": "Recruiting runners: first- and second-tier card runners, dual-custody maintenance, large-scale mixing, and step-by-step maintenance all the way to offload.",
-    "relatedRisks": [
-      "R0060",
-      "R0093",
-      "R0095"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [
-      "AT0039",
-      "AT0040"
-    ],
-    "relatedThreatActors": [
-      "TA0014-001",
-      "TA0014",
-      "TA0015"
-    ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -49,7 +24,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

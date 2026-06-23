@@ -16,32 +16,6 @@
     "definition": "A lightweight, illicit social relationship query service that outputs only the names and national ID numbers of related individuals.",
     "description": "This is a downgraded version of a full correlation query, providing only basic identifiers without specific relationship types or address extensions. It is often used to quickly identify people around a target, for bulk matching, or as a starting point for further queries. Data brokers typically sell these records at a low price per entry, combining them with other lookup services to lower the cost barrier for buyers.",
     "usageExample": "\"Ten-year flight and border-crossing records, single hotel check-in records, co-check-in records, ghost records, and basic relationship queries.\"",
-    "relatedRisks": [
-      "R0092",
-      "R0078",
-      "R0089",
-      "R0109"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0012",
-      "AT0064"
-    ],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040",
-      "TA0018"
-    ],
-    "relatedBusinessScenes": [
-      "BS00"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -49,7 +23,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

@@ -17,22 +17,6 @@
     "definition": "A broker with active lending channels acquires loan-seeking clients from other brokers.",
     "description": "Brokers with reliable lending channels post 'client acquisition' notices to attract other intermediaries to supply them with applicants. The acquiring broker prices the client based on their credit profile and pays a commission to the referring broker upon successful loan disbursement. This creates an illicit profit chain where client data is repeatedly traded, making it highly susceptible to secondary fraud.",
     "usageExample": "ChengXin is acquiring clients. Twenty thousand upfront upon signing, plus a six percent internal rebate. No tricks, send your clients over.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -40,7 +24,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

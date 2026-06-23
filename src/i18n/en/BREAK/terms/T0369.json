@@ -17,27 +17,6 @@
     "definition": "Forcibly activating a loan service through illicit means, often involving theft of customer data or unauthorized deductions.",
     "description": "Fraudsters use stolen or leaked personal information to activate loan products on behalf of victims without their knowledge or consent, then deduct fees or interest upfront. Operators typically bypass risk controls using technical exploits or insider access to process applications in bulk. This practice leaves victims with unexpected debt and limited recourse for recovery.",
     "usageExample": "They got hold of a batch of personal data and forcibly opened loans on them. The victims only found out they were in debt when collection calls started coming in.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -45,7 +24,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

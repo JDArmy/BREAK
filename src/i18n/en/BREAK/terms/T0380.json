@@ -17,27 +17,6 @@
     "definition": "The time it takes to complete a full cycle of a fraudulent loan application, from fabrication to fund disbursement.",
     "description": "In the context of credit fraud, 'graduation' refers to the entire process, from packaging false documents and applying for a loan to the final successful disbursement of funds. Fraud rings often advertise their schemes with phrases like 'graduation in X days' to attract clients seeking quick cash or looking to default on debts. A shorter time indicates higher efficiency in the ring's fabrication capabilities and channel access, enabling faster fund extraction and risk transfer.",
     "usageExample": "Direct channel, highest commission settlement, graduation in 15 to 30 days, payout of 3 to 8 million, no direct clients, intermediaries only.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -45,7 +24,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

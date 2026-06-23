@@ -16,28 +16,6 @@
     "category": "Data Leakage",
     "definition": "Refurbished data refers to old data that has been processed and disguised as new data in illicit data trading.",
     "description": "Fraudsters repackage outdated data by supplementing it with fabricated information, altering timestamps, or deduplicating records. On the surface, this data appears fresh and valid, but the core information is stale, often leading to failed scams or blocked marketing efforts when used by buyers. Refurbished data is commonly used to deceive downstream buyers by passing off inferior goods as high-quality, reaping excessive profits.",
-    "relatedRisks": [
-      "R0016",
-      "R0189",
-      "R0078",
-      "R0089"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040"
-    ],
-    "relatedBusinessScenes": [
-      "BS00"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -45,7 +23,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

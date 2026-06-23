@@ -16,34 +16,6 @@
     "definition": "A payment QR code used in money laundering with an extremely high transaction success rate and almost no risk-control interference, regarded by fraud rings as a “stable” channel that won’t drop.",
     "description": "The core value of a smooth code lies in “no penalty stand”—meaning no risk-control pop-ups or blocks cause the transaction to fail after scanning. Fraud rings nurture accounts through simulated normal consumer behavior to keep the code “clean,” then deploy it in telecom fraud or money-muling to receive dirty money. These codes offer smooth flow and fast settlement, significantly reducing the risk of victim suspicion and platform intervention, which is why they command higher prices and the strongest demand.",
     "usageExample": "Recruiting vehicles, any smooth code vehicle, truck, high volume no penalty stand—no empty runs.",
-    "relatedRisks": [
-      "R0060",
-      "R0093"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044",
-      "A0006-005",
-      "A0016-002",
-      "A0051",
-      "A0037",
-      "A0059",
-      "A0021",
-      "A0061"
-    ],
-    "relatedAttackTools": [
-      "AT0026"
-    ],
-    "relatedThreatActors": [
-      "TA0006-003",
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS01"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -51,7 +23,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

@@ -15,24 +15,6 @@
     "category": "Credit Fraud",
     "definition": "Slang term used in underground circles for ten thousand yuan in cash.",
     "description": "In cash-intensive underground transactions, money muling, or debt assumption settlements, fraud operators often use “brick” to refer to ten thousand yuan in cash, as a bank-strapped bundle of hundred-yuan notes resembles a brick. This jargon facilitates discreet communication about sums of money without explicitly mentioning the amount. The movement of large numbers of “bricks” typically involves offline cash handovers, gambling fund transfers, or illegal fund splitting, and is a hallmark of money laundering and illegal settlement.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044",
-      "A0024",
-      "A0016"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -40,7 +22,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

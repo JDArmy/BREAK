@@ -15,40 +15,10 @@
     "definition": "An underground organization on live-streaming platforms that specializes in buying users' virtual gifts at a low price, functionally identical to a 'supermarket.'",
     "description": "This type of gray-market channel is often promoted under code names like 'cake shop' in private communities, offering cash-out services for users holding virtual gifts. They profit by buying low and reselling high to clients who need to boost their ranking, facilitating the illegal circulation of virtual assets. This behavior undermines the platform's live-streaming ecosystem and may involve money laundering risks.",
     "usageExample": "Don't randomly add those cake shop contacts on WeChat from live-streaming rooms; they offer extremely low prices for gifts.",
-    "relatedRisks": [
-      "R0094",
-      "R0138",
-      "R0121"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061",
-      "A0024",
-      "A0016",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [
-      "AT0067",
-      "AT0039"
-    ],
-    "relatedThreatActors": [
-      "TA0039",
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS05",
-      "BS15"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

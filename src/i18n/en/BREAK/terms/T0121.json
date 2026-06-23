@@ -16,35 +16,10 @@
     "definition": "A collective term used by fraud rings to refer to potential victims—individuals with low vigilance who are easily lured into scams.",
     "description": "Fraudsters liken the process of finding victims to fishing, calling target selection “choosing the fish.” Using illegally obtained contact lists or mass messaging, they identify people who are credulous and lack defensive awareness. Once someone responds, they are marked as a “hooked fish” and moved into the next stage of the fraud pipeline.",
     "usageExample": "That group blasted 20,000 messages last night and hooked over 30 fish in a single evening.",
-    "relatedRisks": [
-      "R0095",
-      "R0150"
-    ],
-    "relatedAvoidances": [
-      "A0006-005",
-      "A0016",
-      "A0051",
-      "A0024",
-      "A0044",
-      "A0007",
-      "A0016-003",
-      "A0021"
-    ],
-    "relatedAttackTools": [
-      "AT0053-001"
-    ],
-    "relatedThreatActors": [
-      "TA0015",
-      "TA0008"
-    ],
-    "relatedBusinessScenes": [
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

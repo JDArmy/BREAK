@@ -16,28 +16,6 @@
     "definition": "A person blacklisted by financial institutions due to severe adverse credit history, rendering them ineligible for any legitimate loan channel.",
     "description": "These individuals typically have records of delinquency or default. Because fund flows through their accounts are hard to trace, their identities and accounts are frequently purchased or rented by fraud rings as money-laundering conduits. Rings also use blacklisted individuals’ personal information to conduct credential-stuffing attacks across multiple platforms, testing whether they can fraudulently apply for loans or credit products in the victim’s name. If successful, all resulting debt and liability fall on the original identity holder.",
     "usageExample": "That identity is completely blacklisted now—no legitimate path works. It can only be used for running money.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049",
-      "A0024"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -45,7 +23,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

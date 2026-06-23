@@ -17,41 +17,10 @@
     "definition": "Participating in online promotional campaigns to collect small rewards, often scaled up by black and gray market actors for profit.",
     "description": "Organized 'wool-pulling' groups use fake accounts and script tools to mass-participate in platform activities such as new-user acquisition, check-ins, and red-envelope events to extract cash or coupons. Operators register large numbers of accounts via SMS verification platforms and use automated scripts to complete tasks like browsing and ordering, aggregating small rewards into substantial gains. This behavior drains platform marketing budgets, deprives legitimate users of benefits, and can force platforms to tighten fraud controls.",
     "usageExample": "What's the project? Just got here and already seeing wool-pulling, count me in.",
-    "relatedRisks": [
-      "R0005",
-      "R0009",
-      "R0055",
-      "R0064",
-      "R0030",
-      "R0030-001"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061",
-      "A0007",
-      "A0016-003",
-      "A0024"
-    ],
-    "relatedAttackTools": [
-      "AT0023",
-      "AT0006"
-    ],
-    "relatedThreatActors": [
-      "TA0001",
-      "TA0001-001",
-      "TA0003"
-    ],
-    "relatedBusinessScenes": [
-      "BS02"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

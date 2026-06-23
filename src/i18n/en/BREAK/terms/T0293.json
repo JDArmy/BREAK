@@ -17,36 +17,6 @@
     "definition": "The act by which fraud syndicates distribute illicit funds to downstream actors for laundering.",
     "description": "Fund distribution is the upstream stage of the laundering chain, where fraud groups hand over proceeds from telecom scams, gambling, and other illegal activities to money mule teams or laundering intermediaries. Downstream, the funds are laundered through split transfers, cryptocurrency purchases, or the use of merchant accounts. Distributors typically do not directly participate in the cleaning process but profit through commissions, shifting the risk to the operational layer.",
     "usageExample": "Long-term fund distribution: Ponzi scheme",
-    "relatedRisks": [
-      "R0060",
-      "R0093",
-      "R0095"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0052",
-      "A0049",
-      "A0061"
-    ],
-    "relatedAttackTools": [
-      "AT0026"
-    ],
-    "relatedThreatActors": [
-      "TA0006-003",
-      "TA0014",
-      "TA0015"
-    ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS15",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -54,7 +24,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

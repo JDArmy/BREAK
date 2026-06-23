@@ -17,22 +17,6 @@
     "definition": "A period when a bank temporarily relaxes its credit approval standards, making it easier to get a loan or credit card approved.",
     "description": "A loosening window is usually triggered by business pressure, policy adjustments, or system loopholes, and manifests as lower credit requirements, higher tolerance, or simplified processes. Underground intermediaries quickly detect such signals and organize bulk applications to defraud credit funds en masse. These windows are often short-lived, prompting agents to urge clients to act fast.",
     "usageExample": "Inside info—XX Bank is loosening big time these next two days, ignoring inquiry counts. Get in quick before it closes.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -40,7 +24,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

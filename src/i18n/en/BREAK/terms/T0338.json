@@ -17,31 +17,6 @@
     "definition": "In money laundering operations, card-and-PIN write-off refers to the act of binding illegally obtained electronic card numbers and PINs to accounts or consuming them to realize virtual assets.",
     "description": "After purchasing electronic cards with fraudulent funds, downstream card-and-PIN write-off agents bind the card credentials to designated apps or platform accounts, converting them into usable balances or services. This process often involves e-commerce cards, gaming top-up cards, prepaid cards, and other virtual vouchers. Tasks are distributed through instant messaging groups or darknet postings seeking card-and-PIN recyclers. The practice transforms illicit proceeds into virtual assets that are difficult to trace, representing a common cleansing stage in money-muling and money-laundering schemes.",
     "usageExample": "Anyone who can buy shopping cards, come through. Shopping card-and-PIN write-off: you get 650 per recycled card.",
-    "relatedRisks": [
-      "R0060",
-      "R0093"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [
-      "AT0026",
-      "AT0039",
-      "AT0040"
-    ],
-    "relatedThreatActors": [
-      "TA0006-003",
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS02",
-      "BS06"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -49,7 +24,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

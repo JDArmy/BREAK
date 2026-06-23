@@ -17,32 +17,10 @@
     "category": "Marketing Fraud",
     "definition": "A situation where coupon hunters, while participating in promotions or exploiting loopholes, fail to recover their costs and incur a loss due to market downturns or operational errors.",
     "description": "For example, the market price of hoarded physical goods plummets, or risk control triggers lead to frozen accounts and funds. This phenomenon of being 'fleeced by the platform instead' often occurs when black market groups miscalculate a promotion's value or encounter merchant order cancellations, serving as a self-deprecating term for a failed arbitrage attempt.",
-    "relatedRisks": [
-      "R0009",
-      "R0055",
-      "R0064",
-      "R0005"
-    ],
-    "relatedAvoidances": [
-      "A0020-003",
-      "A0015",
-      "A0059",
-      "A0061",
-      "A0044"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0001",
-      "TA0001-001"
-    ],
-    "relatedBusinessScenes": [
-      "BS02"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: E-commerce Scalper Industry Chain Analysis Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

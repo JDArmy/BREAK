@@ -17,32 +17,6 @@
     "definition": "In money laundering operations, points refer to the commission rate taken proportionally by each participant at various stages of the laundering process for profit distribution.",
     "description": "Within the money-mule laundering chain, every tier from the first layer to the offload stage takes a commission at an agreed point rate, typically ranging from 1% to 5% of the total flow. The rate depends on account quality, risk level, and fund volume. Criminal groups often post recruitment ads in formats like points 57+ to attract collaborators. The point-based allocation mechanism is the core profit bond that sustains the laundering network and a central focus of internal negotiation among criminal actors.",
     "usageExample": "Recruiting first-tier large-scale mixing card-to-crypto runners: exchange rate 20+, points 57+, full maintenance through offload.",
-    "relatedRisks": [
-      "R0060",
-      "R0093",
-      "R0095"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [
-      "AT0026",
-      "AT0039",
-      "AT0040"
-    ],
-    "relatedThreatActors": [
-      "TA0006-003",
-      "TA0014",
-      "TA0015"
-    ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -50,7 +24,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

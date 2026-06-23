@@ -16,26 +16,6 @@
     "category": "Data Leakage",
     "definition": "Aged data refers to data that attackers deliberately delay selling for a period after exfiltrating it, in illicit data trading.",
     "description": "To evade risk tracking or wait for the heat to die down, attackers hoard freshly stolen data for a while before releasing it onto the black market. This delayed transaction severely lags the discovery of and response to the data breach, causing victims to suffer ongoing losses often without their knowledge. Aged data is frequently used for highly targeted scams and is favored by underground actors for its strong stealth.",
-    "relatedRisks": [
-      "R0078",
-      "R0089"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040"
-    ],
-    "relatedBusinessScenes": [
-      "BS00"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -43,7 +23,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

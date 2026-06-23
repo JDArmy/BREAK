@@ -16,27 +16,6 @@
     "category": "Credit Fraud",
     "definition": "A fraudulent loan scheme that exploits individuals with good credit history to act as debt bearers for the actual borrower.",
     "description": "Fraud rings target person A, who is desperate for cash but has poor credit, and lure them into recruiting person B, who has a clean credit profile, to act as a guarantor or nominal borrower. Intermediaries then fabricate documentation to help B secure a loan. The funds are used by A, but the debt and legal liability fall entirely on B. Ultimately, A and the intermediaries split the loan proceeds and disappear, leaving B saddled with massive debt under unknowing or coerced circumstances, often triggering severe social and financial risks.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -44,7 +23,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

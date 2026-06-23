@@ -18,35 +18,10 @@
     "definition": "A tactic used by fraud rings during major e-commerce sales events in which they place bulk orders programmatically without completing payment to tie up inventory or promotional slots.",
     "description": "After identifying pricing errors or high-value coupons, fraud rings use automated tools to instantly generate a large volume of pending orders that lock up the available stock. The intent is to hoard goods for resale at a higher price or to hold them for arbitrage, preventing both the merchant from selling normally and other consumers from making purchases.",
     "usageExample": "Don’t rush to pay—first lock down all the low-priced inventory with orders; once the price rebounds, we can flip the order slots for a profit.",
-    "relatedRisks": [
-      "R0014",
-      "R0003",
-      "R0005",
-      "R0070"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0059",
-      "A0061",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0002"
-    ],
-    "relatedBusinessScenes": [
-      "BS02"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: E-commerce Scalper Industry Chain Analysis Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

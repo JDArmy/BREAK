@@ -17,41 +17,6 @@
     "definition": "An illegal lookup service that reverse-queries a software account's QR code to retrieve the associated phone number.",
     "description": "In illegal data trading, 'Code Reverse' is a service where fraudsters provide a target account's QR code, and sellers use technical means or internal interfaces to trace the bound phone number. This service is commonly used for identity mining after social media account takeover or to provide contact leads for precision scams.",
     "usageExample": "Accepting code reverse orders, all reverse queries accepted, high efficiency and speed, no tricks.",
-    "relatedRisks": [
-      "R0092",
-      "R0078",
-      "R0089",
-      "R0109"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0007",
-      "A0016-003",
-      "A0024",
-      "A0021",
-      "A0006-005",
-      "A0016-002",
-      "A0051",
-      "A0037",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0012",
-      "AT0064"
-    ],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040",
-      "TA0018"
-    ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -59,7 +24,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

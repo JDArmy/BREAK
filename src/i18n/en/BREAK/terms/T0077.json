@@ -16,26 +16,6 @@
     "category": "Data Leakage",
     "definition": "In illicit data trading, refers to raw, leaked data that has not been cleaned, filtered, or categorized.",
     "description": "This data typically contains a large amount of redundant, duplicate, or invalid information, making direct use highly inefficient. Data brokers or technical groups in the underground economy purchase this raw data, clean and process it through methods like credential stuffing and cross-referencing, extract valid fields, and then resell it at a markup to downstream fraud or marketing teams.",
-    "relatedRisks": [
-      "R0078",
-      "R0089"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040"
-    ],
-    "relatedBusinessScenes": [
-      "BS00"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -43,7 +23,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

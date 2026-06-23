@@ -16,22 +16,6 @@
     "definition": "Illegal high-interest loans targeting individuals with severely damaged credit histories or no credit records at all.",
     "description": "These loans are operated by unregulated lenders who exploit borrowers’ inability to access formal financing, profiting through exorbitant interest rates and harsh terms. Commonly found on underground online lending platforms or among private lending rings, borrowers face violent debt collection or rapidly compounding debt once they fall behind on payments.",
     "usageExample": "Black-credit loans—everyone who gets rejected elsewhere is guaranteed approval here. We don’t check liabilities, court lawsuits, court enforcement actions, or current delinquencies. All can be processed.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -39,7 +23,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

@@ -14,28 +14,6 @@
     "definition": "A short-term illegal high-interest loan secured by handing over control of a mobile device account.",
     "description": "Borrowers are required to surrender access to their Apple ID or Android account, giving the lender leverage to enforce repayment. Upon default, the lender locks the device or extracts private data. With extremely short cycles and sky-high interest, this loan targets people in urgent need of cash who lack other collateral, and is commonly circulated through social media and underground lending channels.",
     "usageExample": "For black-credit applicants, we require at least an iPhone 12 Pro or higher. First-time ID loan: 1,800 approved, 1,200 in hand, repayment due in one week.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS04",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -43,7 +21,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

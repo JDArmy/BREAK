@@ -15,31 +15,6 @@
     "category": "Data Leakage",
     "definition": "In illicit data trading, refers to user personal information packages illegally obtained from dating or matchmaking platforms, internally called “dating material.”",
     "description": "Dating material typically includes personal profiles, contact details, photos, and dating preferences, often leaked by insiders or harvested via web scraping. Black-market actors categorize and sell this data by age, location, and asset status to marketing gangs or fraud rings. Downstream buyers frequently use it to carry out “pig-butchering” scams, emotional manipulation, or targeted matchmaking service promotions, exploiting the data’s high authenticity to lower victims’ defenses.",
-    "relatedRisks": [
-      "R0078",
-      "R0089"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049",
-      "A0051",
-      "A0006-005"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040"
-    ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS04",
-      "BS01",
-      "BS02"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -47,7 +22,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

@@ -16,29 +16,6 @@
     "definition": "A money-laundering method in which the payee presents a QR code and the payer scans it to pay directly, emphasizing direct fund transfer without intermediate redirects.",
     "description": "Direct scanning skips steps like entering the amount or confirming the transfer—the payer scans and pays instantly, perfectly suiting fraud rings’ “fast in, fast out” needs. Money-muling crews use direct-scan codes to receive scam proceeds or gambling funds, with money arriving in the designated account almost in real time before being quickly moved or spent. This method demands high code quality; once a code is flagged, direct scanning fails instantly, so fraud rings constantly seek “fresh” direct-scan codes to keep the channel open.",
     "usageExample": "Today’s logistics direct-scan amount, 10,246, send orders, send orders!!!!",
-    "relatedRisks": [
-      "R0060",
-      "R0093"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [
-      "AT0026",
-      "AT0039",
-      "AT0040"
-    ],
-    "relatedThreatActors": [
-      "TA0006-003",
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS01"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -46,7 +23,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

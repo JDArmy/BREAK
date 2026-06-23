@@ -17,48 +17,10 @@
     "definition": "Jieliu is a malicious traffic hijacking tactic that uses technical or content-based methods to intercept a competitor's traffic and forcibly redirect users to one's own platform.",
     "description": "Fraud operators often employ keyword hijacking, malicious pop-ups, or cloned landing pages to divert users while they are trying to access legitimate channels. This technique is widely used in e-commerce brushing and gambling promotion to directly steal a competitor's customer resources and cause financial losses.",
     "usageExample": "Selling ** jieliu investor leads, with proof of traffic videos and settlement records. Looking for partners who can settle daily.",
-    "relatedRisks": [
-      "R0007-002",
-      "R0142",
-      "R0017",
-      "R0017-001",
-      "R0005",
-      "R0024",
-      "R0007-003"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061",
-      "A0006-005",
-      "A0016-002",
-      "A0051",
-      "A0037"
-    ],
-    "relatedAttackTools": [
-      "AT0044",
-      "AT0009",
-      "AT0016",
-      "AT0005",
-      "AT0050"
-    ],
-    "relatedThreatActors": [
-      "TA0009",
-      "TA0006",
-      "TA0007",
-      "TA0013"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

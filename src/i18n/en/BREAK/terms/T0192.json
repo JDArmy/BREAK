@@ -16,37 +16,6 @@
     "definition": "An illegal lookup service that queries the carrier and geographic location associated with a phone number.",
     "description": "In illegal data trading, 'Phone Location' is a service where fraudsters input a phone number to obtain its carrier and registered location. This service is commonly used to pinpoint targets, analyze their activity range, or provide geographic context for telecom fraud and marketing harassment.",
     "usageExample": "Can filter by region, phone location, contact for real-name verification orders.",
-    "relatedRisks": [
-      "R0092",
-      "R0078",
-      "R0089",
-      "R0109"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0007",
-      "A0016-003",
-      "A0024",
-      "A0021",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0012",
-      "AT0064"
-    ],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040",
-      "TA0018"
-    ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS02"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -54,7 +23,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

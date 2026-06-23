@@ -16,36 +16,6 @@
     "definition": "A payment QR code used in money laundering operations to receive single transactions of 2,000 yuan or more, serving as a dedicated tool for handling high-value illicit funds.",
     "description": "Fraud rings treat high-value codes as core channels for volume-based laundering—the larger the single transaction, the faster illicit funds can be pooled and moved. These codes are typically supplied by recruited “code merchants” and linked to upstream crimes such as telecom fraud and gambling. By processing frequent, high-value transactions, dirty money is broken up and recirculated. Although these codes are highly prone to triggering freezes once flagged by risk controls, their laundering efficiency keeps them in high demand across money-muling chains.",
     "usageExample": "Long-term recruitment for vehicles, high-value code vehicles, high volume no worries.",
-    "relatedRisks": [
-      "R0060",
-      "R0093"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044",
-      "A0038",
-      "A0060",
-      "A0016-001",
-      "A0004",
-      "A0006-005",
-      "A0016-002",
-      "A0051",
-      "A0037",
-      "A0061"
-    ],
-    "relatedAttackTools": [
-      "AT0026"
-    ],
-    "relatedThreatActors": [
-      "TA0006-003",
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS01"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -53,7 +23,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

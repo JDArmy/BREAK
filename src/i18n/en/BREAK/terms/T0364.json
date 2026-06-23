@@ -16,22 +16,6 @@
     "category": "Gambling",
     "definition": "In gambling-related black market operations, 'rocker' refers to the top-level boss who controls the entire casino operation, managing funds and personnel.",
     "description": "The 'rocker' typically does not directly participate at the tables but orchestrates operations from behind the scenes, overseeing venue rental, personnel recruitment, fund pool management, and peripheral security to ensure the gambling sessions run continuously. They form a vertical management chain with roles like the 'basket carrier' and 'table manager.' When trouble arises, they are often the first to cut off contact and move assets. In online casinos, the 'rocker' may act as the platform administrator, remotely controlling odds, suspending bets, and centralizing funds.",
-    "relatedRisks": [
-      "R0097"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0016",
-      "A0044",
-      "A0061"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0016"
-    ],
-    "relatedBusinessScenes": [
-      "BS06"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review"
@@ -39,7 +23,6 @@
       {
         "title": "Black Market Big Data: 2025 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

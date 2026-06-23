@@ -16,22 +16,6 @@
     "definition": "An individual whose credit report shows a high volume of hard inquiries due to frequent applications for credit cards or loans.",
     "description": "Because they have applied for multiple credit products in a short period, financial institutions view these individuals as higher-risk—either cash-strapped or exhibiting poor credit management. In underground lending contexts, such profiles are often targeted for “debt restructuring”: a fraud ring pays off their existing debts to temporarily clean their credit report, then immediately helps them apply for a batch of higher-limit loans. The victim ends up with a far heavier debt burden while the ring collects exorbitant service fees.",
     "usageExample": "His credit report is full of inquiries—a classic over-inquired profile. No mainstream bank will approve him now.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -39,7 +23,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

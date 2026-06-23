@@ -16,54 +16,10 @@
     "definition": "A homophonic slang term for “materials” used in fraud circles, referring to personal information, account credentials, and other assets used for registration, verification, or scams.",
     "description": "To evade platform keyword filters, fraudsters use this homophone in chats and trading posts. Materials include front-and-back ID photos, selfie-with-ID images, bank card numbers, and phone numbers—the raw ingredients for bulk account registration and nurturing. Materials are often sold in sets, with freshness and match quality directly determining the price.",
     "usageExample": "Want to make 5000 a day? Check the group in my materials.",
-    "relatedRisks": [
-      "R0034",
-      "R0017",
-      "R0017-001",
-      "R0005",
-      "R0024",
-      "R0007-003"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061",
-      "A0007",
-      "A0016-003",
-      "A0024",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [
-      "AT0044",
-      "AT0009",
-      "AT0016",
-      "AT0005",
-      "AT0050"
-    ],
-    "relatedThreatActors": [
-      "TA0009",
-      "TA0006",
-      "TA0007",
-      "TA0013"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS01",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

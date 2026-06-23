@@ -16,31 +16,6 @@
     "category": "Data Leakage",
     "definition": "In illicit data trading, refers to leaked detailed records from express delivery logistics.",
     "description": "These records contain the recipient's name, phone number, address, and purchased item details, serving as a crucial information source for targeted marketing and fraud within the underground economy. This data is typically leaked by insiders at courier companies or through system vulnerabilities, sold in bulk by data brokers, and used for brushing, telecom fraud, or selling counterfeit goods.",
-    "relatedRisks": [
-      "R0078",
-      "R0089"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0015",
-      "A0059",
-      "A0021",
-      "A0061",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040"
-    ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS02"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -48,7 +23,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

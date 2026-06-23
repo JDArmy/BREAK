@@ -16,32 +16,6 @@
     "definition": "A complete set of loan applicant documents leaked from online lending platforms, including ID cards, bank cards, and credit reports.",
     "description": "This data is leaked internally from loan facilitation platforms or financial institutions, classified by credit rating by underground brokers, and sold at a premium. Downstream fraud rings purchase it to impersonate platform customer service and conduct secondary scams under the guise of 'unfreezing fees' or 'security deposits.' The detailed loan information makes these scams highly deceptive.",
     "usageExample": "\"Various loan application data, welcome to inquire\"",
-    "relatedRisks": [
-      "R0078",
-      "R0089"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049",
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0024"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040"
-    ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -49,7 +23,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

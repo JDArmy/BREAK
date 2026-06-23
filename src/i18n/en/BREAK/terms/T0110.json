@@ -15,33 +15,10 @@
     "category": "Telecom Fraud",
     "definition": "A state of mind-control achieved through long-term cultivation of an emotional or trust-based relationship, causing the victim to completely lower their guard and become dependent on the fraudster.",
     "description": "Through meticulously planned, long-term communication, the fraudster makes the victim emotionally or financially subservient. A victim in this 'drunk bird' state loses their basic judgment and follows the fraudster's instructions without question. This deep level of brainwashing means the victim not only fails to resist but may even actively assist the fraudster.",
-    "relatedRisks": [
-      "R0150",
-      "R0095"
-    ],
-    "relatedAvoidances": [
-      "A0006-005",
-      "A0016",
-      "A0051",
-      "A0024",
-      "A0044"
-    ],
-    "relatedAttackTools": [
-      "AT0053-001"
-    ],
-    "relatedThreatActors": [
-      "TA0039",
-      "TA0015",
-      "TA0008"
-    ],
-    "relatedBusinessScenes": [
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

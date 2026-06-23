@@ -16,36 +16,10 @@
     "definition": "Converting non-cash assets such as platform coupons, red packets, or loyalty points into cash through fake transactions or abuse of promotional rules.",
     "description": "Commonly seen in e-commerce subsidies and cashback campaigns, fraud rings use batches of fake accounts and sham orders to generate artificial transaction volume and drain platform subsidies. The operation chain typically involves card sellers, click workers, and money-mule networks, with profits split after liquidation. If risk controls lag, a single campaign can be drained of hundreds of thousands or even millions in funds.",
     "usageExample": "Quick credit card cash-out guide, simple and efficient ⚡ Instant payout available.",
-    "relatedRisks": [
-      "R0017-001",
-      "R0094",
-      "R0138",
-      "R0121"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061"
-    ],
-    "relatedAttackTools": [
-      "AT0067",
-      "AT0039"
-    ],
-    "relatedThreatActors": [
-      "TA0039",
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS15"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

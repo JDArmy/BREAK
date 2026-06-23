@@ -15,29 +15,6 @@
     "category": "Data Leakage",
     "definition": "Refers to user data from micro-lending platforms with extremely low application thresholds and simple approval processes, illegally traded as 'Rongdan material' in underground markets.",
     "description": "These platforms typically lack strict risk controls, attracting a large number of borrowers in urgent need of cash. After obtaining user information from these platforms, black-market actors package and resell it as 'Rongdan material.' Downstream buyers use this data to conduct targeted scams or secondary marketing. Due to the high authenticity of the data, the potential harm is significant.",
-    "relatedRisks": [
-      "R0078",
-      "R0089"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040"
-    ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01",
-      "BS02",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
@@ -45,7 +22,6 @@
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

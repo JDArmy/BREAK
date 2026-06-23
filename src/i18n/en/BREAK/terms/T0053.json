@@ -16,28 +16,6 @@
     "category": "Credit Fraud",
     "definition": "Internal kickback refers to the commission paid to internal employees or intermediaries who facilitate fraudulent loans.",
     "description": "In the loan fraud chain, internal kickbacks are the illicit payments that motivate bank insiders or loan brokers to violate procedures. To secure these high commissions, they actively help fraud rings fabricate application materials, relax review standards, or even directly use their internal access to approve high-risk applications, leading to significant bad debt.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS02",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -45,7 +23,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

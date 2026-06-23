@@ -16,31 +16,10 @@
     "category": "Marketing Fraud",
     "definition": "A target or single illicit gain with an exceptionally high profit margin and value in black market activities.",
     "description": "Within coupon hunter or hacker circles, 'big meat' signifies the discovery of a severe platform vulnerability or a high-value, no-strings-attached promotion that the group can exploit for a massive, one-time profit. Such targets often involve financial payment loopholes or large-sum discount events, and a successful breach can cause catastrophic financial damage to the targeted enterprise.",
-    "relatedRisks": [
-      "R0009",
-      "R0055",
-      "R0064",
-      "R0005"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0059",
-      "A0061",
-      "A0044"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0001",
-      "TA0001-001"
-    ],
-    "relatedBusinessScenes": [
-      "BS02"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: E-commerce Scalper Industry Chain Analysis Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

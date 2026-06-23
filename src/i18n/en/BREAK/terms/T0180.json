@@ -17,33 +17,6 @@
     "definition": "High-resolution photos or scans of the front and back of a citizen's ID card, containing core identity information like name, address, and ID number.",
     "description": "A black market term for acquired high-resolution images of both sides of an ID card, with complete and valid information. These materials are often used to bypass real-name verification, register illegal accounts, or forge documents, making them a core commodity for identity fraud crimes.",
     "usageExample": "\"National 'priest' available, valid expiry dates, 6 USDT each. Online all day, send as many as you have.\"",
-    "relatedRisks": [
-      "R0078",
-      "R0089",
-      "R0092",
-      "R0109"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0012",
-      "AT0064"
-    ],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040",
-      "TA0018"
-    ],
-    "relatedBusinessScenes": [
-      "BS00"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -51,7 +24,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

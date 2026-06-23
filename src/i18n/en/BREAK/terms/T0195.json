@@ -16,41 +16,6 @@
     "definition": "A vague address containing only the province, city, and district levels of administrative division, used in underground data lookup scenarios.",
     "description": "This type of address cannot pinpoint a specific house or residential compound and is mainly used for initial screening, bulk profiling, or to lower transaction costs. Data brokers often attract buyers with low prices, but the delivered content only includes administrative division names with no practical locating capability. In debt collection and fraud chains, vague addresses often serve as a low-cost lead to upsell buyers on a premium service for real addresses.",
     "usageExample": "\"Nationwide vague addresses for individual accounts, 12 yuan each, still available, inquiries welcome.\"",
-    "relatedRisks": [
-      "R0092",
-      "R0078",
-      "R0089",
-      "R0109"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0006-005",
-      "A0016-002",
-      "A0051",
-      "A0037",
-      "A0049",
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054"
-    ],
-    "relatedAttackTools": [
-      "AT0012",
-      "AT0064"
-    ],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040",
-      "TA0018"
-    ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -58,7 +23,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

@@ -16,42 +16,10 @@
     "category": "Business Fraud",
     "definition": "Kaipinghao refers to black-market account resources that possess commenting privileges and are specifically used to post fake reviews at scale.",
     "description": "These accounts typically bypass platform real-name verification or behavioral thresholds. They are used to mass-publish fake positive reviews, malicious negative reviews, or manipulative comments. In e-commerce brushing and public opinion manipulation, kaipinghao are core tools for executing astroturfing tasks, rapidly fabricating a reputation or attacking competitors.",
-    "relatedRisks": [
-      "R0017",
-      "R0017-001",
-      "R0005"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0044",
-      "AT0009",
-      "AT0016"
-    ],
-    "relatedThreatActors": [
-      "TA0009",
-      "TA0006",
-      "TA0007"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

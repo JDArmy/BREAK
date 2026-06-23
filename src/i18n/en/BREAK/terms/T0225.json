@@ -16,36 +16,10 @@
     "category": "Business Fraud",
     "definition": "Bypassing a platform's internal reporting system by filing complaints directly through external official channels such as the 12315 consumer hotline or government petition offices to report marketing fraud.",
     "description": "Black and gray market actors or victimized users leverage external regulatory pressure to target marketing fraud, often escalating after exhausting internal platform remedies. This approach can trigger administrative intervention, forcing a platform or fraudster to respond quickly, but it may also be exploited maliciously to extort merchants. Operators typically gather evidence such as screenshots and transaction records to submit to authorities, though doing so risks exposing their own involvement in gray-market activities.",
-    "relatedRisks": [
-      "R0068-001",
-      "R0068",
-      "R0068-002"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0034"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

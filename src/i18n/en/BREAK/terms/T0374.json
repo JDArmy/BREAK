@@ -17,27 +17,6 @@
     "definition": "A loan broker passes a client they cannot service to another broker in exchange for a commission split.",
     "description": "When a broker finds a client's profile doesn't match their available lending channels, they sell the client's information to another broker who can process the loan. This practice leads to repeated reselling of personal data and increases the risk of information leaks. The referring broker earns a commission without further work, while the client may face higher fees or fall into a debt trap.",
     "usageExample": "This client's profile is too weak for my channels. I'll pass them to Old Li's side; the referral fee is twenty thousand per client.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -45,7 +24,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

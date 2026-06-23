@@ -16,39 +16,6 @@
     "category": "Money Laundering",
     "definition": "An underground syndicate that illegally acquires and resells bank cards and identity information kits in bulk.",
     "description": "Card dealers collect complete sets of ID cards, bank cards, USB security keys, and phone numbers from cardholders through offline recruitment or online acquisition, then resell them at a premium to money laundering or fraud rings. These cards are used to receive, split, and transfer illicit funds, serving as the foundational tools for money laundering. Once a case is exposed, card dealers quickly cut off contact, significantly complicating fund tracing.",
-    "relatedRisks": [
-      "R0060",
-      "R0093"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044",
-      "A0007",
-      "A0016-003",
-      "A0021",
-      "A0050",
-      "A0035",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0039",
-      "AT0026"
-    ],
-    "relatedThreatActors": [
-      "TA0003",
-      "TA0004",
-      "TA0006-003",
-      "TA0014",
-      "TA0015"
-    ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Global Underground Economy Upgrade Study: SMS-Code Receiving Models Become More Covert"
@@ -59,7 +26,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

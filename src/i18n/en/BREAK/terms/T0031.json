@@ -18,35 +18,10 @@
     "category": "Marketing Fraud",
     "definition": "The illegal practice of binding a single POS terminal to multiple merchant accounts for credit card cashing or limit maintenance.",
     "description": "This operation violates UnionPay's one-machine-one-merchant regulation and is a common tactic used by coupon harvesters for credit card maintenance. By simulating multiple merchants across different industries on a single POS machine, cardholders can fabricate diversified spending records to evade bank risk controls and exploit rate differences between merchants to maximize credit card points or cashback rewards. This constitutes a regulatory violation or outright illegal act and is a form of financial fraud.",
-    "relatedRisks": [
-      "R0009",
-      "R0055",
-      "R0064",
-      "R0005"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0059",
-      "A0061",
-      "A0044",
-      "A0024",
-      "A0016",
-      "A0054"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0001",
-      "TA0001-001"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS01"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: E-commerce Scalper Industry Chain Analysis Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

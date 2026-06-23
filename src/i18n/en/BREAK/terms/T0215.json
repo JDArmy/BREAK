@@ -17,27 +17,6 @@
     "definition": "Refers to consumer data from e-commerce platforms for five sensitive product categories: pharmaceuticals, medical devices, breast enhancement, weight loss, and height increase products.",
     "description": "Due to the clear privacy concerns and specific consumer needs of buyers for these products, this data holds high value on the black market. After obtaining it, black-market actors resell it to other fraud rings for targeted scams, such as impersonating specialists for follow-up calls or peddling fake medicines and health supplements.",
     "usageExample": "'Selling weight loss, freckle removal, breast enhancement, and other black-five-category data, real-time ordering users, super effective results!!'",
-    "relatedRisks": [
-      "R0078",
-      "R0089"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040"
-    ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS02"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -45,7 +24,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

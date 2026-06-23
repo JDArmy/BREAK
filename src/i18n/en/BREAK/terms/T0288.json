@@ -16,30 +16,6 @@
     "category": "Money Laundering",
     "definition": "Sextortion chat is a scam technique that uses social apps for sexual inducement to trick victims into making payments.",
     "description": "A variant of adult-content lead generation scams, operators pose as providers of sexual services on social apps, luring victims into private chats after adding them as friends. During the conversation, they demand payments under various pretexts but never provide any actual service. This low-cost, highly covert scam often goes unreported because victims feel too ashamed to file a complaint, making fund recovery extremely difficult.",
-    "relatedRisks": [
-      "R0060",
-      "R0095"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044",
-      "A0006-005",
-      "A0016-002",
-      "A0051",
-      "A0037"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0014",
-      "TA0015"
-    ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -47,7 +23,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

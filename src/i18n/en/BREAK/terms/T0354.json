@@ -16,31 +16,6 @@
     "category": "Gambling",
     "definition": "A den or syndicate specializing in handling gambling fund flows and money laundering.",
     "description": "A money-handling crew takes on the task of diverting funds from casinos or online gambling platforms. They rapidly split and consolidate gambling proceeds through multiple tiers of accounts to sever the traceability of the funds. Operators use numerous other people's accounts for high-frequency transfers, ultimately returning the laundered money to the behind-the-scenes organizers. When investigated, the money-handling crew is often the first link in the financial chain to be exposed.",
-    "relatedRisks": [
-      "R0097",
-      "R0060"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0016",
-      "A0044",
-      "A0061",
-      "A0024",
-      "A0054"
-    ],
-    "relatedAttackTools": [
-      "AT0026"
-    ],
-    "relatedThreatActors": [
-      "TA0038",
-      "TA0006-003",
-      "TA0014",
-      "TA0016"
-    ],
-    "relatedBusinessScenes": [
-      "BS06",
-      "BS01"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review"
@@ -48,7 +23,6 @@
       {
         "title": "Black Market Big Data: 2025 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

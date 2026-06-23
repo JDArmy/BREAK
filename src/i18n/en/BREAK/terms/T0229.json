@@ -17,52 +17,10 @@
     "definition": "An account or device being banned by a platform's risk-control system within an extremely short time after login.",
     "description": "When black and gray market actors log in using blacklisted devices, abnormal IPs, or cookie-cutter scripts, they trigger real-time risk controls resulting in an 'instant death.' This is common during bulk registration, credential stuffing, or early-stage account farming, where the account's lifespan is too short for subsequent fraud. Operators must constantly change IPs, device fingerprints, or login environments to counter this, but success rates are low, leading to high resource waste and increased costs.",
     "usageExample": "Real-name verified white accounts for all three carriers, all functions normal, guaranteed login, guaranteed instant death, now shipping.",
-    "relatedRisks": [
-      "R0017",
-      "R0017-001",
-      "R0005",
-      "R0030",
-      "R0030-001",
-      "R0032"
-    ],
-    "relatedAvoidances": [
-      "A0020-003",
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061",
-      "A0038",
-      "A0016-001",
-      "A0004",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0044",
-      "AT0009",
-      "AT0016",
-      "AT0003",
-      "AT0007",
-      "AT0021"
-    ],
-    "relatedThreatActors": [
-      "TA0009",
-      "TA0006",
-      "TA0007"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

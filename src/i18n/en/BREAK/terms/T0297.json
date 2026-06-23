@@ -17,33 +17,6 @@
     "definition": "The actual controller of a fraud or gambling operation, responsible for overall fund flows and crew command.",
     "description": "The 'Pan Zong' sits at the top of a fraud or gambling operation, making decisions on profit distribution, money laundering routes, and personnel assignments. They build fund-clearing networks through sub-agents, runner crews, and QR code suppliers, moving illicit proceeds through multiple layers. When an operation is busted, the Pan Zong is typically the primary target of investigation, and the capital pools they control are usually substantial.",
     "usageExample": "Looking for runner crews and individuals to move money; commission is generous. Intermediaries and Pan Zongs welcome to negotiate.",
-    "relatedRisks": [
-      "R0060",
-      "R0093"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044",
-      "A0038",
-      "A0060",
-      "A0016-001",
-      "A0004",
-      "A0061"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0015-001",
-      "TA0014",
-      "TA0015",
-      "TA0006-003"
-    ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -51,7 +24,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

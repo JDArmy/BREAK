@@ -17,22 +17,6 @@
     "definition": "Colluding with a vehicle owner to transfer a financed car to a third party before the mortgage registration is completed, thereby evading the lien.",
     "description": "Fraud rings exploit the time gap between loan disbursement and official vehicle mortgage registration. After the lender releases funds but before the lien is recorded, the intermediary helps the owner quickly transfer the vehicle to another party. This leaves the financial institution unable to enforce its security interest, resulting in a bad debt. Common in the used-car market, intermediaries charge high fees while lenders lose both the car and the money.",
     "usageExample": "The intermediary said they could do a fake lien release. They told me to skip the vehicle registration office and transfer the car directly to a buyer they found. Now the bank is coming after me for the debt.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: Deconstructing the Auto Loan Fraud Industry Chain"
@@ -43,7 +27,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

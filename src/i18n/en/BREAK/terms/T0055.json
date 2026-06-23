@@ -16,22 +16,6 @@
     "category": "Credit Fraud",
     "definition": "7-14 high-interest loan refers to an illegal, ultra-high-interest loan with a 7- or 14-day term that charges exorbitant upfront fees and overdue penalties.",
     "description": "Illegal lending platforms operated by fraud rings lure victims with promises of unsecured, instant loans. In reality, they deduct over 30% in upfront fees at disbursement. Borrowers who default face aggressive debt collection and punitive penalty interest. This model is often accompanied by the illegal harvesting of contact lists, which is used to threaten borrowers, making it a classic trap loan scheme.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -39,7 +23,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

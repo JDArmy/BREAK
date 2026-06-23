@@ -16,58 +16,10 @@
     "definition": "An account that can be logged into directly without SMS verification or a password, usually mass-produced by fraud rings through protocol exploits or credential-stuffing.",
     "description": "These accounts bypass secondary verification, allowing fraudsters to quickly switch devices for batch operations such as fake orders, spam advertising, or money laundering. Direct-login accounts command a premium in underground markets and are sold by platform, activity level, and whether they include payment functions. Buyers can run scripts on them immediately, drastically reducing operational time costs.",
     "usageExample": "Telegram direct-login accounts, fresh protocol accounts, large stock available.",
-    "relatedRisks": [
-      "R0001",
-      "R0011",
-      "R0032-001",
-      "R0017",
-      "R0017-001",
-      "R0005",
-      "R0030",
-      "R0030-001",
-      "R0032"
-    ],
-    "relatedAvoidances": [
-      "A0007",
-      "A0007-001",
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061",
-      "A0016-003",
-      "A0024",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [
-      "AT0042",
-      "AT0044",
-      "AT0009",
-      "AT0016",
-      "AT0003",
-      "AT0007",
-      "AT0021"
-    ],
-    "relatedThreatActors": [
-      "TA0007",
-      "TA0009",
-      "TA0006"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

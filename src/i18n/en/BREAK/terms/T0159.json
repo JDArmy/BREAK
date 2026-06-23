@@ -17,26 +17,6 @@
     "definition": "The act of a service provider completing a query and delivering the results to the buyer in an illegal data transaction.",
     "description": "'Returning the order' signifies that the data query has been completed and delivered, marking the closure of the illicit transaction. After receiving feedback from upstream sources, the provider sends documents or screenshots containing personal privacy information or account statements to the buyer, finalizing the deal. The turnaround time for returning orders is often used as a competitive selling point, with providers emphasizing 'fast returns' to attract buyers in urgent need of information.",
     "usageExample": "\"Direct from the source, price: 200 RMB, results returned in about ten minutes. Affordable and fast.\"",
-    "relatedRisks": [
-      "R0078"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040"
-    ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -44,7 +24,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

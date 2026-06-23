@@ -15,40 +15,10 @@
     "definition": "An underground arbitrage ring on live-streaming platforms that specializes in buying users' virtual gifts at a low price.",
     "description": "These groups lurk in various live-streaming rooms, proactively contacting users who have won high-value gifts and offering to buy them at a discounted cash price. They exploit platform rules that prevent direct cash withdrawal of virtual items, providing a gray-market channel for users eager to cash out. The gifts are then sent to designated streamers through other accounts to complete money laundering or arbitrage, severely disrupting the platform's virtual economy.",
     "usageExample": "I won a castle gift yesterday, and right after I posted it for sale, someone from a supermarket messaged me asking if I wanted to sell.",
-    "relatedRisks": [
-      "R0094",
-      "R0138",
-      "R0121"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061",
-      "A0024",
-      "A0016",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [
-      "AT0067",
-      "AT0039"
-    ],
-    "relatedThreatActors": [
-      "TA0039",
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS05",
-      "BS15"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

@@ -17,42 +17,10 @@
     "definition": "A high-visibility position on a platform used to display content and capture or redirect user traffic.",
     "description": "A 'traffic spot' can be a trending position on a short-video hotlist, a feed ad placement, or a pinned comment section. Fraud rings use bot-driven likes and views to seize these high-exposure spots, pushing fraudulent or deceptive content to a wider audience. Securing a prime traffic spot means gaining a massive influx of users, a critical step for successful traffic diversion.",
     "usageExample": "\"Hurry up, we've seized the hotlist spot for tonight. Get that gambling link up there, quick.\"",
-    "relatedRisks": [
-      "R0017",
-      "R0017-001",
-      "R0005"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061",
-      "A0006-005",
-      "A0016-002",
-      "A0051",
-      "A0037"
-    ],
-    "relatedAttackTools": [
-      "AT0044",
-      "AT0009",
-      "AT0016"
-    ],
-    "relatedThreatActors": [
-      "TA0009",
-      "TA0006",
-      "TA0007"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS05",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

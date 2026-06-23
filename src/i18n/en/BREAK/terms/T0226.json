@@ -17,55 +17,10 @@
     "definition": "Using technical methods to check the status of phone numbers in bulk or in real time, filtering out invalid numbers such as disconnected, suspended, or powered-off lines.",
     "description": "In marketing fraud, telecom scams, or data trading, black and gray market actors first clean number databases with number-checking tools to eliminate invalid resources and reduce costs. Operators connect to third-party verification APIs or use custom scripts to query number statuses, selecting active numbers for registration, fake orders, or traffic driving. Active numbers can be resold at a premium, while risky ones are discarded, all aimed at improving the efficiency and hit rate of fraudulent operations.",
     "usageExample": "Domestic number screening: active and risky number filtering, precise removal of disconnected and inactive numbers.",
-    "relatedRisks": [
-      "R0017",
-      "R0017-001",
-      "R0005",
-      "R0030",
-      "R0030-001",
-      "R0032"
-    ],
-    "relatedAvoidances": [
-      "A0016-003",
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061",
-      "A0007",
-      "A0024",
-      "A0006-005",
-      "A0016-002",
-      "A0051",
-      "A0037",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0044",
-      "AT0009",
-      "AT0016",
-      "AT0003",
-      "AT0007",
-      "AT0021"
-    ],
-    "relatedThreatActors": [
-      "TA0009",
-      "TA0006",
-      "TA0007"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

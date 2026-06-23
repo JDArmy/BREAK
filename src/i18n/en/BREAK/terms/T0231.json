@@ -16,42 +16,10 @@
     "definition": "Fabricating orders, reviews, and other fake transaction data to deceive platform algorithms and consumers for unfair exposure.",
     "description": "Black and gray market actors organize merchants or click-farm workers to create fake sales and positive reviews through self-buying, self-selling, and shipping empty packages. Operators recruit buyers through social groups to simulate real shopping processes, completing the full chain of ordering, payment, and receipt. This distorts fair market competition, misleads consumers, damages platform credibility, and can trigger legal risks in severe cases.",
     "usageExample": "E-commerce platform fake orders at 220 per order, come to me if you're a bro, stable settlements.",
-    "relatedRisks": [
-      "R0017-001",
-      "R0017",
-      "R0005"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0044",
-      "AT0009",
-      "AT0016"
-    ],
-    "relatedThreatActors": [
-      "TA0009",
-      "TA0006",
-      "TA0007"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

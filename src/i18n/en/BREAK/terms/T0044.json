@@ -17,28 +17,6 @@
     "definition": "The operational step of submitting a prepared loan application package to a financial institution’s approval system.",
     "description": "This is the critical juncture in the credit process where an application formally enters the review queue. In organized loan fraud, the submission stage often involves batch-uploading falsified documents, including fabricated corporate financial statements, personal bank statements, or fake housing provident fund records. Fraud rings use these packaged materials to systematically exploit specific risk-control rules and obtain high credit lines.",
     "usageExample": "All these profiles have been seasoned. We’re submitting the whole batch tonight—aiming for full approval.",
-    "relatedRisks": [
-      "R0146",
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -46,7 +24,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

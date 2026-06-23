@@ -18,28 +18,6 @@
     "category": "Credit Fraud",
     "definition": "The practice of fabricating housing provident fund (HPF) contribution records—either by forging data or creating fictitious employment relationships—to fraudulently qualify for personal credit products offered by financial institutions.",
     "description": "Fraud rings use technical means to spoof HPF app data or arrange backdated contributions through shell employment, enabling applicants to pass bank eligibility checks for consumer loans and salary-based loans. This tactic specifically targets credit products that rely on HPF data for risk assessment, allowing unqualified individuals to extract large sums. Once the fraud succeeds, the lender faces a direct bad-debt loss.",
-    "relatedRisks": [
-      "R0146",
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "Credit Fraud: Analysis of Provident Fund Forgery Loan Fraud Techniques"
@@ -50,7 +28,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

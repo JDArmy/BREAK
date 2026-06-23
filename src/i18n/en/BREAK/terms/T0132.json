@@ -17,41 +17,10 @@
     "definition": "Horse feed is the fixed script used when defrauding elderly patient groups, functionally equivalent to pig feed.",
     "description": "In scams targeting “horses,” horse feed is the core brainwashing tool, typically containing fabricated medical theories, fake recovery stories, and emotional care talking points designed specifically to break down an elderly person’s defenses. Operators follow the script and deliver it day by day, first building trust as a health consultant, then gradually planting anxiety about the “only effective treatment,” and finally closing the sale of counterfeit drugs or substandard supplements. The design of horse feed relies heavily on the victim’s medical records; the more the script aligns with their condition, the higher the conversion rate.",
     "usageExample": "This set of horse feed is built specifically for old horses with diabetes and hypertension—first give away free glucose meters, then pitch fake insulin repair case studies, and finally apply pressure to sell those unlicensed capsules.",
-    "relatedRisks": [
-      "R0150",
-      "R0060",
-      "R0095"
-    ],
-    "relatedAvoidances": [
-      "A0006-005",
-      "A0016",
-      "A0051",
-      "A0024",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0053-001",
-      "AT0070"
-    ],
-    "relatedThreatActors": [
-      "TA0015",
-      "TA0008",
-      "TA0042",
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS04",
-      "BS01"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

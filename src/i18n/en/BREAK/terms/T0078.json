@@ -16,27 +16,6 @@
     "category": "Data Leakage",
     "definition": "In illicit data trading, refers to personal information and consumption data related to pregnant women, new mothers, and infants.",
     "description": "This data includes maternal health records, infant birth registrations, and baby product purchase lists, leaked from channels such as hospitals and e-commerce platforms. After acquiring it, underground groups resell it to confinement centers and photography studios for telemarketing harassment, or directly use it for targeted scams impersonating medical staff.",
-    "relatedRisks": [
-      "R0078",
-      "R0089"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040"
-    ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS02"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -44,7 +23,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

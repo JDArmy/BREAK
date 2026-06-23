@@ -17,27 +17,6 @@
     "definition": "A scheme in which a fraud ring rapidly transfers a pre-seasoned shell company to a loan applicant through an untraceable change of ownership, circumventing rules that flag short-tenure legal representatives for business financing fraud.",
     "description": "Fraud rings cultivate empty-shell companies with substantial operating revenue and tax invoice records in advance. Through manipulation, banks are unable to detect the true change of control via commercial registries. Once the applicant takes over, they can apply for multiple large-amount corporate tax-invoice loans within 20 to 45 days under the new legal-representative identity. The tactic exploits a time gap to concentrate large-scale fund extraction before the lender detects the anomaly.",
     "usageExample": "Just took over a fast-transfer shell company—the data has been seasoned for six months. We’re pushing submissions hard over the next few days.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: Desperados in Financial Fraud"
@@ -48,7 +27,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

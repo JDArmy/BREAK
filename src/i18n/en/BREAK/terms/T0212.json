@@ -17,26 +17,6 @@
     "definition": "Refers to complete flight booking data leaked from airline systems, containing sensitive information such as passenger names, ID numbers, and flight numbers.",
     "description": "This data is typically leaked by insiders within ticketing systems or stolen through hacking. After purchasing it, fraud rings impersonate airline customer service agents, tricking victims into transferring money under the pretext of flight cancellations, rebookings, or refunds. The success rate of such scams is extremely high because the scammers can accurately provide the flight details.",
     "usageExample": "'Selling undeparted flight ticket material'",
-    "relatedRisks": [
-      "R0078",
-      "R0089"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040"
-    ],
-    "relatedBusinessScenes": [
-      "BS00"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -44,7 +24,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

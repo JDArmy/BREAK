@@ -15,37 +15,10 @@
     "category": "Telecom Fraud",
     "definition": "In the context of the 'bird-killing scam,' this term refers to individuals who are homebound, have limited social circles, and are easily deceived by offers of online income.",
     "description": "This demographic primarily includes students and homemakers who are eager to earn money through online side jobs but lack sufficient life experience. Fraudsters exploit this psychology, using lures like 'cashback for reviews' to trap them. Within the gang, this specific group of vulnerable individuals is collectively referred to as 'birds.'",
-    "relatedRisks": [
-      "R0095",
-      "R0150"
-    ],
-    "relatedAvoidances": [
-      "A0006-005",
-      "A0016",
-      "A0051",
-      "A0024",
-      "A0044",
-      "A0015",
-      "A0059",
-      "A0021",
-      "A0061"
-    ],
-    "relatedAttackTools": [
-      "AT0053-001"
-    ],
-    "relatedThreatActors": [
-      "TA0015",
-      "TA0008"
-    ],
-    "relatedBusinessScenes": [
-      "BS04",
-      "BS02"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

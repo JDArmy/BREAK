@@ -17,35 +17,6 @@
     "definition": "In gambling-related black market operations, 'washing fee' or 'turnover fee' refers to the commission returned to agents or money mule teams by the casino or platform, calculated as a percentage of the total betting turnover.",
     "description": "This fee is essentially a cut taken from the flow of gambling funds. It is typically deducted by the casino from the total turnover and distributed to intermediaries, junket operators, or money mule teams to incentivize the continuous recruitment of gamblers and the maintenance of fund channels. In scenarios combining telecom fraud and money muling, this fee is often disguised as a 'handling fee' or 'rebate,' but it actually serves as a lubricant for the money laundering chain, significantly diluting the gambler's principal after multiple layers of deductions.",
     "usageExample": "Recruiting for manual money mule work, base salary plus bonus and an extra three points, with a 20% deduction for the turnover fee.",
-    "relatedRisks": [
-      "R0060",
-      "R0093",
-      "R0097"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0016",
-      "A0044",
-      "A0061",
-      "A0038",
-      "A0060",
-      "A0016-001",
-      "A0004",
-      "A0024",
-      "A0054"
-    ],
-    "relatedAttackTools": [
-      "AT0026"
-    ],
-    "relatedThreatActors": [
-      "TA0006-003",
-      "TA0014",
-      "TA0016"
-    ],
-    "relatedBusinessScenes": [
-      "BS06",
-      "BS01"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review"
@@ -53,7 +24,6 @@
       {
         "title": "Black Market Big Data: 2025 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

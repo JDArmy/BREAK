@@ -16,22 +16,6 @@
     "category": "Credit Fraud",
     "definition": "A professional debt mule is an individual recruited by fraud rings to take out loans under their own name in exchange for a small cut of the proceeds, while bearing full liability for the debt.",
     "description": "These individuals typically have clean credit histories but are in urgent need of money. After being coached by fraud intermediaries, they apply for auto loans, mortgages, personal credit, or business loans in their own name. Once the funds are disbursed, the bulk of the money is siphoned off by the orchestrating gang, leaving the debt mule with a small share while they shoulder the entire debt burden and credit damage. This scheme is common in organized loan fraud, ultimately resulting in bad debt for financial institutions and legal liability and credit ruin for the mule.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
@@ -39,7 +23,6 @@
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

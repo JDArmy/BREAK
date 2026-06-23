@@ -19,27 +19,6 @@
     "definition": "Refers to small loans issued through internet platforms, which are frequently exploited by fraud rings for fraudulent applications.",
     "description": "Fraud rings use synthetic or stolen identities to register for and apply to various online lending products in bulk. They typically target small, cash-advance platforms with weak risk controls, maliciously cashing out through a practice known as 'loan farming' and then disappearing after the loan is disbursed. This behavior leads to massive bad debts for online lending platforms and is a contributing factor to the violent debt collection chaos.",
     "usageExample": "He created a bunch of fake profiles to specifically target online loan products that don't check credit history. Any money he got was considered a 'payday,' and he never intended to pay it back.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -47,7 +26,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

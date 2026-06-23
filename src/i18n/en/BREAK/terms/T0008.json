@@ -18,30 +18,10 @@
     "category": "Marketing Fraud",
     "definition": "The act of an upstream taskmaster settling the advanced principal and commission to a downstream operator after a fake transaction or proxy order is completed.",
     "description": "In scalper proxy purchasing or fake order fraud, the operator first advances their own money to buy designated goods. After receiving the goods or completing the task, the taskmaster 'returns the payment' via a payment tool. This sum typically includes the original price of the goods and the agreed-upon commission, serving as the direct financial incentive that keeps part-time black market participants engaged.",
-    "relatedRisks": [
-      "R0003",
-      "R0005",
-      "R0070"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0059",
-      "A0061",
-      "A0044",
-      "A0021"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0002"
-    ],
-    "relatedBusinessScenes": [
-      "BS02"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: E-commerce Scalper Industry Chain Analysis Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

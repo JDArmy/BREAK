@@ -16,29 +16,6 @@
     "category": "Data Leakage",
     "definition": "Track data refers to bank card magnetic stripe information obtained through skimming devices installed on compromised POS terminals, traded in illicit data markets.",
     "description": "By implanting skimming modules in POS terminals, fraudsters steal magnetic stripe data and PINs from bank cards. This data is extremely precise and can be directly used to clone cards for fraudulent transactions or sold to downstream gangs for telecom fraud. Track data is core financial information, and its leakage directly threatens the financial security of cardholders.",
-    "relatedRisks": [
-      "R0078",
-      "R0089"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049",
-      "A0024",
-      "A0054"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040"
-    ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -46,7 +23,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

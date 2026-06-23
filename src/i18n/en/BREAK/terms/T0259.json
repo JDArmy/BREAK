@@ -17,56 +17,10 @@
     "definition": "High-follower accounts are social media profiles with a large follower count, used as a foundational tool for promotion and traffic redirection.",
     "description": "These accounts are typically cultivated through content reposting, fake engagement farming, or bulk registration, and are designed to project a facade of influence. Account dealers or marketing teams use them to post covert advertisements, guide followers to other platforms, or operate as part of a coordinated matrix for hype. High-follower accounts are a core asset in fraudulent marketing, used to boost traffic efficiency and conversion rates.",
     "usageExample": "High-follower accounts for XX email available, DM for details.",
-    "relatedRisks": [
-      "R0011",
-      "R0017",
-      "R0017-001",
-      "R0005",
-      "R0024",
-      "R0007-003",
-      "R0030",
-      "R0030-001",
-      "R0032"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061",
-      "A0007",
-      "A0016-003",
-      "A0024",
-      "A0006-005",
-      "A0016-002",
-      "A0051",
-      "A0037"
-    ],
-    "relatedAttackTools": [
-      "AT0044",
-      "AT0009",
-      "AT0016",
-      "AT0005",
-      "AT0050",
-      "AT0003",
-      "AT0007",
-      "AT0021"
-    ],
-    "relatedThreatActors": [
-      "TA0009",
-      "TA0006",
-      "TA0007",
-      "TA0013"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

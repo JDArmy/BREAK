@@ -17,27 +17,6 @@
     "definition": "A pre-prepared, seasoned business license that can be immediately transferred to a debt mule.",
     "description": "In corporate debt fraud, syndicates register companies in advance and maintain them to create the illusion of good business performance. When a suitable mule is found, the company is directly transferred, eliminating the need for the mule to build a business credit profile from scratch. This significantly shortens the fraud cycle and enables rapid access to high-value business loans.",
     "usageExample": "Ready-to-go business licenses available for immediate transfer. Deposit required for entry, transfer and change of ownership done quickly. Urgent call for agents with clients.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -45,7 +24,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

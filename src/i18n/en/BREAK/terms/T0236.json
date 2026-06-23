@@ -16,54 +16,10 @@
     "definition": "An account that was previously logged in on a device but is now logged out, often recycled by fraud rings for re-registration or volume farming.",
     "description": "Because these accounts retain login traces, they often pass initial platform risk checks more easily than brand-new accounts. Fraud rings collect logged-out accounts in bulk from internet cafés, device rental platforms, and similar sources, then use them for SMS verification, promo abuse, or fake traffic generation. Since the original user no longer controls the account, the actual operator can switch identities at will, complicating anti-fraud detection.",
     "usageExample": "Buying all types of logged-out accounts (gaming logged-out accounts, etc.)",
-    "relatedRisks": [
-      "R0055",
-      "R0009",
-      "R0064",
-      "R0030",
-      "R0030-001",
-      "R0017",
-      "R0017-001",
-      "R0005",
-      "R0032"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061",
-      "A0007",
-      "A0016-003",
-      "A0024"
-    ],
-    "relatedAttackTools": [
-      "AT0006",
-      "AT0044",
-      "AT0009",
-      "AT0016",
-      "AT0003",
-      "AT0007",
-      "AT0021"
-    ],
-    "relatedThreatActors": [
-      "TA0001",
-      "TA0001-001",
-      "TA0003",
-      "TA0009",
-      "TA0006",
-      "TA0007"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS06",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

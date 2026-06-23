@@ -17,29 +17,6 @@
     "definition": "A black-market term indicating an exceptionally high data query success rate, often implying that the data is sourced from leaks by police insiders.",
     "description": "'No blind spots' signifies a query capability with zero failures and no dead ends, able to precisely retrieve highly sensitive data such as bank transaction records, cardholder information, and household registration files. This channel typically involves public officials abusing their positions for unauthorized queries, representing the highest tier of the black-market data supply chain and carrying extreme risk.",
     "usageExample": "\"No-blind-spot transaction record checks, available for both corporate and personal accounts. Consolidated dispatch every Thursday, taking both bulk and single orders.\"",
-    "relatedRisks": [
-      "R0078"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049",
-      "A0024",
-      "A0054"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040"
-    ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -47,7 +24,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

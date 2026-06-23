@@ -17,22 +17,6 @@
     "definition": "A preparatory fraud scheme where a syndicate provides full-chain financial support to a debt mule to secure higher loans.",
     "description": "In debt mule fraud, intermediaries or syndicates provide the mule with full board and lodging and cover upfront costs such as mortgage down payments, car loan down payments, taxes, and even business license fees. Through this fully-funded model, the mule is packaged as a high-quality borrower. Once the loan is disbursed, the funds are split among the syndicate, while the mule assumes all the debt.",
     "usageExample": "Mortgage, credit, business, car loans—fully-funded model. Looking for credit invisibles, age 23 to 48, all upfront costs covered.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -40,7 +24,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

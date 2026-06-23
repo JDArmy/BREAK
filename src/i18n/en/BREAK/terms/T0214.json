@@ -16,29 +16,6 @@
     "category": "Data Leakage",
     "definition": "Refers to user information from small cash-out platforms that support purchasing E-cards or gift cards with installment repayments, illegally traded as 'card voucher material' or 'E-card material.'",
     "description": "These platforms allow users to buy virtual cards and resell them for cash, essentially functioning as illegal lending operations. Black-market actors collect the data of users involved in these cash-outs and package it for sale. This data is often used to promote other illicit lending products or to conduct targeted scams against the users.",
-    "relatedRisks": [
-      "R0078",
-      "R0089"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040"
-    ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01",
-      "BS02",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -46,7 +23,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

@@ -17,35 +17,6 @@
     "definition": "The registered owner of a bank card or payment account whose account is used for money laundering by underground operations.",
     "description": "A cardholder may have knowingly or unknowingly provided their personal account for others to use. In money laundering, the cardholder's account serves as a transit point, receiving upstream funds from fraud or gambling and then transferring them out as instructed. Regardless of whether the cardholder profited, they will face credit penalties and even criminal liability once the account is implicated in a case.",
     "usageExample": "Bank card with 3,000 yuan limit, cardholder is in Jinan.",
-    "relatedRisks": [
-      "R0060",
-      "R0093"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0052",
-      "A0049",
-      "A0061"
-    ],
-    "relatedAttackTools": [
-      "AT0026"
-    ],
-    "relatedThreatActors": [
-      "TA0005-001",
-      "TA0006-003",
-      "TA0014",
-      "TA0015"
-    ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -53,7 +24,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

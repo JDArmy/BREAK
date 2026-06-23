@@ -17,37 +17,6 @@
     "definition": "A bundled resource pack combining a bank card with a corresponding payment QR code, providing a ready-to-use collection channel set for downstream members in money muling operations.",
     "description": "A card-code bundle pairs a bank card number with its associated payment QR code into a single resource unit, allowing money mules and code merchants to switch collection methods on demand. These bundles are distributed through chat groups or darknet markets. When receiving payments, operators select the appropriate card or code based on the transaction amount and payment channel requirements. This combination reduces the logistical cost of managing collection tools and fragments the entry points for funds, increasing the difficulty of tracing.",
     "usageExample": "Direct drops for fresh data, 3,000 to 100,000. Both cards and codes accepted. Operating all day, looking for long-term drivers. All bosses welcome.",
-    "relatedRisks": [
-      "R0060",
-      "R0093"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044",
-      "A0006-005",
-      "A0016-002",
-      "A0051",
-      "A0037",
-      "A0050",
-      "A0035",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0026",
-      "AT0039",
-      "AT0040"
-    ],
-    "relatedThreatActors": [
-      "TA0006-003",
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS01"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -55,7 +24,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

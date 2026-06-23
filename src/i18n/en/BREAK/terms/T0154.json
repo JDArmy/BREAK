@@ -16,39 +16,10 @@
     "category": "Telecom Fraud",
     "definition": "Refers to illicit funds that are directly deducted or transferred through mobile payment channels such as UnionPay QuickPass.",
     "description": "In the money laundering stage of telecom fraud, QuickPass is often used to rapidly consolidate funds transferred by victims due to its fast card binding and instant settlement. Fraud rings trick victims into downloading QuickPass, linking compromised bank cards, or scanning payment codes to achieve an 'instant deduction,' after which the funds are immediately split and moved. These deducted funds typically pass through multiple layers of accounts before being funneled into money-muling platforms or cryptocurrency exchange channels, making tracing extremely difficult.",
-    "relatedRisks": [
-      "R0044",
-      "R0032",
-      "R0131"
-    ],
-    "relatedAvoidances": [
-      "A0006-005",
-      "A0016",
-      "A0051",
-      "A0024",
-      "A0044",
-      "A0054"
-    ],
-    "relatedAttackTools": [
-      "AT0064",
-      "AT0066",
-      "AT0067",
-      "AT0053-002"
-    ],
-    "relatedThreatActors": [
-      "TA0015",
-      "TA0043"
-    ],
-    "relatedBusinessScenes": [
-      "BS04",
-      "BS01",
-      "BS15"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

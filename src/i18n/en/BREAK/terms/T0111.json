@@ -16,37 +16,10 @@
     "category": "Telecom Fraud",
     "definition": "In a fraud context, this specifically refers to the demographic of homemakers who are willing to do part-time work, hoping to supplement their household income through manual tasks or fake review schemes.",
     "description": "Fraudsters post fake job ads on social platforms, attracting homemakers with promises of 'handcraft work from home' or 'commissions for brushing orders.' They demand an upfront deposit or franchise fee, promising a refund and payment later, and ultimately disappear after collecting a large sum in deposits. This type of scam precisely exploits the homemaker demographic's fragmented time and eagerness to earn money.",
-    "relatedRisks": [
-      "R0095",
-      "R0150"
-    ],
-    "relatedAvoidances": [
-      "A0006-005",
-      "A0016",
-      "A0051",
-      "A0024",
-      "A0044",
-      "A0015",
-      "A0059",
-      "A0021",
-      "A0061"
-    ],
-    "relatedAttackTools": [
-      "AT0053-001"
-    ],
-    "relatedThreatActors": [
-      "TA0015",
-      "TA0008"
-    ],
-    "relatedBusinessScenes": [
-      "BS04",
-      "BS02"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

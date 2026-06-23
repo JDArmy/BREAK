@@ -17,33 +17,6 @@
     "definition": "In money laundering operations, write-off refers to the process of disguising illicit funds as legitimate transactions through purchases, redemptions, or card and voucher binding to complete the cleansing cycle.",
     "description": "Criminal actors use proceeds from fraud or gambling to bulk-purchase virtual goods such as shopping cards, membership cards, or group-buying vouchers. These are then monetized through card-and-PIN recycling, resale, or account binding. The operation is typically coordinated by specialized card brokers or write-off agents on money-muling platforms or in private chat groups, with the goal of severing the fund trail and evading risk-control tracking. Once successfully written off, the illicit funds are laundered in the form of consumer spending, making tracing extremely difficult.",
     "usageExample": "Anyone who can buy shopping cards, come through. Supermarket card-and-PIN write-off: you get 650 per recycled card.",
-    "relatedRisks": [
-      "R0060",
-      "R0093"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044",
-      "A0061"
-    ],
-    "relatedAttackTools": [
-      "AT0026",
-      "AT0039",
-      "AT0040"
-    ],
-    "relatedThreatActors": [
-      "TA0003",
-      "TA0004",
-      "TA0006-003",
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -51,7 +24,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

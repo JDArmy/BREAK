@@ -17,58 +17,10 @@
     "definition": "Proxy registration is a service that creates platform accounts in bulk on behalf of others, often to bypass real-name restrictions or for mass account nurturing.",
     "description": "Black-market actors use SMS verification platforms, virtual numbers, or fake identity information to rapidly register large numbers of accounts for subsequent brushing, traffic diversion, or fraud. This service provides foundational resources for downstream black-market activities and is the starting point of the account fraud chain. Bulk-registered accounts are easily used for sending spam or conducting targeted scams.",
     "usageExample": "Proxy registration open, the loophole is closing soon, hurry up.",
-    "relatedRisks": [
-      "R0030-001",
-      "R0030-005",
-      "R0030",
-      "R0017",
-      "R0017-001",
-      "R0005",
-      "R0032"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061",
-      "A0007",
-      "A0016-003",
-      "A0024",
-      "A0006-005",
-      "A0016-002",
-      "A0051",
-      "A0037",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0003",
-      "AT0006",
-      "AT0044",
-      "AT0009",
-      "AT0016",
-      "AT0007",
-      "AT0021"
-    ],
-    "relatedThreatActors": [
-      "TA0003",
-      "TA0009",
-      "TA0006",
-      "TA0007"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

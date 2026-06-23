@@ -15,29 +15,6 @@
     "category": "Data Leakage",
     "definition": "A key figure in underground data trading who owns and operates large-scale databases of leaked information.",
     "description": "The database owner is a top-tier role in the underground data ecosystem, responsible for illegally acquiring, organizing, and continuously updating various social engineering and credential-stuffing databases. By purchasing data from material suppliers or conducting their own attacks, they amass vast amounts of sensitive information and offer query, subscription, or bulk sale services to data buyers. They build and maintain the core infrastructure of underground data trading and are the source of leaked data circulation.",
-    "relatedRisks": [
-      "R0092",
-      "R0078",
-      "R0089"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0012"
-    ],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040"
-    ],
-    "relatedBusinessScenes": [
-      "BS00"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -45,7 +22,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

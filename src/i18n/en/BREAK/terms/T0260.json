@@ -17,53 +17,10 @@
     "definition": "Account dealers are underground industry operators who specialize in the bulk registration, nurturing, and sale of social media platform accounts.",
     "description": "Account dealers manage a complete account production chain, from obtaining verification codes via SMS relay platforms to simulating genuine user behavior for account warming, and finally selling graded accounts to downstream buyers. These buyers use the accounts for engagement farming, traffic redirection, fraud, or astroturfing campaigns. Account dealers form the foundational supply chain of the underground industry, underpinning a wide range of online fraudulent activities.",
     "usageExample": "Direct source, first-hand account dealer.",
-    "relatedRisks": [
-      "R0011",
-      "R0030",
-      "R0030-001",
-      "R0017",
-      "R0017-001",
-      "R0005",
-      "R0032"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061",
-      "A0007",
-      "A0016-003",
-      "A0024",
-      "A0006-005",
-      "A0016-002",
-      "A0051",
-      "A0037"
-    ],
-    "relatedAttackTools": [
-      "AT0006",
-      "AT0044",
-      "AT0009",
-      "AT0016",
-      "AT0003",
-      "AT0007",
-      "AT0021"
-    ],
-    "relatedThreatActors": [
-      "TA0007",
-      "TA0003",
-      "TA0009",
-      "TA0006"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

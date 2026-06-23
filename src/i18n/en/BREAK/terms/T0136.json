@@ -16,39 +16,10 @@
     "definition": "In the underground context, street pushing refers to using offline giveaways, QR-code scanning, and other bait to directly install scam apps or illicit services onto users’ phones as a traffic-generation method.",
     "description": "Unlike legitimate commercial street promotion, underground street pushing typically sets up in high-traffic commercial areas, residential communities, or rural markets, using free gifts such as tissues, eggs, or toys as bait to lure passersby into downloading scam applications disguised as normal apps. Once installed and granted permissions, the app can remotely read contacts, intercept SMS verification codes, or even directly control the phone to initiate transfers. This offline installation method bypasses online risk controls and specifically targets elderly or low-awareness groups, often resulting in financial losses that are nearly impossible to recover.",
     "usageExample": "Last month they set up a stand outside the wet market, giving away eggs to get people to scan a QR code and download that fake investment app—the backend enabled remote control straight away, and several elderly women had their bank cards completely drained.",
-    "relatedRisks": [
-      "R0095",
-      "R0150"
-    ],
-    "relatedAvoidances": [
-      "A0007-001",
-      "A0006-005",
-      "A0016",
-      "A0051",
-      "A0024",
-      "A0044",
-      "A0007",
-      "A0016-003",
-      "A0021",
-      "A0016-002",
-      "A0037",
-      "A0054"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0008",
-      "TA0015",
-      "TA0042"
-    ],
-    "relatedBusinessScenes": [
-      "BS04",
-      "BS01"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

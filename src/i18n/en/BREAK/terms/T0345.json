@@ -16,31 +16,6 @@
     "definition": "A commission model in money laundering operations where account providers are paid a percentage of the laundered amount.",
     "description": "In underground money laundering, criminal groups use third-party bank or payment accounts to move illicit funds. Account holders receive a cut based on the transaction volume, incentivizing them to supply more accounts. This practice is prevalent in telecom fraud and online gambling, often ensnaring account providers who may be unaware of the full criminal context, exposing them to legal liability and account freezes.",
     "usageExample": "Run all the A and B accounts with balances over 100k through the point system, using the standard rate.",
-    "relatedRisks": [
-      "R0060",
-      "R0093",
-      "R0094"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044",
-      "A0061"
-    ],
-    "relatedAttackTools": [
-      "AT0026",
-      "AT0039",
-      "AT0040"
-    ],
-    "relatedThreatActors": [
-      "TA0006-003",
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS01"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -48,7 +23,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

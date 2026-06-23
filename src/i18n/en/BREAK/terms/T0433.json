@@ -15,24 +15,6 @@
     "category": "Credit Fraud",
     "definition": "A one-time payment made by fraud operators to intermediaries to acquire exclusive control over a customer or bank account and all subsequent proceeds.",
     "description": "In loan fraud, fraud operators pay a fixed fee to intermediaries to buy out customer profiles, after which the operators independently handle loan applications, cash-outs, and other operations without sharing profits with the intermediary. In money laundering, this refers to purchasing a bank card outright without returning it to the original holder, using it to receive and move illicit funds until the card is flagged or frozen. This model breaks the traceability chain and complicates tracking.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044",
-      "A0024",
-      "A0016"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -40,7 +22,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

@@ -17,32 +17,6 @@
     "definition": "A type of record check that provides a text-only description of household members, including names, ID numbers, and relationships.",
     "description": "A text-based household registration information service provided by black market actors. It lacks photos but includes key textual data like names, ID numbers, and familial relationships. This plain text format is easy to transmit and process, often used for batch matching, credential stuffing, or as an index for querying more complete household information.",
     "usageExample": "\"Text-only full records with relationships, Chunjiang escrow accepted.\"",
-    "relatedRisks": [
-      "R0092",
-      "R0078",
-      "R0089",
-      "R0109"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0012",
-      "AT0064"
-    ],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040",
-      "TA0018"
-    ],
-    "relatedBusinessScenes": [
-      "BS00"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -50,7 +24,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

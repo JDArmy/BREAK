@@ -15,28 +15,6 @@
     "category": "Gambling",
     "definition": "A mid-level manager in a gambling ring who organizes games, collects house commissions, extends credit, and oversees operations.",
     "description": "Pa Tou Zi control the core of gambling operations by setting commission rates, issuing high-interest loans, and maintaining order at the table. They serve as a critical link between gang leaders and junior staff, and their activities often involve violent debt collection and illegal detention.",
-    "relatedRisks": [
-      "R0097",
-      "R0060"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0016",
-      "A0044",
-      "A0061",
-      "A0046",
-      "A0057",
-      "A0054"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0016",
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS06",
-      "BS01"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2025 H1 Internet Underground Economy Trend Review"
@@ -44,7 +22,6 @@
       {
         "title": "Black Market Big Data: 2025 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

@@ -15,35 +15,6 @@
     "category": "Data Leakage",
     "definition": "A hacking technique used to exfiltrate an entire database from a target server.",
     "description": "After gaining full access to a database through vulnerability exploitation, privilege escalation, or insider collusion, attackers download the entire database file. The stolen data typically contains massive volumes of user information and serves as the source for subsequent database sales and data laundering, causing irreparable damage to businesses and users.",
-    "relatedRisks": [
-      "R0078",
-      "R0089",
-      "R0092",
-      "R0109"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0012",
-      "AT0064"
-    ],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040",
-      "TA0018"
-    ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01",
-      "BS02",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -51,7 +22,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

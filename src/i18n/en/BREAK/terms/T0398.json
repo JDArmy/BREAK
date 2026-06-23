@@ -17,22 +17,6 @@
     "definition": "A short-term funding service provided by individuals or illegal financial organizations to clients whose bank loans are due and cannot be repaid, offering bridge capital at exorbitant interest rates.",
     "description": "When a borrower's bank loan matures and they cannot raise the funds to repay it, underground \"short-term bridge\" intermediaries step in to provide the capital to clear the loan. Once the bank renews the loan and disburses the new funds, the intermediary recoups the principal and charges upfront interest or high service fees. This operation often targets small and medium-sized business owners, with amounts ranging from 100,000 to 5 million yuan. If the loan renewal is not approved, the borrower is saddled with both the bank loan and the high-interest private debt, making them highly vulnerable to violent debt collection.",
     "usageExample": "Accepting [SME short-term bridge loans], 100k to 5 million.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -40,7 +24,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

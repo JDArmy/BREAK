@@ -17,26 +17,6 @@
     "definition": "An intermediary role in illegal data trading that provides trust endorsement and fund escrow services for buyers and sellers.",
     "description": "To mitigate the risks of exit scams and fraud in the underground data market, intermediaries akin to escrow agents have emerged. The guarantor verifies the seller's credentials, temporarily holds the funds, and releases payment to the seller only after the buyer confirms the data's accuracy, taking a commission from the transaction. This model makes illegal data trading more 'professional,' attracting more participants but also complicating efforts to track and crack down on these activities.",
     "usageExample": "\"Scam prevention tip: Be cautious in your transactions; it is recommended to use a reputable escrow agent.\"",
-    "relatedRisks": [
-      "R0078"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040"
-    ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -44,7 +24,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

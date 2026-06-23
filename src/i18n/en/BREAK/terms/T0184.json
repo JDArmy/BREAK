@@ -17,32 +17,6 @@
     "definition": "An illicit service for querying a target's spouse information through API vulnerabilities or social engineering databases.",
     "description": "Black market actors refer to spouse information as 'po' and obtain it through two main methods: real-time querying via system API vulnerabilities, or retrieval from previously leaked social engineering databases. Acquiring spouse information is commonly used to aid fraud, blackmail, or to complete a target's social relationship map.",
     "usageExample": "\"National text-based 'po' with marriage/divorce status, bonus: both parties' frequently used phone numbers, with dates, instant delivery.\"",
-    "relatedRisks": [
-      "R0092",
-      "R0078",
-      "R0089",
-      "R0109"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0012",
-      "AT0064"
-    ],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040",
-      "TA0018"
-    ],
-    "relatedBusinessScenes": [
-      "BS00"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -50,7 +24,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

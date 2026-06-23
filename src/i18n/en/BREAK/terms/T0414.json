@@ -17,27 +17,6 @@
     "definition": "In black-market fraud, a borrower with an extremely poor credit history who has been blacklisted by financial institutions.",
     "description": "These individuals are already unable to obtain loans through legitimate channels due to severe defaults or dishonesty. Fraud intermediaries exploit loopholes in some online lending platforms' risk controls, or use forged documents and identity packaging, to apply for loans specifically for these 'blacklisted' borrowers. Such operations often involve high fees and can easily lead to derivative problems like aggressive debt collection.",
     "usageExample": "Exclusive for blacklisted borrowers, matrix product, available to blacklisted individuals.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044",
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0049"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -45,7 +24,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

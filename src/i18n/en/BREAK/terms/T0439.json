@@ -16,22 +16,6 @@
     "definition": "The process by which a borrower takes out an initial loan and gradually sinks into a cycle of borrowing to repay existing debts until the situation spirals out of control.",
     "description": "Unable to repay the initial loan, the debtor is forced to take new loans to pay old ones, causing interest and principal to snowball until the debt becomes completely unmanageable. During this process, borrowers are often lured into illegal channels such as loan sharking and fraudulent lending schemes, sinking deeper into financial distress—the opposite of getting ashore.",
     "usageExample": "I sent a message but haven't heard back. Not sure if it'll work out. I really can't borrow anymore! I've gotten ashore twice but sank back down both times.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -39,7 +23,6 @@
       {
         "title": "Uncovering a loan-broker scam: 150,000 yuan deducted from a 250,000 yuan loan..."
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

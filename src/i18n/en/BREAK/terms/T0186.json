@@ -17,36 +17,6 @@
     "definition": "The personal identity information of the actual user or registered owner of a mobile phone number.",
     "description": "In illegal data trading, 'owner info' typically includes the name, national ID number, and linked accounts of the phone number's user. Fraudsters obtain this data through insider access or leaked databases, using it for targeted scams, account takeover, or identity theft. This information is often sold in bulk at low prices, serving as a foundational resource for downstream crimes.",
     "usageExample": "Owner info for 4u each, orders fulfilled via insider access, any escrow accepted, priority for those with groups.",
-    "relatedRisks": [
-      "R0078",
-      "R0089",
-      "R0092",
-      "R0109"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0007",
-      "A0016-003",
-      "A0024",
-      "A0021",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0012",
-      "AT0064"
-    ],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040",
-      "TA0018"
-    ],
-    "relatedBusinessScenes": [
-      "BS00"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -54,7 +24,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

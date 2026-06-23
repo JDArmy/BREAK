@@ -15,32 +15,6 @@
     "category": "Data Leakage",
     "definition": "A downstream fraud tactic in which operators manually dial victims to conduct direct harassment or scams.",
     "description": "After acquiring personal information through illegal data trading, downstream marketing or fraud groups contact targets one by one via manual dialing. Compared to automated calls, this “manual dialing” approach is more flexible and is often used to carry out high-return targeted scams or aggressive telemarketing. Insiders use this term to evaluate data conversion performance.",
-    "relatedRisks": [
-      "R0078",
-      "R0089",
-      "R0092",
-      "R0109"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049"
-    ],
-    "relatedAttackTools": [
-      "AT0012",
-      "AT0064"
-    ],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040",
-      "TA0018"
-    ],
-    "relatedBusinessScenes": [
-      "BS00"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -48,7 +22,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

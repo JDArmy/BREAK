@@ -14,25 +14,6 @@
     "definition": "A high-interest lending scheme disguised as an electronics rental arrangement.",
     "description": "Intermediaries lure students or financially strained individuals with promises of no verification and low barriers, signing them to rental contracts whose effective annual interest far exceeds legal limits. When a borrower defaults, they face not only steep penalties but also potential violent collection or litigation, blurring the line between leasing and lending.",
     "usageExample": "Credit score 650+, device rental loan. Agencies looking to cash out, come discuss—high volume, top quality.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044",
-      "A0051",
-      "A0006-005",
-      "A0016"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report"
@@ -40,7 +21,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

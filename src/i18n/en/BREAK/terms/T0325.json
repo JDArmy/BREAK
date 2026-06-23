@@ -17,28 +17,6 @@
     "definition": "A complete identity resource pack for account opening, containing an ID card, bank card, SIM card, and U-shield, serving as the basic configuration for building money laundering accounts in bulk.",
     "description": "A four-piece set provides all the core elements needed for fraudulent account opening. After purchase, criminals can register for online banking, link third-party payment services, and activate large transfer permissions. These accounts are used to receive, split, and transfer illicit funds, forming an anonymous money flow chain. Because the complete identity set can bypass in-person bank verification, it is often used to build account pools for money muling on a large scale. Once such a set enters the market, it signifies a deep abuse of the corresponding citizen's personal information.",
     "usageExample": "Selling four-piece bank card sets.",
-    "relatedRisks": [
-      "R0060",
-      "R0093"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [
-      "AT0039",
-      "AT0026"
-    ],
-    "relatedThreatActors": [
-      "TA0006-003",
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS01"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -46,7 +24,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

@@ -17,22 +17,6 @@
     "definition": "A fraud model where a ring recruits individuals with good credit ('blank slates') to purchase a car for someone else; the actual user then defaults, shifting the debt to the straw buyer and the lender.",
     "description": "The fraud ring pays a fee to lure clients with good credit to use their identity to finance a car for someone else. The vehicle is actually used by a ride-hailing company or a subprime borrower, who makes a few monthly payments before defaulting and disposing of the vehicle for profit. Ultimately, the straw buyer is left with massive debt, and the financial institution suffers a bad loan.",
     "usageExample": "Straw buyer car deals, 2-5 cars per person, done in 10 days.",
-    "relatedRisks": [
-      "R0096"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [],
-    "relatedBusinessScenes": [
-      "BS01",
-      "BS11"
-    ],
     "references": [
       {
         "title": "[Loan Fraud] Anatomy of the 'Straw Buyer' Car Loan Fraud Technique"
@@ -43,7 +27,6 @@
       {
         "title": "Black Market Big Data: Exposing Malicious Loan Brokers"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

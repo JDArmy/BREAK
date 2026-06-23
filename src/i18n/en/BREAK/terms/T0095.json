@@ -15,29 +15,6 @@
     "category": "Data Leakage",
     "definition": "A platform or site on the black market specifically for trading carding information, such as CVV data.",
     "description": "A carding shop is an online marketplace in the credit card fraud industry chain. Stocked by numerous material suppliers, it primarily sells 'material' containing card numbers, expiration dates, and CVV codes. Transactions are typically settled in cryptocurrency to evade oversight, with the shop itself providing escrow and arbitration services. Such platforms significantly lower the barrier to entry for carding crimes, allowing buyers without hacking skills to easily acquire criminal tools.",
-    "relatedRisks": [
-      "R0078",
-      "R0089"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049",
-      "A0024",
-      "A0054"
-    ],
-    "relatedAttackTools": [],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040"
-    ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -45,7 +22,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

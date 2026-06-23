@@ -16,50 +16,10 @@
     "category": "Business Fraud",
     "definition": "The practice of generating large-scale traffic through paid placements or artificial inflation to test conversion rates or fabricate popularity.",
     "description": "Black market operators use bot accounts or automated scripts to generate a high volume of clicks, views, or visits in a short period. This is used to test new scam pages for traffic generation or to create fake popularity for live streams and product listings, thereby attracting real users to participate.",
-    "relatedRisks": [
-      "R0017",
-      "R0017-001",
-      "R0005",
-      "R0024",
-      "R0007-003"
-    ],
-    "relatedAvoidances": [
-      "A0015",
-      "A0021",
-      "A0059",
-      "A0060",
-      "A0061",
-      "A0038",
-      "A0016-001",
-      "A0004",
-      "A0006-005",
-      "A0016-002",
-      "A0051",
-      "A0037"
-    ],
-    "relatedAttackTools": [
-      "AT0044",
-      "AT0009",
-      "AT0016",
-      "AT0005",
-      "AT0050"
-    ],
-    "relatedThreatActors": [
-      "TA0009",
-      "TA0006",
-      "TA0007",
-      "TA0013"
-    ],
-    "relatedBusinessScenes": [
-      "BS02",
-      "BS05",
-      "BS04"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Internet Underground Economy Trend Annual Review"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

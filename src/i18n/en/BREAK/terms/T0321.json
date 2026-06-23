@@ -17,33 +17,6 @@
     "definition": "A UnionPay-based payment QR code used to receive or transfer illicit funds, serving as a collection entry point in money muling operations that rely on bank clearing networks.",
     "description": "UnionPay QR codes leverage the cross-bank clearing network of UnionPay, covering the vast majority of bank accounts. Criminal actors use them as a front-end tool for collecting funds in money muling schemes. During operations, money mule organizers or platform operators generate dynamic or static QR codes for victims to scan and pay. The funds are then rapidly consolidated into controlled accounts through UnionPay channels. Due to their broad bank-level coverage and instant settlement, these codes are often used to split large sums into small, multiple transactions to evade risk monitoring systems.",
     "usageExample": "QR to QR, QR to USDT, UnionPay QR.",
-    "relatedRisks": [
-      "R0060",
-      "R0093"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044",
-      "A0006-005",
-      "A0016-002",
-      "A0051",
-      "A0037"
-    ],
-    "relatedAttackTools": [
-      "AT0026",
-      "AT0039",
-      "AT0040"
-    ],
-    "relatedThreatActors": [
-      "TA0006-003",
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS01"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -51,7 +24,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

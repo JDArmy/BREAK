@@ -15,37 +15,6 @@
     "category": "Data Leakage",
     "definition": "An illegal service that tracks an individual's travel patterns by aggregating data from transportation, accommodation, and other sources.",
     "description": "This service integrates data from hotel stays, traffic checkpoints, and other sources to map a target's complete activity trail. Underground actors use this intelligence to support serious crimes such as aggressive debt collection, illegal investigation, and even kidnapping. Its danger lies in piecing together fragmented information into a comprehensive portrait of a person's movements.",
-    "relatedRisks": [
-      "R0078",
-      "R0089",
-      "R0092",
-      "R0109"
-    ],
-    "relatedAvoidances": [
-      "A0050",
-      "A0035",
-      "A0016",
-      "A0052",
-      "A0044",
-      "A0049",
-      "A0015",
-      "A0046",
-      "A0057",
-      "A0054"
-    ],
-    "relatedAttackTools": [
-      "AT0012",
-      "AT0064"
-    ],
-    "relatedThreatActors": [
-      "TA0005",
-      "TA0040",
-      "TA0018"
-    ],
-    "relatedBusinessScenes": [
-      "BS00",
-      "BS01"
-    ],
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
@@ -53,7 +22,6 @@
       {
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }

@@ -17,29 +17,6 @@
     "definition": "An individual who rents or sells their own identity information and accounts to underground operations for profit.",
     "description": "To earn a commission, these individuals actively or passively provide their ID cards, bank cards, and payment accounts to money laundering crews for registering merchant accounts, receiving illicit funds, or acting as a figurehead. They are often unaware of the specific source and destination of the funds, but once the account is implicated in a case, they, as the account holder, will be the first to face legal sanctions.",
     "usageExample": "Commission for account providers: 4 USDT, come on board.",
-    "relatedRisks": [
-      "R0060",
-      "R0093"
-    ],
-    "relatedAvoidances": [
-      "A0024",
-      "A0015",
-      "A0016",
-      "A0054",
-      "A0044"
-    ],
-    "relatedAttackTools": [
-      "AT0039",
-      "AT0026"
-    ],
-    "relatedThreatActors": [
-      "TA0005-001",
-      "TA0006-003",
-      "TA0014"
-    ],
-    "relatedBusinessScenes": [
-      "BS01"
-    ],
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
@@ -47,7 +24,6 @@
       {
         "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
       }
-    ],
-    "updated": "2026-06-16"
+    ]
   }
 }
