@@ -38,6 +38,7 @@ const baseProps = {
   hasActiveAttackPathFilters: false,
   selectedNodeBusinessSceneImpactSummary: null,
   selectedNodeCoverageSummary: null,
+  selectedNodeRelatedEntitySummary: null,
   isCurrentNodeRoot: true,
   selectedNetworkRelations: [],
   relKey: "R0001",
