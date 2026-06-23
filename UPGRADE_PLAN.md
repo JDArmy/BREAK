@@ -34,7 +34,7 @@
 未完成工作：
 - 基于 `reference-health.domainGroups` 按策略分批处理 review、timeout、connection_error，优先官方源、高价值案例和 primary source。
 - 对 `manual_review_preserve`、`retry_with_long_timeout_preserve`、`replace_or_add_primary` 等策略建立固定处理流程，减少误报和重复复核成本。
-- P1 官方源复测后，继续处理仍为 `mps.gov.cn` 521 的链接；`justice.gov`/`moj.gov.cn` connection_error 已确认浏览器忽略证书错误后可访问，后续保留复核记录即可。
+- P1 官方源复测后，继续处理剩余 `mps.gov.cn` 521 链接；已将 23 条中的 16 条替换为新华社、中国政府网、央视网、中国警察网、使领馆、光明网、解放日报等可访问来源，剩余 7 条因未找到高置信替代源继续保留复核队列。`justice.gov`/`moj.gov.cn` connection_error 已确认浏览器忽略证书错误后可访问，后续保留复核记录即可。
 
 落点：`.github/workflows/link-check.yml`、`scripts/validate/references-health.mjs`、`scripts/validate/reference-domain-plan.mjs`、`research/search-reports/reference-health.*`。
 
