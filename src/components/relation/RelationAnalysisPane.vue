@@ -2,6 +2,7 @@
 import { computed, nextTick, ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
 import { useBreakpoints } from "@/composables/useBreakpoints";
+import { useIncrementalVisibleList } from "@/composables/useIncrementalVisibleList";
 import RelationNodeDetailContent from "@/components/relation/RelationNodeDetailContent.vue";
 import RelationNodeSpecialInsightBlock from "@/components/relation/RelationNodeSpecialInsightBlock.vue";
 import {
@@ -106,9 +107,6 @@ const MOBILE_COVERAGE_ITEM_LIMIT = 6;
 const MOBILE_ATTACK_PATH_LIMIT = 8;
 const MOBILE_SHOW_MORE_STEP = 50;
 
-const visibleCoverageItemLimit = ref(MOBILE_COVERAGE_ITEM_LIMIT);
-const visibleAttackPathLimit = ref(MOBILE_ATTACK_PATH_LIMIT);
-
 const filterTypes: AttackPathFilterType[] = [
   RelationType.threatActor,
   RelationType.attackTool,
@@ -177,64 +175,39 @@ const hasAnyAnalysis = computed(
     props.rootNodeRelations.length > 0
 );
 
-const displayedCoverageItems = computed(() => {
-  const items = props.riskAvoidanceCoverage?.items ?? [];
-  if (!isMobile.value) return items;
-  return items.slice(0, visibleCoverageItemLimit.value);
-});
-
-const hiddenCoverageItemCount = computed(() =>
-  Math.max(
-    0,
-    (props.riskAvoidanceCoverage?.items.length ?? 0) -
-      displayedCoverageItems.value.length
-  )
-);
-
-const displayedAttackPathDetails = computed(() => {
-  if (!isMobile.value) return props.attackPathDetails;
-  return props.attackPathDetails.slice(0, visibleAttackPathLimit.value);
-});
-
-const hiddenAttackPathCount = computed(() =>
-  Math.max(
-    0,
-    props.attackPathDetails.length - displayedAttackPathDetails.value.length
-  )
-);
-
-const hasExpandedCoverageItems = computed(
-  () => visibleCoverageItemLimit.value > MOBILE_COVERAGE_ITEM_LIMIT
-);
-
-const hasExpandedAttackPaths = computed(
-  () => visibleAttackPathLimit.value > MOBILE_ATTACK_PATH_LIMIT
-);
-
-const showMoreCoverageItems = () => {
-  if (hiddenCoverageItemCount.value <= 0) {
-    visibleCoverageItemLimit.value = MOBILE_COVERAGE_ITEM_LIMIT;
-    return;
+const {
+  hiddenCount: hiddenCoverageItemCount,
+  hasExpanded: hasExpandedCoverageItems,
+  reset: resetDisplayedCoverageItems,
+  showMoreOrReset: showMoreCoverageItems,
+  visibleItems: displayedCoverageItems,
+} = useIncrementalVisibleList(
+  computed(() => props.riskAvoidanceCoverage?.items ?? []),
+  {
+    enabled: isMobile,
+    initialLimit: MOBILE_COVERAGE_ITEM_LIMIT,
+    step: MOBILE_SHOW_MORE_STEP,
   }
+);
 
-  visibleCoverageItemLimit.value += MOBILE_SHOW_MORE_STEP;
-};
-
-const showMoreAttackPaths = () => {
-  if (hiddenAttackPathCount.value <= 0) {
-    visibleAttackPathLimit.value = MOBILE_ATTACK_PATH_LIMIT;
-    return;
-  }
-
-  visibleAttackPathLimit.value += MOBILE_SHOW_MORE_STEP;
-};
+const {
+  hiddenCount: hiddenAttackPathCount,
+  hasExpanded: hasExpandedAttackPaths,
+  reset: resetDisplayedAttackPaths,
+  showMoreOrReset: showMoreAttackPaths,
+  visibleItems: displayedAttackPathDetails,
+} = useIncrementalVisibleList(computed(() => props.attackPathDetails), {
+  enabled: isMobile,
+  initialLimit: MOBILE_ATTACK_PATH_LIMIT,
+  step: MOBILE_SHOW_MORE_STEP,
+});
 
 const resetColumnScroll = () => {
   nextTick(() => {
     const preservedPane = preserveScrollPane.value;
     preserveScrollPane.value = null;
-    visibleCoverageItemLimit.value = MOBILE_COVERAGE_ITEM_LIMIT;
-    visibleAttackPathLimit.value = MOBILE_ATTACK_PATH_LIMIT;
+    resetDisplayedCoverageItems();
+    resetDisplayedAttackPaths();
     [
       { key: "left", column: coverageColumnRef.value },
       { key: "middle", column: pathColumnRef.value },

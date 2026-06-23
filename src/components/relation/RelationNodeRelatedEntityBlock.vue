@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { computed, ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
+import { useIncrementalVisibleList } from "@/composables/useIncrementalVisibleList";
 import type { NodeRelatedEntitySummary } from "@/components/relation/relationNodeDrawerInsightTypes";
 import "@/components/relation/relationNodeDrawerInsights.css";
 
@@ -18,34 +18,15 @@ const { t } = useI18n();
 
 const ITEM_LIMIT = 6;
 const SHOW_MORE_STEP = 50;
-const visibleItemLimit = ref(ITEM_LIMIT);
-const visibleItems = computed(() => {
-  const items = props.summary?.items ?? [];
-  return items.slice(0, visibleItemLimit.value);
+const {
+  hiddenCount: hiddenItemCount,
+  hasExpanded: hasExpandedItems,
+  showMoreOrReset: showMoreItems,
+  visibleItems,
+} = useIncrementalVisibleList(() => props.summary?.items ?? [], {
+  initialLimit: ITEM_LIMIT,
+  step: SHOW_MORE_STEP,
 });
-const hiddenItemCount = computed(() =>
-  Math.max(0, (props.summary?.items.length ?? 0) - visibleItems.value.length)
-);
-const hasExpandedItems = computed(() => visibleItemLimit.value > ITEM_LIMIT);
-
-const showMoreItems = () => {
-  if (hiddenItemCount.value <= 0) {
-    visibleItemLimit.value = ITEM_LIMIT;
-    return;
-  }
-
-  visibleItemLimit.value += SHOW_MORE_STEP;
-};
-
-watch(
-  () =>
-    props.summary?.items
-      .map((item) => `${item.type}:${item.id}:${item.relationKey}`)
-      .join("|"),
-  () => {
-    visibleItemLimit.value = ITEM_LIMIT;
-  }
-);
 </script>
 
 <template>

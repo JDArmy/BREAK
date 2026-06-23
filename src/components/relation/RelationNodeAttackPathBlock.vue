@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { computed, ref, watch } from "vue";
+import { computed } from "vue";
 import { useI18n } from "vue-i18n";
+import { useIncrementalVisibleList } from "@/composables/useIncrementalVisibleList";
 import type { AttackPathExplanation } from "@/components/relation/relationNodeDrawerInsightTypes";
 import {
   RelationType,
@@ -28,7 +29,6 @@ const { t } = useI18n();
 
 const DEFAULT_ATTACK_PATH_PREVIEW_LIMIT = 2;
 const SHOW_MORE_STEP = 50;
-const visibleAttackPathLimit = ref(DEFAULT_ATTACK_PATH_PREVIEW_LIMIT);
 
 const pathMatchesFilters = (
   path: AttackPathExplanation,
@@ -58,18 +58,16 @@ const filteredAttackPathExplanations = computed(() =>
 
 const hasAttackPathFilters = computed(() => props.hasActiveAttackPathFilters);
 
-const visibleAttackPathExplanations = computed(() => {
-  return filteredAttackPathExplanations.value.slice(
-    0,
-    visibleAttackPathLimit.value
-  );
+const {
+  hiddenCount: hiddenAttackPathCount,
+  hasExpanded: hasExpandedAttackPaths,
+  reset: resetVisibleAttackPaths,
+  showMoreOrReset: showMoreAttackPaths,
+  visibleItems: visibleAttackPathExplanations,
+} = useIncrementalVisibleList(filteredAttackPathExplanations, {
+  initialLimit: DEFAULT_ATTACK_PATH_PREVIEW_LIMIT,
+  step: SHOW_MORE_STEP,
 });
-
-const hiddenAttackPathCount = computed(
-  () =>
-    filteredAttackPathExplanations.value.length -
-    visibleAttackPathExplanations.value.length
-);
 
 const getDisplayedThreatActors = (path: AttackPathExplanation) => {
   const threatActorId = props.attackPathFilters[RelationType.threatActor];
@@ -141,35 +139,12 @@ const updateAttackPathFilter = (
   type: AttackPathFilterType,
   value: string | undefined
 ) => {
-  visibleAttackPathLimit.value = DEFAULT_ATTACK_PATH_PREVIEW_LIMIT;
+  resetVisibleAttackPaths();
   emit("update:attack-path-filters", {
     ...props.attackPathFilters,
     [type]: value || undefined,
   });
 };
-
-const hasExpandedAttackPaths = computed(
-  () => visibleAttackPathLimit.value > DEFAULT_ATTACK_PATH_PREVIEW_LIMIT
-);
-
-const showMoreAttackPaths = () => {
-  if (hiddenAttackPathCount.value <= 0) {
-    visibleAttackPathLimit.value = DEFAULT_ATTACK_PATH_PREVIEW_LIMIT;
-    return;
-  }
-
-  visibleAttackPathLimit.value += SHOW_MORE_STEP;
-};
-
-watch(
-  () =>
-    props.selectedNodeAttackPathExplanations
-      .map((path) => path.pathKey)
-      .join("|"),
-  () => {
-    visibleAttackPathLimit.value = DEFAULT_ATTACK_PATH_PREVIEW_LIMIT;
-  }
-);
 </script>
 
 <template>

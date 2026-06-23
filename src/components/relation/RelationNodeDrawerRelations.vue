@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { computed, reactive, ref, watch } from "vue";
+import { computed, reactive, watch } from "vue";
 import { useI18n } from "vue-i18n";
+import { useIncrementalVisibleList } from "@/composables/useIncrementalVisibleList";
 
 interface RelationSummary {
   relationKey: string;
@@ -42,7 +43,6 @@ const relationFilters = reactive({
 
 const RELATION_PREVIEW_LIMIT = 15;
 const SHOW_MORE_STEP = 50;
-const visibleRelationLimit = ref(RELATION_PREVIEW_LIMIT);
 
 const uniqueSortedValues = (values: string[]) =>
   [...new Set(values.filter(Boolean))].sort((first, second) =>
@@ -107,16 +107,16 @@ const tableRows = computed(() =>
   }))
 );
 
-const visibleTableRows = computed(() =>
-  tableRows.value.slice(0, visibleRelationLimit.value)
-);
-
-const hiddenRelationCount = computed(
-  () => tableRows.value.length - visibleTableRows.value.length
-);
-const hasExpandedRelations = computed(
-  () => visibleRelationLimit.value > RELATION_PREVIEW_LIMIT
-);
+const {
+  hiddenCount: hiddenRelationCount,
+  hasExpanded: hasExpandedRelations,
+  reset: resetVisibleRelations,
+  showMoreOrReset: showMoreRelations,
+  visibleItems: visibleTableRows,
+} = useIncrementalVisibleList(tableRows, {
+  initialLimit: RELATION_PREVIEW_LIMIT,
+  step: SHOW_MORE_STEP,
+});
 
 const getDirectionLabel = (directionKey: string) =>
   directionKey === "outgoing"
@@ -144,21 +144,12 @@ const resetRelationFilters = () => {
   relationFilters.direction = "";
   relationFilters.relationType = "";
   relationFilters.directness = "";
-  visibleRelationLimit.value = RELATION_PREVIEW_LIMIT;
+  resetVisibleRelations();
 };
 
 const setDirectionFilter = (direction: "incoming" | "outgoing") => {
   relationFilters.direction = direction;
-  visibleRelationLimit.value = RELATION_PREVIEW_LIMIT;
-};
-
-const showMoreRelations = () => {
-  if (hiddenRelationCount.value <= 0) {
-    visibleRelationLimit.value = RELATION_PREVIEW_LIMIT;
-    return;
-  }
-
-  visibleRelationLimit.value += SHOW_MORE_STEP;
+  resetVisibleRelations();
 };
 
 defineExpose({
@@ -194,9 +185,7 @@ watch(
     relationType: relationFilters.relationType,
     directness: relationFilters.directness,
   }),
-  () => {
-    visibleRelationLimit.value = RELATION_PREVIEW_LIMIT;
-  }
+  resetVisibleRelations
 );
 
 watch(

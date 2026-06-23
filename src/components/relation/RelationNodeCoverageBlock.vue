@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { computed, ref, watch } from "vue";
 import { useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
+import { useIncrementalVisibleList } from "@/composables/useIncrementalVisibleList";
 import type { NodeCoverageSummary } from "@/components/relation/relationNodeDrawerInsightTypes";
 import { RelationType } from "@/views/relation/relationTypes";
 import { pushDetailNodeRoute } from "@/views/relation/relationNodeRouting";
@@ -16,33 +16,15 @@ const router = useRouter();
 
 const COVERAGE_ITEM_LIMIT = 5;
 const SHOW_MORE_STEP = 50;
-const visibleCoverageItemLimit = ref(COVERAGE_ITEM_LIMIT);
-const visibleItems = computed(() => {
-  const items = props.summary?.items ?? [];
-  return items.slice(0, visibleCoverageItemLimit.value);
+const {
+  hiddenCount: hiddenItemCount,
+  hasExpanded: hasExpandedCoverageItems,
+  showMoreOrReset: showMoreCoverageItems,
+  visibleItems,
+} = useIncrementalVisibleList(() => props.summary?.items ?? [], {
+  initialLimit: COVERAGE_ITEM_LIMIT,
+  step: SHOW_MORE_STEP,
 });
-const hiddenItemCount = computed(() =>
-  Math.max(0, (props.summary?.items.length ?? 0) - visibleItems.value.length)
-);
-const hasExpandedCoverageItems = computed(
-  () => visibleCoverageItemLimit.value > COVERAGE_ITEM_LIMIT
-);
-
-const showMoreCoverageItems = () => {
-  if (hiddenItemCount.value <= 0) {
-    visibleCoverageItemLimit.value = COVERAGE_ITEM_LIMIT;
-    return;
-  }
-
-  visibleCoverageItemLimit.value += SHOW_MORE_STEP;
-};
-
-watch(
-  () => props.summary?.items.map((item) => `${item.type}:${item.id}`).join("|"),
-  () => {
-    visibleCoverageItemLimit.value = COVERAGE_ITEM_LIMIT;
-  }
-);
 
 const openCoverageEntityDetail = (item: { type: string; id: string }) => {
   if (
