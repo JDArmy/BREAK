@@ -1,5 +1,14 @@
 # Change log
 
+## 2.22.0
+
+- 新增 BREAK 知识库 Claude Code / Codex Skill，支持关键词搜索、ID 精确查询和问答咨询模式
+- 新增 `SKILL.md`（中文）和 `SKILL_en.md`（英文）Skill 定义文件
+- 新增 `scripts/skill/break_search.py` Python 搜索引擎，零外部依赖，支持中英文自动检测
+- 新增 `scripts/skill/export_en_data.mjs` 英文数据预构建脚本，生成 `public/data/break-data-en.json`
+- 新增 `scripts/skill/package_skill.sh` 一键打包脚本，输出可分发的 Skill 目录
+- 构建链集成 `export:data-en`，确保每次构建同步生成英文数据包
+
 ## 2.21.28
 
 - 增强 `i18n-sync --strict`，校验英文 i18n 不包含结构字段、关系字段、ID 数组、`updated` 和引用链接等结构数据

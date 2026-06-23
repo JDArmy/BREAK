@@ -48,6 +48,10 @@ scripts/search/*
 !scripts/search/common.mjs
 !scripts/validate/
 !scripts/validate/*.mjs
+!scripts/skill/
+!scripts/skill/*.mjs
+!scripts/skill/*.py
+!scripts/skill/*.sh
 .claude/
 plans/
 
