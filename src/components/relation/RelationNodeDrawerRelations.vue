@@ -41,7 +41,8 @@ const relationFilters = reactive({
 });
 
 const RELATION_PREVIEW_LIMIT = 15;
-const showAllRelations = ref(false);
+const SHOW_MORE_STEP = 50;
+const visibleRelationLimit = ref(RELATION_PREVIEW_LIMIT);
 
 const uniqueSortedValues = (values: string[]) =>
   [...new Set(values.filter(Boolean))].sort((first, second) =>
@@ -107,13 +108,14 @@ const tableRows = computed(() =>
 );
 
 const visibleTableRows = computed(() =>
-  showAllRelations.value
-    ? tableRows.value
-    : tableRows.value.slice(0, RELATION_PREVIEW_LIMIT)
+  tableRows.value.slice(0, visibleRelationLimit.value)
 );
 
 const hiddenRelationCount = computed(
   () => tableRows.value.length - visibleTableRows.value.length
+);
+const hasExpandedRelations = computed(
+  () => visibleRelationLimit.value > RELATION_PREVIEW_LIMIT
 );
 
 const getDirectionLabel = (directionKey: string) =>
@@ -142,16 +144,21 @@ const resetRelationFilters = () => {
   relationFilters.direction = "";
   relationFilters.relationType = "";
   relationFilters.directness = "";
-  showAllRelations.value = false;
+  visibleRelationLimit.value = RELATION_PREVIEW_LIMIT;
 };
 
 const setDirectionFilter = (direction: "incoming" | "outgoing") => {
   relationFilters.direction = direction;
-  showAllRelations.value = false;
+  visibleRelationLimit.value = RELATION_PREVIEW_LIMIT;
 };
 
-const toggleShowAllRelations = () => {
-  showAllRelations.value = !showAllRelations.value;
+const showMoreRelations = () => {
+  if (hiddenRelationCount.value <= 0) {
+    visibleRelationLimit.value = RELATION_PREVIEW_LIMIT;
+    return;
+  }
+
+  visibleRelationLimit.value += SHOW_MORE_STEP;
 };
 
 defineExpose({
@@ -188,7 +195,7 @@ watch(
     directness: relationFilters.directness,
   }),
   () => {
-    showAllRelations.value = false;
+    visibleRelationLimit.value = RELATION_PREVIEW_LIMIT;
   }
 );
 
@@ -395,13 +402,13 @@ const relationRowClassName = ({ row }: { row: { isActive: boolean } }) =>
     </el-table>
   </div>
   <button
-    v-if="hiddenRelationCount > 0 || showAllRelations"
+    v-if="hiddenRelationCount > 0 || hasExpandedRelations"
     type="button"
     class="node-relation-more node-attack-path-more-button"
-    @click="toggleShowAllRelations"
+    @click="showMoreRelations"
   >
     {{
-      showAllRelations
+      hiddenRelationCount <= 0
         ? t("relationView.collapseRelationCount")
         : t("relationView.hiddenRelationCount", {
             count: hiddenRelationCount,

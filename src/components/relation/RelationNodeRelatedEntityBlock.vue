@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
+import { computed, ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
 import type { NodeRelatedEntitySummary } from "@/components/relation/relationNodeDrawerInsightTypes";
 import "@/components/relation/relationNodeDrawerInsights.css";
@@ -17,18 +17,35 @@ const emit = defineEmits<{
 const { t } = useI18n();
 
 const ITEM_LIMIT = 6;
-const showAllItems = ref(false);
+const SHOW_MORE_STEP = 50;
+const visibleItemLimit = ref(ITEM_LIMIT);
 const visibleItems = computed(() => {
   const items = props.summary?.items ?? [];
-  return showAllItems.value ? items : items.slice(0, ITEM_LIMIT);
+  return items.slice(0, visibleItemLimit.value);
 });
 const hiddenItemCount = computed(() =>
   Math.max(0, (props.summary?.items.length ?? 0) - visibleItems.value.length)
 );
+const hasExpandedItems = computed(() => visibleItemLimit.value > ITEM_LIMIT);
 
-const toggleShowAllItems = () => {
-  showAllItems.value = !showAllItems.value;
+const showMoreItems = () => {
+  if (hiddenItemCount.value <= 0) {
+    visibleItemLimit.value = ITEM_LIMIT;
+    return;
+  }
+
+  visibleItemLimit.value += SHOW_MORE_STEP;
 };
+
+watch(
+  () =>
+    props.summary?.items
+      .map((item) => `${item.type}:${item.id}:${item.relationKey}`)
+      .join("|"),
+  () => {
+    visibleItemLimit.value = ITEM_LIMIT;
+  }
+);
 </script>
 
 <template>
@@ -75,13 +92,13 @@ const toggleShowAllItems = () => {
         </div>
       </div>
       <button
-        v-if="hiddenItemCount > 0 || showAllItems"
+        v-if="hiddenItemCount > 0 || hasExpandedItems"
         type="button"
         class="node-relation-more node-attack-path-more-button"
-        @click="toggleShowAllItems"
+        @click="showMoreItems"
       >
         {{
-          showAllItems
+          hiddenItemCount <= 0
             ? t("relationView.collapseRelatedEntityCount")
             : t("relationView.hiddenRelatedEntityCount", {
                 count: hiddenItemCount,

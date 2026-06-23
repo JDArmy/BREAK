@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, nextTick, ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
+import { useBreakpoints } from "@/composables/useBreakpoints";
 import RelationNodeDetailContent from "@/components/relation/RelationNodeDetailContent.vue";
 import RelationNodeSpecialInsightBlock from "@/components/relation/RelationNodeSpecialInsightBlock.vue";
 import {
@@ -95,10 +96,18 @@ const emit = defineEmits<{
 }>();
 
 const { t } = useI18n();
+const { isMobile } = useBreakpoints();
 const coverageColumnRef = ref<HTMLElement | null>(null);
 const pathColumnRef = ref<HTMLElement | null>(null);
 const detailColumnRef = ref<HTMLElement | null>(null);
 const preserveScrollPane = ref<"left" | "middle" | "right" | null>(null);
+
+const MOBILE_COVERAGE_ITEM_LIMIT = 6;
+const MOBILE_ATTACK_PATH_LIMIT = 8;
+const MOBILE_SHOW_MORE_STEP = 50;
+
+const visibleCoverageItemLimit = ref(MOBILE_COVERAGE_ITEM_LIMIT);
+const visibleAttackPathLimit = ref(MOBILE_ATTACK_PATH_LIMIT);
 
 const filterTypes: AttackPathFilterType[] = [
   RelationType.threatActor,
@@ -169,13 +178,63 @@ const hasAnyAnalysis = computed(
 );
 
 const displayedCoverageItems = computed(() => {
-  return props.riskAvoidanceCoverage?.items ?? [];
+  const items = props.riskAvoidanceCoverage?.items ?? [];
+  if (!isMobile.value) return items;
+  return items.slice(0, visibleCoverageItemLimit.value);
 });
+
+const hiddenCoverageItemCount = computed(() =>
+  Math.max(
+    0,
+    (props.riskAvoidanceCoverage?.items.length ?? 0) -
+      displayedCoverageItems.value.length
+  )
+);
+
+const displayedAttackPathDetails = computed(() => {
+  if (!isMobile.value) return props.attackPathDetails;
+  return props.attackPathDetails.slice(0, visibleAttackPathLimit.value);
+});
+
+const hiddenAttackPathCount = computed(() =>
+  Math.max(
+    0,
+    props.attackPathDetails.length - displayedAttackPathDetails.value.length
+  )
+);
+
+const hasExpandedCoverageItems = computed(
+  () => visibleCoverageItemLimit.value > MOBILE_COVERAGE_ITEM_LIMIT
+);
+
+const hasExpandedAttackPaths = computed(
+  () => visibleAttackPathLimit.value > MOBILE_ATTACK_PATH_LIMIT
+);
+
+const showMoreCoverageItems = () => {
+  if (hiddenCoverageItemCount.value <= 0) {
+    visibleCoverageItemLimit.value = MOBILE_COVERAGE_ITEM_LIMIT;
+    return;
+  }
+
+  visibleCoverageItemLimit.value += MOBILE_SHOW_MORE_STEP;
+};
+
+const showMoreAttackPaths = () => {
+  if (hiddenAttackPathCount.value <= 0) {
+    visibleAttackPathLimit.value = MOBILE_ATTACK_PATH_LIMIT;
+    return;
+  }
+
+  visibleAttackPathLimit.value += MOBILE_SHOW_MORE_STEP;
+};
 
 const resetColumnScroll = () => {
   nextTick(() => {
     const preservedPane = preserveScrollPane.value;
     preserveScrollPane.value = null;
+    visibleCoverageItemLimit.value = MOBILE_COVERAGE_ITEM_LIMIT;
+    visibleAttackPathLimit.value = MOBILE_ATTACK_PATH_LIMIT;
     [
       { key: "left", column: coverageColumnRef.value },
       { key: "middle", column: pathColumnRef.value },
@@ -316,6 +375,23 @@ watch(
                     </span>
                   </button>
                 </div>
+                <button
+                  v-if="
+                    isMobile &&
+                    (hiddenCoverageItemCount > 0 || hasExpandedCoverageItems)
+                  "
+                  type="button"
+                  class="node-relation-more node-attack-path-more-button"
+                  @click="showMoreCoverageItems"
+                >
+                  {{
+                    hiddenCoverageItemCount <= 0
+                      ? t("relationView.collapseAnalysisCoverageCount")
+                      : t("relationView.hiddenAnalysisCoverageCount", {
+                          count: hiddenCoverageItemCount,
+                        })
+                  }}
+                </button>
               </div>
             </div>
             <RelationNodeSpecialInsightBlock
@@ -401,7 +477,7 @@ watch(
                 </div>
                 <div class="relation-analysis-path-list">
                   <button
-                    v-for="path in attackPathDetails"
+                    v-for="path in displayedAttackPathDetails"
                     :key="path.id"
                     type="button"
                     :class="[
@@ -421,6 +497,23 @@ watch(
                     </span>
                   </button>
                 </div>
+                <button
+                  v-if="
+                    isMobile &&
+                    (hiddenAttackPathCount > 0 || hasExpandedAttackPaths)
+                  "
+                  type="button"
+                  class="node-relation-more node-attack-path-more-button"
+                  @click="showMoreAttackPaths"
+                >
+                  {{
+                    hiddenAttackPathCount <= 0
+                      ? t("relationView.collapseAnalysisPathCount")
+                      : t("relationView.hiddenAnalysisPathCount", {
+                          count: hiddenAttackPathCount,
+                        })
+                  }}
+                </button>
               </div>
             </div>
           </aside>

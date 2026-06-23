@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
+import { computed, ref, watch } from "vue";
 import { useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
 import type { NodeCoverageSummary } from "@/components/relation/relationNodeDrawerInsightTypes";
@@ -15,20 +15,34 @@ const { t } = useI18n();
 const router = useRouter();
 
 const COVERAGE_ITEM_LIMIT = 5;
-const showAllCoverageItems = ref(false);
+const SHOW_MORE_STEP = 50;
+const visibleCoverageItemLimit = ref(COVERAGE_ITEM_LIMIT);
 const visibleItems = computed(() => {
   const items = props.summary?.items ?? [];
-  return showAllCoverageItems.value
-    ? items
-    : items.slice(0, COVERAGE_ITEM_LIMIT);
+  return items.slice(0, visibleCoverageItemLimit.value);
 });
 const hiddenItemCount = computed(() =>
   Math.max(0, (props.summary?.items.length ?? 0) - visibleItems.value.length)
 );
+const hasExpandedCoverageItems = computed(
+  () => visibleCoverageItemLimit.value > COVERAGE_ITEM_LIMIT
+);
 
-const toggleShowAllCoverageItems = () => {
-  showAllCoverageItems.value = !showAllCoverageItems.value;
+const showMoreCoverageItems = () => {
+  if (hiddenItemCount.value <= 0) {
+    visibleCoverageItemLimit.value = COVERAGE_ITEM_LIMIT;
+    return;
+  }
+
+  visibleCoverageItemLimit.value += SHOW_MORE_STEP;
 };
+
+watch(
+  () => props.summary?.items.map((item) => `${item.type}:${item.id}`).join("|"),
+  () => {
+    visibleCoverageItemLimit.value = COVERAGE_ITEM_LIMIT;
+  }
+);
 
 const openCoverageEntityDetail = (item: { type: string; id: string }) => {
   if (
@@ -94,13 +108,13 @@ const openCoverageEntityDetail = (item: { type: string; id: string }) => {
         </div>
       </div>
       <button
-        v-if="hiddenItemCount > 0 || showAllCoverageItems"
+        v-if="hiddenItemCount > 0 || hasExpandedCoverageItems"
         type="button"
         class="node-relation-more node-attack-path-more-button"
-        @click="toggleShowAllCoverageItems"
+        @click="showMoreCoverageItems"
       >
         {{
-          showAllCoverageItems
+          hiddenItemCount <= 0
             ? t("relationView.collapseCoverageItemCount")
             : t("relationView.hiddenCoverageItemCount", {
                 count: hiddenItemCount,

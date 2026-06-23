@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
+import { computed, ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
 import type { AttackPathExplanation } from "@/components/relation/relationNodeDrawerInsightTypes";
 import {
@@ -27,7 +27,8 @@ const emit = defineEmits<{
 const { t } = useI18n();
 
 const DEFAULT_ATTACK_PATH_PREVIEW_LIMIT = 2;
-const showAllAttackPaths = ref(false);
+const SHOW_MORE_STEP = 50;
+const visibleAttackPathLimit = ref(DEFAULT_ATTACK_PATH_PREVIEW_LIMIT);
 
 const pathMatchesFilters = (
   path: AttackPathExplanation,
@@ -58,12 +59,9 @@ const filteredAttackPathExplanations = computed(() =>
 const hasAttackPathFilters = computed(() => props.hasActiveAttackPathFilters);
 
 const visibleAttackPathExplanations = computed(() => {
-  if (showAllAttackPaths.value) {
-    return filteredAttackPathExplanations.value;
-  }
   return filteredAttackPathExplanations.value.slice(
     0,
-    DEFAULT_ATTACK_PATH_PREVIEW_LIMIT
+    visibleAttackPathLimit.value
   );
 });
 
@@ -143,16 +141,35 @@ const updateAttackPathFilter = (
   type: AttackPathFilterType,
   value: string | undefined
 ) => {
-  showAllAttackPaths.value = false;
+  visibleAttackPathLimit.value = DEFAULT_ATTACK_PATH_PREVIEW_LIMIT;
   emit("update:attack-path-filters", {
     ...props.attackPathFilters,
     [type]: value || undefined,
   });
 };
 
-const toggleShowAllAttackPaths = () => {
-  showAllAttackPaths.value = !showAllAttackPaths.value;
+const hasExpandedAttackPaths = computed(
+  () => visibleAttackPathLimit.value > DEFAULT_ATTACK_PATH_PREVIEW_LIMIT
+);
+
+const showMoreAttackPaths = () => {
+  if (hiddenAttackPathCount.value <= 0) {
+    visibleAttackPathLimit.value = DEFAULT_ATTACK_PATH_PREVIEW_LIMIT;
+    return;
+  }
+
+  visibleAttackPathLimit.value += SHOW_MORE_STEP;
 };
+
+watch(
+  () =>
+    props.selectedNodeAttackPathExplanations
+      .map((path) => path.pathKey)
+      .join("|"),
+  () => {
+    visibleAttackPathLimit.value = DEFAULT_ATTACK_PATH_PREVIEW_LIMIT;
+  }
+);
 </script>
 
 <template>
@@ -403,13 +420,13 @@ const toggleShowAllAttackPaths = () => {
         {{ t("relationView.noFilteredAttackPaths") }}
       </div>
       <button
-        v-else-if="hiddenAttackPathCount > 0 || showAllAttackPaths"
+        v-else-if="hiddenAttackPathCount > 0 || hasExpandedAttackPaths"
         type="button"
         class="node-relation-more node-attack-path-more-button"
-        @click="toggleShowAllAttackPaths"
+        @click="showMoreAttackPaths"
       >
         {{
-          showAllAttackPaths
+          hiddenAttackPathCount <= 0
             ? t("relationView.collapseAttackPathCount", {
                 count: hiddenAttackPathCount,
               })
