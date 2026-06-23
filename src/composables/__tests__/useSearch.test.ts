@@ -210,6 +210,8 @@ const mockMessages = ref<Record<string, unknown>>({
 });
 
 const mockLocale = ref("zh-CN");
+const mockCases = ref<Record<string, { title?: string; keywords?: string[]; summary?: string; category?: string }>>({});
+const mockCasesLoaded = ref(false);
 
 vi.mock("vue-i18n", () => ({
   useI18n: () => ({
@@ -218,11 +220,11 @@ vi.mock("vue-i18n", () => ({
   }),
 }));
 
-// Mock useCases（cases 懒加载，测试用空数据）
+// Mock useCases（cases 懒加载，共享 ref 用于验证搜索索引响应式刷新）
 vi.mock("@/composables/useCases", () => ({
   useCases: () => ({
-    cases: ref({}),
-    loaded: ref(false),
+    cases: mockCases,
+    loaded: mockCasesLoaded,
     ensureCases: () => Promise.resolve(),
   }),
 }));
@@ -233,6 +235,8 @@ import { extractSnippetForSearch, useSearch } from "@/composables/useSearch";
 describe("useSearch", () => {
   beforeEach(() => {
     mockLocale.value = "zh-CN";
+    mockCases.value = {};
+    mockCasesLoaded.value = false;
   });
 
   describe("空查询", () => {
@@ -456,6 +460,56 @@ describe("useSearch", () => {
       expect(result.attackTool.length).toBeLessThanOrEqual(5);
       expect(result.threatActor.length).toBeLessThanOrEqual(5);
       expect(result.term.length).toBeLessThanOrEqual(5);
+    });
+  });
+
+  describe("案例懒加载刷新", () => {
+    it("cases 从空数据加载后会重建 case 搜索索引", async () => {
+      const { search } = useSearch();
+
+      expect(search("冻结资金").case).toEqual([]);
+
+      mockCases.value = {
+        C0001: {
+          title: "虚假投资平台冻结资金案例",
+          keywords: ["冻结资金", "虚假投资"],
+          summary: "用户在虚假投资平台入金后被要求继续缴纳解冻费。",
+          category: "news_report",
+        },
+      };
+      await Promise.resolve();
+
+      const result = search("冻结资金");
+      expect(result.case).toHaveLength(1);
+      expect(result.case[0].id).toBe("C0001");
+    });
+
+    it("cases 替换后旧 case 不会继续留在缓存索引中", async () => {
+      const { search } = useSearch();
+
+      mockCases.value = {
+        C0001: {
+          title: "旧案例",
+          keywords: ["legacy-freeze-token"],
+          summary: "旧案例摘要",
+          category: "news_report",
+        },
+      };
+      await Promise.resolve();
+      expect(search("legacy-freeze-token").case[0].id).toBe("C0001");
+
+      mockCases.value = {
+        C0002: {
+          title: "新案例",
+          keywords: ["fresh-wire-token"],
+          summary: "新案例摘要",
+          category: "security_incident",
+        },
+      };
+      await Promise.resolve();
+
+      expect(search("legacy-freeze-token").case).toEqual([]);
+      expect(search("fresh-wire-token").case[0].id).toBe("C0002");
     });
   });
 });

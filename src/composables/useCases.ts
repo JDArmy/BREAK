@@ -9,6 +9,7 @@ import { mergeWithStructure } from "@/i18n";
 const cases = ref<Cases>({});
 const loaded = ref(false);
 let cnLoadingPromise: Promise<Cases> | null = null;
+let localeWatchRegistered = false;
 
 // 英文翻译懒加载（非 eager glob，仅英文模式且 cases 已加载时合并）
 const enCaseFiles = import.meta.glob("../i18n/en/BREAK/cases/C*.json");
@@ -34,34 +35,40 @@ async function applyEnTranslations() {
     Object.assign(enCases, data);
   }
   const merged = mergeWithStructure(cn, enCases) as Cases;
-  Object.keys(cases.value).forEach((k) => delete cases.value[k]);
-  Object.assign(cases.value, merged);
+  cases.value = merged;
+}
+
+async function syncCasesForLocale(localeValue: string) {
+  if (localeValue === "en") {
+    await applyEnTranslations();
+    return;
+  }
+
+  cases.value = await loadCnCases();
+}
+
+function registerLocaleWatcher(locale: ReturnType<typeof useI18n>["locale"]) {
+  if (localeWatchRegistered) return;
+  localeWatchRegistered = true;
+
+  // locale 切换时重新合并翻译。watch 只注册一次，避免多个组件同时使用案例数据时重复加载与覆盖。
+  watch(locale, async (newLocale) => {
+    if (!loaded.value) return;
+    await syncCasesForLocale(newLocale);
+  });
 }
 
 export function useCases() {
   const { locale } = useI18n();
+  registerLocaleWatcher(locale);
 
   const ensureCases = async (): Promise<void> => {
     if (!loaded.value) {
-      const cn = await loadCnCases();
-      Object.keys(cases.value).forEach((k) => delete cases.value[k]);
-      Object.assign(cases.value, cn);
+      cases.value = await loadCnCases();
       loaded.value = true;
       if (locale.value === "en") await applyEnTranslations();
     }
   };
-
-  // locale 切换时重新合并翻译
-  watch(locale, async (newLocale) => {
-    if (!loaded.value) return;
-    if (newLocale === "en") {
-      await applyEnTranslations();
-    } else {
-      const cn = await loadCnCases();
-      Object.keys(cases.value).forEach((k) => delete cases.value[k]);
-      Object.assign(cases.value, cn);
-    }
-  });
 
   return { cases, loaded, ensureCases };
 }

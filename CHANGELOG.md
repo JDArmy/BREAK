@@ -1,5 +1,12 @@
 # Change log
 
+## 2.23.3
+
+- 修复案例懒加载和语言切换后全文搜索 case 索引不可靠刷新的问题，cases 更新改为替换 ref 值以触发下游浅监听
+- `useCases` 的 locale watcher 改为模块级单次注册，避免多个组件同时使用案例数据时重复监听和重复合并
+- 补充 `useSearch` 与 `useCases` 回归测试，覆盖案例加载后重建索引、替换后清理旧索引和 watcher 单次注册
+- 更新升级计划，移除已完成的 P1-1 响应式刷新清理项
+
 ## 2.23.2
 
 - 新增 `RelationEntityType` 强类型别名和实体类型常量，收紧关系页 `Node.type`、`GraphNode.type`、Sankey 节点和分析摘要的类型边界
