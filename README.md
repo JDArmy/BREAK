@@ -101,6 +101,10 @@ npm run validate:schema-docs
 npm run schema:docs:write
 npm run export:data
 npm run export:data-en
+npm run export:stix
+npm run export:jsonld
+npm run validate:stix
+npm run version:bump
 npm run export:data-package
 npm run validate:data-export
 npm run validate:data-package
@@ -117,13 +121,17 @@ npm run type-check
 ```
 
 `npm run validate:data` runs JSON Schema validation, i18n key synchronization, relationship coverage auditing, and generated schema documentation checks.
-`npm run build` runs `lint`, `type-check`, `validate:data`, `test`, `test:coverage`, `validate:schema-docs`, `validate:home-counts`, `export:data`, `export:data-en`, `build-only`, `export:data-package`, `audit:bundle:check`, `validate:data-export`, and `validate:data-package`.
+`npm run build` runs `lint`, `type-check`, `validate:data`, `test`, `test:coverage`, `validate:schema-docs`, `validate:home-counts`, `export:data`, `export:data-en`, `export:stix`, `export:jsonld`, `build-only`, `export:data-package`, `audit:bundle:check`, `validate:data-export`, `validate:data-package`, and `validate:stix`.
 `npm run test:coverage` enforces the core logic coverage baseline for relation analysis, Sankey attack paths, root/path insights, search, safe i18n, and BREAK data utilities.
 `npm run validate:schema-docs` checks [DATA_SCHEMA.md](./DATA_SCHEMA.md) against `src/validation/breakSchema.ts`.
 `npm run schema:docs:write` regenerates [DATA_SCHEMA.md](./DATA_SCHEMA.md) after schema changes.
 `npm run validate:home-counts` checks that the entity counts in `src/BREAK/home.ts` match the actual data; `npm run generate:home-counts` regenerates them (also run automatically via a pre-commit hook).
 `npm run export:data` writes the Chinese static data bundle to `public/data/break-data.json`, `public/data/break-manifest.json`, and `public/data/quality-report.json`.
 `npm run export:data-en` writes the English static data bundle to `public/data/break-data-en.json` by merging the Chinese structure source with English translation files.
+`npm run export:stix` exports STIX 2.1 Bundles (`public/data/break-stix-zh.json` and `public/data/break-stix-en.json`) mapping all BREAK entities and relationships to STIX SDOs/SROs with Extension Definitions for BREAK-specific fields.
+`npm run export:jsonld` exports JSON-LD documents (`public/data/break-ld-zh.jsonld` and `public/data/break-ld-en.jsonld`) for semantic web and knowledge graph consumption, with `stixId` cross-references to the STIX Bundle.
+`npm run validate:stix` runs three-layer STIX validation (structural schema, referential integrity, business-rule cross-checks) plus JSON-LD expansion validation.
+`npm run version:bump` detects substantive entity file changes via `git diff` and auto-increments the `version` field (also updates `updated`).
 `npm run export:data-package` writes an npm package evaluation artifact to `dist/break-data-package`.
 `npm run validate:data-export` checks the public data bundle, manifest hash, entity counts, version, and copied GitHub Pages artifacts.
 `npm run validate:data-package` checks the npm package boundary, runtime entry, type declarations, README, manifest hash, and version alignment.
@@ -138,12 +146,26 @@ npm run type-check
 - Manifest: <https://break.jd.army/data/break-manifest.json>
 - Chinese data bundle: <https://break.jd.army/data/break-data.json>
 - English data bundle: <https://break.jd.army/data/break-data-en.json>
+- Chinese STIX 2.1 Bundle: <https://break.jd.army/data/break-stix-zh.json>
+- English STIX 2.1 Bundle: <https://break.jd.army/data/break-stix-en.json>
+- Chinese JSON-LD: <https://break.jd.army/data/break-ld-zh.jsonld>
+- English JSON-LD: <https://break.jd.army/data/break-ld-en.jsonld>
 - Quality report: <https://break.jd.army/data/quality-report.json>
 
 The static bundle exposes the current BREAK data with version, generation metadata, counts, byte size, SHA-256 checksum, and quality report for downstream tools. The Chinese bundle remains the canonical structure source; the English bundle keeps the same structure and replaces only translatable text fields.
 
+### Standardized Interoperability (STIX 2.1 & JSON-LD)
+
+BREAK provides standardized export formats for integration with external CTI/SIEM platforms and semantic web tools:
+
+**STIX 2.1** — All 7 entity types (Risk, Avoidance, AttackTool, ThreatActor, Term, Case, BusinessScene) are mapped to STIX SDOs with deterministic UUID v5 identifiers. Cross-entity and intra-entity relationships are mapped to STIX Relationship SROs. BREAK-specific fields are preserved through 7 Extension Definitions. Chinese and English Bundles share the same UUIDs, differing only in text content. See [STIX_MAPPING.md](./STIX_MAPPING.md) for the full mapping specification.
+
+**JSON-LD** — Entities are exported as a `@graph` of linked data nodes using `schema.org` vocabulary and BREAK-specific terms. Each entity carries a `stixId` field for bidirectional cross-referencing with the STIX Bundle. Entity URIs follow the pattern `https://break.jd.army/entity/{ID}`.
+
+**Entity Version** — All knowledge entities carry an integer `version` field (default `1`) that auto-increments on substantive content changes. This enables downstream consumers to detect and track entity-level evolution. Run `npm run version:bump` before committing entity changes to auto-increment versions.
+
 ### npm Data Package Evaluation
 
-`npm run export:data-package` creates `dist/break-data-package` as an evaluation artifact for a future `@jdarmy/break-data` package. The artifact is data-only: it excludes the Vue app, ECharts runtime, and browser UI code, and includes `data/break-data.json`, `data/break-manifest.json`, `data/quality-report.json`, `index.js`, `index.d.ts`, and its own README.
+`npm run export:data-package` creates `dist/break-data-package` as an evaluation artifact for a future `@jdarmy/break-data` package. The artifact is data-only: it excludes the Vue app, ECharts runtime, and browser UI code, and includes `data/break-data.json`, `data/break-manifest.json`, `data/quality-report.json`, STIX 2.1 Bundles (`data/break-stix-zh.json`, `data/break-stix-en.json`), JSON-LD documents (`data/break-ld-zh.jsonld`, `data/break-ld-en.jsonld`), `index.js`, `index.d.ts`, and its own README.
 
 The package version mirrors the BREAK application version. The generated manifest keeps the same SHA-256 checksum and entity counts as the GitHub Pages static data bundle, so downstream users can evaluate npm consumption without changing the canonical data source.

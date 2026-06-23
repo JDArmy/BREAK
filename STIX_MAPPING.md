@@ -115,10 +115,10 @@ Bundle 中包含 7 个 Extension Definition，承载 BREAK 特有字段：
 
 ## 7. 双语产物
 
-| 文件 | 语言 | 说明 |
-|---|---|---|
-| `break-stix-zh.json` | zh-CN | 中文 STIX Bundle |
-| `break-stix-en.json` | en | 英文 STIX Bundle |
+| 文件 | 语言 | 说明 | 下载地址 |
+|---|---|---|---|
+| `break-stix-zh.json` | zh-CN | 中文 STIX Bundle | <https://break.jd.army/data/break-stix-zh.json> |
+| `break-stix-en.json` | en | 英文 STIX Bundle | <https://break.jd.army/data/break-stix-en.json> |
 
 两个 Bundle 共享完全相同的 STIX UUID 集合，仅 `name`、`description` 等文本内容不同。
 

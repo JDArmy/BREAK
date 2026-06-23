@@ -101,6 +101,10 @@ npm run validate:schema-docs
 npm run schema:docs:write
 npm run export:data
 npm run export:data-en
+npm run export:stix
+npm run export:jsonld
+npm run validate:stix
+npm run version:bump
 npm run export:data-package
 npm run validate:data-export
 npm run validate:data-package
@@ -117,13 +121,17 @@ npm run type-check
 ```
 
 `npm run validate:data` 会执行 JSON Schema 校验、i18n key 同步检查、关系覆盖审计和生成式 Schema 文档同步检查。
-`npm run build` 会执行 `lint`、`type-check`、`validate:data`、`test`、`test:coverage`、`validate:schema-docs`、`validate:home-counts`、`export:data`、`export:data-en`、`build-only`、`export:data-package`、`audit:bundle:check`、`validate:data-export` 和 `validate:data-package`。
+`npm run build` 会执行 `lint`、`type-check`、`validate:data`、`test`、`test:coverage`、`validate:schema-docs`、`validate:home-counts`、`export:data`、`export:data-en`、`export:stix`、`export:jsonld`、`build-only`、`export:data-package`、`audit:bundle:check`、`validate:data-export`、`validate:data-package` 和 `validate:stix`。
 `npm run test:coverage` 会对关系分析、Sankey 攻击路径、根节点路径洞察、搜索、安全 i18n 和 BREAK 数据工具执行核心逻辑覆盖率门禁。
 `npm run validate:schema-docs` 会检查 [DATA_SCHEMA.md](./DATA_SCHEMA.md) 是否与 `src/validation/breakSchema.ts` 同步。
 `npm run schema:docs:write` 会在 Schema 变更后重新生成 [DATA_SCHEMA.md](./DATA_SCHEMA.md)。
 `npm run validate:home-counts` 会检查 `src/BREAK/home.ts` 的实体计数是否与实际数据一致；`npm run generate:home-counts` 重新生成计数（也通过 pre-commit hook 自动执行）。
 `npm run export:data` 会生成中文静态数据包 `public/data/break-data.json`、`public/data/break-manifest.json` 和 `public/data/quality-report.json`。
 `npm run export:data-en` 会合并中文结构源与英文翻译文件，生成英文静态数据包 `public/data/break-data-en.json`。
+`npm run export:stix` 会导出 STIX 2.1 Bundle（`public/data/break-stix-zh.json` 和 `public/data/break-stix-en.json`），将全部 BREAK 实体和关系映射为 STIX SDO/SRO，并通过 Extension Definition 保留 BREAK 特有字段。
+`npm run export:jsonld` 会导出 JSON-LD 文档（`public/data/break-ld-zh.jsonld` 和 `public/data/break-ld-en.jsonld`），用于语义网和知识图谱消费，包含与 STIX Bundle 的 `stixId` 交叉引用。
+`npm run validate:stix` 会执行三层 STIX 校验（结构校验、引用完整性、业务规则交叉检查）和 JSON-LD expansion 校验。
+`npm run version:bump` 会通过 `git diff` 检测实体文件的实质变更，自动递增 `version` 字段并更新 `updated`。
 `npm run export:data-package` 会生成 `dist/break-data-package` npm 数据包评估产物。
 `npm run validate:data-export` 会检查公共数据包、manifest hash、实体计数、版本号和 GitHub Pages 产物同步状态。
 `npm run validate:data-package` 会检查 npm 包边界、运行时入口、类型声明、README、manifest hash 和版本一致性。
@@ -138,12 +146,26 @@ npm run type-check
 - Manifest：<https://break.jd.army/data/break-manifest.json>
 - 中文数据包：<https://break.jd.army/data/break-data.json>
 - 英文数据包：<https://break.jd.army/data/break-data-en.json>
+- 中文 STIX 2.1 Bundle：<https://break.jd.army/data/break-stix-zh.json>
+- 英文 STIX 2.1 Bundle：<https://break.jd.army/data/break-stix-en.json>
+- 中文 JSON-LD：<https://break.jd.army/data/break-ld-zh.jsonld>
+- 英文 JSON-LD：<https://break.jd.army/data/break-ld-en.jsonld>
 - 质量报告：<https://break.jd.army/data/quality-report.json>
 
 静态数据包提供当前 BREAK 数据，并包含版本、生成信息、实体计数、字节数、SHA-256 校验值和质量报告，便于外部工具直接消费。中文数据包是权威结构源；英文数据包保持相同结构，只替换可翻译文本字段。
 
+### 标准化互操作（STIX 2.1 & JSON-LD）
+
+BREAK 提供标准化导出格式，用于与外部 CTI/SIEM 平台和语义网工具集成：
+
+**STIX 2.1** — 全部 7 类实体（Risk、Avoidance、AttackTool、ThreatActor、Term、Case、BusinessScene）均映射为 STIX SDO，使用确定性 UUID v5 标识符。跨实体和同类实体关系映射为 STIX Relationship SRO。BREAK 特有字段通过 7 个 Extension Definition 保留。中英文 Bundle 共享相同 UUID，仅文本内容不同。完整映射规范见 [STIX_MAPPING.md](./STIX_MAPPING.md)。
+
+**JSON-LD** — 实体导出为 `@graph` 链接数据节点，使用 `schema.org` 词汇表和 BREAK 专用术语。每个实体携带 `stixId` 字段，实现与 STIX Bundle 的双向交叉引用。实体 URI 格式为 `https://break.jd.army/entity/{ID}`。
+
+**实体版本** — 所有知识实体均携带整数 `version` 字段（默认为 `1`），在实质内容变更时自动递增。下游消费方可通过此字段检测和追踪实体级演进。提交实体变更前运行 `npm run version:bump` 即可自动递增版本。
+
 ### npm 数据包评估
 
-`npm run export:data-package` 会生成 `dist/break-data-package`，用于评估未来发布 `@jdarmy/break-data` 或等价 npm 包。该产物只包含数据，不包含 Vue 应用、ECharts 运行时和浏览器 UI 代码，文件边界为 `data/break-data.json`、`data/break-manifest.json`、`data/quality-report.json`、`index.js`、`index.d.ts` 和独立 README。
+`npm run export:data-package` 会生成 `dist/break-data-package`，用于评估未来发布 `@jdarmy/break-data` 或等价 npm 包。该产物只包含数据，不包含 Vue 应用、ECharts 运行时和浏览器 UI 代码，文件边界为 `data/break-data.json`、`data/break-manifest.json`、`data/quality-report.json`、STIX 2.1 Bundle（`data/break-stix-zh.json`、`data/break-stix-en.json`）、JSON-LD 文档（`data/break-ld-zh.jsonld`、`data/break-ld-en.jsonld`）、`index.js`、`index.d.ts` 和独立 README。
 
 包版本跟随 BREAK 应用版本。生成的 manifest 与 GitHub Pages 静态数据包保持相同 SHA-256 校验值和实体计数，外部使用方可以在不改变权威数据源的前提下评估 npm 消费方式。

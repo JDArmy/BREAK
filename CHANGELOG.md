@@ -1,5 +1,12 @@
 # Change log
 
+## 2.23.1
+
+- 拆分关系页关系解释规则到独立配置模块，统一维护关系线的解释、语义说明、影响提示、证据等级、来源字段和排序优先级
+- 关系解释主流程改为规则表驱动，保留端点类型相关的来源字段特判，降低新增关系类型时的重复分支维护成本
+- 补充关系解释规则单测，覆盖 coverage 派生、证据等级、直接关系判断和排序优先级
+- 更新 README/README_CN/STIX_MAPPING，补充 STIX 2.1、JSON-LD 导出和实体 version 字段的文档说明及下载地址
+
 ## 2.23.0
 
 - 新增 STIX 2.1 标准化导出，支持将全部 7 类实体（Risk/Avoidance/AttackTool/ThreatActor/Term/Case/BusinessScene）及 26,000+ 关系边映射为合法 STIX 2.1 Bundle
