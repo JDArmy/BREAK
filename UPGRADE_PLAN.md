@@ -35,9 +35,10 @@
 - 基于 `reference-health.domainGroups` 按策略分批处理 review、timeout、connection_error，优先官方源、高价值案例和 primary source。
 - 对 `manual_review_preserve`、`retry_with_long_timeout_preserve`、`replace_or_add_primary` 等策略建立固定处理流程，减少误报和重复复核成本。
 
-落点：`.github/workflows/link-check.yml`、`scripts/validate/references-health.mjs`、`research/search-reports/reference-health.*`。
+落点：`.github/workflows/link-check.yml`、`scripts/validate/references-health.mjs`、`scripts/validate/reference-domain-plan.mjs`、`research/search-reports/reference-health.*`。
 
 验收：
+- `npm run audit:reference-domain-plan` 可生成 P1/P2 域名治理批次。
 - review/timeout/connection_error 按域名策略分批收敛，关键 P1 域名有处理记录或复测结论。
 
 #### P0-2. 高价值案例 primary source 补强

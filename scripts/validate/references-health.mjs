@@ -10,6 +10,25 @@ const strict = process.argv.includes('--strict');
 const fromCache = process.argv.includes('--from-cache');
 const maxDomainExamples = 5;
 
+function readArgValue(name) {
+  const prefix = `--${name}=`;
+  const found = process.argv.find((arg) => arg.startsWith(prefix));
+  return found ? found.slice(prefix.length).trim() : '';
+}
+
+function readCsvArg(name) {
+  return readArgValue(name)
+    .split(',')
+    .map((item) => item.trim().toLowerCase())
+    .filter(Boolean);
+}
+
+const filterDomains = new Set(readCsvArg('domains'));
+const filterPriority = readArgValue('priority');
+const filterAction = readArgValue('action');
+const limit = Number(readArgValue('limit') || 0);
+const hasFilters = filterDomains.size > 0 || filterPriority || filterAction || limit > 0;
+
 const officialDomainSuffixes = [
   '.gov',
   '.gov.cn',
@@ -190,6 +209,31 @@ function buildDomainGroups(results) {
     });
 }
 
+function filterResultsByOptions(results, domainGroups) {
+  let allowedDomains = new Set(domainGroups.map((group) => group.domain));
+
+  if (filterDomains.size > 0) {
+    allowedDomains = new Set([...allowedDomains].filter((domain) => filterDomains.has(domain)));
+  }
+  if (filterPriority) {
+    allowedDomains = new Set(
+      [...allowedDomains].filter((domain) =>
+        domainGroups.find((group) => group.domain === domain)?.strategy.priority === filterPriority,
+      ),
+    );
+  }
+  if (filterAction) {
+    allowedDomains = new Set(
+      [...allowedDomains].filter((domain) =>
+        domainGroups.find((group) => group.domain === domain)?.strategy.action === filterAction,
+      ),
+    );
+  }
+
+  const filtered = results.filter((item) => !item.domain || allowedDomains.has(item.domain));
+  return limit > 0 ? filtered.slice(0, limit) : filtered;
+}
+
 async function fetchWithTimeout(url, method) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeoutMs);
@@ -328,9 +372,16 @@ if (fromCache) {
   console.log(`使用缓存引用健康报告重新生成域名分组: ${cachePath}`);
 } else {
   const references = collectReferences();
-  console.log(`准备检查 ${references.length} 个唯一引用链接，并发 ${concurrency}，超时 ${timeoutMs}ms`);
-  results = await runPool(references, checkLink);
+  const cachedGroupsPath = path.join(reportDir, 'reference-health.json');
+  const cachedGroups = fs.existsSync(cachedGroupsPath)
+    ? JSON.parse(fs.readFileSync(cachedGroupsPath, 'utf8')).domainGroups || []
+    : buildDomainGroups(references.map((item) => ({ ...item, issue: 'unknown', status: 0 })));
+  const filteredReferences = filterResultsByOptions(references, cachedGroups);
+  console.log(`准备检查 ${filteredReferences.length}/${references.length} 个唯一引用链接，并发 ${concurrency}，超时 ${timeoutMs}ms`);
+  results = await runPool(filteredReferences, checkLink);
 }
+const initialDomainGroups = buildDomainGroups(results);
+results = filterResultsByOptions(results, initialDomainGroups);
 const stats = {
   uniqueLinks: results.length,
   ok: results.filter((item) => item.issue === 'ok').length,
@@ -344,20 +395,27 @@ const report = {
   generatedAt: fromCache ? cachedReport.generatedAt : new Date().toISOString(),
   timeoutMs: fromCache ? cachedReport.timeoutMs : timeoutMs,
   concurrency: fromCache ? cachedReport.concurrency : concurrency,
+  filters: {
+    domains: [...filterDomains],
+    priority: filterPriority || '',
+    action: filterAction || '',
+    limit,
+  },
   stats,
   domainGroups: buildDomainGroups(results),
   results,
 };
 
 fs.mkdirSync(reportDir, { recursive: true });
-writeJson(path.join(reportDir, 'reference-health.json'), report);
-fs.writeFileSync(path.join(reportDir, 'reference-health.md'), renderMarkdown(report));
+const outputBaseName = hasFilters ? 'reference-health-filtered' : 'reference-health';
+writeJson(path.join(reportDir, `${outputBaseName}.json`), report);
+fs.writeFileSync(path.join(reportDir, `${outputBaseName}.md`), renderMarkdown(report));
 
 console.log('\n=== BREAK 引用链接可达性检查 ===\n');
 for (const [key, value] of Object.entries(stats)) {
   console.log(`${key}: ${value}`);
 }
-console.log(`\n报告已保存到: ${path.join(reportDir, 'reference-health.md')}`);
+console.log(`\n报告已保存到: ${path.join(reportDir, `${outputBaseName}.md`)}`);
 
 if (strict && (stats.broken > 0 || stats.timeout > 0 || stats.connectionError > 0)) {
   process.exitCode = 1;

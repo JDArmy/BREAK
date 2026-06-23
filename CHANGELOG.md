@@ -1,5 +1,11 @@
 # Change log
 
+## 2.23.6
+
+- 新增 `audit:reference-domain-plan`，基于引用健康 `domainGroups` 生成域名治理计划，输出 P1/P2 批次、影响链接数、引用数和建议执行命令
+- `references-health` 支持按 `--domains`、`--priority`、`--action`、`--limit` 筛选复测范围，筛选结果写入独立 `reference-health-filtered.*`，避免覆盖全量基线报告
+- 引用治理计划将 `retry_with_long_timeout_preserve`、`manual_review_preserve`、`replace_or_add_primary` 等策略转成可执行命令，便于后续分批复测和补源
+
 ## 2.23.5
 
 - 引用健康审计新增域名级复核分组，按 issue、HTTP 状态、实体类型和引用数量汇总待处理域名
