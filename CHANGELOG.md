@@ -1,5 +1,12 @@
 # Change log
 
+## 2.23.5
+
+- 引用健康审计新增域名级复核分组，按 issue、HTTP 状态、实体类型和引用数量汇总待处理域名
+- 为引用健康报告补充自动策略分类，区分 `manual_review_preserve`、`retry_with_long_timeout_preserve`、`replace_or_add_primary` 等处理动作
+- 新增 `audit:references-health:cached`，可基于已有 `reference-health.json` 快速重建域名分组和 Markdown 报告，避免本地频繁触发网络复测
+- 质量报告的 `sourceReports.referenceHealth` 同步暴露 `domainGroups`，npm 数据包类型定义同步新增域名策略结构
+
 ## 2.23.4
 
 - 扩展 `audit:quality-report`，将引用健康和案例来源质量纳入统一质量报告，输出来源报告摘要、域名分组和 Top 待复核项

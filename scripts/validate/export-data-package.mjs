@@ -240,6 +240,20 @@ export interface BreakReferenceHealthSummary {
     total: number;
     byIssue: Record<string, number>;
   }>;
+  domainGroups: Array<{
+    domain: string;
+    total: number;
+    issues: Record<string, number>;
+    statuses: Record<string, number>;
+    entityTypes: Record<string, number>;
+    referenceCount: number;
+    examples: unknown[];
+    strategy: {
+      action: string;
+      priority: string;
+      note: string;
+    };
+  }>;
 }
 
 export interface BreakCaseSourceQualitySummary {

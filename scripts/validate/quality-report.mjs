@@ -274,9 +274,8 @@ function summarizeReferenceHealth(report) {
     concurrency: report.concurrency,
     stats: report.stats || {},
     byIssue,
-    byDomain: Object.fromEntries(
-      Object.entries(byDomain).sort(([, a], [, b]) => b.total - a.total || 0),
-    ),
+    byDomain: Object.fromEntries(Object.entries(byDomain).sort(([, a], [, b]) => b.total - a.total || 0)),
+    domainGroups: report.domainGroups || [],
   };
 }
 
