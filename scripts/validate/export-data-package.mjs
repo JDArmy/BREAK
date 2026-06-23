@@ -209,6 +209,18 @@ export interface BreakQualityIssue {
   field?: string;
   relation?: string;
   ref?: string;
+  link?: string;
+  domain?: string;
+  status?: number;
+  issue?: string;
+  referenceCount?: number;
+  checkedAt?: string;
+  category?: string;
+  file?: string;
+  strongestSourceType?: string;
+  sourceTypes?: string[];
+  qualityFlags?: string[];
+  referenceDomains?: string[];
 }
 
 export interface BreakQualitySummary {
@@ -217,18 +229,48 @@ export interface BreakQualitySummary {
   byType: Record<string, number>;
 }
 
+export interface BreakReferenceHealthSummary {
+  generatedAt: string | null;
+  stale: boolean;
+  timeoutMs?: number;
+  concurrency?: number;
+  stats: Record<string, number>;
+  byIssue: Record<string, number>;
+  byDomain: Record<string, {
+    total: number;
+    byIssue: Record<string, number>;
+  }>;
+}
+
+export interface BreakCaseSourceQualitySummary {
+  generatedAt: string | null;
+  stale: boolean;
+  stats: Record<string, number>;
+  statsByCategory: Record<string, Record<string, number>>;
+  highValueCategories: string[];
+}
+
 export interface BreakQualityReport {
   schemaVersion: 1;
   generatedAt: string;
+  embeddedIssueLimit: number;
+  sourceReports: {
+    referenceHealth: BreakReferenceHealthSummary;
+    caseSourceQuality: BreakCaseSourceQualitySummary;
+  };
   weakRelations: BreakQualityIssue[];
   missingCoverage: BreakQualityIssue[];
   sceneIssues: BreakQualityIssue[];
   i18nIssues: BreakQualityIssue[];
+  referenceHealthIssues: BreakQualityIssue[];
+  caseSourceIssues: BreakQualityIssue[];
   summary: {
     weakRelations: BreakQualitySummary;
     missingCoverage: BreakQualitySummary;
     sceneIssues: BreakQualitySummary;
     i18nIssues: BreakQualitySummary;
+    referenceHealthIssues: BreakQualitySummary;
+    caseSourceIssues: BreakQualitySummary;
   };
 }
 

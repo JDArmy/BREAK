@@ -1,5 +1,12 @@
 # Change log
 
+## 2.23.4
+
+- 扩展 `audit:quality-report`，将引用健康和案例来源质量纳入统一质量报告，输出来源报告摘要、域名分组和 Top 待复核项
+- `quality-report.json` 新增 `sourceReports`、`referenceHealthIssues`、`caseSourceIssues` 和 `embeddedIssueLimit`，并同步 public、dist、manifest 与 npm 数据包校验
+- 更新 npm 数据包类型定义，补充质量报告新增字段，方便外部消费者读取治理信号
+- 调整质量报告控制台摘要和导出校验，确保新增治理维度进入构建链保护
+
 ## 2.23.3
 
 - 修复案例懒加载和语言切换后全文搜索 case 索引不可靠刷新的问题，cases 更新改为替换 ref 值以触发下游浅监听

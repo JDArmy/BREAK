@@ -140,5 +140,5 @@ console.log(
   `entities=${counts.risks.total}/${counts.avoidances.total}/${counts.attackTools.total}/${counts.threatActors.total}/${counts.terms.total}/${counts.businessScenes.total}/${counts.avoidanceCategories.total}/${counts.cases.total}`
 );
 console.log(
-  `quality=${qualityReport.weakRelations.length}/${qualityReport.missingCoverage.length}/${qualityReport.sceneIssues.length}/${qualityReport.i18nIssues.length}`
+  `quality=${qualityReport.weakRelations.length}/${qualityReport.missingCoverage.length}/${qualityReport.sceneIssues.length}/${qualityReport.i18nIssues.length}/${qualityReport.referenceHealthIssues.length}/${qualityReport.caseSourceIssues.length}`
 );

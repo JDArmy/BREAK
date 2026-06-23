@@ -115,7 +115,17 @@ if (data && manifest) {
 if (manifest && qualityReport) {
   expectEqual(issues, 'qualityReport.schemaVersion', qualityReport.schemaVersion, 1);
   expectEqual(issues, 'qualityReport.generatedAt', qualityReport.generatedAt, manifest.generatedAt);
-  for (const key of ['weakRelations', 'missingCoverage', 'sceneIssues', 'i18nIssues']) {
+  if (!Number.isInteger(qualityReport.embeddedIssueLimit) || qualityReport.embeddedIssueLimit <= 0) {
+    issues.push('qualityReport.embeddedIssueLimit 必须是正整数');
+  }
+  for (const key of [
+    'weakRelations',
+    'missingCoverage',
+    'sceneIssues',
+    'i18nIssues',
+    'referenceHealthIssues',
+    'caseSourceIssues',
+  ]) {
     if (!Array.isArray(qualityReport[key])) {
       issues.push(`qualityReport.${key} 必须是数组`);
     }
@@ -125,6 +135,14 @@ if (manifest && qualityReport) {
       qualityReport.summary?.[key]?.total,
       Array.isArray(qualityReport[key]) ? qualityReport[key].length : undefined,
     );
+  }
+  if (!qualityReport.sourceReports || typeof qualityReport.sourceReports !== 'object') {
+    issues.push('qualityReport.sourceReports 必须是对象');
+  }
+  for (const key of ['referenceHealth', 'caseSourceQuality']) {
+    if (!qualityReport.sourceReports?.[key] || typeof qualityReport.sourceReports[key] !== 'object') {
+      issues.push(`qualityReport.sourceReports.${key} 必须是对象`);
+    }
   }
   const qualityReportSha256 = crypto.createHash('sha256').update(publicQualityReportText).digest('hex');
   expectEqual(issues, 'manifest qualityReport sha256', manifest.files?.qualityReport?.sha256, qualityReportSha256);

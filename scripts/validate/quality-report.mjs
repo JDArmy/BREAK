@@ -5,6 +5,9 @@ import { ensureDir, loadEntities, projectRoot, readJson, writeJson } from '../se
 
 const publicReportPath = path.join(projectRoot, 'public/data/quality-report.json');
 const researchReportPath = path.join(projectRoot, 'research/search-reports/quality-report.json');
+const referenceHealthReportPath = path.join(projectRoot, 'research/search-reports/reference-health.json');
+const caseSourceQualityReportPath = path.join(projectRoot, 'research/search-reports/case-source-quality.json');
+const maxEmbeddedIssueItems = 100;
 
 const entityLabels = {
   risk: 'Risk',
@@ -59,6 +62,11 @@ function hasArrayValues(entity, field) {
 
 function issueId(prefix, ...parts) {
   return [prefix, ...parts].filter(Boolean).join(':');
+}
+
+function readOptionalJson(filePath) {
+  if (!fs.existsSync(filePath)) return null;
+  return readJson(filePath);
 }
 
 function collectBusinessSceneRisks(scene) {
@@ -232,6 +240,166 @@ function summarizeIssues(items) {
   };
 }
 
+function summarizeReferenceHealth(report) {
+  if (!report) {
+    return {
+      generatedAt: null,
+      stale: true,
+      stats: {},
+      byIssue: {},
+      byDomain: {},
+    };
+  }
+
+  const byIssue = {};
+  const byDomain = {};
+  for (const item of report.results || []) {
+    byIssue[item.issue] = (byIssue[item.issue] || 0) + 1;
+    if (item.issue === 'ok') continue;
+    const domain = item.domain || 'unknown';
+    if (!byDomain[domain]) {
+      byDomain[domain] = {
+        total: 0,
+        byIssue: {},
+      };
+    }
+    byDomain[domain].total++;
+    byDomain[domain].byIssue[item.issue] = (byDomain[domain].byIssue[item.issue] || 0) + 1;
+  }
+
+  return {
+    generatedAt: report.generatedAt || null,
+    stale: false,
+    timeoutMs: report.timeoutMs,
+    concurrency: report.concurrency,
+    stats: report.stats || {},
+    byIssue,
+    byDomain: Object.fromEntries(
+      Object.entries(byDomain).sort(([, a], [, b]) => b.total - a.total || 0),
+    ),
+  };
+}
+
+function collectReferenceHealthIssues(report) {
+  if (!report) {
+    return [
+      {
+        id: issueId('referenceHealth', 'missingReport'),
+        type: 'missingReferenceHealthReport',
+        severity: 'review',
+        entityType: 'reference',
+        key: 'reference-health',
+        title: '',
+        message: '缺少引用健康报告，请先运行 npm run audit:references-health',
+      },
+    ];
+  }
+
+  return (report.results || [])
+    .filter((item) => item.issue && item.issue !== 'ok')
+    .sort(
+      (a, b) =>
+        String(a.issue).localeCompare(String(b.issue)) ||
+        String(a.domain || '').localeCompare(String(b.domain || '')) ||
+        String(a.link || '').localeCompare(String(b.link || '')),
+    )
+    .slice(0, maxEmbeddedIssueItems)
+    .map((item) => {
+      const firstRef = item.references?.[0] || {};
+      const severity = item.issue === 'broken' ? 'error' : 'review';
+      return {
+        id: issueId('referenceHealth', item.issue, item.link),
+        type: `reference_${item.issue}`,
+        severity,
+        entityType: firstRef.entityType || 'reference',
+        key: firstRef.entityKey || item.domain || '',
+        title: firstRef.entityTitle || '',
+        link: item.link,
+        domain: item.domain || '',
+        status: item.status || 0,
+        issue: item.issue,
+        referenceCount: item.references?.length || 0,
+        checkedAt: item.checkedAt || report.generatedAt || '',
+        message: `引用链接需要复核: ${item.issue} ${item.link}`,
+      };
+    });
+}
+
+function summarizeCaseSourceQuality(report) {
+  if (!report) {
+    return {
+      generatedAt: null,
+      stale: true,
+      stats: {},
+      statsByCategory: {},
+      highValueCategories: [],
+    };
+  }
+
+  return {
+    generatedAt: report.generatedAt || null,
+    stale: false,
+    stats: report.stats || {},
+    statsByCategory: report.statsByCategory || {},
+    highValueCategories: report.highValueCategories || [],
+  };
+}
+
+function collectCaseSourceIssues(report) {
+  if (!report) {
+    return [
+      {
+        id: issueId('caseSource', 'missingReport'),
+        type: 'missingCaseSourceQualityReport',
+        severity: 'review',
+        entityType: 'case',
+        key: 'case-source-quality',
+        title: '',
+        message: '缺少案例来源质量报告，请先运行 npm run audit:case-source-quality',
+      },
+    ];
+  }
+
+  const issueConfigs = [
+    { key: 'highValueMissingPrimary', type: 'highValueMissingPrimary', severity: 'review' },
+    { key: 'weakSource', type: 'weakSource', severity: 'review' },
+    { key: 'unknownOnly', type: 'unknownOnly', severity: 'review' },
+    { key: 'secondaryOnly', type: 'secondaryOnly', severity: 'info' },
+  ];
+
+  const items = [];
+  for (const config of issueConfigs) {
+    for (const item of report.issues?.[config.key] || []) {
+      items.push({
+        id: issueId('caseSource', config.type, item.key),
+        type: config.type,
+        severity: config.severity,
+        entityType: 'case',
+        key: item.key,
+        title: item.title || '',
+        category: item.category || '',
+        file: item.file || '',
+        strongestSourceType: item.strongestSourceType || '',
+        sourceTypes: item.sourceTypes || [],
+        qualityFlags: item.qualityFlags || [],
+        referenceDomains: (item.references || []).map((ref) => ref.domain || 'unknown'),
+        message: `Case 来源质量需要复核: ${config.type} ${item.key}`,
+      });
+    }
+  }
+
+  const typeOrder = {
+    highValueMissingPrimary: 0,
+    weakSource: 1,
+    unknownOnly: 2,
+    secondaryOnly: 3,
+  };
+
+  return items
+    .sort((a, b) => (typeOrder[a.type] ?? 99) - (typeOrder[b.type] ?? 99) || a.key.localeCompare(b.key))
+    .slice(0, maxEmbeddedIssueItems);
+}
+
 export function buildQualityReport({ generatedAt = new Date().toISOString() } = {}) {
   const collections = {
     risks: loadEntities('risks'),
@@ -245,19 +413,32 @@ export function buildQualityReport({ generatedAt = new Date().toISOString() } = 
   const missingCoverage = collectMissingCoverage(collections);
   const sceneIssues = collectSceneIssues(collections.businessScenes, riskIds);
   const i18nIssues = collectI18nIssues();
+  const referenceHealthReport = readOptionalJson(referenceHealthReportPath);
+  const caseSourceQualityReport = readOptionalJson(caseSourceQualityReportPath);
+  const referenceHealthIssues = collectReferenceHealthIssues(referenceHealthReport);
+  const caseSourceIssues = collectCaseSourceIssues(caseSourceQualityReport);
 
   return {
     schemaVersion: 1,
     generatedAt,
+    embeddedIssueLimit: maxEmbeddedIssueItems,
+    sourceReports: {
+      referenceHealth: summarizeReferenceHealth(referenceHealthReport),
+      caseSourceQuality: summarizeCaseSourceQuality(caseSourceQualityReport),
+    },
     weakRelations,
     missingCoverage,
     sceneIssues,
     i18nIssues,
+    referenceHealthIssues,
+    caseSourceIssues,
     summary: {
       weakRelations: summarizeIssues(weakRelations),
       missingCoverage: summarizeIssues(missingCoverage),
       sceneIssues: summarizeIssues(sceneIssues),
       i18nIssues: summarizeIssues(i18nIssues),
+      referenceHealthIssues: summarizeIssues(referenceHealthIssues),
+      caseSourceIssues: summarizeIssues(caseSourceIssues),
     },
   };
 }
@@ -281,5 +462,7 @@ if (isCli) {
   console.log(`missingCoverage=${report.missingCoverage.length}`);
   console.log(`sceneIssues=${report.sceneIssues.length}`);
   console.log(`i18nIssues=${report.i18nIssues.length}`);
+  console.log(`referenceHealthIssues=${report.referenceHealthIssues.length}`);
+  console.log(`caseSourceIssues=${report.caseSourceIssues.length}`);
   console.log(`report=${path.relative(projectRoot, publicReportPath)}`);
 }
