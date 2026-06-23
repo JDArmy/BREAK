@@ -39,19 +39,19 @@
         "note": "共同覆盖 5 个风险，共同限制 2 个攻击工具。"
       },
       {
-        "key": "A0014-001",
+        "key": "A0015",
         "relation": "complement",
-        "note": "该细分手段可作为主控制的具体落地方式。"
-      },
-      {
-        "key": "A0014-002",
-        "relation": "complement",
-        "note": "该细分手段可作为主控制的具体落地方式。"
+        "note": "共同覆盖 6 个风险。"
       },
       {
         "key": "A0029-001",
         "relation": "complement",
         "note": "共同覆盖 5 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0016",
+        "relation": "complement",
+        "note": "共同覆盖 5 个风险。"
       }
     ]
   },
@@ -80,16 +80,6 @@
     "effectiveness": "high",
     "relatedAvoidances": [
       {
-        "key": "A0014",
-        "relation": "prerequisite",
-        "note": "同一主规避体系下的基础控制。"
-      },
-      {
-        "key": "A0014-002",
-        "relation": "alternative",
-        "note": "同一主规避体系下的可替代细分手段。"
-      },
-      {
         "key": "A0002",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
@@ -106,6 +96,16 @@
       },
       {
         "key": "A0013-003",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0013-004",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0021",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
@@ -136,16 +136,6 @@
     "effectiveness": "high",
     "relatedAvoidances": [
       {
-        "key": "A0014",
-        "relation": "prerequisite",
-        "note": "同一主规避体系下的基础控制。"
-      },
-      {
-        "key": "A0014-001",
-        "relation": "alternative",
-        "note": "同一主规避体系下的可替代细分手段。"
-      },
-      {
         "key": "A0017",
         "relation": "complement",
         "note": "共同覆盖 4 个风险。"
@@ -162,6 +152,16 @@
       },
       {
         "key": "A0016",
+        "relation": "complement",
+        "note": "共同覆盖 3 个风险。"
+      },
+      {
+        "key": "A0019",
+        "relation": "complement",
+        "note": "共同覆盖 3 个风险。"
+      },
+      {
+        "key": "A0028",
         "relation": "complement",
         "note": "共同覆盖 3 个风险。"
       }

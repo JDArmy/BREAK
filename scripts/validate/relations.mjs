@@ -7,6 +7,7 @@ import {
   readJson,
   writeJson,
 } from '../search/common.mjs';
+import { validateDerivedRelationNotes, validateDerivedRelationTop6 } from './relation-note-utils.mjs';
 
 const reportDir = path.join(projectRoot, 'research/search-reports');
 const reportJsonPath = path.join(reportDir, 'relationship-coverage.json');
@@ -186,6 +187,24 @@ function collectRelationAudit() {
       }
       seen.add(fingerprint);
     }
+  }
+  for (const issue of validateDerivedRelationNotes({ risks, avoidances, attackTools, threatActors })) {
+    addIssue(
+      issues,
+      'error',
+      'stale_derived_relation_note',
+      `${issue.entity}.${issue.field}[${issue.index}].note 与当前关系数据不一致: ${issue.sourceKey} -> ${issue.targetKey}`,
+      issue,
+    );
+  }
+  for (const issue of validateDerivedRelationTop6({ risks, avoidances, attackTools, threatActors })) {
+    addIssue(
+      issues,
+      'error',
+      'stale_derived_relation_top6',
+      `${issue.entity}.${issue.field} 不是按共同连接数派生的 top6: ${issue.sourceKey}`,
+      issue,
+    );
   }
   for (const ref of threatActorAttackToolRefs) {
     if (!attackToolIds.has(ref)) {

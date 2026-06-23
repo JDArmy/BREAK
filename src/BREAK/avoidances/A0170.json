@@ -17,6 +17,16 @@
     "effectiveness": "high",
     "relatedAvoidances": [
       {
+        "key": "A0057",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0079",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
         "key": "A0104",
         "relation": "complement",
         "note": "共同限制 1 个攻击工具。"
@@ -33,16 +43,6 @@
       },
       {
         "key": "A0168",
-        "relation": "complement",
-        "note": "共同限制 1 个攻击工具。"
-      },
-      {
-        "key": "A0169",
-        "relation": "complement",
-        "note": "共同限制 1 个攻击工具。"
-      },
-      {
-        "key": "A0176",
         "relation": "complement",
         "note": "共同限制 1 个攻击工具。"
       }

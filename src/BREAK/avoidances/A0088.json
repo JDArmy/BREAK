@@ -31,11 +31,6 @@
     "effectiveness": "high",
     "relatedAvoidances": [
       {
-        "key": "A0064",
-        "relation": "complement",
-        "note": "条目正文明确提及该规避手段。"
-      },
-      {
         "key": "A0084",
         "relation": "complement",
         "note": "共同覆盖 2 个风险。"
@@ -57,6 +52,11 @@
       },
       {
         "key": "A0024",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0048",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }

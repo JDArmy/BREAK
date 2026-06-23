@@ -1,6 +1,6 @@
 {
   "name": "break",
-  "version": "2.21.24",
+  "version": "2.21.25",
   "private": true,
   "type": "module",
   "engines": {
@@ -31,6 +31,7 @@
     "audit:keywords": "node scripts/validate/keywords.mjs",
     "fix:keywords": "node scripts/validate/keywords.mjs",
     "list:keyword-batches": "node scripts/validate/keyword-batches.mjs",
+    "sync:lateral-relations": "node scripts/validate/sync-lateral-relations.mjs",
     "audit:relations": "node scripts/validate/relations.mjs",
     "audit:references": "node scripts/validate/references.mjs",
     "audit:references-health": "node scripts/validate/references-health.mjs",

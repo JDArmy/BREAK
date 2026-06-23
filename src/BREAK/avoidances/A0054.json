@@ -48,14 +48,14 @@
         "note": "共同覆盖 8 个风险。"
       },
       {
-        "key": "A0044",
-        "relation": "complement",
-        "note": "共同覆盖 6 个风险，共同限制 1 个攻击工具。"
-      },
-      {
         "key": "A0048",
         "relation": "complement",
         "note": "共同覆盖 7 个风险。"
+      },
+      {
+        "key": "A0044",
+        "relation": "complement",
+        "note": "共同覆盖 6 个风险，共同限制 1 个攻击工具。"
       }
     ]
   },
@@ -83,11 +83,6 @@
     ],
     "effectiveness": "high",
     "relatedAvoidances": [
-      {
-        "key": "A0054",
-        "relation": "prerequisite",
-        "note": "同一主规避体系下的基础控制。"
-      },
       {
         "key": "A0035",
         "relation": "complement",

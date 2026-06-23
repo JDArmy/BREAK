@@ -26,22 +26,6 @@
       "AI数据投毒与提示注入"
     ],
     "updated": "2026-06-17",
-    "relatedAttackTools": [
-      {
-        "key": "AT0057",
-        "relation": "co-used",
-        "note": "AI 数据投毒与提示注入常与 LLM 自动化攻击工具组合进行批量探测和触发。"
-      },
-      {
-        "key": "AT0074",
-        "relation": "co-used",
-        "note": "提示注入可作为 AI Agent 劫持链路中的输入控制和能力触发手段。"
-      },
-      {
-        "key": "AT0053",
-        "relation": "alternative",
-        "note": "同属 AI 滥用工具域，可在不同场景下替代或组合形成攻击能力。"
-      }
-    ]
+    "relatedAttackTools": []
   }
 }

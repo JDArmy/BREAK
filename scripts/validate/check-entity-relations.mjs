@@ -1,5 +1,6 @@
 import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
+import { validateDerivedRelationNotes, validateDerivedRelationTop6 } from "./relation-note-utils.mjs";
 
 const root = "src/BREAK";
 
@@ -266,6 +267,28 @@ for (const { id, entity, file } of risks) {
   if (!id.includes("-") && !referencedMainRisks.has(id)) {
     addIssue(issues, file, id, `主风险未被场景/工具/行为者引用: ${entity.title}`);
   }
+}
+
+for (const issue of validateDerivedRelationNotes({ risks, avoidances, attackTools, threatActors })) {
+  const records = issue.entity === "Avoidance" ? avoidances : attackTools;
+  const record = records.find((item) => item.id === issue.sourceKey);
+  addIssue(
+    issues,
+    record?.file || `src/BREAK/${issue.entity}`,
+    issue.sourceKey,
+    `${issue.field}[${issue.index}].note 与当前关系数据不一致: ${issue.sourceKey} -> ${issue.targetKey}; 当前="${issue.note}"; 应为="${issue.expected}"`,
+  );
+}
+
+for (const issue of validateDerivedRelationTop6({ risks, avoidances, attackTools, threatActors })) {
+  const records = issue.entity === "Avoidance" ? avoidances : attackTools;
+  const record = records.find((item) => item.id === issue.sourceKey);
+  addIssue(
+    issues,
+    record?.file || `src/BREAK/${issue.entity}`,
+    issue.sourceKey,
+    `${issue.field} 不是按共同连接数派生的 top6: 当前 ${issue.actualCount} 条，应为 ${issue.expectedCount} 条；请运行 npm run sync:lateral-relations`,
+  );
 }
 
 if (issues.length > 0) {

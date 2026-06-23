@@ -29,29 +29,29 @@
         "note": "共同覆盖 7 个风险，共同限制 1 个攻击工具。"
       },
       {
-        "key": "A0008-001",
+        "key": "A0002",
         "relation": "complement",
-        "note": "该细分手段可作为主控制的具体落地方式。"
+        "note": "共同覆盖 5 个风险，共同限制 1 个攻击工具。"
       },
       {
-        "key": "A0008-002",
+        "key": "A0001",
         "relation": "complement",
-        "note": "该细分手段可作为主控制的具体落地方式。"
+        "note": "共同覆盖 5 个风险。"
       },
       {
-        "key": "A0008-003",
+        "key": "A0005",
         "relation": "complement",
-        "note": "该细分手段可作为主控制的具体落地方式。"
+        "note": "共同覆盖 4 个风险。"
       },
       {
-        "key": "A0008-004",
+        "key": "A0067",
         "relation": "complement",
-        "note": "该细分手段可作为主控制的具体落地方式。"
+        "note": "共同覆盖 3 个风险，共同限制 1 个攻击工具。"
       },
       {
-        "key": "A0008-005",
+        "key": "A0018",
         "relation": "complement",
-        "note": "该细分手段可作为主控制的具体落地方式。"
+        "note": "共同覆盖 3 个风险。"
       }
     ]
   },
@@ -80,32 +80,32 @@
     "effectiveness": "high",
     "relatedAvoidances": [
       {
-        "key": "A0008",
-        "relation": "prerequisite",
-        "note": "同一主规避体系下的基础控制。"
-      },
-      {
-        "key": "A0008-002",
-        "relation": "alternative",
-        "note": "同一主规避体系下的可替代细分手段。"
-      },
-      {
-        "key": "A0008-003",
-        "relation": "alternative",
-        "note": "同一主规避体系下的可替代细分手段。"
-      },
-      {
-        "key": "A0008-004",
-        "relation": "alternative",
-        "note": "同一主规避体系下的可替代细分手段。"
-      },
-      {
-        "key": "A0008-005",
-        "relation": "alternative",
-        "note": "同一主规避体系下的可替代细分手段。"
-      },
-      {
         "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0002",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0003",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0004",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0005",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0008",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
@@ -136,32 +136,32 @@
     "effectiveness": "high",
     "relatedAvoidances": [
       {
-        "key": "A0008",
-        "relation": "prerequisite",
-        "note": "同一主规避体系下的基础控制。"
-      },
-      {
-        "key": "A0008-001",
-        "relation": "alternative",
-        "note": "同一主规避体系下的可替代细分手段。"
-      },
-      {
-        "key": "A0008-003",
-        "relation": "alternative",
-        "note": "同一主规避体系下的可替代细分手段。"
-      },
-      {
-        "key": "A0008-004",
-        "relation": "alternative",
-        "note": "同一主规避体系下的可替代细分手段。"
-      },
-      {
-        "key": "A0008-005",
-        "relation": "alternative",
-        "note": "同一主规避体系下的可替代细分手段。"
-      },
-      {
         "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0002",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0003",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0004",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0005",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0008",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
@@ -192,32 +192,32 @@
     "effectiveness": "high",
     "relatedAvoidances": [
       {
-        "key": "A0008",
-        "relation": "prerequisite",
-        "note": "同一主规避体系下的基础控制。"
-      },
-      {
-        "key": "A0008-001",
-        "relation": "alternative",
-        "note": "同一主规避体系下的可替代细分手段。"
-      },
-      {
-        "key": "A0008-002",
-        "relation": "alternative",
-        "note": "同一主规避体系下的可替代细分手段。"
-      },
-      {
-        "key": "A0008-004",
-        "relation": "alternative",
-        "note": "同一主规避体系下的可替代细分手段。"
-      },
-      {
-        "key": "A0008-005",
-        "relation": "alternative",
-        "note": "同一主规避体系下的可替代细分手段。"
-      },
-      {
         "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0002",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0003",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0004",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0005",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0008",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
@@ -248,32 +248,32 @@
     "effectiveness": "high",
     "relatedAvoidances": [
       {
-        "key": "A0008",
-        "relation": "prerequisite",
-        "note": "同一主规避体系下的基础控制。"
-      },
-      {
-        "key": "A0008-001",
-        "relation": "alternative",
-        "note": "同一主规避体系下的可替代细分手段。"
-      },
-      {
-        "key": "A0008-002",
-        "relation": "alternative",
-        "note": "同一主规避体系下的可替代细分手段。"
-      },
-      {
-        "key": "A0008-003",
-        "relation": "alternative",
-        "note": "同一主规避体系下的可替代细分手段。"
-      },
-      {
-        "key": "A0008-005",
-        "relation": "alternative",
-        "note": "同一主规避体系下的可替代细分手段。"
-      },
-      {
         "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0002",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0003",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0004",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0005",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0008",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
@@ -304,32 +304,32 @@
     "effectiveness": "high",
     "relatedAvoidances": [
       {
-        "key": "A0008",
-        "relation": "prerequisite",
-        "note": "同一主规避体系下的基础控制。"
-      },
-      {
-        "key": "A0008-001",
-        "relation": "alternative",
-        "note": "同一主规避体系下的可替代细分手段。"
-      },
-      {
-        "key": "A0008-002",
-        "relation": "alternative",
-        "note": "同一主规避体系下的可替代细分手段。"
-      },
-      {
-        "key": "A0008-003",
-        "relation": "alternative",
-        "note": "同一主规避体系下的可替代细分手段。"
-      },
-      {
-        "key": "A0008-004",
-        "relation": "alternative",
-        "note": "同一主规避体系下的可替代细分手段。"
-      },
-      {
         "key": "A0001",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      },
+      {
+        "key": "A0002",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      },
+      {
+        "key": "A0004",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      },
+      {
+        "key": "A0005",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      },
+      {
+        "key": "A0010",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      },
+      {
+        "key": "A0018",
         "relation": "complement",
         "note": "共同覆盖 4 个风险。"
       }

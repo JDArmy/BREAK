@@ -30,17 +30,7 @@
       {
         "key": "A0035-001",
         "relation": "complement",
-        "note": "该细分手段可作为主控制的具体落地方式。"
-      },
-      {
-        "key": "A0035-002",
-        "relation": "complement",
-        "note": "该细分手段可作为主控制的具体落地方式。"
-      },
-      {
-        "key": "A0035-003",
-        "relation": "complement",
-        "note": "该细分手段可作为主控制的具体落地方式。"
+        "note": "共同覆盖 4 个风险。"
       },
       {
         "key": "A0050",
@@ -56,6 +46,16 @@
         "key": "A0016",
         "relation": "complement",
         "note": "共同覆盖 2 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0043",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0006",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
       }
     ]
   },
@@ -85,21 +85,6 @@
     "relatedAvoidances": [
       {
         "key": "A0035",
-        "relation": "prerequisite",
-        "note": "同一主规避体系下的基础控制。"
-      },
-      {
-        "key": "A0035-002",
-        "relation": "alternative",
-        "note": "同一主规避体系下的可替代细分手段。"
-      },
-      {
-        "key": "A0035-003",
-        "relation": "alternative",
-        "note": "同一主规避体系下的可替代细分手段。"
-      },
-      {
-        "key": "A0035",
         "relation": "complement",
         "note": "共同覆盖 4 个风险。"
       },
@@ -112,6 +97,21 @@
         "key": "A0045",
         "relation": "complement",
         "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0016",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0020",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0043",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
       }
     ]
   },
@@ -140,22 +140,12 @@
     "effectiveness": "high",
     "relatedAvoidances": [
       {
-        "key": "A0035",
-        "relation": "prerequisite",
-        "note": "同一主规避体系下的基础控制。"
-      },
-      {
-        "key": "A0035-001",
-        "relation": "alternative",
-        "note": "同一主规避体系下的可替代细分手段。"
+        "key": "A0020-001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
       },
       {
         "key": "A0035-003",
-        "relation": "alternative",
-        "note": "同一主规避体系下的可替代细分手段。"
-      },
-      {
-        "key": "A0020-001",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       },
@@ -191,22 +181,12 @@
     "effectiveness": "high",
     "relatedAvoidances": [
       {
-        "key": "A0035",
-        "relation": "prerequisite",
-        "note": "同一主规避体系下的基础控制。"
-      },
-      {
-        "key": "A0035-001",
-        "relation": "alternative",
-        "note": "同一主规避体系下的可替代细分手段。"
+        "key": "A0020-001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
       },
       {
         "key": "A0035-002",
-        "relation": "alternative",
-        "note": "同一主规避体系下的可替代细分手段。"
-      },
-      {
-        "key": "A0020-001",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       },

@@ -41,34 +41,34 @@
     ],
     "relatedAttackTools": [
       {
-        "key": "AT0031",
-        "relation": "co-used",
-        "note": "共同关联 7 个风险，共享 1 个规避手段。"
-      },
-      {
-        "key": "AT0021",
-        "relation": "co-used",
-        "note": "共同关联 9 个风险。"
-      },
-      {
-        "key": "AT0022",
-        "relation": "co-used",
-        "note": "共同关联 9 个风险。"
-      },
-      {
         "key": "AT0034-001",
-        "relation": "capability-upgrade",
-        "note": "该细分工具扩展了主工具的具体能力。"
+        "relation": "co-used",
+        "note": "共同关联 12 个风险，共享 2 个规避手段。"
       },
       {
         "key": "AT0034-002",
-        "relation": "capability-upgrade",
-        "note": "该细分工具扩展了主工具的具体能力。"
+        "relation": "co-used",
+        "note": "共同关联 12 个风险，共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0032",
+        "relation": "co-used",
+        "note": "共同关联 10 个风险。"
+      },
+      {
+        "key": "AT0050",
+        "relation": "co-used",
+        "note": "共同关联 9 个风险，共享 1 个规避手段。"
       },
       {
         "key": "AT0035",
         "relation": "co-used",
         "note": "共同关联 9 个风险，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0021",
+        "relation": "co-used",
+        "note": "共同关联 9 个风险。"
       }
     ]
   },
@@ -128,13 +128,8 @@
     "relatedAttackTools": [
       {
         "key": "AT0034-002",
-        "relation": "alternative",
-        "note": "共同关联 24 个风险，共享 4 个规避手段，被 3 个相同行为者使用或建设。"
-      },
-      {
-        "key": "AT0001",
         "relation": "co-used",
-        "note": "共同关联 8 个风险，被 9 个相同行为者使用或建设。"
+        "note": "共同关联 24 个风险，共享 4 个规避手段，被 3 个相同行为者使用或建设。"
       },
       {
         "key": "AT0023",
@@ -142,19 +137,24 @@
         "note": "共同关联 10 个风险，被 8 个相同行为者使用或建设。"
       },
       {
-        "key": "AT0045",
+        "key": "AT0001",
         "relation": "co-used",
-        "note": "共同关联 9 个风险，共享 1 个规避手段，被 2 个相同行为者使用或建设。"
-      },
-      {
-        "key": "AT0030",
-        "relation": "co-used",
-        "note": "共同关联 9 个风险，被 2 个相同行为者使用或建设。"
+        "note": "共同关联 8 个风险，被 9 个相同行为者使用或建设。"
       },
       {
         "key": "AT0035",
         "relation": "co-used",
         "note": "共同关联 13 个风险，被 3 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0044",
+        "relation": "co-used",
+        "note": "共同关联 8 个风险，共享 1 个规避手段，被 6 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0034",
+        "relation": "co-used",
+        "note": "共同关联 12 个风险，共享 2 个规避手段。"
       }
     ]
   },
@@ -214,7 +214,7 @@
     "relatedAttackTools": [
       {
         "key": "AT0034-001",
-        "relation": "alternative",
+        "relation": "co-used",
         "note": "共同关联 24 个风险，共享 4 个规避手段，被 3 个相同行为者使用或建设。"
       },
       {
@@ -223,24 +223,24 @@
         "note": "共同关联 13 个风险，被 1 个相同行为者使用或建设。"
       },
       {
-        "key": "AT0030",
-        "relation": "co-used",
-        "note": "共同关联 9 个风险，被 1 个相同行为者使用或建设。"
-      },
-      {
         "key": "AT0034",
-        "relation": "prerequisite",
-        "note": "同一主攻击工具体系下的基础工具能力。"
+        "relation": "co-used",
+        "note": "共同关联 12 个风险，共享 2 个规避手段。"
       },
       {
-        "key": "AT0045",
+        "key": "AT0021",
         "relation": "co-used",
-        "note": "共同关联 9 个风险，共享 1 个规避手段。"
+        "note": "共同关联 11 个风险，被 1 个相同行为者使用或建设。"
       },
       {
-        "key": "AT0042",
+        "key": "AT0022",
         "relation": "co-used",
-        "note": "共同关联 10 个风险，共享 1 个规避手段。"
+        "note": "共同关联 11 个风险，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0023",
+        "relation": "co-used",
+        "note": "共同关联 10 个风险，被 2 个相同行为者使用或建设。"
       }
     ]
   }

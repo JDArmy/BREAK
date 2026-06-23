@@ -46,6 +46,16 @@
     "updated": "2026-06-16",
     "relatedAttackTools": [
       {
+        "key": "AT0081",
+        "relation": "co-used",
+        "note": "共同关联 3 个风险，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0083",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险。"
+      },
+      {
         "key": "AT0063",
         "relation": "co-used",
         "note": "共享 2 个规避手段。"
@@ -61,19 +71,9 @@
         "note": "共享 2 个规避手段。"
       },
       {
-        "key": "AT0013",
+        "key": "AT0003",
         "relation": "co-used",
-        "note": "被 1 个相同行为者使用或建设。"
-      },
-      {
-        "key": "AT0054",
-        "relation": "co-used",
-        "note": "被 1 个相同行为者使用或建设。"
-      },
-      {
-        "key": "AT0081",
-        "relation": "co-used",
-        "note": "共同关联 3 个风险，被 1 个相同行为者使用或建设。"
+        "note": "共享 1 个规避手段。"
       }
     ]
   }

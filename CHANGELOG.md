@@ -1,5 +1,11 @@
 # Change log
 
+## 2.21.25
+
+- 将规避手段和攻击工具横向关系改为按共同连接数派生 top6，避免人工维护顺序和说明数字漂移
+- 新增 `sync:lateral-relations` 脚本，统一生成 `relatedAvoidances` 与 `relatedAttackTools` 的关系和 note
+- 强化关系校验：`validate:data` 校验横向关系列表是否为派生 top6，并校验 note 中的共同覆盖/共同关联数字
+
 ## 2.21.24
 
 - 新增 `AttackTool.relatedAttackTools` 攻击工具横向关系模型，支持前置、组合使用、替代和能力升级四类语义
