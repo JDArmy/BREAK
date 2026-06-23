@@ -42,6 +42,38 @@
       "工具调用劫持",
       "记忆投毒",
       "Agent攻击"
+    ],
+    "relatedAttackTools": [
+      {
+        "key": "AT0057",
+        "relation": "co-used",
+        "note": "工具正文明确提及该攻击工具。"
+      },
+      {
+        "key": "AT0064",
+        "relation": "co-used",
+        "note": "共同关联 3 个风险，共享 1 个规避手段。"
+      },
+      {
+        "key": "AT0071",
+        "relation": "co-used",
+        "note": "共同关联 3 个风险。"
+      },
+      {
+        "key": "AT0012",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险。"
+      },
+      {
+        "key": "AT0013",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险。"
+      },
+      {
+        "key": "AT0030",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险。"
+      }
     ]
   }
 }

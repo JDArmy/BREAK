@@ -39,6 +39,38 @@
       "剪贴板劫持",
       "PowerShell诱导",
       "粘贴执行"
+    ],
+    "relatedAttackTools": [
+      {
+        "key": "AT0063",
+        "relation": "co-used",
+        "note": "工具正文明确提及该攻击工具。"
+      },
+      {
+        "key": "AT0071",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，共享 2 个规避手段，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0067",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，共享 1 个规避手段，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0073",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0001-002",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0057",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，被 1 个相同行为者使用或建设。"
+      }
     ]
   }
 }

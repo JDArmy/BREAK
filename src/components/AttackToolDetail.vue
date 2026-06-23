@@ -25,10 +25,13 @@ const termKey = ref("");
 
 const { getInnerDrawerWidth } = useDrawerWidth();
 
+const selectedAttackTool = computed(() => BREAK.attackTools[props.atKey as keyof typeof BREAK.attackTools]);
+
 // 缓存到当前 atKey，避免模板 v-if+v-for 重复取值/全表遍历
 const attackToolAvoidances = computed(
-  () => BREAK.attackTools[props.atKey as keyof typeof BREAK.attackTools].avoidances
+  () => selectedAttackTool.value?.avoidances ?? []
 );
+const relatedAttackTools = computed(() => selectedAttackTool.value?.relatedAttackTools ?? []);
 
 const relatedTerms = computed(() => {
   const atKey = props.atKey;
@@ -92,6 +95,20 @@ const relatedTerms = computed(() => {
         >
           {{ aKey }}: {{ $t(`BREAK.avoidances.${aKey}.title`) }}
         </button>
+      </div>
+    </div>
+    <div class="desc" v-if="relatedAttackTools.length > 0">
+      <strong>{{ $t("attackToolRelatedAttackTools") }}:&nbsp;</strong>
+      <div class="entity-links">
+        <router-link
+          v-for="relation in relatedAttackTools"
+          :key="`${relation.key}-${relation.relation}`"
+          class="entity-link"
+          :to="{ name: 'attackTools', hash: `#${relation.key}` }"
+        >
+          {{ $t(`attackToolRelationType.${relation.relation}`) }} ·
+          {{ relation.key }}: {{ $t(`BREAK.attackTools.${relation.key}.title`) }}
+        </router-link>
       </div>
     </div>
     <div class="desc" v-if="relatedTerms.length > 0">

@@ -50,6 +50,10 @@ interface UseRelationGraphDataOptions {
       | "avoidanceComplement"
       | "avoidanceAlternative"
       | "avoidanceMitigatesGap"
+      | "attackToolPrerequisite"
+      | "attackToolCoUsed"
+      | "attackToolAlternative"
+      | "attackToolCapabilityUpgrade"
       | "buildAttackTool"
       | "useAttackTool"
       | "causeRisk"
@@ -154,6 +158,30 @@ export const useRelationGraphData = ({
         color: getRelationLineColor("avoidanceMitigatesGap"),
         label: t("relationLine.avoidanceMitigatesGap"),
         fields: ["Avoidance.relatedAvoidances"],
+      },
+      {
+        key: "relationLine.attackToolPrerequisite",
+        color: getRelationLineColor("attackToolPrerequisite"),
+        label: t("relationLine.attackToolPrerequisite"),
+        fields: ["AttackTool.relatedAttackTools"],
+      },
+      {
+        key: "relationLine.attackToolCoUsed",
+        color: getRelationLineColor("attackToolCoUsed"),
+        label: t("relationLine.attackToolCoUsed"),
+        fields: ["AttackTool.relatedAttackTools"],
+      },
+      {
+        key: "relationLine.attackToolAlternative",
+        color: getRelationLineColor("attackToolAlternative"),
+        label: t("relationLine.attackToolAlternative"),
+        fields: ["AttackTool.relatedAttackTools"],
+      },
+      {
+        key: "relationLine.attackToolCapabilityUpgrade",
+        color: getRelationLineColor("attackToolCapabilityUpgrade"),
+        label: t("relationLine.attackToolCapabilityUpgrade"),
+        fields: ["AttackTool.relatedAttackTools"],
       },
       {
         key: "relationLine.buildAttackTool",

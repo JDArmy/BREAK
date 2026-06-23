@@ -49,6 +49,23 @@
       "治理攻击脚本",
       "链上套利机器人"
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-06-16",
+    "relatedAttackTools": [
+      {
+        "key": "AT0054",
+        "relation": "co-used",
+        "note": "被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0060",
+        "relation": "co-used",
+        "note": "被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0076",
+        "relation": "co-used",
+        "note": "共同关联 4 个风险，被 1 个相同行为者使用或建设。"
+      }
+    ]
   }
 }

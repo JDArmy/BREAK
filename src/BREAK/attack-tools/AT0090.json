@@ -25,6 +25,38 @@
       "支付欺诈自动化工具",
       "支付欺诈自动化"
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-06-17",
+    "relatedAttackTools": [
+      {
+        "key": "AT0026",
+        "relation": "co-used",
+        "note": "被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0001",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险。"
+      },
+      {
+        "key": "AT0001-003",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险。"
+      },
+      {
+        "key": "AT0006",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险。"
+      },
+      {
+        "key": "AT0008",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险。"
+      },
+      {
+        "key": "AT0023",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险。"
+      }
+    ]
   }
 }

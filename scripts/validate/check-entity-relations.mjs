@@ -81,6 +81,7 @@ const avoidanceCategories = readJson(join(root, "avoidance-categories", "avoidan
 const avoidanceCategoryIds = new Set(Object.keys(avoidanceCategories));
 const riskRelationTypes = new Set(["prerequisite", "co-occurrence", "escalation", "variant"]);
 const avoidanceRelationTypes = new Set(["prerequisite", "complement", "alternative", "mitigates-gap"]);
+const attackToolRelationTypes = new Set(["prerequisite", "co-used", "alternative", "capability-upgrade"]);
 
 const issues = [];
 
@@ -164,6 +165,31 @@ for (const record of attackTools) {
     addIssue(issues, record.file, record.id, "avoidances 不能为空");
   }
   checkRefs(issues, record, "avoidances", avoidanceIds, "Avoidance");
+
+  const relatedAttackTools = record.entity.relatedAttackTools || [];
+  if (!Array.isArray(relatedAttackTools)) {
+    addIssue(issues, record.file, record.id, "relatedAttackTools 必须是数组");
+  } else {
+    const seen = new Set();
+    for (const [index, relation] of relatedAttackTools.entries()) {
+      const ref = relation?.key;
+      const relationType = relation?.relation;
+      if (!ref || !attackToolIds.has(ref)) {
+        addIssue(issues, record.file, record.id, `relatedAttackTools[${index}].key 引用了不存在的 AttackTool: ${ref}`);
+      }
+      if (ref === record.id) {
+        addIssue(issues, record.file, record.id, `relatedAttackTools[${index}].key 不能引用自身`);
+      }
+      if (!attackToolRelationTypes.has(relationType)) {
+        addIssue(issues, record.file, record.id, `relatedAttackTools[${index}].relation 非法: ${relationType}`);
+      }
+      const fingerprint = `${ref}:${relationType}`;
+      if (seen.has(fingerprint)) {
+        addIssue(issues, record.file, record.id, `relatedAttackTools 存在重复关系: ${fingerprint}`);
+      }
+      seen.add(fingerprint);
+    }
+  }
 }
 
 for (const record of threatActors) {

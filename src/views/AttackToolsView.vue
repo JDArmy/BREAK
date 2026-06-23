@@ -63,12 +63,14 @@ const attackToolItems = computed(() =>
         ...attackTool.avoidances,
         ...attackTool.directCauseRisks,
         ...attackTool.indirectSupportRisks,
+        ...(attackTool.relatedAttackTools ?? []).map((relation) => relation.key),
       ].join(" "),
     };
   })
 );
 
 const selectedAttackTool = computed(() => BREAK.attackTools[selectedAttackToolKey.value]);
+const relatedAttackToolRelations = computed(() => selectedAttackTool.value?.relatedAttackTools ?? []);
 const localeMessages = computed(() => messages.value[locale.value] as Record<string, unknown>);
 
 const { relatedCases, ensureCases, cases, loaded, sectionRef: casesSectionRef } = useRelatedCases(
@@ -149,6 +151,23 @@ const { openRelationGraph } = useRelationGraph("attack-tool");
         param-key="aKey"
         anchor="avoidances"
       />
+      <section v-if="relatedAttackToolRelations.length" class="detail-section">
+        <h3>{{ $t("attackToolRelatedAttackTools") }}</h3>
+        <div class="attack-tool-relation-list">
+          <router-link
+            v-for="relation in relatedAttackToolRelations"
+            :key="`${relation.key}-${relation.relation}`"
+            class="attack-tool-relation-item"
+            :to="{ name: 'attackTools', hash: `#${relation.key}` }"
+          >
+            <span class="attack-tool-relation-type">{{ $t(`attackToolRelationType.${relation.relation}`) }}</span>
+            <span class="attack-tool-relation-title">
+              {{ relation.key }}: {{ $t(`BREAK.attackTools.${relation.key}.title`) }}
+            </span>
+            <span v-if="relation.note" class="attack-tool-relation-note">{{ relation.note }}</span>
+          </router-link>
+        </div>
+      </section>
       <EntityLinkSection
         :keys="builderThreatActorKeys"
         title="buildAttackTools"
@@ -228,5 +247,87 @@ const { openRelationGraph } = useRelationGraph("attack-tool");
 .text-muted {
   color: var(--break-text-muted);
   font-size: 0.9em;
+}
+
+.attack-tool-relation-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.attack-tool-relation-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-areas:
+    "type title"
+    "type note";
+  column-gap: 8px;
+  row-gap: 2px;
+  align-items: center;
+  min-width: 0;
+  min-height: 62px;
+  padding: 8px 10px;
+  color: inherit;
+  text-decoration: none;
+  background: var(--break-bg-secondary);
+  border: 1px solid var(--break-border);
+  border-radius: 6px;
+}
+
+.attack-tool-relation-item:hover {
+  color: var(--break-primary);
+  border-color: var(--break-primary);
+}
+
+.attack-tool-relation-type {
+  grid-area: type;
+  flex: 0 0 auto;
+  min-width: 44px;
+  padding: 1px 6px;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--break-primary);
+  border: 1px solid var(--break-primary);
+  border-radius: 4px;
+}
+
+.attack-tool-relation-title {
+  grid-area: title;
+  min-width: 0;
+  overflow: hidden;
+  font-weight: 600;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.attack-tool-relation-note {
+  grid-area: note;
+  min-width: 0;
+  overflow: hidden;
+  color: var(--break-text-muted);
+  font-size: 0.84em;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 720px) {
+  .attack-tool-relation-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 1180px) {
+  .attack-tool-relation-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1181px) and (max-width: 1599px) {
+  .attack-tool-relation-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 </style>

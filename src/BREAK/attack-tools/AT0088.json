@@ -24,6 +24,28 @@
       "云配置扫描与密钥利用工具",
       "云配置扫描与密钥利用"
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-06-17",
+    "relatedAttackTools": [
+      {
+        "key": "AT0096",
+        "relation": "co-used",
+        "note": "共享 1 个规避手段，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0057",
+        "relation": "co-used",
+        "note": "共享 1 个规避手段。"
+      },
+      {
+        "key": "AT0064",
+        "relation": "co-used",
+        "note": "共享 1 个规避手段。"
+      },
+      {
+        "key": "AT0074",
+        "relation": "co-used",
+        "note": "共享 1 个规避手段。"
+      }
+    ]
   }
 }

@@ -49,6 +49,38 @@
       "手机号接管",
       "短信验证码劫持",
       "运营商社工"
+    ],
+    "relatedAttackTools": [
+      {
+        "key": "AT0059",
+        "relation": "co-used",
+        "note": "共同关联 9 个风险，共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0065",
+        "relation": "co-used",
+        "note": "共同关联 10 个风险，共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0069",
+        "relation": "co-used",
+        "note": "共同关联 7 个风险，共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0063",
+        "relation": "co-used",
+        "note": "共同关联 6 个风险，共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0064",
+        "relation": "co-used",
+        "note": "共同关联 6 个风险，共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0068",
+        "relation": "co-used",
+        "note": "共同关联 8 个风险，共享 2 个规避手段。"
+      }
     ]
   }
 }

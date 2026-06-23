@@ -25,6 +25,23 @@
       "CI/CD凭证扫描与投毒工具",
       "CI/CD凭证扫描与投毒"
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-06-17",
+    "relatedAttackTools": [
+      {
+        "key": "AT0088",
+        "relation": "co-used",
+        "note": "CI/CD 凭证泄露后常与云配置扫描和密钥利用形成供应链到云资源的连续攻击链。"
+      },
+      {
+        "key": "AT0085",
+        "relation": "co-used",
+        "note": "CI/CD 接口、制品仓库和部署 API 暴露时，常与 API 枚举和越权测试组合使用。"
+      },
+      {
+        "key": "AT0096",
+        "relation": "co-used",
+        "note": "部署链路被污染后可能继续利用 CDN 与边缘配置扩大影响面。"
+      }
+    ]
   }
 }

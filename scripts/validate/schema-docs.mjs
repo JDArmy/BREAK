@@ -95,7 +95,7 @@ const fieldDescriptions = {
   summary: '案例摘要，80-150 字事实性描述。',
   incidentTime: '案例发生时间，YYYY 或 YYYY-MM。',
   relatedAvoidances: '相关规避手段列表；Avoidance 中为规避手段间关联对象列表。',
-  relatedAttackTools: '相关攻击工具 ID 列表。',
+  relatedAttackTools: '相关攻击工具列表；AttackTool 中为攻击工具间关联对象列表。',
   relatedThreatActors: '相关威胁行为者 ID 列表。',
   relatedBusinessScenes: '相关业务场景 ID 列表。',
   risks: '业务场景直接引用的风险 ID 列表。',
@@ -157,6 +157,7 @@ function countRecords(relativeDir) {
 function typeFor({ name, expression }) {
   if (expression.includes('riskRelationSchema')) return 'RiskRelation[]';
   if (expression.includes('avoidanceRelationSchema')) return 'AvoidanceRelation[]';
+  if (expression.includes('attackToolRelationSchema')) return 'AttackToolRelation[]';
   if (expression.includes('avoidanceCategorySchema')) {
     return enumValues.avoidanceCategorySchema.map((item) => `"${item}"`).join(' | ');
   }
@@ -267,6 +268,7 @@ function generateMarkdown() {
     '| `AttackTool.directCauseRisks` | AttackTool -> Risk | Risks directly caused by the tool. |',
     '| `AttackTool.indirectSupportRisks` | AttackTool -> Risk | Risks indirectly supported by the tool. |',
     '| `AttackTool.avoidances` | AttackTool -> Avoidance | Controls that mitigate the tool. |',
+    '| `AttackTool.relatedAttackTools` | AttackTool -> AttackTool | Semantic relations between attack tools, including prerequisites, co-use, alternatives, and capability upgrades. |',
     '| `ThreatActor.buildAttackTools` | ThreatActor -> AttackTool | Tools the actor can build or maintain. |',
     '| `ThreatActor.useAttackTools` | ThreatActor -> AttackTool | Tools the actor uses. |',
     '| `ThreatActor.directCauseRisks` | ThreatActor -> Risk | Risks directly caused by the actor. |',

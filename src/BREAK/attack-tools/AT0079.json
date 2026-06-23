@@ -47,6 +47,38 @@
       "Telegram Bot钓鱼",
       "EIP授权钓鱼"
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-06-16",
+    "relatedAttackTools": [
+      {
+        "key": "AT0063",
+        "relation": "co-used",
+        "note": "被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0080",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0058",
+        "relation": "co-used",
+        "note": "被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0060",
+        "relation": "co-used",
+        "note": "被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0064",
+        "relation": "co-used",
+        "note": "被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0065",
+        "relation": "co-used",
+        "note": "被 1 个相同行为者使用或建设。"
+      }
+    ]
   }
 }

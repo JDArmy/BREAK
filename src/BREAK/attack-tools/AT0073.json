@@ -38,6 +38,38 @@
       "AI诈骗电话",
       "语音诈骗工具",
       "伪装来电"
+    ],
+    "relatedAttackTools": [
+      {
+        "key": "AT0059",
+        "relation": "co-used",
+        "note": "工具正文明确提及该攻击工具。"
+      },
+      {
+        "key": "AT0063",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0067",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0071",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0075",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0001",
+        "relation": "co-used",
+        "note": "被 3 个相同行为者使用或建设。"
+      }
     ]
   }
 }

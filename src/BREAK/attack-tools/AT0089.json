@@ -24,6 +24,13 @@
       "SaaS OAuth滥用工具",
       "SaaS OAuth滥用"
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-06-17",
+    "relatedAttackTools": [
+      {
+        "key": "AT0092",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，共享 1 个规避手段，被 1 个相同行为者使用或建设。"
+      }
+    ]
   }
 }

@@ -11,6 +11,12 @@ interface AttackTool {
   avoidances: string[];
   directCauseRisks: string[];
   indirectSupportRisks: string[];
+  relatedAttackTools?: {
+    key: string;
+    relation: "prerequisite" | "co-used" | "alternative" | "capability-upgrade";
+    note?: string;
+  }[];
+  updated?: string;
 }
 
 interface AttackTools {

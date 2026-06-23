@@ -90,6 +90,9 @@ function collectRelationAudit() {
     ]),
   );
   const attackToolAvoidanceRefs = unique(attackTools.flatMap(({ entity }) => entity.avoidances || []));
+  const attackToolRelatedAttackToolRefs = unique(
+    attackTools.flatMap(({ entity }) => (entity.relatedAttackTools || []).map((relation) => relation.key)),
+  );
   const threatActorAttackToolRefs = unique(
     threatActors.flatMap(({ entity }) => [
       ...(entity.buildAttackTools || []),
@@ -164,6 +167,26 @@ function collectRelationAudit() {
       addIssue(issues, 'error', 'invalid_attack_tool_avoidance_ref', `AttackTool 引用了不存在的 Avoidance: ${ref}`, { ref });
     }
   }
+  for (const { key, entity } of attackTools) {
+    const seen = new Set();
+    for (const [index, relation] of (entity.relatedAttackTools || []).entries()) {
+      if (!relation?.key || !attackToolIds.has(relation.key)) {
+        addIssue(issues, 'error', 'invalid_attack_tool_related_attack_tool_ref', `AttackTool.relatedAttackTools 引用了不存在的 AttackTool: ${relation?.key}`, { key, index, ref: relation?.key });
+      }
+      if (relation?.key === key) {
+        addIssue(issues, 'error', 'self_attack_tool_relation', `AttackTool.relatedAttackTools 不能引用自身: ${key}`, { key, index });
+      }
+      const relationType = relation?.relation;
+      if (!['prerequisite', 'co-used', 'alternative', 'capability-upgrade'].includes(relationType)) {
+        addIssue(issues, 'error', 'invalid_attack_tool_relation_type', `AttackTool.relatedAttackTools 关系类型非法: ${relationType}`, { key, index, relationType });
+      }
+      const fingerprint = `${relation?.key}:${relationType}`;
+      if (seen.has(fingerprint)) {
+        addIssue(issues, 'review', 'duplicate_attack_tool_relation', `AttackTool.relatedAttackTools 存在重复关系: ${fingerprint}`, { key, index });
+      }
+      seen.add(fingerprint);
+    }
+  }
   for (const ref of threatActorAttackToolRefs) {
     if (!attackToolIds.has(ref)) {
       addIssue(issues, 'error', 'invalid_threat_actor_attack_tool_ref', `ThreatActor 引用了不存在的 AttackTool: ${ref}`, { ref });
@@ -182,7 +205,7 @@ function collectRelationAudit() {
 
   const referencedAvoidances = new Set([...riskAvoidanceRefs, ...attackToolAvoidanceRefs]);
   const referencedRisks = new Set([...attackToolRiskRefs, ...threatActorRiskRefs, ...sceneRiskRefs, ...riskRelatedRiskRefs]);
-  const referencedAttackTools = new Set(threatActorAttackToolRefs);
+  const referencedAttackTools = new Set([...threatActorAttackToolRefs, ...attackToolRelatedAttackToolRefs]);
 
   const unreferencedAvoidances = avoidances
     .filter(({ key }) => !referencedAvoidances.has(key))
@@ -211,6 +234,7 @@ function collectRelationAudit() {
     { name: 'AttackTool.directCauseRisks', ...coverage(attackTools, 'directCauseRisks') },
     { name: 'AttackTool.indirectSupportRisks', ...coverage(attackTools, 'indirectSupportRisks') },
     { name: 'AttackTool.avoidances', ...coverage(attackTools, 'avoidances') },
+    { name: 'AttackTool.relatedAttackTools', observationOnly: true, ...coverage(attackTools, 'relatedAttackTools') },
     { name: 'ThreatActor.attackTools', ...threatActorToolCoverage(threatActors) },
     { name: 'ThreatActor.buildAttackTools', observationOnly: true, ...coverage(threatActors, 'buildAttackTools') },
     { name: 'ThreatActor.useAttackTools', observationOnly: true, ...coverage(threatActors, 'useAttackTools') },

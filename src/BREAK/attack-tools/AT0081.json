@@ -47,6 +47,28 @@
       "设备劫持",
       "固件后门"
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-06-16",
+    "relatedAttackTools": [
+      {
+        "key": "AT0083",
+        "relation": "co-used",
+        "note": "共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0013",
+        "relation": "co-used",
+        "note": "被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0054",
+        "relation": "co-used",
+        "note": "被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0082",
+        "relation": "co-used",
+        "note": "共同关联 3 个风险，被 1 个相同行为者使用或建设。"
+      }
+    ]
   }
 }

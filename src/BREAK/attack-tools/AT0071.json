@@ -42,6 +42,38 @@
       "云钓鱼平台",
       "EvilProxy",
       "AiTM平台"
+    ],
+    "relatedAttackTools": [
+      {
+        "key": "AT0063",
+        "relation": "co-used",
+        "note": "共同关联 8 个风险，共享 6 个规避手段，被 3 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0067",
+        "relation": "co-used",
+        "note": "共同关联 7 个风险，共享 2 个规避手段，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0064",
+        "relation": "co-used",
+        "note": "共同关联 5 个风险，共享 2 个规避手段，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0075",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，共享 2 个规避手段，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0069",
+        "relation": "co-used",
+        "note": "共同关联 6 个风险，共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0072",
+        "relation": "co-used",
+        "note": "共同关联 3 个风险，共享 3 个规避手段。"
+      }
     ]
   }
 }

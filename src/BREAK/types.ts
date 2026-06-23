@@ -25,6 +25,18 @@ export interface AvoidanceRelation {
   note?: string;
 }
 
+export type AttackToolRelationType =
+  | "prerequisite"
+  | "co-used"
+  | "alternative"
+  | "capability-upgrade";
+
+export interface AttackToolRelation {
+  key: string;
+  relation: AttackToolRelationType;
+  note?: string;
+}
+
 export interface Risk {
   title: string;
   keywords: string[];
@@ -59,6 +71,7 @@ export interface AttackTool {
   avoidances: string[];
   directCauseRisks: string[];
   indirectSupportRisks: string[];
+  relatedAttackTools: AttackToolRelation[];
   references: Reference[];
   updated?: string;
 }

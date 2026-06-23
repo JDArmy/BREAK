@@ -46,6 +46,38 @@
       "AI变声",
       "声纹伪造",
       "零样本语音克隆"
+    ],
+    "relatedAttackTools": [
+      {
+        "key": "AT0056",
+        "relation": "co-used",
+        "note": "共同关联 5 个风险，共享 2 个规避手段，被 3 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0062",
+        "relation": "co-used",
+        "note": "共同关联 9 个风险，共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0065",
+        "relation": "co-used",
+        "note": "共同关联 10 个风险，共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0073",
+        "relation": "co-used",
+        "note": "目标工具正文明确提及当前攻击工具。"
+      },
+      {
+        "key": "AT0057",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，被 4 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0063",
+        "relation": "co-used",
+        "note": "共同关联 4 个风险，共享 1 个规避手段，被 1 个相同行为者使用或建设。"
+      }
     ]
   }
 }

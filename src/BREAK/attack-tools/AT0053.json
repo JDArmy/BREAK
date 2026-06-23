@@ -35,6 +35,38 @@
       "AI攻击工具",
       "AI诈骗工具",
       "黑产AI"
+    ],
+    "relatedAttackTools": [
+      {
+        "key": "AT0053-001",
+        "relation": "capability-upgrade",
+        "note": "该细分工具扩展了主工具的具体能力。"
+      },
+      {
+        "key": "AT0053-002",
+        "relation": "capability-upgrade",
+        "note": "该细分工具扩展了主工具的具体能力。"
+      },
+      {
+        "key": "AT0050",
+        "relation": "co-used",
+        "note": "共同关联 4 个风险，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0056",
+        "relation": "co-used",
+        "note": "共同关联 4 个风险，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0058",
+        "relation": "co-used",
+        "note": "共同关联 4 个风险，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0059",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，被 2 个相同行为者使用或建设。"
+      }
     ]
   },
   "AT0053-001": {
@@ -68,6 +100,38 @@
       "聊天诈骗机器人",
       "scam bot",
       "诈骗话术机器人"
+    ],
+    "relatedAttackTools": [
+      {
+        "key": "AT0053",
+        "relation": "prerequisite",
+        "note": "同一主攻击工具体系下的基础工具能力。"
+      },
+      {
+        "key": "AT0053-002",
+        "relation": "alternative",
+        "note": "同一主攻击工具体系下的可替代细分工具。"
+      },
+      {
+        "key": "AT0056",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 1 个规避手段，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0001-002",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0058",
+        "relation": "co-used",
+        "note": "共同关联 3 个风险，共享 1 个规避手段，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0073",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，被 1 个相同行为者使用或建设。"
+      }
     ]
   },
   "AT0053-002": {
@@ -103,6 +167,38 @@
       "实时换脸",
       "会议换脸",
       "人脸认证绕过"
+    ],
+    "relatedAttackTools": [
+      {
+        "key": "AT0053",
+        "relation": "prerequisite",
+        "note": "同一主攻击工具体系下的基础工具能力。"
+      },
+      {
+        "key": "AT0053-001",
+        "relation": "alternative",
+        "note": "同一主攻击工具体系下的可替代细分工具。"
+      },
+      {
+        "key": "AT0056",
+        "relation": "co-used",
+        "note": "共同关联 4 个风险，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0013",
+        "relation": "co-used",
+        "note": "共享 1 个规避手段，被 3 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0059",
+        "relation": "co-used",
+        "note": "共同关联 3 个风险，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0053",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，共享 1 个规避手段，被 1 个相同行为者使用或建设。"
+      }
     ]
   }
 }

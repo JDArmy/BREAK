@@ -26,6 +26,10 @@ type RelationLineKey =
   | "avoidanceComplement"
   | "avoidanceAlternative"
   | "avoidanceMitigatesGap"
+  | "attackToolPrerequisite"
+  | "attackToolCoUsed"
+  | "attackToolAlternative"
+  | "attackToolCapabilityUpgrade"
   | "buildAttackTool"
   | "useAttackTool"
   | "causeRisk"
@@ -145,6 +149,38 @@ export const createRelationExplanationHelpers = ({
       impactKey: "relationView.relationImpact.avoidanceRelation",
       evidenceLevel: "direct",
       sourceFields: ["Avoidance.relatedAvoidances"],
+    },
+    {
+      key: "attackToolPrerequisite",
+      relationKey: "relationLine.attackToolPrerequisite",
+      explanationKey: "relationView.relationExplanation.attackToolPrerequisite",
+      impactKey: "relationView.relationImpact.attackToolRelation",
+      evidenceLevel: "direct",
+      sourceFields: ["AttackTool.relatedAttackTools"],
+    },
+    {
+      key: "attackToolCoUsed",
+      relationKey: "relationLine.attackToolCoUsed",
+      explanationKey: "relationView.relationExplanation.attackToolCoUsed",
+      impactKey: "relationView.relationImpact.attackToolRelation",
+      evidenceLevel: "direct",
+      sourceFields: ["AttackTool.relatedAttackTools"],
+    },
+    {
+      key: "attackToolAlternative",
+      relationKey: "relationLine.attackToolAlternative",
+      explanationKey: "relationView.relationExplanation.attackToolAlternative",
+      impactKey: "relationView.relationImpact.attackToolRelation",
+      evidenceLevel: "direct",
+      sourceFields: ["AttackTool.relatedAttackTools"],
+    },
+    {
+      key: "attackToolCapabilityUpgrade",
+      relationKey: "relationLine.attackToolCapabilityUpgrade",
+      explanationKey: "relationView.relationExplanation.attackToolCapabilityUpgrade",
+      impactKey: "relationView.relationImpact.attackToolRelation",
+      evidenceLevel: "direct",
+      sourceFields: ["AttackTool.relatedAttackTools"],
     },
     {
       key: "buildAttackTool",
@@ -297,6 +333,14 @@ export const createRelationExplanationHelpers = ({
     ) {
       fields.add("Avoidance.relatedAvoidances");
     }
+    if (
+      getRelationLineKey(line) === "relationLine.attackToolPrerequisite" ||
+      getRelationLineKey(line) === "relationLine.attackToolCoUsed" ||
+      getRelationLineKey(line) === "relationLine.attackToolAlternative" ||
+      getRelationLineKey(line) === "relationLine.attackToolCapabilityUpgrade"
+    ) {
+      fields.add("AttackTool.relatedAttackTools");
+    }
     if (getRelationLineKey(line) === "relationLine.buildAttackTool")
       fields.add("ThreatActor.buildAttackTools");
     if (getRelationLineKey(line) === "relationLine.useAttackTool")
@@ -347,7 +391,11 @@ export const createRelationExplanationHelpers = ({
       getRelationLineKey(line) === "relationLine.avoidancePrerequisite" ||
       getRelationLineKey(line) === "relationLine.avoidanceComplement" ||
       getRelationLineKey(line) === "relationLine.avoidanceAlternative" ||
-      getRelationLineKey(line) === "relationLine.avoidanceMitigatesGap"
+      getRelationLineKey(line) === "relationLine.avoidanceMitigatesGap" ||
+      getRelationLineKey(line) === "relationLine.attackToolPrerequisite" ||
+      getRelationLineKey(line) === "relationLine.attackToolCoUsed" ||
+      getRelationLineKey(line) === "relationLine.attackToolAlternative" ||
+      getRelationLineKey(line) === "relationLine.attackToolCapabilityUpgrade"
     ) {
       return "direct";
     }
@@ -395,6 +443,10 @@ export const createRelationExplanationHelpers = ({
       lineText === "relationLine.avoidanceComplement" ||
       lineText === "relationLine.avoidanceAlternative" ||
       lineText === "relationLine.avoidanceMitigatesGap" ||
+      lineText === "relationLine.attackToolPrerequisite" ||
+      lineText === "relationLine.attackToolCoUsed" ||
+      lineText === "relationLine.attackToolAlternative" ||
+      lineText === "relationLine.attackToolCapabilityUpgrade" ||
       lineText === t("relationLine.riskPrerequisite") ||
       lineText === t("relationLine.riskCoOccurrence") ||
       lineText === t("relationLine.riskEscalation") ||
@@ -402,7 +454,11 @@ export const createRelationExplanationHelpers = ({
       lineText === t("relationLine.avoidancePrerequisite") ||
       lineText === t("relationLine.avoidanceComplement") ||
       lineText === t("relationLine.avoidanceAlternative") ||
-      lineText === t("relationLine.avoidanceMitigatesGap")
+      lineText === t("relationLine.avoidanceMitigatesGap") ||
+      lineText === t("relationLine.attackToolPrerequisite") ||
+      lineText === t("relationLine.attackToolCoUsed") ||
+      lineText === t("relationLine.attackToolAlternative") ||
+      lineText === t("relationLine.attackToolCapabilityUpgrade")
     )
       return 3;
     if (
@@ -429,6 +485,10 @@ export const createRelationExplanationHelpers = ({
       "relationLine.avoidanceComplement",
       "relationLine.avoidanceAlternative",
       "relationLine.avoidanceMitigatesGap",
+      "relationLine.attackToolPrerequisite",
+      "relationLine.attackToolCoUsed",
+      "relationLine.attackToolAlternative",
+      "relationLine.attackToolCapabilityUpgrade",
       "relationLine.buildAttackTool",
       "relationLine.useAttackTool",
       t("relationLine.directCauseRisk"),
@@ -440,6 +500,10 @@ export const createRelationExplanationHelpers = ({
       t("relationLine.avoidanceComplement"),
       t("relationLine.avoidanceAlternative"),
       t("relationLine.avoidanceMitigatesGap"),
+      t("relationLine.attackToolPrerequisite"),
+      t("relationLine.attackToolCoUsed"),
+      t("relationLine.attackToolAlternative"),
+      t("relationLine.attackToolCapabilityUpgrade"),
       t("relationLine.buildAttackTool"),
       t("relationLine.useAttackTool"),
     ].includes(lineText);
@@ -485,6 +549,14 @@ export const createRelationExplanationHelpers = ({
       return t(`${prefix}.avoidanceAlternative`);
     if (getRelationLineKey(line) === "relationLine.avoidanceMitigatesGap")
       return t(`${prefix}.avoidanceMitigatesGap`);
+    if (getRelationLineKey(line) === "relationLine.attackToolPrerequisite")
+      return t(`${prefix}.attackToolPrerequisite`);
+    if (getRelationLineKey(line) === "relationLine.attackToolCoUsed")
+      return t(`${prefix}.attackToolCoUsed`);
+    if (getRelationLineKey(line) === "relationLine.attackToolAlternative")
+      return t(`${prefix}.attackToolAlternative`);
+    if (getRelationLineKey(line) === "relationLine.attackToolCapabilityUpgrade")
+      return t(`${prefix}.attackToolCapabilityUpgrade`);
     if (getRelationLineKey(line) === "relationLine.buildAttackTool")
       return t(`${prefix}.buildAttackTool`);
     if (getRelationLineKey(line) === "relationLine.useAttackTool")
@@ -555,6 +627,14 @@ export const createRelationExplanationHelpers = ({
       return t(`${prefix}.avoidanceAlternative`, params);
     if (getRelationLineKey(line) === "relationLine.avoidanceMitigatesGap")
       return t(`${prefix}.avoidanceMitigatesGap`, params);
+    if (getRelationLineKey(line) === "relationLine.attackToolPrerequisite")
+      return t(`${prefix}.attackToolPrerequisite`, params);
+    if (getRelationLineKey(line) === "relationLine.attackToolCoUsed")
+      return t(`${prefix}.attackToolCoUsed`, params);
+    if (getRelationLineKey(line) === "relationLine.attackToolAlternative")
+      return t(`${prefix}.attackToolAlternative`, params);
+    if (getRelationLineKey(line) === "relationLine.attackToolCapabilityUpgrade")
+      return t(`${prefix}.attackToolCapabilityUpgrade`, params);
     if (getRelationLineKey(line) === "relationLine.buildAttackTool")
       return t(`${prefix}.buildAttackTool`, params);
     if (getRelationLineKey(line) === "relationLine.useAttackTool")
@@ -600,6 +680,14 @@ export const createRelationExplanationHelpers = ({
       getRelationLineKey(line) === "relationLine.avoidanceMitigatesGap"
     ) {
       return t(`${prefix}.avoidanceRelation`);
+    }
+    if (
+      getRelationLineKey(line) === "relationLine.attackToolPrerequisite" ||
+      getRelationLineKey(line) === "relationLine.attackToolCoUsed" ||
+      getRelationLineKey(line) === "relationLine.attackToolAlternative" ||
+      getRelationLineKey(line) === "relationLine.attackToolCapabilityUpgrade"
+    ) {
+      return t(`${prefix}.attackToolRelation`);
     }
     if (
       getRelationLineKey(line) === "relationLine.buildAttackTool" ||

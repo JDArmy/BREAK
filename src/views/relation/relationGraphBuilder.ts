@@ -198,6 +198,8 @@ export const createRelationGraphBuilder = ({
         attackToolBuilder.addRisk(currentNodeId);
       } else if (reqType == RelationType.avoidance) {
         attackToolBuilder.addAvoidance(currentNodeId);
+      } else if (reqType == RelationType.attackTool) {
+        attackToolBuilder.addRelatedAttackTool(currentNodeId);
       } else if (reqType == RelationType.threatActor) {
         attackToolBuilder.addThreatActor(currentNodeId);
       } else if (reqType == RelationType.term) {
@@ -206,6 +208,7 @@ export const createRelationGraphBuilder = ({
         attackToolBuilder.addRisk(currentNodeId);
         attackToolBuilder.addAvoidance(currentNodeId);
         attackToolBuilder.addRiskAvoidanceRelation(currentNodeId);
+        attackToolBuilder.addRelatedAttackTool(currentNodeId);
         attackToolBuilder.addThreatActor(currentNodeId);
         attackToolBuilder.addThreatActorRiskRelation(currentNodeId);
         attackToolBuilder.addSubattackTool(currentNodeId);

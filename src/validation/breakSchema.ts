@@ -21,6 +21,11 @@ const avoidanceRelationSchema = z.object({
   relation: z.enum(["prerequisite", "complement", "alternative", "mitigates-gap"]),
   note: nonEmptyString.optional(),
 });
+const attackToolRelationSchema = z.object({
+  key: nonEmptyString,
+  relation: z.enum(["prerequisite", "co-used", "alternative", "capability-upgrade"]),
+  note: nonEmptyString.optional(),
+});
 
 export const referenceSchema = z.object({
   title: nonEmptyString,
@@ -62,6 +67,7 @@ export const attackToolSchema = z.object({
   avoidances: idArray,
   directCauseRisks: idArray,
   indirectSupportRisks: idArray,
+  relatedAttackTools: z.array(attackToolRelationSchema).default([]),
   updated: z.string().optional(),
 });
 

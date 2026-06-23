@@ -63,6 +63,15 @@ export interface BreakAttackTool extends BreakBaseEntity {
   avoidances: string[];
   directCauseRisks: string[];
   indirectSupportRisks: string[];
+  relatedAttackTools: BreakAttackToolRelation[];
+}
+
+export type BreakAttackToolRelationType = 'prerequisite' | 'co-used' | 'alternative' | 'capability-upgrade';
+
+export interface BreakAttackToolRelation {
+  key: string;
+  relation: BreakAttackToolRelationType;
+  note?: string;
 }
 
 export interface BreakThreatActor extends BreakBaseEntity {

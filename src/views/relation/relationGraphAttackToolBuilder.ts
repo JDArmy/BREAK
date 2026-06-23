@@ -7,6 +7,13 @@ import {
 } from "@/views/relation/relationGraphBuilderShared";
 import { addRelatedTerms } from "@/views/relation/relationGraphTermBuilder";
 
+const attackToolRelationLineKeyMap = {
+  prerequisite: "relationLine.attackToolPrerequisite",
+  "co-used": "relationLine.attackToolCoUsed",
+  alternative: "relationLine.attackToolAlternative",
+  "capability-upgrade": "relationLine.attackToolCapabilityUpgrade",
+} as const;
+
 export const createAttackToolRelationBuilder = (context: RelationGraphBuilderContext) => {
   const addRisk = (attackToolKey: string) => {
     const attackTool = BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools];
@@ -115,12 +122,23 @@ export const createAttackToolRelationBuilder = (context: RelationGraphBuilderCon
     });
   };
 
+  const addRelatedAttackTool = (attackToolKey: string) => {
+    const relatedAttackTools =
+      BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools].relatedAttackTools ?? [];
+    relatedAttackTools.forEach(({ key, relation }) => {
+      if (!(key in BREAK.attackTools)) return;
+      addRelationNode(context, RelationType.attackTool, key);
+      addRelationLine(context, attackToolKey, attackToolRelationLineKeyMap[relation], key);
+    });
+  };
+
   const addTerm = (attackToolKey: string) => {
     addRelatedTerms(context, RelationType.attackTool, attackToolKey);
   };
 
   return {
     addAvoidance,
+    addRelatedAttackTool,
     addRisk,
     addRiskAvoidanceRelation,
     addSubattackTool,
