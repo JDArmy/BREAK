@@ -9,7 +9,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  verify:
+  static-checks:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
@@ -23,10 +23,34 @@ jobs:
       - run: npm run lint
       - run: npm run type-check
       - run: npm run validate:data
-      - run: npm run test
-      - run: npm run test:coverage
       - run: npm run validate:schema-docs
       - run: npm run validate:home-counts
+
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run test
+      - run: npm run test:coverage
+
+  data-export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
       - run: npm run export:data
       - run: npm run export:data-en
       - run: npm run export:data-package
@@ -35,7 +59,6 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
-    needs: verify
     steps:
       - uses: actions/checkout@v5
         with:
@@ -52,7 +75,6 @@ jobs:
 
   browser-regression:
     runs-on: ubuntu-latest
-    needs: build
     continue-on-error: true
     steps:
       - uses: actions/checkout@v5

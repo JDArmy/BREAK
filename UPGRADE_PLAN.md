@@ -120,16 +120,14 @@
 目标：减少重复校验、提升 CI 反馈速度。
 
 未完成工作：
-- 为 PR CI 增加 concurrency，取消旧 run。
-- 将 lint、type-check、test、build 中无依赖部分拆为并行 job。
-- 抽取可复用 workflow 或统一校验 job，减少 ci/deploy 重复命令维护。
+- 继续评估是否抽取可复用 workflow 或统一校验 job，减少后续 ci/deploy 重复命令维护。
 - link-check 去重与引用健康治理联动。
 
 落点：`.github/workflows/ci.yml`、`.github/workflows/deploy.yml`、`.github/workflows/link-check.yml`。
 
 验收：
 - CI 总耗时明显下降。
-- ci/deploy 重复步骤减少。
+- ci/deploy 重复步骤继续减少。
 - link-check 不重复创建同类 Issue。
 
 #### P1-3. 任务型分析视角切换
@@ -241,7 +239,7 @@
 | P0-3 浏览器回归与覆盖率收紧 | P0 | 2-3 天 | 防 UI/关系页回归 |
 | P0-4 质量报告规则扩展 | P0 | 持续 | 形成维护者治理闭环 |
 | P1-1 关系页工程债清理 | P1 | 4-5 天 | 降低维护成本 |
-| P1-2 CI workflow 优化 | P1 | 2 天 | 提升反馈速度 |
+| P1-2 CI workflow 优化 | P1 | 1 天 | 提升反馈速度 |
 | P1-3 任务型分析视角切换 | P1 | 3-4 天 | 提升关系页分析效率 |
 | P2-1 完整路径发现交互面板 | P2 | 2-3 天 | 强化推理型分析 |
 | P2-2 大图性能与截图基线 | P2 | 1-2 天 | 降低可视化回归风险 |

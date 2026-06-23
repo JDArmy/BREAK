@@ -84,22 +84,9 @@ jobs:
             echo "run=false" >> "$GITHUB_OUTPUT"
             echo "changed=" >> "$GITHUB_OUTPUT"
           fi
+      - run: npm run build
       - run: npx playwright install --with-deps chromium
         if: steps.browser-audit-changes.outputs.run == 'true'
-      - run: npm run lint
-      - run: npm run type-check
-      - run: npm run validate:data
-      - run: npm run test
-      - run: npm run test:coverage
-      - run: npm run validate:schema-docs
-      - run: npm run validate:home-counts
-      - run: npm run export:data
-      - run: npm run export:data-en
-      - run: npm run build-only
-      - run: npm run export:data-package
-      - run: npm run audit:bundle:check
-      - run: npm run validate:data-export
-      - run: npm run validate:data-package
       - run: npm run test:lighthouse
         if: steps.browser-audit-changes.outputs.run == 'true'
         continue-on-error: true

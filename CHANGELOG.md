@@ -1,5 +1,11 @@
 # Change log
 
+## 2.22.2
+
+- 优化 PR CI workflow，将静态校验、单元测试、数据导出校验、构建和浏览器回归拆为并行 job
+- Deploy workflow 改为复用 `npm run build`，减少部署链路与本地构建脚本的重复命令维护
+- 更新升级计划，保留 CI workflow 优化中仍未完成的可复用 workflow 和 link-check 联动事项
+
 ## 2.22.1
 
 - 更新 README 和 README_CN，补充 BREAK Skill 的位置、直接使用方式、打包方式和英文静态数据说明

@@ -85,6 +85,7 @@ const buildGateScripts = [
   'validate:data-package',
 ];
 const documentedUtilityScripts = ['schema:docs:write'];
+const deployRunsBuildScript = docs.deployWorkflow.includes('npm run build');
 
 const englishStats =
   `The current framework catalogues ${counts.risks.total} risk items, ` +
@@ -111,8 +112,12 @@ for (const scriptName of buildGateScripts) {
   expectIncludes('readme', `npm run ${scriptName}`, `README build gate ${scriptName}`);
   expectIncludes('readmeCn', `npm run ${scriptName}`, `README_CN build gate ${scriptName}`);
   expectIncludes('ciWorkflow', `npm run ${scriptName}`, `CI workflow build gate ${scriptName}`);
-  expectIncludes('deployWorkflow', `npm run ${scriptName}`, `Deploy workflow build gate ${scriptName}`);
+  if (!deployRunsBuildScript) {
+    expectIncludes('deployWorkflow', `npm run ${scriptName}`, `Deploy workflow build gate ${scriptName}`);
+  }
 }
+
+expectIncludes('deployWorkflow', 'npm run build', 'Deploy workflow build script');
 
 for (const scriptName of documentedUtilityScripts) {
   expectIncludes('readme', `npm run ${scriptName}`, `README utility script ${scriptName}`);
