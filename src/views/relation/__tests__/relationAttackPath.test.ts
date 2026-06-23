@@ -430,7 +430,9 @@ describe("relationAttackPath", () => {
     attackPath.selectAttackPath("missing-path");
     attackPath.normalizeAttackPathFilters();
 
-    expect(attackPath.attackPathFilters.value).toEqual({});
+    expect(attackPath.attackPathFilters.value).toEqual({
+      [RelationType.threatActor]: "TA0038",
+    });
     expect(attackPath.selectedAttackPathDetail.value?.id).not.toBe("missing-path");
 
     attackPath.resetAttackPathFilters();
