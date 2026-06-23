@@ -1,5 +1,11 @@
 # Change log
 
+## 2.23.12
+
+- 扩充案例来源质量分类规则，将新华社、央广网、中国日报、人民网客户端等稳定媒体来源归入 secondary，减少 unknown 来源噪声
+- 为 `C0024`、`C0025` 补充央广网、新华网稳定报道来源，并同步英文引用标题
+- 案例 unknown only 从 540 降到 527；高价值司法案例未找到同案法院/检察院/公安 primary 时保留待复核，不用相似案例硬补
+
 ## 2.23.11
 
 - 扩充案例来源质量分类规则，将 OWASP、Cloudflare、GEETEST、AWS 中国、AppsFlyer、Fraudlogix、AdGuard、Chrome Web Store、PeerJ 等英文原始/学术/厂商来源纳入 primary 识别
