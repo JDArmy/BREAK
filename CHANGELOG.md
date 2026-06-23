@@ -1,5 +1,11 @@
 # Change log
 
+## 2.23.31
+
+- 继续集中补强国外安全事件与链上事件 primary source，为 `C1358`、`C1360`、`C1363`、`C1365`、`C1507`、`C1518`、`C1553`、`C1679`、`C1680`、`C1686` 补充或识别 Halborn、PeckShield、Kudelski Security、Unit 42、Lightning AI、Elliptic、Endor Labs、StepSecurity 等原始研究、官方说明或链上分析来源，并同步英文引用标题
+- 扩充案例来源质量审计的 primary 识别，纳入 Lightning AI、Elliptic、StepSecurity、Kudelski Security、Halborn，并对白名单方式识别 PeckShield Medium 原始链上分析
+- 高价值案例 primary 覆盖提升到 381，primary 覆盖率提升到 38.79%，高价值 primary 覆盖率提升到 35.31%
+
 ## 2.23.30
 
 - 集中合并国外官方与原始研究补源结果，为 `C1269`、`C1298`、`C1300`、`C1366`、`C1454`、`C1473`、`C1484`、`C1519`、`C1675`、`C1676` 追加 HackerOne、Truffle Security、Unit 42、FBI、Parity、Eclypsium、Koi Security、LiteLLM 官方、GitHub Advisory 等 primary source，并同步英文引用标题
