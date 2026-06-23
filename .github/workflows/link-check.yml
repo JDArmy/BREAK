@@ -5,6 +5,14 @@ on:
     - cron: "0 1 * * 1" # 每周一 UTC 01:00（北京时间 09:00）
   workflow_dispatch:
 
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: link-health-${{ github.workflow }}
+  cancel-in-progress: true
+
 jobs:
   check-links:
     runs-on: ubuntu-latest
@@ -19,20 +27,123 @@ jobs:
         id: link-check
         run: |
           set +e
-          node scripts/validate/references.mjs
+          node scripts/validate/references-health.mjs --strict
           exit_code=$?
           echo "exit_code=$exit_code" >> "$GITHUB_OUTPUT"
           exit 0
-      - name: Create Issue on Failure
+      - name: Upload reference health report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reference-health-report
+          path: |
+            research/search-reports/reference-health.json
+            research/search-reports/reference-health.md
+          if-no-files-found: ignore
+      - name: Create or update Issue on failure
         if: steps.link-check.outputs.exit_code != '0'
         uses: actions/github-script@v7
         with:
           script: |
-            const date = new Date().toISOString().split('T')[0];
-            github.rest.issues.create({
+            const fs = require('fs');
+            const marker = '<!-- BREAK_REFERENCE_HEALTH -->';
+            const title = '链接健康检查待处理';
+            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const report = JSON.parse(fs.readFileSync('research/search-reports/reference-health.json', 'utf8'));
+            const issueItems = report.results.filter((item) => item.issue !== 'ok');
+            const grouped = issueItems.reduce((acc, item) => {
+              acc[item.issue] = (acc[item.issue] || 0) + 1;
+              return acc;
+            }, {});
+            const topItems = issueItems.slice(0, 30).map((item) => {
+              const refs = item.references.slice(0, 3)
+                .map((ref) => `${ref.entityType}/${ref.entityKey}`)
+                .join(', ');
+              return `- [${item.issue}] ${item.status || 'FAILED'} ${item.link}${refs ? ` (${refs})` : ''}`;
+            }).join('\n');
+            const body = `${marker}
+            自动链接健康检查发现待处理项。
+            
+            ## 汇总
+            
+            - uniqueLinks: ${report.stats.uniqueLinks}
+            - ok: ${report.stats.ok}
+            - review: ${report.stats.review}
+            - broken: ${report.stats.broken}
+            - timeout: ${report.stats.timeout}
+            - connectionError: ${report.stats.connectionError}
+            
+            ## 问题类型
+            
+            ${Object.entries(grouped).map(([key, value]) => `- ${key}: ${value}`).join('\n') || '- 无'}
+            
+            ## 前 30 条问题链接
+            
+            ${topItems || '无'}
+            
+            完整报告见 workflow artifact: reference-health-report
+            
+            Run: ${runUrl}
+            `.replace(/^ {12}/gm, '');
+
+            const { owner, repo } = context.repo;
+            const openIssues = await github.paginate(github.rest.issues.listForRepo, {
+              owner,
+              repo,
+              state: 'open',
+              labels: 'automated,data-quality',
+              per_page: 100,
+            });
+            const existing = openIssues.find((issue) => issue.title === title || issue.body?.includes(marker));
+
+            if (existing) {
+              await github.rest.issues.update({
+                owner,
+                repo,
+                issue_number: existing.number,
+                title,
+                body,
+                labels: ['automated', 'data-quality'],
+              });
+            } else {
+              await github.rest.issues.create({
+                owner,
+                repo,
+                title,
+                body,
+                labels: ['automated', 'data-quality'],
+              });
+            }
+      - name: Close resolved Issue
+        if: steps.link-check.outputs.exit_code == '0'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const marker = '<!-- BREAK_REFERENCE_HEALTH -->';
+            const title = '链接健康检查待处理';
+            const { owner, repo } = context.repo;
+            const openIssues = await github.paginate(github.rest.issues.listForRepo, {
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: `链接健康检查失败 - ${date}`,
-              body: `本周自动链接健康检查发现问题，请查看 CI 日志获取详情。\n\nRun: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
-              labels: ['automated', 'data-quality']
+              state: 'open',
+              labels: 'automated,data-quality',
+              per_page: 100,
             });
+            const existing = openIssues.find((issue) => issue.title === title || issue.body?.includes(marker));
+            if (existing) {
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number: existing.number,
+                body: `链接健康检查已恢复通过。\n\nRun: ${context.serverUrl}/${owner}/${repo}/actions/runs/${context.runId}`,
+              });
+              await github.rest.issues.update({
+                owner,
+                repo,
+                issue_number: existing.number,
+                state: 'closed',
+              });
+            }
+      - name: Fail workflow on link health issues
+        if: steps.link-check.outputs.exit_code != '0'
+        run: exit 1

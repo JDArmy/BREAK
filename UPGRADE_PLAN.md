@@ -32,16 +32,12 @@
 目标：把引用健康从“能检测”推进到“能持续治理、少噪声、可追踪”。
 
 未完成工作：
-- 增强 `.github/workflows/link-check.yml`，失败时创建 Issue，并在创建前按标题或标识查询已有 Issue，避免重复刷屏。
-- Issue body 输出坏链明细、实体 ID、来源字段、错误类型和复核建议。
 - 对 review、timeout、connection_error 按域名分批处理，优先官方源、高价值案例和 primary source。
 - 为常见慢站、反爬站、权限站建立域名级策略，减少误报和重复复核成本。
 
 落点：`.github/workflows/link-check.yml`、`scripts/validate/references-health.mjs`、`research/search-reports/reference-health.*`。
 
 验收：
-- link-check 失败 Issue 可去重。
-- Issue 明细足够定位到实体和引用字段。
 - review/timeout/connection_error 有域名级分组和复核策略。
 
 #### P0-2. 高价值案例 primary source 补强
@@ -121,14 +117,12 @@
 
 未完成工作：
 - 继续评估是否抽取可复用 workflow 或统一校验 job，减少后续 ci/deploy 重复命令维护。
-- link-check 去重与引用健康治理联动。
 
 落点：`.github/workflows/ci.yml`、`.github/workflows/deploy.yml`、`.github/workflows/link-check.yml`。
 
 验收：
 - CI 总耗时明显下降。
 - ci/deploy 重复步骤继续减少。
-- link-check 不重复创建同类 Issue。
 
 #### P1-3. 任务型分析视角切换
 

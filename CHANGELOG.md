@@ -1,5 +1,11 @@
 # Change log
 
+## 2.22.3
+
+- 增强 link-check workflow，改用引用健康报告并上传 JSON/Markdown artifact
+- 链接健康失败时按固定标题创建或更新同一个 Issue，避免重复刷屏，并在恢复后自动关闭
+- 更新升级计划，移除已完成的 link-check Issue 去重与明细输出事项
+
 ## 2.22.2
 
 - 优化 PR CI workflow，将静态校验、单元测试、数据导出校验、构建和浏览器回归拆为并行 job
