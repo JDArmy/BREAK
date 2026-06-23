@@ -1,6 +1,6 @@
 {
   "name": "break",
-  "version": "2.23.6",
+  "version": "2.23.7",
   "private": true,
   "type": "module",
   "engines": {
@@ -41,6 +41,7 @@
     "audit:references": "node scripts/validate/references.mjs",
     "audit:references-health": "node scripts/validate/references-health.mjs",
     "audit:references-health:cached": "node scripts/validate/references-health.mjs --from-cache",
+    "audit:references-browser": "node scripts/validate/check-403-with-browser.mjs",
     "audit:reference-domain-plan": "node scripts/validate/reference-domain-plan.mjs",
     "audit:content-quality": "node scripts/validate/content-quality.mjs",
     "audit:case-source-quality": "node scripts/validate/case-source-quality.mjs",

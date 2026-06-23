@@ -1,5 +1,11 @@
 # Change log
 
+## 2.23.7
+
+- 将旧的一次性 403 检查脚本升级为通用浏览器复核工具，可读取 `reference-health-filtered.json` 并输出浏览器可访问性报告
+- 对 `cisa.gov` 进行长超时复测和 Chromium 复核，确认脚本 403 多数为浏览器可访问的反爬/权限站表现
+- 修复 CISA IoT 旧引用 404，将 AT0082、TA0048 的 CISA IoT 参考链接替换为当前可访问页面
+
 ## 2.23.6
 
 - 新增 `audit:reference-domain-plan`，基于引用健康 `domainGroups` 生成域名治理计划，输出 P1/P2 批次、影响链接数、引用数和建议执行命令
