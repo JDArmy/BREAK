@@ -44,7 +44,7 @@ const aliases = computed(() =>
     </template>
     <div class="desc">
       <strong>{{ $t("termId") }}:&nbsp;</strong>
-      <router-link :to="{ name: 'terms', hash: `#${tKey}` }" class="id-link">
+      <router-link :to="{ name: 'termsDetail', params: { tKey } }" class="id-link">
         {{ tKey }}
       </router-link>
     </div>
@@ -104,7 +104,7 @@ const aliases = computed(() =>
       <ReferenceList type="terms" :entity-key="tKey" />
     </div>
     <div class="desc">
-      <el-button type="primary" plain size="small" @click="$router.push('/terms#' + tKey)">
+      <el-button type="primary" plain size="small" @click="$router.push({ name: 'termsDetail', params: { tKey } })">
         {{ $t("viewDetail") }}
       </el-button>
     </div>

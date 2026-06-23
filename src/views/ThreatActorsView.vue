@@ -164,7 +164,7 @@ const { openRelationGraph } = useRelationGraph("threat-actor");
             v-for="relation in relatedThreatActorRelations"
             :key="`${relation.key}-${relation.relation}`"
             class="threat-actor-relation-item"
-            :to="{ name: 'threatActors', hash: `#${relation.key}` }"
+            :to="{ name: 'threatActorsDetail', params: { taKey: relation.key } }"
           >
             <span class="threat-actor-relation-type">{{ $t(`threatActorRelationType.${relation.relation}`) }}</span>
             <span class="threat-actor-relation-title">

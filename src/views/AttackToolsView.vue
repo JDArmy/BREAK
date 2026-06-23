@@ -161,7 +161,7 @@ const { openRelationGraph } = useRelationGraph("attack-tool");
             v-for="relation in relatedAttackToolRelations"
             :key="`${relation.key}-${relation.relation}`"
             class="attack-tool-relation-item"
-            :to="{ name: 'attackTools', hash: `#${relation.key}` }"
+            :to="{ name: 'attackToolsDetail', params: { atKey: relation.key } }"
           >
             <span class="attack-tool-relation-type">{{ $t(`attackToolRelationType.${relation.relation}`) }}</span>
             <span class="attack-tool-relation-title">

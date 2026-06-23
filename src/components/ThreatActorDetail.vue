@@ -54,7 +54,7 @@ const termKey = ref("");
     </template>
     <div class="desc">
       <strong>{{ $t("ID") }}:&nbsp;</strong>
-      <router-link :to="{ name: 'threatActors', hash: `#${taKey}` }" class="id-link">
+      <router-link :to="{ name: 'threatActorsDetail', params: { taKey } }" class="id-link">
         {{ taKey }}
       </router-link>
       <router-link
@@ -83,7 +83,7 @@ const termKey = ref("");
           v-for="relation in relatedThreatActors"
           :key="`${relation.key}-${relation.relation}`"
           class="entity-link"
-          :to="{ name: 'threatActors', hash: `#${relation.key}` }"
+          :to="{ name: 'threatActorsDetail', params: { taKey: relation.key } }"
         >
           {{ $t(`threatActorRelationType.${relation.relation}`) }} ·
           {{ relation.key }}: {{ $t(`BREAK.threatActors.${relation.key}.title`) }}
@@ -108,7 +108,7 @@ const termKey = ref("");
       <ReferenceList type="threatActors" :entityKey="taKey" />
     </div>
     <div class="desc">
-      <el-button type="primary" plain size="small" @click="$router.push('/threat-actors#' + taKey)">
+      <el-button type="primary" plain size="small" @click="$router.push({ name: 'threatActorsDetail', params: { taKey } })">
         {{ $t("viewDetail") }}
       </el-button>
     </div>

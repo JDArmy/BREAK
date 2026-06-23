@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { computed } from "vue";
-import { useBreakpoints } from "@/composables/useBreakpoints";
 
 interface EntityReferenceRecord {
   title?: string;
@@ -16,7 +15,7 @@ interface EntityReferenceRecord {
  * 模板重复 20+ 次，结构同构（v-if keys.length + h3 + entity-links + router-link 三目），
  * 抽出本件复用。仅服务 View 层 router-link 场景；详情抽屉用 button 开嵌套抽屉，语义不同，不复用。
  *
- * PC 端走列表路由 + hash（同页滚动定位），移动端走独立详情路由。
+ * 有独立详情路由的实体统一走列表详情路由（如 /risks/detail/R0001）。
  * businessScenes 无独立详情路由（detailRouteName === routeName），移动端也走 route + hash。
  */
 const props = defineProps<{
@@ -38,14 +37,11 @@ const props = defineProps<{
   entityRecords?: Record<string, EntityReferenceRecord | undefined>;
 }>();
 
-const { isMobile } = useBreakpoints();
 // i18n 路径段：绝大多数实体等于 routeName（BREAK.risks/BREAK.attackTools/...），
 // 唯一例外 businessScenes（routeName=businessScene 单数，i18n 路径=BREAK.businessScenes 复数）
 const entityType = computed(() => props.i18nEntityType ?? props.routeName);
-// 移动端是否走独立详情路由：businessScenes 无 detail 变体，与 routeName 相同时走 route + hash
-const useDetailRoute = computed(
-  () => isMobile.value && props.detailRouteName && props.detailRouteName !== props.routeName,
-);
+// 是否走独立详情路由：businessScenes 无 detail 变体，与 routeName 相同时走 route + hash
+const useDetailRoute = computed(() => props.detailRouteName && props.detailRouteName !== props.routeName);
 
 const summaryFieldByEntityType: Record<string, string> = {
   risks: "definition",

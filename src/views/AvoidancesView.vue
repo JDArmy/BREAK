@@ -182,7 +182,7 @@ const { openRelationGraph } = useRelationGraph("avoidance");
             v-for="relation in relatedAvoidanceRelations"
             :key="`${relation.key}-${relation.relation}`"
             class="avoidance-relation-item"
-            :to="{ name: 'avoidances', hash: `#${relation.key}` }"
+            :to="{ name: 'avoidancesDetail', params: { aKey: relation.key } }"
           >
             <span class="avoidance-relation-type">{{ $t(`avoidanceRelationType.${relation.relation}`) }}</span>
             <span class="avoidance-relation-title">

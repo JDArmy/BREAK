@@ -138,7 +138,7 @@ const { openRelationGraph } = useRelationGraph("risk");
             v-for="relation in relatedRiskRelations"
             :key="`${relation.key}-${relation.relation}`"
             class="risk-relation-item"
-            :to="{ name: 'risks', hash: `#${relation.key}` }"
+            :to="{ name: 'risksDetail', params: { rKey: relation.key } }"
           >
             <span class="risk-relation-type">{{ $t(`riskRelationType.${relation.relation}`) }}</span>
             <span class="risk-relation-title">

@@ -55,7 +55,7 @@ const termKey = ref("");
     </template>
     <div class="desc">
       <strong>{{ $t("ID") }}:&nbsp;</strong>
-      <router-link :to="{ name: 'avoidances', hash: `#${aKey}` }" class="id-link">
+      <router-link :to="{ name: 'avoidancesDetail', params: { aKey } }" class="id-link">
         {{ aKey }}
       </router-link>
       <router-link
@@ -96,7 +96,7 @@ const termKey = ref("");
           v-for="relation in relatedAvoidances"
           :key="`${relation.key}-${relation.relation}`"
           class="entity-link"
-          :to="{ name: 'avoidances', hash: `#${relation.key}` }"
+          :to="{ name: 'avoidancesDetail', params: { aKey: relation.key } }"
         >
           {{ $t(`avoidanceRelationType.${relation.relation}`) }} ·
           {{ relation.key }}: {{ $t(`BREAK.avoidances.${relation.key}.title`) }}
@@ -121,7 +121,7 @@ const termKey = ref("");
       <ReferenceList type="avoidances" :entityKey="aKey" />
     </div>
     <div class="desc">
-      <el-button type="primary" plain size="small" @click="$router.push('/avoidances#' + aKey)">
+      <el-button type="primary" plain size="small" @click="$router.push({ name: 'avoidancesDetail', params: { aKey } })">
         {{ $t("viewDetail") }}
       </el-button>
     </div>

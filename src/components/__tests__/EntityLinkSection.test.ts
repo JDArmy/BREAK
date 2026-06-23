@@ -1,10 +1,6 @@
 import { mount, RouterLinkStub } from "@vue/test-utils";
-import { describe, expect, it, vi } from "vitest";
+import { describe, expect, it } from "vitest";
 import EntityLinkSection from "@/components/EntityLinkSection.vue";
-
-const mocks = vi.hoisted(() => ({
-  isMobile: { value: false, __v_isRef: true },
-}));
 
 const globalConfig = {
   mocks: {
@@ -18,12 +14,8 @@ const globalConfig = {
   },
 };
 
-vi.mock("@/composables/useBreakpoints", () => ({
-  useBreakpoints: () => ({ isMobile: mocks.isMobile }),
-}));
-
 describe("EntityLinkSection", () => {
-  it("普通桌面列表链接使用 hash 定位", () => {
+  it("普通实体链接统一使用详情路由", () => {
     const wrapper = mount(EntityLinkSection, {
       props: {
         keys: ["R0001"],
@@ -36,8 +28,8 @@ describe("EntityLinkSection", () => {
     });
 
     expect(wrapper.findComponent(RouterLinkStub).props("to")).toEqual({
-      name: "risks",
-      hash: "#R0001",
+      name: "risksDetail",
+      params: { rKey: "R0001" },
     });
     expect(wrapper.find("table").exists()).toBe(true);
     expect(wrapper.text()).toContain("R0001");

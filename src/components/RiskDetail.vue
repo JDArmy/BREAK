@@ -91,7 +91,7 @@ const openRelationGraph = (rKey: string) => {
     </template>
     <div class="desc">
       <strong>{{ $t("riskKey") }}:&nbsp;</strong>
-      <router-link :to="{ name: 'risks', hash: `#${rKey}` }" class="id-link">
+      <router-link :to="{ name: 'risksDetail', params: { rKey } }" class="id-link">
         {{ rKey }}
       </router-link>
       <router-link
@@ -145,7 +145,7 @@ const openRelationGraph = (rKey: string) => {
           v-for="relation in relatedRiskRelations"
           :key="`${relation.key}-${relation.relation}`"
           class="entity-link"
-          :to="{ name: 'risks', hash: `#${relation.key}` }"
+          :to="{ name: 'risksDetail', params: { rKey: relation.key } }"
         >
           {{ $t(`riskRelationType.${relation.relation}`) }} ·
           {{ relation.key }}: {{ $t(`BREAK.risks.${relation.key}.title`) }}
@@ -209,7 +209,7 @@ const openRelationGraph = (rKey: string) => {
       </el-button>
     </div>
     <div class="desc">
-      <el-button type="primary" plain size="small" @click="$router.push('/risks#' + rKey)">
+      <el-button type="primary" plain size="small" @click="$router.push({ name: 'risksDetail', params: { rKey } })">
         {{ $t("viewDetail") }}
       </el-button>
     </div>

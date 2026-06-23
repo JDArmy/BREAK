@@ -62,7 +62,7 @@ const relatedTerms = computed(() => {
     </template>
     <div class="desc">
       <strong>{{ $t("ID") }}:&nbsp;</strong>
-      <router-link :to="{ name: 'attackTools', hash: `#${atKey}` }" class="id-link">
+      <router-link :to="{ name: 'attackToolsDetail', params: { atKey } }" class="id-link">
         {{ atKey }}
       </router-link>
       <router-link
@@ -104,7 +104,7 @@ const relatedTerms = computed(() => {
           v-for="relation in relatedAttackTools"
           :key="`${relation.key}-${relation.relation}`"
           class="entity-link"
-          :to="{ name: 'attackTools', hash: `#${relation.key}` }"
+          :to="{ name: 'attackToolsDetail', params: { atKey: relation.key } }"
         >
           {{ $t(`attackToolRelationType.${relation.relation}`) }} ·
           {{ relation.key }}: {{ $t(`BREAK.attackTools.${relation.key}.title`) }}
@@ -129,7 +129,7 @@ const relatedTerms = computed(() => {
       <ReferenceList type="attackTools" :entityKey="atKey" />
     </div>
     <div class="desc">
-      <el-button type="primary" plain size="small" @click="$router.push('/attack-tools#' + atKey)">
+      <el-button type="primary" plain size="small" @click="$router.push({ name: 'attackToolsDetail', params: { atKey } })">
         {{ $t("viewDetail") }}
       </el-button>
     </div>
