@@ -49,7 +49,7 @@
 未完成工作：
 - 基于 `npm run audit:case-source-quality` 输出的高价值清单，按类别分批补 primary source。
 - `criminal_verdict` 优先法院、检察院、公安、监管通报；`security_incident` 优先厂商公告、官方通报、链上分析；`vulnerability_advisory` 优先 CVE/NVD、厂商安全公告、论文或原始仓库。
-- 对只有 secondary、weak、unknown 来源的高价值案例进入复核队列；已扩充英文原始/学术/厂商来源和稳定媒体 secondary 识别，并为 `C0039`、`C0043`、`C0046` 补充检察院或法院来源，为 `C0024`、`C0025` 补充央广网、新华网稳定报道来源。下一批继续处理 `C0009`、`C0010`、`C0023`、`C0031`、`C0033`、`C0034` 等高价值司法案例；未找到同案 primary 时不使用相似案例硬补。
+- 对只有 secondary、weak、unknown 来源的高价值案例进入复核队列；已扩充英文原始/学术/厂商来源和稳定媒体 secondary 识别，并为 `C0039`、`C0043`、`C0046`、`C0201` 补充检察院、法院或公安典型案例来源，为 `C0024`、`C0025` 补充央广网、新华网稳定报道来源。下一批继续处理 `C0009`、`C0010`、`C0023`、`C0031`、`C0033`、`C0034` 等高价值司法案例；未找到同案 primary 时不使用相似案例硬补。
 - 补源时同步英文 references title，保持英文 i18n 不写结构字段。
 
 落点：`scripts/validate/case-source-quality.mjs`、`src/BREAK/cases/*.json`、`src/i18n/en/BREAK/cases/*.json`。
