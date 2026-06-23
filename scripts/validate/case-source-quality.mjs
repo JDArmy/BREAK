@@ -84,6 +84,7 @@ const primaryDomainSuffixes = [
   'qianxin.com',
   'forcepoint.com',
   'flare.io',
+  'shaanxijubao.cn',
 ];
 
 const secondaryDomainSuffixes = [
