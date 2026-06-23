@@ -37,6 +37,8 @@ export const referenceSchema = z.object({
   link: nonEmptyString.url("必须是合法 URL"),
 });
 
+export const entityVersionSchema = z.number().int().positive().optional();
+
 export const riskSchema = z.object({
   title: nonEmptyString,
   keywords: keywordArray,
@@ -48,6 +50,7 @@ export const riskSchema = z.object({
   relatedRisks: z.array(riskRelationSchema).default([]),
   references: z.array(referenceSchema).default([]),
   updated: z.string().optional(),
+  version: entityVersionSchema,
 });
 
 export const avoidanceSchema = z.object({
@@ -62,6 +65,7 @@ export const avoidanceSchema = z.object({
   relatedAvoidances: z.array(avoidanceRelationSchema).default([]),
   references: z.array(referenceSchema).default([]),
   updated: z.string().optional(),
+  version: entityVersionSchema,
 });
 
 export const attackToolSchema = z.object({
@@ -74,6 +78,7 @@ export const attackToolSchema = z.object({
   indirectSupportRisks: idArray,
   relatedAttackTools: z.array(attackToolRelationSchema).default([]),
   updated: z.string().optional(),
+  version: entityVersionSchema,
 });
 
 export const threatActorSchema = z.object({
@@ -87,6 +92,7 @@ export const threatActorSchema = z.object({
   indirectSupportRisks: idArray,
   relatedThreatActors: z.array(threatActorRelationSchema).default([]),
   updated: z.string().optional(),
+  version: entityVersionSchema,
 });
 
 export const termSchema = z.object({
@@ -104,6 +110,7 @@ export const termSchema = z.object({
   relatedBusinessScenes: idArray,
   references: z.array(referenceSchema).default([]),
   updated: z.string().optional(),
+  version: entityVersionSchema,
 });
 
 export const businessSceneSchema = z.object({
@@ -125,6 +132,7 @@ export const businessSceneSchema = z.object({
     })
   ),
   updated: z.string().optional(),
+  version: entityVersionSchema,
 });
 
 export const caseSchema = z.object({
@@ -146,6 +154,7 @@ export const caseSchema = z.object({
   relatedThreatActors: idArray.default([]),
   references: z.array(referenceSchema).default([]),
   updated: z.string().optional(),
+  version: entityVersionSchema,
 });
 
 export const entitySchemas = {

@@ -1,6 +1,6 @@
 {
   "name": "break",
-  "version": "2.22.1",
+  "version": "2.23.0",
   "private": true,
   "type": "module",
   "engines": {
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "npm run lint && npm run type-check && npm run validate:data && npm run test && npm run test:coverage && npm run validate:schema-docs && npm run validate:home-counts && npm run export:data && npm run export:data-en && npm run build-only && npm run export:data-package && npm run audit:bundle:check && npm run validate:data-export && npm run validate:data-package",
+    "build": "npm run lint && npm run type-check && npm run validate:data && npm run test && npm run test:coverage && npm run validate:schema-docs && npm run validate:home-counts && npm run export:data && npm run export:data-en && npm run export:stix && npm run export:jsonld && npm run build-only && npm run export:data-package && npm run audit:bundle:check && npm run validate:data-export && npm run validate:data-package && npm run validate:stix",
     "preview": "vite preview",
     "build-only": "vite build",
     "analyze": "ANALYZE=1 vite build",
@@ -25,6 +25,10 @@
     "export:data": "node scripts/validate/export-static-data.mjs",
     "export:data-en": "node scripts/skill/export_en_data.mjs",
     "export:data-package": "node scripts/validate/export-data-package.mjs",
+    "export:stix": "node scripts/validate/export-stix.mjs",
+    "export:jsonld": "node scripts/validate/export-jsonld.mjs",
+    "validate:stix": "node scripts/validate/validate-stix.mjs",
+    "version:bump": "node scripts/validate/auto-version.mjs",
     "test:smoke": "node scripts/validate/site-smoke.mjs",
     "test:performance": "node scripts/validate/site-performance.mjs",
     "test:relation-stability": "node scripts/validate/relation-stability.mjs",
@@ -75,6 +79,7 @@
     "eslint-plugin-vue": "^10.0.0",
     "happy-dom": "^20.10.2",
     "husky": "^9.1.7",
+    "jsonld": "^9.0.0",
     "lighthouse": "^12.6.1",
     "playwright": "^1.61.0",
     "prettier": "^3.5.0",

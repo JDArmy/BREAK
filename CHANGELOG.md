@@ -1,5 +1,18 @@
 # Change log
 
+## 2.23.0
+
+- 新增 STIX 2.1 标准化导出，支持将全部 7 类实体（Risk/Avoidance/AttackTool/ThreatActor/Term/Case/BusinessScene）及 26,000+ 关系边映射为合法 STIX 2.1 Bundle
+- 新增 JSON-LD 语义网导出，面向知识图谱和 RDF/SPARQL 消费场景
+- 中英文双 Bundle 导出，STIX UUID 确定性生成（UUID v5），中英文共享相同 ID
+- 新增实体级 `version` 字段（可选整数），支持追踪实体变更版本
+- 新增 `auto-version.mjs` 脚本，自动检测实体文件变更并递增 version
+- 新增三层 STIX 校验（结构校验 + 引用完整性 + BREAK 业务规则），含 JSON-LD 校验
+- 新增 `STIX_MAPPING.md` 映射规范文档
+- npm 数据包 `@jdarmy/break-data` 包含 STIX/JSON-LD 产物
+- build 链集成 `export:stix`、`export:jsonld`、`validate:stix` 步骤
+- 新增 npm scripts：`export:stix`、`export:jsonld`、`validate:stix`、`version:bump`
+
 ## 2.22.1
 
 - 更新 README 和 README_CN，补充 BREAK Skill 的位置、直接使用方式、打包方式和英文静态数据说明

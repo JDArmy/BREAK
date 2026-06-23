@@ -24,6 +24,7 @@ export interface BreakBaseEntity {
   references?: BreakReference[];
   keywords?: string[];
   updated?: string;
+  version?: number;
 }
 
 export type BreakRiskRelationType = 'prerequisite' | 'co-occurrence' | 'escalation' | 'variant';
@@ -119,6 +120,7 @@ export interface BreakCase {
   relatedRisks: string[];
   references?: BreakReference[];
   updated?: string;
+  version?: number;
 }
 
 export interface BreakDataCollections {
@@ -159,6 +161,26 @@ export interface BreakDataManifest {
     };
     qualityReport: {
       path: 'data/quality-report.json';
+      bytes: number;
+      sha256: string;
+    };
+    stixZh?: {
+      path: 'data/break-stix-zh.json';
+      bytes: number;
+      sha256: string;
+    };
+    stixEn?: {
+      path: 'data/break-stix-en.json';
+      bytes: number;
+      sha256: string;
+    };
+    jsonldZh?: {
+      path: 'data/break-ld-zh.jsonld';
+      bytes: number;
+      sha256: string;
+    };
+    jsonldEn?: {
+      path: 'data/break-ld-en.jsonld';
       bytes: number;
       sha256: string;
     };
@@ -222,6 +244,10 @@ Static BREAK data bundle for consumers that need the knowledge base without the 
   - \`data/break-data.json\`
   - \`data/break-manifest.json\`
   - \`data/quality-report.json\`
+  - \`data/break-stix-zh.json\` (STIX 2.1 Bundle, zh-CN)
+  - \`data/break-stix-en.json\` (STIX 2.1 Bundle, en)
+  - \`data/break-ld-zh.jsonld\` (JSON-LD, zh-CN)
+  - \`data/break-ld-en.jsonld\` (JSON-LD, en)
   - \`index.js\`
   - \`index.d.ts\`
 
@@ -266,6 +292,10 @@ const packageBoundary = {
     'data/break-data.json',
     'data/break-manifest.json',
     'data/quality-report.json',
+    'data/break-stix-zh.json',
+    'data/break-stix-en.json',
+    'data/break-ld-zh.jsonld',
+    'data/break-ld-en.jsonld',
     'index.js',
     'index.d.ts',
     'README.md',
@@ -278,6 +308,10 @@ const packageBoundary = {
     './data/break-data.json': './data/break-data.json',
     './data/break-manifest.json': './data/break-manifest.json',
     './data/quality-report.json': './data/quality-report.json',
+    './data/break-stix-zh.json': './data/break-stix-zh.json',
+    './data/break-stix-en.json': './data/break-stix-en.json',
+    './data/break-ld-zh.jsonld': './data/break-ld-zh.jsonld',
+    './data/break-ld-en.jsonld': './data/break-ld-en.jsonld',
     './package.json': './package.json',
   },
   types: './index.d.ts',
@@ -289,6 +323,17 @@ writeJson(path.join(packageDir, 'package.json'), packageBoundary);
 writeJson(path.join(packageDir, 'data/break-data.json'), data);
 writeJson(path.join(packageDir, 'data/break-manifest.json'), manifest);
 writeJson(path.join(packageDir, 'data/quality-report.json'), qualityReport);
+
+// 复制 STIX/JSON-LD 产物（如果存在）
+const stixZhPath = path.join(projectRoot, 'public/data/break-stix-zh.json');
+const stixEnPath = path.join(projectRoot, 'public/data/break-stix-en.json');
+const ldZhPath = path.join(projectRoot, 'public/data/break-ld-zh.jsonld');
+const ldEnPath = path.join(projectRoot, 'public/data/break-ld-en.jsonld');
+if (fs.existsSync(stixZhPath)) fs.copyFileSync(stixZhPath, path.join(packageDir, 'data/break-stix-zh.json'));
+if (fs.existsSync(stixEnPath)) fs.copyFileSync(stixEnPath, path.join(packageDir, 'data/break-stix-en.json'));
+if (fs.existsSync(ldZhPath)) fs.copyFileSync(ldZhPath, path.join(packageDir, 'data/break-ld-zh.jsonld'));
+if (fs.existsSync(ldEnPath)) fs.copyFileSync(ldEnPath, path.join(packageDir, 'data/break-ld-en.jsonld'));
+
 fs.writeFileSync(path.join(packageDir, 'index.js'), runtimeEntry);
 fs.writeFileSync(path.join(packageDir, 'index.d.ts'), typeDefinitions);
 fs.writeFileSync(path.join(packageDir, 'README.md'), readme);

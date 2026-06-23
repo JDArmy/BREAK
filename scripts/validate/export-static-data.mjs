@@ -12,14 +12,14 @@ const qualityReportPath = path.join(outputDir, 'quality-report.json');
 const packageJson = readJson(path.join(projectRoot, 'package.json'));
 
 const exportConfigs = [
-  { key: 'risks', dir: 'src/BREAK/risks' },
-  { key: 'avoidances', dir: 'src/BREAK/avoidances' },
-  { key: 'attackTools', dir: 'src/BREAK/attack-tools' },
-  { key: 'threatActors', dir: 'src/BREAK/threat-actors' },
-  { key: 'terms', dir: 'src/BREAK/terms' },
-  { key: 'businessScenes', dir: 'src/BREAK/business-scenes' },
-  { key: 'avoidanceCategories', dir: 'src/BREAK/avoidance-categories' },
-  { key: 'cases', dir: 'src/BREAK/cases' },
+  { key: 'risks', dir: 'src/BREAK/risks', hasVersion: true },
+  { key: 'avoidances', dir: 'src/BREAK/avoidances', hasVersion: true },
+  { key: 'attackTools', dir: 'src/BREAK/attack-tools', hasVersion: true },
+  { key: 'threatActors', dir: 'src/BREAK/threat-actors', hasVersion: true },
+  { key: 'terms', dir: 'src/BREAK/terms', hasVersion: true },
+  { key: 'businessScenes', dir: 'src/BREAK/business-scenes', hasVersion: true },
+  { key: 'avoidanceCategories', dir: 'src/BREAK/avoidance-categories', hasVersion: false },
+  { key: 'cases', dir: 'src/BREAK/cases', hasVersion: true },
 ];
 
 function sortedObject(value) {
@@ -37,7 +37,7 @@ function sortedObject(value) {
   );
 }
 
-function loadEntityMap(relativeDir) {
+function loadEntityMap(relativeDir, injectVersion) {
   const dir = path.join(projectRoot, relativeDir);
   const merged = {};
 
@@ -46,6 +46,15 @@ function loadEntityMap(relativeDir) {
     .filter((item) => item.endsWith('.json'))
     .sort()) {
     Object.assign(merged, readJson(path.join(dir, file)));
+  }
+
+  // 为缺失 version 的实体注入默认值 1
+  if (injectVersion) {
+    for (const entity of Object.values(merged)) {
+      if (entity && typeof entity === 'object' && entity.version == null) {
+        entity.version = 1;
+      }
+    }
   }
 
   return sortedObject(merged);
@@ -87,7 +96,7 @@ const data = {
   packageVersion: packageJson.version,
   generatedAt,
   locale: 'zh-CN',
-  data: Object.fromEntries(exportConfigs.map((config) => [config.key, loadEntityMap(config.dir)])),
+  data: Object.fromEntries(exportConfigs.map((config) => [config.key, loadEntityMap(config.dir, config.hasVersion)])),
 };
 
 const counts = Object.fromEntries(
