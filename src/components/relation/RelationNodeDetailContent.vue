@@ -8,6 +8,7 @@ import type {
   NodeAnalysisSummary,
   NodeBusinessSceneImpactSummary,
   NodeCoverageSummary,
+  NodeRelatedEntitySummary,
   RootPathSummary,
   RootRelationSummary,
 } from "@/components/relation/relationNodeDrawerInsightTypes";
@@ -47,6 +48,7 @@ withDefaults(defineProps<{
   rootNodeRelations: RootRelationSummary[];
   selectedNodeRootPath: RootPathSummary | null;
   selectedNodeAnalysisSummary: NodeAnalysisSummary | null;
+  selectedNodeRelatedEntitySummary: NodeRelatedEntitySummary | null;
   selectedNodeAttackPathSummary: string[];
   selectedNodeAttackPathDescription: string;
   selectedNodeAttackPathExplanations: AttackPathExplanation[];
@@ -117,6 +119,7 @@ const filterRelationsByDirection = (direction: "incoming" | "outgoing") => {
     :root-node-relations="rootNodeRelations"
     :selected-node-root-path="selectedNodeRootPath"
     :selected-node-analysis-summary="selectedNodeAnalysisSummary"
+    :selected-node-related-entity-summary="selectedNodeRelatedEntitySummary"
     :selected-node-type="selectedNetworkNode.type"
     :selected-node-id="selectedNetworkNode.id"
     :selected-node-attack-path-summary="selectedNodeAttackPathSummary"
@@ -139,6 +142,7 @@ const filterRelationsByDirection = (direction: "incoming" | "outgoing") => {
     @reset-attack-path-filters="emit('reset-attack-path-filters')"
     @focus-node="emit('focus-node', $event)"
     @open-node-as-root="emit('open-node-as-root', $event)"
+    @open-node-detail="emit('open-node-detail', $event)"
   />
   <div ref="relationsSectionRef">
     <RelationNodeDrawerRelations

@@ -3,11 +3,13 @@ import { createRelationGraphRelationSummary } from "@/views/relation/relationGra
 import { createRelationGraphRootAnalysis } from "@/views/relation/relationGraphRootAnalysis";
 import { findRelationPaths } from "@/views/relation/relationPathDiscovery";
 import {
+  getRelationLineKey,
   RelationType,
   isRelationEntityType,
   type Line,
   type Node,
 } from "@/views/relation/relationTypes";
+import type { NodeRelatedEntitySummary } from "@/components/relation/relationNodeDrawerInsightTypes";
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;
 
@@ -228,6 +230,69 @@ export const createRelationGraphInsights = ({
     }
   );
 
+  const selectedNodeRelatedEntitySummary =
+    computed<NodeRelatedEntitySummary | null>(() => {
+      const node = selectedNetworkNode.value;
+      if (!node || !isRelationEntityType(node.type)) return null;
+
+      const relatedItems = lines
+        .filter((line) => line.from === node.id || line.to === node.id)
+        .map((line) => {
+          const otherNodeId = line.from === node.id ? line.to : line.from;
+          const otherNode = nodes.find((item) => item.id === otherNodeId);
+          if (
+            !otherNode ||
+            otherNode.type !== node.type ||
+            !otherNode.data?.isRelatedEntity
+          ) {
+            return null;
+          }
+
+          const relationKey = getRelationLineKey(line);
+          return {
+            id: otherNode.id,
+            title: getNodeTitle(node.type, otherNode.id),
+            type: otherNode.type,
+            relationKey,
+            relationText: line.text,
+            direction:
+              line.from === node.id
+                ? t("relationView.outgoing")
+                : t("relationView.incoming"),
+            sourceFields: getRelationSourceFields(line),
+            priority: getRelationPriority(relationKey),
+          };
+        })
+        .filter((item): item is NonNullable<typeof item> => item !== null)
+        .sort(
+          (first, second) =>
+            first.priority - second.priority ||
+            first.id.localeCompare(second.id)
+        )
+        .map((item) => ({
+          id: item.id,
+          title: item.title,
+          type: item.type,
+          relationKey: item.relationKey,
+          relationText: item.relationText,
+          direction: item.direction,
+          sourceFields: item.sourceFields,
+        }));
+
+      if (!relatedItems.length) return null;
+
+      return {
+        title: t("relationView.relatedEntityTitle", {
+          type: getNodeTypeTitle(node.type),
+        }),
+        summary: t("relationView.relatedEntitySummary", {
+          count: relatedItems.length,
+          type: getNodeTypeTitle(node.type),
+        }),
+        items: relatedItems,
+      };
+    });
+
   return {
     buildNodeSummary,
     findNodeById,
@@ -238,6 +303,7 @@ export const createRelationGraphInsights = ({
     selectedNetworkRelationCounts,
     selectedNetworkRelations,
     selectedNodeAnalysisSummary,
+    selectedNodeRelatedEntitySummary,
     selectedNodeDiscoveredPaths,
     selectedNodePathRelationKeys,
     selectedNodeRootPath,

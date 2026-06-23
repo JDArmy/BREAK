@@ -3,12 +3,14 @@ import RelationNodeAnalysisBlock from "@/components/relation/RelationNodeAnalysi
 import RelationNodeAttackPathBlock from "@/components/relation/RelationNodeAttackPathBlock.vue";
 import RelationNodeBusinessSceneImpactBlock from "@/components/relation/RelationNodeBusinessSceneImpactBlock.vue";
 import RelationNodeCoverageBlock from "@/components/relation/RelationNodeCoverageBlock.vue";
+import RelationNodeRelatedEntityBlock from "@/components/relation/RelationNodeRelatedEntityBlock.vue";
 import RelationNodeRootRelationBlock from "@/components/relation/RelationNodeRootRelationBlock.vue";
 import type {
   AttackPathExplanation,
   NodeAnalysisSummary,
   NodeBusinessSceneImpactSummary,
   NodeCoverageSummary,
+  NodeRelatedEntitySummary,
   RootPathSummary,
   RootRelationSummary,
 } from "@/components/relation/relationNodeDrawerInsightTypes";
@@ -23,6 +25,7 @@ defineProps<{
   rootNodeRelations: RootRelationSummary[];
   selectedNodeRootPath: RootPathSummary | null;
   selectedNodeAnalysisSummary: NodeAnalysisSummary | null;
+  selectedNodeRelatedEntitySummary: NodeRelatedEntitySummary | null;
   selectedNodeType: string;
   selectedNodeId: string;
   selectedNodeAttackPathSummary: string[];
@@ -46,6 +49,7 @@ const emit = defineEmits<{
   "reset-attack-path-filters": [];
   "focus-node": [nodeId: string];
   "open-node-as-root": [nodeId: string];
+  "open-node-detail": [nodeId: string];
 }>();
 </script>
 
@@ -64,6 +68,12 @@ const emit = defineEmits<{
     :summary="selectedNodeAnalysisSummary"
     :selected-node-type="selectedNodeType"
     :selected-node-id="selectedNodeId"
+  />
+  <RelationNodeRelatedEntityBlock
+    :summary="selectedNodeRelatedEntitySummary"
+    @focus-node="emit('focus-node', $event)"
+    @open-node-as-root="emit('open-node-as-root', $event)"
+    @open-node-detail="emit('open-node-detail', $event)"
   />
   <RelationNodeBusinessSceneImpactBlock
     :summary="selectedNodeBusinessSceneImpactSummary"

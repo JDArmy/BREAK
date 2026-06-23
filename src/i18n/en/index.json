@@ -248,6 +248,12 @@
       "rootPath": "This node can return to the root through a {count}-hop path.",
       "discoveredPath": "Path discovery found {count} reachable paths; the shortest is {hops} hops."
     },
+    "relatedEntityBlockTitle": "Related Entities",
+    "relatedEntityTitle": "Related {type} entities",
+    "relatedEntitySummary": "This node has {count} related {type} entities of the same type.",
+    "hiddenRelatedEntityCount": "{count} more related entities are hidden.",
+    "collapseRelatedEntityCount": "Collapse related entities",
+    "focusNode": "Focus Node",
     "businessSceneImpactBlockTitle": "Business Scene Impact",
     "businessSceneImpactTitle": "Business scenes linked to \"{title}\"",
     "businessSceneImpactSummary": "Covers {businessScenes} business scenes across {dimensions} business dimensions.",

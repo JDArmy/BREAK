@@ -248,6 +248,12 @@
       "rootPath": "当前节点可通过 {count} 跳路径回到根节点。",
       "discoveredPath": "路径发现已识别 {count} 条可达路径，最短为 {hops} 跳。"
     },
+    "relatedEntityBlockTitle": "关联实体",
+    "relatedEntityTitle": "同类{type}关联",
+    "relatedEntitySummary": "当前节点有 {count} 个同类{type}关联实体。",
+    "hiddenRelatedEntityCount": "还有 {count} 个关联实体未显示。",
+    "collapseRelatedEntityCount": "收起关联实体",
+    "focusNode": "定位节点",
     "businessSceneImpactBlockTitle": "业务场景影响",
     "businessSceneImpactTitle": "「{title}」关联的业务场景",
     "businessSceneImpactSummary": "共命中 {businessScenes} 个业务场景，涉及 {dimensions} 个业务维度。",

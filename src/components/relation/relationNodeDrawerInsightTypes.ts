@@ -42,6 +42,22 @@ export interface NodeAnalysisSummary {
   notices: string[];
 }
 
+export interface NodeRelatedEntityItem {
+  id: string;
+  title: string;
+  type: string;
+  relationKey: string;
+  relationText: string;
+  direction: string;
+  sourceFields: string[];
+}
+
+export interface NodeRelatedEntitySummary {
+  title: string;
+  summary: string;
+  items: NodeRelatedEntityItem[];
+}
+
 export interface AttackPathEntity {
   id: string;
   title: string;

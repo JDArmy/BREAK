@@ -20,6 +20,13 @@ describe("relationGraphInsights", () => {
     },
     { id: "TOOL", type: RelationType.attackTool, text: "tool", color: "" },
     { id: "RISK", type: RelationType.risk, text: "risk", color: "" },
+    {
+      id: "RISK-RELATED",
+      type: RelationType.risk,
+      text: "related risk",
+      color: "",
+      data: { isRelatedEntity: true },
+    },
     { id: "AVOID", type: RelationType.avoidance, text: "avoidance", color: "" },
     {
       id: "TERM",
@@ -32,6 +39,7 @@ describe("relationGraphInsights", () => {
   const lines: Line[] = [
     { from: "ROOT", text: "使用攻击工具", to: "TOOL" },
     { from: "TOOL", text: "直接导致风险", to: "RISK" },
+    { from: "RISK", text: "风险共现", to: "RISK-RELATED" },
     { from: "RISK", text: "规避手段", to: "AVOID" },
     { from: "RISK", text: "关联术语", to: "TERM" },
   ];
@@ -155,11 +163,11 @@ describe("relationGraphInsights", () => {
     expect(insights.selectedNodeDiscoveredPaths.value).toHaveLength(1);
     expect(insights.selectedNetworkRelationCounts.value).toEqual({
       incoming: 1,
-      outgoing: 2,
+      outgoing: 3,
     });
     expect(
       insights.selectedNetworkRelations.value.map((relation) => relation.text)
-    ).toEqual(["直接导致风险", "关联术语", "规避手段"]);
+    ).toEqual(["直接导致风险", "关联术语", "规避手段", "风险共现"]);
     expect(insights.selectedNetworkRelations.value[0]).toEqual(
       expect.objectContaining({
         direction: "relationView.incoming",
@@ -170,14 +178,34 @@ describe("relationGraphInsights", () => {
     );
 
     expect(insights.selectedNodeRootPreview.value).toEqual({
-      nodeCount: 4,
-      lineCount: 3,
+      nodeCount: 5,
+      lineCount: 4,
       groupedCounts: {
-        [RelationType.risk]: 1,
+        [RelationType.risk]: 2,
         [RelationType.attackTool]: 1,
         [RelationType.avoidance]: 1,
         [RelationType.term]: 1,
       },
+    });
+  });
+
+  it("summarizes same-type related entities for the selected drawer node", () => {
+    const insights = createInsights("RISK");
+
+    expect(insights.selectedNodeRelatedEntitySummary.value).toEqual({
+      title: "relationView.relatedEntityTitle",
+      summary: "relationView.relatedEntitySummary",
+      items: [
+        {
+          id: "RISK-RELATED",
+          title: "risk:RISK-RELATED",
+          type: RelationType.risk,
+          relationKey: "风险共现",
+          relationText: "风险共现",
+          direction: "relationView.outgoing",
+          sourceFields: ["source:风险共现"],
+        },
+      ],
     });
   });
 

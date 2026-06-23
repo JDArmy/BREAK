@@ -5,6 +5,7 @@ import type {
   NodeAnalysisSummary,
   NodeBusinessSceneImpactSummary,
   NodeCoverageSummary,
+  NodeRelatedEntitySummary,
   RootPathSummary,
   RootRelationSummary,
 } from "@/components/relation/relationNodeDrawerInsightTypes";
@@ -18,6 +19,7 @@ defineProps<{
   rootNodeRelations: RootRelationSummary[];
   selectedNodeRootPath: RootPathSummary | null;
   selectedNodeAnalysisSummary: NodeAnalysisSummary | null;
+  selectedNodeRelatedEntitySummary: NodeRelatedEntitySummary | null;
   selectedNodeType: string;
   selectedNodeId: string;
   selectedNodeAttackPathSummary: string[];
@@ -38,6 +40,7 @@ const emit = defineEmits<{
   "reset-attack-path-filters": [];
   "focus-node": [nodeId: string];
   "open-node-as-root": [nodeId: string];
+  "open-node-detail": [nodeId: string];
 }>();
 </script>
 
@@ -46,6 +49,7 @@ const emit = defineEmits<{
     :root-node-relations="rootNodeRelations"
     :selected-node-root-path="selectedNodeRootPath"
     :selected-node-analysis-summary="selectedNodeAnalysisSummary"
+    :selected-node-related-entity-summary="selectedNodeRelatedEntitySummary"
     :selected-node-type="selectedNodeType"
     :selected-node-id="selectedNodeId"
     :selected-node-attack-path-summary="selectedNodeAttackPathSummary"
@@ -65,5 +69,6 @@ const emit = defineEmits<{
     @reset-attack-path-filters="emit('reset-attack-path-filters')"
     @focus-node="emit('focus-node', $event)"
     @open-node-as-root="emit('open-node-as-root', $event)"
+    @open-node-detail="emit('open-node-detail', $event)"
   />
 </template>

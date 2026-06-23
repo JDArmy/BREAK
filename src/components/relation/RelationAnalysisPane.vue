@@ -17,6 +17,7 @@ import type {
   NodeAnalysisSummary,
   NodeBusinessSceneImpactSummary,
   NodeCoverageSummary,
+  NodeRelatedEntitySummary,
   NodeSpecialInsightSummary,
   RootPathSummary,
   RootRelationSummary,
@@ -55,6 +56,7 @@ const props = defineProps<{
   riskAvoidanceCoverage: RiskAvoidanceCoverage | null;
   selectedAttackPathDetail: AttackPathDetail | null;
   selectedNodeAnalysisSummary: NodeAnalysisSummary | null;
+  selectedNodeRelatedEntitySummary: NodeRelatedEntitySummary | null;
   selectedNodeAttackPathSummary: string[];
   selectedNodeAttackPathDescription: string;
   selectedNodeAttackPathExplanations: AttackPathExplanation[];
@@ -449,6 +451,9 @@ watch(
                   :root-node-relations="rootNodeRelations"
                   :selected-node-root-path="selectedNodeRootPath"
                   :selected-node-analysis-summary="selectedNodeAnalysisSummary"
+                  :selected-node-related-entity-summary="
+                    selectedNodeRelatedEntitySummary
+                  "
                   :selected-node-attack-path-summary="
                     selectedNodeAttackPathSummary
                   "

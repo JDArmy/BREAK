@@ -248,6 +248,111 @@
   overflow-wrap: anywhere;
 }
 
+.node-related-entity-panel {
+  gap: 10px;
+}
+
+.node-related-entity-summary {
+  display: grid;
+  gap: 4px;
+  color: var(--break-text-secondary);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.node-related-entity-summary strong {
+  color: var(--break-text-primary);
+  font-size: 12px;
+}
+
+.node-related-entity-list {
+  display: grid;
+  gap: 8px;
+}
+
+.node-related-entity-item {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid color-mix(in srgb, var(--break-border) 86%, var(--el-color-primary));
+  border-radius: 7px;
+  background: color-mix(in srgb, var(--break-bg-card) 84%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--break-border) 24%, transparent);
+}
+
+.node-related-entity-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  align-items: baseline;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--break-text-primary);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+
+.node-related-entity-main:hover .node-related-entity-title,
+.node-related-entity-main:focus-visible .node-related-entity-title {
+  color: var(--el-color-primary);
+}
+
+.node-related-entity-main:focus-visible {
+  outline: none;
+}
+
+.node-related-entity-title {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.node-related-entity-id {
+  color: var(--break-text-muted);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.node-related-entity-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  color: var(--break-text-secondary);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.node-related-entity-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.node-related-entity-actions button {
+  min-height: 26px;
+  padding: 3px 8px;
+  border: 1px solid var(--break-border);
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--break-bg-soft) 88%, transparent);
+  color: var(--break-text-secondary);
+  font-size: 11px;
+  line-height: 1.35;
+  cursor: pointer;
+}
+
+.node-related-entity-actions button:hover,
+.node-related-entity-actions button:focus-visible {
+  border-color: var(--el-color-primary);
+  color: var(--el-color-primary);
+  outline: none;
+}
+
 .node-coverage-panel {
   gap: 9px;
 }

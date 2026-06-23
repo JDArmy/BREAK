@@ -8,6 +8,7 @@ import type {
   NodeAnalysisSummary,
   NodeBusinessSceneImpactSummary,
   NodeCoverageSummary,
+  NodeRelatedEntitySummary,
   RootPathSummary,
   RootRelationSummary,
 } from "@/components/relation/relationNodeDrawerInsightTypes";
@@ -48,6 +49,7 @@ const props = defineProps<{
   rootNodeRelations: RootRelationSummary[];
   selectedNodeRootPath: RootPathSummary | null;
   selectedNodeAnalysisSummary: NodeAnalysisSummary | null;
+  selectedNodeRelatedEntitySummary: NodeRelatedEntitySummary | null;
   selectedNodeAttackPathSummary: string[];
   selectedNodeAttackPathDescription: string;
   selectedNodeAttackPathExplanations: AttackPathExplanation[];
@@ -106,6 +108,7 @@ const drawerVisible = computed({
         :root-node-relations="rootNodeRelations"
         :selected-node-root-path="selectedNodeRootPath"
         :selected-node-analysis-summary="selectedNodeAnalysisSummary"
+        :selected-node-related-entity-summary="selectedNodeRelatedEntitySummary"
         :selected-node-attack-path-summary="selectedNodeAttackPathSummary"
         :selected-node-attack-path-description="
           selectedNodeAttackPathDescription
