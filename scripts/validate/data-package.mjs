@@ -89,6 +89,27 @@ if (packageQualityReportText && publicQualityReportText) {
   );
 }
 
+// STIX/JSON-LD 产物一致性校验
+const interopFiles = [
+  { pkgFile: 'data/break-stix-zh.json', pubFile: 'public/data/break-stix-zh.json' },
+  { pkgFile: 'data/break-stix-en.json', pubFile: 'public/data/break-stix-en.json' },
+  { pkgFile: 'data/break-ld-zh.jsonld', pubFile: 'public/data/break-ld-zh.jsonld' },
+  { pkgFile: 'data/break-ld-en.jsonld', pubFile: 'public/data/break-ld-en.jsonld' },
+];
+for (const { pkgFile, pubFile } of interopFiles) {
+  const pkgPath = path.join(packageDir, pkgFile);
+  const pubPath = path.join(projectRoot, pubFile);
+  if (fs.existsSync(pubPath)) {
+    if (!fs.existsSync(pkgPath)) {
+      issues.push(`npm 包缺少 ${pkgFile}（public 中已存在）`);
+    } else {
+      const pkgText = fs.readFileSync(pkgPath, 'utf8');
+      const pubText = fs.readFileSync(pubPath, 'utf8');
+      expectEqual(issues, `package ${pkgFile} 与 public 不一致`, pkgText, pubText);
+    }
+  }
+}
+
 if (packageDataText && packageManifestText && packageQualityReportText) {
   const manifest = JSON.parse(packageManifestText);
   const sha256 = crypto.createHash('sha256').update(packageDataText).digest('hex');

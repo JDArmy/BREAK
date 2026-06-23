@@ -135,6 +135,24 @@ if (manifest && qualityReport) {
     Buffer.byteLength(publicQualityReportText),
   );
   expectEqual(issues, 'manifest qualityReport path', manifest.files?.qualityReport?.path, 'data/quality-report.json');
+
+  // STIX/JSON-LD 产物校验（存在时校验 sha256 一致性）
+  const interopFiles = [
+    { key: 'stixZh', publicFile: 'break-stix-zh.json', expectedPath: 'data/break-stix-zh.json' },
+    { key: 'stixEn', publicFile: 'break-stix-en.json', expectedPath: 'data/break-stix-en.json' },
+    { key: 'jsonldZh', publicFile: 'break-ld-zh.jsonld', expectedPath: 'data/break-ld-zh.jsonld' },
+    { key: 'jsonldEn', publicFile: 'break-ld-en.jsonld', expectedPath: 'data/break-ld-en.jsonld' },
+  ];
+  for (const { key, publicFile, expectedPath } of interopFiles) {
+    const filePath = path.join(projectRoot, 'public/data', publicFile);
+    if (fs.existsSync(filePath) && manifest.files?.[key]) {
+      const text = fs.readFileSync(filePath, 'utf8');
+      const sha256 = crypto.createHash('sha256').update(text).digest('hex');
+      expectEqual(issues, `manifest ${key} sha256`, manifest.files[key].sha256, sha256);
+      expectEqual(issues, `manifest ${key} bytes`, manifest.files[key].bytes, Buffer.byteLength(text));
+      expectEqual(issues, `manifest ${key} path`, manifest.files[key].path, expectedPath);
+    }
+  }
 }
 
 if (issues.length > 0) {

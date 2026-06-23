@@ -56,6 +56,7 @@ export interface Risk {
   relatedRisks: RiskRelation[];
   references: Reference[];
   updated?: string;
+  version?: number;
 }
 
 export interface Avoidance {
@@ -70,6 +71,7 @@ export interface Avoidance {
   relatedAvoidances: AvoidanceRelation[];
   references: Reference[];
   updated?: string;
+  version?: number;
 }
 
 export interface AttackTool {
@@ -82,6 +84,7 @@ export interface AttackTool {
   relatedAttackTools: AttackToolRelation[];
   references: Reference[];
   updated?: string;
+  version?: number;
 }
 
 export interface ThreatActor {
@@ -95,6 +98,7 @@ export interface ThreatActor {
   relatedThreatActors: ThreatActorRelation[];
   references: Reference[];
   updated?: string;
+  version?: number;
 }
 
 export interface Term {
@@ -112,6 +116,7 @@ export interface Term {
   relatedBusinessScenes: string[];
   references: Reference[];
   updated?: string;
+  version?: number;
 }
 
 export type CaseCategory =
@@ -134,4 +139,5 @@ export interface CaseEntity {
   relatedThreatActors: string[];
   references: Reference[];
   updated?: string;
+  version?: number;
 }
