@@ -17,6 +17,7 @@ import {
   createRelationAttackPathFilters,
   isAttackPathFilterType,
 } from "@/views/relation/relationAttackPathFilters";
+import { createRelationAttackPathSankey } from "@/views/relation/relationAttackPathSankey";
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;
 
@@ -48,7 +49,7 @@ export const createRelationAttackPathData = ({
   getNodeTitle,
 }: CreateRelationAttackPathOptions) => {
   const selectedAttackPathId = ref("");
-  const isMobileView = () => isMobile?.value === true;
+  const isMobileView = computed(() => isMobile?.value === true);
   const rootAttackPathFilter = ref<{
     type: AttackPathFilterType;
     key: string;
@@ -765,106 +766,6 @@ export const createRelationAttackPathData = ({
     };
   };
 
-  const createEmptySankeyData = () => {
-    const nodeMap = new Map<
-      string,
-      {
-        name: string;
-        depth?: number;
-        entityType: Exclude<RelationType, RelationType.all>;
-        entityKey: string;
-        itemStyle: { color: string };
-      }
-    >();
-    const linkMap = new Map<
-      string,
-      { source: string; target: string; value: number }
-    >();
-
-    const addNode = (
-      type: Exclude<RelationType, RelationType.all>,
-      key: string,
-      depth: number
-    ) => {
-      const nodeKey = `${type}:${key}`;
-      const existingNode = nodeMap.get(nodeKey);
-      if (existingNode) {
-        return existingNode.name;
-      }
-
-      const name = getSankeyNodeName(type, key);
-      nodeMap.set(nodeKey, {
-        name,
-        depth,
-        entityType: type,
-        entityKey: key,
-        itemStyle: {
-          color: RelationTypeMapping[type].color,
-        },
-      });
-      return name;
-    };
-
-    const addLink = (source: string, target: string) => {
-      const linkKey = `${source}->${target}`;
-      const existing = linkMap.get(linkKey);
-      if (existing) {
-        existing.value += 1;
-      } else {
-        linkMap.set(linkKey, { source, target, value: 1 });
-      }
-    };
-
-    const addPath = (path: AttackPath) => {
-      const pathNodes: string[] = [];
-      if (path.threatActorKey) {
-        pathNodes.push(
-          addNode(RelationType.threatActor, path.threatActorKey, 0)
-        );
-      }
-      if (path.attackToolKey) {
-        pathNodes.push(addNode(RelationType.attackTool, path.attackToolKey, 1));
-      }
-      pathNodes.push(addNode(RelationType.risk, path.riskKey, 2));
-      if (path.avoidanceKey) {
-        pathNodes.push(addNode(RelationType.avoidance, path.avoidanceKey, 3));
-      }
-
-      pathNodes.forEach((nodeName, index) => {
-        const nextNodeName = pathNodes[index + 1];
-        if (nextNodeName) {
-          addLink(nodeName, nextNodeName);
-        }
-      });
-    };
-
-    return {
-      addPath,
-      toData: () => ({
-        nodes: [...nodeMap.values()],
-        links: [...linkMap.values()],
-      }),
-    };
-  };
-
-  const buildSankeyData = () => {
-    const sankey = createEmptySankeyData();
-    const options = {
-      attackToolKey:
-        relType.value === RelationType.attackTool ? relKey.value : undefined,
-      avoidanceKey:
-        relType.value === RelationType.avoidance ? relKey.value : undefined,
-      threatActorKey:
-        relType.value === RelationType.threatActor ? relKey.value : undefined,
-    };
-
-    getCandidateRiskKeys().forEach((riskKey) => {
-      buildAttackPathsForRisk(riskKey, options).forEach(sankey.addPath);
-    });
-
-    return sankey.toData();
-  };
-
   const selectedNodeAttackPathSummary = computed(() => {
     const node = selectedNetworkNode.value;
     if (!node || !isRelationEntityType(node.type)) return [];
@@ -914,11 +815,14 @@ export const createRelationAttackPathData = ({
     );
   });
 
-  const sankeyData = computed(() => {
-    return buildSankeyData();
-  });
-
   const allAttackPaths = computed(() => buildAttackPaths());
+
+  const { sankeyChartHeight, sankeyData } = createRelationAttackPathSankey({
+    buildAttackPaths,
+    getSankeyNodeName,
+    isMobile: isMobileView,
+    RelationTypeMapping,
+  });
 
   const {
     attackPathDetails,
@@ -1017,24 +921,6 @@ export const createRelationAttackPathData = ({
       overlapCount: items.filter((item) => item.source === "both").length,
       items,
     };
-  });
-
-  const sankeyChartHeight = computed(() => {
-    const nodesByDepth = sankeyData.value.nodes.reduce<Record<number, number>>(
-      (acc, node) => {
-        const depth = node.depth ?? 0;
-        acc[depth] = (acc[depth] ?? 0) + 1;
-        return acc;
-      },
-      {}
-    );
-    const maxLayerNodeCount = Math.max(1, ...Object.values(nodesByDepth));
-
-    if (isMobileView()) {
-      return Math.min(Math.max(620, maxLayerNodeCount * 34 + 140), 5200);
-    }
-
-    return Math.min(Math.max(520, maxLayerNodeCount * 24 + 96), 3200);
   });
 
   return {

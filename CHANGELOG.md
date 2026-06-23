@@ -1,5 +1,11 @@
 # Change log
 
+## 2.22.10
+
+- 拆分关系页攻击路径 Sankey 构建逻辑到独立模块，降低 `relationAttackPath` 职责复杂度
+- 补充 Sankey 模块单测，覆盖节点聚合、重复链接计数和移动端高度计算
+- ESLint 忽略本地 `.claude` 工作区，避免本地辅助 worktree 污染主项目 lint
+
 ## 2.22.9
 
 - 统一知识库相关实体链接跳转到列表详情路由，避免进入列表页 hash 定位

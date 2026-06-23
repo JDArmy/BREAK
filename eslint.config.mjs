@@ -17,6 +17,7 @@ export default [
       ".eslintrc.cjs",
       "scripts/**",
       "research/**",
+      ".claude/**",
     ],
   },
   ...pluginVue.configs["flat/essential"],
