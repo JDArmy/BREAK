@@ -50,6 +50,38 @@
       "黑产兼职",
       "刷单工",
       "网赚工人"
+    ],
+    "relatedThreatActors": [
+      {
+        "key": "TA0006-001",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同间接支持 9 个风险，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0010",
+        "relation": "co-involved",
+        "note": "共同直接造成 4 个风险，共同间接支持 6 个风险，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0013",
+        "relation": "co-involved",
+        "note": "共同直接造成 2 个风险，共同间接支持 8 个风险，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0002",
+        "relation": "co-involved",
+        "note": "共同直接造成 3 个风险，共同间接支持 6 个风险，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0006-002",
+        "relation": "co-involved",
+        "note": "共同间接支持 8 个风险，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0019",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同间接支持 7 个风险，共同使用 2 个攻击工具。"
+      }
     ]
   },
   "TA0006-001": {
@@ -93,6 +125,38 @@
       "验证码代过",
       "打码平台",
       "CAPTCHA代过"
+    ],
+    "relatedThreatActors": [
+      {
+        "key": "TA0006-002",
+        "relation": "co-involved",
+        "note": "共同直接造成 2 个风险，共同间接支持 9 个风险，共同建设 1 个攻击工具，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0006",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同间接支持 9 个风险，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0019",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同间接支持 5 个风险，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0011",
+        "relation": "co-involved",
+        "note": "共同间接支持 7 个风险。"
+      },
+      {
+        "key": "TA0002",
+        "relation": "co-involved",
+        "note": "共同直接造成 2 个风险，共同间接支持 4 个风险，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0006-003",
+        "relation": "co-involved",
+        "note": "共同间接支持 6 个风险，共同使用 1 个攻击工具。"
+      }
     ]
   },
   "TA0006-002": {
@@ -134,6 +198,38 @@
       "语音打码",
       "语音验证码代过",
       "语音码代打"
+    ],
+    "relatedThreatActors": [
+      {
+        "key": "TA0006-001",
+        "relation": "co-involved",
+        "note": "共同直接造成 2 个风险，共同间接支持 9 个风险，共同建设 1 个攻击工具，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0006",
+        "relation": "co-involved",
+        "note": "共同间接支持 8 个风险，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0011",
+        "relation": "co-involved",
+        "note": "共同间接支持 8 个风险。"
+      },
+      {
+        "key": "TA0013",
+        "relation": "co-involved",
+        "note": "共同间接支持 7 个风险，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0019",
+        "relation": "co-involved",
+        "note": "共同间接支持 5 个风险，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0003",
+        "relation": "co-involved",
+        "note": "共同间接支持 6 个风险。"
+      }
     ]
   },
   "TA0006-003": {
@@ -177,6 +273,38 @@
       "洗钱跑分",
       "通道跑分",
       "跑分兼职"
+    ],
+    "relatedThreatActors": [
+      {
+        "key": "TA0006",
+        "relation": "co-involved",
+        "note": "共同间接支持 6 个风险，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0003",
+        "relation": "co-involved",
+        "note": "共同间接支持 7 个风险。"
+      },
+      {
+        "key": "TA0006-001",
+        "relation": "co-involved",
+        "note": "共同间接支持 6 个风险，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0007",
+        "relation": "co-involved",
+        "note": "共同间接支持 6 个风险。"
+      },
+      {
+        "key": "TA0011",
+        "relation": "co-involved",
+        "note": "共同间接支持 6 个风险。"
+      },
+      {
+        "key": "TA0006-002",
+        "relation": "co-involved",
+        "note": "共同间接支持 5 个风险，共同使用 1 个攻击工具。"
+      }
     ]
   }
 }

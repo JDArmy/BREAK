@@ -60,6 +60,38 @@
       "动态IP商",
       "秒拨IP",
       "机房代理商"
+    ],
+    "relatedThreatActors": [
+      {
+        "key": "TA0003",
+        "relation": "co-involved",
+        "note": "共同间接支持 15 个风险，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0020",
+        "relation": "co-involved",
+        "note": "共同间接支持 14 个风险，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0004",
+        "relation": "co-involved",
+        "note": "共同间接支持 11 个风险，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0005",
+        "relation": "co-involved",
+        "note": "共同间接支持 10 个风险，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0017",
+        "relation": "co-involved",
+        "note": "共同间接支持 9 个风险，共同建设 1 个攻击工具，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0018",
+        "relation": "co-involved",
+        "note": "共同间接支持 8 个风险，共同使用 2 个攻击工具。"
+      }
     ]
   }
 }

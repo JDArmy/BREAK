@@ -60,6 +60,38 @@
       "监守自盗员工",
       "Insider Threat",
       "内部作恶"
+    ],
+    "relatedThreatActors": [
+      {
+        "key": "TA0030",
+        "relation": "co-involved",
+        "note": "共同直接造成 9 个风险，共同间接支持 1 个风险，共同建设 2 个攻击工具，共同使用 8 个攻击工具。"
+      },
+      {
+        "key": "TA0018",
+        "relation": "co-involved",
+        "note": "共同直接造成 6 个风险，共同间接支持 1 个风险，共同使用 8 个攻击工具。"
+      },
+      {
+        "key": "TA0022",
+        "relation": "co-involved",
+        "note": "共同直接造成 7 个风险，共同间接支持 2 个风险，共同使用 3 个攻击工具。"
+      },
+      {
+        "key": "TA0021",
+        "relation": "co-involved",
+        "note": "共同直接造成 6 个风险。"
+      },
+      {
+        "key": "TA0023",
+        "relation": "co-involved",
+        "note": "共同直接造成 6 个风险。"
+      },
+      {
+        "key": "TA0012",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同间接支持 2 个风险，共同建设 1 个攻击工具，共同使用 1 个攻击工具。"
+      }
     ]
   }
 }

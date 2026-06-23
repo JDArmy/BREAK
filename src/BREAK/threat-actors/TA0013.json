@@ -75,6 +75,38 @@
       "数据采集团伙",
       "APP爬虫",
       "采集工作室"
+    ],
+    "relatedThreatActors": [
+      {
+        "key": "TA0002",
+        "relation": "co-involved",
+        "note": "共同直接造成 10 个风险，共同间接支持 8 个风险，共同使用 12 个攻击工具。"
+      },
+      {
+        "key": "TA0019",
+        "relation": "co-involved",
+        "note": "共同直接造成 7 个风险，共同间接支持 9 个风险，共同使用 7 个攻击工具。"
+      },
+      {
+        "key": "TA0001",
+        "relation": "co-involved",
+        "note": "共同直接造成 10 个风险，共同间接支持 5 个风险，共同建设 1 个攻击工具，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0012",
+        "relation": "co-involved",
+        "note": "共同间接支持 8 个风险，共同使用 10 个攻击工具。"
+      },
+      {
+        "key": "TA0025",
+        "relation": "co-involved",
+        "note": "共同间接支持 8 个风险，共同使用 9 个攻击工具。"
+      },
+      {
+        "key": "TA0026",
+        "relation": "co-involved",
+        "note": "共同间接支持 9 个风险，共同建设 1 个攻击工具，共同使用 5 个攻击工具。"
+      }
     ]
   }
 }

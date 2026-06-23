@@ -1,5 +1,5 @@
 import BREAK from "@/BREAK";
-import type { AttackToolRelation, AvoidanceRelation, RiskRelation } from "@/BREAK/types";
+import type { AttackToolRelation, AvoidanceRelation, RiskRelation, ThreatActorRelation } from "@/BREAK/types";
 
 type Translate = (key: string, named?: Record<string, unknown>) => string;
 
@@ -72,6 +72,34 @@ export function formatAttackToolRelationNote(
     parts.push(t("relationNote.attackToolSharedAvoidances", { count: avoidanceCount }));
   }
   if (actorCount > 0) parts.push(t("relationNote.attackToolSharedThreatActors", { count: actorCount }));
+
+  return parts.length ? formatParts(parts, t) : relation.note;
+}
+
+export function formatThreatActorRelationNote(
+  relation: ThreatActorRelation,
+  locale: string,
+  t: Translate,
+) {
+  if (!relation.note || !isEnglish(locale)) return relation.note || "";
+
+  const directRiskCount = matchCount(relation.note, /共同直接造成 (\d+) 个风险/);
+  const indirectRiskCount = matchCount(relation.note, /共同间接支持 (\d+) 个风险/);
+  const buildToolCount = matchCount(relation.note, /共同建设 (\d+) 个攻击工具/);
+  const useToolCount = matchCount(relation.note, /共同使用 (\d+) 个攻击工具/);
+  const parts = [];
+  if (directRiskCount > 0) {
+    parts.push(t("relationNote.threatActorSharedDirectRisks", { count: directRiskCount }));
+  }
+  if (indirectRiskCount > 0) {
+    parts.push(t("relationNote.threatActorSharedIndirectRisks", { count: indirectRiskCount }));
+  }
+  if (buildToolCount > 0) {
+    parts.push(t("relationNote.threatActorSharedBuildTools", { count: buildToolCount }));
+  }
+  if (useToolCount > 0) {
+    parts.push(t("relationNote.threatActorSharedUseTools", { count: useToolCount }));
+  }
 
   return parts.length ? formatParts(parts, t) : relation.note;
 }

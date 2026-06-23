@@ -46,6 +46,38 @@
       "虚拟骚扰团伙",
       "元宇宙欺诈"
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-06-16",
+    "relatedThreatActors": [
+      {
+        "key": "TA0047",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0019",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0021",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0031",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0032",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0041",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      }
+    ]
   }
 }

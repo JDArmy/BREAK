@@ -14,6 +14,11 @@ interface ThreatActor {
   useAttackTools: string[];
   directCauseRisks: string[];
   indirectSupportRisks: string[];
+  relatedThreatActors: Array<{
+    key: string;
+    relation: "co-involved";
+    note?: string;
+  }>;
   attackTools: string[];
   updated: string;
 }

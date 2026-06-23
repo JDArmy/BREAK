@@ -100,6 +100,9 @@ function collectRelationAudit() {
       ...(entity.useAttackTools || []),
     ]),
   );
+  const threatActorRelatedThreatActorRefs = unique(
+    threatActors.flatMap(({ entity }) => (entity.relatedThreatActors || []).map((relation) => relation.key)),
+  );
   const threatActorRiskRefs = unique(
     threatActors.flatMap(({ entity }) => [
       ...(entity.directCauseRisks || []),
@@ -211,6 +214,26 @@ function collectRelationAudit() {
       addIssue(issues, 'error', 'invalid_threat_actor_attack_tool_ref', `ThreatActor 引用了不存在的 AttackTool: ${ref}`, { ref });
     }
   }
+  for (const { key, entity } of threatActors) {
+    const seen = new Set();
+    for (const [index, relation] of (entity.relatedThreatActors || []).entries()) {
+      if (!relation?.key || !threatActorIds.has(relation.key)) {
+        addIssue(issues, 'error', 'invalid_threat_actor_related_threat_actor_ref', `ThreatActor.relatedThreatActors 引用了不存在的 ThreatActor: ${relation?.key}`, { key, index, ref: relation?.key });
+      }
+      if (relation?.key === key) {
+        addIssue(issues, 'error', 'self_threat_actor_relation', `ThreatActor.relatedThreatActors 不能引用自身: ${key}`, { key, index });
+      }
+      const relationType = relation?.relation;
+      if (relationType !== 'co-involved') {
+        addIssue(issues, 'error', 'invalid_threat_actor_relation_type', `ThreatActor.relatedThreatActors 关系类型非法: ${relationType}`, { key, index, relationType });
+      }
+      const fingerprint = `${relation?.key}:${relationType}`;
+      if (seen.has(fingerprint)) {
+        addIssue(issues, 'review', 'duplicate_threat_actor_relation', `ThreatActor.relatedThreatActors 存在重复关系: ${fingerprint}`, { key, index });
+      }
+      seen.add(fingerprint);
+    }
+  }
   for (const ref of threatActorRiskRefs) {
     if (!riskIds.has(ref)) {
       addIssue(issues, 'error', 'invalid_threat_actor_risk_ref', `ThreatActor 引用了不存在的 Risk: ${ref}`, { ref });
@@ -225,6 +248,7 @@ function collectRelationAudit() {
   const referencedAvoidances = new Set([...riskAvoidanceRefs, ...attackToolAvoidanceRefs]);
   const referencedRisks = new Set([...attackToolRiskRefs, ...threatActorRiskRefs, ...sceneRiskRefs, ...riskRelatedRiskRefs]);
   const referencedAttackTools = new Set([...threatActorAttackToolRefs, ...attackToolRelatedAttackToolRefs]);
+  const referencedThreatActors = new Set(threatActorRelatedThreatActorRefs);
 
   const unreferencedAvoidances = avoidances
     .filter(({ key }) => !referencedAvoidances.has(key))
@@ -235,6 +259,9 @@ function collectRelationAudit() {
   const attackToolsWithoutThreatActors = attackTools
     .filter(({ key }) => !referencedAttackTools.has(key))
     .map(({ key, entity }) => ({ key, title: entity.title || '' }));
+  const threatActorsWithoutRelatedThreatActors = threatActors
+    .filter(({ key }) => !referencedThreatActors.has(key))
+    .map(({ key, entity }) => ({ key, title: entity.title || '' }));
 
   for (const item of unreferencedAvoidances) {
     addIssue(issues, 'review', 'unreferenced_avoidance', `未被 Risk/AttackTool 引用的 Avoidance: ${item.key}`, item);
@@ -244,6 +271,9 @@ function collectRelationAudit() {
   }
   for (const item of attackToolsWithoutThreatActors) {
     addIssue(issues, 'info', 'attack_tool_without_threat_actor', `未被 ThreatActor 引用的 AttackTool: ${item.key}`, item);
+  }
+  for (const item of threatActorsWithoutRelatedThreatActors) {
+    addIssue(issues, 'info', 'threat_actor_without_related_threat_actor', `未被 ThreatActor.relatedThreatActors 引用的 ThreatActor: ${item.key}`, item);
   }
 
   const summaries = [
@@ -257,6 +287,7 @@ function collectRelationAudit() {
     { name: 'ThreatActor.attackTools', ...threatActorToolCoverage(threatActors) },
     { name: 'ThreatActor.buildAttackTools', observationOnly: true, ...coverage(threatActors, 'buildAttackTools') },
     { name: 'ThreatActor.useAttackTools', observationOnly: true, ...coverage(threatActors, 'useAttackTools') },
+    { name: 'ThreatActor.relatedThreatActors', observationOnly: true, ...coverage(threatActors, 'relatedThreatActors') },
     { name: 'ThreatActor.directCauseRisks', ...coverage(threatActors, 'directCauseRisks') },
     { name: 'ThreatActor.indirectSupportRisks', ...coverage(threatActors, 'indirectSupportRisks') },
     { name: 'Case.relatedRisks', observationOnly: true, ...coverage(cases, 'relatedRisks') },

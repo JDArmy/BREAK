@@ -59,6 +59,38 @@
       "商业间谍",
       "竞业对手",
       "商业窃密方"
+    ],
+    "relatedThreatActors": [
+      {
+        "key": "TA0030",
+        "relation": "co-involved",
+        "note": "共同直接造成 9 个风险，共同间接支持 3 个风险，共同使用 5 个攻击工具。"
+      },
+      {
+        "key": "TA0018",
+        "relation": "co-involved",
+        "note": "共同直接造成 9 个风险，共同使用 3 个攻击工具。"
+      },
+      {
+        "key": "TA0024",
+        "relation": "co-involved",
+        "note": "共同直接造成 7 个风险，共同间接支持 2 个风险，共同使用 3 个攻击工具。"
+      },
+      {
+        "key": "TA0023",
+        "relation": "co-involved",
+        "note": "共同直接造成 4 个风险，共同间接支持 3 个风险。"
+      },
+      {
+        "key": "TA0021",
+        "relation": "co-involved",
+        "note": "共同直接造成 6 个风险。"
+      },
+      {
+        "key": "TA0001-001",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同间接支持 3 个风险，共同使用 1 个攻击工具。"
+      }
     ]
   }
 }

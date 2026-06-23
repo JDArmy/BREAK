@@ -63,6 +63,10 @@
     "alternative": "替代",
     "capability-upgrade": "升级"
   },
+  "threatActorRelatedThreatActors": "相关威胁行为者",
+  "threatActorRelationType": {
+    "co-involved": "共同关联"
+  },
   "relationNote": {
     "separator": "，",
     "period": "。",
@@ -71,6 +75,10 @@
     "attackToolSharedRisks": "共同关联 {count} 个风险",
     "attackToolSharedAvoidances": "共享 {count} 个规避手段",
     "attackToolSharedThreatActors": "被 {count} 个相同行为者使用或建设",
+    "threatActorSharedDirectRisks": "共同直接造成 {count} 个风险",
+    "threatActorSharedIndirectRisks": "共同间接支持 {count} 个风险",
+    "threatActorSharedBuildTools": "共同建设 {count} 个攻击工具",
+    "threatActorSharedUseTools": "共同使用 {count} 个攻击工具",
     "riskMutualReference": "风险「{fromTitle}」与风险「{toTitle}」在定义或描述中互相指向。",
     "riskSiblingVariant": "风险「{fromTitle}」与风险「{toTitle}」同属同一上层风险下的细分变体。",
     "riskParentVariant": "风险「{toTitle}」是风险「{fromTitle}」的上层风险。",
@@ -426,6 +434,7 @@
       "attackToolCoUsed": "攻击工具实体将目标工具列为常组合使用的工具。",
       "attackToolAlternative": "攻击工具实体将目标工具列为替代工具。",
       "attackToolCapabilityUpgrade": "攻击工具实体将目标工具列为能力升级或扩展工具。",
+      "threatActorCoInvolved": "威胁行为者实体将目标行为者列为共享风险或工具连接最多的相关行为者。",
       "buildAttackTool": "威胁行为者实体列出该攻击工具为制作能力。",
       "useAttackTool": "威胁行为者实体列出该攻击工具为使用能力。",
       "causeRisk": "该关系聚合了直接造成和间接支撑风险字段。",
@@ -452,6 +461,7 @@
       "attackToolCoUsed": "攻击工具「{fromTitle}」与「{toTitle}」常在同一攻击链路中组合使用。",
       "attackToolAlternative": "攻击工具「{toTitle}」可作为「{fromTitle}」的替代或同类工具。",
       "attackToolCapabilityUpgrade": "攻击工具「{toTitle}」扩展或升级了「{fromTitle}」的攻击能力。",
+      "threatActorCoInvolved": "威胁行为者「{fromTitle}」与「{toTitle}」共享较多风险或攻击工具连接，适合作为相邻画像线索复核。",
       "buildAttackTool": "威胁行为者「{fromTitle}」具备建设或维护攻击工具「{toTitle}」的能力。",
       "useAttackTool": "威胁行为者「{fromTitle}」会使用攻击工具「{toTitle}」开展相关活动。",
       "causeRisk": "「{fromTitle}」通过风险因果字段关联到「{toTitle}」，需要结合来源字段区分直接与间接。",
@@ -467,6 +477,7 @@
       "riskRelation": "用于识别风险之间的前置、共现、升级或变体关系。",
       "avoidanceRelation": "用于识别规避手段之间的组合、替代、前置和补短板关系。",
       "attackToolRelation": "用于识别攻击工具之间的前置、组合、替代和能力升级关系。",
+      "threatActorRelation": "用于识别共享风险或工具连接较多的相邻威胁行为者。",
       "threatActorTool": "可用于识别行为者能力来源和工具使用面。",
       "causeRisk": "需要结合来源字段区分直接与间接关系。",
       "relatedTerm": "用于解释术语上下文，不等同于攻击因果。",
@@ -553,6 +564,7 @@
     "attackToolCoUsed": "组合攻击工具",
     "attackToolAlternative": "替代攻击工具",
     "attackToolCapabilityUpgrade": "升级攻击工具",
+    "threatActorCoInvolved": "相关威胁行为者",
     "buildAttackTool": "制作攻击工具",
     "useAttackTool": "使用攻击工具",
     "relatedTerm": "关联术语",

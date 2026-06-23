@@ -37,6 +37,14 @@ export interface AttackToolRelation {
   note?: string;
 }
 
+export type ThreatActorRelationType = "co-involved";
+
+export interface ThreatActorRelation {
+  key: string;
+  relation: ThreatActorRelationType;
+  note?: string;
+}
+
 export interface Risk {
   title: string;
   keywords: string[];
@@ -84,6 +92,7 @@ export interface ThreatActor {
   indirectSupportRisks: string[];
   buildAttackTools: string[];
   useAttackTools: string[];
+  relatedThreatActors: ThreatActorRelation[];
   references: Reference[];
   updated?: string;
 }

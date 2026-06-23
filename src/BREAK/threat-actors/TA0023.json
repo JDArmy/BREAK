@@ -59,6 +59,38 @@
       "风险第三方",
       "渠道作弊合作方",
       "外包风险方"
+    ],
+    "relatedThreatActors": [
+      {
+        "key": "TA0036",
+        "relation": "co-involved",
+        "note": "共同间接支持 8 个风险，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0037",
+        "relation": "co-involved",
+        "note": "共同间接支持 8 个风险，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0034",
+        "relation": "co-involved",
+        "note": "共同间接支持 8 个风险，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0011",
+        "relation": "co-involved",
+        "note": "共同间接支持 8 个风险。"
+      },
+      {
+        "key": "TA0018",
+        "relation": "co-involved",
+        "note": "共同直接造成 7 个风险，共同间接支持 1 个风险。"
+      },
+      {
+        "key": "TA0017",
+        "relation": "co-involved",
+        "note": "共同直接造成 5 个风险，共同间接支持 2 个风险，共同使用 1 个攻击工具。"
+      }
     ]
   }
 }

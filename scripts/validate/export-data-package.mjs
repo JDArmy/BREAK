@@ -79,6 +79,15 @@ export interface BreakThreatActor extends BreakBaseEntity {
   useAttackTools: string[];
   directCauseRisks: string[];
   indirectSupportRisks: string[];
+  relatedThreatActors: BreakThreatActorRelation[];
+}
+
+export type BreakThreatActorRelationType = 'co-involved';
+
+export interface BreakThreatActorRelation {
+  key: string;
+  relation: BreakThreatActorRelationType;
+  note?: string;
 }
 
 export interface BreakTerm extends BreakBaseEntity {

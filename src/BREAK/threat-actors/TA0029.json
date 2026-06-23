@@ -35,6 +35,38 @@
       "债务优化黑产",
       "债务协商黑产",
       "代理维权黑产"
+    ],
+    "relatedThreatActors": [
+      {
+        "key": "TA0001",
+        "relation": "co-involved",
+        "note": "共同建设 1 个攻击工具，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0002",
+        "relation": "co-involved",
+        "note": "共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0013",
+        "relation": "co-involved",
+        "note": "共同建设 1 个攻击工具，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0019",
+        "relation": "co-involved",
+        "note": "共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0025",
+        "relation": "co-involved",
+        "note": "共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0026",
+        "relation": "co-involved",
+        "note": "共同建设 1 个攻击工具，共同使用 1 个攻击工具。"
+      }
     ]
   }
 }

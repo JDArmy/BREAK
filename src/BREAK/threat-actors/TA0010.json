@@ -74,6 +74,38 @@
       "黑产用户",
       "恶意买家",
       "欺诈买家"
+    ],
+    "relatedThreatActors": [
+      {
+        "key": "TA0001",
+        "relation": "co-involved",
+        "note": "共同直接造成 9 个风险，共同间接支持 2 个风险，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0006",
+        "relation": "co-involved",
+        "note": "共同直接造成 4 个风险，共同间接支持 6 个风险，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0002",
+        "relation": "co-involved",
+        "note": "共同直接造成 5 个风险，共同间接支持 3 个风险，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0009",
+        "relation": "co-involved",
+        "note": "共同直接造成 4 个风险，共同间接支持 3 个风险，共同使用 3 个攻击工具。"
+      },
+      {
+        "key": "TA0001-001",
+        "relation": "co-involved",
+        "note": "共同直接造成 8 个风险，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0020",
+        "relation": "co-involved",
+        "note": "共同直接造成 4 个风险，共同间接支持 3 个风险。"
+      }
     ]
   }
 }

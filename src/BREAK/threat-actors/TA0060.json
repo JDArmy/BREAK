@@ -25,6 +25,28 @@
       "移动应用仿冒团伙",
       "移动应用仿冒"
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-06-17",
+    "relatedThreatActors": [
+      {
+        "key": "TA0013",
+        "relation": "co-involved",
+        "note": "共同间接支持 1 个风险。"
+      },
+      {
+        "key": "TA0025-001",
+        "relation": "co-involved",
+        "note": "共同间接支持 1 个风险。"
+      },
+      {
+        "key": "TA0028",
+        "relation": "co-involved",
+        "note": "共同间接支持 1 个风险。"
+      },
+      {
+        "key": "TA0015",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      }
+    ]
   }
 }

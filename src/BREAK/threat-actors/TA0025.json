@@ -62,6 +62,38 @@
       "gold farming",
       "gold farmer",
       "工作室搬砖"
+    ],
+    "relatedThreatActors": [
+      {
+        "key": "TA0026",
+        "relation": "co-involved",
+        "note": "共同直接造成 3 个风险，共同间接支持 8 个风险，共同使用 9 个攻击工具。"
+      },
+      {
+        "key": "TA0002",
+        "relation": "co-involved",
+        "note": "共同直接造成 2 个风险，共同间接支持 6 个风险，共同使用 12 个攻击工具。"
+      },
+      {
+        "key": "TA0019",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同间接支持 8 个风险，共同使用 9 个攻击工具。"
+      },
+      {
+        "key": "TA0013",
+        "relation": "co-involved",
+        "note": "共同间接支持 8 个风险，共同使用 9 个攻击工具。"
+      },
+      {
+        "key": "TA0025-001",
+        "relation": "co-involved",
+        "note": "共同直接造成 4 个风险，共同间接支持 7 个风险，共同建设 1 个攻击工具，共同使用 4 个攻击工具。"
+      },
+      {
+        "key": "TA0028",
+        "relation": "co-involved",
+        "note": "共同直接造成 2 个风险，共同间接支持 5 个风险，共同建设 1 个攻击工具，共同使用 4 个攻击工具。"
+      }
     ]
   },
   "TA0025-001": {
@@ -110,6 +142,38 @@
       "游戏币交易",
       "RMT",
       "real-money trading"
+    ],
+    "relatedThreatActors": [
+      {
+        "key": "TA0025",
+        "relation": "co-involved",
+        "note": "共同直接造成 4 个风险，共同间接支持 7 个风险，共同建设 1 个攻击工具，共同使用 4 个攻击工具。"
+      },
+      {
+        "key": "TA0028",
+        "relation": "co-involved",
+        "note": "共同直接造成 2 个风险，共同间接支持 8 个风险，共同建设 1 个攻击工具，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0026",
+        "relation": "co-involved",
+        "note": "共同直接造成 3 个风险，共同间接支持 6 个风险，共同建设 1 个攻击工具，共同使用 3 个攻击工具。"
+      },
+      {
+        "key": "TA0013",
+        "relation": "co-involved",
+        "note": "共同间接支持 10 个风险，共同建设 1 个攻击工具，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0019",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同间接支持 7 个风险。"
+      },
+      {
+        "key": "TA0006",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同间接支持 6 个风险，共同使用 1 个攻击工具。"
+      }
     ]
   }
 }

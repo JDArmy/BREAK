@@ -47,6 +47,38 @@
       "数字人带货",
       "假直播团伙",
       "AI直播矩阵"
+    ],
+    "relatedThreatActors": [
+      {
+        "key": "TA0031",
+        "relation": "co-involved",
+        "note": "共同直接造成 2 个风险，共同间接支持 3 个风险，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0019",
+        "relation": "co-involved",
+        "note": "共同直接造成 3 个风险，共同使用 3 个攻击工具。"
+      },
+      {
+        "key": "TA0009",
+        "relation": "co-involved",
+        "note": "共同直接造成 4 个风险，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0035",
+        "relation": "co-involved",
+        "note": "共同直接造成 2 个风险，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0008",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0037",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同使用 2 个攻击工具。"
+      }
     ]
   }
 }

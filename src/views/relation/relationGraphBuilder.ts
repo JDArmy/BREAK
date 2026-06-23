@@ -219,12 +219,15 @@ export const createRelationGraphBuilder = ({
         threatActorBuilder.addRisk(currentNodeId);
       } else if (reqType == RelationType.attackTool) {
         threatActorBuilder.addAttackTool(currentNodeId);
+      } else if (reqType == RelationType.threatActor) {
+        threatActorBuilder.addRelatedThreatActor(currentNodeId);
       } else if (reqType == RelationType.term) {
         threatActorBuilder.addTerm(currentNodeId);
       } else if (reqType == RelationType.all) {
         threatActorBuilder.addRisk(currentNodeId);
         threatActorBuilder.addAttackTool(currentNodeId);
         threatActorBuilder.addAttackToolRiskRelation(currentNodeId);
+        threatActorBuilder.addRelatedThreatActor(currentNodeId);
         threatActorBuilder.addSubthreatActor(currentNodeId);
         threatActorBuilder.addTerm(currentNodeId);
       }

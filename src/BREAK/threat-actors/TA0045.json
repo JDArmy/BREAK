@@ -50,6 +50,38 @@
       "MEV搜索者",
       "Web3黑客"
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-06-16",
+    "relatedThreatActors": [
+      {
+        "key": "TA0044",
+        "relation": "co-involved",
+        "note": "共同间接支持 1 个风险，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0046",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险。"
+      },
+      {
+        "key": "TA0017",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0018",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0024",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0030",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      }
+    ]
   }
 }

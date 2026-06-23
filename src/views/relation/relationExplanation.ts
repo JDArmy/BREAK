@@ -30,6 +30,7 @@ type RelationLineKey =
   | "attackToolCoUsed"
   | "attackToolAlternative"
   | "attackToolCapabilityUpgrade"
+  | "threatActorCoInvolved"
   | "buildAttackTool"
   | "useAttackTool"
   | "causeRisk"
@@ -181,6 +182,14 @@ export const createRelationExplanationHelpers = ({
       impactKey: "relationView.relationImpact.attackToolRelation",
       evidenceLevel: "direct",
       sourceFields: ["AttackTool.relatedAttackTools"],
+    },
+    {
+      key: "threatActorCoInvolved",
+      relationKey: "relationLine.threatActorCoInvolved",
+      explanationKey: "relationView.relationExplanation.threatActorCoInvolved",
+      impactKey: "relationView.relationImpact.threatActorRelation",
+      evidenceLevel: "inferred",
+      sourceFields: ["ThreatActor.relatedThreatActors"],
     },
     {
       key: "buildAttackTool",
@@ -341,6 +350,8 @@ export const createRelationExplanationHelpers = ({
     ) {
       fields.add("AttackTool.relatedAttackTools");
     }
+    if (getRelationLineKey(line) === "relationLine.threatActorCoInvolved")
+      fields.add("ThreatActor.relatedThreatActors");
     if (getRelationLineKey(line) === "relationLine.buildAttackTool")
       fields.add("ThreatActor.buildAttackTools");
     if (getRelationLineKey(line) === "relationLine.useAttackTool")
@@ -411,7 +422,8 @@ export const createRelationExplanationHelpers = ({
       getRelationLineKey(line) === "relationLine.subAvoidance" ||
       getRelationLineKey(line) === "relationLine.subAttackTool" ||
       getRelationLineKey(line) === "relationLine.subThreatActor" ||
-      getRelationLineKey(line) === "relationLine.attackToolMaker"
+      getRelationLineKey(line) === "relationLine.attackToolMaker" ||
+      getRelationLineKey(line) === "relationLine.threatActorCoInvolved"
     ) {
       return "inferred";
     }
@@ -447,6 +459,7 @@ export const createRelationExplanationHelpers = ({
       lineText === "relationLine.attackToolCoUsed" ||
       lineText === "relationLine.attackToolAlternative" ||
       lineText === "relationLine.attackToolCapabilityUpgrade" ||
+      lineText === "relationLine.threatActorCoInvolved" ||
       lineText === t("relationLine.riskPrerequisite") ||
       lineText === t("relationLine.riskCoOccurrence") ||
       lineText === t("relationLine.riskEscalation") ||
@@ -458,7 +471,8 @@ export const createRelationExplanationHelpers = ({
       lineText === t("relationLine.attackToolPrerequisite") ||
       lineText === t("relationLine.attackToolCoUsed") ||
       lineText === t("relationLine.attackToolAlternative") ||
-      lineText === t("relationLine.attackToolCapabilityUpgrade")
+      lineText === t("relationLine.attackToolCapabilityUpgrade") ||
+      lineText === t("relationLine.threatActorCoInvolved")
     )
       return 3;
     if (
@@ -557,6 +571,8 @@ export const createRelationExplanationHelpers = ({
       return t(`${prefix}.attackToolAlternative`);
     if (getRelationLineKey(line) === "relationLine.attackToolCapabilityUpgrade")
       return t(`${prefix}.attackToolCapabilityUpgrade`);
+    if (getRelationLineKey(line) === "relationLine.threatActorCoInvolved")
+      return t(`${prefix}.threatActorCoInvolved`);
     if (getRelationLineKey(line) === "relationLine.buildAttackTool")
       return t(`${prefix}.buildAttackTool`);
     if (getRelationLineKey(line) === "relationLine.useAttackTool")
@@ -635,6 +651,8 @@ export const createRelationExplanationHelpers = ({
       return t(`${prefix}.attackToolAlternative`, params);
     if (getRelationLineKey(line) === "relationLine.attackToolCapabilityUpgrade")
       return t(`${prefix}.attackToolCapabilityUpgrade`, params);
+    if (getRelationLineKey(line) === "relationLine.threatActorCoInvolved")
+      return t(`${prefix}.threatActorCoInvolved`, params);
     if (getRelationLineKey(line) === "relationLine.buildAttackTool")
       return t(`${prefix}.buildAttackTool`, params);
     if (getRelationLineKey(line) === "relationLine.useAttackTool")
@@ -689,6 +707,8 @@ export const createRelationExplanationHelpers = ({
     ) {
       return t(`${prefix}.attackToolRelation`);
     }
+    if (getRelationLineKey(line) === "relationLine.threatActorCoInvolved")
+      return t(`${prefix}.threatActorRelation`);
     if (
       getRelationLineKey(line) === "relationLine.buildAttackTool" ||
       getRelationLineKey(line) === "relationLine.useAttackTool"

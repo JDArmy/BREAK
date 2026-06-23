@@ -26,6 +26,33 @@
       "账号接管团伙",
       "账号接管"
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-06-17",
+    "relatedThreatActors": [
+      {
+        "key": "TA0051",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0021",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0043",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0047",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0050",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      }
+    ]
   }
 }

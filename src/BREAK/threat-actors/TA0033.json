@@ -56,6 +56,38 @@
       "东南亚黑产",
       "跨境洗钱网络",
       "跨境电诈网络"
+    ],
+    "relatedThreatActors": [
+      {
+        "key": "TA0014",
+        "relation": "co-involved",
+        "note": "共同直接造成 3 个风险，共同间接支持 6 个风险，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0015",
+        "relation": "co-involved",
+        "note": "共同直接造成 4 个风险，共同间接支持 3 个风险，共同使用 4 个攻击工具。"
+      },
+      {
+        "key": "TA0004",
+        "relation": "co-involved",
+        "note": "共同直接造成 3 个风险，共同间接支持 6 个风险，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0005-001",
+        "relation": "co-involved",
+        "note": "共同直接造成 2 个风险，共同间接支持 6 个风险，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0017",
+        "relation": "co-involved",
+        "note": "共同直接造成 4 个风险，共同间接支持 3 个风险，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0011",
+        "relation": "co-involved",
+        "note": "共同间接支持 6 个风险，共同使用 1 个攻击工具。"
+      }
     ]
   }
 }

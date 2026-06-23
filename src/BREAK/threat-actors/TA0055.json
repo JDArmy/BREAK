@@ -27,6 +27,38 @@
       "支付欺诈团伙",
       "支付欺诈"
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-06-17",
+    "relatedThreatActors": [
+      {
+        "key": "TA0003",
+        "relation": "co-involved",
+        "note": "共同间接支持 1 个风险。"
+      },
+      {
+        "key": "TA0005",
+        "relation": "co-involved",
+        "note": "共同间接支持 1 个风险。"
+      },
+      {
+        "key": "TA0005-002",
+        "relation": "co-involved",
+        "note": "共同间接支持 1 个风险。"
+      },
+      {
+        "key": "TA0007",
+        "relation": "co-involved",
+        "note": "共同间接支持 1 个风险。"
+      },
+      {
+        "key": "TA0011",
+        "relation": "co-involved",
+        "note": "共同间接支持 1 个风险。"
+      },
+      {
+        "key": "TA0015-001",
+        "relation": "co-involved",
+        "note": "共同间接支持 1 个风险。"
+      }
+    ]
   }
 }

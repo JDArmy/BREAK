@@ -26,6 +26,13 @@
       "车联网攻击者",
       "车联网攻击"
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-06-17",
+    "relatedThreatActors": [
+      {
+        "key": "TA0049",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      }
+    ]
   }
 }

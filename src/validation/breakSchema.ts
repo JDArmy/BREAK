@@ -26,6 +26,11 @@ const attackToolRelationSchema = z.object({
   relation: z.enum(["prerequisite", "co-used", "alternative", "capability-upgrade"]),
   note: nonEmptyString.optional(),
 });
+const threatActorRelationSchema = z.object({
+  key: nonEmptyString,
+  relation: z.enum(["co-involved"]),
+  note: nonEmptyString.optional(),
+});
 
 export const referenceSchema = z.object({
   title: nonEmptyString,
@@ -80,6 +85,7 @@ export const threatActorSchema = z.object({
   useAttackTools: idArray,
   directCauseRisks: idArray,
   indirectSupportRisks: idArray,
+  relatedThreatActors: z.array(threatActorRelationSchema).default([]),
   updated: z.string().optional(),
 });
 

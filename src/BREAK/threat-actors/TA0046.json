@@ -41,6 +41,13 @@
       "共识攻击者",
       "P2P网络攻击者"
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-06-16",
+    "relatedThreatActors": [
+      {
+        "key": "TA0045",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险。"
+      }
+    ]
   }
 }

@@ -18,6 +18,8 @@ const props = defineProps<{
 defineEmits(["drawerClose"]);
 
 const { getInnerDrawerWidth } = useDrawerWidth();
+const selectedThreatActor = computed(() => BREAK.threatActors[props.taKey as keyof typeof BREAK.threatActors]);
+const relatedThreatActors = computed(() => selectedThreatActor.value?.relatedThreatActors ?? []);
 
 // 缓存到当前 taKey，避免模板 v-if+v-for 重复全表遍历
 const relatedTerms = computed(() => {
@@ -73,6 +75,20 @@ const termKey = ref("");
     <div class="desc">
       <strong>{{ $t("description") }}:&nbsp;</strong>
       {{ $t(`BREAK.threatActors.${taKey}.description`) }}
+    </div>
+    <div class="desc" v-if="relatedThreatActors.length > 0">
+      <strong>{{ $t("threatActorRelatedThreatActors") }}:&nbsp;</strong>
+      <div class="entity-links">
+        <router-link
+          v-for="relation in relatedThreatActors"
+          :key="`${relation.key}-${relation.relation}`"
+          class="entity-link"
+          :to="{ name: 'threatActors', hash: `#${relation.key}` }"
+        >
+          {{ $t(`threatActorRelationType.${relation.relation}`) }} ·
+          {{ relation.key }}: {{ $t(`BREAK.threatActors.${relation.key}.title`) }}
+        </router-link>
+      </div>
     </div>
     <div class="desc" v-if="relatedTerms.length > 0">
       <strong>{{ $t("terms") }}:&nbsp;</strong>

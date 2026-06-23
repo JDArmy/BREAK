@@ -25,6 +25,13 @@
       "SaaS数据窃取者",
       "SaaS数据窃取"
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-06-17",
+    "relatedThreatActors": [
+      {
+        "key": "TA0057",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      }
+    ]
   }
 }

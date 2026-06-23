@@ -10,6 +10,7 @@ import { getMessageStringArray } from "@/utils/i18nMessage";
 import { useRelatedCases } from "@/composables/useRelatedCases";
 import { useRelatedEntities } from "@/composables/useRelatedEntities";
 import { useRelationGraph } from "@/composables/useRelationGraph";
+import { formatThreatActorRelationNote } from "@/utils/relationNote";
 
 const route = useRoute();
 const { t, locale, messages } = useI18n();
@@ -64,12 +65,16 @@ const threatActorItems = computed(() =>
         ...threatActor.indirectSupportRisks,
         ...threatActor.buildAttackTools,
         ...threatActor.useAttackTools,
+        ...(threatActor.relatedThreatActors ?? []).map((relation) => relation.key),
       ].join(" "),
     };
   })
 );
 
 const selectedThreatActor = computed(() => BREAK.threatActors[selectedThreatActorKey.value]);
+const relatedThreatActorRelations = computed(() => selectedThreatActor.value?.relatedThreatActors ?? []);
+const getThreatActorRelationNote = (relation: NonNullable<typeof relatedThreatActorRelations.value>[number]) =>
+  formatThreatActorRelationNote(relation, locale.value, t);
 const localeMessages = computed(() => messages.value[locale.value] as Record<string, unknown>);
 
 const { relatedCases, ensureCases, cases, loaded, sectionRef: casesSectionRef } = useRelatedCases(
@@ -152,6 +157,23 @@ const { openRelationGraph } = useRelationGraph("threat-actor");
         param-key="atKey"
         anchor="attack-tools"
       />
+      <section v-if="relatedThreatActorRelations.length" class="detail-section">
+        <h3>{{ $t("threatActorRelatedThreatActors") }}</h3>
+        <div class="threat-actor-relation-list">
+          <router-link
+            v-for="relation in relatedThreatActorRelations"
+            :key="`${relation.key}-${relation.relation}`"
+            class="threat-actor-relation-item"
+            :to="{ name: 'threatActors', hash: `#${relation.key}` }"
+          >
+            <span class="threat-actor-relation-type">{{ $t(`threatActorRelationType.${relation.relation}`) }}</span>
+            <span class="threat-actor-relation-title">
+              {{ relation.key }}: {{ $t(`BREAK.threatActors.${relation.key}.title`) }}
+            </span>
+            <span v-if="relation.note" class="threat-actor-relation-note">{{ getThreatActorRelationNote(relation) }}</span>
+          </router-link>
+        </div>
+      </section>
       <EntityLinkSection
         :keys="relatedTermKeys"
         title="terms"
@@ -215,5 +237,79 @@ const { openRelationGraph } = useRelationGraph("threat-actor");
 .text-muted {
   color: var(--break-text-muted);
   font-size: 0.9em;
+}
+
+.threat-actor-relation-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.threat-actor-relation-item {
+  min-width: 0;
+  min-height: 78px;
+  padding: 10px 12px;
+  display: grid;
+  grid-template:
+    "type title" auto
+    "note note" 1fr / auto minmax(0, 1fr);
+  align-items: start;
+  gap: 6px 8px;
+  border: 1px solid var(--break-border);
+  border-radius: 6px;
+  background: var(--break-bg-secondary);
+  color: inherit;
+  text-decoration: none;
+}
+
+.threat-actor-relation-item:hover {
+  border-color: var(--break-primary-color);
+  background: var(--break-bg-hover);
+}
+
+.threat-actor-relation-type {
+  grid-area: type;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: var(--break-primary-color);
+  color: #fff;
+  font-size: 0.72rem;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+.threat-actor-relation-title {
+  grid-area: title;
+  min-width: 0;
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.threat-actor-relation-note {
+  grid-area: note;
+  color: var(--break-text-muted);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+@media (width <= 1280px) {
+  .threat-actor-relation-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (width <= 900px) {
+  .threat-actor-relation-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (width <= 560px) {
+  .threat-actor-relation-list {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

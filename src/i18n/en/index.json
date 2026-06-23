@@ -63,6 +63,10 @@
     "alternative": "Alternative",
     "capability-upgrade": "Upgrade"
   },
+  "threatActorRelatedThreatActors": "Related Threat Actors",
+  "threatActorRelationType": {
+    "co-involved": "Co-involved"
+  },
   "relationNote": {
     "separator": ", ",
     "period": ".",
@@ -71,6 +75,10 @@
     "attackToolSharedRisks": "Shared related risks: {count}",
     "attackToolSharedAvoidances": "Shared avoidances: {count}",
     "attackToolSharedThreatActors": "Shared threat actors: {count}",
+    "threatActorSharedDirectRisks": "Shared directly caused risks: {count}",
+    "threatActorSharedIndirectRisks": "Shared indirectly supported risks: {count}",
+    "threatActorSharedBuildTools": "Shared built attack tools: {count}",
+    "threatActorSharedUseTools": "Shared used attack tools: {count}",
     "riskMutualReference": "Risk \"{fromTitle}\" and risk \"{toTitle}\" reference each other in their definitions or descriptions.",
     "riskSiblingVariant": "Risk \"{fromTitle}\" and risk \"{toTitle}\" are sibling variants under the same parent risk.",
     "riskParentVariant": "Risk \"{toTitle}\" is a parent risk of risk \"{fromTitle}\".",
@@ -426,6 +434,7 @@
       "attackToolCoUsed": "The attack-tool entity lists the target tool as commonly co-used.",
       "attackToolAlternative": "The attack-tool entity lists the target tool as an alternative tool.",
       "attackToolCapabilityUpgrade": "The attack-tool entity lists the target tool as a capability upgrade or extension.",
+      "threatActorCoInvolved": "The threat-actor entity lists the target actor as a top related actor by shared risks or tool connections.",
       "buildAttackTool": "The threat-actor entity lists this attack tool as a built capability.",
       "useAttackTool": "The threat-actor entity lists this attack tool as a used capability.",
       "causeRisk": "This relation aggregates direct-cause and indirect-support risk fields.",
@@ -452,6 +461,7 @@
       "attackToolCoUsed": "Attack tool \"{fromTitle}\" and \"{toTitle}\" are often used together in the same attack chain.",
       "attackToolAlternative": "Attack tool \"{toTitle}\" can act as an alternative or peer tool for \"{fromTitle}\".",
       "attackToolCapabilityUpgrade": "Attack tool \"{toTitle}\" extends or upgrades the capability of \"{fromTitle}\".",
+      "threatActorCoInvolved": "Threat actor \"{fromTitle}\" and \"{toTitle}\" share many risk or attack-tool connections, making them adjacent actor-profile clues for review.",
       "buildAttackTool": "Threat actor \"{fromTitle}\" has the capability to build or maintain attack tool \"{toTitle}\".",
       "useAttackTool": "Threat actor \"{fromTitle}\" uses attack tool \"{toTitle}\" in related activity.",
       "causeRisk": "\"{fromTitle}\" reaches \"{toTitle}\" through risk-causation fields; use the source fields to distinguish direct and indirect links.",
@@ -467,6 +477,7 @@
       "riskRelation": "Use this to identify prerequisite, co-occurrence, escalation, or variant relations between risks.",
       "avoidanceRelation": "Use this to identify control combinations, alternatives, prerequisites, and gap coverage.",
       "attackToolRelation": "Use this to identify prerequisite, co-use, alternative, and capability-upgrade relations between attack tools.",
+      "threatActorRelation": "Use this to identify adjacent threat actors with many shared risk or tool connections.",
       "threatActorTool": "Use this to identify actor capabilities and tool usage.",
       "causeRisk": "Check the source fields to distinguish direct and indirect relations.",
       "relatedTerm": "This explains terminology context and is not attack causality.",
@@ -553,6 +564,7 @@
     "attackToolCoUsed": "Co-used Attack Tool",
     "attackToolAlternative": "Alternative Attack Tool",
     "attackToolCapabilityUpgrade": "Upgraded Attack Tool",
+    "threatActorCoInvolved": "Related Threat Actor",
     "buildAttackTool": "Builds Attack Tool",
     "useAttackTool": "Uses Attack Tool",
     "relatedTerm": "Related Term",

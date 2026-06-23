@@ -4,6 +4,7 @@ import {
   buildRelationNoteContext,
   expectedAttackToolRelations,
   expectedAvoidanceRelations,
+  expectedThreatActorRelations,
 } from "./relation-note-utils.mjs";
 
 const root = "src/BREAK";
@@ -52,9 +53,14 @@ for (const source of attackTools) {
   source.entity.relatedAttackTools = expectedAttackToolRelations(source.key, attackTools, context);
 }
 
-for (const { filePath, data } of [...avoidanceFiles, ...attackToolFiles]) {
+for (const source of threatActors) {
+  source.entity.relatedThreatActors = expectedThreatActorRelations(source.key, threatActors, context);
+}
+
+for (const { filePath, data } of [...avoidanceFiles, ...attackToolFiles, ...threatActorFiles]) {
   writeJson(filePath, data);
 }
 
 console.log(`已同步规避手段横向关系: ${avoidances.length}/${avoidances.length}`);
 console.log(`已同步攻击工具横向关系: ${attackTools.length}/${attackTools.length}`);
+console.log(`已同步威胁行为者横向关系: ${threatActors.length}/${threatActors.length}`);

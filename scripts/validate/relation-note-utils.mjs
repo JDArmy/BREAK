@@ -37,6 +37,10 @@ function attackToolActorIndex(threatActors) {
   return index;
 }
 
+function threatActorSet(entity, field) {
+  return new Set(unique(entity[field] || []));
+}
+
 function avoidanceRiskIndex(risks) {
   const index = new Map();
   for (const [riskKey, entity] of entityEntries(risks)) {
@@ -85,6 +89,10 @@ export function isDerivedAttackToolNote(note) {
   return /^共同关联 \d+ 个风险/.test(note || "");
 }
 
+export function isDerivedThreatActorNote(note) {
+  return /^共同(?:直接造成|间接支持|建设|使用) \d+ 个/.test(note || "");
+}
+
 export function expectedAvoidanceRelationNote(sourceKey, targetKey, context) {
   const sourceRisks = context.avoidanceRiskRefs.get(sourceKey) || new Set();
   const targetRisks = context.avoidanceRiskRefs.get(targetKey) || new Set();
@@ -118,9 +126,40 @@ export function expectedAttackToolRelationNote(sourceKey, targetKey, context) {
   return sentence(parts);
 }
 
+export function expectedThreatActorRelationNote(sourceKey, targetKey, context) {
+  const source = context.threatActorsByKey.get(sourceKey);
+  const target = context.threatActorsByKey.get(targetKey);
+  if (!source || !target) return "";
+
+  const directRiskCount = intersectCount(
+    threatActorSet(source, "directCauseRisks"),
+    threatActorSet(target, "directCauseRisks"),
+  );
+  const indirectRiskCount = intersectCount(
+    threatActorSet(source, "indirectSupportRisks"),
+    threatActorSet(target, "indirectSupportRisks"),
+  );
+  const buildToolCount = intersectCount(
+    threatActorSet(source, "buildAttackTools"),
+    threatActorSet(target, "buildAttackTools"),
+  );
+  const useToolCount = intersectCount(
+    threatActorSet(source, "useAttackTools"),
+    threatActorSet(target, "useAttackTools"),
+  );
+
+  const parts = [];
+  if (directRiskCount > 0) parts.push(`共同直接造成 ${directRiskCount} 个风险`);
+  if (indirectRiskCount > 0) parts.push(`共同间接支持 ${indirectRiskCount} 个风险`);
+  if (buildToolCount > 0) parts.push(`共同建设 ${buildToolCount} 个攻击工具`);
+  if (useToolCount > 0) parts.push(`共同使用 ${useToolCount} 个攻击工具`);
+  return sentence(parts);
+}
+
 export function buildRelationNoteContext({ risks, attackTools, threatActors }) {
   return {
     attackToolsByKey: entityMap(attackTools),
+    threatActorsByKey: entityMap(threatActors),
     attackToolActorRefs: attackToolActorIndex(threatActors),
     avoidanceRiskRefs: avoidanceRiskIndex(risks),
     avoidanceAttackToolRefs: avoidanceAttackToolIndex(attackTools),
@@ -183,6 +222,40 @@ export function expectedAttackToolRelations(sourceKey, attackTools, context) {
   }));
 }
 
+export function expectedThreatActorRelations(sourceKey, threatActors, context) {
+  const source = context.threatActorsByKey.get(sourceKey);
+  if (!source) return [];
+  const sourceDirectRisks = threatActorSet(source, "directCauseRisks");
+  const sourceIndirectRisks = threatActorSet(source, "indirectSupportRisks");
+  const sourceBuildTools = threatActorSet(source, "buildAttackTools");
+  const sourceUseTools = threatActorSet(source, "useAttackTools");
+
+  return topRelations(
+    entityEntries(threatActors)
+      .filter(([targetKey]) => targetKey !== sourceKey)
+      .map(([targetKey, target]) => {
+        const directRiskCount = intersectCount(sourceDirectRisks, threatActorSet(target, "directCauseRisks"));
+        const indirectRiskCount = intersectCount(sourceIndirectRisks, threatActorSet(target, "indirectSupportRisks"));
+        const buildToolCount = intersectCount(sourceBuildTools, threatActorSet(target, "buildAttackTools"));
+        const useToolCount = intersectCount(sourceUseTools, threatActorSet(target, "useAttackTools"));
+        return {
+          key: targetKey,
+          riskCount: directRiskCount + indirectRiskCount,
+          attackToolCount: buildToolCount + useToolCount,
+          directRiskCount,
+          indirectRiskCount,
+          buildToolCount,
+          useToolCount,
+          score: directRiskCount + indirectRiskCount + buildToolCount + useToolCount,
+        };
+      }),
+  ).map((target) => ({
+    key: target.key,
+    relation: "co-involved",
+    note: expectedThreatActorRelationNote(sourceKey, target.key, context),
+  }));
+}
+
 function sameRelations(actual, expected) {
   return JSON.stringify(actual || []) === JSON.stringify(expected);
 }
@@ -227,6 +300,24 @@ export function validateDerivedRelationNotes({ risks, avoidances, attackTools, t
     }
   }
 
+  for (const [sourceKey, entity] of entityEntries(threatActors)) {
+    for (const [index, relation] of (entity.relatedThreatActors || []).entries()) {
+      if (!isDerivedThreatActorNote(relation?.note)) continue;
+      const expected = expectedThreatActorRelationNote(sourceKey, relation.key, context);
+      if (relation.note !== expected) {
+        issues.push({
+          entity: "ThreatActor",
+          field: "relatedThreatActors",
+          sourceKey,
+          targetKey: relation.key,
+          index,
+          note: relation.note,
+          expected,
+        });
+      }
+    }
+  }
+
   return issues;
 }
 
@@ -255,6 +346,19 @@ export function validateDerivedRelationTop6({ risks, avoidances, attackTools, th
         field: "relatedAttackTools",
         sourceKey,
         actualCount: entity.relatedAttackTools?.length || 0,
+        expectedCount: expected.length,
+      });
+    }
+  }
+
+  for (const [sourceKey, entity] of entityEntries(threatActors)) {
+    const expected = expectedThreatActorRelations(sourceKey, threatActors, context);
+    if (!sameRelations(entity.relatedThreatActors, expected)) {
+      issues.push({
+        entity: "ThreatActor",
+        field: "relatedThreatActors",
+        sourceKey,
+        actualCount: entity.relatedThreatActors?.length || 0,
         expectedCount: expected.length,
       });
     }

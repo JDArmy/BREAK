@@ -58,6 +58,38 @@
       "VoIP技术员",
       "反检测技术员",
       "盘口技术"
+    ],
+    "relatedThreatActors": [
+      {
+        "key": "TA0042",
+        "relation": "co-involved",
+        "note": "共同直接造成 2 个风险，共同间接支持 6 个风险，共同使用 3 个攻击工具。"
+      },
+      {
+        "key": "TA0015",
+        "relation": "co-involved",
+        "note": "共同直接造成 2 个风险，共同间接支持 4 个风险，共同建设 2 个攻击工具，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0011",
+        "relation": "co-involved",
+        "note": "共同间接支持 7 个风险，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0031",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同间接支持 5 个风险，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0041",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同间接支持 5 个风险，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0014-001",
+        "relation": "co-involved",
+        "note": "共同间接支持 6 个风险，共同使用 1 个攻击工具。"
+      }
     ]
   }
 }

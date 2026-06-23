@@ -27,6 +27,38 @@
       "广告归因作弊团伙",
       "广告归因作弊"
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-06-17",
+    "relatedThreatActors": [
+      {
+        "key": "TA0010",
+        "relation": "co-involved",
+        "note": "共同间接支持 1 个风险，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0001",
+        "relation": "co-involved",
+        "note": "共同间接支持 1 个风险。"
+      },
+      {
+        "key": "TA0006",
+        "relation": "co-involved",
+        "note": "共同间接支持 1 个风险。"
+      },
+      {
+        "key": "TA0006-001",
+        "relation": "co-involved",
+        "note": "共同间接支持 1 个风险。"
+      },
+      {
+        "key": "TA0006-002",
+        "relation": "co-involved",
+        "note": "共同间接支持 1 个风险。"
+      },
+      {
+        "key": "TA0006-003",
+        "relation": "co-involved",
+        "note": "共同间接支持 1 个风险。"
+      }
+    ]
   }
 }

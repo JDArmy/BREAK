@@ -42,6 +42,38 @@
       "竞品差评",
       "差评黑产",
       "控评黑产"
+    ],
+    "relatedThreatActors": [
+      {
+        "key": "TA0037",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同间接支持 7 个风险，共同建设 1 个攻击工具，共同使用 3 个攻击工具。"
+      },
+      {
+        "key": "TA0036",
+        "relation": "co-involved",
+        "note": "共同间接支持 7 个风险，共同使用 3 个攻击工具。"
+      },
+      {
+        "key": "TA0034",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同间接支持 7 个风险，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0023",
+        "relation": "co-involved",
+        "note": "共同间接支持 6 个风险，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0001-001",
+        "relation": "co-involved",
+        "note": "共同间接支持 4 个风险，共同建设 1 个攻击工具，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0001",
+        "relation": "co-involved",
+        "note": "共同间接支持 3 个风险，共同建设 1 个攻击工具，共同使用 2 个攻击工具。"
+      }
     ]
   }
 }

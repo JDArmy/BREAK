@@ -83,6 +83,7 @@ const avoidanceCategoryIds = new Set(Object.keys(avoidanceCategories));
 const riskRelationTypes = new Set(["prerequisite", "co-occurrence", "escalation", "variant"]);
 const avoidanceRelationTypes = new Set(["prerequisite", "complement", "alternative", "mitigates-gap"]);
 const attackToolRelationTypes = new Set(["prerequisite", "co-used", "alternative", "capability-upgrade"]);
+const threatActorRelationTypes = new Set(["co-involved"]);
 
 const issues = [];
 
@@ -204,6 +205,30 @@ for (const record of threatActors) {
   checkRefs(issues, record, "buildAttackTools", attackToolIds, "AttackTool");
   checkRefs(issues, record, "useAttackTools", attackToolIds, "AttackTool");
 
+  const relatedThreatActors = record.entity.relatedThreatActors || [];
+  if (!Array.isArray(relatedThreatActors)) {
+    addIssue(issues, record.file, record.id, "relatedThreatActors 必须是数组");
+  } else {
+    const seen = new Set();
+    for (const [index, relation] of relatedThreatActors.entries()) {
+      const ref = relation?.key;
+      const relationType = relation?.relation;
+      if (!ref || !threatActorIds.has(ref)) {
+        addIssue(issues, record.file, record.id, `relatedThreatActors[${index}].key 引用了不存在的 ThreatActor: ${ref}`);
+      }
+      if (ref === record.id) {
+        addIssue(issues, record.file, record.id, `relatedThreatActors[${index}].key 不能引用自身`);
+      }
+      if (!threatActorRelationTypes.has(relationType)) {
+        addIssue(issues, record.file, record.id, `relatedThreatActors[${index}].relation 非法: ${relationType}`);
+      }
+      const fingerprint = `${ref}:${relationType}`;
+      if (seen.has(fingerprint)) {
+        addIssue(issues, record.file, record.id, `relatedThreatActors 存在重复关系: ${fingerprint}`);
+      }
+      seen.add(fingerprint);
+    }
+  }
 }
 
 for (const record of terms) {

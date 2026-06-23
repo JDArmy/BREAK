@@ -1,6 +1,6 @@
 # BREAK Data Schema
 
-> Generated from `src/validation/breakSchema.ts` for package version `2.21.26`.
+> Generated from `src/validation/breakSchema.ts` for package version `2.21.27`.
 > Last schema doc review: 2026-06-17. Run `npm run schema:docs:write` after schema changes.
 
 This document describes the committed JSON data model used by the BREAK knowledge base. The source of truth is the Zod schema in `src/validation/breakSchema.ts`; `npm run validate:schema-docs` checks this document against that source.
@@ -101,6 +101,7 @@ Parent and child records live in the parent JSON file. For example, `R0001-001` 
 | `useAttackTools` | string | required | 行为者会使用的攻击工具 ID 列表。 Target: AttackTool. |
 | `directCauseRisks` | string | required | 该工具或行为者可直接造成的风险 ID 列表。 Target: Risk. |
 | `indirectSupportRisks` | string | required | 该工具或行为者可间接支撑的风险 ID 列表。 Target: Risk. |
+| `relatedThreatActors` | string[] | optional, defaults to empty array | 相关威胁行为者列表；ThreatActor 中为威胁行为者间关联对象列表，Term 中为威胁行为者 ID 列表。 Target: ThreatActor. |
 | `updated` | string | optional | 最近更新日期，建议使用 YYYY-MM-DD。 |
 
 ### Term
@@ -119,7 +120,7 @@ Parent and child records live in the parent JSON file. For example, `R0001-001` 
 | `relatedRisks` | string | required | 相关风险 ID 列表；Risk 中为风险间关联对象列表。 Target: Risk. |
 | `relatedAvoidances` | string | required | 相关规避手段列表；Avoidance 中为规避手段间关联对象列表。 Target: Avoidance. |
 | `relatedAttackTools` | string | required | 相关攻击工具列表；AttackTool 中为攻击工具间关联对象列表。 Target: AttackTool. |
-| `relatedThreatActors` | string | required | 相关威胁行为者 ID 列表。 Target: ThreatActor. |
+| `relatedThreatActors` | string | required | 相关威胁行为者列表；ThreatActor 中为威胁行为者间关联对象列表，Term 中为威胁行为者 ID 列表。 Target: ThreatActor. |
 | `relatedBusinessScenes` | string | required | 相关业务场景 ID 列表。 Target: BusinessScene. |
 | `references` | Reference[] | optional, defaults to empty array | 参考资料列表。 |
 | `updated` | string | optional | 最近更新日期，建议使用 YYYY-MM-DD。 |
@@ -151,7 +152,7 @@ Parent and child records live in the parent JSON file. For example, `R0001-001` 
 | `incidentTime` | string | optional | 案例发生时间，YYYY 或 YYYY-MM。 |
 | `relatedRisks` | string | required | 相关风险 ID 列表；Risk 中为风险间关联对象列表。 Target: Risk. |
 | `relatedAttackTools` | string | optional, defaults to empty array | 相关攻击工具列表；AttackTool 中为攻击工具间关联对象列表。 Target: AttackTool. |
-| `relatedThreatActors` | string | optional, defaults to empty array | 相关威胁行为者 ID 列表。 Target: ThreatActor. |
+| `relatedThreatActors` | string | optional, defaults to empty array | 相关威胁行为者列表；ThreatActor 中为威胁行为者间关联对象列表，Term 中为威胁行为者 ID 列表。 Target: ThreatActor. |
 | `references` | Reference[] | optional, defaults to empty array | 参考资料列表。 |
 | `updated` | string | optional | 最近更新日期，建议使用 YYYY-MM-DD。 |
 
@@ -170,6 +171,7 @@ Parent and child records live in the parent JSON file. For example, `R0001-001` 
 | `ThreatActor.useAttackTools` | ThreatActor -> AttackTool | Tools the actor uses. |
 | `ThreatActor.directCauseRisks` | ThreatActor -> Risk | Risks directly caused by the actor. |
 | `ThreatActor.indirectSupportRisks` | ThreatActor -> Risk | Risks indirectly supported by the actor. |
+| `ThreatActor.relatedThreatActors` | ThreatActor -> ThreatActor | Derived top related actors by shared risks and shared attack tools. |
 | `Term.related*` | Term -> Entity | Conceptual references used for navigation and search. |
 | `BusinessScene.riskScenes.*.risks` | BusinessScene -> Risk | Risks grouped under a scene-specific risk scene. |
 

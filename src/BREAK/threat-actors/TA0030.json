@@ -70,6 +70,38 @@
       "商业窃密",
       "竞对窃密",
       "内鬼窃密"
+    ],
+    "relatedThreatActors": [
+      {
+        "key": "TA0024",
+        "relation": "co-involved",
+        "note": "共同直接造成 9 个风险，共同间接支持 1 个风险，共同建设 2 个攻击工具，共同使用 8 个攻击工具。"
+      },
+      {
+        "key": "TA0018",
+        "relation": "co-involved",
+        "note": "共同直接造成 5 个风险，共同间接支持 3 个风险，共同使用 11 个攻击工具。"
+      },
+      {
+        "key": "TA0022",
+        "relation": "co-involved",
+        "note": "共同直接造成 9 个风险，共同间接支持 3 个风险，共同使用 5 个攻击工具。"
+      },
+      {
+        "key": "TA0021",
+        "relation": "co-involved",
+        "note": "共同直接造成 9 个风险。"
+      },
+      {
+        "key": "TA0011",
+        "relation": "co-involved",
+        "note": "共同间接支持 7 个风险，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0015",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同间接支持 3 个风险，共同使用 5 个攻击工具。"
+      }
     ]
   }
 }

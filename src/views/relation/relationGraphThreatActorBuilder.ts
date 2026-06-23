@@ -7,6 +7,10 @@ import {
 } from "@/views/relation/relationGraphBuilderShared";
 import { addRelatedTerms } from "@/views/relation/relationGraphTermBuilder";
 
+const threatActorRelationLineKeyMap = {
+  "co-involved": "relationLine.threatActorCoInvolved",
+} as const;
+
 export const createThreatActorRelationBuilder = (context: RelationGraphBuilderContext) => {
   const addRisk = (threatActorKey: string) => {
     const threatActor = BREAK.threatActors[threatActorKey];
@@ -66,6 +70,16 @@ export const createThreatActorRelationBuilder = (context: RelationGraphBuilderCo
     });
   };
 
+  const addRelatedThreatActor = (threatActorKey: string) => {
+    const relatedThreatActors =
+      BREAK.threatActors[threatActorKey as keyof typeof BREAK.threatActors].relatedThreatActors ?? [];
+    relatedThreatActors.forEach(({ key, relation }) => {
+      if (!(key in BREAK.threatActors)) return;
+      addRelationNode(context, RelationType.threatActor, key);
+      addRelationLine(context, threatActorKey, threatActorRelationLineKeyMap[relation], key);
+    });
+  };
+
   const addTerm = (threatActorKey: string) => {
     addRelatedTerms(context, RelationType.threatActor, threatActorKey);
   };
@@ -73,6 +87,7 @@ export const createThreatActorRelationBuilder = (context: RelationGraphBuilderCo
   return {
     addAttackTool,
     addAttackToolRiskRelation,
+    addRelatedThreatActor,
     addRisk,
     addSubthreatActor,
     addTerm,

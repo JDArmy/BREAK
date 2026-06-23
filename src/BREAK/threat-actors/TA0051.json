@@ -28,6 +28,38 @@
       "API滥用者",
       "API滥用"
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-06-17",
+    "relatedThreatActors": [
+      {
+        "key": "TA0059",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0006-002",
+        "relation": "co-involved",
+        "note": "共同间接支持 1 个风险。"
+      },
+      {
+        "key": "TA0009",
+        "relation": "co-involved",
+        "note": "共同间接支持 1 个风险。"
+      },
+      {
+        "key": "TA0011",
+        "relation": "co-involved",
+        "note": "共同间接支持 1 个风险。"
+      },
+      {
+        "key": "TA0012",
+        "relation": "co-involved",
+        "note": "共同间接支持 1 个风险。"
+      },
+      {
+        "key": "TA0013",
+        "relation": "co-involved",
+        "note": "共同间接支持 1 个风险。"
+      }
+    ]
   }
 }

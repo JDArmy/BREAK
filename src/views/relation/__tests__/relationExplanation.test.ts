@@ -101,6 +101,7 @@ describe("relationExplanation", () => {
       "relationLine.attackToolCoUsed",
       "relationLine.attackToolAlternative",
       "relationLine.attackToolCapabilityUpgrade",
+      "relationLine.threatActorCoInvolved",
       "relationLine.buildAttackTool",
       "relationLine.useAttackTool",
       "relationLine.causeRisk",

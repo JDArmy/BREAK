@@ -64,6 +64,38 @@
       "电话卡商",
       "手机号贩子",
       "接码卡商"
+    ],
+    "relatedThreatActors": [
+      {
+        "key": "TA0011",
+        "relation": "co-involved",
+        "note": "共同间接支持 15 个风险，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0004",
+        "relation": "co-involved",
+        "note": "共同间接支持 12 个风险，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0017",
+        "relation": "co-involved",
+        "note": "共同直接造成 3 个风险，共同间接支持 7 个风险，共同建设 1 个攻击工具，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0002",
+        "relation": "co-involved",
+        "note": "共同直接造成 3 个风险，共同间接支持 8 个风险，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0020",
+        "relation": "co-involved",
+        "note": "共同间接支持 11 个风险，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0007",
+        "relation": "co-involved",
+        "note": "共同直接造成 4 个风险，共同间接支持 6 个风险，共同使用 1 个攻击工具。"
+      }
     ]
   }
 }

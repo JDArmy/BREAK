@@ -48,6 +48,38 @@
       "加密钱包诈骗",
       "虚拟资产盗窃"
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-06-16",
+    "relatedThreatActors": [
+      {
+        "key": "TA0050",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0017",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0018",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0021",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0033",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0038",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      }
+    ]
   }
 }

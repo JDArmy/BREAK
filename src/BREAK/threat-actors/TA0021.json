@@ -39,6 +39,38 @@
       "钓鱼受害员工",
       "社工受害员工",
       "安全薄弱员工"
+    ],
+    "relatedThreatActors": [
+      {
+        "key": "TA0030",
+        "relation": "co-involved",
+        "note": "共同直接造成 9 个风险。"
+      },
+      {
+        "key": "TA0018",
+        "relation": "co-involved",
+        "note": "共同直接造成 7 个风险。"
+      },
+      {
+        "key": "TA0022",
+        "relation": "co-involved",
+        "note": "共同直接造成 6 个风险。"
+      },
+      {
+        "key": "TA0024",
+        "relation": "co-involved",
+        "note": "共同直接造成 6 个风险。"
+      },
+      {
+        "key": "TA0023",
+        "relation": "co-involved",
+        "note": "共同直接造成 4 个风险，共同间接支持 1 个风险。"
+      },
+      {
+        "key": "TA0015",
+        "relation": "co-involved",
+        "note": "共同直接造成 3 个风险。"
+      }
     ]
   }
 }
