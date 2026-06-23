@@ -7,12 +7,14 @@ const packageJson = readJson(path.join(projectRoot, 'package.json'));
 const packageDir = path.join(projectRoot, 'dist/break-data-package');
 const packagePackagePath = path.join(packageDir, 'package.json');
 const packageDataPath = path.join(packageDir, 'data/break-data.json');
+const packageDataEnPath = path.join(packageDir, 'data/break-data-en.json');
 const packageManifestPath = path.join(packageDir, 'data/break-manifest.json');
 const packageQualityReportPath = path.join(packageDir, 'data/quality-report.json');
 const packageRuntimePath = path.join(packageDir, 'index.js');
 const packageTypesPath = path.join(packageDir, 'index.d.ts');
 const packageReadmePath = path.join(packageDir, 'README.md');
 const publicDataPath = path.join(projectRoot, 'public/data/break-data.json');
+const publicDataEnPath = path.join(projectRoot, 'public/data/break-data-en.json');
 const publicManifestPath = path.join(projectRoot, 'public/data/break-manifest.json');
 const publicQualityReportPath = path.join(projectRoot, 'public/data/quality-report.json');
 
@@ -39,9 +41,11 @@ function expectIncludes(issues, label, text, expected) {
 const issues = [];
 const packageMeta = fs.existsSync(packagePackagePath) ? readJson(packagePackagePath) : null;
 const packageDataText = readText(packageDataPath, issues);
+const packageDataEnText = readText(packageDataEnPath, issues);
 const packageManifestText = readText(packageManifestPath, issues);
 const packageQualityReportText = readText(packageQualityReportPath, issues);
 const publicDataText = readText(publicDataPath, issues);
+const publicDataEnText = readText(publicDataEnPath, issues);
 const publicManifestText = readText(publicManifestPath, issues);
 const publicQualityReportText = readText(publicQualityReportPath, issues);
 const runtimeText = readText(packageRuntimePath, issues);
@@ -60,6 +64,7 @@ if (!packageMeta) {
   expectEqual(issues, 'package sideEffects', packageMeta.sideEffects, false);
   for (const file of [
     'data/break-data.json',
+    'data/break-data-en.json',
     'data/break-manifest.json',
     'data/quality-report.json',
     'index.js',
@@ -72,10 +77,14 @@ if (!packageMeta) {
   }
   expectEqual(issues, 'package root export default', packageMeta.exports?.['.']?.default, './index.js');
   expectEqual(issues, 'package root export types', packageMeta.exports?.['.']?.types, './index.d.ts');
+  expectEqual(issues, 'package break-data-en export', packageMeta.exports?.['./data/break-data-en.json'], './data/break-data-en.json');
 }
 
 if (packageDataText && publicDataText) {
   expectEqual(issues, 'package data 与 public data 不一致', packageDataText, publicDataText);
+}
+if (packageDataEnText && publicDataEnText) {
+  expectEqual(issues, 'package data-en 与 public data-en 不一致', packageDataEnText, publicDataEnText);
 }
 if (packageManifestText && publicManifestText) {
   expectEqual(issues, 'package manifest 与 public manifest 不一致', packageManifestText, publicManifestText);
@@ -110,11 +119,13 @@ for (const { pkgFile, pubFile } of interopFiles) {
   }
 }
 
-if (packageDataText && packageManifestText && packageQualityReportText) {
+if (packageDataText && packageDataEnText && packageManifestText && packageQualityReportText) {
   const manifest = JSON.parse(packageManifestText);
   const sha256 = crypto.createHash('sha256').update(packageDataText).digest('hex');
+  const dataEnSha256 = crypto.createHash('sha256').update(packageDataEnText).digest('hex');
   const qualityReportSha256 = crypto.createHash('sha256').update(packageQualityReportText).digest('hex');
   expectEqual(issues, 'manifest data sha256', manifest.files?.data?.sha256, sha256);
+  expectEqual(issues, 'manifest dataEn sha256', manifest.files?.dataEn?.sha256, dataEnSha256);
   expectEqual(issues, 'manifest qualityReport sha256', manifest.files?.qualityReport?.sha256, qualityReportSha256);
   expectEqual(issues, 'manifest packageVersion', manifest.packageVersion, packageJson.version);
 }
@@ -134,11 +145,11 @@ for (const expectedType of [
   expectIncludes(issues, 'index.d.ts', typeText, expectedType);
 }
 
-for (const expectedText of ['breakData', 'breakManifest', 'breakQualityReport', "with { type: 'json' }"]) {
+for (const expectedText of ['breakData', 'breakDataEn', 'breakManifest', 'breakQualityReport', "with { type: 'json' }"]) {
   expectIncludes(issues, 'index.js', runtimeText, expectedText);
 }
 
-for (const expectedText of ['Package Boundary', 'Version Strategy', '@jdarmy/break-data', packageJson.version, 'index.js']) {
+for (const expectedText of ['Package Boundary', 'Version Strategy', '@jdarmy/break-data', packageJson.version, 'break-data-en.json', 'index.js']) {
   expectIncludes(issues, 'package README', readmeText, expectedText);
 }
 

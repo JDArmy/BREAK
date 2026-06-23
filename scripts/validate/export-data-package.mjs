@@ -4,12 +4,14 @@ import { ensureDir, projectRoot, readJson, writeJson } from '../search/common.mj
 
 const packageJson = readJson(path.join(projectRoot, 'package.json'));
 const publicDataPath = path.join(projectRoot, 'public/data/break-data.json');
+const publicDataEnPath = path.join(projectRoot, 'public/data/break-data-en.json');
 const publicManifestPath = path.join(projectRoot, 'public/data/break-manifest.json');
 const publicQualityReportPath = path.join(projectRoot, 'public/data/quality-report.json');
 const packageDir = path.join(projectRoot, 'dist/break-data-package');
 const dataPackageName = '@jdarmy/break-data';
 
 const data = readJson(publicDataPath);
+const dataEn = readJson(publicDataEnPath);
 const manifest = readJson(publicManifestPath);
 const qualityReport = readJson(publicQualityReportPath);
 
@@ -138,7 +140,7 @@ export interface BreakDataBundle {
   schemaVersion: 1;
   packageVersion: string;
   generatedAt: string;
-  locale: 'zh-CN';
+  locale: 'zh-CN' | 'en';
   data: BreakDataCollections;
 }
 
@@ -156,6 +158,11 @@ export interface BreakDataManifest {
   files: {
     data: {
       path: 'data/break-data.json';
+      bytes: number;
+      sha256: string;
+    };
+    dataEn?: {
+      path: 'data/break-data-en.json';
       bytes: number;
       sha256: string;
     };
@@ -226,6 +233,7 @@ export interface BreakQualityReport {
 }
 
 export const breakData: BreakDataBundle;
+export const breakDataEn: BreakDataBundle;
 export const breakManifest: BreakDataManifest;
 export const breakQualityReport: BreakQualityReport;
 export default breakData;
@@ -238,10 +246,11 @@ Static BREAK data bundle for consumers that need the knowledge base without the 
 ## Package Boundary
 
 - Data only: no Vue runtime, no ECharts runtime, no browser app code.
-- Locale: zh-CN canonical data bundle.
+- Locale: zh-CN canonical data bundle and en translated data bundle.
 - Schema: follows \`schemaVersion: 1\` from \`break-data.json\`.
 - Files:
   - \`data/break-data.json\`
+  - \`data/break-data-en.json\`
   - \`data/break-manifest.json\`
   - \`data/quality-report.json\`
   - \`data/break-stix-zh.json\` (STIX 2.1 Bundle, zh-CN)
@@ -262,20 +271,23 @@ Static BREAK data bundle for consumers that need the knowledge base without the 
 
 \`\`\`ts
 import type { BreakDataBundle } from '${dataPackageName}';
-import { breakData, breakManifest, breakQualityReport } from '${dataPackageName}';
+import { breakData, breakDataEn, breakManifest, breakQualityReport } from '${dataPackageName}';
 
 const bundle = breakData as BreakDataBundle;
+const enBundle = breakDataEn as BreakDataBundle;
 console.log(Object.keys(bundle.data.risks).length);
+console.log(enBundle.locale);
 console.log(breakManifest.files.data.sha256);
 console.log(breakQualityReport.summary.weakRelations.total);
 \`\`\`
 `;
 
 const runtimeEntry = `import breakData from './data/break-data.json' with { type: 'json' };
+import breakDataEn from './data/break-data-en.json' with { type: 'json' };
 import breakManifest from './data/break-manifest.json' with { type: 'json' };
 import breakQualityReport from './data/quality-report.json' with { type: 'json' };
 
-export { breakData, breakManifest, breakQualityReport };
+export { breakData, breakDataEn, breakManifest, breakQualityReport };
 export default breakData;
 `;
 
@@ -290,6 +302,7 @@ const packageBoundary = {
   main: './index.js',
   files: [
     'data/break-data.json',
+    'data/break-data-en.json',
     'data/break-manifest.json',
     'data/quality-report.json',
     'data/break-stix-zh.json',
@@ -306,6 +319,7 @@ const packageBoundary = {
       default: './index.js',
     },
     './data/break-data.json': './data/break-data.json',
+    './data/break-data-en.json': './data/break-data-en.json',
     './data/break-manifest.json': './data/break-manifest.json',
     './data/quality-report.json': './data/quality-report.json',
     './data/break-stix-zh.json': './data/break-stix-zh.json',
@@ -321,6 +335,7 @@ fs.rmSync(packageDir, { recursive: true, force: true });
 ensureDir(path.join(packageDir, 'data'));
 writeJson(path.join(packageDir, 'package.json'), packageBoundary);
 writeJson(path.join(packageDir, 'data/break-data.json'), data);
+writeJson(path.join(packageDir, 'data/break-data-en.json'), dataEn);
 writeJson(path.join(packageDir, 'data/break-manifest.json'), manifest);
 writeJson(path.join(packageDir, 'data/quality-report.json'), qualityReport);
 

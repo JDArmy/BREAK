@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -85,6 +85,95 @@ jobs:
             echo "changed=" >> "$GITHUB_OUTPUT"
           fi
       - run: npm run build
+
+      - name: Create GitHub Release (on version change)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          TAG="v${VERSION}"
+
+          if gh release view "$TAG" --repo "$GITHUB_REPOSITORY" &>/dev/null; then
+            echo "Release $TAG already exists, skipping."
+            exit 0
+          fi
+
+          echo "Creating release $TAG ..."
+
+          DATA_DIR="dist/break-data-package/data"
+
+          gzip -k "$DATA_DIR/break-stix-zh.json"
+          gzip -k "$DATA_DIR/break-stix-en.json"
+          gzip -k "$DATA_DIR/break-ld-zh.jsonld"
+          gzip -k "$DATA_DIR/break-ld-en.jsonld"
+
+          COUNTS=$(node -e "
+            const m = require('./${DATA_DIR}/break-manifest.json');
+            const c = m.counts;
+            const total = Object.values(c).reduce((s, v) => s + v.total, 0);
+            console.log([
+              '| 实体类型 | 数量 |',
+              '|---------|------|',
+              '| 风险（Risk） | ' + c.risks.total + ' |',
+              '| 规避手段（Avoidance） | ' + c.avoidances.total + ' |',
+              '| 攻击工具（AttackTool） | ' + c.attackTools.total + ' |',
+              '| 威胁行为者（ThreatActor） | ' + c.threatActors.total + ' |',
+              '| 行业术语（Term） | ' + c.terms.total + ' |',
+              '| 典型案例（Case） | ' + c.cases.total + ' |',
+              '| 业务场景（BusinessScene） | ' + c.businessScenes.total + ' |',
+              '| **总计** | **' + total + '** |',
+            ].join('\n'));
+          ")
+
+          CHANGELOG_SECTION=$(sed -n "/^## ${VERSION}\$/,/^## [0-9]/{ /^## [0-9]/!p; }" CHANGELOG.md | sed '/^$/d')
+
+          NOTES_FILE=$(mktemp)
+          {
+            echo "## BREAK ${TAG} — 业务风险枚举与规避知识框架"
+            echo ""
+            echo "框架地址：https://break.jd.army/"
+            echo ""
+            echo "### 数据规模"
+            echo ""
+            echo "${COUNTS}"
+            echo ""
+            echo "### 下载说明"
+            echo ""
+            echo "| 文件 | 格式 | 说明 |"
+            echo "|------|------|------|"
+            echo "| \`break-data.json\` | JSON | BREAK 全量结构化数据（中文），可直接程序消费 |"
+            echo "| \`break-data-en.json\` | JSON | BREAK 全量结构化数据（英文），可直接程序消费 |"
+            echo "| \`break-stix-zh.json.gz\` | STIX 2.1 | 中文 STIX 2.1 标准导出，适配 SIEM/SOAR/CTI 平台 |"
+            echo "| \`break-stix-en.json.gz\` | STIX 2.1 | 英文 STIX 2.1 标准导出 |"
+            echo "| \`break-ld-zh.jsonld.gz\` | JSON-LD | 中文语义网导出，适配知识图谱和 RDF/SPARQL 场景 |"
+            echo "| \`break-ld-en.jsonld.gz\` | JSON-LD | 英文语义网导出 |"
+            echo "| \`break-manifest.json\` | JSON | 数据包 manifest（版本号、SHA-256 哈希、实体计数） |"
+            echo ""
+            echo "> STIX/JSON-LD 的 \`.gz\` 文件下载后用 \`gzip -d\` 解压即可得到原始 JSON。"
+            echo ""
+            echo "### 本版本变化"
+            echo ""
+            echo "${CHANGELOG_SECTION}"
+            echo ""
+            echo "完整变更日志见 [CHANGELOG.md](https://github.com/${GITHUB_REPOSITORY}/blob/main/CHANGELOG.md)"
+          } > "${NOTES_FILE}"
+
+          gh release create "${TAG}" \
+            --repo "${GITHUB_REPOSITORY}" \
+            --title "BREAK ${TAG}" \
+            --notes-file "${NOTES_FILE}" \
+            "${DATA_DIR}/break-data.json" \
+            "${DATA_DIR}/break-data-en.json" \
+            "${DATA_DIR}/break-manifest.json" \
+            "${DATA_DIR}/break-stix-zh.json.gz" \
+            "${DATA_DIR}/break-stix-en.json.gz" \
+            "${DATA_DIR}/break-ld-zh.jsonld.gz" \
+            "${DATA_DIR}/break-ld-en.jsonld.gz"
+
+          rm -f "${NOTES_FILE}"
+          echo "Release ${TAG} created successfully."
+
       - run: npx playwright install --with-deps chromium
         if: steps.browser-audit-changes.outputs.run == 'true'
       - run: npm run test:lighthouse
