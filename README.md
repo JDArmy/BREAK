@@ -24,6 +24,34 @@ The current framework catalogues 350 risk items, 300 avoidance measures, 110 att
 
 **Important note:** Business risks and vulnerabilities are not the same thing. Vulnerabilities are generally caused by coding defects and can be fixed by modifying code to remove the defect. Business risks, however, are largely not caused by coding defects — they are unintended exploitations of normal business logic by attackers. As a result, it is usually impossible to completely eliminate business risks; they can only be reduced to an acceptable level. Instead of direct code fixes, business risks typically require added security capabilities and risk control models to slow attacks, reduce attack ROI, and shrink the attack surface.
 
+### BREAK Skill
+
+The repository also provides a Claude Code / Codex Skill definition for local knowledge-base search:
+
+- `SKILL.md` — Chinese Skill definition
+- `SKILL_en.md` — English Skill definition
+- `scripts/skill/break_search.py` — zero-dependency Python search engine
+- `scripts/skill/export_en_data.mjs` — English static data export
+- `scripts/skill/package_skill.sh` — packaging script for a distributable Skill directory
+
+Use it directly in this repository:
+
+```shell
+npm run export:data
+npm run export:data-en
+python3 scripts/skill/break_search.py "credential stuffing" --lang en
+python3 scripts/skill/break_search.py R0001 --lang en --detail
+python3 scripts/skill/break_search.py "爬虫" --lang zh --type risks,avoidances
+```
+
+Package it as a distributable Skill directory:
+
+```shell
+scripts/skill/package_skill.sh
+```
+
+The default output is `dist/break-skill`. Copy that directory into the target agent's Skill directory. The packaged Skill contains `SKILL.md`, `SKILL_en.md`, `break_search.py`, and the generated Chinese/English data bundles.
+
 ## Collaboration & Contribution
 
 The framework is described in JSON format under the `/src/BREAK` directory:
@@ -53,7 +81,7 @@ Contributors are welcome to collaborate by directly editing the JSON files. Data
 
 ## Development
 
-Requires Node.js 20.19+ or 22.12+.
+Requires Node.js 24.0+.
 
 ```shell
 npm install
@@ -72,6 +100,7 @@ npm run test:coverage
 npm run validate:schema-docs
 npm run schema:docs:write
 npm run export:data
+npm run export:data-en
 npm run export:data-package
 npm run validate:data-export
 npm run validate:data-package
@@ -88,12 +117,13 @@ npm run type-check
 ```
 
 `npm run validate:data` runs JSON Schema validation, i18n key synchronization, relationship coverage auditing, and generated schema documentation checks.
-`npm run build` runs `lint`, `type-check`, `validate:data`, `test`, `test:coverage`, `validate:schema-docs`, `validate:home-counts`, `export:data`, `build-only`, `export:data-package`, `audit:bundle:check`, `validate:data-export`, and `validate:data-package`.
+`npm run build` runs `lint`, `type-check`, `validate:data`, `test`, `test:coverage`, `validate:schema-docs`, `validate:home-counts`, `export:data`, `export:data-en`, `build-only`, `export:data-package`, `audit:bundle:check`, `validate:data-export`, and `validate:data-package`.
 `npm run test:coverage` enforces the core logic coverage baseline for relation analysis, Sankey attack paths, root/path insights, search, safe i18n, and BREAK data utilities.
 `npm run validate:schema-docs` checks [DATA_SCHEMA.md](./DATA_SCHEMA.md) against `src/validation/breakSchema.ts`.
 `npm run schema:docs:write` regenerates [DATA_SCHEMA.md](./DATA_SCHEMA.md) after schema changes.
 `npm run validate:home-counts` checks that the entity counts in `src/BREAK/home.ts` match the actual data; `npm run generate:home-counts` regenerates them (also run automatically via a pre-commit hook).
-`npm run export:data` writes the static data bundle to `public/data/break-data.json`, `public/data/break-manifest.json`, and `public/data/quality-report.json`.
+`npm run export:data` writes the Chinese static data bundle to `public/data/break-data.json`, `public/data/break-manifest.json`, and `public/data/quality-report.json`.
+`npm run export:data-en` writes the English static data bundle to `public/data/break-data-en.json` by merging the Chinese structure source with English translation files.
 `npm run export:data-package` writes an npm package evaluation artifact to `dist/break-data-package`.
 `npm run validate:data-export` checks the public data bundle, manifest hash, entity counts, version, and copied GitHub Pages artifacts.
 `npm run validate:data-package` checks the npm package boundary, runtime entry, type declarations, README, manifest hash, and version alignment.
@@ -106,10 +136,11 @@ npm run type-check
 ### Static Data
 
 - Manifest: <https://break.jd.army/data/break-manifest.json>
-- Data bundle: <https://break.jd.army/data/break-data.json>
+- Chinese data bundle: <https://break.jd.army/data/break-data.json>
+- English data bundle: <https://break.jd.army/data/break-data-en.json>
 - Quality report: <https://break.jd.army/data/quality-report.json>
 
-The static bundle exposes the current Chinese BREAK data with version, generation metadata, counts, byte size, SHA-256 checksum, and quality report for downstream tools.
+The static bundle exposes the current BREAK data with version, generation metadata, counts, byte size, SHA-256 checksum, and quality report for downstream tools. The Chinese bundle remains the canonical structure source; the English bundle keeps the same structure and replaces only translatable text fields.
 
 ### npm Data Package Evaluation
 

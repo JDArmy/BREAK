@@ -94,6 +94,7 @@ jobs:
       - run: npm run validate:schema-docs
       - run: npm run validate:home-counts
       - run: npm run export:data
+      - run: npm run export:data-en
       - run: npm run build-only
       - run: npm run export:data-package
       - run: npm run audit:bundle:check

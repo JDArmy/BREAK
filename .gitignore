@@ -36,9 +36,7 @@ public/data/quality-report.json
 *.tsbuildinfo
 
 stats.html
-资料
 CLAUDE.md
-AGENT.md
 AGENTS.md
 code.command
 TODO.md
@@ -54,6 +52,7 @@ scripts/search/*
 !scripts/skill/*.py
 !scripts/skill/*.sh
 .claude/
+.agents/
 plans/
 
 # 一次性链接可达性扫描报告（403/连接失败记录），属于临时产物，不纳入版本库

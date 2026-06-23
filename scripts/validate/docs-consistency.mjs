@@ -77,6 +77,7 @@ const buildGateScripts = [
   'validate:schema-docs',
   'validate:home-counts',
   'export:data',
+  'export:data-en',
   'export:data-package',
   'build-only',
   'audit:bundle:check',

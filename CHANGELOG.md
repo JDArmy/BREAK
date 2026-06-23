@@ -1,5 +1,12 @@
 # Change log
 
+## 2.22.1
+
+- 更新 README 和 README_CN，补充 BREAK Skill 的位置、直接使用方式、打包方式和英文静态数据说明
+- 从未完成升级计划中移除已完成的 i18n-sync 字段级校验与英文结构字段清理项，重新整理 P1 待办顺序
+- 在 CI 和 Deploy workflow 中补充 `export:data-en`，确保英文静态数据包随校验链路生成
+- 调整 `.gitignore`，忽略本地 `.agents/` 配置目录
+
 ## 2.22.0
 
 - 新增 BREAK 知识库 Claude Code / Codex Skill，支持关键词搜索、ID 精确查询和问答咨询模式

@@ -24,6 +24,34 @@ JDArmy BREAK 是英文 "Business Risk Enumeration & Avoidance Knowledge" 的缩�
 
 **主要注意的是：** 业务风险和漏洞不是一回事情。一般来说漏洞是由于业务编码的缺陷导致的，可以通过修改代码去除缺陷来修复漏洞；而业务风险很大程度上并不是由编码缺陷造成的，只是攻击者对正常业务逻辑的一种非预期的利用。也因此，在大部分情况下，并不能完全消除风险，只能将风险降低到一定的可接受范围。所以并不一定可以通过直接修改代码来修复漏洞，通常业务风险需要外挂安全能力、构造风控模型来减缓攻击、降低攻击ROI或缩小攻击面。
 
+### BREAK Skill
+
+仓库提供 Claude Code / Codex Skill 定义，方便本地检索 BREAK 知识库：
+
+- `SKILL.md`：中文 Skill 定义
+- `SKILL_en.md`：英文 Skill 定义
+- `scripts/skill/break_search.py`：零外部依赖 Python 搜索引擎
+- `scripts/skill/export_en_data.mjs`：英文静态数据导出脚本
+- `scripts/skill/package_skill.sh`：可分发 Skill 目录打包脚本
+
+在仓库内可以直接使用：
+
+```shell
+npm run export:data
+npm run export:data-en
+python3 scripts/skill/break_search.py "credential stuffing" --lang en
+python3 scripts/skill/break_search.py R0001 --lang zh --detail
+python3 scripts/skill/break_search.py "爬虫" --lang zh --type risks,avoidances
+```
+
+也可以打包成可分发的 Skill 目录：
+
+```shell
+scripts/skill/package_skill.sh
+```
+
+默认输出目录是 `dist/break-skill`。将该目录复制到目标 Agent 的 Skill 目录即可使用。打包产物包含 `SKILL.md`、`SKILL_en.md`、`break_search.py` 以及生成后的中英文数据包。
+
 ## 协作 & 贡献
 
 本框架采用JSON格式进行了系统描述，详见`/src/BREAK`文件夹。其中：
@@ -53,7 +81,7 @@ JDArmy BREAK 是英文 "Business Risk Enumeration & Avoidance Knowledge" 的缩�
 
 ## 开发
 
-需要 Node.js 20.19+ 或 22.12+。
+需要 Node.js 24.0+。
 
 ```shell
 npm install
@@ -72,6 +100,7 @@ npm run test:coverage
 npm run validate:schema-docs
 npm run schema:docs:write
 npm run export:data
+npm run export:data-en
 npm run export:data-package
 npm run validate:data-export
 npm run validate:data-package
@@ -88,12 +117,13 @@ npm run type-check
 ```
 
 `npm run validate:data` 会执行 JSON Schema 校验、i18n key 同步检查、关系覆盖审计和生成式 Schema 文档同步检查。
-`npm run build` 会执行 `lint`、`type-check`、`validate:data`、`test`、`test:coverage`、`validate:schema-docs`、`validate:home-counts`、`export:data`、`build-only`、`export:data-package`、`audit:bundle:check`、`validate:data-export` 和 `validate:data-package`。
+`npm run build` 会执行 `lint`、`type-check`、`validate:data`、`test`、`test:coverage`、`validate:schema-docs`、`validate:home-counts`、`export:data`、`export:data-en`、`build-only`、`export:data-package`、`audit:bundle:check`、`validate:data-export` 和 `validate:data-package`。
 `npm run test:coverage` 会对关系分析、Sankey 攻击路径、根节点路径洞察、搜索、安全 i18n 和 BREAK 数据工具执行核心逻辑覆盖率门禁。
 `npm run validate:schema-docs` 会检查 [DATA_SCHEMA.md](./DATA_SCHEMA.md) 是否与 `src/validation/breakSchema.ts` 同步。
 `npm run schema:docs:write` 会在 Schema 变更后重新生成 [DATA_SCHEMA.md](./DATA_SCHEMA.md)。
 `npm run validate:home-counts` 会检查 `src/BREAK/home.ts` 的实体计数是否与实际数据一致；`npm run generate:home-counts` 重新生成计数（也通过 pre-commit hook 自动执行）。
-`npm run export:data` 会生成 `public/data/break-data.json`、`public/data/break-manifest.json` 和 `public/data/quality-report.json` 静态数据包。
+`npm run export:data` 会生成中文静态数据包 `public/data/break-data.json`、`public/data/break-manifest.json` 和 `public/data/quality-report.json`。
+`npm run export:data-en` 会合并中文结构源与英文翻译文件，生成英文静态数据包 `public/data/break-data-en.json`。
 `npm run export:data-package` 会生成 `dist/break-data-package` npm 数据包评估产物。
 `npm run validate:data-export` 会检查公共数据包、manifest hash、实体计数、版本号和 GitHub Pages 产物同步状态。
 `npm run validate:data-package` 会检查 npm 包边界、运行时入口、类型声明、README、manifest hash 和版本一致性。
@@ -106,10 +136,11 @@ npm run type-check
 ### 静态数据
 
 - Manifest：<https://break.jd.army/data/break-manifest.json>
-- 数据包：<https://break.jd.army/data/break-data.json>
+- 中文数据包：<https://break.jd.army/data/break-data.json>
+- 英文数据包：<https://break.jd.army/data/break-data-en.json>
 - 质量报告：<https://break.jd.army/data/quality-report.json>
 
-静态数据包提供当前中文 BREAK 数据，并包含版本、生成信息、实体计数、字节数、SHA-256 校验值和质量报告，便于外部工具直接消费。
+静态数据包提供当前 BREAK 数据，并包含版本、生成信息、实体计数、字节数、SHA-256 校验值和质量报告，便于外部工具直接消费。中文数据包是权威结构源；英文数据包保持相同结构，只替换可翻译文本字段。
 
 ### npm 数据包评估
 
