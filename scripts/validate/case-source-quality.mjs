@@ -43,6 +43,7 @@ const primaryDomainSuffixes = [
   'nist.gov',
   'nvd.nist.gov',
   'justice.gov',
+  'europol.europa.eu',
   'fbi.gov',
   'sec.gov',
   'cve.org',
@@ -86,7 +87,12 @@ const primaryDomainSuffixes = [
   'fraudblocker.com',
   'indusface.com',
   'securityscorecard.com',
+  'jfrog.com',
   'cyfrin.io',
+  'autoriteitpersoonsgegevens.nl',
+  'dataprotection.ie',
+  'capitalone.com',
+  'ankr.com',
   'qianxin.com',
   'forcepoint.com',
   'flare.io',
@@ -142,6 +148,12 @@ const secondaryDomainSuffixes = [
 ];
 
 const mirrorDomainSuffixes = ['mp.weixin.qq.com', 'm.gmw.cn', 'toutiao.com', 'web.toutiao.com'];
+const primaryReferenceLinks = new Set([
+  'https://m.thepaper.cn/newsdetail_forward_20536442', // 上海市第二中级人民法院官方澎湃号
+  'https://mp.weixin.qq.com/s/zm3kcgvf3bselnsmgdcglq', // 扬州经济技术开发区人民检察院官网要闻列表指向的官方微信原文
+  'https://mp.weixin.qq.com/s?__biz=mzawntgwnjy0nq==&mid=2909647260&idx=1&sn=724da208d4480ad7ac2e411282b0556f', // 樊城发布政务微信
+  'https://mp.weixin.qq.com/s?__biz=mzg4nta2mdu0oq==&mid=2247530131&idx=1&sn=69682338439f50044b36db5956286c8b', // 成都市市场监管政务微信
+]);
 const primaryWechatBizIds = [
   'MjM5MjMyNTA0MQ==', // 公安部网安局
 ];
@@ -166,6 +178,10 @@ function classifySource(ref) {
 
   if (weakDomains.some((item) => domain === item || domain.endsWith(`.${item}`))) {
     return { sourceType: 'weak', reason: 'weak_or_user_generated_domain' };
+  }
+
+  if (primaryReferenceLinks.has(link.toLowerCase())) {
+    return { sourceType: 'primary', reason: 'official_account_reference' };
   }
 
   if (matchesDomain(domain, primaryDomainSuffixes)) {
