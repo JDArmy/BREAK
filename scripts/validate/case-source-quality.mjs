@@ -110,6 +110,10 @@ const primaryDomainSuffixes = [
   'endorlabs.com',
   'nsfocusglobal.com',
   'notepad-plus-plus.org',
+  'unit42.paloaltonetworks.com',
+  'eclypsium.com',
+  'trufflesecurity.com',
+  'docs.litellm.ai',
   'autoriteitpersoonsgegevens.nl',
   'dataprotection.ie',
   'capitalone.com',
@@ -177,6 +181,7 @@ const primaryReferenceLinks = new Set([
   'https://mp.weixin.qq.com/s/mkzzqogpgzb9dtgenlu6ja', // 公安部网安局官方微信
   'https://mp.weixin.qq.com/s/blui1fvmlxx8-zzzvaqnjq', // 警民直通车浦东官方微信
   'https://medium.com/osmosis-community-updates/osmosis-updates-from-the-lab-recap-osmocon-and-exploit-fix-june-15-2022-fc22355e4b0d', // Osmosis 官方社区更新
+  'https://medium.com/paritytech/a-postmortem-on-the-parity-multi-sig-library-self-destruct-63daca3a4cf7', // Parity 官方事后分析
 ]);
 const primaryWechatBizIds = [
   'MjM5MjMyNTA0MQ==', // 公安部网安局

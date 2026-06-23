@@ -1,5 +1,11 @@
 # Change log
 
+## 2.23.30
+
+- 集中合并国外官方与原始研究补源结果，为 `C1269`、`C1298`、`C1300`、`C1366`、`C1454`、`C1473`、`C1484`、`C1519`、`C1675`、`C1676` 追加 HackerOne、Truffle Security、Unit 42、FBI、Parity、Eclypsium、Koi Security、LiteLLM 官方、GitHub Advisory 等 primary source，并同步英文引用标题
+- 扩充案例来源质量审计的 primary 识别，纳入 Unit 42、Eclypsium、Truffle Security、LiteLLM 官方文档，并对白名单方式识别 Parity 官方 Medium 事后分析
+- 高价值案例 primary 覆盖提升到 371，primary 覆盖率提升到 38.23%，高价值 primary 覆盖率提升到 34.38%
+
 ## 2.23.29
 
 - 一次性复核并补充高价值安全事件 primary source，为 `C0294`、`C0782`、`C0795`、`C0803`、`C0806`、`C0811`、`C0812` 追加 Osmosis 官方社区、NSFOCUS、Notepad++ 官方公告、Endor Labs、Sonatype、Checkmarx、CERT-EU 等官方或原始研究来源，并同步英文引用标题

@@ -17,6 +17,9 @@
     "references": [
       {
         "title": "Bug Bounty Experience: How I Bypassed Uber's Single Sign-On Authentication via Subdomain Takeover"
+      },
+      {
+        "title": "Authentication Bypass on auth.uber.com via Subdomain Takeover of saostatic.uber.com"
       }
     ]
   }
