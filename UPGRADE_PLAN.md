@@ -103,7 +103,7 @@
 未完成工作：
 - 已完成：增强 `scripts/validate/i18n-sync.mjs --strict`，校验英文文件不包含结构字段、ID 数组、references link、updated、关系字段等。
 - 已完成：扫描并清理现有英文 i18n 中的多余结构字段。
-- 收敛 `mergeWithStructure` 双实现，降低 TS/JS 逻辑漂移风险。
+- 已完成：收敛 `mergeWithStructure` 双实现，降低 TS/JS 逻辑漂移风险。
 - 已完成：更新 `DATA_SCHEMA.md`，使“英文 key 结构同步”和“英文不含结构字段”的规则与脚本一致。
 
 落点：`scripts/validate/i18n-sync.mjs`、`src/i18n/en/BREAK/**/*.json`、`src/i18n/index.ts`、`DATA_SCHEMA.md`。

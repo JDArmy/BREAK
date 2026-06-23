@@ -8,6 +8,8 @@
 - 新增 `scripts/skill/export_en_data.mjs` 英文数据预构建脚本，生成 `public/data/break-data-en.json`
 - 新增 `scripts/skill/package_skill.sh` 一键打包脚本，输出可分发的 Skill 目录
 - 构建链集成 `export:data-en`，确保每次构建同步生成英文数据包
+- 抽出 `src/utils/mergeWithStructure.mjs`，让前端 i18n 与英文数据导出共用同一套结构合并规则
+- 英文 i18n 质量脚本改为直接校验翻译层字段，避免复制合并逻辑造成规则漂移
 
 ## 2.21.28
 

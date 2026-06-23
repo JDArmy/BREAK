@@ -47,7 +47,6 @@ const categories = [
   },
 ];
 
-const replaceArrayTranslationKeys = new Set(["keywords", "aliases"]);
 const generatedKeywordSuffixes = [
   "control",
   "controls",
@@ -63,53 +62,6 @@ const generatedKeywordSuffixes = [
 
 function loadJson(file) {
   return JSON.parse(readFileSync(file, "utf8"));
-}
-
-function mergeWithStructure(structure, translations, key) {
-  if (replaceArrayTranslationKeys.has(key ?? "") && Array.isArray(structure)) {
-    return Array.isArray(translations) ? translations : [];
-  }
-  if (translations === undefined || translations === null) return structure;
-  if (structure === undefined || structure === null) return translations;
-  if (typeof structure !== "object") return translations;
-  if (typeof translations !== "object") return translations;
-
-  if (Array.isArray(structure)) {
-    if (!Array.isArray(translations)) return structure;
-    return structure.map((item, index) =>
-      index < translations.length ? mergeWithStructure(item, translations[index], key) : item
-    );
-  }
-  if (Array.isArray(translations)) return translations;
-
-  const result = { ...structure };
-  for (const arrayKey of replaceArrayTranslationKeys) {
-    if (Array.isArray(structure[arrayKey]) && !(arrayKey in translations)) {
-      result[arrayKey] = [];
-    }
-  }
-  for (const [key, translatedValue] of Object.entries(translations)) {
-    const structureValue = structure[key];
-    if (Array.isArray(translatedValue) && Array.isArray(structureValue)) {
-      result[key] = replaceArrayTranslationKeys.has(key)
-        ? translatedValue
-        : structureValue.map((item, index) =>
-            index < translatedValue.length ? mergeWithStructure(item, translatedValue[index], key) : item
-          );
-    } else if (
-      typeof translatedValue === "object" &&
-      translatedValue !== null &&
-      !Array.isArray(translatedValue) &&
-      typeof structureValue === "object" &&
-      structureValue !== null &&
-      !Array.isArray(structureValue)
-    ) {
-      result[key] = mergeWithStructure(structureValue, translatedValue, key);
-    } else {
-      result[key] = translatedValue;
-    }
-  }
-  return result;
 }
 
 function hasChineseText(value) {
@@ -164,15 +116,13 @@ for (const category of categories) {
         continue;
       }
 
-      const merged = mergeWithStructure(zhEntity, enEntity);
-
       for (const field of category.fields) {
         if (zhEntity[field] === undefined) continue;
         if (isMissingEnglishValue(zhEntity[field], enEntity[field])) {
           issues.push(`${category.name}.${id}.${field}: missing English field`);
           continue;
         }
-        if (hasChineseText(merged[field])) {
+        if (hasChineseText(enEntity[field])) {
           issues.push(`${category.name}.${id}.${field}: English display value contains Chinese text`);
         }
       }
@@ -201,13 +151,23 @@ for (const category of categories) {
       }
 
       if (category.checkBusinessSceneNestedTitles) {
-        for (const [key, value] of Object.entries(merged.riskDimensions ?? {})) {
-          if (hasChineseText(value.title)) {
+        for (const [key, value] of Object.entries(zhEntity.riskDimensions ?? {})) {
+          const enValue = enEntity.riskDimensions?.[key];
+          if (isMissingEnglishValue(value.title, enValue?.title)) {
+            issues.push(`${category.name}.${id}.riskDimensions.${key}.title: missing English field`);
+            continue;
+          }
+          if (hasChineseText(enValue.title)) {
             issues.push(`${category.name}.${id}.riskDimensions.${key}.title: English display value contains Chinese text`);
           }
         }
-        for (const [key, value] of Object.entries(merged.riskScenes ?? {})) {
-          if (hasChineseText(value.title)) {
+        for (const [key, value] of Object.entries(zhEntity.riskScenes ?? {})) {
+          const enValue = enEntity.riskScenes?.[key];
+          if (isMissingEnglishValue(value.title, enValue?.title)) {
+            issues.push(`${category.name}.${id}.riskScenes.${key}.title: missing English field`);
+            continue;
+          }
+          if (hasChineseText(enValue.title)) {
             issues.push(`${category.name}.${id}.riskScenes.${key}.title: English display value contains Chinese text`);
           }
         }
