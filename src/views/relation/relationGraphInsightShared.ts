@@ -1,9 +1,8 @@
 import {
-  isRelationEntityType,
-  RelationType,
   getRelationLineKey,
   type Line,
   type Node,
+  type RelationEntityType,
 } from "@/views/relation/relationTypes";
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;
@@ -12,7 +11,7 @@ export interface RelationGraphInsightBaseOptions {
   t: Translate;
   nodes: Node[];
   lines: Line[];
-  getNodeTitle: (type: Exclude<RelationType, RelationType.all>, key: string) => string;
+  getNodeTitle: (type: RelationEntityType, key: string) => string;
   getNodeTypeTitle: (type: string) => string;
   getRelationPriority: (lineText: string) => number;
   isDirectRelationLine: (lineText: string) => boolean;
@@ -46,12 +45,19 @@ export const createRelationGraphInsightHelpers = ({
     const relationLineKey = getRelationLineKey(line);
     return {
       relationKey: `${line.from}::${relationLineKey}::${line.to}`,
-      direction: line.from === nodeId ? t("relationView.outgoing") : t("relationView.incoming"),
+      direction:
+        line.from === nodeId
+          ? t("relationView.outgoing")
+          : t("relationView.incoming"),
       text: line.text,
       relationLineKey,
       priority: getRelationPriority(relationLineKey),
-      directness: isDirectRelationLine(relationLineKey) ? t("relationView.direct") : t("relationView.indirect"),
-      directnessKey: isDirectRelationLine(relationLineKey) ? "direct" : "indirect",
+      directness: isDirectRelationLine(relationLineKey)
+        ? t("relationView.direct")
+        : t("relationView.indirect"),
+      directnessKey: isDirectRelationLine(relationLineKey)
+        ? "direct"
+        : "indirect",
       evidenceLevel: explanation.evidenceLevel,
       evidenceLabel: formatEvidenceLevel(explanation.evidenceLevel),
       explanation: explanation.explanation,
@@ -59,8 +65,9 @@ export const createRelationGraphInsightHelpers = ({
       qualityFlags: explanation.qualityFlags,
       otherNodeId,
       otherNodeType: otherNode ? getNodeTypeTitle(otherNode.type) : "",
-      otherNodeTitle:
-        otherNode && isRelationEntityType(otherNode.type) ? getNodeTitle(otherNode.type, otherNode.id) : "",
+      otherNodeTitle: otherNode
+        ? getNodeTitle(otherNode.type, otherNode.id)
+        : "",
       sourceFields: getRelationSourceFields(line),
     };
   };
@@ -72,7 +79,7 @@ export const createRelationGraphInsightHelpers = ({
       rawType: node?.type ?? "",
       isSubNode: Boolean(node?.data?.isSubNode),
       type: node ? getNodeTypeTitle(node.type) : "",
-      title: node && isRelationEntityType(node.type) ? getNodeTitle(node.type, node.id) : "",
+      title: node ? getNodeTitle(node.type, node.id) : "",
     };
   };
 

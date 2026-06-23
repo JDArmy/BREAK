@@ -16,6 +16,7 @@ import {
   networkLayoutOptions,
   relationLineColors,
   RelationType,
+  type RelationEntityType,
 } from "@/views/relation/relationTypes";
 
 export const useRelationViewModel = () => {
@@ -25,13 +26,13 @@ export const useRelationViewModel = () => {
   const { isDark } = useTheme();
   const { isMobile, width } = useBreakpoints();
 
-  const getRelationTypeColor = (type: Exclude<RelationType, RelationType.all>) => {
+  const getRelationTypeColor = (type: RelationEntityType) => {
     return getColorFromCSS(`--break-relation-${type}`);
   };
 
   const RelationTypeMapping = createRelationTypeMapping(
     (key) => t(key),
-    getRelationTypeColor
+    getRelationTypeColor,
   );
 
   const graphColorVarMap: Record<keyof typeof graphColors, string> = {

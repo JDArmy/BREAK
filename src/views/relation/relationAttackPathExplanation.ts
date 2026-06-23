@@ -3,22 +3,23 @@ import {
   type AttackPath,
   type AttackPathEntitySummary,
   type AttackPathExplanation,
+  type RelationEntityType,
 } from "@/views/relation/relationTypes";
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;
 
-type NodeTitleGetter = (
-  type: Exclude<RelationType, RelationType.all>,
-  key: string
-) => string;
+type NodeTitleGetter = (type: RelationEntityType, key: string) => string;
 
 interface CreateRelationAttackPathExplanationOptions {
   buildPathGroupKey: (path: AttackPath) => string;
   getNodeTitle: NodeTitleGetter;
-  getThreatActorRiskFields: (threatActorKey: string, riskKey: string) => string[];
+  getThreatActorRiskFields: (
+    threatActorKey: string,
+    riskKey: string,
+  ) => string[];
   getThreatActorToolFields: (
     threatActorKey: string,
-    attackToolKey: string
+    attackToolKey: string,
   ) => string[];
   getToolRiskFields: (attackToolKey: string, riskKey: string) => string[];
   t: Translate;
@@ -35,8 +36,8 @@ export const createRelationAttackPathExplanation = ({
   t,
 }: CreateRelationAttackPathExplanationOptions) => {
   const buildEntitySummary = (
-    type: Exclude<RelationType, RelationType.all>,
-    id: string
+    type: RelationEntityType,
+    id: string,
   ): AttackPathEntitySummary => ({
     id,
     title: getNodeTitle(type, id),
@@ -45,7 +46,7 @@ export const createRelationAttackPathExplanation = ({
 
   const explainAttackPath = (
     path: AttackPath,
-    groupedPaths: AttackPath[] = [path]
+    groupedPaths: AttackPath[] = [path],
   ): AttackPathExplanation => {
     const steps: AttackPathExplanation["steps"] = [];
     const qualityFlags: string[] = [];
@@ -53,10 +54,10 @@ export const createRelationAttackPathExplanation = ({
     const threatActorIds = unique(
       groupedPaths
         .map((item) => item.threatActorKey)
-        .filter(Boolean) as string[]
+        .filter(Boolean) as string[],
     );
     const threatActors = threatActorIds.map((id) =>
-      buildEntitySummary(RelationType.threatActor, id)
+      buildEntitySummary(RelationType.threatActor, id),
     );
     const attackTool = path.attackToolKey
       ? buildEntitySummary(RelationType.attackTool, path.attackToolKey)
@@ -69,8 +70,11 @@ export const createRelationAttackPathExplanation = ({
     if (path.threatActorKey && path.attackToolKey) {
       const sourceFields = unique(
         threatActorIds.flatMap((threatActorKey) =>
-          getThreatActorToolFields(threatActorKey, path.attackToolKey as string)
-        )
+          getThreatActorToolFields(
+            threatActorKey,
+            path.attackToolKey as string,
+          ),
+        ),
       );
       steps.push({
         fromId:
@@ -117,7 +121,7 @@ export const createRelationAttackPathExplanation = ({
     } else if (path.threatActorKey) {
       const sourceFields = getThreatActorRiskFields(
         path.threatActorKey,
-        path.riskKey
+        path.riskKey,
       );
       steps.push({
         fromId: path.threatActorKey,
@@ -228,7 +232,7 @@ export const createRelationAttackPathExplanation = ({
     });
 
     return [...groupedPaths.values()].map((items) =>
-      explainAttackPath(items[0], items)
+      explainAttackPath(items[0], items),
     );
   };
 

@@ -1,14 +1,12 @@
 import { describe, expect, it } from "vitest";
 import { createRelationAttackPathExplanation } from "../relationAttackPathExplanation";
-import { RelationType } from "../relationTypes";
+import { RelationType, type RelationEntityType } from "../relationTypes";
 
 describe("relationAttackPathExplanation", () => {
   const t = (key: string, params?: Record<string, unknown>) =>
     params ? `${key}:${JSON.stringify(params)}` : key;
-  const getNodeTitle = (
-    type: Exclude<RelationType, RelationType.all>,
-    key: string
-  ) => `${type}:${key}`;
+  const getNodeTitle = (type: RelationEntityType, key: string) =>
+    `${type}:${key}`;
 
   const createExplanation = () =>
     createRelationAttackPathExplanation({
@@ -73,7 +71,7 @@ describe("relationAttackPathExplanation", () => {
         avoidanceId: "A0001",
         defensiveFocus: ["A0001"],
         qualityFlags: [],
-      })
+      }),
     );
     expect(explanation.evidenceFields).toEqual([
       "ThreatActor.useAttackTools",
@@ -86,7 +84,7 @@ describe("relationAttackPathExplanation", () => {
       expect.objectContaining({
         fromId: 'relationView.groupedThreatActors:{"count":2}',
         relationType: "relationLine.buildAttackTool",
-      })
+      }),
     );
   });
 
@@ -105,7 +103,7 @@ describe("relationAttackPathExplanation", () => {
         attackTool: undefined,
         avoidance: undefined,
         qualityFlags: ["relationView.qualityFlagMissingAvoidance"],
-      })
+      }),
     );
     expect(explanation.steps).toEqual([
       expect.objectContaining({

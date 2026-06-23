@@ -1,5 +1,8 @@
 import BREAK from "@/BREAK";
-import { RelationType } from "@/views/relation/relationTypes";
+import {
+  RelationType,
+  type RelationEntityType,
+} from "@/views/relation/relationTypes";
 import {
   addRelationLine,
   addRelationNode,
@@ -15,7 +18,7 @@ type TermRelationField =
 const termRelationConfig: Record<
   TermRelationField,
   {
-    type: Exclude<RelationType, RelationType.all>;
+    type: RelationEntityType;
     relationKey: string;
   }
 > = {
@@ -38,10 +41,10 @@ const termRelationConfig: Record<
 };
 
 export const getRelatedTermKeys = (
-  targetType: Exclude<RelationType, RelationType.all>,
-  targetKey: string
+  targetType: RelationEntityType,
+  targetKey: string,
 ) => {
-  const fieldByType: Partial<Record<Exclude<RelationType, RelationType.all>, TermRelationField>> = {
+  const fieldByType: Partial<Record<RelationEntityType, TermRelationField>> = {
     [RelationType.risk]: "relatedRisks",
     [RelationType.avoidance]: "relatedAvoidances",
     [RelationType.attackTool]: "relatedAttackTools",
@@ -51,14 +54,16 @@ export const getRelatedTermKeys = (
   if (!field) return [];
 
   return Object.keys(BREAK.terms).filter((termKey) =>
-    BREAK.terms[termKey as keyof typeof BREAK.terms][field].includes(targetKey as never)
+    BREAK.terms[termKey as keyof typeof BREAK.terms][field].includes(
+      targetKey as never,
+    ),
   );
 };
 
 export const addRelatedTerms = (
   context: RelationGraphBuilderContext,
-  targetType: Exclude<RelationType, RelationType.all>,
-  targetKey: string
+  targetType: RelationEntityType,
+  targetKey: string,
 ) => {
   getRelatedTermKeys(targetType, targetKey).forEach((termKey) => {
     addRelationNode(context, RelationType.term, termKey);
@@ -66,17 +71,21 @@ export const addRelatedTerms = (
   });
 };
 
-export const createTermRelationBuilder = (context: RelationGraphBuilderContext) => {
+export const createTermRelationBuilder = (
+  context: RelationGraphBuilderContext,
+) => {
   const addRelatedEntities = (termKey: string) => {
     const term = BREAK.terms[termKey as keyof typeof BREAK.terms];
 
-    (Object.keys(termRelationConfig) as TermRelationField[]).forEach((field) => {
-      const config = termRelationConfig[field];
-      term[field].forEach((entityKey) => {
-        addRelationNode(context, config.type, entityKey);
-        addRelationLine(context, termKey, config.relationKey, entityKey);
-      });
-    });
+    (Object.keys(termRelationConfig) as TermRelationField[]).forEach(
+      (field) => {
+        const config = termRelationConfig[field];
+        term[field].forEach((entityKey) => {
+          addRelationNode(context, config.type, entityKey);
+          addRelationLine(context, termKey, config.relationKey, entityKey);
+        });
+      },
+    );
   };
 
   return {

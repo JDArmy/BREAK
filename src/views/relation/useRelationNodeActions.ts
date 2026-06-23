@@ -17,8 +17,8 @@ import {
   RelationType,
   type Line,
   type Node,
-  isRelationEntityType,
   createRelationTypeMapping,
+  type RelationEntityType,
 } from "@/views/relation/relationTypes";
 
 interface UseRelationNodeActionsOptions {
@@ -32,10 +32,7 @@ interface UseRelationNodeActionsOptions {
   selectedNetworkNode: ComputedRef<Node | null>;
   selectedNetworkNodeId: Ref<string>;
   RelationTypeMapping: ReturnType<typeof createRelationTypeMapping>;
-  ensureRelationNode: (
-    type: Exclude<RelationType, RelationType.all>,
-    key: string
-  ) => Node;
+  ensureRelationNode: (type: RelationEntityType, key: string) => Node;
   findNodeById: (id: string) => Node | undefined;
   buildNodeSummary: (nodeId: string) => NodeSummary;
   isDirectRelationLine: (lineText: string) => boolean;
@@ -44,7 +41,7 @@ interface UseRelationNodeActionsOptions {
     reqType: RelationType,
     currentNodeType: RelationType,
     currentNodeId: string,
-    options?: { render?: boolean }
+    options?: { render?: boolean },
   ) => void;
   renderNetworkChart: (notMerge?: boolean) => void;
 }
@@ -134,10 +131,7 @@ export const useRelationNodeActions = ({
     setContextAvailability(node);
   };
 
-  const prepareNodeActions = (
-    type: Exclude<RelationType, RelationType.all>,
-    id: string
-  ) => {
+  const prepareNodeActions = (type: RelationEntityType, id: string) => {
     const hasCurrentRootRelations = lines.length > 0;
     if (!hasCurrentRootRelations) {
       genNetworkGraphData(RelationType.all, relType.value, relKey.value, {
@@ -153,7 +147,7 @@ export const useRelationNodeActions = ({
   const scrollDrawerToTop = () => {
     nextTick(() => {
       const drawerBody = document.querySelector(
-        ".relation-drawer .el-drawer__body"
+        ".relation-drawer .el-drawer__body",
       );
       if (drawerBody instanceof HTMLElement) {
         drawerBody.scrollTop = 0;
@@ -226,40 +220,38 @@ export const useRelationNodeActions = ({
       () => {
         drawerCopyFeedbackMessage.value = "";
       },
-      result.ok ? 1500 : 2200
+      result.ok ? 1500 : 2200,
     );
     return result;
   };
 
   const openSelectedNodeAsRoot = () => {
     const node = selectedNetworkNode.value;
-    if (!node || !isRelationEntityType(node.type) || node.id === relKey.value)
-      return;
+    if (!node || node.id === relKey.value) return;
     pushRelationNodeRoute(router, node.type, node.id);
   };
 
   const gotoSelectedNodeDetailView = () => {
     const node = selectedNetworkNode.value;
-    if (!node || !isRelationEntityType(node.type)) return;
+    if (!node) return;
     pushDetailNodeRoute(router, node.type, node.id);
   };
 
   const openSelectedNodeDetailInNewWindow = () => {
     const node = selectedNetworkNode.value;
-    if (!node || !isRelationEntityType(node.type)) return;
+    if (!node) return;
     openDetailNodeRouteInNewWindow(router, node.type, node.id);
   };
 
   const openNodeAsRootById = (nodeId: string) => {
     const node = findNodeById(nodeId);
-    if (!node || !isRelationEntityType(node.type) || node.id === relKey.value)
-      return;
+    if (!node || node.id === relKey.value) return;
     pushRelationNodeRoute(router, node.type, node.id);
   };
 
   const gotoNodeDetailViewById = (nodeId: string) => {
     const node = findNodeById(nodeId);
-    if (!node || !isRelationEntityType(node.type)) return;
+    if (!node) return;
     openDetailNodeRouteInNewWindow(router, node.type, node.id);
   };
 

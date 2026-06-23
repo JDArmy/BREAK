@@ -7,6 +7,7 @@ import {
   type Line,
   type NetworkLayoutMode,
   type Node,
+  type RelationEntityType,
 } from "../relationTypes";
 
 const t = (key: string, params?: Record<string, unknown>) =>
@@ -14,8 +15,8 @@ const t = (key: string, params?: Record<string, unknown>) =>
 
 const createNode = (
   id: string,
-  type: Exclude<RelationType, RelationType.all>,
-  data?: Node["data"]
+  type: RelationEntityType,
+  data?: Node["data"],
 ): Node => ({
   id,
   type,
@@ -27,18 +28,27 @@ const createNode = (
 const createHighFanOutFixture = () => {
   const root = createNode("ROOT", RelationType.risk);
   const avoidances = Array.from({ length: 18 }, (_, index) =>
-    createNode(`A${String(index + 1).padStart(2, "0")}`, RelationType.avoidance)
+    createNode(
+      `A${String(index + 1).padStart(2, "0")}`,
+      RelationType.avoidance,
+    ),
   );
   const tools = Array.from({ length: 10 }, (_, index) =>
-    createNode(`AT${String(index + 1).padStart(2, "0")}`, RelationType.attackTool)
+    createNode(
+      `AT${String(index + 1).padStart(2, "0")}`,
+      RelationType.attackTool,
+    ),
   );
   const actors = Array.from({ length: 8 }, (_, index) =>
-    createNode(`TA${String(index + 1).padStart(2, "0")}`, RelationType.threatActor)
+    createNode(
+      `TA${String(index + 1).padStart(2, "0")}`,
+      RelationType.threatActor,
+    ),
   );
   const terms = Array.from({ length: 12 }, (_, index) =>
     createNode(`T${String(index + 1).padStart(2, "0")}`, RelationType.term, {
       isSubNode: index % 2 === 0,
-    })
+    }),
   );
   const nodes = [root, ...avoidances, ...tools, ...actors, ...terms];
   const lines: Line[] = [
@@ -89,7 +99,7 @@ const createNetworkHelpers = (
     filterSubNode?: boolean;
     filterRelatedEntity?: boolean;
     filterLineType?: string[];
-  }
+  },
 ) =>
   createNetworkDataHelpers({
     nodes,
@@ -103,7 +113,7 @@ const createNetworkHelpers = (
         RelationType.attackTool,
         RelationType.threatActor,
         RelationType.term,
-      ]
+      ],
     ),
     filterSubNode: ref(options?.filterSubNode ?? true),
     filterRelatedEntity: ref(options?.filterRelatedEntity ?? true),
@@ -114,15 +124,27 @@ const createNetworkHelpers = (
         "relationLine.indirectSupportRisk",
         "relationLine.useAttackTool",
         "relationLine.relatedTerm",
-      ]
+      ],
     ),
     draggedNodePositions: ref({}),
     networkState: { layout: options?.layout ?? "horizontal" },
     relationLegendItems: ref([
       { key: "relationLine.avoidanceMeans", color: "#0a0", label: "规避手段" },
-      { key: "relationLine.directCauseRisk", color: "#a00", label: "直接导致风险" },
-      { key: "relationLine.indirectSupportRisk", color: "#a50", label: "间接支撑风险" },
-      { key: "relationLine.useAttackTool", color: "#05a", label: "使用攻击工具" },
+      {
+        key: "relationLine.directCauseRisk",
+        color: "#a00",
+        label: "直接导致风险",
+      },
+      {
+        key: "relationLine.indirectSupportRisk",
+        color: "#a50",
+        label: "间接支撑风险",
+      },
+      {
+        key: "relationLine.useAttackTool",
+        color: "#05a",
+        label: "使用攻击工具",
+      },
       { key: "relationLine.relatedTerm", color: "#50a", label: "关联术语" },
     ]),
     isDark: ref(false),
@@ -138,7 +160,10 @@ const createNetworkHelpers = (
       toId: line.to,
       relationType: line.text,
       sourceFields: [`${fromType}->${toType}:${line.relationKey ?? line.text}`],
-      evidenceLevel: line.relationKey === "relationLine.directCauseRisk" ? "direct" : "indirect",
+      evidenceLevel:
+        line.relationKey === "relationLine.directCauseRisk"
+          ? "direct"
+          : "indirect",
       explanation: `explain:${line.relationKey ?? line.text}`,
       impactHint: `impact:${line.relationKey ?? line.text}`,
       qualityFlags: [],
@@ -147,7 +172,11 @@ const createNetworkHelpers = (
     getNodeTypeTitle: (type) => `type:${type}`,
   });
 
-const createInsights = (nodes: Node[], lines: Line[], selectedNetworkNodeId: string) =>
+const createInsights = (
+  nodes: Node[],
+  lines: Line[],
+  selectedNetworkNodeId: string,
+) =>
   createRelationGraphInsights({
     t,
     relKey: ref("ROOT"),
@@ -159,7 +188,9 @@ const createInsights = (nodes: Node[], lines: Line[], selectedNetworkNodeId: str
     getRelationPriority: (lineText) =>
       lineText === "直接导致风险" ? 1 : lineText === "使用攻击工具" ? 2 : 9,
     isDirectRelationLine: (lineText) => lineText === "直接导致风险",
-    getRelationSourceFields: (line) => [`source:${line.relationKey ?? line.text}`],
+    getRelationSourceFields: (line) => [
+      `source:${line.relationKey ?? line.text}`,
+    ],
     explainRelation: (line) => ({
       evidenceLevel: line.text === "直接导致风险" ? "direct" : "indirect",
       explanation: `explain:${line.text}`,
@@ -173,7 +204,10 @@ describe("relation edge fixtures", () => {
   it("keeps an isolated root node renderable and reports low connectivity", () => {
     const nodes = [createNode("ROOT", RelationType.risk)];
     const lines: Line[] = [];
-    const visibleData = createNetworkHelpers(nodes, lines).getVisibleNetworkData();
+    const visibleData = createNetworkHelpers(
+      nodes,
+      lines,
+    ).getVisibleNetworkData();
     const insights = createInsights(nodes, lines, "ROOT");
 
     expect(visibleData.nodes).toEqual([
@@ -193,7 +227,7 @@ describe("relation edge fixtures", () => {
       expect.arrayContaining([
         "relationView.nodeAnalysisNotice.lowConnectivity",
         "relationView.nodeAnalysisNotice.missingAvoidance",
-      ])
+      ]),
     );
   });
 
@@ -213,7 +247,11 @@ describe("relation edge fixtures", () => {
       { ...duplicateLine },
       { ...duplicateLine },
     ]).getVisibleNetworkData();
-    const insights = createInsights(nodes, [duplicateLine, { ...duplicateLine }], "ROOT");
+    const insights = createInsights(
+      nodes,
+      [duplicateLine, { ...duplicateLine }],
+      "ROOT",
+    );
 
     expect(visibleData.links).toHaveLength(1);
     expect(visibleData.links[0]).toEqual(
@@ -222,13 +260,17 @@ describe("relation edge fixtures", () => {
         target: "ROOT",
         sourceFields: ["attack-tool->risk:relationLine.directCauseRisk"],
         evidenceLabel: "evidence:direct",
-      })
+      }),
     );
     expect(insights.selectedNetworkRelationCounts.value).toEqual({
       incoming: 2,
       outgoing: 0,
     });
-    expect(insights.selectedNetworkRelations.value.map((relation) => relation.relationKey)).toEqual([
+    expect(
+      insights.selectedNetworkRelations.value.map(
+        (relation) => relation.relationKey,
+      ),
+    ).toEqual([
       "AT01::relationLine.directCauseRisk::ROOT",
       "AT01::relationLine.directCauseRisk::ROOT",
     ]);
@@ -245,10 +287,16 @@ describe("relation edge fixtures", () => {
       "hierarchical",
       "force",
     ] satisfies NetworkLayoutMode[]) {
-      const visibleData = createNetworkHelpers(nodes, lines, { layout }).getVisibleNetworkData();
+      const visibleData = createNetworkHelpers(nodes, lines, {
+        layout,
+      }).getVisibleNetworkData();
       expect(visibleData.nodes).toHaveLength(nodes.length);
       expect(visibleData.links).toHaveLength(lines.length);
-      expect(visibleData.nodes.every((node) => Number.isFinite(node.x) && Number.isFinite(node.y))).toBe(true);
+      expect(
+        visibleData.nodes.every(
+          (node) => Number.isFinite(node.x) && Number.isFinite(node.y),
+        ),
+      ).toBe(true);
     }
   });
 
@@ -268,32 +316,99 @@ describe("relation edge fixtures", () => {
       createNode("T02", RelationType.term),
     ];
     const lines: Line[] = [
-      { from: "ROOT", relationKey: "relationLine.useAttackTool", text: "使用攻击工具", to: "AT02" },
-      { from: "ROOT", relationKey: "relationLine.useAttackTool", text: "使用攻击工具", to: "AT01" },
-      { from: "ROOT", relationKey: "relationLine.useAttackTool", text: "使用攻击工具", to: "AT03" },
-      { from: "ROOT", relationKey: "relationLine.useAttackTool", text: "使用攻击工具", to: "AT04" },
-      { from: "ROOT", relationKey: "relationLine.useAttackTool", text: "使用攻击工具", to: "AT05" },
-      { from: "AT01", relationKey: "relationLine.directCauseRisk", text: "直接导致风险", to: "R01" },
-      { from: "AT02", relationKey: "relationLine.directCauseRisk", text: "直接导致风险", to: "R02" },
-      { from: "R01", relationKey: "relationLine.avoidanceMeans", text: "规避手段", to: "A01" },
-      { from: "R02", relationKey: "relationLine.avoidanceMeans", text: "规避手段", to: "A02" },
-      { from: "R01", relationKey: "relationLine.relatedTerm", text: "关联术语", to: "T01" },
-      { from: "ROOT", relationKey: "relationLine.indirectSupportRisk", text: "间接支撑风险", to: "R02" },
-      { from: "ROOT", relationKey: "relationLine.relatedTerm", text: "关联术语", to: "T01" },
-      { from: "ROOT", relationKey: "relationLine.relatedTerm", text: "关联术语", to: "T02" },
+      {
+        from: "ROOT",
+        relationKey: "relationLine.useAttackTool",
+        text: "使用攻击工具",
+        to: "AT02",
+      },
+      {
+        from: "ROOT",
+        relationKey: "relationLine.useAttackTool",
+        text: "使用攻击工具",
+        to: "AT01",
+      },
+      {
+        from: "ROOT",
+        relationKey: "relationLine.useAttackTool",
+        text: "使用攻击工具",
+        to: "AT03",
+      },
+      {
+        from: "ROOT",
+        relationKey: "relationLine.useAttackTool",
+        text: "使用攻击工具",
+        to: "AT04",
+      },
+      {
+        from: "ROOT",
+        relationKey: "relationLine.useAttackTool",
+        text: "使用攻击工具",
+        to: "AT05",
+      },
+      {
+        from: "AT01",
+        relationKey: "relationLine.directCauseRisk",
+        text: "直接导致风险",
+        to: "R01",
+      },
+      {
+        from: "AT02",
+        relationKey: "relationLine.directCauseRisk",
+        text: "直接导致风险",
+        to: "R02",
+      },
+      {
+        from: "R01",
+        relationKey: "relationLine.avoidanceMeans",
+        text: "规避手段",
+        to: "A01",
+      },
+      {
+        from: "R02",
+        relationKey: "relationLine.avoidanceMeans",
+        text: "规避手段",
+        to: "A02",
+      },
+      {
+        from: "R01",
+        relationKey: "relationLine.relatedTerm",
+        text: "关联术语",
+        to: "T01",
+      },
+      {
+        from: "ROOT",
+        relationKey: "relationLine.indirectSupportRisk",
+        text: "间接支撑风险",
+        to: "R02",
+      },
+      {
+        from: "ROOT",
+        relationKey: "relationLine.relatedTerm",
+        text: "关联术语",
+        to: "T01",
+      },
+      {
+        from: "ROOT",
+        relationKey: "relationLine.relatedTerm",
+        text: "关联术语",
+        to: "T02",
+      },
     ];
 
     const rootInsights = createInsights(nodes, lines, "ROOT");
     const avoidanceInsights = createInsights(nodes, lines, "A01");
 
     expect(rootInsights.selectedNodeAnalysisSummary.value?.notices).toEqual(
-      expect.arrayContaining(["relationView.nodeAnalysisNotice.highConnectivity"])
+      expect.arrayContaining([
+        "relationView.nodeAnalysisNotice.highConnectivity",
+      ]),
     );
-    expect(avoidanceInsights.selectedNodeRootPath.value?.steps.map((step) => step.targetNode.id)).toEqual([
-      "AT01",
-      "R01",
-      "A01",
-    ]);
+    expect(
+      avoidanceInsights.selectedNodeRootPath.value?.steps.map(
+        (step) => step.targetNode.id,
+      ),
+    ).toEqual(["AT01", "R01", "A01"]);
     expect([...avoidanceInsights.selectedNodePathRelationKeys.value]).toEqual([
       "ROOT::relationLine.useAttackTool::AT01",
       "AT01::relationLine.directCauseRisk::R01",
@@ -302,7 +417,9 @@ describe("relation edge fixtures", () => {
   });
 
   it("keeps computed insights reactive when an edge fixture selection changes", () => {
-    const selectedNode = ref<Node | null>(createNode("ROOT", RelationType.risk));
+    const selectedNode = ref<Node | null>(
+      createNode("ROOT", RelationType.risk),
+    );
     const insights = createRelationGraphInsights({
       t,
       relKey: ref("ROOT"),
@@ -310,7 +427,14 @@ describe("relation edge fixtures", () => {
         createNode("ROOT", RelationType.risk),
         createNode("A01", RelationType.avoidance),
       ],
-      lines: [{ from: "ROOT", relationKey: "relationLine.avoidanceMeans", text: "规避手段", to: "A01" }],
+      lines: [
+        {
+          from: "ROOT",
+          relationKey: "relationLine.avoidanceMeans",
+          text: "规避手段",
+          to: "A01",
+        },
+      ],
       selectedNetworkNodeId: computed(() => selectedNode.value?.id ?? ""),
       getNodeTitle: (type, key) => `${type}:${key}`,
       getNodeTypeTitle: (type) => `type:${type}`,
@@ -329,6 +453,8 @@ describe("relation edge fixtures", () => {
     expect(insights.selectedNetworkNode.value?.id).toBe("ROOT");
     selectedNode.value = createNode("A01", RelationType.avoidance);
     expect(insights.selectedNetworkNode.value?.id).toBe("A01");
-    expect(insights.selectedNodeRootPath.value?.steps.at(-1)?.targetNode.id).toBe("A01");
+    expect(
+      insights.selectedNodeRootPath.value?.steps.at(-1)?.targetNode.id,
+    ).toBe("A01");
   });
 });

@@ -1,14 +1,16 @@
 import { computed, ref } from "vue";
 import { describe, expect, it } from "vitest";
 import { createRelationAttackPathCoverage } from "../relationAttackPathCoverage";
-import { RelationType, type AttackPath } from "../relationTypes";
+import {
+  RelationType,
+  type AttackPath,
+  type RelationEntityType,
+} from "../relationTypes";
 
 describe("relationAttackPathCoverage", () => {
   const t = (key: string) => key;
-  const getNodeTitle = (
-    type: Exclude<RelationType, RelationType.all>,
-    key: string
-  ) => `${type}:${key}`;
+  const getNodeTitle = (type: RelationEntityType, key: string) =>
+    `${type}:${key}`;
 
   it("按风险直接规避、工具规避和重叠来源汇总防御覆盖", () => {
     const paths = ref<AttackPath[]>([
@@ -41,7 +43,7 @@ describe("relationAttackPathCoverage", () => {
         directCount: expect.any(Number),
         attackToolCount: 1,
         overlapCount: expect.any(Number),
-      })
+      }),
     );
     expect(riskAvoidanceCoverage.value?.items).toEqual(
       expect.arrayContaining([
@@ -59,7 +61,7 @@ describe("relationAttackPathCoverage", () => {
           attackToolLabels: ["attack-tool:AT0099 (AT0099)"],
           sourceFields: ["AttackTool.avoidances"],
         }),
-      ])
+      ]),
     );
   });
 

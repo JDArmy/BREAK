@@ -97,18 +97,12 @@
 目标：降低关系页核心逻辑复杂度，并修复潜在响应式刷新问题。
 
 未完成工作：
-- 拆分 `relationAttackPath.ts`，将路径构建、路径解释、Sankey 数据、覆盖汇总、过滤器拆到独立模块。
-- 将 `relationExplanation.ts` 的多处分支收敛为 lineKey 配置表。
-- 将 Node.type、GraphNode.type 等从 string 收紧为 RelationType 联合类型，减少 `as` 断言。
 - 复核并修复 `useSearch` 对 cases 的 watch 刷新问题，补测试覆盖。
 - 将 `useCases` 的 locale watch 调整为模块级单次注册或其他不重复注册的实现。
 
-落点：`src/views/relation/relationAttackPath*.ts`、`src/views/relation/relationExplanation.ts`、`src/views/relation/relationTypes.ts`、`src/composables/useSearch.ts`、`src/composables/useCases.ts`。
+落点：`src/composables/useSearch.ts`、`src/composables/useCases.ts`。
 
 验收：
-- 拆分后单文件职责清晰，核心大文件显著变小。
-- relationExplanation 配置表化。
-- 关键节点类型强类型化。
 - useSearch/useCases 响应式问题有回归测试。
 
 #### P1-2. CI workflow 优化

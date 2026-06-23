@@ -6,7 +6,7 @@ import { RelationType, type Node } from "../relationTypes";
 describe("relationCoverageAnalysis", () => {
   const t = (key: string, params?: Record<string, unknown>) =>
     params ? `${key}:${JSON.stringify(params)}` : key;
-  const getNodeTitle = (type: Exclude<RelationType, RelationType.all>, key: string) =>
+  const getNodeTitle = (type: RelationEntityType, key: string) =>
     `${type}:${key}`;
 
   const node = (id: string, type: RelationType): Node => ({
@@ -28,20 +28,22 @@ describe("relationCoverageAnalysis", () => {
     expect(analysis.selectedNodeCoverageSummary.value).toEqual(
       expect.objectContaining({
         title: expect.stringContaining("risk:R0005-001"),
-        summary: expect.stringContaining("relationView.nodeCoverageSummary.risk"),
+        summary: expect.stringContaining(
+          "relationView.nodeCoverageSummary.risk",
+        ),
         metrics: expect.arrayContaining([
-          expect.objectContaining({ label: "relationView.nodeCoverageMetricDirect" }),
+          expect.objectContaining({
+            label: "relationView.nodeCoverageMetricDirect",
+          }),
         ]),
         items: expect.arrayContaining([
           expect.objectContaining({
             id: expect.any(String),
             type: RelationType.avoidance,
-            sourceFields: expect.arrayContaining([
-              "Risk.avoidances",
-            ]),
+            sourceFields: expect.arrayContaining(["Risk.avoidances"]),
           }),
         ]),
-      })
+      }),
     );
   });
 
@@ -50,7 +52,9 @@ describe("relationCoverageAnalysis", () => {
       t,
       relType: ref(RelationType.attackTool),
       relKey: ref("AT0001"),
-      selectedNetworkNode: computed(() => node("AT0001", RelationType.attackTool)),
+      selectedNetworkNode: computed(() =>
+        node("AT0001", RelationType.attackTool),
+      ),
       getNodeTitle,
     });
 
@@ -65,7 +69,7 @@ describe("relationCoverageAnalysis", () => {
             type: RelationType.avoidance,
           }),
         ]),
-      })
+      }),
     );
   });
 
@@ -74,15 +78,19 @@ describe("relationCoverageAnalysis", () => {
       t,
       relType: ref(RelationType.risk),
       relKey: ref("R0005-001"),
-      selectedNetworkNode: computed(() => node("AT0001", RelationType.attackTool)),
+      selectedNetworkNode: computed(() =>
+        node("AT0001", RelationType.attackTool),
+      ),
       getNodeTitle,
     });
 
     expect(analysis.selectedNodeCoverageSummary.value).toEqual(
       expect.objectContaining({
         title: expect.stringContaining("attack-tool:AT0001"),
-        summary: expect.stringContaining("relationView.nodeCoverageSummary.attackTool"),
-      })
+        summary: expect.stringContaining(
+          "relationView.nodeCoverageSummary.attackTool",
+        ),
+      }),
     );
   });
 
@@ -91,7 +99,9 @@ describe("relationCoverageAnalysis", () => {
       t,
       relType: ref(RelationType.threatActor),
       relKey: ref("TA0017"),
-      selectedNetworkNode: computed(() => node("TA0017", RelationType.threatActor)),
+      selectedNetworkNode: computed(() =>
+        node("TA0017", RelationType.threatActor),
+      ),
       getNodeTitle,
     });
 
@@ -106,7 +116,7 @@ describe("relationCoverageAnalysis", () => {
             type: RelationType.risk,
           }),
         ]),
-      })
+      }),
     );
   });
 });

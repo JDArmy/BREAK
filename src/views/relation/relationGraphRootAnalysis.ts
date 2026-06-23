@@ -1,9 +1,9 @@
 import { computed, type ComputedRef, type Ref } from "vue";
 import {
   getRelationLineKey,
-  isRelationEntityType,
   type Line,
   type Node,
+  type RelationEntityType,
 } from "@/views/relation/relationTypes";
 
 interface CreateRelationGraphRootAnalysisOptions {
@@ -13,12 +13,15 @@ interface CreateRelationGraphRootAnalysisOptions {
   findNodeById: (id: string) => Node | undefined;
   buildNodeSummary: (nodeId: string) => {
     id: string;
-    rawType: string;
+    rawType: RelationEntityType | "";
     isSubNode: boolean;
     type: string;
     title: string;
   };
-  buildRelationSummary: (line: Line, nodeId: string) => {
+  buildRelationSummary: (
+    line: Line,
+    nodeId: string,
+  ) => {
     relationKey: string;
     direction: string;
     text: string;
@@ -56,9 +59,10 @@ export const createRelationGraphRootAnalysis = ({
       adjacency.set(line.to, toEdges);
     });
 
-    const queue: { nodeId: string; steps: { fromId: string; toId: string; line: Line }[] }[] = [
-      { nodeId: relKey.value, steps: [] },
-    ];
+    const queue: {
+      nodeId: string;
+      steps: { fromId: string; toId: string; line: Line }[];
+    }[] = [{ nodeId: relKey.value, steps: [] }];
     const visited = new Set<string>([relKey.value]);
 
     while (queue.length > 0) {
@@ -79,13 +83,20 @@ export const createRelationGraphRootAnalysis = ({
       const neighbors = adjacency.get(current.nodeId) ?? [];
       neighbors
         .slice()
-        .sort((a, b) => getRelationPriority(getRelationLineKey(a.line)) - getRelationPriority(getRelationLineKey(b.line)))
+        .sort(
+          (a, b) =>
+            getRelationPriority(getRelationLineKey(a.line)) -
+            getRelationPriority(getRelationLineKey(b.line)),
+        )
         .forEach(({ nextId, line }) => {
           if (visited.has(nextId)) return;
           visited.add(nextId);
           queue.push({
             nodeId: nextId,
-            steps: [...current.steps, { fromId: current.nodeId, toId: nextId, line }],
+            steps: [
+              ...current.steps,
+              { fromId: current.nodeId, toId: nextId, line },
+            ],
           });
         });
     }
@@ -95,12 +106,14 @@ export const createRelationGraphRootAnalysis = ({
 
   const selectedNodePathRelationKeys = computed(() => {
     if (!selectedNodeRootPath.value) return new Set<string>();
-    return new Set(selectedNodeRootPath.value.steps.map((step) => step.relation.relationKey));
+    return new Set(
+      selectedNodeRootPath.value.steps.map((step) => step.relation.relationKey),
+    );
   });
 
   const selectedNodeRootPreview = computed(() => {
     const node = selectedNetworkNode.value;
-    if (!node || !isRelationEntityType(node.type)) return null;
+    if (!node) return null;
 
     const previewNodes: Node[] = [];
     const previewLines: Line[] = [];
@@ -115,7 +128,11 @@ export const createRelationGraphRootAnalysis = ({
 
     const collectPreviewRelation = (relatedNodeId: string) => {
       const relatedNode = findNodeById(relatedNodeId);
-      if (relatedNode && relatedNode.id !== node.id && !previewNodes.some((item) => item.id === relatedNode.id)) {
+      if (
+        relatedNode &&
+        relatedNode.id !== node.id &&
+        !previewNodes.some((item) => item.id === relatedNode.id)
+      ) {
         previewNodes.push(relatedNode);
       }
     };
@@ -128,10 +145,13 @@ export const createRelationGraphRootAnalysis = ({
       }
     });
 
-    const groupedCounts = previewNodes.reduce<Record<string, number>>((acc, item) => {
-      acc[item.type] = (acc[item.type] ?? 0) + 1;
-      return acc;
-    }, {});
+    const groupedCounts = previewNodes.reduce<Record<string, number>>(
+      (acc, item) => {
+        acc[item.type] = (acc[item.type] ?? 0) + 1;
+        return acc;
+      },
+      {},
+    );
 
     return {
       nodeCount: previewNodes.length,

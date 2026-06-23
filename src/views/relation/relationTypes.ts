@@ -9,6 +9,16 @@ export enum RelationType {
   all = "all",
 }
 
+export type RelationEntityType = Exclude<RelationType, RelationType.all>;
+
+export const relationEntityTypes = [
+  RelationType.risk,
+  RelationType.avoidance,
+  RelationType.attackTool,
+  RelationType.threatActor,
+  RelationType.term,
+] as const satisfies readonly RelationEntityType[];
+
 export type NetworkLayoutMode =
   | "horizontal"
   | "lanes"
@@ -19,7 +29,7 @@ export type NetworkLayoutMode =
 
 export interface Node {
   id: string;
-  type: string;
+  type: RelationEntityType;
   text: string;
   color: string;
   data?: { isSubNode?: boolean; isRelatedEntity?: boolean };
@@ -61,7 +71,7 @@ export interface RelationLegendItem {
 export interface GraphNode {
   id: string;
   name: string;
-  type: string;
+  type: RelationEntityType;
   text: string;
   labelText: string;
   symbolSize: number;
@@ -106,7 +116,7 @@ export interface GraphLink {
 export interface SankeyNode {
   name: string;
   depth?: number;
-  entityType: Exclude<RelationType, RelationType.all>;
+  entityType: RelationEntityType;
   entityKey: string;
   itemStyle: {
     color: string;
@@ -141,7 +151,7 @@ export interface AttackPathExplanationStep {
 export interface AttackPathEntitySummary {
   id: string;
   title: string;
-  type: Exclude<RelationType, RelationType.all>;
+  type: RelationEntityType;
 }
 
 export interface AttackPathExplanation {
@@ -227,7 +237,7 @@ export interface NodeCoverageMetric {
 export interface NodeCoverageItem {
   id: string;
   title: string;
-  type: Exclude<RelationType, RelationType.all>;
+  type: RelationEntityType;
   meta: string;
   sourceFields: string[];
 }
@@ -302,7 +312,7 @@ export const getColorFromCSS = (varName: string): string => {
 };
 
 export const relationTypeColors: Record<
-  Exclude<RelationType, RelationType.all>,
+  RelationEntityType,
   { light: string; dark: string }
 > = {
   [RelationType.risk]: { light: "#fed7aa", dark: "#7c2d12" },
@@ -420,21 +430,13 @@ export const networkRootNodeSize = 64;
 export const networkLabelMaxLineLength = 5;
 
 export const isRelationEntityType = (
-  type: string
-): type is Exclude<RelationType, RelationType.all> =>
-  [
-    RelationType.risk,
-    RelationType.avoidance,
-    RelationType.attackTool,
-    RelationType.threatActor,
-    RelationType.term,
-  ].includes(type as Exclude<RelationType, RelationType.all>);
+  type: string,
+): type is RelationEntityType =>
+  relationEntityTypes.includes(type as RelationEntityType);
 
 export const createRelationTypeMapping = (
   t: (key: string) => string,
-  getRelationTypeColor: (
-    type: Exclude<RelationType, RelationType.all>
-  ) => string
+  getRelationTypeColor: (type: RelationEntityType) => string,
 ) => ({
   [RelationType.risk]: {
     get title() {

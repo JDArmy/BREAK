@@ -3,16 +3,14 @@ import {
   createRelationTypeMapping,
   RelationType,
   type AttackPath,
+  type RelationEntityType,
   type SankeyLink,
   type SankeyNode,
 } from "@/views/relation/relationTypes";
 
 type BuildAttackPaths = () => AttackPath[];
 
-type SankeyNodeNameGetter = (
-  type: Exclude<RelationType, RelationType.all>,
-  key: string
-) => string;
+type SankeyNodeNameGetter = (type: RelationEntityType, key: string) => string;
 
 interface CreateRelationAttackPathSankeyOptions {
   buildAttackPaths: BuildAttackPaths;
@@ -31,11 +29,7 @@ const createEmptySankeyData = ({
   const nodeMap = new Map<string, SankeyNode>();
   const linkMap = new Map<string, SankeyLink>();
 
-  const addNode = (
-    type: Exclude<RelationType, RelationType.all>,
-    key: string,
-    depth: number
-  ) => {
+  const addNode = (type: RelationEntityType, key: string, depth: number) => {
     const nodeKey = `${type}:${key}`;
     const existingNode = nodeMap.get(nodeKey);
     if (existingNode) {
@@ -117,7 +111,7 @@ export const createRelationAttackPathSankey = ({
         acc[depth] = (acc[depth] ?? 0) + 1;
         return acc;
       },
-      {}
+      {},
     );
     const maxLayerNodeCount = Math.max(1, ...Object.values(nodesByDepth));
 

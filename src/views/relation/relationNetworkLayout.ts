@@ -2,12 +2,13 @@ import type { Ref } from "vue";
 import {
   RelationType,
   getRelationLineKey,
-  isRelationEntityType,
+  relationEntityTypes,
   type GraphLink,
   type GraphNode,
   type Line,
   type NetworkLayoutMode,
   type Node,
+  type RelationEntityType,
   networkLabelMaxLineLength,
   networkNodeSize,
   networkRootNodeSize,
@@ -26,9 +27,7 @@ interface CreateNetworkDataHelpersOptions {
   networkState: { layout: NetworkLayoutMode };
   relationLegendItems: Ref<{ key?: string; color: string; label: string }[]>;
   isDark: Ref<boolean>;
-  getRelationTypeColor: (
-    type: Exclude<RelationType, RelationType.all>
-  ) => string;
+  getRelationTypeColor: (type: RelationEntityType) => string;
   wrapLabelText: (text: string, maxLineLength?: number) => string;
   getGraphColor: (
     key:
@@ -38,17 +37,17 @@ interface CreateNetworkDataHelpersOptions {
       | "selectedNodeBorder"
       | "subNodeBorder"
       | "nodeBorder"
-      | "selectedNodeGlow"
+      | "selectedNodeGlow",
   ) => string;
   getRelationSourceFields: (
     line: Line,
     fromType?: string,
-    toType?: string
+    toType?: string,
   ) => string[];
   explainRelation: (
     line: Line,
     fromType?: string,
-    toType?: string
+    toType?: string,
   ) => GraphLink["explanation"];
   formatEvidenceLevel: (level: string) => string;
   getNodeTypeTitle: (type: string) => string;
@@ -72,9 +71,7 @@ interface NetworkGraphStyleContext {
   selectedNodeGlowColor: string;
   subNodeFillColor: string;
   subNodeBorderColor: string;
-  relationTypeColors: Partial<
-    Record<Exclude<RelationType, RelationType.all>, string>
-  >;
+  relationTypeColors: Partial<Record<RelationEntityType, string>>;
 }
 
 export const createNetworkDataHelpers = ({
@@ -103,16 +100,15 @@ export const createNetworkDataHelpers = ({
     x: number,
     y: number,
     styleContext: NetworkGraphStyleContext,
-    symbolSize = networkNodeSize
+    symbolSize = networkNodeSize,
   ): GraphNode => {
     const text = normalizeGraphText(node.text);
     const isSelected = node.id === selectedNetworkNodeId.value;
     const isSubNode = Boolean(node.data?.isSubNode);
     const draggedPosition = draggedNodePositions.value[node.id];
-    const baseColor = isRelationEntityType(node.type)
-      ? (styleContext.relationTypeColors[node.type] ??
-        getRelationTypeColor(node.type))
-      : node.color;
+    const baseColor =
+      styleContext.relationTypeColors[node.type] ??
+      getRelationTypeColor(node.type);
     return {
       id: node.id,
       name: node.id,
@@ -152,7 +148,7 @@ export const createNetworkDataHelpers = ({
       [RelationType.risk]: [],
       [RelationType.avoidance]: [],
       [RelationType.term]: [],
-    }) as Record<Exclude<RelationType, RelationType.all>, Node[]>;
+    }) as Record<RelationEntityType, Node[]>;
 
   const placeGridNodes = (
     graphNodes: GraphNode[],
@@ -164,7 +160,7 @@ export const createNetworkDataHelpers = ({
       columnGap?: number;
       rowGap?: number;
     },
-    styleContext: NetworkGraphStyleContext
+    styleContext: NetworkGraphStyleContext,
   ) => {
     if (group.length === 0) return;
 
@@ -183,19 +179,19 @@ export const createNetworkDataHelpers = ({
           node,
           layout.x + column * columnGap - width / 2,
           layout.y + row * rowGap - height / 2,
-          styleContext
-        )
+          styleContext,
+        ),
       );
     });
   };
 
   const applyHorizontalNetworkLayout = (
     graphNodes: GraphNode[],
-    groupedNodes: Record<Exclude<RelationType, RelationType.all>, Node[]>,
-    styleContext: NetworkGraphStyleContext
+    groupedNodes: Record<RelationEntityType, Node[]>,
+    styleContext: NetworkGraphStyleContext,
   ) => {
     const groupLayout: Record<
-      Exclude<RelationType, RelationType.all>,
+      RelationEntityType,
       {
         x: number;
         y: number;
@@ -241,23 +237,19 @@ export const createNetworkDataHelpers = ({
       },
     };
 
-    Object.entries(groupLayout).forEach(([type, layout]) => {
-      placeGridNodes(
-        graphNodes,
-        groupedNodes[type as Exclude<RelationType, RelationType.all>],
-        layout,
-        styleContext
-      );
+    relationEntityTypes.forEach((type) => {
+      const layout = groupLayout[type];
+      placeGridNodes(graphNodes, groupedNodes[type], layout, styleContext);
     });
   };
 
   const applyLaneNetworkLayout = (
     graphNodes: GraphNode[],
-    groupedNodes: Record<Exclude<RelationType, RelationType.all>, Node[]>,
-    styleContext: NetworkGraphStyleContext
+    groupedNodes: Record<RelationEntityType, Node[]>,
+    styleContext: NetworkGraphStyleContext,
   ) => {
     const groupLayout: Record<
-      Exclude<RelationType, RelationType.all>,
+      RelationEntityType,
       {
         x: number;
         y: number;
@@ -303,23 +295,19 @@ export const createNetworkDataHelpers = ({
       },
     };
 
-    Object.entries(groupLayout).forEach(([type, layout]) => {
-      placeGridNodes(
-        graphNodes,
-        groupedNodes[type as Exclude<RelationType, RelationType.all>],
-        layout,
-        styleContext
-      );
+    relationEntityTypes.forEach((type) => {
+      const layout = groupLayout[type];
+      placeGridNodes(graphNodes, groupedNodes[type], layout, styleContext);
     });
   };
 
   const applySplitNetworkLayout = (
     graphNodes: GraphNode[],
-    groupedNodes: Record<Exclude<RelationType, RelationType.all>, Node[]>,
-    styleContext: NetworkGraphStyleContext
+    groupedNodes: Record<RelationEntityType, Node[]>,
+    styleContext: NetworkGraphStyleContext,
   ) => {
     const groupLayout: Record<
-      Exclude<RelationType, RelationType.all>,
+      RelationEntityType,
       {
         x: number;
         y: number;
@@ -365,13 +353,9 @@ export const createNetworkDataHelpers = ({
       },
     };
 
-    Object.entries(groupLayout).forEach(([type, layout]) => {
-      placeGridNodes(
-        graphNodes,
-        groupedNodes[type as Exclude<RelationType, RelationType.all>],
-        layout,
-        styleContext
-      );
+    relationEntityTypes.forEach((type) => {
+      const layout = groupLayout[type];
+      placeGridNodes(graphNodes, groupedNodes[type], layout, styleContext);
     });
   };
 
@@ -384,7 +368,7 @@ export const createNetworkDataHelpers = ({
       radius: number;
       innerRadius?: number;
     },
-    styleContext: NetworkGraphStyleContext
+    styleContext: NetworkGraphStyleContext,
   ) => {
     if (group.length === 0) return;
 
@@ -407,16 +391,16 @@ export const createNetworkDataHelpers = ({
           node,
           Math.cos(angle) * ring,
           Math.sin(angle) * ring,
-          styleContext
-        )
+          styleContext,
+        ),
       );
     });
   };
 
   const applyRadialNetworkLayout = (
     graphNodes: GraphNode[],
-    groupedNodes: Record<Exclude<RelationType, RelationType.all>, Node[]>,
-    styleContext: NetworkGraphStyleContext
+    groupedNodes: Record<RelationEntityType, Node[]>,
+    styleContext: NetworkGraphStyleContext,
   ) => {
     placeRadialGroupNodes(
       graphNodes,
@@ -426,7 +410,7 @@ export const createNetworkDataHelpers = ({
         endAngle: -Math.PI * 0.55,
         radius: 650,
       },
-      styleContext
+      styleContext,
     );
     placeRadialGroupNodes(
       graphNodes,
@@ -436,7 +420,7 @@ export const createNetworkDataHelpers = ({
         endAngle: -Math.PI * 0.05,
         radius: 520,
       },
-      styleContext
+      styleContext,
     );
     placeRadialGroupNodes(
       graphNodes,
@@ -446,7 +430,7 @@ export const createNetworkDataHelpers = ({
         endAngle: Math.PI * 0.45,
         radius: 520,
       },
-      styleContext
+      styleContext,
     );
     placeRadialGroupNodes(
       graphNodes,
@@ -456,7 +440,7 @@ export const createNetworkDataHelpers = ({
         endAngle: Math.PI * 0.95,
         radius: 650,
       },
-      styleContext
+      styleContext,
     );
     placeRadialGroupNodes(
       graphNodes,
@@ -467,7 +451,7 @@ export const createNetworkDataHelpers = ({
         radius: 720,
         innerRadius: 580,
       },
-      styleContext
+      styleContext,
     );
   };
 
@@ -475,7 +459,7 @@ export const createNetworkDataHelpers = ({
     lines.reduce(
       (count, line) =>
         count + (line.from === nodeId || line.to === nodeId ? 1 : 0),
-      0
+      0,
     );
 
   const placeForceGroupNodes = (
@@ -486,7 +470,7 @@ export const createNetworkDataHelpers = ({
       endAngle: number;
       radius: number;
     },
-    styleContext: NetworkGraphStyleContext
+    styleContext: NetworkGraphStyleContext,
   ) => {
     if (group.length === 0) return;
 
@@ -503,23 +487,24 @@ export const createNetworkDataHelpers = ({
         (angleSpan * (index + 0.5)) / Math.max(1, sortedGroup.length);
       const degreePull = Math.min(180, degree * 30);
       const alternatingSpread = index % 2 === 0 ? -36 : 36;
-      const radius = Math.max(210, options.radius - degreePull) + alternatingSpread;
+      const radius =
+        Math.max(210, options.radius - degreePull) + alternatingSpread;
 
       graphNodes.push(
         createGraphNode(
           node,
           Math.cos(angle) * radius,
           Math.sin(angle) * radius,
-          styleContext
-        )
+          styleContext,
+        ),
       );
     });
   };
 
   const applyForceNetworkLayout = (
     graphNodes: GraphNode[],
-    groupedNodes: Record<Exclude<RelationType, RelationType.all>, Node[]>,
-    styleContext: NetworkGraphStyleContext
+    groupedNodes: Record<RelationEntityType, Node[]>,
+    styleContext: NetworkGraphStyleContext,
   ) => {
     placeForceGroupNodes(
       graphNodes,
@@ -529,7 +514,7 @@ export const createNetworkDataHelpers = ({
         endAngle: -Math.PI * 0.52,
         radius: 520,
       },
-      styleContext
+      styleContext,
     );
     placeForceGroupNodes(
       graphNodes,
@@ -539,7 +524,7 @@ export const createNetworkDataHelpers = ({
         endAngle: -Math.PI * 0.1,
         radius: 360,
       },
-      styleContext
+      styleContext,
     );
     placeForceGroupNodes(
       graphNodes,
@@ -549,7 +534,7 @@ export const createNetworkDataHelpers = ({
         endAngle: Math.PI * 0.42,
         radius: 300,
       },
-      styleContext
+      styleContext,
     );
     placeForceGroupNodes(
       graphNodes,
@@ -559,7 +544,7 @@ export const createNetworkDataHelpers = ({
         endAngle: Math.PI * 0.88,
         radius: 430,
       },
-      styleContext
+      styleContext,
     );
     placeForceGroupNodes(
       graphNodes,
@@ -569,17 +554,17 @@ export const createNetworkDataHelpers = ({
         endAngle: Math.PI * 1.4,
         radius: 560,
       },
-      styleContext
+      styleContext,
     );
   };
 
   const applyHierarchicalNetworkLayout = (
     graphNodes: GraphNode[],
-    groupedNodes: Record<Exclude<RelationType, RelationType.all>, Node[]>,
-    styleContext: NetworkGraphStyleContext
+    groupedNodes: Record<RelationEntityType, Node[]>,
+    styleContext: NetworkGraphStyleContext,
   ) => {
     const groupLayout: Record<
-      Exclude<RelationType, RelationType.all>,
+      RelationEntityType,
       {
         x: number;
         y: number;
@@ -601,20 +586,16 @@ export const createNetworkDataHelpers = ({
       },
     };
 
-    Object.entries(groupLayout).forEach(([type, layout]) => {
-      placeGridNodes(
-        graphNodes,
-        groupedNodes[type as Exclude<RelationType, RelationType.all>],
-        layout,
-        styleContext
-      );
+    relationEntityTypes.forEach((type) => {
+      const layout = groupLayout[type];
+      placeGridNodes(graphNodes, groupedNodes[type], layout, styleContext);
     });
   };
 
   const applyNetworkLayout = (
     graphNodes: GraphNode[],
-    groupedNodes: Record<Exclude<RelationType, RelationType.all>, Node[]>,
-    styleContext: NetworkGraphStyleContext
+    groupedNodes: Record<RelationEntityType, Node[]>,
+    styleContext: NetworkGraphStyleContext,
   ) => {
     switch (networkState.layout) {
       case "lanes":
@@ -651,7 +632,10 @@ export const createNetworkDataHelpers = ({
     const filterLineTypeSet = new Set(filterLineType.value);
     const nodeTypeById = new Map(nodes.map((node) => [node.id, node.type]));
     const relationLegendColorByKey = new Map(
-      relationLegendItems.value.map((item) => [item.key ?? item.label, item.color])
+      relationLegendItems.value.map((item) => [
+        item.key ?? item.label,
+        item.color,
+      ]),
     );
     const styleContext: NetworkGraphStyleContext = {
       lineColor: getGraphColor("line"),
@@ -665,10 +649,10 @@ export const createNetworkDataHelpers = ({
         [RelationType.risk]: getRelationTypeColor(RelationType.risk),
         [RelationType.avoidance]: getRelationTypeColor(RelationType.avoidance),
         [RelationType.attackTool]: getRelationTypeColor(
-          RelationType.attackTool
+          RelationType.attackTool,
         ),
         [RelationType.threatActor]: getRelationTypeColor(
-          RelationType.threatActor
+          RelationType.threatActor,
         ),
         [RelationType.term]: getRelationTypeColor(RelationType.term),
       },
@@ -701,20 +685,15 @@ export const createNetworkDataHelpers = ({
           (networkNodeSortOrder[b.type] ?? 99);
         return orderDiff || a.id.localeCompare(b.id);
       })
-      .reduce<Record<Exclude<RelationType, RelationType.all>, Node[]>>(
-        (groups, node) => {
-          groups[node.type as Exclude<RelationType, RelationType.all>].push(
-            node
-          );
-          return groups;
-        },
-        createEmptyGroupedNodes()
-      );
+      .reduce<Record<RelationEntityType, Node[]>>((groups, node) => {
+        groups[node.type].push(node);
+        return groups;
+      }, createEmptyGroupedNodes());
 
     const graphNodes: GraphNode[] = [];
     if (rootNode) {
       graphNodes.push(
-        createGraphNode(rootNode, 0, 0, styleContext, networkRootNodeSize)
+        createGraphNode(rootNode, 0, 0, styleContext, networkRootNodeSize),
       );
     }
     applyNetworkLayout(graphNodes, groupedNodes, styleContext);
@@ -734,10 +713,10 @@ export const createNetworkDataHelpers = ({
       if (!linkMap.has(linkKey)) {
         const explanation = explainRelation(line, fromType, toType);
         const sourceTitle = normalizeGraphText(
-          sourceNode?.text ?? line.from
+          sourceNode?.text ?? line.from,
         ).replace(/\n/g, " ");
         const targetTitle = normalizeGraphText(
-          targetNode?.text ?? line.to
+          targetNode?.text ?? line.to,
         ).replace(/\n/g, " ");
         const sourceTypeTitle = getNodeTypeTitle(fromType);
         const targetTypeTitle = getNodeTypeTitle(toType);
@@ -758,8 +737,7 @@ export const createNetworkDataHelpers = ({
           evidenceLabel: formatEvidenceLevel(explanation.evidenceLevel),
           lineStyle: {
             color:
-              relationLegendColorByKey.get(lineKey) ??
-              styleContext.lineColor,
+              relationLegendColorByKey.get(lineKey) ?? styleContext.lineColor,
             opacity: isDark.value ? 0.42 : 0.52,
             curveness: 0.18,
           },

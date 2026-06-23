@@ -5,9 +5,9 @@ import { findRelationPaths } from "@/views/relation/relationPathDiscovery";
 import {
   getRelationLineKey,
   RelationType,
-  isRelationEntityType,
   type Line,
   type Node,
+  type RelationEntityType,
 } from "@/views/relation/relationTypes";
 import type { NodeRelatedEntitySummary } from "@/components/relation/relationNodeDrawerInsightTypes";
 
@@ -29,10 +29,7 @@ interface CreateRelationGraphInsightsOptions {
   nodes: Node[];
   lines: Line[];
   selectedNetworkNodeId: Ref<string>;
-  getNodeTitle: (
-    type: Exclude<RelationType, RelationType.all>,
-    key: string
-  ) => string;
+  getNodeTitle: (type: RelationEntityType, key: string) => string;
   getNodeTypeTitle: (type: string) => string;
   getRelationPriority: (lineText: string) => number;
   isDirectRelationLine: (lineText: string) => boolean;
@@ -138,22 +135,23 @@ export const createRelationGraphInsights = ({
       >((groups, nodeId) => {
         const relatedNode = nodes.find((item) => item.id === nodeId);
         if (!relatedNode) return groups;
-        groups[relatedNode.type] = [...(groups[relatedNode.type] ?? []), nodeId];
+        groups[relatedNode.type] = [
+          ...(groups[relatedNode.type] ?? []),
+          nodeId,
+        ];
         return groups;
       }, {});
       const relatedTypeCounts = Object.fromEntries(
         Object.entries(relatedTypeGroups).map(([type, ids]) => [
           type,
           ids.length,
-        ])
+        ]),
       );
 
       const getCount = (type: RelationType) => relatedTypeCounts[type] ?? 0;
       const relationCount = incoming + outgoing;
       const typeTitle = getNodeTypeTitle(node.type);
-      const title = isRelationEntityType(node.type)
-        ? getNodeTitle(node.type, node.id)
-        : node.id;
+      const title = getNodeTitle(node.type, node.id);
       const params = {
         title,
         type: typeTitle,
@@ -167,13 +165,11 @@ export const createRelationGraphInsights = ({
         terms: getCount(RelationType.term),
       };
 
-      const summaryKey = isRelationEntityType(node.type)
-        ? `relationView.nodeAnalysis.${node.type}`
-        : "relationView.nodeAnalysis.default";
+      const summaryKey = `relationView.nodeAnalysis.${node.type}`;
       const highlights = Object.entries(relatedTypeCounts)
         .filter(([, count]) => count > 0)
         .sort(([firstType], [secondType]) =>
-          firstType.localeCompare(secondType)
+          firstType.localeCompare(secondType),
         )
         .map(([relatedType, count]) => ({
           label: t("relationView.nodeAnalysisRelatedCount", {
@@ -210,7 +206,7 @@ export const createRelationGraphInsights = ({
         notices.push(
           t("relationView.nodeAnalysisNotice.rootPath", {
             count: selectedNodeRootPath.value.hopCount,
-          })
+          }),
         );
       }
       if (selectedNodeDiscoveredPaths.value.length > 1) {
@@ -218,7 +214,7 @@ export const createRelationGraphInsights = ({
           t("relationView.nodeAnalysisNotice.discoveredPath", {
             count: selectedNodeDiscoveredPaths.value.length,
             hops: selectedNodeDiscoveredPaths.value[0]?.hopCount ?? 0,
-          })
+          }),
         );
       }
 
@@ -227,13 +223,13 @@ export const createRelationGraphInsights = ({
         highlights,
         notices,
       };
-    }
+    },
   );
 
   const selectedNodeRelatedEntitySummary =
     computed<NodeRelatedEntitySummary | null>(() => {
       const node = selectedNetworkNode.value;
-      if (!node || !isRelationEntityType(node.type)) return null;
+      if (!node) return null;
 
       const relatedItems = lines
         .filter((line) => line.from === node.id || line.to === node.id)
@@ -267,7 +263,7 @@ export const createRelationGraphInsights = ({
         .sort(
           (first, second) =>
             first.priority - second.priority ||
-            first.id.localeCompare(second.id)
+            first.id.localeCompare(second.id),
         )
         .map((item) => ({
           id: item.id,

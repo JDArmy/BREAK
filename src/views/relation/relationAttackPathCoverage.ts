@@ -3,15 +3,13 @@ import BREAK from "@/BREAK";
 import {
   RelationType,
   type AttackPath,
+  type RelationEntityType,
   type RiskAvoidanceCoverage,
 } from "@/views/relation/relationTypes";
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;
 
-type NodeTitleGetter = (
-  type: Exclude<RelationType, RelationType.all>,
-  key: string
-) => string;
+type NodeTitleGetter = (type: RelationEntityType, key: string) => string;
 
 interface CreateRelationAttackPathCoverageOptions {
   allAttackPaths: ComputedRef<AttackPath[]>;
@@ -28,7 +26,7 @@ const sortByKey = <T extends { key: string }>(items: T[]) =>
     first.key.localeCompare(second.key, undefined, {
       numeric: true,
       sensitivity: "base",
-    })
+    }),
   );
 
 export const createRelationAttackPathCoverage = ({
@@ -78,11 +76,11 @@ export const createRelationAttackPathCoverage = ({
                   ? t("relationView.coverageSourceRisk")
                   : t("relationView.coverageSourceAttackTool"),
             pathCount: allAttackPaths.value.filter(
-              (path) => path.avoidanceKey === avoidanceKey
+              (path) => path.avoidanceKey === avoidanceKey,
             ).length,
             attackToolLabels: attackToolKeys.map(
               (attackToolKey) =>
-                `${getNodeTitle(RelationType.attackTool, attackToolKey)} (${attackToolKey})`
+                `${getNodeTitle(RelationType.attackTool, attackToolKey)} (${attackToolKey})`,
             ),
             sourceFields: [
               ...(fromRisk ? ["Risk.avoidances"] : []),
@@ -90,7 +88,7 @@ export const createRelationAttackPathCoverage = ({
             ],
           };
         })
-        .filter((item) => item.pathCount > 0)
+        .filter((item) => item.pathCount > 0),
     );
 
     return {

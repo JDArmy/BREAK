@@ -5,18 +5,17 @@ import {
   createRelationTypeMapping,
   RelationType,
   type Node,
+  type RelationEntityType,
 } from "../relationTypes";
 
 describe("relationAttackPath", () => {
   const t = (key: string) => key;
   const relationTypeMapping = createRelationTypeMapping(
     t,
-    (type) => `color:${type}`
+    (type) => `color:${type}`,
   );
-  const getSankeyNodeName = (
-    type: Exclude<RelationType, RelationType.all>,
-    key: string
-  ) => `${type}:${key}`;
+  const getSankeyNodeName = (type: RelationEntityType, key: string) =>
+    `${type}:${key}`;
 
   const createAttackPathData = (options: {
     relType: RelationType;
@@ -46,8 +45,8 @@ describe("relationAttackPath", () => {
 
     const nodeKeys = new Set(
       attackPath.sankeyData.value.nodes.map(
-        (node) => `${node.entityType}:${node.entityKey}`
-      )
+        (node) => `${node.entityType}:${node.entityKey}`,
+      ),
     );
     expect(nodeKeys).toContain("threat-actor:TA0017");
     expect(nodeKeys).toContain("attack-tool:AT0001");
@@ -76,7 +75,7 @@ describe("relationAttackPath", () => {
           depth: 3,
           itemStyle: { color: "color:avoidance" },
         }),
-      ])
+      ]),
     );
 
     expect(attackPath.sankeyData.value.links).toEqual(
@@ -96,7 +95,7 @@ describe("relationAttackPath", () => {
           target: "avoidance:A0016-003",
           value: expect.any(Number),
         }),
-      ])
+      ]),
     );
     expect(attackPath.attackPathDetails.value.length).toBeGreaterThan(0);
     expect(attackPath.filteredAttackPaths.value.length).toBeGreaterThan(0);
@@ -106,15 +105,18 @@ describe("relationAttackPath", () => {
           key: "R0005-001",
           label: "BREAK.risks.R0005-001.title",
         }),
-      ])
+      ]),
     );
     expect(attackPath.selectedAttackPathDetail.value).toEqual(
       expect.objectContaining({
         id: expect.any(String),
         nodes: expect.arrayContaining([
-          expect.objectContaining({ type: RelationType.attackTool, key: "AT0001" }),
+          expect.objectContaining({
+            type: RelationType.attackTool,
+            key: "AT0001",
+          }),
         ]),
-      })
+      }),
     );
   });
 
@@ -134,7 +136,7 @@ describe("relationAttackPath", () => {
       "relationView.pathRoleRisk",
     ]);
     expect(attackPath.selectedNodeAttackPathDescription.value).toBe(
-      "relationView.pathRoleRiskDesc"
+      "relationView.pathRoleRiskDesc",
     );
     expect(attackPath.selectedNodeAttackPathExplanations.value[0]).toEqual(
       expect.objectContaining({
@@ -162,7 +164,7 @@ describe("relationAttackPath", () => {
         steps: expect.arrayContaining([
           expect.objectContaining({
             relationType: expect.stringMatching(
-              /^relationLine\.(buildAttackTool|useAttackTool)$/
+              /^relationLine\.(buildAttackTool|useAttackTool)$/,
             ),
             sourceFields: expect.arrayContaining([
               "ThreatActor.useAttackTools",
@@ -184,7 +186,7 @@ describe("relationAttackPath", () => {
             defensiveMeaning: "relationView.attackPathDefense.riskToAvoidance",
           }),
         ]),
-      })
+      }),
     );
   });
 
@@ -203,11 +205,11 @@ describe("relationAttackPath", () => {
     const groupedPath =
       attackPath.selectedNodeAttackPathExplanations.value.find(
         (path) =>
-          path.attackToolId === "AT0002" && path.avoidanceId === "A0010-001"
+          path.attackToolId === "AT0002" && path.avoidanceId === "A0010-001",
       );
 
     expect(
-      attackPath.selectedNodeAttackPathExplanations.value.length
+      attackPath.selectedNodeAttackPathExplanations.value.length,
     ).toBeGreaterThan(3);
     expect(groupedPath).toEqual(
       expect.objectContaining({
@@ -215,7 +217,7 @@ describe("relationAttackPath", () => {
         riskId: "R0001",
         attackToolId: "AT0002",
         avoidanceId: "A0010-001",
-      })
+      }),
     );
     expect(groupedPath?.pathCount).toBeGreaterThan(1);
     expect(groupedPath?.threatActors.length).toBeGreaterThan(1);
@@ -226,7 +228,7 @@ describe("relationAttackPath", () => {
         toId: "AT0002",
         toTitle: "BREAK.attackTools.AT0002.title",
         sourceFields: ["ThreatActor.useAttackTools"],
-      })
+      }),
     );
   });
 
@@ -247,7 +249,7 @@ describe("relationAttackPath", () => {
         (path) =>
           path.threatActors.some((actor) => actor.id === "TA0038") &&
           path.attackToolId === "AT0034-001" &&
-          path.riskId === "R0001"
+          path.riskId === "R0001",
       )
       .map((path) => path.avoidanceId);
 
@@ -264,11 +266,11 @@ describe("relationAttackPath", () => {
         (path) =>
           path.attackToolId === "AT0034-001" &&
           path.riskId === "R0001" &&
-          path.avoidanceId === "A0016-001"
+          path.avoidanceId === "A0016-001",
       );
 
     expect(proxyIpIntelligencePath?.evidenceFields).toEqual(
-      expect.arrayContaining(["AttackTool.avoidances", "Risk.avoidances"])
+      expect.arrayContaining(["AttackTool.avoidances", "Risk.avoidances"]),
     );
   });
 
@@ -306,7 +308,7 @@ describe("relationAttackPath", () => {
       "relationView.pathRoleAvoidance",
     ]);
     expect(attackPath.selectedNodeAttackPathDescription.value).toBe(
-      "relationView.pathRoleAvoidanceDesc"
+      "relationView.pathRoleAvoidanceDesc",
     );
     expect(attackPath.selectedNodeAttackPathExplanations.value).toEqual(
       expect.arrayContaining([
@@ -315,11 +317,12 @@ describe("relationAttackPath", () => {
           steps: expect.arrayContaining([
             expect.objectContaining({
               toId: "A0010-001",
-              defensiveMeaning: "relationView.attackPathDefense.riskToAvoidance",
+              defensiveMeaning:
+                "relationView.attackPathDefense.riskToAvoidance",
             }),
           ]),
         }),
-      ])
+      ]),
     );
   });
 
@@ -354,24 +357,28 @@ describe("relationAttackPath", () => {
         attackToolKey: "AT0034-001",
         avoidanceKey: "A0016-001",
         riskKey: "R0001",
-      })
+      }),
     );
-    expect(attackPath.attackPathFilterOptions.value[RelationType.threatActor]).toEqual(
+    expect(
+      attackPath.attackPathFilterOptions.value[RelationType.threatActor],
+    ).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
           key: "TA0038",
           label: "BREAK.threatActors.TA0038.title",
           count: expect.any(Number),
         }),
-      ])
+      ]),
     );
-    expect(attackPath.attackPathFilterOptions.value[RelationType.avoidance]).toEqual(
+    expect(
+      attackPath.attackPathFilterOptions.value[RelationType.avoidance],
+    ).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
           key: "A0016-001",
           label: "BREAK.avoidances.A0016-001.title",
         }),
-      ])
+      ]),
     );
 
     const selectedPathId = attackPath.attackPathDetails.value[0].id;
@@ -419,7 +426,7 @@ describe("relationAttackPath", () => {
             ]),
           }),
         ]),
-      })
+      }),
     );
 
     attackPath.attackPathFilters.value = {
@@ -433,7 +440,9 @@ describe("relationAttackPath", () => {
     expect(attackPath.attackPathFilters.value).toEqual({
       [RelationType.threatActor]: "TA0038",
     });
-    expect(attackPath.selectedAttackPathDetail.value?.id).not.toBe("missing-path");
+    expect(attackPath.selectedAttackPathDetail.value?.id).not.toBe(
+      "missing-path",
+    );
 
     attackPath.resetAttackPathFilters();
     expect(attackPath.attackPathFilters.value).toEqual({});
@@ -454,7 +463,7 @@ describe("relationAttackPath", () => {
         directCount: expect.any(Number),
         attackToolCount: expect.any(Number),
         overlapCount: expect.any(Number),
-      })
+      }),
     );
     expect(coverage?.items).toEqual(
       expect.arrayContaining([
@@ -470,7 +479,7 @@ describe("relationAttackPath", () => {
             "BREAK.attackTools.AT0034-001.title (AT0034-001)",
           ]),
         }),
-      ])
+      ]),
     );
     expect(coverage?.overlapCount).toBeGreaterThan(0);
 
@@ -487,7 +496,7 @@ describe("relationAttackPath", () => {
           sourceLabel: "relationView.coverageSourceRisk",
           sourceFields: ["Risk.avoidances"],
         }),
-      ])
+      ]),
     );
     expect(directCoverage?.directCount).toBeGreaterThan(0);
 
@@ -515,13 +524,13 @@ describe("relationAttackPath", () => {
       "relationView.pathRoleAttackTool",
     ]);
     expect(actorPath.selectedNodeAttackPathDescription.value).toBe(
-      "relationView.pathRoleAttackToolDesc"
+      "relationView.pathRoleAttackToolDesc",
     );
     expect(actorPath.filteredAttackPaths.value.length).toBeGreaterThan(0);
     expect(
-      actorPath.filteredAttackPaths.value.every((path) =>
-        path.threatActorKey === "TA0017"
-      )
+      actorPath.filteredAttackPaths.value.every(
+        (path) => path.threatActorKey === "TA0017",
+      ),
     ).toBe(true);
 
     const avoidancePath = createAttackPathData({
@@ -532,15 +541,15 @@ describe("relationAttackPath", () => {
     expect(avoidancePath.filteredAttackPaths.value.length).toBeGreaterThan(0);
     expect(
       avoidancePath.filteredAttackPaths.value.every(
-        (path) => path.avoidanceKey === "A0016-001"
-      )
+        (path) => path.avoidanceKey === "A0016-001",
+      ),
     ).toBe(true);
     expect(
       avoidancePath.sankeyData.value.nodes.every(
         (node) =>
           node.entityType !== RelationType.avoidance ||
-          node.entityKey === "A0016-001"
-      )
+          node.entityKey === "A0016-001",
+      ),
     ).toBe(true);
   });
 
@@ -556,10 +565,14 @@ describe("relationAttackPath", () => {
           name: "risk:R0033",
           depth: 2,
         }),
-      ])
+      ]),
     );
     expect(sparseRiskPath.filteredAttackPaths.value.length).toBeGreaterThan(0);
-    expect(sparseRiskPath.filteredAttackPaths.value.every((path) => path.riskKey === "R0033")).toBe(true);
+    expect(
+      sparseRiskPath.filteredAttackPaths.value.every(
+        (path) => path.riskKey === "R0033",
+      ),
+    ).toBe(true);
 
     const denseRiskPath = createAttackPathData({
       relType: RelationType.risk,
@@ -587,7 +600,7 @@ describe("relationAttackPath", () => {
           segments: expect.arrayContaining([
             expect.objectContaining({
               relation: expect.stringMatching(
-                /^relationLine\.(directCauseRisk|indirectSupportRisk)$/
+                /^relationLine\.(directCauseRisk|indirectSupportRisk)$/,
               ),
             }),
             expect.objectContaining({
@@ -595,15 +608,15 @@ describe("relationAttackPath", () => {
             }),
           ]),
         }),
-      ])
+      ]),
     );
     expect(
       denseRiskPath.attackPathDetails.value.every(
         (path, index, paths) =>
           index === 0 ||
           `${path.attackToolId ?? ""}:${path.riskId}:${path.avoidanceId ?? ""}` >=
-            `${paths[index - 1].attackToolId ?? ""}:${paths[index - 1].riskId}:${paths[index - 1].avoidanceId ?? ""}`
-      )
+            `${paths[index - 1].attackToolId ?? ""}:${paths[index - 1].riskId}:${paths[index - 1].avoidanceId ?? ""}`,
+      ),
     ).toBe(true);
   });
 });

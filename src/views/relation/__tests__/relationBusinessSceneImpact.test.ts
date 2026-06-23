@@ -6,10 +6,8 @@ import { RelationType, type Node } from "../relationTypes";
 describe("relationBusinessSceneImpact", () => {
   const t = (key: string, params?: Record<string, unknown>) =>
     params ? `${key}:${JSON.stringify(params)}` : key;
-  const getNodeTitle = (
-    type: Exclude<RelationType, RelationType.all>,
-    key: string
-  ) => `${type}:${key}`;
+  const getNodeTitle = (type: RelationEntityType, key: string) =>
+    `${type}:${key}`;
 
   const node = (id: string, type: RelationType): Node => ({
     id,
@@ -28,7 +26,9 @@ describe("relationBusinessSceneImpact", () => {
     expect(analysis.selectedNodeBusinessSceneImpactSummary.value).toEqual(
       expect.objectContaining({
         title: expect.stringContaining("risk:R0005-001"),
-        summary: expect.stringContaining("relationView.businessSceneImpactSummary"),
+        summary: expect.stringContaining(
+          "relationView.businessSceneImpactSummary",
+        ),
         items: expect.arrayContaining([
           expect.objectContaining({
             id: "BS00",
@@ -45,14 +45,16 @@ describe("relationBusinessSceneImpact", () => {
             ]),
           }),
         ]),
-      })
+      }),
     );
   });
 
   it("maps an attack tool to business scenes through caused risks", () => {
     const analysis = createRelationBusinessSceneImpact({
       t,
-      selectedNetworkNode: computed(() => node("AT0001", RelationType.attackTool)),
+      selectedNetworkNode: computed(() =>
+        node("AT0001", RelationType.attackTool),
+      ),
       getNodeTitle,
     });
 
@@ -67,27 +69,35 @@ describe("relationBusinessSceneImpact", () => {
         risks: expect.arrayContaining([
           expect.objectContaining({
             id: "R0005-001",
-            sourceFields: expect.arrayContaining(["AttackTool.directCauseRisks"]),
+            sourceFields: expect.arrayContaining([
+              "AttackTool.directCauseRisks",
+            ]),
           }),
         ]),
-      })
+      }),
     );
   });
 
   it("maps an avoidance to business scenes through covered risks", () => {
     const analysis = createRelationBusinessSceneImpact({
       t,
-      selectedNetworkNode: computed(() => node("A0001", RelationType.avoidance)),
+      selectedNetworkNode: computed(() =>
+        node("A0001", RelationType.avoidance),
+      ),
       getNodeTitle,
     });
 
-    expect(analysis.selectedNodeBusinessSceneImpactSummary.value?.items.length).toBeGreaterThan(0);
-    expect(analysis.selectedNodeBusinessSceneImpactSummary.value?.risks).toEqual(
+    expect(
+      analysis.selectedNodeBusinessSceneImpactSummary.value?.items.length,
+    ).toBeGreaterThan(0);
+    expect(
+      analysis.selectedNodeBusinessSceneImpactSummary.value?.risks,
+    ).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
           sourceFields: ["Risk.avoidances"],
         }),
-      ])
+      ]),
     );
   });
 
@@ -99,18 +109,22 @@ describe("relationBusinessSceneImpact", () => {
       getNodeTitle,
     });
 
-    expect(analysis.selectedNodeBusinessSceneImpactSummary.value?.risks).toEqual(
+    expect(
+      analysis.selectedNodeBusinessSceneImpactSummary.value?.risks,
+    ).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
           id: "R0005-001",
           sourceFields: expect.arrayContaining(["AttackTool.directCauseRisks"]),
         }),
-      ])
+      ]),
     );
 
     selectedNode.value = node("R0005-001", RelationType.risk);
 
-    expect(analysis.selectedNodeBusinessSceneImpactSummary.value?.risks).toEqual([
+    expect(
+      analysis.selectedNodeBusinessSceneImpactSummary.value?.risks,
+    ).toEqual([
       expect.objectContaining({
         id: "R0005-001",
         sourceFields: ["selected node"],

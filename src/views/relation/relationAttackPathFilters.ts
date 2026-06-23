@@ -6,12 +6,10 @@ import {
   type AttackPathFilterOption,
   type AttackPathFilters,
   type AttackPathFilterType,
+  type RelationEntityType,
 } from "@/views/relation/relationTypes";
 
-type NodeTitleGetter = (
-  type: Exclude<RelationType, RelationType.all>,
-  key: string
-) => string;
+type NodeTitleGetter = (type: RelationEntityType, key: string) => string;
 
 interface CreateRelationAttackPathFiltersOptions {
   allAttackPaths: ComputedRef<AttackPath[]>;
@@ -28,14 +26,14 @@ export const attackPathFilterTypes = [
 ] as AttackPathFilterType[];
 
 export const isAttackPathFilterType = (
-  type: RelationType
+  type: RelationType,
 ): type is AttackPathFilterType =>
   attackPathFilterTypes.includes(type as AttackPathFilterType);
 
 export const pathMatchesAttackPathFilters = (
   path: AttackPath,
   filters: AttackPathFilters,
-  ignoredFilter?: AttackPathFilterType
+  ignoredFilter?: AttackPathFilterType,
 ) =>
   (ignoredFilter === RelationType.threatActor ||
     !filters[RelationType.threatActor] ||
@@ -55,7 +53,7 @@ const sortByKey = <T extends { key: string }>(items: T[]) =>
     first.key.localeCompare(second.key, undefined, {
       numeric: true,
       sensitivity: "base",
-    })
+    }),
   );
 
 const getPathFilterKey = (path: AttackPath, type: AttackPathFilterType) => {
@@ -75,23 +73,25 @@ export const createRelationAttackPathFilters = ({
 
   const filteredAttackPaths = computed(() =>
     allAttackPaths.value.filter((path) =>
-      pathMatchesAttackPathFilters(path, attackPathFilters.value)
-    )
+      pathMatchesAttackPathFilters(path, attackPathFilters.value),
+    ),
   );
 
   const attackPathDetails = computed(() =>
-    filteredAttackPaths.value.map(buildAttackPathDetail)
+    filteredAttackPaths.value.map(buildAttackPathDetail),
   );
 
   const hasActiveAttackPathFilters = computed(() =>
-    attackPathFilterTypes.some((type) => Boolean(attackPathFilters.value[type]))
+    attackPathFilterTypes.some((type) =>
+      Boolean(attackPathFilters.value[type]),
+    ),
   );
 
   const buildFilterOptions = (type: AttackPathFilterType) => {
     const countMap = new Map<string, number>();
     allAttackPaths.value
       .filter((path) =>
-        pathMatchesAttackPathFilters(path, attackPathFilters.value, type)
+        pathMatchesAttackPathFilters(path, attackPathFilters.value, type),
       )
       .forEach((path) => {
         const key = getPathFilterKey(path, type);
@@ -104,7 +104,7 @@ export const createRelationAttackPathFilters = ({
         key,
         label: getNodeTitle(type, key),
         count,
-      }))
+      })),
     );
   };
 
@@ -124,7 +124,9 @@ export const createRelationAttackPathFilters = ({
       const value = attackPathFilters.value[type];
       if (
         value &&
-        allAttackPaths.value.some((path) => getPathFilterKey(path, type) === value)
+        allAttackPaths.value.some(
+          (path) => getPathFilterKey(path, type) === value,
+        )
       ) {
         nextFilters[type] = value;
       }
@@ -134,7 +136,7 @@ export const createRelationAttackPathFilters = ({
     if (
       selectedAttackPathId.value &&
       !attackPathDetails.value.some(
-        (detail) => detail.id === selectedAttackPathId.value
+        (detail) => detail.id === selectedAttackPathId.value,
       )
     ) {
       selectedAttackPathId.value = "";

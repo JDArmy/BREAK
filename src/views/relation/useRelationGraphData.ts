@@ -12,6 +12,7 @@ import {
   isRelationEntityType,
   type Line,
   type Node,
+  type RelationEntityType,
   type RelationLegendItem,
 } from "@/views/relation/relationTypes";
 
@@ -35,7 +36,7 @@ interface UseRelationGraphDataOptions {
       | "subNodeFill"
       | "subNodeBorder"
       | "selectedNodeBorder"
-      | "selectedNodeGlow"
+      | "selectedNodeGlow",
   ) => string;
   getRelationLineColor: (
     key:
@@ -62,7 +63,7 @@ interface UseRelationGraphDataOptions {
       | "subAvoidance"
       | "subAttackTool"
       | "subThreatActor"
-      | "attackToolMaker"
+      | "attackToolMaker",
   ) => string;
   renderNetworkChart: (notMerge?: boolean) => void;
 }
@@ -265,46 +266,31 @@ export const useRelationGraphData = ({
       .BreakKey as keyof typeof BREAK;
 
   const getCurrentEntityOptions = computed(
-    () => BREAK[getBreakKey(relType.value)] as Record<string, unknown>
+    () => BREAK[getBreakKey(relType.value)] as Record<string, unknown>,
   );
 
-  const getEntityTitle = (
-    type: Exclude<RelationType, RelationType.all>,
-    key: string
-  ) => {
+  const getEntityTitle = (type: RelationEntityType, key: string) => {
     void locale.value;
     const breakKey = RelationTypeMapping[type].BreakKey;
     return t(`BREAK.${breakKey}.${key}.title`);
   };
 
-  const getNodeLabel = (
-    type: Exclude<RelationType, RelationType.all>,
-    key: string
-  ) => `${key} ${getEntityTitle(type, key)}`;
+  const getNodeLabel = (type: RelationEntityType, key: string) =>
+    `${key} ${getEntityTitle(type, key)}`;
 
-  const getSankeyNodeName = (
-    type: Exclude<RelationType, RelationType.all>,
-    key: string
-  ) => `${RelationTypeMapping[type].title}: ${getNodeLabel(type, key)}`;
+  const getSankeyNodeName = (type: RelationEntityType, key: string) =>
+    `${RelationTypeMapping[type].title}: ${getNodeLabel(type, key)}`;
 
-  const getNodeTitle = (
-    type: Exclude<RelationType, RelationType.all>,
-    key: string
-  ) => {
+  const getNodeTitle = (type: RelationEntityType, key: string) => {
     void locale.value;
     const breakKey = RelationTypeMapping[type].BreakKey;
     return t(`BREAK.${breakKey}.${key}.title`);
   };
 
-  const getGraphNodeText = (
-    type: Exclude<RelationType, RelationType.all>,
-    key: string
-  ) => `${key}\n${getNodeTitle(type, key)}`;
+  const getGraphNodeText = (type: RelationEntityType, key: string) =>
+    `${key}\n${getNodeTitle(type, key)}`;
 
-  const ensureRelationNode = (
-    type: Exclude<RelationType, RelationType.all>,
-    key: string
-  ) => {
+  const ensureRelationNode = (type: RelationEntityType, key: string) => {
     const existingNode = nodes.find((node) => node.id === key);
     if (existingNode) return existingNode;
 
@@ -457,11 +443,11 @@ export const useRelationGraphData = ({
 
   const { selectedNodeCoverageSummary, selectedNodeSpecialInsightSummary } =
     createRelationCoverageAnalysis({
-    t,
-    relType,
-    relKey,
-    selectedNetworkNode,
-    getNodeTitle,
+      t,
+      relType,
+      relKey,
+      selectedNetworkNode,
+      getNodeTitle,
     });
 
   const { selectedNodeBusinessSceneImpactSummary } =

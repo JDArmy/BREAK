@@ -2,7 +2,6 @@ import { computed, ref, watch, type ComputedRef, type Ref } from "vue";
 import BREAK from "@/BREAK";
 import {
   createRelationTypeMapping,
-  isRelationEntityType,
   RelationType,
   type AttackPath,
   type AttackPathDetail,
@@ -10,6 +9,7 @@ import {
   type AttackPathFilters,
   type AttackPathFilterType,
   type Node,
+  type RelationEntityType,
 } from "@/views/relation/relationTypes";
 import { createRelationAttackPathBuilder } from "@/views/relation/relationAttackPathBuilder";
 import { createRelationAttackPathCoverage } from "@/views/relation/relationAttackPathCoverage";
@@ -29,14 +29,8 @@ interface CreateRelationAttackPathOptions {
   relKey: Ref<string>;
   selectedNetworkNode: ComputedRef<Node | null>;
   RelationTypeMapping: ReturnType<typeof createRelationTypeMapping>;
-  getSankeyNodeName: (
-    type: Exclude<RelationType, RelationType.all>,
-    key: string
-  ) => string;
-  getNodeTitle: (
-    type: Exclude<RelationType, RelationType.all>,
-    key: string
-  ) => string;
+  getSankeyNodeName: (type: RelationEntityType, key: string) => string;
+  getNodeTitle: (type: RelationEntityType, key: string) => string;
 }
 
 export const createRelationAttackPathData = ({
@@ -81,9 +75,7 @@ export const createRelationAttackPathData = ({
     selectedAttackPathId.value = "";
   };
 
-  const describeAttackPathRole = (
-    nodeType: Exclude<RelationType, RelationType.all>
-  ) => {
+  const describeAttackPathRole = (nodeType: RelationEntityType) => {
     switch (nodeType) {
       case RelationType.threatActor:
         return t("relationView.pathRoleThreatActorDesc");
@@ -147,7 +139,7 @@ export const createRelationAttackPathData = ({
 
   const getThreatActorToolFields = (
     threatActorKey: string,
-    attackToolKey: string
+    attackToolKey: string,
   ) => {
     const threatActor =
       BREAK.threatActors[threatActorKey as keyof typeof BREAK.threatActors];
@@ -161,7 +153,7 @@ export const createRelationAttackPathData = ({
 
   const getThreatActorRiskFields = (
     threatActorKey: string,
-    riskKey: string
+    riskKey: string,
   ) => {
     const threatActor =
       BREAK.threatActors[threatActorKey as keyof typeof BREAK.threatActors];
@@ -189,7 +181,7 @@ export const createRelationAttackPathData = ({
 
   const getPathNode = (
     type: AttackPathFilterType,
-    key: string
+    key: string,
   ): AttackPathDetailNode => ({
     type,
     key,
@@ -214,7 +206,7 @@ export const createRelationAttackPathData = ({
     if (path.threatActorKey && path.attackToolKey) {
       const sourceFields = getThreatActorToolFields(
         path.threatActorKey,
-        path.attackToolKey
+        path.attackToolKey,
       );
       segments.push({
         source: getPathNode(RelationType.threatActor, path.threatActorKey),
@@ -248,7 +240,7 @@ export const createRelationAttackPathData = ({
     } else if (path.threatActorKey) {
       const sourceFields = getThreatActorRiskFields(
         path.threatActorKey,
-        path.riskKey
+        path.riskKey,
       );
       segments.push({
         source: getPathNode(RelationType.threatActor, path.threatActorKey),
@@ -286,7 +278,7 @@ export const createRelationAttackPathData = ({
 
   const selectedNodeAttackPathSummary = computed(() => {
     const node = selectedNetworkNode.value;
-    if (!node || !isRelationEntityType(node.type)) return [];
+    if (!node) return [];
     if (node.type === RelationType.term) return [];
 
     const matchingPaths = buildAttackPaths().filter((path) => {
@@ -315,21 +307,16 @@ export const createRelationAttackPathData = ({
 
   const selectedNodeAttackPathDescription = computed(() => {
     const node = selectedNetworkNode.value;
-    if (!node || !isRelationEntityType(node.type)) return "";
+    if (!node) return "";
     return describeAttackPathRole(node.type);
   });
 
   const selectedNodeAttackPathExplanations = computed(() => {
     const node = selectedNetworkNode.value;
-    if (
-      !node ||
-      !isRelationEntityType(node.type) ||
-      node.type === RelationType.term
-    )
-      return [];
+    if (!node || node.type === RelationType.term) return [];
 
     return explainGroupedAttackPaths(
-      buildAttackPaths().filter((path) => hasPathNode(path, node))
+      buildAttackPaths().filter((path) => hasPathNode(path, node)),
     );
   });
 
@@ -371,7 +358,7 @@ export const createRelationAttackPathData = ({
   const selectedAttackPathDetail = computed(() => {
     if (selectedAttackPathId.value) {
       const selected = attackPathDetails.value.find(
-        (detail) => detail.id === selectedAttackPathId.value
+        (detail) => detail.id === selectedAttackPathId.value,
       );
       if (selected) return selected;
     }

@@ -1,9 +1,5 @@
 import { computed, type Ref } from "vue";
-import {
-  getRelationLineKey,
-  isRelationEntityType,
-  RelationType,
-} from "@/views/relation/relationTypes";
+import { getRelationLineKey } from "@/views/relation/relationTypes";
 import {
   createRelationGraphInsightHelpers,
   type RelationGraphInsightBaseOptions,
@@ -19,17 +15,24 @@ export const createRelationGraphRelationSummary = ({
   selectedNetworkNodeId,
   ...baseOptions
 }: CreateRelationGraphRelationSummaryOptions) => {
-  const { buildNodeSummary, buildRelationSummary, findNodeById } = createRelationGraphInsightHelpers(baseOptions);
+  const { buildNodeSummary, buildRelationSummary, findNodeById } =
+    createRelationGraphInsightHelpers(baseOptions);
 
   const selectedNetworkNode = computed(() => {
-    const selectedNode = baseOptions.nodes.find((node) => node.id === selectedNetworkNodeId.value);
-    return selectedNode ?? baseOptions.nodes.find((node) => node.id === relKey.value) ?? null;
+    const selectedNode = baseOptions.nodes.find(
+      (node) => node.id === selectedNetworkNodeId.value,
+    );
+    return (
+      selectedNode ??
+      baseOptions.nodes.find((node) => node.id === relKey.value) ??
+      null
+    );
   });
 
   const selectedNetworkNodeTitle = computed(() => {
     const node = selectedNetworkNode.value;
-    if (!node || !isRelationEntityType(node.type)) return "";
-    return baseOptions.getNodeTitle(node.type as Exclude<RelationType, RelationType.all>, node.id);
+    if (!node) return "";
+    return baseOptions.getNodeTitle(node.type, node.id);
   });
 
   const selectedNetworkRelations = computed(() => {
@@ -39,7 +42,10 @@ export const createRelationGraphRelationSummary = ({
     return baseOptions.lines
       .filter((line) => line.from === node.id || line.to === node.id)
       .map((line) => buildRelationSummary(line, node.id))
-      .sort((a, b) => a.priority - b.priority || a.otherNodeId.localeCompare(b.otherNodeId));
+      .sort(
+        (a, b) =>
+          a.priority - b.priority || a.otherNodeId.localeCompare(b.otherNodeId),
+      );
   });
 
   const selectedNetworkRelationCounts = computed(() => {
@@ -47,7 +53,8 @@ export const createRelationGraphRelationSummary = ({
     if (!node) return { incoming: 0, outgoing: 0 };
     return {
       incoming: baseOptions.lines.filter((line) => line.to === node.id).length,
-      outgoing: baseOptions.lines.filter((line) => line.from === node.id).length,
+      outgoing: baseOptions.lines.filter((line) => line.from === node.id)
+        .length,
     };
   });
 
@@ -58,7 +65,8 @@ export const createRelationGraphRelationSummary = ({
     return baseOptions.lines
       .filter(
         (line) =>
-          (line.from === relKey.value && line.to === node.id) || (line.from === node.id && line.to === relKey.value)
+          (line.from === relKey.value && line.to === node.id) ||
+          (line.from === node.id && line.to === relKey.value),
       )
       .map((line) => {
         const relationLineKey = getRelationLineKey(line);
@@ -73,7 +81,9 @@ export const createRelationGraphRelationSummary = ({
             ? baseOptions.t("relationView.direct")
             : baseOptions.t("relationView.indirect"),
           evidenceLevel: explanation.evidenceLevel,
-          evidenceLabel: baseOptions.formatEvidenceLevel(explanation.evidenceLevel),
+          evidenceLabel: baseOptions.formatEvidenceLevel(
+            explanation.evidenceLevel,
+          ),
           explanation: explanation.explanation,
           impactHint: explanation.impactHint,
           qualityFlags: explanation.qualityFlags,

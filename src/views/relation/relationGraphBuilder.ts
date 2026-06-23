@@ -10,7 +10,14 @@ import {
 import { createRiskRelationBuilder } from "@/views/relation/relationGraphRiskBuilder";
 import { createTermRelationBuilder } from "@/views/relation/relationGraphTermBuilder";
 import { createThreatActorRelationBuilder } from "@/views/relation/relationGraphThreatActorBuilder";
-import { createRelationTypeMapping, getRelationLineKey, type Line, type Node, RelationType } from "@/views/relation/relationTypes";
+import {
+  createRelationTypeMapping,
+  getRelationLineKey,
+  RelationType,
+  type Line,
+  type Node,
+  type RelationEntityType,
+} from "@/views/relation/relationTypes";
 
 interface CreateRelationGraphBuilderOptions {
   t: Translate;
@@ -21,8 +28,10 @@ interface CreateRelationGraphBuilderOptions {
   jsonData: { rootId: string };
   selectedNetworkNodeId: Ref<string>;
   RelationTypeMapping: ReturnType<typeof createRelationTypeMapping>;
-  relationLegendItems: Ref<{ key?: string; color: string; label: string; fields: string[] }[]>;
-  getGraphNodeText: (type: Exclude<RelationType, RelationType.all>, key: string) => string;
+  relationLegendItems: Ref<
+    { key?: string; color: string; label: string; fields: string[] }[]
+  >;
+  getGraphNodeText: (type: RelationEntityType, key: string) => string;
   renderNetworkChart: (notMerge?: boolean) => void;
 }
 
@@ -89,7 +98,9 @@ export const createRelationGraphBuilder = ({
   };
 
   const visibleRelationLegendItems = computed(() =>
-    relationLegendItems.value.filter((item) => totalLineType.value.includes(item.key ?? item.label))
+    relationLegendItems.value.filter((item) =>
+      totalLineType.value.includes(item.key ?? item.label),
+    ),
   );
 
   const setNetworkGraphData = (options?: { render?: boolean }) => {
@@ -101,7 +112,9 @@ export const createRelationGraphBuilder = ({
     }
   };
 
-  const draggedNodePositions = ref<Record<string, { x: number; y: number }>>({});
+  const draggedNodePositions = ref<Record<string, { x: number; y: number }>>(
+    {},
+  );
 
   const clearDraggedNodePositions = () => {
     draggedNodePositions.value = {};
@@ -159,7 +172,7 @@ export const createRelationGraphBuilder = ({
     reqType: RelationType,
     currentNodeType: RelationType,
     currentNodeId: string,
-    options?: { render?: boolean }
+    options?: { render?: boolean },
   ) => {
     if (currentNodeType === RelationType.risk) {
       if (reqType == RelationType.avoidance) {
@@ -235,7 +248,12 @@ export const createRelationGraphBuilder = ({
     } else if (currentNodeType === RelationType.term) {
       if (reqType == RelationType.all) {
         termBuilder.addRelatedEntities(currentNodeId);
-      } else if (reqType == RelationType.risk || reqType == RelationType.avoidance || reqType == RelationType.attackTool || reqType == RelationType.threatActor) {
+      } else if (
+        reqType == RelationType.risk ||
+        reqType == RelationType.avoidance ||
+        reqType == RelationType.attackTool ||
+        reqType == RelationType.threatActor
+      ) {
         termBuilder.addRelatedEntities(currentNodeId);
       }
     }

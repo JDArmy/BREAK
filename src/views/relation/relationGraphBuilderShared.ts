@@ -2,24 +2,27 @@ import {
   createRelationTypeMapping,
   type Line,
   type Node,
-  type RelationType,
+  type RelationEntityType,
 } from "@/views/relation/relationTypes";
 
-export type Translate = (key: string, params?: Record<string, unknown>) => string;
+export type Translate = (
+  key: string,
+  params?: Record<string, unknown>,
+) => string;
 
 export interface RelationGraphBuilderContext {
   t: Translate;
   nodes: Node[];
   lines: Line[];
   RelationTypeMapping: ReturnType<typeof createRelationTypeMapping>;
-  getGraphNodeText: (type: Exclude<RelationType, RelationType.all>, key: string) => string;
+  getGraphNodeText: (type: RelationEntityType, key: string) => string;
 }
 
 export const addRelationNode = (
   context: RelationGraphBuilderContext,
-  type: Exclude<RelationType, RelationType.all>,
+  type: RelationEntityType,
   id: string,
-  options?: { isSubNode?: boolean; isRelatedEntity?: boolean }
+  options?: { isSubNode?: boolean; isRelatedEntity?: boolean },
 ) => {
   context.nodes.push({
     id,
@@ -40,7 +43,7 @@ export const addRelationLine = (
   context: RelationGraphBuilderContext,
   from: string,
   relationKey: string,
-  to: string
+  to: string,
 ) => {
   context.lines.push({
     from,
