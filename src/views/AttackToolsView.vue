@@ -10,6 +10,7 @@ import { getMessageStringArray } from "@/utils/i18nMessage";
 import { useRelatedCases } from "@/composables/useRelatedCases";
 import { useRelatedEntities } from "@/composables/useRelatedEntities";
 import { useRelationGraph } from "@/composables/useRelationGraph";
+import { formatAttackToolRelationNote } from "@/utils/relationNote";
 
 const route = useRoute();
 const { t, locale, messages } = useI18n();
@@ -71,6 +72,8 @@ const attackToolItems = computed(() =>
 
 const selectedAttackTool = computed(() => BREAK.attackTools[selectedAttackToolKey.value]);
 const relatedAttackToolRelations = computed(() => selectedAttackTool.value?.relatedAttackTools ?? []);
+const getAttackToolRelationNote = (relation: NonNullable<typeof relatedAttackToolRelations.value>[number]) =>
+  formatAttackToolRelationNote(relation, locale.value, t);
 const localeMessages = computed(() => messages.value[locale.value] as Record<string, unknown>);
 
 const { relatedCases, ensureCases, cases, loaded, sectionRef: casesSectionRef } = useRelatedCases(
@@ -164,7 +167,7 @@ const { openRelationGraph } = useRelationGraph("attack-tool");
             <span class="attack-tool-relation-title">
               {{ relation.key }}: {{ $t(`BREAK.attackTools.${relation.key}.title`) }}
             </span>
-            <span v-if="relation.note" class="attack-tool-relation-note">{{ relation.note }}</span>
+            <span v-if="relation.note" class="attack-tool-relation-note">{{ getAttackToolRelationNote(relation) }}</span>
           </router-link>
         </div>
       </section>

@@ -9,6 +9,7 @@ import EntityLinkSection from "@/components/EntityLinkSection.vue";
 import { getMessageStringArray } from "@/utils/i18nMessage";
 import { useRelatedEntities } from "@/composables/useRelatedEntities";
 import { useRelationGraph } from "@/composables/useRelationGraph";
+import { formatAvoidanceRelationNote } from "@/utils/relationNote";
 
 const route = useRoute();
 const { t, locale, messages } = useI18n();
@@ -77,6 +78,8 @@ const avoidanceItems = computed(() =>
 const selectedAvoidance = computed(() => BREAK.avoidances[selectedAvoidanceKey.value]);
 const selectedAvoidanceEffectiveness = computed(() => selectedAvoidance.value?.effectiveness);
 const relatedAvoidanceRelations = computed(() => selectedAvoidance.value?.relatedAvoidances ?? []);
+const getAvoidanceRelationNote = (relation: NonNullable<typeof relatedAvoidanceRelations.value>[number]) =>
+  formatAvoidanceRelationNote(relation, locale.value, t);
 
 watch(selectedCategory, () => {
   if (
@@ -185,7 +188,7 @@ const { openRelationGraph } = useRelationGraph("avoidance");
             <span class="avoidance-relation-title">
               {{ relation.key }}: {{ $t(`BREAK.avoidances.${relation.key}.title`) }}
             </span>
-            <span v-if="relation.note" class="avoidance-relation-note">{{ relation.note }}</span>
+            <span v-if="relation.note" class="avoidance-relation-note">{{ getAvoidanceRelationNote(relation) }}</span>
           </router-link>
         </div>
       </section>

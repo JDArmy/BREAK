@@ -7,6 +7,7 @@ import KnowledgeSplitView from "@/components/KnowledgeSplitView.vue";
 import ReferenceList from "@/components/ReferenceList.vue";
 import EntityLinkSection from "@/components/EntityLinkSection.vue";
 import { getMessageStringArray } from "@/utils/i18nMessage";
+import { formatRiskRelationNote } from "@/utils/relationNote";
 import { useRelatedCases } from "@/composables/useRelatedCases";
 import { useRelatedEntities } from "@/composables/useRelatedEntities";
 import { useRelationGraph } from "@/composables/useRelationGraph";
@@ -59,6 +60,8 @@ watch(
 const selectedRisk = computed(() => BREAK.risks[selectedRiskKey.value]);
 const localeMessages = computed(() => messages.value[locale.value] as Record<string, unknown>);
 const relatedRiskRelations = computed(() => selectedRisk.value?.relatedRisks ?? []);
+const getRiskRelationNote = (relation: NonNullable<typeof relatedRiskRelations.value>[number]) =>
+  formatRiskRelationNote(relation, selectedRiskKey.value, locale.value, t);
 
 const { relatedCases, ensureCases, cases, loaded, sectionRef: casesSectionRef } = useRelatedCases(
   "risk",
@@ -141,7 +144,7 @@ const { openRelationGraph } = useRelationGraph("risk");
             <span class="risk-relation-title">
               {{ relation.key }}: {{ $t(`BREAK.risks.${relation.key}.title`) }}
             </span>
-            <span v-if="relation.note" class="risk-relation-note">{{ relation.note }}</span>
+            <span v-if="relation.note" class="risk-relation-note">{{ getRiskRelationNote(relation) }}</span>
           </router-link>
         </div>
       </section>
