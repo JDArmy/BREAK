@@ -72,6 +72,8 @@ const primaryDomainSuffixes = [
   'learn.microsoft.com',
   'pvp.qq.com',
   'gp.qq.com',
+  'daan.cpd.com.cn',
+  'epaper.cpd.com.cn',
   'cf.qq.com',
   'rule.jd.com',
   'gamesafe.qq.com',
@@ -117,7 +119,6 @@ const secondaryDomainSuffixes = [
   'caixin.com',
   'ysxw.cctv.cn',
   'news.cctv.cn',
-  'cpd.com.cn',
   '163.com',
   'sina.cn',
   'sina.com.cn',
@@ -141,6 +142,9 @@ const secondaryDomainSuffixes = [
 ];
 
 const mirrorDomainSuffixes = ['mp.weixin.qq.com', 'm.gmw.cn', 'toutiao.com', 'web.toutiao.com'];
+const primaryWechatBizIds = [
+  'MjM5MjMyNTA0MQ==', // 公安部网安局
+];
 
 function matchesDomain(domain, suffixes) {
   return suffixes.some((suffix) => {
@@ -166,6 +170,10 @@ function classifySource(ref) {
 
   if (matchesDomain(domain, primaryDomainSuffixes)) {
     return { sourceType: 'primary', reason: 'official_academic_or_original_domain' };
+  }
+
+  if (domain === 'mp.weixin.qq.com' && primaryWechatBizIds.some((bizId) => link.includes(`__biz=${bizId}`))) {
+    return { sourceType: 'primary', reason: 'official_wechat_account' };
   }
 
   if (matchesDomain(domain, mirrorDomainSuffixes)) {
