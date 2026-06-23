@@ -22,6 +22,7 @@ const props = defineProps<{
   relationTypeItems: RelationTypeItem[];
   filterRelationType: string[];
   filterSubNode: boolean;
+  filterRelatedEntity: boolean;
   subNodeFilterColor?: string;
   filterLineType: string[];
   visibleRelationLegendItems: RelationLegendItem[];
@@ -33,6 +34,7 @@ const emit = defineEmits<{
   "update:lineFilterVisible": [value: boolean];
   "update:filterRelationType": [value: string[]];
   "update:filterSubNode": [value: boolean];
+  "update:filterRelatedEntity": [value: boolean];
   "update:filterLineType": [value: string[]];
   filter: [];
 }>();
@@ -47,6 +49,11 @@ const filterRelationTypeModel = computed({
 const filterSubNodeModel = computed({
   get: () => props.filterSubNode,
   set: (value: boolean) => emit("update:filterSubNode", value),
+});
+
+const filterRelatedEntityModel = computed({
+  get: () => props.filterRelatedEntity,
+  set: (value: boolean) => emit("update:filterRelatedEntity", value),
 });
 
 const filterLineTypeModel = computed({
@@ -86,6 +93,17 @@ const filterLineTypeModel = computed({
       <span class="filter-item-with-color">
         <span class="legend-node-color" :style="{ backgroundColor: subNodeFilterColor }"></span>
         <span>{{ t("subNodeFilter") }}</span>
+      </span>
+    </el-checkbox>
+    <el-checkbox
+      v-model="filterRelatedEntityModel"
+      class="filter-checkbox"
+      name="node-filter-related-entity"
+      @change="emit('filter')"
+    >
+      <span class="filter-item-with-color">
+        <span class="legend-node-color related-entity-marker"></span>
+        <span>{{ t("relatedEntityFilter") }}</span>
       </span>
     </el-checkbox>
   </div>
@@ -166,6 +184,12 @@ const filterLineTypeModel = computed({
   height: 3px;
   flex: 0 0 auto;
   border-radius: 999px;
+}
+
+.related-entity-marker {
+  background:
+    linear-gradient(135deg, transparent 42%, var(--break-text-secondary) 42% 58%, transparent 58%),
+    var(--break-bg-card);
 }
 
 .filter-item-with-color,

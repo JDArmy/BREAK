@@ -20,6 +20,7 @@ interface CreateNetworkDataHelpersOptions {
   selectedNetworkNodeId: Ref<string>;
   filterRelationType: Ref<string[]>;
   filterSubNode: Ref<boolean>;
+  filterRelatedEntity: Ref<boolean>;
   filterLineType: Ref<string[]>;
   draggedNodePositions: Ref<Record<string, { x: number; y: number }>>;
   networkState: { layout: NetworkLayoutMode };
@@ -83,6 +84,7 @@ export const createNetworkDataHelpers = ({
   selectedNetworkNodeId,
   filterRelationType,
   filterSubNode,
+  filterRelatedEntity,
   filterLineType,
   draggedNodePositions,
   networkState,
@@ -677,9 +679,11 @@ export const createNetworkDataHelpers = ({
 
     nodes.forEach((node) => {
       const isSubNode = node.data?.isSubNode;
+      const isRelatedEntity = node.data?.isRelatedEntity;
       if (
         !filterRelationType.value.includes(node.type) ||
-        (isSubNode && !filterSubNode.value)
+        (isSubNode && !filterSubNode.value) ||
+        (isRelatedEntity && !filterRelatedEntity.value)
       ) {
         return;
       }

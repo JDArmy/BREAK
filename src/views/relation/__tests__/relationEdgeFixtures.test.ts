@@ -87,6 +87,7 @@ const createNetworkHelpers = (
     selectedNetworkNodeId?: string;
     filterRelationType?: string[];
     filterSubNode?: boolean;
+    filterRelatedEntity?: boolean;
     filterLineType?: string[];
   }
 ) =>
@@ -105,6 +106,7 @@ const createNetworkHelpers = (
       ]
     ),
     filterSubNode: ref(options?.filterSubNode ?? true),
+    filterRelatedEntity: ref(options?.filterRelatedEntity ?? true),
     filterLineType: ref(
       options?.filterLineType ?? [
         "relationLine.avoidanceMeans",

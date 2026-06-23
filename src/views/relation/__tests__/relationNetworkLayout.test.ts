@@ -44,14 +44,17 @@ describe("relationNetworkLayout", () => {
     layout?: NetworkLayoutMode;
     filterRelationType?: string[];
     filterSubNode?: boolean;
+    filterRelatedEntity?: boolean;
     filterLineType?: string[];
+    nodes?: Node[];
+    lines?: Line[];
     selectedNetworkNodeId?: string;
     draggedNodePositions?: Record<string, { x: number; y: number }>;
     isDark?: boolean;
   }) =>
     createNetworkDataHelpers({
-      nodes,
-      lines,
+      nodes: options?.nodes ?? nodes,
+      lines: options?.lines ?? lines,
       relKey: ref("ROOT"),
       selectedNetworkNodeId: ref(options?.selectedNetworkNodeId ?? ""),
       filterRelationType: ref(
@@ -64,6 +67,7 @@ describe("relationNetworkLayout", () => {
         ]
       ),
       filterSubNode: ref(options?.filterSubNode ?? true),
+      filterRelatedEntity: ref(options?.filterRelatedEntity ?? true),
       filterLineType: ref(
         options?.filterLineType ?? [
           "relationLine.avoidanceMeans",
@@ -173,6 +177,43 @@ describe("relationNetworkLayout", () => {
         text: "攻击工具",
       }),
     ]);
+  });
+
+  it("filters related entities independently from same-type root nodes", () => {
+    const helpers = createHelpers({
+      filterRelatedEntity: false,
+      nodes: [
+        ...nodes,
+        {
+          id: "RELATED_RISK",
+          type: RelationType.risk,
+          text: "Related Risk",
+          color: "",
+          data: { isRelatedEntity: true },
+        },
+      ],
+      lines: [
+        ...lines,
+        {
+          from: "ROOT",
+          relationKey: "relationLine.riskPrerequisite",
+          text: "关联风险",
+          to: "RELATED_RISK",
+        },
+      ],
+      filterLineType: [
+        "relationLine.avoidanceMeans",
+        "relationLine.directCauseRisk",
+        "relationLine.useAttackTool",
+        "relationLine.relatedTerm",
+        "relationLine.riskPrerequisite",
+      ],
+    });
+    const visibleData = helpers.getVisibleNetworkData();
+
+    expect(visibleData.nodes.map((node) => node.id)).toContain("ROOT");
+    expect(visibleData.nodes.map((node) => node.id)).not.toContain("RELATED_RISK");
+    expect(visibleData.links.map((link) => link.target)).not.toContain("RELATED_RISK");
   });
 
   it("uses dragged positions only in force layout and keeps sub-node styling distinct", () => {

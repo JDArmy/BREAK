@@ -19,6 +19,7 @@ const props = defineProps<{
   lineFilterVisible: boolean;
   filterRelationType: string[];
   filterSubNode: boolean;
+  filterRelatedEntity: boolean;
   filterLineType: string[];
   relationTypeItems: { key: string; title: string; color: string }[];
   subNodeFilterColor?: string;
@@ -45,6 +46,7 @@ const emit = defineEmits<{
   "update:lineFilterVisible": [value: boolean];
   "update:filterRelationType": [value: string[]];
   "update:filterSubNode": [value: boolean];
+  "update:filterRelatedEntity": [value: boolean];
   "update:filterLineType": [value: string[]];
   filter: [];
   closeRelationDetail: [];
@@ -152,6 +154,7 @@ const setNetworkScrollerRef = (
       :line-filter-visible="lineFilterVisible"
       :filter-relation-type="filterRelationType"
       :filter-sub-node="filterSubNode"
+      :filter-related-entity="filterRelatedEntity"
       :filter-line-type="filterLineType"
       :relation-type-items="relationTypeItems"
       :sub-node-filter-color="subNodeFilterColor"
@@ -161,6 +164,7 @@ const setNetworkScrollerRef = (
       @update:line-filter-visible="emit('update:lineFilterVisible', $event)"
       @update:filter-relation-type="emit('update:filterRelationType', $event)"
       @update:filter-sub-node="emit('update:filterSubNode', $event)"
+      @update:filter-related-entity="emit('update:filterRelatedEntity', $event)"
       @update:filter-line-type="emit('update:filterLineType', $event)"
       @filter="emit('filter')"
     />

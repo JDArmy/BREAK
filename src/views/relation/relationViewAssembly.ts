@@ -133,6 +133,7 @@ export const createRelationViewAssembly = ({
     selectedNetworkNodeId,
     filterRelationType: graphData.filterRelationType,
     filterSubNode: graphData.filterSubNode,
+    filterRelatedEntity: graphData.filterRelatedEntity,
     filterLineType: graphData.filterLineType,
     draggedNodePositions: graphData.draggedNodePositions,
     networkState,

@@ -22,7 +22,7 @@ export interface Node {
   type: string;
   text: string;
   color: string;
-  data?: { isSubNode?: boolean };
+  data?: { isSubNode?: boolean; isRelatedEntity?: boolean };
 }
 
 export interface Line {
@@ -77,7 +77,7 @@ export interface GraphNode {
     fontSize: number;
     fontWeight?: number | string;
   };
-  data?: { isSubNode?: boolean };
+  data?: { isSubNode?: boolean; isRelatedEntity?: boolean };
   x?: number;
   y?: number;
   fixed?: boolean;

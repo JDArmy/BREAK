@@ -48,6 +48,7 @@ export const createRelationGraphBuilder = ({
   ] as string[]);
 
   const filterSubNode = ref(true);
+  const filterRelatedEntity = ref(true);
   const totalLineType = ref([] as string[]);
   const filterLineType = ref(totalLineType.value);
 
@@ -246,6 +247,7 @@ export const createRelationGraphBuilder = ({
     clearDraggedNodePositions,
     draggedNodePositions,
     filterLineType,
+    filterRelatedEntity,
     filterRelationType,
     filterSubNode,
     getLineType,

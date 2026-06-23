@@ -75,7 +75,7 @@ export const createThreatActorRelationBuilder = (context: RelationGraphBuilderCo
       BREAK.threatActors[threatActorKey as keyof typeof BREAK.threatActors].relatedThreatActors ?? [];
     relatedThreatActors.forEach(({ key, relation }) => {
       if (!(key in BREAK.threatActors)) return;
-      addRelationNode(context, RelationType.threatActor, key);
+      addRelationNode(context, RelationType.threatActor, key, { isRelatedEntity: true });
       addRelationLine(context, threatActorKey, threatActorRelationLineKeyMap[relation], key);
     });
   };

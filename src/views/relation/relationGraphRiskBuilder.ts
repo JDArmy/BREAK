@@ -120,7 +120,7 @@ export const createRiskRelationBuilder = (context: RelationGraphBuilderContext) 
       BREAK.risks[riskKey as keyof typeof BREAK.risks].relatedRisks ?? [];
     relatedRisks.forEach(({ key, relation }) => {
       if (!(key in BREAK.risks)) return;
-      addRelationNode(context, RelationType.risk, key);
+      addRelationNode(context, RelationType.risk, key, { isRelatedEntity: true });
       addRelationLine(context, riskKey, riskRelationLineKeyMap[relation], key);
     });
   };

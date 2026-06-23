@@ -127,7 +127,7 @@ export const createAttackToolRelationBuilder = (context: RelationGraphBuilderCon
       BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools].relatedAttackTools ?? [];
     relatedAttackTools.forEach(({ key, relation }) => {
       if (!(key in BREAK.attackTools)) return;
-      addRelationNode(context, RelationType.attackTool, key);
+      addRelationNode(context, RelationType.attackTool, key, { isRelatedEntity: true });
       addRelationLine(context, attackToolKey, attackToolRelationLineKeyMap[relation], key);
     });
   };

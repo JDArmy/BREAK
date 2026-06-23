@@ -19,14 +19,20 @@ export const addRelationNode = (
   context: RelationGraphBuilderContext,
   type: Exclude<RelationType, RelationType.all>,
   id: string,
-  options?: { isSubNode?: boolean }
+  options?: { isSubNode?: boolean; isRelatedEntity?: boolean }
 ) => {
   context.nodes.push({
     id,
     type,
     text: context.getGraphNodeText(type, id),
     color: "",
-    data: options?.isSubNode ? { isSubNode: true } : undefined,
+    data:
+      options?.isSubNode || options?.isRelatedEntity
+        ? {
+            ...(options?.isSubNode ? { isSubNode: true } : {}),
+            ...(options?.isRelatedEntity ? { isRelatedEntity: true } : {}),
+          }
+        : undefined,
   } as Node);
 };
 
