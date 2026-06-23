@@ -20,6 +20,10 @@
       {
         "title": "runc 文件描述符泄漏漏洞（CVE-2024-21626） - 阿里云漏洞库",
         "link": "https://avd.aliyun.com/detail?id=AVD-2024-21626"
+      },
+      {
+        "title": "NVD：CVE-2024-21626 runc 容器逃逸漏洞详情",
+        "link": "https://nvd.nist.gov/vuln/detail/cve-2024-21626"
       }
     ],
     "updated": "2026-06-18",
