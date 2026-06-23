@@ -134,13 +134,18 @@ function classifyDomainStrategy(domain, issues, statuses) {
     };
   }
 
-  if (statusKeys.includes('403') || statusKeys.includes('401') || statusKeys.includes('429')) {
+  if (
+    statusKeys.includes('403') ||
+    statusKeys.includes('401') ||
+    statusKeys.includes('429') ||
+    statusKeys.includes('521')
+  ) {
     return {
       action: isOfficial || isAcademic ? 'manual_review_preserve' : 'manual_review_or_replace',
       priority: isOfficial || isAcademic ? 'P1' : 'P2',
       note: isOfficial || isAcademic
-        ? '权限/反爬导致的待复核，来源价值较高时不直接删除，人工确认页面可访问性。'
-        : '权限/反爬导致的待复核，人工确认后决定保留、替换或补充镜像。',
+        ? '权限、反爬或源站错误导致的待复核，来源价值较高时不直接删除，人工确认页面可访问性。'
+        : '权限、反爬或源站错误导致的待复核，人工确认后决定保留、替换或补充镜像。',
     };
   }
 
@@ -369,6 +374,7 @@ if (fromCache) {
   }
   cachedReport = JSON.parse(fs.readFileSync(cachePath, 'utf8'));
   results = cachedReport.results || [];
+  results = filterResultsByOptions(results, cachedReport.domainGroups || buildDomainGroups(results));
   console.log(`使用缓存引用健康报告重新生成域名分组: ${cachePath}`);
 } else {
   const references = collectReferences();
@@ -380,8 +386,6 @@ if (fromCache) {
   console.log(`准备检查 ${filteredReferences.length}/${references.length} 个唯一引用链接，并发 ${concurrency}，超时 ${timeoutMs}ms`);
   results = await runPool(filteredReferences, checkLink);
 }
-const initialDomainGroups = buildDomainGroups(results);
-results = filterResultsByOptions(results, initialDomainGroups);
 const stats = {
   uniqueLinks: results.length,
   ok: results.filter((item) => item.issue === 'ok').length,

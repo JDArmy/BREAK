@@ -34,6 +34,7 @@
 未完成工作：
 - 基于 `reference-health.domainGroups` 按策略分批处理 review、timeout、connection_error，优先官方源、高价值案例和 primary source。
 - 对 `manual_review_preserve`、`retry_with_long_timeout_preserve`、`replace_or_add_primary` 等策略建立固定处理流程，减少误报和重复复核成本。
+- P1 官方源复测后，继续处理仍为 `mps.gov.cn` 521、`justice.gov`/`moj.gov.cn` connection_error 的链接；可访问但脚本失败的权威源保留复核记录。
 
 落点：`.github/workflows/link-check.yml`、`scripts/validate/references-health.mjs`、`scripts/validate/reference-domain-plan.mjs`、`research/search-reports/reference-health.*`。
 

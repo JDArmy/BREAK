@@ -1,5 +1,11 @@
 # Change log
 
+## 2.23.8
+
+- 修正 `references-health` 筛选复测报告统计，保留筛选范围内恢复为 ok 的链接，避免复测摘要只显示剩余问题项
+- 对 P1 官方域名批量长超时复测，确认 `chinacourt.org`、`microsoft.com` 等大量 timeout 可恢复，剩余问题集中在 `mps.gov.cn`、`justice.gov`、`moj.gov.cn`
+- 将 521 源站错误纳入官方/学术域名保留复核策略，并让域名治理计划对 manual review 类策略附带浏览器复核命令
+
 ## 2.23.7
 
 - 将旧的一次性 403 检查脚本升级为通用浏览器复核工具，可读取 `reference-health-filtered.json` 并输出浏览器可访问性报告

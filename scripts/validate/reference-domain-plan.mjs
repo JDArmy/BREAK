@@ -12,17 +12,17 @@ const actionCommands = {
   retry_with_long_timeout_preserve:
     'REFERENCE_HEALTH_TIMEOUT_MS=30000 REFERENCE_HEALTH_CONCURRENCY=4 npm run audit:references-health -- --domains={domain}',
   manual_review_preserve:
-    'npm run audit:references-health:cached -- --domains={domain}',
+    'npm run audit:references-health:cached -- --domains={domain} && npm run audit:references-browser -- --issue=review',
   replace_or_add_primary:
     'npm run audit:quality-report',
   manual_review_or_replace:
-    'npm run audit:references-health:cached -- --domains={domain}',
+    'npm run audit:references-health:cached -- --domains={domain} && npm run audit:references-browser -- --issue=review',
   retry_or_replace:
     'REFERENCE_HEALTH_TIMEOUT_MS=30000 REFERENCE_HEALTH_CONCURRENCY=4 npm run audit:references-health -- --domains={domain}',
   replace_or_remove:
     'npm run audit:references-health:cached -- --domains={domain}',
   manual_review:
-    'npm run audit:references-health:cached -- --domains={domain}',
+    'npm run audit:references-health:cached -- --domains={domain} && npm run audit:references-browser -- --issue=review',
 };
 
 function readReferenceHealthReport() {
