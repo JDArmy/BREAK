@@ -105,6 +105,11 @@ const primaryDomainSuffixes = [
   'checkmarx.com',
   'securelist.com',
   'koi.ai',
+  'cert.europa.eu',
+  'sonatype.com',
+  'endorlabs.com',
+  'nsfocusglobal.com',
+  'notepad-plus-plus.org',
   'autoriteitpersoonsgegevens.nl',
   'dataprotection.ie',
   'capitalone.com',
@@ -171,6 +176,7 @@ const primaryReferenceLinks = new Set([
   'https://mp.weixin.qq.com/s?__biz=mzg4nta2mdu0oq==&mid=2247530131&idx=1&sn=69682338439f50044b36db5956286c8b', // 成都市市场监管政务微信
   'https://mp.weixin.qq.com/s/mkzzqogpgzb9dtgenlu6ja', // 公安部网安局官方微信
   'https://mp.weixin.qq.com/s/blui1fvmlxx8-zzzvaqnjq', // 警民直通车浦东官方微信
+  'https://medium.com/osmosis-community-updates/osmosis-updates-from-the-lab-recap-osmocon-and-exploit-fix-june-15-2022-fc22355e4b0d', // Osmosis 官方社区更新
 ]);
 const primaryWechatBizIds = [
   'MjM5MjMyNTA0MQ==', // 公安部网安局

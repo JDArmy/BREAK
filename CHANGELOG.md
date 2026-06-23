@@ -1,5 +1,11 @@
 # Change log
 
+## 2.23.29
+
+- 一次性复核并补充高价值安全事件 primary source，为 `C0294`、`C0782`、`C0795`、`C0803`、`C0806`、`C0811`、`C0812` 追加 Osmosis 官方社区、NSFOCUS、Notepad++ 官方公告、Endor Labs、Sonatype、Checkmarx、CERT-EU 等官方或原始研究来源，并同步英文引用标题
+- 扩充案例来源质量审计的 primary 识别，纳入 CERT-EU、Sonatype、Endor Labs、NSFOCUS、Notepad++ 官方域，并对白名单方式识别 Osmosis 官方社区 Medium 原文
+- 高价值案例 primary 覆盖提升到 361，primary 覆盖率提升到 37.67%，高价值 primary 覆盖率提升到 33.46%
+
 ## 2.23.28
 
 - 并行复核缺 primary 的安全事件、漏洞公告和司法执法案例，为 `C0203`、`C0284`、`C0307`、`C0792`、`C0822`、`C0892`、`C1173`、`C1271`、`C1302`、`C1303`、`C1381`、`C1506`、`C1520`、`C1789` 补充最高检、FTC、Europol、AT&T、Fortinet、Checkmarx、FDA、NVD 等官方或原始来源，并同步英文引用标题
