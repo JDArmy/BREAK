@@ -32,6 +32,7 @@ const primaryDomainSuffixes = [
   '.ac.cn',
   'gov.cn',
   'court.gov.cn',
+  'chinacourt.cn',
   'chinacourt.org',
   'jcy.gov.cn',
   'mps.gov.cn',
@@ -124,6 +125,13 @@ const secondaryDomainSuffixes = [
   'thehackernews.com',
   'krebsonsecurity.com',
   'bleepingcomputer.com',
+  'freebuf.com',
+  'anquanke.com',
+  'xz.aliyun.com',
+  'secrss.com',
+  'cloud.tencent.com',
+  '51cto.com',
+  'schneier.com',
 ];
 
 const mirrorDomainSuffixes = ['mp.weixin.qq.com', 'm.gmw.cn', 'toutiao.com', 'web.toutiao.com'];
