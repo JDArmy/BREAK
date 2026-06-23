@@ -1,5 +1,10 @@
 import { describe, expect, it } from "vitest";
 import { createRelationExplanationHelpers } from "../relationExplanation";
+import {
+  directRelationLineKeys,
+  relationExplanationRuleByKey,
+  relationExplanationRules,
+} from "../relationExplanationRules";
 import { RelationType, type Line, type Node } from "../relationTypes";
 
 describe("relationExplanation", () => {
@@ -43,7 +48,7 @@ describe("relationExplanation", () => {
         impactHint: "relationView.relationImpact.directCauseRisk",
         sourceFields: ["AttackTool.directCauseRisks"],
         qualityFlags: [],
-      })
+      }),
     );
   });
 
@@ -62,7 +67,7 @@ describe("relationExplanation", () => {
           "relationView.qualityFlagMissingSource",
           "relationView.qualityFlagReview",
         ],
-      })
+      }),
     );
   });
 
@@ -78,7 +83,7 @@ describe("relationExplanation", () => {
         evidenceLevel: "direct",
         sourceFields: ["Risk.avoidances"],
         explanation: "relationView.relationExplanation.riskAvoidance",
-      })
+      }),
     );
   });
 
@@ -115,13 +120,42 @@ describe("relationExplanation", () => {
 
     coverage.forEach((item) => {
       expect(item.explanationKey).toMatch(
-        /^relationView\.relationExplanation\./
+        /^relationView\.relationExplanation\./,
       );
       expect(item.impactKey).toMatch(/^relationView\.relationImpact\./);
       expect(item.sourceFields.length).toBeGreaterThan(0);
       expect(["direct", "indirect", "inferred", "review"]).toContain(
-        item.evidenceLevel
+        item.evidenceLevel,
       );
+    });
+  });
+
+  it("derives coverage and direct relation checks from rule configuration", () => {
+    const coverage = helpers.relationExplanationCoverage;
+
+    expect(coverage.map((item) => item.relationKey)).toEqual(
+      relationExplanationRules.map((rule) => rule.relationKey),
+    );
+    expect(
+      coverage.every(
+        (item) =>
+          relationExplanationRuleByKey.get(item.relationKey)?.evidenceLevel ===
+          item.evidenceLevel,
+      ),
+    ).toBe(true);
+
+    relationExplanationRules.forEach((rule) => {
+      const line: Line = {
+        from: "AT0001",
+        text: rule.relationKey,
+        to: "R0001",
+      };
+
+      expect(helpers.getRelationEvidenceLevel(line)).toBe(rule.evidenceLevel);
+      expect(helpers.isDirectRelationLine(rule.relationKey)).toBe(
+        directRelationLineKeys.has(rule.relationKey),
+      );
+      expect(helpers.getRelationPriority(rule.relationKey)).toBe(rule.priority);
     });
   });
 });
