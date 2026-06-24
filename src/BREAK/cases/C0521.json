@@ -19,11 +19,15 @@
     ],
     "references": [
       {
+        "title": "超18万个摄像头“失控”，“窥私”背后的黑产",
+        "link": "https://yk.lncourt.gov.cn/article/detail/2024/04/id/7895107.shtml"
+      },
+      {
         "title": "黑客反编译软件控制18万个摄像头供人偷窥,获利80万,获刑5年",
         "link": "https://mp.weixin.qq.com/s?__biz=MjM5NTc2MDYxMw==&mid=2458549899&idx=3&sn=bf93e17da3a7bc1e769a3df836767cb9&chksm=b00a692c5f0614829e486b2dfef40a7316e74efc41ed3d04819e4960cf690f0494ac47d40f57&scene=27"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-06-24",
     "incidentTime": "2018-04",
     "relatedAttackTools": [
       "AT0028",
@@ -32,6 +36,7 @@
     ],
     "relatedThreatActors": [
       "TA0018"
-    ]
+    ],
+    "version": 2
   }
 }

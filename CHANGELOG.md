@@ -1,5 +1,11 @@
 # Change log
 
+## 2.23.62
+
+- 更新升级规划，将已完成的浏览器回归 hard-fail 收紧从未完成 P0 项中移除，改为后续测试覆盖和视觉巡检噪声治理任务
+- 明确当前 PR CI 已覆盖 browser-smoke、relation-stability、lighthouse-baseline、site-performance、visual-review 独立阻断门禁，后续重点转向 `RelationView`、`HomeView` 和关键交互测试深度
+- 继续补强高价值案例 primary source，为 `C0492` 追加公安部人民公安报来源，为 `C0521` 追加营口法院案例来源，并同步英文引用标题
+
 ## 2.23.61
 
 - 将浏览器视觉巡检提升为 PR CI 独立 hard-fail job，覆盖 3 档视口、知识库页面、关系图/Sankey/Analysis 交互、搜索、导航、主题语言切换、异常路由回退和移动端关键路径

@@ -18,11 +18,15 @@
     ],
     "references": [
       {
+        "title": "[人民公安报]公安部公布打击黑客犯罪十大典型案例",
+        "link": "https://www.mps.gov.cn/n2254536/n2254544/n2254552/n9309244/n9309283/c9312129/content.html"
+      },
+      {
         "title": "公安部公布打击黑客犯罪十大典型案例",
         "link": "https://cn.chinadaily.com.cn/a/202409/02/WS66d55af1a310a792b3ab9d8e.html"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-06-24",
     "incidentTime": "2023-05",
     "relatedAttackTools": [
       "AT0056"
@@ -30,6 +34,7 @@
     "relatedThreatActors": [
       "TA0041",
       "TA0031"
-    ]
+    ],
+    "version": 2
   }
 }
