@@ -311,6 +311,7 @@ const primaryReferenceLinks = new Set([
   'https://news.ifeng.com/c/8ocjypfqor1', // 凤凰网托管公安部网安局游戏外挂通报
   'https://m.thepaper.cn/baijiahao_28782951', // 延津县人民法院官方澎湃号
   'https://www.thepaper.cn/newsdetail_forward_2921336', // 浙江法院系统政务稿，首例恶意注册账号案
+  'https://ipr.mofcom.gov.cn/article/gnxw/qt/202112/1966903.html', // 商务部知识产权栏目转载常熟市场监管跨平台盗图处罚
   'https://www.sohu.com/a/1037162346_99923255', // 《方圆》杂志原创，徐州经开区检察院审查起诉
   'https://web.archive.org/web/20220621092007/https://weibo.com/6329746106/LyKD2xUk8', // 学习通官方微博数据泄露传闻声明存档
   'https://view.inews.qq.com/a/20251205a03wsm00', // 抖音黑板报官方托管页，盗号黑产治理公告
