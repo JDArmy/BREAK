@@ -1,5 +1,10 @@
 # Change log
 
+## 2.23.69
+
+- 继续补强高价值监管、平台竞争和境外司法案例 primary source，为 `C1160`、`C1233`、`C1235`、`C1392` 追加 CNPD、市场监管总局、上海市场监管局和美国司法部官方来源，并同步英文引用标题
+- 案例 primary 覆盖提升到 855，高价值 primary 覆盖提升到 532，primary 覆盖率提升到 47.58%，高价值 primary 覆盖率提升到 49.30%
+
 ## 2.23.68
 
 - 继续补强高价值境外司法案例 primary source，为 `C1212`、`C1389`、`C1406` 追加美国司法部 SIM swapping、Mirai 僵尸网络和 Frosties NFT Rug Pull 官方公告，并同步英文引用标题

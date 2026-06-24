@@ -168,6 +168,7 @@ const primaryDomainSuffixes = [
   'youst.in',
   'autoriteitpersoonsgegevens.nl',
   'dataprotection.ie',
+  'cnpd.public.lu',
   'capitalone.com',
   'wuhua.gov.cn',
   'ankr.com',
