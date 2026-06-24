@@ -1,28 +1,31 @@
 {
   "C1178": {
-    "title": "SoundCloud数据泄露事件：API枚举滥用影响近3000万账户",
+    "title": "SoundCloud数据泄露事件：约2980万账号被HIBP收录",
     "keywords": [
       "SoundCloud",
       "数据泄露",
-      "API滥用",
-      "数据枚举",
       "账户安全",
-      "API接口攻击",
-      "大规模数据窃取",
+      "电子邮件地址泄露",
+      "公开资料",
+      "Have I Been Pwned",
       "信息安全事件"
     ],
-    "summary": "SoundCloud遭遇数据泄露事件，近3000万账户受影响。攻击者通过数据枚举和API滥用手段实施攻击，而非直接入侵数据库。该事件表明攻击者利用API接口进行大规模数据窃取，属于典型的API滥用风险。",
+    "summary": "Have I Been Pwned 将 SoundCloud 事件收录为影响约2980万账号的数据泄露事件，暴露数据包括电子邮件地址及公开资料。SoundCloud 官方说明称，事件源于一项辅助服务仪表盘的未授权访问，未涉及密码、财务数据或核心平台系统。该案体现了第三方辅助系统权限暴露对账号资料安全的影响。",
     "category": "security_incident",
     "relatedRisks": [
       "R0126"
     ],
     "references": [
       {
-        "title": "SoundCloud Data Exposure Incident: Nearly 30 Million Accounts ...",
-        "link": "https://r.search.yahoo.com/_ylt=AwrNaj14ozJqMAIA4AtXNyoA;_ylu=Y29sbwNiZjEEcG9zAzQEdnRpZAMEc2VjA3Ny/RV=2/RE=1782913145/RO=10/RU=https%3a%2f%2fundercodenews.com%2fsoundcloud-data-exposure-incident-nearly-30-million-accounts-impacted-by-api-enumeration-abuse%2f/RK=2/RS=yfcDhiY4tP3NrpOViUejTuP.l6c-"
+        "title": "SoundCloud data breach",
+        "link": "https://haveibeenpwned.com/Breach/SoundCloud"
+      },
+      {
+        "title": "Protecting our users and our service",
+        "link": "https://soundcloud.com/playbook-articles/protecting-our-users-and-our-service"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-06-25",
     "relatedAttackTools": [
       "AT0085",
       "AT0061"

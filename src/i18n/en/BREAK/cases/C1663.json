@@ -1,20 +1,20 @@
 {
   "C1663": {
-    "title": "Sleep Function Resource Exhaustion Attack Disrupts AI Large Model Training",
+    "title": "ByteDance Large Model Training Task Maliciously Disrupted by an Intern",
     "keywords": [
       "AI large model training",
-      "Sleep function attack",
-      "GPU resource exhaustion",
-      "compute waste",
-      "Huggingface",
-      "malicious code injection",
+      "intern malicious disruption",
+      "GPU training task",
+      "compute resources",
+      "ByteDance",
+      "model training security",
       "training task interruption",
       "cluster security"
     ],
-    "summary": "In a domestic AI large model training security incident disclosed in October 2024, attackers maliciously used Sleep functions to suspend training tasks, causing a drastic drop in GPU utilization with a compute-to-idle ratio reaching 1:1 and severely wasting expensive computing resources. The attack targeted large-scale training jobs involving over 256 GPUs, exhibiting strong stealth and causing si",
+    "summary": "In October 2024, ByteDance's official account clarified rumors about an intern attacking large model training. The company said an intern in its commercial technology team maliciously disrupted a model training task because of dissatisfaction with resource allocation and had been dismissed. ByteDance said the affected work was a research project within the commercial technology team and did not affect online services, formal projects, or commercial large models; online claims involving more than 8,000 GPUs and tens of millions of dollars in losses were described as severely exaggerated.",
     "references": [
       {
-        "title": "Unprecedented: Malicious Code Injection in GPU Clusters? Model Poisoning? Resource Consumption Attacks? - Tencent..."
+        "title": "ByteDance statement on an intern maliciously disrupting a model training task"
       }
     ]
   }

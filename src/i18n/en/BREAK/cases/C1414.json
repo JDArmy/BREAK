@@ -1,18 +1,18 @@
 {
   "C1414": {
-    "title": "Polymarket UMA Oracle Manipulation Incident",
+    "title": "Polymarket UMA Oracle Disputed Resolution Incident",
     "keywords": [
-      "Polymarket oracle exploit",
-      "UMA token voting manipulation",
-      "prediction market dispute attack",
-      "whale governance attack",
-      "oracle manipulation incident",
-      "decentralized oracle vulnerability"
+      "Polymarket oracle dispute",
+      "UMA token voting",
+      "prediction market dispute",
+      "oracle governance",
+      "disputed resolution",
+      "decentralized oracle risk"
     ],
-    "summary": "In March 2025, a whale holding a large amount of UMA tokens forcibly validated an incorrect outcome during the dispute resolution phase of a Polymarket prediction market on whether Ukraine would agree to Trump's mineral deal by April. This manipulated a market that should have resolved to zero into a 100% probability, exposing the manipulability of token-based oracle governance mechanisms.",
+    "summary": "In March 2025, a Polymarket prediction market on whether Ukraine would agree to give Trump rare earth minerals before April entered UMA's dispute-resolution process. The official market page shows about $7.08 million in trading volume, with the outcome proposed, disputed, and ultimately finalized as Yes. The case illustrates how prediction markets can face conflicts between user expectations, rule interpretation, and final oracle settlement in contentious news events.",
     "references": [
       {
-        "title": "When Magical Realism Becomes the Norm: Top 10 Most 'Outrageous' Web3 Events of 2025"
+        "title": "Ukraine agrees to give Trump rare earth minerals before April?"
       }
     ]
   }

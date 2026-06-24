@@ -1,27 +1,32 @@
 {
   "C1176": {
-    "title": "SoundCloud数据暴露事件：近3000万账户因API枚举滥用受影响",
+    "title": "SoundCloud用户资料数据暴露事件",
     "keywords": [
       "SoundCloud",
       "data exposure",
-      "API enumeration",
-      "API abuse",
+      "ancillary service dashboard",
       "user accounts",
-      "data scraping",
+      "email address exposure",
+      "public profile data",
+      "Have I Been Pwned",
       "information disclosure"
     ],
-    "summary": "SoundCloud遭遇数据暴露事件，近3000万账户受影响。该事件由数据枚举和API滥用导致，而非直接数据库入侵。攻击者通过API接口进行大规模数据枚举，获取用户信息。",
+    "summary": "SoundCloud披露，2025年12月其一项辅助服务的仪表盘遭未授权访问，部分用户的电子邮件地址和公开资料被查看。SoundCloud称未涉及密码或财务信息，影响范围约为活跃月用户的20%。Have I Been Pwned 后续将该事件收录为影响约2980万账号的数据泄露事件。",
     "category": "security_incident",
     "relatedRisks": [
       "R0126"
     ],
     "references": [
       {
-        "title": "SoundCloud Data Exposure Incident: Nearly 30 Million Accounts Impacted ...",
-        "link": "https://undercodenews.com/soundcloud-data-exposure-incident-nearly-30-million-accounts-impacted-by-api-enumeration-abuse/"
+        "title": "Protecting our users and our service",
+        "link": "https://soundcloud.com/playbook-articles/protecting-our-users-and-our-service"
+      },
+      {
+        "title": "SoundCloud data breach",
+        "link": "https://haveibeenpwned.com/Breach/SoundCloud"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-06-25",
     "relatedAttackTools": [
       "AT0005",
       "AT0085",

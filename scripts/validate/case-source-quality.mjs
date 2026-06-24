@@ -53,6 +53,8 @@ const primaryDomainSuffixes = [
   'bj148.org',
   'njyhfy.gov.cn',
   'liulin.gov.cn',
+  'scjgj.quanzhou.gov.cn',
+  'pbc.gov.cn',
   'samr.gov.cn',
   'cac.gov.cn',
   'chinatax.gov.cn',
@@ -192,6 +194,8 @@ const primaryDomainSuffixes = [
   'cloudsek.com',
   'tenable.com',
   'youst.in',
+  'soundcloud.com',
+  'haveibeenpwned.com',
   'datenschutz-berlin.de',
   'nilsonreport.com',
   'cgbchina.com.cn',
@@ -363,6 +367,8 @@ const primaryReferenceLinks = new Set([
   'https://x.com/gate_io/status/1082525066510749696', // Gate.io 官方 ETC 51% 攻击说明
   'https://humanityprotocol.notion.site/h-token-incident-update-37ab0ec467a781d7af06e7dcedd66852', // Humanity Protocol 官方事件更新
   'https://bitcointalk.org/index.php?topic=105818.0', // BitFloor 创始人事故说明
+  'https://polymarket.com/event/ukraine-agrees-to-give-trump-rare-earth-metals-before-april/ukraine-agrees-to-give-trump-rare-earth-metals-before-april', // Polymarket 官方市场页
+  'https://www.toutiao.com/w/1813324433807370/', // 字节跳动官方账号澄清
 ]);
 const normalizedPrimaryReferenceLinks = new Set([...primaryReferenceLinks].map((link) => link.toLowerCase()));
 const primaryWechatBizIds = [

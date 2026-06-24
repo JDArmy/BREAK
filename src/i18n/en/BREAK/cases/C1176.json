@@ -1,19 +1,23 @@
 {
   "C1176": {
-    "title": "SoundCloud Data Exposure: Nearly 30 Million Accounts Affected by API Enumeration Abuse",
+    "title": "SoundCloud User Profile Data Exposure Incident",
     "keywords": [
       "SoundCloud",
       "data exposure",
-      "API enumeration",
-      "API abuse",
+      "ancillary service dashboard",
       "user accounts",
-      "data scraping",
+      "email address exposure",
+      "public profile data",
+      "Have I Been Pwned",
       "information disclosure"
     ],
-    "summary": "SoundCloud experienced a data exposure incident impacting nearly 30 million user accounts. The event resulted from data enumeration and API abuse rather than a direct database breach. Attackers performed large-scale data enumeration through API endpoints to harvest user information.",
+    "summary": "SoundCloud disclosed that in December 2025 an ancillary service dashboard was accessed without authorization, exposing some users' email addresses and public profile information. SoundCloud said passwords and financial information were not involved, and estimated that roughly 20% of monthly active users were affected. Have I Been Pwned later listed the incident as a breach affecting about 29.8 million accounts.",
     "references": [
       {
-        "title": "SoundCloud Data Exposure Incident: Nearly 30 Million Accounts Impacted ..."
+        "title": "Protecting our users and our service"
+      },
+      {
+        "title": "SoundCloud data breach"
       }
     ]
   }

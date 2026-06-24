@@ -1,28 +1,27 @@
 {
   "C1414": {
-    "title": "Polymarket UMA 预言机操纵事件",
+    "title": "Polymarket UMA 预言机争议性结算事件",
     "keywords": [
       "Polymarket",
       "UMA",
-      "预言机操纵",
+      "预言机争议",
       "预测市场",
       "代币投票",
-      "治理攻击",
-      "巨鲸",
+      "治理争议",
       "争端解决"
     ],
-    "summary": "2025年3月，在Polymarket关于“乌克兰是否会在4月前同意特朗普矿产协议”的预测市场中，一名持有大量UMA代币的巨鲸，在结果争议期通过其投票权强行将错误结果判定为真，导致一个原本应归零的市场被操纵为100%胜率。该事件暴露了基于代币投票的预言机治理机制存在被操纵的风险。",
+    "summary": "2025年3月，Polymarket 上关于“乌克兰是否会在4月前同意特朗普稀土矿产协议”的预测市场进入 UMA 争议解决流程。官方市场页显示，该市场成交量约708万美元，结果经历 Proposed 与 Disputed 后最终结算为 Yes。该案说明预测市场在争议性新闻事件中依赖预言机治理结算时，可能出现用户预期、规则解释与最终结果之间的冲突。",
     "category": "security_incident",
     "relatedRisks": [
       "R0169"
     ],
     "references": [
       {
-        "title": "当魔幻现实主义成为常态,盘点2025 Web3行业十大“离谱”事件_腾讯...",
-        "link": "https://view.inews.qq.com/a/20251226A06GXA00"
+        "title": "Ukraine agrees to give Trump rare earth minerals before April?",
+        "link": "https://polymarket.com/event/ukraine-agrees-to-give-trump-rare-earth-metals-before-april/ukraine-agrees-to-give-trump-rare-earth-metals-before-april"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-06-25",
     "incidentTime": "2025-03",
     "relatedAttackTools": [],
     "relatedThreatActors": [
