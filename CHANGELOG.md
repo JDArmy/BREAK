@@ -1,5 +1,10 @@
 # Change log
 
+## 2.23.90
+
+- 继续补强高价值案例 primary source，为 `C0274`、`C0276`、`C0316`、`C0321`、`C0326`、`C0327`、`C0329`、`C0332`、`C0339`、`C0342` 追加公安、法院、检察、税务和政法系统官方来源，并同步英文引用标题
+- 案例 primary 覆盖提升到 885，高价值 primary 覆盖提升到 562，primary 覆盖率提升到 49.25%，高价值 primary 覆盖率提升到 52.09%
+
 ## 2.23.89
 
 - 拆分 `RelationNodeDrawerRelations` 的关系筛选逻辑，新增 `relationNodeDrawerRelationFilters` 承载筛选匹配、候选项构建、自然排序去重和无效筛选清理
