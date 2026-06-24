@@ -51,6 +51,8 @@ const primaryDomainSuffixes = [
   'gat.guizhou.gov.cn',
   'gaj.ningbo.gov.cn',
   'gat.nmg.gov.cn',
+  'yjj.wuzhou.gov.cn',
+  'wjw.lanzhou.gov.cn',
   'bj148.org',
   'njyhfy.gov.cn',
   'liulin.gov.cn',
@@ -379,6 +381,7 @@ const primaryReferenceLinks = new Set([
   'https://sichuan.scol.com.cn/ggxw/202605/83260828.html', // 四川在线承载公安部网安局通报
   'https://xinwen.bjd.com.cn/content/s61ac6df9e4b04441fdd04169.html', // 北京日报客户端发布海淀区检察院白皮书
   'https://finance.sina.com.cn/wm/2026-05-08/doc-inhxcusr4543179.shtml', // 新浪承载公安部网安局官方账号通报
+  'https://mp.weixin.qq.com/s?__biz=mjm5mtczodg0ma==&mid=2649821281&idx=1&sn=4c5cfd23a22fa9563581871847f89863&chksm=bfd3905763b3ba9d7dfed20dc74856a586350043733c7cdb9c8af73c163ab6d015f264768f97&scene=27', // 南京市场监管相关官方微信托管页，价格违法典型案例
 ]);
 const normalizedPrimaryReferenceLinks = new Set([...primaryReferenceLinks].map((link) => link.toLowerCase()));
 const primaryWechatBizIds = [
