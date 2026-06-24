@@ -1,20 +1,20 @@
 {
   "C1172": {
-    "title": "API Logic Flaw in Domestic E-Commerce Platform Exposes 1.18 Billion Order Records",
+    "title": "Taobao Customer Information Illegally Crawled at 1.18 Billion Records",
     "keywords": [
-      "API logic vulnerability",
-      "order data leak",
-      "e-commerce platform",
-      "API business logic abuse",
+      "customer information scraping",
+      "Taobao",
+      "web interface",
+      "illegal data acquisition",
       "data security",
       "interface security",
       "logic flaw",
       "user privacy"
     ],
-    "summary": "In June 2021, a domestic e-commerce platform suffered a data leak of 1.18 billion user order records due to a logic flaw in the combination of two API interfaces. Attackers exploited this vulnerability to gain unauthorized access to data through legitimate API calls, representing a typical case of API business logic abuse.",
+    "summary": "A criminal judgment from the Suiyang District People's Court of Shangqiu, Henan, showed that the defendants illegally crawled Taobao customer information through web interfaces and obtained 1,180,738,048 records. The case highlights the platform user information security risks created by exposed interfaces, crawler programs, and bulk data collection.",
     "references": [
       {
-        "title": "E-Commerce Platform Crawler Industry Chain: 1.2 Billion Taobao Data Records Leaked, Price Comparison Platforms Face Compliance Risks"
+        "title": "First-Instance Criminal Judgment for Zhang and Lu on Infringement of Citizens' Personal Information"
       }
     ]
   }

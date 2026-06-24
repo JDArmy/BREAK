@@ -1,31 +1,31 @@
 {
   "C0401": {
-    "title": "Tycoon 2FA钓鱼套件攻击医疗科技公司致140万美元损失",
+    "title": "Microsoft披露Tycoon2FA中间人钓鱼套件大规模运行",
     "keywords": [
-      "Tycoon 2FA",
+      "Tycoon2FA",
       "钓鱼套件",
       "中间人攻击",
       "会话Cookie劫持",
       "多因素认证绕过",
       "Microsoft 365",
-      "医疗科技",
-      "商业电子邮件诈骗",
+      "凭证窃取",
+      "钓鱼即服务",
       "反向代理",
       "Any.run"
     ],
-    "summary": "2025年10月，波士顿一家医疗科技公司财务总监点击伪装成会议邀请的钓鱼邮件附件，在仿冒Microsoft 365登录页输入账号密码及MFA验证码。攻击者通过Tycoon 2FA套件的中间人反向代理实时截获会话Cookie，随后以CEO名义发送变更收款账户邮件，卷走140万美元。",
+    "summary": "2026年3月，Microsoft披露Tycoon2FA中间人钓鱼套件的运行方式。该套件以钓鱼即服务形态提供，可通过反向代理仿冒登录流程，诱导受害者输入凭证和完成多因素认证，并窃取会话Cookie用于绕过MFA。",
     "category": "security_incident",
     "relatedRisks": [
       "R0035-001"
     ],
     "references": [
       {
-        "title": "\"MFA已过时?\"Tycoon 2FA钓鱼套件掀起会话劫持风暴,全球超6万...",
-        "link": "https://cloud.tencent.com/developer/article/2619574"
+        "title": "Inside Tycoon2FA: How a leading AiTM phishing kit operated at scale",
+        "link": "https://www.microsoft.com/en-us/security/blog/2026/03/04/inside-tycoon2fa-how-a-leading-aitm-phishing-kit-operated-at-scale/"
       }
     ],
     "updated": "2026-06-18",
-    "incidentTime": "2025-10",
+    "incidentTime": "2026-03",
     "relatedAttackTools": [
       "AT0071",
       "AT0072",

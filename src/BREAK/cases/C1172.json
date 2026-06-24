@@ -1,25 +1,25 @@
 {
   "C1172": {
-    "title": "国内网购平台API逻辑漏洞致11.8亿订单数据泄露",
+    "title": "淘宝客户信息被非法爬取11.8亿条",
     "keywords": [
-      "API逻辑漏洞",
-      "订单数据泄露",
-      "网购平台",
-      "API业务逻辑滥用",
+      "客户信息爬取",
+      "淘宝",
+      "网页接口",
+      "非法获取数据",
       "数据安全",
       "接口安全",
       "逻辑缺陷",
       "用户隐私"
     ],
-    "summary": "2021年6月，国内某网购平台因两个API接口组合存在逻辑缺陷，攻击者利用该漏洞非法获取了11.8亿条用户订单数据。该事件属于典型的API业务逻辑滥用，通过合法API调用实现了非预期的数据访问。",
+    "summary": "河南省商丘市睢阳区人民法院刑事判决书显示，行为人通过淘宝网页接口非法爬取客户信息，获取数据1180738048条。案件反映出公开接口、爬虫程序和批量数据采集结合后对平台用户信息安全造成的风险。",
     "category": "security_incident",
     "relatedRisks": [
       "R0126-003"
     ],
     "references": [
       {
-        "title": "电商平台爬虫产业链：淘宝12亿条数据泄露，比价平台存合规隐患",
-        "link": "https://finance.sina.com.cn/tech/2021-06-19/doc-ikqcfnca1985266.shtml?cre=tianyi&mod=pcpager_news&loc=30&r=0&rfunc=33&tj=cxvertical_pc_pager_news&tr=340"
+        "title": "张某某、陆某某侵犯公民个人信息一审刑事判决书",
+        "link": "https://www.elawcn.com/ecommerce/2021/0611/845.html"
       }
     ],
     "updated": "2026-06-18",

@@ -39,6 +39,7 @@ const primaryDomainSuffixes = [
   'jcrb.com',
   'moj.gov.cn',
   'mps.gov.cn',
+  'europarl.europa.eu',
   'jxzfw.gov.cn',
   'gdzf.org.cn',
   'gzszfw.gov.cn',
@@ -372,6 +373,12 @@ const primaryReferenceLinks = new Set([
   'https://www.toutiao.com/w/1813324433807370/', // 字节跳动官方账号澄清
   'https://dj.sina.com.cn/article/iznezxt0458042.shtml', // 新浪电竞承载 DOTA2 官方公告
   'https://www.facebook.com/100084504854473/videos/a-statement-on-the-recent-upload-of-ai-music-impersonating-my-voice-onto-major-s/892417137070162/', // 艺人本人声明
+  'https://news.cctv.cn/2024/11/05/ARTIoH6Pv5aQFgb3LONjc3Kc241105.shtml', // 央视网转载北京市第一中级人民法院法官署名案例
+  'https://www.elawcn.com/ecommerce/2021/0611/845.html', // 法律教育网转载人民法院刑事判决书文本
+  'https://www.freebuf.com/articles/network/216918.html', // FreeBuf 原创应急响应分析
+  'https://sichuan.scol.com.cn/ggxw/202605/83260828.html', // 四川在线承载公安部网安局通报
+  'https://xinwen.bjd.com.cn/content/s61ac6df9e4b04441fdd04169.html', // 北京日报客户端发布海淀区检察院白皮书
+  'https://finance.sina.com.cn/wm/2026-05-08/doc-inhxcusr4543179.shtml', // 新浪承载公安部网安局官方账号通报
 ]);
 const normalizedPrimaryReferenceLinks = new Set([...primaryReferenceLinks].map((link) => link.toLowerCase()));
 const primaryWechatBizIds = [
