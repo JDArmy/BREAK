@@ -1,5 +1,13 @@
 # Change log
 
+## 2.23.35
+
+- 继续批量补强高价值安全事件与漏洞案例 primary source，为 `C0417`、`C0708`、`C0716`、`C1210`、`C1270`、`C1332`、`C1354`、`C1359`、`C1364`、`C1369`、`C1396`、`C1423`、`C1656`、`C1658`、`C1758`、`C1767` 追加或识别 Sekoia、Cisco、Oligo、Twitter/X 官方、Push Security、Microsoft、PeckShield、Venus Protocol、Thetanuts Finance、Multichain、Akamai、Horizen、CloudSEK、Appknox、Cisco Talos、Youstin 等官方、厂商研究、原始论文或精确社媒公告来源，并同步英文引用标题
+- 严格跳过 Reddit 个体陈述等不稳定来源，并将 `C1423` 的事件时间修正为官方资料对应的 2018-06
+- 扩充案例来源质量审计的 primary 识别，纳入 Sekoia、Cisco/Talos、Oligo、Push Security、Akamai、Horizen、CloudSEK、Youstin、PeckShield Medium 原始分析和若干官方 X 精确链接
+- 高价值案例 primary 覆盖提升到 432，primary 覆盖率提升到 41.85%，高价值 primary 覆盖率提升到 40.04%
+- 收紧浏览器回归链路：新增次版本以上升级门控、视觉人工复核截图报告和关键交互巡检，CI 仅在 major/minor 版本变化时运行并阻断失败
+
 ## 2.23.34
 
 - 继续集中补强链上、僵尸网络和企业攻击案例 primary source，为 `C1361`、`C1374`、`C1376`、`C1390`、`C1394`、`C1413`、`C1422`、`C1424`、`C1426`、`C1436`、`C1455`、`C1522`、`C1525`、`C1540`、`C1543` 追加或识别 xToken、PeckShield、BitFloor、USENIX、CertiK、Qubic、Bitcoin Gold、Messari、Manta Network、Aztec Labs、SlowMist、Scam Sniffer、Microsoft、Balancer 等官方、原始研究或链上分析来源，并同步英文引用标题

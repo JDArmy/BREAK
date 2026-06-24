@@ -15,6 +15,9 @@
     "references": [
       {
         "title": "Solidity Smart Contract Basic Vulnerability: Integer Overflow - Security KER"
+      },
+      {
+        "title": "New batchOverflow Bug in Multiple ERC20 Smart Contracts (CVE-2018-10299)"
       }
     ]
   }

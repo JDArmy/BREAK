@@ -100,6 +100,12 @@ const primaryDomainSuffixes = [
   'paloaltonetworks.com',
   'invariantlabs.ai',
   'samcurry.net',
+  'sekoia.io',
+  'cisco.com',
+  'talosintelligence.com',
+  'oligo.security',
+  'pushsecurity.com',
+  'akamai.com',
   'fortiguard.com',
   'fortinet.com',
   'checkmarx.com',
@@ -144,6 +150,9 @@ const primaryDomainSuffixes = [
   'cloudsmith.com',
   'qubic.org',
   'bitcoingold.org',
+  'horizen.io',
+  'cloudsek.com',
+  'youst.in',
   'autoriteitpersoonsgegevens.nl',
   'dataprotection.ie',
   'capitalone.com',
@@ -210,6 +219,7 @@ const primaryReferenceLinks = new Set([
   'https://medium.com/paritytech/a-postmortem-on-the-parity-multi-sig-library-self-destruct-63daca3a4cf7', // Parity 官方事后分析
   'https://peckshield.medium.com/value-defi-incident-root-cause-analysis-fbab71faf373', // PeckShield 原始链上分析
   'https://peckshield.medium.com/bzx-hack-ii-full-disclosure-with-detailed-profit-analysis-8126eecc1360', // PeckShield 原始链上分析
+  'https://peckshield.medium.com/alert-new-batchoverflow-bug-in-multiple-erc20-smart-contracts-cve-2018-10299-511067db6536', // PeckShield 原始链上分析
   'https://slowmist.medium.com/the-root-cause-of-poly-network-being-hacked-ec2ee1b0c68f', // SlowMist 原始链上分析
   'https://slowmist.medium.com/navigating-on-chain-communication-after-a-crypto-hack-74a4fd8b1791', // SlowMist 原始链上分析
   'https://medium.com/xtoken/xsnx-post-mortem-666d35071f38', // xToken 官方事后分析
@@ -218,6 +228,10 @@ const primaryReferenceLinks = new Set([
   'https://x.com/AztecLabs_/status/2066175430252700035', // Aztec Labs 官方事故说明
   'https://x.com/realScamSniffer/status/1970322013597450609', // Scam Sniffer 原始链上告警
   'https://x.com/PeckShieldAlert/status/1976577386469839269', // PeckShield 原始链上告警
+  'https://x.com/TwitterComms/status/1167559184410431488', // Twitter 官方事件说明
+  'https://x.com/VenusProtocol/status/2033471885259034989', // Venus Protocol 官方事件说明
+  'https://x.com/ThetanutsFi/status/2066569315961454925', // Thetanuts Finance 官方事件说明
+  'https://x.com/MultichainOrg/status/1679768407628185600', // Multichain 官方事件说明
   'https://bitcointalk.org/index.php?topic=105818.0', // BitFloor 创始人事故说明
 ]);
 const primaryWechatBizIds = [
