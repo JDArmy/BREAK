@@ -241,6 +241,8 @@ const primaryReferenceLinks = new Set([
   'https://mp.weixin.qq.com/s?__biz=mza5mzgzodywoa==&mid=2650506064&idx=3&sn=6f1ab6601fe507fea783c3da8235ab61&chksm=8914f041678c84c260dabbab50587d08dfbbea7248fc01300674a473343172e066f62f2bd993&scene=27', // 众安保险官方协查公告
   'https://mp.weixin.qq.com/s?__biz=mziwmjg4oti2nq==&mid=2247597756&idx=1&sn=751c1ea5b214ae6e14a208c04ae05e3d&chksm=976a9115a2f2a7d3a131e573f1ace2322d97ec1a77abf668a1224ac8d977e046968f5c7cad71&scene=27', // 上海高院官方微信
   'https://mp.weixin.qq.com/s?__biz=mzi3mtqznjyxnw==&mid=2247942229&idx=1&sn=60015b68761a105e0f52e046a045e0b0&chksm=eb23a3265ba293db1f219b1ce7328244489cb07e98df0a228bd981f419b7ec820f1515bb599a&scene=27', // 网信北京官方微信
+  'https://mp.weixin.qq.com/s/ksxev9ft7i4suicefuyzxg', // 微信安全中心官方治理公告
+  'https://mp.weixin.qq.com/s?__biz=mzu1mte1mju5nw==&mid=2247485363&idx=1&sn=76a86685d32ca24ebff66be37165fdf3', // 国家网络安全通报中心官方微信
   'https://mp.weixin.qq.com/s?__biz=mza3ody0njqzma==&mid=2650284888&idx=1&sn=a48ed16d4c3feb2abfe101fb778108f9&chksm=87b31ea9b0c497bf2295c0506f0b9adb1618bad1e445662eefe8423764371d94786a591701e9&scene=27', // 宁波公安官方微信
   'https://mp.weixin.qq.com/s?__biz=mzawmtu1odawnq==&mid=2650670258&idx=4&sn=115d31346e5a6671f91921b2bd1597c6&chksm=82dd7028b5aaf93eba9ba66f686d8fad00b96ea480d9cd30a8b77277c3a3d09b55571658b53b&scene=27', // 公安部网安局官方微信
   'https://mp.weixin.qq.com/s/nhiwxqy5qxj_xsxtzgpyba', // 钦州网警官方微信
