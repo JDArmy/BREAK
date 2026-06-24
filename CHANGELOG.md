@@ -6,7 +6,8 @@
 - 严格跳过 Reddit 个体陈述等不稳定来源，并将 `C1423` 的事件时间修正为官方资料对应的 2018-06
 - 扩充案例来源质量审计的 primary 识别，纳入 Sekoia、Cisco/Talos、Oligo、Push Security、Akamai、Horizen、CloudSEK、Youstin、PeckShield Medium 原始分析和若干官方 X 精确链接
 - 高价值案例 primary 覆盖提升到 436，primary 覆盖率提升到 42.07%，高价值 primary 覆盖率提升到 40.41%
-- 收紧浏览器回归链路：新增次版本以上升级门控、视觉人工复核截图报告和关键交互巡检，CI 仅在 major/minor 版本变化时运行并阻断失败
+- 收紧浏览器回归链路：新增次版本以上升级门控、视觉人工复核截图报告和关键交互巡检，本地 pre-commit 与 PR CI 仅在 major/minor 版本变化时运行慢速回归并阻断失败，deploy 阶段不再重复运行 Playwright/Lighthouse
+- 精简 deploy 构建链路：新增 `deploy:build` 只生成发布所需的静态站点、STIX/JSON-LD 和数据包产物，不再重复执行 PR CI 已覆盖的 lint、类型检查、数据校验、单元测试和覆盖率
 
 ## 2.23.34
 

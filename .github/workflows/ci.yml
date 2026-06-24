@@ -73,9 +73,29 @@ jobs:
       - run: npm run build-only
       - run: npm run audit:bundle:check
 
+  browser-regression-gate:
+    runs-on: ubuntu-latest
+    outputs:
+      run: ${{ steps.gate.outputs.run }}
+      reason: ${{ steps.gate.outputs.reason }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - run: git fetch origin "${{ github.base_ref }}:${{ github.base_ref }}" || true
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+      - id: gate
+        env:
+          BREAK_PREVIOUS_VERSION_REF: ${{ github.base_ref }}
+        run: npm run ci:browser-regression-gate
+
   browser-regression:
     runs-on: ubuntu-latest
-    continue-on-error: true
+    needs: browser-regression-gate
+    if: needs.browser-regression-gate.outputs.run == 'true'
     steps:
       - uses: actions/checkout@v5
         with:
@@ -91,4 +111,10 @@ jobs:
       - run: npm run build-only
       - run: npm run test:smoke
       - run: npm run test:performance
+      - run: npm run test:visual-review
       - run: npm run test:relation-stability
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: browser-visual-review
+          path: research/search-reports/browser-visual-review

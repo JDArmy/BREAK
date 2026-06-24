@@ -29,62 +29,7 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
-      - id: browser-audit-changes
-        name: Detect browser audit changes
-        shell: bash
-        run: |
-          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
-            echo "run=true" >> "$GITHUB_OUTPUT"
-            echo "changed=manual workflow_dispatch" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          base="${{ github.event.before }}"
-          if [[ -z "$base" || "$base" =~ ^0+$ ]] || ! git cat-file -e "$base^{commit}" 2>/dev/null; then
-            echo "base commit unavailable: ${base:-empty}; fallback to HEAD^"
-            base="$(git rev-parse HEAD^ 2>/dev/null || true)"
-          fi
-
-          if [[ -z "$base" ]] || ! git cat-file -e "$base^{commit}" 2>/dev/null; then
-            echo "run=true" >> "$GITHUB_OUTPUT"
-            echo "changed=base commit unavailable; run browser audits defensively" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          echo "detecting browser audit changes from $base to $GITHUB_SHA"
-
-          changed="$(
-            git diff --name-only "$base" "$GITHUB_SHA" -- \
-              .github/workflows/deploy.yml \
-              package.json \
-              package-lock.json \
-              vite.config.ts \
-              tsconfig*.json \
-              scripts/search/common.mjs \
-              scripts/validate/lighthouse-baseline.mjs \
-              scripts/validate/lighthouse-sankey-trace.mjs \
-              src/router \
-              src/views/RelationView.vue \
-              src/views/RelationRouteShell.vue \
-              src/views/relation \
-              src/components/relation \
-              src/components/EntityLinkSection.vue \
-              src/composables/useBreakpoints.ts \
-              src/composables/useRelationGraph.ts
-          )"
-
-          if [[ -n "$changed" ]]; then
-            echo "run=true" >> "$GITHUB_OUTPUT"
-            {
-              echo "changed<<EOF"
-              echo "$changed"
-              echo "EOF"
-            } >> "$GITHUB_OUTPUT"
-          else
-            echo "run=false" >> "$GITHUB_OUTPUT"
-            echo "changed=" >> "$GITHUB_OUTPUT"
-          fi
-      - run: npm run build
+      - run: npm run deploy:build
 
       - name: Create GitHub Release (on version change)
         env:
@@ -174,14 +119,6 @@ jobs:
           rm -f "${NOTES_FILE}"
           echo "Release ${TAG} created successfully."
 
-      - run: npx playwright install --with-deps chromium
-        if: steps.browser-audit-changes.outputs.run == 'true'
-      - run: npm run test:lighthouse
-        if: steps.browser-audit-changes.outputs.run == 'true'
-        continue-on-error: true
-      - run: npm run audit:lighthouse-sankey
-        if: steps.browser-audit-changes.outputs.run == 'true'
-        continue-on-error: true
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5
         with:

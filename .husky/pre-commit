@@ -9,3 +9,7 @@ if [ $status -ne 0 ]; then
 fi
 # home.ts 若被刷新则加入本次提交
 git diff --quiet -- src/BREAK/home.ts || git add src/BREAK/home.ts
+
+# major/minor 版本变化时，在本地 commit 前运行慢速浏览器回归和 Lighthouse；
+# patch 版本跳过，避免日常数据修补提交被拖慢。
+npm run precommit:browser-regression
