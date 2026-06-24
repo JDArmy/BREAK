@@ -1,5 +1,12 @@
 # Change log
 
+## 2.23.59
+
+- 扩展 `RelationNodeDetailDrawer` 组件测试，覆盖桌面/移动端抽屉尺寸、空节点不渲染、关闭同步和详情内容所有操作事件转发
+- 关系页测试规模提升到 40 个测试文件、233 个测试，coverage 为 statements 77.66%、branches 62.33%、functions 77.15%、lines 80.39%
+- 继续补强高价值游戏安全案例 primary source，为 `C0980`、`C0986`、`C0988` 追加《和平精英》官网坐挂车、外挂和观战透视处罚公告，并同步英文引用标题
+- 案例 primary 覆盖提升到 836，高价值 primary 覆盖提升到 513，primary 覆盖率提升到 46.52%，高价值 primary 覆盖率提升到 47.54%
+
 ## 2.23.58
 
 - 将 Lighthouse 基线提升为 PR CI 独立 hard-fail job，强制覆盖首页、风险列表和关系 Sankey 在桌面/移动端的性能、可访问性、最佳实践、SEO、LCP 和 CLS 预算
