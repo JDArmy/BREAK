@@ -249,6 +249,7 @@ const primaryReferenceLinks = new Set([
   'https://m.thepaper.cn/newsdetail_forward_20536442', // 上海市第二中级人民法院官方澎湃号
   'https://m.thepaper.cn/newsdetail_forward_6016636', // 汾阳市市场监管局政务通报
   'https://m.thepaper.cn/newsdetail_forward_31179929', // 敦化市人民法院官方澎湃号
+  'https://m.thepaper.cn/newsdetail_forward_33183066', // 夏都西宁官方澎湃号，来源青海省公安厅
   'https://www.thepaper.cn/newsdetail_forward_33164885', // 云浮市中级人民法院官方澎湃号，供稿罗定法院
   'https://xinwen.bjd.com.cn/content/s6a2bfd65d5de97bd7464c3db.html', // 北京互联网法院供稿
   'https://hzsc.hangzhou.com.cn/content/content_7015476.htm', // 上城区法院案件通报
