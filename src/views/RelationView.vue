@@ -92,8 +92,10 @@ export default defineComponent({
     }"
   >
     <RelationSelectorBar
+      v-model:analysis-perspective="activeAnalysisPerspective"
       v-model:rel-type="relType"
       v-model:rel-key="relKey"
+      :analysis-perspective-options="relationAnalysisPerspectiveOptions"
       :RelationTypeMapping="RelationTypeMapping"
       :get-current-entity-options="getCurrentEntityOptions"
     />

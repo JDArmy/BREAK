@@ -1,5 +1,9 @@
 import { computed, reactive, ref, type Ref } from "vue";
 import type { RouteLocationNormalizedLoaded } from "vue-router";
+import {
+  normalizeRelationAnalysisPerspective,
+  type RelationAnalysisPerspective,
+} from "@/views/relation/relationAnalysisPerspectives";
 import { networkLayoutOptions, networkLayoutZoom, RelationType, type NetworkLayoutMode, type SankeyNode } from "@/views/relation/relationTypes";
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;
@@ -34,6 +38,9 @@ export const createRelationViewState = ({
   const relKey = ref<string>(route.params.key as string);
   const defaultActiveView = isMobile.value ? "sankey" : "network";
   const activeView = ref<RelationViewMode>(normalizeRelationViewMode(route.query.view, defaultActiveView));
+  const activeAnalysisPerspective = ref<RelationAnalysisPerspective>(
+    normalizeRelationAnalysisPerspective(route.query.perspective),
+  );
 
   const networkState = reactive({
     zoom: networkLayoutZoom.horizontal,
@@ -113,6 +120,7 @@ export const createRelationViewState = ({
   };
 
   return {
+    activeAnalysisPerspective,
     activeView,
     handleNetworkLayoutCommand,
     networkLayoutTooltip,

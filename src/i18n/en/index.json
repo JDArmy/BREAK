@@ -138,6 +138,21 @@
     "network": "Relation Network",
     "attackPath": "Attack Path",
     "analysis": "Analysis",
+    "perspective": {
+      "label": "Analysis Perspective",
+      "risk": {
+        "title": "Risk",
+        "description": "Focus on risks, tools and actors that cause them, and the available avoidances."
+      },
+      "attackPath": {
+        "title": "Attack Path",
+        "description": "Prioritize paths among threat actors, attack tools, risks, and avoidances."
+      },
+      "defenseCoverage": {
+        "title": "Defense Coverage",
+        "description": "Focus on risk-to-avoidance coverage to assess defense gaps and priorities."
+      }
+    },
     "noAnalysis": "No analysis is available for the selected entity yet.",
     "entityNameSuffix": " Name",
     "entityIdSuffix": " ID",

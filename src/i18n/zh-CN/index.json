@@ -138,6 +138,21 @@
     "network": "关系网络",
     "attackPath": "攻击路径",
     "analysis": "分析解读",
+    "perspective": {
+      "label": "分析视角",
+      "risk": {
+        "title": "风险视角",
+        "description": "聚焦风险节点、造成风险的工具与威胁行为者，以及可用规避手段。"
+      },
+      "attackPath": {
+        "title": "攻击路径视角",
+        "description": "优先展示威胁行为者、攻击工具、风险和规避手段之间的路径链路。"
+      },
+      "defenseCoverage": {
+        "title": "防御覆盖视角",
+        "description": "聚焦风险与规避手段覆盖关系，辅助判断防御缺口和优先级。"
+      }
+    },
     "noAnalysis": "当前实体暂无可展示的分析解读。",
     "entityNameSuffix": "名称",
     "entityIdSuffix": "ID",

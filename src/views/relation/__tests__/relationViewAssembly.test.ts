@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
-import { computed, ref } from "vue";
+import { computed, nextTick, ref } from "vue";
 import { createRelationViewAssembly } from "../relationViewAssembly";
 import { RelationType, type SankeyNode } from "../relationTypes";
 
@@ -47,7 +47,7 @@ vi.mock("@/views/relation/useRelationNodeActions", () => ({
 }));
 
 const route = { params: { type: "risk", key: "R0001" }, query: {} };
-const router = { push: vi.fn() };
+const router = { push: vi.fn(), replace: vi.fn() };
 const t = (key: string) => `t:${key}`;
 const locale = ref("zh-CN");
 const isDark = ref(false);
@@ -71,6 +71,7 @@ const relationMapping = {
 };
 
 const createState = () => ({
+  activeAnalysisPerspective: ref("risk"),
   activeView: ref("network"),
   handleNetworkLayoutCommand: vi.fn(),
   networkLayoutTooltip: computed(() => "布局"),
@@ -118,7 +119,12 @@ const createGraphData = () => ({
   normalizeAttackPathFilters: vi.fn(),
   rebuildGraphData: vi.fn(),
   refreshGraphAfterVisible: vi.fn(),
-  relationLegendItems: computed(() => []),
+  relationLegendItems: computed(() => [
+    { key: "relationLine.directCauseRisk" },
+    { key: "relationLine.indirectSupportRisk" },
+    { key: "relationLine.avoidanceMeans" },
+    { key: "relationLine.avoidanceComplement" },
+  ]),
   sankeyChartHeight: computed(() => 460),
   sankeyData: computed(() => ({ nodes: [], links: [] })),
   selectedNetworkNode: ref(null),
@@ -127,6 +133,7 @@ const createGraphData = () => ({
 });
 
 const createNodeActions = () => ({
+  doFilter: vi.fn(),
   focusNodeInDrawer: vi.fn(),
   handleGlobalPointerDown: vi.fn(),
   handleNodeTouch: vi.fn(),
@@ -216,8 +223,46 @@ describe("relationViewAssembly", () => {
       }),
     );
     expect(relationView.activeView).toBe(state.activeView);
+    expect(relationView.activeAnalysisPerspective).toBe(state.activeAnalysisPerspective);
+    expect(relationView.relationAnalysisPerspectiveOptions).toHaveLength(3);
     expect(relationView.renderNetworkChart).toBe(networkController.renderNetworkChart);
     expect(relationView.renderSankeyChart).toBe(sankeyController.renderSankeyChart);
+  });
+
+  it("按任务型分析视角更新筛选、布局、默认视图和 URL 查询", async () => {
+    const relationView = createAssembly();
+    const state = createRelationViewState.mock.results[0].value;
+    const graphData = useRelationGraphData.mock.results[0].value;
+    const nodeActions = useRelationNodeActions.mock.results[0].value;
+
+    state.activeAnalysisPerspective.value = "defenseCoverage";
+    await nextTick();
+
+    expect(graphData.filterRelationType.value).toEqual([
+      RelationType.risk,
+      RelationType.avoidance,
+      RelationType.attackTool,
+      RelationType.threatActor,
+    ]);
+    expect(graphData.filterSubNode.value).toBe(false);
+    expect(graphData.filterRelatedEntity.value).toBe(true);
+    expect(graphData.filterLineType.value).toEqual([
+      "relationLine.avoidanceMeans",
+      "relationLine.directCauseRisk",
+      "relationLine.indirectSupportRisk",
+      "relationLine.avoidanceComplement",
+    ]);
+    expect(state.handleNetworkLayoutCommand).toHaveBeenCalledWith("force");
+    expect(state.activeView.value).toBe("analysis");
+    expect(nodeActions.doFilter).toHaveBeenCalled();
+    expect(router.replace).toHaveBeenCalledWith({
+      name: "relation",
+      params: { type: RelationType.risk, key: "R0001" },
+      query: { perspective: "defenseCoverage" },
+    });
+    expect(relationView.currentAnalysisPerspectiveOption.value.key).toBe(
+      "defenseCoverage",
+    );
   });
 
   it("bridges network and Sankey interactions back to node actions", () => {

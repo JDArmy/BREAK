@@ -1,11 +1,16 @@
 import { describe, expect, it, vi } from "vitest";
 import { ref } from "vue";
-import { createRelationViewState, normalizeRelationViewMode } from "../relationViewState";
+import {
+  createRelationViewState,
+  normalizeRelationViewMode,
+} from "../relationViewState";
+import { normalizeRelationAnalysisPerspective } from "../relationAnalysisPerspectives";
 import { RelationType, type NetworkLayoutMode, type SankeyNode } from "../relationTypes";
 
 const createRoute = (options?: {
   type?: RelationType;
   key?: string;
+  perspective?: unknown;
   view?: unknown;
 }) =>
   ({
@@ -14,6 +19,7 @@ const createRoute = (options?: {
       key: options?.key ?? "R0001",
     },
     query: {
+      perspective: options?.perspective,
       view: options?.view,
     },
   }) as never;
@@ -22,10 +28,14 @@ const createState = (options?: {
   isMobile?: boolean;
   width?: number;
   view?: unknown;
+  perspective?: unknown;
 }) => {
   const renderNetworkChart = vi.fn();
   const state = createRelationViewState({
-    route: createRoute({ view: options?.view }),
+    route: createRoute({
+      perspective: options?.perspective,
+      view: options?.view,
+    }),
     t: (key) => `t:${key}`,
     isMobile: ref(options?.isMobile ?? false),
     width: ref(options?.width ?? 1200),
@@ -36,6 +46,21 @@ const createState = (options?: {
 };
 
 describe("relationViewState", () => {
+  it("normalizes analysis perspectives and falls back for invalid query values", () => {
+    expect(normalizeRelationAnalysisPerspective("attackPath")).toBe(
+      "attackPath",
+    );
+    expect(normalizeRelationAnalysisPerspective("defenseCoverage")).toBe(
+      "defenseCoverage",
+    );
+    expect(normalizeRelationAnalysisPerspective("unknown", "risk")).toBe(
+      "risk",
+    );
+    expect(normalizeRelationAnalysisPerspective(["risk"], "attackPath")).toBe(
+      "attackPath",
+    );
+  });
+
   it("normalizes view modes and falls back for invalid route query values", () => {
     expect(normalizeRelationViewMode("sankey", "network")).toBe("sankey");
     expect(normalizeRelationViewMode("analysis", "network")).toBe("analysis");
@@ -47,6 +72,18 @@ describe("relationViewState", () => {
     expect(createState({ isMobile: false, view: undefined }).state.activeView.value).toBe("network");
     expect(createState({ isMobile: true, view: undefined }).state.activeView.value).toBe("sankey");
     expect(createState({ isMobile: true, view: "analysis" }).state.activeView.value).toBe("analysis");
+  });
+
+  it("uses risk analysis perspective by default and accepts query perspective", () => {
+    expect(createState().state.activeAnalysisPerspective.value).toBe("risk");
+    expect(
+      createState({ perspective: "defenseCoverage" }).state
+        .activeAnalysisPerspective.value,
+    ).toBe("defenseCoverage");
+    expect(
+      createState({ perspective: "invalid" }).state
+        .activeAnalysisPerspective.value,
+    ).toBe("risk");
   });
 
   it("computes network layout label and tooltip from the selected layout", () => {

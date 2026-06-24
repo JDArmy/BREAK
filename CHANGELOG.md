@@ -1,5 +1,11 @@
 # Change log
 
+## 2.23.86
+
+- 新增关系页任务型分析视角配置，支持风险总览、攻击路径和防御覆盖三类公开视角，并按视角自动切换默认图表、节点类型、关系线类型、子节点/相关实体筛选和网络布局
+- 在关系页选择栏增加分析视角切换控件，同步支持 URL `perspective` 查询参数，便于分享和恢复当前分析任务
+- 补强 `RelationSelectorBar`、`RelationView`、`relationViewState` 和 `relationViewAssembly` 测试，覆盖视角归一化、组件事件转发、页面组合暴露和视角应用链路；当前测试规模为 47 个测试文件、295 个测试
+
 ## 2.23.85
 
 - 新增 `relationSpecialInsightBuilders` 直接分支测试，覆盖缺失实体、规避手段无覆盖复核建议、风险与工具重叠覆盖、攻击工具无 gap 使用建议和威胁行为者防御优先项

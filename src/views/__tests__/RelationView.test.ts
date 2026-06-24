@@ -18,6 +18,20 @@ const createViewModel = () => ({
   relKey: ref("R0001"),
   RelationTypeMapping: {},
   getCurrentEntityOptions: vi.fn(() => []),
+  activeAnalysisPerspective: ref("risk"),
+  relationAnalysisPerspectiveOptions: [
+    {
+      key: "risk",
+      titleKey: "relationView.perspective.risk.title",
+      descriptionKey: "relationView.perspective.risk.description",
+      defaultView: "network",
+      networkLayout: "horizontal",
+      relationTypes: [RelationType.risk],
+      lineTypes: ["relationLine.directCauseRisk"],
+      showSubNode: true,
+      showRelatedEntity: true,
+    },
+  ],
   activeView: ref("network"),
   setNetworkPaneElement: vi.fn(),
   setNetworkScrollerElement: vi.fn(),
@@ -115,9 +129,9 @@ const mountRelationView = async () => {
       },
       stubs: {
         RelationSelectorBar: {
-          props: ["relType", "relKey"],
-          emits: ["update:relType", "update:relKey"],
-          template: '<div class="selector-stub">{{ relType }} {{ relKey }}</div>',
+          props: ["analysisPerspective", "analysisPerspectiveOptions", "relType", "relKey"],
+          emits: ["update:analysisPerspective", "update:relType", "update:relKey"],
+          template: '<div class="selector-stub">{{ analysisPerspective }} {{ analysisPerspectiveOptions.length }} {{ relType }} {{ relKey }}</div>',
         },
         ElTabs: {
           props: ["modelValue"],
@@ -167,7 +181,7 @@ describe("RelationView", () => {
     vi.stubGlobal("requestIdleCallback", requestIdleCallback);
     const wrapper = await mountRelationView();
 
-    expect(wrapper.find(".selector-stub").text()).toContain("R0001");
+    expect(wrapper.find(".selector-stub").text()).toContain("risk 1 risk R0001");
     expect(wrapper.find(".network-pane-stub").exists()).toBe(true);
     expect(wrapper.find(".sankey-pane-stub").exists()).toBe(true);
     expect(requestIdleCallback).toHaveBeenCalled();
@@ -207,4 +221,3 @@ describe("RelationView", () => {
     vi.useRealTimers();
   });
 });
-

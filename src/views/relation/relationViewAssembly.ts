@@ -5,6 +5,11 @@ import {
 } from "@/views/relation/relationViewControllers";
 import { setupRelationViewEffects } from "@/views/relation/relationViewEffects";
 import { createRelationViewState } from "@/views/relation/relationViewState";
+import {
+  getRelationAnalysisPerspectiveOption,
+  normalizeRelationAnalysisPerspective,
+  relationAnalysisPerspectiveOptions,
+} from "@/views/relation/relationAnalysisPerspectives";
 import { useRelationGraphData } from "@/views/relation/useRelationGraphData";
 import { useRelationNodeActions } from "@/views/relation/useRelationNodeActions";
 import {
@@ -16,7 +21,7 @@ import {
 } from "@/views/relation/relationTypes";
 import type { RouteLocationNormalizedLoaded, Router } from "vue-router";
 import type { DropdownInstance } from "element-plus";
-import { ref, type Ref } from "vue";
+import { computed, ref, watch, type Ref } from "vue";
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;
 
@@ -73,6 +78,7 @@ export const createRelationViewAssembly = ({
   });
 
   const {
+    activeAnalysisPerspective,
     activeView,
     handleNetworkLayoutCommand,
     networkLayoutTooltip,
@@ -170,6 +176,73 @@ export const createRelationViewAssembly = ({
     renderNetworkChart: (notMerge) =>
       renderNetworkChartBridge.current(notMerge),
   });
+
+  const currentAnalysisPerspectiveOption = computed(() =>
+    getRelationAnalysisPerspectiveOption(activeAnalysisPerspective.value)
+  );
+
+  const applyAnalysisPerspective = (
+    perspective = activeAnalysisPerspective.value,
+    options: { applyDefaultView?: boolean } = {},
+  ) => {
+    const perspectiveOption = getRelationAnalysisPerspectiveOption(perspective);
+    graphData.filterRelationType.value = [...perspectiveOption.relationTypes];
+    graphData.filterSubNode.value = perspectiveOption.showSubNode;
+    graphData.filterRelatedEntity.value = perspectiveOption.showRelatedEntity;
+
+    const availableLineTypes = new Set(
+      graphData.relationLegendItems.value.map((item) => item.key),
+    );
+    graphData.filterLineType.value = perspectiveOption.lineTypes.filter(
+      (lineType) => availableLineTypes.has(lineType),
+    );
+
+    if (networkState.layout !== perspectiveOption.networkLayout) {
+      handleNetworkLayoutCommand(perspectiveOption.networkLayout);
+    }
+
+    if (options.applyDefaultView ?? true) {
+      activeView.value = perspectiveOption.defaultView;
+    }
+
+    nodeActions.doFilter();
+  };
+
+  watch(activeAnalysisPerspective, (perspective) => {
+    if (route.query.perspective !== perspective) {
+      router.replace({
+        name: "relation",
+        params: {
+          type: relType.value,
+          key: relKey.value,
+        },
+        query: {
+          ...route.query,
+          perspective,
+        },
+      });
+    }
+    applyAnalysisPerspective(perspective);
+  });
+
+  watch(
+    () => route.query.perspective,
+    (perspective) => {
+      const normalizedPerspective = normalizeRelationAnalysisPerspective(
+        perspective,
+        activeAnalysisPerspective.value,
+      );
+      if (normalizedPerspective !== activeAnalysisPerspective.value) {
+        activeAnalysisPerspective.value = normalizedPerspective;
+      }
+    },
+  );
+
+  if (typeof route.query.perspective === "string") {
+    applyAnalysisPerspective(activeAnalysisPerspective.value, {
+      applyDefaultView: route.query.view === undefined,
+    });
+  }
 
   const openSankeyNodeActions = (node: SankeyNode, event?: MouseEvent) => {
     const contextNode = nodeActions.prepareNodeActions(
@@ -281,14 +354,17 @@ export const createRelationViewAssembly = ({
     ...networkController,
     ...nodeActions,
     ...sankeyController,
+    activeAnalysisPerspective,
     activeView,
     closeNetworkRelationDetail,
     dropdown1,
     setDropdownInstance,
     setRelationPageElement,
     handleNetworkLayoutCommand,
+    currentAnalysisPerspectiveOption,
     networkLayoutTooltip,
     networkState,
+    relationAnalysisPerspectiveOptions,
     refreshNetworkChart,
     selectedNetworkRelationDetail,
     relKey,
