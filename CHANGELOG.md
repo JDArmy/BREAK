@@ -1,5 +1,10 @@
 # Change log
 
+## 2.23.45
+
+- 补充 `relationSankeyChartController` 单测，覆盖 Sankey 图 ECharts 懒加载渲染、节点详情、右键操作、移动端长按、主题刷新、tooltip 隐藏、resize 和 dispose 清理
+- 将 Vitest coverage 阈值从 48% 提升到 50%；当前测试规模为 32 个测试文件、196 个测试，coverage 为 statements 58.42%、branches 52.61%、functions 55.89%、lines 60.29%
+
 ## 2.23.44
 
 - 补充 `relationNetworkChartController` 单测，覆盖网络图 ECharts 懒加载渲染、节点选择、详情打开、右键操作、拖拽位置持久化、移动端长按、下载、全屏切换和 dispose 清理
