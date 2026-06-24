@@ -1,5 +1,15 @@
 # Change log
 
+## 2.23.53
+
+- 继续补强账号矩阵治理、停车优惠滥用和低俗直播治理案例 primary source，为 `C0049`、`C0128`、`C0237` 追加抖音官方治理规则、最高检案例通报和网信北京处罚通报，并同步英文引用标题
+- 扩充案例来源质量审计的 primary 识别，纳入抖音 `amemv.com` 官方页面，并以精确 URL 白名单识别网信北京官方微信
+
+## 2.23.52
+
+- 补充 `useRelationGraphData` 轻量 helper 单测，覆盖节点创建复用、标题/类型映射、关系图例、字段 tooltip 转义、标签换行、可见图刷新调度和选中路径判断
+- 将 Vitest coverage 阈值从 57% 提升到 58%；当前测试规模为 39 个测试文件、220 个测试，coverage 为 statements 71.80%、branches 58.76%、functions 66.84%、lines 74.23%
+
 ## 2.23.51
 
 - 补充 `relationNodeClipboard` 单测，覆盖上下文关系 CSV 输出、字段转义、解释/证据/质量标记写入、缺失节点失败和 clipboard 写入失败
