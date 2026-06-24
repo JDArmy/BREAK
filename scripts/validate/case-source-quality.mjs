@@ -191,6 +191,7 @@ const primaryDomainSuffixes = [
   'cloudsek.com',
   'tenable.com',
   'youst.in',
+  'datenschutz-berlin.de',
   'nilsonreport.com',
   'cgbchina.com.cn',
   'autoriteitpersoonsgegevens.nl',

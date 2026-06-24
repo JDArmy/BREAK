@@ -1,6 +1,6 @@
 {
   "C1163": {
-    "title": "柏林DPA要求苹果和谷歌下架DeepSeek应用",
+    "title": "柏林数据保护专员通知苹果和谷歌审查 DeepSeek 应用下架",
     "keywords": [
       "柏林数据保护局",
       "Apple",
@@ -13,19 +13,19 @@
       "应用下架",
       "数据保护"
     ],
-    "summary": "2025年9月30日报道，柏林数据保护局（DPA）援引《数字服务法》（DSA）第16条，向苹果和谷歌发出通知，要求其下架DeepSeek应用，理由是涉嫌违反GDPR规定将数据非法传输至中国。此举引发争议，被认为是用内容审核工具处理复杂数据跨境纠纷，可能使平台成为隐私争议的准司法仲裁者。",
+    "summary": "2025年6月27日，柏林数据保护与信息自由专员宣布，已根据《数字服务法》（DSA）第16条向德国的苹果和谷歌通知 DeepSeek 应用属于违法内容，要求平台及时审查并决定是否在德国屏蔽该应用。该机构认为 DeepSeek 将德国用户个人数据传输并存储在中国，缺少欧盟充分性决定或适当保障，涉嫌违反 GDPR 的跨境传输要求。",
     "category": "administrative_enforcement",
     "relatedRisks": [
       "R0125"
     ],
     "references": [
       {
-        "title": "From Transfers to Takedowns: Can Article 16 DSA Police GDPR ...",
-        "link": "https://r.search.yahoo.com/_ylt=Awrij6oKeDJqIAMAcRtXNyoA;_ylu=Y29sbwNiZjEEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1782902027/RO=10/RU=https%3a%2f%2fwww.crossborderdataforum.org%2ffrom-transfers-to-takedowns-can-article-16-dsa-police-gdpr-violations%2f/RK=2/RS=gg8b94JPA9kQb8ha3jD7sVpiLUk-"
+        "title": "Berliner Datenschutzbeauftragte meldet KI-App DeepSeek in Deutschland bei Apple und Google als rechtswidrigen Inhalt",
+        "link": "https://www.datenschutz-berlin.de/pressemitteilung/berliner-datenschutzbeauftragte-meldet-ki-app-deepseek-in-deutschland-bei-apple-und-google-als-rechtswidrigen-inhalt/"
       }
     ],
     "updated": "2026-06-18",
-    "incidentTime": "2025-09",
+    "incidentTime": "2025-06",
     "relatedAttackTools": [],
     "relatedThreatActors": []
   }
