@@ -244,6 +244,7 @@ const primaryReferenceLinks = new Set([
   'https://mp.weixin.qq.com/s?__biz=mzi3mtqznjyxnw==&mid=2247942229&idx=1&sn=60015b68761a105e0f52e046a045e0b0&chksm=eb23a3265ba293db1f219b1ce7328244489cb07e98df0a228bd981f419b7ec820f1515bb599a&scene=27', // 网信北京官方微信
   'https://mp.weixin.qq.com/s/ksxev9ft7i4suicefuyzxg', // 微信安全中心官方治理公告
   'https://mp.weixin.qq.com/s?__biz=mzu1mte1mju5nw==&mid=2247485363&idx=1&sn=76a86685d32ca24ebff66be37165fdf3', // 国家网络安全通报中心官方微信
+  'https://mp.weixin.qq.com/s?__biz=mjm5mjk2odm2ma==&mid=2652737162&idx=5&sn=9b044f853f0bcacdd13c0f24218565de&chksm=bce87f0d81468ad5857e16c6e43a77ee8a6809d162a627524fe86a69d5a98bc3ddc9c671cc8b&scene=27', // 国家网络安全通报中心官方微信
   'https://mp.weixin.qq.com/s?__biz=mza3ody0njqzma==&mid=2650284888&idx=1&sn=a48ed16d4c3feb2abfe101fb778108f9&chksm=87b31ea9b0c497bf2295c0506f0b9adb1618bad1e445662eefe8423764371d94786a591701e9&scene=27', // 宁波公安官方微信
   'https://mp.weixin.qq.com/s?__biz=mzawmtu1odawnq==&mid=2650670258&idx=4&sn=115d31346e5a6671f91921b2bd1597c6&chksm=82dd7028b5aaf93eba9ba66f686d8fad00b96ea480d9cd30a8b77277c3a3d09b55571658b53b&scene=27', // 公安部网安局官方微信
   'https://mp.weixin.qq.com/s/nhiwxqy5qxj_xsxtzgpyba', // 钦州网警官方微信
@@ -269,6 +270,7 @@ const primaryReferenceLinks = new Set([
   'https://x.com/realScamSniffer/status/1970322013597450609', // Scam Sniffer 原始链上告警
   'https://x.com/PeckShieldAlert/status/1976577386469839269', // PeckShield 原始链上告警
   'https://x.com/twittercomms/status/1167559184410431488', // Twitter 官方事件说明
+  'https://x.com/github/status/2056949169701720157', // GitHub 官方事件说明
   'https://x.com/venusprotocol/status/2033471885259034989', // Venus Protocol 官方事件说明
   'https://x.com/thetanutsfi/status/2066569315961454925', // Thetanuts Finance 官方事件说明
   'https://x.com/multichainorg/status/1679768407628185600', // Multichain 官方事件说明

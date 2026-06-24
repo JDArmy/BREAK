@@ -1,5 +1,10 @@
 # Change log
 
+## 2.23.71
+
+- 继续补强高价值安全事件 primary source，为 `C0781` 追加 GitHub 官方事件说明，为 `C1678` 追加国家网络安全通报中心供应链投毒官方原文，并同步英文引用标题
+- 案例 primary 覆盖提升到 858，高价值 primary 覆盖提升到 535，primary 覆盖率提升到 47.75%，高价值 primary 覆盖率提升到 49.58%
+
 ## 2.23.70
 
 - 继续补强高价值 Web3 安全事件 primary source，为 `C1550` 追加 Multichain 官方停运说明，并同步英文引用标题

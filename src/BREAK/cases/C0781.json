@@ -18,11 +18,15 @@
     ],
     "references": [
       {
+        "title": "GitHub 关于 TeamPCP 声称窃取约 3800 个内部代码库的官方说明",
+        "link": "https://x.com/github/status/2056949169701720157"
+      },
+      {
         "title": "GitHub Breached — Employee Device Hack Led to Exfiltration of 3,800 ...",
         "link": "https://thehackernews.com/2026/05/github-investigating-teampcp-claimed.html"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-06-24",
     "incidentTime": "2026-05",
     "relatedAttackTools": [
       "AT0013",
