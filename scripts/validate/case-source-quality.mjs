@@ -52,6 +52,7 @@ const primaryDomainSuffixes = [
   'gat.nmg.gov.cn',
   'bj148.org',
   'njyhfy.gov.cn',
+  'liulin.gov.cn',
   'samr.gov.cn',
   'cac.gov.cn',
   'chinatax.gov.cn',
