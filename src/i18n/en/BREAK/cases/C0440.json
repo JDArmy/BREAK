@@ -12,7 +12,7 @@
       "payment security",
       "behavioral bypass"
     ],
-    "summary": "Security researchers have observed early fraud patterns leveraging AI agents for credential stuffing as AI-driven traffic surges. Attackers may use AI agents to simulate human behavior, automating the validation and testing of stolen credit card information to bypass traditional rule-based detection mechanisms, marking an evolution in credential stuffing techniques.",
+    "summary": "A HUMAN Security research article observed early evidence of suspected AI-agent-assisted carding behavior in real web traffic as AI-agent traffic surged. The traffic showed characteristics of automated payment-card validation and testing, suggesting that carding attacks may be evolving through agentic AI traffic rather than relying only on traditional scripts.",
     "references": [
       {
         "title": "AI Agents and Fraud: Early Evidence of Carding Behavior in the Wild"
