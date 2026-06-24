@@ -1,5 +1,11 @@
 # Change log
 
+## 2.23.79
+
+- 新增 `RelationNodeDrawerRelations` 组件 contract 测试，覆盖多实体关系渲染、空关系列表、方向/关系类型/直接性过滤、清空筛选、方向筛选暴露方法、关系数据变化重置、复制事件、节点详情跳转和增量展开折叠
+- 将 Vitest coverage 全局阈值从 70% 提升到 72%；当前测试规模为 46 个测试文件、286 个测试，coverage 为 statements 88.59%、branches 73.77%、functions 87.77%、lines 91.33%
+- 更新升级规划，标记 `RelationNodeDrawerRelations` 主要展示状态、空状态和交互事件测试已补齐，后续重点转向分析面板/节点关系抽屉小步拆分和 `relationCoverageAnalysis` helper 拆分
+
 ## 2.23.78
 
 - 补强关系页网络图控制器测试，覆盖 inactive、缺失容器、异步过期渲染、移动端选项、tooltip 转义、拖拽、点击早退、滚动容器、全屏和销毁清理等分支
