@@ -16,6 +16,9 @@
     "summary": "In 2023, Beijing police uncovered a case in which a hacker exploited a weak SMS verification API on a recruitment app to conduct credential stuffing attacks. The suspect, surnamed Yu, discovered the website's single signature algorithm and wrote a malicious program to attack the interface, successfully matching over 300,000 registered accounts. Another suspect, Jiao, purchased the program and used",
     "references": [
       {
+        "title": "Public Safety: Reusing Passwords Across Platforms Risks Credential Stuffing Account Theft"
+      },
+      {
         "title": "One password for multiple platforms? Beware of hackers 'credential stuffing' to steal accounts"
       }
     ]

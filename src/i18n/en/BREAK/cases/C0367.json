@@ -15,6 +15,9 @@
     "summary": "On August 1, 2023, a post on an overseas forum exposed over 700,000 order records from a Beijing-based education company. An investigation by Haidian cyber police found that the company’s academic scheduling system transmitted account credentials without encryption, making it susceptible to brute-force attacks. Attackers cracked passwords through brute-force methods, gained access, and exported la",
     "references": [
       {
+        "title": "Beijing Companies Penalized for Failing to Fulfill Cybersecurity Protection Obligations"
+      },
+      {
         "title": "Ministry of Public Security announces four cybersecurity administrative penalty cases involving weak password accounts and website defacement - Tencent"
       }
     ]

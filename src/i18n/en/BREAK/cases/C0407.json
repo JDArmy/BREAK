@@ -15,6 +15,12 @@
     "summary": "Push bombing, also known as MFA fatigue, has been exploited in high-profile breaches at Uber and Cisco. Attackers, including the ransomware group Scattered Spider, leverage this technique to bypass multi-factor authentication by overwhelming users with repeated push notifications until they approve one, granting unauthorized access.",
     "references": [
       {
+        "title": "Uber Security Update"
+      },
+      {
+        "title": "Cisco Talos Shares Insights Related to Recent Cyber Attack on Cisco"
+      },
+      {
         "title": "What Is Push Bombing? And How Beyond Identity Makes It Impossible"
       }
     ]
