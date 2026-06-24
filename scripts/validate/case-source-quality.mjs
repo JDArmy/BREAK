@@ -300,6 +300,9 @@ const primaryReferenceLinks = new Set([
   'https://news.qq.com/rain/a/20260605a03qyh00', // 乐山市人民政府新闻办公室官方账号托管页
   'https://weibo.com/2508053484/lzdbhlssp', // 腾讯 QQ 官方微博回应盗号事件
   'https://m.thepaper.cn/baijiahao_28782951', // 延津县人民法院官方澎湃号
+  'https://www.thepaper.cn/newsdetail_forward_2921336', // 浙江法院系统政务稿，首例恶意注册账号案
+  'https://www.sohu.com/a/1037162346_99923255', // 《方圆》杂志原创，徐州经开区检察院审查起诉
+  'https://view.inews.qq.com/a/20251205a03wsm00', // 抖音黑板报官方托管页，盗号黑产治理公告
   'https://www.zhongyuan.gov.cn/rdhy/9581840.jhtml', // 政府门户转载抖音黑板报官方治理公示
   'http://putian.pafj.net/caw/f/10/view-225-766722.html', // 莆田长安网检察院栏目，中共莆田市委政法委员会主办
   'https://x.com/alvierid/status/1999403353466421320', // 安全研究人员原始披露
