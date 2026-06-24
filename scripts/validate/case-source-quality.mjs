@@ -183,6 +183,7 @@ const primaryDomainSuffixes = [
   'tenable.com',
   'youst.in',
   'nilsonreport.com',
+  'cgbchina.com.cn',
   'autoriteitpersoonsgegevens.nl',
   'dataprotection.ie',
   'cnpd.public.lu',
@@ -303,6 +304,8 @@ const primaryReferenceLinks = new Set([
   'https://www.thepaper.cn/newsdetail_forward_2921336', // 浙江法院系统政务稿，首例恶意注册账号案
   'https://www.sohu.com/a/1037162346_99923255', // 《方圆》杂志原创，徐州经开区检察院审查起诉
   'https://view.inews.qq.com/a/20251205a03wsm00', // 抖音黑板报官方托管页，盗号黑产治理公告
+  'https://mp.weixin.qq.com/s/wsro3i0l02fku9gr0o9gfw', // 公安部网安局官方微信，变脸软件解封涉诈账号
+  'https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=16452910468894153646&track_id=06cab3b6-40f2-45f6-b2ee-15f8dc4ae04d', // 央视新闻客户端转述沁水公安 USDT 洗钱案
   'https://www.zhongyuan.gov.cn/rdhy/9581840.jhtml', // 政府门户转载抖音黑板报官方治理公示
   'http://putian.pafj.net/caw/f/10/view-225-766722.html', // 莆田长安网检察院栏目，中共莆田市委政法委员会主办
   'https://x.com/alvierid/status/1999403353466421320', // 安全研究人员原始披露
