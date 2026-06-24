@@ -4,7 +4,6 @@ import { useI18n } from "vue-i18n";
 import BREAK from "@/BREAK";
 import {
   RelationType,
-  type RelationEntityType,
   type SankeyNode,
   type SankeyLink,
   type createRelationTypeMapping,

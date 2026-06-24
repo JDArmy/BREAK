@@ -80,7 +80,6 @@ export const setupRelationViewEffects = ({
   disposeNetworkChart,
   disposeSankeyChart,
   selectedNetworkNodeId,
-  renderPathExplorerSankeyChart,
   resizePathExplorerSankeyChart,
   updatePathExplorerSankeyTheme,
   disposePathExplorerSankeyChart,

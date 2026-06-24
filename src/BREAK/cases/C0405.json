@@ -13,15 +13,15 @@
       "云安全",
       "横向移动"
     ],
-    "summary": "思科2025年全球威胁态势报告指出，超过60%的初始入侵源于被盗登录凭证。攻击者利用密码复用习惯进行撞库，或通过钓鱼获取凭证。报告强调，被盗的云访问令牌（如OAuth）可被用于绕过密码验证，长期潜伏并横向移动，实现身份复用。",
+    "summary": "思科2025年网络安全就绪指数指出，在 Cisco Talos 事件响应案例中，基于身份的攻击占 60%。攻击者利用被盗或被滥用的有效账号支持初始入侵、横向移动和权限提升，暴露出凭证复用、钓鱼和云访问令牌滥用带来的身份安全风险。",
     "category": "news_report",
     "relatedRisks": [
       "R0035"
     ],
     "references": [
       {
-        "title": "凭证仍是“命门”?思科最新报告揭示网络攻击“老套路”的新威胁...",
-        "link": "https://cloud.tencent.com/developer/article/2582909"
+        "title": "2025 Cisco Cybersecurity Readiness Index",
+        "link": "https://newsroom.cisco.com/c/dam/r/newsroom/en/us/interactive/cybersecurity-readiness-index/2025/documents/2025_Cisco_Cybersecurity_Readiness_Index.pdf"
       }
     ],
     "updated": "2026-06-18",

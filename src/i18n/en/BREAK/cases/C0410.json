@@ -14,7 +14,7 @@
     "summary": "Attackers repeatedly send MFA push requests to create pressure, then follow up with phone calls or messages impersonating IT support, claiming users need to approve the request to stop the notifications. They exploit users' trust in technical support and their urgency to resolve the issue, tricking them into completing authentication approval.",
     "references": [
       {
-        "title": "What is Push Bombing (MFA Fatigue)? - Doppel"
+        "title": "MFA Fatigue: A Growing Security Concern"
       }
     ]
   }

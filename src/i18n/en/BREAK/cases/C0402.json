@@ -14,7 +14,7 @@
     "summary": "In 2019, a researcher on a bug bounty platform discovered a vulnerability in Slack that allowed attackers to forcibly redirect users to a rogue session, enabling theft of their session cookies. The flaw granted access to any data shared within Slack and posed a serious threat to numerous organizations. Slack patched the issue within 24 hours.",
     "references": [
       {
-        "title": "Session Hijacking and Session Hijacking Attacks"
+        "title": "HackerOne Report #737140: Mass Account Takeovers Using HTTP Request Smuggling in Slack"
       }
     ]
   }

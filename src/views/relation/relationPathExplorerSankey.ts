@@ -103,16 +103,13 @@ const pathsToSankeyData = (
 
 export const createRelationPathExplorerSankey = ({
   lines,
-  startType,
   startKey,
-  endType,
   endKey,
   maxDepth,
   maxPaths,
   getSankeyNodeName,
   isMobile,
   RelationTypeMapping,
-  getNodeIds,
 }: CreatePathExplorerSankeyOptions) => {
   // 搜索触发标志——只有用户点击"发现路径"时才触发搜索
   const searchTriggered = ref(false);

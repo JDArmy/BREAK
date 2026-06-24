@@ -167,6 +167,7 @@ const mountRelationView = async () => {
         },
         RelationSankeyPane: { template: '<div class="sankey-pane-stub">sankey</div>' },
         RelationAnalysisPane: { template: '<div class="analysis-pane-stub">analysis</div>' },
+        RelationPathExplorerPane: { template: '<div class="path-explorer-pane-stub">path</div>' },
         RelationGraphContextMenu: { template: '<div class="context-menu-stub" />' },
         RelationGraphTouchActions: { template: '<div class="touch-actions-stub" />' },
         RelationNodeDetailDrawer: {
