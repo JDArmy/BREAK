@@ -1,5 +1,11 @@
 # Change log
 
+## 2.23.46
+
+- 补充 `useRelationViewModel` 和 `relationViewAssembly` 单测，覆盖关系页组合入口、颜色解析、装配依赖、控制器桥接、Sankey 节点交互和关系详情状态
+- 将 Vitest coverage 阈值从 50% 提升到 52%；当前测试规模为 34 个测试文件、200 个测试，coverage 为 statements 60.42%、branches 53.04%、functions 57.59%、lines 62.44%
+- 将复杂关系图谱稳定性测试提升为 PR CI 独立 hard-fail job，并为 `relation-stability` 增加 CI 强制运行开关；major/minor 门控回归继续保留 performance、视觉复核和 Lighthouse
+
 ## 2.23.45
 
 - 补充 `relationSankeyChartController` 单测，覆盖 Sankey 图 ECharts 懒加载渲染、节点详情、右键操作、移动端长按、主题刷新、tooltip 隐藏、resize 和 dispose 清理

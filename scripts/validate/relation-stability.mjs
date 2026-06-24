@@ -178,9 +178,13 @@ async function assertNodeDrawerOpens(page, fixture) {
 }
 
 const bump = shouldRunOnMinorBump();
-if (!bump.shouldRun) {
+const forceRun = process.env.BREAK_FORCE_RELATION_STABILITY === '1';
+if (!bump.shouldRun && !forceRun) {
   console.log(`⏭️  跳过复杂关系图谱稳定性测试：${bump.reason}`);
   process.exit(0);
+}
+if (forceRun && !bump.shouldRun) {
+  console.log(`强制运行复杂关系图谱稳定性测试：${bump.reason}`);
 }
 
 const data = readStaticData();
