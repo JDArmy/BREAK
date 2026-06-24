@@ -1,22 +1,25 @@
 {
   "C0836": {
-    "title": "Beijing Chaoyang Education Company Fined for Data Breach: Unencrypted System Testing",
+    "title": "Beijing Chaoyang Education Company Fined After Weak Test Account Led to Data Leak",
     "keywords": [
       "education company",
       "data breach",
-      "system testing",
-      "unencrypted",
+      "weak password",
+      "test account",
       "Data Security Law",
-      "warning",
       "fine",
       "Beijing Chaoyang",
       "data security protection obligation",
-      "internet testing"
+      "customer relationship management system",
+      "overseas illegal website"
     ],
-    "summary": "In January 2024, an education company in Beijing's Chaoyang District was penalized for a data security violation. During the internet testing phase of its system development, the company failed to encrypt relevant data and did not implement security protection measures, constituting a failure to fulfill data security protection obligations. It was issued a warning and fined 50,000 yuan under the D",
+    "summary": "In July 2023, cyber police in Beijing Chaoyang found that data from an education company had been leaked to an overseas illegal website. The company's customer relationship management system exposed more than 120,000 records, including employee accounts and customer names, phone numbers, order times, and transaction amounts. Investigators found that a privileged test account used a weak password, the account was not removed after the system went into production, and the company had not established required data security management procedures. Beijing Chaoyang police fined the company 50,000 yuan under the Data Security Law.",
     "references": [
       {
         "title": "Multiple Beijing Companies Fined for Data Breach Risks"
+      },
+      {
+        "title": "Multiple Beijing Companies Suffer Data Leaks, Cyber Police Bureau of the Ministry of Public Security Reports"
       }
     ]
   }
