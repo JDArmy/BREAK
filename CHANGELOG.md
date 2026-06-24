@@ -1,5 +1,10 @@
 # Change log
 
+## 2.23.84
+
+- 继续拆分 `relationCoverageAnalysis`，新增 `relationSpecialInsightBuilders` 承载规避手段、攻击工具和威胁行为者专项洞察构建逻辑
+- 将 `relationCoverageAnalysis` 主文件收敛为 selected node 覆盖摘要和专项洞察选择层，保留现有覆盖分析测试验证行为不回退
+
 ## 2.23.83
 
 - 继续拆分 `relationCoverageAnalysis`，新增 `relationNodeCoverageBuilders` 承载风险、规避手段、攻击工具和威胁行为者的节点覆盖摘要构建逻辑
