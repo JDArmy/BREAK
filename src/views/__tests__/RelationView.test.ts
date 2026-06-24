@@ -3,8 +3,6 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 import { computed, ref } from "vue";
 import { RelationType } from "@/views/relation/relationTypes";
 
-vi.mock("element-plus/es/components/drawer/style/css", () => ({}));
-
 const loadNetworkECharts = vi.fn(async () => ({}));
 const loadSankeyECharts = vi.fn(async () => ({}));
 vi.mock("@/views/relation/relationECharts", () => ({
@@ -110,6 +108,29 @@ const createViewModel = () => ({
   openTouchNodeDetailDrawer: vi.fn(),
   touchActionClose: vi.fn(),
   nodeDetailDrawerVisible: ref(false),
+  // 路径探索
+  pathExplorerSankeyData: ref({ nodes: [], links: [] }),
+  pathExplorerHasData: ref(false),
+  pathExplorerChartHeight: ref(0),
+  pathExplorerStats: ref(null),
+  searchTriggered: ref(false),
+  searching: ref(false),
+  discoverPaths: vi.fn(),
+  pathExplorerStartType: ref(RelationType.risk),
+  pathExplorerStartKey: ref("R0001"),
+  pathExplorerEndType: ref(RelationType.avoidance),
+  pathExplorerEndKey: ref(""),
+  pathExplorerMaxDepth: ref(4),
+  pathExplorerMaxPaths: ref(10),
+  pathExplorerSankeyController: {
+    setSankeyChartElement: vi.fn(),
+    renderSankeyChart: vi.fn(),
+    resizeSankeyChart: vi.fn(),
+    updateSankeyTheme: vi.fn(),
+    disposeSankeyChart: vi.fn(),
+    hideSankeyTooltip: vi.fn(),
+    sankeyHasData: ref(false),
+  },
 });
 
 let viewModel = createViewModel();

@@ -12,6 +12,7 @@ import {
 } from "@/views/relation/relationAnalysisPerspectives";
 import { useRelationGraphData } from "@/views/relation/useRelationGraphData";
 import { useRelationNodeActions } from "@/views/relation/useRelationNodeActions";
+import { createRelationPathExplorerSankey } from "@/views/relation/relationPathExplorerSankey";
 import {
   type createRelationTypeMapping,
   type GraphLink,
@@ -101,6 +102,12 @@ export const createRelationViewAssembly = ({
     sankeyTop,
     setClearDraggedNodePositions,
     zoomNetworkChart,
+    pathExplorerStartType,
+    pathExplorerStartKey,
+    pathExplorerEndType,
+    pathExplorerEndKey,
+    pathExplorerMaxDepth,
+    pathExplorerMaxPaths,
   } = viewState;
 
   const graphData = useRelationGraphData({
@@ -226,6 +233,8 @@ export const createRelationViewAssembly = ({
   });
 
   watch(activeView, (view) => {
+    // pathExplorer 独立于视角系统，不参与视角联动
+    if (view === "pathExplorer") return;
     const perspective = getRelationAnalysisPerspectiveByView(view);
     if (perspective !== activeAnalysisPerspective.value) {
       activeAnalysisPerspective.value = perspective;
@@ -293,6 +302,46 @@ export const createRelationViewAssembly = ({
     onOpenNodeActions: openSankeyNodeActions,
   });
 
+  // 路径探索数据
+  const pathExplorerData = createRelationPathExplorerSankey({
+    lines,
+    startType: pathExplorerStartType,
+    startKey: pathExplorerStartKey,
+    endType: pathExplorerEndType,
+    endKey: pathExplorerEndKey,
+    maxDepth: pathExplorerMaxDepth,
+    maxPaths: pathExplorerMaxPaths,
+    getSankeyNodeName: graphData.getSankeyNodeName,
+    isMobile,
+    RelationTypeMapping,
+    getNodeIds: () => new Set(graphData.nodes.map((n) => n.id)),
+  });
+
+  // 路径探索桑基图控制器（独立实例）
+  const pathExplorerSankeyController = createSankeyChartController({
+    t,
+    isDark,
+    isMobile,
+    activeView,
+    sankeyChartHeight: pathExplorerData.pathExplorerChartHeight,
+    sankeyData: pathExplorerData.pathExplorerSankeyData,
+    sankeyBottom,
+    sankeyLabelFontSize,
+    sankeyLabelLineHeight,
+    sankeyLabelOverflow,
+    sankeyLayoutIterations,
+    sankeyRight,
+    sankeyLabelWidth,
+    sankeyLeft,
+    sankeyNodeAlign,
+    sankeyNodeGap,
+    sankeyNodeWidth,
+    sankeyTop,
+    onOpenNodeDetail: openSankeyNodeDetail,
+    onOpenNodeActions: openSankeyNodeActions,
+    viewModeKey: "pathExplorer",
+  });
+
   const networkController = createNetworkChartController({
     t,
     isDark,
@@ -351,6 +400,11 @@ export const createRelationViewAssembly = ({
     resizeSankeyChart: sankeyController.resizeSankeyChart,
     hideNetworkTooltip: networkController.hideNetworkTooltip,
     hideSankeyTooltip: sankeyController.hideSankeyTooltip,
+    renderPathExplorerSankeyChart: pathExplorerSankeyController.renderSankeyChart,
+    resizePathExplorerSankeyChart: pathExplorerSankeyController.resizeSankeyChart,
+    updatePathExplorerSankeyTheme: pathExplorerSankeyController.updateSankeyTheme,
+    disposePathExplorerSankeyChart: pathExplorerSankeyController.disposeSankeyChart,
+    hidePathExplorerSankeyTooltip: pathExplorerSankeyController.hideSankeyTooltip,
     normalizeAttackPathFilters: graphData.normalizeAttackPathFilters,
     handleGlobalPointerDown: nodeActions.handleGlobalPointerDown,
     disposeNetworkChart: networkController.disposeNetworkChart,
@@ -363,6 +417,8 @@ export const createRelationViewAssembly = ({
     ...networkController,
     ...nodeActions,
     ...sankeyController,
+    ...pathExplorerData,
+    pathExplorerSankeyController,
     activeAnalysisPerspective,
     activeView,
     closeNetworkRelationDetail,
@@ -373,6 +429,12 @@ export const createRelationViewAssembly = ({
     currentAnalysisPerspectiveOption,
     networkLayoutTooltip,
     networkState,
+    pathExplorerStartType,
+    pathExplorerStartKey,
+    pathExplorerEndType,
+    pathExplorerEndKey,
+    pathExplorerMaxDepth,
+    pathExplorerMaxPaths,
     refreshNetworkChart,
     selectedNetworkRelationDetail,
     relKey,

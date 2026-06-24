@@ -31,6 +31,8 @@ interface CreateSankeyChartControllerOptions {
   sankeyLabelWidth: ComputedRef<number>;
   onOpenNodeDetail: (node: SankeyNode) => void;
   onOpenNodeActions: (node: SankeyNode, event?: MouseEvent) => void;
+  /** 该控制器对应的视图模式 key，默认 "sankey" */
+  viewModeKey?: RelationViewMode;
 }
 
 export const createSankeyChartController = ({
@@ -54,6 +56,7 @@ export const createSankeyChartController = ({
   sankeyLabelWidth,
   onOpenNodeDetail,
   onOpenNodeActions,
+  viewModeKey = "sankey",
 }: CreateSankeyChartControllerOptions) => {
   const sankeyChartRef = ref<HTMLDivElement>();
   const sankeyHasData = ref(false);
@@ -94,7 +97,7 @@ export const createSankeyChartController = ({
   };
 
   const renderSankeyChart = (attempt = 0) => {
-    if (activeView.value !== "sankey" || !sankeyChartRef.value) return;
+    if (activeView.value !== viewModeKey || !sankeyChartRef.value) return;
     const requestId = ++renderRequestId;
     const currentSankeyData = sankeyData.value;
     sankeyHasData.value = currentSankeyData.nodes.length > 0;
@@ -118,7 +121,7 @@ export const createSankeyChartController = ({
     const applySankeyOption = async () => {
       if (
         !sankeyChartRef.value ||
-        activeView.value !== "sankey" ||
+        activeView.value !== viewModeKey ||
         requestId !== renderRequestId
       )
         return;
@@ -127,7 +130,7 @@ export const createSankeyChartController = ({
         const init = await loadSankeyECharts();
         if (
           !sankeyChartRef.value ||
-          activeView.value !== "sankey" ||
+          activeView.value !== viewModeKey ||
           requestId !== renderRequestId
         )
           return;
@@ -307,7 +310,7 @@ export const createSankeyChartController = ({
   };
 
   const updateSankeyTheme = () => {
-    if (activeView.value !== "sankey") return;
+    if (activeView.value !== viewModeKey) return;
     renderSankeyChart();
   };
 

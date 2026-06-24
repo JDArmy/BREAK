@@ -137,6 +137,7 @@
   "relationView": {
     "network": "Relation Network",
     "attackPath": "Attack Path",
+    "pathExplorer": "Path Explorer",
     "analysis": "Analysis",
     "perspective": {
       "label": "Analysis Perspective",
@@ -157,6 +158,21 @@
     "entityNameSuffix": " Name",
     "entityIdSuffix": " ID",
     "noAttackPath": "No attack path available for the selected entity",
+    "pathExplorerPanel": {
+      "sourceType": "Source Type",
+      "sourceEntity": "Source Entity",
+      "targetType": "Target Type",
+      "targetEntity": "Target Entity",
+      "maxHops": "Max Hops",
+      "maxPaths": "Max Paths",
+      "discover": "Discover Paths",
+      "noTarget": "Please select a target entity",
+      "noPath": "No path found between source and target",
+      "searching": "Searching paths...",
+      "resultSummary": "{count} paths found",
+      "hopRange": "hop range {min}~{max}",
+      "selectPlaceholder": "Search & select..."
+    },
     "legend": "Legend",
     "nodeDetail": "Node Detail",
     "edgeDetail": "Relation Edge Detail",
