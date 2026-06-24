@@ -1,5 +1,9 @@
 # Change log
 
+## 2.23.39
+
+- 补充 `relationViewState` 状态单测，覆盖关系页视图模式、Sankey 响应式尺寸、节点选择、网络缩放和布局切换，并将 Vitest coverage 阈值从 40% 提升到 45%
+
 ## 2.23.38
 
 - 收紧自动化回归门禁：PR CI 新增无条件 `browser-smoke` hard-fail job，major/minor 版本门控回归保留 performance、视觉复核、关系稳定性并补入 Lighthouse，README 与升级计划同步更新当前状态

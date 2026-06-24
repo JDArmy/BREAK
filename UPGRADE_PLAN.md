@@ -66,15 +66,15 @@
 未完成工作：
 - `site-smoke` 已转为每个 PR 的 hard-fail 浏览器门禁；继续观察其稳定性和耗时。
 - `site-performance`、`site-visual-review`、`relation-stability` 和 Lighthouse 仍按 major/minor 版本变化条件运行；后续根据稳定性分阶段收紧，不一次性把易抖动脚本全部设为全量阻断。
-- 继续补 `RelationView`、`HomeView`、关系图控制器、view model、关键交互组件测试。
-- 随测试增长逐步提高 coverage 阈值，避免长期停留在初始低阈值。
+- 已补 `relationViewState` 单测，覆盖视图模式归一化、移动端 Sankey 尺寸、节点选择、网络缩放和布局切换；继续补 `RelationView`、`HomeView`、关系图控制器、view model、关键交互组件测试。
+- coverage 阈值已从 40% 提升到 45%；后续随控制器和 view model 测试增长继续上调，避免长期停留在低阈值。
 
 落点：`.github/workflows/ci.yml`、`.github/workflows/deploy.yml`、`vitest.config.ts`、`src/views/relation/**/__tests__`、`src/components/**/__tests__`。
 
 验收：
 - ~~至少 smoke 回归在 PR 中阻断失败。~~ 已完成：`.github/workflows/ci.yml` 新增无条件 `browser-smoke` job。
 - 关系页核心状态和控制器有测试覆盖。
-- 覆盖率阈值有阶段性提升记录。
+- ~~覆盖率阈值有阶段性提升记录。~~ 已完成第一阶段：`vitest.config.ts` 全局阈值从 40% 提升到 45%。
 
 ### P1. 知识模型与工程债
 
