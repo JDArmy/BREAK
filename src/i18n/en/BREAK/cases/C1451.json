@@ -1,6 +1,6 @@
 {
   "C1451": {
-    "title": "Solidity Smart Contract Timestamp Manipulation Vulnerability and Fix",
+    "title": "Solidity Smart Contract Timestamp Dependence Vulnerability Case Analysis",
     "keywords": [
       "Solidity",
       "smart contract",
@@ -11,10 +11,10 @@
       "randomness source",
       "Ethereum"
     ],
-    "summary": "A lottery contract nearly lost $50,000 due to using block.timestamp to control the drawing logic. A malicious miner could manipulate the block timestamp within a roughly 900-second window to select themselves as the winner. The article provides secure alternatives, such as using a longer time window and a more secure randomness source.",
+    "summary": "OWASP Smart Contract Top 10 lists timestamp dependence as a common smart contract risk. Ethereum contracts often use block.timestamp for time-sensitive functions such as auctions, lotteries, and token vesting, but block producers can slightly adjust timestamps within protocol constraints. If a contract uses the timestamp as a randomness source or critical decision condition, a malicious block producer may manipulate drawings, end auctions early, or trigger unfair gains.",
     "references": [
       {
-        "title": "Fix Smart Contract Timestamp Attacks in 20 Minutes (Before You Lose Money)"
+        "title": "Vulnerability: Timestamp Dependence"
       }
     ]
   }

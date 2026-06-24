@@ -215,6 +215,7 @@ const primaryDomainSuffixes = [
   'whwx.gov.cn',
   'vcredit.com',
   'vicone.com',
+  'vulntech.com',
 ];
 
 const secondaryDomainSuffixes = [
