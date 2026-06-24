@@ -189,17 +189,20 @@ watch(selectedCategory, () => {
       />
       <section v-if="selectedCase.references?.length" class="detail-section" data-detail-anchor="references">
         <h3>{{ $t("references") }}</h3>
-        <div class="entity-links">
-          <a
-            v-for="(ref, i) in selectedCase.references"
-            :key="i"
-            :href="ref.link"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="entity-link"
-          >
-            {{ ref.title }}
-          </a>
+        <div class="reference-list">
+          <div v-for="(ref, i) in selectedCase.references" :key="i" class="reference-item">
+            <span class="reference-bullet">•</span>
+            <a
+              v-if="ref.link"
+              :href="ref.link"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="reference-link"
+            >
+              {{ ref.title }}
+            </a>
+            <span v-else class="reference-text">{{ ref.title }}</span>
+          </div>
         </div>
       </section>
       <section v-if="selectedCase.updated" class="detail-section">
@@ -234,5 +237,44 @@ watch(selectedCategory, () => {
 .text-muted {
   color: var(--break-text-muted);
   font-size: 0.9em;
+}
+
+.reference-list {
+  margin-top: 8px;
+}
+
+.reference-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.reference-bullet {
+  color: var(--break-text-secondary);
+  font-weight: 600;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.reference-link {
+  color: var(--break-link);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+  flex: 1;
+}
+
+.reference-link:hover,
+.reference-link:active {
+  color: var(--break-link-hover);
+  text-decoration: underline;
+}
+
+.reference-text {
+  color: var(--break-text-primary);
+  font-size: 14px;
+  flex: 1;
 }
 </style>
