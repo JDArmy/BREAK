@@ -41,6 +41,7 @@ const primaryDomainSuffixes = [
   'jxzfw.gov.cn',
   'gdzf.org.cn',
   'gzszfw.gov.cn',
+  'fjcdi.gov.cn',
   'sichuanpeace.gov.cn',
   'cdgaj.chengdu.gov.cn',
   'gat.guizhou.gov.cn',
