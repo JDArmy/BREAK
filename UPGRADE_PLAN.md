@@ -8,7 +8,7 @@
 ## 0. 当前未完成短板
 
 1. **内容与引用治理仍需闭环**：真实 broken 链接已清理，但 review、timeout、connection_error 仍需按域名和来源价值分批复核；高价值案例的 primary source 覆盖率仍偏低，需要继续补强。
-2. **自动化回归仍需收紧**：浏览器回归和 Lighthouse 已接入自动化链路，但部分仍以条件运行或非阻断方式执行；需要在稳定后逐步转为 hard fail，并继续补组件、控制器和视图模型测试。
+2. **自动化回归仍需收紧**：`site-smoke` 已转为每个 PR 的 hard-fail 浏览器门禁；较慢的浏览器回归和 Lighthouse 仍按 major/minor 版本变化条件运行，需要在稳定后继续分阶段收紧，并继续补组件、控制器和视图模型测试。
 3. **质量治理应留在审计链路**：质量报告 JSON 已纳入引用健康、案例来源等级、字段级 i18n、弱来源等规则；后续重点是按报告分批治理，不在公开关系页暴露“质量治理”入口。
 4. **关系页工程债偏重**：路径、解释、Sankey、覆盖、过滤等逻辑仍需继续拆分；部分复杂分析流程仍需要更多组件、控制器和视图模型测试覆盖。
 5. **可视化推理能力仍可深化**：已有路径发现和 force 布局基础，但缺少完整路径发现交互面板、大图截图/性能基线、攻击路径步骤级 method/action 解释。
@@ -64,15 +64,15 @@
 目标：把已接入的回归脚本逐步变成可靠门禁。
 
 未完成工作：
-- 观察 `site-smoke`、`site-performance`、`relation-stability` 稳定性后，优先将 `site-smoke` 转为 PR hard fail。
-- Lighthouse 和 relation-stability 根据稳定性分阶段收紧，不一次性把易抖动脚本全部设为阻断。
+- `site-smoke` 已转为每个 PR 的 hard-fail 浏览器门禁；继续观察其稳定性和耗时。
+- `site-performance`、`site-visual-review`、`relation-stability` 和 Lighthouse 仍按 major/minor 版本变化条件运行；后续根据稳定性分阶段收紧，不一次性把易抖动脚本全部设为全量阻断。
 - 继续补 `RelationView`、`HomeView`、关系图控制器、view model、关键交互组件测试。
 - 随测试增长逐步提高 coverage 阈值，避免长期停留在初始低阈值。
 
 落点：`.github/workflows/ci.yml`、`.github/workflows/deploy.yml`、`vitest.config.ts`、`src/views/relation/**/__tests__`、`src/components/**/__tests__`。
 
 验收：
-- 至少 smoke 回归在 PR 中阻断失败。
+- ~~至少 smoke 回归在 PR 中阻断失败。~~ 已完成：`.github/workflows/ci.yml` 新增无条件 `browser-smoke` job。
 - 关系页核心状态和控制器有测试覆盖。
 - 覆盖率阈值有阶段性提升记录。
 

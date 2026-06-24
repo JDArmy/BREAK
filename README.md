@@ -135,7 +135,7 @@ npm run type-check
 `npm run export:data-package` writes an npm package evaluation artifact to `dist/break-data-package`.
 `npm run validate:data-export` checks the public data bundle, manifest hash, entity counts, version, and copied GitHub Pages artifacts.
 `npm run validate:data-package` checks the npm package boundary, runtime entry, type declarations, README, manifest hash, and version alignment.
-`npm run test:smoke`, `npm run test:performance`, `npm run test:relation-stability`, and `npm run test:lighthouse` validate the generated static site with Playwright/Chromium. These run only in the local dev environment (not in CI/Deploy) — run them manually as needed.
+`npm run test:smoke`, `npm run test:performance`, `npm run test:visual-review`, `npm run test:relation-stability`, and `npm run test:lighthouse` validate the generated static site with Playwright/Chromium. PR CI runs `test:smoke` as a hard-fail browser gate on every pull request. Slower browser regression, visual review, relation stability, and Lighthouse checks run in PR CI only for major/minor version changes, and remain available locally via the same npm scripts. Deploy does not rerun Playwright/Lighthouse.
 `npm run audit:quality-report` regenerates the frontend-consumable quality report JSON.
 `npm run audit:metrics` generates the content trust, relation coverage, category distribution, and business scene coverage baseline.
 `npm run audit:bundle` checks the generated `dist/assets` bundle against the current performance budget.

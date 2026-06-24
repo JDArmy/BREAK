@@ -73,6 +73,23 @@ jobs:
       - run: npm run build-only
       - run: npm run audit:bundle:check
 
+  browser-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run export:data
+      - run: npm run export:data-en
+      - run: npm run build-only
+      - run: npm run test:smoke
+
   browser-regression-gate:
     runs-on: ubuntu-latest
     outputs:
@@ -109,10 +126,10 @@ jobs:
       - run: npm run export:data
       - run: npm run export:data-en
       - run: npm run build-only
-      - run: npm run test:smoke
       - run: npm run test:performance
       - run: npm run test:visual-review
       - run: npm run test:relation-stability
+      - run: npm run test:lighthouse
       - uses: actions/upload-artifact@v4
         if: always()
         with:

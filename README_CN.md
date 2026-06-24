@@ -135,7 +135,7 @@ npm run type-check
 `npm run export:data-package` 会生成 `dist/break-data-package` npm 数据包评估产物。
 `npm run validate:data-export` 会检查公共数据包、manifest hash、实体计数、版本号和 GitHub Pages 产物同步状态。
 `npm run validate:data-package` 会检查 npm 包边界、运行时入口、类型声明、README、manifest hash 和版本一致性。
-`npm run test:smoke`、`npm run test:performance`、`npm run test:relation-stability` 和 `npm run test:lighthouse` 会使用 Playwright/Chromium 验证生成后的静态站点。这 4 个仅在本地开发环境运行（不进 CI/Deploy），按需手动执行。
+`npm run test:smoke`、`npm run test:performance`、`npm run test:visual-review`、`npm run test:relation-stability` 和 `npm run test:lighthouse` 会使用 Playwright/Chromium 验证生成后的静态站点。PR CI 会在每个 PR 中把 `test:smoke` 作为 hard-fail 浏览器门禁执行；较慢的浏览器回归、视觉复核、关系稳定性和 Lighthouse 检查仅在 major/minor 版本变化时进入 PR CI，也可以通过相同 npm scripts 在本地手动执行。Deploy 不重复运行 Playwright/Lighthouse。
 `npm run audit:quality-report` 会重新生成前端可消费的质量报告 JSON。
 `npm run audit:metrics` 会生成内容可信度、关系覆盖、分类分布和业务场景覆盖基线报告。
 `npm run audit:bundle` 会基于 `dist/assets` 检查构建产物是否超过 bundle 预算。
