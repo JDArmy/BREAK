@@ -262,6 +262,7 @@ const primaryReferenceLinks = new Set([
   'https://www.zhongyuan.gov.cn/rdhy/9581840.jhtml', // 政府门户转载抖音黑板报官方治理公示
   'https://x.com/alvierid/status/1999403353466421320', // 安全研究人员原始披露
   'https://xz.aliyun.com/news/13288', // 作者原始漏洞复盘
+  'https://xz.aliyun.com/news/14031', // 作者原始云存储接管复盘
   'https://0xspade.medium.com/api-secret-key-leakage-leads-to-disclosure-of-employees-information-5ca4ce17e1ce', // 漏洞赏金猎人原始披露
   'https://medium.com/osmosis-community-updates/osmosis-updates-from-the-lab-recap-osmocon-and-exploit-fix-june-15-2022-fc22355e4b0d', // Osmosis 官方社区更新
   'https://medium.com/paritytech/a-postmortem-on-the-parity-multi-sig-library-self-destruct-63daca3a4cf7', // Parity 官方事后分析

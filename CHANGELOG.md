@@ -1,5 +1,15 @@
 # Change log
 
+## 2.23.83
+
+- 继续拆分 `relationCoverageAnalysis`，新增 `relationNodeCoverageBuilders` 承载风险、规避手段、攻击工具和威胁行为者的节点覆盖摘要构建逻辑
+- 保留 `relationCoverageAnalysis` 主模块负责 selected node 组合和专项洞察组合，降低主文件职责密度，并通过既有覆盖分析测试验证行为不回退
+
+## 2.23.82
+
+- 将 `C0677` 的先知社区作者原始云存储接管复盘加入精确 primary 白名单，修正该高价值安全事件被审计为 secondary only 的问题
+- 案例 primary 覆盖提升到 875，高价值 primary 覆盖提升到 552，primary 覆盖率提升到 48.69%，高价值 primary 覆盖率提升到 51.16%
+
 ## 2.23.81
 
 - 拆分 `relationCoverageAnalysis` 通用 helper，抽出节点 item builder、规避手段排序、洞察 section builder、按风险反查威胁行为者、按工具反查风险、按风险和工具反查规避手段等纯组合逻辑
