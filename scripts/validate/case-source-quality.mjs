@@ -272,6 +272,7 @@ const primaryReferenceLinks = new Set([
   'https://x.com/multichainorg/status/1679768407628185600', // Multichain 官方事件说明
   'https://bitcointalk.org/index.php?topic=105818.0', // BitFloor 创始人事故说明
 ]);
+const normalizedPrimaryReferenceLinks = new Set([...primaryReferenceLinks].map((link) => link.toLowerCase()));
 const primaryWechatBizIds = [
   'MjM5MjMyNTA0MQ==', // 公安部网安局
 ];
@@ -298,7 +299,7 @@ function classifySource(ref) {
     return { sourceType: 'weak', reason: 'weak_or_user_generated_domain' };
   }
 
-  if (primaryReferenceLinks.has(link.toLowerCase())) {
+  if (normalizedPrimaryReferenceLinks.has(link.toLowerCase())) {
     return { sourceType: 'primary', reason: 'official_account_reference' };
   }
 

@@ -1,5 +1,10 @@
 # Change log
 
+## 2.23.63
+
+- 修复案例来源质量审计中精确 primary 白名单的大小写归一化，确保 Manta Network、Aztec Labs、Scam Sniffer、PeckShield 等 X 原始公告链接按精确 URL 正确识别
+- 案例 primary 覆盖提升到 842，高价值 primary 覆盖提升到 519，primary 覆盖率提升到 46.86%，高价值 primary 覆盖率提升到 48.10%
+
 ## 2.23.62
 
 - 更新升级规划，将已完成的浏览器回归 hard-fail 收紧从未完成 P0 项中移除，改为后续测试覆盖和视觉巡检噪声治理任务
