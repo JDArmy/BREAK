@@ -242,6 +242,7 @@ const secondaryDomainSuffixes = [
 const mirrorDomainSuffixes = ['mp.weixin.qq.com', 'm.gmw.cn', 'toutiao.com', 'web.toutiao.com'];
 const primaryReferenceLinks = new Set([
   'https://web.archive.org/web/20180221031903/https://blog.redlock.io/cryptojacking-tesla', // RedLock CSI Team 原始研究存档
+  'https://www.douyin.com/video/7646680404434504998', // 抖音黑板报官方治理公告
   'https://m.thepaper.cn/newsdetail_forward_20536442', // 上海市第二中级人民法院官方澎湃号
   'https://m.thepaper.cn/newsdetail_forward_6016636', // 汾阳市市场监管局政务通报
   'https://xinwen.bjd.com.cn/content/s6a2bfd65d5de97bd7464c3db.html', // 北京互联网法院供稿
