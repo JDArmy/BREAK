@@ -63,6 +63,7 @@ const primaryDomainSuffixes = [
   'ic3.gov',
   'sec.gov',
   'cve.org',
+  'ipaguard.com',
   'mitre.org',
   'attack.mitre.org',
   'arxiv.org',
