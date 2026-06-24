@@ -1,0 +1,28 @@
+name: Setup Playwright
+description: Restore Playwright cache, install Chromium, and download the site build artifact.
+
+inputs:
+  artifact-name:
+    description: Build artifact name to download before running browser checks.
+    required: false
+    default: ci-site-build
+  artifact-path:
+    description: Target path for the downloaded build artifact.
+    required: false
+    default: .
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/cache@v4
+      with:
+        path: ~/.cache/ms-playwright
+        key: ${{ runner.os }}-playwright-${{ hashFiles('package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-playwright-
+    - run: npx playwright install --with-deps chromium
+      shell: bash
+    - uses: actions/download-artifact@v4
+      with:
+        name: ${{ inputs.artifact-name }}
+        path: ${{ inputs.artifact-path }}

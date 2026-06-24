@@ -16,11 +16,7 @@ jobs:
       - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v5
-        with:
-          node-version: 24
-          cache: npm
-      - run: npm ci
+      - uses: ./.github/actions/setup-node-env
       - run: npm run lint
       - run: npm run type-check
       - run: npm run validate:data
@@ -34,11 +30,7 @@ jobs:
       - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v5
-        with:
-          node-version: 24
-          cache: npm
-      - run: npm ci
+      - uses: ./.github/actions/setup-node-env
       - run: npm run test
       - run: npm run test:coverage
 
@@ -49,31 +41,32 @@ jobs:
       - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v5
-        with:
-          node-version: 24
-          cache: npm
-      - run: npm ci
+      - uses: ./.github/actions/setup-node-env
       - run: npm run export:data
       - run: npm run export:data-en
       - run: npm run export:data-package
       - run: npm run validate:data-export
       - run: npm run validate:data-package
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ci-static-data
+          path: public/data
+          if-no-files-found: error
+          retention-days: 1
 
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    needs: data-export
     steps:
       - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v5
+      - uses: ./.github/actions/setup-node-env
+      - uses: actions/download-artifact@v4
         with:
-          node-version: 24
-          cache: npm
-      - run: npm ci
-      - run: npm run export:data
-      - run: npm run export:data-en
+          name: ci-static-data
+          path: public/data
       - run: npm run build-only
       - run: npm run audit:bundle:check
       - uses: actions/upload-artifact@v4
@@ -85,141 +78,46 @@ jobs:
           if-no-files-found: error
           retention-days: 1
 
-  browser-smoke:
+  browser-tests:
+    name: ${{ matrix.name }}
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: ${{ matrix.timeout-minutes }}
     needs: build
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: browser-smoke
+            command: npm run test:smoke
+            timeout-minutes: 25
+          - name: relation-stability
+            command: npm run test:relation-stability
+            timeout-minutes: 25
+            break-force-relation-stability: "1"
+          - name: lighthouse-baseline
+            command: npm run test:lighthouse
+            timeout-minutes: 30
+            break-force-browser-regression: "1"
+          - name: site-performance
+            command: npm run test:performance
+            timeout-minutes: 25
+          - name: visual-review
+            command: npm run test:visual-review
+            timeout-minutes: 30
+            artifact-name: browser-visual-review
+            artifact-path: research/search-reports/browser-visual-review
     steps:
       - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v5
-        with:
-          node-version: 24
-          cache: npm
-      - run: npm ci
-      - uses: actions/cache@v4
-        with:
-          path: ~/.cache/ms-playwright
-          key: ${{ runner.os }}-playwright-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-playwright-
-      - run: npx playwright install --with-deps chromium
-      - uses: actions/download-artifact@v4
-        with:
-          name: ci-site-build
-          path: .
-      - run: npm run test:smoke
-
-  relation-stability:
-    runs-on: ubuntu-latest
-    timeout-minutes: 25
-    needs: build
-    steps:
-      - uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v5
-        with:
-          node-version: 24
-          cache: npm
-      - run: npm ci
-      - uses: actions/cache@v4
-        with:
-          path: ~/.cache/ms-playwright
-          key: ${{ runner.os }}-playwright-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-playwright-
-      - run: npx playwright install --with-deps chromium
-      - uses: actions/download-artifact@v4
-        with:
-          name: ci-site-build
-          path: .
-      - run: npm run test:relation-stability
+      - uses: ./.github/actions/setup-node-env
+      - uses: ./.github/actions/setup-playwright
+      - run: ${{ matrix.command }}
         env:
-          BREAK_FORCE_RELATION_STABILITY: "1"
-
-  lighthouse-baseline:
-    runs-on: ubuntu-latest
-    timeout-minutes: 30
-    needs: build
-    steps:
-      - uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v5
-        with:
-          node-version: 24
-          cache: npm
-      - run: npm ci
-      - uses: actions/cache@v4
-        with:
-          path: ~/.cache/ms-playwright
-          key: ${{ runner.os }}-playwright-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-playwright-
-      - run: npx playwright install --with-deps chromium
-      - uses: actions/download-artifact@v4
-        with:
-          name: ci-site-build
-          path: .
-      - run: npm run test:lighthouse
-        env:
-          BREAK_FORCE_BROWSER_REGRESSION: "1"
-
-  site-performance:
-    runs-on: ubuntu-latest
-    timeout-minutes: 25
-    needs: build
-    steps:
-      - uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v5
-        with:
-          node-version: 24
-          cache: npm
-      - run: npm ci
-      - uses: actions/cache@v4
-        with:
-          path: ~/.cache/ms-playwright
-          key: ${{ runner.os }}-playwright-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-playwright-
-      - run: npx playwright install --with-deps chromium
-      - uses: actions/download-artifact@v4
-        with:
-          name: ci-site-build
-          path: .
-      - run: npm run test:performance
-
-  visual-review:
-    runs-on: ubuntu-latest
-    timeout-minutes: 30
-    needs: build
-    steps:
-      - uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v5
-        with:
-          node-version: 24
-          cache: npm
-      - run: npm ci
-      - uses: actions/cache@v4
-        with:
-          path: ~/.cache/ms-playwright
-          key: ${{ runner.os }}-playwright-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-playwright-
-      - run: npx playwright install --with-deps chromium
-      - uses: actions/download-artifact@v4
-        with:
-          name: ci-site-build
-          path: .
-      - run: npm run test:visual-review
+          BREAK_FORCE_RELATION_STABILITY: ${{ matrix.break-force-relation-stability }}
+          BREAK_FORCE_BROWSER_REGRESSION: ${{ matrix.break-force-browser-regression }}
       - uses: actions/upload-artifact@v4
-        if: always()
+        if: always() && matrix.artifact-name != ''
         with:
-          name: browser-visual-review
-          path: research/search-reports/browser-visual-review
+          name: ${{ matrix.artifact-name }}
+          path: ${{ matrix.artifact-path }}

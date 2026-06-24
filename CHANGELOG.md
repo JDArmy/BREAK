@@ -1,5 +1,11 @@
 # Change log
 
+## 2.23.93
+
+- 提取 CI 公共初始化流程，新增 `setup-node-env` 和 `setup-playwright` composite action，统一 Node 24、`npm ci`、Playwright 缓存、Chromium 安装和站点构建 artifact 下载
+- 将 5 个浏览器回归 job 合并为 matrix strategy，并让 `build` 复用 `data-export` 产出的静态数据 artifact，减少 workflow 重复步骤
+- 更新升级规划，移除已完成的 CI workflow DRY 待办，保留内容治理与可视化推理后续任务
+
 ## 2.23.92
 
 - 为 `C0194` 追加广州市公安局“净网2022”官方来源，并同步英文引用标题
