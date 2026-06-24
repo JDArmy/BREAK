@@ -97,7 +97,7 @@
 
 未完成工作：
 - `RelationAnalysisPane.vue`：展示 contract 测试已覆盖空态、覆盖分析、专项洞察、路径摘要、筛选、移动端展开折叠和详情事件转发；已拆出 `RelationAnalysisCoverageColumn`、`RelationAnalysisPathColumn` 和 `RelationAnalysisDetailColumn` 承载左侧覆盖/专项洞察列、中间路径列与右侧详情列，后续继续拆分更细粒度卡片，并保持现有 contract 不回退。
-- `RelationNodeDrawerRelations.vue`：主要展示状态、空状态、跳转事件、可点击 ID、多实体类型组合、筛选和增量展开折叠 contract 测试已覆盖；后续拆分关系分组渲染和节点跳转控制，并保持现有 contract 不回退。
+- `RelationNodeDrawerRelations.vue`：主要展示状态、空状态、跳转事件、可点击 ID、多实体类型组合、筛选和增量展开折叠 contract 测试已覆盖；已抽出 `relationNodeDrawerRelationFilters` 承载关系筛选、候选项构建和无效筛选清理规则，后续继续拆分关系分组渲染和节点跳转控制，并保持现有 contract 不回退。
 - `relationCoverageAnalysis.ts`：已抽出节点 item builder、规避手段排序、洞察 section builder、跨实体反查 helper、risk/avoidance/tool/actor coverage builder 和 special insight builder；专项 builder 已补直接分支测试，后续继续观察拆分后覆盖率与维护边界。
 - `relationGraphBuilder.ts`：覆盖已稳定后，评估是否抽出实体分发/请求分发 helper，并保持现有测试不回退。
 - 继续用 `npm run test:coverage` 观察关系目录覆盖率和分支覆盖率；只有在分支余量稳定后再继续上调全局 coverage 阈值。

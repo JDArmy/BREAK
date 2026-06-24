@@ -2,24 +2,13 @@
 import { computed, reactive, watch } from "vue";
 import { useI18n } from "vue-i18n";
 import { useIncrementalVisibleList } from "@/composables/useIncrementalVisibleList";
-
-interface RelationSummary {
-  relationKey: string;
-  relationLineKey: string;
-  direction: string;
-  directionKey?: string;
-  text: string;
-  directness: string;
-  directnessKey?: string;
-  otherNodeId: string;
-  otherNodeType: string;
-  otherNodeTitle: string;
-  sourceFields: string[];
-  evidenceLabel: string;
-  explanation: string;
-  impactHint: string;
-  qualityFlags: string[];
-}
+import {
+  buildRelationFilterOptions,
+  createEmptyRelationFilters,
+  filterRelations,
+  sanitizeRelationFilters,
+  type RelationSummary,
+} from "@/components/relation/relationNodeDrawerRelationFilters";
 
 const props = defineProps<{
   selectedNetworkRelations: RelationSummary[];
@@ -35,68 +24,17 @@ const emit = defineEmits<{
 
 const { t } = useI18n();
 
-const relationFilters = reactive({
-  direction: "",
-  relationType: "",
-  directness: "",
-});
+const relationFilters = reactive(createEmptyRelationFilters());
 
 const RELATION_PREVIEW_LIMIT = 15;
 const SHOW_MORE_STEP = 50;
 
-const uniqueSortedValues = (values: string[]) =>
-  [...new Set(values.filter(Boolean))].sort((first, second) =>
-    first.localeCompare(second, undefined, {
-      numeric: true,
-      sensitivity: "base",
-    })
-  );
-
-type RelationFilterKey = keyof typeof relationFilters;
-type RelationFilterValues = Record<RelationFilterKey, string>;
-
-const relationMatchesFilters = (
-  relation: RelationSummary,
-  filters: RelationFilterValues,
-  ignoredFilter?: RelationFilterKey
-) =>
-  (ignoredFilter === "direction" ||
-    !filters.direction ||
-    (relation.directionKey ?? relation.direction) === filters.direction) &&
-  (ignoredFilter === "relationType" ||
-    !filters.relationType ||
-    relation.relationLineKey === filters.relationType) &&
-  (ignoredFilter === "directness" ||
-    !filters.directness ||
-    (relation.directnessKey ?? relation.directness) === filters.directness);
-
-const getCandidateRelationsForFilter = (ignoredFilter: RelationFilterKey) =>
-  props.selectedNetworkRelations.filter((relation) =>
-    relationMatchesFilters(relation, relationFilters, ignoredFilter)
-  );
-
-const relationFilterOptions = computed(() => ({
-  directions: uniqueSortedValues(
-    getCandidateRelationsForFilter("direction").map(
-      (relation) => relation.directionKey ?? relation.direction
-    )
-  ),
-  relationTypes: uniqueSortedValues(
-    getCandidateRelationsForFilter("relationType").map(
-      (relation) => relation.relationLineKey
-    )
-  ),
-  directness: uniqueSortedValues(
-    getCandidateRelationsForFilter("directness").map(
-      (relation) => relation.directnessKey ?? relation.directness
-    )
-  ),
-}));
+const relationFilterOptions = computed(() =>
+  buildRelationFilterOptions(props.selectedNetworkRelations, relationFilters)
+);
 
 const filteredRelations = computed(() =>
-  props.selectedNetworkRelations.filter((relation) =>
-    relationMatchesFilters(relation, relationFilters)
-  )
+  filterRelations(props.selectedNetworkRelations, relationFilters)
 );
 
 const tableRows = computed(() =>
@@ -198,32 +136,13 @@ watch(
     directnessOptions: relationFilterOptions.value.directness.join("|"),
   }),
   () => {
-    if (
-      relationFilters.direction &&
-      !relationFilterOptions.value.directions.includes(
-        relationFilters.direction
-      )
-    ) {
-      relationFilters.direction = "";
-    }
-
-    if (
-      relationFilters.relationType &&
-      !relationFilterOptions.value.relationTypes.includes(
-        relationFilters.relationType
-      )
-    ) {
-      relationFilters.relationType = "";
-    }
-
-    if (
-      relationFilters.directness &&
-      !relationFilterOptions.value.directness.includes(
-        relationFilters.directness
-      )
-    ) {
-      relationFilters.directness = "";
-    }
+    const sanitizedFilters = sanitizeRelationFilters(
+      relationFilters,
+      relationFilterOptions.value
+    );
+    relationFilters.direction = sanitizedFilters.direction;
+    relationFilters.relationType = sanitizedFilters.relationType;
+    relationFilters.directness = sanitizedFilters.directness;
   },
   { flush: "post" }
 );

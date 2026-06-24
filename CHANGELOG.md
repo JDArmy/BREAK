@@ -1,5 +1,11 @@
 # Change log
 
+## 2.23.89
+
+- 拆分 `RelationNodeDrawerRelations` 的关系筛选逻辑，新增 `relationNodeDrawerRelationFilters` 承载筛选匹配、候选项构建、自然排序去重和无效筛选清理
+- 新增节点关系抽屉筛选 helper 单测，覆盖组合筛选、级联候选项、排序去重和筛选清理；当前测试规模为 49 个测试文件、306 个测试
+- 更新升级规划，标记节点关系抽屉筛选规则已拆分，后续继续收敛关系分组渲染和节点跳转控制
+
 ## 2.23.88
 
 - 继续拆分 `RelationAnalysisPane`，新增 `RelationAnalysisDetailColumn` 承载右侧详情列，父组件收敛为三列编排、筛选与滚动保留逻辑
