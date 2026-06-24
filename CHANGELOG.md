@@ -1,5 +1,11 @@
 # Change log
 
+## 2.23.33
+
+- 继续补强安全事件、平台与链上案例 primary source，为 `C0786`、`C0842`、`C1293`、`C1330`、`C1433`、`C1439`、`C1441`、`C1631` 追加或识别 Cloudsmith、Okta、Koi Security、Cybereason、Solana、Binance、CertiK 等官方或原始研究来源，并同步英文引用标题
+- 扩充案例来源质量审计的 primary 识别，纳入 Solana、Binance、Okta、Cybereason、Cloudsmith 等官方或原始研究来源
+- 高价值案例 primary 覆盖提升到 408，primary 覆盖率提升到 40.51%，高价值 primary 覆盖率提升到 37.81%
+
 ## 2.23.32
 
 - 集中补强下一批安全事件、漏洞与链上案例 primary source，为 `C0807`、`C0872`、`C1018`、`C1019`、`C1135`、`C1183`、`C1184`、`C1294`、`C1316`、`C1334`、`C1357`、`C1463`、`C1470`、`C1539`、`C1541`、`C1551`、`C1696`、`C1757` 追加或识别 Socket、c/side、Volex、Fujitsu、BlockSec、StepSecurity、Wiz、Invariant Labs、Blackpanda、Microsoft、SolidityScan、Forescout、NHTSA、Chainalysis、SlowMist、Uber 等官方或原始研究来源，并同步英文引用标题
