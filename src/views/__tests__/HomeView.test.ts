@@ -152,6 +152,15 @@ const mountHomeView = async () => {
   });
 };
 
+const waitForAsyncRoute = async (assertion: () => boolean) => {
+  for (let index = 0; index < 20; index += 1) {
+    await Promise.resolve();
+    await nextTick();
+    if (assertion()) return;
+  }
+  throw new Error("异步详情路由状态未在预期轮次内稳定");
+};
+
 describe("HomeView", () => {
   beforeEach(() => {
     vi.resetModules();
@@ -216,15 +225,19 @@ describe("HomeView", () => {
     route.name = "avoidanceDetail";
     route.params = { aKey: "A0001" };
     const wrapper = await mountHomeView();
-    await vi.dynamicImportSettled();
-    await nextTick();
+    await waitForAsyncRoute(() =>
+      wrapper.find(".avoidance-detail-stub").exists()
+    );
 
     expect(wrapper.find(".avoidance-detail-stub").text()).toContain("A0001");
 
     route.name = "termDetail";
     route.params = { tKey: "T9999" };
-    await vi.dynamicImportSettled();
-    await nextTick();
+    await waitForAsyncRoute(() =>
+      replace.mock.calls.some(([location]) =>
+        JSON.stringify(location) === JSON.stringify({ name: "home" })
+      )
+    );
 
     expect(replace).toHaveBeenCalledWith({ name: "home" });
   });
