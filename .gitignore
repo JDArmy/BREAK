@@ -39,6 +39,12 @@ public/data/break-ld-en.jsonld
 
 *.tsbuildinfo
 
+# TypeScript 编译配置文件时生成的产物，源码使用 vite.config.mts / vitest.config.ts
+vite.config.mjs
+vite.config.d.mts
+vitest.config.js
+vitest.config.d.ts
+
 stats.html
 CLAUDE.md
 AGENTS.md
