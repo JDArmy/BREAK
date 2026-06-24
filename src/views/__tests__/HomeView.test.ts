@@ -1,5 +1,5 @@
-import { mount } from "@vue/test-utils";
-import { beforeEach, describe, expect, it, vi } from "vitest";
+import { mount, type VueWrapper } from "@vue/test-utils";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { computed, defineComponent, nextTick, reactive, ref } from "vue";
 
 const push = vi.fn();
@@ -12,6 +12,7 @@ const route = reactive<{
   params: {},
 });
 const locale = ref("cn");
+const wrappers: VueWrapper[] = [];
 
 vi.mock("element-plus/es/components/row/style/css", () => ({}));
 vi.mock("element-plus/es/components/col/style/css", () => ({}));
@@ -112,7 +113,7 @@ const drawerStub = (className: string, keyProp: string) =>
 
 const mountHomeView = async () => {
   const HomeView = (await import("@/views/HomeView.vue")).default;
-  return mount(HomeView, {
+  const wrapper = mount(HomeView, {
     global: {
       mocks: {
         $t: (key: string) => key,
@@ -150,6 +151,16 @@ const mountHomeView = async () => {
       },
     },
   });
+  wrappers.push(wrapper);
+  await waitForPendingUpdates();
+  return wrapper;
+};
+
+const waitForPendingUpdates = async () => {
+  for (let index = 0; index < 5; index += 1) {
+    await Promise.resolve();
+    await nextTick();
+  }
 };
 
 const waitForAsyncRoute = async (assertion: () => boolean) => {
@@ -168,6 +179,11 @@ describe("HomeView", () => {
     route.name = "home";
     route.params = {};
     locale.value = "cn";
+  });
+
+  afterEach(async () => {
+    wrappers.splice(0).forEach((wrapper) => wrapper.unmount());
+    await waitForPendingUpdates();
   });
 
   it("渲染首页统计与默认业务场景风险入口", async () => {

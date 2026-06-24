@@ -3,8 +3,9 @@ import { computed, nextTick, ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
 import { useBreakpoints } from "@/composables/useBreakpoints";
 import { useIncrementalVisibleList } from "@/composables/useIncrementalVisibleList";
+import RelationAnalysisCoverageColumn from "@/components/relation/RelationAnalysisCoverageColumn.vue";
+import RelationAnalysisPathColumn from "@/components/relation/RelationAnalysisPathColumn.vue";
 import RelationNodeDetailContent from "@/components/relation/RelationNodeDetailContent.vue";
-import RelationNodeSpecialInsightBlock from "@/components/relation/RelationNodeSpecialInsightBlock.vue";
 import {
   RelationType,
   type AttackPathDetail,
@@ -296,82 +297,19 @@ watch(
             ref="coverageColumnRef"
             class="relation-analysis-column relation-analysis-coverage-column"
           >
-            <div
-              v-if="riskAvoidanceCoverage"
-              class="node-explain-block relation-analysis-coverage"
-            >
-              <h3>{{ t("relationView.coverageMode") }}</h3>
-              <div class="node-insight-panel">
-                <div class="relation-analysis-summary">
-                  {{
-                    t("relationView.coverageModeSummary", {
-                      total: riskAvoidanceCoverage.totalCount,
-                      direct: riskAvoidanceCoverage.directCount,
-                      tool: riskAvoidanceCoverage.attackToolCount,
-                      overlap: riskAvoidanceCoverage.overlapCount,
-                    })
-                  }}
-                </div>
-                <div class="relation-analysis-coverage-list">
-                  <button
-                    v-for="item in displayedCoverageItems"
-                    :key="item.avoidanceKey"
-                    type="button"
-                    :class="[
-                      'relation-analysis-coverage-item',
-                      `relation-analysis-coverage-item-${item.source}`,
-                      attackPathFilters[RelationType.avoidance] ===
-                      item.avoidanceKey
-                        ? 'relation-analysis-coverage-item-active'
-                        : '',
-                    ]"
-                    @click="applyLeftAvoidanceFilter(item.avoidanceKey)"
-                  >
-                    <span class="relation-analysis-item-title">
-                      <strong>{{ item.avoidanceTitle }}</strong>
-                      <span>{{ item.avoidanceKey }}</span>
-                    </span>
-                    <span class="relation-analysis-item-meta">
-                      {{ item.sourceLabel }} /
-                      {{
-                        t("relationView.coveragePathCount", {
-                          count: item.pathCount,
-                        })
-                      }}
-                    </span>
-                    <span
-                      v-if="item.attackToolLabels.length"
-                      class="relation-analysis-item-meta"
-                    >
-                      {{ t("relationView.coverageToolSources") }}:
-                      {{ item.attackToolLabels.join(", ") }}
-                    </span>
-                  </button>
-                </div>
-                <button
-                  v-if="
-                    isMobile &&
-                    (hiddenCoverageItemCount > 0 || hasExpandedCoverageItems)
-                  "
-                  type="button"
-                  class="node-relation-more node-attack-path-more-button"
-                  @click="showMoreCoverageItems"
-                >
-                  {{
-                    hiddenCoverageItemCount <= 0
-                      ? t("relationView.collapseAnalysisCoverageCount")
-                      : t("relationView.hiddenAnalysisCoverageCount", {
-                          count: hiddenCoverageItemCount,
-                        })
-                  }}
-                </button>
-              </div>
-            </div>
-            <RelationNodeSpecialInsightBlock
-              v-else
-              :summary="selectedNodeSpecialInsightSummary"
-              :interactive="true"
-              @apply-filter="applySpecialInsightFilter"
+            <RelationAnalysisCoverageColumn
+              :attack-path-filters="attackPathFilters"
+              :displayed-coverage-items="displayedCoverageItems"
+              :has-expanded-coverage-items="hasExpandedCoverageItems"
+              :hidden-coverage-item-count="hiddenCoverageItemCount"
+              :is-mobile="isMobile"
+              :risk-avoidance-coverage="riskAvoidanceCoverage"
+              :selected-node-special-insight-summary="
+                selectedNodeSpecialInsightSummary
+              "
+              @apply-avoidance-filter="applyLeftAvoidanceFilter"
+              @apply-special-insight-filter="applySpecialInsightFilter"
+              @toggle-coverage-items="showMoreCoverageItems"
             />
           </aside>
           <el-backtop
@@ -389,106 +327,17 @@ watch(
             ref="pathColumnRef"
             class="relation-analysis-column relation-analysis-path-column"
           >
-            <div
-              v-if="selectedAttackPathDetail"
-              class="node-explain-block relation-analysis-path-detail"
-            >
-              <h3>{{ t("relationView.pathDetail") }}</h3>
-              <div class="node-insight-panel">
-                <div class="relation-analysis-summary">
-                  {{
-                    t("relationView.filteredSimplePathCount", {
-                      count: filteredAttackPathCount,
-                    })
-                  }}
-                </div>
-                <div class="relation-analysis-path-chain">
-                  <span
-                    v-for="(node, index) in selectedAttackPathDetail.nodes"
-                    :key="`${node.type}:${node.key}`"
-                    class="relation-analysis-path-node"
-                  >
-                    <span>{{ node.label }}</span>
-                    <span
-                      v-if="index < selectedAttackPathDetail.nodes.length - 1"
-                      class="relation-analysis-path-arrow"
-                      >-></span
-                    >
-                  </span>
-                </div>
-                <div class="relation-analysis-segments">
-                  <div
-                    v-for="segment in selectedAttackPathDetail.segments"
-                    :key="`${segment.source.type}:${segment.source.key}->${segment.target.type}:${segment.target.key}`"
-                    class="relation-analysis-segment"
-                  >
-                    <div class="relation-analysis-segment-main">
-                      <strong>{{ segment.source.label }}</strong>
-                      <span>{{ segment.relation }}</span>
-                      <strong>{{ segment.target.label }}</strong>
-                    </div>
-                    <div class="relation-analysis-item-meta">
-                      {{ segment.reason }}
-                    </div>
-                    <div class="relation-analysis-item-meta">
-                      {{ t("relationView.sourceFields") }}:
-                      {{ segment.sourceFields.join(", ") }}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="node-explain-block relation-analysis-all-paths">
-              <h3>{{ t("relationView.allPaths") }}</h3>
-              <div class="node-insight-panel">
-                <div class="relation-analysis-summary">
-                  {{
-                    t("relationView.filteredSimplePathCount", {
-                      count: attackPathDetails.length,
-                    })
-                  }}
-                </div>
-                <div class="relation-analysis-path-list">
-                  <button
-                    v-for="path in displayedAttackPathDetails"
-                    :key="path.id"
-                    type="button"
-                    :class="[
-                      'relation-analysis-path-list-item',
-                      selectedAttackPathDetail?.id === path.id
-                        ? 'relation-analysis-path-list-item-active'
-                        : '',
-                    ]"
-                    @click="selectMiddleAttackPath(path.id)"
-                  >
-                    <span class="relation-analysis-path-list-title">
-                      {{ path.label }}
-                    </span>
-                    <span class="relation-analysis-item-meta">
-                      {{ path.segments.length }}
-                      {{ t("relationView.pathSegments") }}
-                    </span>
-                  </button>
-                </div>
-                <button
-                  v-if="
-                    isMobile &&
-                    (hiddenAttackPathCount > 0 || hasExpandedAttackPaths)
-                  "
-                  type="button"
-                  class="node-relation-more node-attack-path-more-button"
-                  @click="showMoreAttackPaths"
-                >
-                  {{
-                    hiddenAttackPathCount <= 0
-                      ? t("relationView.collapseAnalysisPathCount")
-                      : t("relationView.hiddenAnalysisPathCount", {
-                          count: hiddenAttackPathCount,
-                        })
-                  }}
-                </button>
-              </div>
-            </div>
+            <RelationAnalysisPathColumn
+              :attack-path-details="attackPathDetails"
+              :displayed-attack-path-details="displayedAttackPathDetails"
+              :filtered-attack-path-count="filteredAttackPathCount"
+              :has-expanded-attack-paths="hasExpandedAttackPaths"
+              :hidden-attack-path-count="hiddenAttackPathCount"
+              :is-mobile="isMobile"
+              :selected-attack-path-detail="selectedAttackPathDetail"
+              @select-attack-path="selectMiddleAttackPath"
+              @toggle-attack-paths="showMoreAttackPaths"
+            />
           </aside>
           <el-backtop
             class="relation-analysis-pane-backtop"
