@@ -1,5 +1,11 @@
 # Change log
 
+## 2.23.58
+
+- 将 Lighthouse 基线提升为 PR CI 独立 hard-fail job，强制覆盖首页、风险列表和关系 Sankey 在桌面/移动端的性能、可访问性、最佳实践、SEO、LCP 和 CLS 预算
+- 从条件浏览器回归 job 中移除重复 Lighthouse 执行，保留 performance 与视觉复核继续按 major/minor 版本变化运行
+- 本地强制执行 `BREAK_FORCE_BROWSER_REGRESSION=1 npm run test:lighthouse` 通过，最弱移动端关系 Sankey perf=65、LCP=6870ms，仍高于当前预算
+
 ## 2.23.57
 
 - 扩展 `RelationSelectorBar` 组件测试，覆盖 idle 延迟加载、fallback timer、关系类型切换、缺失类型映射、空闲回调清理和定时器卸载清理
