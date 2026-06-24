@@ -1,7 +1,7 @@
 # BREAK 框架未完成升级计划
 
 > 文档版本：2.1
-> 修订日期：2026-06-23
+> 修订日期：2026-06-24
 > 范围：仅保留尚未收口或需要持续推进的升级项；既往阶段、验收记录和历史流水账不再维护在本文档中。
 > 评估结论：BREAK 已具备较成熟的知识模型、关系可视化、数据校验和构建门禁。后续重点不是继续堆功能，而是收紧内容质量闭环、补齐知识模型短板、降低关系页工程复杂度，并把可视化从解释型推进到更强的推理型。
 
@@ -66,15 +66,15 @@
 未完成工作：
 - `site-smoke` 和 `relation-stability` 已转为每个 PR 的 hard-fail 浏览器门禁；继续观察其稳定性和耗时。
 - `site-performance`、`site-visual-review` 和 Lighthouse 仍按 major/minor 版本变化条件运行；后续根据稳定性分阶段收紧，不一次性把易抖动脚本全部设为全量阻断。
-- 已补 `relationViewState`、`relationNodeRouting`、`relationViewBridges`、`relationNetworkChartController`、`relationSankeyChartController`、`useRelationViewModel`、`relationViewAssembly`、`relationViewEffects`、`useRelationNodeActions`、`relationNodeContextMenu`、`relationNodeClipboard`、`useRelationGraphData` 单测，覆盖视图模式归一化、移动端 Sankey 尺寸、节点选择、网络缩放、布局切换、实体详情跳转、详情锚点、新窗口打开、view model 桥接层、关系页组合入口、网络图/Sankey 图渲染、节点交互、触屏操作、右键菜单定位与禁用策略、复制反馈、CSV 导出、图谱数据 helper、拖拽持久化、下载、全屏、移动端长按、主题刷新、路由/语言变化刷新和 dispose 清理；继续补 `RelationView`、`HomeView`、关键交互组件测试。
-- coverage 阈值已从 40% 提升到 58%；后续随控制器和 view model 测试增长继续上调，避免长期停留在低阈值。
+- 已补 `relationViewState`、`relationNodeRouting`、`relationViewBridges`、`relationNetworkChartController`、`relationSankeyChartController`、`useRelationViewModel`、`relationViewAssembly`、`relationViewEffects`、`useRelationNodeActions`、`relationNodeContextMenu`、`relationNodeClipboard`、`useRelationGraphData`、`relationGraph*Builder` 单测，覆盖视图模式归一化、移动端 Sankey 尺寸、节点选择、网络缩放、布局切换、实体详情跳转、详情锚点、新窗口打开、view model 桥接层、关系页组合入口、网络图/Sankey 图渲染、节点交互、触屏操作、右键菜单定位与禁用策略、复制反馈、CSV 导出、图谱数据 helper、实体关系构建、子实体、相关实体、术语反查、缺失关联跳过、拖拽持久化、下载、全屏、移动端长按、主题刷新、路由/语言变化刷新和 dispose 清理；继续补 `RelationView`、`HomeView`、关键交互组件测试。
+- coverage 阈值已从 40% 提升到 61%；后续随组件和 view model 测试增长继续上调，避免长期停留在低阈值。
 
 落点：`.github/workflows/ci.yml`、`.github/workflows/deploy.yml`、`vitest.config.ts`、`src/views/relation/**/__tests__`、`src/components/**/__tests__`。
 
 验收：
 - ~~至少 smoke 回归在 PR 中阻断失败。~~ 已完成：`.github/workflows/ci.yml` 新增无条件 `browser-smoke` 和 `relation-stability` job。
 - 关系页核心状态和控制器有测试覆盖。
-- ~~覆盖率阈值有阶段性提升记录。~~ 已完成阶段性提升：`vitest.config.ts` 全局阈值从 40% 提升到 58%。
+- ~~覆盖率阈值有阶段性提升记录。~~ 已完成阶段性提升：`vitest.config.ts` 全局阈值从 40% 提升到 61%。
 
 ### P1. 知识模型与工程债
 
