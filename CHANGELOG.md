@@ -1,5 +1,11 @@
 # Change log
 
+## 2.23.61
+
+- 将浏览器视觉巡检提升为 PR CI 独立 hard-fail job，覆盖 3 档视口、知识库页面、关系图/Sankey/Analysis 交互、搜索、导航、主题语言切换、异常路由回退和移动端关键路径
+- 移除 major/minor 条件浏览器回归 gate/job；slow browser 链路已拆为 `browser-smoke`、`relation-stability`、`lighthouse-baseline`、`site-performance`、`visual-review` 独立阻断 job
+- 本地执行 `npm run test:visual-review` 通过，生成 78 张截图报告；当前报告仍保留布局 warning 作为人工复核线索，不作为失败条件
+
 ## 2.23.60
 
 - 将静态站性能预算提升为 PR CI 独立 hard-fail job，覆盖首页、风险列表和关系 Sankey 的加载耗时、总传输、脚本传输和资源数量预算
