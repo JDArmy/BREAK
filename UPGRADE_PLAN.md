@@ -43,11 +43,11 @@
 
 目标：让核心案例优先具备可信 primary source，避免用全量多源率作为低收益 KPI。
 
-已完成：审计工具链已建成（`case-source-quality.mjs`），可按类别统计高价值案例 primary 覆盖率；当前全量覆盖率 54.31%，高价值覆盖率 59.04%，并已将 `view.inews.qq.com` 归入 secondary 来源以减少 unknown 噪声。
+已完成：审计工具链已建成（`case-source-quality.mjs`），可按类别统计高价值案例 primary 覆盖率；当前全量覆盖率 54.48%，高价值覆盖率 59.31%，并已将 `view.inews.qq.com` 归入 secondary 来源以减少 unknown 噪声。
 
 未完成工作：
-- 高价值 1,079 案例中 442 个缺 primary source。按类别分批补源：
-  - `criminal_verdict`：47.25%（316 个缺口，最大短板），优先法院、检察院、公安、监管通报。
+- 高价值 1,079 案例中 439 个缺 primary source。按类别分批补源：
+  - `criminal_verdict`：47.75%（313 个缺口，最大短板），优先法院、检察院、公安、监管通报。
   - `administrative_enforcement`：50.93%（79 个缺口），优先各级市场监管局、网信办官网。
   - `news_report`：13.90%（347 个缺口），价值相对低，按需处理。
   - `security_incident`：82.14%，`academic_research`：89.52%，`vulnerability_advisory`：97.01% — 已较好。
