@@ -4,6 +4,7 @@ import { useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
 import { Search } from "@element-plus/icons-vue";
 import { useSearch, type EntityType, type SearchResult } from "@/composables/useSearch";
+import { useCases } from "@/composables/useCases";
 import { useBreakpoints } from "@/composables/useBreakpoints";
 
 import "element-plus/es/components/dialog/style/css";
@@ -16,6 +17,7 @@ const emit = defineEmits<{ "update:modelValue": [value: boolean] }>();
 const router = useRouter();
 const { t } = useI18n();
 const { search: doSearch } = useSearch();
+const { ensureCases } = useCases();
 const { isMobile } = useBreakpoints();
 
 const query = ref("");
@@ -174,6 +176,7 @@ watch(() => props.modelValue, (open) => {
     query.value = "";
     debouncedQuery.value = "";
     selectedIndex.value = -1;
+    ensureCases(); // 确保案例数据已加载，加载完成后搜索索引自动重建
     nextTick(() => {
       inputRef.value?.focus();
     });
