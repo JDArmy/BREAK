@@ -10,7 +10,7 @@
 1. **内容与引用治理仍需闭环**：真实 broken 链接已清理，但 review、timeout、connection_error 仍需按域名和来源价值分批复核；高价值案例的 primary source 覆盖率仍偏低，需要继续补强。
 2. **回归门禁已收紧，测试深度仍需继续补齐**：浏览器 smoke、关系稳定性、Lighthouse、静态站性能和视觉巡检已全部转为每个 PR 的独立 hard-fail job；`RelationView`、`HomeView`、基础布局/主题/案例 composables 已补页面组合与状态测试，coverage 阈值已提升到 65%；后续重点是继续观察 CI 耗时、稳定性和视觉 warning 噪声，并补关键交互组件、控制器和复杂关系分支测试。
 3. **质量治理应留在审计链路**：质量报告 JSON 已纳入引用健康、案例来源等级、字段级 i18n、弱来源等规则；后续重点是按报告分批治理，不在公开关系页暴露“质量治理”入口。
-4. **关系页工程债偏重**：路径、解释、Sankey、覆盖、过滤等逻辑仍需继续拆分；复杂分析流程、页面组合入口和关键交互仍需要更多组件、控制器和视图模型测试覆盖。
+4. **关系页工程债偏重**：路径、解释、Sankey、覆盖、过滤等逻辑仍需继续拆分；`relationCoverageAnalysis` 已补核心分支测试，后续重点转向 `relationGraphBuilder`、图表控制器、分析面板和节点关系抽屉的测试保护与小步拆分。
 5. **可视化推理能力仍可深化**：已有路径发现和 force 布局基础，但缺少完整路径发现交互面板、大图截图/性能基线、攻击路径步骤级 method/action 解释。
 6. ~~**标准化互操作尚未开始**~~：已实现 STIX 2.1 和 JSON-LD 双格式导出，支持实体级 version 字段，外部 CTI/SIEM 消费能力已具备（v2.23.0）。
 
@@ -72,7 +72,7 @@
 - 已补 `RelationView` 页面组合测试，覆盖桌面/移动端预加载、卸载清理、详情抽屉状态和网络面板事件转发；已补 `HomeView` 页面测试，覆盖首页统计、风险详情路由、业务场景详情关闭、非法路由回退和异步实体抽屉。
 - 已补 `useBreakpoints`、`useTheme`、`useDrawerWidth`、`useCasesByRisk`、`useLazyCasesSection`、`useRelationGraph` 测试，覆盖断点监听、主题同步、抽屉宽度、案例倒排索引、滚动懒加载和关系图路由跳转。
 - `site-visual-review` 已将首页英文矩阵受控横向滚动、移动端关系图画布、抽屉打开态等 warning 分类为 `knownWarnings`；后续继续处理未知 warning，并把真实布局问题转为阻断项。
-- coverage 阈值已从 62% 提升到 65%；后续优先补 `relationCoverageAnalysis`、`relationGraphBuilder`、图表控制器和关键交互组件分支，再评估继续上调。
+- coverage 阈值已从 62% 提升到 65%；`relationCoverageAnalysis` 已补空选择、未知实体、孤立规避手段、有效性排序、攻击工具缺口、威胁行为者缺口等核心分支测试，后续优先补 `relationGraphBuilder`、图表控制器和关键交互组件分支，再评估继续上调。
 - CI/deploy/link-check 已增加 job 级 `timeout-minutes`，后续观察 hard-fail 浏览器 job 的耗时和偶发失败，再决定是否拆分缓存或复用 workflow。
 
 落点：`vitest.config.ts`、`src/views/**/__tests__`、`src/components/**/__tests__`、`scripts/validate/site-visual-review.mjs`。
@@ -88,15 +88,38 @@
 目标：减少重复校验、提升 CI 反馈速度。
 
 未完成工作：
-- 继续评估是否抽取可复用 workflow 或统一校验 job，减少后续 ci/deploy 重复命令维护。
+- PR CI 已由 `build` job 统一执行 `export:data`、`export:data-en`、`build-only` 并上传 `ci-site-build` artifact，browser-smoke、relation-stability、lighthouse-baseline、site-performance、visual-review 分别下载复用，保持独立 hard-fail。
+- 浏览器类 job 已增加 Playwright Chromium 缓存，减少重复安装成本。
+- 后续观察 GitHub Actions 实际耗时和 artifact 传输成本；如瓶颈仍明显，再评估 composite action 或 reusable workflow 收敛 `checkout/setup-node/npm ci/playwright install/download artifact` 公共步骤。
 
 落点：`.github/workflows/ci.yml`、`.github/workflows/deploy.yml`、`.github/workflows/link-check.yml`。
 
 验收：
-- CI 总耗时明显下降。
+- browser job 不重复执行 `export:data`、`export:data-en`、`build-only`，且仍保持独立 hard-fail。
+- CI 总耗时和 Playwright 安装耗时在后续 PR 中可观察。
 - ci/deploy 重复步骤继续减少。
 
-#### P1-3. 任务型分析视角切换
+#### P1-3. 关系页工程债治理
+
+目标：把关系页从“功能已可用但大文件耦合重”推进到“核心分析逻辑有测试保护、控制器职责清晰、组件可小步维护”的状态。
+
+未完成工作：
+- `relationGraphBuilder.ts`：补 `addRootNode` 缺失实体、`rebuildGraphData` 状态重置、`genNetworkGraphData` 各实体和 `reqType` 分支测试；覆盖稳定后再评估是否抽出实体分发/请求分发 helper。
+- `relationNetworkChartController.ts` / `relationSankeyChartController.ts`：补空图、销毁、resize、拖拽位置、节点选择、菜单事件和重复渲染分支测试；避免控制器拆分时破坏图表生命周期。
+- `RelationAnalysisPane.vue`：先补覆盖分析、专项洞察、路径摘要、Sankey/网络视图切换等展示 contract 测试，再拆出覆盖卡片、专项洞察区、路径摘要区等子组件。
+- `RelationNodeDrawerRelations.vue`：补节点关系分组、空状态、跳转事件、可点击 ID 和多实体类型组合测试；拆分关系分组渲染和节点跳转控制。
+- `relationCoverageAnalysis.ts`：当前核心分支测试已补，后续拆分时优先抽出纯 helper，例如 coverage item builder、risk/avoidance/tool/actor coverage builder、special insight builder，并保持现有测试不回退。
+- 继续用 `npm run test:coverage` 观察关系目录覆盖率和分支覆盖率；只有在分支余量稳定后再上调全局 coverage 阈值。
+
+落点：`src/views/relation/relationGraphBuilder.ts`、`src/views/relation/relationNetworkChartController.ts`、`src/views/relation/relationSankeyChartController.ts`、`src/views/relation/relationCoverageAnalysis.ts`、`src/components/relation/RelationAnalysisPane.vue`、`src/components/relation/RelationNodeDrawerRelations.vue`、对应 `__tests__`。
+
+验收：
+- `relationGraphBuilder`、网络图控制器、Sankey 控制器的关键分支均有单测覆盖，`npm run test:coverage` 稳定通过。
+- `RelationAnalysisPane` 和 `RelationNodeDrawerRelations` 至少覆盖主要展示状态、空状态和交互事件。
+- 拆分后的子模块保持纯函数或窄组件输入输出，关系页 URL、节点选择、筛选、图表渲染和抽屉交互不回退。
+- 关系目录覆盖率不低于当前水平，新增拆分不降低全局 coverage 阈值。
+
+#### P1-4. 任务型分析视角切换
 
 目标：从单一实体中心图升级为面向任务的分析入口。
 
@@ -187,7 +210,8 @@
 | P0-2 高价值案例 primary source 补强 | P0 | 4-6 天 | 提升核心案例可信度 |
 | P1-1 测试覆盖与视觉巡检噪声治理 | P1 | 2-3 天 | 降低 UI/关系页回归和人工复核成本 |
 | P1-2 CI workflow 优化 | P1 | 1 天 | 提升反馈速度 |
-| P1-3 任务型分析视角切换 | P1 | 3-4 天 | 提升关系页分析效率 |
+| P1-3 关系页工程债治理 | P1 | 3-5 天 | 降低关系页拆分和交互回归风险 |
+| P1-4 任务型分析视角切换 | P1 | 3-4 天 | 提升关系页分析效率 |
 | P2-1 完整路径发现交互面板 | P2 | 2-3 天 | 强化推理型分析 |
 | P2-2 大图性能与截图基线 | P2 | 1-2 天 | 降低可视化回归风险 |
 | P2-3 攻击路径步骤级解释 | P2 | 2-3 天 | 提升解释可信度 |
@@ -196,8 +220,9 @@
 推荐顺序：
 1. 先继续做 P0-1、P0-2，收紧内容质量和引用可信度。
 2. 同步推进 P1-1、P1-2，降低回归噪声和 CI 维护成本。
-3. 然后推进 P1-3，补齐关系页分析方式。
-4. 最后按外部需求选择 P2 项。
+3. 然后推进 P1-3，先稳住关系页工程债和测试保护。
+4. 在 P1-3 稳定后推进 P1-4，补齐关系页分析方式。
+5. 最后按外部需求选择 P2 项。
 
 ## 4. 整体验收标准
 
@@ -208,7 +233,7 @@
 | 回归门禁 | 浏览器 smoke、关系稳定性、Lighthouse、性能和视觉巡检均为 PR hard fail；关系页核心逻辑有测试覆盖 |
 | 质量报告 | `audit:quality-report` 覆盖引用、案例来源、i18n、弱关系等治理维度，并进入静态数据与 npm 包校验 |
 | 公开关系页 | 不暴露内部质量治理入口 |
-| 关系页工程 | 继续拆分复杂分析模块，补控制器、视图模型和交互测试 |
+| 关系页工程 | 关系覆盖分析已补核心分支测试；继续补 graph builder、图表控制器、分析面板和节点关系抽屉测试，再小步拆分复杂模块 |
 | CI | PR 旧 run 可取消；重复 workflow 明显减少 |
 | 任务型视角 | 至少支持风险、攻击路径、防御覆盖 3 个视角 |
 | 路径发现 | 任意起止节点路径发现有完整交互 |

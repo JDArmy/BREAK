@@ -76,10 +76,19 @@ jobs:
       - run: npm run export:data-en
       - run: npm run build-only
       - run: npm run audit:bundle:check
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ci-site-build
+          path: |
+            dist
+            public/data
+          if-no-files-found: error
+          retention-days: 1
 
   browser-smoke:
     runs-on: ubuntu-latest
     timeout-minutes: 25
+    needs: build
     steps:
       - uses: actions/checkout@v5
         with:
@@ -89,15 +98,23 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-playwright-
       - run: npx playwright install --with-deps chromium
-      - run: npm run export:data
-      - run: npm run export:data-en
-      - run: npm run build-only
+      - uses: actions/download-artifact@v4
+        with:
+          name: ci-site-build
+          path: .
       - run: npm run test:smoke
 
   relation-stability:
     runs-on: ubuntu-latest
     timeout-minutes: 25
+    needs: build
     steps:
       - uses: actions/checkout@v5
         with:
@@ -107,10 +124,17 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-playwright-
       - run: npx playwright install --with-deps chromium
-      - run: npm run export:data
-      - run: npm run export:data-en
-      - run: npm run build-only
+      - uses: actions/download-artifact@v4
+        with:
+          name: ci-site-build
+          path: .
       - run: npm run test:relation-stability
         env:
           BREAK_FORCE_RELATION_STABILITY: "1"
@@ -118,6 +142,7 @@ jobs:
   lighthouse-baseline:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    needs: build
     steps:
       - uses: actions/checkout@v5
         with:
@@ -127,10 +152,17 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-playwright-
       - run: npx playwright install --with-deps chromium
-      - run: npm run export:data
-      - run: npm run export:data-en
-      - run: npm run build-only
+      - uses: actions/download-artifact@v4
+        with:
+          name: ci-site-build
+          path: .
       - run: npm run test:lighthouse
         env:
           BREAK_FORCE_BROWSER_REGRESSION: "1"
@@ -138,6 +170,7 @@ jobs:
   site-performance:
     runs-on: ubuntu-latest
     timeout-minutes: 25
+    needs: build
     steps:
       - uses: actions/checkout@v5
         with:
@@ -147,15 +180,23 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-playwright-
       - run: npx playwright install --with-deps chromium
-      - run: npm run export:data
-      - run: npm run export:data-en
-      - run: npm run build-only
+      - uses: actions/download-artifact@v4
+        with:
+          name: ci-site-build
+          path: .
       - run: npm run test:performance
 
   visual-review:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    needs: build
     steps:
       - uses: actions/checkout@v5
         with:
@@ -165,10 +206,17 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-playwright-
       - run: npx playwright install --with-deps chromium
-      - run: npm run export:data
-      - run: npm run export:data-en
-      - run: npm run build-only
+      - uses: actions/download-artifact@v4
+        with:
+          name: ci-site-build
+          path: .
       - run: npm run test:visual-review
       - uses: actions/upload-artifact@v4
         if: always()
