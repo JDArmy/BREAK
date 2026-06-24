@@ -63,6 +63,18 @@ const networkNodeSortOrder: Record<string, number> = {
 
 const normalizeGraphText = (text: string) => text.replace(/<br\s*\/?>/gi, "\n");
 
+const entityChildIdPatterns: Partial<Record<RelationEntityType, RegExp>> = {
+  [RelationType.risk]: /^R\d{4}-\d+/,
+  [RelationType.avoidance]: /^A\d{4}-\d+/,
+  [RelationType.attackTool]: /^AT\d{4}-\d+/,
+  [RelationType.threatActor]: /^TA\d{4}-\d+/,
+};
+
+const getEntityParentId = (node: Node) => {
+  const childMatch = entityChildIdPatterns[node.type]?.exec(node.id);
+  return childMatch ? node.id.split("-")[0] : undefined;
+};
+
 interface NetworkGraphStyleContext {
   lineColor: string;
   nodeTextColor: string;
@@ -95,6 +107,19 @@ export const createNetworkDataHelpers = ({
   formatEvidenceLevel,
   getNodeTypeTitle,
 }: CreateNetworkDataHelpersOptions) => {
+  const isSubNodeLike = (node: Node) =>
+    Boolean(node.data?.isSubNode) ||
+    (node.id !== relKey.value &&
+      Boolean(getEntityParentId(node)));
+
+  const isForeignChildNode = (node: Node) => {
+    if (node.data?.isSubNode) return false;
+    const parentId = getEntityParentId(node);
+    return Boolean(
+      parentId && node.id !== relKey.value && parentId !== relKey.value,
+    );
+  };
+
   const createGraphNode = (
     node: Node,
     x: number,
@@ -104,7 +129,7 @@ export const createNetworkDataHelpers = ({
   ): GraphNode => {
     const text = normalizeGraphText(node.text);
     const isSelected = node.id === selectedNetworkNodeId.value;
-    const isSubNode = Boolean(node.data?.isSubNode);
+    const isSubNode = isSubNodeLike(node);
     const draggedPosition = draggedNodePositions.value[node.id];
     const baseColor =
       styleContext.relationTypeColors[node.type] ??
@@ -674,12 +699,13 @@ export const createNetworkDataHelpers = ({
     const linkMap = new Map<string, GraphLink>();
 
     nodes.forEach((node) => {
-      const isSubNode = node.data?.isSubNode;
+      const isSubNode = isSubNodeLike(node);
       const isRelatedEntity = node.data?.isRelatedEntity;
       if (
         !filterRelationType.value.includes(node.type) ||
+        isForeignChildNode(node) ||
         (isSubNode && !filterSubNode.value) ||
-        (isRelatedEntity && !filterRelatedEntity.value)
+        (isRelatedEntity && !isSubNode && !filterRelatedEntity.value)
       ) {
         return;
       }

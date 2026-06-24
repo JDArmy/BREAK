@@ -294,6 +294,25 @@ describe("useRelationNodeActions", () => {
     drawer.remove();
   });
 
+  it("opens the drawer for valid entity ids that are not loaded in the current graph", () => {
+    const { actions, ensureRelationNode, selectedNetworkNodeId } = createActions({
+      selectedNodeId: "",
+    });
+
+    actions.focusNodeInDrawer("AT0001");
+    expect(ensureRelationNode).toHaveBeenCalledWith(
+      RelationType.attackTool,
+      "AT0001",
+    );
+    expect(selectedNetworkNodeId.value).toBe("AT0001");
+    expect(actions.nodeDetailDrawerVisible.value).toBe(true);
+
+    actions.nodeDetailDrawerVisible.value = false;
+    actions.focusNodeInDrawer("UNKNOWN");
+    expect(selectedNetworkNodeId.value).toBe("AT0001");
+    expect(actions.nodeDetailDrawerVisible.value).toBe(false);
+  });
+
   it("shows feedback for context and drawer copy results", async () => {
     const { actions } = createActions();
 

@@ -155,8 +155,23 @@ export const useRelationNodeActions = ({
     });
   };
 
+  const inferRelationTypeFromId = (id: string): RelationEntityType | null => {
+    if (/^AT\d{4}(?:-\d+)?$/.test(id)) return RelationType.attackTool;
+    if (/^TA\d{4}(?:-\d+)?$/.test(id)) return RelationType.threatActor;
+    if (/^R\d{4}(?:-\d+)?$/.test(id)) return RelationType.risk;
+    if (/^A\d{4}(?:-\d+)?$/.test(id)) return RelationType.avoidance;
+    if (/^T\d{4}$/.test(id)) return RelationType.term;
+    return null;
+  };
+
   const focusNodeInDrawer = (nodeId: string) => {
-    if (!findNodeById(nodeId)) return;
+    const node =
+      findNodeById(nodeId) ??
+      (() => {
+        const inferredType = inferRelationTypeFromId(nodeId);
+        return inferredType ? ensureRelationNode(inferredType, nodeId) : null;
+      })();
+    if (!node) return;
     selectedNetworkNodeId.value = nodeId;
     nodeDetailDrawerVisible.value = true;
     scrollDrawerToTop();

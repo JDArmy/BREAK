@@ -54,6 +54,8 @@ export const createNetworkChartController = ({
   let longPressStart: { x: number; y: number } | undefined;
   let renderRequestId = 0;
   let bodyOverflowBeforeAppFullscreen: string | null = null;
+  let resizeObserver: ResizeObserver | undefined;
+  let resizeFrameId: number | undefined;
 
   const escapeTooltipHtml = (value: unknown) =>
     String(value ?? "")
@@ -85,18 +87,53 @@ export const createNetworkChartController = ({
     networkChart?.dispatchAction({ type: "hideTip" });
   };
 
+  const resizeNetworkChartOnNextFrame = () => {
+    if (resizeFrameId !== undefined) {
+      cancelAnimationFrame(resizeFrameId);
+    }
+    resizeFrameId = requestAnimationFrame(() => {
+      resizeFrameId = undefined;
+      networkChart?.resize();
+      if (isMobile.value) {
+        centerSelectedNodeInScroller();
+      }
+    });
+  };
+
+  const getResizeObserver = () => {
+    if (typeof ResizeObserver === "undefined") return undefined;
+    resizeObserver ??= new ResizeObserver(resizeNetworkChartOnNextFrame);
+    return resizeObserver;
+  };
+
+  const observeChartLayoutElement = (element?: HTMLDivElement) => {
+    if (!element) return;
+    getResizeObserver()?.observe(element);
+  };
+
+  const unobserveChartLayoutElement = (element?: HTMLDivElement) => {
+    if (!element) return;
+    resizeObserver?.unobserve(element);
+  };
+
   const setNetworkChartElement = (element: HTMLDivElement | undefined) => {
     removeNativeContextMenuHandler(networkChartRef.value);
+    unobserveChartLayoutElement(networkChartRef.value);
     networkChartRef.value = element;
     element?.addEventListener("contextmenu", preventMobileNativeContextMenu);
+    observeChartLayoutElement(element);
   };
 
   const setNetworkPaneElement = (element: HTMLDivElement | undefined) => {
+    unobserveChartLayoutElement(networkPaneRef.value);
     networkPaneRef.value = element;
+    observeChartLayoutElement(element);
   };
 
   const setNetworkScrollerElement = (element: HTMLDivElement | undefined) => {
+    unobserveChartLayoutElement(networkScrollerRef.value);
     networkScrollerRef.value = element;
+    observeChartLayoutElement(element);
   };
 
   const centerSelectedNodeInScroller = (
@@ -377,6 +414,7 @@ export const createNetworkChartController = ({
             links: networkData.links,
             center: ["52%", "50%"],
             roam: true,
+            roamTrigger: "global",
             draggable: !isMobile.value,
             force: isForceLayout
               ? {
@@ -456,6 +494,10 @@ export const createNetworkChartController = ({
 
   const releaseNetworkChart = () => {
     renderRequestId += 1;
+    if (resizeFrameId !== undefined) {
+      cancelAnimationFrame(resizeFrameId);
+      resizeFrameId = undefined;
+    }
     clearLongPressTimer();
     hideNetworkTooltip();
     networkChart
@@ -472,6 +514,8 @@ export const createNetworkChartController = ({
   const disposeNetworkChart = () => {
     exitAppFullscreen();
     releaseNetworkChart();
+    resizeObserver?.disconnect();
+    resizeObserver = undefined;
     removeNativeContextMenuHandler(networkChartRef.value);
   };
 

@@ -13,6 +13,26 @@ vi.mock("@/views/relation/relationECharts", () => ({
 
 type ChartHandler = (params: unknown) => void;
 type NetworkChart = ReturnType<typeof createChart>;
+type ResizeObserverCallback = () => void;
+
+const resizeObserverInstances: Array<{
+  callback: ResizeObserverCallback;
+  disconnect: ReturnType<typeof vi.fn>;
+  observe: ReturnType<typeof vi.fn>;
+  unobserve: ReturnType<typeof vi.fn>;
+}> = [];
+
+class TestResizeObserver {
+  callback: ResizeObserverCallback;
+  disconnect = vi.fn();
+  observe = vi.fn();
+  unobserve = vi.fn();
+
+  constructor(callback: ResizeObserverCallback) {
+    this.callback = callback;
+    resizeObserverInstances.push(this);
+  }
+}
 
 const node: GraphNode = {
   id: "R0001",
@@ -179,6 +199,7 @@ const latestOption = (chart: NetworkChart) =>
       draggable?: boolean;
       force?: unknown;
       layout?: string;
+      roamTrigger?: string;
     }>;
     tooltip?: {
       formatter: (params: {
@@ -191,6 +212,8 @@ const latestOption = (chart: NetworkChart) =>
 describe("relationNetworkChartController", () => {
   beforeEach(() => {
     loadNetworkECharts.mockReset();
+    resizeObserverInstances.length = 0;
+    vi.stubGlobal("ResizeObserver", TestResizeObserver);
   });
 
   afterEach(() => {
@@ -214,6 +237,7 @@ describe("relationNetworkChartController", () => {
             draggable: true,
             layout: "none",
             links: [link],
+            roamTrigger: "global",
             zoom: 1.25,
           }),
         ],
@@ -452,6 +476,39 @@ describe("relationNetworkChartController", () => {
       seriesIndex: 0,
     });
     expect(chart.dispose).toHaveBeenCalled();
+  });
+
+  it("resizes the chart when observed layout elements change size", async () => {
+    const requestAnimationFrameSpy = vi
+      .spyOn(window, "requestAnimationFrame")
+      .mockImplementation((callback) => {
+        callback(0);
+        return 1;
+      });
+    const chartElement = document.createElement("div");
+    const paneElement = document.createElement("div");
+    const scrollerElement = document.createElement("div");
+    const { chart, controller } = createController({
+      networkChartElement: chartElement,
+    });
+    controller.setNetworkPaneElement(paneElement);
+    controller.setNetworkScrollerElement(scrollerElement);
+    controller.renderNetworkChart();
+    await flushPromises();
+
+    expect(resizeObserverInstances).toHaveLength(1);
+    expect(resizeObserverInstances[0].observe).toHaveBeenCalledWith(chartElement);
+    expect(resizeObserverInstances[0].observe).toHaveBeenCalledWith(paneElement);
+    expect(resizeObserverInstances[0].observe).toHaveBeenCalledWith(scrollerElement);
+
+    chart.resize.mockClear();
+    resizeObserverInstances[0].callback();
+
+    expect(requestAnimationFrameSpy).toHaveBeenCalled();
+    expect(chart.resize).toHaveBeenCalledTimes(1);
+
+    controller.disposeNetworkChart();
+    expect(resizeObserverInstances[0].disconnect).toHaveBeenCalled();
   });
 
   it("downloads, toggles mobile fullscreen, and disposes chart resources", async () => {

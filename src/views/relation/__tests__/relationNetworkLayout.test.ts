@@ -48,6 +48,7 @@ describe("relationNetworkLayout", () => {
     filterLineType?: string[];
     nodes?: Node[];
     lines?: Line[];
+    relKey?: string;
     selectedNetworkNodeId?: string;
     draggedNodePositions?: Record<string, { x: number; y: number }>;
     isDark?: boolean;
@@ -55,7 +56,7 @@ describe("relationNetworkLayout", () => {
     createNetworkDataHelpers({
       nodes: options?.nodes ?? nodes,
       lines: options?.lines ?? lines,
-      relKey: ref("ROOT"),
+      relKey: ref(options?.relKey ?? "ROOT"),
       selectedNetworkNodeId: ref(options?.selectedNetworkNodeId ?? ""),
       filterRelationType: ref(
         options?.filterRelationType ?? [
@@ -214,6 +215,118 @@ describe("relationNetworkLayout", () => {
     expect(visibleData.nodes.map((node) => node.id)).toContain("ROOT");
     expect(visibleData.nodes.map((node) => node.id)).not.toContain("RELATED_RISK");
     expect(visibleData.links.map((link) => link.target)).not.toContain("RELATED_RISK");
+  });
+
+  it("keeps child nodes visible when related entities are hidden", () => {
+    const helpers = createHelpers({
+      filterSubNode: true,
+      filterRelatedEntity: false,
+      nodes: [
+        ...nodes,
+        {
+          id: "R0001-001",
+          type: RelationType.risk,
+          text: "Child Related Risk",
+          color: "",
+          data: { isSubNode: true, isRelatedEntity: true },
+        },
+      ],
+      lines: [
+        ...lines,
+        {
+          from: "ROOT",
+          relationKey: "relationLine.riskCoOccurrence",
+          text: "风险共现",
+          to: "R0001-001",
+        },
+      ],
+      filterLineType: [
+        "relationLine.avoidanceMeans",
+        "relationLine.directCauseRisk",
+        "relationLine.useAttackTool",
+        "relationLine.relatedTerm",
+        "relationLine.riskCoOccurrence",
+      ],
+    });
+    const visibleData = helpers.getVisibleNetworkData();
+
+    expect(visibleData.nodes.map((node) => node.id)).toContain("R0001-001");
+    expect(visibleData.links.map((link) => link.target)).toContain("R0001-001");
+  });
+
+  it("filters child-entity ids even when the sub-node marker is missing", () => {
+    const helpers = createHelpers({
+      filterSubNode: false,
+      nodes: [
+        ...nodes,
+        {
+          id: "R0001-001",
+          type: RelationType.risk,
+          text: "Child Risk",
+          color: "",
+          data: { isRelatedEntity: true },
+        },
+      ],
+      lines: [
+        ...lines,
+        {
+          from: "ROOT",
+          relationKey: "relationLine.riskCoOccurrence",
+          text: "风险共现",
+          to: "R0001-001",
+        },
+      ],
+      filterLineType: [
+        "relationLine.avoidanceMeans",
+        "relationLine.directCauseRisk",
+        "relationLine.useAttackTool",
+        "relationLine.relatedTerm",
+        "relationLine.riskCoOccurrence",
+      ],
+    });
+    const visibleData = helpers.getVisibleNetworkData();
+
+    expect(visibleData.nodes.map((node) => node.id)).not.toContain("R0001-001");
+    expect(visibleData.links.map((link) => link.target)).not.toContain("R0001-001");
+  });
+
+  it("keeps a child id visible when it is the current root node", () => {
+    const helpers = createHelpers({
+      relKey: "R0001-001",
+      filterSubNode: false,
+      nodes: [
+        {
+          id: "R0001-001",
+          type: RelationType.risk,
+          text: "Child Root",
+          color: "",
+        },
+        {
+          id: "A0001",
+          type: RelationType.avoidance,
+          text: "Avoidance",
+          color: "",
+        },
+      ],
+      lines: [
+        {
+          from: "R0001-001",
+          relationKey: "relationLine.avoidanceMeans",
+          text: "规避手段",
+          to: "A0001",
+        },
+      ],
+      filterLineType: ["relationLine.avoidanceMeans"],
+    });
+    const visibleData = helpers.getVisibleNetworkData();
+
+    expect(visibleData.nodes.map((node) => node.id)).toContain("R0001-001");
+    expect(visibleData.links).toEqual([
+      expect.objectContaining({
+        source: "R0001-001",
+        target: "A0001",
+      }),
+    ]);
   });
 
   it("uses dragged positions only in force layout and keeps sub-node styling distinct", () => {
