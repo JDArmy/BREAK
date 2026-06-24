@@ -1,5 +1,10 @@
 # Change log
 
+## 2.23.47
+
+- 补充 `relationViewEffects` 单测，覆盖非法关系路由重定向、首次挂载初始化、路由/语言/视图/主题变化刷新、选中节点同步和卸载清理
+- 将 Vitest coverage 阈值从 52% 提升到 54%；当前测试规模为 35 个测试文件、204 个测试，coverage 为 statements 63.06%、branches 54.54%、functions 59.82%、lines 65.22%
+
 ## 2.23.46
 
 - 补充 `useRelationViewModel` 和 `relationViewAssembly` 单测，覆盖关系页组合入口、颜色解析、装配依赖、控制器桥接、Sankey 节点交互和关系详情状态
