@@ -1,15 +1,9 @@
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
-import type {
-  RelationAnalysisPerspective,
-  RelationAnalysisPerspectiveOption,
-} from "@/views/relation/relationAnalysisPerspectives";
 import { RelationType } from "@/views/relation/relationTypes";
 
 const props = defineProps<{
-  analysisPerspective?: RelationAnalysisPerspective;
-  analysisPerspectiveOptions?: RelationAnalysisPerspectiveOption[];
   relType: RelationType;
   relKey: string;
   RelationTypeMapping: Record<string, { title: string; BreakKey: string }>;
@@ -17,7 +11,6 @@ const props = defineProps<{
 }>();
 
 const emit = defineEmits<{
-  "update:analysisPerspective": [value: RelationAnalysisPerspective];
   "update:relType": [value: RelationType];
   "update:relKey": [value: string];
 }>();
@@ -33,23 +26,6 @@ const selectedKey = computed({
   get: () => props.relKey,
   set: (value: string) => emit("update:relKey", value),
 });
-
-const selectedPerspective = computed({
-  get: () => props.analysisPerspective,
-  set: (value: RelationAnalysisPerspective | undefined) => {
-    if (value) emit("update:analysisPerspective", value);
-  },
-});
-
-const perspectiveOptions = computed(
-  () => props.analysisPerspectiveOptions ?? []
-);
-
-const currentPerspective = computed(() =>
-  perspectiveOptions.value.find(
-    (option) => option.key === props.analysisPerspective
-  )
-);
 
 const selectableRelationTypes = computed(() =>
   Object.entries(props.RelationTypeMapping).filter(
@@ -123,31 +99,6 @@ watch(
 
 <template>
   <div class="relation-selector">
-    <div
-      v-if="perspectiveOptions.length"
-      class="relation-perspective-control"
-    >
-      <el-radio-group
-        v-model="selectedPerspective"
-        class="relation-perspective-group"
-        :aria-label="t('relationView.perspective.label')"
-        size="small"
-      >
-        <el-radio-button
-          v-for="option in perspectiveOptions"
-          :key="option.key"
-          :value="option.key"
-        >
-          {{ t(option.titleKey) }}
-        </el-radio-button>
-      </el-radio-group>
-      <span
-        v-if="currentPerspective"
-        class="relation-perspective-description"
-      >
-        {{ t(currentPerspective.descriptionKey) }}
-      </span>
-    </div>
     <el-select
       id="relation-selector-type"
       v-model="selectedType"
@@ -182,33 +133,42 @@ watch(
   z-index: 20;
   top: 0;
   right: 12px;
+  left: 460px;
   display: flex;
   gap: 8px;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: flex-end;
+  min-width: 0;
   padding-bottom: 4px;
 }
 
-.relation-perspective-control {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  max-width: min(640px, calc(100vw - 560px));
-}
-
-.relation-perspective-description {
-  max-width: 240px;
-  color: var(--break-text-muted);
-  font-size: 12px;
-  line-height: 1.35;
-}
-
 .relation-select {
+  flex: 0 0 150px;
   width: 160px;
 }
 
 .relation-key-select {
-  width: min(520px, calc(100vw - 420px));
+  flex: 1 1 240px;
+  min-width: 180px;
+  max-width: 420px;
+  width: auto;
+}
+
+@media (max-width: 1180px) {
+  .relation-selector {
+    left: 320px;
+  }
+}
+
+@media (max-width: 980px) {
+  .relation-selector {
+    left: 0;
+    position: static;
+    width: 100%;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -218,30 +178,6 @@ watch(
     flex-wrap: wrap;
     justify-content: flex-start;
     margin-bottom: 8px;
-  }
-
-  .relation-perspective-control {
-    width: 100%;
-    max-width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .relation-perspective-group {
-    width: 100%;
-  }
-
-  .relation-perspective-group :deep(.el-radio-button) {
-    width: 33.333%;
-  }
-
-  .relation-perspective-group :deep(.el-radio-button__inner) {
-    width: 100%;
-    padding-inline: 6px;
-  }
-
-  .relation-perspective-description {
-    max-width: 100%;
   }
 
   .relation-select,

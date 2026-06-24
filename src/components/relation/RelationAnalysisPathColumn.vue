@@ -103,7 +103,7 @@ const { t } = useI18n();
         </button>
       </div>
       <button
-        v-if="isMobile && (hiddenAttackPathCount > 0 || hasExpandedAttackPaths)"
+        v-if="hiddenAttackPathCount > 0 || hasExpandedAttackPaths"
         type="button"
         class="node-relation-more node-attack-path-more-button"
         @click="emit('toggle-attack-paths')"

@@ -81,9 +81,7 @@ const { t } = useI18n();
         </button>
       </div>
       <button
-        v-if="
-          isMobile && (hiddenCoverageItemCount > 0 || hasExpandedCoverageItems)
-        "
+        v-if="hiddenCoverageItemCount > 0 || hasExpandedCoverageItems"
         type="button"
         class="node-relation-more node-attack-path-more-button"
         @click="emit('toggle-coverage-items')"

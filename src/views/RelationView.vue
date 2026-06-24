@@ -92,17 +92,15 @@ export default defineComponent({
     }"
   >
     <RelationSelectorBar
-      v-model:analysis-perspective="activeAnalysisPerspective"
       v-model:rel-type="relType"
       v-model:rel-key="relKey"
-      :analysis-perspective-options="relationAnalysisPerspectiveOptions"
       :RelationTypeMapping="RelationTypeMapping"
       :get-current-entity-options="getCurrentEntityOptions"
     />
 
     <el-tabs v-model="activeView" class="relation-tabs">
       <el-tab-pane
-        :label="$t('relationView.network')"
+        :label="$t('relationView.perspective.risk.title')"
         name="network"
         :lazy="activeView !== 'network'"
       >
@@ -144,7 +142,7 @@ export default defineComponent({
         />
       </el-tab-pane>
       <el-tab-pane
-        :label="$t('relationView.attackPath')"
+        :label="$t('relationView.perspective.attackPath.title')"
         name="sankey"
         :lazy="activeView !== 'sankey'"
       >
@@ -156,7 +154,7 @@ export default defineComponent({
         />
       </el-tab-pane>
       <el-tab-pane
-        :label="$t('relationView.analysis')"
+        :label="$t('relationView.perspective.defenseCoverage.title')"
         name="analysis"
         :lazy="activeView !== 'analysis'"
       >

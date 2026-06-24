@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, nextTick, ref, watch } from "vue";
+import { computed, nextTick, ref, toValue, watch } from "vue";
 import { useI18n } from "vue-i18n";
 import { useBreakpoints } from "@/composables/useBreakpoints";
 import { useIncrementalVisibleList } from "@/composables/useIncrementalVisibleList";
@@ -106,7 +106,8 @@ const preserveScrollPane = ref<"left" | "middle" | "right" | null>(null);
 
 const MOBILE_COVERAGE_ITEM_LIMIT = 6;
 const MOBILE_ATTACK_PATH_LIMIT = 8;
-const MOBILE_SHOW_MORE_STEP = 50;
+const DESKTOP_ANALYSIS_ITEM_LIMIT = 10;
+const SHOW_MORE_STEP = 50;
 
 const filterTypes: AttackPathFilterType[] = [
   RelationType.threatActor,
@@ -175,6 +176,12 @@ const hasAnyAnalysis = computed(
     props.selectedAttackPathDetail ||
     props.rootNodeRelations.length > 0
 );
+const coverageItemLimit = computed(() =>
+  toValue(isMobile) ? MOBILE_COVERAGE_ITEM_LIMIT : DESKTOP_ANALYSIS_ITEM_LIMIT
+);
+const attackPathLimit = computed(() =>
+  toValue(isMobile) ? MOBILE_ATTACK_PATH_LIMIT : DESKTOP_ANALYSIS_ITEM_LIMIT
+);
 
 const {
   hiddenCount: hiddenCoverageItemCount,
@@ -185,9 +192,9 @@ const {
 } = useIncrementalVisibleList(
   computed(() => props.riskAvoidanceCoverage?.items ?? []),
   {
-    enabled: isMobile,
-    initialLimit: MOBILE_COVERAGE_ITEM_LIMIT,
-    step: MOBILE_SHOW_MORE_STEP,
+    enabled: true,
+    initialLimit: coverageItemLimit,
+    step: SHOW_MORE_STEP,
   }
 );
 
@@ -198,9 +205,9 @@ const {
   showMoreOrReset: showMoreAttackPaths,
   visibleItems: displayedAttackPathDetails,
 } = useIncrementalVisibleList(computed(() => props.attackPathDetails), {
-  enabled: isMobile,
-  initialLimit: MOBILE_ATTACK_PATH_LIMIT,
-  step: MOBILE_SHOW_MORE_STEP,
+  enabled: true,
+  initialLimit: attackPathLimit,
+  step: SHOW_MORE_STEP,
 });
 
 const resetColumnScroll = () => {
@@ -460,7 +467,7 @@ watch(
   -webkit-overflow-scrolling: touch;
 }
 
-.relation-analysis-detail-panel {
+:deep(.relation-analysis-detail-panel) {
   padding: 12px;
   background: transparent;
 }
@@ -538,23 +545,23 @@ watch(
   background: var(--break-bg-card);
 }
 
-.relation-analysis-summary {
+:deep(.relation-analysis-summary) {
   color: var(--break-text-secondary);
   font-size: 12px;
   line-height: 1.6;
 }
 
-.relation-analysis-coverage-list,
-.relation-analysis-segments,
-.relation-analysis-path-list {
+:deep(.relation-analysis-coverage-list),
+:deep(.relation-analysis-segments),
+:deep(.relation-analysis-path-list) {
   display: grid;
   gap: 10px;
   margin-top: 10px;
 }
 
-.relation-analysis-coverage-item,
-.relation-analysis-segment,
-.relation-analysis-path-list-item {
+:deep(.relation-analysis-coverage-item),
+:deep(.relation-analysis-segment),
+:deep(.relation-analysis-path-list-item) {
   display: flex;
   min-width: 0;
   flex-direction: column;
@@ -567,15 +574,15 @@ watch(
   box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--break-border) 24%, transparent);
 }
 
-.relation-analysis-coverage-item,
-.relation-analysis-path-list-item {
+:deep(.relation-analysis-coverage-item),
+:deep(.relation-analysis-path-list-item) {
   font: inherit;
   text-align: left;
   cursor: pointer;
 }
 
-.relation-analysis-coverage-item:hover,
-.relation-analysis-coverage-item-active {
+:deep(.relation-analysis-coverage-item:hover),
+:deep(.relation-analysis-coverage-item-active) {
   border-color: var(--el-color-primary);
   background: color-mix(in srgb, var(--el-color-primary) 5%, var(--break-bg-card));
   box-shadow:
@@ -583,25 +590,25 @@ watch(
     0 0 0 1px color-mix(in srgb, var(--el-color-primary) 10%, transparent);
 }
 
-.relation-analysis-coverage-item-both {
+:deep(.relation-analysis-coverage-item-both) {
   box-shadow:
     inset 3px 0 0 var(--el-color-success),
     inset 0 0 0 1px color-mix(in srgb, var(--break-border) 24%, transparent);
 }
 
-.relation-analysis-coverage-item-risk {
+:deep(.relation-analysis-coverage-item-risk) {
   box-shadow:
     inset 3px 0 0 var(--el-color-primary),
     inset 0 0 0 1px color-mix(in srgb, var(--break-border) 24%, transparent);
 }
 
-.relation-analysis-coverage-item-attackTool {
+:deep(.relation-analysis-coverage-item-attackTool) {
   box-shadow:
     inset 3px 0 0 var(--el-color-warning),
     inset 0 0 0 1px color-mix(in srgb, var(--break-border) 24%, transparent);
 }
 
-.relation-analysis-item-title {
+:deep(.relation-analysis-item-title) {
   display: flex;
   flex-wrap: wrap;
   gap: 4px 8px;
@@ -609,14 +616,14 @@ watch(
   font-size: 12px;
 }
 
-.relation-analysis-item-meta {
+:deep(.relation-analysis-item-meta) {
   color: var(--break-text-secondary);
   font-size: 12px;
   line-height: 1.5;
   overflow-wrap: anywhere;
 }
 
-.relation-analysis-path-chain {
+:deep(.relation-analysis-path-chain) {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
@@ -626,24 +633,24 @@ watch(
   line-height: 1.5;
 }
 
-.relation-analysis-path-node {
+:deep(.relation-analysis-path-node) {
   display: inline-flex;
   gap: 6px;
   align-items: center;
 }
 
-.relation-analysis-path-arrow {
+:deep(.relation-analysis-path-arrow) {
   color: var(--break-text-muted);
 }
 
-.relation-analysis-path-list-item {
+:deep(.relation-analysis-path-list-item) {
   box-shadow:
     inset 3px 0 0 var(--el-color-primary),
     inset 0 0 0 1px color-mix(in srgb, var(--break-border) 24%, transparent);
 }
 
-.relation-analysis-path-list-item:hover,
-.relation-analysis-path-list-item-active {
+:deep(.relation-analysis-path-list-item:hover),
+:deep(.relation-analysis-path-list-item-active) {
   border-color: var(--el-color-primary);
   background: color-mix(in srgb, var(--el-color-primary) 5%, var(--break-bg-card));
   color: var(--break-text-primary);
@@ -653,7 +660,7 @@ watch(
     0 0 0 1px color-mix(in srgb, var(--el-color-primary) 10%, transparent);
 }
 
-.relation-analysis-path-list-title {
+:deep(.relation-analysis-path-list-title) {
   color: var(--break-text-primary);
   font-size: 12px;
   font-weight: 700;
@@ -661,7 +668,7 @@ watch(
   overflow-wrap: anywhere;
 }
 
-.relation-analysis-segment-main {
+:deep(.relation-analysis-segment-main) {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;

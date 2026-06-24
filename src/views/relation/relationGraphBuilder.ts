@@ -10,6 +10,7 @@ import {
 import { createRiskRelationBuilder } from "@/views/relation/relationGraphRiskBuilder";
 import { createTermRelationBuilder } from "@/views/relation/relationGraphTermBuilder";
 import { createThreatActorRelationBuilder } from "@/views/relation/relationGraphThreatActorBuilder";
+import { createRelationGraphRequestDispatcher } from "@/views/relation/relationGraphRequestDispatcher";
 import {
   createRelationTypeMapping,
   getRelationLineKey,
@@ -156,6 +157,13 @@ export const createRelationGraphBuilder = ({
   const attackToolBuilder = createAttackToolRelationBuilder(builderContext);
   const threatActorBuilder = createThreatActorRelationBuilder(builderContext);
   const termBuilder = createTermRelationBuilder(builderContext);
+  const requestDispatcher = createRelationGraphRequestDispatcher({
+    attackToolBuilder,
+    avoidanceBuilder,
+    riskBuilder,
+    termBuilder,
+    threatActorBuilder,
+  });
 
   function rebuildGraphData(options?: { render?: boolean }) {
     jsonData.rootId = relKey.value;
@@ -174,89 +182,7 @@ export const createRelationGraphBuilder = ({
     currentNodeId: string,
     options?: { render?: boolean },
   ) => {
-    if (currentNodeType === RelationType.risk) {
-      if (reqType == RelationType.avoidance) {
-        riskBuilder.addAvoidance(currentNodeId);
-      } else if (reqType == RelationType.attackTool) {
-        riskBuilder.addAttackTool(currentNodeId);
-      } else if (reqType == RelationType.threatActor) {
-        riskBuilder.addThreatActor(currentNodeId);
-      } else if (reqType == RelationType.term) {
-        riskBuilder.addTerm(currentNodeId);
-      } else if (reqType == RelationType.all) {
-        riskBuilder.addAvoidance(currentNodeId);
-        riskBuilder.addAttackTool(currentNodeId);
-        riskBuilder.addAvoidanceAttackToolRelation(currentNodeId);
-        riskBuilder.addThreatActor(currentNodeId);
-        riskBuilder.addThreatActorAttackToolRelation(currentNodeId);
-        riskBuilder.addRelatedRisk(currentNodeId);
-        riskBuilder.addSubrisk(currentNodeId);
-        riskBuilder.addTerm(currentNodeId);
-      }
-    } else if (currentNodeType === RelationType.avoidance) {
-      if (reqType == RelationType.risk) {
-        avoidanceBuilder.addRisk(currentNodeId);
-      } else if (reqType == RelationType.avoidance) {
-        avoidanceBuilder.addRelatedAvoidance(currentNodeId);
-      } else if (reqType == RelationType.term) {
-        avoidanceBuilder.addTerm(currentNodeId);
-      }
-      if (reqType == RelationType.all) {
-        avoidanceBuilder.addRisk(currentNodeId);
-        avoidanceBuilder.addRelatedAvoidance(currentNodeId);
-        avoidanceBuilder.addSubavoidance(currentNodeId);
-        avoidanceBuilder.addTerm(currentNodeId);
-      }
-    } else if (currentNodeType === RelationType.attackTool) {
-      if (reqType == RelationType.risk) {
-        attackToolBuilder.addRisk(currentNodeId);
-      } else if (reqType == RelationType.avoidance) {
-        attackToolBuilder.addAvoidance(currentNodeId);
-      } else if (reqType == RelationType.attackTool) {
-        attackToolBuilder.addRelatedAttackTool(currentNodeId);
-      } else if (reqType == RelationType.threatActor) {
-        attackToolBuilder.addThreatActor(currentNodeId);
-      } else if (reqType == RelationType.term) {
-        attackToolBuilder.addTerm(currentNodeId);
-      } else if (reqType == RelationType.all) {
-        attackToolBuilder.addRisk(currentNodeId);
-        attackToolBuilder.addAvoidance(currentNodeId);
-        attackToolBuilder.addRiskAvoidanceRelation(currentNodeId);
-        attackToolBuilder.addRelatedAttackTool(currentNodeId);
-        attackToolBuilder.addThreatActor(currentNodeId);
-        attackToolBuilder.addThreatActorRiskRelation(currentNodeId);
-        attackToolBuilder.addSubattackTool(currentNodeId);
-        attackToolBuilder.addTerm(currentNodeId);
-      }
-    } else if (currentNodeType === RelationType.threatActor) {
-      if (reqType == RelationType.risk) {
-        threatActorBuilder.addRisk(currentNodeId);
-      } else if (reqType == RelationType.attackTool) {
-        threatActorBuilder.addAttackTool(currentNodeId);
-      } else if (reqType == RelationType.threatActor) {
-        threatActorBuilder.addRelatedThreatActor(currentNodeId);
-      } else if (reqType == RelationType.term) {
-        threatActorBuilder.addTerm(currentNodeId);
-      } else if (reqType == RelationType.all) {
-        threatActorBuilder.addRisk(currentNodeId);
-        threatActorBuilder.addAttackTool(currentNodeId);
-        threatActorBuilder.addAttackToolRiskRelation(currentNodeId);
-        threatActorBuilder.addRelatedThreatActor(currentNodeId);
-        threatActorBuilder.addSubthreatActor(currentNodeId);
-        threatActorBuilder.addTerm(currentNodeId);
-      }
-    } else if (currentNodeType === RelationType.term) {
-      if (reqType == RelationType.all) {
-        termBuilder.addRelatedEntities(currentNodeId);
-      } else if (
-        reqType == RelationType.risk ||
-        reqType == RelationType.avoidance ||
-        reqType == RelationType.attackTool ||
-        reqType == RelationType.threatActor
-      ) {
-        termBuilder.addRelatedEntities(currentNodeId);
-      }
-    }
+    requestDispatcher.dispatch(reqType, currentNodeType, currentNodeId);
     setNetworkGraphData(options);
   };
 

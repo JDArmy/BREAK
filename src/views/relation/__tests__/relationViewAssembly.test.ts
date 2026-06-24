@@ -224,7 +224,6 @@ describe("relationViewAssembly", () => {
     );
     expect(relationView.activeView).toBe(state.activeView);
     expect(relationView.activeAnalysisPerspective).toBe(state.activeAnalysisPerspective);
-    expect(relationView.relationAnalysisPerspectiveOptions).toHaveLength(3);
     expect(relationView.renderNetworkChart).toBe(networkController.renderNetworkChart);
     expect(relationView.renderSankeyChart).toBe(sankeyController.renderSankeyChart);
   });
@@ -262,6 +261,33 @@ describe("relationViewAssembly", () => {
     });
     expect(relationView.currentAnalysisPerspectiveOption.value.key).toBe(
       "defenseCoverage",
+    );
+  });
+
+  it("切换主视图时同步任务型分析视角和预设筛选", async () => {
+    const relationView = createAssembly();
+    const state = createRelationViewState.mock.results[0].value;
+    const graphData = useRelationGraphData.mock.results[0].value;
+
+    state.activeView.value = "sankey";
+    await nextTick();
+
+    expect(state.activeAnalysisPerspective.value).toBe("attackPath");
+    expect(graphData.filterRelationType.value).toEqual([
+      RelationType.threatActor,
+      RelationType.attackTool,
+      RelationType.risk,
+      RelationType.avoidance,
+    ]);
+    expect(graphData.filterSubNode.value).toBe(false);
+    expect(graphData.filterRelatedEntity.value).toBe(false);
+    expect(router.replace).toHaveBeenCalledWith({
+      name: "relation",
+      params: { type: RelationType.risk, key: "R0001" },
+      query: { perspective: "attackPath" },
+    });
+    expect(relationView.currentAnalysisPerspectiveOption.value.key).toBe(
+      "attackPath",
     );
   });
 

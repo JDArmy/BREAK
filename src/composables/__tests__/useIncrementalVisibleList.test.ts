@@ -69,4 +69,22 @@ describe("useIncrementalVisibleList", () => {
     expect(list.visibleItems.value).toHaveLength(6);
     expect(list.hasExpanded.value).toBe(false);
   });
+
+  it("初始数量支持响应式变化并重置展示数量", async () => {
+    const items = ref(Array.from({ length: 30 }, (_, index) => index));
+    const initialLimit = ref(10);
+    const list = useIncrementalVisibleList(items, {
+      initialLimit,
+      step: 50,
+    });
+
+    expect(list.visibleItems.value).toHaveLength(10);
+
+    initialLimit.value = 6;
+    await Promise.resolve();
+
+    expect(list.visibleItems.value).toHaveLength(6);
+    expect(list.hiddenCount.value).toBe(24);
+    expect(list.hasExpanded.value).toBe(false);
+  });
 });

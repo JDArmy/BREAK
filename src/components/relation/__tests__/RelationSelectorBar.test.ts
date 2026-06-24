@@ -1,7 +1,6 @@
 import { mount } from "@vue/test-utils";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import RelationSelectorBar from "@/components/relation/RelationSelectorBar.vue";
-import type { RelationAnalysisPerspectiveOption } from "@/views/relation/relationAnalysisPerspectives";
 import { RelationType } from "@/views/relation/relationTypes";
 
 vi.mock("vue-i18n", () => ({
@@ -19,16 +18,6 @@ const relationTypeMapping = {
 };
 
 const stubs = {
-  ElRadioGroup: {
-    props: ["modelValue"],
-    emits: ["update:modelValue"],
-    template:
-      '<div class="radio-group-stub"><slot /><button class="perspective-update" @click="$emit(\'update:modelValue\', \'attackPath\')">update</button></div>',
-  },
-  ElRadioButton: {
-    props: ["value"],
-    template: '<button class="radio-button-stub" :data-value="value"><slot /></button>',
-  },
   ElSelect: {
     props: ["modelValue"],
     emits: ["update:modelValue"],
@@ -46,31 +35,6 @@ const stubs = {
       '<select id="relation-selector-key" :value="modelValue" @change="$emit(\'update:modelValue\', $event.target.value)"><option v-for="item in options" :key="item.value" :value="item.value">{{ item.label }}</option></select>',
   },
 };
-
-const perspectiveOptions: RelationAnalysisPerspectiveOption[] = [
-  {
-    key: "risk",
-    titleKey: "relationView.perspective.risk.title",
-    descriptionKey: "relationView.perspective.risk.description",
-    defaultView: "network",
-    networkLayout: "horizontal",
-    relationTypes: [RelationType.risk],
-    lineTypes: ["relationLine.directCauseRisk"],
-    showSubNode: true,
-    showRelatedEntity: true,
-  },
-  {
-    key: "attackPath",
-    titleKey: "relationView.perspective.attackPath.title",
-    descriptionKey: "relationView.perspective.attackPath.description",
-    defaultView: "sankey",
-    networkLayout: "horizontal",
-    relationTypes: [RelationType.threatActor, RelationType.attackTool],
-    lineTypes: ["relationLine.useAttackTool"],
-    showSubNode: false,
-    showRelatedEntity: false,
-  },
-];
 
 const mountSelector = (props?: Partial<InstanceType<typeof RelationSelectorBar>["$props"]>) =>
   mount(RelationSelectorBar, {
@@ -94,22 +58,11 @@ afterEach(() => {
 });
 
 describe("RelationSelectorBar", () => {
-  it("渲染任务型分析视角并转发视角更新", async () => {
-    const wrapper = mountSelector({
-      analysisPerspective: "risk",
-      analysisPerspectiveOptions: perspectiveOptions,
-    });
+  it("不渲染重复的任务型分析视角控件", () => {
+    const wrapper = mountSelector();
 
-    expect(wrapper.text()).toContain("relationView.perspective.risk.title");
-    expect(wrapper.text()).toContain(
-      "relationView.perspective.risk.description",
-    );
-
-    await wrapper.find(".perspective-update").trigger("click");
-
-    expect(wrapper.emitted("update:analysisPerspective")?.[0]).toEqual([
-      "attackPath",
-    ]);
+    expect(wrapper.find(".relation-perspective-control").exists()).toBe(false);
+    expect(wrapper.emitted("update:analysisPerspective")).toBeUndefined();
   });
 
   it("隐藏术语类型并转发关系类型更新", async () => {

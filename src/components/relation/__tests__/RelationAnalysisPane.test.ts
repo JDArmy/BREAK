@@ -336,6 +336,33 @@ describe("RelationAnalysisPane", () => {
     expect(wrapper.findAll(".relation-analysis-path-list-item")).toHaveLength(8);
   });
 
+  it("PC 端默认只展示 10 条覆盖和路径，点击更多后展示剩余数据", async () => {
+    const manyCoverage: RiskAvoidanceCoverage = {
+      ...coverage,
+      items: Array.from({ length: 12 }, (_, index) => ({
+        ...coverage.items[0],
+        avoidanceKey: `A_PC_${index}`,
+        avoidanceTitle: `桌面覆盖 ${index}`,
+      })),
+    };
+    const manyPaths = Array.from({ length: 13 }, (_, index) =>
+      pathDetail(`desktop-${index}`),
+    );
+    const wrapper = mountPane({
+      attackPathDetails: manyPaths,
+      riskAvoidanceCoverage: manyCoverage,
+    });
+
+    expect(wrapper.findAll(".relation-analysis-coverage-item")).toHaveLength(10);
+    expect(wrapper.findAll(".relation-analysis-path-list-item")).toHaveLength(10);
+
+    await wrapper.findAll(".node-attack-path-more-button")[0].trigger("click");
+    await wrapper.findAll(".node-attack-path-more-button")[1].trigger("click");
+
+    expect(wrapper.findAll(".relation-analysis-coverage-item")).toHaveLength(12);
+    expect(wrapper.findAll(".relation-analysis-path-list-item")).toHaveLength(13);
+  });
+
   it("右侧详情内容事件应该继续向外转发", async () => {
     const wrapper = mountPane();
 

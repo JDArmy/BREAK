@@ -115,3 +115,9 @@ export const getRelationAnalysisPerspectiveOption = (
 ) =>
   relationAnalysisPerspectiveOptions.find((option) => option.key === perspective) ??
   relationAnalysisPerspectiveOptions[0];
+
+export const getRelationAnalysisPerspectiveByView = (
+  view: RelationViewMode,
+): RelationAnalysisPerspective =>
+  relationAnalysisPerspectiveOptions.find((option) => option.defaultView === view)
+    ?.key ?? "risk";

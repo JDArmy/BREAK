@@ -6,9 +6,9 @@ import {
 import { setupRelationViewEffects } from "@/views/relation/relationViewEffects";
 import { createRelationViewState } from "@/views/relation/relationViewState";
 import {
+  getRelationAnalysisPerspectiveByView,
   getRelationAnalysisPerspectiveOption,
   normalizeRelationAnalysisPerspective,
-  relationAnalysisPerspectiveOptions,
 } from "@/views/relation/relationAnalysisPerspectives";
 import { useRelationGraphData } from "@/views/relation/useRelationGraphData";
 import { useRelationNodeActions } from "@/views/relation/useRelationNodeActions";
@@ -225,6 +225,13 @@ export const createRelationViewAssembly = ({
     applyAnalysisPerspective(perspective);
   });
 
+  watch(activeView, (view) => {
+    const perspective = getRelationAnalysisPerspectiveByView(view);
+    if (perspective !== activeAnalysisPerspective.value) {
+      activeAnalysisPerspective.value = perspective;
+    }
+  });
+
   watch(
     () => route.query.perspective,
     (perspective) => {
@@ -234,6 +241,8 @@ export const createRelationViewAssembly = ({
       );
       if (normalizedPerspective !== activeAnalysisPerspective.value) {
         activeAnalysisPerspective.value = normalizedPerspective;
+        activeView.value =
+          getRelationAnalysisPerspectiveOption(normalizedPerspective).defaultView;
       }
     },
   );
@@ -364,7 +373,6 @@ export const createRelationViewAssembly = ({
     currentAnalysisPerspectiveOption,
     networkLayoutTooltip,
     networkState,
-    relationAnalysisPerspectiveOptions,
     refreshNetworkChart,
     selectedNetworkRelationDetail,
     relKey,

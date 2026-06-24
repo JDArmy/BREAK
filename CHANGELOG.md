@@ -1,5 +1,12 @@
 # Change log
 
+## 2.23.94
+
+- 移除关系页重复的任务型分析视角控件，改由主标签直接承载风险、攻击路径和防御覆盖视角，并同步视角预设
+- 将 PC 端分析面板的规避覆盖与攻击路径列表默认收敛为 10 条，保留“更多/收起”增量展示
+- 拆分关系图请求分发逻辑为 `relationGraphRequestDispatcher`，补充关系页装配、选择器、增量列表和分发器测试
+- 为 `C0272`、`C0280`、`C0406`、`C0421` 补充案例来源并同步英文引用标题
+
 ## 2.23.93
 
 - 提取 CI 公共初始化流程，新增 `setup-node-env` 和 `setup-playwright` composite action，统一 Node 24、`npm ci`、Playwright 缓存、Chromium 安装和站点构建 artifact 下载

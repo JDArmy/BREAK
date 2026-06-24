@@ -1,7 +1,7 @@
 import { computed, ref, toValue, watch, type MaybeRefOrGetter } from "vue";
 
 interface IncrementalVisibleListOptions {
-  initialLimit: number;
+  initialLimit: MaybeRefOrGetter<number>;
   step?: number;
   enabled?: MaybeRefOrGetter<boolean>;
 }
@@ -14,7 +14,8 @@ export function useIncrementalVisibleList<T>(
     enabled = true,
   }: IncrementalVisibleListOptions
 ) {
-  const visibleLimit = ref(initialLimit);
+  const resolvedInitialLimit = computed(() => toValue(initialLimit));
+  const visibleLimit = ref(resolvedInitialLimit.value);
   const sourceItems = computed(() => toValue(items));
   const isEnabled = computed(() => toValue(enabled));
 
@@ -27,10 +28,12 @@ export function useIncrementalVisibleList<T>(
     Math.max(0, sourceItems.value.length - visibleItems.value.length)
   );
 
-  const hasExpanded = computed(() => visibleLimit.value > initialLimit);
+  const hasExpanded = computed(
+    () => visibleLimit.value > resolvedInitialLimit.value
+  );
 
   const reset = () => {
-    visibleLimit.value = initialLimit;
+    visibleLimit.value = resolvedInitialLimit.value;
   };
 
   const showMoreOrReset = () => {
@@ -42,7 +45,7 @@ export function useIncrementalVisibleList<T>(
     visibleLimit.value += step;
   };
 
-  watch([sourceItems, isEnabled], reset);
+  watch([sourceItems, isEnabled, resolvedInitialLimit], reset);
 
   return {
     hiddenCount,
