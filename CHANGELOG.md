@@ -1,5 +1,11 @@
 # Change log
 
+## 2.23.60
+
+- 将静态站性能预算提升为 PR CI 独立 hard-fail job，覆盖首页、风险列表和关系 Sankey 的加载耗时、总传输、脚本传输和资源数量预算
+- 从条件浏览器回归 job 中移除重复 performance 执行，保留视觉复核继续按 major/minor 版本变化运行
+- 本地执行 `npm run test:performance` 通过，最重页面 relation-sankey load=1275ms、transfer=2118.44kB、scripts=1827.92kB、resources=71，低于当前预算
+
 ## 2.23.59
 
 - 扩展 `RelationNodeDetailDrawer` 组件测试，覆盖桌面/移动端抽屉尺寸、空节点不渲染、关闭同步和详情内容所有操作事件转发

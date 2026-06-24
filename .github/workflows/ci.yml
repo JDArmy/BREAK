@@ -128,6 +128,23 @@ jobs:
         env:
           BREAK_FORCE_BROWSER_REGRESSION: "1"
 
+  site-performance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run export:data
+      - run: npm run export:data-en
+      - run: npm run build-only
+      - run: npm run test:performance
+
   browser-regression-gate:
     runs-on: ubuntu-latest
     outputs:
@@ -164,7 +181,6 @@ jobs:
       - run: npm run export:data
       - run: npm run export:data-en
       - run: npm run build-only
-      - run: npm run test:performance
       - run: npm run test:visual-review
       - uses: actions/upload-artifact@v4
         if: always()
