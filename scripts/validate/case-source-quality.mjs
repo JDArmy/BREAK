@@ -189,6 +189,7 @@ const primaryDomainSuffixes = [
   'cybereason.com',
   'cloudsmith.com',
   'qubic.org',
+  'dzb.xfrb.com.cn',
   'bitcoingold.org',
   'horizen.io',
   'cloudsek.com',
@@ -369,6 +370,8 @@ const primaryReferenceLinks = new Set([
   'https://bitcointalk.org/index.php?topic=105818.0', // BitFloor 创始人事故说明
   'https://polymarket.com/event/ukraine-agrees-to-give-trump-rare-earth-metals-before-april/ukraine-agrees-to-give-trump-rare-earth-metals-before-april', // Polymarket 官方市场页
   'https://www.toutiao.com/w/1813324433807370/', // 字节跳动官方账号澄清
+  'https://dj.sina.com.cn/article/iznezxt0458042.shtml', // 新浪电竞承载 DOTA2 官方公告
+  'https://www.facebook.com/100084504854473/videos/a-statement-on-the-recent-upload-of-ai-music-impersonating-my-voice-onto-major-s/892417137070162/', // 艺人本人声明
 ]);
 const normalizedPrimaryReferenceLinks = new Set([...primaryReferenceLinks].map((link) => link.toLowerCase()));
 const primaryWechatBizIds = [

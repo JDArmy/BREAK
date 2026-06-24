@@ -13,19 +13,19 @@
       "IMBATV",
       "赛事违规"
     ],
-    "summary": "2020年2月，中国DOTA2战队Newbee在SL-l基辅Major预选赛中涉嫌故意送人头、打假赛。比赛中Newbee在经济领先时输掉第一局，第二局营造大比分落后假象后翻盘，第三局获胜。因比赛过程异常，被玩家质疑为获取场外赌注而故意送分，最终战队及6名队员被终身禁赛。",
+    "summary": "2021年1月，DOTA2 官方公告对 Newbee 俱乐部及其成员 Moogy、AQ、Wizard、Waixi、Faith 作出处罚。公告称，Valve 与完美世界电竞决定自2021年1月1日起，永久禁止上述俱乐部和个人参加 Valve 及完美世界电竞主办的 DOTA2 官方赛事。该案体现了电竞赛事中对假赛等诚信风险的长期禁赛处置。",
     "category": "security_incident",
     "relatedRisks": [
       "R0101"
     ],
     "references": [
       {
-        "title": "打假赛后果多严重?被判刑出狱后开车为生,开直播被网友骂到下跪...",
-        "link": "https://view.inews.qq.com/a/20210512A0EOMQ00"
+        "title": "DOTA2官方公告：Newbee俱乐部及相关成员永久禁赛",
+        "link": "https://dj.sina.com.cn/article/iznezxt0458042.shtml"
       }
     ],
-    "updated": "2026-06-18",
-    "incidentTime": "2020-02",
+    "updated": "2026-06-25",
+    "incidentTime": "2021-01",
     "relatedAttackTools": [],
     "relatedThreatActors": []
   }

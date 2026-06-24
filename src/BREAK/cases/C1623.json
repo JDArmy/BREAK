@@ -1,29 +1,29 @@
 {
   "C1623": {
-    "title": "AI克隆声音生成虚假歌曲冒充艺人事件",
+    "title": "AI克隆Murphy Campbell声音生成虚假歌曲事件",
     "keywords": [
       "AI克隆声音",
       "深度伪造",
       "虚假歌曲",
       "流媒体平台",
+      "Murphy Campbell",
       "艺人冒充",
-      "AI生成内容检测",
       "声音克隆侵权",
       "数字虚拟人"
     ],
-    "summary": "2026年，有攻击者利用AI克隆了一位女性艺人的声音，生成翻唱歌曲并以她的名义上传到各大流媒体平台。AI检测工具判定该歌曲很可能是AI生成。当事人对此感到震惊和沮丧，称“那是一台电脑在模仿我的声音”。",
+    "summary": "音乐人 Murphy Campbell 公开声明称，有人将冒充其声音的 AI 音乐上传至主流流媒体平台。她表示这些作品并非本人创作或授权，属于使用 AI 模仿其声音的冒名内容。该事件展示了声音克隆技术在音乐发行平台中可能造成的身份冒用和内容归属风险。",
     "category": "security_incident",
     "relatedRisks": [
       "R0214"
     ],
     "references": [
       {
-        "title": "妹子被AI克隆声音发假歌,刚想维权,结果反被AI打成侵权?_腾讯新闻",
-        "link": "https://view.inews.qq.com/a/20260408A007LA00"
+        "title": "A statement on the recent upload of AI music impersonating my voice onto major streaming platforms",
+        "link": "https://www.facebook.com/100084504854473/videos/a-statement-on-the-recent-upload-of-ai-music-impersonating-my-voice-onto-major-s/892417137070162/"
       }
     ],
-    "updated": "2026-06-18",
-    "incidentTime": "2026-04",
+    "updated": "2026-06-25",
+    "incidentTime": "2025-12",
     "relatedAttackTools": [
       "AT0059",
       "AT0056"

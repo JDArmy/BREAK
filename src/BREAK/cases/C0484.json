@@ -12,18 +12,18 @@
       "漏洞",
       "腾讯"
     ],
-    "summary": "2023年10月30日，手游未成年评测发现，未成年人通过购买来的QQ号登录游戏时，可以利用原号主（成年人）的实名信息绕过实名认证环节。这一漏洞使得游戏防沉迷系统的身份识别机制被直接绕过。",
+    "summary": "2023年10月，消费日报社发布《20款手游未成年人保护测评报告》。报告在《王者荣耀》测试中发现，测试人员使用网络购买的QQ账号登录游戏时，系统直接沿用原号主成年人身份信息，跳过注册阶段实名认证。该现象说明账号租售和转让会削弱防沉迷系统对真实使用人的身份识别。",
     "category": "security_incident",
     "relatedRisks": [
       "R0046"
     ],
     "references": [
       {
-        "title": "手游未成年评测发布!QQ存在漏洞,未成年可绕过游戏实名认证-腾讯新闻",
-        "link": "https://view.inews.qq.com/k/20231030A0A1JQ00?no-redirect=1&web_channel=wap&openApp=false"
+        "title": "20款手游未成年人保护测评报告",
+        "link": "https://dzb.xfrb.com.cn/UploadFiles/file/20231026/202310261110048726.pdf"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-06-25",
     "incidentTime": "2023-10",
     "relatedAttackTools": [],
     "relatedThreatActors": [
