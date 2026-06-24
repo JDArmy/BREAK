@@ -59,6 +59,7 @@ const primaryDomainSuffixes = [
   'scjgj.quanzhou.gov.cn',
   'pbc.gov.cn',
   'samr.gov.cn',
+  'tj.gov.cn',
   'cac.gov.cn',
   'chinatax.gov.cn',
   'npc.gov.cn',
