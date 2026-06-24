@@ -13,19 +13,23 @@
       "攻击成本",
       "区块重组"
     ],
-    "summary": "2024年1月7日，攻击者在4小时内用超过51%算力对以太经典（ETC）实施双花攻击，至少双花4笔总计54200个ETC，价值27.1万美元。攻击每小时成本仅5168美元，总成本约20672美元，攻击收益超10倍。",
+    "summary": "2019年1月7日，攻击者在4小时内用超过51%算力对以太经典（ETC）实施双花攻击，至少双花4笔总计54200个ETC，价值27.1万美元。攻击每小时成本仅5168美元，总成本约20672美元，攻击收益超10倍。",
     "category": "security_incident",
     "relatedRisks": [
       "R0171"
     ],
     "references": [
       {
+        "title": "Gate.io确认ETC 51%攻击涉及54,200 ETC双花",
+        "link": "https://x.com/gate_io/status/1082525066510749696"
+      },
+      {
         "title": "51%攻击ETC 4小时收益超10倍",
         "link": "https://www.nbd.com.cn/rss/toutiao/articles/1289865.html"
       }
     ],
     "updated": "2026-06-18",
-    "incidentTime": "2024-01",
+    "incidentTime": "2019-01",
     "relatedAttackTools": [
       "AT0078"
     ],
