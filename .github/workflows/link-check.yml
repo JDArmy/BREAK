@@ -16,6 +16,7 @@ concurrency:
 jobs:
   check-links:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v5

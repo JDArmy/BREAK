@@ -276,14 +276,25 @@ const filterLineTypeModel = computed({
     flex: 0 0 auto;
     width: 100%;
     margin-right: 0;
-    white-space: nowrap;
+    min-width: 0;
+    white-space: normal;
+  }
+
+  .filter-checkbox :deep(.el-checkbox__label) {
+    min-width: 0;
+    max-width: calc(100% - 24px);
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.2;
   }
 
   .filter-item-with-color,
   .filter-line-item {
     gap: 4px;
-    flex-wrap: nowrap;
-    white-space: nowrap;
+    max-width: 100%;
+    flex-wrap: wrap;
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
 
   .legend-node-color {
@@ -297,6 +308,13 @@ const filterLineTypeModel = computed({
 
   .filter-line-help {
     display: none;
+  }
+
+  .filter-line-label {
+    min-width: 0;
+    max-width: calc(100% - 22px);
+    overflow-wrap: anywhere;
+    line-height: 1.2;
   }
 }
 </style>

@@ -4,6 +4,11 @@
 
 - 继续补强高价值司法和行政监管案例 primary source，为 `C0455` 追加公安部涉银行卡犯罪典型案例原文，为 `C0523` 追加广东省通信管理局 App 监管通报原文，并同步英文引用标题
 - 案例 primary 覆盖提升到 846，高价值 primary 覆盖提升到 523，primary 覆盖率提升到 47.08%，高价值 primary 覆盖率提升到 48.47%
+- 补充 `HomeView` 和 `RelationView` 页面级组合测试，覆盖首页统计、详情路由、非法路由回退、业务场景关闭、关系页预加载、卸载清理、详情抽屉和网络面板事件转发
+- 补充布局、主题和案例相关 composables 测试，覆盖 `useBreakpoints`、`useTheme`、`useDrawerWidth`、`useCasesByRisk`、`useLazyCasesSection`、`useRelationGraph`
+- 将 Vitest coverage 阈值从 62% 提升到 65%；当前测试规模为 44 个测试文件、248 个测试，coverage 为 statements 81.11%、branches 65.06%、functions 81.19%、lines 83.68%
+- 为浏览器视觉巡检增加 `knownWarnings` 分类，区分首页英文矩阵受控横向滚动、移动端关系图画布和抽屉打开态等已知复核项；本地巡检 unknown warning 已降为 0
+- 为 CI、deploy 和 link-check workflow 增加 job 级超时上限，降低 hard-fail 浏览器链路挂死风险
 
 ## 2.23.64
 

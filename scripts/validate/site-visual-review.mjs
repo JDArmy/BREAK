@@ -174,6 +174,113 @@ function sanitizeIssueText(text) {
   return String(text || '').replace(/\|/g, '\\|').replace(/\n/g, ' ').trim();
 }
 
+function classifyKnownWarning(result, warning) {
+  const warningText = String(warning);
+  const isOverflowElement = warningText.startsWith('溢出元素 ');
+  const isHorizontalOverflow = warningText.startsWith('横向溢出 ');
+
+  if (
+    result.label === 'home' &&
+    result.viewport === 'desktop' &&
+    isOverflowElement &&
+    /risk-dimension|risk-card|risk-scene|risk-list|risk-with-sub|s-risk|parent-risk-link|risk-dimension-title|risk-scene-title|el-row is-justify-center|tbody\.no-class|tr\.no-class/.test(warningText)
+  ) {
+    return '首页英文场景矩阵采用受控横向滚动，风险维度和风险场景列允许超出视口';
+  }
+
+  if (
+    result.label === 'relation-network' &&
+    result.viewport.startsWith('mobile') &&
+    isOverflowElement &&
+    /network-chart|canvas|no-class/.test(warningText)
+  ) {
+    return '移动端关系网络画布在面板内通过缩放和拖拽浏览，允许 canvas 尺寸超出视口';
+  }
+
+  if (
+    result.label === 'desktop-global-search' &&
+    result.viewport === 'desktop' &&
+    isOverflowElement &&
+    /risk-dimension|risk-card|risk-scene|risk-list|risk-with-sub|s-risk|parent-risk-link|risk-dimension-title|risk-scene-title|el-row is-justify-center|tbody\.no-class|tr\.no-class/.test(warningText)
+  ) {
+    return '桌面全局搜索场景停留在首页背景，继承首页英文场景矩阵受控横向滚动';
+  }
+
+  if (
+    [
+      'desktop-navigation-controls',
+      'desktop-error-route-fallbacks',
+      'home-drawer-detail-route',
+    ].includes(result.label) &&
+    result.viewport === 'desktop' &&
+    isOverflowElement &&
+    /risk-dimension|risk-card|risk-scene|risk-list|risk-with-sub|s-risk|parent-risk-link|risk-dimension-title|risk-scene-title|el-row is-justify-center|tbody\.no-class|tr\.no-class/.test(warningText)
+  ) {
+    return '桌面导航和详情抽屉场景停留在首页背景，继承首页英文场景矩阵受控横向滚动';
+  }
+
+  if (
+    result.label === 'relation-network-interaction' &&
+    result.step === 'after-node-detail-drawer' &&
+    isOverflowElement &&
+    /el-drawer|relation-drawer|drawer|node-insight-panel|node-detail-panel|node-detail-title|svg\.no-class|path\.no-class|risk-dimension|risk-card|risk-scene|risk-list|risk-with-sub|s-risk|parent-risk-link|risk-dimension-title|risk-scene-title|tbody\.no-class|tr\.no-class/.test(warningText)
+  ) {
+    return '关系节点详情抽屉打开态会保留图谱和长内容背景，抽屉内滚动由组件控制';
+  }
+
+  if (
+    result.label === 'mobile-nav-search' &&
+    result.viewport === 'mobile' &&
+    isOverflowElement &&
+    /mobile-nav-drawer|el-drawer|drawer-header|drawer-logo|drawer-title|mobile-nav-list|mobile-nav-item|span\.no-class|search-result|search-highlight|risk-dimension|risk-card|risk-scene|risk-list|risk-with-sub|s-risk|parent-risk-link|risk-dimension-title|risk-scene-title|tbody\.no-class|tr\.no-class/.test(warningText)
+  ) {
+    return '移动端菜单和搜索抽屉打开态由抽屉内部滚动控制';
+  }
+
+  if (
+    result.label === 'mobile-cases-detail-click' &&
+    result.viewport === 'mobile' &&
+    isOverflowElement &&
+    /knowledge|case|detail|entity-reference|el-drawer|risk-dimension|risk-card|risk-scene|risk-list|risk-with-sub|s-risk|parent-risk-link|risk-dimension-title|risk-scene-title|tbody\.no-class|thead\.no-class|tr\.no-class|th\.no-class|colgroup\.no-class/.test(warningText)
+  ) {
+    return '移动端知识库详情页长内容由详情区域滚动控制';
+  }
+
+  if (
+    isHorizontalOverflow &&
+    [
+      'home',
+      'desktop-global-search',
+      'desktop-navigation-controls',
+      'desktop-error-route-fallbacks',
+      'home-drawer-detail-route',
+      'relation-network',
+      'relation-network-interaction',
+      'mobile-nav-search',
+      'mobile-cases-detail-click',
+    ].includes(result.label)
+  ) {
+    return '该场景存在已知受控横向滚动或抽屉打开态溢出，保留截图人工复核';
+  }
+
+  return null;
+}
+
+function splitKnownWarnings(result) {
+  const warnings = [];
+  const knownWarnings = [];
+  for (const warning of result.warnings) {
+    const reason = classifyKnownWarning(result, warning);
+    if (reason) {
+      knownWarnings.push({ warning, reason });
+    } else {
+      warnings.push(warning);
+    }
+  }
+  result.warnings = warnings;
+  result.knownWarnings = knownWarnings;
+}
+
 function renderMarkdown(report) {
   const lines = [
     '# Browser Visual Review',
@@ -190,6 +297,7 @@ function renderMarkdown(report) {
     const issues = [
       ...result.issues.map((item) => `错误：${item}`),
       ...result.warnings.map((item) => `警告：${item}`),
+      ...(result.knownWarnings ?? []).map((item) => `已知：${item.warning}（${item.reason}）`),
     ];
     lines.push(
       `| ${result.viewport} | \`${result.path}\` | [${result.screenshot}](screenshots/${result.screenshot}) | ${issues.length ? issues.map(sanitizeIssueText).join('<br>') : 'ok'} |`,
@@ -203,6 +311,7 @@ function renderMarkdown(report) {
     const issues = [
       ...result.issues.map((item) => `错误：${item}`),
       ...result.warnings.map((item) => `警告：${item}`),
+      ...(result.knownWarnings ?? []).map((item) => `已知：${item.warning}（${item.reason}）`),
     ];
     lines.push(
       `| ${result.viewport} | ${result.label} | ${result.step} | \`${result.url}\` | [${result.screenshot}](screenshots/${result.screenshot}) | ${issues.length ? issues.map(sanitizeIssueText).join('<br>') : 'ok'} |`,
@@ -967,6 +1076,9 @@ try {
     runtimeErrors,
     resourceErrors,
   };
+
+  for (const result of results) splitKnownWarnings(result);
+  for (const result of interactions) splitKnownWarnings(result);
 
   writeJson(reportJsonPath, report);
   fs.writeFileSync(reportMdPath, renderMarkdown(report));

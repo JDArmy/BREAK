@@ -8,7 +8,7 @@
 ## 0. 当前未完成短板
 
 1. **内容与引用治理仍需闭环**：真实 broken 链接已清理，但 review、timeout、connection_error 仍需按域名和来源价值分批复核；高价值案例的 primary source 覆盖率仍偏低，需要继续补强。
-2. **回归门禁已收紧，测试深度仍需继续补齐**：浏览器 smoke、关系稳定性、Lighthouse、静态站性能和视觉巡检已全部转为每个 PR 的独立 hard-fail job；后续重点是观察耗时与视觉 warning 噪声，并继续补 `RelationView`、`HomeView`、关键交互组件、控制器和视图模型测试。
+2. **回归门禁已收紧，测试深度仍需继续补齐**：浏览器 smoke、关系稳定性、Lighthouse、静态站性能和视觉巡检已全部转为每个 PR 的独立 hard-fail job；`RelationView`、`HomeView`、基础布局/主题/案例 composables 已补页面组合与状态测试，coverage 阈值已提升到 65%；后续重点是继续观察 CI 耗时、稳定性和视觉 warning 噪声，并补关键交互组件、控制器和复杂关系分支测试。
 3. **质量治理应留在审计链路**：质量报告 JSON 已纳入引用健康、案例来源等级、字段级 i18n、弱来源等规则；后续重点是按报告分批治理，不在公开关系页暴露“质量治理”入口。
 4. **关系页工程债偏重**：路径、解释、Sankey、覆盖、过滤等逻辑仍需继续拆分；复杂分析流程、页面组合入口和关键交互仍需要更多组件、控制器和视图模型测试覆盖。
 5. **可视化推理能力仍可深化**：已有路径发现和 force 布局基础，但缺少完整路径发现交互面板、大图截图/性能基线、攻击路径步骤级 method/action 解释。
@@ -66,16 +66,19 @@
 目标：在回归门禁已 hard fail 的基础上，继续提升高风险页面和交互的测试深度，降低视觉巡检 warning 的人工复核成本。
 
 未完成工作：
-- 继续补 `RelationView`、`HomeView`、关键交互组件、控制器和视图模型测试，优先覆盖分支判断、异常态、路由同步、主题/语言切换和移动端交互。
-- 跟踪 `site-visual-review` 报告中的横向溢出、受控滚动、长英文文案和抽屉尺寸 warning，区分真实布局问题与允许名单。
-- 随测试覆盖提升继续评估 coverage 阈值上调，避免在 branches 边界不足时盲目提高门槛。
+- 已补 `RelationView` 页面组合测试，覆盖桌面/移动端预加载、卸载清理、详情抽屉状态和网络面板事件转发；已补 `HomeView` 页面测试，覆盖首页统计、风险详情路由、业务场景详情关闭、非法路由回退和异步实体抽屉。
+- 已补 `useBreakpoints`、`useTheme`、`useDrawerWidth`、`useCasesByRisk`、`useLazyCasesSection`、`useRelationGraph` 测试，覆盖断点监听、主题同步、抽屉宽度、案例倒排索引、滚动懒加载和关系图路由跳转。
+- `site-visual-review` 已将首页英文矩阵受控横向滚动、移动端关系图画布、抽屉打开态等 warning 分类为 `knownWarnings`；后续继续处理未知 warning，并把真实布局问题转为阻断项。
+- coverage 阈值已从 62% 提升到 65%；后续优先补 `relationCoverageAnalysis`、`relationGraphBuilder`、图表控制器和关键交互组件分支，再评估继续上调。
+- CI/deploy/link-check 已增加 job 级 `timeout-minutes`，后续观察 hard-fail 浏览器 job 的耗时和偶发失败，再决定是否拆分缓存或复用 workflow。
 
 落点：`vitest.config.ts`、`src/views/**/__tests__`、`src/components/**/__tests__`、`scripts/validate/site-visual-review.mjs`。
 
 验收：
 - 关键页面组合入口和高风险交互有稳定单测或浏览器巡检覆盖。
-- 视觉巡检 warning 有分类处置或明确允许名单。
+- 视觉巡检 warning 有分类处置或明确允许名单，未知 warning 数量持续收敛。
 - coverage 阈值随实际覆盖提升逐步上调，且 `npm run test:coverage` 稳定通过。
+- CI 浏览器类 job 有明确超时上限，避免长时间挂死。
 
 #### P1-2. CI workflow 优化
 
