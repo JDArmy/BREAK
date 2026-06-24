@@ -245,6 +245,8 @@ const primaryReferenceLinks = new Set([
   'https://www.douyin.com/video/7646680404434504998', // 抖音黑板报官方治理公告
   'https://m.thepaper.cn/newsdetail_forward_20536442', // 上海市第二中级人民法院官方澎湃号
   'https://m.thepaper.cn/newsdetail_forward_6016636', // 汾阳市市场监管局政务通报
+  'https://m.thepaper.cn/newsdetail_forward_31179929', // 敦化市人民法院官方澎湃号
+  'https://www.thepaper.cn/newsdetail_forward_33164885', // 云浮市中级人民法院官方澎湃号，供稿罗定法院
   'https://xinwen.bjd.com.cn/content/s6a2bfd65d5de97bd7464c3db.html', // 北京互联网法院供稿
   'https://hzsc.hangzhou.com.cn/content/content_7015476.htm', // 上城区法院案件通报
   'https://mp.weixin.qq.com/s/zm3kcgvf3bselnsmgdcglq', // 扬州经济技术开发区人民检察院官网要闻列表指向的官方微信原文
