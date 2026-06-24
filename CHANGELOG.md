@@ -1,5 +1,12 @@
 # Change log
 
+## 2.23.34
+
+- 继续集中补强链上、僵尸网络和企业攻击案例 primary source，为 `C1361`、`C1374`、`C1376`、`C1390`、`C1394`、`C1413`、`C1422`、`C1424`、`C1426`、`C1436`、`C1455`、`C1522`、`C1525`、`C1540`、`C1543` 追加或识别 xToken、PeckShield、BitFloor、USENIX、CertiK、Qubic、Bitcoin Gold、Messari、Manta Network、Aztec Labs、SlowMist、Scam Sniffer、Microsoft、Balancer 等官方、原始研究或链上分析来源，并同步英文引用标题
+- 严格核对来源与案例事实口径，未采纳只能部分支撑细节的 Terra Google Ads 钓鱼来源，并修正 BitFloor、Balancer、UXLINK、Hyperliquid、Aztec Connect 等案例的事件时间元数据
+- 扩充案例来源质量审计的 primary 识别，纳入 Qubic、Bitcoin Gold、Messari、CERT/CC、GitHub Gist 原始研究和若干官方 X / Medium / forum 精确链接
+- 高价值案例 primary 覆盖提升到 420，primary 覆盖率提升到 41.18%，高价值 primary 覆盖率提升到 38.92%
+
 ## 2.23.33
 
 - 继续补强安全事件、平台与链上案例 primary source，为 `C0786`、`C0842`、`C1293`、`C1330`、`C1433`、`C1439`、`C1441`、`C1631` 追加或识别 Cloudsmith、Okta、Koi Security、Cybereason、Solana、Binance、CertiK 等官方或原始研究来源，并同步英文引用标题

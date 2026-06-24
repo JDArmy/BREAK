@@ -105,7 +105,9 @@ const primaryDomainSuffixes = [
   'checkmarx.com',
   'securelist.com',
   'koi.ai',
+  'gist.github.com',
   'cert.europa.eu',
+  'cert.org.cn',
   'sonatype.com',
   'endorlabs.com',
   'nsfocusglobal.com',
@@ -134,11 +136,14 @@ const primaryDomainSuffixes = [
   'certik.com',
   'slowmist.com',
   'peckshield.com',
+  'messari.io',
   'solana.com',
   'binance.com',
   'okta.com',
   'cybereason.com',
   'cloudsmith.com',
+  'qubic.org',
+  'bitcoingold.org',
   'autoriteitpersoonsgegevens.nl',
   'dataprotection.ie',
   'capitalone.com',
@@ -206,6 +211,14 @@ const primaryReferenceLinks = new Set([
   'https://peckshield.medium.com/value-defi-incident-root-cause-analysis-fbab71faf373', // PeckShield 原始链上分析
   'https://peckshield.medium.com/bzx-hack-ii-full-disclosure-with-detailed-profit-analysis-8126eecc1360', // PeckShield 原始链上分析
   'https://slowmist.medium.com/the-root-cause-of-poly-network-being-hacked-ec2ee1b0c68f', // SlowMist 原始链上分析
+  'https://slowmist.medium.com/navigating-on-chain-communication-after-a-crypto-hack-74a4fd8b1791', // SlowMist 原始链上分析
+  'https://medium.com/xtoken/xsnx-post-mortem-666d35071f38', // xToken 官方事后分析
+  'https://medium.com/balancer-protocol/incident-with-non-standard-erc20-deflationary-tokens-95a0f6d46dea', // Balancer 官方事故说明
+  'https://x.com/MantaNetwork/status/1749636246023057431', // Manta Network 官方公告
+  'https://x.com/AztecLabs_/status/2066175430252700035', // Aztec Labs 官方事故说明
+  'https://x.com/realScamSniffer/status/1970322013597450609', // Scam Sniffer 原始链上告警
+  'https://x.com/PeckShieldAlert/status/1976577386469839269', // PeckShield 原始链上告警
+  'https://bitcointalk.org/index.php?topic=105818.0', // BitFloor 创始人事故说明
 ]);
 const primaryWechatBizIds = [
   'MjM5MjMyNTA0MQ==', // 公安部网安局
