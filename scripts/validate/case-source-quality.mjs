@@ -265,6 +265,7 @@ const primaryReferenceLinks = new Set([
   'https://medium.com/balancer-protocol/incident-with-non-standard-erc20-deflationary-tokens-95a0f6d46dea', // Balancer 官方事故说明
   'https://x.com/MantaNetwork/status/1749636246023057431', // Manta Network 官方公告
   'https://x.com/AztecLabs_/status/2066175430252700035', // Aztec Labs 官方事故说明
+  'https://x.com/MultichainOrg/status/1679768407628185600', // Multichain 官方停运说明
   'https://x.com/realScamSniffer/status/1970322013597450609', // Scam Sniffer 原始链上告警
   'https://x.com/PeckShieldAlert/status/1976577386469839269', // PeckShield 原始链上告警
   'https://x.com/twittercomms/status/1167559184410431488', // Twitter 官方事件说明
