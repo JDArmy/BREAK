@@ -269,6 +269,7 @@ const primaryReferenceLinks = new Set([
   'https://x.com/MultichainOrg/status/1679768407628185600', // Multichain 官方停运说明
   'https://x.com/realScamSniffer/status/1970322013597450609', // Scam Sniffer 原始链上告警
   'https://x.com/PeckShieldAlert/status/1976577386469839269', // PeckShield 原始链上告警
+  'https://x.com/SlowMist_Team/status/1516962155211407360', // SlowMist 原始链上分析
   'https://x.com/twittercomms/status/1167559184410431488', // Twitter 官方事件说明
   'https://x.com/github/status/2056949169701720157', // GitHub 官方事件说明
   'https://x.com/venusprotocol/status/2033471885259034989', // Venus Protocol 官方事件说明
