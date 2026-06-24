@@ -314,6 +314,7 @@ const primaryReferenceLinks = new Set([
   'https://www.sohu.com/a/1037162346_99923255', // 《方圆》杂志原创，徐州经开区检察院审查起诉
   'https://web.archive.org/web/20220621092007/https://weibo.com/6329746106/LyKD2xUk8', // 学习通官方微博数据泄露传闻声明存档
   'https://view.inews.qq.com/a/20251205a03wsm00', // 抖音黑板报官方托管页，盗号黑产治理公告
+  'https://view.inews.qq.com/a/20250821a025up00?scene=qb_ranking', // 公安部网安局官方托管页，弱支付密码盗刷案
   'https://mp.weixin.qq.com/s/wsro3i0l02fku9gr0o9gfw', // 公安部网安局官方微信，变脸软件解封涉诈账号
   'https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=16452910468894153646&track_id=06cab3b6-40f2-45f6-b2ee-15f8dc4ae04d', // 央视新闻客户端转述沁水公安 USDT 洗钱案
   'https://xinwen.bjd.com.cn/content/s659b6e44e4b0f6c5abd4836a.html', // 北京日报托管公安部网安局数据泄露处罚通报
