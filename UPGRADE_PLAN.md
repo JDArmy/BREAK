@@ -10,7 +10,7 @@
 1. **内容与引用治理仍需闭环**：review、timeout、connection_error 仍需按域名和来源价值分批复核；高价值案例的 primary source 覆盖率仍偏低，需要继续补强。
 2. **回归测试深度仍需继续补齐**：后续重点是继续观察 CI 耗时、稳定性和视觉 warning 噪声，并补关键交互组件、控制器和复杂关系分支测试。
 3. **质量治理应留在审计链路**：后续重点是按质量报告分批治理引用健康、案例来源等级、字段级 i18n 和弱来源问题，不在公开关系页暴露“质量治理”入口。
-4. **关系页工程债偏重**：路径、解释、Sankey、覆盖、过滤等逻辑仍需继续拆分；后续重点转向图表控制器、分析面板和节点关系抽屉的测试保护与小步拆分。
+4. **关系页工程债偏重**：路径、解释、Sankey、覆盖、过滤等逻辑仍需继续拆分；后续重点转向分析面板和节点关系抽屉的测试保护与小步拆分。
 5. **可视化推理能力仍可深化**：缺少完整路径发现交互面板、大图截图/性能基线、攻击路径步骤级 method/action 解释。
 
 ## 1. 执行原则
@@ -66,7 +66,7 @@
 目标：在回归门禁已 hard fail 的基础上，继续提升高风险页面和交互的测试深度，降低视觉巡检 warning 的人工复核成本。
 
 未完成工作：
-- 继续补图表控制器和关键交互组件分支，再评估继续上调 coverage 阈值。
+- 继续补关键交互组件分支，再评估继续上调 coverage 阈值。
 - 继续处理 `site-visual-review` 未知 warning，并把真实布局问题转为阻断项。
 - 继续观察 hard-fail 浏览器 job 的耗时和偶发失败，再决定是否拆分缓存或复用 workflow。
 
@@ -96,18 +96,17 @@
 目标：把关系页从“功能已可用但大文件耦合重”推进到“核心分析逻辑有测试保护、控制器职责清晰、组件可小步维护”的状态。
 
 未完成工作：
-- `relationNetworkChartController.ts` / `relationSankeyChartController.ts`：补空图、销毁、resize、拖拽位置、节点选择、菜单事件和重复渲染分支测试；避免控制器拆分时破坏图表生命周期。
-- `RelationAnalysisPane.vue`：先补覆盖分析、专项洞察、路径摘要、Sankey/网络视图切换等展示 contract 测试，再拆出覆盖卡片、专项洞察区、路径摘要区等子组件。
+- `RelationAnalysisPane.vue`：展示 contract 测试已覆盖空态、覆盖分析、专项洞察、路径摘要、筛选、移动端展开折叠和详情事件转发；后续拆出覆盖卡片、专项洞察区、路径摘要区等子组件，并保持现有 contract 不回退。
 - `RelationNodeDrawerRelations.vue`：补节点关系分组、空状态、跳转事件、可点击 ID 和多实体类型组合测试；拆分关系分组渲染和节点跳转控制。
 - `relationCoverageAnalysis.ts`：后续拆分时优先抽出纯 helper，例如 coverage item builder、risk/avoidance/tool/actor coverage builder、special insight builder，并保持现有测试不回退。
 - `relationGraphBuilder.ts`：覆盖已稳定后，评估是否抽出实体分发/请求分发 helper，并保持现有测试不回退。
-- 继续用 `npm run test:coverage` 观察关系目录覆盖率和分支覆盖率；只有在分支余量稳定后再上调全局 coverage 阈值。
+- 继续用 `npm run test:coverage` 观察关系目录覆盖率和分支覆盖率；只有在分支余量稳定后再继续上调全局 coverage 阈值。
 
 落点：`src/views/relation/relationGraphBuilder.ts`、`src/views/relation/relationNetworkChartController.ts`、`src/views/relation/relationSankeyChartController.ts`、`src/views/relation/relationCoverageAnalysis.ts`、`src/components/relation/RelationAnalysisPane.vue`、`src/components/relation/RelationNodeDrawerRelations.vue`、对应 `__tests__`。
 
 验收：
-- `relationGraphBuilder`、网络图控制器、Sankey 控制器的关键分支均有单测覆盖，`npm run test:coverage` 稳定通过。
-- `RelationAnalysisPane` 和 `RelationNodeDrawerRelations` 至少覆盖主要展示状态、空状态和交互事件。
+- `relationGraphBuilder`、网络图控制器、Sankey 控制器的关键分支均有单测覆盖，`npm run test:coverage` 在 70% 全局阈值下稳定通过。
+- `RelationAnalysisPane` 已覆盖主要展示状态、空状态和交互事件；`RelationNodeDrawerRelations` 仍需补节点关系分组、空状态、跳转事件、可点击 ID 和多实体类型组合测试。
 - 拆分后的子模块保持纯函数或窄组件输入输出，关系页 URL、节点选择、筛选、图表渲染和抽屉交互不回退。
 - 关系目录覆盖率不低于当前水平，新增拆分不降低全局 coverage 阈值。
 
@@ -225,7 +224,7 @@
 | 回归门禁 | 浏览器 smoke、关系稳定性、Lighthouse、性能和视觉巡检均为 PR hard fail；关系页核心逻辑有测试覆盖 |
 | 质量报告 | `audit:quality-report` 覆盖引用、案例来源、i18n、弱关系等治理维度，并进入静态数据与 npm 包校验 |
 | 公开关系页 | 不暴露内部质量治理入口 |
-| 关系页工程 | 继续补图表控制器、分析面板和节点关系抽屉测试，再小步拆分复杂模块 |
+| 关系页工程 | 继续补分析面板和节点关系抽屉测试，再小步拆分复杂模块 |
 | CI | PR 旧 run 可取消；重复 workflow 明显减少 |
 | 任务型视角 | 至少支持风险、攻击路径、防御覆盖 3 个视角 |
 | 路径发现 | 任意起止节点路径发现有完整交互 |
