@@ -4,8 +4,8 @@ import { useI18n } from "vue-i18n";
 import { useBreakpoints } from "@/composables/useBreakpoints";
 import { useIncrementalVisibleList } from "@/composables/useIncrementalVisibleList";
 import RelationAnalysisCoverageColumn from "@/components/relation/RelationAnalysisCoverageColumn.vue";
+import RelationAnalysisDetailColumn from "@/components/relation/RelationAnalysisDetailColumn.vue";
 import RelationAnalysisPathColumn from "@/components/relation/RelationAnalysisPathColumn.vue";
-import RelationNodeDetailContent from "@/components/relation/RelationNodeDetailContent.vue";
 import {
   RelationType,
   type AttackPathDetail,
@@ -354,71 +354,50 @@ watch(
             ref="detailColumnRef"
             class="relation-analysis-column relation-analysis-main"
           >
-            <div v-if="selectedNetworkNode" class="node-explain-block">
-              <h3>{{ t("relationView.relationDetail") }}</h3>
-              <div class="node-insight-panel relation-analysis-detail-panel">
-                <RelationNodeDetailContent
-                  :selected-network-node="selectedNetworkNode"
-                  :selected-network-node-title="selectedNetworkNodeTitle"
-                  :selected-network-relation-counts="
-                    selectedNetworkRelationCounts
-                  "
-                  :root-node-relations="rootNodeRelations"
-                  :selected-node-root-path="selectedNodeRootPath"
-                  :selected-node-analysis-summary="selectedNodeAnalysisSummary"
-                  :selected-node-related-entity-summary="
-                    selectedNodeRelatedEntitySummary
-                  "
-                  :selected-node-attack-path-summary="
-                    selectedNodeAttackPathSummary
-                  "
-                  :selected-node-attack-path-description="
-                    selectedNodeAttackPathDescription
-                  "
-                  :selected-node-attack-path-explanations="
-                    selectedNodeAttackPathExplanations
-                  "
-                  :attack-path-filter-options="attackPathFilterOptions"
-                  :attack-path-filters="attackPathFilters"
-                  :has-active-attack-path-filters="hasActiveAttackPathFilters"
-                  :selected-node-business-scene-impact-summary="
-                    selectedNodeBusinessSceneImpactSummary
-                  "
-                  :selected-node-coverage-summary="selectedNodeCoverageSummary"
-                  :show-root-relation-block="false"
-                  :show-coverage-block="false"
-                  :show-attack-path-block="false"
-                  :selected-network-relations="selectedNetworkRelations"
-                  :rel-key="relKey"
-                  :get-node-type-title="getNodeTypeTitle"
-                  :is-path-node-current-selection="
-                    isPathNodeCurrentSelection
-                  "
-                  :is-relation-on-selected-path="isRelationOnSelectedPath"
-                  :is-current-node-root="isCurrentNodeRoot"
-                  :drawer-copy-feedback-message="drawerCopyFeedbackMessage"
-                  :drawer-copy-feedback-type="drawerCopyFeedbackType"
-                  :show-open-as-root-action="false"
-                  @copy-csv="emitRightAction('copy-csv')"
-                  @view-detail="emitRightAction('view-detail')"
-                  @open-detail-new-window="
-                    emitRightAction('open-detail-new-window')
-                  "
-                  @open-as-root="emitRightAction('open-as-root')"
-                  @update:attack-path-filters="
-                    emitAttackPathFilters($event, 'right')
-                  "
-                  @reset-attack-path-filters="
-                    emitRightAction('reset-attack-path-filters')
-                  "
-                  @focus-node="emitRightAction('focus-node', $event)"
-                  @open-node-as-root="
-                    emitRightAction('open-node-as-root', $event)
-                  "
-                  @open-node-detail="emitRightAction('open-node-detail', $event)"
-                />
-              </div>
-            </div>
+            <RelationAnalysisDetailColumn
+              :attack-path-filter-options="attackPathFilterOptions"
+              :attack-path-filters="attackPathFilters"
+              :drawer-copy-feedback-message="drawerCopyFeedbackMessage"
+              :drawer-copy-feedback-type="drawerCopyFeedbackType"
+              :get-node-type-title="getNodeTypeTitle"
+              :has-active-attack-path-filters="hasActiveAttackPathFilters"
+              :is-current-node-root="isCurrentNodeRoot"
+              :is-path-node-current-selection="isPathNodeCurrentSelection"
+              :is-relation-on-selected-path="isRelationOnSelectedPath"
+              :rel-key="relKey"
+              :root-node-relations="rootNodeRelations"
+              :selected-network-node="selectedNetworkNode"
+              :selected-network-node-title="selectedNetworkNodeTitle"
+              :selected-network-relation-counts="selectedNetworkRelationCounts"
+              :selected-network-relations="selectedNetworkRelations"
+              :selected-node-analysis-summary="selectedNodeAnalysisSummary"
+              :selected-node-attack-path-description="
+                selectedNodeAttackPathDescription
+              "
+              :selected-node-attack-path-explanations="
+                selectedNodeAttackPathExplanations
+              "
+              :selected-node-attack-path-summary="selectedNodeAttackPathSummary"
+              :selected-node-business-scene-impact-summary="
+                selectedNodeBusinessSceneImpactSummary
+              "
+              :selected-node-coverage-summary="selectedNodeCoverageSummary"
+              :selected-node-related-entity-summary="
+                selectedNodeRelatedEntitySummary
+              "
+              :selected-node-root-path="selectedNodeRootPath"
+              @copy-csv="emitRightAction('copy-csv')"
+              @view-detail="emitRightAction('view-detail')"
+              @open-detail-new-window="emitRightAction('open-detail-new-window')"
+              @open-as-root="emitRightAction('open-as-root')"
+              @update:attack-path-filters="emitAttackPathFilters($event, 'right')"
+              @reset-attack-path-filters="
+                emitRightAction('reset-attack-path-filters')
+              "
+              @focus-node="emitRightAction('focus-node', $event)"
+              @open-node-as-root="emitRightAction('open-node-as-root', $event)"
+              @open-node-detail="emitRightAction('open-node-detail', $event)"
+            />
           </div>
           <el-backtop
             class="relation-analysis-pane-backtop"

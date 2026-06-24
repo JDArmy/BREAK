@@ -1,8 +1,15 @@
 import { mount } from "@vue/test-utils";
 import { describe, expect, it, vi } from "vitest";
 import RelationAnalysisCoverageColumn from "@/components/relation/RelationAnalysisCoverageColumn.vue";
+import RelationAnalysisDetailColumn from "@/components/relation/RelationAnalysisDetailColumn.vue";
 import RelationAnalysisPathColumn from "@/components/relation/RelationAnalysisPathColumn.vue";
-import { RelationType, type AttackPathDetail, type RiskAvoidanceCoverageItem } from "@/views/relation/relationTypes";
+import {
+  RelationType,
+  type AttackPathDetail,
+  type AttackPathFilterOption,
+  type AttackPathFilterType,
+  type RiskAvoidanceCoverageItem,
+} from "@/views/relation/relationTypes";
 import type { NodeSpecialInsightSummary } from "@/components/relation/relationNodeDrawerInsightTypes";
 
 vi.mock("vue-i18n", () => ({
@@ -74,6 +81,50 @@ const pathDetail = (id: string): AttackPathDetail => ({
     },
   ],
 });
+
+const filterOptions: Record<AttackPathFilterType, AttackPathFilterOption[]> = {
+  [RelationType.threatActor]: [],
+  [RelationType.attackTool]: [],
+  [RelationType.risk]: [],
+  [RelationType.avoidance]: [],
+};
+
+const detailContentStub = {
+  props: [
+    "selectedNetworkNode",
+    "selectedNetworkNodeTitle",
+    "showRootRelationBlock",
+    "showCoverageBlock",
+    "showAttackPathBlock",
+    "showOpenAsRootAction",
+  ],
+  emits: [
+    "copy-csv",
+    "view-detail",
+    "open-detail-new-window",
+    "open-as-root",
+    "update:attack-path-filters",
+    "reset-attack-path-filters",
+    "focus-node",
+    "open-node-as-root",
+    "open-node-detail",
+  ],
+  template: `
+    <div class="detail-content-stub">
+      <span>{{ selectedNetworkNode.id }} {{ selectedNetworkNodeTitle }}</span>
+      <span class="detail-flags">{{ showRootRelationBlock }} {{ showCoverageBlock }} {{ showAttackPathBlock }} {{ showOpenAsRootAction }}</span>
+      <button class="copy-csv" @click="$emit('copy-csv')">copy</button>
+      <button class="view-detail" @click="$emit('view-detail')">view</button>
+      <button class="open-new" @click="$emit('open-detail-new-window')">new</button>
+      <button class="open-root" @click="$emit('open-as-root')">root</button>
+      <button class="update-filter" @click="$emit('update:attack-path-filters', { risk: 'R0001' })">filter</button>
+      <button class="reset-filter" @click="$emit('reset-attack-path-filters')">reset</button>
+      <button class="focus-node" @click="$emit('focus-node', selectedNetworkNode.id)">focus</button>
+      <button class="open-node-root" @click="$emit('open-node-as-root', selectedNetworkNode.id)">node root</button>
+      <button class="open-node-detail" @click="$emit('open-node-detail', selectedNetworkNode.id)">node detail</button>
+    </div>
+  `,
+};
 
 describe("RelationAnalysisCoverageColumn", () => {
   it("渲染覆盖列表并转发规避筛选和移动端展开事件", async () => {
@@ -168,5 +219,84 @@ describe("RelationAnalysisPathColumn", () => {
     await wrapper.find(".node-attack-path-more-button").trigger("click");
 
     expect(wrapper.emitted("toggle-attack-paths")).toHaveLength(1);
+  });
+});
+
+describe("RelationAnalysisDetailColumn", () => {
+  const mountDetailColumn = (
+    props: Partial<InstanceType<typeof RelationAnalysisDetailColumn>["$props"]> = {},
+  ) =>
+    mount(RelationAnalysisDetailColumn, {
+      props: {
+        attackPathFilterOptions: filterOptions,
+        attackPathFilters: {},
+        drawerCopyFeedbackMessage: "",
+        drawerCopyFeedbackType: "success",
+        getNodeTypeTitle: (type: string) => type,
+        hasActiveAttackPathFilters: false,
+        isCurrentNodeRoot: true,
+        isPathNodeCurrentSelection: () => false,
+        isRelationOnSelectedPath: () => false,
+        relKey: "R0001",
+        rootNodeRelations: [],
+        selectedNetworkNode: { id: "R0001", type: RelationType.risk },
+        selectedNetworkNodeTitle: "流程自动化",
+        selectedNetworkRelationCounts: { incoming: 1, outgoing: 2 },
+        selectedNetworkRelations: [],
+        selectedNodeAnalysisSummary: null,
+        selectedNodeAttackPathDescription: "",
+        selectedNodeAttackPathExplanations: [],
+        selectedNodeAttackPathSummary: [],
+        selectedNodeBusinessSceneImpactSummary: null,
+        selectedNodeCoverageSummary: null,
+        selectedNodeRelatedEntitySummary: null,
+        selectedNodeRootPath: null,
+        ...props,
+      },
+      global: {
+        stubs: {
+          RelationNodeDetailContent: detailContentStub,
+        },
+      },
+    });
+
+  it("没有选中节点时不渲染右侧详情", () => {
+    const wrapper = mountDetailColumn({ selectedNetworkNode: null });
+
+    expect(wrapper.find(".detail-content-stub").exists()).toBe(false);
+  });
+
+  it("渲染右侧详情并关闭抽屉专属块", async () => {
+    const wrapper = mountDetailColumn();
+
+    expect(wrapper.text()).toContain("relationView.relationDetail");
+    expect(wrapper.text()).toContain("R0001 流程自动化");
+    expect(wrapper.find(".detail-flags").text()).toBe("false false false false");
+  });
+
+  it("继续透传右侧详情交互事件", async () => {
+    const wrapper = mountDetailColumn();
+
+    await wrapper.find(".copy-csv").trigger("click");
+    await wrapper.find(".view-detail").trigger("click");
+    await wrapper.find(".open-new").trigger("click");
+    await wrapper.find(".open-root").trigger("click");
+    await wrapper.find(".update-filter").trigger("click");
+    await wrapper.find(".reset-filter").trigger("click");
+    await wrapper.find(".focus-node").trigger("click");
+    await wrapper.find(".open-node-root").trigger("click");
+    await wrapper.find(".open-node-detail").trigger("click");
+
+    expect(wrapper.emitted("copy-csv")).toHaveLength(1);
+    expect(wrapper.emitted("view-detail")).toHaveLength(1);
+    expect(wrapper.emitted("open-detail-new-window")).toHaveLength(1);
+    expect(wrapper.emitted("open-as-root")).toHaveLength(1);
+    expect(wrapper.emitted("update:attack-path-filters")?.[0]).toEqual([
+      { risk: "R0001" },
+    ]);
+    expect(wrapper.emitted("reset-attack-path-filters")).toHaveLength(1);
+    expect(wrapper.emitted("focus-node")?.[0]).toEqual(["R0001"]);
+    expect(wrapper.emitted("open-node-as-root")?.[0]).toEqual(["R0001"]);
+    expect(wrapper.emitted("open-node-detail")?.[0]).toEqual(["R0001"]);
   });
 });

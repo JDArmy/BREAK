@@ -1,5 +1,11 @@
 # Change log
 
+## 2.23.88
+
+- 继续拆分 `RelationAnalysisPane`，新增 `RelationAnalysisDetailColumn` 承载右侧详情列，父组件收敛为三列编排、筛选与滚动保留逻辑
+- 补强分析面板子列测试，覆盖右侧详情空态、抽屉专属块关闭状态和详情事件透传；当前测试规模为 48 个测试文件、302 个测试
+- 更新升级规划，将 P1-3 关系页工程债剩余重点收敛到节点关系抽屉、分析面板更细粒度卡片和图构建分发逻辑
+
 ## 2.23.87
 
 - 拆分 `RelationAnalysisPane` 左侧覆盖/专项洞察列和中间路径列，新增 `RelationAnalysisCoverageColumn`、`RelationAnalysisPathColumn`，降低分析面板主组件模板复杂度

@@ -44,6 +44,7 @@ declare module 'vue' {
     MenuList: typeof import('./src/components/MenuList.vue')['default']
     ReferenceList: typeof import('./src/components/ReferenceList.vue')['default']
     RelationAnalysisCoverageColumn: typeof import('./src/components/relation/RelationAnalysisCoverageColumn.vue')['default']
+    RelationAnalysisDetailColumn: typeof import('./src/components/relation/RelationAnalysisDetailColumn.vue')['default']
     RelationAnalysisPane: typeof import('./src/components/relation/RelationAnalysisPane.vue')['default']
     RelationAnalysisPathColumn: typeof import('./src/components/relation/RelationAnalysisPathColumn.vue')['default']
     RelationFilterPanels: typeof import('./src/components/relation/RelationFilterPanels.vue')['default']

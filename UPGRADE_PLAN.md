@@ -10,7 +10,7 @@
 1. **内容与引用治理仍需闭环**：review、timeout、connection_error 仍需按域名和来源价值分批复核；高价值案例的 primary source 覆盖率仍偏低，需要继续补强。
 2. **回归测试深度仍需继续补齐**：后续重点是继续观察 CI 耗时、稳定性和视觉 warning 噪声，并补关键交互组件、控制器和复杂关系分支测试。
 3. **质量治理应留在审计链路**：后续重点是按质量报告分批治理引用健康、案例来源等级、字段级 i18n 和弱来源问题，不在公开关系页暴露“质量治理”入口。
-4. **关系页工程债偏重**：路径、解释、Sankey、覆盖、过滤等逻辑仍需继续拆分；分析面板已拆出覆盖/专项洞察列和路径列，后续重点转向节点关系抽屉、右侧详情组合和图构建分发逻辑的小步拆分。
+4. **关系页工程债偏重**：路径、解释、Sankey、覆盖、过滤等逻辑仍需继续拆分；分析面板已拆出覆盖/专项洞察列、路径列和右侧详情列，后续重点转向节点关系抽屉和图构建分发逻辑的小步拆分。
 5. **可视化推理能力仍可深化**：缺少完整路径发现交互面板、大图截图/性能基线、攻击路径步骤级 method/action 解释。
 
 ## 1. 执行原则
@@ -96,7 +96,7 @@
 目标：把关系页从“功能已可用但大文件耦合重”推进到“核心分析逻辑有测试保护、控制器职责清晰、组件可小步维护”的状态。
 
 未完成工作：
-- `RelationAnalysisPane.vue`：展示 contract 测试已覆盖空态、覆盖分析、专项洞察、路径摘要、筛选、移动端展开折叠和详情事件转发；已拆出 `RelationAnalysisCoverageColumn` 和 `RelationAnalysisPathColumn` 承载左侧覆盖/专项洞察列与中间路径列，后续继续拆分右侧详情组合和更细粒度卡片，并保持现有 contract 不回退。
+- `RelationAnalysisPane.vue`：展示 contract 测试已覆盖空态、覆盖分析、专项洞察、路径摘要、筛选、移动端展开折叠和详情事件转发；已拆出 `RelationAnalysisCoverageColumn`、`RelationAnalysisPathColumn` 和 `RelationAnalysisDetailColumn` 承载左侧覆盖/专项洞察列、中间路径列与右侧详情列，后续继续拆分更细粒度卡片，并保持现有 contract 不回退。
 - `RelationNodeDrawerRelations.vue`：主要展示状态、空状态、跳转事件、可点击 ID、多实体类型组合、筛选和增量展开折叠 contract 测试已覆盖；后续拆分关系分组渲染和节点跳转控制，并保持现有 contract 不回退。
 - `relationCoverageAnalysis.ts`：已抽出节点 item builder、规避手段排序、洞察 section builder、跨实体反查 helper、risk/avoidance/tool/actor coverage builder 和 special insight builder；专项 builder 已补直接分支测试，后续继续观察拆分后覆盖率与维护边界。
 - `relationGraphBuilder.ts`：覆盖已稳定后，评估是否抽出实体分发/请求分发 helper，并保持现有测试不回退。
@@ -205,7 +205,7 @@
 | 回归门禁 | 浏览器 smoke、关系稳定性、Lighthouse、性能和视觉巡检均为 PR hard fail；关系页核心逻辑有测试覆盖 |
 | 质量报告 | `audit:quality-report` 覆盖引用、案例来源、i18n、弱关系等治理维度，并进入静态数据与 npm 包校验 |
 | 公开关系页 | 不暴露内部质量治理入口 |
-| 关系页工程 | 继续小步拆分节点关系抽屉、分析面板右侧详情组合和图构建分发逻辑，并保持现有测试 contract 不回退 |
+| 关系页工程 | 继续小步拆分节点关系抽屉、分析面板更细粒度卡片和图构建分发逻辑，并保持现有测试 contract 不回退 |
 | CI | PR 旧 run 可取消；重复 workflow 明显减少 |
 | 任务型视角 | 已支持风险、攻击路径、防御覆盖 3 个公开视角，且不暴露内部质量治理入口 |
 | 路径发现 | 任意起止节点路径发现有完整交互 |
