@@ -178,6 +178,7 @@ export const createRelationAttackPathData = ({
     relKey,
     relType,
   });
+  const allAttackPaths = computed(() => buildAttackPaths());
 
   const getPathNode = (
     type: AttackPathFilterType,
@@ -281,7 +282,7 @@ export const createRelationAttackPathData = ({
     if (!node) return [];
     if (node.type === RelationType.term) return [];
 
-    const matchingPaths = buildAttackPaths().filter((path) => {
+    const matchingPaths = allAttackPaths.value.filter((path) => {
       if (node.type === RelationType.threatActor)
         return path.threatActorKey === node.id;
       if (node.type === RelationType.attackTool)
@@ -316,14 +317,12 @@ export const createRelationAttackPathData = ({
     if (!node || node.type === RelationType.term) return [];
 
     return explainGroupedAttackPaths(
-      buildAttackPaths().filter((path) => hasPathNode(path, node)),
+      allAttackPaths.value.filter((path) => hasPathNode(path, node)),
     );
   });
 
-  const allAttackPaths = computed(() => buildAttackPaths());
-
   const { sankeyChartHeight, sankeyData } = createRelationAttackPathSankey({
-    buildAttackPaths,
+    allAttackPaths,
     getSankeyNodeName,
     isMobile: isMobileView,
     RelationTypeMapping,

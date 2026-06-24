@@ -83,4 +83,43 @@ describe("relationPathDiscovery", () => {
       }),
     ]);
   });
+
+  it("caps breadth-first expansion for dense relation graphs", () => {
+    const denseLines: Line[] = [];
+    for (let index = 0; index < 30; index += 1) {
+      denseLines.push({
+        from: "ROOT",
+        relationKey: "dense",
+        text: "密集关系",
+        to: `RISK-${index.toString().padStart(2, "0")}`,
+      });
+      denseLines.push({
+        from: `RISK-${index.toString().padStart(2, "0")}`,
+        relationKey: "dense",
+        text: "密集关系",
+        to: "TARGET",
+      });
+    }
+
+    expect(
+      findRelationPaths({
+        lines: denseLines,
+        startId: "ROOT",
+        endId: "TARGET",
+        maxDepth: 2,
+        maxPaths: 5,
+        maxExpansions: 1,
+      }),
+    ).toEqual([]);
+    expect(
+      findRelationPaths({
+        lines: denseLines,
+        startId: "ROOT",
+        endId: "TARGET",
+        maxDepth: 2,
+        maxPaths: 5,
+        maxExpansions: 40,
+      }),
+    ).toHaveLength(5);
+  });
 });

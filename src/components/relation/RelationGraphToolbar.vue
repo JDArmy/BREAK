@@ -99,16 +99,17 @@ const emit = defineEmits<{
 
 <style scoped>
 .graph-toolbar {
+  box-sizing: border-box;
   position: absolute;
   z-index: 710;
   top: 50%;
-  right: 18px;
+  right: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 6px;
-  width: 48px;
-  padding: 10px 7px;
+  width: 40px;
+  padding: 8px 5px;
   border: 1px solid var(--break-graph-border);
   border-radius: 8px;
   background: var(--break-bg-card);

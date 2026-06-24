@@ -8,12 +8,10 @@ import {
   type SankeyNode,
 } from "@/views/relation/relationTypes";
 
-type BuildAttackPaths = () => AttackPath[];
-
 type SankeyNodeNameGetter = (type: RelationEntityType, key: string) => string;
 
 interface CreateRelationAttackPathSankeyOptions {
-  buildAttackPaths: BuildAttackPaths;
+  allAttackPaths: ComputedRef<AttackPath[]>;
   getSankeyNodeName: SankeyNodeNameGetter;
   isMobile: ComputedRef<boolean> | Ref<boolean>;
   RelationTypeMapping: ReturnType<typeof createRelationTypeMapping>;
@@ -90,7 +88,7 @@ const createEmptySankeyData = ({
 };
 
 export const createRelationAttackPathSankey = ({
-  buildAttackPaths,
+  allAttackPaths,
   getSankeyNodeName,
   isMobile,
   RelationTypeMapping,
@@ -100,7 +98,7 @@ export const createRelationAttackPathSankey = ({
       getSankeyNodeName,
       RelationTypeMapping,
     });
-    buildAttackPaths().forEach(sankey.addPath);
+    allAttackPaths.value.forEach(sankey.addPath);
     return sankey.toData();
   });
 

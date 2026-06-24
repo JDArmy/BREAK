@@ -17,6 +17,24 @@ export const createRelationGraphRelationSummary = ({
 }: CreateRelationGraphRelationSummaryOptions) => {
   const { buildNodeSummary, buildRelationSummary, findNodeById } =
     createRelationGraphInsightHelpers(baseOptions);
+  const relationLinesByNodeId = computed(() => {
+    const lineMap = new Map<string, Line[]>();
+    baseOptions.lines.forEach((line) => {
+      const fromLines = lineMap.get(line.from);
+      if (fromLines) {
+        fromLines.push(line);
+      } else {
+        lineMap.set(line.from, [line]);
+      }
+      const toLines = lineMap.get(line.to);
+      if (toLines) {
+        toLines.push(line);
+      } else {
+        lineMap.set(line.to, [line]);
+      }
+    });
+    return lineMap;
+  });
 
   const selectedNetworkNode = computed(() => {
     const selectedNode = baseOptions.nodes.find(
@@ -39,8 +57,7 @@ export const createRelationGraphRelationSummary = ({
     const node = selectedNetworkNode.value;
     if (!node) return [];
 
-    return baseOptions.lines
-      .filter((line) => line.from === node.id || line.to === node.id)
+    return (relationLinesByNodeId.value.get(node.id) ?? [])
       .map((line) => buildRelationSummary(line, node.id))
       .sort(
         (a, b) =>
@@ -51,10 +68,10 @@ export const createRelationGraphRelationSummary = ({
   const selectedNetworkRelationCounts = computed(() => {
     const node = selectedNetworkNode.value;
     if (!node) return { incoming: 0, outgoing: 0 };
+    const relationLines = relationLinesByNodeId.value.get(node.id) ?? [];
     return {
-      incoming: baseOptions.lines.filter((line) => line.to === node.id).length,
-      outgoing: baseOptions.lines.filter((line) => line.from === node.id)
-        .length,
+      incoming: relationLines.filter((line) => line.to === node.id).length,
+      outgoing: relationLines.filter((line) => line.from === node.id).length,
     };
   });
 

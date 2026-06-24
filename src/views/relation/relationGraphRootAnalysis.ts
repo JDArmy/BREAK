@@ -6,6 +6,8 @@ import {
   type RelationEntityType,
 } from "@/views/relation/relationTypes";
 
+const maxRootPathExpansions = 800;
+
 interface CreateRelationGraphRootAnalysisOptions {
   relKey: Ref<string>;
   lines: Line[];
@@ -44,30 +46,49 @@ export const createRelationGraphRootAnalysis = ({
   buildRelationSummary,
   getRelationPriority,
 }: CreateRelationGraphRootAnalysisOptions) => {
+  const adjacencyByNodeId = computed(() => {
+    const adjacency = new Map<string, { nextId: string; line: Line }[]>();
+    const appendEdge = (fromId: string, nextId: string, line: Line) => {
+      const edges = adjacency.get(fromId);
+      if (edges) {
+        edges.push({ nextId, line });
+        return;
+      }
+      adjacency.set(fromId, [{ nextId, line }]);
+    };
+
+    lines.forEach((line) => {
+      appendEdge(line.from, line.to, line);
+      appendEdge(line.to, line.from, line);
+    });
+
+    adjacency.forEach((neighbors) => {
+      neighbors.sort(
+        (a, b) =>
+          getRelationPriority(getRelationLineKey(a.line)) -
+          getRelationPriority(getRelationLineKey(b.line)),
+      );
+    });
+
+    return adjacency;
+  });
+
   const selectedNodeRootPath = computed(() => {
     const node = selectedNetworkNode.value;
     if (!node || node.id === relKey.value) return null;
 
-    const adjacency = new Map<string, { nextId: string; line: Line }[]>();
-    lines.forEach((line) => {
-      const fromEdges = adjacency.get(line.from) ?? [];
-      fromEdges.push({ nextId: line.to, line });
-      adjacency.set(line.from, fromEdges);
-
-      const toEdges = adjacency.get(line.to) ?? [];
-      toEdges.push({ nextId: line.from, line });
-      adjacency.set(line.to, toEdges);
-    });
-
+    const adjacency = adjacencyByNodeId.value;
     const queue: {
       nodeId: string;
       steps: { fromId: string; toId: string; line: Line }[];
     }[] = [{ nodeId: relKey.value, steps: [] }];
     const visited = new Set<string>([relKey.value]);
+    let expansions = 0;
 
-    while (queue.length > 0) {
+    while (queue.length > 0 && expansions < maxRootPathExpansions) {
       const current = queue.shift();
       if (!current) break;
+      expansions += 1;
       if (current.nodeId === node.id) {
         return {
           hopCount: current.steps.length,
@@ -81,24 +102,18 @@ export const createRelationGraphRootAnalysis = ({
       }
 
       const neighbors = adjacency.get(current.nodeId) ?? [];
-      neighbors
-        .slice()
-        .sort(
-          (a, b) =>
-            getRelationPriority(getRelationLineKey(a.line)) -
-            getRelationPriority(getRelationLineKey(b.line)),
-        )
-        .forEach(({ nextId, line }) => {
-          if (visited.has(nextId)) return;
-          visited.add(nextId);
-          queue.push({
-            nodeId: nextId,
-            steps: [
-              ...current.steps,
-              { fromId: current.nodeId, toId: nextId, line },
-            ],
-          });
+      for (const { nextId, line } of neighbors) {
+        if (visited.has(nextId)) continue;
+        visited.add(nextId);
+        queue.push({
+          nodeId: nextId,
+          steps: [
+            ...current.steps,
+            { fromId: current.nodeId, toId: nextId, line },
+          ],
         });
+        if (expansions >= maxRootPathExpansions) break;
+      }
     }
 
     return null;
@@ -137,7 +152,7 @@ export const createRelationGraphRootAnalysis = ({
       }
     };
 
-    lines.forEach((line) => {
+    (adjacencyByNodeId.value.get(node.id) ?? []).forEach(({ line }) => {
       if (line.from === node.id || line.to === node.id) {
         previewLines.push(line);
         collectPreviewRelation(line.from);

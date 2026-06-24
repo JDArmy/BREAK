@@ -33,6 +33,7 @@ export interface FindRelationPathsOptions {
   endId: string;
   maxDepth?: number;
   maxPaths?: number;
+  maxExpansions?: number;
   directed?: boolean;
   getRelationPriority?: (lineKey: string) => number;
 }
@@ -43,16 +44,29 @@ export const findRelationPaths = ({
   endId,
   maxDepth = 4,
   maxPaths = 5,
+  maxExpansions = 800,
   directed = false,
   getRelationPriority = () => 0,
 }: FindRelationPathsOptions): DiscoveredRelationPath[] => {
-  if (!startId || !endId || startId === endId || maxDepth < 1 || maxPaths < 1) {
+  if (
+    !startId ||
+    !endId ||
+    startId === endId ||
+    maxDepth < 1 ||
+    maxPaths < 1 ||
+    maxExpansions < 1
+  ) {
     return [];
   }
 
   const adjacency = new Map<string, RelationPathEdge[]>();
   const appendEdge = (fromId: string, nextId: string, line: Line) => {
-    adjacency.set(fromId, [...(adjacency.get(fromId) ?? []), { nextId, line }]);
+    const edges = adjacency.get(fromId);
+    if (edges) {
+      edges.push({ nextId, line });
+      return;
+    }
+    adjacency.set(fromId, [{ nextId, line }]);
   };
 
   lines.forEach((line) => {
@@ -60,8 +74,8 @@ export const findRelationPaths = ({
     if (!directed) appendEdge(line.to, line.from, line);
   });
 
-  const sortEdges = (edges: RelationPathEdge[]) =>
-    edges.slice().sort((first, second) => {
+  adjacency.forEach((edges) => {
+    edges.sort((first, second) => {
       const priorityDiff =
         getRelationPriority(getRelationLineKey(first.line)) -
         getRelationPriority(getRelationLineKey(second.line));
@@ -73,18 +87,26 @@ export const findRelationPaths = ({
         )
       );
     });
+  });
 
   const paths: DiscoveredRelationPath[] = [];
   const queue: RelationPathQueueItem[] = [
     { nodeId: startId, visited: new Set([startId]), steps: [] },
   ];
+  let expansions = 0;
 
-  while (queue.length > 0 && paths.length < maxPaths) {
+  while (
+    queue.length > 0 &&
+    paths.length < maxPaths &&
+    expansions < maxExpansions
+  ) {
     const current = queue.shift();
     if (!current || current.steps.length >= maxDepth) continue;
+    expansions += 1;
 
-    sortEdges(adjacency.get(current.nodeId) ?? []).forEach(({ nextId, line }) => {
-      if (paths.length >= maxPaths || current.visited.has(nextId)) return;
+    for (const { nextId, line } of adjacency.get(current.nodeId) ?? []) {
+      if (paths.length >= maxPaths) break;
+      if (current.visited.has(nextId)) continue;
 
       const nextSteps = [
         ...current.steps,
@@ -97,15 +119,16 @@ export const findRelationPaths = ({
           hopCount: nextSteps.length,
           steps: nextSteps,
         });
-        return;
+        continue;
       }
 
+      if (expansions >= maxExpansions) break;
       queue.push({
         nodeId: nextId,
         visited: new Set([...current.visited, nextId]),
         steps: nextSteps,
       });
-    });
+    }
   }
 
   return paths;

@@ -1,4 +1,4 @@
-import { ref } from "vue";
+import { computed, ref } from "vue";
 import { describe, expect, it } from "vitest";
 import { createRelationAttackPathSankey } from "../relationAttackPathSankey";
 import { createRelationTypeMapping, RelationType } from "../relationTypes";
@@ -11,7 +11,7 @@ describe("relationAttackPathSankey", () => {
 
   it("聚合攻击路径节点和重复链接，并按端类型生成层级", () => {
     const sankey = createRelationAttackPathSankey({
-      buildAttackPaths: () => [
+      allAttackPaths: computed(() => [
         {
           threatActorKey: "TA0001",
           attackToolKey: "AT0001",
@@ -28,7 +28,7 @@ describe("relationAttackPathSankey", () => {
           attackToolKey: "AT0002",
           riskKey: "R0001",
         },
-      ],
+      ]),
       getSankeyNodeName: (type, key) => `${type}:${key}`,
       isMobile: ref(false),
       RelationTypeMapping: relationTypeMapping,
@@ -76,10 +76,11 @@ describe("relationAttackPathSankey", () => {
   it("根据最密集层级和移动端状态计算图表高度", () => {
     const isMobile = ref(false);
     const sankey = createRelationAttackPathSankey({
-      buildAttackPaths: () =>
+      allAttackPaths: computed(() =>
         Array.from({ length: 20 }, (_, index) => ({
           riskKey: `R${String(index + 1).padStart(4, "0")}`,
         })),
+      ),
       getSankeyNodeName: (type, key) => `${type}:${key}`,
       isMobile,
       RelationTypeMapping: relationTypeMapping,

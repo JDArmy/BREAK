@@ -455,12 +455,14 @@ export const createNetworkDataHelpers = ({
     );
   };
 
-  const getNodeDegree = (nodeId: string) =>
-    lines.reduce(
-      (count, line) =>
-        count + (line.from === nodeId || line.to === nodeId ? 1 : 0),
-      0,
-    );
+  const getNodeDegreeMap = () => {
+    const degreeMap = new Map<string, number>();
+    lines.forEach((line) => {
+      degreeMap.set(line.from, (degreeMap.get(line.from) ?? 0) + 1);
+      degreeMap.set(line.to, (degreeMap.get(line.to) ?? 0) + 1);
+    });
+    return degreeMap;
+  };
 
   const placeForceGroupNodes = (
     graphNodes: GraphNode[],
@@ -471,17 +473,20 @@ export const createNetworkDataHelpers = ({
       radius: number;
     },
     styleContext: NetworkGraphStyleContext,
+    nodeDegreeMap: Map<string, number>,
   ) => {
     if (group.length === 0) return;
 
     const angleSpan = options.endAngle - options.startAngle;
     const sortedGroup = group.slice().sort((first, second) => {
-      const degreeDiff = getNodeDegree(second.id) - getNodeDegree(first.id);
+      const degreeDiff =
+        (nodeDegreeMap.get(second.id) ?? 0) -
+        (nodeDegreeMap.get(first.id) ?? 0);
       return degreeDiff || first.id.localeCompare(second.id);
     });
 
     sortedGroup.forEach((node, index) => {
-      const degree = getNodeDegree(node.id);
+      const degree = nodeDegreeMap.get(node.id) ?? 0;
       const angle =
         options.startAngle +
         (angleSpan * (index + 0.5)) / Math.max(1, sortedGroup.length);
@@ -506,6 +511,7 @@ export const createNetworkDataHelpers = ({
     groupedNodes: Record<RelationEntityType, Node[]>,
     styleContext: NetworkGraphStyleContext,
   ) => {
+    const nodeDegreeMap = getNodeDegreeMap();
     placeForceGroupNodes(
       graphNodes,
       groupedNodes[RelationType.threatActor],
@@ -515,6 +521,7 @@ export const createNetworkDataHelpers = ({
         radius: 520,
       },
       styleContext,
+      nodeDegreeMap,
     );
     placeForceGroupNodes(
       graphNodes,
@@ -525,6 +532,7 @@ export const createNetworkDataHelpers = ({
         radius: 360,
       },
       styleContext,
+      nodeDegreeMap,
     );
     placeForceGroupNodes(
       graphNodes,
@@ -535,6 +543,7 @@ export const createNetworkDataHelpers = ({
         radius: 300,
       },
       styleContext,
+      nodeDegreeMap,
     );
     placeForceGroupNodes(
       graphNodes,
@@ -545,6 +554,7 @@ export const createNetworkDataHelpers = ({
         radius: 430,
       },
       styleContext,
+      nodeDegreeMap,
     );
     placeForceGroupNodes(
       graphNodes,
@@ -555,6 +565,7 @@ export const createNetworkDataHelpers = ({
         radius: 560,
       },
       styleContext,
+      nodeDegreeMap,
     );
   };
 
@@ -630,6 +641,7 @@ export const createNetworkDataHelpers = ({
 
   const getVisibleNetworkData = () => {
     const filterLineTypeSet = new Set(filterLineType.value);
+    const nodeById = new Map(nodes.map((node) => [node.id, node]));
     const nodeTypeById = new Map(nodes.map((node) => [node.id, node.type]));
     const relationLegendColorByKey = new Map(
       relationLegendItems.value.map((item) => [
@@ -706,8 +718,8 @@ export const createNetworkDataHelpers = ({
       const fromType = nodeTypeById.get(line.from);
       const toType = nodeTypeById.get(line.to);
       if (!fromType || !toType) return;
-      const sourceNode = nodes.find((node) => node.id === line.from);
-      const targetNode = nodes.find((node) => node.id === line.to);
+      const sourceNode = nodeById.get(line.from);
+      const targetNode = nodeById.get(line.to);
 
       const linkKey = `${line.from}->${line.to}->${lineKey}`;
       if (!linkMap.has(linkKey)) {

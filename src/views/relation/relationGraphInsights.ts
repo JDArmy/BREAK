@@ -57,6 +57,26 @@ export const createRelationGraphInsights = ({
   explainRelation,
   formatEvidenceLevel,
 }: CreateRelationGraphInsightsOptions) => {
+  const nodeById = computed(() => new Map(nodes.map((node) => [node.id, node])));
+  const relationLinesByNodeId = computed(() => {
+    const lineMap = new Map<string, Line[]>();
+    lines.forEach((line) => {
+      const fromLines = lineMap.get(line.from);
+      if (fromLines) {
+        fromLines.push(line);
+      } else {
+        lineMap.set(line.from, [line]);
+      }
+      const toLines = lineMap.get(line.to);
+      if (toLines) {
+        toLines.push(line);
+      } else {
+        lineMap.set(line.to, [line]);
+      }
+    });
+    return lineMap;
+  });
+
   const {
     buildNodeSummary,
     buildRelationSummary,
@@ -119,7 +139,7 @@ export const createRelationGraphInsights = ({
       let incoming = 0;
       let outgoing = 0;
 
-      lines.forEach((line) => {
+      (relationLinesByNodeId.value.get(node.id) ?? []).forEach((line) => {
         if (line.from === node.id) {
           outgoing += 1;
           relatedNodeIds.add(line.to);
@@ -133,7 +153,7 @@ export const createRelationGraphInsights = ({
       const relatedTypeGroups = [...relatedNodeIds].reduce<
         Record<string, string[]>
       >((groups, nodeId) => {
-        const relatedNode = nodes.find((item) => item.id === nodeId);
+        const relatedNode = nodeById.value.get(nodeId);
         if (!relatedNode) return groups;
         groups[relatedNode.type] = [
           ...(groups[relatedNode.type] ?? []),
@@ -231,11 +251,10 @@ export const createRelationGraphInsights = ({
       const node = selectedNetworkNode.value;
       if (!node) return null;
 
-      const relatedItems = lines
-        .filter((line) => line.from === node.id || line.to === node.id)
+      const relatedItems = (relationLinesByNodeId.value.get(node.id) ?? [])
         .map((line) => {
           const otherNodeId = line.from === node.id ? line.to : line.from;
-          const otherNode = nodes.find((item) => item.id === otherNodeId);
+          const otherNode = nodeById.value.get(otherNodeId);
           if (
             !otherNode ||
             otherNode.type !== node.type ||

@@ -192,6 +192,7 @@ const secondaryDomainSuffixes = [
   'thepaper.cn',
   'news.qq.com',
   'new.qq.com',
+  'view.inews.qq.com',
   'content-static.cctvnews.cctv.com',
   'cctv.com',
   'xinhuanet.com',

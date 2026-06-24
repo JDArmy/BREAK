@@ -139,7 +139,7 @@ const filterLineTypeModel = computed({
 .filter-pane {
   position: absolute;
   z-index: 700;
-  top: 20px;
+  top: 15px;
   padding: 10px 30px;
   border: var(--break-graph-border) solid 1px;
   color: var(--break-graph-text);
@@ -214,11 +214,11 @@ const filterLineTypeModel = computed({
 }
 
 #node-filter-pane {
-  left: 20px;
+  left: 15px;
 }
 
 #line-filter-pane {
-  right: 80px;
+  right: 70px;
   padding-inline: 18px;
 }
 

@@ -36,7 +36,8 @@ export const createRelationGraphInsightHelpers = ({
   explainRelation,
   formatEvidenceLevel,
 }: RelationGraphInsightBaseOptions) => {
-  const findNodeById = (id: string) => nodes.find((node) => node.id === id);
+  const nodeById = new Map(nodes.map((node) => [node.id, node]));
+  const findNodeById = (id: string) => nodeById.get(id);
 
   const buildRelationSummary = (line: Line, nodeId: string) => {
     const otherNodeId = line.from === nodeId ? line.to : line.from;
