@@ -286,6 +286,7 @@ const primaryReferenceLinks = new Set([
   'https://mp.weixin.qq.com/s/zi8yf94a9ylqkdgb_yjqvq', // 烟台公安官方微信
   'https://mp.weixin.qq.com/s/az4jgsr42s-qjtrmjtc2dg', // 石门县人民法院官方微信
   'https://mp.weixin.qq.com/s/-4rbqfafnygl6uz2l8mk1a', // 成都公安官方微信
+  'https://mp.weixin.qq.com/s?__biz=mjm5mtiwmjy1mg==&mid=2650074669&idx=1&sn=df2777e4c5a07e8b62a2ec98b12b4c6f&chksm=bf14ee27f795e8d2f1ca2b37d65972e134a6f6b8f89ff592b4c46d18b5f78404910ea62caf87&scene=27', // 国家安全部官方微信
   'https://jsnews.jschina.com.cn/jczx/202502/t20250218_s67b41f81e4b04dff9907e0f5.shtml', // 江苏检察在线来源，太仓市人民检察院官网宣传看点索引指向
   'https://news.qq.com/rain/a/20250415a08y8c00', // 上海市徐汇区新闻办公室官方账号托管页
   'https://www.zhongyuan.gov.cn/rdhy/9581840.jhtml', // 政府门户转载抖音黑板报官方治理公示
