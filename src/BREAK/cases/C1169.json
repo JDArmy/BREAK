@@ -19,6 +19,10 @@
     ],
     "references": [
       {
+        "title": "HTTP/2: The Sequel is Always Worse - PortSwigger Research",
+        "link": "https://portswigger.net/research/http2"
+      },
+      {
         "title": "Rate Limit Bypass - HackTricks",
         "link": "https://hacktricks.wiki/en/pentesting-web/rate-limit-bypass.html"
       }

@@ -1,6 +1,6 @@
 {
   "C1471": {
-    "title": "V2X Road Test Triggers Emergency Braking Due to Ghost Vehicle Spoofed BSM Attack",
+    "title": "VicOne Research Demonstrates V2X Ghost Vehicle Spoofing Attack Scenario",
     "keywords": [
       "V2X spoofing",
       "ghost vehicle attack",
@@ -13,7 +13,7 @@
       "emergency braking",
       "vehicle-to-everything"
     ],
-    "summary": "In August 2025, an autonomous driving pilot zone experienced a near-miss during V2X road testing when a test vehicle performed an emergency brake after receiving a Basic Safety Message (BSM) claiming a vehicle ahead was braking hard. Investigation revealed the message did not originate from any legitimate vehicle; an attacker used a Raspberry Pi and an open-source V2X protocol stack to inject a sp",
+    "summary": "VicOne researchers describe how attackers can create fake nodes in a V2X network by using software-defined radio or by relaying V2X messages through road or telecom infrastructure. Such ghost vehicles can mimic plausible mobility patterns and use messages such as Basic Safety Messages (BSMs) to influence nearby vehicle decisions, creating a high-risk connected-vehicle and autonomous-driving attack scenario.",
     "references": [
       {
         "title": "Vehicle Networking Technology: Enhancing Mobility and Safety, but Also Attracting Cyberattacks?"

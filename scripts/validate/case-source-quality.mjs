@@ -75,6 +75,7 @@ const primaryDomainSuffixes = [
   'ieee.org',
   'usenix.org',
   'openaccess.thecvf.com',
+  'portswigger.net',
   'eprint.iacr.org',
   'tches.iacr.org',
   'mdpi.com',
@@ -210,6 +211,7 @@ const primaryDomainSuffixes = [
   'threathunter.cn',
   'whwx.gov.cn',
   'vcredit.com',
+  'vicone.com',
 ];
 
 const secondaryDomainSuffixes = [
