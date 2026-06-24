@@ -219,11 +219,15 @@ function resolvePreviousVersionRef() {
  * - major.minor 段不同 → 运行（次版本变化，如 2.18.x → 2.19.0）
  * - major.minor 段相同 → 跳过（补丁变化，如 2.18.3 → 2.18.4）
  * - 任一版本取不到（首次提交 / 无 git / shallow clone）→ 默认运行（保守不漏跑）
+ * - BREAK_FORCE_BROWSER_REGRESSION=1 → 强制运行（用于本地完整验收）
  *
  * @returns {{ shouldRun: boolean, current: string|null, previous: string|null, reason: string }}
  */
 export function shouldRunOnMinorBump() {
   const current = readJson(path.join(projectRoot, 'package.json')).version;
+  if (process.env.BREAK_FORCE_BROWSER_REGRESSION === '1') {
+    return { shouldRun: true, current, previous: null, reason: 'BREAK_FORCE_BROWSER_REGRESSION=1 强制运行' };
+  }
   const previousRef = resolvePreviousVersionRef();
   const previous = readGitVersion(previousRef);
   const curSeg = minorSegment(current);

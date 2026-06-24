@@ -15,6 +15,7 @@ const reportMdPath = path.join(reportDir, 'browser-visual-review.md');
 const viewports = [
   { label: 'desktop', width: 1440, height: 980 },
   { label: 'mobile', width: 390, height: 844 },
+  { label: 'mobile-small', width: 360, height: 740 },
 ];
 
 const routes = [
@@ -39,10 +40,20 @@ const routes = [
 ];
 
 const interactionRoutes = [
+  { label: 'desktop-global-search', path: '/', viewport: 'desktop' },
+  { label: 'desktop-navigation-controls', path: '/', viewport: 'desktop' },
+  { label: 'desktop-error-route-fallbacks', path: '/', viewport: 'desktop' },
+  { label: 'home-drawer-detail-route', path: '/#/risks/R0001', viewport: 'desktop' },
+  { label: 'knowledge-search-and-filters', path: '/#/risks', viewport: 'desktop' },
   { label: 'risks-detail-click', path: '/#/risks', viewport: 'desktop' },
   { label: 'entity-link-navigation', path: '/#/risks#R0001', viewport: 'desktop' },
+  { label: 'relation-selector-switch', path: '/#/relation/risk/R0001?view=network', viewport: 'desktop' },
   { label: 'relation-network-interaction', path: '/#/relation/risk/R0001?view=network', viewport: 'desktop' },
+  { label: 'relation-sankey-interaction', path: '/#/relation/risk/R0001?view=sankey', viewport: 'desktop' },
+  { label: 'relation-analysis-filters', path: '/#/relation/risk/R0001?view=analysis', viewport: 'desktop' },
+  { label: 'mobile-nav-search', path: '/', viewport: 'mobile' },
   { label: 'mobile-cases-detail-click', path: '/#/cases', viewport: 'mobile' },
+  { label: 'mobile-small-knowledge-empty', path: '/#/risks', viewport: 'mobile-small' },
 ];
 
 async function findFreePort() {
@@ -95,6 +106,10 @@ function formatRequest(request) {
 function resetReportDir() {
   fs.rmSync(reportDir, { recursive: true, force: true });
   ensureDir(screenshotDir);
+}
+
+function isMobileViewport(label) {
+  return label.startsWith('mobile');
 }
 
 async function getPaintedCanvasPixels(page, selector) {
@@ -246,6 +261,256 @@ async function clickFirstVisible(page, selectors, issues, actionLabel) {
   return false;
 }
 
+async function waitForUrlIncludes(page, expected, issues, actionLabel) {
+  try {
+    await page.waitForFunction(
+      (value) => window.location.href.includes(value),
+      expected,
+      { timeout: 6000 },
+    );
+  } catch {
+    issues.push(`${actionLabel} 后 URL 未包含 ${expected}，实际 ${page.url()}`);
+  }
+}
+
+async function waitForVisibleDrawerText(page, textPattern, timeoutMs = 10000) {
+  const drawerBody = page.locator('.el-drawer__body', { hasText: textPattern }).last();
+  await drawerBody.waitFor({ state: 'visible', timeout: timeoutMs });
+}
+
+async function clickDropdownItemByText(page, textPattern, issues, actionLabel) {
+  const locator = page.locator('.el-dropdown-menu__item', { hasText: textPattern }).first();
+  try {
+    await locator.waitFor({ state: 'visible', timeout: 5000 });
+    await locator.click({ timeout: 5000 });
+    return true;
+  } catch {
+    issues.push(`无法选择下拉项：${actionLabel}`);
+    return false;
+  }
+}
+
+async function clickSelectOptionByText(page, triggerSelector, textPattern, issues, actionLabel) {
+  try {
+    await page.locator(triggerSelector).locator('.el-select__wrapper').first().click({ timeout: 5000 });
+  } catch {
+    try {
+      await page.locator(triggerSelector).click({ timeout: 5000 });
+    } catch {
+      issues.push(`无法打开选择器：${actionLabel}`);
+      return false;
+    }
+  }
+
+  const option = page
+    .locator('.el-select-dropdown__item:visible', {
+      hasText: textPattern,
+    })
+    .first();
+  try {
+    await option.waitFor({ state: 'visible', timeout: 5000 });
+    await option.click({ timeout: 5000 });
+    return true;
+  } catch {
+    issues.push(`无法选择下拉项：${actionLabel}`);
+    return false;
+  }
+}
+
+async function clickFirstSelectOption(page, triggerSelector, issues, actionLabel) {
+  try {
+    await page.locator(triggerSelector).locator('.el-select__wrapper').first().click({ timeout: 5000 });
+  } catch {
+    try {
+      await page.locator(triggerSelector).click({ timeout: 5000 });
+    } catch {
+      issues.push(`无法打开选择器：${actionLabel}`);
+      return false;
+    }
+  }
+
+  const option = page.locator('.el-select-dropdown__item:visible').first();
+  try {
+    await option.waitFor({ state: 'visible', timeout: 5000 });
+    await option.click({ timeout: 5000 });
+    return true;
+  } catch {
+    issues.push(`无法选择首个下拉项：${actionLabel}`);
+    return false;
+  }
+}
+
+async function expectKnowledgeListHasResult(page, expectedText, issues, actionLabel) {
+  try {
+    await page.locator('.knowledge-list-item').first().waitFor({ state: 'visible', timeout: 8000 });
+  } catch {
+    issues.push(`${actionLabel} 后列表没有结果`);
+    return;
+  }
+
+  if (expectedText) {
+    try {
+      await page.locator('.knowledge-list-item', { hasText: expectedText }).first().waitFor({ state: 'visible', timeout: 5000 });
+    } catch {
+      issues.push(`${actionLabel} 后未出现预期结果 ${expectedText}`);
+    }
+  }
+}
+
+async function expectKnowledgeEmpty(page, issues, actionLabel) {
+  try {
+    await page.locator('.knowledge-empty').waitFor({ state: 'visible', timeout: 5000 });
+  } catch {
+    issues.push(`${actionLabel} 后未出现空结果状态`);
+  }
+}
+
+async function runDesktopGlobalSearchScenario(page, scenario, interactions) {
+  await page.goto(page.baseUrl + scenario.path, { waitUntil: 'networkidle', timeout: 30000 });
+  await recordState(page, interactions, scenario, 'initial');
+
+  const openIssues = [];
+  await clickFirstVisible(page, ['.search-trigger'], openIssues, '打开全局搜索');
+  try {
+    await page.locator('#global-search').waitFor({ state: 'visible', timeout: 8000 });
+  } catch {
+    openIssues.push('全局搜索输入框未出现');
+  }
+  await recordState(page, interactions, scenario, 'after-search-open', openIssues);
+
+  const queryIssues = [];
+  try {
+    await page.locator('#global-search').fill('R0001');
+    await page.locator('.search-result-item').first().waitFor({ state: 'visible', timeout: 8000 });
+    await page.locator('.search-result-item').first().hover();
+  } catch {
+    queryIssues.push('全局搜索结果未出现或不可悬停');
+  }
+  await recordState(page, interactions, scenario, 'after-search-query-hover', queryIssues);
+
+  const selectIssues = [];
+  try {
+    await page.locator('.search-result-item').first().click();
+    await waitForVisibleDrawerText(page, /R0001|Process Automation|流程自动化/i, 10000);
+  } catch {
+    selectIssues.push('点击全局搜索结果后详情抽屉未出现');
+  }
+  if (!page.url().includes('/risks/R0001')) {
+    selectIssues.push(`点击全局搜索结果后 URL 未进入风险详情路由，实际 ${page.url()}`);
+  }
+  await recordState(page, interactions, scenario, 'after-search-result-click', selectIssues);
+}
+
+async function runDesktopNavigationScenario(page, scenario, interactions) {
+  await page.goto(page.baseUrl + scenario.path, { waitUntil: 'networkidle', timeout: 30000 });
+  await recordState(page, interactions, scenario, 'initial');
+
+  const knowledgeIssues = [];
+  await clickFirstVisible(page, ['.knowledge-menu .el-dropdown-link'], knowledgeIssues, '打开知识库菜单');
+  await clickDropdownItemByText(page, /Terms|术语/i, knowledgeIssues, '术语');
+  await waitForUrlIncludes(page, '/terms', knowledgeIssues, '点击知识库术语菜单');
+  await recordState(page, interactions, scenario, 'after-knowledge-menu-click', knowledgeIssues);
+
+  const themeIssues = [];
+  await clickFirstVisible(page, ['.theme-toggle .el-dropdown-link'], themeIssues, '打开主题菜单');
+  await clickDropdownItemByText(page, /Dark|深色|暗色/i, themeIssues, '深色主题');
+  try {
+    await page.waitForFunction(() => document.documentElement.classList.contains('dark'), { timeout: 5000 });
+  } catch {
+    themeIssues.push('选择深色主题后 html.dark 未生效');
+  }
+  await recordState(page, interactions, scenario, 'after-theme-dark-click', themeIssues);
+
+  const localeIssues = [];
+  await clickFirstVisible(page, ['.translate .el-dropdown-link'], localeIssues, '打开语言菜单');
+  await clickDropdownItemByText(page, /中文|Chinese/i, localeIssues, '中文');
+  try {
+    await waitForExpectedText(page, /行业术语|知识库|业务风险/i, 8000);
+  } catch {
+    localeIssues.push('切换中文后页面文本未更新');
+  }
+  await recordState(page, interactions, scenario, 'after-locale-zh-click', localeIssues);
+}
+
+async function runDesktopErrorRouteFallbacksScenario(page, scenario, interactions) {
+  const notFoundIssues = [];
+  await page.goto(`${page.baseUrl}/#/path-that-does-not-exist`, { waitUntil: 'networkidle', timeout: 30000 });
+  await waitForUrlIncludes(page, '/#/', notFoundIssues, '未知路由回退');
+  try {
+    await waitForExpectedText(page, /BREAK|业务风险|Business Risk/i, 8000);
+  } catch {
+    notFoundIssues.push('未知路由回退后首页内容未出现');
+  }
+  await recordState(page, interactions, scenario, 'unknown-route-redirect-home', notFoundIssues);
+
+  const relationIssues = [];
+  await page.goto(`${page.baseUrl}/#/relation/unknown/NOPE?view=network`, { waitUntil: 'networkidle', timeout: 30000 });
+  await waitForUrlIncludes(page, '/relation/risk/R0001', relationIssues, '非法关系路由回退');
+  try {
+    await waitForExpectedText(page, /R0001|Process Automation|流程自动化|未知类型|Unknown type/i, 8000);
+  } catch {
+    relationIssues.push('非法关系路由回退后未出现默认关系页或提示');
+  }
+  await recordState(page, interactions, scenario, 'invalid-relation-route-redirect-default', relationIssues);
+}
+
+const knowledgeSearchConfigs = [
+  { label: 'risks', path: '/#/risks', query: 'R0001', expected: /R0001|Process Automation|流程自动化/i },
+  { label: 'avoidances', path: '/#/avoidances', query: 'A0001', expected: /A0001|CAPTCHA|人机验证/i, filterSelector: '.avoidance-category-filter' },
+  { label: 'attack-tools', path: '/#/attack-tools', query: 'AT0001', expected: /AT0001|SIM|电话黑卡/i },
+  { label: 'threat-actors', path: '/#/threat-actors', query: 'TA0001', expected: /TA0001|Freebie|羊毛/i },
+  { label: 'terms', path: '/#/terms', query: 'T0001', expected: /T0001|Account|账号/i },
+  { label: 'cases', path: '/#/cases', query: 'C0001', expected: /C0001|Login Replay|登录/i, filterSelector: '.case-category-filter' },
+];
+
+async function runKnowledgeSearchAndFiltersScenario(page, scenario, interactions) {
+  for (const config of knowledgeSearchConfigs) {
+    await page.goto(page.baseUrl + config.path, { waitUntil: 'networkidle', timeout: 30000 });
+    const queryIssues = [];
+    try {
+      await page.locator('#knowledge-search').fill(config.query);
+      await expectKnowledgeListHasResult(page, config.expected, queryIssues, `${config.label} 搜索 ${config.query}`);
+      await page.locator('.knowledge-list-item').first().hover();
+    } catch {
+      queryIssues.push(`${config.label} 搜索输入或悬停失败`);
+    }
+    await recordState(page, interactions, scenario, `${config.label}-search-result-hover`, queryIssues);
+
+    const emptyIssues = [];
+    try {
+      await page.locator('#knowledge-search').fill(`no-result-${config.label}-zzzz`);
+      await expectKnowledgeEmpty(page, emptyIssues, `${config.label} 无结果搜索`);
+    } catch {
+      emptyIssues.push(`${config.label} 无结果搜索输入失败`);
+    }
+    await recordState(page, interactions, scenario, `${config.label}-empty-search`, emptyIssues);
+
+    if (!config.filterSelector) continue;
+    const filterIssues = [];
+    await page.locator('#knowledge-search').fill('');
+    if (await clickFirstSelectOption(page, config.filterSelector, filterIssues, `${config.label} 分类筛选`)) {
+      await expectKnowledgeListHasResult(page, null, filterIssues, `${config.label} 分类筛选`);
+    }
+    await recordState(page, interactions, scenario, `${config.label}-category-filter`, filterIssues);
+  }
+}
+
+async function runHomeDrawerDetailRouteScenario(page, scenario, interactions) {
+  const issues = [];
+  await page.goto(page.baseUrl + scenario.path, { waitUntil: 'networkidle', timeout: 30000 });
+  try {
+    await waitForVisibleDrawerText(page, /R0001|Process Automation|流程自动化/i, 10000);
+  } catch {
+    issues.push('首页详情路由未打开风险抽屉');
+  }
+  await recordState(page, interactions, scenario, 'drawer-opened', issues);
+
+  const closeIssues = [];
+  await clickFirstVisible(page, ['.drawer-back-btn', '.el-drawer__close-btn'], closeIssues, '关闭首页详情抽屉');
+  await page.waitForTimeout(500);
+  await recordState(page, interactions, scenario, 'after-drawer-close', closeIssues);
+}
+
 async function runRiskDetailScenario(page, scenario, interactions) {
   const issues = [];
   await page.goto(page.baseUrl + scenario.path, { waitUntil: 'networkidle', timeout: 30000 });
@@ -289,6 +554,23 @@ async function runEntityLinkScenario(page, scenario, interactions) {
     issues.push(`实体链接未跳转到规避手段详情，实际 ${page.url()}`);
   }
   await recordState(page, interactions, scenario, 'after-entity-link-click', issues);
+}
+
+async function runRelationSelectorScenario(page, scenario, interactions) {
+  const issues = [];
+  await page.goto(page.baseUrl + scenario.path, { waitUntil: 'networkidle', timeout: 30000 });
+  await page.locator('.network-chart canvas').first().waitFor({ state: 'visible', timeout: 15000 });
+  await recordState(page, interactions, scenario, 'initial');
+
+  if (await clickSelectOptionByText(page, '.relation-select', /Avoidance|规避手段/i, issues, '规避手段')) {
+    await waitForUrlIncludes(page, '/relation/avoidance/', issues, '切换关系实体类型');
+  }
+  await page.waitForTimeout(800);
+  const paintedPixels = await getPaintedCanvasPixels(page, '.network-chart canvas');
+  if (paintedPixels < 1200) {
+    issues.push(`切换实体类型后画布有效像素过少 ${paintedPixels}`);
+  }
+  await recordState(page, interactions, scenario, 'after-type-switch', issues);
 }
 
 async function runRelationNetworkScenario(page, scenario, interactions) {
@@ -345,6 +627,108 @@ async function runRelationNetworkScenario(page, scenario, interactions) {
   }
 }
 
+async function runRelationSankeyScenario(page, scenario, interactions) {
+  const issues = [];
+  await page.goto(page.baseUrl + scenario.path, { waitUntil: 'networkidle', timeout: 30000 });
+  const sankeyCanvas = page.locator('.sankey-chart canvas').first();
+  try {
+    await sankeyCanvas.waitFor({ state: 'visible', timeout: 15000 });
+  } catch {
+    issues.push('Sankey 画布未出现');
+  }
+  await recordState(page, interactions, scenario, 'initial', issues);
+
+  const box = await sankeyCanvas.boundingBox().catch(() => null);
+  const hoverIssues = [];
+  if (box) {
+    await page.mouse.move(box.x + box.width * 0.45, box.y + box.height * 0.45);
+    await page.waitForTimeout(500);
+  } else {
+    hoverIssues.push('Sankey canvas 不可悬停');
+  }
+  await recordState(page, interactions, scenario, 'after-sankey-hover', hoverIssues);
+
+  const tabIssues = [];
+  await clickFirstVisible(page, ['.el-tabs__item:has-text("Analysis")', '.el-tabs__item:has-text("分析")'], tabIssues, '切换关系分析 tab');
+  try {
+    await waitForExpectedText(page, /Analysis|Coverage|分析|覆盖/i, 8000);
+  } catch {
+    tabIssues.push('切换分析 tab 后未出现分析内容');
+  }
+  await recordState(page, interactions, scenario, 'after-analysis-tab-click', tabIssues);
+}
+
+async function runRelationAnalysisFiltersScenario(page, scenario, interactions) {
+  const issues = [];
+  await page.goto(page.baseUrl + scenario.path, { waitUntil: 'networkidle', timeout: 30000 });
+  try {
+    await waitForExpectedText(page, /Analysis|Coverage|Attack Path|分析|覆盖|攻击路径/i, 10000);
+  } catch {
+    issues.push('关系分析页未出现预期内容');
+  }
+  await recordState(page, interactions, scenario, 'initial', issues);
+
+  const filterIssues = [];
+  const attackToolFilter = '.relation-analysis-filter:has(#relation-analysis-filter-attack-tool) .el-select';
+  if (await clickFirstSelectOption(page, attackToolFilter, filterIssues, '关系分析攻击工具过滤')) {
+    try {
+      await waitForExpectedText(page, /Filtered|过滤|path|路径/i, 8000);
+    } catch {
+      filterIssues.push('选择攻击工具过滤后未出现过滤摘要');
+    }
+  }
+  await recordState(page, interactions, scenario, 'after-attack-tool-filter', filterIssues);
+
+  const resetIssues = [];
+  await clickFirstVisible(page, ['.relation-analysis-filter-summary .el-button', '.node-filter-clear-button'], resetIssues, '清空关系分析过滤');
+  await page.waitForTimeout(500);
+  await recordState(page, interactions, scenario, 'after-filter-reset', resetIssues);
+}
+
+async function runMobileNavSearchScenario(page, scenario, interactions) {
+  await page.goto(page.baseUrl + scenario.path, { waitUntil: 'networkidle', timeout: 30000 });
+  await recordState(page, interactions, scenario, 'initial');
+
+  const menuIssues = [];
+  await clickFirstVisible(page, ['.mobile-hamburger'], menuIssues, '打开移动端菜单');
+  try {
+    await page.locator('.mobile-nav-drawer').waitFor({ state: 'visible', timeout: 6000 });
+  } catch {
+    menuIssues.push('移动端菜单抽屉未出现');
+  }
+  await recordState(page, interactions, scenario, 'after-mobile-menu-open', menuIssues);
+
+  const navIssues = [];
+  await clickFirstVisible(page, ['.mobile-nav-item:has-text("Terms")', '.mobile-nav-item:has-text("术语")'], navIssues, '移动端菜单跳转术语');
+  await waitForUrlIncludes(page, '/terms', navIssues, '移动端菜单跳转术语');
+  await recordState(page, interactions, scenario, 'after-mobile-menu-terms-click', navIssues);
+
+  const searchIssues = [];
+  await clickFirstVisible(page, ['.mobile-search'], searchIssues, '打开移动端搜索');
+  try {
+    await page.locator('#global-search').waitFor({ state: 'visible', timeout: 8000 });
+    await page.locator('#global-search').fill('Account');
+    await page.locator('.search-result-item').first().waitFor({ state: 'visible', timeout: 8000 });
+  } catch {
+    searchIssues.push('移动端搜索结果未出现');
+  }
+  await recordState(page, interactions, scenario, 'after-mobile-search-query', searchIssues);
+}
+
+async function runMobileSmallKnowledgeEmptyScenario(page, scenario, interactions) {
+  await page.goto(page.baseUrl + scenario.path, { waitUntil: 'networkidle', timeout: 30000 });
+  await recordState(page, interactions, scenario, 'initial');
+
+  const emptyIssues = [];
+  try {
+    await page.locator('#knowledge-mobile-search').fill('mobile-small-no-result-zzzz');
+    await expectKnowledgeEmpty(page, emptyIssues, '小屏移动端无结果搜索');
+  } catch {
+    emptyIssues.push('小屏移动端搜索输入失败');
+  }
+  await recordState(page, interactions, scenario, 'after-empty-search', emptyIssues);
+}
+
 async function runMobileCasesScenario(page, scenario, interactions) {
   const issues = [];
   await page.goto(page.baseUrl + scenario.path, { waitUntil: 'networkidle', timeout: 30000 });
@@ -368,6 +752,26 @@ async function runMobileCasesScenario(page, scenario, interactions) {
 }
 
 async function runInteractionScenario(page, scenario, interactions) {
+  if (scenario.label === 'desktop-global-search') {
+    await runDesktopGlobalSearchScenario(page, scenario, interactions);
+    return;
+  }
+  if (scenario.label === 'desktop-navigation-controls') {
+    await runDesktopNavigationScenario(page, scenario, interactions);
+    return;
+  }
+  if (scenario.label === 'desktop-error-route-fallbacks') {
+    await runDesktopErrorRouteFallbacksScenario(page, scenario, interactions);
+    return;
+  }
+  if (scenario.label === 'home-drawer-detail-route') {
+    await runHomeDrawerDetailRouteScenario(page, scenario, interactions);
+    return;
+  }
+  if (scenario.label === 'knowledge-search-and-filters') {
+    await runKnowledgeSearchAndFiltersScenario(page, scenario, interactions);
+    return;
+  }
   if (scenario.label === 'risks-detail-click') {
     await runRiskDetailScenario(page, scenario, interactions);
     return;
@@ -376,8 +780,28 @@ async function runInteractionScenario(page, scenario, interactions) {
     await runEntityLinkScenario(page, scenario, interactions);
     return;
   }
+  if (scenario.label === 'relation-selector-switch') {
+    await runRelationSelectorScenario(page, scenario, interactions);
+    return;
+  }
   if (scenario.label === 'relation-network-interaction') {
     await runRelationNetworkScenario(page, scenario, interactions);
+    return;
+  }
+  if (scenario.label === 'relation-sankey-interaction') {
+    await runRelationSankeyScenario(page, scenario, interactions);
+    return;
+  }
+  if (scenario.label === 'relation-analysis-filters') {
+    await runRelationAnalysisFiltersScenario(page, scenario, interactions);
+    return;
+  }
+  if (scenario.label === 'mobile-nav-search') {
+    await runMobileNavSearchScenario(page, scenario, interactions);
+    return;
+  }
+  if (scenario.label === 'mobile-small-knowledge-empty') {
+    await runMobileSmallKnowledgeEmptyScenario(page, scenario, interactions);
     return;
   }
   if (scenario.label === 'mobile-cases-detail-click') {
@@ -415,8 +839,8 @@ try {
   for (const viewport of viewports) {
     const context = await browser.newContext({
       viewport: { width: viewport.width, height: viewport.height },
-      deviceScaleFactor: viewport.label === 'mobile' ? 2 : 1,
-      isMobile: viewport.label === 'mobile',
+      deviceScaleFactor: isMobileViewport(viewport.label) ? 2 : 1,
+      isMobile: isMobileViewport(viewport.label),
     });
     const page = await context.newPage();
     page.baseUrl = baseUrl;
@@ -501,8 +925,8 @@ try {
     if (!viewport) continue;
     const context = await browser.newContext({
       viewport: { width: viewport.width, height: viewport.height },
-      deviceScaleFactor: viewport.label === 'mobile' ? 2 : 1,
-      isMobile: viewport.label === 'mobile',
+      deviceScaleFactor: isMobileViewport(viewport.label) ? 2 : 1,
+      isMobile: isMobileViewport(viewport.label),
     });
     const page = await context.newPage();
     page.baseUrl = baseUrl;

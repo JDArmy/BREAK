@@ -262,8 +262,8 @@ export const useRelationGraphData = ({
   const subNodeFilterColor = computed(() => getGraphColor("subNodeFill"));
 
   const getBreakKey = (type: RelationType) =>
-    RelationTypeMapping[type as keyof typeof RelationTypeMapping]
-      .BreakKey as keyof typeof BREAK;
+    (RelationTypeMapping[type as keyof typeof RelationTypeMapping]?.BreakKey ??
+      RelationTypeMapping[RelationType.risk].BreakKey) as keyof typeof BREAK;
 
   const getCurrentEntityOptions = computed(
     () => BREAK[getBreakKey(relType.value)] as Record<string, unknown>,
