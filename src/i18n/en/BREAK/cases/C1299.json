@@ -14,6 +14,9 @@
     "summary": "In February 2020, bug bounty hunter Ace Candelario discovered an unobfuscated Base64-encoded API key in a main.js file during subdomain enumeration. The key granted access to an HR system API endpoint, allowing an attacker to retrieve, view, delete, and update all employee records. The vulnerability was classified as broken user authentication.",
     "references": [
       {
+        "title": "API Secret Key Leakage Leads to Disclosure of Employee’s Information"
+      },
+      {
         "title": "API Security Technology and Practice_3.3 API KEY Leak Vulnerability Read Online-QQ Reading"
       }
     ]

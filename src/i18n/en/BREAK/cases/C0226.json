@@ -14,6 +14,9 @@
     "summary": "In December 2025, a large-scale SEO poisoning attack targeted .gov domains across multiple US states and local governments. Attackers exploited public file upload functions on government websites to upload PDF files containing malicious links. Once these files were indexed by search engines, users clicking on official domain links were redirected to pages containing pornographic advertisements and",
     "references": [
       {
+        "title": "Dominic Alvieri Original Disclosure of a .gov PDF SEO Poisoning Campaign"
+      },
+      {
         "title": "U.S. government website hit by SEO poisoning attack: Official domain tampered to redirect to pornographic content entry"
       }
     ]
