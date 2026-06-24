@@ -1,5 +1,11 @@
 # Change log
 
+## 2.23.81
+
+- 拆分 `relationCoverageAnalysis` 通用 helper，抽出节点 item builder、规避手段排序、洞察 section builder、按风险反查威胁行为者、按工具反查风险、按风险和工具反查规避手段等纯组合逻辑
+- 保持 `relationCoverageAnalysis` 现有行为不变，定向测试覆盖风险、规避手段、攻击工具、威胁行为者覆盖摘要和专项洞察分支
+- 更新升级规划，将 P1 关系页工程债的剩余重点收敛到分析面板、节点关系抽屉和覆盖分析 helper 的继续拆分
+
 ## 2.23.80
 
 - 继续补强高价值 Web3 安全事件 primary source，为 `C1483` 追加 SharkTeam 周杰伦 BAYC #3738 钓鱼盗窃链上分析 PDF，并同步英文引用标题
