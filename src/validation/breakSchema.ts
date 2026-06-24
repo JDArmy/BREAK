@@ -49,7 +49,7 @@ export const riskSchema = z.object({
   avoidances: idArray,
   relatedRisks: z.array(riskRelationSchema).default([]),
   references: z.array(referenceSchema).default([]),
-  updated: z.string().optional(),
+  updated: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "updated 格式必须为 YYYY-MM-DD").optional(),
   version: entityVersionSchema,
 });
 
@@ -64,7 +64,7 @@ export const avoidanceSchema = z.object({
   limitation: z.string().optional(),
   relatedAvoidances: z.array(avoidanceRelationSchema).default([]),
   references: z.array(referenceSchema).default([]),
-  updated: z.string().optional(),
+  updated: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "updated 格式必须为 YYYY-MM-DD").optional(),
   version: entityVersionSchema,
 });
 
@@ -77,7 +77,7 @@ export const attackToolSchema = z.object({
   directCauseRisks: idArray,
   indirectSupportRisks: idArray,
   relatedAttackTools: z.array(attackToolRelationSchema).default([]),
-  updated: z.string().optional(),
+  updated: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "updated 格式必须为 YYYY-MM-DD").optional(),
   version: entityVersionSchema,
 });
 
@@ -91,7 +91,7 @@ export const threatActorSchema = z.object({
   directCauseRisks: idArray,
   indirectSupportRisks: idArray,
   relatedThreatActors: z.array(threatActorRelationSchema).default([]),
-  updated: z.string().optional(),
+  updated: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "updated 格式必须为 YYYY-MM-DD").optional(),
   version: entityVersionSchema,
 });
 
@@ -109,7 +109,7 @@ export const termSchema = z.object({
   relatedThreatActors: idArray,
   relatedBusinessScenes: idArray,
   references: z.array(referenceSchema).default([]),
-  updated: z.string().optional(),
+  updated: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "updated 格式必须为 YYYY-MM-DD").optional(),
   version: entityVersionSchema,
 });
 
@@ -131,7 +131,7 @@ export const businessSceneSchema = z.object({
       risks: idArray,
     })
   ),
-  updated: z.string().optional(),
+  updated: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "updated 格式必须为 YYYY-MM-DD").optional(),
   version: entityVersionSchema,
 });
 
@@ -153,7 +153,7 @@ export const caseSchema = z.object({
   relatedAttackTools: idArray.default([]),
   relatedThreatActors: idArray.default([]),
   references: z.array(referenceSchema).default([]),
-  updated: z.string().optional(),
+  updated: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "updated 格式必须为 YYYY-MM-DD").optional(),
   version: entityVersionSchema,
 });
 

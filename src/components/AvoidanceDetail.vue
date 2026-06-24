@@ -3,8 +3,6 @@ import { defineAsyncComponent, ref, computed } from "vue";
 import BREAK from "@/BREAK";
 import ReferenceList from "@/components/ReferenceList.vue";
 
-import "element-plus/es/components/drawer/style/css";
-import "element-plus/es/components/button/style/css";
 import { ArrowLeft } from "@element-plus/icons-vue";
 import iconRelation from "./icons/iconRelation.vue";
 import { useDrawerWidth } from "@/composables/useDrawerWidth";
@@ -136,29 +134,4 @@ const termKey = ref("");
   />
 </template>
 
-<style scoped>
-.desc {
-  margin-bottom: 20px;
-}
-
-.desc strong {
-  display: block;
-  margin-bottom: 8px;
-}
-
-.drawer-header-with-back {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.drawer-back-btn {
-  padding: 4px 8px;
-  color: var(--break-text-muted);
-}
-
-.drawer-header-title {
-  font-weight: 600;
-  color: var(--break-text-primary);
-}
-</style>
+<style src="./drawer-detail-shared.css" scoped></style>

@@ -14,9 +14,6 @@ const route = reactive<{
 const locale = ref("cn");
 const wrappers: VueWrapper[] = [];
 
-vi.mock("element-plus/es/components/row/style/css", () => ({}));
-vi.mock("element-plus/es/components/col/style/css", () => ({}));
-
 vi.mock("vue-router", () => ({
   useRouter: () => ({ push, replace }),
   useRoute: () => route,

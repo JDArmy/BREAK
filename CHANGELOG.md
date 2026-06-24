@@ -1,13 +1,27 @@
 # Change log
 
-## 2.23.103
+## 2.24.0
 
-- 继续补强高价值案例 primary source，为 `C0170`、`C0182`、`C0185`、`C0190` 追加检察院官网索引指向的官方微信、公安部、中国法院系统和中国长安网来源，并同步英文引用标题
-- 将 `C0170` 的扬州市江都区人民检察院官网索引指向官方微信加入精确 primary 白名单，避免泛化普通微信来源
-- 按中国长安网官方来源修正 `C0190` 标题和摘要，补充陕西警方、中成传媒、195名涉案嫌疑人和刑拘128人的事实口径
-- 复核 `C0138`、`C0146`、`C0147`、`C0150`、`C0161`、`C0184`、`C0187`、`C0204` 等候选时，未找到高置信同案 primary 或稳定详情页的不硬补
-- 案例 primary 覆盖提升到 914，高价值 primary 覆盖提升到 579，primary 覆盖率提升到 50.86%，高价值 primary 覆盖率提升到 53.66%
-- 更新升级计划中的 P0-2 案例来源覆盖统计和下一批候选
+### 架构与代码质量改进
+
+- **[P0-A] 修复 i18n 英文 Promise 永久缓存 bug**：`cnBreakMessagePromise` 和 `enBreakMessagePromise` 失败后重置为 null，防止英文模式功能永久瘫痪
+- **[P0-B] 修复 HomeView fullBreakPromise 永久缓存 bug**：失败后重置缓存，防止抽屉详情功能永久失效
+- **[P1-A] 路由 meta 标记替代硬编码集合**：删除 `routesNeedFullLocaleMessages` 硬编码集合，改用 `meta.needsBreakData` 声明式标记，新增路由不再需要手动同步
+- **[P1-B] HomeView 抽屉管理重构**：新增 `useDrawerRoute` composable，5 个抽屉的路由感知状态管理从 150 行重复代码缩减为 50 行声明式配置
+- **[P1-C] 统一 Element Plus 样式引入**：移除 12 个文件中 32 行冗余的手动 `import "element-plus/es/components/*/style/css"`，统一由 unplugin-vue-components 的 ElementPlusResolver 自动处理
+- **[P1-D] 抽屉详情组件样式去重**：抽取 `drawer-detail-shared.css` 公共样式文件，5 个抽屉详情组件共享，消除 130 行重复 CSS
+- **[P1-E] 加强异步错误处理**：`useCases.ts` 英文翻译单文件加载容错、locale 切换 try-catch、全局 watcher 单例化防止重复注册
+
+### 数据质量与工程化
+
+- **[P2-A] 构建管线优化**：新增 `build:validate`（lint + type-check + validate:data + coverage）和 `build:fast`（跳过 lint/test 的快速构建）命令
+- **[P2-C] references 中英文对齐门禁**：`i18n-sync.mjs --strict` 新增 references 数组长度一致性检查，发现并修复 C1316、C1553 两处已有的 references 错配
+- **[P2-D] updated 字段日期格式校验**：`breakSchema.ts` 中 7 处 `updated` 字段增加 `YYYY-MM-DD` 正则约束
+
+### 统计
+
+- 22 个文件修改，2 个新文件（`useDrawerRoute.ts`、`drawer-detail-shared.css`）
+- 净减 218 行代码（169 insertions, 387 deletions）
 
 ## 2.23.102
 

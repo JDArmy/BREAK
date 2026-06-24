@@ -4,8 +4,6 @@ import { useRoute, useRouter } from "vue-router";
 import { useBreakpoints } from "@/composables/useBreakpoints";
 import { ArrowLeft } from "@element-plus/icons-vue";
 
-import "element-plus/es/components/button/style/css";
-
 interface KnowledgeItem {
   id: string;
   title: string;

@@ -26,11 +26,18 @@ function loadCnCases(): Promise<Cases> {
 
 async function applyEnTranslations() {
   const cn = await loadCnCases();
+  // 逐文件加载英文翻译，单个文件失败不影响整体（降级为中文）
   const entries = await Promise.all(
-    Object.values(enCaseFiles).map((loader) => loader())
+    Object.values(enCaseFiles).map((loader) =>
+      loader().catch((err) => {
+        console.warn("[useCases] 加载英文案例翻译文件失败，该文件降级为中文:", err);
+        return null;
+      })
+    )
   );
   const enCases: Record<string, unknown> = {};
   for (const mod of entries) {
+    if (!mod) continue;
     const data = (mod as { default: Record<string, unknown> }).default;
     Object.assign(enCases, data);
   }
@@ -38,13 +45,16 @@ async function applyEnTranslations() {
   cases.value = merged;
 }
 
-async function syncCasesForLocale(localeValue: string) {
-  if (localeValue === "en") {
-    await applyEnTranslations();
-    return;
+async function syncCasesForLocale(newLocale: string) {
+  try {
+    if (newLocale === "en") {
+      await applyEnTranslations();
+    } else {
+      cases.value = await loadCnCases();
+    }
+  } catch (err) {
+    console.error("[useCases] 切换语言时加载案例数据失败:", err);
   }
-
-  cases.value = await loadCnCases();
 }
 
 function registerLocaleWatcher(locale: ReturnType<typeof useI18n>["locale"]) {

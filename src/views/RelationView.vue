@@ -11,7 +11,6 @@ import {
   loadNetworkECharts,
   loadSankeyECharts,
 } from "@/views/relation/relationECharts";
-import "element-plus/es/components/drawer/style/css";
 
 const loadRelationNetworkPane = () =>
   import("@/components/relation/RelationNetworkPane.vue");

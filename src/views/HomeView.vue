@@ -4,11 +4,8 @@ import BREAK from "@/BREAK/home";
 import { defineAsyncComponent, ref, watch, computed } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import { useBreakpoints } from "@/composables/useBreakpoints";
+import { useDrawerRoute } from "@/composables/useDrawerRoute";
 import { useI18n } from "vue-i18n";
-
-import "element-plus/es/components/row/style/css";
-import "element-plus/es/components/col/style/css";
-import { ElRow, ElCol } from "element-plus";
 
 const RiskDetail = defineAsyncComponent(() => import("@/components/RiskDetail.vue"));
 const AvoidanceDetail = defineAsyncComponent(() => import("@/components/AvoidanceDetail.vue"));
@@ -34,7 +31,13 @@ type FullBREAK = typeof import("@/BREAK").default;
 let fullBreakPromise: Promise<FullBREAK> | null = null;
 
 const loadFullBREAK = () => {
-  fullBreakPromise ??= import("@/BREAK").then(({ default: fullBREAK }) => fullBREAK);
+  // 失败时清空缓存并 rethrow，避免把 rejected Promise 永久缓存导致抽屉详情功能瘫痪
+  fullBreakPromise ??= import("@/BREAK")
+    .then(({ default: fullBREAK }) => fullBREAK)
+    .catch((err) => {
+      fullBreakPromise = null;
+      throw err;
+    });
   return fullBreakPromise;
 };
 
@@ -266,152 +269,61 @@ watch(
 //subrisk end.
 
 /////////////////////////////////////////////////////////////////////
-//start: 查看风险细节
-const riskDrawer = ref(false);
-const riskKey = ref("");
-const showRiskDetail = (riskKey1: string, drawer1: boolean) => {
-  riskDrawer.value = drawer1;
-  riskKey.value = riskKey1;
-};
-watch(
-  () => [route.name, route.params.rKey] as const,
-  ([routeName, rawRiskKey]) => {
-    if (routeName === "riskDetail" || routeName === "businessSceneRiskDetail") {
-      const nextRiskKey = getSingleRouteParam(rawRiskKey);
-      if (nextRiskKey && hasOwn(BREAK.risks, nextRiskKey)) {
-        showRiskDetail(nextRiskKey, true);
-        return;
-      }
+// 抽屉路由管理——统一使用 useDrawerRoute composable
 
-      router.replace({ name: "home" });
-      return;
+// 风险详情抽屉（特殊：支持两个路由名，关闭时需区分业务场景）
+const riskDrawer = useDrawerRoute({
+  routeNames: ["riskDetail", "businessSceneRiskDetail"],
+  routeParam: "rKey",
+  validateKey: (key) => hasOwn(BREAK.risks, key),
+  onClose: () => {
+    if (route.name === "businessSceneRiskDetail" && route.params.bsKey) {
+      router.push({ name: "businessScene", params: { bsKey: route.params.bsKey } });
+    } else {
+      router.push({ name: "home" });
     }
-
-    showRiskDetail("", false);
   },
-  { immediate: true }
-);
-
-const riskDetailClose = () => {
-  riskDrawer.value = false;
-  if (route.name === "businessSceneRiskDetail" && route.params.bsKey) {
-    router.push({
-      name: "businessScene",
-      params: { bsKey: route.params.bsKey },
-    });
-  } else {
-    router.push({ name: "home" });
-  }
-};
-//end.
+});
 
 // 规避手段抽屉
-const avoidanceDrawer = ref(false);
-const avoidanceKey = ref("");
-watch(
-  () => [route.name, route.params.aKey] as const,
-  async ([routeName, rawAKey]) => {
-    if (routeName === "avoidanceDetail") {
-      const nextKey = getSingleRouteParam(rawAKey);
-      const fullBREAK = await loadFullBREAK();
-      if (route.name !== routeName || route.params.aKey !== rawAKey) return;
-      if (nextKey && hasOwn(fullBREAK.avoidances, nextKey)) {
-        avoidanceKey.value = nextKey;
-        avoidanceDrawer.value = true;
-        return;
-      }
-      router.replace({ name: "home" });
-      return;
-    }
-    avoidanceDrawer.value = false;
+const avoidanceDrawer = useDrawerRoute({
+  routeNames: ["avoidanceDetail"],
+  routeParam: "aKey",
+  validateKey: async (key) => {
+    const fullBREAK = await loadFullBREAK();
+    return hasOwn(fullBREAK.avoidances, key);
   },
-  { immediate: true }
-);
-const avoidanceDetailClose = () => {
-  avoidanceDrawer.value = false;
-  router.push({ name: "home" });
-};
+});
 
 // 攻击工具抽屉
-const attackToolDrawer = ref(false);
-const attackToolKey = ref("");
-watch(
-  () => [route.name, route.params.atKey] as const,
-  async ([routeName, rawAtKey]) => {
-    if (routeName === "attackToolDetail") {
-      const nextKey = getSingleRouteParam(rawAtKey);
-      const fullBREAK = await loadFullBREAK();
-      if (route.name !== routeName || route.params.atKey !== rawAtKey) return;
-      if (nextKey && hasOwn(fullBREAK.attackTools, nextKey)) {
-        attackToolKey.value = nextKey;
-        attackToolDrawer.value = true;
-        return;
-      }
-      router.replace({ name: "home" });
-      return;
-    }
-    attackToolDrawer.value = false;
+const attackToolDrawer = useDrawerRoute({
+  routeNames: ["attackToolDetail"],
+  routeParam: "atKey",
+  validateKey: async (key) => {
+    const fullBREAK = await loadFullBREAK();
+    return hasOwn(fullBREAK.attackTools, key);
   },
-  { immediate: true }
-);
-const attackToolDetailClose = () => {
-  attackToolDrawer.value = false;
-  router.push({ name: "home" });
-};
+});
 
 // 威胁行为者抽屉
-const threatActorDrawer = ref(false);
-const threatActorKey = ref("");
-watch(
-  () => [route.name, route.params.taKey] as const,
-  async ([routeName, rawTaKey]) => {
-    if (routeName === "threatActorDetail") {
-      const nextKey = getSingleRouteParam(rawTaKey);
-      const fullBREAK = await loadFullBREAK();
-      if (route.name !== routeName || route.params.taKey !== rawTaKey) return;
-      if (nextKey && hasOwn(fullBREAK.threatActors, nextKey)) {
-        threatActorKey.value = nextKey;
-        threatActorDrawer.value = true;
-        return;
-      }
-      router.replace({ name: "home" });
-      return;
-    }
-    threatActorDrawer.value = false;
+const threatActorDrawer = useDrawerRoute({
+  routeNames: ["threatActorDetail"],
+  routeParam: "taKey",
+  validateKey: async (key) => {
+    const fullBREAK = await loadFullBREAK();
+    return hasOwn(fullBREAK.threatActors, key);
   },
-  { immediate: true }
-);
-const threatActorDetailClose = () => {
-  threatActorDrawer.value = false;
-  router.push({ name: "home" });
-};
+});
 
 // 行业术语抽屉
-const termDrawer = ref(false);
-const termKey = ref("");
-watch(
-  () => [route.name, route.params.tKey] as const,
-  async ([routeName, rawTKey]) => {
-    if (routeName === "termDetail") {
-      const nextKey = getSingleRouteParam(rawTKey);
-      const fullBREAK = await loadFullBREAK();
-      if (route.name !== routeName || route.params.tKey !== rawTKey) return;
-      if (nextKey && hasOwn(fullBREAK.terms, nextKey)) {
-        termKey.value = nextKey;
-        termDrawer.value = true;
-        return;
-      }
-      router.replace({ name: "home" });
-      return;
-    }
-    termDrawer.value = false;
+const termDrawer = useDrawerRoute({
+  routeNames: ["termDetail"],
+  routeParam: "tKey",
+  validateKey: async (key) => {
+    const fullBREAK = await loadFullBREAK();
+    return hasOwn(fullBREAK.terms, key);
   },
-  { immediate: true }
-);
-const termDetailClose = () => {
-  termDrawer.value = false;
-  router.push({ name: "home" });
-};
+});
 </script>
 
 <template>
@@ -618,34 +530,34 @@ const termDetailClose = () => {
   </el-row>
   </div>
   <RiskDetail
-    v-if="riskDrawer"
-    v-on:drawer-close="riskDetailClose"
-    :drawer="riskDrawer"
-    :rKey="riskKey"
+    v-if="riskDrawer.drawerVisible.value"
+    v-on:drawer-close="riskDrawer.close"
+    :drawer="riskDrawer.drawerVisible.value"
+    :rKey="riskDrawer.entityKey.value"
   />
   <AvoidanceDetail
-    v-if="avoidanceDrawer"
-    v-on:drawer-close="avoidanceDetailClose"
-    :drawer="avoidanceDrawer"
-    :aKey="avoidanceKey"
+    v-if="avoidanceDrawer.drawerVisible.value"
+    v-on:drawer-close="avoidanceDrawer.close"
+    :drawer="avoidanceDrawer.drawerVisible.value"
+    :aKey="avoidanceDrawer.entityKey.value"
   />
   <AttackToolDetail
-    v-if="attackToolDrawer"
-    v-on:drawer-close="attackToolDetailClose"
-    :drawer="attackToolDrawer"
-    :atKey="attackToolKey"
+    v-if="attackToolDrawer.drawerVisible.value"
+    v-on:drawer-close="attackToolDrawer.close"
+    :drawer="attackToolDrawer.drawerVisible.value"
+    :atKey="attackToolDrawer.entityKey.value"
   />
   <ThreatActorDetail
-    v-if="threatActorDrawer"
-    v-on:drawer-close="threatActorDetailClose"
-    :drawer="threatActorDrawer"
-    :taKey="threatActorKey"
+    v-if="threatActorDrawer.drawerVisible.value"
+    v-on:drawer-close="threatActorDrawer.close"
+    :drawer="threatActorDrawer.drawerVisible.value"
+    :taKey="threatActorDrawer.entityKey.value"
   />
   <TermDetail
-    v-if="termDrawer"
-    v-on:drawer-close="termDetailClose"
-    :drawer="termDrawer"
-    :tKey="termKey"
+    v-if="termDrawer.drawerVisible.value"
+    v-on:drawer-close="termDrawer.close"
+    :drawer="termDrawer.drawerVisible.value"
+    :tKey="termDrawer.entityKey.value"
   />
 </template>
 

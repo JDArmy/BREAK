@@ -2,12 +2,6 @@
 import { RouterView } from "vue-router";
 import MenuList from "./components/MenuList.vue";
 
-import "element-plus/es/components/container/style/css";
-import "element-plus/es/components/header/style/css";
-import "element-plus/es/components/main/style/css";
-import "element-plus/es/components/footer/style/css";
-import "element-plus/es/components/backtop/style/css";
-import { ElContainer, ElHeader, ElMain, ElFooter, ElBacktop } from "element-plus";
 import iconGithub from "@/components/icons/iconGithub.vue";
 </script>
 
