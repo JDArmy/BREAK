@@ -1,5 +1,10 @@
 # Change log
 
+## 2.23.51
+
+- 补充 `relationNodeClipboard` 单测，覆盖上下文关系 CSV 输出、字段转义、解释/证据/质量标记写入、缺失节点失败和 clipboard 写入失败
+- 将 Vitest coverage 阈值从 56% 提升到 57%；当前测试规模为 38 个测试文件、216 个测试，coverage 为 statements 69.27%、branches 57.85%、functions 64.18%、lines 71.70%
+
 ## 2.23.50
 
 - 补充 `relationNodeContextMenu` 单测，覆盖菜单定位夹取、全局 pointerdown 关闭、隐藏状态保护、节点类型菜单禁用策略和当前根节点不可重复作为根打开
