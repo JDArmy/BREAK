@@ -187,6 +187,7 @@ const primaryDomainSuffixes = [
   'dataprotection.ie',
   'cnpd.public.lu',
   'humanrights.go.kr',
+  'pipc.go.kr',
   'capitalone.com',
   'wuhua.gov.cn',
   'ankr.com',
@@ -295,6 +296,7 @@ const primaryReferenceLinks = new Set([
   'https://peking.bjd.com.cn/content/s649a2d5fe4b042ca9e8e4fb9.html', // 北京法院审判信息发布账号，供稿朝阳法院
   'https://jsnews.jschina.com.cn/jczx/202502/t20250218_s67b41f81e4b04dff9907e0f5.shtml', // 江苏检察在线来源，太仓市人民检察院官网宣传看点索引指向
   'https://news.qq.com/rain/a/20250415a08y8c00', // 上海市徐汇区新闻办公室官方账号托管页
+  'https://news.qq.com/rain/a/20260605a03qyh00', // 乐山市人民政府新闻办公室官方账号托管页
   'https://www.zhongyuan.gov.cn/rdhy/9581840.jhtml', // 政府门户转载抖音黑板报官方治理公示
   'http://putian.pafj.net/caw/f/10/view-225-766722.html', // 莆田长安网检察院栏目，中共莆田市委政法委员会主办
   'https://x.com/alvierid/status/1999403353466421320', // 安全研究人员原始披露
