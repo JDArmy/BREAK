@@ -228,10 +228,10 @@ const primaryReferenceLinks = new Set([
   'https://x.com/AztecLabs_/status/2066175430252700035', // Aztec Labs 官方事故说明
   'https://x.com/realScamSniffer/status/1970322013597450609', // Scam Sniffer 原始链上告警
   'https://x.com/PeckShieldAlert/status/1976577386469839269', // PeckShield 原始链上告警
-  'https://x.com/TwitterComms/status/1167559184410431488', // Twitter 官方事件说明
-  'https://x.com/VenusProtocol/status/2033471885259034989', // Venus Protocol 官方事件说明
-  'https://x.com/ThetanutsFi/status/2066569315961454925', // Thetanuts Finance 官方事件说明
-  'https://x.com/MultichainOrg/status/1679768407628185600', // Multichain 官方事件说明
+  'https://x.com/twittercomms/status/1167559184410431488', // Twitter 官方事件说明
+  'https://x.com/venusprotocol/status/2033471885259034989', // Venus Protocol 官方事件说明
+  'https://x.com/thetanutsfi/status/2066569315961454925', // Thetanuts Finance 官方事件说明
+  'https://x.com/multichainorg/status/1679768407628185600', // Multichain 官方事件说明
   'https://bitcointalk.org/index.php?topic=105818.0', // BitFloor 创始人事故说明
 ]);
 const primaryWechatBizIds = [
