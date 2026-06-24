@@ -18,11 +18,15 @@
     ],
     "references": [
       {
+        "title": "发布 | 上海网络检察案例",
+        "link": "http://www.nmdengkou.jcy.gov.cn/ajjj/202511/t20251107_7217173.shtml"
+      },
+      {
         "title": "2025年游戏法年度十大影响力事件_腾讯新闻",
         "link": "https://view.inews.qq.com/a/20260112A06S5800"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-06-24",
     "incidentTime": "2025-02",
     "relatedAttackTools": [
       "AT0003",
@@ -31,6 +35,7 @@
     "relatedThreatActors": [
       "TA0007",
       "TA0017"
-    ]
+    ],
+    "version": 2
   }
 }

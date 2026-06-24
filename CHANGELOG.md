@@ -1,5 +1,10 @@
 # Change log
 
+## 2.23.64
+
+- 继续补强高价值游戏账号黑产案例 primary source，为 `C0317`、`C0338` 追加检察系统发布的上海网络检察案例合集，并同步英文引用标题
+- 案例 primary 覆盖提升到 844，高价值 primary 覆盖提升到 521，primary 覆盖率提升到 46.97%，高价值 primary 覆盖率提升到 48.29%
+
 ## 2.23.63
 
 - 修复案例来源质量审计中精确 primary 白名单的大小写归一化，确保 Manta Network、Aztec Labs、Scam Sniffer、PeckShield 等 X 原始公告链接按精确 URL 正确识别
