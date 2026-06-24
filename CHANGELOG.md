@@ -1,5 +1,10 @@
 # Change log
 
+## 2.23.80
+
+- 继续补强高价值 Web3 安全事件 primary source，为 `C1483` 追加 SharkTeam 周杰伦 BAYC #3738 钓鱼盗窃链上分析 PDF，并同步英文引用标题
+- 案例 primary 覆盖提升到 874，高价值 primary 覆盖提升到 551，primary 覆盖率提升到 48.64%，高价值 primary 覆盖率提升到 51.07%
+
 ## 2.23.79
 
 - 新增 `RelationNodeDrawerRelations` 组件 contract 测试，覆盖多实体关系渲染、空关系列表、方向/关系类型/直接性过滤、清空筛选、方向筛选暴露方法、关系数据变化重置、复制事件、节点详情跳转和增量展开折叠

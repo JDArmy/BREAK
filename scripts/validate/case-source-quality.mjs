@@ -177,6 +177,7 @@ const primaryDomainSuffixes = [
   'qianxin.com',
   'forcepoint.com',
   'flare.io',
+  'sharkteam.org',
   'shaanxijubao.cn',
   'jinyier.me',
   'bocongan.gov.vn',
