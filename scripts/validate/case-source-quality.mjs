@@ -231,6 +231,8 @@ const primaryReferenceLinks = new Set([
   'https://mp.weixin.qq.com/s?__biz=mzi0nzqwnzy1mw==&mid=2247944095&idx=3&sn=c237244af82a135331a870a2bfa43632&chksm=e9b832d5decfbbc39143c28fd3a49dbb946ef253ee8deab1d48800408634a44ebcf5f93eda98&scene=27', // 抖音黑板报官方治理公告
   'https://mp.weixin.qq.com/s?__biz=mza5mzgzodywoa==&mid=2650506064&idx=3&sn=6f1ab6601fe507fea783c3da8235ab61&chksm=8914f041678c84c260dabbab50587d08dfbbea7248fc01300674a473343172e066f62f2bd993&scene=27', // 众安保险官方协查公告
   'https://mp.weixin.qq.com/s?__biz=mziwmjg4oti2nq==&mid=2247597756&idx=1&sn=751c1ea5b214ae6e14a208c04ae05e3d&chksm=976a9115a2f2a7d3a131e573f1ace2322d97ec1a77abf668a1224ac8d977e046968f5c7cad71&scene=27', // 上海高院官方微信
+  'https://mp.weixin.qq.com/s/nhiwxqy5qxj_xsxtzgpyba', // 钦州网警官方微信
+  'https://mp.weixin.qq.com/s/mmawdyonqffbbdzexx-qaa', // 公安部网安局官方微信
   'https://news.qq.com/rain/a/20250415a08y8c00', // 上海市徐汇区新闻办公室官方账号托管页
   'https://www.zhongyuan.gov.cn/rdhy/9581840.jhtml', // 政府门户转载抖音黑板报官方治理公示
   'https://x.com/alvierid/status/1999403353466421320', // 安全研究人员原始披露
