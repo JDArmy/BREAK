@@ -325,6 +325,7 @@ const primaryReferenceLinks = new Set([
   'https://view.inews.qq.com/a/20251205a03wsm00', // 抖音黑板报官方托管页，盗号黑产治理公告
   'https://view.inews.qq.com/a/20250821a025up00?scene=qb_ranking', // 公安部网安局官方托管页，弱支付密码盗刷案
   'https://mp.weixin.qq.com/s/wsro3i0l02fku9gr0o9gfw', // 公安部网安局官方微信，变脸软件解封涉诈账号
+  'https://mp.weixin.qq.com/s?__biz=mjm5nzc5mzmwmg==&mid=2657509714&idx=1&sn=ea2791b3a16cd87c205a988970e63d9f&chksm=bca72fc0e30cef6f8cca4d60cabf4574670190e0eb8736e5a8a402373d0fc786bb7fef3a4f08&scene=27', // 公安部网安局官方微信，AI 仿冒名人直播带货行政拘留案
   'https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=16452910468894153646&track_id=06cab3b6-40f2-45f6-b2ee-15f8dc4ae04d', // 央视新闻客户端转述沁水公安 USDT 洗钱案
   'https://xinwen.bjd.com.cn/content/s659b6e44e4b0f6c5abd4836a.html', // 北京日报托管公安部网安局数据泄露处罚通报
   'https://xinwen.bjd.com.cn/content/s683f8979e4b0380e186cf999.html', // 北京日报托管公安部网安局/陕西网警非法薅羊毛案
