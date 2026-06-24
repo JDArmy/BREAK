@@ -1,5 +1,10 @@
 # Change log
 
+## 2.23.85
+
+- 新增 `relationSpecialInsightBuilders` 直接分支测试，覆盖缺失实体、规避手段无覆盖复核建议、风险与工具重叠覆盖、攻击工具无 gap 使用建议和威胁行为者防御优先项
+- 将 Vitest coverage 全局阈值从 72% 提升到 74%；当前测试规模为 47 个测试文件、291 个测试，coverage 为 statements 89.19%、branches 74.46%、functions 89.19%、lines 91.79%
+
 ## 2.23.84
 
 - 继续拆分 `relationCoverageAnalysis`，新增 `relationSpecialInsightBuilders` 承载规避手段、攻击工具和威胁行为者专项洞察构建逻辑
