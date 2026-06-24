@@ -1,5 +1,11 @@
 # Change log
 
+## 2.23.57
+
+- 扩展 `RelationSelectorBar` 组件测试，覆盖 idle 延迟加载、fallback timer、关系类型切换、缺失类型映射、空闲回调清理和定时器卸载清理
+- 将 Vitest coverage 阈值从 61% 提升到 62%；当前测试规模为 40 个测试文件、231 个测试，coverage 为 statements 77.48%、branches 62.23%、functions 76.51%、lines 80.20%
+- 更新升级规划中 P0-3 自动化回归状态，明确 RelationSelectorBar 关键生命周期与选项加载逻辑已纳入组件测试
+
 ## 2.23.56
 
 - 继续补强高价值平台治理、反诈和游戏安全案例 primary source，为 `C0268`、`C0480`、`C0927`、`C0981`、`C0984`、`C0987`、`C1155`、`C1158` 追加微信安全中心、公安部、《和平精英》官网和国家网络安全通报中心等官方来源，并同步英文引用标题
