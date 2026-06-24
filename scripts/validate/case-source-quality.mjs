@@ -99,6 +99,7 @@ const primaryDomainSuffixes = [
   'peerj.com',
   'att.com',
   'about.att.com',
+  'acer.com',
   'microsoft.com',
   'learn.microsoft.com',
   'uber.com',
