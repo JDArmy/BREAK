@@ -38,8 +38,13 @@ const primaryDomainSuffixes = [
   'jcy.gov.cn',
   'mps.gov.cn',
   'jxzfw.gov.cn',
+  'gdzf.org.cn',
+  'gzszfw.gov.cn',
+  'sichuanpeace.gov.cn',
+  'cdgaj.chengdu.gov.cn',
   'samr.gov.cn',
   'cac.gov.cn',
+  'chinatax.gov.cn',
   'npc.gov.cn',
   'cisa.gov',
   'nist.gov',
@@ -215,6 +220,8 @@ const primaryReferenceLinks = new Set([
   'https://mp.weixin.qq.com/s?__biz=mzg4nta2mdu0oq==&mid=2247530131&idx=1&sn=69682338439f50044b36db5956286c8b', // 成都市市场监管政务微信
   'https://mp.weixin.qq.com/s/mkzzqogpgzb9dtgenlu6ja', // 公安部网安局官方微信
   'https://mp.weixin.qq.com/s/blui1fvmlxx8-zzzvaqnjq', // 警民直通车浦东官方微信
+  'https://mp.weixin.qq.com/s?__biz=mjazmdqwntu0mq==&mid=2653000171&idx=1&sn=3c2a6b6f9da032c1df95330f763093d5&chksm=4b7a5d4a81092891c6e0b10cb742fb5b0b6d25060326fd33ab8ec5eaf6cff8e908bb5194e5f9&scene=27', // 公安机关处罚快手公司官方微信
+  'https://mp.weixin.qq.com/s?__biz=mzi1mde2oteynq==&mid=2651575022&idx=1&sn=adacaec3ecf7ff07d111d5b00d07e4bc&chksm=f378f513b9d6f9b9abcdd0a175a8023e855453160fdfa587ba8c166bfa9faff20736064dc02b&scene=27', // 网信上海政务微信
   'https://medium.com/osmosis-community-updates/osmosis-updates-from-the-lab-recap-osmocon-and-exploit-fix-june-15-2022-fc22355e4b0d', // Osmosis 官方社区更新
   'https://medium.com/paritytech/a-postmortem-on-the-parity-multi-sig-library-self-destruct-63daca3a4cf7', // Parity 官方事后分析
   'https://peckshield.medium.com/value-defi-incident-root-cause-analysis-fbab71faf373', // PeckShield 原始链上分析

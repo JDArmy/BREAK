@@ -1,5 +1,11 @@
 # Change log
 
+## 2.23.36
+
+- 继续补强国内司法、执法与行政监管案例 primary source，为 `C0153`、`C0216`、`C0433`、`C0430`、`C0206`、`C0264`、`C0025`、`C0235`、`C0760`、`C0260` 追加广东政法、广西税务、最高检、公安部、广州政法、成都公安、四川长安网及政务微信等官方来源，并同步英文引用标题
+- 扩充案例来源质量审计的 primary 识别，纳入广东/广州/四川政法、成都公安、税务系统官方域和快手处罚、网信上海等政务微信精确链接
+- 高价值案例 primary 覆盖提升到 447，primary 覆盖率提升到 42.68%，高价值 primary 覆盖率提升到 41.43%
+
 ## 2.23.35
 
 - 继续批量补强高价值安全事件与漏洞案例 primary source，为 `C0417`、`C0708`、`C0716`、`C1210`、`C1270`、`C1332`、`C1354`、`C1359`、`C1364`、`C1369`、`C1396`、`C1423`、`C1656`、`C1658`、`C1758`、`C1767` 追加或识别 Sekoia、Cisco、Oligo、Twitter/X 官方、Push Security、Microsoft、PeckShield、Venus Protocol、Thetanuts Finance、Multichain、Akamai、Horizen、CloudSEK、Appknox、Cisco Talos、Youstin 等官方、厂商研究、原始论文或精确社媒公告来源，并同步英文引用标题

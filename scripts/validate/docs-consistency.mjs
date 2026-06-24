@@ -13,6 +13,7 @@ const docs = {
 
 const packageJson = readJson(path.join(projectRoot, 'package.json'));
 const buildScript = packageJson.scripts?.build || '';
+const deployBuildScript = packageJson.scripts?.['deploy:build'] || '';
 
 const entityDirs = {
   risks: 'src/BREAK/risks',
@@ -85,7 +86,14 @@ const buildGateScripts = [
   'validate:data-package',
 ];
 const documentedUtilityScripts = ['schema:docs:write'];
-const deployRunsBuildScript = docs.deployWorkflow.includes('npm run build');
+const deployBuildScripts = [
+  'export:data',
+  'export:data-en',
+  'export:stix',
+  'export:jsonld',
+  'build-only',
+  'export:data-package',
+];
 
 const englishStats =
   `The current framework catalogues ${counts.risks.total} risk items, ` +
@@ -112,12 +120,15 @@ for (const scriptName of buildGateScripts) {
   expectIncludes('readme', `npm run ${scriptName}`, `README build gate ${scriptName}`);
   expectIncludes('readmeCn', `npm run ${scriptName}`, `README_CN build gate ${scriptName}`);
   expectIncludes('ciWorkflow', `npm run ${scriptName}`, `CI workflow build gate ${scriptName}`);
-  if (!deployRunsBuildScript) {
-    expectIncludes('deployWorkflow', `npm run ${scriptName}`, `Deploy workflow build gate ${scriptName}`);
+}
+
+for (const scriptName of deployBuildScripts) {
+  if (!deployBuildScript.includes(`npm run ${scriptName}`)) {
+    failures.push(`package.json: deploy:build 脚本缺少发布产物步骤 npm run ${scriptName}`);
   }
 }
 
-expectIncludes('deployWorkflow', 'npm run build', 'Deploy workflow build script');
+expectIncludes('deployWorkflow', 'npm run deploy:build', 'Deploy workflow release build script');
 
 for (const scriptName of documentedUtilityScripts) {
   expectIncludes('readme', `npm run ${scriptName}`, `README utility script ${scriptName}`);
