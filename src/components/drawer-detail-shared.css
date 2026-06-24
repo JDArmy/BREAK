@@ -1,0 +1,31 @@
+/* 抽屉详情组件公共样式 —— 由 RiskDetail / AvoidanceDetail / AttackToolDetail / ThreatActorDetail / TermDetail 共享 */
+
+.desc {
+  margin-bottom: 20px;
+}
+
+.desc strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.drawer-header-with-back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.drawer-back-btn {
+  padding: 4px 8px;
+  color: var(--break-text-muted);
+}
+
+.drawer-header-title {
+  font-weight: 600;
+  color: var(--break-text-primary);
+}
+
+button.entity-link {
+  cursor: pointer;
+  font-family: inherit;
+}

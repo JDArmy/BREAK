@@ -56,9 +56,13 @@ const hasBreakMessages = (locale: Locale) => {
 
 const loadCnBreakMessages = () => {
   if (!cnBreakMessagePromise) {
-    cnBreakMessagePromise = import("../BREAK").then(
-      ({ default: cnBREAK }) => cnBREAK
-    );
+    // 失败时清空缓存并 rethrow，避免把 rejected Promise 永久缓存导致功能瘫痪
+    cnBreakMessagePromise = import("../BREAK")
+      .then(({ default: cnBREAK }) => cnBREAK)
+      .catch((err) => {
+        cnBreakMessagePromise = null;
+        throw err;
+      });
   }
 
   return cnBreakMessagePromise;
@@ -78,15 +82,21 @@ const ensureEnLocaleMessages = async () => {
   if (hasBreakMessages("en")) return;
 
   if (!enBreakMessagePromise) {
+    // 失败时清空缓存并 rethrow，避免把 rejected Promise 永久缓存导致英文模式瘫痪
     enBreakMessagePromise = Promise.all([
       loadCnBreakMessages(),
       import("./en/BREAK"),
-    ]).then(([cnBREAK, { default: enBREAK }]) => {
-      i18n.global.setLocaleMessage("en", {
-        ...en,
-        BREAK: mergeWithStructure(cnBREAK, enBREAK) as typeof enBREAK,
+    ])
+      .then(([cnBREAK, { default: enBREAK }]) => {
+        i18n.global.setLocaleMessage("en", {
+          ...en,
+          BREAK: mergeWithStructure(cnBREAK, enBREAK) as typeof enBREAK,
+        });
+      })
+      .catch((err) => {
+        enBreakMessagePromise = null;
+        throw err;
       });
-    });
   }
 
   await enBreakMessagePromise;

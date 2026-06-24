@@ -3,30 +3,17 @@ import RelationRouteShell from "@/views/RelationRouteShell.vue";
 import { initLocaleMessages } from "@/i18n";
 import { loadNetworkECharts, loadSankeyECharts } from "@/views/relation/relationECharts";
 
+// 扩展 vue-router 的 RouteMeta 类型，支持 needsBreakData 标记
+declare module "vue-router" {
+  interface RouteMeta {
+    /** 设为 true 表示该路由需要加载完整 BREAK 数据（触发 i18n 懒加载） */
+    needsBreakData?: boolean;
+  }
+}
+
 const loadHomeView = () => import("@/views/HomeView.vue");
 const loadRelationView = () => import("@/views/RelationView.vue");
 type RelationPreloadTarget = "network" | "sankey";
-const routesNeedFullLocaleMessages = new Set([
-  "riskDetail",
-  "businessSceneRiskDetail",
-  "avoidanceDetail",
-  "attackToolDetail",
-  "threatActorDetail",
-  "termDetail",
-  "risks",
-  "risksDetail",
-  "avoidances",
-  "avoidancesDetail",
-  "attackTools",
-  "attackToolsDetail",
-  "threatActors",
-  "threatActorsDetail",
-  "terms",
-  "termsDetail",
-  "cases",
-  "casesDetail",
-  "relation",
-]);
 
 export const preloadRelationView = (target?: RelationPreloadTarget) => {
   void loadRelationView();
@@ -48,26 +35,31 @@ const router = createRouter({
     {
       path: "/risks/:rKey",
       name: "riskDetail",
+      meta: { needsBreakData: true },
       component: loadHomeView,
     },
     {
       path: "/avoidances/:aKey",
       name: "avoidanceDetail",
+      meta: { needsBreakData: true },
       component: loadHomeView,
     },
     {
       path: "/attack-tools/:atKey",
       name: "attackToolDetail",
+      meta: { needsBreakData: true },
       component: loadHomeView,
     },
     {
       path: "/threat-actors/:taKey",
       name: "threatActorDetail",
+      meta: { needsBreakData: true },
       component: loadHomeView,
     },
     {
       path: "/terms/:tKey",
       name: "termDetail",
+      meta: { needsBreakData: true },
       component: loadHomeView,
     },
     {
@@ -78,71 +70,85 @@ const router = createRouter({
     {
       path: "/business-scene/:bsKey/risks/:rKey",
       name: "businessSceneRiskDetail",
+      meta: { needsBreakData: true },
       component: loadHomeView,
     },
     {
       path: "/risks",
       name: "risks",
+      meta: { needsBreakData: true },
       component: () => import("@/views/RisksView.vue"),
     },
     {
       path: "/risks/detail/:rKey",
       name: "risksDetail",
+      meta: { needsBreakData: true },
       component: () => import("@/views/RisksView.vue"),
     },
     {
       path: "/avoidances",
       name: "avoidances",
+      meta: { needsBreakData: true },
       component: () => import("@/views/AvoidancesView.vue"),
     },
     {
       path: "/avoidances/detail/:aKey",
       name: "avoidancesDetail",
+      meta: { needsBreakData: true },
       component: () => import("@/views/AvoidancesView.vue"),
     },
     {
       path: "/attack-tools",
       name: "attackTools",
+      meta: { needsBreakData: true },
       component: () => import("@/views/AttackToolsView.vue"),
     },
     {
       path: "/attack-tools/detail/:atKey",
       name: "attackToolsDetail",
+      meta: { needsBreakData: true },
       component: () => import("@/views/AttackToolsView.vue"),
     },
     {
       path: "/threat-actors",
       name: "threatActors",
+      meta: { needsBreakData: true },
       component: () => import("@/views/ThreatActorsView.vue"),
     },
     {
       path: "/threat-actors/detail/:taKey",
       name: "threatActorsDetail",
+      meta: { needsBreakData: true },
       component: () => import("@/views/ThreatActorsView.vue"),
     },
     {
       path: "/terms",
       name: "terms",
+      meta: { needsBreakData: true },
       component: () => import("@/views/TermsView.vue"),
     },
     {
       path: "/terms/detail/:tKey",
       name: "termsDetail",
+      meta: { needsBreakData: true },
       component: () => import("@/views/TermsView.vue"),
     },
     {
       path: "/cases",
       name: "cases",
+      meta: { needsBreakData: true },
       component: () => import("@/views/CasesView.vue"),
     },
     {
       path: "/cases/detail/:cKey",
       name: "casesDetail",
+      meta: { needsBreakData: true },
       component: () => import("@/views/CasesView.vue"),
     },
     {
       path: "/relation/:type/:key",
       name: "relation",
+      meta: { needsBreakData: true },
       component: RelationRouteShell,
     },
     {
@@ -183,7 +189,8 @@ const router = createRouter({
 });
 
 router.beforeEach((to) => {
-  if (routesNeedFullLocaleMessages.has(String(to.name))) {
+  // 通过路由 meta 标记判断是否需要加载 BREAK 数据，无需维护硬编码路由名集合
+  if (to.meta.needsBreakData) {
     void initLocaleMessages();
   }
 

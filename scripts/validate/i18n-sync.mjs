@@ -90,11 +90,19 @@ const categories = [
 
 let hasErrors = false;
 
-function checkReferenceTranslations(issues, category, key, entity) {
+function checkReferenceTranslations(issues, category, key, entity, zhEntity) {
   if (!Object.prototype.hasOwnProperty.call(entity, "references")) return;
   if (!Array.isArray(entity.references)) {
     issues.push(`${category.name}.${key}.references 必须是数组`);
     return;
+  }
+  // 检查中英文 references 数组长度一致性，防止按索引合并时错配 title ↔ link
+  if (zhEntity && Array.isArray(zhEntity.references)) {
+    if (entity.references.length !== zhEntity.references.length) {
+      issues.push(
+        `${category.name}.${key}.references 长度不一致: 中文 ${zhEntity.references.length} 条, 英文 ${entity.references.length} 条`
+      );
+    }
   }
   entity.references.forEach((reference, index) => {
     if (!reference || typeof reference !== "object" || Array.isArray(reference)) {
@@ -133,7 +141,7 @@ function checkBusinessSceneTranslations(issues, category, key, entity) {
   }
 }
 
-function checkTranslationFields(category, enRecords) {
+function checkTranslationFields(category, enRecords, zhRecords) {
   const issues = [];
   const allowedFields = new Set(category.fields);
 
@@ -147,7 +155,9 @@ function checkTranslationFields(category, enRecords) {
       issues.push(`${category.name}.${key} 包含结构字段: ${extraFields.join(", ")}`);
     }
 
-    checkReferenceTranslations(issues, category, key, entity);
+    const zhRecord = zhRecords.get(key);
+    const zhEntity = zhRecord?.entity;
+    checkReferenceTranslations(issues, category, key, entity, zhEntity);
     if (category.businessScene) {
       checkBusinessSceneTranslations(issues, category, key, entity);
     }
@@ -160,10 +170,11 @@ for (const cat of categories) {
   const zhKeys = loadKeys(cat.zhDir);
   const enKeys = loadKeys(cat.enDir);
   const enRecords = loadRecords(cat.enDir);
+  const zhRecords = loadRecords(cat.zhDir);
 
   const missingInEn = [...zhKeys].filter((k) => !enKeys.has(k));
   const extraInEn = [...enKeys].filter((k) => !zhKeys.has(k));
-  const fieldIssues = checkTranslationFields(cat, enRecords);
+  const fieldIssues = checkTranslationFields(cat, enRecords, zhRecords);
 
   if (missingInEn.length === 0 && extraInEn.length === 0 && fieldIssues.length === 0) {
     console.log(`✅ ${cat.name}: 中英文同步 (${zhKeys.size} 条)`);

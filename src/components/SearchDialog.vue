@@ -7,10 +7,6 @@ import { useSearch, type EntityType, type SearchResult } from "@/composables/use
 import { useCases } from "@/composables/useCases";
 import { useBreakpoints } from "@/composables/useBreakpoints";
 
-import "element-plus/es/components/dialog/style/css";
-import "element-plus/es/components/input/style/css";
-import "element-plus/es/components/icon/style/css";
-
 const props = defineProps<{ modelValue: boolean }>();
 const emit = defineEmits<{ "update:modelValue": [value: boolean] }>();
 

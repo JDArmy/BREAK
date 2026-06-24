@@ -1,8 +1,4 @@
 <script lang="ts" setup>
-import "element-plus/es/components/dropdown/style/css";
-import "element-plus/es/components/dropdown-menu/style/css";
-import "element-plus/es/components/dropdown-item/style/css";
-
 import { useTheme, type ThemeMode } from "@/composables/useTheme";
 import { useI18n } from "vue-i18n";
 import { ArrowDown } from "@element-plus/icons-vue";

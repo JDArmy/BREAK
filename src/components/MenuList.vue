@@ -1,10 +1,4 @@
 <script lang="ts" setup>
-import "element-plus/es/components/menu/style/css";
-import "element-plus/es/components/menu-item/style/css";
-import "element-plus/es/components/dropdown/style/css";
-import "element-plus/es/components/dropdown-menu/style/css";
-import "element-plus/es/components/dropdown-item/style/css";
-import "element-plus/es/components/drawer/style/css";
 import "element-plus/theme-chalk/display.css";
 
 import GithubPane from "@/components/GithubPane.vue";

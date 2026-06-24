@@ -1,6 +1,6 @@
 {
   "name": "break",
-  "version": "2.23.102",
+  "version": "2.24.0",
   "private": true,
   "type": "module",
   "engines": {
@@ -9,6 +9,8 @@
   "scripts": {
     "dev": "vite",
     "build": "npm run lint && npm run type-check && npm run validate:data && npm run test && npm run test:coverage && npm run validate:schema-docs && npm run validate:home-counts && npm run export:data && npm run export:data-en && npm run export:stix && npm run export:jsonld && npm run build-only && npm run export:data-package && npm run audit:bundle:check && npm run validate:data-export && npm run validate:data-package && npm run validate:stix",
+    "build:validate": "npm run lint && npm run type-check && npm run validate:data && npm run test:coverage",
+    "build:fast": "npm run type-check && npm run validate:data && npm run export:data && npm run export:data-en && npm run export:stix && npm run export:jsonld && npm run build-only && npm run export:data-package",
     "deploy:build": "npm run export:data && npm run export:data-en && npm run export:stix && npm run export:jsonld && npm run build-only && npm run export:data-package",
     "preview": "vite preview",
     "build-only": "vite build",
