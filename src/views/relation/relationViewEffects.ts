@@ -44,6 +44,11 @@ interface SetupRelationViewEffectsOptions {
   disposeNetworkChart: () => void;
   disposeSankeyChart: () => void;
   selectedNetworkNodeId: Ref<string>;
+  renderPathExplorerSankeyChart: () => void;
+  resizePathExplorerSankeyChart: () => void;
+  updatePathExplorerSankeyTheme: () => void;
+  disposePathExplorerSankeyChart: () => void;
+  hidePathExplorerSankeyTooltip: () => void;
 }
 
 export const setupRelationViewEffects = ({
@@ -75,6 +80,11 @@ export const setupRelationViewEffects = ({
   disposeNetworkChart,
   disposeSankeyChart,
   selectedNetworkNodeId,
+  renderPathExplorerSankeyChart,
+  resizePathExplorerSankeyChart,
+  updatePathExplorerSankeyTheme,
+  disposePathExplorerSankeyChart,
+  hidePathExplorerSankeyTooltip,
 }: SetupRelationViewEffectsOptions) => {
   let hasMounted = false;
   let networkDataReady = false;
@@ -110,6 +120,7 @@ export const setupRelationViewEffects = ({
     }
     window.addEventListener("resize", resizeNetworkChart);
     window.addEventListener("resize", resizeSankeyChart);
+    window.addEventListener("resize", resizePathExplorerSankeyChart);
     document.addEventListener("pointerdown", handleGlobalPointerDown);
     hasMounted = true;
   };
@@ -142,9 +153,11 @@ export const setupRelationViewEffects = ({
   onBeforeUnmount(() => {
     window.removeEventListener("resize", resizeNetworkChart);
     window.removeEventListener("resize", resizeSankeyChart);
+    window.removeEventListener("resize", resizePathExplorerSankeyChart);
     document.removeEventListener("pointerdown", handleGlobalPointerDown);
     disposeNetworkChart();
     disposeSankeyChart();
+    disposePathExplorerSankeyChart();
   });
 
   watch(
@@ -235,6 +248,7 @@ export const setupRelationViewEffects = ({
 
       hideNetworkTooltip();
       hideSankeyTooltip();
+      hidePathExplorerSankeyTooltip();
 
       if (activeView.value === "sankey") {
         nextTick(renderSankeyChart);
@@ -269,6 +283,7 @@ export const setupRelationViewEffects = ({
   watch(isDark, () => {
     renderNetworkChart(true);
     nextTick(updateSankeyTheme);
+    nextTick(updatePathExplorerSankeyTheme);
   });
 
   watch(selectedNetworkNodeId, () => {

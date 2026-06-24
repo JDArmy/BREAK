@@ -137,6 +137,7 @@
   "relationView": {
     "network": "关系网络",
     "attackPath": "攻击路径",
+    "pathExplorer": "路径探索",
     "analysis": "分析解读",
     "perspective": {
       "label": "分析视角",
@@ -157,6 +158,21 @@
     "entityNameSuffix": "名称",
     "entityIdSuffix": "ID",
     "noAttackPath": "当前实体没有可展示的攻击路径",
+    "pathExplorerPanel": {
+      "sourceType": "起点类型",
+      "sourceEntity": "起点实体",
+      "targetType": "终点类型",
+      "targetEntity": "终点实体",
+      "maxHops": "最大跳数",
+      "maxPaths": "最大路径数",
+      "discover": "发现路径",
+      "noTarget": "请选择终点实体",
+      "noPath": "未找到从起点到终点的路径",
+      "searching": "正在搜索路径...",
+      "resultSummary": "发现 {count} 条路径",
+      "hopRange": "跳数范围 {min}~{max}",
+      "selectPlaceholder": "搜索选择..."
+    },
     "legend": "图例说明",
     "nodeDetail": "节点详情",
     "edgeDetail": "关系边详情",

@@ -16,10 +16,13 @@ const loadRelationNetworkPane = () =>
   import("@/components/relation/RelationNetworkPane.vue");
 const loadRelationNodeDetailDrawer = () =>
   import("@/components/relation/RelationNodeDetailDrawer.vue");
+const loadRelationPathExplorerPane = () =>
+  import("@/components/relation/RelationPathExplorerPane.vue");
 const RelationNetworkPane = defineAsyncComponent(loadRelationNetworkPane);
 const RelationNodeDetailDrawer = defineAsyncComponent(
   loadRelationNodeDetailDrawer
 );
+const RelationPathExplorerPane = defineAsyncComponent(loadRelationPathExplorerPane);
 
 export default defineComponent({
   name: "RelationView",
@@ -29,6 +32,7 @@ export default defineComponent({
     RelationGraphContextMenu,
     RelationGraphTouchActions,
     RelationNetworkPane,
+    RelationPathExplorerPane,
     RelationSankeyPane,
     RelationSelectorBar,
   },
@@ -208,6 +212,32 @@ export default defineComponent({
           @focus-node="focusNodeInDrawer"
           @open-node-as-root="openNodeAsRootById"
           @open-node-detail="gotoNodeDetailViewById"
+        />
+      </el-tab-pane>
+      <el-tab-pane
+        :label="$t('relationView.pathExplorer')"
+        name="pathExplorer"
+        :lazy="activeView !== 'pathExplorer'"
+      >
+        <RelationPathExplorerPane
+          :active="activeView === 'pathExplorer'"
+          :rel-type="relType"
+          :rel-key="relKey"
+          :RelationTypeMapping="RelationTypeMapping"
+          :path-explorer-sankey-data="pathExplorerSankeyData"
+          :path-explorer-has-data="pathExplorerHasData"
+          :path-explorer-chart-height="pathExplorerChartHeight"
+          :path-explorer-stats="pathExplorerStats"
+          :search-triggered="searchTriggered"
+          :searching="searching"
+          :set-path-explorer-chart-element="pathExplorerSankeyController.setSankeyChartElement"
+          @update:start-type="pathExplorerStartType = $event"
+          @update:start-key="pathExplorerStartKey = $event"
+          @update:end-type="pathExplorerEndType = $event"
+          @update:end-key="pathExplorerEndKey = $event"
+          @update:max-depth="pathExplorerMaxDepth = $event"
+          @update:max-paths="pathExplorerMaxPaths = $event"
+          @discover="discoverPaths"
         />
       </el-tab-pane>
     </el-tabs>

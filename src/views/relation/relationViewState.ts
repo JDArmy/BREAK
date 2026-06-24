@@ -7,11 +7,11 @@ import {
 import { networkLayoutOptions, networkLayoutZoom, RelationType, type NetworkLayoutMode, type SankeyNode } from "@/views/relation/relationTypes";
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;
-export type RelationViewMode = "network" | "sankey" | "analysis";
+export type RelationViewMode = "network" | "sankey" | "analysis" | "pathExplorer";
 export type SankeyLabelOverflow = "truncate" | "break";
 export type SankeyNodeAlign = "justify" | "left" | "right";
 
-export const relationViewModes = ["network", "sankey", "analysis"] as const;
+export const relationViewModes = ["network", "sankey", "analysis", "pathExplorer"] as const;
 
 export const normalizeRelationViewMode = (view: unknown, fallback: RelationViewMode): RelationViewMode =>
   typeof view === "string" && relationViewModes.includes(view as RelationViewMode)
@@ -92,6 +92,14 @@ export const createRelationViewState = ({
     relKey.value = node.entityKey;
   };
 
+  // 路径探索器状态
+  const pathExplorerStartType = ref<RelationType>(relType.value);
+  const pathExplorerStartKey = ref(relKey.value);
+  const pathExplorerEndType = ref<RelationType>(RelationType.avoidance);
+  const pathExplorerEndKey = ref("");
+  const pathExplorerMaxDepth = ref(4);
+  const pathExplorerMaxPaths = ref(10);
+
   const zoomNetworkChart = (step: number) => {
     networkState.zoom = Math.min(3, Math.max(0.12, networkState.zoom + step));
     renderNetworkChartBridge.current(true);
@@ -143,6 +151,12 @@ export const createRelationViewState = ({
     sankeyTop,
     setClearDraggedNodePositions,
     selectSankeyNode,
+    pathExplorerStartType,
+    pathExplorerStartKey,
+    pathExplorerEndType,
+    pathExplorerEndKey,
+    pathExplorerMaxDepth,
+    pathExplorerMaxPaths,
     zoomNetworkChart,
   };
 };

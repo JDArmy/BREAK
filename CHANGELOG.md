@@ -1,5 +1,19 @@
 # Change log
 
+## 2.25.0
+
+### 路径探索交互面板（P2-1）
+
+- 新增关系图谱"路径探索"tab，支持用户选择任意起点/终点实体，以桑基图展示所有发现路径
+- 支持参数调节：最大跳数（1-6）、最大路径数（1-30）
+- 复用现有 BFS 路径发现算法（`findRelationPaths`）和桑基图渲染控制器
+- 新增 `relationPathExplorerSankey.ts`：将发现路径转为桑基图 nodes/links 数据
+- 新增 `RelationPathExplorerPane.vue`：路径探索面板，包含实体选择器、参数滑块、桑基图、统计信息
+- `createSankeyChartController` 支持 `viewModeKey` 参数，允许多实例共存
+- pathExplorer tab 独立于三大分析视角系统，切换不干扰视角联动
+- 桑基图节点支持双击查看详情、右键打开操作菜单
+- 移动端响应式布局
+
 ## 2.24.0
 
 ### 架构与代码质量改进
