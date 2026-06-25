@@ -17,6 +17,7 @@ const attackToolRelationLineKeyMap = {
 export const createAttackToolRelationBuilder = (context: RelationGraphBuilderContext) => {
   const addRisk = (attackToolKey: string) => {
     const attackTool = BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools];
+    if (!attackTool) return;
 
     attackTool.directCauseRisks.forEach((riskKey) => {
       addRelationNode(context, RelationType.risk, riskKey);
@@ -29,7 +30,9 @@ export const createAttackToolRelationBuilder = (context: RelationGraphBuilderCon
   };
 
   const addAvoidance = (attackToolKey: string) => {
-    const avoidanceKeys = BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools].avoidances;
+    const attackTool = BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools];
+    if (!attackTool) return;
+    const avoidanceKeys = attackTool.avoidances;
     avoidanceKeys.forEach((avoidanceKey) => {
       addRelationNode(context, RelationType.avoidance, avoidanceKey);
       addRelationLine(context, attackToolKey, "relationLine.avoidanceMeans", avoidanceKey);
@@ -38,11 +41,14 @@ export const createAttackToolRelationBuilder = (context: RelationGraphBuilderCon
 
   const addRiskAvoidanceRelation = (attackToolKey: string) => {
     const attackTool = BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools];
+    if (!attackTool) return;
     const riskKeys = [...attackTool.directCauseRisks, ...attackTool.indirectSupportRisks];
     const avoidanceKeys = attackTool.avoidances;
 
     riskKeys.forEach((riskKey) => {
-      BREAK.risks[riskKey as keyof typeof BREAK.risks].avoidances.forEach((avoidanceKey) => {
+      const risk = BREAK.risks[riskKey as keyof typeof BREAK.risks];
+      if (!risk) return;
+      risk.avoidances.forEach((avoidanceKey) => {
         if (avoidanceKeys.includes(avoidanceKey)) {
           addRelationLine(context, riskKey, "relationLine.avoidanceMeans", avoidanceKey);
         }
@@ -73,6 +79,8 @@ export const createAttackToolRelationBuilder = (context: RelationGraphBuilderCon
   };
 
   const addThreatActorRiskRelation = (attackToolKey: string) => {
+    const attackTool = BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools];
+    if (!attackTool) return;
     const builderThreatActorKeys = Object.keys(BREAK.threatActors).filter((threatActorKey) =>
       BREAK.threatActors[threatActorKey as keyof typeof BREAK.threatActors].buildAttackTools.includes(
         attackToolKey as never
@@ -83,7 +91,6 @@ export const createAttackToolRelationBuilder = (context: RelationGraphBuilderCon
         attackToolKey as never
       )
     );
-    const attackTool = BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools];
     const riskKeys = [...attackTool.directCauseRisks, ...attackTool.indirectSupportRisks];
 
     builderThreatActorKeys.forEach((threatActorKey) => {
@@ -123,8 +130,9 @@ export const createAttackToolRelationBuilder = (context: RelationGraphBuilderCon
   };
 
   const addRelatedAttackTool = (attackToolKey: string) => {
-    const relatedAttackTools =
-      BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools].relatedAttackTools ?? [];
+    const attackTool = BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools];
+    if (!attackTool) return;
+    const relatedAttackTools = attackTool.relatedAttackTools ?? [];
     relatedAttackTools.forEach(({ key, relation }) => {
       if (!(key in BREAK.attackTools)) return;
       addRelationNode(context, RelationType.attackTool, key, { isRelatedEntity: true });

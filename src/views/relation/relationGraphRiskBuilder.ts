@@ -16,7 +16,9 @@ const riskRelationLineKeyMap = {
 
 export const createRiskRelationBuilder = (context: RelationGraphBuilderContext) => {
   const addAvoidance = (riskKey: string) => {
-    const avoidanceKeys = BREAK.risks[riskKey as keyof typeof BREAK.risks].avoidances;
+    const risk = BREAK.risks[riskKey as keyof typeof BREAK.risks];
+    if (!risk) return;
+    const avoidanceKeys = risk.avoidances;
     avoidanceKeys.forEach((avoidanceKey) => {
       addRelationNode(context, RelationType.avoidance, avoidanceKey);
       addRelationLine(context, riskKey, "relationLine.avoidanceMeans", avoidanceKey);
@@ -42,7 +44,9 @@ export const createRiskRelationBuilder = (context: RelationGraphBuilderContext) 
   };
 
   const addAvoidanceAttackToolRelation = (riskKey: string) => {
-    const avoidanceKeys = BREAK.risks[riskKey as keyof typeof BREAK.risks].avoidances;
+    const risk = BREAK.risks[riskKey as keyof typeof BREAK.risks];
+    if (!risk) return;
+    const avoidanceKeys = risk.avoidances;
     const attackToolKeys = Object.keys(BREAK.attackTools).filter((attackToolKey) => {
       const attackTool = BREAK.attackTools[attackToolKey as keyof typeof BREAK.attackTools];
       return (
@@ -116,8 +120,9 @@ export const createRiskRelationBuilder = (context: RelationGraphBuilderContext) 
   };
 
   const addRelatedRisk = (riskKey: string) => {
-    const relatedRisks =
-      BREAK.risks[riskKey as keyof typeof BREAK.risks].relatedRisks ?? [];
+    const risk = BREAK.risks[riskKey as keyof typeof BREAK.risks];
+    if (!risk) return;
+    const relatedRisks = risk.relatedRisks ?? [];
     relatedRisks.forEach(({ key, relation }) => {
       if (!(key in BREAK.risks)) return;
       addRelationNode(context, RelationType.risk, key, { isRelatedEntity: true });

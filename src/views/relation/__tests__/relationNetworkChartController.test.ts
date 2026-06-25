@@ -316,7 +316,7 @@ describe("relationNetworkChartController", () => {
     const formatter = latestOption(chart).tooltip?.formatter;
     expect(
       formatter?.({ dataType: "node", data: unsafeNode }),
-    ).toBe("第一行<br><script>alert(1)</script>");
+    ).toBe('第一行<br><script>alert(1)</script><br><span style="opacity:.6;font-size:11px;">t:relationView.doubleClickToView</span>');
     const edgeHtml = formatter?.({ dataType: "edge", data: link }) ?? "";
     expect(edgeHtml).toContain("&lt;script&gt;alert(1)&lt;/script&gt;");
     expect(edgeHtml).toContain("review &lt;required&gt;");

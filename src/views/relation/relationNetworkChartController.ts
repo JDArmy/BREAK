@@ -365,7 +365,8 @@ export const createNetworkChartController = ({
             data?: GraphNode | GraphLink;
           }) => {
             if (params.dataType === "node") {
-              return (params.data as GraphNode).text.replace(/\n/g, "<br>");
+              const nodeText = (params.data as GraphNode).text.replace(/\n/g, "<br>");
+              return `${nodeText}<br><span style="opacity:.6;font-size:11px;">${escapeTooltipHtml(t("relationView.doubleClickToView"))}</span>`;
             }
             if (params.dataType === "edge") {
               const link = params.data as GraphLink;

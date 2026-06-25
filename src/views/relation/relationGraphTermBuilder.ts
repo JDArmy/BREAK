@@ -76,6 +76,7 @@ export const createTermRelationBuilder = (
 ) => {
   const addRelatedEntities = (termKey: string) => {
     const term = BREAK.terms[termKey as keyof typeof BREAK.terms];
+    if (!term) return;
 
     (Object.keys(termRelationConfig) as TermRelationField[]).forEach(
       (field) => {

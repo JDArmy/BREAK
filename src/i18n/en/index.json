@@ -284,7 +284,7 @@
     "relatedEntitySummary": "This node has {count} related {type} entities of the same type.",
     "hiddenRelatedEntityCount": "{count} more related entities are hidden. Show more.",
     "collapseRelatedEntityCount": "Collapse related entities and show the first 6 only.",
-    "focusNode": "Focus Node",
+    "focusNode": "View Node Details",
     "businessSceneImpactBlockTitle": "Business Scene Impact",
     "businessSceneImpactTitle": "Business scenes linked to \"{title}\"",
     "businessSceneImpactSummary": "Covers {businessScenes} business scenes across {dimensions} business dimensions.",
@@ -447,6 +447,7 @@
       "riskToAvoidance": "Defensive meaning: this avoidance measure is the direct mitigation candidate for the path."
     },
     "pathCount": "Related Path Count",
+    "doubleClickToView": "Double-click to view node details",
     "evidenceLevel": {
       "direct": "Direct Evidence",
       "indirect": "Indirect Evidence",

@@ -198,6 +198,7 @@ export const createSankeyChartController = ({
                 params.data?.displayName ?? params.name ?? params.data?.name ?? "",
               ),
               `${t("relationView.pathCount")}: ${value}`,
+              `<span style="opacity:.6;font-size:11px;">${t("relationView.doubleClickToView")}</span>`,
             ].join("<br>");
           },
         },

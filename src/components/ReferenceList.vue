@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import BREAK from "@/BREAK";
 import { useSafeI18n } from "@/composables/useSafeI18n";
-import { TopRight } from "@element-plus/icons-vue";
+import { Link } from "@element-plus/icons-vue";
 import { computed } from "vue";
 
 const { safeT } = useSafeI18n();
@@ -37,7 +37,7 @@ function getRefTitle(index: number): string {
       <span class="reference-bullet">•</span>
       <a v-if="ref.link" :href="ref.link" target="_blank" rel="noopener noreferrer" class="reference-link">
         <span class="reference-link-text">{{ getRefTitle(index) }}</span>
-        <el-icon class="reference-link-icon" aria-hidden="true"><TopRight /></el-icon>
+        <el-icon class="reference-link-icon" aria-hidden="true"><Link /></el-icon>
       </a>
       <span v-else class="reference-text">{{ getRefTitle(index) }}</span>
     </div>

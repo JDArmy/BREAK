@@ -312,13 +312,13 @@ describe("relationSankeyChartController", () => {
         name: "风险",
         value: 3,
       }),
-    ).toBe("风险<br>t:relationView.pathCount: 3");
+    ).toBe('风险<br>t:relationView.pathCount: 3<br><span style="opacity:.6;font-size:11px;">t:relationView.doubleClickToView</span>');
     expect(
       formatter?.({
         dataType: "node",
         data: { name: "备用节点", value: 4 },
       }),
-    ).toBe("备用节点<br>t:relationView.pathCount: 4");
+    ).toBe('备用节点<br>t:relationView.pathCount: 4<br><span style="opacity:.6;font-size:11px;">t:relationView.doubleClickToView</span>');
   });
 
   it("opens node details and action menus from chart events", async () => {

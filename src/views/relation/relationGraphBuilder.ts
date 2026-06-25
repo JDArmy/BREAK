@@ -121,7 +121,7 @@ export const createRelationGraphBuilder = ({
     draggedNodePositions.value = {};
   };
 
-  const addRootNode = () => {
+  const addRootNode = (): boolean => {
     const breakItemAttr =
       RelationTypeMapping[relType.value as keyof typeof RelationTypeMapping];
     const items = BREAK[breakItemAttr.BreakKey as keyof typeof BREAK];
@@ -134,7 +134,7 @@ export const createRelationGraphBuilder = ({
         duration: 2200,
         grouping: true,
       });
-      return;
+      return false;
     }
 
     nodes.push({
@@ -143,6 +143,7 @@ export const createRelationGraphBuilder = ({
       text: getGraphNodeText(breakItemAttr.relType, relKey.value),
       color: "",
     } as Node);
+    return true;
   };
 
   const builderContext: RelationGraphBuilderContext = {
@@ -172,7 +173,8 @@ export const createRelationGraphBuilder = ({
     totalLineType.value.splice(0, totalLineType.value.length);
     nodes.splice(0, nodes.length);
     lines.splice(0, lines.length);
-    addRootNode();
+    const success = addRootNode();
+    if (!success) return;
     genNetworkGraphData(RelationType.all, relType.value, relKey.value, options);
   }
 

@@ -2,7 +2,7 @@
 import { computed, ref, watch } from "vue";
 import { useRoute } from "vue-router";
 import { useI18n } from "vue-i18n";
-import { TopRight } from "@element-plus/icons-vue";
+import { Link } from "@element-plus/icons-vue";
 import KnowledgeSplitView from "@/components/KnowledgeSplitView.vue";
 import EntityLinkSection from "@/components/EntityLinkSection.vue";
 import { useCases } from "@/composables/useCases";
@@ -190,7 +190,7 @@ watch(selectedCategory, () => {
               class="reference-link"
             >
               <span class="reference-link-text">{{ ref.title }}</span>
-              <el-icon class="reference-link-icon" aria-hidden="true"><TopRight /></el-icon>
+              <el-icon class="reference-link-icon" aria-hidden="true"><Link /></el-icon>
             </a>
             <span v-else class="reference-text">{{ ref.title }}</span>
           </div>

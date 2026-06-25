@@ -39,8 +39,9 @@ export const createAvoidanceRelationBuilder = (context: RelationGraphBuilderCont
   };
 
   const addRelatedAvoidance = (avoidanceKey: string) => {
-    const relatedAvoidances =
-      BREAK.avoidances[avoidanceKey as keyof typeof BREAK.avoidances].relatedAvoidances ?? [];
+    const avoidance = BREAK.avoidances[avoidanceKey as keyof typeof BREAK.avoidances];
+    if (!avoidance) return;
+    const relatedAvoidances = avoidance.relatedAvoidances ?? [];
     relatedAvoidances.forEach(({ key, relation }) => {
       if (!(key in BREAK.avoidances)) return;
       addRelationNode(context, RelationType.avoidance, key, { isRelatedEntity: true });
