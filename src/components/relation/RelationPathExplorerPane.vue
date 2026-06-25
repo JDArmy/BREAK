@@ -103,7 +103,11 @@ watch(startType, () => {
   startBuildTimer = setTimeout(rebuildStartOptions, 50);
 });
 
+// 标记：初始化阶段不清空 endKey（从 URL 恢复时保留已设定的值）
+let isInitializing = true;
+
 watch(endType, () => {
+  if (isInitializing) return;
   endKey.value = "";
   if (endBuildTimer) clearTimeout(endBuildTimer);
   endBuildTimer = setTimeout(() => {
@@ -119,6 +123,8 @@ watch(endType, () => {
 onMounted(() => {
   rebuildStartOptions();
   rebuildEndOptions();
+  // 初始化完成后，后续 endType 变更才清空 endKey
+  isInitializing = false;
 });
 
 onUnmounted(() => {

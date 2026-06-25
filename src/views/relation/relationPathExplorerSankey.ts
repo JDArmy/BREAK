@@ -117,20 +117,51 @@ const pathsToSankeyData = (
   RelationTypeMapping: ReturnType<typeof createRelationTypeMapping>,
   getNodeType: (id: string) => RelationEntityType,
 ) => {
+  // 所有路径都是 startId → ... → endId，但因为无向图搜索，
+  // 同一节点可能在不同路径中出现在不同深度。
+  // 策略：收集所有有向边（按路径方向），用 BFS 从起点确定层级，确保 DAG。
+
+  const startId = paths[0]?.startId;
+  if (!startId) return { nodes: [] as SankeyNode[], links: [] as SankeyLink[] };
+
+  // 收集每条路径中相邻步骤构成的有向边
+  const directedEdges = new Map<string, Set<string>>();
+  for (const path of paths) {
+    let prev = path.startId;
+    for (const step of path.steps) {
+      if (!directedEdges.has(prev)) directedEdges.set(prev, new Set());
+      directedEdges.get(prev)!.add(step.toId);
+      prev = step.toId;
+    }
+  }
+
+  // BFS 从起点确定层级（最短路径深度）——保证起点在最左，终点在最右
+  const depthMap = new Map<string, number>();
+  depthMap.set(startId, 0);
+  const queue = [startId];
+  let qi = 0;
+  while (qi < queue.length) {
+    const curr = queue[qi++];
+    const currDepth = depthMap.get(curr)!;
+    const neighbors = directedEdges.get(curr);
+    if (!neighbors) continue;
+    for (const next of neighbors) {
+      if (!depthMap.has(next)) {
+        depthMap.set(next, currDepth + 1);
+        queue.push(next);
+      }
+    }
+  }
+
+  // 构建桑基节点和链接
   const nodeMap = new Map<string, SankeyNode>();
   const linkMap = new Map<string, SankeyLink>();
 
-  const addNode = (key: string, depth: number) => {
-    const existing = nodeMap.get(key);
-    if (existing) {
-      // 取最大 depth——让节点尽量靠右，避免短路径把中间节点拉到起点附近
-      if (depth > (existing.depth ?? -1)) {
-        existing.depth = depth;
-      }
-      return existing.name;
-    }
+  const ensureNode = (key: string) => {
+    if (nodeMap.has(key)) return nodeMap.get(key)!.name;
     const type = getNodeType(key);
     const name = getSankeyNodeName(type, key);
+    const depth = depthMap.get(key) ?? 0;
     nodeMap.set(key, {
       name,
       depth,
@@ -143,25 +174,19 @@ const pathsToSankeyData = (
     return name;
   };
 
-  const addLink = (source: string, target: string) => {
-    const linkKey = `${source}->${target}`;
-    const existing = linkMap.get(linkKey);
-    if (existing) {
-      existing.value += 1;
-    } else {
-      linkMap.set(linkKey, { source, target, value: 1 });
-    }
-  };
-
-  for (const path of paths) {
-    const startName = addNode(path.startId, 0);
-    let prevName = startName;
-
-    for (let i = 0; i < path.steps.length; i++) {
-      const step = path.steps[i];
-      const nodeName = addNode(step.toId, i + 1);
-      addLink(prevName, nodeName);
-      prevName = nodeName;
+  // 只添加从低 depth 到高 depth 的 link（确保 DAG，无环）
+  for (const [from, toSet] of directedEdges) {
+    const fromName = ensureNode(from);
+    const fromDepth = depthMap.get(from) ?? 0;
+    for (const to of toSet) {
+      const toDepth = depthMap.get(to) ?? 0;
+      if (fromDepth < toDepth) {
+        const toName = ensureNode(to);
+        const linkKey = `${fromName}->${toName}`;
+        if (!linkMap.has(linkKey)) {
+          linkMap.set(linkKey, { source: fromName, target: toName, value: 1 });
+        }
+      }
     }
   }
 
@@ -228,6 +253,7 @@ export const createRelationPathExplorerSankey = ({
     () => {
       runSearch();
     },
+    { immediate: true },
   );
 
   const hasTarget = computed(() => Boolean(endKey.value));
