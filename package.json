@@ -1,6 +1,6 @@
 {
   "name": "break",
-  "version": "2.25.43",
+  "version": "2.25.44",
   "private": true,
   "type": "module",
   "engines": {
@@ -97,7 +97,7 @@
     "typescript": "^5.8.0",
     "unplugin-auto-import": "^19.0.0",
     "unplugin-vue-components": "^28.0.0",
-    "vite": "^8.0.16",
+    "vite": "^8.1.0",
     "vitest": "^4.1.8",
     "vue-tsc": "^2.1.10"
   }
