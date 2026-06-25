@@ -47,6 +47,7 @@ const primaryDomainSuffixes = [
   'fjcdi.gov.cn',
   'faxin.cn',
   'sichuanpeace.gov.cn',
+  'suiningpeace.gov.cn',
   'cdgaj.chengdu.gov.cn',
   'gat.guizhou.gov.cn',
   'gaj.ningbo.gov.cn',
@@ -345,6 +346,7 @@ const primaryReferenceLinks = new Set([
   'https://www.zhongyuan.gov.cn/rdhy/9581840.jhtml', // 政府门户转载抖音黑板报官方治理公示
   'http://putian.pafj.net/caw/f/10/view-225-766722.html', // 莆田长安网检察院栏目，中共莆田市委政法委员会主办
   'https://www.msxf.com/news/xwxq/1326', // 马上消费金融官网，反催收团伙协查公告
+  'https://news.qq.com/rain/a/20260402a067vo00', // 腾讯新闻承载《三角洲行动》官方账号安全公告
   'https://x.com/alvierid/status/1999403353466421320', // 安全研究人员原始披露
   'https://xz.aliyun.com/news/13288', // 作者原始漏洞复盘
   'https://xz.aliyun.com/news/14031', // 作者原始云存储接管复盘
