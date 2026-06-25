@@ -514,7 +514,7 @@ export const createRelationViewAssembly = ({
   // 不再依赖网络图局部 lines（局部 lines 仅含根节点 1 跳邻域，非邻域节点会显示 0 关系）。
   // 其余视角沿用 graphData 基于局部 lines 的原值。
   const mergedSelectedNodeAnalysisSummary = computed(() => {
-    if (activeView.value !== "pathExplorer") {
+    if (useLocalGraphData()) {
       return graphData.selectedNodeAnalysisSummary.value;
     }
     const node = graphData.selectedNetworkNode.value;
@@ -528,8 +528,13 @@ export const createRelationViewAssembly = ({
       selectedNodeDiscoveredPaths: graphData.selectedNodeDiscoveredPaths.value,
     });
   });
+  // 节点详情：network/analysis 视图有局部图数据，可直接读 graphData；
+  // sankey/pathExplorer 视图不构建 network 数据（lines 为空），改用全局 BREAK 关系。
+  const useLocalGraphData = () =>
+    activeView.value === "network" || activeView.value === "analysis";
+
   const mergedSelectedNetworkRelations = computed(() => {
-    if (activeView.value !== "pathExplorer") {
+    if (useLocalGraphData()) {
       return graphData.selectedNetworkRelations.value;
     }
     const node = graphData.selectedNetworkNode.value;
@@ -548,7 +553,7 @@ export const createRelationViewAssembly = ({
     });
   });
   const mergedSelectedNetworkRelationCounts = computed(() => {
-    if (activeView.value !== "pathExplorer") {
+    if (useLocalGraphData()) {
       return graphData.selectedNetworkRelationCounts.value;
     }
     const node = graphData.selectedNetworkNode.value;
@@ -556,7 +561,7 @@ export const createRelationViewAssembly = ({
     return buildGlobalNodeRelationCounts(node.id, getGlobalLines());
   });
   const mergedSelectedNodeRelatedEntitySummary = computed(() => {
-    if (activeView.value !== "pathExplorer") {
+    if (useLocalGraphData()) {
       return graphData.selectedNodeRelatedEntitySummary.value;
     }
     const node = graphData.selectedNetworkNode.value;
