@@ -1,25 +1,25 @@
 {
   "C0376": {
-    "title": "大量博主因《星空》钓鱼邮件被骗：骗子伪装开发者盗号",
+    "title": "Google TAG 披露针对 YouTube 创作者的钓鱼与 Cookie 窃取攻击",
     "keywords": [
       "钓鱼邮件",
       "账号盗取",
       "YouTube",
-      "Starfield",
-      "游戏博主",
-      "伪装开发者",
-      "凭证窃取",
+      "Google TAG",
+      "Cookie窃取",
+      "假合作邀约",
+      "恶意软件",
       "社交工程"
     ],
-    "summary": "不法分子利用玩家对游戏《星空》的期待，伪装成Starfield开发人员，向YouTube游戏博主发起大规模钓鱼攻击，通过钓鱼邮件盗取博主们的油管账户。该事件展示了以伪装身份方式骗取登录凭证的典型账号盗取手法。",
+    "summary": "Google Threat Analysis Group 披露，自2019年以来，攻击者持续以财务获利为目的针对 YouTube 创作者发起钓鱼活动，伪装成软件、游戏或合作机会诱导目标下载带有 Cookie 窃取能力的恶意软件，用于劫持 YouTube 频道。Google 表示已识别约15000个攻击者账号和1011个相关域名，并拦截约160万封钓鱼邮件。",
     "category": "security_incident",
     "relatedRisks": [
       "R0032"
     ],
     "references": [
       {
-        "title": "大量博主因《星空》钓鱼邮件被骗!骗子伪装成开发者来盗号_游戏...",
-        "link": "https://m.sohu.com/a/676539529_121124836"
+        "title": "Phishing campaign targets YouTube creators with cookie theft malware",
+        "link": "https://blog.google/threat-analysis-group/phishing-campaign-targets-youtube-creators-cookie-theft-malware/"
       }
     ],
     "updated": "2026-06-18",

@@ -1,20 +1,20 @@
 {
   "C0376": {
-    "title": "Phishing Campaign Targeting YouTubers with Fake Starfield Developer Emails",
+    "title": "Google TAG Discloses Phishing and Cookie Theft Campaign Targeting YouTube Creators",
     "keywords": [
       "phishing email",
       "account takeover",
       "YouTube",
-      "Starfield",
-      "gaming creator",
-      "developer impersonation",
-      "credential theft",
+      "Google TAG",
+      "cookie theft",
+      "fake collaboration offer",
+      "malware",
       "social engineering"
     ],
-    "summary": "Attackers exploited anticipation for the game Starfield by posing as its developers, launching a large-scale phishing attack against YouTube gaming creators. The campaign used phishing emails to steal their YouTube accounts, demonstrating a typical account takeover technique that uses impersonation to obtain login credentials.",
+    "summary": "Google Threat Analysis Group disclosed that, since 2019, financially motivated attackers have targeted YouTube creators with phishing campaigns. The attackers impersonated software, games, or collaboration opportunities to trick targets into downloading malware capable of stealing cookies, which were then used to hijack YouTube channels. Google said it identified about 15,000 actor accounts and 1,011 related domains, and blocked around 1.6 million phishing messages.",
     "references": [
       {
-        "title": "Numerous bloggers scammed by Starfield phishing email; fraudsters impersonate developers to steal accounts - Gaming"
+        "title": "Phishing campaign targets YouTube creators with cookie theft malware"
       }
     ]
   }

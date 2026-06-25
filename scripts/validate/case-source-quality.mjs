@@ -112,6 +112,7 @@ const primaryDomainSuffixes = [
   'appsflyer.com',
   'fraudlogix.com',
   'adguard.com',
+  'blog.google',
   'chromewebstore.google.com',
   'peerj.com',
   'att.com',
