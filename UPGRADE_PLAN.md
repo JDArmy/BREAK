@@ -7,7 +7,7 @@
 
 ## 0. 当前未完成短板
 
-1. **内容与引用治理仍需闭环**：review 152 + timeout 150 + connection_error 66 条问题链接仍需按域名策略分批复核；高价值案例 primary source 覆盖率为 76.83%（250 个缺口），其中 criminal_verdict 类仍是最大短板。
+1. **内容与引用治理仍需闭环**：review 152 + timeout 150 + connection_error 66 条问题链接仍需按域名策略分批复核；高价值案例 primary source 覆盖率为 76.92%（249 个缺口），其中 criminal_verdict 类仍是最大短板。
 2. **可视化推理能力仍可深化**：缺少完整路径发现交互面板（算法已完成，UI 未实现）；业务场景图谱仅有影响分析模块，独立图谱未开发。
 
 ## 1. 执行原则
@@ -43,11 +43,11 @@
 
 目标：让核心案例优先具备可信 primary source，避免用全量多源率作为低收益 KPI。
 
-已完成：审计工具链已建成（`case-source-quality.mjs`），可按类别统计高价值案例 primary 覆盖率；当前全量覆盖率 65.33%，高价值覆盖率 76.83%，并已将 `view.inews.qq.com` 归入 secondary 来源以减少 unknown 噪声。
+已完成：审计工具链已建成（`case-source-quality.mjs`），可按类别统计高价值案例 primary 覆盖率；当前全量覆盖率 65.39%，高价值覆盖率 76.92%，并已将 `view.inews.qq.com` 归入 secondary 来源以减少 unknown 噪声。
 
 未完成工作：
-- 高价值 1,079 案例中 250 个缺 primary source。按类别分批补源：
-  - `criminal_verdict`：65.22%（208 个缺口，最大短板），优先法院、检察院、公安、监管通报。
+- 高价值 1,079 案例中 249 个缺 primary source。按类别分批补源：
+  - `criminal_verdict`：65.38%（207 个缺口，最大短板），优先法院、检察院、公安、监管通报。
   - `administrative_enforcement`：87.65%（20 个缺口），优先各级市场监管局、网信办官网。
   - `security_incident`：91.67%（21 个缺口），优先厂商公告、官方通报和原始研究。
   - `vulnerability_advisory`：98.51%（1 个缺口）— 已较好。
