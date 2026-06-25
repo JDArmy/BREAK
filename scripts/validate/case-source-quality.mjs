@@ -280,10 +280,13 @@ const mirrorDomainSuffixes = ['mp.weixin.qq.com', 'm.gmw.cn', 'toutiao.com', 'we
 const primaryReferenceLinks = new Set([
   'https://web.archive.org/web/20180221031903/https://blog.redlock.io/cryptojacking-tesla', // RedLock CSI Team 原始研究存档
   'https://www.douyin.com/video/7646680404434504998', // 抖音黑板报官方治理公告
+  'https://www.xinhuanet.com/politics/2016-12/20/c_1120149364.htm', // 新华网转载法院审理结果，高校学生利用境外隐藏网络传播儿童淫秽视频案
   'https://m.thepaper.cn/newsdetail_forward_20536442', // 上海市第二中级人民法院官方澎湃号
   'https://m.thepaper.cn/newsdetail_forward_6016636', // 汾阳市市场监管局政务通报
   'https://m.thepaper.cn/newsdetail_forward_31179929', // 敦化市人民法院官方澎湃号
   'https://m.thepaper.cn/newsdetail_forward_33183066', // 夏都西宁官方澎湃号，来源青海省公安厅
+  'https://news.ijjnews.com/system/2023/08/15/030131845.shtml', // 晋江新闻网法院通讯员稿，丰泽法院“呼死你”软件产业链案
+  'https://www.sznews.com/news/content/2021-08/28/content_24522078.htm', // 深圳公安发布托管页，福田警方打击涉诈手机黑卡产业链
   'https://news.qq.com/rain/a/20250312A0885900', // 警民直通车上海官方托管页，点餐优惠券漏洞案
   'https://news.qq.com/rain/a/20260614a04mdv00', // 上海静安官方托管页，七天无理由退货掉包案
   'https://news.cctv.com/2026/06/18/arti1im1sqmvqzkv04azh5w5260618.shtml', // 央视网转载平安北京/朝阳分局调包退货案
