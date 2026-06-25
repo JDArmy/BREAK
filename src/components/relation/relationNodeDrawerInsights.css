@@ -85,6 +85,16 @@
   color: var(--break-text-primary);
 }
 
+.node-analysis-chip-link-icon {
+  margin-left: 3px;
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.node-analysis-chip-button:hover .node-analysis-chip-link-icon {
+  opacity: 1;
+}
+
 .node-analysis-notices {
   display: flex;
   flex-direction: column;

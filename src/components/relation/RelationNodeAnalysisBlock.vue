@@ -1,15 +1,16 @@
 <script setup lang="ts">
 import { useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
+import { TopRight } from "@element-plus/icons-vue";
 import type { NodeAnalysisSummary } from "@/components/relation/relationNodeDrawerInsightTypes";
 import { RelationType } from "@/views/relation/relationTypes";
 import {
-  pushDetailNodeRouteWithAnchor,
+  openDetailNodeRouteInNewWindow,
   type DetailNodeAnchor,
 } from "@/views/relation/relationNodeRouting";
 import "@/components/relation/relationNodeDrawerInsights.css";
 
-const props = defineProps<{
+defineProps<{
   summary: NodeAnalysisSummary | null;
   selectedNodeType: string;
   selectedNodeId: string;
@@ -26,23 +27,20 @@ const detailAnchorByType: Partial<Record<RelationType, DetailNodeAnchor>> = {
   [RelationType.term]: "terms",
 };
 
-const openSelectedNodeDetail = (relatedType: string) => {
-  if (
-    props.selectedNodeType !== RelationType.risk &&
-    props.selectedNodeType !== RelationType.avoidance &&
-    props.selectedNodeType !== RelationType.attackTool &&
-    props.selectedNodeType !== RelationType.threatActor &&
-    props.selectedNodeType !== RelationType.term
-  ) {
+const isSupportedType = (type: string): type is RelationType =>
+  type === RelationType.risk ||
+  type === RelationType.avoidance ||
+  type === RelationType.attackTool ||
+  type === RelationType.threatActor ||
+  type === RelationType.term;
+
+// 点击关联类型 chip：新窗口打开该类型下首个关联实体的详情页
+const openRelatedDetailInNewWindow = (relatedType: string, ids: string[]) => {
+  if (!isSupportedType(relatedType) || ids.length === 0) {
     return;
   }
-  const detailAnchor = detailAnchorByType[relatedType as RelationType];
-  void pushDetailNodeRouteWithAnchor(
-    router,
-    props.selectedNodeType as RelationType,
-    props.selectedNodeId,
-    detailAnchor ?? "risks"
-  );
+  const detailAnchor = detailAnchorByType[relatedType];
+  openDetailNodeRouteInNewWindow(router, relatedType, ids[0]!, detailAnchor);
 };
 </script>
 
@@ -59,9 +57,11 @@ const openSelectedNodeDetail = (relatedType: string) => {
           :key="`${highlight.type}:${highlight.ids.join(',')}`"
           type="button"
           class="node-analysis-chip node-analysis-chip-button"
-          @click="openSelectedNodeDetail(highlight.type)"
+          :title="t('viewDetail')"
+          @click="openRelatedDetailInNewWindow(highlight.type, highlight.ids)"
         >
-          {{ highlight.label }}
+          <span>{{ highlight.label }}</span>
+          <el-icon class="node-analysis-chip-link-icon"><TopRight /></el-icon>
         </button>
       </div>
       <div v-if="summary.notices.length" class="node-analysis-notices">
