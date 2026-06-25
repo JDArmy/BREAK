@@ -1,5 +1,13 @@
 # Change log
 
+## 2.27.1
+
+工程质量修复：JSON 重复 key 检测 & VSCode 类型提示修复
+
+- 新增 `eslint-plugin-jsonc`，ESLint 覆盖 `.json` 文件并启用 `jsonc/no-dupe-keys` 规则，`npm run lint` / `npm run build` 可自动检测 JSON 重复 key
+- 修复中英文 i18n 文件（`src/i18n/zh-CN/index.json`、`src/i18n/en/index.json`）中 `relationView` 下 5 组重复 key（`evidenceLevel`、`relationExplanation`、`relationImpact`、`qualityFlagReview`、`qualityFlagMissingSource`），保留更完整的版本
+- 补充 `env.d.ts` 中 `*.vue` 模块类型声明，修复 VSCode 报 `ts(2307) 找不到模块` 的问题
+
 ## 2.27.0
 
 全站路由/链接结构统一重构，URL 语义更清晰、关系图视角参数不再串扰：

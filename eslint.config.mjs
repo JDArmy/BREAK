@@ -1,6 +1,7 @@
 import pluginVue from "eslint-plugin-vue";
 import vueTsEslintConfig from "@vue/eslint-config-typescript";
 import skipFormatting from "@vue/eslint-config-prettier/skip-formatting";
+import pluginJsonc from "eslint-plugin-jsonc";
 
 export default [
   {
@@ -23,4 +24,14 @@ export default [
   ...pluginVue.configs["flat/essential"],
   ...vueTsEslintConfig(),
   skipFormatting,
+
+  // JSON 文件检查：检测重复 key 等问题
+  ...pluginJsonc.configs["flat/recommended-with-json"],
+  {
+    name: "app/json-strict",
+    files: ["**/*.json"],
+    rules: {
+      "jsonc/no-dupe-keys": "error",
+    },
+  },
 ];
