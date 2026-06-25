@@ -287,6 +287,11 @@ const primaryReferenceLinks = new Set([
   'https://news.qq.com/rain/a/20250312A0885900', // 警民直通车上海官方托管页，点餐优惠券漏洞案
   'https://news.qq.com/rain/a/20260614a04mdv00', // 上海静安官方托管页，七天无理由退货掉包案
   'https://news.cctv.com/2026/06/18/arti1im1sqmvqzkv04azh5w5260618.shtml', // 央视网转载平安北京/朝阳分局调包退货案
+  'https://www.chinaums.com/tblm/aqzx2/djzldxwlzp_1905/jbzspj_1904/202209/t20220906_45358.shtml', // 银联商务转载中国支付清算协会跨境赌博资金转移案例
+  'https://m.cyol.com/gb/articles/2021-10/17/content_xyzgdfvxp.html', // 中国青年报客户端来源江都警方，商户收款码非法套现案
+  'https://m.thepaper.cn/newsdetail_forward_30782061', // 乌兰浩特市人民法院官方澎湃号，伪造国家机关印章案
+  'https://pubg.qq.com/webplat/info/news_version3/33247/33250/33268/33270/m19999/201804/713383.shtml', // 腾讯《绝地求生》官方公告，外挂黑产团伙案
+  'https://zzky.shandong-energy.com/185709/185711/2024/04/32388212.html', // 山东能源枣矿集团官网转载枣西公安微信公众号，虚假招聘诈骗团伙案
   'https://m.gmw.cn/2023-04/12/content_1303339963.htm', // 光明网托管温州市中级人民法院/龙湾法院案例
   'https://www.thepaper.cn/newsdetail_forward_14923193', // 中国共产党武宣县委员会宣传部官方澎湃号
   'https://www.thepaper.cn/newsdetail_forward_33164885', // 云浮市中级人民法院官方澎湃号，供稿罗定法院
