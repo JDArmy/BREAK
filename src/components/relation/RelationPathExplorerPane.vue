@@ -197,7 +197,7 @@ const setRef = (el: unknown) => {
     </div>
 
     <!-- 结果区域 -->
-    <div class="path-explorer-result">
+    <div class="path-explorer-result" :class="{ 'path-explorer-result--has-chart': pathExplorerHasData && !searching }">
       <!-- 搜索中 -->
       <div v-if="searching" class="path-explorer-empty">
         {{ t("relationView.pathExplorerPanel.searching") }}
@@ -213,7 +213,7 @@ const setRef = (el: unknown) => {
         {{ t("relationView.pathExplorerPanel.noPath") }}
       </div>
 
-      <!-- 有数据：统计 + 桑基图 -->
+      <!-- 有数据：统计（sticky）+ 桑基图（可滚动） -->
       <template v-else>
         <div v-if="pathExplorerStats" class="path-explorer-stats">
           <span class="stat-item">
@@ -302,6 +302,13 @@ const setRef = (el: unknown) => {
   min-height: 200px;
 }
 
+.path-explorer-result--has-chart {
+  border: var(--break-graph-border) solid 1px;
+  background: var(--break-bg-card);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 .path-explorer-empty {
   display: flex;
   align-items: center;
@@ -312,13 +319,15 @@ const setRef = (el: unknown) => {
 }
 
 .path-explorer-stats {
+  position: sticky;
+  top: 0;
+  z-index: 2;
   display: flex;
   align-items: center;
   gap: 16px;
   padding: 8px 16px;
-  background: var(--break-bg-soft);
-  border-radius: 6px;
-  margin-bottom: 8px;
+  background: var(--break-bg-card);
+  border-bottom: 1px solid var(--break-border);
 }
 
 .stat-item {
@@ -334,7 +343,7 @@ const setRef = (el: unknown) => {
 
 .path-explorer-chart {
   width: 100%;
-  min-height: 400px;
+  min-height: 100%;
 }
 
 @media (max-width: 767px) {
@@ -359,6 +368,17 @@ const setRef = (el: unknown) => {
 
   .param-slider {
     width: 100%;
+  }
+
+  .path-explorer-result--has-chart {
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .path-explorer-chart {
+    -webkit-touch-callout: none;
+    user-select: none;
   }
 }
 </style>
