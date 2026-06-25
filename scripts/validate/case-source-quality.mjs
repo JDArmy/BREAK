@@ -288,6 +288,7 @@ const primaryReferenceLinks = new Set([
   'https://news.qq.com/rain/a/20260614a04mdv00', // 上海静安官方托管页，七天无理由退货掉包案
   'https://news.cctv.com/2026/06/18/arti1im1sqmvqzkv04azh5w5260618.shtml', // 央视网转载平安北京/朝阳分局调包退货案
   'https://m.news.cctv.com/2021/07/19/artie58rnmechoj4v8zu2jfq210719.shtml', // 央视新闻客户端，绵阳手机积分兑换诈骗案
+  'https://tv.cctv.com/2024/03/15/VIDEaISGnSjSjVaDWrZDsLbf240315.shtml', // 央视 3·15 晚会，同程金融礼品卡变相现金贷曝光
   'https://www.chinaums.com/tblm/aqzx2/djzldxwlzp_1905/jbzspj_1904/202209/t20220906_45358.shtml', // 银联商务转载中国支付清算协会跨境赌博资金转移案例
   'https://m.cyol.com/gb/articles/2021-10/17/content_xyzgdfvxp.html', // 中国青年报客户端来源江都警方，商户收款码非法套现案
   'https://m.thepaper.cn/newsdetail_forward_30782061', // 乌兰浩特市人民法院官方澎湃号，伪造国家机关印章案
@@ -361,6 +362,8 @@ const primaryReferenceLinks = new Set([
   'https://www.msxf.com/news/xwxq/1326', // 马上消费金融官网，反催收团伙协查公告
   'https://news.qq.com/rain/a/20260402a067vo00', // 腾讯新闻承载《三角洲行动》官方账号安全公告
   'https://x.com/alvierid/status/1999403353466421320', // 安全研究人员原始披露
+  'https://x.com/iloveponzi/status/1488354391401054216', // larrylawliet.eth 本人说明 Moshi Mochi Discord 被黑和假 mint 链接
+  'https://etherscan.io/address/0x6d0267156f1c6CE44Caa4BF129B76009d3d41830', // larrylawliet.eth 链上地址页面
   'https://xz.aliyun.com/news/13288', // 作者原始漏洞复盘
   'https://xz.aliyun.com/news/14031', // 作者原始云存储接管复盘
   'https://0xspade.medium.com/api-secret-key-leakage-leads-to-disclosure-of-employees-information-5ca4ce17e1ce', // 漏洞赏金猎人原始披露
