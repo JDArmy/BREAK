@@ -228,7 +228,7 @@ export default defineComponent({
           :path-explorer-has-data="pathExplorerHasData"
           :path-explorer-chart-height="pathExplorerChartHeight"
           :path-explorer-stats="pathExplorerStats"
-          :search-triggered="searchTriggered"
+          :has-target="hasTarget"
           :searching="searching"
           :set-path-explorer-chart-element="pathExplorerSankeyController.setSankeyChartElement"
           @update:start-type="pathExplorerStartType = $event"
@@ -237,7 +237,6 @@ export default defineComponent({
           @update:end-key="pathExplorerEndKey = $event"
           @update:max-depth="pathExplorerMaxDepth = $event"
           @update:max-paths="pathExplorerMaxPaths = $event"
-          @discover="discoverPaths"
         />
       </el-tab-pane>
     </el-tabs>

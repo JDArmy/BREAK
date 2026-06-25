@@ -19,7 +19,7 @@ const props = defineProps<{
   pathExplorerHasData: boolean;
   pathExplorerChartHeight: number;
   pathExplorerStats: PathExplorerStats | null;
-  searchTriggered: boolean;
+  hasTarget: boolean;
   searching: boolean;
   setPathExplorerChartElement?: (el: HTMLElement | undefined) => void;
 }>();
@@ -31,7 +31,6 @@ const emit = defineEmits<{
   "update:endKey": [value: string];
   "update:maxDepth": [value: number];
   "update:maxPaths": [value: number];
-  discover: [];
 }>();
 
 const { t } = useI18n();
@@ -122,15 +121,6 @@ const setRef = (el: unknown) => {
   chartRef.value = element;
   props.setPathExplorerChartElement?.(element);
 };
-
-// 按钮禁用状态
-const discoverDisabled = computed(
-  () => !startKey.value || !endKey.value || startKey.value === endKey.value || props.searching
-);
-
-const handleDiscover = () => {
-  emit("discover");
-};
 </script>
 
 <template>
@@ -203,15 +193,6 @@ const handleDiscover = () => {
           <label class="control-label">{{ t("relationView.pathExplorerPanel.maxPaths") }}: {{ maxPaths }}</label>
           <el-slider v-model="maxPaths" :min="1" :max="30" :step="1" size="small" class="param-slider" />
         </div>
-        <el-button
-          type="primary"
-          size="small"
-          :disabled="discoverDisabled"
-          :loading="searching"
-          @click="handleDiscover"
-        >
-          {{ t("relationView.pathExplorerPanel.discover") }}
-        </el-button>
       </div>
     </div>
 
@@ -222,8 +203,8 @@ const handleDiscover = () => {
         {{ t("relationView.pathExplorerPanel.searching") }}
       </div>
 
-      <!-- 未触发搜索 -->
-      <div v-else-if="!searchTriggered" class="path-explorer-empty">
+      <!-- 未选择终点 -->
+      <div v-else-if="!hasTarget" class="path-explorer-empty">
         {{ t("relationView.pathExplorerPanel.noTarget") }}
       </div>
 

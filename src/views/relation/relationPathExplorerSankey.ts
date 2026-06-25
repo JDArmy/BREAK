@@ -1,4 +1,4 @@
-import { computed, ref, type ComputedRef, type Ref } from "vue";
+import { computed, ref, watch, type ComputedRef, type Ref } from "vue";
 import {
   findRelationPaths,
   type DiscoveredRelationPath,
@@ -111,20 +111,10 @@ export const createRelationPathExplorerSankey = ({
   isMobile,
   RelationTypeMapping,
 }: CreatePathExplorerSankeyOptions) => {
-  // 搜索触发标志——只有用户点击"发现路径"时才触发搜索
-  const searchTriggered = ref(false);
   const searching = ref(false);
 
   // 缓存路径发现结果
   const discoveredPaths = ref<DiscoveredRelationPath[]>([]);
-
-  // 从 lines 构建节点类型查找表
-  const nodeTypeMap = computed(() => {
-    const map = new Map<string, RelationEntityType>();
-    // 从 lines 的 from/to 字段推断类型有限；使用 RelationType 前缀规则
-    // R=risk, A=avoidance, AT=attackTool, TA=threatActor, T=term
-    return map;
-  });
 
   const getNodeType = (id: string): RelationEntityType => {
     if (id.startsWith("AT")) return RelationType.attackTool;
@@ -135,19 +125,25 @@ export const createRelationPathExplorerSankey = ({
     return RelationType.risk;
   };
 
-  // 执行路径搜索
-  const discoverPaths = () => {
+  // 执行路径搜索（内部使用）
+  let searchTimer: ReturnType<typeof setTimeout> | null = null;
+  const runSearch = () => {
+    if (searchTimer) {
+      clearTimeout(searchTimer);
+      searchTimer = null;
+    }
+
     if (!startKey.value || !endKey.value || startKey.value === endKey.value) {
       discoveredPaths.value = [];
-      searchTriggered.value = true;
+      searching.value = false;
       return;
     }
 
     searching.value = true;
-    searchTriggered.value = true;
 
-    // 使用 setTimeout 避免阻塞 UI（大图搜索可能较慢）
-    setTimeout(() => {
+    // 防抖 + 异步避免阻塞 UI
+    searchTimer = setTimeout(() => {
+      searchTimer = null;
       const result = findRelationPaths({
         lines,
         startId: startKey.value,
@@ -159,12 +155,23 @@ export const createRelationPathExplorerSankey = ({
       });
       discoveredPaths.value = result;
       searching.value = false;
-    }, 0);
+    }, 150);
   };
+
+  // 监听所有影响搜索结果的参数，自动触发搜索
+  watch(
+    [startKey, endKey, maxDepth, maxPaths],
+    () => {
+      runSearch();
+    },
+  );
+
+  // 是否已选择终点（用于空状态提示）
+  const hasTarget = computed(() => Boolean(endKey.value));
 
   // 桑基图数据
   const pathExplorerSankeyData = computed(() => {
-    if (!searchTriggered.value || discoveredPaths.value.length === 0) {
+    if (discoveredPaths.value.length === 0) {
       return { nodes: [] as SankeyNode[], links: [] as SankeyLink[] };
     }
     return pathsToSankeyData(
@@ -214,15 +221,12 @@ export const createRelationPathExplorerSankey = ({
   );
 
   return {
-    discoverPaths,
     discoveredPaths,
+    hasTarget,
     pathExplorerChartHeight,
     pathExplorerHasData,
     pathExplorerSankeyData,
     pathExplorerStats,
-    searchTriggered,
     searching,
-    // 暴露 nodeTypeMap 以便调试
-    void: nodeTypeMap,
   };
 };

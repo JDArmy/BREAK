@@ -1,4 +1,4 @@
-import { computed, ref } from "vue";
+import { computed, nextTick, ref } from "vue";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { createRelationPathExplorerSankey } from "../relationPathExplorerSankey";
 import { createRelationTypeMapping, RelationType, type Line } from "../relationTypes";
@@ -20,7 +20,7 @@ const createExplorer = (options?: {
     startType: ref(RelationType.risk),
     startKey: ref(options?.startKey ?? "R0001"),
     endType: ref(RelationType.attackTool),
-    endKey: ref(options?.endKey ?? "AT0001"),
+    endKey: ref(options?.endKey ?? ""),
     maxDepth: ref(3),
     maxPaths: ref(10),
     getSankeyNodeName: (_type, key) => `node:${key}`,
@@ -34,32 +34,62 @@ describe("relationPathExplorerSankey", () => {
     vi.useFakeTimers();
   });
 
-  it("keeps sankey data empty before discovery", () => {
+  it("keeps sankey data empty when no target selected", () => {
     const explorer = createExplorer();
 
-    expect(explorer.searchTriggered.value).toBe(false);
+    expect(explorer.hasTarget.value).toBe(false);
     expect(explorer.pathExplorerHasData.value).toBe(false);
     expect(explorer.pathExplorerSankeyData.value).toEqual({ nodes: [], links: [] });
     expect(explorer.pathExplorerChartHeight.value).toBe(0);
     expect(explorer.pathExplorerStats.value).toBeNull();
   });
 
-  it("marks empty discovery when endpoints are invalid", () => {
-    const explorer = createExplorer({ startKey: "R0001", endKey: "R0001" });
+  it("returns empty when start equals end", () => {
+    const endKey = ref("R0001");
+    const explorer = createRelationPathExplorerSankey({
+      lines: [{ from: "R0001", relationKey: "x", text: "x", to: "A0001" }],
+      startType: ref(RelationType.risk),
+      startKey: ref("R0001"),
+      endType: ref(RelationType.risk),
+      endKey,
+      maxDepth: ref(3),
+      maxPaths: ref(10),
+      getSankeyNodeName: (_type, key) => `node:${key}`,
+      isMobile: computed(() => false),
+      RelationTypeMapping: relationTypeMapping,
+      getNodeIds: () => new Set(["R0001", "A0001"]),
+    });
 
-    explorer.discoverPaths();
+    // watch 触发搜索
+    vi.runAllTimers();
 
-    expect(explorer.searchTriggered.value).toBe(true);
-    expect(explorer.searching.value).toBe(false);
     expect(explorer.discoveredPaths.value).toEqual([]);
     expect(explorer.pathExplorerHasData.value).toBe(false);
   });
 
-  it("builds sankey nodes, merged links, stats, and desktop height after discovery", () => {
-    const explorer = createExplorer();
+  it("auto-discovers paths when endKey changes and builds sankey data", async () => {
+    const endKey = ref("");
+    const explorer = createRelationPathExplorerSankey({
+      lines: [
+        { from: "R0001", relationKey: "risk-avoidance", text: "关联", to: "A0001" },
+        { from: "A0001", relationKey: "avoidance-tool", text: "关联", to: "AT0001" },
+        { from: "R0001", relationKey: "risk-tool", text: "关联", to: "AT0001" },
+      ],
+      startType: ref(RelationType.risk),
+      startKey: ref("R0001"),
+      endType: ref(RelationType.attackTool),
+      endKey,
+      maxDepth: ref(3),
+      maxPaths: ref(10),
+      getSankeyNodeName: (_type, key) => `node:${key}`,
+      isMobile: computed(() => false),
+      RelationTypeMapping: relationTypeMapping,
+      getNodeIds: () => new Set(["R0001", "A0001", "AT0001"]),
+    });
 
-    explorer.discoverPaths();
-    expect(explorer.searching.value).toBe(true);
+    // 设置终点触发自动搜索
+    endKey.value = "AT0001";
+    await nextTick();
     vi.runAllTimers();
 
     expect(explorer.searching.value).toBe(false);
@@ -87,20 +117,30 @@ describe("relationPathExplorerSankey", () => {
     expect(explorer.pathExplorerChartHeight.value).toBe(400);
   });
 
-  it("uses mobile height constraints for dense path layers", () => {
+  it("uses mobile height constraints for dense path layers", async () => {
     const denseLines: Line[] = Array.from({ length: 100 }, (_, index) => ({
       from: "R0001",
       relationKey: "dense",
       text: "密集关系",
       to: `A${index.toString().padStart(4, "0")}`,
     }));
-    const explorer = createExplorer({
-      isMobile: true,
-      endKey: "A0099",
+    const endKey = ref("");
+    const explorer = createRelationPathExplorerSankey({
       lines: denseLines,
+      startType: ref(RelationType.risk),
+      startKey: ref("R0001"),
+      endType: ref(RelationType.avoidance),
+      endKey,
+      maxDepth: ref(3),
+      maxPaths: ref(10),
+      getSankeyNodeName: (_type, key) => `node:${key}`,
+      isMobile: computed(() => true),
+      RelationTypeMapping: relationTypeMapping,
+      getNodeIds: () => new Set(["R0001"]),
     });
 
-    explorer.discoverPaths();
+    endKey.value = "A0099";
+    await nextTick();
     vi.runAllTimers();
 
     expect(explorer.pathExplorerSankeyData.value.nodes.length).toBeGreaterThan(1);
