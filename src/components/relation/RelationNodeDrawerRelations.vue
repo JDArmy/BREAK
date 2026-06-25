@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, reactive, watch } from "vue";
 import { useI18n } from "vue-i18n";
+import { TopRight } from "@element-plus/icons-vue";
 import { useIncrementalVisibleList } from "@/composables/useIncrementalVisibleList";
 import {
   buildRelationFilterOptions,
@@ -304,6 +305,7 @@ const relationRowClassName = ({ row }: { row: { isActive: boolean } }) =>
           >
             <span class="node-relation-link-id">{{ row.otherNodeId }}</span>
             <span>{{ row.otherNodeTitle }}</span>
+            <el-icon class="node-relation-link-icon"><TopRight /></el-icon>
           </button>
         </template>
       </el-table-column>
@@ -503,6 +505,7 @@ const relationRowClassName = ({ row }: { row: { isActive: boolean } }) =>
 .node-relation-link {
   display: inline-flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 4px;
   padding: 0;
   border: 0;
@@ -519,6 +522,11 @@ const relationRowClassName = ({ row }: { row: { isActive: boolean } }) =>
 
 .node-relation-link-id {
   font-weight: 600;
+}
+
+.node-relation-link-icon {
+  font-size: 12px;
+  opacity: 0.75;
 }
 
 .node-relation-badges {

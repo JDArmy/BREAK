@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
+import { TopRight } from "@element-plus/icons-vue";
 import { useIncrementalVisibleList } from "@/composables/useIncrementalVisibleList";
 import type { NodeCoverageSummary } from "@/components/relation/relationNodeDrawerInsightTypes";
 import { RelationType } from "@/views/relation/relationTypes";
-import { pushDetailNodeRoute } from "@/views/relation/relationNodeRouting";
+import { openDetailNodeRouteInNewWindow } from "@/views/relation/relationNodeRouting";
 import "@/components/relation/relationNodeDrawerInsights.css";
 
 const props = defineProps<{
@@ -36,7 +37,7 @@ const openCoverageEntityDetail = (item: { type: string; id: string }) => {
   ) {
     return;
   }
-  void pushDetailNodeRoute(router, item.type as RelationType, item.id);
+  openDetailNodeRouteInNewWindow(router, item.type as RelationType, item.id);
 };
 </script>
 
@@ -81,6 +82,7 @@ const openCoverageEntityDetail = (item: { type: string; id: string }) => {
           <div class="node-coverage-item-main">
             <strong>{{ item.title }}</strong>
             <span>{{ item.id }}</span>
+            <el-icon class="node-coverage-link-icon"><TopRight /></el-icon>
           </div>
           <div class="node-relation-fields">{{ item.meta }}</div>
           <div v-if="item.sourceFields.length" class="node-relation-fields">

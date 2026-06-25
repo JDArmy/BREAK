@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
+import { TopRight } from "@element-plus/icons-vue";
 import { useIncrementalVisibleList } from "@/composables/useIncrementalVisibleList";
 import type { NodeRelatedEntitySummary } from "@/components/relation/relationNodeDrawerInsightTypes";
 import "@/components/relation/relationNodeDrawerInsights.css";
@@ -66,8 +67,13 @@ const {
             <button type="button" @click="emit('open-node-as-root', item.id)">
               {{ t("openAsRoot") }}
             </button>
-            <button type="button" @click="emit('open-node-detail', item.id)">
-              {{ t("viewDetail") }}
+            <button
+              type="button"
+              class="node-related-entity-action-link"
+              @click="emit('open-node-detail', item.id)"
+            >
+              <span>{{ t("viewDetail") }}</span>
+              <el-icon><TopRight /></el-icon>
             </button>
           </div>
         </div>

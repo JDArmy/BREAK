@@ -262,6 +262,27 @@ describe("useRelationNodeActions", () => {
     expect(openDetailNodeRouteInNewWindow).toHaveBeenCalledTimes(2);
   });
 
+  it("opens non-neighbor nodes (not in local graph) as root / detail via type inference", () => {
+    const { actions } = createActions();
+    pushRelationNodeRoute.mockClear();
+    openDetailNodeRouteInNewWindow.mockClear();
+
+    // AT0097 不在局部 nodes 中（如路径探索里的全局节点），但仍应通过 ID 前缀推断类型生效
+    actions.openNodeAsRootById("AT0097");
+    expect(pushRelationNodeRoute).toHaveBeenCalledWith(
+      expect.anything(),
+      RelationType.attackTool,
+      "AT0097",
+    );
+
+    actions.gotoNodeDetailViewById("TA0061");
+    expect(openDetailNodeRouteInNewWindow).toHaveBeenCalledWith(
+      expect.anything(),
+      RelationType.threatActor,
+      "TA0061",
+    );
+  });
+
   it("opens drawers, toggles filters, and renders filter changes", async () => {
     const { actions, renderNetworkChart, selectedNetworkNodeId } = createActions();
     const drawerBody = document.createElement("div");

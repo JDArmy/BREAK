@@ -164,6 +164,11 @@ export const useRelationNodeActions = ({
     return null;
   };
 
+  // 取节点类型：优先用网络图局部节点，miss 时（如路径探索里的全局节点）按 ID 前缀推断。
+  // 避免非邻域节点因不在局部 nodes 中而无法构造路由。
+  const resolveNodeType = (nodeId: string): RelationEntityType | null =>
+    findNodeById(nodeId)?.type ?? inferRelationTypeFromId(nodeId);
+
   const focusNodeInDrawer = (nodeId: string) => {
     const node =
       findNodeById(nodeId) ??
@@ -259,15 +264,16 @@ export const useRelationNodeActions = ({
   };
 
   const openNodeAsRootById = (nodeId: string) => {
-    const node = findNodeById(nodeId);
-    if (!node || node.id === relKey.value) return;
-    pushRelationNodeRoute(router, node.type, node.id);
+    if (nodeId === relKey.value) return;
+    const type = resolveNodeType(nodeId);
+    if (!type) return;
+    pushRelationNodeRoute(router, type, nodeId);
   };
 
   const gotoNodeDetailViewById = (nodeId: string) => {
-    const node = findNodeById(nodeId);
-    if (!node) return;
-    openDetailNodeRouteInNewWindow(router, node.type, node.id);
+    const type = resolveNodeType(nodeId);
+    if (!type) return;
+    openDetailNodeRouteInNewWindow(router, type, nodeId);
   };
 
   const toggleNodeFilter = () => {

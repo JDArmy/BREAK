@@ -34,9 +34,15 @@ const { t } = useI18n();
 
 <template>
   <div class="node-insight-panel node-detail-panel">
-    <button type="button" class="node-detail-title" @click="emit('open-detail-new-window')">
+    <button
+      type="button"
+      class="node-detail-title"
+      :title="t('viewDetail')"
+      @click="emit('open-detail-new-window')"
+    >
       <span class="node-detail-id">{{ selectedNetworkNode.id }}</span>
       <span class="node-detail-name">{{ selectedNetworkNodeTitle }}</span>
+      <el-icon class="node-detail-link-icon"><TopRight /></el-icon>
     </button>
     <div class="node-detail-meta">
       <span class="node-detail-type">
@@ -58,7 +64,7 @@ const { t } = useI18n();
       </button>
     </div>
     <div class="node-detail-actions">
-      <el-button size="small" @click="emit('view-detail')">
+      <el-button size="small" @click="emit('open-detail-new-window')">
         <span class="menu-action-with-icon">
           <el-icon><TopRight /></el-icon>
           <span>{{ t("viewDetail") }}</span>
@@ -80,7 +86,7 @@ const { t } = useI18n();
 .node-detail-title {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
+  align-items: center;
   gap: 8px;
   width: 100%;
   margin-bottom: 8px;
@@ -96,7 +102,8 @@ const { t } = useI18n();
 }
 
 .node-detail-title:hover .node-detail-id,
-.node-detail-title:hover .node-detail-name {
+.node-detail-title:hover .node-detail-name,
+.node-detail-title:hover .node-detail-link-icon {
   color: var(--el-color-primary);
 }
 
@@ -106,9 +113,18 @@ const { t } = useI18n();
 }
 
 .node-detail-name {
+  min-width: 0;
   color: var(--break-text-secondary);
   font-size: 13px;
+  overflow: hidden;
   overflow-wrap: anywhere;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.node-detail-link-icon {
+  color: var(--break-text-muted);
+  font-size: 13px;
 }
 
 .node-detail-meta,
@@ -150,6 +166,7 @@ const { t } = useI18n();
 
 @media (max-width: 767px) {
   .node-detail-title {
+    flex-wrap: nowrap;
     gap: 4px 8px;
     margin-bottom: 6px;
   }
@@ -159,7 +176,6 @@ const { t } = useI18n();
   }
 
   .node-detail-name {
-    width: 100%;
     font-size: 12px;
     line-height: 1.45;
   }

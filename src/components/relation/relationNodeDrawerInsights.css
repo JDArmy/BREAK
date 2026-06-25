@@ -345,6 +345,9 @@
 }
 
 .node-related-entity-actions button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   min-height: 26px;
   padding: 3px 8px;
   border: 1px solid var(--break-border);
