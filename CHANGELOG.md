@@ -1,5 +1,11 @@
 # Change log
 
+## 2.26.1
+
+- 修复路径探索桑基图在动态切换语言时不刷新实体标题与类型的问题：`setupRelationViewEffects` 漏解构 `renderPathExplorerSankeyChart`，切换语言时抛 `ReferenceError`
+- 路径探索起点/终点实体列表与桑基图节点文案改为随语言重算（`startEntityOptions`/`endEntityOptions` 改用 `computed`，`pathExplorerSankeyData` 计算属性建立 `locale` 依赖）
+- 路径探索桑基图改用「起点/终点合并为单节点 + 中间实体按位置多节点」方案，消除不同长度路径导致的多终点现象，保证 DAG 无环
+
 ## 2.26.0
 
 - 完善路径探索器：终点类型/实体、最大跳数、最大路径数与 URL 查询参数双向同步，刷新后自动恢复

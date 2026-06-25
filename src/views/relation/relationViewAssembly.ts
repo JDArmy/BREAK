@@ -313,6 +313,7 @@ export const createRelationViewAssembly = ({
     getSankeyNodeName: graphData.getSankeyNodeName,
     isMobile,
     RelationTypeMapping,
+    locale,
   });
 
   // 路径探索桑基图：根据跳数动态调整右侧标签宽度

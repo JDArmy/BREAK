@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, watch, onMounted, onUnmounted } from "vue";
+import { computed, nextTick, ref, watch, onMounted } from "vue";
 import { useI18n } from "vue-i18n";
 import BREAK from "@/BREAK";
 import {
@@ -37,7 +37,7 @@ const emit = defineEmits<{
   "update:maxPaths": [value: number];
 }>();
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 
 // 可选择的实体类型（排除 term 和 all）
 const selectableTypes = computed(() =>
@@ -68,15 +68,10 @@ watch(endKey, (val) => emit("update:endKey", val));
 watch(maxDepth, (val) => emit("update:maxDepth", val));
 watch(maxPaths, (val) => emit("update:maxPaths", val));
 
-// 实体选项构建（虚拟化列表，懒加载）
+// 实体选项构建：用 computed 让 label 随语言切换自动更新
+// （t() 内部依赖 locale，computed 会自动重算）
 const getBreakKey = (type: RelationType) =>
   props.RelationTypeMapping[type as keyof typeof props.RelationTypeMapping]?.BreakKey as keyof typeof BREAK | undefined;
-
-const startEntityOptions = ref<{ value: string; label: string }[]>([]);
-const endEntityOptions = ref<{ value: string; label: string }[]>([]);
-
-let startBuildTimer: ReturnType<typeof setTimeout> | null = null;
-let endBuildTimer: ReturnType<typeof setTimeout> | null = null;
 
 const buildOptions = (type: RelationType) => {
   const breakKey = getBreakKey(type);
@@ -88,23 +83,11 @@ const buildOptions = (type: RelationType) => {
   }));
 };
 
-const rebuildStartOptions = () => {
-  startEntityOptions.value = buildOptions(startType.value);
-};
-
-const rebuildEndOptions = () => {
-  const options = buildOptions(endType.value);
-  endEntityOptions.value = options;
-  // 默认选中终点类型下的第一个实体
-  if (options.length > 0 && !endKey.value) {
-    endKey.value = options[0].value;
-  }
-};
+const startEntityOptions = computed(() => buildOptions(startType.value));
+const endEntityOptions = computed(() => buildOptions(endType.value));
 
 watch(startType, () => {
   startKey.value = "";
-  if (startBuildTimer) clearTimeout(startBuildTimer);
-  startBuildTimer = setTimeout(rebuildStartOptions, 50);
 });
 
 // 标记：初始化阶段不清空 endKey（从 URL 恢复时保留已设定的值）
@@ -113,27 +96,36 @@ let isInitializing = true;
 watch(endType, () => {
   if (isInitializing) return;
   endKey.value = "";
-  if (endBuildTimer) clearTimeout(endBuildTimer);
-  endBuildTimer = setTimeout(() => {
-    const options = buildOptions(endType.value);
-    endEntityOptions.value = options;
-    // 切换终点类型后，默认选中列表第一个实体
+  // 切换终点类型后，默认选中列表第一个实体
+  nextTick(() => {
+    const options = endEntityOptions.value;
     if (options.length > 0) {
       endKey.value = options[0].value;
     }
-  }, 50);
+  });
+});
+
+// 语言切换时，若终点为空则补选当前类型第一个实体（与初次挂载行为一致）
+watch(locale, () => {
+  if (isInitializing) return;
+  if (!endKey.value) {
+    const options = endEntityOptions.value;
+    if (options.length > 0) {
+      endKey.value = options[0].value;
+    }
+  }
 });
 
 onMounted(() => {
-  rebuildStartOptions();
-  rebuildEndOptions();
+  // 初次挂载：若终点未设定（非 URL 恢复），默认选当前类型第一个实体
+  if (!endKey.value) {
+    const options = endEntityOptions.value;
+    if (options.length > 0) {
+      endKey.value = options[0].value;
+    }
+  }
   // 初始化完成后，后续 endType 变更才清空 endKey
   isInitializing = false;
-});
-
-onUnmounted(() => {
-  if (startBuildTimer) clearTimeout(startBuildTimer);
-  if (endBuildTimer) clearTimeout(endBuildTimer);
 });
 
 // 桑基图容器引用

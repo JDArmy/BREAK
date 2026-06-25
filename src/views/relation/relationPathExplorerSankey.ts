@@ -25,6 +25,8 @@ interface CreatePathExplorerSankeyOptions {
   getSankeyNodeName: SankeyNodeNameGetter;
   isMobile: ComputedRef<boolean> | Ref<boolean>;
   RelationTypeMapping: ReturnType<typeof createRelationTypeMapping>;
+  /** 当前语言，变化时桑基图节点 displayName 随之重算 */
+  locale: Ref<string>;
 }
 
 /** 路径探索统计 */
@@ -108,15 +110,15 @@ const getGlobalLines = (): Line[] => {
 
 /**
  * 将 DiscoveredRelationPath[] 转换为桑基图 nodes/links 数据。
- * 关键约束：桑基图必须是 DAG（无环），且终点实体唯一出现在最右层。
+ * 关键约束：桑基图必须是 DAG（无环），且起点/终点实体各只出现一个节点。
  *
- * 无向图搜索会让同一实体在不同路径中处于不同位置，若强行合并成单一节点，
- * 不同路径对它的位置期望冲突，要么产生环要么让中间节点被推向最右变成"伪终点"。
+ * 策略：
+ * - 起点和终点合并为单节点：起点 depth=0，终点 depth=最长路径跳数。
+ * - 中间实体按「实体ID + 在路径中的位置」多节点：同一实体在不同路径的不同位置
+ *   各自独立成节点，避免跨路径位置冲突产生环。
  *
- * 策略：以「实体ID + 该实体在路径中的位置」作为桑基节点的唯一标识，
- * 即允许同一实体在不同深度各出现一个节点。每条路径独立成链，深度严格递增，
- * 自然满足 DAG；终点实体的节点只会出现在它真正作为路径末尾的那一层，
- * 不会因为被其他路径"提前引用"而分裂成多个终点。
+ * 无环性验证：任意 link 都是「起点(0)→中间(≥1)」或「中间(p)→中间(p+1)」
+ * 或「中间(末尾前)→终点(最长跳数)」，源 depth 始终 < 目标 depth。
  */
 const pathsToSankeyData = (
   paths: DiscoveredRelationPath[],
@@ -128,35 +130,38 @@ const pathsToSankeyData = (
     return { nodes: [] as SankeyNode[], links: [] as SankeyLink[] };
   }
 
-  // 节点唯一键：实体ID @ 该实体在所属路径中的步进位置。
-  // 同一实体出现在不同位置时各自独立成节点，避免跨路径位置冲突。
-  const nodeKey = (entityId: string, position: number) => `${entityId}@${position}`;
+  const startId = paths[0].startId;
+  // 终点 = 最长路径的末尾实体（所有路径终点相同）
+  const endId = paths.reduce((max, p) => (p.hopCount > max.hopCount ? p : max), paths[0])
+    .endId;
+  // 终点 depth = 最长路径跳数，确保终点始终在最右层
+  const maxHop = Math.max(...paths.map((p) => p.hopCount));
 
-  // 统计每个 (entityId, position) 的最大深度贡献，用于同名实体去重对齐。
-  // 这里直接用 position 作为 depth：每条路径的步骤严格按 0,1,2,... 递增。
   const nodeMap = new Map<string, SankeyNode>();
   const linkMap = new Map<string, SankeyLink>();
 
-  const ensureNode = (entityId: string, position: number) => {
-    const key = nodeKey(entityId, position);
+  const createNode = (entityId: string, key: string, depth: number) => {
     const existing = nodeMap.get(key);
     if (existing) return existing.name;
     const type = getNodeType(entityId);
-    // name 作为内部唯一键（含位置），供 link 匹配；displayName 供 label 显示
-    const name = key;
     const displayName = getSankeyNodeName(type, entityId);
     nodeMap.set(key, {
-      name,
+      // name 作为内部唯一键供 link 匹配；displayName 供 label 显示
+      name: key,
       displayName,
-      depth: position,
+      depth,
       entityType: type,
       entityKey: entityId,
       itemStyle: {
         color: RelationTypeMapping[type]?.color ?? "#999",
       },
     });
-    return name;
+    return key;
   };
+
+  // 起点/终点用固定单键（合并所有路径的起点/终点）
+  const startKey = createNode(startId, `start:${startId}`, 0);
+  const endKey = createNode(endId, `end:${endId}`, maxHop);
 
   const addLink = (sourceName: string, targetName: string) => {
     const linkKey = `${sourceName}->${targetName}`;
@@ -166,12 +171,19 @@ const pathsToSankeyData = (
   };
 
   for (const path of paths) {
-    const startName = ensureNode(path.startId, 0);
-    let prevName = startName;
+    // 起点 → 第一个中间节点（或直接到终点，当只有 1 跳）
+    let prevName = startKey;
     for (let i = 0; i < path.steps.length; i++) {
       const step = path.steps[i];
+      if (step.toId === endId) {
+        // 连到合并的终点节点（终点在路径中只应出现在末尾）
+        addLink(prevName, endKey);
+        break;
+      }
+      // 中间节点按 (entityId, position) 多节点
       const position = i + 1;
-      const nodeName = ensureNode(step.toId, position);
+      const key = `${step.toId}@${position}`;
+      const nodeName = createNode(step.toId, key, position);
       addLink(prevName, nodeName);
       prevName = nodeName;
     }
@@ -191,6 +203,7 @@ export const createRelationPathExplorerSankey = ({
   getSankeyNodeName,
   isMobile,
   RelationTypeMapping,
+  locale,
 }: CreatePathExplorerSankeyOptions) => {
   const searching = ref(false);
   const discoveredPaths = ref<DiscoveredRelationPath[]>([]);
@@ -246,6 +259,8 @@ export const createRelationPathExplorerSankey = ({
   const hasTarget = computed(() => Boolean(endKey.value));
 
   const pathExplorerSankeyData = computed(() => {
+    // 访问 locale 建立响应依赖：语言切换时 displayName 需随 getSankeyNodeName 重算
+    void locale.value;
     if (discoveredPaths.value.length === 0) {
       return { nodes: [] as SankeyNode[], links: [] as SankeyLink[] };
     }

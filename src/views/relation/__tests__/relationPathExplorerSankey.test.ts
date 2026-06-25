@@ -62,6 +62,7 @@ const createExplorer = (options?: {
   const endKey = ref(options?.endKey ?? "");
   const maxDepth = ref(options?.maxDepth ?? 4);
   const maxPaths = ref(options?.maxPaths ?? 10);
+  const locale = ref("zh-CN");
   return {
     explorer: createRelationPathExplorerSankey({
       startType: ref(options?.startType ?? RelationType.risk),
@@ -70,14 +71,16 @@ const createExplorer = (options?: {
       endKey,
       maxDepth,
       maxPaths,
-      getSankeyNodeName: (_type, key) => `node:${key}`,
+      getSankeyNodeName: (type, key) => `${locale.value}:${type}:${key}`,
       isMobile: computed(() => options?.isMobile ?? false),
       RelationTypeMapping: relationTypeMapping,
+      locale,
     }),
     startKey,
     endKey,
     maxDepth,
     maxPaths,
+    locale,
   };
 };
 
@@ -151,12 +154,10 @@ describe("relationPathExplorerSankey", () => {
     expect(explorer.pathExplorerStats.value!.minHops).toBeGreaterThanOrEqual(2);
   });
 
-  // === depth 分配（同实体多节点方案：同一实体在不同路径位置各自独立成节点）===
+  // === depth 分配（起点/终点合并为单节点，中间实体按位置多节点）===
 
-  it("places end entity nodes at their path positions (max position equals max hop)", async () => {
-    // R0001 → A0001（1 跳）和 R0001 → A0002 → ... → A0002（间接多跳）
-    // 终点 A0002 在每条路径中都处于该路径的末尾位置，
-    // 其最右节点的 depth 应等于最长路径的跳数，不会被短路径拉到左侧
+  it("end entity is a single node at max hop depth", async () => {
+    // 不同长度路径都终止于 A0002，终点应合并为唯一节点且 depth = 最长路径跳数
     const { explorer, endKey } = createExplorer({
       startType: RelationType.risk,
       startKey: "R0001",
@@ -170,20 +171,19 @@ describe("relationPathExplorerSankey", () => {
     vi.runAllTimers();
 
     if (explorer.discoveredPaths.value.length > 1) {
-      // 终点 A0002 的所有节点中，最右节点的 depth = 最长路径跳数
       const endNodes = explorer.pathExplorerSankeyData.value.nodes.filter(
         (n) => n.entityKey === "A0002",
       );
-      expect(endNodes.length).toBeGreaterThan(0);
-      const maxEndDepth = Math.max(...endNodes.map((n) => n.depth ?? 0));
+      // 终点实体只出现一个节点
+      expect(endNodes.length).toBe(1);
       const maxHop = Math.max(
         ...explorer.discoveredPaths.value.map((p) => p.hopCount),
       );
-      expect(maxEndDepth).toBe(maxHop);
+      expect(endNodes[0]!.depth).toBe(maxHop);
     }
   });
 
-  it("end entity max depth equals max hop count across all paths", async () => {
+  it("end entity is single node at max hop count across all paths", async () => {
     const { explorer, endKey } = createExplorer({
       startType: RelationType.threatActor,
       startKey: "TA0001",
@@ -201,10 +201,9 @@ describe("relationPathExplorerSankey", () => {
       const endNodes = explorer.pathExplorerSankeyData.value.nodes.filter(
         (n) => n.entityKey === "A0001",
       );
-      expect(endNodes.length).toBeGreaterThan(0);
-      const maxEndDepth = Math.max(...endNodes.map((n) => n.depth ?? 0));
+      expect(endNodes.length).toBe(1);
       const maxHop = Math.max(...paths.map((p) => p.hopCount));
-      expect(maxEndDepth).toBe(maxHop);
+      expect(endNodes[0]!.depth).toBe(maxHop);
     }
   });
 
@@ -328,5 +327,36 @@ describe("relationPathExplorerSankey", () => {
     vi.runAllTimers();
     expect(explorer.searching.value).toBe(false);
     expect(explorer.pathExplorerHasData.value).toBe(true);
+  });
+
+  // === 语言切换：桑基图节点 displayName 随语言重算 ===
+
+  it("updates sankey node display names when locale changes", async () => {
+    const { explorer, endKey, locale } = createExplorer({
+      startKey: "R0027",
+      endType: RelationType.avoidance,
+    });
+
+    endKey.value = "A0003";
+    await nextTick();
+    vi.runAllTimers();
+
+    expect(explorer.pathExplorerHasData.value).toBe(true);
+    const nodeBefore = explorer.pathExplorerSankeyData.value.nodes.find(
+      (n) => n.entityKey === "A0003",
+    );
+    expect(nodeBefore).toBeDefined();
+    expect(nodeBefore!.displayName).toContain("zh-CN");
+
+    // 切换到英文
+    locale.value = "en-US";
+    await nextTick();
+
+    const nodeAfter = explorer.pathExplorerSankeyData.value.nodes.find(
+      (n) => n.entityKey === "A0003",
+    );
+    expect(nodeAfter).toBeDefined();
+    expect(nodeAfter!.displayName).toContain("en-US");
+    expect(nodeAfter!.displayName).not.toBe(nodeBefore!.displayName);
   });
 });

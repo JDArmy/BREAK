@@ -80,6 +80,7 @@ export const setupRelationViewEffects = ({
   disposeNetworkChart,
   disposeSankeyChart,
   selectedNetworkNodeId,
+  renderPathExplorerSankeyChart,
   resizePathExplorerSankeyChart,
   updatePathExplorerSankeyTheme,
   disposePathExplorerSankeyChart,
@@ -220,6 +221,8 @@ export const setupRelationViewEffects = ({
         renderNetworkChart(true);
       } else if (activeView.value === "sankey") {
         renderSankeyChart();
+      } else if (activeView.value === "pathExplorer") {
+        renderPathExplorerSankeyChart();
       }
     });
   });
