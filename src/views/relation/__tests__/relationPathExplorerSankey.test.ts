@@ -261,7 +261,7 @@ describe("relationPathExplorerSankey", () => {
 
   // === 最小高度使用视口减去其他元素高度 ===
 
-  it("chart height respects viewport-based minimum (desktop)", async () => {
+  it("chart height at least fills one screen (desktop)", async () => {
     // happy-dom 默认 window.innerHeight = 768
     const { explorer, endKey } = createExplorer({ isMobile: false });
 
@@ -270,14 +270,12 @@ describe("relationPathExplorerSankey", () => {
     vi.runAllTimers();
 
     const height = explorer.pathExplorerChartHeight.value;
-    // 最小高度 = max(300, innerHeight - 300) = max(300, 468) = 468
-    expect(height).toBeGreaterThanOrEqual(300);
-    // 不应使用旧的固定 400 最小值；对于节点少的图，应该是 viewport-based
-    const viewportMin = Math.max(300, window.innerHeight - 300);
+    // 最小高度 = max(300, innerHeight - 372)
+    const viewportMin = Math.max(300, window.innerHeight - 372);
     expect(height).toBeGreaterThanOrEqual(viewportMin);
   });
 
-  it("chart height respects viewport-based minimum (mobile)", async () => {
+  it("chart height at least fills one screen (mobile)", async () => {
     const { explorer, endKey } = createExplorer({ isMobile: true });
 
     endKey.value = "A0001";
@@ -285,9 +283,8 @@ describe("relationPathExplorerSankey", () => {
     vi.runAllTimers();
 
     const height = explorer.pathExplorerChartHeight.value;
-    const viewportMin = Math.max(300, window.innerHeight - 340);
+    const viewportMin = Math.max(300, window.innerHeight - 400);
     expect(height).toBeGreaterThanOrEqual(viewportMin);
-    expect(height).toBeLessThanOrEqual(3200);
   });
 
   // === 自动触发搜索（修复：去掉手动按钮）===

@@ -92,11 +92,15 @@ export const createRelationViewState = ({
     relKey.value = node.entityKey;
   };
 
-  // 路径探索器状态
+  // 路径探索器状态（终点类型/实体从 URL query 初始化）
   const pathExplorerStartType = ref<RelationType>(relType.value);
   const pathExplorerStartKey = ref(relKey.value);
-  const pathExplorerEndType = ref<RelationType>(RelationType.avoidance);
-  const pathExplorerEndKey = ref("");
+  const pathExplorerEndType = ref<RelationType>(
+    (typeof route.query.endType === "string" && Object.values(RelationType).includes(route.query.endType as RelationType))
+      ? route.query.endType as RelationType
+      : RelationType.avoidance
+  );
+  const pathExplorerEndKey = ref(typeof route.query.endKey === "string" ? route.query.endKey : "");
   const pathExplorerMaxDepth = ref(4);
   const pathExplorerMaxPaths = ref(10);
 

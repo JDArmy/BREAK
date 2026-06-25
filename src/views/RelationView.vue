@@ -92,6 +92,7 @@ export default defineComponent({
     :class="{
       'relation-page--mobile-sankey': activeView === 'sankey',
       'relation-page--mobile-network': activeView === 'network',
+      'relation-page--path-explorer': activeView === 'pathExplorer',
     }"
   >
     <RelationSelectorBar
@@ -346,6 +347,25 @@ export default defineComponent({
 
 .relation-tabs :deep(.el-tab-pane) {
   height: 100%;
+}
+
+/* 路径探索模式：允许页面滚动，图表限高 1 屏 */
+.relation-page--path-explorer {
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+}
+
+.relation-page--path-explorer .relation-tabs {
+  flex: none;
+}
+
+.relation-page--path-explorer :deep(.el-tabs__content) {
+  height: auto;
+}
+
+.relation-page--path-explorer :deep(.el-tab-pane) {
+  height: auto;
 }
 
 @media (max-width: 767px) {

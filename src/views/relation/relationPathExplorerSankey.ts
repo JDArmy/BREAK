@@ -215,7 +215,7 @@ export const createRelationPathExplorerSankey = ({
         endId: endKey.value,
         maxDepth: maxDepth.value,
         maxPaths: maxPaths.value,
-        maxExpansions: 2000,
+        maxExpansions: 10000,
         directed: false,
       });
       discoveredPaths.value = result;
@@ -258,18 +258,17 @@ export const createRelationPathExplorerSankey = ({
     );
     const maxLayerNodeCount = Math.max(1, ...Object.values(nodesByDepth));
 
-    // 最小高度 = 视口高度 - 页面其他元素占位（header + tabs + 控制面板 + 统计栏 + footer + 边距）
+    // 最小高度 = 视口高度 - 页面其他元素占位（确保至少占满 1 屏可用空间）
+    // header(60) + 选择器栏(44) + tabs(48) + 控制面板(~130) + 统计栏(~40) + footer(30) + 间距(~20) ≈ 372
     const viewportHeight = typeof window !== "undefined" ? window.innerHeight : 800;
-    const otherElementsHeight = isMobile.value ? 340 : 300;
+    const otherElementsHeight = isMobile.value ? 400 : 372;
     const minHeight = Math.max(300, viewportHeight - otherElementsHeight);
 
     // 按最密集层的节点数计算所需高度：每节点需要约 44px（含 nodeGap + label + 节点条高度）
     const nodeSlotHeight = isMobile.value ? 50 : 44;
     const contentHeight = maxLayerNodeCount * nodeSlotHeight + 100;
 
-    if (isMobile.value) {
-      return Math.max(minHeight, contentHeight);
-    }
+    // 最小 1 屏，实体多时可动态增高（页面滚动查看）
     return Math.max(minHeight, contentHeight);
   });
 

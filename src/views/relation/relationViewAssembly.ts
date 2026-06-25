@@ -347,6 +347,52 @@ export const createRelationViewAssembly = ({
     }
   });
 
+  // 路径探索终点参数 ↔ URL query 双向同步
+  let isUpdatingFromRoute = false;
+  watch([pathExplorerEndType, pathExplorerEndKey], ([endType, endKey]) => {
+    if (isUpdatingFromRoute) return;
+    const query = { ...route.query };
+    let changed = false;
+    if (endType && endType !== query.endType) {
+      query.endType = endType;
+      changed = true;
+    }
+    if (endKey !== query.endKey) {
+      if (endKey) {
+        query.endKey = endKey;
+      } else {
+        delete query.endKey;
+      }
+      changed = true;
+    }
+    if (changed) {
+      router.replace({
+        name: "relation",
+        params: { type: relType.value, key: relKey.value },
+        query,
+      });
+    }
+  });
+
+  watch(
+    () => [route.query.endType, route.query.endKey],
+    ([queryEndType, queryEndKey]) => {
+      isUpdatingFromRoute = true;
+      if (typeof queryEndType === "string" && queryEndType !== pathExplorerEndType.value) {
+        const validTypes = Object.values(RelationType) as string[];
+        if (validTypes.includes(queryEndType)) {
+          pathExplorerEndType.value = queryEndType as RelationType;
+        }
+      }
+      if (typeof queryEndKey === "string" && queryEndKey !== pathExplorerEndKey.value) {
+        pathExplorerEndKey.value = queryEndKey;
+      } else if (queryEndKey === undefined && pathExplorerEndKey.value) {
+        pathExplorerEndKey.value = "";
+      }
+      nextTick(() => { isUpdatingFromRoute = false; });
+    },
+  );
+
   const networkController = createNetworkChartController({
     t,
     isDark,

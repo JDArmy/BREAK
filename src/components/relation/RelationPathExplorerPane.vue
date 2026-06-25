@@ -89,7 +89,12 @@ const rebuildStartOptions = () => {
 };
 
 const rebuildEndOptions = () => {
-  endEntityOptions.value = buildOptions(endType.value);
+  const options = buildOptions(endType.value);
+  endEntityOptions.value = options;
+  // 默认选中终点类型下的第一个实体
+  if (options.length > 0 && !endKey.value) {
+    endKey.value = options[0].value;
+  }
 };
 
 watch(startType, () => {
@@ -101,7 +106,14 @@ watch(startType, () => {
 watch(endType, () => {
   endKey.value = "";
   if (endBuildTimer) clearTimeout(endBuildTimer);
-  endBuildTimer = setTimeout(rebuildEndOptions, 50);
+  endBuildTimer = setTimeout(() => {
+    const options = buildOptions(endType.value);
+    endEntityOptions.value = options;
+    // 切换终点类型后，默认选中列表第一个实体
+    if (options.length > 0) {
+      endKey.value = options[0].value;
+    }
+  }, 50);
 });
 
 onMounted(() => {
@@ -302,10 +314,7 @@ const setRef = (el: unknown) => {
   border: var(--break-graph-border) solid 1px;
   border-radius: 8px;
   background: var(--break-bg-card);
-  overflow-x: hidden;
-  overflow-y: auto;
-  /* header(60) + tabs(46) + 控制面板(~130) + margin/padding(~44) = ~280px */
-  max-height: calc(100vh - 280px);
+  overflow: hidden;
 }
 
 .path-explorer-empty {
