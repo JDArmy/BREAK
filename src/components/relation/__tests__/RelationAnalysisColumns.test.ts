@@ -261,7 +261,8 @@ describe("RelationAnalysisDetailColumn", () => {
     });
 
   it("没有选中节点时不渲染右侧详情", () => {
-    const wrapper = mountDetailColumn({ selectedNetworkNode: null });
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const wrapper = mountDetailColumn({ selectedNetworkNode: null } as any);
 
     expect(wrapper.find(".detail-content-stub").exists()).toBe(false);
   });

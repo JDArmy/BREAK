@@ -62,7 +62,7 @@ export const createRelationAttackPathCoverage = ({
           const fromRisk = directAvoidances.includes(avoidanceKey);
           const attackToolKeys = toolAvoidanceMap.get(avoidanceKey) ?? [];
           const fromTool = attackToolKeys.length > 0;
-          const source =
+          const source: "risk" | "attackTool" | "both" =
             fromRisk && fromTool ? "both" : fromRisk ? "risk" : "attackTool";
           return {
             key: avoidanceKey,

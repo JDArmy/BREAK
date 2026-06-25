@@ -1,5 +1,5 @@
 import { computed, type Ref } from "vue";
-import { getRelationLineKey } from "@/views/relation/relationTypes";
+import { getRelationLineKey, type Line } from "@/views/relation/relationTypes";
 import {
   createRelationGraphInsightHelpers,
   type RelationGraphInsightBaseOptions,

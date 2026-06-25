@@ -30,7 +30,6 @@ import {
 import {
   RelationType,
   type createRelationTypeMapping,
-  getRelationLineKey,
   type GraphLink,
   type graphColors,
   type relationLineColors,
@@ -193,8 +192,6 @@ export const createRelationViewAssembly = ({
     buildNodeSummary,
     isDirectRelationLine,
     getRelationSourceFields,
-    explainRelation: graphData.explainRelation,
-    formatEvidenceLevel: graphData.formatEvidenceLevel,
     genNetworkGraphData,
     renderNetworkChart: (notMerge) =>
       renderNetworkChartBridge.current(notMerge),
@@ -313,7 +310,6 @@ export const createRelationViewAssembly = ({
     getNodeTypeTitle: graphData.getNodeTypeTitle,
     isDirectRelationLine: graphData.isDirectRelationLine,
     getRelationSourceFields: graphData.getRelationSourceFields,
-    getRelationLineKey,
     t,
   });
 

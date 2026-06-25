@@ -1,6 +1,7 @@
 import { computed, toValue, type ComputedRef, type MaybeRefOrGetter, type Ref } from "vue";
 import { useCasesByRisk } from "@/composables/useCasesByRisk";
 import { useLazyCasesSection } from "@/composables/useLazyCasesSection";
+import type { Cases } from "@/BREAK/cases";
 
 /**
  * 按实体类型反查相关案例 + 滚动懒加载的统一封装。
@@ -17,15 +18,10 @@ import { useLazyCasesSection } from "@/composables/useLazyCasesSection";
  */
 export type RelatedCasesType = "risk" | "attackTool" | "threatActor";
 
-interface CaseEntity {
-  title: string;
-  [key: string]: unknown;
-}
-
 interface UseRelatedCasesReturn {
   relatedCases: ComputedRef<string[]>;
   ensureCases: () => Promise<void>;
-  cases: Ref<Record<string, CaseEntity>>;
+  cases: Ref<Cases>;
   loaded: Ref<boolean>;
   sectionRef: Ref<HTMLElement | undefined>;
 }

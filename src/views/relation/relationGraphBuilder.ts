@@ -139,8 +139,8 @@ export const createRelationGraphBuilder = ({
 
     nodes.push({
       id: relKey.value,
-      type: breakItemAttr.relType,
-      text: getGraphNodeText(breakItemAttr.relType, relKey.value),
+      type: breakItemAttr.relType as RelationEntityType,
+      text: getGraphNodeText(breakItemAttr.relType as RelationEntityType, relKey.value),
       color: "",
     } as Node);
     return true;

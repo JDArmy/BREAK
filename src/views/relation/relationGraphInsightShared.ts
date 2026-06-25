@@ -73,7 +73,13 @@ export const createRelationGraphInsightHelpers = ({
     };
   };
 
-  const buildNodeSummary = (nodeId: string) => {
+  const buildNodeSummary = (nodeId: string): {
+    id: string;
+    rawType: RelationEntityType | "";
+    isSubNode: boolean;
+    type: string;
+    title: string;
+  } => {
     const node = findNodeById(nodeId);
     return {
       id: nodeId,

@@ -13,6 +13,11 @@ interface Risk {
   complexity: string;
   influence: string;
   avoidances: string[];
+  relatedRisks?: {
+    key: string;
+    relation: "prerequisite" | "co-occurrence" | "escalation" | "variant";
+    note?: string;
+  }[];
   references: Reference[];
 }
 interface AllRisks {

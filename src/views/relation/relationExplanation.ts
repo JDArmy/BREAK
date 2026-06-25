@@ -10,9 +10,14 @@ import {
   directRelationLineKeys,
   relationExplanationCoverage,
   relationExplanationRuleByKey,
+  type RelationLineKey,
 } from "@/views/relation/relationExplanationRules";
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;
+type RelationLineRuleKey = `relationLine.${RelationLineKey}`;
+
+/** 将 getRelationLineKey 的宽 string 结果收窄为规则表 key 类型 */
+const asRuleKey = (key: string) => key as RelationLineRuleKey;
 
 interface CreateRelationExplanationHelpersOptions {
   t: Translate;
@@ -56,7 +61,7 @@ export const createRelationExplanationHelpers = ({
     );
     const fields = new Set<string>();
 
-    const relationKey = getRelationLineKey(line);
+    const relationKey = asRuleKey(getRelationLineKey(line));
 
     if (relationKey === "relationLine.avoidanceMeans") {
       if (fromType === RelationType.risk) fields.add("Risk.avoidances");
@@ -108,7 +113,7 @@ export const createRelationExplanationHelpers = ({
   };
 
   const getRelationEvidenceLevel = (line: Line): RelationEvidenceLevel =>
-    relationExplanationRuleByKey.get(getRelationLineKey(line))?.evidenceLevel ??
+    relationExplanationRuleByKey.get(asRuleKey(getRelationLineKey(line)))?.evidenceLevel ??
     "review";
 
   const getRelationPriority = (lineText: string) => {
@@ -137,7 +142,7 @@ export const createRelationExplanationHelpers = ({
       sourceType,
       targetType,
     );
-    const relationKey = getRelationLineKey(line);
+    const relationKey = asRuleKey(getRelationLineKey(line));
     const prefix = "relationView.relationExplanation";
 
     if (relationKey === "relationLine.avoidanceMeans") {
@@ -150,6 +155,7 @@ export const createRelationExplanationHelpers = ({
       return t(`${prefix}.avoidance`);
     }
     return t(
+      relationExplanationRuleByKey.get(relationKey)?.explanationKey ??
       relationExplanationRuleByKey.get(relationKey)?.explanationKey ??
         `${prefix}.review`,
     );
@@ -172,7 +178,7 @@ export const createRelationExplanationHelpers = ({
       toTitle: getNodeDisplayTitle(line.to),
       relation: line.text,
     };
-    const relationKey = getRelationLineKey(line);
+    const relationKey = asRuleKey(getRelationLineKey(line));
     const prefix = "relationView.semanticExplanation";
 
     if (relationKey === "relationLine.avoidanceMeans") {
@@ -196,7 +202,7 @@ export const createRelationExplanationHelpers = ({
     const prefix = "relationView.relationImpact";
 
     return t(
-      relationExplanationRuleByKey.get(getRelationLineKey(line))?.impactKey ??
+      relationExplanationRuleByKey.get(asRuleKey(getRelationLineKey(line)))?.impactKey ??
         `${prefix}.review`,
     );
   };

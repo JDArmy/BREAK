@@ -1,3 +1,4 @@
+import type { LocationQueryRaw } from "vue-router";
 import type { RelationPerspectiveKey } from "@/views/relation/relationAnalysisPerspectives";
 
 /**
@@ -17,11 +18,11 @@ const RELATION_PERSPECTIVE_QUERY_KEYS: Record<RelationPerspectiveKey, string[]> 
  * 非白名单 key 一律丢弃，确保视角间参数隔离。
  */
 export const buildPerspectiveQuery = (
-  currentQuery: Record<string, unknown>,
+  currentQuery: LocationQueryRaw,
   target: RelationPerspectiveKey,
-): Record<string, unknown> => {
+): LocationQueryRaw => {
   const allowed = RELATION_PERSPECTIVE_QUERY_KEYS[target];
-  const next: Record<string, unknown> = {};
+  const next: LocationQueryRaw = {};
   for (const key of allowed) {
     if (currentQuery[key] !== undefined) {
       next[key] = currentQuery[key];

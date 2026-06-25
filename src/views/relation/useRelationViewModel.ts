@@ -113,7 +113,7 @@ export const useRelationViewModel = () => {
     RelationType,
     RelationTypeMapping,
     networkLayoutOptions,
-    setDropdownInstance,
     ...relationView,
+    setDropdownInstance,
   };
 };

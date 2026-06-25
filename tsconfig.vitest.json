@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.app.json",
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "exclude": [],
+  "compilerOptions": {
+    "composite": true,
+    "types": ["vitest/globals"]
+  }
+}

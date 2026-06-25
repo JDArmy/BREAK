@@ -13,7 +13,7 @@ import type { NodeRelatedEntitySummary } from "@/components/relation/relationNod
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;
 
-interface NodeAnalysisSummary {
+export interface NodeAnalysisSummary {
   summary: string;
   highlights: Array<{
     label: string;

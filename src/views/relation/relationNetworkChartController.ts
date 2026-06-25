@@ -1,5 +1,5 @@
 import { ref, type Ref } from "vue";
-import type { ECharts, EChartsOption } from "echarts/core";
+import type { ECharts, EChartsCoreOption } from "echarts/core";
 import type {
   GraphLink,
   GraphNode,
@@ -13,7 +13,7 @@ interface CreateNetworkChartControllerOptions {
   t: Translate;
   isDark: Ref<boolean>;
   isMobile: Ref<boolean>;
-  activeView: Ref<"network" | "sankey">;
+  activeView: Ref<string>;
   networkState: { zoom: number; layout: NetworkLayoutMode };
   selectedNetworkNodeId: Ref<string>;
   draggedNodePositions: Ref<Record<string, { x: number; y: number }>>;
@@ -190,20 +190,20 @@ export const createNetworkChartController = ({
     const persistDraggedNodePosition = (params: {
       dataType?: string;
       dataIndex?: number;
-      data?: GraphNode;
+      data?: Partial<GraphNode>;
     }) => {
       if (params.dataType !== "node") return;
-      const option = networkChart?.getOption();
-      const seriesData =
-        option?.series?.[0] && "data" in option.series[0]
-          ? (option.series[0].data as Array<Partial<GraphNode>>)
-          : [];
+      const option = networkChart?.getOption() as
+        | { series?: Array<{ data?: Array<Partial<GraphNode>> }> }
+        | undefined;
+      const seriesData = option?.series?.[0]?.data ?? [];
       const draggedData =
         typeof params.dataIndex === "number"
           ? seriesData[params.dataIndex]
           : undefined;
-      const data = (draggedData ?? params.data) as Partial<GraphNode>;
+      const data = (draggedData ?? params.data) as Partial<GraphNode> | undefined;
       if (
+        !data ||
         typeof data.id !== "string" ||
         typeof data.x !== "number" ||
         typeof data.y !== "number"
@@ -242,12 +242,20 @@ export const createNetworkChartController = ({
     networkChart.on("mouseup", (params) => {
       clearLongPressTimer();
       if (isMobile.value) return;
-      persistDraggedNodePosition(params);
+      persistDraggedNodePosition({
+        dataType: params.dataType,
+        dataIndex: params.dataIndex,
+        data: params.data as Partial<GraphNode> | undefined,
+      });
     });
     networkChart.on("dragend", (params) => {
       clearLongPressTimer();
       if (isMobile.value) return;
-      persistDraggedNodePosition(params);
+      persistDraggedNodePosition({
+        dataType: params.dataType,
+        dataIndex: params.dataIndex,
+        data: params.data as Partial<GraphNode> | undefined,
+      });
     });
     networkChart.on("mousedown", (params) => {
       if (!isMobile.value || params.dataType !== "node") return;
@@ -477,7 +485,7 @@ export const createNetworkChartController = ({
             animation: isForceLayout,
           },
         ],
-      } satisfies EChartsOption;
+      } satisfies EChartsCoreOption;
 
       networkChart.setOption(option, { notMerge, lazyUpdate: false });
       clearNetworkNodeHighlight();

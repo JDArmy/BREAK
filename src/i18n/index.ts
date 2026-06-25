@@ -90,7 +90,7 @@ const ensureEnLocaleMessages = async () => {
       .then(([cnBREAK, { default: enBREAK }]) => {
         i18n.global.setLocaleMessage("en", {
           ...en,
-          BREAK: mergeWithStructure(cnBREAK, enBREAK) as typeof enBREAK,
+          BREAK: mergeWithStructure(cnBREAK, enBREAK) as BreakMessages,
         });
       })
       .catch((err) => {

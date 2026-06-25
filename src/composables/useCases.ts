@@ -1,3 +1,4 @@
+import type { Ref } from "vue";
 import { ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
 import { loadCases, type Cases } from "@/BREAK/cases";
@@ -57,7 +58,7 @@ async function syncCasesForLocale(newLocale: string) {
   }
 }
 
-function registerLocaleWatcher(locale: ReturnType<typeof useI18n>["locale"]) {
+function registerLocaleWatcher(locale: Ref<string>) {
   if (localeWatchRegistered) return;
   localeWatchRegistered = true;
 
