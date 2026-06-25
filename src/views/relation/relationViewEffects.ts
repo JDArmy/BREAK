@@ -251,6 +251,8 @@ export const setupRelationViewEffects = ({
 
       if (activeView.value === "sankey") {
         nextTick(renderSankeyChart);
+      } else if (activeView.value === "pathExplorer") {
+        nextTick(renderPathExplorerSankeyChart);
       } else if (activeView.value === "network") {
         ensureNetworkData({ render: false });
         nextTick(() => renderNetworkChart(true));

@@ -22,7 +22,7 @@ import {
 } from "@/views/relation/relationTypes";
 import type { RouteLocationNormalizedLoaded, Router } from "vue-router";
 import type { DropdownInstance } from "element-plus";
-import { computed, ref, watch, type Ref } from "vue";
+import { computed, nextTick, ref, watch, type Ref } from "vue";
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;
 
@@ -340,6 +340,13 @@ export const createRelationViewAssembly = ({
     onOpenNodeDetail: openSankeyNodeDetail,
     onOpenNodeActions: openSankeyNodeActions,
     viewModeKey: "pathExplorer",
+  });
+
+  // 路径发现数据变化时触发桑基图渲染
+  watch(pathExplorerData.discoveredPaths, () => {
+    if (activeView.value === "pathExplorer" && pathExplorerData.pathExplorerHasData.value) {
+      nextTick(pathExplorerSankeyController.renderSankeyChart);
+    }
   });
 
   const networkController = createNetworkChartController({
