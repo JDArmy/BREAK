@@ -1,4 +1,5 @@
 import { computed, ref, watch, type ComputedRef, type Ref } from "vue";
+import BREAK from "@/BREAK";
 import {
   findRelationPaths,
   type DiscoveredRelationPath,
@@ -15,7 +16,6 @@ import {
 type SankeyNodeNameGetter = (type: RelationEntityType, key: string) => string;
 
 interface CreatePathExplorerSankeyOptions {
-  lines: Line[];
   startType: Ref<RelationType>;
   startKey: Ref<string>;
   endType: Ref<RelationType>;
@@ -25,8 +25,6 @@ interface CreatePathExplorerSankeyOptions {
   getSankeyNodeName: SankeyNodeNameGetter;
   isMobile: ComputedRef<boolean> | Ref<boolean>;
   RelationTypeMapping: ReturnType<typeof createRelationTypeMapping>;
-  /** 用于检测起终点在图中是否存在的节点 ID 集合 */
-  getNodeIds: () => Set<string>;
 }
 
 /** 路径探索统计 */
@@ -35,6 +33,78 @@ export interface PathExplorerStats {
   minHops: number;
   maxHops: number;
 }
+
+/**
+ * 从 BREAK 全局数据构建所有实体间的关系边。
+ * 覆盖 Risk↔Avoidance、AttackTool→Risk、AttackTool→Avoidance、
+ * ThreatActor→Risk、ThreatActor→AttackTool、Term→各实体 等全部关系方向。
+ */
+const buildGlobalLines = (): Line[] => {
+  const lines: Line[] = [];
+
+  // Risk → Avoidance
+  for (const [rKey, risk] of Object.entries(BREAK.risks)) {
+    for (const aKey of risk.avoidances ?? []) {
+      lines.push({ from: rKey, to: aKey, text: "规避", relationKey: "risk-avoidance" });
+    }
+  }
+
+  // AttackTool → Risk (直接/间接), AttackTool → Avoidance
+  for (const [atKey, tool] of Object.entries(BREAK.attackTools)) {
+    for (const rKey of tool.directCauseRisks ?? []) {
+      lines.push({ from: atKey, to: rKey, text: "直接造成", relationKey: "attackTool-directCauseRisk" });
+    }
+    for (const rKey of tool.indirectSupportRisks ?? []) {
+      lines.push({ from: atKey, to: rKey, text: "间接支持", relationKey: "attackTool-indirectSupportRisk" });
+    }
+    for (const aKey of tool.avoidances ?? []) {
+      lines.push({ from: atKey, to: aKey, text: "规避", relationKey: "attackTool-avoidance" });
+    }
+  }
+
+  // ThreatActor → Risk (直接/间接), ThreatActor → AttackTool (构建/使用)
+  for (const [taKey, actor] of Object.entries(BREAK.threatActors)) {
+    for (const rKey of actor.directCauseRisks ?? []) {
+      lines.push({ from: taKey, to: rKey, text: "直接造成", relationKey: "threatActor-directCauseRisk" });
+    }
+    for (const rKey of actor.indirectSupportRisks ?? []) {
+      lines.push({ from: taKey, to: rKey, text: "间接支持", relationKey: "threatActor-indirectSupportRisk" });
+    }
+    for (const atKey of actor.buildAttackTools ?? []) {
+      lines.push({ from: taKey, to: atKey, text: "构建", relationKey: "threatActor-buildAttackTool" });
+    }
+    for (const atKey of actor.useAttackTools ?? []) {
+      lines.push({ from: taKey, to: atKey, text: "使用", relationKey: "threatActor-useAttackTool" });
+    }
+  }
+
+  // Term → 各实体
+  for (const [tKey, term] of Object.entries(BREAK.terms)) {
+    for (const rKey of term.relatedRisks ?? []) {
+      lines.push({ from: tKey, to: rKey, text: "关联风险", relationKey: "term-risk" });
+    }
+    for (const aKey of term.relatedAvoidances ?? []) {
+      lines.push({ from: tKey, to: aKey, text: "关联规避", relationKey: "term-avoidance" });
+    }
+    for (const atKey of term.relatedAttackTools ?? []) {
+      lines.push({ from: tKey, to: atKey, text: "关联工具", relationKey: "term-attackTool" });
+    }
+    for (const taKey of term.relatedThreatActors ?? []) {
+      lines.push({ from: tKey, to: taKey, text: "关联行为者", relationKey: "term-threatActor" });
+    }
+  }
+
+  return lines;
+};
+
+// 全局缓存：所有关系边只构建一次
+let globalLinesCache: Line[] | null = null;
+const getGlobalLines = (): Line[] => {
+  if (!globalLinesCache) {
+    globalLinesCache = buildGlobalLines();
+  }
+  return globalLinesCache;
+};
 
 /**
  * 将 DiscoveredRelationPath[] 转换为桑基图 nodes/links 数据。
@@ -52,7 +122,6 @@ const pathsToSankeyData = (
   const addNode = (key: string, depth: number) => {
     const existing = nodeMap.get(key);
     if (existing) {
-      // 取最小 depth
       if (depth < (existing.depth ?? Infinity)) {
         existing.depth = depth;
       }
@@ -83,7 +152,6 @@ const pathsToSankeyData = (
   };
 
   for (const path of paths) {
-    // 起点 depth=0
     const startName = addNode(path.startId, 0);
     let prevName = startName;
 
@@ -102,7 +170,6 @@ const pathsToSankeyData = (
 };
 
 export const createRelationPathExplorerSankey = ({
-  lines,
   startKey,
   endKey,
   maxDepth,
@@ -112,8 +179,6 @@ export const createRelationPathExplorerSankey = ({
   RelationTypeMapping,
 }: CreatePathExplorerSankeyOptions) => {
   const searching = ref(false);
-
-  // 缓存路径发现结果
   const discoveredPaths = ref<DiscoveredRelationPath[]>([]);
 
   const getNodeType = (id: string): RelationEntityType => {
@@ -125,7 +190,6 @@ export const createRelationPathExplorerSankey = ({
     return RelationType.risk;
   };
 
-  // 执行路径搜索（内部使用）
   let searchTimer: ReturnType<typeof setTimeout> | null = null;
   const runSearch = () => {
     if (searchTimer) {
@@ -141,11 +205,10 @@ export const createRelationPathExplorerSankey = ({
 
     searching.value = true;
 
-    // 防抖 + 异步避免阻塞 UI
     searchTimer = setTimeout(() => {
       searchTimer = null;
       const result = findRelationPaths({
-        lines,
+        lines: getGlobalLines(),
         startId: startKey.value,
         endId: endKey.value,
         maxDepth: maxDepth.value,
@@ -158,7 +221,6 @@ export const createRelationPathExplorerSankey = ({
     }, 150);
   };
 
-  // 监听所有影响搜索结果的参数，自动触发搜索
   watch(
     [startKey, endKey, maxDepth, maxPaths],
     () => {
@@ -166,10 +228,8 @@ export const createRelationPathExplorerSankey = ({
     },
   );
 
-  // 是否已选择终点（用于空状态提示）
   const hasTarget = computed(() => Boolean(endKey.value));
 
-  // 桑基图数据
   const pathExplorerSankeyData = computed(() => {
     if (discoveredPaths.value.length === 0) {
       return { nodes: [] as SankeyNode[], links: [] as SankeyLink[] };
@@ -182,7 +242,6 @@ export const createRelationPathExplorerSankey = ({
     );
   });
 
-  // 桑基图高度
   const pathExplorerChartHeight = computed(() => {
     const nodes = pathExplorerSankeyData.value.nodes;
     if (nodes.length === 0) return 0;
@@ -203,7 +262,6 @@ export const createRelationPathExplorerSankey = ({
     return Math.min(Math.max(400, maxLayerNodeCount * 24 + 96), 2400);
   });
 
-  // 统计信息
   const pathExplorerStats = computed<PathExplorerStats | null>(() => {
     const paths = discoveredPaths.value;
     if (paths.length === 0) return null;
@@ -215,7 +273,6 @@ export const createRelationPathExplorerSankey = ({
     };
   });
 
-  // 是否有数据
   const pathExplorerHasData = computed(
     () => pathExplorerSankeyData.value.nodes.length > 0,
   );

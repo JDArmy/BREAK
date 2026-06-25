@@ -302,9 +302,8 @@ export const createRelationViewAssembly = ({
     onOpenNodeActions: openSankeyNodeActions,
   });
 
-  // 路径探索数据
+  // 路径探索数据（基于全局知识库关系，不依赖当前图谱局部边）
   const pathExplorerData = createRelationPathExplorerSankey({
-    lines,
     startType: pathExplorerStartType,
     startKey: pathExplorerStartKey,
     endType: pathExplorerEndType,
@@ -314,7 +313,6 @@ export const createRelationViewAssembly = ({
     getSankeyNodeName: graphData.getSankeyNodeName,
     isMobile,
     RelationTypeMapping,
-    getNodeIds: () => new Set(graphData.nodes.map((n) => n.id)),
   });
 
   // 路径探索桑基图控制器（独立实例）
