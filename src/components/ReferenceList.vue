@@ -36,8 +36,8 @@ function getRefTitle(index: number): string {
     <div v-for="(ref, index) in references" :key="index" class="reference-item">
       <span class="reference-bullet">•</span>
       <a v-if="ref.link" :href="ref.link" target="_blank" rel="noopener noreferrer" class="reference-link">
-        <span class="reference-link-text">{{ getRefTitle(index) }}</span>
         <el-icon class="reference-link-icon" aria-hidden="true"><Link /></el-icon>
+        <span class="reference-link-text">{{ getRefTitle(index) }}</span>
       </a>
       <span v-else class="reference-text">{{ getRefTitle(index) }}</span>
     </div>

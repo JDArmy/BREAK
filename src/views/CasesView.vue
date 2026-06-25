@@ -189,8 +189,8 @@ watch(selectedCategory, () => {
               rel="noopener noreferrer"
               class="reference-link"
             >
-              <span class="reference-link-text">{{ ref.title }}</span>
               <el-icon class="reference-link-icon" aria-hidden="true"><Link /></el-icon>
+              <span class="reference-link-text">{{ ref.title }}</span>
             </a>
             <span v-else class="reference-text">{{ ref.title }}</span>
           </div>
