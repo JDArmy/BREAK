@@ -1,5 +1,4 @@
 import { computed, ref, watch, type ComputedRef, type Ref } from "vue";
-import BREAK from "@/BREAK";
 import {
   findRelationPaths,
   type DiscoveredRelationPath,
@@ -14,6 +13,7 @@ import {
   RelationType,
 } from "@/views/relation/relationTypes";
 import type { RootPathSummary } from "@/components/relation/relationNodeDrawerInsightTypes";
+import { getGlobalLines, getNodeTypeById } from "@/views/relation/relationGlobalLines";
 
 type SankeyNodeNameGetter = (type: RelationEntityType, key: string) => string;
 type Translate = (key: string, params?: Record<string, unknown>) => string;
@@ -51,77 +51,6 @@ export interface PathExplorerStats {
   maxHops: number;
 }
 
-/**
- * 从 BREAK 全局数据构建所有实体间的关系边。
- * 覆盖 Risk↔Avoidance、AttackTool→Risk、AttackTool→Avoidance、
- * ThreatActor→Risk、ThreatActor→AttackTool、Term→各实体 等全部关系方向。
- */
-const buildGlobalLines = (): Line[] => {
-  const lines: Line[] = [];
-
-  // Risk → Avoidance
-  for (const [rKey, risk] of Object.entries(BREAK.risks)) {
-    for (const aKey of risk.avoidances ?? []) {
-      lines.push({ from: rKey, to: aKey, text: "规避", relationKey: "risk-avoidance" });
-    }
-  }
-
-  // AttackTool → Risk (直接/间接), AttackTool → Avoidance
-  for (const [atKey, tool] of Object.entries(BREAK.attackTools)) {
-    for (const rKey of tool.directCauseRisks ?? []) {
-      lines.push({ from: atKey, to: rKey, text: "直接造成", relationKey: "attackTool-directCauseRisk" });
-    }
-    for (const rKey of tool.indirectSupportRisks ?? []) {
-      lines.push({ from: atKey, to: rKey, text: "间接支持", relationKey: "attackTool-indirectSupportRisk" });
-    }
-    for (const aKey of tool.avoidances ?? []) {
-      lines.push({ from: atKey, to: aKey, text: "规避", relationKey: "attackTool-avoidance" });
-    }
-  }
-
-  // ThreatActor → Risk (直接/间接), ThreatActor → AttackTool (构建/使用)
-  for (const [taKey, actor] of Object.entries(BREAK.threatActors)) {
-    for (const rKey of actor.directCauseRisks ?? []) {
-      lines.push({ from: taKey, to: rKey, text: "直接造成", relationKey: "threatActor-directCauseRisk" });
-    }
-    for (const rKey of actor.indirectSupportRisks ?? []) {
-      lines.push({ from: taKey, to: rKey, text: "间接支持", relationKey: "threatActor-indirectSupportRisk" });
-    }
-    for (const atKey of actor.buildAttackTools ?? []) {
-      lines.push({ from: taKey, to: atKey, text: "构建", relationKey: "threatActor-buildAttackTool" });
-    }
-    for (const atKey of actor.useAttackTools ?? []) {
-      lines.push({ from: taKey, to: atKey, text: "使用", relationKey: "threatActor-useAttackTool" });
-    }
-  }
-
-  // Term → 各实体
-  for (const [tKey, term] of Object.entries(BREAK.terms)) {
-    for (const rKey of term.relatedRisks ?? []) {
-      lines.push({ from: tKey, to: rKey, text: "关联风险", relationKey: "term-risk" });
-    }
-    for (const aKey of term.relatedAvoidances ?? []) {
-      lines.push({ from: tKey, to: aKey, text: "关联规避", relationKey: "term-avoidance" });
-    }
-    for (const atKey of term.relatedAttackTools ?? []) {
-      lines.push({ from: tKey, to: atKey, text: "关联工具", relationKey: "term-attackTool" });
-    }
-    for (const taKey of term.relatedThreatActors ?? []) {
-      lines.push({ from: tKey, to: taKey, text: "关联行为者", relationKey: "term-threatActor" });
-    }
-  }
-
-  return lines;
-};
-
-// 全局缓存：所有关系边只构建一次
-let globalLinesCache: Line[] | null = null;
-const getGlobalLines = (): Line[] => {
-  if (!globalLinesCache) {
-    globalLinesCache = buildGlobalLines();
-  }
-  return globalLinesCache;
-};
 
 /**
  * 将 DiscoveredRelationPath[] 转换为桑基图 nodes/links 数据。
@@ -311,15 +240,6 @@ export const createRelationPathExplorerSankey = ({
   const searching = ref(false);
   const discoveredPaths = ref<DiscoveredRelationPath[]>([]);
 
-  const getNodeType = (id: string): RelationEntityType => {
-    if (id.startsWith("AT")) return RelationType.attackTool;
-    if (id.startsWith("TA")) return RelationType.threatActor;
-    if (id.startsWith("R")) return RelationType.risk;
-    if (id.startsWith("A")) return RelationType.avoidance;
-    if (id.startsWith("T")) return RelationType.term;
-    return RelationType.risk;
-  };
-
   let searchTimer: ReturnType<typeof setTimeout> | null = null;
   const runSearch = () => {
     if (searchTimer) {
@@ -371,7 +291,7 @@ export const createRelationPathExplorerSankey = ({
       discoveredPaths.value,
       getSankeyNodeName,
       RelationTypeMapping,
-      getNodeType,
+      getNodeTypeById,
     );
   });
 
@@ -388,23 +308,12 @@ export const createRelationPathExplorerSankey = ({
       {},
     );
     const maxLayerNodeCount = Math.max(1, ...Object.values(nodesByDepth));
-    const depthCount = Object.keys(nodesByDepth).length;
 
-    // 最小高度 = 视口高度 - 页面其他元素占位（确保至少占满 1 屏可用空间）
-    // header(60) + 选择器栏(44) + tabs(48) + 控制面板(~130) + 统计栏(~40) + footer(30) + 间距(~20) ≈ 372
-    const viewportHeight = typeof window !== "undefined" ? window.innerHeight : 800;
-    const otherElementsHeight = isMobile.value ? 400 : 372;
-    const minHeight = Math.max(300, viewportHeight - otherElementsHeight);
+    if (isMobile.value) {
+      return Math.min(Math.max(620, maxLayerNodeCount * 34 + 140), 5200);
+    }
 
-    // 每节点分配高度随跳数增加而增加——层数多时标签更密集，需要更大垂直间距
-    // 基准 44px，每增加 1 层（超过 3 层）加 10px
-    const baseNodeHeight = isMobile.value ? 50 : 44;
-    const extraPerDepth = depthCount > 3 ? (depthCount - 3) * 10 : 0;
-    const nodeSlotHeight = baseNodeHeight + extraPerDepth;
-    const contentHeight = maxLayerNodeCount * nodeSlotHeight + 100;
-
-    // 最小 1 屏，实体多时可动态增高（页面滚动查看）
-    return Math.max(minHeight, contentHeight);
+    return Math.min(Math.max(520, maxLayerNodeCount * 24 + 96), 3200);
   });
 
   const pathExplorerStats = computed<PathExplorerStats | null>(() => {
@@ -430,7 +339,7 @@ export const createRelationPathExplorerSankey = ({
       discoveredPaths: discoveredPaths.value,
       clickedId: selectedNetworkNodeId.value,
       startId: startKey.value,
-      getNodeType,
+      getNodeType: getNodeTypeById,
       getNodeTitle,
       getNodeTypeTitle,
       isDirectRelationLine,

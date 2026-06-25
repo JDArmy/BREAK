@@ -117,7 +117,12 @@ const createGraphData = () => ({
   clearDraggedNodePositions: vi.fn(),
   draggedNodePositions: ref({}),
   ensureRelationNode: vi.fn(),
-  explainRelation: vi.fn(),
+  explainRelation: vi.fn(() => ({
+    evidenceLevel: "direct",
+    explanation: "",
+    impactHint: "",
+    qualityFlags: [],
+  })),
   filterLineType: ref("all"),
   filterRelatedEntity: ref("all"),
   filterRelationType: ref("all"),
@@ -127,8 +132,9 @@ const createGraphData = () => ({
   genNetworkGraphData: vi.fn(),
   getCurrentEntityOptions: vi.fn(),
   getNodeTypeTitle: vi.fn(),
-  getRelationSourceFields: vi.fn(),
-  isDirectRelationLine: vi.fn(),
+  getRelationPriority: vi.fn(() => 0),
+  getRelationSourceFields: vi.fn(() => []),
+  isDirectRelationLine: vi.fn(() => true),
   lines: ref([]),
   nodes: ref([]),
   normalizeAttackPathFilters: vi.fn(),
@@ -145,6 +151,11 @@ const createGraphData = () => ({
   sankeyData: computed(() => ({ nodes: [], links: [] })),
   selectedNetworkNode: ref(null),
   selectedNetworkNodeId: ref("R0001"),
+  selectedNetworkRelations: ref([]),
+  selectedNetworkRelationCounts: ref({ incoming: 0, outgoing: 0 }),
+  selectedNodeAnalysisSummary: ref(null),
+  selectedNodeDiscoveredPaths: ref([]),
+  selectedNodeRelatedEntitySummary: ref(null),
   selectedNodeRootPath: ref(null),
   isCurrentNodeRoot: ref(false),
   getNodeTitle: vi.fn(),
@@ -397,7 +408,7 @@ describe("relationViewAssembly", () => {
     expect(nodeActionOptions.contextMenuPaneRef.value).toBe(element);
   });
 
-  it("configures path explorer Sankey spacing from discovered depth and mobile state", () => {
+  it("configures path explorer Sankey with attack-path sizing defaults", () => {
     createRelationPathExplorerSankey.mockReturnValue({
       discoveredPaths: ref([]),
       pathExplorerChartHeight: computed(() => 420),
@@ -419,14 +430,14 @@ describe("relationViewAssembly", () => {
 
     const pathExplorerOptions = createSankeyChartController.mock.calls[1][0];
     expect(pathExplorerOptions.viewModeKey).toBe("pathExplorer");
-    expect(pathExplorerOptions.sankeyRight.value).toBe(160);
-    expect(pathExplorerOptions.sankeyLabelWidth.value).toBe(140);
-    expect(pathExplorerOptions.sankeyNodeGap.value).toBe(24);
+    expect(pathExplorerOptions.sankeyRight.value).toBe(280);
+    expect(pathExplorerOptions.sankeyLabelWidth.value).toBe(220);
+    expect(pathExplorerOptions.sankeyNodeGap.value).toBe(10);
 
     isMobile.value = true;
-    expect(pathExplorerOptions.sankeyRight.value).toBe(200);
+    expect(pathExplorerOptions.sankeyRight.value).toBe(280);
     expect(pathExplorerOptions.sankeyLabelWidth.value).toBe(220);
-    expect(pathExplorerOptions.sankeyNodeGap.value).toBe(16);
+    expect(pathExplorerOptions.sankeyNodeGap.value).toBe(10);
     isMobile.value = false;
   });
 
@@ -450,19 +461,28 @@ describe("relationViewAssembly", () => {
     createAssembly();
 
     const pathExplorerOptions = createSankeyChartController.mock.calls[1][0];
-    expect(pathExplorerOptions.sankeyRight.value).toBe(200);
-    expect(pathExplorerOptions.sankeyLabelWidth.value).toBe(160);
-    expect(pathExplorerOptions.sankeyNodeGap.value).toBe(20);
+    expect(pathExplorerOptions.sankeyRight.value).toBe(280);
+    expect(pathExplorerOptions.sankeyLabelWidth.value).toBe(220);
+    expect(pathExplorerOptions.sankeyNodeGap.value).toBe(10);
   });
 
   it("renders path explorer Sankey only when active view has data", async () => {
+    const requestAnimationFrameSpy = vi
+      .spyOn(window, "requestAnimationFrame")
+      .mockImplementation((callback) => {
+        callback(0);
+        return 1;
+      });
     const discoveredPaths = ref<string[]>([]);
     const pathExplorerHasData = ref(false);
     createRelationPathExplorerSankey.mockReturnValue({
       discoveredPaths,
       pathExplorerChartHeight: computed(() => 420),
       pathExplorerHasData,
-      pathExplorerSankeyData: computed(() => ({ nodes: [], links: [] })),
+      pathExplorerSankeyData: computed(() => ({
+        nodes: discoveredPaths.value.map((path) => ({ name: path })),
+        links: [],
+      })),
     });
     const relationView = createAssembly();
     const pathExplorerController = createSankeyChartController.mock.results[1].value;
@@ -479,6 +499,7 @@ describe("relationViewAssembly", () => {
     await nextTick();
 
     expect(pathExplorerController.renderSankeyChart).toHaveBeenCalled();
+    expect(requestAnimationFrameSpy).toHaveBeenCalled();
   });
 
   it("syncs path explorer parameter changes into route query", async () => {

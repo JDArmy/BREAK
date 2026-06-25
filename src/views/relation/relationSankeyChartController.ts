@@ -139,6 +139,7 @@ export const createSankeyChartController = ({
           .getDom()
           .addEventListener("contextmenu", preventMobileNativeContextMenu);
       }
+      sankeyChart.resize();
       sankeyChart.dispatchAction({ type: "hideTip" });
       // name → displayName 映射，供 edge tooltip 把内部唯一键还原为可读名
       const displayNameByNodeName = (nodeName: string): string => {

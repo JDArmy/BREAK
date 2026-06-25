@@ -14,6 +14,13 @@ import { useRelationGraphData } from "@/views/relation/useRelationGraphData";
 import { useRelationNodeActions } from "@/views/relation/useRelationNodeActions";
 import { createRelationPathExplorerSankey } from "@/views/relation/relationPathExplorerSankey";
 import {
+  buildGlobalNodeAnalysisSummary,
+  buildGlobalNodeRelatedEntitySummary,
+  buildGlobalNodeRelationCounts,
+  buildGlobalNodeRelations,
+  getGlobalLines,
+} from "@/views/relation/relationGlobalLines";
+import {
   RelationType,
   type createRelationTypeMapping,
   getRelationLineKey,
@@ -327,39 +334,6 @@ export const createRelationViewAssembly = ({
 
   // 路径探索桑基图：根据跳数动态调整右侧标签宽度
   // 层数多时（5-6跳）缩小右侧标签区，把更多水平空间留给节点分布
-  const pathExplorerDepthCount = computed(() => {
-    const nodes = pathExplorerData.pathExplorerSankeyData.value.nodes;
-    if (nodes.length === 0) return 0;
-    const depths = new Set(nodes.map(n => n.depth ?? 0));
-    return depths.size;
-  });
-
-  const pathExplorerSankeyRight = computed(() => {
-    const depths = pathExplorerDepthCount.value;
-    if (isMobile.value) return Math.max(120, Math.min(200, sankeyRight.value));
-    // 5+ 层时缩小右侧标签，让图表节点有更多水平空间
-    if (depths >= 6) return 160;
-    if (depths >= 5) return 200;
-    return sankeyRight.value;
-  });
-
-  const pathExplorerSankeyLabelWidth = computed(() => {
-    const depths = pathExplorerDepthCount.value;
-    if (isMobile.value) return sankeyLabelWidth.value;
-    if (depths >= 6) return 140;
-    if (depths >= 5) return 160;
-    return sankeyLabelWidth.value;
-  });
-
-  // 路径探索：层数多时增大节点间距，让节点分布更开
-  const pathExplorerNodeGap = computed(() => {
-    const depths = pathExplorerDepthCount.value;
-    if (isMobile.value) return 16;
-    if (depths >= 6) return 24;
-    if (depths >= 5) return 20;
-    return 14;
-  });
-
   // 路径探索桑基图控制器（独立实例）
   const pathExplorerSankeyController = createSankeyChartController({
     t,
@@ -373,11 +347,11 @@ export const createRelationViewAssembly = ({
     sankeyLabelLineHeight,
     sankeyLabelOverflow,
     sankeyLayoutIterations,
-    sankeyRight: pathExplorerSankeyRight,
-    sankeyLabelWidth: pathExplorerSankeyLabelWidth,
+    sankeyRight,
+    sankeyLabelWidth,
     sankeyLeft,
     sankeyNodeAlign,
-    sankeyNodeGap: pathExplorerNodeGap,
+    sankeyNodeGap,
     sankeyNodeWidth,
     sankeyTop,
     onOpenNodeDetail: openSankeyNodeDetail,
@@ -385,10 +359,14 @@ export const createRelationViewAssembly = ({
     viewModeKey: "pathExplorer",
   });
 
-  // 路径发现数据变化时触发桑基图渲染
-  watch(pathExplorerData.discoveredPaths, () => {
+  // 路径发现和图表高度变化时触发桑基图渲染：先让 computed 高度更新并落到 DOM，再绘制。
+  watch([pathExplorerData.pathExplorerSankeyData, pathExplorerData.pathExplorerChartHeight], () => {
     if (activeView.value === "pathExplorer" && pathExplorerData.pathExplorerHasData.value) {
-      nextTick(pathExplorerSankeyController.renderSankeyChart);
+      nextTick(() => {
+        requestAnimationFrame(() => {
+          pathExplorerSankeyController.renderSankeyChart();
+        });
+      });
     }
   });
 
@@ -539,6 +517,66 @@ export const createRelationViewAssembly = ({
       : graphData.isCurrentNodeRoot.value,
   );
 
+  // 路径探索 tab 下节点详情改用全局 BREAK 关系（仅此 tab 生效）：
+  // 节点概览 / 关系列表 / 关系计数 / 相关实体 基于该节点自身的全局关系构建，
+  // 不再依赖网络图局部 lines（局部 lines 仅含根节点 1 跳邻域，非邻域节点会显示 0 关系）。
+  // 其余视角沿用 graphData 基于局部 lines 的原值。
+  const mergedSelectedNodeAnalysisSummary = computed(() => {
+    if (activeView.value !== "pathExplorer") {
+      return graphData.selectedNodeAnalysisSummary.value;
+    }
+    const node = graphData.selectedNetworkNode.value;
+    return buildGlobalNodeAnalysisSummary({
+      node: node ? { id: node.id, type: node.type } : null,
+      globalLines: getGlobalLines(),
+      getNodeTitle: graphData.getNodeTitle,
+      getNodeTypeTitle: graphData.getNodeTypeTitle,
+      t,
+      selectedNodeRootPath: mergedSelectedNodeRootPath.value,
+      selectedNodeDiscoveredPaths: graphData.selectedNodeDiscoveredPaths.value,
+    });
+  });
+  const mergedSelectedNetworkRelations = computed(() => {
+    if (activeView.value !== "pathExplorer") {
+      return graphData.selectedNetworkRelations.value;
+    }
+    const node = graphData.selectedNetworkNode.value;
+    if (!node) return [];
+    return buildGlobalNodeRelations({
+      nodeId: node.id,
+      globalLines: getGlobalLines(),
+      getNodeTitle: graphData.getNodeTitle,
+      getNodeTypeTitle: graphData.getNodeTypeTitle,
+      isDirectRelationLine: graphData.isDirectRelationLine,
+      getRelationSourceFields: graphData.getRelationSourceFields,
+      getRelationPriority: graphData.getRelationPriority,
+      explainRelation: graphData.explainRelation,
+      formatEvidenceLevel: graphData.formatEvidenceLevel,
+      t,
+    });
+  });
+  const mergedSelectedNetworkRelationCounts = computed(() => {
+    if (activeView.value !== "pathExplorer") {
+      return graphData.selectedNetworkRelationCounts.value;
+    }
+    const node = graphData.selectedNetworkNode.value;
+    if (!node) return { incoming: 0, outgoing: 0 };
+    return buildGlobalNodeRelationCounts(node.id, getGlobalLines());
+  });
+  const mergedSelectedNodeRelatedEntitySummary = computed(() => {
+    if (activeView.value !== "pathExplorer") {
+      return graphData.selectedNodeRelatedEntitySummary.value;
+    }
+    const node = graphData.selectedNetworkNode.value;
+    if (!node) return null;
+    return buildGlobalNodeRelatedEntitySummary({
+      nodeId: node.id,
+      getNodeTitle: graphData.getNodeTitle,
+      getNodeTypeTitle: graphData.getNodeTypeTitle,
+      t,
+    });
+  });
+
   const relationView = {
     ...graphData,
     ...networkController,
@@ -567,6 +605,11 @@ export const createRelationViewAssembly = ({
     // 覆盖 graphData 展开的同名键：路径探索 tab 下改用起点实体为根
     selectedNodeRootPath: mergedSelectedNodeRootPath,
     isCurrentNodeRoot: mergedIsCurrentNodeRoot,
+    // 覆盖 graphData 展开的同名键：路径探索 tab 下节点详情改用全局 BREAK 关系
+    selectedNodeAnalysisSummary: mergedSelectedNodeAnalysisSummary,
+    selectedNetworkRelations: mergedSelectedNetworkRelations,
+    selectedNetworkRelationCounts: mergedSelectedNetworkRelationCounts,
+    selectedNodeRelatedEntitySummary: mergedSelectedNodeRelatedEntitySummary,
     relKey,
     relType,
     sankeyChartMinWidth,

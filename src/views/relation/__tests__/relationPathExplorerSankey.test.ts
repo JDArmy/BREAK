@@ -315,10 +315,9 @@ describe("relationPathExplorerSankey", () => {
     expect(explorer.pathExplorerHasData.value).toBe(true);
   });
 
-  // === 最小高度使用视口减去其他元素高度 ===
+  // === 图表高度 ===
 
   it("chart height at least fills one screen (desktop)", async () => {
-    // happy-dom 默认 window.innerHeight = 768
     const { explorer, endKey } = createExplorer({ isMobile: false });
 
     endKey.value = "A0001";
@@ -326,12 +325,11 @@ describe("relationPathExplorerSankey", () => {
     vi.runAllTimers();
 
     const height = explorer.pathExplorerChartHeight.value;
-    // 最小高度 = max(300, innerHeight - 372)
-    const viewportMin = Math.max(300, window.innerHeight - 372);
-    expect(height).toBeGreaterThanOrEqual(viewportMin);
+    expect(height).toBeGreaterThanOrEqual(520);
+    expect(height).toBeLessThanOrEqual(3200);
   });
 
-  it("chart height at least fills one screen (mobile)", async () => {
+  it("chart height follows attack-path Sankey sizing on mobile", async () => {
     const { explorer, endKey } = createExplorer({ isMobile: true });
 
     endKey.value = "A0001";
@@ -339,8 +337,8 @@ describe("relationPathExplorerSankey", () => {
     vi.runAllTimers();
 
     const height = explorer.pathExplorerChartHeight.value;
-    const viewportMin = Math.max(300, window.innerHeight - 400);
-    expect(height).toBeGreaterThanOrEqual(viewportMin);
+    expect(height).toBeGreaterThanOrEqual(620);
+    expect(height).toBeLessThanOrEqual(5200);
   });
 
   // === 自动触发搜索（修复：去掉手动按钮）===

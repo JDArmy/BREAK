@@ -228,6 +228,7 @@ export default defineComponent({
           :path-explorer-sankey-data="pathExplorerSankeyData"
           :path-explorer-has-data="pathExplorerHasData"
           :path-explorer-chart-height="pathExplorerChartHeight"
+          :path-explorer-chart-min-width="sankeyChartMinWidth"
           :path-explorer-stats="pathExplorerStats"
           :has-target="hasTarget"
           :searching="searching"

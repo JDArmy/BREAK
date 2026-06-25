@@ -289,7 +289,7 @@ describe("relationSankeyChartController", () => {
         }),
       }),
     );
-    expect(chart.resize).not.toHaveBeenCalled();
+    expect(chart.resize).toHaveBeenCalled();
     expect(requestAnimationFrameSpy).toHaveBeenCalledTimes(2);
   });
 

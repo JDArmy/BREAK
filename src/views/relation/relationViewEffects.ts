@@ -280,6 +280,8 @@ export const setupRelationViewEffects = ({
     () => {
       if (hasMounted && activeView.value === "sankey") {
         nextTick(renderSankeyChart);
+      } else if (hasMounted && activeView.value === "pathExplorer") {
+        nextTick(renderPathExplorerSankeyChart);
       }
     }
   );

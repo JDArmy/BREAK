@@ -18,6 +18,7 @@ const props = defineProps<{
   pathExplorerSankeyData: { nodes: SankeyNode[]; links: SankeyLink[] };
   pathExplorerHasData: boolean;
   pathExplorerChartHeight: number;
+  pathExplorerChartMinWidth?: number;
   pathExplorerStats: PathExplorerStats | null;
   hasTarget: boolean;
   searching: boolean;
@@ -55,6 +56,8 @@ const endType = ref<RelationType>(props.initialEndType ?? RelationType.avoidance
 const endKey = ref(props.initialEndKey ?? "");
 const maxDepth = ref(props.initialMaxDepth ?? 4);
 const maxPaths = ref(props.initialMaxPaths ?? 10);
+const draftMaxDepth = ref(maxDepth.value);
+const draftMaxPaths = ref(maxPaths.value);
 
 // 初始化时同步父组件
 watch(() => props.relType, (val) => { startType.value = val; }, { immediate: true });
@@ -65,8 +68,29 @@ watch(startType, (val) => emit("update:startType", val));
 watch(startKey, (val) => emit("update:startKey", val));
 watch(endType, (val) => emit("update:endType", val));
 watch(endKey, (val) => emit("update:endKey", val));
-watch(maxDepth, (val) => emit("update:maxDepth", val));
-watch(maxPaths, (val) => emit("update:maxPaths", val));
+
+watch(maxDepth, (val) => {
+  draftMaxDepth.value = val;
+});
+watch(maxPaths, (val) => {
+  draftMaxPaths.value = val;
+});
+
+const commitMaxDepth = (value: number | number[]) => {
+  const nextValue = Array.isArray(value) ? value[0] : value;
+  draftMaxDepth.value = nextValue;
+  if (nextValue === maxDepth.value) return;
+  maxDepth.value = nextValue;
+  emit("update:maxDepth", nextValue);
+};
+
+const commitMaxPaths = (value: number | number[]) => {
+  const nextValue = Array.isArray(value) ? value[0] : value;
+  draftMaxPaths.value = nextValue;
+  if (nextValue === maxPaths.value) return;
+  maxPaths.value = nextValue;
+  emit("update:maxPaths", nextValue);
+};
 
 // 实体选项构建：用 computed 让 label 随语言切换自动更新
 // （t() 内部依赖 locale，computed 会自动重算）
@@ -143,7 +167,7 @@ const setRef = (el: unknown) => {
     <div class="path-explorer-controls">
       <div class="control-row">
         <!-- 起点选择 -->
-        <div class="control-group">
+        <div class="control-group control-group--type">
           <label class="control-label">{{ t("relationView.pathExplorerPanel.sourceType") }}</label>
           <el-select v-model="startType" size="small" class="type-select">
             <el-option
@@ -172,7 +196,7 @@ const setRef = (el: unknown) => {
         <div class="control-separator">→</div>
 
         <!-- 终点选择 -->
-        <div class="control-group">
+        <div class="control-group control-group--type">
           <label class="control-label">{{ t("relationView.pathExplorerPanel.targetType") }}</label>
           <el-select v-model="endType" size="small" class="type-select">
             <el-option
@@ -200,12 +224,28 @@ const setRef = (el: unknown) => {
 
       <div class="control-row control-row--params">
         <div class="control-group control-group--slider">
-          <label class="control-label">{{ t("relationView.pathExplorerPanel.maxHops") }}: {{ maxDepth }}</label>
-          <el-slider v-model="maxDepth" :min="1" :max="6" :step="1" size="small" class="param-slider" />
+          <label class="control-label">{{ t("relationView.pathExplorerPanel.maxHops") }}: {{ draftMaxDepth }}</label>
+          <el-slider
+            v-model="draftMaxDepth"
+            :min="1"
+            :max="6"
+            :step="1"
+            size="small"
+            class="param-slider"
+            @change="commitMaxDepth"
+          />
         </div>
         <div class="control-group control-group--slider">
-          <label class="control-label">{{ t("relationView.pathExplorerPanel.maxPaths") }}: {{ maxPaths }}</label>
-          <el-slider v-model="maxPaths" :min="1" :max="30" :step="1" size="small" class="param-slider" />
+          <label class="control-label">{{ t("relationView.pathExplorerPanel.maxPaths") }}: {{ draftMaxPaths }}</label>
+          <el-slider
+            v-model="draftMaxPaths"
+            :min="1"
+            :max="30"
+            :step="1"
+            size="small"
+            class="param-slider"
+            @change="commitMaxPaths"
+          />
         </div>
       </div>
     </div>
@@ -236,7 +276,12 @@ const setRef = (el: unknown) => {
         <div
           class="path-explorer-chart"
           :ref="setRef"
-          :style="{ height: pathExplorerChartHeight + 'px' }"
+          :style="{
+            height: pathExplorerChartHeight + 'px',
+            minWidth: pathExplorerChartMinWidth
+              ? `${pathExplorerChartMinWidth}px`
+              : undefined,
+          }"
         ></div>
       </div>
     </div>
@@ -276,6 +321,10 @@ const setRef = (el: unknown) => {
 .control-group--entity {
   flex: 1;
   min-width: 160px;
+}
+
+.control-group--type {
+  flex: 0 0 120px;
 }
 
 .control-group--slider {
@@ -354,18 +403,28 @@ const setRef = (el: unknown) => {
 .path-explorer-chart {
   width: 100%;
   min-height: 100%;
+  box-sizing: border-box;
 }
 
 @media (max-width: 767px) {
   .control-row {
-    flex-direction: column;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: minmax(88px, 96px) minmax(0, 1fr);
+    gap: 8px 10px;
+    align-items: end;
   }
 
   .control-separator {
-    text-align: center;
-    align-self: center;
-    margin: 4px 0;
+    display: none;
+  }
+
+  .control-group--type {
+    flex: none;
+    min-width: 0;
+  }
+
+  .control-group--entity {
+    min-width: 0;
   }
 
   .type-select {
@@ -378,6 +437,10 @@ const setRef = (el: unknown) => {
 
   .param-slider {
     width: 100%;
+  }
+
+  .control-row--params {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .path-explorer-result--has-chart {
