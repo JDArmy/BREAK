@@ -308,6 +308,8 @@ const setRef = (el: unknown) => {
   background: var(--break-bg-card);
   overflow-x: hidden;
   overflow-y: auto;
+  /* header(60) + tabs(46) + 控制面板(~130) + margin/padding(~44) = ~280px */
+  max-height: calc(100vh - 280px);
 }
 
 .path-explorer-empty {
