@@ -197,24 +197,20 @@ const setRef = (el: unknown) => {
     </div>
 
     <!-- 结果区域 -->
-    <div class="path-explorer-result" :class="{ 'path-explorer-result--has-chart': pathExplorerHasData && !searching }">
-      <!-- 搜索中 -->
-      <div v-if="searching" class="path-explorer-empty">
+    <div class="path-explorer-result" :class="{ 'path-explorer-result--has-chart': pathExplorerHasData }">
+      <!-- 空状态提示（搜索中 / 未选终点 / 无路径） -->
+      <div v-show="searching" class="path-explorer-empty">
         {{ t("relationView.pathExplorerPanel.searching") }}
       </div>
-
-      <!-- 未选择终点 -->
-      <div v-else-if="!hasTarget" class="path-explorer-empty">
+      <div v-show="!searching && !hasTarget" class="path-explorer-empty">
         {{ t("relationView.pathExplorerPanel.noTarget") }}
       </div>
-
-      <!-- 无路径 -->
-      <div v-else-if="!pathExplorerHasData" class="path-explorer-empty">
+      <div v-show="!searching && hasTarget && !pathExplorerHasData" class="path-explorer-empty">
         {{ t("relationView.pathExplorerPanel.noPath") }}
       </div>
 
-      <!-- 有数据：统计（sticky）+ 桑基图（可滚动） -->
-      <template v-else>
+      <!-- 桑基图区域（始终挂载，v-show 控制显隐，避免参数变化时 DOM 重建导致图表丢失） -->
+      <div v-show="!searching && pathExplorerHasData" class="path-explorer-chart-area">
         <div v-if="pathExplorerStats" class="path-explorer-stats">
           <span class="stat-item">
             {{ t("relationView.pathExplorerPanel.resultSummary", { count: pathExplorerStats.pathCount }) }}
@@ -228,7 +224,7 @@ const setRef = (el: unknown) => {
           :ref="setRef"
           :style="{ height: pathExplorerChartHeight + 'px' }"
         ></div>
-      </template>
+      </div>
     </div>
   </div>
 </template>
