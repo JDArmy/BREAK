@@ -53,7 +53,8 @@ vi.mock("@/views/relation/useRelationNodeActions", () => ({
 }));
 
 const route = reactive({
-  params: { type: "risk", key: "R0001" },
+  name: "relationRiskEntity" as string | symbol | undefined,
+  params: { entity: "risk", id: "R0001" },
   query: {} as Record<string, string>,
 });
 const router = { push: vi.fn(), replace: vi.fn() };
@@ -183,7 +184,8 @@ const createPathExplorerData = () => ({
 describe("relationViewAssembly", () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    route.params = { type: "risk", key: "R0001" };
+    route.name = "relationRiskEntity";
+    route.params = { entity: "risk", id: "R0001" };
     route.query = {};
     router.push.mockClear();
     router.replace.mockClear();
@@ -276,13 +278,15 @@ describe("relationViewAssembly", () => {
     expect(relationView.renderSankeyChart).toBe(sankeyController.renderSankeyChart);
   });
 
-  it("按任务型分析视角更新筛选、布局、默认视图和 URL 查询", async () => {
+  it("按任务型分析视角更新筛选、布局、默认视图（视角由路由 name 驱动）", async () => {
     const relationView = createAssembly();
     const state = createRelationViewState.mock.results[0].value;
     const graphData = useRelationGraphData.mock.results[0].value;
     const nodeActions = useRelationNodeActions.mock.results[0].value;
+    router.replace.mockClear();
 
-    state.activeAnalysisPerspective.value = "defenseCoverage";
+    // 切到防御覆盖视角：由 route.name 驱动
+    route.name = "relationDefenseCoverage";
     await nextTick();
 
     expect(graphData.filterRelationType.value).toEqual([
@@ -301,26 +305,27 @@ describe("relationViewAssembly", () => {
     ]);
     expect(state.handleNetworkLayoutCommand).toHaveBeenCalledWith("force");
     expect(state.activeView.value).toBe("analysis");
+    expect(state.activeAnalysisPerspective.value).toBe("defenseCoverage");
     expect(nodeActions.doFilter).toHaveBeenCalled();
-    expect(router.replace).toHaveBeenCalledWith({
-      name: "relation",
-      params: { type: RelationType.risk, key: "R0001" },
-      query: { perspective: "defenseCoverage" },
-    });
+    // 视角不再写回 query.perspective，仅切路由不触发 replace
+    expect(router.replace).not.toHaveBeenCalled();
     expect(relationView.currentAnalysisPerspectiveOption.value.key).toBe(
       "defenseCoverage",
     );
   });
 
-  it("切换主视图时同步任务型分析视角和预设筛选", async () => {
+  it("切换视角路由时同步任务型分析视角和预设筛选", async () => {
     const relationView = createAssembly();
     const state = createRelationViewState.mock.results[0].value;
     const graphData = useRelationGraphData.mock.results[0].value;
+    router.replace.mockClear();
 
-    state.activeView.value = "sankey";
+    // 切到攻击路径视角：由 route.name 驱动
+    route.name = "relationAttackPath";
     await nextTick();
 
     expect(state.activeAnalysisPerspective.value).toBe("attackPath");
+    expect(state.activeView.value).toBe("sankey");
     expect(graphData.filterRelationType.value).toEqual([
       RelationType.threatActor,
       RelationType.attackTool,
@@ -329,11 +334,7 @@ describe("relationViewAssembly", () => {
     ]);
     expect(graphData.filterSubNode.value).toBe(false);
     expect(graphData.filterRelatedEntity.value).toBe(false);
-    expect(router.replace).toHaveBeenCalledWith({
-      name: "relation",
-      params: { type: RelationType.risk, key: "R0001" },
-      query: { perspective: "attackPath" },
-    });
+    expect(router.replace).not.toHaveBeenCalled();
     expect(relationView.currentAnalysisPerspectiveOption.value.key).toBe(
       "attackPath",
     );
@@ -503,6 +504,7 @@ describe("relationViewAssembly", () => {
   });
 
   it("syncs path explorer parameter changes into route query", async () => {
+    route.name = "relationPathExplorerEntity";
     const relationView = createAssembly();
     router.replace.mockClear();
 
@@ -513,8 +515,8 @@ describe("relationViewAssembly", () => {
     await nextTick();
 
     expect(router.replace).toHaveBeenCalledWith({
-      name: "relation",
-      params: { type: RelationType.risk, key: "R0001" },
+      name: "relationPathExplorerEntity",
+      params: { entity: RelationType.risk, id: "R0001" },
       query: {
         endType: RelationType.threatActor,
         endKey: "TA0001",
@@ -528,8 +530,8 @@ describe("relationViewAssembly", () => {
     await nextTick();
 
     expect(router.replace).toHaveBeenCalledWith({
-      name: "relation",
-      params: { type: RelationType.risk, key: "R0001" },
+      name: "relationPathExplorerEntity",
+      params: { entity: RelationType.risk, id: "R0001" },
       query: {
         endType: RelationType.threatActor,
         maxDepth: "6",
@@ -539,6 +541,7 @@ describe("relationViewAssembly", () => {
   });
 
   it("does not replace route when path explorer parameters match query defaults", async () => {
+    route.name = "relationPathExplorerEntity";
     route.query = {
       endType: RelationType.avoidance,
       maxDepth: "4",
@@ -558,6 +561,7 @@ describe("relationViewAssembly", () => {
   });
 
   it("applies valid path explorer query values with numeric clamping", async () => {
+    route.name = "relationPathExplorerEntity";
     const relationView = createAssembly();
 
     route.query = {
@@ -581,7 +585,8 @@ describe("relationViewAssembly", () => {
     await nextTick();
 
     expect(relationView.pathExplorerEndType.value).toBe(RelationType.term);
-    expect(relationView.pathExplorerEndKey.value).toBe("");
+    // endKey 不再因 queryEndKey=undefined 被重置——面板 onMounted 设置后保留到手动清除
+    expect(relationView.pathExplorerEndKey.value).toBe("T0001");
     expect(relationView.pathExplorerMaxDepth.value).toBe(4);
     expect(relationView.pathExplorerMaxPaths.value).toBe(30);
   });

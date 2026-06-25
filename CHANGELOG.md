@@ -1,5 +1,16 @@
 # Change log
 
+## 2.27.0
+
+全站路由/链接结构统一重构，URL 语义更清晰、关系图视角参数不再串扰：
+
+- 首页抽屉路由统一为 `/home/{entity}/{id}`（原 `/risks/:rKey` 等扁平路径）；业务场景新增 `/business-scene/:bsKey/{entity}/{id}` 支持所有实体类型，关闭抽屉时回到对应业务场景
+- 知识库路由统一为 `/knowledges/{entity}/list` 与 `/knowledges/{entity}/detail/{id}`（entity 段单数）；PC 下 list 默认激活第一个条目，`list?selected={id}` 自动跳转 detail，list/detail 同组件互跳；移动端 list 显示列表、detail 两态切换
+- 关系图谱拆分为 4 个独立视角路由：`/relations/risk-relation`、`/relations/attack-path`、`/relations/defense-coverage`、`/relations/path-explorer`，选中实体为 `/relations/{视角}/{entity}/{id}`（entity 单数）；视角由路由 name 决定，切换视角时按 query 白名单隔离参数，彻底消除 pathExplorer 的 endType/endKey/maxDepth/maxPaths 残留到其它视角的问题
+- 抽屉中跳知识库详情页的链接改为新窗口打开并补充 TopRight 跳转图标；参考链接 references 补充链接图标
+- 「打开关系图」按实体主角色映射视角：risk→风险视角、avoidance→防御覆盖、attack-tool/threat-actor→攻击路径
+- 旧路由全部删除不做重定向（hash 模式内部工具，catch-all 落首页）
+
 ## 2.26.8
 
 - 修复关系图谱节点详情移动端标题区外跳图标换行问题，保持 ID、标题和外跳图标同一行展示

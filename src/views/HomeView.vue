@@ -271,58 +271,76 @@ watch(
 /////////////////////////////////////////////////////////////////////
 // 抽屉路由管理——统一使用 useDrawerRoute composable
 
-// 风险详情抽屉（特殊：支持两个路由名，关闭时需区分业务场景）
+// 业务场景下的实体抽屉路由名集合（关闭抽屉时据此回到 businessScene 而非 home）
+const businessSceneDrawerRouteNames = [
+  "businessSceneRiskDetail",
+  "businessSceneAvoidanceDetail",
+  "businessSceneAttackToolDetail",
+  "businessSceneThreatActorDetail",
+  "businessSceneTermDetail",
+];
+const isBusinessSceneDrawerRoute = (name: unknown) =>
+  typeof name === "string" && businessSceneDrawerRouteNames.includes(name);
+
+// 关闭抽屉：来自业务场景则回 businessScene（保留 bsKey），否则回 home
+const closeDrawerToHome = () => {
+  if (isBusinessSceneDrawerRoute(route.name) && route.params.bsKey) {
+    router.push({ name: "businessScene", params: { bsKey: route.params.bsKey } });
+  } else {
+    router.push({ name: "home" });
+  }
+};
+
+// 风险详情抽屉（支持首页与业务场景两类路由名）
 const riskDrawer = useDrawerRoute({
-  routeNames: ["riskDetail", "businessSceneRiskDetail"],
+  routeNames: ["homeRiskDetail", "businessSceneRiskDetail"],
   routeParam: "rKey",
   validateKey: (key) => hasOwn(BREAK.risks, key),
-  onClose: () => {
-    if (route.name === "businessSceneRiskDetail" && route.params.bsKey) {
-      router.push({ name: "businessScene", params: { bsKey: route.params.bsKey } });
-    } else {
-      router.push({ name: "home" });
-    }
-  },
+  onClose: closeDrawerToHome,
 });
 
 // 规避手段抽屉
 const avoidanceDrawer = useDrawerRoute({
-  routeNames: ["avoidanceDetail"],
+  routeNames: ["homeAvoidanceDetail", "businessSceneAvoidanceDetail"],
   routeParam: "aKey",
   validateKey: async (key) => {
     const fullBREAK = await loadFullBREAK();
     return hasOwn(fullBREAK.avoidances, key);
   },
+  onClose: closeDrawerToHome,
 });
 
 // 攻击工具抽屉
 const attackToolDrawer = useDrawerRoute({
-  routeNames: ["attackToolDetail"],
+  routeNames: ["homeAttackToolDetail", "businessSceneAttackToolDetail"],
   routeParam: "atKey",
   validateKey: async (key) => {
     const fullBREAK = await loadFullBREAK();
     return hasOwn(fullBREAK.attackTools, key);
   },
+  onClose: closeDrawerToHome,
 });
 
 // 威胁行为者抽屉
 const threatActorDrawer = useDrawerRoute({
-  routeNames: ["threatActorDetail"],
+  routeNames: ["homeThreatActorDetail", "businessSceneThreatActorDetail"],
   routeParam: "taKey",
   validateKey: async (key) => {
     const fullBREAK = await loadFullBREAK();
     return hasOwn(fullBREAK.threatActors, key);
   },
+  onClose: closeDrawerToHome,
 });
 
 // 行业术语抽屉
 const termDrawer = useDrawerRoute({
-  routeNames: ["termDetail"],
+  routeNames: ["homeTermDetail", "businessSceneTermDetail"],
   routeParam: "tKey",
   validateKey: async (key) => {
     const fullBREAK = await loadFullBREAK();
     return hasOwn(fullBREAK.terms, key);
   },
+  onClose: closeDrawerToHome,
 });
 </script>
 
@@ -337,32 +355,32 @@ const termDrawer = useDrawerRoute({
         {{ $t("lastUpdated") }}: {{ BREAK.updated }}
       </div>
       <div class="stats">
-        <router-link to="/risks" class="stat-card">
+        <router-link to="/knowledges/risk/list" class="stat-card">
           <div class="stat-label">{{ $t("stats.risks") }}</div>
           <div class="stat-number">{{ totalRisks }}</div>
           <div v-if="subRisksCount > 0" class="stat-sub">{{ $t("stats.subRisks") }} {{ subRisksCount }}</div>
         </router-link>
-        <router-link to="/avoidances" class="stat-card">
+        <router-link to="/knowledges/avoidance/list" class="stat-card">
           <div class="stat-label">{{ $t("stats.avoidances") }}</div>
           <div class="stat-number">{{ totalAvoidances }}</div>
           <div v-if="subAvoidancesCount > 0" class="stat-sub">{{ $t("stats.subAvoidances") }} {{ subAvoidancesCount }}</div>
         </router-link>
-        <router-link to="/attack-tools" class="stat-card">
+        <router-link to="/knowledges/attack-tool/list" class="stat-card">
           <div class="stat-label">{{ $t("stats.attackTools") }}</div>
           <div class="stat-number">{{ totalAttackTools }}</div>
           <div v-if="subAttackToolsCount > 0" class="stat-sub">{{ $t("stats.subAttackTools") }} {{ subAttackToolsCount }}</div>
         </router-link>
-        <router-link to="/threat-actors" class="stat-card">
+        <router-link to="/knowledges/threat-actor/list" class="stat-card">
           <div class="stat-label">{{ $t("stats.threatActors") }}</div>
           <div class="stat-number">{{ totalThreatActors }}</div>
           <div v-if="subThreatActorsCount > 0" class="stat-sub">{{ $t("stats.subThreatActors") }} {{ subThreatActorsCount }}</div>
         </router-link>
-        <router-link to="/terms" class="stat-card">
+        <router-link to="/knowledges/term/list" class="stat-card">
           <div class="stat-label">{{ $t("stats.terms") }}</div>
           <div class="stat-number">{{ totalTerms }}</div>
           <div class="stat-sub">&nbsp;</div>
         </router-link>
-        <router-link to="/cases" class="stat-card">
+        <router-link to="/knowledges/case/list" class="stat-card">
           <div class="stat-label">{{ $t("stats.cases") }}</div>
           <div class="stat-number">{{ totalCases }}</div>
           <div class="stat-sub">&nbsp;</div>
@@ -480,7 +498,7 @@ const termDrawer = useDrawerRoute({
                     <router-link
                       class="link"
                       :to="bsKeySelected === defaultBusinessSceneKey
-                        ? { name: 'riskDetail', params: { rKey } }
+                        ? { name: 'homeRiskDetail', params: { rKey } }
                         : { name: 'businessSceneRiskDetail', params: { bsKey: bsKeySelected, rKey } }">{{
 	                      getRiskTitle(rKey)
                     }}</router-link>
@@ -503,7 +521,7 @@ const termDrawer = useDrawerRoute({
                     <router-link
                       class="link"
                       :to="bsKeySelected === defaultBusinessSceneKey
-                        ? { name: 'riskDetail', params: { rKey: srKey } }
+                        ? { name: 'homeRiskDetail', params: { rKey: srKey } }
                         : { name: 'businessSceneRiskDetail', params: { bsKey: bsKeySelected, rKey: srKey } }">{{
 	                      getRiskTitle(srKey)
                     }}</router-link>
@@ -517,7 +535,7 @@ const termDrawer = useDrawerRoute({
                 class="link"
                 v-else
                 :to="bsKeySelected === defaultBusinessSceneKey
-                  ? { name: 'riskDetail', params: { rKey } }
+                  ? { name: 'homeRiskDetail', params: { rKey } }
                   : { name: 'businessSceneRiskDetail', params: { bsKey: bsKeySelected, rKey } }">{{
 	                getRiskTitle(rKey)
               }}</router-link>

@@ -17,31 +17,41 @@ const createRoute = (options?: {
   endType?: unknown;
   maxDepth?: unknown;
   maxPaths?: unknown;
-  type?: RelationType;
-  key?: string;
-  perspective?: unknown;
-  view?: unknown;
-}) =>
-  ({
+  entity?: RelationType;
+  id?: string;
+  name?: string;
+}) => {
+  // 视角由路由 name 决定；按 perspective 选项映射到对应视角路由 name
+  const nameByPerspective: Record<string, string> = {
+    risk: "relationRisk",
+    attackPath: "relationAttackPath",
+    defenseCoverage: "relationDefenseCoverage",
+    pathExplorer: "relationPathExplorer",
+  };
+  const name = options?.name ?? nameByPerspective[options?.entity ?? "risk"] ?? "relationRisk";
+  return {
+    name,
     params: {
-      type: options?.type ?? RelationType.risk,
-      key: options?.key ?? "R0001",
+      entity: options?.entity ?? RelationType.risk,
+      id: options?.id ?? "R0001",
     },
     query: {
       endKey: options?.endKey,
       endType: options?.endType,
       maxDepth: options?.maxDepth,
       maxPaths: options?.maxPaths,
-      perspective: options?.perspective,
-      view: options?.view,
     },
-  }) as never;
+  } as never;
+};
 
 const createState = (options?: {
   isMobile?: boolean;
   width?: number;
-  view?: unknown;
-  perspective?: unknown;
+  perspective?: "risk" | "attackPath" | "defenseCoverage" | "pathExplorer";
+  /** 覆盖 route.params.entity（默认跟随 perspective/risk） */
+  entity?: RelationType;
+  /** 覆盖 route.params.id（默认 R0001） */
+  id?: string;
   endKey?: unknown;
   endType?: unknown;
   maxDepth?: unknown;
@@ -50,8 +60,8 @@ const createState = (options?: {
   const renderNetworkChart = vi.fn();
   const state = createRelationViewState({
     route: createRoute({
-      perspective: options?.perspective,
-      view: options?.view,
+      entity: options?.entity ?? options?.perspective,
+      id: options?.id,
       endKey: options?.endKey,
       endType: options?.endType,
       maxDepth: options?.maxDepth,
@@ -67,6 +77,37 @@ const createState = (options?: {
 };
 
 describe("relationViewState", () => {
+  it("从路由 entity/id 段初始化根节点（回归：避免被错误回退为 R0001）", () => {
+    // 模拟 /relations/attack-path/attack-tool/AT0045
+    const { state } = createState({
+      perspective: "attackPath",
+      entity: RelationType.attackTool,
+      id: "AT0045",
+    });
+    expect(state.relType.value).toBe(RelationType.attackTool);
+    expect(state.relKey.value).toBe("AT0045");
+    // pathExplorer 起点跟随根节点
+    expect(state.pathExplorerStartType.value).toBe(RelationType.attackTool);
+    expect(state.pathExplorerStartKey.value).toBe("AT0045");
+  });
+
+  it("视角首页（无 entity/id）保留默认根节点 risk/R0001", () => {
+    const route = {
+      name: "relationRisk",
+      params: {},
+      query: {},
+    } as never;
+    const state = createRelationViewState({
+      route,
+      t: (key) => `t:${key}`,
+      isMobile: ref(false),
+      width: ref(1200),
+      renderNetworkChartBridge: { current: vi.fn() },
+    });
+    expect(state.relType.value).toBe(RelationType.risk);
+    expect(state.relKey.value).toBe("R0001");
+  });
+
   it("normalizes analysis perspectives and falls back for invalid query values", () => {
     expect(relationAnalysisPerspectiveOptions.map((option) => option.key)).toEqual([
       "risk",
@@ -115,20 +156,23 @@ describe("relationViewState", () => {
     expect(normalizeRelationViewMode(["sankey"], "network")).toBe("network");
   });
 
-  it("uses responsive default active view when route query does not provide a valid view", () => {
-    expect(createState({ isMobile: false, view: undefined }).state.activeView.value).toBe("network");
-    expect(createState({ isMobile: true, view: undefined }).state.activeView.value).toBe("sankey");
-    expect(createState({ isMobile: true, view: "analysis" }).state.activeView.value).toBe("analysis");
+  it("derives active view from route name (perspective), mobile falls back to sankey only for risk", () => {
+    // risk 视角：桌面 network，移动端 sankey
+    expect(createState({ isMobile: false, perspective: "risk" }).state.activeView.value).toBe("network");
+    expect(createState({ isMobile: true, perspective: "risk" }).state.activeView.value).toBe("sankey");
+    // defenseCoverage 视角：移动端也尊重视角默认 view（analysis）
+    expect(createState({ isMobile: true, perspective: "defenseCoverage" }).state.activeView.value).toBe("analysis");
   });
 
-  it("uses risk analysis perspective by default and accepts query perspective", () => {
+  it("derives analysis perspective from route name", () => {
     expect(createState().state.activeAnalysisPerspective.value).toBe("risk");
     expect(
       createState({ perspective: "defenseCoverage" }).state
         .activeAnalysisPerspective.value,
     ).toBe("defenseCoverage");
+    // pathExplorer 不属于三元分析视角，兜底为 risk
     expect(
-      createState({ perspective: "invalid" }).state
+      createState({ perspective: "pathExplorer" }).state
         .activeAnalysisPerspective.value,
     ).toBe("risk");
   });

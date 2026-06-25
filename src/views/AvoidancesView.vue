@@ -15,23 +15,13 @@ const route = useRoute();
 const { t, locale, messages } = useI18n();
 
 const avoidanceKeys = Object.keys(BREAK.avoidances);
-// 优先从路由参数获取，否则从 hash 获取，最后使用默认值
+// 优先从路由参数获取，最后使用默认值
 const getInitialKey = () => {
   const paramKey = typeof route.params.aKey === 'string' ? route.params.aKey : '';
-  const hashKey = route.hash.replace("#", "");
-  return paramKey || hashKey || avoidanceKeys[0] || "";
+  return paramKey || avoidanceKeys[0] || "";
 };
 const selectedAvoidanceKey = ref(getInitialKey());
 const selectedCategory = ref("");
-
-watch(
-  () => route.hash,
-  (hash) => {
-    const key = hash.replace("#", "");
-    if (key && BREAK.avoidances[key]) selectedAvoidanceKey.value = key;
-  },
-  { immediate: true }
-);
 
 watch(
   () => route.params.aKey,
@@ -107,8 +97,9 @@ const { openRelationGraph } = useRelationGraph("avoidance");
 <template>
   <KnowledgeSplitView
     :title="$t('menu.avoidances')"
-    route-name="avoidances"
-    detail-route-name="avoidancesDetail"
+    param-key="aKey"
+    route-name="knowledgesAvoidanceList"
+    detail-route-name="knowledgesAvoidanceDetail"
     :items="avoidanceItems"
     :selected-key="selectedAvoidanceKey"
     :search-placeholder="$t('search.avoidancePlaceholder')"
@@ -182,7 +173,7 @@ const { openRelationGraph } = useRelationGraph("avoidance");
             v-for="relation in relatedAvoidanceRelations"
             :key="`${relation.key}-${relation.relation}`"
             class="avoidance-relation-item"
-            :to="{ name: 'avoidancesDetail', params: { aKey: relation.key } }"
+            :to="{ name: 'knowledgesAvoidanceDetail', params: { aKey: relation.key } }"
           >
             <span class="avoidance-relation-type">{{ $t(`avoidanceRelationType.${relation.relation}`) }}</span>
             <span class="avoidance-relation-title">
@@ -195,24 +186,24 @@ const { openRelationGraph } = useRelationGraph("avoidance");
       <EntityLinkSection
         :keys="relatedRiskKeys"
         title="risks"
-        route-name="risks"
-        detail-route-name="risksDetail"
+        route-name="knowledgesRiskList"
+        detail-route-name="knowledgesRiskDetail"
         param-key="rKey"
         anchor="risks"
       />
       <EntityLinkSection
         :keys="relatedAttackToolKeys"
         title="attackTools"
-        route-name="attackTools"
-        detail-route-name="attackToolsDetail"
+        route-name="knowledgesAttackToolList"
+        detail-route-name="knowledgesAttackToolDetail"
         param-key="atKey"
         anchor="attack-tools"
       />
       <EntityLinkSection
         :keys="relatedTermKeys"
         title="terms"
-        route-name="terms"
-        detail-route-name="termsDetail"
+        route-name="knowledgesTermList"
+        detail-route-name="knowledgesTermDetail"
         param-key="tKey"
         anchor="terms"
       />

@@ -74,12 +74,12 @@ const handleLocaleChange = async (lang: string) => {
 };
 
 const knowledgeRoutes: Record<string, string> = {
-  risks: "/risks",
-  avoidances: "/avoidances",
-  attackTools: "/attack-tools",
-  threatActors: "/threat-actors",
-  terms: "/terms",
-  cases: "/cases",
+  risks: "/knowledges/risk/list",
+  avoidances: "/knowledges/avoidance/list",
+  attackTools: "/knowledges/attack-tool/list",
+  threatActors: "/knowledges/threat-actor/list",
+  terms: "/knowledges/term/list",
+  cases: "/knowledges/case/list",
 };
 
 const handleKnowledgeCommand = (command: string) => {
@@ -92,10 +92,10 @@ const handleKnowledgeCommand = (command: string) => {
 };
 
 const handleMobileNav = (path: string) => {
-  if (path !== "/" && !path.startsWith("/relation/")) {
+  if (path !== "/" && !path.startsWith("/relations/")) {
     prefetchAllKnowledgeViews();
   }
-  if (path.startsWith("/relation/")) {
+  if (path.startsWith("/relations/")) {
     preloadRelationView("sankey");
   }
   router.push(path);
@@ -108,7 +108,7 @@ const handleMobileMenuOpen = () => {
 };
 
 const handleDesktopMenuSelect = (index: string) => {
-  if (index.startsWith("/relation/")) {
+  if (index.startsWith("/relations/")) {
     preloadRelationView("network");
   }
 };
@@ -152,25 +152,38 @@ onUnmounted(() => {
   }
 });
 
-const isKnowledgeActive = (fullPath: string) =>
-  ["/risks", "/avoidances", "/attack-tools", "/threat-actors", "/terms", "/cases"].includes(
-    getActiveIndex(fullPath)
-  );
+const isKnowledgeActive = (fullPath: string) => {
+  const active = getActiveIndex(fullPath);
+  return [
+    "/knowledges/risk/list",
+    "/knowledges/avoidance/list",
+    "/knowledges/attack-tool/list",
+    "/knowledges/threat-actor/list",
+    "/knowledges/term/list",
+    "/knowledges/case/list",
+  ].includes(active);
+};
 
 const getActiveKnowledge = (fullPath: string) => {
   const path = getActiveIndex(fullPath);
-  if (path === "/risks") return "risks";
-  if (path === "/avoidances") return "avoidances";
-  if (path === "/attack-tools") return "attackTools";
-  if (path === "/threat-actors") return "threatActors";
-  if (path === "/terms") return "terms";
-  if (path === "/cases") return "cases";
+  if (path === "/knowledges/risk/list") return "risks";
+  if (path === "/knowledges/avoidance/list") return "avoidances";
+  if (path === "/knowledges/attack-tool/list") return "attackTools";
+  if (path === "/knowledges/threat-actor/list") return "threatActors";
+  if (path === "/knowledges/term/list") return "terms";
+  if (path === "/knowledges/case/list") return "cases";
   return "";
 };
 
 const getActiveIndex = (fullPath: string) => {
+  // 知识库 list/detail 统一归一到 list 路径，便于菜单高亮
+  const knowledgesMatch = fullPath.match(
+    /^\/knowledges\/(risk|avoidance|attack-tool|threat-actor|term|case)\//
+  );
+  if (knowledgesMatch) return `/knowledges/${knowledgesMatch[1]}/list`;
   if (fullPath.match(/^\/business-scene\//)) return "/";
-  if (fullPath.match(/^\/relation\//)) return "/relation/risk/R0001";
+  if (fullPath.match(/^\/home\//)) return "/";
+  if (fullPath.match(/^\/relations\//)) return "/relations/risk-relation/risk/R0001";
 
   return fullPath.split("#")[0];
 };
@@ -224,28 +237,28 @@ const getActiveIndex = (fullPath: string) => {
         <span>{{ $t("menu.home") }}</span>
       </div>
 
-      <div class="mobile-nav-item" :class="{ active: route.fullPath.match(/^\/relation\//) }" @click="handleMobileNav('/relation/risk/R0001')">
+      <div class="mobile-nav-item" :class="{ active: route.fullPath.match(/^\/relations\//) }" @click="handleMobileNav('/relations/risk-relation/risk/R0001')">
         <span>{{ $t("relationMap") }}</span>
       </div>
 
       <div class="mobile-nav-group">
         <div class="mobile-nav-group-title">{{ $t("menu.knowledge") }}</div>
-        <div class="mobile-nav-item" :class="{ active: getActiveIndex(route.fullPath) === '/risks' }" @click="handleMobileNav('/risks')">
+        <div class="mobile-nav-item" :class="{ active: getActiveIndex(route.fullPath) === '/knowledges/risk/list' }" @click="handleMobileNav('/knowledges/risk/list')">
           <span>{{ $t("menu.risks") }}</span>
         </div>
-        <div class="mobile-nav-item" :class="{ active: getActiveIndex(route.fullPath) === '/avoidances' }" @click="handleMobileNav('/avoidances')">
+        <div class="mobile-nav-item" :class="{ active: getActiveIndex(route.fullPath) === '/knowledges/avoidance/list' }" @click="handleMobileNav('/knowledges/avoidance/list')">
           <span>{{ $t("menu.avoidances") }}</span>
         </div>
-        <div class="mobile-nav-item" :class="{ active: getActiveIndex(route.fullPath) === '/attack-tools' }" @click="handleMobileNav('/attack-tools')">
+        <div class="mobile-nav-item" :class="{ active: getActiveIndex(route.fullPath) === '/knowledges/attack-tool/list' }" @click="handleMobileNav('/knowledges/attack-tool/list')">
           <span>{{ $t("attackTools") }}</span>
         </div>
-        <div class="mobile-nav-item" :class="{ active: getActiveIndex(route.fullPath) === '/threat-actors' }" @click="handleMobileNav('/threat-actors')">
+        <div class="mobile-nav-item" :class="{ active: getActiveIndex(route.fullPath) === '/knowledges/threat-actor/list' }" @click="handleMobileNav('/knowledges/threat-actor/list')">
           <span>{{ $t("threatActors") }}</span>
         </div>
-        <div class="mobile-nav-item" :class="{ active: getActiveIndex(route.fullPath) === '/terms' }" @click="handleMobileNav('/terms')">
+        <div class="mobile-nav-item" :class="{ active: getActiveIndex(route.fullPath) === '/knowledges/term/list' }" @click="handleMobileNav('/knowledges/term/list')">
           <span>{{ $t("terms") }}</span>
         </div>
-        <div class="mobile-nav-item" :class="{ active: getActiveIndex(route.fullPath) === '/cases' }" @click="handleMobileNav('/cases')">
+        <div class="mobile-nav-item" :class="{ active: getActiveIndex(route.fullPath) === '/knowledges/case/list' }" @click="handleMobileNav('/knowledges/case/list')">
           <span>{{ $t("cases") }}</span>
         </div>
       </div>
@@ -340,7 +353,7 @@ const getActiveIndex = (fullPath: string) => {
       </button>
     </div>
     <el-menu-item class="" index="/">{{ $t("menu.home") }}</el-menu-item>
-    <el-menu-item index="/relation/risk/R0001">{{
+    <el-menu-item index="/relations/risk-relation/risk/R0001">{{
       $t("relationMap")
     }}</el-menu-item>
     <el-dropdown

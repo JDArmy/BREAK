@@ -14,9 +14,9 @@ const budgets = {
 
 const routes = [
   { path: '/', label: 'home', text: /BREAK|业务风险|Business Risk/i },
-  { path: '/#/risks', label: 'risks', text: /R0001|流程自动化|Process/i },
+  { path: '/#/knowledges/risk/list', label: 'risks', text: /R0001|流程自动化|Process/i },
   {
-    path: '/#/relation/risk/R0001?view=sankey',
+    path: '/#/relations/attack-path/risk/R0001',
     label: 'relation-sankey',
     text: /R0001|攻击路径|Attack Path|关系网络|Network/i,
   },

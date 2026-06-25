@@ -20,15 +20,15 @@ describe("EntityLinkSection", () => {
       props: {
         keys: ["R0001"],
         title: "risks",
-        routeName: "risks",
-        detailRouteName: "risksDetail",
+        routeName: "knowledgesRiskList",
+        detailRouteName: "knowledgesRiskDetail",
         paramKey: "rKey",
       },
       global: globalConfig,
     });
 
     expect(wrapper.findComponent(RouterLinkStub).props("to")).toEqual({
-      name: "risksDetail",
+      name: "knowledgesRiskDetail",
       params: { rKey: "R0001" },
     });
     expect(wrapper.find("table").exists()).toBe(true);

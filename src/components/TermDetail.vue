@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useI18n } from "vue-i18n";
+import { useRouter } from "vue-router";
 import BREAK from "@/BREAK";
 import ReferenceList from "@/components/ReferenceList.vue";
 import { getMessageStringArray } from "@/utils/i18nMessage";
 
-import { ArrowLeft } from "@element-plus/icons-vue";
+import { ArrowLeft, TopRight } from "@element-plus/icons-vue";
 import { useDrawerWidth } from "@/composables/useDrawerWidth";
 
 const props = defineProps<{
@@ -16,11 +17,19 @@ defineEmits(["drawerClose"]);
 
 const { locale, messages } = useI18n();
 const { getInnerDrawerWidth } = useDrawerWidth();
+const router = useRouter();
 
 const localeMessages = computed(() => messages.value[locale.value] as Record<string, unknown>);
 const aliases = computed(() =>
   getMessageStringArray(localeMessages.value, `BREAK.terms.${props.tKey}.aliases`)
 );
+
+// 跳知识库详情页（新窗口）
+const detailHref = (tKey: string) =>
+  router.resolve({ name: "knowledgesTermDetail", params: { tKey } }).href;
+const openDetail = (tKey: string) => {
+  window.open(detailHref(tKey), "_blank", "noopener,noreferrer");
+};
 </script>
 
 <template>
@@ -42,9 +51,10 @@ const aliases = computed(() =>
     </template>
     <div class="desc">
       <strong>{{ $t("termId") }}:&nbsp;</strong>
-      <router-link :to="{ name: 'termsDetail', params: { tKey } }" class="id-link">
+      <a :href="detailHref(tKey)" target="_blank" rel="noopener" class="id-link">
         {{ tKey }}
-      </router-link>
+        <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
+      </a>
     </div>
     <div class="desc">
       <strong>{{ $t("title") }}:&nbsp;</strong>
@@ -102,8 +112,9 @@ const aliases = computed(() =>
       <ReferenceList type="terms" :entity-key="tKey" />
     </div>
     <div class="desc">
-      <el-button type="primary" plain size="small" @click="$router.push({ name: 'termsDetail', params: { tKey } })">
+      <el-button type="primary" plain size="small" @click="openDetail(tKey)">
         {{ $t("viewDetail") }}
+        <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
       </el-button>
     </div>
   </el-drawer>

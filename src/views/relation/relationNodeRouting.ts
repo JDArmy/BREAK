@@ -1,5 +1,5 @@
 import type { RouteLocationRaw, Router } from "vue-router";
-import { RelationType } from "@/views/relation/relationTypes";
+import { RelationType, type RelationEntityType } from "@/views/relation/relationTypes";
 
 export type DetailNodeAnchor =
   | "risks"
@@ -24,54 +24,51 @@ const withDetailAnchor = (
   };
 };
 
-const getRelationNodeRoute = (type: RelationType, id: string): RouteLocationRaw => ({
-  name: "relation",
-  params: {
-    type,
-    key: id,
-  },
-});
+/**
+ * 实体类型 → 主角色视角的「带实体子路由」name。
+ * 「作为根节点打开」/「打开关系图」按实体主角色映射视角：
+ * risk→风险视角、avoidance→防御覆盖、attack-tool/threat-actor→攻击路径。
+ * term 不作为关系图根节点（需求明确只含 4 类），走 getRelationNodeRoute 兜底。
+ */
+const RELATION_PERSPECTIVE_ROUTE_BY_TYPE: Partial<Record<RelationEntityType, string>> = {
+  [RelationType.risk]: "relationRiskEntity",
+  [RelationType.avoidance]: "relationDefenseCoverageEntity",
+  [RelationType.attackTool]: "relationAttackPathEntity",
+  [RelationType.threatActor]: "relationAttackPathEntity",
+};
+
+const getRelationNodeRoute = (type: RelationType, id: string): RouteLocationRaw => {
+  const name =
+    RELATION_PERSPECTIVE_ROUTE_BY_TYPE[type as RelationEntityType] ?? "relationRiskEntity";
+  return {
+    name,
+    params: {
+      entity: type,
+      id,
+    },
+  };
+};
+
+/** 实体类型 → 知识库 detail 路由 name + paramKey */
+const DETAIL_ROUTE_BY_TYPE: Record<RelationType, { name: string; paramKey: string }> = {
+  [RelationType.risk]: { name: "knowledgesRiskDetail", paramKey: "rKey" },
+  [RelationType.avoidance]: { name: "knowledgesAvoidanceDetail", paramKey: "aKey" },
+  [RelationType.attackTool]: { name: "knowledgesAttackToolDetail", paramKey: "atKey" },
+  [RelationType.threatActor]: { name: "knowledgesThreatActorDetail", paramKey: "taKey" },
+  [RelationType.term]: { name: "knowledgesTermDetail", paramKey: "tKey" },
+  [RelationType.all]: { name: "knowledgesRiskDetail", paramKey: "rKey" },
+};
 
 const getDetailNodeRoute = (
   type: RelationType,
   id: string,
   detailAnchor?: DetailNodeAnchor
 ): RouteLocationRaw => {
-  let route: RouteLocationRaw;
-  switch (type) {
-    case RelationType.risk:
-      route = {
-        name: "risks",
-        hash: `#${id}`,
-      };
-      break;
-    case RelationType.avoidance:
-      route = {
-        name: "avoidances",
-        hash: `#${id}`,
-      };
-      break;
-    case RelationType.attackTool:
-      route = {
-        name: "attackTools",
-        hash: `#${id}`,
-      };
-      break;
-    case RelationType.threatActor:
-      route = {
-        name: "threatActors",
-        hash: `#${id}`,
-      };
-      break;
-    case RelationType.term:
-      route = {
-        name: "terms",
-        hash: `#${id}`,
-      };
-      break;
-  }
-
-  return withDetailAnchor(route, detailAnchor);
+  const entry = DETAIL_ROUTE_BY_TYPE[type] ?? DETAIL_ROUTE_BY_TYPE[RelationType.risk];
+  return withDetailAnchor(
+    { name: entry.name, params: { [entry.paramKey]: id } },
+    detailAnchor
+  );
 };
 
 export const pushRelationNodeRoute = (router: Router, type: RelationType, id: string) =>

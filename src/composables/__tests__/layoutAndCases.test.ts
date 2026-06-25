@@ -262,8 +262,8 @@ describe("布局与案例 composables", () => {
     useRelationGraph("attack-tool").openRelationGraph("AT0001");
 
     expect(push).toHaveBeenCalledWith({
-      name: "relation",
-      params: { type: "attack-tool", key: "AT0001" },
+      name: "relationAttackPathEntity",
+      params: { entity: "attack-tool", id: "AT0001" },
     });
   });
 

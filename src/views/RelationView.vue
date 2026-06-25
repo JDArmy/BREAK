@@ -80,6 +80,10 @@ export default defineComponent({
     return {
       ...viewModel,
       RelationType,
+      onTabChange: (name: string | number) => {
+        // el-tabs 切换：交由 switchPerspective 路由跳转到目标视角
+        viewModel.switchPerspective(name as "network" | "sankey" | "analysis" | "pathExplorer");
+      },
     };
   },
 });
@@ -102,7 +106,7 @@ export default defineComponent({
       :get-current-entity-options="getCurrentEntityOptions"
     />
 
-    <el-tabs v-model="activeView" class="relation-tabs">
+    <el-tabs :model-value="activeView" class="relation-tabs" @tab-change="onTabChange">
       <el-tab-pane
         :label="$t('relationView.perspective.risk.title')"
         name="network"

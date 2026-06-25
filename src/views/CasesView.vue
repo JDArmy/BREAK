@@ -2,6 +2,7 @@
 import { computed, ref, watch } from "vue";
 import { useRoute } from "vue-router";
 import { useI18n } from "vue-i18n";
+import { TopRight } from "@element-plus/icons-vue";
 import KnowledgeSplitView from "@/components/KnowledgeSplitView.vue";
 import EntityLinkSection from "@/components/EntityLinkSection.vue";
 import { useCases } from "@/composables/useCases";
@@ -39,22 +40,10 @@ const selectedCategory = ref("");
 
 const caseKeys = computed(() => Object.keys(cases.value));
 
-const getInitialKey = () => {
-  const paramKey = typeof route.params.cKey === "string" ? route.params.cKey : "";
-  const hashKey = route.hash.replace("#", "");
-  return paramKey || hashKey || caseKeys.value[0] || "";
-};
+const getInitialKey = () =>
+  (typeof route.params.cKey === "string" ? route.params.cKey : "") || caseKeys.value[0] || "";
 
 const selectedCaseKey = ref(getInitialKey());
-
-watch(
-  () => route.hash,
-  (hash) => {
-    const key = hash.replace("#", "");
-    if (key && cases.value[key]) selectedCaseKey.value = key;
-  },
-  { immediate: true }
-);
 
 watch(
   () => route.params.cKey,
@@ -110,8 +99,9 @@ watch(selectedCategory, () => {
 <template>
   <KnowledgeSplitView
     :title="$t('cases')"
-    route-name="cases"
-    detail-route-name="casesDetail"
+    route-name="knowledgesCaseList"
+    detail-route-name="knowledgesCaseDetail"
+    param-key="cKey"
     :items="caseItems"
     :selected-key="selectedCaseKey"
     :search-placeholder="$t('search.casePlaceholder')"
@@ -166,24 +156,24 @@ watch(selectedCategory, () => {
       <EntityLinkSection
         :keys="selectedCase.relatedRisks"
         title="risks"
-        route-name="risks"
-        detail-route-name="risksDetail"
+        route-name="knowledgesRiskList"
+        detail-route-name="knowledgesRiskDetail"
         param-key="rKey"
         anchor="risks"
       />
       <EntityLinkSection
         :keys="selectedCase.relatedAttackTools"
         title="attackTools"
-        route-name="attackTools"
-        detail-route-name="attackToolsDetail"
+        route-name="knowledgesAttackToolList"
+        detail-route-name="knowledgesAttackToolDetail"
         param-key="atKey"
         anchor="attack-tools"
       />
       <EntityLinkSection
         :keys="selectedCase.relatedThreatActors"
         title="threatActors"
-        route-name="threatActors"
-        detail-route-name="threatActorsDetail"
+        route-name="knowledgesThreatActorList"
+        detail-route-name="knowledgesThreatActorDetail"
         param-key="taKey"
         anchor="threat-actors"
       />
@@ -199,7 +189,8 @@ watch(selectedCategory, () => {
               rel="noopener noreferrer"
               class="reference-link"
             >
-              {{ ref.title }}
+              <span class="reference-link-text">{{ ref.title }}</span>
+              <el-icon class="reference-link-icon" aria-hidden="true"><TopRight /></el-icon>
             </a>
             <span v-else class="reference-text">{{ ref.title }}</span>
           </div>
@@ -259,6 +250,9 @@ watch(selectedCategory, () => {
 }
 
 .reference-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   color: var(--break-link);
   text-decoration: none;
   font-size: 14px;
@@ -266,10 +260,21 @@ watch(selectedCategory, () => {
   flex: 1;
 }
 
+.reference-link-icon {
+  font-size: 12px;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
 .reference-link:hover,
 .reference-link:active {
   color: var(--break-link-hover);
   text-decoration: underline;
+}
+
+.reference-link:hover .reference-link-icon,
+.reference-link:active .reference-link-icon {
+  opacity: 1;
 }
 
 .reference-text {

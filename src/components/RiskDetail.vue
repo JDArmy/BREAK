@@ -4,7 +4,7 @@ import { useRouter } from "vue-router";
 import BREAK from "@/BREAK";
 import ReferenceList from "@/components/ReferenceList.vue";
 
-import { ArrowLeft } from "@element-plus/icons-vue";
+import { ArrowLeft, TopRight } from "@element-plus/icons-vue";
 
 import iconRelation from "./icons/iconRelation.vue";
 import { useDrawerWidth } from "@/composables/useDrawerWidth";
@@ -62,10 +62,19 @@ const termKey = ref("");
 
 const openRelationGraph = (rKey: string) => {
   const route = router.resolve({
-    name: "relation",
-    params: { type: "risk", key: rKey },
+    name: "relationRiskEntity",
+    params: { entity: "risk", id: rKey },
   });
   window.open(route.href, "_blank", "noopener,noreferrer");
+};
+
+// 跳知识库详情页（新窗口）的 href
+const detailHref = (rKey: string) =>
+  router.resolve({ name: "knowledgesRiskDetail", params: { rKey } }).href;
+
+// 新窗口打开知识库详情页
+const openDetail = (rKey: string) => {
+  window.open(detailHref(rKey), "_blank", "noopener,noreferrer");
 };
 </script>
 
@@ -89,19 +98,17 @@ const openRelationGraph = (rKey: string) => {
     </template>
     <div class="desc">
       <strong>{{ $t("riskKey") }}:&nbsp;</strong>
-      <router-link :to="{ name: 'risksDetail', params: { rKey } }" class="id-link">
+      <a :href="detailHref(rKey)" target="_blank" rel="noopener" class="id-link">
         {{ rKey }}
-      </router-link>
-      <router-link
+        <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
+      </a>
+      <button
         :title="$t('relationMap')"
         class="relation-map-icon"
-        :to="{
-          name: 'relation',
-          params: { type: 'risk', key: rKey },
-        }"
+        @click="openRelationGraph(rKey)"
       >
         <icon-relation width="14px" height="14px" />
-      </router-link>
+      </button>
     </div>
     <div class="desc">
       <strong>{{ $t("riskTitle") }}:&nbsp;</strong>
@@ -139,15 +146,18 @@ const openRelationGraph = (rKey: string) => {
     <div class="desc" v-if="relatedRiskRelations.length > 0">
       <strong>{{ $t("riskRelatedRisks") }}:&nbsp;</strong>
       <div class="entity-links">
-        <router-link
+        <a
           v-for="relation in relatedRiskRelations"
           :key="`${relation.key}-${relation.relation}`"
           class="entity-link"
-          :to="{ name: 'risksDetail', params: { rKey: relation.key } }"
+          :href="detailHref(relation.key)"
+          target="_blank"
+          rel="noopener"
         >
           {{ $t(`riskRelationType.${relation.relation}`) }} ·
           {{ relation.key }}: {{ $t(`BREAK.risks.${relation.key}.title`) }}
-        </router-link>
+          <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
+        </a>
       </div>
     </div>
     <div class="desc" v-if="relatedTerms.length > 0">
@@ -207,8 +217,9 @@ const openRelationGraph = (rKey: string) => {
       </el-button>
     </div>
     <div class="desc">
-      <el-button type="primary" plain size="small" @click="$router.push({ name: 'risksDetail', params: { rKey } })">
+      <el-button type="primary" plain size="small" @click="openDetail(rKey)">
         {{ $t("viewDetail") }}
+        <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
       </el-button>
     </div>
   </el-drawer>

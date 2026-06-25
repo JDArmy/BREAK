@@ -52,14 +52,34 @@ const groupLabels: Record<EntityType, string> = {
   case: "search.groupCase",
 };
 
-// 各类型对应的详情路由
+// 各类型对应的详情路由（首页用 homeXxxDetail 抽屉路由；案例无首页抽屉，跳知识库 detail）
 const detailRoutes: Record<EntityType, { name: string; paramKey: string }> = {
-  risk: { name: "riskDetail", paramKey: "rKey" },
-  avoidance: { name: "avoidanceDetail", paramKey: "aKey" },
-  attackTool: { name: "attackToolDetail", paramKey: "atKey" },
-  threatActor: { name: "threatActorDetail", paramKey: "taKey" },
-  term: { name: "termDetail", paramKey: "tKey" },
-  case: { name: "casesDetail", paramKey: "cKey" },
+  risk: { name: "homeRiskDetail", paramKey: "rKey" },
+  avoidance: { name: "homeAvoidanceDetail", paramKey: "aKey" },
+  attackTool: { name: "homeAttackToolDetail", paramKey: "atKey" },
+  threatActor: { name: "homeThreatActorDetail", paramKey: "taKey" },
+  term: { name: "homeTermDetail", paramKey: "tKey" },
+  case: { name: "knowledgesCaseDetail", paramKey: "cKey" },
+};
+
+// 业务场景下用的抽屉路由（带 bsKey）
+const businessSceneDetailRoutes: Record<EntityType, { name: string; paramKey: string }> = {
+  risk: { name: "businessSceneRiskDetail", paramKey: "rKey" },
+  avoidance: { name: "businessSceneAvoidanceDetail", paramKey: "aKey" },
+  attackTool: { name: "businessSceneAttackToolDetail", paramKey: "atKey" },
+  threatActor: { name: "businessSceneThreatActorDetail", paramKey: "taKey" },
+  term: { name: "businessSceneTermDetail", paramKey: "tKey" },
+  case: { name: "knowledgesCaseDetail", paramKey: "cKey" },
+};
+
+// 非首页（知识库页等）用的知识库 detail 路由
+const knowledgeDetailRoutes: Record<EntityType, { name: string; paramKey: string }> = {
+  risk: { name: "knowledgesRiskDetail", paramKey: "rKey" },
+  avoidance: { name: "knowledgesAvoidanceDetail", paramKey: "aKey" },
+  attackTool: { name: "knowledgesAttackToolDetail", paramKey: "atKey" },
+  threatActor: { name: "knowledgesThreatActorDetail", paramKey: "taKey" },
+  term: { name: "knowledgesTermDetail", paramKey: "tKey" },
+  case: { name: "knowledgesCaseDetail", paramKey: "cKey" },
 };
 
 // 防抖搜索
@@ -103,26 +123,32 @@ function highlightText(text: string, queryStr: string): string {
 function selectResult(result: SearchResult) {
   emit("update:modelValue", false);
 
-  const isHomePage = router.currentRoute.value.name === 'home' || router.currentRoute.value.name === 'businessScene';
+  const currentName = router.currentRoute.value.name;
+  const isHomePage = currentName === "home";
+  const isBusinessScene = currentName === "businessScene";
 
   if (isHomePage) {
-    // 在首页：使用专门的详情路由
+    // 首页：使用 homeXxxDetail 抽屉路由
     const detailRoute = detailRoutes[result.type];
     router.push({
       name: detailRoute.name,
       params: { [detailRoute.paramKey]: result.id },
     });
+  } else if (isBusinessScene) {
+    // 业务场景页：跳 businessSceneXxxDetail 抽屉路由，带 bsKey 保持上下文
+    const bsKey = router.currentRoute.value.params.bsKey;
+    const detailRoute = businessSceneDetailRoutes[result.type];
+    router.push({
+      name: detailRoute.name,
+      params: { bsKey, [detailRoute.paramKey]: result.id },
+    });
   } else {
-    // 在非首页：跳转到列表页并使用锚点定位
-    const listRoutes: Record<EntityType, string> = {
-      risk: '/risks',
-      avoidance: '/avoidances',
-      attackTool: '/attack-tools',
-      threatActor: '/threat-actors',
-      term: '/terms',
-      case: '/cases',
-    };
-    router.push(`${listRoutes[result.type]}#${result.id}`);
+    // 非首页（知识库页等）：跳知识库 detail 路由
+    const detailRoute = knowledgeDetailRoutes[result.type];
+    router.push({
+      name: detailRoute.name,
+      params: { [detailRoute.paramKey]: result.id },
+    });
   }
 
   query.value = "";

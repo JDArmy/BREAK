@@ -193,7 +193,7 @@ describe("HomeView", () => {
   });
 
   it("风险详情路由打开抽屉，关闭后回到首页", async () => {
-    route.name = "riskDetail";
+    route.name = "homeRiskDetail";
     route.params = { rKey: "R0001" };
     const wrapper = await mountHomeView();
 
@@ -227,7 +227,7 @@ describe("HomeView", () => {
     expect(replace).toHaveBeenCalledWith({ name: "home" });
 
     vi.clearAllMocks();
-    route.name = "riskDetail";
+    route.name = "homeRiskDetail";
     route.params = { rKey: "R9999" };
     await mountHomeView();
 
@@ -235,7 +235,7 @@ describe("HomeView", () => {
   });
 
   it("异步详情路由仅在实体存在时打开对应抽屉", async () => {
-    route.name = "avoidanceDetail";
+    route.name = "homeAvoidanceDetail";
     route.params = { aKey: "A0001" };
     const wrapper = await mountHomeView();
     await waitForAsyncRoute(() =>
@@ -244,7 +244,7 @@ describe("HomeView", () => {
 
     expect(wrapper.find(".avoidance-detail-stub").text()).toContain("A0001");
 
-    route.name = "termDetail";
+    route.name = "homeTermDetail";
     route.params = { tKey: "T9999" };
     await waitForAsyncRoute(() =>
       replace.mock.calls.some(([location]) =>

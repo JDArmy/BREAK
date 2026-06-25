@@ -36,7 +36,7 @@ vi.mock("@/views/relation/relationViewAssembly", () => ({
 describe("useRelationViewModel", () => {
   beforeEach(() => {
     createRelationViewAssembly.mockReset();
-    useRoute.mockReturnValue({ params: { type: "risk", key: "R0001" } });
+    useRoute.mockReturnValue({ params: { entity: "risk", id: "R0001" } });
     useRouter.mockReturnValue({ push: vi.fn() });
     createRelationViewAssembly.mockReturnValue({ assembled: true });
     document.documentElement.style.cssText = [
@@ -76,7 +76,7 @@ describe("useRelationViewModel", () => {
     expect(model.RelationTypeMapping.risk.color).toBe("rgb(239, 68, 68)");
     expect(model.setDropdownInstance).toBe(assemblyOptions.setDropdownInstance);
 
-    expect(assemblyOptions.route.params.key).toBe("R0001");
+    expect(assemblyOptions.route.params.id).toBe("R0001");
     expect(assemblyOptions.RelationTypeMapping[RelationType.attackTool].BreakKey).toBe("attackTools");
     expect(assemblyOptions.getGraphColor("background")).toBe("rgb(255, 255, 255)");
     expect(assemblyOptions.getGraphColor("selectedNodeGlow")).toBe("rgba(10, 20, 30, 0.3)");

@@ -1,7 +1,8 @@
 import { computed, reactive, ref, type Ref } from "vue";
 import type { RouteLocationNormalizedLoaded } from "vue-router";
 import {
-  normalizeRelationAnalysisPerspective,
+  getDefaultViewByPerspective,
+  getRelationPerspectiveFromRoute,
   type RelationAnalysisPerspective,
 } from "@/views/relation/relationAnalysisPerspectives";
 import { networkLayoutOptions, networkLayoutZoom, RelationType, type NetworkLayoutMode, type SankeyNode } from "@/views/relation/relationTypes";
@@ -34,12 +35,20 @@ export const createRelationViewState = ({
   renderNetworkChartBridge,
 }: CreateRelationViewStateOptions) => {
   let clearDraggedNodePositions = () => {};
-  const relType = ref<RelationType>(route.params.type as RelationType);
-  const relKey = ref<string>(route.params.key as string);
-  const defaultActiveView = isMobile.value ? "sankey" : "network";
-  const activeView = ref<RelationViewMode>(normalizeRelationViewMode(route.query.view, defaultActiveView));
+  // relType/relKey 来自路由 entity/id 段（带实体子路由有值；视角首页无值则用默认 risk/R0001）
+  const routePerspective = getRelationPerspectiveFromRoute(route.name) ?? "risk";
+  const relType = ref<RelationType>(
+    (route.params.entity as RelationType) || RelationType.risk,
+  );
+  const relKey = ref<string>((route.params.id as string) || "R0001");
+  // activeView 由视角推导（取代 query.view）；移动端仅 risk 视角默认 sankey，其它视角尊重视角默认 view
+  const perspectiveDefaultView = getDefaultViewByPerspective(routePerspective);
+  const defaultActiveView =
+    isMobile.value && routePerspective === "risk" ? "sankey" : perspectiveDefaultView;
+  const activeView = ref<RelationViewMode>(defaultActiveView);
+  // activeAnalysisPerspective 由视角推导（pathExplorer 不属于三元分析视角，兜底 risk）
   const activeAnalysisPerspective = ref<RelationAnalysisPerspective>(
-    normalizeRelationAnalysisPerspective(route.query.perspective),
+    routePerspective === "pathExplorer" ? "risk" : routePerspective,
   );
 
   const networkState = reactive({

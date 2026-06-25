@@ -49,11 +49,11 @@ describe("useDrawerRoute", () => {
   };
 
   it("匹配详情路由时打开抽屉并记录实体 key", async () => {
-    mocks.route.name = "riskDetail";
+    mocks.route.name = "homeRiskDetail";
     mocks.route.params = { rKey: "R0001" };
 
     const { state } = await mountHost({
-      routeNames: ["riskDetail"],
+      routeNames: ["homeRiskDetail"],
       routeParam: "rKey",
     });
 
@@ -63,11 +63,11 @@ describe("useDrawerRoute", () => {
   });
 
   it("缺少字符串参数或验证失败时跳转首页", async () => {
-    mocks.route.name = "riskDetail";
+    mocks.route.name = "homeRiskDetail";
     mocks.route.params = { rKey: ["R0001"] };
 
     await mountHost({
-      routeNames: ["riskDetail"],
+      routeNames: ["homeRiskDetail"],
       routeParam: "rKey",
     });
 
@@ -76,7 +76,7 @@ describe("useDrawerRoute", () => {
     mocks.router.replace.mockClear();
     mocks.route.params = { rKey: "R9999" };
     await mountHost({
-      routeNames: ["riskDetail"],
+      routeNames: ["homeRiskDetail"],
       routeParam: "rKey",
       validateKey: vi.fn(async () => false),
     });
@@ -85,7 +85,7 @@ describe("useDrawerRoute", () => {
   });
 
   it("异步验证期间路由已变化时忽略旧结果", async () => {
-    mocks.route.name = "riskDetail";
+    mocks.route.name = "homeRiskDetail";
     mocks.route.params = { rKey: "R0001" };
     let resolveValidation!: (value: boolean) => void;
     const validateKey = vi.fn(
@@ -95,7 +95,7 @@ describe("useDrawerRoute", () => {
         }),
     );
     const { state } = await mountHost({
-      routeNames: ["riskDetail"],
+      routeNames: ["homeRiskDetail"],
       routeParam: "rKey",
       validateKey,
     });
@@ -112,7 +112,7 @@ describe("useDrawerRoute", () => {
 
   it("非详情路由关闭抽屉，close 支持默认、自定义路由和自定义回调", async () => {
     const { state } = await mountHost({
-      routeNames: ["riskDetail"],
+      routeNames: ["homeRiskDetail"],
       routeParam: "rKey",
     });
 
@@ -123,7 +123,7 @@ describe("useDrawerRoute", () => {
 
     const customClose = vi.fn();
     const custom = await mountHost({
-      routeNames: ["riskDetail"],
+      routeNames: ["homeRiskDetail"],
       routeParam: "rKey",
       closeRouteName: "risks",
     });
@@ -131,7 +131,7 @@ describe("useDrawerRoute", () => {
     expect(mocks.router.push).toHaveBeenCalledWith({ name: "risks" });
 
     const callback = await mountHost({
-      routeNames: ["riskDetail"],
+      routeNames: ["homeRiskDetail"],
       routeParam: "rKey",
       onClose: customClose,
     });

@@ -4,9 +4,14 @@ import BREAK from "@/BREAK";
 import type { Router, RouteLocationNormalizedLoaded } from "vue-router";
 import { createRelationTypeMapping, RelationType } from "@/views/relation/relationTypes";
 import {
-  normalizeRelationViewMode,
-  type RelationViewMode,
-} from "@/views/relation/relationViewState";
+  getRelationPerspectiveFromRoute,
+} from "@/views/relation/relationAnalysisPerspectives";
+import {
+  buildPerspectiveQuery,
+  ENTITY_ROUTE_BY_PERSPECTIVE,
+  PERSPECTIVE_ROUTE_NAME,
+} from "@/views/relation/relationRouteQuery";
+import type { RelationViewMode } from "@/views/relation/relationViewState";
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;
 
@@ -97,15 +102,22 @@ export const setupRelationViewEffects = ({
     networkDataReady = true;
   };
 
-  const isRouteParamsValid = () =>
-    Object.values(RelationType).includes(route.params.type as RelationType) &&
-    Object.keys(
-      BREAK[
-        RelationTypeMapping[
-          route.params.type as keyof typeof RelationTypeMapping
-        ].BreakKey as keyof typeof BREAK
-      ]
-    ).includes(route.params.key as string);
+  const isRouteParamsValid = () => {
+    // 视角首页（无 entity/id）视为合法（无选中根节点，用默认 risk/R0001 渲染）
+    const entity = route.params.entity as string | undefined;
+    const id = route.params.id as string | undefined;
+    if (!entity || !id) return true;
+    return (
+      Object.values(RelationType).includes(entity as RelationType) &&
+      Object.keys(
+        BREAK[
+          RelationTypeMapping[
+            entity as keyof typeof RelationTypeMapping
+          ].BreakKey as keyof typeof BREAK
+        ]
+      ).includes(id)
+    );
+  };
 
   // 首次渲染初始化：根节点 + 首屏图表 + 全局监听。可被 onMounted 或路由 watch 补跑。
   const performInitialRender = () => {
@@ -137,13 +149,12 @@ export const setupRelationViewEffects = ({
         grouping: true,
       });
       needsInit = true;
+      // 非法 entity/id：重定向到当前视角首页（无实体），query 按白名单隔离
+      const perspective =
+        getRelationPerspectiveFromRoute(route.name) ?? "risk";
       router.replace({
-        name: "relation",
-        params: {
-          type: "risk",
-          key: "R0001",
-        },
-        query: route.query,
+        name: PERSPECTIVE_ROUTE_NAME[perspective],
+        query: buildPerspectiveQuery(route.query, perspective),
       });
       return;
     }
@@ -173,24 +184,27 @@ export const setupRelationViewEffects = ({
     () => [relType.value, relKey.value],
     ([newType, newKey]) => {
       selectedNetworkNodeId.value = newKey;
-      if (newType !== route.params.type || newKey !== route.params.key) {
+      const perspective = getRelationPerspectiveFromRoute(route.name) ?? "risk";
+      const currentEntity = route.params.entity as string | undefined;
+      const currentId = route.params.id as string | undefined;
+      if (newType !== currentEntity || newKey !== currentId) {
         router.push({
-          name: "relation",
-          params: {
-            type: newType,
-            key: newKey,
-          },
-          query: route.query,
+          name: ENTITY_ROUTE_BY_PERSPECTIVE[perspective],
+          params: { entity: newType, id: newKey },
+          query: buildPerspectiveQuery(route.query, perspective),
         });
       }
     }
   );
 
   watch(
-    [() => route.params.type, () => route.params.key],
+    [() => route.params.entity, () => route.params.id],
     () => {
-      relType.value = route.params.type as RelationType;
-      relKey.value = route.params.key as string;
+      const entity = route.params.entity as RelationType | undefined;
+      const id = route.params.id as string | undefined;
+      // 视角首页（无 entity/id）保留默认根节点，不置空
+      if (entity) relType.value = entity;
+      if (id) relKey.value = id;
       selectedNetworkNodeId.value = relKey.value;
       normalizeAttackPathFilters();
       // 非法参数重定向后，参数已合法时补跑首次初始化（仅一次）
@@ -230,20 +244,7 @@ export const setupRelationViewEffects = ({
   watch(
     activeView,
     (nextView, prevView) => {
-      if (route.query.view !== activeView.value) {
-        router.replace({
-          name: "relation",
-          params: {
-            type: relType.value,
-            key: relKey.value,
-          },
-          query: {
-            ...route.query,
-            view: activeView.value,
-          },
-        });
-      }
-
+      // activeView 现由 route.name（视角）推导，不再写回 query.view
       if (!hasMounted) {
         return;
       }
@@ -267,16 +268,6 @@ export const setupRelationViewEffects = ({
         nextTick(() => renderNetworkChart(true));
       } else {
         ensureNetworkData({ render: false });
-      }
-    }
-  );
-
-  watch(
-    () => route.query.view,
-    (view) => {
-      const nextView = normalizeRelationViewMode(view, activeView.value);
-      if (nextView !== activeView.value) {
-        activeView.value = nextView;
       }
     }
   );

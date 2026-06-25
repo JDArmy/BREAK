@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import BREAK from "@/BREAK";
 import { defineAsyncComponent, ref, computed } from "vue";
+import { useRouter } from "vue-router";
 import ReferenceList from "@/components/ReferenceList.vue";
 
-import { ArrowLeft } from "@element-plus/icons-vue";
+import { ArrowLeft, TopRight } from "@element-plus/icons-vue";
 import iconRelation from "./icons/iconRelation.vue";
 import { useDrawerWidth } from "@/composables/useDrawerWidth";
 
@@ -15,6 +16,7 @@ const props = defineProps<{
 }>();
 defineEmits(["drawerClose"]);
 
+const router = useRouter();
 const { getInnerDrawerWidth } = useDrawerWidth();
 const selectedThreatActor = computed(() => BREAK.threatActors[props.taKey as keyof typeof BREAK.threatActors]);
 const relatedThreatActors = computed(() => selectedThreatActor.value?.relatedThreatActors ?? []);
@@ -29,6 +31,23 @@ const relatedTerms = computed(() => {
 
 const termDrawer = ref(false);
 const termKey = ref("");
+
+const openRelationGraph = (taKey: string) => {
+  const route = router.resolve({
+    name: "relationAttackPathEntity",
+    params: { entity: "threat-actor", id: taKey },
+  });
+  window.open(route.href, "_blank", "noopener,noreferrer");
+};
+
+// 跳知识库详情页（新窗口）的 href
+const detailHref = (taKey: string) =>
+  router.resolve({ name: "knowledgesThreatActorDetail", params: { taKey } }).href;
+
+// 新窗口打开知识库详情页
+const openDetail = (taKey: string) => {
+  window.open(detailHref(taKey), "_blank", "noopener,noreferrer");
+};
 </script>
 
 <template>
@@ -52,19 +71,17 @@ const termKey = ref("");
     </template>
     <div class="desc">
       <strong>{{ $t("ID") }}:&nbsp;</strong>
-      <router-link :to="{ name: 'threatActorsDetail', params: { taKey } }" class="id-link">
+      <a :href="detailHref(taKey)" target="_blank" rel="noopener" class="id-link">
         {{ taKey }}
-      </router-link>
-      <router-link
+        <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
+      </a>
+      <button
         :title="$t('relationMap')"
         class="relation-map-icon"
-        :to="{
-          name: 'relation',
-          params: { type: 'threat-actor', key: taKey },
-        }"
+        @click="openRelationGraph(taKey)"
       >
         <icon-relation width="14px" height="14px" />
-      </router-link>
+      </button>
     </div>
     <div class="desc">
       <strong>{{ $t("title") }}:&nbsp;</strong>
@@ -77,15 +94,18 @@ const termKey = ref("");
     <div class="desc" v-if="relatedThreatActors.length > 0">
       <strong>{{ $t("threatActorRelatedThreatActors") }}:&nbsp;</strong>
       <div class="entity-links">
-        <router-link
+        <a
           v-for="relation in relatedThreatActors"
           :key="`${relation.key}-${relation.relation}`"
           class="entity-link"
-          :to="{ name: 'threatActorsDetail', params: { taKey: relation.key } }"
+          :href="detailHref(relation.key)"
+          target="_blank"
+          rel="noopener"
         >
           {{ $t(`threatActorRelationType.${relation.relation}`) }} ·
           {{ relation.key }}: {{ $t(`BREAK.threatActors.${relation.key}.title`) }}
-        </router-link>
+          <el-icon class="external-link-icon"><TopRight /></el-icon>
+        </a>
       </div>
     </div>
     <div class="desc" v-if="relatedTerms.length > 0">
@@ -106,8 +126,9 @@ const termKey = ref("");
       <ReferenceList type="threatActors" :entityKey="taKey" />
     </div>
     <div class="desc">
-      <el-button type="primary" plain size="small" @click="$router.push({ name: 'threatActorsDetail', params: { taKey } })">
+      <el-button type="primary" plain size="small" @click="openDetail(taKey)">
         {{ $t("viewDetail") }}
+        <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
       </el-button>
     </div>
   </el-drawer>

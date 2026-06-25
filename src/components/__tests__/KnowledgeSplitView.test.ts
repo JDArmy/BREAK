@@ -31,7 +31,7 @@ const mocks = vi.hoisted(() => {
     hash: "",
     params: {} as Record<string, string>,
     query: {} as Record<string, string>,
-    name: "risks",
+    name: "knowledgesRiskList",
   };
   return {
     isMobile,
@@ -68,8 +68,9 @@ const mountView = (selectedKey = "R0001") =>
   mount(KnowledgeSplitView, {
     props: {
       title: "风险",
-      routeName: "risks",
-      detailRouteName: "riskDetail",
+      routeName: "knowledgesRiskList",
+      detailRouteName: "knowledgesRiskDetail",
+      paramKey: "rKey",
       items,
       selectedKey,
       searchPlaceholder: "搜索风险",
@@ -102,8 +103,9 @@ const mountViewWithAnchor = () =>
   mount(KnowledgeSplitView, {
     props: {
       title: "风险",
-      routeName: "risks",
-      detailRouteName: "riskDetail",
+      routeName: "knowledgesRiskList",
+      detailRouteName: "knowledgesRiskDetail",
+      paramKey: "rKey",
       items,
       selectedKey: "R0001",
       searchPlaceholder: "搜索风险",
@@ -141,7 +143,7 @@ describe("KnowledgeSplitView", () => {
     mocks.route.hash = "";
     mocks.route.params = {};
     mocks.route.query = {};
-    mocks.route.name = "risks";
+    mocks.route.name = "knowledgesRiskList";
     mocks.router.push.mockClear();
     mocks.router.replace.mockClear();
     // happy-dom 在 Node 26 下未注入 localStorage，直接挂到 window 供组件读写，
@@ -185,31 +187,31 @@ describe("KnowledgeSplitView", () => {
     expect(wrapper.findAll(".knowledge-list-item")).toHaveLength(0);
   });
 
-  it("初始 hash 指向有效条目时发出选择事件", () => {
-    mocks.route.hash = "#R0002";
+  it("初始路由参数指向有效条目时发出选择事件", () => {
+    mocks.route.params = { rKey: "R0002" };
 
     const wrapper = mountView("R0001");
 
     expect(wrapper.emitted("select")?.[0]).toEqual(["R0002"]);
   });
 
-  it("初始 hash 无效时不发出选择事件", () => {
-    mocks.route.hash = "#R9999";
+  it("初始路由参数无效时不发出选择事件", () => {
+    mocks.route.params = { rKey: "R9999" };
 
     const wrapper = mountView("R0001");
 
     expect(wrapper.emitted("select")).toBeUndefined();
   });
 
-  it("点击桌面列表项时发出选择事件并更新 hash", async () => {
+  it("点击桌面列表项时发出选择事件并跳转详情路由", async () => {
     const wrapper = mountView();
 
     await wrapper.find('[data-knowledge-key="R0002"]').trigger("click");
 
     expect(wrapper.emitted("select")?.[0]).toEqual(["R0002"]);
-    expect(mocks.router.replace).toHaveBeenCalledWith({
-      name: "risks",
-      hash: "#R0002",
+    expect(mocks.router.push).toHaveBeenCalledWith({
+      name: "knowledgesRiskDetail",
+      params: { rKey: "R0002" },
     });
   });
 
@@ -234,7 +236,7 @@ describe("KnowledgeSplitView", () => {
 
     expect(wrapper.emitted("select")?.[0]).toEqual(["R0002"]);
     expect(mocks.router.push).toHaveBeenCalledWith({
-      name: "riskDetail",
+      name: "knowledgesRiskDetail",
       params: { rKey: "R0002" },
     });
   });
@@ -245,6 +247,7 @@ describe("KnowledgeSplitView", () => {
       props: {
         title: "风险",
         routeName: "unknown",
+        paramKey: "rKey",
         items,
         selectedKey: "R0001",
         searchPlaceholder: "搜索风险",
@@ -293,13 +296,13 @@ describe("KnowledgeSplitView", () => {
 
     await wrapper.find(".back-button").trigger("click");
 
-    expect(mocks.router.push).toHaveBeenCalledWith({ name: "risks" });
+    expect(mocks.router.push).toHaveBeenCalledWith({ name: "knowledgesRiskList" });
   });
 
   it("移动端路由参数无效且处于列表路由时保持列表态", async () => {
     mocks.isMobile.value = true;
     mocks.route.params = { rKey: "R9999" };
-    mocks.route.name = "risks";
+    mocks.route.name = "knowledgesRiskList";
 
     const wrapper = mountView("R0001");
     await nextTick();

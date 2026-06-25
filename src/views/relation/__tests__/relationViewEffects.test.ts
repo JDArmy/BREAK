@@ -29,9 +29,10 @@ const createHarness = (options?: {
   routeKey?: string;
 }) => {
   const route = reactive({
+    name: "relationRiskEntity" as string | symbol | undefined,
     params: {
-      type: options?.routeType ?? RelationType.risk,
-      key: options?.routeKey ?? "R0001",
+      entity: options?.routeType ?? RelationType.risk,
+      id: options?.routeKey ?? "R0001",
     },
     query: {} as Record<string, unknown>,
   });
@@ -42,13 +43,13 @@ const createHarness = (options?: {
   const locale = ref("zh-CN");
   const isDark = ref(false);
   const activeView = ref<RelationViewMode>(options?.activeView ?? "network");
-  const relType = ref(route.params.type as RelationType);
-  const relKey = ref(route.params.key);
+  const relType = ref(route.params.entity as RelationType);
+  const relKey = ref(route.params.id);
   const getCurrentEntityOptions = ref<Record<string, unknown>>({
     R0001: {},
     R0002: {},
   });
-  const selectedNetworkNodeId = ref(route.params.key);
+  const selectedNetworkNodeId = ref(route.params.id);
   const calls = {
     addRootNode: vi.fn(),
     disposeNetworkChart: vi.fn(),
@@ -136,14 +137,14 @@ describe("relationViewEffects", () => {
     expect(ElMessage).toHaveBeenCalledWith(
       expect.objectContaining({ message: "t:unknownTypeOrId", type: "warning" }),
     );
+    // 非法 entity/id：重定向到当前视角首页（无实体），query 按白名单隔离为空
     expect(router.replace).toHaveBeenCalledWith({
-      name: "relation",
-      params: { type: "risk", key: "R0001" },
-      query: route.query,
+      name: "relationRisk",
+      query: {},
     });
     expect(calls.addRootNode).not.toHaveBeenCalled();
 
-    route.params.key = "R0001";
+    route.params.id = "R0001";
     await flushTicks();
 
     expect(calls.addRootNode).toHaveBeenCalledTimes(1);
@@ -207,8 +208,8 @@ describe("relationViewEffects", () => {
     analysis.wrapper.unmount();
   });
 
-  it("routes selection changes, synchronizes query view, and refreshes active charts", async () => {
-    const { activeView, calls, relKey, route, router, selectedNetworkNodeId } =
+  it("routes selection changes to entity route and refreshes active charts on view change", async () => {
+    const { activeView, calls, relKey, router, selectedNetworkNodeId } =
       createHarness({ activeView: "network" });
     calls.genNetworkGraphData.mockClear();
     calls.renderNetworkChart.mockClear();
@@ -217,41 +218,37 @@ describe("relationViewEffects", () => {
     await flushTicks();
 
     expect(selectedNetworkNodeId.value).toBe("R0002");
+    // 切换根节点：push 到当前视角的带实体子路由，query 按白名单隔离为空
     expect(router.push).toHaveBeenCalledWith({
-      name: "relation",
-      params: { type: RelationType.risk, key: "R0002" },
-      query: route.query,
+      name: "relationRiskEntity",
+      params: { entity: RelationType.risk, id: "R0002" },
+      query: {},
     });
 
     activeView.value = "sankey";
     await flushTicks();
 
-    expect(router.replace).toHaveBeenCalledWith({
-      name: "relation",
-      params: { type: RelationType.risk, key: "R0002" },
-      query: { view: "sankey" },
-    });
+    // activeView 不再写回 query.view，仅触发渲染副作用
     expect(calls.hideNetworkTooltip).toHaveBeenCalled();
     expect(calls.hideSankeyTooltip).toHaveBeenCalled();
     expect(calls.renderSankeyChart).toHaveBeenCalled();
 
-    route.query.view = "analysis";
-    await flushTicks();
-
-    expect(activeView.value).toBe("analysis");
-    expect(calls.hideNetworkTooltip).toHaveBeenCalledTimes(2);
-    expect(calls.hideSankeyTooltip).toHaveBeenCalledTimes(2);
-
     activeView.value = "pathExplorer";
     await flushTicks();
 
-    expect(router.replace).toHaveBeenCalledWith({
-      name: "relation",
-      params: { type: RelationType.risk, key: "R0002" },
-      query: { view: "pathExplorer" },
-    });
     expect(calls.hidePathExplorerSankeyTooltip).toHaveBeenCalled();
     expect(calls.renderPathExplorerSankeyChart).toHaveBeenCalled();
+  });
+
+  it("读取 route.params.entity/id 而非旧的 type/key（回归：AT0045 不应被替换为 R0001）", async () => {
+    // 模拟 /relations/attack-path/attack-tool/AT0045
+    const { relType, relKey } = createHarness({
+      routeType: "attack-tool",
+      routeKey: "AT0045",
+    });
+    // 初始化时应正确读取 entity="attack-tool"，id="AT0045"
+    expect(relType.value).toBe("attack-tool");
+    expect(relKey.value).toBe("AT0045");
   });
 
   it("resets selected node to root when leaving path explorer view", async () => {
@@ -300,7 +297,7 @@ describe("relationViewEffects", () => {
       selectedNetworkNodeId,
     } = createHarness({ activeView: "network" });
 
-    route.params.key = "R0002";
+    route.params.id = "R0002";
     await flushTicks();
 
     expect(calls.normalizeAttackPathFilters).toHaveBeenCalled();
@@ -333,7 +330,7 @@ describe("relationViewEffects", () => {
       activeView: "analysis",
     });
 
-    route.params.key = "R0002";
+    route.params.id = "R0002";
     await flushTicks();
 
     expect(calls.rebuildGraphData).toHaveBeenCalledWith({ render: false });

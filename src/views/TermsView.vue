@@ -15,20 +15,10 @@ const termKeys = Object.keys(BREAK.terms);
 
 const getInitialKey = () => {
   const paramKey = typeof route.params.tKey === "string" ? route.params.tKey : "";
-  const hashKey = route.hash.replace("#", "");
-  return paramKey || hashKey || termKeys[0] || "";
+  return paramKey || termKeys[0] || "";
 };
 
 const selectedTermKey = ref(getInitialKey());
-
-watch(
-  () => route.hash,
-  (hash) => {
-    const key = hash.replace("#", "");
-    if (key && BREAK.terms[key]) selectedTermKey.value = key;
-  },
-  { immediate: true }
-);
 
 watch(
   () => route.params.tKey,
@@ -78,8 +68,9 @@ const selectedTermAliases = computed(() => getTermStringArray(selectedTermKey.va
 <template>
   <KnowledgeSplitView
     :title="$t('terms')"
-    route-name="terms"
-    detail-route-name="termsDetail"
+    route-name="knowledgesTermList"
+    detail-route-name="knowledgesTermDetail"
+    param-key="tKey"
     :items="termItems"
     :selected-key="selectedTermKey"
     :search-placeholder="$t('search.termPlaceholder')"
@@ -128,32 +119,32 @@ const selectedTermAliases = computed(() => getTermStringArray(selectedTermKey.va
       <EntityLinkSection
         :keys="selectedTerm.relatedThreatActors"
         title="threatActors"
-        route-name="threatActors"
-        detail-route-name="threatActorsDetail"
+        route-name="knowledgesThreatActorList"
+        detail-route-name="knowledgesThreatActorDetail"
         param-key="taKey"
         anchor="threat-actors"
       />
       <EntityLinkSection
         :keys="selectedTerm.relatedAttackTools"
         title="attackTools"
-        route-name="attackTools"
-        detail-route-name="attackToolsDetail"
+        route-name="knowledgesAttackToolList"
+        detail-route-name="knowledgesAttackToolDetail"
         param-key="atKey"
         anchor="attack-tools"
       />
       <EntityLinkSection
         :keys="selectedTerm.relatedRisks"
         title="risks"
-        route-name="risks"
-        detail-route-name="risksDetail"
+        route-name="knowledgesRiskList"
+        detail-route-name="knowledgesRiskDetail"
         param-key="rKey"
         anchor="risks"
       />
       <EntityLinkSection
         :keys="selectedTerm.relatedAvoidances"
         title="riskAvoidances"
-        route-name="avoidances"
-        detail-route-name="avoidancesDetail"
+        route-name="knowledgesAvoidanceList"
+        detail-route-name="knowledgesAvoidanceDetail"
         param-key="aKey"
         anchor="avoidances"
       />

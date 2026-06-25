@@ -7,8 +7,8 @@ const route = useRoute();
 const relationViewComponent = shallowRef<Component | null>(null);
 
 const currentEntity = computed(() => {
-  const type = typeof route.params.type === "string" ? route.params.type : "";
-  const key = typeof route.params.key === "string" ? route.params.key : "";
+  const type = typeof route.params.entity === "string" ? route.params.entity : "";
+  const key = typeof route.params.id === "string" ? route.params.id : "";
   return [type, key].filter(Boolean).join(" / ");
 });
 

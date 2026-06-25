@@ -29,3 +29,17 @@ button.entity-link {
   cursor: pointer;
   font-family: inherit;
 }
+
+/* 外链/跳转详情页 icon（与文字同行，新窗口打开语义） */
+.external-link-icon {
+  font-size: 0.85em;
+  margin-left: 2px;
+  vertical-align: -1px;
+  opacity: 0.7;
+}
+
+.id-link:hover .external-link-icon,
+a.entity-link:hover .external-link-icon,
+button:hover .external-link-icon {
+  opacity: 1;
+}

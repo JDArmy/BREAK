@@ -20,20 +20,20 @@ const viewports = [
 
 const routes = [
   { label: 'home', path: '/', text: /BREAK|业务风险|Business Risk/i },
-  { label: 'risks', path: '/#/risks', text: /R0001|流程自动化|Process/i },
-  { label: 'avoidances', path: '/#/avoidances', text: /A0001|人机验证|CAPTCHA/i },
-  { label: 'attack-tools', path: '/#/attack-tools', text: /AT0001|电话黑卡|SIM/i },
-  { label: 'threat-actors', path: '/#/threat-actors', text: /Threat Actors|TA0001|Freebie Hunters/i },
-  { label: 'terms', path: '/#/terms', text: /T0001|账号|Account/i },
-  { label: 'cases', path: '/#/cases', text: /Cases|C0001|Login Replay/i },
+  { label: 'risks', path: '/#/knowledges/risk/list', text: /R0001|流程自动化|Process/i },
+  { label: 'avoidances', path: '/#/knowledges/avoidance/list', text: /A0001|人机验证|CAPTCHA/i },
+  { label: 'attack-tools', path: '/#/knowledges/attack-tool/list', text: /AT0001|电话黑卡|SIM/i },
+  { label: 'threat-actors', path: '/#/knowledges/threat-actor/list', text: /Threat Actors|TA0001|Freebie Hunters/i },
+  { label: 'terms', path: '/#/knowledges/term/list', text: /T0001|账号|Account/i },
+  { label: 'cases', path: '/#/knowledges/case/list', text: /Cases|C0001|Login Replay/i },
   {
     label: 'relation-sankey',
-    path: '/#/relation/risk/R0001?view=sankey',
+    path: '/#/relations/attack-path/risk/R0001',
     text: /R0001|攻击路径|Attack Path|关系网络|Network/i,
   },
   {
     label: 'relation-network',
-    path: '/#/relation/risk/R0001?view=network',
+    path: '/#/relations/risk-relation/risk/R0001',
     text: /R0001|攻击路径|Attack Path|关系网络|Network/i,
     canvasSelector: '.network-chart canvas',
   },
@@ -43,17 +43,17 @@ const interactionRoutes = [
   { label: 'desktop-global-search', path: '/', viewport: 'desktop' },
   { label: 'desktop-navigation-controls', path: '/', viewport: 'desktop' },
   { label: 'desktop-error-route-fallbacks', path: '/', viewport: 'desktop' },
-  { label: 'home-drawer-detail-route', path: '/#/risks/R0001', viewport: 'desktop' },
-  { label: 'knowledge-search-and-filters', path: '/#/risks', viewport: 'desktop' },
-  { label: 'risks-detail-click', path: '/#/risks', viewport: 'desktop' },
-  { label: 'entity-link-navigation', path: '/#/risks#R0001', viewport: 'desktop' },
-  { label: 'relation-selector-switch', path: '/#/relation/risk/R0001?view=network', viewport: 'desktop' },
-  { label: 'relation-network-interaction', path: '/#/relation/risk/R0001?view=network', viewport: 'desktop' },
-  { label: 'relation-sankey-interaction', path: '/#/relation/risk/R0001?view=sankey', viewport: 'desktop' },
-  { label: 'relation-analysis-filters', path: '/#/relation/risk/R0001?view=analysis', viewport: 'desktop' },
+  { label: 'home-drawer-detail-route', path: '/#/home/risk/R0001', viewport: 'desktop' },
+  { label: 'knowledge-search-and-filters', path: '/#/knowledges/risk/list', viewport: 'desktop' },
+  { label: 'risks-detail-click', path: '/#/knowledges/risk/list', viewport: 'desktop' },
+  { label: 'entity-link-navigation', path: '/#/knowledges/risk/detail/R0001', viewport: 'desktop' },
+  { label: 'relation-selector-switch', path: '/#/relations/risk-relation/risk/R0001', viewport: 'desktop' },
+  { label: 'relation-network-interaction', path: '/#/relations/risk-relation/risk/R0001', viewport: 'desktop' },
+  { label: 'relation-sankey-interaction', path: '/#/relations/attack-path/risk/R0001', viewport: 'desktop' },
+  { label: 'relation-analysis-filters', path: '/#/relations/defense-coverage/risk/R0001', viewport: 'desktop' },
   { label: 'mobile-nav-search', path: '/', viewport: 'mobile' },
-  { label: 'mobile-cases-detail-click', path: '/#/cases', viewport: 'mobile' },
-  { label: 'mobile-small-knowledge-empty', path: '/#/risks', viewport: 'mobile-small' },
+  { label: 'mobile-cases-detail-click', path: '/#/knowledges/case/list', viewport: 'mobile' },
+  { label: 'mobile-small-knowledge-empty', path: '/#/knowledges/risk/list', viewport: 'mobile-small' },
 ];
 
 async function findFreePort() {
@@ -553,8 +553,8 @@ async function runDesktopErrorRouteFallbacksScenario(page, scenario, interaction
   await recordState(page, interactions, scenario, 'unknown-route-redirect-home', notFoundIssues);
 
   const relationIssues = [];
-  await page.goto(`${page.baseUrl}/#/relation/unknown/NOPE?view=network`, { waitUntil: 'networkidle', timeout: 30000 });
-  await waitForUrlIncludes(page, '/relation/risk/R0001', relationIssues, '非法关系路由回退');
+  await page.goto(`${page.baseUrl}/#/relations/risk-relation/risk/NOPE`, { waitUntil: 'networkidle', timeout: 30000 });
+  await waitForUrlIncludes(page, '/relations/risk-relation', relationIssues, '非法关系路由回退');
   try {
     await waitForExpectedText(page, /R0001|Process Automation|流程自动化|未知类型|Unknown type/i, 8000);
   } catch {
@@ -564,12 +564,12 @@ async function runDesktopErrorRouteFallbacksScenario(page, scenario, interaction
 }
 
 const knowledgeSearchConfigs = [
-  { label: 'risks', path: '/#/risks', query: 'R0001', expected: /R0001|Process Automation|流程自动化/i },
-  { label: 'avoidances', path: '/#/avoidances', query: 'A0001', expected: /A0001|CAPTCHA|人机验证/i, filterSelector: '.avoidance-category-filter' },
-  { label: 'attack-tools', path: '/#/attack-tools', query: 'AT0001', expected: /AT0001|SIM|电话黑卡/i },
-  { label: 'threat-actors', path: '/#/threat-actors', query: 'TA0001', expected: /TA0001|Freebie|羊毛/i },
-  { label: 'terms', path: '/#/terms', query: 'T0001', expected: /T0001|Account|账号/i },
-  { label: 'cases', path: '/#/cases', query: 'C0001', expected: /C0001|Login Replay|登录/i, filterSelector: '.case-category-filter' },
+  { label: 'risks', path: '/#/knowledges/risk/list', query: 'R0001', expected: /R0001|Process Automation|流程自动化/i },
+  { label: 'avoidances', path: '/#/knowledges/avoidance/list', query: 'A0001', expected: /A0001|CAPTCHA|人机验证/i, filterSelector: '.avoidance-category-filter' },
+  { label: 'attack-tools', path: '/#/knowledges/attack-tool/list', query: 'AT0001', expected: /AT0001|SIM|电话黑卡/i },
+  { label: 'threat-actors', path: '/#/knowledges/threat-actor/list', query: 'TA0001', expected: /TA0001|Freebie|羊毛/i },
+  { label: 'terms', path: '/#/knowledges/term/list', query: 'T0001', expected: /T0001|Account|账号/i },
+  { label: 'cases', path: '/#/knowledges/case/list', query: 'C0001', expected: /C0001|Login Replay|登录/i, filterSelector: '.case-category-filter' },
 ];
 
 async function runKnowledgeSearchAndFiltersScenario(page, scenario, interactions) {

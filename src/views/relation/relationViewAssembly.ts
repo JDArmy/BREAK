@@ -4,12 +4,19 @@ import {
   createSankeyChartController,
 } from "@/views/relation/relationViewControllers";
 import { setupRelationViewEffects } from "@/views/relation/relationViewEffects";
-import { createRelationViewState } from "@/views/relation/relationViewState";
+import { createRelationViewState, type RelationViewMode } from "@/views/relation/relationViewState";
 import {
-  getRelationAnalysisPerspectiveByView,
+  getDefaultViewByPerspective,
   getRelationAnalysisPerspectiveOption,
-  normalizeRelationAnalysisPerspective,
+  getRelationPerspectiveFromRoute,
+  type RelationPerspectiveKey,
 } from "@/views/relation/relationAnalysisPerspectives";
+import {
+  buildPerspectiveQuery,
+  ENTITY_ROUTE_BY_PERSPECTIVE,
+  PERSPECTIVE_ROUTE_NAME,
+  VIEW_TO_PERSPECTIVE,
+} from "@/views/relation/relationRouteQuery";
 import { useRelationGraphData } from "@/views/relation/useRelationGraphData";
 import { useRelationNodeActions } from "@/views/relation/useRelationNodeActions";
 import { createRelationPathExplorerSankey } from "@/views/relation/relationPathExplorerSankey";
@@ -224,52 +231,30 @@ export const createRelationViewAssembly = ({
     nodeActions.doFilter();
   };
 
-  watch(activeAnalysisPerspective, (perspective) => {
-    if (route.query.perspective !== perspective) {
-      router.replace({
-        name: "relation",
-        params: {
-          type: relType.value,
-          key: relKey.value,
-        },
-        query: {
-          ...route.query,
-          perspective,
-        },
-      });
-    }
-    applyAnalysisPerspective(perspective);
-  });
-
-  watch(activeView, (view) => {
-    // pathExplorer 独立于视角系统，不参与视角联动
-    if (view === "pathExplorer") return;
-    const perspective = getRelationAnalysisPerspectiveByView(view);
-    if (perspective !== activeAnalysisPerspective.value) {
-      activeAnalysisPerspective.value = perspective;
-    }
-  });
-
+  // 视角由路由 name 决定（meta.relationPerspective）。
+  // 切视角（route.name 变化）→ 推导 activeView/activeAnalysisPerspective 并重置筛选/布局；
+  // pathExplorer 切入时复位根节点为起点实体，切出时复位为 selector 根节点。
   watch(
-    () => route.query.perspective,
-    (perspective) => {
-      const normalizedPerspective = normalizeRelationAnalysisPerspective(
-        perspective,
-        activeAnalysisPerspective.value,
-      );
-      if (normalizedPerspective !== activeAnalysisPerspective.value) {
-        activeAnalysisPerspective.value = normalizedPerspective;
-        activeView.value =
-          getRelationAnalysisPerspectiveOption(normalizedPerspective).defaultView;
+    () => route.name,
+    (name) => {
+      const perspective = getRelationPerspectiveFromRoute(name);
+      if (!perspective) return;
+      const nextView = getDefaultViewByPerspective(perspective);
+      if (nextView !== activeView.value) activeView.value = nextView;
+      if (perspective === "pathExplorer") {
+        // pathExplorer 不属于三元分析视角；起点实体跟随当前 selector 根节点
+        pathExplorerStartType.value = relType.value;
+        pathExplorerStartKey.value = relKey.value;
+        selectedNetworkNodeId.value = relKey.value;
+      } else {
+        if (perspective !== activeAnalysisPerspective.value) {
+          activeAnalysisPerspective.value = perspective;
+        }
+        applyAnalysisPerspective(perspective);
       }
     },
+    { immediate: true },
   );
-
-  if (typeof route.query.perspective === "string") {
-    applyAnalysisPerspective(activeAnalysisPerspective.value, {
-      applyDefaultView: route.query.view === undefined,
-    });
-  }
 
   const openSankeyNodeActions = (node: SankeyNode, event?: MouseEvent) => {
     const contextNode = nodeActions.prepareNodeActions(
@@ -374,6 +359,10 @@ export const createRelationViewAssembly = ({
   let isUpdatingFromRoute = false;
   watch([pathExplorerEndType, pathExplorerEndKey, pathExplorerMaxDepth, pathExplorerMaxPaths], ([endType, endKey, maxDepth, maxPaths]) => {
     if (isUpdatingFromRoute) return;
+    // 仅在 pathExplorer 视角下写回 URL：
+    // 切视角过程中面板可能先挂载并设置默认 endKey，此时 route.name 尚未切到 path-explorer，
+    // 若放任写回会用旧 route.name（如 risk-relation）replace，取消正在进行的视角跳转 push。
+    if (getRelationPerspectiveFromRoute(route.name) !== "pathExplorer") return;
     const query = { ...route.query };
     let changed = false;
     if (endType && endType !== query.endType) {
@@ -399,10 +388,11 @@ export const createRelationViewAssembly = ({
       changed = true;
     }
     if (changed) {
+      const perspective = getRelationPerspectiveFromRoute(route.name) ?? "pathExplorer";
       router.replace({
-        name: "relation",
-        params: { type: relType.value, key: relKey.value },
-        query,
+        name: ENTITY_ROUTE_BY_PERSPECTIVE[perspective],
+        params: { entity: relType.value, id: relKey.value },
+        query: buildPerspectiveQuery(query, "pathExplorer"),
       });
     }
   });
@@ -410,6 +400,8 @@ export const createRelationViewAssembly = ({
   watch(
     () => [route.query.endType, route.query.endKey, route.query.maxDepth, route.query.maxPaths],
     ([queryEndType, queryEndKey, queryMaxDepth, queryMaxPaths]) => {
+      // 仅 pathExplorer 视角读取这些 query（白名单已隔离，此处再加防御）
+      if (getRelationPerspectiveFromRoute(route.name) !== "pathExplorer") return;
       isUpdatingFromRoute = true;
       if (typeof queryEndType === "string" && queryEndType !== pathExplorerEndType.value) {
         const validTypes = Object.values(RelationType) as string[];
@@ -419,9 +411,9 @@ export const createRelationViewAssembly = ({
       }
       if (typeof queryEndKey === "string" && queryEndKey !== pathExplorerEndKey.value) {
         pathExplorerEndKey.value = queryEndKey;
-      } else if (queryEndKey === undefined && pathExplorerEndKey.value) {
-        pathExplorerEndKey.value = "";
       }
+      // 注意：不在 queryEndKey=undefined 时重置 pathExplorerEndKey——面板 onMounted 可能已设置默认值，
+      // 写回尚未完成（路由导航异步），此时重置会导致 hasTarget 闪为 false。
       if (typeof queryMaxDepth === "string") {
         const val = Math.max(1, Math.min(6, parseInt(queryMaxDepth, 10) || 4));
         if (val !== pathExplorerMaxDepth.value) pathExplorerMaxDepth.value = val;
@@ -577,6 +569,21 @@ export const createRelationViewAssembly = ({
     });
   });
 
+  // el-tabs 切视角：push 到目标视角路由，保留当前选中实体（若有），query 按白名单隔离
+  const switchPerspective = (view: RelationViewMode) => {
+    const perspective: RelationPerspectiveKey = VIEW_TO_PERSPECTIVE[view];
+    const hasSelection = Boolean(relKey.value);
+    router.push({
+      name: hasSelection
+        ? ENTITY_ROUTE_BY_PERSPECTIVE[perspective]
+        : PERSPECTIVE_ROUTE_NAME[perspective],
+      params: hasSelection
+        ? { entity: relType.value, id: relKey.value }
+        : {},
+      query: buildPerspectiveQuery(route.query, perspective),
+    });
+  };
+
   const relationView = {
     ...graphData,
     ...networkController,
@@ -590,6 +597,7 @@ export const createRelationViewAssembly = ({
     dropdown1,
     setDropdownInstance,
     setRelationPageElement,
+    switchPerspective,
     handleNetworkLayoutCommand,
     currentAnalysisPerspectiveOption,
     networkLayoutTooltip,

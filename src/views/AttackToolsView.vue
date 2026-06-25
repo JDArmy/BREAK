@@ -16,22 +16,12 @@ const route = useRoute();
 const { t, locale, messages } = useI18n();
 
 const attackToolKeys = Object.keys(BREAK.attackTools);
-// 优先从路由参数获取，否则从 hash 获取，最后使用默认值
+// 优先从路由参数获取，最后使用默认值
 const getInitialKey = () => {
   const paramKey = typeof route.params.atKey === 'string' ? route.params.atKey : '';
-  const hashKey = route.hash.replace("#", "");
-  return paramKey || hashKey || attackToolKeys[0] || "";
+  return paramKey || attackToolKeys[0] || "";
 };
 const selectedAttackToolKey = ref(getInitialKey());
-
-watch(
-  () => route.hash,
-  (hash) => {
-    const key = hash.replace("#", "");
-    if (key && BREAK.attackTools[key]) selectedAttackToolKey.value = key;
-  },
-  { immediate: true }
-);
 
 watch(
   () => route.params.atKey,
@@ -100,8 +90,9 @@ const { openRelationGraph } = useRelationGraph("attack-tool");
 <template>
   <KnowledgeSplitView
     :title="$t('attackTools')"
-    route-name="attackTools"
-    detail-route-name="attackToolsDetail"
+    route-name="knowledgesAttackToolList"
+    detail-route-name="knowledgesAttackToolDetail"
+    param-key="atKey"
     :items="attackToolItems"
     :selected-key="selectedAttackToolKey"
     :search-placeholder="$t('search.attackToolPlaceholder')"
@@ -133,24 +124,24 @@ const { openRelationGraph } = useRelationGraph("attack-tool");
       <EntityLinkSection
         :keys="selectedAttackTool.directCauseRisks"
         title="relationLine.directCauseRisk"
-        route-name="risks"
-        detail-route-name="risksDetail"
+        route-name="knowledgesRiskList"
+        detail-route-name="knowledgesRiskDetail"
         param-key="rKey"
         anchor="risks"
       />
       <EntityLinkSection
         :keys="selectedAttackTool.indirectSupportRisks"
         title="relationLine.indirectSupportRisk"
-        route-name="risks"
-        detail-route-name="risksDetail"
+        route-name="knowledgesRiskList"
+        detail-route-name="knowledgesRiskDetail"
         param-key="rKey"
         anchor="risks"
       />
       <EntityLinkSection
         :keys="selectedAttackTool.avoidances"
         title="avoidance"
-        route-name="avoidances"
-        detail-route-name="avoidancesDetail"
+        route-name="knowledgesAvoidanceList"
+        detail-route-name="knowledgesAvoidanceDetail"
         param-key="aKey"
         anchor="avoidances"
       />
@@ -161,7 +152,7 @@ const { openRelationGraph } = useRelationGraph("attack-tool");
             v-for="relation in relatedAttackToolRelations"
             :key="`${relation.key}-${relation.relation}`"
             class="attack-tool-relation-item"
-            :to="{ name: 'attackToolsDetail', params: { atKey: relation.key } }"
+            :to="{ name: 'knowledgesAttackToolDetail', params: { atKey: relation.key } }"
           >
             <span class="attack-tool-relation-type">{{ $t(`attackToolRelationType.${relation.relation}`) }}</span>
             <span class="attack-tool-relation-title">
@@ -174,24 +165,24 @@ const { openRelationGraph } = useRelationGraph("attack-tool");
       <EntityLinkSection
         :keys="builderThreatActorKeys"
         title="buildAttackTools"
-        route-name="threatActors"
-        detail-route-name="threatActorsDetail"
+        route-name="knowledgesThreatActorList"
+        detail-route-name="knowledgesThreatActorDetail"
         param-key="taKey"
         anchor="threat-actors"
       />
       <EntityLinkSection
         :keys="userThreatActorKeys"
         title="useAttackTools"
-        route-name="threatActors"
-        detail-route-name="threatActorsDetail"
+        route-name="knowledgesThreatActorList"
+        detail-route-name="knowledgesThreatActorDetail"
         param-key="taKey"
         anchor="threat-actors"
       />
       <EntityLinkSection
         :keys="relatedTermKeys"
         title="terms"
-        route-name="terms"
-        detail-route-name="termsDetail"
+        route-name="knowledgesTermList"
+        detail-route-name="knowledgesTermDetail"
         param-key="tKey"
         anchor="terms"
       />
@@ -212,8 +203,8 @@ const { openRelationGraph } = useRelationGraph("attack-tool");
         v-else
         :keys="relatedCases"
         title="relatedCases"
-        route-name="cases"
-        detail-route-name="casesDetail"
+        route-name="knowledgesCaseList"
+        detail-route-name="knowledgesCaseDetail"
         param-key="cKey"
         anchor="cases"
         :entity-records="cases"

@@ -16,22 +16,12 @@ const route = useRoute();
 const { t, locale, messages } = useI18n();
 
 const threatActorKeys = Object.keys(BREAK.threatActors);
-// 优先从路由参数获取，否则从 hash 获取，最后使用默认值
+// 优先从路由参数获取，否则使用默认值
 const getInitialKey = () => {
   const paramKey = typeof route.params.taKey === 'string' ? route.params.taKey : '';
-  const hashKey = route.hash.replace("#", "");
-  return paramKey || hashKey || threatActorKeys[0] || "";
+  return paramKey || threatActorKeys[0] || "";
 };
 const selectedThreatActorKey = ref(getInitialKey());
-
-watch(
-  () => route.hash,
-  (hash) => {
-    const key = hash.replace("#", "");
-    if (key && BREAK.threatActors[key]) selectedThreatActorKey.value = key;
-  },
-  { immediate: true }
-);
 
 watch(
   () => route.params.taKey,
@@ -95,8 +85,9 @@ const { openRelationGraph } = useRelationGraph("threat-actor");
 <template>
   <KnowledgeSplitView
     :title="$t('threatActors')"
-    route-name="threatActors"
-    detail-route-name="threatActorsDetail"
+    route-name="knowledgesThreatActorList"
+    detail-route-name="knowledgesThreatActorDetail"
+    param-key="taKey"
     :items="threatActorItems"
     :selected-key="selectedThreatActorKey"
     :search-placeholder="$t('search.threatActorPlaceholder')"
@@ -128,32 +119,32 @@ const { openRelationGraph } = useRelationGraph("threat-actor");
       <EntityLinkSection
         :keys="selectedThreatActor.directCauseRisks"
         title="relationLine.directCauseRisk"
-        route-name="risks"
-        detail-route-name="risksDetail"
+        route-name="knowledgesRiskList"
+        detail-route-name="knowledgesRiskDetail"
         param-key="rKey"
         anchor="risks"
       />
       <EntityLinkSection
         :keys="selectedThreatActor.indirectSupportRisks"
         title="relationLine.indirectSupportRisk"
-        route-name="risks"
-        detail-route-name="risksDetail"
+        route-name="knowledgesRiskList"
+        detail-route-name="knowledgesRiskDetail"
         param-key="rKey"
         anchor="risks"
       />
       <EntityLinkSection
         :keys="selectedThreatActor.buildAttackTools"
         title="buildAttackTools"
-        route-name="attackTools"
-        detail-route-name="attackToolsDetail"
+        route-name="knowledgesAttackToolList"
+        detail-route-name="knowledgesAttackToolDetail"
         param-key="atKey"
         anchor="attack-tools"
       />
       <EntityLinkSection
         :keys="selectedThreatActor.useAttackTools"
         title="useAttackTools"
-        route-name="attackTools"
-        detail-route-name="attackToolsDetail"
+        route-name="knowledgesAttackToolList"
+        detail-route-name="knowledgesAttackToolDetail"
         param-key="atKey"
         anchor="attack-tools"
       />
@@ -164,7 +155,7 @@ const { openRelationGraph } = useRelationGraph("threat-actor");
             v-for="relation in relatedThreatActorRelations"
             :key="`${relation.key}-${relation.relation}`"
             class="threat-actor-relation-item"
-            :to="{ name: 'threatActorsDetail', params: { taKey: relation.key } }"
+            :to="{ name: 'knowledgesThreatActorDetail', params: { taKey: relation.key } }"
           >
             <span class="threat-actor-relation-type">{{ $t(`threatActorRelationType.${relation.relation}`) }}</span>
             <span class="threat-actor-relation-title">
@@ -177,8 +168,8 @@ const { openRelationGraph } = useRelationGraph("threat-actor");
       <EntityLinkSection
         :keys="relatedTermKeys"
         title="terms"
-        route-name="terms"
-        detail-route-name="termsDetail"
+        route-name="knowledgesTermList"
+        detail-route-name="knowledgesTermDetail"
         param-key="tKey"
         anchor="terms"
       />
@@ -199,8 +190,8 @@ const { openRelationGraph } = useRelationGraph("threat-actor");
         v-else
         :keys="relatedCases"
         title="relatedCases"
-        route-name="cases"
-        detail-route-name="casesDetail"
+        route-name="knowledgesCaseList"
+        detail-route-name="knowledgesCaseDetail"
         param-key="cKey"
         anchor="cases"
         :entity-records="cases"

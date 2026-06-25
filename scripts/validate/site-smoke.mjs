@@ -42,13 +42,13 @@ function waitForServer(url, timeoutMs = 15000) {
 
 const routes = [
   { path: '/', text: /BREAK|业务风险|Business Risk/i },
-  { path: '/#/risks', text: /R0001|流程自动化|Process/i },
-  { path: '/#/avoidances', text: /A0001|人机验证|CAPTCHA/i },
-  { path: '/#/attack-tools', text: /AT0001|电话黑卡|SIM/i },
-  { path: '/#/threat-actors', text: /TA0001|羊毛党|Threat/i },
-  { path: '/#/terms', text: /T0001|账号|Account/i },
-  { path: '/#/cases', text: /C0001|案例|Case/i },
-  { path: '/#/relation/risk/R0001?view=sankey', text: /R0001|攻击路径|Attack Path|关系网络|Network/i },
+  { path: '/#/knowledges/risk/list', text: /R0001|流程自动化|Process/i },
+  { path: '/#/knowledges/avoidance/list', text: /A0001|人机验证|CAPTCHA/i },
+  { path: '/#/knowledges/attack-tool/list', text: /AT0001|电话黑卡|SIM/i },
+  { path: '/#/knowledges/threat-actor/list', text: /TA0001|羊毛党|Threat/i },
+  { path: '/#/knowledges/term/list', text: /T0001|账号|Account/i },
+  { path: '/#/knowledges/case/list', text: /C0001|案例|Case/i },
+  { path: '/#/relations/attack-path/risk/R0001', text: /R0001|攻击路径|Attack Path|关系网络|Network/i },
 ];
 
 function isSameOrigin(url, baseUrl) {

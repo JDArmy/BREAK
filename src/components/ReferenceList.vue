@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import BREAK from "@/BREAK";
 import { useSafeI18n } from "@/composables/useSafeI18n";
+import { TopRight } from "@element-plus/icons-vue";
 import { computed } from "vue";
 
 const { safeT } = useSafeI18n();
@@ -35,7 +36,8 @@ function getRefTitle(index: number): string {
     <div v-for="(ref, index) in references" :key="index" class="reference-item">
       <span class="reference-bullet">•</span>
       <a v-if="ref.link" :href="ref.link" target="_blank" rel="noopener noreferrer" class="reference-link">
-        {{ getRefTitle(index) }}
+        <span class="reference-link-text">{{ getRefTitle(index) }}</span>
+        <el-icon class="reference-link-icon" aria-hidden="true"><TopRight /></el-icon>
       </a>
       <span v-else class="reference-text">{{ getRefTitle(index) }}</span>
     </div>
@@ -63,6 +65,9 @@ function getRefTitle(index: number): string {
 }
 
 .reference-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   color: var(--break-link);
   text-decoration: none;
   font-size: 14px;
@@ -70,10 +75,21 @@ function getRefTitle(index: number): string {
   flex: 1;
 }
 
+.reference-link-icon {
+  font-size: 12px;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
 .reference-link:hover,
 .reference-link:active {
   color: var(--break-link-hover);
   text-decoration: underline;
+}
+
+.reference-link:hover .reference-link-icon,
+.reference-link:active .reference-link-icon {
+  opacity: 1;
 }
 
 .reference-text {

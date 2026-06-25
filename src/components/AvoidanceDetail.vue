@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { defineAsyncComponent, ref, computed } from "vue";
+import { useRouter } from "vue-router";
 import BREAK from "@/BREAK";
 import ReferenceList from "@/components/ReferenceList.vue";
 
-import { ArrowLeft } from "@element-plus/icons-vue";
+import { ArrowLeft, TopRight } from "@element-plus/icons-vue";
 import iconRelation from "./icons/iconRelation.vue";
 import { useDrawerWidth } from "@/composables/useDrawerWidth";
 
@@ -15,7 +16,25 @@ const props = defineProps<{
 }>();
 defineEmits(["drawerClose"]);
 
+const router = useRouter();
 const { getInnerDrawerWidth } = useDrawerWidth();
+
+const openRelationGraph = (aKey: string) => {
+  const route = router.resolve({
+    name: "relationDefenseCoverageEntity",
+    params: { entity: "avoidance", id: aKey },
+  });
+  window.open(route.href, "_blank", "noopener,noreferrer");
+};
+
+// 跳知识库详情页（新窗口）的 href
+const detailHref = (aKey: string) =>
+  router.resolve({ name: "knowledgesAvoidanceDetail", params: { aKey } }).href;
+
+// 新窗口打开知识库详情页
+const openDetail = (aKey: string) => {
+  window.open(detailHref(aKey), "_blank", "noopener,noreferrer");
+};
 
 // 缓存到当前 aKey，避免模板 v-if+v-for 重复全表遍历
 const relatedTerms = computed(() => {
@@ -53,19 +72,13 @@ const termKey = ref("");
     </template>
     <div class="desc">
       <strong>{{ $t("ID") }}:&nbsp;</strong>
-      <router-link :to="{ name: 'avoidancesDetail', params: { aKey } }" class="id-link">
+      <a :href="detailHref(aKey)" target="_blank" rel="noopener" class="id-link">
         {{ aKey }}
-      </router-link>
-      <router-link
-        :title="$t('relationMap')"
-        class="relation-map-icon"
-        :to="{
-          name: 'relation',
-          params: { type: 'avoidance', key: aKey },
-        }"
-      >
+        <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
+      </a>
+      <button :title="$t('relationMap')" class="relation-map-icon" @click="openRelationGraph(aKey)">
         <icon-relation width="14px" height="14px" />
-      </router-link>
+      </button>
     </div>
     <div class="desc">
       <strong>{{ $t("title") }}:&nbsp;</strong>
@@ -90,15 +103,18 @@ const termKey = ref("");
     <div class="desc" v-if="relatedAvoidances.length > 0">
       <strong>{{ $t("avoidanceRelatedAvoidances") }}:&nbsp;</strong>
       <div class="entity-links">
-        <router-link
+        <a
           v-for="relation in relatedAvoidances"
           :key="`${relation.key}-${relation.relation}`"
           class="entity-link"
-          :to="{ name: 'avoidancesDetail', params: { aKey: relation.key } }"
+          :href="detailHref(relation.key)"
+          target="_blank"
+          rel="noopener"
         >
           {{ $t(`avoidanceRelationType.${relation.relation}`) }} ·
           {{ relation.key }}: {{ $t(`BREAK.avoidances.${relation.key}.title`) }}
-        </router-link>
+          <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
+        </a>
       </div>
     </div>
     <div class="desc" v-if="relatedTerms.length > 0">
@@ -119,8 +135,9 @@ const termKey = ref("");
       <ReferenceList type="avoidances" :entityKey="aKey" />
     </div>
     <div class="desc">
-      <el-button type="primary" plain size="small" @click="$router.push({ name: 'avoidancesDetail', params: { aKey } })">
+      <el-button type="primary" plain size="small" @click="openDetail(aKey)">
         {{ $t("viewDetail") }}
+        <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
       </el-button>
     </div>
   </el-drawer>

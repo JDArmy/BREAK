@@ -16,9 +16,7 @@ const route = useRoute();
 const { t, locale, messages } = useI18n();
 
 const risks = Object.keys(BREAK.risks);
-const selectedRiskKey = ref(
-  (route.params.rKey as string) || route.hash.replace("#", "") || risks[0] || ""
-);
+const selectedRiskKey = ref((route.params.rKey as string) || risks[0] || "");
 
 const riskItems = computed(() =>
   risks.map((rKey) => {
@@ -39,15 +37,6 @@ const riskItems = computed(() =>
         .join(" "),
     };
   })
-);
-
-watch(
-  () => route.hash,
-  (hash) => {
-    const key = hash.replace("#", "");
-    if (key && BREAK.risks[key]) selectedRiskKey.value = key;
-  },
-  { immediate: true }
 );
 
 watch(
@@ -87,8 +76,9 @@ const { openRelationGraph } = useRelationGraph("risk");
 <template>
   <KnowledgeSplitView
     :title="$t('menu.risks')"
-    route-name="risks"
-    detail-route-name="risksDetail"
+    route-name="knowledgesRiskList"
+    detail-route-name="knowledgesRiskDetail"
+    param-key="rKey"
     :items="riskItems"
     :selected-key="selectedRiskKey"
     :search-placeholder="$t('search.riskPlaceholder')"
@@ -138,7 +128,7 @@ const { openRelationGraph } = useRelationGraph("risk");
             v-for="relation in relatedRiskRelations"
             :key="`${relation.key}-${relation.relation}`"
             class="risk-relation-item"
-            :to="{ name: 'risksDetail', params: { rKey: relation.key } }"
+            :to="{ name: 'knowledgesRiskDetail', params: { rKey: relation.key } }"
           >
             <span class="risk-relation-type">{{ $t(`riskRelationType.${relation.relation}`) }}</span>
             <span class="risk-relation-title">
@@ -151,32 +141,32 @@ const { openRelationGraph } = useRelationGraph("risk");
       <EntityLinkSection
         :keys="selectedRisk.avoidances"
         title="riskAvoidances"
-        route-name="avoidances"
-        detail-route-name="avoidancesDetail"
+        route-name="knowledgesAvoidanceList"
+        detail-route-name="knowledgesAvoidanceDetail"
         param-key="aKey"
         anchor="avoidances"
       />
       <EntityLinkSection
         :keys="descriptionTools"
         title="attackTools"
-        route-name="attackTools"
-        detail-route-name="attackToolsDetail"
+        route-name="knowledgesAttackToolList"
+        detail-route-name="knowledgesAttackToolDetail"
         param-key="atKey"
         anchor="attack-tools"
       />
       <EntityLinkSection
         :keys="riskThreatActors"
         title="threatActors"
-        route-name="threatActors"
-        detail-route-name="threatActorsDetail"
+        route-name="knowledgesThreatActorList"
+        detail-route-name="knowledgesThreatActorDetail"
         param-key="taKey"
         anchor="threat-actors"
       />
       <EntityLinkSection
         :keys="relatedTerms"
         title="terms"
-        route-name="terms"
-        detail-route-name="termsDetail"
+        route-name="knowledgesTermList"
+        detail-route-name="knowledgesTermDetail"
         param-key="tKey"
         anchor="terms"
       />
@@ -197,8 +187,8 @@ const { openRelationGraph } = useRelationGraph("risk");
         v-else
         :keys="relatedCases"
         title="relatedCases"
-        route-name="cases"
-        detail-route-name="casesDetail"
+        route-name="knowledgesCaseList"
+        detail-route-name="knowledgesCaseDetail"
         param-key="cKey"
         anchor="cases"
         :entity-records="cases"
