@@ -263,9 +263,9 @@ export const createRelationPathExplorerSankey = ({
     const otherElementsHeight = isMobile.value ? 340 : 300;
     const minHeight = Math.max(300, viewportHeight - otherElementsHeight);
 
-    // 按最密集层的节点数计算所需高度：每节点需要约 36px（含 nodeGap + label 高度）
-    const nodeSlotHeight = isMobile.value ? 42 : 36;
-    const contentHeight = maxLayerNodeCount * nodeSlotHeight + 80;
+    // 按最密集层的节点数计算所需高度：每节点需要约 44px（含 nodeGap + label + 节点条高度）
+    const nodeSlotHeight = isMobile.value ? 50 : 44;
+    const contentHeight = maxLayerNodeCount * nodeSlotHeight + 100;
 
     if (isMobile.value) {
       return Math.max(minHeight, contentHeight);
