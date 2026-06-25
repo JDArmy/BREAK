@@ -140,6 +140,11 @@ export const createSankeyChartController = ({
           .addEventListener("contextmenu", preventMobileNativeContextMenu);
       }
       sankeyChart.dispatchAction({ type: "hideTip" });
+      // name → displayName 映射，供 edge tooltip 把内部唯一键还原为可读名
+      const displayNameByNodeName = (nodeName: string): string => {
+        const node = currentSankeyData.nodes.find((n) => n.name === nodeName);
+        return node?.displayName ?? node?.name ?? nodeName;
+      };
       const style = getComputedStyle(document.documentElement);
       const tooltipBackground = style
         .getPropertyValue("--break-tooltip-bg")
@@ -175,14 +180,22 @@ export const createSankeyChartController = ({
           }) => {
             const value = params.value ?? params.data?.value ?? 0;
             if (params.dataType === "edge") {
+              const sourceName = displayNameByNodeName(
+                params.data?.source ?? "",
+              );
+              const targetName = displayNameByNodeName(
+                params.data?.target ?? "",
+              );
               return [
-                `${String(params.data?.source ?? "")} -> ${String(params.data?.target ?? "")}`,
+                `${sourceName} -> ${targetName}`,
                 `${t("relationView.pathCount")}: ${value}`,
               ].join("<br>");
             }
 
             return [
-              String(params.name ?? params.data?.name ?? ""),
+              String(
+                params.data?.displayName ?? params.name ?? params.data?.name ?? "",
+              ),
               `${t("relationView.pathCount")}: ${value}`,
             ].join("<br>");
           },
@@ -219,6 +232,9 @@ export const createSankeyChartController = ({
               overflow: sankeyLabelOverflow.value,
               ellipsis:
                 sankeyLabelOverflow.value === "truncate" ? "..." : undefined,
+              // name 可能是内部唯一键，优先显示 displayName
+              formatter: (params: { data?: Partial<SankeyNode> }) =>
+                params.data?.displayName ?? params.data?.name ?? "",
             },
             itemStyle: {
               borderColor: getComputedStyle(document.documentElement)

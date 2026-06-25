@@ -71,4 +71,113 @@ describe("useCases", () => {
     expect(cases.value).toEqual(loadedCases);
     expect(cases.value).not.toBe(originalCases);
   });
+
+  it("ensureCases 并发调用时复用同一个中文案例加载 Promise", async () => {
+    const vue = await vi.importActual<typeof import("vue")>("vue");
+    const locale = vue.ref("zh-CN");
+    const loadedCases = {
+      C0002: {
+        title: "并发案例",
+        keywords: ["并发"],
+        summary: "并发摘要",
+        category: "news_report",
+        relatedRisks: ["R0002"],
+        references: [{ title: "来源", link: "https://example.com" }],
+      },
+    };
+    let resolveLoad!: (cases: typeof loadedCases) => void;
+    const loadCases = vi.fn(
+      () =>
+        new Promise<typeof loadedCases>((resolve) => {
+          resolveLoad = resolve;
+        }),
+    );
+
+    vi.doMock("vue-i18n", () => ({
+      useI18n: () => ({ locale }),
+    }));
+    vi.doMock("@/BREAK/cases", () => ({
+      loadCases,
+    }));
+    vi.doMock("@/i18n", () => ({
+      mergeWithStructure: vi.fn((source) => source),
+    }));
+
+    const { useCases } = await import("@/composables/useCases");
+    const { cases, ensureCases, loaded } = useCases();
+    const first = ensureCases();
+    const second = ensureCases();
+
+    expect(loadCases).toHaveBeenCalledTimes(1);
+    resolveLoad(loadedCases);
+    await Promise.all([first, second]);
+
+    expect(cases.value).toEqual(loadedCases);
+    expect(loaded.value).toBe(true);
+  });
+
+  it("ensureCases 加载失败后清空缓存并允许下次重试", async () => {
+    const vue = await vi.importActual<typeof import("vue")>("vue");
+    const locale = vue.ref("zh-CN");
+    const retryCases = {
+      C0003: {
+        title: "重试案例",
+        keywords: ["重试"],
+        summary: "重试摘要",
+        category: "news_report",
+        relatedRisks: ["R0003"],
+        references: [{ title: "来源", link: "https://example.com" }],
+      },
+    };
+    const loadCases = vi
+      .fn()
+      .mockRejectedValueOnce(new Error("首次加载失败"))
+      .mockResolvedValueOnce(retryCases);
+
+    vi.doMock("vue-i18n", () => ({
+      useI18n: () => ({ locale }),
+    }));
+    vi.doMock("@/BREAK/cases", () => ({
+      loadCases,
+    }));
+    vi.doMock("@/i18n", () => ({
+      mergeWithStructure: vi.fn((source) => source),
+    }));
+
+    const { useCases } = await import("@/composables/useCases");
+    const { cases, ensureCases, loaded } = useCases();
+
+    await expect(ensureCases()).rejects.toThrow("首次加载失败");
+    expect(loaded.value).toBe(false);
+
+    await ensureCases();
+    expect(loadCases).toHaveBeenCalledTimes(2);
+    expect(cases.value).toEqual(retryCases);
+    expect(loaded.value).toBe(true);
+  });
+
+  it("案例未加载时切换 locale 不触发案例同步", async () => {
+    const vue = await vi.importActual<typeof import("vue")>("vue");
+    const locale = vue.ref("zh-CN");
+    const loadCases = vi.fn(async () => ({}));
+
+    vi.doMock("vue-i18n", () => ({
+      useI18n: () => ({ locale }),
+    }));
+    vi.doMock("@/BREAK/cases", () => ({
+      loadCases,
+    }));
+    vi.doMock("@/i18n", () => ({
+      mergeWithStructure: vi.fn((source) => source),
+    }));
+
+    const { useCases } = await import("@/composables/useCases");
+    useCases();
+
+    locale.value = "en";
+    await vue.nextTick();
+    await Promise.resolve();
+
+    expect(loadCases).not.toHaveBeenCalled();
+  });
 });

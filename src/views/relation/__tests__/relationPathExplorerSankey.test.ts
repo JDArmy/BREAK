@@ -151,11 +151,12 @@ describe("relationPathExplorerSankey", () => {
     expect(explorer.pathExplorerStats.value!.minHops).toBeGreaterThanOrEqual(2);
   });
 
-  // === depth 取最大值（修复：确保节点靠右排布）===
+  // === depth 分配（同实体多节点方案：同一实体在不同路径位置各自独立成节点）===
 
-  it("assigns max depth to nodes appearing in multiple paths at different positions", async () => {
-    // R0001 → A0001（1 跳）和 R0001 → A0002 → ... → A0001（间接多跳）
-    // A0001 应取最大 depth，不会被 1 跳路径拉到 depth=1 的最小值
+  it("places end entity nodes at their path positions (max position equals max hop)", async () => {
+    // R0001 → A0001（1 跳）和 R0001 → A0002 → ... → A0002（间接多跳）
+    // 终点 A0002 在每条路径中都处于该路径的末尾位置，
+    // 其最右节点的 depth 应等于最长路径的跳数，不会被短路径拉到左侧
     const { explorer, endKey } = createExplorer({
       startType: RelationType.risk,
       startKey: "R0001",
@@ -169,18 +170,20 @@ describe("relationPathExplorerSankey", () => {
     vi.runAllTimers();
 
     if (explorer.discoveredPaths.value.length > 1) {
-      // 如果找到多条路径，终点 A0002 应取最大 depth
-      const endNode = explorer.pathExplorerSankeyData.value.nodes.find(
+      // 终点 A0002 的所有节点中，最右节点的 depth = 最长路径跳数
+      const endNodes = explorer.pathExplorerSankeyData.value.nodes.filter(
         (n) => n.entityKey === "A0002",
       );
-      expect(endNode).toBeDefined();
-      const allEndDepths = explorer.discoveredPaths.value.map((p) => p.hopCount);
-      const maxEndDepth = Math.max(...allEndDepths);
-      expect(endNode!.depth).toBe(maxEndDepth);
+      expect(endNodes.length).toBeGreaterThan(0);
+      const maxEndDepth = Math.max(...endNodes.map((n) => n.depth ?? 0));
+      const maxHop = Math.max(
+        ...explorer.discoveredPaths.value.map((p) => p.hopCount),
+      );
+      expect(maxEndDepth).toBe(maxHop);
     }
   });
 
-  it("end node depth equals max hop count across all paths", async () => {
+  it("end entity max depth equals max hop count across all paths", async () => {
     const { explorer, endKey } = createExplorer({
       startType: RelationType.threatActor,
       startKey: "TA0001",
@@ -195,12 +198,13 @@ describe("relationPathExplorerSankey", () => {
 
     const paths = explorer.discoveredPaths.value;
     if (paths.length > 0) {
-      const endNode = explorer.pathExplorerSankeyData.value.nodes.find(
+      const endNodes = explorer.pathExplorerSankeyData.value.nodes.filter(
         (n) => n.entityKey === "A0001",
       );
-      expect(endNode).toBeDefined();
+      expect(endNodes.length).toBeGreaterThan(0);
+      const maxEndDepth = Math.max(...endNodes.map((n) => n.depth ?? 0));
       const maxHop = Math.max(...paths.map((p) => p.hopCount));
-      expect(endNode!.depth).toBe(maxHop);
+      expect(maxEndDepth).toBe(maxHop);
     }
   });
 

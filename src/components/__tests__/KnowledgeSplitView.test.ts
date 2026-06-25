@@ -98,6 +98,41 @@ const mountView = (selectedKey = "R0001") =>
     },
   });
 
+const mountViewWithAnchor = () =>
+  mount(KnowledgeSplitView, {
+    props: {
+      title: "风险",
+      routeName: "risks",
+      detailRouteName: "riskDetail",
+      items,
+      selectedKey: "R0001",
+      searchPlaceholder: "搜索风险",
+    },
+    slots: {
+      default:
+        '<div><section data-detail-anchor="cases">相关案例</section><section>详情 R0001</section></div>',
+    },
+    global: {
+      mocks: {
+        $t: (key: string) => key,
+      },
+      stubs: {
+        ElInput: {
+          props: ["modelValue", "placeholder"],
+          emits: ["update:modelValue"],
+          template:
+            '<input class="el-input-stub" :placeholder="placeholder" :value="modelValue" @input="$emit(\'update:modelValue\', $event.target.value)" />',
+        },
+        ElButton: {
+          emits: ["click"],
+          template: '<button type="button" @click="$emit(\'click\', $event)"><slot /></button>',
+        },
+        ElIcon: { template: "<span><slot /></span>" },
+        ArrowLeft: { template: "<span />" },
+      },
+    },
+  });
+
 describe("KnowledgeSplitView", () => {
   let originalLocalStorage: Storage | undefined;
 
@@ -141,6 +176,23 @@ describe("KnowledgeSplitView", () => {
     expect(wrapper.text()).toContain("详情 R0001");
   });
 
+  it("查询无匹配项时展示空结果提示", async () => {
+    const wrapper = mountView();
+
+    await wrapper.find(".el-input-stub").setValue("不存在的风险");
+
+    expect(wrapper.find(".knowledge-empty").text()).toBe("search.noResults");
+    expect(wrapper.findAll(".knowledge-list-item")).toHaveLength(0);
+  });
+
+  it("初始 hash 指向有效条目时发出选择事件", () => {
+    mocks.route.hash = "#R0002";
+
+    const wrapper = mountView("R0001");
+
+    expect(wrapper.emitted("select")?.[0]).toEqual(["R0002"]);
+  });
+
   it("点击桌面列表项时发出选择事件并更新 hash", async () => {
     const wrapper = mountView();
 
@@ -176,6 +228,35 @@ describe("KnowledgeSplitView", () => {
     expect(mocks.router.push).toHaveBeenCalledWith({
       name: "riskDetail",
       params: { rKey: "R0002" },
+    });
+  });
+
+  it("移动端初始详情参数有效时进入详情态并可返回列表路由", async () => {
+    mocks.isMobile.value = true;
+    mocks.route.params = { rKey: "R0002" };
+    const wrapper = mountView("R0001");
+    await nextTick();
+
+    expect(wrapper.emitted("select")?.[0]).toEqual(["R0002"]);
+    expect(wrapper.find(".knowledge-mobile-detail-header").exists()).toBe(true);
+
+    await wrapper.find(".back-button").trigger("click");
+
+    expect(mocks.router.push).toHaveBeenCalledWith({ name: "risks" });
+  });
+
+  it("存在 detailAnchor 查询参数时滚动到详情锚点", async () => {
+    const scrollIntoView = vi.fn();
+    HTMLElement.prototype.scrollIntoView = scrollIntoView;
+    mocks.route.query = { detailAnchor: "cases" };
+
+    mountViewWithAnchor();
+    await nextTick();
+    await nextTick();
+
+    expect(scrollIntoView).toHaveBeenCalledWith({
+      behavior: "smooth",
+      block: "start",
     });
   });
 

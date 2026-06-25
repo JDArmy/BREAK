@@ -315,6 +315,41 @@ export const createRelationViewAssembly = ({
     RelationTypeMapping,
   });
 
+  // 路径探索桑基图：根据跳数动态调整右侧标签宽度
+  // 层数多时（5-6跳）缩小右侧标签区，把更多水平空间留给节点分布
+  const pathExplorerDepthCount = computed(() => {
+    const nodes = pathExplorerData.pathExplorerSankeyData.value.nodes;
+    if (nodes.length === 0) return 0;
+    const depths = new Set(nodes.map(n => n.depth ?? 0));
+    return depths.size;
+  });
+
+  const pathExplorerSankeyRight = computed(() => {
+    const depths = pathExplorerDepthCount.value;
+    if (isMobile.value) return Math.max(120, Math.min(200, sankeyRight.value));
+    // 5+ 层时缩小右侧标签，让图表节点有更多水平空间
+    if (depths >= 6) return 160;
+    if (depths >= 5) return 200;
+    return sankeyRight.value;
+  });
+
+  const pathExplorerSankeyLabelWidth = computed(() => {
+    const depths = pathExplorerDepthCount.value;
+    if (isMobile.value) return sankeyLabelWidth.value;
+    if (depths >= 6) return 140;
+    if (depths >= 5) return 160;
+    return sankeyLabelWidth.value;
+  });
+
+  // 路径探索：层数多时增大节点间距，让节点分布更开
+  const pathExplorerNodeGap = computed(() => {
+    const depths = pathExplorerDepthCount.value;
+    if (isMobile.value) return 16;
+    if (depths >= 6) return 24;
+    if (depths >= 5) return 20;
+    return 14;
+  });
+
   // 路径探索桑基图控制器（独立实例）
   const pathExplorerSankeyController = createSankeyChartController({
     t,
@@ -328,11 +363,11 @@ export const createRelationViewAssembly = ({
     sankeyLabelLineHeight,
     sankeyLabelOverflow,
     sankeyLayoutIterations,
-    sankeyRight,
-    sankeyLabelWidth,
+    sankeyRight: pathExplorerSankeyRight,
+    sankeyLabelWidth: pathExplorerSankeyLabelWidth,
     sankeyLeft,
     sankeyNodeAlign,
-    sankeyNodeGap,
+    sankeyNodeGap: pathExplorerNodeGap,
     sankeyNodeWidth,
     sankeyTop,
     onOpenNodeDetail: openSankeyNodeDetail,
@@ -347,9 +382,9 @@ export const createRelationViewAssembly = ({
     }
   });
 
-  // 路径探索终点参数 ↔ URL query 双向同步
+  // 路径探索参数 ↔ URL query 双向同步
   let isUpdatingFromRoute = false;
-  watch([pathExplorerEndType, pathExplorerEndKey], ([endType, endKey]) => {
+  watch([pathExplorerEndType, pathExplorerEndKey, pathExplorerMaxDepth, pathExplorerMaxPaths], ([endType, endKey, maxDepth, maxPaths]) => {
     if (isUpdatingFromRoute) return;
     const query = { ...route.query };
     let changed = false;
@@ -365,6 +400,16 @@ export const createRelationViewAssembly = ({
       }
       changed = true;
     }
+    const maxDepthStr = String(maxDepth);
+    if (maxDepthStr !== (query.maxDepth ?? "4")) {
+      query.maxDepth = maxDepthStr;
+      changed = true;
+    }
+    const maxPathsStr = String(maxPaths);
+    if (maxPathsStr !== (query.maxPaths ?? "10")) {
+      query.maxPaths = maxPathsStr;
+      changed = true;
+    }
     if (changed) {
       router.replace({
         name: "relation",
@@ -375,8 +420,8 @@ export const createRelationViewAssembly = ({
   });
 
   watch(
-    () => [route.query.endType, route.query.endKey],
-    ([queryEndType, queryEndKey]) => {
+    () => [route.query.endType, route.query.endKey, route.query.maxDepth, route.query.maxPaths],
+    ([queryEndType, queryEndKey, queryMaxDepth, queryMaxPaths]) => {
       isUpdatingFromRoute = true;
       if (typeof queryEndType === "string" && queryEndType !== pathExplorerEndType.value) {
         const validTypes = Object.values(RelationType) as string[];
@@ -388,6 +433,14 @@ export const createRelationViewAssembly = ({
         pathExplorerEndKey.value = queryEndKey;
       } else if (queryEndKey === undefined && pathExplorerEndKey.value) {
         pathExplorerEndKey.value = "";
+      }
+      if (typeof queryMaxDepth === "string") {
+        const val = Math.max(1, Math.min(6, parseInt(queryMaxDepth, 10) || 4));
+        if (val !== pathExplorerMaxDepth.value) pathExplorerMaxDepth.value = val;
+      }
+      if (typeof queryMaxPaths === "string") {
+        const val = Math.max(1, Math.min(30, parseInt(queryMaxPaths, 10) || 10));
+        if (val !== pathExplorerMaxPaths.value) pathExplorerMaxPaths.value = val;
       }
       nextTick(() => { isUpdatingFromRoute = false; });
     },

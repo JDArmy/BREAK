@@ -101,8 +101,12 @@ export const createRelationViewState = ({
       : RelationType.avoidance
   );
   const pathExplorerEndKey = ref(typeof route.query.endKey === "string" ? route.query.endKey : "");
-  const pathExplorerMaxDepth = ref(4);
-  const pathExplorerMaxPaths = ref(10);
+  const pathExplorerMaxDepth = ref(
+    typeof route.query.maxDepth === "string" ? Math.max(1, Math.min(6, parseInt(route.query.maxDepth, 10) || 4)) : 4
+  );
+  const pathExplorerMaxPaths = ref(
+    typeof route.query.maxPaths === "string" ? Math.max(1, Math.min(30, parseInt(route.query.maxPaths, 10) || 10)) : 10
+  );
 
   const zoomNetworkChart = (step: number) => {
     networkState.zoom = Math.min(3, Math.max(0.12, networkState.zoom + step));

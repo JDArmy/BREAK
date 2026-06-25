@@ -115,6 +115,8 @@ export interface GraphLink {
 
 export interface SankeyNode {
   name: string;
+  /** 节点显示名；当 name 为内部唯一键时，label/tooltip 应优先使用此字段 */
+  displayName?: string;
   depth?: number;
   entityType: RelationEntityType;
   entityKey: string;

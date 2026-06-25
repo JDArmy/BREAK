@@ -758,7 +758,7 @@ async function runRelationSankeyScenario(page, scenario, interactions) {
   await recordState(page, interactions, scenario, 'after-sankey-hover', hoverIssues);
 
   const tabIssues = [];
-  await clickFirstVisible(page, ['.el-tabs__item:has-text("Analysis")', '.el-tabs__item:has-text("分析")'], tabIssues, '切换关系分析 tab');
+  await clickFirstVisible(page, ['.el-tabs__item:has-text("Defense Coverage")', '.el-tabs__item:has-text("防御覆盖")'], tabIssues, '切换关系分析 tab');
   try {
     await waitForExpectedText(page, /Analysis|Coverage|分析|覆盖/i, 8000);
   } catch {

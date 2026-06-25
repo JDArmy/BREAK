@@ -22,6 +22,10 @@ const props = defineProps<{
   hasTarget: boolean;
   searching: boolean;
   setPathExplorerChartElement?: (el: HTMLElement | undefined) => void;
+  initialEndType?: RelationType;
+  initialEndKey?: string;
+  initialMaxDepth?: number;
+  initialMaxPaths?: number;
 }>();
 
 const emit = defineEmits<{
@@ -47,10 +51,10 @@ const selectableTypes = computed(() =>
 // 本地状态（双绑到父组件）
 const startType = ref<RelationType>(props.relType);
 const startKey = ref(props.relKey);
-const endType = ref<RelationType>(RelationType.avoidance);
-const endKey = ref("");
-const maxDepth = ref(4);
-const maxPaths = ref(10);
+const endType = ref<RelationType>(props.initialEndType ?? RelationType.avoidance);
+const endKey = ref(props.initialEndKey ?? "");
+const maxDepth = ref(props.initialMaxDepth ?? 4);
+const maxPaths = ref(props.initialMaxPaths ?? 10);
 
 // 初始化时同步父组件
 watch(() => props.relType, (val) => { startType.value = val; }, { immediate: true });

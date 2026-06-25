@@ -94,6 +94,12 @@ const createState = () => ({
   sankeyTop: computed(() => 24),
   setClearDraggedNodePositions: vi.fn(),
   zoomNetworkChart: vi.fn(),
+  pathExplorerStartType: ref(RelationType.risk),
+  pathExplorerStartKey: ref("R0001"),
+  pathExplorerEndType: ref(RelationType.avoidance),
+  pathExplorerEndKey: ref(""),
+  pathExplorerMaxDepth: ref(4),
+  pathExplorerMaxPaths: ref(10),
 });
 
 const createGraphData = () => ({
