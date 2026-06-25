@@ -478,6 +478,7 @@ button.node-coverage-item.node-special-insight-item:hover,
 .node-coverage-item-main {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 4px 8px;
   color: var(--break-text-primary);
   font-size: 12px;
@@ -488,6 +489,12 @@ button.node-coverage-item.node-special-insight-item:hover,
 .node-coverage-item-main span {
   color: var(--break-text-muted);
   font-weight: 600;
+}
+
+.node-coverage-link-icon {
+  color: var(--break-text-muted);
+  font-size: 12px;
+  opacity: 0.75;
 }
 
 .node-relation-item {
