@@ -332,6 +332,8 @@ const primaryReferenceLinks = new Set([
   'https://mp.weixin.qq.com/s/ivnvm37snzpzajrgimpy-a', // 大悟发布政务微信，大悟县人民政府办公室情况通报
   'https://mp.weixin.qq.com/s/8olzgvwkc7qhqzkma1ixia', // 上海市长宁区人民检察院官网索引指向的官方微信原文
   'https://mp.weixin.qq.com/s/o9cuy24aczeyta73z0iqda', // 江苏省人民检察院官网案件发布索引指向的仪征检察官方微信原文
+  'https://web.guardiacivil.es/es/destacados/noticias/la-guardia-civil-desmantela-una-red-de-phishing-bancario-y-detiene-al-principal-desarrollador-de-kits-de-robo-de-credenciales-en-espana/', // 西班牙国民警卫队官方通报，GXC Team 银行钓鱼工具网络
+  'https://www.group-ib.com/media-center/press-releases/guardia-civil-gxc-team-takedown/', // Group-IB 官方协查公告，GXC Team AI 增强钓鱼工具网络
   'https://peking.bjd.com.cn/content/s649a2d5fe4b042ca9e8e4fb9.html', // 北京法院审判信息发布账号，供稿朝阳法院
   'https://jsnews.jschina.com.cn/jczx/202502/t20250218_s67b41f81e4b04dff9907e0f5.shtml', // 江苏检察在线来源，太仓市人民检察院官网宣传看点索引指向
   'https://news.qq.com/rain/a/20250415a08y8c00', // 上海市徐汇区新闻办公室官方账号托管页
