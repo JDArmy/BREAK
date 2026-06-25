@@ -254,6 +254,42 @@ describe("relationViewEffects", () => {
     expect(calls.renderPathExplorerSankeyChart).toHaveBeenCalled();
   });
 
+  it("resets selected node to root when leaving path explorer view", async () => {
+    const { activeView, relKey, selectedNetworkNodeId } = createHarness({
+      activeView: "pathExplorer",
+      routeKey: "R0001",
+    });
+
+    // 路径探索里点击某节点查看详情
+    selectedNetworkNodeId.value = "TA0061";
+    await flushTicks();
+    expect(selectedNetworkNodeId.value).toBe("TA0061");
+
+    // 切到防御覆盖视角，节点详情应复位为顶部 selector 的根节点
+    activeView.value = "analysis";
+    await flushTicks();
+
+    expect(selectedNetworkNodeId.value).toBe(relKey.value);
+    expect(selectedNetworkNodeId.value).toBe("R0001");
+  });
+
+  it("does not reset selected node when switching between non-path-explorer views", async () => {
+    const { activeView, selectedNetworkNodeId } = createHarness({
+      activeView: "network",
+      routeKey: "R0001",
+    });
+
+    // 网络图里点击某节点查看详情
+    selectedNetworkNodeId.value = "TA0061";
+    await flushTicks();
+
+    // 网络图 → 桑基图（非路径探索间切换），选中节点保留
+    activeView.value = "sankey";
+    await flushTicks();
+
+    expect(selectedNetworkNodeId.value).toBe("TA0061");
+  });
+
   it("rebuilds data on route, locale, theme, and selected node changes", async () => {
     const {
       activeView,

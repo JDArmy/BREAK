@@ -229,7 +229,7 @@ export const setupRelationViewEffects = ({
 
   watch(
     activeView,
-    () => {
+    (nextView, prevView) => {
       if (route.query.view !== activeView.value) {
         router.replace({
           name: "relation",
@@ -246,6 +246,12 @@ export const setupRelationViewEffects = ({
 
       if (!hasMounted) {
         return;
+      }
+
+      // 从路径探索切出到其它视角时，节点详情复位为顶部 selector 的根节点。
+      // 路径探索里点击的节点是临时查看，切出后不应延续到其它视角的默认详情。
+      if (prevView === "pathExplorer" && nextView !== "pathExplorer") {
+        selectedNetworkNodeId.value = relKey.value;
       }
 
       hideNetworkTooltip();
