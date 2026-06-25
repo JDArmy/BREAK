@@ -258,10 +258,15 @@ export const createRelationPathExplorerSankey = ({
     );
     const maxLayerNodeCount = Math.max(1, ...Object.values(nodesByDepth));
 
+    // 最小高度 = 视口高度 - 页面其他元素占位（header + tabs + 控制面板 + 统计栏 + footer + 边距）
+    const viewportHeight = typeof window !== "undefined" ? window.innerHeight : 800;
+    const otherElementsHeight = isMobile.value ? 340 : 300;
+    const minHeight = Math.max(300, viewportHeight - otherElementsHeight);
+
     if (isMobile.value) {
-      return Math.min(Math.max(400, maxLayerNodeCount * 34 + 140), 3200);
+      return Math.min(Math.max(minHeight, maxLayerNodeCount * 34 + 140), 3200);
     }
-    return Math.min(Math.max(400, maxLayerNodeCount * 24 + 96), 2400);
+    return Math.min(Math.max(minHeight, maxLayerNodeCount * 24 + 96), 2400);
   });
 
   const pathExplorerStats = computed<PathExplorerStats | null>(() => {
