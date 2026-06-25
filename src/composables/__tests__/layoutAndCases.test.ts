@@ -73,6 +73,16 @@ describe("布局与案例 composables", () => {
     expect(breakpoints.isMd.value).toBe(true);
     expect(breakpoints.isTablet.value).toBe(true);
 
+    setWindowWidth(500);
+    await nextTick();
+    expect(breakpoints.isSm.value).toBe(true);
+    expect(breakpoints.isXs.value).toBe(false);
+
+    setWindowWidth(1040);
+    await nextTick();
+    expect(breakpoints.isLg.value).toBe(true);
+    expect(breakpoints.isDesktop.value).toBe(true);
+
     setWindowWidth(1280);
     await nextTick();
     expect(breakpoints.isXl.value).toBe(true);
@@ -191,6 +201,55 @@ describe("布局与案例 composables", () => {
 
     wrapper.unmount();
     root.remove();
+  });
+
+  it("useLazyCasesSection 处理无滚动容器、重复 setup 与非可见 entries", async () => {
+    const disconnect = vi.fn();
+    const observe = vi.fn();
+    let callback!: IntersectionObserverCallback;
+    const IntersectionObserverMock = vi.fn(function (
+      this: IntersectionObserver,
+      cb: IntersectionObserverCallback,
+    ) {
+      callback = cb;
+      this.observe = observe;
+      this.disconnect = disconnect;
+    });
+    vi.stubGlobal("IntersectionObserver", IntersectionObserverMock);
+    const trigger = vi.fn();
+    const { useLazyCasesSection } = await import("@/composables/useLazyCasesSection");
+    let sectionRef!: ReturnType<typeof useLazyCasesSection>["sectionRef"];
+    const Host = defineComponent({
+      setup() {
+        sectionRef = useLazyCasesSection(trigger).sectionRef;
+        return () => null;
+      },
+    });
+    const wrapper = mount(Host, { attachTo: document.body });
+    const el = document.createElement("section");
+    document.body.appendChild(el);
+
+    sectionRef.value = el;
+    await nextTick();
+    await nextTick();
+    sectionRef.value = el;
+    await nextTick();
+    await nextTick();
+
+    expect(IntersectionObserverMock).toHaveBeenCalledTimes(1);
+    expect(IntersectionObserverMock).toHaveBeenCalledWith(
+      expect.any(Function),
+      expect.objectContaining({ root: null }),
+    );
+    expect(observe).toHaveBeenCalledWith(el);
+
+    callback([{ isIntersecting: false } as IntersectionObserverEntry], {} as IntersectionObserver);
+    expect(trigger).not.toHaveBeenCalled();
+    expect(disconnect).not.toHaveBeenCalled();
+
+    wrapper.unmount();
+    expect(disconnect).toHaveBeenCalledTimes(1);
+    el.remove();
   });
 
   it("useRelationGraph 以指定实体类型跳转到关系图路由", async () => {

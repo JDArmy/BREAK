@@ -193,6 +193,14 @@ describe("KnowledgeSplitView", () => {
     expect(wrapper.emitted("select")?.[0]).toEqual(["R0002"]);
   });
 
+  it("初始 hash 无效时不发出选择事件", () => {
+    mocks.route.hash = "#R9999";
+
+    const wrapper = mountView("R0001");
+
+    expect(wrapper.emitted("select")).toBeUndefined();
+  });
+
   it("点击桌面列表项时发出选择事件并更新 hash", async () => {
     const wrapper = mountView();
 
@@ -231,6 +239,49 @@ describe("KnowledgeSplitView", () => {
     });
   });
 
+  it("移动端没有详情路由名时点击列表项仅切换到详情态", async () => {
+    mocks.isMobile.value = true;
+    const wrapper = mount(KnowledgeSplitView, {
+      props: {
+        title: "风险",
+        routeName: "unknown",
+        items,
+        selectedKey: "R0001",
+        searchPlaceholder: "搜索风险",
+      },
+      slots: {
+        default: ({ selectedKey: key }: { selectedKey: string }) => `详情 ${key}`,
+      },
+      global: {
+        mocks: { $t: (key: string) => key },
+        stubs: {
+          ElInput: {
+            props: ["modelValue", "placeholder"],
+            emits: ["update:modelValue"],
+            template:
+              '<input class="el-input-stub" :placeholder="placeholder" :value="modelValue" @input="$emit(\'update:modelValue\', $event.target.value)" />',
+          },
+          ElButton: {
+            emits: ["click"],
+            template: '<button type="button" class="button-stub" @click="$emit(\'click\', $event)"><slot /></button>',
+          },
+          ElIcon: { template: "<span><slot /></span>" },
+          ArrowLeft: { template: "<span />" },
+        },
+      },
+    });
+    await nextTick();
+
+    await wrapper.find('[data-knowledge-key="R0002"]').trigger("click");
+
+    expect(wrapper.emitted("select")?.[0]).toEqual(["R0002"]);
+    expect(mocks.router.push).not.toHaveBeenCalled();
+    expect(wrapper.find(".knowledge-mobile-detail-header").exists()).toBe(true);
+
+    await wrapper.find(".back-button").trigger("click");
+    expect(wrapper.find(".knowledge-mobile-sidebar").exists()).toBe(true);
+  });
+
   it("移动端初始详情参数有效时进入详情态并可返回列表路由", async () => {
     mocks.isMobile.value = true;
     mocks.route.params = { rKey: "R0002" };
@@ -243,6 +294,18 @@ describe("KnowledgeSplitView", () => {
     await wrapper.find(".back-button").trigger("click");
 
     expect(mocks.router.push).toHaveBeenCalledWith({ name: "risks" });
+  });
+
+  it("移动端路由参数无效且处于列表路由时保持列表态", async () => {
+    mocks.isMobile.value = true;
+    mocks.route.params = { rKey: "R9999" };
+    mocks.route.name = "risks";
+
+    const wrapper = mountView("R0001");
+    await nextTick();
+
+    expect(wrapper.emitted("select")).toBeUndefined();
+    expect(wrapper.find(".knowledge-mobile-sidebar").exists()).toBe(true);
   });
 
   it("存在 detailAnchor 查询参数时滚动到详情锚点", async () => {
@@ -286,6 +349,19 @@ describe("KnowledgeSplitView", () => {
     expect(sidebar.style.width).toMatch(/px$/);
   });
 
+  it("点击不存在的条目不会发出选择事件或更新路由", async () => {
+    const wrapper = mountView();
+
+    await wrapper.vm.$.exposed;
+    await wrapper.find('[data-knowledge-key="R0001"]').trigger("click");
+    mocks.router.replace.mockClear();
+    await wrapper.setProps({ items: [] });
+    await nextTick();
+
+    expect(wrapper.find('[data-knowledge-key="R0001"]').exists()).toBe(false);
+    expect(mocks.router.replace).not.toHaveBeenCalled();
+  });
+
   it("拖拽增宽后持久化宽度到 localStorage", async () => {
     const wrapper = mountView();
 
@@ -314,6 +390,18 @@ describe("KnowledgeSplitView", () => {
     expect(localStorage.getItem("break-knowledge-sidebar-width")).toBe("0");
   });
 
+  it("移动端不会启动桌面分隔条拖拽", async () => {
+    mocks.isMobile.value = true;
+    const addSpy = vi.spyOn(window, "addEventListener");
+    const wrapper = mountView();
+    await nextTick();
+
+    expect(wrapper.find(".knowledge-splitter").exists()).toBe(false);
+
+    wrapper.unmount();
+    expect(addSpy).toHaveBeenCalledWith("resize", expect.any(Function));
+  });
+
   it("从收起态拖出可恢复展开", async () => {
     localStorage.setItem("break-knowledge-sidebar-width", "0");
     const wrapper = mountView();
@@ -326,5 +414,29 @@ describe("KnowledgeSplitView", () => {
     expect(sidebar.style.width).not.toBe("0px");
     expect(Number(sidebar.style.width.replace("px", ""))).toBeGreaterThanOrEqual(240);
     expect(wrapper.find(".knowledge-page").classes()).not.toContain("is-collapsed");
+  });
+
+  it("窗口缩小时将已展开侧栏限制到最大宽度", async () => {
+    vi.useFakeTimers();
+    Object.defineProperty(window, "innerWidth", {
+      configurable: true,
+      writable: true,
+      value: 2000,
+    });
+    localStorage.setItem("break-knowledge-sidebar-width", "560");
+    const wrapper = mountView();
+    expect(wrapper.find<HTMLElement>(".knowledge-sidebar").element.style.width).toBe("560px");
+
+    Object.defineProperty(window, "innerWidth", {
+      configurable: true,
+      writable: true,
+      value: 600,
+    });
+    window.dispatchEvent(new Event("resize"));
+    vi.advanceTimersByTime(200);
+    await nextTick();
+
+    expect(wrapper.find<HTMLElement>(".knowledge-sidebar").element.style.width).toBe("360px");
+    vi.useRealTimers();
   });
 });

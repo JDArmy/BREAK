@@ -73,4 +73,55 @@ describe("relationAttackPathBuilder", () => {
 
     expect(buildAttackPaths()).toEqual([]);
   });
+
+  it("无效风险、攻击工具、威胁行为者和规避手段不生成路径", () => {
+    expect(createBuilder(RelationType.risk, "R9999").buildAttackPaths()).toEqual([]);
+    expect(
+      createBuilder(RelationType.attackTool, "AT9999").buildAttackPaths(),
+    ).toEqual([]);
+    expect(
+      createBuilder(RelationType.threatActor, "TA9999").buildAttackPaths(),
+    ).toEqual([]);
+    expect(
+      createBuilder(RelationType.avoidance, "A9999").buildAttackPaths(),
+    ).toEqual([]);
+  });
+
+  it("威胁行为者根节点合并直接风险和工具风险并限定行为者", () => {
+    const { buildAttackPaths, getCandidateRiskKeys } = createBuilder(
+      RelationType.threatActor,
+      "TA0017",
+    );
+
+    const candidateRiskKeys = getCandidateRiskKeys();
+    const paths = buildAttackPaths();
+
+    expect(candidateRiskKeys).toContain("R0005-001");
+    expect(paths.length).toBeGreaterThan(0);
+    expect(paths.every((path) => path.threatActorKey === "TA0017")).toBe(true);
+    expect(paths).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          threatActorKey: "TA0017",
+          attackToolKey: "AT0001",
+        }),
+      ]),
+    );
+  });
+
+  it("all 根节点构建全量路径并允许直接调用风险路径过滤条件", () => {
+    const { buildAttackPaths, buildAttackPathsForRisk, getCandidateRiskKeys } =
+      createBuilder(RelationType.all, "");
+
+    expect(getCandidateRiskKeys().length).toBeGreaterThan(100);
+    expect(buildAttackPaths().length).toBeGreaterThan(100);
+    expect(
+      buildAttackPathsForRisk("R0001", {
+        attackToolKey: "missing-tool",
+        threatActorKey: "missing-actor",
+        avoidanceKey: "missing-avoidance",
+      }),
+    ).toEqual([]);
+    expect(buildAttackPathsForRisk("R9999")).toEqual([]);
+  });
 });

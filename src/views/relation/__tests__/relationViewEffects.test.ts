@@ -187,6 +187,26 @@ describe("relationViewEffects", () => {
     expect(calls.disposeSankeyChart).toHaveBeenCalled();
   });
 
+  it("initializes sankey and analysis views with their specific render paths", () => {
+    const sankey = createHarness({ activeView: "sankey" });
+    expect(sankey.calls.addRootNode).toHaveBeenCalledTimes(1);
+    expect(sankey.calls.renderSankeyChart).toHaveBeenCalledTimes(1);
+    expect(sankey.calls.genNetworkGraphData).not.toHaveBeenCalled();
+    sankey.wrapper.unmount();
+
+    const analysis = createHarness({ activeView: "analysis" });
+    expect(analysis.calls.addRootNode).toHaveBeenCalledTimes(1);
+    expect(analysis.calls.genNetworkGraphData).toHaveBeenCalledWith(
+      RelationType.all,
+      RelationType.risk,
+      "R0001",
+      { render: false },
+    );
+    expect(analysis.calls.renderNetworkChart).not.toHaveBeenCalled();
+    expect(analysis.calls.renderSankeyChart).not.toHaveBeenCalled();
+    analysis.wrapper.unmount();
+  });
+
   it("routes selection changes, synchronizes query view, and refreshes active charts", async () => {
     const { activeView, calls, relKey, route, router, selectedNetworkNodeId } =
       createHarness({ activeView: "network" });
@@ -221,6 +241,17 @@ describe("relationViewEffects", () => {
     expect(activeView.value).toBe("analysis");
     expect(calls.hideNetworkTooltip).toHaveBeenCalledTimes(2);
     expect(calls.hideSankeyTooltip).toHaveBeenCalledTimes(2);
+
+    activeView.value = "pathExplorer";
+    await flushTicks();
+
+    expect(router.replace).toHaveBeenCalledWith({
+      name: "relation",
+      params: { type: RelationType.risk, key: "R0002" },
+      query: { view: "pathExplorer" },
+    });
+    expect(calls.hidePathExplorerSankeyTooltip).toHaveBeenCalled();
+    expect(calls.renderPathExplorerSankeyChart).toHaveBeenCalled();
   });
 
   it("rebuilds data on route, locale, theme, and selected node changes", async () => {
@@ -259,5 +290,38 @@ describe("relationViewEffects", () => {
     await flushTicks();
 
     expect(calls.updateNetworkSelection).toHaveBeenCalled();
+  });
+
+  it("handles route and locale changes for analysis, sankey, and path explorer views", async () => {
+    const { activeView, calls, locale, route } = createHarness({
+      activeView: "analysis",
+    });
+
+    route.params.key = "R0002";
+    await flushTicks();
+
+    expect(calls.rebuildGraphData).toHaveBeenCalledWith({ render: false });
+    expect(calls.refreshGraphAfterVisible).not.toHaveBeenCalled();
+
+    activeView.value = "sankey";
+    await flushTicks();
+    locale.value = "en";
+    await flushTicks();
+    expect(calls.renderSankeyChart).toHaveBeenCalled();
+
+    activeView.value = "pathExplorer";
+    await flushTicks();
+    locale.value = "zh-CN";
+    await flushTicks();
+    expect(calls.renderPathExplorerSankeyChart).toHaveBeenCalled();
+  });
+
+  it("normalizes invalid query view without changing active view", async () => {
+    const { activeView, route } = createHarness({ activeView: "network" });
+
+    route.query.view = "unknown";
+    await flushTicks();
+
+    expect(activeView.value).toBe("network");
   });
 });

@@ -87,6 +87,147 @@ describe("relationExplanation", () => {
     );
   });
 
+  it("maps avoidance relation source fields by endpoint types", () => {
+    expect(
+      helpers.getRelationSourceFields({
+        from: "AT0001",
+        text: "relationLine.avoidanceMeans",
+        to: "A0001",
+      }),
+    ).toEqual(["AttackTool.avoidances"]);
+
+    expect(
+      helpers.getRelationSourceFields(
+        {
+          from: "R0001",
+          text: "relationLine.avoidanceMeans",
+          to: "AT0001",
+        },
+        RelationType.avoidance,
+        RelationType.attackTool,
+      ),
+    ).toEqual(["AttackTool.avoidances"]);
+
+    expect(
+      helpers.explainRelation(
+        {
+          from: "A0001",
+          text: "relationLine.avoidanceMeans",
+          to: "R0001",
+        },
+        RelationType.avoidance,
+        RelationType.risk,
+      ),
+    ).toEqual(
+      expect.objectContaining({
+        explanation: "relationView.relationExplanation.avoidance",
+        semanticExplanation:
+          "relationView.semanticExplanation.avoidance:A0001|avoidance|R0001|流程自动化|relationLine.avoidanceMeans",
+      }),
+    );
+  });
+
+  it("maps risk causation source fields for attack tools and threat actors", () => {
+    expect(
+      helpers.getRelationSourceFields({
+        from: "AT0001",
+        text: "relationLine.indirectSupportRisk",
+        to: "R0001",
+      }),
+    ).toEqual(["AttackTool.indirectSupportRisks"]);
+
+    expect(
+      helpers.getRelationSourceFields({
+        from: "TA0001",
+        text: "relationLine.directCauseRisk",
+        to: "R0001",
+      }),
+    ).toEqual(["ThreatActor.directCauseRisks"]);
+
+    expect(
+      helpers.getRelationSourceFields({
+        from: "TA0001",
+        text: "relationLine.indirectSupportRisk",
+        to: "R0001",
+      }),
+    ).toEqual(["ThreatActor.indirectSupportRisks"]);
+
+    expect(
+      helpers.getRelationSourceFields({
+        from: "AT0001",
+        text: "relationLine.causeRisk",
+        to: "R0001",
+      }),
+    ).toEqual([
+      "AttackTool.directCauseRisks",
+      "AttackTool.indirectSupportRisks",
+    ]);
+
+    expect(
+      helpers.getRelationSourceFields({
+        from: "TA0001",
+        text: "relationLine.causeRisk",
+        to: "R0001",
+      }),
+    ).toEqual([
+      "ThreatActor.directCauseRisks",
+      "ThreatActor.indirectSupportRisks",
+    ]);
+  });
+
+  it("maps term relation source fields for every supported target type", () => {
+    const termLine = (to: string, targetType: RelationType) =>
+      helpers.getRelationSourceFields(
+        {
+          from: "T0001",
+          text: "relationLine.relatedTerm",
+          to,
+        },
+        RelationType.term,
+        targetType,
+      );
+
+    expect(termLine("R0001", RelationType.risk)).toEqual(["Term.relatedRisks"]);
+    expect(termLine("A0001", RelationType.avoidance)).toEqual([
+      "Term.relatedAvoidances",
+    ]);
+    expect(termLine("AT0001", RelationType.attackTool)).toEqual([
+      "Term.relatedAttackTools",
+    ]);
+    expect(termLine("TA0001", RelationType.threatActor)).toEqual([
+      "Term.relatedThreatActors",
+    ]);
+  });
+
+  it("falls back for missing node titles and translated relation labels", () => {
+    const translatedHelpers = createRelationExplanationHelpers({
+      t: (key: string) =>
+        key === "relationLine.directCauseRisk" ? "直接导致风险" : key,
+      nodes: [
+        {
+          id: "R9999",
+          type: RelationType.risk,
+          text: "   ",
+          color: "",
+        },
+      ],
+    });
+
+    expect(translatedHelpers.getRelationPriority("直接导致风险")).toBe(0);
+    expect(translatedHelpers.isDirectRelationLine("直接导致风险")).toBe(true);
+    expect(translatedHelpers.getRelationPriority("不存在的关系")).toBe(6);
+    expect(translatedHelpers.explainRelation({
+      from: "UNKNOWN",
+      text: "relationLine.directCauseRisk",
+      to: "R9999",
+    }).semanticExplanation).toBe(
+      "relationView.semanticExplanation.directCauseRisk",
+    );
+    expect(translatedHelpers.formatEvidenceLevel("manual-review")).toBe(
+      "relationView.evidenceLevel.manual-review",
+    );
+  });
+
   it("keeps explanation coverage for every configured relation line", () => {
     const coverage = helpers.relationExplanationCoverage;
 

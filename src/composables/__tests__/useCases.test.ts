@@ -180,4 +180,105 @@ describe("useCases", () => {
 
     expect(loadCases).not.toHaveBeenCalled();
   });
+
+  it("英文 locale 首次 ensureCases 后合并英文案例翻译", async () => {
+    const vue = await vi.importActual<typeof import("vue")>("vue");
+    const locale = vue.ref("en");
+    const loadedCases = {
+      C0001: {
+        title: "中文案例",
+        keywords: ["中文"],
+        summary: "中文摘要",
+        category: "news_report",
+        relatedRisks: ["R0001"],
+        references: [{ title: "中文来源", link: "https://example.com" }],
+      },
+    };
+    const mergedCases = {
+      C0001: {
+        ...loadedCases.C0001,
+        title: "English Case",
+      },
+    };
+    const mergeWithStructure = vi.fn(() => mergedCases);
+
+    vi.doMock("vue-i18n", () => ({
+      useI18n: () => ({ locale }),
+    }));
+    vi.doMock("@/BREAK/cases", () => ({
+      loadCases: vi.fn(async () => loadedCases),
+    }));
+    vi.doMock("@/i18n", () => ({
+      mergeWithStructure,
+    }));
+
+    const { useCases } = await import("@/composables/useCases");
+    const { cases, ensureCases, loaded } = useCases();
+
+    await ensureCases();
+
+    expect(loaded.value).toBe(true);
+    expect(mergeWithStructure).toHaveBeenCalledWith(
+      loadedCases,
+      expect.objectContaining({
+        C0001: expect.objectContaining({
+          title: expect.any(String),
+        }),
+      }),
+    );
+    expect(cases.value).toEqual(mergedCases);
+  });
+
+  it("案例加载后切换 locale 会重新同步中英文案例数据", async () => {
+    const vue = await vi.importActual<typeof import("vue")>("vue");
+    const locale = vue.ref("zh-CN");
+    let localeWatcher!: (newLocale: string) => Promise<void>;
+    const loadedCases = {
+      C0001: {
+        title: "中文案例",
+        keywords: ["中文"],
+        summary: "中文摘要",
+        category: "news_report",
+        relatedRisks: ["R0001"],
+        references: [{ title: "中文来源", link: "https://example.com" }],
+      },
+    };
+    const mergedCases = {
+      C0001: {
+        ...loadedCases.C0001,
+        title: "English Case",
+      },
+    };
+    const mergeWithStructure = vi.fn(() => mergedCases);
+
+    vi.doMock("vue", () => ({
+      ...vue,
+      watch: vi.fn((_source, callback) => {
+        localeWatcher = callback as (newLocale: string) => Promise<void>;
+      }),
+    }));
+    vi.doMock("vue-i18n", () => ({
+      useI18n: () => ({ locale }),
+    }));
+    vi.doMock("@/BREAK/cases", () => ({
+      loadCases: vi.fn(async () => loadedCases),
+    }));
+    vi.doMock("@/i18n", () => ({
+      mergeWithStructure,
+    }));
+
+    const { useCases } = await import("@/composables/useCases");
+    const { cases, ensureCases } = useCases();
+
+    await ensureCases();
+    expect(cases.value).toEqual(loadedCases);
+
+    await localeWatcher("en");
+
+    expect(cases.value).toEqual(mergedCases);
+
+    await localeWatcher("zh-CN");
+
+    expect(cases.value).toEqual(loadedCases);
+  });
 });

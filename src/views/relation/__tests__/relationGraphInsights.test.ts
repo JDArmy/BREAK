@@ -255,6 +255,17 @@ describe("relationGraphInsights", () => {
     expect(insights.selectedNodeRootPath.value).toBeNull();
   });
 
+  it("returns root-only analysis when the root node is selected", () => {
+    const insights = createInsights("ROOT");
+
+    expect(insights.isCurrentNodeRoot.value).toBe(true);
+    expect(insights.selectedNodeRootPath.value).toBeNull();
+    expect(insights.selectedNodeDiscoveredPaths.value).toEqual([]);
+    expect(insights.selectedNodeAnalysisSummary.value?.notices).toContain(
+      "relationView.nodeAnalysisNotice.lowConnectivity",
+    );
+  });
+
   it("does not report root-node relations for nodes that are only connected through a path", () => {
     const insights = createInsights("AVOID");
 
@@ -263,6 +274,37 @@ describe("relationGraphInsights", () => {
       "ROOT::使用攻击工具::TOOL",
       "TOOL::直接导致风险::RISK",
       "RISK::规避手段::AVOID",
+    ]);
+  });
+
+  it("handles nodes without a root path and preserves ordering of direct relations", () => {
+    const isolatedNodes: Node[] = [
+      ...nodes,
+      { id: "ISOLATED", type: RelationType.attackTool, text: "isolated", color: "" },
+    ];
+    const noPathInsights = createRelationGraphInsights({
+      t,
+      relKey: ref("ROOT"),
+      nodes: isolatedNodes,
+      lines,
+      selectedNetworkNodeId: ref("ISOLATED"),
+      getNodeTitle: (type, key) => `${type}:${key}`,
+      getNodeTypeTitle: (type) => `type:${type}`,
+      getRelationPriority: (lineText) => relationPriority[lineText] ?? 99,
+      isDirectRelationLine: (lineText) => lineText === "直接导致风险",
+      getRelationSourceFields: (line) => [`source:${line.text}`],
+      explainRelation,
+      formatEvidenceLevel,
+    });
+
+    expect(noPathInsights.selectedNodeRootPath.value).toBeNull();
+    expect(noPathInsights.rootNodeRelations.value).toEqual([]);
+    expect(noPathInsights.selectedNodeAnalysisSummary.value?.summary).toBe(
+      "relationView.nodeAnalysis.attack-tool",
+    );
+    expect(noPathInsights.selectedNodeAnalysisSummary.value?.notices).toEqual([
+      "relationView.nodeAnalysisNotice.lowConnectivity",
+      "relationView.nodeAnalysisNotice.missingRiskLink",
     ]);
   });
 });

@@ -4,10 +4,19 @@ import {
   createRelationViewState,
   normalizeRelationViewMode,
 } from "../relationViewState";
-import { normalizeRelationAnalysisPerspective } from "../relationAnalysisPerspectives";
+import {
+  getRelationAnalysisPerspectiveByView,
+  getRelationAnalysisPerspectiveOption,
+  normalizeRelationAnalysisPerspective,
+  relationAnalysisPerspectiveOptions,
+} from "../relationAnalysisPerspectives";
 import { RelationType, type NetworkLayoutMode, type SankeyNode } from "../relationTypes";
 
 const createRoute = (options?: {
+  endKey?: unknown;
+  endType?: unknown;
+  maxDepth?: unknown;
+  maxPaths?: unknown;
   type?: RelationType;
   key?: string;
   perspective?: unknown;
@@ -19,6 +28,10 @@ const createRoute = (options?: {
       key: options?.key ?? "R0001",
     },
     query: {
+      endKey: options?.endKey,
+      endType: options?.endType,
+      maxDepth: options?.maxDepth,
+      maxPaths: options?.maxPaths,
       perspective: options?.perspective,
       view: options?.view,
     },
@@ -29,12 +42,20 @@ const createState = (options?: {
   width?: number;
   view?: unknown;
   perspective?: unknown;
+  endKey?: unknown;
+  endType?: unknown;
+  maxDepth?: unknown;
+  maxPaths?: unknown;
 }) => {
   const renderNetworkChart = vi.fn();
   const state = createRelationViewState({
     route: createRoute({
       perspective: options?.perspective,
       view: options?.view,
+      endKey: options?.endKey,
+      endType: options?.endType,
+      maxDepth: options?.maxDepth,
+      maxPaths: options?.maxPaths,
     }),
     t: (key) => `t:${key}`,
     isMobile: ref(options?.isMobile ?? false),
@@ -47,6 +68,11 @@ const createState = (options?: {
 
 describe("relationViewState", () => {
   it("normalizes analysis perspectives and falls back for invalid query values", () => {
+    expect(relationAnalysisPerspectiveOptions.map((option) => option.key)).toEqual([
+      "risk",
+      "attackPath",
+      "defenseCoverage",
+    ]);
     expect(normalizeRelationAnalysisPerspective("attackPath")).toBe(
       "attackPath",
     );
@@ -59,6 +85,27 @@ describe("relationViewState", () => {
     expect(normalizeRelationAnalysisPerspective(["risk"], "attackPath")).toBe(
       "attackPath",
     );
+    expect(getRelationAnalysisPerspectiveOption("attackPath")).toEqual(
+      expect.objectContaining({
+        defaultView: "sankey",
+        networkLayout: "horizontal",
+        showSubNode: false,
+        showRelatedEntity: false,
+      }),
+    );
+    expect(getRelationAnalysisPerspectiveOption("risk")).toEqual(
+      relationAnalysisPerspectiveOptions[0],
+    );
+    expect(
+      getRelationAnalysisPerspectiveOption(
+        "missing" as Parameters<typeof getRelationAnalysisPerspectiveOption>[0],
+      ),
+    ).toEqual(relationAnalysisPerspectiveOptions[0]);
+    expect(getRelationAnalysisPerspectiveByView("sankey")).toBe("attackPath");
+    expect(getRelationAnalysisPerspectiveByView("analysis")).toBe(
+      "defenseCoverage",
+    );
+    expect(getRelationAnalysisPerspectiveByView("network")).toBe("risk");
   });
 
   it("normalizes view modes and falls back for invalid route query values", () => {
@@ -132,6 +179,49 @@ describe("relationViewState", () => {
     expect(mobile.sankeyLabelWidth.value).toBe(304);
     expect(mobile.sankeyNodeAlign.value).toBe("left");
     expect(mobile.sankeyLayoutIterations.value).toBe(0);
+    expect(mobile.sankeyTop.value).toBe(12);
+    expect(mobile.sankeyBottom.value).toBe(14);
+    expect(mobile.sankeyNodeWidth.value).toBe(10);
+    expect(mobile.sankeyNodeGap.value).toBe(12);
+    expect(mobile.sankeyLabelFontSize.value).toBe(12);
+    expect(mobile.sankeyLabelLineHeight.value).toBe(16);
+
+    const tinyMobile = createState({ isMobile: true, width: 100 }).state;
+    expect(tinyMobile.sankeyChartMinWidth.value).toBe(980);
+    expect(tinyMobile.sankeyRight.value).toBe(274);
+    expect(tinyMobile.sankeyLabelWidth.value).toBe(294);
+
+    const wideMobile = createState({ isMobile: true, width: 3000 }).state;
+    expect(wideMobile.sankeyRight.value).toBe(340);
+    expect(wideMobile.sankeyLabelWidth.value).toBe(360);
+  });
+
+  it("initializes path explorer query state with validation and numeric clamping", () => {
+    const valid = createState({
+      endType: RelationType.threatActor,
+      endKey: "TA0001",
+      maxDepth: "99",
+      maxPaths: "0",
+    }).state;
+
+    expect(valid.pathExplorerStartType.value).toBe(RelationType.risk);
+    expect(valid.pathExplorerStartKey.value).toBe("R0001");
+    expect(valid.pathExplorerEndType.value).toBe(RelationType.threatActor);
+    expect(valid.pathExplorerEndKey.value).toBe("TA0001");
+    expect(valid.pathExplorerMaxDepth.value).toBe(6);
+    expect(valid.pathExplorerMaxPaths.value).toBe(10);
+
+    const invalid = createState({
+      endType: "invalid",
+      endKey: ["TA0001"],
+      maxDepth: "-1",
+      maxPaths: "31",
+    }).state;
+
+    expect(invalid.pathExplorerEndType.value).toBe(RelationType.avoidance);
+    expect(invalid.pathExplorerEndKey.value).toBe("");
+    expect(invalid.pathExplorerMaxDepth.value).toBe(1);
+    expect(invalid.pathExplorerMaxPaths.value).toBe(30);
   });
 
   it("clamps network zoom and requests chart rerendering", () => {
@@ -159,6 +249,11 @@ describe("relationViewState", () => {
     expect(renderNetworkChart).toHaveBeenCalledWith(true);
 
     state.handleNetworkLayoutCommand("invalid");
+    expect(state.networkState.layout).toBe("force");
+    expect(clearDraggedNodePositions).toHaveBeenCalledTimes(1);
+
+    state.handleNetworkLayoutCommand(123);
+    state.handleNetworkLayoutCommand({ value: "radial" });
     expect(state.networkState.layout).toBe("force");
     expect(clearDraggedNodePositions).toHaveBeenCalledTimes(1);
   });

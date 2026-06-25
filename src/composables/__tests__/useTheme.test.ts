@@ -44,6 +44,23 @@ describe("useTheme", () => {
     expect(document.documentElement.classList.contains("dark")).toBe(true);
   });
 
+  it("无效本地主题偏好回落到 dark 并可切换回 light", async () => {
+    localStorage.setItem("break-theme", "invalid");
+    const { useTheme } = await import("@/composables/useTheme");
+    const { theme, isDark, setTheme } = useTheme();
+
+    expect(theme.value).toBe("dark");
+    expect(isDark.value).toBe(true);
+    expect(document.documentElement.classList.contains("dark")).toBe(true);
+
+    setTheme("light");
+    await nextTick();
+
+    expect(theme.value).toBe("light");
+    expect(isDark.value).toBe(false);
+    expect(document.documentElement.classList.contains("dark")).toBe(false);
+  });
+
   it("system 模式跟随 matchMedia，并按组件挂载数量管理监听器", async () => {
     const listeners = new Set<(event: MediaQueryListEvent) => void>();
     const addEventListener = vi.fn((_type: string, listener: (event: MediaQueryListEvent) => void) => {
@@ -93,5 +110,21 @@ describe("useTheme", () => {
     expect(removeEventListener).not.toHaveBeenCalled();
     secondWrapper.unmount();
     expect(removeEventListener).toHaveBeenCalledTimes(1);
+  });
+
+  it("system 模式在系统偏好为浅色时保持 light DOM 状态", async () => {
+    vi.stubGlobal("matchMedia", vi.fn(() => ({
+      matches: false,
+      addEventListener: vi.fn(),
+      removeEventListener: vi.fn(),
+    })));
+    localStorage.setItem("break-theme", "system");
+
+    const { useTheme } = await import("@/composables/useTheme");
+    const { theme, isDark } = useTheme();
+
+    expect(theme.value).toBe("system");
+    expect(isDark.value).toBe(false);
+    expect(document.documentElement.classList.contains("dark")).toBe(false);
   });
 });

@@ -37,6 +37,28 @@ describe("relationAttackPath", () => {
     });
   };
 
+  const createMutableAttackPathData = (options: {
+    relType: RelationType;
+    relKey: string;
+    selectedNode?: Node | null;
+  }) => {
+    const relType = ref(options.relType);
+    const relKey = ref(options.relKey);
+    const selectedNode = ref<Node | null>(options.selectedNode ?? null);
+    const attackPath = createRelationAttackPathData({
+      t,
+      isMobile: ref(false),
+      relType,
+      relKey,
+      selectedNetworkNode: computed(() => selectedNode.value),
+      RelationTypeMapping: relationTypeMapping,
+      getSankeyNodeName,
+      getNodeTitle: (type, key) =>
+        `BREAK.${relationTypeMapping[type].BreakKey}.${key}.title`,
+    });
+    return { attackPath, relKey, relType, selectedNode };
+  };
+
   it("builds Sankey attack paths from threat actors through tools and risks to avoidances", () => {
     const attackPath = createAttackPathData({
       relType: RelationType.attackTool,
@@ -290,6 +312,18 @@ describe("relationAttackPath", () => {
     expect(attackPath.selectedNodeAttackPathSummary.value).toEqual([]);
     expect(attackPath.selectedNodeAttackPathDescription.value).toBe("");
     expect(attackPath.sankeyChartHeight.value).toBeGreaterThanOrEqual(620);
+  });
+
+  it("returns empty selected-node details when no node is selected", () => {
+    const attackPath = createAttackPathData({
+      relType: RelationType.risk,
+      relKey: "R0001",
+      selectedNode: null,
+    });
+
+    expect(attackPath.selectedNodeAttackPathSummary.value).toEqual([]);
+    expect(attackPath.selectedNodeAttackPathDescription.value).toBe("");
+    expect(attackPath.selectedNodeAttackPathExplanations.value).toEqual([]);
   });
 
   it("describes avoidance nodes as defensive endpoints in matching attack paths", () => {
@@ -551,6 +585,79 @@ describe("relationAttackPath", () => {
           node.entityKey === "A0016-001",
       ),
     ).toBe(true);
+  });
+
+  it("describes threat actor nodes and direct actor-to-risk paths", () => {
+    const actorPath = createAttackPathData({
+      relType: RelationType.threatActor,
+      relKey: "TA0017",
+      selectedNode: {
+        id: "TA0017",
+        type: RelationType.threatActor,
+        text: "威胁行为者",
+        color: "",
+      },
+    });
+
+    expect(actorPath.selectedNodeAttackPathSummary.value).toContain(
+      "relationView.pathRoleThreatActor",
+    );
+    expect(actorPath.selectedNodeAttackPathDescription.value).toBe(
+      "relationView.pathRoleThreatActorDesc",
+    );
+
+    const directActorRiskDetail = actorPath.attackPathDetails.value.find(
+      (detail) =>
+        detail.segments.length >= 1 &&
+        detail.segments[0].source.type === RelationType.threatActor &&
+        detail.segments[0].target.type === RelationType.risk,
+    );
+
+    expect(directActorRiskDetail).toEqual(
+      expect.objectContaining({
+        segments: expect.arrayContaining([
+          expect.objectContaining({
+            relation: expect.stringMatching(
+              /^relationLine\.(directCauseRisk|indirectSupportRisk)$/,
+            ),
+            sourceFields: expect.arrayContaining([
+              expect.stringMatching(/^ThreatActor\./),
+            ]),
+          }),
+        ]),
+      }),
+    );
+  });
+
+  it("keeps root attack-path filter synchronized when relation route changes", async () => {
+    const { attackPath, relKey, relType } = createMutableAttackPathData({
+      relType: RelationType.risk,
+      relKey: "R0001",
+    });
+    const initialCount = attackPath.filteredAttackPaths.value.length;
+    attackPath.attackPathFilters.value = {
+      ...attackPath.attackPathFilters.value,
+      [RelationType.attackTool]: "AT0034-001",
+    };
+    attackPath.selectAttackPath(attackPath.attackPathDetails.value[0]?.id ?? "");
+
+    relType.value = RelationType.attackTool;
+    relKey.value = "AT0001";
+    await Promise.resolve();
+
+    expect(attackPath.attackPathFilters.value[RelationType.risk]).toBeUndefined();
+    expect(attackPath.attackPathFilters.value[RelationType.attackTool]).toBe(
+      "AT0001",
+    );
+    expect(attackPath.selectedAttackPathDetail.value?.id).not.toBe("");
+    expect(attackPath.filteredAttackPaths.value.length).not.toBe(initialCount);
+
+    relType.value = RelationType.term;
+    relKey.value = "T0001";
+    await Promise.resolve();
+
+    expect(attackPath.attackPathFilters.value[RelationType.attackTool]).toBeUndefined();
+    expect(attackPath.filteredAttackPaths.value).toEqual([]);
   });
 
   it("handles sparse and dense real fixtures without breaking Sankey grouping", () => {
