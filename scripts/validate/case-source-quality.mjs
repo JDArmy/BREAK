@@ -382,6 +382,9 @@ const primaryReferenceLinks = new Set([
   'https://sichuan.scol.com.cn/ggxw/202605/83260828.html', // 四川在线承载公安部网安局通报
   'https://xinwen.bjd.com.cn/content/s61ac6df9e4b04441fdd04169.html', // 北京日报客户端发布海淀区检察院白皮书
   'https://finance.sina.com.cn/wm/2026-05-08/doc-inhxcusr4543179.shtml', // 新浪承载公安部网安局官方账号通报
+  'https://mp.weixin.qq.com/s?__biz=mzi1nji5nju4mq==&mid=2247515266&idx=1&sn=4c6c087308a789b4669772ec8f2aef63&chksm=ebb9ea1c5e83f82dcf46c7304595a7abc3ee3d420411372888f73739ee36d90e19404816526b&scene=27', // 公安部网安局官方微信，烟台莱山勒索病毒通报
+  'http://finance.sina.com.cn/wm/2026-05-08/doc-inhxcyyr4271612.shtml', // 新浪承载公安部网安局官方账号通报
+  'https://finance.sina.com.cn/wm/2026-05-08/doc-inhxcusr4594497.shtml', // 新浪承载公安部网安局官方账号通报
   'https://mp.weixin.qq.com/s?__biz=mjm5mtczodg0ma==&mid=2649821281&idx=1&sn=4c5cfd23a22fa9563581871847f89863&chksm=bfd3905763b3ba9d7dfed20dc74856a586350043733c7cdb9c8af73c163ab6d015f264768f97&scene=27', // 南京市场监管相关官方微信托管页，价格违法典型案例
 ]);
 const normalizedPrimaryReferenceLinks = new Set([...primaryReferenceLinks].map((link) => link.toLowerCase()));

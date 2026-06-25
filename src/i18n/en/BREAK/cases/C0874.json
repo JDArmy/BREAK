@@ -11,10 +11,10 @@
       "administrative penalty",
       "malicious code"
     ],
-    "summary": "In May 2026, a university server in Lanzhou was remotely implanted with cryptomining malware. Due to the lack of internal network segmentation, the malware rapidly spread to other office devices, creating serious security risks. The university was administratively penalized and ordered to rectify for failing to fulfill its cybersecurity protection obligations.",
+    "summary": "In May 2026, the MPS Cyber Security Bureau reported that a university server in Lanzhou had been remotely implanted with cryptomining malware. Because the university had not implemented effective server protections or lateral segmentation inside its network, the malware spread to other office devices. Local public security authorities imposed an administrative penalty and ordered rectification for failure to fulfill cybersecurity protection obligations.",
     "references": [
       {
-        "title": "A university server in Lanzhou was remotely implanted with cryptojacking malware, which then spread laterally to other office..."
+        "title": "A university server in Lanzhou was remotely implanted with cryptomining malware and spread laterally to other office devices, details disclosed by the MPS Cyber Security Bureau"
       }
     ]
   }

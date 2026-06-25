@@ -11,19 +11,19 @@
       "烟台莱山",
       "勒索攻击"
     ],
-    "summary": "2026年2月，烟台莱山某公司服务器感染勒索病毒，数据库被锁定无法使用。经查，攻击者利用业务系统文件上传漏洞植入后门程序，投放WannaCry勒索病毒，导致大量文件被加密。",
+    "summary": "2025年12月，烟台莱山公安机关网安部门接到辖区某公司报案，称单位服务器感染勒索病毒，数据库被锁定无法使用。经查，攻击者利用业务系统文件上传漏洞植入后门程序，投放 WannaCry 勒索病毒，导致大量文件被加密。",
     "category": "administrative_enforcement",
     "relatedRisks": [
       "R0085"
     ],
     "references": [
       {
-        "title": "公司文件“中毒加密”，莱山网警查处一起勒索病毒攻击案件",
-        "link": "https://yantai.dzwww.com/dz2022/202602/t20260203_17391291.htm"
+        "title": "护网—2025｜警惕勒索病毒正在向你发起攻击！",
+        "link": "https://mp.weixin.qq.com/s?__biz=MzI1NjI5NjU4MQ==&mid=2247515266&idx=1&sn=4c6c087308a789b4669772ec8f2aef63&chksm=ebb9ea1c5e83f82dcf46c7304595a7abc3ee3d420411372888f73739ee36d90e19404816526b&scene=27"
       }
     ],
     "updated": "2026-06-18",
-    "incidentTime": "2026-02",
+    "incidentTime": "2025-12",
     "relatedAttackTools": [
       "AT0013",
       "AT0054"
