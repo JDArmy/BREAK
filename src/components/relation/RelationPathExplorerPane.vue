@@ -304,6 +304,7 @@ const setRef = (el: unknown) => {
 
 .path-explorer-result--has-chart {
   border: var(--break-graph-border) solid 1px;
+  border-radius: 8px;
   background: var(--break-bg-card);
   overflow-x: hidden;
   overflow-y: auto;
