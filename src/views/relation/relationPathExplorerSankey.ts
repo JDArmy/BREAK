@@ -119,37 +119,24 @@ const pathsToSankeyData = (
 ) => {
   // 所有路径都是 startId → ... → endId，但因为无向图搜索，
   // 同一节点可能在不同路径中出现在不同深度。
-  // 策略：收集所有有向边（按路径方向），用 BFS 从起点确定层级，确保 DAG。
+  // 策略：同一实体取其在所有路径中的最大位置，尽量让终点和复用节点靠右。
 
   const startId = paths[0]?.startId;
   if (!startId) return { nodes: [] as SankeyNode[], links: [] as SankeyLink[] };
 
-  // 收集每条路径中相邻步骤构成的有向边
+  // 收集每条路径中相邻步骤构成的有向边，并记录节点最大 depth
   const directedEdges = new Map<string, Set<string>>();
-  for (const path of paths) {
-    let prev = path.startId;
-    for (const step of path.steps) {
-      if (!directedEdges.has(prev)) directedEdges.set(prev, new Set());
-      directedEdges.get(prev)!.add(step.toId);
-      prev = step.toId;
-    }
-  }
-
-  // BFS 从起点确定层级（最短路径深度）——保证起点在最左，终点在最右
   const depthMap = new Map<string, number>();
   depthMap.set(startId, 0);
-  const queue = [startId];
-  let qi = 0;
-  while (qi < queue.length) {
-    const curr = queue[qi++];
-    const currDepth = depthMap.get(curr)!;
-    const neighbors = directedEdges.get(curr);
-    if (!neighbors) continue;
-    for (const next of neighbors) {
-      if (!depthMap.has(next)) {
-        depthMap.set(next, currDepth + 1);
-        queue.push(next);
-      }
+  for (const path of paths) {
+    let prev = path.startId;
+    let depth = 0;
+    for (const step of path.steps) {
+      depth += 1;
+      if (!directedEdges.has(prev)) directedEdges.set(prev, new Set());
+      directedEdges.get(prev)!.add(step.toId);
+      depthMap.set(step.toId, Math.max(depthMap.get(step.toId) ?? 0, depth));
+      prev = step.toId;
     }
   }
 
