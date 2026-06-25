@@ -14,7 +14,9 @@ import { useRelationGraphData } from "@/views/relation/useRelationGraphData";
 import { useRelationNodeActions } from "@/views/relation/useRelationNodeActions";
 import { createRelationPathExplorerSankey } from "@/views/relation/relationPathExplorerSankey";
 import {
+  RelationType,
   type createRelationTypeMapping,
+  getRelationLineKey,
   type GraphLink,
   type graphColors,
   type relationLineColors,
@@ -314,6 +316,13 @@ export const createRelationViewAssembly = ({
     isMobile,
     RelationTypeMapping,
     locale,
+    selectedNetworkNodeId,
+    getNodeTitle: graphData.getNodeTitle,
+    getNodeTypeTitle: graphData.getNodeTypeTitle,
+    isDirectRelationLine: graphData.isDirectRelationLine,
+    getRelationSourceFields: graphData.getRelationSourceFields,
+    getRelationLineKey,
+    t,
   });
 
   // 路径探索桑基图：根据跳数动态调整右侧标签宽度
@@ -517,6 +526,19 @@ export const createRelationViewAssembly = ({
     selectedNetworkNodeId,
   });
 
+  // 节点详情抽屉「与根节点关系」：路径探索 tab 以起点实体为根，
+  // 展示起点→被点击节点的子路径；其余视角沿用图谱根（relKey）的局部 BFS 结果。
+  const mergedSelectedNodeRootPath = computed(() =>
+    activeView.value === "pathExplorer"
+      ? pathExplorerData.pathExplorerNodeRootPath.value
+      : graphData.selectedNodeRootPath.value,
+  );
+  const mergedIsCurrentNodeRoot = computed(() =>
+    activeView.value === "pathExplorer"
+      ? pathExplorerData.pathExplorerIsCurrentNodeRoot.value
+      : graphData.isCurrentNodeRoot.value,
+  );
+
   const relationView = {
     ...graphData,
     ...networkController,
@@ -542,6 +564,9 @@ export const createRelationViewAssembly = ({
     pathExplorerMaxPaths,
     refreshNetworkChart,
     selectedNetworkRelationDetail,
+    // 覆盖 graphData 展开的同名键：路径探索 tab 下改用起点实体为根
+    selectedNodeRootPath: mergedSelectedNodeRootPath,
+    isCurrentNodeRoot: mergedIsCurrentNodeRoot,
     relKey,
     relType,
     sankeyChartMinWidth,

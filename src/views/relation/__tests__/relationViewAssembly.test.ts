@@ -1,11 +1,12 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
-import { computed, nextTick, ref } from "vue";
+import { computed, nextTick, reactive, ref } from "vue";
 import { createRelationViewAssembly } from "../relationViewAssembly";
 import { RelationType, type SankeyNode } from "../relationTypes";
 
 const {
   createNetworkChartController,
   createNetworkDataHelpers,
+  createRelationPathExplorerSankey,
   createRelationViewState,
   createSankeyChartController,
   setupRelationViewEffects,
@@ -14,6 +15,7 @@ const {
 } = vi.hoisted(() => ({
   createNetworkChartController: vi.fn(),
   createNetworkDataHelpers: vi.fn(),
+  createRelationPathExplorerSankey: vi.fn(),
   createRelationViewState: vi.fn(),
   createSankeyChartController: vi.fn(),
   setupRelationViewEffects: vi.fn(),
@@ -28,6 +30,10 @@ vi.mock("@/views/relation/relationNetworkLayout", () => ({
 vi.mock("@/views/relation/relationViewControllers", () => ({
   createNetworkChartController,
   createSankeyChartController,
+}));
+
+vi.mock("@/views/relation/relationPathExplorerSankey", () => ({
+  createRelationPathExplorerSankey,
 }));
 
 vi.mock("@/views/relation/relationViewEffects", () => ({
@@ -46,7 +52,10 @@ vi.mock("@/views/relation/useRelationNodeActions", () => ({
   useRelationNodeActions,
 }));
 
-const route = { params: { type: "risk", key: "R0001" }, query: {} };
+const route = reactive({
+  params: { type: "risk", key: "R0001" },
+  query: {} as Record<string, string>,
+});
 const router = { push: vi.fn(), replace: vi.fn() };
 const t = (key: string) => `t:${key}`;
 const locale = ref("zh-CN");
@@ -131,10 +140,14 @@ const createGraphData = () => ({
     { key: "relationLine.avoidanceMeans" },
     { key: "relationLine.avoidanceComplement" },
   ]),
+  rootNodeRelations: ref([]),
   sankeyChartHeight: computed(() => 460),
   sankeyData: computed(() => ({ nodes: [], links: [] })),
   selectedNetworkNode: ref(null),
   selectedNetworkNodeId: ref("R0001"),
+  selectedNodeRootPath: ref(null),
+  isCurrentNodeRoot: ref(false),
+  getNodeTitle: vi.fn(),
   wrapLabelText: vi.fn(),
 });
 
@@ -147,9 +160,26 @@ const createNodeActions = () => ({
   prepareNodeActions: vi.fn((type: RelationType, key: string) => ({ id: key, type })),
 });
 
+const createPathExplorerData = () => ({
+  discoveredPaths: ref([]),
+  pathExplorerChartHeight: computed(() => 420),
+  pathExplorerHasData: ref(false),
+  pathExplorerIsCurrentNodeRoot: ref(false),
+  pathExplorerNodeRootPath: ref(null),
+  pathExplorerSankeyData: computed(() => ({ nodes: [], links: [] })),
+});
+
 describe("relationViewAssembly", () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    route.params = { type: "risk", key: "R0001" };
+    route.query = {};
+    router.push.mockClear();
+    router.replace.mockClear();
+    isDark.value = false;
+    isMobile.value = false;
+    width.value = 1280;
+    locale.value = "zh-CN";
     const state = createState();
     const graphData = createGraphData();
     const nodeActions = createNodeActions();
@@ -178,6 +208,7 @@ describe("relationViewAssembly", () => {
       setSankeyChartElement: vi.fn(),
       updateSankeyTheme: vi.fn(),
     });
+    createRelationPathExplorerSankey.mockReturnValue(createPathExplorerData());
   });
 
   const createAssembly = () =>
@@ -297,6 +328,19 @@ describe("relationViewAssembly", () => {
     );
   });
 
+  it("路径探索视图不反向联动任务型分析视角", async () => {
+    createAssembly();
+    const state = createRelationViewState.mock.results[0].value;
+
+    state.activeAnalysisPerspective.value = "risk";
+    router.replace.mockClear();
+    state.activeView.value = "pathExplorer";
+    await nextTick();
+
+    expect(state.activeAnalysisPerspective.value).toBe("risk");
+    expect(router.replace).not.toHaveBeenCalled();
+  });
+
   it("bridges network and Sankey interactions back to node actions", () => {
     const relationView = createAssembly();
     const nodeActions = useRelationNodeActions.mock.results[0].value;
@@ -351,5 +395,173 @@ describe("relationViewAssembly", () => {
 
     relationView.setRelationPageElement(element);
     expect(nodeActionOptions.contextMenuPaneRef.value).toBe(element);
+  });
+
+  it("configures path explorer Sankey spacing from discovered depth and mobile state", () => {
+    createRelationPathExplorerSankey.mockReturnValue({
+      discoveredPaths: ref([]),
+      pathExplorerChartHeight: computed(() => 420),
+      pathExplorerHasData: ref(true),
+      pathExplorerSankeyData: computed(() => ({
+        nodes: [
+          { name: "d0", depth: 0 },
+          { name: "d1", depth: 1 },
+          { name: "d2", depth: 2 },
+          { name: "d3", depth: 3 },
+          { name: "d4", depth: 4 },
+          { name: "d5", depth: 5 },
+        ],
+        links: [],
+      })),
+    });
+
+    createAssembly();
+
+    const pathExplorerOptions = createSankeyChartController.mock.calls[1][0];
+    expect(pathExplorerOptions.viewModeKey).toBe("pathExplorer");
+    expect(pathExplorerOptions.sankeyRight.value).toBe(160);
+    expect(pathExplorerOptions.sankeyLabelWidth.value).toBe(140);
+    expect(pathExplorerOptions.sankeyNodeGap.value).toBe(24);
+
+    isMobile.value = true;
+    expect(pathExplorerOptions.sankeyRight.value).toBe(200);
+    expect(pathExplorerOptions.sankeyLabelWidth.value).toBe(220);
+    expect(pathExplorerOptions.sankeyNodeGap.value).toBe(16);
+    isMobile.value = false;
+  });
+
+  it("uses medium path explorer spacing for five discovered depths", () => {
+    createRelationPathExplorerSankey.mockReturnValue({
+      discoveredPaths: ref([]),
+      pathExplorerChartHeight: computed(() => 420),
+      pathExplorerHasData: ref(true),
+      pathExplorerSankeyData: computed(() => ({
+        nodes: [
+          { name: "d0", depth: 0 },
+          { name: "d1", depth: 1 },
+          { name: "d2", depth: 2 },
+          { name: "d3", depth: 3 },
+          { name: "d4", depth: 4 },
+        ],
+        links: [],
+      })),
+    });
+
+    createAssembly();
+
+    const pathExplorerOptions = createSankeyChartController.mock.calls[1][0];
+    expect(pathExplorerOptions.sankeyRight.value).toBe(200);
+    expect(pathExplorerOptions.sankeyLabelWidth.value).toBe(160);
+    expect(pathExplorerOptions.sankeyNodeGap.value).toBe(20);
+  });
+
+  it("renders path explorer Sankey only when active view has data", async () => {
+    const discoveredPaths = ref<string[]>([]);
+    const pathExplorerHasData = ref(false);
+    createRelationPathExplorerSankey.mockReturnValue({
+      discoveredPaths,
+      pathExplorerChartHeight: computed(() => 420),
+      pathExplorerHasData,
+      pathExplorerSankeyData: computed(() => ({ nodes: [], links: [] })),
+    });
+    const relationView = createAssembly();
+    const pathExplorerController = createSankeyChartController.mock.results[1].value;
+
+    discoveredPaths.value = ["p1"];
+    await nextTick();
+    await nextTick();
+    expect(pathExplorerController.renderSankeyChart).not.toHaveBeenCalled();
+
+    relationView.activeView.value = "pathExplorer";
+    pathExplorerHasData.value = true;
+    discoveredPaths.value = ["p1", "p2"];
+    await nextTick();
+    await nextTick();
+
+    expect(pathExplorerController.renderSankeyChart).toHaveBeenCalled();
+  });
+
+  it("syncs path explorer parameter changes into route query", async () => {
+    const relationView = createAssembly();
+    router.replace.mockClear();
+
+    relationView.pathExplorerEndType.value = RelationType.threatActor;
+    relationView.pathExplorerEndKey.value = "TA0001";
+    relationView.pathExplorerMaxDepth.value = 6;
+    relationView.pathExplorerMaxPaths.value = 20;
+    await nextTick();
+
+    expect(router.replace).toHaveBeenCalledWith({
+      name: "relation",
+      params: { type: RelationType.risk, key: "R0001" },
+      query: {
+        endType: RelationType.threatActor,
+        endKey: "TA0001",
+        maxDepth: "6",
+        maxPaths: "20",
+      },
+    });
+
+    router.replace.mockClear();
+    relationView.pathExplorerEndKey.value = "";
+    await nextTick();
+
+    expect(router.replace).toHaveBeenCalledWith({
+      name: "relation",
+      params: { type: RelationType.risk, key: "R0001" },
+      query: {
+        endType: RelationType.threatActor,
+        maxDepth: "6",
+        maxPaths: "20",
+      },
+    });
+  });
+
+  it("does not replace route when path explorer parameters match query defaults", async () => {
+    route.query = {
+      endType: RelationType.avoidance,
+      maxDepth: "4",
+      maxPaths: "10",
+    };
+    const relationView = createAssembly();
+    await nextTick();
+    router.replace.mockClear();
+
+    relationView.pathExplorerEndType.value = RelationType.avoidance;
+    relationView.pathExplorerEndKey.value = "";
+    relationView.pathExplorerMaxDepth.value = 4;
+    relationView.pathExplorerMaxPaths.value = 10;
+    await nextTick();
+
+    expect(router.replace).not.toHaveBeenCalled();
+  });
+
+  it("applies valid path explorer query values with numeric clamping", async () => {
+    const relationView = createAssembly();
+
+    route.query = {
+      endType: RelationType.term,
+      endKey: "T0001",
+      maxDepth: "99",
+      maxPaths: "0",
+    };
+    await nextTick();
+
+    expect(relationView.pathExplorerEndType.value).toBe(RelationType.term);
+    expect(relationView.pathExplorerEndKey.value).toBe("T0001");
+    expect(relationView.pathExplorerMaxDepth.value).toBe(6);
+    expect(relationView.pathExplorerMaxPaths.value).toBe(10);
+
+    route.query = {
+      endType: "invalid",
+      maxDepth: "abc",
+      maxPaths: "31",
+    };
+    await nextTick();
+
+    expect(relationView.pathExplorerEndType.value).toBe(RelationType.term);
+    expect(relationView.pathExplorerEndKey.value).toBe("");
+    expect(relationView.pathExplorerMaxDepth.value).toBe(4);
+    expect(relationView.pathExplorerMaxPaths.value).toBe(30);
   });
 });

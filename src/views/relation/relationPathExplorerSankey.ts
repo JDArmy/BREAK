@@ -6,14 +6,17 @@ import {
 } from "@/views/relation/relationPathDiscovery";
 import {
   type createRelationTypeMapping,
+  getRelationLineKey,
   type Line,
   type RelationEntityType,
   type SankeyLink,
   type SankeyNode,
   RelationType,
 } from "@/views/relation/relationTypes";
+import type { RootPathSummary } from "@/components/relation/relationNodeDrawerInsightTypes";
 
 type SankeyNodeNameGetter = (type: RelationEntityType, key: string) => string;
+type Translate = (key: string, params?: Record<string, unknown>) => string;
 
 interface CreatePathExplorerSankeyOptions {
   startType: Ref<RelationType>;
@@ -27,6 +30,18 @@ interface CreatePathExplorerSankeyOptions {
   RelationTypeMapping: ReturnType<typeof createRelationTypeMapping>;
   /** 当前语言，变化时桑基图节点 displayName 随之重算 */
   locale: Ref<string>;
+  /** 当前选中的网络节点 ID（被点击打开详情的节点） */
+  selectedNetworkNodeId: Ref<string>;
+  /** 实体标题（i18n 响应），用于构建根路径预览的节点文案 */
+  getNodeTitle: (type: RelationEntityType, key: string) => string;
+  /** 实体类型标题，用于根路径预览的节点 type 字段 */
+  getNodeTypeTitle: (type: string) => string;
+  /** 判断关系是否为直接关系（入参为关系 key） */
+  isDirectRelationLine: (lineKey: string) => boolean;
+  /** 关系来源字段 */
+  getRelationSourceFields: (line: Line) => string[];
+  /** 翻译函数 */
+  t: Translate;
 }
 
 /** 路径探索统计 */
@@ -195,6 +210,88 @@ const pathsToSankeyData = (
   };
 };
 
+interface BuildPathExplorerRootPathSummaryOptions {
+  discoveredPaths: DiscoveredRelationPath[];
+  /** 被点击打开详情的节点实体 ID */
+  clickedId: string;
+  /** 路径起点实体 ID（= pathExplorerStartKey） */
+  startId: string;
+  /** 由实体 ID 推断类型 */
+  getNodeType: (id: string) => RelationEntityType;
+  getNodeTitle: (type: RelationEntityType, key: string) => string;
+  getNodeTypeTitle: (type: string) => string;
+  isDirectRelationLine: (lineKey: string) => boolean;
+  getRelationSourceFields: (line: Line) => string[];
+  getRelationLineKey: (line: Line) => string;
+  t: Translate;
+}
+
+/**
+ * 从路径探索已发现的路径中，截取「起点 → 被点击节点」的子路径，
+ * 转换为节点详情抽屉「与根节点关系」区块使用的 RootPathSummary。
+ *
+ * 被点击节点必出现在至少一条 discoveredPath 的某个 step.toId（桑基图即由 discoveredPaths 构建）。
+ * - 点击起点自身 → null（抽屉走 currentNodeIsRoot 分支）
+ * - 点击终点 → 完整路径
+ * - 点击中间节点 → 截断到该节点为止的子路径
+ */
+export const buildPathExplorerRootPathSummary = ({
+  discoveredPaths,
+  clickedId,
+  startId,
+  getNodeType,
+  getNodeTitle,
+  getNodeTypeTitle,
+  isDirectRelationLine,
+  getRelationSourceFields,
+  getRelationLineKey,
+  t,
+}: BuildPathExplorerRootPathSummaryOptions): RootPathSummary | null => {
+  if (!clickedId || discoveredPaths.length === 0) return null;
+  if (clickedId === startId) return null;
+
+  const path = discoveredPaths.find((p) =>
+    p.steps.some((step) => step.toId === clickedId),
+  );
+  if (!path) return null;
+
+  const targetIndex = path.steps.findIndex((step) => step.toId === clickedId);
+  if (targetIndex < 0) return null;
+  const truncated = path.steps.slice(0, targetIndex + 1);
+
+  const buildNodeSummary = (id: string) => {
+    const type = getNodeType(id);
+    return {
+      id,
+      type: getNodeTypeTitle(type),
+      title: getNodeTitle(type, id),
+    };
+  };
+
+  return {
+    hopCount: truncated.length,
+    startNode: buildNodeSummary(startId),
+    steps: truncated.map((step) => {
+      const lineKey = getRelationLineKey(step.line);
+      return {
+        relation: {
+          direction:
+            step.line.from === step.fromId
+              ? t("relationView.outgoing")
+              : t("relationView.incoming"),
+          text: step.line.text,
+          directness: isDirectRelationLine(lineKey)
+            ? t("relationView.direct")
+            : t("relationView.indirect"),
+          sourceFields: getRelationSourceFields(step.line),
+        },
+        targetNode: buildNodeSummary(step.toId),
+        isCurrentTarget: step.toId === clickedId,
+      };
+    }),
+  };
+};
+
 export const createRelationPathExplorerSankey = ({
   startKey,
   endKey,
@@ -204,6 +301,12 @@ export const createRelationPathExplorerSankey = ({
   isMobile,
   RelationTypeMapping,
   locale,
+  selectedNetworkNodeId,
+  getNodeTitle,
+  getNodeTypeTitle,
+  isDirectRelationLine,
+  getRelationSourceFields,
+  t,
 }: CreatePathExplorerSankeyOptions) => {
   const searching = ref(false);
   const discoveredPaths = ref<DiscoveredRelationPath[]>([]);
@@ -319,11 +422,37 @@ export const createRelationPathExplorerSankey = ({
     () => pathExplorerSankeyData.value.nodes.length > 0,
   );
 
+  // 节点详情抽屉「与根节点关系」：路径探索以起点实体为根，
+  // 从 discoveredPaths 截取起点→被点击节点的子路径。
+  // getNodeTitle/getNodeTypeTitle 内部读取 locale，语言切换时自动重算。
+  const pathExplorerNodeRootPath = computed(() =>
+    buildPathExplorerRootPathSummary({
+      discoveredPaths: discoveredPaths.value,
+      clickedId: selectedNetworkNodeId.value,
+      startId: startKey.value,
+      getNodeType,
+      getNodeTitle,
+      getNodeTypeTitle,
+      isDirectRelationLine,
+      getRelationSourceFields,
+      getRelationLineKey,
+      t,
+    }),
+  );
+
+  const pathExplorerIsCurrentNodeRoot = computed(
+    () =>
+      Boolean(selectedNetworkNodeId.value) &&
+      selectedNetworkNodeId.value === startKey.value,
+  );
+
   return {
     discoveredPaths,
     hasTarget,
     pathExplorerChartHeight,
     pathExplorerHasData,
+    pathExplorerIsCurrentNodeRoot,
+    pathExplorerNodeRootPath,
     pathExplorerSankeyData,
     pathExplorerStats,
     searching,
