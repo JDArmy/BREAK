@@ -108,7 +108,8 @@ const getGlobalLines = (): Line[] => {
 
 /**
  * 将 DiscoveredRelationPath[] 转换为桑基图 nodes/links 数据。
- * 每条路径的步骤按顺序分配 depth；同一实体取最小 depth。
+ * 每条路径的步骤按顺序分配 depth；同一实体取距起点的最大距离，
+ * 确保桑基图中节点尽量靠右排布，避免短路径把中间节点拉到左侧导致连线交叉。
  */
 const pathsToSankeyData = (
   paths: DiscoveredRelationPath[],
@@ -122,7 +123,8 @@ const pathsToSankeyData = (
   const addNode = (key: string, depth: number) => {
     const existing = nodeMap.get(key);
     if (existing) {
-      if (depth < (existing.depth ?? Infinity)) {
+      // 取最大 depth——让节点尽量靠右，避免短路径把中间节点拉到起点附近
+      if (depth > (existing.depth ?? -1)) {
         existing.depth = depth;
       }
       return existing.name;
