@@ -309,6 +309,7 @@ export default defineComponent({
       :is-current-node-root="isCurrentNodeRoot"
       :drawer-copy-feedback-message="drawerCopyFeedbackMessage"
       :drawer-copy-feedback-type="drawerCopyFeedbackType"
+      :hide-related-entity-actions="activeView === 'pathExplorer'"
       @copy-csv="copySelectedNodeCsv"
       @view-detail="gotoSelectedNodeDetailView"
       @open-detail-new-window="openSelectedNodeDetailInNewWindow"

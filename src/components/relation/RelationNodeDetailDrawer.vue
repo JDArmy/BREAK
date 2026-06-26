@@ -66,6 +66,7 @@ const props = defineProps<{
   isRelationOnSelectedPath: (relationKey: string) => boolean;
   drawerCopyFeedbackMessage: string;
   drawerCopyFeedbackType: "success" | "error";
+  hideRelatedEntityActions?: boolean;
 }>();
 
 const emit = defineEmits<{
@@ -135,6 +136,7 @@ const drawerVisible = computed({
         :show-root-relation-block="true"
         :show-coverage-block="true"
         :show-attack-path-block="true"
+        :hide-related-entity-actions="hideRelatedEntityActions"
         @copy-csv="emit('copy-csv')"
         @view-detail="emit('view-detail')"
         @open-detail-new-window="emit('open-detail-new-window')"

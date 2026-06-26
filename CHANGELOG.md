@@ -2,8 +2,9 @@
 
 ## 2.28.3
 
-项目清理，移除废弃代码和无用文件：
+项目清理与路径探索体验优化：
 
+- 路径探索视角节点详情抽屉中，关联实体 block 隐藏 3 个操作按钮（查看节点详情、作为根节点打开、查看详情）
 - 删除废弃组件 `RelationNodeDrawerInsights.vue`（已被 `RelationNodeInsightBlocks.vue` 替代，零引用）
 - 删除废弃 composable `useAnchorTable.ts` 及其对应测试用例和 `.anchor-row` CSS 样式（零引用）
 - 删除早期遗留脚本 `src/BREAK/savejson.cjs`（依赖文件已不存在）
