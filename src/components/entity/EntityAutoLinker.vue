@@ -109,6 +109,14 @@ const INTERACTIVE_SELECTORS = [
   ".node-coverage-item",
   // 关系图抽屉：攻击路径实体项
   ".node-attack-entity",
+  // 防御覆盖视角：规避覆盖列表项（button）
+  ".relation-analysis-coverage-item",
+  // 防御覆盖视角：路径列表项（button）
+  ".relation-analysis-path-list-item",
+  // 防御覆盖视角：路径段中的实体
+  ".relation-analysis-segment-main",
+  // 防御覆盖视角：路径节点
+  ".relation-analysis-path-node",
 ];
 const INTERACTIVE_SELECTOR = INTERACTIVE_SELECTORS.join(",");
 
@@ -145,7 +153,7 @@ function isInsideSkipZone(node: Node): boolean {
     }
     // 代码块 / canvas 容器
     if (tag === "CODE" || tag === "PRE" || tag === "CANVAS") return true;
-    // 已包裹 / Popover 自身 / 下拉列表 / ECharts / 特殊展示区
+    // 已包裹 / Popover 自身 / 下拉列表 / 选择器 / ECharts / 特殊展示区
     if (
       parent.hasAttribute(ATTR) ||
       parent.hasAttribute("_echarts_instance_") ||
@@ -156,6 +164,9 @@ function isInsideSkipZone(node: Node): boolean {
       parent.classList.contains("el-select-dropdown") ||
       parent.classList.contains("el-autocomplete-suggestion") ||
       parent.classList.contains("el-select-dropdown__item") ||
+      parent.classList.contains("el-select-v2") ||
+      parent.classList.contains("el-select") ||
+      parent.classList.contains("el-input") ||
       parent.classList.contains("network-chart") ||
       parent.classList.contains("sankey-chart") ||
       parent.classList.contains("detail-id") ||
@@ -270,8 +281,8 @@ function handleMutations(mutations: MutationRecord[]) {
   }, 100);
 }
 
-/** 排除区域：下拉列表、Popover 自身、ECharts 图表等不应触发 Popover 的区域 */
-const EXCLUDE_ZONE = ".el-select-dropdown, .el-autocomplete-suggestion, .el-popover, .entity-popover, .entity-card, [_echarts_instance_], .network-chart, .sankey-chart";
+/** 排除区域：下拉列表、选择器、Popover 自身、ECharts 图表等不应触发 Popover 的区域 */
+const EXCLUDE_ZONE = ".el-select-dropdown, .el-autocomplete-suggestion, .el-select-v2, .el-select, .el-input, .el-popover, .entity-popover, .entity-card, [_echarts_instance_], .network-chart, .sankey-chart";
 
 // ─── 事件委托（路径 A + B 统一入口） ──────────────────
 function handleMouseEnter(e: Event) {
