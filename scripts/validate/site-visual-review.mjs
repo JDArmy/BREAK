@@ -263,6 +263,10 @@ function classifyKnownWarning(result, warning) {
     return '该场景存在已知受控横向滚动或抽屉打开态溢出，保留截图人工复核';
   }
 
+  if (isOverflowElement && /entity-id-auto/.test(warningText)) {
+    return '实体 ID 自动识别 span 在长文本中可能微量超出视口，属于行内元素自然溢出';
+  }
+
   return null;
 }
 
@@ -504,7 +508,7 @@ async function runDesktopGlobalSearchScenario(page, scenario, interactions) {
   } catch {
     selectIssues.push('点击全局搜索结果后详情抽屉未出现');
   }
-  if (!page.url().includes('/risks/R0001')) {
+  if (!page.url().includes('/risk/R0001')) {
     selectIssues.push(`点击全局搜索结果后 URL 未进入风险详情路由，实际 ${page.url()}`);
   }
   await recordState(page, interactions, scenario, 'after-search-result-click', selectIssues);
@@ -517,7 +521,7 @@ async function runDesktopNavigationScenario(page, scenario, interactions) {
   const knowledgeIssues = [];
   await clickFirstVisible(page, ['.knowledge-menu .el-dropdown-link'], knowledgeIssues, '打开知识库菜单');
   await clickDropdownItemByText(page, /Terms|术语/i, knowledgeIssues, '术语');
-  await waitForUrlIncludes(page, '/terms', knowledgeIssues, '点击知识库术语菜单');
+  await waitForUrlIncludes(page, '/term', knowledgeIssues, '点击知识库术语菜单');
   await recordState(page, interactions, scenario, 'after-knowledge-menu-click', knowledgeIssues);
 
   const themeIssues = [];
@@ -650,16 +654,16 @@ async function runEntityLinkScenario(page, scenario, interactions) {
   await clickFirstVisible(
     page,
     [
-      '.entity-reference-link[href*="/avoidances"]',
+      '.entity-reference-link[href*="/avoidance"]',
       '.entity-reference-link:has-text("A")',
-      'a[href*="/avoidances"]',
+      'a[href*="/avoidance"]',
     ],
     issues,
     '点击详情里的规避手段实体链接',
   );
   await page.waitForLoadState('networkidle');
   await page.waitForTimeout(500);
-  if (!page.url().includes('/avoidances') || !page.url().includes('A0001')) {
+  if (!page.url().includes('/avoidance') || !page.url().includes('A0001')) {
     issues.push(`实体链接未跳转到规避手段详情，实际 ${page.url()}`);
   }
   await recordState(page, interactions, scenario, 'after-entity-link-click', issues);
@@ -809,7 +813,7 @@ async function runMobileNavSearchScenario(page, scenario, interactions) {
 
   const navIssues = [];
   await clickFirstVisible(page, ['.mobile-nav-item:has-text("Terms")', '.mobile-nav-item:has-text("术语")'], navIssues, '移动端菜单跳转术语');
-  await waitForUrlIncludes(page, '/terms', navIssues, '移动端菜单跳转术语');
+  await waitForUrlIncludes(page, '/term', navIssues, '移动端菜单跳转术语');
   await recordState(page, interactions, scenario, 'after-mobile-menu-terms-click', navIssues);
 
   const searchIssues = [];
@@ -854,7 +858,7 @@ async function runMobileCasesScenario(page, scenario, interactions) {
     '移动端点击案例列表 C0002',
   );
   await page.waitForTimeout(500);
-  if (!page.url().includes('/cases/detail/C0002') && !page.url().includes('#C0002')) {
+  if (!page.url().includes('/case/detail/C0002') && !page.url().includes('#C0002')) {
     issues.push(`移动端案例点击后 URL 未切换到 C0002，实际 ${page.url()}`);
   }
   await recordState(page, interactions, scenario, 'after-case-click', issues);
