@@ -88,6 +88,7 @@ const primaryDomainSuffixes = [
   'portswigger.net',
   'eprint.iacr.org',
   'tches.iacr.org',
+  'ncl.ac.uk',
   'mdpi.com',
   'nature.com',
   'sciencedirect.com',
@@ -128,6 +129,7 @@ const primaryDomainSuffixes = [
   'cpd.com.cn',
   'cf.qq.com',
   'rule.jd.com',
+  'qn.taobao.com',
   'gamesafe.qq.com',
   'yysls.cn',
   'sega.co.jp',
@@ -161,6 +163,7 @@ const primaryDomainSuffixes = [
   'cert.org.cn',
   'cverc.org.cn',
   'courtlistener.com',
+  'santaclara.courts.ca.gov',
   'sonatype.com',
   'endorlabs.com',
   'nsfocusglobal.com',
@@ -206,6 +209,7 @@ const primaryDomainSuffixes = [
   'haveibeenpwned.com',
   'datenschutz-berlin.de',
   'nilsonreport.com',
+  'visa.com',
   'cgbchina.com.cn',
   'autoriteitpersoonsgegevens.nl',
   'dataprotection.ie',
@@ -291,6 +295,7 @@ const primaryReferenceLinks = new Set([
   'https://news.qq.com/rain/a/20260614a04mdv00', // 上海静安官方托管页，七天无理由退货掉包案
   'https://news.cctv.com/2026/06/18/arti1im1sqmvqzkv04azh5w5260618.shtml', // 央视网转载平安北京/朝阳分局调包退货案
   'https://m.news.cctv.com/2021/07/19/artie58rnmechoj4v8zu2jfq210719.shtml', // 央视新闻客户端，绵阳手机积分兑换诈骗案
+  'https://tv.cctv.cn/2018/10/09/VIDEBJfRxwDXNrvaPc5N7361181009.shtml', // 央视《焦点访谈》节目页，免费手环货到付款诈骗案
   'https://tv.cctv.com/2024/03/15/VIDEaISGnSjSjVaDWrZDsLbf240315.shtml', // 央视 3·15 晚会，同程金融礼品卡变相现金贷曝光
   'https://www.chinaums.com/tblm/aqzx2/djzldxwlzp_1905/jbzspj_1904/202209/t20220906_45358.shtml', // 银联商务转载中国支付清算协会跨境赌博资金转移案例
   'https://m.cyol.com/gb/articles/2021-10/17/content_xyzgdfvxp.html', // 中国青年报客户端来源江都警方，商户收款码非法套现案
