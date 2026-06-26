@@ -392,6 +392,7 @@ const primaryReferenceLinks = new Set([
   'https://xinwen.bjd.com.cn/content/s683f8979e4b0380e186cf999.html', // 北京日报托管公安部网安局/陕西网警非法薅羊毛案
   'https://mp.weixin.qq.com/s?__biz=mziwnzexnti5ma==&mid=2649895992&idx=1&sn=2db768454308aea8661283b04870a38d&chksm=8e40cffb5980f6350bf9e907cc441b820572068c2b4b5e6215a0f98ae38e4b465829b53ca1a4&scene=27', // 上海高院官方微信，临期食品恶意索赔案
   'https://www.zhongyuan.gov.cn/rdhy/9581840.jhtml', // 政府门户转载抖音黑板报官方治理公示
+  'https://jubao.xzdw.gov.cn/zxdt/202308/t20230826_390432.html', // 西藏自治区党委保密办/自治区国家保密局，保密典型案例
   'http://putian.pafj.net/caw/f/10/view-225-766722.html', // 莆田长安网检察院栏目，中共莆田市委政法委员会主办
   'https://www.msxf.com/news/xwxq/1326', // 马上消费金融官网，反催收团伙协查公告
   'https://news.qq.com/rain/a/20260402a067vo00', // 腾讯新闻承载《三角洲行动》官方账号安全公告
