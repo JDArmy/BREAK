@@ -1,6 +1,6 @@
 {
   "name": "break",
-  "version": "2.29.1",
+  "version": "2.29.2",
   "private": true,
   "type": "module",
   "engines": {
@@ -36,6 +36,7 @@
     "test:performance": "node scripts/validate/site-performance.mjs",
     "test:visual-review": "node scripts/validate/site-visual-review.mjs",
     "test:relation-stability": "node scripts/validate/relation-stability.mjs",
+    "test:autolinker-regression": "node scripts/validate/entity-autolinker-regression.mjs",
     "test:lighthouse": "node scripts/validate/lighthouse-baseline.mjs",
     "ci:browser-regression-gate": "node scripts/validate/browser-regression-gate.mjs",
     "precommit:browser-regression": "node scripts/validate/precommit-browser-regression.mjs",

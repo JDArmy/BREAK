@@ -18,6 +18,7 @@ const commands = [
   ['npm', ['run', 'test:performance']],
   ['npm', ['run', 'test:visual-review']],
   ['npm', ['run', 'test:relation-stability']],
+  ['npm', ['run', 'test:autolinker-regression']],
   ['npm', ['run', 'test:lighthouse']],
   ['npm', ['run', 'audit:lighthouse-sankey']],
 ];

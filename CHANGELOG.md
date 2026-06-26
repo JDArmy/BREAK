@@ -1,5 +1,17 @@
 # Change log
 
+## 2.29.2
+
+EntityAutoLinker 架构加固——提取核心逻辑并增加两层回归测试：
+
+### 架构优化
+- 提取 `autoLinkerCore.ts`：将 `processTextNode`、`isInsideSkipZone`、`scanSubtree` 等纯 DOM 函数从 `EntityAutoLinker.vue` 的 `<script setup>` 中分离到独立模块，隔离副作用与纯逻辑
+
+### 测试增强
+- **Vitest 单元测试**（+35 用例）：覆盖 processTextNode 基本功能（文本拆分/多 ID 包裹/子编号识别/重复处理防护）、isInsideSkipZone 全部 17 个排除区域边界、extractEntityId 提取逻辑、scanSubtree 子树扫描、DOM 扫描性能预算（1000 节点 < 200ms）
+- **Playwright 浏览器回归测试**（4 场景）：大列表页浏览（350 条风险列表渲染）、抽屉打开/关闭、搜索弹窗交互、关系图 tab 切换——全部断言无运行时错误
+- 新增 `npm run test:autolinker-regression` 脚本，集成到 `precommit-browser-regression` 流程
+
 ## 2.29.1
 
 修复 EntityAutoLinker 全局提前加载 BREAK 全量数据的性能问题：
