@@ -69,7 +69,6 @@ declare module 'vue' {
     RelationNodeDetailContent: typeof import('./src/components/relation/RelationNodeDetailContent.vue')['default']
     RelationNodeDetailDrawer: typeof import('./src/components/relation/RelationNodeDetailDrawer.vue')['default']
     RelationNodeDrawerHeader: typeof import('./src/components/relation/RelationNodeDrawerHeader.vue')['default']
-    RelationNodeDrawerInsights: typeof import('./src/components/relation/RelationNodeDrawerInsights.vue')['default']
     RelationNodeDrawerRelations: typeof import('./src/components/relation/RelationNodeDrawerRelations.vue')['default']
     RelationNodeInsightBlocks: typeof import('./src/components/relation/RelationNodeInsightBlocks.vue')['default']
     RelationNodeRelatedEntityBlock: typeof import('./src/components/relation/RelationNodeRelatedEntityBlock.vue')['default']

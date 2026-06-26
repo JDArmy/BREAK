@@ -13,7 +13,6 @@ export default [
     ignores: [
       "**/dist/**",
       "**/coverage/**",
-      "savejson.js",
       "**/*.cjs",
       ".eslintrc.cjs",
       "scripts/**",

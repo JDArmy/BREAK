@@ -1,5 +1,15 @@
 # Change log
 
+## 2.28.3
+
+项目清理，移除废弃代码和无用文件：
+
+- 删除废弃组件 `RelationNodeDrawerInsights.vue`（已被 `RelationNodeInsightBlocks.vue` 替代，零引用）
+- 删除废弃 composable `useAnchorTable.ts` 及其对应测试用例和 `.anchor-row` CSS 样式（零引用）
+- 删除早期遗留脚本 `src/BREAK/savejson.cjs`（依赖文件已不存在）
+- 删除一次性链接重试脚本 `scripts/validate/retry-connection-failed.mjs`（未被引用）
+- 清理 `eslint.config.mjs` 中失效的 `savejson.js` 忽略规则
+
 ## 2.28.2
 
 英文 references 独立链接准备：

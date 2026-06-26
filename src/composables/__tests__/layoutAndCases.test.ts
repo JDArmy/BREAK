@@ -267,28 +267,6 @@ describe("布局与案例 composables", () => {
     });
   });
 
-  it("useAnchorTable 根据 hash 返回表格高度与锚点行样式", async () => {
-    const route = { hash: "" };
-    vi.doMock("vue-router", () => ({
-      useRoute: () => route,
-    }));
-    Object.defineProperty(window, "innerHeight", {
-      configurable: true,
-      writable: true,
-      value: 720,
-    });
-    const { useAnchorTable } = await import("@/composables/useAnchorTable");
-    const table = useAnchorTable("id");
-
-    expect(table.getTableHeight()).toBe(620);
-    expect(table.tableRowClassName({ row: { id: "R0001" } })).toBe("");
-
-    route.hash = "#R0001";
-    expect(table.getTableHeight()).toBe("unset");
-    expect(table.tableRowClassName({ row: { id: "R0001" } })).toBe("anchor-row");
-    expect(table.tableRowClassName({ row: { id: "R0002" } })).toBe("");
-  });
-
   it("prefetchAllKnowledgeViews 只触发一次知识库视图预加载", async () => {
     vi.doMock("@/views/RisksView.vue", () => ({ default: {} }));
     vi.doMock("@/views/AvoidancesView.vue", () => ({ default: {} }));
