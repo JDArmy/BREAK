@@ -305,8 +305,13 @@ const primaryReferenceLinks = new Set([
   'https://m.thepaper.cn/newsdetail_forward_31179929', // 敦化市人民法院官方澎湃号
   'https://m.thepaper.cn/newsdetail_forward_33183066', // 夏都西宁官方澎湃号，来源青海省公安厅
   'https://news.ijjnews.com/system/2023/08/15/030131845.shtml', // 晋江新闻网法院通讯员稿，丰泽法院“呼死你”软件产业链案
+  'https://www.hshfy.sh.cn/shfy/web/xxnr.jsp?pa=aaWQ9MTAyMDMxOTYyNCZ4aD0xJmxtZG09bG03NDYPdcssz&zd=xwzx', // 上海高院官网，恶意软件霸屏广告案
   'https://www.sznews.com/news/content/2021-08/28/content_24522078.htm', // 深圳公安发布托管页，福田警方打击涉诈手机黑卡产业链
   'https://news.qq.com/rain/a/20250312A0885900', // 警民直通车上海官方托管页，点餐优惠券漏洞案
+  'https://news.qq.com/rain/a/20220224A06WIA00', // 警民直通车上海官方托管页，货运平台改定位诈骗案
+  'https://www.sznews.com/news/content/2021-06/15/content_24299254.htm', // 深圳新闻网承载龙华警方通报，私家侦探公司案
+  'https://mp.weixin.qq.com/s/tcDg7zap3pX4MivKt6JkoA', // 公安部网安局官方微信，呼死你短信轰炸案
+  'https://news.qq.com/rain/a/20240920A08WA400', // 成都公安官方托管页，篡改货运车辆 GPS 监控数据案
   'https://news.qq.com/rain/a/20260614a04mdv00', // 上海静安官方托管页，七天无理由退货掉包案
   'https://news.cctv.com/2026/06/18/arti1im1sqmvqzkv04azh5w5260618.shtml', // 央视网转载平安北京/朝阳分局调包退货案
   'https://tv.cctv.cn/2026/06/16/VIDE8BAjd4ZlnMMT7J42OnrO260616.shtml', // 央视《新闻直播间》节目页，北京调包退货诈骗案
@@ -317,11 +322,14 @@ const primaryReferenceLinks = new Set([
   'https://m.cyol.com/gb/articles/2021-10/17/content_xyzgdfvxp.html', // 中国青年报客户端来源江都警方，商户收款码非法套现案
   'https://m.thepaper.cn/newsdetail_forward_30782061', // 乌兰浩特市人民法院官方澎湃号，伪造国家机关印章案
   'https://pubg.qq.com/webplat/info/news_version3/33247/33250/33268/33270/m19999/201804/713383.shtml', // 腾讯《绝地求生》官方公告，外挂黑产团伙案
+  'https://lol.qq.com/news/detail.shtml?docid=15623264036510329250', // 腾讯《英雄联盟》官方站，消极比赛封号诉讼案
   'https://zzky.shandong-energy.com/185709/185711/2024/04/32388212.html', // 山东能源枣矿集团官网转载枣西公安微信公众号，虚假招聘诈骗团伙案
   'https://m.gmw.cn/2023-04/12/content_1303339963.htm', // 光明网托管温州市中级人民法院/龙湾法院案例
   'https://www.thepaper.cn/newsdetail_forward_14923193', // 中国共产党武宣县委员会宣传部官方澎湃号
   'https://www.thepaper.cn/newsdetail_forward_33164885', // 云浮市中级人民法院官方澎湃号，供稿罗定法院
   'https://xinwen.bjd.com.cn/content/s6a2bfd65d5de97bd7464c3db.html', // 北京互联网法院供稿
+  'https://xinwen.bjd.com.cn/content/s66249aa1e4b064178156893f.html', // 海淀区人民法院官方，北京 AI 一键去衣案
+  'https://xinwen.bjd.com.cn/content/s6168f10ce4b08aed9d8a566a.html', // 扬州市公安局江都分局，二维码套现案
   'https://hzsc.hangzhou.com.cn/content/content_7015476.htm', // 上城区法院案件通报
   'https://z.hangzhou.com.cn/2022/wangan/content/content_8269934.htm', // 杭州网警以案说法，假冒 imToken 钱包盗币案
   'https://mp.weixin.qq.com/s/zm3kcgvf3bselnsmgdcglq', // 扬州经济技术开发区人民检察院官网要闻列表指向的官方微信原文

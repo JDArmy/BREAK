@@ -1,6 +1,6 @@
 {
   "C1599": {
-    "title": "几毛钱就能控制你的电脑!计算机变“傀儡机”，网络黑客案告破!",
+    "title": "公安部公布打击网络黑客犯罪典型案例",
     "keywords": [
       "网络黑客",
       "远程控制",
@@ -12,19 +12,19 @@
       "网警",
       "计算机入侵"
     ],
-    "summary": "网警破获网络黑客案，嫌疑人利用网络漏洞远程控制他人计算机，将其变为“肉鸡”或“傀儡机”。这些受控计算机被用于发起DDoS攻击，同时集中访问某网站或发送攻击性指令，致目标网站瘫痪。",
+    "summary": "公安部公布8起打击网络黑客犯罪典型案例，覆盖非法侵入、控制计算机信息系统、窃取数据、提供黑客工具和发起网络攻击等情形，展示公安机关对黑客犯罪产业链的侦办与打击。",
     "category": "criminal_verdict",
     "relatedRisks": [
       "R0209"
     ],
     "references": [
       {
-        "title": "几毛钱就能控制你的电脑!计算机变“傀儡机”，网络黑客案告破!",
-        "link": "https://mp.weixin.qq.com/s?__biz=MjM5NzQ5MTkyMA==&mid=2656985186&idx=2&sn=d1e570d32d70e021ad8e5652b9b2aee0&chksm=bd73e5dd8a046ccb3925013461a596e7d49017682a1307fbf16f3089459bd5bd013ebda1cf55&scene=27"
+        "title": "公安机关依法打击网络黑客犯罪取得显著成效 公安部公布8起打击网络黑客犯罪典型案例",
+        "link": "https://www.mps.gov.cn/n2254098/n4904352/c9933851/content.html"
       }
     ],
     "updated": "2026-06-18",
-    "incidentTime": "2019-11",
+    "incidentTime": "2024-09",
     "relatedAttackTools": [
       "AT0013",
       "AT0054"
