@@ -307,6 +307,7 @@ const primaryReferenceLinks = new Set([
   'https://news.ijjnews.com/system/2023/08/15/030131845.shtml', // 晋江新闻网法院通讯员稿，丰泽法院“呼死你”软件产业链案
   'https://www.hshfy.sh.cn/shfy/web/xxnr.jsp?pa=aaWQ9MTAyMDMxOTYyNCZ4aD0xJmxtZG09bG03NDYPdcssz&zd=xwzx', // 上海高院官网，恶意软件霸屏广告案
   'https://www.sznews.com/news/content/2021-08/28/content_24522078.htm', // 深圳公安发布托管页，福田警方打击涉诈手机黑卡产业链
+  'https://www.sznews.com/news/content/2021-12/08/content_24799309.htm', // 深圳南山警方发布托管页，木马盗号冒充熟人诈骗案
   'https://news.qq.com/rain/a/20250312A0885900', // 警民直通车上海官方托管页，点餐优惠券漏洞案
   'https://news.qq.com/rain/a/20220224A06WIA00', // 警民直通车上海官方托管页，货运平台改定位诈骗案
   'https://www.sznews.com/news/content/2021-06/15/content_24299254.htm', // 深圳新闻网承载龙华警方通报，私家侦探公司案
@@ -382,6 +383,7 @@ const primaryReferenceLinks = new Set([
   'https://news.ifeng.com/c/8ocjypfqor1', // 凤凰网托管公安部网安局游戏外挂通报
   'https://m.thepaper.cn/baijiahao_28782951', // 延津县人民法院官方澎湃号
   'https://www.thepaper.cn/newsdetail_forward_2921336', // 浙江法院系统政务稿，首例恶意注册账号案
+  'https://static.nfapp.southcn.com/content/202104/01/c5049044.html', // 南方+承载蕉岭公安发布，内外勾结非法获取企业数据案
   'https://ipr.mofcom.gov.cn/article/gnxw/qt/202112/1966903.html', // 商务部知识产权栏目转载常熟市场监管跨平台盗图处罚
   'https://www.sohu.com/a/1037162346_99923255', // 《方圆》杂志原创，徐州经开区检察院审查起诉
   'https://web.archive.org/web/20220621092007/https://weibo.com/6329746106/LyKD2xUk8', // 学习通官方微博数据泄露传闻声明存档
@@ -440,6 +442,9 @@ const primaryReferenceLinks = new Set([
   'https://mp.weixin.qq.com/s?__biz=mzi1nji5nju4mq==&mid=2247515266&idx=1&sn=4c6c087308a789b4669772ec8f2aef63&chksm=ebb9ea1c5e83f82dcf46c7304595a7abc3ee3d420411372888f73739ee36d90e19404816526b&scene=27', // 公安部网安局官方微信，烟台莱山勒索病毒通报
   'http://finance.sina.com.cn/wm/2026-05-08/doc-inhxcyyr4271612.shtml', // 新浪承载公安部网安局官方账号通报
   'https://finance.sina.com.cn/wm/2026-05-08/doc-inhxcusr4594497.shtml', // 新浪承载公安部网安局官方账号通报
+  'http://www.chinapeace.gov.cn/chinapeace/c100052/2021-10/18/content_12548925.shtml', // 中国长安网，郑州内鬼侵犯公民个人信息案
+  'https://www.gipc.gov.cn/res/pdfFile/6a7f6b6d-f68c-4a22-903a-480c8acc53cc.pdf', // 广东省高级人民法院典型案例，AI 换脸非法获取计算机信息系统数据案
+  'http://www.chinapeace.gov.cn/chinapeace/c100045/2025-12/16/content_12815785.shtml', // 中国长安网，短视频带货诈骗团伙案
   'https://mp.weixin.qq.com/s?__biz=mjm5mtczodg0ma==&mid=2649821281&idx=1&sn=4c5cfd23a22fa9563581871847f89863&chksm=bfd3905763b3ba9d7dfed20dc74856a586350043733c7cdb9c8af73c163ab6d015f264768f97&scene=27', // 南京市场监管相关官方微信托管页，价格违法典型案例
   'https://mp.weixin.qq.com/s?__biz=MzIyMTk1NDkzMg==&mid=2247533157&idx=2&sn=27cc5dbb20b7d0500b59088f46c3f6ff&chksm=e836d47edf415d68d183b1dcbd10f684f5e4ebaeaea49c02209103ed06a95f24d32e7faee253&scene=27', // 茂县公安官方微信托管页，伪造转账截图诈骗通报
 ]);
