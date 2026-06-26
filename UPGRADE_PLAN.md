@@ -7,7 +7,7 @@
 
 ## 0. 当前未完成短板
 
-1. **内容与引用治理仍需闭环**：review 152 + timeout 150 + connection_error 66 条问题链接仍需按域名策略分批复核；高价值案例 primary source 覆盖率为 87.41%（136 个缺口），其中 criminal_verdict 类仍是最大短板。
+1. **内容与引用治理仍需闭环**：review 152 + timeout 150 + connection_error 66 条问题链接仍需按域名策略分批复核；高价值案例 primary source 覆盖率为 88.06%（129 个缺口），其中 criminal_verdict 类仍是最大短板。
 2. **可视化推理能力仍可深化**：缺少完整路径发现交互面板（算法已完成，UI 未实现）；业务场景图谱仅有影响分析模块，独立图谱未开发。
 
 ## 1. 执行原则
@@ -43,11 +43,11 @@
 
 目标：让核心案例优先具备可信 primary source，避免用全量多源率作为低收益 KPI。
 
-已完成：审计工具链已建成（`case-source-quality.mjs`），可按类别统计高价值案例 primary 覆盖率；当前全量覆盖率 72.01%，高价值覆盖率 87.41%，并已将 `view.inews.qq.com` 归入 secondary 来源以减少 unknown 噪声。
+已完成：审计工具链已建成（`case-source-quality.mjs`），可按类别统计高价值案例 primary 覆盖率；当前全量覆盖率 72.40%，高价值覆盖率 88.06%，并已将 `view.inews.qq.com` 归入 secondary 来源以减少 unknown 噪声。
 
 未完成工作：
-- 高价值 1,080 案例中 136 个缺 primary source。按类别分批补源：
-  - `criminal_verdict`：82.44%（105 个缺口，最大短板），优先法院、检察院、公安、监管通报。
+- 高价值 1,080 案例中 129 个缺 primary source。按类别分批补源：
+  - `criminal_verdict`：83.61%（98 个缺口，最大短板），优先法院、检察院、公安、监管通报。
   - `administrative_enforcement`：92.50%（12 个缺口），优先各级市场监管局、网信办官网。
   - `security_incident`：92.94%（18 个缺口），优先厂商公告、官方通报和原始研究。
   - `vulnerability_advisory`：98.51%（1 个缺口）— 已较好。
@@ -64,6 +64,7 @@
 - 最新小批次已补强 `C0179`、`C0379`、`C0733`、`C1080`、`C1104`、`C1105` 共 6 条高价值案例 primary 来源；`C0252` 仅找到司法部治理综述中的同类案例，`C0619` 仅找到官方微信线索但账号归属未稳定核验，暂不按 strict primary 落库。
 - 最新小批次已补强 `C0957`、`C1056`、`C1086`、`C1099`、`C1136`、`C1248` 共 6 条高价值案例 primary 来源；本批多子代理复核中，`C0566`/`C0574` 疑似同案重复，`C0912`/`C0916` 仅有官方公众号线索但缺少稳定可核验页面，`C1111` 为法规事实来源而非具体判例，均暂不硬补。
 - 最新小批次已补强 `C1039`、`C1284` 两条高价值案例 primary 来源；本批复核中 `C0992` 仅找到文章来源为红网的官方普法转载，`C1072` 仅找到媒体账号承载的警方通报，`C1081` 官方微信触发环境验证，均暂不按 strict primary 落库。
+- 最新小批次已补强 `C1220`、`C1280`、`C1283`、`C1337`、`C1338`、`C1372`、`C1478` 共 7 条案例 primary 来源。
 - 补源时同步英文 references title，保持英文 i18n 不写结构字段。
 
 落点：`scripts/validate/case-source-quality.mjs`、`src/BREAK/cases/*.json`、`src/i18n/en/BREAK/cases/*.json`。
