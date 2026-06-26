@@ -280,6 +280,15 @@
     "relatedEntityBlockTitle": "关联实体",
     "relatedEntityTitle": "同类{type}关联",
     "relatedEntitySummary": "当前节点有 {count} 个同类{type}关联实体。",
+    "entityRelation": {
+      "co-involved": "共同参与",
+      "co-occurrence": "共现",
+      "co-used": "共同使用",
+      "complement": "互补",
+      "variant": "变体",
+      "prerequisite": "前提",
+      "escalation": "升级"
+    },
     "hiddenRelatedEntityCount": "还有 {count} 个关联实体未显示，点击显示更多。",
     "collapseRelatedEntityCount": "收起关联实体，仅显示前 6 个。",
     "focusNode": "查看节点详情",

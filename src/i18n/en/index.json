@@ -280,6 +280,15 @@
     "relatedEntityBlockTitle": "Related Entities",
     "relatedEntityTitle": "Related {type} entities",
     "relatedEntitySummary": "This node has {count} related {type} entities of the same type.",
+    "entityRelation": {
+      "co-involved": "Co-involved",
+      "co-occurrence": "Co-occurrence",
+      "co-used": "Co-used",
+      "complement": "Complement",
+      "variant": "Variant",
+      "prerequisite": "Prerequisite",
+      "escalation": "Escalation"
+    },
     "hiddenRelatedEntityCount": "{count} more related entities are hidden. Show more.",
     "collapseRelatedEntityCount": "Collapse related entities and show the first 6 only.",
     "focusNode": "View Node Details",

@@ -419,6 +419,13 @@ export const buildGlobalNodeRelatedEntitySummary = ({
 }: BuildGlobalNodeRelatedEntitySummaryOptions): NodeRelatedEntitySummary | null => {
   const nodeType = getNodeTypeById(nodeId);
 
+  const translateRelation = (relation: string): string => {
+    const key = `relationView.entityRelation.${relation}`;
+    const translated = t(key);
+    // 如果翻译 key 不存在，t() 返回 key 本身，此时退回原始值
+    return translated === key ? relation : translated;
+  };
+
   const collectPairs = (): Array<{
     otherId: string;
     relationText: string;
@@ -434,7 +441,7 @@ export const buildGlobalNodeRelatedEntitySummary = ({
       entity?.relatedRisks?.forEach((r) =>
         pairs.push({
           otherId: r.key,
-          relationText: r.relation,
+          relationText: translateRelation(r.relation),
           relationKey: "relationLine.riskVariant",
         }),
       );
@@ -443,7 +450,7 @@ export const buildGlobalNodeRelatedEntitySummary = ({
       entity?.relatedAvoidances?.forEach((r) =>
         pairs.push({
           otherId: r.key,
-          relationText: r.relation,
+          relationText: translateRelation(r.relation),
           relationKey: "relationLine.subAvoidance",
         }),
       );
@@ -452,7 +459,7 @@ export const buildGlobalNodeRelatedEntitySummary = ({
       entity?.relatedAttackTools?.forEach((r) =>
         pairs.push({
           otherId: r.key,
-          relationText: r.relation,
+          relationText: translateRelation(r.relation),
           relationKey: "relationLine.subAttackTool",
         }),
       );
@@ -462,7 +469,7 @@ export const buildGlobalNodeRelatedEntitySummary = ({
       entity?.relatedThreatActors?.forEach((r) =>
         pairs.push({
           otherId: r.key,
-          relationText: r.relation,
+          relationText: translateRelation(r.relation),
           relationKey: "relationLine.subThreatActor",
         }),
       );
