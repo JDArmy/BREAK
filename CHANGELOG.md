@@ -9,6 +9,15 @@
 - 增强知识库列表项 hover 效果，鼠标经过时展示更明显的高亮背景、边框和轻微位移反馈
 - 增加 `KnowledgeSplitView` 虚拟列表回归测试，覆盖大量条目下的窗口化渲染与末尾条目定位
 
+关系图谱错误边界与用户可见错误提示：
+
+- ECharts `setOption` 3 处裸调用包裹 try/catch，渲染失败时 ElMessage 提示而非白屏
+- 关系图 3 个异步组件（NetworkPane/NodeDetailDrawer/PathExplorerPane）加 `errorComponent`，chunk 加载失败时显示占位提示
+- `performInitialRender` 和路由参数 watch 包裹 try/catch，数据异常时提示而非半渲染态
+- `initLocaleMessages` 加载失败时 ElMessage 提示用户刷新（不走 i18n，防止循环依赖）
+- `useCases` 语言切换失败时 ElMessage 提示
+- 新增 i18n 错误提示 key：`error.chartRenderFailed` / `error.componentLoadFailed` / `error.caseSyncFailed`
+
 ## 2.29.2
 
 EntityAutoLinker 架构加固——提取核心逻辑并增加两层回归测试：

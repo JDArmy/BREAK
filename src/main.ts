@@ -1,4 +1,5 @@
 import { createApp } from "vue";
+import { ElMessage } from "element-plus";
 import App from "./App.vue";
 import router from "./router";
 import { i18n, initLocaleMessages } from "./i18n";
@@ -25,6 +26,7 @@ const MOBILE_IDLE_PRELOAD_DELAY_MS = 15000;
 if (shouldLoadInitialLocaleBeforeMount) {
   initLocaleMessages().catch((error) => {
     console.error("Failed to load initial locale messages:", error);
+    ElMessage({ message: "数据加载失败，请刷新页面", type: "error", plain: true, duration: 5000, grouping: true });
   });
 }
 
@@ -50,6 +52,7 @@ const shouldPreloadOnMobileConnection = () => {
 const preloadLocaleMessages = () => {
   initLocaleMessages().catch((error) => {
     console.error("Failed to load initial locale messages:", error);
+    ElMessage({ message: "数据加载失败，请刷新页面", type: "error", plain: true, duration: 5000, grouping: true });
   });
 };
 

@@ -5,6 +5,7 @@ import RelationGraphContextMenu from "@/components/relation/RelationGraphContext
 import RelationGraphTouchActions from "@/components/relation/RelationGraphTouchActions.vue";
 import RelationSankeyPane from "@/components/relation/RelationSankeyPane.vue";
 import RelationSelectorBar from "@/components/relation/RelationSelectorBar.vue";
+import RelationPaneError from "@/components/relation/RelationPaneError.vue";
 import { useRelationViewModel } from "@/views/relation/useRelationViewModel";
 import { RelationType } from "@/views/relation/relationTypes";
 import {
@@ -18,11 +19,18 @@ const loadRelationNodeDetailDrawer = () =>
   import("@/components/relation/RelationNodeDetailDrawer.vue");
 const loadRelationPathExplorerPane = () =>
   import("@/components/relation/RelationPathExplorerPane.vue");
-const RelationNetworkPane = defineAsyncComponent(loadRelationNetworkPane);
-const RelationNodeDetailDrawer = defineAsyncComponent(
-  loadRelationNodeDetailDrawer
-);
-const RelationPathExplorerPane = defineAsyncComponent(loadRelationPathExplorerPane);
+const RelationNetworkPane = defineAsyncComponent({
+  loader: loadRelationNetworkPane,
+  errorComponent: RelationPaneError,
+});
+const RelationNodeDetailDrawer = defineAsyncComponent({
+  loader: loadRelationNodeDetailDrawer,
+  errorComponent: RelationPaneError,
+});
+const RelationPathExplorerPane = defineAsyncComponent({
+  loader: loadRelationPathExplorerPane,
+  errorComponent: RelationPaneError,
+});
 
 export default defineComponent({
   name: "RelationView",

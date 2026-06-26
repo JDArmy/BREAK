@@ -1,5 +1,6 @@
 import { ref, type Ref } from "vue";
 import type { ECharts, EChartsCoreOption } from "echarts/core";
+import { ElMessage } from "element-plus";
 import type {
   GraphLink,
   GraphNode,
@@ -301,17 +302,21 @@ export const createNetworkChartController = ({
   const updateNetworkSelection = () => {
     if (!networkChart || activeView.value !== "network") return;
     const networkData = getVisibleNetworkData();
-    networkChart.setOption(
-      {
-        series: [
-          {
-            type: "graph",
-            data: networkData.nodes,
-          },
-        ],
-      },
-      { notMerge: false, lazyUpdate: false }
-    );
+    try {
+      networkChart.setOption(
+        {
+          series: [
+            {
+              type: "graph",
+              data: networkData.nodes,
+            },
+          ],
+        },
+        { notMerge: false, lazyUpdate: false }
+      );
+    } catch (err) {
+      console.warn("[relationNetwork] updateNetworkSelection setOption failed:", err);
+    }
     clearNetworkNodeHighlight();
   };
 
@@ -487,9 +492,15 @@ export const createNetworkChartController = ({
         ],
       } satisfies EChartsCoreOption;
 
-      networkChart.setOption(option, { notMerge, lazyUpdate: false });
-      clearNetworkNodeHighlight();
-      networkChart.resize();
+      try {
+        networkChart.setOption(option, { notMerge, lazyUpdate: false });
+        clearNetworkNodeHighlight();
+        networkChart.resize();
+      } catch (err) {
+        console.error("[relationNetwork] renderNetworkChart setOption failed:", err);
+        ElMessage({ message: t("error.chartRenderFailed"), type: "error", plain: true, duration: 3000, grouping: true });
+        return;
+      }
       if (isMobile.value) {
         requestAnimationFrame(() => {
           if (requestId !== renderRequestId) return;

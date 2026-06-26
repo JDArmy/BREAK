@@ -1,5 +1,6 @@
 import { ref, type ComputedRef, type Ref } from "vue";
 import type { ECharts } from "echarts/core";
+import { ElMessage } from "element-plus";
 import type { SankeyLink, SankeyNode } from "@/views/relation/relationTypes";
 import type {
   RelationViewMode,
@@ -155,7 +156,8 @@ export const createSankeyChartController = ({
         .trim();
       const tooltipText = style.getPropertyValue("--break-tooltip-text").trim();
 
-      sankeyChart.setOption({
+      try {
+        sankeyChart.setOption({
         backgroundColor: getComputedStyle(document.documentElement)
           .getPropertyValue("--break-bg-primary")
           .trim(),
@@ -247,6 +249,11 @@ export const createSankeyChartController = ({
           },
         ],
       });
+      } catch (err) {
+        console.error("[relationSankey] renderSankeyChart setOption failed:", err);
+        ElMessage({ message: t("error.chartRenderFailed"), type: "error", plain: true, duration: 3000, grouping: true });
+        return;
+      }
       sankeyChart.off("dblclick");
       sankeyChart.off("contextmenu");
       sankeyChart.off("mousedown");

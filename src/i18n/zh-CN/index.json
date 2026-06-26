@@ -563,6 +563,11 @@
   "viewDetail": "查看详细描述",
   "unknownId": "未知ID",
   "unknownTypeOrId": "未知类型或ID",
+  "error": {
+    "chartRenderFailed": "图表渲染失败，请刷新页面",
+    "componentLoadFailed": "组件加载失败，请刷新页面",
+    "caseSyncFailed": "案例数据加载失败"
+  },
   "relationType": {
     "risk": "风险",
     "avoidance": "规避手段",

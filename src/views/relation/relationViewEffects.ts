@@ -121,14 +121,19 @@ export const setupRelationViewEffects = ({
 
   // 首次渲染初始化：根节点 + 首屏图表 + 全局监听。可被 onMounted 或路由 watch 补跑。
   const performInitialRender = () => {
-    addRootNode();
-    if (activeView.value === "network") {
-      ensureNetworkData({ render: false });
-      renderNetworkChart(false);
-    } else if (activeView.value === "sankey") {
-      renderSankeyChart();
-    } else {
-      ensureNetworkData({ render: false });
+    try {
+      addRootNode();
+      if (activeView.value === "network") {
+        ensureNetworkData({ render: false });
+        renderNetworkChart(false);
+      } else if (activeView.value === "sankey") {
+        renderSankeyChart();
+      } else {
+        ensureNetworkData({ render: false });
+      }
+    } catch (err) {
+      console.error("[relationView] performInitialRender failed:", err);
+      ElMessage({ message: t("error.chartRenderFailed"), type: "error", plain: true, duration: 3000, grouping: true });
     }
     window.addEventListener("resize", resizeNetworkChart);
     window.addEventListener("resize", resizeSankeyChart);
@@ -200,26 +205,31 @@ export const setupRelationViewEffects = ({
   watch(
     [() => route.params.entity, () => route.params.id],
     () => {
-      const entity = route.params.entity as RelationType | undefined;
-      const id = route.params.id as string | undefined;
-      // 视角首页（无 entity/id）保留默认根节点，不置空
-      if (entity) relType.value = entity;
-      if (id) relKey.value = id;
-      selectedNetworkNodeId.value = relKey.value;
-      normalizeAttackPathFilters();
-      // 非法参数重定向后，参数已合法时补跑首次初始化（仅一次）
-      if (needsInit) {
-        needsInit = false;
-        performInitialRender();
-        return;
-      }
-      networkDataReady = false;
-      if (activeView.value === "network") {
-        refreshGraphAfterVisible();
-        networkDataReady = true;
-      } else if (activeView.value === "analysis") {
-        rebuildGraphData({ render: false });
-        networkDataReady = true;
+      try {
+        const entity = route.params.entity as RelationType | undefined;
+        const id = route.params.id as string | undefined;
+        // 视角首页（无 entity/id）保留默认根节点，不置空
+        if (entity) relType.value = entity;
+        if (id) relKey.value = id;
+        selectedNetworkNodeId.value = relKey.value;
+        normalizeAttackPathFilters();
+        // 非法参数重定向后，参数已合法时补跑首次初始化（仅一次）
+        if (needsInit) {
+          needsInit = false;
+          performInitialRender();
+          return;
+        }
+        networkDataReady = false;
+        if (activeView.value === "network") {
+          refreshGraphAfterVisible();
+          networkDataReady = true;
+        } else if (activeView.value === "analysis") {
+          rebuildGraphData({ render: false });
+          networkDataReady = true;
+        }
+      } catch (err) {
+        console.error("[relationView] route params watch failed:", err);
+        ElMessage({ message: t("error.chartRenderFailed"), type: "error", plain: true, duration: 3000, grouping: true });
       }
     }
   );

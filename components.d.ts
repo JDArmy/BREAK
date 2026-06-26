@@ -74,6 +74,7 @@ declare module 'vue' {
     RelationNodeRelatedEntityBlock: typeof import('./src/components/relation/RelationNodeRelatedEntityBlock.vue')['default']
     RelationNodeRootRelationBlock: typeof import('./src/components/relation/RelationNodeRootRelationBlock.vue')['default']
     RelationNodeSpecialInsightBlock: typeof import('./src/components/relation/RelationNodeSpecialInsightBlock.vue')['default']
+    RelationPaneError: typeof import('./src/components/relation/RelationPaneError.vue')['default']
     RelationPathExplorerPane: typeof import('./src/components/relation/RelationPathExplorerPane.vue')['default']
     RelationSankeyPane: typeof import('./src/components/relation/RelationSankeyPane.vue')['default']
     RelationSelectorBar: typeof import('./src/components/relation/RelationSelectorBar.vue')['default']

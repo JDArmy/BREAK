@@ -1,6 +1,7 @@
 import type { Ref } from "vue";
 import { ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
+import { ElMessage } from "element-plus";
 import { loadCases, type Cases } from "@/BREAK/cases";
 import { mergeWithStructure } from "@/i18n";
 
@@ -55,6 +56,7 @@ async function syncCasesForLocale(newLocale: string) {
     }
   } catch (err) {
     console.error("[useCases] 切换语言时加载案例数据失败:", err);
+    ElMessage({ message: "案例数据加载失败", type: "error", plain: true, duration: 3000, grouping: true });
   }
 }
 

@@ -563,6 +563,11 @@
   "viewDetail": "View Detail",
   "unknownId": "Unknown ID",
   "unknownTypeOrId": "Unknown type or ID",
+  "error": {
+    "chartRenderFailed": "Chart rendering failed. Please refresh the page.",
+    "componentLoadFailed": "Component failed to load. Please refresh the page.",
+    "caseSyncFailed": "Failed to load case data."
+  },
   "relationType": {
     "risk": "Risk",
     "avoidance": "Avoidance",
