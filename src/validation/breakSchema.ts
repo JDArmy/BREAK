@@ -11,24 +11,36 @@ const keywordArray = z
 const avoidanceCategorySchema = z.enum(["AC01", "AC02", "AC03", "AC04"]);
 const avoidanceEffectivenessSchema = z.enum(["high", "medium", "low"]);
 const riskComplexitySchema = z.enum(["basic", "intermediate", "advanced"]);
+const riskRelationTypeSchema = z.enum(["prerequisite", "co-occurrence", "escalation", "variant"]);
+const avoidanceRelationTypeSchema = z.enum(["prerequisite", "complement", "alternative", "mitigates-gap"]);
+const attackToolRelationTypeSchema = z.enum(["prerequisite", "co-used", "alternative", "capability-upgrade"]);
+const threatActorRelationTypeSchema = z.enum(["co-involved"]);
+const caseCategorySchema = z.enum([
+  "criminal_verdict",
+  "administrative_enforcement",
+  "security_incident",
+  "vulnerability_advisory",
+  "academic_research",
+  "news_report",
+]);
 const riskRelationSchema = z.object({
   key: nonEmptyString,
-  relation: z.enum(["prerequisite", "co-occurrence", "escalation", "variant"]),
+  relation: riskRelationTypeSchema,
   note: nonEmptyString.optional(),
 });
 const avoidanceRelationSchema = z.object({
   key: nonEmptyString,
-  relation: z.enum(["prerequisite", "complement", "alternative", "mitigates-gap"]),
+  relation: avoidanceRelationTypeSchema,
   note: nonEmptyString.optional(),
 });
 const attackToolRelationSchema = z.object({
   key: nonEmptyString,
-  relation: z.enum(["prerequisite", "co-used", "alternative", "capability-upgrade"]),
+  relation: attackToolRelationTypeSchema,
   note: nonEmptyString.optional(),
 });
 const threatActorRelationSchema = z.object({
   key: nonEmptyString,
-  relation: z.enum(["co-involved"]),
+  relation: threatActorRelationTypeSchema,
   note: nonEmptyString.optional(),
 });
 
@@ -140,14 +152,7 @@ export const caseSchema = z.object({
   keywords: keywordArray,
   summary: nonEmptyString,
   description: z.string().optional(),
-  category: z.enum([
-    "criminal_verdict",
-    "administrative_enforcement",
-    "security_incident",
-    "vulnerability_advisory",
-    "academic_research",
-    "news_report",
-  ]),
+  category: caseCategorySchema,
   incidentTime: z.string().optional(),
   relatedRisks: idArray.min(1, "relatedRisks 不能为空"),
   relatedAttackTools: idArray.default([]),
@@ -168,6 +173,34 @@ export const entitySchemas = {
 } as const;
 
 export type EntitySchemaKey = keyof typeof entitySchemas;
+
+// ── 从 Zod schema 推导的 TS 类型（唯一类型来源，消除双重维护） ──
+
+export type Reference = z.infer<typeof referenceSchema>;
+
+export type RiskRelationType = z.infer<typeof riskRelationTypeSchema>;
+export type RiskRelation = z.infer<typeof riskRelationSchema>;
+export type RiskComplexity = z.infer<typeof riskComplexitySchema>;
+export type Risk = z.infer<typeof riskSchema>;
+
+export type AvoidanceCategory = z.infer<typeof avoidanceCategorySchema>;
+export type AvoidanceEffectiveness = z.infer<typeof avoidanceEffectivenessSchema>;
+export type AvoidanceRelationType = z.infer<typeof avoidanceRelationTypeSchema>;
+export type AvoidanceRelation = z.infer<typeof avoidanceRelationSchema>;
+export type Avoidance = z.infer<typeof avoidanceSchema>;
+
+export type AttackToolRelationType = z.infer<typeof attackToolRelationTypeSchema>;
+export type AttackToolRelation = z.infer<typeof attackToolRelationSchema>;
+export type AttackTool = z.infer<typeof attackToolSchema>;
+
+export type ThreatActorRelationType = z.infer<typeof threatActorRelationTypeSchema>;
+export type ThreatActorRelation = z.infer<typeof threatActorRelationSchema>;
+export type ThreatActor = z.infer<typeof threatActorSchema>;
+
+export type Term = z.infer<typeof termSchema>;
+
+export type CaseCategory = z.infer<typeof caseCategorySchema>;
+export type CaseEntity = z.infer<typeof caseSchema>;
 
 export function formatZodIssues(error: z.ZodError): string[] {
   return error.issues.map((issue) => {

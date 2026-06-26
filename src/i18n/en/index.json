@@ -566,7 +566,9 @@
   "error": {
     "chartRenderFailed": "Chart rendering failed. Please refresh the page.",
     "componentLoadFailed": "Component failed to load. Please refresh the page.",
-    "caseSyncFailed": "Failed to load case data."
+    "caseSyncFailed": "Failed to load case data.",
+    "retry": "Click to retry",
+    "dataLoadFailed": "Data loading failed. Please check your network and try again."
   },
   "relationType": {
     "risk": "Risk",

@@ -6,6 +6,7 @@ import {
   getRelationDefaultViewByPerspective,
   type RelationPerspectiveKey,
 } from "@/views/relation/relationAnalysisPerspectives";
+import { ElMessage } from "element-plus";
 
 // 扩展 vue-router 的 RouteMeta 类型
 declare module "vue-router" {
@@ -290,7 +291,10 @@ const router = createRouter({
 router.beforeEach((to) => {
   // 通过路由 meta 标记判断是否需要加载 BREAK 数据，无需维护硬编码路由名集合
   if (to.meta.needsBreakData) {
-    void initLocaleMessages();
+    void initLocaleMessages().catch((err) => {
+      console.error("[router] BREAK 数据加载失败:", err);
+      ElMessage({ message: String(err?.message || "Data load failed"), type: "error", plain: true, duration: 5000, grouping: true });
+    });
   }
 
   // 关系图谱路由：按视角预加载对应 ECharts

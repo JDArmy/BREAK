@@ -1,10 +1,13 @@
 <script setup lang="ts">
-import { computed, markRaw, onUnmounted, shallowRef, type Component } from "vue";
+import { computed, markRaw, onUnmounted, ref, shallowRef, type Component } from "vue";
 import { useRoute } from "vue-router";
+import { useI18n } from "vue-i18n";
 import { initLocaleMessages } from "@/i18n";
 
 const route = useRoute();
+const { t } = useI18n();
 const relationViewComponent = shallowRef<Component | null>(null);
+const loadError = ref(false);
 
 const currentEntity = computed(() => {
   const type = typeof route.params.entity === "string" ? route.params.entity : "";
@@ -23,6 +26,10 @@ const loadRelationView = () => {
     // 组件已卸载则不再写入，避免操作已销毁的响应式状态
     if (cancelled) return;
     relationViewComponent.value = markRaw(mod.default);
+  }).catch((err) => {
+    if (cancelled) return;
+    console.error("[RelationRouteShell] 加载关系视图失败:", err);
+    loadError.value = true;
   });
 };
 
@@ -33,6 +40,11 @@ if (window.innerWidth >= 768) {
 } else {
   loadTimer = window.setTimeout(loadRelationView, 0);
 }
+
+const retryLoad = () => {
+  loadError.value = false;
+  loadRelationView();
+};
 
 onUnmounted(() => {
   cancelled = true;
@@ -48,7 +60,20 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section v-if="!relationViewComponent" class="relation-route-shell" aria-busy="true">
+  <section v-if="loadError" class="relation-route-shell" role="alert">
+    <div class="relation-route-shell__panel relation-route-shell__panel--error">
+      <div class="relation-route-shell__error-icon" aria-hidden="true">!</div>
+      <div>
+        <div class="relation-route-shell__title">{{ t("error.componentLoadFailed") }}</div>
+        <div class="relation-route-shell__meta">
+          <a href="javascript:void(0)" class="relation-route-shell__retry" @click="retryLoad">
+            {{ t("error.retry") }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section v-else-if="!relationViewComponent" class="relation-route-shell" aria-busy="true">
     <div class="relation-route-shell__panel">
       <div class="relation-route-shell__spinner" aria-hidden="true"></div>
       <div>
@@ -105,6 +130,31 @@ onUnmounted(() => {
   color: var(--break-text-muted);
   font-size: 0.75rem;
   line-height: 1.4;
+}
+
+.relation-route-shell__panel--error {
+  border-color: var(--break-danger, #f56c6c);
+}
+
+.relation-route-shell__error-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--break-danger, #f56c6c);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.relation-route-shell__retry {
+  color: var(--break-link);
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 0.75rem;
 }
 
 @keyframes relation-route-shell-spin {

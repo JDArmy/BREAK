@@ -1,5 +1,14 @@
 # Change log
 
+## 2.29.4
+
+架构 Review 改进：
+
+- Zod Schema 与 TS 接口合并：所有实体类型（Risk/Avoidance/AttackTool/ThreatActor/Term/CaseEntity 及关系类型）改为由 `z.infer<>` 从 Zod schema 自动推导，消除 `breakSchema.ts` 与 `types.ts` 双重维护。`types.ts` 保留为重导出入口保持向后兼容
+- RelationRouteShell 错误兜底：动态 `import()` 添加 `.catch` 处理，加载失败时显示错误提示与重试按钮，不再产生 unhandled rejection
+- 路由守卫 i18n 加载失败 UI 反馈：`beforeEach` 中 `initLocaleMessages` 添加 `.catch` + ElMessage 错误提示
+- 新增 i18n key：`error.retry`、`error.dataLoadFailed`
+
 ## 2.29.3
 
 优化 Case 列表大数据浏览体验：
