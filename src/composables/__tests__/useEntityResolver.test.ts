@@ -132,7 +132,7 @@ describe("useEntityResolver", () => {
 
     vi.doMock("@/composables/useCases", () => ({
       useCases: () => ({
-        cases: vue.ref(null),
+        cases: vue.ref({}),
         loaded: vue.ref(false),
         ensureCases: vi.fn(),
       }),
@@ -171,7 +171,7 @@ describe("useEntityResolver", () => {
 
     vi.doMock("@/composables/useCases", () => ({
       useCases: () => ({
-        cases: vue.ref(null),
+        cases: vue.ref({}),
         loaded: vue.ref(false),
         ensureCases: vi.fn(),
       }),
@@ -204,7 +204,7 @@ describe("useEntityResolver", () => {
 
     vi.doMock("@/composables/useCases", () => ({
       useCases: () => ({
-        cases: vue.ref(null),
+        cases: vue.ref({}),
         loaded: vue.ref(false),
         ensureCases: vi.fn(),
       }),
@@ -235,7 +235,7 @@ describe("useEntityResolver", () => {
 
     vi.doMock("@/composables/useCases", () => ({
       useCases: () => ({
-        cases: vue.ref(null),
+        cases: vue.ref({}),
         loaded: vue.ref(false),
         ensureCases: ensureMock,
       }),
@@ -245,6 +245,41 @@ describe("useEntityResolver", () => {
     const { resolve } = useEntityResolver();
 
     resolve("C0001");
+    expect(ensureMock).toHaveBeenCalled();
+  });
+
+  it("Case 懒加载：cases 初始为空对象 {} 时仍触发加载", async () => {
+    // 回归保障：真实 useCases 的 cases 初始值是 ref({})（truthy），
+    // 不能用 !cases.value 判断是否需要加载，必须用 loaded ref。
+    const vue = await vi.importActual<typeof import("vue")>("vue");
+    const ensureMock = vi.fn();
+
+    vi.doMock("vue-i18n", () => ({
+      useI18n: () => ({
+        t: (key: string) => key,
+        te: () => false,
+      }),
+    }));
+
+    vi.doMock("vue-router", () => ({
+      useRouter: () => ({
+        resolve: () => ({ href: "#/knowledges/case/detail/C0001" }),
+      }),
+    }));
+
+    vi.doMock("@/composables/useCases", () => ({
+      useCases: () => ({
+        cases: vue.ref({}), // 真实初始值：空对象，truthy
+        loaded: vue.ref(false),
+        ensureCases: ensureMock,
+      }),
+    }));
+
+    const { useEntityResolver } = await import("@/composables/useEntityResolver");
+    const { resolve } = useEntityResolver();
+
+    resolve("C0001");
+    // 即使 cases.value 是 {}（truthy），loaded=false 仍应触发 ensureCases
     expect(ensureMock).toHaveBeenCalled();
   });
 
@@ -323,7 +358,7 @@ describe("useEntityResolver", () => {
 
     vi.doMock("@/composables/useCases", () => ({
       useCases: () => ({
-        cases: vue.ref(null),
+        cases: vue.ref({}),
         loaded: vue.ref(false),
         ensureCases: vi.fn(),
       }),
