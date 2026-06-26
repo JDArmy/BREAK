@@ -18,14 +18,13 @@
  * 由 EntityAutoLinker.vue 的 DOM 操作动态添加 class="entity-id-auto"。
  */
 .entity-id-auto {
-  border-bottom: 1px dashed var(--el-color-primary);
+  border-bottom: 1px dashed currentColor;
   cursor: pointer;
-  color: var(--el-color-primary);
+  color: inherit;
   text-decoration: none;
-  transition: border-color 0.2s, color 0.2s;
+  transition: border-color 0.2s;
 }
 
 .entity-id-auto:hover {
   border-bottom-style: solid;
-  color: var(--el-color-primary-light-3);
 }
