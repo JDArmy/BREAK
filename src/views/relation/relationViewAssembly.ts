@@ -597,13 +597,11 @@ export const createRelationViewAssembly = ({
     [RelationType.risk, "r"],
     [RelationType.avoidance, "a"],
   ];
-  let isUpdatingFiltersFromRoute = false;
 
   // State → URL
   watch(
     () => ({ ...graphData.attackPathFilters.value }),
     (filters) => {
-      if (isUpdatingFiltersFromRoute) return;
       const perspective = getRelationPerspectiveFromRoute(route.name);
       if (perspective !== "defenseCoverage") return;
       const query = { ...route.query };
@@ -632,7 +630,6 @@ export const createRelationViewAssembly = ({
     ([queryTa, queryAt, queryR, queryA]) => {
       const perspective = getRelationPerspectiveFromRoute(route.name);
       if (perspective !== "defenseCoverage") return;
-      isUpdatingFiltersFromRoute = true;
       const queryValues = [queryTa, queryAt, queryR, queryA];
       const nextFilters: Record<string, string | undefined> = {};
       let filtersChanged = false;
@@ -647,7 +644,6 @@ export const createRelationViewAssembly = ({
       if (filtersChanged) {
         graphData.attackPathFilters.value = nextFilters;
       }
-      nextTick(() => { isUpdatingFiltersFromRoute = false; });
     },
     { immediate: true },
   );
