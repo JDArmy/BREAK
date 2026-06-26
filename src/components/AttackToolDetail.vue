@@ -7,6 +7,8 @@ import ReferenceList from "@/components/ReferenceList.vue";
 import { ArrowLeft, TopRight } from "@element-plus/icons-vue";
 import iconRelation from "./icons/iconRelation.vue";
 import { useDrawerWidth } from "@/composables/useDrawerWidth";
+import { entityDetailHref } from "@/utils/entityRoute";
+import { getEntityEntry } from "@/BREAK/entityRegistry";
 
 const TermDetail = defineAsyncComponent(() => import("@/components/TermDetail.vue"));
 const AvoidanceDetail = defineAsyncComponent(() => import("@/components/AvoidanceDetail.vue"));
@@ -42,20 +44,20 @@ const relatedTerms = computed(() => {
 const router = useRouter();
 
 const openRelationGraph = (atKey: string) => {
+  const entry = getEntityEntry("attackTool");
   const route = router.resolve({
-    name: "relationAttackPathEntity",
-    params: { entity: "attack-tool", id: atKey },
+    name: entry.relationPerspectiveRouteName,
+    params: { entity: entry.relationKey, id: atKey },
   });
   window.open(route.href, "_blank", "noopener,noreferrer");
 };
 
 // 跳知识库详情页（新窗口）的 href
-const detailHref = (atKey: string) =>
-  router.resolve({ name: "knowledgesAttackToolDetail", params: { atKey } }).href;
+const detailHref = computed(() => entityDetailHref(router, props.atKey, "attackTool") ?? "");
 
 // 新窗口打开知识库详情页
-const openDetail = (atKey: string) => {
-  window.open(detailHref(atKey), "_blank", "noopener,noreferrer");
+const openDetail = () => {
+  if (detailHref.value) window.open(detailHref.value, "_blank", "noopener,noreferrer");
 };
 </script>
 
@@ -80,7 +82,7 @@ const openDetail = (atKey: string) => {
     </template>
     <div class="desc">
       <strong>{{ $t("ID") }}:&nbsp;</strong>
-      <a :href="detailHref(atKey)" target="_blank" rel="noopener" class="id-link">
+      <a :href="detailHref" target="_blank" rel="noopener" class="id-link">
         {{ atKey }}
         <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
       </a>
@@ -116,7 +118,7 @@ const openDetail = (atKey: string) => {
           v-for="relation in relatedAttackTools"
           :key="`${relation.key}-${relation.relation}`"
           class="entity-link"
-          :href="detailHref(relation.key)"
+          :href="entityDetailHref(router, relation.key, 'attackTool') ?? ''"
           target="_blank"
           rel="noopener"
         >
@@ -144,7 +146,7 @@ const openDetail = (atKey: string) => {
       <ReferenceList type="attackTools" :entityKey="atKey" />
     </div>
     <div class="desc">
-      <el-button type="primary" plain size="small" @click="openDetail(atKey)">
+      <el-button type="primary" plain size="small" @click="openDetail()">
         {{ $t("viewDetail") }}
         <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
       </el-button>

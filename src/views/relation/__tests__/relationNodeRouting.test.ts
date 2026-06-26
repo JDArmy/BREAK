@@ -36,6 +36,21 @@ describe("relationNodeRouting", () => {
     });
   });
 
+  it("falls back to risk perspective for types without a perspective route", () => {
+    const router = createRouter();
+
+    // term 没有关系图视角路由，兜底到风险视角
+    pushRelationNodeRoute(router as never, RelationType.term, "T0001");
+
+    expect(router.push).toHaveBeenCalledWith({
+      name: "relationRiskEntity",
+      params: {
+        entity: RelationType.term,
+        id: "T0001",
+      },
+    });
+  });
+
   it.each([
     [RelationType.risk, "R0001", "knowledgesRiskDetail", "rKey"],
     [RelationType.avoidance, "A0001", "knowledgesAvoidanceDetail", "aKey"],
@@ -50,6 +65,18 @@ describe("relationNodeRouting", () => {
     expect(router.push).toHaveBeenCalledWith({
       name: routeName,
       params: { [paramKey]: id },
+    });
+  });
+
+  it("falls back to risk detail route for unregistered entity types", () => {
+    const router = createRouter();
+
+    // "all" 不在 entityRegistry 中，兜底到 risk 的 detail 路由
+    pushDetailNodeRoute(router as never, RelationType.all, "R0001");
+
+    expect(router.push).toHaveBeenCalledWith({
+      name: "knowledgesRiskDetail",
+      params: { rKey: "R0001" },
     });
   });
 

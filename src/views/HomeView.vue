@@ -6,6 +6,7 @@ import { useRouter, useRoute } from "vue-router";
 import { useBreakpoints } from "@/composables/useBreakpoints";
 import { useDrawerRoute } from "@/composables/useDrawerRoute";
 import { useHomeSceneLayout, useSubRiskToggle } from "@/composables/useHomeSceneLayout";
+import { entityRegistry } from "@/BREAK/entityRegistry";
 import { useI18n } from "vue-i18n";
 
 const RiskDetail = defineAsyncComponent(() => import("@/components/RiskDetail.vue"));
@@ -165,14 +166,10 @@ const { subRisks, hideSubRisks, hideAllSubRisks } = useSubRiskToggle();
 /////////////////////////////////////////////////////////////////////
 // 抽屉路由管理——统一使用 useDrawerRoute composable
 
-// 业务场景下的实体抽屉路由名集合（关闭抽屉时据此回到 businessScene 而非 home）
-const businessSceneDrawerRouteNames = [
-  "businessSceneRiskDetail",
-  "businessSceneAvoidanceDetail",
-  "businessSceneAttackToolDetail",
-  "businessSceneThreatActorDetail",
-  "businessSceneTermDetail",
-];
+// 业务场景下的实体抽屉路由名集合（从 entityRegistry 派生）
+const businessSceneDrawerRouteNames = entityRegistry
+  .map(e => e.businessSceneDetailRouteName)
+  .filter(Boolean);
 const isBusinessSceneDrawerRoute = (name: unknown) =>
   typeof name === "string" && businessSceneDrawerRouteNames.includes(name);
 

@@ -4,6 +4,7 @@ import {
   entityI18nPrefix,
   getEntityEntry,
   getEntityEntryByBreakKey,
+  getEntityEntryByRelationKey,
   entityRegistry,
   ENTITY_ID_PATTERN,
   ALL_ENTITY_TYPES,
@@ -87,6 +88,21 @@ describe("entityRegistry", () => {
     });
   });
 
+  describe("getEntityEntryByRelationKey", () => {
+    it("按 relationKey 查找", () => {
+      expect(getEntityEntryByRelationKey("risk")?.type).toBe("risk");
+      expect(getEntityEntryByRelationKey("avoidance")?.type).toBe("avoidance");
+      expect(getEntityEntryByRelationKey("attack-tool")?.type).toBe("attackTool");
+      expect(getEntityEntryByRelationKey("threat-actor")?.type).toBe("threatActor");
+      expect(getEntityEntryByRelationKey("term")?.type).toBe("term");
+      expect(getEntityEntryByRelationKey("case")?.type).toBe("case");
+    });
+
+    it("不存在的 relationKey 返回 undefined", () => {
+      expect(getEntityEntryByRelationKey("unknown")).toBeUndefined();
+    });
+  });
+
   describe("ENTITY_ID_PATTERN", () => {
     it("匹配各种实体 ID", () => {
       const text = "风险 R0001 和攻击工具 AT0002-001 以及案例 C1234";
@@ -116,14 +132,25 @@ describe("entityRegistry", () => {
       for (const entry of entityRegistry) {
         expect(entry.type).toBeTruthy();
         expect(entry.idPrefix).toBeTruthy();
+        expect(entry.relationKey).toBeTruthy();
         expect(entry.paramKey).toBeTruthy();
         expect(entry.breakKey).toBeTruthy();
         expect(entry.i18nPath).toBeTruthy();
         expect(entry.typeLabelKey).toBeTruthy();
+        expect(entry.listRouteName).toBeTruthy();
         expect(entry.detailRouteName).toBeTruthy();
         expect(entry.fieldPriority.length).toBeGreaterThan(0);
         expect(["i18n", "lazy"]).toContain(entry.dataSource);
       }
+    });
+
+    it("关系图视角路由名正确配置", () => {
+      expect(getEntityEntry("risk").relationPerspectiveRouteName).toBe("relationRiskEntity");
+      expect(getEntityEntry("avoidance").relationPerspectiveRouteName).toBe("relationDefenseCoverageEntity");
+      expect(getEntityEntry("attackTool").relationPerspectiveRouteName).toBe("relationAttackPathEntity");
+      expect(getEntityEntry("threatActor").relationPerspectiveRouteName).toBe("relationAttackPathEntity");
+      expect(getEntityEntry("term").relationPerspectiveRouteName).toBe("");
+      expect(getEntityEntry("case").relationPerspectiveRouteName).toBe("");
     });
   });
 });

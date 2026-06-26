@@ -8,6 +8,8 @@ import { ArrowLeft, TopRight } from "@element-plus/icons-vue";
 
 import iconRelation from "./icons/iconRelation.vue";
 import { useDrawerWidth } from "@/composables/useDrawerWidth";
+import { entityDetailHref } from "@/utils/entityRoute";
+import { getEntityEntry } from "@/BREAK/entityRegistry";
 
 const AvoidanceDetail = defineAsyncComponent(() => import("@/components/AvoidanceDetail.vue"));
 const AttackToolDetail = defineAsyncComponent(() => import("@/components/AttackToolDetail.vue"));
@@ -62,15 +64,14 @@ const termKey = ref("");
 
 const openRelationGraph = (rKey: string) => {
   const route = router.resolve({
-    name: "relationRiskEntity",
+    name: getEntityEntry("risk").relationPerspectiveRouteName,
     params: { entity: "risk", id: rKey },
   });
   window.open(route.href, "_blank", "noopener,noreferrer");
 };
 
 // 跳知识库详情页（新窗口）的 href
-const detailHref = (rKey: string) =>
-  router.resolve({ name: "knowledgesRiskDetail", params: { rKey } }).href;
+const detailHref = (rKey: string) => entityDetailHref(router, rKey, "risk") ?? "";
 
 // 新窗口打开知识库详情页
 const openDetail = (rKey: string) => {

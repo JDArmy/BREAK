@@ -1,5 +1,6 @@
 import BREAK from "@/BREAK";
 import type { AttackToolRelation, AvoidanceRelation, RiskRelation, ThreatActorRelation } from "@/BREAK/types";
+import { getEntityEntry, type EntityType } from "@/BREAK/entityRegistry";
 
 type Translate = (key: string, named?: Record<string, unknown>) => string;
 
@@ -20,13 +21,14 @@ function keyByTitle<T extends { title: string }>(records: Record<string, T>, tit
 }
 
 function translatedEntityTitle(
-  type: "avoidances" | "attackTools" | "threatActors",
+  type: EntityType,
   title: string,
   t: Translate,
 ) {
-  const records = BREAK[type] as Record<string, { title: string }>;
+  const entry = getEntityEntry(type);
+  const records = BREAK[entry.breakKey as keyof typeof BREAK] as Record<string, { title: string }>;
   const key = keyByTitle(records, title);
-  return key ? t(`BREAK.${type}.${key}.title`) : title;
+  return key ? t(`${entry.i18nPath}.${key}.title`) : title;
 }
 
 function translatedRiskSceneTitle(title: string, t: Translate) {
@@ -112,8 +114,9 @@ export function formatRiskRelationNote(
 ) {
   if (!relation.note || !isEnglish(locale)) return relation.note || "";
 
-  const fromTitle = t(`BREAK.risks.${sourceKey}.title`);
-  const toTitle = t(`BREAK.risks.${relation.key}.title`);
+  const riskI18n = getEntityEntry("risk").i18nPath;
+  const fromTitle = t(`${riskI18n}.${sourceKey}.title`);
+  const toTitle = t(`${riskI18n}.${relation.key}.title`);
   const note = relation.note;
 
   if (note.includes("在定义或描述中互相指向")) {
@@ -129,52 +132,52 @@ export function formatRiskRelationNote(
     return t("relationNote.riskSubtypeVariant", { fromTitle, toTitle });
   }
 
-  const attackToolDirect = note.match(/均可由攻击工具“(.+)”直接造成/);
+  const attackToolDirect = note.match(/均可由攻击工具"(.+)"直接造成/);
   if (attackToolDirect) {
     return t("relationNote.riskSharedDirectAttackTool", {
       fromTitle,
       toTitle,
-      toolTitle: translatedEntityTitle("attackTools", attackToolDirect[1], t),
+      toolTitle: translatedEntityTitle("attackTool", attackToolDirect[1], t),
     });
   }
 
-  const attackToolIndirect = note.match(/均受攻击工具“(.+)”间接支持/);
+  const attackToolIndirect = note.match(/均受攻击工具"(.+)"间接支持/);
   if (attackToolIndirect) {
     return t("relationNote.riskSharedIndirectAttackTool", {
       fromTitle,
       toTitle,
-      toolTitle: translatedEntityTitle("attackTools", attackToolIndirect[1], t),
+      toolTitle: translatedEntityTitle("attackTool", attackToolIndirect[1], t),
     });
   }
 
-  const threatActorDirect = note.match(/均可由威胁行为者“(.+)”直接造成/);
+  const threatActorDirect = note.match(/均可由威胁行为者"(.+)"直接造成/);
   if (threatActorDirect) {
     return t("relationNote.riskSharedDirectThreatActor", {
       fromTitle,
       toTitle,
-      actorTitle: translatedEntityTitle("threatActors", threatActorDirect[1], t),
+      actorTitle: translatedEntityTitle("threatActor", threatActorDirect[1], t),
     });
   }
 
-  const threatActorIndirect = note.match(/均受威胁行为者“(.+)”间接支持/);
+  const threatActorIndirect = note.match(/均受威胁行为者"(.+)"间接支持/);
   if (threatActorIndirect) {
     return t("relationNote.riskSharedIndirectThreatActor", {
       fromTitle,
       toTitle,
-      actorTitle: translatedEntityTitle("threatActors", threatActorIndirect[1], t),
+      actorTitle: translatedEntityTitle("threatActor", threatActorIndirect[1], t),
     });
   }
 
-  const avoidance = note.match(/共享规避手段“(.+)”/);
+  const avoidance = note.match(/共享规避手段"(.+)"/);
   if (avoidance) {
     return t("relationNote.riskSharedAvoidance", {
       fromTitle,
       toTitle,
-      avoidanceTitle: translatedEntityTitle("avoidances", avoidance[1], t),
+      avoidanceTitle: translatedEntityTitle("avoidance", avoidance[1], t),
     });
   }
 
-  const riskScene = note.match(/同属“(.+)”风险场景/);
+  const riskScene = note.match(/同属"(.+)"风险场景/);
   if (riskScene) {
     return t("relationNote.riskSharedScene", {
       fromTitle,

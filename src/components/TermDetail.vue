@@ -5,6 +5,7 @@ import { useRouter } from "vue-router";
 import BREAK from "@/BREAK";
 import ReferenceList from "@/components/ReferenceList.vue";
 import { getMessageStringArray } from "@/utils/i18nMessage";
+import { entityDetailHref } from "@/utils/entityRoute";
 
 import { ArrowLeft, TopRight } from "@element-plus/icons-vue";
 import { useDrawerWidth } from "@/composables/useDrawerWidth";
@@ -25,10 +26,9 @@ const aliases = computed(() =>
 );
 
 // 跳知识库详情页（新窗口）
-const detailHref = (tKey: string) =>
-  router.resolve({ name: "knowledgesTermDetail", params: { tKey } }).href;
-const openDetail = (tKey: string) => {
-  window.open(detailHref(tKey), "_blank", "noopener,noreferrer");
+const detailHref = computed(() => entityDetailHref(router, props.tKey, "term"));
+const openDetail = () => {
+  if (detailHref.value) window.open(detailHref.value, "_blank", "noopener,noreferrer");
 };
 </script>
 
@@ -51,7 +51,7 @@ const openDetail = (tKey: string) => {
     </template>
     <div class="desc">
       <strong>{{ $t("termId") }}:&nbsp;</strong>
-      <a :href="detailHref(tKey)" target="_blank" rel="noopener" class="id-link">
+      <a :href="detailHref" target="_blank" rel="noopener" class="id-link">
         {{ tKey }}
         <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
       </a>
@@ -112,7 +112,7 @@ const openDetail = (tKey: string) => {
       <ReferenceList type="terms" :entity-key="tKey" />
     </div>
     <div class="desc">
-      <el-button type="primary" plain size="small" @click="openDetail(tKey)">
+      <el-button type="primary" plain size="small" @click="openDetail()">
         {{ $t("viewDetail") }}
         <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
       </el-button>

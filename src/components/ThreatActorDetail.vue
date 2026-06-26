@@ -7,6 +7,8 @@ import ReferenceList from "@/components/ReferenceList.vue";
 import { ArrowLeft, TopRight } from "@element-plus/icons-vue";
 import iconRelation from "./icons/iconRelation.vue";
 import { useDrawerWidth } from "@/composables/useDrawerWidth";
+import { entityDetailHref } from "@/utils/entityRoute";
+import { getEntityEntry } from "@/BREAK/entityRegistry";
 
 const TermDetail = defineAsyncComponent(() => import("@/components/TermDetail.vue"));
 
@@ -34,19 +36,18 @@ const termKey = ref("");
 
 const openRelationGraph = (taKey: string) => {
   const route = router.resolve({
-    name: "relationAttackPathEntity",
+    name: getEntityEntry("threatActor").relationPerspectiveRouteName,
     params: { entity: "threat-actor", id: taKey },
   });
   window.open(route.href, "_blank", "noopener,noreferrer");
 };
 
 // 跳知识库详情页（新窗口）的 href
-const detailHref = (taKey: string) =>
-  router.resolve({ name: "knowledgesThreatActorDetail", params: { taKey } }).href;
+const detailHref = (taKey: string) => entityDetailHref(router, taKey, "threatActor");
 
 // 新窗口打开知识库详情页
 const openDetail = (taKey: string) => {
-  window.open(detailHref(taKey), "_blank", "noopener,noreferrer");
+  window.open(detailHref(taKey)!, "_blank", "noopener,noreferrer");
 };
 </script>
 

@@ -1,5 +1,17 @@
 # Change log
 
+## 2.29.7
+
+Entity Registry 硬编码清理：
+
+- 注册表新增 `listRouteName`、`relationPerspectiveRouteName` 字段，覆盖知识库列表路由和关系图视角路由
+- SearchDialog：3 套详情路由映射 + ID 前缀推断 + 首页/业务场景路由集合全部改为 Registry 派生
+- EntityLinkSection：`BREAK_KEY_BY_ROUTE_NAME` 映射和 `summaryFieldByEntityType` 映射改为 Registry 派生
+- useRelationGraph + relationNodeRouting：2 处重复的关系图视角路由映射合并为 Registry 派生
+- 5 个 Detail 组件（RiskDetail/AvoidanceDetail/AttackToolDetail/ThreatActorDetail/TermDetail）：详情路由名+paramKey 改用 `entityDetailHref`，关系图路由名改用 Registry
+- HomeView：`businessSceneDrawerRouteNames` 改为 Registry 派生
+- relationNote.ts：`translatedEntityTitle` 改为接收 EntityType，消除 breakKey/i18n 路径前缀硬编码
+
 ## 2.29.6
 
 架构 Review 改进（完结）：

@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { computed } from "vue";
+import { entityRegistry, getEntityEntryByBreakKey } from "@/BREAK/entityRegistry";
 
 interface EntityReferenceRecord {
   title?: string;
@@ -37,15 +38,10 @@ const props = defineProps<{
   entityRecords?: Record<string, EntityReferenceRecord | undefined>;
 }>();
 
-// 知识库列表路由 name → BREAK 数据键（i18n 路径段）
-const BREAK_KEY_BY_ROUTE_NAME: Record<string, string> = {
-  knowledgesRiskList: "risks",
-  knowledgesAvoidanceList: "avoidances",
-  knowledgesAttackToolList: "attackTools",
-  knowledgesThreatActorList: "threatActors",
-  knowledgesTermList: "terms",
-  knowledgesCaseList: "cases",
-};
+// 知识库列表路由 name → BREAK 数据键（i18n 路径段）——从 entityRegistry 动态构建
+const BREAK_KEY_BY_ROUTE_NAME: Record<string, string> = Object.fromEntries(
+  entityRegistry.map((e) => [e.listRouteName, e.breakKey]),
+);
 
 // i18n 路径段：显式传入优先，否则从 routeName 推导 BREAK 键；
 // businessScenes 显式传 "businessScenes"（routeName=businessScene，i18n 路径=BREAK.businessScenes 复数）
@@ -55,18 +51,8 @@ const entityType = computed(
 // 是否走独立详情路由：businessScenes 无 detail 变体，与 routeName 相同时走 route + hash
 const useDetailRoute = computed(() => props.detailRouteName && props.detailRouteName !== props.routeName);
 
-const summaryFieldByEntityType: Record<string, string> = {
-  risks: "definition",
-  avoidances: "definition",
-  attackTools: "description",
-  threatActors: "description",
-  terms: "definition",
-  businessScenes: "description",
-  cases: "summary",
-};
-
 const summaryField = computed(
-  () => summaryFieldByEntityType[entityType.value] ?? "description",
+  () => getEntityEntryByBreakKey(entityType.value)?.fieldPriority[0] ?? "description",
 );
 
 const to = (k: string) =>

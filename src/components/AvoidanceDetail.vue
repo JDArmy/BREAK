@@ -7,6 +7,8 @@ import ReferenceList from "@/components/ReferenceList.vue";
 import { ArrowLeft, TopRight } from "@element-plus/icons-vue";
 import iconRelation from "./icons/iconRelation.vue";
 import { useDrawerWidth } from "@/composables/useDrawerWidth";
+import { entityDetailHref } from "@/utils/entityRoute";
+import { getEntityEntry } from "@/BREAK/entityRegistry";
 
 const TermDetail = defineAsyncComponent(() => import("@/components/TermDetail.vue"));
 
@@ -21,19 +23,18 @@ const { getInnerDrawerWidth } = useDrawerWidth();
 
 const openRelationGraph = (aKey: string) => {
   const route = router.resolve({
-    name: "relationDefenseCoverageEntity",
+    name: getEntityEntry("avoidance").relationPerspectiveRouteName,
     params: { entity: "avoidance", id: aKey },
   });
   window.open(route.href, "_blank", "noopener,noreferrer");
 };
 
 // 跳知识库详情页（新窗口）的 href
-const detailHref = (aKey: string) =>
-  router.resolve({ name: "knowledgesAvoidanceDetail", params: { aKey } }).href;
+const detailHref = (aKey: string) => entityDetailHref(router, aKey, "avoidance");
 
 // 新窗口打开知识库详情页
 const openDetail = (aKey: string) => {
-  window.open(detailHref(aKey), "_blank", "noopener,noreferrer");
+  window.open(detailHref(aKey)!, "_blank", "noopener,noreferrer");
 };
 
 // 缓存到当前 aKey，避免模板 v-if+v-for 重复全表遍历

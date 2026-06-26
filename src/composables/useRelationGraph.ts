@@ -1,4 +1,5 @@
 import { useRouter } from "vue-router";
+import { getEntityEntryByRelationKey, getEntityEntry } from "@/BREAK/entityRegistry";
 
 /**
  * 关系图实体类型，对应 /relations/{视角}/{entity}/{id} 路由的 entity 段（单数）。
@@ -6,16 +7,16 @@ import { useRouter } from "vue-router";
  */
 export type RelationEntityType = "risk" | "avoidance" | "attack-tool" | "threat-actor";
 
+/** 风险视角路由名，用于 term 等无视角实体的兜底 */
+const FALLBACK_PERSPECTIVE_ROUTE = getEntityEntry("risk").relationPerspectiveRouteName;
+
 /**
- * 实体类型 → 主角色视角的「带实体子路由」name。
- * 「打开关系图」按实体主角色映射视角：
- * risk→风险视角、avoidance→防御覆盖、attack-tool/threat-actor→攻击路径。
+ * 从 entityRegistry 派生实体类型对应的关系图视角路由名。
+ * term 等无视角实体兜底到风险视角。
  */
-const RELATION_ROUTE_BY_TYPE: Record<RelationEntityType, string> = {
-  risk: "relationRiskEntity",
-  avoidance: "relationDefenseCoverageEntity",
-  "attack-tool": "relationAttackPathEntity",
-  "threat-actor": "relationAttackPathEntity",
+const getRelationRouteName = (type: RelationEntityType): string => {
+  const entry = getEntityEntryByRelationKey(type);
+  return entry?.relationPerspectiveRouteName || FALLBACK_PERSPECTIVE_ROUTE;
 };
 
 /**
@@ -34,7 +35,7 @@ export function useRelationGraph(type: RelationEntityType) {
   const router = useRouter();
   const openRelationGraph = (key: string) => {
     router.push({
-      name: RELATION_ROUTE_BY_TYPE[type],
+      name: getRelationRouteName(type),
       params: { entity: type, id: key },
     });
   };
