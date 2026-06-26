@@ -64,7 +64,10 @@ const items = [
   { id: "R0002", title: "账号盗用", subtitle: "Account takeover", searchText: "ato" },
 ];
 
-const mountView = (selectedKey = "R0001") =>
+const mountView = (
+  selectedKey = "R0001",
+  extraProps: Partial<InstanceType<typeof KnowledgeSplitView>["$props"]> = {},
+) =>
   mount(KnowledgeSplitView, {
     props: {
       title: "风险",
@@ -74,6 +77,7 @@ const mountView = (selectedKey = "R0001") =>
       items,
       selectedKey,
       searchPlaceholder: "搜索风险",
+      ...extraProps,
     },
     slots: {
       default: ({ selectedKey: key }: { selectedKey: string }) => `详情 ${key}`,
@@ -185,6 +189,42 @@ describe("KnowledgeSplitView", () => {
 
     expect(wrapper.find(".knowledge-empty").text()).toBe("search.noResults");
     expect(wrapper.findAll(".knowledge-list-item")).toHaveLength(0);
+  });
+
+  it("开启虚拟列表时只渲染可见窗口并可滚动到末尾条目", async () => {
+    const manyItems = Array.from({ length: 240 }, (_, index) => {
+      const n = String(index + 1).padStart(4, "0");
+      return {
+        id: `C${n}`,
+        title: `案例 ${n}`,
+        subtitle: `摘要 ${n}`,
+        searchText: `case ${n}`,
+      };
+    });
+    const wrapper = mountView("C0001", {
+      items: manyItems,
+      paramKey: "cKey",
+      virtualList: true,
+    });
+    const list = wrapper.find<HTMLElement>(".knowledge-list").element;
+    Object.defineProperty(list, "clientHeight", {
+      configurable: true,
+      value: 256,
+    });
+    Object.defineProperty(list, "scrollHeight", {
+      configurable: true,
+      value: 240 * 64,
+    });
+
+    expect(wrapper.findAll(".knowledge-list-item").length).toBeLessThan(40);
+    expect(wrapper.find('[data-knowledge-key="C0240"]').exists()).toBe(false);
+
+    await wrapper.setProps({ selectedKey: "C0240" });
+    await nextTick();
+    await nextTick();
+
+    expect(wrapper.find('[data-knowledge-key="C0240"]').exists()).toBe(true);
+    expect(wrapper.findAll(".knowledge-list-item").length).toBeLessThan(40);
   });
 
   it("初始路由参数指向有效条目时发出选择事件", () => {

@@ -22,6 +22,7 @@ const props = defineProps<{
   items: KnowledgeItem[];
   selectedKey: string;
   searchPlaceholder: string;
+  virtualList?: boolean;
 }>();
 
 const emit = defineEmits<{
@@ -36,6 +37,11 @@ const mobileListRef = ref<HTMLElement>();
 const desktopListRef = ref<HTMLElement>();
 const detailRef = ref<HTMLElement>();
 const mobileListScrollTop = ref(0);
+const listScrollTop = ref(0);
+const listViewportHeight = ref(0);
+const VIRTUAL_ITEM_HEIGHT = 64;
+const VIRTUAL_OVERSCAN = 6;
+const VIRTUAL_VIEWPORT_FALLBACK = 520;
 
 // 移动端两态：list / detail
 const mobileView = ref<"list" | "detail">("list");
@@ -145,6 +151,88 @@ const filteredItems = computed(() => {
   );
 });
 
+const virtualStartIndex = computed(() => {
+  if (!props.virtualList) return 0;
+  return Math.max(0, Math.floor(listScrollTop.value / VIRTUAL_ITEM_HEIGHT) - VIRTUAL_OVERSCAN);
+});
+
+const virtualEndIndex = computed(() => {
+  if (!props.virtualList) return filteredItems.value.length;
+  const viewport = listViewportHeight.value || VIRTUAL_VIEWPORT_FALLBACK;
+  const visibleCount = Math.ceil(viewport / VIRTUAL_ITEM_HEIGHT) + VIRTUAL_OVERSCAN * 2;
+  return Math.min(filteredItems.value.length, virtualStartIndex.value + visibleCount);
+});
+
+const renderedItems = computed(() =>
+  filteredItems.value.slice(virtualStartIndex.value, virtualEndIndex.value).map((item, index) => ({
+    item,
+    index: virtualStartIndex.value + index,
+  }))
+);
+
+const virtualTopSpacerHeight = computed(() =>
+  props.virtualList ? virtualStartIndex.value * VIRTUAL_ITEM_HEIGHT : 0
+);
+
+const virtualBottomSpacerHeight = computed(() =>
+  props.virtualList
+    ? Math.max(0, (filteredItems.value.length - virtualEndIndex.value) * VIRTUAL_ITEM_HEIGHT)
+    : 0
+);
+
+const currentListElement = () => (isMobile.value ? mobileListRef.value : desktopListRef.value);
+
+const updateListViewport = () => {
+  const list = currentListElement();
+  if (!list) return;
+  listViewportHeight.value = list.clientHeight;
+  listScrollTop.value = list.scrollTop;
+};
+
+const resetListScrollTop = () => {
+  nextTick(() => {
+    requestAnimationFrame(() => {
+      const list = currentListElement();
+      if (list) list.scrollTop = 0;
+      listScrollTop.value = 0;
+      updateListViewport();
+    });
+  });
+};
+
+const onListScroll = (e: Event) => {
+  const target = (e.currentTarget || e.target) as HTMLElement | null;
+  if (!target) return;
+  listScrollTop.value = target.scrollTop;
+  listViewportHeight.value = target.clientHeight;
+};
+
+const scrollListToItem = (list: HTMLElement, key: string) => {
+  if (!props.virtualList) {
+    const selectedElement = list.querySelector<HTMLElement>(
+      `[data-knowledge-key="${CSS.escape(key)}"]`
+    );
+    if (!selectedElement) return false;
+
+    const listRect = list.getBoundingClientRect();
+    const selectedRect = selectedElement.getBoundingClientRect();
+    const selectedTop = selectedRect.top - listRect.top + list.scrollTop;
+    const targetScrollTop = selectedTop - (list.clientHeight - selectedElement.offsetHeight) / 2;
+    const maxScrollTop = list.scrollHeight - list.clientHeight;
+    list.scrollTop = Math.max(0, Math.min(targetScrollTop, maxScrollTop));
+    return true;
+  }
+
+  const index = filteredItems.value.findIndex((item) => item.id === key);
+  if (index < 0) return false;
+  const targetScrollTop = index * VIRTUAL_ITEM_HEIGHT - (list.clientHeight - VIRTUAL_ITEM_HEIGHT) / 2;
+  const maxScrollTop = Math.max(0, filteredItems.value.length * VIRTUAL_ITEM_HEIGHT - list.clientHeight);
+  list.scrollTop = Math.max(0, Math.min(targetScrollTop, maxScrollTop));
+  listScrollTop.value = list.scrollTop;
+  listViewportHeight.value = list.clientHeight;
+  return true;
+};
+
 const selectItem = (key: string, updateRoute = true) => {
   if (!props.items.some((item) => item.id === key)) return;
   if (isMobile.value && mobileListRef.value) {
@@ -165,18 +253,7 @@ const selectItem = (key: string, updateRoute = true) => {
 const scrollSelectedItemToMobileListCenter = () => {
   const list = mobileListRef.value;
   if (!list) return false;
-
-  const selectedElement = list.querySelector<HTMLElement>(
-    `[data-knowledge-key="${CSS.escape(props.selectedKey)}"]`
-  );
-  if (!selectedElement) return false;
-
-  const listRect = list.getBoundingClientRect();
-  const selectedRect = selectedElement.getBoundingClientRect();
-  const selectedTop = selectedRect.top - listRect.top + list.scrollTop;
-  const targetScrollTop = selectedTop - (list.clientHeight - selectedElement.offsetHeight) / 2;
-  const maxScrollTop = list.scrollHeight - list.clientHeight;
-  list.scrollTop = Math.max(0, Math.min(targetScrollTop, maxScrollTop));
+  if (!scrollListToItem(list, props.selectedKey)) return false;
   mobileListScrollTop.value = list.scrollTop;
   return true;
 };
@@ -238,8 +315,14 @@ watch(
     resetDetailScroll();
     if (isMobile.value) return;
     nextTick(() => {
-      desktopListRef.value
-        ?.querySelector(`[data-knowledge-key="${CSS.escape(key)}"]`)
+      const list = desktopListRef.value;
+      if (!list) return;
+      if (props.virtualList) {
+        scrollListToItem(list, key);
+        return;
+      }
+      list
+        .querySelector(`[data-knowledge-key="${CSS.escape(key)}"]`)
         ?.scrollIntoView({ block: "nearest" });
     });
   },
@@ -253,8 +336,14 @@ watch(
     if (!len || !props.selectedKey || isMobile.value) return;
     if (!props.items.some((item) => item.id === props.selectedKey)) return;
     nextTick(() => {
-      desktopListRef.value
-        ?.querySelector(`[data-knowledge-key="${CSS.escape(props.selectedKey)}"]`)
+      const list = desktopListRef.value;
+      if (!list) return;
+      if (props.virtualList) {
+        scrollListToItem(list, props.selectedKey);
+        return;
+      }
+      list
+        .querySelector(`[data-knowledge-key="${CSS.escape(props.selectedKey)}"]`)
         ?.scrollIntoView({ block: "nearest" });
     });
   }
@@ -310,6 +399,9 @@ watch(isMobile, (mobile) => {
 
 onMounted(() => {
   window.addEventListener("resize", onWindowResize);
+  nextTick(() => {
+    requestAnimationFrame(updateListViewport);
+  });
   // PC 下访问 list?selected={id} 自动跳转到 detail 路由
   if (!isMobile.value && route.name === props.routeName && props.detailRouteName) {
     const selected = typeof route.query.selected === "string" ? route.query.selected : "";
@@ -321,6 +413,23 @@ onMounted(() => {
     }
   }
 });
+
+watch(
+  () => [isMobile.value, mobileView.value, props.virtualList, filteredItems.value.length],
+  () => {
+    nextTick(() => {
+      requestAnimationFrame(updateListViewport);
+    });
+  },
+  { flush: "post" }
+);
+
+watch(
+  () => [query.value, props.items],
+  () => {
+    resetListScrollTop();
+  }
+);
 
 // cases 等懒加载场景：items 从空变满后，若仍在 list?selected 等待跳转则补跳 detail
 watch(
@@ -366,13 +475,24 @@ onBeforeUnmount(() => {
           :placeholder="searchPlaceholder"
         />
       </div>
-      <div ref="desktopListRef" class="knowledge-list">
+      <div
+        ref="desktopListRef"
+        class="knowledge-list"
+        :class="{ 'knowledge-list-virtual': virtualList }"
+        @scroll="onListScroll"
+      >
+        <div
+          v-if="virtualList && virtualTopSpacerHeight > 0"
+          class="knowledge-virtual-spacer"
+          :style="{ height: virtualTopSpacerHeight + 'px' }"
+        />
         <button
-          v-for="item in filteredItems"
+          v-for="{ item, index } in renderedItems"
           :key="item.id"
           class="knowledge-list-item"
           :class="{ active: item.id === selectedKey }"
           :data-knowledge-key="item.id"
+          :data-virtual-index="index"
           type="button"
           @click="selectItem(item.id)"
         >
@@ -383,6 +503,11 @@ onBeforeUnmount(() => {
             <span v-if="item.badge" class="knowledge-badge" :class="item.badgeType">{{ item.badge }}</span>
           </span>
         </button>
+        <div
+          v-if="virtualList && virtualBottomSpacerHeight > 0"
+          class="knowledge-virtual-spacer"
+          :style="{ height: virtualBottomSpacerHeight + 'px' }"
+        />
         <div v-if="filteredItems.length === 0" class="knowledge-empty">
           {{ $t("search.noResults") }}
         </div>
@@ -424,13 +549,24 @@ onBeforeUnmount(() => {
             :placeholder="searchPlaceholder"
           />
         </div>
-        <div ref="mobileListRef" class="knowledge-list">
+        <div
+          ref="mobileListRef"
+          class="knowledge-list"
+          :class="{ 'knowledge-list-virtual': virtualList }"
+          @scroll="onListScroll"
+        >
+          <div
+            v-if="virtualList && virtualTopSpacerHeight > 0"
+            class="knowledge-virtual-spacer"
+            :style="{ height: virtualTopSpacerHeight + 'px' }"
+          />
           <button
-            v-for="item in filteredItems"
+            v-for="{ item, index } in renderedItems"
             :key="item.id"
             class="knowledge-list-item"
             :class="{ active: item.id === selectedKey }"
             :data-knowledge-key="item.id"
+            :data-virtual-index="index"
             type="button"
             @click="selectItem(item.id)"
           >
@@ -441,6 +577,11 @@ onBeforeUnmount(() => {
               <span v-if="item.badge" class="knowledge-badge" :class="item.badgeType">{{ item.badge }}</span>
             </span>
           </button>
+          <div
+            v-if="virtualList && virtualBottomSpacerHeight > 0"
+            class="knowledge-virtual-spacer"
+            :style="{ height: virtualBottomSpacerHeight + 'px' }"
+          />
           <div v-if="filteredItems.length === 0" class="knowledge-empty">
             {{ $t("search.noResults") }}
           </div>
@@ -569,6 +710,15 @@ onBeforeUnmount(() => {
   padding: 10px;
 }
 
+.knowledge-list-virtual {
+  overflow-anchor: none;
+}
+
+.knowledge-virtual-spacer {
+  flex: 0 0 auto;
+  pointer-events: none;
+}
+
 .knowledge-list-item {
   box-sizing: border-box;
   display: grid;
@@ -583,18 +733,34 @@ onBeforeUnmount(() => {
   color: var(--break-text-primary);
   text-align: left;
   cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease,
+    transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.knowledge-list-virtual .knowledge-list-item {
+  height: 64px;
+  min-height: 64px;
 }
 
 .knowledge-list-item:hover,
 .knowledge-list-item:active {
-  background: var(--break-bg-secondary);
-  border-color: var(--break-border-light);
+  background: var(--break-highlight-bg);
+  border-color: var(--break-highlight-border);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+  transform: translateX(2px);
 }
 
 .knowledge-list-item.active {
   background: var(--break-highlight-bg);
   color: var(--break-link);
   border-color: var(--break-highlight-border);
+}
+
+.knowledge-list-item.active:hover,
+.knowledge-list-item.active:active {
+  background: color-mix(in srgb, var(--break-highlight-bg) 78%, var(--break-link) 22%);
+  border-color: var(--break-link);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.14);
 }
 
 .knowledge-id {

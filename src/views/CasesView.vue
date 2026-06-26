@@ -105,6 +105,7 @@ watch(selectedCategory, () => {
     :items="caseItems"
     :selected-key="selectedCaseKey"
     :search-placeholder="$t('search.casePlaceholder')"
+    virtual-list
     @select="selectedCaseKey = $event"
   >
     <template #filters>
