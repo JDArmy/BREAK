@@ -390,6 +390,8 @@
     },
     "hiddenCoverageItemCount": "{count} more coverage items are hidden. Show more.",
     "collapseCoverageItemCount": "Collapse coverage and show the first 5 only.",
+    "hiddenInsightItemCount": "{count} more items are hidden. Show more.",
+    "collapseInsightItemCount": "Collapse and show the first {count} only.",
     "attackPathExplanationSummary": "This path contains {count} reasoning steps, with {risk} as the core risk.",
     "attackPathGroupedExplanationSummary": "Merged {pathCount} similar paths across {actorCount} threat actors, with {risk} as the core risk.",
     "attackPathFinding": {

@@ -390,6 +390,8 @@
     },
     "hiddenCoverageItemCount": "还有 {count} 个覆盖对象未显示，点击显示更多。",
     "collapseCoverageItemCount": "收起防御覆盖，仅显示前 5 个。",
+    "hiddenInsightItemCount": "还有 {count} 项未显示，点击显示更多。",
+    "collapseInsightItemCount": "收起列表，仅显示前 {count} 项。",
     "attackPathExplanationSummary": "该路径包含 {count} 段推导，核心风险为 {risk}。",
     "attackPathGroupedExplanationSummary": "已合并 {pathCount} 条同类路径，涉及 {actorCount} 个威胁行为者，核心风险为 {risk}。",
     "attackPathFinding": {
