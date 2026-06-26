@@ -23,10 +23,14 @@ const shouldLoadInitialLocaleBeforeMount =
   typeof window !== "undefined" && window.innerWidth >= 768;
 const MOBILE_IDLE_PRELOAD_DELAY_MS = 15000;
 
+const DATA_LOAD_FAIL_MSG = navigator.language?.startsWith("en")
+  ? "Data failed to load. Please refresh the page."
+  : "数据加载失败，请刷新页面";
+
 if (shouldLoadInitialLocaleBeforeMount) {
   initLocaleMessages().catch((error) => {
     console.error("Failed to load initial locale messages:", error);
-    ElMessage({ message: "数据加载失败，请刷新页面", type: "error", plain: true, duration: 5000, grouping: true });
+    ElMessage({ message: DATA_LOAD_FAIL_MSG, type: "error", plain: true, duration: 5000, grouping: true });
   });
 }
 
@@ -52,7 +56,7 @@ const shouldPreloadOnMobileConnection = () => {
 const preloadLocaleMessages = () => {
   initLocaleMessages().catch((error) => {
     console.error("Failed to load initial locale messages:", error);
-    ElMessage({ message: "数据加载失败，请刷新页面", type: "error", plain: true, duration: 5000, grouping: true });
+    ElMessage({ message: DATA_LOAD_FAIL_MSG, type: "error", plain: true, duration: 5000, grouping: true });
   });
 };
 
