@@ -338,6 +338,8 @@ const primaryReferenceLinks = new Set([
   'https://hzsc.hangzhou.com.cn/content/content_7015476.htm', // 上城区法院案件通报
   'https://z.hangzhou.com.cn/2022/wangan/content/content_8269934.htm', // 杭州网警以案说法，假冒 imToken 钱包盗币案
   'https://mp.weixin.qq.com/s/zm3kcgvf3bselnsmgdcglq', // 扬州经济技术开发区人民检察院官网要闻列表指向的官方微信原文
+  'https://delhihighcourt.nic.in/app/showlogo/1669383973237_80487_2022.pdf/2022', // 德里高等法院官网 PDF，Amitabh Bachchan 人格权临时禁令
+  'https://news.cctv.com/2025/12/17/ARTIP5TCJFTBanuU5hioemaE251217.shtml', // 央视新闻采访广州海关缉私局，走私孕妇血样系列案
   'https://mp.weixin.qq.com/s?__biz=mzawntgwnjy0nq==&mid=2909647260&idx=1&sn=724da208d4480ad7ac2e411282b0556f', // 樊城发布政务微信
   'https://mp.weixin.qq.com/s?__biz=mzg4nta2mdu0oq==&mid=2247530131&idx=1&sn=69682338439f50044b36db5956286c8b', // 成都市市场监管政务微信
   'https://mp.weixin.qq.com/s/mkzzqogpgzb9dtgenlu6ja', // 公安部网安局官方微信

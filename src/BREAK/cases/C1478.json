@@ -1,30 +1,30 @@
 {
   "C1478": {
-    "title": "Amitabh Bachchan胜诉元宇宙身份盗用案",
+    "title": "Amitabh Bachchan人格权未经授权商业使用禁令案",
     "keywords": [
       "Amitabh Bachchan",
       "德里高等法院",
-      "元宇宙",
-      "身份盗用",
-      "虚拟身份",
       "人格权",
+      "名人权益",
+      "商业使用",
       "深度伪造",
       "肖像权",
       "声音克隆",
       "印度"
     ],
-    "summary": "印度演员Amitabh Bachchan在元宇宙中遭遇身份盗用，其声音、面孔和姓名被未经授权使用。德里高等法院就此作出裁决，保护了Bachchan的虚拟身份权益。此案成为元宇宙身份盗用领域的标志性判例。",
+    "summary": "印度演员 Amitabh Bachchan 向德里高等法院起诉 Rajat Nagi 等被告，称其姓名、肖像、声音和其他人格特征被未经授权用于推广商品和服务。德里高等法院于 2022 年 11 月 25 日作出临时禁令，禁止被告未经许可使用 Bachchan 的姓名、形象、声音或其他与其相关的人格属性进行商业活动。该案体现了生成式内容、声音克隆和虚拟形象场景下名人权益保护的边界。",
     "category": "criminal_verdict",
     "relatedRisks": [
       "R0184"
     ],
     "references": [
       {
-        "title": "Amitabh Bachchan wins case on Metaverse identity theft",
-        "link": "https://www.linkedin.com/posts/piyush-bhardwaj-linkdin_legalupdate-ipr-amitabhbachchan-activity-7327936890014175234-U0m9"
+        "title": "Amitabh Bachchan v. Rajat Nagi and Others",
+        "link": "https://delhihighcourt.nic.in/app/showlogo/1669383973237_80487_2022.pdf/2022"
       }
     ],
-    "updated": "2026-06-18",
+    "updated": "2026-06-26",
+    "incidentTime": "2022-11",
     "relatedAttackTools": [
       "AT0056",
       "AT0059",
