@@ -8,7 +8,6 @@
 
 import { useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
-import BREAK from "@/BREAK";
 import { useCases } from "@/composables/useCases";
 import {
   inferEntityType,
@@ -72,26 +71,19 @@ function truncate(s: string | undefined | null, max = DESC_MAX_LEN): string | nu
 export function useEntityResolver() {
   const { t, te } = useI18n();
   const router = useRouter();
-  const { cases, ensureCases } = useCases();
+  const { cases, loaded, ensureCases } = useCases();
 
-  /** 检查实体是否存在于数据集中（Case 未加载时返回 false，不触发加载） */
+  /**
+   * 检查实体是否存在于数据集中。
+   * 非 case 类型通过 i18n te() 判断（BREAK 数据注入 i18n 后等价于 id in BREAK[collection]）。
+   * Case 未加载时返回 false，不触发加载。
+   */
   function entityExists(id: string, type: EntityType): boolean {
-    switch (type) {
-      case "risk":
-        return id in BREAK.risks;
-      case "avoidance":
-        return id in BREAK.avoidances;
-      case "attackTool":
-        return id in BREAK.attackTools;
-      case "threatActor":
-        return id in BREAK.threatActors;
-      case "term":
-        return id in BREAK.terms;
-      case "case":
-        return cases.value ? id in cases.value : false;
-      default:
-        return false;
+    if (type === "case") {
+      return loaded.value ? id in cases.value : false;
     }
+    // BREAK 数据通过 i18n 动态注入，te(prefix.title) 与 id in BREAK[collection] 等价
+    return te(`${entityI18nPrefix(id, type)}.title`);
   }
 
   /**
@@ -103,7 +95,7 @@ export function useEntityResolver() {
     if (!type) return null;
 
     // Case 特殊处理：触发懒加载（不阻塞，Promise 忽略）
-    if (type === "case" && !cases.value) {
+    if (type === "case" && !loaded.value) {
       void ensureCases();
     }
 

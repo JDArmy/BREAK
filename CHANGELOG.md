@@ -1,5 +1,16 @@
 # Change log
 
+## 2.29.1
+
+修复 EntityAutoLinker 全局提前加载 BREAK 全量数据的性能问题：
+
+### Bug 修复
+- 修复 `useEntityResolver` 中 Case 懒加载条件判断错误（`cases.value` 初始值 `{}` 永远 truthy，导致 `ensureCases()` 永远不触发），改用 `loaded` ref 判断
+
+### 性能优化
+- 移除 `useEntityResolver` 对 `@/BREAK` 的静态导入，改用 `te()` 判断实体存在性，消除 EntityAutoLinker chunk 对全量知识库数据的级联依赖
+- EntityAutoLinker 异步 chunk 不再拉入 BREAK-Risks/Avoidances/AttackTools/ThreatActors/Terms 等数据 chunk，BREAK 数据完全由 i18n 动态加载策略按需加载
+
 ## 2.29.0
 
 实体层级关系全面重构——大规模子实体化与去重：

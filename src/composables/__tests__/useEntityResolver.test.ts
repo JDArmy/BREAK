@@ -93,7 +93,6 @@ describe("useEntityResolver", () => {
     vi.clearAllMocks();
     vi.doUnmock("vue-i18n");
     vi.doUnmock("vue-router");
-    vi.doUnmock("@/BREAK");
     vi.doUnmock("@/composables/useCases");
   });
 
@@ -131,19 +130,10 @@ describe("useEntityResolver", () => {
       }),
     }));
 
-    vi.doMock("@/BREAK", () => ({
-      default: {
-        risks: { R0001: { title: "测试风险" } },
-        avoidances: {},
-        attackTools: {},
-        threatActors: {},
-        terms: {},
-      },
-    }));
-
     vi.doMock("@/composables/useCases", () => ({
       useCases: () => ({
         cases: vue.ref(null),
+        loaded: vue.ref(false),
         ensureCases: vi.fn(),
       }),
     }));
@@ -179,19 +169,10 @@ describe("useEntityResolver", () => {
       }),
     }));
 
-    vi.doMock("@/BREAK", () => ({
-      default: {
-        risks: {},
-        avoidances: {},
-        attackTools: {},
-        threatActors: {},
-        terms: {},
-      },
-    }));
-
     vi.doMock("@/composables/useCases", () => ({
       useCases: () => ({
         cases: vue.ref(null),
+        loaded: vue.ref(false),
         ensureCases: vi.fn(),
       }),
     }));
@@ -221,19 +202,10 @@ describe("useEntityResolver", () => {
       }),
     }));
 
-    vi.doMock("@/BREAK", () => ({
-      default: {
-        risks: {},
-        avoidances: {},
-        attackTools: {},
-        threatActors: {},
-        terms: {},
-      },
-    }));
-
     vi.doMock("@/composables/useCases", () => ({
       useCases: () => ({
         cases: vue.ref(null),
+        loaded: vue.ref(false),
         ensureCases: vi.fn(),
       }),
     }));
@@ -261,19 +233,10 @@ describe("useEntityResolver", () => {
       }),
     }));
 
-    vi.doMock("@/BREAK", () => ({
-      default: {
-        risks: {},
-        avoidances: {},
-        attackTools: {},
-        threatActors: {},
-        terms: {},
-      },
-    }));
-
     vi.doMock("@/composables/useCases", () => ({
       useCases: () => ({
         cases: vue.ref(null),
+        loaded: vue.ref(false),
         ensureCases: ensureMock,
       }),
     }));
@@ -288,10 +251,19 @@ describe("useEntityResolver", () => {
   it("entityExists 正确判断各类型实体", async () => {
     const vue = await vi.importActual<typeof import("vue")>("vue");
 
+    // entityExists 现在通过 te() 判断非 case 类型的存在性
+    const existingKeys = new Set([
+      "BREAK.risks.R0001.title",
+      "BREAK.avoidances.A0001.title",
+      "BREAK.attackTools.AT0001.title",
+      "BREAK.threatActors.TA0001.title",
+      "BREAK.terms.T0001.title",
+    ]);
+
     vi.doMock("vue-i18n", () => ({
       useI18n: () => ({
         t: (key: string) => key,
-        te: () => false,
+        te: (key: string) => existingKeys.has(key),
       }),
     }));
 
@@ -301,19 +273,10 @@ describe("useEntityResolver", () => {
       }),
     }));
 
-    vi.doMock("@/BREAK", () => ({
-      default: {
-        risks: { R0001: {} },
-        avoidances: { A0001: {} },
-        attackTools: { AT0001: {} },
-        threatActors: { TA0001: {} },
-        terms: { T0001: {} },
-      },
-    }));
-
     vi.doMock("@/composables/useCases", () => ({
       useCases: () => ({
         cases: vue.ref({ C0001: { title: "案例" } }),
+        loaded: vue.ref(true),
         ensureCases: vi.fn(),
       }),
     }));
@@ -358,19 +321,10 @@ describe("useEntityResolver", () => {
       }),
     }));
 
-    vi.doMock("@/BREAK", () => ({
-      default: {
-        risks: { R0001: {} },
-        avoidances: {},
-        attackTools: {},
-        threatActors: {},
-        terms: {},
-      },
-    }));
-
     vi.doMock("@/composables/useCases", () => ({
       useCases: () => ({
         cases: vue.ref(null),
+        loaded: vue.ref(false),
         ensureCases: vi.fn(),
       }),
     }));
