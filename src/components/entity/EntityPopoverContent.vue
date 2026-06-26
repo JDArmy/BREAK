@@ -35,18 +35,8 @@ const TYPE_ICON: Record<string, string> = {
       <span class="entity-card__id">{{ entity.id }}</span>
     </div>
 
-    <!-- 标题：可点击跳转详情页 -->
-    <a
-      v-if="entity.href"
-      :href="entity.href"
-      target="_blank"
-      rel="noopener"
-      class="entity-card__title entity-card__title--link"
-    >
-      {{ entity.title }}
-      <el-icon :size="12" class="entity-card__title-icon"><TopRight /></el-icon>
-    </a>
-    <div v-else class="entity-card__title">{{ entity.title }}</div>
+    <!-- 标题 -->
+    <div class="entity-card__title">{{ entity.title }}</div>
 
     <!-- 实体不存在时的提示 -->
     <div v-if="!entity.exists" class="entity-card__not-found">

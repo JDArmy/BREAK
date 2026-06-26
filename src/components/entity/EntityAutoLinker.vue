@@ -126,15 +126,22 @@ function isInsideSkipZone(node: Node): boolean {
     ) {
       return true;
     }
-    // 代码块
-    if (tag === "CODE" || tag === "PRE") return true;
-    // 已包裹 / Popover 自身 / 特殊展示区
+    // 代码块 / canvas 容器
+    if (tag === "CODE" || tag === "PRE" || tag === "CANVAS") return true;
+    // 已包裹 / Popover 自身 / 下拉列表 / ECharts / 特殊展示区
     if (
       parent.hasAttribute(ATTR) ||
+      parent.hasAttribute("_echarts_instance_") ||
       parent.classList.contains(CLS) ||
       parent.classList.contains("el-popover") ||
       parent.classList.contains("entity-popover") ||
       parent.classList.contains("entity-card") ||
+      parent.classList.contains("el-select-dropdown") ||
+      parent.classList.contains("el-autocomplete-suggestion") ||
+      parent.classList.contains("el-select-dropdown__item") ||
+      parent.classList.contains("el-scrollbar") ||
+      parent.classList.contains("network-chart") ||
+      parent.classList.contains("sankey-chart") ||
       parent.classList.contains("detail-id") ||
       parent.classList.contains("knowledge-id")
     ) {
@@ -247,10 +254,16 @@ function handleMutations(mutations: MutationRecord[]) {
   }, 100);
 }
 
+/** 排除区域：下拉列表、Popover 自身、ECharts 图表等不应触发 Popover 的区域 */
+const EXCLUDE_ZONE = ".el-select-dropdown, .el-autocomplete-suggestion, .el-popover, .entity-popover, .entity-card, [_echarts_instance_], .network-chart, .sankey-chart";
+
 // ─── 事件委托（路径 A + B 统一入口） ──────────────────
 function handleMouseEnter(e: Event) {
   const target = e.target as HTMLElement;
   if (!target?.tagName) return;
+
+  // 排除下拉列表等区域
+  if (target.closest(EXCLUDE_ZONE)) return;
 
   // 路径 A：文本节点中自动包裹的 span
   if (target.classList.contains(CLS)) {
