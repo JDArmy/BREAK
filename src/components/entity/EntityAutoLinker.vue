@@ -306,8 +306,10 @@ function handleMouseEnter(e: Event) {
   }
 
   // 路径 B：交互元素（按钮 / 链接 / 表格 / 卡片）
+  // 若内部已有路径 A 包裹的 span，则跳过（由路径 A 逐个处理）
   const interactive = target.closest(INTERACTIVE_SELECTOR) as HTMLElement | null;
   if (interactive) {
+    if (interactive.querySelector(`.${CLS}`)) return;
     const text = interactive.textContent || "";
     const id = extractEntityId(text);
     if (id) showPopover(interactive, id);
