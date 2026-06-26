@@ -146,6 +146,11 @@
         "note": "共同限制 2 个攻击工具。"
       },
       {
+        "key": "A0025-001",
+        "relation": "complement",
+        "note": "共同限制 2 个攻击工具。"
+      },
+      {
         "key": "A0026",
         "relation": "complement",
         "note": "共同限制 2 个攻击工具。"
@@ -159,11 +164,6 @@
         "key": "A0078",
         "relation": "complement",
         "note": "共同限制 2 个攻击工具。"
-      },
-      {
-        "key": "A0019",
-        "relation": "complement",
-        "note": "共同覆盖 1 个风险。"
       }
     ]
   },

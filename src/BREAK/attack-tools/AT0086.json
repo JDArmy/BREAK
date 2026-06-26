@@ -4,7 +4,9 @@
     "description": "用于捕获、修改和重放Webhook事件，测试签名验证和幂等处理缺陷。",
     "avoidances": [
       "A0219",
-      "A0198"
+      "A0198",
+      "A0015",
+      "A0004"
     ],
     "directCauseRisks": [
       "R0225"
@@ -30,14 +32,29 @@
         "note": "共同关联 2 个风险，被 1 个相同行为者使用或建设。"
       },
       {
-        "key": "AT0096",
+        "key": "AT0003",
         "relation": "co-used",
-        "note": "共享 1 个规避手段。"
+        "note": "共享 2 个规避手段。"
       },
       {
-        "key": "AT0094",
+        "key": "AT0005",
         "relation": "co-used",
-        "note": "被 1 个相同行为者使用或建设。"
+        "note": "共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0023",
+        "relation": "co-used",
+        "note": "共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0035",
+        "relation": "co-used",
+        "note": "共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0042",
+        "relation": "co-used",
+        "note": "共享 2 个规避手段。"
       }
     ]
   }

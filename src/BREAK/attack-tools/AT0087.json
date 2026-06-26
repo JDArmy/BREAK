@@ -5,7 +5,10 @@
     "avoidances": [
       "A0199",
       "A0200",
-      "A0201"
+      "A0201",
+      "A0044",
+      "A0016",
+      "A0070"
     ],
     "directCauseRisks": [
       "R0226",
@@ -26,6 +29,37 @@
       "CI/CD凭证扫描与投毒"
     ],
     "updated": "2026-06-17",
-    "relatedAttackTools": []
+    "relatedAttackTools": [
+      {
+        "key": "AT0010",
+        "relation": "co-used",
+        "note": "共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0039-001",
+        "relation": "co-used",
+        "note": "共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0039-002",
+        "relation": "co-used",
+        "note": "共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0040-001",
+        "relation": "co-used",
+        "note": "共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0042",
+        "relation": "co-used",
+        "note": "共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0060",
+        "relation": "co-used",
+        "note": "共享 2 个规避手段。"
+      }
+    ]
   }
 }

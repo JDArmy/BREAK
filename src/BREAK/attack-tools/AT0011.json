@@ -9,7 +9,9 @@
       }
     ],
     "avoidances": [
-      "A0010"
+      "A0010",
+      "A0025-003",
+      "A0092"
     ],
     "directCauseRisks": [
       "R0003",

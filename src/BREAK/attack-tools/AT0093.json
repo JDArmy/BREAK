@@ -5,7 +5,8 @@
     "avoidances": [
       "A0213",
       "A0215",
-      "A0216"
+      "A0216",
+      "A0044"
     ],
     "directCauseRisks": [
       "R0243",
@@ -26,6 +27,37 @@
       "AI数据投毒与提示注入"
     ],
     "updated": "2026-06-17",
-    "relatedAttackTools": []
+    "relatedAttackTools": [
+      {
+        "key": "AT0001",
+        "relation": "co-used",
+        "note": "共享 1 个规避手段。"
+      },
+      {
+        "key": "AT0001-002",
+        "relation": "co-used",
+        "note": "共享 1 个规避手段。"
+      },
+      {
+        "key": "AT0004",
+        "relation": "co-used",
+        "note": "共享 1 个规避手段。"
+      },
+      {
+        "key": "AT0010",
+        "relation": "co-used",
+        "note": "共享 1 个规避手段。"
+      },
+      {
+        "key": "AT0026",
+        "relation": "co-used",
+        "note": "共享 1 个规避手段。"
+      },
+      {
+        "key": "AT0033",
+        "relation": "co-used",
+        "note": "共享 1 个规避手段。"
+      }
+    ]
   }
 }

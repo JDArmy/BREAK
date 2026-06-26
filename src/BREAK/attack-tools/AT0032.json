@@ -126,6 +126,11 @@
     ],
     "relatedAttackTools": [
       {
+        "key": "AT0013",
+        "relation": "co-used",
+        "note": "共同关联 3 个风险，共享 3 个规避手段，被 4 个相同行为者使用或建设。"
+      },
+      {
         "key": "AT0032",
         "relation": "co-used",
         "note": "共同关联 7 个风险，共享 2 个规避手段。"
@@ -144,11 +149,6 @@
         "key": "AT0007",
         "relation": "co-used",
         "note": "共同关联 5 个风险，共享 3 个规避手段。"
-      },
-      {
-        "key": "AT0013",
-        "relation": "co-used",
-        "note": "共同关联 3 个风险，共享 1 个规避手段，被 4 个相同行为者使用或建设。"
       },
       {
         "key": "AT0044",

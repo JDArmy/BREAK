@@ -27,22 +27,22 @@
         "note": "共同覆盖 1 个风险。"
       },
       {
+        "key": "A0015",
+        "relation": "complement",
+        "note": "共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0044",
+        "relation": "complement",
+        "note": "共同限制 1 个攻击工具。"
+      },
+      {
         "key": "A0152",
         "relation": "complement",
         "note": "共同限制 1 个攻击工具。"
       },
       {
         "key": "A0153",
-        "relation": "complement",
-        "note": "共同限制 1 个攻击工具。"
-      },
-      {
-        "key": "A0154",
-        "relation": "complement",
-        "note": "共同限制 1 个攻击工具。"
-      },
-      {
-        "key": "A0188",
         "relation": "complement",
         "note": "共同限制 1 个攻击工具。"
       }
