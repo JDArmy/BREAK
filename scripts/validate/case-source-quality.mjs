@@ -330,6 +330,8 @@ const primaryReferenceLinks = new Set([
   'https://xinwen.bjd.com.cn/content/s6a2bfd65d5de97bd7464c3db.html', // 北京互联网法院供稿
   'https://xinwen.bjd.com.cn/content/s66249aa1e4b064178156893f.html', // 海淀区人民法院官方，北京 AI 一键去衣案
   'https://xinwen.bjd.com.cn/content/s6168f10ce4b08aed9d8a566a.html', // 扬州市公安局江都分局，二维码套现案
+  'https://www.bjcourt.gov.cn/cpws/paperview.htm?id=d9b9eef791a44e1798920d1a896c419e&n=1', // 北京法院审判信息网，金某某破坏计算机信息系统案
+  'https://ga.lasa.gov.cn/lsga/jwxw/202503/00a60419366a450bbc87f3413e6e154a.shtml', // 拉萨市公安局，冒充领导亲属诈骗案
   'https://hzsc.hangzhou.com.cn/content/content_7015476.htm', // 上城区法院案件通报
   'https://z.hangzhou.com.cn/2022/wangan/content/content_8269934.htm', // 杭州网警以案说法，假冒 imToken 钱包盗币案
   'https://mp.weixin.qq.com/s/zm3kcgvf3bselnsmgdcglq', // 扬州经济技术开发区人民检察院官网要闻列表指向的官方微信原文
