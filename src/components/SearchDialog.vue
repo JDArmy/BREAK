@@ -26,11 +26,37 @@ const emptyResults = () =>
     SearchResult[]
   >;
 
-// 扁平化的所有结果（用于键盘导航索引）
+// 默认分组显示顺序
+const DEFAULT_TYPE_ORDER: EntityType[] = ["risk", "avoidance", "attackTool", "threatActor", "term", "case"];
+
+// ID 前缀 → 实体类型（按最长前缀优先排列，避免 A/AT、T/TA 歧义）
+const ID_PREFIX_MAP: [RegExp, EntityType][] = [
+  [/^AT\d/i, "attackTool"],
+  [/^TA\d/i, "threatActor"],
+  [/^BS\d/i, "risk"], // BS 前缀无独立类型，保持默认
+  [/^R\d/i, "risk"],
+  [/^A\d/i, "avoidance"],
+  [/^T\d/i, "term"],
+  [/^C\d/i, "case"],
+];
+
+// 根据搜索词自动调整分组顺序：搜索实体 ID 时将对应类型提前到首位
+const sortedTypes = computed(() => {
+  const q = debouncedQuery.value.trim();
+  if (!q) return DEFAULT_TYPE_ORDER;
+  for (const [re, type] of ID_PREFIX_MAP) {
+    if (re.test(q)) {
+      return [type, ...DEFAULT_TYPE_ORDER.filter(t => t !== type)];
+    }
+  }
+  return DEFAULT_TYPE_ORDER;
+});
+
+// 扁平化的所有结果（用于键盘导航索引，顺序跟随 sortedTypes）
 const flatResults = computed(() => {
   const flat: (SearchResult & { groupIndex: number })[] = [];
   let groupIdx = 0;
-  for (const type of ["risk", "avoidance", "attackTool", "threatActor", "term", "case"] as EntityType[]) {
+  for (const type of sortedTypes.value) {
     for (const r of resultsDebounced.value[type]) {
       flat.push({ ...r, groupIndex: groupIdx });
     }
@@ -82,6 +108,41 @@ const knowledgeDetailRoutes: Record<EntityType, { name: string; paramKey: string
   case: { name: "knowledgesCaseDetail", paramKey: "cKey" },
 };
 
+// 搜索命中字段 → 显示标签（不用 i18n 因为字段名是内部标识，用简短中英混合标签更直观）
+const fieldLabels: Record<string, string> = {
+  title: "search.fieldTitle",
+  keywords: "search.fieldKeywords",
+  aliases: "search.fieldAliases",
+  category: "search.fieldCategory",
+  definition: "search.fieldDefinition",
+  description: "search.fieldDescription",
+  influence: "search.fieldInfluence",
+  limitation: "search.fieldLimitation",
+  usageExample: "search.fieldUsageExample",
+  summary: "search.fieldSummary",
+  referenceTitles: "search.fieldReferences",
+};
+
+// 首页相关路由名（含已打开抽屉时的路由），搜索结果应在首页抽屉中打开
+const homePageRoutes = new Set([
+  "home",
+  "homeRiskDetail",
+  "homeAvoidanceDetail",
+  "homeAttackToolDetail",
+  "homeThreatActorDetail",
+  "homeTermDetail",
+]);
+
+// 业务场景相关路由名（含已打开抽屉时的路由），搜索结果应在业务场景抽屉中打开
+const businessSceneRoutes = new Set([
+  "businessScene",
+  "businessSceneRiskDetail",
+  "businessSceneAvoidanceDetail",
+  "businessSceneAttackToolDetail",
+  "businessSceneThreatActorDetail",
+  "businessSceneTermDetail",
+]);
+
 // 防抖搜索
 let debounceTimer: ReturnType<typeof setTimeout> | null = null;
 const debouncedQuery = ref("");
@@ -123,9 +184,9 @@ function highlightText(text: string, queryStr: string): string {
 function selectResult(result: SearchResult) {
   emit("update:modelValue", false);
 
-  const currentName = router.currentRoute.value.name;
-  const isHomePage = currentName === "home";
-  const isBusinessScene = currentName === "businessScene";
+  const currentName = router.currentRoute.value.name as string;
+  const isHomePage = homePageRoutes.has(currentName);
+  const isBusinessScene = businessSceneRoutes.has(currentName);
 
   if (isHomePage) {
     // 首页：使用 homeXxxDetail 抽屉路由
@@ -257,7 +318,7 @@ function handleTouchStart(index: number) {
 
     <!-- 搜索结果 -->
     <div class="search-results" v-if="debouncedQuery.trim()">
-      <template v-for="type in (['risk', 'avoidance', 'attackTool', 'threatActor', 'term', 'case'] as EntityType[])" :key="type">
+      <template v-for="type in sortedTypes" :key="type">
         <div v-if="resultsDebounced[type]?.length" class="result-group">
           <div class="result-group-header">
             {{ t(groupLabels[type]) }}
@@ -276,7 +337,10 @@ function handleTouchStart(index: number) {
               <span class="result-id">{{ result.id }}</span>
               <span class="result-title" v-html="highlightText(result.title, debouncedQuery)" />
             </div>
-            <span v-if="result.snippet" class="result-snippet" v-html="highlightText(result.snippet, debouncedQuery)" />
+            <div class="result-snippet-row" v-if="result.snippet">
+              <span v-if="result.matchedField && fieldLabels[result.matchedField]" class="field-badge">{{ t(fieldLabels[result.matchedField]) }}</span>
+              <span class="result-snippet" v-html="highlightText(result.snippet, debouncedQuery)" />
+            </div>
           </div>
         </div>
       </template>
@@ -388,13 +452,32 @@ function handleTouchStart(index: number) {
   white-space: nowrap;
 }
 
+.result-snippet-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-left: 80px;
+  overflow: hidden;
+}
+
+.field-badge {
+  flex-shrink: 0;
+  font-size: 10px;
+  line-height: 1;
+  padding: 2px 5px;
+  border-radius: 3px;
+  background: var(--el-color-primary-light-8);
+  color: var(--el-color-primary);
+  font-weight: 500;
+}
+
 .result-snippet {
   font-size: 12px;
   color: var(--el-text-color-secondary);
-  padding-left: 80px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  min-width: 0;
 }
 
 .no-results {
@@ -423,7 +506,7 @@ function handleTouchStart(index: number) {
 }
 
 @media (max-width: 767px) {
-  .result-snippet {
+  .result-snippet-row {
     padding-left: 0;
   }
 }

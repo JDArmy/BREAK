@@ -614,7 +614,18 @@
     "groupAttackTool": "Attack Tools",
     "groupThreatActor": "Threat Actors",
     "groupTerm": "Slang Terms",
-    "groupCase": "Cases"
+    "groupCase": "Cases",
+    "fieldTitle": "Title",
+    "fieldKeywords": "Keywords",
+    "fieldAliases": "Aliases",
+    "fieldCategory": "Category",
+    "fieldDefinition": "Definition",
+    "fieldDescription": "Description",
+    "fieldInfluence": "Influence",
+    "fieldLimitation": "Limitation",
+    "fieldUsageExample": "Example",
+    "fieldSummary": "Summary",
+    "fieldReferences": "Reference"
   },
   "theme": {
     "current": "Current theme",

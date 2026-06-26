@@ -614,7 +614,18 @@
     "groupAttackTool": "攻击工具",
     "groupThreatActor": "威胁行为者",
     "groupTerm": "行业术语",
-    "groupCase": "案例"
+    "groupCase": "案例",
+    "fieldTitle": "标题",
+    "fieldKeywords": "关键词",
+    "fieldAliases": "别名",
+    "fieldCategory": "分类",
+    "fieldDefinition": "定义",
+    "fieldDescription": "描述",
+    "fieldInfluence": "影响",
+    "fieldLimitation": "局限性",
+    "fieldUsageExample": "使用示例",
+    "fieldSummary": "摘要",
+    "fieldReferences": "参考"
   },
   "theme": {
     "current": "当前主题",

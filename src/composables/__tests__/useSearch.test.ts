@@ -316,7 +316,7 @@ describe("useSearch", () => {
     });
 
     it("snippet 围绕实际命中关键词生成", () => {
-      const snippet = extractSnippetForSearch(
+      const { snippet } = extractSnippetForSearch(
         {
           id: "R0002",
           title: "合规处罚风险",

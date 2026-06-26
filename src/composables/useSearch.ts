@@ -33,6 +33,8 @@ export interface SearchResult {
   title: string;
   /** 匹配摘要（截取匹配片段） */
   snippet?: string;
+  /** 命中的字段名（用于 UI 展示匹配来源） */
+  matchedField?: string;
 }
 
 /** 可索引的实体数据 */
@@ -48,6 +50,7 @@ interface IndexableItem {
   limitation?: string;
   usageExample?: string;
   summary?: string;
+  referenceTitles?: string[];
 }
 
 /** 各类型的 Fuse 索引配置 */
@@ -63,6 +66,7 @@ const FUSE_CONFIGS: Record<
       { name: "definition", weight: 1.5 },
       { name: "description", weight: 1 },
       { name: "influence", weight: 0.5 },
+      { name: "referenceTitles", weight: 0.4 },
     ],
     i18nPath: "BREAK.risks",
     idKey: "rKey",
@@ -75,6 +79,7 @@ const FUSE_CONFIGS: Record<
       { name: "definition", weight: 1.5 },
       { name: "description", weight: 1 },
       { name: "limitation", weight: 0.5 },
+      { name: "referenceTitles", weight: 0.4 },
     ],
     i18nPath: "BREAK.avoidances",
     idKey: "aKey",
@@ -85,6 +90,7 @@ const FUSE_CONFIGS: Record<
       { name: "title", weight: 2 },
       { name: "keywords", weight: 1.6 },
       { name: "description", weight: 1 },
+      { name: "referenceTitles", weight: 0.4 },
     ],
     i18nPath: "BREAK.attackTools",
     idKey: "atKey",
@@ -95,6 +101,7 @@ const FUSE_CONFIGS: Record<
       { name: "title", weight: 2 },
       { name: "keywords", weight: 1.6 },
       { name: "description", weight: 1 },
+      { name: "referenceTitles", weight: 0.4 },
     ],
     i18nPath: "BREAK.threatActors",
     idKey: "taKey",
@@ -109,6 +116,7 @@ const FUSE_CONFIGS: Record<
       { name: "description", weight: 1 },
       { name: "category", weight: 0.8 },
       { name: "usageExample", weight: 0.7 },
+      { name: "referenceTitles", weight: 0.4 },
     ],
     i18nPath: "BREAK.terms",
     idKey: "tKey",
@@ -119,7 +127,9 @@ const FUSE_CONFIGS: Record<
       { name: "title", weight: 2 },
       { name: "keywords", weight: 1.6 },
       { name: "summary", weight: 1.2 },
+      { name: "description", weight: 1 },
       { name: "category", weight: 0.6 },
+      { name: "referenceTitles", weight: 0.4 },
     ],
     i18nPath: "BREAK.cases",
     idKey: "cKey",
@@ -135,11 +145,20 @@ const BREAK_KEYS: Record<Exclude<EntityType, "case">, keyof typeof BREAK> = {
   term: "terms",
 };
 
+/** 从 i18n references 数据中提取标题数组 */
+function extractReferenceTitles(refs: unknown): string[] | undefined {
+  if (!Array.isArray(refs)) return undefined;
+  const titles = refs
+    .map((r) => (typeof r === "object" && r !== null ? (r as Record<string, unknown>).title : undefined))
+    .filter((t): t is string => typeof t === "string" && t.length > 0);
+  return titles.length > 0 ? titles : undefined;
+}
+
 /** 从 i18n messages 构建可索引的实体列表（case 类型走 casesData 直接构建） */
 function buildIndexableItems(
   type: EntityType,
   localeMessages: Record<string, unknown>,
-  casesData?: Record<string, { title?: string; keywords?: string[]; summary?: string; category?: string }>
+  casesData?: Record<string, { title?: string; keywords?: string[]; summary?: string; description?: string; category?: string; references?: { title: string }[] }>
 ): IndexableItem[] {
   const config = FUSE_CONFIGS[type];
 
@@ -153,7 +172,9 @@ function buildIndexableItems(
         title: c.title || "",
         keywords: c.keywords || [],
         summary: c.summary,
+        description: c.description,
         category: c.category,
+        referenceTitles: c.references?.map(r => r.title).filter(Boolean),
       });
     }
     return items;
@@ -189,17 +210,18 @@ function buildIndexableItems(
       category: (i18nEntity.category as string) || undefined,
       usageExample: (i18nEntity.usageExample as string) || undefined,
       summary: (i18nEntity.summary as string) || undefined,
+      referenceTitles: extractReferenceTitles(i18nEntity.references),
     });
   }
   return items;
 }
 
-/** 从 Fuse matches 中提取匹配片段 */
+/** 从 Fuse matches 中提取匹配片段及命中字段名 */
 export function extractSnippetForSearch(
   item: IndexableItem,
   matches: readonly FuseResultMatch[] | undefined,
   query: string
-): string {
+): { snippet: string; matchedField?: string } {
   const fallback = item.description || item.definition || "";
   const normalizedQuery = query.trim().toLowerCase();
   const snippetRadiusBefore = 12;
@@ -226,6 +248,7 @@ export function extractSnippetForSearch(
       "limitation",
       "usageExample",
       "summary",
+      "referenceTitles",
     ] as const;
     for (const fieldName of searchableFields) {
       const fieldValue = item[fieldName];
@@ -235,36 +258,36 @@ export function extractSnippetForSearch(
         const keywordHit = fieldValue.find((keyword) =>
           keyword.toLowerCase().includes(normalizedQuery)
         );
-        if (keywordHit) return keywordHit;
+        if (keywordHit) return { snippet: keywordHit, matchedField: fieldName };
         continue;
       }
 
       const matchIndex = fieldValue.toLowerCase().indexOf(normalizedQuery);
-      if (matchIndex >= 0) return createSnippet(fieldValue, matchIndex);
+      if (matchIndex >= 0) return { snippet: createSnippet(fieldValue, matchIndex), matchedField: fieldName };
     }
   }
 
-  if (!matches || matches.length === 0) return fallback;
+  if (!matches || matches.length === 0) return { snippet: fallback };
 
   // 取第一个匹配字段，提取包含匹配的片段
   const firstMatch = matches[0];
   const fieldName = firstMatch.key as keyof IndexableItem;
   const fieldValue = item[fieldName];
-  if (!fieldValue) return fallback;
+  if (!fieldValue) return { snippet: fallback };
 
   if (Array.isArray(fieldValue)) {
     const keywordHit = fieldValue.find((keyword) =>
       keyword.toLowerCase().includes(normalizedQuery)
     );
-    return keywordHit || fieldValue[0] || fallback;
+    return { snippet: keywordHit || fieldValue[0] || fallback, matchedField: fieldName as string };
   }
 
   // 截取匹配位置附近的文本（前后各 30 字符）
   const indices = firstMatch.indices;
-  if (!indices || indices.length === 0) return fieldValue.substring(0, 80);
+  if (!indices || indices.length === 0) return { snippet: fieldValue.substring(0, 80), matchedField: fieldName as string };
 
   const [start] = indices[0];
-  return createSnippet(fieldValue, start);
+  return { snippet: createSnippet(fieldValue, start), matchedField: fieldName as string };
 }
 
 export function useSearch() {
@@ -327,12 +350,16 @@ export function useSearch() {
       const fuse = fuseInstances.value[type];
       const fuseResults = fuse.search(query, { limit: 5 });
 
-      results[type] = fuseResults.map((r) => ({
-        id: r.item.id,
-        type,
-        title: r.item.title,
-        snippet: extractSnippetForSearch(r.item, r.matches, query),
-      }));
+      results[type] = fuseResults.map((r) => {
+        const { snippet, matchedField } = extractSnippetForSearch(r.item, r.matches, query);
+        return {
+          id: r.item.id,
+          type,
+          title: r.item.title,
+          snippet,
+          matchedField,
+        };
+      });
     }
 
     return results;
