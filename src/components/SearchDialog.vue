@@ -6,6 +6,7 @@ import { Search } from "@element-plus/icons-vue";
 import { useSearch, type EntityType, type SearchResult } from "@/composables/useSearch";
 import { useCases } from "@/composables/useCases";
 import { useBreakpoints } from "@/composables/useBreakpoints";
+import { inferEntityType, ALL_ENTITY_TYPES, entityRegistry, getEntityEntry } from "@/BREAK/entityRegistry";
 
 const props = defineProps<{ modelValue: boolean }>();
 const emit = defineEmits<{ "update:modelValue": [value: boolean] }>();
@@ -26,28 +27,17 @@ const emptyResults = () =>
     SearchResult[]
   >;
 
-// 默认分组显示顺序
-const DEFAULT_TYPE_ORDER: EntityType[] = ["risk", "avoidance", "attackTool", "threatActor", "term", "case"];
-
-// ID 前缀 → 实体类型（按最长前缀优先排列，避免 A/AT、T/TA 歧义）
-const ID_PREFIX_MAP: [RegExp, EntityType][] = [
-  [/^AT\d/i, "attackTool"],
-  [/^TA\d/i, "threatActor"],
-  [/^BS\d/i, "risk"], // BS 前缀无独立类型，保持默认
-  [/^R\d/i, "risk"],
-  [/^A\d/i, "avoidance"],
-  [/^T\d/i, "term"],
-  [/^C\d/i, "case"],
-];
+// 默认分组显示顺序（从 entityRegistry 派生）
+const DEFAULT_TYPE_ORDER: EntityType[] = [...ALL_ENTITY_TYPES];
 
 // 根据搜索词自动调整分组顺序：搜索实体 ID 时将对应类型提前到首位
 const sortedTypes = computed(() => {
   const q = debouncedQuery.value.trim();
   if (!q) return DEFAULT_TYPE_ORDER;
-  for (const [re, type] of ID_PREFIX_MAP) {
-    if (re.test(q)) {
-      return [type, ...DEFAULT_TYPE_ORDER.filter(t => t !== type)];
-    }
+  // BS 前缀无独立类型，保持默认 risk
+  const matchedType = q.match(/^BS\d/i) ? ("risk" as EntityType) : inferEntityType(q);
+  if (matchedType) {
+    return [matchedType, ...DEFAULT_TYPE_ORDER.filter(t => t !== matchedType)];
   }
   return DEFAULT_TYPE_ORDER;
 });
@@ -78,34 +68,19 @@ const groupLabels: Record<EntityType, string> = {
   case: "search.groupCase",
 };
 
-// 各类型对应的详情路由（首页用 homeXxxDetail 抽屉路由；案例无首页抽屉，跳知识库 detail）
-const detailRoutes: Record<EntityType, { name: string; paramKey: string }> = {
-  risk: { name: "homeRiskDetail", paramKey: "rKey" },
-  avoidance: { name: "homeAvoidanceDetail", paramKey: "aKey" },
-  attackTool: { name: "homeAttackToolDetail", paramKey: "atKey" },
-  threatActor: { name: "homeThreatActorDetail", paramKey: "taKey" },
-  term: { name: "homeTermDetail", paramKey: "tKey" },
-  case: { name: "knowledgesCaseDetail", paramKey: "cKey" },
+// 各类型对应的详情路由（从 entityRegistry 派生）
+const getHomeDetailRoute = (type: EntityType) => {
+  const e = getEntityEntry(type);
+  // case 无首页抽屉，跳知识库 detail
+  return { name: e.homeDetailRouteName || e.detailRouteName, paramKey: e.paramKey };
 };
-
-// 业务场景下用的抽屉路由（带 bsKey）
-const businessSceneDetailRoutes: Record<EntityType, { name: string; paramKey: string }> = {
-  risk: { name: "businessSceneRiskDetail", paramKey: "rKey" },
-  avoidance: { name: "businessSceneAvoidanceDetail", paramKey: "aKey" },
-  attackTool: { name: "businessSceneAttackToolDetail", paramKey: "atKey" },
-  threatActor: { name: "businessSceneThreatActorDetail", paramKey: "taKey" },
-  term: { name: "businessSceneTermDetail", paramKey: "tKey" },
-  case: { name: "knowledgesCaseDetail", paramKey: "cKey" },
+const getBusinessSceneDetailRoute = (type: EntityType) => {
+  const e = getEntityEntry(type);
+  return { name: e.businessSceneDetailRouteName || e.detailRouteName, paramKey: e.paramKey };
 };
-
-// 非首页（知识库页等）用的知识库 detail 路由
-const knowledgeDetailRoutes: Record<EntityType, { name: string; paramKey: string }> = {
-  risk: { name: "knowledgesRiskDetail", paramKey: "rKey" },
-  avoidance: { name: "knowledgesAvoidanceDetail", paramKey: "aKey" },
-  attackTool: { name: "knowledgesAttackToolDetail", paramKey: "atKey" },
-  threatActor: { name: "knowledgesThreatActorDetail", paramKey: "taKey" },
-  term: { name: "knowledgesTermDetail", paramKey: "tKey" },
-  case: { name: "knowledgesCaseDetail", paramKey: "cKey" },
+const getKnowledgeDetailRoute = (type: EntityType) => {
+  const e = getEntityEntry(type);
+  return { name: e.detailRouteName, paramKey: e.paramKey };
 };
 
 // 搜索命中字段 → 显示标签（不用 i18n 因为字段名是内部标识，用简短中英混合标签更直观）
@@ -123,24 +98,16 @@ const fieldLabels: Record<string, string> = {
   referenceTitles: "search.fieldReferences",
 };
 
-// 首页相关路由名（含已打开抽屉时的路由），搜索结果应在首页抽屉中打开
+// 首页相关路由名（从 entityRegistry 派生），搜索结果应在首页抽屉中打开
 const homePageRoutes = new Set([
   "home",
-  "homeRiskDetail",
-  "homeAvoidanceDetail",
-  "homeAttackToolDetail",
-  "homeThreatActorDetail",
-  "homeTermDetail",
+  ...entityRegistry.map(e => e.homeDetailRouteName).filter(Boolean),
 ]);
 
-// 业务场景相关路由名（含已打开抽屉时的路由），搜索结果应在业务场景抽屉中打开
+// 业务场景相关路由名（从 entityRegistry 派生），搜索结果应在业务场景抽屉中打开
 const businessSceneRoutes = new Set([
   "businessScene",
-  "businessSceneRiskDetail",
-  "businessSceneAvoidanceDetail",
-  "businessSceneAttackToolDetail",
-  "businessSceneThreatActorDetail",
-  "businessSceneTermDetail",
+  ...entityRegistry.map(e => e.businessSceneDetailRouteName).filter(Boolean),
 ]);
 
 // 防抖搜索
@@ -190,7 +157,7 @@ function selectResult(result: SearchResult) {
 
   if (isHomePage) {
     // 首页：使用 homeXxxDetail 抽屉路由
-    const detailRoute = detailRoutes[result.type];
+    const detailRoute = getHomeDetailRoute(result.type);
     router.push({
       name: detailRoute.name,
       params: { [detailRoute.paramKey]: result.id },
@@ -198,14 +165,14 @@ function selectResult(result: SearchResult) {
   } else if (isBusinessScene) {
     // 业务场景页：跳 businessSceneXxxDetail 抽屉路由，带 bsKey 保持上下文
     const bsKey = router.currentRoute.value.params.bsKey;
-    const detailRoute = businessSceneDetailRoutes[result.type];
+    const detailRoute = getBusinessSceneDetailRoute(result.type);
     router.push({
       name: detailRoute.name,
       params: { bsKey, [detailRoute.paramKey]: result.id },
     });
   } else {
     // 非首页（知识库页等）：跳知识库 detail 路由
-    const detailRoute = knowledgeDetailRoutes[result.type];
+    const detailRoute = getKnowledgeDetailRoute(result.type);
     router.push({
       name: detailRoute.name,
       params: { [detailRoute.paramKey]: result.id },

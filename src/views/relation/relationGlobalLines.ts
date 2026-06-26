@@ -8,6 +8,7 @@ import {
 import type {
   DiscoveredRelationPath,
 } from "@/views/relation/relationPathDiscovery";
+import { inferEntityType, getEntityEntry } from "@/BREAK/entityRegistry";
 import type { RelationSummary } from "@/components/relation/relationNodeDrawerRelationFilters";
 import type {
   NodeAnalysisSummary,
@@ -150,13 +151,13 @@ export const getGlobalLines = (): Line[] => {
   return globalLinesCache;
 };
 
-/** 由实体 ID 前缀推断类型（不依赖网络图局部 nodes） */
+/** 由实体 ID 前缀推断类型（从 entityRegistry 派生，不依赖网络图局部 nodes） */
 export const getNodeTypeById = (id: string): RelationEntityType => {
-  if (id.startsWith("AT")) return RelationType.attackTool;
-  if (id.startsWith("TA")) return RelationType.threatActor;
-  if (id.startsWith("R")) return RelationType.risk;
-  if (id.startsWith("A")) return RelationType.avoidance;
-  if (id.startsWith("T")) return RelationType.term;
+  const entry = inferEntityType(id);
+  if (entry) {
+    const reg = getEntityEntry(entry);
+    return reg.relationKey as RelationEntityType;
+  }
   return RelationType.risk;
 };
 

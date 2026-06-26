@@ -5,6 +5,7 @@ import { defineAsyncComponent, ref, watch, computed } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import { useBreakpoints } from "@/composables/useBreakpoints";
 import { useDrawerRoute } from "@/composables/useDrawerRoute";
+import { useHomeSceneLayout, useSubRiskToggle } from "@/composables/useHomeSceneLayout";
 import { useI18n } from "vue-i18n";
 
 const RiskDetail = defineAsyncComponent(() => import("@/components/RiskDetail.vue"));
@@ -60,35 +61,6 @@ const totalTerms = computed(() => BREAK.entityCounts.terms);
 const totalCases = computed(() => BREAK.entityCounts.cases);
 
 //分业务场景查看风险
-interface SceneBREAK {
-  riskDimensions: {
-    [key: string]: {
-      title: string;
-      riskScenes: string[];
-    };
-  };
-  riskScenes: {
-    [key: string]: {
-      title: string;
-      risks: string[];
-    };
-  };
-}
-
-// 场景布局常量
-const SCENE_MIN_WIDTH_CN = 126;
-const SCENE_MAX_WIDTH_CN = 190;
-const SCENE_MIN_WIDTH_EN = 180;
-const SCENE_MAX_WIDTH_EN = 300;
-const SCENE_CARD_GAP = 6;
-const SCROLL_THRESHOLD_CN = 8;
-const SCROLL_THRESHOLD_EN = 6;
-
-const visualTextLength = (value: string) =>
-  Array.from(value).reduce((length, char) => length + (/[\u4e00-\u9fff]/.test(char) ? 2 : 1), 0);
-
-const clamp = (value: number, min: number, max: number) =>
-  Math.max(min, Math.min(max, value));
 
 const isChineseLocale = computed(() => locale.value === "cn");
 
@@ -124,61 +96,8 @@ const getRiskTitle = (riskKey: string) =>
 const getRiskDefinition = (riskKey: string) =>
   getLocalizedText(`BREAK.risks.${riskKey}.definition`, BREAK.risks[riskKey]?.definition ?? "");
 
-const getSceneColumnWidth = (sceneKey: string) => {
-  const isEnglish = locale.value === 'en';
-  const sceneTitle = getRiskSceneTitle(sceneKey);
-  const risks = sceneBREAK.value.riskScenes[sceneKey as keyof typeof sceneBREAK.value.riskScenes]?.risks ?? [];
-  const maxRiskTitleLength = risks.reduce((maxLength, riskKey) => {
-    return Math.max(maxLength, visualTextLength(getRiskTitle(riskKey)));
-  }, 0);
-  const contentLength = Math.max(visualTextLength(sceneTitle), maxRiskTitleLength);
-  const minWidth = isEnglish ? SCENE_MIN_WIDTH_EN : SCENE_MIN_WIDTH_CN;
-  const maxWidth = isEnglish ? SCENE_MAX_WIDTH_EN : SCENE_MAX_WIDTH_CN;
-  const charWidth = isEnglish ? 7 : 9;
-  const padding = isEnglish ? 44 : 34;
-  return clamp(Math.ceil(contentLength * charWidth + padding), minWidth, maxWidth);
-};
-
-const sceneLayout = computed(() => {
-  const totalScenes = Object.keys(sceneBREAK.value.riskScenes).length;
-  const scrollThreshold = locale.value === 'en' ? SCROLL_THRESHOLD_EN : SCROLL_THRESHOLD_CN;
-  const enableScroll = totalScenes > scrollThreshold;
-  let remainingRowSize = 24;
-
-  return Object.entries(sceneBREAK.value.riskDimensions).map(([rdKey, rdVal]) => {
-    let dimensionSize;
-    let dimensionWidth;
-
-    if (enableScroll) {
-      dimensionWidth = rdVal.riskScenes.reduce(
-        (total, sceneKey) => total + getSceneColumnWidth(sceneKey) + SCENE_CARD_GAP,
-        0
-      );
-      dimensionSize = 24;
-    } else {
-      dimensionSize = Math.round((rdVal.riskScenes.length / totalScenes) * 24);
-      dimensionSize = Math.min(dimensionSize, remainingRowSize || 24);
-      remainingRowSize -= dimensionSize;
-    }
-
-    let remainingSceneSize = 24;
-    const scenes = rdVal.riskScenes.map(rsKey => {
-      let sceneSize = Math.round(24 / rdVal.riskScenes.length);
-      sceneSize = Math.min(sceneSize, remainingSceneSize || 24);
-      remainingSceneSize -= sceneSize;
-      return { key: rsKey, size: sceneSize, width: enableScroll ? getSceneColumnWidth(rsKey) : undefined };
-    });
-
-    return { key: rdKey, value: rdVal, size: dimensionSize, width: dimensionWidth, scenes };
-  });
-});
-
-const shouldEnableScroll = computed(() => {
-  const scrollThreshold = locale.value === 'en' ? SCROLL_THRESHOLD_EN : SCROLL_THRESHOLD_CN;
-  return Object.keys(sceneBREAK.value.riskScenes).length > scrollThreshold;
-});
-
 const shouldEnableMatrixScroll = computed(() => shouldEnableScroll.value && !isMobile.value);
+
 
 const normalizeBusinessSceneKey = (key?: string) =>
   key && hasOwn(BREAK.businessScenes, key) ? key : defaultBusinessSceneKey;
@@ -199,12 +118,11 @@ watch(
   { immediate: true }
 );
 
-const sceneBREAK = computed(
-  () =>
-    ({
-      riskDimensions: BREAK.businessScenes[bsKeySelected.value].riskDimensions,
-      riskScenes: BREAK.businessScenes[bsKeySelected.value].riskScenes,
-    }) as SceneBREAK
+// 场景布局计算委托给 composable（布局常量、列宽计算、滚动阈值均在 composable 内部管理）
+const { sceneBREAK, sceneLayout, shouldEnableScroll } = useHomeSceneLayout(
+  bsKeySelected,
+  locale,
+  { riskScene: getRiskSceneTitle, risk: getRiskTitle },
 );
 
 //bsKeySelected event
@@ -240,32 +158,8 @@ const getRisks = (
 };
 
 /*-----子风险筛选-----*/
-const getSubRisks = (prKey: string) => {
-  return Object.keys(BREAK.risks).filter(
-    (rKey) => rKey.includes("-") && rKey.split("-")[0] == prKey
-  );
-};
-
-// 以父风险为key，将子风险放到value的对象中
-const subRisks = ref<Record<string, string[]>>({});
-const hideSubRisks = ref<Record<string, boolean>>({});
-Object.keys(BREAK.risks).forEach((prKey) => {
-  if (prKey.includes("-")) return;
-  const srKeys = getSubRisks(prKey);
-  if (srKeys.length > 0) {
-    subRisks.value[prKey] = srKeys;
-    hideSubRisks.value[prKey] = false;
-  }
-});
-const hideAllSubRisks = ref(false);
-watch(
-  () => hideAllSubRisks.value,
-  () => {
-    Object.keys(hideSubRisks.value).forEach((prKey) => {
-      hideSubRisks.value[prKey] = hideAllSubRisks.value;
-    });
-  }
-);
+const { subRisks, hideSubRisks, hideAllSubRisks } = useSubRiskToggle();
+//subrisk end.
 //subrisk end.
 
 /////////////////////////////////////////////////////////////////////

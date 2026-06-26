@@ -9,6 +9,7 @@ import {
   pushDetailNodeRoute,
   pushRelationNodeRoute,
 } from "@/views/relation/relationNodeRouting";
+import { inferEntityType, getEntityEntry } from "@/BREAK/entityRegistry";
 import {
   type NodeSummary,
   type Translate,
@@ -156,12 +157,9 @@ export const useRelationNodeActions = ({
   };
 
   const inferRelationTypeFromId = (id: string): RelationEntityType | null => {
-    if (/^AT\d{4}(?:-\d+)?$/.test(id)) return RelationType.attackTool;
-    if (/^TA\d{4}(?:-\d+)?$/.test(id)) return RelationType.threatActor;
-    if (/^R\d{4}(?:-\d+)?$/.test(id)) return RelationType.risk;
-    if (/^A\d{4}(?:-\d+)?$/.test(id)) return RelationType.avoidance;
-    if (/^T\d{4}$/.test(id)) return RelationType.term;
-    return null;
+    const entityType = inferEntityType(id);
+    if (!entityType) return null;
+    return getEntityEntry(entityType).relationKey as RelationEntityType;
   };
 
   // 取节点类型：优先用网络图局部节点，miss 时（如路径探索里的全局节点）按 ID 前缀推断。

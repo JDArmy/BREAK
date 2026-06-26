@@ -1,5 +1,6 @@
 import type { RouteLocationRaw, Router } from "vue-router";
 import { RelationType, type RelationEntityType } from "@/views/relation/relationTypes";
+import { getEntityEntryByRelationKey } from "@/BREAK/entityRegistry";
 
 export type DetailNodeAnchor =
   | "risks"
@@ -49,14 +50,13 @@ const getRelationNodeRoute = (type: RelationType, id: string): RouteLocationRaw 
   };
 };
 
-/** 实体类型 → 知识库 detail 路由 name + paramKey */
-const DETAIL_ROUTE_BY_TYPE: Record<RelationType, { name: string; paramKey: string }> = {
-  [RelationType.risk]: { name: "knowledgesRiskDetail", paramKey: "rKey" },
-  [RelationType.avoidance]: { name: "knowledgesAvoidanceDetail", paramKey: "aKey" },
-  [RelationType.attackTool]: { name: "knowledgesAttackToolDetail", paramKey: "atKey" },
-  [RelationType.threatActor]: { name: "knowledgesThreatActorDetail", paramKey: "taKey" },
-  [RelationType.term]: { name: "knowledgesTermDetail", paramKey: "tKey" },
-  [RelationType.all]: { name: "knowledgesRiskDetail", paramKey: "rKey" },
+/** 实体类型 → 知识库 detail 路由 name + paramKey（从 entityRegistry 派生） */
+const getDetailRouteEntry = (type: RelationType) => {
+  const entry = getEntityEntryByRelationKey(type);
+  if (entry) return { name: entry.detailRouteName, paramKey: entry.paramKey };
+  // all 兜底到 risk
+  const fallback = getEntityEntryByRelationKey("risk")!;
+  return { name: fallback.detailRouteName, paramKey: fallback.paramKey };
 };
 
 const getDetailNodeRoute = (
@@ -64,7 +64,7 @@ const getDetailNodeRoute = (
   id: string,
   detailAnchor?: DetailNodeAnchor
 ): RouteLocationRaw => {
-  const entry = DETAIL_ROUTE_BY_TYPE[type] ?? DETAIL_ROUTE_BY_TYPE[RelationType.risk];
+  const entry = getDetailRouteEntry(type);
   return withDetailAnchor(
     { name: entry.name, params: { [entry.paramKey]: id } },
     detailAnchor

@@ -1,4 +1,5 @@
 import { createI18n } from "vue-i18n";
+import { ElMessage } from "element-plus";
 import en from "./en/index.json";
 import cn from "./zh-CN/index.json";
 import { mergeWithStructure } from "@/utils/mergeWithStructure.mjs";
@@ -68,14 +69,28 @@ const loadCnBreakMessages = () => {
   return cnBreakMessagePromise;
 };
 
+// 加载失败提示（不走 i18n 管道，因为此时 i18n 数据可能还没注入；按浏览器语言判断文案）
+const DATA_LOAD_FAIL_MSG = typeof navigator !== "undefined" && navigator.language?.startsWith("en")
+  ? "Data failed to load. Please refresh the page."
+  : "数据加载失败，请刷新页面";
+
+const showDataLoadError = () => {
+  ElMessage({ message: DATA_LOAD_FAIL_MSG, type: "error", plain: true, duration: 5000, grouping: true });
+};
+
 const ensureCnLocaleMessages = async () => {
   if (hasBreakMessages("cn")) return;
 
-  const cnBREAK = await loadCnBreakMessages();
-  i18n.global.setLocaleMessage("cn", {
-    ...cn,
-    BREAK: cnBREAK,
-  });
+  try {
+    const cnBREAK = await loadCnBreakMessages();
+    i18n.global.setLocaleMessage("cn", {
+      ...cn,
+      BREAK: cnBREAK,
+    });
+  } catch (err) {
+    showDataLoadError();
+    throw err;
+  }
 };
 
 const ensureEnLocaleMessages = async () => {
@@ -95,6 +110,7 @@ const ensureEnLocaleMessages = async () => {
       })
       .catch((err) => {
         enBreakMessagePromise = null;
+        showDataLoadError();
         throw err;
       });
   }

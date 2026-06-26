@@ -1,4 +1,5 @@
 import { ref } from "vue";
+import { getEntityEntryByRelationKey } from "@/BREAK/entityRegistry";
 
 export enum RelationType {
   risk = "risk",
@@ -439,60 +440,26 @@ export const isRelationEntityType = (
 export const createRelationTypeMapping = (
   t: (key: string) => string,
   getRelationTypeColor: (type: RelationEntityType) => string,
-) => ({
-  [RelationType.risk]: {
-    get title() {
-      return t("relationType.risk");
-    },
-    relType: RelationType.risk,
-    BreakKey: "risks",
-    get color() {
-      return getRelationTypeColor(RelationType.risk);
-    },
-    disableContextMenu: ref<boolean>(false),
-  },
-  [RelationType.avoidance]: {
-    get title() {
-      return t("relationType.avoidance");
-    },
-    relType: RelationType.avoidance,
-    BreakKey: "avoidances",
-    get color() {
-      return getRelationTypeColor(RelationType.avoidance);
-    },
-    disableContextMenu: ref<boolean>(false),
-  },
-  [RelationType.attackTool]: {
-    get title() {
-      return t("relationType.attackTool");
-    },
-    relType: RelationType.attackTool,
-    BreakKey: "attackTools",
-    get color() {
-      return getRelationTypeColor(RelationType.attackTool);
-    },
-    disableContextMenu: ref<boolean>(false),
-  },
-  [RelationType.threatActor]: {
-    get title() {
-      return t("relationType.threatActor");
-    },
-    relType: RelationType.threatActor,
-    BreakKey: "threatActors",
-    get color() {
-      return getRelationTypeColor(RelationType.threatActor);
-    },
-    disableContextMenu: ref<boolean>(false),
-  },
-  [RelationType.term]: {
-    get title() {
-      return t("relationType.term");
-    },
-    relType: RelationType.term,
-    BreakKey: "terms",
-    get color() {
-      return getRelationTypeColor(RelationType.term);
-    },
-    disableContextMenu: ref<boolean>(false),
-  },
-});
+) => {
+  const makeEntry = (relType: RelationEntityType) => {
+    const entry = getEntityEntryByRelationKey(relType);
+    return {
+      get title() {
+        return t(entry?.typeLabelKey ?? `relationType.${relType}`);
+      },
+      relType,
+      BreakKey: entry?.breakKey ?? relType,
+      get color() {
+        return getRelationTypeColor(relType);
+      },
+      disableContextMenu: ref<boolean>(false),
+    };
+  };
+  return {
+    [RelationType.risk]: makeEntry(RelationType.risk),
+    [RelationType.avoidance]: makeEntry(RelationType.avoidance),
+    [RelationType.attackTool]: makeEntry(RelationType.attackTool),
+    [RelationType.threatActor]: makeEntry(RelationType.threatActor),
+    [RelationType.term]: makeEntry(RelationType.term),
+  };
+};

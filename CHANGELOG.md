@@ -1,5 +1,14 @@
 # Change log
 
+## 2.29.6
+
+架构 Review 改进（完结）：
+
+- Entity Registry 消费扩展：SearchDialog、relationNodeRouting、relationGlobalLines、useRelationNodeActions、relationNetworkLayout、relationTypes 共 6 个文件迁移到 Registry 消费，消除全部散落的 ID 前缀推断（5 处→1 处）、detail 路由映射（5 处→1 处）、BreakKey 映射（3 处→1 处）
+- Registry 新增 `relationKey`（kebab-case 映射）和 `childIdPattern`（子编号正则）字段，支持关系图模块消费
+- HomeView 接入 composable：布局计算和子风险折叠逻辑迁移到 `useHomeSceneLayout`，HomeView 从 1010 行减少到 904 行（-106 行）
+- i18n 模块内部错误提示：`ensureCnLocaleMessages`/`ensureEnLocaleMessages` 失败时直接 ElMessage 提示用户，不再依赖调用方兜底
+
 ## 2.29.5
 
 架构 Review 改进（续）：

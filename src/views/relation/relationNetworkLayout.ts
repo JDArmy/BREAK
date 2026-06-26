@@ -13,6 +13,7 @@ import {
   networkNodeSize,
   networkRootNodeSize,
 } from "@/views/relation/relationTypes";
+import { entityRegistry, type EntityRegistryEntry } from "@/BREAK/entityRegistry";
 
 interface CreateNetworkDataHelpersOptions {
   nodes: Node[];
@@ -63,12 +64,13 @@ const networkNodeSortOrder: Record<string, number> = {
 
 const normalizeGraphText = (text: string) => text.replace(/<br\s*\/?>/gi, "\n");
 
-const entityChildIdPatterns: Partial<Record<RelationEntityType, RegExp>> = {
-  [RelationType.risk]: /^R\d{4}-\d+/,
-  [RelationType.avoidance]: /^A\d{4}-\d+/,
-  [RelationType.attackTool]: /^AT\d{4}-\d+/,
-  [RelationType.threatActor]: /^TA\d{4}-\d+/,
-};
+/** 子编号 ID 正则（从 entityRegistry 派生，只含有 childIdPattern 的类型） */
+const entityChildIdPatterns: Partial<Record<RelationEntityType, RegExp>> =
+  Object.fromEntries(
+    entityRegistry
+      .filter((e): e is EntityRegistryEntry & { childIdPattern: RegExp } => !!e.childIdPattern)
+      .map((e) => [e.relationKey, e.childIdPattern]),
+  ) as Partial<Record<RelationEntityType, RegExp>>;
 
 const getEntityParentId = (node: Node) => {
   const childMatch = entityChildIdPatterns[node.type]?.exec(node.id);

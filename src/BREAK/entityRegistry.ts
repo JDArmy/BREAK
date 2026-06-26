@@ -20,6 +20,8 @@ export interface EntityRegistryEntry {
   type: EntityType;
   /** ID 前缀（最长优先匹配），如 ["AT"]、["TA"] */
   idPrefix: string;
+  /** 关系图中使用的 kebab-case 类型键，如 "attack-tool"、"threat-actor" */
+  relationKey: string;
   /** 路由参数名，如 rKey / aKey / atKey / taKey / tKey / cKey */
   paramKey: string;
   /** BREAK 数据对象的集合键名（复数），同时也是 ReferenceList 的 type prop */
@@ -38,6 +40,8 @@ export interface EntityRegistryEntry {
   fieldPriority: string[];
   /** 数据来源：'i18n'(走 BREAK+i18n) | 'lazy'(懒加载，如 cases) */
   dataSource: "i18n" | "lazy";
+  /** 子编号 ID 正则（可选，如 /^R\d{4}-\d+/），用于关系图子节点识别 */
+  childIdPattern?: RegExp;
 }
 
 /**
@@ -47,6 +51,7 @@ const REGISTRY: readonly EntityRegistryEntry[] = [
   {
     type: "risk",
     idPrefix: "R",
+    relationKey: "risk",
     paramKey: "rKey",
     breakKey: "risks",
     i18nPath: "BREAK.risks",
@@ -56,10 +61,12 @@ const REGISTRY: readonly EntityRegistryEntry[] = [
     businessSceneDetailRouteName: "businessSceneRiskDetail",
     fieldPriority: ["definition", "description"],
     dataSource: "i18n",
+    childIdPattern: /^R\d{4}-\d+/,
   },
   {
     type: "avoidance",
     idPrefix: "A",
+    relationKey: "avoidance",
     paramKey: "aKey",
     breakKey: "avoidances",
     i18nPath: "BREAK.avoidances",
@@ -69,10 +76,12 @@ const REGISTRY: readonly EntityRegistryEntry[] = [
     businessSceneDetailRouteName: "businessSceneAvoidanceDetail",
     fieldPriority: ["definition", "description"],
     dataSource: "i18n",
+    childIdPattern: /^A\d{4}-\d+/,
   },
   {
     type: "attackTool",
     idPrefix: "AT",
+    relationKey: "attack-tool",
     paramKey: "atKey",
     breakKey: "attackTools",
     i18nPath: "BREAK.attackTools",
@@ -82,10 +91,12 @@ const REGISTRY: readonly EntityRegistryEntry[] = [
     businessSceneDetailRouteName: "businessSceneAttackToolDetail",
     fieldPriority: ["description"],
     dataSource: "i18n",
+    childIdPattern: /^AT\d{4}-\d+/,
   },
   {
     type: "threatActor",
     idPrefix: "TA",
+    relationKey: "threat-actor",
     paramKey: "taKey",
     breakKey: "threatActors",
     i18nPath: "BREAK.threatActors",
@@ -95,10 +106,12 @@ const REGISTRY: readonly EntityRegistryEntry[] = [
     businessSceneDetailRouteName: "businessSceneThreatActorDetail",
     fieldPriority: ["description"],
     dataSource: "i18n",
+    childIdPattern: /^TA\d{4}-\d+/,
   },
   {
     type: "term",
     idPrefix: "T",
+    relationKey: "term",
     paramKey: "tKey",
     breakKey: "terms",
     i18nPath: "BREAK.terms",
@@ -112,6 +125,7 @@ const REGISTRY: readonly EntityRegistryEntry[] = [
   {
     type: "case",
     idPrefix: "C",
+    relationKey: "case",
     paramKey: "cKey",
     breakKey: "cases",
     i18nPath: "BREAK.cases",
@@ -136,6 +150,11 @@ const byBreakKey = new Map<string, EntityRegistryEntry>(
   REGISTRY.map((e) => [e.breakKey, e]),
 );
 
+/** 按 relationKey（kebab-case）查找，供关系图模块使用 */
+const byRelationKey = new Map<string, EntityRegistryEntry>(
+  REGISTRY.map((e) => [e.relationKey, e]),
+);
+
 /**
  * ID 前缀 → 类型，按前缀长度降序排列以实现最长前缀优先匹配。
  * AT 匹配先于 A，TA 匹配先于 T。
@@ -156,6 +175,11 @@ export function getEntityEntry(type: EntityType): EntityRegistryEntry {
 /** 按 breakKey（如 "risks"）获取注册信息 */
 export function getEntityEntryByBreakKey(breakKey: string): EntityRegistryEntry | undefined {
   return byBreakKey.get(breakKey);
+}
+
+/** 按 relationKey（如 "attack-tool"）获取注册信息，供关系图模块使用 */
+export function getEntityEntryByRelationKey(relationKey: string): EntityRegistryEntry | undefined {
+  return byRelationKey.get(relationKey);
 }
 
 /**
