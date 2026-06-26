@@ -626,22 +626,29 @@ export const createRelationViewAssembly = ({
     },
   );
 
-  // URL → State
+  // URL → State：只恢复 URL 中显式存在的筛选参数，缺失的保持现有值
+  // （syncRootAttackPathFilter 会自动填充 selector 选中值，不应被 URL 缺失覆盖）
   watch(
     () => [route.query.ta, route.query.at, route.query.r, route.query.a],
     ([queryTa, queryAt, queryR, queryA]) => {
       const perspective = getRelationPerspectiveFromRoute(route.name);
       if (perspective !== "defenseCoverage") return;
       const queryValues = [queryTa, queryAt, queryR, queryA];
-      const nextFilters: Record<string, string | undefined> = {};
+      const nextFilters: Record<string, string | undefined> = {
+        ...graphData.attackPathFilters.value,
+      };
       let filtersChanged = false;
       for (let i = 0; i < ATTACK_PATH_FILTER_QUERY_MAP.length; i++) {
         const [filterKey] = ATTACK_PATH_FILTER_QUERY_MAP[i];
         const qVal = typeof queryValues[i] === "string" ? (queryValues[i] as string) : undefined;
-        nextFilters[filterKey] = qVal;
-        if (qVal !== graphData.attackPathFilters.value[filterKey as keyof typeof graphData.attackPathFilters.value]) {
-          filtersChanged = true;
+        if (qVal !== undefined) {
+          // URL 中显式指定了值，覆盖
+          if (qVal !== nextFilters[filterKey]) {
+            nextFilters[filterKey] = qVal;
+            filtersChanged = true;
+          }
         }
+        // URL 中没有该参数时不清空，保持现有值
       }
       if (filtersChanged) {
         graphData.attackPathFilters.value = nextFilters;
