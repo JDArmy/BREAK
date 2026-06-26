@@ -262,10 +262,15 @@ function scanSubtree(root: Node) {
 let observer: MutationObserver | null = null;
 let scanTimer: ReturnType<typeof setTimeout> | null = null;
 
+let pendingMutations: MutationRecord[] = [];
+
 function handleMutations(mutations: MutationRecord[]) {
+  pendingMutations.push(...mutations);
   if (scanTimer) clearTimeout(scanTimer);
   scanTimer = setTimeout(() => {
-    for (const mutation of mutations) {
+    const batch = pendingMutations;
+    pendingMutations = [];
+    for (const mutation of batch) {
       if (mutation.type === "childList") {
         for (const node of mutation.addedNodes) {
           if (node.nodeType === Node.TEXT_NODE) {
