@@ -92,6 +92,8 @@ const INTERACTIVE_SELECTORS = [
   ".node-relation-link-id",
   // 关系图抽屉：相关实体块中的 ID
   ".node-related-entity-id",
+  // 关系图抽屉：防御覆盖列表项（div[role=button]，含 ID span）
+  ".node-coverage-item",
 ];
 const INTERACTIVE_SELECTOR = INTERACTIVE_SELECTORS.join(",");
 
