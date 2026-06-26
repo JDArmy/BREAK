@@ -16,10 +16,12 @@
     "summary": "The National Cybersecurity Notification Center has issued a warning that the default configuration of the open-source large language model tool Ollama contains vulnerabilities such as unauthorized access and model theft, potentially leading to data leakage, computational resource hijacking, and service disruption. As many users deploy the tool privately without modifying default settings, it poses",
     "references": [
       {
-        "title": "Industrial Internet Weekly | National Cybersecurity Notification Center Alert: Large Model Tool Ollama..."
+        "title": "Industrial Internet Weekly | National Cybersecurity Notification Center Alert: Large Model Tool Ollama...",
+        "link": "https://view.inews.qq.com/k/20250311A095QK00"
       },
       {
-        "title": "Models, More ProbLLMs: New Vulnerabilities in Ollama"
+        "title": "Models, More ProbLLMs: New Vulnerabilities in Ollama",
+        "link": "https://www.oligo.security/blog/more-models-more-probllms"
       }
     ]
   }

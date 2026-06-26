@@ -15,7 +15,8 @@
     "summary": "The OpenClaw voice-call plugin contains an insecure webhook verification flaw. Remote attackers can bypass webhook verification by manipulating Forwarded or X-Forwarded-* headers in reverse proxy configurations, enabling them to forge webhook events and trigger false state changes.",
     "references": [
       {
-        "title": "NVD - CVE-2026-28465"
+        "title": "NVD - CVE-2026-28465",
+        "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-28465"
       }
     ]
   }

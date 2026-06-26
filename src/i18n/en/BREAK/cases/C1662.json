@@ -14,7 +14,8 @@
     "summary": "In 2019, an attacker exploited an AWS misconfiguration and an IDOR (Insecure Direct Object Reference) vulnerability to access data of over 100 million Capital One customers, including credit card applications, bank account details, and personally identifiable information. The incident, one of the largest data breaches in U.S. history, resulted in Capital One paying over $80 million in fines.",
     "references": [
       {
-        "title": "012_Web Security Attack and Defense Practice: In-Depth Analysis and Protection of IDOR Insecure Direct Object Reference Vulnerability..."
+        "title": "012_Web Security Attack and Defense Practice: In-Depth Analysis and Protection of IDOR Insecure Direct Object Reference Vulnerability...",
+        "link": "https://cloud.tencent.com/developer/article/2590379"
       }
     ]
   }

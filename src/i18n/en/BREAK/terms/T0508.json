@@ -8,10 +8,12 @@
     "usageExample": "A hacker group compromised an energy industry association website, implanting a zero-day exploit code that successfully infected the computers of employees from multiple power companies.",
     "references": [
       {
-        "title": "Watering Hole Attacks - CISA"
+        "title": "Watering Hole Attacks - CISA",
+        "link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-099a"
       },
       {
-        "title": "Drive-by Compromise - MITRE ATT&CK"
+        "title": "Drive-by Compromise - MITRE ATT&CK",
+        "link": "https://attack.mitre.org/techniques/T1189/"
       }
     ],
     "title": "Watering Hole Attack",

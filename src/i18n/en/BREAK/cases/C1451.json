@@ -14,7 +14,8 @@
     "summary": "OWASP Smart Contract Top 10 lists timestamp dependence as a common smart contract risk. Ethereum contracts often use block.timestamp for time-sensitive functions such as auctions, lotteries, and token vesting, but block producers can slightly adjust timestamps within protocol constraints. If a contract uses the timestamp as a randomness source or critical decision condition, a malicious block producer may manipulate drawings, end auctions early, or trigger unfair gains.",
     "references": [
       {
-        "title": "Vulnerability: Timestamp Dependence"
+        "title": "Vulnerability: Timestamp Dependence",
+        "link": "https://owasp.org/www-project-smart-contract-top-10/2023/en/src/SC03-timestamp-dependence.html"
       }
     ]
   }

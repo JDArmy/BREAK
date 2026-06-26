@@ -16,7 +16,8 @@
     "summary": "This case study analyzes common use cases in NFC mobile payments, specifically tap-to-pay systems. It identifies that cloud token synchronization, Trusted Service Manager (TSM) leaks, or misconfigured APIs can lead to payment tokenization misconfigurations, introducing security risks.",
     "references": [
       {
-        "title": "Secure NFC Communication in Mobile Payments: Evaluating Privacy and Authentication in Tap-to-Pay Systems"
+        "title": "Secure NFC Communication in Mobile Payments: Evaluating Privacy and Authentication in Tap-to-Pay Systems",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11431283/"
       }
     ]
   }

@@ -9,10 +9,12 @@
     "usageExample": "A NIDS detects that an internal host is sending an abnormally high volume of DNS query requests, generating an alert for potential data exfiltration.",
     "references": [
       {
-        "title": "Guide to Intrusion Detection and Prevention Systems (IDPS) - NIST SP 800-94"
+        "title": "Guide to Intrusion Detection and Prevention Systems (IDPS) - NIST SP 800-94",
+        "link": "https://www.nist.gov/publications/guide-intrusion-detection-and-prevention-systems-idps"
       },
       {
-        "title": "Introduction to Intrusion Detection Systems - SANS"
+        "title": "Introduction to Intrusion Detection Systems - SANS",
+        "link": "https://www.sans.org/reading-room/whitepapers/detection/intrusion-detection-systems-594"
       }
     ],
     "title": "Intrusion Detection System",

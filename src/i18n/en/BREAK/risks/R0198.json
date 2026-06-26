@@ -12,10 +12,12 @@
     ],
     "references": [
       {
-        "title": "Smart Contract Token Economics Security"
+        "title": "Smart Contract Token Economics Security",
+        "link": "https://consensys.io/diligence/blog/2019/09/stop-using-soliditys-transfer-now/"
       },
       {
-        "title": "Building Secure Smart Contracts"
+        "title": "Building Secure Smart Contracts",
+        "link": "https://github.com/crytic/building-secure-contracts"
       }
     ],
     "description": "Token minting and deflation bugs arise from smart contract permission errors, arithmetic flaws, hook logic, or upgrade mistakes. Attackers may mint tokens without authorization, destroy supply abnormally, or corrupt balance accounting.\n\nThese bugs directly undermine scarcity and market expectations, leading to price collapse, liquidity loss, and governance distortion. Token economics, permissions, and edge states need dedicated review before launch.",

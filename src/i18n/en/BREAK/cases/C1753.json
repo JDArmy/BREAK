@@ -14,7 +14,8 @@
     "summary": "A security weakness in the data loader component of a RAG pipeline allows attackers to import malicious documents, resulting in unauthorized data access and the generation of harmful content. Any client that imports documents can trigger this vulnerability, causing the system to return sensitive information the client is not authorized to view.",
     "references": [
       {
-        "title": "The Hidden Threat in Plain Text: Attacking RAG Data Loaders"
+        "title": "The Hidden Threat in Plain Text: Attacking RAG Data Loaders",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3733799.3762976"
       }
     ]
   }

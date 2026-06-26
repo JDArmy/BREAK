@@ -14,7 +14,8 @@
     "summary": "Attackers repackage apps by injecting ad network SDK code into Activities or Services, causing pop-up ads or persistent background displays. They also implant data collection modules to harvest device IMEI, MAC address, location coordinates, and contact lists, periodically uploading the information to remote servers.",
     "references": [
       {
-        "title": "Android APK Repackaging Detection and Channel Distribution Security: Signature Verification, SDK Injection Identification, and Automated..."
+        "title": "Android APK Repackaging Detection and Channel Distribution Security: Signature Verification, SDK Injection Identification, and Automated...",
+        "link": "https://cloud.tencent.com/developer/article/2688979"
       }
     ]
   }

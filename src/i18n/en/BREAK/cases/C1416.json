@@ -14,7 +14,8 @@
     "summary": "On June 28, 2023, the crypto lending protocol Themis suffered an oracle manipulation attack. The attacker exploited external price data fed by the oracle to distort the protocol's normal lending or liquidation logic, ultimately profiting approximately $370,000.",
     "references": [
       {
-        "title": "WTF Solidity Contract Security: S15. Manipulating Oracles - GitHub"
+        "title": "WTF Solidity Contract Security: S15. Manipulating Oracles - GitHub",
+        "link": "https://github.com/AmazingAng/WTF-Solidity/blob/main/S15_OracleManipulation/readme.md"
       }
     ]
   }

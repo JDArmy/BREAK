@@ -15,7 +15,8 @@
     "summary": "An e-commerce platform provided revenue charts for its hosted shops. An attacker discovered that the API endpoint pattern was /shops/{shopName}/revenue_data.json and used another API to obtain a list of all shop names. By scripting bulk replacement of the shop name in the URL, the attacker accessed sales data for thousands of stores without authorization, representing a classic case of object-leve",
     "references": [
       {
-        "title": "API1:2023 Broken Object Level Authorization - OWASP API Security"
+        "title": "API1:2023 Broken Object Level Authorization - OWASP API Security",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0xa1-broken-object-level-authorization/"
       }
     ]
   }

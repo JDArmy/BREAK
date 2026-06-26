@@ -15,7 +15,8 @@
     "summary": "This vulnerability allows attackers to bypass the authentication mechanism of the Modbus TCP protocol, leading to unauthorized access to industrial control systems. It affects Modbus TCP devices lacking authentication measures and can be exploited for remote control.",
     "references": [
       {
-        "title": "GitHub - InfoSec-DB/ModBusPwn: Modbus TCP Exploitation, Targeting"
+        "title": "GitHub - InfoSec-DB/ModBusPwn: Modbus TCP Exploitation, Targeting",
+        "link": "https://github.com/InfoSec-DB/ModBusPwn"
       }
     ]
   }

@@ -6,7 +6,8 @@
     "influence": "Contract logic manipulated, lottery results predictable, time-sensitive business fails.",
     "references": [
       {
-        "title": "Vulnerability: Timestamp Dependence"
+        "title": "Vulnerability: Timestamp Dependence",
+        "link": "https://owasp.org/www-project-smart-contract-top-10/2023/en/src/SC03-timestamp-dependence.html"
       }
     ],
     "keywords": [

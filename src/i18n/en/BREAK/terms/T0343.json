@@ -18,10 +18,12 @@
     "description": "Criminal operators conducting money-mule transfers must constantly monitor account limit-geese to avoid transaction failures or triggering risk controls due to exceeding caps. Limits vary significantly across different payment channels and account types, and dedicated maintenance personnel within the syndicate are assigned to track limit changes. Once an account hits its limit, a new account must be switched in immediately or order-splitting strategies adjusted; otherwise, the fund chain will be disrupted, impacting laundering efficiency.",
     "references": [
       {
-        "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly"
+        "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly",
+        "link": "https://k.sina.cn/article_7857201856_1d45362c001906fzea.html?from=tech"
       },
       {
-        "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign"
+        "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign",
+        "link": "https://www.secrss.com/articles/56050"
       }
     ]
   }

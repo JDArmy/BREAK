@@ -14,7 +14,8 @@
     "summary": "A study on multi-factor authentication security examines how attackers executed MFA fatigue attacks by flooding users with repeated authentication requests after obtaining valid credentials. The findings show that while MFA is effective, it can be circumvented through user manipulation, underscoring the human element as a critical vulnerability.",
     "references": [
       {
-        "title": "Study and Enhancement of MFA Security Through Predictive Phishing Detection in Cloud Environments"
+        "title": "Study and Enhancement of MFA Security Through Predictive Phishing Detection in Cloud Environments",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11474393/"
       }
     ]
   }

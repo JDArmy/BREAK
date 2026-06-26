@@ -6,13 +6,16 @@
     "limitation": "Overly restricting OAuth permissions may affect normal application functionality and user experience; fine-grained permission control increases development and maintenance costs; users may not understand the meaning of permission requests and habitually consent; monitoring third-party application permission usage depends on platform support capabilities.",
     "references": [
       {
-        "title": "OAuth 2.0 Security Best Current Practice"
+        "title": "OAuth 2.0 Security Best Current Practice",
+        "link": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics"
       },
       {
-        "title": "Microsoft: Securing OAuth Apps in Microsoft 365"
+        "title": "Microsoft: Securing OAuth Apps in Microsoft 365",
+        "link": "https://learn.microsoft.com/en-us/microsoft-365/security/"
       },
       {
-        "title": "OWASP OAuth 2.0 Security Cheat Sheet"
+        "title": "OWASP OAuth 2.0 Security Cheat Sheet",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/OAuth2_Cheat_Sheet.html"
       }
     ],
     "keywords": [

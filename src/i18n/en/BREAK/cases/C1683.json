@@ -16,7 +16,8 @@
     "summary": "Microsoft disclosed a large-scale npm supply chain attack in which threat actors compromised packages associated with @redhat-cloud-services and injected malicious code across more than 90 versions. The malware exploited npm preinstall scripts to execute silently in CI/CD environments and developer systems, stealing GitHub, cloud platform, and local machine credentials, then republished trusted pa",
     "references": [
       {
-        "title": "Preinstall to persistence: Inside the Red Hat npm Miasma credential ..."
+        "title": "Preinstall to persistence: Inside the Red Hat npm Miasma credential ...",
+        "link": "https://www.microsoft.com/en-us/security/blog/2026/06/02/preinstall-persistence-inside-red-hat-npm-miasma-credential-stealing-campaign/"
       }
     ]
   }

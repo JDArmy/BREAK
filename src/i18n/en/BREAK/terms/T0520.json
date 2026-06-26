@@ -8,10 +8,12 @@
     "usageExample": "The security team ran the suspicious email attachment in a sandbox to observe whether it exhibited malicious behaviors such as encrypting files or connecting to a C2 server.",
     "references": [
       {
-        "title": "Cloudflare Sandbox SDK"
+        "title": "Cloudflare Sandbox SDK",
+        "link": "https://sandbox.cloudflare.com/"
       },
       {
-        "title": "Virtualization/Sandbox Evasion - MITRE ATT&CK"
+        "title": "Virtualization/Sandbox Evasion - MITRE ATT&CK",
+        "link": "https://attack.mitre.org/techniques/T1497/"
       }
     ],
     "title": "Sandbox",

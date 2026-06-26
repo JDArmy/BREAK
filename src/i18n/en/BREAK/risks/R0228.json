@@ -11,7 +11,8 @@
     ],
     "references": [
       {
-        "title": "Software Bill of Materials - CISA"
+        "title": "Software Bill of Materials - CISA",
+        "link": "https://www.cisa.gov/topics/information-communications-technology-supply-chain-security/sbom"
       }
     ],
     "description": "Dependency confusion and malicious package poisoning exploit package manager resolution rules, leaked internal package names, or lookalike names to make build systems install attacker-controlled components. Malicious packages can steal secrets during install or runtime.\n\nThe risk is common when public and private registries are mixed or dependency review is weak. Organizations need source priority controls, lockfiles, package provenance checks, and install anomaly monitoring.",

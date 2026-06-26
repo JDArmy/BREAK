@@ -13,7 +13,8 @@
     "summary": "QRLJacking is a simple yet highly impactful social engineering attack where the victim scans an attacker's QR code, resulting in session hijacking. This attack affects all applications that rely on 'scan-to-login' functionality as a secure authentication method.",
     "references": [
       {
-        "title": "GitHub - OWASP/QRLJacking: QRLJacking or Quick Response Code Login ..."
+        "title": "GitHub - OWASP/QRLJacking: QRLJacking or Quick Response Code Login ...",
+        "link": "https://github.com/OWASP/QRLJacking"
       }
     ]
   }

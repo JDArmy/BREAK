@@ -16,10 +16,12 @@
     "summary": "During a risk assessment of a hospital in April 2023, Tencent security experts discovered that its mobile app exposed a GraphQL endpoint with introspection enabled. This allowed mapping of all available APIs, many of which lacked authentication. The flaws permitted direct access to millions of sensitive records including patient identities and medical visits, and even exposed unauthenticated data ",
     "references": [
       {
-        "title": "A Million-Level Sensitive Data Leak Caused by an API Unauthorized Vulnerability - Tencent News"
+        "title": "A Million-Level Sensitive Data Leak Caused by an API Unauthorized Vulnerability - Tencent News",
+        "link": "https://new.qq.com/rain/a/20230517A084AU00"
       },
       {
-        "title": "Exposed! How a Single API Flaw Put Millions of Medical Records at Risk"
+        "title": "Exposed! How a Single API Flaw Put Millions of Medical Records at Risk",
+        "link": "https://www.cloudsek.com/blog/exposed-how-a-single-api-flaw-put-millions-of-medical-records-at-risk"
       }
     ]
   }

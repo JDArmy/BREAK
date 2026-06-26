@@ -17,10 +17,12 @@
     "description": "Operators filter illegally obtained user information by removing invalid or inactive numbers and supplementing records with attributes such as geographic location and age demographics. This refined data enables downstream fraud or marketing groups to conduct highly targeted scams, significantly increasing their success rates. Such activities directly amplify the risk of secondary harm following a privacy breach.",
     "references": [
       {
-        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
       },
       {
-        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
       }
     ]
   }

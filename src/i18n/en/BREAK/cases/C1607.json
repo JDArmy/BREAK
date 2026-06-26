@@ -15,7 +15,8 @@
     "summary": "CISA issued an ICS advisory regarding a security vulnerability (CVE-2019-13946) in the Siemens PROFINET-IO Stack. Attackers could exploit this flaw, and Siemens strongly recommends users protect network access. The vulnerability concerns security issues in the Profinet industrial protocol.",
     "references": [
       {
-        "title": "Siemens PROFINET-IO Stack (Update H)"
+        "title": "Siemens PROFINET-IO Stack (Update H)",
+        "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-20-042-04"
       }
     ]
   }

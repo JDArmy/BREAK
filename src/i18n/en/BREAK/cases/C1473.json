@@ -15,10 +15,12 @@
     "summary": "A backdoor was discovered in the firmware update process of 271 Gigabyte motherboard models. Update files are transmitted over unencrypted HTTP, allowing attackers to perform man-in-the-middle attacks to hijack the update channel, replace the firmware, and cause the motherboard to download and install malicious firmware for persistent device compromise.",
     "references": [
       {
-        "title": "Backdoor Found in Gigabyte Motherboard Firmware, Vulnerable to Man-in-the-Middle Attacks, Affecting 271 Models"
+        "title": "Backdoor Found in Gigabyte Motherboard Firmware, Vulnerable to Man-in-the-Middle Attacks, Affecting 271 Models",
+        "link": "https://www.landiannews.com/archives/98948.html"
       },
       {
-        "title": "Supply Chain Risk from Gigabyte App Center Backdoor"
+        "title": "Supply Chain Risk from Gigabyte App Center Backdoor",
+        "link": "https://eclypsium.com/blog/supply-chain-risk-from-gigabyte-app-center-backdoor/"
       }
     ]
   }

@@ -6,10 +6,12 @@
     "limitation": "Watermarks may disappear or become unrecoverable when the digital signal is edited, such as through image cropping, video editing, or audio editing.",
     "references": [
       {
-        "title": "[PDF] enhancing personal identity verification with digital watermarks ..."
+        "title": "[PDF] enhancing personal identity verification with digital watermarks ...",
+        "link": "https://csrc.nist.gov/csrc/media/projects/piv/documents/fips201-public-comments/digimarc.pdf"
       },
       {
-        "title": "C2PA Specification: Content Credentials for Media Provenance and Integrity"
+        "title": "C2PA Specification: Content Credentials for Media Provenance and Integrity",
+        "link": "https://spec.c2pa.org/specifications/specifications/2.4/explainer/Explainer.html"
       }
     ],
     "keywords": [
@@ -25,7 +27,8 @@
     "limitation": "The limitations of text watermarking include visibility issues, ease of removal, inapplicability to all text types, stealth requirements, inability to prevent copying, inapplicability to encrypted text, difficulty scaling to large deployments, and legal and privacy concerns.",
     "references": [
       {
-        "title": "JD.Army Open Source Text Watermark Solution"
+        "title": "JD.Army Open Source Text Watermark Solution",
+        "link": "https://textwatermark.jd.army/"
       }
     ],
     "keywords": [

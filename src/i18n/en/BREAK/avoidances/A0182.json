@@ -12,7 +12,8 @@
     ],
     "references": [
       {
-        "title": "CISA ICS Security"
+        "title": "CISA ICS Security",
+        "link": "https://www.cisa.gov/ics"
       }
     ],
     "definition": "Monitor IoT device network traffic to detect abnormal outbound connections."

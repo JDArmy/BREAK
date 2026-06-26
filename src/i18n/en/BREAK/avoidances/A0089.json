@@ -6,13 +6,16 @@
     "limitation": "The sandbox environment may not fully simulate the production environment, leading to differences in agent behavior; excessive restrictions may reduce the functionality and utility of the agent; sandbox performance overhead is significant in high-performance computing scenarios; complex toolchains and external dependencies may be difficult to run completely within the sandbox.",
     "references": [
       {
-        "title": "OWASP Top 10 for Agentic Applications"
+        "title": "OWASP Top 10 for Agentic Applications",
+        "link": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/"
       },
       {
-        "title": "NIST AI 100-2 E2025: Adversarial Machine Learning - A Taxonomy and Terminology of Attacks and Mitigations"
+        "title": "NIST AI 100-2 E2025: Adversarial Machine Learning - A Taxonomy and Terminology of Attacks and Mitigations",
+        "link": "https://csrc.nist.gov/pubs/ai/100/2/e2025/final"
       },
       {
-        "title": "Google DeepMind: Scalable Agent Alignment via Reward Modeling"
+        "title": "Google DeepMind: Scalable Agent Alignment via Reward Modeling",
+        "link": "https://deepmind.google/"
       }
     ],
     "keywords": [

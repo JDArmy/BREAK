@@ -16,7 +16,8 @@
     "summary": "In May 2026, Microsoft disclosed a dependency confusion campaign in which attackers used 33 malicious npm packages to collect reconnaissance data from developer and build environments. The packages exploited the package manager's default behavior of pulling dependencies from public registries by publishing malicious public packages with names matching internal private packages, enabling a supply c",
     "references": [
       {
-        "title": "Malicious npm packages abuse dependency confusion to profile developer ..."
+        "title": "Malicious npm packages abuse dependency confusion to profile developer ...",
+        "link": "https://www.microsoft.com/en-us/security/blog/2026/05/29/33-malicious-npm-packages-abuse-dependency-confusion-profile-developer-environments/"
       }
     ]
   }

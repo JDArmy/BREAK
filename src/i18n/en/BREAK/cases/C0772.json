@@ -16,7 +16,8 @@
     "summary": "A study proposes a hybrid cryptographic framework applying SM2 for key exchange and authentication, SM4 for message encryption, and SM3 for integrity verification to address security threats in instant messaging systems. The framework aims to meet the requirements of China's Cryptography Law for commercial cryptographic applications, ensuring data confidentiality, integrity, and availability.",
     "references": [
       {
-        "title": "Enhancing Security in Instant Messaging Systems with a Hybrid SM2 Encryption Approach"
+        "title": "Enhancing Security in Instant Messaging Systems with a Hybrid SM2 Encryption Approach",
+        "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12435676/"
       }
     ]
   }

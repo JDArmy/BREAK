@@ -14,7 +14,8 @@
     "summary": "A NIST publication highlights that a key threat to machine learning systems involves attackers controlling training data or the training process to alter model predictions on specific test inputs at deployment. The attack has a long history, dating back to early work on worm signature development.",
     "references": [
       {
-        "title": "Poisoning Attacks Against Machine Learning: Can Machine Learning Be ..."
+        "title": "Poisoning Attacks Against Machine Learning: Can Machine Learning Be ...",
+        "link": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=934932"
       }
     ]
   }

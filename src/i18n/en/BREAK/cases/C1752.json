@@ -14,7 +14,8 @@
     "summary": "In multi-tenant Retrieval-Augmented Generation systems, attackers exploit inconsistencies between model prompts and the retrieval mechanism to bypass access controls, leading to cross-user information leakage. By crafting specific queries, adversaries can cause the system to return document fragments that other users are not authorized to access, resulting in the exposure of sensitive knowledge.",
     "references": [
       {
-        "title": "Provably Secure Retrieval-Augmented Generation - arXiv.org"
+        "title": "Provably Secure Retrieval-Augmented Generation - arXiv.org",
+        "link": "https://arxiv.org/pdf/2508.01084"
       }
     ]
   }

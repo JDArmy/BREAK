@@ -15,7 +15,8 @@
     "summary": "This technical article surveys various poisoning attack vectors in federated learning. Malicious clients can disrupt the global model by manipulating local training data (data poisoning), or embed triggers into training samples and upload backdoored local models so that the aggregated global model inherits the backdoor (backdoor attack). Attackers may also directly tamper with local model updates ",
     "references": [
       {
-        "title": "[PDF] A Survey of Backdoor Attacks and Defenses Based on Federated Learning - Journal of Computer Research and Development"
+        "title": "[PDF] A Survey of Backdoor Attacks and Defenses Based on Federated Learning - Journal of Computer Research and Development",
+        "link": "https://crad.ict.ac.cn/cn/article/pdf/preview/10.7544/issn1000-1239.202440487.pdf"
       }
     ]
   }

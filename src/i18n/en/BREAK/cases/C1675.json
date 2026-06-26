@@ -15,10 +15,12 @@
     "summary": "Two malicious versions of LiteLLM (1.82.7 and 1.82.8) were discovered on the PyPI official repository, embedding multi-stage payloads designed to steal CI/CD keys, cloud credentials (AWS, GCP, Azure), Kubernetes configurations, and Docker credentials from developer environments. Attackers compromised publishing credentials to inject the credential-stealing code into official releases and GitHub Ac",
     "references": [
       {
-        "title": "PyPI Warns Developers: LiteLLM Malware Steals Cloud Service and CI/CD Credentials Incident..."
+        "title": "PyPI Warns Developers: LiteLLM Malware Steals Cloud Service and CI/CD Credentials Incident...",
+        "link": "https://www.freebuf.com/articles/database/474939.html"
       },
       {
-        "title": "Security Update: Suspected Supply Chain Incident"
+        "title": "Security Update: Suspected Supply Chain Incident",
+        "link": "https://docs.litellm.ai/blog/security-update-march-2026"
       }
     ]
   }

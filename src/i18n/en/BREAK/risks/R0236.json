@@ -11,7 +11,8 @@
     ],
     "references": [
       {
-        "title": "PCI Data Security Standard"
+        "title": "PCI Data Security Standard",
+        "link": "https://www.pcisecuritystandards.org/standards/pci-dss/"
       }
     ],
     "description": "Payment tokenization misconfiguration occurs when card substitutes, payment tokens, binding relationships, or merchant domain isolation are configured incorrectly. Attackers may reuse, enumerate, or use tokens across contexts to make unauthorized charges.\n\nTokenization reduces exposure of raw card numbers, but does not replace authorization boundaries. Payment systems must validate token scope, device binding, merchant binding, transaction context, and lifecycle.",

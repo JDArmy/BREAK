@@ -16,10 +16,12 @@
     "summary": "After March 19, 2026, the TeamPCP group used stolen CI/CD credentials to compromise two GitHub Actions workflows, leading to credential theft and a potential supply chain attack. The attacker achieved lateral movement and persistent access through automated pipeline tokens.",
     "references": [
       {
-        "title": "TeamPCP Hacks Checkmarx GitHub Actions Using Stolen CI Credentials"
+        "title": "TeamPCP Hacks Checkmarx GitHub Actions Using Stolen CI Credentials",
+        "link": "https://thehackernews.com/2026/03/teampcp-hacks-checkmarx-github-actions.html"
       },
       {
-        "title": "Checkmarx: Ongoing Security Updates"
+        "title": "Checkmarx: Ongoing Security Updates",
+        "link": "https://checkmarx.com/blog/ongoing-security-updates/"
       }
     ]
   }

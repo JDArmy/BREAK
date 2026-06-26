@@ -15,7 +15,8 @@
     "summary": "A longitudinal study across 12 cloud platforms identified 20,904 cases of abused dangling records. Attackers exploit released but uncleaned dangling resources such as storage buckets, IP addresses, and DNS records to host malicious content, conduct phishing, or steal data.",
     "references": [
       {
-        "title": "Cloudy with a chance of cyberattacks: dangling resources abuse on cloud platforms"
+        "title": "Cloudy with a chance of cyberattacks: dangling resources abuse on cloud platforms",
+        "link": "https://www.usenix.org/conference/nsdi24/presentation/friess"
       }
     ]
   }

@@ -6,10 +6,12 @@
     "limitation": "The limitations of privacy computing include performance overhead, reduced accuracy, communication overhead, complexity, security dependencies, compliance issues, and selective disclosure. It must be applied carefully with consideration for balancing privacy protection against other aspects.",
     "references": [
       {
-        "title": "Privacy-Enhancing Cryptography (PEC) - NIST CSRC"
+        "title": "Privacy-Enhancing Cryptography (PEC) - NIST CSRC",
+        "link": "https://csrc.nist.gov/projects/pec"
       },
       {
-        "title": "Privacy-Preserving Computation: Concepts, Frameworks, and Future Development Trends"
+        "title": "Privacy-Preserving Computation: Concepts, Frameworks, and Future Development Trends",
+        "link": "https://www.engineering.org.cn/engi/CN/10.1016/j.eng.2019.09.002"
       }
     ],
     "keywords": [

@@ -15,7 +15,8 @@
     "summary": "A GitHub security skills document explains that API enumeration attacks often involve attackers systematically probing API endpoints using sequential or predictable identifiers to discover and access unauthorized resources. For example, attackers may iterate through user IDs like /api/v1/users/1001 or exploit UUIDs leaked from list endpoints to enumerate user profiles, representing exploitation of",
     "references": [
       {
-        "title": "Detecting API Enumeration Attacks - GitHub"
+        "title": "Detecting API Enumeration Attacks - GitHub",
+        "link": "https://github.com/26zl/cybersec-toolkit/blob/main/.claude/skills/detecting-api-enumeration-attacks/SKILL.md"
       }
     ]
   }

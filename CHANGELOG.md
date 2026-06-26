@@ -1,5 +1,15 @@
 # Change log
 
+## 2.28.2
+
+英文 references 独立链接准备：
+
+- 为所有英文 i18n 翻译文件的 references 条目添加 link 字段（从中文源复制），涉及 3037 个文件、4328 条 references
+- 修改验证脚本（i18n-sync.mjs、references.mjs、english-i18n-quality.mjs）支持并校验英文 references 中的 link 字段
+- 更新 mergeWithStructure.mjs 注释，反映英文翻译也维护 references[].link
+- 新增批量脚本 scripts/import/add-en-refs-link.mjs
+- 更新 CLAUDE.md 和 DATA_SCHEMA.md 文档
+
 ## 2.28.1
 
 关系图谱体验优化：

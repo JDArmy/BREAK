@@ -4,7 +4,8 @@
     "description": "Continuously detect excessive cloud permissions, long-lived keys, and cross-account trusts, then enforce least privilege and temporary credentials.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0"
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
       }
     ],
     "keywords": [

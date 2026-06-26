@@ -14,7 +14,8 @@
     "summary": "A preprint study published in September 2025 indicates that the advent of large-scale quantum computers, driven by Shor's algorithm and Grover's algorithm, poses an existential threat to modern public-key cryptography. This vulnerability stems from the ability of quantum computers to efficiently solve hard mathematical problems such as integer factorization and elliptic curve discrete logarithms, ",
     "references": [
       {
-        "title": "Mapping Quantum Threats: An Engineering Inventory of Cryptographic ..."
+        "title": "Mapping Quantum Threats: An Engineering Inventory of Cryptographic ...",
+        "link": "https://arxiv.org/pdf/2509.24623v1"
       }
     ]
   }

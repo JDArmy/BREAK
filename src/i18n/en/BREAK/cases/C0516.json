@@ -15,7 +15,8 @@
     "summary": "The article highlights that due to the highly standardized structure of Java .class files, attackers can easily reconstruct source code logic using decompilation tools like JD-GUI and CFR, leading to the leakage of core algorithms, business processes, and sensitive configuration information such as hardcoded keys and database connection strings. It demonstrates the process of using the CFR decompi",
     "references": [
       {
-        "title": "Java Source Code Protection - Preventing Code Decompilation - Beijing SenseShield"
+        "title": "Java Source Code Protection - Preventing Code Decompilation - Beijing SenseShield",
+        "link": "https://lm.virbox.com/solution/12.html"
       }
     ]
   }

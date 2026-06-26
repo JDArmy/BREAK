@@ -6,10 +6,12 @@
     "influence": "Causes loss of platform or user digital assets, disrupts smart contract business logic, damages blockchain application reputation.",
     "references": [
       {
-        "title": "OWASP Smart Contract Top 10"
+        "title": "OWASP Smart Contract Top 10",
+        "link": "https://owasp.org/www-project-smart-contract-top-10/"
       },
       {
-        "title": "GitHub - demining/Dao-Exploit"
+        "title": "GitHub - demining/Dao-Exploit",
+        "link": "https://github.com/demining/Dao-Exploit"
       }
     ],
     "keywords": [

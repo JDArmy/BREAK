@@ -14,7 +14,8 @@
     "summary": "A 2018 academic paper identifies a vulnerability in the password reset mechanism of IoT device accounts that relies on SMS verification codes. Attackers can use automated tools to brute-force the SMS codes and gain unauthorized account access. The study develops an automation tool to demonstrate account takeover by brute-forcing SMS verification codes.",
     "references": [
       {
-        "title": "Cracking IoT Device User Account via Brute-force Attack to SMS"
+        "title": "Cracking IoT Device User Account via Brute-force Attack to SMS",
+        "link": "https://dl.acm.org/doi/10.1145/3203422.3203426"
       }
     ]
   }

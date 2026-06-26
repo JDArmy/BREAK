@@ -15,7 +15,8 @@
     "summary": "This research paper classifies current image CAPTCHAs into selection-based, slider-based, and click-based types, proposes attack frameworks for each category, and systematically evaluates attack effectiveness against 10 real-world image CAPTCHAs from providers such as Tencent, Google, and 12306. It also identifies 152 underground CAPTCHA-solving services, revealing the scale and business ecosystem",
     "references": [
       {
-        "title": "Towards understanding the security of modern image captchas and underground captcha-solving services"
+        "title": "Towards understanding the security of modern image captchas and underground captcha-solving services",
+        "link": "https://ieeexplore.ieee.org/abstract/document/8665729/"
       }
     ]
   }

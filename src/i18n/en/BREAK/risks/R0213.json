@@ -11,10 +11,12 @@
     ],
     "references": [
       {
-        "title": "AIoT security: edge computing node security"
+        "title": "AIoT security: edge computing node security",
+        "link": "https://www.163.com/dy/article/KIOS8MI70511ALHJ.html"
       },
       {
-        "title": "NIST Cybersecurity for IoT Program"
+        "title": "NIST Cybersecurity for IoT Program",
+        "link": "https://www.nist.gov/itl/applied-cybersecurity/nist-cybersecurity-iot-program"
       }
     ],
     "description": "Edge computing node attacks target local compute resources deployed in stores, factories, base stations, vehicles, or campuses. Attackers can use physical access, weak operations accounts, container flaws, or exposed services to steal data or alter inference results.\n\nEdge nodes are distributed and often lack data center-grade controls. Design needs trusted boot, remote attestation, least privilege, and auditable behavior during disconnected operation.",

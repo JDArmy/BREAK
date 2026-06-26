@@ -14,7 +14,8 @@
     "summary": "An academic paper proposes using TLS fingerprinting, specifically the JA4 method, to detect malicious automation programs (bad bots) at the protocol level. By analyzing protocol characteristics during the TLS handshake, the approach distinguishes automated scripts from real users, serving as a protocol-level detection technique for automated behavior.",
     "references": [
       {
-        "title": "When Handshakes Tell the Truth: Detecting Web Bad Bots via TLS"
+        "title": "When Handshakes Tell the Truth: Detecting Web Bad Bots via TLS",
+        "link": "https://arxiv.org/html/2602.09606v1"
       }
     ]
   }

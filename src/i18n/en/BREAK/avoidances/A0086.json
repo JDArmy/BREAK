@@ -6,13 +6,16 @@
     "limitation": "Not all phone systems support STIR/SHAKEN protocols; high-quality AI voice clones may temporarily evade voiceprint detection; attackers may use legitimate communication channels as intermediaries to reduce suspicion; false positives may block legitimate emergency calls; some countries' communication infrastructure does not support caller verification.",
     "references": [
       {
-        "title": "Google Android Scam Detection - Official Blog"
+        "title": "Google Android Scam Detection - Official Blog",
+        "link": "https://blog.google/security/new-ai-powered-scam-detection-features/"
       },
       {
-        "title": "FCC STIR/SHAKEN Framework"
+        "title": "FCC STIR/SHAKEN Framework",
+        "link": "https://www.fcc.gov/call-authentication"
       },
       {
-        "title": "INTERPOL Report on AI Voice Cloning Fraud"
+        "title": "INTERPOL Report on AI Voice Cloning Fraud",
+        "link": "https://www.interpol.int/en"
       }
     ],
     "keywords": [

@@ -14,7 +14,8 @@
     "summary": "A simulated fintech scenario where a developer accidentally commits AWS access keys to a GitHub repository, triggering a GitHub secret scanning alert. The response team must confirm if the keys were used, assess the impact scope, and perform secure rotation. This case demonstrates typical risks and response procedures for credential leaks in CI/CD pipelines.",
     "references": [
       {
-        "title": "0x9reedark/cloud-credential-incident-response-playbook - GitHub"
+        "title": "0x9reedark/cloud-credential-incident-response-playbook - GitHub",
+        "link": "https://github.com/0x9reedark/cloud-credential-incident-response-playbook"
       }
     ]
   }

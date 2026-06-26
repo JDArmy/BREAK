@@ -11,10 +11,12 @@
     ],
     "references": [
       {
-        "title": "OWASP Top 10 CI/CD Security Risks"
+        "title": "OWASP Top 10 CI/CD Security Risks",
+        "link": "https://owasp.org/www-project-top-10-ci-cd-security-risks/"
       },
       {
-        "title": "Software Bill of Materials - CISA"
+        "title": "Software Bill of Materials - CISA",
+        "link": "https://www.cisa.gov/topics/information-communications-technology-supply-chain-security/sbom"
       }
     ],
     "description": "Build artifact poisoning means attackers alter images, installers, frontend assets, SDKs, or release packages so normal delivery installs a backdoor into production or customer environments. The attack can occur on builders, artifact repositories, signing workflows, or distribution channels.\n\nArtifacts are trusted by downstream systems, so impact scales with installation and deployment privilege. Controls include artifact signing, reproducible builds, repository permissions, and pre-release integrity checks.",

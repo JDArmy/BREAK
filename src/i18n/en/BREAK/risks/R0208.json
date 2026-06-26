@@ -11,10 +11,12 @@
     ],
     "references": [
       {
-        "title": "Annual report on the riskiest connected devices: medical IoT"
+        "title": "Annual report on the riskiest connected devices: medical IoT",
+        "link": "https://metc.njtc.edu.cn/info/1141/5622.htm"
       },
       {
-        "title": "FDA Medical Device Cybersecurity"
+        "title": "FDA Medical Device Cybersecurity",
+        "link": "https://www.fda.gov/medical-devices/digital-health-center-excellence/cybersecurity"
       }
     ],
     "description": "Medical IoT risk affects connected monitors, infusion pumps, imaging systems, wearables, and implantable devices. Attackers can exploit weak passwords, old firmware, flat networks, or supply chain weaknesses to alter data or device behavior.\n\nThe impact can go beyond privacy and downtime into clinical decisions and patient safety. Medical environments must manage device availability, clinical workflow, and update capability together.",

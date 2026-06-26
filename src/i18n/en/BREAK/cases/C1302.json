@@ -15,10 +15,12 @@
     "summary": "An attacker force-pushed 75 tags via GitHub Actions, exposing the Trivy project's CI/CD secrets. The leaked tokens could be exploited to steal data and establish persistent access in developer systems, constituting a typical supply chain attack.",
     "references": [
       {
-        "title": "Trivy Security Scanner GitHub Actions Breached, 75 Tags Hijacked to ..."
+        "title": "Trivy Security Scanner GitHub Actions Breached, 75 Tags Hijacked to ...",
+        "link": "https://thehackernews.com/2026/03/trivy-security-scanner-github-actions.html"
       },
       {
-        "title": "Aqua Security GitHub Advisory: Trivy Supply Chain Incident"
+        "title": "Aqua Security GitHub Advisory: Trivy Supply Chain Incident",
+        "link": "https://github.com/aquasecurity/trivy/security/advisories/GHSA-69fq-xp46-6x23"
       }
     ]
   }

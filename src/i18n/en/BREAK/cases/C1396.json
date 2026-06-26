@@ -14,10 +14,12 @@
     "summary": "The Silex botnet exploited default credentials on IoT devices, permanently damaging or bricking a large number of them. What began as a prank led to real, widespread destruction, highlighting the severity of default credential risks.",
     "references": [
       {
-        "title": "OWASP IoT Top 10 Series: Weak or Hardcoded Password Policy"
+        "title": "OWASP IoT Top 10 Series: Weak or Hardcoded Password Policy",
+        "link": "https://blog.securelayer7.net/owasp-iot-top-10-series-weak-or-hardcoded-password-policy-owasp/"
       },
       {
-        "title": "Silexbot Bricking Systems With Known Default Login Credentials"
+        "title": "Silexbot Bricking Systems With Known Default Login Credentials",
+        "link": "https://www.akamai.com/blog/security/sirt-advisory-silexbot-bricking-systems-with-known-default-login-credentials"
       }
     ]
   }

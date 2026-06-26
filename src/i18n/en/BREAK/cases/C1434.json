@@ -15,7 +15,8 @@
     "summary": "Academic research reveals a cross-chain sandwich attack where the attacker manipulates gas fees to reorder transactions, inflating asset prices before the victim's trade and immediately reversing the position afterward to extract arbitrage profit. This demonstrates a front-running and priority manipulation technique leveraging the gas fee mechanism.",
     "references": [
       {
-        "title": "Unveiling Cross-Chain Sandwich Attacks in DeFi - arXiv"
+        "title": "Unveiling Cross-Chain Sandwich Attacks in DeFi - arXiv",
+        "link": "https://arxiv.org/html/2511.15245v1"
       }
     ]
   }

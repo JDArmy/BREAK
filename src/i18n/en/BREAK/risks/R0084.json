@@ -6,10 +6,12 @@
     "influence": "Harms include personal privacy leakage, account compromise, and financial losses; for organizations, may lead to confidential information leakage, system intrusion, and reputational damage.",
     "references": [
       {
-        "title": "Phishing - Wikipedia"
+        "title": "Phishing - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Phishing"
       },
       {
-        "title": "T1566 Phishing - MITRE ATT&CK"
+        "title": "T1566 Phishing - MITRE ATT&CK",
+        "link": "https://attack.mitre.org/techniques/T1566/"
       }
     ],
     "keywords": [
@@ -29,7 +31,8 @@
     "influence": "Phishing attack success rates increase significantly, traditional security awareness training becomes less effective, and organizations face greater social engineering attack risks.",
     "references": [
       {
-        "title": "AI-Enhanced Phishing Threats - NCSC"
+        "title": "AI-Enhanced Phishing Threats - NCSC",
+        "link": "https://www.ncsc.gov.uk/report/impact-of-ai-on-cyber-threat"
       }
     ],
     "keywords": [

@@ -14,10 +14,12 @@
     "summary": "Between June and October 2025, threat actors breached Notepad++'s hosting infrastructure and redirected the WinGUp update traffic to a malicious server, delivering a backdoor named Chrysalis to users. Even after losing their foothold on the server, the attackers continued hijacking update flows using valid credentials, constituting a complex software supply chain attack.",
     "references": [
       {
-        "title": "Cybersecurity Threats Shift to Ecosystems: From AI-Skilled Malware to 31Tbps Attacks"
+        "title": "Cybersecurity Threats Shift to Ecosystems: From AI-Skilled Malware to 31Tbps Attacks",
+        "link": "https://new.qq.com/rain/a/20260210A0326L00"
       },
       {
-        "title": "Notepad++ Hijacked by State-Sponsored Hackers"
+        "title": "Notepad++ Hijacked by State-Sponsored Hackers",
+        "link": "https://notepad-plus-plus.org/news/hijacked-incident-info-update/"
       }
     ]
   }

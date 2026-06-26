@@ -14,7 +14,8 @@
     "summary": "In December 2025, a company detected that its deployed AI agent was manipulated into outputting database data beyond its authorized scope. The incident occurred in both public-facing applications and internal systems. Attackers used prompt injection to coerce the agent into invoking database tools for unauthorized queries, leading to sensitive data leakage.",
     "references": [
       {
-        "title": "On the Eve of the Trillion-Agent Explosion, Who Will Protect Our AI Security? | Jiazi Guangnian"
+        "title": "On the Eve of the Trillion-Agent Explosion, Who Will Protect Our AI Security? | Jiazi Guangnian",
+        "link": "https://new.qq.com/rain/a/20251223A030TR00"
       }
     ]
   }

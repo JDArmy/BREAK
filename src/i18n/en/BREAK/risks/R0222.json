@@ -11,7 +11,8 @@
     ],
     "references": [
       {
-        "title": "OWASP API Security Top 10 2023"
+        "title": "OWASP API Security Top 10 2023",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
       }
     ],
     "description": "Shadow API exposure means undocumented, deprecated, or test endpoints remain reachable from internal or external networks. These endpoints are often outside unified authentication, rate limiting, audit, and change management.\n\nAttackers can discover them through frontend resources, path enumeration, or mobile traffic analysis, then bypass formal API gateways and security policies.",

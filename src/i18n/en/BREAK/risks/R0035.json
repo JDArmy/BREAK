@@ -6,10 +6,12 @@
     "influence": "Bypasses MFA multi-factor authentication mechanisms in the login process, or enables a single account to log in on multiple devices.",
     "references": [
       {
-        "title": "Session Hijacking Attack - OWASP"
+        "title": "Session Hijacking Attack - OWASP",
+        "link": "https://owasp.org/www-community/attacks/Session_hijacking_attack"
       },
       {
-        "title": "Steal Web Session Cookie - MITRE ATT&CK T1539"
+        "title": "Steal Web Session Cookie - MITRE ATT&CK T1539",
+        "link": "https://attack.mitre.org/techniques/T1539/"
       }
     ],
     "keywords": [
@@ -28,10 +30,12 @@
     "influence": "Many account systems do not invalidate existing login sessions after a password change, meaning that with stolen or reused cookies, a hacker can maintain persistent login access to the target user's account.",
     "references": [
       {
-        "title": "Nearly 1,000 Data Breaches in Q1 2023, Affecting 1,204 Companies Across 38 Industries"
+        "title": "Nearly 1,000 Data Breaches in Q1 2023, Affecting 1,204 Companies Across 38 Industries",
+        "link": "https://m.163.com/dy/article/I2H92SPP0518STKV.html"
       },
       {
-        "title": "Credential Stuffing Prevention Cheat Sheet - OWASP"
+        "title": "Credential Stuffing Prevention Cheat Sheet - OWASP",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html"
       }
     ],
     "keywords": [

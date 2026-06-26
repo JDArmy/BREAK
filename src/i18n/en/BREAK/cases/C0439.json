@@ -12,7 +12,8 @@
     "summary": "A merchant on the BigCommerce platform faced a sustained carding attack where attackers used stolen credit card details to perform bulk validation on their store. Both the merchant and the platform reported difficulty in effectively stopping the attack, resulting in a high volume of fraudulent order attempts and payment verification requests that severely disrupted normal business operations.",
     "references": [
       {
-        "title": "Carding Attack on BigCommerce - Unable to Stop Due to Platform ..."
+        "title": "Carding Attack on BigCommerce - Unable to Stop Due to Platform ...",
+        "link": "https://www.reddit.com/r/bigcommerce/comments/1oqalfa/carding_attack_on_bigcommerce_unable_to_stop_due/"
       }
     ]
   }

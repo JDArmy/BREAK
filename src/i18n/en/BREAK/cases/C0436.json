@@ -13,7 +13,8 @@
     "summary": "PayPal's official merchant security article cites industry data showing that carding attacks increased by 134% year over year in 2022. Attackers purchase stolen credit card information from the dark web or obtain it through phishing, then use automated scripts to launch numerous small-value transaction attempts on merchant websites to validate the card credentials. Successfully verified cards are subsequently used to purchase high-value goods or resold ",
     "references": [
       {
-        "title": "How To Help Protect Your Business Against Carding Attacks - PayPal"
+        "title": "How To Help Protect Your Business Against Carding Attacks - PayPal",
+        "link": "https://www.paypal.com/us/brc/article/protect-your-business-against-carding-attacks"
       }
     ]
   }

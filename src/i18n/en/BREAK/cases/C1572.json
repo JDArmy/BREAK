@@ -15,7 +15,8 @@
     "summary": "This research systematically examines countermeasures against MEV, including setting appropriate fees or using MEV auctions. It also notes that priority gas auctions (PGA) can lead to network congestion.",
     "references": [
       {
-        "title": "SoK: MEV countermeasures"
+        "title": "SoK: MEV countermeasures",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3689931.3694911"
       }
     ]
   }

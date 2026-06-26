@@ -14,7 +14,8 @@
     "summary": "An organization configured Azure AD domain allowlists to restrict file sharing to authorized domains only. However, the security team discovered that some files were shared with unauthorized domains, potentially exposing sensitive data to external parties. The issue involved an integration gap between Microsoft Defender for Cloud Apps and the domain allowlist feature, highlighting exposure risks c",
     "references": [
       {
-        "title": "File Shared with unauthorized domain | Microsoft Community Hub"
+        "title": "File Shared with unauthorized domain | Microsoft Community Hub",
+        "link": "https://techcommunity.microsoft.com/discussions/microsoftdefendercloudapps/file-shared-with-unauthorized-domain/3901560"
       }
     ]
   }

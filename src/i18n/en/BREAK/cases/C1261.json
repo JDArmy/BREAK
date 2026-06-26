@@ -14,7 +14,8 @@
     "summary": "This project demonstrates simulation and detection of GPS spoofing attacks, where forged GPS signals deceive a receiver into reporting an incorrect position. It simulates a mobile device deviating from its original trajectory and applies machine learning techniques to identify the falsified data points.",
     "references": [
       {
-        "title": "ParveetKumar/GPS-Spoofing-Simulation-Detection-Framework - GitHub"
+        "title": "ParveetKumar/GPS-Spoofing-Simulation-Detection-Framework - GitHub",
+        "link": "https://github.com/ParveetKumar/GPS-Spoofing-Simulation-Detection-Framework"
       }
     ]
   }

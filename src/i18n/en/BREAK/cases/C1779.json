@@ -13,7 +13,8 @@
     "summary": "Security researchers discovered vulnerabilities in OBD-II dongles that allow attackers to obtain vehicle location, diagnostic data, and CAN bus traffic, demonstrating the practical risk of abusing the onboard diagnostic interface to steal sensitive driving data.",
     "references": [
       {
-        "title": "[PDF] Comprehensive Vulnerability Analysis of OBD-II Dongles as A New ..."
+        "title": "[PDF] Comprehensive Vulnerability Analysis of OBD-II Dongles as A New ...",
+        "link": "https://www.usenix.org/system/files/sec20summer_wen_prepub.pdf"
       }
     ]
   }

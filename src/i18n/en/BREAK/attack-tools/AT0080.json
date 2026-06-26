@@ -4,13 +4,16 @@
     "description": "Analytics tools for tracing on-chain addresses, transaction paths, and cross-chain asset flows. Legitimate organizations use them for compliance, anti-money laundering, and incident response, while attackers may use similar capabilities to deanonymize addresses, identify high-value targets, link wallet identities, or track virtual-asset movement in support of targeted phishing, extortion, and asset theft.",
     "references": [
       {
-        "title": "Chainalysis Reactor"
+        "title": "Chainalysis Reactor",
+        "link": "https://www.chainalysis.com/chainalysis-reactor/"
       },
       {
-        "title": "MITRE ATT&CK: Gather Victim Identity Information"
+        "title": "MITRE ATT&CK: Gather Victim Identity Information",
+        "link": "https://attack.mitre.org/techniques/T1589/"
       },
       {
-        "title": "Zcash privacy technology"
+        "title": "Zcash privacy technology",
+        "link": "https://z.cash/technology/"
       }
     ],
     "keywords": [

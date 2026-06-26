@@ -14,7 +14,8 @@
     "summary": "VR-S1000 firmware versions 2.37 and earlier contain hardcoded encryption keys, which could allow an attacker to analyze user passwords for specific products. The vulnerability has been documented in a GitHub security advisory.",
     "references": [
       {
-        "title": "VR-S1000 Firmware Ver. 2.37 and Earlier Uses a Hard-Coded..."
+        "title": "VR-S1000 Firmware Ver. 2.37 and Earlier Uses a Hard-Coded...",
+        "link": "https://github.com/advisories/GHSA-gqfx-jp8p-5v6q"
       }
     ]
   }

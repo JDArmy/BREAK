@@ -16,7 +16,8 @@
     "summary": "In March 2026, Microsoft disclosed how the Tycoon2FA adversary-in-the-middle phishing kit operated at scale. The phishing-as-a-service kit can proxy a fake login flow, induce victims to enter credentials and complete MFA, and steal session cookies to bypass MFA protections.",
     "references": [
       {
-        "title": "Inside Tycoon2FA: How a leading AiTM phishing kit operated at scale"
+        "title": "Inside Tycoon2FA: How a leading AiTM phishing kit operated at scale",
+        "link": "https://www.microsoft.com/en-us/security/blog/2026/03/04/inside-tycoon2fa-how-a-leading-aitm-phishing-kit-operated-at-scale/"
       }
     ]
   }

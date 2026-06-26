@@ -11,7 +11,8 @@
     ],
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0"
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
       }
     ],
     "description": "MFA fatigue attacks repeatedly trigger login prompts until a user approves one under fatigue, confusion, or social pressure. Attackers usually already know the password and only need the second factor.\n\nPush approval without transaction meaning is easy to misclick. Number matching, location prompts, rate limits, and high-risk login blocking reduce success.",

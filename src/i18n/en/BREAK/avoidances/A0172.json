@@ -7,7 +7,8 @@
     ],
     "references": [
       {
-        "title": "EIP-2981: NFT Royalty Standard"
+        "title": "EIP-2981: NFT Royalty Standard",
+        "link": "https://eips.ethereum.org/EIPS/eip-2981"
       }
     ],
     "definition": "Enforce NFT royalties at protocol level through smart contracts, making them unbypasable."

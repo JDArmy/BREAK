@@ -14,10 +14,12 @@
     "summary": "In September 2022, a 17-year-old hacker launched an MFA fatigue attack against Uber. The attacker repeatedly logged in, sending a flood of MFA push requests to an employee's phone, inducing the victim to mistakenly tap \"approve.\" Eventually, the overwhelmed employee confirmed the request, bypassing MFA protection and allowing the hacker to breach Uber's internal systems and steal personal informat",
     "references": [
       {
-        "title": "Cloud Phishing: New Tricks and the 'Crown Jewels' - Tencent Cloud Developer Community"
+        "title": "Cloud Phishing: New Tricks and the 'Crown Jewels' - Tencent Cloud Developer Community",
+        "link": "https://cloud.tencent.com/developer/article/2224021"
       },
       {
-        "title": "Security Update"
+        "title": "Security Update",
+        "link": "https://www.uber.com/newsroom/security-update/?id=5674865%3Futm_source%3Dtestdevjobs"
       }
     ]
   }

@@ -13,7 +13,8 @@
     "summary": "This study evaluates side-channel attack vulnerabilities in mixed-signal IoT devices. Using TVLA testing, information leakage was detected under multiple conditions, and a leakage-based key recovery attack was successfully demonstrated in one case. The work reveals the existence of novel side-channel attack vectors in mixed-signal devices.",
     "references": [
       {
-        "title": "Leaky noise: New side-channel attack vectors in mixed-signal IoT devices"
+        "title": "Leaky noise: New side-channel attack vectors in mixed-signal IoT devices",
+        "link": "https://tches.iacr.org/index.php/TCHES/article/view/8297"
       }
     ]
   }

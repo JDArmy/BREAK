@@ -13,7 +13,8 @@
     "summary": "In a July 2023 blog post, the Microsoft Security team highlighted a growing trend of compute theft targeting cloud environments, where attackers use automated methods to illegally occupy CPU or GPU resources for cryptocurrency mining. The article emphasizes that such mining would be economically unviable if attackers had to pay for the compute resources used, indicating they must be stealing cloud",
     "references": [
       {
-        "title": "Cryptojacking: Understanding and defending against cloud compute..."
+        "title": "Cryptojacking: Understanding and defending against cloud compute...",
+        "link": "https://www.microsoft.com/en-us/security/blog/2023/07/25/cryptojacking-understanding-and-defending-against-cloud-compute-resource-abuse/"
       }
     ]
   }

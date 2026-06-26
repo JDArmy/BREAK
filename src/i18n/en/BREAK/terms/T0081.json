@@ -17,10 +17,12 @@
     "description": "This type of data typically leaks through cross-border logistics processes and includes sensitive information such as recipient identity, addresses, and phone numbers. Black-market actors intercept data at customs clearance nodes via insiders or system vulnerabilities, then sort and sell it based on freshness and completeness. Downstream buyers often use it for precision fraud, marketing harassment, or identity theft. Due to its high timeliness, this data can be monetized quickly in the short term.",
     "references": [
       {
-        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
       },
       {
-        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
       }
     ]
   }

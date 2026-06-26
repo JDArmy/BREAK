@@ -14,7 +14,8 @@
     "summary": "This research demonstrates that ad blocker detection pipelines can be attacked via adversarial machine learning, allowing publishers or ad networks to bypass ad blocker detection and even exploit its high privilege level to evade blocking.",
     "references": [
       {
-        "title": "Adversarial: Perceptual Ad Blocking Meets Adversarial Machine Learning"
+        "title": "Adversarial: Perceptual Ad Blocking Meets Adversarial Machine Learning",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3319535.3354222"
       }
     ]
   }

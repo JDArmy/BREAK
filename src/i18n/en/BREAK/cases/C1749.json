@@ -14,7 +14,8 @@
     "summary": "Experimental results show that data poisoning significantly degrades model performance, with classification accuracy dropping by up to 27% in image recognition tasks and 22% in fraud detection models. The proposed defense mechanisms, including statistical anomaly detection and adversarial training, successfully mitigated the poisoning impact.",
     "references": [
       {
-        "title": "Detecting and Preventing Data Poisoning Attacks on AI Models"
+        "title": "Detecting and Preventing Data Poisoning Attacks on AI Models",
+        "link": "https://arxiv.org/pdf/2503.09302"
       }
     ]
   }

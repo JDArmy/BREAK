@@ -16,7 +16,8 @@
     "summary": "A German steel plant suffered an advanced persistent threat attack in which threat actors used spear-phishing emails to infiltrate the office network and subsequently breach the production network. The attackers gained access to the blast furnace control system, preventing a proper shutdown and resulting in significant physical damage.",
     "references": [
       {
-        "title": "A multi-layer industrial-IoT attack taxonomy: Layers, dimensions, techniques and application"
+        "title": "A multi-layer industrial-IoT attack taxonomy: Layers, dimensions, techniques and application",
+        "link": "https://ieeexplore.ieee.org/abstract/document/9343166/"
       }
     ]
   }

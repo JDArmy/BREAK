@@ -12,10 +12,12 @@
     "summary": "In 2019, a misconfigured AWS cloud storage allowed an attacker to exploit overly permissive API keys to access S3 buckets, exposing approximately 100 million customer records. The root cause was improper privilege management, where the attacker gained broader access than necessary, amplifying the breach impact.",
     "references": [
       {
-        "title": "How Should We Protect Cloud Security in 2025? - Tencent Cloud Developer Community - Tencent Cloud"
+        "title": "How Should We Protect Cloud Security in 2025? - Tencent Cloud Developer Community - Tencent Cloud",
+        "link": "https://cloud.tencent.com/developer/article/2486778"
       },
       {
-        "title": "Capital One: 2019 Cyber Incident Facts"
+        "title": "Capital One: 2019 Cyber Incident Facts",
+        "link": "https://www.capitalone.com/digital/facts2019/"
       }
     ]
   }

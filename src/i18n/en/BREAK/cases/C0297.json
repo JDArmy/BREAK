@@ -16,7 +16,8 @@
     "summary": "Researchers propose the RECUR attack method, which induces excessive reflection in large reasoning models (LRMs) by constructing counterfactual problems, leading to an 11× increase in output length and a 90% drop in throughput, thereby consuming computational resources. This attack reveals inherent resource exhaustion vulnerabilities within the reasoning process itself.",
     "references": [
       {
-        "title": "RECUR: Resource Exhaustion Attack via Recursive-Entropy Guided ..."
+        "title": "RECUR: Resource Exhaustion Attack via Recursive-Entropy Guided ...",
+        "link": "https://arxiv.org/html/2602.08214v1"
       }
     ]
   }

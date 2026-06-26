@@ -14,10 +14,12 @@
     "summary": "In December 2024, security researchers discovered typosquatting npm packages impersonating legitimate ones like typescript-eslint and @types/node, accumulating thousands of downloads. The fake packages, named @typescript_eslinter/eslint and types-node, were used to download trojans and fetch second-stage payloads, posing a severe supply chain threat to downstream users.",
     "references": [
       {
-        "title": "Thousands Download Malicious npm Libraries Impersonating Legitimate Tools"
+        "title": "Thousands Download Malicious npm Libraries Impersonating Legitimate Tools",
+        "link": "https://thehackernews.com/2024/12/thousands-download-malicious-npm.html"
       },
       {
-        "title": "Counterfeit npm Packages Targeting Developers - Sonatype"
+        "title": "Counterfeit npm Packages Targeting Developers - Sonatype",
+        "link": "https://www.sonatype.com/blog/counterfeit-eslint-and-node-types-libraries-downloaded-thousands-of-times-abuse-pastebin"
       }
     ]
   }

@@ -13,7 +13,8 @@
     "summary": "This study proposes a new method for detecting Challenge Collapsar (CC) attack traffic. CC attacks launch denial of service by frequently sending forged HTTP requests to target servers. Experimental results show the model achieves a detection accuracy of 98.55% and an F1 score of 98.59%, representing a 3% improvement over previous methods.",
     "references": [
       {
-        "title": "Challenge Collapsar (CC) Attack Traffic Detection Based on Packet ..."
+        "title": "Challenge Collapsar (CC) Attack Traffic Detection Based on Packet ...",
+        "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7304042/"
       }
     ]
   }

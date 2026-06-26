@@ -13,7 +13,8 @@
     "summary": "Rate limiting in some applications is configured only for specific HTTP methods such as POST. Attackers bypass the rate limiting mechanism by switching the request method from POST to GET, or by using a different Content-Type header such as application/x-www-form-urlencoded instead of application/json, enabling unlimited API calls.",
     "references": [
       {
-        "title": "VulnTech Rate Limit Bypass - VulnTech Notes"
+        "title": "VulnTech Rate Limit Bypass - VulnTech Notes",
+        "link": "https://vulntech.com/tutorials/website-penetration-testing/rate-limit-bypass/"
       }
     ]
   }

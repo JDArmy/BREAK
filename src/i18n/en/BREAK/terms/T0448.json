@@ -21,10 +21,12 @@
     "usageExample": "When creating a new wallet, users receive a 12-word seed phrase that must be written down in order and securely stored to recover the wallet in case of device loss or damage.",
     "references": [
       {
-        "title": "BIP39: Mnemonic code for generating deterministic keys"
+        "title": "BIP39: Mnemonic code for generating deterministic keys",
+        "link": "https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki"
       },
       {
-        "title": "Crypto Everest project: cracking a 7,002-BTC wallet worth USD 235 million..."
+        "title": "Crypto Everest project: cracking a 7,002-BTC wallet worth USD 235 million...",
+        "link": "https://new.qq.com/rain/a/20231027A04MBS00"
       }
     ],
     "category": "Business Security"

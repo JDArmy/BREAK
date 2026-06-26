@@ -11,10 +11,12 @@
     ],
     "references": [
       {
-        "title": "2024 Cybersecurity Deep Insight: Hardware Supply Chain Risk"
+        "title": "2024 Cybersecurity Deep Insight: Hardware Supply Chain Risk",
+        "link": "http://finance.people.com.cn/n1/2025/0311/c1004-40436497.html"
       },
       {
-        "title": "Hardware Security | CSRC"
+        "title": "Hardware Security | CSRC",
+        "link": "https://csrc.nist.gov/projects/hardware-security"
       }
     ],
     "description": "IoT hardware supply chain attacks occur across chips, modules, sensors, firmware, manufacturing, and logistics. Attackers may implant backdoors, replace components, or alter default settings so deployed devices remain controllable.\n\nIoT fleets are large, long-lived, and hard to patch in the field. Supplier verification, firmware signing, hardware sampling, and runtime anomaly monitoring are essential.",

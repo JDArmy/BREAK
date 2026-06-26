@@ -14,7 +14,8 @@
     "summary": "Security researchers have discovered a new variant of the Gafgyt malware targeting D-Link routers and other IoT devices, leveraging the Tor network to obfuscate command-and-control communications and evade detection. The botnet compromises IoT devices, turning them into controlled bots to carry out malicious commands such as DDoS attacks.",
     "references": [
       {
-        "title": "New IoT Botnet Uses Tor to Obfuscate C2 Communications"
+        "title": "New IoT Botnet Uses Tor to Obfuscate C2 Communications",
+        "link": "https://www.bitdefender.com/en-us/blog/hotforsecurity/new-iot-botnet-uses-tor-obfuscate-c2-communications-researchers-find"
       }
     ]
   }

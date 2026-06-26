@@ -14,10 +14,12 @@
     "summary": "An attacker physically captured an Itron-Centron CL200 smart meter, analyzed its EEPROM memory dump, and discovered that the device ID is stored locally without read/write protection. By copying another meter's ID into the EEPROM, the attacker made the compromised device impersonate a different smart meter, leading to energy consumption data theft. Logs showed two distinct devices sharing the same",
     "references": [
       {
-        "title": "Security and Privacy in IoT Era"
+        "title": "Security and Privacy in IoT Era",
+        "link": "https://www.jinyier.me/papers/IoT_Chapter17_Temp.pdf"
       },
       {
-        "title": "IoT Security Vulnerability Case Studies and Solutions - Tencent Cloud Developer Community"
+        "title": "IoT Security Vulnerability Case Studies and Solutions - Tencent Cloud Developer Community",
+        "link": "https://www.cloud.tencent.com/developer/article/1543779"
       }
     ]
   }

@@ -15,7 +15,8 @@
     "summary": "This study uncovers cheating strategies in mobile ad fraud, including the use of super click farms. It finds that devices in these farms run older Android versions and combine multiple fraud techniques to cover more devices, simulating fake user interactions and conversions.",
     "references": [
       {
-        "title": "Understanding and detecting mobile ad fraud through the lens of invalid traffic"
+        "title": "Understanding and detecting mobile ad fraud through the lens of invalid traffic",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3460120.3484547"
       }
     ]
   }

@@ -6,7 +6,8 @@
     "limitation": "Malicious content detection is mostly based on keyword matching or scoring mechanisms from some type of strategy model, which allows attackers to counter detection through keyword bypasses, model bypasses, or borderline scoring techniques.",
     "references": [
       {
-        "title": "Provisions on the Governance of the Online Information Content Ecosystem"
+        "title": "Provisions on the Governance of the Online Information Content Ecosystem",
+        "link": "https://www.cac.gov.cn/2019-12/20/c_1578375159509309.htm"
       }
     ],
     "keywords": [
@@ -26,7 +27,8 @@
     "limitation": "Due to human resource and efficiency constraints, multi-account, large-scale automated requests can be used to achieve a denial-of-service attack against human reviewers. This can result in prolonged downtime for pre-publication review, or significantly extended response times for post-publication removal of malicious content.",
     "references": [
       {
-        "title": "Provisions on the Governance of the Online Information Content Ecosystem"
+        "title": "Provisions on the Governance of the Online Information Content Ecosystem",
+        "link": "https://www.cac.gov.cn/2019-12/20/c_1578375159509309.htm"
       }
     ],
     "keywords": [
@@ -44,10 +46,12 @@
     "limitation": "Current OCR text recognition accuracy is relatively high, but it is still subject to the limitations of automated malicious text detection (A006-001). Recognizing image content itself currently has a low accuracy rate and needs to be combined with manual content review (A006-007).",
     "references": [
       {
-        "title": "Artificial Intelligence Risk Management Framework - NIST AI 100-1"
+        "title": "Artificial Intelligence Risk Management Framework - NIST AI 100-1",
+        "link": "https://www.nist.gov/itl/ai-risk-management-framework"
       },
       {
-        "title": "Tesseract OCR Documentation"
+        "title": "Tesseract OCR Documentation",
+        "link": "https://tesseract-ocr.github.io/"
       }
     ],
     "keywords": [
@@ -66,7 +70,8 @@
     "limitation": "Attackers can use adversarial samples to fool automated malicious audio detection systems, preventing them from accurately detecting and identifying malicious audio. Additionally, automated malicious audio detection systems may be affected by environmental noise, language variation, speaker variation, and other factors, reducing their accuracy.",
     "references": [
       {
-        "title": "Speaker Recognition Evaluation - NIST"
+        "title": "Speaker Recognition Evaluation - NIST",
+        "link": "https://www.nist.gov/itl/iad/mig/speaker-recognition"
       }
     ],
     "keywords": [
@@ -84,7 +89,8 @@
     "limitation": "This is equally subject to the limitations of automated malicious image detection (A006-002) and automated malicious audio detection (A006-003).",
     "references": [
       {
-        "title": "TRECVID - NIST"
+        "title": "TRECVID - NIST",
+        "link": "https://www-nlpir.nist.gov/projects/trecvid/"
       }
     ],
     "keywords": [
@@ -102,10 +108,12 @@
     "limitation": "Whitelist-based domain auditing is ineffective against open redirect vulnerabilities and resource abuse (R0069). Blacklist-based auditing has the problem that domains or links can easily be changed. Therefore, in many cases neither approach works well.",
     "references": [
       {
-        "title": "CISA Avoiding Social Engineering and Phishing Attacks"
+        "title": "CISA Avoiding Social Engineering and Phishing Attacks",
+        "link": "https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks"
       },
       {
-        "title": "An effective detection approach for phishing websites using URL and HTML features"
+        "title": "An effective detection approach for phishing websites using URL and HTML features",
+        "link": "https://www.nature.com/articles/s41598-022-10841-5"
       }
     ],
     "keywords": [
@@ -124,7 +132,8 @@
     "limitation": "Attackers can use adversarial samples to fool automated malicious document detection systems, preventing them from accurately detecting and identifying malicious documents. Additionally, automated malicious document detection systems may be affected by changes in file format, language, font, and other factors, reducing their accuracy.",
     "references": [
       {
-        "title": "Analyze Malicious Office Documents: The Complete Guide"
+        "title": "Analyze Malicious Office Documents: The Complete Guide",
+        "link": "https://www.hackingdream.net/2026/02/analyze-malicious-office-documents.html"
       }
     ],
     "keywords": [
@@ -143,7 +152,8 @@
     "limitation": "Due to the diversity and ambiguity of language, and the widespread existence of homophones, near-homophones, and visually similar characters in Chinese, it is very easy to bypass automated malicious text detection and produce malicious text that preserves the original meaning. A classic example is 'Martian script' (a form of obfuscated Chinese text), and there are many other methods such as using pinyin initials as substitutes. Therefore, in some necessary or extreme scenarios, manual content review (A006-007) needs to be introduced as a supplement.",
     "references": [
       {
-        "title": "Leveraging NLP Techniques for Effective Content Moderation"
+        "title": "Leveraging NLP Techniques for Effective Content Moderation",
+        "link": "https://www.lettria.com/blogpost/nlp-techniques-for-content-moderation"
       }
     ],
     "keywords": [
@@ -162,7 +172,8 @@
     "limitation": "These methods face the challenge that advanced generative models are increasingly approaching realistic expression, and traditional rule-based and pattern detection approaches may be insufficient to distinguish generated from real content. Deepfake technology continues to evolve, and adversarial samples can fool detection systems. Additionally, while AI-generated content labeling requirements (such as China's requirement for explicit labeling of AI-generated videos starting September 2025) provide supplementary judgment, content from non-compliant platforms remains difficult to identify.",
     "references": [
       {
-        "title": "iResearch & NetEase Yidun Release Industry First Digital Content Risk Control White Paper"
+        "title": "iResearch & NetEase Yidun Release Industry First Digital Content Risk Control White Paper",
+        "link": "https://news.sina.com.cn/shangxunfushen/2023-09-16/detail-imzmwpuk1265154.shtml"
       }
     ],
     "keywords": [

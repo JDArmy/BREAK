@@ -16,10 +16,12 @@
     "summary": "Unit 42 threat research from Palo Alto Networks reveals that medical devices are the weakest link in hospital networks. 75% of infusion pumps carry at least one vulnerability or security alert. Imaging equipment is especially exposed: 51% of X-ray machines are affected by the high-severity CVE-2019-11687, while 44% of CT scanners and 31% of MRI machines also face critical CVEs. These flaws can be ",
     "references": [
       {
-        "title": "Ensuring Reliable Medical IoT Security in Life-or-Death Moments"
+        "title": "Ensuring Reliable Medical IoT Security in Life-or-Death Moments",
+        "link": "https://view.inews.qq.com/a/20230120A02FB600"
       },
       {
-        "title": "Unit 42: Infusion Pump Vulnerabilities: Common Security Gaps"
+        "title": "Unit 42: Infusion Pump Vulnerabilities: Common Security Gaps",
+        "link": "https://unit42.paloaltonetworks.com/infusion-pump-vulnerabilities/"
       }
     ]
   }

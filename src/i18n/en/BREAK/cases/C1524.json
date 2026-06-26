@@ -14,7 +14,8 @@
     "summary": "Academic research reveals that EIP-7702 introduces a novel class of phishing attacks. Instead of tricking users into signing a single transaction, attackers can induce them to sign an authorization that rewrites their account into a malicious contract, gaining full control and leveraging ERC-4337 infrastructure to transfer assets.",
     "references": [
       {
-        "title": "EIP-7702 Phishing Attack - arXiv"
+        "title": "EIP-7702 Phishing Attack - arXiv",
+        "link": "https://arxiv.org/html/2512.12174v1"
       }
     ]
   }

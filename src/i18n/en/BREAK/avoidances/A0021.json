@@ -6,10 +6,12 @@
     "limitation": "For unique identifiers in devices such as IMEI, IMSI, MAC address, Android ID, and IDFA, due to user privacy restrictions and system upgrades, these generally require user authorization to access. This makes universality a problem, especially since black-gray market devices will basically never grant such permissions. For device identifiers computed from multiple device characteristics, they are too easily tampered with, making recall impossible.",
     "references": [
       {
-        "title": "Fingerprinting - MDN Web Docs"
+        "title": "Fingerprinting - MDN Web Docs",
+        "link": "https://developer.mozilla.org/en-US/docs/Glossary/Fingerprinting"
       },
       {
-        "title": "OWASP Web Security Testing Guide - Fingerprint Web Server"
+        "title": "OWASP Web Security Testing Guide - Fingerprint Web Server",
+        "link": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/02-Fingerprint_Web_Server"
       }
     ],
     "keywords": [
@@ -28,7 +30,8 @@
     "limitation": "Due to the inability to guarantee terminal data integrity, combined with legal and regulatory requirements for user privacy, terminal tagging has significant constraints and is only effective under certain conditions.",
     "references": [
       {
-        "title": "Device Fingerprint - Wikipedia"
+        "title": "Device Fingerprint - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Device_fingerprint"
       }
     ],
     "keywords": [

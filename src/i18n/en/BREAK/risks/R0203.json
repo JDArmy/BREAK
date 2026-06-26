@@ -11,10 +11,12 @@
     ],
     "references": [
       {
-        "title": "What is dApp Security? - CertiK"
+        "title": "What is dApp Security? - CertiK",
+        "link": "https://www.certik.com/blog/what-is-dapp-security"
       },
       {
-        "title": "IPFS Content Addressing and Security"
+        "title": "IPFS Content Addressing and Security",
+        "link": "https://docs.ipfs.tech/concepts/content-addressing/"
       }
     ],
     "description": "DApp frontend hijacking targets the user access layer rather than the on-chain contract. Attackers may abuse DNS, IPFS gateways, CDN configuration, or frontend dependencies to alter displayed content and wallet interaction parameters.\n\nUsers see a familiar interface while signing requests or recipient addresses may be replaced. Projects need release integrity, domain hardening, resource verification, and independent transaction previews.",

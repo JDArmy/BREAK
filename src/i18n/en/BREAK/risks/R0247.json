@@ -11,7 +11,8 @@
     ],
     "references": [
       {
-        "title": "OWASP API Security Top 10 2023"
+        "title": "OWASP API Security Top 10 2023",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
       }
     ],
     "description": "Session token replay occurs when attackers steal cookies, access tokens, or refresh tokens and reuse them from another device or environment. Tokens may be obtained through malware, proxy logs, XSS, phishing, or endpoint compromise.\n\nWithout device binding, location checks, risk signals, or token rotation, attackers can bypass password and MFA checks. Defenses need token protection, abnormal session detection, and rapid revocation.",

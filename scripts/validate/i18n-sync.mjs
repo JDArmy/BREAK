@@ -109,7 +109,7 @@ function checkReferenceTranslations(issues, category, key, entity, zhEntity) {
       issues.push(`${category.name}.${key}.references[${index}] 必须是对象`);
       return;
     }
-    const extraKeys = Object.keys(reference).filter((field) => field !== "title");
+    const extraKeys = Object.keys(reference).filter((field) => field !== "title" && field !== "link");
     if (extraKeys.length > 0) {
       issues.push(
         `${category.name}.${key}.references[${index}] 包含结构字段: ${extraKeys.join(", ")}`

@@ -11,10 +11,12 @@
     ],
     "references": [
       {
-        "title": "EIP-4337: Account Abstraction"
+        "title": "EIP-4337: Account Abstraction",
+        "link": "https://eips.ethereum.org/EIPS/eip-4337"
       },
       {
-        "title": "Account Abstraction Security Considerations"
+        "title": "Account Abstraction Security Considerations",
+        "link": "https://www.alchemy.com/blog/account-abstraction"
       }
     ],
     "description": "Account abstraction wallets move signature validation, gas sponsorship, batch execution, and permission logic into smart contracts. This introduces UserOperation, Bundler, Paymaster, and aggregation components, each with new failure modes.\n\nThe architecture improves usability but expands the attack surface. Designers must reason about permission models, replay protection, simulation differences, and the trust boundary of third-party sponsorship services.",

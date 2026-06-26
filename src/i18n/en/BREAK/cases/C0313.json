@@ -13,7 +13,8 @@
     "summary": "This study reveals over 20 million reflection amplification DoS attacks through macroscopic internet monitoring. Attacks exploit open services such as DNS to amplify small requests into massive traffic, exhausting target network bandwidth and causing service disruptions. The victim population is vast, with median attack duration dropping to 240 seconds.",
     "references": [
       {
-        "title": "Millions of targets under attack: a macroscopic characterization of the DoS ecosystem"
+        "title": "Millions of targets under attack: a macroscopic characterization of the DoS ecosystem",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3131365.3131383"
       }
     ]
   }

@@ -14,7 +14,8 @@
     "summary": "An empirical study examined internet-facing HTTP servers for Slow HTTP DoS vulnerabilities and found that some servers are susceptible to such attacks. By sending HTTP requests at an extremely slow rate, attackers exhaust server connection resources, preventing legitimate users from accessing services. The study proposes a detection method based on traffic ratio characteristics.",
     "references": [
       {
-        "title": "How secure are web servers? An empirical study of slow HTTP DoS attacks and detection"
+        "title": "How secure are web servers? An empirical study of slow HTTP DoS attacks and detection",
+        "link": "https://ieeexplore.ieee.org/abstract/document/7784605/"
       }
     ]
   }

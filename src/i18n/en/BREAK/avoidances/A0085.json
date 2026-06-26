@@ -6,10 +6,12 @@
     "limitation": "High implementation cost, requiring network architecture re-planning; may affect normal communication between business systems; requires continuous maintenance and policy updates.",
     "references": [
       {
-        "title": "NIST SP 800-207: Zero Trust Architecture"
+        "title": "NIST SP 800-207: Zero Trust Architecture",
+        "link": "https://csrc.nist.gov/pubs/sp/800/207/final"
       },
       {
-        "title": "Zero Trust Maturity Model - CISA"
+        "title": "Zero Trust Maturity Model - CISA",
+        "link": "https://www.cisa.gov/resources-tools/resources/zero-trust-maturity-model"
       }
     ],
     "keywords": [

@@ -15,7 +15,8 @@
     "summary": "Some IoT manufacturers port SM4-CBC to MCUs and claim 'national cryptography support,' but overlook critical requirements such as key derivation not using SM3-HMAC, device unique identity not bound to SM2 certificates, and firmware signatures not following GM/T 0015-2012 specifications. While functional, such implementations fail the integrity assessment under GB/T 39786-2021 regarding trusted key",
     "references": [
       {
-        "title": "[PDF] Report on the Development of the Commercial Cryptography Industry in Liaoning Province"
+        "title": "[PDF] Report on the Development of the Commercial Cryptography Industry in Liaoning Province",
+        "link": "https://gxt.ln.gov.cn/gxt/zhzx/xyxx/2026041309423171444/2026041309414728242.pdf"
       }
     ]
   }

@@ -14,7 +14,8 @@
     "summary": "Cybersecurity firm Barracuda warned that phishing gangs are abusing Microsoft OAuth authorization flows to gain stealthy access to accounts. Attackers trick users into granting malicious applications permissions, enabling token-based access that can bypass traditional password-centric defenses and support account takeover.",
     "references": [
       {
-        "title": "Barracuda Email Threat Radar: Phishing Gangs Abuse Microsoft OAuth for Stealthy Access"
+        "title": "Barracuda Email Threat Radar: Phishing Gangs Abuse Microsoft OAuth for Stealthy Access",
+        "link": "https://blog.barracuda.com/2025/09/23/email-threat-radar-september-2025"
       }
     ]
   }

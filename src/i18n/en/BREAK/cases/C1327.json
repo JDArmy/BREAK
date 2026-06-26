@@ -15,7 +15,8 @@
     "summary": "A developer at a mid-sized tech company privately deployed the open-source autonomous AI agent tool OpenClaw on office endpoints to simplify operations, granting it excessive permissions. The tool's configuration file stored sensitive information such as database API keys and cloud service credentials in plaintext. Because traditional EDR solutions could not recognize its behavioral patterns, the ",
     "references": [
       {
-        "title": "Your OpenClaw Might Be Turning Against You! Complete Critical Protection Immediately - Alibaba Cloud Documentation"
+        "title": "Your OpenClaw Might Be Turning Against You! Complete Critical Protection Immediately - Alibaba Cloud Documentation",
+        "link": "https://help.aliyun.com/zh/acsg/openclaw-key-protective-measures"
       }
     ]
   }

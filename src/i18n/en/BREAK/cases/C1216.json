@@ -14,7 +14,8 @@
     "summary": "In federated learning, attackers can reconstruct original training data or infer sensitive attributes of participants from shared gradient information through model inversion or attribute inference attacks. This exploits information leakage during privacy-preserving computation, undermining data privacy protection goals.",
     "references": [
       {
-        "title": "A Survey of Federated Learning Security"
+        "title": "A Survey of Federated Learning Security",
+        "link": "https://www.secrss.com/articles/52186"
       }
     ]
   }

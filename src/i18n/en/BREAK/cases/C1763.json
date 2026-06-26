@@ -14,7 +14,8 @@
     "summary": "After obtaining an app's installation package, attackers repackage it with malicious code. Common scenarios include inserting ad SDKs into the app and redistributing it through third-party channels to generate ad revenue, and modifying payment interface parameters to replace the recipient's account with the attacker's, resulting in user fund theft.",
     "references": [
       {
-        "title": "Is Your App Client Really Secure? Full Analysis of Decompilation, Repackaging, and Debugging Attacks"
+        "title": "Is Your App Client Really Secure? Full Analysis of Decompilation, Repackaging, and Debugging Attacks",
+        "link": "https://developer.cloud.tencent.com/article/2657120?policyId=1003"
       }
     ]
   }

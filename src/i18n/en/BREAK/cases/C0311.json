@@ -14,7 +14,8 @@
     "summary": "Researchers conducted an empirical study of Slow HTTP/2 DoS attacks against web servers on the internet and identified multiple vulnerable servers. Attackers exploit HTTP/2 protocol features by sending requests slowly to exhaust server resources, causing denial of service. The study proposes a real-time detection scheme based on event sequence analysis.",
     "references": [
       {
-        "title": "Delays Have Dangerous Ends: Slow HTTP/2 DoS Attacks Into the Wild and Their Real-Time Detection Using Event Sequence Analysis"
+        "title": "Delays Have Dangerous Ends: Slow HTTP/2 DoS Attacks Into the Wild and Their Real-Time Detection Using Event Sequence Analysis",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10124271/"
       }
     ]
   }

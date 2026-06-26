@@ -14,7 +14,8 @@
     "summary": "A penetration test on a mobile Fantasy Pool platform uncovered an API business logic flaw allowing attackers to chain OTP design weaknesses, missing rate limits, and exposed internal payment endpoints into a fully automated abuse sequence. This enabled extraction of real monetary referral rewards without completing any actual payment.",
     "references": [
       {
-        "title": "API Security Assessment — Business Logic Abuse in a ... - GitHub"
+        "title": "API Security Assessment — Business Logic Abuse in a ... - GitHub",
+        "link": "https://github.com/rickyma18/api-pentest-otp-business-logic"
       }
     ]
   }

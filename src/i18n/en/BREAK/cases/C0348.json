@@ -13,7 +13,8 @@
     "summary": "An academic study identified security flaws in 9 out of 42 IoT management platforms, where attackers can exploit sub-account functionality by sending an invitation to a victim and gaining access to that sub-account, enabling malicious operations and highlighting insufficient sub-account access controls in IoT platforms.",
     "references": [
       {
-        "title": "All your IoT devices are belong to us: Security weaknesses in IoT management platforms"
+        "title": "All your IoT devices are belong to us: Security weaknesses in IoT management platforms",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3577923.3583636"
       }
     ]
   }

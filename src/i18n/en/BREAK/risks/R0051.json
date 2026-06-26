@@ -6,7 +6,8 @@
     "influence": "May cause security processes within the application to be broken and data to be forged.",
     "references": [
       {
-        "title": "What Is Reverse Engineering?"
+        "title": "What Is Reverse Engineering?",
+        "link": "https://github.com/eastmountyxz/Reverse-Analysis-Case"
       }
     ],
     "keywords": [
@@ -25,7 +26,8 @@
     "influence": "May cause security processes within the application to be broken and data to be forged.",
     "references": [
       {
-        "title": "MASTG-TEST-0244: Missing Certificate Pinning in Network Traffic - OWASP"
+        "title": "MASTG-TEST-0244: Missing Certificate Pinning in Network Traffic - OWASP",
+        "link": "https://mas.owasp.org/MASTG/tests/android/MASVS-NETWORK/MASTG-TEST-0244/"
       }
     ],
     "keywords": [
@@ -44,7 +46,8 @@
     "influence": "May cause security processes within the application to be broken and data to be forged.",
     "references": [
       {
-        "title": "Complete HTTP Request Analysis"
+        "title": "Complete HTTP Request Analysis",
+        "link": "https://www.cnblogs.com/wzfwaf/p/10515507.html"
       }
     ],
     "keywords": [

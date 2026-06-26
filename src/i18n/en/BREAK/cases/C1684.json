@@ -14,7 +14,8 @@
     "summary": "On November 24, 2025, an attacker published five consecutive versions of a malicious PyPI package named 'perfviewer', leveraging dependency confusion techniques to trick developers into downloading it. Upon installation, the package executed a remote trojan implantation targeting Windows systems.",
     "references": [
       {
-        "title": "Risk Alert on the 'Black Cat' Gang Using Search Engines to Distribute Bundled Remote Control Trojan Horse Installers of Well-Known Applications"
+        "title": "Risk Alert on the 'Black Cat' Gang Using Search Engines to Distribute Bundled Remote Control Trojan Horse Installers of Well-Known Applications",
+        "link": "https://www.cert.org.cn/publish/main/10/2025/20250730102455770581298/20250730102455770581298_.html"
       }
     ]
   }

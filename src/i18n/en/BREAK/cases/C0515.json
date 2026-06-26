@@ -14,7 +14,8 @@
     "summary": "Microsoft Threat Intelligence assesses that attackers compromised SOHO routers to perform DNS hijacking, potentially enabling large-scale adversary-in-the-middle (AiTM) attacks. Such operations may involve active network traffic interception, consistent with techniques used to analyze HTTP/HTTPS requests through man-in-the-middle methods.",
     "references": [
       {
-        "title": "SOHO router compromise leads to DNS hijacking and adversary-in-the-middle attacks"
+        "title": "SOHO router compromise leads to DNS hijacking and adversary-in-the-middle attacks",
+        "link": "https://www.microsoft.com/en-us/security/blog/2026/04/07/soho-router-compromise-leads-to-dns-hijacking-and-adversary-in-the-middle-attacks/"
       }
     ]
   }

@@ -13,7 +13,8 @@
     "summary": "A luxury brand faced automated gift card cracking attacks, with attackers brute-forcing balance inquiries and checkout balance applications at 100 times the frequency of legitimate customers. After deploying F5 Distributed Cloud Bot Defense, the attacks ceased, and 98.5% of gift card balance inquiry traffic was identified as automated requests.",
     "references": [
       {
-        "title": "Prevent Gift Card Cracking: Brute Force Enumeration - F5"
+        "title": "Prevent Gift Card Cracking: Brute Force Enumeration - F5",
+        "link": "https://www.f5.com/go/solution/gift-card-cracking"
       }
     ]
   }

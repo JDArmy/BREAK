@@ -15,10 +15,12 @@
     "usageExample": "An attacker borrows 100 million dollars via flash loan, manipulates a DEX price oracle through massive swaps, exploits the distorted price to drain a lending protocol, repays the loan, and profits from the difference—all within a single transaction.",
     "references": [
       {
-        "title": "What are flash loans and why do they repeatedly contribute to DeFi incidents?"
+        "title": "What are flash loans and why do they repeatedly contribute to DeFi incidents?",
+        "link": "https://new.qq.com/omn/20211229/20211229A049IH00.html"
       },
       {
-        "title": "A guide to understanding flash loans"
+        "title": "A guide to understanding flash loans",
+        "link": "https://zhuanlan.zhihu.com/p/385431947"
       }
     ],
     "category": "Business Security"

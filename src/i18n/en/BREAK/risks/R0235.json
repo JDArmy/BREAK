@@ -11,7 +11,8 @@
     ],
     "references": [
       {
-        "title": "PCI Data Security Standard"
+        "title": "PCI Data Security Standard",
+        "link": "https://www.pcisecuritystandards.org/standards/pci-dss/"
       }
     ],
     "description": "Chargeback and refund abuse uses payment disputes, after-sales policies, logistics conflicts, or fake evidence to obtain improper refunds. Common patterns include empty packages, item swaps, forged delivery issues, and repeated complaints.\n\nThe risk creates direct losses for platforms, merchants, and payment providers, while undermining fair after-sales rules. Detection must combine logistics evidence, history, device linkage, and dispute handling strategy.",

@@ -13,7 +13,8 @@
     "summary": "A question posted on Ethereum StackExchange asks whether timestamp manipulation attacks remain feasible under the current Ethereum network conditions and, if so, whether users can detect and avoid such attacks. The discussion reflects ongoing community concern about the risks of relying on block timestamps in smart contracts, given that miners can freely set timestamps within a roughly 15-second w",
     "references": [
       {
-        "title": "Is timestamp manipulation still possible? And if yes, can users spot ..."
+        "title": "Is timestamp manipulation still possible? And if yes, can users spot ...",
+        "link": "https://ethereum.stackexchange.com/questions/99427/is-timestamp-manipulation-still-possible-and-if-yes-can-users-spot-that-and-di"
       }
     ]
   }

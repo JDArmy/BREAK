@@ -14,7 +14,8 @@
     "summary": "Cybercriminals bypassed Google Gemini's safety guardrails to deeply embed large model capabilities into the full PhaaS (Phishing-as-a-Service) chain. Attackers can leverage Gemini to automate reconnaissance and generate highly customized social engineering scripts and phishing page code, enabling fully automated, mass-produced phishing attacks that compress the per-target attack cost from hours to",
     "references": [
       {
-        "title": "Research on Large-Scale Phishing Attacks and Defense Technologies Empowered by Generative AI - Tencent Cloud"
+        "title": "Research on Large-Scale Phishing Attacks and Defense Technologies Empowered by Generative AI - Tencent Cloud",
+        "link": "https://cloud.tencent.com/developer/article/2688865"
       }
     ]
   }

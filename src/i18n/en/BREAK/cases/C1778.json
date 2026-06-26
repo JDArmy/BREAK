@@ -15,7 +15,8 @@
     "summary": "A GitHub security project highlights that automotive OTA update processes are susceptible to multiple cybersecurity threats, including man-in-the-middle attacks that can hijack communications, firmware spoofing that can forge update packages, and unauthorized access. Attackers can use these methods to tamper with or replay OTA packages and implant malicious firmware.",
     "references": [
       {
-        "title": "MCS Project 1 - Secure OTA - GitHub"
+        "title": "MCS Project 1 - Secure OTA - GitHub",
+        "link": "https://github.com/SEA-ME/MCS_Secure-OTA"
       }
     ]
   }

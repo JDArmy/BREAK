@@ -16,7 +16,8 @@
     "summary": "This study introduces the Phishfarm framework for measuring how effectively phishing sites evade browser blacklists. Attackers acquire large pools of IP addresses and rotate them rapidly, switching to a new IP shortly after a phishing site is blocklisted, thereby continuously bypassing browser-based malicious URL detection and keeping phishing campaigns active.",
     "references": [
       {
-        "title": "Phishfarm: A Scalable Framework for Measuring the Effectiveness of Evasion Techniques Against Browser Phishing Blacklists"
+        "title": "Phishfarm: A Scalable Framework for Measuring the Effectiveness of Evasion Techniques Against Browser Phishing Blacklists",
+        "link": "https://ieeexplore.ieee.org/abstract/document/8835369/"
       }
     ]
   }

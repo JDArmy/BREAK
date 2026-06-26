@@ -16,7 +16,8 @@
     "summary": "This research proposes a signature-based defense mechanism against long-range attacks in Proof-of-Stake blockchains. The attack scenario involves malicious validators using historical private keys to fork from early blocks, constructing an alternative chain to rewrite transaction history, exploiting the nothing-at-stake property to threaten network consistency.",
     "references": [
       {
-        "title": "Modeling Resources in Permissionless Longest-Chain Total-Order Broadcast"
+        "title": "Modeling Resources in Permissionless Longest-Chain Total-Order Broadcast",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11494077/"
       }
     ]
   }

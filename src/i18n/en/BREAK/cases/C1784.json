@@ -14,7 +14,8 @@
     "summary": "A study published in IEEE in March 2026 proposes the FRAC (Flexible Fraud-Resistant Access Control) framework to address credential fraud in decentralized identity systems, including credential theft and reuse of revoked credentials. The framework employs Merkle trees to implement a format-agnostic anti-fraud mechanism, requiring only lightweight hash and signature verification to prevent maliciou",
     "references": [
       {
-        "title": "Flexible and Privacy-Preserving Access Control Framework for Decentralized Identity Systems"
+        "title": "Flexible and Privacy-Preserving Access Control Framework for Decentralized Identity Systems",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11450467/"
       }
     ]
   }

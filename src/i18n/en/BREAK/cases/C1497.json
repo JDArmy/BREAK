@@ -16,7 +16,8 @@
     "summary": "This study shows that Proof-of-Stake systems are more susceptible to long-range attacks and demonstrates such attacks against longest-chain protocols, including a general case of resource depletion attacks. An attacker forks from an early block using historical private keys and constructs an alternative chain at low cost to overwrite the main chain's history.",
     "references": [
       {
-        "title": "GitHub - goudanwang/miniblockchain2"
+        "title": "GitHub - goudanwang/miniblockchain2",
+        "link": "https://arxiv.org/abs/2211.12050"
       }
     ]
   }

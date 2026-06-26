@@ -7,7 +7,8 @@
     ],
     "references": [
       {
-        "title": "NIST AI Risk Management Framework"
+        "title": "NIST AI Risk Management Framework",
+        "link": "https://www.nist.gov/itl/ai-risk-management-framework"
       }
     ],
     "definition": "Defend AI models against adversarial examples and poisoning attacks to ensure decision reliability."

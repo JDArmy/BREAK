@@ -15,7 +15,8 @@
     "summary": "A paper presents a real-world case study of protocol-compliant denial-of-service attacks against C-V2X forward collision warning systems. Attackers congest communication channels by sending high-frequency UDP packets at the transport layer and oversized basic safety messages at the application layer, preventing vehicles from properly receiving and processing safety-related information and thus dis",
     "references": [
       {
-        "title": "Real-World Evaluation of Protocol-Compliant Denial-of-Service Attacks"
+        "title": "Real-World Evaluation of Protocol-Compliant Denial-of-Service Attacks",
+        "link": "https://arxiv.org/pdf/2508.02805"
       }
     ]
   }

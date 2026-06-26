@@ -15,7 +15,8 @@
     "summary": "This academic survey systematically examines sensor spoofing attacks targeting autonomous vehicles, including GNSS spoofing, LiDAR injection, radar jamming, and electromagnetic attacks. These malicious interferences can mislead individual perception modules or disrupt cross-sensor fusion, resulting in perception failures, planning errors, and unsafe behaviors, confirming the severe threat posed by",
     "references": [
       {
-        "title": "SoK: How Sensor Attacks Disrupt Autonomous Vehicles: An End-to-end ..."
+        "title": "SoK: How Sensor Attacks Disrupt Autonomous Vehicles: An End-to-end ...",
+        "link": "https://arxiv.org/pdf/2509.11120v2"
       }
     ]
   }

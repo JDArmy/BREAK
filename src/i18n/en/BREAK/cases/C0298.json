@@ -13,7 +13,8 @@
     "summary": "This research proposes a detection mechanism for application-layer CPU-exhaustion denial-of-service attacks. Unlike traditional high-volume attacks, these attacks exploit algorithmic or implementation vulnerabilities to consume significant server CPU resources with a small number of carefully crafted requests, and they lack identifiable patterns.",
     "references": [
       {
-        "title": "Coda: Runtime Detection of Application-Layer CPU-Exhaustion DoS Attacks ..."
+        "title": "Coda: Runtime Detection of Application-Layer CPU-Exhaustion DoS Attacks ...",
+        "link": "https://ieeexplore.ieee.org/document/9842371"
       }
     ]
   }

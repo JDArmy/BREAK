@@ -6,7 +6,8 @@
     "limitation": "Traffic encryption increases the complexity and cost of data transmission. When using traffic encryption, the trade-off between security and performance impact needs to be considered.",
     "references": [
       {
-        "title": "Transport Layer Security - Wikipedia"
+        "title": "Transport Layer Security - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Transport_Layer_Security"
       }
     ],
     "keywords": [
@@ -25,7 +26,8 @@
     "limitation": "Not applicable to scenarios where users access web pages via a browser.",
     "references": [
       {
-        "title": "Transport Layer Security - Wikipedia"
+        "title": "Transport Layer Security - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Transport_Layer_Security"
       }
     ],
     "keywords": [
@@ -44,7 +46,8 @@
     "limitation": "Generally implemented by hooking the remote request function to encrypt data, but this may cause certain compatibility issues. If some business logic does not use a unified remote request function, that portion of data cannot be encrypted.",
     "references": [
       {
-        "title": "OWASP REST Security Cheat Sheet"
+        "title": "OWASP REST Security Cheat Sheet",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html"
       }
     ],
     "keywords": [
@@ -63,7 +66,8 @@
     "limitation": "Generally implemented by hooking the remote request function to encrypt data, but this may cause certain compatibility issues. If some business logic does not use a unified remote request function, that portion of data cannot be encrypted.",
     "references": [
       {
-        "title": "OWASP REST Security Cheat Sheet"
+        "title": "OWASP REST Security Cheat Sheet",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html"
       }
     ],
     "keywords": [
@@ -82,7 +86,8 @@
     "limitation": "Custom transport protocols require custom protocol parsing logic on both the client and server sides, and the protocol versions on both sides must be consistent; otherwise communication will fail.",
     "references": [
       {
-        "title": "OWASP Cryptographic Storage Cheat Sheet"
+        "title": "OWASP Cryptographic Storage Cheat Sheet",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html"
       }
     ],
     "keywords": [

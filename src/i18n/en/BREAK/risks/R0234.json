@@ -11,7 +11,8 @@
     ],
     "references": [
       {
-        "title": "PCI Data Security Standard"
+        "title": "PCI Data Security Standard",
+        "link": "https://www.pcisecuritystandards.org/standards/pci-dss/"
       }
     ],
     "description": "Merchant cash-out and fake transaction fraud uses fake orders, circular transactions, linked accounts, or abnormal refunds to convert payment rails and platform subsidies into cash. Attackers may coordinate as merchants and buyers.\n\nThe fraud pollutes transaction data, increases payment channel risk, and may trigger anti-money-laundering obligations. Risk control needs to link merchants, buyers, devices, funds, and fulfillment evidence.",

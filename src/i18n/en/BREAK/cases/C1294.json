@@ -15,10 +15,12 @@
     "summary": "A security threat disclosed in May 2025 reveals that malicious MCP servers can tamper with tool descriptions to launch attacks. When multiple servers connect to the same client, a rogue server can poison tool descriptions, steal data from other trusted servers, and hijack authentication by transferring credentials from one server to another. Because the agent system exposes tool description permis",
     "references": [
       {
-        "title": "How Should We Respond to MCP 'Tool Poisoning'?"
+        "title": "How Should We Respond to MCP 'Tool Poisoning'?",
+        "link": "https://view.inews.qq.com/a/20250513A01Y7D00"
       },
       {
-        "title": "MCP Security Notification: Tool Poisoning Attacks"
+        "title": "MCP Security Notification: Tool Poisoning Attacks",
+        "link": "https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks"
       }
     ]
   }

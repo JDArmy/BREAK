@@ -15,7 +15,8 @@
     "summary": "This study employs differential execution analysis to automatically detect anti-adblocker mechanisms, finding that 30.5% of Alexa top 10,000 websites deploy such measures, with over 90% showing no visible warning. It also develops JavaScript rewriting and API hooking schemes to help ad blockers evade anti-adblock detection.",
     "references": [
       {
-        "title": "Measuring and Disrupting Anti-Adblockers Using Differential Execution Analysis"
+        "title": "Measuring and Disrupting Anti-Adblockers Using Differential Execution Analysis",
+        "link": "https://par.nsf.gov/biblio/10073731"
       }
     ]
   }

@@ -14,10 +14,12 @@
     "summary": "In August 2022, researchers from KU Leuven published a paper demonstrating a practical break of SIKEp434, a Round 4 candidate in the NIST post-quantum cryptography standardization process, using a single-core processor in 62 minutes. Higher security levels SIKEp503, p610, and p751 were also broken within hours. The attack recovers the private key, effectively compromising the supersingular isogeny",
     "references": [
       {
-        "title": "An Efficient Key Recovery Attack on SIDH"
+        "title": "An Efficient Key Recovery Attack on SIDH",
+        "link": "https://eprint.iacr.org/2022/975"
       },
       {
-        "title": "Is Post-Quantum Cryptography Really Safe? NIST Fourth-Round Candidate SIKE Has Been Cracked_Tencent News"
+        "title": "Is Post-Quantum Cryptography Really Safe? NIST Fourth-Round Candidate SIKE Has Been Cracked_Tencent News",
+        "link": "https://new.qq.com/rain/a/20220802A08GZP00"
       }
     ]
   }

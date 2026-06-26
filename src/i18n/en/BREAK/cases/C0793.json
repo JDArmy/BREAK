@@ -14,7 +14,8 @@
     "summary": "An open-source project on GitHub named 'supply_backdoor' uses an Arduino Nano development board to simulate a firmware-level backdoor as a proof-of-concept. The project illustrates how supply chain attacks against embedded devices can implant hidden backdoors at the firmware level, enabling long-term persistence and remote control by attackers. It serves as a typical technical demonstration of IoT",
     "references": [
       {
-        "title": "GitHub - socalit/supply_backdoor: A proof-of-concept (PoC) firmware ..."
+        "title": "GitHub - socalit/supply_backdoor: A proof-of-concept (PoC) firmware ...",
+        "link": "https://github.com/socalit/supply_backdoor"
       }
     ]
   }

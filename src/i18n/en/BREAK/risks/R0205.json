@@ -12,10 +12,12 @@
     ],
     "references": [
       {
-        "title": "Smart IoT (AIoT) Security Technologies and Application Research, 2025 Edition"
+        "title": "Smart IoT (AIoT) Security Technologies and Application Research, 2025 Edition",
+        "link": "https://www.163.com/dy/article/KIOS8MI70511ALHJ.html"
       },
       {
-        "title": "SP 800-183, Networks of 'Things' | CSRC"
+        "title": "SP 800-183, Networks of 'Things' | CSRC",
+        "link": "https://csrc.nist.gov/pubs/sp/800/183/final"
       }
     ],
     "description": "AIoT convergence attacks target IoT devices that use AI for perception, inference, or automated control. Attackers may use adversarial inputs, sensor spoofing, model poisoning, or firmware tampering to influence decisions and actions.\n\nWhen AIoT is used in access control, traffic, healthcare, industrial, or home automation, data-layer attacks can produce physical consequences. Protection must combine model robustness, device identity, trusted data, and execution safety.",

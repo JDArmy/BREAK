@@ -15,10 +15,12 @@
     "summary": "In October 2021, globally recognized medical device manufacturer Medtronic announced a recall of certain insulin pump remote controllers due to critical security vulnerabilities. Attackers could exploit these flaws to alter the insulin dosage delivered to patients, potentially causing injury or death.",
     "references": [
       {
-        "title": "Winnut builds a security protection matrix for medical IoT_Devices_Systems_Data"
+        "title": "Winnut builds a security protection matrix for medical IoT_Devices_Systems_Data",
+        "link": "https://news.sohu.com/a/841128319_121123671"
       },
       {
-        "title": "FDA: Medtronic MiniMed 600 Series Insulin Pump Cybersecurity Recall"
+        "title": "FDA: Medtronic MiniMed 600 Series Insulin Pump Cybersecurity Recall",
+        "link": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfres/res.cfm?id=196205"
       }
     ]
   }

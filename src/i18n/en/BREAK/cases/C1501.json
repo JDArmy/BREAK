@@ -15,7 +15,8 @@
     "summary": "This study examines the feasibility of semi-selfish mining attacks, where a mining pool sponsors a selfish mining operation to gain excess rewards. Honest miners may exit upon detecting abnormal fork behavior, while the attacker leverages this strategy to continuously earn a disproportionate share of block rewards without being detected.",
     "references": [
       {
-        "title": "Is semi‐selfish mining available without being detected?"
+        "title": "Is semi‐selfish mining available without being detected?",
+        "link": "https://onlinelibrary.wiley.com/doi/abs/10.1002/int.22656"
       }
     ]
   }

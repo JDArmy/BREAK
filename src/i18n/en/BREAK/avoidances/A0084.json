@@ -6,13 +6,16 @@
     "limitation": "Real-time detection requires analysis within extremely short timeframes, demanding significant computational resources; detection accuracy may decline as deepfake technology advances; high-quality deepfakes may temporarily evade detection; privacy regulations may limit real-time analysis of communication content; false positives may disrupt normal business communications.",
     "references": [
       {
-        "title": "Cybersecurity Forecast 2026 - Google Cloud"
+        "title": "Cybersecurity Forecast 2026 - Google Cloud",
+        "link": "https://cloud.google.com/security/resources/cybersecurity-forecast"
       },
       {
-        "title": "Microsoft Digital Defense Report 2025"
+        "title": "Microsoft Digital Defense Report 2025",
+        "link": "https://www.microsoft.com/en-us/security/business/microsoft-digital-defense-report"
       },
       {
-        "title": "Deepfake Detection - NIST"
+        "title": "Deepfake Detection - NIST",
+        "link": "https://airc.nist.gov/airmf-resources/airmf/"
       }
     ],
     "keywords": [

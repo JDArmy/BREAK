@@ -15,7 +15,8 @@
     "summary": "Deus Finance suffered an oracle manipulation attack where the attacker manipulated oracle data through large transactions, leading to a series of erroneous liquidations in the protocol. The attacker subsequently exploited price discrepancies to conduct arbitrage trades, profiting over $3 million. This incident is cited in an IEEE paper as a typical case of multi-transaction oracle manipulation att",
     "references": [
       {
-        "title": "Pomabuster: Detecting Price Oracle Manipulation Attacks in Decentralized Finance"
+        "title": "Pomabuster: Detecting Price Oracle Manipulation Attacks in Decentralized Finance",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10646773/"
       }
     ]
   }

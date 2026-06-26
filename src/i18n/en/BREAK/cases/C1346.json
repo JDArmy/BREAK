@@ -15,7 +15,8 @@
     "summary": "Cloudflare has been researching post-quantum cryptography since 2017 and has now deployed post-quantum hybrid key agreement protocols such as X25519MLKEM768. The move aims to counter harvest-now-decrypt-later attacks, where adversaries collect encrypted data today with the intent of decrypting it once sufficiently powerful quantum computers become available. Cloudflare plans to achieve full post-q",
     "references": [
       {
-        "title": "Post-quantum cryptography (PQC) - SSL/TLS - Cloudflare Docs"
+        "title": "Post-quantum cryptography (PQC) - SSL/TLS - Cloudflare Docs",
+        "link": "https://developers.cloudflare.com/ssl/post-quantum-cryptography/"
       }
     ]
   }

@@ -16,7 +16,8 @@
     "summary": "In June 2026, the Arch User Repository (AUR) suffered a supply chain attack via atomic-lockfile, where an attacker injected malicious installation scripts into PKGBUILD files, poisoning over 1,600 packages to distribute an infostealer and an eBPF rootkit.",
     "references": [
       {
-        "title": "GitHub - lenucksi/aur-malware-check: Detection tools for the June 2026 ..."
+        "title": "GitHub - lenucksi/aur-malware-check: Detection tools for the June 2026 ...",
+        "link": "https://github.com/lenucksi/aur-malware-check"
       }
     ]
   }

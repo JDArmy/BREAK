@@ -18,10 +18,12 @@
     "description": "Fraudsters repackage outdated data by supplementing it with fabricated information, altering timestamps, or deduplicating records. On the surface, this data appears fresh and valid, but the core information is stale, often leading to failed scams or blocked marketing efforts when used by buyers. Refurbished data is commonly used to deceive downstream buyers by passing off inferior goods as high-quality, reaping excessive profits.",
     "references": [
       {
-        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
       },
       {
-        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
       }
     ]
   }

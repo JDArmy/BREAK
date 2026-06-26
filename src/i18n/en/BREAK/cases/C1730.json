@@ -14,7 +14,8 @@
     "summary": "This study defines a type of click fraud called 'humanoid attack,' whose behavioral patterns are nearly indistinguishable from normal user clicks. Attackers inject fraudulent click code directly into ad code, making fake clicks difficult to detect with traditional methods, thereby more effectively stealing advertising attribution revenue.",
     "references": [
       {
-        "title": "Dissecting click fraud autonomy in the wild"
+        "title": "Dissecting click fraud autonomy in the wild",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3460120.3484546"
       }
     ]
   }

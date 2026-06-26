@@ -15,7 +15,8 @@
     "summary": "An empirical study of 2,313 Docker images finds that SBOMs produced by different generation tools such as Syft and Trivy, and in different formats, yield highly variable vulnerability counts, revealing that the method of SBOM generation directly affects vulnerability visibility.",
     "references": [
       {
-        "title": "Impacts of Software Bill of Materials (SBOM) Generation on ..."
+        "title": "Impacts of Software Bill of Materials (SBOM) Generation on ...",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3689944.3696164"
       }
     ]
   }

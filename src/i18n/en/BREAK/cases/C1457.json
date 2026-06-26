@@ -14,7 +14,8 @@
     "summary": "Researchers propose a deep learning-based side-channel analysis technique targeting the lightweight cipher SPECK-32/64, widely used in IoT devices. Using fewer than 250 power traces, they successfully recover an 8-byte key. This study marks the first implementation of a deep learning side-channel attack against SPECK, highlighting the physical security vulnerabilities of IoT devices.",
     "references": [
       {
-        "title": "Deep learning-based profiling side-channel attacks in SPECK cipher - Nature"
+        "title": "Deep learning-based profiling side-channel attacks in SPECK cipher - Nature",
+        "link": "https://www.nature.com/articles/s41598-025-08888-1"
       }
     ]
   }

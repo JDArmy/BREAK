@@ -14,7 +14,8 @@
     "summary": "In April 2026, the National Cybersecurity Notification Center issued an alert regarding a supply chain poisoning attack targeting the JavaScript HTTP library Axios. Malicious code was concealed using obfuscation, self-deletion, and anti-debugging techniques, executing upon developer installation or update to steal credentials and achieve remote code execution. As Axios is a direct dependency for n",
     "references": [
       {
-        "title": "Security Risk Analysis of Multiple Recent Supply Chain Poisoning Incidents - Jiangsu Cyberspace Administration"
+        "title": "Security Risk Analysis of Multiple Recent Supply Chain Poisoning Incidents - Jiangsu Cyberspace Administration",
+        "link": "https://www.jswx.gov.cn/anquan/guanli/202604/t20260410_1322184.shtml"
       }
     ]
   }

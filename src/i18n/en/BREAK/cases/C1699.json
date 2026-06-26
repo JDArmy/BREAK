@@ -13,7 +13,8 @@
     "summary": "This project simulates AWS IAM privilege escalation scenarios by deliberately creating misconfigured IAM environments. It demonstrates how a low-privilege user can escalate privileges and leverages tools such as CloudTrail and GuardDuty to detect the attack, aiming to understand IAM policy weaknesses.",
     "references": [
       {
-        "title": "GitHub - jmcoded0/AWS-IAM-Privilege-Escalation-Detection"
+        "title": "GitHub - jmcoded0/AWS-IAM-Privilege-Escalation-Detection",
+        "link": "https://github.com/jmcoded0/AWS-IAM-Privilege-Escalation-Detection"
       }
     ]
   }

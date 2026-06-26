@@ -14,7 +14,8 @@
     "summary": "This study examines the security trade-offs in implantable medical devices such as pacemakers and insulin pumps, cataloging feasible attacks against them. Attackers can exploit communication vulnerabilities to launch wireless attacks, tampering with device parameters or disrupting therapy, thereby directly endangering patient lives.",
     "references": [
       {
-        "title": "Security Tradeoffs in Cyber Physical Systems: A Case Study Survey on Implantable Medical Devices"
+        "title": "Security Tradeoffs in Cyber Physical Systems: A Case Study Survey on Implantable Medical Devices",
+        "link": "https://ieeexplore.ieee.org/abstract/document/7393449/"
       }
     ]
   }

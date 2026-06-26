@@ -15,7 +15,8 @@
     "summary": "A GitHub-hosted experimental project demonstrates how attackers modify legitimate Android apps by injecting malicious code and redistributing them. The experiment walks through decompiling an APK, injecting malicious payloads, repackaging and signing the app, and successfully triggering malicious behavior on a virtual machine, illustrating the full repackaging attack lifecycle.",
     "references": [
       {
-        "title": "thomasruegg/android-repackaging-attack - GitHub"
+        "title": "thomasruegg/android-repackaging-attack - GitHub",
+        "link": "https://github.com/thomasruegg/android-repackaging-attack"
       }
     ]
   }

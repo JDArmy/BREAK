@@ -13,10 +13,12 @@
     "summary": "A critical vulnerability was discovered in the Cosmos ecosystem DEX Osmosis, allowing anyone to add liquidity to any pool and receive an extra 50% return upon removal, potentially draining all liquidity pools. The team later confirmed the vulnerability, estimated the loss at approximately $5 million, and urgently halted on-chain activity to fix the bug.",
     "references": [
       {
-        "title": "PA Daily | Alibaba Cloud Launches NFT Solution; PayPal Supports Third-Party Wallet Addresses - Tencent News"
+        "title": "PA Daily | Alibaba Cloud Launches NFT Solution; PayPal Supports Third-Party Wallet Addresses - Tencent News",
+        "link": "https://new.qq.com/rain/a/20220608A0C9ED00"
       },
       {
-        "title": "Osmosis Updates from the Lab Recap, Osmocon and Exploit Fix"
+        "title": "Osmosis Updates from the Lab Recap, Osmocon and Exploit Fix",
+        "link": "https://medium.com/osmosis-community-updates/osmosis-updates-from-the-lab-recap-osmocon-and-exploit-fix-june-15-2022-fc22355e4b0d"
       }
     ]
   }

@@ -8,10 +8,12 @@
     "usageExample": "Banks utilize TLS encryption protocols to secure online banking communications, ensuring that account credentials are not intercepted by eavesdroppers.",
     "references": [
       {
-        "title": "Cryptography - NIST"
+        "title": "Cryptography - NIST",
+        "link": "https://www.nist.gov/cryptography"
       },
       {
-        "title": "Post-Quantum Cryptography - NIST"
+        "title": "Post-Quantum Cryptography - NIST",
+        "link": "https://csrc.nist.gov/projects/post-quantum-cryptography"
       }
     ],
     "title": "Encryption",

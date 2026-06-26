@@ -13,10 +13,12 @@
     "summary": "In February 2022, security researchers discovered multiple websites using man-in-the-middle (MitM) phishing kits capable of intercepting two-factor authentication (2FA) security codes, allowing cybercriminals to bypass this verification step and take over user accounts.",
     "references": [
       {
-        "title": "Tycoon 2FA Phishing Kit Sparks a Session Hijacking Storm"
+        "title": "Tycoon 2FA Phishing Kit Sparks a Session Hijacking Storm",
+        "link": "https://cloud.tencent.com/developer/article/2619574"
       },
       {
-        "title": "Tycoon 2FA: an in-depth analysis of the latest version of the AiTM phishing kit"
+        "title": "Tycoon 2FA: an in-depth analysis of the latest version of the AiTM phishing kit",
+        "link": "https://blog.sekoia.io/tycoon-2fa-an-in-depth-analysis-of-the-latest-version-of-the-aitm-phishing-kit/"
       }
     ]
   }

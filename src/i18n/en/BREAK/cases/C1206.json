@@ -14,7 +14,8 @@
     "summary": "This report describes an attack technique where fake login QR codes are used to steal user accounts. Attackers display a counterfeit QQ login QR code on a website, tricking victims into scanning and confirming the login. The attacker then polls the QQ server login interface to obtain the victim's login token, thereby hijacking the account. This method exploits the fact that QR code content is invi",
     "references": [
       {
-        "title": "Discussing the Principle of QR Code Scan Login - Tencent Cloud"
+        "title": "Discussing the Principle of QR Code Scan Login - Tencent Cloud",
+        "link": "https://cloud.tencent.com/developer/article/1948928"
       }
     ]
   }

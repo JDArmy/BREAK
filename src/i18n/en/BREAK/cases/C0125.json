@@ -15,7 +15,8 @@
     "summary": "A research team identified a novel collusive mobile ad fraud scheme called ad attribution laundering fraud (ALF), in which multiple apps conspire to hide the true source of ad impressions, allowing low-quality apps to steal the reputation of legitimate ones. The developed AlfScan-X tool achieved 92% precision and recall on a real-world dataset of 200 apps, identifying 4,515 unique fraudulent apps ",
     "references": [
       {
-        "title": "Collaborative ad fraud detection in ad networks"
+        "title": "Collaborative ad fraud detection in ad networks",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10938010/"
       }
     ]
   }

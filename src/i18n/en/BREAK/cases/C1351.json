@@ -15,7 +15,8 @@
     "summary": "A research paper published at USENIX NSDI 2024 titled 'Cloudy with a Chance of Cyberattacks: Dangling Resources Abuse on Cloud Platforms' confirms that attackers can hijack released but uncleaned resources on cloud platforms, which originally belonged to legitimate organizations. Attackers exploit these hijacked resources to launch attacks against the original service customers, such as distributi",
     "references": [
       {
-        "title": "Cloudy with a Chance of Cyberattacks: Dangling Resources Abuse on Cloud ..."
+        "title": "Cloudy with a Chance of Cyberattacks: Dangling Resources Abuse on Cloud ...",
+        "link": "https://arxiv.org/html/2403.19368v1"
       }
     ]
   }

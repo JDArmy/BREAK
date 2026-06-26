@@ -13,7 +13,8 @@
     "summary": "The article explains that a replay attack can occur when two forked cryptocurrencies allow transactions to be valid on both chains. This aligns with the definition of replay attacks in blockchain fork scenarios, where an attacker exploits cross-chain compatibility to replay a legitimate transaction from one chain onto the other, resulting in duplicated asset transfers.",
     "references": [
       {
-        "title": "What is a replay attack? - Exodus Knowledge Base"
+        "title": "What is a replay attack? - Exodus Knowledge Base",
+        "link": "https://support.exodus.com/support/en/articles/8598706-what-is-a-replay-attack"
       }
     ]
   }

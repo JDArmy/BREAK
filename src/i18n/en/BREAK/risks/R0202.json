@@ -11,10 +11,12 @@
     ],
     "references": [
       {
-        "title": "An Empirical Analysis of Privacy in the Lightning Network"
+        "title": "An Empirical Analysis of Privacy in the Lightning Network",
+        "link": "https://arxiv.org/abs/1904.05234"
       },
       {
-        "title": "Chainalysis: The Blockchain Data Platform"
+        "title": "Chainalysis: The Blockchain Data Platform",
+        "link": "https://www.chainalysis.com/"
       }
     ],
     "description": "On-chain privacy exposure comes from public visibility of transactions, addresses, balances, and contract interactions. Attackers can combine address clustering, transaction graphs, MEV monitoring, and off-chain data to infer asset holdings, behavior, and identity links.\n\nThe leak may not involve a breach; it is a byproduct of transparent ledgers and analytics. High-value users and institutions need address isolation, privacy-preserving protocols, and minimal off-chain disclosure.",

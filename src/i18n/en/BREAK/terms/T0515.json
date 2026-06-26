@@ -9,10 +9,12 @@
     "usageExample": "An enterprise deploys a firewall at the network perimeter to allow only web traffic on ports 80 and 443 into the DMZ zone.",
     "references": [
       {
-        "title": "SP 800-41 Rev. 1, Guidelines on Firewalls and Firewall Policy | CSRC"
+        "title": "SP 800-41 Rev. 1, Guidelines on Firewalls and Firewall Policy | CSRC",
+        "link": "https://csrc.nist.gov/pubs/sp/800/41/r1/final"
       },
       {
-        "title": "What is a Firewall? - Cloudflare"
+        "title": "What is a Firewall? - Cloudflare",
+        "link": "https://www.cloudflare.com/learning/security/what-is-a-firewall/"
       }
     ],
     "title": "Firewall",

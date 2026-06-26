@@ -14,7 +14,8 @@
     "summary": "On the Pikachu vulnerability practice platform, a logged-in user can directly view other users' personal information by modifying the username parameter in the URL, demonstrating a horizontal privilege escalation attack through parameter tampering among users with the same permission level.",
     "references": [
       {
-        "title": "Qi-An-Xin Offensive and Defensive Community - Horizontal and Vertical Privilege Escalation in Business Logic"
+        "title": "Qi-An-Xin Offensive and Defensive Community - Horizontal and Vertical Privilege Escalation in Business Logic",
+        "link": "https://mdr.skyeye.qianxin.com/forum/share/467"
       }
     ]
   }

@@ -15,7 +15,8 @@
     "summary": "In December 2022, security analysis revealed that the techniques used in the Optus Telecom incident closely mirrored common shadow API risks found in customer environments. Publicly exposed APIs, also known as shadow or zombie APIs, required no authorization or authentication and were inadvertently left accessible on the internet, allowing attackers to leak personally identifiable information (PII",
     "references": [
       {
-        "title": "Australia's Optus User Data Leak Shocks the Nation: What You Need to Know - ABC News"
+        "title": "Australia's Optus User Data Leak Shocks the Nation: What You Need to Know - ABC News",
+        "link": "https://www.abc.net.au/chinese/2022-09-28/what-we-know-about-optus-cyber-attack-user-data-leak-security/101479560"
       }
     ]
   }

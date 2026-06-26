@@ -16,7 +16,8 @@
     "summary": "At DEF CON 32, CertiK security engineers presented an analysis highlighting unique risks facing DApps, including client-side and server-side attacks. Attackers can steal user crypto assets by hijacking frontend code or gain full control over smart contracts and associated assets by exploiting server-side vulnerabilities to obtain private keys. The analysis directly maps to DApp frontend hijacking ",
     "references": [
       {
-        "title": "Web2 Meets Web3: Hacking Decentralized Applications - CertiK"
+        "title": "Web2 Meets Web3: Hacking Decentralized Applications - CertiK",
+        "link": "https://www.certik.com/blog/web2-meets-web3-hacking-decentralized-applications"
       }
     ]
   }

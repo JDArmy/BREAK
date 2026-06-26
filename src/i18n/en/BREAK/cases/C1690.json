@@ -15,7 +15,8 @@
     "summary": "In February 2026, attackers poisoned the npm package of the AI coding tool Cline, silently installing the OpenClaw agent via a postinstall script. Due to the lack of an SBOM, developers could not quickly detect the implanted extra component, resulting in approximately 4,000 high-value development endpoints being persistently compromised, exposing the recursive supply chain risks caused by missing ",
     "references": [
       {
-        "title": "OpenClaw: The Hidden Dangers Behind the Craze - Tencent News"
+        "title": "OpenClaw: The Hidden Dangers Behind the Craze - Tencent News",
+        "link": "https://news.qq.com/rain/a/20260310A01SYE00"
       }
     ]
   }

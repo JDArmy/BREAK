@@ -16,7 +16,8 @@
     "summary": "In an April 2026 article, the Lakera team summarized real-world indirect prompt injection attacks, including browsers tricked into leaking credentials when summarizing web pages, Copilot taking actions based on poisoned emails or metadata, and agent tools executing attacker-controlled commands after reading compromised documents. The article also covered the Perplexity Comet leak, a zero-click RCE",
     "references": [
       {
-        "title": "Indirect Prompt Injection: The Hidden Threat Breaking Modern AI ..."
+        "title": "Indirect Prompt Injection: The Hidden Threat Breaking Modern AI ...",
+        "link": "https://www.lakera.ai/blog/indirect-prompt-injection"
       }
     ]
   }

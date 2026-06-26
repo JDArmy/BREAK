@@ -16,10 +16,12 @@
     "summary": "Uber's single sign-on system relied on cross-subdomain cookie sharing for authentication. An attacker took over the unregistered Amazon CloudFront subdomain saostatic.uber.com, combined it with a CSRF protection bypass, and stole the shared session cookie. This allowed bypassing SSO at auth.uber.com and gaining control of accounts on arbitrary Uber subdomains.",
     "references": [
       {
-        "title": "Bug Bounty Experience: How I Bypassed Uber's Single Sign-On Authentication via Subdomain Takeover"
+        "title": "Bug Bounty Experience: How I Bypassed Uber's Single Sign-On Authentication via Subdomain Takeover",
+        "link": "https://cloud.tencent.com/developer/article/1047451"
       },
       {
-        "title": "Authentication Bypass on auth.uber.com via Subdomain Takeover of saostatic.uber.com"
+        "title": "Authentication Bypass on auth.uber.com via Subdomain Takeover of saostatic.uber.com",
+        "link": "https://hackerone.com/reports/219205"
       }
     ]
   }

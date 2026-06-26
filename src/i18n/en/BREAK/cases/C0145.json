@@ -14,7 +14,8 @@
     "summary": "A report reveals that platforms with 5 million to 300 million users face a median account takeover (ATO) exposure rate of 1.4%. Of particular concern is the rise of session hijacking techniques, where attackers use infostealer malware to steal session cookies, bypass MFA, and take over user accounts.",
     "references": [
       {
-        "title": "The Account and Session Takeover Economy"
+        "title": "The Account and Session Takeover Economy",
+        "link": "https://flare.io/learn/resources/the-account-and-session-takeover-economy"
       }
     ]
   }

@@ -16,10 +16,12 @@
     "summary": "In January 2026, security organization Koi Security disclosed a supply chain poisoning attack named 'ClawHavoc' targeting the OpenClaw ecosystem. The attackers used 'ClickFix 2.0' social engineering tactics, disguising malicious prerequisites in skill documentation to trick developers into downloading malicious binaries. This established reverse shell remote control channels to steal API keys, cry",
     "references": [
       {
-        "title": "Tencent Cloud OpenClaw Security Solution: A Defense System to Block Agent Overreach and Supply Chain Poisoning"
+        "title": "Tencent Cloud OpenClaw Security Solution: A Defense System to Block Agent Overreach and Supply Chain Poisoning",
+        "link": "https://cloud.tencent.com/developer/article/2642850"
       },
       {
-        "title": "341 Malicious Clawed Skills Found by the Bot They Were Targeting"
+        "title": "341 Malicious Clawed Skills Found by the Bot They Were Targeting",
+        "link": "https://www.koi.ai/blog/clawhavoc-341-malicious-clawedbot-skills-found-by-the-bot-they-were-targeting"
       }
     ]
   }

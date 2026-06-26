@@ -14,7 +14,8 @@
     "summary": "In September 2019, an internal network server was hit by a fileless cryptomining attack. The attacker leveraged SMB anonymous login and password brute-forcing to deliver the malware, executing mining code in memory via PowerShell without dropping files to disk, causing 100% CPU usage. The attack also used scheduled tasks to download malicious files and involved port scanning and lateral movement.",
     "references": [
       {
-        "title": "Emergency Response Series: Analysis of Fileless Attacks - FreeBuf Cybersecurity Industry Portal"
+        "title": "Emergency Response Series: Analysis of Fileless Attacks - FreeBuf Cybersecurity Industry Portal",
+        "link": "https://www.freebuf.com/articles/network/216918.html"
       }
     ]
   }

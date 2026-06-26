@@ -8,10 +8,12 @@
     "usageExample": "A user signs a transfer transaction using their private key to send 10 ETH to another address. Once broadcast to the network and confirmed, the transaction is irreversible and cannot be undone.",
     "references": [
       {
-        "title": "Private Key : r/Coinbase - Reddit"
+        "title": "Private Key : r/Coinbase - Reddit",
+        "link": "https://www.reddit.com/r/Coinbase/comments/18bkowa/private_key/"
       },
       {
-        "title": "Ethereum Accounts - Ethereum"
+        "title": "Ethereum Accounts - Ethereum",
+        "link": "https://ethereum.org/en/developers/docs/accounts/"
       }
     ],
     "title": "Private Key",

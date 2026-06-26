@@ -6,10 +6,12 @@
     "limitation": "Completely ineffective against attack behavior that perfectly simulates normal user access.",
     "references": [
       {
-        "title": "Guide to Intrusion Detection and Prevention Systems (IDPS)"
+        "title": "Guide to Intrusion Detection and Prevention Systems (IDPS)",
+        "link": "https://csrc.nist.gov/pubs/sp/800/94/final"
       },
       {
-        "title": "MITRE D3FEND: Connected Honeynet Technique"
+        "title": "MITRE D3FEND: Connected Honeynet Technique",
+        "link": "https://d3fend.mitre.org/technique/d3f:ConnectedHoneynet/"
       }
     ],
     "keywords": [

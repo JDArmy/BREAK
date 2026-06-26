@@ -14,7 +14,8 @@
     "summary": "In a Java web application example, an order query endpoint retrieves orders solely by a path parameter ID without extracting the current user identity from the security context or verifying order ownership. An attacker can iterate through order IDs to access other users' order details, leading to sensitive information disclosure.",
     "references": [
       {
-        "title": "Don't Let Your Java Application Run Naked! OWASP Top10 Full Vulnerability Principles, Reproduction, and One-Stop..."
+        "title": "Don't Let Your Java Application Run Naked! OWASP Top10 Full Vulnerability Principles, Reproduction, and One-Stop...",
+        "link": "https://cloud.tencent.com/developer/article/2655703"
       }
     ]
   }

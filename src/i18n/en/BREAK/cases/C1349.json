@@ -14,7 +14,8 @@
     "summary": "The U.S. National Institute of Standards and Technology (NIST) has identified that AI systems can malfunction when exposed to untrusted data, and attackers are actively exploiting this weakness. NIST published guidance on attack types and mitigations but acknowledged that no foolproof protection currently exists, underscoring the black-box nature of AI decision-making that can become unexplainable",
     "references": [
       {
-        "title": "NIST Identifies Types of Cyberattacks That Manipulate Behavior of AI ..."
+        "title": "NIST Identifies Types of Cyberattacks That Manipulate Behavior of AI ...",
+        "link": "https://www.nist.gov/news-events/news/2024/01/nist-identifies-types-cyberattacks-manipulate-behavior-ai-systems"
       }
     ]
   }

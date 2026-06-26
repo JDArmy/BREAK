@@ -15,7 +15,8 @@
     "summary": "The OWASP Smart Contract Weakness Classification identifies signature replay attacks as SCWE-055. When a valid signature from a previous transaction is reused in a different context, such as another transaction or contract call, attackers can bypass authentication and perform unauthorized actions. This weakness emphasizes the need for anti-replay measures like unique nonces or chain identifiers.",
     "references": [
       {
-        "title": "SCWE-055: Missing Protection against Signature Replay Attacks"
+        "title": "SCWE-055: Missing Protection against Signature Replay Attacks",
+        "link": "https://scs.owasp.org/SCWE/SCSVS-CRYPTO/SCWE-055/"
       }
     ]
   }

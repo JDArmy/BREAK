@@ -14,10 +14,12 @@
     "summary": "On March 3, 2026, attackers exploited leaked GitHub App credentials to conduct a tag poisoning attack against Xygeni's official xygeni-action GitHub Action. The attackers redirected the mutable v5 tag to a malicious commit from an unmerged pull request, causing any workflow referencing @v5 to pull and execute malicious code. The backdoor registered a beacon in the CI runtime environment, executed ",
     "references": [
       {
-        "title": "Variable Tag Trap: Xygeni GitHub Action High-Risk Vulnerability Endangers CI/CD Pipelines - Security..."
+        "title": "Variable Tag Trap: Xygeni GitHub Action High-Risk Vulnerability Endangers CI/CD Pipelines - Security...",
+        "link": "https://www.anquanke.com/post/id/315171"
       },
       {
-        "title": "xygeni-action v5 Tag Poisoned with C2 Backdoor"
+        "title": "xygeni-action v5 Tag Poisoned with C2 Backdoor",
+        "link": "https://github.com/advisories/GHSA-f8q5-h5qh-33mh"
       }
     ]
   }

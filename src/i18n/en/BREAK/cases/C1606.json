@@ -12,7 +12,8 @@
     "summary": "A security vulnerability in the OPC UA .NET Standard Stack allows unauthenticated attackers to bypass application authentication mechanisms and gain unauthorized access to OPC UA servers, impacting industrial IoT communication security.",
     "references": [
       {
-        "title": "Security Update for the OPC UA .NET Standard Stack"
+        "title": "Security Update for the OPC UA .NET Standard Stack",
+        "link": "https://github.com/OPCFoundation/UA-.NETStandard/security/advisories/GHSA-h958-fxgg-g7w3"
       }
     ]
   }

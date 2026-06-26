@@ -15,7 +15,8 @@
     "summary": "In wireless sensor networks (WSNs), a Sybil attack occurs when a malicious device illegitimately claims multiple identities, referred to as Sybil nodes. Attack vectors include direct communication, indirect communication, fabricated identities, and stolen identities. Because sensor nodes have limited energy, lightweight defense schemes are required. The attack can cause data loss when legitimate n",
     "references": [
       {
-        "title": "A Review: Sybil Attack Detection Techniques in WSN"
+        "title": "A Review: Sybil Attack Detection Techniques in WSN",
+        "link": "https://ieeexplore.ieee.org/abstract/document/8067865/"
       }
     ]
   }

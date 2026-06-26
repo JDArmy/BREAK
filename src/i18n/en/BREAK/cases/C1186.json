@@ -15,7 +15,8 @@
     "summary": "In December 2020, a backdoor was implanted into the software update package for SolarWinds' Orion platform, compromising thousands of institutional customers, including U.S. government agencies such as the National Security Agency and major enterprises. Attackers injected malicious code through the official update channel, enabling long-term persistence and large-scale data exfiltration from downs",
     "references": [
       {
-        "title": "SUNBURST Additional Technical Details"
+        "title": "SUNBURST Additional Technical Details",
+        "link": "https://www.microsoft.com/en-us/security/blog/2020/12/18/analyzing-solorigate-the-compromised-dll-file-that-started-a-sophisticated-cyberattack-and-how-microsoft-defender-helps-protect/"
       }
     ]
   }

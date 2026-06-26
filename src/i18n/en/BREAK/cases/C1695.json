@@ -14,7 +14,8 @@
     "summary": "In October 2024, a company's telemetry report on its cloud security customers found that 74% had publicly exposed storage or other misconfigurations, creating opportunities for attackers. The report identified storage bucket misconfigurations as a leading source of cloud vulnerabilities, accounting for 16% of issues, and referenced the 2017 data breach involving a U.S. Department of Defense contra",
     "references": [
       {
-        "title": "Investigation: Over 6% of Google Cloud Storage Buckets Are Publicly Accessible Due to Misconfiguration"
+        "title": "Investigation: Over 6% of Google Cloud Storage Buckets Are Publicly Accessible Due to Misconfiguration",
+        "link": "https://www.secrss.com/articles/25827"
       }
     ]
   }

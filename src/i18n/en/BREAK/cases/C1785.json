@@ -15,7 +15,8 @@
     "summary": "A 2025 IEEE paper presents an Ethereum-based decentralized identity management platform that uses DIDs, verifiable credentials, and zero-knowledge proofs to detect synthetic identity fraud in a simulated U.S. tax filing scenario. Tested on 10,000 synthetic identities, it achieves a 95% fraud detection rate, a 25% improvement over centralized systems, and effectively resists Sybil attacks, validati",
     "references": [
       {
-        "title": "Decentralized Blockchain-Based Digital Identity Management for Fraud Prevention in the US"
+        "title": "Decentralized Blockchain-Based Digital Identity Management for Fraud Prevention in the US",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11472520/"
       }
     ]
   }

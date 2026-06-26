@@ -6,13 +6,16 @@
     "limitation": "Post-quantum algorithms have significantly larger key and signature sizes than classical algorithms, which may lead to performance degradation and increased storage requirements; the migration process is complex and time-consuming, involving the modification of numerous systems and protocols; the security of some post-quantum algorithms still requires time to validate; backward compatibility may create security weaknesses during the hybrid deployment period; migration costs are high, and small and medium enterprises may find it difficult to afford.",
     "references": [
       {
-        "title": "Post-Quantum Cryptography - NIST CSRC"
+        "title": "Post-Quantum Cryptography - NIST CSRC",
+        "link": "https://csrc.nist.gov/projects/post-quantum-cryptography"
       },
       {
-        "title": "NIST Releases First 3 Finalized Post-Quantum Encryption Standards"
+        "title": "NIST Releases First 3 Finalized Post-Quantum Encryption Standards",
+        "link": "https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards"
       },
       {
-        "title": "NIST FIPS 203, 204, and 205 Finalized: An Important Step Towards a Quantum-Safe Future"
+        "title": "NIST FIPS 203, 204, and 205 Finalized: An Important Step Towards a Quantum-Safe Future",
+        "link": "https://cloudsecurityalliance.org/blog/2024/08/15/nist-fips-203-204-and-205-finalized-an-important-step-towards-a-quantum-safe-future"
       }
     ],
     "keywords": [

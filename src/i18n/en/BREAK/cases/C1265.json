@@ -15,7 +15,8 @@
     "summary": "A CSDN article outlines five common man-in-the-middle attack types: Wi-Fi spoofing creates a rogue access point with the same SSID to hijack user traffic; HTTPS spoofing tricks the browser into visiting a fake trusted site; SSL hijacking intercepts the HTTP-to-HTTPS redirect to inject malicious links; DNS spoofing forces the browser to visit a forged address under attacker control; and email hijac",
     "references": [
       {
-        "title": "An Article to Understand Man-in-the-Middle (MITM) Attacks, Never Be a Network Puppet Again! - Tencent Cloud"
+        "title": "An Article to Understand Man-in-the-Middle (MITM) Attacks, Never Be a Network Puppet Again! - Tencent Cloud",
+        "link": "https://cloud.tencent.com/developer/article/2488645"
       }
     ]
   }

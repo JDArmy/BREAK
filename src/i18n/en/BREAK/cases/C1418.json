@@ -13,7 +13,8 @@
     "summary": "According to Chainalysis estimates, DeFi protocols lost $403.2 million across 41 separate oracle manipulation attacks in 2022. These attacks exploited manipulated external data feeds, causing smart contracts to reference incorrect prices, leading to significant losses for lending protocols and decentralized exchanges.",
     "references": [
       {
-        "title": "Oracle Manipulation Attacks Rising: A Unique Concern for DeFi"
+        "title": "Oracle Manipulation Attacks Rising: A Unique Concern for DeFi",
+        "link": "https://www.chainalysis.com/blog/oracle-manipulation-attacks-rising/"
       }
     ]
   }

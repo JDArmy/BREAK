@@ -4,13 +4,16 @@
     "description": "Hackers or groups that target smart contracts and DeFi protocols, usually with Solidity, EVM, on-chain transaction simulation, and fund-flow planning capabilities. Their goals include exploiting contract vulnerabilities to steal funds, manipulating oracle prices, launching flash-loan attack chains, frontrunning or sandwich trading, manipulating DAO governance, and attacking cross-chain bridges.",
     "references": [
       {
-        "title": "Chainalysis Crypto Crime Report"
+        "title": "Chainalysis Crypto Crime Report",
+        "link": "https://www.chainalysis.com/blog/2026-crypto-crime-report-introduction/"
       },
       {
-        "title": "CertiK Web3 Security Reports"
+        "title": "CertiK Web3 Security Reports",
+        "link": "https://www.certik.com/resources/blog"
       },
       {
-        "title": "Immunefi Crypto Losses Reports"
+        "title": "Immunefi Crypto Losses Reports",
+        "link": "https://immunefi.com/reports/"
       }
     ],
     "keywords": [

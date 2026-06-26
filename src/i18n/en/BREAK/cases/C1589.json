@@ -14,7 +14,8 @@
     "summary": "This study analyzes the security of consumer remote SIM provisioning protocols, revealing that attackers could exploit protocol vulnerabilities to install rogue profiles or hijack phone numbers. It highlights how the remote provisioning process may be abused for SIM swapping attacks, leading to identity theft.",
     "references": [
       {
-        "title": "Security analysis of the consumer remote sim provisioning protocol"
+        "title": "Security analysis of the consumer remote sim provisioning protocol",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3663761"
       }
     ]
   }

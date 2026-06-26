@@ -15,7 +15,8 @@
     "summary": "Blackpanda's incident response team handled an adversary-in-the-middle (AiTM) phishing attack targeting a Singapore-based IT services company. Attackers used a real-time phishing page to steal user credentials and one-time passwords (OTP), successfully bypassing multi-factor authentication. The stolen session tokens were then used to take over the compromised accounts.",
     "references": [
       {
-        "title": "MFA Bypass Attack at Singapore IT Services Firm — Blackpanda IR ..."
+        "title": "MFA Bypass Attack at Singapore IT Services Firm — Blackpanda IR ...",
+        "link": "https://www.blackpanda.com/case-studies/singapore-it-services-firm-bec-aitm-2025"
       }
     ]
   }

@@ -15,10 +15,12 @@
     "summary": "In September 2022, security reports highlighted the growing prevalence of MFA fatigue attacks among threat actors. Attackers run scripts using stolen credentials to repeatedly log in, sending an endless stream of MFA push requests to the target's phone. This creates a sense of \"fatigue,\" ultimately pressuring the victim into clicking \"approve\" or making a mistake, thereby bypassing multi-factor au",
     "references": [
       {
-        "title": "MFA Fatigue Attacks: A New Strategy Favored by Hackers"
+        "title": "MFA Fatigue Attacks: A New Strategy Favored by Hackers",
+        "link": "https://mp.weixin.qq.com/s?__biz=MzUzNDYxOTA1NA==&mid=2247531598&idx=2&sn=90528ddfe77497d33195162ef0d1c991&chksm=fa93ca8fcde44399087442a7d026985811995e0b9adffb1cd12c5d7371f5657e99024c85c21f&scene=27"
       },
       {
-        "title": "Cisco Talos shares insights related to recent cyber attack on Cisco"
+        "title": "Cisco Talos shares insights related to recent cyber attack on Cisco",
+        "link": "https://blog.talosintelligence.com/recent-cyber-attack/"
       }
     ]
   }

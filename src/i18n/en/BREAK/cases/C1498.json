@@ -14,7 +14,8 @@
     "summary": "A GitHub-hosted CTF challenge project built on a Proof-of-Stake blockchain susceptible to long-range attacks. It provides a vulnerable PoS blockchain environment where participants must exploit long-range attack flaws to complete the challenge, accompanied by a detailed solution guide.",
     "references": [
       {
-        "title": "Optimal Selfish Mining-Based Denial-of-Service Attack"
+        "title": "Optimal Selfish Mining-Based Denial-of-Service Attack",
+        "link": "https://github.com/goudanwang/miniblockchain2"
       }
     ]
   }

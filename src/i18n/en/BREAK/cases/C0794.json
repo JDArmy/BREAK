@@ -16,10 +16,12 @@
     "summary": "In August 2025, threat group UNC6395 breached Salesloft's GitHub account and stole OAuth tokens for customer integrations on the Drift platform, gaining access to Salesforce data of over 700 enterprises including Cloudflare and Palo Alto Networks. The attackers leveraged high-privilege OAuth tokens to bypass traditional security controls and systematically harvest high-value credentials such as AW",
     "references": [
       {
-        "title": "Most Severe SaaS Supply Chain Attack in History: In-Depth Analysis of Salesloft Drift Data Breach"
+        "title": "Most Severe SaaS Supply Chain Attack in History: In-Depth Analysis of Salesloft Drift Data Breach",
+        "link": "https://new.qq.com/rain/a/20250912A060OP00"
       },
       {
-        "title": "Cloudflare: Response to the Salesloft Drift Incident"
+        "title": "Cloudflare: Response to the Salesloft Drift Incident",
+        "link": "https://blog.cloudflare.com/response-to-salesloft-drift-incident/"
       }
     ]
   }

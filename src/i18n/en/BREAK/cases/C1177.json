@@ -14,7 +14,8 @@
     "summary": "Instagram experienced a data leak affecting 17 million user accounts, caused by data scraping and API abuse. Attackers exploited API endpoints to conduct large-scale scraping and harvest account information, highlighting gaps in API security protections.",
     "references": [
       {
-        "title": "Instagram 2026 - 17 Million Accounts Scraped in Data Leak"
+        "title": "Instagram 2026 - 17 Million Accounts Scraped in Data Leak",
+        "link": "https://aviatrix.ai/threat-research-center/instagram-2026-data-scraping-exposes-17-million-accounts/"
       }
     ]
   }

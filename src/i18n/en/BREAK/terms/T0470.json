@@ -17,13 +17,16 @@
     "usageExample": "A DNS hijacking attack compromised residential routers, redirecting banking domain queries to phishing sites that collected login credentials from thousands of users who believed they were accessing legitimate bank websites.",
     "references": [
       {
-        "title": "DNS hijacking encyclopedia entry"
+        "title": "DNS hijacking encyclopedia entry",
+        "link": "https://upimg.baike.so.com/doc/5394872-5632022.html"
       },
       {
-        "title": "What is DNS hijacking? A detailed beginner-friendly cybersecurity guide"
+        "title": "What is DNS hijacking? A detailed beginner-friendly cybersecurity guide",
+        "link": "https://blog.csdn.net/SpringJavaMyBatis/article/details/143905018"
       },
       {
-        "title": "Can HTTPS be affected by DNS hijacking and how can websites prevent it?"
+        "title": "Can HTTPS be affected by DNS hijacking and how can websites prevent it?",
+        "link": "https://www.zhihu.com/question/62287096/answer/3156001396"
       }
     ],
     "category": "Business Security"

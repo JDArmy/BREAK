@@ -14,7 +14,8 @@
     "summary": "Research presented at the USENIX Security conference introduces Rampart, a system designed to protect web applications from CPU-exhaustion DoS attacks. Attackers can drain CPU resources on web servers such as WordPress and Drupal by sending computationally intensive requests, leading to denial of service.",
     "references": [
       {
-        "title": "Rampart: Protecting Web Applications from CPU-Exhaustion ... - USENIX"
+        "title": "Rampart: Protecting Web Applications from CPU-Exhaustion ... - USENIX",
+        "link": "https://www.usenix.org/conference/usenixsecurity18/presentation/meng"
       }
     ]
   }

@@ -10,10 +10,12 @@
     "usageExample": "A bot detects a user's large buy order, frontruns it by purchasing the asset at a lower price, and then sells immediately after the user's transaction drives up the price, profiting from the price impact.",
     "references": [
       {
-        "title": "Maximal Extractable Value (MEV) - Ethereum"
+        "title": "Maximal Extractable Value (MEV) - Ethereum",
+        "link": "https://ethereum.org/en/developers/docs/mev/"
       },
       {
-        "title": "Ethereum is a Dark Forest - Paradigm"
+        "title": "Ethereum is a Dark Forest - Paradigm",
+        "link": "https://www.paradigm.xyz/2020/08/ethereum-is-a-dark-forest"
       }
     ],
     "title": "Maximal Extractable Value",

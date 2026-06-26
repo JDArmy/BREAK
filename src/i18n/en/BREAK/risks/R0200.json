@@ -11,10 +11,12 @@
     ],
     "references": [
       {
-        "title": "L2BEAT - Layer2 Bridge Risk Analysis"
+        "title": "L2BEAT - Layer2 Bridge Risk Analysis",
+        "link": "https://l2beat.com/scaling/risk"
       },
       {
-        "title": "Blockchain Cross-Chain Bridge Security: Challenges, Solutions, and ..."
+        "title": "Blockchain Cross-Chain Bridge Security: Challenges, Solutions, and ...",
+        "link": "https://dl.acm.org/doi/10.1145/3696429"
       }
     ],
     "description": "Layer 2 bridging risk sits in asset locking, message validation, exit proofs, and relayer workflows between the base chain and rollups, sidechains, or app chains. A validation flaw or privileged key abuse can lock funds or release assets incorrectly.\n\nBridges often hold large liquidity and depend on complex on-chain and off-chain coordination. Security review must cover contracts, proof systems, operational keys, delay windows, and emergency exits.",

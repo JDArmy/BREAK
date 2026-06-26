@@ -15,10 +15,12 @@
     "summary": "In March 2022, JFrog's security research team identified over 200 malicious npm packages designed to typosquat packages within the @azure scope. Attackers created packages with names resembling legitimate Azure packages but stripped of the scope, exploiting developer typos. The malicious code automatically exfiltrated personal information such as user directories, IP addresses, and DNS server deta",
     "references": [
       {
-        "title": "Over 200 npm Packages Attacked, Azure Developers Beware! - Tencent News"
+        "title": "Over 200 npm Packages Attacked, Azure Developers Beware! - Tencent News",
+        "link": "https://new.qq.com/rain/a/20220325A0A4PU00"
       },
       {
-        "title": "JFrog: Large-Scale npm Attack Targets Azure Developers with Malicious Packages"
+        "title": "JFrog: Large-Scale npm Attack Targets Azure Developers with Malicious Packages",
+        "link": "https://jfrog.com/blog/large-scale-npm-attack-targets-azure-developers-with-malicious-packages/"
       }
     ]
   }

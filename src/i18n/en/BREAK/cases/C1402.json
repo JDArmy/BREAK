@@ -14,7 +14,8 @@
     "summary": "The IEEE paper 'Understanding Security Issues in the DAO Governance Process' compiles 11 DAO governance attack cases, identifying vulnerabilities across three key components: governance contracts, documentation, and proposals. The analysis reveals that some DAOs permit external entities to control governance contracts or allow developers to arbitrarily alter contract logic, leading to manipulation",
     "references": [
       {
-        "title": "Understanding Security Issues in the DAO Governance Process"
+        "title": "Understanding Security Issues in the DAO Governance Process",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10891888/"
       }
     ]
   }

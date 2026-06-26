@@ -14,7 +14,8 @@
     "summary": "An academic study on multi-factor authentication reveals weaknesses in MFA systems and discusses common bypass vectors, such as brute-forcing tokens. Once an attacker obtains a username and password, they may attempt to brute-force time-based one-time codes to circumvent MFA protection.",
     "references": [
       {
-        "title": "On Data Protection Using Multi-Factor Authentication"
+        "title": "On Data Protection Using Multi-Factor Authentication",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3394788.3394789"
       }
     ]
   }

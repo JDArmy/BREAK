@@ -14,7 +14,8 @@
     "summary": "According to a Microsoft security report, 147,000 token replay attacks were detected in 2023, a 111% year-over-year increase. Attackers steal and replay user session tokens to bypass previously satisfied multi-factor authentication requirements and gain access to organizational resources. The frequency of such attacks is now on par with password-based attacks.",
     "references": [
       {
-        "title": "Session Hijacking 2.0 — The Latest Way That Attackers are Bypassing MFA"
+        "title": "Session Hijacking 2.0 — The Latest Way That Attackers are Bypassing MFA",
+        "link": "https://thehackernews.com/2024/09/session-hijacking-20-latest-way-that.html"
       }
     ]
   }

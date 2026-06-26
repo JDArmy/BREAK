@@ -15,7 +15,8 @@
     "summary": "The open-source MEV Detection Tool scans the Ethereum mempool in real time to detect MEV bots that exploit high gas fees for front-running and sandwich attacks. Built with Ethers.js, WebSockets, and Alchemy, it helps identify attackers who manipulate transaction ordering by setting extremely high gas fees to extract value from ordinary user transactions.",
     "references": [
       {
-        "title": "weezyjs/MEV--Detection-Tool - GitHub"
+        "title": "weezyjs/MEV--Detection-Tool - GitHub",
+        "link": "https://github.com/weezyjs/MEV--Detection-Tool"
       }
     ]
   }

@@ -14,7 +14,8 @@
     "summary": "This research reveals data exfiltration and remote exploitation attacks targeting consumer-grade 3D printers. The study found that the printers store data of printed and in-progress objects on an unauthenticated web server, and flaws in the transport layer security implementation allow sensitive intellectual property data to be remotely stolen and manipulated.",
     "references": [
       {
-        "title": "A Data Exfiltration and Remote Exploitation Attack on Consumer 3D Printers"
+        "title": "A Data Exfiltration and Remote Exploitation Attack on Consumer 3D Printers",
+        "link": "https://ieeexplore.ieee.org/abstract/document/7487008/"
       }
     ]
   }

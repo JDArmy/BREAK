@@ -4,7 +4,8 @@
     "description": "Risk IP addresses are IP addresses considered unsafe in the network security domain. They may be malicious IPs, IPs being maliciously exploited, or IPs that have been misjudged. Risk IP addresses are classified into three risk levels: high, medium, and low. High-risk IPs are considered malicious, medium-risk IPs are being maliciously exploited, and low-risk IPs are misjudged.",
     "references": [
       {
-        "title": "Microsoft Defender TI Reputation Scoring"
+        "title": "Microsoft Defender TI Reputation Scoring",
+        "link": "https://learn.microsoft.com/en-us/defender/threat-intelligence/reputation-scoring"
       }
     ],
     "keywords": [
@@ -21,7 +22,8 @@
     "description": "A proxy IP is a network proxy technique used to conceal a device's real IP address. The client first connects to the proxy IP, which then forwards the request to the target website, leaving only the proxy IP in the site's access logs. Common proxy IP types include HTTP proxies, HTTPS proxies, and SOCKS proxies.",
     "references": [
       {
-        "title": "What Is a Proxy IP?"
+        "title": "What Is a Proxy IP?",
+        "link": "https://web-auto.91ajs.com/information/type-of-proxy-ip.html"
       }
     ],
     "keywords": [
@@ -39,7 +41,8 @@
     "description": "A 'second-dial IP' exploits the fact that home broadband connections obtain a new IP address each time they reconnect. Criminals rent large numbers of home broadband lines and rapidly generate millions of IP addresses to form an 'IP pool', which is then provided to cybercrime groups. The resulting massive volume of IP addresses circumvents normal IP-based restrictions, making it extremely difficult for law enforcement to trace criminal activity.",
     "references": [
       {
-        "title": "What Is a Residential Proxy? Definition, Risks & Detection"
+        "title": "What Is a Residential Proxy? Definition, Risks & Detection",
+        "link": "https://spur.us/blog/what-is-a-residential-proxy"
       }
     ],
     "keywords": [

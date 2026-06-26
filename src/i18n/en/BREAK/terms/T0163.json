@@ -18,10 +18,12 @@
     "description": "By embedding scripts into target applications or websites, or by tampering with app packages, sensitive data such as passwords, verification codes, and bank card numbers is simultaneously transmitted to black-market servers as the user types. This technique is commonly used on phishing sites and in cracked apps, serving as a primary channel for harvesting first-hand, high-precision data.",
     "references": [
       {
-        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
       },
       {
-        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
       }
     ]
   }

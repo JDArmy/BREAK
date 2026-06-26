@@ -14,7 +14,8 @@
     "summary": "Using a foot bath shop membership scenario, a customer states their card number to request service. The conversation is overheard, and a bystander repeats the same request with the card number and signature to receive service. This illustrates the essence of a replay attack: an attacker does not need to understand or modify the message content, but simply retransmits intercepted valid data as-is t",
     "references": [
       {
-        "title": "Interviewer: What Is Request Replay? - why technology - Blog Park"
+        "title": "Interviewer: What Is Request Replay? - why technology - Blog Park",
+        "link": "https://www.cnblogs.com/thisiswhy/p/14780445.html"
       }
     ]
   }

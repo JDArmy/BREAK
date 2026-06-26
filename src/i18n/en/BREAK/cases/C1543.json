@@ -12,10 +12,12 @@
     "summary": "The Balancer protocol mishandled deflationary tokens, allowing an attacker to exploit the vulnerability and resulting in a loss of approximately $520,000. Since its launch in 2020, Balancer has encountered multiple similar security incidents, with the earliest dating back to early deflationary token exploits.",
     "references": [
       {
-        "title": "Five Accidents in Six Years with Losses Exceeding 100 Million: A Look Back at the Hacking History of the Veteran DeFi Protocol Balancer - Tencent..."
+        "title": "Five Accidents in Six Years with Losses Exceeding 100 Million: A Look Back at the Hacking History of the Veteran DeFi Protocol Balancer - Tencent...",
+        "link": "https://view.inews.qq.com/a/20251104A02PWU00"
       },
       {
-        "title": "Incident with Non-standard ERC20 Deflationary Tokens"
+        "title": "Incident with Non-standard ERC20 Deflationary Tokens",
+        "link": "https://medium.com/balancer-protocol/incident-with-non-standard-erc20-deflationary-tokens-95a0f6d46dea"
       }
     ]
   }

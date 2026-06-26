@@ -14,10 +14,12 @@
     "summary": "SoundCloud disclosed that in December 2025 an ancillary service dashboard was accessed without authorization, exposing some users' email addresses and public profile information. SoundCloud said passwords and financial information were not involved, and estimated that roughly 20% of monthly active users were affected. Have I Been Pwned later listed the incident as a breach affecting about 29.8 million accounts.",
     "references": [
       {
-        "title": "Protecting our users and our service"
+        "title": "Protecting our users and our service",
+        "link": "https://soundcloud.com/playbook-articles/protecting-our-users-and-our-service"
       },
       {
-        "title": "SoundCloud data breach"
+        "title": "SoundCloud data breach",
+        "link": "https://haveibeenpwned.com/Breach/SoundCloud"
       }
     ]
   }

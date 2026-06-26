@@ -15,7 +15,8 @@
     "summary": "This study introduces the SUUM (Staircase-Unrestricted Uncle Maker) attack, the first block-withholding attack targeting timestamp-based Nakamoto-style blockchains. By combining block withholding, timestamp manipulation, and difficulty risk control, an attacker can sustain the assault at zero cost with minimal difficulty risk, indefinitely extracting rewards from honest participants and threatenin",
     "references": [
       {
-        "title": "Timestamp Manipulation: Timestamp-based Nakamoto-style Blockchains are Vulnerable"
+        "title": "Timestamp Manipulation: Timestamp-based Nakamoto-style Blockchains are Vulnerable",
+        "link": "https://arxiv.org/abs/2505.05328"
       }
     ]
   }

@@ -13,7 +13,8 @@
     "summary": "In mid-2025, North Korean attackers used fake job interviews to trick developers into downloading 67 malicious NPM packages, which were downloaded over 17,000 times. The packages implanted malware such as BeaverTail, compromising developer environments and stealing credentials.",
     "references": [
       {
-        "title": "Supply Chain Attacks in Cloud Native Web Applications"
+        "title": "Supply Chain Attacks in Cloud Native Web Applications",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11473029/"
       }
     ]
   }

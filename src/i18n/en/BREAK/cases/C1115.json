@@ -15,7 +15,8 @@
     "summary": "A Stanford University student bypassed Microsoft Bing Chat's (now Microsoft Copilot) security mechanisms by using the instruction 'ignore previous instructions'. This direct prompt injection attack caused the AI to reveal its internal codename 'Sydney' and related internal operating guidelines, exposing the serious risk that system preset instructions can be maliciously overwritten by user input w",
     "references": [
       {
-        "title": "Prompt Injection - OWASP Foundation"
+        "title": "Prompt Injection - OWASP Foundation",
+        "link": "https://owasp.org/www-community/attacks/PromptInjection"
       }
     ]
   }

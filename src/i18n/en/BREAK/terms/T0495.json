@@ -8,10 +8,12 @@
     "usageExample": "An attacker utilized a flash loan to borrow $10 million, manipulated a DEX price, exploited the price discrepancy for arbitrage, and repaid the loan, all within a single transaction.",
     "references": [
       {
-        "title": "GitHub - aave/flashloan-box: A box containing all you need to get ..."
+        "title": "GitHub - aave/flashloan-box: A box containing all you need to get ...",
+        "link": "https://github.com/aave/flashloan-box"
       },
       {
-        "title": "XRP Ledger's design blocks the flash loan attacks costing DeFi ..."
+        "title": "XRP Ledger's design blocks the flash loan attacks costing DeFi ...",
+        "link": "https://www.coindesk.com/tech/2026/05/29/xrp-ledger-s-new-proposal-blocks-the-flash-loan-attacks-costing-defi-hundreds-of-millions"
       }
     ],
     "title": "Flash Loan",

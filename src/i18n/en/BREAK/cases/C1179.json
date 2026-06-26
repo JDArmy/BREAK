@@ -13,7 +13,8 @@
     "summary": "Google Cloud has introduced an API abuse detection feature powered by machine learning to address the growing number of API abuse incidents. A report indicates that 50% of enterprises experienced an API security incident in the past 12 months, with 77% of those delaying the rollout of new services or applications as a result. API abuse leads to business logic attacks, data scraping, and anomalous ",
     "references": [
       {
-        "title": "Announcing API Abuse Detection Powered by Machine Learning"
+        "title": "Announcing API Abuse Detection Powered by Machine Learning",
+        "link": "https://cloud.google.com/blog/products/identity-security/rsa-announcing-api-abuse-detection-machine-learning"
       }
     ]
   }

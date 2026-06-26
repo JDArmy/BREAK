@@ -12,7 +12,8 @@
     "summary": "In 2024, a security flaw was discovered in the open-source identity management software Keycloak, where an attacker who obtained a user's password could brute-force the OTP verification code, bypassing two-factor authentication. To address this, Keycloak proposed an enhancement in issue #46164 to separate password and OTP brute-force protection policies, preventing OTP brute-force attacks that cou",
     "references": [
       {
-        "title": "Separate password and OTP brute force protection to prevent OTP"
+        "title": "Separate password and OTP brute force protection to prevent OTP",
+        "link": "https://github.com/keycloak/keycloak/issues/46164"
       }
     ]
   }

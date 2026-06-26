@@ -13,10 +13,12 @@
     ],
     "references": [
       {
-        "title": "H1 2025 Blockchain Security and Anti-Money Laundering Report - SlowMist"
+        "title": "H1 2025 Blockchain Security and Anti-Money Laundering Report - SlowMist",
+        "link": "https://m.sohu.com/a/911507899_122029326/"
       },
       {
-        "title": "Ethereum Improvement Proposals"
+        "title": "Ethereum Improvement Proposals",
+        "link": "https://eips.ethereum.org/"
       }
     ],
     "description": "EIP and protocol phishing abuses user confusion around new protocol features, signature formats, or wallet prompts. Attackers craft apparently legitimate approvals, permits, delegations, or contract interactions that grant token transfer or execution rights after the user signs.\n\nThe core risk is semantic opacity: structured signing data can hide real consequences from ordinary users. Wallets, DApps, and risk engines need to translate protocol actions into understandable warnings.",

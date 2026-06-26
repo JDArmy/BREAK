@@ -14,10 +14,12 @@
     "summary": "In April 2022, General Motors detected malicious login activity and found that attackers had used credentials leaked from other non-GM sites to launch a credential stuffing attack against its online platform. After successfully accessing customer accounts, the attackers stole personal information and redeemed reward points for gift cards. GM subsequently required affected users to reset their pass",
     "references": [
       {
-        "title": "GM hit by credential stuffing attack, owner personal info exposed"
+        "title": "GM hit by credential stuffing attack, owner personal info exposed",
+        "link": "https://m.freebuf.com/news/334080.html"
       },
       {
-        "title": "California DOJ: General Motors Data Breach Notification Sample"
+        "title": "California DOJ: General Motors Data Breach Notification Sample",
+        "link": "https://oag.ca.gov/ecrime/databreach/reports/sb24-553442"
       }
     ]
   }

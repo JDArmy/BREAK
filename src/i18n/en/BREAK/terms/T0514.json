@@ -8,10 +8,12 @@
     "usageExample": "An APT group exploited a Windows zero-day vulnerability to infiltrate a government network, remaining undetected until Microsoft released a patch.",
     "references": [
       {
-        "title": "Known Exploited Vulnerabilities Catalog - CISA"
+        "title": "Known Exploited Vulnerabilities Catalog - CISA",
+        "link": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
       },
       {
-        "title": "Microsoft Security Response Center Blog"
+        "title": "Microsoft Security Response Center Blog",
+        "link": "https://www.microsoft.com/en-us/msrc/blog"
       }
     ],
     "title": "Zero-day Vulnerability",

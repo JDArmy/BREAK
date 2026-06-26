@@ -15,7 +15,8 @@
     "summary": "An IEEE paper published in 2025 examines advanced persistent threat (APT) cases that leverage supply chain vulnerabilities, with a focus on hardware-oriented exploitation. It details how attackers compromise hardware supply chains to implant hidden backdoors, enabling long-term persistence and remote control over target systems, representing a typical study of IoT hardware supply chain attacks.",
     "references": [
       {
-        "title": "Advanced Persistent Threats Based on Supply Chain Vulnerabilities: Challenges, Solutions, and Future Directions"
+        "title": "Advanced Persistent Threats Based on Supply Chain Vulnerabilities: Challenges, Solutions, and Future Directions",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10838587/"
       }
     ]
   }

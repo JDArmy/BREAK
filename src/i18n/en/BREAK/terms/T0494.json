@@ -8,10 +8,12 @@
     "usageExample": "A user transfers USDC from Ethereum to the Polygon network via the Polygon Bridge to benefit from lower transaction fees.",
     "references": [
       {
-        "title": "Introduction to Bridges - Ethereum"
+        "title": "Introduction to Bridges - Ethereum",
+        "link": "https://ethereum.org/en/bridges/"
       },
       {
-        "title": "Crypto Bridge Protocols - TVL, Volume, & Fees - DefiLlama"
+        "title": "Crypto Bridge Protocols - TVL, Volume, & Fees - DefiLlama",
+        "link": "https://defillama.com/protocols/bridge"
       }
     ],
     "title": "Cross-Chain Bridge",

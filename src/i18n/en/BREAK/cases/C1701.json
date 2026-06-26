@@ -15,7 +15,8 @@
     "summary": "This CTF challenge simulates a low-privileged IAM user exploiting misconfigured EC2 role permissions to escalate privileges and retrieve a flag from a restricted S3 bucket, demonstrating an attack path caused by improper IAM permission configuration.",
     "references": [
       {
-        "title": "cloud-security-ctf/challenges/02-overprivileged-iam/writeup at Backup ..."
+        "title": "cloud-security-ctf/challenges/02-overprivileged-iam/writeup at Backup ...",
+        "link": "https://github.com/master-coder1998/cloud-security-ctf/tree/main/challenges/02-overprivileged-iam/writeup"
       }
     ]
   }

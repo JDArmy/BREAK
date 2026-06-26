@@ -13,7 +13,8 @@
     "summary": "Cloudflare announced the launch of an Account Abuse Protection suite designed to prevent fake account creation and promotion abuse. New features include disposable email detection and email risk assessment to identify fraudulent sign-ups using temporary email addresses, along with hashed user IDs to gain visibility into suspicious account activity and block bulk fake account attacks.",
     "references": [
       {
-        "title": "Announcing Cloudflare Account Abuse Protection: prevent ..."
+        "title": "Announcing Cloudflare Account Abuse Protection: prevent ...",
+        "link": "https://blog.cloudflare.com/account-abuse-protection/"
       }
     ]
   }

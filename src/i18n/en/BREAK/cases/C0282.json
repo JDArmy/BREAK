@@ -14,7 +14,8 @@
     "summary": "This research presents a method that leverages the MQTT protocol to establish tunneling attacks for data exfiltration. Since MQTT is widely used in IoT environments and commonly permitted through firewalls, attackers can encapsulate and exfiltrate sensitive information. The study validates the attack's effectiveness and proposes a machine learning-based detection approach achieving over 95% accura",
     "references": [
       {
-        "title": "Exploiting Internet of Things Protocols for Malicious Data Exfiltration Activities"
+        "title": "Exploiting Internet of Things Protocols for Malicious Data Exfiltration Activities",
+        "link": "https://ieeexplore.ieee.org/abstract/document/9493887/"
       }
     ]
   }

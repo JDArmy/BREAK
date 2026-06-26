@@ -15,10 +15,12 @@
     "summary": "Researchers uncovered a malware campaign dubbed PhantomRaven that distributes 126 malicious npm packages designed to steal GitHub tokens through remote dependencies, posing a serious threat to developers and projects relying on these open-source packages.",
     "references": [
       {
-        "title": "PhantomRaven Malware Found in 126 npm Packages Stealing GitHub Tokens ..."
+        "title": "PhantomRaven Malware Found in 126 npm Packages Stealing GitHub Tokens ...",
+        "link": "https://thehackernews.com/2025/10/phantomraven-malware-found-in-126-npm.html"
       },
       {
-        "title": "Koi Security: PhantomRaven NPM Malware Hidden in Invisible Dependencies"
+        "title": "Koi Security: PhantomRaven NPM Malware Hidden in Invisible Dependencies",
+        "link": "https://www.koi.ai/blog/phantomraven-npm-malware-hidden-in-invisible-dependencies"
       }
     ]
   }

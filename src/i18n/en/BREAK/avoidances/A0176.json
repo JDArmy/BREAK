@@ -7,7 +7,8 @@
     ],
     "references": [
       {
-        "title": "MDN Subresource Integrity"
+        "title": "MDN Subresource Integrity",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity"
       }
     ],
     "definition": "Ensure frontend is not tampered through Subresource Integrity (SRI), IPFS hash verification, etc."

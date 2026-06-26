@@ -6,7 +6,8 @@
     "influence": "User assets are repeatedly transferred on multiple chains, causing additional losses.",
     "references": [
       {
-        "title": "Replay Attack Protection"
+        "title": "Replay Attack Protection",
+        "link": "https://eips.ethereum.org/EIPS/eip-155"
       }
     ],
     "keywords": [

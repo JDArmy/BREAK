@@ -16,10 +16,12 @@
     "summary": "The LAPSUS$ hacking group breached Microsoft in March 2022 by leveraging compromised session tokens obtained from a public code repository, combining them with session token replay techniques to bypass multi-factor authentication (MFA) and exfiltrate 37GB of data from Azure DevOps servers. The group also purchased passwords and session tokens on the dark web to target over a dozen enterprises incl",
     "references": [
       {
-        "title": "16-Year-Old 'Genius Hacker' Repeatedly Breaches Samsung, Microsoft, Nvidia, and Other Giants - Tencent News"
+        "title": "16-Year-Old 'Genius Hacker' Repeatedly Breaches Samsung, Microsoft, Nvidia, and Other Giants - Tencent News",
+        "link": "https://new.qq.com/omn/20221109/20221109A04MSW00.html"
       },
       {
-        "title": "DEV-0537 criminal actor targeting organizations for data exfiltration and destruction"
+        "title": "DEV-0537 criminal actor targeting organizations for data exfiltration and destruction",
+        "link": "https://www.microsoft.com/en-us/security/blog/2022/03/22/dev-0537-criminal-actor-targeting-organizations-for-data-exfiltration-and-destruction/"
       }
     ]
   }

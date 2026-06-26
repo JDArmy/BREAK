@@ -9,10 +9,12 @@
     "usageExample": "An APT group infiltrated a defense contractor's network via a spear-phishing campaign, maintaining persistence for 18 months to exfiltrate weapon system design blueprints.",
     "references": [
       {
-        "title": "Nation-State Threats | Cybersecurity and Infrastructure ... - CISA"
+        "title": "Nation-State Threats | Cybersecurity and Infrastructure ... - CISA",
+        "link": "https://www.cisa.gov/topics/cyber-threats-and-advisories/nation-state-cyber-actors"
       },
       {
-        "title": "Groups - MITRE ATT&CK"
+        "title": "Groups - MITRE ATT&CK",
+        "link": "https://attack.mitre.org/groups/"
       }
     ],
     "title": "Advanced Persistent Threat",

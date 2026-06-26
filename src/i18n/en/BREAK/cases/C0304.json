@@ -15,7 +15,8 @@
     "summary": "Researchers demonstrate how attackers can launch anonymous DDoS attacks against 911 emergency services using a mobile phone botnet. By leveraging a rootkit embedded in baseband firmware, attackers can randomize phone identifiers and repeatedly place emergency calls, overwhelming public safety answering points and preventing legitimate calls from being processed. Simulations show that fewer than 6,",
     "references": [
       {
-        "title": "9-1-1 DDoS: attacks, analysis and mitigation"
+        "title": "9-1-1 DDoS: attacks, analysis and mitigation",
+        "link": "https://ieeexplore.ieee.org/abstract/document/7961982/"
       }
     ]
   }

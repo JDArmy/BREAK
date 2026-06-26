@@ -14,7 +14,8 @@
     "summary": "In 2019, a cloud infrastructure misconfiguration at Capital One, including improperly set storage bucket permissions, exposed the personal data of over 100 million customers. The incident became a landmark case of how cloud configuration flaws can lead to severe consequences, highlighting the critical importance of IAM permission management and storage security.",
     "references": [
       {
-        "title": "Survey on Kubernetes Misconfiguration Vulnerabilities and Best Practices"
+        "title": "Survey on Kubernetes Misconfiguration Vulnerabilities and Best Practices",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11344470/"
       }
     ]
   }

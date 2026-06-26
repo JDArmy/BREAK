@@ -15,7 +15,8 @@
     "summary": "This study explores a concept lattice-based method for de-anonymizing Bitcoin addresses, using formal concept analysis to trace user identities and demonstrating that Bitcoin transactions can be clustered and linked to real-world identities.",
     "references": [
       {
-        "title": "De anonymization of Bitcoin addresses based on concept lattice"
+        "title": "De anonymization of Bitcoin addresses based on concept lattice",
+        "link": "https://dl.acm.org/doi/full/10.1145/3708635.3708643"
       }
     ]
   }

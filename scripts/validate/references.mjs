@@ -21,7 +21,6 @@ const lowQualityDomains = [
   'zhuanlan.zhihu.com',
 ];
 const includeI18nLinkIssues = process.argv.includes('--include-i18n-link-issues');
-const compareI18nLinks = process.argv.includes('--compare-i18n-links');
 
 function containsCjk(text) {
   return /[\u3400-\u9fff\uf900-\ufaff]/u.test(String(text || ''));
@@ -183,9 +182,10 @@ function checkI18nSync(entityType, zhRecords, issues, i18nStats) {
         }
       }
 
-      if (compareI18nLinks) {
+      // 英文翻译现在也维护 references[].link，默认比较中英文 link 一致性
+      if (enRefs[index] && Object.prototype.hasOwnProperty.call(enRefs[index], 'link')) {
         const zhLink = normalizeLink(zhRef.link);
-        const enLink = normalizeLink(enRefs[index]?.link);
+        const enLink = normalizeLink(enRefs[index].link);
         if (zhLink !== enLink) {
           stats.referenceLinkMismatches++;
           if (includeI18nLinkIssues) {
@@ -199,18 +199,6 @@ function checkI18nSync(entityType, zhRecords, issues, i18nStats) {
               enLink,
             });
           }
-        }
-      } else if (enRefs[index] && Object.prototype.hasOwnProperty.call(enRefs[index], 'link')) {
-        stats.referenceLinkMismatches++;
-        if (includeI18nLinkIssues) {
-          addIssue(issues, {
-            type: 'i18n_reference_link_in_translation',
-            entityType,
-            entityKey: key,
-            entityTitle: zhEntity.title || '',
-            refIndex: index,
-            link: enRefs[index].link,
-          });
         }
       }
     });
@@ -258,8 +246,8 @@ function renderMarkdown(stats, issues, i18nStats) {
   }
 
   lines.push('', '## i18n 参考资料同步概览', '');
-  lines.push('英文 i18n 文件只维护引用标题，不维护 `references[].link`。默认检查引用数量、英文标题是否缺失或未翻译，以及英文文件是否误写 link；如需兼容旧口径比较中英文 link，运行 `npm run audit:references -- --compare-i18n-links`。');
-  lines.push('', '| 类别 | 检查实体数 | 引用数量不一致实体 | 英文标题缺失/未翻译条目 | 英文误写 link 条目 |');
+  lines.push('英文 i18n 文件同时维护 `references[].title` 和 `references[].link`。默认检查引用数量、英文标题是否缺失或未翻译，以及中英文 link 是否一致。');
+  lines.push('', '| 类别 | 检查实体数 | 引用数量不一致实体 | 英文标题缺失/未翻译条目 | link 不一致条目 |');
   lines.push('| --- | ---: | ---: | ---: | ---: |');
   for (const item of i18nStats) {
     lines.push(

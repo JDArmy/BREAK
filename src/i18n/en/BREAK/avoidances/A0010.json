@@ -6,7 +6,8 @@
     "limitation": "Because abnormal environment detection is carried out on a user-controlled terminal, the ultimate effectiveness depends on the adversarial contest. In theory, since the terminal is controllable, it is always possible to bypass various abnormal environment detection strategies — it is ultimately a matter of time cost and capability.",
     "references": [
       {
-        "title": "Device Fingerprint - Wikipedia"
+        "title": "Device Fingerprint - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Device_fingerprint"
       }
     ],
     "keywords": [
@@ -25,7 +26,8 @@
     "limitation": "There are two countermeasure points for mobile emulator detection: one is to pre-forge the information collected by the APP; the other is to forge the information after the APP has collected and uploaded it.",
     "references": [
       {
-        "title": "MASTG-KNOW-0031: Emulator Detection - OWASP"
+        "title": "MASTG-KNOW-0031: Emulator Detection - OWASP",
+        "link": "https://mas.owasp.org/MASTG-KNOW-0031/"
       }
     ],
     "keywords": [
@@ -44,7 +46,8 @@
     "limitation": "As cloud phones and cloud gaming continue to develop and become more widespread, APP vendors will not be able to adopt a blanket 'cloud equals blacklisted' policy, otherwise they will face a large number of user complaints. This leaves room for the black-gray industry to exploit cloud phones in the future.",
     "references": [
       {
-        "title": "NIST Guidelines for Managing the Security of Mobile Devices"
+        "title": "NIST Guidelines for Managing the Security of Mobile Devices",
+        "link": "https://csrc.nist.gov/pubs/sp/800/124/r2/final"
       }
     ],
     "keywords": [
@@ -62,7 +65,8 @@
     "limitation": "There are two strategies for anti-detection on rooted devices: one is to target the app and interfere with its root detection behavior; the other is to target the system and hide the system's own root-related characteristics. By reversing every root detection policy and rule in the app, anti-detection strategies can be pre-built. For example, the open-source RootCloak can hook API calls to counter root detection.",
     "references": [
       {
-        "title": "Summary of Android Root Detection Methods"
+        "title": "Summary of Android Root Detection Methods",
+        "link": "https://www.lmlphp.com/user/58076/article/item/637693/"
       }
     ],
     "keywords": [
@@ -81,7 +85,8 @@
     "limitation": "Similar to the limitations of mobile ROOT/jailbreak detection (A010-003), by analyzing and reversing the detection process, blocking or providing hooked false values can bypass cheat detection. However, since cheats are typically used in games, and game data packets are much less readable than HTTP-based APP traffic, hiding cheat detection logic and data reporting within normal game operation and communication will increase the difficulty of anti-cheat countermeasures.",
     "references": [
       {
-        "title": "In-Depth Analysis of DMA Hardware Cheat Principles and Detection Techniques"
+        "title": "In-Depth Analysis of DMA Hardware Cheat Principles and Detection Techniques",
+        "link": "https://www.163.com/dy/article/KOVL1LB80556IVC7.html"
       }
     ],
     "keywords": [
@@ -101,7 +106,8 @@
     "limitation": "By analyzing and reversing the detection process, blocking or providing hooked false values can bypass multi-instance detection.",
     "references": [
       {
-        "title": "MASTG-KNOW-0031: Emulator Detection - OWASP"
+        "title": "MASTG-KNOW-0031: Emulator Detection - OWASP",
+        "link": "https://mas.owasp.org/MASTG-KNOW-0031/"
       }
     ],
     "keywords": [
@@ -120,7 +126,8 @@
     "limitation": "By analyzing and reversing the detection process, blocking or providing hooked false values can bypass debugger detection.",
     "references": [
       {
-        "title": "MASTG-KNOW-0085: Anti-Debugging Detection - OWASP"
+        "title": "MASTG-KNOW-0085: Anti-Debugging Detection - OWASP",
+        "link": "https://mas.owasp.org/MASTG-KNOW-0085/"
       }
     ],
     "keywords": [
@@ -139,7 +146,8 @@
     "limitation": "Virtual machine detection methods mainly work by checking certain environment properties and files, but these methods are not absolutely reliable because black-gray industry actors can modify the virtual machine's environment properties and files to evade detection.",
     "references": [
       {
-        "title": "Virtual Machine Runtime Environment Detection"
+        "title": "Virtual Machine Runtime Environment Detection",
+        "link": "https://www.cnblogs.com/cherishui/p/14366072.html"
       }
     ],
     "keywords": [
@@ -158,7 +166,8 @@
     "limitation": "Headless browser detection methods mainly work by checking certain environment properties and files, but these methods are not absolutely reliable because black-gray industry actors can modify the headless browser's environment properties and files to evade detection.",
     "references": [
       {
-        "title": "National Cybersecurity Awareness Week: Domain Name Theft Should Not Be Underestimated"
+        "title": "National Cybersecurity Awareness Week: Domain Name Theft Should Not Be Underestimated",
+        "link": "https://mp.weixin.qq.com/s?__biz=MzIwOTIxNTY0MQ==&mid=2650363457&idx=1&sn=5da31d6062602002a9efe40b898df485&chksm=8f7abfb7b80d36a12c2a7de21d4b404bf60087dcff9b5641499a19ae74acc33ec769952b1443&scene=27"
       }
     ],
     "keywords": [
@@ -177,7 +186,8 @@
     "limitation": "HOOK detection methods mainly work by checking certain environment properties and files, but these methods are not absolutely reliable because black-gray industry actors can modify the HOOKed environment's properties and files to evade detection.",
     "references": [
       {
-        "title": "Android Hook, Detection, and Countermeasures"
+        "title": "Android Hook, Detection, and Countermeasures",
+        "link": "https://tech.meituan.com/2018/02/02/android-anti-hooking.html"
       }
     ],
     "keywords": [

@@ -13,7 +13,8 @@
     "summary": "Demonstrates generating an APK backdoor on Kali using msfvenom to create a reverse TCP connection trojan. After installation on an Android device, a C2 channel is established via the Metasploit console to obtain a shell, enabling remote control including camera access, audio recording, and file browsing.",
     "references": [
       {
-        "title": "How to Use Mobile Trojans for Remote Control"
+        "title": "How to Use Mobile Trojans for Remote Control",
+        "link": "https://cloud.tencent.com/developer/inventory/32351/article/1808937"
       }
     ]
   }

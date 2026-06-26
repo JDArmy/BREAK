@@ -8,10 +8,12 @@
     "usageExample": "A user receives an email disguised as a communication from their bank, claiming that their account requires verification due to an anomaly. Upon clicking the link, the user is directed to a spoofed website and enters their banking card details.",
     "references": [
       {
-        "title": "What is Phishing? - Anti-Phishing Working Group"
+        "title": "What is Phishing? - Anti-Phishing Working Group",
+        "link": "https://www.phishing.org/what-is-phishing"
       },
       {
-        "title": "Recognize and Report Phishing - CISA"
+        "title": "Recognize and Report Phishing - CISA",
+        "link": "https://www.cisa.gov/secure-our-world/recognize-and-report-phishing"
       }
     ],
     "title": "Phishing",

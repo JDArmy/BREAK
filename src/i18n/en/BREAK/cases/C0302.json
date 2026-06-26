@@ -14,7 +14,8 @@
     "summary": "This algorithm applies information entropy theory to detect Challenge Collapsar (CC) attacks in real time, identify attack sources, and block malicious connections. It addresses application-layer DDoS attacks that flood servers with forged HTTP requests by providing an online protection mechanism.",
     "references": [
       {
-        "title": "An Algorithm of Detecting and Defending CC Attack in Real Time"
+        "title": "An Algorithm of Detecting and Defending CC Attack in Real Time",
+        "link": "https://ieeexplore.ieee.org/document/6322767/"
       }
     ]
   }

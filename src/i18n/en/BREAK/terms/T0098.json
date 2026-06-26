@@ -17,10 +17,12 @@
     "description": "Attackers exploit vulnerabilities or use credential-stuffing techniques to breach platform defenses and forcibly access user account backends, stealing order details, addresses, and other private data. This high-value information is then packaged and sold to downstream fraud or marketing groups. In data-trading advertisements, the term “forced login” is often used to indicate the data’s source and freshness.",
     "references": [
       {
-        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
       },
       {
-        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
       }
     ]
   }

@@ -14,10 +14,12 @@
     "summary": "In March 2024, attackers compromised the GitHub account of Discord Top.gg and tampered with its Python SDK repository by adding a malicious dependency on a package named 'colorama' in requirements.txt. The malicious package, hosted on a fake PyPI mirror, was designed to steal browser data, Discord tokens, and cryptocurrency wallet information. The attackers hijacked the account and injected malici",
     "references": [
       {
-        "title": "GitHub Hit by Severe Supply Chain Poisoning Attack"
+        "title": "GitHub Hit by Severe Supply Chain Poisoning Attack",
+        "link": "https://new.qq.com/rain/a/20240326A08OFX00"
       },
       {
-        "title": "Attack on Software Supply Chains Using Fake Python Infrastructure"
+        "title": "Attack on Software Supply Chains Using Fake Python Infrastructure",
+        "link": "https://checkmarx.com/blog/over-170k-users-affected-by-attack-using-fake-python-infrastructure/"
       }
     ]
   }

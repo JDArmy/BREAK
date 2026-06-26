@@ -8,10 +8,12 @@
     "usageExample": "A security researcher discovered an SQL injection vulnerability in a web framework that could lead to complete compromise of the database.",
     "references": [
       {
-        "title": "Common Vulnerabilities and Exposures (CVE)"
+        "title": "Common Vulnerabilities and Exposures (CVE)",
+        "link": "https://www.cve.org/"
       },
       {
-        "title": "Known Exploited Vulnerabilities Catalog - CISA"
+        "title": "Known Exploited Vulnerabilities Catalog - CISA",
+        "link": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
       }
     ],
     "title": "Vulnerability",

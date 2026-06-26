@@ -16,7 +16,8 @@
     "summary": "Microsoft's security team released a case study detailing a stealthy intrusion that exploited third-party vendor management relationships, identity infrastructure, and operational tools. Attackers moved laterally through trusted third-party systems and maintained long-term access to the enterprise environment, evading conventional detection methods.",
     "references": [
       {
-        "title": "Undermining the trust boundary: Investigating a stealthy intrusion ..."
+        "title": "Undermining the trust boundary: Investigating a stealthy intrusion ...",
+        "link": "https://www.microsoft.com/en-us/security/blog/2026/05/12/undermining-the-trust-boundary-investigating-a-stealthy-intrusion-through-third-party-compromise/"
       }
     ]
   }

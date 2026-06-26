@@ -16,7 +16,8 @@
     "summary": "This paper demonstrates that time constitutes an independent attack surface even when consensus, immutability, and auditability are guaranteed. Attackers exploit delays and timestamp manipulation to systematically undermine fairness and efficiency in periodic sealed-bid markets such as McAfee double auctions and continuous double auctions, because blockchains cannot enforce the exact moment at whi",
     "references": [
       {
-        "title": "Timing is the New Attack: Blockchain Cannot Prevent Market Manipulation at the Boundary"
+        "title": "Timing is the New Attack: Blockchain Cannot Prevent Market Manipulation at the Boundary",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11449682/"
       }
     ]
   }

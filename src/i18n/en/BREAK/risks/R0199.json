@@ -11,10 +11,12 @@
     ],
     "references": [
       {
-        "title": "How NFT royalties work: Designs, challenges, and new ideas"
+        "title": "How NFT royalties work: Designs, challenges, and new ideas",
+        "link": "https://a16zcrypto.com/posts/article/how-nft-royalties-work/"
       },
       {
-        "title": "EIP-2981: NFT Royalty Standard"
+        "title": "EIP-2981: NFT Royalty Standard",
+        "link": "https://eips.ethereum.org/EIPS/eip-2981"
       }
     ],
     "description": "NFT royalty bypass occurs when traders use off-market transfers, custom contracts, aggregators, or marketplaces that do not enforce royalty rules. The creator may define a royalty policy, but enforcement depends on contracts and marketplace behavior.\n\nThis weakens creator revenue and creates inconsistent rules across markets. Projects need to distinguish between on-chain enforceability, marketplace commitments, and community governance.",

@@ -14,7 +14,8 @@
     "summary": "A research team conducted a security analysis of 36 commercial applications integrating LLMs and found that 31 were vulnerable to prompt injection attacks. They proposed a novel black-box attack technique called HouYi, which can achieve unrestricted LLM usage and steal application prompts, among other severe consequences. Ten vendors, including Notion, have confirmed these vulnerabilities, which c",
     "references": [
       {
-        "title": "Prompt Injection attack against LLM-integrated Applications"
+        "title": "Prompt Injection attack against LLM-integrated Applications",
+        "link": "https://arxiv.org/html/2306.05499v3"
       }
     ]
   }

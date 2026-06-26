@@ -287,15 +287,15 @@ function generateMarkdown() {
     '',
     '| Entity | Allowed English fields |',
     '| --- | --- |',
-    '| Risk | `title`, `keywords`, `definition`, `description`, `complexity`, `influence`, `references[].title` |',
-    '| Avoidance | `title`, `keywords`, `definition`, `description`, `complexity`, `limitation`, `references[].title` |',
-    '| AttackTool | `title`, `keywords`, `description`, `references[].title` |',
-    '| ThreatActor | `title`, `keywords`, `description`, `references[].title` |',
-    '| Term | `title`, `keywords`, `aliases`, `category`, `definition`, `description`, `usageExample`, `references[].title` |',
+    '| Risk | `title`, `keywords`, `definition`, `description`, `complexity`, `influence`, `references[].title`, `references[].link` |',
+    '| Avoidance | `title`, `keywords`, `definition`, `description`, `complexity`, `limitation`, `references[].title`, `references[].link` |',
+    '| AttackTool | `title`, `keywords`, `description`, `references[].title`, `references[].link` |',
+    '| ThreatActor | `title`, `keywords`, `description`, `references[].title`, `references[].link` |',
+    '| Term | `title`, `keywords`, `aliases`, `category`, `definition`, `description`, `usageExample`, `references[].title`, `references[].link` |',
     '| BusinessScene | `title`, `description`, `riskDimensions[*].title`, `riskScenes[*].title` |',
-    '| Case | `title`, `keywords`, `summary`, `description`, `references[].title` |',
+    '| Case | `title`, `keywords`, `summary`, `description`, `references[].title`, `references[].link` |',
     '',
-    'English files must not contain relationship fields, ID arrays, `updated`, `references[].link`, or BusinessScene structural arrays such as `riskDimensions[*].riskScenes` and `riskScenes[*].risks`.',
+    'English files must not contain relationship fields, ID arrays, `updated`, or BusinessScene structural arrays such as `riskDimensions[*].riskScenes` and `riskScenes[*].risks`.',
     ''
   );
 

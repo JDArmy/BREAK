@@ -14,7 +14,8 @@
     "summary": "A threat actor abused the trusted Trivy distribution channel to inject credential-stealing malware into CI/CD pipelines globally. This analysis details the attacker techniques, intrusion methods, and provides security teams with concrete steps for detection and defense against similar attacks. The incident highlights the severe risk of development tools becoming attack vectors within the software ",
     "references": [
       {
-        "title": "Guidance for detecting, investigating, and defending against the Trivy ..."
+        "title": "Guidance for detecting, investigating, and defending against the Trivy ...",
+        "link": "https://www.microsoft.com/en-us/security/blog/2026/03/24/detecting-investigating-defending-against-trivy-supply-chain-compromise/"
       }
     ]
   }

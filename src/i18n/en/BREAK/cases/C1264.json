@@ -14,7 +14,8 @@
     "summary": "A Tencent Cloud developer community article explains the process of HTTPS man-in-the-middle attacks, where an attacker acts like a postman intercepting client-server communication, replacing public keys and digital certificates to eavesdrop on and tamper with encrypted traffic. It also introduces SSLStrip techniques, where the attacker prevents the client from establishing an HTTPS connection, for",
     "references": [
       {
-        "title": "HTTPS Man-in-the-Middle Attacks and Their Prevention - Tencent Cloud Developer Community"
+        "title": "HTTPS Man-in-the-Middle Attacks and Their Prevention - Tencent Cloud Developer Community",
+        "link": "https://cloud.tencent.com/developer/news/151488"
       }
     ]
   }

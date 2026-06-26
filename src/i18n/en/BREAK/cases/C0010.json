@@ -16,13 +16,16 @@
     "summary": "On May 2, 2018, a software launched high-frequency automated queries against the Shenzhen residence permit system within two hours, reaching 183 requests per second and totaling over 1.51 million queries. The scraped data was saved to cloud storage. The automated attack caused the Shenzhen Public Security Bureau's residence permit service platform server to become overloaded and unable to operate ",
     "references": [
       {
-        "title": "Yang and Zhang Computer Information System Sabotage Case"
+        "title": "Yang and Zhang Computer Information System Sabotage Case",
+        "link": "https://wenshu.court.gov.cn/website/wenshu/181107ANFZ0BXSK4/index.html?docId=ddbe90eedd1341888ed9ac24009b67fb"
       },
       {
-        "title": "...3 Years, a Programmer Sentenced to 18 Months: Crawler Software Automated Attacks on Government Servers"
+        "title": "...3 Years, a Programmer Sentenced to 18 Months: Crawler Software Automated Attacks on Government Servers",
+        "link": "https://cloud.tencent.com/developer/article/2010221?areaSource=102001.11&traceId=Lgeb3Q8VKNrwjBYzr74CC"
       },
       {
-        "title": "Crawler software automated attacks on government servers caused server blockage and system paralysis"
+        "title": "Crawler software automated attacks on government servers caused server blockage and system paralysis",
+        "link": "https://m.163.com/dy/article/H866NQQ205315PUD.html"
       }
     ]
   }

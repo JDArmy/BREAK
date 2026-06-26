@@ -14,7 +14,8 @@
     "summary": "This research formalizes eclipse attacks against the Bitcoin peer-to-peer network. An adversary controlling a sufficient pool of IP addresses can monopolize all connections of a target node, isolating it from the rest of the network. The eclipsed node receives information solely from the attacker, who can feed it a fabricated view of the blockchain to enable transaction hiding or double-spending.",
     "references": [
       {
-        "title": "A Survey on Long-Range Attacks for Proof of Stake Protocols"
+        "title": "A Survey on Long-Range Attacks for Proof of Stake Protocols",
+        "link": "https://dl.acm.org/doi/10.5555/2831143.2831152"
       }
     ]
   }

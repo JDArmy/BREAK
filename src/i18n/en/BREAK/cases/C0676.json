@@ -14,7 +14,8 @@
     "summary": "Microsoft's security blog analysis indicates that Azure Blob Storage has become a high-value target for threat actors due to its critical role in storing and managing massive amounts of unstructured data. Attackers employ sophisticated attack chains, exploiting misconfigurations, leaked credentials, and evolving cloud tactics to conduct targeted intrusions and abuse of the service.",
     "references": [
       {
-        "title": "Inside the attack chain: Threat activity targeting Azure Blob Storage..."
+        "title": "Inside the attack chain: Threat activity targeting Azure Blob Storage...",
+        "link": "https://www.microsoft.com/en-us/security/blog/2025/10/20/inside-the-attack-chain-threat-activity-targeting-azure-blob-storage/"
       }
     ]
   }

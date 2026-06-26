@@ -6,13 +6,16 @@
     "influence": "Can lead to long-term confidential data leakage, collapse of digital trust systems, cryptocurrency security failure, and complete loss of communication privacy.",
     "references": [
       {
-        "title": "NIST Post-Quantum Cryptography Standards"
+        "title": "NIST Post-Quantum Cryptography Standards",
+        "link": "https://csrc.nist.gov/projects/post-quantum-cryptography"
       },
       {
-        "title": "ENISA: Post-Quantum Cryptography Integration Study"
+        "title": "ENISA: Post-Quantum Cryptography Integration Study",
+        "link": "https://www.enisa.europa.eu/publications/post-quantum-cryptography-integration-study"
       },
       {
-        "title": "Frequently Asked Questions about Post-Quantum Cryptography"
+        "title": "Frequently Asked Questions about Post-Quantum Cryptography",
+        "link": "https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/"
       }
     ],
     "keywords": [

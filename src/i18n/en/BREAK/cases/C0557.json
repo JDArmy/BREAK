@@ -16,7 +16,8 @@
     "summary": "Academic research reveals that a debit card cashback program (Issuer A) never adjusts previously issued rewards after a refund, enabling attackers to exploit this flaw for a double-dipping attack. Another credit card issuer (Issuer B) exhibits a billing cycle timing gap that allows users to redeem rewards before the merchant return window closes, effectively cashing out rewards prior to the refund",
     "references": [
       {
-        "title": "Refunded but Rewarded: The Double Dip Attack on Cashback Reward Engines"
+        "title": "Refunded but Rewarded: The Double Dip Attack on Cashback Reward Engines",
+        "link": "https://arxiv.org/abs/2604.16427"
       }
     ]
   }

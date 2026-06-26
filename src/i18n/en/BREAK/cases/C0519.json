@@ -14,10 +14,12 @@
     "summary": "The article discusses how the community reverse-engineered Anthropic's Claude Code product through decompilation, reconstructing a clearly modular source code structure. Although it is a decompilation artifact, the code exhibits good modularity with distinct boundaries between functional modules and a clear separation of type definitions and implementations. The article also notes that most jurisd",
     "references": [
       {
-        "title": "GitHub DMCA: Anthropic Notice"
+        "title": "GitHub DMCA: Anthropic Notice",
+        "link": "https://github.com/github/dmca/blob/master/2026/03/2026-03-31-anthropic.md"
       },
       {
-        "title": "Claude Code Source Code Leak: A Public Lesson in AI Engineering Worth Hundreds of Millions"
+        "title": "Claude Code Source Code Leak: A Public Lesson in AI Engineering Worth Hundreds of Millions",
+        "link": "https://developer.aliyun.com/article/1722081"
       }
     ]
   }

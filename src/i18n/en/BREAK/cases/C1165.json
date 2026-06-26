@@ -16,7 +16,8 @@
     "summary": "During penetration testing, attackers use tools like Dirsearch and Yujian to brute-force website paths, enumerating backend directories, backup files, and database files in bulk. By constructing requests with URLs and extensions, they determine path existence based on status codes, uncovering unauthorized access to sensitive files such as config.php configuration files and .sql database backups.",
     "references": [
       {
-        "title": "Path and Sensitive Information Discovery - FreeBuf Cybersecurity Industry Portal"
+        "title": "Path and Sensitive Information Discovery - FreeBuf Cybersecurity Industry Portal",
+        "link": "https://www.freebuf.com/articles/web/263211.html"
       }
     ]
   }

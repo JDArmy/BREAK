@@ -11,7 +11,8 @@
     ],
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0"
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
       }
     ],
     "description": "Edge function configuration abuse occurs when CDN edge functions, Workers, WAF rules, or traffic orchestration logic are misconfigured. Attackers may bypass authentication, forward sensitive requests, alter responses, or create an open proxy.\n\nEdge logic sits between users and origin services, so mistakes affect the full traffic entry point. Changes need review, staged rollout, least privilege, and rollback mechanisms.",

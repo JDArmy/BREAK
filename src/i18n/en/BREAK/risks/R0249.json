@@ -11,7 +11,8 @@
     ],
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0"
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
       }
     ],
     "description": "CDN cache poisoning abuses cache key design, request header handling, parameter normalization, or edge rule flaws so an attacker-crafted response is cached as legitimate content. Later users receive the poisoned content.\n\nThe risk can affect static pages, API responses, and redirects, amplifying one request across many users. Defenses need clear cache keys, isolation of user-specific responses, and abnormal cache hit monitoring.",

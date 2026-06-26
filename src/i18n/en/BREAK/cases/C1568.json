@@ -15,7 +15,8 @@
     "summary": "A study on mobile Web3 security reveals that attackers can compromise decentralized application frontends by injecting malicious code. Leveraging DNS hijacking or compromised certificate authorities, adversaries can tamper with the DApp interface to replace transaction addresses or execute unauthorized actions without user awareness, directly threatening asset safety.",
     "references": [
       {
-        "title": "SecureSign: Bridging Security and UX in Mobile Web3 through Emulated EIP-6963 Sandboxing"
+        "title": "SecureSign: Bridging Security and UX in Mobile Web3 through Emulated EIP-6963 Sandboxing",
+        "link": "https://arxiv.org/abs/2511.14611"
       }
     ]
   }

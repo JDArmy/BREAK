@@ -14,7 +14,8 @@
     "summary": "This research introduces a stake-bleeding attack leveraging eclipse attacks, involving long-range attack vectors and corresponding defense mechanisms. An attacker can combine network isolation with compromised historical private keys to fork from an early block and construct an alternative chain, exploiting the costless simulation property of Proof-of-Stake to overwrite the main chain history.",
     "references": [
       {
-        "title": "Closing the Proof-of-Stake Security Gap: A Signature-Based Defense Against Malicious Validators in Long-Range Attacks"
+        "title": "Closing the Proof-of-Stake Security Gap: A Signature-Based Defense Against Malicious Validators in Long-Range Attacks",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3327960.3332391"
       }
     ]
   }

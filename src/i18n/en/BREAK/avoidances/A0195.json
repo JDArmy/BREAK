@@ -4,7 +4,8 @@
     "description": "Maintain a unified API asset catalog, shadow API discovery, interface ownership, and lifecycle governance to reduce unknown interface exposure.",
     "references": [
       {
-        "title": "OWASP API Security Top 10 2023"
+        "title": "OWASP API Security Top 10 2023",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
       }
     ],
     "keywords": [

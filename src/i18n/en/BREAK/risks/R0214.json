@@ -11,10 +11,12 @@
     ],
     "references": [
       {
-        "title": "Building a strong security barrier for digital humans"
+        "title": "Building a strong security barrier for digital humans",
+        "link": "https://www.cac.gov.cn/2026-04/03/c_1776953007208921.htm"
       },
       {
-        "title": "Coalition for Content Provenance and Authenticity (C2PA)"
+        "title": "Coalition for Content Provenance and Authenticity (C2PA)",
+        "link": "https://c2pa.org/"
       }
     ],
     "description": "Digital human deepfakes use generative AI to clone appearance, voice, facial expression, and speaking style for impersonation. Attackers may pose as support agents, streamers, executives, or relatives to commit fraud or manipulate opinion.\n\nReal-time generation lowers the cost of convincing impersonation. Businesses need liveness checks, provenance signals, identity verification, and behavior-based anomaly detection.",

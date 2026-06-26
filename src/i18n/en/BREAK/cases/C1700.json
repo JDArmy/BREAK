@@ -14,7 +14,8 @@
     "summary": "This project compares insecure and secure IAM designs in GCP, demonstrating how over-privileged service accounts gain broad permissions and a larger attack surface, and applies hardening through auditing and JIT simulation following the principle of least privilege.",
     "references": [
       {
-        "title": "ANTONINAOTIENO/GCP-IAM-Hardening-From-Overprivileged-Access-to ..."
+        "title": "ANTONINAOTIENO/GCP-IAM-Hardening-From-Overprivileged-Access-to ...",
+        "link": "https://github.com/ANTONINAOTIENO/GCP-IAM-Hardening-From-Overprivileged-Access-to-Least-Privilege-with-Audit-JIT-Simulation"
       }
     ]
   }

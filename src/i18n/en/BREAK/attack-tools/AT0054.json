@@ -4,7 +4,8 @@
     "description": "Vulnerability exploitation tools are software or hardware tools used to discover and exploit security vulnerabilities in computer systems or network systems. These tools can be used for vulnerability scanning, vulnerability mining, and vulnerability attacks to assess system security or conduct penetration testing.",
     "references": [
       {
-        "title": "MITRE ATT&CK - Software"
+        "title": "MITRE ATT&CK - Software",
+        "link": "https://attack.mitre.org/software/"
       }
     ],
     "keywords": [

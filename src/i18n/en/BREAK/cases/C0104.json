@@ -13,7 +13,8 @@
     "summary": "This study addresses bot install fraud in mobile advertising by proposing BotSpot, a hybrid learning framework for detecting fake installs. By analyzing advertiser feedback on whether installs are normal or bot-driven, the model identifies fraudulent activities that use automated scripts or bot accounts to simulate user installs, with relevant case studies demonstrated.",
     "references": [
       {
-        "title": "BotSpot: A Hybrid Learning Framework to Uncover Bot Install Fraud in Mobile Advertising"
+        "title": "BotSpot: A Hybrid Learning Framework to Uncover Bot Install Fraud in Mobile Advertising",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3340531.3412690"
       }
     ]
   }

@@ -13,7 +13,8 @@
     "summary": "Researchers analyzed the Kad protocol and its source code, uncovering multiple Sybil attack vulnerabilities. Attackers can arbitrarily join the Kad network by masquerading as legitimate nodes and exploit these flaws to forge identities, thereby compromising the security and reliability of P2P file-sharing systems.",
     "references": [
       {
-        "title": "Research on the P2P Sybil Attack and the Detection Mechanism"
+        "title": "Research on the P2P Sybil Attack and the Detection Mechanism",
+        "link": "https://ieeexplore.ieee.org/document/8343002/"
       }
     ]
   }

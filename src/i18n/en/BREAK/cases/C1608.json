@@ -15,7 +15,8 @@
     "summary": "An academic paper presents a vulnerability analysis of the Profinet IO protocol and demonstrates multiple attacks that can be launched based on these weaknesses. The research focuses on the security flaws inherent in the protocol itself and their exploitation methods.",
     "references": [
       {
-        "title": "Towards the Protection of Industrial Control Systems"
+        "title": "Towards the Protection of Industrial Control Systems",
+        "link": "https://dl.acm.org/doi/10.1007/978-3-642-39235-1_10"
       }
     ]
   }

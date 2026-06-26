@@ -12,10 +12,12 @@
     ],
     "references": [
       {
-        "title": "GSMA eSIM Specifications"
+        "title": "GSMA eSIM Specifications",
+        "link": "https://www.gsma.com/esim/"
       },
       {
-        "title": "Privacy and data protection in mobile applications - ENISA"
+        "title": "Privacy and data protection in mobile applications - ENISA",
+        "link": "https://www.enisa.europa.eu/publications/privacy-and-data-protection-in-mobile-applications"
       }
     ],
     "description": "eSIM and iSIM hijacking abuses remote provisioning, carrier workflows, device binding, or identity verification weaknesses to move or control a mobile network identity. Attackers can intercept SMS, take over recovery flows, or impersonate devices.\n\nAs eSIM and iSIM expand into phones, vehicles, and IoT devices, SIM identity affects payments, authentication, and device management. Defense needs both carrier-side verification and business-side risk controls.",

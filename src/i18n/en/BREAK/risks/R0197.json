@@ -11,10 +11,12 @@
     ],
     "references": [
       {
-        "title": "2024 Crypto Crime Trends from Chainalysis"
+        "title": "2024 Crypto Crime Trends from Chainalysis",
+        "link": "https://www.chainalysis.com/blog/2024-crypto-crime-report-introduction/"
       },
       {
-        "title": "Multisig Best Practices to Maximize Transaction Security - Polygon"
+        "title": "Multisig Best Practices to Maximize Transaction Security - Polygon",
+        "link": "https://polygon.technology/blog/multisig-best-practices-to-maximize-transaction-security"
       }
     ],
     "description": "Multi-signature wallet social engineering targets DAO, foundation, and institutional treasury approval flows. Attackers forge urgent proposals, impersonate team members, create pressure, or send misleading transaction summaries to make multiple signers approve malicious transactions.\n\nMultisig reduces single-key failure but does not prevent coordinated mistaken approvals. Governance needs transaction simulation, timelocks, permission tiers, and independent review.",

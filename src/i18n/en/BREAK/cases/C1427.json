@@ -15,7 +15,8 @@
     "summary": "Defenders deploy Sybil nodes to counter the Storm P2P botnet. An attacker fabricates multiple Sybil nodes from a single malicious entity, placing them in the query paths of legitimate nodes to disrupt or block the botnet's C&C communication, employing strategies such as index poisoning and activity monitoring.",
     "references": [
       {
-        "title": "What Is a Sybil Attack - Tencent Cloud Developer Community"
+        "title": "What Is a Sybil Attack - Tencent Cloud Developer Community",
+        "link": "https://cloud.tencent.com/developer/article/1656893"
       }
     ]
   }

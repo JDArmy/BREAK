@@ -15,7 +15,8 @@
     "summary": "This document describes how API enumeration attacks involve adversaries systematically probing API endpoints using sequential or predictable identifiers to discover and access unauthorized resources. Attackers often manipulate object identifiers such as user IDs or order numbers to bypass authorization and access others' data, corresponding to the BOLA vulnerability in the OWASP API Security Top 1",
     "references": [
       {
-        "title": "Detecting API Enumeration Attacks - GitHub"
+        "title": "Detecting API Enumeration Attacks - GitHub",
+        "link": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills/blob/main/skills/detecting-api-enumeration-attacks/SKILL.md"
       }
     ]
   }

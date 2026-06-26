@@ -6,7 +6,8 @@
     "influence": "Causes business denial of service and affects user access.",
     "references": [
       {
-        "title": "OWASP Automated Threat: OAT-015 Denial of Service"
+        "title": "OWASP Automated Threat: OAT-015 Denial of Service",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-015_Denial_of_Service.html"
       }
     ],
     "keywords": [
@@ -26,7 +27,8 @@
     "influence": "Exhausts platform SMS verification code resources, creates a denial of service attack against the server, and causes disruption and denial of service to specific phone number recipients.",
     "references": [
       {
-        "title": "What to Do When SMS Verification Code Interface Is Under Malicious Attack?"
+        "title": "What to Do When SMS Verification Code Interface Is Under Malicious Attack?",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-015_Denial_of_Service.html"
       }
     ],
     "keywords": [
@@ -46,10 +48,12 @@
     "influence": "Causes service unavailability, performance degradation, reliability impact, and financial losses due to malicious resource consumption.",
     "references": [
       {
-        "title": "Governance Path for Advertising-Promotion Cyber Black-Grey Crime"
+        "title": "Governance Path for Advertising-Promotion Cyber Black-Grey Crime",
+        "link": "https://www.163.com/dy/article/JCU216GI051200BP.html"
       },
       {
-        "title": "OWASP: OAT-015 Denial of Service"
+        "title": "OWASP: OAT-015 Denial of Service",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-015_Denial_of_Service.html"
       }
     ],
     "keywords": [
@@ -69,7 +73,8 @@
     "influence": "Causes business denial of service and affects user access.",
     "references": [
       {
-        "title": "OWASP Automated Threat: OAT-015 Denial of Service"
+        "title": "OWASP Automated Threat: OAT-015 Denial of Service",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-015_Denial_of_Service.html"
       }
     ],
     "keywords": [
@@ -89,7 +94,8 @@
     "influence": "Causes service unavailability, performance degradation, reliability impact, and financial losses due to resource consumption.",
     "references": [
       {
-        "title": "Understanding and Responding to Distributed Denial-of-Service Attacks - CISA"
+        "title": "Understanding and Responding to Distributed Denial-of-Service Attacks - CISA",
+        "link": "https://www.cisa.gov/resources-tools/resources/understanding-and-responding-distributed-denial-service-attacks"
       }
     ],
     "keywords": [

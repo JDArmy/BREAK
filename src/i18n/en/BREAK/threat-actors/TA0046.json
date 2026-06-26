@@ -4,13 +4,16 @@
     "description": "Actors who control blockchain nodes, mining pools, validators, or large numbers of forged node identities to influence P2P networks and consensus processes. Their behaviors include Sybil attacks, eclipse attacks, chain reorganizations, long-range attacks, selfish mining, 51 percent attacks, and transaction-replay abuse, often requiring node resources, hash power, stake weight, or network connectivity control.",
     "references": [
       {
-        "title": "Bitcoin Eclipse Attacks and Countermeasures"
+        "title": "Bitcoin Eclipse Attacks and Countermeasures",
+        "link": "https://www.usenix.org/conference/usenixsecurity15/technical-sessions/presentation/heilman"
       },
       {
-        "title": "Selfish Mining in Bitcoin"
+        "title": "Selfish Mining in Bitcoin",
+        "link": "https://arxiv.org/abs/1311.0243"
       },
       {
-        "title": "Ethereum Proof-of-Stake Consensus Specifications"
+        "title": "Ethereum Proof-of-Stake Consensus Specifications",
+        "link": "https://github.com/ethereum/consensus-specs"
       }
     ],
     "keywords": [

@@ -14,7 +14,8 @@
     "summary": "A study proposes an intrusion detection system targeting false messages in vehicular ad hoc networks. The system uses machine learning classification models trained on vehicle-to-vehicle and vehicle-to-infrastructure communication data under both attack and normal scenarios, aiming to classify received messages as genuine or false and improve false information detection accuracy.",
     "references": [
       {
-        "title": "VANETs-Based Intrusion Detection System for False Message"
+        "title": "VANETs-Based Intrusion Detection System for False Message",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10370894"
       }
     ]
   }

@@ -18,10 +18,12 @@
     "description": "The slow line refers to a data lookup method that relies on special relationships or manual operations, such as a corporate insider manually exporting data. Although timeliness is poor, it may access deeper information that express lines cannot cover, such as historical records or encrypted files. The slow line is often used for non-urgent bulk data reselling and serves as a covert, long-term infiltration channel for underground networks.",
     "references": [
       {
-        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report"
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
       },
       {
-        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report"
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
       }
     ]
   }

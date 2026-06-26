@@ -6,13 +6,16 @@
     "limitation": "The closed nature of mobile operating systems limits MTD detection depth; iOS sandbox mechanisms make it difficult for MTD to obtain system-level information; increased user privacy awareness may lead to rejection of MTD app installation; mobile device battery and performance limitations affect continuous monitoring capabilities; some advanced mobile threats may bypass MTD detection.",
     "references": [
       {
-        "title": "Definition and Value of Mobile Threat Defense (MTD)"
+        "title": "Definition and Value of Mobile Threat Defense (MTD)",
+        "link": "https://www.163.com/dy/article/H9DUIGGJ0511ALHJ.html"
       },
       {
-        "title": "SP 800-124 Rev. 2, Guidelines for Managing the Security of Mobile ..."
+        "title": "SP 800-124 Rev. 2, Guidelines for Managing the Security of Mobile ...",
+        "link": "https://csrc.nist.gov/pubs/sp/800/124/r2/final"
       },
       {
-        "title": "OWASP Mobile Security Testing Guide"
+        "title": "OWASP Mobile Security Testing Guide",
+        "link": "https://owasp.org/www-project-mobile-security-testing-guide/"
       }
     ],
     "keywords": [

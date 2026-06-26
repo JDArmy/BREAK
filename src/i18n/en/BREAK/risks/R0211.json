@@ -11,10 +11,12 @@
     ],
     "references": [
       {
-        "title": "Data breaches are a reality: smart-home privacy risks"
+        "title": "Data breaches are a reality: smart-home privacy risks",
+        "link": "https://news.cnr.cn/rebang/20260204/t20260204_527515211.shtml"
       },
       {
-        "title": "FTC Securing Your Internet-Connected Devices at Home"
+        "title": "FTC Securing Your Internet-Connected Devices at Home",
+        "link": "https://consumer.ftc.gov/articles/securing-your-internet-connected-devices-home"
       }
     ],
     "description": "Smart home privacy eavesdropping occurs when cameras, doorbells, speakers, TVs, or hubs are accessed or controlled without authorization. Attackers can capture audio, video, routines, and household details.\n\nHome devices often ship with weak defaults, cloud account weaknesses, or long patch gaps. Vendors need secure defaults, cloud access control, anomaly alerts, and firmware update support.",

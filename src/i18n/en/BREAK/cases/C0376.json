@@ -14,7 +14,8 @@
     "summary": "Google Threat Analysis Group disclosed that, since 2019, financially motivated attackers have targeted YouTube creators with phishing campaigns. The attackers impersonated software, games, or collaboration opportunities to trick targets into downloading malware capable of stealing cookies, which were then used to hijack YouTube channels. Google said it identified about 15,000 actor accounts and 1,011 related domains, and blocked around 1.6 million phishing messages.",
     "references": [
       {
-        "title": "Phishing campaign targets YouTube creators with cookie theft malware"
+        "title": "Phishing campaign targets YouTube creators with cookie theft malware",
+        "link": "https://blog.google/threat-analysis-group/phishing-campaign-targets-youtube-creators-cookie-theft-malware/"
       }
     ]
   }

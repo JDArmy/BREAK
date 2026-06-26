@@ -14,10 +14,12 @@
     "summary": "In 2016, the Mirai botnet exploited default credentials in IoT devices through large-scale scanning and brute-force attacks, infecting hundreds of thousands of devices to form a botnet. It launched the largest DDoS attack in history, causing widespread internet outages across the US East Coast. This incident highlighted the severe threat posed by unchanged default credentials in IoT devices.",
     "references": [
       {
-        "title": "Mirai Botnet 2016: Exploiting Default Credentials in IoT Devices"
+        "title": "Mirai Botnet 2016: Exploiting Default Credentials in IoT Devices",
+        "link": "https://aviatrix.ai/threat-research-center/mirai-botnet-2016-default-credentials-exploitation/"
       },
       {
-        "title": "Understanding the Mirai Botnet"
+        "title": "Understanding the Mirai Botnet",
+        "link": "https://www.usenix.org/conference/usenixsecurity17/technical-sessions/presentation/antonakakis"
       }
     ]
   }

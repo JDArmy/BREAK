@@ -9,10 +9,12 @@
     "usageExample": "A lending protocol uses Chainlink oracles to obtain real-time ETH prices, based on which it calculates users' collateral ratios and liquidation thresholds.",
     "references": [
       {
-        "title": "What Is a Blockchain Oracle? - Chainlink"
+        "title": "What Is a Blockchain Oracle? - Chainlink",
+        "link": "https://chain.link/education/blockchain-oracles"
       },
       {
-        "title": "Introduction to Oracles - Ethereum"
+        "title": "Introduction to Oracles - Ethereum",
+        "link": "https://ethereum.org/en/developers/docs/oracles/"
       }
     ],
     "title": "Oracle",

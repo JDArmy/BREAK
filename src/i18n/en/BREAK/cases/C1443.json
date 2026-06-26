@@ -16,7 +16,8 @@
     "summary": "A large-scale two-year measurement on Ethereum and BSC identifies 13 times more address poisoning attempts than publicly reported. Attackers send small tokens to user wallets and exploit address similarity and temporal correlation to trick victims into copying poisoned addresses, stealing assets. The study reveals how attackers leverage the transparency of on-chain transactions to analyze user hab",
     "references": [
       {
-        "title": "Blockchain Address Poisoning - USENIX"
+        "title": "Blockchain Address Poisoning - USENIX",
+        "link": "https://www.usenix.org/conference/usenixsecurity25/presentation/tsuchiya"
       }
     ]
   }

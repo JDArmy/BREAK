@@ -11,10 +11,12 @@
     ],
     "references": [
       {
-        "title": "NHTSA Vehicle Cybersecurity"
+        "title": "NHTSA Vehicle Cybersecurity",
+        "link": "https://www.nhtsa.gov/technology-innovation/vehicle-cybersecurity"
       },
       {
-        "title": "ISO/SAE 21434 Road vehicles Cybersecurity"
+        "title": "ISO/SAE 21434 Road vehicles Cybersecurity",
+        "link": "https://www.iso.org/standard/70918.html"
       }
     ],
     "description": "Vehicle V2X attacks target communication between vehicles, roadside infrastructure, and cloud systems. Attackers can forge location, speed, road event, or signal messages that mislead automated or assisted driving decisions.\n\nThe risk turns network manipulation into road safety impact. Systems must validate message origin, spatial and temporal plausibility, certificate status, and abnormal behavior before acting on V2X data.",

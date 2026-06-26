@@ -16,10 +16,12 @@
     "summary": "In May 2025, Spain's Guardia Civil carried out coordinated searches and arrested “GoogleXcoder,” dismantling the GXC Team banking phishing tool network. The group operated a Crime-as-a-Service model that supplied other criminals with phishing kits capable of cloning Spanish banks, international institutions, and government portals, together with customization, technical support, and updates. Group-IB reported that the ecosystem also included Android SMS-stealing malware disguised as banking apps and AI-powered voice scam tooling integrated into phishing kits to trick victims into revealing two-factor authentication codes, with related phishing campaigns causing millions of euros in losses.",
     "references": [
       {
-        "title": "Guardia Civil dismantles a banking phishing network and arrests the main developer of credential theft kits in Spain"
+        "title": "Guardia Civil dismantles a banking phishing network and arrests the main developer of credential theft kits in Spain",
+        "link": "https://web.guardiacivil.es/es/destacados/noticias/La-Guardia-Civil-desmantela-una-red-de-phishing-bancario-y-detiene-al-principal-desarrollador-de-kits-de-robo-de-credenciales-en-Espana/"
       },
       {
-        "title": "Group-IB intelligence powers Spanish Guardia Civil operation to dismantle the GXC Team cybercrime syndicate"
+        "title": "Group-IB intelligence powers Spanish Guardia Civil operation to dismantle the GXC Team cybercrime syndicate",
+        "link": "https://www.group-ib.com/media-center/press-releases/guardia-civil-gxc-team-takedown/"
       }
     ]
   }

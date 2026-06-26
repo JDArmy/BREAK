@@ -2,7 +2,7 @@ const replaceArrayTranslationKeys = new Set(["keywords", "aliases"]);
 
 /**
  * 以结构源为基底，用翻译层覆盖可翻译字段。
- * 关系、ID 数组、references[].link、updated 等结构字段必须来自结构源。
+ * 关系、ID 数组、updated 等结构字段必须来自结构源。references[].link 在英文翻译中也维护。
  */
 export function mergeWithStructure(structure, translations, key) {
   if (replaceArrayTranslationKeys.has(key ?? "") && Array.isArray(structure)) {

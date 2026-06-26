@@ -10,10 +10,12 @@
     ],
     "references": [
       {
-        "title": "Interoperability security for metaverse virtual assets"
+        "title": "Interoperability security for metaverse virtual assets",
+        "link": "https://www.secrss.com/articles/45265"
       },
       {
-        "title": "Ethereum NFT Standards"
+        "title": "Ethereum NFT Standards",
+        "link": "https://ethereum.org/en/nft/"
       }
     ],
     "description": "Virtual asset cross-platform transfer risk appears when assets move across metaverse platforms, games, wallets, or marketplaces. Protocol flaws, synchronization failures, or authorization gaps can cause loss, double spend, or theft.\n\nInteroperability increases liquidity but connects the trust boundaries of multiple platforms. Designs need clear custody rules, finality, rollback handling, and dispute processes.",

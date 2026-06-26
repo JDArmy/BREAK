@@ -14,10 +14,12 @@
     "summary": "A vulnerability in Aztec Connect's legacy contract, which was designed to be fully immutable with no upgrade capability, was exploited. As a result, a portion of the tokens became trapped in the non-upgradable contract and could not be withdrawn. The system had intentionally relinquished upgrade permissions for decentralization, but the immutable design flaw led to asset loss, highlighting the dou",
     "references": [
       {
-        "title": "Aztec Connect Hit by $2.1 Million Exploit in Old Contract"
+        "title": "Aztec Connect Hit by $2.1 Million Exploit in Old Contract",
+        "link": "https://capwolf.com/aztec-connect-hit-by-2-1-million-exploit-in-old-contract/"
       },
       {
-        "title": "Aztec Labs: Potential Exploit Affecting Aztec Connect"
+        "title": "Aztec Labs: Potential Exploit Affecting Aztec Connect",
+        "link": "https://x.com/AztecLabs_/status/2066175430252700035"
       }
     ]
   }

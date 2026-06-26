@@ -13,7 +13,8 @@
     "summary": "Threat actors used an implant named SUNSPOT to access SolarWinds' build server and insert a backdoor during the software build process, leading to a supply chain attack affecting thousands of downstream organizations.",
     "references": [
       {
-        "title": "Defending Against Software Supply Chain Attacks - CISA"
+        "title": "Defending Against Software Supply Chain Attacks - CISA",
+        "link": "https://www.cisa.gov/sites/default/files/publications/defending_against_software_supply_chain_attacks_508.pdf"
       }
     ]
   }

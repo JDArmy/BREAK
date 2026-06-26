@@ -6,10 +6,12 @@
     "influence": "User accounts are taken over, personal data is leaked, cross-platform trust chains are broken, and third-party login ecosystem security is affected.",
     "references": [
       {
-        "title": "OAuth 2.0 Security Best Current Practice - IETF"
+        "title": "OAuth 2.0 Security Best Current Practice - IETF",
+        "link": "https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics"
       },
       {
-        "title": "Research on OAuth authorization security and defense amid the surge in device-code phishing attacks..."
+        "title": "Research on OAuth authorization security and defense amid the surge in device-code phishing attacks...",
+        "link": "https://cloud.tencent.com/developer/article/2651032"
       }
     ],
     "keywords": [

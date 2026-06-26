@@ -16,10 +16,12 @@
     "summary": "In December 2025, the pro-Russian hacking group TwoNet exploited the ScadaBR vulnerability CVE-2021-26829, which was patched in 2021, to compromise a water treatment plant's ICS honeypot and deface its HMI login page. The vulnerability is a cross-site scripting flaw that allows arbitrary code execution and session hijacking. If exploited in a real industrial environment, it could lead to productio",
     "references": [
       {
-        "title": "4-Year-Old Vulnerability Exploited by Hackers to Breach Water Plant ICS and Deface Login Page"
+        "title": "4-Year-Old Vulnerability Exploited by Hackers to Breach Water Plant ICS and Deface Login Page",
+        "link": "https://cloud.tencent.com/developer/article/2596782"
       },
       {
-        "title": "Anatomy of a Hacktivist Attack: Russian-Aligned Group Targets OT/ICS"
+        "title": "Anatomy of a Hacktivist Attack: Russian-Aligned Group Targets OT/ICS",
+        "link": "https://www.forescout.com/blog/anatomy-of-a-hacktivist-attack-russian-aligned-group-targets-otics/"
       }
     ]
   }

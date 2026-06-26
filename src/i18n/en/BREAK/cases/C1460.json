@@ -14,7 +14,8 @@
     "summary": "This study highlights the growing importance of protecting secret information on IoT devices as the technology expands. Since IoT devices are susceptible to physical access by third parties, power side-channel attacks that leak physical information pose a significant threat. The paper proposes a hardware/software cooperative design that combines a secure processor architecture with masked software",
     "references": [
       {
-        "title": "Hardware/software cooperative design against power side-channel attacks on IoT devices"
+        "title": "Hardware/software cooperative design against power side-channel attacks on IoT devices",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10404032/"
       }
     ]
   }

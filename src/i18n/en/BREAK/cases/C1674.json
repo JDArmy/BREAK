@@ -14,7 +14,8 @@
     "summary": "A systematic literature review reveals that attackers have recently exploited credentials leaked from CI/CD pipelines to replace cached objects with malicious content. Since downstream dependencies typically trust these pipelines, this leads to severe security consequences.",
     "references": [
       {
-        "title": "SoK: Understanding CI/CD Security: A Comprehensive Review of Architecture, Attacks, and Defenses"
+        "title": "SoK: Understanding CI/CD Security: A Comprehensive Review of Architecture, Attacks, and Defenses",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11226761/"
       }
     ]
   }

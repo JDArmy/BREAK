@@ -7,7 +7,8 @@
     ],
     "references": [
       {
-        "title": "GlobalPlatform TEE Internal Core API Specification v1.4"
+        "title": "GlobalPlatform TEE Internal Core API Specification v1.4",
+        "link": "https://globalplatform.org/specs-library/tee-internal-core-api-specification/"
       }
     ],
     "definition": "Integrate Trusted Execution Environment (TEE) or security chips in IoT devices to defend against hardware attacks."

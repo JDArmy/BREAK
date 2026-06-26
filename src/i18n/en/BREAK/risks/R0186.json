@@ -6,7 +6,8 @@
     "influence": "Node receives false blockchain data, transactions double-spent, consensus voting manipulated, network partitioned.",
     "references": [
       {
-        "title": "Eclipse Attacks on Bitcoin's Peer-to-Peer Network"
+        "title": "Eclipse Attacks on Bitcoin's Peer-to-Peer Network",
+        "link": "https://www.usenix.org/conference/usenixsecurity15/technical-sessions/presentation/heilman"
       }
     ],
     "keywords": [

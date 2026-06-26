@@ -9,10 +9,12 @@
     "usageExample": "The Mirai botnet infected hundreds of thousands of IoT cameras and launched DDoS attacks exceeding 1 Tbps, disrupting internet services across the U.S. East Coast.",
     "references": [
       {
-        "title": "Botnet - The Cloudflare Blog"
+        "title": "Botnet - The Cloudflare Blog",
+        "link": "https://blog.cloudflare.com/tag/botnet/"
       },
       {
-        "title": "Understanding Denial-of-Service Attacks - CISA"
+        "title": "Understanding Denial-of-Service Attacks - CISA",
+        "link": "https://www.cisa.gov/news-events/news/understanding-denial-service-attacks"
       }
     ],
     "title": "Botnet",

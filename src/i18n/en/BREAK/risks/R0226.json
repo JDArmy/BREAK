@@ -11,7 +11,8 @@
     ],
     "references": [
       {
-        "title": "OWASP Top 10 CI/CD Security Risks"
+        "title": "OWASP Top 10 CI/CD Security Risks",
+        "link": "https://owasp.org/www-project-top-10-ci-cd-security-risks/"
       }
     ],
     "description": "CI/CD pipeline credential exposure often comes from build logs, environment variables, runner configuration, script output, caches, or third-party plugins. Leaked cloud keys, repository tokens, and deployment credentials can give attackers direct access to production resources.\n\nPipelines connect code, artifacts, environments, and privileges, making them a major supply chain entry point. Credentials need least privilege, short lifetime, runner isolation, and sensitive output auditing.",

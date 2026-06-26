@@ -14,7 +14,8 @@
     "summary": "An ACM CCS 2022 paper titled 'Understanding security issues in the NFT ecosystem' reveals that sellers can completely bypass NFT marketplace protocols through over-the-counter (OTC) deals, avoiding royalty payments to creators. Sellers list NFTs and then privately negotiate transactions with buyers, completing transfers without using marketplace contracts, thereby circumventing built-in royalty fe",
     "references": [
       {
-        "title": "Understanding security issues in the NFT ecosystem"
+        "title": "Understanding security issues in the NFT ecosystem",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3548606.3559342"
       }
     ]
   }

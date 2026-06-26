@@ -15,7 +15,8 @@
     "summary": "Microsoft's threat intelligence team discovered a prompt injection vulnerability in Claude Code's GitHub Action that allows attackers to access sensitive secrets within CI/CD workflows under specific conditions. The flaw highlights how AI-powered CI/CD tools can become a new vector for credential leakage.",
     "references": [
       {
-        "title": "Securing CI/CD in an Agentic World: Claude Code Github Action Case"
+        "title": "Securing CI/CD in an Agentic World: Claude Code Github Action Case",
+        "link": "https://www.microsoft.com/en-us/security/blog/2026/06/05/securing-ci-cd-in-agentic-world-claude-code-github-action-case/"
       }
     ]
   }

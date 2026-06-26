@@ -16,7 +16,8 @@
     "summary": "This study proposes Botspot++, a hierarchical deep ensemble model for detecting bot-driven install fraud in mobile advertising. Using advertiser feedback labels (normal installs or bot installs), case studies and data visualization are conducted to identify fraudulent activities that use automated programs to simulate user installations, aiming to mitigate the damage of fake install volumes on the",
     "references": [
       {
-        "title": "Botspot++: A Hierarchical Deep Ensemble Model for Bots Install Fraud Detection in Mobile Advertising"
+        "title": "Botspot++: A Hierarchical Deep Ensemble Model for Bots Install Fraud Detection in Mobile Advertising",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3476107"
       }
     ]
   }

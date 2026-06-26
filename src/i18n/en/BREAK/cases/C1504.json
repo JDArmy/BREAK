@@ -13,7 +13,8 @@
     "summary": "Researchers propose a method that uses a program analysis framework to generate sensor spoofing attacks. Analysts can produce sensor reading trajectories that drive a system into unsafe states. As a case study, the system generates forged wireless signals to spoof wireless sensors, demonstrating the feasibility of signal injection attacks.",
     "references": [
       {
-        "title": "Using program analysis to synthesize sensor spoofing attacks"
+        "title": "Using program analysis to synthesize sensor spoofing attacks",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3052973.3053038"
       }
     ]
   }

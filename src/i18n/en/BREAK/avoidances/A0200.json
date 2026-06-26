@@ -4,7 +4,8 @@
     "description": "Generate signatures, SLSA provenance, and verifiable release records for build outputs, images, and dependencies.",
     "references": [
       {
-        "title": "Software Bill of Materials - CISA"
+        "title": "Software Bill of Materials - CISA",
+        "link": "https://www.cisa.gov/topics/information-communications-technology-supply-chain-security/sbom"
       }
     ],
     "keywords": [

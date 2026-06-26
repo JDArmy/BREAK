@@ -6,13 +6,16 @@
     "influence": "Can result in complete terminal compromise, bulk credential leakage, ransomware infection, and enterprise internal network penetration.",
     "references": [
       {
-        "title": "Security Brief: ClickFix Social Engineering Technique Floods Threat Landscape"
+        "title": "Security Brief: ClickFix Social Engineering Technique Floods Threat Landscape",
+        "link": "https://www.proofpoint.com/us/blog/threat-insight/security-brief-clickfix-social-engineering-technique-floods-threat-landscape"
       },
       {
-        "title": "ClickFix Attacks - HHS Sector Alert"
+        "title": "ClickFix Attacks - HHS Sector Alert",
+        "link": "https://www.hhs.gov/sites/default/files/clickfix-attacks-sector-alert-tlpclear.pdf"
       },
       {
-        "title": "Caught in the CAPTCHA: How ClickFix is Weaponizing Verification Fatigue"
+        "title": "Caught in the CAPTCHA: How ClickFix is Weaponizing Verification Fatigue",
+        "link": "https://www.sentinelone.com/blog/how-clickfix-is-weaponizing-verification-fatigue-to-deliver-rats-infostealers/"
       }
     ],
     "keywords": [

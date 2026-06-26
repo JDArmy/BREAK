@@ -14,7 +14,8 @@
     "summary": "A 2023 IEEE conference paper investigates the risks of default credentials in IoT devices, with a specific focus on IP cameras. The study finds that a large number of internet-connected IP cameras still use manufacturer default passwords, making them easily accessible to malicious actors. Attackers can obtain images and other sensitive data for criminal activities. Through two case studies, the re",
     "references": [
       {
-        "title": "Default Credentials Vulnerability: The Case Study of Exposed IP Cameras"
+        "title": "Default Credentials Vulnerability: The Case Study of Exposed IP Cameras",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10224944/"
       }
     ]
   }

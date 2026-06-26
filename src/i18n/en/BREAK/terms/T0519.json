@@ -9,10 +9,12 @@
     "usageExample": "An employee working from home connects to the corporate intranet via VPN to securely access file servers and office systems.",
     "references": [
       {
-        "title": "Guide to IPsec VPNs - NIST SP 800-77"
+        "title": "Guide to IPsec VPNs - NIST SP 800-77",
+        "link": "https://www.nist.gov/publications/guide-ipsec-vpns"
       },
       {
-        "title": "Enterprise VPN Security - CISA"
+        "title": "Enterprise VPN Security - CISA",
+        "link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-073a"
       }
     ],
     "title": "Virtual Private Network",

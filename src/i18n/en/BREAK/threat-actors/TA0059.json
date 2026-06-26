@@ -4,7 +4,8 @@
     "description": "Groups that take over user or employee accounts through MFA fatigue, session-token replay, and phishing tools.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0"
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
       }
     ],
     "keywords": [

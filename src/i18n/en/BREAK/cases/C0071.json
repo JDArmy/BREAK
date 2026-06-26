@@ -16,10 +16,12 @@
     "summary": "In November 2020, Alipay discovered that when users selected \"Alipay\" for payment on iOS, the interface was forcibly redirected to a selection pop-up for the \"Jiazhengjia\" app, causing payment failures and leading users to question Alipay's security. Investigation revealed that Jiangsu Bama Software Technology Co., Ltd. had defined its Jiazhengjia app's URL Scheme identically as \"alipay://\", sever",
     "references": [
       {
-        "title": "Shanghai Pudong Court Issues Preservation Order in App Wake-Up Strategy Unfair Competition Case"
+        "title": "Shanghai Pudong Court Issues Preservation Order in App Wake-Up Strategy Unfair Competition Case",
+        "link": "https://fqxfy.hncourt.gov.cn/public/detail.php?id=4631"
       },
       {
-        "title": "Special report | Judicial analysis of internet traffic hijacking _ Tencent News"
+        "title": "Special report | Judicial analysis of internet traffic hijacking _ Tencent News",
+        "link": "https://new.qq.com/rain/a/20220813A01DFQ00"
       }
     ]
   }

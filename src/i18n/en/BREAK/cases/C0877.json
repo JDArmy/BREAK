@@ -14,7 +14,8 @@
     "summary": "Attackers manipulate product prices, quantities, or key payment fields during the checkout process to produce unintended transaction outcomes. For example, changing a product price from 100 to 50 or -100, modifying the quantity to a negative value to offset the amount, or multiplying by 0.5 to alter the price, causing the system to miscalculate the order total and resulting in asset loss.",
     "references": [
       {
-        "title": "A Summary of Payment Vulnerability Mining in Logic Flaws"
+        "title": "A Summary of Payment Vulnerability Mining in Logic Flaws",
+        "link": "https://developer.volcengine.com/articles/7381538072443715594"
       }
     ]
   }

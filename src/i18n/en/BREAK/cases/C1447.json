@@ -13,7 +13,8 @@
     "summary": "This academic paper investigates cross-shard replay attacks in sharded distributed ledgers, highlighting account-based blockchains like Ethereum as common application scenarios. It directly addresses the problem of replay attacks in cross-chain or sharded contexts as defined in risk taxonomies.",
     "references": [
       {
-        "title": "Replay attacks and defenses against cross-shard consensus in sharded distributed ledgers"
+        "title": "Replay attacks and defenses against cross-shard consensus in sharded distributed ledgers",
+        "link": "https://ieeexplore.ieee.org/abstract/document/9230373/"
       }
     ]
   }

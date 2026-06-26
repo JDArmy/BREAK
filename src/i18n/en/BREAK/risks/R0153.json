@@ -6,13 +6,16 @@
     "influence": "Can lead to sensitive data leakage, compliance violation penalties, trade secret exfiltration, loss of customer trust, and irreversible intellectual property loss.",
     "references": [
       {
-        "title": "Cisco 2025 Data Privacy Benchmark Study"
+        "title": "Cisco 2025 Data Privacy Benchmark Study",
+        "link": "https://www.cisco.com/c/en/us/about/trust-center/data-privacy-benchmark-study.html"
       },
       {
-        "title": "NIST AI 100-1: AI Risk Management Framework"
+        "title": "NIST AI 100-1: AI Risk Management Framework",
+        "link": "https://www.nist.gov/itl/ai-risk-management-framework"
       },
       {
-        "title": "What Is Shadow AI? - IBM"
+        "title": "What Is Shadow AI? - IBM",
+        "link": "https://www.ibm.com/think/topics/shadow-ai"
       }
     ],
     "keywords": [

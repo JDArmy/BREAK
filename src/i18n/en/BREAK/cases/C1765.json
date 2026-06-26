@@ -13,7 +13,8 @@
     "summary": "Researchers conducted a systematic study of six major third-party Android app markets and identified a common in-the-wild repackaging behavior: attackers obtain legitimate apps from official Android markets, repackage them, and distribute them to third-party markets. The study found that some repackaged apps were implanted with backdoors or malicious payloads, posing a serious threat to the smartp",
     "references": [
       {
-        "title": "Detecting Repackaged Smartphone Applications in Third-Party Android ..."
+        "title": "Detecting Repackaged Smartphone Applications in Third-Party Android ...",
+        "link": "https://dl.acm.org/doi/10.1145/2133601.2133640"
       }
     ]
   }

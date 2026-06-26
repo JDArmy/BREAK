@@ -14,7 +14,8 @@
     "summary": "Tencent Cloud Developer Community published an analysis revealing that some OAuth 2.0 providers fail to properly validate callback URLs or have bypassable validation, allowing hackers to craft phishing pages that trick users into authorizing access, thereby gaining account permissions and enabling identity impersonation.",
     "references": [
       {
-        "title": "Analysis and prevention suggestions for the recent 'eye-catching OAuth vulnerability' - Tencent Cloud Development..."
+        "title": "Analysis and prevention suggestions for the recent 'eye-catching OAuth vulnerability' - Tencent Cloud Development...",
+        "link": "https://cloud.tencent.com/developer/article/1035354"
       }
     ]
   }

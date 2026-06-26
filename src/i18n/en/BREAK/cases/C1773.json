@@ -15,7 +15,8 @@
     "summary": "Microsoft security researchers disclosed a multi-stage attack where threat actors exploited a security flaw in an internet-exposed F5 BIG-IP edge device to gain initial access, then moved laterally to internal Confluence servers to steal credentials and attempted Kerberos relay attacks to expand their foothold.",
     "references": [
       {
-        "title": "From edge appliance to enterprise compromise: Multi-stage Linux ..."
+        "title": "From edge appliance to enterprise compromise: Multi-stage Linux ...",
+        "link": "https://www.microsoft.com/en-us/security/blog/2026/05/22/from-edge-appliance-to-enterprise-compromise-multi-stage-linux-intrusion-via-f5-and-confluence/"
       }
     ]
   }

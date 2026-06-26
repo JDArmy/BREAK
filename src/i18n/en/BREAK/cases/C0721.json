@@ -14,7 +14,8 @@
     "summary": "A research paper introduces the LinkQ system, which combats hallucinations by forcing large language models to query knowledge graphs for factual data. Quantitative evaluation shows the system outperforms GPT-4 on KGQA datasets but still struggles with certain question categories, indicating that LLMs hallucinate when lacking ground-truth data support.",
     "references": [
       {
-        "title": "Mitigating LLM Hallucinations with Knowledge Graphs: A Case Study"
+        "title": "Mitigating LLM Hallucinations with Knowledge Graphs: A Case Study",
+        "link": "https://arxiv.org/abs/2504.12422"
       }
     ]
   }

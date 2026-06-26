@@ -14,7 +14,8 @@
     "summary": "This survey provides a comprehensive analysis of poisoning attacks and defense strategies in federated learning. It highlights that due to the invisibility of client datasets and training processes, federated learning faces multiple security threats. Poisoning attacks can significantly impact the global model, allowing malicious attackers to prevent model convergence or even manipulate prediction ",
     "references": [
       {
-        "title": "Poisoning Attacks and Defenses in Federated Learning: A Survey"
+        "title": "Poisoning Attacks and Defenses in Federated Learning: A Survey",
+        "link": "https://arxiv.org/abs/2301.05795"
       }
     ]
   }

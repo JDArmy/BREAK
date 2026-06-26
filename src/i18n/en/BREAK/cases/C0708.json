@@ -14,10 +14,12 @@
     "summary": "China's National Cybersecurity Notification Center issued a warning about security vulnerabilities in the default configuration of the open-source LLM tool Ollama, including unauthorized access and model theft. Given the widespread deployment of large models like DeepSeek, many users deploy Ollama privately without changing default settings, creating risks of data leakage, computational resource t",
     "references": [
       {
-        "title": "Industrial Internet Weekly | National Cybersecurity Notification Center Alert: Large Model Tool Ollama..."
+        "title": "Industrial Internet Weekly | National Cybersecurity Notification Center Alert: Large Model Tool Ollama...",
+        "link": "https://news.qq.com/rain/a/20250311A095QK00"
       },
       {
-        "title": "Detecting Exposed LLM Servers: Shodan Case Study on Ollama"
+        "title": "Detecting Exposed LLM Servers: Shodan Case Study on Ollama",
+        "link": "https://blogs.cisco.com/security/detecting-exposed-llm-servers-shodan-case-study-on-ollama"
       }
     ]
   }

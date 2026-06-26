@@ -15,7 +15,8 @@
     "summary": "This academic study examines how block producers on the Ethereum blockchain can extract additional value by strategically including, excluding, or reordering transactions within a block, a practice known as maximal extractable value (MEV). As of September 2022, the total MEV extracted on Ethereum was approximately $675 million. Arbitrage and sandwich attacks represent the two dominant extraction m",
     "references": [
       {
-        "title": "Remeasuring the Arbitrage and Sandwich Attacks of Maximal Extractable Value in Ethereum"
+        "title": "Remeasuring the Arbitrage and Sandwich Attacks of Maximal Extractable Value in Ethereum",
+        "link": "https://arxiv.org/html/2405.17944v2"
       }
     ]
   }

@@ -14,7 +14,8 @@
     "summary": "Through its acquisition of Pangea, CrowdStrike analyzed over 300,000 adversarial prompts and tracked more than 150 prompt injection techniques. The article notes that indirect prompt injection involves inserting malicious instructions into data sources accessed by GenAI systems, with attackers potentially hiding adversarial commands in email signatures, document metadata, web content, image files,",
     "references": [
       {
-        "title": "Indirect Prompt Injection Attacks: Hidden AI Risks - CrowdStrike"
+        "title": "Indirect Prompt Injection Attacks: Hidden AI Risks - CrowdStrike",
+        "link": "https://www.crowdstrike.com/en-us/blog/indirect-prompt-injection-attacks-hidden-ai-risks/"
       }
     ]
   }

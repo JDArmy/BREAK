@@ -15,7 +15,8 @@
     "summary": "This study proposes a secure authentication protocol for mitigating rogue node attacks in edge computing. Attackers can compromise and impersonate legitimate edge nodes as rogue fog nodes to steal data or disrupt services. The proposed scheme leverages software-defined networking and wireless virtualization to enable cloud service providers to exercise exclusive control over edge nodes, thereby de",
     "references": [
       {
-        "title": "Mitigating Rogue Node Attacks in Edge Computing"
+        "title": "Mitigating Rogue Node Attacks in Edge Computing",
+        "link": "https://ieeexplore.ieee.org/document/8988518"
       }
     ]
   }

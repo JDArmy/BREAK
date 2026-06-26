@@ -16,10 +16,12 @@
     "summary": "A Keep Aware customer encountered a compromised website while browsing search results, where a fake CAPTCHA prompt appeared. Upon clicking, JavaScript copied a malicious PowerShell command to the clipboard and tricked the user into pasting and executing it via the Windows Run dialog. The command was designed to download and install the NetSupportManager remote access trojan for persistent remote c",
     "references": [
       {
-        "title": "On the Scene of a Real ClickFix Attack: The Full Process of a Social Engineering Hack"
+        "title": "On the Scene of a Real ClickFix Attack: The Full Process of a Social Engineering Hack",
+        "link": "https://www.anquanke.com/post/id/310802"
       },
       {
-        "title": "Deploying NetSupport RAT via WordPress & ClickFix"
+        "title": "Deploying NetSupport RAT via WordPress & ClickFix",
+        "link": "https://www.cybereason.com/blog/net-support-rat-wordpress-clickfix"
       }
     ]
   }

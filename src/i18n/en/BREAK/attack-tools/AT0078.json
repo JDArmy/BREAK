@@ -4,13 +4,16 @@
     "description": "Toolsets targeting blockchain P2P networks and consensus layers. They can construct malicious nodes, generate many node identities, manipulate peer connections, simulate chain reorganizations, hide or delay block propagation, and validate 51 percent, Sybil, eclipse, long-range, or selfish-mining strategies in test or private networks. These tools usually require control of node infrastructure, hash power, stake weight, or network connectivity.",
     "references": [
       {
-        "title": "Bitcoin Eclipse Attacks and Countermeasures"
+        "title": "Bitcoin Eclipse Attacks and Countermeasures",
+        "link": "https://www.usenix.org/conference/usenixsecurity15/technical-sessions/presentation/heilman"
       },
       {
-        "title": "Selfish Mining in Bitcoin"
+        "title": "Selfish Mining in Bitcoin",
+        "link": "https://arxiv.org/abs/1311.0243"
       },
       {
-        "title": "Ethereum Proof-of-Stake Consensus Specifications"
+        "title": "Ethereum Proof-of-Stake Consensus Specifications",
+        "link": "https://github.com/ethereum/consensus-specs"
       }
     ],
     "keywords": [

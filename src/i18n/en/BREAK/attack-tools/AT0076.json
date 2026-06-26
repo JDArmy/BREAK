@@ -4,13 +4,16 @@
     "description": "An automated toolset for discovering, validating, and chaining smart-contract vulnerabilities. It combines bytecode analysis, ABI call construction, transaction simulation, reentrancy and access-control testing, timestamp-dependency checks, and proxy-upgrade path analysis to help attackers locate profitable flaws and generate exploit transactions. Legitimate security teams may use similar capabilities in audits and red-team exercises, while adversaries use them for mainnet asset theft, contract-state manipulation, and vulnerability scanning at scale.",
     "references": [
       {
-        "title": "Trail of Bits Slither"
+        "title": "Trail of Bits Slither",
+        "link": "https://github.com/crytic/slither"
       },
       {
-        "title": "Foundry Ethereum development toolkit"
+        "title": "Foundry Ethereum development toolkit",
+        "link": "https://github.com/foundry-rs/foundry"
       },
       {
-        "title": "Consensys Smart Contract Best Practices"
+        "title": "Consensys Smart Contract Best Practices",
+        "link": "https://consensys.github.io/smart-contract-best-practices/"
       }
     ],
     "keywords": [

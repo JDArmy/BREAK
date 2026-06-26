@@ -14,7 +14,8 @@
     "summary": "The article highlights that attackers can launch attacks on OTA update links of intelligent connected vehicles through hijacking, tampering, or replacement. During the verification process based on signature algorithms, attackers can replace or tamper with the target ECU update package after the vehicle's main controller completes full-package verification and unpacking, achieving malicious update",
     "references": [
       {
-        "title": "A Discussion on OTA Upgrade Security for Intelligent Connected Vehicles"
+        "title": "A Discussion on OTA Upgrade Security for Intelligent Connected Vehicles",
+        "link": "https://new.qq.com/rain/a/20220814A0188Y00"
       }
     ]
   }

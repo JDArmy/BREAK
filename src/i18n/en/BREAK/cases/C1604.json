@@ -14,7 +14,8 @@
     "summary": "A flaw in the Profinet protocol stack implementation allows attackers to trigger a denial-of-service condition by sending crafted network packets, disrupting availability in industrial control systems.",
     "references": [
       {
-        "title": "CVE-2020-3409 Detail"
+        "title": "CVE-2020-3409 Detail",
+        "link": "https://nvd.nist.gov/vuln/detail/CVE-2020-3409"
       }
     ]
   }

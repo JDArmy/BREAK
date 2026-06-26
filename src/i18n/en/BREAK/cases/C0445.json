@@ -14,13 +14,16 @@
     "summary": "In 2016, Newcastle University researchers disclosed the Distributed Guessing Attack. The research showed that attackers could spread guesses across many merchant websites and exploit inconsistent validation fields and weak cross-site failure correlation to enumerate payment card numbers, expiry dates, and CVVs. Visa later identified enumeration, brute force, BIN testing, and card stuffing as account-testing risks in the payment ecosystem.",
     "references": [
       {
-        "title": "How cyber thieves can hack your credit card in seconds"
+        "title": "How cyber thieves can hack your credit card in seconds",
+        "link": "https://www.ncl.ac.uk/press/articles/archive/2016/12/cyberattack/"
       },
       {
-        "title": "Does the Online Card Payment Landscape Unwittingly Facilitate Fraud?"
+        "title": "Does the Online Card Payment Landscape Unwittingly Facilitate Fraud?",
+        "link": "https://eprints.ncl.ac.uk/230123"
       },
       {
-        "title": "Visa Guidance to Guard Against Enumeration Attacks and Account Testing Schemes"
+        "title": "Visa Guidance to Guard Against Enumeration Attacks and Account Testing Schemes",
+        "link": "https://usa.visa.com/content/dam/VCOM/global/support-legal/documents/visa-guidance-to-guard-against-enumeration-attacks.pdf"
       }
     ]
   }

@@ -14,7 +14,8 @@
     "summary": "On October 20, 2022, an attacker took a 40 WBNB flash loan on BSC, swapped into HEALTH tokens on PancakeSwap, and exploited flawed contract price-calculation logic by executing 999 zero-balance transfers. The manipulated token price allowed the attacker to reverse the swap and profit by about 16 BNB, exposing risks in token price update and transfer logic.",
     "references": [
       {
-        "title": "SolidityScan: Health Token Hack Analysis"
+        "title": "SolidityScan: Health Token Hack Analysis",
+        "link": "https://blog.solidityscan.com/health-token-hack-analysis-dad822fbf0/"
       }
     ]
   }

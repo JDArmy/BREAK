@@ -8,10 +8,12 @@
     "usageExample": "An enterprise deploys a honeypot on its internal network to simulate a file server. As soon as someone accesses it, an alert is triggered, helping to detect lateral movement within the network.",
     "references": [
       {
-        "title": "Introduction To Honeypots.md - GitHub"
+        "title": "Introduction To Honeypots.md - GitHub",
+        "link": "https://github.com/jesusgavancho/TryHackMe_and_HackTheBox/blob/master/Introduction%20To%20Honeypots.md"
       },
       {
-        "title": "Honeypots: A Sweet Solution? - SANS"
+        "title": "Honeypots: A Sweet Solution? - SANS",
+        "link": "https://www.sans.org/reading-room/whitepapers/detection/paper/37017"
       }
     ],
     "title": "Honeypot",

@@ -14,7 +14,8 @@
     "summary": "A study on multi-factor authentication uncovers various MFA bypass methods, including exploit-based attacks, man-in-the-middle attacks, data theft, and weaknesses in one-time password distribution. The research identifies brute-forcing tokens as a common attack vector for bypassing MFA.",
     "references": [
       {
-        "title": "Beyond Passwords: The Essence and Impact of Multi-Factor Authentication in Cybersecurity"
+        "title": "Beyond Passwords: The Essence and Impact of Multi-Factor Authentication in Cybersecurity",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11140909/"
       }
     ]
   }

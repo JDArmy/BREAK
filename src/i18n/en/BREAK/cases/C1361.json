@@ -12,10 +12,12 @@
     "summary": "On August 29, 2021, xTokenMarket suffered a flash loan attack exploiting a vulnerability in its xSNX contract. The attacker borrowed assets via a flash loan and leveraged the contract logic flaw to profit within a single transaction.",
     "references": [
       {
-        "title": "Flash Loan Attacks: How They Work & How to Prevent Them"
+        "title": "Flash Loan Attacks: How They Work & How to Prevent Them",
+        "link": "https://hacken.io/discover/flash-loan-attacks/"
       },
       {
-        "title": "xSNX Post Mortem"
+        "title": "xSNX Post Mortem",
+        "link": "https://medium.com/xtoken/xsnx-post-mortem-666d35071f38"
       }
     ]
   }

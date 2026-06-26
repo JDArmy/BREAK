@@ -12,10 +12,12 @@
     "summary": "The Hyperliquid platform suffered a wallet attack resulting in a $21 million loss. Unlike smart contract exploits or exchange breaches, this incident stemmed directly from a private key leak, where the attacker gained direct access to wallet login credentials and transferred the assets.",
     "references": [
       {
-        "title": "$21 Million Vanishes After Hyperliquid Wallet Hack"
+        "title": "$21 Million Vanishes After Hyperliquid Wallet Hack",
+        "link": "https://cryptonews.net/news/security/31772067/"
       },
       {
-        "title": "PeckShieldAlert: Victim Lost ~$21M on Hyperliquid Due to Private Key Leak"
+        "title": "PeckShieldAlert: Victim Lost ~$21M on Hyperliquid Due to Private Key Leak",
+        "link": "https://x.com/PeckShieldAlert/status/1976577386469839269"
       }
     ]
   }

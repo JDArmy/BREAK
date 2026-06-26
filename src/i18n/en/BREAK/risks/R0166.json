@@ -6,7 +6,8 @@
     "influence": "Devices are controlled in bulk, user data is leaked, devices are incorporated into botnets.",
     "references": [
       {
-        "title": "Default Password Lists"
+        "title": "Default Password Lists",
+        "link": "https://github.com/danielmiessler/SecLists/tree/master/Passwords/Default-Credentials"
       }
     ],
     "keywords": [

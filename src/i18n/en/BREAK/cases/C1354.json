@@ -14,10 +14,12 @@
     "summary": "On April 22, 2018, an attacker exploited an integer overflow vulnerability in the batchTransfer function of the BEC smart contract. By passing extremely large values, a multiplication operation overflowed, causing the amount variable to become zero and bypassing balance checks. The attacker generated massive amounts of BEC tokens out of thin air and dumped them on the market, driving the token's v",
     "references": [
       {
-        "title": "Solidity Smart Contract Basic Vulnerability: Integer Overflow - Security KER"
+        "title": "Solidity Smart Contract Basic Vulnerability: Integer Overflow - Security KER",
+        "link": "https://www.anquanke.com/post/id/268535"
       },
       {
-        "title": "New batchOverflow Bug in Multiple ERC20 Smart Contracts (CVE-2018-10299)"
+        "title": "New batchOverflow Bug in Multiple ERC20 Smart Contracts (CVE-2018-10299)",
+        "link": "https://peckshield.medium.com/alert-new-batchoverflow-bug-in-multiple-erc20-smart-contracts-cve-2018-10299-511067db6536"
       }
     ]
   }

@@ -15,10 +15,12 @@
     "summary": "In August 2024, attackers exploited GitHub Actions in CI/CD workflows to steal open-source project tokens from major tech companies including Google, Microsoft, AWS, and Red Hat. These tokens were used to access code repositories and cloud resources, significantly escalating supply chain security risks.",
     "references": [
       {
-        "title": "GitHub Actions Exploited, Token Leak Risk Surges in 14 Popular Open Source Projects_Tencent News"
+        "title": "GitHub Actions Exploited, Token Leak Risk Surges in 14 Popular Open Source Projects_Tencent News",
+        "link": "https://new.qq.com/rain/a/20240815A04M3V00"
       },
       {
-        "title": "Hacking Giants Through a Race Condition in GitHub Actions Artifacts"
+        "title": "Hacking Giants Through a Race Condition in GitHub Actions Artifacts",
+        "link": "https://unit42.paloaltonetworks.com/github-repo-artifacts-leak-tokens/"
       }
     ]
   }

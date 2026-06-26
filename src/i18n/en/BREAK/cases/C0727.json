@@ -13,10 +13,12 @@
     "summary": "NTU and 0G Labs introduced BadSFL, a novel backdoor attack targeting the Scaffold federated learning framework. The attack tampers with the control variates used to correct client drift, turning benign clients into attack accomplices. By leveraging a GAN-enhanced data poisoning strategy, it significantly strengthens backdoor persistence in the global model while maintaining stealth, with the attac",
     "references": [
       {
-        "title": "Mind the Cost of Scaffold! Benign Clients May Even Become Accomplices of Backdoor Attack"
+        "title": "Mind the Cost of Scaffold! Benign Clients May Even Become Accomplices of Backdoor Attack",
+        "link": "https://openaccess.thecvf.com/content/ICCV2025/html/Han_Mind_the_Cost_of_Scaffold_Benign_Clients_May_Even_Become_ICCV_2025_paper.html"
       },
       {
-        "title": "ICCV 2025: Novel Backdoor Attack Targets Scaffold Federated Learning, NTU and 0G Labs Join Forces"
+        "title": "ICCV 2025: Novel Backdoor Attack Targets Scaffold Federated Learning, NTU and 0G Labs Join Forces",
+        "link": "https://new.qq.com/rain/a/20250809A03O5O00"
       }
     ]
   }

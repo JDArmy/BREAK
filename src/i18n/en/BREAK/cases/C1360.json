@@ -15,10 +15,12 @@
     "summary": "On May 8, 2021, Value DeFi's vSwap AMM non-50/50 liquidity pools were exploited in a flash loan attack, resulting in a loss of approximately $11 million. The attacker borrowed a large amount of assets using a flash loan and targeted a vulnerability in the non-proportional pools, completing the profit within a single transaction.",
     "references": [
       {
-        "title": "Belt Flash Loan Attack Aftermath: Total Losses $50 Million, Compensation Plan Within 48 Hours | Loan ..."
+        "title": "Belt Flash Loan Attack Aftermath: Total Losses $50 Million, Compensation Plan Within 48 Hours | Loan ...",
+        "link": "https://www.163.com/dy/article/GBBOAOT30514832I.html"
       },
       {
-        "title": "Value DeFi Incident: Root Cause Analysis"
+        "title": "Value DeFi Incident: Root Cause Analysis",
+        "link": "https://peckshield.medium.com/value-defi-incident-root-cause-analysis-fbab71faf373"
       }
     ]
   }

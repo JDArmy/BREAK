@@ -15,7 +15,8 @@
     "summary": "A US jewelry retailer suffered a sustained carding attack where attackers used multiple browser-simulated bots to attempt purchases with stolen or fake credit card details and randomly generated email addresses. Although the orders were unsuccessful, the high volume of fraudulent transactions put the merchant at risk of being blacklisted by its third-party payment provider, potentially leading to ",
     "references": [
       {
-        "title": "Mitigating Carding for a US-Based Jewellery Company - Indusface"
+        "title": "Mitigating Carding for a US-Based Jewellery Company - Indusface",
+        "link": "https://www.indusface.com/resources/case-studies/mitigating-carding-attacks/"
       }
     ]
   }

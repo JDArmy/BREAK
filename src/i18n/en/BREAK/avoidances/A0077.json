@@ -6,10 +6,12 @@
     "limitation": "The limitations of transaction risk monitoring include: (1) rule strategies need continuous iteration and updates, as new fraud patterns may bypass existing rules; (2) overly strict monitoring strategies may cause legitimate transactions to be incorrectly blocked, affecting user experience; (3) high real-time requirements place strict demands on system performance and stability; (4) detection effectiveness for small-amount dispersed fraud is limited; (5) cross-platform and cross-institution transaction data integration faces barriers.",
     "references": [
       {
-        "title": "Transaction Monitoring Best Practices - ACAMS"
+        "title": "Transaction Monitoring Best Practices - ACAMS",
+        "link": "https://www.acams.org/en/resource/best-practice-guide-transaction-monitoring-effectiveness-matters"
       },
       {
-        "title": "Beijing National FinTech Risk Monitoring Center: Privacy-Preserving Computation for Inter-Institutional Fraud Risk Detection"
+        "title": "Beijing National FinTech Risk Monitoring Center: Privacy-Preserving Computation for Inter-Institutional Fraud Risk Detection",
+        "link": "https://dy.163.com/article/KONLV1280519QIKK.html"
       }
     ],
     "keywords": [

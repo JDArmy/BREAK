@@ -16,10 +16,12 @@
     "summary": "In February 2026, security researchers disclosed a supply chain worm attack campaign dubbed SANDWORM_MODE, which used at least 19 malicious npm packages to harvest credentials and steal cryptocurrency keys. The packages were distributed via typosquatting and possessed capabilities to exfiltrate system information, access tokens, and API keys, while self-propagating by abusing stolen npm and GitHub",
     "references": [
       {
-        "title": "Malicious npm Packages Steal Cryptocurrency Keys and API Tokens - Tencent News"
+        "title": "Malicious npm Packages Steal Cryptocurrency Keys and API Tokens - Tencent News",
+        "link": "https://view.inews.qq.com/a/20260224A03ZQU00"
       },
       {
-        "title": "SANDWORM_MODE: Dissecting a Multi-Stage npm Supply Chain Attack"
+        "title": "SANDWORM_MODE: Dissecting a Multi-Stage npm Supply Chain Attack",
+        "link": "https://www.endorlabs.com/learn/sandworm-mode-dissecting-a-multi-stage-npm-supply-chain-attack"
       }
     ]
   }

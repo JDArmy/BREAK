@@ -12,10 +12,12 @@
     ],
     "references": [
       {
-        "title": "2025 Web3 Security Annual Report: Supply Chain Attacks Become the Largest Threat"
+        "title": "2025 Web3 Security Annual Report: Supply Chain Attacks Become the Largest Threat",
+        "link": "https://news.qq.com/rain/a/20251230A03V4I00"
       },
       {
-        "title": "Blockchain Security: Preventing Threats Before They Strike"
+        "title": "Blockchain Security: Preventing Threats Before They Strike",
+        "link": "https://www.chainalysis.com/blog/blockchain-security/"
       }
     ],
     "description": "Blockchain supply chain attacks target development tools, wallet plugins, SDKs, node components, frontend dependencies, and release processes. Attackers tamper with dependencies, insert backdoors, or take over publisher accounts to deliver malicious logic to downstream Web3 projects.\n\nBecause Web3 applications directly handle keys, signatures, and on-chain assets, supply chain compromise can trigger asset theft, authorization tampering, or sensitive data exposure during normal user interactions.",

@@ -15,7 +15,8 @@
     "summary": "Research reveals that the SBOM generation process for popular programming languages is susceptible to covert manipulation by malicious insiders, rendering the resulting SBOM data untrustworthy. Meanwhile, tools designed to consume SBOMs lack sufficient capability to detect and handle tampered or compromised SBOM data, potentially producing misleading vulnerability reports.",
     "references": [
       {
-        "title": "Supply Chain Insecurity: The Lack of Integrity Protection in SBOM Solutions"
+        "title": "Supply Chain Insecurity: The Lack of Integrity Protection in SBOM Solutions",
+        "link": "https://arxiv.org/abs/2412.05138"
       }
     ]
   }

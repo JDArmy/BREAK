@@ -15,7 +15,8 @@
     "summary": "A 2021 IEEE conference paper introduces Secretation, a scheme that uses decentralized identifiers and verifiable credentials to achieve scalable decentralized secret management. The design ensures that credential forgery remains infeasible even if an attacker controls part of the key shares, because the issuing authority retains control over another share, architecturally preventing identity crede",
     "references": [
       {
-        "title": "Secretation: Toward a decentralised identity and verifiable credentials based scalable and decentralised secret management solution"
+        "title": "Secretation: Toward a decentralised identity and verifiable credentials based scalable and decentralised secret management solution",
+        "link": "https://ieeexplore.ieee.org/abstract/document/9461144/"
       }
     ]
   }

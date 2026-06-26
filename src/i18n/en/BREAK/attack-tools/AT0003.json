@@ -4,7 +4,8 @@
     "description": "An automation tool specifically designed for bulk registration of business accounts. Normal registration requires complex operations such as phone verification and CAPTCHA recognition, making it tedious to register even one account. However, gray/black market actors need large numbers of business accounts to support activities such as traffic inflation, deal abuse, and fraud. Bulk registration tools automate the registration process to quickly register large numbers of accounts. They are typically used in combination with SMS verification code platforms, CAPTCHA solving platforms, and proxy IP pools, forming a complete bulk registration industry chain that automates the entire process from obtaining phone numbers and solving CAPTCHAs to filling in registration information.",
     "references": [
       {
-        "title": "OWASP Automated Threat: OAT-019 Account Creation"
+        "title": "OWASP Automated Threat: OAT-019 Account Creation",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-019_Account_Creation.html"
       }
     ],
     "keywords": [

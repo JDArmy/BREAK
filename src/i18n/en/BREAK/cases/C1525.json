@@ -15,10 +15,12 @@
     "summary": "A hacker who previously targeted the UXLINK project fell victim to a phishing site posing as a white-hat negotiation platform. The attacker signed a malicious smart contract granting unlimited token approval, resulting in the transfer of approximately $48 million in digital assets from their wallet. The exploit leveraged the ERC-20 approve function to trick the user into granting infinite allowanc",
     "references": [
       {
-        "title": "Hackers get 'phished' instead? The security behind the 'evaporation' of $48 million in digital assets on-chain..."
+        "title": "Hackers get 'phished' instead? The security behind the 'evaporation' of $48 million in digital assets on-chain...",
+        "link": "https://cloud.tencent.com/developer/article/2583766"
       },
       {
-        "title": "Scam Sniffer: UXLINK Exploiter Signed Malicious IncreaseAllowance Approval"
+        "title": "Scam Sniffer: UXLINK Exploiter Signed Malicious IncreaseAllowance Approval",
+        "link": "https://x.com/realScamSniffer/status/1970322013597450609"
       }
     ]
   }

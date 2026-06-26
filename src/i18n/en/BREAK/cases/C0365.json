@@ -13,7 +13,8 @@
     "summary": "A study of authentication logs from SSH servers reveals that a high volume of consecutive failed login attempts serves as a typical indicator of brute-force attacks. Attackers employ automated tools to guess credentials by trying various username and password combinations in an attempt to gain server access. This research analyzes attack patterns and detection methods through case studies.",
     "references": [
       {
-        "title": "Who is trying to compromise your SSH server? An analysis of authentication logs and detection of bruteforce attacks"
+        "title": "Who is trying to compromise your SSH server? An analysis of authentication logs and detection of bruteforce attacks",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3427477.3429772"
       }
     ]
   }

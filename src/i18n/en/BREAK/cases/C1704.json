@@ -14,7 +14,8 @@
     "summary": "A GitHub security project describes consent phishing techniques where attackers send phishing links requesting targets to grant access to sensitive data or perform critical operations. This technique is cataloged in the browser identity attacks matrix and represents a typical abuse of the OAuth authorization mechanism.",
     "references": [
       {
-        "title": "Consent phishing - browser-identity-attacks-matrix - GitHub"
+        "title": "Consent phishing - browser-identity-attacks-matrix - GitHub",
+        "link": "https://github.com/pushsecurity/saas-attacks/blob/main/techniques/consent_phishing/description.md"
       }
     ]
   }

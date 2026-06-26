@@ -15,7 +15,8 @@
     "summary": "A research team discovered 1,207 bypass vulnerabilities across five mainstream WAFs, including AWS, Azure, Cloud Armor, Cloudflare, and ModSecurity, through fuzz testing. Attackers exploited parsing discrepancies in HTTP request headers and chunked content between the WAF and backend servers, using non-malicious components to successfully bypass WAF rules.",
     "references": [
       {
-        "title": "WAFFLED: Exploiting Parsing Discrepancies to Bypass Web Application ..."
+        "title": "WAFFLED: Exploiting Parsing Discrepancies to Bypass Web Application ...",
+        "link": "https://arxiv.org/html/2503.10846v1"
       }
     ]
   }

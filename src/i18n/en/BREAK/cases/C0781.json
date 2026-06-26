@@ -14,10 +14,12 @@
     "summary": "In May 2026, GitHub suffered a breach where attackers compromised an employee device to gain internal access, resulting in the leak of data from 3,800 code repositories. The malicious payload implanted was a dropper configured to fetch a second-stage payload from an external server, assessed as a malware variant linked to the previous guardrails-ai package compromise.",
     "references": [
       {
-        "title": "GitHub official statement on TeamPCP claims involving about 3,800 internal repositories"
+        "title": "GitHub official statement on TeamPCP claims involving about 3,800 internal repositories",
+        "link": "https://x.com/github/status/2056949169701720157"
       },
       {
-        "title": "GitHub Breached — Employee Device Hack Led to Exfiltration of 3,800 ..."
+        "title": "GitHub Breached — Employee Device Hack Led to Exfiltration of 3,800 ...",
+        "link": "https://thehackernews.com/2026/05/github-investigating-teampcp-claimed.html"
       }
     ]
   }

@@ -148,6 +148,10 @@ for (const category of categories) {
         if (hasChineseText(enReference?.title)) {
           issues.push(`${category.name}.${id}.references[${index}].title: English reference title contains Chinese text`);
         }
+        // 检查英文 references 是否包含 link
+        if (zhReference.link && (!enReference || !enReference.link)) {
+          issues.push(`${category.name}.${id}.references[${index}].link: missing English reference link`);
+        }
       }
 
       if (category.checkBusinessSceneNestedTitles) {

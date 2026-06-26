@@ -15,7 +15,8 @@
     "summary": "In March 2023, scammers sent phishing emails with the subject \"Limited-Time OpenAI DEFI Token Airdrop\" using a spoofed OpenAI domain (openai.com-token.info), tricking users into connecting cryptocurrency wallets like MetaMask or WalletConnect. Once connected, the phishing site automatically transferred all cryptocurrency and NFT assets from the user's wallet to the attacker's wallet.",
     "references": [
       {
-        "title": "Tenable: OpenAI's ChatGPT and GPT-4 used as lure in fake token airdrop phishing scams"
+        "title": "Tenable: OpenAI's ChatGPT and GPT-4 used as lure in fake token airdrop phishing scams",
+        "link": "https://www.tenable.com/blog/openai-chatgpt-and-gpt-4-used-as-lure-in-phishing-scams-to-promote-fake-token-airdrop"
       }
     ]
   }

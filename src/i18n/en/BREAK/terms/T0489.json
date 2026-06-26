@@ -9,10 +9,12 @@
     "usageExample": "A DeFi protocol utilizes smart contracts to manage lending logic, where users automatically receive loan quota upon depositing collateral without requiring manual review.",
     "references": [
       {
-        "title": "Introduction to Smart Contracts - Ethereum"
+        "title": "Introduction to Smart Contracts - Ethereum",
+        "link": "https://ethereum.org/en/developers/docs/smart-contracts/"
       },
       {
-        "title": "A guide to smart contract security best practices - GitHub"
+        "title": "A guide to smart contract security best practices - GitHub",
+        "link": "https://github.com/Consensys/smart-contract-best-practices"
       }
     ],
     "title": "Smart Contract",

@@ -14,7 +14,8 @@
     "summary": "A paper presented at USENIX NSDI '19 introduces CAUDIT, a system for continuously auditing SSH servers to mitigate brute-force attacks. The research highlights that credential guessing traffic constitutes the majority of attack attempts. By detecting anomalous login behavior to defend against credential stuffing, the system achieves an approximate 100-fold reduction in attack attempts.",
     "references": [
       {
-        "title": "{CAUDIT}: Continuous auditing of {SSH} servers to mitigate {Brute-Force} attacks"
+        "title": "{CAUDIT}: Continuous auditing of {SSH} servers to mitigate {Brute-Force} attacks",
+        "link": "https://www.usenix.org/conference/nsdi19/presentation/cao"
       }
     ]
   }

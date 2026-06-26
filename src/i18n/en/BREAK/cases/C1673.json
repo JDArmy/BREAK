@@ -14,7 +14,8 @@
     "summary": "A threat-oriented study reveals that credential leaks in CI/CD pipelines stem from API misuse and YAML misconfigurations. Attackers inject malicious code through supply chain attacks and exploit the exposed credentials for lateral penetration.",
     "references": [
       {
-        "title": "A Threat-Oriented Study of API Security Challenges in CI/CD Pipelines"
+        "title": "A Threat-Oriented Study of API Security Challenges in CI/CD Pipelines",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11331540/"
       }
     ]
   }

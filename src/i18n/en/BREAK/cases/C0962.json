@@ -14,7 +14,8 @@
     "summary": "Research indicates that attackers can better evade detection by launching malicious activities through clusters of multiple IP addresses. Traditional IP blacklists are often incomplete and suffer from update delays. Attackers exploit this limitation by rotating or distributing IP addresses, making it difficult for individual malicious IPs to be blocklisted, thereby bypassing blocking.",
     "references": [
       {
-        "title": "(Un)wisdom of Crowds: Accurately Spotting Malicious IP Clusters Using Not-So-Accurate IP Blacklists"
+        "title": "(Un)wisdom of Crowds: Accurately Spotting Malicious IP Clusters Using Not-So-Accurate IP Blacklists",
+        "link": "https://ieeexplore.ieee.org/abstract/document/7839928/"
       }
     ]
   }

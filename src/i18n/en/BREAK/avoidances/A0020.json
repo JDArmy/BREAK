@@ -6,7 +6,8 @@
     "limitation": "Account penalties are a loss-mitigation strategy with a certain degree of latency.",
     "references": [
       {
-        "title": "OWASP Blocking Brute Force Attacks"
+        "title": "OWASP Blocking Brute Force Attacks",
+        "link": "https://owasp.org/www-community/controls/Blocking_Brute_Force_Attacks"
       }
     ],
     "keywords": [
@@ -25,7 +26,8 @@
     "limitation": "Store penalties are a loss-mitigation strategy with a certain degree of latency.",
     "references": [
       {
-        "title": "Interpretation of the Personal Fine System"
+        "title": "Interpretation of the Personal Fine System",
+        "link": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/xwxcs/art/2023/art_36461cc80e004ad0afa7daef05ee1f9e.html"
       }
     ],
     "keywords": [
@@ -44,7 +46,8 @@
     "limitation": "Limitations include the potential to cause employee dissatisfaction and affect the work environment. Compliance must be ensured to guard against legal action. Therefore, fair, clear, and consistently enforced strategies must be developed in alignment with relevant regulations and company policies.",
     "references": [
       {
-        "title": "Ministry of Public Security Releases Top 10 Financial Black-Grey Market Crime Cases"
+        "title": "Ministry of Public Security Releases Top 10 Financial Black-Grey Market Crime Cases",
+        "link": "https://www.thepaper.cn/tag/7200885"
       }
     ],
     "keywords": [
@@ -63,7 +66,8 @@
     "limitation": "Account banning is a loss-mitigation strategy with a certain degree of latency.",
     "references": [
       {
-        "title": "Account Lockout - NIST SP 800-53"
+        "title": "Account Lockout - NIST SP 800-53",
+        "link": "https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final"
       }
     ],
     "keywords": [

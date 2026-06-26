@@ -16,7 +16,8 @@
     "summary": "This study presents a smart detector designed to identify eclipse attacks in the Ethereum network. Eclipse attacks allow malicious actors to isolate a system user by controlling all outgoing connections, and such attacks are difficult to detect in blockchain applications. The proposed detector aims to address this challenge, helping users recognize whether they are being isolated by an eclipse att",
     "references": [
       {
-        "title": "Eclipse Attacks on Bitcoin's Peer-to-Peer Network - ACM Digital Library"
+        "title": "Eclipse Attacks on Bitcoin's Peer-to-Peer Network - ACM Digital Library",
+        "link": "https://www.sciencedirect.com/science/article/abs/pii/S0167404818313798"
       }
     ]
   }

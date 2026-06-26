@@ -9,10 +9,12 @@
     "usageExample": "An attacker spoofed the CEO's email address and sent an urgent payment request to the finance director, instructing an immediate wire transfer to complete a confidential acquisition. The finance employee, without verifying the request through an out-of-band channel, authorized the transfer, resulting in a loss of $5 million.",
     "references": [
       {
-        "title": "Business Email Compromise - FBI"
+        "title": "Business Email Compromise - FBI",
+        "link": "https://www.fbi.gov/how-we-can-help-you/scams-and-safety/common-frauds-and-scams/business-email-compromise"
       },
       {
-        "title": "What is a Whaling Attack? - Fortinet"
+        "title": "What is a Whaling Attack? - Fortinet",
+        "link": "https://www.fortinet.com/resources/cyberglossary/whaling-attack"
       }
     ],
     "title": "Whaling Attack",

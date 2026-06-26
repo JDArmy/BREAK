@@ -6,10 +6,12 @@
     "influence": "Directly causes account security defenses to be breached, enterprise core systems and data can be accessed without authorization, and traditional MFA protection becomes ineffective.",
     "references": [
       {
-        "title": "CrowdStrike 2026 Global Threat Report"
+        "title": "CrowdStrike 2026 Global Threat Report",
+        "link": "https://www.crowdstrike.com/global-threat-report/"
       },
       {
-        "title": "CISA MFA Implementation Guidance"
+        "title": "CISA MFA Implementation Guidance",
+        "link": "https://www.cisa.gov/"
       }
     ],
     "keywords": [

@@ -6,7 +6,8 @@
     "limitation": "Cost issues: improving service availability requires significant investment in human, material, and financial resources, which may increase enterprise costs. Technical issues: in some cases, technical limitations may affect service availability — for example, some applications may not be able to seamlessly switch between multiple data centers. Human factors: human factors may also affect service availability, such as human error and malicious attacks.",
     "references": [
       {
-        "title": "High Availability - Wikipedia"
+        "title": "High Availability - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/High_availability"
       }
     ],
     "keywords": [
@@ -25,7 +26,8 @@
     "limitation": "This is complementary to business system optimization (A008-004). Adding computing resources can quickly resolve availability issues but will significantly increase operating costs.",
     "references": [
       {
-        "title": "Auto Scaling - Wikipedia"
+        "title": "Auto Scaling - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Autoscaling"
       }
     ],
     "keywords": [
@@ -44,7 +46,8 @@
     "limitation": "Existing DDoS protection systems have limited effectiveness against CC attacks and need to be combined with cloud-side anti-crawling (A003) and other measures.",
     "references": [
       {
-        "title": "Denial of Service Attack - Wikipedia"
+        "title": "Denial of Service Attack - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Denial-of-service_attack"
       }
     ],
     "keywords": [
@@ -63,7 +66,8 @@
     "limitation": "Caching acceleration is effective for static resources but does not help with dynamic resources.",
     "references": [
       {
-        "title": "What is Amazon CloudFront? - AWS Documentation"
+        "title": "What is Amazon CloudFront? - AWS Documentation",
+        "link": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html"
       }
     ],
     "keywords": [
@@ -82,7 +86,8 @@
     "limitation": "Has a long implementation cycle; suitable for long-term planning but not a quick fix. Requires significant R&D investment.",
     "references": [
       {
-        "title": "Business Continuity - Wikipedia"
+        "title": "Business Continuity - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Business_continuity"
       }
     ],
     "keywords": [
@@ -101,7 +106,8 @@
     "limitation": "For resources that can yield high returns, it is difficult to directly solve resource scarcity by simply increasing supply.",
     "references": [
       {
-        "title": "Cloud Computing - Wikipedia"
+        "title": "Cloud Computing - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Cloud_computing"
       }
     ],
     "keywords": [

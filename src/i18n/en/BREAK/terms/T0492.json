@@ -9,10 +9,12 @@
     "usageExample": "A DeFi protocol's DAO community votes on whether to launch a new feature; once the proposal passes, the smart contract automatically executes the upgrade.",
     "references": [
       {
-        "title": "Introduction to DAOs - Ethereum"
+        "title": "Introduction to DAOs - Ethereum",
+        "link": "https://ethereum.org/en/dao/"
       },
       {
-        "title": "The DAO Canon - a16z crypto"
+        "title": "The DAO Canon - a16z crypto",
+        "link": "https://a16zcrypto.com/posts/article/dao-canon/"
       }
     ],
     "title": "DAO",

@@ -16,7 +16,8 @@
     "summary": "This study highlights that sensitive data such as eye tracking used in XR systems is vulnerable to membership inference and re-identification attacks, which can be exploited to infer and leak personal information. It proposes a defense framework combining explainable AI and differential privacy, validated through deployment on an HTC VIVE Pro headset.",
     "references": [
       {
-        "title": "PrivateXR: Defending Privacy Attacks in Extended Reality Through..."
+        "title": "PrivateXR: Defending Privacy Attacks in Extended Reality Through...",
+        "link": "https://arxiv.org/abs/2512.16851v1"
       }
     ]
   }

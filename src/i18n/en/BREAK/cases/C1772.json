@@ -15,7 +15,8 @@
     "summary": "In the Capital One data breach, an attacker exploited a misconfigured ModSecurity WAF reverse proxy combined with a server-side request forgery vulnerability to bypass the firewall and access sensitive data stored in AWS S3 buckets, resulting in a large-scale data leak. The incident highlights how WAF misconfiguration can become a critical link in the attack chain.",
     "references": [
       {
-        "title": "A Systematic Analysis of the Capital One Data Breach"
+        "title": "A Systematic Analysis of the Capital One Data Breach",
+        "link": "https://dl.acm.org/doi/full/10.1145/3546068"
       }
     ]
   }

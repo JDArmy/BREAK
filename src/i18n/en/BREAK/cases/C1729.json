@@ -14,7 +14,8 @@
     "summary": "This study exposes an ad fraud technique called Ghost Click. Attackers inject a server-side script (e.g., 123.php) into web pages visited by victims. Whenever a user performs a normal click, the script triggers a fraudulent ad click in the background, effectively hijacking genuine user interactions to steal ad attribution revenue.",
     "references": [
       {
-        "title": "Dissecting ghost clicks: Ad fraud via misdirected human clicks"
+        "title": "Dissecting ghost clicks: Ad fraud via misdirected human clicks",
+        "link": "https://dl.acm.org/doi/abs/10.1145/2420950.2420954"
       }
     ]
   }

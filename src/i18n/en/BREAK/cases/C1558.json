@@ -14,7 +14,8 @@
     "summary": "ERC-4337 EntryPoint v0.9 introduces a change where initCode is silently ignored instead of reverting if the account already exists. The official warning states that contracts previously assuming non-zero initCode indicates a first-time UserOperation will no longer hold, potentially affecting the security of account contracts relying on the old behavior.",
     "references": [
       {
-        "title": "Releases · eth-infinitism/account-abstraction - GitHub"
+        "title": "Releases · eth-infinitism/account-abstraction - GitHub",
+        "link": "https://github.com/eth-infinitism/account-abstraction/releases"
       }
     ]
   }

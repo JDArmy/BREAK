@@ -9,10 +9,12 @@
     "usageExample": "A user transferring tokens on Ethereum typically pays approximately $5-50 in gas fees, while complex DeFi interactions such as multi-hop swaps, yield farming operations, or flash loan executions may incur gas fees exceeding $100 during periods of network congestion.",
     "references": [
       {
-        "title": "Gas and Fees - Ethereum"
+        "title": "Gas and Fees - Ethereum",
+        "link": "https://ethereum.org/en/developers/docs/gas/"
       },
       {
-        "title": "Ethereum Gas Tracker - Etherscan"
+        "title": "Ethereum Gas Tracker - Etherscan",
+        "link": "https://etherscan.io/gastracker"
       }
     ],
     "title": "Gas Fee",

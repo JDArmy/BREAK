@@ -15,7 +15,8 @@
     "summary": "A security incident involving the compromise of a Global Administrator account, impacting identity, security, and compliance posture. Immediate tenant security validation is required, highlighting the severe consequences of high-privilege account takeover.",
     "references": [
       {
-        "title": "Security Incident – Global Administrator Access Compromised ..."
+        "title": "Security Incident – Global Administrator Access Compromised ...",
+        "link": "https://learn.microsoft.com/en-us/answers/questions/5858419/security-incident-global-administrator-access-comp"
       }
     ]
   }

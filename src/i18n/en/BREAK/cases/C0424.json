@@ -13,7 +13,8 @@
     "summary": "QRLJacking is a social engineering attack vector that affects applications relying on QR code login. Attackers trick victims into scanning an attacker-controlled QR code, leading to session hijacking and unauthorized account access.",
     "references": [
       {
-        "title": "Qrljacking - OWASP Foundation"
+        "title": "Qrljacking - OWASP Foundation",
+        "link": "https://owasp.org/www-community/attacks/Qrljacking"
       }
     ]
   }

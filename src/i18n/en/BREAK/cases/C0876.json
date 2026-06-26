@@ -16,7 +16,8 @@
     "summary": "A 2021 IEEE Symposium on Security and Privacy paper systematically examines cryptojacking malware, revealing that banking servers, government and military infrastructure, YouTube, Nintendo, and Zoom have all been victims of cryptojacking attacks where adversaries exploit server computing resources to mine cryptocurrency without authorization.",
     "references": [
       {
-        "title": "SoK: cryptojacking malware"
+        "title": "SoK: cryptojacking malware",
+        "link": "https://ieeexplore.ieee.org/abstract/document/9581251/"
       }
     ]
   }

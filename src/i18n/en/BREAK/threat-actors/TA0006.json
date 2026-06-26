@@ -4,7 +4,8 @@
     "description": "In the gray/black market, crowdsourced workers are large numbers of individuals organized or hired to participate in illegal activities through online platforms. Their tasks often include fraudulent activities such as installing specific software for arbitrage, clicking ad links, or making purchases for fake orders. This form of illegal crowdsourcing enables fraud at scale, posing serious challenges to legitimate businesses and digital platforms.",
     "references": [
       {
-        "title": "OWASP Automated Threats to Web Applications"
+        "title": "OWASP Automated Threats to Web Applications",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/"
       }
     ],
     "keywords": [
@@ -20,7 +21,8 @@
     "description": "Individuals hired or organized to manually or automatically break CAPTCHAs, bypassing access restrictions to mass-register accounts or carry out other illegal activities such as malicious promotion, fraud, and spam registration.",
     "references": [
       {
-        "title": "OAT-009 CAPTCHA Defeat - OWASP"
+        "title": "OAT-009 CAPTCHA Defeat - OWASP",
+        "link": "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-009_CAPTCHA_Defeat"
       }
     ],
     "keywords": [
@@ -36,7 +38,8 @@
     "description": "Individuals hired or organized specifically to break voice CAPTCHAs. They analyze audio content manually or with technical tools to bypass voice-based security verification, enabling malicious promotion, fraud, or other illegal activities that require circumventing voice CAPTCHAs.",
     "references": [
       {
-        "title": "SMS PVA: Underground Service for Cybercriminals"
+        "title": "SMS PVA: Underground Service for Cybercriminals",
+        "link": "https://www.trendmicro.com/en_us/research/22/b/sms-pva-cybercriminals-part-2.html"
       }
     ],
     "keywords": [
@@ -52,7 +55,8 @@
     "description": "Individuals who serve money laundering operations by conducting fictitious transactions and other means to obscure the origin of illicit funds, making them appear legitimate. Their activities may span financial systems, e-commerce platforms, virtual currencies, and other domains, making it significantly harder for law enforcement to detect illegal fund flows.",
     "references": [
       {
-        "title": "Case Study: Operating a Money Laundering Platform for Cyber Black-Grey Market Merchants"
+        "title": "Case Study: Operating a Money Laundering Platform for Cyber Black-Grey Market Merchants",
+        "link": "https://news.qq.com/rain/a/20241224A07GZB00"
       }
     ],
     "keywords": [

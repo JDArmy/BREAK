@@ -16,7 +16,8 @@
     "summary": "First appearing on the dark web in 2024 and remaining active through 2025, VoidProxy is a phishing-as-a-service (PhaaS) platform with real-time session relay capabilities. It uses an AI-driven proxy architecture to clone legitimate login pages, relay user authentication sessions, and capture session tokens and cookies, successfully bypassing MFA mechanisms based on SMS, TOTP, and push notification",
     "references": [
       {
-        "title": "Analysis and Defense Strategy Research on MFA Bypass Mechanisms Under the VoidProxy Attack Paradigm"
+        "title": "Analysis and Defense Strategy Research on MFA Bypass Mechanisms Under the VoidProxy Attack Paradigm",
+        "link": "https://dy.163.com/article/KD91U3C40556CG2E.html"
       }
     ]
   }

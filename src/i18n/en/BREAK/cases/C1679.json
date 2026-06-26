@@ -16,10 +16,12 @@
     "summary": "In June 2026, a malicious campaign dubbed Hades uploaded 19 poisoned packages to PyPI. These packages contained a credential stealer and could abuse developers' OIDC trust configurations to push trojanized versions of PyPI packages onto compromised systems, enabling lateral spread. The attacker tampered with package contents to implant backdoors into the build artifacts of Python projects using th",
     "references": [
       {
-        "title": "Hades PyPI Attack: 19 Packages Poisoned to Auto-Run Bun Credential Stealer"
+        "title": "Hades PyPI Attack: 19 Packages Poisoned to Auto-Run Bun Credential Stealer",
+        "link": "https://thehackernews.com/2026/06/hades-pypi-attack-19-packages-poisoned.html"
       },
       {
-        "title": "Shai-Hulud “Hades” Wave Hits Six PyPI Bioinformatics Packages via Trusted Publishing"
+        "title": "Shai-Hulud “Hades” Wave Hits Six PyPI Bioinformatics Packages via Trusted Publishing",
+        "link": "https://www.endorlabs.com/learn/shai-hulud-hades-wave-hits-six-pypi-bioinformatics-packages"
       }
     ]
   }

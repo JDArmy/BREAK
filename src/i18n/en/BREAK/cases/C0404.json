@@ -16,7 +16,8 @@
     "summary": "Microsoft security researchers discovered that attackers used adversary-in-the-middle (AiTM) phishing sites to steal user session cookies. Even when the targeted organization had multi-factor authentication (MFA) enabled, attackers could use the stolen cookies containing MFA claims to bypass authentication and directly access user accounts. The attackers then accessed finance-related emails and fi",
     "references": [
       {
-        "title": "From Cookie Theft to BEC: Attackers Use AiTM Phishing Sites as Entry..."
+        "title": "From Cookie Theft to BEC: Attackers Use AiTM Phishing Sites as Entry...",
+        "link": "https://www.microsoft.com/en-us/security/blog/2022/07/12/from-cookie-theft-to-bec-attackers-use-aitm-phishing-sites-as-entry-point-to-further-financial-fraud/"
       }
     ]
   }

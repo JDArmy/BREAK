@@ -16,7 +16,8 @@
     "summary": "VicOne researchers describe how attackers can create fake nodes in a V2X network by using software-defined radio or by relaying V2X messages through road or telecom infrastructure. Such ghost vehicles can mimic plausible mobility patterns and use messages such as Basic Safety Messages (BSMs) to influence nearby vehicle decisions, creating a high-risk connected-vehicle and autonomous-driving attack scenario.",
     "references": [
       {
-        "title": "Vehicle Networking Technology: Enhancing Mobility and Safety, but Also Attracting Cyberattacks?"
+        "title": "Vehicle Networking Technology: Enhancing Mobility and Safety, but Also Attracting Cyberattacks?",
+        "link": "https://vicone.com/zh/blog/v2x-technology-inviting-cyberattacks-while-enhancing-mobility-and-safety/"
       }
     ]
   }

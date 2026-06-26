@@ -15,10 +15,12 @@
     "summary": "In November 2017, a self-destruct function vulnerability in the multisig contract library used by Parity Wallet was accidentally triggered, causing approximately 510,000 ETH (worth around $150 million at the time) to be permanently locked in the contract. With no upgrade mechanism designed into the contract, the flaw could not be fixed and the funds became irretrievable, making it a classic disast",
     "references": [
       {
-        "title": "A major vulnerability has frozen hundreds of millions of dollars of Ethereum"
+        "title": "A major vulnerability has frozen hundreds of millions of dollars of Ethereum",
+        "link": "https://techcrunch.com/2017/11/07/a-major-vulnerability-has-frozen-hundreds-of-millions-of-dollars-of-ethereum/"
       },
       {
-        "title": "A Postmortem on the Parity Multi-Sig Library Self-Destruct"
+        "title": "A Postmortem on the Parity Multi-Sig Library Self-Destruct",
+        "link": "https://medium.com/paritytech/a-postmortem-on-the-parity-multi-sig-library-self-destruct-63daca3a4cf7"
       }
     ]
   }

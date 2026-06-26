@@ -15,10 +15,12 @@
     "summary": "Security researchers have identified a sharp increase in malicious PyPI and npm packages designed to steal developer credentials, CI/CD data, and cryptocurrency wallets. The campaigns target macOS systems, AI workflows, and cloud environment configurations, compromising open-source package registries to execute software supply chain attacks that pose a severe threat to DevOps pipelines relying on ",
     "references": [
       {
-        "title": "PyPI, npm, and AI Tools Exploited in Malware Surge Targeting DevOps and ..."
+        "title": "PyPI, npm, and AI Tools Exploited in Malware Surge Targeting DevOps and ...",
+        "link": "https://thehackernews.com/2025/06/malicious-pypi-package-masquerades-as.html"
       },
       {
-        "title": "Multiple Malicious Packages Discovered on PyPI, npm, and RubyGems"
+        "title": "Multiple Malicious Packages Discovered on PyPI, npm, and RubyGems",
+        "link": "https://cloudsmith.com/blog/multiple-malicious-packages-discovered-on-pypi-npm-and-rubygems"
       }
     ]
   }

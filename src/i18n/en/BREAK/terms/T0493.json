@@ -8,10 +8,12 @@
     "usageExample": "A user executes token swaps on Arbitrum, a Layer2 network, benefiting from low gas fees and fast confirmations, while the final state is batched and submitted to the Ethereum mainnet for settlement.",
     "references": [
       {
-        "title": "Layer 2 Scaling - Ethereum"
+        "title": "Layer 2 Scaling - Ethereum",
+        "link": "https://ethereum.org/en/layer-2/"
       },
       {
-        "title": "L2BEAT - Layer 2 Analytics"
+        "title": "L2BEAT - Layer 2 Analytics",
+        "link": "https://l2beat.com/"
       }
     ],
     "title": "Layer2",

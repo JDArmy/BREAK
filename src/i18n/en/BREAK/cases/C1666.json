@@ -14,7 +14,8 @@
     "summary": "In a GitHub community discussion, developers examined the reliability of relying solely on the X-GitHub-Delivery request header to prevent webhook replay attacks. The header provides a unique ID for each event for tracking purposes, but without additional validation mechanisms, an attacker could replay captured valid webhook requests to trigger duplicate operations.",
     "references": [
       {
-        "title": "Should We Trust `X-GitHub-Delivery` for Replay Attack Prevention"
+        "title": "Should We Trust `X-GitHub-Delivery` for Replay Attack Prevention",
+        "link": "https://github.com/orgs/community/discussions/136297"
       }
     ]
   }

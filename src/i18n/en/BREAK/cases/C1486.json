@@ -14,7 +14,8 @@
     "summary": "In permissionless blockchain systems like Bitcoin, light clients rely on peer-to-peer networks to receive transactions. If a client fails to connect to at least one honest node, it becomes vulnerable to an eclipse attack, where the adversary controls all its connections and feeds it a malicious forked blockchain view. This can lead to catastrophic business decisions based on distorted transaction ",
     "references": [
       {
-        "title": "Decentralized Lightweight Detection of Eclipse Attacks on Bitcoin Clients"
+        "title": "Decentralized Lightweight Detection of Eclipse Attacks on Bitcoin Clients",
+        "link": "https://ieeexplore.ieee.org/abstract/document/9284663/"
       }
     ]
   }

@@ -6,7 +6,8 @@
     "limitation": "The biggest problem with proxy detection is that normal users may also use proxies, making false positives easy.",
     "references": [
       {
-        "title": "Proxy Server - Wikipedia"
+        "title": "Proxy Server - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Proxy_server"
       }
     ],
     "keywords": [
@@ -22,7 +23,8 @@
     "limitation": "Because web access proxy detection ultimately relies on analyzing terminal request information, placing this measure in a high-adversarial context makes it easy to bypass by forging and modifying data.",
     "references": [
       {
-        "title": "Proxy, Technique T1090 - MITRE ATT&CK"
+        "title": "Proxy, Technique T1090 - MITRE ATT&CK",
+        "link": "https://attack.mitre.org/techniques/T1090/"
       }
     ],
     "keywords": [
@@ -38,7 +40,8 @@
     "limitation": "Network proxy detection has the following limitations: first, normal users may also use network proxies, making false positives easy; second, using mobile carrier egress IPs as proxies makes blocking difficult even when detected; third, using ADSL dial-up networks as proxies allows immediate switching to a new proxy by re-dialing after being blocked.",
     "references": [
       {
-        "title": "Proxy, Technique T1090 - MITRE ATT&CK"
+        "title": "Proxy, Technique T1090 - MITRE ATT&CK",
+        "link": "https://attack.mitre.org/techniques/T1090/"
       }
     ],
     "keywords": [

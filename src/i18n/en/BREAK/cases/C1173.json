@@ -14,10 +14,12 @@
     "summary": "In January 2023, security researchers discovered a business logic flaw in Ferrari's system at api.ferrari.com, where JS code on a dealer test site exposed API keys. Attackers could use the keys to access backend user management interfaces, create super admin accounts, and then view, modify, or delete all customer information and manage CMS functions.",
     "references": [
       {
-        "title": "Summary of Major Automotive Cybersecurity Incidents in 2023 - Tencent News"
+        "title": "Summary of Major Automotive Cybersecurity Incidents in 2023 - Tencent News",
+        "link": "https://new.qq.com/rain/a/20240115A00XJK00"
       },
       {
-        "title": "Sam Curry: Web Hackers vs. The Auto Industry"
+        "title": "Sam Curry: Web Hackers vs. The Auto Industry",
+        "link": "https://samcurry.net/web-hackers-vs-the-auto-industry"
       }
     ]
   }

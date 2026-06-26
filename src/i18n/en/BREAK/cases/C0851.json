@@ -16,7 +16,8 @@
     "summary": "Microsoft Defender Research observed a large-scale credential harvesting campaign using 'code of conduct'-themed lures and a multi-stage attack chain. The attackers distributed fully authenticated emails from attacker-controlled domains via legitimate email services, targeting over 35,000 users across more than 13,000 organizations in 26 countries to steal authentication tokens.",
     "references": [
       {
-        "title": "Breaking the Code: Multi-stage 'Code of Conduct' Phishing Campaign"
+        "title": "Breaking the Code: Multi-stage 'Code of Conduct' Phishing Campaign",
+        "link": "https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/"
       }
     ]
   }

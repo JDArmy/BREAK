@@ -13,7 +13,8 @@
     "summary": "This literature investigates the use of electromagnetic side-channel analysis techniques to examine the security of IoT devices. It highlights that IoT devices significantly expand the attack surface, as attackers can extract sensitive information by analyzing physical characteristics such as electromagnetic radiation emitted during device operation, posing a serious threat to IoT security.",
     "references": [
       {
-        "title": "Electromagnetic side-channel attacks - ACM Digital Library"
+        "title": "Electromagnetic side-channel attacks - ACM Digital Library",
+        "link": "https://dl.acm.org/doi/10.1145/3236454.3236512"
       }
     ]
   }

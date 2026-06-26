@@ -14,7 +14,8 @@
     "summary": "Researchers tested and found that deep learning models used for COVID-19 diagnosis are vulnerable to adversarial example attacks. By adding carefully crafted perturbations, attackers can cause IoMT diagnostic systems based on CT scans or X-ray images to misclassify inputs, for instance misjudging a masked person as unmasked, leading to incorrect diagnostic outcomes.",
     "references": [
       {
-        "title": "Adversarial Examples—Security Threats to COVID-19 Deep Learning Systems in Medical IoT Devices"
+        "title": "Adversarial Examples—Security Threats to COVID-19 Deep Learning Systems in Medical IoT Devices",
+        "link": "https://ieeexplore.ieee.org/abstract/document/9154468/"
       }
     ]
   }

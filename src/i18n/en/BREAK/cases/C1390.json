@@ -14,10 +14,12 @@
     "summary": "In October 2016, the Mirai botnet launched a massive DDoS attack against DNS provider Dyn by leveraging numerous compromised IoT devices such as IP cameras and home routers, causing widespread internet outages across the US East Coast and disrupting major sites like Twitter and Netflix.",
     "references": [
       {
-        "title": "Mirai (malware) - Wikipedia"
+        "title": "Mirai (malware) - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Mirai_(malware)"
       },
       {
-        "title": "Understanding the Mirai Botnet"
+        "title": "Understanding the Mirai Botnet",
+        "link": "https://www.usenix.org/conference/usenixsecurity17/technical-sessions/presentation/antonakakis"
       }
     ]
   }

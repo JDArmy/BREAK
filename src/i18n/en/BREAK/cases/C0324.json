@@ -14,7 +14,8 @@
     "summary": "Microsoft observed phishing attacks exploiting OAuth redirect abuse. Attackers send phishing links to victims, which trigger an OAuth authorization flow upon clicking, tricking users into granting permissions to malicious applications. This method can be used for data theft or malware distribution, exploiting user trust in third-party logins to bypass existing security verifications.",
     "references": [
       {
-        "title": "OAuth redirection abuse enables phishing and malware delivery"
+        "title": "OAuth redirection abuse enables phishing and malware delivery",
+        "link": "https://www.microsoft.com/en-us/security/blog/2026/03/02/oauth-redirection-abuse-enables-phishing-malware-delivery/"
       }
     ]
   }

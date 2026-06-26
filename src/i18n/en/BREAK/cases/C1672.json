@@ -13,7 +13,8 @@
     "summary": "A study found that a large number of open-source software projects leak credentials in their CI/CD pipelines. Through real-world attack cases, the research demonstrates how leaked credentials can be exploited, revealing the widespread risks of credential management in CI/CD pipelines.",
     "references": [
       {
-        "title": "Ambush from All Sides: Understanding Security Threats in Open-Source Software CI/CD Pipelines"
+        "title": "Ambush from All Sides: Understanding Security Threats in Open-Source Software CI/CD Pipelines",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10061526/"
       }
     ]
   }

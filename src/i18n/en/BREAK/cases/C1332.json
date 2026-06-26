@@ -16,10 +16,12 @@
     "summary": "In March 2026, Microsoft disclosed a ClickFix attack campaign where attackers abused Windows Terminal to trick users into executing malicious commands. The campaign used fake system errors or verification prompts to instruct users to copy and run PowerShell commands, ultimately deploying the Lumma Stealer information-stealing trojan. The malware specifically targets stored browser passwords, cooki",
     "references": [
       {
-        "title": "Microsoft Reveals ClickFix Campaign Using Windows Terminal to …"
+        "title": "Microsoft Reveals ClickFix Campaign Using Windows Terminal to …",
+        "link": "https://thehackernews.com/2026/03/microsoft-reveals-clickfix-campaign.html"
       },
       {
-        "title": "Think before you Click(Fix): Analyzing the ClickFix social engineering technique"
+        "title": "Think before you Click(Fix): Analyzing the ClickFix social engineering technique",
+        "link": "https://www.microsoft.com/en-us/security/blog/2025/08/21/think-before-you-clickfix-analyzing-the-clickfix-social-engineering-technique/"
       }
     ]
   }

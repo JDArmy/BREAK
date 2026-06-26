@@ -15,7 +15,8 @@
     "summary": "Academic research reveals that Ethereum's EIP-1559 transaction fee mechanism, under the conservative assumption of a stable demand curve, is susceptible to manipulation by a small group of attackers, such as miners with 20% of the hash power. Attackers can strategically send transactions to manipulate the base fee, and smaller miners may be incentivized to join the attack. This study provides a th",
     "references": [
       {
-        "title": "Base Fee Manipulation in Ethereum's EIP-1559 Transaction Fee Mechanism"
+        "title": "Base Fee Manipulation in Ethereum's EIP-1559 Transaction Fee Mechanism",
+        "link": "https://arxiv.org/pdf/2304.11478"
       }
     ]
   }

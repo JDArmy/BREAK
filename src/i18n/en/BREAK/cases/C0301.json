@@ -15,7 +15,8 @@
     "summary": "A 2015 IEEE conference paper proposes a metadata monitoring method to defend against HTTP GET flood attacks. Attackers use botnets to exhaust server resources with massive volumes of legitimate-looking HTTP GET requests. The approach identifies IP addresses with anomalous request frequencies through real-time big data analytics and maintains normal service even under 9 Gbps attack traffic.",
     "references": [
       {
-        "title": "Mitigating HTTP flooding attacks with meta-data analysis"
+        "title": "Mitigating HTTP flooding attacks with meta-data analysis",
+        "link": "https://ieeexplore.ieee.org/abstract/document/7336365/"
       }
     ]
   }

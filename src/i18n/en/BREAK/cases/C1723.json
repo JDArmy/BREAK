@@ -14,7 +14,8 @@
     "summary": "Analyzing authentication vulnerability cases involving credential leaks and session hijacking, where token misconfigurations allow attackers to hijack sessions and perform unauthorized operations such as fraudulent fund transfers.",
     "references": [
       {
-        "title": "An empirical analysis of incorrect account remediation in the case of broken authentication"
+        "title": "An empirical analysis of incorrect account remediation in the case of broken authentication",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10360844/"
       }
     ]
   }

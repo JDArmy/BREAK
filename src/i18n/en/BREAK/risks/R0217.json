@@ -11,10 +11,12 @@
     ],
     "references": [
       {
-        "title": "Legal risks in metaverse development: technology and data"
+        "title": "Legal risks in metaverse development: technology and data",
+        "link": "https://mp.weixin.qq.com/s?__biz=MzA4MjY5MDIyMA==&mid=2652007605&idx=1&sn=8a33943fcbb314610310aabe8aa44749"
       },
       {
-        "title": "NIST Mobile Device Security"
+        "title": "NIST Mobile Device Security",
+        "link": "https://www.nccoe.nist.gov/mobile-device-security"
       }
     ],
     "description": "XR device firmware attacks target headsets, controllers, base stations, and sensor firmware. Attackers may exploit update mechanisms, driver flaws, or debug interfaces to control devices and steal visual, motion, or spatial data.\n\nXR devices hold high privileges and collect sensitive body and environment signals. Vendors need firmware signing, permission isolation, vulnerability response, and peripheral trust controls.",

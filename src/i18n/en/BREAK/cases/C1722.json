@@ -14,7 +14,8 @@
     "summary": "A penetration test on a merchant payment platform uncovered critical vulnerabilities including price manipulation and unauthorized access to sensitive data, likely caused by misconfiguration of payment or session tokens, leading to privilege escalation and data leakage.",
     "references": [
       {
-        "title": "Penetration Testing of a Merchant Payment Platform; Systemic Vulnerabilities and Compliance-Centric Mitigation"
+        "title": "Penetration Testing of a Merchant Payment Platform; Systemic Vulnerabilities and Compliance-Centric Mitigation",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11049241/"
       }
     ]
   }

@@ -6,10 +6,12 @@
     "influence": "Traditional security detection systems are almost entirely ineffective; attackers hide within systems using legitimate identities for extended periods, making detection and blocking extremely difficult, with very high risk of data exfiltration and business disruption.",
     "references": [
       {
-        "title": "Microsoft Digital Defense Report 2025"
+        "title": "Microsoft Digital Defense Report 2025",
+        "link": "https://www.microsoft.com/en-us/security/business/microsoft-digital-defense-report"
       },
       {
-        "title": "CrowdStrike 2026 Global Threat Report"
+        "title": "CrowdStrike 2026 Global Threat Report",
+        "link": "https://www.crowdstrike.com/global-threat-report/"
       }
     ],
     "keywords": [

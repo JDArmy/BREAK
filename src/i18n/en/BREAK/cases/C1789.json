@@ -16,10 +16,12 @@
     "summary": "The attacker Jia Tan infiltrated the xz compression library project over two and a half years, gaining maintainer privileges and implanting a backdoor in the core component liblzma. This backdoor allowed the attacker to send hidden commands via SSH, enabling unauthorized remote code execution and full control of the target system. The vulnerability was discovered just before it could be distribute",
     "references": [
       {
-        "title": "xz Backdoor Hacker Timeline, A Watershed Moment for Open Source Software Supply Chain Security | Notes"
+        "title": "xz Backdoor Hacker Timeline, A Watershed Moment for Open Source Software Supply Chain Security | Notes",
+        "link": "https://new.qq.com/rain/a/20240403A05FJD00"
       },
       {
-        "title": "NVD: CVE-2024-3094 xz/liblzma Backdoor Vulnerability"
+        "title": "NVD: CVE-2024-3094 xz/liblzma Backdoor Vulnerability",
+        "link": "https://nvd.nist.gov/vuln/detail/cve-2024-3094"
       }
     ]
   }

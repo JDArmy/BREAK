@@ -6,13 +6,16 @@
     "influence": "Can lead to core data asset exfiltration, national security risks, heavy compliance penalties, and loss of competitive advantage.",
     "references": [
       {
-        "title": "China Data Security Law and Cross-Border Data Transfer Regulations"
+        "title": "China Data Security Law and Cross-Border Data Transfer Regulations",
+        "link": "https://www.dataguidance.com/notes/china-data-security-law"
       },
       {
-        "title": "MITRE: Data Exfiltration Techniques"
+        "title": "MITRE: Data Exfiltration Techniques",
+        "link": "https://attack.mitre.org/tactics/TA0010/"
       },
       {
-        "title": "PwC: Global Data Transfer Compliance Report"
+        "title": "PwC: Global Data Transfer Compliance Report",
+        "link": "https://www.pwc.com/us/en/services/consulting/cybersecurity-data-tech-risk/data-risk-privacy.html"
       }
     ],
     "keywords": [

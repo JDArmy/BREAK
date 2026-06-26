@@ -15,7 +15,8 @@
     "summary": "In March 2023, vivo's internet security team published a technical article dissecting the principles of web cache poisoning attacks. Attackers craft requests that share the same cache key as legitimate users but contain malicious content, causing front-end cache servers like CDNs to store poisoned responses. Subsequent users accessing the same cache-keyed interface directly receive the tainted res",
     "references": [
       {
-        "title": "Non-Intrusive Intrusion — Web Cache Poisoning and Request Smuggling - Tencent Cloud Developer Community"
+        "title": "Non-Intrusive Intrusion — Web Cache Poisoning and Request Smuggling - Tencent Cloud Developer Community",
+        "link": "https://cloud.tencent.com/developer/article/2239506"
       }
     ]
   }

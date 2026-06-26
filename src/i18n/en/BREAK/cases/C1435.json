@@ -14,7 +14,8 @@
     "summary": "Academic research identifies critical pricing flaws in existing rollup fee mechanisms, where attackers exploit imbalances between L2 fees, L1 data availability fees, and L1 gas costs to manipulate transaction costs and ordering.",
     "references": [
       {
-        "title": "Unaligned Incentives: Pricing Attacks Against Blockchain Rollups"
+        "title": "Unaligned Incentives: Pricing Attacks Against Blockchain Rollups",
+        "link": "https://arxiv.org/pdf/2509.17126"
       }
     ]
   }

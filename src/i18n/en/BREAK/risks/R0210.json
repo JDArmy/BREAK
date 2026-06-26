@@ -11,10 +11,12 @@
     ],
     "references": [
       {
-        "title": "CISA Industrial Control Systems"
+        "title": "CISA Industrial Control Systems",
+        "link": "https://www.cisa.gov/ics"
       },
       {
-        "title": "ENISA IoT Security Good Practices"
+        "title": "ENISA IoT Security Good Practices",
+        "link": "https://www.enisa.europa.eu/publications/good-practices-for-security-of-iot"
       }
     ],
     "description": "Industrial protocol exploitation targets weaknesses in protocols such as Modbus, OPC UA, Profinet, and BACnet, including missing authentication, plaintext traffic, command injection, or implementation bugs. Attackers can read production data, change control parameters, or disrupt equipment.\n\nMany industrial protocols were designed for trusted networks. Once exposed through remote operations or IoT platforms, risk increases sharply. Segmentation, protocol gateways, command allowlists, and anomaly detection are central defenses.",

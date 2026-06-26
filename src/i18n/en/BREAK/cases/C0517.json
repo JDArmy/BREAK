@@ -16,7 +16,8 @@
     "summary": "The article reveals that in jailbroken environments with widespread decompilation tools, attackers can rapidly parse symbol tables, method names, and logic structures from IPA files using class-dump or IDA Pro, exposing core algorithms, payment flows, and encryption protocols. An unprotected IPA is nearly equivalent to open-source code. It introduces defense solutions like Ipa Guard that apply sym",
     "references": [
       {
-        "title": "What to Do If an IPA Is Decompiled? The Full Process of Hardening Without Source Code"
+        "title": "What to Do If an IPA Is Decompiled? The Full Process of Hardening Without Source Code",
+        "link": "https://ipaguard.com/blog/154"
       }
     ]
   }

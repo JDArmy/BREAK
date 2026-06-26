@@ -9,10 +9,12 @@
     "usageExample": "A user writes down the 12-word mnemonic phrase on paper and stores it offline. After losing their mobile phone, they can restore the wallet on a new device using the mnemonic phrase.",
     "references": [
       {
-        "title": "What is a Recovery Phrase? - Ledger Academy"
+        "title": "What is a Recovery Phrase? - Ledger Academy",
+        "link": "https://www.ledger.com/academy/crypto/what-is-a-recovery-phrase"
       },
       {
-        "title": "BIP-39: Mnemonic code for generating deterministic keys"
+        "title": "BIP-39: Mnemonic code for generating deterministic keys",
+        "link": "https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki"
       }
     ],
     "title": "Seed Phrase",

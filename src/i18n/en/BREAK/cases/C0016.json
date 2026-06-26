@@ -15,7 +15,8 @@
     "summary": "An attacker exploits a sniping attack during the auction process by calling cancelBid() after each bid to cancel the previous bid, enabling them to acquire any token at an extremely low cost. This vulnerability allows attackers to front-run bids and manipulate auction outcomes through unfair automated means.",
     "references": [
       {
-        "title": "Sniping Attack During the Auction Process Allows Attackers to ... - GitHub"
+        "title": "Sniping Attack During the Auction Process Allows Attackers to ... - GitHub",
+        "link": "https://github.com/code-423n4/2023-10-nextgen-findings/issues/1254"
       }
     ]
   }

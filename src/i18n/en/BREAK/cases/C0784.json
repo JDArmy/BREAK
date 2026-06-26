@@ -15,7 +15,8 @@
     "summary": "Attackers compromised Trivy's official distribution channel and released a tampered v0.69.4 binary. The malicious payload is a credential-stealing trojan that collects environment variables, cloud tokens, SSH keys, and CI/CD secrets from all CI/CD pipelines running Trivy scans. The incident has been assigned CVE-2026-33634 with a CVSS score of 9.4, representing a classic build tool poisoning attac",
     "references": [
       {
-        "title": "Pipeline security lessons from March supply chain incidents"
+        "title": "Pipeline security lessons from March supply chain incidents",
+        "link": "https://about.gitlab.com/blog/pipeline-security-lessons-from-march-supply-chain-incidents/"
       }
     ]
   }

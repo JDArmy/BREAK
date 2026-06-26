@@ -14,7 +14,8 @@
     "summary": "A study published on January 23, 2024, indicates that current cryptocurrency exchange blockchain systems primarily use Elliptic Curve Cryptography (ECC) to generate wallet key pairs and the Elliptic Curve Digital Signature Algorithm (ECDSA) to create transaction signatures. As quantum computing technology matures, quantum computers may forge signatures produced by ECDSA, exposing blockchain system",
     "references": [
       {
-        "title": "The Security Performance Analysis of Blockchain System Based on Post-Quantum Cryptography--A Case Study of Cryptocurrency Exchanges"
+        "title": "The Security Performance Analysis of Blockchain System Based on Post-Quantum Cryptography--A Case Study of Cryptocurrency Exchanges",
+        "link": "https://arxiv.org/abs/2404.16837"
       }
     ]
   }

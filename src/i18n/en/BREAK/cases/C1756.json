@@ -15,7 +15,8 @@
     "summary": "The OWASP GenAI risk list highlights that improperly configured model outputs may leak proprietary algorithms or data. Leaking training data can expose models to inversion attacks, where attackers infer sensitive information from model outputs. This risk underscores how insecure output handling can lead to sensitive information disclosure.",
     "references": [
       {
-        "title": "LLM02:2025 Sensitive Information Disclosure"
+        "title": "LLM02:2025 Sensitive Information Disclosure",
+        "link": "https://genai.owasp.org/llmrisk/llm02-insecure-output-handling/"
       }
     ]
   }

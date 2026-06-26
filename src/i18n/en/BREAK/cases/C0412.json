@@ -14,7 +14,8 @@
     "summary": "On the HackerOne platform, researchers identified a flaw in the vulnerability reporting system. While the main submission page enforced two-factor authentication (2FA), this check was bypassed when submitting reports via an embedded form, allowing users without 2FA enabled to successfully submit, exposing a bypass in the MFA process.",
     "references": [
       {
-        "title": "HackerOne Report: Bypass 2FA Requirement and Reporter Blacklist"
+        "title": "HackerOne Report: Bypass 2FA Requirement and Reporter Blacklist",
+        "link": "https://hackerone.com/reports/418767"
       }
     ]
   }

@@ -6,7 +6,8 @@
     "limitation": "Hardened applications can still be decompiled: although hardening increases the difficulty of decompilation, it cannot completely prevent it. Hackers can use various means to crack hardened applications and obtain source code and sensitive information. Hardened applications may have compatibility issues: since hardening modifies the application's code and structure, it may cause compatibility problems — for example, the hardened application may not run on certain devices or may crash. Hardened applications may have performance issues: since hardening increases the application's size and runtime overhead, it may cause performance problems such as slower startup or higher memory usage.",
     "references": [
       {
-        "title": "Code Obfuscation - Wikipedia"
+        "title": "Code Obfuscation - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Code_obfuscation"
       }
     ],
     "keywords": [
@@ -26,7 +27,8 @@
     "limitation": "May have compatibility and runtime performance issues.",
     "references": [
       {
-        "title": "OWASP Mobile Application Security"
+        "title": "OWASP Mobile Application Security",
+        "link": "https://mas.owasp.org/"
       }
     ],
     "keywords": [
@@ -45,7 +47,8 @@
     "limitation": "May have compatibility and runtime performance issues.",
     "references": [
       {
-        "title": "OWASP Mobile Application Security"
+        "title": "OWASP Mobile Application Security",
+        "link": "https://mas.owasp.org/"
       }
     ],
     "keywords": [
@@ -64,7 +67,8 @@
     "limitation": "May have compatibility and runtime performance issues.",
     "references": [
       {
-        "title": "OWASP Bytecode Obfuscation"
+        "title": "OWASP Bytecode Obfuscation",
+        "link": "https://owasp.org/www-community/controls/Bytecode_obfuscation"
       }
     ],
     "keywords": [
@@ -84,7 +88,8 @@
     "limitation": "May have compatibility and runtime performance issues.",
     "references": [
       {
-        "title": "OWASP Bytecode Obfuscation"
+        "title": "OWASP Bytecode Obfuscation",
+        "link": "https://owasp.org/www-community/controls/Bytecode_obfuscation"
       }
     ],
     "keywords": [

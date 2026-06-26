@@ -9,10 +9,12 @@
     "usageExample": "After deploying an SSL certificate on a website, a lock icon appears in the browser's address bar, allowing users to confirm the website's identity and communicate securely.",
     "references": [
       {
-        "title": "RFC 5280: Internet X.509 Public Key Infrastructure Certificate"
+        "title": "RFC 5280: Internet X.509 Public Key Infrastructure Certificate",
+        "link": "https://www.ietf.org/rfc/rfc5280.txt"
       },
       {
-        "title": "What is SSL? | Learning Center - Cloudflare"
+        "title": "What is SSL? | Learning Center - Cloudflare",
+        "link": "https://www.cloudflare.com/learning/ssl/what-is-ssl/"
       }
     ],
     "title": "Digital Certificate",

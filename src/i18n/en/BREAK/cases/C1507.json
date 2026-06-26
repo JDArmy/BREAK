@@ -14,10 +14,12 @@
     "summary": "Research from Palo Alto Networks reveals that more than 75% of medical infusion pumps contain known security flaws, with over half susceptible to two specific vulnerabilities disclosed in 2019, highlighting the tension between long medical device refresh cycles and growing exposure.",
     "references": [
       {
-        "title": "Is your medical IoT secure? - Smart Hospital Construction - Smart Healthcare Network"
+        "title": "Is your medical IoT secure? - Smart Hospital Construction - Smart Healthcare Network",
+        "link": "http://www.cn-witmed.com/list/33/11335.html"
       },
       {
-        "title": "Infusion Pump Vulnerabilities: Common Security Gaps - Unit 42"
+        "title": "Infusion Pump Vulnerabilities: Common Security Gaps - Unit 42",
+        "link": "https://unit42.paloaltonetworks.com/infusion-pump-vulnerabilities/"
       }
     ]
   }

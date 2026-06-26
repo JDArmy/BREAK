@@ -14,7 +14,8 @@
     "summary": "Microsoft's security team uncovered a cryptojacking campaign where attackers distributed malware through poisoned search results, used process hollowing to inject malicious code into Windows system processes, and ultimately deployed GPU mining clients on compromised servers for cryptocurrency mining.",
     "references": [
       {
-        "title": "From poisoned search results to GPU mining: A cryptojacking campaign..."
+        "title": "From poisoned search results to GPU mining: A cryptojacking campaign...",
+        "link": "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
       }
     ]
   }

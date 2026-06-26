@@ -12,7 +12,8 @@
     "summary": "This academic study presents a novel de-anonymization attack that links blockchain RPC users' IP addresses to their on-chain pseudonymous addresses. The attack requires no transaction fees and does not assume an active network eavesdropper; it works solely by analyzing metadata such as the timing of RPC requests. The research reveals that user privacy at the infrastructure network layer can be com",
     "references": [
       {
-        "title": "Time Tells All: Deanonymization of Blockchain RPC Users with Zero..."
+        "title": "Time Tells All: Deanonymization of Blockchain RPC Users with Zero...",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3719027.3765082"
       }
     ]
   }
