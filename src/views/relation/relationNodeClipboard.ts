@@ -39,7 +39,7 @@ export const createCopyContextNodeCsv = ({
       sourceNode.id,
       sourceNode.type,
       sourceNode.title,
-      line.text,
+      t(getRelationLineKey(line)),
       isDirectRelationLine(getRelationLineKey(line))
         ? t("relationView.direct")
         : t("relationView.indirect"),

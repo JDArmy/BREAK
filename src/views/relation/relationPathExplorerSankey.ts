@@ -208,7 +208,7 @@ export const buildPathExplorerRootPathSummary = ({
             step.line.from === step.fromId
               ? t("relationView.outgoing")
               : t("relationView.incoming"),
-          text: step.line.text,
+          text: t(getRelationLineKey(step.line)),
           directness: isDirectRelationLine(lineKey)
             ? t("relationView.direct")
             : t("relationView.indirect"),

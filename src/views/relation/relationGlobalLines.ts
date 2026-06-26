@@ -252,7 +252,7 @@ export const buildGlobalNodeRelations = ({
             ? t("relationView.outgoing")
             : t("relationView.incoming"),
         directionKey: line.from === nodeId ? "outgoing" : "incoming",
-        text: line.text,
+        text: t(relationLineKey),
         directness: isDirectRelationLine(relationLineKey)
           ? t("relationView.direct")
           : t("relationView.indirect"),

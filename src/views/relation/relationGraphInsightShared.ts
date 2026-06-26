@@ -50,7 +50,7 @@ export const createRelationGraphInsightHelpers = ({
         line.from === nodeId
           ? t("relationView.outgoing")
           : t("relationView.incoming"),
-      text: line.text,
+      text: t(relationLineKey),
       relationLineKey,
       priority: getRelationPriority(relationLineKey),
       directness: isDirectRelationLine(relationLineKey)

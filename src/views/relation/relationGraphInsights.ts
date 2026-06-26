@@ -269,7 +269,7 @@ export const createRelationGraphInsights = ({
             title: getNodeTitle(node.type, otherNode.id),
             type: otherNode.type,
             relationKey,
-            relationText: line.text,
+            relationText: t(relationKey),
             direction:
               line.from === node.id
                 ? t("relationView.outgoing")

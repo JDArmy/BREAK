@@ -460,7 +460,7 @@ const termDrawer = useDrawerRoute({
               ? { flex: `0 0 ${scene.width}px`, maxWidth: `${scene.width}px` }
               : {}"
           >
-          <h4 class="risk-scene-title" :title="'风险场景 ID: ' + scene.key">
+          <h4 class="risk-scene-title" :title="t('riskSceneIdTitle', { id: scene.key })">
             <!-- <a :href="'/risk-demensions/' + rdKey"> -->
             {{
               getRiskSceneTitle(scene.key)

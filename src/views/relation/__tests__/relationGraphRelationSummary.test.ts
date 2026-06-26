@@ -73,14 +73,14 @@ describe("relationGraphRelationSummary", () => {
     const outgoing = createSummary("A0001");
     expect(outgoing.rootNodeRelations.value).toEqual([
       expect.objectContaining({
-        text: "规避",
+        text: "t:risk-avoidance",
         direction: "t:relationView.rootToNode",
         directness: "t:relationView.indirect",
         evidenceLabel: "evidence:indirect",
         sourceFields: ["source:risk-avoidance"],
       }),
       expect.objectContaining({
-        text: "反向",
+        text: "t:reverse",
         direction: "t:relationView.nodeToRoot",
         qualityFlags: ["review"],
         priority: 3,
@@ -90,7 +90,7 @@ describe("relationGraphRelationSummary", () => {
     const incoming = createSummary("AT0001");
     expect(incoming.rootNodeRelations.value).toEqual([
       expect.objectContaining({
-        text: "直接导致",
+        text: "t:direct",
         direction: "t:relationView.nodeToRoot",
         directness: "t:relationView.direct",
         evidenceLevel: "direct",

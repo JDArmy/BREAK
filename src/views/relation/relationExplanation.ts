@@ -176,7 +176,7 @@ export const createRelationExplanationHelpers = ({
       fromTitle: getNodeDisplayTitle(line.from),
       toId: line.to,
       toTitle: getNodeDisplayTitle(line.to),
-      relation: line.text,
+      relation: t(getRelationLineKey(line)),
     };
     const relationKey = asRuleKey(getRelationLineKey(line));
     const prefix = "relationView.semanticExplanation";
@@ -227,7 +227,7 @@ export const createRelationExplanationHelpers = ({
       relationKey: `${line.from}::${getRelationLineKey(line)}::${line.to}`,
       fromId: line.from,
       toId: line.to,
-      relationType: line.text,
+      relationType: t(getRelationLineKey(line)),
       sourceFields,
       evidenceLevel,
       explanation: getRelationExplanationText(line, sourceType, targetType),

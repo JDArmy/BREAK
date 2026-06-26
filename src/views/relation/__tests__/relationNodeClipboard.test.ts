@@ -103,7 +103,7 @@ describe("relationNodeClipboard", () => {
     expect(csv).toContain("t:relationView.csvRelations");
     expect(csv).toContain('"R0001","risk","风险","t:relationView.csvRoleRoot"');
     expect(csv).toContain('"A0001","avoidance","规避 ""手段""","t:relationView.csvRoleRelated"');
-    expect(csv).toContain('"规避"');
+    expect(csv).toContain('"t:relationLine.avoidanceMeans"');
     expect(csv).toContain('"t:relationView.direct"');
     expect(csv).toContain('"证据:direct"');
     expect(csv).toContain('"风险通过该手段缓解"');

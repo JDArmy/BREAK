@@ -89,7 +89,7 @@ export const createRelationGraphRelationSummary = ({
         const relationLineKey = getRelationLineKey(line);
         const explanation = baseOptions.explainRelation(line);
         return {
-          text: line.text,
+          text: baseOptions.t(relationLineKey),
           direction:
             line.from === relKey.value
               ? baseOptions.t("relationView.rootToNode")
