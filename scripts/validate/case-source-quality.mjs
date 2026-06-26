@@ -294,6 +294,7 @@ const primaryReferenceLinks = new Set([
   'https://news.qq.com/rain/a/20250312A0885900', // 警民直通车上海官方托管页，点餐优惠券漏洞案
   'https://news.qq.com/rain/a/20260614a04mdv00', // 上海静安官方托管页，七天无理由退货掉包案
   'https://news.cctv.com/2026/06/18/arti1im1sqmvqzkv04azh5w5260618.shtml', // 央视网转载平安北京/朝阳分局调包退货案
+  'https://tv.cctv.cn/2026/06/16/VIDE8BAjd4ZlnMMT7J42OnrO260616.shtml', // 央视《新闻直播间》节目页，北京调包退货诈骗案
   'https://m.news.cctv.com/2021/07/19/artie58rnmechoj4v8zu2jfq210719.shtml', // 央视新闻客户端，绵阳手机积分兑换诈骗案
   'https://tv.cctv.cn/2018/10/09/VIDEBJfRxwDXNrvaPc5N7361181009.shtml', // 央视《焦点访谈》节目页，免费手环货到付款诈骗案
   'https://tv.cctv.com/2024/03/15/VIDEaISGnSjSjVaDWrZDsLbf240315.shtml', // 央视 3·15 晚会，同程金融礼品卡变相现金贷曝光
@@ -412,6 +413,7 @@ const primaryReferenceLinks = new Set([
   'http://finance.sina.com.cn/wm/2026-05-08/doc-inhxcyyr4271612.shtml', // 新浪承载公安部网安局官方账号通报
   'https://finance.sina.com.cn/wm/2026-05-08/doc-inhxcusr4594497.shtml', // 新浪承载公安部网安局官方账号通报
   'https://mp.weixin.qq.com/s?__biz=mjm5mtczodg0ma==&mid=2649821281&idx=1&sn=4c5cfd23a22fa9563581871847f89863&chksm=bfd3905763b3ba9d7dfed20dc74856a586350043733c7cdb9c8af73c163ab6d015f264768f97&scene=27', // 南京市场监管相关官方微信托管页，价格违法典型案例
+  'https://mp.weixin.qq.com/s?__biz=MzIyMTk1NDkzMg==&mid=2247533157&idx=2&sn=27cc5dbb20b7d0500b59088f46c3f6ff&chksm=e836d47edf415d68d183b1dcbd10f684f5e4ebaeaea49c02209103ed06a95f24d32e7faee253&scene=27', // 茂县公安官方微信托管页，伪造转账截图诈骗通报
 ]);
 const normalizedPrimaryReferenceLinks = new Set([...primaryReferenceLinks].map((link) => link.toLowerCase()));
 const primaryWechatBizIds = [
