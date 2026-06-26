@@ -9,7 +9,7 @@ import type { RelationPerspectiveKey } from "@/views/relation/relationAnalysisPe
 const RELATION_PERSPECTIVE_QUERY_KEYS: Record<RelationPerspectiveKey, string[]> = {
   risk: ["nodeTypes", "subNode", "relatedEntity", "lineTypes", "layout"],
   attackPath: ["nodeTypes", "subNode", "relatedEntity", "lineTypes", "layout"],
-  defenseCoverage: ["nodeTypes", "subNode", "relatedEntity", "lineTypes", "layout"],
+  defenseCoverage: ["nodeTypes", "subNode", "relatedEntity", "lineTypes", "layout", "ta", "at", "r", "a"],
   pathExplorer: ["endType", "endKey", "maxDepth", "maxPaths"],
 };
 

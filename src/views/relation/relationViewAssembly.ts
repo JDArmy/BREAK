@@ -589,6 +589,68 @@ export const createRelationViewAssembly = ({
     { immediate: true },
   );
 
+  // attackPathFilters（防御覆盖视角的 4 个实体筛选下拉）↔ URL query 双向同步
+  // query key 映射：ta=threat-actor, at=attack-tool, r=risk, a=avoidance
+  const ATTACK_PATH_FILTER_QUERY_MAP: [string, string][] = [
+    [RelationType.threatActor, "ta"],
+    [RelationType.attackTool, "at"],
+    [RelationType.risk, "r"],
+    [RelationType.avoidance, "a"],
+  ];
+
+  // State → URL
+  watch(
+    () => ({ ...graphData.attackPathFilters.value }),
+    (filters) => {
+      if (isUpdatingFromRoute) return;
+      const perspective = getRelationPerspectiveFromRoute(route.name);
+      if (perspective !== "defenseCoverage") return;
+      const query = { ...route.query };
+      let changed = false;
+      for (const [filterKey, queryKey] of ATTACK_PATH_FILTER_QUERY_MAP) {
+        const val = filters[filterKey as keyof typeof filters];
+        if (val) {
+          if (val !== query[queryKey]) { query[queryKey] = val; changed = true; }
+        } else {
+          if (query[queryKey] !== undefined) { delete query[queryKey]; changed = true; }
+        }
+      }
+      if (changed) {
+        router.replace({
+          name: ENTITY_ROUTE_BY_PERSPECTIVE[perspective],
+          params: { entity: relType.value, id: relKey.value },
+          query: buildPerspectiveQuery(query, perspective),
+        });
+      }
+    },
+  );
+
+  // URL → State
+  watch(
+    () => [route.query.ta, route.query.at, route.query.r, route.query.a],
+    ([queryTa, queryAt, queryR, queryA]) => {
+      const perspective = getRelationPerspectiveFromRoute(route.name);
+      if (perspective !== "defenseCoverage") return;
+      isUpdatingFromRoute = true;
+      const queryValues = [queryTa, queryAt, queryR, queryA];
+      const nextFilters: Record<string, string | undefined> = {};
+      let filtersChanged = false;
+      for (let i = 0; i < ATTACK_PATH_FILTER_QUERY_MAP.length; i++) {
+        const [filterKey] = ATTACK_PATH_FILTER_QUERY_MAP[i];
+        const qVal = typeof queryValues[i] === "string" ? (queryValues[i] as string) : undefined;
+        nextFilters[filterKey] = qVal;
+        if (qVal !== graphData.attackPathFilters.value[filterKey as keyof typeof graphData.attackPathFilters.value]) {
+          filtersChanged = true;
+        }
+      }
+      if (filtersChanged) {
+        graphData.attackPathFilters.value = nextFilters;
+      }
+      nextTick(() => { isUpdatingFromRoute = false; });
+    },
+    { immediate: true },
+  );
+
   const networkController = createNetworkChartController({
     t,
     isDark,

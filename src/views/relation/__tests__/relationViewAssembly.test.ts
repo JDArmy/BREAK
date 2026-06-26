@@ -117,6 +117,7 @@ const createState = () => {
 
 const createGraphData = () => ({
   addRootNode: vi.fn(),
+  attackPathFilters: ref({}),
   buildNodeSummary: vi.fn(),
   clearDraggedNodePositions: vi.fn(),
   draggedNodePositions: ref({}),
