@@ -6,7 +6,7 @@
     "complexity": "advanced",
     "influence": "用户交易成本飙升，网络拥堵瘫痪，交易顺序被恶意操纵。",
     "avoidances": [
-      "A0128",
+      "A0177-001",
       "A0129",
       "A0130",
       "A0177"
@@ -56,6 +56,71 @@
         "key": "R0175",
         "relation": "co-occurrence",
         "note": "Gas费操纵与区块链重放攻击均可由威胁行为者“DeFi协议攻击者”直接造成。"
+      }
+    ]
+  },
+  "R0173-001": {
+    "title": "Gas费操纵与抢跑",
+    "definition": "矿工或验证者利用交易排序权，通过Gas费竞价抢跑用户交易，或与套利机器人串谋获取MEV收益。",
+    "complexity": "advanced",
+    "influence": "DeFi用户交易滑点增大，利益受损",
+    "limitation": "依赖区块生产者权限",
+    "avoidances": [
+      "A0177",
+      "A0177-001",
+      "A0130"
+    ],
+    "references": [
+      {
+        "link": "https://arxiv.org/abs/1904.05234",
+        "title": "Flash Boys 2.0: Frontrunning in Decentralized Exchanges"
+      },
+      {
+        "link": "https://www.paradigm.xyz/2020/08/ethereum-is-a-dark-forest",
+        "title": "Ethereum is a Dark Forest - MEV Threats"
+      }
+    ],
+    "keywords": [
+      "Gas费操纵与抢跑",
+      "Gas费操纵",
+      "抢跑交易",
+      "MEV攻击",
+      "交易排序操纵",
+      "三明治攻击",
+      "区块构建者串谋"
+    ],
+    "updated": "2026-06-22",
+    "description": "Gas 费操纵与抢跑利用交易排序、费用竞价和区块构建机制，在用户交易前后插入套利或干扰交易。常见形态包括三明治攻击、清算抢跑、NFT mint 抢跑和恶意提高手续费。\n\n该风险会放大用户滑点、提高交易成本，并损害市场公平性。DeFi 协议需要通过私有交易通道、滑点控制、批量撮合和 MEV 缓解机制降低影响。",
+    "relatedRisks": [
+      {
+        "key": "R0170",
+        "relation": "co-occurrence",
+        "note": "Gas费操纵与抢跑与MEV攻击（矿工可提取价值）共享规避手段“私有交易池与MEV保护服务”。"
+      },
+      {
+        "key": "R0173",
+        "relation": "co-occurrence",
+        "note": "Gas费操纵与抢跑与Gas费操纵共享规避手段“私有交易池与MEV保护服务”。"
+      },
+      {
+        "key": "R0159",
+        "relation": "co-occurrence",
+        "note": "Gas费操纵与抢跑与智能合约漏洞均受攻击工具“DeFi攻击脚本”间接支持。"
+      },
+      {
+        "key": "R0160",
+        "relation": "co-occurrence",
+        "note": "Gas费操纵与抢跑与闪电贷攻击同属“智能合约与DeFi安全”风险场景。"
+      },
+      {
+        "key": "R0169",
+        "relation": "co-occurrence",
+        "note": "Gas费操纵与抢跑与预言机操纵同属“智能合约与DeFi安全”风险场景。"
+      },
+      {
+        "key": "R0176",
+        "relation": "co-occurrence",
+        "note": "Gas费操纵与抢跑与时间戳依赖攻击同属“智能合约与DeFi安全”风险场景。"
       }
     ]
   }

@@ -10,7 +10,7 @@
     "description": "CRM数据用于在BREAK业务安全分析中识别相关风险、滥用模式、控制需求和运营信号。",
     "usageExample": "评估CRM数据相关的暴露风险，并定义相应的控制措施。",
     "relatedRisks": [
-      "R0255"
+      "R0078-002"
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [],

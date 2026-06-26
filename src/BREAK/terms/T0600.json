@@ -10,7 +10,7 @@
     "description": "客户支持数据泄露用于在BREAK业务安全分析中识别相关风险、滥用模式、控制要求和运营信号。",
     "usageExample": "评估客户支持数据泄露相关的暴露面，并定义相应的控制措施。",
     "relatedRisks": [
-      "R0255"
+      "R0078-002"
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [],

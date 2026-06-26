@@ -16,7 +16,7 @@
     "summary": "一名网络安全专业学生发现其Windows笔记本电脑CPU占用率异常高达48%，经调查发现攻击者利用合法的微软AddInProcess.exe进程注入Monero挖矿程序，连接至Nanopool矿池进行加密货币挖矿。该恶意软件通过伪装成系统进程实现持久化驻留，最终检出1997个恶意文件，包括木马和密码窃取器，属于典型的算力盗用攻击。",
     "category": "security_incident",
     "relatedRisks": [
-      "R0158"
+      "R0086-001"
     ],
     "references": [
       {

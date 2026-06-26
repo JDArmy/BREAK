@@ -33,7 +33,7 @@
     ],
     "relatedRisks": [
       {
-        "key": "R0151",
+        "key": "R0036-002",
         "relation": "co-occurrence",
         "note": "中间人攻击与MFA绕过风险在定义或描述中互相指向。"
       },
@@ -53,7 +53,7 @@
         "note": "中间人攻击与无线网络风险在定义或描述中互相指向。"
       },
       {
-        "key": "R0144",
+        "key": "R0084-004",
         "relation": "co-occurrence",
         "note": "中间人攻击与域名/品牌仿冒均可由攻击工具“虚假APP”直接造成。"
       },

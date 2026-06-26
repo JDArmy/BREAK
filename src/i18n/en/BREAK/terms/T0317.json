@@ -25,5 +25,402 @@
         "link": "https://www.secrss.com/articles/56050"
       }
     ]
+  },
+  "T0317-001": {
+    "title": "Personal QR Code",
+    "keywords": [
+      "Personal QR Code",
+      "Personal QR",
+      "P2P Code",
+      "Individual QR",
+      "Private QR",
+      "Personal Pay Code",
+      "Consumer QR",
+      "P2P Payment Code",
+      "Direct QR"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "A personal QR code is a collection QR code registered under an individual identity, featuring limited transaction caps but relatively loose risk controls, commonly used for micro-laundering.",
+    "description": "Underground actors collect or purchase ordinary users' personal payment QR codes to receive illicit funds. These codes typically have per-transaction and daily limits, but their fragmented and concealed nature makes them less likely to trigger early risk alerts. On money-running platforms, numerous personal codes are used for fragmented collection, breaking large sums of dirty money into countless small transactions to increase tracing difficulty.",
+    "usageExample": "Looking for a few smooth personal codes, must handle under 3000 per day, rates are negotiable.",
+    "references": [
+      {
+        "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly",
+        "link": "https://k.sina.cn/article_7857201856_1d45362c001906fzea.html?from=tech"
+      },
+      {
+        "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign",
+        "link": "https://www.secrss.com/articles/56050"
+      }
+    ]
+  },
+  "T0317-002": {
+    "title": "Merchant QR Code",
+    "keywords": [
+      "Merchant QR Code",
+      "Business QR",
+      "Enterprise QR",
+      "Commercial QR",
+      "Business Pay Code",
+      "Merchant Payment Code",
+      "Corporate QR",
+      "POS QR",
+      "Business Account QR"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "A merchant QR code is a collection QR code opened under a business identity, offering higher transaction limits and greater stability, serving as a key channel for cleaning illicit funds.",
+    "description": "Compared to personal codes, merchant codes have higher collection limits and more stable channels, capable of handling larger cash flows. Criminal rings register shell businesses or acquire existing merchants' codes to use as core collection tools. Due to high transaction volumes, these channels can trigger large-scale financial risks once used for money laundering and are a primary target for risk monitoring.",
+    "usageExample": "Recruiting drivers, card runners, aggregated codes, merchant codes—all smooth channels come connect.",
+    "references": [
+      {
+        "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly",
+        "link": "https://k.sina.cn/article_7857201856_1d45362c001906fzea.html?from=tech"
+      },
+      {
+        "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign",
+        "link": "https://www.secrss.com/articles/56050"
+      }
+    ]
+  },
+  "T0317-003": {
+    "title": "Aggregated QR Code",
+    "keywords": [
+      "Aggregated QR Code",
+      "Multi-Payment QR",
+      "Unified QR",
+      "Combined QR",
+      "Multi-Channel QR",
+      "Payment Gateway QR",
+      "Omni-Channel QR",
+      "Integrated QR",
+      "Universal QR"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "An aggregated QR code is a collection QR code that consolidates multiple payment methods, exploited by underground actors to obscure fund flows and increase tracing difficulty.",
+    "description": "An aggregated code combines WeChat Pay, Alipay, UnionPay, and other payment options into a single QR code for user convenience. Criminals exploit this feature to have victims pay through different channels after scanning, thereby confusing the source and destination of funds. In laundering scenarios, aggregated codes are often used to collect small, multi-transaction illicit funds such as group-buying material to evade single-channel risk controls.",
+    "usageExample": "Recruiting aggregated codes for small group-buying material, 28 points, single transaction 90–110, daily volume 1500–2000.",
+    "references": [
+      {
+        "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly",
+        "link": "https://k.sina.cn/article_7857201856_1d45362c001906fzea.html?from=tech"
+      },
+      {
+        "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign",
+        "link": "https://www.secrss.com/articles/56050"
+      }
+    ]
+  },
+  "T0317-004": {
+    "title": "Direct Aggregated Scan",
+    "keywords": [
+      "Direct Aggregated Scan",
+      "aggregated payment QR",
+      "multi-platform scan",
+      "direct payment gateway",
+      "aggregation scan code",
+      "unified scan",
+      "direct channel",
+      "scan-to-pay aggregation"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "Aggregated direct scan is a payment-ready aggregated QR code used by underground actors to directly receive payments, featuring multi-platform compatibility and high liquidity.",
+    "description": "This is a payment channel that can be used directly for transactions; victims scan it and complete payments through various payment apps. Criminal rings widely use it for money running and collection, as its multi-platform compatibility enables rapid receipt and transfer of funds. Due to its high liquidity, it often circulates among groups as a direct-source asset to connect with various fraud scenarios.",
+    "usageExample": "Looking for regular direct-scan channels, must be aggregated direct scan, stable channels only.",
+    "references": [
+      {
+        "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly",
+        "link": "https://k.sina.cn/article_7857201856_1d45362c001906fzea.html?from=tech"
+      },
+      {
+        "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign",
+        "link": "https://www.secrss.com/articles/56050"
+      }
+    ]
+  },
+  "T0317-005": {
+    "title": "Small-Ticket QR",
+    "keywords": [
+      "Small-Ticket QR",
+      "micro payment QR",
+      "small-value code",
+      "low-value scan",
+      "micro-transaction code",
+      "small-ticket scan",
+      "split payment code",
+      "small-amount QR"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "A small-value QR code is a collection QR code specifically used for transactions under 1,000 yuan, widely adopted in money running due to its low risk-control sensitivity.",
+    "description": "To evade risk controls triggered by large transactions, criminals split illicit funds into numerous small payments. Small-value codes are the tools for receiving these fragmented funds, with single amounts typically ranging from tens to hundreds of yuan. Large numbers of small-value codes are organized on money-running platforms, where ordinary users complete collection and transfer through a task-grabbing model to wash funds, offering extreme concealment.",
+    "usageExample": "Small-value codes for cashing out to USDT, Fuli escrow, high volume and stable.",
+    "references": [
+      {
+        "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly",
+        "link": "https://k.sina.cn/article_7857201856_1d45362c001906fzea.html?from=tech"
+      },
+      {
+        "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign",
+        "link": "https://www.secrss.com/articles/56050"
+      }
+    ]
+  },
+  "T0317-006": {
+    "title": "Large-Ticket QR",
+    "keywords": [
+      "Large-Ticket QR",
+      "high-value QR",
+      "large-amount scan",
+      "bulk payment code",
+      "big-ticket scan",
+      "high-limit QR",
+      "large-sum code",
+      "whale transaction code"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "A payment QR code used in money laundering operations to receive single transactions of 2,000 yuan or more, serving as a dedicated tool for handling high-value illicit funds.",
+    "description": "Fraud rings treat high-value codes as core channels for volume-based laundering—the larger the single transaction, the faster illicit funds can be pooled and moved. These codes are typically supplied by recruited “code merchants” and linked to upstream crimes such as telecom fraud and gambling. By processing frequent, high-value transactions, dirty money is broken up and recirculated. Although these codes are highly prone to triggering freezes once flagged by risk controls, their laundering efficiency keeps them in high demand across money-muling chains.",
+    "usageExample": "Long-term recruitment for vehicles, high-value code vehicles, high volume no worries.",
+    "references": [
+      {
+        "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly",
+        "link": "https://k.sina.cn/article_7857201856_1d45362c001906fzea.html?from=tech"
+      },
+      {
+        "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign",
+        "link": "https://www.secrss.com/articles/56050"
+      }
+    ]
+  },
+  "T0317-007": {
+    "title": "Limit-Breaking QR",
+    "keywords": [
+      "Limit-Breaking QR",
+      "limit bypass QR",
+      "threshold breaker code",
+      "limit override scan",
+      "ceiling breaker QR",
+      "limit crack code",
+      "bypass scan",
+      "limit evasion code"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "A payment QR code used in money laundering that can bypass single-transaction or daily limits imposed by payment platforms, specifically designed to circumvent risk controls for high-density transfers.",
+    "description": "Platforms typically set limits on payment codes; limit-breaking codes are “over-limit” codes created by fraud rings through technical manipulation or account nurturing, capable of receiving funds far exceeding normal thresholds in a short time. Money-muling crews use them to handle the splitting of large illicit sums, breaking a single large amount into multiple rapid entries to reduce the chance of interception. Long-term use accelerates account freezes or bans, but these codes are virtually indispensable in time-sensitive laundering scenarios.",
+    "usageExample": "5,000–50,000 limit-breaking codes continuously operating.",
+    "references": [
+      {
+        "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly",
+        "link": "https://k.sina.cn/article_7857201856_1d45362c001906fzea.html?from=tech"
+      },
+      {
+        "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign",
+        "link": "https://www.secrss.com/articles/56050"
+      }
+    ]
+  },
+  "T0317-008": {
+    "title": "Smooth-Pass QR",
+    "keywords": [
+      "Smooth-Pass QR",
+      "no-block scan",
+      "clean QR",
+      "unflagged code",
+      "low-friction scan",
+      "stealth payment code",
+      "smooth transaction QR",
+      "bypass scan code"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "A payment QR code used in money laundering with an extremely high transaction success rate and almost no risk-control interference, regarded by fraud rings as a “stable” channel that won’t drop.",
+    "description": "The core value of a smooth code lies in “no penalty stand”—meaning no risk-control pop-ups or blocks cause the transaction to fail after scanning. Fraud rings nurture accounts through simulated normal consumer behavior to keep the code “clean,” then deploy it in telecom fraud or money-muling to receive dirty money. These codes offer smooth flow and fast settlement, significantly reducing the risk of victim suspicion and platform intervention, which is why they command higher prices and the strongest demand.",
+    "usageExample": "Recruiting vehicles, any smooth code vehicle, truck, high volume no penalty stand—no empty runs.",
+    "references": [
+      {
+        "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly",
+        "link": "https://k.sina.cn/article_7857201856_1d45362c001906fzea.html?from=tech"
+      },
+      {
+        "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign",
+        "link": "https://www.secrss.com/articles/56050"
+      }
+    ]
+  },
+  "T0317-009": {
+    "title": "Fixed-Amount QR",
+    "keywords": [
+      "Fixed-Amount QR",
+      "preset amount QR",
+      "fixed-value scan",
+      "locked-amount code",
+      "set-value payment link",
+      "fixed-sum QR",
+      "predefined amount code",
+      "static amount scan"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "A payment link or QR code used in money laundering that can be preset with a fixed amount, enabling precise collection of specific denominations of illicit funds.",
+    "description": "Preset codes are often tied to virtual goods payment scenarios, such as QQ coins or top-up vouchers. Fraud rings lock the top-up amount to a specific tier so that the payer can only pay the preset sum. This avoids reconciliation hassles from overpayment or underpayment while disguising dirty money as legitimate virtual consumption. Money-muling crews purchase these codes in bulk and pair them with automated card-issuing platforms to achieve “pay-and-ship,” completing both money laundering and asset conversion.",
+    "usageExample": "Recruiting: preset codes, aggregated codes, personal codes, DiDi cash.",
+    "references": [
+      {
+        "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly",
+        "link": "https://k.sina.cn/article_7857201856_1d45362c001906fzea.html?from=tech"
+      },
+      {
+        "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign",
+        "link": "https://www.secrss.com/articles/56050"
+      }
+    ]
+  },
+  "T0317-010": {
+    "title": "Direct Scan",
+    "keywords": [
+      "Direct Scan",
+      "scan-to-pay",
+      "direct pay QR",
+      "instant scan",
+      "one-step scan",
+      "direct receipt scan",
+      "straight scan",
+      "payee-presented QR"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "A money-laundering method in which the payee presents a QR code and the payer scans it to pay directly, emphasizing direct fund transfer without intermediate redirects.",
+    "description": "Direct scanning skips steps like entering the amount or confirming the transfer—the payer scans and pays instantly, perfectly suiting fraud rings’ “fast in, fast out” needs. Money-muling crews use direct-scan codes to receive scam proceeds or gambling funds, with money arriving in the designated account almost in real time before being quickly moved or spent. This method demands high code quality; once a code is flagged, direct scanning fails instantly, so fraud rings constantly seek “fresh” direct-scan codes to keep the channel open.",
+    "usageExample": "Today’s logistics direct-scan amount, 10,246, send orders, send orders!!!!",
+    "references": [
+      {
+        "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly",
+        "link": "https://k.sina.cn/article_7857201856_1d45362c001906fzea.html?from=tech"
+      },
+      {
+        "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign",
+        "link": "https://www.secrss.com/articles/56050"
+      }
+    ]
+  },
+  "T0317-011": {
+    "title": "Reverse Scan",
+    "keywords": [
+      "Reverse Scan",
+      "merchant scan",
+      "POS-style scan",
+      "active scan",
+      "scan customer code",
+      "merchant-initiated scan",
+      "retail scan mode",
+      "presented code capture"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "A money-laundering method in which the payee uses a device to actively scan the payer’s payment code to collect funds, commonly seen in offline or POS scenarios.",
+    "description": "Reverse scanning puts the initiative in the payee’s hands—the payer merely displays their payment code and the money is deducted. In fraud rings, this is often used for offline laundering or “mobile phone vehicle” operations, such as using a POS terminal to reverse-scan a victim’s payment code or sending a “runner” with a device to scan a gambler’s code. The fund flow is more covert and less likely to be noticed by the payer. This method requires hardware and scenario coordination but effectively circumvents online risk controls, making it a key offline money-muling technique.",
+    "usageExample": "Looking for a reverse-scan vehicle, mobile phone/gold reverse-scan vehicle, major supermarket reverse-scan vehicle!!!",
+    "references": [
+      {
+        "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly",
+        "link": "https://k.sina.cn/article_7857201856_1d45362c001906fzea.html?from=tech"
+      },
+      {
+        "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign",
+        "link": "https://www.secrss.com/articles/56050"
+      }
+    ]
+  },
+  "T0317-012": {
+    "title": "Bank Direct-Scan QR",
+    "keywords": [
+      "Bank Direct-Scan QR",
+      "bank app scan",
+      "banking QR transfer",
+      "direct bank scan",
+      "bank-channel QR",
+      "bank-to-bank scan",
+      "bank collection code",
+      "bank pay scan"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "A money-laundering method that uses a payment QR code generated by a banking app for direct scan-and-transfer, disguising dirty money as ordinary bank transactions.",
+    "description": "Bank direct scanning uses the bank’s proprietary channel, keeping fund flow within the banking system. Fraud rings consider this more “stable” than third-party payment codes because risk controls tend to lag. Money-muling crews use bank direct-scan codes to receive large illicit sums; the payer completes the transfer by scanning the code via a banking app, and the transaction record resembles a normal person-to-person transfer. These codes are often paired with models like “code-to-code” or “code-to-USDT,” converting renminbi into cryptocurrency or foreign exchange to further sever the traceability chain.",
+    "usageExample": "Exchange rate ceiling, code-to-code, code-to-USDT, bank direct scan, UnionPay code.",
+    "references": [
+      {
+        "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly",
+        "link": "https://k.sina.cn/article_7857201856_1d45362c001906fzea.html?from=tech"
+      },
+      {
+        "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign",
+        "link": "https://www.secrss.com/articles/56050"
+      }
+    ]
+  },
+  "T0317-013": {
+    "title": "Unionpay QR",
+    "keywords": [
+      "Unionpay QR",
+      "Quick Response code for money laundering",
+      "UnionPay collection QR",
+      "payment code for illegal funds",
+      "UnionPay money receiving frontend",
+      "QR code for running score",
+      "bank settlement network QR",
+      "dynamic QR for illicit collection",
+      "static QR for dirty money"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "A UnionPay-based payment QR code used to receive or transfer illicit funds, serving as a collection entry point in money muling operations that rely on bank clearing networks.",
+    "description": "UnionPay QR codes leverage the cross-bank clearing network of UnionPay, covering the vast majority of bank accounts. Criminal actors use them as a front-end tool for collecting funds in money muling schemes. During operations, money mule organizers or platform operators generate dynamic or static QR codes for victims to scan and pay. The funds are then rapidly consolidated into controlled accounts through UnionPay channels. Due to their broad bank-level coverage and instant settlement, these codes are often used to split large sums into small, multiple transactions to evade risk monitoring systems.",
+    "usageExample": "QR to QR, QR to USDT, UnionPay QR.",
+    "references": [
+      {
+        "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly",
+        "link": "https://k.sina.cn/article_7857201856_1d45362c001906fzea.html?from=tech"
+      },
+      {
+        "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign",
+        "link": "https://www.secrss.com/articles/56050"
+      }
+    ]
+  },
+  "T0317-014": {
+    "title": "Card-and-QR Bundle",
+    "keywords": [
+      "Card-and-QR Bundle",
+      "payment card and QR combo",
+      "bundled payment resource",
+      "receiving channel bundle",
+      "card and code package",
+      "QR and bank card set",
+      "payment method combo",
+      "fragmented payment tool",
+      "card code bundle"
+    ],
+    "aliases": [],
+    "category": "Money Laundering",
+    "definition": "A bundled resource pack combining a bank card with a corresponding payment QR code, providing a ready-to-use collection channel set for downstream members in money muling operations.",
+    "description": "A card-code bundle pairs a bank card number with its associated payment QR code into a single resource unit, allowing money mules and code merchants to switch collection methods on demand. These bundles are distributed through chat groups or darknet markets. When receiving payments, operators select the appropriate card or code based on the transaction amount and payment channel requirements. This combination reduces the logistical cost of managing collection tools and fragments the entry points for funds, increasing the difficulty of tracing.",
+    "usageExample": "Direct drops for fresh data, 3,000 to 100,000. Both cards and codes accepted. Operating all day, looking for long-term drivers. All bosses welcome.",
+    "references": [
+      {
+        "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly",
+        "link": "https://k.sina.cn/article_7857201856_1d45362c001906fzea.html?from=tech"
+      },
+      {
+        "title": "The Current Card Vendor Ecosystem Under the Card-Crackdown Campaign",
+        "link": "https://www.secrss.com/articles/56050"
+      }
+    ]
   }
 }

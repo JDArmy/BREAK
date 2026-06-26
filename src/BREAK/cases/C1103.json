@@ -14,7 +14,7 @@
     "summary": "一名女子利用AI换脸技术进行网恋诈骗，骗取他人13万元。法院审理后，考虑到其积极退赔并获得谅解，最终判处有期徒刑3年，缓刑4年。该案展示了AI换脸技术在情感诈骗中的应用。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0116-001"
+      "R0071-010"
     ],
     "references": [
       {
@@ -25,7 +25,7 @@
     "updated": "2026-06-18",
     "incidentTime": "2025-11",
     "relatedAttackTools": [
-      "AT0056"
+      "AT0053-003"
     ],
     "relatedThreatActors": [
       "TA0031"

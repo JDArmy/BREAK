@@ -14,7 +14,7 @@
     "summary": "2025年12月的行业论坛报道指出，随着T-BOX、ECU等核心组件联网化及OTA的普及，车辆攻击面极大扩展。OTA功能作为智能网联汽车的重要功能，已成为黑客的重点攻击对象，攻击者可通过劫持、篡改升级包实施恶意刷写。",
     "category": "news_report",
     "relatedRisks": [
-      "R0251"
+      "R0181-001"
     ],
     "references": [
       {
@@ -28,7 +28,7 @@
       "AT0097"
     ],
     "relatedThreatActors": [
-      "TA0061"
+      "TA0049-001"
     ]
   }
 }

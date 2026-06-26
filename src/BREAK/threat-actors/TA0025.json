@@ -9,7 +9,7 @@
       }
     ],
     "buildAttackTools": [
-      "AT0019",
+      "AT0049-001",
       "AT0049"
     ],
     "useAttackTools": [
@@ -23,8 +23,8 @@
       "AT0016",
       "AT0017",
       "AT0018",
-      "AT0019",
-      "AT0020",
+      "AT0049-001",
+      "AT0007-001",
       "AT0023",
       "AT0034-001",
       "AT0036",
@@ -65,7 +65,7 @@
     ],
     "relatedThreatActors": [
       {
-        "key": "TA0026",
+        "key": "TA0025-002",
         "relation": "co-involved",
         "note": "共同直接造成 3 个风险，共同间接支持 8 个风险，共同使用 9 个攻击工具。"
       },
@@ -111,7 +111,7 @@
     ],
     "useAttackTools": [
       "AT0017",
-      "AT0019",
+      "AT0049-001",
       "AT0044",
       "AT0047"
     ],
@@ -155,7 +155,7 @@
         "note": "共同直接造成 2 个风险，共同间接支持 8 个风险，共同建设 1 个攻击工具，共同使用 2 个攻击工具。"
       },
       {
-        "key": "TA0026",
+        "key": "TA0025-002",
         "relation": "co-involved",
         "note": "共同直接造成 3 个风险，共同间接支持 6 个风险，共同建设 1 个攻击工具，共同使用 3 个攻击工具。"
       },
@@ -173,6 +173,168 @@
         "key": "TA0006",
         "relation": "co-involved",
         "note": "共同直接造成 1 个风险，共同间接支持 6 个风险，共同使用 1 个攻击工具。"
+      }
+    ]
+  },
+  "TA0025-002": {
+    "title": "游戏代练员",
+    "description": "游戏代练员是指专业的玩家或团队，通过代替其他玩家进行游戏，提供代练服务。这种服务通常涉及帮助其他玩家提升游戏角色的等级、获取虚拟物品、完成特定任务或挑战等。游戏代练员通常有丰富的游戏经验和技能，可以迅速且高效地完成任务，帮助玩家在游戏中取得进展。",
+    "references": [
+      {
+        "title": "Boosting (Video Games) - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Boosting_(video_games)"
+      }
+    ],
+    "buildAttackTools": [
+      "AT0023"
+    ],
+    "useAttackTools": [
+      "AT0002",
+      "AT0007",
+      "AT0017",
+      "AT0018",
+      "AT0049-001",
+      "AT0034-001",
+      "AT0036",
+      "AT0044",
+      "AT0049"
+    ],
+    "directCauseRisks": [
+      "R0001",
+      "R0106",
+      "R0108",
+      "R0114"
+    ],
+    "indirectSupportRisks": [
+      "R0001-002",
+      "R0003-003",
+      "R0003-004",
+      "R0005",
+      "R0005-001",
+      "R0012",
+      "R0016-001",
+      "R0034",
+      "R0050",
+      "R0001-003"
+    ],
+    "updated": "2026-06-11",
+    "keywords": [
+      "游戏代练员",
+      "代练",
+      "上分代练",
+      "代打",
+      "刷段",
+      "rank boosting",
+      "boosting",
+      "elo boosting"
+    ],
+    "relatedThreatActors": [
+      {
+        "key": "TA0025",
+        "relation": "co-involved",
+        "note": "共同直接造成 3 个风险，共同间接支持 8 个风险，共同使用 9 个攻击工具。"
+      },
+      {
+        "key": "TA0013",
+        "relation": "co-involved",
+        "note": "共同间接支持 9 个风险，共同建设 1 个攻击工具，共同使用 5 个攻击工具。"
+      },
+      {
+        "key": "TA0025-001",
+        "relation": "co-involved",
+        "note": "共同直接造成 3 个风险，共同间接支持 6 个风险，共同建设 1 个攻击工具，共同使用 3 个攻击工具。"
+      },
+      {
+        "key": "TA0025-003",
+        "relation": "co-involved",
+        "note": "共同间接支持 8 个风险，共同使用 3 个攻击工具。"
+      },
+      {
+        "key": "TA0012",
+        "relation": "co-involved",
+        "note": "共同间接支持 7 个风险，共同使用 4 个攻击工具。"
+      },
+      {
+        "key": "TA0002",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同间接支持 5 个风险，共同使用 5 个攻击工具。"
+      }
+    ]
+  },
+  "TA0025-003": {
+    "title": "游戏演员",
+    "description": "一般指的在游戏中，存在送分和吃分的玩家，在同一对局中，操纵比赛结果的恶意行为，一般出现在MOBA游戏对局中，有时也会出现在FPS游戏中。",
+    "references": [
+      {
+        "title": "Match Fixing - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Match_fixing"
+      }
+    ],
+    "buildAttackTools": [
+      "AT0049"
+    ],
+    "useAttackTools": [
+      "AT0002",
+      "AT0034-001",
+      "AT0048",
+      "AT0049"
+    ],
+    "directCauseRisks": [
+      "R0107"
+    ],
+    "indirectSupportRisks": [
+      "R0001",
+      "R0001-002",
+      "R0002",
+      "R0003-003",
+      "R0005-001",
+      "R0012",
+      "R0016-001",
+      "R0034",
+      "R0050",
+      "R0001-003"
+    ],
+    "updated": "2026-06-11",
+    "keywords": [
+      "游戏演员",
+      "送分演员",
+      "演子",
+      "吃分",
+      "送分",
+      "控分",
+      "假赛",
+      "match fixing"
+    ],
+    "relatedThreatActors": [
+      {
+        "key": "TA0013",
+        "relation": "co-involved",
+        "note": "共同间接支持 8 个风险，共同使用 3 个攻击工具。"
+      },
+      {
+        "key": "TA0025-002",
+        "relation": "co-involved",
+        "note": "共同间接支持 8 个风险，共同使用 3 个攻击工具。"
+      },
+      {
+        "key": "TA0025",
+        "relation": "co-involved",
+        "note": "共同间接支持 6 个风险，共同建设 1 个攻击工具，共同使用 4 个攻击工具。"
+      },
+      {
+        "key": "TA0012",
+        "relation": "co-involved",
+        "note": "共同间接支持 7 个风险，共同使用 3 个攻击工具。"
+      },
+      {
+        "key": "TA0002",
+        "relation": "co-involved",
+        "note": "共同间接支持 5 个风险，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0019",
+        "relation": "co-involved",
+        "note": "共同间接支持 5 个风险，共同使用 2 个攻击工具。"
       }
     ]
   }

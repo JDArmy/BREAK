@@ -10,7 +10,7 @@
     "description": "OTA Update 用于在 BREAK 业务安全分析中识别相关风险、滥用模式、控制需求和运营信号。",
     "usageExample": "评估 OTA Update 相关风险暴露并定义相应的控制措施。",
     "relatedRisks": [
-      "R0251"
+      "R0181-001"
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [],

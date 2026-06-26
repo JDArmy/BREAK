@@ -15,7 +15,7 @@
     "summary": "微软威胁情报追踪的Storm-1747组织开发、支持和推广的Tycoon 2FA钓鱼套件，提供中间人攻击（AiTM）能力，使技能较低的攻击者也能绕过MFA，显著降低了实施账户入侵的门槛。该套件通过钓鱼即服务模式分发，拦截凭证和MFA令牌，窃取会话Cookie以重放访问。",
     "category": "news_report",
     "relatedRisks": [
-      "R0151"
+      "R0036-002"
     ],
     "references": [
       {
@@ -26,7 +26,7 @@
     "updated": "2026-06-18",
     "incidentTime": "2025-04",
     "relatedAttackTools": [
-      "AT0071",
+      "AT0063-001",
       "AT0072",
       "AT0063",
       "AT0064"

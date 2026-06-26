@@ -52,5 +52,122 @@
       "deepfake KYC bypass",
       "video call impersonation"
     ]
+  },
+  "AT0053-003": {
+    "title": "AI Deepfake Tools",
+    "description": "AI deepfake tools are a collection of tools that use deep learning technology (particularly Generative Adversarial Networks and diffusion models) to generate highly realistic fake face images, videos, and audio. These tools can implement face swapping, face reenactment, expression transfer, and full-body synthesis. Representative tools include DeepFaceLab, FaceSwap, Wav2Lip, and various commercial AI face-swapping applications. Attackers use these tools to forge identities for fraud, bypass facial recognition authentication, create fake videos for extortion or opinion manipulation.",
+    "references": [
+      {
+        "title": "DeepFaceLab - GitHub",
+        "link": "https://github.com/iperov/DeepFaceLab"
+      },
+      {
+        "title": "AI Security Governance Research Report (2025) - CAICT",
+        "link": "https://www.caict.ac.cn/kxyj/qwfb/bps/202601/P020260109784447548497.pdf"
+      }
+    ],
+    "keywords": [
+      "AI Deepfake Tools",
+      "DeepFaceLab",
+      "FaceSwap",
+      "Wav2Lip",
+      "face swapping",
+      "face reenactment",
+      "deepfake generator"
+    ]
+  },
+  "AT0053-004": {
+    "title": "LLM Automated Attack Tools",
+    "description": "LLM automated attack tools use the capabilities of large language models (such as GPT, Claude, etc.) to automate and enhance traditional cyberattacks. These tools can automatically generate phishing emails and social engineering scripts, write malicious code and exploit scripts, automate vulnerability scanning and penetration testing, batch generate fake content and reviews, and automate CAPTCHA recognition and bypass. Attackers use prompt engineering, fine-tuning, and agent orchestration techniques to transform general large models into specialized attack assistance tools. They also include tools targeting LLM services themselves, such as prompt injection frameworks, jailbreak toolkits, AI-agent attack orchestration tools, and MCP tool-call abuse tools.",
+    "references": [
+      {
+        "title": "OWASP Top 10 for LLM Applications",
+        "link": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"
+      },
+      {
+        "title": "Global Cybersecurity Outlook 2025 - WEF",
+        "link": "https://reports.weforum.org/docs/WEF_Global_Cybersecurity_Outlook_2025.pdf"
+      }
+    ],
+    "keywords": [
+      "LLM Automated Attack Tools",
+      "WormGPT",
+      "FraudGPT",
+      "phishing email generator",
+      "malware code generator",
+      "prompt injection framework",
+      "agentic attack toolkit",
+      "LLM jailbreak tool"
+    ]
+  },
+  "AT0053-005": {
+    "title": "Digital Human Generation Tools",
+    "description": "Digital human generation tools use AI technology to create virtual digital human avatars and drive them for real-time interaction. These tools can generate highly realistic virtual character images based on a small amount of real person photos or video material, and achieve real-time lip sync, facial expression changes, and body movements through text-driven or voice-driven methods. In live streaming scenarios, digital humans can conduct 24-hour uninterrupted live-stream e-commerce and interactive chat. Attackers use digital human tools for fake live-stream e-commerce fraud, impersonating real people for social fraud, and batch generating fake account content.",
+    "references": [
+      {
+        "title": "AI Digital Human Technology Development Report",
+        "link": "https://www.iresearch.com.cn/"
+      },
+      {
+        "title": "Virtual Digital Human In-depth Industry Report",
+        "link": "https://www.qianzhan.com/"
+      }
+    ],
+    "keywords": [
+      "Digital Human Generation Tools",
+      "AI avatar generator",
+      "digital human platform",
+      "virtual presenter",
+      "real-time avatar",
+      "lip-sync avatar",
+      "virtual influencer generator"
+    ]
+  },
+  "AT0053-006": {
+    "title": "AI Voice Cloning Tools",
+    "description": "AI voice cloning tools use deep learning technology to generate synthetic voices highly similar to a target person based on a small amount of voice samples (typically only a few seconds to a few minutes). These tools use Text-to-Speech (TTS) and Voice Conversion technology to generate cloned voices of any content in real time or offline. Representative technologies include VALL-E, Bark, and Tortoise-TTS. Attackers use voice cloning tools for phone fraud (impersonating friends or leaders), bypassing voiceprint authentication systems, and creating fake audio evidence.",
+    "references": [
+      {
+        "title": "VALL-E: Neural Codec Language Models",
+        "link": "https://arxiv.org/abs/2301.02111"
+      },
+      {
+        "title": "AI Voice Cloning Security Risk Analysis",
+        "link": "https://www.europol.europa.eu/publications-events/publications/chatgpt-impact-of-large-language-models-law-enforcement"
+      }
+    ],
+    "keywords": [
+      "AI Voice Cloning Tools",
+      "voice cloning",
+      "speaker cloning",
+      "voice conversion",
+      "real-time voice changer",
+      "VALL-E",
+      "Bark",
+      "Tortoise-TTS"
+    ]
+  },
+  "AT0053-007": {
+    "title": "Fake Call Spoofing Tool",
+    "description": "Fake call spoofing tools combine AI voice cloning technology with caller ID spoofing to disguise caller identity and voice during phone calls. Unlike AT0059 AI Voice Cloning Tool which only provides voice synthesis capabilities, fake call spoofing tools add telecom-level number forgery and call path manipulation capabilities. Key features and attack methods include: ① Caller ID spoofing: altering caller display numbers through VoIP gateways or SS7 signaling vulnerabilities, making the victim's phone display the real number of the target person or institution; ② AI real-time voice cloning: converting the attacker's voice to the target person's voice during calls in real-time, supporting two-way real-time dialogue; ③ Call scenario scripts: providing dialogue scripts and contingency response talking points for common scam scenarios; ④ Multi-line concurrent calling: supporting simultaneous spoofed calls to multiple targets for large-scale fraud; ⑤ Call recording and analysis: automatically recording call content for script improvement and subsequent extortion. This tool is key to the AI-driven evolution of telecom fraud, with global AI voice cloning fraud losses exceeding $400 billion in 2025.",
+    "references": [
+      {
+        "title": "Google Android Fake Call Detection Announcement",
+        "link": "https://blog.google/security/new-ai-powered-scam-detection-features/"
+      },
+      {
+        "title": "Combating Spoofed Robocalls with Caller ID Authentication",
+        "link": "https://www.fcc.gov/call-authentication"
+      }
+    ],
+    "keywords": [
+      "Fake Call Spoofing Tool",
+      "caller ID spoofing",
+      "call spoofing",
+      "spoofed VoIP call",
+      "vishing kit",
+      "SS7 spoofing",
+      "real-time voice changer call"
+    ]
   }
 }

@@ -14,7 +14,7 @@
     "summary": "2025年3月，欧洲刑警组织发布报告警告，AI技术正在助长有组织犯罪。犯罪分子利用语音克隆和实时深度伪造视频进行诈骗、敲诈和身份盗窃，导致网络诈骗和黑客攻击等犯罪行为威胁加剧。",
     "category": "news_report",
     "relatedRisks": [
-      "R0116"
+      "R0071-009"
     ],
     "references": [
       {
@@ -25,9 +25,9 @@
     "updated": "2026-06-18",
     "incidentTime": "2025-03",
     "relatedAttackTools": [
-      "AT0056",
-      "AT0059",
-      "AT0058"
+      "AT0053-003",
+      "AT0053-006",
+      "AT0053-005"
     ],
     "relatedThreatActors": [
       "TA0031",

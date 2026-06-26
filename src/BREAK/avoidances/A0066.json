@@ -57,5 +57,131 @@
         "note": "共同覆盖 2 个风险，共同限制 2 个攻击工具。"
       }
     ]
+  },
+  "A0066-001": {
+    "title": "实时深度伪造检测",
+    "category": "AC03",
+    "definition": "在实时通信场景（如视频会议、语音通话、直播）中，对AI生成的深度伪造内容进行即时检测和预警的安全技术手段。",
+    "description": "实时深度伪造检测是针对实时通信场景的深度伪造防御技术，区别于A0066深度伪造检测侧重于离线/静态内容分析。随着AI深度伪造技术在视频通话、语音通话中的实时应用，攻击者可以在视频会议中实时替换面部、在电话中实时克隆目标声音，使传统的事后检测手段无法应对。实时深度伪造检测包括：①视频流活体检测：通过分析面部微表情、眼球运动、光照一致性等生物特征判断视频流是否为深度伪造；②语音流真实性验证：通过声纹特征分析、呼吸节奏、情感连贯性等判断语音是否为AI合成；③通信元数据校验：验证通信链路的端点身份和传输路径是否被篡改；④多模态交叉验证：将音频、视频、文本等多模态信号进行一致性分析；⑤行为基线比对：与已知真人的行为模式进行实时比对。该技术对防御AI换脸欺诈、AI语音克隆诈骗等实时攻击场景至关重要。",
+    "limitation": "实时检测需要在极短时间内完成分析，对计算资源要求高；随着深度伪造技术进步，检测准确率可能下降；高质量深度伪造可能暂时逃避检测；隐私法规可能限制对通信内容的实时分析；误报可能影响正常业务沟通。",
+    "references": [
+      {
+        "title": "Cybersecurity Forecast 2026 - Google Cloud",
+        "link": "https://cloud.google.com/security/resources/cybersecurity-forecast"
+      },
+      {
+        "title": "Microsoft Digital Defense Report 2025",
+        "link": "https://www.microsoft.com/en-us/security/business/microsoft-digital-defense-report"
+      },
+      {
+        "title": "Deepfake Detection - NIST",
+        "link": "https://airc.nist.gov/airmf-resources/airmf/"
+      }
+    ],
+    "updated": "2026-06-11",
+    "keywords": [
+      "实时深度伪造检测",
+      "实时Deepfake检测",
+      "视频会议伪造检测",
+      "语音通话伪造检测",
+      "直播换脸检测",
+      "实时语音克隆识别"
+    ],
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0066",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0088",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0007",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0023",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0023-001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0024",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
+  },
+  "A0066-002": {
+    "title": "虚假来电检测",
+    "category": "AC03",
+    "definition": "对电话通话中利用AI语音克隆和来电号码篡改实施的虚假来电进行检测和识别的安全技术手段。",
+    "description": "虚假来电检测是针对AI语音克隆与来电号码伪造组合攻击的防御技术。随着AI语音克隆技术的成熟，攻击者可以实时克隆目标声音，再结合来电号码篡改（Caller ID Spoofing）技术，伪装成熟人、领导或金融机构工作人员实施电信诈骗。虚假来电检测包括：①来电号码验证：通过STIR/SHAKEN协议验证来电号码的真实性，检测号码伪造行为；②AI语音克隆检测：分析通话中的声纹特征，识别是否为AI合成的语音；③通话行为异常检测：识别异常的通话模式，如陌生号码突然以紧急事由要求转账；④身份交叉验证：通过其他渠道（如短信、面对面）验证来电者真实身份；⑤来电元数据分析：分析通话链路信息，识别VoIP伪造和网关异常。2025年Google Android已推出行业首创的虚假来电检测功能，通过端到端加密RCS协议验证来电真实性。",
+    "limitation": "并非所有电话系统都支持STIR/SHAKEN协议；高质量的AI语音克隆可能暂时逃避声纹检测；攻击者可能利用合法通信渠道中转降低可疑度；误报可能阻断正常紧急通话；部分国家和地区的通信基础设施不支持来电验证。",
+    "references": [
+      {
+        "title": "Google Android Scam Detection - Official Blog",
+        "link": "https://blog.google/security/new-ai-powered-scam-detection-features/"
+      },
+      {
+        "title": "FCC STIR/SHAKEN Framework",
+        "link": "https://www.fcc.gov/call-authentication"
+      },
+      {
+        "title": "INTERPOL Report on AI Voice Cloning Fraud",
+        "link": "https://www.interpol.int/en"
+      }
+    ],
+    "updated": "2026-06-11",
+    "keywords": [
+      "虚假来电检测",
+      "诈骗电话识别",
+      "AI语音诈骗检测",
+      "来电号码伪造检测",
+      "语音克隆来电识别",
+      "STIR/SHAKEN"
+    ],
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0007",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0011",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0012",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0019",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0021",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0063",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      }
+    ]
   }
 }

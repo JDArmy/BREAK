@@ -24,6 +24,11 @@
     "effectiveness": "high",
     "relatedAvoidances": [
       {
+        "key": "A0045-001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
+      },
+      {
         "key": "A0135",
         "relation": "complement",
         "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
@@ -39,7 +44,41 @@
         "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
       },
       {
-        "key": "A0162",
+        "key": "A0163",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0134-001",
+        "relation": "complement",
+        "note": "共同限制 1 个攻击工具。"
+      }
+    ]
+  },
+  "A0134-001": {
+    "category": "AC01",
+    "title": "链上隐私保护",
+    "description": "使用混币协议、隐私币或零知识证明保护交易隐私。",
+    "references": [
+      {
+        "link": "https://z.cash/",
+        "title": "Zcash: Privacy-protecting digital currency"
+      }
+    ],
+    "keywords": [
+      "链上隐私保护"
+    ],
+    "updated": "2026-06-16",
+    "definition": "使用混币协议、隐私币或零知识证明保护交易隐私。",
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0045-001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0161",
         "relation": "complement",
         "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
       },
@@ -49,7 +88,17 @@
         "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
       },
       {
-        "key": "A0175",
+        "key": "A0018-001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0134",
+        "relation": "complement",
+        "note": "共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0135",
         "relation": "complement",
         "note": "共同限制 1 个攻击工具。"
       }

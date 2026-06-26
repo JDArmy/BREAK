@@ -24,12 +24,12 @@
     "effectiveness": "high",
     "relatedAvoidances": [
       {
-        "key": "A0114",
+        "key": "A0004-002",
         "relation": "complement",
         "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
       },
       {
-        "key": "A0115",
+        "key": "A0114",
         "relation": "complement",
         "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
       },
@@ -44,9 +44,58 @@
         "note": "共同限制 1 个攻击工具。"
       },
       {
-        "key": "A0182",
+        "key": "A0113-001",
         "relation": "complement",
         "note": "共同限制 1 个攻击工具。"
+      }
+    ]
+  },
+  "A0113-001": {
+    "category": "AC03",
+    "title": "IoT流量监控与异常检测",
+    "description": "监控IoT设备网络流量，检测异常外联行为。",
+    "references": [
+      {
+        "link": "https://www.cisa.gov/ics",
+        "title": "CISA ICS Security"
+      }
+    ],
+    "keywords": [
+      "IoT流量监控与异常检测"
+    ],
+    "updated": "2026-06-16",
+    "definition": "监控IoT设备网络流量，检测异常外联行为。",
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0108",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      },
+      {
+        "key": "A0078",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0014",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0118",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0016",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0022",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
       }
     ]
   }

@@ -29,12 +29,12 @@
     "updated": "2026-06-17",
     "relatedAttackTools": [
       {
-        "key": "AT0098",
+        "key": "AT0054-006",
         "relation": "co-used",
         "note": "共享 3 个规避手段。"
       },
       {
-        "key": "AT0099",
+        "key": "AT0054-007",
         "relation": "co-used",
         "note": "共享 3 个规避手段。"
       },
@@ -49,12 +49,12 @@
         "note": "共同关联 1 个风险，共享 1 个规避手段。"
       },
       {
-        "key": "AT0019",
+        "key": "AT0025",
         "relation": "co-used",
         "note": "共同关联 1 个风险，共享 1 个规避手段。"
       },
       {
-        "key": "AT0025",
+        "key": "AT0028",
         "relation": "co-used",
         "note": "共同关联 1 个风险，共享 1 个规避手段。"
       }

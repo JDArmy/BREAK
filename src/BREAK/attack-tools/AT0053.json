@@ -21,7 +21,7 @@
       "R0071",
       "R0084",
       "R0110",
-      "R0116"
+      "R0071-009"
     ],
     "indirectSupportRisks": [
       "R0047",
@@ -38,12 +38,12 @@
     ],
     "relatedAttackTools": [
       {
-        "key": "AT0056",
+        "key": "AT0053-003",
         "relation": "co-used",
         "note": "共同关联 4 个风险，被 2 个相同行为者使用或建设。"
       },
       {
-        "key": "AT0058",
+        "key": "AT0053-005",
         "relation": "co-used",
         "note": "共同关联 4 个风险，被 2 个相同行为者使用或建设。"
       },
@@ -58,12 +58,12 @@
         "note": "共同关联 2 个风险，共享 1 个规避手段，被 1 个相同行为者使用或建设。"
       },
       {
-        "key": "AT0059",
+        "key": "AT0053-006",
         "relation": "co-used",
         "note": "共同关联 2 个风险，被 2 个相同行为者使用或建设。"
       },
       {
-        "key": "AT0057",
+        "key": "AT0053-004",
         "relation": "co-used",
         "note": "共同关联 1 个风险，被 3 个相同行为者使用或建设。"
       }
@@ -91,7 +91,7 @@
     ],
     "indirectSupportRisks": [
       "R0115",
-      "R0119"
+      "R0071-006"
     ],
     "updated": "2026-06-13",
     "keywords": [
@@ -109,7 +109,7 @@
         "note": "共同关联 2 个风险，共享 3 个规避手段，被 3 个相同行为者使用或建设。"
       },
       {
-        "key": "AT0058",
+        "key": "AT0053-005",
         "relation": "co-used",
         "note": "共同关联 3 个风险，共享 1 个规避手段，被 1 个相同行为者使用或建设。"
       },
@@ -119,7 +119,7 @@
         "note": "共同关联 2 个风险，共享 1 个规避手段，被 1 个相同行为者使用或建设。"
       },
       {
-        "key": "AT0056",
+        "key": "AT0053-003",
         "relation": "co-used",
         "note": "共同关联 1 个风险，共享 1 个规避手段，被 2 个相同行为者使用或建设。"
       },
@@ -153,13 +153,13 @@
     "directCauseRisks": [
       "R0048",
       "R0095",
-      "R0116"
+      "R0071-009"
     ],
     "indirectSupportRisks": [
       "R0044",
       "R0071-003",
-      "R0119",
-      "R0120"
+      "R0071-006",
+      "R0071-007"
     ],
     "updated": "2026-06-13",
     "keywords": [
@@ -178,22 +178,22 @@
         "note": "共同关联 2 个风险，共享 3 个规避手段，被 3 个相同行为者使用或建设。"
       },
       {
-        "key": "AT0056",
+        "key": "AT0053-003",
         "relation": "co-used",
         "note": "共同关联 4 个风险，共享 1 个规避手段，被 2 个相同行为者使用或建设。"
       },
       {
-        "key": "AT0073",
+        "key": "AT0053-007",
         "relation": "co-used",
         "note": "共同关联 4 个风险，被 1 个相同行为者使用或建设。"
       },
       {
-        "key": "AT0058",
+        "key": "AT0053-005",
         "relation": "co-used",
         "note": "共同关联 3 个风险，共享 1 个规避手段，被 1 个相同行为者使用或建设。"
       },
       {
-        "key": "AT0059",
+        "key": "AT0053-006",
         "relation": "co-used",
         "note": "共同关联 3 个风险，被 2 个相同行为者使用或建设。"
       },
@@ -201,6 +201,420 @@
         "key": "AT0040-001",
         "relation": "co-used",
         "note": "共同关联 2 个风险，共享 1 个规避手段，被 1 个相同行为者使用或建设。"
+      }
+    ]
+  },
+  "AT0053-003": {
+    "title": "AI深度伪造工具",
+    "description": "AI深度伪造工具是利用深度学习技术（特别是生成对抗网络GAN和扩散模型）生成高度逼真的虚假人脸图像、视频和音频的工具集合。这类工具可以实现人脸替换（Face Swap）、人脸重演（Face Reenactment）、表情迁移、全身合成等功能。代表性工具包括DeepFaceLab、FaceSwap、Wav2Lip等开源项目，以及各类商业化的AI换脸应用。攻击者利用这些工具可以伪造身份进行欺诈、绕过人脸识别认证、制作虚假视频进行敲诈勒索或舆论操纵。随着技术的进步，深度伪造内容的生成门槛不断降低，质量持续提升，已成为业务安全领域的重大威胁。",
+    "references": [
+      {
+        "title": "DeepFaceLab - GitHub",
+        "link": "https://github.com/iperov/DeepFaceLab"
+      },
+      {
+        "title": "人工智能安全治理研究报告(2025年) - 中国信通院",
+        "link": "https://www.caict.ac.cn/kxyj/qwfb/bps/202601/P020260109784447548497.pdf"
+      }
+    ],
+    "avoidances": [
+      "A0064",
+      "A0066",
+      "A0023",
+      "A0023-001",
+      "A0024",
+      "A0006",
+      "A0048",
+      "A0088",
+      "A0053"
+    ],
+    "directCauseRisks": [
+      "R0048",
+      "R0084",
+      "R0092",
+      "R0071-009",
+      "R0071-010",
+      "R0071-011",
+      "R0071-007"
+    ],
+    "indirectSupportRisks": [
+      "R0071-008",
+      "R0003-003",
+      "R0003-004",
+      "R0071-004",
+      "R0097",
+      "R0110",
+      "R0113",
+      "R0071-006",
+      "R0005",
+      "R0005-001"
+    ],
+    "updated": "2026-06-11",
+    "keywords": [
+      "AI深度伪造工具",
+      "AI换脸工具",
+      "deepfake",
+      "DeepFaceLab",
+      "FaceSwap",
+      "Wav2Lip",
+      "人脸合成"
+    ],
+    "relatedAttackTools": [
+      {
+        "key": "AT0053-005",
+        "relation": "co-used",
+        "note": "共同关联 7 个风险，共享 4 个规避手段，被 3 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0053-006",
+        "relation": "co-used",
+        "note": "共同关联 5 个风险，共享 4 个规避手段，被 3 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0001-003",
+        "relation": "co-used",
+        "note": "共同关联 6 个风险，共享 3 个规避手段。"
+      },
+      {
+        "key": "AT0050",
+        "relation": "co-used",
+        "note": "共同关联 5 个风险，共享 4 个规避手段。"
+      },
+      {
+        "key": "AT0053-004",
+        "relation": "co-used",
+        "note": "共同关联 4 个风险，共享 1 个规避手段，被 3 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0053-002",
+        "relation": "co-used",
+        "note": "共同关联 4 个风险，共享 1 个规避手段，被 2 个相同行为者使用或建设。"
+      }
+    ]
+  },
+  "AT0053-004": {
+    "title": "LLM自动化攻击工具",
+    "description": "LLM自动化攻击工具是利用大语言模型（如GPT、Claude等）的能力来自动化和增强传统网络攻击的工具。这类工具可以自动生成钓鱼邮件和社工话术、编写恶意代码和漏洞利用脚本、自动化漏洞扫描和渗透测试、批量生成虚假内容和评论、自动化验证码识别和绕过等。攻击者通过提示工程（Prompt Engineering）、微调（Fine-tuning）和智能体编排技术，将通用大模型改造为专用的攻击辅助工具，大幅降低了攻击的技术门槛和成本，同时提高了攻击的效率和成功率。此外，还包括针对LLM服务本身的攻击工具，如提示注入框架、越狱工具包、AI代理化攻击编排工具、MCP工具调用滥用工具等。",
+    "references": [
+      {
+        "title": "OWASP Top 10 for LLM Applications",
+        "link": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"
+      },
+      {
+        "title": "Global Cybersecurity Outlook 2025 - WEF",
+        "link": "https://reports.weforum.org/docs/WEF_Global_Cybersecurity_Outlook_2025.pdf"
+      }
+    ],
+    "avoidances": [
+      "A0065",
+      "A0087",
+      "A0079",
+      "A0067",
+      "A0001",
+      "A0004",
+      "A0015",
+      "A0064"
+    ],
+    "directCauseRisks": [
+      "R0084",
+      "R0117",
+      "R0117-001",
+      "R0117-002",
+      "R0118",
+      "R0148"
+    ],
+    "indirectSupportRisks": [
+      "R0001-001",
+      "R0001-002",
+      "R0002",
+      "R0003",
+      "R0003-001",
+      "R0003-002",
+      "R0003-003",
+      "R0003-004",
+      "R0005-001",
+      "R0005-002",
+      "R0153"
+    ],
+    "updated": "2026-06-11",
+    "keywords": [
+      "LLM自动化攻击工具",
+      "大模型攻击工具",
+      "LLM攻击框架",
+      "提示注入工具",
+      "越狱工具包",
+      "恶意提示工程",
+      "AI攻击编排"
+    ],
+    "relatedAttackTools": [
+      {
+        "key": "AT0014-001",
+        "relation": "co-used",
+        "note": "共同关联 8 个风险，共享 3 个规避手段，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0045",
+        "relation": "co-used",
+        "note": "共同关联 9 个风险，共享 3 个规避手段。"
+      },
+      {
+        "key": "AT0061",
+        "relation": "co-used",
+        "note": "共同关联 8 个风险，共享 3 个规避手段，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0023",
+        "relation": "co-used",
+        "note": "共同关联 8 个风险，共享 3 个规避手段。"
+      },
+      {
+        "key": "AT0050",
+        "relation": "co-used",
+        "note": "共同关联 8 个风险，共享 3 个规避手段。"
+      },
+      {
+        "key": "AT0042",
+        "relation": "co-used",
+        "note": "共同关联 7 个风险，共享 3 个规避手段，被 1 个相同行为者使用或建设。"
+      }
+    ]
+  },
+  "AT0053-005": {
+    "title": "数字人生成工具",
+    "description": "数字人生成工具是利用AI技术创建虚拟数字人形象并驱动其进行实时互动的工具。这类工具可以基于少量的真人照片或视频素材，生成高度逼真的虚拟人物形象，并通过文本驱动或语音驱动实现实时的口型同步、表情变化和肢体动作。在直播场景中，数字人可以24小时不间断进行直播带货、互动聊天等活动。攻击者利用数字人工具进行虚假直播带货欺诈、冒充真人进行社交诈骗、批量生成虚假账号内容等恶意行为。代表性工具包括各类AI数字人平台、虚拟主播生成工具、实时驱动引擎等。",
+    "references": [
+      {
+        "title": "AI数字人技术发展报告",
+        "link": "https://www.iresearch.com.cn/"
+      },
+      {
+        "title": "虚拟数字人深度产业报告",
+        "link": "https://www.qianzhan.com/"
+      }
+    ],
+    "avoidances": [
+      "A0064",
+      "A0066",
+      "A0006",
+      "A0006-001",
+      "A0020",
+      "A0048"
+    ],
+    "directCauseRisks": [
+      "R0006",
+      "R0071-003",
+      "R0071-009",
+      "R0071-006",
+      "R0071-008"
+    ],
+    "indirectSupportRisks": [
+      "R0071-011",
+      "R0097",
+      "R0115",
+      "R0020",
+      "R0021",
+      "R0024",
+      "R0071-004",
+      "R0110",
+      "R0004",
+      "R0022"
+    ],
+    "updated": "2026-06-11",
+    "keywords": [
+      "数字人生成工具",
+      "AI数字人",
+      "虚拟人生成",
+      "虚拟主播工具",
+      "数字分身",
+      "实时数字人",
+      "数字人口播"
+    ],
+    "relatedAttackTools": [
+      {
+        "key": "AT0053-003",
+        "relation": "co-used",
+        "note": "共同关联 7 个风险，共享 4 个规避手段，被 3 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0053",
+        "relation": "co-used",
+        "note": "共同关联 4 个风险，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0050",
+        "relation": "co-used",
+        "note": "共同关联 3 个风险，共享 2 个规避手段，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0053-001",
+        "relation": "co-used",
+        "note": "共同关联 3 个风险，共享 1 个规避手段，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0053-002",
+        "relation": "co-used",
+        "note": "共同关联 3 个风险，共享 1 个规避手段，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0053-006",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 1 个规避手段，被 2 个相同行为者使用或建设。"
+      }
+    ]
+  },
+  "AT0053-006": {
+    "title": "AI语音克隆工具",
+    "description": "AI语音克隆工具是利用深度学习技术，基于少量目标人物的语音样本（通常仅需几秒到几分钟），即可生成与目标人物高度相似的合成语音的工具。这类工具采用语音合成（TTS）和语音转换（Voice Conversion）技术，可以实时或离线生成任意内容的克隆语音。代表性技术包括VALL-E、Bark、Tortoise-TTS等开源项目，以及各类商业化语音克隆服务。攻击者利用语音克隆工具进行电话诈骗（冒充亲友、领导等）、绕过声纹认证系统、制作虚假音频证据等。随着零样本（Zero-shot）语音克隆技术的发展，攻击门槛进一步降低。",
+    "references": [
+      {
+        "title": "VALL-E: Neural Codec Language Models",
+        "link": "https://arxiv.org/abs/2301.02111"
+      },
+      {
+        "title": "AI语音克隆安全风险分析",
+        "link": "https://www.europol.europa.eu/publications-events/publications/chatgpt-impact-of-large-language-models-law-enforcement"
+      }
+    ],
+    "avoidances": [
+      "A0066",
+      "A0023",
+      "A0007",
+      "A0027",
+      "A0088",
+      "A0053"
+    ],
+    "directCauseRisks": [
+      "R0044",
+      "R0084",
+      "R0092",
+      "R0071-009",
+      "R0071-007"
+    ],
+    "indirectSupportRisks": [
+      "R0071-010",
+      "R0032-001",
+      "R0032-002",
+      "R0032-003",
+      "R0035-001",
+      "R0043",
+      "R0043-001",
+      "R0045",
+      "R0083",
+      "R0083-001"
+    ],
+    "updated": "2026-06-11",
+    "keywords": [
+      "AI语音克隆工具",
+      "语音克隆",
+      "voice cloning",
+      "声音克隆",
+      "AI变声",
+      "声纹伪造",
+      "零样本语音克隆"
+    ],
+    "relatedAttackTools": [
+      {
+        "key": "AT0064-001",
+        "relation": "co-used",
+        "note": "共同关联 10 个风险，共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0053-003",
+        "relation": "co-used",
+        "note": "共同关联 5 个风险，共享 4 个规避手段，被 3 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0062",
+        "relation": "co-used",
+        "note": "共同关联 9 个风险，共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0053-007",
+        "relation": "co-used",
+        "note": "共同关联 4 个风险，共享 1 个规避手段，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0069",
+        "relation": "co-used",
+        "note": "共同关联 5 个风险，共享 1 个规避手段。"
+      },
+      {
+        "key": "AT0042",
+        "relation": "co-used",
+        "note": "共同关联 4 个风险，共享 2 个规避手段。"
+      }
+    ]
+  },
+  "AT0053-007": {
+    "title": "虚假来电伪装工具",
+    "description": "虚假来电伪装工具是结合AI语音克隆技术和来电号码篡改（Caller ID Spoofing）技术，在电话通话中伪装来电者身份和声音的组合攻击工具。区别于AT0059 AI语音克隆工具仅提供声音合成能力，虚假来电伪装工具增加了电信层面的号码伪造和通话链路操控能力。主要功能和攻击方式包括：①来电号码伪造：通过VoIP网关或SS7信令漏洞，篡改来电显示号码，使受害者的手机显示为目标人物或机构的真实号码；②AI实时语音克隆：在通话过程中实时将攻击者的声音转换为目标人物的声音，支持双向实时对话；③通话场景脚本：提供常见诈骗场景的对话脚本和应急应对话术；④多线路并发：支持同时向多个目标发起伪装来电，实施规模化诈骗；⑤通话录制与分析：自动录制通话内容，用于改进话术和后续勒索。该工具是电信诈骗向AI化升级的关键工具，2025年全球AI语音克隆诈骗损失已超过4000亿美元。",
+    "avoidances": [
+      "A0066-001",
+      "A0066-002",
+      "A0073",
+      "A0027"
+    ],
+    "directCauseRisks": [
+      "R0084",
+      "R0095",
+      "R0071-007"
+    ],
+    "indirectSupportRisks": [
+      "R0048",
+      "R0092",
+      "R0071-009",
+      "R0132"
+    ],
+    "references": [
+      {
+        "title": "Google Android Fake Call Detection Announcement",
+        "link": "https://blog.google/security/new-ai-powered-scam-detection-features/"
+      },
+      {
+        "link": "https://www.fcc.gov/call-authentication",
+        "title": "Combating Spoofed Robocalls with Caller ID Authentication"
+      }
+    ],
+    "updated": "2026-06-11",
+    "keywords": [
+      "虚假来电伪装工具",
+      "Caller ID Spoofing",
+      "来电显示伪造",
+      "号码伪造",
+      "AI诈骗电话",
+      "语音诈骗工具",
+      "伪装来电"
+    ],
+    "relatedAttackTools": [
+      {
+        "key": "AT0053-006",
+        "relation": "co-used",
+        "note": "共同关联 4 个风险，共享 1 个规避手段，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0053-003",
+        "relation": "co-used",
+        "note": "共同关联 5 个风险。"
+      },
+      {
+        "key": "AT0053-002",
+        "relation": "co-used",
+        "note": "共同关联 4 个风险，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0053",
+        "relation": "co-used",
+        "note": "共同关联 3 个风险。"
+      },
+      {
+        "key": "AT0062",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，共享 1 个规避手段。"
+      },
+      {
+        "key": "AT0063",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，被 2 个相同行为者使用或建设。"
       }
     ]
   }

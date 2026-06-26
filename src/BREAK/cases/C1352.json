@@ -14,7 +14,7 @@
     "summary": "学术研究全面分析了针对GPU的远程代码执行攻击，演示了利用GPU固件或驱动漏洞在目标系统上执行恶意代码的攻击方法。攻击者可通过这些漏洞非法获取并控制受害者GPU计算资源，将其用于加密货币挖矿或其他计算密集型任务。",
     "category": "academic_research",
     "relatedRisks": [
-      "R0158"
+      "R0086-001"
     ],
     "references": [
       {
@@ -27,7 +27,7 @@
       "AT0054"
     ],
     "relatedThreatActors": [
-      "TA0044"
+      "TA0002-001"
     ]
   }
 }

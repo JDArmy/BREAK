@@ -27,7 +27,7 @@
     "updated": "2026-06-22",
     "relatedRisks": [
       {
-        "key": "R0255",
+        "key": "R0078-002",
         "relation": "co-occurrence",
         "note": "数据共享越权使用与客户成功与客服工单数据泄露均可由攻击工具“数据导出与DLP绕过工具”直接造成。"
       },

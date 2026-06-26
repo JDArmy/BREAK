@@ -15,7 +15,7 @@
     "summary": "2024年2月，香港一家跨国公司的办公室遭遇深度伪造诈骗。犯罪分子利用深度伪造技术冒充公司首席财务官进行视频通话，诱骗一名财务人员向诈骗者转账2560万美元。该事件是AI深度伪造技术被用于实时视频通话欺诈、实施金融诈骗的典型案例。",
     "category": "security_incident",
     "relatedRisks": [
-      "R0116"
+      "R0071-009"
     ],
     "references": [
       {
@@ -26,7 +26,7 @@
     "updated": "2026-06-18",
     "incidentTime": "2024-02",
     "relatedAttackTools": [
-      "AT0056"
+      "AT0053-003"
     ],
     "relatedThreatActors": [
       "TA0031"

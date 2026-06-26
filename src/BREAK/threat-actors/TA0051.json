@@ -10,9 +10,9 @@
     ],
     "buildAttackTools": [],
     "useAttackTools": [
-      "AT0085",
-      "AT0086",
-      "AT0094"
+      "AT0061-001",
+      "AT0061-002",
+      "AT0054-004"
     ],
     "directCauseRisks": [
       "R0222",
@@ -36,6 +36,11 @@
         "note": "共同直接造成 1 个风险，共同使用 1 个攻击工具。"
       },
       {
+        "key": "TA0002-001",
+        "relation": "co-involved",
+        "note": "共同间接支持 1 个风险。"
+      },
+      {
         "key": "TA0006-002",
         "relation": "co-involved",
         "note": "共同间接支持 1 个风险。"
@@ -52,11 +57,6 @@
       },
       {
         "key": "TA0012",
-        "relation": "co-involved",
-        "note": "共同间接支持 1 个风险。"
-      },
-      {
-        "key": "TA0013",
         "relation": "co-involved",
         "note": "共同间接支持 1 个风险。"
       }

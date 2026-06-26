@@ -103,7 +103,7 @@
         "note": "合作方数据泄露与双重/三重勒索共享规避手段“数据脱敏（脱密）”。"
       },
       {
-        "key": "R0089",
+        "key": "R0078-003",
         "relation": "co-occurrence",
         "note": "合作方数据泄露与用户隐私泄露共享规避手段“数据脱敏（脱密）”。"
       },
@@ -121,6 +121,126 @@
         "key": "R0124",
         "relation": "co-occurrence",
         "note": "合作方数据泄露与未成年人保护合规风险共享规避手段“信用等级限制”。"
+      }
+    ]
+  },
+  "R0078-002": {
+    "title": "客户成功与客服工单数据泄露",
+    "definition": "客服、CRM或工单系统中客户隐私、密钥、截图和业务信息被越权访问或外发。",
+    "description": "客户成功与客服工单数据泄露来自 CRM、客服系统、工单平台和协作工具中的聊天记录、截图、密钥、账号信息和业务上下文被越权访问或外发。\n\n客服和客户成功团队通常需要广泛查看客户问题，但过宽权限和外包协作会增加泄露面。治理需要字段脱敏、分级授权、导出控制和敏感工单审计。",
+    "complexity": "intermediate",
+    "influence": "客服和工单数据泄露会暴露客户隐私、业务截图、密钥和问题细节，造成客户信任损失与合规压力。",
+    "avoidances": [
+      "A0206",
+      "A0211",
+      "A0050"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "客户成功与客服工单数据泄露",
+      "客服工单泄露",
+      "CRM数据泄露",
+      "客户成功数据泄露",
+      "工单截图泄露",
+      "客服越权访问"
+    ],
+    "updated": "2026-06-22",
+    "relatedRisks": [
+      {
+        "key": "R0078",
+        "relation": "co-occurrence",
+        "note": "客户成功与客服工单数据泄露与数据泄露在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0240",
+        "relation": "co-occurrence",
+        "note": "客户成功与客服工单数据泄露与数据共享越权使用均可由攻击工具“数据导出与DLP绕过工具”直接造成。"
+      },
+      {
+        "key": "R0232",
+        "relation": "co-occurrence",
+        "note": "客户成功与客服工单数据泄露与SaaS第三方应用授权滥用均可由威胁行为者“SaaS数据窃取者”直接造成。"
+      },
+      {
+        "key": "R0233",
+        "relation": "co-occurrence",
+        "note": "客户成功与客服工单数据泄露与协作文档外链泄露均可由威胁行为者“SaaS数据窃取者”直接造成。"
+      },
+      {
+        "key": "R0059",
+        "relation": "co-occurrence",
+        "note": "客户成功与客服工单数据泄露与商业秘密泄露共享规避手段“数据泄露保护”。"
+      },
+      {
+        "key": "R0065",
+        "relation": "co-occurrence",
+        "note": "客户成功与客服工单数据泄露与员工失误风险共享规避手段“数据泄露保护”。"
+      }
+    ]
+  },
+  "R0078-003": {
+    "title": "用户隐私泄露",
+    "definition": "用户隐私泄露（PII leaked）指在平台上存储、处理或传输的个人敏感信息可能因安全漏洞、数据泄露或滥用而受到威胁，引发用户隐私安全问题。",
+    "description": "个人隐私泄露风险的成因包括平台安全漏洞、未经授权的数据访问、滥用用户数据用途、第三方合作伙伴不当处理用户信息等，导致用户隐私暴露的潜在风险。",
+    "complexity": "basic",
+    "influence": "个人隐私泄露风险可能导致用户失去信任，引发法律责任，损害平台声誉，降低用户活跃度，以及面临法规合规问题，对平台可持续发展带来负面影响。",
+    "avoidances": [
+      "A0035",
+      "A0050",
+      "A0055",
+      "A0056"
+    ],
+    "references": [
+      {
+        "title": "Privacy breach - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Privacy_breach"
+      }
+    ],
+    "updated": "2026-06-11",
+    "keywords": [
+      "用户隐私泄露",
+      "个人信息泄露",
+      "PII泄露",
+      "用户信息外泄",
+      "隐私外泄",
+      "敏感信息泄露",
+      "用户数据泄露"
+    ],
+    "relatedRisks": [
+      {
+        "key": "R0090",
+        "relation": "co-occurrence",
+        "note": "用户隐私泄露与批量扫号在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0163",
+        "relation": "co-occurrence",
+        "note": "用户隐私泄露与智能设备劫持在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0078",
+        "relation": "co-occurrence",
+        "note": "用户隐私泄露与数据泄露在定义或描述中互相指向。"
+      },
+      {
+        "key": "R0092",
+        "relation": "co-occurrence",
+        "note": "用户隐私泄露与现实身份盗用均可由攻击工具“拦截卡”直接造成。"
+      },
+      {
+        "key": "R0098",
+        "relation": "co-occurrence",
+        "note": "用户隐私泄露与虚假身份认证均可由攻击工具“拦截卡”直接造成。"
+      },
+      {
+        "key": "R0005-001",
+        "relation": "co-occurrence",
+        "note": "用户隐私泄露与批量小号作弊均可由攻击工具“拦截卡”直接造成。"
       }
     ]
   }

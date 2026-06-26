@@ -16,7 +16,7 @@
     "summary": "该研究记录并量化了区块链系统中，特别是去中心化交易所（DEX）中，套利机器人广泛且日益增长的部署情况。这些机器人通过抢先交易（Frontrunning）等方式，利用交易排序权获取利益。",
     "category": "academic_research",
     "relatedRisks": [
-      "R0204"
+      "R0173-001"
     ],
     "references": [
       {

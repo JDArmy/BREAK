@@ -5,8 +5,8 @@
     "avoidances": [
       "A0113",
       "A0114",
-      "A0115",
-      "A0182",
+      "A0004-002",
+      "A0113-001",
       "A0078",
       "A0016"
     ],
@@ -56,22 +56,22 @@
         "note": "共同关联 2 个风险，共享 1 个规避手段。"
       },
       {
+        "key": "AT0054-007",
+        "relation": "co-used",
+        "note": "共享 2 个规避手段。"
+      },
+      {
         "key": "AT0063",
         "relation": "co-used",
         "note": "共享 2 个规避手段。"
       },
       {
-        "key": "AT0071",
+        "key": "AT0063-001",
         "relation": "co-used",
         "note": "共享 2 个规避手段。"
       },
       {
         "key": "AT0075",
-        "relation": "co-used",
-        "note": "共享 2 个规避手段。"
-      },
-      {
-        "key": "AT0099",
         "relation": "co-used",
         "note": "共享 2 个规避手段。"
       }

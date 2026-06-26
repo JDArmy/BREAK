@@ -22,5 +22,55 @@
       "Phishing attack"
     ],
     "category": "Business Security"
+  },
+  "T0505-001": {
+    "keywords": [
+      "Spear Phishing"
+    ],
+    "definition": "A highly personalized phishing attack tailored to specific individuals or organizations, with a significantly higher success rate than generic phishing.",
+    "description": "Spear phishing attackers conduct in-depth research on their targets through social media, public information, and other channels, carefully crafting email content relevant to the target's work and interests to enhance credibility. This type of attack is commonly used in APT (Advanced Persistent Threat) operations, targeting high-value individuals such as corporate executives, government officials, and research and development personnel. Due to its high degree of customization, traditional email filtering is often ineffective in defending against such attacks.",
+    "usageExample": "After researching a company CFO's social media profiles, hackers forged a supplier email requesting a change in payment account details, successfully defrauding the company of millions of dollars in wire transfers.",
+    "references": [
+      {
+        "title": "What Is Spear Phishing? | Microsoft Security",
+        "link": "https://www.microsoft.com/en-us/security/business/security-101/what-is-spear-phishing"
+      },
+      {
+        "title": "Spear Phishing - Proofpoint",
+        "link": "https://www.proofpoint.com/us/threat-reference/spear-phishing"
+      }
+    ],
+    "title": "Spear Phishing",
+    "aliases": [
+      "Spear Phishing",
+      "Targeted phishing"
+    ],
+    "category": "Business Security"
+  },
+  "T0505-002": {
+    "keywords": [
+      "Whaling Attack",
+      "BEC"
+    ],
+    "definition": "A highly targeted spear-phishing attack aimed specifically at senior executives (e.g., CEO, CFO) to steal sensitive information or authorize fraudulent high-value financial transactions.",
+    "description": "Whaling attacks represent an extreme form of spear phishing where threat actors impersonate board members, business partners, or regulatory authorities to exploit the decision-making authority of C-suite executives. These attacks leverage time pressure and the executive's privileged access to induce unauthorized large-sum wire transfers or the disclosure of trade secrets and other confidential business intelligence. The average financial loss from whaling significantly exceeds that of conventional phishing campaigns, and the FBI classifies this attack vector as a primary form of Business Email Compromise (BEC) fraud.",
+    "usageExample": "An attacker spoofed the CEO's email address and sent an urgent payment request to the finance director, instructing an immediate wire transfer to complete a confidential acquisition. The finance employee, without verifying the request through an out-of-band channel, authorized the transfer, resulting in a loss of $5 million.",
+    "references": [
+      {
+        "title": "Business Email Compromise - FBI",
+        "link": "https://www.fbi.gov/how-we-can-help-you/scams-and-safety/common-frauds-and-scams/business-email-compromise"
+      },
+      {
+        "title": "What is a Whaling Attack? - Fortinet",
+        "link": "https://www.fortinet.com/resources/cyberglossary/whaling-attack"
+      }
+    ],
+    "title": "Whaling Attack",
+    "aliases": [
+      "Whaling Attack",
+      "Executive phishing",
+      "BEC"
+    ],
+    "category": "Business Security"
   }
 }

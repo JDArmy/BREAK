@@ -14,7 +14,7 @@
     "summary": "根据IBM《2025年X-Force威胁情报指数报告》，2024年包含信息窃取程序的网络钓鱼邮件增加84%，攻击者利用AI实现大规模推送，导致凭证失窃事件占所有安全事件近三分之一。信息窃取程序可快速盗取登录信息，缩短攻击时间，并规避多因素验证。",
     "category": "news_report",
     "relatedRisks": [
-      "R0088"
+      "R0001-003"
     ],
     "references": [
       {
@@ -27,7 +27,7 @@
     "relatedAttackTools": [
       "AT0064",
       "AT0063",
-      "AT0057"
+      "AT0053-004"
     ],
     "relatedThreatActors": [
       "TA0031",

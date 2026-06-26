@@ -19,5 +19,65 @@
       "deepfake analysis",
       "face forgery detection"
     ]
+  },
+  "A0066-001": {
+    "title": "Real-Time Deepfake Detection",
+    "definition": "Security techniques for instantly detecting and alerting on AI-generated deepfake content during real-time communications such as video conferences, voice calls, and live streams.",
+    "description": "Real-time deepfake detection targets real-time communication scenarios, distinguishing it from A0066 Deepfake Detection which focuses on offline/static content analysis. As AI deepfake technology is applied in real-time during video calls and phone conversations, attackers can replace faces in real-time during video conferences or clone target voices during phone calls, making traditional post-hoc detection methods inadequate. Real-time deepfake detection includes: ① Video stream liveness detection: determining whether a video stream is deepfake by analyzing facial micro-expressions, eye movement, and lighting consistency; ② Voice stream authenticity verification: determining whether speech is AI-synthesized through voiceprint analysis, breathing patterns, and emotional coherence; ③ Communication metadata validation: verifying that endpoint identities and transmission paths have not been tampered with; ④ Multimodal cross-validation: performing consistency analysis across audio, video, and text signals; ⑤ Behavioral baseline comparison: real-time comparison with known genuine person behavioral patterns. This technology is critical for defending against real-time attack scenarios such as AI face-swap fraud and AI voice cloning scams.",
+    "limitation": "Real-time detection requires analysis within extremely short timeframes, demanding significant computational resources; detection accuracy may decline as deepfake technology advances; high-quality deepfakes may temporarily evade detection; privacy regulations may limit real-time analysis of communication content; false positives may disrupt normal business communications.",
+    "references": [
+      {
+        "title": "Cybersecurity Forecast 2026 - Google Cloud",
+        "link": "https://cloud.google.com/security/resources/cybersecurity-forecast"
+      },
+      {
+        "title": "Microsoft Digital Defense Report 2025",
+        "link": "https://www.microsoft.com/en-us/security/business/microsoft-digital-defense-report"
+      },
+      {
+        "title": "Deepfake Detection - NIST",
+        "link": "https://airc.nist.gov/airmf-resources/airmf/"
+      }
+    ],
+    "keywords": [
+      "Real-Time Deepfake Detection",
+      "live deepfake detection",
+      "audio deepfake detection",
+      "video stream deepfake detection",
+      "AI voice clone detection",
+      "liveness analysis",
+      "real-time face forgery detection",
+      "voice spoof detection"
+    ]
+  },
+  "A0066-002": {
+    "title": "Fake Call Detection",
+    "definition": "Security techniques for detecting and identifying fraudulent phone calls that use AI voice cloning combined with caller ID spoofing.",
+    "description": "Fake call detection targets combined attacks using AI voice cloning and caller ID spoofing. As AI voice cloning technology matures, attackers can clone target voices in real-time and, combined with caller ID spoofing, impersonate acquaintances, supervisors, or financial institution staff to perpetrate telecom fraud. Fake call detection includes: ① Caller ID verification: verifying the authenticity of incoming call numbers through STIR/SHAKEN protocols to detect number spoofing; ② AI voice cloning detection: analyzing voiceprint features during calls to identify AI-synthesized speech; ③ Call behavior anomaly detection: identifying abnormal call patterns such as unfamiliar numbers making urgent transfer requests; ④ Identity cross-verification: verifying the caller's true identity through other channels (SMS, in-person); ⑤ Call metadata analysis: analyzing call path information to identify VoIP spoofing and gateway anomalies. In 2025, Google Android launched an industry-first fake call detection feature that verifies call authenticity through end-to-end encrypted RCS protocol.",
+    "limitation": "Not all phone systems support STIR/SHAKEN protocols; high-quality AI voice clones may temporarily evade voiceprint detection; attackers may use legitimate communication channels as intermediaries to reduce suspicion; false positives may block legitimate emergency calls; some countries' communication infrastructure does not support caller verification.",
+    "references": [
+      {
+        "title": "Google Android Scam Detection - Official Blog",
+        "link": "https://blog.google/security/new-ai-powered-scam-detection-features/"
+      },
+      {
+        "title": "FCC STIR/SHAKEN Framework",
+        "link": "https://www.fcc.gov/call-authentication"
+      },
+      {
+        "title": "INTERPOL Report on AI Voice Cloning Fraud",
+        "link": "https://www.interpol.int/en"
+      }
+    ],
+    "keywords": [
+      "Fake Call Detection",
+      "scam call detection",
+      "caller ID spoofing detection",
+      "vishing detection",
+      "STIR/SHAKEN",
+      "AI voice clone detection",
+      "spoofed call screening",
+      "voice phishing detection"
+    ]
   }
 }

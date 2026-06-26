@@ -19,10 +19,10 @@
     "usageExample": "光有密码不够，还得找人做破脸，不然那笔大额转账过不去。",
     "relatedRisks": [
       "R0048",
-      "R0116-001",
+      "R0071-010",
       "R0044",
       "R0032",
-      "R0131"
+      "R0084-003"
     ],
     "relatedAvoidances": [
       "A0023-001",
@@ -40,7 +40,7 @@
     ],
     "relatedThreatActors": [
       "TA0015",
-      "TA0043"
+      "TA0042-001"
     ],
     "relatedBusinessScenes": [
       "BS04",

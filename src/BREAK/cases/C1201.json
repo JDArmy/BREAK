@@ -14,7 +14,7 @@
     "summary": "山西网安部门集中曝光典型案例，辖区居民邢某非法使用中国国民党主席郑丽文形象的AI数字人直播带货，引发网民质疑，严重干扰正常网络秩序。邢某未经授权利用AI工具生成数字人形象及带货方案，被公安机关依法作出行政处罚。",
     "category": "administrative_enforcement",
     "relatedRisks": [
-      "R0130"
+      "R0071-008"
     ],
     "references": [
       {
@@ -25,8 +25,8 @@
     "updated": "2026-06-18",
     "incidentTime": "2026-06",
     "relatedAttackTools": [
-      "AT0058",
-      "AT0056"
+      "AT0053-005",
+      "AT0053-003"
     ],
     "relatedThreatActors": [
       "TA0032",

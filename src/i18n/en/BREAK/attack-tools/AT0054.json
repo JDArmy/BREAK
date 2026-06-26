@@ -18,5 +18,140 @@
       "Metasploit module",
       "RCE exploit"
     ]
+  },
+  "AT0054-001": {
+    "title": "CI/CD Credential Scanning and Poisoning Tool",
+    "description": "Toolsets for finding pipeline credentials, modifying build scripts, or injecting malicious code into artifacts.",
+    "references": [
+      {
+        "title": "OWASP Top 10 CI/CD Security Risks",
+        "link": "https://owasp.org/www-project-top-10-ci-cd-security-risks/"
+      }
+    ],
+    "keywords": [
+      "CI/CD Credential Scanning and Poisoning Tool",
+      "CI/CD credential scanning",
+      "pipeline poisoning",
+      "build script tampering",
+      "artifact injection",
+      "supply-chain tooling"
+    ]
+  },
+  "AT0054-002": {
+    "title": "Cloud Configuration Scanning and Key Abuse Tool",
+    "description": "Tools for enumerating cloud resources, detecting public storage, exploiting leaked keys, and moving laterally.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "Cloud Configuration Scanning and Key Abuse Tool",
+      "cloud configuration scanner",
+      "leaked key exploitation",
+      "public bucket discovery",
+      "cloud lateral movement",
+      "IAM enumeration"
+    ]
+  },
+  "AT0054-003": {
+    "title": "Data Export and DLP Bypass Tool",
+    "description": "Tools for bulk-exporting collaboration documents, splitting archives, bypassing watermarking, and evading outbound audits.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "Data Export and DLP Bypass Tool",
+      "bulk data export",
+      "DLP bypass",
+      "archive splitting",
+      "watermark evasion",
+      "outbound audit evasion"
+    ]
+  },
+  "AT0054-004": {
+    "title": "MFA Bombing and Session Hijacking Tool",
+    "description": "Tools for MFA fatigue attacks, cookie theft, token replay, and session takeover.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "MFA Bombing and Session Hijacking Tool",
+      "MFA bombing",
+      "push fatigue automation",
+      "cookie theft",
+      "token replay",
+      "session takeover"
+    ]
+  },
+  "AT0054-005": {
+    "title": "CDN and Edge Configuration Attack Tool",
+    "description": "Tools for testing cache keys, header pollution, edge functions, and WAF rule defects.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "CDN and Edge Configuration Attack Tool",
+      "CDN cache testing",
+      "cache key confusion",
+      "header pollution",
+      "edge function abuse",
+      "WAF rule testing"
+    ]
+  },
+  "AT0054-006": {
+    "title": "Dependency Poisoning Toolkit",
+    "keywords": [
+      "Dependency Poisoning",
+      "Malicious Package",
+      "Supply Chain Poisoning",
+      "npm Poisoning",
+      "PyPI Poisoning",
+      "Typosquatting",
+      "Dependency Confusion"
+    ],
+    "description": "Tools and methods for publishing malicious packages to open-source repositories (npm, PyPI, Maven, RubyGems, Go Modules). Attack techniques include: typosquatting (registering packages with names similar to popular ones); dependency confusion (exploiting priority vulnerabilities between internal and public packages); maintainer account takeover; and installation hook exploitation. Typical consequences include credential theft, reverse shells, and cryptocurrency mining.",
+    "references": [
+      {
+        "title": "MITRE ATT&CK: Supply Chain Compromise - Compromise Software Supply Chain (T1195.002)",
+        "link": "https://attack.mitre.org/techniques/T1195/002/"
+      },
+      {
+        "title": "OpenSSF Package Analysis Project",
+        "link": "https://github.com/ossf/package-analysis"
+      }
+    ]
+  },
+  "AT0054-007": {
+    "title": "Container Escape & K8s Attack Toolkit",
+    "keywords": [
+      "Container Escape",
+      "Kubernetes Attack",
+      "K8s Penetration",
+      "Docker Escape",
+      "Pod Privilege Escalation",
+      "RBAC Abuse"
+    ],
+    "description": "Attack tools targeting containerized environments and Kubernetes clusters. Key capabilities include: container escape via kernel vulnerabilities or privileged configurations; K8s API abuse through misconfigured RBAC permissions or exposed API servers; lateral movement via ServiceAccount tokens and secret leakage; and persistence through malicious CronJobs, DaemonSets, or Admission Webhooks. Representative tools include CDK, PEIRATES, and kube-hunter.",
+    "references": [
+      {
+        "title": "MITRE ATT&CK: Container Administration Command (T1609)",
+        "link": "https://attack.mitre.org/techniques/T1609/"
+      },
+      {
+        "title": "Kubernetes Security Best Practices - CISA",
+        "link": "https://www.cisa.gov/news-events/alerts/2022/03/15/cisa-and-partners-release-advisory-kubernetes-hardening"
+      }
+    ]
   }
 }

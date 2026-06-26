@@ -37,7 +37,7 @@
     ],
     "relatedRisks": [
       {
-        "key": "R0088",
+        "key": "R0001-003",
         "relation": "co-occurrence",
         "note": "自动化养号与自动化登录风险在定义或描述中互相指向。"
       },

@@ -29,7 +29,7 @@
       "R0081-003",
       "R0081-004",
       "R0085-001",
-      "R0089"
+      "R0078-003"
     ],
     "updated": "2026-06-13",
     "keywords": [
@@ -67,10 +67,444 @@
         "note": "共同关联 1 个风险，被 2 个相同行为者使用或建设。"
       },
       {
-        "key": "AT0099",
+        "key": "AT0054-007",
         "relation": "co-used",
         "note": "共享 1 个规避手段，被 2 个相同行为者使用或建设。"
       }
     ]
+  },
+  "AT0054-001": {
+    "title": "CI/CD凭证扫描与投毒工具",
+    "description": "用于搜索流水线凭证、篡改构建脚本或向制品注入恶意代码的工具集合。",
+    "avoidances": [
+      "A0199",
+      "A0200",
+      "A0201"
+    ],
+    "directCauseRisks": [
+      "R0226",
+      "R0227",
+      "R0228"
+    ],
+    "indirectSupportRisks": [
+      "R0229"
+    ],
+    "references": [
+      {
+        "title": "OWASP Top 10 CI/CD Security Risks",
+        "link": "https://owasp.org/www-project-top-10-ci-cd-security-risks/"
+      }
+    ],
+    "keywords": [
+      "CI/CD凭证扫描与投毒工具",
+      "CI/CD凭证扫描与投毒"
+    ],
+    "updated": "2026-06-17",
+    "relatedAttackTools": [
+      {
+        "key": "AT0054-006",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 1 个规避手段，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0013",
+        "relation": "co-used",
+        "note": "被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0054",
+        "relation": "co-used",
+        "note": "被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0054-002",
+        "relation": "co-used",
+        "note": "被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0054-007",
+        "relation": "co-used",
+        "note": "被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0063",
+        "relation": "co-used",
+        "note": "被 1 个相同行为者使用或建设。"
+      }
+    ]
+  },
+  "AT0054-002": {
+    "title": "云配置扫描与密钥利用工具",
+    "description": "用于枚举云资源、检测公开存储、利用泄露密钥和横向移动的工具。",
+    "avoidances": [
+      "A0203",
+      "A0204",
+      "A0079"
+    ],
+    "directCauseRisks": [
+      "R0230",
+      "R0231"
+    ],
+    "indirectSupportRisks": [
+      "R0254"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "云配置扫描与密钥利用工具",
+      "云配置扫描与密钥利用"
+    ],
+    "updated": "2026-06-17",
+    "relatedAttackTools": [
+      {
+        "key": "AT0054-005",
+        "relation": "co-used",
+        "note": "共享 1 个规避手段，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0064",
+        "relation": "co-used",
+        "note": "共享 1 个规避手段，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0053-004",
+        "relation": "co-used",
+        "note": "共享 1 个规避手段。"
+      },
+      {
+        "key": "AT0074",
+        "relation": "co-used",
+        "note": "共享 1 个规避手段。"
+      },
+      {
+        "key": "AT0013",
+        "relation": "co-used",
+        "note": "被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0054",
+        "relation": "co-used",
+        "note": "被 1 个相同行为者使用或建设。"
+      }
+    ]
+  },
+  "AT0054-003": {
+    "title": "数据导出与DLP绕过工具",
+    "description": "用于批量导出协作文档、拆分压缩、规避水印和外发审计的工具。",
+    "avoidances": [
+      "A0206",
+      "A0211",
+      "A0050",
+      "A0044",
+      "A0015",
+      "A0068"
+    ],
+    "directCauseRisks": [
+      "R0240",
+      "R0078-002"
+    ],
+    "indirectSupportRisks": [
+      "R0233"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "数据导出与DLP绕过工具",
+      "数据导出与DLP绕过"
+    ],
+    "updated": "2026-06-17",
+    "relatedAttackTools": [
+      {
+        "key": "AT0061-003",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，共享 3 个规避手段，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0026",
+        "relation": "co-used",
+        "note": "共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0038",
+        "relation": "co-used",
+        "note": "共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0039",
+        "relation": "co-used",
+        "note": "共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0040",
+        "relation": "co-used",
+        "note": "共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0040-001",
+        "relation": "co-used",
+        "note": "共享 2 个规避手段。"
+      }
+    ]
+  },
+  "AT0054-004": {
+    "title": "MFA轰炸与会话劫持工具",
+    "description": "用于MFA疲劳攻击、Cookie窃取、Token重放和会话接管。",
+    "avoidances": [
+      "A0217",
+      "A0218",
+      "A0026",
+      "A0044",
+      "A0016"
+    ],
+    "directCauseRisks": [
+      "R0246",
+      "R0247"
+    ],
+    "indirectSupportRisks": [
+      "R0032"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "MFA轰炸与会话劫持工具",
+      "MFA轰炸与会话劫持"
+    ],
+    "updated": "2026-06-17",
+    "relatedAttackTools": [
+      {
+        "key": "AT0063",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 3 个规避手段，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0063-001",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 3 个规避手段。"
+      },
+      {
+        "key": "AT0042",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0061-001",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 1 个规避手段，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0012",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 1 个规避手段。"
+      },
+      {
+        "key": "AT0062",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 1 个规避手段。"
+      }
+    ]
+  },
+  "AT0054-005": {
+    "title": "CDN与边缘配置攻击工具",
+    "description": "用于测试缓存键、头部污染、边缘函数和WAF规则缺陷的工具。",
+    "avoidances": [
+      "A0221",
+      "A0204",
+      "A0198"
+    ],
+    "directCauseRisks": [
+      "R0249",
+      "R0250"
+    ],
+    "indirectSupportRisks": [
+      "R0222"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "CDN与边缘配置攻击工具",
+      "CDN与边缘配置攻击"
+    ],
+    "updated": "2026-06-17",
+    "relatedAttackTools": [
+      {
+        "key": "AT0054-002",
+        "relation": "co-used",
+        "note": "共享 1 个规避手段，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0061-001",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险。"
+      },
+      {
+        "key": "AT0061-002",
+        "relation": "co-used",
+        "note": "共享 1 个规避手段。"
+      }
+    ]
+  },
+  "AT0054-006": {
+    "title": "依赖包投毒工具",
+    "keywords": [
+      "依赖包投毒工具",
+      "依赖包投毒",
+      "恶意包",
+      "供应链投毒",
+      "npm投毒",
+      "PyPI投毒",
+      "typosquatting",
+      "dependency confusion",
+      "依赖混淆"
+    ],
+    "description": "用于向开源软件包仓库（npm、PyPI、Maven、RubyGems、Go Modules 等）发布恶意包的工具和方法集合。攻击手法包括：①域名抢注/拼写抢注（Typosquatting）：注册与流行包相似名称的恶意包，等待开发者误安装；②依赖混淆（Dependency Confusion）：利用内部包与公开仓库同名的优先级漏洞，上传高版本恶意包覆盖内部依赖；③维护者账户接管：窃取包维护者凭据后直接向合法包注入恶意代码；④安装钩子利用：在 postinstall、setup.py 等生命周期脚本中植入后门代码。典型后果包括凭据窃取、反向 Shell、加密货币挖矿等。近年影响面巨大的事件包括 event-stream、ua-parser-js、colors.js/faker.js 等。",
+    "directCauseRisks": [
+      "R0228",
+      "R0078"
+    ],
+    "indirectSupportRisks": [
+      "R0034",
+      "R0209",
+      "R0083"
+    ],
+    "avoidances": [
+      "A0070",
+      "A0201",
+      "A0202",
+      "A0016",
+      "A0044",
+      "A0055"
+    ],
+    "relatedAttackTools": [
+      {
+        "key": "AT0054-007",
+        "relation": "co-used",
+        "note": "共同关联 4 个风险，共享 3 个规避手段，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0063",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 2 个规避手段，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0054-001",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 1 个规避手段，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0064",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0095",
+        "relation": "co-used",
+        "note": "共享 3 个规避手段。"
+      },
+      {
+        "key": "AT0010",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 1 个规避手段。"
+      }
+    ],
+    "references": [
+      {
+        "title": "MITRE ATT&CK: Supply Chain Compromise - Compromise Software Supply Chain (T1195.002)",
+        "link": "https://attack.mitre.org/techniques/T1195/002/"
+      },
+      {
+        "title": "OpenSSF Package Analysis Project",
+        "link": "https://github.com/ossf/package-analysis"
+      }
+    ],
+    "updated": "2026-06-26"
+  },
+  "AT0054-007": {
+    "title": "容器逃逸与K8s攻击工具",
+    "keywords": [
+      "容器逃逸与K8s攻击工具",
+      "容器逃逸",
+      "Container Escape",
+      "Kubernetes攻击",
+      "K8s渗透",
+      "Docker逃逸",
+      "pod提权",
+      "RBAC滥用"
+    ],
+    "description": "针对容器化环境和 Kubernetes 集群的攻击工具集合。主要能力包括：①容器逃逸：利用内核漏洞（如 CVE-2022-0185、CVE-2024-21626）、特权容器配置、挂载宿主机文件系统或 Docker Socket 暴露等方式突破容器隔离，获取宿主机权限；②K8s API 滥用：利用错误配置的 RBAC 权限、暴露的 API Server、未授权的 kubelet 端口进行集群接管；③横向移动：通过 ServiceAccount Token、Secret 泄露、Pod 间网络无隔离等方式在集群内横向扩展；④持久化：创建恶意 CronJob、DaemonSet、Admission Webhook 或修改镜像仓库实现长期驻留。代表性工具包括 CDK（Container penetration toolkit）、PEIRATES、kube-hunter 等。",
+    "directCauseRisks": [
+      "R0078",
+      "R0209"
+    ],
+    "indirectSupportRisks": [
+      "R0034",
+      "R0083"
+    ],
+    "avoidances": [
+      "A0085",
+      "A0068",
+      "A0078",
+      "A0055",
+      "A0016",
+      "A0044"
+    ],
+    "relatedAttackTools": [
+      {
+        "key": "AT0054-006",
+        "relation": "co-used",
+        "note": "共同关联 4 个风险，共享 3 个规避手段，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0063",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 3 个规避手段，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0064",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，共享 1 个规避手段，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0013",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0063-001",
+        "relation": "co-used",
+        "note": "共享 3 个规避手段。"
+      },
+      {
+        "key": "AT0081",
+        "relation": "co-used",
+        "note": "共享 3 个规避手段。"
+      }
+    ],
+    "references": [
+      {
+        "title": "MITRE ATT&CK: Container Administration Command (T1609)",
+        "link": "https://attack.mitre.org/techniques/T1609/"
+      },
+      {
+        "title": "Kubernetes Security Best Practices - CISA",
+        "link": "https://www.cisa.gov/news-events/alerts/2022/03/15/cisa-and-partners-release-advisory-kubernetes-hardening"
+      }
+    ],
+    "updated": "2026-06-26"
   }
 }

@@ -15,7 +15,7 @@
     "summary": "GitHub安全项目指出，汽车OTA更新过程易受多种网络安全威胁，包括中间人攻击（可劫持通信）、固件欺骗（可伪造升级包）以及未授权访问。攻击者通过这些手段可篡改或重放OTA包，植入恶意固件。",
     "category": "vulnerability_advisory",
     "relatedRisks": [
-      "R0251"
+      "R0181-001"
     ],
     "references": [
       {
@@ -30,7 +30,7 @@
     ],
     "relatedThreatActors": [
       "TA0049",
-      "TA0061"
+      "TA0049-001"
     ]
   }
 }

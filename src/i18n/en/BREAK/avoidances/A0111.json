@@ -14,5 +14,40 @@
         "link": "https://trustedcomputinggroup.org/resource/tcg-guidance-for-secure-update-of-software-and-firmware-on-embedded-systems/"
       }
     ]
+  },
+  "A0111-001": {
+    "title": "Firmware OTA Update Signature Verification",
+    "definition": "Digital signature verification of firmware packages delivered via OTA to ensure trusted origin and integrity against tampering.",
+    "description": "Prevents malicious firmware from being implanted through OTA. Measures: firmware packages signed with the vendor's private key; device-side verification using the embedded public key; secure hashing algorithms; certificate chain validation; anti-rollback version enforcement; automatic rollback upon update failure.",
+    "complexity": "Intermediate",
+    "limitation": "Complex key management; increased latency due to signature verification; certificate expiration requires handling.",
+    "keywords": [
+      "Firmware OTA Update Signature Verification"
+    ],
+    "references": [
+      {
+        "title": "Transaction Risk Control",
+        "link": "https://www.nhtsa.gov/sites/nhtsa.gov/files/documents/cybersecurity_of_firmware_updates_oct2020.pdf"
+      }
+    ]
+  },
+  "A0111-002": {
+    "title": "Connected-Vehicle OTA Security Governance",
+    "description": "Apply signature verification and security monitoring to vehicle OTA packages, upgrade channels, rollback policies, and phased releases.",
+    "references": [
+      {
+        "title": "ISO/SAE 21434 Road vehicles Cybersecurity",
+        "link": "https://www.iso.org/standard/70918.html"
+      }
+    ],
+    "keywords": [
+      "Connected-Vehicle OTA Security Governance",
+      "OTA signature verification",
+      "vehicle update security",
+      "firmware rollback protection",
+      "canary rollout",
+      "automotive cybersecurity"
+    ],
+    "definition": "Apply signature verification and security monitoring to vehicle OTA packages, upgrade channels, rollback policies, and phased releases."
   }
 }

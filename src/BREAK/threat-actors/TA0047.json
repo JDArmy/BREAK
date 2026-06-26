@@ -8,8 +8,8 @@
     "useAttackTools": [
       "AT0063",
       "AT0064",
-      "AT0065",
-      "AT0071",
+      "AT0064-001",
+      "AT0063-001",
       "AT0079",
       "AT0060",
       "AT0080"
@@ -20,7 +20,7 @@
       "R0185"
     ],
     "indirectSupportRisks": [
-      "R0194",
+      "R0084-002",
       "R0195",
       "R0197",
       "R0201",
@@ -71,12 +71,12 @@
         "note": "共同使用 2 个攻击工具。"
       },
       {
-        "key": "TA0017",
+        "key": "TA0002-001",
         "relation": "co-involved",
         "note": "共同使用 1 个攻击工具。"
       },
       {
-        "key": "TA0018",
+        "key": "TA0017",
         "relation": "co-involved",
         "note": "共同使用 1 个攻击工具。"
       }

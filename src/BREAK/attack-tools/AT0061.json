@@ -52,17 +52,17 @@
     ],
     "relatedAttackTools": [
       {
-        "key": "AT0057",
+        "key": "AT0053-004",
         "relation": "co-used",
         "note": "共同关联 8 个风险，共享 3 个规避手段，被 1 个相同行为者使用或建设。"
       },
       {
-        "key": "AT0023",
+        "key": "AT0014-001",
         "relation": "co-used",
         "note": "共同关联 7 个风险，共享 3 个规避手段，被 2 个相同行为者使用或建设。"
       },
       {
-        "key": "AT0035",
+        "key": "AT0023",
         "relation": "co-used",
         "note": "共同关联 7 个风险，共享 3 个规避手段，被 2 个相同行为者使用或建设。"
       },
@@ -80,6 +80,298 @@
         "key": "AT0045",
         "relation": "co-used",
         "note": "共同关联 7 个风险，共享 2 个规避手段。"
+      }
+    ]
+  },
+  "AT0061-001": {
+    "title": "API枚举与越权测试工具",
+    "description": "用于枚举API路径、参数、对象ID和权限边界的自动化工具。",
+    "avoidances": [
+      "A0195",
+      "A0196",
+      "A0004-001",
+      "A0218"
+    ],
+    "directCauseRisks": [
+      "R0222",
+      "R0223",
+      "R0224",
+      "R0247"
+    ],
+    "indirectSupportRisks": [
+      "R0225"
+    ],
+    "references": [
+      {
+        "title": "OWASP API Security Top 10 2023",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+      }
+    ],
+    "keywords": [
+      "API枚举与越权测试工具",
+      "API枚举与越权测试"
+    ],
+    "updated": "2026-06-17",
+    "relatedAttackTools": [
+      {
+        "key": "AT0061-002",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0054-004",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 1 个规避手段，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0054-005",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险。"
+      }
+    ]
+  },
+  "AT0061-002": {
+    "title": "Webhook重放工具",
+    "description": "用于捕获、修改和重放Webhook事件，测试签名验证和幂等处理缺陷。",
+    "avoidances": [
+      "A0219",
+      "A0198",
+      "A0015",
+      "A0004"
+    ],
+    "directCauseRisks": [
+      "R0225"
+    ],
+    "indirectSupportRisks": [
+      "R0223"
+    ],
+    "references": [
+      {
+        "title": "OWASP API Security Top 10 2023",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+      }
+    ],
+    "keywords": [
+      "Webhook重放工具",
+      "Webhook重放"
+    ],
+    "updated": "2026-06-17",
+    "relatedAttackTools": [
+      {
+        "key": "AT0061-001",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0003",
+        "relation": "co-used",
+        "note": "共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0005",
+        "relation": "co-used",
+        "note": "共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0014-001",
+        "relation": "co-used",
+        "note": "共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0023",
+        "relation": "co-used",
+        "note": "共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0042",
+        "relation": "co-used",
+        "note": "共享 2 个规避手段。"
+      }
+    ]
+  },
+  "AT0061-003": {
+    "title": "SaaS OAuth滥用工具",
+    "description": "用于诱导授权、枚举SaaS权限和批量导出邮件/网盘数据的工具。",
+    "avoidances": [
+      "A0205",
+      "A0206",
+      "A0090",
+      "A0044",
+      "A0015"
+    ],
+    "directCauseRisks": [
+      "R0232",
+      "R0233"
+    ],
+    "indirectSupportRisks": [
+      "R0078-002"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "SaaS OAuth滥用工具",
+      "SaaS OAuth滥用"
+    ],
+    "updated": "2026-06-17",
+    "relatedAttackTools": [
+      {
+        "key": "AT0054-003",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，共享 3 个规避手段，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0026",
+        "relation": "co-used",
+        "note": "共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0038",
+        "relation": "co-used",
+        "note": "共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0039",
+        "relation": "co-used",
+        "note": "共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0040",
+        "relation": "co-used",
+        "note": "共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0040-001",
+        "relation": "co-used",
+        "note": "共享 2 个规避手段。"
+      }
+    ]
+  },
+  "AT0061-004": {
+    "title": "支付欺诈自动化工具",
+    "description": "用于批量下单、虚假交易、退款滥用和拒付证据伪造的自动化工具。",
+    "avoidances": [
+      "A0207",
+      "A0208",
+      "A0077",
+      "A0044",
+      "A0015"
+    ],
+    "directCauseRisks": [
+      "R0017-003",
+      "R0235",
+      "R0236"
+    ],
+    "indirectSupportRisks": [
+      "R0005"
+    ],
+    "references": [
+      {
+        "title": "PCI Data Security Standard",
+        "link": "https://www.pcisecuritystandards.org/standards/pci-dss/"
+      }
+    ],
+    "keywords": [
+      "支付欺诈自动化工具",
+      "支付欺诈自动化"
+    ],
+    "updated": "2026-06-17",
+    "relatedAttackTools": [
+      {
+        "key": "AT0038",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0026",
+        "relation": "co-used",
+        "note": "共享 2 个规避手段，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0001",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 1 个规避手段。"
+      },
+      {
+        "key": "AT0014-001",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 1 个规避手段。"
+      },
+      {
+        "key": "AT0023",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 1 个规避手段。"
+      },
+      {
+        "key": "AT0030",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 1 个规避手段。"
+      }
+    ]
+  },
+  "AT0061-005": {
+    "title": "广告归因作弊工具",
+    "description": "用于点击注入、安装农场、虚假转化和联盟佣金欺诈的工具。",
+    "avoidances": [
+      "A0209",
+      "A0210",
+      "A0021",
+      "A0044",
+      "A0015",
+      "A0046"
+    ],
+    "directCauseRisks": [
+      "R0237",
+      "R0238",
+      "R0239"
+    ],
+    "indirectSupportRisks": [
+      "R0008"
+    ],
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "广告归因作弊工具",
+      "广告归因作弊"
+    ],
+    "updated": "2026-06-17",
+    "relatedAttackTools": [
+      {
+        "key": "AT0044",
+        "relation": "co-used",
+        "note": "共享 3 个规避手段，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0003",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 2 个规避手段。"
+      },
+      {
+        "key": "AT0042",
+        "relation": "co-used",
+        "note": "共享 3 个规避手段。"
+      },
+      {
+        "key": "AT0045",
+        "relation": "co-used",
+        "note": "共享 3 个规避手段。"
+      },
+      {
+        "key": "AT0046",
+        "relation": "co-used",
+        "note": "共享 3 个规避手段。"
+      },
+      {
+        "key": "AT0047",
+        "relation": "co-used",
+        "note": "共享 3 个规避手段。"
       }
     ]
   }

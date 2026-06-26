@@ -33,6 +33,11 @@
         "note": "共同覆盖 3 个风险，共同限制 1 个攻击工具。"
       },
       {
+        "key": "A0110-001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
         "key": "A0167",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
@@ -43,12 +48,100 @@
         "note": "共同覆盖 1 个风险。"
       },
       {
-        "key": "A0190",
+        "key": "A0016",
+        "relation": "complement",
+        "note": "共同限制 1 个攻击工具。"
+      }
+    ]
+  },
+  "A0111-001": {
+    "title": "固件OTA更新签名验证",
+    "category": "AC01",
+    "definition": "对OTA推送的固件包进行数字签名验证，确保来源可信且未被篡改",
+    "description": "防止恶意固件通过OTA植入。措施：固件包使用厂商私钥签名；设备内置公钥验证；使用安全哈希算法；证书链验证；版本号防回滚；更新失败自动回退。",
+    "complexity": "中级",
+    "limitation": "密钥管理复杂；签名验证增加时间；证书过期需处理",
+    "references": [
+      {
+        "title": "Secure OTA Update Implementation",
+        "link": "https://www.nhtsa.gov/sites/nhtsa.gov/files/documents/cybersecurity_of_firmware_updates_oct2020.pdf"
+      }
+    ],
+    "updated": "2026-06-16",
+    "keywords": [
+      "固件OTA更新签名验证",
+      "OTA安全",
+      "固件签名",
+      "更新验证"
+    ],
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0150",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
+      },
+      {
+        "key": "A0108",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0118",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
+        "key": "A0111-002",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0185",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0151",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
+  },
+  "A0111-002": {
+    "category": "AC01",
+    "title": "车联网OTA安全治理",
+    "description": "对车端OTA包、升级通道、回滚策略和版本灰度实施签名验证与安全监控。",
+    "references": [
+      {
+        "title": "ISO/SAE 21434 Road vehicles Cybersecurity",
+        "link": "https://www.iso.org/standard/70918.html"
+      }
+    ],
+    "keywords": [
+      "车联网OTA安全治理"
+    ],
+    "updated": "2026-06-17",
+    "definition": "对车端OTA包、升级通道、回滚策略和版本灰度实施签名验证与安全监控。",
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0111-001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0150",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       },
       {
-        "key": "A0016",
+        "key": "A0044",
+        "relation": "complement",
+        "note": "共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0185",
         "relation": "complement",
         "note": "共同限制 1 个攻击工具。"
       }

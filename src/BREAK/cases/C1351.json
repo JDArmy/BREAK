@@ -14,7 +14,7 @@
     "summary": "发表在USENIX NSDI 2024会议上的研究论文《Cloudy with a Chance of Cyberattacks: Dangling Resources Abuse on Cloud Platforms》证实，攻击者可以劫持云平台上已释放但未清理的资源，这些资源原本属于合法组织。攻击者利用这些被劫持的资源对原服务客户发起攻击，例如分发恶意软件，实现了对云算力的非法占用和滥用。",
     "category": "academic_research",
     "relatedRisks": [
-      "R0158"
+      "R0086-001"
     ],
     "references": [
       {

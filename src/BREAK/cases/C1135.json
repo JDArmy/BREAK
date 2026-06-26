@@ -16,7 +16,7 @@
     "summary": "2025年2月，Starknet上的借贷协议zkLend遭黑客攻击，损失近500万美元。黑客试图通过隐私协议Railgun进行混币洗钱，但Railgun内置的反洗钱政策检测到资金异常，强制将赃款退回。该事件展示了混币器在反洗钱合规方面的技术实践。",
     "category": "security_incident",
     "relatedRisks": [
-      "R0121"
+      "R0060-001"
     ],
     "references": [
       {

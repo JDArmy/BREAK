@@ -15,7 +15,7 @@
     "summary": "2022年4月，被告人李某某等人通过学习AI换脸技术，利用他人肖像照片实现“AI换脸”，破解平台认证系统，非法获取计算机信息系统数据并牟取暴利。法院以非法获取计算机信息系统数据罪判处五人有期徒刑三年八个月至三年三个月不等。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0116-001"
+      "R0071-010"
     ],
     "references": [
       {
@@ -26,7 +26,7 @@
     "updated": "2026-06-18",
     "incidentTime": "2024-07",
     "relatedAttackTools": [
-      "AT0056"
+      "AT0053-003"
     ],
     "relatedThreatActors": [
       "TA0031"

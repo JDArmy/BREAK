@@ -22,7 +22,7 @@
     "effectiveness": "high",
     "relatedAvoidances": [
       {
-        "key": "A0149",
+        "key": "A0111-001",
         "relation": "complement",
         "note": "共同覆盖 4 个风险。"
       },
@@ -37,17 +37,17 @@
         "note": "共同覆盖 2 个风险。"
       },
       {
+        "key": "A0111-002",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
         "key": "A0151",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       },
       {
         "key": "A0181",
-        "relation": "complement",
-        "note": "共同覆盖 1 个风险。"
-      },
-      {
-        "key": "A0185",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }

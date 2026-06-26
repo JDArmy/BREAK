@@ -14,7 +14,7 @@
     "summary": "公安部通报，针对“AI换脸”导致群众被欺诈的问题，公安机关发起专项会战，侦破相关案件79起，抓获犯罪嫌疑人515名。犯罪分子用于实施“AI换脸”的物料主要为照片，利用AI换脸技术实施诈骗活动。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0116-001"
+      "R0071-010"
     ],
     "references": [
       {
@@ -25,7 +25,7 @@
     "updated": "2026-06-26",
     "incidentTime": "2023-08",
     "relatedAttackTools": [
-      "AT0056"
+      "AT0053-003"
     ],
     "relatedThreatActors": [
       "TA0031"

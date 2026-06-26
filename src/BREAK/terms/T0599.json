@@ -10,7 +10,7 @@
     "description": "在 BREAK 业务安全分析中，工单系统用于识别相关风险、滥用模式、控制需求和运营信号。",
     "usageExample": "评估工单系统相关的风险敞口，并定义相应的控制措施。",
     "relatedRisks": [
-      "R0255"
+      "R0078-002"
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [],

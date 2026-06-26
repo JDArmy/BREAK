@@ -43,5 +43,288 @@
       }
     ],
     "updated": "2026-06-16"
+  },
+  "T0400-001": {
+    "title": "高炮 / gp",
+    "keywords": [
+      "高炮 / gp",
+      "高炮",
+      "gp",
+      "714高炮",
+      "砍头息",
+      "短期高利贷",
+      "爆通讯录",
+      "借条",
+      "高利贷"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "指年化利率远超法定上限、期限极短、以复利滚动计息的非法贷款产品。",
+    "description": "这类贷款通常以日、周或月为周期计息，年化利率动辄超过500%，通过砍头息、展期费等方式让债务迅速膨胀。放贷方多为无资质的地下钱庄或线上现金贷平台，专门瞄准急需用钱且无其他融资渠道的人群。借款人一旦逾期，将面临高频骚扰、爆通讯录等暴力催收手段，债务几乎无法清偿。",
+    "usageExample": "真服了这家高炮也有好几年了,契而不舍隔三差五的催,都被315点名了的还不挂?两千多买卡到手才一千多还有脸来要钱",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [
+      "A0015",
+      "A0046",
+      "A0057",
+      "A0054",
+      "A0044"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [
+      {
+        "title": "2024年上半年信贷欺诈风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-ab1e8b8c-509b-44e7-9dbe-d7271765ae2c"
+      },
+      {
+        "title": "【黑产大数据】恶意贷款中介揭秘",
+        "link": "https://zhuanlan.zhihu.com/p/17601711058"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0400-002": {
+    "title": "黑户贷",
+    "keywords": [
+      "黑户贷",
+      "黑户贷款",
+      "不看征信",
+      "无视负债",
+      "法院执行贷款",
+      "逾期可贷",
+      "包过贷款",
+      "高利贷",
+      "黑户下款"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "面向征信严重不良或完全无记录人群发放的非法高息贷款。",
+    "description": "这类贷款由非正规金融机构操作，利用借款人无法从正规渠道获得资金的困境，通过高利率和严苛条款牟利。常见于网贷平台或民间借贷团伙，借款人一旦逾期将面临暴力催收或债务滚雪球的风险。",
+    "usageExample": "黑户贷，所有贷款不会过的统统包过，不看负债，法院起诉、法院执行、当前逾期，都可办理",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [
+      "A0015",
+      "A0046",
+      "A0057",
+      "A0054",
+      "A0044"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [
+      {
+        "title": "2024年上半年信贷欺诈风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-ab1e8b8c-509b-44e7-9dbe-d7271765ae2c"
+      },
+      {
+        "title": "【黑产大数据】恶意贷款中介揭秘",
+        "link": "https://zhuanlan.zhihu.com/p/17601711058"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0400-003": {
+    "title": "账号 / id贷",
+    "keywords": [
+      "账号 / id贷",
+      "苹果ID贷",
+      "ID抵押",
+      "手机账号贷款",
+      "锁机贷",
+      "短期高利",
+      "到手金额",
+      "一周还款",
+      "苹果12以上"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "以手机账号作为抵押物发放的短期非法高利贷。",
+    "description": "借款人需交出苹果ID或安卓账号控制权，放贷方以此要挟还款，一旦逾期即锁定设备或窃取隐私数据。这种贷款周期极短、利息极高，专门针对急需用钱且无其他抵押物的群体，常见于社交媒体和地下借贷渠道。",
+    "usageExample": "黑户最少都是要苹果12P以上，第一单ID贷1800到手1200，一个星期还款",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [
+      "A0015",
+      "A0046",
+      "A0057",
+      "A0054",
+      "A0044",
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0049"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS04",
+      "BS11"
+    ],
+    "references": [
+      {
+        "title": "2024年上半年信贷欺诈风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-ab1e8b8c-509b-44e7-9dbe-d7271765ae2c"
+      },
+      {
+        "title": "【黑产大数据】恶意贷款中介揭秘",
+        "link": "https://zhuanlan.zhihu.com/p/17601711058"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0400-004": {
+    "title": "租机贷",
+    "keywords": [
+      "租机贷",
+      "租机套现",
+      "免审核租赁",
+      "低门槛租机",
+      "信用分650",
+      "套现机构",
+      "高利租机",
+      "租赁变现",
+      "学生租机"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "以租赁电子产品为名实施的高利贷操作。",
+    "description": "中介通过“免审核、低门槛”话术吸引学生或资金紧张者签订租赁合同，实际年利率远超法定上限。借款人一旦违约，不仅面临高额罚金，还可能被暴力催收或起诉，模糊了租赁与借贷的界限。",
+    "usageExample": "信用分650+，租机贷，套现的机构来聊，量大质优",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [
+      "A0015",
+      "A0046",
+      "A0057",
+      "A0054",
+      "A0044",
+      "A0051",
+      "A0006-005",
+      "A0016"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [
+      {
+        "title": "2024年上半年信贷欺诈风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-ab1e8b8c-509b-44e7-9dbe-d7271765ae2c"
+      },
+      {
+        "title": "【黑产大数据】恶意贷款中介揭秘",
+        "link": "https://zhuanlan.zhihu.com/p/17601711058"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0400-005": {
+    "title": "55高炮",
+    "keywords": [
+      "55高炮",
+      "短期高炮",
+      "高利网贷",
+      "借1000还1500",
+      "5天还款",
+      "非法网贷",
+      "利息50%",
+      "超短期贷款",
+      "砍头息"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "借款周期极短、利息极高的非法网贷产品。",
+    "description": "例如借1000元5天后需还1500元，利息高达50%，由非法网贷平台运作。这类贷款专门收割无路可借的群体，逾期后迅速叠加罚息和催收压力，极易导致借款人债务失控。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [
+      "A0015",
+      "A0046",
+      "A0057",
+      "A0054",
+      "A0044"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [
+      {
+        "title": "2024年上半年信贷欺诈风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-ab1e8b8c-509b-44e7-9dbe-d7271765ae2c"
+      },
+      {
+        "title": "【黑产大数据】恶意贷款中介揭秘",
+        "link": "https://zhuanlan.zhihu.com/p/17601711058"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0400-006": {
+    "title": "搂贷",
+    "keywords": [
+      "搂贷",
+      "房产侵占",
+      "虚假借款合同",
+      "诱骗房产",
+      "老年人诈骗",
+      "以房借贷",
+      "诉讼夺产",
+      "暴力收房",
+      "房产抵押陷阱"
+    ],
+    "aliases": [],
+    "category": "信贷欺诈",
+    "definition": "通过虚假借款合同非法侵占借款人房产的欺诈行为。",
+    "description": "黑产团伙诱骗房产持有者签订含房产买卖条款的借款协议，利用借款人急需资金或法律意识薄弱的特点，最终通过诉讼或暴力手段夺取房产。老年人是主要受害群体，整个过程设计精密，追索难度大。",
+    "relatedRisks": [
+      "R0096"
+    ],
+    "relatedAvoidances": [
+      "A0015",
+      "A0046",
+      "A0057",
+      "A0054",
+      "A0044"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [],
+    "relatedBusinessScenes": [
+      "BS01",
+      "BS11"
+    ],
+    "references": [
+      {
+        "title": "2024年上半年信贷欺诈风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-ab1e8b8c-509b-44e7-9dbe-d7271765ae2c"
+      },
+      {
+        "title": "【黑产大数据】恶意贷款中介揭秘",
+        "link": "https://zhuanlan.zhihu.com/p/17601711058"
+      }
+    ],
+    "updated": "2026-06-16"
   }
 }

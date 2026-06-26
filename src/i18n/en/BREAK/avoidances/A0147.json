@@ -14,5 +14,19 @@
         "link": "https://www.dragos.com/"
       }
     ]
+  },
+  "A0147-001": {
+    "title": "Industrial Protocol Deep Packet Inspection",
+    "description": "Deep packet inspection of industrial protocols to identify and block attack traffic.",
+    "keywords": [
+      "Industrial Protocol Deep Packet Inspection"
+    ],
+    "references": [
+      {
+        "title": "Industrial Control Systems Security: Recommendations for Europe ...",
+        "link": "https://www.enisa.europa.eu/news/enisa-news/industrial-control-systems-security-recommendations-for-europe-member-states"
+      }
+    ],
+    "definition": "Deep packet inspection of industrial protocols to identify and block attack traffic."
   }
 }

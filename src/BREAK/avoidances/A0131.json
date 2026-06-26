@@ -24,12 +24,12 @@
     "effectiveness": "high",
     "relatedAvoidances": [
       {
-        "key": "A0132",
+        "key": "A0131-001",
         "relation": "complement",
         "note": "共同覆盖 5 个风险，共同限制 1 个攻击工具。"
       },
       {
-        "key": "A0133",
+        "key": "A0131-002",
         "relation": "complement",
         "note": "共同覆盖 4 个风险，共同限制 1 个攻击工具。"
       },
@@ -37,6 +37,96 @@
         "key": "A0156",
         "relation": "complement",
         "note": "共同覆盖 2 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0044",
+        "relation": "complement",
+        "note": "共同限制 1 个攻击工具。"
+      }
+    ]
+  },
+  "A0131-001": {
+    "title": "连续区块限制与重组检测",
+    "category": "AC03",
+    "definition": "限制单一矿工连续出块数量，并监控链重组行为，及时发现51%攻击迹象",
+    "description": "检测和限制攻击者控制链的能力。技术实现：限制同一矿工/验证者连续出块数量（如不超过3个连续块）；监控链重组深度和频率，超过阈值触发告警；追踪大额交易的确认数，检测双花企图；交易所和支付处理商提高确认数要求（如从6增到50+）；部署实时监控系统，检测算力突然集中。MIT DCI研究表明通过连续块限制可以显著提高攻击难度。",
+    "complexity": "中级",
+    "limitation": "限制连续出块可能影响网络效率；提高确认数降低用户体验；监控系统可能产生误报；无法阻止攻击只能延迟检测",
+    "references": [
+      {
+        "title": "Preventing 51% Attack by Using Consecutive Block Limits in Bitcoin",
+        "link": "https://ieeexplore.ieee.org/iel7/6287639/10380310/10542114.pdf"
+      }
+    ],
+    "updated": "2026-06-16",
+    "keywords": [
+      "连续区块限制与重组检测",
+      "连续区块限制",
+      "链重组",
+      "双花检测",
+      "确认数"
+    ],
+    "effectiveness": "high",
+    "relatedAvoidances": [
+      {
+        "key": "A0131",
+        "relation": "complement",
+        "note": "共同覆盖 5 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0131-002",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0156",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0044",
+        "relation": "complement",
+        "note": "共同限制 1 个攻击工具。"
+      }
+    ]
+  },
+  "A0131-002": {
+    "title": "算力租赁市场监控与应急响应",
+    "category": "AC02",
+    "definition": "监控算力租赁平台异常活动，发现疑似51%攻击准备时启动应急预案",
+    "description": "攻击者常通过NiceHash等平台租赁算力发动攻击。防御策略：监控算力租赁市场，检测针对本链的大规模算力租赁；追踪历史51%攻击的算力来源和模式；与租赁平台合作，可疑租赁行为时暂停服务；建立社区预警机制，矿工和节点运营者快速响应；准备应急方案：临时提高确认数、暂停大额提现、联系交易所暂停充提。Bitpanda等平台强调应急响应的重要性。",
+    "complexity": "中级",
+    "limitation": "依赖外部数据和第三方合作；攻击者可能使用自有算力绕过监控；应急措施可能影响正常用户；无法预防所有攻击路径",
+    "references": [
+      {
+        "link": "https://www.investopedia.com/terms/1/51-attack.asp",
+        "title": "What is a 51% Attack on Blockchain? Risks, Examples, and Costs ..."
+      }
+    ],
+    "updated": "2026-06-16",
+    "keywords": [
+      "算力租赁市场监控与应急响应",
+      "算力监控",
+      "应急响应",
+      "NiceHash",
+      "社区预警"
+    ],
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0131",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0131-001",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险，共同限制 1 个攻击工具。"
+      },
+      {
+        "key": "A0156",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
       },
       {
         "key": "A0044",

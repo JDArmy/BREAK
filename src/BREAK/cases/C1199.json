@@ -14,7 +14,7 @@
     "summary": "公安部网安局披露，山西大同网民邢某在未经授权的情况下，利用AI工具生成郑丽文形象的AI数字人进行直播带货，引发社会关注，造成恶劣影响。邢某的行为构成盗用、冒用他人身份名义招摇撞骗，被属地公安局依法作出行政拘留。",
     "category": "administrative_enforcement",
     "relatedRisks": [
-      "R0130"
+      "R0071-008"
     ],
     "references": [
       {
@@ -25,8 +25,8 @@
     "updated": "2026-06-18",
     "incidentTime": "2026-05",
     "relatedAttackTools": [
-      "AT0056",
-      "AT0058"
+      "AT0053-003",
+      "AT0053-005"
     ],
     "relatedThreatActors": [
       "TA0041",

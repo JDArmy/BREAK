@@ -20,10 +20,10 @@
     "usageExample": "用户在以太坊上转账需支付约5-50美元Gas费，复杂的DeFi交互可能需要100美元以上。",
     "relatedRisks": [
       "R0173",
-      "R0204"
+      "R0173-001"
     ],
     "relatedAvoidances": [
-      "A0128",
+      "A0177-001",
       "A0177"
     ],
     "relatedAttackTools": [

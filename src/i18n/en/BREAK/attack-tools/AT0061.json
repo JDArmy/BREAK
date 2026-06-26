@@ -21,5 +21,95 @@
       "JWT attack tool",
       "business logic abuse automation"
     ]
+  },
+  "AT0061-001": {
+    "title": "API Enumeration and Authorization Testing Tool",
+    "description": "Automation for enumerating API paths, parameters, object IDs, and authorization boundaries.",
+    "references": [
+      {
+        "title": "OWASP API Security Top 10 2023",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+      }
+    ],
+    "keywords": [
+      "API Enumeration and Authorization Testing Tool",
+      "API enumeration",
+      "object ID testing",
+      "authorization boundary testing",
+      "BOLA testing",
+      "API security testing"
+    ]
+  },
+  "AT0061-002": {
+    "title": "Webhook Replay Tool",
+    "description": "Tooling that captures, modifies, and replays webhook events to test signature verification and idempotency defects.",
+    "references": [
+      {
+        "title": "OWASP API Security Top 10 2023",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+      }
+    ],
+    "keywords": [
+      "Webhook Replay Tool",
+      "webhook replay",
+      "event capture",
+      "signature bypass testing",
+      "idempotency testing",
+      "timestamp replay"
+    ]
+  },
+  "AT0061-003": {
+    "title": "SaaS OAuth Abuse Tool",
+    "description": "Tools for inducing authorization, enumerating SaaS permissions, and exporting mail or drive data at scale.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "SaaS OAuth Abuse Tool",
+      "OAuth grant abuse",
+      "SaaS permission enumeration",
+      "mailbox export",
+      "drive data extraction",
+      "third-party app abuse"
+    ]
+  },
+  "AT0061-004": {
+    "title": "Payment Fraud Automation Tool",
+    "description": "Automation for bulk ordering, fake transactions, refund abuse, and forged chargeback evidence.",
+    "references": [
+      {
+        "title": "PCI Data Security Standard",
+        "link": "https://www.pcisecuritystandards.org/standards/pci-dss/"
+      }
+    ],
+    "keywords": [
+      "Payment Fraud Automation Tool",
+      "payment fraud automation",
+      "bulk ordering script",
+      "refund abuse tooling",
+      "chargeback evidence forgery",
+      "merchant cash-out"
+    ]
+  },
+  "AT0061-005": {
+    "title": "Ad Attribution Fraud Tool",
+    "description": "Tooling for click injection, install farms, fake conversions, and affiliate commission fraud.",
+    "references": [
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "link": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "keywords": [
+      "Ad Attribution Fraud Tool",
+      "click injection tooling",
+      "install farm automation",
+      "fake conversion script",
+      "affiliate fraud",
+      "attribution hijacking"
+    ]
   }
 }

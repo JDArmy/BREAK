@@ -20,8 +20,8 @@
       "R0084",
       "R0084-001",
       "R0032",
-      "R0144",
-      "R0194"
+      "R0084-004",
+      "R0084-002"
     ],
     "relatedAvoidances": [
       "A0016",
@@ -31,14 +31,14 @@
     ],
     "relatedAttackTools": [
       "AT0063",
-      "AT0071",
+      "AT0063-001",
       "AT0072"
     ],
     "relatedThreatActors": [
       "TA0015",
       "TA0018",
       "TA0039",
-      "TA0043"
+      "TA0042-001"
     ],
     "relatedBusinessScenes": [
       "BS00",
@@ -55,6 +55,113 @@
       {
         "link": "https://www.cisa.gov/secure-our-world/recognize-and-report-phishing",
         "title": "Recognize and Report Phishing - CISA"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0505-001": {
+    "title": "鱼叉式钓鱼",
+    "aliases": [
+      "Spear Phishing",
+      "定向钓鱼",
+      "精准钓鱼"
+    ],
+    "category": "社会工程",
+    "keywords": [
+      "鱼叉式钓鱼",
+      "Spear Phishing",
+      "定向钓鱼",
+      "APT攻击",
+      "精准钓鱼"
+    ],
+    "definition": "针对特定个人或组织定制的高度个性化钓鱼攻击，成功率远高于普通钓鱼。",
+    "description": "鱼叉式钓鱼攻击者通过社交媒体、公开信息等渠道深入研究目标，精心伪造与目标工作、兴趣相关的邮件内容，提高可信度。此类攻击常用于APT（高级持续性威胁）行动，目标包括企业高管、政府官员、研发人员等高价值对象。由于高度定制化，传统邮件过滤难以防御。",
+    "usageExample": "黑客研究某公司CFO的社交媒体后，伪造供应商邮件请求更改付款账户，成功骗取百万美元汇款。",
+    "relatedRisks": [
+      "R0084",
+      "R0084-001",
+      "R0083-002",
+      "R0059"
+    ],
+    "relatedAvoidances": [
+      "A0051",
+      "A0007",
+      "A0016"
+    ],
+    "relatedAttackTools": [
+      "AT0063",
+      "AT0063-001"
+    ],
+    "relatedThreatActors": [
+      "TA0018",
+      "TA0042-001"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [
+      {
+        "link": "https://www.microsoft.com/en-us/security/business/security-101/what-is-spear-phishing",
+        "title": "What Is Spear Phishing? | Microsoft Security"
+      },
+      {
+        "link": "https://www.proofpoint.com/us/threat-reference/spear-phishing",
+        "title": "Spear Phishing - Proofpoint"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0505-002": {
+    "title": "捕鲸攻击",
+    "aliases": [
+      "Whaling Attack",
+      "高管钓鱼",
+      "BEC"
+    ],
+    "category": "社会工程",
+    "keywords": [
+      "捕鲸攻击",
+      "Whaling Attack",
+      "高管钓鱼",
+      "CEO诈骗",
+      "商业邮件入侵",
+      "BEC"
+    ],
+    "definition": "专门针对企业高管（CEO、CFO等）的鱼叉式钓鱼攻击，通常涉及高额资金或敏感信息。",
+    "description": "捕鲸攻击是鱼叉式钓鱼的极端形式，攻击者冒充董事会成员、合作伙伴或监管机构，利用高管的决策权限和时间压力，诱导其授权大额转账或泄露商业机密。此类攻击造成的平均损失远超普通钓鱼，FBI将其归类为商业邮件入侵（BEC）诈骗的主要形式。",
+    "usageExample": "攻击者伪造CEO邮件要求财务总监紧急汇款完成秘密收购，财务人员未经核实直接转账损失500万美元。",
+    "relatedRisks": [
+      "R0084",
+      "R0083",
+      "R0095",
+      "R0059"
+    ],
+    "relatedAvoidances": [
+      "A0051",
+      "A0007"
+    ],
+    "relatedAttackTools": [
+      "AT0063",
+      "AT0063-001",
+      "AT0053-007"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0018",
+      "TA0042-001"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [
+      {
+        "link": "https://www.fbi.gov/how-we-can-help-you/scams-and-safety/common-frauds-and-scams/business-email-compromise",
+        "title": "Business Email Compromise - FBI"
+      },
+      {
+        "link": "https://www.fortinet.com/resources/cyberglossary/whaling-attack",
+        "title": "What is a Whaling Attack? - Fortinet"
       }
     ],
     "updated": "2026-06-16"

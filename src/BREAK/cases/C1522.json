@@ -14,7 +14,7 @@
     "summary": "2023年3月22日，Euler Finance攻击者在攻击完成后，为混淆视听向Ronin黑客发送100枚ETH。Ronin黑客随即回礼2枚ETH并发送链上消息，要求解密一条加密信息。安全专家指出该消息实为网络钓鱼骗局，试图窃取Euler攻击者钱包私钥。",
     "category": "security_incident",
     "relatedRisks": [
-      "R0194"
+      "R0084-002"
     ],
     "references": [
       {

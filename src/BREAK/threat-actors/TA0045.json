@@ -25,7 +25,7 @@
       "R0173"
     ],
     "indirectSupportRisks": [
-      "R0121",
+      "R0060-001",
       "R0174"
     ],
     "references": [
@@ -53,7 +53,7 @@
     "updated": "2026-06-16",
     "relatedThreatActors": [
       {
-        "key": "TA0044",
+        "key": "TA0002-001",
         "relation": "co-involved",
         "note": "共同间接支持 1 个风险，共同使用 1 个攻击工具。"
       },

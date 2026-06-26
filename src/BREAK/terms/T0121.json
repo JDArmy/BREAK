@@ -48,5 +48,306 @@
       }
     ],
     "updated": "2026-06-16"
+  },
+  "T0121-001": {
+    "title": "宝妈鱼",
+    "keywords": [
+      "宝妈鱼",
+      "宝妈兼职",
+      "在家做手工",
+      "手工活外发",
+      "宝妈刷单",
+      "宝妈押金",
+      "兼职手工活",
+      "宝妈群"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "在诈骗语境下特指有兼职意愿、希望通过手工活或刷单补贴家用的家庭主妇群体。",
+    "description": "诈骗分子在社交平台发布虚假兼职广告，以“在家做手工”“刷单赚佣金”为名吸引宝妈。他们要求先交纳押金或加盟费，承诺后续返还并支付报酬，最终在骗取大量押金后失联。这类骗局精准利用了宝妈群体时间碎片化、急于赚钱的心理。",
+    "relatedRisks": [
+      "R0095",
+      "R0150"
+    ],
+    "relatedAvoidances": [
+      "A0006-005",
+      "A0016",
+      "A0051",
+      "A0024",
+      "A0044",
+      "A0015",
+      "A0059",
+      "A0021",
+      "A0061"
+    ],
+    "relatedAttackTools": [
+      "AT0053-001"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS02"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2025年上半年互联网黑灰产趋势半年度总结",
+        "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0121-002": {
+    "title": "朋友鱼",
+    "keywords": [
+      "朋友鱼",
+      "交友诈骗",
+      "杀猪盘",
+      "建立信任",
+      "情感诈骗",
+      "朋友借款",
+      "虚假友谊",
+      "长期聊天"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "诈骗团伙对伪装成朋友关系进行诈骗的目标群体的内部称呼。",
+    "description": "诈骗分子通过长期聊天建立虚假友谊，以此瓦解受害者的防备心理。这类受害者往往情感需求较强，容易被“朋友”推荐的虚假投资、借款周转等借口欺骗。该手法利用人际信任，比直接利诱更具隐蔽性，常造成较大金额损失。",
+    "relatedRisks": [
+      "R0150",
+      "R0095"
+    ],
+    "relatedAvoidances": [
+      "A0006-005",
+      "A0016",
+      "A0051",
+      "A0024",
+      "A0044"
+    ],
+    "relatedAttackTools": [
+      "AT0053-001"
+    ],
+    "relatedThreatActors": [
+      "TA0039",
+      "TA0015",
+      "TA0008"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2025年上半年互联网黑灰产趋势半年度总结",
+        "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0121-003": {
+    "title": "色鱼",
+    "keywords": [
+      "色鱼",
+      "裸聊",
+      "色情网站",
+      "敲诈",
+      "通讯录",
+      "木马",
+      "色情诈骗",
+      "封口费"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "黑产内部对因寻求色情内容而落入诈骗陷阱的男性群体的称呼。",
+    "description": "诈骗分子在色情网站或社交平台投放带有木马或虚假付费链接的色情内容，引诱用户点击。受害者往往因羞于启齿，在被小额扣款或盗取通讯录后，更容易在后续的裸聊敲诈中被迫支付高额封口费。此类骗局利用人性弱点，风险极高。",
+    "relatedRisks": [
+      "R0095",
+      "R0150",
+      "R0060"
+    ],
+    "relatedAvoidances": [
+      "A0006-005",
+      "A0016",
+      "A0051",
+      "A0024",
+      "A0044",
+      "A0016-002",
+      "A0037"
+    ],
+    "relatedAttackTools": [
+      "AT0053-001"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008",
+      "TA0014"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS01"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2025年上半年互联网黑灰产趋势半年度总结",
+        "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0121-004": {
+    "title": "学生鱼",
+    "keywords": [
+      "学生鱼",
+      "刷单",
+      "兼职诈骗",
+      "培训费",
+      "学生兼职",
+      "高薪日结",
+      "学生刷单",
+      "保证金"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "诈骗团伙对以在校学生为主要目标的群体的内部称呼。",
+    "description": "针对学生缺乏社会经验且希望兼职赚钱的心理，诈骗分子发布“高薪日结”“刷单返利”等虚假兼职信息。受害者一旦联系，便被要求交纳“培训费”或“保证金”，最终不仅拿不到报酬，本金也无法追回。该群体基数大，是刷单诈骗的重灾区。",
+    "relatedRisks": [
+      "R0017-001",
+      "R0095",
+      "R0150"
+    ],
+    "relatedAvoidances": [
+      "A0006-005",
+      "A0016",
+      "A0051",
+      "A0024",
+      "A0044",
+      "A0015",
+      "A0059",
+      "A0021",
+      "A0061"
+    ],
+    "relatedAttackTools": [
+      "AT0053-001"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS02"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2025年上半年互联网黑灰产趋势半年度总结",
+        "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0121-005": {
+    "title": "游戏鱼",
+    "keywords": [
+      "游戏鱼",
+      "游戏交易",
+      "低价充值",
+      "代练",
+      "装备买卖",
+      "游戏账号",
+      "钓鱼网站",
+      "游戏诈骗"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "诈骗团伙对以网络游戏玩家为主要目标的群体的内部称呼。",
+    "description": "诈骗分子在游戏公屏或交易平台发布低价充值、代练升级或买卖游戏装备的虚假信息。玩家一旦上钩，便会被诱导至钓鱼网站支付，或直接骗取账号密码。利用玩家对游戏资产的关注，此类交易诈骗在年轻群体中发案率极高。",
+    "relatedRisks": [
+      "R0010",
+      "R0095",
+      "R0150",
+      "R0084",
+      "R0084-003"
+    ],
+    "relatedAvoidances": [
+      "A0006-005",
+      "A0016",
+      "A0051",
+      "A0024",
+      "A0044",
+      "A0016-002",
+      "A0037"
+    ],
+    "relatedAttackTools": [
+      "AT0053-001",
+      "AT0063",
+      "AT0063-001"
+    ],
+    "relatedThreatActors": [
+      "TA0025-002",
+      "TA0015",
+      "TA0008",
+      "TA0042-001"
+    ],
+    "relatedBusinessScenes": [
+      "BS04",
+      "BS06"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2025年上半年互联网黑灰产趋势半年度总结",
+        "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0121-006": {
+    "title": "孕妇鱼",
+    "keywords": [
+      "孕妇鱼",
+      "孕妇兼职",
+      "手工活",
+      "材料费",
+      "居家客服",
+      "母婴论坛",
+      "押金",
+      "孕妇刷单"
+    ],
+    "aliases": [],
+    "category": "电信诈骗",
+    "definition": "诈骗团伙对以孕妇为主要目标的群体的内部称呼。",
+    "description": "针对孕妇空闲时间多、希望居家创收的心理，诈骗分子在宝妈群或母婴论坛发布“手工活外包”“居家客服”等虚假兼职。通常要求受害者先交纳材料费或押金，随后以各种理由拒绝支付报酬，最终卷款失联。该群体防范意识相对薄弱，容易反复受骗。",
+    "relatedRisks": [
+      "R0095",
+      "R0150"
+    ],
+    "relatedAvoidances": [
+      "A0006-005",
+      "A0016",
+      "A0051",
+      "A0024",
+      "A0044",
+      "A0050",
+      "A0035",
+      "A0052",
+      "A0049"
+    ],
+    "relatedAttackTools": [
+      "AT0053-001"
+    ],
+    "relatedThreatActors": [
+      "TA0015",
+      "TA0008"
+    ],
+    "relatedBusinessScenes": [
+      "BS04"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2025年上半年互联网黑灰产趋势半年度总结",
+        "link": "https://www.threathunter.cn/blog/2025-h1-anti-fraud-intelligence"
+      }
+    ],
+    "updated": "2026-06-16"
   }
 }

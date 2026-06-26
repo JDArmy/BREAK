@@ -10,7 +10,7 @@
     "description": "在 BREAK 业务安全分析中，商户套现用于识别相关风险、滥用模式、控制要求及运营信号。",
     "usageExample": "评估商户套现相关风险敞口并制定相应的控制措施。",
     "relatedRisks": [
-      "R0234"
+      "R0017-003"
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [],

@@ -16,7 +16,7 @@
     "description": "这些数据涵盖个人信息、企业机密、登录凭证等，是网络诈骗、盗刷和营销欺诈的基础资源。黑产链条中，料通常经过多次倒卖，从原始毛料加工为精准料，最终被下游犯罪团伙用于变现。",
     "relatedRisks": [
       "R0078",
-      "R0089"
+      "R0078-003"
     ],
     "relatedAvoidances": [
       "A0050",
@@ -32,6 +32,1364 @@
     "relatedThreatActors": [
       "TA0005",
       "TA0020",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01",
+      "BS02",
+      "BS04"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "【黑产大数据】2025年上半年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0075-001": {
+    "title": "二手料",
+    "keywords": [
+      "二手料",
+      "倒卖数据",
+      "数据转手",
+      "低质数据",
+      "过时数据",
+      "二手信息",
+      "数据清洗",
+      "广撒网数据",
+      "黑产数据"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "二手料指在非法数据交易中已被转手一次或多次的个人或企业数据。",
+    "description": "这类数据因多次倒卖，常出现字段缺失、信息过时或被篡改的情况，准确性和有效性大打折扣。在黑产链条中，二手料通常被用于广撒网的诈骗或低质量的营销推广。其交易价格远低于一手料，买家多为预算有限的下游黑产从业者。",
+    "relatedRisks": [
+      "R0078",
+      "R0078-003"
+    ],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0049"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "【黑产大数据】2025年上半年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0075-002": {
+    "title": "泛料",
+    "keywords": [
+      "泛料",
+      "无效数据",
+      "重复数据",
+      "数据清洗",
+      "群发钓鱼",
+      "低转化率",
+      "未筛选数据",
+      "数据筛选",
+      "杂乱数据"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "泛料指在非法数据交易中未经筛选、范围宽泛且精准度低的个人信息集合。",
+    "description": "这类数据通常来源杂乱，包含大量无效、重复或错误的记录，缺乏针对性。黑产从业者购买泛料后，往往需要投入额外成本进行清洗和筛选，才能用于诈骗或营销。因其转化率极低，泛料在市场上价格低廉，常被用于群发钓鱼短信等低端攻击。",
+    "relatedRisks": [
+      "R0078",
+      "R0078-003"
+    ],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0007",
+      "A0016-003",
+      "A0024",
+      "A0021",
+      "A0006-005",
+      "A0016-002",
+      "A0051",
+      "A0037",
+      "A0049"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "【黑产大数据】2025年上半年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0075-003": {
+    "title": "翻新料",
+    "keywords": [
+      "翻新料",
+      "数据造假",
+      "数据包装",
+      "旧数据翻新",
+      "修改时间戳",
+      "数据去重",
+      "以次充好",
+      "数据伪装",
+      "虚假数据"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "翻新料指在非法数据交易中经过加工处理、伪装成新数据的旧数据。",
+    "description": "黑产从业者通过补充虚假信息、修改时间戳或去重等手段，将过时数据重新包装出售。这种数据表面上看似新鲜有效，实则核心信息陈旧，买家使用时容易导致诈骗失败或营销受阻。翻新料常用于欺骗下游买家，以次充好，牟取暴利。",
+    "relatedRisks": [
+      "R0016",
+      "R0078",
+      "R0078-003"
+    ],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0049"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "【黑产大数据】2025年上半年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0075-004": {
+    "title": "扶贫料",
+    "keywords": [
+      "扶贫料",
+      "扶贫信息",
+      "定向诈骗",
+      "冒充扶贫办",
+      "低收入人群",
+      "补贴诈骗",
+      "精准诈骗",
+      "真实数据",
+      "扶贫对象"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "扶贫料指在非法数据交易中与扶贫对象相关的个人信息。",
+    "description": "这类数据通常包含低收入人群的详细身份、住址及补贴信息，被黑产非法获取后转卖。下游买家利用这些信息对防范意识较弱的群体实施定向诈骗，如冒充扶贫办发放补贴等。由于数据真实度高，此类诈骗成功率较高，社会危害性极大。",
+    "relatedRisks": [
+      "R0078",
+      "R0078-003"
+    ],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0049"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "【黑产大数据】2025年上半年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0075-005": {
+    "title": "隔夜料",
+    "keywords": [
+      "隔夜料",
+      "延迟交易",
+      "数据囤积",
+      "风控规避",
+      "精准诈骗",
+      "窃取数据",
+      "数据泄露滞后",
+      "隐蔽攻击",
+      "黑市数据"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "隔夜料指在非法数据交易中，攻击者窃取后故意延迟一段时间才出售的数据。",
+    "description": "攻击者为规避风控追踪或等待热度下降，会将刚窃取的数据囤积一段时间再流入黑市。这种延迟交易使得数据泄露的发现和应急响应严重滞后，受害者往往在不知情的情况下持续遭受损失。隔夜料常用于针对特定目标的精准诈骗，因其隐蔽性强而备受黑产青睐。",
+    "relatedRisks": [
+      "R0078",
+      "R0078-003"
+    ],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0049"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "【黑产大数据】2025年上半年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0075-006": {
+    "title": "Gm料",
+    "keywords": [
+      "Gm料",
+      "股民数据",
+      "炒股粉",
+      "电话名单",
+      "高净值人群",
+      "投资数据",
+      "股民电话",
+      "精准引流"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "Gm料指在非法数据交易中专为股民定制的个人信息数据。",
+    "description": "这类数据精准定位高净值或活跃股民，包含其投资偏好、持仓情况等敏感信息。黑产利用这些数据实施荐股诈骗、诱导接盘等非法活动，单笔诈骗金额往往巨大。因其转化率高、变现能力强，Gm料在暗网交易中属于高价商品。",
+    "relatedRisks": [
+      "R0078",
+      "R0078-003"
+    ],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0049"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01",
+      "BS02",
+      "BS04"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "【黑产大数据】2025年上半年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0075-007": {
+    "title": "轨道料",
+    "keywords": [
+      "轨道料",
+      "银行卡磁条",
+      "侧录",
+      "盗刷数据",
+      "磁条信息",
+      "CVV",
+      "银行卡复制",
+      "轨道数据"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "轨道料指在非法数据交易中通过改装POS机侧录获取的银行卡轨道信息。",
+    "description": "黑产通过在POS机中植入侧录模块，窃取银行卡磁条数据及密码。这类数据极其精准，可直接用于复制伪卡进行盗刷，或转卖给下游团伙实施电信诈骗。轨道料属于核心金融数据，一旦泄露，将直接威胁持卡人的资金安全。",
+    "relatedRisks": [
+      "R0078",
+      "R0078-003"
+    ],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0049",
+      "A0024",
+      "A0054"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "【黑产大数据】2025年上半年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0075-008": {
+    "title": "活料",
+    "keywords": [
+      "活料",
+      "一手数据",
+      "新鲜料",
+      "实时数据",
+      "高通过率",
+      "未清洗数据",
+      "即时料"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "在非法数据交易中，指仍然有效且可立即用于诈骗等活动的个人或组织信息。",
+    "description": "这类数据通常是最新泄露或窃取的一手信息，未经多次转卖，验证通过率高。黑产从业者购入后可直接用于精准诈骗、盗刷或账户接管，无需额外清洗。因其时效性强，在暗网和Telegram群组中价格远高于过期数据。",
+    "relatedRisks": [
+      "R0078",
+      "R0078-003"
+    ],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0049"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "【黑产大数据】2025年上半年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0075-009": {
+    "title": "精准料",
+    "keywords": [
+      "精准料",
+      "高净值数据",
+      "精洗料",
+      "定向诈骗",
+      "筛选数据",
+      "标注数据",
+      "高转化率"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "在非法数据交易中，指经过精细筛选和验证、真实性极高的个人信息或账户资料。",
+    "description": "这类数据通常包含详细的联系方式、资产状况或特定消费记录，由专业团伙进行清洗和标注。诈骗分子利用其高准确性实施定向钓鱼或商业欺诈，成功率远超普通料。在黑市交易中，精准料常按条高价出售，是导致大额资金损失的核心工具。",
+    "relatedRisks": [
+      "R0078",
+      "R0078-003"
+    ],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0006-005",
+      "A0016-002",
+      "A0051",
+      "A0037",
+      "A0049"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "【黑产大数据】2025年上半年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0075-010": {
+    "title": "冷门料",
+    "keywords": [
+      "冷门料",
+      "垃圾数据",
+      "低转化",
+      "过时数据",
+      "打包料",
+      "填充料",
+      "无效料"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "在非法数据交易中，指市场需求低、不易变现的个人或企业信息。",
+    "description": "这类数据可能因目标群体消费能力弱、信息过时或应用场景狭窄，导致黑产从业者兴趣不大。冷门料常被打包低价抛售，或与其他高价值数据捆绑交易，用于填充数据库或进行低成本的广撒网式诈骗。",
+    "relatedRisks": [
+      "R0078",
+      "R0078-003"
+    ],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0049"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "【黑产大数据】2025年上半年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0075-011": {
+    "title": "毛料",
+    "keywords": [
+      "毛料",
+      "原始数据",
+      "未清洗",
+      "一手毛料",
+      "数据清洗",
+      "撞库料",
+      "批量数据"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "在非法数据交易中，指未经清洗、筛选和分类的原始泄露数据。",
+    "description": "毛料通常包含大量冗余、重复或无效信息，直接使用效率极低。黑产中的料商或技术团伙会购入毛料，通过撞库、比对等方式进行清洗加工，提取有效字段后加价转卖给下游的诈骗或营销团队。",
+    "relatedRisks": [
+      "R0078",
+      "R0078-003"
+    ],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0049"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "【黑产大数据】2025年上半年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0075-012": {
+    "title": "母婴料",
+    "keywords": [
+      "母婴料",
+      "孕妇数据",
+      "婴儿数据",
+      "产后修复",
+      "奶粉客户",
+      "母婴店",
+      "月子中心"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "在非法数据交易中，指与孕产妇、婴幼儿相关的个人信息及消费数据。",
+    "description": "这类数据包括孕妇建档信息、婴儿出生记录、母婴产品购买清单等，由医院、电商平台等渠道泄露。黑产团伙获取后，将其转卖给月子中心、摄影机构用于电话骚扰，或直接用于冒充医护人员的精准诈骗。",
+    "relatedRisks": [
+      "R0078",
+      "R0078-003"
+    ],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0049"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS02"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "【黑产大数据】2025年上半年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0075-013": {
+    "title": "内料",
+    "keywords": [
+      "内料",
+      "四件套",
+      "银行卡四件",
+      "内料四件",
+      "卡密料",
+      "身份证号",
+      "银行卡密码"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "在非法数据交易中，指境内银行卡的卡号、密码、持卡人身份证号及绑定手机号这四类核心信息。",
+    "description": "这四大件是实施盗刷、洗钱和账户接管的关键数据，通常通过钓鱼网站、木马程序或系统漏洞获取。黑产团伙利用其直接转移资金，或用于注册虚假账户进行跑分洗钱，对公民财产安全构成直接威胁。",
+    "relatedRisks": [
+      "R0078",
+      "R0078-003"
+    ],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0007",
+      "A0016-003",
+      "A0024",
+      "A0021",
+      "A0006-005",
+      "A0016-002",
+      "A0051",
+      "A0037",
+      "A0049",
+      "A0054"
+    ],
+    "relatedAttackTools": [
+      "AT0039"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "【黑产大数据】2025年上半年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0075-014": {
+    "title": "实时料",
+    "keywords": [
+      "实时料",
+      "实时数据",
+      "一手数据",
+      "新鲜料",
+      "实时料包",
+      "未转手数据",
+      "高时效数据",
+      "即时数据",
+      "一手料源"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指刚被窃取、未经转手的一手个人信息或组织数据，在黑产市场上因时效最新而叫价最高。",
+    "description": "实时料强调数据的新鲜度和即时可用性，通常来自刚发生的系统入侵、内鬼泄露或钓鱼收割。黑产拿到后会在短时间内通过自动发卡平台或暗网群组快速分销，抢在数据失效前完成变现。买家拿到后多用于实时诈骗、撞库攻击或注册恶意账号，延迟越短成功率越高。",
+    "relatedRisks": [
+      "R0078",
+      "R0078-003"
+    ],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0006-005",
+      "A0016-002",
+      "A0051",
+      "A0037",
+      "A0049"
+    ],
+    "relatedAttackTools": [
+      "AT0027"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "【黑产大数据】2025年上半年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0075-015": {
+    "title": "死料",
+    "keywords": [
+      "死料",
+      "失效数据",
+      "无效料",
+      "废料",
+      "死号",
+      "已注销",
+      "数据废品",
+      "过期数据",
+      "无用料"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "在非法数据交易中，指已经失效、无法再利用的个人或组织数据，黑产内部视为无价值库存。",
+    "description": "死料通常因时间过久、信息变更或原平台风控升级而失去使用价值，比如已注销的手机号、被冻结的银行卡或失效的登录凭证。这类数据在市场上无人问津，有时被当作垃圾数据掺入料包中充数，用来坑骗不懂行的下游买家。一旦被识别为死料，基本只能废弃，无法进入后续诈骗或营销环节。",
+    "relatedRisks": [
+      "R0078",
+      "R0078-003"
+    ],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0007",
+      "A0016-003",
+      "A0024",
+      "A0021",
+      "A0049",
+      "A0054"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "【黑产大数据】2025年上半年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0075-016": {
+    "title": "外料",
+    "keywords": [
+      "外料",
+      "CVV",
+      "境外卡",
+      "四件套",
+      "卡料",
+      "信用卡数据",
+      "外卡",
+      "境外料"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指境外银行卡的卡号、密码、持卡人身份证号及绑定手机号四类信息，黑产称为“外料”或“CVV四大件”。",
+    "description": "外料主要来自境外卡的数据泄露渠道，包括钓鱼网站、支付接口劫持或暗网数据库拖库。黑产将四件套打包出售，下游买家用于跨境盗刷、虚假交易或冒充持卡人实施电信诈骗。因涉及境外卡，追查难度大，且常与洗钱、跑分平台对接，变现路径隐蔽。这类信息一旦流入市场，持卡人往往面临直接资金损失和身份冒用风险。",
+    "relatedRisks": [
+      "R0078",
+      "R0078-003",
+      "R0092",
+      "R0109"
+    ],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0007",
+      "A0016-003",
+      "A0024",
+      "A0021",
+      "A0006-005",
+      "A0016-002",
+      "A0051",
+      "A0037",
+      "A0049",
+      "A0054"
+    ],
+    "relatedAttackTools": [
+      "AT0039",
+      "AT0012",
+      "AT0064"
+    ],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040",
+      "TA0018"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "【黑产大数据】2025年上半年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0075-017": {
+    "title": "一手料",
+    "keywords": [
+      "一手料",
+      "一手数据",
+      "源头数据",
+      "一手货源",
+      "一手料源",
+      "一手信息",
+      "一手库",
+      "一手资料",
+      "一手料包"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指未经任何中间商转手、直接从泄露源头获取的个人或组织数据，在黑产交易中因完整度高而溢价明显。",
+    "description": "一手料避免了多次倒卖造成的数据污染和掺假，通常由数据源头直接流出，如内鬼、系统漏洞或即时钓鱼结果。黑产内部会优先消化一手料，用于高价值诈骗或精准营销，因为信息完整、关联性强，转化率远高于二手料。市场上常以“一手货源”为噱头招揽买家，实际交易中也会掺杂部分死料或重复数据来虚增数量。",
+    "relatedRisks": [
+      "R0078",
+      "R0078-003"
+    ],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0006-005",
+      "A0016-002",
+      "A0051",
+      "A0037",
+      "A0049"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "【黑产大数据】2025年上半年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0075-018": {
+    "title": "诊股料",
+    "keywords": [
+      "诊股料",
+      "股民数据",
+      "投顾数据",
+      "股票客户",
+      "投资数据",
+      "荐股料",
+      "股民信息",
+      "投顾信息",
+      "诊股数据"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "在非法数据交易中，指从股票投资平台或投顾公司非法获取的客户敏感信息，黑产称为“诊股料”。",
+    "description": "这类数据涵盖个人身份、交易记录、持仓偏好和联系方式等，多由内部员工泄露或系统入侵获取。黑产将诊股料转售给荐股诈骗团伙、非法配资平台或精准营销机构，用于实施投资诱导、虚假荐股或收取高额服务费。受害人因信息精准匹配，容易误信对方为正规投顾，最终造成资金损失。",
+    "relatedRisks": [
+      "R0078",
+      "R0078-003"
+    ],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0049"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "【黑产大数据】2025年上半年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0075-019": {
+    "title": "借条料",
+    "keywords": [
+      "借条料",
+      "借条",
+      "借条数据",
+      "借贷数据",
+      "借条料出",
+      "借条一手",
+      "条子料",
+      "借条包",
+      "借贷料"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指高利贷或私人借贷中，包含借款人签订的借条、身份信息及联系方式的用户数据包。",
+    "description": "这类数据通常从非法的借贷平台或私人放贷团伙内部流出，包含详细的借款人隐私信息。黑产收购后，用于进行二次诈骗、暴力催收或转卖给其他犯罪团伙。由于数据真实且涉及债务关系，受害者极易上当。",
+    "usageExample": "“出实时借条料,风控料,有量,保一手,价格优”",
+    "relatedRisks": [
+      "R0078",
+      "R0078-003"
+    ],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0049",
+      "A0015",
+      "A0046",
+      "A0057",
+      "A0054"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "【黑产大数据】2025年上半年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0075-020": {
+    "title": "风控料",
+    "keywords": [
+      "风控料",
+      "风控数据",
+      "风控标签",
+      "用户画像",
+      "风控料出",
+      "风控一手",
+      "信贷数据",
+      "风控包",
+      "风控数据出"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指从金融平台风控系统泄露的、经过初步分析标记的用户数据集合。",
+    "description": "这些数据通常包含用户的信用评级、消费习惯、风险标签等敏感信息，多由内部人员或第三方服务商泄露。黑产利用这些精准画像，进行定制化的营销欺诈、贷款诈骗等非法活动。因其针对性强，诈骗成功率远高于盲打。",
+    "usageExample": "“出实时借条料,风控料,有量,保一手,价格优。”",
+    "relatedRisks": [
+      "R0078",
+      "R0078-003"
+    ],
+    "relatedAvoidances": [
+      "A0029-001",
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0049",
+      "A0015",
+      "A0046",
+      "A0057",
+      "A0054"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "【黑产大数据】2025年上半年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0075-021": {
+    "title": "助贷料",
+    "keywords": [
+      "助贷料",
+      "助贷数据",
+      "助贷料出",
+      "贷款资料",
+      "助贷一手",
+      "贷款数据",
+      "申贷资料",
+      "助贷包",
+      "贷款料"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指从网贷平台泄露的贷款申请人全套资料，包括身份证、银行卡、征信报告等。",
+    "description": "这些数据由助贷平台或金融机构内部泄露，经黑产中介按信用等级分类后高价出售。下游诈骗团伙购买后，冒充平台客服以“解冻费”“保证金”等名义对受害人实施二次诈骗。由于掌握了受害人的详细借款信息，此类诈骗极具迷惑性。",
+    "usageExample": "“各种助贷料,欢迎来撩”",
+    "relatedRisks": [
+      "R0078",
+      "R0078-003"
+    ],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0049",
+      "A0015",
+      "A0046",
+      "A0057",
+      "A0054",
+      "A0024"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "【黑产大数据】2025年上半年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0075-022": {
+    "title": "黄金料",
+    "keywords": [
+      "黄金料",
+      "黄金分期",
+      "黄金套现",
+      "黄金料出",
+      "黄金数据",
+      "套现数据",
+      "黄金一手",
+      "黄金料包",
+      "分期数据"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指支持黄金购买并分期还款的小型非法套现平台，其用户信息在数据黑市中被称为“黄金料”。",
+    "description": "这类平台以购买黄金为幌子，实则帮助用户套取现金，并收取高额手续费。黑产人员将参与套现的用户个人信息整理成“黄金料”出售。这些数据常被用于二次诈骗，受害者不仅面临财产损失，还可能因套现行为卷入法律纠纷。",
+    "relatedRisks": [
+      "R0078",
+      "R0078-003"
+    ],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0049"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2025年上半年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2025"
+      },
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0075-023": {
+    "title": "扶贫料",
+    "keywords": [
+      "扶贫料",
+      "补贴数据",
+      "扶贫名单",
+      "精准扶贫",
+      "扶贫对象",
+      "扶贫信息",
+      "扶贫名单数据",
+      "扶贫款",
+      "扶贫诈骗"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指与扶贫补贴对象相关的个人信息，被黑产非法获取后用于精准诈骗或洗钱的数据。",
+    "description": "黑产通过内鬼或系统漏洞窃取扶贫对象的身份、联系方式及补贴详情。这些数据被转卖给诈骗团伙，冒充政府人员以发放补贴为名实施诈骗。由于信息精准，受害者往往深信不疑，导致大量本用于脱贫的资金被骗走。",
+    "usageExample": "“需要传销料、扶贫料、快递料的老板找我! 西装大头 v推 电销 数据 sdk现抓日活跃高质量数据!”",
+    "relatedRisks": [
+      "R0078",
+      "R0078-003"
+    ],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0049",
+      "A0024",
+      "A0054"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "【黑产大数据】2025年上半年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0075-024": {
+    "title": "机票料",
+    "keywords": [
+      "机票料",
+      "机票数据",
+      "航班信息",
+      "乘机人信息",
+      "航班改签",
+      "退票诈骗",
+      "机票退改签",
+      "机票订单",
+      "航班取消"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指从航空系统泄露的完整机票订单数据，包含乘机人姓名、身份证号、航班号等敏感信息。",
+    "description": "这些数据通常由票务系统内部人员泄露或被黑客攻击窃取。诈骗团伙购买后，会冒充航空公司客服，以航班取消需改签或退票为由，诱导受害者进行转账操作。由于骗子能准确说出航班信息，此类诈骗成功率极高。",
+    "usageExample": "“出未起飞机票料”",
+    "relatedRisks": [
+      "R0078",
+      "R0078-003"
+    ],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0049"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "【黑产大数据】2025年上半年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0075-025": {
+    "title": "租机料",
+    "keywords": [
+      "租机料",
+      "租机数据",
+      "租机用户",
+      "租机平台",
+      "手机租赁",
+      "租机信息",
+      "租机订单",
+      "租机客户",
+      "租机还款"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指从手机租赁平台泄露的用户订单数据，包含手机型号、租期、还款记录及个人身份信息。",
+    "description": "黑产通过渗透租赁平台后台或收买内部人员获取这些数据。买家利用这些信息，对租机用户实施定向营销或冒充平台客服进行诈骗。这些数据还能被用于恶意催收，或筛选出有资金需求的用户进行二次欺诈。",
+    "usageExample": "需租机料 隔天实时下机 数据 能测的联系",
+    "relatedRisks": [
+      "R0078",
+      "R0078-003"
+    ],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0049",
+      "A0015",
+      "A0046",
+      "A0057",
+      "A0054"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
+      "TA0040"
+    ],
+    "relatedBusinessScenes": [
+      "BS00",
+      "BS01"
+    ],
+    "references": [
+      {
+        "title": "【黑产大数据】2024年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "【黑产大数据】2025年上半年数据泄露风险态势报告",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ],
+    "updated": "2026-06-16"
+  },
+  "T0075-026": {
+    "title": "卡券料/E卡料",
+    "keywords": [
+      "卡券料/E卡料",
+      "E卡套现",
+      "卡券套现",
+      "E卡数据",
+      "卡券用户",
+      "E卡平台",
+      "虚拟卡套现",
+      "E卡料",
+      "卡券平台"
+    ],
+    "aliases": [],
+    "category": "数据泄露",
+    "definition": "指支持购买E卡或卡券并分期还款的小型套现平台，其用户信息在非法交易中被称为“卡券料”。",
+    "description": "这类平台允许用户购买虚拟卡券后转卖套现，实质是非法放贷。黑产收集这些参与套现的用户数据，打包成“卡券料”出售。这些数据常被用于推销其他非法借贷产品，或对用户实施精准诈骗。",
+    "relatedRisks": [
+      "R0078",
+      "R0078-003"
+    ],
+    "relatedAvoidances": [
+      "A0050",
+      "A0035",
+      "A0016",
+      "A0052",
+      "A0044",
+      "A0049"
+    ],
+    "relatedAttackTools": [],
+    "relatedThreatActors": [
+      "TA0005",
       "TA0040"
     ],
     "relatedBusinessScenes": [

@@ -15,7 +15,7 @@
     "summary": "2024年9月，韩国国会通过法案，规定持有、购买、储存或观看利用AI生成的深度伪造性剥削视频者，最高可被判处3年有期徒刑。此举旨在应对日益猖獗的深度伪造性犯罪，特别是针对女性的合成色情内容传播。",
     "category": "criminal_verdict",
     "relatedRisks": [
-      "R0116"
+      "R0071-009"
     ],
     "references": [
       {
@@ -26,7 +26,7 @@
     "updated": "2026-06-18",
     "incidentTime": "2024-09",
     "relatedAttackTools": [
-      "AT0056"
+      "AT0053-003"
     ],
     "relatedThreatActors": []
   }

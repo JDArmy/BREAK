@@ -3,13 +3,13 @@
     "title": "车联网OTA与接口测试工具",
     "description": "用于测试OTA包签名、车联网API、诊断接口和V2X通信安全的工具。",
     "avoidances": [
-      "A0222",
+      "A0111-002",
       "A0185",
-      "A0149",
+      "A0111-001",
       "A0044"
     ],
     "directCauseRisks": [
-      "R0251",
+      "R0181-001",
       "R0252"
     ],
     "indirectSupportRisks": [

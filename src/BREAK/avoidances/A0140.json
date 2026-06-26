@@ -24,6 +24,11 @@
     "effectiveness": "medium",
     "relatedAvoidances": [
       {
+        "key": "A0140-001",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
         "key": "A0141",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
@@ -34,7 +39,45 @@
         "note": "共同覆盖 1 个风险。"
       },
       {
-        "key": "A0159",
+        "key": "A0160",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      }
+    ]
+  },
+  "A0140-001": {
+    "title": "合约升级与紧急暂停",
+    "category": "AC04",
+    "definition": "实施可升级合约设计和紧急暂停机制应对漏洞",
+    "description": "为智能合约预留受控升级能力，并配置紧急暂停、分级权限、多签审批和时间锁等机制，使团队在发现严重漏洞、跨链桥异常或资产流转异常时能够快速止损并完成修复。",
+    "complexity": "高级",
+    "limitation": "升级和暂停能力会引入治理中心化、权限滥用和密钥托管风险；若权限边界、审批流程或时间锁设计不当，防护机制本身也可能成为攻击入口。",
+    "references": [
+      {
+        "title": "Smart Contract Upgrade Patterns",
+        "link": "https://ethereum.org/developers/docs/smart-contracts/"
+      }
+    ],
+    "updated": "2026-06-16",
+    "keywords": [
+      "合约升级与紧急暂停",
+      "可升级合约",
+      "紧急暂停"
+    ],
+    "effectiveness": "medium",
+    "relatedAvoidances": [
+      {
+        "key": "A0140",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0141",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
+        "key": "A0142",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       },

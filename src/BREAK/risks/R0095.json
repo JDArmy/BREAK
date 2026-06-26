@@ -35,12 +35,12 @@
     ],
     "relatedRisks": [
       {
-        "key": "R0116",
+        "key": "R0071-009",
         "relation": "co-occurrence",
         "note": "平台诈骗风险与AI深度伪造风险均可由攻击工具“AI视频伪造”直接造成。"
       },
       {
-        "key": "R0120",
+        "key": "R0071-007",
         "relation": "co-occurrence",
         "note": "平台诈骗风险与AI语音克隆欺诈均可由攻击工具“虚假来电伪装工具”直接造成。"
       },

@@ -1,14 +1,13 @@
 # BREAK 框架未完成升级计划
 
-> 文档版本：2.2
+> 文档版本：2.3
 > 修订日期：2026-06-26
 > 范围：仅保留尚未收口或需要持续推进的升级项；既往阶段、验收记录和历史流水账不再维护在本文档中。
-> 评估结论：BREAK 已具备较成熟的知识模型、关系可视化、数据校验和构建门禁。后续重点不是继续堆功能，而是收紧内容质量闭环，并把可视化从解释型推进到更强的推理型。
+> 评估结论：BREAK 已具备较成熟的知识模型、关系可视化（含路径发现交互面板与业务场景图谱）、数据校验和构建门禁。后续重点是收紧内容质量闭环。
 
 ## 0. 当前未完成短板
 
 1. **内容与引用治理仍需闭环**：review 152 + timeout 150 + connection_error 66 条问题链接仍需按域名策略分批复核；高价值案例 primary source 覆盖率为 88.06%（129 个缺口），其中 criminal_verdict 类仍是最大短板。
-2. **可视化推理能力仍可深化**：缺少完整路径发现交互面板（算法已完成，UI 未实现）；业务场景图谱仅有影响分析模块，独立图谱未开发。
 
 ## 1. 执行原则
 
@@ -74,56 +73,15 @@
 - `secondary_only`、`weak_source`、`unknown_only` 可追踪。
 - 修改数据后 `npm run validate:data` 通过。
 
-### P2. 可视化推理与标准化
-
-#### P2-1. 完整路径发现交互面板
-
-目标：把已有路径发现能力从内部摘要升级为用户可操作的分析工具。
-
-已完成：`relationPathDiscovery.ts`（BFS 路径发现算法）、`relationGraphInsights.ts`（图谱洞察分析）已实现。路径展示目前由 `RelationAnalysisPathColumn.vue` 承载。
-
-未完成工作：
-- 新增 `RelationPathExplorer.vue` 独立路径发现面板，支持选择任意起止节点。
-- 支持最大跳数、最大路径数、方向图/无向图、排序策略等参数的 UI 控件。
-- 在 UI 中展示完整多路径列表，并能定位或高亮对应路径。
-
-落点：`src/components/relation/RelationPathExplorer.vue`、`src/views/relation/relationPathDiscovery.ts`、`src/views/relation/relationGraphInsights.ts`。
-
-验收：
-- 用户能发现任意两节点路径。
-- 路径列表稳定排序，节点和边可回到图上定位。
-- 不破坏现有预定义攻击路径。
-
-#### P2-5. 业务场景图谱
-
-目标：从 BusinessScene/RiskScene 进入解释型关系图谱。本项价值低于前述任务，作为可选探索。
-
-已完成：`relationBusinessSceneImpact.ts`（8.5KB 商业场景影响分析模块）已实现。BusinessScene 详情路由 `/business-scene/:bsKey` 已有。
-
-未完成工作：
-- 新增 `relationBusinessSceneGraph.ts` 业务场景图谱构建模块。
-- 支持 BusinessScene → RiskDimension → RiskScene → Risk → AttackTool/Avoidance 的解释型展示。
-- 保持 BusinessScene 中文结构文件为权威来源，不在 Risk 实体新增 relatedBusinessScenes。
-
-落点：`src/views/relation/relationBusinessSceneGraph.ts`、`src/views/relation/relationGraphBuilder.ts`、`src/views/relation/relationTypes.ts`、`src/router/index.ts`。
-
-验收：
-- 可从业务场景进入对应风险图谱。
-- 图谱能解释该场景的主要风险暴露面。
-- 有专门测试覆盖业务场景关系构建。
-
 ## 3. 优先级建议
 
 | 项 | 优先级 | 估算 | 主要收益 |
 |---|---|---:|---|
 | P0-1 引用健康持续治理 | P0 | 2-4 天 | 收敛问题链接 |
 | P0-2 高价值案例 primary source 补强 | P0 | 4-6 天 | 提升核心案例可信度 |
-| P2-1 完整路径发现交互面板 | P2 | 2-3 天 | 强化推理型分析 |
-| P2-5 业务场景图谱 | P2 可选 | 4-5 天 | 场景入口增强 |
 
 推荐顺序：
-1. 先继续做 P0-1、P0-2，收紧内容质量和引用可信度。
-2. 最后按外部需求选择 P2 项。
+1. 继续做 P0-1、P0-2，收紧内容质量和引用可信度。
 
 ## 4. 整体验收标准
 
@@ -131,7 +89,6 @@
 |---|---|
 | 引用健康 | review/timeout/connection_error 有分域名复核策略，按治理计划分批收敛 |
 | 案例来源 | 高价值案例 primary 覆盖率可统计并持续提升；弱来源可追踪 |
-| 路径发现 | 任意起止节点路径发现有完整交互 |
 | 公开关系页 | 不暴露内部质量治理入口 |
 
 工程验收不可回退：

@@ -15,7 +15,7 @@
     "summary": "2025年12月初，安全研究人员发现一起针对Microsoft 365和Okta用户的AiTM攻击活动。攻击者使用高仿域名劫持合法认证流程，窃取会话Cookie，有效绕过了非防钓鱼的MFA。攻击诱饵主题涉及员工福利和年终薪酬审查。",
     "category": "news_report",
     "relatedRisks": [
-      "R0151"
+      "R0036-002"
     ],
     "references": [
       {
@@ -28,7 +28,7 @@
     "relatedAttackTools": [
       "AT0072",
       "AT0063",
-      "AT0094"
+      "AT0054-004"
     ],
     "relatedThreatActors": [
       "TA0059"

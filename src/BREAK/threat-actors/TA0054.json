@@ -10,13 +10,13 @@
     ],
     "buildAttackTools": [],
     "useAttackTools": [
-      "AT0089",
-      "AT0092"
+      "AT0061-003",
+      "AT0054-003"
     ],
     "directCauseRisks": [
       "R0232",
       "R0233",
-      "R0255"
+      "R0078-002"
     ],
     "indirectSupportRisks": [
       "R0059"

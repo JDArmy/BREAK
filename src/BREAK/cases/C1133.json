@@ -14,7 +14,7 @@
     "summary": "2024年4月9日，央视《超级新闻场》报道新型诈骗手法，提醒公众警惕AI拟声骗局。诈骗分子利用AI技术高度还原人声音色，并可进行实时对话交互，冒充亲友实施诈骗。",
     "category": "news_report",
     "relatedRisks": [
-      "R0120"
+      "R0071-007"
     ],
     "references": [
       {
@@ -25,7 +25,7 @@
     "updated": "2026-06-18",
     "incidentTime": "2024-04",
     "relatedAttackTools": [
-      "AT0059"
+      "AT0053-006"
     ],
     "relatedThreatActors": [
       "TA0031"

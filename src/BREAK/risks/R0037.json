@@ -40,7 +40,7 @@
     ],
     "relatedRisks": [
       {
-        "key": "R0088",
+        "key": "R0001-003",
         "relation": "co-occurrence",
         "note": "第三方账号聚合与自动化登录风险在定义或描述中互相指向。"
       },

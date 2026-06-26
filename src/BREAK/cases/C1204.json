@@ -14,7 +14,7 @@
     "summary": "报道指出，在数字人直播热潮中，比起正经带货赚钱，利用数字人概念进行“割韭菜”和诈骗反而成为第一批赚钱的方式，揭示了数字人直播领域的欺诈乱象。",
     "category": "news_report",
     "relatedRisks": [
-      "R0130"
+      "R0071-008"
     ],
     "references": [
       {
@@ -25,8 +25,8 @@
     "updated": "2026-06-18",
     "incidentTime": "2024-04",
     "relatedAttackTools": [
-      "AT0058",
-      "AT0059"
+      "AT0053-005",
+      "AT0053-006"
     ],
     "relatedThreatActors": [
       "TA0031",

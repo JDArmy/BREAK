@@ -14,5 +14,19 @@
         "link": "https://akitra.com/blog/firmware-security-the-unsung-hero-of-cyber-defense/"
       }
     ]
+  },
+  "A0110-001": {
+    "title": "XR Device Trusted Boot",
+    "description": "Implement firmware signature verification and secure boot in XR devices to prevent malicious firmware.",
+    "keywords": [
+      "XR Device Trusted Boot"
+    ],
+    "references": [
+      {
+        "title": "Guidelines for Managing the Security of Mobile Devices in the ...",
+        "link": "https://www.nist.gov/publications/guidelines-managing-security-mobile-devices-enterprise-0"
+      }
+    ],
+    "definition": "Implement firmware signature verification and secure boot in XR devices to prevent malicious firmware."
   }
 }

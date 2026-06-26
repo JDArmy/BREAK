@@ -14,5 +14,24 @@
         "link": "https://ieeexplore.ieee.org/document/10895253/"
       }
     ]
+  },
+  "A0113-001": {
+    "title": "IoT Traffic Monitoring and Anomaly Detection",
+    "description": "Monitor IoT device network traffic to detect abnormal outbound connections.",
+    "keywords": [
+      "IoT Traffic Monitoring and Anomaly Detection",
+      "IoT traffic analysis",
+      "device behavior baseline",
+      "network anomaly detection",
+      "C2 traffic detection",
+      "edge telemetry monitoring"
+    ],
+    "references": [
+      {
+        "title": "CISA ICS Security",
+        "link": "https://www.cisa.gov/ics"
+      }
+    ],
+    "definition": "Monitor IoT device network traffic to detect abnormal outbound connections."
   }
 }

@@ -18,7 +18,7 @@
     "effectiveness": "high",
     "relatedAvoidances": [
       {
-        "key": "A0197",
+        "key": "A0004-001",
         "relation": "complement",
         "note": "共同覆盖 2 个风险，共同限制 1 个攻击工具。"
       },

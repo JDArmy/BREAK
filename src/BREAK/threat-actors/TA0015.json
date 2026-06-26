@@ -11,8 +11,8 @@
     "buildAttackTools": [
       "AT0053-001",
       "AT0063",
-      "AT0071",
-      "AT0073"
+      "AT0063-001",
+      "AT0053-007"
     ],
     "useAttackTools": [
       "AT0001",
@@ -43,7 +43,7 @@
       "R0146",
       "R0150",
       "R0084",
-      "R0131"
+      "R0084-003"
     ],
     "indirectSupportRisks": [
       "R0002",

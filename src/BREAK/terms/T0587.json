@@ -10,7 +10,7 @@
     "description": "固件签名用于在BREAK业务安全分析中识别相关风险、滥用模式、控制需求和运营信号。",
     "usageExample": "评估与固件签名相关的暴露面，并定义相应的控制措施。",
     "relatedRisks": [
-      "R0251"
+      "R0181-001"
     ],
     "relatedAvoidances": [],
     "relatedAttackTools": [],

@@ -68,7 +68,7 @@ const categories = [
     dir: "src/BREAK/terms",
     schemaKey: "terms",
     filePattern: /^T\d{4}\.json$/,
-    keyPattern: /^T\d{4}$/,
+    keyPattern: /^T\d{4}(?:-\d{3})?$/,
     requireKeywords: true,
   },
   {
@@ -119,7 +119,7 @@ const enKeywordCategories = [
     name: "en-terms",
     dir: "src/i18n/en/BREAK/terms",
     filePattern: /^T\d{4}\.json$/,
-    keyPattern: /^T\d{4}$/,
+    keyPattern: /^T\d{4}(?:-\d{3})?$/,
   },
   {
     name: "en-cases",

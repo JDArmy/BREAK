@@ -15,7 +15,7 @@
     "summary": "一名曾攻击UXLINK项目的黑客，因误信伪装成白帽协商平台的钓鱼网站，签署了恶意智能合约的无限额度授权交易，导致其钱包内约4800万美元数字资产被转移。攻击者利用ERC-20标准的approve函数诱导用户授予无限授权，随后通过transferFrom函数转走资产。",
     "category": "security_incident",
     "relatedRisks": [
-      "R0194"
+      "R0084-002"
     ],
     "references": [
       {

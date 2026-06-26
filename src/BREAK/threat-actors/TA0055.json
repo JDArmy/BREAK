@@ -9,14 +9,14 @@
       }
     ],
     "buildAttackTools": [
-      "AT0090"
+      "AT0061-004"
     ],
     "useAttackTools": [
-      "AT0090",
+      "AT0061-004",
       "AT0026"
     ],
     "directCauseRisks": [
-      "R0234",
+      "R0017-003",
       "R0235",
       "R0236"
     ],
@@ -29,6 +29,11 @@
     ],
     "updated": "2026-06-17",
     "relatedThreatActors": [
+      {
+        "key": "TA0002-001",
+        "relation": "co-involved",
+        "note": "共同间接支持 1 个风险。"
+      },
       {
         "key": "TA0003",
         "relation": "co-involved",
@@ -51,11 +56,6 @@
       },
       {
         "key": "TA0011",
-        "relation": "co-involved",
-        "note": "共同间接支持 1 个风险。"
-      },
-      {
-        "key": "TA0015-001",
         "relation": "co-involved",
         "note": "共同间接支持 1 个风险。"
       }

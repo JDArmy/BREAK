@@ -18,5 +18,29 @@
       "priority gas auction",
       "fee market manipulation"
     ]
+  },
+  "R0173-001": {
+    "title": "Gas Fee Manipulation and Frontrunning",
+    "definition": "Miners or validators exploit transaction ordering rights to front-run user transactions through gas fee bidding or collude with arbitrage bots to extract MEV profits.",
+    "keywords": [
+      "Gas Fee Manipulation and Frontrunning",
+      "gas fee manipulation",
+      "frontrunning",
+      "MEV attack",
+      "transaction ordering manipulation",
+      "sandwich attack"
+    ],
+    "references": [
+      {
+        "title": "Flash Boys 2.0: Frontrunning in Decentralized Exchanges",
+        "link": "https://arxiv.org/abs/1904.05234"
+      },
+      {
+        "title": "Ethereum is a Dark Forest - MEV Threats",
+        "link": "https://www.paradigm.xyz/2020/08/ethereum-is-a-dark-forest"
+      }
+    ],
+    "description": "Gas fee manipulation and frontrunning exploit transaction ordering, fee bidding, and block construction. Attackers insert transactions before or after user actions for arbitrage or disruption, including sandwich attacks, liquidation sniping, NFT mint frontrunning, and malicious fee escalation.\n\nThe risk increases user slippage, trading cost, and perceived unfairness. DeFi protocols need private order flow, slippage controls, batch auctions, and MEV mitigation patterns.",
+    "influence": "Frontrunning and gas manipulation increase slippage and trading costs, distort DeFi markets, and weaken confidence in transaction fairness."
   }
 }

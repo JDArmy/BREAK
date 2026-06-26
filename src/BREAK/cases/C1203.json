@@ -14,7 +14,7 @@
     "summary": "网络平台封停了上千个利用AI数字人恶意欺诈网友的账号。这些数字人直播陷阱专门针对辨别能力较弱的群体，如老年人，进行欺诈活动，成为网络乱象之一。",
     "category": "news_report",
     "relatedRisks": [
-      "R0130"
+      "R0071-008"
     ],
     "references": [
       {
@@ -25,9 +25,9 @@
     "updated": "2026-06-18",
     "incidentTime": "2024-09",
     "relatedAttackTools": [
-      "AT0058",
-      "AT0059",
-      "AT0056"
+      "AT0053-005",
+      "AT0053-006",
+      "AT0053-003"
     ],
     "relatedThreatActors": [
       "TA0031",

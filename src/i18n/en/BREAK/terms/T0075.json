@@ -26,5 +26,730 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ]
+  },
+  "T0075-001": {
+    "title": "Resold Data",
+    "keywords": [
+      "Resold Data",
+      "recycled data",
+      "data reseller",
+      "aged data",
+      "secondhand data",
+      "data resharing",
+      "data repackaging",
+      "data re-brokering",
+      "data resale"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "Second-hand data refers to personal or corporate data that has been resold one or more times in illicit data trading markets.",
+    "description": "Due to repeated reselling, this data often suffers from missing fields, outdated information, or tampering, significantly reducing its accuracy and validity. In the underground supply chain, second-hand data is typically used for broad-stroke scams or low-quality marketing campaigns. Its trading price is far lower than that of fresh data, and buyers are usually downstream fraudsters with limited budgets.",
+    "references": [
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ]
+  },
+  "T0075-002": {
+    "title": "Broad-Sweep Data",
+    "keywords": [
+      "Broad-Sweep Data",
+      "unfiltered data",
+      "raw data dump",
+      "unverified data",
+      "bulk data",
+      "data sweep",
+      "untargeted data",
+      "data trawling",
+      "broad data scrape"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "Bulk data refers to a broad, unfiltered collection of personal information with low precision, traded in illicit data markets.",
+    "description": "This type of data usually comes from messy sources and contains a high volume of invalid, duplicate, or erroneous records, lacking any specific targeting. After purchasing bulk data, fraudsters often need to invest additional effort in cleaning and filtering before it can be used for scams or marketing. Due to its extremely low conversion rate, bulk data is cheap on the market and is commonly used for low-level attacks such as mass phishing SMS blasts.",
+    "references": [
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ]
+  },
+  "T0075-003": {
+    "title": "Refreshed Data",
+    "keywords": [
+      "Refreshed Data",
+      "data laundering",
+      "data refresh",
+      "data reconditioning",
+      "data repurposing",
+      "data reactivation",
+      "data rejuvenation",
+      "data revalidation",
+      "data re-aging"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "Refurbished data refers to old data that has been processed and disguised as new data in illicit data trading.",
+    "description": "Fraudsters repackage outdated data by supplementing it with fabricated information, altering timestamps, or deduplicating records. On the surface, this data appears fresh and valid, but the core information is stale, often leading to failed scams or blocked marketing efforts when used by buyers. Refurbished data is commonly used to deceive downstream buyers by passing off inferior goods as high-quality, reaping excessive profits.",
+    "references": [
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ]
+  },
+  "T0075-004": {
+    "title": "Subsidy Recipient Data",
+    "keywords": [
+      "Subsidy Recipient Data",
+      "welfare data",
+      "benefits data",
+      "subsidy list",
+      "aid recipient data",
+      "low-income data",
+      "public assistance data",
+      "relief data",
+      "grant recipient data"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "Subsidy data refers to personal information related to recipients of government poverty alleviation programs, traded in illicit data markets.",
+    "description": "This data typically contains detailed identity, address, and subsidy information of low-income individuals, illegally obtained and resold by underground actors. Downstream buyers exploit this data to carry out targeted scams against vulnerable groups with weak awareness, such as impersonating poverty alleviation offices to issue fake subsidies. Due to the high authenticity of the data, such scams have a high success rate and cause severe social harm.",
+    "references": [
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ]
+  },
+  "T0075-005": {
+    "title": "Overnight Data",
+    "keywords": [
+      "Overnight Data",
+      "delayed data release",
+      "data embargo",
+      "data holdback",
+      "stale data",
+      "data aging",
+      "delayed breach sale",
+      "data warehousing",
+      "data time delay"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "Aged data refers to data that attackers deliberately delay selling for a period after exfiltrating it, in illicit data trading.",
+    "description": "To evade risk tracking or wait for the heat to die down, attackers hoard freshly stolen data for a while before releasing it onto the black market. This delayed transaction severely lags the discovery of and response to the data breach, causing victims to suffer ongoing losses often without their knowledge. Aged data is frequently used for highly targeted scams and is favored by underground actors for its strong stealth.",
+    "references": [
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ]
+  },
+  "T0075-006": {
+    "title": "Stock Investor Data",
+    "keywords": [
+      "Stock Investor Data",
+      "investor leads",
+      "retail investor PII",
+      "high-net-worth data",
+      "active trader profiles",
+      "investor fullz",
+      "stock trader intel",
+      "wealth management targets",
+      "investor database"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "Investor data refers to personal information specifically tailored for targeting stock investors, traded in illicit data markets.",
+    "description": "This data precisely targets high-net-worth or active retail investors and contains sensitive information such as investment preferences and portfolio holdings. Fraud rings use this data to carry out stock recommendation scams, pump-and-dump schemes, and other illegal activities, with single fraud amounts often being substantial. Due to its high conversion rate and strong monetization potential, investor data is a high-value commodity in darknet trading.",
+    "references": [
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ]
+  },
+  "T0075-007": {
+    "title": "Skimmed Card Data",
+    "keywords": [
+      "Skimmed Card Data",
+      "POS skimming data",
+      "skimmed track2",
+      "dumps with PIN",
+      "compromised terminal data",
+      "skimmer logs",
+      "magstripe dump",
+      "track data",
+      "skimmed fullz"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "Track data refers to bank card magnetic stripe information obtained through skimming devices installed on compromised POS terminals, traded in illicit data markets.",
+    "description": "By implanting skimming modules in POS terminals, fraudsters steal magnetic stripe data and PINs from bank cards. This data is extremely precise and can be directly used to clone cards for fraudulent transactions or sold to downstream gangs for telecom fraud. Track data is core financial information, and its leakage directly threatens the financial security of cardholders.",
+    "references": [
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ]
+  },
+  "T0075-008": {
+    "title": "Fresh Data",
+    "keywords": [
+      "Fresh Data",
+      "live data",
+      "fresh fullz",
+      "active PII",
+      "verified leads",
+      "recent breach data",
+      "fresh dump",
+      "live account info",
+      "valid credentials"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illicit data trading, refers to personal or organizational information that is still valid and can be immediately used for fraudulent activities.",
+    "description": "This type of data is typically the latest leaked or stolen first-hand information, not yet resold multiple times, and has a high verification success rate. After purchasing it, underground practitioners can directly use it for targeted scams, unauthorized transactions, or account takeovers without additional cleaning. Due to its timeliness, its price on dark web forums and Telegram groups is significantly higher than that of expired data.",
+    "references": [
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ]
+  },
+  "T0075-009": {
+    "title": "Precision Data",
+    "keywords": [
+      "Precision Data",
+      "verified fullz",
+      "high-quality leads",
+      "enriched PII",
+      "targeted data",
+      "premium intel",
+      "curated dataset",
+      "validated profiles",
+      "high-value targets"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illicit data trading, refers to personal information or account credentials that have been meticulously filtered and verified, possessing extremely high authenticity.",
+    "description": "This data often includes detailed contact information, asset status, or specific consumption records, cleaned and annotated by specialized groups. Fraudsters exploit its high accuracy to conduct targeted phishing or business fraud, with success rates far exceeding ordinary data. In underground market transactions, this data is often sold at a high price per record and is a core tool leading to substantial financial losses.",
+    "references": [
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ]
+  },
+  "T0075-010": {
+    "title": "Niche Data",
+    "keywords": [
+      "Niche Data",
+      "low-demand data",
+      "specialty intel",
+      "obscure datasets",
+      "limited-use profiles",
+      "niche targets",
+      "uncommon PII",
+      "specialized leads",
+      "low-volume data"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illicit data trading, refers to personal or corporate information with low market demand that is difficult to monetize.",
+    "description": "This data may be of little interest to underground practitioners due to the target group's weak purchasing power, outdated information, or narrow application scenarios. Such data is often sold off cheaply in bulk or bundled with other high-value data, used to fill databases or for low-cost, wide-net scams.",
+    "references": [
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ]
+  },
+  "T0075-011": {
+    "title": "Raw Data",
+    "keywords": [
+      "Raw Data",
+      "unprocessed data",
+      "unfiltered dump",
+      "raw intel",
+      "unsorted records",
+      "dirty data",
+      "unrefined PII",
+      "bulk raw data",
+      "uncleaned leak"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illicit data trading, refers to raw, leaked data that has not been cleaned, filtered, or categorized.",
+    "description": "This data typically contains a large amount of redundant, duplicate, or invalid information, making direct use highly inefficient. Data brokers or technical groups in the underground economy purchase this raw data, clean and process it through methods like credential stuffing and cross-referencing, extract valid fields, and then resell it at a markup to downstream fraud or marketing teams.",
+    "references": [
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ]
+  },
+  "T0075-012": {
+    "title": "Maternal-and-Infant Data",
+    "keywords": [
+      "Maternal-and-Infant Data",
+      "pregnancy data",
+      "new parent leads",
+      "baby product records",
+      "maternity PII",
+      "newborn intel",
+      "mom-and-baby profiles",
+      "infant data",
+      "parenting targets"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illicit data trading, refers to personal information and consumption data related to pregnant women, new mothers, and infants.",
+    "description": "This data includes maternal health records, infant birth registrations, and baby product purchase lists, leaked from channels such as hospitals and e-commerce platforms. After acquiring it, underground groups resell it to confinement centers and photography studios for telemarketing harassment, or directly use it for targeted scams impersonating medical staff.",
+    "references": [
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ]
+  },
+  "T0075-013": {
+    "title": "Domestic Fullz",
+    "keywords": [
+      "Domestic Fullz",
+      "CVV fullz",
+      "cardholder data",
+      "bank card intel",
+      "full card details",
+      "card PII",
+      "account takeover data",
+      "carding fullz",
+      "cardholder profiles"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illicit data trading, refers to the four core pieces of information for a domestic bank card: the card number, password, cardholder's ID number, and linked mobile phone number.",
+    "description": "These four pieces of data are critical for conducting unauthorized transactions, money laundering, and account takeovers, typically obtained through phishing sites, trojans, or system vulnerabilities. Underground groups use them to directly transfer funds or register fake accounts for money laundering through transaction splitting, posing a direct threat to personal financial security.",
+    "references": [
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ]
+  },
+  "T0075-014": {
+    "title": "Real-Time Data",
+    "keywords": [
+      "Real-Time Data",
+      "fresh fullz",
+      "first hand fullz",
+      "live data feed",
+      "fresh logs",
+      "fresh data dump",
+      "recent breach data",
+      "new stolen data"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "Refers to freshly stolen, first-hand personal or organizational data that has not been resold, commanding the highest price on the black market due to its timeliness.",
+    "description": "Real-time material emphasizes data freshness and immediate usability, often sourced from recent system intrusions, insider leaks, or phishing harvests. Black-market actors quickly distribute it through automated card-selling platforms or darknet groups, aiming to monetize it before it becomes obsolete. Buyers typically use it for real-time fraud, credential-stuffing attacks, or registering malicious accounts, as shorter delays yield higher success rates.",
+    "references": [
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ]
+  },
+  "T0075-015": {
+    "title": "Dead Data",
+    "keywords": [
+      "Dead Data",
+      "aged fullz",
+      "expired fullz",
+      "old logs",
+      "recycled data",
+      "dead fullz",
+      "invalid records",
+      "stale data dump"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illicit data trading, refers to personal or organizational data that has expired and can no longer be exploited, regarded as worthless inventory within the black market.",
+    "description": "Dead material loses its utility due to age, information changes, or upgraded platform risk controls, such as deactivated phone numbers, frozen bank cards, or invalid login credentials. This data finds no buyers on the market and is sometimes mixed into data packs to deceive inexperienced downstream purchasers. Once identified as dead material, it is typically discarded and cannot be used in subsequent fraud or marketing operations.",
+    "references": [
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ]
+  },
+  "T0075-016": {
+    "title": "International Fullz",
+    "keywords": [
+      "International Fullz",
+      "CVV fullz",
+      "overseas card fullz",
+      "non-resident fullz",
+      "foreign card dump",
+      "international card data",
+      "cross-border fullz",
+      "offshore card info"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "Refers to four types of overseas bank card information—card number, password, cardholder ID number, and linked phone number—known in the black market as “foreign material” or “CVV fullz.”",
+    "description": "Foreign material primarily originates from data breaches involving overseas cards, including phishing sites, payment interface hijacking, or darknet database dumps. Black-market actors sell these full sets to downstream buyers for cross-border carding, fraudulent transactions, or impersonation-based telecom fraud. Due to the involvement of overseas cards, tracing is difficult, and the laundering process often integrates with underground money-transfer platforms, making the cash-out path covert. Once such information enters the market, cardholders face direct financial loss and identity theft risks.",
+    "references": [
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ]
+  },
+  "T0075-017": {
+    "title": "First-Hand Data",
+    "keywords": [
+      "First-Hand Data",
+      "unresold data",
+      "fresh dump",
+      "private data leak",
+      "exclusive leak",
+      "direct breach data",
+      "unshared fullz",
+      "zero-day data leak"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "Refers to personal or organizational data obtained directly from the breach source without any intermediary resale, commanding a premium in black-market trading due to its high integrity.",
+    "description": "First-hand material avoids the contamination and adulteration caused by multiple resales and typically comes directly from data sources such as insiders, system vulnerabilities, or real-time phishing results. Black-market actors prioritize using first-hand material for high-value fraud or precision marketing because its completeness and strong correlations yield much higher conversion rates than second-hand material. Sellers often advertise “first-hand supply” to attract buyers, though actual transactions may include dead or duplicate data to inflate volumes.",
+    "references": [
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ]
+  },
+  "T0075-018": {
+    "title": "Stock Advisory Lead Data",
+    "keywords": [
+      "Stock Advisory Lead Data",
+      "stock investor leads",
+      "investment client data",
+      "brokerage data leak",
+      "trading account data",
+      "investor PII",
+      "financial advisory leak",
+      "stock tip leads"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "In illicit data trading, refers to sensitive customer information illegally obtained from stock investment platforms or advisory firms, known in the black market as “stock advisory material.”",
+    "description": "This data covers personal identities, transaction records, portfolio preferences, and contact details, often leaked by internal employees or obtained through system intrusions. Black-market actors resell stock advisory material to investment scam rings, illegal margin-trading platforms, or precision marketing agencies, who use it for fraudulent investment inducement, fake stock recommendations, or charging exorbitant service fees. Victims are easily misled into believing the scammers are legitimate advisors due to the precise matching of their personal investment profiles, ultimately resulting in financial loss.",
+    "references": [
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ]
+  },
+  "T0075-019": {
+    "title": "IOU App Data",
+    "keywords": [
+      "IOU App Data",
+      "Loan data",
+      "Debtor info",
+      "Private lending data",
+      "Borrower records",
+      "Lending app leak",
+      "Debt collection data",
+      "Loan application data"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "A data package from high-interest or private lending containing signed IOUs, personal identity information, and contact details of borrowers.",
+    "description": "This data typically leaks from illegal lending platforms or private loan shark groups and contains detailed borrower privacy information. After acquisition, underground actors use it for secondary fraud, aggressive debt collection, or resale to other criminal groups. Victims are highly susceptible to scams due to the data's authenticity and the debt relationship involved.",
+    "usageExample": "\"Selling real-time IOU data, risk-control data, high volume, guaranteed first-hand source, good price\"",
+    "references": [
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ]
+  },
+  "T0075-020": {
+    "title": "Risk-Control Data",
+    "keywords": [
+      "Risk-Control Data",
+      "Credit scoring data",
+      "User profiling",
+      "Financial profiling",
+      "Creditworthiness data",
+      "Borrower risk data",
+      "Loan applicant data",
+      "Underwriting data"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "A collection of user data leaked from financial platform risk-control systems, containing preliminary analysis and risk tags.",
+    "description": "This data often includes sensitive information such as credit ratings, spending habits, and risk labels, leaked by insiders or third-party service providers. Underground actors use these precise profiles for customized marketing fraud, loan scams, and other illegal activities. Its targeted nature leads to a much higher scam success rate compared to random attacks.",
+    "usageExample": "\"Selling real-time IOU data, risk-control data, high volume, guaranteed first-hand source, good price.\"",
+    "references": [
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ]
+  },
+  "T0075-021": {
+    "title": "Loan-Lead Data",
+    "keywords": [
+      "Loan-Lead Data",
+      "Loan applicant data",
+      "Loan application leak",
+      "Borrower PII",
+      "Loan origination data",
+      "Lending platform leak",
+      "Applicant records",
+      "Loan broker data"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "A complete set of loan applicant documents leaked from online lending platforms, including ID cards, bank cards, and credit reports.",
+    "description": "This data is leaked internally from loan facilitation platforms or financial institutions, classified by credit rating by underground brokers, and sold at a premium. Downstream fraud rings purchase it to impersonate platform customer service and conduct secondary scams under the guise of 'unfreezing fees' or 'security deposits.' The detailed loan information makes these scams highly deceptive.",
+    "usageExample": "\"Various loan application data, welcome to inquire\"",
+    "references": [
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ]
+  },
+  "T0075-022": {
+    "title": "Gold-Installment Data",
+    "keywords": [
+      "Gold-Installment Data",
+      "Gold installment data",
+      "Gold loan data",
+      "Gold collateral loan",
+      "Gold purchase data",
+      "Gold-backed loan",
+      "Gold pawn data",
+      "Gold financing data"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "Refers to user information from small, illegal cash-out platforms that support gold purchases with installment repayments, known as 'gold material' in underground data markets.",
+    "description": "These platforms use gold purchases as a front to help users obtain cash, charging high handling fees. Black-market actors compile the personal information of users involved in cash-outs and sell it as 'gold material.' This data is often used for secondary scams, where victims not only face financial loss but may also become entangled in legal disputes due to the cash-out activity.",
+    "references": [
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      },
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      }
+    ]
+  },
+  "T0075-023": {
+    "title": "Subsidy Fraud Leads",
+    "keywords": [
+      "Subsidy Fraud Leads",
+      "subsidy data leak",
+      "poverty relief data",
+      "government assistance data",
+      "welfare fraud leads",
+      "subsidy scam data",
+      "social benefit data breach",
+      "aid recipient data",
+      "subsidy phishing leads"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "Refers to personal information related to recipients of poverty alleviation subsidies, illegally obtained by black-market actors for targeted scams or money laundering.",
+    "description": "Black-market actors steal the identities, contact details, and subsidy specifics of aid recipients through insider moles or system vulnerabilities. This data is resold to fraud rings, who impersonate government officials and defraud victims under the pretense of distributing subsidies. Due to the precision of the information, victims are often highly convinced, leading to the theft of funds intended for poverty relief.",
+    "usageExample": "'Bosses needing pyramid scheme material, poverty alleviation material, or courier material, contact me! Suit-and-tie big shots, V-push, telemarketing, data, SDK real-time daily active high-quality data!'",
+    "references": [
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ]
+  },
+  "T0075-024": {
+    "title": "Air Ticket Booking Data",
+    "keywords": [
+      "Air Ticket Booking Data",
+      "flight booking data",
+      "PNR leak",
+      "airline ticket leak",
+      "travel itinerary data",
+      "flight confirmation data",
+      "passenger data breach",
+      "airline booking scam",
+      "flight data dump"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "Refers to complete flight booking data leaked from airline systems, containing sensitive information such as passenger names, ID numbers, and flight numbers.",
+    "description": "This data is typically leaked by insiders within ticketing systems or stolen through hacking. After purchasing it, fraud rings impersonate airline customer service agents, tricking victims into transferring money under the pretext of flight cancellations, rebookings, or refunds. The success rate of such scams is extremely high because the scammers can accurately provide the flight details.",
+    "usageExample": "'Selling undeparted flight ticket material'",
+    "references": [
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ]
+  },
+  "T0075-025": {
+    "title": "Device-Rental Data",
+    "keywords": [
+      "Device-Rental Data",
+      "device rental leak",
+      "phone rental data",
+      "rental order data",
+      "device leasing data",
+      "rental user data",
+      "gadget rental leak",
+      "rental platform data",
+      "device financing data"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "Refers to user order data leaked from phone rental platforms, including phone models, rental periods, repayment records, and personal identity information.",
+    "description": "Black-market actors obtain this data by infiltrating rental platform backends or bribing insiders. Buyers use this information for targeted marketing to rental users or to impersonate platform customer service for scams. This data can also be used for malicious debt collection or to screen users with financial needs for secondary fraud.",
+    "usageExample": "'Need phone rental material, next-day real-time device data, can test, contact me'",
+    "references": [
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ]
+  },
+  "T0075-026": {
+    "title": "Gift-Card Installment Data",
+    "keywords": [
+      "Gift-Card Installment Data",
+      "gift card data",
+      "E-card data",
+      "virtual card data",
+      "installment card data",
+      "card installment leak",
+      "prepaid card data",
+      "gift card dump",
+      "card installment data"
+    ],
+    "aliases": [],
+    "category": "Data Leakage",
+    "definition": "Refers to user information from small cash-out platforms that support purchasing E-cards or gift cards with installment repayments, illegally traded as 'card voucher material' or 'E-card material.'",
+    "description": "These platforms allow users to buy virtual cards and resell them for cash, essentially functioning as illegal lending operations. Black-market actors collect the data of users involved in these cash-outs and package it for sale. This data is often used to promote other illicit lending products or to conduct targeted scams against the users.",
+    "references": [
+      {
+        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
+      },
+      {
+        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
+        "link": "https://www.threathunter.cn/blog/2025"
+      }
+    ]
   }
 }
