@@ -38,6 +38,11 @@
         "note": "共同覆盖 2 个风险。"
       },
       {
+        "key": "A0044",
+        "relation": "complement",
+        "note": "共同覆盖 2 个风险。"
+      },
+      {
         "key": "A0050-001",
         "relation": "complement",
         "note": "共同覆盖 2 个风险。"
@@ -49,11 +54,6 @@
       },
       {
         "key": "A0051",
-        "relation": "complement",
-        "note": "共同覆盖 2 个风险。"
-      },
-      {
-        "key": "A0062",
         "relation": "complement",
         "note": "共同覆盖 2 个风险。"
       }
@@ -89,6 +89,11 @@
         "note": "共同覆盖 1 个风险。"
       },
       {
+        "key": "A0010-003",
+        "relation": "complement",
+        "note": "共同覆盖 1 个风险。"
+      },
+      {
         "key": "A0011",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
@@ -105,11 +110,6 @@
       },
       {
         "key": "A0019",
-        "relation": "complement",
-        "note": "共同覆盖 1 个风险。"
-      },
-      {
-        "key": "A0021",
         "relation": "complement",
         "note": "共同覆盖 1 个风险。"
       }
@@ -140,34 +140,34 @@
     "effectiveness": "high",
     "relatedAvoidances": [
       {
-        "key": "A0001",
+        "key": "A0021",
         "relation": "complement",
-        "note": "共同限制 1 个攻击工具。"
+        "note": "共同覆盖 2 个风险。"
       },
       {
         "key": "A0002",
         "relation": "complement",
-        "note": "共同限制 1 个攻击工具。"
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
       },
       {
         "key": "A0004",
         "relation": "complement",
-        "note": "共同限制 1 个攻击工具。"
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
       },
       {
         "key": "A0010",
         "relation": "complement",
-        "note": "共同限制 1 个攻击工具。"
+        "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
       },
       {
-        "key": "A0015",
+        "key": "A0005",
         "relation": "complement",
-        "note": "共同限制 1 个攻击工具。"
+        "note": "共同覆盖 1 个风险。"
       },
       {
-        "key": "A0022",
+        "key": "A0007",
         "relation": "complement",
-        "note": "共同限制 1 个攻击工具。"
+        "note": "共同覆盖 1 个风险。"
       }
     ]
   },

@@ -34,22 +34,27 @@
         "note": "共同直接造成 1 个风险，共同使用 1 个攻击工具。"
       },
       {
+        "key": "TA0062",
+        "relation": "co-involved",
+        "note": "共同间接支持 1 个风险，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0063",
+        "relation": "co-involved",
+        "note": "共同间接支持 1 个风险，共同使用 1 个攻击工具。"
+      },
+      {
+        "key": "TA0029",
+        "relation": "co-involved",
+        "note": "共同间接支持 1 个风险。"
+      },
+      {
+        "key": "TA0064",
+        "relation": "co-involved",
+        "note": "共同间接支持 1 个风险。"
+      },
+      {
         "key": "TA0021",
-        "relation": "co-involved",
-        "note": "共同使用 1 个攻击工具。"
-      },
-      {
-        "key": "TA0043",
-        "relation": "co-involved",
-        "note": "共同使用 1 个攻击工具。"
-      },
-      {
-        "key": "TA0047",
-        "relation": "co-involved",
-        "note": "共同使用 1 个攻击工具。"
-      },
-      {
-        "key": "TA0050",
         "relation": "co-involved",
         "note": "共同使用 1 个攻击工具。"
       }

@@ -1,0 +1,23 @@
+{
+  "AT0098": {
+    "title": "Dependency Poisoning Toolkit",
+    "keywords": [
+      "Dependency Poisoning",
+      "Malicious Package",
+      "Supply Chain Poisoning",
+      "npm Poisoning",
+      "PyPI Poisoning",
+      "Typosquatting",
+      "Dependency Confusion"
+    ],
+    "description": "Tools and methods for publishing malicious packages to open-source repositories (npm, PyPI, Maven, RubyGems, Go Modules). Attack techniques include: typosquatting (registering packages with names similar to popular ones); dependency confusion (exploiting priority vulnerabilities between internal and public packages); maintainer account takeover; and installation hook exploitation. Typical consequences include credential theft, reverse shells, and cryptocurrency mining.",
+    "references": [
+      {
+        "title": "MITRE ATT&CK: Supply Chain Compromise - Compromise Software Supply Chain (T1195.002)"
+      },
+      {
+        "title": "OpenSSF Package Analysis Project"
+      }
+    ]
+  }
+}

@@ -29,14 +29,14 @@
         "note": "共同覆盖 53 个风险，共同限制 5 个攻击工具。"
       },
       {
+        "key": "A0010",
+        "relation": "complement",
+        "note": "共同覆盖 24 个风险，共同限制 4 个攻击工具。"
+      },
+      {
         "key": "A0016",
         "relation": "complement",
         "note": "共同覆盖 26 个风险，共同限制 1 个攻击工具。"
-      },
-      {
-        "key": "A0010",
-        "relation": "complement",
-        "note": "共同覆盖 23 个风险，共同限制 4 个攻击工具。"
       },
       {
         "key": "A0021",
@@ -51,7 +51,7 @@
       {
         "key": "A0044",
         "relation": "complement",
-        "note": "共同覆盖 17 个风险，共同限制 1 个攻击工具。"
+        "note": "共同覆盖 18 个风险，共同限制 1 个攻击工具。"
       }
     ]
   },
@@ -194,7 +194,17 @@
       {
         "key": "A0015",
         "relation": "complement",
+        "note": "共同覆盖 8 个风险。"
+      },
+      {
+        "key": "A0044",
+        "relation": "complement",
         "note": "共同覆盖 6 个风险。"
+      },
+      {
+        "key": "A0006",
+        "relation": "complement",
+        "note": "共同覆盖 4 个风险。"
       },
       {
         "key": "A0010",
@@ -207,17 +217,7 @@
         "note": "共同覆盖 4 个风险。"
       },
       {
-        "key": "A0024",
-        "relation": "complement",
-        "note": "共同覆盖 4 个风险。"
-      },
-      {
-        "key": "A0029-001",
-        "relation": "complement",
-        "note": "共同覆盖 4 个风险。"
-      },
-      {
-        "key": "A0044",
+        "key": "A0021",
         "relation": "complement",
         "note": "共同覆盖 4 个风险。"
       }

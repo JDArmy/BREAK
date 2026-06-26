@@ -1,0 +1,77 @@
+{
+  "AT0098": {
+    "title": "依赖包投毒工具",
+    "keywords": [
+      "依赖包投毒工具",
+      "依赖包投毒",
+      "恶意包",
+      "供应链投毒",
+      "npm投毒",
+      "PyPI投毒",
+      "typosquatting",
+      "dependency confusion",
+      "依赖混淆"
+    ],
+    "description": "用于向开源软件包仓库（npm、PyPI、Maven、RubyGems、Go Modules 等）发布恶意包的工具和方法集合。攻击手法包括：①域名抢注/拼写抢注（Typosquatting）：注册与流行包相似名称的恶意包，等待开发者误安装；②依赖混淆（Dependency Confusion）：利用内部包与公开仓库同名的优先级漏洞，上传高版本恶意包覆盖内部依赖；③维护者账户接管：窃取包维护者凭据后直接向合法包注入恶意代码；④安装钩子利用：在 postinstall、setup.py 等生命周期脚本中植入后门代码。典型后果包括凭据窃取、反向 Shell、加密货币挖矿等。近年影响面巨大的事件包括 event-stream、ua-parser-js、colors.js/faker.js 等。",
+    "directCauseRisks": [
+      "R0228",
+      "R0078"
+    ],
+    "indirectSupportRisks": [
+      "R0034",
+      "R0209",
+      "R0083"
+    ],
+    "avoidances": [
+      "A0070",
+      "A0201",
+      "A0202",
+      "A0016",
+      "A0044",
+      "A0055"
+    ],
+    "relatedAttackTools": [
+      {
+        "key": "AT0099",
+        "relation": "co-used",
+        "note": "共同关联 4 个风险，共享 3 个规避手段，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0063",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 2 个规避手段，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0087",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 1 个规避手段，被 2 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0064",
+        "relation": "co-used",
+        "note": "共同关联 2 个风险，被 1 个相同行为者使用或建设。"
+      },
+      {
+        "key": "AT0010",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 1 个规避手段。"
+      },
+      {
+        "key": "AT0033",
+        "relation": "co-used",
+        "note": "共同关联 1 个风险，共享 1 个规避手段。"
+      }
+    ],
+    "references": [
+      {
+        "title": "MITRE ATT&CK: Supply Chain Compromise - Compromise Software Supply Chain (T1195.002)",
+        "link": "https://attack.mitre.org/techniques/T1195/002/"
+      },
+      {
+        "title": "OpenSSF Package Analysis Project",
+        "link": "https://github.com/ossf/package-analysis"
+      }
+    ],
+    "updated": "2026-06-26"
+  }
+}

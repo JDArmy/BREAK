@@ -13,13 +13,19 @@
     ],
     "useAttackTools": [
       "AT0095",
-      "AT0066"
+      "AT0066",
+      "AT0064",
+      "AT0063"
     ],
     "directCauseRisks": [
-      "R0248"
+      "R0248",
+      "R0032",
+      "R0078"
     ],
     "indirectSupportRisks": [
-      "R0051"
+      "R0051",
+      "R0005",
+      "R0083"
     ],
     "keywords": [
       "移动应用仿冒团伙",
@@ -28,24 +34,34 @@
     "updated": "2026-06-17",
     "relatedThreatActors": [
       {
+        "key": "TA0062",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同间接支持 1 个风险，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0063",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同间接支持 1 个风险，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0064",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同间接支持 2 个风险。"
+      },
+      {
         "key": "TA0013",
         "relation": "co-involved",
-        "note": "共同间接支持 1 个风险。"
+        "note": "共同间接支持 2 个风险。"
+      },
+      {
+        "key": "TA0020",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同间接支持 1 个风险。"
       },
       {
         "key": "TA0025-001",
         "relation": "co-involved",
-        "note": "共同间接支持 1 个风险。"
-      },
-      {
-        "key": "TA0028",
-        "relation": "co-involved",
-        "note": "共同间接支持 1 个风险。"
-      },
-      {
-        "key": "TA0015",
-        "relation": "co-involved",
-        "note": "共同使用 1 个攻击工具。"
+        "note": "共同间接支持 2 个风险。"
       }
     ]
   }

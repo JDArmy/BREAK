@@ -11,8 +11,8 @@ This document describes the committed JSON data model used by the BREAK knowledg
 |--------|-----------|--------------|------------|-----------------|
 | Risk | `src/BREAK/risks` | `R0001.json` | `R0001 or R0001-001` | 350 total (255 main, 95 sub) |
 | Avoidance | `src/BREAK/avoidances` | `A0001.json` | `A0001 or A0001-001` | 300 total (222 main, 78 sub) |
-| AttackTool | `src/BREAK/attack-tools` | `AT0001.json` | `AT0001 or AT0001-001` | 110 total (97 main, 13 sub) |
-| ThreatActor | `src/BREAK/threat-actors` | `TA0001.json` | `TA0001 or TA0001-001` | 70 total (61 main, 9 sub) |
+| AttackTool | `src/BREAK/attack-tools` | `AT0001.json` | `AT0001 or AT0001-001` | 112 total (99 main, 13 sub) |
+| ThreatActor | `src/BREAK/threat-actors` | `TA0001.json` | `TA0001 or TA0001-001` | 73 total (64 main, 9 sub) |
 | Term | `src/BREAK/terms` | `T0001.json` | `T0001` | 600 total (600 main, 0 sub) |
 | BusinessScene | `src/BREAK/business-scenes` | `BS00.json` | `BS00` | 18 total (18 main, 0 sub) |
 | Case | `src/BREAK/cases` | `C0001.json` | `C0001` | 1797 total (1797 main, 0 sub) |

@@ -7,7 +7,9 @@
     "limitation": "依赖买卖双方协同",
     "avoidances": [
       "A0172",
-      "A0077"
+      "A0077",
+      "A0096",
+      "A0044"
     ],
     "references": [
       {

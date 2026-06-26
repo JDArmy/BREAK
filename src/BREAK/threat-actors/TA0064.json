@@ -1,0 +1,75 @@
+{
+  "TA0064": {
+    "title": "暗网市场运营者",
+    "keywords": [
+      "暗网市场运营者",
+      "暗网市场",
+      "Dark Web Marketplace",
+      "地下市场",
+      "黑市平台",
+      "数据交易平台",
+      "犯罪即服务"
+    ],
+    "description": "运营暗网地下交易市场的组织或个人，提供犯罪即服务（CaaS）基础设施。这类平台托管并促成各类非法商品和服务的交易，包括被盗数据（信用卡信息、个人身份信息、企业凭据）、恶意软件和漏洞利用工具、攻击服务（DDoS-for-hire、RaaS）、虚假证件和银行卡套件等。平台通过加密货币支付和混币服务实现匿名交易，使用 Tor 或 I2P 网络隐藏基础设施。代表性案例包括 Hydra Market、Genesis Market、BreachForums 等。",
+    "directCauseRisks": [
+      "R0078",
+      "R0169"
+    ],
+    "indirectSupportRisks": [
+      "R0032",
+      "R0051",
+      "R0083"
+    ],
+    "buildAttackTools": [
+      "AT0010"
+    ],
+    "useAttackTools": [
+      "AT0010",
+      "AT0012",
+      "AT0060"
+    ],
+    "relatedThreatActors": [
+      {
+        "key": "TA0029",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同间接支持 2 个风险。"
+      },
+      {
+        "key": "TA0060",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同间接支持 2 个风险。"
+      },
+      {
+        "key": "TA0062",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同间接支持 2 个风险。"
+      },
+      {
+        "key": "TA0063",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同间接支持 2 个风险。"
+      },
+      {
+        "key": "TA0017",
+        "relation": "co-involved",
+        "note": "共同使用 3 个攻击工具。"
+      },
+      {
+        "key": "TA0033",
+        "relation": "co-involved",
+        "note": "共同间接支持 1 个风险，共同使用 1 个攻击工具。"
+      }
+    ],
+    "references": [
+      {
+        "title": "Europol Internet Organised Crime Threat Assessment (IOCTA)",
+        "link": "https://www.europol.europa.eu/publications-events/main-reports/internet-organised-crime-threat-assessment-iocta"
+      },
+      {
+        "title": "UNODC Darknet Cybercrime Threats to Southeast Asia",
+        "link": "https://www.unodc.org/"
+      }
+    ],
+    "updated": "2026-06-26"
+  }
+}

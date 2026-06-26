@@ -7,7 +7,9 @@
     "limitation": "需要深入理解合约经济模型",
     "avoidances": [
       "A0056",
-      "A0171"
+      "A0171",
+      "A0096",
+      "A0044"
     ],
     "references": [
       {

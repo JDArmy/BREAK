@@ -1,0 +1,21 @@
+{
+  "TA0064": {
+    "title": "Dark Web Marketplace Operator",
+    "keywords": [
+      "Dark Web Marketplace",
+      "Underground Market",
+      "Black Market Platform",
+      "Data Trading Platform",
+      "Crime-as-a-Service"
+    ],
+    "description": "Organizations or individuals operating underground dark web trading marketplaces, providing Crime-as-a-Service (CaaS) infrastructure. These platforms host and facilitate trading of illegal goods and services, including stolen data, malware and exploit tools, attack services (DDoS-for-hire, RaaS), forged documents, and banking card kits. Platforms achieve anonymous transactions through cryptocurrency payments and mixing services, using Tor or I2P networks to conceal infrastructure.",
+    "references": [
+      {
+        "title": "Europol Internet Organised Crime Threat Assessment (IOCTA)"
+      },
+      {
+        "title": "UNODC Darknet Cybercrime Threats to Southeast Asia"
+      }
+    ]
+  }
+}
