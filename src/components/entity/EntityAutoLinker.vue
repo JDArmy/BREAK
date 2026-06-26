@@ -107,6 +107,8 @@ const INTERACTIVE_SELECTORS = [
   ".node-related-entity-id",
   // 关系图抽屉：防御覆盖列表项（div[role=button]，含 ID span）
   ".node-coverage-item",
+  // 关系图抽屉：攻击路径实体项
+  ".node-attack-entity",
 ];
 const INTERACTIVE_SELECTOR = INTERACTIVE_SELECTORS.join(",");
 
@@ -154,7 +156,6 @@ function isInsideSkipZone(node: Node): boolean {
       parent.classList.contains("el-select-dropdown") ||
       parent.classList.contains("el-autocomplete-suggestion") ||
       parent.classList.contains("el-select-dropdown__item") ||
-      parent.classList.contains("el-scrollbar") ||
       parent.classList.contains("network-chart") ||
       parent.classList.contains("sankey-chart") ||
       parent.classList.contains("detail-id") ||
