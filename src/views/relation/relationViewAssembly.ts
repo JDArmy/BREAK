@@ -598,16 +598,16 @@ export const createRelationViewAssembly = ({
     [RelationType.avoidance, "a"],
   ];
 
-  // State → URL
+  // State → URL（同时监听 relType/relKey 变化，selector 切换时立即清理冗余参数）
   watch(
-    () => ({ ...graphData.attackPathFilters.value }),
-    (filters) => {
+    () => ({ ...graphData.attackPathFilters.value, _rt: relType.value, _rk: relKey.value }),
+    (snapshot) => {
       const perspective = getRelationPerspectiveFromRoute(route.name);
       if (perspective !== "defenseCoverage") return;
       const query = { ...route.query };
       let changed = false;
       for (const [filterKey, queryKey] of ATTACK_PATH_FILTER_QUERY_MAP) {
-        const val = filters[filterKey as keyof typeof filters];
+        const val = snapshot[filterKey as keyof typeof snapshot] as string | undefined;
         // 筛选值与 relation-selector 当前选中实体相同时视为冗余，不写入 URL
         const isRedundant = val && filterKey === relType.value && val === relKey.value;
         if (val && !isRedundant) {
