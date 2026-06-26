@@ -1,6 +1,6 @@
 {
   "C1209": {
-    "title": "Nicholas Truglia因SIM卡交换攻击窃取2200万美元加密货币被判12年",
+    "title": "Nicholas Truglia因SIM卡交换攻击窃取超2000万美元加密货币被判刑",
     "keywords": [
       "SIM卡交换攻击",
       "加密货币盗窃",
@@ -11,19 +11,19 @@
       "电信诈骗",
       "手机号码劫持"
     ],
-    "summary": "Nicholas Truglia通过SIM卡交换攻击，劫持受害者手机号码，绕过短信双因素认证，非法访问并窃取价值约2200万美元的加密货币。2026年1月，其被判处12年监禁，该案凸显了SIM卡交换攻击对数字资产的巨大威胁。",
+    "summary": "美国司法部披露，Nicholas Truglia 因参与 SIM 卡交换攻击窃取受害者超过2000万美元加密货币，被纽约南区联邦法院判处18个月监禁，并被责令在60日内赔偿20,379,007美元。该案显示，攻击者可通过劫持手机号绕过短信双因素认证并接管加密资产账户。",
     "category": "criminal_verdict",
     "relatedRisks": [
       "R0132"
     ],
     "references": [
       {
-        "title": "Nicholas Truglia Sentenced to 12 Years for $22M Crypto Theft via SIM Swap",
-        "link": "https://www.gate.com/crypto-wiki/article/nicholas-truglia-sentenced-to-12-years-for-22m-crypto-theft-via-sim-swap-20260111"
+        "title": "Florida Man Sentenced To 18 Months For Theft Of Over $20 Million In SIM Swap Scheme",
+        "link": "https://www.justice.gov/usao-sdny/pr/florida-man-sentenced-18-months-theft-over-20-million-sim-swap-scheme"
       }
     ],
-    "updated": "2026-06-18",
-    "incidentTime": "2026-01",
+    "updated": "2026-06-26",
+    "incidentTime": "2022-12",
     "relatedAttackTools": [
       "AT0062"
     ],

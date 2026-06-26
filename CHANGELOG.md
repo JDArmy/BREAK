@@ -1,5 +1,14 @@
 # Change log
 
+## 2.25.74
+
+- 补强 `C1064`、`C1069`、`C1075`、`C1087`、`C1100`、`C1102`、`C1134`、`C1194`、`C1209`、`C1247`、`C1251`、`C1253`、`C1305`、`C1393`、`C1482`、`C1485`、`C1620`、`C1711` 共 18 条高价值案例 primary 来源
+- 按最高检、最高法公报、公安部、地方法院/检察院/公安、美国司法部、英国 CPS、Santa Rosa Police 和 Richmond County DA 等官方来源修正案情口径，并修复多条英文摘要截断
+- 将 `C1209` 从不可靠的“判 12 年”二手口径修正为美国司法部可证的 18 个月监禁及 20,379,007 美元赔偿口径
+- 扩展案例来源审计 primary 域名识别，补充 `cps.gov.uk`、`statenislandda.org`、`page.alertsense.com`、`sdcourt.gov.cn`、`szlhcourt.gov.cn`、`gaj.huangshi.gov.cn`、`gat.hubei.gov.cn`、`hexushui.jcy.gov.cn`、`baoding.jcy.gov.cn`
+- 案例 primary 覆盖提升到 1256，高价值 primary 覆盖提升到 906，primary 覆盖率提升到 69.89%，高价值 primary 覆盖率提升到 83.89%
+- 更新升级计划中的 P0-2 案例来源覆盖统计，并记录本批多子代理复核后暂不硬补的重复案、分类不稳和无官方原文案例
+
 ## 2.25.73
 
 - 将 `C0350` 按最高检第四十七批指导性案例改写为国有银行管理人员违规使用备付金挪用公款案，删除旧来源无法支撑的南京银行和子账号风险表述
