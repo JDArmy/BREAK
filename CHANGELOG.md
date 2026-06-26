@@ -1,5 +1,15 @@
 # Change log
 
+## 2.29.5
+
+架构 Review 改进（续）：
+
+- Entity Registry 集中注册：新增 `src/BREAK/entityRegistry.ts`，统一管理实体类型元信息（ID 前缀、paramKey、breakKey、i18n 路径、路由名等）。`entityRoute.ts`、`useEntityResolver.ts`、`useSearch.ts` 已迁移到 Registry 消费，消除 3 处重复的类型映射
+- 搜索索引按类型独立重建：`useSearch.ts` 的 locale 变化仅重建非 case 索引，cases 变化仅重建 case 索引，避免全量重建 6 类 Fuse 索引
+- HomeView 布局逻辑提取：新增 `useHomeSceneLayout` composable（场景布局计算+子风险折叠），含 7 个单元测试
+- SearchDialog 组件测试：新增 8 个测试用例覆盖搜索交互、ID 前缀优先排序、多页面路由分发、cases 预加载
+- Entity Registry 测试：17 个测试用例覆盖类型推断、i18n 前缀、查找表、ID 正则
+
 ## 2.29.4
 
 架构 Review 改进：

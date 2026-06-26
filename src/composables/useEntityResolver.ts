@@ -15,6 +15,7 @@ import {
   entityDetailHref,
   type EntityType,
 } from "@/utils/entityRoute";
+import { getEntityEntry } from "@/BREAK/entityRegistry";
 
 /** Popover 中展示的实体摘要信息 */
 export interface EntitySummary {
@@ -32,33 +33,6 @@ export interface EntitySummary {
   /** 实体是否存在于数据集中 */
   exists: boolean;
 }
-
-/**
- * 类型标签 i18n key 映射。
- * 复用已有 `relationType.*`（已有 risk / avoidance / attackTool / threatActor / term）。
- * Case 需在 i18n 中新增 `relationType.case`。
- */
-const TYPE_LABEL_KEY: Record<EntityType, string> = {
-  risk: "relationType.risk",
-  avoidance: "relationType.avoidance",
-  attackTool: "relationType.attackTool",
-  threatActor: "relationType.threatActor",
-  term: "relationType.term",
-  case: "relationType.case",
-};
-
-/**
- * 每个实体类型可展示的字段优先级。
- * 第一个命中的作为 definition（主描述行），第二个作为 description（次描述行）。
- */
-const FIELD_PRIORITY: Record<EntityType, string[]> = {
-  risk: ["definition", "description"],
-  avoidance: ["definition", "description"],
-  attackTool: ["description"], // 无 definition
-  threatActor: ["description"], // 无 definition
-  term: ["definition", "description"],
-  case: ["summary", "description"], // summary 优先
-};
 
 /** 描述文本截断长度 */
 const DESC_MAX_LEN = 120;
@@ -79,7 +53,8 @@ export function useEntityResolver() {
    * Case 未加载时返回 false，不触发加载。
    */
   function entityExists(id: string, type: EntityType): boolean {
-    if (type === "case") {
+    const entry = getEntityEntry(type);
+    if (entry.dataSource === "lazy") {
       return loaded.value ? id in cases.value : false;
     }
     // BREAK 数据通过 i18n 动态注入，te(prefix.title) 与 id in BREAK[collection] 等价
@@ -94,8 +69,10 @@ export function useEntityResolver() {
     const type = inferEntityType(id);
     if (!type) return null;
 
-    // Case 特殊处理：触发懒加载（不阻塞，Promise 忽略）
-    if (type === "case" && !loaded.value) {
+    const entry = getEntityEntry(type);
+
+    // 懒加载数据源：触发加载（不阻塞，Promise 忽略）
+    if (entry.dataSource === "lazy" && !loaded.value) {
       void ensureCases();
     }
 
@@ -103,8 +80,7 @@ export function useEntityResolver() {
     const exists = entityExists(id, type);
 
     // 类型标签
-    const labelKey = TYPE_LABEL_KEY[type];
-    const typeLabel = te(labelKey) ? t(labelKey) : type;
+    const typeLabel = te(entry.typeLabelKey) ? t(entry.typeLabelKey) : type;
 
     // 标题
     const titleKey = `${prefix}.title`;
@@ -115,8 +91,7 @@ export function useEntityResolver() {
     let description: string | null = null;
 
     if (exists) {
-      const fields = FIELD_PRIORITY[type];
-      for (const field of fields) {
+      for (const field of entry.fieldPriority) {
         const key = `${prefix}.${field}`;
         if (te(key)) {
           const val = t(key);

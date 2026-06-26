@@ -5,6 +5,7 @@ import type { FuseResultMatch } from "fuse.js";
 import BREAK from "@/BREAK";
 import { useCases } from "@/composables/useCases";
 import { getMessageStringArray, getNestedMessageValue } from "@/utils/i18nMessage";
+import { type EntityType, entityRegistry, getEntityEntry } from "@/BREAK/entityRegistry";
 
 /**
  * 全文搜索功能
@@ -20,8 +21,8 @@ import { getMessageStringArray, getNestedMessageValue } from "@/utils/i18nMessag
  * ```
  */
 
-/** 实体类型 */
-export type EntityType = "risk" | "avoidance" | "attackTool" | "threatActor" | "term" | "case";
+// EntityType 从 entityRegistry 统一导出
+export type { EntityType };
 
 /** 搜索结果条目 */
 export interface SearchResult {
@@ -53,7 +54,7 @@ interface IndexableItem {
   referenceTitles?: string[];
 }
 
-/** 各类型的 Fuse 索引配置 */
+/** 各类型的 Fuse 索引配置（i18nPath/idKey 从 entityRegistry 派生） */
 const FUSE_CONFIGS: Record<
   EntityType,
   { keys: { name: string; weight: number }[]; i18nPath: string; idKey: string }
@@ -68,8 +69,8 @@ const FUSE_CONFIGS: Record<
       { name: "influence", weight: 0.5 },
       { name: "referenceTitles", weight: 0.4 },
     ],
-    i18nPath: "BREAK.risks",
-    idKey: "rKey",
+    i18nPath: getEntityEntry("risk").i18nPath,
+    idKey: getEntityEntry("risk").paramKey,
   },
   avoidance: {
     keys: [
@@ -81,8 +82,8 @@ const FUSE_CONFIGS: Record<
       { name: "limitation", weight: 0.5 },
       { name: "referenceTitles", weight: 0.4 },
     ],
-    i18nPath: "BREAK.avoidances",
-    idKey: "aKey",
+    i18nPath: getEntityEntry("avoidance").i18nPath,
+    idKey: getEntityEntry("avoidance").paramKey,
   },
   attackTool: {
     keys: [
@@ -92,8 +93,8 @@ const FUSE_CONFIGS: Record<
       { name: "description", weight: 1 },
       { name: "referenceTitles", weight: 0.4 },
     ],
-    i18nPath: "BREAK.attackTools",
-    idKey: "atKey",
+    i18nPath: getEntityEntry("attackTool").i18nPath,
+    idKey: getEntityEntry("attackTool").paramKey,
   },
   threatActor: {
     keys: [
@@ -103,8 +104,8 @@ const FUSE_CONFIGS: Record<
       { name: "description", weight: 1 },
       { name: "referenceTitles", weight: 0.4 },
     ],
-    i18nPath: "BREAK.threatActors",
-    idKey: "taKey",
+    i18nPath: getEntityEntry("threatActor").i18nPath,
+    idKey: getEntityEntry("threatActor").paramKey,
   },
   term: {
     keys: [
@@ -118,8 +119,8 @@ const FUSE_CONFIGS: Record<
       { name: "usageExample", weight: 0.7 },
       { name: "referenceTitles", weight: 0.4 },
     ],
-    i18nPath: "BREAK.terms",
-    idKey: "tKey",
+    i18nPath: getEntityEntry("term").i18nPath,
+    idKey: getEntityEntry("term").paramKey,
   },
   case: {
     keys: [
@@ -131,19 +132,18 @@ const FUSE_CONFIGS: Record<
       { name: "category", weight: 0.6 },
       { name: "referenceTitles", weight: 0.4 },
     ],
-    i18nPath: "BREAK.cases",
-    idKey: "cKey",
+    i18nPath: getEntityEntry("case").i18nPath,
+    idKey: getEntityEntry("case").paramKey,
   },
 };
 
-/** 各类型对应的 BREAK 数据 key（case 除外，case 懒加载由 useCases 提供） */
-const BREAK_KEYS: Record<Exclude<EntityType, "case">, keyof typeof BREAK> = {
-  risk: "risks",
-  avoidance: "avoidances",
-  attackTool: "attackTools",
-  threatActor: "threatActors",
-  term: "terms",
-};
+/** 各类型对应的 BREAK 数据 key（case 除外，case 懒加载由 useCases 提供，从 entityRegistry 派生） */
+const BREAK_KEYS: Record<Exclude<EntityType, "case">, keyof typeof BREAK> =
+  Object.fromEntries(
+    entityRegistry
+      .filter((e) => e.dataSource !== "lazy")
+      .map((e) => [e.type, e.breakKey]),
+  ) as Record<Exclude<EntityType, "case">, keyof typeof BREAK>;
 
 /** 从 i18n references 数据中提取标题数组 */
 function extractReferenceTitles(refs: unknown): string[] | undefined {
@@ -294,12 +294,28 @@ export function useSearch() {
   const { locale, messages } = useI18n();
   const { cases } = useCases();
 
-  // 惰性构建的 Fuse 实例缓存
+  // 惰性构建的 Fuse 实例缓存（按类型独立管理，避免全量重建）
   const fuseInstances = ref<Record<EntityType, Fuse<IndexableItem>> | null>(
     null
   );
 
-  /** 构建/重建搜索索引 */
+  /** 构建单个类型的 Fuse 索引 */
+  function buildTypeIndex(type: EntityType, localeMessages: Record<string, unknown>): Fuse<IndexableItem> {
+    const config = FUSE_CONFIGS[type];
+    const items = buildIndexableItems(
+      type,
+      localeMessages,
+      type === "case" ? cases.value : undefined
+    );
+    return new Fuse(items, {
+      keys: config.keys,
+      threshold: 0.4, // 宽松阈值，支持模糊匹配
+      includeMatches: true,
+      minMatchCharLength: 1,
+    });
+  }
+
+  /** 构建全部索引 */
   function buildIndex() {
     const localeMessages = messages.value[locale.value] as Record<string, unknown>;
     const instances: Record<EntityType, Fuse<IndexableItem>> = {} as Record<
@@ -308,22 +324,33 @@ export function useSearch() {
     >;
 
     for (const type of Object.keys(FUSE_CONFIGS) as EntityType[]) {
-      const config = FUSE_CONFIGS[type];
-      const items = buildIndexableItems(
-        type,
-        localeMessages,
-        type === "case" ? cases.value : undefined
-      );
-
-      instances[type] = new Fuse(items, {
-        keys: config.keys,
-        threshold: 0.4, // 宽松阈值，支持模糊匹配
-        includeMatches: true,
-        minMatchCharLength: 1,
-      });
+      instances[type] = buildTypeIndex(type, localeMessages);
     }
 
     fuseInstances.value = instances;
+  }
+
+  /** 仅重建指定类型的索引，不影响其他类型 */
+  function rebuildTypeIndex(type: EntityType) {
+    if (!fuseInstances.value) return;
+    const localeMessages = messages.value[locale.value] as Record<string, unknown>;
+    fuseInstances.value = {
+      ...fuseInstances.value,
+      [type]: buildTypeIndex(type, localeMessages),
+    };
+  }
+
+  /** 仅重建非 case 类型的索引（locale 变化时，case 数据不受 i18n 消息影响） */
+  function rebuildNonCaseIndexes() {
+    if (!fuseInstances.value) return;
+    const localeMessages = messages.value[locale.value] as Record<string, unknown>;
+    const updated = { ...fuseInstances.value };
+    for (const type of Object.keys(FUSE_CONFIGS) as EntityType[]) {
+      if (type !== "case") {
+        updated[type] = buildTypeIndex(type, localeMessages);
+      }
+    }
+    fuseInstances.value = updated;
   }
 
   /** 确保索引已构建 */
@@ -365,14 +392,19 @@ export function useSearch() {
     return results;
   }
 
-  // locale 变化时重建索引
+  // locale 变化时仅重建非 case 索引（case 数据由 useCases 管理，
+  // locale 变化时 useCases 会独立触发 cases ref 更新，由下方 watch(cases) 处理）
   watch(locale, () => {
-    fuseInstances.value = null;
+    if (fuseInstances.value) {
+      rebuildNonCaseIndexes();
+    }
   });
 
-  // cases 懒加载完成或 locale 切换合并后重建索引（含 case 索引）
+  // cases 懒加载完成或 locale 切换合并后仅重建 case 索引
   watch(cases, () => {
-    fuseInstances.value = null;
+    if (fuseInstances.value) {
+      rebuildTypeIndex("case");
+    }
   }, { deep: false });
 
   return { search };
