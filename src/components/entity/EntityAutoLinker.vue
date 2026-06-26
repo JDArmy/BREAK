@@ -34,6 +34,8 @@ let hideTimer: ReturnType<typeof setTimeout> | null = null;
 
 const { resolve } = useEntityResolver();
 
+let showTimer: ReturnType<typeof setTimeout> | null = null;
+
 function showPopover(el: HTMLElement, id: string) {
   const entity = resolve(id);
   if (!entity) return;
@@ -41,12 +43,23 @@ function showPopover(el: HTMLElement, id: string) {
     clearTimeout(hideTimer);
     hideTimer = null;
   }
-  popoverEntity.value = entity;
-  triggerRef.value = el;
-  popoverVisible.value = true;
+  if (showTimer) clearTimeout(showTimer);
+  showTimer = setTimeout(() => {
+    popoverEntity.value = entity;
+    triggerRef.value = el;
+    popoverVisible.value = true;
+  }, 150);
+}
+
+function cancelShow() {
+  if (showTimer) {
+    clearTimeout(showTimer);
+    showTimer = null;
+  }
 }
 
 function scheduleHide() {
+  cancelShow();
   if (hideTimer) clearTimeout(hideTimer);
   hideTimer = setTimeout(() => {
     popoverVisible.value = false;
@@ -328,6 +341,7 @@ onUnmounted(() => {
   observer?.disconnect();
   if (scanTimer) clearTimeout(scanTimer);
   if (hideTimer) clearTimeout(hideTimer);
+  if (showTimer) clearTimeout(showTimer);
 
   const root = document.body;
   root.removeEventListener("mouseenter", handleMouseEnter, true);
