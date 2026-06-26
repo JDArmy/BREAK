@@ -100,7 +100,7 @@ const openDetail = (tKey: string) => {
         <router-link
           v-for="sceneKey in BREAK.terms[tKey as keyof typeof BREAK.terms].relatedBusinessScenes"
           :key="sceneKey"
-          :to="{ name: 'businessScene', params: { bsKey: sceneKey }, hash: `#${sceneKey}` }"
+          :to="{ name: 'businessScene', params: { bsKey: sceneKey } }"
           class="tag-chip tag-link"
         >
           {{ sceneKey }}: {{ $t(`BREAK.businessScenes.${sceneKey}.title`) }}

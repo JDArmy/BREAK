@@ -132,6 +132,7 @@ const createGraphData = () => ({
   filterRelationType: ref("all"),
   filterSubNode: ref("all"),
   suppressLineTypeAutoAdd: ref(false),
+  totalLineType: ref([]),
   findNodeById: vi.fn(),
   formatEvidenceLevel: vi.fn(),
   genNetworkGraphData: vi.fn(),

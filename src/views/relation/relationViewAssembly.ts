@@ -436,7 +436,13 @@ export const createRelationViewAssembly = ({
 
   // State → URL：筛选/布局变化时写回 query（仅非默认值写入，默认值时清除对应 key）
   watch(
-    [graphData.filterRelationType, graphData.filterSubNode, graphData.filterRelatedEntity, graphData.filterLineType, () => networkState.layout],
+    () => [
+      [...graphData.filterRelationType.value],
+      graphData.filterSubNode.value,
+      graphData.filterRelatedEntity.value,
+      [...graphData.filterLineType.value],
+      networkState.layout,
+    ] as const,
     ([nodeTypes, subNode, relatedEntity, lineTypes, layout]) => {
       if (isUpdatingFromRoute) return;
       const perspective = getRelationPerspectiveFromRoute(route.name);
@@ -471,18 +477,21 @@ export const createRelationViewAssembly = ({
         if (val !== query.relatedEntity) { query.relatedEntity = val; changed = true; }
       }
 
-      // lineTypes：比较时以 availableLineTypes 过滤后的默认值为基准
-      const availableLineTypes = new Set(
-        graphData.relationLegendItems.value.map((item) => item.key),
-      );
-      const effectiveDefaultLineTypes = defaults.lineTypes.filter(
-        (lt) => availableLineTypes.has(lt),
-      );
-      if (arrayEquals(lineTypes as string[], effectiveDefaultLineTypes)) {
-        if (query.lineTypes !== undefined) { delete query.lineTypes; changed = true; }
-      } else {
-        const serialized = serializeLineTypes(lineTypes as string[]);
-        if (serialized !== query.lineTypes) { query.lineTypes = serialized; changed = true; }
+      // lineTypes：默认状态 = 全选（图中所有可见线类型都被选中）
+      // 只要不是全选就写入 URL，全选时清除 lineTypes 参数
+      const currentTotalLineTypes = graphData.totalLineType.value;
+      if (currentTotalLineTypes.length > 0) {
+        const effectiveFilter = (lineTypes as string[]).filter(
+          (lt) => currentTotalLineTypes.includes(lt),
+        );
+        // 全选 = effectiveFilter 包含了 totalLineType 中的所有项
+        const isAllSelected = currentTotalLineTypes.every((lt) => effectiveFilter.includes(lt));
+        if (isAllSelected) {
+          if (query.lineTypes !== undefined) { delete query.lineTypes; changed = true; }
+        } else {
+          const serialized = serializeLineTypes(effectiveFilter);
+          if (serialized !== query.lineTypes) { query.lineTypes = serialized; changed = true; }
+        }
       }
 
       // layout
@@ -548,7 +557,7 @@ export const createRelationViewAssembly = ({
         needsFilter = true;
       }
 
-      // lineTypes
+      // lineTypes：URL 有 lineTypes 参数 → 恢复指定筛选；无参数 → 代表全选，不干预当前值
       if (typeof queryLineTypes === "string") {
         const parsed = deserializeLineTypes(queryLineTypes);
         if (parsed.length > 0 && !arrayEquals(parsed, graphData.filterLineType.value as string[])) {
@@ -557,10 +566,9 @@ export const createRelationViewAssembly = ({
         }
         // URL 显式指定了 lineTypes，禁止图数据重建时自动追加
         graphData.suppressLineTypeAutoAdd.value = true;
-      } else if (!arrayEquals(graphData.filterLineType.value as string[], defaults.lineTypes as string[])) {
-        graphData.filterLineType.value = [...defaults.lineTypes];
+      } else {
+        // URL 无 lineTypes = 全选状态，允许自动追加，不强制覆盖当前值
         graphData.suppressLineTypeAutoAdd.value = false;
-        needsFilter = true;
       }
 
       // layout
