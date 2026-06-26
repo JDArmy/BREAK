@@ -1,31 +1,36 @@
 {
   "C0841": {
-    "title": "西班牙警方捣毁AI驱动钓鱼团伙",
+    "title": "西班牙国民警卫队捣毁GXC Team AI增强钓鱼工具网络",
     "keywords": [
-      "生成式AI",
+      "GXC Team",
       "网络钓鱼",
-      "AI钓鱼流水线",
-      "多语言钓鱼邮件",
-      "语音钓鱼",
-      "号码伪造",
-      "西班牙国家警察",
-      "欧洲刑警组织",
-      "验证码诈骗",
+      "AI语音诈骗",
+      "钓鱼套件",
+      "Android恶意软件",
+      "银行凭证窃取",
+      "GoogleXcoder",
+      "西班牙国民警卫队",
+      "Crime-as-a-Service",
+      "一次性密码拦截",
       "银行欺诈"
     ],
-    "summary": "2025年11月，西班牙联合欧洲多国捣毁一个利用生成式AI进行大规模网络钓鱼的犯罪团伙。该团伙构建AI钓鱼流水线，自动生成多语言钓鱼邮件与语音脚本，利用号码伪造技术冒充银行，诱导受害者泄露验证码，涉案金额高达数百万欧元。",
+    "summary": "2025年5月，西班牙国民警卫队在多地同步搜查并抓获“GoogleXcoder”，捣毁其运营的 GXC Team 银行钓鱼工具网络。该团伙以 Crime-as-a-Service 模式向其他犯罪分子提供可克隆西班牙银行、国际机构和政府门户的钓鱼套件，并提供定制、技术支持和更新。Group-IB 披露，该生态还包含伪装成银行应用的 Android 短信窃取木马，以及集成在钓鱼套件中的 AI 语音诈骗工具，用自动语音电话诱导受害者泄露双因素认证验证码，相关钓鱼活动造成数百万欧元损失。",
     "category": "security_incident",
     "relatedRisks": [
       "R0084-001"
     ],
     "references": [
       {
-        "title": "西班牙警方联合欧洲多国捣毁AI驱动钓鱼团伙,数百受害者获救...",
-        "link": "https://cloud.tencent.com/developer/article/2584940"
+        "title": "La Guardia Civil desmantela una red de phishing bancario y detiene al principal desarrollador de kits de robo de credenciales en España",
+        "link": "https://web.guardiacivil.es/es/destacados/noticias/La-Guardia-Civil-desmantela-una-red-de-phishing-bancario-y-detiene-al-principal-desarrollador-de-kits-de-robo-de-credenciales-en-Espana/"
+      },
+      {
+        "title": "Group-IB Intelligence Powers Spanish Guardia Civil Operation to Dismantle the “GXC Team” Cybercrime Syndicate",
+        "link": "https://www.group-ib.com/media-center/press-releases/guardia-civil-gxc-team-takedown/"
       }
     ],
-    "updated": "2026-06-18",
-    "incidentTime": "2025-11",
+    "updated": "2026-06-25",
+    "incidentTime": "2025-05",
     "relatedAttackTools": [
       "AT0057",
       "AT0059",

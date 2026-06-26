@@ -1,21 +1,25 @@
 {
   "C0841": {
-    "title": "Spanish Police Dismantle AI-Powered Phishing Ring",
+    "title": "Spanish Guardia Civil Dismantles GXC Team AI-Enhanced Phishing Tool Network",
     "keywords": [
-      "generative AI phishing",
-      "AI phishing pipeline",
-      "multilingual phishing emails",
-      "voice phishing",
-      "number spoofing",
-      "Spanish National Police",
-      "Europol",
-      "verification code scam",
+      "GXC Team",
+      "AI voice scam",
+      "phishing kits",
+      "Android malware",
+      "bank credential theft",
+      "GoogleXcoder",
+      "Spanish Guardia Civil",
+      "Crime-as-a-Service",
+      "one-time password interception",
       "bank impersonation"
     ],
-    "summary": "In November 2025, Spanish authorities, in coordination with multiple European countries, dismantled a criminal group that used generative AI to conduct large-scale phishing campaigns. The group built an AI phishing pipeline that automatically generated multilingual phishing emails and voice scripts, used number spoofing to impersonate banks, and tricked victims into revealing verification codes, r",
+    "summary": "In May 2025, Spain's Guardia Civil carried out coordinated searches and arrested “GoogleXcoder,” dismantling the GXC Team banking phishing tool network. The group operated a Crime-as-a-Service model that supplied other criminals with phishing kits capable of cloning Spanish banks, international institutions, and government portals, together with customization, technical support, and updates. Group-IB reported that the ecosystem also included Android SMS-stealing malware disguised as banking apps and AI-powered voice scam tooling integrated into phishing kits to trick victims into revealing two-factor authentication codes, with related phishing campaigns causing millions of euros in losses.",
     "references": [
       {
-        "title": "Spanish Police and European Partners Dismantle AI-Powered Phishing Ring, Hundreds of Victims Rescued"
+        "title": "Guardia Civil dismantles a banking phishing network and arrests the main developer of credential theft kits in Spain"
+      },
+      {
+        "title": "Group-IB intelligence powers Spanish Guardia Civil operation to dismantle the GXC Team cybercrime syndicate"
       }
     ]
   }

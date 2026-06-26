@@ -33,10 +33,16 @@ const primaryDomainSuffixes = [
   '.ac.cn',
   'gov.cn',
   'court.gov.cn',
+  'sdcourt.gov.cn',
+  'szlhcourt.gov.cn',
   'chinacourt.cn',
   'chinacourt.org',
   'jcy.gov.cn',
+  'jcy.gansu.gov.cn',
+  'hexushui.jcy.gov.cn',
+  'baoding.jcy.gov.cn',
   'jcrb.com',
+  'spp.gov.cn',
   'moj.gov.cn',
   'mps.gov.cn',
   'europarl.europa.eu',
@@ -51,11 +57,15 @@ const primaryDomainSuffixes = [
   'cdgaj.chengdu.gov.cn',
   'gat.guizhou.gov.cn',
   'gaj.ningbo.gov.cn',
+  'gaj.huangshi.gov.cn',
   'gat.nmg.gov.cn',
+  'gat.hubei.gov.cn',
   'yjj.wuzhou.gov.cn',
   'wjw.lanzhou.gov.cn',
+  'hljcourt.gov.cn',
   'bj148.org',
   'njyhfy.gov.cn',
+  'nxfy.gov.cn',
   'liulin.gov.cn',
   'sgzjfy.gov.cn',
   'scjgj.quanzhou.gov.cn',
@@ -70,6 +80,7 @@ const primaryDomainSuffixes = [
   'nvd.nist.gov',
   'justice.gov',
   'judiciary.uk',
+  'cps.gov.uk',
   'europol.europa.eu',
   'fbi.gov',
   'peelpolice.ca',
@@ -88,6 +99,7 @@ const primaryDomainSuffixes = [
   'portswigger.net',
   'eprint.iacr.org',
   'tches.iacr.org',
+  'ncl.ac.uk',
   'mdpi.com',
   'nature.com',
   'sciencedirect.com',
@@ -112,6 +124,7 @@ const primaryDomainSuffixes = [
   'appsflyer.com',
   'fraudlogix.com',
   'adguard.com',
+  'blog.google',
   'chromewebstore.google.com',
   'peerj.com',
   'att.com',
@@ -127,6 +140,8 @@ const primaryDomainSuffixes = [
   'cpd.com.cn',
   'cf.qq.com',
   'rule.jd.com',
+  'qn.taobao.com',
+  'jinritemai.com',
   'gamesafe.qq.com',
   'yysls.cn',
   'sega.co.jp',
@@ -160,6 +175,7 @@ const primaryDomainSuffixes = [
   'cert.org.cn',
   'cverc.org.cn',
   'courtlistener.com',
+  'santaclara.courts.ca.gov',
   'sonatype.com',
   'endorlabs.com',
   'nsfocusglobal.com',
@@ -204,7 +220,10 @@ const primaryDomainSuffixes = [
   'soundcloud.com',
   'haveibeenpwned.com',
   'datenschutz-berlin.de',
+  'statenislandda.org',
+  'page.alertsense.com',
   'nilsonreport.com',
+  'visa.com',
   'cgbchina.com.cn',
   'autoriteitpersoonsgegevens.nl',
   'dataprotection.ie',
@@ -223,11 +242,13 @@ const primaryDomainSuffixes = [
   'jinyier.me',
   'bocongan.gov.vn',
   'baochinhphu.vn',
+  'ipthailand.go.th',
   'threathunter.cn',
   'whwx.gov.cn',
   'vcredit.com',
   'vicone.com',
   'vulntech.com',
+  'tfri.tencent.com',
 ];
 
 const secondaryDomainSuffixes = [
@@ -279,16 +300,46 @@ const mirrorDomainSuffixes = ['mp.weixin.qq.com', 'm.gmw.cn', 'toutiao.com', 'we
 const primaryReferenceLinks = new Set([
   'https://web.archive.org/web/20180221031903/https://blog.redlock.io/cryptojacking-tesla', // RedLock CSI Team 原始研究存档
   'https://www.douyin.com/video/7646680404434504998', // 抖音黑板报官方治理公告
+  'https://www.xinhuanet.com/politics/2016-12/20/c_1120149364.htm', // 新华网转载法院审理结果，高校学生利用境外隐藏网络传播儿童淫秽视频案
   'https://m.thepaper.cn/newsdetail_forward_20536442', // 上海市第二中级人民法院官方澎湃号
   'https://m.thepaper.cn/newsdetail_forward_6016636', // 汾阳市市场监管局政务通报
   'https://m.thepaper.cn/newsdetail_forward_31179929', // 敦化市人民法院官方澎湃号
   'https://m.thepaper.cn/newsdetail_forward_33183066', // 夏都西宁官方澎湃号，来源青海省公安厅
+  'https://www.thepaper.cn/newsdetail_forward_28991401', // 思明法院官方澎湃号，网络赌博代理返点案
+  'https://news.ijjnews.com/system/2023/08/15/030131845.shtml', // 晋江新闻网法院通讯员稿，丰泽法院“呼死你”软件产业链案
+  'https://www.hshfy.sh.cn/shfy/web/xxnr.jsp?pa=aaWQ9MTAyMDMxOTYyNCZ4aD0xJmxtZG09bG03NDYPdcssz&zd=xwzx', // 上海高院官网，恶意软件霸屏广告案
+  'https://www.sznews.com/news/content/2021-08/28/content_24522078.htm', // 深圳公安发布托管页，福田警方打击涉诈手机黑卡产业链
+  'https://www.sznews.com/news/content/2021-12/08/content_24799309.htm', // 深圳南山警方发布托管页，木马盗号冒充熟人诈骗案
+  'https://news.qq.com/rain/a/20250312A0885900', // 警民直通车上海官方托管页，点餐优惠券漏洞案
+  'https://news.qq.com/rain/a/20220224A06WIA00', // 警民直通车上海官方托管页，货运平台改定位诈骗案
+  'https://www.sznews.com/news/content/2021-06/15/content_24299254.htm', // 深圳新闻网承载龙华警方通报，私家侦探公司案
+  'https://mp.weixin.qq.com/s/tcDg7zap3pX4MivKt6JkoA', // 公安部网安局官方微信，呼死你短信轰炸案
+  'https://news.qq.com/rain/a/20240920A08WA400', // 成都公安官方托管页，篡改货运车辆 GPS 监控数据案
+  'https://news.qq.com/rain/a/20260614a04mdv00', // 上海静安官方托管页，七天无理由退货掉包案
+  'https://news.cctv.com/2026/06/18/arti1im1sqmvqzkv04azh5w5260618.shtml', // 央视网转载平安北京/朝阳分局调包退货案
+  'https://tv.cctv.cn/2026/06/16/VIDE8BAjd4ZlnMMT7J42OnrO260616.shtml', // 央视《新闻直播间》节目页，北京调包退货诈骗案
+  'https://m.news.cctv.com/2021/07/19/artie58rnmechoj4v8zu2jfq210719.shtml', // 央视新闻客户端，绵阳手机积分兑换诈骗案
+  'https://tv.cctv.cn/2018/10/09/VIDEBJfRxwDXNrvaPc5N7361181009.shtml', // 央视《焦点访谈》节目页，免费手环货到付款诈骗案
+  'https://tv.cctv.com/2024/03/15/VIDEaISGnSjSjVaDWrZDsLbf240315.shtml', // 央视 3·15 晚会，同程金融礼品卡变相现金贷曝光
+  'https://www.chinaums.com/tblm/aqzx2/djzldxwlzp_1905/jbzspj_1904/202209/t20220906_45358.shtml', // 银联商务转载中国支付清算协会跨境赌博资金转移案例
+  'https://m.cyol.com/gb/articles/2021-10/17/content_xyzgdfvxp.html', // 中国青年报客户端来源江都警方，商户收款码非法套现案
+  'https://m.thepaper.cn/newsdetail_forward_30782061', // 乌兰浩特市人民法院官方澎湃号，伪造国家机关印章案
+  'https://pubg.qq.com/webplat/info/news_version3/33247/33250/33268/33270/m19999/201804/713383.shtml', // 腾讯《绝地求生》官方公告，外挂黑产团伙案
+  'https://lol.qq.com/news/detail.shtml?docid=15623264036510329250', // 腾讯《英雄联盟》官方站，消极比赛封号诉讼案
+  'https://zzky.shandong-energy.com/185709/185711/2024/04/32388212.html', // 山东能源枣矿集团官网转载枣西公安微信公众号，虚假招聘诈骗团伙案
   'https://m.gmw.cn/2023-04/12/content_1303339963.htm', // 光明网托管温州市中级人民法院/龙湾法院案例
   'https://www.thepaper.cn/newsdetail_forward_14923193', // 中国共产党武宣县委员会宣传部官方澎湃号
   'https://www.thepaper.cn/newsdetail_forward_33164885', // 云浮市中级人民法院官方澎湃号，供稿罗定法院
   'https://xinwen.bjd.com.cn/content/s6a2bfd65d5de97bd7464c3db.html', // 北京互联网法院供稿
+  'https://xinwen.bjd.com.cn/content/s66249aa1e4b064178156893f.html', // 海淀区人民法院官方，北京 AI 一键去衣案
+  'https://xinwen.bjd.com.cn/content/s6168f10ce4b08aed9d8a566a.html', // 扬州市公安局江都分局，二维码套现案
+  'https://www.bjcourt.gov.cn/cpws/paperview.htm?id=d9b9eef791a44e1798920d1a896c419e&n=1', // 北京法院审判信息网，金某某破坏计算机信息系统案
+  'https://ga.lasa.gov.cn/lsga/jwxw/202503/00a60419366a450bbc87f3413e6e154a.shtml', // 拉萨市公安局，冒充领导亲属诈骗案
   'https://hzsc.hangzhou.com.cn/content/content_7015476.htm', // 上城区法院案件通报
+  'https://z.hangzhou.com.cn/2022/wangan/content/content_8269934.htm', // 杭州网警以案说法，假冒 imToken 钱包盗币案
   'https://mp.weixin.qq.com/s/zm3kcgvf3bselnsmgdcglq', // 扬州经济技术开发区人民检察院官网要闻列表指向的官方微信原文
+  'https://delhihighcourt.nic.in/app/showlogo/1669383973237_80487_2022.pdf/2022', // 德里高等法院官网 PDF，Amitabh Bachchan 人格权临时禁令
+  'https://news.cctv.com/2025/12/17/ARTIP5TCJFTBanuU5hioemaE251217.shtml', // 央视新闻采访广州海关缉私局，走私孕妇血样系列案
   'https://mp.weixin.qq.com/s?__biz=mzawntgwnjy0nq==&mid=2909647260&idx=1&sn=724da208d4480ad7ac2e411282b0556f', // 樊城发布政务微信
   'https://mp.weixin.qq.com/s?__biz=mzg4nta2mdu0oq==&mid=2247530131&idx=1&sn=69682338439f50044b36db5956286c8b', // 成都市市场监管政务微信
   'https://mp.weixin.qq.com/s/mkzzqogpgzb9dtgenlu6ja', // 公安部网安局官方微信
@@ -311,6 +362,7 @@ const primaryReferenceLinks = new Set([
   'https://mp.weixin.qq.com/s?__biz=mza3ody0njqzma==&mid=2650284888&idx=1&sn=a48ed16d4c3feb2abfe101fb778108f9&chksm=87b31ea9b0c497bf2295c0506f0b9adb1618bad1e445662eefe8423764371d94786a591701e9&scene=27', // 宁波公安官方微信
   'https://mp.weixin.qq.com/s?__biz=mzawmtu1odawnq==&mid=2650670258&idx=4&sn=115d31346e5a6671f91921b2bd1597c6&chksm=82dd7028b5aaf93eba9ba66f686d8fad00b96ea480d9cd30a8b77277c3a3d09b55571658b53b&scene=27', // 公安部网安局官方微信
   'https://mp.weixin.qq.com/s/nhiwxqy5qxj_xsxtzgpyba', // 钦州网警官方微信
+  'https://mp.weixin.qq.com/s?__biz=mziyotaymjyyng==&mid=2650559154&idx=1&sn=09b817d995126acdf25c3dca552ac662&chksm=f041fc7fc7367569868f18818e306b0c5566798c7d43df51844d7e13cda1f644f7fa507fb96a&scene=27', // 钦南法院官方微信
   'https://mp.weixin.qq.com/s/mmawdyonqffbbdzexx-qaa', // 公安部网安局官方微信
   'https://mp.weixin.qq.com/s/xjq1sbdm5_2njzfcf3g3tq', // 公安部网安局官方微信
   'https://mp.weixin.qq.com/s/ml4m1wnvnrh90rqkhvxura', // 昌南公安官方微信
@@ -322,6 +374,8 @@ const primaryReferenceLinks = new Set([
   'https://mp.weixin.qq.com/s/ivnvm37snzpzajrgimpy-a', // 大悟发布政务微信，大悟县人民政府办公室情况通报
   'https://mp.weixin.qq.com/s/8olzgvwkc7qhqzkma1ixia', // 上海市长宁区人民检察院官网索引指向的官方微信原文
   'https://mp.weixin.qq.com/s/o9cuy24aczeyta73z0iqda', // 江苏省人民检察院官网案件发布索引指向的仪征检察官方微信原文
+  'https://web.guardiacivil.es/es/destacados/noticias/la-guardia-civil-desmantela-una-red-de-phishing-bancario-y-detiene-al-principal-desarrollador-de-kits-de-robo-de-credenciales-en-espana/', // 西班牙国民警卫队官方通报，GXC Team 银行钓鱼工具网络
+  'https://www.group-ib.com/media-center/press-releases/guardia-civil-gxc-team-takedown/', // Group-IB 官方协查公告，GXC Team AI 增强钓鱼工具网络
   'https://peking.bjd.com.cn/content/s649a2d5fe4b042ca9e8e4fb9.html', // 北京法院审判信息发布账号，供稿朝阳法院
   'https://jsnews.jschina.com.cn/jczx/202502/t20250218_s67b41f81e4b04dff9907e0f5.shtml', // 江苏检察在线来源，太仓市人民检察院官网宣传看点索引指向
   'https://news.qq.com/rain/a/20250415a08y8c00', // 上海市徐汇区新闻办公室官方账号托管页
@@ -333,6 +387,7 @@ const primaryReferenceLinks = new Set([
   'https://news.ifeng.com/c/8ocjypfqor1', // 凤凰网托管公安部网安局游戏外挂通报
   'https://m.thepaper.cn/baijiahao_28782951', // 延津县人民法院官方澎湃号
   'https://www.thepaper.cn/newsdetail_forward_2921336', // 浙江法院系统政务稿，首例恶意注册账号案
+  'https://static.nfapp.southcn.com/content/202104/01/c5049044.html', // 南方+承载蕉岭公安发布，内外勾结非法获取企业数据案
   'https://ipr.mofcom.gov.cn/article/gnxw/qt/202112/1966903.html', // 商务部知识产权栏目转载常熟市场监管跨平台盗图处罚
   'https://www.sohu.com/a/1037162346_99923255', // 《方圆》杂志原创，徐州经开区检察院审查起诉
   'https://web.archive.org/web/20220621092007/https://weibo.com/6329746106/LyKD2xUk8', // 学习通官方微博数据泄露传闻声明存档
@@ -345,10 +400,14 @@ const primaryReferenceLinks = new Set([
   'https://xinwen.bjd.com.cn/content/s683f8979e4b0380e186cf999.html', // 北京日报托管公安部网安局/陕西网警非法薅羊毛案
   'https://mp.weixin.qq.com/s?__biz=mziwnzexnti5ma==&mid=2649895992&idx=1&sn=2db768454308aea8661283b04870a38d&chksm=8e40cffb5980f6350bf9e907cc441b820572068c2b4b5e6215a0f98ae38e4b465829b53ca1a4&scene=27', // 上海高院官方微信，临期食品恶意索赔案
   'https://www.zhongyuan.gov.cn/rdhy/9581840.jhtml', // 政府门户转载抖音黑板报官方治理公示
+  'https://jubao.xzdw.gov.cn/zxdt/202308/t20230826_390432.html', // 西藏自治区党委保密办/自治区国家保密局，保密典型案例
   'http://putian.pafj.net/caw/f/10/view-225-766722.html', // 莆田长安网检察院栏目，中共莆田市委政法委员会主办
   'https://www.msxf.com/news/xwxq/1326', // 马上消费金融官网，反催收团伙协查公告
   'https://news.qq.com/rain/a/20260402a067vo00', // 腾讯新闻承载《三角洲行动》官方账号安全公告
+  'https://view.inews.qq.com/a/20240926a05rcb00', // 警民直通车上海官方托管页，国际通用礼品卡非法汇兑案
   'https://x.com/alvierid/status/1999403353466421320', // 安全研究人员原始披露
+  'https://x.com/iloveponzi/status/1488354391401054216', // larrylawliet.eth 本人说明 Moshi Mochi Discord 被黑和假 mint 链接
+  'https://etherscan.io/address/0x6d0267156f1c6CE44Caa4BF129B76009d3d41830', // larrylawliet.eth 链上地址页面
   'https://xz.aliyun.com/news/13288', // 作者原始漏洞复盘
   'https://xz.aliyun.com/news/14031', // 作者原始云存储接管复盘
   'https://0xspade.medium.com/api-secret-key-leakage-leads-to-disclosure-of-employees-information-5ca4ce17e1ce', // 漏洞赏金猎人原始披露
@@ -388,7 +447,11 @@ const primaryReferenceLinks = new Set([
   'https://mp.weixin.qq.com/s?__biz=mzi1nji5nju4mq==&mid=2247515266&idx=1&sn=4c6c087308a789b4669772ec8f2aef63&chksm=ebb9ea1c5e83f82dcf46c7304595a7abc3ee3d420411372888f73739ee36d90e19404816526b&scene=27', // 公安部网安局官方微信，烟台莱山勒索病毒通报
   'http://finance.sina.com.cn/wm/2026-05-08/doc-inhxcyyr4271612.shtml', // 新浪承载公安部网安局官方账号通报
   'https://finance.sina.com.cn/wm/2026-05-08/doc-inhxcusr4594497.shtml', // 新浪承载公安部网安局官方账号通报
+  'http://www.chinapeace.gov.cn/chinapeace/c100052/2021-10/18/content_12548925.shtml', // 中国长安网，郑州内鬼侵犯公民个人信息案
+  'https://www.gipc.gov.cn/res/pdfFile/6a7f6b6d-f68c-4a22-903a-480c8acc53cc.pdf', // 广东省高级人民法院典型案例，AI 换脸非法获取计算机信息系统数据案
+  'http://www.chinapeace.gov.cn/chinapeace/c100045/2025-12/16/content_12815785.shtml', // 中国长安网，短视频带货诈骗团伙案
   'https://mp.weixin.qq.com/s?__biz=mjm5mtczodg0ma==&mid=2649821281&idx=1&sn=4c5cfd23a22fa9563581871847f89863&chksm=bfd3905763b3ba9d7dfed20dc74856a586350043733c7cdb9c8af73c163ab6d015f264768f97&scene=27', // 南京市场监管相关官方微信托管页，价格违法典型案例
+  'https://mp.weixin.qq.com/s?__biz=MzIyMTk1NDkzMg==&mid=2247533157&idx=2&sn=27cc5dbb20b7d0500b59088f46c3f6ff&chksm=e836d47edf415d68d183b1dcbd10f684f5e4ebaeaea49c02209103ed06a95f24d32e7faee253&scene=27', // 茂县公安官方微信托管页，伪造转账截图诈骗通报
 ]);
 const normalizedPrimaryReferenceLinks = new Set([...primaryReferenceLinks].map((link) => link.toLowerCase()));
 const primaryWechatBizIds = [

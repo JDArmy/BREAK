@@ -1,6 +1,6 @@
 {
   "C0445": {
-    "title": "信用卡暴力破解：被忽视的攻击向量",
+    "title": "纽卡斯尔大学披露分布式猜测攻击可破解在线银行卡信息",
     "keywords": [
       "信用卡暴力破解",
       "BIN枚举",
@@ -12,19 +12,27 @@
       "PAN枚举",
       "支付基础设施"
     ],
-    "summary": "2026年报告指出，信用卡暴力破解（BIN枚举或卡破解）是一种系统性漏洞，攻击者利用BIN公开信息，结合Luhn算法，对PAN、有效期和CVV进行分布式枚举。传统欺诈检测系统难以发现此类攻击，因其交易金额极小且分散，导致支付基础设施泄露有效卡信息。",
-    "category": "news_report",
+    "summary": "2016年，纽卡斯尔大学研究团队披露 Distributed Guessing Attack。研究指出，攻击者可以把猜测分散到多个商户网站，利用不同网站校验字段不一致、跨站失败尝试难以关联等问题，枚举银行卡号、有效期和CVV。Visa 后续指南也将 enumeration、brute force、BIN testing 和 card stuffing 列为支付生态中的账户测试风险。",
+    "category": "academic_research",
     "relatedRisks": [
       "R0041"
     ],
     "references": [
       {
-        "title": "Credit Card Brute Force: The Overlooked Attack Vector [2026]",
-        "link": "https://r.search.yahoo.com/_ylt=AwrEsealnDJqTwIAfepXNyoA;_ylu=Y29sbwNiZjEEcG9zAzYEdnRpZAMEc2VjA3Ny/RV=2/RE=1782911397/RO=10/RU=https%3a%2f%2fthecodersblog.com%2fcredit-card-brute-force-vulnerabilities-exposed-2026%2f/RK=2/RS=pBj8M5TLcdmP1.LI4z72588n1cM-"
+        "title": "How cyber thieves can hack your credit card in seconds",
+        "link": "https://www.ncl.ac.uk/press/articles/archive/2016/12/cyberattack/"
+      },
+      {
+        "title": "Does the Online Card Payment Landscape Unwittingly Facilitate Fraud?",
+        "link": "https://eprints.ncl.ac.uk/230123"
+      },
+      {
+        "title": "Visa Guidance to Guard Against Enumeration Attacks and Account Testing Schemes",
+        "link": "https://usa.visa.com/content/dam/VCOM/global/support-legal/documents/visa-guidance-to-guard-against-enumeration-attacks.pdf"
       }
     ],
     "updated": "2026-06-18",
-    "incidentTime": "2026-05",
+    "incidentTime": "2016-12",
     "relatedAttackTools": [
       "AT0090",
       "AT0068",

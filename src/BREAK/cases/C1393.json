@@ -12,19 +12,19 @@
       "美国联邦法院",
       "IoT安全"
     ],
-    "summary": "一名22岁的黑客因协助发动一系列利用Mirai僵尸网络的大规模DDoS攻击，被美国联邦法院判处支付860万美元损害赔偿，并执行6个月居家监禁。该黑客参与利用被感染的物联网设备组建僵尸网络，对Dyn等目标发动攻击，造成严重网络中断。",
+    "summary": "美国司法部披露，Mirai 僵尸网络共同作者 Paras Jha 因针对罗格斯大学发动一系列 DDoS 攻击，被新泽西联邦法院责令支付860万美元赔偿，并判处6个月居家监禁、2500小时社区服务和5年监督释放。该案说明，利用受感染物联网设备构建僵尸网络实施持续 DDoS 攻击，会带来重大刑事责任和赔偿责任。",
     "category": "criminal_verdict",
     "relatedRisks": [
       "R0165"
     ],
     "references": [
       {
-        "title": "Mirai botnet hacker ordered to pay $8.6 million in damages",
-        "link": "https://www.reuters.com/article/world/us/mirai-botnet-hacker-ordered-to-pay-86-million-in-damages-idUSKCN1N02VX/"
+        "title": "Computer Hacker Who Launched Attacks On Rutgers University Ordered To Pay $8.6M Restitution",
+        "link": "https://www.justice.gov/usao-nj/pr/computer-hacker-who-launched-attacks-rutgers-university-ordered-pay-86m-restitution"
       }
     ],
-    "updated": "2026-06-18",
-    "incidentTime": "2018-11",
+    "updated": "2026-06-26",
+    "incidentTime": "2018-10",
     "relatedAttackTools": [
       "AT0082"
     ],

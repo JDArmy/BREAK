@@ -1,21 +1,22 @@
 {
   "C0306": {
-    "title": "Hacker Sentenced for DDoS Attack on Alipay",
+    "title": "Beijing Haidian DDoS Attack Platform Case",
     "keywords": [
       "DDoS attack",
-      "Alipay",
-      "Ant Financial",
-      "Cloud Dike",
-      "traffic scrubbing",
-      "blackhole routing",
-      "distributed denial of service",
-      "IDC",
-      "criminal verdict"
+      "DDoS attack platform",
+      "illegal use of information networks",
+      "Haidian District Procuratorate",
+      "Beijing cyber police",
+      "attack packages",
+      "Wang",
+      "criminal judgment",
+      "Supreme People's Procuratorate",
+      "distributed denial of service"
     ],
-    "summary": "A hacker was convicted for launching a DDoS attack against Alipay. The assault generated massive traffic that exceeded the IDC's internal defenses, forcing Ant Financial to activate China Telecom's Cloud Dike overseas blackhole service for traffic scrubbing. The incident highlights the tangible threat of DDoS attacks to financial services.",
+    "summary": "The Supreme People's Procuratorate reported that a DDoS attack platform case prosecuted by the Haidian District Procuratorate in Beijing received a first-instance judgment on July 17, 2020. The defendant Wang built a dedicated online DDoS attack platform and openly sold attack packages labeled bronze, silver, gold, and diamond. After users placed orders and paid fees, they could maliciously attack target websites. The court convicted Wang of illegally using information networks and sentenced him to one year in prison and a 50,000 yuan fine.",
     "references": [
       {
-        "title": "He was sentenced for DDoS attacking Alipay"
+        "title": "Beijing Haidian: Suspect in DDoS Attack Platform Case Sentenced - Supreme People's Procuratorate"
       }
     ]
   }

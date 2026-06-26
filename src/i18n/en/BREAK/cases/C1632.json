@@ -1,9 +1,10 @@
 {
   "C1632": {
-    "title": "NFT Collector Loses $1.5M in Assets After Wallet Private Key Leak",
+    "title": "larrylawliet.eth NFT Theft via Fake Mint Link",
     "keywords": [
       "NFT theft",
-      "private key leak",
+      "fake mint link",
+      "Discord compromise",
       "Bored Ape Yacht Club",
       "Mutant Ape Yacht Club",
       "OpenSea",
@@ -11,10 +12,13 @@
       "wallet compromise",
       "virtual asset theft"
     ],
-    "summary": "In February 2022, NFT collector larrylawliet.eth had approximately 10.79 million RMB worth of NFTs, including Bored Ape Yacht Club and Mutant Ape Yacht Club tokens, drained from their wallet within minutes due to a private key compromise. The incident spanned multiple NFT collections and highlighted the risk of cross-platform asset theft when users manage holdings across different services with ex",
+    "summary": "In February 2022, NFT collector larrylawliet.eth said on social media that the Moshi Mochi project's Discord had been compromised and that attackers posted a fake mint link in the official channel. After clicking the link, the collector reported NFT theft and publicly asked OpenSea and LooksRare for help. The case shows how a compromised Web3 community channel can turn a fake mint link into a wallet-connection or signing trap that transfers high-value NFTs such as BAYC and MAYC assets.",
     "references": [
       {
-        "title": "Skyrocketing 1,350 Times in Six Months: Priceless NFT Avatar Stolen, Over 10 Million Yuan Lost Completely"
+        "title": "larrylawliet.eth Statement on Moshi Mochi Discord Compromise and Fake Mint Link"
+      },
+      {
+        "title": "Etherscan: larrylawliet.eth Address Page"
       }
     ]
   }

@@ -1,9 +1,10 @@
 {
   "C1632": {
-    "title": "NFT收藏大户遭黑客攻击损失千万资产",
+    "title": "larrylawliet.eth 假 mint 链接 NFT 被盗案",
     "keywords": [
       "NFT被盗",
-      "私钥泄露",
+      "假mint链接",
+      "Discord被黑",
       "无聊猿猴",
       "Bored Ape Yacht Club",
       "Mutant Ape Yacht Club",
@@ -12,15 +13,19 @@
       "钱包安全",
       "虚拟资产盗窃"
     ],
-    "summary": "2022年2月，NFT收藏大户larrylawliet.eth因钱包私钥泄露，其持有的无聊猿猴、变异猿猴等价值约1079万元人民币的NFT在几分钟内被黑客转走。事件涉及多个NFT系列，暴露了用户在不同平台间管理资产时因私钥泄露导致跨平台资产被盗的风险。",
+    "summary": "2022年2月，NFT收藏者 larrylawliet.eth 在社交平台称，Moshi Mochi 项目 Discord 被黑后，攻击者在官方频道发布假 mint 链接，其点击链接后发生 NFT 被盗，并向 OpenSea、LooksRare 等平台公开求助。该事件反映出 Web3 项目官方社区渠道被劫持后，假 mint 链接可诱导用户连接钱包或授权签名，进而造成 BAYC、MAYC 等高价值 NFT 资产被转移。",
     "category": "security_incident",
     "relatedRisks": [
       "R0216"
     ],
     "references": [
       {
-        "title": "半年暴涨1350倍,天价NFT头像被盗,1000多万元血本无归_腾讯新闻",
-        "link": "https://view.inews.qq.com/a/20220202A093RP00"
+        "title": "larrylawliet.eth 关于 Moshi Mochi Discord 被黑和假 mint 链接的说明",
+        "link": "https://x.com/iloveponzi/status/1488354391401054216"
+      },
+      {
+        "title": "Etherscan: larrylawliet.eth 地址页面",
+        "link": "https://etherscan.io/address/0x6d0267156f1c6CE44Caa4BF129B76009d3d41830"
       }
     ],
     "updated": "2026-06-18",
