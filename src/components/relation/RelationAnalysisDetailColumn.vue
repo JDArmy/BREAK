@@ -82,7 +82,7 @@ const { t } = useI18n();
 
 <template>
   <div v-if="selectedNetworkNode" class="node-explain-block">
-    <h3>{{ t("relationView.relationDetail") }}</h3>
+    <h3>{{ t("relationView.nodeDetail") }}</h3>
     <div class="node-insight-panel relation-analysis-detail-panel">
       <RelationNodeDetailContent
         :selected-network-node="selectedNetworkNode"
@@ -105,6 +105,7 @@ const { t } = useI18n();
         :show-root-relation-block="false"
         :show-coverage-block="false"
         :show-attack-path-block="false"
+        :hide-related-entity-actions="true"
         :selected-network-relations="selectedNetworkRelations"
         :rel-key="relKey"
         :get-node-type-title="getNodeTypeTitle"

@@ -7,6 +7,7 @@ import "@/components/relation/relationNodeDrawerInsights.css";
 
 const props = defineProps<{
   summary: NodeRelatedEntitySummary | null;
+  hideActions?: boolean;
 }>();
 
 const emit = defineEmits<{
@@ -60,7 +61,7 @@ const {
             {{ t("relationView.sourceFields") }}:
             {{ item.sourceFields.join(", ") }}
           </div>
-          <div class="node-related-entity-actions">
+          <div v-if="!hideActions" class="node-related-entity-actions">
             <button type="button" @click="emit('focus-node', item.id)">
               {{ t("relationView.focusNode") }}
             </button>

@@ -39,6 +39,7 @@ defineProps<{
   showRootRelationBlock?: boolean;
   showCoverageBlock?: boolean;
   showAttackPathBlock?: boolean;
+  hideRelatedEntityActions?: boolean;
   relKey: string;
   isPathNodeCurrentSelection: (nodeId: string) => boolean;
   isCurrentNodeRoot: boolean;
@@ -71,6 +72,7 @@ const emit = defineEmits<{
   />
   <RelationNodeRelatedEntityBlock
     :summary="selectedNodeRelatedEntitySummary"
+    :hide-actions="hideRelatedEntityActions"
     @focus-node="emit('focus-node', $event)"
     @open-node-as-root="emit('open-node-as-root', $event)"
     @open-node-detail="emit('open-node-detail', $event)"

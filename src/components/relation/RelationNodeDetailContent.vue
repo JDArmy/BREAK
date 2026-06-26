@@ -69,6 +69,7 @@ withDefaults(defineProps<{
   showRootRelationBlock?: boolean;
   showCoverageBlock?: boolean;
   showAttackPathBlock?: boolean;
+  hideRelatedEntityActions?: boolean;
 }>(), {
   showOpenAsRootAction: true,
   showRootRelationBlock: true,
@@ -135,6 +136,7 @@ const filterRelationsByDirection = (direction: "incoming" | "outgoing") => {
     :show-root-relation-block="showRootRelationBlock"
     :show-coverage-block="showCoverageBlock"
     :show-attack-path-block="showAttackPathBlock"
+    :hide-related-entity-actions="hideRelatedEntityActions"
     :rel-key="relKey"
     :is-path-node-current-selection="isPathNodeCurrentSelection"
     :is-current-node-root="isCurrentNodeRoot"

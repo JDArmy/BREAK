@@ -270,7 +270,7 @@ describe("RelationAnalysisDetailColumn", () => {
   it("渲染右侧详情并关闭抽屉专属块", async () => {
     const wrapper = mountDetailColumn();
 
-    expect(wrapper.text()).toContain("relationView.relationDetail");
+    expect(wrapper.text()).toContain("relationView.nodeDetail");
     expect(wrapper.text()).toContain("R0001 流程自动化");
     expect(wrapper.find(".detail-flags").text()).toBe("false false false false");
   });

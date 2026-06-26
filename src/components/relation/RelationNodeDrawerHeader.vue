@@ -63,13 +63,7 @@ const { t } = useI18n();
         {{ t("relationView.outgoing") }}: {{ selectedNetworkRelationCounts.outgoing }}
       </button>
     </div>
-    <div class="node-detail-actions">
-      <el-button size="small" @click="emit('open-detail-new-window')">
-        <span class="menu-action-with-icon">
-          <el-icon><TopRight /></el-icon>
-          <span>{{ t("viewDetail") }}</span>
-        </span>
-      </el-button>
+    <div v-if="showOpenAsRootAction" class="node-detail-actions">
       <el-button
         v-if="showOpenAsRootAction"
         size="small"
