@@ -608,7 +608,9 @@ export const createRelationViewAssembly = ({
       let changed = false;
       for (const [filterKey, queryKey] of ATTACK_PATH_FILTER_QUERY_MAP) {
         const val = filters[filterKey as keyof typeof filters];
-        if (val) {
+        // 筛选值与 relation-selector 当前选中实体相同时视为冗余，不写入 URL
+        const isRedundant = val && filterKey === relType.value && val === relKey.value;
+        if (val && !isRedundant) {
           if (val !== query[queryKey]) { query[queryKey] = val; changed = true; }
         } else {
           if (query[queryKey] !== undefined) { delete query[queryKey]; changed = true; }
