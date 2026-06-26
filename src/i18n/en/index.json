@@ -556,7 +556,12 @@
     "avoidance": "Avoidance",
     "attackTool": "Attack Tool",
     "threatActor": "Threat Actor",
-    "term": "Slang Term"
+    "term": "Slang Term",
+    "case": "Case"
+  },
+  "entityPopover": {
+    "viewDetail": "View Detail",
+    "notFound": "ID not found"
   },
   "relationLine": {
     "avoidanceMeans": "Avoidance",

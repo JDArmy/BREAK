@@ -1,12 +1,19 @@
 <script setup lang="ts">
+import { defineAsyncComponent } from "vue";
 import { RouterView } from "vue-router";
 import MenuList from "./components/MenuList.vue";
+
+// 异步加载：避免 useEntityResolver → useCases 等依赖拉入入口 chunk
+const EntityAutoLinker = defineAsyncComponent(
+  () => import("./components/entity/EntityAutoLinker.vue")
+);
 
 import iconGithub from "@/components/icons/iconGithub.vue";
 </script>
 
 <template>
   <div class="common-layout">
+    <EntityAutoLinker />
     <el-container>
       <el-header>
         <MenuList />

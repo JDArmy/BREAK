@@ -1,0 +1,31 @@
+/**
+ * 实体 Popover 全局样式。
+ * el-popover 通过 teleport 挂载到 body，scoped 样式无法覆盖，需全局注入。
+ * 在 main.ts 中 import。
+ */
+.entity-popover.el-popover {
+  --el-popover-padding: 12px;
+  border-radius: 8px !important;
+  box-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(0, 0, 0, 0.04) !important;
+  /* 确保浮层在所有抽屉（z-index: 4000）之上 */
+  z-index: 9999 !important;
+}
+
+/**
+ * 全局自动识别的实体 ID 行内样式。
+ * 由 EntityAutoLinker.vue 的 DOM 操作动态添加 class="entity-id-auto"。
+ */
+.entity-id-auto {
+  border-bottom: 1px dashed var(--el-color-primary);
+  cursor: pointer;
+  color: var(--el-color-primary);
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.entity-id-auto:hover {
+  border-bottom-style: solid;
+  color: var(--el-color-primary-light-3);
+}

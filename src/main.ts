@@ -5,6 +5,7 @@ import { i18n, initLocaleMessages } from "./i18n";
 
 import "element-plus/theme-chalk/dark/css-vars.css";
 import "./assets/main.css";
+import "./components/entity/entity.css";
 
 const app = createApp(App);
 
