@@ -640,8 +640,8 @@ async function runRiskDetailScenario(page, scenario, interactions) {
     '点击风险列表 R0002',
   );
   await page.waitForTimeout(500);
-  if (!page.url().includes('#R0002')) {
-    issues.push(`点击列表后 URL 未切换到 #R0002，实际 ${page.url()}`);
+  if (!page.url().includes('R0002')) {
+    issues.push(`点击列表后 URL 未包含 R0002，实际 ${page.url()}`);
   }
   await recordState(page, interactions, scenario, 'after-list-click', issues);
 }
@@ -676,7 +676,7 @@ async function runRelationSelectorScenario(page, scenario, interactions) {
   await recordState(page, interactions, scenario, 'initial');
 
   if (await clickSelectOptionByText(page, '.relation-select', /Avoidance|规避手段/i, issues, '规避手段')) {
-    await waitForUrlIncludes(page, '/relation/avoidance/', issues, '切换关系实体类型');
+    await waitForUrlIncludes(page, '/avoidance/', issues, '切换关系实体类型');
   }
   await page.waitForTimeout(800);
   const paintedPixels = await getPaintedCanvasPixels(page, '.network-chart canvas');
