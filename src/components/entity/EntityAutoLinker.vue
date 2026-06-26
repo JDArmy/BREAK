@@ -135,21 +135,22 @@ function extractEntityId(text: string): string | null {
 // ─── 路径 A：DOM 扫描逻辑 ────────────────────────────
 /**
  * 判断文本节点是否在"不应拆分包裹"的祖先内。
- * 交互元素内的 ID 由路径 B 的事件委托处理，无需拆分 DOM。
+ *
+ * 对 <a> / <button>：若祖先匹配路径 B 的 INTERACTIVE_SELECTOR，
+ * 则允许路径 A 进入扫描（处理内含多个 ID 的场景）。
+ * 否则跳过（普通导航链接 / 普通按钮由路径 B 统一处理）。
  */
 function isInsideSkipZone(node: Node): boolean {
   let parent = node.parentElement;
   while (parent) {
     const tag = parent.tagName;
-    // 交互元素：由路径 B 处理
-    if (
-      tag === "A" ||
-      tag === "BUTTON" ||
-      tag === "INPUT" ||
-      tag === "TEXTAREA" ||
-      tag === "SELECT"
-    ) {
+    // 表单元素：始终跳过
+    if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") {
       return true;
+    }
+    // <a> / <button>：若匹配路径 B 选择器则放行（多 ID 场景），否则跳过
+    if (tag === "A" || tag === "BUTTON") {
+      return !parent.closest(INTERACTIVE_SELECTOR);
     }
     // 代码块 / canvas 容器
     if (tag === "CODE" || tag === "PRE" || tag === "CANVAS") return true;
