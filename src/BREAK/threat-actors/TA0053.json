@@ -26,6 +26,12 @@
       "云资源滥用"
     ],
     "updated": "2026-06-17",
-    "relatedThreatActors": []
+    "relatedThreatActors": [
+      {
+        "key": "TA0063",
+        "relation": "co-involved",
+        "note": "共同使用 1 个攻击工具。"
+      }
+    ]
   }
 }

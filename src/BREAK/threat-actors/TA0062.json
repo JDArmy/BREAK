@@ -1,0 +1,83 @@
+{
+  "TA0062": {
+    "title": "勒索软件团伙",
+    "keywords": [
+      "勒索软件团伙",
+      "勒索软件",
+      "Ransomware",
+      "RaaS",
+      "勒索即服务",
+      "数据加密勒索",
+      "双重勒索",
+      "LockBit",
+      "BlackCat",
+      "Conti"
+    ],
+    "description": "以勒索即服务（RaaS）模式运营的有组织网络犯罪团伙。核心开发者负责编写加密恶意软件并维护暗网泄露站点，附属成员（Affiliate）负责入侵目标网络并部署勒索载荷。采用双重勒索策略：先窃取敏感数据再加密文件，受害者若不支付赎金则公开数据。代表性组织包括 LockBit、BlackCat/ALPHV、Cl0p、Play 等。2024-2026 年勒索攻击呈现供应链化、自动化和针对关基设施的趋势。",
+    "directCauseRisks": [
+      "R0078",
+      "R0067",
+      "R0209"
+    ],
+    "indirectSupportRisks": [
+      "R0083",
+      "R0032",
+      "R0034"
+    ],
+    "buildAttackTools": [
+      "AT0013",
+      "AT0064"
+    ],
+    "useAttackTools": [
+      "AT0054",
+      "AT0063",
+      "AT0064",
+      "AT0013",
+      "AT0068",
+      "AT0099"
+    ],
+    "relatedThreatActors": [
+      {
+        "key": "TA0063",
+        "relation": "co-involved",
+        "note": "共同直接造成 3 个风险，共同间接支持 2 个风险，共同建设 2 个攻击工具，共同使用 5 个攻击工具。"
+      },
+      {
+        "key": "TA0024",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同间接支持 1 个风险，共同建设 1 个攻击工具，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0018",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同建设 1 个攻击工具，共同使用 3 个攻击工具。"
+      },
+      {
+        "key": "TA0060",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同间接支持 1 个风险，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0017",
+        "relation": "co-involved",
+        "note": "共同间接支持 1 个风险，共同建设 1 个攻击工具，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0030",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同建设 1 个攻击工具，共同使用 2 个攻击工具。"
+      }
+    ],
+    "references": [
+      {
+        "title": "CISA StopRansomware Advisory",
+        "link": "https://www.cisa.gov/stopransomware"
+      },
+      {
+        "title": "MITRE ATT&CK: Ransomware Techniques",
+        "link": "https://attack.mitre.org/techniques/T1486/"
+      }
+    ],
+    "updated": "2026-06-26"
+  }
+}

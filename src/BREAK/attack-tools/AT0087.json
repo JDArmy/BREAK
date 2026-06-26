@@ -5,10 +5,7 @@
     "avoidances": [
       "A0199",
       "A0200",
-      "A0201",
-      "A0044",
-      "A0016",
-      "A0070"
+      "A0201"
     ],
     "directCauseRisks": [
       "R0226",
@@ -31,34 +28,34 @@
     "updated": "2026-06-17",
     "relatedAttackTools": [
       {
-        "key": "AT0010",
+        "key": "AT0098",
         "relation": "co-used",
-        "note": "共享 2 个规避手段。"
+        "note": "共同关联 1 个风险，共享 1 个规避手段，被 2 个相同行为者使用或建设。"
       },
       {
-        "key": "AT0039-001",
+        "key": "AT0013",
         "relation": "co-used",
-        "note": "共享 2 个规避手段。"
+        "note": "被 1 个相同行为者使用或建设。"
       },
       {
-        "key": "AT0039-002",
+        "key": "AT0054",
         "relation": "co-used",
-        "note": "共享 2 个规避手段。"
+        "note": "被 1 个相同行为者使用或建设。"
       },
       {
-        "key": "AT0040-001",
+        "key": "AT0063",
         "relation": "co-used",
-        "note": "共享 2 个规避手段。"
+        "note": "被 1 个相同行为者使用或建设。"
       },
       {
-        "key": "AT0042",
+        "key": "AT0064",
         "relation": "co-used",
-        "note": "共享 2 个规避手段。"
+        "note": "被 1 个相同行为者使用或建设。"
       },
       {
-        "key": "AT0060",
+        "key": "AT0088",
         "relation": "co-used",
-        "note": "共享 2 个规避手段。"
+        "note": "被 1 个相同行为者使用或建设。"
       }
     ]
   }

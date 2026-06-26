@@ -7,9 +7,9 @@ import businessScenes from "./business-scenes";
 const entityCounts = {
   avoidances: 300,
   subAvoidances: 78,
-  attackTools: 110,
+  attackTools: 112,
   subAttackTools: 13,
-  threatActors: 70,
+  threatActors: 73,
   subThreatActors: 9,
   terms: 600,
   cases: 1797,

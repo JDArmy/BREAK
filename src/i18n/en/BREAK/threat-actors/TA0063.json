@@ -1,0 +1,22 @@
+{
+  "TA0063": {
+    "title": "APT / Nation-State Actor",
+    "keywords": [
+      "APT",
+      "Nation-State Attack",
+      "Advanced Persistent Threat",
+      "State-Sponsored Hacker",
+      "Intelligence Agency",
+      "Cyber Warfare"
+    ],
+    "description": "State-sponsored advanced persistent threat organizations with substantial resources, time, and expertise. Their typical targets include critical infrastructure, government agencies, defense contractors, high-tech enterprises, and research institutions. Attack methods include zero-day exploitation, custom malware, supply chain compromise, long-term persistence, and lateral movement. Unlike common cybercrime, APT objectives focus on intelligence collection, intellectual property theft, or destructive operations rather than direct financial gain.",
+    "references": [
+      {
+        "title": "MITRE ATT&CK Groups"
+      },
+      {
+        "title": "CISA Known Exploited Vulnerabilities Catalog"
+      }
+    ]
+  }
+}

@@ -12,7 +12,8 @@
       "AT0087"
     ],
     "useAttackTools": [
-      "AT0087"
+      "AT0087",
+      "AT0098"
     ],
     "directCauseRisks": [
       "R0226",
@@ -28,6 +29,12 @@
       "供应链投毒"
     ],
     "updated": "2026-06-17",
-    "relatedThreatActors": []
+    "relatedThreatActors": [
+      {
+        "key": "TA0063",
+        "relation": "co-involved",
+        "note": "共同使用 2 个攻击工具。"
+      }
+    ]
   }
 }

@@ -1,0 +1,22 @@
+{
+  "AT0099": {
+    "title": "Container Escape & K8s Attack Toolkit",
+    "keywords": [
+      "Container Escape",
+      "Kubernetes Attack",
+      "K8s Penetration",
+      "Docker Escape",
+      "Pod Privilege Escalation",
+      "RBAC Abuse"
+    ],
+    "description": "Attack tools targeting containerized environments and Kubernetes clusters. Key capabilities include: container escape via kernel vulnerabilities or privileged configurations; K8s API abuse through misconfigured RBAC permissions or exposed API servers; lateral movement via ServiceAccount tokens and secret leakage; and persistence through malicious CronJobs, DaemonSets, or Admission Webhooks. Representative tools include CDK, PEIRATES, and kube-hunter.",
+    "references": [
+      {
+        "title": "MITRE ATT&CK: Container Administration Command (T1609)"
+      },
+      {
+        "title": "Kubernetes Security Best Practices - CISA"
+      }
+    ]
+  }
+}

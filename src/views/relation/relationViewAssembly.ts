@@ -16,6 +16,11 @@ import {
   ENTITY_ROUTE_BY_PERSPECTIVE,
   PERSPECTIVE_ROUTE_NAME,
   VIEW_TO_PERSPECTIVE,
+  serializeArray,
+  deserializeArray,
+  arrayEquals,
+  serializeLineTypes,
+  deserializeLineTypes,
 } from "@/views/relation/relationRouteQuery";
 import { useRelationGraphData } from "@/views/relation/useRelationGraphData";
 import { useRelationNodeActions } from "@/views/relation/useRelationNodeActions";
@@ -29,6 +34,8 @@ import {
 } from "@/views/relation/relationGlobalLines";
 import {
   RelationType,
+  networkLayoutOptions,
+  type NetworkLayoutMode,
   type createRelationTypeMapping,
   type GraphLink,
   type graphColors,
@@ -216,6 +223,8 @@ export const createRelationViewAssembly = ({
     graphData.filterLineType.value = perspectiveOption.lineTypes.filter(
       (lineType) => availableLineTypes.has(lineType),
     );
+    // 切视角重置为默认筛选，允许后续自动追加新线类型
+    graphData.suppressLineTypeAutoAdd.value = false;
 
     if (networkState.layout !== perspectiveOption.networkLayout) {
       handleNetworkLayoutCommand(perspectiveOption.networkLayout);
@@ -422,6 +431,156 @@ export const createRelationViewAssembly = ({
     },
   );
 
+  // 筛选/布局 ↔ URL query 双向同步（risk / attackPath / defenseCoverage 三视角）
+  const validLayoutValues = networkLayoutOptions.map((o) => o.value);
+
+  // State → URL：筛选/布局变化时写回 query（仅非默认值写入，默认值时清除对应 key）
+  watch(
+    [graphData.filterRelationType, graphData.filterSubNode, graphData.filterRelatedEntity, graphData.filterLineType, () => networkState.layout],
+    ([nodeTypes, subNode, relatedEntity, lineTypes, layout]) => {
+      if (isUpdatingFromRoute) return;
+      const perspective = getRelationPerspectiveFromRoute(route.name);
+      if (!perspective || perspective === "pathExplorer") return;
+      const defaults = getRelationAnalysisPerspectiveOption(perspective);
+      const query = { ...route.query };
+      let changed = false;
+
+      // nodeTypes
+      if (arrayEquals(nodeTypes as string[], defaults.relationTypes as string[])) {
+        if (query.nodeTypes !== undefined) { delete query.nodeTypes; changed = true; }
+      } else {
+        const serialized = serializeArray(nodeTypes as string[]);
+        if (serialized !== query.nodeTypes) { query.nodeTypes = serialized; changed = true; }
+      }
+
+      // subNode
+      const subNodeDefault = defaults.showSubNode;
+      if (subNode === subNodeDefault) {
+        if (query.subNode !== undefined) { delete query.subNode; changed = true; }
+      } else {
+        const val = subNode ? "1" : "0";
+        if (val !== query.subNode) { query.subNode = val; changed = true; }
+      }
+
+      // relatedEntity
+      const relatedEntityDefault = defaults.showRelatedEntity;
+      if (relatedEntity === relatedEntityDefault) {
+        if (query.relatedEntity !== undefined) { delete query.relatedEntity; changed = true; }
+      } else {
+        const val = relatedEntity ? "1" : "0";
+        if (val !== query.relatedEntity) { query.relatedEntity = val; changed = true; }
+      }
+
+      // lineTypes：比较时以 availableLineTypes 过滤后的默认值为基准
+      const availableLineTypes = new Set(
+        graphData.relationLegendItems.value.map((item) => item.key),
+      );
+      const effectiveDefaultLineTypes = defaults.lineTypes.filter(
+        (lt) => availableLineTypes.has(lt),
+      );
+      if (arrayEquals(lineTypes as string[], effectiveDefaultLineTypes)) {
+        if (query.lineTypes !== undefined) { delete query.lineTypes; changed = true; }
+      } else {
+        const serialized = serializeLineTypes(lineTypes as string[]);
+        if (serialized !== query.lineTypes) { query.lineTypes = serialized; changed = true; }
+      }
+
+      // layout
+      if (layout === defaults.networkLayout) {
+        if (query.layout !== undefined) { delete query.layout; changed = true; }
+      } else {
+        if (layout !== query.layout) { query.layout = layout; changed = true; }
+      }
+
+      if (changed) {
+        router.replace({
+          name: ENTITY_ROUTE_BY_PERSPECTIVE[perspective],
+          params: { entity: relType.value, id: relKey.value },
+          query: buildPerspectiveQuery(query, perspective),
+        });
+      }
+    },
+  );
+
+  // URL → State：从 URL query 恢复筛选/布局状态
+  watch(
+    () => [route.query.nodeTypes, route.query.subNode, route.query.relatedEntity, route.query.lineTypes, route.query.layout],
+    ([queryNodeTypes, querySubNode, queryRelatedEntity, queryLineTypes, queryLayout]) => {
+      const perspective = getRelationPerspectiveFromRoute(route.name);
+      if (!perspective || perspective === "pathExplorer") return;
+      isUpdatingFromRoute = true;
+      const defaults = getRelationAnalysisPerspectiveOption(perspective);
+      let needsFilter = false;
+
+      // nodeTypes
+      if (typeof queryNodeTypes === "string") {
+        const parsed = deserializeArray(queryNodeTypes);
+        if (parsed.length > 0 && !arrayEquals(parsed, graphData.filterRelationType.value as string[])) {
+          graphData.filterRelationType.value = parsed;
+          needsFilter = true;
+        }
+      } else if (!arrayEquals(graphData.filterRelationType.value as string[], defaults.relationTypes as string[])) {
+        graphData.filterRelationType.value = [...defaults.relationTypes];
+        needsFilter = true;
+      }
+
+      // subNode
+      if (typeof querySubNode === "string") {
+        const val = querySubNode === "1";
+        if (val !== graphData.filterSubNode.value) {
+          graphData.filterSubNode.value = val;
+          needsFilter = true;
+        }
+      } else if (graphData.filterSubNode.value !== defaults.showSubNode) {
+        graphData.filterSubNode.value = defaults.showSubNode;
+        needsFilter = true;
+      }
+
+      // relatedEntity
+      if (typeof queryRelatedEntity === "string") {
+        const val = queryRelatedEntity === "1";
+        if (val !== graphData.filterRelatedEntity.value) {
+          graphData.filterRelatedEntity.value = val;
+          needsFilter = true;
+        }
+      } else if (graphData.filterRelatedEntity.value !== defaults.showRelatedEntity) {
+        graphData.filterRelatedEntity.value = defaults.showRelatedEntity;
+        needsFilter = true;
+      }
+
+      // lineTypes
+      if (typeof queryLineTypes === "string") {
+        const parsed = deserializeLineTypes(queryLineTypes);
+        if (parsed.length > 0 && !arrayEquals(parsed, graphData.filterLineType.value as string[])) {
+          graphData.filterLineType.value = parsed;
+          needsFilter = true;
+        }
+        // URL 显式指定了 lineTypes，禁止图数据重建时自动追加
+        graphData.suppressLineTypeAutoAdd.value = true;
+      } else if (!arrayEquals(graphData.filterLineType.value as string[], defaults.lineTypes as string[])) {
+        graphData.filterLineType.value = [...defaults.lineTypes];
+        graphData.suppressLineTypeAutoAdd.value = false;
+        needsFilter = true;
+      }
+
+      // layout
+      if (typeof queryLayout === "string" && validLayoutValues.includes(queryLayout as NetworkLayoutMode)) {
+        if (queryLayout !== networkState.layout) {
+          handleNetworkLayoutCommand(queryLayout as NetworkLayoutMode);
+        }
+      } else if (networkState.layout !== defaults.networkLayout) {
+        handleNetworkLayoutCommand(defaults.networkLayout);
+      }
+
+      if (needsFilter) {
+        nodeActions.doFilter();
+      }
+
+      nextTick(() => { isUpdatingFromRoute = false; });
+    },
+    { immediate: true },
+  );
+
   const networkController = createNetworkChartController({
     t,
     isDark,
@@ -570,7 +729,7 @@ export const createRelationViewAssembly = ({
     });
   });
 
-  // el-tabs 切视角：push 到目标视角路由，保留当前选中实体（若有），query 按白名单隔离
+  // el-tabs 切视角：push 到目标视角路由，丢弃当前视角的筛选参数（各视角参数不共享）
   const switchPerspective = (view: RelationViewMode) => {
     const perspective: RelationPerspectiveKey = VIEW_TO_PERSPECTIVE[view];
     const hasSelection = Boolean(relKey.value);
@@ -581,7 +740,7 @@ export const createRelationViewAssembly = ({
       params: hasSelection
         ? { entity: relType.value, id: relKey.value }
         : {},
-      query: buildPerspectiveQuery(route.query, perspective),
+      query: {},  // 切视角时丢弃所有筛选参数，使用新视角默认值
     });
   };
 

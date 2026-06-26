@@ -7,7 +7,9 @@
     "limitation": "量子计算技术尚未成熟",
     "avoidances": [
       "A0091",
-      "A0077"
+      "A0077",
+      "A0055",
+      "A0016"
     ],
     "references": [
       {

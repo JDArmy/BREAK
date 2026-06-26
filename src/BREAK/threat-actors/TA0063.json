@@ -1,0 +1,85 @@
+{
+  "TA0063": {
+    "title": "APT/国家级攻击者",
+    "keywords": [
+      "APT/国家级攻击者",
+      "APT",
+      "国家级攻击",
+      "高级持续性威胁",
+      "Advanced Persistent Threat",
+      "国家黑客",
+      "情报机构",
+      "网络战"
+    ],
+    "description": "受国家或政府支持的高级持续性威胁组织，具备充足的资源、时间和专业能力。其攻击目标通常为关键基础设施、政府机构、国防承包商、高科技企业和研究机构。攻击手法包括零日漏洞利用、定制化恶意软件、供应链攻击、长期潜伏和横向移动。与普通网络犯罪不同，APT 的主要目的是情报收集、知识产权窃取或破坏性操作，而非直接经济利益。代表性活动包括 SolarWinds 供应链攻击、Microsoft Exchange 漏洞利用等。",
+    "directCauseRisks": [
+      "R0078",
+      "R0067",
+      "R0034",
+      "R0209"
+    ],
+    "indirectSupportRisks": [
+      "R0032",
+      "R0083",
+      "R0036"
+    ],
+    "buildAttackTools": [
+      "AT0054",
+      "AT0013",
+      "AT0064"
+    ],
+    "useAttackTools": [
+      "AT0054",
+      "AT0013",
+      "AT0064",
+      "AT0063",
+      "AT0087",
+      "AT0088",
+      "AT0098",
+      "AT0099"
+    ],
+    "relatedThreatActors": [
+      {
+        "key": "TA0062",
+        "relation": "co-involved",
+        "note": "共同直接造成 3 个风险，共同间接支持 2 个风险，共同建设 2 个攻击工具，共同使用 5 个攻击工具。"
+      },
+      {
+        "key": "TA0024",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同间接支持 1 个风险，共同建设 1 个攻击工具，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0018",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同建设 1 个攻击工具，共同使用 3 个攻击工具。"
+      },
+      {
+        "key": "TA0060",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同间接支持 1 个风险，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0030",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同建设 1 个攻击工具，共同使用 2 个攻击工具。"
+      },
+      {
+        "key": "TA0064",
+        "relation": "co-involved",
+        "note": "共同直接造成 1 个风险，共同间接支持 2 个风险。"
+      }
+    ],
+    "references": [
+      {
+        "title": "MITRE ATT&CK Groups",
+        "link": "https://attack.mitre.org/groups/"
+      },
+      {
+        "title": "CISA Known Exploited Vulnerabilities Catalog",
+        "link": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      }
+    ],
+    "updated": "2026-06-26"
+  }
+}

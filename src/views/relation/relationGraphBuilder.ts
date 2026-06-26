@@ -61,6 +61,8 @@ export const createRelationGraphBuilder = ({
   const filterRelatedEntity = ref(true);
   const totalLineType = ref([] as string[]);
   const filterLineType = ref(totalLineType.value);
+  // 当 URL 指定了 lineTypes 筛选时，禁止 getLineType 自动追加新线类型到 filterLineType
+  const suppressLineTypeAutoAdd = ref(false);
 
   const getLineType = () => {
     totalLineType.value.splice(0, totalLineType.value.length);
@@ -70,11 +72,15 @@ export const createRelationGraphBuilder = ({
         totalLineType.value.push(lineKey);
       }
     });
-    totalLineType.value.forEach((lineType) => {
-      if (!filterLineType.value.includes(lineType)) {
-        filterLineType.value.push(lineType);
-      }
-    });
+    // 当 suppressLineTypeAutoAdd 为 true 时，不自动追加线类型到 filterLineType
+    // （用户通过 URL 或手动筛选后，新出现的线类型不应破坏已有筛选）
+    if (!suppressLineTypeAutoAdd.value) {
+      totalLineType.value.forEach((lineType) => {
+        if (!filterLineType.value.includes(lineType)) {
+          filterLineType.value.push(lineType);
+        }
+      });
+    }
   };
 
   const uniqLines = () => {
@@ -196,6 +202,7 @@ export const createRelationGraphBuilder = ({
     filterRelatedEntity,
     filterRelationType,
     filterSubNode,
+    suppressLineTypeAutoAdd,
     getLineType,
     genNetworkGraphData,
     rebuildGraphData,

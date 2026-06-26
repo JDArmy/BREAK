@@ -8,9 +8,7 @@
       "A0115",
       "A0182",
       "A0078",
-      "A0016",
-      "A0044",
-      "A0085"
+      "A0016"
     ],
     "directCauseRisks": [
       "R0165",
@@ -28,7 +26,7 @@
       },
       {
         "title": "CISA Securing Internet of Things Devices",
-        "link": "https://www.cisa.gov/news-events/news/securing-internet-things-iot"
+        "link": "https://www.cisa.gov/resources-tools/resources/securing-internet-things-iot-devices"
       },
       {
         "title": "ENISA Baseline Security Recommendations for IoT",
@@ -45,35 +43,35 @@
       "DDoS僵尸网络",
       "IoT数据篡改"
     ],
-    "updated": "2026-06-23",
+    "updated": "2026-06-16",
     "relatedAttackTools": [
       {
         "key": "AT0081",
         "relation": "co-used",
-        "note": "共同关联 3 个风险，共享 3 个规避手段，被 1 个相同行为者使用或建设。"
+        "note": "共同关联 3 个风险，共享 1 个规避手段，被 1 个相同行为者使用或建设。"
       },
       {
         "key": "AT0083",
         "relation": "co-used",
-        "note": "共同关联 2 个风险，共享 3 个规避手段。"
+        "note": "共同关联 2 个风险，共享 1 个规避手段。"
       },
       {
         "key": "AT0063",
         "relation": "co-used",
-        "note": "共享 3 个规避手段。"
+        "note": "共享 2 个规避手段。"
       },
       {
         "key": "AT0071",
         "relation": "co-used",
-        "note": "共享 3 个规避手段。"
+        "note": "共享 2 个规避手段。"
       },
       {
-        "key": "AT0054",
+        "key": "AT0075",
         "relation": "co-used",
-        "note": "共享 2 个规避手段，被 1 个相同行为者使用或建设。"
+        "note": "共享 2 个规避手段。"
       },
       {
-        "key": "AT0010",
+        "key": "AT0099",
         "relation": "co-used",
         "note": "共享 2 个规避手段。"
       }

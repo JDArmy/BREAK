@@ -7,9 +7,9 @@ import type { RelationPerspectiveKey } from "@/views/relation/relationAnalysisPe
  * （例如 pathExplorer 的 endType/endKey/maxDepth/maxPaths 不应残留在其它视角 URL）。
  */
 const RELATION_PERSPECTIVE_QUERY_KEYS: Record<RelationPerspectiveKey, string[]> = {
-  risk: [],
-  attackPath: [],
-  defenseCoverage: [],
+  risk: ["nodeTypes", "subNode", "relatedEntity", "lineTypes", "layout"],
+  attackPath: ["nodeTypes", "subNode", "relatedEntity", "lineTypes", "layout"],
+  defenseCoverage: ["nodeTypes", "subNode", "relatedEntity", "lineTypes", "layout"],
   pathExplorer: ["endType", "endKey", "maxDepth", "maxPaths"],
 };
 
@@ -57,3 +57,31 @@ export const VIEW_TO_PERSPECTIVE: Record<
   analysis: "defenseCoverage",
   pathExplorer: "pathExplorer",
 };
+
+/** 将数组序列化为逗号分隔字符串 */
+export const serializeArray = (arr: string[]): string => arr.join(",");
+
+/** 将逗号分隔字符串反序列化为数组（过滤空串） */
+export const deserializeArray = (str: string): string[] =>
+  str ? str.split(",").filter(Boolean) : [];
+
+/** 比较两个数组是否内容相同（忽略顺序） */
+export const arrayEquals = (a: string[], b: string[]): boolean => {
+  if (a.length !== b.length) return false;
+  const sortedA = [...a].sort();
+  const sortedB = [...b].sort();
+  return sortedA.every((v, i) => v === sortedB[i]);
+};
+
+const LINE_TYPE_PREFIX = "relationLine.";
+
+/** 将 lineType 数组序列化为 URL 值（剥离 "relationLine." 前缀） */
+export const serializeLineTypes = (arr: string[]): string =>
+  arr.map((s) => (s.startsWith(LINE_TYPE_PREFIX) ? s.slice(LINE_TYPE_PREFIX.length) : s)).join(",");
+
+/** 将 URL 值反序列化为 lineType 数组（补回 "relationLine." 前缀） */
+export const deserializeLineTypes = (str: string): string[] =>
+  str
+    ? str.split(",").filter(Boolean).map((s) => (s.startsWith(LINE_TYPE_PREFIX) ? s : LINE_TYPE_PREFIX + s))
+    : [];
+

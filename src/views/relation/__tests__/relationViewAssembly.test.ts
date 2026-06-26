@@ -80,16 +80,18 @@ const relationMapping = {
   term: { color: "#f59e0b" },
 };
 
-const createState = () => ({
-  activeAnalysisPerspective: ref("risk"),
-  activeView: ref("network"),
-  handleNetworkLayoutCommand: vi.fn(),
-  networkLayoutTooltip: computed(() => "布局"),
-  networkState: { zoom: 1, layout: "horizontal" },
-  refreshNetworkChart: vi.fn(),
-  relKey: ref("R0001"),
-  relType: ref(RelationType.risk),
-  sankeyBottom: computed(() => 24),
+const createState = () => {
+  const networkState = reactive({ zoom: 1, layout: "horizontal" as string });
+  return {
+    activeAnalysisPerspective: ref("risk"),
+    activeView: ref("network"),
+    handleNetworkLayoutCommand: vi.fn((cmd: string) => { networkState.layout = cmd; }),
+    networkLayoutTooltip: computed(() => "布局"),
+    networkState,
+    refreshNetworkChart: vi.fn(),
+    relKey: ref("R0001"),
+    relType: ref(RelationType.risk),
+    sankeyBottom: computed(() => 24),
   sankeyChartMinWidth: computed(() => 0),
   sankeyLabelFontSize: computed(() => 13),
   sankeyLabelLineHeight: computed(() => 17),
@@ -110,7 +112,8 @@ const createState = () => ({
   pathExplorerEndKey: ref(""),
   pathExplorerMaxDepth: ref(4),
   pathExplorerMaxPaths: ref(10),
-});
+  };
+};
 
 const createGraphData = () => ({
   addRootNode: vi.fn(),
@@ -128,6 +131,7 @@ const createGraphData = () => ({
   filterRelatedEntity: ref("all"),
   filterRelationType: ref("all"),
   filterSubNode: ref("all"),
+  suppressLineTypeAutoAdd: ref(false),
   findNodeById: vi.fn(),
   formatEvidenceLevel: vi.fn(),
   genNetworkGraphData: vi.fn(),

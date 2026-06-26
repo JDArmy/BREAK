@@ -1,0 +1,24 @@
+{
+  "TA0062": {
+    "title": "Ransomware Gang",
+    "keywords": [
+      "Ransomware",
+      "RaaS",
+      "Ransomware-as-a-Service",
+      "Data Encryption Extortion",
+      "Double Extortion",
+      "LockBit",
+      "BlackCat",
+      "Conti"
+    ],
+    "description": "Organized cybercrime groups operating under the Ransomware-as-a-Service (RaaS) model. Core developers create encryption malware and maintain dark web leak sites, while affiliates breach target networks and deploy ransomware payloads. They employ double extortion tactics: exfiltrating sensitive data before encrypting files, threatening to publish data if ransom is not paid. Notable groups include LockBit, BlackCat/ALPHV, Cl0p, and Play. From 2024-2026, ransomware attacks have trended toward supply chain targeting, automation, and critical infrastructure focus.",
+    "references": [
+      {
+        "title": "CISA StopRansomware Advisory"
+      },
+      {
+        "title": "MITRE ATT&CK: Ransomware Techniques"
+      }
+    ]
+  }
+}
