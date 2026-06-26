@@ -248,6 +248,7 @@ const primaryDomainSuffixes = [
   'vcredit.com',
   'vicone.com',
   'vulntech.com',
+  'tfri.tencent.com',
 ];
 
 const secondaryDomainSuffixes = [
@@ -304,6 +305,7 @@ const primaryReferenceLinks = new Set([
   'https://m.thepaper.cn/newsdetail_forward_6016636', // 汾阳市市场监管局政务通报
   'https://m.thepaper.cn/newsdetail_forward_31179929', // 敦化市人民法院官方澎湃号
   'https://m.thepaper.cn/newsdetail_forward_33183066', // 夏都西宁官方澎湃号，来源青海省公安厅
+  'https://www.thepaper.cn/newsdetail_forward_28991401', // 思明法院官方澎湃号，网络赌博代理返点案
   'https://news.ijjnews.com/system/2023/08/15/030131845.shtml', // 晋江新闻网法院通讯员稿，丰泽法院“呼死你”软件产业链案
   'https://www.hshfy.sh.cn/shfy/web/xxnr.jsp?pa=aaWQ9MTAyMDMxOTYyNCZ4aD0xJmxtZG09bG03NDYPdcssz&zd=xwzx', // 上海高院官网，恶意软件霸屏广告案
   'https://www.sznews.com/news/content/2021-08/28/content_24522078.htm', // 深圳公安发布托管页，福田警方打击涉诈手机黑卡产业链
@@ -400,6 +402,7 @@ const primaryReferenceLinks = new Set([
   'http://putian.pafj.net/caw/f/10/view-225-766722.html', // 莆田长安网检察院栏目，中共莆田市委政法委员会主办
   'https://www.msxf.com/news/xwxq/1326', // 马上消费金融官网，反催收团伙协查公告
   'https://news.qq.com/rain/a/20260402a067vo00', // 腾讯新闻承载《三角洲行动》官方账号安全公告
+  'https://view.inews.qq.com/a/20240926a05rcb00', // 警民直通车上海官方托管页，国际通用礼品卡非法汇兑案
   'https://x.com/alvierid/status/1999403353466421320', // 安全研究人员原始披露
   'https://x.com/iloveponzi/status/1488354391401054216', // larrylawliet.eth 本人说明 Moshi Mochi Discord 被黑和假 mint 链接
   'https://etherscan.io/address/0x6d0267156f1c6CE44Caa4BF129B76009d3d41830', // larrylawliet.eth 链上地址页面
