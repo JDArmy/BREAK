@@ -2,7 +2,7 @@ import { createApp } from "vue";
 import { ElMessage } from "element-plus";
 import App from "./App.vue";
 import router from "./router";
-import { i18n, initLocaleMessages } from "./i18n";
+import { i18n, initLocaleMessages, initialLocale } from "./i18n";
 
 import "element-plus/theme-chalk/dark/css-vars.css";
 import "./assets/main.css";
@@ -19,6 +19,7 @@ app.config.errorHandler = (err, instance, info) => {
 app.use(i18n);
 app.use(router);
 
+const isEnglishLocale = initialLocale === "en";
 const shouldLoadInitialLocaleBeforeMount =
   typeof window !== "undefined" && window.innerWidth >= 768;
 const MOBILE_IDLE_PRELOAD_DELAY_MS = 15000;
@@ -27,14 +28,27 @@ const DATA_LOAD_FAIL_MSG = navigator.language?.startsWith("en")
   ? "Data failed to load. Please refresh the page."
   : "数据加载失败，请刷新页面";
 
-if (shouldLoadInitialLocaleBeforeMount) {
-  initLocaleMessages().catch((error) => {
-    console.error("Failed to load initial locale messages:", error);
-    ElMessage({ message: DATA_LOAD_FAIL_MSG, type: "error", plain: true, duration: 5000, grouping: true });
-  });
-}
+if (isEnglishLocale) {
+  // 英文 locale 必须在 mount 前加载完 BREAK 数据，否则首屏显示中文
+  initLocaleMessages()
+    .catch((error) => {
+      console.error("Failed to load EN locale messages:", error);
+      ElMessage({ message: DATA_LOAD_FAIL_MSG, type: "error", plain: true, duration: 5000, grouping: true });
+    })
+    .finally(() => {
+      app.mount("#app");
+    });
+} else {
+  // 中文 locale：直接 mount，保持现有行为
+  if (shouldLoadInitialLocaleBeforeMount) {
+    initLocaleMessages().catch((error) => {
+      console.error("Failed to load initial locale messages:", error);
+      ElMessage({ message: DATA_LOAD_FAIL_MSG, type: "error", plain: true, duration: 5000, grouping: true });
+    });
+  }
 
-app.mount("#app");
+  app.mount("#app");
+}
 
 const getConnection = () => {
   const navigatorWithConnection = navigator as Navigator & {

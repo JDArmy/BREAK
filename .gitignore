@@ -24,6 +24,9 @@ public/data/break-stix-en.json
 public/data/break-ld-zh.jsonld
 public/data/break-ld-en.jsonld
 
+# 构建时预合并的英文完整数据（generate-en-full.mjs 生成），不纳入版本库
+src/i18n/en/.generated/
+
 /cypress/videos/
 /cypress/screenshots/
 

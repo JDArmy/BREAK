@@ -2,7 +2,6 @@ import { createI18n } from "vue-i18n";
 import { ElMessage } from "element-plus";
 import en from "./en/index.json";
 import cn from "./zh-CN/index.json";
-import { mergeWithStructure } from "@/utils/mergeWithStructure.mjs";
 
 const languages = {
   en: "English",
@@ -26,6 +25,7 @@ const getInitialLocale = (): Locale => {
 };
 
 const initialLocale = getInitialLocale();
+export { initialLocale };
 
 const messages = {
   en,
@@ -97,15 +97,13 @@ const ensureEnLocaleMessages = async () => {
   if (hasBreakMessages("en")) return;
 
   if (!enBreakMessagePromise) {
+    // 直接 import 构建时预合并的完整英文数据，无需加载中文 BREAK
     // 失败时清空缓存并 rethrow，避免把 rejected Promise 永久缓存导致英文模式瘫痪
-    enBreakMessagePromise = Promise.all([
-      loadCnBreakMessages(),
-      import("./en/BREAK"),
-    ])
-      .then(([cnBREAK, { default: enBREAK }]) => {
+    enBreakMessagePromise = import("./en/BREAK-full")
+      .then(({ default: enBREAK }) => {
         i18n.global.setLocaleMessage("en", {
           ...en,
-          BREAK: mergeWithStructure(cnBREAK, enBREAK) as BreakMessages,
+          BREAK: enBREAK as unknown as BreakMessages,
         });
       })
       .catch((err) => {
@@ -139,7 +137,6 @@ export {
   i18n,
   initLocaleMessages,
   languages,
-  mergeWithStructure,
   setLocale,
   LOCALE_STORAGE_KEY,
 };

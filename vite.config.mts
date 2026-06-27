@@ -24,6 +24,16 @@ const codeSplittingGroups = [
   { name: "BREAK-Cases", test: toChunkTest("/src/BREAK/cases"), maxSize: 300 * 1024 },
   { name: "BREAK-BusinessScenes", test: toChunkTest("/src/BREAK/business-scenes") },
   { name: "BREAK", test: toChunkTest("/src/BREAK") },
+  // 构建时预合并的完整英文数据（src/i18n/en/.generated/）
+  { name: "en-full-Risks", test: toChunkTest("/src/i18n/en/.generated/risks") },
+  { name: "en-full-Avoidances", test: toChunkTest("/src/i18n/en/.generated/avoidances") },
+  { name: "en-full-AttackTools", test: toChunkTest("/src/i18n/en/.generated/attack-tools") },
+  { name: "en-full-ThreatActors", test: toChunkTest("/src/i18n/en/.generated/threat-actors") },
+  { name: "en-full-Terms", test: toChunkTest("/src/i18n/en/.generated/terms"), maxSize: 300 * 1024 },
+  { name: "en-full-Cases", test: toChunkTest("/src/i18n/en/.generated/cases"), maxSize: 300 * 1024 },
+  { name: "en-full-BusinessScenes", test: toChunkTest("/src/i18n/en/.generated/business-scenes") },
+  { name: "en-full-BREAK", test: toChunkTest("/src/i18n/en/.generated") },
+  // 英文翻译源文件（改造后运行时不再直接 import，保留用于其他引用）
   { name: "i18n-en-Risks", test: toChunkTest("/src/i18n/en/BREAK/risks") },
   { name: "i18n-en-Avoidances", test: toChunkTest("/src/i18n/en/BREAK/avoidances") },
   { name: "i18n-en-AttackTools", test: toChunkTest("/src/i18n/en/BREAK/attack-tools") },

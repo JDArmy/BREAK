@@ -23,6 +23,7 @@ function isDataChunk(asset) {
     asset.type === 'js' &&
     (asset.file.startsWith('BREAK-') ||
       asset.file.startsWith('i18n-en-') ||
+      asset.file.startsWith('en-full-') ||
       asset.file.startsWith('useCases-'))
   );
 }

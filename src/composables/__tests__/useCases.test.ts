@@ -26,7 +26,7 @@ describe("useCases", () => {
       loadCases: vi.fn(async () => ({})),
     }));
     vi.doMock("@/i18n", () => ({
-      mergeWithStructure: vi.fn((source) => source),
+      i18n: { global: { t: vi.fn((key: string) => key) } },
     }));
 
     const { useCases } = await import("@/composables/useCases");
@@ -59,7 +59,7 @@ describe("useCases", () => {
       loadCases: vi.fn(async () => loadedCases),
     }));
     vi.doMock("@/i18n", () => ({
-      mergeWithStructure: vi.fn((source) => source),
+      i18n: { global: { t: vi.fn((key: string) => key) } },
     }));
 
     const { useCases } = await import("@/composables/useCases");
@@ -100,7 +100,7 @@ describe("useCases", () => {
       loadCases,
     }));
     vi.doMock("@/i18n", () => ({
-      mergeWithStructure: vi.fn((source) => source),
+      i18n: { global: { t: vi.fn((key: string) => key) } },
     }));
 
     const { useCases } = await import("@/composables/useCases");
@@ -141,7 +141,7 @@ describe("useCases", () => {
       loadCases,
     }));
     vi.doMock("@/i18n", () => ({
-      mergeWithStructure: vi.fn((source) => source),
+      i18n: { global: { t: vi.fn((key: string) => key) } },
     }));
 
     const { useCases } = await import("@/composables/useCases");
@@ -168,7 +168,7 @@ describe("useCases", () => {
       loadCases,
     }));
     vi.doMock("@/i18n", () => ({
-      mergeWithStructure: vi.fn((source) => source),
+      i18n: { global: { t: vi.fn((key: string) => key) } },
     }));
 
     const { useCases } = await import("@/composables/useCases");
@@ -181,35 +181,19 @@ describe("useCases", () => {
     expect(loadCases).not.toHaveBeenCalled();
   });
 
-  it("英文 locale 首次 ensureCases 后合并英文案例翻译", async () => {
+  it("英文 locale 首次 ensureCases 加载预合并英文数据（不依赖中文）", async () => {
     const vue = await vi.importActual<typeof import("vue")>("vue");
     const locale = vue.ref("en");
-    const loadedCases = {
-      C0001: {
-        title: "中文案例",
-        keywords: ["中文"],
-        summary: "中文摘要",
-        category: "news_report",
-        relatedRisks: ["R0001"],
-        references: [{ title: "中文来源", link: "https://example.com" }],
-      },
-    };
-    const mergedCases = {
-      C0001: {
-        ...loadedCases.C0001,
-        title: "English Case",
-      },
-    };
-    const mergeWithStructure = vi.fn(() => mergedCases);
+    const loadCases = vi.fn(async () => ({}));
 
     vi.doMock("vue-i18n", () => ({
       useI18n: () => ({ locale }),
     }));
     vi.doMock("@/BREAK/cases", () => ({
-      loadCases: vi.fn(async () => loadedCases),
+      loadCases,
     }));
     vi.doMock("@/i18n", () => ({
-      mergeWithStructure,
+      i18n: { global: { t: vi.fn((key: string) => key) } },
     }));
 
     const { useCases } = await import("@/composables/useCases");
@@ -218,15 +202,10 @@ describe("useCases", () => {
     await ensureCases();
 
     expect(loaded.value).toBe(true);
-    expect(mergeWithStructure).toHaveBeenCalledWith(
-      loadedCases,
-      expect.objectContaining({
-        C0001: expect.objectContaining({
-          title: expect.any(String),
-        }),
-      }),
-    );
-    expect(cases.value).toEqual(mergedCases);
+    // 英文 locale 首次加载不应调用 loadCases（不需要中文数据作基底）
+    expect(loadCases).not.toHaveBeenCalled();
+    // cases 应已从 .generated 预合并文件加载（非空）
+    expect(Object.keys(cases.value).length).toBeGreaterThan(0);
   });
 
   it("案例加载后切换 locale 会重新同步中英文案例数据", async () => {
@@ -243,17 +222,10 @@ describe("useCases", () => {
         references: [{ title: "中文来源", link: "https://example.com" }],
       },
     };
-    const mergedCases = {
-      C0001: {
-        ...loadedCases.C0001,
-        title: "English Case",
-      },
-    };
-    const mergeWithStructure = vi.fn(() => mergedCases);
 
     vi.doMock("vue", () => ({
       ...vue,
-      watch: vi.fn((_source, callback) => {
+      watch: vi.fn((_source: unknown, callback: unknown) => {
         localeWatcher = callback as (newLocale: string) => Promise<void>;
       }),
     }));
@@ -264,7 +236,7 @@ describe("useCases", () => {
       loadCases: vi.fn(async () => loadedCases),
     }));
     vi.doMock("@/i18n", () => ({
-      mergeWithStructure,
+      i18n: { global: { t: vi.fn((key: string) => key) } },
     }));
 
     const { useCases } = await import("@/composables/useCases");
@@ -273,12 +245,12 @@ describe("useCases", () => {
     await ensureCases();
     expect(cases.value).toEqual(loadedCases);
 
+    // 切换到英文：加载预合并英文数据
     await localeWatcher("en");
+    expect(Object.keys(cases.value).length).toBeGreaterThan(0);
 
-    expect(cases.value).toEqual(mergedCases);
-
+    // 切换回中文：加载中文数据
     await localeWatcher("zh-CN");
-
     expect(cases.value).toEqual(loadedCases);
   });
 });

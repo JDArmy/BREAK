@@ -1,5 +1,17 @@
 # Change log
 
+## 2.30.0
+
+英文 i18n 构建时预合并，修复英文首屏中文残留：
+
+- 新增 `generate-en-full.mjs` 预合并脚本：构建前读取中英文源文件，用 `mergeWithStructure` 逐文件合并，输出到 `src/i18n/en/.generated/` 目录
+- 新增 `BREAK-full.ts` barrel：使用 `import.meta.glob` eager 加载预合并的完整英文数据
+- `ensureEnLocaleMessages` 改为直接 import 预合并数据，英文 locale 运行时不再加载中文 BREAK 数据
+- `useCases.ts` 英文 cases 改为从 `.generated/cases/` 懒加载预合并数据，不再依赖中文 cases 作基底
+- `main.ts` 英文 locale 时 await 加载完成后再 mount，消除首屏中文残留
+- 逐文件输出结构使 rolldown `maxSize` 自然拆分，所有 chunk 在 900KB 预算内
+- 移除运行时 `mergeWithStructure` 依赖，英文加载链路从"中文+英文→客户端合并"简化为"预合并英文→直接注入"
+
 ## 2.29.7
 
 Entity Registry 硬编码清理：

@@ -3,18 +3,14 @@ import { ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
 import { ElMessage } from "element-plus";
 import { loadCases, type Cases } from "@/BREAK/cases";
-import { i18n, mergeWithStructure } from "@/i18n";
+import { i18n } from "@/i18n";
 
-// 案例数据全局单例：懒加载，所有使用案例的地方共享同一份缓存。
-// 首页不加载 cases；访问 /cases、搜索、相关案例反查时触发 loadCases。
-// 中文：src/BREAK/cases 原始数据；英文：src/i18n/en/BREAK/cases 翻译合并。
+// 英文翻译：直接 import 构建时预合并的完整英文 cases 数据
+// 中文：src/BREAK/cases 原始数据；英文：src/i18n/en/.generated/cases.json 预合并数据。
 const cases = ref<Cases>({});
 const loaded = ref(false);
 let cnLoadingPromise: Promise<Cases> | null = null;
 let localeWatchRegistered = false;
-
-// 英文翻译懒加载（非 eager glob，仅英文模式且 cases 已加载时合并）
-const enCaseFiles = import.meta.glob("../i18n/en/BREAK/cases/C*.json");
 
 function loadCnCases(): Promise<Cases> {
   if (cnLoadingPromise) return cnLoadingPromise;
@@ -26,25 +22,27 @@ function loadCnCases(): Promise<Cases> {
   return cnLoadingPromise;
 }
 
+// 英文完整 cases 懒加载（非 eager glob，从构建时预合并的 .generated 目录加载）
+const enFullCaseFiles = import.meta.glob("../i18n/en/.generated/cases/C*.json");
+
+// 英文 cases 直接加载构建时预合并的完整数据，无需中文 cases 作基底
+
 async function applyEnTranslations() {
-  const cn = await loadCnCases();
-  // 逐文件加载英文翻译，单个文件失败不影响整体（降级为中文）
   const entries = await Promise.all(
-    Object.values(enCaseFiles).map((loader) =>
+    Object.values(enFullCaseFiles).map((loader) =>
       loader().catch((err) => {
-        console.warn("[useCases] 加载英文案例翻译文件失败，该文件降级为中文:", err);
+        console.warn("[useCases] 加载英文案例数据文件失败:", err);
         return null;
       })
     )
   );
-  const enCases: Record<string, unknown> = {};
+  const enCases: Cases = {};
   for (const mod of entries) {
     if (!mod) continue;
     const data = (mod as { default: Record<string, unknown> }).default;
     Object.assign(enCases, data);
   }
-  const merged = mergeWithStructure(cn, enCases) as Cases;
-  cases.value = merged;
+  cases.value = enCases;
 }
 
 async function syncCasesForLocale(newLocale: string) {
@@ -77,9 +75,13 @@ export function useCases() {
 
   const ensureCases = async (): Promise<void> => {
     if (!loaded.value) {
-      cases.value = await loadCnCases();
+      if (locale.value === "en") {
+        // 英文 locale 直接加载预合并数据，无需先加载中文
+        await applyEnTranslations();
+      } else {
+        cases.value = await loadCnCases();
+      }
       loaded.value = true;
-      if (locale.value === "en") await applyEnTranslations();
     }
   };
 
