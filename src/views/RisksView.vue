@@ -40,6 +40,8 @@ const riskItems = computed(() =>
       id: rKey,
       title,
       subtitle: definition.slice(0, 56),
+      badge: complexity,
+      badgeType: `risk-${BREAK.risks[rKey].complexity}`,
       searchText: [title, ...keywords, definition, description, complexity, influence]
         .filter(Boolean)
         .join(" "),
@@ -53,6 +55,13 @@ watch(
     if (key && typeof key === "string" && BREAK.risks[key]) selectedRiskKey.value = key;
   }
 );
+
+// 筛选变化时，若当前选中项不在过滤结果中，自动选中第一个
+watch(selectedComplexity, () => {
+  if (selectedComplexity.value && !riskItems.value.some((item) => item.id === selectedRiskKey.value)) {
+    selectedRiskKey.value = riskItems.value[0]?.id || "";
+  }
+});
 
 const selectedRisk = computed(() => BREAK.risks[selectedRiskKey.value]);
 const localeMessages = computed(() => messages.value[locale.value] as Record<string, unknown>);

@@ -840,6 +840,108 @@ html.dark .knowledge-badge.ac04 {
   color: var(--break-badge-ac04-text);
 }
 
+.knowledge-badge.risk-basic {
+  background: var(--break-badge-risk-basic-bg);
+  border-color: var(--break-badge-risk-basic-border);
+  color: var(--break-badge-risk-basic-text);
+}
+
+.knowledge-badge.risk-intermediate {
+  background: var(--break-badge-risk-intermediate-bg);
+  border-color: var(--break-badge-risk-intermediate-border);
+  color: var(--break-badge-risk-intermediate-text);
+}
+
+.knowledge-badge.risk-advanced {
+  background: var(--break-badge-risk-advanced-bg);
+  border-color: var(--break-badge-risk-advanced-border);
+  color: var(--break-badge-risk-advanced-text);
+}
+
+.knowledge-badge.case-cat-criminal_verdict {
+  background: var(--break-badge-case-criminal-bg);
+  border-color: var(--break-badge-case-criminal-border);
+  color: var(--break-badge-case-criminal-text);
+}
+
+.knowledge-badge.case-cat-administrative_enforcement {
+  background: var(--break-badge-case-admin-bg);
+  border-color: var(--break-badge-case-admin-border);
+  color: var(--break-badge-case-admin-text);
+}
+
+.knowledge-badge.case-cat-security_incident {
+  background: var(--break-badge-case-incident-bg);
+  border-color: var(--break-badge-case-incident-border);
+  color: var(--break-badge-case-incident-text);
+}
+
+.knowledge-badge.case-cat-vulnerability_advisory {
+  background: var(--break-badge-case-vuln-bg);
+  border-color: var(--break-badge-case-vuln-border);
+  color: var(--break-badge-case-vuln-text);
+}
+
+.knowledge-badge.case-cat-academic_research {
+  background: var(--break-badge-case-academic-bg);
+  border-color: var(--break-badge-case-academic-border);
+  color: var(--break-badge-case-academic-text);
+}
+
+.knowledge-badge.case-cat-news_report {
+  background: var(--break-badge-case-news-bg);
+  border-color: var(--break-badge-case-news-border);
+  color: var(--break-badge-case-news-text);
+}
+
+.knowledge-badge.term-cat-0 {
+  background: var(--break-badge-term-0-bg);
+  border-color: var(--break-badge-term-0-border);
+  color: var(--break-badge-term-0-text);
+}
+
+.knowledge-badge.term-cat-1 {
+  background: var(--break-badge-term-1-bg);
+  border-color: var(--break-badge-term-1-border);
+  color: var(--break-badge-term-1-text);
+}
+
+.knowledge-badge.term-cat-2 {
+  background: var(--break-badge-term-2-bg);
+  border-color: var(--break-badge-term-2-border);
+  color: var(--break-badge-term-2-text);
+}
+
+.knowledge-badge.term-cat-3 {
+  background: var(--break-badge-term-3-bg);
+  border-color: var(--break-badge-term-3-border);
+  color: var(--break-badge-term-3-text);
+}
+
+.knowledge-badge.term-cat-4 {
+  background: var(--break-badge-term-4-bg);
+  border-color: var(--break-badge-term-4-border);
+  color: var(--break-badge-term-4-text);
+}
+
+.knowledge-badge.term-cat-5 {
+  background: var(--break-badge-term-5-bg);
+  border-color: var(--break-badge-term-5-border);
+  color: var(--break-badge-term-5-text);
+}
+
+.knowledge-badge.term-cat-6 {
+  background: var(--break-badge-term-6-bg);
+  border-color: var(--break-badge-term-6-border);
+  color: var(--break-badge-term-6-text);
+}
+
+.knowledge-badge.term-cat-7 {
+  background: var(--break-badge-term-7-bg);
+  border-color: var(--break-badge-term-7-border);
+  color: var(--break-badge-term-7-text);
+}
+
 .knowledge-subtitle {
   display: flex;
   align-items: center;

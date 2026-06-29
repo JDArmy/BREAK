@@ -1,6 +1,6 @@
 {
   "name": "break",
-  "version": "2.30.0",
+  "version": "2.31.0",
   "private": true,
   "type": "module",
   "engines": {
@@ -8,10 +8,10 @@
   },
   "scripts": {
     "dev": "npm run generate:en-full && vite",
-    "build": "npm run lint && npm run type-check && npm run validate:data && npm run test && npm run test:coverage && npm run validate:schema-docs && npm run validate:home-counts && npm run generate:en-full && npm run export:data && npm run export:data-en && npm run export:stix && npm run export:jsonld && npm run build-only && npm run export:data-package && npm run audit:bundle:check && npm run validate:data-export && npm run validate:data-package && npm run validate:stix",
+    "build": "npm run lint && npm run type-check && npm run validate:data && npm run test && npm run test:coverage && npm run validate:schema-docs && npm run validate:home-counts && npm run generate:en-full && npm run generate:changelog && npm run export:data && npm run export:data-en && npm run export:stix && npm run export:jsonld && npm run build-only && npm run export:data-package && npm run audit:bundle:check && npm run validate:data-export && npm run validate:data-package && npm run validate:stix",
     "build:validate": "npm run lint && npm run type-check && npm run validate:data && npm run test:coverage",
-    "build:fast": "npm run type-check && npm run validate:data && npm run generate:en-full && npm run export:data && npm run export:data-en && npm run export:stix && npm run export:jsonld && npm run build-only && npm run export:data-package",
-    "deploy:build": "npm run generate:en-full && npm run export:data && npm run export:data-en && npm run export:stix && npm run export:jsonld && npm run build-only && npm run export:data-package",
+    "build:fast": "npm run type-check && npm run validate:data && npm run generate:en-full && npm run generate:changelog && npm run export:data && npm run export:data-en && npm run export:stix && npm run export:jsonld && npm run build-only && npm run export:data-package",
+    "deploy:build": "npm run generate:en-full && npm run generate:changelog && npm run export:data && npm run export:data-en && npm run export:stix && npm run export:jsonld && npm run build-only && npm run export:data-package",
     "preview": "vite preview",
     "build-only": "vite build",
     "analyze": "ANALYZE=1 vite build",
@@ -26,6 +26,7 @@
     "validate:home-counts": "node scripts/validate/generate-home-counts.mjs --check",
     "generate:home-counts": "node scripts/validate/generate-home-counts.mjs",
     "generate:en-full": "node scripts/validate/generate-en-full.mjs",
+    "generate:changelog": "node scripts/validate/generate-changelog-json.mjs",
     "export:data": "node scripts/validate/export-static-data.mjs",
     "export:data-en": "node scripts/skill/export_en_data.mjs",
     "export:data-package": "node scripts/validate/export-data-package.mjs",

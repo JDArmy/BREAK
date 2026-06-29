@@ -80,6 +80,12 @@ const getBusinessSceneTitle = (bsKey: string) =>
     BREAK.businessScenes[bsKey]?.title ?? bsKey
   );
 
+const getBusinessSceneDescription = (bsKey: string) =>
+  getLocalizedText(
+    `BREAK.businessScenes.${bsKey}.description`,
+    BREAK.businessScenes[bsKey]?.description ?? ""
+  );
+
 const getRiskDimensionTitle = (dimensionKey: string) =>
   getLocalizedText(
     `BREAK.businessScenes.${bsKeySelected.value}.riskDimensions.${dimensionKey}.title`,
@@ -319,6 +325,10 @@ const termDrawer = useDrawerRoute({
       </div>
     </el-col>
   </el-row>
+
+  <p v-if="getBusinessSceneDescription(bsKeySelected)" class="scene-description">
+    {{ getBusinessSceneDescription(bsKeySelected) }}
+  </p>
 
   <div :class="{ 'scrollable-container': shouldEnableMatrixScroll }">
     <el-row>
@@ -771,6 +781,17 @@ const termDrawer = useDrawerRoute({
 
 .scene-selector {
   min-width: 200px;
+}
+
+.scene-description {
+  margin: -8px 0 16px;
+  padding: 10px 16px;
+  color: var(--break-text-secondary);
+  font-size: 13px;
+  line-height: 1.65;
+  background: var(--break-bg-soft);
+  border: 1px solid var(--break-border);
+  border-radius: 8px;
 }
 
 .subrisk-toggle {

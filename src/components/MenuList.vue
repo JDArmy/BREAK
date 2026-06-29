@@ -81,6 +81,7 @@ const knowledgeRoutes: Record<string, string> = {
   threatActors: "/knowledges/threat-actor/list",
   terms: "/knowledges/term/list",
   cases: "/knowledges/case/list",
+  changelog: "/changelog",
 };
 
 const handleKnowledgeCommand = (command: string) => {
@@ -162,6 +163,7 @@ const isKnowledgeActive = (fullPath: string) => {
     "/knowledges/threat-actor/list",
     "/knowledges/term/list",
     "/knowledges/case/list",
+    "/changelog",
   ].includes(active);
 };
 
@@ -173,6 +175,7 @@ const getActiveKnowledge = (fullPath: string) => {
   if (path === "/knowledges/threat-actor/list") return "threatActors";
   if (path === "/knowledges/term/list") return "terms";
   if (path === "/knowledges/case/list") return "cases";
+  if (path === "/changelog") return "changelog";
   return "";
 };
 
@@ -182,6 +185,7 @@ const getActiveIndex = (fullPath: string) => {
     /^\/knowledges\/(risk|avoidance|attack-tool|threat-actor|term|case)\//
   );
   if (knowledgesMatch) return `/knowledges/${knowledgesMatch[1]}/list`;
+  if (fullPath.startsWith("/changelog")) return "/changelog";
   if (fullPath.match(/^\/business-scene\//)) return "/";
   if (fullPath.match(/^\/home\//)) return "/";
   if (fullPath.match(/^\/relations\//)) return "/relations/risk-relation/risk/R0001";
@@ -261,6 +265,9 @@ const getActiveIndex = (fullPath: string) => {
         </div>
         <div class="mobile-nav-item" :class="{ active: getActiveIndex(route.fullPath) === '/knowledges/case/list' }" @click="handleMobileNav('/knowledges/case/list')">
           <span>{{ $t("cases") }}</span>
+        </div>
+        <div class="mobile-nav-item" :class="{ active: route.fullPath.startsWith('/changelog') }" @click="handleMobileNav('/changelog')">
+          <span>{{ $t("menu.changelog") }}</span>
         </div>
       </div>
 
@@ -381,6 +388,7 @@ const getActiveIndex = (fullPath: string) => {
           <el-dropdown-item command="threatActors" :class="{ 'is-active': getActiveKnowledge($route.fullPath) === 'threatActors' }">{{ $t("threatActors") }}</el-dropdown-item>
           <el-dropdown-item command="terms" :class="{ 'is-active': getActiveKnowledge($route.fullPath) === 'terms' }">{{ $t("terms") }}</el-dropdown-item>
           <el-dropdown-item command="cases" :class="{ 'is-active': getActiveKnowledge($route.fullPath) === 'cases' }">{{ $t("cases") }}</el-dropdown-item>
+          <el-dropdown-item divided command="changelog" :class="{ 'is-active': getActiveKnowledge($route.fullPath) === 'changelog' }">{{ $t("menu.changelog") }}</el-dropdown-item>
         </el-dropdown-menu>
       </template>
     </el-dropdown>

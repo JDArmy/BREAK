@@ -238,6 +238,13 @@ const router = createRouter({
       component: RelationRouteShell,
     },
 
+    // 更新日志
+    {
+      path: "/changelog",
+      name: "changelog",
+      component: () => import("@/views/ChangelogView.vue"),
+    },
+
     {
       path: "/:pathMatch(.*)*",
       redirect: "/",
@@ -335,6 +342,8 @@ router.afterEach((to) => {
     title = `${PERSPECTIVE_TITLES[to.meta.relationPerspective] || "Relations"} | ${SITE_TITLE}`;
   } else if (to.name === "businessScene") {
     title = `Business Scenes | ${SITE_TITLE}`;
+  } else if (to.name === "changelog") {
+    title = `Changelog | ${SITE_TITLE}`;
   }
   document.title = title;
 });

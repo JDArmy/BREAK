@@ -67,12 +67,16 @@ const caseItems = computed(() =>
       const c = cases.value[caseKey];
       if (!c) return { id: caseKey, title: "", subtitle: "", badge: "", searchText: "" };
       const category = c.category;
+      const catKey = CATEGORY_ZH_TO_KEY[category] || category;
+      const timePart = c.incidentTime || "";
+      const summaryPart = c.summary.slice(0, 48);
       return {
         id: caseKey,
         title: c.title,
-        subtitle: c.summary.slice(0, 48),
+        subtitle: timePart ? `${timePart} · ${summaryPart}` : summaryPart,
         badge: categoryLabel(category),
-        searchText: [c.title, ...(c.keywords || []), c.summary, category].filter(Boolean).join(" "),
+        badgeType: `case-cat-${catKey}`,
+        searchText: [c.title, ...(c.keywords || []), c.summary, category, timePart].filter(Boolean).join(" "),
       };
     })
 );

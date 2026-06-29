@@ -8,7 +8,8 @@
     "home": "Home",
     "knowledge": "Knowledge Base",
     "risks": "Risks",
-    "avoidances": "Avoidances"
+    "avoidances": "Avoidances",
+    "changelog": "Changelog"
   },
   "risk": "Risk",
   "riskKey": "Risk ID",
@@ -106,6 +107,7 @@
   "incidentTime": "Incident Time",
   "relatedCases": "Related Cases",
   "loadRelatedCases": "Load related cases",
+  "loading": "Loading",
   "loadingRelatedCases": "Loading…",
   "noRelatedCases": "No related cases",
   "limitation": "Limitations",
@@ -632,6 +634,7 @@
     "threatActorPlaceholder": "Search threat actors",
     "termPlaceholder": "Search slang terms",
     "casePlaceholder": "Search cases",
+    "changelogPlaceholder": "Search versions...",
     "noResults": "No results found",
     "hint": "Press ESC to close",
     "groupRisk": "Risks",

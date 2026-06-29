@@ -141,6 +141,63 @@
   --break-badge-ac04-bg: #efd2e2;
   --break-badge-ac04-border: #c2749d;
   --break-badge-ac04-text: #762044;
+
+  /* Risk 复杂度 badge */
+  --break-badge-risk-basic-bg: #cdeedb;
+  --break-badge-risk-basic-border: #6ab889;
+  --break-badge-risk-basic-text: #164c2d;
+  --break-badge-risk-intermediate-bg: #fde7a7;
+  --break-badge-risk-intermediate-border: #d6a84a;
+  --break-badge-risk-intermediate-text: #6f3f12;
+  --break-badge-risk-advanced-bg: #fecaca;
+  --break-badge-risk-advanced-border: #f87171;
+  --break-badge-risk-advanced-text: #991b1b;
+
+  /* Case 分类 badge */
+  --break-badge-case-criminal-bg: #fecaca;
+  --break-badge-case-criminal-border: #f87171;
+  --break-badge-case-criminal-text: #991b1b;
+  --break-badge-case-admin-bg: #fed7aa;
+  --break-badge-case-admin-border: #fb923c;
+  --break-badge-case-admin-text: #7c2d12;
+  --break-badge-case-incident-bg: #fde7a7;
+  --break-badge-case-incident-border: #fbbf24;
+  --break-badge-case-incident-text: #713f12;
+  --break-badge-case-vuln-bg: #d4e1f3;
+  --break-badge-case-vuln-border: #7fa8d8;
+  --break-badge-case-vuln-text: #243f78;
+  --break-badge-case-academic-bg: #e9d5ff;
+  --break-badge-case-academic-border: #c084fc;
+  --break-badge-case-academic-text: #581c87;
+  --break-badge-case-news-bg: #cdeedb;
+  --break-badge-case-news-border: #6ab889;
+  --break-badge-case-news-text: #164c2d;
+
+  /* Term 分类 badge（8 色调色板，哈希取色） */
+  --break-badge-term-0-bg: #fde7a7;
+  --break-badge-term-0-border: #d6a84a;
+  --break-badge-term-0-text: #6f3f12;
+  --break-badge-term-1-bg: #cdeedb;
+  --break-badge-term-1-border: #6ab889;
+  --break-badge-term-1-text: #164c2d;
+  --break-badge-term-2-bg: #d4e1f3;
+  --break-badge-term-2-border: #7fa8d8;
+  --break-badge-term-2-text: #243f78;
+  --break-badge-term-3-bg: #e9d5ff;
+  --break-badge-term-3-border: #c084fc;
+  --break-badge-term-3-text: #581c87;
+  --break-badge-term-4-bg: #fecaca;
+  --break-badge-term-4-border: #f87171;
+  --break-badge-term-4-text: #991b1b;
+  --break-badge-term-5-bg: #d1fae5;
+  --break-badge-term-5-border: #34d399;
+  --break-badge-term-5-text: #064e3b;
+  --break-badge-term-6-bg: #fed7aa;
+  --break-badge-term-6-border: #fb923c;
+  --break-badge-term-6-text: #7c2d12;
+  --break-badge-term-7-bg: #efd2e2;
+  --break-badge-term-7-border: #c2749d;
+  --break-badge-term-7-text: #762044;
 }
 
 html.dark {
@@ -225,6 +282,63 @@ html.dark {
   --break-badge-ac04-bg: rgba(131, 24, 67, 0.42);
   --break-badge-ac04-border: #9b3a68;
   --break-badge-ac04-text: #e7bfd2;
+
+  /* Risk 复杂度 badge */
+  --break-badge-risk-basic-bg: rgba(20, 83, 45, 0.42);
+  --break-badge-risk-basic-border: #2f8452;
+  --break-badge-risk-basic-text: #b7dfc5;
+  --break-badge-risk-intermediate-bg: rgba(113, 63, 18, 0.42);
+  --break-badge-risk-intermediate-border: #9a671d;
+  --break-badge-risk-intermediate-text: #efd59d;
+  --break-badge-risk-advanced-bg: rgba(127, 29, 29, 0.42);
+  --break-badge-risk-advanced-border: #b84040;
+  --break-badge-risk-advanced-text: #f5c2c2;
+
+  /* Case 分类 badge */
+  --break-badge-case-criminal-bg: rgba(127, 29, 29, 0.42);
+  --break-badge-case-criminal-border: #b84040;
+  --break-badge-case-criminal-text: #f5c2c2;
+  --break-badge-case-admin-bg: rgba(124, 45, 18, 0.42);
+  --break-badge-case-admin-border: #b85e2a;
+  --break-badge-case-admin-text: #f5d4b5;
+  --break-badge-case-incident-bg: rgba(113, 63, 18, 0.42);
+  --break-badge-case-incident-border: #a8861d;
+  --break-badge-case-incident-text: #efd59d;
+  --break-badge-case-vuln-bg: rgba(30, 58, 138, 0.42);
+  --break-badge-case-vuln-border: #426aa8;
+  --break-badge-case-vuln-text: #c1d1ec;
+  --break-badge-case-academic-bg: rgba(88, 28, 135, 0.42);
+  --break-badge-case-academic-border: #8855b8;
+  --break-badge-case-academic-text: #dcc5f0;
+  --break-badge-case-news-bg: rgba(20, 83, 45, 0.42);
+  --break-badge-case-news-border: #2f8452;
+  --break-badge-case-news-text: #b7dfc5;
+
+  /* Term 分类 badge（8 色调色板，哈希取色） */
+  --break-badge-term-0-bg: rgba(113, 63, 18, 0.42);
+  --break-badge-term-0-border: #9a671d;
+  --break-badge-term-0-text: #efd59d;
+  --break-badge-term-1-bg: rgba(20, 83, 45, 0.42);
+  --break-badge-term-1-border: #2f8452;
+  --break-badge-term-1-text: #b7dfc5;
+  --break-badge-term-2-bg: rgba(30, 58, 138, 0.42);
+  --break-badge-term-2-border: #426aa8;
+  --break-badge-term-2-text: #c1d1ec;
+  --break-badge-term-3-bg: rgba(88, 28, 135, 0.42);
+  --break-badge-term-3-border: #8855b8;
+  --break-badge-term-3-text: #dcc5f0;
+  --break-badge-term-4-bg: rgba(127, 29, 29, 0.42);
+  --break-badge-term-4-border: #b84040;
+  --break-badge-term-4-text: #f5c2c2;
+  --break-badge-term-5-bg: rgba(6, 78, 59, 0.42);
+  --break-badge-term-5-border: #26956e;
+  --break-badge-term-5-text: #a7f3d0;
+  --break-badge-term-6-bg: rgba(124, 45, 18, 0.42);
+  --break-badge-term-6-border: #b85e2a;
+  --break-badge-term-6-text: #f5d4b5;
+  --break-badge-term-7-bg: rgba(131, 24, 67, 0.42);
+  --break-badge-term-7-border: #9b3a68;
+  --break-badge-term-7-text: #e7bfd2;
 }
 
 /* 暗色主题全局样式 */
