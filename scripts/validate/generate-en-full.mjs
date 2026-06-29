@@ -51,8 +51,24 @@ function loadJsonFiles(relativeDir) {
 }
 
 /**
+ * 判断目标文件是否已存在且内容与待写入数据完全一致。
+ * 一致时返回 true，跳过写入以避免不必要的磁盘 IO 和文件时间戳变化。
+ */
+function isContentUnchanged(filePath, data) {
+  if (!fs.existsSync(filePath)) return false;
+  try {
+    const existing = fs.readFileSync(filePath, 'utf-8');
+    const newContent = JSON.stringify(data, null, 2) + '\n';
+    return existing === newContent;
+  } catch {
+    return false;
+  }
+}
+
+/**
  * 逐文件合并中英文数据并写入输出目录。
  * 每个中文源文件对应一个输出文件，英文翻译同名文件覆盖可翻译字段。
+ * 若生成内容与已有文件完全一致则跳过写入，避免不必要的磁盘写入和文件时间戳变化。
  */
 function mergeAndWriteEntityFiles(config) {
   const cnFiles = loadJsonFiles(config.cnDir);
@@ -61,6 +77,7 @@ function mergeAndWriteEntityFiles(config) {
   ensureDir(entityOutDir);
 
   let entityCount = 0;
+  let skipped = 0;
   for (const [fileName, cnData] of Object.entries(cnFiles)) {
     const enData = enFiles[fileName] || {};
     // 逐顶层 key（实体 ID）合并
@@ -72,22 +89,31 @@ function mergeAndWriteEntityFiles(config) {
         : cnEntity;
       entityCount++;
     }
-    writeJson(path.join(entityOutDir, fileName), merged);
+    const outPath = path.join(entityOutDir, fileName);
+    if (isContentUnchanged(outPath, merged)) {
+      skipped++;
+    } else {
+      writeJson(outPath, merged);
+    }
   }
-  return entityCount;
+  return { entityCount, skipped };
 }
 
 function main() {
-  // 清理旧生成目录，避免残留文件
-  if (fs.existsSync(outputDir)) {
-    fs.rmSync(outputDir, { recursive: true });
-  }
+  // 确保输出目录存在（不再每次清空，通过一致性判断跳过未变更文件）
   ensureDir(outputDir);
 
   // 1. 处理各实体类型（逐文件输出）
+  let totalSkipped = 0;
   for (const config of entityConfigs) {
-    const count = mergeAndWriteEntityFiles(config);
-    console.log(`  ✓ ${config.key}: ${count} 条`);
+    const { entityCount, skipped } = mergeAndWriteEntityFiles(config);
+    const written = entityCount > 0 ? (Object.keys(loadJsonFiles(config.cnDir)).length - skipped) : 0;
+    if (skipped > 0) {
+      console.log(`  ✓ ${config.key}: ${entityCount} 条 (${skipped} 文件未变更，跳过)`);
+    } else {
+      console.log(`  ✓ ${config.key}: ${entityCount} 条`);
+    }
+    totalSkipped += skipped;
   }
 
   // 2. 处理 basic-info（单文件）
@@ -95,10 +121,41 @@ function main() {
   const enBasicInfoPath = path.join(projectRoot, 'src/i18n/en/BREAK/basic-info/main.json');
   const enBasicInfo = fs.existsSync(enBasicInfoPath) ? readJson(enBasicInfoPath) : {};
   const mergedBasicInfo = mergeWithStructure(cnBasicInfo, enBasicInfo);
-  writeJson(path.join(outputDir, 'basic-info.json'), mergedBasicInfo);
-  console.log(`  ✓ basic-info: 已合并`);
+  const basicInfoOutPath = path.join(outputDir, 'basic-info.json');
+  if (isContentUnchanged(basicInfoOutPath, mergedBasicInfo)) {
+    console.log(`  ✓ basic-info: 未变更，跳过`);
+    totalSkipped++;
+  } else {
+    writeJson(basicInfoOutPath, mergedBasicInfo);
+    console.log(`  ✓ basic-info: 已合并`);
+  }
 
-  console.log(`\n✅ 英文完整数据生成完成 → ${path.relative(projectRoot, outputDir)}/`);
+  // 3. 清理输出目录中不再需要的残留文件
+  cleanStaleFiles();
+
+  if (totalSkipped > 0) {
+    console.log(`\n✅ 英文完整数据生成完成 → ${path.relative(projectRoot, outputDir)}/ (${totalSkipped} 文件无变更已跳过)`);
+  } else {
+    console.log(`\n✅ 英文完整数据生成完成 → ${path.relative(projectRoot, outputDir)}/`);
+  }
+}
+
+/**
+ * 清理输出目录中不再对应源文件的残留文件。
+ * 例如中文源删除了某个实体文件后，对应的 .generated 输出也应移除。
+ */
+function cleanStaleFiles() {
+  for (const config of entityConfigs) {
+    const entityOutDir = path.join(outputDir, config.outDir);
+    if (!fs.existsSync(entityOutDir)) continue;
+
+    const cnFiles = new Set(Object.keys(loadJsonFiles(config.cnDir)));
+    for (const file of fs.readdirSync(entityOutDir)) {
+      if (file.endsWith('.json') && !cnFiles.has(file)) {
+        fs.unlinkSync(path.join(entityOutDir, file));
+      }
+    }
+  }
 }
 
 main();
