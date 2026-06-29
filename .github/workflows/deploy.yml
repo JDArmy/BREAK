@@ -28,13 +28,21 @@ jobs:
       - uses: ./.github/actions/setup-node-env
       - run: npm run deploy:build
 
-      - name: Create GitHub Release (on version change)
+      - name: Create GitHub Release (minor+ version only)
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
         run: |
           VERSION=$(node -p "require('./package.json').version")
           TAG="v${VERSION}"
+
+          # 只在次版本（minor）及以上变化时创建 release，补丁版本跳过
+          MINOR=$(echo "$VERSION" | cut -d. -f2)
+          PATCH=$(echo "$VERSION" | cut -d. -f3)
+          if [ "$PATCH" != "0" ]; then
+            echo "Patch release ($VERSION), skipping GitHub Release."
+            exit 0
+          fi
 
           if gh release view "$TAG" --repo "$GITHUB_REPOSITORY" &>/dev/null; then
             echo "Release $TAG already exists, skipping."
