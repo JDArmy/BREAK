@@ -57,6 +57,7 @@
         "link": "https://www.threathunter.cn/blog/2024-37b58782-063b-4426-a2f8-6de6622dbca7"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-06-16",
+    "usageExample": "用户点了一个伪造的空投链接授权钱包，瞬间被盗U，钱包里价值几十万的USDT被自动转走，连二次验证都没触发，追查后发现私钥早已泄露。"
   }
 }
