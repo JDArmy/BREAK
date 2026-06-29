@@ -93,7 +93,7 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: calc(100dvh - 132px);
+  min-height: 100%;
   padding: 12px;
   background: var(--break-bg-primary);
   color: var(--break-text-primary);
@@ -165,7 +165,7 @@ onUnmounted(() => {
 
 @media (max-width: 767px) {
   .relation-route-shell {
-    min-height: calc(100dvh - 96px);
+    min-height: 100%;
     padding: 8px;
   }
 

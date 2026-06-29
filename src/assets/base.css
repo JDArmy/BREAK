@@ -4,10 +4,16 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     touch-action: pan-x pan-y;
+    height: 100%;
 }
 
 html {
     touch-action: manipulation;
+    height: 100%;
+}
+
+#app {
+    height: 100%;
 }
 
 * {

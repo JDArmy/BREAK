@@ -45,6 +45,9 @@ import iconGithub from "@/components/icons/iconGithub.vue";
 </template>
 
 <style scoped>
+.common-layout {
+  height: 100%;
+}
 .el-container {
   height: 100%;
   padding: 0;
@@ -58,6 +61,8 @@ import iconGithub from "@/components/icons/iconGithub.vue";
 }
 .el-main {
   margin-bottom: 0;
+  flex: 1;
+  min-height: 0;
 }
 .el-footer {
   position: sticky;

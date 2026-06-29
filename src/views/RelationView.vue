@@ -336,7 +336,7 @@ export default defineComponent({
   position: relative;
   display: flex;
   flex-direction: column;
-  height: calc(100dvh - 132px);
+  height: 100%;
   min-height: 480px;
   overflow: hidden;
   padding: 0 12px 4px;
@@ -445,7 +445,7 @@ export default defineComponent({
   /* 关系网络在移动端限制为一屏：面板限高、画布在面板内通过 ECharts 缩放/拖拽浏览，
      不再把页面整体撑高到超出一屏。 */
   .relation-page--mobile-network {
-    height: calc(100dvh - 130px);
+    height: 100%;
     min-height: 0;
     overflow: hidden;
   }
