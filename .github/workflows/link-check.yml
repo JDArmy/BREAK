@@ -1,8 +1,8 @@
 name: Link Health Check
 
+# 已禁用：线上运行会因反爬机制大量失败，仅保留本地手动执行
+# 本地运行：npm run audit:references-health
 on:
-  schedule:
-    - cron: "0 1 * * 1" # 每周一 UTC 01:00（北京时间 09:00）
   workflow_dispatch:
 
 permissions:
