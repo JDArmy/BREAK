@@ -8,7 +8,7 @@
     ],
     "definition": "反复发送认证或批准提示，旨在迫使用户同意的行为。",
     "description": "Push Bombing 用于在 BREAK 业务安全分析中识别相关风险、滥用模式、控制要求和运营信号。",
-    "usageExample": "评估 Push Bombing 相关的暴露风险，并定义相应的控制措施。",
+    "usageExample": "攻击者对目标账户发起推送轰炸，连续触发数百次MFA验证请求，直到用户疲于应付误点了允许。",
     "relatedRisks": [
       "R0246"
     ],

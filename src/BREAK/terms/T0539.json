@@ -8,7 +8,7 @@
     ],
     "definition": "一种记录确切依赖版本和完整性元数据以确保构建可重复的文件。",
     "description": "在 BREAK 业务安全分析中，Lock File 用于识别相关风险、滥用模式、控制要求和运营信号。",
-    "usageExample": "评估 Lock File 相关的暴露面并定义相应的控制措施。",
+    "usageExample": "攻击者提交PR篡改锁文件中的依赖解析地址，将合法包指向含后门的恶意仓库。",
     "relatedRisks": [],
     "relatedAvoidances": [],
     "relatedAttackTools": [],

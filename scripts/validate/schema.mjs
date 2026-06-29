@@ -201,7 +201,9 @@ for (const category of categories) {
       if (category.schemaKey === "terms" && entity.usageExample) {
         const title = entity.title || "";
         const aliases = Array.isArray(entity.aliases) ? entity.aliases : [];
-        const hasTitleOrAlias = (title && entity.usageExample.includes(title)) ||
+        // title 可能含 "/" "\" " / " 分隔的多个变体，拆开逐个匹配
+        const titleParts = title.split(/[/\\]| \/ /).map((s) => s.trim()).filter(Boolean);
+        const hasTitleOrAlias = titleParts.some((part) => entity.usageExample.includes(part)) ||
           aliases.some((alias) => alias && entity.usageExample.includes(alias));
         if (!hasTitleOrAlias) {
           usageExampleIssues.push(`${filePath}.${key}: usageExample 未包含 title("${title}") 或 aliases`);

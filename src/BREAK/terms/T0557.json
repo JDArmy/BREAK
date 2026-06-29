@@ -8,7 +8,7 @@
     ],
     "definition": "滥用退款、退货、售后或索赔流程以获取不当补偿的行为。",
     "description": "在 BREAK 业务安全分析中，Refund Fraud 用于识别相关风险、滥用模式、控制要求及运营信号。",
-    "usageExample": "评估与 Refund Fraud 相关的风险敞口，并制定相应的控制措施。",
+    "usageExample": "买家收到商品后谎称未收到，向平台发起退款欺诈申请，反复操作获利数万元后被风控系统识别封号。",
     "relatedRisks": [
       "R0017-003",
       "R0235"

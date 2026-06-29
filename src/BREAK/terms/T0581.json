@@ -8,7 +8,7 @@
     ],
     "definition": "检测或抵御篡改、挂钩、调试、仿真及运行时操纵的控制措施。",
     "description": "Runtime Protection 用于在 BREAK 业务安全分析中识别相关风险、滥用模式、控制需求及运营信号。",
-    "usageExample": "评估与 Runtime Protection 相关的暴露面，并定义相应的控制措施。",
+    "usageExample": "应用集成运行时防护（RASP）后，即使存在未修补漏洞，恶意payload在执行阶段也会被实时拦截。",
     "relatedRisks": [],
     "relatedAvoidances": [],
     "relatedAttackTools": [],

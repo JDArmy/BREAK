@@ -8,7 +8,7 @@
     ],
     "definition": "用于认证车联网通信及相关信任关系的证书。",
     "description": "在 BREAK 业务安全分析中，V2X 证书用于识别相关风险、滥用模式、控制要求及运营信号。",
-    "usageExample": "评估 V2X 证书相关暴露面并定义对应控制措施。",
+    "usageExample": "伪基站广播伪造的V2X证书，向周围车辆发送虚假路况信息，诱导自动驾驶系统做出错误决策。",
     "relatedRisks": [],
     "relatedAvoidances": [],
     "relatedAttackTools": [],

@@ -215,7 +215,7 @@ node scripts/validate/metrics.mjs
 
 **术语专用**：
 - `aliases`：别名数组
-- `usageExample`：使用场景示例
+- `usageExample`：使用场景示例（必填），**必须包含术语的 title 或 aliases 中至少一个词**，前端会对其高亮显示。中文源文件使用中文，英文翻译文件使用独立的英文 usageExample。
 
 **注意事项**：
 - 所有数组字段为空时也必须保留（写为 `[]`）

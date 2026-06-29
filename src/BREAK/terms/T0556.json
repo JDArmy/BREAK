@@ -8,7 +8,7 @@
     ],
     "definition": "由发卡机构或支付网络在争议发生后发起的付款撤销。",
     "description": "在 BREAK 业务安全分析中，Chargeback 用于识别相关风险、滥用模式、控制要求及运营信号。",
-    "usageExample": "评估与 Chargeback 相关的风险敞口，并定义相应的控制措施。",
+    "usageExample": "诈骗分子用盗刷的信用卡购买高价商品后，持卡人发起拒付，商户既失去商品又被扣回货款。",
     "relatedRisks": [
       "R0235"
     ],

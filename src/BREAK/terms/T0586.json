@@ -8,7 +8,7 @@
     ],
     "definition": "一种远程向设备或车辆发送的无线软件或固件更新。",
     "description": "OTA Update 用于在 BREAK 业务安全分析中识别相关风险、滥用模式、控制需求和运营信号。",
-    "usageExample": "评估 OTA Update 相关风险暴露并定义相应的控制措施。",
+    "usageExample": "攻击者劫持车辆的OTA更新通道，向ECU推送篡改过的固件镜像，获取车辆控制权限。",
     "relatedRisks": [
       "R0181-001"
     ],

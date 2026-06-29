@@ -8,7 +8,7 @@
     ],
     "definition": "一种用于公开车辆状态、位置、远程控制、诊断或服务功能的API。",
     "description": "在BREAK业务安全分析中，Connected-Vehicle API用于识别相关风险、滥用模式、控制要求和操作信号。",
-    "usageExample": "评估Connected-Vehicle API相关的风险暴露，并定义相应的控制措施。",
+    "usageExample": "安全研究员发现车联网API存在越权漏洞，通过篡改请求中的车辆ID可远程解锁任意车辆。",
     "relatedRisks": [
       "R0252"
     ],

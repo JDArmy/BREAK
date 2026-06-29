@@ -8,7 +8,7 @@
     ],
     "definition": "云身份与访问管理，用于控制用户、角色、服务账号、策略及权限。",
     "description": "在 BREAK 业务安全分析中，Cloud IAM 用于识别相关风险、滥用模式、控制需求及运营信号。",
-    "usageExample": "评估 Cloud IAM 相关暴露面并定义对应的控制措施。",
+    "usageExample": "运维人员误配云IAM策略授予了过宽权限，导致一个低权限服务账号可以读取所有S3存储桶数据。",
     "relatedRisks": [
       "R0231"
     ],

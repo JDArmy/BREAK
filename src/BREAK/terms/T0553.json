@@ -8,7 +8,7 @@
     ],
     "definition": "一项隐私原则，要求数据仅用于指定、明确且合法的目的。",
     "description": "目的限制在BREAK业务安全分析中用于识别相关风险、滥用模式、控制要求和运营信号。",
-    "usageExample": "评估与目的限制相关的风险敞口，并定义相应的控制措施。",
+    "usageExample": "企业将用户注册时收集的手机号用于营销推送，违反了用途限制原则，被数据保护机构处罚。",
     "relatedRisks": [],
     "relatedAvoidances": [],
     "relatedAttackTools": [],

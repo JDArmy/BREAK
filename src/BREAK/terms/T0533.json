@@ -8,7 +8,7 @@
     ],
     "definition": "存储构建输出、包、容器镜像和发布产物的仓库。",
     "description": "Artifact Repository 用于在 BREAK 业务安全分析中识别相关风险、滥用模式、控制要求和运营信号。",
-    "usageExample": "评估 Artifact Repository 相关的暴露面并定义相应的控制措施。",
+    "usageExample": "攻击者入侵公司制品库服务器，在构建产物中植入后门，所有拉取该镜像的服务都被感染。",
     "relatedRisks": [],
     "relatedAvoidances": [],
     "relatedAttackTools": [],

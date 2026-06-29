@@ -8,7 +8,7 @@
     ],
     "definition": "一种伪造或串通的交易，用于虚增活动、转移资金、骗取奖励或绕过控制。",
     "description": "在 BREAK 业务安全分析中，Fake Transaction 用于识别相关风险、滥用模式、控制要求及运营信号。",
-    "usageExample": "评估 Fake Transaction 相关敞口并制定相应的控制措施。",
+    "usageExample": "刷单团伙通过虚假交易制造大量虚假成交记录，将新店铺搜索排名快速提升到首页。",
     "relatedRisks": [
       "R0225",
       "R0017-003",

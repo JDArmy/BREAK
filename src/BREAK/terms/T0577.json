@@ -8,7 +8,7 @@
     ],
     "definition": "利用窃取的会话 Cookie 从其他客户端或设备冒充用户的行为。",
     "description": "Cookie Replay 用于在 BREAK 业务安全分析中识别相关风险、滥用模式、控制需求和运营信号。",
-    "usageExample": "评估 Cookie Replay 相关的暴露面并定义相应的控制措施。",
+    "usageExample": "攻击者通过抓包获取有效的会话凭据后进行Cookie重放，绕过登录流程以受害者身份访问其账户。",
     "relatedRisks": [
       "R0239",
       "R0247"
