@@ -28,6 +28,7 @@
         "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
         "link": "https://www.threathunter.cn/blog/2025"
       }
-    ]
+    ],
+    "usageExample": "A loan platform's risk control flagged an anomaly when an applicant was hit by a **Multi-Lender Data** check. It revealed the user had submitted applications to over twenty small loan platforms within two weeks, leading to an immediate rejection for suspected group fraud."
   }
 }
