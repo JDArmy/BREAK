@@ -1,3 +1,12 @@
+/**
+ * 关系说明翻译工具。
+ *
+ * 设计说明：note 字段始终来自中文结构数据（src/BREAK/ 下的 JSON），不会被英文翻译覆盖。
+ * 中文 locale 时直接显示原文 note；英文 locale 时，用正则从中文 note 中提取数字/实体名，
+ * 然后通过 i18n key 组装英文翻译。如果正则未匹配（新增了中文 note 模式但未更新此文件），
+ * 则回退显示中文原文。
+ */
+
 import BREAK from "@/BREAK";
 import type { AttackToolRelation, AvoidanceRelation, RiskRelation, ThreatActorRelation } from "@/BREAK/types";
 import { getEntityEntry, type EntityType } from "@/BREAK/entityRegistry";

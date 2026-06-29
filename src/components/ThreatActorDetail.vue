@@ -79,6 +79,7 @@ const openDetail = (taKey: string) => {
       </a>
       <button
         :title="$t('relationMap')"
+        :aria-label="$t('relationMap')"
         class="relation-map-icon"
         @click="openRelationGraph(taKey)"
       >

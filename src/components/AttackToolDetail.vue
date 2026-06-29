@@ -87,7 +87,7 @@ const openDetail = () => {
         {{ atKey }}
         <el-icon class="external-link-icon" aria-hidden="true"><TopRight /></el-icon>
       </a>
-      <button :title="$t('relationMap')" class="relation-map-icon" @click="openRelationGraph(atKey)">
+      <button :title="$t('relationMap')" :aria-label="$t('relationMap')" class="relation-map-icon" @click="openRelationGraph(atKey)">
         <icon-relation width="14px" height="14px" />
       </button>
     </div>

@@ -127,6 +127,20 @@
   --break-line-related-term: var(--lime-600);
   --break-line-sub: var(--slate-400);
   --break-line-maker: var(--green-500);
+
+  /* Avoidance 分类 badge */
+  --break-badge-ac01-bg: #f6e7bd;
+  --break-badge-ac01-border: #d6a84a;
+  --break-badge-ac01-text: #6f3f12;
+  --break-badge-ac02-bg: #cdeedb;
+  --break-badge-ac02-border: #6ab889;
+  --break-badge-ac02-text: #164c2d;
+  --break-badge-ac03-bg: #d4e1f3;
+  --break-badge-ac03-border: #7fa8d8;
+  --break-badge-ac03-text: #243f78;
+  --break-badge-ac04-bg: #efd2e2;
+  --break-badge-ac04-border: #c2749d;
+  --break-badge-ac04-text: #762044;
 }
 
 html.dark {
@@ -197,6 +211,20 @@ html.dark {
   --break-line-related-term: var(--lime-300);
   --break-line-sub: var(--slate-500);
   --break-line-maker: var(--green-400);
+
+  /* Avoidance 分类 badge */
+  --break-badge-ac01-bg: rgba(120, 53, 15, 0.42);
+  --break-badge-ac01-border: #9a671d;
+  --break-badge-ac01-text: #efd59d;
+  --break-badge-ac02-bg: rgba(20, 83, 45, 0.42);
+  --break-badge-ac02-border: #2f8452;
+  --break-badge-ac02-text: #b7dfc5;
+  --break-badge-ac03-bg: rgba(30, 58, 138, 0.42);
+  --break-badge-ac03-border: #426aa8;
+  --break-badge-ac03-text: #c1d1ec;
+  --break-badge-ac04-bg: rgba(131, 24, 67, 0.42);
+  --break-badge-ac04-border: #9b3a68;
+  --break-badge-ac04-text: #e7bfd2;
 }
 
 /* 暗色主题全局样式 */

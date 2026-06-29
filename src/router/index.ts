@@ -310,6 +310,35 @@ router.beforeEach((to) => {
   }
 });
 
+// 动态页面标题：根据路由 meta 设置 document.title
+const SITE_TITLE = "JDArmy BREAK";
+const PAGE_TITLES: Record<string, string> = {
+  risk: "Risks",
+  avoidance: "Avoidances",
+  "attack-tool": "Attack Tools",
+  "threat-actor": "Threat Actors",
+  term: "Terms",
+  case: "Cases",
+};
+const PERSPECTIVE_TITLES: Record<string, string> = {
+  risk: "Risk Relation",
+  attackPath: "Attack Path",
+  defenseCoverage: "Defense Coverage",
+  pathExplorer: "Path Explorer",
+};
+
+router.afterEach((to) => {
+  let title = SITE_TITLE;
+  if (to.meta.knowledgeEntity) {
+    title = `${PAGE_TITLES[to.meta.knowledgeEntity] || to.meta.knowledgeEntity} | ${SITE_TITLE}`;
+  } else if (to.meta.relationPerspective) {
+    title = `${PERSPECTIVE_TITLES[to.meta.relationPerspective] || "Relations"} | ${SITE_TITLE}`;
+  } else if (to.name === "businessScene") {
+    title = `Business Scenes | ${SITE_TITLE}`;
+  }
+  document.title = title;
+});
+
 // 全局动态 import 失败处理：部署更新后旧 chunk 不存在，由 main.ts 的
 // unhandledrejection 监听统一处理自动刷新。router.onError 作为补充拦截，
 // 防止路由级 chunk 错误被 Vue 吞掉而不触发 unhandledrejection。

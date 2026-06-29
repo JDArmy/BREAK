@@ -793,51 +793,51 @@ onBeforeUnmount(() => {
 }
 
 .knowledge-badge.ac01 {
-  background: #f6e7bd;
-  border-color: #d6a84a;
-  color: #6f3f12;
+  background: var(--break-badge-ac01-bg);
+  border-color: var(--break-badge-ac01-border);
+  color: var(--break-badge-ac01-text);
 }
 
 .knowledge-badge.ac02 {
-  background: #cdeedb;
-  border-color: #6ab889;
-  color: #164c2d;
+  background: var(--break-badge-ac02-bg);
+  border-color: var(--break-badge-ac02-border);
+  color: var(--break-badge-ac02-text);
 }
 
 .knowledge-badge.ac03 {
-  background: #d4e1f3;
-  border-color: #7fa8d8;
-  color: #243f78;
+  background: var(--break-badge-ac03-bg);
+  border-color: var(--break-badge-ac03-border);
+  color: var(--break-badge-ac03-text);
 }
 
 .knowledge-badge.ac04 {
-  background: #efd2e2;
-  border-color: #c2749d;
-  color: #762044;
+  background: var(--break-badge-ac04-bg);
+  border-color: var(--break-badge-ac04-border);
+  color: var(--break-badge-ac04-text);
 }
 
 html.dark .knowledge-badge.ac01 {
-  background: rgba(120, 53, 15, 0.42);
-  border-color: #9a671d;
-  color: #efd59d;
+  background: var(--break-badge-ac01-bg);
+  border-color: var(--break-badge-ac01-border);
+  color: var(--break-badge-ac01-text);
 }
 
 html.dark .knowledge-badge.ac02 {
-  background: rgba(20, 83, 45, 0.42);
-  border-color: #2f8452;
-  color: #b7dfc5;
+  background: var(--break-badge-ac02-bg);
+  border-color: var(--break-badge-ac02-border);
+  color: var(--break-badge-ac02-text);
 }
 
 html.dark .knowledge-badge.ac03 {
-  background: rgba(30, 58, 138, 0.42);
-  border-color: #426aa8;
-  color: #c1d1ec;
+  background: var(--break-badge-ac03-bg);
+  border-color: var(--break-badge-ac03-border);
+  color: var(--break-badge-ac03-text);
 }
 
 html.dark .knowledge-badge.ac04 {
-  background: rgba(131, 24, 67, 0.42);
-  border-color: #9b3a68;
-  color: #e7bfd2;
+  background: var(--break-badge-ac04-bg);
+  border-color: var(--break-badge-ac04-border);
+  color: var(--break-badge-ac04-text);
 }
 
 .knowledge-subtitle {
