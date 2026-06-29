@@ -17,9 +17,17 @@ const { t, locale, messages } = useI18n();
 
 const risks = Object.keys(BREAK.risks);
 const selectedRiskKey = ref((route.params.rKey as string) || risks[0] || "");
+const selectedComplexity = ref("");
+
+const COMPLEXITY_LEVELS = ["basic", "intermediate", "advanced"] as const;
 
 const riskItems = computed(() =>
-  risks.map((rKey) => {
+  risks
+    .filter((rKey) => {
+      if (!selectedComplexity.value) return true;
+      return BREAK.risks[rKey].complexity === selectedComplexity.value;
+    })
+    .map((rKey) => {
     const title = t(`BREAK.risks.${rKey}.title`);
     const definition = t(`BREAK.risks.${rKey}.definition`);
     const description = t(`BREAK.risks.${rKey}.description`);
@@ -84,6 +92,22 @@ const { openRelationGraph } = useRelationGraph("risk");
     :search-placeholder="$t('search.riskPlaceholder')"
     @select="selectedRiskKey = $event"
   >
+    <template #filters>
+      <el-select
+        v-model="selectedComplexity"
+        class="complexity-filter"
+        size="small"
+        clearable
+        :placeholder="$t('allComplexityLevels')"
+      >
+        <el-option
+          v-for="level in COMPLEXITY_LEVELS"
+          :key="level"
+          :label="$t(`riskComplexityLevel.${level}`)"
+          :value="level"
+        />
+      </el-select>
+    </template>
     <article v-if="selectedRisk" class="detail-panel risk-detail-panel">
       <div class="detail-heading">
         <div>
@@ -206,6 +230,10 @@ const { openRelationGraph } = useRelationGraph("risk");
 </template>
 
 <style scoped>
+.complexity-filter {
+  flex: 0 0 96px;
+}
+
 .keywords {
   display: flex;
   flex-wrap: wrap;

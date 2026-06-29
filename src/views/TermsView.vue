@@ -12,6 +12,16 @@ const route = useRoute();
 const { locale, messages } = useI18n();
 
 const termKeys = Object.keys(BREAK.terms);
+const selectedCategory = ref("");
+
+// 动态提取所有分类值（去重排序）
+const categoryOptions = computed(() => {
+  const cats = new Set<string>();
+  for (const term of Object.values(BREAK.terms)) {
+    if (term.category) cats.add(term.category);
+  }
+  return [...cats].sort();
+});
 
 const getInitialKey = () => {
   const paramKey = typeof route.params.tKey === "string" ? route.params.tKey : "";
@@ -38,7 +48,12 @@ const getTermStringArray = (termKey: string, field: string) =>
   getMessageStringArray(localeMessages.value, `BREAK.terms.${termKey}.${field}`);
 
 const termItems = computed(() =>
-  termKeys.map((termKey) => {
+  termKeys
+    .filter((termKey) => {
+      if (!selectedCategory.value) return true;
+      return BREAK.terms[termKey].category === selectedCategory.value;
+    })
+    .map((termKey) => {
     const aliases = getTermStringArray(termKey, "aliases");
     const category = getTermString(termKey, "category");
     const definition = getTermString(termKey, "definition");
@@ -104,6 +119,23 @@ function escapeHtml(str: string): string {
     :search-placeholder="$t('search.termPlaceholder')"
     @select="selectedTermKey = $event"
   >
+    <template #filters>
+      <el-select
+        v-model="selectedCategory"
+        class="term-category-filter"
+        size="small"
+        clearable
+        filterable
+        :placeholder="$t('allCategories')"
+      >
+        <el-option
+          v-for="cat in categoryOptions"
+          :key="cat"
+          :label="cat"
+          :value="cat"
+        />
+      </el-select>
+    </template>
     <article v-if="selectedTerm" class="detail-panel">
       <div class="detail-heading">
         <div>
@@ -198,6 +230,10 @@ function escapeHtml(str: string): string {
 </template>
 
 <style scoped>
+.term-category-filter {
+  flex: 0 0 120px;
+}
+
 .keywords {
   display: flex;
   flex-wrap: wrap;
