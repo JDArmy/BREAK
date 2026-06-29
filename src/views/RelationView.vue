@@ -410,11 +410,41 @@ export default defineComponent({
   .relation-tabs :deep(.el-tabs__nav-wrap) {
     padding-right: 0;
     min-height: 34px;
+    max-width: 100%;
+    overflow: visible;
+  }
+
+  /* 隐藏 el-tabs 内置的左右箭头按钮，移动端用触摸滑动代替 */
+  .relation-tabs :deep(.el-tabs__nav-prev),
+  .relation-tabs :deep(.el-tabs__nav-next) {
+    display: none;
+  }
+
+  /* is-scrollable 模式下 el-tabs 会给 nav-wrap 加 padding，这里重置 */
+  .relation-tabs :deep(.el-tabs__nav-wrap.is-scrollable) {
+    padding: 0;
+  }
+
+  /* nav-scroll 容器变为手指可滑动 */
+  .relation-tabs :deep(.el-tabs__nav-scroll) {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* 隐藏滚动条但保留功能 */
+  .relation-tabs :deep(.el-tabs__nav-scroll::-webkit-scrollbar) {
+    display: none;
+  }
+
+  .relation-tabs :deep(.el-tabs__nav-scroll) {
+    scrollbar-width: none;
   }
 
   .relation-tabs :deep(.el-tabs__item) {
     height: 34px;
     line-height: 34px;
+    font-size: 13px;
+    padding: 0 12px;
   }
 
   .relation-tabs :deep(.el-tabs__content) {
