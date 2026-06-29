@@ -35,6 +35,7 @@
         "link": "https://www.yunweipai.com/45863.html"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-06-16",
+    "usageExample": "攻击者在登录表单中输入' OR '1'='1'--实现SQL注入，绕过身份验证直接访问管理后台，泄露了50万用户的个人信息。"
   }
 }

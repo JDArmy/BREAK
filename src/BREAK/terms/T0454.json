@@ -53,6 +53,7 @@
         "link": "https://dy.163.com/article/GJANNOBQ0514832I.html"
       }
     ],
-    "updated": "2026-06-16"
+    "updated": "2026-06-16",
+    "usageExample": "用户通过DeFi协议将USDC存入Aave借贷池赚取利息，然后以存款作为抵押借出ETH进行杠杆交易。当ETH价格暴跌时触发清算，用户损失了全部抵押品。"
   }
 }

@@ -82,8 +82,8 @@ function entityUri(breakId) {
 // 3. 实体节点转换
 // ────────────────────────────────────────
 
-function convertRiskNode(breakId, entity) {
-  return {
+function convertRiskNode(breakId, entity, relatedCaseIds) {
+  const node = {
     '@id': entityUri(breakId),
     '@type': 'Risk',
     breakId,
@@ -100,6 +100,10 @@ function convertRiskNode(breakId, entity) {
     updated: entity.updated,
     version: entity.version ?? 1,
   };
+  if (relatedCaseIds && relatedCaseIds.length > 0) {
+    node.relatedCases = relatedCaseIds.map(entityUri);
+  }
+  return node;
 }
 
 function convertAvoidanceNode(breakId, entity) {
@@ -251,8 +255,17 @@ function convertToJsonLd(breakBundle) {
   const data = breakBundle.data;
   const graph = [];
 
+  // 构建 Case → Risk 倒排索引（哪些 Case 引用了某个 Risk）
+  const riskToCases = {};
+  for (const [caseId, caseEntity] of Object.entries(data.cases || {})) {
+    for (const riskId of caseEntity.relatedRisks || []) {
+      if (!riskToCases[riskId]) riskToCases[riskId] = [];
+      riskToCases[riskId].push(caseId);
+    }
+  }
+
   for (const [id, entity] of Object.entries(data.risks || {})) {
-    graph.push(convertRiskNode(id, entity));
+    graph.push(convertRiskNode(id, entity, riskToCases[id] || []));
   }
   for (const [id, entity] of Object.entries(data.avoidances || {})) {
     graph.push(convertAvoidanceNode(id, entity));

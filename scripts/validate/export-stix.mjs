@@ -283,15 +283,16 @@ function convertReferences(refs, breakId) {
 
 /**
  * Case category → STIX report_types 映射
+ * 参考 STIX 2.1 report-type-ov 开放词汇表
  */
 function mapCaseCategoryToReportType(category) {
   const map = {
     criminal_verdict: 'threat-report',
     administrative_enforcement: 'threat-report',
     security_incident: 'threat-report',
-    vulnerability_advisory: 'threat-report',
-    academic_research: 'threat-report',
-    news_report: 'threat-report',
+    vulnerability_advisory: 'vulnerability',
+    academic_research: 'observed-data',
+    news_report: 'campaign',
   };
   return map[category] || 'threat-report';
 }
