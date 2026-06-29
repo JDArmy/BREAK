@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import AsyncComponentError from "@/components/AsyncComponentError.vue";
 import { defineAsyncComponent, ref, computed } from "vue";
 import { useRouter } from "vue-router";
 import BREAK from "@/BREAK";
@@ -10,8 +11,8 @@ import { useDrawerWidth } from "@/composables/useDrawerWidth";
 import { entityDetailHref } from "@/utils/entityRoute";
 import { getEntityEntry } from "@/BREAK/entityRegistry";
 
-const TermDetail = defineAsyncComponent(() => import("@/components/TermDetail.vue"));
-const AvoidanceDetail = defineAsyncComponent(() => import("@/components/AvoidanceDetail.vue"));
+const TermDetail = defineAsyncComponent({ loader: () => import("@/components/TermDetail.vue"), errorComponent: AsyncComponentError });
+const AvoidanceDetail = defineAsyncComponent({ loader: () => import("@/components/AvoidanceDetail.vue"), errorComponent: AsyncComponentError });
 
 const props = defineProps<{
   drawer: boolean;

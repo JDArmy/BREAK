@@ -8,6 +8,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    AsyncComponentError: typeof import('./src/components/AsyncComponentError.vue')['default']
     AttackToolDetail: typeof import('./src/components/AttackToolDetail.vue')['default']
     AvoidanceDetail: typeof import('./src/components/AvoidanceDetail.vue')['default']
     ElBacktop: typeof import('element-plus/es')['ElBacktop']

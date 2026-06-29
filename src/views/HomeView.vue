@@ -8,12 +8,13 @@ import { useDrawerRoute } from "@/composables/useDrawerRoute";
 import { useHomeSceneLayout, useSubRiskToggle } from "@/composables/useHomeSceneLayout";
 import { entityRegistry } from "@/BREAK/entityRegistry";
 import { useI18n } from "vue-i18n";
+import AsyncComponentError from "@/components/AsyncComponentError.vue";
 
-const RiskDetail = defineAsyncComponent(() => import("@/components/RiskDetail.vue"));
-const AvoidanceDetail = defineAsyncComponent(() => import("@/components/AvoidanceDetail.vue"));
-const AttackToolDetail = defineAsyncComponent(() => import("@/components/AttackToolDetail.vue"));
-const ThreatActorDetail = defineAsyncComponent(() => import("@/components/ThreatActorDetail.vue"));
-const TermDetail = defineAsyncComponent(() => import("@/components/TermDetail.vue"));
+const RiskDetail = defineAsyncComponent({ loader: () => import("@/components/RiskDetail.vue"), errorComponent: AsyncComponentError });
+const AvoidanceDetail = defineAsyncComponent({ loader: () => import("@/components/AvoidanceDetail.vue"), errorComponent: AsyncComponentError });
+const AttackToolDetail = defineAsyncComponent({ loader: () => import("@/components/AttackToolDetail.vue"), errorComponent: AsyncComponentError });
+const ThreatActorDetail = defineAsyncComponent({ loader: () => import("@/components/ThreatActorDetail.vue"), errorComponent: AsyncComponentError });
+const TermDetail = defineAsyncComponent({ loader: () => import("@/components/TermDetail.vue"), errorComponent: AsyncComponentError });
 
 const router = useRouter();
 const route = useRoute();

@@ -14,10 +14,10 @@ type Locale = "cn" | "en";
 type BreakMessages = typeof import("../BREAK").default;
 
 const getInitialLocale = (): Locale => {
-  const saved = localStorage.getItem(LOCALE_STORAGE_KEY);
+  const saved = typeof localStorage !== "undefined" ? localStorage.getItem(LOCALE_STORAGE_KEY) : null;
   if (saved && saved in languages) return saved as Locale;
 
-  const browserLang = navigator.language || "";
+  const browserLang = typeof navigator !== "undefined" ? (navigator.language || "") : "";
   if (browserLang.startsWith("zh")) return "cn";
   if (browserLang.startsWith("en")) return "en";
 
@@ -127,10 +127,17 @@ const ensureLocaleMessages = async (locale: Locale) => {
 
 const initLocaleMessages = () => ensureLocaleMessages(initialLocale);
 
+// 初始化时同步 <html lang>
+if (typeof document !== "undefined") {
+  document.documentElement.lang = initialLocale === "en" ? "en" : "zh-CN";
+}
+
 const setLocale = async (locale: Locale) => {
   await ensureLocaleMessages(locale);
   localStorage.setItem(LOCALE_STORAGE_KEY, locale);
   i18n.global.locale.value = locale;
+  // 同步更新 <html lang> 属性，利于 SEO 和辅助技术
+  document.documentElement.lang = locale === "cn" ? "zh-CN" : "en";
 };
 
 export {

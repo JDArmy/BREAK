@@ -15,6 +15,7 @@ import type {
   NodeRelatedEntitySummary,
   RootPathSummary,
 } from "@/components/relation/relationNodeDrawerInsightTypes";
+import { i18n } from "@/i18n";
 
 type Translate = (key: string, params?: Record<string, unknown>) => string;
 
@@ -23,8 +24,11 @@ type Translate = (key: string, params?: Record<string, unknown>) => string;
  * relationKey 统一使用完整 `relationLine.*` key（与网络图谱 builder 一致），
  * 使 isDirectRelationLine / getRelationSourceFields / explainRelation / getRelationPriority
  * 等规则函数能正确匹配（短 key 无法匹配规则，会导致 directness/sourceFields 失效）。
+ *
+ * text 字段使用 i18n 翻译，随 locale 变化自动更新。
  */
 const buildGlobalLines = (): Line[] => {
+  const t = i18n.global.t;
   const lines: Line[] = [];
 
   // Risk → Avoidance
@@ -33,7 +37,7 @@ const buildGlobalLines = (): Line[] => {
       lines.push({
         from: rKey,
         to: aKey,
-        text: "规避",
+        text: t("relationLine.avoidanceMeans"),
         relationKey: "relationLine.avoidanceMeans",
       });
     }
@@ -45,7 +49,7 @@ const buildGlobalLines = (): Line[] => {
       lines.push({
         from: atKey,
         to: rKey,
-        text: "直接造成",
+        text: t("relationLine.directCauseRisk"),
         relationKey: "relationLine.directCauseRisk",
       });
     }
@@ -53,7 +57,7 @@ const buildGlobalLines = (): Line[] => {
       lines.push({
         from: atKey,
         to: rKey,
-        text: "间接支持",
+        text: t("relationLine.indirectSupportRisk"),
         relationKey: "relationLine.indirectSupportRisk",
       });
     }
@@ -61,7 +65,7 @@ const buildGlobalLines = (): Line[] => {
       lines.push({
         from: atKey,
         to: aKey,
-        text: "规避",
+        text: t("relationLine.avoidanceMeans"),
         relationKey: "relationLine.avoidanceMeans",
       });
     }
@@ -73,7 +77,7 @@ const buildGlobalLines = (): Line[] => {
       lines.push({
         from: taKey,
         to: rKey,
-        text: "直接造成",
+        text: t("relationLine.directCauseRisk"),
         relationKey: "relationLine.directCauseRisk",
       });
     }
@@ -81,7 +85,7 @@ const buildGlobalLines = (): Line[] => {
       lines.push({
         from: taKey,
         to: rKey,
-        text: "间接支持",
+        text: t("relationLine.indirectSupportRisk"),
         relationKey: "relationLine.indirectSupportRisk",
       });
     }
@@ -89,7 +93,7 @@ const buildGlobalLines = (): Line[] => {
       lines.push({
         from: taKey,
         to: atKey,
-        text: "构建",
+        text: t("relationLine.buildAttackTool"),
         relationKey: "relationLine.buildAttackTool",
       });
     }
@@ -97,7 +101,7 @@ const buildGlobalLines = (): Line[] => {
       lines.push({
         from: taKey,
         to: atKey,
-        text: "使用",
+        text: t("relationLine.useAttackTool"),
         relationKey: "relationLine.useAttackTool",
       });
     }
@@ -109,7 +113,7 @@ const buildGlobalLines = (): Line[] => {
       lines.push({
         from: tKey,
         to: rKey,
-        text: "关联风险",
+        text: t("relationLine.relatedTerm"),
         relationKey: "relationLine.relatedTerm",
       });
     }
@@ -117,7 +121,7 @@ const buildGlobalLines = (): Line[] => {
       lines.push({
         from: tKey,
         to: aKey,
-        text: "关联规避",
+        text: t("relationLine.relatedTerm"),
         relationKey: "relationLine.relatedTerm",
       });
     }
@@ -125,7 +129,7 @@ const buildGlobalLines = (): Line[] => {
       lines.push({
         from: tKey,
         to: atKey,
-        text: "关联工具",
+        text: t("relationLine.relatedTerm"),
         relationKey: "relationLine.relatedTerm",
       });
     }
@@ -133,7 +137,7 @@ const buildGlobalLines = (): Line[] => {
       lines.push({
         from: tKey,
         to: taKey,
-        text: "关联行为者",
+        text: t("relationLine.relatedTerm"),
         relationKey: "relationLine.relatedTerm",
       });
     }
@@ -142,11 +146,14 @@ const buildGlobalLines = (): Line[] => {
   return lines;
 };
 
-// 全局缓存：BREAK 数据静态，关系边只构建一次
+// 全局缓存：locale 变化时重建
 let globalLinesCache: Line[] | null = null;
+let globalLinesCacheLocale: string | null = null;
 export const getGlobalLines = (): Line[] => {
-  if (!globalLinesCache) {
+  const currentLocale = i18n.global.locale.value;
+  if (!globalLinesCache || globalLinesCacheLocale !== currentLocale) {
     globalLinesCache = buildGlobalLines();
+    globalLinesCacheLocale = currentLocale;
   }
   return globalLinesCache;
 };

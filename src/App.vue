@@ -2,11 +2,13 @@
 import { defineAsyncComponent } from "vue";
 import { RouterView } from "vue-router";
 import MenuList from "./components/MenuList.vue";
+import AsyncComponentError from "./components/AsyncComponentError.vue";
 
 // 异步加载：避免 useEntityResolver → useCases 等依赖拉入入口 chunk
-const EntityAutoLinker = defineAsyncComponent(
-  () => import("./components/entity/EntityAutoLinker.vue")
-);
+const EntityAutoLinker = defineAsyncComponent({
+  loader: () => import("./components/entity/EntityAutoLinker.vue"),
+  errorComponent: AsyncComponentError,
+});
 
 import iconGithub from "@/components/icons/iconGithub.vue";
 </script>

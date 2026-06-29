@@ -11,9 +11,10 @@ import { defineAsyncComponent, onMounted, onUnmounted, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import { preloadRelationView } from "@/router";
 import { prefetchAllKnowledgeViews } from "@/composables/useRoutePrefetch";
+import AsyncComponentError from "@/components/AsyncComponentError.vue";
 
 const loadSearchDialog = () => import("@/components/SearchDialog.vue");
-const SearchDialog = defineAsyncComponent(loadSearchDialog);
+const SearchDialog = defineAsyncComponent({ loader: loadSearchDialog, errorComponent: AsyncComponentError });
 
 const { locale } = useI18n();
 const router = useRouter();
