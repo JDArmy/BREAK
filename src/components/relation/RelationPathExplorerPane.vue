@@ -63,17 +63,18 @@ const draftMaxPaths = ref(maxPaths.value);
 watch(() => props.relType, (val) => { startType.value = val; }, { immediate: true });
 watch(() => props.relKey, (val) => { startKey.value = val; }, { immediate: true });
 
-// 同步到父组件
-watch(startType, (val) => emit("update:startType", val));
-watch(startKey, (val) => emit("update:startKey", val));
-watch(endType, (val) => emit("update:endType", val));
-watch(endKey, (val) => emit("update:endKey", val));
-
-watch(maxDepth, (val) => {
-  draftMaxDepth.value = val;
+// 同步到父组件（合并同类 emit watch）
+watch([startType, startKey, endType, endKey], ([st, sk, et, ek], [oldSt, oldSk, oldEt, oldEk]) => {
+  if (st !== oldSt) emit("update:startType", st);
+  if (sk !== oldSk) emit("update:startKey", sk);
+  if (et !== oldEt) emit("update:endType", et);
+  if (ek !== oldEk) emit("update:endKey", ek);
 });
-watch(maxPaths, (val) => {
-  draftMaxPaths.value = val;
+
+// 滑块草稿值同步
+watch([maxDepth, maxPaths], ([d, p]) => {
+  draftMaxDepth.value = d;
+  draftMaxPaths.value = p;
 });
 
 const commitMaxDepth = (value: number | number[]) => {
