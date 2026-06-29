@@ -47,7 +47,7 @@ jobs:
       - run: npm run export:data-package
       - run: npm run validate:data-export
       - run: npm run validate:data-package
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: ci-static-data
           path: public/data
@@ -63,13 +63,13 @@ jobs:
         with:
           fetch-depth: 0
       - uses: ./.github/actions/setup-node-env
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v5
         with:
           name: ci-static-data
           path: public/data
       - run: npm run build-only
       - run: npm run audit:bundle:check
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: ci-site-build
           path: |
@@ -116,7 +116,7 @@ jobs:
         env:
           BREAK_FORCE_RELATION_STABILITY: ${{ matrix.break-force-relation-stability }}
           BREAK_FORCE_BROWSER_REGRESSION: ${{ matrix.break-force-browser-regression }}
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         if: always() && matrix.artifact-name != ''
         with:
           name: ${{ matrix.artifact-name }}

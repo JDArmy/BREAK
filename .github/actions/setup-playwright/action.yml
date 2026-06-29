@@ -22,7 +22,7 @@ runs:
           ${{ runner.os }}-playwright-
     - run: npx playwright install --with-deps chromium
       shell: bash
-    - uses: actions/download-artifact@v4
+    - uses: actions/download-artifact@v5
       with:
         name: ${{ inputs.artifact-name }}
         path: ${{ inputs.artifact-path }}

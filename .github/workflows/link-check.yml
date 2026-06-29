@@ -30,7 +30,7 @@ jobs:
           exit 0
       - name: Upload reference health report
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: reference-health-report
           path: |
@@ -39,7 +39,7 @@ jobs:
           if-no-files-found: ignore
       - name: Create or update Issue on failure
         if: steps.link-check.outputs.exit_code != '0'
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const fs = require('fs');
@@ -113,7 +113,7 @@ jobs:
             }
       - name: Close resolved Issue
         if: steps.link-check.outputs.exit_code == '0'
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const marker = '<!-- BREAK_REFERENCE_HEALTH -->';
