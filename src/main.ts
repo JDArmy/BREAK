@@ -14,10 +14,54 @@ app.config.errorHandler = (err, instance, info) => {
   console.error('Vue Error:', err);
   console.error('Component:', instance);
   console.error('Info:', info);
+  // Vue 异步组件（defineAsyncComponent）加载失败也走此处
+  if (isChunkLoadError(err)) {
+    handleChunkLoadError();
+  }
 };
 
 app.use(i18n);
 app.use(router);
+
+// ─── Chunk 加载失败自动刷新（部署更新后旧资源 404/500） ───
+const CHUNK_RELOAD_KEY = "__break_chunk_reload__";
+
+function isChunkLoadError(error: unknown): boolean {
+  if (!(error instanceof Error)) return false;
+  const msg = error.message;
+  return (
+    /Failed to fetch dynamically imported module/i.test(msg) ||
+    /Loading chunk [\w.-]+ failed/i.test(msg) ||
+    /Loading CSS chunk [\w.-]+ failed/i.test(msg)
+  );
+}
+
+function handleChunkLoadError() {
+  const currentPath = window.location.hash.slice(1) || window.location.pathname || "/";
+  const reloadRecord = sessionStorage.getItem(CHUNK_RELOAD_KEY);
+  // 同一路径只自动刷新 1 次，避免无限循环
+  if (reloadRecord !== currentPath) {
+    sessionStorage.setItem(CHUNK_RELOAD_KEY, currentPath);
+    console.warn("[BREAK] Chunk 加载失败，自动刷新页面");
+    window.location.reload();
+    return;
+  }
+  // 已经刷新过仍然失败，清除标记
+  sessionStorage.removeItem(CHUNK_RELOAD_KEY);
+}
+
+// 捕获非 Vue 管理的动态 import 失败（如 router lazy load 等 Promise rejection）
+window.addEventListener("unhandledrejection", (event) => {
+  if (isChunkLoadError(event.reason)) {
+    event.preventDefault();
+    handleChunkLoadError();
+  }
+});
+
+// 页面正常加载成功后清除刷新标记
+window.addEventListener("load", () => {
+  sessionStorage.removeItem(CHUNK_RELOAD_KEY);
+});
 
 const isEnglishLocale = initialLocale === "en";
 const shouldLoadInitialLocaleBeforeMount =

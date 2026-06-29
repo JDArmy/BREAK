@@ -310,4 +310,31 @@ router.beforeEach((to) => {
   }
 });
 
+// 全局动态 import 失败处理：部署更新后旧 chunk 不存在，由 main.ts 的
+// unhandledrejection 监听统一处理自动刷新。router.onError 作为补充拦截，
+// 防止路由级 chunk 错误被 Vue 吞掉而不触发 unhandledrejection。
+router.onError((error) => {
+  if (isChunkLoadError(error)) {
+    const CHUNK_RELOAD_KEY = "__break_chunk_reload__";
+    const currentPath = window.location.hash.slice(1) || "/";
+    if (sessionStorage.getItem(CHUNK_RELOAD_KEY) !== currentPath) {
+      sessionStorage.setItem(CHUNK_RELOAD_KEY, currentPath);
+      console.warn("[router] Chunk 加载失败，自动刷新页面:", error.message);
+      window.location.reload();
+    } else {
+      sessionStorage.removeItem(CHUNK_RELOAD_KEY);
+    }
+  }
+});
+
+function isChunkLoadError(error: unknown): boolean {
+  if (!(error instanceof Error)) return false;
+  const msg = error.message;
+  return (
+    /Failed to fetch dynamically imported module/i.test(msg) ||
+    /Loading chunk [\w.-]+ failed/i.test(msg) ||
+    /Loading CSS chunk [\w.-]+ failed/i.test(msg)
+  );
+}
+
 export default router;

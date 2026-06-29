@@ -29,6 +29,17 @@ const loadRelationView = () => {
   }).catch((err) => {
     if (cancelled) return;
     console.error("[RelationRouteShell] 加载关系视图失败:", err);
+    // chunk 加载失败（部署更新）：自动刷新一次
+    if (err instanceof TypeError && /fetch|module/i.test(err.message)) {
+      const key = "__break_chunk_reload__";
+      const path = window.location.hash.slice(1) || "/";
+      if (sessionStorage.getItem(key) !== path) {
+        sessionStorage.setItem(key, path);
+        window.location.reload();
+        return;
+      }
+      sessionStorage.removeItem(key);
+    }
     loadError.value = true;
   });
 };
