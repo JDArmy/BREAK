@@ -614,7 +614,7 @@ onBeforeUnmount(() => {
 .knowledge-page {
   display: flex;
   gap: 0;
-  height: calc(100dvh - 150px);
+  height: 100%;
   min-height: 520px;
 }
 
@@ -867,7 +867,7 @@ html.dark .knowledge-badge.ac04 {
 .knowledge-mobile {
   display: flex;
   flex-direction: column;
-  height: calc(100dvh - 150px);
+  height: 100%;
   min-height: 420px;
 }
 
