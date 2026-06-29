@@ -131,7 +131,6 @@ const enKeywordCategories = [
 
 const issues = [];
 const keywordIssues = [];
-const usageExampleIssues = [];
 
 function addIssue(message) {
   issues.push(message);
@@ -206,7 +205,7 @@ for (const category of categories) {
         const hasTitleOrAlias = titleParts.some((part) => entity.usageExample.includes(part)) ||
           aliases.some((alias) => alias && entity.usageExample.includes(alias));
         if (!hasTitleOrAlias) {
-          usageExampleIssues.push(`${filePath}.${key}: usageExample 未包含 title("${title}") 或 aliases`);
+          addIssue(`${filePath}.${key}: usageExample 未包含 title("${title}") 或 aliases`);
         }
       }
     }
@@ -292,16 +291,6 @@ if (keywordIssues.length > 0) {
     console.error(`... 另有 ${keywordIssues.length - 80} 个问题未显示`);
   }
   process.exit(1);
-}
-
-if (usageExampleIssues.length > 0) {
-  console.warn(`\n⚠️  usageExample 待复核: ${usageExampleIssues.length} 条未包含术语名`);
-  for (const issue of usageExampleIssues.slice(0, 20)) {
-    console.warn(`  ${issue}`);
-  }
-  if (usageExampleIssues.length > 20) {
-    console.warn(`  ... 另有 ${usageExampleIssues.length - 20} 条未显示`);
-  }
 }
 
 console.log("\n✅ 所有 BREAK 数据均通过 Schema 校验");
