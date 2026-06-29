@@ -135,3 +135,34 @@ const scheduleMobileLocalePreload = () => {
 };
 
 window.requestAnimationFrame(scheduleMobileLocalePreload);
+
+// ─── Service Worker 注册 + 更新提示 ───
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("./sw.js")
+      .then((registration) => {
+        // 检测到新版本时提示用户
+        registration.addEventListener("updatefound", () => {
+          const newWorker = registration.installing;
+          if (!newWorker) return;
+          newWorker.addEventListener("statechange", () => {
+            if (newWorker.state === "activated" && navigator.serviceWorker.controller) {
+              ElMessage({
+                message: navigator.language?.startsWith("en")
+                  ? "New version available. Please refresh the page."
+                  : "发现新版本，请刷新页面。",
+                type: "info",
+                plain: true,
+                duration: 8000,
+                grouping: true,
+              });
+            }
+          });
+        });
+      })
+      .catch((err) => {
+        console.warn("[BREAK] Service Worker 注册失败:", err);
+      });
+  });
+}
