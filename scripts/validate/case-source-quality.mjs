@@ -239,6 +239,8 @@ const primaryDomainSuffixes = [
   'flare.io',
   'sharkteam.org',
   'shaanxijubao.cn',
+  'js12377.cn',
+  'hubeidaily.net',
   'jinyier.me',
   'bocongan.gov.vn',
   'baochinhphu.vn',
