@@ -241,6 +241,7 @@ const primaryDomainSuffixes = [
   'shaanxijubao.cn',
   'js12377.cn',
   'hubeidaily.net',
+  'gipc.gov.cn',
   'jinyier.me',
   'bocongan.gov.vn',
   'baochinhphu.vn',
@@ -322,6 +323,7 @@ const primaryReferenceLinks = new Set([
   'https://tv.cctv.cn/2026/06/16/VIDE8BAjd4ZlnMMT7J42OnrO260616.shtml', // 央视《新闻直播间》节目页，北京调包退货诈骗案
   'https://m.news.cctv.com/2021/07/19/artie58rnmechoj4v8zu2jfq210719.shtml', // 央视新闻客户端，绵阳手机积分兑换诈骗案
   'https://tv.cctv.cn/2018/10/09/VIDEBJfRxwDXNrvaPc5N7361181009.shtml', // 央视《焦点访谈》节目页，免费手环货到付款诈骗案
+  'https://tv.cctv.com/2017/09/21/VIDEJqe01aCBDDY5DvRi3h8K170921.shtml', // 央视《朝闻天下》，上海除夕夜智能电表遭攻击案
   'https://tv.cctv.com/2024/03/15/VIDEaISGnSjSjVaDWrZDsLbf240315.shtml', // 央视 3·15 晚会，同程金融礼品卡变相现金贷曝光
   'https://www.chinaums.com/tblm/aqzx2/djzldxwlzp_1905/jbzspj_1904/202209/t20220906_45358.shtml', // 银联商务转载中国支付清算协会跨境赌博资金转移案例
   'https://m.cyol.com/gb/articles/2021-10/17/content_xyzgdfvxp.html', // 中国青年报客户端来源江都警方，商户收款码非法套现案
