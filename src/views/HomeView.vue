@@ -323,12 +323,11 @@ const termDrawer = useDrawerRoute({
           }}</el-radio-button>
         </el-radio-group>
       </div>
+      <p v-if="getBusinessSceneDescription(bsKeySelected)" class="scene-description">
+        {{ getBusinessSceneDescription(bsKeySelected) }}
+      </p>
     </el-col>
   </el-row>
-
-  <p v-if="getBusinessSceneDescription(bsKeySelected)" class="scene-description">
-    {{ getBusinessSceneDescription(bsKeySelected) }}
-  </p>
 
   <div :class="{ 'scrollable-container': shouldEnableMatrixScroll }">
     <el-row>
@@ -784,14 +783,15 @@ const termDrawer = useDrawerRoute({
 }
 
 .scene-description {
-  margin: -8px 0 16px;
-  padding: 10px 16px;
+  width: 100%;
+  margin: 4px 0 0;
+  padding: 0;
   color: var(--break-text-secondary);
   font-size: 13px;
   line-height: 1.65;
-  background: var(--break-bg-soft);
-  border: 1px solid var(--break-border);
-  border-radius: 8px;
+  background: none;
+  border: none;
+  border-radius: 0;
 }
 
 .subrisk-toggle {
