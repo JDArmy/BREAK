@@ -15,7 +15,7 @@ This document describes the committed JSON data model used by the BREAK knowledg
 | ThreatActor | `src/BREAK/threat-actors` | `TA0001.json` | `TA0001 or TA0001-001` | 73 total (59 main, 14 sub) |
 | Term | `src/BREAK/terms` | `T0001.json` | `T0001` | 585 total (520 main, 65 sub) |
 | BusinessScene | `src/BREAK/business-scenes` | `BS00.json` | `BS00` | 18 total (18 main, 0 sub) |
-| Case | `src/BREAK/cases` | `C0001.json` | `C0001` | 1797 total (1797 main, 0 sub) |
+| Case | `src/BREAK/cases` | `C0001.json` | `C0001` | 1798 total (1798 main, 0 sub) |
 
 Parent and child records live in the parent JSON file. For example, `R0001-001` belongs in `src/BREAK/risks/R0001.json`.
 
