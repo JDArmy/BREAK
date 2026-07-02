@@ -1,5 +1,10 @@
 [
   {
+    "version": "2.34.0",
+    "summary": "移动端新增「点击顶部 banner 标题区滚回顶部」交互：",
+    "body": "移动端新增「点击顶部 banner 标题区滚回顶部」交互：\n\n- 新增 `src/utils/dom.ts` 工具函数 `scrollActiveContainerToTop`：定位 App 主内容区 `.el-main`，在其子树内深度优先查找第一个可见且内容溢出的可滚动元素（overflow-y 为 auto/scroll 且 scrollHeight > clientHeight），平滑滚到顶部；找不到则回退到 `.el-main` 自身或 `window`。滚动容器不在 banner 祖先链上（el-main 是 el-header 的兄弟），故不采用向上找祖先的方式，自动适配各页面不同滚动容器\n- `MenuList.vue` 移动端中间 banner（`<h3 class=\"banner\">`）加点击事件调用上述函数，补 `role=\"button\"` / `tabindex=\"0\"` / `title` / 回车键支持；桌面端（≥768px）不响应。文案复用已有 `backtop` i18n key\n- 适配各页面滚动容器：首页 / 关系图谱（analysis/sankey/pathExplorer）/ 业务场景由 `.el-main` 滚；知识库列表态由 `.knowledge-list` 滚；详情态由 `.knowledge-detail` 滚"
+  },
+  {
     "version": "2.33.0",
     "summary": "知识库实体互引用密度评估与补足，新增文本字段引用测量与自引用检测：",
     "body": "知识库实体互引用密度评估与补足，新增文本字段引用测量与自引用检测：\n\n- **互引用密度评估**：新增 `scripts/validate/measure-cross-refs.mjs` 测量脚本，统计各实体文本字段（description/limitation/definition/influence/summary/usageExample）内嵌的实体 ID 互引用密度。基线测量显示 3215 个实体仅 2.5% 有文本引用，但结构化关系里的 20503 个引用多数是\"关系罗列\"（如一个 Risk 对应 43 个 Avoidance），全塞进文本会破坏可读性\n- **4 类知识实体互引用补足**（仅补\"语义必要\"引用：同类对比缺失 + 直接因果缺 ID，不罗列结构化关系，每实体最多 1-2 个）：\n  - Risk：9 个实体补 13 处（如 R0001 点明两个子风险 R0001-001/002、R0032-002 凭证爆破 vs R0032-003 兄弟对比、R0071-010/-011 深度伪造父子归属）\n  - Avoidance：A0010 族 5 个 limitation 补同类对抗机制对比（多开/调试器→外挂检测 A0010-004、虚拟机/无头浏览器/HOOK→模拟器检测 A0010-001）；A0006-008 自动AI生成内容识别补深度伪造检测 A0066\n  - AttackTool：6 个实体补 6 处易混工具对比（如 AT0016 云手机 vs AT0002 模拟器、AT0014-001 发包工具 vs AT0014 抓包工具、AT0049-001 脱机挂 vs AT0049 游戏外挂）\n  - ThreatActor：3 个子角色补父角色归属（TA0001-001 羊头→TA0001 羊毛党、TA0005-001 卡农→TA0005 料商、TA0015-001 金主→TA0015 电诈团伙）\n  - 引用密度提升：Risk 6.9%→9.4%、Avoidance 14.0%→16.4%、AttackTool 7.1%→12.5%、ThreatActor 8.2%→12.3%；Term/Case 保持 0（术语定义与事件摘要靠自然语言，硬塞 ID 反而不自然）\n- **修复自引用笔误**：A0006-007（自动恶意文本识别）limitation 把\"人工内容审核（A0006-001）\"误写成自身 ID A0006-007，已修正\n- **审计脚本增强**：`audit-text-id-refs.mjs` 新增自引用检测（实体文本引用自身 ID，多需人工判断是否笔误，如 A0006-007 这类；少数合法自指对比句式如 R0041 不阻断），自引用作为提示输出不计入退出码\n- 中英文翻译同步，`validate:data` + `build` 全绿"

@@ -11,7 +11,17 @@ import { defineAsyncComponent, onMounted, onUnmounted, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import { preloadRelationView } from "@/router";
 import { prefetchAllKnowledgeViews } from "@/composables/useRoutePrefetch";
+import { useBreakpoints } from "@/composables/useBreakpoints";
+import { scrollActiveContainerToTop } from "@/utils/dom";
 import AsyncComponentError from "@/components/AsyncComponentError.vue";
+
+const { isMobile } = useBreakpoints();
+
+// 移动端：点击顶部 banner 标题区，把当前页面滚动容器平滑滚回顶部
+const handleBannerClick = () => {
+  if (!isMobile.value) return;
+  scrollActiveContainerToTop();
+};
 
 const loadSearchDialog = () => import("@/components/SearchDialog.vue");
 const SearchDialog = defineAsyncComponent({ loader: loadSearchDialog, errorComponent: AsyncComponentError });
@@ -209,7 +219,16 @@ const getActiveIndex = (fullPath: string) => {
     <button class="mobile-logo-button" type="button" aria-label="JDArmy BREAK" @click="$router.push('/')">
       <img src="/logo.png" class="logo" width="50" alt="" />
     </button>
-    <h3 class="banner" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%">
+    <h3
+      class="banner"
+      :class="{ 'banner--clickable': isMobile }"
+      :title="$t('backtop')"
+      role="button"
+      tabindex="0"
+      style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%"
+      @click="handleBannerClick"
+      @keydown.enter="handleBannerClick"
+    >
       {{ $t("BREAK.name") }}
     </h3>
     <div class="mobile-nav-right" role="none">
@@ -603,6 +622,11 @@ const getActiveIndex = (fullPath: string) => {
   text-align: center;
   font-weight: 600;
   letter-spacing: 0.02em;
+}
+
+.banner--clickable {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .sm-banner {

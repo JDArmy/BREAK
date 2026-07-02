@@ -1,5 +1,13 @@
 # Change log
 
+## 2.34.0
+
+移动端新增「点击顶部 banner 标题区滚回顶部」交互：
+
+- 新增 `src/utils/dom.ts` 工具函数 `scrollActiveContainerToTop`：定位 App 主内容区 `.el-main`，在其子树内深度优先查找第一个可见且内容溢出的可滚动元素（overflow-y 为 auto/scroll 且 scrollHeight > clientHeight），平滑滚到顶部；找不到则回退到 `.el-main` 自身或 `window`。滚动容器不在 banner 祖先链上（el-main 是 el-header 的兄弟），故不采用向上找祖先的方式，自动适配各页面不同滚动容器
+- `MenuList.vue` 移动端中间 banner（`<h3 class="banner">`）加点击事件调用上述函数，补 `role="button"` / `tabindex="0"` / `title` / 回车键支持；桌面端（≥768px）不响应。文案复用已有 `backtop` i18n key
+- 适配各页面滚动容器：首页 / 关系图谱（analysis/sankey/pathExplorer）/ 业务场景由 `.el-main` 滚；知识库列表态由 `.knowledge-list` 滚；详情态由 `.knowledge-detail` 滚
+
 ## 2.33.0
 
 知识库实体互引用密度评估与补足，新增文本字段引用测量与自引用检测：
