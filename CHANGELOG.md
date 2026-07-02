@@ -1,5 +1,13 @@
 # Change log
 
+## 2.31.3
+
+消除 CI 安装期 deprecation 警告：
+
+- 通过 `package.json` overrides 将 `js-beautify` 顶到 `2.0.3`，连带 `glob` 从已废弃的 `10.5.0` 升级到 `13.0.6`
+- 根因：`@vue/test-utils@2.4.11` 依赖 `js-beautify@1.x`，后者锁定 `glob@^10`（已废弃且不再维护）
+- `js-beautify@2.0.3` API 与 `@vue/test-utils` 兼容，`npm audit` 无 glob 相关漏洞，533 个测试与构建均通过
+
 ## 2.31.2
 
 修复商业场景子风险重复显示：

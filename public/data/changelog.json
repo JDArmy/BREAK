@@ -1,5 +1,10 @@
 [
   {
+    "version": "2.31.3",
+    "summary": "消除 CI 安装期 deprecation 警告：",
+    "body": "消除 CI 安装期 deprecation 警告：\n\n- 通过 `package.json` overrides 将 `js-beautify` 顶到 `2.0.3`，连带 `glob` 从已废弃的 `10.5.0` 升级到 `13.0.6`\n- 根因：`@vue/test-utils@2.4.11` 依赖 `js-beautify@1.x`，后者锁定 `glob@^10`（已废弃且不再维护）\n- `js-beautify@2.0.3` API 与 `@vue/test-utils` 兼容，`npm audit` 无 glob 相关漏洞，533 个测试与构建均通过"
+  },
+  {
     "version": "2.31.2",
     "summary": "修复商业场景子风险重复显示：",
     "body": "修复商业场景子风险重复显示：\n\n- 新增 `business-scene-sub-risks.mjs` 校验脚本，检测并修复 riskScenes 中父子风险同时存在的重复问题\n- 清理 18 个 BS 文件中 947 处父子重复（子风险由前端 `useSubRiskToggle` 自动展开，无需在数据中显式列出）\n- 修复关系图谱商业场景影响分析：`buildBusinessSceneIndex` 自动将父风险的场景归类扩展到子风险\n- 集成到 `validate:data` 命令链，防止重复问题再次引入"

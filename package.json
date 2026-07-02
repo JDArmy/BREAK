@@ -1,6 +1,6 @@
 {
   "name": "break",
-  "version": "2.31.2",
+  "version": "2.31.3",
   "private": true,
   "type": "module",
   "engines": {
@@ -105,5 +105,8 @@
     "vite": "^8.1.0",
     "vitest": "^4.1.8",
     "vue-tsc": "^2.1.10"
+  },
+  "overrides": {
+    "js-beautify": "2.0.3"
   }
 }
