@@ -30,7 +30,7 @@ The repository also provides a Claude Code / Codex Skill definition for local kn
 
 - `SKILL.md` — Chinese Skill definition
 - `SKILL_en.md` — English Skill definition
-- `scripts/skill/break_search.py` — zero-dependency Python search engine
+- `scripts/skill/break_search.mjs` — zero-dependency Node.js search engine
 - `scripts/skill/export_en_data.mjs` — English static data export
 - `scripts/skill/package_skill.sh` — packaging script for a distributable Skill directory
 
@@ -39,9 +39,9 @@ Use it directly in this repository:
 ```shell
 npm run export:data
 npm run export:data-en
-python3 scripts/skill/break_search.py "credential stuffing" --lang en
-python3 scripts/skill/break_search.py R0001 --lang en --detail
-python3 scripts/skill/break_search.py "爬虫" --lang zh --type risks,avoidances
+node scripts/skill/break_search.mjs "credential stuffing" --lang en
+node scripts/skill/break_search.mjs R0001 --lang en --detail
+node scripts/skill/break_search.mjs "爬虫" --lang zh --type risks,avoidances
 ```
 
 Package it as a distributable Skill directory:
@@ -50,7 +50,7 @@ Package it as a distributable Skill directory:
 scripts/skill/package_skill.sh
 ```
 
-The default output is `dist/break-skill`. Copy that directory into the target agent's Skill directory. The packaged Skill contains `SKILL.md`, `SKILL_en.md`, `break_search.py`, and the generated Chinese/English data bundles.
+The default output is `dist/break-skill`. Copy that directory into the target agent's Skill directory. The packaged Skill contains `SKILL.md`, `SKILL_en.md`, `break_search.mjs`, and the generated Chinese/English data bundles.
 
 ## Collaboration & Contribution
 

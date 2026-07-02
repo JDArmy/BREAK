@@ -22,12 +22,12 @@ BREAK (Business Risk Enumeration & Avoidance Knowledge) is an open knowledge fra
 
 ## How to Invoke
 
-Execute the Python search script via Bash. The script is located at `break_search.py` in the same directory as this SKILL file.
+Execute the search script via Bash. The script is located at `break_search.mjs` in the same directory as this SKILL file.
 
 ### Basic Command Format
 
 ```bash
-python3 <skill_dir>/break_search.py "<query>" [options]
+node <skill_dir>/break_search.mjs "<query>" [options]
 ```
 
 Where `<skill_dir>` is the directory containing this SKILL file.
@@ -57,7 +57,7 @@ Upon receiving `$query`, follow this workflow:
 #### ID Lookup
 
 ```bash
-python3 <skill_dir>/break_search.py "<ID>" --lang en
+node <skill_dir>/break_search.mjs "<ID>" --lang en
 ```
 
 Returns full details including expanded relationships. Present directly to the user.
@@ -65,12 +65,12 @@ Returns full details including expanded relationships. Present directly to the u
 #### Keyword Search
 
 ```bash
-python3 <skill_dir>/break_search.py "<keyword>" --lang en
+node <skill_dir>/break_search.mjs "<keyword>" --lang en
 ```
 
 To narrow scope:
 ```bash
-python3 <skill_dir>/break_search.py "<keyword>" --type risks,avoidances --lang en
+node <skill_dir>/break_search.mjs "<keyword>" --type risks,avoidances --lang en
 ```
 
 #### Question Answering (Core Scenario)
@@ -90,13 +90,13 @@ Call the search script for each keyword set. Multiple calls are encouraged:
 
 ```bash
 # Round 1: Search the core issue
-python3 <skill_dir>/break_search.py "scraping" --lang en
+node <skill_dir>/break_search.mjs "scraping" --lang en
 
 # Round 2: Search for defenses
-python3 <skill_dir>/break_search.py "anti-bot" --type avoidances --lang en
+node <skill_dir>/break_search.mjs "anti-bot" --type avoidances --lang en
 
 # Round 3: Search related areas if needed
-python3 <skill_dir>/break_search.py "data breach" --type risks,cases --lang en
+node <skill_dir>/break_search.mjs "data breach" --type risks,cases --lang en
 ```
 
 **Step 3: Deep Dive**
@@ -105,10 +105,10 @@ Pick the most relevant entity IDs from search results for detailed lookup:
 
 ```bash
 # Get full details of the scraping risk and its avoidances
-python3 <skill_dir>/break_search.py R0027 --lang en
+node <skill_dir>/break_search.mjs R0027 --lang en
 
 # Get details of a specific avoidance
-python3 <skill_dir>/break_search.py A0003 --lang en
+node <skill_dir>/break_search.mjs A0003 --lang en
 ```
 
 **Step 4: Synthesize Answer**

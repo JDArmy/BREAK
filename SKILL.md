@@ -22,12 +22,12 @@ BREAK (Business Risk Enumeration & Avoidance Knowledge) 是一个开放的业务
 
 ## 调用方式
 
-使用 Bash 执行 Python 搜索脚本。脚本路径位于 skill 目录下的 `break_search.py`。
+使用 Bash 执行搜索脚本。脚本路径位于 skill 目录下的 `break_search.mjs`。
 
 ### 基本命令格式
 
 ```bash
-python3 <skill_dir>/break_search.py "<query>" [options]
+node <skill_dir>/break_search.mjs "<query>" [options]
 ```
 
 其中 `<skill_dir>` 为本 SKILL.md 所在的目录路径。
@@ -58,7 +58,7 @@ python3 <skill_dir>/break_search.py "<query>" [options]
 
 直接执行：
 ```bash
-python3 <skill_dir>/break_search.py "<ID>" --lang zh
+node <skill_dir>/break_search.mjs "<ID>" --lang zh
 ```
 
 返回该条目的完整详情，包括关联关系展开。直接呈现给用户。
@@ -66,12 +66,12 @@ python3 <skill_dir>/break_search.py "<ID>" --lang zh
 #### 关键词搜索
 
 ```bash
-python3 <skill_dir>/break_search.py "<关键词>" --lang zh
+node <skill_dir>/break_search.mjs "<关键词>" --lang zh
 ```
 
 如需限定范围：
 ```bash
-python3 <skill_dir>/break_search.py "<关键词>" --type risks,avoidances --lang zh
+node <skill_dir>/break_search.mjs "<关键词>" --type risks,avoidances --lang zh
 ```
 
 将搜索结果整理后呈现给用户。
@@ -93,13 +93,13 @@ python3 <skill_dir>/break_search.py "<关键词>" --type risks,avoidances --lang
 
 ```bash
 # 第一轮：直接搜索问题关键词
-python3 <skill_dir>/break_search.py "爬虫" --lang zh
+node <skill_dir>/break_search.mjs "爬虫" --lang zh
 
 # 第二轮：搜索相关风险和防御手段
-python3 <skill_dir>/break_search.py "反爬" --type avoidances --lang zh
+node <skill_dir>/break_search.mjs "反爬" --type avoidances --lang zh
 
 # 第三轮：如有需要，搜索其他相关领域
-python3 <skill_dir>/break_search.py "数据泄露" --type risks,cases --lang zh
+node <skill_dir>/break_search.mjs "数据泄露" --type risks,cases --lang zh
 ```
 
 **步骤 3：深入查询**
@@ -108,10 +108,10 @@ python3 <skill_dir>/break_search.py "数据泄露" --type risks,cases --lang zh
 
 ```bash
 # 查看爬虫风险的详情和关联规避手段
-python3 <skill_dir>/break_search.py R0027 --lang zh
+node <skill_dir>/break_search.mjs R0027 --lang zh
 
 # 查看具体规避手段的详情
-python3 <skill_dir>/break_search.py A0003 --lang zh
+node <skill_dir>/break_search.mjs A0003 --lang zh
 ```
 
 **步骤 4：综合回答**

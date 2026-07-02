@@ -36,8 +36,8 @@ mkdir -p "$OUTPUT_DIR/data"
 cp "$PROJECT_ROOT/SKILL.md" "$OUTPUT_DIR/SKILL.md"
 cp "$PROJECT_ROOT/SKILL_en.md" "$OUTPUT_DIR/SKILL_en.md"
 
-# 复制 Python 搜索脚本
-cp "$PROJECT_ROOT/scripts/skill/break_search.py" "$OUTPUT_DIR/break_search.py"
+# 复制搜索脚本
+cp "$PROJECT_ROOT/scripts/skill/break_search.mjs" "$OUTPUT_DIR/break_search.mjs"
 
 # 复制数据文件
 cp "$PROJECT_ROOT/public/data/break-data.json" "$OUTPUT_DIR/data/break-data.json"
@@ -58,7 +58,7 @@ echo "📁 目录结构:"
 echo "   $OUTPUT_DIR/"
 echo "   ├── SKILL.md              # Skill 定义（中文）"
 echo "   ├── SKILL_en.md           # Skill 定义（英文）"
-echo "   ├── break_search.py       # Python 搜索引擎"
+echo "   ├── break_search.mjs      # Node.js 搜索引擎"
 echo "   └── data/"
 echo "       ├── break-data.json   # 中文数据 ($(( ZH_SIZE / 1024 / 1024 ))MB)"
 echo "       └── break-data-en.json # 英文数据 ($(( EN_SIZE / 1024 / 1024 ))MB)"

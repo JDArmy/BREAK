@@ -30,7 +30,7 @@ JDArmy BREAK 是英文 "Business Risk Enumeration & Avoidance Knowledge" 的缩�
 
 - `SKILL.md`：中文 Skill 定义
 - `SKILL_en.md`：英文 Skill 定义
-- `scripts/skill/break_search.py`：零外部依赖 Python 搜索引擎
+- `scripts/skill/break_search.mjs`：零外部依赖 Node.js 搜索引擎
 - `scripts/skill/export_en_data.mjs`：英文静态数据导出脚本
 - `scripts/skill/package_skill.sh`：可分发 Skill 目录打包脚本
 
@@ -39,9 +39,9 @@ JDArmy BREAK 是英文 "Business Risk Enumeration & Avoidance Knowledge" 的缩�
 ```shell
 npm run export:data
 npm run export:data-en
-python3 scripts/skill/break_search.py "credential stuffing" --lang en
-python3 scripts/skill/break_search.py R0001 --lang zh --detail
-python3 scripts/skill/break_search.py "爬虫" --lang zh --type risks,avoidances
+node scripts/skill/break_search.mjs "credential stuffing" --lang en
+node scripts/skill/break_search.mjs R0001 --lang zh --detail
+node scripts/skill/break_search.mjs "爬虫" --lang zh --type risks,avoidances
 ```
 
 也可以打包成可分发的 Skill 目录：
@@ -50,7 +50,7 @@ python3 scripts/skill/break_search.py "爬虫" --lang zh --type risks,avoidances
 scripts/skill/package_skill.sh
 ```
 
-默认输出目录是 `dist/break-skill`。将该目录复制到目标 Agent 的 Skill 目录即可使用。打包产物包含 `SKILL.md`、`SKILL_en.md`、`break_search.py` 以及生成后的中英文数据包。
+默认输出目录是 `dist/break-skill`。将该目录复制到目标 Agent 的 Skill 目录即可使用。打包产物包含 `SKILL.md`、`SKILL_en.md`、`break_search.mjs` 以及生成后的中英文数据包。
 
 ## 协作 & 贡献
 
