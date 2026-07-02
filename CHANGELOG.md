@@ -1,5 +1,14 @@
 # Change log
 
+## 2.31.2
+
+修复商业场景子风险重复显示：
+
+- 新增 `business-scene-sub-risks.mjs` 校验脚本，检测并修复 riskScenes 中父子风险同时存在的重复问题
+- 清理 18 个 BS 文件中 947 处父子重复（子风险由前端 `useSubRiskToggle` 自动展开，无需在数据中显式列出）
+- 修复关系图谱商业场景影响分析：`buildBusinessSceneIndex` 自动将父风险的场景归类扩展到子风险
+- 集成到 `validate:data` 命令链，防止重复问题再次引入
+
 ## 2.31.1
 
 术语实体去重与定义质量修复：

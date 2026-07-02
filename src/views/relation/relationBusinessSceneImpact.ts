@@ -59,6 +59,22 @@ const mergeSourceFields = (existing: string[], incoming: string[]) =>
 const buildBusinessSceneIndex = () => {
   const riskToLocations = new Map<string, RiskSceneLocation[]>();
 
+  // 预计算父风险 → 子风险映射，用于将父风险的场景归类自动扩展到子风险
+  const parentToChildren = new Map<string, string[]>();
+  Object.keys(BREAK.risks).forEach((riskKey) => {
+    if (!riskKey.includes("-")) return;
+    const parentKey = riskKey.split("-")[0];
+    const children = parentToChildren.get(parentKey) ?? [];
+    children.push(riskKey);
+    parentToChildren.set(parentKey, children);
+  });
+
+  const addLocation = (riskKey: string, location: RiskSceneLocation) => {
+    const locations = riskToLocations.get(riskKey) ?? [];
+    locations.push(location);
+    riskToLocations.set(riskKey, locations);
+  };
+
   Object.entries(BREAK.businessScenes).forEach(([businessSceneId, scene]) => {
     Object.entries(scene.riskDimensions).forEach(
       ([riskDimensionId, dimension]) => {
@@ -66,14 +82,26 @@ const buildBusinessSceneIndex = () => {
           const riskScene = scene.riskScenes[riskSceneId];
           if (!riskScene) return;
 
+          const risksInScene = new Set(riskScene.risks);
+
           riskScene.risks.forEach((riskKey) => {
-            const locations = riskToLocations.get(riskKey) ?? [];
-            locations.push({
+            const location: RiskSceneLocation = {
               businessSceneId,
               riskDimensionId,
               riskSceneId,
-            });
-            riskToLocations.set(riskKey, locations);
+            };
+            addLocation(riskKey, location);
+
+            // 父风险的场景归类自动扩展到子风险（BS 数据中只保留父风险 ID，
+            // 子风险由此处自动继承，避免数据层重复维护）
+            const children = parentToChildren.get(riskKey);
+            if (children) {
+              children.forEach((childKey) => {
+                if (!risksInScene.has(childKey)) {
+                  addLocation(childKey, location);
+                }
+              });
+            }
           });
         });
       },
