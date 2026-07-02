@@ -234,7 +234,7 @@ try {
       resourceErrors.push(`${fixture.type}/${fixture.key}: ${response.request().method()} ${response.url()} returned HTTP ${status}`);
     });
 
-    await page.goto(`${baseUrl}/#/relation/${fixture.type}/${fixture.key}?view=network`, {
+    await page.goto(`${baseUrl}/#/relations/risk-relation/${fixture.type}/${fixture.key}?view=network`, {
       waitUntil: 'networkidle',
       timeout: 30000,
     });

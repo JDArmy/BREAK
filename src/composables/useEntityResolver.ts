@@ -73,7 +73,9 @@ export function useEntityResolver() {
 
     // 懒加载数据源：触发加载（不阻塞，Promise 忽略）
     if (entry.dataSource === "lazy" && !loaded.value) {
-      void ensureCases();
+      void Promise.resolve(ensureCases()).catch(() => {
+        // 加载失败由 useCases.loadError 维护，解析器下次触发会重试
+      });
     }
 
     const prefix = entityI18nPrefix(id, type);

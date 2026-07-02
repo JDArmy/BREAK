@@ -24,7 +24,9 @@ export function useLazyCasesSection(
     observer = new IntersectionObserver(
       (entries) => {
         if (entries.some((entry) => entry.isIntersecting)) {
-          void trigger();
+          Promise.resolve(trigger()).catch(() => {
+            // 加载失败由 useCases.loadError 维护，滚入视区时已触发过一次
+          });
           observer?.disconnect();
           observer = null;
         }

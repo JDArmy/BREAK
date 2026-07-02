@@ -16,13 +16,16 @@ const error = ref(false);
 
 const selectedVersion = ref("");
 
-onMounted(async () => {
+const loadChangelog = async () => {
+  // 重试时重置状态，确保列表区重新展示加载中而非残留失败态
+  loading.value = true;
+  error.value = false;
   try {
     const resp = await fetch(`${import.meta.env.BASE_URL}data/changelog.json`);
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
     const data: ChangelogEntry[] = await resp.json();
     entries.value = data;
-    if (data.length > 0) {
+    if (data.length > 0 && !selectedVersion.value) {
       selectedVersion.value = data[0].version;
     }
   } catch {
@@ -30,7 +33,13 @@ onMounted(async () => {
   } finally {
     loading.value = false;
   }
-});
+};
+
+onMounted(loadChangelog);
+
+const retryLoad = () => {
+  void loadChangelog();
+};
 
 const items = computed(() =>
   entries.value.map((entry) => ({
@@ -121,21 +130,17 @@ function inlineFormat(text: string): string {
 </script>
 
 <template>
-  <div v-if="loading" class="changelog-loading">
-    {{ t("loading") }}...
-  </div>
-  <div v-else-if="error" class="changelog-error">
-    {{ t("error.dataLoadFailed") }}
-  </div>
   <KnowledgeSplitView
-    v-else
     :title="t('menu.changelog')"
     route-name="changelog"
     param-key="version"
     :items="items"
     :selected-key="selectedVersion"
     :search-placeholder="t('search.changelogPlaceholder')"
+    :loading="loading"
+    :load-error="error"
     @select="selectedVersion = $event"
+    @retry="retryLoad"
   >
     <article v-if="selectedEntry" class="detail-panel changelog-detail">
       <div class="detail-heading">
@@ -152,16 +157,6 @@ function inlineFormat(text: string): string {
 </template>
 
 <style scoped>
-.changelog-loading,
-.changelog-error {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 400px;
-  color: var(--break-text-muted);
-  font-size: 14px;
-}
-
 .changelog-detail {
   max-width: 960px;
 }

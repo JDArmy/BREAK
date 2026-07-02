@@ -1,5 +1,18 @@
 # Change log
 
+## 2.32.0
+
+异步加载失败处理与列表空态三态统一：
+
+- `useCases` 新增 `loadError` 状态：案例首次加载失败时不再静默 reject 成未处理异常，改为记录错误态供 UI 反映，并保留“失败即拒绝”契约以便重试
+- `KnowledgeSplitView` 新增 `loading` / `loadError` / `errorTextKey` props 与 `retry` emit，列表区统一“加载中 / 加载失败+重试 / 未找到匹配结果”三态空态（失败态优先级最高），失败文案可通过 `errorTextKey` 覆盖（默认通用 `error.dataLoadFailed`，案例传 `error.caseSyncFailed`）
+- `CasesView` 采用新三态：加载中显示转圈、加载失败显示“案例数据加载失败”+点击重试，不再误显示“未找到匹配结果”或永久转圈
+- `ChangelogView` 改造为复用 `KnowledgeSplitView` 三态：移除外层 `v-if/v-else-if`（此前加载中/失败时侧栏+详情栏布局塌掉只剩一行字），失败时提供重试按钮
+- `useDrawerRoute` 的 `validateKey` 包 try/catch：`loadFullBREAK` 失败时（非 chunk 错误）抽屉不再静默打不开，改为跳首页 + 弹错误提示；chunk 加载失败仍由 `main.ts` 全局兜底自动刷新
+- 其他 `ensureCases` 调用方（`useEntityResolver` / `useLazyCasesSection` / `SearchDialog`）补 `Promise.resolve(...).catch()` 兜底，消除未处理 Promise rejection
+- 新增 6 个测试覆盖加载中、加载失败+重试、失败态优先级、失败文案可定制、validateKey 抛错跳首页等场景
+- 修复 `relation-stability` 测试脚本 URL：路由早已从 `/relation/:type/:key` 重构为 `/relations/risk-relation/:entity/:id`，测试 URL 未同步导致该次版本 gate 误失败
+
 ## 2.31.3
 
 消除 CI 安装期 deprecation 警告：

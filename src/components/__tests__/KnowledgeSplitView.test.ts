@@ -191,6 +191,60 @@ describe("KnowledgeSplitView", () => {
     expect(wrapper.findAll(".knowledge-list-item")).toHaveLength(0);
   });
 
+  it("加载态下空列表展示加载中提示而非未找到", () => {
+    const wrapper = mountView("R0001", { items: [], loading: true });
+
+    const empty = wrapper.find(".knowledge-empty");
+    expect(empty.exists()).toBe(true);
+    expect(empty.text()).toBe("loading");
+    expect(empty.classes()).toContain("is-loading");
+    expect(wrapper.find(".knowledge-empty-spinner").exists()).toBe(true);
+  });
+
+  it("加载态在移动端同样展示加载中提示", async () => {
+    mocks.isMobile.value = true;
+    const wrapper = mountView("R0001", { items: [], loading: true });
+    await nextTick();
+
+    const empty = wrapper.find(".knowledge-empty");
+    expect(empty.exists()).toBe(true);
+    expect(empty.text()).toBe("loading");
+  });
+
+  it("加载失败时展示失败提示与重试按钮并发出 retry 事件", async () => {
+    const wrapper = mountView("R0001", { items: [], loadError: true });
+
+    const empty = wrapper.find(".knowledge-empty");
+    expect(empty.exists()).toBe(true);
+    expect(empty.classes()).toContain("is-error");
+    // 默认失败文案为通用 error.dataLoadFailed
+    expect(empty.text()).toContain("error.dataLoadFailed");
+    expect(wrapper.find(".knowledge-empty-retry").text()).toBe("error.retry");
+
+    await wrapper.find(".knowledge-empty-retry").trigger("click");
+    expect(wrapper.emitted("retry")?.[0]).toEqual([]);
+  });
+
+  it("errorTextKey 可覆盖默认失败文案", () => {
+    const wrapper = mountView("R0001", {
+      items: [],
+      loadError: true,
+      errorTextKey: "error.caseSyncFailed",
+    });
+
+    expect(wrapper.find(".knowledge-empty").text()).toContain("error.caseSyncFailed");
+    expect(wrapper.find(".knowledge-empty").text()).not.toContain("error.dataLoadFailed");
+  });
+
+  it("加载失败态优先于加载中态", () => {
+    const wrapper = mountView("R0001", { items: [], loading: true, loadError: true });
+
+    const empty = wrapper.find(".knowledge-empty");
+    expect(empty.classes()).toContain("is-error");
+    expect(empty.classes()).not.toContain("is-loading");
+    expect(empty.text()).toContain("error.dataLoadFailed");
+  });
+
   it("开启虚拟列表时只渲染可见窗口并可滚动到末尾条目", async () => {
     const manyItems = Array.from({ length: 240 }, (_, index) => {
       const n = String(index + 1).padStart(4, "0");

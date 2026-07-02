@@ -1,5 +1,10 @@
 [
   {
+    "version": "2.32.0",
+    "summary": "异步加载失败处理与列表空态三态统一：",
+    "body": "异步加载失败处理与列表空态三态统一：\n\n- `useCases` 新增 `loadError` 状态：案例首次加载失败时不再静默 reject 成未处理异常，改为记录错误态供 UI 反映，并保留“失败即拒绝”契约以便重试\n- `KnowledgeSplitView` 新增 `loading` / `loadError` / `errorTextKey` props 与 `retry` emit，列表区统一“加载中 / 加载失败+重试 / 未找到匹配结果”三态空态（失败态优先级最高），失败文案可通过 `errorTextKey` 覆盖（默认通用 `error.dataLoadFailed`，案例传 `error.caseSyncFailed`）\n- `CasesView` 采用新三态：加载中显示转圈、加载失败显示“案例数据加载失败”+点击重试，不再误显示“未找到匹配结果”或永久转圈\n- `ChangelogView` 改造为复用 `KnowledgeSplitView` 三态：移除外层 `v-if/v-else-if`（此前加载中/失败时侧栏+详情栏布局塌掉只剩一行字），失败时提供重试按钮\n- `useDrawerRoute` 的 `validateKey` 包 try/catch：`loadFullBREAK` 失败时（非 chunk 错误）抽屉不再静默打不开，改为跳首页 + 弹错误提示；chunk 加载失败仍由 `main.ts` 全局兜底自动刷新\n- 其他 `ensureCases` 调用方（`useEntityResolver` / `useLazyCasesSection` / `SearchDialog`）补 `Promise.resolve(...).catch()` 兜底，消除未处理 Promise rejection\n- 新增 6 个测试覆盖加载中、加载失败+重试、失败态优先级、失败文案可定制、validateKey 抛错跳首页等场景"
+  },
+  {
     "version": "2.31.3",
     "summary": "消除 CI 安装期 deprecation 警告：",
     "body": "消除 CI 安装期 deprecation 警告：\n\n- 通过 `package.json` overrides 将 `js-beautify` 顶到 `2.0.3`，连带 `glob` 从已废弃的 `10.5.0` 升级到 `13.0.6`\n- 根因：`@vue/test-utils@2.4.11` 依赖 `js-beautify@1.x`，后者锁定 `glob@^10`（已废弃且不再维护）\n- `js-beautify@2.0.3` API 与 `@vue/test-utils` 兼容，`npm audit` 无 glob 相关漏洞，533 个测试与构建均通过"

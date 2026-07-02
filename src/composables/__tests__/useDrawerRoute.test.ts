@@ -1,6 +1,7 @@
 import { mount } from "@vue/test-utils";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { defineComponent, nextTick } from "vue";
+import { ElMessage } from "element-plus";
 
 const mocks = vi.hoisted(() => ({
   route: {
@@ -16,6 +17,14 @@ const mocks = vi.hoisted(() => ({
 vi.mock("vue-router", () => ({
   useRoute: () => mocks.route,
   useRouter: () => mocks.router,
+}));
+
+vi.mock("vue-i18n", () => ({
+  useI18n: () => ({ t: (key: string) => key }),
+}));
+
+vi.mock("element-plus", () => ({
+  ElMessage: vi.fn(),
 }));
 
 const flush = async () => {
@@ -137,5 +146,28 @@ describe("useDrawerRoute", () => {
     });
     callback.state.close();
     expect(customClose).toHaveBeenCalledTimes(1);
+  });
+
+  it("异步验证抛错时跳转首页并提示失败", async () => {
+    mocks.route.name = "homeAvoidanceDetail";
+    mocks.route.params = { aKey: "A0001" };
+
+    const { state } = await mountHost({
+      routeNames: ["homeAvoidanceDetail"],
+      routeParam: "aKey",
+      validateKey: async () => {
+        throw new Error("加载失败");
+      },
+    });
+
+    await flush();
+    // 抛错后抽屉不应打开
+    expect(state.drawerVisible.value).toBe(false);
+    // 跳回首页
+    expect(mocks.router.replace).toHaveBeenCalledWith({ name: "home" });
+    // 弹出失败提示
+    expect(ElMessage).toHaveBeenCalledWith(
+      expect.objectContaining({ type: "error" })
+    );
   });
 });

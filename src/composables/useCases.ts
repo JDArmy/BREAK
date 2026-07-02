@@ -9,6 +9,7 @@ import { i18n } from "@/i18n";
 // 中文：src/BREAK/cases 原始数据；英文：src/i18n/en/.generated/cases.json 预合并数据。
 const cases = ref<Cases>({});
 const loaded = ref(false);
+const loadError = ref(false);
 let cnLoadingPromise: Promise<Cases> | null = null;
 let localeWatchRegistered = false;
 
@@ -74,7 +75,10 @@ export function useCases() {
   registerLocaleWatcher(locale);
 
   const ensureCases = async (): Promise<void> => {
-    if (!loaded.value) {
+    if (loaded.value) return;
+    // 重试时先清错误态
+    loadError.value = false;
+    try {
       if (locale.value === "en") {
         // 英文 locale 直接加载预合并数据，无需先加载中文
         await applyEnTranslations();
@@ -82,8 +86,14 @@ export function useCases() {
         cases.value = await loadCnCases();
       }
       loaded.value = true;
+    } catch (err) {
+      // 首次加载失败：记录错误态供 UI 展示失败提示与重试入口，并 rethrow 保留“失败即拒绝”契约，
+      // 供调用方（如测试、相关案例反查）感知失败；UI 层通过 loadError 反映状态而非依赖 rejection。
+      console.error("[useCases] 加载案例数据失败:", err);
+      loadError.value = true;
+      throw err;
     }
   };
 
-  return { cases, loaded, ensureCases };
+  return { cases, loaded, loadError, ensureCases };
 }

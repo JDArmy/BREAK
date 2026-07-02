@@ -1,5 +1,7 @@
 import { ref, watch } from "vue";
 import { useRouter, useRoute } from "vue-router";
+import { useI18n } from "vue-i18n";
+import { ElMessage } from "element-plus";
 
 interface DrawerConfig {
   /** 触发该抽屉的路由名称（可多个，如 riskDetail + businessSceneRiskDetail） */
@@ -21,6 +23,7 @@ interface DrawerConfig {
 export function useDrawerRoute(config: DrawerConfig) {
   const router = useRouter();
   const route = useRoute();
+  const { t } = useI18n();
 
   const drawerVisible = ref(false);
   const entityKey = ref("");
@@ -40,7 +43,23 @@ export function useDrawerRoute(config: DrawerConfig) {
 
         // 如果有异步验证函数，等待验证
         if (config.validateKey) {
-          const isValid = await config.validateKey(nextKey);
+          let isValid: boolean;
+          try {
+            isValid = await config.validateKey(nextKey);
+          } catch (err) {
+            // validateKey 抛错（如 loadFullBREAK 加载失败）：抽屉无法打开，
+            // 跳回首页并提示。chunk 加载失败由 main.ts 全局兜底自动刷新，此处只兜非 chunk 错误。
+            console.error("[useDrawerRoute] 验证 key 失败:", err);
+            ElMessage({
+              message: t("error.dataLoadFailed"),
+              type: "error",
+              plain: true,
+              duration: 3000,
+              grouping: true,
+            });
+            router.replace({ name: "home" });
+            return;
+          }
           // 路由可能在 await 期间变化，需要重新检查
           if (
             route.name !== routeName ||

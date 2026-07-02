@@ -9,9 +9,22 @@ import { useCases } from "@/composables/useCases";
 
 const route = useRoute();
 const { t } = useI18n();
-const { cases, ensureCases } = useCases();
+const { cases, loaded, loadError, ensureCases } = useCases();
 
-void ensureCases();
+// ensureCases 失败时会设置 loadError 并 rethrow；此处捕获以避免未处理的 Promise 拒绝，
+// 失败状态已通过 loadError 反映到 UI（失败提示 + 重试入口）。
+const loadCasesQuietly = () => {
+  ensureCases().catch(() => {
+    /* 错误态已由 useCases 的 loadError 维护，UI 据此展示重试入口 */
+  });
+};
+
+loadCasesQuietly();
+
+const retryLoadCases = () => {
+  // loadError 已在 ensureCases 内部重置，此处直接重新触发加载
+  loadCasesQuietly();
+};
 
 // category 值规范化为 key（兼容历史中文值与新 key）
 const CATEGORY_ZH_TO_KEY: Record<string, string> = {
@@ -109,8 +122,12 @@ watch(selectedCategory, () => {
     :items="caseItems"
     :selected-key="selectedCaseKey"
     :search-placeholder="$t('search.casePlaceholder')"
+    :loading="!loaded"
+    :load-error="loadError"
+    error-text-key="error.caseSyncFailed"
     virtual-list
     @select="selectedCaseKey = $event"
+    @retry="retryLoadCases"
   >
     <template #filters>
       <el-select

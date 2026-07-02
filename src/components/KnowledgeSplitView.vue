@@ -23,10 +23,17 @@ const props = defineProps<{
   selectedKey: string;
   searchPlaceholder: string;
   virtualList?: boolean;
+  /** 列表数据是否仍在加载（懒加载场景）。加载中且无匹配项时展示“加载中”而非“未找到匹配结果”。 */
+  loading?: boolean;
+  /** 列表数据加载失败。失败态优先于加载中与无结果，展示失败提示与重试入口。 */
+  loadError?: boolean;
+  /** 加载失败提示文案的 i18n key，默认 error.dataLoadFailed。cases 等专属场景可传 error.caseSyncFailed。 */
+  errorTextKey?: string;
 }>();
 
 const emit = defineEmits<{
   select: [key: string];
+  retry: [];
 }>();
 
 const route = useRoute();
@@ -150,6 +157,21 @@ const filteredItems = computed(() => {
       .some((value) => value?.toLowerCase().includes(keyword))
   );
 });
+
+// 懒加载场景（如 cases）：数据未加载完成时列表为空，此时应提示“加载中”而非“未找到匹配结果”。
+// 加载态优先于“未找到”——数据未就绪时即便输入了查询词，也不能下“无匹配”结论。
+// 失败态优先于加载态，故加载态需排除已失败的情况。
+const isLoadingEmpty = computed(
+  () => !!props.loading && !props.loadError && filteredItems.value.length === 0
+);
+
+// 加载失败态：最高优先级，展示失败提示与重试入口。
+const isErrorEmpty = computed(
+  () => !!props.loadError && filteredItems.value.length === 0
+);
+
+// 失败提示文案 i18n key：默认通用 dataLoadFailed，调用方可覆盖（如 cases 传 caseSyncFailed）。
+const errorTextKey = computed(() => props.errorTextKey || "error.dataLoadFailed");
 
 const virtualStartIndex = computed(() => {
   if (!props.virtualList) return 0;
@@ -508,8 +530,21 @@ onBeforeUnmount(() => {
           class="knowledge-virtual-spacer"
           :style="{ height: virtualBottomSpacerHeight + 'px' }"
         />
-        <div v-if="filteredItems.length === 0" class="knowledge-empty">
-          {{ $t("search.noResults") }}
+        <div
+          v-if="filteredItems.length === 0"
+          class="knowledge-empty"
+          :class="{ 'is-loading': isLoadingEmpty, 'is-error': isErrorEmpty }"
+        >
+          <span v-if="isLoadingEmpty" class="knowledge-empty-spinner" aria-hidden="true"></span>
+          <template v-if="isErrorEmpty">
+            <span class="knowledge-empty-text">{{ $t(errorTextKey) }}</span>
+            <button type="button" class="knowledge-empty-retry" @click="emit('retry')">
+              {{ $t("error.retry") }}
+            </button>
+          </template>
+          <template v-else>
+            {{ isLoadingEmpty ? $t("loading") : $t("search.noResults") }}
+          </template>
         </div>
       </div>
     </aside>
@@ -582,8 +617,21 @@ onBeforeUnmount(() => {
             class="knowledge-virtual-spacer"
             :style="{ height: virtualBottomSpacerHeight + 'px' }"
           />
-          <div v-if="filteredItems.length === 0" class="knowledge-empty">
-            {{ $t("search.noResults") }}
+          <div
+            v-if="filteredItems.length === 0"
+            class="knowledge-empty"
+            :class="{ 'is-loading': isLoadingEmpty, 'is-error': isErrorEmpty }"
+          >
+            <span v-if="isLoadingEmpty" class="knowledge-empty-spinner" aria-hidden="true"></span>
+            <template v-if="isErrorEmpty">
+              <span class="knowledge-empty-text">{{ $t(errorTextKey) }}</span>
+              <button type="button" class="knowledge-empty-retry" @click="emit('retry')">
+                {{ $t("error.retry") }}
+              </button>
+            </template>
+            <template v-else>
+              {{ isLoadingEmpty ? $t("loading") : $t("search.noResults") }}
+            </template>
           </div>
         </div>
       </aside>
@@ -1012,5 +1060,54 @@ html.dark .knowledge-badge.ac04 {
   border-radius: 0 0 8px 8px;
   border-top: none;
   padding: 16px 18px 24px;
+}
+
+.knowledge-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 24px 12px;
+  color: var(--break-text-muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+.knowledge-empty.is-error {
+  color: var(--break-text-secondary);
+}
+
+.knowledge-empty-spinner {
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--break-border);
+  border-top-color: var(--break-link);
+  border-radius: 50%;
+  animation: knowledge-empty-spin 0.8s linear infinite;
+  flex-shrink: 0;
+}
+
+.knowledge-empty-retry {
+  flex-shrink: 0;
+  padding: 2px 10px;
+  border: 1px solid var(--break-border);
+  border-radius: 4px;
+  background: var(--break-bg-card);
+  color: var(--break-link);
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.knowledge-empty-retry:hover,
+.knowledge-empty-retry:active {
+  background: var(--break-highlight-bg);
+  border-color: var(--break-highlight-border);
+}
+
+@keyframes knowledge-empty-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 </style>
