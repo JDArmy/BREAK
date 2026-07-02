@@ -10,7 +10,7 @@
       "social engineering"
     ],
     "definition": "Repeated delivery of authentication or approval prompts intended to pressure users into consent.",
-    "description": "Push Bombing is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "Push bombing floods a user with login or approval notifications to pressure accidental consent. It can support account takeover, enterprise VPN intrusion, and approval of privileged actions. Controls focus on challenge throttling, risky-login blocking, clear request-origin display, and abnormal-approval alerts.",
     "usageExample": "Assess Push Bombing related exposure and define the corresponding controls.",
     "references": [
       {

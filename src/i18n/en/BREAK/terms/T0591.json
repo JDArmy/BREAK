@@ -10,7 +10,7 @@
       "identity proof"
     ],
     "definition": "A decentralized identifier that enables verifiable, self-managed digital identity without a central registry dependency.",
-    "description": "DID is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "DIDs let subjects manage verifiable identifiers without depending on a centralized registry. They are useful for verifiable credentials, cross-platform identity, and decentralized trust, but require governance for key recovery, identifier resolution, privacy correlation, and ecosystem interoperability.",
     "usageExample": "Assess DID related exposure and define the corresponding controls.",
     "references": [
       {

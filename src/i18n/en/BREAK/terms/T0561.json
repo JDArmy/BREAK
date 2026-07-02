@@ -10,7 +10,7 @@
       "ad fraud"
     ],
     "definition": "A mobile attribution fraud technique that inserts fake clicks shortly before conversion to steal credit.",
-    "description": "Click Injection is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "Click injection inserts fake clicks shortly before a real install or conversion to steal attribution credit. It is common in mobile advertising and can abuse app permissions, background monitoring, or SDK behavior. Controls focus on click-to-install time distributions, device behavior, channel baselines, and anomalous SDK detection.",
     "usageExample": "Assess Click Injection related exposure and define the corresponding controls.",
     "references": [
       {

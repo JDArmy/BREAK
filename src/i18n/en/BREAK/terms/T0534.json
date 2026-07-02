@@ -10,7 +10,7 @@
       "provenance verification"
     ],
     "definition": "A mechanism that cryptographically signs build artifacts so consumers can verify origin and integrity.",
-    "description": "Build Signing is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "Build signing lets consumers verify that an artifact came from a trusted pipeline and was not modified after build. It is usually paired with key management, provenance attestations, repository policy, and deployment admission. Reviews should examine signing-key protection, what is covered by the signature, whether verification is mandatory, and rollback behavior.",
     "usageExample": "Assess Build Signing related exposure and define the corresponding controls.",
     "references": [
       {

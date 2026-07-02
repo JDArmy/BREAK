@@ -7,7 +7,7 @@
       "CDN缓存键"
     ],
     "definition": "CDN 用于判断两个请求是否映射到同一缓存对象的请求属性。",
-    "description": "CDN 缓存键在 BREAK 业务安全分析中用于识别相关风险、滥用模式、控制要求及运营信号。",
+    "description": "CDN 缓存键决定请求如何命中同一个缓存对象。若 Host、路径、查询参数、Header 或认证上下文未正确纳入缓存键，可能导致跨用户内容混淆、缓存投毒或敏感页面被缓存。治理重点是缓存策略审计和动态内容隔离。",
     "usageExample": "攻击者构造特殊的CDN缓存键参数，使缓存服务器存储含恶意脚本的响应页面，后续用户请求时被投毒内容命中。",
     "relatedRisks": [
       "R0226",
@@ -25,6 +25,7 @@
         "link": "https://www.nist.gov/cyberframework"
       }
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-07-02",
+    "version": 2
   }
 }

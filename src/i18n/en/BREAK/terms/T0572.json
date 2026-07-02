@@ -10,7 +10,7 @@
       "hallucination review"
     ],
     "definition": "Review and monitoring of model outputs for safety, privacy, compliance, accuracy, and policy violations.",
-    "description": "Model Output Audit is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "Model output audit detects privacy leakage, policy violations, hallucinations, unauthorized advice, and safety bypasses in model responses. It can combine rules, classifiers, human review, and user feedback. The key is to cover high-risk scenarios, preserve traceable evidence, and feed findings back into retrieval, prompts, and model governance.",
     "usageExample": "Assess Model Output Audit related exposure and define the corresponding controls.",
     "references": [
       {

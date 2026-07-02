@@ -1,6 +1,6 @@
 {
   "T0098": {
-    "title": "Forced Account Login",
+    "title": "Forced Account Takeover",
     "keywords": [
       "Forced Account Login",
       "forced login",
@@ -9,12 +9,23 @@
       "ATO",
       "unauthorized login",
       "forced session",
-      "credential hijack"
+      "credential hijack",
+      "Forced Account Takeover",
+      "account hijacking",
+      "credential stuffing",
+      "session hijacking",
+      "unauthorized access",
+      "account compromise",
+      "credential takeover"
     ],
-    "aliases": [],
+    "aliases": [
+      "forced login",
+      "account forced login",
+      "unauthorized account access"
+    ],
     "category": "Data Leakage",
-    "definition": "The act of forcibly logging into user accounts using technical means to steal internal sensitive information.",
-    "description": "Attackers exploit vulnerabilities or use credential-stuffing techniques to breach platform defenses and forcibly access user account backends, stealing order details, addresses, and other private data. This high-value information is then packaged and sold to downstream fraud or marketing groups. In data-trading advertisements, the term “forced login” is often used to indicate the data’s source and freshness.",
+    "definition": "Unauthorized account takeover performed through credential stuffing, vulnerability exploitation, malware, or authentication bypass without the user's knowledge.",
+    "description": "Forced account takeover centers on unauthorized login and control of an account. Common methods include credential stuffing, password spraying, session hijacking, vulnerability exploitation, malware-based credential theft, and MFA bypass. After access is obtained, criminals may steal orders, balances, contacts, messages, enterprise backend data, or use the account for further fraud.\n\nIn underground data markets, the term also signals that the data came from live account access and may be fresh or actionable. Controls focus on anomalous login detection, credential-exposure monitoring, device and session risk scoring, step-up verification for sensitive actions, and rapid post-takeover response.",
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",

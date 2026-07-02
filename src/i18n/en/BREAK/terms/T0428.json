@@ -1,7 +1,8 @@
 {
   "T0428": {
-    "title": "Commission Rate",
+    "title": "Credit-Fraud Service Fee Rate",
     "keywords": [
+      "Credit-Fraud Service Fee Rate",
       "Commission Rate",
       "commission percentage",
       "service fee rate",
@@ -13,8 +14,8 @@
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "The service fee percentage charged by fraud syndicates to clients based on the risk level of the operation.",
-    "description": "In credit fraud, money muling, and other underground activities, intermediaries or operators charge different fee percentages based on the risk level of the business. The more covert the operation channel, the larger the amount involved, and the higher the probability of being blocked by risk controls, the higher the fee percentage. For example, the fee for large-scale debt assumption using a fake business is far higher than for ordinary personal consumer loan packaging. The fee percentage is a core metric for fraud syndicates to measure risk and return; a high percentage often implies a higher fraud success rate or more severe legal consequences.",
+    "definition": "In credit fraud or loan-packaging chains, the service-fee percentage charged by brokers according to operational risk and expected deal value.",
+    "description": "Credit-fraud service fee rate expresses the percentage charged for loan packaging, approval facilitation, debt-assumption schemes, or channel brokerage. The rate changes with customer profile, loan size, document-fabrication difficulty, channel concealment, and the chance of risk-control interception; higher risk or higher expected return usually leads to a higher rate.\n\nIt is a key language for pricing risk, allocating commissions, and recruiting agents in credit-fraud networks. Controls focus on intermediary quote monitoring, abnormal service-fee detection, packaging-channel profiling, and end-to-end tracing of loan application flows.",
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report",
@@ -25,6 +26,6 @@
         "link": "https://zhuanlan.zhihu.com/p/17601711058"
       }
     ],
-    "usageExample": "Inside the code-receiving ring, the Commission Rate was clearly fixed: eight points for a first-purchase verification code from an e-commerce platform, while a bank facial recognition code jumped to twenty-five points due to higher risk."
+    "usageExample": "Credit-Fraud Service Fee Rate rises when loan-packaging difficulty and risk-control interception probability increase."
   }
 }

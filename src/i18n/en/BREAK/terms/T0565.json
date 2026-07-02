@@ -10,7 +10,7 @@
       "browser stuffing"
     ],
     "definition": "A fraud technique that places tracking cookies without genuine user intent to steal affiliate attribution.",
-    "description": "Cookie Stuffing is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "Cookie stuffing writes tracking cookies without genuine user click or purchase intent so the attacker can claim commission on later real conversions. Defenses require validation of meaningful clicks, cookie-lifetime limits, touchpoint-quality analysis, and investigation of affiliates with unusually high conversion rates.",
     "usageExample": "Assess Cookie Stuffing related exposure and define the corresponding controls.",
     "references": [
       {

@@ -7,7 +7,7 @@
       "Webhook"
     ],
     "definition": "Webhook 是一种通过 HTTP 协议在业务事件发生时，从一个系统向另一个系统发送的事件回调机制。",
-    "description": "在 BREAK 业务安全分析中，Webhook 用于识别相关风险、滥用模式、控制要求及运营信号。",
+    "description": "Webhook 把业务事件主动推送给外部系统，因此需要验证来源、签名、重放窗口、目标地址和失败重试行为。配置不当时，攻击者可能伪造回调、重放旧事件、滥用 SSRF 通道或借助回调泄露敏感数据。治理重点是签名校验、事件幂等、目标白名单和审计追踪。",
     "usageExample": "评估 Webhook 相关的暴露面，并定义相应的控制措施。",
     "relatedRisks": [
       "R0225"
@@ -24,6 +24,7 @@
         "link": "https://www.nist.gov/cyberframework"
       }
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-07-02",
+    "version": 2
   }
 }

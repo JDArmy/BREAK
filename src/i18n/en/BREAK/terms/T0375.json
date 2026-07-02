@@ -1,7 +1,8 @@
 {
   "T0375": {
-    "title": "Lead Intake",
+    "title": "Credit Lead Intake",
     "keywords": [
+      "Credit Lead Intake",
       "Lead Intake",
       "lead buying",
       "app sourcing",
@@ -14,9 +15,9 @@
     ],
     "aliases": [],
     "category": "Credit Fraud",
-    "definition": "A broker with active lending channels acquires loan-seeking clients from other brokers.",
-    "description": "Brokers with reliable lending channels post 'client acquisition' notices to attract other intermediaries to supply them with applicants. The acquiring broker prices the client based on their credit profile and pays a commission to the referring broker upon successful loan disbursement. This creates an illicit profit chain where client data is repeatedly traded, making it highly susceptible to secondary fraud.",
-    "usageExample": "ChengXin is acquiring clients. Twenty thousand upfront upon signing, plus a six percent internal rebate. No tricks, send your clients over.",
+    "definition": "In credit-fraud ecosystems, the acquisition of loan-seeking customer leads by brokers that control lending, packaging, or approval channels.",
+    "description": "Credit lead intake occurs when brokers with lending, packaging, or approval channels buy loan-seeking customers from other intermediaries. The lead supplier provides customer information and intent, while the intake broker prices the lead by credit profile, expected amount, channel success rate, and commission rules, then shares proceeds after approval or signing.\n\nThis model causes customer data to circulate through multiple broker layers, increasing privacy leakage, false packaging, induced borrowing, and secondary fraud. Controls focus on intermediary-chain detection, customer-source verification, abnormal commission monitoring, and consistency checks across loan materials.",
+    "usageExample": "Credit Lead Intake brokers advertise upfront signing rebates to attract other intermediaries to send loan-seeking customers.",
     "references": [
       {
         "title": "2024 H1 Credit Fraud Risk Landscape Report",

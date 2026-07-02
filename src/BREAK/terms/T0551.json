@@ -7,7 +7,7 @@
       "PIA"
     ],
     "definition": "隐私影响评估，用于识别产品、服务或数据处理活动中的隐私风险。",
-    "description": "在 BREAK 业务安全分析中，PIA 用于识别相关风险、滥用模式、控制要求及运营信号。",
+    "description": "PIA 用于在产品或数据处理活动上线前识别隐私影响，包括收集必要性、使用目的、共享范围、用户权利和保留期限。它帮助把隐私风险转化为设计约束和控制措施，适合新功能、数据共享、画像分析和第三方接入场景。",
     "usageExample": "评估 PIA 相关暴露面并定义相应的控制措施。",
     "relatedRisks": [
       "R0222",
@@ -26,6 +26,7 @@
         "link": "https://www.nist.gov/cyberframework"
       }
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-07-02",
+    "version": 2
   }
 }

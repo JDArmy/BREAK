@@ -10,7 +10,7 @@
       "processing purpose"
     ],
     "definition": "A privacy principle requiring data to be used only for specified, explicit, and legitimate purposes.",
-    "description": "Purpose Limitation is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "Purpose limitation requires data to be used only for specified, explicit, and legitimate purposes rather than any technically possible reuse. It directly shapes boundaries for data sharing, model training, marketing profiles, and risk-control linkage. Controls focus on purpose registry, authorization-scope checks, secondary-use approval, and processing audits.",
     "usageExample": "Assess Purpose Limitation related exposure and define the corresponding controls.",
     "references": [
       {

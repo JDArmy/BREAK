@@ -7,7 +7,7 @@
       "锁文件"
     ],
     "definition": "一种记录确切依赖版本和完整性元数据以确保构建可重复的文件。",
-    "description": "在 BREAK 业务安全分析中，Lock File 用于识别相关风险、滥用模式、控制要求和运营信号。",
+    "description": "锁文件记录精确版本和完整性校验值，可减少构建时依赖漂移和意外升级。缺失或未提交锁文件会让构建结果受外部仓库状态影响，增加恶意包替换和不可复现问题。治理重点是强制使用锁文件、审查锁文件变更和定期更新策略。",
     "usageExample": "攻击者提交PR篡改锁文件中的依赖解析地址，将合法包指向含后门的恶意仓库。",
     "relatedRisks": [],
     "relatedAvoidances": [],
@@ -22,6 +22,7 @@
         "link": "https://www.nist.gov/cyberframework"
       }
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-07-02",
+    "version": 2
   }
 }

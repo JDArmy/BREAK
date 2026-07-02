@@ -7,7 +7,7 @@
       "APK签名"
     ],
     "definition": "APK 签名是让 Android 系统验证应用包发布者身份与完整性的签名过程。",
-    "description": "在 BREAK 业务安全分析中，APK 签名用于识别相关风险、滥用模式、控制要求及运营信号。",
+    "description": "APK 签名用于证明 Android 应用包来源和完整性，是安装、升级和渠道分发的信任基础。签名密钥泄露、弱签名策略或重打包绕过会导致恶意版本冒充官方应用。治理重点是密钥保护、签名方案升级、渠道校验和证书轮换预案。",
     "usageExample": "攻击者反编译APK后修改代码重新打包，使用伪造的APK签名分发恶意版本诱导用户安装。",
     "relatedRisks": [
       "R0222",
@@ -26,6 +26,7 @@
         "link": "https://www.nist.gov/cyberframework"
       }
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-07-02",
+    "version": 2
   }
 }

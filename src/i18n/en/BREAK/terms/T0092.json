@@ -1,6 +1,6 @@
 {
   "T0092": {
-    "title": "Database Operator",
+    "title": "Underground Database Operator",
     "keywords": [
       "Database Operator",
       "db operator",
@@ -9,12 +9,22 @@
       "leaked database operator",
       "database admin",
       "underground db admin",
-      "db admin"
+      "db admin",
+      "Database Owner",
+      "leak operator",
+      "combolist owner",
+      "data vault owner",
+      "leak curator",
+      "data lord"
     ],
-    "aliases": [],
+    "aliases": [
+      "database owner",
+      "social-engineering database operator",
+      "data source operator"
+    ],
     "category": "Data Leakage",
-    "definition": "A key figure in underground data trading who owns and operates large-scale databases of leaked information.",
-    "description": "The database owner is a top-tier role in the underground data ecosystem, responsible for illegally acquiring, organizing, and continuously updating various social engineering and credential-stuffing databases. By purchasing data from material suppliers or conducting their own attacks, they amass vast amounts of sensitive information and offer query, subscription, or bulk sale services to data buyers. They build and maintain the core infrastructure of underground data trading and are the source of leaked data circulation.",
+    "definition": "A core underground data-trading actor who controls and operates social-engineering databases, credential-stuffing data, or leaked datasets.",
+    "description": "An underground database operator sits upstream in the data-abuse supply chain, illegally acquiring, consolidating, cleaning, and updating large volumes of sensitive data. Sources may include insiders, intrusions, credential-stuffing results, historical breaches, and bulk purchases from data suppliers.\n\nThey monetize the data through query portals, subscriptions, bulk sales, or reseller channels, providing the foundation for targeted fraud, identity misuse, and criminal intelligence services. Controls focus on breach tracing, takedown of database services, abnormal bulk queries, and upstream supplier mapping.",
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",

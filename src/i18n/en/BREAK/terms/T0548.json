@@ -10,7 +10,7 @@
       "public link"
     ],
     "definition": "A shareable URL that grants access to cloud documents, drive files, knowledge-base pages, or collaboration assets.",
-    "description": "Collaboration Document Shared Link is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "Collaboration document shared links simplify file sharing but public, permanent, or forwardable links can expand data exposure. Risks include sensitive documents being indexed, departed users retaining access, and links spreading through chats. Controls focus on domain-restricted defaults, expiration, access logs, and sensitive-content blocking.",
     "usageExample": "Assess Collaboration Document Shared Link related exposure and define the corresponding controls.",
     "references": [
       {

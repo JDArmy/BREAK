@@ -7,7 +7,7 @@
       "SLSA"
     ],
     "definition": "软件制品供应链级别，一个用于改善构建来源和供应链完整性的框架。",
-    "description": "SLSA用于在BREAK业务安全分析中识别相关风险、滥用模式、控制要求和运营信号。",
+    "description": "SLSA 提供软件供应链成熟度框架，用于衡量构建过程是否可追溯、可验证且抗篡改。它帮助团队把源码控制、构建隔离、依赖治理、来源证明和发布策略组织成分级目标。落地时应结合业务风险选择目标级别，而不是只把它当作合规标签。",
     "usageExample": "评估SLSA相关风险暴露并定义相应的控制措施。",
     "relatedRisks": [],
     "relatedAvoidances": [],
@@ -22,6 +22,7 @@
         "link": "https://www.nist.gov/cyberframework"
       }
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-07-02",
+    "version": 2
   }
 }

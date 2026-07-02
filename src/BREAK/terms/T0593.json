@@ -7,7 +7,7 @@
       "VC撤销"
     ],
     "definition": "一种使可验证凭证失效或检查其当前有效性状态的机制。",
-    "description": "VC Revocation 用于在 BREAK 业务安全分析中识别相关风险、滥用模式、控制需求和操作信号。",
+    "description": "VC 撤销用于让已签发的可验证凭证失效或让验证方检查当前状态。设计不当会暴露持有人行为、造成状态延迟或无法及时阻断失效凭证。治理重点是撤销列表隐私、查询可用性、状态同步和验证端强制检查。",
     "usageExample": "当员工离职或设备丢失时，管理员通过VC撤销机制使其持有的可验证凭证立即失效，阻止后续访问。",
     "relatedRisks": [],
     "relatedAvoidances": [],
@@ -22,6 +22,7 @@
         "link": "https://www.nist.gov/cyberframework"
       }
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-07-02",
+    "version": 2
   }
 }

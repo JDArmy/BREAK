@@ -7,7 +7,7 @@
       "联盟营销"
     ],
     "definition": "一种渠道模式，合作伙伴因引荐流量、潜在客户、转化或销售而获得报酬。",
-    "description": "在BREAK业务安全分析中，联盟营销用于识别相关风险、滥用模式、控制要求和运营信号。",
+    "description": "联盟营销按流量、线索、转化或销售结果付费，因此容易被虚假流量、Cookie Stuffing、自买自卖和落地页劫持滥用。治理重点是合作方准入、转化证据、异常佣金、流量来源透明度和事后追偿机制。",
     "usageExample": "评估与联盟营销相关的风险敞口，并定义相应的控制措施。",
     "relatedRisks": [
       "R0239"
@@ -24,6 +24,7 @@
         "link": "https://www.nist.gov/cyberframework"
       }
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-07-02",
+    "version": 2
   }
 }

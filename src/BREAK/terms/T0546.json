@@ -7,7 +7,7 @@
       "OAuth授权"
     ],
     "definition": "一种授权许可，允许应用程序代表用户或租户访问资源。",
-    "description": "OAuth Grant 用于在 BREAK 业务安全分析中识别相关风险、滥用模式、控制需求和操作信号。",
+    "description": "OAuth 授权让应用代表用户访问资源，但授权范围、回调地址、刷新令牌和同意流程配置不当时会造成长期数据访问风险。治理重点是最小 scope、应用审核、令牌轮换、异常授权撤销和对高风险权限的管理员批准。",
     "usageExample": "攻击者利用OAuth授权流程中的redirect_uri校验缺陷，将授权码重定向到恶意站点窃取用户访问令牌。",
     "relatedRisks": [],
     "relatedAvoidances": [],
@@ -22,6 +22,7 @@
         "link": "https://www.nist.gov/cyberframework"
       }
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-07-02",
+    "version": 2
   }
 }

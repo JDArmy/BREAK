@@ -10,7 +10,7 @@
       "improper refund"
     ],
     "definition": "Abuse of refund, return, after-sales, or claim processes to obtain improper compensation.",
-    "description": "Refund Fraud is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "Refund fraud abuses return, after-sales, compensation, or claim workflows for improper benefit. Common patterns include empty-box returns, item swapping, repeated claims, false item-not-received reports, and exploitation of support exceptions. Controls focus on order evidence, logistics validation, account linkage, after-sales frequency, and high-risk item rules.",
     "usageExample": "Assess Refund Fraud related exposure and define the corresponding controls.",
     "references": [
       {

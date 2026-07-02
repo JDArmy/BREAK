@@ -7,7 +7,7 @@
       "Token绑定"
     ],
     "definition": "一种将令牌绑定到设备、客户端、网络或加密证明以限制重放的控制机制。",
-    "description": "令牌绑定用于在BREAK业务安全分析中识别相关风险、滥用模式、控制要求和操作信号。",
+    "description": "Token 绑定把令牌与设备、客户端证书、网络上下文或加密密钥关联，降低令牌被复制后在其他环境中重放的价值。设计时应平衡安全性与用户换设备、移动网络切换、灾备恢复之间的可用性。",
     "usageExample": "实施Token绑定后，即使令牌被窃取也无法在其他设备上使用，因为token与原始设备的密钥对绑定。",
     "relatedRisks": [
       "R0247"
@@ -24,6 +24,7 @@
         "link": "https://www.nist.gov/cyberframework"
       }
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-07-02",
+    "version": 2
   }
 }

@@ -10,7 +10,7 @@
       "software rollout"
     ],
     "definition": "An over-the-air software or firmware update delivered remotely to devices or vehicles.",
-    "description": "OTA Update is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "OTA updates remotely deliver software or firmware to devices, vehicles, or terminals. They are essential for patching but can become an attack path if signing, staged rollout, rollback, or version checks are weak. Controls focus on end-to-end signing, release approval, canary monitoring, and failure recovery.",
     "usageExample": "Assess OTA Update related exposure and define the corresponding controls.",
     "references": [
       {

@@ -7,7 +7,7 @@
       "OpenAPI"
     ],
     "definition": "一种规范格式，用于描述 HTTP API、端点、参数、模式和认证方法。",
-    "description": "在 BREAK 业务安全分析中，OpenAPI 用于识别相关风险、滥用模式、控制要求和操作信号。",
+    "description": "OpenAPI 文档既是接口资产清单，也是安全评审和自动化测试的输入。文档缺失或与真实接口不一致时，容易产生影子 API、参数校验遗漏和权限模型盲区。治理时应把规范文件纳入版本管理、发布流程和安全扫描，并持续比对线上流量。",
     "usageExample": "评估 OpenAPI 相关暴露面并定义相应的控制措施。",
     "relatedRisks": [],
     "relatedAvoidances": [],
@@ -22,6 +22,7 @@
         "link": "https://www.nist.gov/cyberframework"
       }
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-07-02",
+    "version": 2
   }
 }

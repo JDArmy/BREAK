@@ -10,7 +10,7 @@
       "vendor operations"
     ],
     "definition": "Operational activities performed by external service providers, integrators, or maintenance teams.",
-    "description": "Third-Party Operations is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "Third-party operations are maintenance, configuration changes, incident handling, or data operations performed by external teams. They expand the set of operators and responsibility boundaries, increasing risk of missing approval, shared accounts, and untraceable logs. Controls focus on ticket binding, least privilege, dual review, operation logging, and supplier performance review.",
     "usageExample": "Assess Third-Party Operations related exposure and define the corresponding controls.",
     "references": [
       {

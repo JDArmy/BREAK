@@ -7,7 +7,7 @@
       "Runner"
     ],
     "definition": "运行 CI/CD 作业、构建脚本、测试和部署任务的执行环境。",
-    "description": "在 BREAK 业务安全分析中，Runner 用于识别相关风险、滥用模式、控制要求和运营信号。",
+    "description": "Runner 执行流水线任务，通常能访问源代码、制品库、部署凭证和内部网络。共享 Runner 或自托管 Runner 配置不当时，攻击者可通过恶意任务窃取密钥、持久化后门或横向移动。治理时应隔离租户、限制网络、清理工作区并控制特权模式。",
     "usageExample": "评估 Runner 相关暴露面并定义相应的控制措施。",
     "relatedRisks": [
       "R0226"
@@ -24,6 +24,7 @@
         "link": "https://www.nist.gov/cyberframework"
       }
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-07-02",
+    "version": 2
   }
 }

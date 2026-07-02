@@ -126,12 +126,20 @@
       "low-income data",
       "public assistance data",
       "relief data",
-      "grant recipient data"
+      "grant recipient data",
+      "Subsidy Fraud Leads",
+      "subsidy data leak",
+      "poverty relief data",
+      "government assistance data",
+      "welfare fraud leads",
+      "subsidy scam data",
+      "social benefit data breach",
+      "subsidy phishing leads"
     ],
     "aliases": [],
     "category": "Data Leakage",
-    "definition": "Subsidy data refers to personal information related to recipients of government poverty alleviation programs, traded in illicit data markets.",
-    "description": "This data typically contains detailed identity, address, and subsidy information of low-income individuals, illegally obtained and resold by underground actors. Downstream buyers exploit this data to carry out targeted scams against vulnerable groups with weak awareness, such as impersonating poverty alleviation offices to issue fake subsidies. Due to the high authenticity of the data, such scams have a high success rate and cause severe social harm.",
+    "definition": "Personal information about recipients of poverty-alleviation, welfare, or subsidy programs that is traded in illicit data markets.",
+    "description": "Subsidy recipient data typically contains identities, contact details, addresses, and benefit records of low-income or aid-recipient groups. Criminals obtain it through insiders, exposed systems, or leaked public records, then sell it to downstream fraud rings.\n\nBecause the data is accurate and tied to vulnerable groups, attackers can impersonate government or welfare staff and run highly convincing subsidy scams. Controls focus on minimizing public exposure, auditing access to aid-recipient lists, and warning high-risk groups about impersonation schemes.",
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
@@ -142,7 +150,7 @@
         "link": "https://www.threathunter.cn/blog/2025"
       }
     ],
-    "usageExample": "A black-market ring specifically compiled a batch of Subsidy Recipient Data, precisely tagging the information of farmers who had just received subsidies. They then posed as poverty alleviation officials, calling to perpetrate targeted fraud under the guise of distributing follow-up benefits."
+    "usageExample": "A fraud ring bought Subsidy Recipient Data with recent benefit-payment details, then called recipients while pretending to be welfare officials distributing follow-up subsidies."
   },
   "T0075-005": {
     "title": "Overnight Data",
@@ -656,35 +664,6 @@
       }
     ],
     "usageExample": "Underground groups targeted user data from small-amount gold installment platforms, selling this \"Gold-Installment Data\" to debt collection crews because the users are mostly desperate, debt-ridden young people with extremely high collection value."
-  },
-  "T0075-023": {
-    "title": "Subsidy Fraud Leads",
-    "keywords": [
-      "Subsidy Fraud Leads",
-      "subsidy data leak",
-      "poverty relief data",
-      "government assistance data",
-      "welfare fraud leads",
-      "subsidy scam data",
-      "social benefit data breach",
-      "aid recipient data",
-      "subsidy phishing leads"
-    ],
-    "aliases": [],
-    "category": "Data Leakage",
-    "definition": "Refers to personal information related to recipients of poverty alleviation subsidies, illegally obtained by black-market actors for targeted scams or money laundering.",
-    "description": "Black-market actors steal the identities, contact details, and subsidy specifics of aid recipients through insider moles or system vulnerabilities. This data is resold to fraud rings, who impersonate government officials and defraud victims under the pretense of distributing subsidies. Due to the precision of the information, victims are often highly convinced, leading to the theft of funds intended for poverty relief.",
-    "usageExample": "'Bosses needing pyramid scheme material, poverty alleviation material, or courier material, contact me! Suit-and-tie big shots, V-push, telemarketing, data, SDK real-time daily active high-quality data!'",
-    "references": [
-      {
-        "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",
-        "link": "https://www.threathunter.cn/blog/2024-1da6b236-8f6a-4cfe-bd67-9d0e9a8f4a22"
-      },
-      {
-        "title": "Black Market Big Data: 2025 H1 Data Leakage Risk Landscape Report",
-        "link": "https://www.threathunter.cn/blog/2025"
-      }
-    ]
   },
   "T0075-024": {
     "title": "Air Ticket Booking Data",

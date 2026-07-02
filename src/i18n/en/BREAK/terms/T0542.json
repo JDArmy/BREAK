@@ -10,7 +10,7 @@
       "credential rotation"
     ],
     "definition": "A short-lived credential issued for bounded access, reducing exposure compared with long-lived secrets.",
-    "description": "Temporary Credential is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "Temporary credentials reduce exposure by using short lifetimes and bounded privileges. They are useful for CI/CD, cloud access, third-party operations, and cross-account authorization. Designs should review issuance conditions, permission scope, session duration, revocation, and log correlation so short-lived credentials do not become durable backdoors.",
     "usageExample": "Assess Temporary Credential related exposure and define the corresponding controls.",
     "references": [
       {

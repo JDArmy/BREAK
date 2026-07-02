@@ -7,7 +7,7 @@
       "DLP"
     ],
     "definition": "数据丢失防护控制，用于检测、分类、限制和审计敏感数据的流动。",
-    "description": "DLP用于在BREAK业务安全分析中识别相关风险、滥用模式、控制需求和操作信号。",
+    "description": "DLP 通过识别、分类、阻断或审计敏感数据流动来减少泄露。它可覆盖终端、邮件、云盘、SaaS、代码仓库和网络出口，但效果取决于数据分类准确性、业务例外管理和告警处置能力。评估时应关注误报、绕过路径和响应闭环。",
     "usageExample": "评估DLP相关的暴露风险并定义相应的控制措施。",
     "relatedRisks": [],
     "relatedAvoidances": [],
@@ -22,6 +22,7 @@
         "link": "https://www.nist.gov/cyberframework"
       }
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-07-02",
+    "version": 2
   }
 }

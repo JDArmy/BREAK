@@ -1,7 +1,8 @@
 {
   "T0344": {
-    "title": "Commission Rate",
+    "title": "Money-Mule Commission Rate",
     "keywords": [
+      "Money-Mule Commission Rate",
       "Commission Rate",
       "percentage cut",
       "tiered commission",
@@ -14,9 +15,9 @@
     ],
     "aliases": [],
     "category": "Money Laundering",
-    "definition": "In money laundering operations, points refer to the commission rate taken proportionally by each participant at various stages of the laundering process for profit distribution.",
-    "description": "Within the money-mule laundering chain, every tier from the first layer to the offload stage takes a commission at an agreed point rate, typically ranging from 1% to 5% of the total flow. The rate depends on account quality, risk level, and fund volume. Criminal groups often post recruitment ads in formats like points 57+ to attract collaborators. The point-based allocation mechanism is the core profit bond that sustains the laundering network and a central focus of internal negotiation among criminal actors.",
-    "usageExample": "Recruiting first-tier large-scale mixing card-to-crypto runners: exchange rate 20+, points 57+, full maintenance through offload.",
+    "definition": "In money-mule laundering chains, the commission rate taken by each participant layer as a percentage of fund flow.",
+    "description": "Money-mule commission rate describes profit sharing in laundering chains. Different layers, from account holders and mule teams to payment handlers and upstream organizers, take commissions according to agreed percentages. Rates vary with account quality, settlement speed, fund volume, risk-control pressure, and criminal exposure.\n\nThe rate is a core incentive mechanism for mule networks and can reveal the risk premium of specific accounts or channels. Controls focus on layered fund-flow detection, commission-settlement analysis, recruitment-ad monitoring, and inference of abnormal fee ratios from transaction behavior.",
+    "usageExample": "Money-Mule Commission Rate ads use point-based percentages to describe each layer's cut in a laundering chain.",
     "references": [
       {
         "title": "Exposing Fraud-Laundering Models: Order-Posting Recharge Laundering and Merchant Laundering Spread Rapidly",

@@ -10,7 +10,7 @@
       "API protection"
     ],
     "definition": "A control that restricts request frequency by identity, device, IP, tenant, endpoint, or business action.",
-    "description": "Rate Limiting is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "Rate limiting controls request intensity over time to reduce credential stuffing, SMS bombing, API enumeration, resource exhaustion, and promotion abuse. Effective limits are layered by user, device, IP, tenant, endpoint, and business action, with thresholds tuned against normal peaks, attack patterns, and false-positive cost.",
     "usageExample": "Assess Rate Limiting related exposure and define the corresponding controls.",
     "references": [
       {

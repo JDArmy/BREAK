@@ -10,7 +10,7 @@
       "transaction consistency"
     ],
     "definition": "A property that allows repeated requests with the same intent to produce the same business result without duplicate side effects.",
-    "description": "Idempotency is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "Idempotency prevents duplicate side effects when clients retry requests, networks fail, or attackers replay operations. It is commonly implemented with idempotency keys, request de-duplication, state-machine constraints, and unique transaction identifiers. Reviews should cover idempotency scope, expiration, concurrency races, and rollback behavior.",
     "usageExample": "Assess Idempotency related exposure and define the corresponding controls.",
     "references": [
       {

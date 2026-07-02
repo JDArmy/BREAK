@@ -10,7 +10,7 @@
       "contract testing"
     ],
     "definition": "A specification format used to describe HTTP APIs, endpoints, parameters, schemas, and authentication methods.",
-    "description": "OpenAPI is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "OpenAPI files are both API asset inventory and input for security review and automated testing. Missing or stale specifications create blind spots around shadow APIs, parameter validation, and permission models. Governance should version specifications, include them in release workflows and security scanning, and continuously compare them with live traffic.",
     "usageExample": "Assess OpenAPI related exposure and define the corresponding controls.",
     "references": [
       {

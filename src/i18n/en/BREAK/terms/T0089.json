@@ -1,6 +1,6 @@
 {
   "T0089": {
-    "title": "Record Lookup",
+    "title": "Illicit Record Lookup",
     "keywords": [
       "Record Lookup",
       "data lookup service",
@@ -9,12 +9,25 @@
       "personal record search",
       "background check illegal",
       "info retrieval service",
-      "data broker lookup"
+      "data broker lookup",
+      "Background Check Service",
+      "personal dossier lookup",
+      "phone-to-identity lookup",
+      "full background check",
+      "identity record retrieval",
+      "asset lookup service",
+      "address lookup service",
+      "bank card lookup",
+      "data broker background check"
     ],
-    "aliases": [],
+    "aliases": [
+      "phone-to-identity lookup",
+      "personal dossier lookup",
+      "background check service"
+    ],
     "category": "Data Leakage",
-    "definition": "A service in which underground criminal groups illegally retrieve a target's complete personal dossier using a single piece of information, such as a phone number.",
-    "description": "File retrieval is a core service in underground data trading. Criminals leverage insider access, system vulnerabilities, or previously breached databases to provide clients with detailed personal records. The service covers highly sensitive data, including identity information, bank card numbers, asset holdings, and hotel stay records. Typically charged per query, this service is a critical source of intelligence for downstream crimes such as fraud, extortion, and precision marketing.",
+    "definition": "An illicit service that reverse-lookups a target's complete personal dossier from a single clue such as a phone number.",
+    "description": "Illicit record lookup is a core underground data-trading service. Operators use social-engineering databases, insider access, exposed interfaces, or breached datasets to turn a phone number, name, or ID number into sensitive personal records such as identity details, addresses, bank cards, assets, travel, or hotel-stay information.\n\nThe service feeds targeted fraud, extortion, debt collection, and privacy abuse. Relevant controls focus on data-source tracing, abnormal query detection, insider misuse, and downstream trading channels.",
     "references": [
       {
         "title": "Black Market Big Data: 2024 Data Leakage Risk Landscape Report",

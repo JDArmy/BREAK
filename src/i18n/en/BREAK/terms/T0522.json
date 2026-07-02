@@ -10,7 +10,7 @@
       "API discovery"
     ],
     "definition": "An undocumented, unmanaged, or deprecated API that remains reachable outside the official API inventory.",
-    "description": "Shadow API is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "Shadow APIs expose the gap between the official API inventory and endpoints that remain reachable in production. They may bypass centralized authentication, rate limits, logging, and data-classification controls. Governance should combine gateway logs, source repositories, OpenAPI files, traffic discovery, and decommissioning workflows to confirm whether each endpoint still has a business purpose and adequate controls.",
     "usageExample": "Assess Shadow API related exposure and define the corresponding controls.",
     "references": [
       {

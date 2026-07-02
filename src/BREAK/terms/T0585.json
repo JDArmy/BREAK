@@ -7,7 +7,7 @@
       "WAF规则"
     ],
     "definition": "一种用于检测、阻止、质询或记录可疑 HTTP 流量的 Web 应用程序防火墙规则。",
-    "description": "WAF 规则用于在 BREAK 业务安全分析中识别相关风险、滥用模式、控制需求和运营信号。",
+    "description": "WAF 规则用于识别和处置可疑 HTTP 请求，但规则过宽会误伤业务，过窄又容易被绕过。有效运营需要结合攻击情报、业务上下文、例外管理、灰度发布和命中效果评估，而不是长期依赖静态规则。",
     "usageExample": "安全团队编写定制WAF规则拦截针对业务逻辑的攻击流量，如异常频率的优惠券领取请求。",
     "relatedRisks": [
       "R0250"
@@ -24,6 +24,7 @@
         "link": "https://www.nist.gov/cyberframework"
       }
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-07-02",
+    "version": 2
   }
 }

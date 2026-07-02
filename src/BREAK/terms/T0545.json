@@ -7,7 +7,7 @@
       "SaaS"
     ],
     "definition": "通过提供商运营的应用程序交付、并通过租户级配置进行管理的软件即服务。",
-    "description": "SaaS 用于在 BREAK 业务安全分析中识别相关风险、滥用模式、控制要求和运营信号。",
+    "description": "SaaS 依赖租户级配置、第三方集成和用户授权来保护企业数据。风险常来自过宽共享、外部应用授权、管理员权限滥用和审计不足。评估 SaaS 安全时，应关注身份集成、数据导出、协作链接、租户隔离和供应商访问。",
     "usageExample": "评估 SaaS 相关暴露面并定义相应的控制措施。",
     "relatedRisks": [
       "R0232"
@@ -24,6 +24,7 @@
         "link": "https://www.nist.gov/cyberframework"
       }
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-07-02",
+    "version": 2
   }
 }

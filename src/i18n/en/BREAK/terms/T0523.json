@@ -10,7 +10,7 @@
       "API authorization"
     ],
     "definition": "A server-side authorization check that verifies whether the caller is allowed to access a specific object or resource instance.",
-    "description": "Object-Level Authorization is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "Object-level authorization decides whether a caller may access a specific order, file, account, tenant resource, or business object. Without this check, an authenticated user can often enumerate object IDs and read or modify another user's data. Controls focus on server-side per-object checks, tenant isolation, unpredictable identifiers, and authorization testing.",
     "usageExample": "Assess Object-Level Authorization related exposure and define the corresponding controls.",
     "references": [
       {

@@ -10,7 +10,7 @@
       "account management"
     ],
     "definition": "A system used to manage customer adoption, support signals, health scores, and engagement workflows.",
-    "description": "Customer Success System is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "Customer success systems store customer contacts, health scores, renewal status, support signals, and business interactions. Because they reveal relationships and internal priority, leakage can support targeted phishing, supplier fraud, or competitive intelligence. Controls focus on field classification, export control, third-party integrations, and sales/support permission boundaries.",
     "usageExample": "Assess Customer Success System related exposure and define the corresponding controls.",
     "references": [
       {

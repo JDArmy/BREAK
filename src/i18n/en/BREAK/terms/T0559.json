@@ -10,7 +10,7 @@
       "payment fraud"
     ],
     "definition": "A fabricated or collusive transaction used to inflate activity, move funds, earn rewards, or bypass controls.",
-    "description": "Fake Transaction is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "Fake transactions create fabricated or collusive orders, payments, reviews, or fulfillment records. They can support brushing, subsidy abuse, cash-out, fake volume, ranking manipulation, or campaign-threshold bypass. Controls require linked analysis across accounts, devices, funds, logistics, merchants, and review behavior.",
     "usageExample": "Assess Fake Transaction related exposure and define the corresponding controls.",
     "references": [
       {

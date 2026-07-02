@@ -10,7 +10,7 @@
       "model reliability"
     ],
     "definition": "A model output that appears plausible but is unsupported, incorrect, fabricated, or misleading.",
-    "description": "Model Hallucination is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "Model hallucination produces plausible but unsupported, false, fabricated, or misleading content. In support, compliance, finance, and security-analysis workflows, it can drive wrong decisions. Mitigation requires citations, retrieval grounding, confidence signals, factual verification, and human review for high-impact outputs.",
     "usageExample": "Assess Model Hallucination related exposure and define the corresponding controls.",
     "references": [
       {

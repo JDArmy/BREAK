@@ -10,7 +10,7 @@
       "content inspection"
     ],
     "definition": "Data loss prevention controls that detect, classify, restrict, and audit sensitive data movement.",
-    "description": "DLP is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "DLP reduces leakage by detecting, classifying, blocking, or auditing sensitive data movement across endpoints, email, cloud drives, SaaS, code repositories, and network egress. Its effectiveness depends on classification accuracy, exception management, and alert response. Reviews should cover false positives, bypass paths, and response closure.",
     "usageExample": "Assess DLP related exposure and define the corresponding controls.",
     "references": [
       {

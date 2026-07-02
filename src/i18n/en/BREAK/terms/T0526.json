@@ -10,7 +10,7 @@
       "timestamp window"
     ],
     "definition": "An attack that reuses a valid request, event, token, or signature to trigger an operation again.",
-    "description": "Replay Attack is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "Replay attacks reuse a still-valid request, signature, token, or event to trigger a business action again. They often affect payment callbacks, webhooks, login tickets, and signed APIs. Effective controls combine nonces, timestamps, signed request scope, one-time tokens, and idempotent processing so old messages cannot be reused.",
     "usageExample": "Assess Replay Attack related exposure and define the corresponding controls.",
     "references": [
       {

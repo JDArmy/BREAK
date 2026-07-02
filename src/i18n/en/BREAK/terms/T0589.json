@@ -10,7 +10,7 @@
       "car data access"
     ],
     "definition": "An API that exposes vehicle status, location, remote-control, diagnostics, or service capabilities.",
-    "description": "Connected-Vehicle API is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "Connected-vehicle APIs expose vehicle status, location, remote control, diagnostics, and service features across mobile apps, cloud platforms, and vehicles. Risks include unauthorized queries, remote-control abuse, location leakage, and overprivileged third-party integrations. Controls focus on object-level authorization, command risk checks, device binding, and traceability.",
     "usageExample": "Assess Connected-Vehicle API related exposure and define the corresponding controls.",
     "references": [
       {

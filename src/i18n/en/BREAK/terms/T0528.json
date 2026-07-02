@@ -10,7 +10,7 @@
       "traffic control"
     ],
     "definition": "An entry layer that centralizes API routing, authentication, rate limiting, logging, and policy enforcement.",
-    "description": "API Gateway is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "An API gateway centralizes authentication, authorization, rate limiting, audit logging, routing, and policy enforcement. It reduces duplicated control logic across services, but incomplete coverage, bypass paths, or incorrect tenant-context propagation can concentrate risk at the entry layer. Reviews should clarify the security boundary between gateway and backend services.",
     "usageExample": "Assess API Gateway related exposure and define the corresponding controls.",
     "references": [
       {

@@ -7,7 +7,7 @@
       "制品库"
     ],
     "definition": "存储构建输出、包、容器镜像和发布产物的仓库。",
-    "description": "Artifact Repository 用于在 BREAK 业务安全分析中识别相关风险、滥用模式、控制要求和运营信号。",
+    "description": "制品库保存软件包、镜像、构建产物和发布版本，是生产系统实际运行内容的来源。若访问控制、签名校验或保留策略不足，攻击者可能上传恶意包、替换镜像或诱导部署旧版本。治理重点是来源验证、权限分层、不可变发布和下载审计。",
     "usageExample": "攻击者入侵公司制品库服务器，在构建产物中植入后门，所有拉取该镜像的服务都被感染。",
     "relatedRisks": [],
     "relatedAvoidances": [],
@@ -22,6 +22,7 @@
         "link": "https://www.nist.gov/cyberframework"
       }
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-07-02",
+    "version": 2
   }
 }

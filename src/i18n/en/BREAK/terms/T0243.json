@@ -1,6 +1,6 @@
 {
   "T0243": {
-    "title": "Carding Marketplace",
+    "title": "Virtual Gift Cashout Channel",
     "keywords": [
       "Carding Marketplace",
       "gift card cashing",
@@ -8,12 +8,24 @@
       "gift card reseller",
       "gift card broker",
       "gift card dump",
-      "gift card flipping"
+      "gift card flipping",
+      "Cashout Merchant",
+      "gift card cashout",
+      "virtual currency exchanger",
+      "gift card fence",
+      "gift card launderer",
+      "gift card arbitrage",
+      "virtual gift broker"
     ],
-    "aliases": [],
+    "aliases": [
+      "cake shop",
+      "supermarket",
+      "virtual gift broker",
+      "gift cashout merchant"
+    ],
     "category": "Business Fraud",
-    "definition": "An underground arbitrage ring on live-streaming platforms that specializes in buying users' virtual gifts at a low price.",
-    "description": "These groups lurk in various live-streaming rooms, proactively contacting users who have won high-value gifts and offering to buy them at a discounted cash price. They exploit platform rules that prevent direct cash withdrawal of virtual items, providing a gray-market channel for users eager to cash out. The gifts are then sent to designated streamers through other accounts to complete money laundering or arbitrage, severely disrupting the platform's virtual economy.",
+    "definition": "An underground live-streaming channel that buys users' virtual gifts at a discount and resells, cashes out, or launders them.",
+    "description": "A virtual gift cashout channel, sometimes advertised with code names such as “cake shop” or “supermarket,” buys virtual gifts from live-streaming users at discounted cash prices. Operators contact users who won or hold high-value gifts, then resell the gifts to clients who need ranking boosts, fake activity, or fund movement.\n\nThese channels exploit the difficulty of directly withdrawing virtual items, the complexity of gift-transfer flows, and the opacity of off-platform deals. They disrupt platform virtual economies and may support money laundering, fake transactions, and streamer-ranking manipulation.",
     "usageExample": "I won a castle gift yesterday, and right after I posted it for sale, someone from a supermarket messaged me asking if I wanted to sell.",
     "references": [
       {

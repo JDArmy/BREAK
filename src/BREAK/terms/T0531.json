@@ -7,7 +7,7 @@
       "CI/CD"
     ],
     "definition": "用于构建、测试、打包和发布软件的持续集成与持续交付流水线。",
-    "description": "CI/CD 用于在 BREAK 业务安全分析中识别相关风险、滥用模式、控制需求和运营信号。",
+    "description": "CI/CD 流水线连接代码、依赖、密钥、构建产物和生产发布权限，是软件供应链攻击的重要入口。风险包括 Runner 被滥用、流水线变量泄露、构建脚本被篡改和未授权发布。治理重点是最小权限、分支保护、环境隔离、审计和构建来源证明。",
     "usageExample": "评估 CI/CD 相关风险敞口并定义相应的控制措施。",
     "relatedRisks": [
       "R0226"
@@ -24,6 +24,7 @@
         "link": "https://www.nist.gov/cyberframework"
       }
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-07-02",
+    "version": 2
   }
 }

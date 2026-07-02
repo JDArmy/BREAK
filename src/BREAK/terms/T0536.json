@@ -7,7 +7,7 @@
       "SBOM"
     ],
     "definition": "软件物料清单，列出软件中包含的组件、依赖项和版本。",
-    "description": "在 BREAK 业务安全分析中，SBOM 用于识别相关风险、滥用模式、控制要求和运营信号。",
+    "description": "SBOM 描述软件包含哪些组件和依赖，便于在漏洞披露、恶意包发现或许可证风险出现时快速定位受影响系统。有效 SBOM 需要覆盖生成时机、依赖层级、版本准确性和制品关联关系，并与漏洞管理、资产管理和供应商治理流程打通。",
     "usageExample": "评估 SBOM 相关暴露面并定义相应的控制措施。",
     "relatedRisks": [
       "R0229"
@@ -24,6 +24,7 @@
         "link": "https://www.nist.gov/cyberframework"
       }
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-07-02",
+    "version": 2
   }
 }

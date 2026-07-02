@@ -10,7 +10,7 @@
       "runner isolation"
     ],
     "definition": "An execution environment that runs CI/CD jobs, build scripts, tests, and deployment tasks.",
-    "description": "Runner is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "Runners execute pipeline jobs and often access source code, artifact repositories, deployment credentials, and internal networks. Misconfigured shared or self-hosted runners can let attackers steal secrets, persist backdoors, or move laterally through malicious jobs. Controls include tenant isolation, network restrictions, workspace cleanup, and limiting privileged mode.",
     "usageExample": "Assess Runner related exposure and define the corresponding controls.",
     "references": [
       {

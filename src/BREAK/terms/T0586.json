@@ -7,7 +7,7 @@
       "OTA更新"
     ],
     "definition": "一种远程向设备或车辆发送的无线软件或固件更新。",
-    "description": "OTA Update 用于在 BREAK 业务安全分析中识别相关风险、滥用模式、控制需求和运营信号。",
+    "description": "OTA 更新把软件或固件远程下发到设备、车辆或终端，是修复漏洞和发布功能的重要通道。若签名、分批、回滚或版本校验不足，攻击者可能投递恶意更新或阻断修复。治理重点是端到端签名、发布审批、灰度监控和失败恢复。",
     "usageExample": "攻击者劫持车辆的OTA更新通道，向ECU推送篡改过的固件镜像，获取车辆控制权限。",
     "relatedRisks": [
       "R0181-001"
@@ -24,6 +24,7 @@
         "link": "https://www.nist.gov/cyberframework"
       }
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-07-02",
+    "version": 2
   }
 }

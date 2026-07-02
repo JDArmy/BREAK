@@ -10,7 +10,7 @@
       "service request"
     ],
     "definition": "A system for recording, assigning, tracking, and resolving support or operations cases.",
-    "description": "Ticketing System is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "Ticketing systems record customer issues, troubleshooting notes, screenshots, logs, and remediation steps, often accidentally including secrets, personal data, or system details. Attackers can use this information for social engineering, lateral movement, or exploit reproduction. Controls focus on sensitive-data redaction, attachment scanning, permission tiers, and external-collaborator access control.",
     "usageExample": "Assess Ticketing System related exposure and define the corresponding controls.",
     "references": [
       {

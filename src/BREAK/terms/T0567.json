@@ -7,7 +7,7 @@
       "RAG"
     ],
     "definition": "检索增强生成，模型检索外部知识并将其用作生成上下文的技术。",
-    "description": "RAG用于在BREAK业务安全分析中识别相关风险、滥用模式、控制需求和运营信号。",
+    "description": "RAG 把外部知识检索结果注入模型上下文，能提升回答时效性和专业性，但也引入知识库权限、内容投毒和提示注入风险。治理时应关注检索范围、文档级权限、来源可信度、上下文过滤和模型输出审计。",
     "usageExample": "评估RAG相关风险暴露并定义相应的控制措施。",
     "relatedRisks": [
       "R0244"
@@ -24,6 +24,7 @@
         "link": "https://www.nist.gov/cyberframework"
       }
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-07-02",
+    "version": 2
   }
 }

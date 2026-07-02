@@ -7,7 +7,7 @@
       "第三方应用授权"
     ],
     "definition": "授予外部应用程序访问企业SaaS数据、API或账户功能的权限。",
-    "description": "第三方应用授权用于在BREAK业务安全分析中识别相关风险、滥用模式、控制要求和操作信号。",
+    "description": "第三方应用授权把企业 SaaS、云盘、邮箱或协作平台的数据访问能力开放给外部应用。未经审查的授权可能长期绕过人工登录和 MFA 控制。治理时应建立应用准入、权限审计、闲置授权清理和高危 API 调用监控。",
     "usageExample": "评估第三方应用授权相关的风险敞口，并定义相应的控制措施。",
     "relatedRisks": [
       "R0224",
@@ -26,6 +26,7 @@
         "link": "https://www.nist.gov/cyberframework"
       }
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-07-02",
+    "version": 2
   }
 }

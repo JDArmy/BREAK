@@ -10,7 +10,7 @@
       "UDS diagnostics"
     ],
     "definition": "A maintenance interface used to inspect, configure, test, or update devices and vehicle systems.",
-    "description": "Diagnostic Interface is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "Diagnostic interfaces inspect, configure, test, or update devices and vehicle systems and often carry high privileges. If authentication is weak, exposed, or abused, attackers can read sensitive state, change configuration, or trigger dangerous actions. Controls focus on access control, physical or network isolation, command auditing, and secure defaults.",
     "usageExample": "Assess Diagnostic Interface related exposure and define the corresponding controls.",
     "references": [
       {

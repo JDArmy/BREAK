@@ -10,7 +10,7 @@
       "issuer revocation"
     ],
     "definition": "A mechanism for invalidating or checking the current validity status of a verifiable credential.",
-    "description": "VC Revocation is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "VC revocation invalidates a issued verifiable credential or lets verifiers check current status. Poor design can expose holder behavior, delay status updates, or fail to block invalid credentials promptly. Controls focus on revocation-list privacy, query availability, status synchronization, and mandatory verifier checks.",
     "usageExample": "Assess VC Revocation related exposure and define the corresponding controls.",
     "references": [
       {

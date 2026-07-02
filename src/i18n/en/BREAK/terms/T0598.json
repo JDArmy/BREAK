@@ -10,7 +10,7 @@
       "customer profile"
     ],
     "definition": "Customer relationship management data such as contacts, account records, opportunities, notes, and interaction history.",
-    "description": "CRM Data is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "CRM data includes customer contacts, accounts, opportunities, communication history, and sales notes, combining commercial value with personal information. Risks include bulk export, departing employees taking customer lists, overprivileged plugins, and cross-team oversharing. Controls focus on row and field permissions, export auditing, abnormal-access detection, and watermarking.",
     "usageExample": "Assess CRM Data related exposure and define the corresponding controls.",
     "references": [
       {

@@ -7,7 +7,7 @@
       "车联网API"
     ],
     "definition": "一种用于公开车辆状态、位置、远程控制、诊断或服务功能的API。",
-    "description": "在BREAK业务安全分析中，Connected-Vehicle API用于识别相关风险、滥用模式、控制要求和操作信号。",
+    "description": "车联网 API 暴露车辆状态、位置、远程控制、诊断和服务能力，连接移动应用、云平台和车辆端。风险包括越权查询、远程控制滥用、位置泄露和第三方集成过权。治理重点是对象级授权、命令风控、设备绑定和操作可追溯。",
     "usageExample": "安全研究员发现车联网API存在越权漏洞，通过篡改请求中的车辆ID可远程解锁任意车辆。",
     "relatedRisks": [
       "R0252"
@@ -24,6 +24,7 @@
         "link": "https://www.nist.gov/cyberframework"
       }
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-07-02",
+    "version": 2
   }
 }

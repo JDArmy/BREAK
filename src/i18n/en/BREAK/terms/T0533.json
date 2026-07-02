@@ -10,7 +10,7 @@
       "artifact storage"
     ],
     "definition": "A repository that stores build outputs, packages, container images, and release artifacts.",
-    "description": "Artifact Repository is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "Artifact repositories store packages, images, build outputs, and release versions that production systems may eventually run. Weak access control, missing signature checks, or poor retention policies can allow malicious uploads, image replacement, or unsafe rollbacks. Controls focus on provenance verification, tiered permissions, immutable releases, and download auditing.",
     "usageExample": "Assess Artifact Repository related exposure and define the corresponding controls.",
     "references": [
       {

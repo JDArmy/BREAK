@@ -7,7 +7,7 @@
       "DID"
     ],
     "definition": "一种去中心化标识符，支持可验证、自主管理的数字身份，无需依赖中心化注册机构。",
-    "description": "在 BREAK 业务安全分析中，DID 用于识别相关风险、滥用模式、控制要求及运营信号。",
+    "description": "DID 让主体在不依赖中心化注册机构的情况下管理可验证身份标识。它适用于可验证凭证、跨平台身份和去中心化信任场景，但需要处理密钥恢复、标识解析、隐私关联和治理框架问题。",
     "usageExample": "评估与 DID 相关的暴露面，并定义相应的控制措施。",
     "relatedRisks": [
       "R0253"
@@ -24,6 +24,7 @@
         "link": "https://www.nist.gov/cyberframework"
       }
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-07-02",
+    "version": 2
   }
 }

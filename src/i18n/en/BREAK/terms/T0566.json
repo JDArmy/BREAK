@@ -10,7 +10,7 @@
       "affiliate hijack"
     ],
     "definition": "A tactic that diverts or manipulates landing pages to capture traffic, credentials, conversions, or commissions.",
-    "description": "Landing Page Hijacking is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "Landing page hijacking replaces, redirects, or forges landing pages to capture users, credentials, orders, or commissions. It may occur through ad chains, affiliate marketing, DNS abuse, malicious extensions, or creative assets. Controls focus on landing-page integrity monitoring, redirect-chain auditing, certificate and domain validation, and channel complaint analysis.",
     "usageExample": "Assess Landing Page Hijacking related exposure and define the corresponding controls.",
     "references": [
       {

@@ -10,7 +10,7 @@
       "consent review"
     ],
     "definition": "Permission granted to an external application to access enterprise SaaS data, APIs, or account capabilities.",
-    "description": "Third-Party App Authorization is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "Third-party app authorization opens enterprise SaaS, drive, email, or collaboration-platform data to external applications. Unreviewed grants can persistently bypass interactive login and MFA controls. Governance should include app onboarding, permission review, dormant-grant cleanup, and monitoring of high-risk API calls.",
     "usageExample": "Assess Third-Party App Authorization related exposure and define the corresponding controls.",
     "references": [
       {

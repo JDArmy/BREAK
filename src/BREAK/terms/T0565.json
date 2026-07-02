@@ -7,7 +7,7 @@
       "Cookie Stuffing"
     ],
     "definition": "一种在用户无真实意图的情况下放置跟踪 Cookie，以窃取联盟营销归因的欺诈技术。",
-    "description": "Cookie Stuffing 用于在 BREAK 业务安全分析中识别相关风险、滥用模式、控制要求和运营信号。",
+    "description": "Cookie Stuffing 在用户无真实点击或购买意图时写入跟踪 Cookie，让攻击者在后续真实转化中冒领佣金。防护需要校验有效点击、限制 Cookie 生命周期、分析触点质量和追踪异常高转化的联盟渠道。",
     "usageExample": "评估与 Cookie Stuffing 相关的风险敞口，并定义相应的控制措施。",
     "relatedRisks": [
       "R0239",
@@ -25,6 +25,7 @@
         "link": "https://www.nist.gov/cyberframework"
       }
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-07-02",
+    "version": 2
   }
 }

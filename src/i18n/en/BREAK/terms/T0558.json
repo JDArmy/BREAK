@@ -10,7 +10,7 @@
       "cash-out fraud"
     ],
     "definition": "A fraud pattern in which merchants use fake or circular transactions to convert payment channels into cash.",
-    "description": "Merchant Cash-Out is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "Merchant cash-out converts payment channels into cash through fake, circular, or related-party transactions. It may bypass payment risk controls, credit limits, or fund-use restrictions. Detection should examine merchant-buyer relationships, abnormal transaction structures, refund loops, fund return paths, and short-term high-frequency small transactions.",
     "usageExample": "Assess Merchant Cash-Out related exposure and define the corresponding controls.",
     "references": [
       {

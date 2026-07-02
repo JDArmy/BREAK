@@ -10,7 +10,7 @@
       "content ACL"
     ],
     "definition": "Access rules that determine which users, roles, or tenants can retrieve specific knowledge-base content.",
-    "description": "Knowledge-Base Permission is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "Knowledge-base permissions decide which documents, chunks, and metadata a user or model may retrieve. If permissions are too coarse or fail to inherit source-system ACLs, RAG can leak internal documents or cross-tenant content. Controls focus on document-level ACLs, pre-retrieval filtering, synchronization consistency, and unauthorized-recall testing.",
     "usageExample": "Assess Knowledge-Base Permission related exposure and define the corresponding controls.",
     "references": [
       {

@@ -10,7 +10,7 @@
       "data trading"
     ],
     "definition": "An organization or individual that collects, aggregates, processes, shares, or sells data from multiple sources.",
-    "description": "Data Broker is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "Data brokers aggregate data from multiple sources into profiles, attributes, or lookup services. The risk is not only single-source leakage but the higher sensitivity created by cross-source linkage. Controls focus on source legality, consent chains, data minimization, sharing audits, and third-party exit mechanisms.",
     "usageExample": "Assess Data Broker related exposure and define the corresponding controls.",
     "references": [
       {

@@ -7,7 +7,7 @@
       "V2X证书"
     ],
     "definition": "用于认证车联网通信及相关信任关系的证书。",
-    "description": "在 BREAK 业务安全分析中，V2X 证书用于识别相关风险、滥用模式、控制要求及运营信号。",
+    "description": "V2X 证书用于车辆、路侧单元和交通基础设施之间的可信通信。证书管理不当会影响消息真实性、隐私保护和吊销能力。治理重点是证书签发、轮换、匿名化、撤销检查和跨域信任链管理。",
     "usageExample": "伪基站广播伪造的V2X证书，向周围车辆发送虚假路况信息，诱导自动驾驶系统做出错误决策。",
     "relatedRisks": [],
     "relatedAvoidances": [],
@@ -22,6 +22,7 @@
         "link": "https://www.nist.gov/cyberframework"
       }
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-07-02",
+    "version": 2
   }
 }

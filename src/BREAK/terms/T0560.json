@@ -7,7 +7,7 @@
       "广告归因"
     ],
     "definition": "将安装、购买、注册或转化等行为归因于特定营销触点的过程。",
-    "description": "在 BREAK 业务安全分析中，广告归因用于识别相关风险、滥用模式、控制要求及运营信号。",
+    "description": "广告归因决定转化奖励归属，因此会受到点击劫持、Cookie Stuffing、安装农场和虚假转化操纵。评估归因质量时，应关注触点时间线、设备一致性、渠道异常转化率、重复归因和激励结算规则。",
     "usageExample": "评估广告归因相关的风险敞口，并定义相应的控制措施。",
     "relatedRisks": [
       "R0237",
@@ -25,6 +25,7 @@
         "link": "https://www.nist.gov/cyberframework"
       }
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-07-02",
+    "version": 2
   }
 }

@@ -7,7 +7,7 @@
       "会话令牌"
     ],
     "definition": "一种代表已认证会话的凭证，通常存储在 Cookie 或持有者令牌中。",
-    "description": "会话令牌在 BREAK 业务安全分析中用于识别相关风险、滥用模式、控制要求及运营信号。",
+    "description": "会话令牌代表已认证状态，一旦被窃取，攻击者可能绕过密码和 MFA 直接冒充用户。风险常来自 XSS、恶意插件、日志泄露、设备失陷和 Cookie 配置错误。治理重点是 HttpOnly/SameSite/Secure、短有效期、设备绑定和异常会话撤销。",
     "usageExample": "评估与会话令牌相关的暴露面，并定义相应的控制措施。",
     "relatedRisks": [
       "R0247"
@@ -24,6 +24,7 @@
         "link": "https://www.nist.gov/cyberframework"
       }
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-07-02",
+    "version": 2
   }
 }

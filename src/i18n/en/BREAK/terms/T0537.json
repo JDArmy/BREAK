@@ -10,7 +10,7 @@
       "package resolution"
     ],
     "definition": "A supply-chain attack in which a malicious public package with a matching name is chosen instead of the intended internal dependency.",
-    "description": "Dependency Confusion is used to identify related risks, abuse patterns, control requirements, and operational signals in BREAK business-security analysis.",
+    "description": "Dependency confusion abuses a name collision between an internal package and a public package so the build system chooses the attacker's public package. Defenses require private-source priority, package namespaces, lock files, allowlists, and build-network policy. Reviews should check resolver behavior and mirror configuration across language ecosystems.",
     "usageExample": "Assess Dependency Confusion related exposure and define the corresponding controls.",
     "references": [
       {

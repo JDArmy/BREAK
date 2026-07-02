@@ -7,7 +7,7 @@
       "运行时防护"
     ],
     "definition": "检测或抵御篡改、挂钩、调试、仿真及运行时操纵的控制措施。",
-    "description": "Runtime Protection 用于在 BREAK 业务安全分析中识别相关风险、滥用模式、控制需求及运营信号。",
+    "description": "运行时防护在应用执行期间检测调试、注入、Hook、模拟器、篡改和内存修改。它不能替代服务端风控，但能提高移动作弊、逆向和自动化攻击成本。评估时应关注绕过难度、误伤、信号上报和与服务端策略联动。",
     "usageExample": "应用集成运行时防护（RASP）后，即使存在未修补漏洞，恶意payload在执行阶段也会被实时拦截。",
     "relatedRisks": [],
     "relatedAvoidances": [],
@@ -22,6 +22,7 @@
         "link": "https://www.nist.gov/cyberframework"
       }
     ],
-    "updated": "2026-06-17"
+    "updated": "2026-07-02",
+    "version": 2
   }
 }
