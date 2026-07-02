@@ -141,7 +141,7 @@ function main() {
   const { legal } = collectLegalIds();
 
   /** findings[type] = [{ file, entityId, field, badId, context }] */
-  const findings = { typo: [], dangling: [] };
+  const findings = { typo: [], dangling: [], selfRef: [] };
 
   for (const dir of ENTITY_DIRS) {
     const dirPath = join(ROOT, dir);
@@ -195,11 +195,23 @@ function main() {
             });
           }
 
-          // B类：标准格式但 ID 不存在
+          // B类：标准格式但 ID 不存在；自引用（文本里引用自己 ID，几乎必是笔误）
           // 先用标准正则（4位）扫，再用 BS 正则扫
           const stdRe = new RegExp(STANDARD_RE.source, "g");
           while ((m = stdRe.exec(value)) !== null) {
             const matched = m[0];
+            if (matched === topKey) {
+              // 自引用：实体文本里出现自己的 ID。子风险引用父风险不算（不同 ID）。
+              // 这类几乎必是笔误（如 A0006-007 把 A0006-001 误写成自己），单独报以便人工核对。
+              findings.selfRef.push({
+                file: relFile,
+                entityId: topKey,
+                field: path.join("."),
+                badId: matched,
+                context: contextSnippet(value, matched),
+              });
+              continue;
+            }
             if (!legal.has(matched)) {
               findings.dangling.push({
                 file: relFile,
@@ -263,6 +275,7 @@ function main() {
   const out = [];
   const totalTypo = findings.typo.length;
   const totalDangling = findings.dangling.length;
+  const totalSelfRef = findings.selfRef.length;
 
   out.push("=".repeat(78));
   out.push("文本字段嵌入实体 ID 引用审计报告");
@@ -316,12 +329,38 @@ function main() {
     }
   }
   out.push("");
+
+  // 自引用：实体文本引用了自身 ID。多数是笔误（如 A0006-007 把 A0006-001 误写成自己），
+  // 但少数是合法自指对比句式（如 R0041 "支付卡破解（R0041）的成果可用于实际支付" 与 R0040 对比）。
+  // 因此自引用仅作提示供人工判断，不计入退出码（不阻断构建）。
+  out.push("─".repeat(78));
+  out.push(`【自引用·提示】实体文本引用了自身 ID（多需人工判断是否笔误，共 ${totalSelfRef} 处）`);
+  out.push("─".repeat(78));
+  if (totalSelfRef === 0) {
+    out.push("  无");
+  } else {
+    const byFile = new Map();
+    for (const f of findings.selfRef) {
+      if (!byFile.has(f.file)) byFile.set(f.file, []);
+      byFile.get(f.file).push(f);
+    }
+    for (const [file, items] of [...byFile.entries()].sort()) {
+      out.push(`\n  文件：${file}`);
+      for (const it of items) {
+        out.push(`    [实体 ${it.entityId}] 字段 ${it.field}`);
+        out.push(`      自引用 ID：${it.badId}`);
+        out.push(`      上下文：${it.context}`);
+      }
+    }
+  }
+  out.push("");
   out.push("=".repeat(78));
-  out.push(`汇总：A类笔误 ${totalTypo} 处 | B类悬空 ${totalDangling} 处 | 总计 ${totalTypo + totalDangling} 处`);
+  out.push(`汇总：A类笔误 ${totalTypo} 处 | B类悬空 ${totalDangling} 处 | 自引用提示 ${totalSelfRef} 处（不计入阻断）| 阻断问题 ${totalTypo + totalDangling} 处`);
   out.push("=".repeat(78));
 
   console.log(out.join("\n"));
 
+  // 自引用不计入退出码（少数合法自指对比句式会误报，需人工判断）
   process.exit(totalTypo + totalDangling > 0 ? 1 : 0);
 }
 

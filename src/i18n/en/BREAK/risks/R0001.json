@@ -2,7 +2,7 @@
   "R0001": {
     "title": "Process Automation",
     "definition": "Includes but is not limited to automated registration, login, shopping, coupon collection, lottery, and task completion — using unintended application operations to accelerate or schedule specific workflows.",
-    "description": "There are two mainstream approaches to implementing process automation: one is to reverse-engineer the business workflow and data transmission protocol, then write automated scripts to send requests; the other is to manipulate the business access terminal (e.g., browser, mobile app) and replay pre-recorded workflow actions.",
+    "description": "There are two mainstream approaches to implementing process automation: one is to reverse-engineer the business workflow and data transmission protocol, then write automated scripts to send requests; the other is to manipulate the business access terminal (e.g., browser, mobile app) and replay pre-recorded workflow actions. The former corresponds to protocol-level automation (R0001-001) and the latter to automated simulators (R0001-002).",
     "influence": "Exploits platform promotional benefits and occupies resources intended for legitimate users.",
     "references": [
       {

@@ -103,7 +103,7 @@
     "title": "Multi-Instance Detection",
     "definition": "Identifying whether an APP is running in multiple instances on a terminal.",
     "description": "Game multi-instance detection simply limits the number of game processes and is divided into pre-detection, in-process detection, and post-detection. In-process and post-detection are often silent and serve as the basis for banning or penalizing accounts. Pre-detection prevents multi-instance launching and includes methods such as: process enumeration multi-instance detection, mutex object multi-instance detection, semaphore multi-instance detection, window multi-instance detection, shared memory multi-instance detection, etc.",
-    "limitation": "By analyzing and reversing the detection process, blocking or providing hooked false values can bypass multi-instance detection.",
+    "limitation": "Similar to the limitations of cheat detection (A0010-004), by analyzing and reversing the detection process, blocking or providing hooked false values can bypass multi-instance detection.",
     "references": [
       {
         "title": "MASTG-KNOW-0031: Emulator Detection - OWASP",
@@ -123,7 +123,7 @@
     "title": "Debugger Detection",
     "definition": "Identifying whether a program is being debugged.",
     "description": "The most basic debugger detection technique is to check the BeingDebugged flag in the Process Environment Block (PEB). Another PEB member called NtGlobalFlag (offset 0x68) is also used by packers to detect whether the program was loaded with a debugger. Kernel32!CheckRemoteDebuggerPresent() is another API that can be used to determine whether a debugger is attached to a process. When stepping over INT3 and INT1 instructions in a debugger, since the debugger typically handles these debug interrupts, the exception handler will not be called by default. Debugger Interrupts exploits this fact — a packer can set a flag in the exception handler, and if the flag is not set after the INT instruction, it means the process is being debugged. See references for more methods.",
-    "limitation": "By analyzing and reversing the detection process, blocking or providing hooked false values can bypass debugger detection.",
+    "limitation": "Similar to the limitations of cheat detection (A0010-004), by analyzing and reversing the detection process, blocking or providing hooked false values can bypass debugger detection.",
     "references": [
       {
         "title": "MASTG-KNOW-0085: Anti-Debugging Detection - OWASP",
@@ -143,7 +143,7 @@
     "title": "Virtual Machine Detection",
     "definition": "Identifying whether an APP is running inside a virtual machine.",
     "description": "Virtual machine environment detection refers to software's ability to determine whether it is currently running in a virtual machine and to take corresponding action based on the result. From a malware perspective, it can change its behavior inside a virtual machine to increase analysis difficulty. From a software security perspective, it is used to prevent reverse engineering and abnormal use in certain scenarios.",
-    "limitation": "Virtual machine detection methods mainly work by checking certain environment properties and files, but these methods are not absolutely reliable because black-gray industry actors can modify the virtual machine's environment properties and files to evade detection.",
+    "limitation": "Similar to the limitations of emulator detection (A0010-001), virtual machine detection methods mainly work by checking certain environment properties and files, but these methods are not absolutely reliable because black-gray industry actors can modify the virtual machine's environment properties and files to evade detection.",
     "references": [
       {
         "title": "Virtual Machine Runtime Environment Detection",
@@ -163,7 +163,7 @@
     "title": "Headless Browser Detection",
     "definition": "Identifying whether an APP is running inside a headless browser.",
     "description": "Headless browser detection refers to software's ability to determine whether it is currently running in a headless browser and to take corresponding action based on the result. From a malware perspective, it can change its behavior inside a headless browser to increase analysis difficulty. From a software security perspective, it is used to prevent reverse engineering and abnormal use in certain scenarios.",
-    "limitation": "Headless browser detection methods mainly work by checking certain environment properties and files, but these methods are not absolutely reliable because black-gray industry actors can modify the headless browser's environment properties and files to evade detection.",
+    "limitation": "Similar to the limitations of emulator detection (A0010-001), headless browser detection methods mainly work by checking certain environment properties and files, but these methods are not absolutely reliable because black-gray industry actors can modify the headless browser's environment properties and files to evade detection.",
     "references": [
       {
         "title": "National Cybersecurity Awareness Week: Domain Name Theft Should Not Be Underestimated",
@@ -183,7 +183,7 @@
     "title": "HOOK Detection",
     "definition": "Identifying whether an APP is running in a HOOKed environment.",
     "description": "HOOK detection refers to software's ability to determine whether it is currently running in a HOOKed environment and to take corresponding action based on the result. From a malware perspective, it can change its behavior in a HOOKed environment to increase analysis difficulty. From a software security perspective, it is used to prevent reverse engineering and abnormal use in certain scenarios.",
-    "limitation": "HOOK detection methods mainly work by checking certain environment properties and files, but these methods are not absolutely reliable because black-gray industry actors can modify the HOOKed environment's properties and files to evade detection.",
+    "limitation": "Similar to the limitations of emulator detection (A0010-001), HOOK detection methods mainly work by checking certain environment properties and files, but these methods are not absolutely reliable because black-gray industry actors can modify the HOOKed environment's properties and files to evade detection.",
     "references": [
       {
         "title": "Android Hook, Detection, and Countermeasures",

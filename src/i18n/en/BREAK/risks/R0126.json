@@ -2,7 +2,7 @@
   "R0126": {
     "title": "API Abuse Risk",
     "definition": "The risk of attackers discovering, enumerating, and abusing API interfaces of business systems to conduct data theft, business logic bypass, resource exhaustion, and other attacks.",
-    "description": "API abuse risk is a security risk that has become increasingly prominent with the development of microservice architectures and the API economy. Attackers discover and exploit security flaws in API interfaces through various means to carry out malicious operations. Key risk scenarios include API enumeration attacks, API rate limit bypass, and API business logic abuse.",
+    "description": "API abuse risk is a security risk that has become increasingly prominent with the development of microservice architectures and the API economy. Attackers discover and exploit security flaws in API interfaces through various means to carry out malicious operations. Key risk scenarios include API enumeration attacks (R0126-001), API rate limit bypass (R0126-002), and API business logic abuse (R0126-003).",
     "influence": "Sensitive data leakage, business logic bypass, service availability impact, and financial losses.",
     "references": [
       {
