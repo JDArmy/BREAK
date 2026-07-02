@@ -23,7 +23,7 @@
     "title": "Adding Computing Resources",
     "definition": "Improving the number of concurrent terminal requests that can be handled by adding server computing resources.",
     "description": "For distributed architectures, adding computing resources is the simplest and most effective way to improve availability.",
-    "limitation": "This is complementary to business system optimization (A008-004). Adding computing resources can quickly resolve availability issues but will significantly increase operating costs.",
+    "limitation": "This is complementary to business system optimization (A0008-004). Adding computing resources can quickly resolve availability issues but will significantly increase operating costs.",
     "references": [
       {
         "title": "Auto Scaling - Wikipedia",
@@ -43,7 +43,7 @@
     "title": "DDoS Protection",
     "definition": "Identifying and filtering attack traffic through a DDoS protection system.",
     "description": "Filtering attack traffic through a DDoS protection system allows fewer, more legitimate user requests to be served by the server. This is an effective approach when the system is under large-scale attack.",
-    "limitation": "Existing DDoS protection systems have limited effectiveness against CC attacks and need to be combined with cloud-side anti-crawling (A003) and other measures.",
+    "limitation": "Existing DDoS protection systems have limited effectiveness against CC attacks and need to be combined with cloud-side anti-crawling (A0003) and other measures.",
     "references": [
       {
         "title": "Denial of Service Attack - Wikipedia",

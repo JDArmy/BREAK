@@ -2,7 +2,7 @@
   "A0025": {
     "title": "Digital Certificate",
     "definition": "Digitally signing and encrypting data or files through a digital certificate mechanism.",
-    "description": "Unlike API signature verification (A002), digital certificates place more emphasis on the integrity of the entire transmission chain from sender to receiver, and can also serve as a mechanism for verifying the sender's authenticity. API signatures focus more on ensuring the integrity of data passed from the client and across sites. Simply put, digital certificates primarily protect the data transmission process, while API signatures primarily protect the user terminal.",
+    "description": "Unlike API signature verification (A0002), digital certificates place more emphasis on the integrity of the entire transmission chain from sender to receiver, and can also serve as a mechanism for verifying the sender's authenticity. API signatures focus more on ensuring the integrity of data passed from the client and across sites. Simply put, digital certificates primarily protect the data transmission process, while API signatures primarily protect the user terminal.",
     "limitation": "Since digital certificates are issued by trusted third-party authorities, the security of digital certificates is heavily dependent on the trustworthiness of the issuing authority. If the issuing authority is compromised, attackers can forge digital certificates. Additionally, the security of digital certificates is also affected by the signing algorithm — if the signing algorithm is compromised, attackers can forge digital signatures.",
     "references": [
       {

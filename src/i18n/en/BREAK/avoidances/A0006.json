@@ -2,7 +2,7 @@
   "A0006": {
     "title": "Malicious Content Detection",
     "definition": "Identifying malicious content in user-generated content.",
-    "description": "User-generated content (UGC) includes but is not limited to: text, images, video (streams), links, etc. Malicious content varies by interest and scenario and includes but is not limited to: illegal content, violations, fraud, malicious promotion, etc. Simple text detection can be achieved by setting keywords; complex text content may also involve natural language processing. For image or video content, in addition to OCR text recognition, image content recognition is also required. For links, beyond blacklists and whitelists, some scenarios also require combining domain and link threat intelligence (A016-002) for more precise identification.",
+    "description": "User-generated content (UGC) includes but is not limited to: text, images, video (streams), links, etc. Malicious content varies by interest and scenario and includes but is not limited to: illegal content, violations, fraud, malicious promotion, etc. Simple text detection can be achieved by setting keywords; complex text content may also involve natural language processing. For image or video content, in addition to OCR text recognition, image content recognition is also required. For links, beyond blacklists and whitelists, some scenarios also require combining domain and link threat intelligence (A0016-002) for more precise identification.",
     "limitation": "Malicious content detection is mostly based on keyword matching or scoring mechanisms from some type of strategy model, which allows attackers to counter detection through keyword bypasses, model bypasses, or borderline scoring techniques.",
     "references": [
       {
@@ -42,8 +42,8 @@
   "A0006-002": {
     "title": "Automated Malicious Image Detection",
     "definition": "Identifying malicious image content in user-generated content.",
-    "description": "Malicious image detection generally consists of two parts: first, OCR recognition of text within the image followed by malicious text detection (A006-001); second, recognition of the visual content of the image itself, such as pornography or violence, which typically requires machine image recognition algorithms.",
-    "limitation": "Current OCR text recognition accuracy is relatively high, but it is still subject to the limitations of automated malicious text detection (A006-001). Recognizing image content itself currently has a low accuracy rate and needs to be combined with manual content review (A006-007).",
+    "description": "Malicious image detection generally consists of two parts: first, OCR recognition of text within the image followed by malicious text detection (A0006-001); second, recognition of the visual content of the image itself, such as pornography or violence, which typically requires machine image recognition algorithms.",
+    "limitation": "Current OCR text recognition accuracy is relatively high, but it is still subject to the limitations of automated malicious text detection (A0006-001). Recognizing image content itself currently has a low accuracy rate and needs to be combined with manual content review (A0006-007).",
     "references": [
       {
         "title": "Artificial Intelligence Risk Management Framework - NIST AI 100-1",
@@ -66,7 +66,7 @@
   "A0006-003": {
     "title": "Automated Malicious Audio Detection",
     "definition": "Identifying malicious audio content in user-generated content.",
-    "description": "Malicious audio detection should also consist of two parts: first, speech recognition to convert speech to text, followed by malicious text detection (A006-001); second, recognition of the content conveyed by the audio, such as pornography or violence.",
+    "description": "Malicious audio detection should also consist of two parts: first, speech recognition to convert speech to text, followed by malicious text detection (A0006-001); second, recognition of the content conveyed by the audio, such as pornography or violence.",
     "limitation": "Attackers can use adversarial samples to fool automated malicious audio detection systems, preventing them from accurately detecting and identifying malicious audio. Additionally, automated malicious audio detection systems may be affected by environmental noise, language variation, speaker variation, and other factors, reducing their accuracy.",
     "references": [
       {
@@ -85,8 +85,8 @@
   "A0006-004": {
     "title": "Automated Malicious Video Detection",
     "definition": "Identifying malicious video content in user-generated content.",
-    "description": "The current general approach to malicious video detection is to extract key frames as images and then perform malicious image detection (A006-002), and to extract the audio track for automated malicious audio detection (A006-003). With the development of AI-generated content, multi-modal large models have gained the ability to understand video content, and detection effectiveness is being significantly improved.",
-    "limitation": "This is equally subject to the limitations of automated malicious image detection (A006-002) and automated malicious audio detection (A006-003).",
+    "description": "The current general approach to malicious video detection is to extract key frames as images and then perform malicious image detection (A0006-002), and to extract the audio track for automated malicious audio detection (A0006-003). With the development of AI-generated content, multi-modal large models have gained the ability to understand video content, and detection effectiveness is being significantly improved.",
+    "limitation": "This is equally subject to the limitations of automated malicious image detection (A0006-002) and automated malicious audio detection (A0006-003).",
     "references": [
       {
         "title": "TRECVID - NIST",
@@ -104,7 +104,7 @@
   "A0006-005": {
     "title": "Automated Malicious Link Detection",
     "definition": "Identifying malicious links in user-generated content.",
-    "description": "There are currently two mainstream approaches to handling links: whitelist mode and blacklist mode. Blacklist mode typically needs to be combined with domain and link threat intelligence (A016-002).",
+    "description": "There are currently two mainstream approaches to handling links: whitelist mode and blacklist mode. Blacklist mode typically needs to be combined with domain and link threat intelligence (A0016-002).",
     "limitation": "Whitelist-based domain auditing is ineffective against open redirect vulnerabilities and resource abuse (R0069). Blacklist-based auditing has the problem that domains or links can easily be changed. Therefore, in many cases neither approach works well.",
     "references": [
       {
@@ -128,7 +128,7 @@
   "A0006-006": {
     "title": "Automated Malicious Document Detection",
     "definition": "Identifying malicious documents in user-generated content.",
-    "description": "Malicious document detection is carried out in two aspects: first, document content recognition — extracting document content and then performing malicious text detection (A006-001) and malicious image detection (A006-002); second, antivirus detection of the document itself, which typically requires integration with antivirus software.",
+    "description": "Malicious document detection is carried out in two aspects: first, document content recognition — extracting document content and then performing malicious text detection (A0006-001) and malicious image detection (A0006-002); second, antivirus detection of the document itself, which typically requires integration with antivirus software.",
     "limitation": "Attackers can use adversarial samples to fool automated malicious document detection systems, preventing them from accurately detecting and identifying malicious documents. Additionally, automated malicious document detection systems may be affected by changes in file format, language, font, and other factors, reducing their accuracy.",
     "references": [
       {
@@ -149,7 +149,7 @@
     "title": "Automated Malicious Text Detection",
     "definition": "Identifying malicious text content in user-generated content.",
     "description": "Simple text detection is typically built on a blacklist of keywords; complex text detection combines deep learning with sentiment analysis of the text.",
-    "limitation": "Due to the diversity and ambiguity of language, and the widespread existence of homophones, near-homophones, and visually similar characters in Chinese, it is very easy to bypass automated malicious text detection and produce malicious text that preserves the original meaning. A classic example is 'Martian script' (a form of obfuscated Chinese text), and there are many other methods such as using pinyin initials as substitutes. Therefore, in some necessary or extreme scenarios, manual content review (A006-007) needs to be introduced as a supplement.",
+    "limitation": "Due to the diversity and ambiguity of language, and the widespread existence of homophones, near-homophones, and visually similar characters in Chinese, it is very easy to bypass automated malicious text detection and produce malicious text that preserves the original meaning. A classic example is 'Martian script' (a form of obfuscated Chinese text), and there are many other methods such as using pinyin initials as substitutes. Therefore, in some necessary or extreme scenarios, manual content review (A0006-007) needs to be introduced as a supplement.",
     "references": [
       {
         "title": "Leveraging NLP Techniques for Effective Content Moderation",

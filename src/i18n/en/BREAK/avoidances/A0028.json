@@ -2,7 +2,7 @@
   "A0028": {
     "title": "Resource Access Restriction",
     "definition": "Restricting the resources accessible to a requester.",
-    "description": "Unlike account penalty strategies (A020), resource access restrictions do not necessarily require obtaining the user's login identity. By using session information delivered to the terminal by the browser, access IP information, or unique device IDs obtained through terminal tracking (A021), the accessor can be identified. On this basis, specific business functions can be disabled, resource usage frequency can be limited, resources can be deleted, or access to illegal resources can be restricted.",
+    "description": "Unlike account penalty strategies (A0020), resource access restrictions do not necessarily require obtaining the user's login identity. By using session information delivered to the terminal by the browser, access IP information, or unique device IDs obtained through terminal tracking (A0021), the accessor can be identified. On this basis, specific business functions can be disabled, resource usage frequency can be limited, resources can be deleted, or access to illegal resources can be restricted.",
     "limitation": "In non-login scenarios, resource access restrictions can only rely on terminal factors such as IP, UA, and device ID, all of which can be forged. This limits the effectiveness of this measure against sophisticated attackers.",
     "references": [
       {

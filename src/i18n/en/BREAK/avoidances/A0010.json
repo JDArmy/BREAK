@@ -42,7 +42,7 @@
   "A0010-002": {
     "title": "Cloud Phone Detection",
     "definition": "Identifying whether an APP is running on a cloud phone.",
-    "description": "Cloud phone detection can be performed using the same methods as mobile emulator detection (A010-001). Additionally, device fingerprinting, abnormal environment monitoring, and outbound IP can also be used for cloud phone detection. Since cloud phones typically cannot modify the ROM and most cannot even obtain root access, the countermeasure effectiveness is generally better than mobile emulator detection (A010-001).",
+    "description": "Cloud phone detection can be performed using the same methods as mobile emulator detection (A0010-001). Additionally, device fingerprinting, abnormal environment monitoring, and outbound IP can also be used for cloud phone detection. Since cloud phones typically cannot modify the ROM and most cannot even obtain root access, the countermeasure effectiveness is generally better than mobile emulator detection (A0010-001).",
     "limitation": "As cloud phones and cloud gaming continue to develop and become more widespread, APP vendors will not be able to adopt a blanket 'cloud equals blacklisted' policy, otherwise they will face a large number of user complaints. This leaves room for the black-gray industry to exploit cloud phones in the future.",
     "references": [
       {
@@ -82,7 +82,7 @@
     "title": "Cheat/Plugin Detection",
     "definition": "Identifying whether a program has had runtime instructions injected or cheat programs attached.",
     "description": "Detection is performed by checking program runtime integrity, keyword or DLL list detection, process lists, window title keywords, etc. to determine whether cheat programs are present.",
-    "limitation": "Similar to the limitations of mobile ROOT/jailbreak detection (A010-003), by analyzing and reversing the detection process, blocking or providing hooked false values can bypass cheat detection. However, since cheats are typically used in games, and game data packets are much less readable than HTTP-based APP traffic, hiding cheat detection logic and data reporting within normal game operation and communication will increase the difficulty of anti-cheat countermeasures.",
+    "limitation": "Similar to the limitations of mobile ROOT/jailbreak detection (A0010-003), by analyzing and reversing the detection process, blocking or providing hooked false values can bypass cheat detection. However, since cheats are typically used in games, and game data packets are much less readable than HTTP-based APP traffic, hiding cheat detection logic and data reporting within normal game operation and communication will increase the difficulty of anti-cheat countermeasures.",
     "references": [
       {
         "title": "In-Depth Analysis of DMA Hardware Cheat Principles and Detection Techniques",
