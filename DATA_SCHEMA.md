@@ -154,7 +154,6 @@ Parent and child records live in the parent JSON file. For example, `R0001-001` 
 | `title` | string | required | 展示标题。 |
 | `keywords` | string | required | 搜索关键词；必须非空，且不能重复。 |
 | `summary` | string | required | 案例摘要，80-150 字事实性描述。 |
-| `description` | string | optional | 详细说明。 |
 | `category` | string | required | 分类 ID。 |
 | `incidentTime` | string | optional | 案例发生时间，YYYY、YYYY-MM 或 YYYY-MM-DD。 |
 | `relatedRisks` | string | required | 相关风险 ID 列表；Risk 中为风险间关联对象列表。 Target: Risk. |

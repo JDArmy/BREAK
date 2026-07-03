@@ -170,7 +170,6 @@ export const caseSchema = z.object({
   title: nonEmptyString,
   keywords: keywordArray,
   summary: nonEmptyString,
-  description: z.string().optional(),
   category: caseCategorySchema,
   incidentTime: z.string().regex(/^\d{4}(-\d{2}(-\d{2})?)?$/, "incidentTime 需为 YYYY、YYYY-MM 或 YYYY-MM-DD").optional(),
   relatedRisks: idArray.min(1, "relatedRisks 不能为空"),
@@ -179,7 +178,7 @@ export const caseSchema = z.object({
   references: z.array(referenceSchema).default([]),
   updated: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "updated 格式必须为 YYYY-MM-DD").optional(),
   version: entityVersionSchema,
-});
+}).strict(); // strict：Case 不维护 description 等多余字段，详细背景统一写入 summary，门禁拒绝任何未定义字段
 
 export const entitySchemas = {
   risks: riskSchema,

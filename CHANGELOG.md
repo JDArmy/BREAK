@@ -1,5 +1,14 @@
 # Change log
 
+## 2.38.3
+
+移除 Case 实体的 description 字段，案例事实性描述统一用 summary：
+
+- **数据**：删除 C1798/C1799/C1803 三个案例（中英文）的 description 字段。历史上仅这 3 个案例有 description，与 summary 内容重叠，造成冗余。
+- **schema 门禁**：`breakSchema.ts` 的 caseSchema 移除 description 字段定义并加 `.strict()`，拒绝任何未定义字段（含未来误加的 description）。
+- **文档**：CLAUDE.md 的 Case schema 示例与英文字段清单移除 description，新增字段约束说明"Case 不维护 description，详细背景统一写入 summary"。
+- **schema-docs 脚本**：`schema-docs.mjs` 的正则兼容 `z.object({...}).strict()` 链式结尾，修复 strict 模式下文档生成报错。
+
 ## 2.38.2
 
 修正两个案例的事实性数据错误：

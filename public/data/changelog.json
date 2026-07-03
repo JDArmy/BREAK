@@ -1,5 +1,10 @@
 [
   {
+    "version": "2.38.2",
+    "summary": "修正两个案例的事实性数据错误：",
+    "body": "修正两个案例的事实性数据错误：\n\n- **C1803**（17岁少年DDoS攻击购票系统案）：incidentTime 由 2026-07 修正为 2020-06（案发时间），summary 补充\"2021年8月广州市中级人民法院发布该案判决\"等准确事实。原 incidentTime 与 summary 误用 2026 年时间。\n- **C1038**（民警盗卖个人信息案）：summary 修正\"查询次数接近9万次\"为\"导出近5000人数据（含近600条住宿信息），非法获利5万元，判有期徒刑一年八个月\"——9万次查询实为另一反诈平台案的数字，原 summary 混淆了两个案件。"
+  },
+  {
     "version": "2.38.1",
     "summary": "补强具身智能场景（BS19）新增案例的一手来源覆盖率：",
     "body": "补强具身智能场景（BS19）新增案例的一手来源覆盖率：\n\n- **案例一手来源补全**：为 13 个具身智能场景案例补充官方/原始一手来源，highValueMissingPrimary 由 90 降至 77，高价值案例一手来源覆盖率由 91.8% 提升至 92.99%。\n  - 5 条刑事判决（C1798/C1800/C1801/C1803/C1804）：补法院官网、政法委官网、政务微信等一手通报。\n  - 8 条海外安全事件（C1808-C1819）：补 MIT Tech Review 原始调查、联合国专家小组报告、腾讯科恩实验室官方博客、Black Hat whitepaper、DJI 官方安全博客、Bellingcat 开源调查、DEF CON 演讲 PDF、AI 事故数据库等一手来源。\n- **白名单扩充**：`case-source-quality.mjs` 的 `primaryDomainSuffixes` 新增 4 个国际权威域名（incidentdatabase.ai / icrc.org / stopkillerrobots.org / en.wikipedia.org），`primaryReferenceLinks` 新增 9 条经核实的官方一手来源 URL。"

@@ -130,7 +130,7 @@ const enumValues = {
 function loadSchemaSource() {
   const source = fs.readFileSync(path.join(projectRoot, 'src/validation/breakSchema.ts'), 'utf8');
   const schemaBlocks = {};
-  for (const match of source.matchAll(/export const (\w+)Schema = z\.object\(\{([\s\S]*?)\n\}\);/g)) {
+  for (const match of source.matchAll(/export const (\w+)Schema = z\.object\(\{([\s\S]*?)\n\}\)(\.\w+\(\))*;/g)) {
     schemaBlocks[match[1]] = match[2];
   }
   return schemaBlocks;
