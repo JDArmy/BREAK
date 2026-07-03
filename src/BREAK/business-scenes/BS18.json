@@ -7,8 +7,7 @@
       "RD01": {
         "title": "交易维度",
         "riskScenes": [
-          "RS29",
-          "RS32"
+          "RS29"
         ],
         "updated": "2026-07-03"
       },
@@ -24,14 +23,6 @@
         "title": "身份维度",
         "riskScenes": [
           "RS32"
-        ],
-        "updated": "2026-07-03"
-      },
-      "RD04": {
-        "title": "对抗维度",
-        "riskScenes": [
-          "RS29",
-          "RS30"
         ],
         "updated": "2026-07-03"
       }
