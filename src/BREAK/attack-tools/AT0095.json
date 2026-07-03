@@ -18,6 +18,10 @@
     ],
     "references": [
       {
+        "title": "Android Repackaging Attack Lab — SEED Labs",
+        "link": "https://seedsecuritylabs.org/Labs_16.04/Mobile/Android_Repackaging/"
+      },
+      {
         "title": "NIST Cybersecurity Framework 2.0",
         "link": "https://www.nist.gov/cyberframework"
       }
@@ -26,7 +30,7 @@
       "移动应用重打包工具链",
       "移动应用重打包"
     ],
-    "updated": "2026-06-17",
+    "updated": "2026-07-03",
     "relatedAttackTools": [
       {
         "key": "AT0054-006",

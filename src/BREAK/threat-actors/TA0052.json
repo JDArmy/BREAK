@@ -4,8 +4,8 @@
     "description": "通过依赖包、构建链路、制品库和发布流程实施投毒的攻击者。",
     "references": [
       {
-        "title": "Software Bill of Materials - CISA",
-        "link": "https://www.cisa.gov/topics/information-communications-technology-supply-chain-security/sbom"
+        "title": "Widespread Supply Chain Compromise Impacting npm Ecosystem - CISA",
+        "link": "https://www.cisa.gov/news-events/alerts/2025/09/23/widespread-supply-chain-compromise-impacting-npm-ecosystem"
       }
     ],
     "buildAttackTools": [
@@ -28,7 +28,7 @@
       "供应链投毒者",
       "供应链投毒"
     ],
-    "updated": "2026-06-17",
+    "updated": "2026-07-03",
     "relatedThreatActors": [
       {
         "key": "TA0063",

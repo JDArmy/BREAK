@@ -4,8 +4,8 @@
     "description": "通过MFA疲劳、会话令牌重放和钓鱼工具接管用户或员工账号。",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Implementing Phishing-Resistant MFA - CISA",
+        "link": "https://www.cisa.gov/sites/default/files/publications/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf"
       }
     ],
     "buildAttackTools": [
@@ -26,7 +26,7 @@
       "账号接管团伙",
       "账号接管"
     ],
-    "updated": "2026-06-17",
+    "updated": "2026-07-03",
     "relatedThreatActors": [
       {
         "key": "TA0051",

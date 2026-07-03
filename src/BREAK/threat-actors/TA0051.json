@@ -4,8 +4,8 @@
     "description": "专门枚举和滥用公开API、影子API、Webhook和会话令牌的攻击者。",
     "references": [
       {
-        "title": "OWASP API Security Top 10 2023",
-        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+        "title": "API1:2023 Broken Object Level Authorization - OWASP API Security",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0xa1-broken-object-level-authorization/"
       }
     ],
     "buildAttackTools": [],
@@ -28,7 +28,7 @@
       "API滥用者",
       "API滥用"
     ],
-    "updated": "2026-06-17",
+    "updated": "2026-07-03",
     "relatedThreatActors": [
       {
         "key": "TA0059",

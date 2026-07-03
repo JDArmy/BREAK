@@ -4,8 +4,8 @@
     "description": "围绕商户套现、拒付、退款和支付令牌滥用牟利的黑灰产团伙。",
     "references": [
       {
-        "title": "PCI Data Security Standard",
-        "link": "https://www.pcisecuritystandards.org/standards/pci-dss/"
+        "title": "入库参考案例：武某信用卡诈骗案 - 中华人民共和国最高人民法院",
+        "link": "https://www.court.gov.cn/zixun/xiangqing/469031.html"
       }
     ],
     "buildAttackTools": [
@@ -27,7 +27,7 @@
       "支付欺诈团伙",
       "支付欺诈"
     ],
-    "updated": "2026-06-17",
+    "updated": "2026-07-03",
     "relatedThreatActors": [
       {
         "key": "TA0002-001",

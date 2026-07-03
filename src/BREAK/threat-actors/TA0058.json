@@ -4,8 +4,8 @@
     "description": "通过污染训练数据、反馈数据、知识库和提示上下文影响模型行为。",
     "references": [
       {
-        "title": "NIST AI Risk Management Framework",
-        "link": "https://www.nist.gov/itl/ai-risk-management-framework"
+        "title": "A small number of samples can poison LLMs of any size - Anthropic",
+        "link": "https://www.anthropic.com/research/small-samples-poison"
       }
     ],
     "buildAttackTools": [
@@ -27,7 +27,7 @@
       "AI数据投毒者",
       "AI数据投毒"
     ],
-    "updated": "2026-06-17",
+    "updated": "2026-07-03",
     "relatedThreatActors": []
   }
 }

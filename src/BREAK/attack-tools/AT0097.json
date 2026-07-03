@@ -17,6 +17,10 @@
     ],
     "references": [
       {
+        "title": "Vehicle Cybersecurity: The Jeep Hack and Beyond — CMU SEI",
+        "link": "https://www.sei.cmu.edu/blog/vehicle-cybersecurity-the-jeep-hack-and-beyond/"
+      },
+      {
         "title": "ISO/SAE 21434 Road vehicles Cybersecurity",
         "link": "https://www.iso.org/standard/70918.html"
       }
@@ -25,7 +29,7 @@
       "车联网OTA与接口测试工具",
       "车联网OTA与接口测试"
     ],
-    "updated": "2026-06-17",
+    "updated": "2026-07-03",
     "relatedAttackTools": [
       {
         "key": "AT0083",

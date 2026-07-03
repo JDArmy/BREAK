@@ -4,6 +4,10 @@
     "description": "A toolchain for decompiling, modifying, signing, and distributing repackaged mobile applications.",
     "references": [
       {
+        "title": "Android Repackaging Attack Lab — SEED Labs",
+        "link": "https://seedsecuritylabs.org/Labs_16.04/Mobile/Android_Repackaging/"
+      },
+      {
         "title": "NIST Cybersecurity Framework 2.0",
         "link": "https://www.nist.gov/cyberframework"
       }

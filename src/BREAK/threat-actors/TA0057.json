@@ -4,8 +4,8 @@
     "description": "超出授权范围收集、共享、再加工或售卖业务数据的组织或个人。",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "最高法发布人民法院依法惩治侵犯公民个人信息犯罪及关联犯罪典型案例",
+        "link": "https://www.court.gov.cn/zixun/xiangqing/499271.html"
       }
     ],
     "buildAttackTools": [],
@@ -23,7 +23,7 @@
       "数据经纪与越权使用方",
       "数据经纪与越权使用"
     ],
-    "updated": "2026-06-17",
+    "updated": "2026-07-03",
     "relatedThreatActors": [
       {
         "key": "TA0017",

@@ -4,8 +4,8 @@
     "description": "通过安装农场、点击注入和虚假转化骗取广告预算或佣金。",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "What is Mobile Ad Fraud? - HUMAN Security",
+        "link": "https://www.humansecurity.com/learn/topics/what-is-mobile-ad-fraud/"
       }
     ],
     "buildAttackTools": [
@@ -27,7 +27,7 @@
       "广告归因作弊团伙",
       "广告归因作弊"
     ],
-    "updated": "2026-06-17",
+    "updated": "2026-07-03",
     "relatedThreatActors": [
       {
         "key": "TA0010",

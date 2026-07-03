@@ -10,8 +10,8 @@
     "description": "An attacker specialized against robot and embodied-intelligence systems, with capabilities in VLA model adversarial attacks, teleoperation channel hijacking, ROS/DDS middleware vulnerability exploitation, and robot hardware debug-interface attacks, motivated by espionage, extortion, physical sabotage, ideological attacks, and nation-state operations. Such attackers exploit embodied-intelligence-unique attack surfaces like Unitree UniPwn-style BLE command injection, RoboPAIR-style VLA jailbreaks, Raven II-style teleoperation hijacking, and FastDDS-style middleware vulnerabilities to make humanoid robots, surgical robots, and autonomous-driving systems perform unintended physical actions or be fully taken over. Unlike TA0049 (industrial & V2X attacker, focused on OT/V2X protocols) and TA0048 (IoT botnet operator, focused on device DDoS), This attacker focuses on the model-layer and physical-world attack surfaces unique to embodied intelligence, where consequences translate directly into physical harm or physical-world destruction.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "RoboPAIR: Jailbreaking LLM-Controlled Robots",
+        "link": "https://robopair.org/"
       }
     ]
   }

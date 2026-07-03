@@ -4,8 +4,8 @@
     "description": "Attackers who influence model behavior by poisoning training data, feedback data, knowledge bases, and prompt context.",
     "references": [
       {
-        "title": "NIST AI Risk Management Framework",
-        "link": "https://www.nist.gov/itl/ai-risk-management-framework"
+        "title": "A small number of samples can poison LLMs of any size - Anthropic",
+        "link": "https://www.anthropic.com/research/small-samples-poison"
       }
     ],
     "keywords": [

@@ -4,8 +4,8 @@
     "description": "重打包、分发和运营仿冒移动应用以窃取账号、广告收益或支付信息。",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Social engineering attacks lure Indian users to install Android banking trojans - Microsoft Security",
+        "link": "https://www.microsoft.com/en-us/security/blog/2023/11/20/social-engineering-attacks-lure-indian-users-to-install-android-banking-trojans/"
       }
     ],
     "buildAttackTools": [
@@ -31,7 +31,7 @@
       "移动应用仿冒团伙",
       "移动应用仿冒"
     ],
-    "updated": "2026-06-17",
+    "updated": "2026-07-03",
     "relatedThreatActors": [
       {
         "key": "TA0062",

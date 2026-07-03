@@ -12,8 +12,8 @@
     "description": "An adversarial-attack toolset targeting embodied-intelligence robots controlled by Vision-Language-Action (VLA) and Vision-Language Models (VLM), integrating physical adversarial-patch generation, cross-modal injection-sample construction, jailbreak-prompt generation, and physical-world prompt-injection payload crafting. The tool draws on published research methods such as the RoboPAIR jailbreak algorithm (often 100% attack success across white-box/gray-box/black-box platforms), UPA-RFAS single-patch cross-model transfer, CrossInject cross-modal injection, and BadRobot voice jailbreak, and can generate attack payloads inducing robots to perform harmful physical actions such as collision, weaponization, and ignoring stop signs against platforms like NVIDIA Dolphins, Unitree Go2+GPT, and Clearpath Jackal. Unlike AT0054 (system/application vulnerability exploitation tool) which focuses on traditional software vulnerabilities, this tool focuses on VLA model-layer adversarial attacks and jailbreaks.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "RoboPAIR — Jailbreaking LLM-Controlled Robots",
+        "link": "https://robopair.org/"
       }
     ]
   }

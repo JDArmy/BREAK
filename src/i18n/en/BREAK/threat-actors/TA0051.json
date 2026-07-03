@@ -4,8 +4,8 @@
     "description": "Attackers focused on enumerating and abusing public APIs, shadow APIs, webhooks, and session tokens.",
     "references": [
       {
-        "title": "OWASP API Security Top 10 2023",
-        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+        "title": "API1:2023 Broken Object Level Authorization - OWASP API Security",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0xa1-broken-object-level-authorization/"
       }
     ],
     "keywords": [

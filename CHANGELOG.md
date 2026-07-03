@@ -10,6 +10,17 @@ Avoidance 内容规范三档控制落地：明确 description（检测信号）�
 - **档位一·撰写规范**：CLAUDE.md 补《Avoidance 内容撰写规范》章节，明确 description/limitation 的内容导向、长度阈值、词集初筛与 LLM 兜底的关系。
 - **存量补全**：补全 124 个 Avoidance 实体（中文+英文同步）的 description/limitation，其中 57 条原本无 limitation，覆盖率从 82% 提升至 100%。
 
+### 新条目准入标准 + 落地门禁
+
+制定 6 类知识实体（Risk/Avoidance/AttackTool/ThreatActor/Term/Case）新条目的严格准入标准，落地为机器门禁（`admission.mjs` 接入 `validate:data`）+ 标准文档（`ADMISSION-STANDARD.md`）+ discover 评审关约束三层。补 6 个原有准入空白：是否值得录入、是否重复、是否泛泛（文本长度下限）、keywords 数量下限、references 占位污染、高价值 Case 来源质量。
+
+- **准入门禁脚本**：新增 `scripts/validate/admission.mjs`，接入 `validate:data` build 链。检查项：①references 禁 10 种框架首页占位链接（精确匹配，不误伤具体页）；②keywords≥3（Term≥4）；③文本字段长度下限（risk description≥60字、case summary≥80字 等，去空白字符）；④高价值 Case（criminal_verdict 等 4 类）需 ≥2 源且含 ≥1 primary 一手来源；⑤内容退化保护。`npm run audit:admission` 只报告不阻断。
+- **baseline 豁免 + 退化保护**：新增 `scripts/validate/admission-baseline.json` 冻结快照（2965 条 exemptIds + 218 条 placeholderExempt + fieldSnapshots）。历史条目豁免初始下限（防误伤），但 keywords/文本长度低于快照值仍报错（防劣化）；新增条目严格执行所有下限。
+- **共享来源分级模块**：新增 `scripts/validate/source-classify.mjs`，从 `case-source-quality.mjs` 抽出 `classifySource`/5 个域名后缀集合/`primaryReferenceLinks`/`highValueCategories`（去重 250+ 域名），`case-source-quality.mjs` 改为 import（行为无回归）。
+- **准入标准文档**：新增 `ADMISSION-STANDARD.md`（7 章节 + 各类型阈值表 + 占位黑名单 + 来源分级 + 与现有门禁分工表 + discover 衔接）。CLAUDE.md 补"新条目准入标准"小节，SKILL.md 草稿生成约束节补占位禁令与内容下限。
+- **discover 衔接**：`write-drafts.mjs` 的 `ENTITY_STANDARD` 6 类各追加【内容下限】段，`buildReviewPrompt` 评审第1项引用阈值，`buildDraftPrompt` 补 references 禁占位 + 高价值 Case ≥2源。与 admission 同步上线，落盘草稿三层卡。
+- **历史占位引用修复**：218 个文件用框架首页当唯一引用（源于 `expand-coverage-batch.mjs` 批量生成），按混合策略（优先替换为权威主题对应具体页，替换不了补一条具体来源+保留占位作辅助）分批修复，中英文双改。本批先修 attack-tools(7) + threat-actors(12)，其余 risks/avoidances/terms(199) 作为后续独立工单。
+
 ## 2.38.3
 
 移除 Case 实体的 description 字段，案例事实性描述统一用 summary：
