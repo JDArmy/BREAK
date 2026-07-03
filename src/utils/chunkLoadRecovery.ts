@@ -16,6 +16,10 @@ interface ChunkReloadRecord {
   time: number;
 }
 
+interface RecoverableAsyncComponentOptions {
+  showLoading?: boolean;
+}
+
 const getCurrentPath = () =>
   window.location.hash.slice(1) || window.location.pathname || "/";
 
@@ -111,6 +115,7 @@ export function createRecoverableAsyncComponent<T extends Component = Component>
   loader: AsyncComponentLoader<T>,
   errorComponent: Component = AsyncComponentError,
   source = "async-component",
+  options: RecoverableAsyncComponentOptions = {},
 ) {
   return defineAsyncComponent({
     loader: () => {
@@ -123,7 +128,7 @@ export function createRecoverableAsyncComponent<T extends Component = Component>
       startTopLoading(taskId, 25);
       return loader().finally(() => finishTopLoading(taskId));
     },
-    loadingComponent: AsyncComponentLoading,
+    loadingComponent: options.showLoading === false ? undefined : AsyncComponentLoading,
     errorComponent,
     delay: 150,
     onError(error, _retry, fail) {

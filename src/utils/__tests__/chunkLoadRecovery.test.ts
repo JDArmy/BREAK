@@ -110,4 +110,19 @@ describe("chunkLoadRecovery", () => {
     expect(appUpdateMocks.applyPendingAppUpdate).toHaveBeenCalledWith("async:FeatureEntry");
     expect(loader).not.toHaveBeenCalled();
   });
+
+  it("支持后台异步组件静默加载，不渲染加载占位", () => {
+    const loader = vi.fn(async () => ({ template: "<div />" }));
+    const component = createRecoverableAsyncComponent(
+      loader,
+      undefined,
+      "BackgroundWorker",
+      { showLoading: false },
+    ) as {
+      __asyncLoader: () => Promise<unknown>;
+      __asyncLoadingComponent?: unknown;
+    };
+
+    expect(component.__asyncLoadingComponent).toBeUndefined();
+  });
 });

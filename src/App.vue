@@ -8,6 +8,7 @@ const EntityAutoLinker = createRecoverableAsyncComponent(
   () => import("./components/entity/EntityAutoLinker.vue"),
   undefined,
   "EntityAutoLinker",
+  { showLoading: false },
 );
 
 import iconGithub from "@/components/icons/iconGithub.vue";

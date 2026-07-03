@@ -27,7 +27,12 @@ const handleBannerClick = () => {
 };
 
 const loadSearchDialog = () => import("@/components/SearchDialog.vue");
-const SearchDialog = createRecoverableAsyncComponent(loadSearchDialog, undefined, "SearchDialog");
+const SearchDialog = createRecoverableAsyncComponent(
+  loadSearchDialog,
+  undefined,
+  "SearchDialog",
+  { showLoading: false },
+);
 
 const { locale } = useI18n();
 const router = useRouter();
@@ -42,7 +47,6 @@ const shortcutHint =
     : "Ctrl+K";
 
 const preloadSearchDialog = () => {
-  searchDialogEnabled.value = true;
   void loadSearchDialog();
 };
 
@@ -74,6 +78,7 @@ const pendingCleanups: Array<() => void> = [];
 
 const openSearchDialog = () => {
   preloadSearchDialog();
+  searchDialogEnabled.value = true;
   searchOpen.value = true;
 };
 
@@ -510,7 +515,7 @@ const getActiveIndex = (fullPath: string) => {
     </div>
   </nav>
 
-  <SearchDialog v-if="searchDialogEnabled" v-model="searchOpen" />
+  <SearchDialog v-if="searchDialogEnabled && searchOpen" v-model="searchOpen" />
 </template>
 
 <style scoped>
