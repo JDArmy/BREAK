@@ -1,5 +1,13 @@
 # Change log
 
+## 2.35.2
+
+修复业务场景详情页风险维度折行 bug：
+
+- **根因**：`useHomeSceneLayout.ts` 的非滚动分支（场景数 ≤ 阈值 8）用栅格 `dimension.size` 分配宽度，当 RS 被多个维度复用时（如 BS18 的 RS29/RS30/RS32 各被 2 个维度引用），`Σ(维度场景数) > totalScenes`，按比例算出的 `dimensionSize` 之和超过 24，加上 `remainingRowSize || 24` 在 remainingRowSize=0 时回退到 24 的 bug，导致维度折行。
+- **修复**：移除 `SCROLL_THRESHOLD` 阈值判断，所有桌面场景统一走滚动布局分支——`flex-wrap: nowrap` 保证维度始终在同一行，内容宽度 < 容器宽时铺满无滚动条，超出则横向滚动。移动端不受影响（用 `xs/sm=24` 垂直堆叠）。
+- `shouldEnableScroll` 改为恒 true（保留导出供桌面/移动端切换）；`sceneLayout` 删非滚动分支；测试断言更新并新增 BS18 RS 跨维度复用回归测试。
+
 ## 2.35.1
 
 完善新增物流实体与已有实体之间的关系，补充相关案例：

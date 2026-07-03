@@ -38,6 +38,21 @@ vi.mock("@/BREAK/home", () => ({
           RS09: { title: "S9", risks: ["R0001"] },
         },
       },
+      // BS18 结构：4 维度，RS29/RS30/RS32 跨维度复用，触发历史折行 bug
+      BS18: {
+        riskDimensions: {
+          RD01: { title: "交易维度", riskScenes: ["RS29", "RS32"] },
+          RD02: { title: "运营维度", riskScenes: ["RS30", "RS31"] },
+          RD03: { title: "身份维度", riskScenes: ["RS32"] },
+          RD04: { title: "对抗维度", riskScenes: ["RS29", "RS30"] },
+        },
+        riskScenes: {
+          RS29: { title: "快递快运", risks: ["R0255"] },
+          RS30: { title: "运力调度", risks: ["R0258"] },
+          RS31: { title: "重量货品", risks: ["R0260"] },
+          RS32: { title: "商家账号", risks: ["R0263"] },
+        },
+      },
     },
   },
 }));
@@ -60,11 +75,11 @@ describe("useHomeSceneLayout", () => {
     expect(sceneLayout.value.length).toBeGreaterThan(0);
     expect(sceneLayout.value[0].key).toBe("RD01");
     expect(sceneLayout.value[0].scenes.length).toBeGreaterThan(0);
-    // 3 个场景，低于中文阈值 8
-    expect(shouldEnableScroll.value).toBe(false);
+    // 统一走滚动布局，无论场景数多少都启用滚动（桌面端由 HomeView 按移动端切换堆叠）
+    expect(shouldEnableScroll.value).toBe(true);
   });
 
-  it("英文 locale 使用不同阈值", () => {
+  it("英文 locale 仍启用滚动", () => {
     const bsKey = ref("BS00");
     const locale = ref("en");
     const { shouldEnableScroll, sceneBREAK } = useHomeSceneLayout(
@@ -75,10 +90,10 @@ describe("useHomeSceneLayout", () => {
         risk: (key) => key,
       },
     );
-    expect(shouldEnableScroll.value).toBe(false);
+    expect(shouldEnableScroll.value).toBe(true);
   });
 
-  it("超过阈值时启用滚动并计算维度宽度", () => {
+  it("统一启用滚动并计算维度宽度", () => {
     const bsKey = ref("BS01"); // 9 个场景
     const locale = ref("cn");
     const { sceneLayout, sceneBREAK, shouldEnableScroll } = useHomeSceneLayout(
@@ -90,7 +105,7 @@ describe("useHomeSceneLayout", () => {
       },
     );
 
-    // 9 个场景 > 中文阈值 8
+    // 统一启用滚动
     expect(shouldEnableScroll.value).toBe(true);
     // 滚动模式下维度有固定 width
     expect(sceneLayout.value[0].width).toBeGreaterThan(0);
@@ -98,7 +113,7 @@ describe("useHomeSceneLayout", () => {
     expect(sceneLayout.value[0].scenes[0].width).toBeGreaterThan(0);
   });
 
-  it("多维度时尺寸按比例分配", () => {
+  it("多维度统一占满整行且各有宽度", () => {
     const bsKey = ref("BS00");
     const locale = ref("cn");
     const { sceneLayout, sceneBREAK } = useHomeSceneLayout(
@@ -112,8 +127,38 @@ describe("useHomeSceneLayout", () => {
 
     // BS00 有 2 个维度
     expect(sceneLayout.value).toHaveLength(2);
-    const totalSize = sceneLayout.value.reduce((s, d) => s + d.size, 0);
-    expect(totalSize).toBeLessThanOrEqual(24);
+    // 统一走滚动分支后 dimensionSize 恒为 24（桌面端模板传 md=undefined 不消费 size）
+    for (const dim of sceneLayout.value) {
+      expect(dim.size).toBe(24);
+      expect(dim.width).toBeGreaterThan(0);
+    }
+  });
+
+  it("RS 跨维度复用时不折行（BS18 回归）", () => {
+    // 模拟 BS18 结构：4 个维度，RS29/RS30/RS32 被多个维度复用，
+    // 历史上非滚动分支因 Σ(维度场景数) > totalScenes 导致 dimensionSize 之和 > 24 折行。
+    const bsKey = ref("BS18");
+    const locale = ref("cn");
+    const { sceneLayout, shouldEnableScroll } = useHomeSceneLayout(
+      bsKey,
+      locale,
+      {
+        riskScene: (key) => key,
+        risk: () => "R0001",
+      },
+    );
+
+    expect(shouldEnableScroll.value).toBe(true);
+    expect(sceneLayout.value).toHaveLength(4);
+    // 每个维度 size 恒 24，不因 RS 复用膨胀
+    for (const dim of sceneLayout.value) {
+      expect(dim.size).toBe(24);
+      expect(dim.width).toBeGreaterThan(0);
+      // 每个场景都有 width（滚动分支）
+      for (const scene of dim.scenes) {
+        expect(scene.width).toBeGreaterThan(0);
+      }
+    }
   });
 
   it("isChineseLocale 正确响应", () => {

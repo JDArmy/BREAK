@@ -29,8 +29,6 @@ const SCENE_MAX_WIDTH_CN = 190;
 const SCENE_MIN_WIDTH_EN = 180;
 const SCENE_MAX_WIDTH_EN = 300;
 const SCENE_CARD_GAP = 6;
-const SCROLL_THRESHOLD_CN = 8;
-const SCROLL_THRESHOLD_EN = 6;
 
 const visualTextLength = (value: string) =>
   Array.from(value).reduce(
@@ -93,43 +91,20 @@ export function useHomeSceneLayout(
     );
   };
 
-  const shouldEnableScroll = computed(() => {
-    const scrollThreshold =
-      locale.value === "en" ? SCROLL_THRESHOLD_EN : SCROLL_THRESHOLD_CN;
-    return (
-      Object.keys(sceneBREAK.value.riskScenes).length > scrollThreshold
-    );
-  });
+  // 桌面端统一走横向滚动布局：维度始终在同一行（flex-wrap: nowrap），
+  // 内容宽度 < 容器宽时铺满无滚动条，超出则横向滚动。移动端由 HomeView 的
+  // shouldEnableMatrixScroll && !isMobile 切换为垂直堆叠，不依赖此值。
+  const shouldEnableScroll = computed(() => true);
 
   const sceneLayout = computed<SceneLayoutItem[]>(() => {
-    const totalScenes = Object.keys(sceneBREAK.value.riskScenes).length;
-    const scrollThreshold =
-      locale.value === "en" ? SCROLL_THRESHOLD_EN : SCROLL_THRESHOLD_CN;
-    const enableScroll = totalScenes > scrollThreshold;
-    let remainingRowSize = 24;
-
     return Object.entries(sceneBREAK.value.riskDimensions).map(
       ([rdKey, rdVal]) => {
-        let dimensionSize;
-        let dimensionWidth;
-
-        if (enableScroll) {
-          dimensionWidth = rdVal.riskScenes.reduce(
-            (total, sceneKey) =>
-              total + getSceneColumnWidth(sceneKey) + SCENE_CARD_GAP,
-            0,
-          );
-          dimensionSize = 24;
-        } else {
-          dimensionSize = Math.round(
-            (rdVal.riskScenes.length / totalScenes) * 24,
-          );
-          dimensionSize = Math.min(
-            dimensionSize,
-            remainingRowSize || 24,
-          );
-          remainingRowSize -= dimensionSize;
-        }
+        const dimensionWidth = rdVal.riskScenes.reduce(
+          (total, sceneKey) =>
+            total + getSceneColumnWidth(sceneKey) + SCENE_CARD_GAP,
+          0,
+        );
+        const dimensionSize = 24;
 
         let remainingSceneSize = 24;
         const scenes = rdVal.riskScenes.map((rsKey) => {
@@ -139,9 +114,7 @@ export function useHomeSceneLayout(
           return {
             key: rsKey,
             size: sceneSize,
-            width: enableScroll
-              ? getSceneColumnWidth(rsKey)
-              : undefined,
+            width: getSceneColumnWidth(rsKey),
           };
         });
 
