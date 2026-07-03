@@ -23,12 +23,239 @@
 
   <body>
     <div id="app">
-      Loading, please wait...
-      <!-- <br />国内用户请访问：<a
-        href="https://jdarmy.gitee.io/break/"
-        >https://jdarmy.gitee.io/break/</a
-      > -->
+      <style>
+        .break-boot {
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 24px;
+          box-sizing: border-box;
+          background: #0f172a;
+          color: #dbeafe;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        .break-boot__panel {
+          width: min(420px, 100%);
+          border: 1px solid rgba(148, 163, 184, 0.32);
+          border-radius: 8px;
+          padding: 24px;
+          background: rgba(15, 23, 42, 0.92);
+          box-shadow: 0 16px 48px rgba(0, 0, 0, 0.28);
+        }
+
+        .break-boot__brand {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          margin-bottom: 18px;
+        }
+
+        .break-boot__mark {
+          width: 36px;
+          height: 36px;
+          border-radius: 8px;
+          background: #1e293b;
+          display: grid;
+          place-items: center;
+          color: #38bdf8;
+          font-weight: 800;
+          font-size: 20px;
+        }
+
+        .break-boot__title {
+          margin: 0;
+          color: #f8fafc;
+          font-size: 18px;
+          line-height: 1.2;
+          letter-spacing: 0;
+        }
+
+        .break-boot__subtitle {
+          margin: 4px 0 0;
+          color: #94a3b8;
+          font-size: 12px;
+          line-height: 1.4;
+        }
+
+        .break-boot__stage {
+          min-height: 22px;
+          margin: 0 0 12px;
+          color: #bfdbfe;
+          font-size: 14px;
+          line-height: 1.5;
+        }
+
+        .break-boot__bar {
+          height: 8px;
+          border-radius: 999px;
+          overflow: hidden;
+          background: #1e293b;
+          border: 1px solid rgba(148, 163, 184, 0.22);
+        }
+
+        .break-boot__progress {
+          height: 100%;
+          width: 12%;
+          border-radius: inherit;
+          background: #38bdf8;
+          transition: width 240ms ease;
+        }
+
+        .break-boot__hint {
+          min-height: 20px;
+          margin: 12px 0 0;
+          color: #94a3b8;
+          font-size: 12px;
+          line-height: 1.5;
+        }
+
+        .break-boot__actions {
+          display: none;
+          gap: 8px;
+          margin-top: 16px;
+          flex-wrap: wrap;
+        }
+
+        .break-boot__button {
+          appearance: none;
+          border: 1px solid rgba(56, 189, 248, 0.48);
+          border-radius: 6px;
+          background: #0f172a;
+          color: #e0f2fe;
+          cursor: pointer;
+          font-size: 13px;
+          line-height: 1;
+          padding: 9px 12px;
+        }
+
+        .break-boot__button:hover {
+          background: #172554;
+        }
+
+        .break-boot.is-error .break-boot__progress {
+          background: #fb7185;
+        }
+
+        .break-boot.is-error .break-boot__actions {
+          display: flex;
+        }
+      </style>
+      <section class="break-boot" id="break-boot" aria-live="polite" aria-busy="true">
+        <div class="break-boot__panel">
+          <div class="break-boot__brand">
+            <div class="break-boot__mark" aria-hidden="true">B</div>
+            <div>
+              <h1 class="break-boot__title">JDARMY BREAK</h1>
+              <p class="break-boot__subtitle">Business Risk Enumeration & Avoidance Knowledge</p>
+            </div>
+          </div>
+          <p class="break-boot__stage" id="break-boot-stage">正在加载应用资源...</p>
+          <div class="break-boot__bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="12" aria-label="应用加载进度">
+            <div class="break-boot__progress" id="break-boot-progress"></div>
+          </div>
+          <p class="break-boot__hint" id="break-boot-hint">首次访问或网络较慢时可能需要稍等。</p>
+          <div class="break-boot__actions" id="break-boot-actions">
+            <button class="break-boot__button" type="button" data-break-boot-reload>刷新页面</button>
+            <button class="break-boot__button" type="button" data-break-boot-clear>清理缓存并刷新</button>
+          </div>
+        </div>
+      </section>
     </div>
+    <script>
+      (function () {
+        var root = document.getElementById("break-boot");
+        var stage = document.getElementById("break-boot-stage");
+        var hint = document.getElementById("break-boot-hint");
+        var progress = document.getElementById("break-boot-progress");
+        var bar = document.querySelector(".break-boot__bar");
+        var currentPercent = 12;
+        var progressTimer = window.setInterval(function () {
+          if (!root || root.dataset.done === "true") return;
+          if (currentPercent >= 82) return;
+          var step = currentPercent < 45 ? 5 : currentPercent < 68 ? 3 : 1;
+          updateProgress(Math.min(82, currentPercent + step));
+        }, 700);
+        var slowTimer = window.setTimeout(function () {
+          if (!root || root.dataset.done === "true") return;
+          hint.textContent = "网络较慢，正在继续加载核心资源。";
+        }, 6000);
+        var errorTimer = window.setTimeout(function () {
+          if (!root || root.dataset.done === "true") return;
+          setError("加载时间较长，可能是网络异常或页面资源正在更新。");
+        }, 15000);
+
+        function updateProgress(percent) {
+          currentPercent = Math.max(currentPercent, Math.max(0, Math.min(100, percent)));
+          if (progress) progress.style.width = currentPercent + "%";
+          if (bar) bar.setAttribute("aria-valuenow", String(currentPercent));
+        }
+
+        function setStage(text, percent, nextHint) {
+          if (!root || root.dataset.done === "true") return;
+          root.classList.remove("is-error");
+          if (stage && text) stage.textContent = text;
+          if (typeof percent === "number") {
+            updateProgress(percent);
+          }
+          if (hint && nextHint) hint.textContent = nextHint;
+        }
+
+        function setError(text) {
+          if (!root || root.dataset.done === "true") return;
+          root.classList.add("is-error");
+          root.setAttribute("aria-busy", "false");
+          if (stage) stage.textContent = text || "页面资源加载失败。";
+          if (hint) hint.textContent = "可以刷新页面；如果问题持续，请清理缓存后重试。";
+        }
+
+        function done() {
+          if (progressTimer) window.clearInterval(progressTimer);
+          if (slowTimer) window.clearTimeout(slowTimer);
+          if (errorTimer) window.clearTimeout(errorTimer);
+          if (root) root.dataset.done = "true";
+        }
+
+        window.__BREAK_BOOT__ = { setStage: setStage, setError: setError, done: done };
+
+        document.addEventListener("click", function (event) {
+          var target = event.target;
+          if (!(target instanceof HTMLElement)) return;
+          if (target.matches("[data-break-boot-reload]")) {
+            window.location.reload();
+          }
+          if (target.matches("[data-break-boot-clear]")) {
+            Promise.resolve()
+              .then(function () {
+                if (!("caches" in window)) return;
+                return caches.keys().then(function (keys) {
+                  return Promise.all(keys.map(function (key) { return caches.delete(key); }));
+                });
+              })
+              .then(function () {
+                if ("serviceWorker" in navigator) {
+                  return navigator.serviceWorker.getRegistrations().then(function (registrations) {
+                    return Promise.all(registrations.map(function (registration) { return registration.unregister(); }));
+                  });
+                }
+              })
+              .finally(function () {
+                window.location.reload();
+              });
+          }
+        });
+
+        window.addEventListener("error", function (event) {
+          if (event.filename || event.message) {
+            setError("页面资源加载失败。");
+          }
+        });
+        window.addEventListener("unhandledrejection", function () {
+          setError("页面资源加载失败。");
+        });
+      })();
+    </script>
     <script type="module" src="/src/main.ts"></script>
     <!-- 百度统计暂时禁用 -->
     <!--

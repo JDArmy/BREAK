@@ -6,6 +6,7 @@ import {
   applyPendingAppUpdate,
   hasPendingAppUpdate,
 } from "@/utils/appUpdate";
+import { finishTopLoading, startTopLoading } from "@/utils/topLoading";
 
 const CHUNK_RELOAD_KEY = "__break_chunk_reload__";
 const CHUNK_RELOAD_COOLDOWN_MS = 2 * 60 * 1000;
@@ -118,7 +119,9 @@ export function createRecoverableAsyncComponent<T extends Component = Component>
           // 页面即将由新 Service Worker 接管并刷新，不再请求旧版本 chunk。
         });
       }
-      return loader();
+      const taskId = `async:${source}`;
+      startTopLoading(taskId, 25);
+      return loader().finally(() => finishTopLoading(taskId));
     },
     loadingComponent: AsyncComponentLoading,
     errorComponent,

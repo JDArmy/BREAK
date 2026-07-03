@@ -14,8 +14,11 @@ import { prefetchAllKnowledgeViews } from "@/composables/useRoutePrefetch";
 import { useBreakpoints } from "@/composables/useBreakpoints";
 import { scrollActiveContainerToTop } from "@/utils/dom";
 import { createRecoverableAsyncComponent } from "@/utils/chunkLoadRecovery";
+import { topLoadingState } from "@/utils/topLoading";
 
 const { isMobile } = useBreakpoints();
+const topLoadingActive = topLoadingState.active;
+const topLoadingProgress = topLoadingState.progress;
 
 // 移动端：点击顶部 banner 标题区，把当前页面滚动容器平滑滚回顶部
 const handleBannerClick = () => {
@@ -238,6 +241,13 @@ const getActiveIndex = (fullPath: string) => {
       <button class="mobile-hamburger" type="button" :aria-label="$t('menu.knowledge')" @click="handleMobileMenuOpen">
         <el-icon :size="20"><MenuIcon /></el-icon>
       </button>
+    </div>
+    <div
+      v-show="topLoadingActive"
+      class="top-loading-line"
+      aria-hidden="true"
+    >
+      <div class="top-loading-line__bar" :style="{ width: `${topLoadingProgress}%` }"></div>
     </div>
     </el-menu>
   </nav>
@@ -491,6 +501,13 @@ const getActiveIndex = (fullPath: string) => {
     </div>
 
     </el-menu>
+    <div
+      v-show="topLoadingActive"
+      class="top-loading-line"
+      aria-hidden="true"
+    >
+      <div class="top-loading-line__bar" :style="{ width: `${topLoadingProgress}%` }"></div>
+    </div>
   </nav>
 
   <SearchDialog v-if="searchDialogEnabled" v-model="searchOpen" />
@@ -507,6 +524,27 @@ const getActiveIndex = (fullPath: string) => {
 .mobile-nav,
 .desktop-nav {
   height: 100%;
+  position: relative;
+}
+
+.top-loading-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  z-index: 10;
+  height: 2px;
+  overflow: hidden;
+  background: transparent;
+  pointer-events: none;
+}
+
+.top-loading-line__bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--break-link), var(--sky-400), var(--cyan-400));
+  box-shadow: 0 0 8px rgba(56, 189, 248, 0.72);
+  transition: width 180ms ease;
 }
 
 .mobile-logo-button,

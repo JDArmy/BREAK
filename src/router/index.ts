@@ -8,6 +8,7 @@ import {
 } from "@/views/relation/relationAnalysisPerspectives";
 import { ElMessage } from "element-plus";
 import { recoverFromChunkLoadError } from "@/utils/chunkLoadRecovery";
+import { finishTopLoading, startTopLoading } from "@/utils/topLoading";
 
 // 扩展 vue-router 的 RouteMeta 类型
 declare module "vue-router" {
@@ -296,13 +297,20 @@ const router = createRouter({
   },
 });
 
+let routeDataLoadSeq = 0;
+
 router.beforeEach((to) => {
+  startTopLoading("route", 18);
   // 通过路由 meta 标记判断是否需要加载 BREAK 数据，无需维护硬编码路由名集合
   if (to.meta.needsBreakData) {
-    void initLocaleMessages().catch((err) => {
-      console.error("[router] BREAK 数据加载失败:", err);
-      ElMessage({ message: String(err?.message || "Data load failed"), type: "error", plain: true, duration: 5000, grouping: true });
-    });
+    const taskId = `route-data:${++routeDataLoadSeq}`;
+    startTopLoading(taskId, 28);
+    void initLocaleMessages()
+      .catch((err) => {
+        console.error("[router] BREAK 数据加载失败:", err);
+        ElMessage({ message: String(err?.message || "Data load failed"), type: "error", plain: true, duration: 5000, grouping: true });
+      })
+      .finally(() => finishTopLoading(taskId));
   }
 
   // 关系图谱路由：按视角预加载对应 ECharts
@@ -336,6 +344,7 @@ const PERSPECTIVE_TITLES: Record<string, string> = {
 };
 
 router.afterEach((to) => {
+  window.setTimeout(() => finishTopLoading("route"), 120);
   let title = SITE_TITLE;
   if (to.meta.knowledgeEntity) {
     title = `${PAGE_TITLES[to.meta.knowledgeEntity] || to.meta.knowledgeEntity} | ${SITE_TITLE}`;
@@ -353,6 +362,7 @@ router.afterEach((to) => {
 // unhandledrejection 监听统一处理自动刷新。router.onError 作为补充拦截，
 // 防止路由级 chunk 错误被 Vue 吞掉而不触发 unhandledrejection。
 router.onError((error) => {
+  finishTopLoading("route");
   recoverFromChunkLoadError(error, "router");
 });
 
