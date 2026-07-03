@@ -1,5 +1,11 @@
 # Change log
 
+## 2.34.1
+
+case incidentTime 校验加固：
+
+- `breakSchema.ts` 的 `incidentTime` 加正则 `^\d{4}(-\d{2}(-\d{2})?)?$`（允许 YYYY/YYYY-MM/YYYY-MM-DD），堵导入流程中填入"未知"/原文片段等非法值。现有 90 个纯年份 case 数据兼容，`validate:data` + `build` 全绿。
+
 ## 2.34.0
 
 移动端新增「点击顶部 banner 标题区滚回顶部」交互：

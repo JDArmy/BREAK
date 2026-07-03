@@ -153,7 +153,7 @@ export const caseSchema = z.object({
   summary: nonEmptyString,
   description: z.string().optional(),
   category: caseCategorySchema,
-  incidentTime: z.string().optional(),
+  incidentTime: z.string().regex(/^\d{4}(-\d{2}(-\d{2})?)?$/, "incidentTime 需为 YYYY、YYYY-MM 或 YYYY-MM-DD").optional(),
   relatedRisks: idArray.min(1, "relatedRisks 不能为空"),
   relatedAttackTools: idArray.default([]),
   relatedThreatActors: idArray.default([]),

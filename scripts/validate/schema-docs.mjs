@@ -93,7 +93,7 @@ const fieldDescriptions = {
   aliases: '别名列表。',
   usageExample: '使用示例。',
   summary: '案例摘要，80-150 字事实性描述。',
-  incidentTime: '案例发生时间，YYYY 或 YYYY-MM。',
+  incidentTime: '案例发生时间，YYYY、YYYY-MM 或 YYYY-MM-DD。',
   relatedAvoidances: '相关规避手段列表；Avoidance 中为规避手段间关联对象列表。',
   relatedAttackTools: '相关攻击工具列表；AttackTool 中为攻击工具间关联对象列表。',
   relatedThreatActors: '相关威胁行为者列表；ThreatActor 中为威胁行为者间关联对象列表，Term 中为威胁行为者 ID 列表。',
