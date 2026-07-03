@@ -1,5 +1,13 @@
 # Change log
 
+## 2.37.2
+
+修复 GitHub Pages 部署偶发失败：
+
+- Pages 上传 artifact 改为使用包含 `run_id` 与 `run_attempt` 的唯一名称。
+- `deploy-pages` 显式读取同名 artifact，避免同一次 workflow run 重跑后出现多个 `github-pages` artifact 导致部署失败。
+- `punycode` deprecation warning 来自动作依赖，不影响部署；本次修复针对 artifact 重名失败。
+
 ## 2.37.1
 
 修复慢网加载状态的两个视觉问题：

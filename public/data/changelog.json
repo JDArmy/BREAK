@@ -1,5 +1,10 @@
 [
   {
+    "version": "2.37.2",
+    "summary": "修复 GitHub Pages 部署偶发失败：",
+    "body": "修复 GitHub Pages 部署偶发失败：\n\n- Pages 上传 artifact 改为使用包含 `run_id` 与 `run_attempt` 的唯一名称。\n- `deploy-pages` 显式读取同名 artifact，避免同一次 workflow run 重跑后出现多个 `github-pages` artifact 导致部署失败。\n- `punycode` deprecation warning 来自动作依赖，不影响部署；本次修复针对 artifact 重名失败。"
+  },
+  {
     "version": "2.37.1",
     "summary": "修复慢网加载状态的两个视觉问题：",
     "body": "修复慢网加载状态的两个视觉问题：\n\n- 启动页阶段重置 `html/body/#app` 的 margin 与背景，移除浏览器默认白边。\n- 全局实体自动链接器改为静默加载，避免后台能力在页面顶部显示“加载中”占位。\n- 搜索弹窗预加载只拉取资源，不在未打开时挂载组件，避免 header 区域出现多余“加载中”。\n- 保留正文区域真实异步组件加载提示，用户进入慢加载页面时仍能看到反馈。"
