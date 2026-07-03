@@ -9,6 +9,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     AsyncComponentError: typeof import('./src/components/AsyncComponentError.vue')['default']
+    AsyncComponentLoading: typeof import('./src/components/AsyncComponentLoading.vue')['default']
     AttackToolDetail: typeof import('./src/components/AttackToolDetail.vue')['default']
     AvoidanceDetail: typeof import('./src/components/AvoidanceDetail.vue')['default']
     ElBacktop: typeof import('element-plus/es')['ElBacktop']

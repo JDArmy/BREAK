@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import AsyncComponentError from "@/components/AsyncComponentError.vue";
-import { defineAsyncComponent, ref, computed } from "vue";
+import { ref, computed } from "vue";
 import { useRouter } from "vue-router";
 import BREAK from "@/BREAK";
 import ReferenceList from "@/components/ReferenceList.vue";
@@ -11,8 +10,9 @@ import iconRelation from "./icons/iconRelation.vue";
 import { useDrawerWidth } from "@/composables/useDrawerWidth";
 import { entityDetailHref } from "@/utils/entityRoute";
 import { getEntityEntry } from "@/BREAK/entityRegistry";
+import { createRecoverableAsyncComponent } from "@/utils/chunkLoadRecovery";
 
-const TermDetail = defineAsyncComponent({ loader: () => import("@/components/TermDetail.vue"), errorComponent: AsyncComponentError });
+const TermDetail = createRecoverableAsyncComponent(() => import("@/components/TermDetail.vue"), undefined, "AvoidanceTermDetail");
 
 const props = defineProps<{
   drawer: boolean;

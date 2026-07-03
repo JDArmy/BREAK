@@ -7,13 +7,13 @@ import iconTranslate from "@/components/icons/iconTranslate.vue";
 import { ArrowDown, Search, Menu as MenuIcon } from "@element-plus/icons-vue";
 import { useI18n } from "vue-i18n";
 import { languages, setLocale } from "@/i18n";
-import { defineAsyncComponent, onMounted, onUnmounted, ref } from "vue";
+import { onMounted, onUnmounted, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import { preloadRelationView } from "@/router";
 import { prefetchAllKnowledgeViews } from "@/composables/useRoutePrefetch";
 import { useBreakpoints } from "@/composables/useBreakpoints";
 import { scrollActiveContainerToTop } from "@/utils/dom";
-import AsyncComponentError from "@/components/AsyncComponentError.vue";
+import { createRecoverableAsyncComponent } from "@/utils/chunkLoadRecovery";
 
 const { isMobile } = useBreakpoints();
 
@@ -24,7 +24,7 @@ const handleBannerClick = () => {
 };
 
 const loadSearchDialog = () => import("@/components/SearchDialog.vue");
-const SearchDialog = defineAsyncComponent({ loader: loadSearchDialog, errorComponent: AsyncComponentError });
+const SearchDialog = createRecoverableAsyncComponent(loadSearchDialog, undefined, "SearchDialog");
 
 const { locale } = useI18n();
 const router = useRouter();

@@ -6,16 +6,19 @@
  *   - data/*.json：stale-while-revalidate
  *   - 图片/字体：cache-first
  *   - 其他：network-first
+ *
+ * 更新策略：
+ *   - 新 SW 安装后默认等待，由页面在空闲/隐藏等安全时机发送 SKIP_WAITING
+ *   - 激活时保留上一版本缓存，避免旧页面懒加载旧 chunk 时被新版本清理破坏
  */
 
 const CACHE_NAME = "break-__SW_VERSION__";
+const CACHE_PREFIX = "break-";
 const PRECACHE_URLS = ["./", "./manifest.webmanifest", "./favicon.ico", "./logo.png", "./icons/icon-192x192.png", "./icons/icon-512x512.png"];
 
 // ─── Install：预缓存核心资源 ───
 self.addEventListener("install", (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(PRECACHE_URLS)).then(() => self.skipWaiting())
-  );
+  event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(PRECACHE_URLS)));
 });
 
 // ─── Activate：清理旧版本缓存 ───
@@ -23,9 +26,25 @@ self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches
       .keys()
-      .then((keys) => Promise.all(keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))))
+      .then((keys) => {
+        const breakCaches = keys.filter((key) => key.startsWith(CACHE_PREFIX));
+        const previousCaches = breakCaches.filter((key) => key !== CACHE_NAME);
+        const cachesToKeep = new Set([CACHE_NAME, ...previousCaches.slice(-1)]);
+        return Promise.all(
+          breakCaches
+            .filter((key) => !cachesToKeep.has(key))
+            .map((key) => caches.delete(key))
+        );
+      })
       .then(() => self.clients.claim())
   );
+});
+
+// ─── Message：页面确认安全后再激活新版本 ───
+self.addEventListener("message", (event) => {
+  if (event.data?.type === "SKIP_WAITING") {
+    event.waitUntil(self.skipWaiting());
+  }
 });
 
 // ─── Fetch：分策略拦截 ───
@@ -44,8 +63,8 @@ self.addEventListener("fetch", (event) => {
 
   const pathname = url.pathname;
 
-  // 带 hash 的静态资源（JS/CSS）：cache-first
-  if (/\/assets\/.*[-.][\da-f]{6,}\.(js|css)$/i.test(pathname)) {
+  // 构建静态资源（JS/CSS）：cache-first。Vite/Rolldown hash 不是纯十六进制，不能用 [\da-f] 限定。
+  if (/\/assets\/.+\.(js|css)$/i.test(pathname)) {
     event.respondWith(cacheFirst(request));
     return;
   }

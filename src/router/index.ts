@@ -7,6 +7,7 @@ import {
   type RelationPerspectiveKey,
 } from "@/views/relation/relationAnalysisPerspectives";
 import { ElMessage } from "element-plus";
+import { recoverFromChunkLoadError } from "@/utils/chunkLoadRecovery";
 
 // 扩展 vue-router 的 RouteMeta 类型
 declare module "vue-router" {
@@ -352,27 +353,7 @@ router.afterEach((to) => {
 // unhandledrejection 监听统一处理自动刷新。router.onError 作为补充拦截，
 // 防止路由级 chunk 错误被 Vue 吞掉而不触发 unhandledrejection。
 router.onError((error) => {
-  if (isChunkLoadError(error)) {
-    const CHUNK_RELOAD_KEY = "__break_chunk_reload__";
-    const currentPath = window.location.hash.slice(1) || "/";
-    if (sessionStorage.getItem(CHUNK_RELOAD_KEY) !== currentPath) {
-      sessionStorage.setItem(CHUNK_RELOAD_KEY, currentPath);
-      console.warn("[router] Chunk 加载失败，自动刷新页面:", error.message);
-      window.location.reload();
-    } else {
-      sessionStorage.removeItem(CHUNK_RELOAD_KEY);
-    }
-  }
+  recoverFromChunkLoadError(error, "router");
 });
-
-function isChunkLoadError(error: unknown): boolean {
-  if (!(error instanceof Error)) return false;
-  const msg = error.message;
-  return (
-    /Failed to fetch dynamically imported module/i.test(msg) ||
-    /Loading chunk [\w.-]+ failed/i.test(msg) ||
-    /Loading CSS chunk [\w.-]+ failed/i.test(msg)
-  );
-}
 
 export default router;

@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { defineAsyncComponent } from "vue";
 import { RouterView } from "vue-router";
 import MenuList from "./components/MenuList.vue";
-import AsyncComponentError from "./components/AsyncComponentError.vue";
+import { createRecoverableAsyncComponent } from "@/utils/chunkLoadRecovery";
 
 // 异步加载：避免 useEntityResolver → useCases 等依赖拉入入口 chunk
-const EntityAutoLinker = defineAsyncComponent({
-  loader: () => import("./components/entity/EntityAutoLinker.vue"),
-  errorComponent: AsyncComponentError,
-});
+const EntityAutoLinker = createRecoverableAsyncComponent(
+  () => import("./components/entity/EntityAutoLinker.vue"),
+  undefined,
+  "EntityAutoLinker",
+);
 
 import iconGithub from "@/components/icons/iconGithub.vue";
 </script>

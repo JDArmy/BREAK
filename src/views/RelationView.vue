@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineAsyncComponent, defineComponent, onMounted, onUnmounted } from "vue";
+import { defineComponent, onMounted, onUnmounted } from "vue";
 import RelationAnalysisPane from "@/components/relation/RelationAnalysisPane.vue";
 import RelationGraphContextMenu from "@/components/relation/RelationGraphContextMenu.vue";
 import RelationGraphTouchActions from "@/components/relation/RelationGraphTouchActions.vue";
@@ -12,6 +12,7 @@ import {
   loadNetworkECharts,
   loadSankeyECharts,
 } from "@/views/relation/relationECharts";
+import { createRecoverableAsyncComponent } from "@/utils/chunkLoadRecovery";
 
 const loadRelationNetworkPane = () =>
   import("@/components/relation/RelationNetworkPane.vue");
@@ -19,18 +20,21 @@ const loadRelationNodeDetailDrawer = () =>
   import("@/components/relation/RelationNodeDetailDrawer.vue");
 const loadRelationPathExplorerPane = () =>
   import("@/components/relation/RelationPathExplorerPane.vue");
-const RelationNetworkPane = defineAsyncComponent({
-  loader: loadRelationNetworkPane,
-  errorComponent: RelationPaneError,
-});
-const RelationNodeDetailDrawer = defineAsyncComponent({
-  loader: loadRelationNodeDetailDrawer,
-  errorComponent: RelationPaneError,
-});
-const RelationPathExplorerPane = defineAsyncComponent({
-  loader: loadRelationPathExplorerPane,
-  errorComponent: RelationPaneError,
-});
+const RelationNetworkPane = createRecoverableAsyncComponent(
+  loadRelationNetworkPane,
+  RelationPaneError,
+  "RelationNetworkPane",
+);
+const RelationNodeDetailDrawer = createRecoverableAsyncComponent(
+  loadRelationNodeDetailDrawer,
+  RelationPaneError,
+  "RelationNodeDetailDrawer",
+);
+const RelationPathExplorerPane = createRecoverableAsyncComponent(
+  loadRelationPathExplorerPane,
+  RelationPaneError,
+  "RelationPathExplorerPane",
+);
 
 export default defineComponent({
   name: "RelationView",

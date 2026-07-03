@@ -1,20 +1,20 @@
 <script setup lang="ts">
 import BREAK from "@/BREAK/home";
 
-import { defineAsyncComponent, ref, watch, computed } from "vue";
+import { ref, watch, computed } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import { useBreakpoints } from "@/composables/useBreakpoints";
 import { useDrawerRoute } from "@/composables/useDrawerRoute";
 import { useHomeSceneLayout, useSubRiskToggle } from "@/composables/useHomeSceneLayout";
 import { entityRegistry } from "@/BREAK/entityRegistry";
 import { useI18n } from "vue-i18n";
-import AsyncComponentError from "@/components/AsyncComponentError.vue";
+import { createRecoverableAsyncComponent } from "@/utils/chunkLoadRecovery";
 
-const RiskDetail = defineAsyncComponent({ loader: () => import("@/components/RiskDetail.vue"), errorComponent: AsyncComponentError });
-const AvoidanceDetail = defineAsyncComponent({ loader: () => import("@/components/AvoidanceDetail.vue"), errorComponent: AsyncComponentError });
-const AttackToolDetail = defineAsyncComponent({ loader: () => import("@/components/AttackToolDetail.vue"), errorComponent: AsyncComponentError });
-const ThreatActorDetail = defineAsyncComponent({ loader: () => import("@/components/ThreatActorDetail.vue"), errorComponent: AsyncComponentError });
-const TermDetail = defineAsyncComponent({ loader: () => import("@/components/TermDetail.vue"), errorComponent: AsyncComponentError });
+const RiskDetail = createRecoverableAsyncComponent(() => import("@/components/RiskDetail.vue"), undefined, "HomeRiskDetail");
+const AvoidanceDetail = createRecoverableAsyncComponent(() => import("@/components/AvoidanceDetail.vue"), undefined, "HomeAvoidanceDetail");
+const AttackToolDetail = createRecoverableAsyncComponent(() => import("@/components/AttackToolDetail.vue"), undefined, "HomeAttackToolDetail");
+const ThreatActorDetail = createRecoverableAsyncComponent(() => import("@/components/ThreatActorDetail.vue"), undefined, "HomeThreatActorDetail");
+const TermDetail = createRecoverableAsyncComponent(() => import("@/components/TermDetail.vue"), undefined, "HomeTermDetail");
 
 const router = useRouter();
 const route = useRoute();
