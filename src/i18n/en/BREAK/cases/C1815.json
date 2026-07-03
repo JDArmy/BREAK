@@ -12,12 +12,20 @@
     "summary": "From May to October 2024, multiple Ecovacs Deebot X2 units in Minnesota, Los Angeles, and El Paso were remotely hijacked. Attackers exploited PIN-only-app-verification and device-shared static key flaws to get cloud tokens and remotely take over, playing racial slurs and profanity via the speaker, chasing pets, and accessing live cameras. DEF CON 32 had earlier disclosed Ecovacs Bluetooth flaws (130 m takeover, reading Wi-Fi passwords and home maps). Ecovacs denied a breach, attributing it to credential stuffing.",
     "references": [
       {
-        "title": "ABC News: Robot vacuum yells racial slurs at family after being hacked",
-        "link": "https://www.abc.net.au/news/2024-10-11/robot-vacuum-yells-racial-slurs-at-family-after-being-hacked/104445408"
+        "title": "DEF CON 32: Reverse engineering and hacking Ecovacs robots (Dennis Giese)",
+        "link": "https://dontvacuum.me/talks/DEFCON32/DEFCON32_reveng_hacking_ecovacs_robots.pdf"
+      },
+      {
+        "title": "AI Incident Database: Ecovacs Deebot X2 hijack",
+        "link": "https://incidentdatabase.ai/cite/842/"
       },
       {
         "title": "TechCrunch: Ecovacs home robots can be hacked to spy on owners",
         "link": "https://techcrunch.com/2024/08/09/ecovacs-home-robots-can-be-hacked-to-spy-on-their-owners-researchers-say/"
+      },
+      {
+        "title": "ABC News: Robot vacuum yells racial slurs at family after being hacked",
+        "link": "https://www.abc.net.au/news/2024-10-11/robot-vacuum-yells-racial-slurs-at-family-after-being-hacked/104445408"
       }
     ]
   }

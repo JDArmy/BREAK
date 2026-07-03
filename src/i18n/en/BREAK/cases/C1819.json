@@ -12,6 +12,14 @@
     "summary": "In February 2026, Spanish software engineer Sammy Azdoufal, aiming to remote-control his own DJI Romo with a PS5 controller, AI-reversed the DJI protocol and accidentally gained remote control of ~7000 Romo devices worldwide: viewing live cameras, listening to microphones, generating floor plans, locating devices. He cataloged 6700 devices across 24 countries and collected 100,000 MQTT messages in 9 minutes. A DJI backend authentication flaw treated a single-user token as valid for multiple devices. DJI fixed it and paid a $30,000 bounty; The Verge reported.",
     "references": [
       {
+        "title": "DJI ViewPoints: Security and Continuous Improvement - ROMO's Path Forward",
+        "link": "https://viewpoints.dji.com/blog/security-and-continuous-improvement-romos-path-forward"
+      },
+      {
+        "title": "GitHub: xn0tsa/dji-romo-video-control (researcher original disclosure repo)",
+        "link": "https://github.com/xn0tsa/dji-romo-video-control"
+      },
+      {
         "title": "The Verge: DJI Romo hack vulnerability remote control camera access MQTT",
         "link": "https://www.theverge.com/tech/879088/dji-romo-hack-vulnerability-remote-control-camera-access-mqtt"
       },

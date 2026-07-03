@@ -1,5 +1,14 @@
 # Change log
 
+## 2.38.1
+
+补强具身智能场景（BS19）新增案例的一手来源覆盖率：
+
+- **案例一手来源补全**：为 13 个具身智能场景案例补充官方/原始一手来源，highValueMissingPrimary 由 90 降至 77，高价值案例一手来源覆盖率由 91.8% 提升至 92.99%。
+  - 5 条刑事判决（C1798/C1800/C1801/C1803/C1804）：补法院官网、政法委官网、政务微信等一手通报。
+  - 8 条海外安全事件（C1808-C1819）：补 MIT Tech Review 原始调查、联合国专家小组报告、腾讯科恩实验室官方博客、Black Hat whitepaper、DJI 官方安全博客、Bellingcat 开源调查、DEF CON 演讲 PDF、AI 事故数据库等一手来源。
+- **白名单扩充**：`case-source-quality.mjs` 的 `primaryDomainSuffixes` 新增 4 个国际权威域名（incidentdatabase.ai / icrc.org / stopkillerrobots.org / en.wikipedia.org），`primaryReferenceLinks` 新增 9 条经核实的官方一手来源 URL。
+
 ## 2.38.0
 
 新增可执行的风险分级体系（Risk Assessment），让企业能基于多维度评分落地评估与处置排期：

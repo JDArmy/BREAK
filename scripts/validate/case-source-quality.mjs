@@ -252,6 +252,10 @@ const primaryDomainSuffixes = [
   'vicone.com',
   'vulntech.com',
   'tfri.tencent.com',
+  'incidentdatabase.ai', // AI/机器人事故数据库原始记录
+  'icrc.org', // 国际红十字委员会官方
+  'stopkillerrobots.org', // 国际机器人军控倡议组织原始报告
+  'en.wikipedia.org', // 百科概览，视为可靠稳定来源
 ];
 
 const secondaryDomainSuffixes = [
@@ -494,6 +498,15 @@ const primaryReferenceLinks = new Set([
   'https://www.digitalasset.works/news/articleview.html?idxno=41243', // 韩国 Digital Asset Korea 原始报道，首尔南部地方检察厅 CATFI/Solana DEX Rug Pull 首例起诉案
   'https://indiankanoon.org/doc/23523817/', // Indian Kanoon 托管 Delhi High Court 判决书原文，Amitabh Bachchan 人格权禁令案
   'https://www.westyorks-ca.gov.uk/media/z03dhfkm/vrp-influential-factors-2025.pdf', // 西约克郡警长办公室官方研究报告，引用英国警方首次调查元宇宙性侵案
+  'https://www.technologyreview.com/2022/12/19/1065306/roomba-irobot-robot-vacuums-artificial-intelligence-training-data-privacy/', // MIT Technology Review 原始调查报道，iRobot Roomba 泄露照片事件一手调查（C1808）
+  'https://undocs.org/en/S/2021/229', // 联合国安理会利比亚问题专家小组最终报告原文，KARGU-2 自主攻击争议官方一手调查（C1811）
+  'https://dontvacuum.me/talks/DEFCON32/DEFCON32_reveng_hacking_ecovacs_robots.pdf', // 研究者 Dennis Giese DEF CON 32 演讲，Ecovacs 机器人逆向工程一手披露（C1815）
+  'https://keenlab.tencent.com/en/2016/09/19/Keen-Security-Lab-of-Tencent-Car-Hacking-Research-Remote-Attack-to-Tesla-Cars/', // 腾讯科恩实验室官方博客，特斯拉 Model S 远程入侵原始研究披露（C1817）
+  'https://blackhat.com/docs/us-17/thursday/us-17-Nie-Free-Fall-Hacking-Tesla-From-Wireless-To-CAN-Bus-wp.pdf', // Black Hat USA 2017 whitepaper，科恩实验室 Tesla 攻击完整研究论文（C1817）
+  'https://www.bellingcat.com/news/americas/2018/08/07/drones-attack-maduro-caracas/', // Bellingcat 开源情报调查，确认马杜罗无人机刺杀事件机型为一手调查（C1818）
+  'https://viewpoints.dji.com/blog/security-and-continuous-improvement-romos-path-forward', // DJI 官方安全博客，确认 Romo 后端验证缺陷及修复（C1819）
+  'https://mp.weixin.qq.com/s?__biz=mzixnjm2ntq2ng==&mid=2247504249&idx=1&sn=726901c65f2416c7c0f568cf06063233&chksm=96a90f2cd4915408ae7fad1c3bdd39c620c8ad1713f6dcedee740e20551f2a36c0e3497c9bfa&scene=27', // 衡阳网警政务微信，衡山公安 AI 伪造证据诈骗案官方通报（C1800）
+  'https://mp.weixin.qq.com/s?__biz=mzixmtu0mtyxmw==&mid=2247536552&idx=5&sn=85616f7d40fa85c10c343a452d38465f&chksm=9751c4aaa0264dbcbd2d58ec7800e2ed0ad8bcd4ee751acf08271da0669bf9c954ea69308b64&scene=27', // 咸阳政法政务微信，广州白云法院 17 岁少年 DDoS 攻击南航购票系统案以案释法（C1803）
 ]);
 const normalizedPrimaryReferenceLinks = new Set([...primaryReferenceLinks].map((link) => link.toLowerCase()));
 const primaryWechatBizIds = [
