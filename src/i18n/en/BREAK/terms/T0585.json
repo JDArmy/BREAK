@@ -14,8 +14,12 @@
     "usageExample": "Assess WAF Rule related exposure and define the corresponding controls.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Web application firewall - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Web_application_firewall"
+      },
+      {
+        "title": "Web Application Firewall - OWASP",
+        "link": "https://owasp.org/www-community/Web_Application_Firewall"
       }
     ],
     "category": "Business Security",

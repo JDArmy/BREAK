@@ -13,6 +13,10 @@
       {
         "title": "NIST Cybersecurity Framework 2.0",
         "link": "https://www.nist.gov/cyberframework"
+      },
+      {
+        "title": "Click Injection (AppsFlyer Anti-Fraud Glossary)",
+        "link": "https://www.appsflyer.com/glossary/click-injection/"
       }
     ],
     "description": "Ad click injection forges click events shortly before an install, open, or conversion to steal attribution from organic traffic or other channels. Attackers often use malicious SDKs, background services, or device permissions to fabricate clicks.\n\nThe risk distorts campaign measurement and makes advertisers pay for hijacked conversions. Anti-fraud analysis should examine click-to-conversion time, device behavior, SDK source, and channel distribution.",

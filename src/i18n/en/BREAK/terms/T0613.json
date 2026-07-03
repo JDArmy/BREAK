@@ -17,8 +17,8 @@
     "usageExample": "If one warehouse robot in a swarm is hijacked into a byzantine node sending false position information, it may cause path conflicts across the entire swarm, paralyzing operations.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Swarm robotics - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Swarm_robotics"
       }
     ]
   }

@@ -4,8 +4,8 @@
     "description": "Continuously discover excessive cloud entitlements, long-term keys, dormant credentials, and cross-account trust relationships. Enforce least privilege and STS temporary credentials, reclaim idle permissions, and rotate credentials on a regular basis to reduce the risk of lateral movement and resource abuse after a cloud identity is compromised.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "CIS Amazon Web Services Benchmarks",
+        "link": "https://www.cisecurity.org/benchmark/amazon_web_services"
       }
     ],
     "keywords": [

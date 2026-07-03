@@ -4,8 +4,8 @@
     "description": "Perform signature verification, timestamp window validation, idempotency deduplication, and event origin verification on webhook events to prevent attackers from forging or replaying webhook events that trigger unauthorized callback actions in business systems.",
     "references": [
       {
-        "title": "OWASP API Security Top 10 2023",
-        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+        "title": "Validating webhook deliveries - GitHub Docs",
+        "link": "https://docs.github.com/en/webhooks/using-webhooks/validating-webhook-deliveries"
       }
     ],
     "keywords": [

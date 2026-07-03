@@ -14,8 +14,12 @@
     "usageExample": "Assess Runtime Protection related exposure and define the corresponding controls.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "MASVS-RESILIENCE: Resilience Against Reverse Engineering and Tampering - OWASP MASTG",
+        "link": "https://mas.owasp.org/MASVS/11-MASVS-RESILIENCE/"
+      },
+      {
+        "title": "MASTG-TECH-0051: Tampering and Runtime Instrumentation - OWASP MASTG",
+        "link": "https://mas.owasp.org/MASTG/techniques/generic/MASTG-TECH-0051/"
       }
     ],
     "category": "Business Security",

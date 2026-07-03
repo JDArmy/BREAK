@@ -15,8 +15,8 @@
     "limitation": "DDS-Security introduces significant performance overhead, impacting real-time control latency. Some legacy ROS nodes and cross-vendor DDS implementations exhibit poor interoperability and may not be able to enable the full set of security features. Certificate and PKI management increases deployment complexity. SROS2 implements only three of the five DDS-Security SPI, with the remaining two requiring vendor extensions.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "ROS 2 DDS-Security integration design",
+        "link": "https://design.ros2.org/articles/ros2_dds_security.html"
       }
     ]
   }

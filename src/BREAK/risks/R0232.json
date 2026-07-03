@@ -12,8 +12,8 @@
     ],
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Detect and Remediate Illicit Consent Grants (Microsoft Defender)",
+        "link": "https://learn.microsoft.com/en-us/defender-office-365/detect-and-remediate-illicit-consent-grants"
       }
     ],
     "keywords": [
@@ -24,7 +24,7 @@
       "邮件网盘授权",
       "企业SaaS集成风险"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "high",

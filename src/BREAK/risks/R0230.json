@@ -12,8 +12,8 @@
     ],
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Enterprise-scale: How Credentials Leaked from Public Storage Buckets (UpGuard)",
+        "link": "https://www.upguard.com/breaches/enterprise-scale-how-credentials-leaked-from-public-storage-buckets"
       }
     ],
     "keywords": [
@@ -24,7 +24,7 @@
       "云快照泄露",
       "存储权限错误"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "critical",

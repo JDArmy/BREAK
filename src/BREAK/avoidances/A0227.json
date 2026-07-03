@@ -17,8 +17,8 @@
     "effectiveness": "medium",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "UW researchers hack a teleoperated surgical robot to reveal security flaws",
+        "link": "https://www.washington.edu/news/2015/05/07/uw-researchers-hack-a-teleoperated-surgical-robot-to-reveal-security-flaws/"
       }
     ],
     "relatedAvoidances": [
@@ -38,6 +38,6 @@
         "note": "共同覆盖 1 个风险，共同限制 1 个攻击工具。"
       }
     ],
-    "updated": "2026-07-03"
+    "updated": "2026-07-04"
   }
 }

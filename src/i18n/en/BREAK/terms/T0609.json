@@ -18,8 +18,12 @@
     "usageExample": "A warehouse robot developed on the Robot Operating System (ROS) without SROS2 enabled lets an attacker arbitrarily publish topics to tamper with navigation commands on the LAN.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Robot Operating System - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Robot_Operating_System"
+      },
+      {
+        "title": "ROS documentation",
+        "link": "https://docs.ros.org/"
       }
     ]
   }

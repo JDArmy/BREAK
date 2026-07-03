@@ -14,8 +14,12 @@
     "usageExample": "Assess V2X Certificate related exposure and define the corresponding controls.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Security Credential Management System (SCMS) Technical Primer - US DOT",
+        "link": "https://rosap.ntl.bts.gov/view/dot/43635/dot_43635_DS1.pdf"
+      },
+      {
+        "title": "A Security Credential Management System for V2X Communications - IEEE",
+        "link": "https://dl.acm.org/doi/10.1109/TITS.2018.2797529"
       }
     ],
     "category": "Business Security",

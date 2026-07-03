@@ -14,8 +14,8 @@
     "usageExample": "Assess Token Binding related exposure and define the corresponding controls.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "RFC 8471 - The Token Binding Protocol Version 1.0 - IETF",
+        "link": "https://datatracker.ietf.org/doc/html/rfc8471"
       }
     ],
     "category": "Business Security",

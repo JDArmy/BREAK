@@ -11,8 +11,8 @@
     ],
     "references": [
       {
-        "title": "OWASP Top 10 for Large Language Model Applications",
-        "link": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"
+        "title": "Extracting Training Data from Large Language Models",
+        "link": "https://arxiv.org/abs/2012.07805"
       }
     ],
     "description": "Sensitive information leakage in model output occurs when a model reveals training data, system prompts, internal documents, secret fragments, or customer information during chat, summarization, code generation, or tool use. It can be triggered by prompt manipulation, context pollution, or permission mistakes.\n\nThe risk grows when models connect to enterprise knowledge bases and business systems. Controls need input and output review, context minimization, permission binding, and sensitive data detection.",

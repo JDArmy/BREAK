@@ -11,8 +11,8 @@
     ],
     "references": [
       {
-        "title": "W3C Decentralized Identifiers (DIDs) v1.0",
-        "link": "https://www.w3.org/TR/did-core/"
+        "title": "Verifiable Credentials Data Model v2.0",
+        "link": "https://www.w3.org/TR/vc-data-model-2.0/"
       }
     ],
     "description": "Decentralized identity credential forgery targets DID, verifiable credentials, and issuance or verification flows. Attackers may impersonate issuers, tamper with claims, reuse revoked credentials, or trick verifiers into accepting untrusted proofs.\n\nWhen credentials gate access to finance, education, enterprise, or platform rights, forgery breaks the trust chain. Systems must verify signatures, status, revocation lists, issuer authority, and context constraints.",

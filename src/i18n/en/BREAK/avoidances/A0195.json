@@ -4,8 +4,8 @@
     "description": "Collect API requests, gateway logs, and traffic patterns to establish a unified API asset catalog. Apply rule matching, call baseline comparison, and anomaly detection to discover shadow APIs, unauthorized interfaces, and lifecycle anomalies, thereby reducing the risk of unknown interface exposure.",
     "references": [
       {
-        "title": "OWASP API Security Top 10 2023",
-        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+        "title": "API9:2023 Improper Inventory Management - OWASP API Security",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0xa9-improper-inventory-management/"
       }
     ],
     "keywords": [

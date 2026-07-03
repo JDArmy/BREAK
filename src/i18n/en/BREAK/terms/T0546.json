@@ -14,8 +14,8 @@
     "usageExample": "Assess OAuth Grant related exposure and define the corresponding controls.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "The OAuth 2.0 Authorization Framework (RFC 6749)",
+        "link": "https://datatracker.ietf.org/doc/html/rfc6749"
       }
     ],
     "category": "Business Security",

@@ -4,8 +4,8 @@
     "description": "For MFA bombing, push fatigue, and anomalous login scenarios, strategies such as number matching confirmation, risk-aware secondary verification, push cooldown, and frequency circuit breaking are applied to prevent attackers from bypassing multi-factor authentication by overwhelming users with massive push notifications, causing them to mistakenly approve access due to fatigue.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "CISA Guidance on Phishing-Resistant and Numbers Matching Multifactor Authentication",
+        "link": "https://www.cisa.gov/news-events/alerts/2022/10/31/cisa-releases-guidance-phishing-resistant-and-numbers-matching-multifactor-authentication"
       }
     ],
     "keywords": [

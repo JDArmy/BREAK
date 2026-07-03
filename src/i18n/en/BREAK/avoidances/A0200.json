@@ -4,8 +4,8 @@
     "description": "Generate digital signatures, SLSA provenance attestations, and verifiable release records for build artifacts, container images, and dependency packages. Verify signatures and provenance chains before deployment to prevent attackers from tampering with artifacts during build or distribution stages and conducting supply chain poisoning.",
     "references": [
       {
-        "title": "Software Bill of Materials - CISA",
-        "link": "https://www.cisa.gov/topics/information-communications-technology-supply-chain-security/sbom"
+        "title": "SLSA: Supply-chain Levels for Software Artifacts",
+        "link": "https://slsa.dev/"
       }
     ],
     "keywords": [

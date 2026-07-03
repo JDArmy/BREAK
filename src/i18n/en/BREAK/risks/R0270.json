@@ -15,8 +15,8 @@
     "influence": "Causes complete robot takeover, firmware tampering, enlistment into botnets, or weaponization as a surveillance node; can spy on users, harm people, or be built into a worm-like robot botnet — UniPwn can auto-infect same-brand robots within Bluetooth range.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "CVE-2025-35027 Unitree UniPwn (Go2/G1/H1/B2 Command Injection)",
+        "link": "https://nvd.nist.gov/vuln/detail/CVE-2025-35027"
       }
     ],
     "riskAssessment": {

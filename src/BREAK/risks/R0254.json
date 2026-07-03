@@ -12,8 +12,8 @@
     ],
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "CISA Alert: Kaseya VSA Supply Chain Ransomware Attack (MSP 远程访问滥用)",
+        "link": "https://www.cisa.gov/news-events/alerts/2021/07/02/kaseya-vsa-supply-chain-ransomware-attack"
       }
     ],
     "keywords": [
@@ -24,7 +24,7 @@
       "远程工具滥用",
       "外包访问风险"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "critical",

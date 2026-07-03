@@ -14,6 +14,10 @@
       {
         "title": "NIST Cybersecurity Framework 2.0",
         "link": "https://www.nist.gov/cyberframework"
+      },
+      {
+        "title": "Click Injection（AppsFlyer 反欺诈术语文档）",
+        "link": "https://www.appsflyer.com/glossary/click-injection/"
       }
     ],
     "keywords": [
@@ -24,7 +28,7 @@
       "安装归因作弊",
       "广告点击作弊"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "high",

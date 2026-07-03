@@ -12,8 +12,8 @@
     ],
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Application Security Issues in AI Edge and Serverless Runtimes (Kodem Security)",
+        "link": "https://www.kodemsecurity.com/resources/application-security-issues-in-ai-edge-and-serverless-runtimes-aws-lambda-vercel-edge-functions-and-cloudflare-workers"
       }
     ],
     "keywords": [
@@ -24,7 +24,7 @@
       "边缘鉴权绕过",
       "流量劫持"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "riskAssessment": {
       "likelihood": "medium",
       "businessLoss": "high",

@@ -4,8 +4,8 @@
     "description": "Collects exposure, click, install, and conversion events along with device fingerprints, and applies rule matching, anomaly statistics, and attribution models to identify fake exposures, click injection, attribution hijacking, install farms, and abnormal conversion paths.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "MRC Invalid Traffic (IVT) Detection and Filtration Guidelines Addendum - IAB",
+        "link": "https://www.iab.com/guidelines/mrc-invalid-traffic-ivt-detection-and-filtration-guidelines-addendum/"
       }
     ],
     "keywords": [

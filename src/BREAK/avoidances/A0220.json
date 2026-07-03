@@ -5,15 +5,15 @@
     "description": "通过应用加固、反调试、反Hook、模拟器检测与运行时完整性校验，检测重打包、动态注入、内存dump和模拟器环境，保护客户端业务逻辑与密钥不被逆向提取。",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "OWASP Mobile Application Security Verification Standard (MASVS)",
+        "link": "https://mas.owasp.org/MASVS/"
       }
     ],
     "keywords": [
       "移动应用完整性与运行时防护",
       "移动应用完整性运行时防护"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "definition": "检测重打包、Hook、调试、模拟环境和运行时篡改，保护客户端业务逻辑。",
     "effectiveness": "high",
     "limitation": "加固方案普遍被Frida、Xposed等动态调试工具绕过，反Hook检测可被更高权限的注入隐藏自身规避；模拟器检测特征老化，新型云手机与定制ROM可伪装真机绕过检测；攻击者通过内存dump、协议层抓包在加固保护之外提取密钥与业务逻辑；加固增加包体积与启动耗时，过强检测会误拦root/越狱的合法用户与辅助功能工具。",

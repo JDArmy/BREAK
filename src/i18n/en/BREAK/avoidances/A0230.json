@@ -15,8 +15,8 @@
     "limitation": "Overly strict boundaries can limit task capability and impair agent autonomy and efficiency. Human confirmation in emergency scenarios introduces latency that may cause missed optimal intervention windows. Boundary configurations require per-task tuning, as generic boundaries struggle to accommodate all scenarios. The hardware constraint layer itself may be bypassed via firmware vulnerabilities and must be paired with secure boot.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "ISO 10218 & ISO/TS 15066 Explained: Robot Safety Standards - AMD Machines",
+        "link": "https://amdmachines.com/blog/robot-safety-standards-iso-10218-and-ts-15066-explained/"
       }
     ]
   }

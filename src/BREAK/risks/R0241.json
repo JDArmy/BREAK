@@ -13,8 +13,8 @@
     ],
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Data Protection Impact Assessments (DPIAs) — ICO Guidance",
+        "link": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/accountability-and-governance/data-protection-impact-assessments-dpias/"
       }
     ],
     "keywords": [
@@ -25,7 +25,7 @@
       "隐私合规评估",
       "数据处理风险评估"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "high",

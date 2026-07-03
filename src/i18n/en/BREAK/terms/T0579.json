@@ -14,8 +14,8 @@
     "usageExample": "Assess Mobile App Repackaging related exposure and define the corresponding controls.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "MASTG-TECH-0039: Repackaging & Re-Signing - OWASP Mobile Application Security",
+        "link": "https://mas.owasp.org/MASTG/techniques/android/MASTG-TECH-0039/"
       }
     ],
     "category": "Business Security",

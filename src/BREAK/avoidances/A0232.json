@@ -17,8 +17,8 @@
     "effectiveness": "medium",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Safety for collaborative robot applications - SICK",
+        "link": "https://www.sick.com/hk/en/blog-safety-collaborative-robot-applications"
       }
     ],
     "relatedAvoidances": [
@@ -53,6 +53,6 @@
         "note": "共同覆盖 1 个风险。"
       }
     ],
-    "updated": "2026-07-03"
+    "updated": "2026-07-04"
   }
 }

@@ -15,8 +15,8 @@
     "limitation": "Hardware emergency stops cannot counteract mechanical inertia once force is already applied, and high-speed motion still requires a braking distance before stopping. Functional safety certification involves high cost and long lead times, making it difficult for small and medium-sized enterprises to afford. Software-based emergency stops can be bypassed by software faults, so hardware emergency stops must serve as the ultimate fallback. Force and speed limits reduce task efficiency, requiring fine-tuning in collaborative scenarios.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Safety for collaborative robot applications - SICK",
+        "link": "https://www.sick.com/hk/en/blog-safety-collaborative-robot-applications"
       }
     ]
   }

@@ -12,8 +12,8 @@
     ],
     "references": [
       {
-        "title": "OWASP API Security Top 10 2023",
-        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+        "title": "API9:2023 Improper Inventory Management",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0xa9-improper-inventory-management/"
       }
     ],
     "keywords": [
@@ -24,7 +24,7 @@
       "API资产盘点",
       "API治理盲区"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "high",

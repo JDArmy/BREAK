@@ -14,8 +14,12 @@
     "usageExample": "Assess Cookie Replay related exposure and define the corresponding controls.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Session hijacking - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Session_hijacking"
+      },
+      {
+        "title": "What is Cookie Hijacking - Keepnet Labs",
+        "link": "https://keepnetlabs.com/blog/what-is-cookie-hijacking-aka-session-hijacking"
       }
     ],
     "category": "Business Security",

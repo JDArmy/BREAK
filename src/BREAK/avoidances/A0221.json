@@ -5,6 +5,10 @@
     "description": "采集CDN、WAF、边缘函数和缓存规则的变更事件与配置特征，运用规则匹配、基线比对与版本序列校验审计异常变更，防止边缘配置被滥用或恶意篡改。",
     "references": [
       {
+        "title": "API8:2023 Security Misconfiguration - OWASP API Security",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0xa8-security-misconfiguration/"
+      },
+      {
         "title": "NIST Cybersecurity Framework 2.0",
         "link": "https://www.nist.gov/cyberframework"
       }
@@ -13,7 +17,7 @@
       "边缘与CDN规则变更审计",
       "边缘CDN规则变更审计"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "definition": "审计CDN、WAF、边缘函数和缓存规则变更，防止边缘配置被滥用。",
     "effectiveness": "high",
     "limitation": "过度授权的运维Token可绕过变更审计、规避日志记录，高频自动化部署易产生告警噪声与误报；正常灰度发布、紧急回滚变更易被误判为异常，跨边缘节点的配置漂移难以及时召回。",

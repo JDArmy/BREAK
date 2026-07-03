@@ -18,8 +18,12 @@
     "usageExample": "A service robot driven by a VLA model, when receiving a grasp-cup instruction, may mis-grab a nearby thermos if attacked by an adversarial patch, causing scalding.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "RT-2: New model translates vision and language into action - Google DeepMind",
+        "link": "https://deepmind.google/blog/rt-2-new-model-translates-vision-and-language-into-action/"
+      },
+      {
+        "title": "RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control (arXiv)",
+        "link": "https://arxiv.org/abs/2307.15818"
       }
     ]
   }

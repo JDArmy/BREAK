@@ -4,8 +4,8 @@
     "description": "Through application hardening, anti-debugging, anti-hooking, emulator detection, and runtime integrity verification, it detects repackaging, dynamic injection, memory dumping, and emulator environments to protect client-side business logic and prevent keys from being reverse-extracted.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "OWASP Mobile Application Security Verification Standard (MASVS)",
+        "link": "https://mas.owasp.org/MASVS/"
       }
     ],
     "keywords": [

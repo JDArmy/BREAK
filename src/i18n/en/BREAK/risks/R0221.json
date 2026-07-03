@@ -17,6 +17,10 @@
       {
         "title": "W3C Decentralized Identifiers (DIDs)",
         "link": "https://www.w3.org/TR/did-core/"
+      },
+      {
+        "title": "De-Anonymizing Avatars in Virtual Reality",
+        "link": "https://www.computer.org/csdl/journal/tm/2024/12/10592805/1YtaWP0j11S"
       }
     ],
     "description": "Cross-virtual-physical identity correlation attacks infer real identities or other platform accounts from virtual behavior, social graphs, device features, and transaction records. Attackers can then perform targeted scams, harassment, or extortion.\n\nThe risk comes from stitching together multiple low-sensitivity signals. Platforms should reduce identifier reuse and restrict exportable behavioral data.",

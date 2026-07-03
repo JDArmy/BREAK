@@ -4,8 +4,8 @@
     "description": "Collects behavioral features from affiliate channels, promotional creatives, landing pages, conversion devices, and commission activities. Applies quality scoring, rule matching, and statistical comparison to identify channel fraud, fake traffic, and abnormal commissions, and downgrades or removes low-quality channels.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "MRC Invalid Traffic (IVT) Detection and Filtration Guidelines Addendum - IAB",
+        "link": "https://www.iab.com/guidelines/mrc-invalid-traffic-ivt-detection-and-filtration-guidelines-addendum/"
       }
     ],
     "keywords": [

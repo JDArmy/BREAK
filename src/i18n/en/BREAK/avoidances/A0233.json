@@ -15,8 +15,8 @@
     "limitation": "Byzantine fault tolerance increases communication and computation overhead, leading to high consensus latency in large-scale clusters that is difficult to meet real-time control requirements. False positives in anomaly detection can cause normal members to be mistakenly isolated. Cluster-level emergency stop may be exploited by attackers to launch denial-of-service attacks. Defense fails when the number of members exceeds the fault tolerance threshold.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Cybersecurity of Teleoperated Quadruped Robots: A Systematic Study - arXiv",
+        "link": "https://arxiv.org/html/2602.23404v1"
       }
     ]
   }

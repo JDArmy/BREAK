@@ -15,15 +15,15 @@
     ],
     "references": [
       {
-        "title": "OWASP Top 10 for LLM Applications",
-        "link": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"
+        "title": "LLM01:2025 Prompt Injection",
+        "link": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/"
       },
       {
         "title": "Prompt Injection攻击与防御综述",
         "link": "https://arxiv.org/abs/2310.12397"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "keywords": [
       "LLM提示注入风险",
       "提示注入",
@@ -93,11 +93,11 @@
     ],
     "references": [
       {
-        "title": "OWASP Top 10 for LLM Applications",
-        "link": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"
+        "title": "LLM01:2025 Prompt Injection",
+        "link": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "keywords": [
       "直接提示注入",
       "Direct Prompt Injection",

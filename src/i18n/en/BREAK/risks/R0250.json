@@ -11,8 +11,8 @@
     ],
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Application Security Issues in AI Edge and Serverless Runtimes (Kodem Security)",
+        "link": "https://www.kodemsecurity.com/resources/application-security-issues-in-ai-edge-and-serverless-runtimes-aws-lambda-vercel-edge-functions-and-cloudflare-workers"
       }
     ],
     "description": "Edge function configuration abuse occurs when CDN edge functions, Workers, WAF rules, or traffic orchestration logic are misconfigured. Attackers may bypass authentication, forward sensitive requests, alter responses, or create an open proxy.\n\nEdge logic sits between users and origin services, so mistakes affect the full traffic entry point. Changes need review, staged rollout, least privilege, and rollback mechanisms.",

@@ -15,8 +15,8 @@
     "limitation": "It is infeasible to exhaustively enumerate all injection forms, as novel adversarial examples can bypass the detector. Dynamic physical environment variations (illumination, occlusion, viewpoint) lead to high false positive rates. The detector itself may be deceived by adversarial attacks. A trade-off exists between real-time requirements and detection overhead, making deployment infeasible in all scenarios.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Misleading text in the physical world can hijack AI-enabled robots - UC Santa Cruz",
+        "link": "https://news.ucsc.edu/2026/01/misleading-text-can-hijack-ai-enabled-robots/"
       }
     ]
   }

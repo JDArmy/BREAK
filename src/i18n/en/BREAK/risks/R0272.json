@@ -14,8 +14,8 @@
     "influence": "A jailbroken agent can manipulate robotic arms, open doors, transport items, or strike people; autonomous decision errors translate directly into physical harm, unlike the controllable rollback of pure software agents — consequences are irreversible and may cause casualties.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Jailbreaking LLM-Controlled Robots (RoboPAIR)",
+        "link": "https://arxiv.org/abs/2410.13691"
       }
     ],
     "riskAssessment": {

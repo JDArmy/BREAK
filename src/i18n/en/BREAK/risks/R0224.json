@@ -11,8 +11,8 @@
     ],
     "references": [
       {
-        "title": "OWASP API Security Top 10 2023",
-        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+        "title": "API4:2023 Unrestricted Resource Consumption",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0xa4-unrestricted-resource-consumption/"
       }
     ],
     "description": "API bulk call resource exhaustion occurs when attackers repeatedly call expensive endpoints to consume inventory, SMS quota, compute, coupons, or third-party service budget. The attack abuses legitimate business functions rather than breaking authentication.\n\nWithout limits by user, device, IP, business object, and cost dimension, abusive traffic blends with normal requests and causes degraded service, cost spikes, and poor user experience.",

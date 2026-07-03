@@ -14,8 +14,8 @@
     "usageExample": "Assess Temporary Credential related exposure and define the corresponding controls.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Temporary security credentials in IAM - AWS",
+        "link": "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html"
       }
     ],
     "category": "Business Security",

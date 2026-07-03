@@ -4,8 +4,8 @@
     "description": "Collect model output texts, images, audio, and other content, and apply rule matching, classification models, and baseline comparison to identify abnormal output risks such as harmful content, privacy leakage, hallucination, bias, and unauthorized advice.",
     "references": [
       {
-        "title": "NIST AI Risk Management Framework",
-        "link": "https://www.nist.gov/itl/ai-risk-management-framework"
+        "title": "LLM05:2025 Improper Output Handling - OWASP Gen AI Security Project",
+        "link": "https://genai.owasp.org/llmrisk/llm05-supply-chain-vulnerabilities/"
       }
     ],
     "keywords": [

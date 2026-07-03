@@ -14,8 +14,12 @@
     "usageExample": "Assess RAG related exposure and define the corresponding controls.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Retrieval-augmented generation - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Retrieval-augmented_generation"
+      },
+      {
+        "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (Lewis et al., 2020)",
+        "link": "https://arxiv.org/abs/2005.11401"
       }
     ],
     "category": "Business Security",

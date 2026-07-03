@@ -12,8 +12,8 @@
     ],
     "references": [
       {
-        "title": "NIST AI Risk Management Framework",
-        "link": "https://www.nist.gov/itl/ai-risk-management-framework"
+        "title": "Poisoning Language Models During Instruction Tuning",
+        "link": "https://arxiv.org/abs/2305.00944"
       }
     ],
     "description": "Training data poisoning occurs when attackers inject malicious samples into training sets, labels, feedback data, or knowledge bases so the model behaves incorrectly under specific triggers. Sources include public datasets, user feedback, and supplier data.\n\nThe attack may not show in normal accuracy tests but can trigger bias, safety bypass, or wrong decisions in target scenarios. Defense requires provenance, anomaly detection, and before-after model evaluation.",

@@ -20,11 +20,11 @@
     ],
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Detect and prevent dependency confusion attacks - Snyk",
+        "link": "https://snyk.io/blog/detect-prevent-dependency-confusion-attacks-npm-supply-chain-security/"
       }
     ],
-    "updated": "2026-07-02",
+    "updated": "2026-07-04",
     "version": 2
   }
 }

@@ -5,14 +5,14 @@
     "description": "建立车联网公钥基础设施（PKI），为车与车（V2V）、车与路侧设施（V2I）、车与云（V2N）通信签发数字证书，确保V2X消息的真实性、完整性与不可抵赖性，防止攻击者伪造车辆身份或篡改广播消息实施碰撞诱骗。",
     "references": [
       {
-        "link": "https://www.iso.org/standard/70918.html",
-        "title": "ISO/SAE 21434 Vehicle Cybersecurity"
+        "title": "ISO/SAE 21434:2021 - Road vehicles cybersecurity engineering - SAE",
+        "link": "https://www.sae.org/standards/isosae21434-road-vehicles-cybersecurity-engineering"
       }
     ],
     "keywords": [
       "车联网PKI认证体系"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "definition": "建立车联网公钥基础设施，确保V2X通信的真实性和完整性。",
     "effectiveness": "high",
     "limitation": "证书私钥一旦从车载安全芯片中提取或被侧信道攻击窃取，攻击者即可伪造合法车辆身份广播虚假BSM消息绕过认证；CA中心被攻破或密钥托管环节失陷可批量签发恶意证书；证书吊销列表（CRL）分发存在延迟，被撤销车辆在窗口期内仍被误判合法；高密度车流下证书验证开销大，隐私保护要求与身份可追溯存在矛盾，易产生误拦合法车辆。",

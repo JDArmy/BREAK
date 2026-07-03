@@ -14,6 +14,10 @@
       {
         "title": "PCI Data Security Standard",
         "link": "https://www.pcisecuritystandards.org/standards/pci-dss/"
+      },
+      {
+        "title": "EMVCo Payment Tokenisation Specification（支付令牌化标准框架）",
+        "link": "https://www.emvco.com/emv-technologies/payment-tokenisation/"
       }
     ],
     "keywords": [
@@ -24,7 +28,7 @@
       "绑卡关系错误",
       "支付凭证泄露"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "riskAssessment": {
       "likelihood": "medium",
       "businessLoss": "critical",

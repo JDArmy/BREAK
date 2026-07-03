@@ -20,11 +20,15 @@
     ],
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Web application firewall - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Web_application_firewall"
+      },
+      {
+        "title": "Web Application Firewall - OWASP",
+        "link": "https://owasp.org/www-community/Web_Application_Firewall"
       }
     ],
-    "updated": "2026-07-02",
+    "updated": "2026-07-04",
     "version": 2
   }
 }

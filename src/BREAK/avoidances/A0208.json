@@ -5,15 +5,15 @@
     "description": "对退款、拒付、售后和理赔采集订单、物流、设备与行为特征，运用行为模型、证据链校验与规则评分判定异常申请，结合人工复核机制识别欺诈性退款。",
     "references": [
       {
-        "title": "PCI Data Security Standard",
-        "link": "https://www.pcisecuritystandards.org/standards/pci-dss/"
+        "title": "Chargeback fraud 101 - Stripe",
+        "link": "https://stripe.com/resources/more/chargeback-fraud-101"
       }
     ],
     "keywords": [
       "退款与争议风控策略",
       "退款争议风控策略"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "definition": "对退款、拒付、售后和理赔建立行为模型、证据链校验和人工复核机制。",
     "effectiveness": "high",
     "limitation": "黑产可组织众包真人下单、伪造物流与聊天证据绕过行为模型，正常售后高峰、争议举证不足易误拦误判；跨境拒付规则差异大，证据链缺失时模型召回率下降漏报风险升高。",

@@ -4,8 +4,8 @@
     "description": "Strictly validate API inputs based on OpenAPI contracts, type constraints, schema validation, and load testing, combined with contract consistency regression testing, to reduce injection, parameter pollution, type confusion, and privilege escalation or denial of service caused by abnormal payloads.",
     "references": [
       {
-        "title": "OWASP API Security Top 10 2023",
-        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+        "title": "API4:2023 Unrestricted Resource Consumption - OWASP API Security",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0xa4-unrestricted-resource-consumption/"
       }
     ],
     "keywords": [

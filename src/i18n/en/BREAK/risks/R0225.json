@@ -13,6 +13,10 @@
       {
         "title": "OWASP API Security Top 10 2023",
         "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+      },
+      {
+        "title": "Stripe Webhook Security: Signature Verification and Replay Attack Prevention",
+        "link": "https://docs.stripe.com/webhooks"
       }
     ],
     "description": "Webhook forgery and event replay occur when receivers fail to validate signatures, timestamps, event IDs, or idempotency state. Attackers can create or repeat events that trigger shipment, recharge, authorization, or state changes.\n\nAsynchronous events connect payments, orders, SaaS integrations, and automation flows. A broken trust boundary can turn forged external messages into internal business actions.",

@@ -11,8 +11,8 @@
     ],
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "ICO Data Sharing: A Code of Practice (data sharing with purpose limitation)",
+        "link": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-sharing/data-sharing-a-code-of-practice/"
       }
     ],
     "description": "Unauthorized use of shared data occurs when internal teams, vendors, or partners use shared data beyond approved purpose, scope, or duration. It can appear in joint modeling, marketing activation, outsourced operations, and data API integrations.\n\nEven if initial sharing was approved, later purpose drift creates compliance and trust risk. Organizations need data use contracts, purpose audits, masking, isolation, and expiration handling.",

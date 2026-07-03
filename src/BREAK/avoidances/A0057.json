@@ -7,11 +7,11 @@
     "limitation": "局限性：效率问题： 过多的审批步骤可能导致决策变得缓慢，降低工作效率。人为错误： 在手动审批流程中，由于人为因素，可能存在错误或疏漏。流程复杂性： 过于复杂的审批流程可能难以理解和管理，增加了维护的难度。适用场景限制： 不是所有场景都需要增加审批流程，某些简单的决策可能会因此显得繁琐。",
     "references": [
       {
-        "title": "The NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Segregation of Duties: What it is and Why it's Important - Hyperproof",
+        "link": "https://hyperproof.io/resource/segregation-of-duties/"
       }
     ],
-    "updated": "2026-06-13",
+    "updated": "2026-07-04",
     "keywords": [
       "增加审批流程",
       "多级审批",

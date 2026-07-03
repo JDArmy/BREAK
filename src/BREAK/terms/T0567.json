@@ -20,11 +20,15 @@
     ],
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Retrieval-augmented generation - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Retrieval-augmented_generation"
+      },
+      {
+        "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (Lewis et al., 2020)",
+        "link": "https://arxiv.org/abs/2005.11401"
       }
     ],
-    "updated": "2026-07-02",
+    "updated": "2026-07-04",
     "version": 2
   }
 }

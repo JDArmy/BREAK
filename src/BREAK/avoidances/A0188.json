@@ -5,14 +5,14 @@
     "description": "建立跨平台、跨虚拟世界的去中心化身份（DID）联邦认证体系，通过可验证凭证与跨域信任锚实现身份互认，防止用户在元宇宙多平台间被冒充或身份凭证被复制重放。",
     "references": [
       {
-        "link": "https://www.w3.org/TR/did-core/",
-        "title": "W3C Decentralized Identifiers"
+        "title": "OpenID Federation 1.0",
+        "link": "https://openid.net/specs/openid-federation-1_0.html"
       }
     ],
     "keywords": [
       "元宇宙身份联邦认证"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "definition": "建立跨平台的去中心化身份(DID)认证体系，防止身份冒充。",
     "effectiveness": "high",
     "limitation": "各平台DID方法与信任锚实现不统一，跨域互认一致性差，易产生验证漏洞被冒充身份绕过；用户私钥保管在终端钱包，被钓鱼或恶意客户端窃取后联邦认证无法识别操作者真伪；跨平台凭证重放检测依赖全局状态同步，同步延迟会产生重放窗口；旧平台账号迁移与凭证继承机制薄弱，账号恢复流程可被社工利用冒充合法用户。",

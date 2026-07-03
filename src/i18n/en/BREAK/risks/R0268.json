@@ -15,8 +15,8 @@
     "influence": "Causes robots to lose localization, misidentify obstacles, deviate from trajectory, or even crash and fall; it is a core threat to autonomous-driving and mobile-robot safety, usable to cause traffic accidents, hijack drones, or paralyze warehouse logistics robots.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Rocking Drones with Intentional Sound Noise on Gyroscopic Sensors (USENIX Security 2015)",
+        "link": "https://www.usenix.org/conference/usenixsecurity15/technical-sessions/presentation/son"
       }
     ],
     "riskAssessment": {

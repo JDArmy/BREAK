@@ -14,8 +14,12 @@
     "usageExample": "Assess Training Data Poisoning related exposure and define the corresponding controls.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "LLM03: Training Data Poisoning - OWASP Gen AI Security Project",
+        "link": "https://genai.owasp.org/llmrisk2023-24/llm03-training-data-poisoning/"
+      },
+      {
+        "title": "What Is Data Poisoning - IBM",
+        "link": "https://www.ibm.com/think/topics/data-poisoning"
       }
     ],
     "category": "Business Security",

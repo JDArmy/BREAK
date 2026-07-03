@@ -12,8 +12,8 @@
     ],
     "references": [
       {
-        "title": "OWASP Top 10 CI/CD Security Risks",
-        "link": "https://owasp.org/www-project-top-10-ci-cd-security-risks/"
+        "title": "OWASP Top 10 CI/CD Security Risks - CICD-SEC-06: Insufficient Credential Hygiene",
+        "link": "https://owasp.org/www-project-top-10-ci-cd-security-risks/CICD-SEC-06-Insufficient-Credential-Hygiene"
       }
     ],
     "keywords": [
@@ -24,7 +24,7 @@
       "构建日志泄密",
       "部署密钥泄露"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "critical",

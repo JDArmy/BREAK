@@ -7,19 +7,11 @@
     "limitation": "C2PA等标准尚未全面普及，许多平台和设备不支持；数字水印可能被高级技术擦除或破坏；区块链溯源的存储成本较高；模型指纹的准确性受模型更新影响；内容签名链的复杂性随传播次数增长而急剧增加。",
     "references": [
       {
-        "title": "C2PA Technical Specification",
-        "link": "https://c2pa.org/specifications/"
-      },
-      {
-        "title": "Adobe Content Authenticity Initiative",
-        "link": "https://contentauthenticity.org/"
-      },
-      {
-        "title": "NIST AI RMF: AI Risk Management Framework",
-        "link": "https://www.nist.gov/itl/ai-risk-management-framework"
+        "title": "C2PA Specifications 2.4",
+        "link": "https://spec.c2pa.org/specifications/specifications/2.4/index.html"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-04",
     "keywords": [
       "AI内容溯源",
       "内容来源验证",

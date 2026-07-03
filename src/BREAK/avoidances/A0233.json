@@ -17,8 +17,8 @@
     "effectiveness": "medium",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Cybersecurity of Teleoperated Quadruped Robots: A Systematic Study - arXiv",
+        "link": "https://arxiv.org/html/2602.23404v1"
       }
     ],
     "relatedAvoidances": [
@@ -43,6 +43,6 @@
         "note": "共同覆盖 1 个风险。"
       }
     ],
-    "updated": "2026-07-03"
+    "updated": "2026-07-04"
   }
 }

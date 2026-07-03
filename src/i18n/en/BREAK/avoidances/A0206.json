@@ -4,8 +4,8 @@
     "description": "Collects sharing behaviors, outbound traffic, and content characteristics from cloud drives, IM, email, knowledge bases, and collaborative documents; applies sensitive data identification, rule matching, and sharing control policies to detect abnormal outbound activities, and retains outbound audit logs.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Cloud Controls Matrix - Cloud Security Alliance",
+        "link": "https://cloudsecurityalliance.org/research/cloud-controls-matrix"
       }
     ],
     "keywords": [

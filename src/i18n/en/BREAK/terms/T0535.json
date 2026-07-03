@@ -14,8 +14,8 @@
     "usageExample": "Assess SLSA related exposure and define the corresponding controls.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "SLSA Levels - Supply-chain Levels for Software Artifacts",
+        "link": "https://slsa.dev/spec/v1.0/levels"
       }
     ],
     "category": "Business Security",

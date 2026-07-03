@@ -4,8 +4,8 @@
     "description": "Establishes baselines for cloud storage, network, security groups, KMS, and logging configurations by collecting current configuration items, and continuously monitors configuration drift using rule matching and statistical comparison to identify anomalous deviations such as public buckets, excessive permissions, and open security groups.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "CIS AWS Foundations Benchmark in AWS Security Hub",
+        "link": "https://docs.aws.amazon.com/securityhub/latest/userguide/cis-aws-foundations-benchmark.html"
       }
     ],
     "keywords": [

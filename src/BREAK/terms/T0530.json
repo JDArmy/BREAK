@@ -18,11 +18,11 @@
     ],
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "API Gateway throttling and quotas - AWS",
+        "link": "https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html"
       }
     ],
-    "updated": "2026-07-02",
+    "updated": "2026-07-04",
     "version": 2
   }
 }

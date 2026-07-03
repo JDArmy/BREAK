@@ -11,8 +11,8 @@
     ],
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Detect and Remediate Illicit Consent Grants (Microsoft Defender)",
+        "link": "https://learn.microsoft.com/en-us/defender-office-365/detect-and-remediate-illicit-consent-grants"
       }
     ],
     "description": "SaaS third-party app authorization abuse occurs when employees or admins grant external apps access to mail, drives, calendars, CRM, or customer data, and the app exceeds expectations or is compromised.\n\nOAuth consent is often perceived as login, but may grant long-lived read or action permissions. Enterprises need app review, high-risk scope restrictions, and periodic cleanup of unused grants.",

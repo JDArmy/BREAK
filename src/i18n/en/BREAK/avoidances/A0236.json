@@ -15,8 +15,8 @@
     "limitation": "Full-chain logging generates large data volumes, leading to high storage and transmission costs. On-chain auditing introduces latency, making real-time on-chain recording for all actions impractical. Explainable decisions may risk exposing model intellectual property. Human-in-the-loop reduces the degree of automation, creating tension with the autonomy objectives of embodied intelligence.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "AU: Audit and Accountability - NIST SP 800-53 Rev. 5 - CSF Tools",
+        "link": "https://csf.tools/reference/nist-sp-800-53/r5/au/"
       }
     ]
   }

@@ -17,8 +17,8 @@
     "effectiveness": "medium",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Unitree Robot Hack: What You Need to Know - IEEE Spectrum",
+        "link": "https://spectrum.ieee.org/unitree-robot-exploit"
       }
     ],
     "relatedAvoidances": [
@@ -38,6 +38,6 @@
         "note": "共同覆盖 1 个风险。"
       }
     ],
-    "updated": "2026-07-03"
+    "updated": "2026-07-04"
   }
 }

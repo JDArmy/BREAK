@@ -34,6 +34,10 @@
       {
         "link": "https://www.iso.org/standard/70918.html",
         "title": "ISO/SAE 21434 Road vehicles Cybersecurity"
+      },
+      {
+        "title": "False Information Cyberattack Detection Models for Connected Vehicles",
+        "link": "https://arxiv.org/abs/2108.01124"
       }
     ],
     "keywords": [
@@ -44,7 +48,7 @@
       "虚假交通消息",
       "联网汽车安全"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "description": "车联网 V2X 攻击针对车辆与车辆、道路基础设施、云平台之间的通信。攻击者可伪造位置、速度、道路事件或信号灯信息，误导自动驾驶和辅助驾驶决策。\n\n这类攻击会把网络风险转化为交通安全风险。系统需要验证消息来源、时空合理性、证书状态和异常行为，避免单一通信信号直接驱动车辆动作。",
     "relatedRisks": [
       {

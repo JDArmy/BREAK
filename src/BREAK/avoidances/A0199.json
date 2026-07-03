@@ -5,14 +5,14 @@
     "description": "限制流水线令牌、Runner、制品库和部署凭证权限，遵循最小权限与短期凭证原则，对构建、推送、部署各环节权限细分授权并审计，降低构建链路被攻陷后横向滥用风险。",
     "references": [
       {
-        "title": "OWASP Top 10 CI/CD Security Risks",
-        "link": "https://owasp.org/www-project-top-10-ci-cd-security-risks/"
+        "title": "CICD-SEC-01: Insufficient Flow Control Mechanisms - OWASP Top 10 CI/CD Security Risks",
+        "link": "https://owasp.org/www-project-top-10-ci-cd-security-risks/CICD-SEC-01-Insufficient-Flow-Control-Mechanisms"
       }
     ],
     "keywords": [
       "CI/CD流水线最小权限治理"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "definition": "限制流水线令牌、Runner、制品库和部署凭证权限，降低构建链路被滥用风险。",
     "effectiveness": "high",
     "limitation": "流水线常需较高权限完成部署，最小权限与自动化效率存在张力，实际执行常放松约束产生过度授权；长期令牌与共享凭证在历史脚本、第三方集成中残留，难以彻底收敛；Runner被攻陷后可窃取运行时注入的临时凭证伪造身份绕过权限治理；权限策略复杂后误配频发，既可能误拦正常构建，也可能留下越权缺口被利用。",

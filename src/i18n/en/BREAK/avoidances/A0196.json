@@ -4,8 +4,8 @@
     "description": "Enforce server-side authorization checks on API objects, tenants, resources, and actions, implementing object-level access control (BOLA/IDOR protection). Verify the caller's ownership and operation permissions for each specific resource on every access, preventing unauthorized access to other users' data.",
     "references": [
       {
-        "title": "OWASP API Security Top 10 2023",
-        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+        "title": "API1:2023 Broken Object Level Authorization - OWASP API Security",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0xa1-broken-object-level-authorization/"
       }
     ],
     "keywords": [

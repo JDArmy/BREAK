@@ -15,8 +15,8 @@
     "limitation": "Encryption and authentication introduce additional communication latency, affecting the real-time performance of fine teleoperation (e.g., remote surgery). Certificate and key management is complex; lost devices or personnel changes require timely revocation. It cannot defend against internal attackers who already possess valid credentials. Latency detection may produce false positives under normal network fluctuations.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "UW researchers hack a teleoperated surgical robot to reveal security flaws",
+        "link": "https://www.washington.edu/news/2015/05/07/uw-researchers-hack-a-teleoperated-surgical-robot-to-reveal-security-flaws/"
       }
     ]
   }

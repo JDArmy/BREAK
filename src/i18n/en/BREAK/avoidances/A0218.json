@@ -4,6 +4,10 @@
     "description": "Bind session tokens to device fingerprint, network environment, and client proof (e.g., DPoP/Token Binding), and detect cross-location replay and anomalous reuse of cookies/tokens to prevent stolen tokens from being replayed on an attacker's device to impersonate a user session.",
     "references": [
       {
+        "title": "RFC 9449: OAuth 2.0 Demonstrating Proof of Possession (DPoP)",
+        "link": "https://datatracker.ietf.org/doc/html/rfc9449"
+      },
+      {
         "title": "OWASP API Security Top 10 2023",
         "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
       }

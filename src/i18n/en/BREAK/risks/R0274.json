@@ -14,8 +14,8 @@
     "influence": "Defeats single-modal defenses, expands the attack surface to any modality, and can manipulate model understanding to cause wrong action decisions; the attacker need not manipulate all modalities simultaneously, making defense significantly harder than single-modal attacks.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "CrossMPI: A Cross-Modal Prompt Injection Attack with Image-Only Perturbation",
+        "link": "https://arxiv.org/abs/2605.16090"
       }
     ],
     "riskAssessment": {

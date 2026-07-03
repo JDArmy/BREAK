@@ -12,8 +12,8 @@
     ],
     "references": [
       {
-        "title": "W3C Decentralized Identifiers (DIDs) v1.0",
-        "link": "https://www.w3.org/TR/did-core/"
+        "title": "Verifiable Credentials Data Model v2.0",
+        "link": "https://www.w3.org/TR/vc-data-model-2.0/"
       }
     ],
     "keywords": [
@@ -24,7 +24,7 @@
       "去中心化身份攻击",
       "身份声明冒用"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "riskAssessment": {
       "likelihood": "medium",
       "businessLoss": "high",

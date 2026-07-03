@@ -15,8 +15,8 @@
     "limitation": "Advanced attackers can synchronously compromise multiple channels (cross-modal coordinated attacks), making data from different channels appear pseudo-consistent. Slow-drift attacks may cause deviations to fall within the consistency tolerance window. Fusion introduces additional computational and latency overhead, impacting real-time control. Sensor deployment is constrained by cost and power consumption, making full redundancy difficult to achieve.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Safeguarding Autonomous Vehicles With Trust-Aware Sensor Fusion - IEEE Xplore",
+        "link": "https://ieeexplore.ieee.org/document/10971200/"
       }
     ]
   }

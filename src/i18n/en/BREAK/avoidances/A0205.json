@@ -4,8 +4,8 @@
     "description": "Collects characteristics such as SaaS administrator accounts, OAuth grants, external sharing, and third-party application configurations, then applies rule matching, permission scoring, and baseline comparison to identify high-risk authorizations, excessive permissions, and anomalous external sharing.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Rein in Risky OAuth Grants & Scopes - Nudge Security",
+        "link": "https://www.nudgesecurity.com/use-cases/oauth-risk-management"
       }
     ],
     "keywords": [

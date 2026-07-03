@@ -12,8 +12,8 @@
     ],
     "references": [
       {
-        "title": "OWASP Top 10 for Large Language Model Applications",
-        "link": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"
+        "title": "Extracting Training Data from Large Language Models",
+        "link": "https://arxiv.org/abs/2012.07805"
       }
     ],
     "keywords": [
@@ -24,7 +24,7 @@
       "LLM敏感信息泄露",
       "内部资料外泄"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "high",

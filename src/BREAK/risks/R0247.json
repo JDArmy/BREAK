@@ -12,8 +12,8 @@
     ],
     "references": [
       {
-        "title": "OWASP API Security Top 10 2023",
-        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+        "title": "API2:2023 Broken Authentication",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0xa2-broken-authentication/"
       }
     ],
     "keywords": [
@@ -24,7 +24,7 @@
       "会话劫持",
       "访问令牌盗用"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "critical",

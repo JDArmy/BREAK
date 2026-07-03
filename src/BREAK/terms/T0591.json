@@ -20,11 +20,15 @@
     ],
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Decentralized identifier - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Decentralized_identifier"
+      },
+      {
+        "title": "Decentralized Identifiers (DIDs) v1.0 - W3C",
+        "link": "https://www.w3.org/TR/did-core/"
       }
     ],
-    "updated": "2026-07-02",
+    "updated": "2026-07-04",
     "version": 2
   }
 }

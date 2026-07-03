@@ -4,8 +4,8 @@
     "description": "Collects order, logistics, device, and behavioral characteristics for refunds, chargebacks, after-sales, and claims. Applies behavioral models, evidence chain verification, and rule-based scoring to identify abnormal requests, combined with manual review mechanisms to detect fraudulent refunds.",
     "references": [
       {
-        "title": "PCI Data Security Standard",
-        "link": "https://www.pcisecuritystandards.org/standards/pci-dss/"
+        "title": "Chargeback fraud 101 - Stripe",
+        "link": "https://stripe.com/resources/more/chargeback-fraud-101"
       }
     ],
     "keywords": [

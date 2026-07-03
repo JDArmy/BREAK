@@ -12,8 +12,8 @@
     ],
     "references": [
       {
-        "title": "ISO/SAE 21434 Road vehicles Cybersecurity",
-        "link": "https://www.iso.org/standard/70918.html"
+        "title": "Security and Privacy Consideration for Vehicle APIs",
+        "link": "https://w3c.github.io/automotive/vehicle_data/security/"
       }
     ],
     "keywords": [
@@ -24,7 +24,7 @@
       "位置数据滥用",
       "车载应用越权"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "riskAssessment": {
       "likelihood": "medium",
       "businessLoss": "high",

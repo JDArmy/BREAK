@@ -5,14 +5,14 @@
     "description": "治理AI训练数据的来源合规、授权链路、敏感信息脱敏、版权风险与数据投毒检测，建立数据集血缘与质量基线，防止攻击者通过投毒训练数据污染模型行为或注入后门触发词。",
     "references": [
       {
-        "title": "NIST AI Risk Management Framework",
-        "link": "https://www.nist.gov/itl/ai-risk-management-framework"
+        "title": "LLM03:2025 Supply Chain (Training Data Poisoning) - OWASP Gen AI Security Project",
+        "link": "https://genai.owasp.org/llmrisk/llm03-training-data-poisoning/"
       }
     ],
     "keywords": [
       "AI训练数据治理"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "definition": "治理训练数据来源、授权、敏感信息、版权风险和数据投毒检测。",
     "effectiveness": "high",
     "limitation": "数据集规模庞大且来源混杂，投毒样本占比极低时难以检出，缓慢注入式投毒可绕过统计检测；众包采集与爬取数据缺乏可追溯授权，版权与合规风险难以消除；脱敏不彻底的残留字段可被属性推断攻击还原敏感信息；治理规则与模型迭代节奏脱节，新数据集未经同等治理即投入训练使既有治理失效。",

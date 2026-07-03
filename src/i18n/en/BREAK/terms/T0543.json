@@ -14,8 +14,8 @@
     "usageExample": "Assess Object Storage Bucket related exposure and define the corresponding controls.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "What is Amazon S3? - Amazon Simple Storage Service",
+        "link": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html"
       }
     ],
     "category": "Business Security",

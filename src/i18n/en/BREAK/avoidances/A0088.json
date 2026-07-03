@@ -6,16 +6,8 @@
     "limitation": "C2PA and other standards have not yet been fully adopted, with many platforms and devices not supporting them; digital watermarks may be erased or damaged by advanced techniques; blockchain provenance has high storage costs; model fingerprinting accuracy is affected by model updates; content signature chain complexity increases dramatically with the number of distribution events.",
     "references": [
       {
-        "title": "C2PA Technical Specification",
-        "link": "https://c2pa.org/specifications/"
-      },
-      {
-        "title": "Adobe Content Authenticity Initiative",
-        "link": "https://contentauthenticity.org/"
-      },
-      {
-        "title": "NIST AI RMF: AI Risk Management Framework",
-        "link": "https://www.nist.gov/itl/ai-risk-management-framework"
+        "title": "C2PA Specifications 2.4",
+        "link": "https://spec.c2pa.org/specifications/specifications/2.4/index.html"
       }
     ],
     "keywords": [

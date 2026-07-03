@@ -11,8 +11,8 @@
     ],
     "references": [
       {
-        "title": "OWASP Top 10 for Large Language Model Applications",
-        "link": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"
+        "title": "RAG Security and Privacy: Formalizing the Threat Model and Attack Surface",
+        "link": "https://arxiv.org/abs/2509.20324"
       }
     ],
     "description": "RAG unauthorized retrieval happens when retrieval-augmented systems do not apply user permissions, tenant boundaries, or document classification during retrieval. A user query may retrieve inaccessible snippets that the model then summarizes.\n\nVector similarity is not access control. RAG systems need permission checks at indexing, retrieval, reranking, and generation stages, plus audit of sensitive outputs.",

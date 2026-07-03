@@ -12,8 +12,8 @@
     ],
     "references": [
       {
-        "title": "NIST AI Risk Management Framework",
-        "link": "https://www.nist.gov/itl/ai-risk-management-framework"
+        "title": "Poisoning Language Models During Instruction Tuning",
+        "link": "https://arxiv.org/abs/2305.00944"
       }
     ],
     "keywords": [
@@ -24,7 +24,7 @@
       "反馈数据污染",
       "AI供应链攻击"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "riskAssessment": {
       "likelihood": "medium",
       "businessLoss": "high",

@@ -22,12 +22,12 @@
     ],
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "CHAI: Command Hijacking against embodied AI",
+        "link": "https://arxiv.org/abs/2510.00181"
       }
     ],
     "relatedRisks": [],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "riskAssessment": {
       "likelihood": "medium",
       "businessLoss": "critical",

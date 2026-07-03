@@ -34,6 +34,10 @@
       {
         "link": "https://www.w3.org/TR/did-core/",
         "title": "W3C Decentralized Identifiers (DIDs)"
+      },
+      {
+        "title": "De-Anonymizing Avatars in Virtual Reality",
+        "link": "https://www.computer.org/csdl/journal/tm/2024/12/10592805/1YtaWP0j11S"
       }
     ],
     "keywords": [
@@ -44,7 +48,7 @@
       "现实身份追踪",
       "定向敲诈"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "description": "跨虚实身份关联攻击通过分析用户在虚拟世界中的行为轨迹、社交关系、设备特征和交易记录，推断其现实身份或其他平台账号。攻击者随后可进行定向诈骗、骚扰或敲诈。\n\n这类风险通常由多源数据拼接造成，单个字段看似不敏感，组合后却能去匿名化。平台需要减少跨场景标识复用，并限制可导出的行为数据。",
     "relatedRisks": [
       {

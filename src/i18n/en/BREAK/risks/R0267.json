@@ -16,8 +16,8 @@
     "influence": "Can induce robots to perform dangerous actions (e.g., unlocking, transporting contraband, striking people), leak environment information, or bypass safety constraints; because the injectioncarrier is in the physical world, it is hard to eradicate via pure software filtering, with low attack threshold yet high harm.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "CHAI: Command Hijacking against embodied AI",
+        "link": "https://arxiv.org/abs/2510.00181"
       }
     ],
     "riskAssessment": {

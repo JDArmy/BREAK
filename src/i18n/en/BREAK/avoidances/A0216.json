@@ -4,8 +4,8 @@
     "description": "Isolate system instructions, user input, and external retrieved content into separate layers. Perform policy validation on tool call parameters and permission boundaries to restrict the ability of external content to override system instructions. This prevents attackers from hijacking LLM execution via prompt injection to perform unauthorized tool calls or leak system prompts.",
     "references": [
       {
-        "title": "OWASP Top 10 for Large Language Model Applications",
-        "link": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"
+        "title": "LLM01:2025 Prompt Injection - OWASP Gen AI Security Project",
+        "link": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/"
       }
     ],
     "keywords": [

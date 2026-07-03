@@ -22,12 +22,12 @@
     ],
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "CVE-2024-30259 eProsima FastDDS 堆缓冲区溢出",
+        "link": "https://nvd.nist.gov/vuln/detail/CVE-2024-30259"
       }
     ],
     "relatedRisks": [],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "critical",

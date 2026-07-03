@@ -20,11 +20,11 @@
     ],
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "RFC 8471 - The Token Binding Protocol Version 1.0 - IETF",
+        "link": "https://datatracker.ietf.org/doc/html/rfc8471"
       }
     ],
-    "updated": "2026-07-02",
+    "updated": "2026-07-04",
     "version": 2
   }
 }

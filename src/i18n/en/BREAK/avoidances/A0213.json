@@ -4,8 +4,8 @@
     "description": "Governs the compliance of AI training data sources, authorization chains, sensitive information desensitization, copyright risks, and data poisoning detection. Establishes dataset lineage and quality baselines to prevent attackers from contaminating model behavior or injecting backdoor triggers through poisoned training data.",
     "references": [
       {
-        "title": "NIST AI Risk Management Framework",
-        "link": "https://www.nist.gov/itl/ai-risk-management-framework"
+        "title": "LLM03:2025 Supply Chain (Training Data Poisoning) - OWASP Gen AI Security Project",
+        "link": "https://genai.owasp.org/llmrisk/llm03-training-data-poisoning/"
       }
     ],
     "keywords": [

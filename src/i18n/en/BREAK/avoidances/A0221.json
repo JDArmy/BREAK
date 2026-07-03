@@ -4,6 +4,10 @@
     "description": "Audit changes to CDN, WAF, edge functions, and caching rules to prevent edge configurations from being abused. Collect change events and configuration characteristics of CDN, WAF, edge functions, and caching rules, and apply rule matching, baseline comparison, and version sequence verification to audit abnormal changes, preventing edge configurations from being abused or maliciously tampered with.",
     "references": [
       {
+        "title": "API8:2023 Security Misconfiguration - OWASP API Security",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0xa8-security-misconfiguration/"
+      },
+      {
         "title": "NIST Cybersecurity Framework 2.0",
         "link": "https://www.nist.gov/cyberframework"
       }

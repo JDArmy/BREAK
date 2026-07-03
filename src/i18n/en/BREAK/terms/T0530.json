@@ -14,8 +14,8 @@
     "usageExample": "Assess Quota Control related exposure and define the corresponding controls.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "API Gateway throttling and quotas - AWS",
+        "link": "https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html"
       }
     ],
     "category": "Business Security",

@@ -12,8 +12,8 @@
     ],
     "references": [
       {
-        "title": "OWASP Top 10 CI/CD Security Risks",
-        "link": "https://owasp.org/www-project-top-10-ci-cd-security-risks/"
+        "title": "CISA AA20-352A: SolarWinds Orion 供应链投毒事件公告",
+        "link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-352a"
       },
       {
         "title": "Software Bill of Materials - CISA",
@@ -28,7 +28,7 @@
       "制品仓库污染",
       "软件供应链投毒"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "riskAssessment": {
       "likelihood": "medium",
       "businessLoss": "critical",

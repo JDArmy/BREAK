@@ -12,8 +12,8 @@
     ],
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Implementing Least Privilege in AWS: Strategies for Minimizing Security Risks (CSA)",
+        "link": "https://cloudsecurityalliance.org/blog/2023/07/14/implementing-least-privilege-in-aws-strategies-for-minimizing-security-risks"
       }
     ],
     "keywords": [
@@ -24,7 +24,7 @@
       "服务账号高权限",
       "云角色滥用"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "critical",

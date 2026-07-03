@@ -11,8 +11,8 @@
     ],
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Enterprise-scale: How Credentials Leaked from Public Storage Buckets (UpGuard)",
+        "link": "https://www.upguard.com/breaches/enterprise-scale-how-credentials-leaked-from-public-storage-buckets"
       }
     ],
     "description": "Public cloud storage bucket exposure usually comes from object storage, backup snapshots, log buckets, or static asset buckets configured for public access. Once sensitive files are public, search engines, scanners, or attackers can download them directly.\n\nThis risk requires little technical sophistication but can cause large data breaches. Organizations need continuous public asset inventory, clear separation of static content from sensitive data, and alerting on public policies.",

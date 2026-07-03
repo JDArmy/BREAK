@@ -17,8 +17,12 @@
     "usageExample": "An industrial robot's functional-safety design requires triggering a safety stop immediately when a force sensor anomaly is detected, preventing a runaway arm from injuring people.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Functional safety - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Functional_safety"
+      },
+      {
+        "title": "ISO 26262 - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/ISO_26262"
       }
     ]
   }

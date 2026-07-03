@@ -14,8 +14,8 @@
     "limitation": "There is a conflict between maintenance convenience and security: after hardening, on-site debugging requires additional authentication steps, increasing operational costs. Legacy device firmware cannot be upgraded, leaving residual vulnerabilities unpatched. BLE provisioning authentication may impact the first-time provisioning user experience. Some vendors resist removing backdoor services for the sake of remote maintenance convenience.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Unitree Robot Hack: What You Need to Know - IEEE Spectrum",
+        "link": "https://spectrum.ieee.org/unitree-robot-exploit"
       }
     ]
   }

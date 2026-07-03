@@ -20,11 +20,15 @@
     ],
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Session hijacking - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Session_hijacking"
+      },
+      {
+        "title": "Session hijacking attack - OWASP",
+        "link": "https://owasp.org/www-community/attacks/Session_hijacking_attack"
       }
     ],
-    "updated": "2026-07-02",
+    "updated": "2026-07-04",
     "version": 2
   }
 }

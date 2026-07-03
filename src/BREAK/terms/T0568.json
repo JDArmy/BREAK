@@ -18,11 +18,15 @@
     ],
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Vector database - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Vector_database"
+      },
+      {
+        "title": "What is a Vector Database - Pinecone",
+        "link": "https://www.pinecone.io/learn/vector-database/"
       }
     ],
-    "updated": "2026-07-02",
+    "updated": "2026-07-04",
     "version": 2
   }
 }

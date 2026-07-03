@@ -5,15 +5,15 @@
     "description": "基于OpenAPI契约、类型约束、Schema校验与负载测试对API输入进行严格校验，结合契约一致性回归测试，减少注入、参数污染、类型混淆和异常负载导致的越权与拒绝服务。",
     "references": [
       {
-        "title": "OWASP API Security Top 10 2023",
-        "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+        "title": "API4:2023 Unrestricted Resource Consumption - OWASP API Security",
+        "link": "https://owasp.org/API-Security/editions/2023/en/0xa4-unrestricted-resource-consumption/"
       }
     ],
     "keywords": [
       "API输入校验与契约测试",
       "API输入校验契约测试"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "definition": "基于OpenAPI契约、类型约束和负载测试校验输入，减少注入和参数污染。",
     "effectiveness": "high",
     "limitation": "契约只能覆盖已知字段与类型，新增字段、可选参数、批量接口常脱离契约产生校验盲区被注入绕过；攻击者通过参数污染、编码绕过、Unicode同形字、JSON结构混淆等手段规避正则与类型校验；契约与实际实现不同步时校验规则形同虚设；过严的输入白名单会误拦合法边缘输入，影响正常用户体验与业务兼容性。",

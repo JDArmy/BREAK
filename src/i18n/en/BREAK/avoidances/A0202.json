@@ -4,8 +4,8 @@
     "description": "Generates SBOMs for applications, images, and firmware by collecting dependency component inventories, and employs version matching, vulnerability intelligence comparison, and baseline verification to locate affected assets by component sequence and assess impact scope when new vulnerabilities are disclosed.",
     "references": [
       {
-        "title": "Software Bill of Materials - CISA",
-        "link": "https://www.cisa.gov/topics/information-communications-technology-supply-chain-security/sbom"
+        "title": "2025 Minimum Elements for a Software Bill of Materials (SBOM) - CISA",
+        "link": "https://www.cisa.gov/resources-tools/resources/2025-minimum-elements-software-bill-materials-sbom"
       }
     ],
     "keywords": [

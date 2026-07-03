@@ -7,15 +7,11 @@
     "limitation": "大模型安全防护的局限性包括：①提示注入的多样性使得完全防御极为困难，攻击者可以通过编码、多语言混合、间接注入等方式绕过过滤。②过度严格的安全策略可能导致模型可用性下降，影响正常用户体验。③安全防护措施本身可能引入额外的延迟和计算开销。④模型的黑盒特性使得难以完全预测和控制其行为。⑤新型攻击手法不断涌现，防护策略需要持续更新。",
     "references": [
       {
-        "title": "OWASP Top 10 for LLM Applications",
-        "link": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"
-      },
-      {
-        "title": "大模型安全实践指南",
-        "link": "https://www.nist.gov/itl/ai-risk-management-framework"
+        "title": "LLM02:2025 Insecure Output Handling - OWASP Gen AI Security Project",
+        "link": "https://genai.owasp.org/llmrisk/llm02-insecure-output-handling/"
       }
     ],
-    "updated": "2026-06-11",
+    "updated": "2026-07-04",
     "keywords": [
       "大模型安全防护",
       "LLM安全",

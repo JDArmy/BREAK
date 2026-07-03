@@ -20,11 +20,15 @@
     ],
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "OWASP API Security Project",
+        "link": "https://owasp.org/www-project-api-security/"
+      },
+      {
+        "title": "Driving API Security Forward: Protecting Vehicle-to-Cloud Communications - Cisco",
+        "link": "https://blogs.cisco.com/industries/driving-api-security-forward-protecting-vehicle-to-cloud-communications"
       }
     ],
-    "updated": "2026-07-02",
+    "updated": "2026-07-04",
     "version": 2
   }
 }

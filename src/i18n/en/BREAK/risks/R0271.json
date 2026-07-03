@@ -16,8 +16,8 @@
     "influence": "Causes robots to perform wrong or dangerous actions, model capabilities to be abused, and safety alignment to be bypassed; it is a core model-layer risk distinguishing embodied intelligence from traditional robots, directly translatable into physical-world harm.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Jailbreaking LLM-Controlled Robots (RoboPAIR)",
+        "link": "https://arxiv.org/abs/2410.13691"
       }
     ],
     "riskAssessment": {

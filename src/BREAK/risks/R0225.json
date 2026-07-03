@@ -16,6 +16,10 @@
       {
         "title": "OWASP API Security Top 10 2023",
         "link": "https://owasp.org/API-Security/editions/2023/en/0x00-header/"
+      },
+      {
+        "title": "Stripe Webhook 安全：签名验证与重放攻击防护",
+        "link": "https://docs.stripe.com/webhooks"
       }
     ],
     "keywords": [
@@ -26,7 +30,7 @@
       "支付回调伪造",
       "异步事件安全"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "riskAssessment": {
       "likelihood": "medium",
       "businessLoss": "critical",

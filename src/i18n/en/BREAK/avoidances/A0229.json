@@ -15,8 +15,8 @@
     "limitation": "Adversarial training struggles to cover novel attack forms in open physical worlds, facing a 'whack-a-mole' dilemma. There is a trade-off between robustness and task performance, where excessive defense may reduce task success rates. Backdoor triggers are highly stealthy and difficult to fully detect and eliminate. Red-team evaluation is costly and cannot guarantee coverage of all attack paths.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Exploring the Adversarial Vulnerabilities of Vision-Language-Action Models - arXiv",
+        "link": "https://arxiv.org/abs/2510.13237"
       }
     ]
   }

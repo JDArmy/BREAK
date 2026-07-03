@@ -14,8 +14,12 @@
     "usageExample": "Assess Firmware Signing related exposure and define the corresponding controls.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Secure Boot - Microsoft Learn",
+        "link": "https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/oem-secure-boot"
+      },
+      {
+        "title": "Introduction to Secure boot and Secure firmware update - STMicroelectronics",
+        "link": "https://wiki.st.com/stm32mcu/wiki/Security:Introduction_to_Secure_boot_and_Secure_firmware_update"
       }
     ],
     "category": "Business Security",

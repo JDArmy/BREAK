@@ -5,6 +5,10 @@
     "description": "对AIoT端侧模型实施对抗样本防御、数据投毒检测、模型完整性校验和推理结果异常监测，确保模型决策可靠性，防止攻击者通过对抗扰动、投毒训练数据或替换模型等手段使设备做出错误判断。",
     "references": [
       {
+        "title": "LLM03:2025 Training Data Poisoning - OWASP Gen AI Security Project",
+        "link": "https://genai.owasp.org/llmrisk/llm03-training-data-poisoning/"
+      },
+      {
         "link": "https://www.nist.gov/itl/ai-risk-management-framework",
         "title": "NIST AI Risk Management Framework"
       }
@@ -12,7 +16,7 @@
     "keywords": [
       "AIoT模型安全防护"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "definition": "对AI模型进行对抗样本防御和投毒检测，确保决策可靠性。",
     "effectiveness": "high",
     "limitation": "对抗训练只能覆盖已知扰动模式，新型对抗样本（黑盒攻击、物理世界扰动）仍可欺骗模型绕过防御；投毒检测在数据规模大时漏报率高，缓慢注入式投毒难以察觉；端侧算力受限使重防御模型难以部署，防护强度与推理延迟存在权衡；模型窃取与替代模型攻击可在不接触原模型前提下构造对抗样本，使防御失效。",

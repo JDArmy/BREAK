@@ -12,8 +12,8 @@
     ],
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "CISA Guidance on Phishing-Resistant and Number-Matching Multifactor Authentication",
+        "link": "https://www.cisa.gov/news-events/alerts/2022/10/31/cisa-releases-guidance-phishing-resistant-and-numbers-matching-multifactor-authentication"
       }
     ],
     "keywords": [
@@ -24,7 +24,7 @@
       "MFA推送滥用",
       "登录批准诱导"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "high",

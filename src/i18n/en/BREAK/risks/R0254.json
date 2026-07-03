@@ -11,8 +11,8 @@
     ],
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "CISA Alert: Kaseya VSA Supply Chain Ransomware Attack (MSP Remote Access Abuse)",
+        "link": "https://www.cisa.gov/news-events/alerts/2021/07/02/kaseya-vsa-supply-chain-ransomware-attack"
       }
     ],
     "description": "Vendor remote access abuse happens when third-party operations accounts, VPN, bastion hosts, remote desktop, or SaaS admin portals are stolen or used beyond scope. Attackers can enter the enterprise through a trusted supplier relationship.\n\nThird-party access often remains highly privileged and long-lived for continuity. Organizations need task-based authorization, mandatory MFA, session recording, expiration, and abnormal access blocking.",

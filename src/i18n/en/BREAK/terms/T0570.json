@@ -14,8 +14,8 @@
     "usageExample": "Assess Prompt Injection related exposure and define the corresponding controls.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "LLM01:2025 Prompt Injection - OWASP Gen AI Security Project",
+        "link": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/"
       }
     ],
     "category": "Business Security",

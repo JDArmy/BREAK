@@ -7,6 +7,10 @@
     ],
     "references": [
       {
+        "title": "LLM03:2025 Training Data Poisoning - OWASP Gen AI Security Project",
+        "link": "https://genai.owasp.org/llmrisk/llm03-training-data-poisoning/"
+      },
+      {
         "title": "NIST AI Risk Management Framework",
         "link": "https://www.nist.gov/itl/ai-risk-management-framework"
       }

@@ -4,8 +4,8 @@
     "description": "Collect dependency manifests, lock files, and package repository metadata; apply malicious package scanning, signature verification, rule matching, and dependency auditing to compare against known malicious indicators, identifying supply chain poisoning and anomalous dependency introduction.",
     "references": [
       {
-        "title": "Software Bill of Materials - CISA",
-        "link": "https://www.cisa.gov/topics/information-communications-technology-supply-chain-security/sbom"
+        "title": "2025 Minimum Elements for a Software Bill of Materials (SBOM) - CISA",
+        "link": "https://www.cisa.gov/resources-tools/resources/2025-minimum-elements-software-bill-materials-sbom"
       }
     ],
     "keywords": [

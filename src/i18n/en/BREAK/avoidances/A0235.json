@@ -14,8 +14,8 @@
     "limitation": "Domain randomization cannot cover all real-world variations, leaving unmodeled physical phenomena; consistency verification relies on accurate simulation predictions, and prediction deviations can be large in complex scenarios; real-world red-teaming is costly and has limited coverage; there is a trade-off between defense effectiveness and policy performance.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Understanding Domain Randomization for Sim-to-real Transfer - arXiv",
+        "link": "https://arxiv.org/abs/2110.03239"
       }
     ]
   }

@@ -4,8 +4,8 @@
     "description": "Enforce approval workflows, data minimization, usage constraints, and masking strategies for data sharing, export, training, analysis, and third-party usage. Ensure data is reviewed for compliance before leaving the boundary and is used solely for authorized purposes, preventing insiders or third parties from misusing sensitive data beyond scope.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Art. 5 GDPR - Principles relating to processing of personal data",
+        "link": "https://gdpr-info.eu/art-5-gdpr/"
       }
     ],
     "keywords": [

@@ -8,11 +8,11 @@
     "limitation": "DID文档与可验证凭证的私钥一旦被钓鱼或终端恶意软件窃取，攻击者即可凭合法凭证冒充身份，验证机制无法区分操作者真伪；跨DID方法（did:web/did:ethr等）解析与信任锚实现不统一，验证方实现差异可能产生误报或漏报；选择性披露在零知识证明实现下算力开销大，移动端落地困难；生态不成熟、监管接受度低，撤销注册表更新延迟会导致已吊销凭证在窗口期内仍被误判有效。",
     "references": [
       {
-        "title": "Decentralized Identity (DID) Standard",
-        "link": "https://www.w3.org/TR/did-core/"
+        "title": "Verifiable Credentials Data Model v2.0 - W3C",
+        "link": "https://www.w3.org/TR/vc-data-model-2.0/"
       }
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "keywords": [
       "链上身份去中心化验证",
       "DID",

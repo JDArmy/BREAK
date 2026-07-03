@@ -11,8 +11,8 @@
     ],
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Repackaging (Promon Security Glossary, Mobile App Repackaging)",
+        "link": "https://promon.io/resources/security-software-glossary/repackaging"
       }
     ],
     "description": "Mobile app repackaging fraud decompiles a legitimate app, inserts ads, phishing pages, malicious SDKs, or risk-control bypass logic, and redistributes it through unofficial channels. Users believe they installed the real app.\n\nRepackaged apps can steal accounts, hijack payments, fake device context, or consume ad budgets. Vendors need app hardening, signature checks, channel monitoring, and runtime integrity detection.",

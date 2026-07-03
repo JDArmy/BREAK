@@ -15,8 +15,8 @@
     "influence": "Robots lie dormant long-term and perform dangerous actions under specific triggers (e.g., unlocking or attacking when a specific visual patch appears); backdoors are highly stealthy and hard to detect, and supply-chain poisoning can affect all downstream deployed robots.",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "DropVLA: An Action-Level Backdoor Attack on Vision-Language-Action Models",
+        "link": "https://arxiv.org/abs/2510.10932"
       }
     ],
     "riskAssessment": {

@@ -14,8 +14,8 @@
     ],
     "references": [
       {
-        "title": "Software Bill of Materials - CISA",
-        "link": "https://www.cisa.gov/topics/information-communications-technology-supply-chain-security/sbom"
+        "title": "OWASP Top 10 CI/CD Security Risks - CICD-SEC-03: Dependency Chain Abuse",
+        "link": "https://owasp.org/www-project-top-10-ci-cd-security-risks/CICD-SEC-03-Dependency-Chain-Abuse"
       }
     ],
     "keywords": [
@@ -26,7 +26,7 @@
       "包名抢注",
       "开源包投毒"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "critical",

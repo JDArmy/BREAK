@@ -11,8 +11,8 @@
     ],
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "Device Farm (AppsFlyer Anti-Fraud Glossary, Device/Install Farms)",
+        "link": "https://www.appsflyer.com/glossary/device-farm/"
       }
     ],
     "description": "Fake conversion and install farms use device farms, emulators, scripts, or crowdsourced labor to simulate registration, installation, retention, purchases, or other funnel events. The goal is to obtain CPA, CPS, acquisition subsidies, or platform rewards.\n\nThese actions look valid in funnel metrics but lack real user value. Platforms need device fingerprinting, behavior sequence analysis, retention quality checks, payment linkage, and channel profiling.",

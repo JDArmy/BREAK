@@ -17,8 +17,8 @@
     "effectiveness": "medium",
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "ROS 2 DDS-Security integration design",
+        "link": "https://design.ros2.org/articles/ros2_dds_security.html"
       }
     ],
     "relatedAvoidances": [
@@ -38,6 +38,6 @@
         "note": "共同覆盖 1 个风险。"
       }
     ],
-    "updated": "2026-07-03"
+    "updated": "2026-07-04"
   }
 }

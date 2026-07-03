@@ -22,11 +22,15 @@
     ],
     "references": [
       {
-        "title": "NIST Cybersecurity Framework 2.0",
-        "link": "https://www.nist.gov/cyberframework"
+        "title": "App signing - Android Open Source Project",
+        "link": "https://source.android.com/docs/security/features/apksigning"
+      },
+      {
+        "title": "Sign your app - Android Studio",
+        "link": "https://developer.android.com/studio/publish/app-signing"
       }
     ],
-    "updated": "2026-07-02",
+    "updated": "2026-07-04",
     "version": 2
   }
 }

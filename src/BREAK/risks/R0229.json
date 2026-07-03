@@ -13,8 +13,8 @@
     ],
     "references": [
       {
-        "title": "Software Bill of Materials - CISA",
-        "link": "https://www.cisa.gov/topics/information-communications-technology-supply-chain-security/sbom"
+        "title": "NTIA: The Minimum Elements For a Software Bill of Materials (SBOM)",
+        "link": "https://www.ntia.gov/report/2021/minimum-elements-software-bill-materials-sbom"
       }
     ],
     "keywords": [
@@ -25,7 +25,7 @@
       "供应链可见性",
       "依赖资产盘点"
     ],
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "riskAssessment": {
       "likelihood": "high",
       "businessLoss": "high",
